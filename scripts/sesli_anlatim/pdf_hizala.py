@@ -46,6 +46,13 @@ GERI_CEZA = 0.06  # geri dönüş sabit cezası
 GERI_SAYFA = 0.015  # geri dönülen her sayfa için ek ceza
 ILERI_SAYFA = 0.0015  # ileri atlanan her sayfa için çok küçük ceza (uzak sıçramaları hafifçe caydırır)
 DOSYA_GECIS = 0.02  # dosyalar arası geçiş (çok dosyalı derste)
+# Cümle düzeyi (dp_cumle)
+C_ILERI = 0.05  # bir sonraki slayta geçiş için gereken en az kanıt
+C_ILERI_SAYFA = 0.02  # atlanan her ek slayt
+C_GERI = 0.16  # önceki slayta dönüş
+C_GERI_SAYFA = 0.03
+CUMLE_ILERI = 4  # paragrafın sayfasından en çok kaç slayt ileri cümle kayabilir (çapa dışı cezalı)
+CAPA_CEZA = 0.08
 
 STOP = set(
     """
@@ -68,11 +75,38 @@ STOP_K = {katla(w) for w in STOP}
 
 def kokler(t: str) -> list[str]:
     out = []
+    t = unicodedata.normalize("NFKC", t)  # slayttaki alt simgeler: LTB₄ → LTB4
+    # Kısaltmalar (DNA, HER2, CD4) ve en az iki haneli sayılar (1960, 46) slaytta da aynı yazılır: bütün hâliyle tutulur
+    for m in re.finditer(r"\b(?:[A-ZÇĞİÖŞÜ][A-ZÇĞİÖŞÜa-z]?[A-ZÇĞİÖŞÜ0-9]{1,5}|\d{2,4})\b", t):
+        w = m.group(0)
+        if sum(c.isupper() or c.isdigit() for c in w) >= 2:
+            out.append("#" + katla(w))
     for w in re.findall(r"[a-z]+", katla(t)):
         if len(w) < 4 or w in STOP_K:
             continue
         out.append(w[:5])
     return out
+
+
+def cumle_sinirlari(p: str) -> list[int]:
+    """Cümle bitiş konumları — canliDersStore.ts::cumleSinirlari ile BİREBİR aynı kural.
+    Sınır: [.!?…]+ (+ kapanan tırnak/parantez) ardından boşluk ya da metin sonu; sonraki karakter küçük harfse
+    sınır sayılmaz ("2. basamak", "1.'si", "3,5" bölünmez)."""
+    out: list[int] = []
+    for m in re.finditer(r"[.!?…]+[\"'”’)\]]*(?:\s+|$)", p):
+        e = m.end()
+        if e < len(p) and p[e].islower():
+            continue
+        if e > (out[-1] if out else 0):
+            out.append(e)
+    if not out or out[-1] < len(p):
+        out.append(len(p))
+    return out
+
+
+def cumleler(p: str) -> list[str]:
+    s = cumle_sinirlari(p)
+    return [p[(s[k - 1] if k else 0):s[k]] for k in range(len(s))]
 
 
 def _nfc(x: str) -> str:
@@ -195,6 +229,28 @@ def dp_hizala(S: np.ndarray, dosya_of: np.ndarray, sira_of: np.ndarray) -> list[
     return yol[::-1]
 
 
+def dp_cumle(S: np.ndarray, dosya_of: np.ndarray, sira_of: np.ndarray) -> list[int]:
+    """Cümle düzeyi Viterbi: sayfada kalmak bedava; ileri geçiş için kanıt gerekir (sabit + sayfa başına ceza);
+    geri dönüş pahalı (anlatıcı nadiren önceki slayta döner)."""
+    n, m = S.shape
+    jp = np.arange(m)[:, None]
+    jn = np.arange(m)[None, :]
+    fark = (sira_of[jn] - sira_of[jp]).astype(float)
+    T = np.where(fark > 0, C_ILERI + (fark - 1) * C_ILERI_SAYFA, C_GERI + (-fark) * C_GERI_SAYFA)
+    T = np.where(dosya_of[jp] == dosya_of[jn], T, T + DOSYA_GECIS)
+    np.fill_diagonal(T, 0.0)
+    skor = S[0].copy()
+    geri = np.zeros((n, m), dtype=np.int32)
+    for i in range(1, n):
+        aday = skor[:, None] - T
+        geri[i] = aday.argmax(axis=0)
+        skor = aday.max(axis=0) + S[i]
+    yol = [int(skor.argmax())]
+    for i in range(n - 1, 0, -1):
+        yol.append(int(geri[i, yol[-1]]))
+    return yol[::-1]
+
+
 def deste_sec(pdfsrc: dict, key: str) -> tuple[str, list[dict]] | None:
     for did in (f"k1p-{key}-v2", f"k1p-{key}"):
         files = (pdfsrc.get(did) or {}).get("files") or []
@@ -209,6 +265,13 @@ def hizala(key: str, pdfsrc: dict, goster: int = 0) -> dict | None:
         return None
     sec = deste_sec(pdfsrc, key)
     if not sec:
+        # deckPdfSources'ta dosya listesi yoksa (ders işçisinin yazdığı hizalama) mevcut dosyadaki PDF yolları kullanılır
+        try:
+            eski = json.loads((CIKTI / f"{key}.json").read_text(encoding="utf-8"))
+            sec = (eski["deckId"], [d for d in eski.get("dosyalar") or [] if d.get("path")]) if eski.get("dosyalar") else None
+        except Exception:
+            sec = None
+    if not sec:
         return None
     did, files = sec
     paragraflar = metin_paragraflari(mdp.read_text(encoding="utf-8"))
@@ -219,6 +282,13 @@ def hizala(key: str, pdfsrc: dict, goster: int = 0) -> dict | None:
         sy = sayfalar_md(md) if md else None
         if not sy:
             sy = sayfalar_pdf(f["path"]) or {}
+        if not sy and os.environ.get("HIZALA_PDF_DIZIN"):
+            # yerelde olmayan PDF (ör. Oracle'dan indirilmiş): <dizin>/<deckId>[_<sıra>].pdf
+            ek = f"_{fi}" if fi else ""
+            yerel = Path(os.environ["HIZALA_PDF_DIZIN"]) / f"{did}{ek}.pdf"
+            if yerel.exists():
+                t = subprocess.run(["pdftotext", "-layout", str(yerel), "-"], capture_output=True, text=True, timeout=180).stdout
+                sy = {i: x for i, x in enumerate(t.split("\f"), 1) if x.strip()}
         dosyalar.append({"path": f["path"], "name": f.get("name"), "fileId": f.get("fileId"), "pages": f.get("pages")})
         for no in sorted(sy):
             sayfa_list.append((fi, no, sy[no]))
@@ -241,74 +311,55 @@ def hizala(key: str, pdfsrc: dict, goster: int = 0) -> dict | None:
         onceki = j
         sonuc.append(j)
 
-    re_cumle = re.compile(r'[^.!?…]+(?:[.!?…]+["\'”’)\]]*\s*|$)')
-    cand_koks = [set(kokler(t)) for _, _, t in sayfa_list]
+    # ---- Cümle düzeyi: tüm ders boyunca cümle × sayfa sıra korumalı yol ----
+    # Bir paragrafın anlattığı içerik art arda 2-4 slayta yayılabilir; cümleler kendi kanıtıyla sayfa seçer.
+    # Kanıt: cümle (+ komşu cümleler yarım ağırlık) ve paragrafın kendisi; paragraf hizası bölge çapası olur.
+    cum_par: list[int] = []
+    cum_txt: list[str] = []
+    for i, p in enumerate(paragraflar):
+        for c in cumleler(p):
+            cum_par.append(i)
+            cum_txt.append(c)
+    cum_kok = [kokler(c) for c in cum_txt]
+    Xc, _ = tfidf(cum_kok, sayfa_kok + par_kok)
+    Sc_tek = Xc @ Sm.T
+    n_c = len(cum_txt)
+    Sc_kom = Sc_tek.copy()
+    for k in range(n_c):
+        for d, w in ((-1, 0.5), (1, 0.5), (-2, 0.2), (2, 0.2)):
+            q = k + d
+            if 0 <= q < n_c and cum_par[q] == cum_par[k]:
+                Sc_kom[k] += w * Sc_tek[q]
+    # paragraf çapası: paragrafın DP sayfası ve yakın komşuları dışındaki sayfalar hafif cezalı
+    capa = np.zeros((n_c, len(sayfa_list)))
+    sira = np.arange(len(sayfa_list))
+    for k in range(n_c):
+        i = cum_par[k]
+        j0 = sonuc[i]
+        j1 = sonuc[i + 1] if i + 1 < len(sonuc) else j0
+        lo, hi = min(j0, j1) - 1, max(j0, j1) + CUMLE_ILERI
+        capa[k] = np.where((sira >= lo) & (sira <= hi), 0.0, CAPA_CEZA)
+    Sc = 0.55 * Sc_tek + 0.25 * Sc_kom / 1.4 + 0.20 * S[np.array(cum_par)] - capa
+    yol_c = dp_cumle(Sc, dosya_of, sira_of)
 
     paragraflar_out = []
+    k = 0
     for i, j in enumerate(sonuc):
-        j_next = sonuc[i + 1] if i + 1 < len(sonuc) else j
-        c_list = [m.group(0).strip() for m in re_cumle.finditer(paragraflar[i]) if m.group(0).strip()]
-        K = len(c_list)
-
-        if K <= 1 or j_next <= j:
-            c_sayfalar = [int(sayfa_list[j][1])] * max(1, K)
-            c_dosyalar = [int(dosya_of[j])] * max(1, K)
-        else:
-            cand_indices = list(range(j, min(len(sayfa_list), max(j + 1, min(j + 6, j_next + 1)))))
-            skorlar = []
-            for c in c_list:
-                ck = set(kokler(c))
-                s_dict = {cand: len(ck & cand_koks[cand]) for cand in cand_indices}
-                skorlar.append(s_dict)
-
-            dp = [{cand: skorlar[0][cand] for cand in cand_indices}]
-            parent = [{cand: None for cand in cand_indices}]
-
-            for ci in range(1, K):
-                cur_dp = {}
-                cur_par = {}
-                for cand in cand_indices:
-                    best_val = -1e9
-                    best_prev = j
-                    for prev in cand_indices:
-                        if prev > cand:
-                            continue
-                        val = dp[ci - 1][prev]
-                        if prev == cand:
-                            val += 0.5
-                        if val > best_val:
-                            best_val = val
-                            best_prev = prev
-                    cur_dp[cand] = best_val + skorlar[ci][cand]
-                    cur_par[cand] = best_prev
-                dp.append(cur_dp)
-                parent.append(cur_par)
-
-            best_last = max(cand_indices, key=lambda cand: dp[-1][cand])
-            c_yol = [best_last]
-            for ci in range(K - 1, 0, -1):
-                c_yol.append(parent[ci][c_yol[-1]])
-            c_yol = c_yol[::-1]
-
-            if c_yol[0] != j:
-                c_yol[0] = j
-                for ci in range(1, K):
-                    if c_yol[ci] < c_yol[ci - 1]:
-                        c_yol[ci] = c_yol[ci - 1]
-
-            if j_next == j + 2 and K >= 3 and (j + 1) not in c_yol:
-                c_yol[-1] = j + 1
-
-            c_sayfalar = [int(sayfa_list[idx][1]) for idx in c_yol]
-            c_dosyalar = [int(dosya_of[idx]) for idx in c_yol]
-
+        idx = []
+        while k < n_c and cum_par[k] == i:
+            idx.append(yol_c[k])
+            k += 1
+        if not idx:
+            idx = [j]
+        j_ilk = idx[0]
         p_obj = {
-            "dosya": int(dosya_of[j]),
-            "sayfa": int(sayfa_list[j][1]),
+            "dosya": int(dosya_of[j_ilk]),
+            "sayfa": int(sayfa_list[j_ilk][1]),
             "guven": round(float(min(1.0, S[i, j] / GUVEN_TAVAN)), 2),
-            "sayfalar": c_sayfalar,
+            "sayfalar": [int(sayfa_list[x][1]) for x in idx],
         }
-        if any(d != dosya_of[j] for d in c_dosyalar):
+        c_dosyalar = [int(dosya_of[x]) for x in idx]
+        if any(d != c_dosyalar[0] for d in c_dosyalar) or c_dosyalar[0] != p_obj["dosya"]:
             p_obj["dosyalar"] = c_dosyalar
         paragraflar_out.append(p_obj)
     if goster:

@@ -1,7 +1,7 @@
 # Vulva, Vajen ve Serviks Hastalıkları
 
 @@ Vulvanın yapısı ve hastalıklarının klinik önemi
-Vulva dış kadın genital organıdır ve iki farklı örtüye sahiptir. Labia majora kıllı deri ile örtülüdür; bu yüzden derinin hastalıkları burada da karşımıza çıkar. Labia minora ise mukoza ile örtülüdür. Bu bölgedeki her lezyonu üç soruyla düşüneceğiz: sık görülen lezyon hangisi, süreç non-neoplastik mi yoksa neoplastik mi, ve tümörse HPV, yani İnsan papilloma virüsü (HPV) (HPV) ile ilişkili mi, ilişkisiz mi.
+Vulva dış kadın genital organıdır ve iki farklı örtüye sahiptir. Labia majora kıllı deri ile örtülüdür; bu yüzden derinin hastalıkları burada da karşımıza çıkar. Labia minora ise mukoza ile örtülüdür. Bu bölgedeki her lezyonu üç soruyla düşüneceğiz: sık görülen lezyon hangisi, süreç non-neoplastik mi yoksa neoplastik mi, ve tümörse HPV, yani İnsan papilloma virüsü (HPV) ile ilişkili mi, ilişkisiz mi.
 
 Vulvanın hastalık spektrumu iki uçta toplanır.
 En sık görülenler inflamatuvar lezyonlardır; bunlar hasta için rahatsız edicidir, kaşıntı, yanma ve ağrı yapar, ama genellikle yaşamı tehdit etmez.
@@ -20,7 +20,7 @@ Yaşlılarda ayrıca bir neden daha vardır: idrar teması kontakt dermatitin ne
 Yani inkontinansı olan yaşlı bir kadında inatçı vulvar eritem ve sulanma gördüğünüzde idrar temasını mutlaka sorgularsınız.
 
 @@ Enfeksiyöz vulvit: HPV ve herpes
-Enfeksiyöz vulvit etkenlerinin çoğu cinsel yolla bulaşır. Derste beş başlıca etken sayılır: İnsan papilloma virüsü (HPV) (HPV), herpes simpleks virüsü Tip 1 ve Tip 2, Neisseria gonorrhoeae, Treponema pallidum ve Kandida türleri. Bu etkenler hem vulvaya özgü lezyonlar, yani siğil, vezikül ve şankr oluşturur, hem de bezler ve vajina gibi çevre yapıları tutar. Ancak listedeki her etken cinsel yolla bulaşmaz; bunu birazdan Kandida'da göreceğiz.
+Enfeksiyöz vulvit etkenlerinin çoğu cinsel yolla bulaşır. Derste beş başlıca etken sayılır: İnsan papilloma virüsü (HPV), herpes simpleks virüsü Tip 1 ve Tip 2, Neisseria gonorrhoeae, Treponema pallidum ve Candida türleri. Bu etkenler hem vulvaya özgü lezyonlar, yani siğil, vezikül ve şankr oluşturur, hem de bezler ve vajina gibi çevre yapıları tutar. Ancak listedeki her etken cinsel yolla bulaşmaz; bunu birazdan Candida'da göreceğiz.
 
 İnsan papilloma virüsü (HPV) vulvada biyolojik davranışı birbirinden çok farklı üç lezyonla ilişkilidir.
 1.'si kondiloma akuminatumdur; HPV bu siğil benzeri benign lezyonun etkenidir.
@@ -35,35 +35,35 @@ Seyir tekrarlayıcıdır.
 Bunun nedeni persistan latent enfeksiyondur: virüs ilk enfeksiyondan sonra vücuttan temizlenmez, sessiz olarak kalır ve uygun koşullarda yeniden aktifleşip yeni vezikül ve ülser atakları oluşturur.
 Ağrılı vezikül, ülser ve tekrarlama üçlüsü vulvada herpes enfeksiyonunu düşündürür.
 
-Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: herpes enfeksiyonunda hücre çekirdeğinde şeffaf bir hale ile çevrili, açık mor, homojen intranükleer inklüzyonlar görülür; bunlara Kaudri A inklüzyonları denir.
-Vezikül tabanından alınan Zank yaymasında epitel hücrelerinin kaynaşmasıyla oluşan çok çekirdekli dev hücreler ve kromatinin çekirdek kenarına itilmesi de herpesin ayırt edici sitopatik bulgularıdır.
-Sorularda HPV, gonore, Trikomonas ya da Klamidya şıkları bulunur; ama Kaudri A inklüzyonu herpes simpleks virüsüne aittir.
+Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: herpes enfeksiyonunda hücre çekirdeğinde şeffaf bir hale ile çevrili, açık mor, homojen intranükleer inklüzyonlar görülür; bunlara Cowdry A inklüzyonları denir.
+Vezikül tabanından alınan Tzanck yaymasında epitel hücrelerinin kaynaşmasıyla oluşan çok çekirdekli dev hücreler ve kromatinin çekirdek kenarına itilmesi de herpesin ayırt edici sitopatik bulgularıdır.
+Sorularda HPV, gonore, Trichomonas ya da Chlamydia şıkları bulunur; ama Cowdry A inklüzyonu herpes simpleks virüsüne aittir.
 HPV'nin kendine özgü değişikliği farklıdır ve adına koilositoz denir; onu kondilomda göreceğiz.
 
-@@ Gonore, sifiliz ve Kandida vulviti
+@@ Gonore, sifiliz ve Candida vulviti
 Cinsel yolla bulaşan iki bakteriyel etken vulvada farklı lezyonlar yapar. Neisseria gonorrhoeae vulvovajinal bezlerin süpüratif, yani irinli enfeksiyonuna yol açar. Treponema pallidum ise vulvar aşılama bölgelerinde, yani etkenin girdiği noktada primer şankr oluşturur. Bu iki etkenin tanısında seroloji, yani kanda antikor araştırılması, kültür ve nükleik asit amplifikasyon testi kullanılır. Nükleik asit amplifikasyon testi etkenin genetik materyalini çoğaltarak saptar.
 
-Kandida türleri vulvitin önemli bir nedenidir, ama enfeksiyöz vulvit etkenleri arasında ayrı bir yerdedir.
-Burası önemli: Kandida cinsel yolla bulaşmaz.
-Sınavda cinsel yolla bulaşan hastalık etkeni olmayanı sorduklarında cevap Kandida'dır.
-Kandida enfeksiyonunu kolaylaştıran şey bulaş değil, konağın savunmasındaki değişikliklerdir.
+Candida türleri vulvitin önemli bir nedenidir, ama enfeksiyöz vulvit etkenleri arasında ayrı bir yerdedir.
+Burası önemli: Candida cinsel yolla bulaşmaz.
+Sınavda cinsel yolla bulaşan hastalık etkeni olmayanı sorduklarında cevap Candida'dır.
+Candida enfeksiyonunu kolaylaştıran şey bulaş değil, konağın savunmasındaki değişikliklerdir.
 Yatkınlaştırıcı durumlar diyabet, antibiyotik kullanımı, gebelik ve immün yetmezliktir.
 Antibiyotik normal bakteri florasını baskılayarak mantarın üremesine alan açar; immün yetmezlik ise savunmayı zayıflatarak bu fırsatçı enfeksiyonu kolaylaştırır.
 
-Kandida vulvitinin klinik bulguları kaşıntı, eritem ve ödem, yani kızarıklık ve şişlik, ve yüzeyde beyaz, plak benzeri lezyonlardır.
+Candida vulvitinin klinik bulguları kaşıntı, eritem ve ödem, yani kızarıklık ve şişlik, ve yüzeyde beyaz, plak benzeri lezyonlardır.
 Beyaz plaklar onu diğer vulvit tiplerinden ayıran önemli bir görünümdür.
-Kandida vulviti vajinitle birlikte olabilir; bu yüzden vulvar Kandida saptanan hastada vajina da değerlendirilir.
-Özetle lezyon tipi etkeni ele verir: beyaz plak Kandida'yı, ağrılı vezikül ve ülser herpesi, şankr Treponema pallidumu, bezde irinli enfeksiyon gonoreyi düşündürür.
+Candida vulviti vajinitle birlikte olabilir; bu yüzden vulvar Candida saptanan hastada vajina da değerlendirilir.
+Özetle lezyon tipi etkeni ele verir: beyaz plak Candida'yı, ağrılı vezikül ve ülser herpesi, şankr Treponema pallidumu, bezde irinli enfeksiyon gonoreyi düşündürür.
 
-@@ Bartolin bezi komplikasyonları
-Vulvitin önemli bir komplikasyonu Bartolin bezi salgı kanalının tıkanmasıdır. Salgısını boşaltamayan bez içinde salgı birikir ve ağrılı bir gland genişlemesi ortaya çıkar; buna Bartolin kisti denir. Kist sıkça enfekte olur ve apse oluşur. Bu durumda cerrahi drenaj ve antibiyotik tedavisi gerekebilir.
+@@ Bartholin bezi komplikasyonları
+Vulvitin önemli bir komplikasyonu Bartholin bezi salgı kanalının tıkanmasıdır. Salgısını boşaltamayan bez içinde salgı birikir ve ağrılı bir gland genişlemesi ortaya çıkar; buna Bartholin kisti denir. Kist sıkça enfekte olur ve apse oluşur. Bu durumda cerrahi drenaj ve antibiyotik tedavisi gerekebilir.
 
-Burası önemli, Bartolin kisti çıkmış sorularda da yer aldı.
-Bartolin kanal kisti vulvanın en sık rastlanan kistik lezyonudur.
-Vestibülde yerleşir ve genellikle üç ile 5 santimetre büyüklüğündedir.
+Burası önemli, Bartholin kisti çıkmış sorularda da yer aldı.
+Bartholin kanal kisti vulvanın en sık rastlanan kistik lezyonudur.
+Vestibülde yerleşir ve genellikle 3 ile 5 santimetre büyüklüğündedir.
 Kisti döşeyen epitel en sık çok katlı yassı epitel ya da ürotelyal epiteldir.
 Tedavisi kistin açılıp boşaltılması ya da eksizyonudur.
-Soruda yanlış ifade olarak sorulan bilgi, kistin postmenopozal dönemde görüldüğüdür; Bartolin kisti postmenopozal döneme özgü bir lezyon değildir.
+Soruda yanlış ifade olarak sorulan bilgi, kistin postmenopozal dönemde görüldüğüdür; Bartholin kisti postmenopozal döneme özgü bir lezyon değildir.
 
 @@ Non-neoplastik epitel bozuklukları ve liken skleroz kliniği
 Vulvanın non-neoplastik epitel bozuklukları, tümör olmayan ama epitelin yapısını kalıcı olarak değiştiren kronik süreçlerdir. Bu grupta iki temel tablo vardır: liken skleroz ve skuamöz hücre hiperplazisi. Liken sklerozda epitel incelir ve altındaki dermis sertleşir; skuamöz hücre hiperplazisinde ise epitel kalınlaşır. İkisi de klinikte genellikle lökoplaki, yani beyaz plak şeklinde görülür. Klinik görünüm benzediği için iki tablonun birbirinden ve diğer beyaz lezyonlardan ayrımı ancak biyopsiyle yapılır; biyopsi ile ayırıcı tanı şarttır.
@@ -83,7 +83,7 @@ Retelerde kaybolma, dermal fibrozis yani homojenleşme, bant benzeri mononüklee
 
 Liken skleroz her yaşta görülebilir, ama iki dönemde belirgin olarak sıklaşır: menopoz sonrası kadınlar ve ergenlik öncesi kızlar.
 Patogenezi belirsizdir.
-Epitel altında aktif te hücre infiltrasyonu bulunur; histolojideki bant tarzı mononükleer infiltrat bunun yansımasıdır.
+Epitel altında aktif T hücre infiltrasyonu bulunur; histolojideki bant tarzı mononükleer infiltrat bunun yansımasıdır.
 Liken skleroz ayrıca otoimmün bozukluklarla birlikte görülür; bu da immün aracılı bir süreç olduğunu düşündürür.
 
 Liken sklerozun en önemli klinik sorusu kansere zemin hazırlayıp hazırlamadığıdır.
@@ -96,7 +96,7 @@ Burası önemli, çıkmış sorularda vulvasında liken skleroz bulunan hastada 
 Melanom, bazal hücreli karsinom, kondiloma akuminatum ya da Paget hastalığı değil.
 
 @@ Skuamöz hücre hiperplazisi
-Skuamöz hücre hiperplazisi vulvanın 2. non-neoplastik epitel bozukluğudur. Eski isimleri hiperplastik distrofi ve liken simpleks kronikustur; sınav sorularında bu eski adlarla sık karşılaşırsınız. Liken sklerozdan farklı olarak mekanik bir nedene bağlanır: şiddetli kaşıntıyı gidermek için tekrarlanan ovma ve kaşıma epitelde reaktif bir kalınlaşmaya yol açar. Vulvitte konuştuğumuz kaşıntı kaşıma döngüsü burada kronikleşmiş bir sonuç doğurur; epitel sürekli travmaya kalınlaşarak yanıt verir. Klinikte lezyon yine lökoplaki görünümündedir.
+Skuamöz hücre hiperplazisi vulvanın ikinci non-neoplastik epitel bozukluğudur. Eski isimleri hiperplastik distrofi ve liken simpleks kronikustur; sınav sorularında bu eski adlarla sık karşılaşırsınız. Liken sklerozdan farklı olarak mekanik bir nedene bağlanır: şiddetli kaşıntıyı gidermek için tekrarlanan ovma ve kaşıma epitelde reaktif bir kalınlaşmaya yol açar. Vulvitte konuştuğumuz kaşıntı kaşıma döngüsü burada kronikleşmiş bir sonuç doğurur; epitel sürekli travmaya kalınlaşarak yanıt verir. Klinikte lezyon yine lökoplaki görünümündedir.
 
 Histolojisi liken sklerozun neredeyse tersidir.
 Epidermis kalınlaşmıştır, buna akantoz denir.
@@ -128,7 +128,7 @@ Dikkat edin, kondiloma lata HPV lezyonu değildir.
 Böylece Treponema pallidumun vulvada iki farklı lezyonu olduğunu görüyoruz: aşılama bölgesinde primer şankr ve sekonder dönemde kondiloma lata.
 
 @@ Kondiloma akuminatum: etken, görünüm ve koilositoz
-Kondiloma akuminatum en yaygın kondilom tipidir ve etkeni viraldir: düşük riskli İnsan papilloma virüsü (HPV) (HPV) tip altı ve on bir. Cinsel temasla bulaşır ve sıklıkla genç erişkinlerde görülür. Düşük riskli tipler malign dönüşüm açısından düşük risk grubundadır ve benign siğil oluşturur; vulvada karsinomla ilişkili olanlar ise yüksek riskli tiplerdir. Kısaca lata sifiliz, yani bakteri; akuminatum ise HPV tip altı ve on bir, yani virüs.
+Kondiloma akuminatum en yaygın kondilom tipidir ve etkeni viraldir: düşük riskli İnsan papilloma virüsü (HPV) tip 6 ve 11. Cinsel temasla bulaşır ve sıklıkla genç erişkinlerde görülür. Düşük riskli tipler malign dönüşüm açısından düşük risk grubundadır ve benign siğil oluşturur; vulvada karsinomla ilişkili olanlar ise yüksek riskli tiplerdir. Kısaca lata sifiliz, yani bakteri; akuminatum ise HPV tip 6 ve 11, yani virüs.
 
 Makroskopik görünüm değişkendir.
 Lezyon papiller ve belirgin kabarık olabilir, ya da düz ve buruşuk olabilir.
@@ -154,20 +154,20 @@ Meme, kolon, uterus kanseri ya da melanom değil.
 HPV alt genital sistemin skuamöz epitelini ortak bir alan olarak etkiler.
 HPV aşıları düşük riskli HPV enfeksiyonlarına karşı korur ve genital siğil gelişimini önler.
 
-@@ Vulva karsinomu ve iki ana grup
-Vulva karsinomu tüm kadın genital sistem kanserlerinin yaklaşık yüzde üçünü oluşturur ve en sık 60 yaş üstü kadınlarda görülür. Histolojik tiplerin yaklaşık %90'ı skuamöz hücreli karsinomdur; diğerleri adenokarsinom ve bazal hücreli karsinomdur. Vulvar skuamöz hücreli karsinom tek bir hastalık değil, iki farklı yoldan gelişen iki ana gruptur. 1. grup bazaloid ya da siğil benzeri karsinomdur ve yüksek riskli HPV ile ilişkilidir. 2. grup keratinize skuamöz hücreli karsinomdur; HPV ile ilişkili değildir ve liken skleroz ya da skuamöz hücre hiperplazisi zemininde gelişir. Böylece az önce konuştuğumuz iki non-neoplastik epitel bozukluğu burada HPV ile ilişkisiz karsinomun zemin lezyonu olarak yeniden karşımıza çıkıyor. Kondilomdaki düşük riskli HPV ise karsinom yolunda yer almaz.
+@@ Vulva karsinomu ve 2 ana grup
+Vulva karsinomu tüm kadın genital sistem kanserlerinin yaklaşık %3'ünü oluşturur ve en sık 60 yaş üstü kadınlarda görülür. Histolojik tiplerin yaklaşık %90'ı skuamöz hücreli karsinomdur; diğerleri adenokarsinom ve bazal hücreli karsinomdur. Vulvar skuamöz hücreli karsinom tek bir hastalık değil, iki farklı yoldan gelişen iki ana gruptur. Birinci grup bazaloid ya da siğil benzeri karsinomdur ve yüksek riskli HPV ile ilişkilidir. İkinci grup keratinize skuamöz hücreli karsinomdur; HPV ile ilişkili değildir ve liken skleroz ya da skuamöz hücre hiperplazisi zemininde gelişir. Böylece az önce konuştuğumuz iki non-neoplastik epitel bozukluğu burada HPV ile ilişkisiz karsinomun zemin lezyonu olarak yeniden karşımıza çıkıyor. Kondilomdaki düşük riskli HPV ise karsinom yolunda yer almaz.
 
 @@ HPV pozitif yol ve vulvar intraepitelyal neoplazi
-HPV pozitif vulvar karsinom iki grup içinde daha az yaygın olan formdur. HPV tip on altı ile ilişkilidir. Ortalama yaş yaklaşık altmıştır. Sıklıkla sigara içen kadınlarda görülür. Lezyonlar çoğunlukla çok odaklıdır; virüs aynı anda geniş bir epitel alanını etkilediği için birden fazla odak gelişir.
+HPV pozitif vulvar karsinom iki grup içinde daha az yaygın olan formdur. HPV tip 16 ile ilişkilidir. Ortalama yaş yaklaşık 60'tır. Sıklıkla sigara içen kadınlarda görülür. Lezyonlar çoğunlukla çok odaklıdır; virüs aynı anda geniş bir epitel alanını etkilediği için birden fazla odak gelişir.
 
 Bu karsinomdan önce bir öncü lezyon bulunur: vulvar intraepitelyal neoplazi.
 Seyrinde önce yüksek dereceli atipi, ardından karsinoma in situ gelişir.
 Ama invaziv karsinom gelişimi kaçınılmaz değildir ve yıllar sürebilir; yani her vulvar intraepitelyal neoplazi kansere ilerlemez.
-İnvaziv karsinom riski kırk beş yaşından büyük kadınlarda ve immün sistemi baskılanmış hastalarda artar; bağışıklık virüsü kontrol edemeyince ilerleme kolaylaşır.
+İnvaziv karsinom riski 45 yaşından büyük kadınlarda ve immün sistemi baskılanmış hastalarda artar; bağışıklık virüsü kontrol edemeyince ilerleme kolaylaşır.
 Vulvar intraepitelyal neoplazinin risk faktörleri servikal skuamöz intraepitelyal lezyonlarınkine benzer ve ortak payda yüksek riskli HPV enfeksiyonudur.
 
 @@ HPV negatif yol: diferansiye öncü lezyon ve patogenez
-HPV negatif keratinize skuamöz hücreli karsinom farklı bir hasta profilinde gelişir. Genellikle yaşlı kadınlarda görülür ve ortalama yaş yaklaşık yetmiş beştir; bu, HPV pozitif grubun 60 yaş ortalamasından belirgin olarak yüksektir. Zemininde uzun süreli liken skleroz ya da skuamöz hücre hiperplazisi vardır ve HPV ile ilişkili değildir. Liken sklerozda söylediğimiz biraz artmış karsinom riskinin gerçekleştiği tümör işte budur.
+HPV negatif keratinize skuamöz hücreli karsinom farklı bir hasta profilinde gelişir. Genellikle yaşlı kadınlarda görülür ve ortalama yaş yaklaşık 75'tir; bu, HPV pozitif grubun 60 yaş ortalamasından belirgin olarak yüksektir. Zemininde uzun süreli liken skleroz ya da skuamöz hücre hiperplazisi vardır ve HPV ile ilişkili değildir. Liken sklerozda söylediğimiz biraz artmış karsinom riskinin gerçekleştiği tümör işte budur.
 
 Bu yolun da bir öncü lezyonu vardır: diferansiye vulvar intraepitelyal neoplazi.
 Burada anormal keratinizasyon bazal tabakaya sınırlıdır; yani normalde yüzeyde olması gereken keratinleşme bazal tabakada görülür.
@@ -216,30 +216,30 @@ Nadir olgularda dermal invazyon gelişir ve bu durumda prognoz kötüdür.
 @@ Vajinanın genel özellikleri, anomalileri ve Gartner kisti
 Vajina, vulvanın aksine yetişkinlerde nadiren primer hastalık yeridir. Daha sık olarak komşu organ kanserlerinin sekonder tutulumu görülür; bunlar serviks, mesane ve rektum kanserleridir. Komşu yapılardaki enfeksiyonların vajinaya yayılması da sıktır. Bu yüzden yetişkin vajinasında bir tümör görüldüğünde önce komşu organlardan yayılım düşünülür. Vajinanın konjenital anomalileri nadirdir. Vajinanın tam yokluğu ve septalı ya da çift vajina görülebilir. Septalı vajinaya sıklıkla septalı serviks, bazen de septalı uterus eşlik eder; bu yüzden üst genital yapılar da değerlendirilir.
 
-Gartner kanal kisti lateral vajinal duvarda yerleşir ve kalıcı Volf kanalı kalıntısından gelişir.
+Gartner kanal kisti lateral vajinal duvarda yerleşir ve kalıcı Wolff kanalı kalıntısından gelişir.
 Burası önemli, çıkmış sorularda Gartner kistinin yeri soruldu: cevap vajen yan duvarıdır.
 Mezosalpinks, uterus yan duvarı, serviks ya da vestibulum girişi değildir.
 Gartner kistlerinin çoğu benign ve asemptomatiktir; büyük boyuta ulaştığında semptom verebilir.
 
-@@ Vajinit: tanım, yatkınlık ve Kandida
-Vajinit vajinanın inflamatuvar durumudur. Genellikle enfeksiyona bağlıdır ve geçicidir; temel bulgusu vajinal akıntı, yani lökoredir. Etkenler bakteri, mantar ve parazitlerdir ve bunların pek çoğu normal kommensal flora üyesidir; yani sağlıklı kadında da bulunur. Etken çoğu zaman dışarıdan gelmez, flora dengesini bozan durumlar kommensal mikroorganizmayı patojen hale getirir. Bu durumlar diyabet, sistemik antibiyotik tedavisi, immün yetmezlik, gebelik ve yakın zamanda geçirilmiş düşüktür. Sık görülen üç etken Kandida albikans, Trikomonas vajinalis ve Gardnerella vajinalistir; her biri farklı bir akıntı tipiyle seyreder ve akıntının niteliği ayırıcı tanıda yol gösterir.
+@@ Vajinit: tanım, yatkınlık ve Candida
+Vajinit vajinanın inflamatuvar durumudur. Genellikle enfeksiyona bağlıdır ve geçicidir; temel bulgusu vajinal akıntı, yani lökoredir. Etkenler bakteri, mantar ve parazitlerdir ve bunların pek çoğu normal kommensal flora üyesidir; yani sağlıklı kadında da bulunur. Etken çoğu zaman dışarıdan gelmez, flora dengesini bozan durumlar kommensal mikroorganizmayı patojen hale getirir. Bu durumlar diyabet, sistemik antibiyotik tedavisi, immün yetmezlik, gebelik ve yakın zamanda geçirilmiş düşüktür. Sık görülen üç etken Candida albicans, Trichomonas vaginalis ve Gardnerella vaginalis'tir; her biri farklı bir akıntı tipiyle seyreder ve akıntının niteliği ayırıcı tanıda yol gösterir.
 
-Kandida albikans kadınların yaklaşık yüzde yirmisinde normal vajinal flora üyesidir.
-Dolayısıyla Kandida'nın bulunması tek başına hastalık değildir.
+Candida albicans kadınların yaklaşık %20'sinde normal vajinal flora üyesidir.
+Dolayısıyla Candida'nın bulunması tek başına hastalık değildir.
 Semptomatik enfeksiyon genellikle yatkınlaştırıcı faktörlere ya da virülan bir suşla süperenfeksiyona bağlıdır.
 Klinikte kalın, beyaz, peynirimsi akıntı ile kaşıntı ve yanma görülür.
 Tanı Papanicolaou testi, yani Pap testi ile hif formlarının gösterilmesiyle konur; Pap yaymasında skuamöz hücreler arasında ince, uzun mantar hifleri izlenir.
 
 @@ Trikomonas ve Gardnerella vajiniti
-Trikomonas vajinalis bir parazittir ve dünya çapında viral olmayan en yaygın cinsel yolla bulaşan enfeksiyondur. Enfeksiyonların çoğu asemptomatiktir; belirti olmaması enfeksiyonu dışlamaz. Semptomatik olgularda bol, sulu, gri yeşil akıntı ve vulvar irritasyon görülür. Tanı mikroskopide hareketli parazitin gösterilmesiyle konur. Pap testinde organizmalar karakteristik oval bir çekirdek ve soluk kırmızı granüller gösterir. Burası önemli, bu soru çıkmış sınavlarda birkaç kez soruldu: servikovajinal yayma sitolojisinde, yani Pap testinde doğrudan tespit edilebilen etken Trikomonas vajinalistir. Şıklarda Treponema pallidum, Neisseria gonorrhoeae, herpes simpleks virüsü ve Chlamydia trachomatis görürsünüz; doğru cevap Trikomonas'tır.
+Trichomonas vaginalis bir parazittir ve dünya çapında viral olmayan en yaygın cinsel yolla bulaşan enfeksiyondur. Enfeksiyonların çoğu asemptomatiktir; belirti olmaması enfeksiyonu dışlamaz. Semptomatik olgularda bol, sulu, gri yeşil akıntı ve vulvar irritasyon görülür. Tanı mikroskopide hareketli parazitin gösterilmesiyle konur. Pap testinde organizmalar karakteristik oval bir çekirdek ve soluk kırmızı granüller gösterir. Burası önemli, bu soru çıkmış sınavlarda birkaç kez soruldu: servikovajinal yayma sitolojisinde, yani Pap testinde doğrudan tespit edilebilen etken Trichomonas vaginalis'tir. Şıklarda Treponema pallidum, Neisseria gonorrhoeae, herpes simpleks virüsü ve Chlamydia trachomatis görürsünüz; doğru cevap Trichomonas'tır.
 
-Gardnerella vajinalis bakteriyel vajinozun ana nedenidir ve derste gram negatif kokobasil olarak tanımlanır.
+Gardnerella vaginalis bakteriyel vajinozun ana nedenidir ve derste gram negatif kokobasil olarak tanımlanır.
 Klinikte ince, gri beyaz, kötü kokulu akıntı vardır ve hasta balık kokusundan yakınır.
 Mikroskopide ipucu hücreleri görülür; bunlar yüzeyi kokobasillerle kaplı yassı epitel hücreleridir ve tanıda ayırt edici özelliktir.
 
 Böylece üç sık vajinit etkenini akıntı ve mikroskopiyle ayırırız.
-Kandida'da kalın, beyaz, peynirimsi akıntı ve Pap testinde hifler vardır.
-Trikomonas'ta bol, sulu, gri yeşil akıntı ve hareketli parazit vardır.
+Candida'da kalın, beyaz, peynirimsi akıntı ve Pap testinde hifler vardır.
+Trichomonas'ta bol, sulu, gri yeşil akıntı ve hareketli parazit vardır.
 Gardnerella'da ince, gri beyaz, balık kokulu akıntı ve ipucu hücreleri vardır.
 
 @@ Vajinanın malign tümörleri: karsinom ve öncü lezyon
@@ -251,11 +251,11 @@ Bölgesel iliak lenf düğümlerine metastaz eğilimindedir; uzak metastaz daha 
 Tedavi ve prognoz evreye bağlıdır.
 
 @@ Embriyonel rabdomiyosarkom: sarkoma botryoides
-Embriyonel rabdomiyosarkom, diğer adıyla sarkoma botryoides, vajinanın nadir bir tümörüdür. Malign embriyonel rabdomiyoblastlardan köken alır; yani iskelet kası yönünde farklanan embriyonel hücrelerden gelişir. En sık beş yaşından küçük bebek ve çocuklarda görülür. Vajina dışında idrar kesesi ve safra kanallarında da gelişebilir; ayrıntıları yumuşak doku tümörleri bölümünde işlenir.
+Embriyonel rabdomiyosarkom, diğer adıyla sarkoma botryoides, vajinanın nadir bir tümörüdür. Malign embriyonel rabdomiyoblastlardan köken alır; yani iskelet kası yönünde farklanan embriyonel hücrelerden gelişir. En sık 5 yaşından küçük bebek ve çocuklarda görülür. Vajina dışında idrar kesesi ve safra kanallarında da gelişebilir; ayrıntıları yumuşak doku tümörleri bölümünde işlenir.
 
 Burası önemli, bu tümör çıkmış sorularda çok sık soruldu.
 Vajen ve mesane gibi içi boş organların duvarında gelişen, iskelet kası diferansiyasyonu gösteren malign mezenkimal tümör botrioid sarkomdur, yani embriyonel rabdomiyosarkomdur.
-Uzun bir vaka kökü şöyle tarif eder: çoğunlukla beş yaşın altındaki çocuklarda ve bebeklerde, nadiren genç kadınlarda görülen, çocukluk ve ergenlik çağının en sık yumuşak doku sarkomu olan, yumuşak polipoid kitleler oluşturan, mesane ve safra yollarında da görülebilen tümör.
+Uzun bir vaka kökü şöyle tarif eder: çoğunlukla 5 yaşın altındaki çocuklarda ve bebeklerde, nadiren genç kadınlarda görülen, çocukluk ve ergenlik çağının en sık yumuşak doku sarkomu olan, yumuşak polipoid kitleler oluşturan, mesane ve safra yollarında da görülebilen tümör.
 Makroskopide vajinadan sarkan, üzüm salkımına benzeyen polipoid kitleler vardır; botryoides adı da üzüm salkımı anlamından gelir.
 Mikroskopide bir kısmı raket şeklinde uzantılar içeren küçük primitif hücreler görülür ve malign hücreler mukozal yüzeyin hemen altında yığılarak kambiyum tabakasını oluşturur.
 Bu tarifi gördüğünüzde kondilom, nöroblastom, malign melanom ya da vajinal adenozis değil, sarkoma botryoides dersiniz.
@@ -270,6 +270,6 @@ Rabdomiyosarkomların en ölümcül olanı pleomorfik varyanttır.
 Servikal lezyonların çoğu inflamatuvardır, yani servisittir. Öte yandan servikal skuamöz hücreli karsinom dünya çapında kadınlarda en sık görülen kanserlerden biridir ve HPV ile ilişkisi belirgindir. Gelişmekte olan ülkelerde mortalitesi yüksektir. Bu nedenle tarama programları büyük önem taşır; tarama Papanicolaou testi ve HPV testi ile yapılır. Servikal lezyonlar ilerleyen derslerde ayrıntılı olarak işlenecektir.
 
 Özetle bu dersi HPV ekseninde toparlayabiliriz.
-Düşük riskli HPV tip altı ve on bir kondiloma akuminatum yapar ve bu lezyon kansere dönüşmez.
-Yüksek riskli HPV, özellikle tip on altı, vulvar intraepitelyal neoplazi, vajinal intraepitelyal neoplazi, servikal lezyonlar ve karsinomlarla ilişkilidir.
+Düşük riskli HPV tip 6 ve 11 kondiloma akuminatum yapar ve bu lezyon kansere dönüşmez.
+Yüksek riskli HPV, özellikle tip 16, vulvar intraepitelyal neoplazi, vajinal intraepitelyal neoplazi, servikal lezyonlar ve karsinomlarla ilişkilidir.
 HPV ile ilişkisiz yolda ise liken skleroz ya da skuamöz hücre hiperplazisi zemininde diferansiye öncü lezyon üzerinden keratinize vulvar skuamöz hücreli karsinom gelişir.

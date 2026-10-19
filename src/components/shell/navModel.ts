@@ -3,7 +3,9 @@ import {
   Archive,
   AudioLines,
   CircleCheckBig,
+  CloudDownload,
   ClipboardCheck,
+  Dna,
   Headphones,
   MessageCircleQuestion,
   Star,
@@ -65,6 +67,7 @@ const I: Record<string, NavItem> = {
   alternatif_cozucu: { id: 'alternatif_cozucu', label: 'Alternatif çözücü', short: 'Alternatif', hint: 'Her soru baştan sona sesli anlatılır, otomatik geçer', icon: Headphones, tint: '#6366F1' },
   en_onemliler: { id: 'en_onemliler', label: 'En önemliler', short: 'Önemli', hint: 'Konu başına en önemli bilgiler, 100 puan', icon: Star, tint: '#F59E0B' },
   patoloji_checkup: { id: 'patoloji_checkup', label: 'Patoloji Check Up', short: 'Check Up', tile: 'Patoloji Check Up', hint: 'Mediyatör, sitokin, hücre ve hastalık tabloları; kendini sına', icon: Table2, tint: '#14B8A6' },
+  genetik_checkup: { id: 'genetik_checkup', label: 'Genetik Check Up', short: 'Genetik', tile: 'Genetik Check Up', hint: 'Sendrom eşleştirme, kanser hedef ilaçları, belirteçler, çıkmış ve örnek sorular', icon: Dna, tint: '#10B981' },
   spots: { id: 'spots', label: 'Sınav spotları', short: 'Spotlar', hint: 'En sık, ayırıcı bulgular, tuzaklar', icon: Crosshair, tint: '#FF3B30' },
   // Soru çöz
   past_exams: { id: 'past_exams', label: 'Çıkmış sorular', short: 'Çıkmış', hint: 'Kurullara göre çıkmışlar', icon: Archive, tint: '#007AFF' },
@@ -81,6 +84,7 @@ const I: Record<string, NavItem> = {
   leaderboard: { id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy, tint: '#FFB340' },
   // Kişisel
   study: { id: 'study', label: 'Çalışma masam', short: 'Masam', tile: 'Çalışma masam', hint: 'Kendi listelerin, notların, hızlı test', icon: ListChecks, tint: '#34C759' },
+  cevrimdisi: { id: 'cevrimdisi', label: 'Çevrimdışı', short: 'Çevrimdışı', tile: 'Çevrimdışı', hint: 'Dersleri cihaza indir, internetsiz çalış; indirilenleri yönet', icon: CloudDownload, tint: '#0A84FF' },
   bitirdiklerim: { id: 'bitirdiklerim', label: 'Bitirdiklerim', short: 'Bitenler', tile: 'Bitirdiklerim', hint: 'Konu konu bitenler, harcanan süre, kalanların tahmini', icon: CircleCheckBig, tint: '#30D158' },
   stats: { id: 'stats', label: 'İstatistiklerim', short: 'İstatistik', tile: 'İstatistik', hint: 'İlerleme, puan ve etkinlik', icon: BarChart3, tint: '#5E5CE6' },
   music: { id: 'music', label: 'Müzik', hint: 'Çalışırken dinle', icon: Music, tint: '#FF375F' },
@@ -99,11 +103,11 @@ export const NAV_ITEMS = I;
 export const NAV_TREE: NavGroup[] = [
   { label: null, items: [I.today] },
   { label: 'Ders çalış', items: [I.learn, I.canli_ders, I.notes, I.flashcards, I.summaries] },
-  { label: 'Sınava hazırlan', items: [I.sinav_calisma, I.soru_cozucu, I.alternatif_cozucu, I.en_onemliler, I.patoloji_checkup, I.spots] },
+  { label: 'Sınava hazırlan', items: [I.sinav_calisma, I.soru_cozucu, I.alternatif_cozucu, I.en_onemliler, I.patoloji_checkup, I.genetik_checkup, I.spots] },
   { label: 'Soru çöz', items: [I.past_exams, I.questions, I.practice, I.ornek_sorular] },
   { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar] },
   { label: 'Topluluk', items: [I.matrix, I.leaderboard] },
-  { label: 'Kişisel', items: [I.bitirdiklerim, I.study, I.stats, I.music] },
+  { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music] },
 ];
 
 /** Telefonda alt gezinmede doğrudan duran sayfalar (v10 sıra: Ekle · Öğren · Havuz · Çıkmış); gerisi "Daha" sayfasında */
@@ -120,10 +124,10 @@ export const MORE_TREE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items
 const V12_RAIL_IDS = new Set<AppRoute>([
   'today',
   'learn', 'canli_ders', 'notes', 'flashcards',
-  'sinav_calisma', 'soru_cozucu', 'alternatif_cozucu', 'en_onemliler', 'patoloji_checkup', 'spots',
+  'sinav_calisma', 'soru_cozucu', 'alternatif_cozucu', 'en_onemliler', 'patoloji_checkup', 'genetik_checkup', 'spots',
   'past_exams', 'questions', 'practice',
   'glossary', 'diseases',
-  'bitirdiklerim',
+  'bitirdiklerim', 'cevrimdisi',
 ]);
 const grupSuz = (keep: (it: NavItem) => boolean): NavGroup[] =>
   NAV_TREE.map((g) => ({ ...g, items: g.items.filter(keep) })).filter((g) => g.items.length > 0);

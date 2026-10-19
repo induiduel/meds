@@ -6,6 +6,7 @@ import { defineConfig } from 'vite';
 import dotenv from 'dotenv';
 import { splitLearningDecks } from './scripts/vite/splitLearningDecks';
 import { surumDosyasi } from './scripts/vite/surumDosyasi';
+import { cevrimdisiManifest } from './scripts/vite/cevrimdisiManifest';
 
 dotenv.config();
 
@@ -14,7 +15,7 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url));
 export default defineConfig(({ mode }) => {
   return {
     base: process.env.VITE_BASE || '/',
-    plugins: [splitLearningDecks(__dirname), surumDosyasi(__dirname), react(), tailwindcss()],
+    plugins: [splitLearningDecks(__dirname), surumDosyasi(__dirname), cevrimdisiManifest(__dirname), react(), tailwindcss()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

@@ -13,6 +13,7 @@
  *   /manage      → yönetim konsolu (manage.nofrostlife.com.tr ile aynı ekran)
  *   /canliders   → Sesli ders (eski adı Canlı ders): sesli dersler (liste), /canliders/<key> metin + PDF ile dinleme
  *   /soru-cozucu → sesli soru çözücü (branş başlangıç ekranı; eski /spotlar?gorunum=cozucu buraya yönlenir)
+ *   /cevrimdisi → çevrimdışı merkezi (ders paketlerini indir, güncelle, sil)
  *   /alternatif-cozucu → patoloji alternatif sesli çözücü (kısa anlatım, otomatik geçiş)
  *   /en-onemliler → sınav için en önemliler (100 puan; eski /spotlar?gorunum=onem buraya yönlenir)
  *   /patoloji-check-up → Patoloji Hızlı Check Up: ders slaytlarından karşılaştırma tabloları + kısa notlar (?bolum=)
@@ -59,7 +60,9 @@ export type AppRoute =
   | 'alternatif_cozucu'
   | 'en_onemliler'
   | 'patoloji_checkup'
-  | 'bitirdiklerim';
+  | 'genetik_checkup'
+  | 'bitirdiklerim'
+  | 'cevrimdisi';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -98,7 +101,9 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   alternatif_cozucu: '/alternatif-cozucu',
   en_onemliler: '/en-onemliler',
   patoloji_checkup: '/patoloji-check-up',
+  genetik_checkup: '/genetik-check-up',
   bitirdiklerim: '/bitirdiklerim',
+  cevrimdisi: '/cevrimdisi',
 };
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
@@ -138,7 +143,9 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   alternatif_cozucu: 'Alternatif çözücü',
   en_onemliler: 'En önemliler',
   patoloji_checkup: 'Patoloji Hızlı Check Up',
+  genetik_checkup: 'Genetik Sınav Kalıbı & Check Up',
   bitirdiklerim: 'Bitirdiklerim',
+  cevrimdisi: 'Çevrimdışı',
 };
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
@@ -234,10 +241,20 @@ const ALIASES: Record<string, AppRoute> = {
   'check-up': 'patoloji_checkup',
   checkup: 'patoloji_checkup',
   'patoloji-checkup': 'patoloji_checkup',
+  genetik_checkup: 'genetik_checkup',
+  'genetik-checkup': 'genetik_checkup',
+  'genetik-check-up': 'genetik_checkup',
+  genetik: 'genetik_checkup',
+  tbg: 'genetik_checkup',
+  'genetik-kampi': 'genetik_checkup',
   bitirdiklerim: 'bitirdiklerim',
   bitirdiklerimiz: 'bitirdiklerim',
   ilerlemem: 'bitirdiklerim',
   'kontrol-listesi': 'bitirdiklerim',
+  cevrimdisi: 'cevrimdisi',
+  offline: 'cevrimdisi',
+  indirilenler: 'cevrimdisi',
+  'cevrimdisi-mod': 'cevrimdisi',
 };
 
 export interface ParsedRoute {

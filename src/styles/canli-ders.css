@@ -111,7 +111,9 @@
 .cd-bolum-ad { position: sticky; top: -8px; z-index: 1; margin: 0 -20px 6px; padding: 10px 20px 8px; background: var(--color-white); border-bottom: 1px solid var(--color-line-soft, var(--color-line));
   font-size: 13px; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; color: var(--color-ink-3); }
 .cd-p { margin: 0 -10px; padding: 8px 10px; border-radius: 10px; font-size: var(--read-size, 16px); line-height: 1.68; color: var(--color-ink-2); cursor: pointer;
-  content-visibility: auto; contain-intrinsic-size: auto 120px; transition: background-color .25s, color .25s; white-space: pre-line; }
+  transition: background-color .25s, color .25s; white-space: pre-line; }
+/* content-visibility KULLANMA: tahmini yükseklikler iOS Safari'de (scroll anchoring yok) yukarı kaydırırken metni zıplatıyor,
+ * otomatik takip de yanlış yere kayıyordu; ders başına ~100 paragraf doğrudan çizilir. */
 .cd-p:hover { background: var(--color-canvas); }
 .cd-p-sar { position: relative; }
 .cd-p-sar .cd-p { padding-right: 38px; }
@@ -122,7 +124,7 @@
 .cd-p-kopya:hover { background: var(--color-line-soft, var(--color-line)); color: var(--color-ink); }
 .cd-p-kopya.is-tamam { opacity: 1; color: var(--color-success, var(--color-accent)); }
 @media (hover: none) { .cd-p-kopya { opacity: .6; } }
-.cd-p.is-on { background: var(--color-accent-soft); color: var(--color-ink); content-visibility: visible; }
+.cd-p.is-on { background: var(--color-accent-soft); color: var(--color-ink); }
 .cd-metin ::highlight(cd-cumle) { background-color: color-mix(in srgb, var(--color-accent) 26%, transparent); color: var(--color-ink); }
 .cd-metin mark.cd-cumle { background: color-mix(in srgb, var(--color-accent) 26%, transparent); color: var(--color-ink); border-radius: 3px; }
 
@@ -275,6 +277,21 @@
 .cd-chip.is-ses { background: var(--color-accent-soft); color: var(--color-accent); }
 .cd-satir-ilerleme { display: inline-flex; align-items: center; gap: 6px; color: var(--color-accent); font-weight: 600; }
 .cd-satir-ilerleme .cd-ilerleme { width: 56px; }
+
+/* ders başlığı (tablet/masaüstü): sığmayınca araçlar alt satıra iner; ad hiçbir zaman "Pat…" diye ezilmez,
+ * düğmeler sağ kenardan taşmaz (iPad yatay 1180 px'te Yıldızlılar/⋯/tam ekran ekran dışındaydı) */
+@media (min-width: 641px) {
+  .cd-ders-bas { flex-wrap: wrap; row-gap: 6px; }
+  .cd-ders-ad { flex: 1 1 260px; }
+  .cd-ders-arac { flex-wrap: wrap; row-gap: 6px; }
+  .cd-ders-uc { margin-left: auto; }
+}
+@media (min-width: 641px) and (max-width: 1100px) {
+  .cd-ders-uc .cd-btn-yildizli { position: relative; width: 34px; padding: 0; justify-content: center; }
+  .cd-ders-uc .cd-btn-yildizli > span { display: none; }
+  .cd-ders-uc .cd-btn-yildizli[data-sayi]::after { content: attr(data-sayi); position: absolute; top: -5px; right: -5px; min-width: 16px; height: 16px; padding: 0 4px; box-sizing: border-box;
+    border-radius: 99px; background: #f59e0b; color: #fff; font-size: 10px; font-weight: 700; line-height: 16px; text-align: center; }
+}
 
 /* ders başlığı: telefonda iki satıra kadar (kesilip okunmaz olmasın) */
 @media (max-width: 640px) {
@@ -472,6 +489,11 @@
   .cd-ders-bas > .cd-ders-ad { grid-area: ad; order: 0; flex-basis: auto; padding: 0; font-size: 14.5px; line-height: 1.25; white-space: normal;
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .cd-ders-bas > .cd-ders-uc { grid-area: uc; gap: 4px; }
+  /* Yıldızlılar telefonda simge + sayı rozeti (yazı sağ kenardan taşıyordu; tam liste ⋯ menüsünde) */
+  .cd-ders-uc .cd-btn-yildizli { position: relative; }
+  .cd-ders-uc .cd-btn-yildizli > span { display: none; }
+  .cd-ders-uc .cd-btn-yildizli[data-sayi]::after { content: attr(data-sayi); position: absolute; top: -5px; right: -5px; min-width: 16px; height: 16px; padding: 0 4px; box-sizing: border-box;
+    border-radius: 99px; background: #f59e0b; color: #fff; font-size: 10px; font-weight: 700; line-height: 16px; text-align: center; }
   .cd-ders-bas > .cd-ders-arac { grid-area: arac; flex-wrap: wrap; gap: 4px; }
   .cd-ders-bas .cd-sekmeler { flex: 1; min-width: 140px; margin: 0; display: flex; }
   .cd-ders-bas .cd-sekmeler button { flex: 1; min-width: 0; justify-content: center; height: 30px; padding: 0 6px; font-size: 12px; }
@@ -759,3 +781,46 @@
 .cd-metin .cd-onem::highlight(cd-cumle), .cd-metin .cd-onem *::highlight(cd-cumle) { color: #c8262d; }
 :root[data-mode="dark"] .cd-metin .cd-onem::highlight(cd-cumle), :root[data-mode="dark"] .cd-metin .cd-onem *::highlight(cd-cumle) { color: #ff7a7a; }
 .cd-metin mark.cd-cumle .cd-onem, .cd-metin .cd-onem mark.cd-cumle { color: inherit; }
+
+/* ── Liste yeniden düzeni (2026-10-20, tasarım tuvali "Sesli Dersler ve En Önemliler") ── */
+.cd-liste { gap: 16px; max-width: 1040px; }
+.cd-liste-bas { gap: 16px; }
+.cd-liste-baslik { align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.cd-liste-baslik h1 { font-size: 30px; letter-spacing: -.02em; line-height: 1.1; }
+.cd-liste-baslik .cd-liste-ust { margin: 0 0 4px; font-size: 12.5px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.cd-liste-baslik .cd-liste-arac { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+
+.cd-liste .cd-devam { grid-template-columns: auto minmax(0, 1fr); gap: 16px; padding: 18px 20px; border: 0; border-radius: 18px; background: var(--color-ink); color: var(--color-white); }
+.cd-liste .cd-devam small { color: color-mix(in srgb, var(--color-white) 70%, transparent); }
+.cd-liste .cd-devam b { font-size: 17px; font-weight: 600; }
+.cd-liste .cd-devam .cd-ilerleme { background: color-mix(in srgb, var(--color-white) 22%, transparent); height: 5px; }
+.cd-devam-oynat { display: grid; place-items: center; width: 56px; height: 56px; border: 0; border-radius: 50%; background: var(--color-accent); color: var(--color-on-accent, #fff); cursor: pointer; flex: none; }
+.cd-devam-oynat > svg { width: 24px; height: 24px; fill: currentColor; margin-left: 2px; }
+
+.cd-serit { position: sticky; top: var(--sh-top-h, 0px); z-index: 5; display: flex; flex-direction: column; gap: 10px; padding: 8px 0; background: var(--color-canvas); }
+.cd-serit .cd-liste-sira { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.cd-serit .cd-gorunum { display: flex; gap: 4px; padding: 4px; border-radius: 12px; background: var(--color-field); }
+.cd-serit .cd-gorunum > button { min-height: 36px; padding: 0 14px; border: 0; border-radius: 9px; background: transparent; color: var(--color-ink-2); font-weight: 500; }
+.cd-serit .cd-gorunum > button.is-on { background: var(--color-white); color: var(--color-ink); font-weight: 600; box-shadow: 0 1px 2px rgb(0 0 0 / .08); }
+.cd-serit .cd-ara { flex: 1 1 260px; }
+.cd-serit .cd-ara input { height: 44px; }
+.cd-serit .cd-kat-cipler { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.cd-serit .cd-kat-cipler > button { flex: none; min-height: 36px; border-radius: 18px; }
+.cd-serit .cd-kat-cipler > button.is-on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
+
+.cd-liste .cd-satirlar { border-radius: 16px; }
+.cd-liste .cd-satir-ana { grid-template-columns: 44px 30px minmax(0, 1fr) auto auto; gap: 12px; padding: 10px 14px; }
+.cd-liste .cd-satir-ana > .cd-btn.is-yuvarlak { width: 44px; height: 44px; border-radius: 50%; background: var(--color-field); border-color: transparent; }
+.cd-liste .cd-satir-ana > .cd-btn.is-yuvarlak.is-on { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+.cd-liste .cd-satir.is-bitti .cd-satir-ana > .cd-btn.is-yuvarlak:not(.is-on) { background: color-mix(in srgb, var(--color-ok) 16%, transparent); color: var(--color-ok); }
+.cd-liste .cd-no { width: 30px; height: auto; background: none; justify-content: end; color: var(--color-ink-3); font-size: 13px; }
+.cd-liste .cd-satir.is-caliyor .cd-no { background: none; color: var(--color-accent); }
+.cd-liste .cd-satir-ad b { font-size: 15px; }
+.cd-satir-sure { min-width: 52px; text-align: right; font-size: 13.5px; font-weight: 500; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
+@media (max-width: 560px) {
+  .cd-liste-baslik h1 { font-size: 25px; }
+  .cd-liste .cd-satir-ana { grid-template-columns: 44px minmax(0, 1fr) auto auto; gap: 10px; padding: 8px 10px; }
+  .cd-liste .cd-no, .cd-satir-sure { display: none; }
+  .cd-serit .cd-gorunum { width: 100%; }
+  .cd-serit .cd-gorunum > button { flex: 1; padding: 0 8px; }
+}

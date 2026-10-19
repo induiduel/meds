@@ -1,23 +1,23 @@
 # Böbrek Tümörleri
 
 @@ İdrar yolu neoplazmlarına giriş ve sıklık
-İdrar yollarında iyi huylu, yani benign olanlardan öldürücü kanserlere kadar uzanan geniş bir neoplazm yelpazesi görülür. Neoplazm dediğimiz şey, hücrelerin kontrolsüz ve otonom çoğalmasıyla oluşan yeni doku kitlesidir; benign de olabilir, malign de. Bu yelpazenin en sessiz ucunda küçük kortikal papiller adenomlar durur. Otopsi serilerinde erişkinlerin yüzde kırkına kadarında böbrek korteksinde yarım santimetreden küçük, papiller yapılı bu adenomlar bulunur. Bu lezyonlar çoğunlukla klinik olarak önemsizdir; kişi yaşamı boyunca hiçbir belirti vermeden onlarla yaşar. Buradan çıkaracağımız ders şudur: bir böbrek lezyonunun sık görülmesi, onun tehlikeli olduğu anlamına gelmez.
+İdrar yollarında iyi huylu, yani benign olanlardan öldürücü kanserlere kadar uzanan geniş bir neoplazm yelpazesi görülür. Neoplazm dediğimiz şey, hücrelerin kontrolsüz ve otonom çoğalmasıyla oluşan yeni doku kitlesidir; benign de olabilir, malign de. Bu yelpazenin en sessiz ucunda küçük kortikal papiller adenomlar durur. Otopsi serilerinde erişkinlerin %40'ına kadarında böbrek korteksinde yarım santimetreden küçük, papiller yapılı bu adenomlar bulunur. Bu lezyonlar çoğunlukla klinik olarak önemsizdir; kişi yaşamı boyunca hiçbir belirti vermeden onlarla yaşar. Buradan çıkaracağımız ders şudur: bir böbrek lezyonunun sık görülmesi, onun tehlikeli olduğu anlamına gelmez.
 
 Şimdi sıklık sıralamasına bakalım, çünkü hangi tümörü önce düşüneceğimizi bu sıralama belirler.
 Böbreğin en sık malign tümörü renal hücreli karsinomdur.
-Daha az sıklıkla nefroblastom, yani Vilms tümörü ile kaliks ve pelvisin, yani böbreğin idrarı toplayan boşluk sisteminin primer neoplazmları görülür.
+Daha az sıklıkla nefroblastom, yani Wilms tümörü ile kaliks ve pelvisin, yani böbreğin idrarı toplayan boşluk sisteminin primer neoplazmları görülür.
 Burası önemli: böbreğin en sık malign tümörü renal hücreli karsinomdur, ama üriner sistemin bütününe baktığınızda alt idrar yolu neoplazmları renal hücreli karsinomdan yaklaşık 2 kat daha yaygındır.
 Dikkat edin, bu iki ayrı sıralama sık karıştırılır.
 Böbrek içinde lider renal hücreli karsinomdur; sistem düzeyinde ise tümörlerin çoğu böbrekte değil, alt idrar yolundadır.
 
 @@ Renal hücreli karsinom: köken, sıklık ve demografi
-Renal hücreli karsinom, böbreğin tubuler epitelinden gelişen bir karsinomdur; yani epitel kökenli malign bir tümördür. Tübüllerin yoğun olduğu bölge korteks olduğu için tümör ağırlıkla böbrek korteksine yerleşir. Burası önemli, bu tanım çıkmış sorularda neredeyse kelimesi kelimesine soruldu: renal tubuler epitelden köken alan, böbreğin tüm primer malign tümörlerinin %80 ile seksen beşini ve tüm erişkin kanserlerinin %2 ile üçünü oluşturan tümör renal hücreli karsinomdur. Şıklarda transizyonel hücreli karsinom, Vilms tümörü, mezoblastik nefroma ya da rabdoid tümör görseniz de bu üçlü sayı yalnız renal hücreli karsinomu tarif eder. Böylece tümör böbrekte baskın, ama tüm erişkin kanserleri içinde görece küçük bir paya sahiptir.
+Renal hücreli karsinom, böbreğin tubuler epitelinden gelişen bir karsinomdur; yani epitel kökenli malign bir tümördür. Tübüllerin yoğun olduğu bölge korteks olduğu için tümör ağırlıkla böbrek korteksine yerleşir. Burası önemli, bu tanım çıkmış sorularda neredeyse kelimesi kelimesine soruldu: renal tubuler epitelden köken alan, böbreğin tüm primer malign tümörlerinin %80 ile 85'ini ve tüm erişkin kanserlerinin %2 ile 3'ünü oluşturan tümör renal hücreli karsinomdur. Şıklarda transizyonel hücreli karsinom, Wilms tümörü, mezoblastik nefroma ya da rabdoid tümör görseniz de bu üçlü sayı yalnız renal hücreli karsinomu tarif eder. Böylece tümör böbrekte baskın, ama tüm erişkin kanserleri içinde görece küçük bir paya sahiptir.
 
 Bu tümörün klinik ağırlığı yalnız sıklığından değil, öldürücülüğünden de gelir.
-Amerika Birleşik Devletleri'nde yılda yaklaşık altmış beş bin yeni olgu görülür ve hastaların yaklaşık %40'ı bu hastalık nedeniyle kaybedilir.
+Amerika Birleşik Devletleri'nde yılda yaklaşık 65.000 yeni olgu görülür ve hastaların yaklaşık %40'ı bu hastalık nedeniyle kaybedilir.
 Bu yüksek ölüm oranı, olguların önemli bir kısmının geç tanı aldığını düşündürür.
-En sık 6. ve 7. dekatta, yani elli ile 69 yaş arasında görülür.
-Erkek kadın oranı yaklaşık ikiye birdir; yani erkeklerde 2 kat sıktır.
+En sık altıncı ve yedinci dekatta, yani 50 ile 69 yaş arasında görülür.
+Erkek kadın oranı yaklaşık 2'ye 1'dir; yani erkeklerde 2 kat sıktır.
 Altmışlı yaşlarda bir erkekte saptanan böbrek kitlesi bu nedenle renal hücreli karsinom açısından yüksek ön olasılık taşır.
 
 @@ Risk faktörleri ve kronik diyaliz
@@ -29,83 +29,83 @@ Bu kistler doğuştan değil, diyaliz sürecinde ortaya çıkar; kalıtsal polik
 Bu hastalarda renal hücreli karsinom riski yaklaşık 30 kat artar.
 Yani sigara ya da obezitenin yarattığı riske göre çok daha güçlü bir zemindir.
 Uzun süredir diyalizde olan bir hastada böbrekte yeni bir solid odak görüldüğünde malignite açısından ciddiye alınmalıdır.
-Küçük bir not düşeyim: vasküler ve kistik böbrek hastalıkları dersinde bu risk yaklaşık yüz kat olarak verilir; bu derste ise sayı yaklaşık otuz kattır.
+Küçük bir not düşeyim: vasküler ve kistik böbrek hastalıkları dersinde bu risk yaklaşık 100 kat olarak verilir; bu derste ise sayı yaklaşık 30 kattır.
 
-@@ Moleküler sınıflama ve üç ana alt tip
-Renal hücreli karsinom tek bir hastalık değil, farklı genetik yolaklardan gelişen bir tümör ailesidir. Genetik bilgi arttıkça, morfolojik benzerliklerin ardında farklı gen değişiklikleri olduğu anlaşıldı ve moleküler temelli sınıflama benimsendi. En sık üç alt tip berrak hücreli karsinom, papiller böbrek hücreli karsinom ve kromofob böbrek hücreli karsinomdur. Sıklık sıralaması şöyledir: berrak hücreli yaklaşık %65, papiller %10 ile on beş, kromofob ise yaklaşık %5. Her alt tip kendine özgü bir moleküler değişiklikle tanımlanır ve tümörün davranışı, prognozu ve tedavi yaklaşımı hakkında bilgi verir. Dikkat edin, onkositoma, anjiyomiyolipom ve Vilms tümörü bu üçlüye dahil değildir; onlar ayrı böbrek tümörleridir.
+@@ Moleküler sınıflama ve 3 ana alt tip
+Renal hücreli karsinom tek bir hastalık değil, farklı genetik yolaklardan gelişen bir tümör ailesidir. Genetik bilgi arttıkça, morfolojik benzerliklerin ardında farklı gen değişiklikleri olduğu anlaşıldı ve moleküler temelli sınıflama benimsendi. En sık üç alt tip berrak hücreli karsinom, papiller böbrek hücreli karsinom ve kromofob böbrek hücreli karsinomdur. Sıklık sıralaması şöyledir: berrak hücreli yaklaşık %65, papiller %10 ile 15, kromofob ise yaklaşık %5. Her alt tip kendine özgü bir moleküler değişiklikle tanımlanır ve tümörün davranışı, prognozu ve tedavi yaklaşımı hakkında bilgi verir. Dikkat edin, onkositoma, anjiyomiyolipom ve Wilms tümörü bu üçlüye dahil değildir; onlar ayrı böbrek tümörleridir.
 
-@@ Berrak hücreli karsinom ve Von Hippel Lindau geni
-Berrak hücreli karsinom renal hücreli karsinomların yaklaşık %65'ini oluşturur ve adını hücrelerin mikroskoptaki görünümünden alır. Tümör hücrelerinin sitoplazması berraktır, çünkü hücreler bol miktarda lipit ve glikojen içerir. Bu depo maddeleri rutin doku hazırlığı sırasında çözünüp boşalır ve geride boyanmayan, saydam görünen bir sitoplazma kalır. Burası önemli, çıkmış sorularda 2 kez soruldu: erişkinde en sık saptanan böbrek kanseri, yani erişkin yaş grubunda en sık primer malign böbrek tümörü berrak hücreli renal hücreli karsinomdur. Şıklarda onkositom, papiller tip, kromofob tip ve Vilms tümörü çeldirici olarak yer alır; onkositom benigndir, papiller ve kromofob daha nadirdir, Vilms ise çocukluk çağı tümörüdür.
+@@ Berrak hücreli karsinom ve von Hippel-Lindau geni
+Berrak hücreli karsinom renal hücreli karsinomların yaklaşık %65'ini oluşturur ve adını hücrelerin mikroskoptaki görünümünden alır. Tümör hücrelerinin sitoplazması berraktır, çünkü hücreler bol miktarda lipit ve glikojen içerir. Bu depo maddeleri rutin doku hazırlığı sırasında çözünüp boşalır ve geride boyanmayan, saydam görünen bir sitoplazma kalır. Burası önemli, çıkmış sorularda 2 kez soruldu: erişkinde en sık saptanan böbrek kanseri, yani erişkin yaş grubunda en sık primer malign böbrek tümörü berrak hücreli renal hücreli karsinomdur. Şıklarda onkositom, papiller tip, kromofob tip ve Wilms tümörü çeldirici olarak yer alır; onkositom benigndir, papiller ve kromofob daha nadirdir, Wilms ise çocukluk çağı tümörüdür.
 
-Berrak hücreli karsinomu diğer alt tiplerden ayıran moleküler olay, Von Hipel Lindau genindedir.
+Berrak hücreli karsinomu diğer alt tiplerden ayıran moleküler olay, Von Hippel Lindau genindedir.
 Ayırt edici özellik, bu genin her iki kopyasında kayıp ya da inaktivasyondur.
 Tek kopyanın kaybı yetmez; tümör gelişimi için iki alelin de işlevsiz kalması gerekir.
-Bu da Von Hipel Lindau geninin bir tümör baskılayıcı gen gibi davrandığını gösterir.
+Bu da Von Hippel Lindau geninin bir tümör baskılayıcı gen gibi davrandığını gösterir.
 Olguların büyük çoğunluğu sporadiktir, yani kalıtsal bir zemin yoktur ve değişiklikler tümör hücresinde sonradan oluşur.
-Bir kısmı ise ailesel geçişlidir ya da Von Hipel Lindau hastalığı ile ilişkilidir.
+Bir kısmı ise ailesel geçişlidir ya da Von Hippel Lindau hastalığı ile ilişkilidir.
 
-@@ Von Hippel Lindau hastalığı
-Von Hipel Lindau hastalığı otozomal dominant kalıtılır ve kişiye çoklu neoplazm yatkınlığı kazandırır; aynı kişide birden çok organda tümör gelişebilir. Bu hastalığın klasik tümörleri serebellar hemanjiyoblastomlar ve retinal hemanjiyoblastomlardır. Hemanjiyoblastom, beyincik ve retinada görülen, damardan zengin benign bir tümördür. Burası önemli, bu senaryo çıkmış sorularda aynen soruldu: retinasında ve serebellumunda hemanjiyoblastom tanısı almış bir kişide böbrekte de kitle saptanıyorsa, beklenen gen mutasyonu ve sendrom Von Hipel Lindau'dur. Şıklarda met ailesel geni, Deniz Draş, vagır ve Bekvit Vidman sendromları çeldiricidir; met geni papiller karsinomla, diğer üç sendrom ise biraz sonra göreceğimiz gibi Vilms tümörüyle ilişkilidir.
+@@ von Hippel-Lindau hastalığı
+Von Hippel Lindau hastalığı otozomal dominant kalıtılır ve kişiye çoklu neoplazm yatkınlığı kazandırır; aynı kişide birden çok organda tümör gelişebilir. Bu hastalığın klasik tümörleri serebellar hemanjiyoblastomlar ve retinal hemanjiyoblastomlardır. Hemanjiyoblastom, beyincik ve retinada görülen, damardan zengin benign bir tümördür. Burası önemli, bu senaryo çıkmış sorularda aynen soruldu: retinasında ve serebellumunda hemanjiyoblastom tanısı almış bir kişide böbrekte de kitle saptanıyorsa, beklenen gen mutasyonu ve sendrom Von Hippel Lindau'dur. Şıklarda MET ailesel geni, Denys-Drash, WAGR ve Beckwith-Wiedemann sendromları çeldiricidir; MET geni papiller karsinomla, diğer üç sendrom ise biraz sonra göreceğimiz gibi Wilms tümörüyle ilişkilidir.
 
 Bu hastalıkta böbrek tutulumu sık ve karakteristiktir.
-Etkilenen bireylerin %40 ile altmışında bilateral ve sıklıkla multipl berrak hücreli karsinomlar gelişir.
-Genetik temel, Von Hipel Lindau geninde kalıtsal germ hattı fonksiyon kaybı mutasyonudur ve gen lokusu 3. kromozomun kısa kolunda, üç pe yirmi beş bölgesindedir.
+Etkilenen bireylerin %40 ile 60'ında bilateral ve sıklıkla multipl berrak hücreli karsinomlar gelişir.
+Genetik temel, Von Hippel Lindau geninde kalıtsal germ hattı fonksiyon kaybı mutasyonudur ve gen lokusu 3. kromozomun kısa kolunda, 3p25 bölgesindedir.
 Germ hattı mutasyonu döllenmeden itibaren vücudun tüm hücrelerinde bulunduğu için iki böbrekte de, birden çok odakta tümör çıkabilir.
 Sporadik olguda ise genellikle tek, tek taraflı bir kitle görürüz.
-Yani iki taraflı ve çok odaklı berrak hücreli karsinom gördüğünüzde ailesel zemini, özellikle Von Hipel Lindau hastalığını düşünmelisiniz.
+Yani iki taraflı ve çok odaklı berrak hücreli karsinom gördüğünüzde ailesel zemini, özellikle Von Hippel Lindau hastalığını düşünmelisiniz.
 
-@@ İki vuruş hipotezi ve sporadik tümörlerde üç pe kaybı
-İki kopyanın da kaybolması gerektiği bilgisi iki vuruş hipoteziyle açıklanır. Ailesel olguda ilk vuruş germ hattı Von Hipel Lindau mutasyonudur; kişi bir bozuk aleli doğuştan taşır. 2. vuruş tümörde gerçekleşir ve diğer alelin kaybı ya da susturulmasıdır. Bu, somatik bir mutasyonla olabileceği gibi hipermetilasyonla da olabilir. Hipermetilasyon, gen promotorunun aşırı metillenmesiyle alelin, dizisi değişmeden epigenetik olarak susturulmasıdır. Yani 2. vuruş yalnız mutasyon değildir; hipermetilasyonla susturma da 2. vuruş sayılır. Ailesel olguda her hücrede bir vuruş zaten hazır olduğu için tek bir somatik olay tümörü başlatabilir; bu da çok odaklılığı açıklar.
+@@ 2 vuruş hipotezi ve sporadik tümörlerde 3p kaybı
+İki kopyanın da kaybolması gerektiği bilgisi iki vuruş hipoteziyle açıklanır. Ailesel olguda ilk vuruş germ hattı Von Hippel Lindau mutasyonudur; kişi bir bozuk aleli doğuştan taşır. İkinci vuruş tümörde gerçekleşir ve diğer alelin kaybı ya da susturulmasıdır. Bu, somatik bir mutasyonla olabileceği gibi hipermetilasyonla da olabilir. Hipermetilasyon, gen promotorunun aşırı metillenmesiyle alelin, dizisi değişmeden epigenetik olarak susturulmasıdır. Yani ikinci vuruş yalnız mutasyon değildir; hipermetilasyonla susturma da ikinci vuruş sayılır. Ailesel olguda her hücrede bir vuruş zaten hazır olduğu için tek bir somatik olay tümörü başlatabilir; bu da çok odaklılığı açıklar.
 
 Berrak hücreli karsinomların çoğu sporadik olduğuna göre iki vuruş bu olgularda da olmalıdır; ancak burada iki vuruş da somatiktir.
-Çoğu sporadik tümörde 3. kromozomun kısa kol segmentinde monoallelik delesyon vardır; yani Von Hipel Lindau genini taşıyan bölge bir kromozomdan silinir.
+Çoğu sporadik tümörde 3. kromozomun kısa kol segmentinde monoallelik delesyon vardır; yani Von Hippel Lindau genini taşıyan bölge bir kromozomdan silinir.
 Diğer alelde ise mutasyon ya da inaktivasyon gelişir.
-Sonuç, Von Hipel Lindau protein fonksiyonunun kaybıdır.
+Sonuç, Von Hippel Lindau protein fonksiyonunun kaybıdır.
 Delesyonun tam da genin bulunduğu kolda olması tesadüf değildir.
 Özetle ailesel yolda ilk vuruş doğuştan, 2.'si somatiktir; sporadik yolda ise iki vuruş da tümör hücresinde sonradan oluşur.
 Ortak payda her iki yolda da proteinin işlevini yitirmesidir.
 
-@@ Von Hippel Lindau, hif, damar yapımı ve metabolizma
-Peki bu proteinin kaybı neden tümör yapar? Cevap, hipoksiyle indüklenen faktörler üzerindeki denetimindedir; bunlara kısaca hif diyoruz. Normalde Von Hipel Lindau proteini hif için oksijene bağımlı degradasyon sağlar; oksijen yeterliyken hif sürekli yıkılır ve düzeyi düşük tutulur. Protein yokluğunda hif düzeyleri yüksek kalır ve normoksik koşullarda, yani oksijen normalken bile hif stabildir. Bunu bir yanlış alarm gibi düşünün: hücre oksijeni yeterli olduğu hâlde kendini sürekli oksijensiz ortamdaymış gibi programlar ve hipoksiye uyum için tasarlanmış genetik programlar açık kalır.
+@@ von Hippel-Lindau, HIF, damar yapımı ve metabolizma
+Peki bu proteinin kaybı neden tümör yapar? Cevap, hipoksiyle indüklenen faktörler üzerindeki denetimindedir; bunlara kısaca HIF diyoruz. Normalde Von Hippel Lindau proteini HIF için oksijene bağımlı degradasyon sağlar; oksijen yeterliyken HIF sürekli yıkılır ve düzeyi düşük tutulur. Protein yokluğunda HIF düzeyleri yüksek kalır ve normoksik koşullarda, yani oksijen normalken bile HIF stabildir. Bunu bir yanlış alarm gibi düşünün: hücre oksijeni yeterli olduğu hâlde kendini sürekli oksijensiz ortamdaymış gibi programlar ve hipoksiye uyum için tasarlanmış genetik programlar açık kalır.
 
-Hif bir transkripsiyon faktörüdür, yani hedef genlerin okunmasını başlatır.
-Artmış hif aktivitesi vasküler endotelyal büyüme faktörünün ekspresyonunu artırır.
+HIF bir transkripsiyon faktörüdür, yani hedef genlerin okunmasını başlatır.
+Artmış HIF aktivitesi vasküler endotelyal büyüme faktörünün ekspresyonunu artırır.
 Bunun sonucunda tümörün anjiyogenezi ve vaskülarizasyonu artar; yeni damarlar büyüyen kitleye oksijen ve besin taşır.
 Berrak hücreli karsinomun damardan zengin yapısının moleküler gerekçesi bu eksendir.
 Anjiyogenezin genel mekanizmalarını neoplazi konusunda ayrıntılı görmüştük.
 
-Hifin etkisi yalnız damarla sınırlı değildir.
-Hif, hücre büyümesini yöneten bir proto onkogen olan mik ile iş birliği yapar.
+HIF'in etkisi yalnız damarla sınırlı değildir.
+HIF, hücre büyümesini yöneten bir proto onkogen olan MYC ile iş birliği yapar.
 Bunun sonucunda hücresel metabolizma proliferasyonu destekleyecek şekilde yeniden programlanır ve bu değişiklikler berrak hücreli karsinomda tümör büyümesini hızlandırır.
-Yani hif birikimi tümöre hem bir yakıt hattı, yani damar, hem de bir üretim bandı, yani bölünmeye göre ayarlanmış metabolizma sağlar.
+Yani HIF birikimi tümöre hem bir yakıt hattı, yani damar, hem de bir üretim bandı, yani bölünmeye göre ayarlanmış metabolizma sağlar.
 
 Tablonun bir katmanı daha var: epigenom.
 Derin genom dizileme çalışmaları, histon metilasyonunu düzenleyen genlerde sık fonksiyon kaybı mutasyonları gösterir.
 Epigenetik düzenleme, DNA dizisi değişmeden genlerin açılıp kapanmasını belirler; histon metilasyonu da DNA'nın sarıldığı histon proteinlerine metil grubu eklenerek hangi genin okunacağını etkiler.
 Bu düzenleyici genler işlev yitirince gen ekspresyon düzeni bozulur.
 Sonuçta epigenomdaki değişiklikler berrak hücreli karsinom gelişiminde önemli rol oynar.
-Tek cümleyle özetlersek: Von Hipel Lindau kaybı hifi stabil kılar, hif damar yapımını ve mik ile birlikte metabolizmayı yönlendirir, epigenetik değişiklikler de buna katkı yapar.
+Tek cümleyle özetlersek: Von Hippel Lindau kaybı HIF'i stabil kılar, HIF damar yapımını ve MYC ile birlikte metabolizmayı yönlendirir, epigenetik değişiklikler de buna katkı yapar.
 
-@@ Papiller böbrek hücreli karsinom ve met geni
-Papiller böbrek hücreli karsinom 2. sık alt tiptir ve tüm böbrek kanserlerinin %10 ile on beşini oluşturur. Adını büyüme paterninden alır; hücreler parmak benzeri papiller çıkıntılar oluşturur. Klinik olarak sıklıkla multifokal, yani aynı böbrekte birden çok odaklı, sıklıkla da bilateral, yani iki taraflıdır ve genellikle erken evrede saptanır. Bu yüzden çok odaklı ve iki taraflı böbrek tümörü gördüğünüzde yalnız Von Hipel Lindau hastalığını değil, papiller karsinomu da düşünmelisiniz.
+@@ Papiller böbrek hücreli karsinom ve MET geni
+Papiller böbrek hücreli karsinom ikinci sık alt tiptir ve tüm böbrek kanserlerinin %10 ile 15'ini oluşturur. Adını büyüme paterninden alır; hücreler parmak benzeri papiller çıkıntılar oluşturur. Klinik olarak sıklıkla multifokal, yani aynı böbrekte birden çok odaklı, sıklıkla da bilateral, yani iki taraflıdır ve genellikle erken evrede saptanır. Bu yüzden çok odaklı ve iki taraflı böbrek tümörü gördüğünüzde yalnız Von Hippel Lindau hastalığını değil, papiller karsinomu da düşünmelisiniz.
 
-Papiller karsinomun hem ailesel hem sporadik formları vardır ve her ikisinde de ortak özellik met fonksiyonunun artışıdır.
-Met, mezenkimal epitelyal geçiş ifadesinin kısaltmasıdır.
-Met geni 7. kromozomun uzun kolunda, yani yedi ku üzerindedir ve bir tirozin kinaz reseptörünü kodlar.
+Papiller karsinomun hem ailesel hem sporadik formları vardır ve her ikisinde de ortak özellik MET fonksiyonunun artışıdır.
+MET, mezenkimal epitelyal geçiş ifadesinin kısaltmasıdır.
+MET geni 7. kromozomun uzun kolunda, yani 7q üzerindedir ve bir tirozin kinaz reseptörünü kodlar.
 Bu reseptör normalde hepatosit büyüme faktörü üzerinden uyarılır ve hücre büyümesi ile hücre motilitesi, yani hareketi ile ilişkilidir.
 Hepatosit büyüme faktörü reseptöre bağlanınca kinaz bölgesi aktive olur ve hücre içine büyüme ve hareket sinyali iletilir.
 
-Met işlevi farklı yollarla artabilir.
-Sporadik tümörlerde met kopya sayısında artış ya da metde somatik aktive edici mutasyonlar görülür.
-Ailesel olgularda ise germ hattı aktive edici met mutasyonları vardır.
-Tüm olgularda net etki met sinyallemesinde artıştır; sonuç da proksimal tubuler epitel hücrelerinde anormal proliferasyon ve tümör gelişimidir.
+MET işlevi farklı yollarla artabilir.
+Sporadik tümörlerde MET kopya sayısında artış ya da MET'te somatik aktive edici mutasyonlar görülür.
+Ailesel olgularda ise germ hattı aktive edici MET mutasyonları vardır.
+Tüm olgularda net etki MET sinyallemesinde artıştır; sonuç da proksimal tubuler epitel hücrelerinde anormal proliferasyon ve tümör gelişimidir.
 Burada mantığın berrak hücreli tipe göre tersine döndüğüne dikkat edin.
-Berrak hücreli tipte bir tümör baskılayıcı genin kaybı, yani üç pe üzerindeki Von Hipel Lindau kaybı vardır.
-Papiller tipte ise bir büyüme sinyali geninin işlev kazancı, yani yedi ku üzerindeki met artışı vardır.
+Berrak hücreli tipte bir tümör baskılayıcı genin kaybı, yani 3p üzerindeki Von Hippel Lindau kaybı vardır.
+Papiller tipte ise bir büyüme sinyali geninin işlev kazancı, yani 7q üzerindeki MET artışı vardır.
 Yönler ve kromozomlar sınavda sık karıştırılır.
 
 @@ Kromofob renal hücreli karsinom: köken, genetik ve prognoz
-Üç ana alt tipin 3.'sü kromofob renal hücreli karsinomdur. Renal hücreli karsinomların en nadir formudur ve tümünün yaklaşık yüzde beşini oluşturur. Kökeni diğerlerinden farklıdır: toplayıcı kanalların ara hücrelerinden gelişir. Hücrelerinin sitoplazması hafif eozinofilik ve soluktur, ancak berrak hücreli karsinom kadar berrak değildir. Yani berrak hücreli ve papiller tipler tubuler epitel kökenliyken, kromofob tip nefronun daha distalindeki toplayıcı kanal ara hücrelerinden doğar.
+Üç ana alt tipin 3.'sü kromofob renal hücreli karsinomdur. Renal hücreli karsinomların en nadir formudur ve tümünün yaklaşık %5'ini oluşturur. Kökeni diğerlerinden farklıdır: toplayıcı kanalların ara hücrelerinden gelişir. Hücrelerinin sitoplazması hafif eozinofilik ve soluktur, ancak berrak hücreli karsinom kadar berrak değildir. Yani berrak hücreli ve papiller tipler tubuler epitel kökenliyken, kromofob tip nefronun daha distalindeki toplayıcı kanal ara hücrelerinden doğar.
 
 Genetik tablosu da farklıdır.
 Sıklıkla çok sayıda kromozom kaybı ve aşırı hipoploidi, yani normalden daha az kromozom sayısı görülür.
@@ -118,7 +118,7 @@ Renal hücreli karsinom genelinde hastaların yaklaşık %40'ı kaybedilirken kr
 Yani üç ana alt tip içinde en nadir olan kromofob tip, aynı zamanda en olumlu prognozlu olandır.
 
 @@ Berrak hücreli karsinomun makroskopisi
-Moleküler temeli öğrendikten sonra berrak hücreli karsinomun çıplak gözle görünümüne geçelim. Tümör tanı anında sıklıkla üç ile 15 santimetre çapındadır. Genellikle tek, küresel bir kitledir ve korteksin hemen her yerinde olabilir. Yüksek çözünürlüklü görüntüleme teknikleri sayesinde daha küçük lezyonlar başka bir nedenle yapılan incelemelerde tesadüfen saptanabilir. Tek ve küresel kitle sporadik olgunun tipik görünümüdür; Von Hipel Lindau hastalığındaki bilateral ve multipl tümörler bu kuralın ailesel istisnasıdır.
+Moleküler temeli öğrendikten sonra berrak hücreli karsinomun çıplak gözle görünümüne geçelim. Tümör tanı anında sıklıkla 3 ile 15 santimetre çapındadır. Genellikle tek, küresel bir kitledir ve korteksin hemen her yerinde olabilir. Yüksek çözünürlüklü görüntüleme teknikleri sayesinde daha küçük lezyonlar başka bir nedenle yapılan incelemelerde tesadüfen saptanabilir. Tek ve küresel kitle sporadik olgunun tipik görünümüdür; Von Hippel Lindau hastalığındaki bilateral ve multipl tümörler bu kuralın ailesel istisnasıdır.
 
 Kesit yüzü sarı turuncu renktedir ve bu renk bol lipit içeriğiyle ilişkilidir.
 Sıklıkla nekroz alanları, belirgin kistik yumuşama ve kanama odakları bulunur.
@@ -141,18 +141,18 @@ Dikkat edin, renal ven invazyonu sık, perirenal yağ ve adrenal invazyonu ise n
 Böylece üç yayılım yolumuz olur: toplayıcı sisteme doğru, venöz sisteme doğru ve çevre dokulara doğru.
 
 @@ Berrak hücreli karsinomun mikroskopisi ve derecelendirme
-Mikroskopta neoplastik hücreler bol lipit ve glikojen içerir; sitoplazma vakuollü ve berraktır, hücre membranları belirgindir, yani hücre sınırları net seçilir. Hücreler ince fibrovasküler stroma ile birbirinden ayrılan yuvalar hâlinde dizilir. Çekirdekler genellikle küçük ve yuvarlaktır. Ders şeklindeki ilk panelde saydam sitoplazmalı hücre yuvaları ve aralarında ince, kanla dolu damarsal ağ görülür; bu ağın zenginliği, hif ve damar büyüme faktörü ekseninin doku düzeyindeki yansımasıdır.
+Mikroskopta neoplastik hücreler bol lipit ve glikojen içerir; sitoplazma vakuollü ve berraktır, hücre membranları belirgindir, yani hücre sınırları net seçilir. Hücreler ince fibrovasküler stroma ile birbirinden ayrılan yuvalar hâlinde dizilir. Çekirdekler genellikle küçük ve yuvarlaktır. Ders şeklindeki ilk panelde saydam sitoplazmalı hücre yuvaları ve aralarında ince, kanla dolu damarsal ağ görülür; bu ağın zenginliği, HIF ve damar büyüme faktörü ekseninin doku düzeyindeki yansımasıdır.
 
 Her berrak hücreli karsinom bu klasik görünümde değildir; iki morfolojik varyant tanımlanır.
-1. varyantta tümör hücrelerinin sitoplazması granüler, yani taneli görünümdedir ve tubuler epitele benzer; berraklık belirgin olmadığından tanı zorlaşabilir.
-2. varyant anaplastiktir: çok sayıda mitotik figür ve büyük, hiperkromatik, pleomorfik çekirdekler görülür.
+Birinci varyantta tümör hücrelerinin sitoplazması granüler, yani taneli görünümdedir ve tubuler epitele benzer; berraklık belirgin olmadığından tanı zorlaşabilir.
+İkinci varyant anaplastiktir: çok sayıda mitotik figür ve büyük, hiperkromatik, pleomorfik çekirdekler görülür.
 Anaplazi farklılaşma kaybıdır; mitoz artışı ve çekirdeklerin koyu boyanıp boyut ve şekilce farklılaşması agresif davranışın morfolojik işaretleridir.
-Burası önemli, çıkmış sorularda soruldu: böbrek tümörlerinin derecelendirilmesinde kullanılan sistem Furman sistemidir, güncel adıyla ay es yu pe derecelendirmesi.
-Şıklarda Notingam, Milano, Paris ve Barselona gibi başka sistemler çeldirici olarak yer alır.
+Burası önemli, çıkmış sorularda soruldu: böbrek tümörlerinin derecelendirilmesinde kullanılan sistem Furman sistemidir, güncel adıyla ISUP derecelendirmesi.
+Şıklarda Nottingham, Milano, Paris ve Barselona gibi başka sistemler çeldirici olarak yer alır.
 
 Hücreler yuvaların yanında abortif, yani tam gelişmemiş tübüller, kordonlar ya da düzensiz kitleler de oluşturabilir.
 Stroma genellikle azdır, ancak belirgin derecede vasküler yapı gösterir.
-Az stroma, tümörün çoğunlukla hücreden oluştuğunu; zengin damar ağı ise hif birikimine bağlı damar büyüme faktörü artışını yansıtır.
+Az stroma, tümörün çoğunlukla hücreden oluştuğunu; zengin damar ağı ise HIF birikimine bağlı damar büyüme faktörü artışını yansıtır.
 Kesit yüzündeki kanama odakları da, tümörün renal vene ilerleme eğilimi de bu damardan zengin biyolojinin parçalarıdır.
 
 @@ Papiller ve kromofob karsinomun morfolojisi
@@ -169,9 +169,9 @@ Kromofob tip ten rengi kahverengi, tek ve iyi sınırlıdır; mikroskopta keskin
 Kısacası renk lipit miktarını, mimari alt tipi, perinükleer halo ise kromofobu gösterir.
 
 @@ Klinik özellikler: triad, hematüri ve sistemik bulgular
-Renal hücreli karsinomun klasik klinik triadı ağrısız hematüri, ele gelen abdominal kitle ve künt yan ağrısıdır. Ancak bu üçlü birlikte yalnızca olguların yaklaşık yüzde onunda görülür. Bu yüzden triadın tamamını beklemek tanıyı geciktirir; triadın yokluğu bu tümörü dışlamaz.
+Renal hücreli karsinomun klasik klinik triadı ağrısız hematüri, ele gelen abdominal kitle ve künt yan ağrısıdır. Ancak bu üçlü birlikte yalnızca olguların yaklaşık %10'unda görülür. Bu yüzden triadın tamamını beklemek tanıyı geciktirir; triadın yokluğu bu tümörü dışlamaz.
 
-En sık başvuru semptomu hematüridir ve olguların yüzde ellisinden fazlasında görülür.
+En sık başvuru semptomu hematüridir ve olguların %50'sinden fazlasında görülür.
 Hematüri tipik olarak aralıklı ve geçici makroskopik hematüri şeklindedir; idrarın gözle görülür şekilde kanlı olduğu ataklar gelip geçer.
 Altta ise sürekli mikroskopik hematüri bulunabilir.
 Kanamanın kendiliğinden durması hastayı ve hekimi yanıltabilir; oysa gözle görülen kanama durmuşken bile idrar mikroskopisinde eritrositler saptanabilir.
@@ -184,9 +184,9 @@ Bu bulgular spesifik değildir ve bu nedenle böbrek tümörü tanısı gecikebi
 Açıklanamayan ateşte enfeksiyon odağı aranırken ya da polisitemide önce kemik iliği hastalıkları düşünülürken böbrekteki tümör gözden kaçabilir.
 
 @@ Paraneoplastik sendromlar ve metastaz
-Polisitemi hastaların %5 ile onunda görülür ve nedeni neoplastik hücreler tarafından eritropoietin üretimidir. Eritropoietin kemik iliğinde kırmızı kan hücresi yapımını uyaran hormondur; tümör hücreleri bunu salgılayınca kemik iliği gereğinden fazla eritrosit üretir ve kırmızı hücre kütlesi artar. Bu bir paraneoplastik bulgudur; yani tümörün kitlesi ya da metastazıyla değil, salgıladığı maddeyle oluşturduğu uzak bir etkidir.
+Polisitemi hastaların %5 ile 10'unda görülür ve nedeni neoplastik hücreler tarafından eritropoietin üretimidir. Eritropoietin kemik iliğinde kırmızı kan hücresi yapımını uyaran hormondur; tümör hücreleri bunu salgılayınca kemik iliği gereğinden fazla eritrosit üretir ve kırmızı hücre kütlesi artar. Bu bir paraneoplastik bulgudur; yani tümörün kitlesi ya da metastazıyla değil, salgıladığı maddeyle oluşturduğu uzak bir etkidir.
 
-Daha nadir paraneoplastik sendromlar da vardır: hiperkalsiyemi, hipertansiyon, Kuşing sendromu, yani kortizol fazlalığı tablosu, ve feminizasyon ya da maskülinizasyon, yani erkekte kadınsı ya da kadında erkeksi özelliklerin gelişmesi.
+Daha nadir paraneoplastik sendromlar da vardır: hiperkalsiyemi, hipertansiyon, Cushing sendromu, yani kortizol fazlalığı tablosu, ve feminizasyon ya da maskülinizasyon, yani erkekte kadınsı ya da kadında erkeksi özelliklerin gelişmesi.
 Bu tabloların çoğu hormon fazlalığıyla uyumludur ve hasta endokrin bir hastalıkla başvuruyormuş gibi görünebilir.
 Hipertansiyonun hem majör risk faktörü hem de nadir bir paraneoplastik bulgu olabildiğine dikkat edin.
 Paraneoplastik sendromların genel mekanizmalarını neoplazi konusunda görmüştük.
@@ -198,9 +198,9 @@ Bunun mantığı açıktır: renal ven ve vena kava içine uzanan tümör, hücr
 Uzak metastaz ileri evre hastalık göstergesidir.
 
 @@ Diğer böbrek tümörlerine genel bakış ve onkositoma
-Renal hücreli karsinomu tamamladık; şimdi diğer önemli böbrek tümörlerine geçiyoruz: onkositoma, anjiyomiyolipom ve Vilms tümörü. Bunların çoğu benign ya da çocukluk çağında görülen tümörlerdir. Benign olanlar görüntülemede renal hücreli karsinomla karışabilir; Vilms tümörü ise çocuk yaş grubuyla öne çıkar. Yani böbrekteki her kitle renal hücreli karsinom değildir.
+Renal hücreli karsinomu tamamladık; şimdi diğer önemli böbrek tümörlerine geçiyoruz: onkositoma, anjiyomiyolipom ve Wilms tümörü. Bunların çoğu benign ya da çocukluk çağında görülen tümörlerdir. Benign olanlar görüntülemede renal hücreli karsinomla karışabilir; Wilms tümörü ise çocuk yaş grubuyla öne çıkar. Yani böbrekteki her kitle renal hücreli karsinom değildir.
 
-Onkositoma benign bir böbrek tümörüdür, toplayıcı kanalların ara hücrelerinden köken alır ve böbrek neoplazmlarının %3 ile yedisini oluşturur.
+Onkositoma benign bir böbrek tümörüdür, toplayıcı kanalların ara hücrelerinden köken alır ve böbrek neoplazmlarının %3 ile 7'sini oluşturur.
 Dikkat edin, kromofob renal hücreli karsinom da aynı ara hücrelerden köken alır; fark, kromofobun malign, onkositomanın benign olmasıdır.
 Ortak köken iki tümörün morfolojik olarak birbirine benzeyebilmesinin temelidir.
 
@@ -209,40 +209,40 @@ Bunun sonucu kahverengi renkli bir tümör kesiti ve ince taneli, eozinofilik si
 Tipik makroskopik bulgu merkezi, yıldız şeklinde bir skardır.
 Ders şeklinde ışık mikroskobunda granüler eozinofilik sitoplazmalı, birbirine benzeyen tek tip hücreler; elektron mikroskobunda ise sitoplazması mitokondriyle dolu bir onkositoma hücresi görülür.
 
-Onkositomada görülebilen kromozomal değişiklikler 1. kromozomun kaybı, ye kromozomunun kaybı ve siklin dee bir lokusunu içeren yeniden düzenlemelerdir.
-Siklin dee bir hücre döngüsünü ilerleten bir proteindir.
-Mitokondri yükünün nedeni ise mitokondriyal bir kusurdur: tümör hücreleri kompleks birde yıkıcı mutasyonlar taşır.
-Kompleks bir, oksidatif fosforilasyon için gerekli elektron taşıma zincirinin bir bileşenidir.
+Onkositomada görülebilen kromozomal değişiklikler 1. kromozomun kaybı, Y kromozomunun kaybı ve siklin D1 lokusunu içeren yeniden düzenlemelerdir.
+Siklin D1 hücre döngüsünü ilerleten bir proteindir.
+Mitokondri yükünün nedeni ise mitokondriyal bir kusurdur: tümör hücreleri kompleks 1'de yıkıcı mutasyonlar taşır.
+Kompleks 1, oksidatif fosforilasyon için gerekli elektron taşıma zincirinin bir bileşenidir.
 Bu kusur mitokondriyal proliferasyonu artıran geri bildirim döngülerini başlatır; mitokondriler verimli enerji üretemeyince hücre daha fazla mitokondri yapar ve sitoplazma mitokondriyle dolar.
 Onkositik morfolojiden sorumlu olan bu süreçtir.
 
 Tüberöz skleroz, birçok organda iyi huylu tümör büyümesine neden olan genetik bir hastalıktır ve bu hastalarda çoklu onkositomlar görülebilir; bu hastalarda böbrek tümörü spektrumu geniştir.
 Klinik açıdan onkositomaları renal hücreli karsinomdan ayırt etmek zordur.
 Ortak köken, kahverengi kesit yüzü ve eozinofilik sitoplazma kromofob karsinomla benzerlik yaratır; ayırımda onkositomanın yıldız skarı ve mitokondri zenginliği, kromofobun ise perinükleer halosu yol gösterir.
-Çoklu onkositik nodülü olan hastaların %10 ile otuzunda eş zamanlı renal hücreli karsinom bulunabilir.
+Çoklu onkositik nodülü olan hastaların %10 ile 30'unda eş zamanlı renal hücreli karsinom bulunabilir.
 Bu nedenle benign tanı izlemden muaf tutmaz; dikkatli ve uzun süreli izlem gereklidir.
 
 @@ Anjiyomiyolipom
-Anjiyomiyolipom benign bir böbrek tümörüdür ve epitel kökenli değildir; perivasküler hücrelerden, yani damar duvarını çevreleyen perisitlerden köken alır. Böbrek tümörlerinin %1 ile ikisini oluşturur. Adı, içerdiği üç doku bileşenine işaret eder: kan damarları, düz kas ve yağ dokusu. En sık tüberöz skleroz kompleksi ile birlikte görülür. Çoğu olgu insidental olarak, yani başka bir nedenle yapılan incelemede rastlantısal olarak saptanır. Büyük lezyonlarda ise spontan kanama riski akılda tutulmalıdır; tümör içindeki damar yapıları lezyon büyüdükçe kendiliğinden yırtılıp kanayabilir. Böylece tüberöz sklerozun iki böbrek tümörünü öğrenmiş olduk: çoklu onkositoma ve anjiyomiyolipom.
+Anjiyomiyolipom benign bir böbrek tümörüdür ve epitel kökenli değildir; perivasküler hücrelerden, yani damar duvarını çevreleyen perisitlerden köken alır. Böbrek tümörlerinin %1 ile 2'sini oluşturur. Adı, içerdiği üç doku bileşenine işaret eder: kan damarları, düz kas ve yağ dokusu. En sık tüberöz skleroz kompleksi ile birlikte görülür. Çoğu olgu insidental olarak, yani başka bir nedenle yapılan incelemede rastlantısal olarak saptanır. Büyük lezyonlarda ise spontan kanama riski akılda tutulmalıdır; tümör içindeki damar yapıları lezyon büyüdükçe kendiliğinden yırtılıp kanayabilir. Böylece tüberöz sklerozun iki böbrek tümörünü öğrenmiş olduk: çoklu onkositoma ve anjiyomiyolipom.
 
-@@ Vilms tümörü
-Vilms tümörü, yani nefroblastom, bu dersin çocukluk çağı temsilcisidir. Erişkinlerde nadirdir. On yaşın altındaki çocuklarda ise en sık görülen 3. katı, yani hematolojik olmayan kanserdir; lösemi ve lenfoma gibi kan kanserleri bu sıralamaya dahil edilmez. Burası önemli, çıkmış sorularda defalarca soruldu: çocukluk döneminde en sık görülen primer böbrek tümörü Vilms tümörüdür. Şıklardaki renal hücreli karsinom erişkinin tümörüdür; anjiyomiyolipom ve onkositom benigndir. Yani erişkinde böbrek malignitesi denince renal hücreli karsinom, çocukta böbrek kitlesi denince Vilms tümörü akla gelir.
+@@ Wilms tümörü
+Wilms tümörü, yani nefroblastom, bu dersin çocukluk çağı temsilcisidir. Erişkinlerde nadirdir. 10 yaşın altındaki çocuklarda ise en sık görülen üçüncü katı, yani hematolojik olmayan kanserdir; lösemi ve lenfoma gibi kan kanserleri bu sıralamaya dahil edilmez. Burası önemli, çıkmış sorularda defalarca soruldu: çocukluk döneminde en sık görülen primer böbrek tümörü Wilms tümörüdür. Şıklardaki renal hücreli karsinom erişkinin tümörüdür; anjiyomiyolipom ve onkositom benigndir. Yani erişkinde böbrek malignitesi denince renal hücreli karsinom, çocukta böbrek kitlesi denince Wilms tümörü akla gelir.
 
-Vilms tümörü sporadik ya da ailesel olabilir; ailesel olgularda tümör yatkınlığı otozomal dominant özellik olarak kalıtılır.
+Wilms tümörü sporadik ya da ailesel olabilir; ailesel olgularda tümör yatkınlığı otozomal dominant özellik olarak kalıtılır.
 Patogenezi, genetiği ve morfolojisi çocukluk çağı tümörleri ile birlikte ayrıntılı olarak işlenir; bu derste yalnız böbrek tümörleri spektrumu içindeki yeri vurgulanır.
 Yine de çıkmış sorularda sorulan noktaları burada toplayalım.
-Vagır sendromu, Deniz Draş sendromu ve Bekvit Vidman sendromu gibi konjenital malformasyon sendromlarında Vilms tümörünün görülme sıklığı artmıştır.
+WAGR sendromu, Denys-Drash sendromu ve Beckwith-Wiedemann sendromu gibi konjenital malformasyon sendromlarında Wilms tümörünün görülme sıklığı artmıştır.
 Lezyonların çoğunda blastemal, stromal ve epitelyal hücre tiplerinin trifazik kombinasyonu görülür.
 
 Burası önemli, bir vaka sorusunda 4 yaşında, batında orta hattı geçip pelvise uzanan, böbrek kaynaklı bir kitle soruldu ve beklenmeyen ifade arandı.
-Vilms tümöründe tümör dışındaki böbrek parankiminde nefrojenik rest saptanabilir, tümörün bir kısmı küçük mavi hücrelerden oluşur, trifazik hücre kombinasyonu görülür ve olguların yaklaşık %10'u bilateral olabilir.
+Wilms tümöründe tümör dışındaki böbrek parankiminde nefrojenik rest saptanabilir, tümörün bir kısmı küçük mavi hücrelerden oluşur, trifazik hücre kombinasyonu görülür ve olguların yaklaşık %10'u bilateral olabilir.
 Beklenmeyen ifade ise yüksek oranda anaplazi saptanırsa kemoterapiye yanıtın çok iyi olacağıdır.
-Tam tersine, tümörlerin yaklaşık yüzde beşinde prognozla yakından ilişkili anaplazi odakları bulunur ve anaplazi olumsuz bir bulgudur.
+Tam tersine, tümörlerin yaklaşık %5'inde prognozla yakından ilişkili anaplazi odakları bulunur ve anaplazi olumsuz bir bulgudur.
 
-Burası önemli, başka bir soruda Vilms tümörüyle ilgili yanlış ifade arandı: nefrektomiyle tümör çıkarılmasına karşın hastaların yüzde ellisinden azının 5 yıl yaşadığı ifadesi yanlıştır.
-Vilms tümörünün prognozu iyidir ve hastaların çoğu uzun süre yaşar.
-Son olarak, Vilms tümörü çocukluk çağının küçük yuvarlak mavi hücreli tümörlerinden biridir; bu grupta nöroblastom, retinoblastom ve rabdomiyosarkom da yer alır.
+Burası önemli, başka bir soruda Wilms tümörüyle ilgili yanlış ifade arandı: nefrektomiyle tümör çıkarılmasına karşın hastaların %50'sinden azının 5 yıl yaşadığı ifadesi yanlıştır.
+Wilms tümörünün prognozu iyidir ve hastaların çoğu uzun süre yaşar.
+Son olarak, Wilms tümörü çocukluk çağının küçük yuvarlak mavi hücreli tümörlerinden biridir; bu grupta nöroblastom, retinoblastom ve rabdomiyosarkom da yer alır.
 Burası önemli, bu da soruldu: berrak hücreli karsinom bu grupta yer almaz; o, berrak sitoplazmalı hücrelerden oluşan bir erişkin tümörüdür.
 
 @@ Genel özet ve klinik uygulama
-Özetle böbrek tümörleri benign ve malign uçları olan geniş bir spektrumdur ve renal hücreli karsinom erişkinlerde en sık böbrek malignitesidir. Berrak hücreli, papiller ve kromofob alt tipler farklı moleküler yolaklara ve farklı prognozlara sahiptir: berrak hücrelide Von Hipel Lindau kaybı ve hif birikimi, papillerde met sinyal artışı, kromofobda kromozom kaybı ve en olumlu prognoz. Klinik uygulamada sigara, obezite, hipertansiyon ve kronik diyaliz gibi risk faktörlerini tanımak; moleküler alt tipin prognoz ve tedavi seçimi için önemini bilmek; onkositoma, anjiyomiyolipom ve Vilms tümörünü ayırıcı tanı ve izlem açısından akılda tutmak gerekir. Çoklu onkositik nodülde eş zamanlı karsinom olasılığı, büyük anjiyomiyolipomda kanama riski ve diyaliz hastasındaki yüksek risk, izlemin neden önemli olduğunu gösterir.
+Özetle böbrek tümörleri benign ve malign uçları olan geniş bir spektrumdur ve renal hücreli karsinom erişkinlerde en sık böbrek malignitesidir. Berrak hücreli, papiller ve kromofob alt tipler farklı moleküler yolaklara ve farklı prognozlara sahiptir: berrak hücrelide Von Hippel Lindau kaybı ve HIF birikimi, papillerde MET sinyal artışı, kromofobda kromozom kaybı ve en olumlu prognoz. Klinik uygulamada sigara, obezite, hipertansiyon ve kronik diyaliz gibi risk faktörlerini tanımak; moleküler alt tipin prognoz ve tedavi seçimi için önemini bilmek; onkositoma, anjiyomiyolipom ve Wilms tümörünü ayırıcı tanı ve izlem açısından akılda tutmak gerekir. Çoklu onkositik nodülde eş zamanlı karsinom olasılığı, büyük anjiyomiyolipomda kanama riski ve diyaliz hastasındaki yüksek risk, izlemin neden önemli olduğunu gösterir.

@@ -1,161 +1,129 @@
-# Türkiye'de Sağlık Hizmetlerinin Sunumu
+# Türkiye'de Sağlık Hizmetleri
 
-@@ Cumhuriyetin ilk yılları ve hekim açığı
-Türkiye'de sağlık hizmetlerinin sunumunu anlamak için önce Cumhuriyetin başladığı noktaya bakalım. 1923 yılında ülkede yalnızca beş yüz elli dört hekim vardı. 1940 yılına gelindiğinde bu sayı 2003 yüz seksen yediye çıkmıştı. Bu artış kendiliğinden olmadı; hekimler parasız yatılı sistemle ve mecburi hizmet karşılığında yetiştirildi. Yani devlet öğrencinin eğitimini üstleniyor, karşılığında mezun hekimi ihtiyaç duyulan yerde çalıştırıyordu. Bugün ise yüz kırk binin üzerinde hekime sahibiz.
+@@ Cumhuriyetin başında hekim insan gücü
+Cumhuriyet döneminde sağlık hizmetlerinin ne kadar yol aldığını en iyi hekim sayıları gösterir. 1923 yılında ülkede yalnızca 554 hekim vardı. 1940'a gelindiğinde bu sayı 2387'ye yükseldi. Bugün ise 140.000'in üzerinde hekimimiz bulunuyor. Burası önemli, bu 3 sayı sınav spotu olarak öne çıkıyor: 1923'te 554, 1940'ta 2387 hekim.
 
-Kırsal bölgelerde kadın sağlık personeli çalıştırmak o yıllarda oldukça zordu.
-Bu güçlüğü aşmak için ayrı bir meslek grubu yetiştirildi: sağlık memuru.
-Sağlık memurları köylere ve kasabalara giderek hekimin tek başına ulaşamadığı nüfusa hizmet götüren önemli bir halka oldu.
+Bu artış kendiliğinden olmadı.
+Hekim yetiştirilmesi parasız yatılı sistemle ve mecburi hizmet karşılığında yapıldı; yani devlet öğrencinin eğitimini üstlendi, karşılığında da hekimin belirli bir süre devletin gösterdiği yerde çalışmasını şart koştu.
+Kırsal bölgeler ayrı bir sorundu.
+Kırsalda bayan personel çalıştırmak zor olduğundan, bu açığı kapatmak için sağlık memuru adı verilen bir meslek grubu yetiştirildi.
+Dikkat edin, sağlık memurunun yetiştirilme nedeni kırsalda kadın personel bulma güçlüğüdür.
 
-@@ Refik Saydam dönemi ve vertikal örgütlenme
-Doktor Refik Saydam'ın sağlık bakanlığı yaptığı 14 yıllık dönemin temel özelliği vertikal örgütlenmedir. Vertikal, yani dikey örgütlenme, tek bir hastalıkla ilgilenen ayrı teşkilatlar kurmak demektir. Bu dönemde sıtma, trahom, frengi ve lepra gibi tek konuyla uğraşan sağlık teşkilatları kuruldu ve bu örgütlerde çalışanlara yüksek ücret ödendi. Böylece o dönemin en yaygın bulaşıcı hastalıklarına odaklanmış güçlü bir mücadele yürütüldü.
+@@ Dr. Refik Saydam dönemi ve vertikal örgütlenme
+Cumhuriyetin ilk yıllarındaki sağlık teşkilatlanmasının temel taşı Dr. Refik Saydam dönemidir. Bu dönem 14 yıl sürmüştür ve Refik Saydam bu süre boyunca Sıhhat ve İçtimai Muavenet Vekili, yani bugünkü adıyla Sağlık Bakanı olarak görev yapmıştır. Dönemin en belirgin özelliği vertikal örgütlenmedir. Vertikal örgütlenme, tek bir hastalıkla ilgilenen ayrı teşkilatlar kurmak demektir: sıtma ile mücadele teşkilatı, trahom ile mücadele teşkilatı, frengi ve lepra ile mücadele teşkilatları gibi. Bu örgütlerde çalışanlara yüksek ücret ödenmiştir; böylece belirli salgın hastalıklara odaklı mücadele güçlendirilmiştir.
 
-Burası önemli, sınavda sıkça sorulan bir bilgidir: Refik Saydam döneminde devlet koruyucu hizmetleri üstlenirken tedavi edici hekimliği Özel İdarelere ve belediyelere bıraktı.
-Ayrıca Osmanlı'daki memleket tabipliğinin yerini tutacak olan Hükümet Tabipliği sistemi ilçelerde kuruldu.
-Yani vertikal teşkilatlar, tedavinin yerel yönetimlere bırakılması ve ilçelerde Hükümet Tabipliği, bu dönemin üç anahtar kavramıdır.
+Burası önemli, Refik Saydam ile ilgili bir soru çıkmış sorularda soruldu.
+Refik Saydam Hıfzıssıhha Enstitüsü'nün kurulmasına öncülük etmesi, Verem Savaş Dernekleri'nin kurulmasına öncülük etmesi, sıtma ve trahom ile mücadele çalışmalarını yürütmesi ve uzun süre Sağlık Bakanı olarak görev yapması onun çalışmaları arasındadır.
+Ancak 224 sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Kanunu'nu Refik Saydam çıkarmamıştır; bu kanun çok daha sonra, 1961'de çıkmıştır.
+Bu 2 dönemi birbirine karıştırmayın.
+
+@@ Umumi Hıfzıssıhha Kanunu, Hükümet Tabipliği ve tedavi hizmetleri
+Bu dönemin temel yasal dayanaklarından biri Umumi Hıfzıssıhha Kanunu'dur. Burası önemli, bu kanunun çıkarıldığı yıl çıkmış sorularda soruldu: Umumi Hıfzıssıhha Kanunu 1930 yılında çıkarılmıştır. Yakın yıllar olan 31, 32 ya da 33 ile karıştırmayın; doğru yıl 1930'dur.
+
+Refik Saydam döneminde devlet, koruyucu hizmetleri ve salgınla mücadeleyi üstlenirken tedavi edici hekimliği Özel İdareler ile belediyelere bırakmıştır.
+İlçelerde ise Osmanlı'daki memleket tabipliğinin yerini tutacak olan Hükümet Tabipliği sistemi kurulmuştur.
+Yani Osmanlı'nın memleket tabibi, Cumhuriyette ilçe düzeyinde hükümet tabibine dönüşmüştür; ilçe düzeyinde koruyucu ve idari hekimlik bu sistemle örgütlenmiştir.
 
 @@ Sosyalleştirme dönemi
-Dikey örgütlenmenin ardından yatay ve bütünleşik bir modele geçildi. 1961 yılında iki yüz yirmi dört sayılı Sağlık Hizmetlerinin Sosyalleştirilmesine Dair Kanun çıktı. Uygulama 1963 yılında Muş'ta başladı. Doğudan başlanarak sosyalleştirilmiş il sayısı giderek arttı ve bir Ocak 1984 tarihinden itibaren tüm Türkiye sosyalleştirme kapsamına alındı.
+Vertikal örgütlenmeden sonra Türkiye'de sağlık hizmetlerinin yönünü değiştiren büyük adım sosyalleştirmedir. 1961 yılında 224 sayılı Sağlık Hizmetlerinin Sosyalleştirilmesine Dair Kanun çıkarılmıştır. Burası önemli, kanunun yılı ve sayısı sınav spotudur: 1961 ve 224 sayılı kanun.
 
-Burası önemli arkadaşlar, bu tarihler ve sayı sınavda birlikte sorulur: kanun 1961, kanun numarası iki yüz yirmi dört, ilk uygulama 1963'te Muş, tüm ülkede uygulama ise bir Ocak 1984. Uygulamanın doğudan başlatılması, sağlık hizmetine en çok ihtiyaç duyulan bölgelerin öncelikli tutulduğunu gösterir.
+Kanun çıktıktan sonra uygulama bir anda bütün ülkeye yayılmadı.
+Sosyalleştirme uygulaması ilk kez 1963 yılında Muş'ta başladı.
+Ardından doğu illerinden başlayarak sosyalleştirilmiş il sayısı giderek arttı; yani hizmet doğudan batıya doğru yaygınlaştırıldı.
+1 Ocak 1984'ten itibaren ise tüm Türkiye sosyalleştirme kapsamına alındı.
+Burası önemli, ilk il Muş, ilk yıl 1963 ve tüm ülkenin kapsama alındığı tarih 1 Ocak 1984; bu üçlü sıkça sorulur.
 
-@@ Sosyalleştirilmiş sağlık hizmetlerinin özellikleri
-Sosyalleştirilmiş sağlık hizmetlerinin sekiz özelliği vardır. 1. özellik, 1. basamak sağlık kurumunun sağlık ocağı olmasıdır; ülkede yaklaşık altı bin sağlık ocağı vardır. 2. özellik, dar bölgede, yani yatay olarak geniş kapsamlı entegre hizmettir. Bu, belirli bir coğrafi bölgede yaşayanlara koruyucu ve tedavi edici hizmetlerle birlikte adli hizmetlerin ve çevre sağlığı hizmetlerinin aynı kurum tarafından verilmesi anlamına gelir. Dikey örgütlenmede her hastalığa ayrı teşkilat varken, burada bir bölgenin tüm sağlık işi tek bir ocakta toplanır.
+@@ Sosyalleştirilmiş hizmetin özellikleri: sağlık ocağı ve entegre hizmet
+Sosyalleştirilmiş sağlık hizmetlerinin 8 temel özelliği vardır. Burası önemli, bu özellikler sınıflama sorusu olarak karşınıza çıkar. 1.'si, birinci basamak sağlık kurumu sağlık ocağıdır ve ülkede yaklaşık 6000 sağlık ocağı vardır. 2.'si, hizmet dar bölgede, yani yatay olarak, geniş kapsamlı entegre bir hizmettir. Bunun anlamı şudur: belirli bir coğrafi bölgede yaşayan herkese koruyucu ve tedavi edici hizmetler, adli hizmetler ve çevre sağlığı hizmetleri tek bir kurum tarafından birlikte verilir. Dikkat edin, burada bir tuzak var. Dar bölgede yatay entegre hizmet sosyalleştirmenin özelliğidir; tek hastalığa odaklanan vertikal örgütlenme ise Refik Saydam dönemine aittir. Biri yatay ve bütünleşik, diğeri dikey ve tek konuludur.
 
-3. özellik basamaklı, yani kademeli hizmettir.
-Sağlık ocakları hastaları hastanelere sevk eder, hastanelerden de sağlık ocağına geri bildirimde bulunulur.
-Böylece hasta önce 1. basamakta değerlendirilir, gerekirse bir üst basamağa gider ve sonucu tekrar kendi hekimine döner.
-4. özellik ekip hizmetidir.
-Ekipte hekim, hemşire, ebe, sağlık memuru, tıbbi sekreter, şoför ve hizmetli yer alır.
+@@ Basamaklı, ekip, mobil, ücretsiz, sürekli ve katılımcı hizmet
+Üçüncü özellik, hizmetin basamaklı yani kademeli olmasıdır. Sağlık ocakları gerektiğinde hastayı hastanelere sevk eder, hastaneler de hasta hakkında sağlık ocağına geri bildirimde bulunur. Böylece sevk zinciri iki yönlü işler. Dördüncü özellik ekip hizmetidir: hekim, hemşire, ebe, sağlık memuru, tıbbi sekreter, şoför ve hizmetli birlikte çalışır.
 
-5. özellik mobil hizmettir, yani halkın ayağına giden hizmet.
-Başlangıçta her sağlık ocağının motorlu aracı varken bugün beş 1840 sağlık ocağının yalnızca yüzde kırkının motorlu aracı bulunmaktadır.
-6. özellik ücretsiz hizmettir; bu hizmet Türk vatandaşlarına ücretsiz verilir.
-7. özellik sürekli hizmettir, yani haftanın yedi günü, günün yirmi dört saati hizmet.
-8. ve son özellik ise toplum katılımını öngören hizmettir; toplum kendi sağlığına ilişkin kararlara ve çalışmalara katılır.
+Beşinci özellik mobil hizmettir; yani hizmet halkın ayağına gider.
+Başlangıçta her sağlık ocağında motorlu araç vardı.
+Bugün ise 5840 sağlık ocağının yalnızca %40'ının motorlu aracı bulunmaktadır.
+Altıncı özellik, hizmetin Türk vatandaşlarına ücretsiz olmasıdır.
+Yedincisi sürekli hizmettir; hizmet günün 24 saati, haftanın 7 günü sunulur.
+Sekizinci ve son özellik ise toplum katılımını öngören bir hizmet olmasıdır; hizmetin planlanmasında ve yürütülmesinde halkın katılımı esas alınır.
 
 @@ Sağlık ocağı tipleri
-Sağlık ocakları hizmet verdikleri nüfusa göre üç tipe ayrılır. Burası önemli, sınavda bu nüfus aralıkları sorulur: köy tipi sağlık ocağı beş ila on bin nüfusa, ilçe tipi sağlık ocağı on ila otuz bin nüfusa, il tipi sağlık ocağı ise otuz ila elli bin nüfusa yöneliktir. Kolay hatırlamak için şöyle düşünebilirsiniz: yerleşim büyüdükçe bir ocağın sorumlu olduğu nüfus da büyür ve aralıklar birbirinin devamı şeklinde sıralanır.
+Sağlık ocakları hizmet verdikleri nüfusa göre 3 tipe ayrılır. Köy tipi sağlık ocağı 5 ile 10 bin arasındaki nüfusa hizmet verir. İlçe tipi sağlık ocağı 10 ile 30 bin arasındaki nüfusa yöneliktir. İl tipi sağlık ocağı ise 30 ile 50 bin arasındaki nüfusa hizmet verir. Yani hizmet kapasitesi nüfus büyüklüğüne göre ölçeklenir.
+
+Burası önemli, bu nüfus aralıkları sınavda tuzak olarak kullanılır.
+En sık yapılan hata köy tipinin 5 ila 10 bin sınırıyla il tipinin 30 ila 50 bin sınırını karıştırmaktır.
+Akılda tutmak için şöyle düşünebilirsiniz: köyden ile doğru gittikçe nüfus büyür; 5 ila 10, 10 ila 30, 30 ila 50 bin.
 
 @@ Sağlıkta Dönüşüm Programı
-Sosyalleştirmeden sonraki büyük değişiklik Sağlıkta Dönüşüm Programıdır. Bu programın dört temel bileşeni vardır. 1.'si, Emekli Sandığı, Bağ-Kur ve Sosyal Sigortalar Kurumu adlı sosyal güvenlik kurumlarının Sosyal Güvenlik Kurumu çatısı altında birleşmesidir. 2.'si, Sosyal Sigortalar Kurumu hastanelerinin devri ve serbest eczanelerden herkesin yararlanabilmesidir. 3.'sü aile hekimliği, 4.'sü ise özel hastanelerin teşvikidir.
+Sosyalleştirmeden sonraki büyük yapısal değişiklik Sağlıkta Dönüşüm Programı'dır. Bu programla sağlığın hem finansmanı hem de sunumu köklü biçimde yeniden yapılandırılmıştır. Programın başlıca bileşenleri şunlardır. 1.'si, Emekli Sandığı, Bağ-Kur ve SSK adlı 3 sosyal güvenlik kurumunun Sosyal Güvenlik Kurumu, yani SGK çatısı altında birleşmesidir. 2.'si, SSK hastanelerinin devri ve herkesin SSK hastanelerinden ve serbest eczanelerden yararlanabilmesidir. 3.'sü aile hekimliği sistemine geçiştir. 4.'sü ise özel hastanelerin teşvik edilmesidir.
 
-Burası önemli, Sağlıkta Dönüşüm Programının bileşenleri sınavda bir arada sorulur: tek çatı altında birleşen sosyal güvenlik, Sosyal Sigortalar Kurumu hastanelerinin devri, aile hekimliği ve özel hastanelerin teşviki.
-Bu devirle ilgili sayıyı da hastane kapasitesi bölümünde göreceğiz.
+Burası önemli, bu bileşenler çıkmış sorularda soruldu ve soru, programa dahil olmayanı buldurdu.
+Askerî hastanelerin Sağlık Bakanlığına devri Sağlıkta Dönüşüm Programı'nın bileşenleri arasında sayılmaz.
+Programa dahil olanlar ise 3 sosyal güvenlik kurumunun SGK altında birleşmesi, aile hekimliği, SSK hastanelerinden ve serbest eczanelerden yararlanma ve özel hastanelerin teşvikidir.
+Devredilen hastaneler askerî hastaneler değil, SSK hastaneleridir.
 
-@@ Sosyal Güvenlik Kurumu denetimleri ve usulsüzlükler
-Sağlık sisteminin finansmanında denetim de önemli bir konudur. Sosyal Güvenlik Kurumu, boyutu yirmi dört virgül dört milyon lirayı bulan büyük bir vurgunu ortaya çıkardı. Doğum iznindeki, hatta hayatta olmayan hekimler üzerinden kuruma fatura edilen tedavi işlemleri, yoğun bakım faturalandırmalarıyla ilgili işlemler ve vatandaşların ölüm tarihlerinden sonra fatura edilen işlemler belirlendi. Habertürk'ten Ahmet Kıvanç'ın haberine göre 2017 yılında bu şekilde tespit edilen usulsüzlükler şöyleydi.
-
-Doğum izninde olan hekimlerin bin altı yüz on beş kişiyi tedavi ettiği ve buna bağlı olarak otuz üç bin altı yüz yirmi dokuz reçete veya tedavi işlemi yapıldığı belirtildi; devlete faturası altı milyon otuz 2000 lira oldu.
-Üç bin dört yüz on beş sigortalının ölüm tarihinden sonra kuruma tedavi veya reçete faturası gönderildi; devlete faturası bir milyon iki yüz on sekiz bin lira oldu.
-Vefat eden hekimlerin kırk beş hastayı tedavi ettiğine dair faturayla yirmi dört 1739 reçete ve işlem bildirildi; bunun devlete faturası dört milyon yüz doksan sekiz bin liradır.
-Haber bu nedenle ölü doktorların yirmi dört bin reçete kestiği başlığıyla verildi.
-
-Hastanelerce temini zorunlu olan kemoterapi ilaçları başta olmak üzere çeşitli tedavilerle ilgili haksız faturalandırma yapıldı; devlete maliyeti on bir virgül iki milyon liradır.
-Çalıştığı halde malul aylığı alan iki yüz seksen sekiz kişi tespit edildi; devlete faturası bir milyon beş yüz otuz bir bin liradır.
-Sosyal Güvenlik Kurumu ayrıca hastane, tıp merkezi, eczane ve optik gibi sağlık hizmeti sunucularını denetledi ve sonuçta beş hastane, sekiz eczane ve altmış dokuz diğer sağlık tesisinin sözleşmesini feshetti.
-Bu işlemlerle kurumun elli dört virgül sekiz milyon lira daha zarara uğratıldığı belirlendi ve bu kuruluşlara beş yüz elli beş virgül üç milyon lira ceza kesildi.
-
-@@ Kırsal nüfus ve uzmana başvuru
-Şimdi Türkiye'nin sağlık göstergelerine geçelim. Hoca burada bir soru soruyor: nüfusun sadece %12'sinin köyde yaşadığı toplumlarda uzmana muayene olmak isteme davranışı nasıl değişir? Kentleşme arttıkça insanlar 1. basamağı atlayıp doğrudan uzmana başvurmaya yönelir. Ancak ülke içinde bölgeler arası fark büyüktür. Orta Anadolu'da, Karadeniz'de ve Erzurum, Kars gibi Kuzeydoğu Anadolu illerinde nüfusun %25 ila kırk beşi kırsalda yaşarken, Malatya'da bu oran %10, Güneydoğu'da ise yüzde dokuzdur.
-
-@@ Hastaneye başvuru nedenleri
-Türkiye İstatistik Kurumu verilerine göre 18 yaş üstünde en sık hastaneye başvuru nedenlerinin oranlarına bakalım. Listenin başında %15,sekizle hipertansiyon gelir. Ardından astım hariç alerjik rinit, dermatit ve yiyecek alerjisi gibi alerjiler %10,8, şeker hastalığı %9,1. Boyun bölgesi problemleri %8,1, alerjik astım dahil astım %7,8, artroz %7,7, bel ağrısı ve bel fıtığı %7,1.
-
-Listenin devamında kronik obstrüktif akciğer hastalığı %7,3, depresyon %7,2, koroner kalp hastalığı %6,5, böbrek problemleri %6,4, idrar kaçırma ya da idrarı tutamama %5,9 ve Alzheimer %5,6. Daha düşük oranlarda kalp krizi %2,1, karaciğer yetmezliği %1,5 ve en sonda inme ve felç %0 virgül dokuz yer alır.
-Yani en sık neden hipertansiyon, en seyrek neden inme ve felçtir.
-
-@@ Bakım ihtiyacı, sezaryen ve gebe izlemi
-Hastalık, sakatlık veya yaşlılığa bağlı kronik problemler yaşayan ve haftada en az 1 kez bakım ya da yardım ihtiyacı olanların oranı 2016 yılında erkeklerde %9, kadınlarda yüzde ondur. Kadınlarda oranın biraz daha yüksek olduğuna dikkat edin.
-
-Sezaryen doğumların tüm doğumlar içindeki payı 2002 yılında %21 iken 2016 yılında %53'e çıktı.
-Karşılaştırma için Fransa'da bu oran %21, İngiltere'de %26'dır.
-Hoca burada neden diye soruyor ve bu artışın sorgulanması gerektiğini vurguluyor.
-Öte yandan iyi gelişmeler de var: gebe başına ortalama izlem sayısı 2002 yılında bir virgül yediden 2016 yılında dört virgül yediye çıktı.
-Yani doğum öncesi bakım belirgin şekilde iyileşti.
+Bu dönemde SGK, boyutu 24,4 milyon Türk lirasını bulan büyük bir vurgunu ortaya çıkarmıştır.
+Doğum izninde olan ve hayatta olmayan hekimler üzerinden fatura edilen tedavi işlemleri, yoğun bakım faturalandırmaları ve vatandaşların ölüm tarihlerinden sonra fatura edilen işlemler tespit edilmiştir.
+Bu olay faturalandırmada denetimin ne kadar önemli olduğunu göstermiştir.
 
 @@ Sağlık Bakanlığı teşkilatı
-Ülkemizde sağlıktan 1. derecede sorumlu olan kurum Sağlık Bakanlığıdır. Bakanlığın teşkilat ve görevleri, 2011 tarihli altı yüz altmış üç sayılı Sağlık Bakanlığı ve Bağlı Kuruluşlarının Teşkilat ve Görevleri Hakkında Kanun Hükmünde Kararname ile düzenlenmiştir. Bu kararname en son on beş Ağustos 2017 tarihli altı yüz doksan dört sayılı kanun hükmünde kararnamenin yüz 84. maddesiyle değiştirilmiştir. Bakanlık üç kısımdan oluşur: merkez teşkilatında bakan, bakan yardımcıları ve genel müdürler; taşra teşkilatında İl Sağlık Müdürü; bir de bağlı kuruluşlar.
+Ülkemizde sağlıktan birinci derecede sorumlu olan bakanlık Sağlık Bakanlığı'dır. Bakanlığın yapısını düzenleyen metin, Sağlık Bakanlığı ve Bağlı Kuruluşlarının Teşkilat ve Görevleri Hakkında Kanun Hükmünde Kararname'dir. Bu kararname 2011 tarihli, 663 sayılı kanun hükmünde kararnamedir. En son 15 Ağustos 2017 tarihli, 694 sayılı kanun hükmünde kararnamenin 184. maddesiyle değiştirilmiştir.
 
-Merkez teşkilatının görev dağılımı şemasında bakan olarak Doktor Fahrettin Koca yer alır.
-Bakana doğrudan bağlı olarak Denetim Hizmetleri Başkanlığı, Hukuk Müşavirliği, İç Denetim Birimi, Özel Kalem Müdürlüğü ve Basın ve Halkla İlişkiler Müşavirliği bulunur.
-Şemada dört bakan yardımcısı vardır: Profesör Doktor Muhammet Güven, Profesör Doktor Emine Alp Meşe, Doktor Şuayip 1. ve Halil Eldemir.
-Bunların altında çeşitli genel müdürlükler ve birimler örgütlenmiştir.
+Merkez teşkilatında en üstte bakan bulunur.
+Bakana bağlı olarak Denetim Hizmetleri Başkanlığı, Özel Kalem Müdürlüğü, Hukuk Müşavirliği ve İç Denetim Birimi Müşavirliği yer alır; bunların yanında 4 bakan yardımcısı vardır.
+Bakanlığın genel müdürlükleri ve birimleri arasında Yönetim Hizmetleri, Halk Sağlığı, Acil Sağlık Hizmetleri, Sağlık Yatırımları, Sağlık Hizmetleri, Sağlığın Geliştirilmesi, Sağlık Bilgi Sistemleri ve Kamu Hastaneleri Genel Müdürlükleri, Dış İlişkiler ve Avrupa Birliği birimi ile Türkiye Hudut ve Sahiller Sağlık Genel Müdürlüğü sayılır.
+Ayrıca Strateji Geliştirme Başkanlığı, Proje Yönetimi Destek Birimi, Türkiye Sağlık Enstitüleri Başkanlığı ve Türkiye İlaç ve Tıbbi Cihaz Kurumu da bu yapının içindedir.
 
-Bu birimler arasında Yönetim Hizmetleri, Sağlık Hizmetleri, Kamu Hastaneleri, Halk Sağlığı, Sağlığın Geliştirilmesi, Dış İlişkiler ve Avrupa Birliği, Acil Sağlık Hizmetleri, Sağlık Yatırımları, Sağlık Bilgi Sistemleri ile Türkiye Hudut ve Sahiller Sağlık genel müdürlükleri yer alır.
-Ayrıca Strateji Geliştirme Başkanlığı ve Proje Yönetimi Destek Birimi vardır.
-Bağlı kuruluşlar ise Türkiye Sağlık Enstitüleri Başkanlığı ile Türkiye İlaç ve Tıbbi Cihaz Kurumudur.
+@@ Belediyelerin sağlıkla ilgili görevleri
+Sağlık yalnızca bakanlığın işi değildir; çevre sağlığının önemli bir kısmı yerel yönetimlerle birlikte yürütülür. Belediyelerin sağlıkla ilgili başlıca görevleri şunlardır: çöplerin toplanması, mezarlık tesisi, içme suyunun temini, kanalizasyon ya da foseptik sisteminin kurulması, binalara ruhsat verilmesi ve başıboş hayvanların aşılanması, kısırlaştırılması ve barındırılması. Örneğin mezarlık tesisi ve başıboş hayvanlar belediyenin sorumluluğundadır.
 
-@@ Belediyeler ve sağlık görevleri
-Sağlık hizmetlerinde yerel yönetimlerin de payı vardır. İki bin on yedi yılı verilerine göre Türkiye'de seksen bir il bulunur. Belediyelere bakarsak otuz büyükşehir belediyesi, elli bir il belediyesi, beş yüz on dokuz büyükşehir ilçe belediyesi, dört yüz ilçe belediyesi ve üç yüz doksan yedi belde belediyesi vardır; bunların toplamı bin üç yüz doksan yedi belediye eder. Ayrıca dokuz yüz on dokuz ilçe, otuz 2052 mahalle ve on sekiz bin üç yüz otuz üç köy bulunmaktadır.
-
-Belediyelerin sağlıkla ilgili başlıca görevleri çevre sağlığı ağırlıklıdır.
-Bunlar çöplerin toplanması, mezarlık tesisi, içme suyu temini, kanalizasyon veya foseptik sisteminin kurulması, binalara ruhsat verilmesi ve başıboş hayvanların aşılanması, kısırlaştırılması ve barındırılmasıdır.
-Yani belediye, hastalığı tedavi etmekten çok hastalığın ortaya çıkmasını önleyecek çevre koşullarını sağlar.
+2017 verilerine göre 30 büyükşehir belediyesi vardı.
+İlçe sayısı 919'du; bunların 519'u büyükşehir ilçe belediyesi, 400'ü ilçe belediyesiydi.
+Bunlara 397 belde belediyesi eklenince toplam belediye sayısı 1397'ye ulaşıyordu.
+Aynı yıl 32.052 mahalle ve 18.333 köy bulunuyordu.
 
 @@ Sağlık insan gücü
-İki bin on altı yılı sağlık insan gücü verilerine bakalım. Toplam hekim sayısı yüz kırk dört 1827'dir. Bunun yetmiş sekiz bin altı yüz yirmisi uzman hekim, kırk üç bin elli sekizi pratisyen hekim, yirmi üç bin yüz kırk dokuzu asistan hekimdir. Hekimlerin yarısından fazlasının uzman olduğuna dikkat edin.
+Şimdi 2016 yılı sağlık insan gücü verilerine bakalım. Uzman hekim sayısı 78.620, pratisyen hekim sayısı 43.058, asistan hekim sayısı 23.149'dur. Bunların toplamı olan toplam hekim sayısı 144.827'dir. Görüldüğü gibi uzman hekim sayısı pratisyen hekim sayısının yaklaşık 2 katıdır; dağılım uzman ağırlıklıdır.
 
-Diğer meslek gruplarında yirmi altı bin altı yüz yetmiş dört diş hekimi, yirmi yedi 1864 eczacı, yüz elli 2009 yüz elli iki hemşire ve elli 2004 yüz elli altı ebe vardır.
-Diğer sağlık personeli yüz kırk dört bin altı yüz dokuz, diğer personel ve hizmet alımı ise üç yüz yirmi bir 1952'dir.
-Sağlık sektöründeki toplam çalışan sayısı sekiz yüz yetmiş bir bin üç yüz otuz dörttür.
-Aile büyüklüğü beş kabul edilirse yaklaşık dört virgül üç milyon kişi geçimini sağlık sektöründen sağlıyor demektir.
+Hekim dışındaki gruplara bakarsak, diş hekimi sayısı 26.674, eczacı sayısı 27.864'tür.
+Diğer sağlık personeli 144.609, diğer personel ve hizmet alımı ise 321.952'dir.
+Sağlık sektöründeki toplam çalışan sayısı 871.334'tür.
+Burası önemli, sınav spotu olarak toplam hekim sayısı 144.827 ve toplam çalışan sayısı 871.334 öne çıkar.
 
-@@ Hastane ve yatak kapasitesi
-İki bin on altı yılında sekiz yüz yetmiş altı Sağlık Bakanlığı hastanesinde yüz yirmi üç bin yatak vardır. Altmış dokuz üniversite hastanesinde otuz yedi bin yatak, beş yüz altmış beş özel hastanede ise kırk yedi bin yatak bulunur. Türkiye genelinde bin beş yüz on hastanede iki yüz on yedi 1700 yatak vardır.
+@@ Hastaneler ve yatak kapasitesi
+Hastanelerde toplam 123.000 yatak vardır. Bunların içinde 69 üniversite hastanesi 37.000 yatakla, 565 özel hastane de 47.000 yatakla yer alır; yani özel hastaneler yatak kapasitesinde önemli bir pay tutar. Dal hastaneleri listesinde 27 göz hastalıkları hastanesi, 20 fizik tedavi ve rehabilitasyon hastanesi ve 14 göğüs hastalıkları hastanesi sayılmıştır.
 
-Burası önemli, bu oran sınavda sorulur: Türkiye'de on bin kişiye yirmi yedi yatak düşer.
-Dünya ortalaması otuz altı yataktır.
-Amerika Birleşik Devletleri'nde ve Yunanistan'da on bin kişiye elli yatak, Almanya'da ise seksen yedi yatak düşmektedir.
-Yani yatak sayımız dünya ortalamasının altındadır.
-Bir de Sağlıkta Dönüşüm Programıyla bağlantılı bir sayı: 2005 yılında Sosyal Sigortalar Kurumu'ndan yüz kırk altı hastane ve otuz beş bin hastane yatağı devralınmıştır.
+Türkiye'de 10.000 kişiye 27 yatak düşmektedir.
+Karşılaştırma için Amerika Birleşik Devletleri'nde ve Yunanistan'da 10.000 kişiye 50 yatak, Almanya'da 87 yatak düşer; dünya ortalaması ise 36 yataktır.
+Burası önemli, sınavda bu 2 sayı yer değiştirilerek sorulur: Türkiye 27, dünya ortalaması 36.
+Yani Türkiye dünya ortalamasının altındadır.
 
-Uluslararası akreditasyon belgesi olan jey si ay belgesine sahip otuz iki hastane 2018 itibarıyla en çok İstanbul'da toplanmıştır.
-İstanbul'da Acıbadem Maslak, Amerikan, Florence Nightingale, Memorial, Medicana ve Hisar gibi hastaneler; Ankara'da Güven, Bayındır ve Memorial; İzmir'de Kent ve Medikal Park; Antalya'da Memorial, Adana'da Acıbadem ve Kocaeli'nde Anadolu Sağlık Merkezi bu listede yer alır.
-Görüldüğü gibi bu belgeli hastanelerin çoğu büyük şehirlerdeki özel hastanelerdir.
+2005 yılında SSK'dan 146 hastane ve 35.000 hastane yatağı Sağlık Bakanlığına devralınmıştır.
+Burası önemli, bu devir sayıları da sınav spotudur.
+Kalite belgelendirmesine gelince, 2018'de uluslararası JCI belgesine sahip 32 hastane sayılmıştır; bu hastaneler İstanbul, Ankara, İzmir, Antalya, Adana ve Kocaeli illerinde bulunmaktadır.
 
-İki bin on altı yılı hastane türlerine göre dağılım tablosuna bakarsak, açık farkla en kalabalık grup bin üç yüz seksen beş hastane ve yüz doksan altı 1951 yatakla genel hastanelerdir.
-Dal hastaneleri arasında otuz bir kadın doğum ve çocuk hastalıkları hastanesi beş bin beş yüz kırk dokuz yatakla öne çıkar.
-Bunu yirmi yedi göz hastalıkları, yirmi fizik tedavi ve rehabilitasyon, on dört göğüs hastalıkları ve on iki psikiyatri hastanesi izler; psikiyatri hastanelerinde dört bin üç yüz elli iki yatak vardır.
+@@ Birinci basamak: aile sağlığı merkezleri
+Türkiye'de 2010 yılından beri birinci basamak sağlık kuruluşu aile sağlığı merkezleridir. Burası önemli, burada klasik bir tuzak var: sosyalleştirme döneminde birinci basamak kurumu sağlık ocağıydı; 2010'dan beri ise aile sağlığı merkezidir. 2016 verilerine göre 24.428 aile hekimi, 7636 aile sağlığı merkezi, 970 toplum sağlığı merkezi ve 5419 sağlık evi vardır. Bir aile hekimine düşen nüfus 3000 ile 3500 arasındadır. 2017 yılında yapılan değişiklikle bu sayının 2000 kişiye indirilmesi hedeflenmiştir; amaç, hekimin her kişiye ayırabileceği zamanı artırmaktır.
 
-Daha az sayıdaki dal hastaneleri ise beş kalp ve damar cerrahisi, dört çocuk hastalıkları, üç kemik hastalıkları, üç meslek hastalıkları, iki onkoloji hastanesi ile birer ortopedi ve travmatoloji, lepra, lösemili çocuklar ve spastik çocuklar hastanesi ve rehabilitasyon merkezidir.
-Lepra hastanesinin hâlâ bulunması, Refik Saydam döneminden gelen lepra mücadelesinin bir devamı olarak dikkat çekicidir.
-Tablonun toplamı yine bin beş yüz on hastane ve iki yüz on yedi 1700 yataktır.
-
-@@ 1. basamak kuruluşları ve aile hekimliği
-Sağlık Bakanlığının 2016 verilerine göre 1. basamakta yirmi dört bin dört yüz yirmi sekiz aile hekimi, yedi bin altı yüz otuz altı aile sağlığı merkezi, dokuz yüz yetmiş toplum sağlığı merkezi ve beş bin dört yüz on dokuz sağlık evi vardır. Bir aile hekimine düşen nüfus üç bin ila üç bin beş yüzdür. İki bin on yedi yılında yapılan değişiklikle bu sayının 2000 kişi olması hedeflendi.
-
-Burası önemli arkadaşlar: Türkiye'de 2010 yılından beri 1. basamak sağlık kuruluşu artık sağlık ocağı değil, aile sağlığı merkezidir.
 Aile sağlığı merkezlerinin bir bölümü eski sağlık ocağı binalarında hizmet verir.
-En ileri donanıma sahip olan A tipi aile sağlığı merkezidir.
-Bu merkezlerde birden fazla hekim çalışabilir ve her hekimin yardımcısı olarak bir aile sağlığı elemanı bulunur; bu eleman genellikle hemşiredir.
-Hoca burada aile hekimini tanımayan var mı diye sorarak herkesin bir aile hekimine kayıtlı olduğunu hatırlatıyor.
+Merkezler donanımlarına göre tiplere ayrılır ve en ileri donanıma sahip olan A tipi aile sağlığı merkezidir.
+Bir merkezde birden fazla hekim çalışabilir ve her hekimin yardımcısı olarak bir aile sağlığı elemanı, genellikle bir hemşire bulunur.
+Böylece ekip yaklaşımı birinci basamakta sürdürülmektedir.
 
-1. basamakta başka kuruluşlar da vardır.
-Ana Çocuk Sağlığı ve Aile Planlaması merkezi sayısı yüz seksen bir, verem savaş dispanseri sayısı yüz seksendir.
-Kanser Erken Teşhis, Tarama ve Eğitim Merkezi, kısaca ketem, yüz elli dokuz tanedir.
-Yüz on iki acil yardım istasyonu sayısı 2004 yüz, halk sağlığı laboratuvarı sayısı ise seksen üçtür.
+@@ Diğer birinci basamak kuruluşları
+Aile sağlığı merkezlerinin dışında da birinci basamakta hizmet veren kuruluşlar vardır. Ana çocuk sağlığı ve aile planlaması merkezi sayısı 181, Verem Savaş Dispanseri sayısı 180'dir. Kanser Erken Teşhis, Tarama ve Eğitim Merkezi, kısaca KETEM sayısı 159'dur. 112 acil yardım istasyonu sayısı 2400, halk sağlığı laboratuvarı sayısı ise 83'tür. Bu birimler koruyucu ve destek hizmetleri ayrı ayrı yürütür. Yeni mezun bir hekimin çalışabileceği yerler de bu yapı içinde tanımlanmıştır: toplum sağlığı merkezi, il devlet hastanesi acil servisi ve ilçe devlet hastanesi acil servisi.
 
-@@ 2. ve 3. basamak, yeni mezun hekimin çalışma yerleri
-Burası önemli, basamakların tanımı sınavda sorulur. 2. basamak sağlık kuruluşları, uzman hekimin çalıştığı özel veya devlete ait kuruluşlardır. 3. basamak sağlık kuruluşları ise asistan yetiştirilen üniversite hastaneleri veya Sağlık Bakanlığı eğitim hastaneleridir. Yani 2. basamağı uzman hekim, 3. basamağı ise uzmanlık eğitimi verilmesi belirler.
+@@ İkinci ve üçüncü basamak ayrımı
+Basamakları birbirinden ayıran ölçüt hekimin niteliği ve eğitim işlevidir. İkinci basamak sağlık kuruluşları, uzman hekimin çalıştığı özel ya da devlete ait kuruluşlardır. Üçüncü basamak sağlık kuruluşları ise asistan yetiştirilen üniversite hastaneleri ya da Sağlık Bakanlığı eğitim hastaneleridir. Burası önemli, bu ayrım sınavda tuzak olarak sorulur. Uzman hekimin varlığı ikinci basamağı tanımlar; asistan eğitiminin yapılması ise üçüncü basamağı tanımlar. Yani bir hastanede uzman hekim çalışıyor olması onu tek başına üçüncü basamak yapmaz; belirleyici olan asistan yetiştirilmesidir.
 
-Yeni mezun bir hekimin çalışabileceği yerler de sayılmıştır: toplum sağlığı merkezi, yüz on iki acil, il devlet hastanesi acil servisi ve ilçe devlet hastanesi acil servisi.
-Siz de mezun olduğunuzda büyük olasılıkla bu birimlerden birinde mesleğe başlayacaksınız.
+@@ Özel sağlık kuruluşları
+Son olarak özel sağlık kuruluşlarının türlerine bakalım. Tıp merkezi, asgari olarak iç hastalıkları, kadın hastalıkları ve doğum, çocuk sağlığı ve hastalıkları ve genel cerrahi dallarında birer uzman hekim olmak üzere en az 4 uzmanlık dalında faaliyet gösteren kuruluştur. Bünyesindeki iç hastalıkları ya da çocuk sağlığı ve hastalıkları uzmanlarından bir kadrolu hekim ile kadın hastalıkları ve doğum alanında hizmet verir. Ağız ve diş sağlığı hizmeti için en az bir diş ünitesi ve diş hekimi bulunur. Ayrıca biyokimya ya da mikrobiyoloji laboratuvarı ve radyoloji ünitesi vardır ve 24 saat ayakta teşhis ve tedavi hizmeti sunar.
 
-@@ Özel sağlık kuruluşları: tıp merkezi
-Son olarak özel sağlık kuruluşlarına geçelim. İlk tür tıp merkezidir. Tıp merkezi, bünyesinde en az dört uzmanlık dalında faaliyet gösteren kurumdur; bu dallarda, yani iç hastalıkları, kadın hastalıkları ve doğum, çocuk sağlığı ve hastalıkları ile genel cerrahide birer uzman hekim bulunur. Ayrıca bu uzmanlardan en az iki kadrolu uzman hekim çalıştırmalıdır: biri iç hastalıkları veya çocuk sağlığı ve hastalıkları uzmanı, diğeri kadın hastalıkları ve doğum veya genel cerrahi uzmanı.
+Özel dal merkezi, ilgili uzmanlık dalında en az 2 uzman hekim çalıştıran, gerekli radyoloji, biyokimya ya da mikrobiyoloji laboratuvarları bulunan ve personel desteğiyle 24 saat ayakta teşhis ve tedavi hizmeti sunan özel sağlık kuruluşudur.
+Poliklinikler ise uzmanlık alanlarının dağılımına bakılmaksızın en az 2 hekimlik hizmetinin bir araya gelmesiyle kurulan kuruluşlardır ve günün 24 saatinde hizmet vermeleri şart değildir.
+Muayenehaneler tek hekimin ya da tek diş hekiminin bulunduğu birimlerdir.
 
-Tıp merkezinde ağız ve diş sağlığı alanında hizmet vermek amacıyla en az bir diş ünitesi ve diş hekimi bulunur.
-Bunun yanında biyokimya veya mikrobiyoloji laboratuvarları ve radyoloji ünitesi bulunur.
-Tıp merkezleri 24 saat süreyle ayakta teşhis ve tedavi hizmeti sunan özel sağlık kuruluşlarıdır.
-Burası önemli: tıp merkezi için dört dal ve en az iki kadrolu uzman kuralı sınavda sorulur.
+Burası önemli, burada da bir tuzak var: özel dal merkezi 24 saat ayakta hizmet verir, poliklinikte ise 24 saat hizmet şartı yoktur.
+Tıp merkezi en az 4 dal, özel dal merkezi tek dalda en az 2 uzman, poliklinik en az 2 hekimlik hizmeti, muayenehane ise tek hekim olarak aklınızda kalsın.
 
-@@ Özel dal merkezi, poliklinik ve muayenehane
-Özel dal merkezi, ilgili uzmanlık dalında en az iki uzman hekim çalıştıran özel sağlık kuruluşudur. Hasta kabul ve tedavi ettiği uzmanlık dalları için gerekli olan radyoloji, biyokimya ya da mikrobiyoloji laboratuvarlarından uygun olanlar bulunur ve personel desteğiyle 24 saat süreyle ayakta teşhis ve tedavi hizmeti sunar. Tıp merkezinden farkı, birden çok temel dal yerine tek bir uzmanlık dalına odaklanmasıdır.
-
-Poliklinikler, tıpta uzmanlık alanlarının dağılımına bakılmaksızın bir veya birden çok uzmanlık dalı, genel pratisyenlik ya da diş hekimliği olarak en az iki hekimlik hizmetinin bir araya gelmesiyle kurulan özel sağlık kuruluşlarıdır.
-Polikliniklerin günün yirmi dört saatinde hizmet vermeleri şart değildir; hizmet vermek istedikleri çalışma saatlerini başvuruları sırasında müdürlüğe bildirirler.
-Muayenehaneler ise tek hekim veya tek diş hekiminin bulunduğu birimlerdir.
-
-Özetle, tıp merkezi ve özel dal merkezi 24 saat hizmet verir, poliklinik için bu şart yoktur, muayenehanede ise tek hekim bulunur.
-Türkiye'de sağlık hizmeti dikey örgütlenmeden sosyalleştirmeye, oradan Sağlıkta Dönüşüm Programı ve aile hekimliğine uzanan bir yol izlemiştir.
+@@ Özetle
+Özetle, Cumhuriyetin başında Refik Saydam'ın vertikal örgütlenmesiyle başlayan süreç, 1961'deki 224 sayılı kanunla sağlık ocağına dayalı yatay ve entegre sosyalleştirme modeline dönüştü. Sağlıkta Dönüşüm Programı ile sosyal güvenlik kurumları birleşti ve 2010'dan itibaren birinci basamak aile sağlığı merkezlerine geçti. Basamakları ayırırken uzman hekimin ikinci, asistan eğitiminin üçüncü basamağı tanımladığını unutmayın.

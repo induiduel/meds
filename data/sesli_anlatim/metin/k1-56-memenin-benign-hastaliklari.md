@@ -1,275 +1,262 @@
 # Memenin Benign Hastalıkları
 
-@@ Meme hastalıklarının başlıca belirtileri
-Meme hastalıkları hastayı hekime birkaç tipik belirtiyle getirir: ağrı, yani mastalji ya da mastodini; inflamatuvar değişiklikler; meme başı akıntısı; yaygın nodülerlik, halk arasındaki adıyla topaklanma; elle gelen, yani palpabl kitle ve erkekte meme büyümesi olan jinekomasti. Bu derste bu belirtilerden başlayıp inflamatuvar süreçlere, stromal neoplazmalara, iyi huylu epitel lezyonlarının kanser riskine ve sonunda meme karsinomunun alt tiplerine, epidemiyolojisine ve genetik mekanizmalarına doğru ilerleyeceğiz.
+@@ Memenin yapısı ve dersin ekseni
+Memenin işlevsel bölümü, özelleşmiş intralobüler stroma ile desteklenen lobüldür. Terminal kanal ile ona bağlı lobül birlikte terminal duktal lobüler üniteyi oluşturur; bu, memenin temel yapısal birimidir. Kanal ve lobüller iki katmanlı hücrelerle döşelidir: bazalde miyoepitel hücreleri, onların üzerinde lümen hücreleri bulunur. Laktasyonda lümen hücreleri süt üretir, miyoepitel hücrelerinin kasılması ise sütün boşaltılmasına ve bazal membranın desteklenmesine yardım eder. Kanallar sütü meme başına taşır. Lobüller arasındaki interlobüler stroma ise yaşla involüsyona uğrar ve memenin boyutunu belirler.
 
-Önce temel bir gerçeği akılda tutalım.
-Meme lezyonlarının yüzde doksanından fazlası benigndir ve çoğu tedavi gerektirmez.
-Ancak her lezyon maligniteyi dışlamak için mutlaka değerlendirilmelidir.
-Kanser olasılığı yaşla birlikte artar.
-Meme kanserli kadınların yaklaşık %45'i bir semptomla başvurur, geri kalanı ise tarama ile saptanır.
+Bu dersin omurgası tek bir sorudur: karşımızdaki lezyon benign mi, benignse gelecekte kanser riskini ne kadar artırır?
+Bu soruya 4 eksende yaklaşacağız.
+Önce hastayı kliniğe getiren belirtiler ve her birinin malignite açısından anlamı, sonra inflamatuvar süreçler, ardından memeye özgü 2 stromal tümör olan fibroadenom ve filloid tümör, en sonda da kanser riskine göre gruplanan iyi huylu epitel lezyonları.
+Meme karsinomunun alt tipleri, epidemiyolojisi ve genetiği ayrı bir derste işlenir.
 
-Şekil on yedi nokta yirmi dört bu durumu iki panelde özetler.
-1. panel hastaları kliniğe getiren yaygın belirtileri gösterir; kanser olasılığı belirtiye göre değişir.
-Elle gelen kitlede yaklaşık %7, meme başı akıntısında ve inflamatuvar değişikliklerde yaklaşık %5 kanser saptanırken, ağrı ve topaklanma gibi belirtilerde bu oran %1 ya da altındadır.
-2. panel ise meme kanserlerinin nasıl ortaya çıktığını gösterir: önemli bir kısmı anormal mamografiyle, bir kısmı da elle gelen kitleyle yakalanır.
+@@ Başlıca belirtiler ve lezyonların doğası
+Meme hastalıkları 6 tipik belirtiyle karşımıza çıkar. 1.'si ağrıdır; mastalji ya da mastodini denir. 2.'si kızarıklık, şişlik ve hassasiyetle seyreden inflamatuar değişikliklerdir. 3.'sü meme başı akıntısı, 4.'sü hastanın topaklanma diye tarif ettiği yaygın nodülerlik, 5.'si elle hissedilen palpabl kitle, 6.'sı da erkekte meme dokusunun büyümesi olan jinekomastidir. Bu belirtilerin hepsi çoğunlukla benign nedenlere bağlıdır, ama hiçbiri kanseri tek başına dışlamaz.
 
-@@ Ağrı ve inflamasyon
-Ağrı, yani mastalji, sıklıkla adet dönemleriyle ilişkilidir ve döngüsel ödem ile şişliğe bağlıdır. Tipik özelliği yaygın, iki taraflı hassasiyettir. Lokalize ağrının nedenleri arasında yırtılmış bir kist ya da travmaya bağlı yağ nekrozu sayılır. Ağrılı kitlelerin çoğu benigndir, ancak yaklaşık yüzde beşinde altta yatan neden meme kanseridir. Yani ağrı varlığı kanseri dışlatmaz.
+Memede saptanan lezyonların %90'dan fazlası benigndir ve çoğu tedavi gerektirmez.
+Buna rağmen her lezyon maligniteyi dışlamak için mutlaka değerlendirilir.
+Kanser olasılığı, belirti ne olursa olsun yaşla birlikte artar.
+Örneğin meme başı akıntısının kansere bağlı olma olasılığı 60 yaşın altında %7 iken 60 yaşın üzerinde %30'a çıkar; ele gelen kitlede bu oran 40 yaşın altında %10, ileri yaştaki kadınlarda ise %60'tır.
+Meme kanserli kadınların yaklaşık %45'i bir belirtiyle başvurur; geri kalanı tarama ile saptanır.
+Yani kanserlerin yarıdan fazlası belirti vermeden yakalanır ve belirtinin olmaması kanserin olmadığı anlamına gelmez.
 
-İnflamasyon klinikte eritem, ödem ve genellikle ağrı ile lokal hassasiyetle kendini gösterir.
-En sık emzirme yani laktasyon döneminde görülür ve en tipik tablo Stafilokokus aureus ya da streptokok kaynaklı laktasyonel apsedir.
-Nadir ama çok önemli bir tuzak da inflamatuvar meme karsinomudur.
-Bu tümör enfeksiyonu taklit eder, bu yüzden memede kızarıklık ve ödem gördüğünüzde her zaman akılda tutulmalıdır.
+@@ Belirtiye göre kanser oranları
+Kitaptaki 2 pasta grafiği bu konuyu iki yönden gösterir. 1.'si, kadınları kliniğe getiren belirtilerin dağılımını ve her belirtinin arkasındaki kanser oranını verir. En büyük dilim yaygın topaklanma ve diğer belirtilerdir; bunların yalnızca yaklaşık %1'i kanserdir. Ağrı ikinci büyük dilimdir ve yaklaşık %5'i kanserdir. Palpabl kitlede de oran yaklaşık %5'tir. Meme başı akıntısı küçük bir dilim olmasına karşın en yüksek orana sahiptir; yaklaşık %7'si kanserdir. İnflamasyon ise en küçük dilimdir ve kanser oranı %1'in altındadır. Dikkat edin, bir belirtinin sık görülmesi ile taşıdığı risk aynı şey değildir.
+
+İkinci grafik ters yönden bakar: tanı konmuş meme kanserlerinin hangi yolla ortaya çıktığını gösterir.
+Açık ara en büyük dilim anormal mamografidir; kanserlerin çoğu hiçbir belirti vermeden mamografide saptanır.
+İkinci sırada palpabl kitle gelir.
+Ağrı, akıntı ve inflamatuar değişiklikler ise birer küçük pay oluşturur.
+İki grafiği birlikte okuyalım: hasta açısından kanser olasılığı en yüksek belirti akıntıdır, ama kanser açısından bakıldığında akıntıyla ortaya çıkan kanser azdır ve ana yol taramadır.
+
+@@ Ağrı: döngüsel ve lokalize
+Meme ağrısının en sık biçimi hormonal döngüye eşlik eden ağrıdır. Sıklıkla adet dönemleriyle ilişkilidir; döngü boyunca gelişen döngüsel ödem ve şişlik meme dokusunu gerer ve ağrıya yol açar. Tipik özelliği yaygın ve bilateral hassasiyettir, yani tek bir noktaya sınırlı değildir. Bu örüntü fizyolojik hormonal etkiyi düşündürür.
+
+Tek bir noktaya sınırlı ağrı ise genellikle fokal bir lezyona işaret eder.
+İki klasik nedeni vardır: yırtılmış kist, yani içeriğini çevre dokuya döken kist, ve travmaya bağlı yağ nekrozu.
+Ağrılı kitlelerin çoğu benigndir; ancak yaklaşık %5'inde altta yatan neden meme kanseridir.
+"Ağrılı kitle kanser değildir" yaygın bir yanılgıdır; ağrı kanseri dışlamaz.
+
+Yağ nekrozu üzerinde biraz duralım.
+Genellikle yaşlı kadınlarda, travmayı izleyen inflamatuvar reaksiyon sonrası gelişen fokal bir nekrozdur.
+Burası önemli, sınav spotudur: yağ nekrozu ağrısız bir kitle de oluşturabilir ve mamografide kalsifikasyon gösterdiği için meme kanserini taklit eder.
+Mikroskopta nekrotik yağ hücrelerini köpüksü sitoplazmalı histiyositler çevreler; zamanla yabancı cisim dev hücreleri, kalsifikasyon, hemosiderin ve en sonunda skar dokusu oluşur.
+Yağ nekrozu memenin interlobüler stromasında, yani yağ ve bağ dokusunda gelişen bir lezyondur.
+Duktal ektaziden ayırmada travma, cerrahi ya da radyasyon öyküsü yol gösterir.
+
+@@ İnflamasyon, apseler ve inflamatuar karsinom
+Meme inflamasyonu deride eritem ve ödemle belirginleşir; genellikle ağrı ve lokal hassasiyet eşlik eder. En sık emzirme yani laktasyon döneminde görülür ve tabloya Staphylococcus aureus ya da streptokoklar yol açar. Burası önemli: memede enfeksiyonun başlıca etkeni Staphylococcus aureus'tur; tipik olarak emzirmenin ilk haftalarında meme başı derisindeki fissürlerden girer. Mikroorganizmalar, nötrofil toplulukları ve bakterilerden oluşan laktasyonel apseler gelişebilir; tedavi edilmezse doku nekrozu ve deriye açılan fistül traktları ortaya çıkar.
 
 Laktasyonel apse emzirmenin ilk ayında sıktır.
-Tedavisi antibiyotik vermek ve sütün sağılmasına devam etmektir; nadiren insizyon ve drenaj gerekir.
-Laktasyon dışı apse ise nadirdir ve genellikle karışık anaerobik enfeksiyonlarla oluşur.
+Tedavisi antibiyotik ile birlikte sütün sağılmasına devam etmektir; memede biriken süt bakteriler için uygun bir ortam oluşturduğu için boşaltım tedavinin bir parçasıdır.
+Yani emzirmeyi ya da sağmayı kesmek yanlıştır.
+İnsizyon ve drenaj yalnızca nadiren gerekir.
+Laktasyon dışı apse ise nadirdir ve genellikle karışık anaerobik enfeksiyonlardan kaynaklanır; tek bir deri bakterisi değil, oksijensiz ortamda çoğalan birden çok mikroorganizma birlikte bulunur.
 
-@@ Meme başı akıntısı ve yaygın nodülerlik
-Meme başı akıntısında taraf ve nitelik çok şey anlatır. İki taraflı, az miktardaki akıntı genelde benigndir. Tek taraflı akıntı ise altta yatan bir meme hastalığı açısından uyarıcıdır. Akıntının en sık benign nedeni meme başı altındaki büyük kanallarda yerleşen intraduktal papillomdur. En çok endişe verici olan ise kendiliğinden gelen, tek taraflı ve kanlı akıntıdır; bu durumda malignite mutlaka dışlanmalıdır.
+Şimdi bu bölümün en kritik tuzağına gelelim.
+Nadir ama önemli bir kanser tipi olan inflamatuar meme karsinomu, eritem ve ödemle seyreder ve klinikte enfeksiyonu taklit eder.
+Burası önemli: buradaki kızarıklık ve şişlik gerçek bir iltihaptan değil, tümör hücrelerinin derideki lenfatik boşlukları yaygın biçimde infiltre edip tıkamasından kaynaklanır.
+Bu yüzden enfeksiyon gibi görünen her meme tablosunda, özellikle emzirme dışı dönemde ve antibiyotiğe yanıt yoksa, inflamatuar karsinom her zaman akılda tutulmalıdır.
 
-Yaygın nodülerlik ya da topaklanma sıklıkla fizyolojiktir ve hormonal etkilerle değişen fibrokistik değişikliklere bağlıdır.
-Belirgin olduğunda mamografi ya da ultrasonografi ile görüntüleme yapılır.
-Burada sorulan soru basittir: ayrı bir kitle var mı, yoksa değişiklik diffüz mü?
+@@ Meme başı akıntısı
+Meme başı akıntısında ilk soru akıntının bir memeden mi, iki memeden mi geldiğidir. İki taraflı ve az miktarda akıntı genelde benigndir; her iki memeyi birden etkileyen sistemik ya da hormonal bir etkiyi yansıtır. Fizyolojik akıntı sıklıkla bilateraldir, birçok kanaldan sıkmakla gelir, seröz niteliktedir ve altında genellikle bir meme patolojisi bulunmaz. Tek taraflı akıntı ise altta yatan bir meme hastalığı açısından uyarıcıdır, çünkü tek bir kanal sistemindeki fokal lezyonu düşündürür. Patolojik akıntı spontan, tek taraflı ve tek kanal kaynaklıdır; seröz, pürülan ya da kanlı olabilir.
 
-@@ Palpabl kitleler ve jinekomasti
-Palpabl kitleler genellikle iki ile 3 santimetre boyuta ulaştığında fark edilir. Kaynakları stromal hücre proliferasyonu ya da epitel hücre proliferasyonudur. Kitlelerin yaklaşık %95'i benigndir; benign kitleler yuvarlak ya da oval, iyi sınırlıdır ve hareketli olabilir. Malign kitleler ise doku planlarını aşma eğilimindedir; düzensiz, sert ve bazen fiksedir. Ancak bazı kanserler de iyi sınırlı olabilir, bu yüzden her kitle değerlendirilmelidir.
+Burası önemli, sınav spotudur: meme başı akıntısının en sık benign nedeni, meme başının altındaki büyük kanallarda gelişen intraduktal papillomdur.
+Akıntının en çok endişe verici biçimi ise 3 özelliğin bir arada olduğu akıntıdır: kendiliğinden gelen, tek taraflı ve kanlı akıntı.
+Bu üçlü varsa malignite dışlanmalıdır.
+En sık benign nedeni papillom olsa bile, bu tablo malignite dışlanmadan papillom kabul edilmez.
 
-Jinekomasti erkekte en sık görülen meme semptomudur.
-Patogenezde östrojen uyarısı artar, androjenlerin karşıt etkisi azalır.
-Sonuçta hem stromada hem epitelde proliferasyon olur.
-Ayırıcı tanıda ilaçlar, karaciğer hastalığı ve testis tümörleri düşünülmelidir; çünkü bu durumların hepsi östrojen ile androjen dengesini östrojen lehine bozabilir.
+@@ Yaygın nodülerlik ve palpabl kitle
+Hastanın "memem topak topak" diye tarif ettiği yaygın nodülerlik çoğunlukla bir hastalık değil, dokunun hormonlara verdiği yanıttır. Sıklıkla fizyolojiktir, yani normal glandüler dokudan kaynaklanır, ya da hormonal etkilerle değişen kist ve fibrozis alanlarından oluşan fibrokistik değişikliklerdir. Nodülerlik belirgin olduğunda mamografi ya da ultrasonografi yapılır. Görüntülemenin sorusu şudur: belirgin, ayrı bir kitle var mı, yoksa değişiklik diffüz mü? Yaygın topaklanmanın kanser oranı yaklaşık %1 olduğu için amaç, diffüz değişikliğin içinde saklanan ayrı bir kitleyi yakalamaktır.
 
-@@ Mamografik tarama
-Mamografik tarama bin dokuz yüz seksenlerden beri palpe edilemeyen, asemptomatik kanserlerin erken saptanmasını sağlar. Taramanın duyarlılığı ve özgüllüğü yaşla artar. Anormal bir mamografinin malign çıkma olasılığı 40 yaşında yaklaşık %10 iken 50 yaşında %25'in üzerindedir. Amerika Birleşik Devletleri'nde 50 yaş üstü kadınlardaki meme kanserlerinin çoğu mamografi ile saptanır.
+Palpabl kitleler genellikle 2 ile 3 santimetre boyuta ulaştığında fark edilir; daha küçük lezyonlar çoğu zaman ancak görüntülemeyle yakalanır.
+Kitlenin kaynağı ya stromal hücre proliferasyonu, yani bağ dokusunun çoğalması, ya da kanal ve lobül epitelinin proliferasyonudur.
+Burası önemli: ele gelen kitlelerin yaklaşık %95'i benigndir.
 
-Mamografide malignitenin başlıca iki işareti vardır: solid kitleye karşılık gelen yoğunluk artışı ve kalsifikasyonlar.
-Kalsifikasyonun biçimi önemlidir.
-Kaba ve yuvarlak kalsifikasyonlar kistler ya da fibroadenom gibi benign süreçleri düşündürür.
-İnce, pleomorfik, lineer ya da dallanan kalsifikasyonlar ise duktal karsinoma in situ gibi malign süreçleri akla getirir.
+Muayenede kitlenin biçimi ilk fikri verir.
+Benign kitleler yuvarlak ya da ovaldir, iyi sınırlıdır, çevreye sızmadan iterek büyür ve hareketli olabilir.
+Malign kitleler ise doku planlarını aşma eğilimindedir; düzensiz, serttir ve çevre dokuya yapıştığı için bazen fiksedir.
+Ancak dikkat edin, bazı kanserler aldatıcı biçimde iyi sınırlı olabilir.
+Bu nedenle iyi sınırlı ve hareketli bir kitle benign olasılığını artırsa da kanseri dışlamaz; her kitle değerlendirilmelidir.
 
-Meme inflamatuvar hastalıklarını özetleyelim.
-Bunlar nadirdir ve enfeksiyon, otoimmün hastalık ya da yabancı cisim reaksiyonlarıyla ilişkilidir.
-Semptomları eritem, ödem, ağrı ve hassasiyettir.
-Önemli nokta değişmez: inflamatuvar görünen her memede inflamatuvar karsinom olasılığı mutlaka düşünülmelidir.
+@@ Erkek memesi: jinekomasti
+Erkek memesi lobül oluşturmayan rudimenter kanallardan oluşur; en önemli patolojileri jinekomasti ve kanserdir. Jinekomasti, erkekte en sık meme semptomudur ve tek ya da iki taraflı olabilir. Patogenezinde iki hormonal etkinin dengesi bozulur: meme dokusunu büyüten östrojen uyarısı artar, normalde onu dengeleyen androjen karşıt etkisi ise azalır. Temel neden östrojen fazlalığıdır. Bu dengesizlik hem stromada hem epitelde proliferasyona yol açar; yani büyüme yalnızca yağ birikimi değil, gerçek doku çoğalmasıdır. Mikroskopta bağ dokusu artışı ve kanallarda epitel hiperplazisi görülür, lobül oluşumu nadirdir. Puberte ve ileri yaşlarda jinekomasti sıklıkla fizyolojiktir.
 
-@@ Stromal neoplazmalar: iki stroma tipi
-Meme stroması iki tiptir: lobüllerin içindeki intralobüler stroma ve lobüller arasındaki interlobüler stroma. Bu iki stroma farklı neoplazm spektrumları üretir. İntralobüler stromadan fibroadenom ve filloid tümör gelişir. İnterlobüler stromadan ise vücudun başka yerlerinde de görülen bağ dokusu tümörleri, örneğin lipom ve anjiyosarkom gelişir.
+Jinekomasti çoğu zaman altta yatan bir nedenin işaretidir, bu yüzden ayırıcı tanı aranır.
+İlk başlık ilaçlardır; hormonal dengeyi östrojen lehine kaydıran farmakolojik ajanlar ve anabolik steroidler jinekomasti yapabilir.
+İkinci başlık karaciğer hastalığıdır; karaciğer östrojenin yıkımında rol aldığından, örneğin sirozda östrojen etkisi artar.
+Üçüncü başlık testis tümörleridir; hormon salgılayan fonksiyonel testis tümörleri dengeyi bozar ve genç erkekte yeni gelişen jinekomastide akla gelmelidir.
+Klinefelter sendromu da etiyolojide yer alır.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: intralobüler stromadan köken alan tümörler fibroadenom ve filloid tümördür.
-Bu iki tümörün ortak özelliği de budur; ikisi de intralobüler stromadan köken alır ve hem stromal hem epitelyal bileşen taşır.
-Benzer bir soruda meme lezyonu ile köken dokusu eşleştirildi; intralobüler stroma filloid tümörle, terminal duktal lobüler ünite ise atipik hiperplazi ve karsinomla eşleşir.
+@@ Erkek meme kanserine kısa bir not
+Bu dersin erkek memesi bölümünde erkek meme kanserinden de kısaca söz edilir. Burası önemli, bu bilgi çıkmış sorularda soruldu: erkek meme kanserinin risk faktörleri birinci derece akrabada meme kanseri, Klinefelter sendromu gibi azalmış testis işlevi, obezite, eksojen östrojen kullanımı, ileri yaş, infertilite, iyonize radyasyon ve önceden meme hastalığı bulunmasıdır. Radyoaktif iyot tedavisi bu listede yer almaz.
+
+Erkek meme kanseri genellikle meme başının altında, subareolar palpabl bir kitle olarak ortaya çıkar ve akıntı yapabilir.
+Burası önemli: kadına göre deriyi ve göğüs duvarını sıklıkla invaze eder, deride ülserasyon sıktır; aksiller lenf nodu ve uzak metastaz da sıktır, tanı sırasında tümörlerin yaklaşık yarısı yayılmış olur.
+Buna karşılık HER2 ekspresyonunun kadına göre daha sık olması beklenmez; nitekim meme kanseri alt tiplerini karşılaştıran tabloda erkekler, östrojen reseptörü pozitif ve HER2 negatif lümenal grubun tipik hastaları arasında sayılır.
+Erkekler daha ileri evrede tanı alsa da, evreler eşleştirildiğinde prognoz kadınla benzerdir.
+
+@@ Mamografik tarama ve yaşın etkisi
+Elle fark edilme eşiğinin 2 ile 3 santimetre olması, daha küçük kanserleri yakalayacak bir yöntemi gerekli kılar. Mamografik tarama 1980'lerden beri, palpe edilemeyen ve belirti vermeyen kanserleri, yayılmadan önce erken saptamak amacıyla uygulanmaktadır. Mamografiyle saptanan invaziv karsinomların ortalama boyutu yaklaşık 1 santimetredir ve tanı anında bunların yalnızca %15'i bölgesel lenf nodlarına yayılmıştır.
+
+Mamografinin duyarlılığı ve özgüllüğü yaşla artar.
+Genç kadında meme dokusu yoğun olduğu için ayırt etme gücü sınırlıdır; yaş ilerledikçe doku yağla yer değiştirir ve lezyonlar daha net seçilir.
+Anormal bir mamografinin malign olma olasılığı da yaşa göre belirgin değişir: 40 yaşında yaklaşık %10, 50 yaşında ise %25'in üzerindedir.
+Yani 40 yaşında anormal bulguların onda dokuzu benign çıkarken, 50 yaşında her dört anormal bulgudan birinden fazlası kanserdir.
+Amerika Birleşik Devletlerinde 50 yaş üstü kadınlarda meme kanserlerinin çoğu mamografiyle saptanır.
+Özetle meme kanseri genç kadınlarda ve tarama yapılmayan toplumlarda daha çok palpasyonla, ileri yaşta ise mamografiyle bulunur.
+
+@@ Mamografide malignite bulguları ve kalsifikasyon biçimi
+Mamografide kanseri düşündüren 2 ana bulgu vardır. 1.'si yoğunluk artışıdır; çevresinden daha opak, solid bir kitleye karşılık gelir ve hacim kaplayan bir tümörü gösterir. 2.'si kalsifikasyonlardır; dokuda biriken kalsiyum tuzları görüntüde parlak noktalar olarak seçilir ve kanal içinde ölen hücrelerin ya da salgıların kalsiyum bağlamasıyla, kitle oluşmadan önce belirebilir.
+
+Ancak kalsifikasyonun varlığı tek başına kanser demek değildir; önemli olan biçimidir.
+Benign kalsifikasyonlar kaba ve yuvarlaktır; tipik kaynakları kistler ve fibroadenomdur.
+Malign kalsifikasyonlar ise ince, pleomorfik, yani şekil ve boyutça birbirinden farklı, lineer ya da dallanan biçimdedir.
+Bunların tipik kaynağı duktal karsinoma in situ gibi kanal içi lezyonlardır; kalsiyum kanalın şeklini izlediği için çizgisel ve dallı görünür.
+
+@@ İnflamatuvar hastalıkların genel çerçevesi ve duktal ektazi
+Apseler dışında memenin inflamatuvar hastalıkları nadirdir. Etiyolojileri 3 grupta toplanır: enfeksiyon, otoimmün hastalık ve dokuya giren yabancı maddeye karşı gelişen yabancı cisim reaksiyonları. Neden ne olursa olsun semptomlar ortaktır: eritem, ödem, ağrı ve hassasiyet. Bu yüzden ve bu hastalıklar nadir olduğu için, her zaman inflamatuar karsinom olasılığı düşünülmelidir. Mastit tiplerinin ve travmatik yağ nekrozunun hiçbirinde kanser riski artmaz.
+
+Burası önemli, bu bilgi çıkmış sorularda soruldu: lümeni nekrotik debrisle dolu, genişlemiş kanallar ve kanalı çevreleyen periduktal inflamasyon gösteren tablo duktal ektazidir.
+Duktal ektazi, adından da anlaşılacağı gibi kanalların genişlemesidir ve patolojik meme başı akıntısının nedenleri arasında da yer alır.
+
+@@ 2 stroma, 2 tümör spektrumu
+Memenin bağ dokusu tek tip değildir. İntralobüler stroma lobülün içinde asinüsleri saran, hormona duyarlı, özelleşmiş stromadır. İnterlobüler stroma ise lobüller arasındaki yoğun bağ ve yağ dokusudur ve vücudun diğer bölgelerindeki bağ dokusuna benzer. Bu iki stroma farklı tümör spektrumlarına kaynak olur. İntralobüler stromadan fibroadenom ve filloid tümör gelişir; bunlar memeye özgüdür, çünkü bu özelleşmiş stroma yalnızca memede bulunur. Burası önemli: intralobüler stroma tümörleri hem stromal hem epitelyal bileşen içerdiği için bifaziktir. Bu tümörlerin monofazik olduğunu söyleyen ifade yanlıştır.
+
+İnterlobüler stromadan ise vücuttaki diğer bağ dokusu tümörlerinin aynısı gelişir.
+Bunlar monofaziktir; hemanjiom ve lipom gibi benign yumuşak doku tümörleri bu gruptadır.
+Burası önemli, sınav spotudur: interlobüler stromal hücrelerden köken alan tek malignite, memeye lokal radyoterapi sonrası gelişen anjiyosarkomdur.
+Lipom ve anjiyosarkom memede görülse de memeye özgü sayılmaz.
+
+Burası önemli, köken eşleştirmeleri çıkmış sorularda soruldu.
+Filloid tümör intralobüler stromadan, yağ nekrozu interlobüler stromadan, atipik hiperplazi terminal duktal lobüler üniteden, soliter intraduktal papillom ise meme başının altındaki büyük kanallardan, yani laktiferöz sinüs bölgesinden köken alır.
+Duktal ektaziyi terminal duktal lobüler üniteyle eşleştirmek ise yanlıştır, çünkü duktal ektazi büyük kanalların lezyonudur.
 
 @@ Fibroadenom
-Fibroadenom ve filloid tümörün ortak kökenini gördük; davranışları ise farklıdır. Fibroadenom benigndir ve genç kadınlarda sıktır. Filloid tümör nadirdir, eksizyondan sonra nüks edebilir ve nadiren malign davranış gösterir. Burası önemli, bu bilgi çıkmış sorularda soruldu: genç kadınlarda en sık görülen benign meme tümörü fibroadenomdur.
+Aynı stromadan gelişen iki tümör, sıklık ve davranış açısından belirgin biçimde ayrılır. Fibroadenom benigndir ve genç kadınlarda sıktır. Filloid tümör ise nadirdir, eksizyondan sonra nüks edebilir ve nadiren malign davranış gösterir.
 
-Fibroadenomun morfolojisine bakalım.
-İki bileşeni vardır: neoplastik stromal hücreler ve bunlara eşlik eden reaktif epitel proliferasyonu.
-Yani asıl neoplastik olan stromadır, epitel ise tepki olarak çoğalır.
-Stromal fibroblastlar epiteli iter ve deforme eder; bu yüzden uzun, yarık benzeri duktus yapıları oluşur.
-Kitle iyi sınırlıdır ve hücre yoğunluğu düşüktür.
-Klinikte genç bir kadında hareketli, lastiksi bir nodül olarak ele gelir.
+Fibroadenom 2 bileşenden oluşur, ama bunlardan yalnız biri gerçek tümör hücresidir.
+Neoplastik bileşen, intralobüler stromadan köken alan stromal hücrelerdir.
+Epitel de çoğalır, ancak bu çoğalma reaktiftir; neoplastik stromal hücrelerin uyarısına verilen bir yanıttır.
+Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: hem stromal hem epitelyal bileşenin proliferasyonuyla karakterli, bifazik yapıdaki, memenin en sık görülen benign tümörü fibroadenomdur.
+Genellikle genç kadınlarda, 3. on yılda pik yapar ve kolayca hareket ettirilebilen, mobil bir kitle olarak ortaya çıkar.
+Yaşlı kadın tümörü değildir, malign değildir ve akıntıyla seyretmez.
+Östrojen aktivitesinin artışı etkilidir; menstrüasyon ve gebelikte büyüyebilir, menopozdan sonra geriler.
+En sık memenin üst dış kadranına yerleşir ve hastaların yaklaşık onda birinde birden çok fibroadenom görülür.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: genç bir kadında iyi sınırlı, hareketli, hem stromal hem epitelyal bileşen içeren benign kitle fibroadenomdur.
-Sorularda bu tümörün stromal hücreler ve epitel bileşeninin birlikte bulunmasıyla tanındığı vurgulanır.
+Mikroskopta stromal fibroblastlar epiteli iter ve deforme eder; bu baskı sonucunda yuvarlak asinüsler yerine uzun, yarık benzeri kanal yapıları oluşur.
+Kitle iyi sınırlıdır ve stroma düşük hücre yoğunluğuna sahiptir, sitolojik atipi yoktur ve mitoz nadirdir.
+Kanallar miyoepitel ve lümen hücreleriyle döşelidir ve bazal membranları sağlamdır.
+Makroskopik olarak keskin sınırlı, lastik kıvamında, kesit yüzü beyaz ve yarık benzeri boşluklar içeren bir kitledir.
+Klinikte genç kadında hareketli, lastiksi bir nodül olarak ele gelir.
 
-Şekil on yedi nokta yirmi beşin 1. paneli fibroadenomu gösterir.
-Bu iyi huylu tümör, itici sınırlı kenarlara sahip, genişleyici bir büyüme paterni sergiler.
-2. panel ise fillodes tümörüdür; proliferatif stromal hücreler bez dokusunu bozarak yarık benzeri boşluklar oluşturur ve çevredeki stromaya doğru şişer.
-Filloides kelimesi yapraksı anlamına gelir.
+Kitaptaki fibroadenom görüntüsünde, pembe, gevşek ve hücreden fakir stroma içinde ince, uzun, yarık benzeri epitel çizgileri dağınık izlenir.
+Tümörün itici sınırlı kenarları vardır; çevre dokuya sızmaz, onu önüne iterek büyür.
+Bu genişleyici büyüme paterni iyi huylu tümörlerin tipik davranışıdır ve muayenede kitlenin iyi sınırlı ve hareketli hissedilmesinin mikroskopik karşılığıdır.
 
-@@ Filloid tümör
-Filloid tümörde stromal proliferasyon epitel hücrelerinden belirgin olarak fazladır. Yapı, epitelle kaplı şişkin stromal nodüllerden oluşur ve yaprak benzeri, yani filloid bir büyüme paterni gösterir. Yüksek dereceli filloid tümörde epitel azdır ya da hiç yoktur ve görünüm sarkomatözdür. Burası önemli, bu bilgi çıkmış sorularda soruldu: yaprak benzeri yarıklar ve stromal hipersellülarite gösteren intralobüler stroma tümörü filloid tümördür.
+@@ Filloid tümör: morfoloji
+Filloid tümörde stroma ile epitel arasındaki denge stroma lehine belirgin biçimde bozulur. Stromal hücreler epitel hücrelerinden belirgin olarak fazladır ve stroma çok daha hücreseldir. Hücreden zengin stroma, epitelle kaplı şişkin stromal nodüller oluşturarak kanalların içine doğru kabarır ve yaprak benzeri bir büyüme paterni ortaya çıkar. Filloides kelimesi Yunanca kökenlidir ve yapraksı demektir; tümör adını bu paternden alır.
 
-Klinik davranış açısından filloid tümör benign ile malign arasında bir spektrumdur.
-Benign ya da düşük dereceli olanlar eksizyondan sonra nüks edebilir.
-Yüksek dereceli olanlar malign, sarkom benzeri davranır ve akciğer gibi uzak organlara metastaz yapabilir.
-Yönetim geniş cerrahi sınırlarla eksizyondur.
-Kısacası köken ortaktır; fibroadenomu ve filloid tümörü morfoloji, yani yarık duktusa karşı yaprak benzeri patern, davranış ve yönetim ayırır.
+Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: intralobüler stromadan köken alan, stromal hücreselliği artmış, epitelle döşeli prolifere stromanın yaprak tarzında uzantılar ve yaprak benzeri yarıklar oluşturduğu, lokal nüks eğilimi gösteren bifazik tümör filloid tümördür.
+Filloid tümör var olan bir fibroadenomdan gelişmez, de novo gelişir.
 
-@@ İyi huylu epitel lezyonları ve kanser riski
-İyi huylu epitel lezyonları üç gruba ayrılır: proliferatif olmayan meme değişiklikleri, atipisiz proliferatif lezyonlar ve atipili proliferatif hastalık. Bu ayrımın önemi kanser riskidir. Proliferatif olmayan değişikliklerde risk artmaz. Atipisiz proliferatif lezyonlarda risk 1,5 ile 2 kat artar. Atipili proliferatif hastalıkta ise risk dört ile 5 kat artar.
+Kitaptaki filloid tümör görüntüsünü fibroadenomla karşılaştıralım.
+Fibroadenomda stroma soluk ve hücreden fakirdir, kanalları basıp yarığa çevirir.
+Filloid tümörde ise koyu ve hücreden zengin stroma, yüzeyi ince bir epitel tabakasıyla örtülü büyük yapraklar halinde dizilir.
+Proliferatif stromal hücreler bez dokusunu bozarak yarık benzeri boşluklar oluşturur ve çevredeki stromaya doğru şişer.
 
-Tablo on yedi nokta altı bu lezyonları rölatif risk ve mutlak yaşam boyu riskle birlikte verir.
-Proliferatif olmayan değişiklikler hafif hiperplazi, duktal ektazi, kistler, apokrin metaplazi, adenozis ve kompleks özellik taşımayan fibroadenomdur; rölatif risk birdir, yani artmamıştır, mutlak risk yaklaşık %3'tür.
-Atipisiz proliferatif hastalık orta ya da belirgin hiperplazi, sklerozan adenozis, kompleks sklerozan lezyon ve kompleks özellikli fibroadenomdur; risk 1,5 ile 2 kat, mutlak risk yaklaşık %5 ile yedidir.
+Burası önemli, çıkmış sorularda filloid tümörü fibroadenomdan ayıran özellikler soruldu.
+Filloid tümörde selülarite yüksektir, mitoz ve nükleer pleomorfizm görülür, yaprak şeklinde çıkıntılar vardır, sınırları infiltratif olabilir, daha ileri yaşta ortaya çıkar, daha hızlı büyür ve nüks oranı yüksektir.
+Ama dikkat edin, bifazik tümör olmak bir fark değildir, çünkü fibroadenom da bifaziktir; bu ortak özellik iki tümörü ayırmaz.
 
-Atipili proliferatif hastalık atipik duktal hiperplazi ile atipik lobüler hiperplazidir; risk dört ile 5 kat, mutlak risk yaklaşık %13 ile on yedidir.
-Karsinoma in situ, yani lobüler ve duktal karsinoma in situ, riski sekiz ile 10 kat artırır; mutlak risk yaklaşık %25 ile otuzdur.
-Rölatif risk, bilinen risk faktörü olmayan kadınlara göre invaziv karsinom olasılığının kaç kat arttığını; mutlak risk ise müdahale olmadan kadınların yaklaşık yüzde kaçında yaşam boyu invaziv karsinom beklendiğini ifade eder.
+@@ Filloid tümör: derece, davranış ve yönetim
+Filloid tümörler tek tip değildir ve benignden maligne uzanan bir spektrumda yer alır. Düşük dereceli tümörlerde yaprak paterni belirgindir ve mikroskopta fibroadenoma benzerler, ama yine de selülarite ve mitoz daha fazladır. Yüksek dereceli filloid tümörde ise epitel az ya da hiç yoktur ve tümör sarkomatöz, yani bir bağ dokusu kanserine benzeyen bir görünüm kazanır; bunları yumuşak doku sarkomlarından ayırmak güçtür. Epitel bileşeninin kaybolması, stromal hücrelerin bağımsız ve agresif büyüdüğünü gösterir. Geçmişte bu tümörlere sistosarkoma fillodes denmiştir, ama bu ad yanıltıcıdır, çünkü tümörlerin çoğu benigndir.
 
-Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: kanser riskini artırmayan lezyon apokrin metaplazidir; sklerozan adenozis, radyal skar, kompleks sklerozan lezyon ve atipik hiperplazi ise riski artırır.
-Aynı şekilde proliferatif olmayan meme hastalığı sorulduğunda basit kistler, adenozis, hafif hiperplazi ve duktal ektazi bu gruptadır.
-Dikkat edin, adenozis proliferatif değildir ama sklerozan adenozis atipisiz proliferatif gruptadır.
-Fibroadenomda da ayrım aynıdır: kompleks özellik yoksa proliferatif olmayan, varsa atipisiz proliferatif gruba girer.
+Malignite düşündüren bulgular artmış stromal hücresellik, anaplazi, yüksek mitotik aktivite, hızlı büyüme ve infiltratif sınırlardır.
+Klinik davranış dereceye paraleldir.
+Benign ya da düşük dereceli tümörlerin ana sorunu eksizyon sonrası yerel nükstür.
+Yüksek dereceli tümörler ise malign, sarkom benzeri davranır ve akciğer gibi uzak organlara metastaz yapabilir.
+Filloid tümörlerin yaklaşık %2'si uzak organ metastazı yapar; aksiller lenf nodu metastazı ise yapmaz.
 
-@@ Proliferatif olmayan değişiklikler
-Proliferatif olmayan değişikliklerin üç ana morfolojik paterni vardır: kistler, fibrozis ve adenozis. Proliferatif olmayan denmesinin nedeni epitelin tek katmanlı bir hücre tabakası olarak kalmasıdır; bu, proliferatif lezyonlardaki çok katlı hiperplaziden farklıdır.
+Yönetim, geniş cerrahi sınırlarla eksizyondur.
+Tümör çevresinde sağlam doku bırakılarak çıkarılmazsa geride kalan stromal hücreler nükse yol açar.
+Benign ve nüks eğilimi olmayan fibroadenomda geniş sınır gerekmezken, filloid tümörde sınırın genişliği nüksü önlemenin temelidir.
+Kısacası ortak köken, farklı kader: stroma ne kadar baskın ve hücreselse, nüks ve metastaz riski o kadar yüksektir.
+
+@@ İyi huylu epitel lezyonları ve risk basamakları
+Meme epitelinden gelişen iyi huylu lezyonların çoğu mamografide rastlantısal olarak saptanır ve asıl klinik önemleri, gelecekte meme kanseri gelişme riskidir. Bu riske göre 3 basamakta sınıflanırlar. 1.'si proliferatif olmayan meme değişiklikleridir; epitel çoğalması yoktur ve risk artmamıştır. 2.'si atipisiz proliferatif lezyonlardır; epitel çoğalır ama atipi yoktur ve risk 1,5 ile 2 kat artar. 3.'sü atipili proliferatif hastalıktır; risk 4 ile 5 kat artar. Yani 2 soru sorarız: epitel prolifere mi, atipi var mı? Kanser riskinin en güçlü belirleyicisi atipidir.
+
+Kitaptaki risk tablosu bu basamakları ayrıntılandırır.
+Nonproliferatif değişiklikler hafif hiperplazi, duktal ektazi, kistler, apokrin metaplazi, adenozis ve kompleks özellik taşımayan fibroadenomdur; rölatif risk 1, mutlak yaşam boyu risk yaklaşık %3'tür.
+Atipisiz proliferatif hastalık orta ya da belirgin hiperplazi, sklerozan adenozis, kompleks sklerozan lezyon ve kompleks özellikli fibroadenomdan oluşur; rölatif risk 1,5 ile 2, mutlak risk yaklaşık %5 ile 7'dir.
+Atipili proliferatif hastalık atipik duktal hiperplazi ve atipik lobüler hiperplazidir; rölatif risk 4 ile 5, mutlak risk yaklaşık %13 ile 17'dir.
+Tablonun son satırında lobüler ve duktal karsinoma in situ yer alır; rölatif risk 8 ile 10, mutlak risk yaklaşık %25 ile 30'dur.
+Karsinoma in situ benign bir lezyon değildir; tablodaki yeri yalnızca risk sürekliliğini göstermek içindir.
+
+Bu tablodaki 2 sayıyı karıştırmayın.
+Rölatif risk, invaziv karsinom geliştirme olasılığının bilinen risk faktörü olmayan kadınlara göre kaç kat arttığını gösterir.
+Mutlak yaşam boyu risk ise herhangi bir müdahale olmaksızın kadınların yaklaşık yüzde kaçının yaşamı boyunca invaziv karsinom geliştirmesinin beklendiğini ifade eder.
+Örneğin atipili lezyonda risk 9 kat artsa da kadınların çoğu yaşamı boyunca invaziv karsinom geliştirmez.
+
+Burası önemli, çıkmış sorularda sık sorulan ayrımlar şunlardır.
+Adenozis nonproliferatiftir, sklerozan adenozis ise atipisiz proliferatiftir.
+Hafif hiperplazi nonproliferatiftir, orta ya da belirgin, yani florid hiperplazi proliferatiftir.
+Basit fibroadenom nonproliferatif, kompleks özellikli fibroadenom bir basamak yukarıda, atipisiz proliferatif gruptadır.
+Bu yüzden proliferatif olmayan hastalıklar arasında basit kistler, adenozis, hafif duktal epitel hiperplazisi ve duktal ektazi sayılırken, sklerozan adenozis bu gruba girmez.
+
+@@ Proliferatif olmayan değişiklikler: kist, fibrozis, adenozis
+Proliferatif olmayan değişikliklerin 3 ana morfolojik paterni vardır: kistler, fibrozis ve adenozis. Proliferatif olmayan denmesinin nedeni, lezyonları döşeyen epitelin tek katmanlı bir hücre tabakası olmasıdır. Bu, proliferatif lezyonlardaki çok katlı hiperplaziden farklıdır. Normal kanal ve lobüller iki katmanlı hücrelerle döşeli olduğu için, epitel hiperplazisi 2 hücre tabakasından daha fazla hücre bulunması olarak tanımlanır.
 
 En sık proliferatif olmayan lezyon basit kistlerdir.
-Lümeni döşeyen epitel tek katmanlıdır ve sıklıkla apokrin metaplazi gösterir; yani hücreler granüler, eozinofilik sitoplazmaya sahiptir.
-Kist sıvısının içeriği kalsifiye olabilir ve bu da mamografide kalsifikasyon olarak görülür.
+Kist lümenini tek katmanlı epitel döşer ve bu epitel sıklıkla apokrin metaplazi gösterir; apokrin hücrelerin sitoplazması bol, granüler ve eozinofiliktir.
+Kitaptaki görüntüde geniş, yuvarlak bir kist boşluğunun duvarını bu pembe, granüler sitoplazmalı hücrelerden oluşan tek sıralı bir epitel döşer.
+Apokrin metaplazi her zaman benigndir.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: apokrin metaplazi meme kanseri riskini artırmaz.
+Buna karşılık sklerozan adenozis, radyal skar, florid hiperplazi, duktal papillomatozis ve atipik epitel hiperplazisi riski artırır.
 
-Bir kist rüptüre olduğunda içeriği çevre dokuya dökülür.
-Bunun sonucunda kronik inflamasyon ve fibrozis gelişir.
-Klinikte elle hissedilen bir nodülerlik oluşur ve bu tablo fibrokistik değişiklikler olarak adlandırılır.
+Kistlerin çapı 1 ile 5 santimetre arasında değişebilir; açılmamış kistler kahverengiden maviye değişen renklerde olabilir ve bunlara mavi kubbe kistleri denir.
+Kist içeriği kalsifiye olabilir ve mamografide kalsifikasyon olarak görülür.
+Kist yırtıldığında içeriği çevre dokuya dökülür; bu içerik kronik inflamasyon ve fibrozise yol açar.
+Kist, inflamasyon ve fibrozis bir araya gelince elle hissedilen nodülerlik oluşur ve bu tabloya fibrokistik değişiklikler denir.
+Eskiden fibrokistik hastalık denirdi, ama bu lezyonların çoğunun kanserden ayırt edilmesi dışında pek klinik önemi olmadığı için değişiklik terimi tercih edilir.
+Östrojen tedavisi ve oral kontraseptifler fibrokistik değişikliklerin sıklığını artırmaz; aksine oral kontraseptifler riski azaltır.
+
+Burası önemli, bu bilgi çıkmış sorularda soruldu: fibrokistik değişikliklerin temel morfolojik bulguları kistik kanallar, apokrin metaplazi, fibrozis ve adenozistir.
+Epitel hiperplazisi ise bu bulgular arasında sayılmaz; o, proliferatif hastalığın göstergesidir.
 
 Adenozis, lobül başına düşen asinüs sayısının artmasıdır.
-Gebelikte bu fizyolojik ve normaldir.
-Gebelik dışında ise fokal alanlar şeklinde görülebilir.
-Adenozis kendi başına meme kanseri riskini belirgin biçimde artırmaz.
+Gebelikte normaldir, çünkü meme laktasyona hazırlanırken lobüller asinüs sayısını artırır.
+Gebelik dışında fokal alanlar halinde görülebilir.
+Kendi başına meme kanseri riskini belirgin artırmaz ve bu yüzden proliferatif olmayan gruptadır.
 
-@@ Atipisiz proliferatif lezyonlar
-Atipisiz proliferatif lezyonların örnekleri epitelyal hiperplazi, sklerozan adenozis, kompleks sklerozan lezyon, radyal sklerozan lezyon ya da radyal skar ve intraduktal papillomdur. Ortak özellikleri farklı derecelerde epitel proliferasyonu bulunması ama atipi olmamasıdır. Çoğu, mamografik yoğunluk ya da kalsifikasyon gibi nedenlerle yapılan biyopsilerde tesadüfen saptanır.
+@@ Atipisiz proliferatif lezyonlar ve intraduktal papillom
+Atipisiz proliferatif lezyonlar, epitelin farklı derecelerde çoğaldığı ama atipinin bulunmadığı geniş bir gruptur. Örnekleri epitel hiperplazisi, sklerozan adenozis, kompleks sklerozan lezyon, radyal sklerozan lezyon ya da radyal skar ve intraduktal papillomdur. Radyal skar, merkezde fibrozis ve çevresinde ışınsal uzanan epitel yapılarıyla karakterlidir. Bu lezyonların çoğu, mamografik yoğunluk ya da kalsifikasyon gibi nedenlerle yapılan biyopsilerde tesadüfen saptanır. Burası önemli: radyal skar ve intraduktal papillom da bu gruptadır ve kanser riskini 1,5 ile 2 kat artırır.
 
-İntraduktal papillomun şeklinde, kanal duvarından uzanan merkezi bir fibrovasküler çekirdek görülür.
-Papiller lümen içinde dallanır ve hem miyoepitel hem lümen hücreleriyle kaplıdır.
-Şekil on yedi nokta yirmi altı da iki örnek verir: proliferatif olmayan değişikliğin yaygın bir özelliği olan, bol granüler sitoplazmalı hücrelerle kaplı apokrin kist ve lümeni heterojen, karışık lümen ve miyoepitel hücre popülasyonuyla dolu epitelyal hiperplazi.
+Epitel hiperplazisinin kitaptaki görüntüsünde yuvarlak bir kanalın içi üst üste binmiş çok sayıda hücreyle dolmuştur ve aralarda düzensiz, yarık benzeri küçük boşluklar kalır.
+Lümen, lümen ve miyoepitel hücrelerinden oluşan heterojen, karışık bir hücre popülasyonuyla doludur.
+Basit kistte epitel tek sıralıydı; burada çok katlı hale gelip lümeni doldurmuştur.
+Heterojenlik atipinin olmadığını gösterir; hücreler homojenleştikçe lezyon atipik hiperplaziye yaklaşır.
 
-@@ Atipili proliferatif hastalıklar
-Atipili proliferatif hastalığın iki ana tipi vardır: atipik duktal hiperplazi ve atipik lobüler hiperplazi. Duktal ve lobüler terimleri hâlâ in situ ve invaziv karsinom alt tiplerini tanımlamak için kullanılır. Ancak kanıtlar, tüm meme karsinomlarının aslında terminal duktal lobüler üniteden kaynaklandığını düşündürür. Yani bu adlar hücrenin çıktığı yeri değil, lezyonun görünümünü anlatır.
+İntraduktal papillomda merkezi bir fibrovasküler çekirdek, yani bağ dokusu ve damar içeren bir sap, kanalın duvarından uzanır.
+Papiller lümen içinde dallanır ve miyoepitel ile lümen hücrelerinden oluşan iki tabakalı bir örtüyle kaplıdır; iki hücre tabakasının korunması lezyonun benign doğasını yansıtır.
+Görüntüde genişlemiş bir kanalın içini, dallanan pembe saplar üzerinde epitelle örtülü parmaksı çıkıntılar doldurur.
+Meme başı altındaki büyük kanallarda yerleştiği için akıntı yapar.
 
-Atipik duktal hiperplazi duktal karsinoma in situya çok benzer, ancak yayılımı daha sınırlıdır.
-Histolojide hücreler homojendir, keskin kenarlı yuvalar ve sert köprüler oluşturur.
-Şekil on yedi nokta yirmi yedinin ilk panelinde bir kanalın periferde yönlenmiş kolumnar hücreler ve merkezde daha yuvarlak hücrelerden oluşan karışık bir popülasyonla dolduğu görülür; bazı boşluklar yuvarlak ve düzenli, periferik boşluklar ise düzensiz ve yarık benzeridir.
-Bu özellikler atipiktir ama duktal karsinoma in situ kapsamına girmez.
-Klinik önemi, gelecekte hem aynı tarafta hem karşı memede kanser riskinin artmasıdır.
+@@ Atipili proliferatif hastalık: atipik duktal ve lobüler hiperplazi
+Atipili proliferatif hastalık, benign epitel lezyonlarının en yüksek riskli basamağıdır ve 2 tipe ayrılır: atipik duktal hiperplazi ve atipik lobüler hiperplazi. Bunlar monoklonal, prekanseröz lezyonlardır; karsinoma in situ tanısı için yeterli niteliksel ve niceliksel özellikleri taşımayan hücresel proliferasyonlardır. Duktal ve lobüler terimleri hâlen in situ ve invaziv karsinom alt tiplerini tanımlamak için kullanılır. Ancak kanıtlar tüm meme karsinomlarının terminal duktal lobüler üniteden kaynaklandığını düşündürür. Dikkat edin, duktal lezyon kanaldan, lobüler lezyon lobülden çıkar diye düşünmek tuzaktır; bu adlar kökeni değil, hücrelerin morfolojik görünümünü anlatır.
+
+Atipik duktal hiperplazi, duktal karsinoma in situya çok benzer, ancak yayılımı daha sınırlıdır.
+Hücreler homojendir; atipisiz hiperplazideki karışık popülasyonun aksine tek tip hücreler görülür.
+Hücreler keskin kenarlı yuvalar oluşturur ve yuvalar arasında sert köprüler uzanır.
+Kitaptaki görüntüde bir kanal, periferde yönlendirilmiş kolumnar hücreler ve merkezde daha yuvarlak hücrelerden oluşan bir popülasyonla doludur.
+Bazı boşluklar yuvarlak ve düzenlidir, ama periferik boşluklar düzensiz ve yarık benzeridir.
+Bu özellikler oldukça atipiktir, ancak duktal karsinoma in situnun kapsamına girmez.
+Klinik olarak hem aynı tarafta hem karşı memede gelecekte meme kanseri riski artar.
 
 Atipik lobüler hiperplazi ise lobüler karsinoma in situya benzer, ancak tutulumu daha sınırlıdır.
-Histolojide monomorfik hücreler ve düzgün, yuvarlak nükleuslar görülür.
-Şekilde küçük, yuvarlak, gevşekçe birleşmiş monomorfik hücrelerin bir lobülü kısmen doldurduğu izlenir; hücreler lobüler karsinoma in situ hücreleriyle morfolojik olarak aynıdır, ama tutulumun kapsamı bu tanı için yeterli değildir.
-Meme kanseri riski dört ile 5 kat artmıştır ve bu risk her iki memede de geçerlidir.
+Hücreler monomorfiktir ve nükleusları düzgün, yuvarlaktır.
+Kitaptaki görüntüde monomorfik, küçük, yuvarlak ve gevşekçe birleşmiş hücreler bir lobülü kısmen doldurur.
+Hücreler morfolojik olarak lobüler karsinoma in situ hücreleriyle aynıdır, ama tutulumun kapsamı bu tanı için yeterli değildir.
+Yani iki lezyonu ayıran hücre tipi değil, lobülün ne kadarının dolduğudur.
+Atipik lobüler hiperplazide de meme kanseri riski 4 ile 5 kat artmıştır ve risk her iki memede birden artar.
 
-@@ Meme karsinomu: genel bakış ve veriler
-Meme karsinomu dünya çapında kadınlarda en sık görülen ve en ölümcül malignitedir. Her yıl yaklaşık iki milyon yeni tanı konur ve hastaların yaklaşık üçte biri hastalıktan kaybedilir. Bölgesel farklar belirgindir: Amerika Birleşik Devletleri ve Avrupa'da insidans birçok bölgeye göre dört ile 7 kat yüksektir. Düşük gelirli ülkelerde ise insidans ve mortalite hızla artmaktadır.
-
-Amerika Birleşik Devletleri verilerine göre doksan yaşına kadar yaşayan bir kadında yaşam boyu meme kanseri riski yaklaşık sekizde birdir.
-İki bin yirmi bir tahminlerine göre yaklaşık iki yüz seksen bin invaziv meme kanseri tanısı ve kırk üç bin ölüm beklenmiştir; meme kanseri akciğer kanserinden sonra 2. sıradaki kanser ölüm nedenidir.
-Ölüm oranı bin dokuz yüz seksenlerden beri %30'dan yüzde yirminin altına inmiştir.
-Bunun nedenleri daha iyi tarama ile erken evrede tanı ve daha etkili sistemik tedavilerdir.
-
-@@ Moleküler alt gruplar
-Meme karsinomlarının neredeyse tümü adenokarsinomdur ve üç ana gruba ayrılır. 1.'si lümenal grup, olguların %50 ile altmış beşidir; östrojen reseptörü pozitif, ha e er iki negatiftir. 2.'si ha e er iki pozitif grup, %10 ile yirmidir; ha e er iki pozitiftir, östrojen reseptörü pozitif ya da negatif olabilir. 3.'sü üçlü negatif grup, %10 ile yirmidir; östrojen reseptörü, progesteron reseptörü ve ha e er iki negatiftir. Ha e er iki, insan epidermal büyüme faktörü reseptörü ikinin kısaltmasıdır.
-
-Burası önemli, bu bilgi çıkmış sorularda soruldu: moleküler alt tiplendirmede değerlendirilen parametreler hormon reseptörleri, yani östrojen ve progesteron reseptörü ile ha e er ikidir; alt tipler de lümenal, ha e er iki pozitif ve üçlü negatiftir.
-Bu üçlünün dışında kalan bir seçenek moleküler alt tip değildir.
-
-Lümenal tümörler kendi içinde de farklılık gösterir.
-Östrojen reseptörü ekspresyonu yüksek olan lümenal kanserde genellikle progesteron reseptörü ekspresyonu da yüksektir; tümör iyi diferansiyedir ve yavaş büyür.
-Östrojen reseptörü düşük, progesteron reseptörü negatif lümenal kanser ise kötü diferansiyedir, proliferasyon hızı yüksektir ve prognostik spektrumun kötü ucunda yer alır.
-
-@@ Üç grubun karşılaştırılması
-Lümenal, ha e er iki pozitif ve üçlü negatif tümörler hasta profili, histopatolojik özellikler, tedavi yanıtı, metastaz paterni, nüks süresi ve prognoz bakımından birbirinden ayrılır. Tablo on yedi nokta yedi bu farkları özetler. Tabloya göre genel sıklık lümenal grupta %50 ile altmış beş, ha e er iki grubunda %20, üçlü negatif grupta %15'tir.
-
-Tipik hasta gruplarında lümenal tümör daha ileri yaştaki kadınlarda, erkeklerde, tarama ile saptanan kanserlerde ve germ hattı BRCA2 mutasyonunda görülür.
-Ha e er iki pozitif tümör daha genç kadınlarda ve germ hattı TP53 mutasyonunda görülür.
-Üçlü negatif tümör ise genç kadınlarda, germ hattı BRCA1 taşıyıcılarında ve Afrika kökenli Amerikalı kadınlarda öne çıkar.
-Derece açısından lümenal tümörler çoğunlukla Grade 1 ve iki, ha e er iki pozitifler Grade 2 ve üç, üçlü negatifler çoğunlukla grade üçtür.
-
-Kemoterapiye tam yanıt lümenal grupta yaklaşık yüzde ondur.
-Ha e er iki pozitif grupta östrojen reseptörü pozitifse %15, negatifse yaklaşık %30 ile altmıştır.
-Üçlü negatif grupta yaklaşık yüzde otuzdur.
-Nüks zamanında lümenal tümörler uzun yıllara yayılan düşük nüks oranı gösterir; tanıdan 10 yıldan uzun süre sonra geç nüks olabilir ve kemik metastazıyla uzun sağkalım mümkündür.
-Ha e er iki pozitif tümörlerde erken ve yaklaşık 10 yıl civarında geç olmak üzere iki tepeli bir nüks paterni vardır.
-
-Üçlü negatif tümörlerde nüks 8 yıldan önce erken bir zirve yapar, geç nüks nadirdir ve metastatik hastalıkta sağkalım genellikle kısadır.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: en kötü prognozlu moleküler alt tip üçlü negatif meme kanseridir; çoğunlukla grade üçtür, erken nükseder ve metastatik hastalıkta sağkalım kısadır.
-
-Metastaz bölgelerinde lümenal tümörler %70 ile seksen kemiğe, %25 ile otuz visseral organlara, yaklaşık %10 beyne gider.
-Ha e er iki pozitiflerde kemik %70, visseral organlar %45, beyin yüzde otuzdur.
-Üçlü negatiflerde kemik %40, visseral organlar %35, beyin %25'tir.
-Sık somatik mutasyonlar lümenal grupta pe i ka üç ce a %29 ile kırk beş ve TP53 %12 ile yirmi dokuzdur; ha e er iki grubunda TP53 %70 ile seksen, pe i ka üç ce a yaklaşık %40'tır; üçlü negatifte TP53 %70 ile seksen, pe i ka üç ce a yüzde dokuzdur.
-Pe i ka üç ce a geni fosfoinozitid üç kinazı kodlar.
-
-@@ Yaş, ırk ve sosyoekonomik durum
-25 yaş altındaki kadınlarda meme kanseri nadirdir; otuz yaşından sonra insidans hızla artar. Üçlü negatif ve ha e er iki pozitif tümörlerin görülme sıklığı kırk yaşından sonra nispeten sabittir; bunlar genç kadın kanserlerinin yaklaşık yarısını, yaşlı kadın kanserlerinin ise %20'den azını oluşturur. Lümenal tümörlerde ise yaşla birlikte belirgin bir insidans artışı vardır.
-
-Meme kanseri oranları yüksek gelirli ülkelerde en yüksektir.
-Amerika Birleşik Devletleri'nde yeni tanı oranları sosyal olarak tanımlanmış ırklar arasında benzerdir, ancak bazı farklar vardır.
-Tanı yaşı en yüksek Avrupa kökenli Amerikalılarda, en düşük Hispanik Amerikalılardadır.
-Üçlü negatif ve ha e er iki pozitif tümör oranı Afrika kökenli Amerikalılarda daha fazladır; hormon reseptörü pozitif, ha e er iki negatif kanser ise Avrupa kökenli Amerikalılarda daha sıktır.
-
-Meme kanseri insidansı Afrika ve Avrupa kökenli Amerikalılarda benzer olsa da, Afrika kökenli Amerikalı kadınların meme kanserinden ölme olasılığı yaklaşık %42 daha yüksektir.
-Bunun nedenleri daha agresif biyoloji, yani daha sık üçlü negatif tümör, bakıma erişim sorunlarına bağlı tanı gecikmesi ve yetersiz tedavidir.
-
-@@ Risk faktörleri
-En önemli risk faktörleri cinsiyettir, çünkü olguların yaklaşık %99'u kadındır; ardından yaş, yaşam boyu östrojen maruziyeti, ailesel ya da germ hattı mutasyonlarla gelen genetik miras ve daha az ölçüde çevresel ve yaşam tarzı faktörleri gelir. Riski azaltan başlıca faktörler erken gebelik, özellikle yirmi yaşından önce ve uzun süreli emzirmedir.
-
-Tablo on yedi nokta sekiz risk faktörlerini rölatif riske göre sıralar.
-Rölatif riski dörtten büyük olanlar kadın cinsiyet, ilerleyen yaş, yüksek penetranslı germ hattı mutasyonları, birden fazla 1. derece akraba, genç yaş ya da çoklu kanser içeren güçlü aile öyküsü, kişisel meme kanseri öyküsü ve yüksek meme dansitesidir.
-Rölatif riski iki nokta bir ile dört arasında olanlar orta penetranslı germ hattı mutasyonları, genç yaşta göğüs bölgesine yüksek doz radyasyon ve tek 1. derece akrabada aile öyküsüdür.
-
-Rölatif riski bir nokta bir ile iki arasında olanlar erken menarş, yani on iki yaşından önce; geç menopoz, yani elli beş yaşından sonra; otuz beş yaşından sonra ilk gebelik; hiç doğum yapmamış olmak; emzirmeme; egzojen hormon tedavisi; menopoz sonrası obezite; fiziksel inaktivite ve yüksek alkol tüketimidir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: hormon tedavisi, atipili ve in situ lezyonlar ve sklerozan adenozis riski artırır; erken menopoz ise risk faktörü değildir, riski artıran geç menopozdur.
-
-@@ Karsinogenez ve germ hattı mutasyonları
-Üç ana alt tipin, yani lümenal, ha e er iki pozitif ve üçlü negatifin ortak temeli, terminal duktal lobüler ünitedeki epitel hücrelerinde sürücü mutasyonların aşamalı olarak edinilmesidir. Bu sürece hem kalıtsal germ hattı mutasyonları hem edinilmiş somatik mutasyonlar katkıda bulunur.
-
-Şekil on yedi nokta yirmi sekiz duktal meme kanserinin başlıca yollarını gösterir.
-En yaygın yol östrojen reseptörü pozitif kanserlere gider; öncü lezyonlar yassı epitelyal atipi, atipik duktal hiperplazi ve duktal karsinoma in situdur.
-Bunlar invaziv kanserle pe i ka üç ce a mutasyonları gibi genomik olayları paylaşır; bu kanserler lümenal olarak sınıflanır ve germ hattı BRCA2 mutasyonu taşıyanlarda en sık görülen türdür.
-Daha az yaygın yol, gen amplifikasyonuyla ha e er ikiyi aşırı ifade eden kanserlerdir; östrojen reseptörü pozitif ya da negatif olabilirler ve germ hattı TP53 mutasyonu olanlarda en sık türdür.
-En az yaygın ama moleküler olarak en belirgin tür üçlü negatiftir; BRCA1 ve pe elli üç işlev kaybı vardır, genomik olarak kararsızdır ve germ hattı BRCA1 mutasyonlarıyla ilişkilidir.
-
-Şekil on yedi nokta yirmi dokuz in situ karsinomu gösterir.
-Duktal karsinoma in situda kanal benzeri boşluklar lobülü deforme eder ve kalsifiye salgı materyali dikkat çeker.
-Lobüler karsinoma in situda monomorfik hücreler lobülü doldurur.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: yoğun santral nekroz gösteren duktal karsinoma in situ paterni komedo tipidir; geniş santral nekroz ve kalsifikasyonla birlikte yüksek dereceli proliferasyon birçok kanalı doldurur.
-Spesimen radyografisinde de duktal karsinoma in situ tutulumunda duktal sistem içinde lineer ve dallanan kalsifikasyonlar görülür.
-
-Be er ce a bir ve BRCA2 klasik tümör baskılayıcı genlerdir; kanser ancak iki allel de inaktive olduğunda gelişir.
-İşlevleri çift sarmallı DNA kırıklarının onarımında kritiktir.
-Taşıyıcılarda yetmiş yaşına kadar meme kanseri riski %45 ile yetmiş beştir; genel popülasyonda bu oran yaklaşık %12'dir.
-Be er ce a iki mutasyonları öncelikle östrojen reseptörü pozitif tümörlerle, BRCA1 mutasyonları ise üçlü negatif kanserlerle güçlü biçimde ilişkilidir.
-
-@@ Diğer kalıtsal genler
-Ailesel meme kanseriyle ilişkili diğer genler arasında TP53 ve pe i üç ka, a ka te yolunun negatif düzenleyicisi olan pe te e ne vardır. Diğer tümör baskılayıcı gen mutasyonları çoğunlukla sendromiktir; örneğin TP53 ile Li Fraumeni sendromu ve pe te e ne ile Cowden sendromu. Bu sendromlarda meme ile birlikte diğer malignitelerin riski de artar.
-
-Tablo on yedi nokta dokuz kalıtsal yatkınlıkla ilişkili en sık tek gen mutasyonlarını verir.
-Be er ce a bir, ailesel meme ve over kanseri, tek genli kanserlerin yaklaşık %50 beşidir; yetmiş yaşa kadar risk kadında yaklaşık %40 ile doksan, erkekte %1'dir.
-Over kanseri riski yaklaşık %20 ile kırktır, ayrıca tuba uterina, pankreas ve prostat kanserleri görülür; kanserlerin çoğu üçlü negatiftir.
-Be er ce a iki tek genli kanserlerin yaklaşık %30 beşidir; risk kadında yaklaşık %30 ile altmış, erkekte %6'dır.
-Over riski %10 ile yirmidir, pankreas ve prostat da eşlik eder; kanserlerin çoğu östrojen reseptörü pozitiftir ve iki allelli mutasyonlar Fanconi anemisinin bir formuna yol açar.
-
-Te pe elli üç, yani Li Fraumeni sendromu, tek genli kanserlerin yüzde birinden azıdır; kadında risk yaklaşık %50 ile altmıştır; sarkom, lösemi ve beyin tümörleri eşlik eder ve kanserlerin çoğu östrojen reseptörü ve ha e er iki pozitiftir.
-Pe te e ne, yani Cowden sendromu, kadında yaklaşık %20 ile seksen risk taşır; tiroid ve endometrium kanserleri eşlik eder ve çok sayıda benign tümörle de ilişkilidir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: pe te e ne mutasyonlu sendrom Cowden sendromudur; tiroid, endometrium kanserleri ve benign tümörlerle birliktedir.
-
-Es te ka on bir, yani Peutz Jeghers sendromu, kadında yaklaşık %40 ile altmış risk taşır; over, kolon ve pankreas kanserleri ile benign hamartomatöz kolon polipleriyle ilişkilidir.
-Ce de ha bir, yani kalıtsal diffüz mide kanseri, kadında yaklaşık %50 risk taşır; mide taşlı yüzük hücreli karsinomu ve kolon kanseri eşlik eder, meme kanserlerinin çoğu lobüler tiptedir.
-Pe a le be iki, kalıtsal meme kanseri, kadında %30 ile altmış risk taşır; pankreas ve prostat kanserleri eşlik eder ve iki allelli mutasyonları Fanconi anemisine yol açar.
-
-Orta penetranslı mutasyonlardan a te me, yani ataksi telenjiektazi geni, tek genli kanserlerin yaklaşık yüzde beşidir, kadında risk %15 ile otuzdur ve iki allelli mutasyonlar ataksi telenjiektaziye neden olur.
-Çek iki de yaklaşık %5'tir; kadında risk %10 ile otuzdur, prostat, tiroid, kolon ve böbrek kanserleri eşlik eder ve kanserlerin çoğu östrojen reseptörü pozitiftir.
-Genel olarak yüksek penetranslı mutasyonlar riski dört kattan fazla artırır ve tüm meme kanserlerinin yaklaşık %3 ile yedisini oluşturur; orta penetranslılar riski iki ile 4 kat artırır ve yaklaşık %5 ile onunu oluşturur.
-Bireysel risk mutasyon tipine ve eşlik eden diğer genlere göre değişebilir.
-
-@@ Somatik mutasyonlar ve ha e er iki yolu
-Be er ce a bir ve BRCA2 somatik mutasyonları sporadik kanserlerde nadirdir. Ancak BRCA1, üçlü negatif kanserlerin yaklaşık yarısında promotor metilasyonu ile inaktive edilmiştir. Te pe elli üç somatik mutasyonları ise sıktır; özellikle üçlü negatif ve ha e er iki pozitif tümörlerde görülür, bunu tablo on yedi nokta yedide de görmüştük.
-
-Pe i üç ka, a ka te yolunu aktive eden mutasyonlar sporadik östrojen reseptörü pozitif kanserlerde ve ha e er iki pozitif kanserlerde sıktır.
-Ha e er iki gen amplifikasyonu meme kanserinde yaygın ve klinik olarak önemlidir.
-Ha e er iki bir reseptör tirozin kinazdır; ras ve pe i üç ka, a ka te yollarını aktive ederek hücre proliferasyonunu artırır ve apoptozu azaltır.
-
-Ha e er iki aşırı ekspresyonu patojenik olarak ayrı bir alt tip oluşturur ve proliferasyon oranı yüksektir.
-Bu yüzden klinik seyir agresiftir.
-Ancak bu tümörler trastuzumab gibi anti ha e er iki tedavilere duyarlıdır; yani hastalığı agresif yapan molekül aynı zamanda tedavinin hedefidir.
-
-@@ Östrojenin rolü
-Östrojen özellikle menopoz sonrasında meme kanseri gelişiminde önemlidir. Mekanizma şöyledir: östrojen östrojen reseptörüne bağlanır, çok sayıda hedef genin transkripsiyonunu uyarır ve meme epitel hücrelerinin proliferasyonunu ve hayatta kalmasını artırır. Bu etki fizyolojik olarak ergenlikte, menstrüel döngülerde ve gebelikte görülür. Burası önemli, bu bilgi çıkmış sorularda soruldu: östrojen, reseptörüne bağlanarak meme epitelinde proliferasyonu ve hücre sağkalımını artırır.
-
-Aşırı östrojenik uyarım DNA replikasyonunu artırır ve replikasyon sırasında mutasyonlar birikir.
-Bu, iki gözlemi açıklar: toplam adet döngüsü sayısı arttıkça meme kanseri riski artar ve lümenal, yani östrojen reseptörü pozitif kanserlerle yaş arasında güçlü bir ilişki vardır.
-
-Östrojenin proonkogenik etkisine kanıtlar da vardır.
-Yüksek riskli kadınlarda tamoksifen gibi östrojen antagonistleri lümenal kanser insidansını azaltır.
-Menopoz sonrası hormon tedavisi, özellikle östrojen ile progesteron birlikte verildiğinde, lümenal kanser insidansını artırır.
-Östrojen reseptörü pozitif kanserler de tamoksifen ve aromataz inhibitörleri gibi östrojen ve reseptör hedefli tedavilere duyarlıdır.
-
-@@ Çok faktörlü doğa ve özet
-Meme kanseri çok faktörlüdür. Be er ce a, TP53 ve pe te e ne gibi germ hattı mutasyonları, ha e er iki amplifikasyonu ve pe i üç ka, a ka te yolu mutasyonları gibi somatik değişiklikler, özellikle östrojen olmak üzere hormon maruziyeti ve çevresel, yaşam tarzı etkileri bir araya gelir. Sonuç, farklı biyolojik yollardan gelişen heterojen bir tümör spektrumu ve kişiselleştirilmiş tanı ile tedavi ihtiyacıdır.
-
-Özetle arkadaşlar, meme lezyonlarının büyük çoğunluğu benigndir ama her biri değerlendirilmelidir.
-Fibroadenom ve filloid tümör intralobüler stromadan köken alır; apokrin metaplazi gibi proliferatif olmayan değişiklikler riski artırmaz, atipili lezyonlar ise riski dört ile 5 kat artırır.
-Karsinomda lümenal, ha e er iki pozitif ve üçlü negatif alt tipler farklı genetik yollardan gelişir ve en kötü prognoz üçlü negatif gruptadır.
+@@ Özetle
+Özetle, meme lezyonlarının büyük çoğunluğu benigndir ama ağrı, kızarıklık ya da belirti yokluğu kanseri dışlamaz. İntralobüler stroma bifazik iki tümörü, fibroadenom ve filloid tümörü verir; ayrımı stromanın hücreselliği ve yaprak paterni belirler. Epitel lezyonlarında risk basamakları nonproliferatif değişiklikten atipisiz proliferasyona, oradan da her iki memede riski artıran atipik duktal ve lobüler hiperplaziye doğru yükselir.

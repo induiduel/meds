@@ -540,7 +540,8 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
               className={`cd-btn cd-btn-yildizli${yildizSayisi > 0 ? ' is-on' : ''}`}
               onClick={() => setYildizModalAcik(true)}
               title="Yıldızlı paragraflar (Tekrar listem)"
-              aria-label="Yıldızlı paragraflar"
+              aria-label={`Yıldızlı paragraflar${yildizSayisi > 0 ? ` (${yildizSayisi})` : ''}`}
+              data-sayi={yildizSayisi > 0 ? (yildizSayisi > 99 ? '99+' : String(yildizSayisi)) : undefined}
             >
               <Star className="w-4 h-4" fill={yildizSayisi > 0 ? '#f59e0b' : 'none'} color={yildizSayisi > 0 ? '#f59e0b' : 'currentColor'} aria-hidden />
               <span>Yıldızlılar{yildizSayisi > 0 ? ` (${yildizSayisi})` : ''}</span>
@@ -969,7 +970,9 @@ function CdMetinBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     if (sel && !sel.isCollapsed && sel.toString().trim()) return;
     if (cdDurum().key !== detay.key) cdOynat(detay, undefined, { oynat: false });
     cdParagrafa(i);
-  }, [detay]);
+    // Dokunulan paragraftan sürerken takip de oradan devam eder (elle kaydırma sonrası "Canlı konuma dön" beklemeden)
+    surdur();
+  }, [detay, surdur]);
 
   const pEl = (i: number) => paneRef.current?.querySelector<HTMLElement>(`p[data-i="${i}"]`) || null;
 
@@ -1021,6 +1024,7 @@ function CdMetinBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   }, []);
 
   // Otomatik kaydırma: etkin paragraf (uzunsa cümle) görünür alanın ortasına yakın
+  const kaydirRef = useRef<(ani?: boolean) => void>(() => {});
   const kaydir = useCallback((ani = false) => {
     const pane = paneRef.current;
     const st = cdDurum();
@@ -1043,14 +1047,20 @@ function CdMetinBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     const sapma = merkez - hedefOrta;
     // Orta bant içindeyse dokunma (sürekli kıpırdamasın)
     if (!ani && Math.abs(sapma) < pane.clientHeight * 0.18) return;
-    progUntil.current = Date.now() + (ani ? 150 : 1000);
-    pane.scrollTo({ top: Math.max(0, pane.scrollTop + sapma), behavior: ani ? 'auto' : 'smooth' });
+    // Uzak atlama (bölüm geçişi, paragrafa dokunma): uzun yumuşak kaydırma iOS'ta yarıda kesilip yanlış yerde kalıyordu
+    // → anında git, iki kare sonra ince ayar
+    const uzak = Math.abs(sapma) > pane.clientHeight * 1.5;
+    const hemen = ani || uzak;
+    progUntil.current = Date.now() + (hemen ? 250 : 1000);
+    pane.scrollTo({ top: Math.max(0, pane.scrollTop + sapma), behavior: hemen ? 'auto' : 'smooth' });
+    if (uzak && !ani) requestAnimationFrame(() => requestAnimationFrame(() => kaydirRef.current(true)));
   }, []);
+  kaydirRef.current = kaydir;
   useEffect(() => {
     if (!canli || durdu || aktif < 0) return;
     const ani = ilk.current;
     ilk.current = false;
-    // content-visibility tahmini yüksekliklerle uzağa atlama: önce anında, sonra ince ayar
+    // İlk açılışta uzağa atlama: önce anında, sonra ince ayar (yazı tipi/yerleşim oturunca)
     const id = requestAnimationFrame(() => {
       kaydir(ani);
       if (ani) requestAnimationFrame(() => kaydir(true));

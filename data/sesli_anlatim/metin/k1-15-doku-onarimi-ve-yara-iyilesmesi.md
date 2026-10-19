@@ -1,13 +1,13 @@
 # Doku Onarımı ve Yara İyileşmesi
 
-@@ Doku onarımı ve iki temel yol
+@@ Doku onarımı ve 2 temel yol
 Doku onarımı, ya da daha sık kullandığımız adıyla iyileşme, yaralanmadan sonra dokunun mimarisini ve fonksiyonunu yeniden kazanması sürecidir. Bu süreç hücresel ve moleküler düzeyde birbirini izleyen adımlarla yürür ve başlangıcında enflamasyon vardır. Enflamasyonun burada iki görevi bulunur. 1.'si, zararlı etkeni ve ölü dokuyu ortadan kaldırarak ortamı temizlemesidir. 2.'si ise onarım sürecini başlatmasıdır; inflamatuvar hücrelerin salgıladığı sinyaller iyileşmenin ilk tetikleyicisidir. Burası önemli: enflamasyon onarımın karşıtı değil, başlatıcısıdır. Zararlı etken temizlenmeden ve enflamasyon sinyali verilmeden etkili onarım başlamaz.
 
 Onarım iki temel yoldan biriyle gerçekleşir.
 1.'si rejenerasyondur.
 Rejenerasyonda hasarlı bileşenlerin yerini aynı hücre tipinin çoğalması alır; örneğin kaybedilen epitel hücresinin yerini yeni epitel hücreleri doldurur.
 Sonuçta doku normal yapısına ve işlevine dönebilir, geride kalıcı iz kalmaz.
-2. yol ise yara izi, yani skar oluşumudur.
+İkinci yol ise yara izi, yani skar oluşumudur.
 Bu kez hasar alanında bağ dokusu, yani fibröz doku birikir ve boşluğu doldurur.
 Fibröz doku alana yapısal stabilite sağlar, doku bütünlüğü korunur ve yapı çökmez.
 Ama fibröz doku kaybedilen özelleşmiş hücrenin işini yapamaz; bu yüzden fonksiyon tam olmayabilir.
@@ -19,24 +19,24 @@ Hasar epitelin altına inip bağ dokusu iskeletine zarar verirse, alan önce pı
 Yani onarım yolunu belirleyen asıl etken, destek iskeletinin korunup korunmamasıdır.
 
 @@ Rejenerasyonun koşulları ve dokuların çoğalma kapasitesi
-Rejenerasyonun gerçekleşmesi için üç koşulun birlikte sağlanması gerekir. Hasar sınırlı olmalıdır, çünkü geniş ve derin hasarda kalan hücreler boşluğu tek başına dolduramaz. Doku iskeleti, yani bazal membran ve stroma korunmuş olmalıdır; bu yapılar yeni hücrelerin doğru yere ve doğru düzende yerleşmesini sağlayan rehberdir. Son olarak kalan hücreler ya da kök hücreler proliferasyon kapasitesine sahip olmalıdır. Klasik rejenerasyon örnekleri deri ve bağırsak epiteli ile parsiyel hepatektomi sonrası karaciğerdir.
+Rejenerasyonun gerçekleşmesi için 3 koşulun birlikte sağlanması gerekir. Hasar sınırlı olmalıdır, çünkü geniş ve derin hasarda kalan hücreler boşluğu tek başına dolduramaz. Doku iskeleti, yani bazal membran ve stroma korunmuş olmalıdır; bu yapılar yeni hücrelerin doğru yere ve doğru düzende yerleşmesini sağlayan rehberdir. Son olarak kalan hücreler ya da kök hücreler proliferasyon kapasitesine sahip olmalıdır. Klasik rejenerasyon örnekleri deri ve bağırsak epiteli ile parsiyel hepatektomi sonrası karaciğerdir.
 
 Burası önemli, tipik bir tuzak sorusudur: bazal membran ya da stroma yıkılmışsa hücreler çoğalabilse bile doku düzeni kurulamaz ve onarım skarla tamamlanır.
 Yani onarım yolunu iki soru belirler: hücre çoğalabilir mi, iskelet korunmuş mu?
 İkisine de evet diyorsak rejenerasyon bekleriz.
 
-Dokular hücrelerinin çoğalma kapasitesine göre üç gruba ayrılır.
-1. grup sürekli bölünen, yani labil dokulardır: kemik iliği, deri ve gastrointestinal sistem epiteli.
+Dokular hücrelerinin çoğalma kapasitesine göre 3 gruba ayrılır.
+Birinci grup sürekli bölünen, yani labil dokulardır: kemik iliği, deri ve gastrointestinal sistem epiteli.
 Bu dokularda hücreler normal koşullarda da sürekli kaybedilir ve sürekli yenilenir; rejenerasyon kapasiteleri yüksektir.
 Yine de iskeletleri bozulursa onlar da skarla iyileşir.
 
-2. grup stabil, İngilizce adıyla kuiesent, yani sessiz dokulardır: karaciğer, böbrek, pankreas, endotel ve düz kas.
-Bu hücreler normalde hücre döngüsünün dışında, ge sıfır fazında dinlenir; doku günlük olarak yenilenmez.
-Ama uygun bir uyarı ile ge sıfırdan çıkıp bölünebilir ve kaybedilen hücreleri yerine koyabilirler.
+İkinci grup stabil, İngilizce adıyla quiescent, yani sessiz dokulardır: karaciğer, böbrek, pankreas, endotel ve düz kas.
+Bu hücreler normalde hücre döngüsünün dışında, G0 fazında dinlenir; doku günlük olarak yenilenmez.
+Ama uygun bir uyarı ile G0'dan çıkıp bölünebilir ve kaybedilen hücreleri yerine koyabilirler.
 Burası önemli, bu bilgi çıkmış sorularda soruldu: stabil doku örneği hangisidir diye sorulduğunda yanıt karaciğerdir.
 Deri ve gastrointestinal kanal hücreleri labil, nöronlar ve kardiyak kas hücreleri ise kalıcı dokudur.
 
-3. grup kalıcı, yani nonproliferatif dokulardır: nöronlar ve kalp kası.
+Üçüncü grup kalıcı, yani nonproliferatif dokulardır: nöronlar ve kalp kası.
 Bu hücreler erişkinde bölünme yeteneğini yitirmiştir ve yenilenemez; hasar alanı skar dokusuyla doldurulur.
 Örneğin kalp kasının kaybedildiği alan fibröz dokuyla kapanır ve kasılmaya katılamaz.
 Burası önemli, çıkmış sorularda birden fazla kez soruldu: yenilenebilme yeteneğine sahip olmayan hücre kalp kası hücresidir.
@@ -66,16 +66,16 @@ Normal koşullarda karaciğer kaybını hepatositlerin kendisi yerine koyar; ova
 Deride bazal membran sağlamsa epidermis tamamen yenilenebilir. Bazal tabakadaki kök hücreler çoğalır ve yüzeye doğru olgunlaşarak kaybedilen epiteli yerine koyar; bazal membran yıkılırsa yeni epitelin dayanacağı zemin kaybolur. Gastrointestinal sistemde villus üstündeki hücreler dökülür ve kript hücreleriyle yenilenir; kript tabanında üretilen hücreler villus boyunca yukarı göç eder ve uçta dökülenlerin yerini alır.
 
 Karaciğer stabil bir doku olmasına karşın çok güçlü bir rejenerasyon kapasitesine sahiptir.
-Burası önemli: karaciğerin yüzde doksanına kadarı, kalan hepatositlerin çoğalması ile yenilenebilir.
+Burası önemli: karaciğerin %90'ına kadarı, kalan hepatositlerin çoğalması ile yenilenebilir.
 Bu süreç en iyi parsiyel hepatektomi, yani karaciğerin bir bölümünün cerrahi olarak çıkarılması sonrasında gözlenir.
 Dikkat edin, normal karaciğerde kaybı yerine koyan esas olarak oval hücreler değil, olgun hepatositlerin kendisidir.
 
-Parsiyel hepatektomiden sonra kalan hepatositler ge sıfırdan ge bir fazına geçer ve bölünür.
-Bu geçiş iki temel basamakta olur.
-1. basamak priming, yani hazırlamadır: interlökin altı gibi sitokinler hepatositleri büyüme faktörlerine duyarlı hale getirir.
+Parsiyel hepatektomiden sonra kalan hepatositler G0'dan G1 fazına geçer ve bölünür.
+Bu geçiş 2 temel basamakta olur.
+Birinci basamak priming, yani hazırlamadır: interlökin 6 gibi sitokinler hepatositleri büyüme faktörlerine duyarlı hale getirir.
 Priming tek başına bölünmeyi tamamlamaz, hücreyi döngüye girmeye hazırlar.
-2. basamak proliferasyondur: hepatosit büyüme faktörü ile transforme edici büyüme faktörü alfa ve diğer büyüme faktörleri hepatosit bölünmesini yürütür.
-Burası önemli, sınavda basamak ve aracı eşleşmesi sorulur: priming interlökin altı, proliferasyon ise hepatosit büyüme faktörü ve transforme edici büyüme faktörü alfa ile olur.
+İkinci basamak proliferasyondur: hepatosit büyüme faktörü ile transforme edici büyüme faktörü alfa ve diğer büyüme faktörleri hepatosit bölünmesini yürütür.
+Burası önemli, sınavda basamak ve aracı eşleşmesi sorulur: priming interlökin 6, proliferasyon ise hepatosit büyüme faktörü ve transforme edici büyüme faktörü alfa ile olur.
 
 Kronik hepatit ya da sirozda tablo farklıdır.
 Uzun süren hasarda hepatositlerin proliferatif kapasitesi bozulabilir.
@@ -88,16 +88,16 @@ Burası önemli, bu bilgi çıkmış sorularda soruldu: normal bir karaciğerde 
 Tip 4 kollajen, laminin ve proteoglikanlarla birlikte bazal membranın yapısına katılan kollajendir.
 
 @@ Skarla onarım ne zaman olur ve aşamaları
-Rejenerasyon yetersiz kaldığında onarım yara iziyle tamamlanır. Bunun üç nedeni vardır: şiddetli ya da kronik doku hasarı, destekleyici iskeletin yani stromanın yıkımı ve proliferasyon yeteneği olmayan hücre tiplerinin ölümü. Gördüğünüz gibi bunlar rejenerasyon koşullarının tam tersidir. Klasik örnekler bu üç nedenin klinik karşılıklarıdır. Miyokard enfarktüsü sonrası kalpte ölen kalp kası kalıcı dokudur ve yerini fibröz skar alır; skar kasılmaya katılmadığı için pompa işlevi azalabilir. Derin deri yaralarında hasar bağ dokusu iskeletini bozar ve yüzey skarla kapanır. Diffüz karaciğer hasarında, örneğin apselerde, karaciğer güçlü bir rejenerasyon kapasitesine sahip olsa bile iskelet yıkıldığı için onarım skarla olur. Buradan çıkan ders şudur: belirleyici olan yalnız hücre tipi değil, hasarın niteliğidir.
+Rejenerasyon yetersiz kaldığında onarım yara iziyle tamamlanır. Bunun 3 nedeni vardır: şiddetli ya da kronik doku hasarı, destekleyici iskeletin yani stromanın yıkımı ve proliferasyon yeteneği olmayan hücre tiplerinin ölümü. Gördüğünüz gibi bunlar rejenerasyon koşullarının tam tersidir. Klasik örnekler bu 3 nedenin klinik karşılıklarıdır. Miyokard enfarktüsü sonrası kalpte ölen kalp kası kalıcı dokudur ve yerini fibröz skar alır; skar kasılmaya katılmadığı için pompa işlevi azalabilir. Derin deri yaralarında hasar bağ dokusu iskeletini bozar ve yüzey skarla kapanır. Diffüz karaciğer hasarında, örneğin apselerde, karaciğer güçlü bir rejenerasyon kapasitesine sahip olsa bile iskelet yıkıldığı için onarım skarla olur. Buradan çıkan ders şudur: belirleyici olan yalnız hücre tipi değil, hasarın niteliğidir.
 
-Skarla onarım birbirini izleyen ve kısmen iç içe geçen dört aşamada gerçekleşir.
+Skarla onarım birbirini izleyen ve kısmen iç içe geçen 4 aşamada gerçekleşir.
 1.'si hemostaz ve enflamasyon, 2.'si hücre çoğalması ve granülasyon dokusu oluşumu yani proliferasyon, 3.'sü ekstraselüler matriks birikimi, 4.'sü de yaranın yeniden şekillenmesi ve skarın olgunlaşması, yani remodeling aşamasıdır.
 Burası önemli, bu sıra sınavda sık sorulur: önce kanama ve temizlik, sonra granülasyon dokusu, ardından matriks birikimi, en son skarın yeniden şekillenmesi.
 
 @@ Hemostaz ve akut enflamasyon
 Yaralanmanın hemen ardından ilk öncelik kanamanın durdurulmasıdır. Trombositler hasarlı damarda toplanarak trombosit tıkacı oluşturur; pıhtılaşma sonucu oluşan fibrin ağı da tıkacı sarıp sağlamlaştırır. Böylece fibrin ağı ve trombosit tıkacından oluşan pıhtı kanamayı durdurur. Pıhtı yalnız kanamayı durdurmakla kalmaz, sonraki aşamada göç edecek hücreler için geçici bir zemin oluşturur. Trombositler ayrıca büyüme faktörlerinin önemli kaynaklarındandır.
 
-İlk altı ile 48 saat içinde hasar alanı inflamatuvar hücrelerle temizlenir.
+İlk 6 ile 48 saat içinde hasar alanı inflamatuvar hücrelerle temizlenir.
 Alana ilk gelen hücreler nötrofillerdir; ölü dokuyu ve mikroorganizmaları temizlemeye başlarlar.
 Ardından monositler gelir ve dokuya geçince makrofaja dönüşür.
 Makrofajın ikili bir kimliği vardır.
@@ -105,10 +105,10 @@ Hem temizlikçidir, yani ölü hücreleri, nötrofil artıklarını ve yabancı 
 Burası önemli: makrofaj enflamasyondan onarıma geçişin anahtar hücresidir.
 
 @@ Hücre çoğalması ve granülasyon dokusu
-Yaralanmadan sonraki üç ile 10 gün arasında temizlenen alanda üç hücre grubu eş zamanlı çoğalır. Epitel hücreleri yara kenarlarından çoğalıp göç ederek yüzeyi kaplar; buna re-epitelizasyon denir. Endotel ve diğer vasküler hücreler yeni damarlar oluşturur; buna anjiyogenez denir ve yeni damarlar çoğalan hücrelere oksijen ve besin taşır. Fibroblastlar ise hasar alanına göç eder ve çoğalır; bunlar ileride matriksi üretecek hücrelerdir. Bu üç olay birbirine bağımlıdır; damar oluşumu bozulursa onarımın tamamı gecikir.
+Yaralanmadan sonraki 3 ile 10 gün arasında temizlenen alanda 3 hücre grubu eş zamanlı çoğalır. Epitel hücreleri yara kenarlarından çoğalıp göç ederek yüzeyi kaplar; buna re-epitelizasyon denir. Endotel ve diğer vasküler hücreler yeni damarlar oluşturur; buna anjiyogenez denir ve yeni damarlar çoğalan hücrelere oksijen ve besin taşır. Fibroblastlar ise hasar alanına göç eder ve çoğalır; bunlar ileride matriksi üretecek hücrelerdir. Bu 3 olay birbirine bağımlıdır; damar oluşumu bozulursa onarımın tamamı gecikir.
 
 Bu çoğalmanın ürünü granülasyon dokusudur.
-Burası önemli: granülasyon dokusu dört bileşenden oluşur; ince duvarlı yeni damarlar, fibroblastlar, lökositler ve gevşek ekstraselüler matriks.
+Burası önemli: granülasyon dokusu 4 bileşenden oluşur; ince duvarlı yeni damarlar, fibroblastlar, lökositler ve gevşek ekstraselüler matriks.
 Lökositler enflamasyondan kalan, temizliği sürdüren hücrelerdir, özellikle makrofajlardır.
 Matriks ise henüz olgun kollajenden fakir, gevşek dokulu bir matrikstir.
 
@@ -120,68 +120,68 @@ Granülasyon dokusu geçici bir yapıdır ve zamanla yerini olgun fibröz skara 
 
 Kitaptaki mikroskobik görüntüde, kollajeni maviye boyayan trikrom boyasıyla incelenen granülasyon dokusunda çok sayıda kan damarı, hücreler ve lifler arasında ödem, ara sıra iltihaplı hücreler ve gevşek bir matriks görülür.
 Mavi boyanan kollajen yalnız ince lifler halindedir; bu noktada minimal olgun kollajen vardır.
-Zaman çizelgesini toparlayalım: hemen hemostaz; ilk altı ile 48 saatte önce nötrofil, sonra makrofaj; üç ile 10 gün arasında granülasyon dokusu.
+Zaman çizelgesini toparlayalım: hemen hemostaz; ilk 6 ile 48 saatte önce nötrofil, sonra makrofaj; 3 ile 10 gün arasında granülasyon dokusu.
 
 @@ Büyüme faktörleri
-Onarımdaki hücre çoğalması ve göçü büyüme faktörleri tarafından yönetilir. Kitaptaki tablo her faktörün kaynağını ve başlıca işlevini karşılaştırır; önemli eşleşmeleri tek tek görelim. Epidermal büyüme faktörü, kısaca e ge ef, aktive makrofajlar, tükürük bezleri, keratinositler ve birçok diğer hücreden salınır. Keratinositler ve fibroblastlar için mitojeniktir, yani onları bölünmeye sevk eder; keratinosit migrasyonunu uyarır ve granülasyon dokusunun oluşumunu stimüle eder. Transforme edici büyüme faktörü alfa, kısaca te ge ef alfa, aktive makrofajlar, keratinositler ve diğer hücrelerden salınır; hepatositlerin ve birçok diğer epitel hücresinin proliferasyonunu uyarır. Bu yüzden karaciğer rejenerasyonunun proliferasyon basamağında yer alır.
+Onarımdaki hücre çoğalması ve göçü büyüme faktörleri tarafından yönetilir. Kitaptaki tablo her faktörün kaynağını ve başlıca işlevini karşılaştırır; önemli eşleşmeleri tek tek görelim. Epidermal büyüme faktörü, kısaca EGF, aktive makrofajlar, tükürük bezleri, keratinositler ve birçok diğer hücreden salınır. Keratinositler ve fibroblastlar için mitojeniktir, yani onları bölünmeye sevk eder; keratinosit migrasyonunu uyarır ve granülasyon dokusunun oluşumunu stimüle eder. Transforme edici büyüme faktörü alfa, kısaca TGF-α, aktive makrofajlar, keratinositler ve diğer hücrelerden salınır; hepatositlerin ve birçok diğer epitel hücresinin proliferasyonunu uyarır. Bu yüzden karaciğer rejenerasyonunun proliferasyon basamağında yer alır.
 
-Hepatosit büyüme faktörü, kısaca ha ge ef, diğer adıyla dağılma faktörü ya da İngilizcesiyle skatır faktör, fibroblastlar, karaciğer stromal hücreleri ve endotel hücrelerinden salınır.
+Hepatosit büyüme faktörü, kısaca HGF, diğer adıyla dağılma faktörü ya da İngilizcesiyle scatter factor, fibroblastlar, karaciğer stromal hücreleri ve endotel hücrelerinden salınır.
 Hepatositler ve diğer epitel hücrelerinin proliferasyonunu artırır, ayrıca hücre motilitesini yani hareketliliğini artırır; dağılma faktörü adı bu hareketlendirici etkiden gelir.
-Vasküler endotelyal büyüme faktörü, kısaca ve ge ef, mezenkimal hücrelerden salınır; endotel hücrelerinin proliferasyonunu uyarır, vasküler permeabiliteyi artırır ve anjiyogenezde temel rol oynar.
+Vasküler endotelyal büyüme faktörü, kısaca VEGF, mezenkimal hücrelerden salınır; endotel hücrelerinin proliferasyonunu uyarır, vasküler permeabiliteyi artırır ve anjiyogenezde temel rol oynar.
 
-Trombosit kaynaklı büyüme faktörü, kısaca pe de ge ef, trombositler, makrofajlar, endotel hücreleri, düz kas hücreleri ve keratinositlerden salınır.
+Trombosit kaynaklı büyüme faktörü, kısaca PDGF, trombositler, makrofajlar, endotel hücreleri, düz kas hücreleri ve keratinositlerden salınır.
 Nötrofiller, makrofajlar, fibroblastlar ve düz kas hücreleri için kemotaktiktir, yani bu hücreleri alana çeker.
 Fibroblastları, endotel ve diğer hücreleri aktive eder, proliferasyonlarını uyarır ve ekstraselüler matriks protein sentezini stimüle eder.
 Pıhtıdaki trombositlerden salındığı için hemostaz ile onarım arasındaki köprüdür.
 
-Fibroblast büyüme faktörleri, yani asidik ef ge ef bir ve bazik ef ge ef iki dahil bu aile, makrofajlar, mast hücreleri, endotel hücreleri ve diğer hücrelerden salınır.
+Fibroblast büyüme faktörleri, yani asidik FGF-1 ve bazik FGF-2 dahil bu aile, makrofajlar, mast hücreleri, endotel hücreleri ve diğer hücrelerden salınır.
 Fibroblastlar için kemotaktik ve mitojeniktir; anjiyogenezi ve matriks protein sentezini uyarır.
-Keratinosit büyüme faktörü, kısaca ka ge ef, ailenin 7. üyesidir, yani ef ge ef yedi.
+Keratinosit büyüme faktörü, kısaca KGF, ailenin yedinci üyesidir, yani FGF-7.
 Fibroblastlardan salınır; keratinosit migrasyonunu, proliferasyonunu ve farklılaşmasını uyarır ve özellikle epitel onarımı ile yeniden epitelleşmede önemlidir.
 
-Transforme edici büyüme faktörü beta, kısaca te ge ef beta, trombositler, te lenfositler, makrofajlar, endotel hücreleri, keratinositler, düz kas hücreleri ve fibroblastlardan salınır.
+Transforme edici büyüme faktörü beta, kısaca TGF-β, trombositler, T lenfositler, makrofajlar, endotel hücreleri, keratinositler, düz kas hücreleri ve fibroblastlardan salınır.
 Lökositler ve fibroblastlar için kemotaktiktir; kollajen ve fibronektin gibi matriks proteinlerinin sentezini artırır ve akut inflamasyonu baskılar, yani antiinflamatuvar etkilidir.
-Dikkat edin, te ge ef alfa ile te ge ef beta sık karıştırılır: alfa epitel ve hepatosit çoğaltır, beta matriks üretimini artırır ve inflamasyonu baskılar.
+Dikkat edin, TGF-α ile TGF-β sık karıştırılır: alfa epitel ve hepatosit çoğaltır, beta matriks üretimini artırır ve inflamasyonu baskılar.
 
-Özetle anjiyogenezi doğrudan uyaran iki faktör ve ge ef ile ef ge eftir; matriks sentezini uyaran üç faktör pe de ge ef, ef ge ef ve te ge ef betadır; re-epitelizasyonda ise ka ge ef ve e ge ef öne çıkar.
+Özetle anjiyogenezi doğrudan uyaran 2 faktör VEGF ile FGF'dir; matriks sentezini uyaran 3 faktör PDGF, FGF ve TGF-β'dır; re-epitelizasyonda ise KGF ve EGF öne çıkar.
 
 @@ Anjiyogenez
 Anjiyogenez, mevcut damarlardan yeni damar oluşumudur; damarlar sıfırdan değil, var olan damarların filizlenmesiyle oluşur. Yara iyileşmesinde granülasyon dokusunun damarları böyle oluşur. İskemik dokularda kollateral gelişiminde, tümör büyümesinde ve ıslak maküler dejenerasyon gibi patolojik durumlarda da anjiyogenez önemlidir. Yani aynı süreç onarımda yararlı, tümörde ve ıslak maküler dejenerasyonda zararlıdır.
 
-Anjiyogenez beş basamakta ilerler.
-1.'sinde hipoksi ve sitokinler ve ge ef üretimini uyarır.
-2.'sinde mevcut damarda vazodilatasyon ve artmış permeabilite gelişir; plazma proteinleri dışarı sızarak yeni damar için geçici bir zemin oluşturur.
-3.'sünde damarın bazal membranı matriks metalloproteinazlarla, kısaca em em pelerle parçalanır; bu yıkım olmadan endotel damar dışına ilerleyemez.
-4.'sünde endotel hücreleri iş bölümü yapar: uç hücreler göç eder ve filizin yönünü belirler, sap hücreler ise proliferasyon göstererek filizi uzatır.
-5.'sinde yeni kapiller perisitler ve düz kas hücreleriyle olgunlaşır; bu destek hücreleri duvarı sağlamlaştırır ve geçirgenliği azaltır.
+Anjiyogenez 5 basamakta ilerler.
+Birincisinde hipoksi ve sitokinler VEGF üretimini uyarır.
+İkincisinde mevcut damarda vazodilatasyon ve artmış permeabilite gelişir; plazma proteinleri dışarı sızarak yeni damar için geçici bir zemin oluşturur.
+Üçüncüsünde damarın bazal membranı matriks metalloproteinazlarla, kısaca MMP'lerle parçalanır; bu yıkım olmadan endotel damar dışına ilerleyemez.
+Dördüncüsünde endotel hücreleri iş bölümü yapar: uç hücreler göç eder ve filizin yönünü belirler, sap hücreler ise proliferasyon göstererek filizi uzatır.
+Beşincisinde yeni kapiller perisitler ve düz kas hücreleriyle olgunlaşır; bu destek hücreleri duvarı sağlamlaştırır ve geçirgenliği azaltır.
 Granülasyon dokusunun kolay kanaması ve ödemi, damarların henüz olgunlaşmamış olmasının sonucudur.
 
-Hipoksi ile ve ge ef arasındaki moleküler köprü, hipoksiye duyarlı faktördür, kısaca hif.
-Hif normal oksijen düzeyinde hızla yıkılır, hipoksik ortamda ise stabil hale gelir ve ve ge ef ile diğer anjiyojenik genlerin ekspresyonunu artırır.
-Ve ge ef de endotel hücre göçü ve proliferasyonunu uyarır ve geçici olarak damar permeabilitesini artırır.
-Burası önemli, bu zincir sınavda sık sorulur: hipoksi, hif stabilizasyonu, ve ge ef artışı, endotel göçü ve proliferasyonu, sonuçta yeni damar.
-Anjiyogenezde temel faktör ve ge eftir.
+Hipoksi ile VEGF arasındaki moleküler köprü, hipoksiye duyarlı faktördür, kısaca HIF.
+HIF normal oksijen düzeyinde hızla yıkılır, hipoksik ortamda ise stabil hale gelir ve VEGF ile diğer anjiyojenik genlerin ekspresyonunu artırır.
+VEGF de endotel hücre göçü ve proliferasyonunu uyarır ve geçici olarak damar permeabilitesini artırır.
+Burası önemli, bu zincir sınavda sık sorulur: hipoksi, HIF stabilizasyonu, VEGF artışı, endotel göçü ve proliferasyonu, sonuçta yeni damar.
+Anjiyogenezde temel faktör VEGF'dir.
 
 @@ Fibroblast aktivasyonu ve ekstraselüler matriks
-Skarla onarımın 3. aşaması fibroblast aktivasyonuyla başlar. Doku hasarı temizlendikten sonra fibroblastlar bölgeye göç eder ve çoğalır. Onları uyaran üç faktör pe de ge ef, ef ge ef iki ve te ge ef betadır. Sonuçta aktive fibroblastlar kollajen ve diğer matriks proteinlerini sentezler ve granülasyon dokusunun gevşek matriksi giderek yoğunlaşır.
+Skarla onarımın üçüncü aşaması fibroblast aktivasyonuyla başlar. Doku hasarı temizlendikten sonra fibroblastlar bölgeye göç eder ve çoğalır. Onları uyaran 3 faktör PDGF, FGF-2 ve TGF-β'dır. Sonuçta aktive fibroblastlar kollajen ve diğer matriks proteinlerini sentezler ve granülasyon dokusunun gevşek matriksi giderek yoğunlaşır.
 
-Ekstraselüler matriksin hücresiz bileşeninde fibriler kollajenler yani Tip 1, iki ve üç, elastin, proteoglikanlar ve hiyaluronan ile yapışkan glikoproteinler bulunur.
+Ekstraselüler matriksin hücresiz bileşeninde fibriler kollajenler yani Tip 1, 2 ve 3, elastin, proteoglikanlar ve hiyaluronan ile yapışkan glikoproteinler bulunur.
 Yapışkan glikoproteinlerden fibronektin interstisyel matrikste, laminin ise bazal membranda yer alır.
 Burası önemli, tipik bir tuzaktır: ikisi de adezyon glikoproteinidir ama yerleri karıştırılır; fibronektin interstisyel matriks, laminin bazal membran.
 Hücre ile matriks arasındaki etkileşimler integrinler aracılığıyla kurulur ve bu bağlantı hücre hareketi, proliferasyonu ve farklılaşması için sinyal sağlar.
 Yani matriks pasif bir dolgu değil, hücreye bilgi veren aktif bir ortamdır.
 
 @@ Kollajen, elastin ve diğer matriks bileşenleri
-Kollajen skar dokusunun ana yapısal proteinidir ve skarın gerilmeye dayanıklılığı büyük ölçüde kollajen liflerine bağlıdır. Fibriler kollajenler Tip 1, iki, üç ve beştir; uzun lifler oluşturarak dokuya çekme kuvvetine karşı direnç kazandırır. Kollajen üçlü heliks yapısındadır, yani üç polipeptit zinciri birbirinin etrafına sarılarak sağlam bir ip oluşturur.
+Kollajen skar dokusunun ana yapısal proteinidir ve skarın gerilmeye dayanıklılığı büyük ölçüde kollajen liflerine bağlıdır. Fibriler kollajenler Tip 1, 2, 3 ve 5'tir; uzun lifler oluşturarak dokuya çekme kuvvetine karşı direnç kazandırır. Kollajen üçlü heliks yapısındadır, yani 3 polipeptit zinciri birbirinin etrafına sarılarak sağlam bir ip oluşturur.
 
 Burası önemli, bu soru çıkmış sorularda defalarca soruldu: normal iyileşme dokusunda, yani skar dokusunda en fazla bulunan temel kollajen tipi Tip 1 kollajendir.
 Granülasyon dokusunun erken matriksinde ince Tip 3 kollajen daha fazladır ve olgunlaşmayla yerini güçlü Tip 1 kollajene bırakır.
 Bu yüzden şıklarda Tip 3 güçlü bir çeldiricidir; Tip 4 ise bazal membranın kollajenidir.
 
-Kollajen liflerinin çapraz bağlanması için ce vitamini gereklidir.
-Ce vitamini yoksa heliks kararlı hale gelemez ve lifler arası çapraz bağlar kurulamaz.
+Kollajen liflerinin çapraz bağlanması için C vitamini gereklidir.
+C vitamini yoksa heliks kararlı hale gelemez ve lifler arası çapraz bağlar kurulamaz.
 Eksikliğinde iskorbüt gelişir; üretilen kollajen zayıf ve dayanıksızdır, sonuç zayıf yara iyileşmesidir.
-Burası önemli: ce vitamini eksikliği hücre çoğalmasını değil, kollajenin kalitesini bozar; fibroblastlar çoğalsa bile dayanıklı skar kuramaz.
+Burası önemli: C vitamini eksikliği hücre çoğalmasını değil, kollajenin kalitesini bozar; fibroblastlar çoğalsa bile dayanıklı skar kuramaz.
 
 Elastin esneklik sağlar; doku gerildikten sonra eski şekline döner.
 Büyük arterlerde, akciğerde, deride ve uterusta bol bulunur; bu organların ortak özelliği sürekli genişleyip daralmalarıdır.
@@ -192,21 +192,21 @@ Hiyaluronanın su bağlama kapasitesi yüksektir; gelişmekte olan dokularda ve 
 Granülasyon dokusunun nemli ve gevşek yapısına katkı verir ve hücre göçünü kolaylaştırır.
 Fibronektin ve laminin ise hücre adezyonu, göçü ve çoğalmasında iskele görevi görür; fibroblast ve endotel hücreleri bu glikoproteinlere tutunarak hasar alanına ilerler.
 
-@@ Te ge ef beta ve fibrogenik sitokinler
-Matriks birikiminin merkezindeki molekül te ge ef betadır; en önemli fibrogenik sitokindir. Fibrogenik, bağ dokusu oluşumunu uyaran demektir. Te ge ef beta fibroblast göçünü ve proliferasyonunu artırır, böylece matriks üretecek hücre havuzu genişler. Kollajen ve fibronektin sentezini artırır, yani her fibroblast daha fazla matriks üretir.
+@@ TGF-β ve fibrogenik sitokinler
+Matriks birikiminin merkezindeki molekül TGF-β'dır; en önemli fibrogenik sitokindir. Fibrogenik, bağ dokusu oluşumunu uyaran demektir. TGF-β fibroblast göçünü ve proliferasyonunu artırır, böylece matriks üretecek hücre havuzu genişler. Kollajen ve fibronektin sentezini artırır, yani her fibroblast daha fazla matriks üretir.
 
-Te ge ef beta matriks birikimini yalnız sentezi artırarak değil, yıkımı engelleyerek de sağlar.
-Matriksi parçalayan enzimler olan metalloproteinazları, kısaca em em peleri azaltır; onları baskılayan doku inhibitörlerini, yani timpleri artırır.
+TGF-β matriks birikimini yalnız sentezi artırarak değil, yıkımı engelleyerek de sağlar.
+Matriksi parçalayan enzimler olan metalloproteinazları, kısaca MMP'leri azaltır; onları baskılayan doku inhibitörlerini, yani TIMP'leri artırır.
 Sonuçta matriks yıkımı azalır.
 Ayrıca inflamasyonu sınırlayıcı, yani antiinflamatuvar etkileri vardır ve enflamasyondan onarıma geçişi destekler.
-Burası önemli: en önemli fibrogenik sitokin te ge ef betadır; sentezi artırır, em em peyi azaltır, timpi artırır.
+Burası önemli: en önemli fibrogenik sitokin TGF-β'dır; sentezi artırır, MMP'yi azaltır, TIMP'i artırır.
 Bu çift etki aşırı olduğunda fibrozise zemin hazırlar.
-Diğer fibrogenik sitokinler pe de ge ef ve te lenfositlerinden salınan interlökin on üçtür.
+Diğer fibrogenik sitokinler PDGF ve T lenfositlerinden salınan interlökin 13'tür.
 
 @@ Yeniden şekillenme, skarın olgunlaşması ve yara gücü
-Bağ dokusu birikiminden sonra matriks sürekli olarak yeniden düzenlenir; bir yandan üretilirken bir yandan yıkılır. Yıkımı yapan matriks metalloproteinazlar çeşitli matriks bileşenlerini parçalar. İnterstisyel kollajenazlar em em pe bir, iki ve üçtür; jelatinazlar em em pe iki ve dokuzdur; stromelizinler ise em em pe üç, on ve on birdir.
+Bağ dokusu birikiminden sonra matriks sürekli olarak yeniden düzenlenir; bir yandan üretilirken bir yandan yıkılır. Yıkımı yapan matriks metalloproteinazlar çeşitli matriks bileşenlerini parçalar. İnterstisyel kollajenazlar MMP-1, 2 ve 3'tür; jelatinazlar MMP-2 ve 9'dur; stromelizinler ise MMP-3, 10 ve 11'dir.
 
-Em em peler doku inhibitörleri yani timpler tarafından dengelenir.
+MMP'ler doku inhibitörleri yani TIMP'ler tarafından dengelenir.
 Bu dengeli işleyişte düzensiz biriken kollajen yıkılır, yerine daha düzenli lifler konur.
 Sonuçta skar küçülür ve daha dayanıklı hale gelir.
 Denge yıkım yönüne kayarsa skar zayıf kalır, fren yönüne kayarsa matriks birikir.
@@ -216,21 +216,21 @@ Olgun yara izinde ise alan yoğun mavi kollajenle doludur ve yalnız dağınık 
 Yani olgunlaşmayla damarlar azalır, kollajen yoğunlaşır.
 
 Yara gücü, iyileşen dokunun gerilmeye dayanma kapasitesidir.
-Burası önemli, sınavda sayı olarak sorulur: yara gücü ilk hafta içinde hızla artar, 3 ay içinde normal dokunun yaklaşık %70 ile seksenine ulaşabilir, ama tam normal güce genellikle hiçbir zaman ulaşılamaz.
+Burası önemli, sınavda sayı olarak sorulur: yara gücü ilk hafta içinde hızla artar, 3 ay içinde normal dokunun yaklaşık %70 ile 80'ine ulaşabilir, ama tam normal güce genellikle hiçbir zaman ulaşılamaz.
 Nedeni, fibröz skar dokusunun normal dokuya göre daha az organize ve daha az esnek olmasıdır.
 
 @@ Primer, sekonder ve tersiyer iyileşme
-Primer iyileşme, Latince adıyla per primam intensiyonem, cerrahi insizyon gibi temiz ve kenarları yakınlaştırılmış kesilerde görülür. Doku kaybı minimaldir, az granülasyon dokusu yeterlidir ve az skar oluşur. Başarının anahtarı kenarların yakınlaştırılmasıdır. Sekonder iyileşme, yani per sekondam intensiyonem, geniş doku kayıplarında ve enfekte yaralarda görülür. Daha fazla granülasyon dokusu gerekir, boşluk tabandan yukarı doğru dolar ve belirgin skar oluşur. Yara kontraksiyonu da daha belirgindir; yara kenarları içe çekilerek kapatılacak alan küçültülür. Burası önemli, klasik tuzaktır: belirgin kontraksiyon sekonder iyileşmenin özelliğidir; kontraksiyonun primer iyileşmede belirgin olduğu ifadesi çeldiricidir. Tersiyer iyileşme, yani per tersiyam intensiyonem, Robbins sınıflamasında yer almaz. Primer iyileşmenin geciktiği durumdur: yara enfeksiyon riski bakımından önce açık bırakılır, tedaviden sonra kapatılır. Böylece hem enfeksiyon kontrol edilir hem de sekonder iyileşmenin belirgin skarından kaçınılır.
+Primer iyileşme, Latince adıyla per primam intentionem, cerrahi insizyon gibi temiz ve kenarları yakınlaştırılmış kesilerde görülür. Doku kaybı minimaldir, az granülasyon dokusu yeterlidir ve az skar oluşur. Başarının anahtarı kenarların yakınlaştırılmasıdır. Sekonder iyileşme, yani per secundam intentionem, geniş doku kayıplarında ve enfekte yaralarda görülür. Daha fazla granülasyon dokusu gerekir, boşluk tabandan yukarı doğru dolar ve belirgin skar oluşur. Yara kontraksiyonu da daha belirgindir; yara kenarları içe çekilerek kapatılacak alan küçültülür. Burası önemli, klasik tuzaktır: belirgin kontraksiyon sekonder iyileşmenin özelliğidir; kontraksiyonun primer iyileşmede belirgin olduğu ifadesi çeldiricidir. Tersiyer iyileşme, yani per tertiam intentionem, Robbins sınıflamasında yer almaz. Primer iyileşmenin geciktiği durumdur: yara enfeksiyon riski bakımından önce açık bırakılır, tedaviden sonra kapatılır. Böylece hem enfeksiyon kontrol edilir hem de sekonder iyileşmenin belirgin skarından kaçınılır.
 
 Kitaptaki deri yarası şeması bir sekonder iyileşme örneğidir.
 İlk evrede yara boşluğunu hemostatik pıhtı doldurur, içinde trombositler, çevresinde nötrofil ve makrofajlar vardır.
-2. evrede epitel hücreleri çoğalır, damar büyümesi ve çoğalan fibroblastlarla granülasyon dokusu oluşur ve yüzeyde eskar görülür; eskar hasarlı derinin üzerinde oluşan kabuktur.
-3. evrede yeniden şekillenmeyle granülasyon dokusunun yerini fibröz yara izi alır.
+İkinci evrede epitel hücreleri çoğalır, damar büyümesi ve çoğalan fibroblastlarla granülasyon dokusu oluşur ve yüzeyde eskar görülür; eskar hasarlı derinin üzerinde oluşan kabuktur.
+Üçüncü evrede yeniden şekillenmeyle granülasyon dokusunun yerini fibröz yara izi alır.
 
 @@ Yara iyileşmesini etkileyen faktörler
-Sistemik faktörlerin başında beslenme gelir: protein ve ce vitamini eksikliği kollajen sentezini azaltır. Metabolik durumlardan diyabet iyileşmeyi üç yoldan bozar: nötrofil fonksiyon bozukluğu, küçük damar hastalığı ve artmış enfeksiyon eğilimi. Bu üçü birbirini besler; iskemik ve savunması zayıf doku kolay enfekte olur. Sirkülasyonda ateroskleroz ve venöz yetmezlik iskemiye yol açar; arteriyel daralma yaraya gelen kanı, venöz yetmezlik kanın uzaklaştırılmasını bozar.
+Sistemik faktörlerin başında beslenme gelir: protein ve C vitamini eksikliği kollajen sentezini azaltır. Metabolik durumlardan diyabet iyileşmeyi 3 yoldan bozar: nötrofil fonksiyon bozukluğu, küçük damar hastalığı ve artmış enfeksiyon eğilimi. Bu üçü birbirini besler; iskemik ve savunması zayıf doku kolay enfekte olur. Sirkülasyonda ateroskleroz ve venöz yetmezlik iskemiye yol açar; arteriyel daralma yaraya gelen kanı, venöz yetmezlik kanın uzaklaştırılmasını bozar.
 
-Hormonlardan glukokortikoidler te ge ef beta üretimini ve kollajen sentezini inhibe eder.
+Hormonlardan glukokortikoidler TGF-β üretimini ve kollajen sentezini inhibe eder.
 Burası önemli, bu bilgi çıkmış sorularda soruldu: kortikosteroidlerin yüksek doz ya da kronik kullanımı kollajen sentezini azaltır ve yara iyileşmesini geciktirir.
 Çeldiricilerin doğru biçimlerini de bilin: kortikosteroidler ameliyat sonrası geç dönemde de iyileşmeyi etkiler, lizozomal enzim salınımını artırmaz tersine azaltır, hem epitelizasyonu hem kontraksiyonu inhibe eder ve inflamatuvar fazı da etkiler.
 
@@ -243,7 +243,7 @@ Son olarak zayıf perfüzyon, örneğin diyabetik bacak ülserlerinde, oksijen v
 @@ Yetersiz onarım: kronik yaralar
 Onarım yetersiz kaldığında yara kapanmaz ve kronik yara gelişir. Venöz bacak ülserlerinin nedeni kronik venöz hipertansiyondur; varisler ve kalp yetmezliği zemin hazırlar. Arteriyel ülserlerin nedeni periferik arter hastalığı ve diyabettir; yetersiz arteriyel akım iskemik nekroz ve zayıf iyileşmeyle sonuçlanır. Venöz ülserde sorun kanın dokudan uzaklaştırılamaması, arteriyel ülserde dokuya kan gelmemesidir.
 
-Diyabetik ayak ülserleri üç etkenin birleşimidir: mikroanjiyopati, nöropati ve enfeksiyon.
+Diyabetik ayak ülserleri 3 etkenin birleşimidir: mikroanjiyopati, nöropati ve enfeksiyon.
 Mikroanjiyopati beslenmeyi bozar, nöropatide hasta duyu kaybı nedeniyle küçük yaraları ve basıyı fark etmez, enfeksiyon da bu zeminde kolay gelişir.
 Basınç ülserleri yatak bağımlı hastalarda kemik çıkıntıları üzerindeki uzun süreli bası sonucu oluşur; bası kılcal damarları kapatır ve doku iskemik nekroza uğrar.
 Kitaptaki kronik yara görüntülerinde venöz bacak ülseri, daha yaygın doku nekrozu gösteren arteriyel ülser, diyabetik ülser ve basınç yarası yan yana görülür.
@@ -255,21 +255,21 @@ Onarım bir uçta yetersiz kalırsa kronik yara, diğer uçta aşırıya kaçars
 @@ Parankimal organlarda fibrozis
 Fibrozis aşırı kollajen ve matriks birikimidir; normal parankimin yerini giderek bağ dokusu alır. Nedenleri kronik inflamasyon ve süregen, yani persistan toksik ya da iskemik hasardır. Uyaran devam ettiği için fibroblast aktivasyonu ve matriks birikimi sona ermez ve sentez sürekli yıkımı aşar. Yani fibrozis, yara iyileşmesiyle aynı mekanizmaların durmaksızın çalışmasıdır. Başlıca örnekler karaciğer sirozu, idiyopatik pulmoner fibroz, pnömokonyoz, son dönem böbrek hastalığı ve sistemik skleroz, yani sklerodermadır. Sonuç, organ fonksiyonunda ciddi ve genellikle kalıcı bozulmadır.
 
-Te ge ef beta ve diğer fibrogenik sitokinler potansiyel tedavi hedefleridir.
+TGF-β ve diğer fibrogenik sitokinler potansiyel tedavi hedefleridir.
 Amaç aşırı kollajen birikimini sınırlamak ve organ fonksiyonunu korumaktır.
 Bazı antifibrotik ilaçlar idiyopatik pulmoner fibroz ve karaciğer fibrozunda klinik kullanıma girmiştir; ancak etkin ve güvenli antifibrotik tedavi hâlâ önemli bir araştırma alanıdır.
 
 @@ Ek şekiller: nakil reddi ve greft versus host hastalığı
 Dersin sonunda nakil reddinin morfolojisini gösteren ek şekiller yer alır; burada da doku hasarı, inflamasyon ve fibrozis kavramları karşımıza çıkar. Hiperakut redde alıcıda, örneğin kan grubu antijeni gibi bir alloantijene karşı dolaşan antikorlar bulunur. Bu antikorlar endotelde birikir, kompleman aktivasyonu endotel hasarı, inflamasyon ve tromboza neden olur. Böbrek allogreftinde trombosit kaynaklı trombüsler ve glomerülde iskemik hasar görülür.
 
-Akut hücresel redde greft hücreleri te hücreleri tarafından tahrip edilir.
-Ce de sekiz pozitif sitotoksik te lenfositler greft hücrelerini doğrudan öldürür, CD4 pozitif te hücrelerinin ürettiği sitokinler ise makrofaj ve nötrofilleri çekerek inflamasyon yapar.
+Akut hücresel redde greft hücreleri T hücreleri tarafından tahrip edilir.
+CD8 pozitif sitotoksik T lenfositler greft hücrelerini doğrudan öldürür, CD4 pozitif T hücrelerinin ürettiği sitokinler ise makrofaj ve nötrofilleri çekerek inflamasyon yapar.
 Böbrek greftinde interstisyumda ve tubul epitel hücreleri arasında inflamatuvar hücreler, yani tubulit görülür; çökmüş tubuller dalgalı bazal membranlarla çevrilidir.
 Akut vasküler redde ise endoteli saldıran ve zayıflatan inflamatuvar hücreler, yani endotelit izlenir.
 Akut antikor aracılı, yani humoral redde greft hasarı damarlarda antikor birikimine bağlıdır.
 Böbrek greftinde peritübüler kılcal damarlarda iltihap, yani kapillarit görülür; immünoperoksidaz boyaması peritübüler kılcal damarlarda ve glomerülde kompleman birikimini gösterir.
 
-Kronik redde te hücre sitokinleri ve antikor birikimi greft arteriyosklerozuna yol açar: damar duvarında kronik inflamasyon, intimal düz kas proliferasyonu ve damar tıkanması.
+Kronik redde T hücre sitokinleri ve antikor birikimi greft arteriyosklerozuna yol açar: damar duvarında kronik inflamasyon, intimal düz kas proliferasyonu ve damar tıkanması.
 Bu, kalp naklinde de görülür.
 Böbrekte kronik antikor aracılı reddin karakteristik belirtisi transplant glomerülopatisidir: kılcal halkalarda inflamatuvar hücreler yani glomerülit, mezangiyal matriks birikimi ve kılcal bazal membran duplikasyonu.
 Arter ve arteriyollerin arteriyosklerozuna bağlı olarak interstisyel fibrozis ve tübüler atrofi gelişir; trikrom boyamada mavi alan fibrozisi gösterir.

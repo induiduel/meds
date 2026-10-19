@@ -1,7 +1,7 @@
 # Ödem, Hiperemi, Konjesyon ve Kanama
 
 @@ Hemodinamik denge ve klinik önemi
-Hücre ve dokuların sağlıklı kalması kan dolaşımına bağlıdır. Dolaşımın iki temel görevi vardır: dokulara oksijen ve besin getirmek, metabolik atıkları da dokudan uzaklaştırmak. Normal koşullarda kılcal damarlarda damar ile interstisyel sıvı, yani hücreler arasındaki doku sıvısı arasında bir denge korunur; sıvı ne damar içinde birikir ne de dokuya taşar. Bu denge bozulduğunda dört temel hemodinamik bozukluk gelişir: ödem, hiperemi, konjesyon ve kanama. Bu dersin bütün başlıkları tek bir eksene bağlanır: kanın ve sıvının damar içi ile doku arasındaki dağılım dengesi.
+Hücre ve dokuların sağlıklı kalması kan dolaşımına bağlıdır. Dolaşımın 2 temel görevi vardır: dokulara oksijen ve besin getirmek, metabolik atıkları da dokudan uzaklaştırmak. Normal koşullarda kılcal damarlarda damar ile interstisyel sıvı, yani hücreler arasındaki doku sıvısı arasında bir denge korunur; sıvı ne damar içinde birikir ne de dokuya taşar. Bu denge bozulduğunda 4 temel hemodinamik bozukluk gelişir: ödem, hiperemi, konjesyon ve kanama. Bu dersin bütün başlıkları tek bir eksene bağlanır: kanın ve sıvının damar içi ile doku arasındaki dağılım dengesi.
 
 Bu bozukluklar aynı adı taşısalar bile hafif bir bulgudan yaşamı tehdit eden tabloya kadar uzanan geniş bir klinik yelpaze gösterir.
 Ödem, göz çevresinde basit bir şişlikten, yani periorbital ödemden, akciğer ödemine bağlı solunum yetmezliğine kadar gidebilir.
@@ -15,7 +15,7 @@ Hiperemi ve konjesyon sıklıkla birlikte anılır, çünkü ikisinin sonucu ayn
 
 Hiperemi, arteriyol dilatasyonu ve artmış kan akımı sonucu oluşur.
 Yani küçük atardamarlar genişler ve dokuya giren kan artar.
-İki klasik örneği vardır.
+2 klasik örneği vardır.
 Fizyolojik örnek egzersiz yapan iskelet kasıdır; çalışan kasın oksijen ihtiyacı artar ve genişleyen arteriyoller kanı kasa yönlendirir.
 Patolojik örnek ise enflamasyon odaklarıdır; iltihaplı dokuda arteriyoller genişler ve bölgeye daha fazla kan gelir.
 Dolayısıyla hiperemi her zaman hastalık anlamına gelmez, ihtiyaca yanıt veren bir uyum mekanizması da olabilir.
@@ -27,7 +27,7 @@ Artmış kan akımı vücudun iç ısısını da dokuya taşır; doku normalden 
 İltihaplı bölgede gördüğümüz kızarıklık ve ısı artışı, aslında hipereminin kendisidir.
 
 @@ Konjesyonun tipleri ve siyanoz
-Konjesyon, bir dokudan venöz kan akımının bozulması sonucu oluşan pasif süreçtir. Kanın dokuya girişi artmamıştır; kan dokudan uzaklaşamadığı için birikir. Yaygınlığına göre iki tipi vardır. Sistemik konjesyon tüm venöz sistemi etkiler ve tipik olarak kalp yetmezliğinde görülür; kalp kanı ileriye yeterince pompalayamadığı için kan venlerde geriye doğru birikir. Lokal konjesyon ise tek bir bölgeyi etkiler ve venöz tıkanıklıklarda gelişir; klasik örneği ven trombozudur, tıkanan venin drene ettiği bölgede kan göllenir. Yani yaygın konjesyon kalbi, tek bölgeye sınırlı konjesyon o bölgenin venini düşündürür.
+Konjesyon, bir dokudan venöz kan akımının bozulması sonucu oluşan pasif süreçtir. Kanın dokuya girişi artmamıştır; kan dokudan uzaklaşamadığı için birikir. Yaygınlığına göre 2 tipi vardır. Sistemik konjesyon tüm venöz sistemi etkiler ve tipik olarak kalp yetmezliğinde görülür; kalp kanı ileriye yeterince pompalayamadığı için kan venlerde geriye doğru birikir. Lokal konjesyon ise tek bir bölgeyi etkiler ve venöz tıkanıklıklarda gelişir; klasik örneği ven trombozudur, tıkanan venin drene ettiği bölgede kan göllenir. Yani yaygın konjesyon kalbi, tek bölgeye sınırlı konjesyon o bölgenin venini düşündürür.
 
 Konjesyone dokunun rengi, birikmiş kanın oksijen içeriğini yansıtır.
 Dokudan uzaklaşamayan kan, doku oksijeni kullanmayı sürdürdükçe giderek oksijenini kaybeder ve oksijenini bırakmış hemoglobin, yani deoksihemoglobin birikir.
@@ -38,16 +38,16 @@ Burası önemli: hiperemi aktif, arteriyel, kırmızı ve sıcaktır; konjesyon 
 Renk, mekanizmanın ipucudur.
 
 @@ Kronik konjesyonun sonuçları
-Konjesyon kısa sürerse doku toparlanabilir; ancak süreğen hale geldiğinde kalıcı hasar başlar ve bu hasar iki yoldan gelişir. 1. yol hipoksi yoludur. Kan dokuda durağanlaştığı için taze, oksijenli kan dokuya yeterince ulaşamaz; buna yetersiz perfüzyon denir. Yetersiz perfüzyon kronik hipoksiye yol açar. Uzun süre oksijensiz kalan dokuda, organın asıl işini yapan ve oksijene en duyarlı hücreler, yani parankimal hücreler ölür. Ölen hücrelerin yeri bağ dokusuyla doldurulur; bu da sekonder doku fibrozisidir, organ sertleşir ve işlevi azalır. Zinciri şöyle aklınızda tutun: yetersiz perfüzyon, kronik hipoksi, parankimal hücre ölümü ve sekonder fibrozis.
+Konjesyon kısa sürerse doku toparlanabilir; ancak süreğen hale geldiğinde kalıcı hasar başlar ve bu hasar 2 yoldan gelişir. Birinci yol hipoksi yoludur. Kan dokuda durağanlaştığı için taze, oksijenli kan dokuya yeterince ulaşamaz; buna yetersiz perfüzyon denir. Yetersiz perfüzyon kronik hipoksiye yol açar. Uzun süre oksijensiz kalan dokuda, organın asıl işini yapan ve oksijene en duyarlı hücreler, yani parankimal hücreler ölür. Ölen hücrelerin yeri bağ dokusuyla doldurulur; bu da sekonder doku fibrozisidir, organ sertleşir ve işlevi azalır. Zinciri şöyle aklınızda tutun: yetersiz perfüzyon, kronik hipoksi, parankimal hücre ölümü ve sekonder fibrozis.
 
-2. yol basınç yoludur ve hipoksiden bağımsızdır.
+İkinci yol basınç yoludur ve hipoksiden bağımsızdır.
 Dokuda biriken kan damar içi, yani intravasküler basıncı artırır.
 Basıncı yükselen damarlardan sıvı doku aralığına sızar; böylece konjesyon kendi başına ödeme yol açabilir.
 Sürekli gerilen ince kılcal duvarlar da yer yer yırtılır; bu kılcal damar rüptürlerinden küçük, sınırlı, odaksal kanamalar oluşur.
-Bu iki sonuç, konjesyonlu bir organda hem sıvı birikiminin hem de eski küçük kanamaların izlerinin neden birlikte görüldüğünü açıklar.
+Bu 2 sonuç, konjesyonlu bir organda hem sıvı birikiminin hem de eski küçük kanamaların izlerinin neden birlikte görüldüğünü açıklar.
 
 @@ Hiperemi ve konjesyonun morfolojisi, akciğer konjesyonu
-Patolojik incelemede hiperemi ve konjesyonun görünümü, dokudaki kan fazlalığını doğrudan yansıtır. Makroskopide organ kesildiğinde kesit yüzeyi ıslaktır ve genellikle kan sızdırır. Mikroskopide kılcal damarlar ve venüller eritrositlerle doludur; normalde birkaç eritrosit içeren küçük damarlar kanla tıka basa dolu görünür. Bu bulguların en önemli iki örneği akciğer ve karaciğer konjesyonudur; her iki organda akut ve kronik evreler farklı morfoloji gösterir.
+Patolojik incelemede hiperemi ve konjesyonun görünümü, dokudaki kan fazlalığını doğrudan yansıtır. Makroskopide organ kesildiğinde kesit yüzeyi ıslaktır ve genellikle kan sızdırır. Mikroskopide kılcal damarlar ve venüller eritrositlerle doludur; normalde birkaç eritrosit içeren küçük damarlar kanla tıka basa dolu görünür. Bu bulguların en önemli 2 örneği akciğer ve karaciğer konjesyonudur; her iki organda akut ve kronik evreler farklı morfoloji gösterir.
 
 Akut pulmoner konjesyonda alveol duvarlarındaki kılcallar kanla doludur.
 Artan damar içi basınç nedeniyle alveoller arasındaki ince duvarlara, yani septalara sıvı sızar ve hafif septal ödem gelişir.
@@ -69,7 +69,7 @@ Periportal alanlar ise kahverengimsi, bazen yağlıdır; burada hepatositler can
 Kırmızı, çökük merkezlerin kahverengi parankim içinde düzenli tekrar etmesi, kesilmiş muskat tohumunun yüzeyine benzeyen muskat karaciğer görünümünü oluşturur.
 Muskat karaciğer, sistemik konjesyonun en sık nedeni olan kalp yetmezliğinde karaciğerin klasik görünümüdür.
 
-Ders kitabındaki şekil, kronik pasif konjesyon ve hemorajik nekrozlu karaciğeri iki düzeyde gösterir.
+Ders kitabındaki şekil, kronik pasif konjesyon ve hemorajik nekrozlu karaciğeri 2 düzeyde gösterir.
 Otopsi örneğinde sentrilobüler alanlar kırmızıdır ve çevredeki kahverengi canlı parankime göre hafifçe çöküktür.
 Mikroskopik preparatta ise lobül merkezinde hemoraji, dağınık inflamasyon hücreleri ve sentrilobüler hepatik nekroz görülür.
 Yani makroskopideki kırmızı çökük alan, mikroskopide kanama ve hepatosit ölümüne karşılık gelir.
@@ -78,7 +78,7 @@ Periportal fibrozis, sentroportal nekroz ya da kanamasız iskemik nekroz bu tabl
 Özetle, kalp yetmezliği hücreleri akciğerde, muskat görünümü ise karaciğerde kronik pasif konjesyonun işaretidir.
 
 @@ Ödem, efüzyon ve anasarka
-Hemodinamik bozuklukların 2. büyük başlığı sıvı birikimidir ve sıvının biriktiği yer kullanılacak terimi belirler. Ödem, dokuların interstisyel boşluğunda aşırı sıvı birikimidir; sıvı hücreler arasındaki doku aralığında toplanır. Efüzyon ise vücut boşluklarında sıvı birikimidir. Efüzyonlar birikimin olduğu boşluğa göre adlandırılır: plevral boşlukta hidrotoraks, perikard boşluğunda hidroperikardiyum, periton boşluğunda hidroperiton, diğer adıyla asit. Hidro öneki, boşlukta biriken şeyin kan değil sıvı olduğunu belirtir.
+Hemodinamik bozuklukların ikinci büyük başlığı sıvı birikimidir ve sıvının biriktiği yer kullanılacak terimi belirler. Ödem, dokuların interstisyel boşluğunda aşırı sıvı birikimidir; sıvı hücreler arasındaki doku aralığında toplanır. Efüzyon ise vücut boşluklarında sıvı birikimidir. Efüzyonlar birikimin olduğu boşluğa göre adlandırılır: plevral boşlukta hidrotoraks, perikard boşluğunda hidroperikardiyum, periton boşluğunda hidroperiton, diğer adıyla asit. Hidro öneki, boşlukta biriken şeyin kan değil sıvı olduğunu belirtir.
 
 Ödem ve efüzyon aynı hastada şiddetli ve yaygın biçimde bir arada bulunabilir; buna anasarka denir.
 Anasarka şiddetli, yaygın ödemdir: deri altı dokular belirgin biçimde şişer ve vücut boşluklarında belirgin sıvı birikimi eşlik eder.
@@ -86,9 +86,9 @@ Genellikle ağır kalp, böbrek ya da karaciğer yetmezliğiyle ilişkilidir.
 Bu yüzden anasarkalı bir hastada sorulacak soru, hangi organın yetersiz olduğudur.
 
 @@ Vücut sıvı dağılımı ve Starling kuvvetleri
-Ödemin nasıl oluştuğunu anlamak için önce normal sıvı dağılımını bilmek gerekir. Yağsız vücut ağırlığının yaklaşık %60'ı sudur. Bu suyun üçte ikisi hücre içinde, üçte biri hücre dışındadır. Hücre dışı sıvının çoğu interstisyel sıvıdadır, yalnız küçük bir kısmı, yaklaşık %5'i plazmadadır. Normalde doku interstisyumu kuruya yakın tutulur ve bunu iki sistem sağlar: kapiller ile interstisyum arasındaki sıvı dengesi ve lenfatik drenaj. Bu iki sistemden biri bozulduğunda interstisyum kuru kalamaz ve ödem gelişir.
+Ödemin nasıl oluştuğunu anlamak için önce normal sıvı dağılımını bilmek gerekir. Yağsız vücut ağırlığının yaklaşık %60'ı sudur. Bu suyun üçte ikisi hücre içinde, üçte biri hücre dışındadır. Hücre dışı sıvının çoğu interstisyel sıvıdadır, yalnız küçük bir kısmı, yaklaşık %5'i plazmadadır. Normalde doku interstisyumu kuruya yakın tutulur ve bunu 2 sistem sağlar: kapiller ile interstisyum arasındaki sıvı dengesi ve lenfatik drenaj. Bu 2 sistemden biri bozulduğunda interstisyum kuru kalamaz ve ödem gelişir.
 
-Mikrosirkülasyonda sıvı hareketini iki karşıt kuvvet yönetir; bunlara Starling kuvvetleri denir.
+Mikrosirkülasyonda sıvı hareketini 2 karşıt kuvvet yönetir; bunlara Starling kuvvetleri denir.
 Hidrostatik basınç damar içindeki sıvının duvara uyguladığı basınçtır ve sıvıyı dışarı iter.
 Kolloid ozmotik basınç, diğer adıyla onkotik basınç ise plazma proteinlerinin oluşturduğu basınçtır ve sıvıyı damar içine çeker.
 Arteriyol ucunda hidrostatik basınç baskındır ve sıvı dışarı çıkar.
@@ -103,11 +103,11 @@ Hidrostatik basınç yükselirse ya da plazma ozmotik basıncı düşerse inters
 Doku lenfatikleri fazla sıvının büyük kısmını torasik kanal yoluyla dolaşıma geri boşaltır; ancak interstisyel sıvı birikimi lenfatik drenaj kapasitesini aşarsa, yetersiz geri emilim gelişir ve doku ödemi oluşur.
 
 @@ Ödemin temel mekanizmaları ve nedenleri
-Bu fizyolojik zemin, ödemin bütün nedenlerini birkaç temel mekanizmada toplamamızı sağlar. 1.'si artmış hidrostatik basınçtır; itici kuvvet artar. 2.'si azalmış plazma kolloid ozmotik basıncıdır; çekici kuvvet azalır. 3.'sü lenfatik tıkanıklıktır; fazlalığı toplayan drenaj yolu kapanır. 4.'sü sodyum ve su tutulumudur. 5.'si artmış vasküler permeabilitedir, yani damar duvarı sıvıya karşı daha geçirgen hale gelir. 6.'sı enflamatuvar ödemdir ve ayrıntısı inflamasyon konusunda işlenir. Burası önemli, bu mekanizma listesi sınav spotudur. Bir hastalığın birden fazla mekanizmayı aynı anda çalıştırabileceğini de unutmayın.
+Bu fizyolojik zemin, ödemin bütün nedenlerini birkaç temel mekanizmada toplamamızı sağlar. 1.'si artmış hidrostatik basınçtır; itici kuvvet artar. 2.'si azalmış plazma kolloid ozmotik basıncıdır; çekici kuvvet azalır. 3.'sü lenfatik tıkanıklıktır; fazlalığı toplayan drenaj yolu kapanır. 4.'sü sodyum ve su tutulumudur. 5.'si artmış vasküler permeabilitedir, yani damar duvarı sıvıya karşı daha geçirgen hale gelir. Altıncısı enflamatuvar ödemdir ve ayrıntısı inflamasyon konusunda işlenir. Burası önemli, bu mekanizma listesi sınav spotudur. Bir hastalığın birden fazla mekanizmayı aynı anda çalıştırabileceğini de unutmayın.
 
 Ödem nedenleri tablosu bu mekanizmaları örneklerle eşleştirir.
-Artmış hidrostatik basıncın 1. alt grubu venöz dönüşün bozulmasıdır: konjestif kalp yetmezliği, konstriktif perikardit, yani kalınlaşmış perikardın kalbin dolmasını kısıtlaması, karaciğer sirozu, tromboz ya da kitle gibi bir dış basıya bağlı venöz obstrüksiyon veya kompresyon ve alt ekstremitelerin uzun süre hareketsiz ve aşağıda kalması.
-2. alt grup arteriol dilatasyonudur; ısı ve nörohümoral disregülasyon, yani damar tonusunu düzenleyen sinirsel ve hormonal kontrolün bozulması, kılcala daha fazla kan getirerek basıncı artırır.
+Artmış hidrostatik basıncın birinci alt grubu venöz dönüşün bozulmasıdır: konjestif kalp yetmezliği, konstriktif perikardit, yani kalınlaşmış perikardın kalbin dolmasını kısıtlaması, karaciğer sirozu, tromboz ya da kitle gibi bir dış basıya bağlı venöz obstrüksiyon veya kompresyon ve alt ekstremitelerin uzun süre hareketsiz ve aşağıda kalması.
+İkinci alt grup arteriol dilatasyonudur; ısı ve nörohümoral disregülasyon, yani damar tonusunu düzenleyen sinirsel ve hormonal kontrolün bozulması, kılcala daha fazla kan getirerek basıncı artırır.
 Görüldüğü gibi hidrostatik ödemin çoğu venöz kökenlidir.
 
 Azalmış plazma onkotik basıncın ortak sorunu hipoproteinemidir.
@@ -115,7 +115,7 @@ Nedenleri protein kaybettiren glomerülopatiler, yani nefrotik sendrom; protein 
 Burası önemli, bu bilgi çıkmış sorularda soruldu: kalp yetmezliği plazma onkotik basıncını azaltan durumlardan biri değildir.
 Nefrotik sendrom, karaciğer sirozu, protein enerji malnütrisyonu ve protein kaybettiren enteropati onkotik basıncı düşürür; kalp yetmezliği ise hidrostatik basıncı artıran gruptadır.
 
-Tablonun 2. bölümünde lenfatik tıkanmanın inflamatuvar, neoplastik, cerrahi sonrası ve radyasyon sonrası nedenleri yer alır.
+Tablonun ikinci bölümünde lenfatik tıkanmanın inflamatuvar, neoplastik, cerrahi sonrası ve radyasyon sonrası nedenleri yer alır.
 Sodyum retansiyonu grubunda böbrek merkezdedir: böbrek yetersizliği ile birlikte aşırı tuz alımı, sodyumun böbrekten atılımının azalması, böbrek hipoperfüzyonu ve artmış renin anjiyotensin aldosteron sistemi aktivasyonu.
 Aldosteron böbrekte sodyum geri emilimini artırır.
 Son grup enflamasyondur: akut enflamasyon, kronik enflamasyon ve anjiyogenez, yani yeni damar oluşumu da ödeme yol açar.
@@ -123,9 +123,9 @@ Son grup enflamasyondur: akut enflamasyon, kronik enflamasyon ve anjiyogenez, ya
 @@ Artmış hidrostatik basınç ve kalp yetmezliği
 Artmış hidrostatik basınç genellikle venöz dönüş bozukluğuna bağlıdır ve ödemin yaygınlığı, etkilenen alanın genişliğine göre değişir. Lokalize örnek, alt ekstremitede derin ven trombozudur; derin vende oluşan trombüs kanın yukarı dönüşünü engeller, tıkanmanın altındaki kılcallarda basınç yükselir ve bacak distalinde ödem gelişir. Bu ödem tek bacakla sınırlıdır. Sistemik örnek ise konjestif kalp yetmezliğidir; venöz basınç tüm vücutta artar ve yaygın ödem ortaya çıkar. Yani tek taraflı bacak ödemi lokal venöz tıkanıklığı, yaygın ödem sistemik venöz basınç artışını düşündürür.
 
-Kalp yetmezliği ödemi aynı anda iki koldan oluşturur.
-1. kol hidrostatiktir: azalmış kalp debisi nedeniyle kan venöz sistemde birikir ve kapiller hidrostatik basınç artar.
-2. kol renaldir: düşük debi böbreğe giden kanı azaltır, yani böbrek hipoperfüzyonu gelişir.
+Kalp yetmezliği ödemi aynı anda 2 koldan oluşturur.
+Birinci kol hidrostatiktir: azalmış kalp debisi nedeniyle kan venöz sistemde birikir ve kapiller hidrostatik basınç artar.
+İkinci kol renaldir: düşük debi böbreğe giden kanı azaltır, yani böbrek hipoperfüzyonu gelişir.
 Böbrek bunu hacim eksikliği gibi algılar ve renin anjiyotensin aldosteron sistemini aktive eder; sodyum ve su tutulumu artar.
 Bu duruma sekonder hiperaldosteronizm denir.
 Dikkat edin, böbrek aslında fazla olan sıvıyı eksik sanır; bu, ödemi besleyen yanlış bir kompansasyondur.
@@ -136,13 +136,13 @@ Artan hacim zaten zayıf olan kalbe daha fazla yük bindirir; ama yetersiz kalp 
 Düşük debi böbrek hipoperfüzyonunu sürdürür ve döngü yeniden başlar.
 Burası önemli, sınav tuzağı şudur: kalp yetmezliği ödemi hidrostatik basınç artışıyla ve renin anjiyotensin aldosteron sistemine bağlı sekonder hiperaldosteronizmle yapar; hipoproteinemi nedeni olarak verilirse yanlıştır.
 
-Sistemik ödeme giden yolları özetleyen şemada üç başlangıç noktası vardır ve bu durumun karaciğer yetmezliği dahil çeşitli nedenleri bulunur.
-Kalp yetmezliğinden iki ok çıkar: biri kapiller hidrostatik basınç artışına, diğeri renal kan akımında azalmaya gider; renal kol renin anjiyotensin aldosteron sistemi aktivasyonu, sodyum ve su tutulumu ve kan hacminde artış şeklinde ilerler.
+Sistemik ödeme giden yolları özetleyen şemada 3 başlangıç noktası vardır ve bu durumun karaciğer yetmezliği dahil çeşitli nedenleri bulunur.
+Kalp yetmezliğinden 2 ok çıkar: biri kapiller hidrostatik basınç artışına, diğeri renal kan akımında azalmaya gider; renal kol renin anjiyotensin aldosteron sistemi aktivasyonu, sodyum ve su tutulumu ve kan hacminde artış şeklinde ilerler.
 Böbrek yetmezliği doğrudan sodyum ve su tutulumu basamağına bağlanır.
 Malnütrisyon, azalmış karaciğer sentezi ve nefrotik sendrom ise plazma albüminini azaltır, plazma ozmotik basıncı düşer ve tüm yollar ödemde birleşir.
 
 @@ Azalmış onkotik basınç ve albümin
-Plazma onkotik basıncının azalmasının başlıca nedeni, plazma albümin düzeyindeki azalmadır. Albümin plazma proteinlerinin yaklaşık yüzde ellisini oluşturur ve kolloid ozmotik basınca en büyük katkıyı sağlar; venül ucunda sıvıyı damar içine geri çeken kuvvetin ana kaynağıdır. Burası önemli, bu bilgi çıkmış sorularda soruldu: plazma kolloid ozmotik, yani onkotik basıncını oluşturan temel bileşen proteinlerdir, bunların başında da albümin gelir. Sodyum, su, lipitler ya da karbonhidratlar onkotik basıncın temel bileşeni değildir.
+Plazma onkotik basıncının azalmasının başlıca nedeni, plazma albümin düzeyindeki azalmadır. Albümin plazma proteinlerinin yaklaşık %50'sini oluşturur ve kolloid ozmotik basınca en büyük katkıyı sağlar; venül ucunda sıvıyı damar içine geri çeken kuvvetin ana kaynağıdır. Burası önemli, bu bilgi çıkmış sorularda soruldu: plazma kolloid ozmotik, yani onkotik basıncını oluşturan temel bileşen proteinlerdir, bunların başında da albümin gelir. Sodyum, su, lipitler ya da karbonhidratlar onkotik basıncın temel bileşeni değildir.
 
 Albümin kaybının artması ya da sentezinin azalması bir dizi ardışık sonuç doğurur.
 Önce onkotik basınç düşer ve sıvı interstisyuma kaçar, yani ödem gelişir.
@@ -151,7 +151,7 @@ Azalan hacim renal hipoperfüzyona, bu da sekonder hiperaldosteronizme yol açar
 Ancak albümin düşük olduğu için tutulan sıvı damar içinde kalamaz, yine interstisyuma geçer ve ödemi artırır.
 Yani hipoalbüminemi ödemi hem doğrudan onkotik basınç düşüşüyle hem de dolaylı olarak sekonder hiperaldosteronizmle yapar.
 
-Albümin düşüklüğünün üç klasik örneği vardır.
+Albümin düşüklüğünün 3 klasik örneği vardır.
 1.'si nefrotik sendromdur ve burada sorun albüminin kaybıdır: glomerüler geçirgenlik artar, ağır proteinüri, yani albüminüri gelişir ve albümin idrarla kaybedilir.
 2.'si karaciğer hastalığıdır; albümin karaciğerde yapılır ve siroz gibi durumlarda albümin sentezi azalır.
 3.'sü yetersiz protein alımıdır, yani kvaşiorkor gibi malnütrisyon tablolarıdır.
@@ -160,17 +160,17 @@ Albümin düşüklüğünün üç klasik örneği vardır.
 @@ Lenfatik tıkanıklık ve lenfödem
 Starling dengesinde geride kalan küçük sıvı fazlalığını lenfatikler toplar. Bu drenaj yolu kapandığında sıvının interstisyumdan çıkışı engellenir ve lenfödem gelişir. Lenfödemde kılcal kuvvetler normal olabilir; sorun, normal miktardaki fazlalığın bile uzaklaştırılamamasıdır. Başlıca nedenler tümör infiltrasyonu, cerrahi lenf düğümü rezeksiyonu, radyoterapiye bağlı fibrozis ve filaryazis gibi paraziter enfeksiyonlardır.
 
-Üç klinik örnek bunları somutlaştırır.
+3 klinik örnek bunları somutlaştırır.
 Filaryazis kasık lenfatiklerinde ve lenf düğümlerinde fibrozise yol açar; sonuçta alt ekstremite ve genital bölgede masif lenfödem gelişir ve bacağın fil bacağını andırması nedeniyle buna fil hastalığı denir.
-Meme kanserinde tümör hücreleri memenin yüzeyel lenfatiklerini infiltre edip tıkar ve meme derisi portakal kabuğu görünümü kazanır; buna Fransızca adıyla po doranj denir.
+Meme kanserinde tümör hücreleri memenin yüzeyel lenfatiklerini infiltre edip tıkar ve meme derisi portakal kabuğu görünümü kazanır; buna Fransızca adıyla peau d'orange denir.
 Aksiller lenf nodu diseksiyonu, yani koltuk altı lenf düğümlerinin cerrahi olarak çıkarılması da ilgili kolda şiddetli lenfödeme yol açabilir.
 Burası önemli, sınav spotu olarak eşleştirin: meme kanseri ve portakal kabuğu görünümü, filaryazis ve fil hastalığı.
 
 @@ Sodyum ve su tutulumu
-Sodyum ve su tutulumu, ödemi Starling dengesinin iki kefesine birden etki ederek kolaylaştırır. Nedenleri arasında post streptokokal glomerülonefrit ile akut ve kronik böbrek yetmezliği gibi böbrek hastalıkları ve aşırı tuz alımı ya da azalmış atılım bulunur. Tutulan tuz suyu da beraberinde damar içinde tutar ve intravasküler hacim artar. Artan hacim kılcal içi hidrostatik basıncı yükseltir, yani itici kuvvet güçlenir. Aynı zamanda protein miktarı değişmese de artan su proteinleri seyreltir ve plazma onkotik basıncı düşer; buna dilüsyon denir. Böylece sodyum ve su tutulumu çift etkiyle ödem gelişimini kolaylaştırır. Görüldüğü gibi böbrek, kalp yetmezliğinde de hipoalbüminemide de ikincil tuz ve su tutulumuyla tabloyu ağırlaştıran ortak halkadır.
+Sodyum ve su tutulumu, ödemi Starling dengesinin 2 kefesine birden etki ederek kolaylaştırır. Nedenleri arasında post streptokokal glomerülonefrit ile akut ve kronik böbrek yetmezliği gibi böbrek hastalıkları ve aşırı tuz alımı ya da azalmış atılım bulunur. Tutulan tuz suyu da beraberinde damar içinde tutar ve intravasküler hacim artar. Artan hacim kılcal içi hidrostatik basıncı yükseltir, yani itici kuvvet güçlenir. Aynı zamanda protein miktarı değişmese de artan su proteinleri seyreltir ve plazma onkotik basıncı düşer; buna dilüsyon denir. Böylece sodyum ve su tutulumu çift etkiyle ödem gelişimini kolaylaştırır. Görüldüğü gibi böbrek, kalp yetmezliğinde de hipoalbüminemide de ikincil tuz ve su tutulumuyla tabloyu ağırlaştıran ortak halkadır.
 
 @@ Ödemin morfolojisi ve periferik ödem
-Ödemin patolojik görünümü, interstisyuma dolan sıvının dokuyu fiziksel olarak genişletmesinden kaynaklanır. Makroskopide dokular şiş ve ağırdır, kesitte sıvı sızabilir. Mikroskopide hücre dışı matrikste boşluklar ve ayrılmalar, kolajen lifleri arasında genişleme görülür. Ödem en sık deri altı dokularda, akciğerde ve beyinde görülür ve bu üç yerleşimin klinik ağırlığı birbirinden çok farklıdır.
+Ödemin patolojik görünümü, interstisyuma dolan sıvının dokuyu fiziksel olarak genişletmesinden kaynaklanır. Makroskopide dokular şiş ve ağırdır, kesitte sıvı sızabilir. Mikroskopide hücre dışı matrikste boşluklar ve ayrılmalar, kolajen lifleri arasında genişleme görülür. Ödem en sık deri altı dokularda, akciğerde ve beyinde görülür ve bu 3 yerleşimin klinik ağırlığı birbirinden çok farklıdır.
 
 Periferik, yani deri altı ödemi genellikle vücudun en alttaki bölgelerinde daha belirgindir, çünkü yerçekimi sıvıyı aşağıya toplar; buna bağımlı ödem denir.
 Ayakta duran hastada ayak ve bacakta, yatan hastada sakrum bölgesinde belirginleşir.
@@ -184,7 +184,7 @@ Bağımlı ödemden farkı, yerçekimine değil dokunun gevşekliğine bağlı o
 Burası önemli: periorbital ödem sistemik bir hastalığın ipucu olabilir ve özellikle nefrotik sendromu düşündürmelidir.
 
 @@ Akciğer ödemi
-Akciğer ödemi klinik olarak en tehlikeli ödem tiplerinden biridir, çünkü sıvı gaz değişiminin yapıldığı alana dolar. Patolojide akciğer ağırlığı iki ila 3 kat artabilir ve kesitte köpüklü, bazen kanlı sıvı sızar; köpük, alveollerdeki sıvının havayla karışmasından kaynaklanır. Nedenleri sol ventrikül yetmezliği, böbrek yetmezliği ve akut akciğer hasarı, inflamasyon ya da enfeksiyondur. Burası önemli: akciğer ödeminin en sık nedeni sol ventrikül yetmezliğidir; sol kalp kanı ileri pompalayamaz, akciğer venlerinde basınç yükselir ve hidrostatik ödem gelişir. Klinikte gaz değişimi bozulur ve hipoksi gelişir; sıvı dolu alveoller ayrıca enfeksiyonlara zemin hazırlar.
+Akciğer ödemi klinik olarak en tehlikeli ödem tiplerinden biridir, çünkü sıvı gaz değişiminin yapıldığı alana dolar. Patolojide akciğer ağırlığı 2 ila 3 kat artabilir ve kesitte köpüklü, bazen kanlı sıvı sızar; köpük, alveollerdeki sıvının havayla karışmasından kaynaklanır. Nedenleri sol ventrikül yetmezliği, böbrek yetmezliği ve akut akciğer hasarı, inflamasyon ya da enfeksiyondur. Burası önemli: akciğer ödeminin en sık nedeni sol ventrikül yetmezliğidir; sol kalp kanı ileri pompalayamaz, akciğer venlerinde basınç yükselir ve hidrostatik ödem gelişir. Klinikte gaz değişimi bozulur ve hipoksi gelişir; sıvı dolu alveoller ayrıca enfeksiyonlara zemin hazırlar.
 
 Ders kitabındaki bir göğüs röntgeni, akciğer ödemini mitral stenozlu bir hasta üzerinden gösterir.
 Mitral kapak darlığında kan sol atriyumdan sol ventriküle güçlükle geçer; sol atriyumda biriken kan geriye, akciğer venlerine yansır ve pulmoner kılcallarda hidrostatik basınç yükselir.
@@ -201,10 +201,10 @@ Beyin ödemi ise intrakraniyal basıncı artırır, herniasyon ve beyin sapı ha
 Bu sıralama, dersin başındaki ilkeyi doğrular: ödemin önemini miktarından çok nerede geliştiği belirler.
 
 @@ Kanama: tanım, nedenler ve hemorajik diyatez
-Hemodinamik bozuklukların son başlığı kanama, yani hemorajidir. Kanama, kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızmasıdır. Nedenleri iki eksende toplanır. 1. eksen damar duvarının yapısal hasarıdır: travma, ateroskleroz, vaskülit, yani damar duvarının iltihabı ve damarda tümör erozyonu. 2. eksen hemostaz bozukluklarıdır; damar, trombosit ya da koagülasyon faktörü defektleri kanamanın durdurulmasını engeller.
+Hemodinamik bozuklukların son başlığı kanama, yani hemorajidir. Kanama, kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızmasıdır. Nedenleri 2 eksende toplanır. Birinci eksen damar duvarının yapısal hasarıdır: travma, ateroskleroz, vaskülit, yani damar duvarının iltihabı ve damarda tümör erozyonu. İkinci eksen hemostaz bozukluklarıdır; damar, trombosit ya da koagülasyon faktörü defektleri kanamanın durdurulmasını engeller.
 
 Hemorajik diyatez, artmış kanama eğilimine yol açan farklı bozuklukları ifade eden genel bir terimdir; tek bir hastalık değil, bir hastalık grubudur.
-Üç düzeyde ortaya çıkabilir.
+3 düzeyde ortaya çıkabilir.
 Damar duvarı düzeyinde duvarın kırılganlığı küçük zorlamalarda kanamaya yol açar.
 Trombosit düzeyinde sayıca azlık ya da işlev bozukluğu, kanamayı durduran ilk tıkacın oluşmasını engeller.
 Plazma koagülasyon faktörleri düzeyinde ise faktör eksikliği ya da işlev bozukluğu kalıcı pıhtıyı engeller.
@@ -214,30 +214,30 @@ Bu bozukluklar ilerideki hemostaz dersinde, tromboz ve kanama bozukluklarıyla b
 Kanamanın adı, kanın biriktiği yere göre değişir. Hematom, doku içinde lokalize kan birikimidir; boyutu küçük bir morarmadan büyük bir retroperitoneal hematoma kadar değişir. Vücut boşluklarına kanamalarda efüzyonlardaki hidro öneki yerine hemo öneki kullanılır: plevral boşluğa kanama hemotoraks, perikard boşluğuna kanama hemoperikardiyum, periton boşluğuna kanama hemoperiton, eklem içine kanama ise hemartrozdur. Yani hidrotoraks plevral boşlukta sıvı, hemotoraks plevral boşlukta kandır. Büyük kanamalarda damar dışına çıkan eritrositler yıkılır ve hemoglobin yıkımı sonucu sarılık da eşlik edebilir.
 
 @@ Peteşi, purpura ve ekimoz
-Deri ve yüzeylerdeki küçük kanamalar boyutlarına göre adlandırılır. En küçükleri peteşilerdir. Burası önemli, bu bilgi çıkmış sorularda en sık sorulan bilgidir: deri, mukoza ve seröz yüzeylerde görülen, bir ila 2 milimetre çaplı, nokta tarzındaki küçük kanama odaklarına peteşi denir. Peteşinin nedenleri trombositopeni, yani trombosit sayısının azalması, trombosit fonksiyon bozukluğu ve C vitamini eksikliği, yani iskorbüttür; iskorbütte damar duvarı kırılganlaşır. Yani peteşi gördüğünüzde önce trombosit sayı ve işlevini düşünün.
+Deri ve yüzeylerdeki küçük kanamalar boyutlarına göre adlandırılır. En küçükleri peteşilerdir. Burası önemli, bu bilgi çıkmış sorularda en sık sorulan bilgidir: deri, mukoza ve seröz yüzeylerde görülen, 1 ila 2 milimetre çaplı, nokta tarzındaki küçük kanama odaklarına peteşi denir. Peteşinin nedenleri trombositopeni, yani trombosit sayısının azalması, trombosit fonksiyon bozukluğu ve C vitamini eksikliği, yani iskorbüttür; iskorbütte damar duvarı kırılganlaşır. Yani peteşi gördüğünüzde önce trombosit sayı ve işlevini düşünün.
 
-Peteşiden biraz daha büyük, üç ila 5 milimetre çaplı kanama odaklarına purpura denir.
-Burası önemli, bu da çıkmış sorularda tekrar tekrar soruldu: deri ve mukozalardaki üç ila 5 milimetre çaplı kanamalar purpuradır.
+Peteşiden biraz daha büyük, 3 ila 5 milimetre çaplı kanama odaklarına purpura denir.
+Burası önemli, bu da çıkmış sorularda tekrar tekrar soruldu: deri ve mukozalardaki 3 ila 5 milimetre çaplı kanamalar purpuradır.
 Purpura peteşinin tüm nedenleriyle oluşabilir; bunlara ek olarak vaskülit, artmış vasküler kırılganlık ve travma da purpura yapar.
-Dikkat edin, peteşi ile purpura en sık karıştırılan iki terimdir; bir ila 2 milimetre peteşi, üç ila 5 milimetre purpuradır.
+Dikkat edin, peteşi ile purpura en sık karıştırılan 2 terimdir; 1 ila 2 milimetre peteşi, 3 ila 5 milimetre purpuradır.
 
-Ders kitabındaki şekil iki farklı kanamayı yan yana gösterir.
-1. panelde kolon mukozasında, trombositopeninin sonucu olarak çok sayıda noktasal peteşiyal kanama görülür; bu, peteşilerin yalnız deride değil mukozalarda da oluştuğunu gösterir.
-2. panelde ise beyin dokusunu yerinden iten büyük, ölümcül bir intraserebral kanama vardır.
+Ders kitabındaki şekil 2 farklı kanamayı yan yana gösterir.
+Birinci panelde kolon mukozasında, trombositopeninin sonucu olarak çok sayıda noktasal peteşiyal kanama görülür; bu, peteşilerin yalnız deride değil mukozalarda da oluştuğunu gösterir.
+İkinci panelde ise beyin dokusunu yerinden iten büyük, ölümcül bir intraserebral kanama vardır.
 Çok sayıda peteşi kendi başına öldürücü değilken, beyin içindeki tek bir kanama yaşamı sonlandırabilir.
 
 Boyut merdiveninin bir üst basamağı ekimozdur.
-Ekimoz, bir ila iki santimetrelik deri altı hematomlarıdır; halk arasında morarma olarak bilinir.
+Ekimoz, 1 ila 2 santimetrelik deri altı hematomlarıdır; halk arasında morarma olarak bilinir.
 Burası önemli, bu bilgi çıkmış sorularda soruldu: birkaç santimetre çaplı subkutan, yani deri altı kanamalara ekimoz denir.
 Ekimozun rengi zaman içinde değişir ve her renk hemoglobin yıkımının bir basamağına karşılık gelir.
 Taze ekimozda hemoglobin kırmızı mavi renk verir.
 Ardından hemoglobin yıkılır ve bilirubin mavi yeşil renk verir.
 En sonda demir hemosiderin olarak depolanır ve altın kahverengi renk ortaya çıkar.
 Yani renk değişimi mor, yeşil ve sarı şeklinde seyreder.
-Boyut merdivenini 1 kez daha sıralayalım: peteşi bir ila 2 milimetre, purpura üç ila 5 milimetre, ekimoz bir ila 2 santimetre, daha büyüğü hematom.
+Boyut merdivenini 1 kez daha sıralayalım: peteşi 1 ila 2 milimetre, purpura 3 ila 5 milimetre, ekimoz 1 ila 2 santimetre, daha büyüğü hematom.
 
 @@ Kanama miktarı, yeri ve demir dengesi
-Kanamanın klinik sonucunu belirleyen ilk etken miktar ve hızdır. Hızlı kan kaybında kan hacminin yüzde yirmisine kadarı sağlıklı bir birey tarafından tolere edilebilir. Daha fazla kayıpta ise hipovolemik şok ve ölüm riski ortaya çıkar. Burası önemli, %20 eşiği sınav spotudur. Aynı miktar kan uzun sürede kaybedilirse vücut uyum sağlayabilir, kısa sürede kaybedilirse şok gelişir.
+Kanamanın klinik sonucunu belirleyen ilk etken miktar ve hızdır. Hızlı kan kaybında kan hacminin %20'sine kadarı sağlıklı bir birey tarafından tolere edilebilir. Daha fazla kayıpta ise hipovolemik şok ve ölüm riski ortaya çıkar. Burası önemli, %20 eşiği sınav spotudur. Aynı miktar kan uzun sürede kaybedilirse vücut uyum sağlayabilir, kısa sürede kaybedilirse şok gelişir.
 
 Kanamanın sonucunu yalnız miktar değil, yeri de belirler.
 Küçük deri altı kanamalar klinik olarak önemsizdir; buna karşılık küçük bir intrakraniyal kanama, kapalı kafatası içinde basınç yarattığı için ölümcül olabilir.

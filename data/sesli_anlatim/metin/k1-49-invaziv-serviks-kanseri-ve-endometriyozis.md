@@ -6,22 +6,22 @@ Servisit, serviksin yani rahim ağzının inflamatuvar durumudur. Patolojik olar
 Servisit nedenine göre iki alt sınıfa ayrılır: enfeksiyonlu servisit ve enfeksiyonlu olmayan servisit.
 Ancak pratikte bu ayrımı kesin olarak yapmak zordur.
 Bunun nedeni vajinanın normal florasıdır.
-Florada tesadüfi olarak aerob ve anaerob bakteriler, streptokok, stafilokok ve enterokok türleri, Eşerişya koli ve Kandida türleri bulunabilir.
+Florada tesadüfi olarak aerob ve anaerob bakteriler, streptokok, stafilokok ve enterokok türleri, Escherichia coli ve Candida türleri bulunabilir.
 Bu organizmalar sağlıklı kadında da bulunduğu için servikal örnekte üremeleri, inflamasyonun nedeninin onlar olduğunu kanıtlamaz.
 Yani kültürde üreyen bakteri gerçek bir etken mi, yoksa yalnızca bir flora elemanı mı, sorusu çoğu zaman yanıtsız kalır.
 
 @@ Servisitin cinsel yolla bulaşan etkenleri
-Enfeksiyonlu servisitin önemli bir bölümü cinsel yolla bulaşan etkenlerle oluşur ve flora elemanlarının aksine bu patojenlerin saptanması klinik olarak anlamlıdır. Önemli patojenler şunlardır: zorunlu hücre içi bir bakteri olan Chlamydia trachomatis, mikoplazma grubundan Üreaplazma üreolitikum, kamçılı bir protozoon olan Trikomonas vajinalis, gram negatif diplokok olan gonokok yani Neisseria gonorrhoeae, genital herpesin etkeni olan herpes simpleks virüs Tip 2 ve bazı HPV tipleri. Gördüğünüz gibi liste bakteri, protozoon ve virüsü bir arada içerir; servisit tek bir mikroorganizma grubuna özgü değildir.
+Enfeksiyonlu servisitin önemli bir bölümü cinsel yolla bulaşan etkenlerle oluşur ve flora elemanlarının aksine bu patojenlerin saptanması klinik olarak anlamlıdır. Önemli patojenler şunlardır: zorunlu hücre içi bir bakteri olan Chlamydia trachomatis, mikoplazma grubundan Ureaplasma urealyticum, kamçılı bir protozoon olan Trichomonas vaginalis, gram negatif diplokok olan gonokok yani Neisseria gonorrhoeae, genital herpesin etkeni olan herpes simpleks virüs Tip 2 ve bazı HPV tipleri. Gördüğünüz gibi liste bakteri, protozoon ve virüsü bir arada içerir; servisit tek bir mikroorganizma grubuna özgü değildir.
 
-Burası önemli: en yaygın servisit etkeni Klamidya trakomatistir.
+Burası önemli: en yaygın servisit etkeni Chlamydia trachomatis'tir.
 Cinsel yolla bulaşan hastalık kliniklerinde servisit olgularının yüzde kırkına kadarından sorumludur.
-Klamidya enfeksiyonu sıklıkla asemptomatik seyreder; hasta yakınma duymadığı için tanı gecikir ve bulaş zinciri sürer.
+Chlamydia enfeksiyonu sıklıkla asemptomatik seyreder; hasta yakınma duymadığı için tanı gecikir ve bulaş zinciri sürer.
 Tedavi edilmeyen enfeksiyon serviksten uterusa, tüplere ve overlere ilerleyebilir; bu nedenle pelvik inflamatuvar hastalık riski taşır.
 Dikkat edin, yakınma olmaması enfeksiyonun zararsız olduğu anlamına gelmez.
 
 Herpes simpleks virüs Tip 2, yani genital herpesin etkeni, özellikle doğum açısından önem taşır.
 Doğum kanalından geçiş sırasında anne bebek bulaşması olur ve bağışıklık sistemi olgunlaşmamış yenidoğanda ağır, bazen ölümcül sistemik herpes gelişebilir.
-Trikomonas vajinalis, gonokok ve HPV ise hem servisitte hem de üst genital yol enfeksiyonlarında rol oynar.
+Trichomonas vaginalis, gonokok ve HPV ise hem servisitte hem de üst genital yol enfeksiyonlarında rol oynar.
 Böylece servisit iki yönde komplikasyon doğurabilir: yenidoğana bulaş ve üst genital yola yayılım.
 
 @@ Servisitte klinik, tanı ve tedavi
@@ -29,7 +29,7 @@ Servisitin klinik tablosu büyük ölçüde akıntı üzerinden tanınır. İrin
 
 Tanısal yaklaşımda önce spekulum muayenesi yapılır; serviks doğrudan görülür, akıntının kaynağı ve niteliği değerlendirilir.
 Ardından servikal ve vajinal akıntı incelenir.
-Laboratuvarda vajinal sıvıda nükleik asit amplifikasyon testleri ile Chlamydia trachomatis, gonokok ve Trikomonas vajinalis aranır.
+Laboratuvarda vajinal sıvıda nükleik asit amplifikasyon testleri ile Chlamydia trachomatis, gonokok ve Trichomonas vaginalis aranır.
 Bu testlerin amacı patojeni tanımlamak ve hedefe yönelik tedavi vermektir.
 Tedavide ise çoğunlukla sonuç beklenmeden ampirik antibiyotik başlanır ve rejimler en önemli iki bakteriyel etken olan Chlamydia trachomatis ile gonokoka etkili olacak şekilde seçilir.
 
@@ -65,7 +65,7 @@ Skuamöz metaplazi ya da inflamasyon endoservikal bezlerin ağzını kapatabilir
 Kronik servisitte ve transformasyon bölgesinde sık görülen bu kistler tamamen benigndir, prekanseröz ya da malign potansiyel taşımaz.
 
 @@ HPV: serviks kanserinin ana etkeni
-Transformasyon bölgesini hedef alan virüs İnsan papilloma virüsü (HPV) (HPV), yani ha pe vedir. Burası önemli: serviks kanseri gelişimiyle ilişkili viral patojen ha pe vedir; sitomegalovirüs, Koksaki virüs, be ka virüs ya da simian virüs kırk ile karıştırmayın. Yüksek riskli HPV serviks kanserinde ana etkendir. HPV bir DNA virüsüdür ve genotiplerine göre iki gruba ayrılır: yüksek onkojenik riskli tipler ve düşük onkojenik riskli tipler. Aynı virüs ailesinin bir kısmı kansere yol açarken diğer kısmının yol açmaması, ilerleyen bölümlerde viral proteinler düzeyinde açıklanacak.
+Transformasyon bölgesini hedef alan virüs İnsan papilloma virüsü (HPV), yani HPV'dir. Burası önemli: serviks kanseri gelişimiyle ilişkili viral patojen HPV'dir; sitomegalovirüs, Coxsackie virüs, BK virüs ya da simian virüs 40 ile karıştırmayın. Yüksek riskli HPV serviks kanserinde ana etkendir. HPV bir DNA virüsüdür ve genotiplerine göre iki gruba ayrılır: yüksek onkojenik riskli tipler ve düşük onkojenik riskli tipler. Aynı virüs ailesinin bir kısmı kansere yol açarken diğer kısmının yol açmaması, ilerleyen bölümlerde viral proteinler düzeyinde açıklanacak.
 
 Yüksek riskli HPV yalnız serviksle sınırlı değildir.
 Vajina, vulva, penis, anüs, tonsil ve diğer orofaringeal bölgelerde de skuamöz karsinom gelişiminde rol oynar.
@@ -82,69 +82,69 @@ HPV cinsel temasla bulaştığı için risk faktörlerinin bir bölümü maruziy
 
 İki grubun mantığı farklıdır: ilk grup virüsle karşılaşmayı kolaylaştırır, sigara ve immün yetmezlik ise karşılaşmadan sonra ilerlemeyi kolaylaştırır.
 
-@@ HPV onkoproteinleri: E altı ve E yedi
-HPV virüsünün kansere yol açma yeteneği, virüsün kendi çoğalma ihtiyacından doğar. HPV olgunlaşmamış skuamöz hücreleri enfekte eder, ama viral replikasyon olgunlaşan skuamöz hücrelerde gerçekleşir. Sorun şudur: olgunlaşan skuamöz hücreler normalde ge bir fazında durur, artık bölünmez. Oysa virüsün kendi DNA'sını çoğaltabilmesi için hücrenin DNA sentez makinesinin çalışması gerekir. Bu yüzden HPV bu büyüme durmasını engeller; bu engelleme virüsün replikasyonu ve yayılımı için gereklidir. Virüs açısından amaç yalnızca çoğalmaktır, ama hücre döngüsü frenlerinin kalkması yan etki olarak karsinogeneze zemin hazırlar. Bu işi yapan viral proteinler E altı ve E yedidir.
+@@ HPV onkoproteinleri: E6 ve E7
+HPV virüsünün kansere yol açma yeteneği, virüsün kendi çoğalma ihtiyacından doğar. HPV olgunlaşmamış skuamöz hücreleri enfekte eder, ama viral replikasyon olgunlaşan skuamöz hücrelerde gerçekleşir. Sorun şudur: olgunlaşan skuamöz hücreler normalde G1 fazında durur, artık bölünmez. Oysa virüsün kendi DNA'sını çoğaltabilmesi için hücrenin DNA sentez makinesinin çalışması gerekir. Bu yüzden HPV bu büyüme durmasını engeller; bu engelleme virüsün replikasyonu ve yayılımı için gereklidir. Virüs açısından amaç yalnızca çoğalmaktır, ama hücre döngüsü frenlerinin kalkması yan etki olarak karsinogeneze zemin hazırlar. Bu işi yapan viral proteinler E6 ve E7'dir.
 
-Burası önemli: E altı proteini tümör baskılayıcı pe elli üçe bağlanır ve pe elli üçün yıkımına aracılık eder.
+Burası önemli: E6 proteini tümör baskılayıcı p53'e bağlanır ve p53'ün yıkımına aracılık eder.
 Ayrıca telomeraz ekspresyonunu artırır.
-Sonuçta pe elli üç yokluğunda DNA hasarlı hücre apoptoza gidemez, yani apoptoz inhibe olur; telomeraz artışıyla da hücre ömrü uzar ve hücre ölümsüzleşmeye doğru ilerler.
+Sonuçta p53 yokluğunda DNA hasarlı hücre apoptoza gidemez, yani apoptoz inhibe olur; telomeraz artışıyla da hücre ömrü uzar ve hücre ölümsüzleşmeye doğru ilerler.
 
-Burası önemli: E yedi proteini ise er be proteinine, yani retinoblastom tümör baskılayıcı proteinine bağlanır.
-Er be normalde E iki ef transkripsiyon faktörlerini tutarak hücre döngüsüne fren yapar.
-E yedi, er be'nin tuttuğu E iki ef faktörlerini serbest bırakır; böylece ge bir fazından es fazına geçiş hızlanır ve hücre döngüsü kontrolü bozulur.
-Dikkat edin, eşleşme sınavın klasiğidir ve sık ters sorulur: E altı pe elli üçü, E yedi er be'yi hedefler.
-Pe on altı, pe yirmi yedi ya da siklin de bir bu onkoproteinlerin hedefi olarak verilmez.
-İkisi birlikte düşünüldüğünde tablo tamamlanır: E yedi hücreyi bölünmeye iterken E altı, bu sırada oluşan hasarlı hücrenin apoptozla ortadan kaldırılmasını önler.
+Burası önemli: E7 proteini ise RB proteinine, yani retinoblastom tümör baskılayıcı proteinine bağlanır.
+RB normalde E2F transkripsiyon faktörlerini tutarak hücre döngüsüne fren yapar.
+E7, RB'nin tuttuğu E2F faktörlerini serbest bırakır; böylece G1 fazından S fazına geçiş hızlanır ve hücre döngüsü kontrolü bozulur.
+Dikkat edin, eşleşme sınavın klasiğidir ve sık ters sorulur: E6 p53'ü, E7 RB'yi hedefler.
+p16, p27 ya da siklin D1 bu onkoproteinlerin hedefi olarak verilmez.
+İkisi birlikte düşünüldüğünde tablo tamamlanır: E7 hücreyi bölünmeye iterken E6, bu sırada oluşan hasarlı hücrenin apoptozla ortadan kaldırılmasını önler.
 
 @@ Yüksek ve düşük riskli tipler, entegrasyon
-Burası önemli, çıkmış sorularda defalarca soruldu: malign transformasyon açısından yüksek risk grubundaki tipler HPV on altı ve on sekizdir; serviks kanseriyle en yakın ilişkili tip on altıdır. Bu iki yüksek riskli tip, servikal intraepiteliyal neoplazi ve servikal karsinomların yaklaşık yüzde yetmişinden sorumludur. Sınavdaki tuzak, on altı ve on sekizi düşük riskli diye sunmaktır; bu yanlıştır. Ayırt edici özellikleri, viral DNA'nın konak genomuna entegre olma eğilimidir ve bu entegrasyon progresyonla ilişkilidir.
+Burası önemli, çıkmış sorularda defalarca soruldu: malign transformasyon açısından yüksek risk grubundaki tipler HPV 16 ve 18'dir; serviks kanseriyle en yakın ilişkili tip 16'dır. Bu iki yüksek riskli tip, servikal intraepiteliyal neoplazi ve servikal karsinomların yaklaşık %70'inden sorumludur. Sınavdaki tuzak, 16 ve 18'i düşük riskli diye sunmaktır; bu yanlıştır. Ayırt edici özellikleri, viral DNA'nın konak genomuna entegre olma eğilimidir ve bu entegrasyon progresyonla ilişkilidir.
 
 Ders şekli HPV maruziyetinin olası sonuçlarını Amerika Birleşik Devletleri verileriyle daralan bir piramit olarak gösterir.
 Cinsel aktiviteyle başlayan maruziyet yılda milyonlarca kişiyi etkiler; sonucu immün durum, genetik yatkınlık ve diğer faktörler belirler.
-Düşük riskli tipler, yani altı ve on bir, epizomal enfeksiyon yapar ve yılda yüz binlerce kondilomla sonuçlanır.
-Yüksek riskli tipler, on altı, on sekiz ve diğerleri, önce yılda yaklaşık bir milyon skuamöz intraepitelyal lezyona yol açar; persistan enfeksiyonla yılda yaklaşık elli bin yüksek dereceli lezyona, viral entegrasyonla da yılda yaklaşık on dört bin invaziv kansere ilerler; ölüm yılda yaklaşık dört bin iki yüzdür.
+Düşük riskli tipler, yani 6 ve 11, epizomal enfeksiyon yapar ve yılda yüz binlerce kondilomla sonuçlanır.
+Yüksek riskli tipler, 16, 18 ve diğerleri, önce yılda yaklaşık 1 milyon skuamöz intraepitelyal lezyona yol açar; persistan enfeksiyonla yılda yaklaşık 50.000 yüksek dereceli lezyona, viral entegrasyonla da yılda yaklaşık 14.000 invaziv kansere ilerler; ölüm yılda yaklaşık 4200'dür.
 İlerleme virüsün entegrasyonu ve ek mutasyonların kazanılmasıyla ilişkilidir.
 
-Burası önemli: düşük risk grubundaki tipler HPV altı ve on birdir.
+Burası önemli: düşük risk grubundaki tipler HPV 6 ve 11'dir.
 Bunlar kondilomlarla, yani anogenital siğillerle ilişkilidir.
-Sınavda HPV altı ve on birin yüksek onkojenik riskli olduğu ve karsinoma dönüştüğü ifadesi yanlış önerme olarak sorulmuştur.
+Sınavda HPV 6 ve 11'in yüksek onkojenik riskli olduğu ve karsinoma dönüştüğü ifadesi yanlış önerme olarak sorulmuştur.
 Neden kanser yapmazlar?
-Bu tiplerde E yedi er be'ye düşük afiniteyle bağlanır.
-E altı pe elli üçe bağlanamaz; bunun yerine Noç sinyal yoluna müdahale eder.
+Bu tiplerde E7 RB'ye düşük afiniteyle bağlanır.
+E6 p53'e bağlanamaz; bunun yerine Notch sinyal yoluna müdahale eder.
 Viral DNA ise episomal kalır, konak genomuna entegre olmaz.
-Noç sinyal yolağı, komşu hücreler arasında doğrudan temasla, yani jukstakrin sinyallemeyle iletişim sağlayan, son derece korunmuş bir yolaktır; embriyonik gelişimde, doku yenilenmesinde ve homeostazda hücre kaderini, yani hücrenin farklılaşacağına, çoğalacağına ya da apoptoza gideceğine karar verilmesini belirler.
+Notch sinyal yolağı, komşu hücreler arasında doğrudan temasla, yani jukstakrin sinyallemeyle iletişim sağlayan, son derece korunmuş bir yolaktır; embriyonik gelişimde, doku yenilenmesinde ve homeostazda hücre kaderini, yani hücrenin farklılaşacağına, çoğalacağına ya da apoptoza gideceğine karar verilmesini belirler.
 
 Yüksek riskli tiplerde entegrasyonun neden progresyonla ilişkili olduğuna bakalım.
-Viral DNA konak genomuna girerken E altı ve E yediyi negatif düzenleyen HPV genini bozar; bu gen standart kaynaklarda E iki olarak adlandırılır.
-Fren kalkınca E altı ve E yedi ekspresyonu artar.
+Viral DNA konak genomuna girerken E6 ve E7'yi negatif düzenleyen HPV genini bozar; bu gen standart kaynaklarda E2 olarak adlandırılır.
+Fren kalkınca E6 ve E7 ekspresyonu artar.
 Ayrıca genomik instabilite artar ve ek proonkogenik mutasyonlar birikir.
 
 Bu mekanizmalar güçlü olsa da HPV enfeksiyonu çok yaygındır; üreme çağında birçok kadın birçok tiple enfekte olur, ama kanser az sayıda bireyde gelişir.
 Belirleyici ek faktörler sigara gibi kanserojenler ve bağışıklık sisteminin durumudur.
 
 @@ Skuamöz intraepitelyal lezyon ve servikal intraepiteliyal neoplazi
-Kalıcı HPV enfeksiyonunun epitelde yaptığı değişiklikler iki terimle anılır. Skuamöz intraepitelyal lezyon, kısaca sil, HPV ilişkili prekanseröz epitelyal değişikliktir; epitel içinde sınırlıdır, bazal membranı aşmaz. Servikal intraepiteliyal neoplazi, kısaca ce i ne ise aynı sürecin histolojik sınıflamasıdır. Yani bunlar iki ayrı hastalık değil, aynı sürecin iki adıdır. Burası önemli: sil insidansı yaklaşık 30 yaşında, invaziv karsinom ise yaklaşık 45 yaşında zirve yapar. Aradaki uzun süre, taramanın öncü lezyonu kanser gelişmeden yakalayabilmesine olanak verir.
+Kalıcı HPV enfeksiyonunun epitelde yaptığı değişiklikler iki terimle anılır. Skuamöz intraepitelyal lezyon, kısaca SIL, HPV ilişkili prekanseröz epitelyal değişikliktir; epitel içinde sınırlıdır, bazal membranı aşmaz. Servikal intraepiteliyal neoplazi, kısaca CIN ise aynı sürecin histolojik sınıflamasıdır. Yani bunlar iki ayrı hastalık değil, aynı sürecin iki adıdır. Burası önemli: SIL insidansı yaklaşık 30 yaşında, invaziv karsinom ise yaklaşık 45 yaşında zirve yapar. Aradaki uzun süre, taramanın öncü lezyonu kanser gelişmeden yakalayabilmesine olanak verir.
 
-Klinik yönetimde iki basamaklı sınıflama kullanılır: düşük dereceli skuamöz intraepitelyal lezyon, kısaca el sil, ve yüksek dereceli skuamöz intraepitelyal lezyon, kısaca ha sil.
-Histolojide ise üç basamak vardır: ce i ne bir, ce i ne iki ve ce i ne üç.
-Burası önemli: el sil, ce i ne bire karşılık gelir; ha sil ise ce i ne iki ve ce i ne üçü kapsar.
-Çıkmış soruda 44 yaşında, pap testi sonucu el sil olarak raporlanan bir hastanın tanı karşılığı soruldu; doğru yanıt yalnızca ce i ne birdir.
-Ce i ne iki, ce i ne üç ya da skuamöz hücreli karsinom el sil kapsamına girmez.
+Klinik yönetimde iki basamaklı sınıflama kullanılır: düşük dereceli skuamöz intraepitelyal lezyon, kısaca LSIL, ve yüksek dereceli skuamöz intraepitelyal lezyon, kısaca HSIL.
+Histolojide ise üç basamak vardır: CIN 1, CIN 2 ve CIN 3.
+Burası önemli: LSIL, CIN 1'e karşılık gelir; HSIL ise CIN 2 ve CIN 3'ü kapsar.
+Çıkmış soruda 44 yaşında, pap testi sonucu LSIL olarak raporlanan bir hastanın tanı karşılığı soruldu; doğru yanıt yalnızca CIN 1'dir.
+CIN 2, CIN 3 ya da skuamöz hücreli karsinom LSIL kapsamına girmez.
 
-El sil, ha sil'den daha sıktır; çoğu el sil kendiliğinden geriler, küçük bir kısmı ha sil'e ilerler.
+LSIL, HSIL'den daha sıktır; çoğu LSIL kendiliğinden geriler, küçük bir kısmı HSIL'e ilerler.
 Biyolojik olarak viral replikasyon yüksektir ve hücre büyümesinde yalnız hafif değişiklikler vardır.
-Bu nedenle el sil prekanseröz olarak kabul edilmez.
-Ha sil'de ise tablo terstir: hücre proliferasyonu belirgin artmış, epitel olgunlaşması durmuştur ve viral replikasyon daha düşüktür, çünkü virüsün çoğalabileceği olgun hücre azalmıştır.
-Ha sil'de karsinom riski yüksektir, ancak zorunlu değildir.
+Bu nedenle LSIL prekanseröz olarak kabul edilmez.
+HSIL'de ise tablo terstir: hücre proliferasyonu belirgin artmış, epitel olgunlaşması durmuştur ve viral replikasyon daha düşüktür, çünkü virüsün çoğalabileceği olgun hücre azalmıştır.
+HSIL'de karsinom riski yüksektir, ancak zorunlu değildir.
 
-Ha sil'lerin çoğu el sil'den gelişir, ama yaklaşık %20'si önce el sil olmadan, de novo gelişir.
-Yani daha önce el sil saptanmamış olması ha sil gelişmeyeceği anlamına gelmez.
+HSIL'lerin çoğu LSIL'den gelişir, ama yaklaşık %20'si önce LSIL olmadan, de novo gelişir.
+Yani daha önce LSIL saptanmamış olması HSIL gelişmeyeceği anlamına gelmez.
 İlerleme riskini sigara içimi ve immün yetmezlik artırır; immün gözetim, yani bağışıklık sisteminin anormal hücreleri tanıyıp ortadan kaldırması ise ilerlemenin baskılanmasında önemlidir.
 
 Burası önemli, doğal seyir tablosu sınavda en çok sorulan verilerdendir.
-El sil olguların %60'ı geriler, %30'u persiste kalır, %10'u ha sil'e ilerler.
-Ha sil'de ise %30'u geriler, %60'ı persiste kalır, %10'u karsinoma ilerler ve bu ilerleme iki ile 10 yıl içinde gerçekleşir.
-Dikkat edin, iki satırda gerileme ve persistans oranları yer değiştirir; ayrıca el sil'in ilerleyen %10'u karsinoma değil, ha sil'e ilerler.
+LSIL olguların %60'ı geriler, %30'u persiste kalır, %10'u HSIL'e ilerler.
+HSIL'de ise %30'u geriler, %60'ı persiste kalır, %10'u karsinoma ilerler ve bu ilerleme 2 ile 10 yıl içinde gerçekleşir.
+Dikkat edin, iki satırda gerileme ve persistans oranları yer değiştirir; ayrıca LSIL'in ilerleyen %10'u karsinoma değil, HSIL'e ilerler.
 
 @@ Pap testi ve HPV DNA testi
 Burası önemli: serviksin prekanseröz lezyonları, gözle görülür bir anormalliğe ulaşmadan çok önce sitolojik olarak saptanabilir. Papanicolaou testinde, kısaca pap testinde, transformasyon bölgesinden hücreler kazınır ve mikroskopik olarak incelenir. Bu bölgenin seçilmesi, HPV virüsüne en duyarlı ve tümörlerin en sık geliştiği alan olmasındandır. Pap testi en başarılı kanser tarama testlerinden biridir.
@@ -160,49 +160,49 @@ Burası önemli: test özellikle 30 yaş ve üzerindeki kadınlarda değerlidir.
 30 yaş altında ise HPV enfeksiyon insidansı yüksektir, çoğu enfeksiyon geçicidir ve testin prediktif değeri düşüktür; pozitif sonuç çoğunlukla kendiliğinden geçecek bir enfeksiyonu gösterir.
 
 @@ HPV aşılaması
-Tarama öncü lezyonu yakalarken aşılama enfeksiyonun kendisini önlemeyi hedefler. Yüksek riskli HPV tiplerine karşı aşılama, servikal kanserden korunmada ana basamaktır. Burası önemli: aşı on bir, 12 yaşındaki kız ve erkek çocuklara, ayrıca yirmi altı yaşına kadar genç erkek ve kadınlara önerilir. Amaç, cinsel aktivite başlamadan, yani virüsle karşılaşmadan önce bağışıklık kazandırmaktır.
+Tarama öncü lezyonu yakalarken aşılama enfeksiyonun kendisini önlemeyi hedefler. Yüksek riskli HPV tiplerine karşı aşılama, servikal kanserden korunmada ana basamaktır. Burası önemli: aşı 11, 12 yaşındaki kız ve erkek çocuklara, ayrıca 26 yaşına kadar genç erkek ve kadınlara önerilir. Amaç, cinsel aktivite başlamadan, yani virüsle karşılaşmadan önce bağışıklık kazandırmaktır.
 
 Erkeklerin de aşılanmasının iki gerekçesi vardır.
 Erkekler HPV virüsünün kadınlara bulaşmasında rol oynar; çok partnerli eş risk faktörü de bu zincirin yansımasıdır.
 Ayrıca erkeklerde HPV ilişkili anal kanser ve orofaringeal kanser gelişebilir.
 Erkek aşılaması böylece toplum düzeyinde enfeksiyon yükünü azaltır.
 
-Dört değerlikli aşı HPV altı, on bir, on altı ve on sekizi içerir; böylece hem kondilom yapan düşük riskli tipleri hem de yüksek riskli tipleri kapsar.
-Dokuz değerlikli aşı bunlara ek yüksek riskli genotipleri içerir; standart kaynaklarda bu ek tipler otuz bir, otuz üç, kırk beş, elli iki ve elli sekiz olarak verilir.
-Bu yüzden sınavda tip otuz bir ya da kırk beşin düşük riskli olduğunu düşünmeyin; düşük riskli olan tip altıdır.
+4 değerlikli aşı HPV 6, 11, 16 ve 18'i içerir; böylece hem kondilom yapan düşük riskli tipleri hem de yüksek riskli tipleri kapsar.
+9 değerlikli aşı bunlara ek yüksek riskli genotipleri içerir; standart kaynaklarda bu ek tipler 31, 33, 45, 52 ve 58 olarak verilir.
+Bu yüzden sınavda tip 31 ya da 45'in düşük riskli olduğunu düşünmeyin; düşük riskli olan tip 6'dır.
 Aşılar ilgili HPV enfeksiyonlarını önlemede yüksek etkinlik gösterir; genital siğil ve serviks kanseri sıklığını azaltması beklenir.
-Koruma süresi en az on yıldır ve uzun dönem takip sürmektedir.
+Koruma süresi en az 10 yıldır ve uzun dönem takip sürmektedir.
 
 Burası önemli: HPV aşıları servikal kanser taramasının yerine geçmez.
 Çünkü birçok kadın aşı öncesinde enfektedir ve aşılar tüm onkojenik HPV genotiplerini kapsamaz.
 Aşılanan kadında taramanın bırakılabileceği klasik bir yanlıştır.
 Strateji pap testi, HPV testi ve aşılamanın birlikte uygulanmasıdır.
 
-@@ Sil histolojisi ve sitolojisi
-El sil, yani ce i ne birde displazi skuamöz epitelin alt üçte birinde sınırlıdır ve yüzeysel katmanlarda koilositik değişiklik görülür. Burası önemli: koilositoz, hücre çekirdeğinin etrafında geniş bir boşluk, yani halo oluşması ve çekirdekte atipiyle karakterizedir; HPV enfeksiyonunu gösteren mikroskobik bulgudur. Yüzeyde görülmesi, viral replikasyonun olgunlaşan hücrelerde olmasıyla uyumludur.
+@@ SIL histolojisi ve sitolojisi
+LSIL, yani CIN 1'de displazi skuamöz epitelin alt üçte birinde sınırlıdır ve yüzeysel katmanlarda koilositik değişiklik görülür. Burası önemli: koilositoz, hücre çekirdeğinin etrafında geniş bir boşluk, yani halo oluşması ve çekirdekte atipiyle karakterizedir; HPV enfeksiyonunu gösteren mikroskobik bulgudur. Yüzeyde görülmesi, viral replikasyonun olgunlaşan hücrelerde olmasıyla uyumludur.
 
-Ha sil'de olgunlaşmamış skuamöz hücreler epitelde daha yukarıya uzanır.
-Ce i ne ikide epitelin alt üçte ikisi, ce i ne üçte ise epitelin tam kalınlığı tutulur.
-Ders şekli bu spektrumu yan yana gösterir: sağlıklı epitelde düzenli olgunlaşma, el sil'de yüzeyde koilositotik atipi, ce i ne ikide epitelin tüm katmanlarında ilerleyici atipi, ce i ne üçte ise yaygın atipi ve olgunlaşma kaybı.
+HSIL'de olgunlaşmamış skuamöz hücreler epitelde daha yukarıya uzanır.
+CIN 2'de epitelin alt üçte ikisi, CIN 3'te ise epitelin tam kalınlığı tutulur.
+Ders şekli bu spektrumu yan yana gösterir: sağlıklı epitelde düzenli olgunlaşma, LSIL'de yüzeyde koilositotik atipi, CIN 2'de epitelin tüm katmanlarında ilerleyici atipi, CIN 3'te ise yaygın atipi ve olgunlaşma kaybı.
 
-Ce i ne iki ve üçte ortak hücresel bulgular hücre ve çekirdek boyutunda varyasyon, nükleer kromatin heterojenliği ve bazal tabakanın üzerinde de görülen, atipik olabilen mitozlardır.
-Ce i ne üçte ayrıca hücrelerin yönlenmesi, yani polaritesi bozulur ve anormal mitozlar sıktır.
-Burası önemli: ce i ne üçte koilositik değişiklik genellikle yoktur, çünkü olgunlaşma durmuştur.
+CIN 2 ve 3'te ortak hücresel bulgular hücre ve çekirdek boyutunda varyasyon, nükleer kromatin heterojenliği ve bazal tabakanın üzerinde de görülen, atipik olabilen mitozlardır.
+CIN 3'te ayrıca hücrelerin yönlenmesi, yani polaritesi bozulur ve anormal mitozlar sıktır.
+Burası önemli: CIN 3'te koilositik değişiklik genellikle yoktur, çünkü olgunlaşma durmuştur.
 Koilositoz HPV bulgusudur ama en ağır intraepitelyal lezyonda genellikle görülmez.
-Ce i ne üçün sitolojik karşılığı anormal nükleer özelliklerdir.
+CIN 3'ün sitolojik karşılığı anormal nükleer özelliklerdir.
 
-Pap preparatlarını gösteren şekilde sağlıklı yüzeyel hücrelerin geniş, kırmızı ya da mavi boyanan sitoplazmalı ve küçük çekirdekli olduğu, el sil'de sitoplazmanın hâlâ geniş ama çekirdeğin büyümüş olduğu, ha sil'de ise sitoplazmanın belirgin azaldığı görülür.
+Pap preparatlarını gösteren şekilde sağlıklı yüzeyel hücrelerin geniş, kırmızı ya da mavi boyanan sitoplazmalı ve küçük çekirdekli olduğu, LSIL'de sitoplazmanın hâlâ geniş ama çekirdeğin büyümüş olduğu, HSIL'de ise sitoplazmanın belirgin azaldığı görülür.
 Ana mesaj şudur: lezyonun derecesi arttıkça sitoplazma azalır ve çekirdek sitoplazma oranı artar.
 Bu da lezyon yüzeyinde hücresel farklılaşmanın ilerleyici kaybını yansıtır.
 
-@@ Sil tanı ve tedavi
-Sil genellikle asemptomatiktir. Tanı basamakları şöyledir: önce anormal pap testi, ardından kolposkopi ve biyopsi. Kolposkopi serviksin, vajinanın ve dış genital bölgenin, özel ışıklı ve büyütücü bir optik cihaz olan kolposkopla incelenmesidir. Kolposkopide lezyonlar asetik asit ile vurgulanır ve biyopsi için hedef alan seçilir. Kısacası pap testi şüpheyi, kolposkopi yeri, biyopsi kesin tanıyı verir.
+@@ SIL tanı ve tedavi
+SIL genellikle asemptomatiktir. Tanı basamakları şöyledir: önce anormal pap testi, ardından kolposkopi ve biyopsi. Kolposkopi serviksin, vajinanın ve dış genital bölgenin, özel ışıklı ve büyütücü bir optik cihaz olan kolposkopla incelenmesidir. Kolposkopide lezyonlar asetik asit ile vurgulanır ve biyopsi için hedef alan seçilir. Kısacası pap testi şüpheyi, kolposkopi yeri, biyopsi kesin tanıyı verir.
 
 Tedavi doğal seyrin doğrudan uygulamasıdır.
-Biyopsiyle doğrulanmış el sil'de yakın takip ve konservatif yaklaşım uygulanır, çünkü el sil prekanseröz kabul edilmez ve çoğu geriler.
-Ha sil'de ya da kalıcı el sil'de cerrahi eksizyon, yani konik biyopsi yapılır; transformasyon bölgesini içeren koni biçimli bir doku parçası çıkarılır.
-Ha sil sonrasında düzenli sitolojik ve klinik takip gerekir.
-Ha sil öyküsü olan hastalarda servikal, vulvar ve vajinal kanser riski artmıştır, çünkü aynı virüs alt genital yolun tamamındaki skuamöz epiteli etkileyebilir; bu nedenle uzun dönem izlem gereklidir.
+Biyopsiyle doğrulanmış LSIL'de yakın takip ve konservatif yaklaşım uygulanır, çünkü LSIL prekanseröz kabul edilmez ve çoğu geriler.
+HSIL'de ya da kalıcı LSIL'de cerrahi eksizyon, yani konik biyopsi yapılır; transformasyon bölgesini içeren koni biçimli bir doku parçası çıkarılır.
+HSIL sonrasında düzenli sitolojik ve klinik takip gerekir.
+HSIL öyküsü olan hastalarda servikal, vulvar ve vajinal kanser riski artmıştır, çünkü aynı virüs alt genital yolun tamamındaki skuamöz epiteli etkileyebilir; bu nedenle uzun dönem izlem gereklidir.
 
 @@ İnvaziv serviks karsinomu: tipler, yaş ve genetik olaylar
 Öncü lezyon bazal membranı aştığında invaziv serviks karsinomu ortaya çıkar. Burası önemli: başlıca histolojik tipler skuamöz hücreli karsinom yaklaşık %80, adenokarsinom ve adenoskuamöz karsinom yaklaşık %15, küçük hücreli nöroendokrin karsinom ise %5'ten azdır. Bu tiplerin tümü yüksek riskli HPV ile ilişkilidir.
@@ -211,8 +211,8 @@ Pap testiyle invaziv skuamöz karsinom insidansı azalmıştır.
 Sonuç olarak adenokarsinom oranı göreceli olarak artmıştır, çünkü pap testi bez lezyonlarını daha zor saptar.
 Göreceli kelimesine dikkat edin: skuamöz karsinom azaldığı için toplam içindeki adenokarsinom payı büyümüştür.
 
-Skuamöz hücreli karsinom insidansı, sil insidansının pikinden on ile 15 yıl sonra zirve yapar; ortalama yaş yaklaşık kırk beştir.
-Sil'den invaziv karsinoma geçiş değişken ve öngörülemezdir.
+Skuamöz hücreli karsinom insidansı, SIL insidansının pikinden 10 ile 15 yıl sonra zirve yapar; ortalama yaş yaklaşık 45'tir.
+SIL'den invaziv karsinoma geçiş değişken ve öngörülemezdir.
 Burası önemli: HPV gereklidir, ancak tek başına yeterli değildir.
 Malign dönüşümde ek genetik olaylar rol oynar: viral DNA entegrasyon bölgesinde onkogen düzensizliği ve artmış hücresel proliferasyon sırasında biriken ek mutasyonlar.
 Risk sınıflamasında sigara, immün yetmezlik ve diğer faktörler yer alır.
@@ -235,7 +235,7 @@ Adenoskuamöz karsinom ise hem bez hem skuamöz bileşen içerir.
 Tümör serviksi saran, stromaya derin invazyon yapabilir. Burası önemli: bunun klinik karşılığı fıçı serviks denen tablodur; palpasyonda kalın, rijit bir serviks hissedilir. Tümör serviksin iki yanındaki bağ dokusuna, yani parametriyuma yayılırsa uterus pelvik yapılara fikse olur ve muayenede hareketsiz bulunur.
 
 Pelvik lenf düğümlerine metastaz invazyon derinliği ile ilişkilidir; vasküler boşluklarda tümör bulunması da riski artırır.
-İnvazyon üç milimetreden azsa nodal metastaz olasılığı %1'den azdır; invazyon üç milimetreyi aşınca bu olasılık %10'un üzerine çıkar.
+İnvazyon 3 milimetreden azsa nodal metastaz olasılığı %1'den azdır; invazyon 3 milimetreyi aşınca bu olasılık %10'un üzerine çıkar.
 Bu eşik, sığ invazyonlu tümörlerde daha sınırlı tedavinin yeterli olabilmesini açıklar.
 
 @@ Klinik, tedavi ve prognoz
@@ -257,4 +257,4 @@ Yine burası önemli: endometriyozisin oluşumunu açıklayan teoriler regürjit
 Östrojen aromataz aktivite teorisi diye bir teori yoktur; sorularda teorilerden olmayan seçenek olarak bu şık sorulur.
 
 @@ Özetle
-Özetle, servisit sık ve çoğunlukla klamidyaya bağlıdır, endoservikal polip ve Naboth kisti benign lezyonlardır. Kanserin doğduğu yer transformasyon bölgesi, ana etken yüksek riskli HPV ile kalıcı enfeksiyondur; E altı pe elli üçü, E yedi er be'yi hedefler. El sil ce i ne bire, ha sil ce i ne iki ve üçe karşılık gelir. Korunma pap testi, HPV testi ve aşılamanın birlikteliğine dayanır ve prognozu en çok tanı anındaki evre belirler.
+Özetle, servisit sık ve çoğunlukla klamidyaya bağlıdır, endoservikal polip ve Naboth kisti benign lezyonlardır. Kanserin doğduğu yer transformasyon bölgesi, ana etken yüksek riskli HPV ile kalıcı enfeksiyondur; E6 p53'ü, E7 RB'yi hedefler. LSIL CIN 1'e, HSIL CIN 2 ve 3'e karşılık gelir. Korunma pap testi, HPV testi ve aşılamanın birlikteliğine dayanır ve prognozu en çok tanı anındaki evre belirler.

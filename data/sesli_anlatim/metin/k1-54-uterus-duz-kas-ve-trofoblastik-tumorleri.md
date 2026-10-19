@@ -4,7 +4,7 @@
 Uterus leiomyomu, klinikte ve halk arasında fibroid adıyla da bilinen, miyometriyumun düz kas hücrelerinden gelişen iyi huylu bir tümördür. Miyometriyum, uterus duvarının düz kas tabakasıdır; tümör bu dokudan doğduğu için düz kas özelliklerini korur. Yani leiomyom, düz kas hücrelerinin klonal, kontrolsüz ama invaziv olmayan bir çoğalmasıdır. Ders notunuzda da vurgulandığı gibi, her nodül tek bir hücrenin klonal çoğalmasıyla oluşur; buna monoklonalite diyoruz.
 
 Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: leiomyom, kadınlarda en sık görülen iyi huylu tümördür ve uterusun da en sık görülen benign tümörüdür.
-Aktif reprodüktif dönemdeki kadınların yaklaşık %30 ile elli arasında, yani neredeyse yarısında gelişir ve siyah ırkta daha sıktır.
+Aktif reprodüktif dönemdeki kadınların yaklaşık %30 ile 50 arasında, yani neredeyse yarısında gelişir ve siyah ırkta daha sıktır.
 Sorularda leiomyom şöyle de tarif edildi: başta uterus olmak üzere deri ve deri altındaki erektör pili kaslarında, meme başında, skrotumda, labiada ve daha az sıklıkla gastrointestinal kanalın derin yumuşak dokularında görülebilen, birbirini çaprazlayıp açılar oluşturan uzun iğsi hücrelerden yapılmış düz kas tümörü.
 Bu tarifi duyduğunuzda cevap leiomyomdur; leiomyosarkom, Kaposi sarkomu, anjiyosarkom ya da hemanjiyom değildir.
 
@@ -21,15 +21,15 @@ Doğrusu, östrojenler ve muhtemelen oral kontraseptifler leiomyom büyümesini 
 Aynı soruda doğru kabul edilen diğer ifadeler de bu derste göreceğimiz bilgilerdir: leiomyom kadınlarda en sık benign tümördür, reprodüktif çağdaki kadınların neredeyse yarısında gelişir, miyometriyuma gömülü, keskin sınırlı, gri beyaz kitleler hâlindedir ve kesit yüzü girdaplıdır.
 
 Leiomyomlar yalnızca hormon etkisiyle değil, belirli genetik değişikliklerle de gelişir; bu da onların gerçek bir neoplazm olduğunu destekler.
-Tekrarlayan kromozomal anormallikler arasında kromozom altı ve on ikiyi içeren yeniden düzenlenmeler öne çıkar.
+Tekrarlayan kromozomal anormallikler arasında kromozom 6 ve 12'yi içeren yeniden düzenlenmeler öne çıkar.
 İlginç olan şu: benzer yeniden düzenlemeler başka iyi huylu lezyonlarda da, yani endometrial poliplerde ve lipomlarda da görülür.
 Üçü de benign lezyondur ve bu ortak sitogenetik imza, o kromozom bölgelerindeki genlerin hücre çoğalmasının düzenlenmesinde rol oynadığını düşündürür.
 
-En sık saptanan tek gen değişikliği ise med on iki geni mutasyonudur.
-Med on iki mutasyonları leiomyomların yaklaşık yüzde yetmişinde bulunur.
-Bu gen, ren a polimeraz iki aracılı transkripsiyonun düzenleyicisidir; yani protein kodlayan genlerin okunmasını ayarlayan kompleksin bir parçasıdır.
+En sık saptanan tek gen değişikliği ise MED12 geni mutasyonudur.
+MED12 mutasyonları leiomyomların yaklaşık %70'inde bulunur.
+Bu gen, RNA polimeraz II aracılı transkripsiyonun düzenleyicisidir; yani protein kodlayan genlerin okunmasını ayarlayan kompleksin bir parçasıdır.
 Mutasyonun tümörü nasıl oluşturduğu tam olarak bilinmemektedir; muhtemel etkisi, düz kas hücre çoğalmasını artırması ve gen ekspresyonunda değişikliğe yol açmasıdır.
-Sınavda oran sorulur: med on iki, leiomyomda yaklaşık %70.
+Sınavda oran sorulur: MED12, leiomyomda yaklaşık %70.
 
 @@ Leiomyom: makroskopi ve yerleşim tipleri
 Leiomyomun makroskopisi oldukça karakteristiktir. Keskin sınırlı, sert, gri beyaz renkte kitlelerdir ve kesit yüzeyi girdaplıdır. Bu girdaplı görünüm, iç içe geçmiş ve farklı yönlerde kesilmiş düz kas demetlerinin yansımasıdır. Keskin sınır, sert kıvam, gri beyaz renk ve girdaplı kesit yüzeyi, leiomyomun klasik makroskopik dörtlüsüdür. Ders notunuz kıvamı sert elastik olarak da tarif eder. Leiomyomlar uterus boyunca dağılmış hâlde bulunabilir ve boyutları küçük nodüllerden uterus boyutunu aşan büyük tümörlere kadar çok geniş bir yelpazede değişir.
@@ -72,21 +72,21 @@ Leiomyosarkom, uterusun malign düz kas tümörüdür. Burası önemli, çıkmı
 
 Leiomyomdan leiomyosarkoma malign dönüşüm son derece nadirdir.
 Yani leiomyosarkomların büyük çoğunluğu var olan bir leiomyomun zamanla kötüleşmesiyle değil, baştan malign olarak, yani de novo gelişir.
-Köken olarak iki olası kaynak vardır: miyometriyumun düz kas hücreleri ya da endometrial stromal öncü hücreler.
+Köken olarak 2 olası kaynak vardır: miyometriyumun düz kas hücreleri ya da endometrial stromal öncü hücreler.
 Bu nedenle bir hastada leiomyom bulunması, o tümörün ileride sarkoma döneceği anlamına gelmez.
 
-Klinik olarak iki tümörü ayırırken tümör sayısı ve menopoz durumu iki önemli ipucudur.
+Klinik olarak iki tümörü ayırırken tümör sayısı ve menopoz durumu 2 önemli ipucudur.
 Leiomyosarkom neredeyse her zaman tektir ve genellikle menopoz sonrası kadınlarda görülür.
 Leiomyom ise sıklıkla çokludur ve genellikle menopoz öncesi, yani hormon düzeylerinin yüksek olduğu reprodüktif çağda görülür.
 Menopoz sonrası bir kadında tek ve büyüyen bir uterus düz kas kitlesi, menopozda küçülmesi beklenen leiomyom tablosuna uymaz ve malignite olasılığını artırır.
 Kısaca: tek ve menopoz sonrası, leiomyosarkomu düşündürür; çoklu ve menopoz öncesi, leiomyom profilidir.
 
 @@ Leiomyosarkom: genetik ve morfoloji
-Leiomyosarkomun genetik yapısı, malign tümörlere özgü genomik dengesizliği yansıtır. Karyotip kompleks ve oldukça değişkendir; tümörden tümöre farklı kromozom değişiklikleri görülür ve sık kromozomal delesyonlar, yani kromozom parçalarının kaybı bulunur. Med on iki mutasyonları leiomyosarkom olgularının yaklaşık yüzde otuzunda saptanır; bu oran leiomyomlardaki yaklaşık %70'e göre daha düşüktür. Karşılaştırmayı şöyle aklınızda tutun: leiomyomda tekrarlayan ve sınırlı değişiklikler, yani kromozom altı ve on iki düzenlenmeleri; leiomyosarkomda ise karmaşık, değişken ve delesyonlu bir karyotip vardır.
+Leiomyosarkomun genetik yapısı, malign tümörlere özgü genomik dengesizliği yansıtır. Karyotip kompleks ve oldukça değişkendir; tümörden tümöre farklı kromozom değişiklikleri görülür ve sık kromozomal delesyonlar, yani kromozom parçalarının kaybı bulunur. MED12 mutasyonları leiomyosarkom olgularının yaklaşık %30'unda saptanır; bu oran leiomyomlardaki yaklaşık %70'e göre daha düşüktür. Karşılaştırmayı şöyle aklınızda tutun: leiomyomda tekrarlayan ve sınırlı değişiklikler, yani kromozom 6 ve 12 düzenlenmeleri; leiomyosarkomda ise karmaşık, değişken ve delesyonlu bir karyotip vardır.
 
 Makroskopik olarak leiomyosarkom, leiomyomun sert ve düzenli görünümünden belirgin biçimde ayrılır.
 Yumuşak, hemorajik ve nekrotik kitlelerdir.
-Kitaptaki örnekte büyük, kanamalı bir tümör uterusun alt korpusunu genişletmekte ve iki leiomyomla çevrelenmektedir.
+Kitaptaki örnekte büyük, kanamalı bir tümör uterusun alt korpusunu genişletmekte ve 2 leiomyomla çevrelenmektedir.
 Leiomyomlar beyaz, sert ve iyi sınırlı görünürken sarkom koyu kırmızı, kanamalı bir kitle olarak dikkat çeker.
 Yani aynı uterusta leiomyom ve leiomyosarkom yan yana bulunabilir ve kesit yüzünün rengi, kıvamı ile kanama ve nekroz varlığı ikisini ayırmada ilk ipucudur.
 Kısaca: leiomyom sert, gri beyaz, girdaplı; leiomyosarkom yumuşak, hemorajik, nekrotik.
@@ -104,77 +104,77 @@ Cerrahi sonrası sıklıkla nüks eder.
 Kan yoluyla, yani hematojen olarak akciğere, kemiğe ve beyne metastaz yapar; ayrıca karın boşluğu boyunca da yayılır.
 Prognozu genel olarak kötüdür ve evreye ve histolojik dereceye bağlıdır; tümörün yayılımı ve anaplazi derecesi arttıkça sonuç kötüleşir.
 
-Düz kas tümörlerini özetlersek: leiomyom iyi huylu, sıklıkla çoklu, menopoz öncesi, med on iki yaklaşık %70, sert ve girdaplı, çoğu asemptomatik ve en sık bulgusu menorajidir.
-Leiomyosarkom kötü huylu, neredeyse her zaman tek, menopoz sonrası, med on iki yaklaşık %30, yumuşak, hemorajik ve nekrotiktir; sık nüks eder ve prognozu kötüdür.
+Düz kas tümörlerini özetlersek: leiomyom iyi huylu, sıklıkla çoklu, menopoz öncesi, MED12 yaklaşık %70, sert ve girdaplı, çoğu asemptomatik ve en sık bulgusu menorajidir.
+Leiomyosarkom kötü huylu, neredeyse her zaman tek, menopoz sonrası, MED12 yaklaşık %30, yumuşak, hemorajik ve nekrotiktir; sık nüks eder ve prognozu kötüdür.
 
 @@ Gebelik trofoblastik hastalıklarına genel bakış
-Şimdi 2. büyük konumuza geçiyoruz. Gebelik trofoblastik hastalıkları, plasentanın trofoblastik dokusundan kaynaklanan ve iyi huylu lezyonlardan çok agresif tümörlere uzanan bir hastalık grubudur. Ortak özellikleri, villöz ya da trofoblastik plasenta dokusunun proliferasyonudur. Trofoblast, plasentanın fetal kökenli epitel hücresidir.
+Şimdi ikinci büyük konumuza geçiyoruz. Gebelik trofoblastik hastalıkları, plasentanın trofoblastik dokusundan kaynaklanan ve iyi huylu lezyonlardan çok agresif tümörlere uzanan bir hastalık grubudur. Ortak özellikleri, villöz ya da trofoblastik plasenta dokusunun proliferasyonudur. Trofoblast, plasentanın fetal kökenli epitel hücresidir.
 
-Başlıca lezyonlar şunlardır: hidatiform mol, ki tam ve kısmi olmak üzere iki tipi vardır; invaziv mol; gebelik koryokarsinomu; ve plasental bölge trofoblastik tümörü.
+Başlıca lezyonlar şunlardır: hidatiform mol, ki tam ve kısmi olmak üzere 2 tipi vardır; invaziv mol; gebelik koryokarsinomu; ve plasental bölge trofoblastik tümörü.
 Agresiflik yönünden çoğu iyi huylu olan molden çok daha malign olan koryokarsinoma doğru sıralanırlar.
 Bu lezyonların hepsi değişen düzeylerde insan koryonik gonadotropini, kısaca hCG üretir.
-Ha ce ge trofoblast dokusunun ürettiği hormon olduğu için hem tanıda hem de izlemde kullanılan ortak bir belirteçtir.
+hCG trofoblast dokusunun ürettiği hormon olduğu için hem tanıda hem de izlemde kullanılan ortak bir belirteçtir.
 Ders notunuza göre hCG düzeyleri molden invaziv mole ve koryokarsinoma doğru gidildikçe artar; hormonun kan ya da idrarda artması ya da azalması, tedavinin etkinliğini izlemede de yol göstericidir.
 
 @@ Hidatiform mol: önemi, tanı ve epidemiyoloji
-Hidatiform mol, tek başına çoğu zaman iyi huylu bir gebelik anomalisidir; ancak ardından gelişebilecek iki ciddi durum nedeniyle önemlidir. 1.'si kalıcı trofoblastik hastalık riskidir; molar doku uterus boşaltıldıktan sonra da varlığını sürdürebilir ve bunun başlıca biçimi invaziv moldür. 2.'si koryokarsinom gelişim riskidir. Bu yüzden mol tanısı konan her hasta, tedaviden sonra da izlenmesi gereken bir hastadır.
+Hidatiform mol, tek başına çoğu zaman iyi huylu bir gebelik anomalisidir; ancak ardından gelişebilecek 2 ciddi durum nedeniyle önemlidir. 1.'si kalıcı trofoblastik hastalık riskidir; molar doku uterus boşaltıldıktan sonra da varlığını sürdürebilir ve bunun başlıca biçimi invaziv moldür. 2.'si koryokarsinom gelişim riskidir. Bu yüzden mol tanısı konan her hasta, tedaviden sonra da izlenmesi gereken bir hastadır.
 
-Histolojik temel iki bulgudur: koryonik villusların kistik şişmesi, yani villusların sıvıyla dolarak balon gibi genişlemesi; ve değişken trofoblastik proliferasyon, yani villusları örten trofoblast tabakasının mol tipine göre farklı derecede çoğalması.
+Histolojik temel 2 bulgudur: koryonik villusların kistik şişmesi, yani villusların sıvıyla dolarak balon gibi genişlemesi; ve değişken trofoblastik proliferasyon, yani villusları örten trofoblast tabakasının mol tipine göre farklı derecede çoğalması.
 Erken gebelikte tanı iki ayaklıdır: pelvik ultrason, uterus içindeki anormal kistik dokuyu gösterir; ve çok yüksek hCG seviyeleri, çünkü çoğalmış trofoblast dokusu fazla miktarda hormon üretir.
 Trofoblast proliferasyonu ne kadar fazlaysa hCG o kadar yüksektir.
 
-Mol her yaşta gelişebilir; ancak risk üreme çağının iki ucunda artar: ergenlik döneminde ve kırk ile 50 yaş arasındaki kadınlarda.
-Tam mol batı ülkelerinde yaklaşık 2000 gebelikte bir ile 1,5 sıklığında görülür ve en sık yirmi yaşın altında ve kırk yaşın üstünde ortaya çıkar.
+Mol her yaşta gelişebilir; ancak risk üreme çağının iki ucunda artar: ergenlik döneminde ve 40 ile 50 yaş arasındaki kadınlarda.
+Tam mol batı ülkelerinde yaklaşık 2000 gebelikte 1 ile 1,5 sıklığında görülür ve en sık 20 yaşın altında ve 40 yaşın üstünde ortaya çıkar.
 Ders notunuza göre Asya ülkelerinde de daha sıktır.
 Önceki mol öyküsü, sonraki gebeliklerde mol riskini artırır; bu nedenle mol öyküsü olan kadının yeni gebeliği erken değerlendirilir.
-Günümüzde erken ultrason sayesinde mol çok daha erken tanınmaktadır; eskiden on iki ile 14. haftalarda gününe göre çok büyük uterusla fark edilen olgular artık erken komplet mol olarak çok daha önce saptanıyor.
+Günümüzde erken ultrason sayesinde mol çok daha erken tanınmaktadır; eskiden 12 ile 14. haftalarda gününe göre çok büyük uterusla fark edilen olgular artık erken komplet mol olarak çok daha önce saptanıyor.
 
 Burası önemli, mol risk faktörleri çıkmış sorularda pek çok kez soruldu.
-Yirmi yaşın altında olmak, kırk yaşın üstünde olmak, Asya kökenli olmak ve geçirilmiş mol öyküsü riski artıran faktörlerdir.
+20 yaşın altında olmak, 40 yaşın üstünde olmak, Asya kökenli olmak ve geçirilmiş mol öyküsü riski artıran faktörlerdir.
 Geçirilmiş ektopik gebelik öyküsü ise mol riskini artıran faktörlerden biri değildir.
-Aynı konudaki bir soruda şık olarak verilen, komplet molde karyotipin daima altmış dokuz, iks iks ye triploidi olduğu ifadesi de yanlıştır; birazdan göreceğiz, komplet mol diploiddir, triploid olan kısmi moldür.
+Aynı konudaki bir soruda şık olarak verilen, komplet molde karyotipin daima 69,XXY triploidi olduğu ifadesi de yanlıştır; birazdan göreceğiz, komplet mol diploiddir, triploid olan kısmi moldür.
 
 @@ Tam ve kısmi mol: temel farklar
-Mol iki alt tipe ayrılır ve bu iki tip embriyo gelişimi ile kromozom yapısı bakımından adeta iki ayrı kutuptur. Tam, yani komplet hidatiform mol embriyogenezle uyumlu değildir, embriyo gelişmez; fetal parçalar nadirdir; tüm koryonik villuslar anormaldir ve epitel hücreleri diploiddir, yani kırk altı, iks iks; nadiren kırk altı, iks ye. Kısmi, yani parsiyel molde ise erken embriyo oluşumu olabilir; fetal parçalar sıktır; bazı normal villuslar vardır ve karyotip neredeyse her zaman triploiddir, örneğin altmış dokuz, iks iks ye.
+Mol iki alt tipe ayrılır ve bu iki tip embriyo gelişimi ile kromozom yapısı bakımından adeta iki ayrı kutuptur. Tam, yani komplet hidatiform mol embriyogenezle uyumlu değildir, embriyo gelişmez; fetal parçalar nadirdir; tüm koryonik villuslar anormaldir ve epitel hücreleri diploiddir, yani 46,XX; nadiren 46,XY. Kısmi, yani parsiyel molde ise erken embriyo oluşumu olabilir; fetal parçalar sıktır; bazı normal villuslar vardır ve karyotip neredeyse her zaman triploiddir, örneğin 69,XXY.
 
 Burası önemli, çıkmış sorularda molar gebeliklerle ilgili yanlış ifade olarak şu soruldu: fetusa ait parçalar komplet mollerde yaygın, parsiyel mollerde çok nadirdir.
 Bu tam tersidir.
 Doğrusu, fetal parçalar komplet molde nadir, parsiyel molde sıktır.
-Aynı soruda doğru kabul edilen ifadeler de tabloyu özetler: komplet molde tüm villuslarda yaygın ödem vardır; parsiyel mol triploid karyotiplidir; komplet molde trofoblastik proliferasyon belirgin, diffüz ve çepeçevredir, parsiyel molde ise fokal ve hafiftir; komplet mollerin yaklaşık yüzde ikisinde koryokarsinom gelişme riski vardır, parsiyel molde ise bu risk nadirdir.
+Aynı soruda doğru kabul edilen ifadeler de tabloyu özetler: komplet molde tüm villuslarda yaygın ödem vardır; parsiyel mol triploid karyotiplidir; komplet molde trofoblastik proliferasyon belirgin, diffüz ve çepeçevredir, parsiyel molde ise fokal ve hafiftir; komplet mollerin yaklaşık %2'sinde koryokarsinom gelişme riski vardır, parsiyel molde ise bu risk nadirdir.
 
-Kitaptaki tablo iki mol tipini altı ölçütle karşılaştırır.
+Kitaptaki tablo iki mol tipini 6 ölçütle karşılaştırır.
 Karyotip tam molde diploid, parsiyel molde triploiddir.
 Villöz ödem tam molde tüm villuslarda, parsiyel molde bazı villuslardadır.
 Trofoblast proliferasyonu tam molde diffüzdür ve villusu çepeçevre sarar, parsiyel molde fokal ve hafiftir.
 Serum hCG tam molde gebelik haftasına göre yüksek, parsiyel molde daha az yüksektir.
-Dokudaki hCG boyanması tam molde çok yoğun, dört artı; parsiyel molde zayıf, bir artıdır.
-Sonraki koryokarsinom riski tam molde %2 buçuk, parsiyel molde nadirdir.
-Ayrımın anahtar sözcükleri: diploid ve triploid, tüm ve bazı, diffüz ve fokal, %2 buçuk ve nadir.
+Dokudaki hCG boyanması tam molde çok yoğun, 4+; parsiyel molde zayıf, 1+'dır.
+Sonraki koryokarsinom riski tam molde %2,5, parsiyel molde nadirdir.
+Ayrımın anahtar sözcükleri: diploid ve triploid, tüm ve bazı, diffüz ve fokal, %2,5 ve nadir.
 
 @@ Mollerin genetik kökeni
-Her iki mol tipinin ortak paydası, döllenme sırasında babadan gelen genetik materyalin fazla olmasıdır; yani molar hastalık paternal kromozomların anormal dağılımına bağlıdır. Tam molde tüm genetik içerik babadan gelir, anneye ait kromozom yoktur. Bunun iki yolu vardır: genetik materyali olmayan boş bir ovumun iki sperm tarafından döllenmesi, ya da boş ovumun tek bir diploid sperm tarafından döllenmesi. Sonuçta yalnızca baba kromozomlarını içeren diploid hücreler oluşur. Bu durum, tam molün neden diploid olduğunu ve neden embriyo gelişmediğini açıklar; çünkü embriyonun normal gelişimi için anneden gelen genom da gereklidir.
+Her iki mol tipinin ortak paydası, döllenme sırasında babadan gelen genetik materyalin fazla olmasıdır; yani molar hastalık paternal kromozomların anormal dağılımına bağlıdır. Tam molde tüm genetik içerik babadan gelir, anneye ait kromozom yoktur. Bunun 2 yolu vardır: genetik materyali olmayan boş bir ovumun iki sperm tarafından döllenmesi, ya da boş ovumun tek bir diploid sperm tarafından döllenmesi. Sonuçta yalnızca baba kromozomlarını içeren diploid hücreler oluşur. Bu durum, tam molün neden diploid olduğunu ve neden embriyo gelişmediğini açıklar; çünkü embriyonun normal gelişimi için anneden gelen genom da gereklidir.
 
 Kısmi molde ise anneden gelen genom vardır ama babadan gelen genom ağır basar.
 Normal bir ovum iki spermle ya da bir diploid spermle döllenir.
 Sonuçta paternal genlerin baskın olduğu triploid bir karyotip oluşur; hücrelerde bir takım anne, iki takım baba kromozomu bulunur.
 Maternal genom bulunduğu için erken embriyo oluşumu mümkündür ve fetal parçalar sık görülür; ancak paternal fazlalık villus ve trofoblastta molar değişikliklere yol açar.
 
-Kitaptaki şema bu mekanizmaları üç panelde gösterir.
-1. panel, tam molün en sık yolunu gösterir: boş bir yumurta tek bir sperm tarafından döllenir ve spermin kromozomları kendini kopyalar, yani duplikasyona uğrar; sonuç kırk altı, iks iks karyotipli, tüm genleri aynı babadan gelen homozigot tam moldür.
-2. panel daha az sık yolu gösterir: iki sperm boş bir yumurtayı döller, buna dispermi denir; sonuç kırk altı, iks iks ya da kırk altı, iks ye karyotipli heterozigot tam moldür.
-Kırk altı, iks ye tam mol ancak bu yolla oluşabilir, çünkü tek bir iks spermin kopyalanması ye kromozomu üretemez.
-3. panel kısmi molü gösterir: iki sperm tek bir normal yumurtayı döller; sonuç altmış dokuz, iks iks iks; altmış dokuz, iks iks ye ya da nadiren altmış dokuz, iks ye ye karyotipli triploid kısmi moldür.
+Kitaptaki şema bu mekanizmaları 3 panelde gösterir.
+Birinci panel, tam molün en sık yolunu gösterir: boş bir yumurta tek bir sperm tarafından döllenir ve spermin kromozomları kendini kopyalar, yani duplikasyona uğrar; sonuç 46,XX karyotipli, tüm genleri aynı babadan gelen homozigot tam moldür.
+İkinci panel daha az sık yolu gösterir: iki sperm boş bir yumurtayı döller, buna dispermi denir; sonuç 46,XX ya da 46,XY karyotipli heterozigot tam moldür.
+46,XY tam mol ancak bu yolla oluşabilir, çünkü tek bir X spermin kopyalanması Y kromozomu üretemez.
+Üçüncü panel kısmi molü gösterir: iki sperm tek bir normal yumurtayı döller; sonuç 69,XXX; 69,XXY ya da nadiren 69,XYY karyotipli triploid kısmi moldür.
 
 @@ Mol tiplerinin klinik riskleri ve hCG düzeyleri
-İki mol tipi, tedaviden sonra gelişebilecek komplikasyonlar açısından önemli bir farkla ayrılır. Kalıcı mol hastalığı riski hem tam molde hem kısmi molde artmıştır; yani her iki tipte de molar doku boşaltıldıktan sonra sürebilir ve her ikisi de izlem gerektirir. Ancak koryokarsinom gelişimi yalnızca tam molle ilişkilidir; kısmi mol koryokarsinomla ilişkili değildir. Bu fark, tam moldeki diffüz ve yoğun trofoblast proliferasyonuyla uyumludur. Ders notunuza göre mollerin %80 ile doksanı küretaj sonrası tekrarlamaz; komplet mollerin yaklaşık %10'u invaziv mole, %2 ile üçü koryokarsinoma ilerler.
+İki mol tipi, tedaviden sonra gelişebilecek komplikasyonlar açısından önemli bir farkla ayrılır. Kalıcı mol hastalığı riski hem tam molde hem kısmi molde artmıştır; yani her iki tipte de molar doku boşaltıldıktan sonra sürebilir ve her ikisi de izlem gerektirir. Ancak koryokarsinom gelişimi yalnızca tam molle ilişkilidir; kısmi mol koryokarsinomla ilişkili değildir. Bu fark, tam moldeki diffüz ve yoğun trofoblast proliferasyonuyla uyumludur. Ders notunuza göre mollerin %80 ile 90'ı küretaj sonrası tekrarlamaz; komplet mollerin yaklaşık %10'u invaziv mole, %2 ile 3'ü koryokarsinoma ilerler.
 
-Ha ce ge düzeyleri, trofoblast proliferasyonunun miktarını doğrudan yansıtır.
-Tam molde hCG, gebelik yaşına göre beklenenden çok daha yüksektir ve litre başına yüz bin uluslararası üniteye ulaşabilir.
+hCG düzeyleri, trofoblast proliferasyonunun miktarını doğrudan yansıtır.
+Tam molde hCG, gebelik yaşına göre beklenenden çok daha yüksektir ve litre başına 100 bin uluslararası üniteye ulaşabilir.
 Kısmi molde trofoblast proliferasyonu daha azdır; hCG yüksek olabileceği gibi normal sınırlar içinde de olabilir, yani normal hCG kısmi molü dışlamaz.
 Her iki tipte de fetal kalp sesleri genellikle duyulmaz.
 
 @@ Hidatiform mol: tedavi ve izlem
-Molün tedavisi, molar dokunun uterustan boşaltılmasıdır: çoğu mol uterus küretajı ile çıkarılır. Ancak asıl önemli olan tedavi sonrası izlemdir. Altı ile 12 ay boyunca seri hCG ölçümü yapılır. Bunun iki amacı vardır: 1.'si, hormonun gebelik dışı düşük seviyelere indiğini doğrulamak, ki bu molar dokunun tamamen temizlendiğini gösterir; 2.'si, kalıcı trofoblastik hastalığı saptamak. Ha ce ge düşmüyorsa ya da yeniden yükseliyorsa, geride kalmış ya da derin dokuya yerleşmiş trofoblast dokusu vardır. Ders notunuz izlemde özellikle hormonun daha belirleyici olan beta alt biriminin ölçüldüğünü vurgular. Ha ce ge yalnızca trofoblast tarafından üretildiği için, gebelik dışında ölçülebilir hCG varlığı trofoblastik dokunun sürdüğünü gösteren duyarlı bir belirteçtir.
+Molün tedavisi, molar dokunun uterustan boşaltılmasıdır: çoğu mol uterus küretajı ile çıkarılır. Ancak asıl önemli olan tedavi sonrası izlemdir. 6 ile 12 ay boyunca seri hCG ölçümü yapılır. Bunun 2 amacı vardır: 1.'si, hormonun gebelik dışı düşük seviyelere indiğini doğrulamak, ki bu molar dokunun tamamen temizlendiğini gösterir; 2.'si, kalıcı trofoblastik hastalığı saptamak. hCG düşmüyorsa ya da yeniden yükseliyorsa, geride kalmış ya da derin dokuya yerleşmiş trofoblast dokusu vardır. Ders notunuz izlemde özellikle hormonun daha belirleyici olan beta alt biriminin ölçüldüğünü vurgular. hCG yalnızca trofoblast tarafından üretildiği için, gebelik dışında ölçülebilir hCG varlığı trofoblastik dokunun sürdüğünü gösteren duyarlı bir belirteçtir.
 
 @@ Hidatiform mol: makroskopi ve histoloji
 İleri olgularda mol çıplak gözle çok karakteristik bir görünüm kazanır. Uterin kavite ince duvarlı, saydam kistik yapılarla dolar; bu kistler sıvıyla şişmiş koryonik villuslardır. Ortaya hassas ve kırılgan bir kitle çıkar. Ders notunuz bu görünümü üzüm salkımına benzetir. Kitaptaki fotoğrafta tam mol, kanlı doku içinde dağılmış, değişik boyutlarda, parlak, yarı saydam, üzüm tanesine benzeyen çok sayıda şişmiş, yani hidropik villustan oluşur. Fetal parçalar tam molde nadir, kısmi molde sıktır. Erken ultrason sayesinde günümüzde mol çoğunlukla bu ileri görünüm gelişmeden tanınır.
@@ -221,8 +221,8 @@ Ancak bu odaklar genellikle büyümez ve kendiliğinden geriler; yani koryokarsi
 @@ Gebelik koryokarsinomu: tanım, epidemiyoloji ve klinik
 Gebelik koryokarsinomu, trofoblastik spektrumun en agresif ucunda yer alan, çok agresif malign trofoblastik bir tümördür. Asıl ve sık kaynağı gebelik koryonik epitelidir, yani plasentanın trofoblast tabakası. Nadiren overdeki ya da testisteki totipotent hücrelerden de koryokarsinom gelişebilir; bu gonadal form gebelikle ilişkili değildir. Tümörün gebelik kaynaklı mı, gonad kaynaklı mı olduğu, birazdan göreceğimiz tedavi yanıtı ve prognoz farklarının temelidir.
 
-Koryokarsinom yaklaşık yirmi bin ile otuz bin gebelikte bir görülür.
-Ders notunuza göre Afrika'da bu sıklık iki binde bir civarına çıkar ve kırk yaşın üzerinde risk belirgin artar.
+Koryokarsinom yaklaşık 20 bin ile 30 bin gebelikte 1 görülür.
+Ders notunuza göre Afrika'da bu sıklık 2000'de 1 civarına çıkar ve 40 yaşın üzerinde risk belirgin artar.
 Kaynak gebeliklerin dağılımı şöyledir: olguların yaklaşık %50'si tam hidatiform mol sonrası, yaklaşık %25'i önceki düşükler sonrası, yaklaşık %22'si normal gebelik sonrası, kalanı ise ektopik gebelikler sonrası gelişir.
 
 Burası önemli, çıkmış soruda koryokarsinomun en sık hangi durumdan sonra geliştiği soruldu: cevap komplet, yani tam mol gebeliktir.
@@ -247,7 +247,7 @@ Kitaptaki mikroskopik görüntüde hem neoplastik sitotrofoblastlar hem de çok 
 
 Yayılım hematojendir; lenfatik yayılım nadirdir.
 Trofoblast hücreleri normal plasentada da anne damarlarıyla yakın ilişki içindedir; bu damar istila eğilimi tümörde kontrolsüz hâle gelerek erken kan yolu yayılımına yol açar.
-En sık metastaz yeri yaklaşık %50 ile akciğerdir; ardından %30 ile kırk arasında vajina gelir; beyin, karaciğer ve böbrek de diğer metastaz yerleridir.
+En sık metastaz yeri yaklaşık %50 ile akciğerdir; ardından %30 ile 40 arasında vajina gelir; beyin, karaciğer ve böbrek de diğer metastaz yerleridir.
 
 Prognoz, tümörün kökenine göre çarpıcı biçimde değişir.
 Plasental, yani gestasyonel koryokarsinom kemoterapiye son derece duyarlıdır ve uzak metastaz olsa bile neredeyse %100 kür sağlanır.
@@ -256,13 +256,13 @@ Ders notunuz bu farkı plasental tümörde babadan gelen, yani paternal antijenl
 Bu bir paradokstur: gestasyonel koryokarsinom çok agresif ve tanıda genellikle metastatik olmasına karşın en iyi tedavi edilebilen solid kanserlerdendir.
 
 @@ Plasental bölge trofoblastik tümörü
-Plasental bölge trofoblastik tümörü, trofoblastik neoplaziler arasında farklı bir hücre tipinden gelişen nadir bir tümördür ve gestasyonel trofoblastik neoplazilerin yüzde ikisinden azını oluşturur. Kökeni ekstravillöz trofoblastlardır; bunlara ara trofoblast ya da intermediyer trofoblast da denir. Normalde ekstravillöz trofoblast sitotrofoblasttan çoğalır ve anneye ait desidua ile miyometriyumu istila ederek plasentanın uterus duvarına tutunmasını sağlar. Bu tümör, normalde istila yeteneğine sahip bu hücrelerin neoplazisidir; bu yüzden plasentanın yerleştiği bölgede, desidua ve miyometriyum içinde büyür. Burası önemli, çıkmış sorularda plasental bölge trofoblastik tümörünün hangi hücreden kaynaklandığı birçok kez soruldu ve cevap intermediyer trofoblasttır. Sitotrofoblast, sinsityotrofoblast, fetal eritrosit ya da desidual hücreler değildir. Koryokarsinomun sitotrofoblast ve sinsityotrofoblast karışımından bu açıdan ayrılır.
+Plasental bölge trofoblastik tümörü, trofoblastik neoplaziler arasında farklı bir hücre tipinden gelişen nadir bir tümördür ve gestasyonel trofoblastik neoplazilerin %2'sinden azını oluşturur. Kökeni ekstravillöz trofoblastlardır; bunlara ara trofoblast ya da intermediyer trofoblast da denir. Normalde ekstravillöz trofoblast sitotrofoblasttan çoğalır ve anneye ait desidua ile miyometriyumu istila ederek plasentanın uterus duvarına tutunmasını sağlar. Bu tümör, normalde istila yeteneğine sahip bu hücrelerin neoplazisidir; bu yüzden plasentanın yerleştiği bölgede, desidua ve miyometriyum içinde büyür. Burası önemli, çıkmış sorularda plasental bölge trofoblastik tümörünün hangi hücreden kaynaklandığı birçok kez soruldu ve cevap intermediyer trofoblasttır. Sitotrofoblast, sinsityotrofoblast, fetal eritrosit ya da desidual hücreler değildir. Koryokarsinomun sitotrofoblast ve sinsityotrofoblast karışımından bu açıdan ayrılır.
 
 Tümör hücreleri sitotrofoblast ve sinsityotrofoblastla örtüşen bir fenotip gösterir, yani her iki hücre tipinin bazı özelliklerini taşır.
 Hormon profili onu diğer trofoblastik hastalıklardan ayıran en önemli laboratuvar ipucudur: hCG az miktarda üretildiği için serum hCG genellikle düşüktür; buna karşılık insan plasental laktojeni önemli miktarda üretilir.
 Mol ve koryokarsinomda hCG çok yüksek ya da hızla yükselirken bu tümörde düşüktür; dolayısıyla düşük hCG trofoblastik tümörü dışlamaz.
 
-Genetik olarak bu tümörler genellikle iks iks karyotipli diploid tümörlerdir.
+Genetik olarak bu tümörler genellikle XX karyotipli diploid tümörlerdir.
 Çoğu, gebelikten birkaç ay sonra ortaya çıkar ve genellikle yavaş seyirlidir; bu, hızla yükselen hCG ve erken metastazla giden koryokarsinomdan belirgin bir farktır.
 Tümör endometriyum ve miyometriyumla sınırlıysa prognoz genellikle iyidir; uterus dışına yayılırsa prognoz kötüdür.
 Diğer trofoblastik tümörlere göre kemoterapiye daha az duyarlıdır.

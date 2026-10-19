@@ -6,6 +6,7 @@
 import type { Express, Request, Response } from 'express';
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 import { metinParagraflari } from './sesliAnlatim';
 
 const KOK = path.join(process.cwd(), 'data', 'sesli_anlatim');
@@ -16,6 +17,7 @@ const P = {
   ses: (k: string, v: string) => path.join(KOK, 'ses', k, `${v}.mp3`),
   hizalama: (k: string) => path.join(KOK, 'hizalama', `${k}.json`),
   vurgu: (k: string) => path.join(KOK, 'vurgu', `${k}.json`),
+  cumle: (k: string) => path.join(KOK, 'cumle_zaman', `${k}.json`),
 };
 
 interface Ders { key: string; no: number; baslik: string; sira: number }
@@ -174,6 +176,14 @@ export function registerCanliDersRoutes(app: Express) {
       ? { deckId: hz.deckId, dosyalar: hz.dosyalar, paragraflar: hz.paragraflar }
       : null;
     const b = bransBilgisi(d);
+    // Cümle başlangıçları (scripts/sesli_anlatim/cumle_zaman.py): yalnız metin ve ses dosyası ölçüldüğü hâliyle duruyorsa
+    const cz = oku<any>(P.cumle(key), null);
+    const czGecerli = cz && cz.metinHash === crypto.createHash('sha1').update(pars.map((p) => p.t).join('\n')).digest('hex');
+    const cumleZaman = (vid: string) => {
+      const e = czGecerli ? cz.varyantlar?.[vid] : null;
+      if (!e || !e.p) return null;
+      try { return fs.statSync(P.ses(key, vid)).size === e.bayt ? e.p : null; } catch { return null; }
+    };
     res.setHeader('Cache-Control', 'public, max-age=60');
     res.json({
       key,
@@ -188,6 +198,7 @@ export function registerCanliDersRoutes(app: Express) {
       varyantlar: vs.map((v) => ({
         ...ozet(key)(v),
         zamanlama: Array.isArray(v.zamanlama) && v.zamanlama.length === pars.length ? v.zamanlama : null,
+        cumleZaman: Array.isArray(v.zamanlama) && v.zamanlama.length === pars.length ? cumleZaman(v.id) : null,
       })),
       pdf,
       // önemli cümle/terim aralıkları (scripts/sesli_anlatim/vurgu_uret.py): { "<i>": [[bas, son, "c"|"t", onem]] }

@@ -51,15 +51,18 @@ def embed_gpu(texts: list[str]):
 
 
 CIKTI = KOK / "data" / "sesli_anlatim" / "vurgu"
-CUMLE = re.compile(r"[^.!?…]+(?:[.!?…]+[\"'”’)]*|$)\s*")
+sys.path.insert(0, str(KOK / "scripts" / "sesli_anlatim"))
+from pdf_hizala import cumle_sinirlari  # noqa: E402 — oynatıcının okunan cümlesiyle aynı sınırlar
 
 
 def cumleler(t: str):
     out = []
-    for m in CUMLE.finditer(t):
-        s, e = m.start(), m.end()
-        while e > s and t[e - 1].isspace(): e -= 1
-        if e - s > 3: out.append((s, e))
+    s = 0
+    for e in cumle_sinirlari(t):
+        b, son = s, e
+        while son > b and t[son - 1].isspace(): son -= 1
+        if son - b > 3: out.append((b, son))
+        s = e
     return out
 
 

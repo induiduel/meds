@@ -9,7 +9,7 @@ Bu mutasyonların üç kaynağı vardır.
 2.'si hücresel süreçlerin hata payıdır; DNA kopyalanırken hiçbir dış etken olmadan kendiliğinden, yani spontan mutasyonlar oluşur.
 3.'sü kalıtsal, yani germ hattı mutasyonlarıdır; ebeveynden aktarılır, vücudun tüm hücrelerinde bulunur ve kansere yatkınlığın zeminini oluşturur.
 
-Genetik koda dokunmayan 2. bir mekanizma da vardır: epigenetik değişiklikler.
+Genetik koda dokunmayan ikinci bir mekanizma da vardır: epigenetik değişiklikler.
 DNA metilasyonu ve histon modifikasyonları, gen ekspresyonunu mutasyon olmadan değiştirir.
 Yani gen dizisi sağlam kalsa bile o gen susturulabilir ya da aşırı ifade edilebilir.
 Kanser hücresindeki bozukluk yalnız dizi değişikliğiyle sınırlı değildir; epigenetik düzenleme bozuklukları da aynı sonuca katkı verir.
@@ -21,53 +21,53 @@ Burada Darwinci seçilim devreye girer: büyüme ya da sağkalım avantajı sağ
 Tümör ilerlemesi dediğimiz şey, işte bu avantajlı alt klonların seçilmesi ve tümörün giderek daha saldırgan davranmasıdır.
 
 @@ Kanserin ayırt edici özellikleri
-Kanser hücreleri gelişimleri boyunca normal hücreden ayrılan sekiz temel özellik kazanır. 1.'si büyüme sinyallerinde kendi kendine yeterliliktir; hücre dış uyarı olmadan çoğalma sinyali üretir. 2.'si büyüme engelleyici sinyallere duyarsızlıktır; fren görevi gören sinyallere yanıt vermez. 3.'sü değişmiş hücresel metabolizmadır, buna Varburg etkisi denir. Kanser hücresi oksijen varken bile glukozu ağırlıklı olarak glikolizle kullanır; bu nedenle Varburg etkisi aerobik glikoliz olarak da bilinir. Bu yol enerji, yani ATP açısından verimsizdir, ama hızlıdır ve büyüme için yapı taşı sağlar.
+Kanser hücreleri gelişimleri boyunca normal hücreden ayrılan 8 temel özellik kazanır. 1.'si büyüme sinyallerinde kendi kendine yeterliliktir; hücre dış uyarı olmadan çoğalma sinyali üretir. 2.'si büyüme engelleyici sinyallere duyarsızlıktır; fren görevi gören sinyallere yanıt vermez. 3.'sü değişmiş hücresel metabolizmadır, buna Warburg etkisi denir. Kanser hücresi oksijen varken bile glukozu ağırlıklı olarak glikolizle kullanır; bu nedenle Warburg etkisi aerobik glikoliz olarak da bilinir. Bu yol enerji, yani ATP açısından verimsizdir, ama hızlıdır ve büyüme için yapı taşı sağlar.
 
-4. özellik apoptozdan, yani programlı hücre ölümünden kaçınmadır.
+Dördüncü özellik apoptozdan, yani programlı hücre ölümünden kaçınmadır.
 5.'si sınırsız çoğalma potansiyelidir; hücre bir anlamda ölümsüzlük kazanır.
-6.'sı sürekli anjiyogenezdir; yeni damar oluşumu kesintisiz uyarılır.
-7.'si istila ve metastazdır, yani çevreye yayılma ve uzak bölgelere ulaşma yeteneği.
-8.'si bağışıklık gözetiminden kaçınmadır; tümör, bağışıklık sisteminin tanıma ve yok etme mekanizmalarından kurtulur.
+Altıncısı sürekli anjiyogenezdir; yeni damar oluşumu kesintisiz uyarılır.
+Yedincisi istila ve metastazdır, yani çevreye yayılma ve uzak bölgelere ulaşma yeteneği.
+Sekizincisi bağışıklık gözetiminden kaçınmadır; tümör, bağışıklık sisteminin tanıma ve yok etme mekanizmalarından kurtulur.
 Bu özelliklerin hepsi genetik ve epigenetik lezyonların ortak sonucudur.
 
-Kitabın Hanahan ve Vaynberg şeması bu sekiz özelliği kanser hücresinin etrafında bir çember olarak gösterir ve yanına iki etkinleştirici faktör ekler.
+Kitabın Hanahan ve Weinberg şeması bu 8 özelliği kanser hücresinin etrafında bir çember olarak gösterir ve yanına 2 etkinleştirici faktör ekler.
 1.'si genomik istikrarsızlıktır, mutatör fenotip de denir; mutasyon hızını artırarak diğer özelliklerin kazanılmasını hızlandırır.
 2.'si tümör gelişimini destekleyen inflamasyondur; inflamatuvar ortam tümör hücrelerine destek sağlar.
 Dikkat edin, bu ikisi kendi başına birer özellik değil, özelliklerin kazanılmasını kolaylaştıran etkinleştirici faktörlerdir.
 Çoğu kanser hücresi bu özellikleri genellikle kritik genlerdeki mutasyonlar nedeniyle kazanır.
 
 @@ Ras sinyal yolu
-Büyüme sinyalinin hücre içine nasıl taşındığını ras proteini üzerinden izleyelim. Büyüme faktörü, hücre zarındaki büyüme faktörü reseptörüne bağlanır; reseptör fosforillenir ve bir adaptör proteini etkinleştirir. Ras, farnesil membran çapası denen lipid bağlantısıyla hücre zarının iç yüzüne tutunmuş durumdadır. İnaktif ras ge de pe, yani guanozin difosfata bağlıdır. Uyarı geldiğinde ge te pe, yani guanozin trifosfata bağlı aktif duruma geçer.
+Büyüme sinyalinin hücre içine nasıl taşındığını ras proteini üzerinden izleyelim. Büyüme faktörü, hücre zarındaki büyüme faktörü reseptörüne bağlanır; reseptör fosforillenir ve bir adaptör proteini etkinleştirir. Ras, farnesil membran çapası denen lipid bağlantısıyla hücre zarının iç yüzüne tutunmuş durumdadır. İnaktif ras GDP, yani guanozin difosfata bağlıdır. Uyarı geldiğinde GTP, yani guanozin trifosfata bağlı aktif duruma geçer.
 
 Normal hücrede bu aktivasyon geçicidir.
-Bunun iki nedeni vardır: ras proteininin kendi içsel ge te pe az aktivitesi ve ge te pe'nin parçalanmasını hızlandıran ge te pe az aktive edici proteinler, kısaca gap proteinleri.
-Ge te pe hidrolize olunca ras yeniden ge de pe'li inaktif hale döner.
+Bunun 2 nedeni vardır: ras proteininin kendi içsel GTPaz aktivitesi ve GTP'nin parçalanmasını hızlandıran GTPaz aktive edici proteinler, kısaca GAP proteinleri.
+GTP hidrolize olunca ras yeniden GDP'li inaktif hale döner.
 Bu hidroliz engellenirse ras sürekli aktif kalır ve hücre kesintisiz büyüme sinyali alır.
 
-Aktive edilmiş ras, büyüme yanlısı sinyalleri iki yol boyunca iletir.
-1.'si raf ve map kinaz yoludur; map kinaz, mitojenle aktive olan protein kinaz demektir.
-Bu yolun üyeleri arasında kanserde sıklıkla mutasyona uğrayan üye be raf proteinidir.
-2.'si pe i üç kinaz, yani fosfatidilinositol üç kinaz ve akt kinaz yoludur; bu yol em tor, yani memeli rapamisin hedefi denen kinaza uzanır.
+Aktive edilmiş ras, büyüme yanlısı sinyalleri 2 yol boyunca iletir.
+1.'si RAF ve MAP kinaz yoludur; MAP kinaz, mitojenle aktive olan protein kinaz demektir.
+Bu yolun üyeleri arasında kanserde sıklıkla mutasyona uğrayan üye BRAF proteinidir.
+2.'si PI3 kinaz, yani fosfatidilinositol 3 kinaz ve AKT kinaz yoludur; bu yol mTOR, yani memeli rapamisin hedefi denen kinaza uzanır.
 Her iki yolun her bileşeninin birkaç yakın ilişkili üyesi vardır.
 Bu sinyallerin sonunda çekirdekte büyüme yanlısı genlerin transkripsiyonu artar; büyümeyi destekleyen metabolizma, artmış protein sentezi ve hücre döngüsünde ilerleme ile hücre büyür.
 Bu sistemin frenleri de önemlidir.
-Gap proteinlerinin yanında, pe i üç kinaz inhibitörü olan pe ten proteini, aktif rasın aşağı akışındaki sinyallemede önemli bir fren görevi görür.
+GAP proteinlerinin yanında, PI3 kinaz inhibitörü olan PTEN proteini, aktif rasın aşağı akışındaki sinyallemede önemli bir fren görevi görür.
 Frenlerin kaybı da, gaz pedalının kilitlenmesi kadar büyüme sinyalini artırır.
 
 @@ Hücre döngüsü, siklinler ve fren aileleri
-Hücre döngüsündeki ilerleme, siklinlerin siklin bağımlı kinazlarla, kısaca CDK'larla oluşturduğu komplekslerle yönetilir ve her kompleks döngünün belirli bir evresinde aktiftir. Ge bir fazından es fazına geçişte siklin de ile CDK dört, siklin de ile CDK altı ve siklin e ile CDK iki kompleksleri çalışır. Bunlar retinoblastom proteinini, kısaca er be proteinini fosforlayarak ge bir ve es kontrol noktasından geçişi teşvik eder. Er be proteini fosforlanmamışken bu kapıyı kapalı tutan bir frendir; fosforilasyon bu freni kaldırır. Es fazında siklin a ile CDK iki ve siklin a ile CDK bir aktiftir. Ge iki fazından em fazına geçiş için ise siklin be ile CDK bir gereklidir.
+Hücre döngüsündeki ilerleme, siklinlerin siklin bağımlı kinazlarla, kısaca CDK'larla oluşturduğu komplekslerle yönetilir ve her kompleks döngünün belirli bir evresinde aktiftir. G1 fazından S fazına geçişte siklin D ile CDK4, siklin D ile CDK6 ve siklin E ile CDK2 kompleksleri çalışır. Bunlar retinoblastom proteinini, kısaca RB proteinini fosforlayarak G1/S kontrol noktasından geçişi teşvik eder. RB proteini fosforlanmamışken bu kapıyı kapalı tutan bir frendir; fosforilasyon bu freni kaldırır. S fazında siklin A ile CDK2 ve siklin A ile CDK1 aktiftir. G2 fazından M fazına geçiş için ise siklin B ile CDK1 gereklidir.
 
-Bu gaz pedalına karşı hücre iki CDK inhibitör ailesiyle fren uygular.
-1. aile pe on beş, pe on altı, pe on sekiz ve pe on dokuzdur; seçici çalışır ve yalnız siklin de ile CDK dört ve CDK altı kompleksleri üzerine etki eder.
-Böylece er be fosforilasyonunun ilk basamağını frenler.
-2. aile pe yirmi bir, pe yirmi yedi ve pe elli yedidir; geniş etkilidir ve tüm CDK'ları inhibe edebilir.
+Bu gaz pedalına karşı hücre 2 CDK inhibitör ailesiyle fren uygular.
+Birinci aile p15, p16, p18 ve p19'dur; seçici çalışır ve yalnız siklin D ile CDK4 ve CDK6 kompleksleri üzerine etki eder.
+Böylece RB fosforilasyonunun ilk basamağını frenler.
+İkinci aile p21, p27 ve p57'dir; geniş etkilidir ve tüm CDK'ları inhibe edebilir.
 Bu frenlerin işlev kaybı, siklin CDK komplekslerinin denetimsiz çalışmasına ve büyüme engelleyici sinyallere duyarsızlığa zemin hazırlar.
-Özetle gaz pedalı ras ve siklin CDK kompleksleri, frenler ise gap, pe ten, er be ve CDK inhibitörleridir; bu dengenin bozulması proliferasyonun denetimden çıkmasının temelidir.
+Özetle gaz pedalı ras ve siklin CDK kompleksleri, frenler ise GAP, PTEN, RB ve CDK inhibitörleridir; bu dengenin bozulması proliferasyonun denetimden çıkmasının temelidir.
 
 @@ Temel terimler, parankim ve stroma
 Şimdi terminolojiye geçelim. Neoplazi, yeni ve otonom hücre çoğalmasıdır; büyüme, dokunun gereksiniminden ve dış denetimden bağımsız ilerler. Tümör, aslen şişlik anlamı taşıyan, yaygın kullanılan bir klinik terimdir ve bugün her neoplazm için kullanılır; iyi ya da kötü huylu ayrımı yapmaz. Onkoloji ise tümörlerin bilimsel ve klinik incelenmesidir.
 
-Her tümör iki bileşenden oluşur.
+Her tümör 2 bileşenden oluşur.
 Parankim, neoplazmın dönüşmüş, neoplastik hücre bileşenidir.
 Tümörün biyolojik davranışını parankim belirler ve tümörün adlandırılması parankime göre yapılır.
 Stroma ise konak kökenli destek dokusudur; bağ dokusu, damarlar ve inflamatuvar hücrelerden oluşur.
@@ -85,7 +85,7 @@ Keskin sınır ve kapsül, tümörün çevreyi istila etmediğinin ipucudur.
 Malign, yani kötü huylu neoplazmın iki temel özelliği lokal invazyon ve uzak metastaz yapma kapasitesidir.
 Tedavi edilmezse genellikle ölümcüldür ve kanser terimi tüm malign neoplazmları kapsar.
 Ancak agresiflik değişkendir: bazı kanserler yavaş seyreder, bazıları hızlı ilerler ama tedaviye duyarlıdır.
-Yani malign tanısı tek Tip 1 prognoz anlamına gelmez.
+Yani malign tanısı tek tip bir prognoz anlamına gelmez.
 
 Malign prototip olarak memenin invaziv duktal karsinomuna bakalım.
 Kesit yüzeyinde taş gibi sert, içeri çekilmiş bir lezyon vardır ve çevredeki meme dokusuna sızar.
@@ -130,7 +130,7 @@ Keratin incisi skuamöz farklılaşmanın mikroskopik kanıtıdır ve tümörün
 Yani malign bir tümör de köken aldığı epitelin özelliklerini koruyabilir.
 
 @@ Terminolojide malign oma istisnaları
-Genel kuralda oma son eki benign tümörü anlatır. Ancak bazı malign tümörler tarihsel olarak yerleşmiş isimleri nedeniyle bu eki taşır. Bunlar dört tanedir: lenfoma, yani lenfoid hücrelerin malign tümörü; melanom, yani melanositlerin malign tümörü; mezotelyoma, yani mezotel döşemesinin malign tümörü; ve seminom, yani testisin germ hücreli malign tümörü. Klinik pratikte bu tümörlerin her zaman malign kabul edildiği unutulmamalıdır; isimdeki oma burada yanıltıcıdır.
+Genel kuralda oma son eki benign tümörü anlatır. Ancak bazı malign tümörler tarihsel olarak yerleşmiş isimleri nedeniyle bu eki taşır. Bunlar 4 tanedir: lenfoma, yani lenfoid hücrelerin malign tümörü; melanom, yani melanositlerin malign tümörü; mezotelyoma, yani mezotel döşemesinin malign tümörü; ve seminom, yani testisin germ hücreli malign tümörü. Klinik pratikte bu tümörlerin her zaman malign kabul edildiği unutulmamalıdır; isimdeki oma burada yanıltıcıdır.
 
 Burası önemli, bu istisnalar çıkmış sorularda tekrar tekrar soruldu.
 Hangisi kötü huyludur diye sorulduğunda mezotelyoma ve melanom doğru cevap oldu; şıklardaki nevüs, ürotelyal papillom, renal tübüler adenom, osteom, fibrom, hemanjiyom ve hidatidiform mol ise benign lezyonlardır.
@@ -167,7 +167,7 @@ Overde seröz ve müsinöz kistadenomun malign karşılıkları seröz ve müsin
 
 Tablonun son bölümü birden fazla hücre tipinden oluşan tümörlerdir.
 Normalde aynı germ tabakasından gelişen hücrelerden oluşanlara örnek, tükürük bezlerinde pleomorfik adenom, yani mikst tükürük bezi tümörü ve onun malign karşılığı olan malign mikst tükürük bezi tümörüdür.
-Böbrek taslağından, yani renal anlajdan gelişen malign tümör Vilms tümörüdür ve benign karşılığı verilmez.
+Böbrek taslağından, yani renal anlajdan gelişen malign tümör Wilms tümörüdür ve benign karşılığı verilmez.
 Birden fazla germ tabakasından gelişen tümörler ise gonadlardaki ya da embriyonik artıklardaki totipotent hücrelerden köken alır: matür teratom ve dermoid kist benign, immatür teratom ve teratokarsinom maligndir.
 Yani teratomda davranışı doku olgunluğu belirler.
 
@@ -183,16 +183,16 @@ Malign tümörlerin bir kısmı da iyi diferansiye olabilir; hatırlayın, iyi d
 Anaplazinin morfolojik bulgularını sayalım.
 İlki hücresel ve nükleer pleomorfizmdir, yani hücre ve çekirdeklerin boyut ve şekil çeşitliliği.
 2.'si nükleer değişikliklerdir: çekirdeğin koyu boyanması, yani hiperkromazi, büyümüş nükleus ve yüksek nükleus sitoplazma oranı.
-Normalde bire dört ile bire altı arasında olan bu oran anaplazide yaklaşık bire bire yükselir.
+Normalde 1:4 ile 1:6 arasında olan bu oran anaplazide yaklaşık 1:1'e yükselir.
 Kromatin de kaba kümeler halinde toplanabilir ve çekirdekte büyük, belirgin nükleoller görülebilir.
 3.'sü tümör dev hücreleridir; tek bir dev çekirdeğe ya da çok sayıda çekirdeğe sahiptirler.
-4.'sü mitozlardır: sayıca sıktır ve biçimce atipiktir, yani üç ya da dört kutuplu anormal mitotik figürler izlenir.
+4.'sü mitozlardır: sayıca sıktır ve biçimce atipiktir, yani 3 ya da 4 kutuplu anormal mitotik figürler izlenir.
 Mitozun sık olması proliferasyonu, atipik olması maligniteyi düşündürür.
 
 Pleomorfik malign bir tümör olan rabdomiyosarkomda hücre ve çekirdek boyutlarında belirgin varyasyon, hiperkromatik çekirdekler ve tümör dev hücreleri dikkat çeker.
-Anaplastik hücrelerin yüksek büyütmesinde ise ortadaki belirgin bir hücrenin anormal üç kutuplu bir iğ yapısına sahip olduğu görülür.
+Anaplastik hücrelerin yüksek büyütmesinde ise ortadaki belirgin bir hücrenin anormal 3 kutuplu bir iğ yapısına sahip olduğu görülür.
 Burası önemli, çıkmış soruda anaplazi bulgusu olmayan seçenek soruldu ve doğru cevap matür bazal membran oluşumu ile hücrelerin düzenli apikobazal polaritesiydi.
-Pleomorfizm, bire bire yaklaşan nükleus sitoplazma oranı, üç ya da dört kutuplu atipik mitozlar, kaba kromatin kümelenmesi ve dev nükleoller anaplazi bulgusudur; düzenli polarite ve olgun yapı ise anaplazinin tam tersidir.
+Pleomorfizm, 1:1'e yaklaşan nükleus sitoplazma oranı, 3 ya da 4 kutuplu atipik mitozlar, kaba kromatin kümelenmesi ve dev nükleoller anaplazi bulgusudur; düzenli polarite ve olgun yapı ise anaplazinin tam tersidir.
 
 Diferansiyasyon fonksiyonu da belirler.
 Diferansiye olmamış hücreler genellikle dokuya özgü fonksiyonlarını kaybetmiştir.
@@ -234,12 +234,12 @@ Kesin ölçütler kapsül ve sınır, lokal invazyon ve metastazdır.
 @@ Metastaz: tanım ve sıklık
 Metastaz, primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşmasıdır. Malignite için ayırt edici özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir. Burası önemli, sınav spotu olarak istisnaları bilin: bazal hücreli karsinomlar ve birçok primer santral sinir sistemi tümörü lokal invazivdir ama nadiren metastaz yapar. Metastatik kanserle kaplı bir karaciğerde, karaciğer parankimi içinde çok sayıda, farklı boyutlarda tümör nodülü dağılmıştır.
 
-Teşhis anında katı tümörlü hastaların yaklaşık yüzde otuzunda klinik metastaz, yaklaşık yüzde yirmisinde ise henüz saptanamayan gizli, yani okült metastaz vardır.
+Teşhis anında katı tümörlü hastaların yaklaşık %30'unda klinik metastaz, yaklaşık %20'sinde ise henüz saptanamayan gizli, yani okült metastaz vardır.
 Büyük ve anaplastik tümörlerde metastaz olasılığı artar; ancak küçük tümörler de metastaz yapabilir, boyut tek başına güvence vermez.
 Lösemi ve lenfomaların ise kan ve lenfoid doku üzerinden yaygın oldukları varsayılır ve tanı anında sistemik kabul edilirler.
 
 @@ Metastaz yolları: tohumlanma ve lenfatik yayılım
-Üç ana metastaz yolu vardır: vücut boşlukları içine tohumlanma, lenfatik yayılım ve hematogen, yani kan yoluyla yayılım. Birçok tümör birden fazla yolu aynı anda kullanabilir. Tohumlanmada tümör bir seröz boşluğa açılır ve hücreler boşluk yüzeylerine yayılır. Tutulan boşluklar periton, plevra, perikard ve beyin ventrikülleridir. Klasik örnek over karsinomudur; periton yüzeylerine karın içi tohumlanma şeklinde yayılır. Santral sinir sisteminde medulloblastom ve ependimom, beyin omurilik sıvısı yoluyla meninks ve spinal yüzeylere yayılır.
+3 ana metastaz yolu vardır: vücut boşlukları içine tohumlanma, lenfatik yayılım ve hematogen, yani kan yoluyla yayılım. Birçok tümör birden fazla yolu aynı anda kullanabilir. Tohumlanmada tümör bir seröz boşluğa açılır ve hücreler boşluk yüzeylerine yayılır. Tutulan boşluklar periton, plevra, perikard ve beyin ventrikülleridir. Klasik örnek over karsinomudur; periton yüzeylerine karın içi tohumlanma şeklinde yayılır. Santral sinir sisteminde medulloblastom ve ependimom, beyin omurilik sıvısı yoluyla meninks ve spinal yüzeylere yayılır.
 
 Lenfatik yayılım en çok karsinomlar için tipiktir.
 Bölgesel lenf düğümleri ilk metastaz bölgesidir.
@@ -265,14 +265,14 @@ Vücutta geniş yer kaplayan ve iyi kanlanan bir dokuda metastazın nadir olmas�
 Seçici yerleşimin mekanizmasında adezyon molekülleri, kemokin reseptörleri ve stromal faktörler rol oynar.
 
 @@ Kanser epidemiyolojisi
-İki bin on sekiz tahminlerine göre dünyada yaklaşık on yedi milyon yeni kanser vakası ve yaklaşık dokuz virgül altı milyon kanser ölümü olmuştur. Nüfus artışı ve yaşlanmayla bu sayılar yükselmektedir; 2035'te yaklaşık yirmi dört milyon yeni vaka ve on dört virgül altı milyon ölüm beklenmektedir. Kanser, kardiyovasküler hastalıklardan sonra 2. ölüm nedenidir.
+2018 tahminlerine göre dünyada yaklaşık 17 milyon yeni kanser vakası ve yaklaşık 9,6 milyon kanser ölümü olmuştur. Nüfus artışı ve yaşlanmayla bu sayılar yükselmektedir; 2035'te yaklaşık 24 milyon yeni vaka ve 14,6 milyon ölüm beklenmektedir. Kanser, kardiyovasküler hastalıklardan sonra ikinci ölüm nedenidir.
 
-Amerika Birleşik Devletleri için 2020 iki tahmini yaklaşık bir virgül dokuz milyon yeni vaka ve yaklaşık altı yüz dokuz bin ölümdür.
+Amerika Birleşik Devletleri için 2022 tahmini yaklaşık 1,9 milyon yeni vaka ve yaklaşık 609.000 ölümdür.
 Sık görülen kanserler erkekte prostat, akciğer ve kolorektal; kadında meme, akciğer ve kolorektal kanserlerdir.
 İnsidansta erkekte prostat %27, kadında meme %31 ile ilk sıradadır; akciğer ve bronş erkekte %12, kadında %13'tür.
-Mortalitede ise her iki cinsiyette de akciğer ve bronş %21 ile 1. sıradadır; 2. sırada erkekte %11 ile prostat, kadında %15 ile meme gelir.
+Mortalitede ise her iki cinsiyette de akciğer ve bronş %21 ile birinci sıradadır; ikinci sırada erkekte %11 ile prostat, kadında %15 ile meme gelir.
 Yani en sık görülen kanser ile en çok öldüren kanser aynı değildir.
-Son 50 yılda kanser mortalitesi erkeklerde yaklaşık %20, kadınlarda yaklaşık %10 azalmıştır; bu düşüş sigara kullanımındaki azalma ve tanı ile tedavideki iyileşmeyle ilişkilidir.
+Son 20-30 yılda kanser mortalitesi erkeklerde yaklaşık %20, kadınlarda yaklaşık %10 azalmıştır; bu düşüş sigara kullanımındaki azalma ve tanı ile tedavideki iyileşmeyle ilişkilidir.
 
 @@ Çevresel faktörler ve mesleki kanserler
 Çevresel maruziyetler birçok yaygın kanser için baskın risk faktörüdür. Bunun kanıtı coğrafi farklılıklardır: meme kanseri Amerika ve Avrupa'da Japonya'ya göre 9 kat fazladır; mide kanseri Japonya'da Amerika'ya göre yaklaşık 7 kat fazladır; hepatosellüler karsinom bazı Afrika bölgelerinde en yaygın kanserdir. Göç eden topluluklarda nesiller boyunca riskler yeni ülkenin populasyonuna doğru değişir. Genetik yapı bu kadar kısa sürede değişmediğine göre, bu kayma çevresel etkenlerin rolünü destekler.
@@ -294,10 +294,10 @@ Krom bileşikleri akciğer karsinomuyla ilişkilidir; metal alaşımı, boya ve 
 Nikel bileşikleri akciğer ve orofaringeal karsinoma yol açar; nikel kaplamada kullanılır, alaşım, seramik ve pillerin bileşenidir ve paslanmaz çelik ark kaynağının yan ürünüdür.
 Radon ve bozunma ürünleri akciğer karsinomuna yol açar; uranyum içeren minerallerin bozunmasından kaynaklanır ve taş ocakları ile yeraltı madenlerinde ciddi bir tehlikedir.
 Vinil klorür ise hepatik anjiosarkoma, yani karaciğerin damar kökenli sarkomuna yol açar; soğutucu, vinil polimerler için monomer ve plastik yapıştırıcısıdır, eskiden aerosol itici gazı olarak da kullanılmıştır.
-Burası önemli, sınav spotu olarak üç eşleşmeyi kesin bilin: asbest mezotelyoma, benzen akut miyeloid lösemi, vinil klorür hepatik anjiosarkom.
+Burası önemli, sınav spotu olarak 3 eşleşmeyi kesin bilin: asbest mezotelyoma, benzen akut miyeloid lösemi, vinil klorür hepatik anjiosarkom.
 
 @@ Yaş ve edinilmiş yatkınlık koşulları
-Kanser insidansı yaşla birlikte artar ve kanser ölümlerinin çoğu elli beş ile 75 yaş arasında görülür. Bunun nedenleri somatik mutasyonların zaman içinde birikmesi ve yaşlanmaya bağlı bağışıklık gözetiminin azalmasıdır. Çocukluk çağında ise kanserler tüm çocuk ölümlerinin yaklaşık yüzde onunu oluşturur. Çocuklarda sık görülen tipler akut lösemiler ve lenfomalar, santral sinir sistemi tümörleri ve yumuşak doku ile kemik sarkomlarıdır.
+Kanser insidansı yaşla birlikte artar ve kanser ölümlerinin çoğu 55 ile 75 yaş arasında görülür. Bunun nedenleri somatik mutasyonların zaman içinde birikmesi ve yaşlanmaya bağlı bağışıklık gözetiminin azalmasıdır. Çocukluk çağında ise kanserler tüm çocuk ölümlerinin yaklaşık %10'unu oluşturur. Çocuklarda sık görülen tipler akut lösemiler ve lenfomalar, santral sinir sistemi tümörleri ve yumuşak doku ile kemik sarkomlarıdır.
 
 Kalıtsal olmayan bazı durumlar da kansere zemin hazırlar.
 Kronik enflamasyon çoğunlukla karsinom gelişimi için zemin hazırlar: kronik gastrit mide adenokarsinomuna, kronik hepatit hepatosellüler karsinoma, inflamatuvar bağırsak hastalığı kolorektal karsinoma zemin olur.
@@ -310,14 +310,14 @@ Asbestoz ve silikoz, asbest lifleri ve silika partikülleri nedeniyle mezotelyom
 İnflamatuvar bağırsak hastalığı kolorektal karsinomla, liken sklerozus vulvar skuamöz hücreli karsinomla ilişkilidir.
 Pankreatit, kronik alkol kullanımı ve tripsinojen geni gibi germ hattı mutasyonları zemininde pankreas karsinomuna yol açar.
 Kronik kolesistit, safra asitleri, bakteriler ve safra kesesi taşları nedeniyle safra kesesi kanserine zemin olur.
-Reflü özofajiti ve Barret özofagusunda etken mide asididir ve gelişen kanser özofagus adenokarsinomudur.
-Şögren sendromu ve Haşimoto tiroiditi ekstranodal marjinal zon lenfomayla ilişkilidir.
+Reflü özofajiti ve Barrett özofagusunda etken mide asididir ve gelişen kanser özofagus adenokarsinomudur.
+Sjögren sendromu ve Hashimoto tiroiditi ekstranodal marjinal zon lenfomayla ilişkilidir.
 
-Tablonun 2. bölümünde etken çoğunlukla enfeksiyondur.
-Opistorkis viverrini denen, safra kanalına yerleşen yassı ve yaprak şeklinde karaciğer kelebeği, kolanjit zemininde kolanjiyokarsinom ve kolon karsinomuyla ilişkilidir.
+Tablonun ikinci bölümünde etken çoğunlukla enfeksiyondur.
+Opisthorchis viverrini denen, safra kanalına yerleşen yassı ve yaprak şeklinde karaciğer kelebeği, kolanjit zemininde kolanjiyokarsinom ve kolon karsinomuyla ilişkilidir.
 Helicobacter pylori, gastrit ve ülser zemininde hem gastrik adenokarsinoma hem de ekstranodal marjinal zon lenfomaya yol açabilir.
-Hepatit be ya da ce virüsü hepatosellüler karsinoma, osteomiyelitteki bakteriyel enfeksiyon drenaj yapan sinüslerde karsinoma, şistozomiyazise bağlı kronik sistit ise mesane karsinomuna zemin hazırlar.
-Burası önemli, sınav spotu olarak Helicobacter pylori ile mide adenokarsinomu ve marjinal zon lenfoma, şistozomiyazis ile mesane karsinomu, Barret özofagusu ile özofagus adenokarsinomu eşleşmelerini bilin.
+Hepatit B ya da C virüsü hepatosellüler karsinoma, osteomiyelitteki bakteriyel enfeksiyon drenaj yapan sinüslerde karsinoma, şistozomiyazise bağlı kronik sistit ise mesane karsinomuna zemin hazırlar.
+Burası önemli, sınav spotu olarak Helicobacter pylori ile mide adenokarsinomu ve marjinal zon lenfoma, şistozomiyazis ile mesane karsinomu, Barrett özofagusu ile özofagus adenokarsinomu eşleşmelerini bilin.
 
 @@ Öncü lezyonlar ve benign tümörlerin riski
 Bazı lezyonlar kendisi kanser olmadan belirli bir kanserin riskini açıkça artırır. Alışkanlık haline gelmiş sigara içenlerde bronş mukozasındaki skuamöz metaplazi ve displazi akciğer karsinomu riskini artırır. Karşılanmamış östrojen uyarımıyla gelişen endometrial hiperplazi ve displazi endometrium karsinomu riskini artırır. Ağız, vulva ve penis mukozasındaki lökoplaki skuamöz hücreli karsinom riskini artırır. Kolon polibi olan villöz adenomun ise kolorektal karsinoma dönüşme riski artmıştır.
@@ -328,18 +328,18 @@ Ağız mukozasındaki lökoplaki, ülseratif kolit, solar keratoz ve kronik atro
 
 Peki iyi huylu tümörler kansere öncü müdür?
 Genel olarak tüm benign tümörler premalign değildir, ama bazıları için malign dönüşüm riski anlamlıdır.
-Kolon adenomunda derste vakaların yaklaşık yüzde ellisinde karsinoma dönüşüm riski belirtilir.
+Kolon adenomunda derste vakaların yaklaşık %50'sinde karsinoma dönüşüm riski belirtilir.
 Uterus leiomyomunda ise malign dönüşüm son derece nadirdir.
 Bu nedenle her benign tümör tipi için risk ayrı değerlendirilmelidir; benign etiketi tek başına risk hakkında bilgi vermez.
 
 @@ Kanser genleri ve mutasyon türleri
-Kanser genleri, kanserlerde tekrar tekrar mutasyona uğrayan ve hücreye büyüme ya da sağkalım avantajı sağlayan genlerdir. Dört ana grupta toplanır: onkogenler, tümör baskılayıcı genler, apoptozu düzenleyen genler ve tümör konak etkileşimini ve bağışıklık yanıtını düzenleyen genler. Bu mutasyonların çoğu somatiktir, yani yalnız tümör hücrelerindedir; bazıları ise germ hattı kaynaklıdır ve ailesel kanser sendromlarına yol açar.
+Kanser genleri, kanserlerde tekrar tekrar mutasyona uğrayan ve hücreye büyüme ya da sağkalım avantajı sağlayan genlerdir. 4 ana grupta toplanır: onkogenler, tümör baskılayıcı genler, apoptozu düzenleyen genler ve tümör konak etkileşimini ve bağışıklık yanıtını düzenleyen genler. Bu mutasyonların çoğu somatiktir, yani yalnız tümör hücrelerindedir; bazıları ise germ hattı kaynaklıdır ve ailesel kanser sendromlarına yol açar.
 
 Onkogenler, proto onkogenlerin işlev kazanımı mutasyonlarıyla oluşur ve büyümeyi teşvik eden onkoproteinler kodlar.
 Genellikle baskın etkilidir; tek alelin mutasyonu yeterlidir.
-Tümör baskılayıcı genler ise büyümeyi frenler ve genomu korur; işlev kaybıyla kanser gelişimine izin verir ve çoğu durumda her iki alelin inaktivasyonu gerekir, buna 2. vuruş denir.
+Tümör baskılayıcı genler ise büyümeyi frenler ve genomu korur; işlev kaybıyla kanser gelişimine izin verir ve çoğu durumda her iki alelin inaktivasyonu gerekir, buna ikinci vuruş denir.
 Burası önemli, sınavda bu iki kavram yer değiştirilerek sorulur: onkogende işlev kazanımı ve tek alel, tümör baskılayıcıda işlev kaybı ve çoğunlukla iki alel.
-Ras bir onkogen örneği, er be ve pe ten ise tümör baskılayıcı fren örnekleridir.
+Ras bir onkogen örneği, RB ve PTEN ise tümör baskılayıcı fren örnekleridir.
 Apoptoz genleri hücre sağkalımını ya da ölümünü düzenler; bağışıklık ve mikroçevre genleri bağışıklık gözetimini, immün kaçışı ve stromal hücrelerle etkileşimi yönetir.
 
 Sürücü mutasyonlar kanser genlerinin fonksiyonunu değiştirir, karsinogenez ve tümör ilerlemesine doğrudan katkı sağlar ve genellikle kanser genleri içinde kümelenir.
@@ -351,26 +351,26 @@ Klinikte mutasyonel imza analizi, tümöre yol açan etkeni gösterebilir; örne
 DNA onarım sistemleri mutasyon yükünü sınırlamada kritiktir. Onarım kusurları mutasyon oranını artırır ve sürücü mutasyonların edinilmesini kolaylaştırır. Önemli onarım bozuklukları uyumsuzluk onarımı, nükleotid eksizyon onarımı, homolog rekombinasyon onarımı ve DNA polimerazın okuma düzeltme defektleridir. Sonuçta genomik instabilite karsinogenez için zemin hazırlar; doğrudan kanser yapmaz, sürücü mutasyon birikimini hızlandırır.
 
 Örnek sendromlara bakalım.
-Kalıtsal polipozsuz kolorektal kanser sendromu, yani Linç sendromu, uyumsuzluk onarım genlerinin mutasyonlarına bağlıdır.
+Kalıtsal polipozsuz kolorektal kanser sendromu, yani Lynch sendromu, uyumsuzluk onarım genlerinin mutasyonlarına bağlıdır.
 Kseroderma pigmentozumda nükleotid eksizyon onarımı kusurludur ve ultraviyole ilişkili deri kanserlerinde dramatik bir artış görülür.
-Homolog rekombinasyon bozuklukları olan Blum sendromu, ataksi telanjiektazi ve Fankoni anemisinde lösemi, lenfoma ve solid tümör riski artar.
-Be er ce a bir ve BRCA2 mutasyonlarında meme, ovaryum ve diğer kanserlerin riski artar.
+Homolog rekombinasyon bozuklukları olan Bloom sendromu, ataksi telanjiektazi ve Fanconi anemisinde lösemi, lenfoma ve solid tümör riski artar.
+BRCA1 ve BRCA2 mutasyonlarında meme, ovaryum ve diğer kanserlerin riski artar.
 
 Kansere kalıtsal yatkınlık tablosunda ilk grup otozomal dominant sendromlardır.
-Retinoblastomda er be geni, çeşitli tümörlerle giden Li Fraumeni sendromunda TP53 geni, melanomda CDK en iki a geni, ailesel adenomatöz polipozis ve kolon kanserinde a pe ce geni sorumludur.
-Nörofibromatozis Tip 1 ve ikide en ef bir ve en ef iki, meme ve over tümörlerinde BRCA1 ve iki, multipl endokrin neoplazi Tip 1 ve ikide men bir ve ret genleri rol oynar.
-Kalıtsal nonpolipozis kolon kanserinde, yani Linç sendromunda em es ha iki, em el ha bir ve em es ha altı; nevoid bazal hücreli karsinom sendromunda ise pe te ce ha bir geni sorumludur.
+Retinoblastomda RB geni, çeşitli tümörlerle giden Li-Fraumeni sendromunda TP53 geni, melanomda CDKN2A geni, ailesel adenomatöz polipozis ve kolon kanserinde APC geni sorumludur.
+Nörofibromatozis Tip 1 ve 2'de NF1 ve NF2, meme ve over tümörlerinde BRCA1 ve 2, multipl endokrin neoplazi Tip 1 ve 2'de MEN1 ve RET genleri rol oynar.
+Kalıtsal nonpolipozis kolon kanserinde, yani Lynch sendromunda MSH2, MLH1 ve MSH6; nevoid bazal hücreli karsinom sendromunda ise PTCH1 geni sorumludur.
 
 Burası önemli, çıkmış soruda çocuklarda en sık görülen primer intraoküler malign tümör soruldu ve doğru cevap retinoblastomdu.
-Bu tümör er be geniyle ilişkilidir; hatırlayın, er be proteini ge bir ve es geçişini frenleyen tümör baskılayıcıdır.
-Şıklardaki nöroblastom, medulloblastom ve Vilms tümörü göz içi tümörleri değildir.
+Bu tümör RB geniyle ilişkilidir; hatırlayın, RB proteini G1/S geçişini frenleyen tümör baskılayıcıdır.
+Şıklardaki nöroblastom, medulloblastom ve Wilms tümörü göz içi tümörleri değildir.
 
-2. grup, DNA tamir bozukluğuna bağlı otozomal resesif sendromlardır.
-Kseroderma pigmentozumda nükleotid eksizyon tamirinde görevli çeşitli genler, ataksi telanjiektazide a te em geni, Blum sendromunda be el em geni, Fankoni anemisinde ise DNA çapraz bağlarının tamirinde görevli çeşitli genler sorumludur.
-Kalıtsal kanser sendromlarının çoğu otozomal dominant iken bu dört sendrom otozomal resesif kalıtılır.
+İkinci grup, DNA tamir bozukluğuna bağlı otozomal resesif sendromlardır.
+Kseroderma pigmentozumda nükleotid eksizyon tamirinde görevli çeşitli genler, ataksi telanjiektazide ATM geni, Bloom sendromunda BLM geni, Fanconi anemisinde ise DNA çapraz bağlarının tamirinde görevli çeşitli genler sorumludur.
+Kalıtsal kanser sendromlarının çoğu otozomal dominant iken bu 4 sendrom otozomal resesif kalıtılır.
 
 @@ Kronik enflamasyon ve çok aşamalı karsinogenez
-İnvaziv kanserler çoğu zaman kronik enflamatuvar infiltrasyon gösterir ve bu hücreler tümöre aktif katkı verir. Epidermal büyüme faktörü gibi büyümeyi destekleyen faktörler salgılarlar. Hücre dışı matriksi parçalayan proteazlar üretirler. Vasküler endotelyal büyüme faktörü ile anjiyogenezi artırırlar. Böylece istila ve metastazı kolaylaştırırlar. Ayrıca te düzenleyici hücreler ve miyeloid kökenli baskılayıcı hücreler aracılığıyla bağışıklık baskılayıcı bir mikroçevre oluştururlar. Tümörü destekleyen inflamasyonun etkinleştirici faktör sayılmasının nedeni budur.
+İnvaziv kanserler çoğu zaman kronik enflamatuvar infiltrasyon gösterir ve bu hücreler tümöre aktif katkı verir. Epidermal büyüme faktörü gibi büyümeyi destekleyen faktörler salgılarlar. Hücre dışı matriksi parçalayan proteazlar üretirler. Vasküler endotelyal büyüme faktörü ile anjiyogenezi artırırlar. Böylece istila ve metastazı kolaylaştırırlar. Ayrıca T düzenleyici hücreler ve miyeloid kökenli baskılayıcı hücreler aracılığıyla bağışıklık baskılayıcı bir mikroçevre oluştururlar. Tümörü destekleyen inflamasyonun etkinleştirici faktör sayılmasının nedeni budur.
 
 Karsinogenez çok aşamalı bir süreçtir: birden çok genetik ve epigenetik olay zaman içinde birikir.
 Sağlıklı bir hücrede karsinojenin tetiklediği ilk sürücü mutasyon, kök hücre benzeri özellikleri olan başlatılmış bir öncü hücre oluşturur.

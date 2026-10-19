@@ -1,290 +1,308 @@
 # Endometrial Hiperplazi ve Kanserleri
 
-@@ Uterus Korpusu ve Dersin Kapsamı
-Uterus korpusu iki temel bölümden oluşur. İçte kaviteyi döşeyen endometriyum vardır; endometriyum bezlerden ve bu bezleri taşıyan stromadan kurulur. Dışta ise düz kas tabakası olan miyometriyum yer alır. Bir lezyonu düşünürken önce hangi bölümden köken aldığını sormak, ayırıcı tanıyı çok kolaylaştırır. Bu derste korpusun sık görülen ve klinik olarak önemli lezyonlarına odaklanıyoruz.
+@@ Uterus korpusu ve endometritin sınıflaması
+Uterus korpusu 2 ana katmandan oluşur ve bu konudaki her lezyon bu katmanlardan birine aittir. İçte endometriyum vardır; kaviteyi döşeyen bu mukozanın 2 bileşeni bezler ve onları çevreleyen stromadır. Dışta ise kalın düz kas tabakası olan miyometriyum bulunur. Bir lezyonla karşılaştığınızda önce şu soruyu sorun: Hangi katman, hangi bileşen? Bez mi, stroma mı, yoksa kas mı? Ayırıcı tanının iskeleti bu soruyla kurulur. Odağımız korpusun sık görülen ve klinik olarak önemli lezyonlarıdır: endometrit, adenomyoz, endometriozis, anormal uterin kanama, endometrial hiperplazi, endometrial karsinom ve endometrial polip. Düz kas tümörleri olan leiomyom ve leiomyosarkom ise ayrı bir derste ayrıntılı işlenir.
 
-Sırasıyla endometritin akut ve kronik formlarını, adenomyozu, endometriozisi, anormal uterin kanamayı ve fonksiyonel olmayan uterin kanamayı, ardından endometrial hiperplazi ile endometrial karsinomu, endometrial polibi ve son olarak uterusun düz kas tümörleri olan leiomyom ile leiomyosarkomu ele alacağız.
-Görüldüğü gibi endometriyumdan miyometriyuma doğru ilerleyen bir yol izliyoruz.
+Endometrit, endometriyumun inflamasyonudur.
+Sınıflama klinik süreye değil, biyopside görülen baskın iltihap hücresine dayanır.
+Akut endometritte nötrofiller baskındır; nötrofil, akut bakteriyel inflamasyonun öncü hücresidir.
+Kronik endometritte ise infiltrat lenfoplazmasitiktir, yani lenfositler ve plazma hücrelerinden oluşur ve tanısal olarak en değerli hücre plazma hücresidir.
+Patolog mikroskopta şu soruya yanıt arar: Nötrofil mi öne çıkıyor, plazma hücresi mi?
 
-@@ Endometrit
-Endometrit, endometriyumun inflamasyonudur ve baskın iltihap hücresine göre sınıflanır. Akut endometritte nötrofiller baskındır. Kronik endometritte ise lenfoplazmasitik bir infiltrasyon görülür ve burada özellikle plazma hücreleri belirleyicidir. Yani sınıflama klinik süreye değil, biyopside gördüğümüz hücreye dayanır.
+@@ Akut ve kronik endometrit
+Burada bir paradoksu bilmeniz gerekir. Genel patolojide bir dokuda iltihap hücresi görmek inflamasyon demektir; ama endometriyum için bu kural geçerli değildir. Endometriyum doğal olarak lökositten zengindir. Nötrofiller menstrüasyondan hemen önce, menstrüasyon sırasında ve hemen sonrasında fizyolojik olarak bulunur. Ancak siklus ortasında, yani proliferatif ya da erken sekretuar fazda nötrofil görülürse akut endometrit düşünülür. Lenfositler de normalde, özellikle bazal tabakada çoğu B lenfositlerinden oluşan agregatlar halinde bulunur.
 
-Akut endometrit nadirdir.
-Tipik olarak doğum sonrası bakteriyel enfeksiyon ya da düşük, yani abortus sonrası enfeksiyon zemininde ortaya çıkar.
-Hasta ateş, alt karın ağrısı ve anormal kanama ya da akıntı ile gelir.
+Akut endometrit nadirdir, çünkü sağlam serviks bariyeri ve siklik dökülme endometriyumu korur.
+Tipik bağlamı doğum sonrası ve düşük, yani abortus sonrası bakteriyel enfeksiyondur.
+Klinikte ateş, alt karın ağrısı ve anormal kanama ya da akıntı görülür.
+Doğum veya düşük sonrası bu üçlü akut endometriti düşündürmelidir.
+Histolojide yoğun nötrofil infiltrasyonu stromada mikroapseler yapar ve bez epitelini harap eder.
 
-Kronik endometritte tanıyı koyduran şey hücre tipidir.
-Arkadaşlar, lenfositler normal endometriyumda da bulunabilir; bu yüzden tek başına lenfosit görmek tanı koydurmaz.
-Tanı için endometriyumda plazma hücresi bulunması gerekir.
-Klinikte uzamış ya da düzensiz kanamalar görülür ve kronik endometrit infertilite ile ilişkili olabilir.
+Kronik endometritte tanının dayanağı tek bir hücredir.
+Burası önemli: kronik endometrit tanısı için endometriyumda plazma hücresi varlığı şarttır.
+Plazma hücreleri normal endometriyumun bileşeni değildir; görüldüklerinde patolojiktir.
+Lenfositler ise normal endometriyumda da bulunabildiği için tek başlarına tanı koydurmaz.
+Sınavda en sık tuzak, lenfosit görülmesini kronik endometrit için yeterli saymaktır.
+Plazma hücreleri rutin boyamada stromal hücrelerle karışabilir; bu nedenle CD138 ve CD38 gibi immünohistokimyasal belirteçlerle gösterilir.
+Biyopside eozinofil görülmesi de plazma hücresi aramak için bir uyarıcıdır.
+Klinikte kronik endometrit uzamış ve düzensiz kanamalarla seyreder ve infertiliteyle ilişkili olabilir; inflamasyonlu endometriyum implantasyon için uygun değildir.
 
-Endometrit çoğu zaman pelvik inflamatuvar hastalığın bir bileşenidir.
-Sık etkenler Neisseria gonore ve Klamidya trakomatistir.
-Tüberküloz endometrit ise granülomatöz bir endometrittir ve genellikle tüberküloz salpenjit ve tüberküloz peritonit ile birlikte görülür.
-Amerika Birleşik Devletleri'nde çoğunlukla immün sistemi baskılanmış kişilerde görülürken, tüberkülozun endemik olduğu bölgelerde daha yaygındır.
-Bu bölgelerden yeni gelmiş göçmenlerde pelvik inflamatuvar hastalığın ayırıcı tanısında mutlaka düşünülmelidir.
+@@ Enfeksiyöz etkenler, tüberküloz endometrit, tanı ve tedavi
+Endometrit çoğu zaman pelvik inflamatuvar hastalığın bir bileşenidir; enfeksiyon serviksten yukarı doğru endometriyuma, tüplere ve peritona yayılır. Burası önemli: spesifik endometritlerde en sık etkenler Chlamydia trachomatis ve Neisseria gonorrhoeae'dir. Özel bir form olarak tüberküloz endometrit ayrı tutulur. Granülomatöz endometrit tablosu verir ve granülomatöz endometritin en sık nedeni tüberkülozdur. Tüberküloz endometrit genellikle tüberküloz salpingit ve tüberküloz peritonitle birlikte görülür; yani endometriyumda granülom gördüğünüzde tüp ve peritonu da düşünmelisiniz.
 
-Endometritin tüm formlarında ateş, karın ya da pelvik ağrı ve adet düzensizlikleri görülebilir.
-Tanı, klinik bulgular ile endometrial biyopsinin birlikte değerlendirilmesiyle konur.
-Tedavide uygun antibiyotik verilir ve altta yatan nedene yönelik yaklaşım uygulanır.
+Tüberküloz endometritin ne kadar sık düşünüleceği hastanın bağışıklık durumuna ve geldiği bölgeye göre değişir.
+Amerika Birleşik Devletleri gibi düşük sıklıklı ülkelerde tablo çoğunlukla immün baskılanmış kişilerde görülür.
+Tüberkülozun endemik olduğu bölgelerde ise daha yaygındır.
+Endemik bölgelerden yeni gelmiş göçmenlerde pelvik inflamatuvar hastalık benzeri bir tablo görüldüğünde tüberküloz ayırıcı tanıda mutlaka düşünülmelidir, çünkü klasik pelvik inflamatuvar hastalığı taklit ederek gözden kaçabilir.
+
+Akut, kronik ya da granülomatöz olsun, endometritin tüm formları ateş, karın ya da pelvik ağrı ve adet düzensizliklerinden oluşan ortak bir klinik çekirdek paylaşır.
+Bu bulgular özgül olmadığından tanı klinik ile endometrial biyopsinin birleştirilmesiyle konur; biyopsi infiltratın türünü, yani nötrofili, plazma hücresini ya da granülomu göstererek formu belirler.
+Tedavide uygun antibiyotik verilir ve altta yatan nedene yönelik yaklaşım uygulanır; örneğin doğum ya da düşük sonrası kalıntı veya eşlik eden pelvik inflamatuvar hastalık ele alınmazsa tablo yineler.
 
 @@ Adenomyoz
-Adenomyoz, miyometriyumun içinde endometrial dokunun bulunmasıdır. Bu doku endometrial stroma, bezler ya da her ikisi olabilir. Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: endometriyuma ait bez ve stromanın miyometriyum içine gömülmesi, miyometriyuma doğru büyümesi adenomyoz olarak adlandırılır. Soruda miyometriyum kelimesini gördüğünüzde aklınıza adenomyoz gelmeli; endometriozis ise uterus dışını anlatır, birazdan karşılaştıracağız.
+Adenomyoz, endometrial dokunun miyometriyum içinde bulunmasıdır. Burası önemli, bu tanım çıkmış sorularda defalarca soruldu: endometriyuma ait dokuların miyometriyuma gömülmesi, yani miyometriyum içine doğru büyümesi adenomyozdur. Odaklar endometrial stroma, bezler ya da her ikisini içerebilir. Köken tabakası endometriyumun bazal tabakasıdır. Dikkat edin, "fonksiyonel tabakanın miyometriyuma büyümesi" ifadesi klasik bir çeldiricidir ve yanlıştır. Bazal tabaka kökenli olduğu için adenomyoz odakları fonksiyonel tabaka gibi döngüsel kanama göstermez. Ayrıca adenomyoz batın boşluğuna doğru uzanan bir süreç değildir; doku uterus duvarının içinde kalır. Eski kaynaklarda adenomyoza endometriozis interna denmiştir; endometriozis eksterna ise uterus dışı yerleşimi, yani endometriozisi anlatır.
 
-Morfolojide endometrial yuvalar miyometriyumun kas demetleri arasında, derine yerleşmiş olarak izlenir.
-Miyometriyum bu yuvalara reaktif hipertrofi ile yanıt verir.
-Sonuçta uterus büyümüş ve küresel bir şekil alır, duvarı çoğunlukla kalınlaşmıştır.
+Morfolojiye bakalım.
+Endometrial yuvalar miyometriyumun kas demetleri arasında, derin kısımlara dek uzanacak şekilde yerleşir.
+Burası önemli: adenomyozda miyometriyumun derin kısımlarına dek uzanan kas demetleri arasında endometrial stroma veya bezler ya da her ikisini içeren odaklar bulunur; çıkmış soruda doğru ifade buydu.
+Bazı kesitlerde bu odaklar ile yüzey endometriyumu arasında devamlılık görülmeyebilir.
+Çevredeki düz kas reaktif hipertrofi gösterir.
+Uterus duvarı hem içerideki endometrial doku hem de bu reaktif miyometriyal hipertrofi nedeniyle kalınlaşır ve sonuçta büyümüş, küresel bir uterus ortaya çıkar.
+Bu simetrik büyüme, sınırlı kitle yapan düz kas tümörlerinden farklıdır.
 
-Yaygın adenomyozda hastada menoraji, yani aşırı adet kanaması, dismenore, yani sancılı ve ağrılı adet görme, ve özellikle adet öncesinde belirgin pelvik ağrı olur.
-Adenomyoz endometriozis ile birlikte görülebilir.
-Tanı genellikle histopatolojik olarak, yani dokunun mikroskobik incelemesiyle konur.
+Yaygın adenomyoz menoraji, yani aşırı adet kanaması, dismenore, yani sancılı adet görme ve özellikle adet öncesi belirginleşen pelvik ağrı yapar.
+Adenomyoz endometriozisle birlikte görülebilir.
+Belirtiler özgül olmadığından tanı genellikle histopatolojiktir, çoğunlukla çıkarılan uterusun incelenmesiyle konur.
+Tanı için hemosiderin yüklü makrofaj aranmaz; esas olan miyometriyum içindeki endometrial odaklardır.
 
-@@ Endometriozis: Tanım, Yerleşim ve Tipler
-Endometriozis, uterus dışında endometrial bez ve stromanın bulunmasıdır. Burası önemli, bu tanım çıkmış sorularda sık soruldu: endometrial bez ya da stromanın endometriyum dışındaki bir bölgede izlenmesi endometriozistir. Ayrımı netleştirelim: endometrial doku miyometriyumun içindeyse adenomyoz, uterusun dışındaysa endometriozis diyoruz. Endometriozis üreme çağındaki kadınların yaklaşık yüzde onunu, infertil kadınların ise yaklaşık yarısını etkiler.
+@@ Endometriozis: tanım, sıklık, yerleşim ve tipler
+Endometriozis, endometrial bez ve stromanın uterus dışında bulunmasıdır. Burası önemli: endometrial bez ve stromanın endometriyum dışındaki bir bölgede izlenmesi endometriozistir; miyometriyum içinde olması ise adenomyozdur. İkisini ayırmanın anahtarı yerleşim yeridir. Endometriozis üreme çağındaki kadınların yaklaşık %10'unda, infertil kadınların ise yaklaşık yarısında saptanır.
 
-Endometriozis sıklıkla multifokaldir, yani aynı anda birden fazla odakta bulunur.
-Tipik pelvik odaklar ovaryumlar, Duglas kesesi, uterus ligamanları ve fallop tüpleridir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: endometriozisin tuttuğu pelvik yapılar sorulduğunda listenin başında over yer alır.
-Daha uzak odaklar arasında uzak periton bölgeleri, göbek çevresi ve laparotomi izleri sayılabilir.
-Duglas kesesi, diğer adıyla rektouterin kese, uterus ile rektum arasında yer alan en alt pelvik boşluktur.
+Endometriozis sıklıkla multifokaldir, yani aynı hastada birden çok odak bulunur.
+Tipik pelvik odaklar ovaryumlar, Douglas kesesi, uterus ligamanları ve fallop tüpleridir.
+Burası önemli: endometriozisin en sık tuttuğu pelvik yapı overdir.
+Diğer odaklar uzak periton bölgeleri, göbek çevresi ve laparotomi izleri, yani ameliyat skarlarıdır.
+Douglas kesesi, diğer adıyla rektouterin kese, uterus ile rektum arasında kalan en alt pelvik boşluktur; pelvisin en bağımlı noktası olduğu için periton boşluğuna dökülen materyal burada birikir.
 
-Endometriozisin üç ana tipi vardır: yüzeysel peritoneal endometriozis, over endometriozisi ve derin infiltratif endometriozis.
-Malign dönüşüm riski esas olarak derin infiltratif endometriozis tipinde bulunur.
+Endometriozis yerleşim ve derinliğe göre 3 ana tipe ayrılır: periton yüzeyindeki implantlardan oluşan yüzeysel peritoneal endometriozis, ovaryumdaki odaklardan oluşan over endometriozisi ve doku içine derin uzanan derin infiltratif endometriozis.
+Bu ayrımın pratik nedeni malign dönüşüm riskidir.
+Malign dönüşüm riski esas olarak derin infiltratif endometrioziste bulunur; infiltrasyon kapasitesi yüksek olan form biyolojik olarak da daha riskli kabul edilir.
 
-@@ Endometriozisin Patogenezi
-Endometriozisin patogenezi tam olarak bilinmiyor. Teoriler iki ana köken grubunda toplanır: uterus endometriyumundan kaynaklandığını savunanlar ve uterus dışındaki hücrelerden kaynaklandığını savunanlar. Birden fazla mekanizmanın birlikte rol oynaması da mümkündür.
+@@ Endometriozisin patogenezi: 4 teori
+Endometriozisin patogenezi tam olarak bilinmez. Teoriler ektopik dokunun nereden geldiğine göre 2 gruba ayrılır: uterus endometriyumundan kaynaklanan teoriler ve uterus dışı hücrelerden kaynaklanan teoriler. Birden fazla mekanizma birlikte rol oynayabilir. Patogenezi özetleyen şekilde, retrograd menstrüasyonla tüpten çıkan dokunun over ve periton yüzeyine implante olduğu, overde endometriotik kistler geliştiği görülür. İmplanttaki endometrial stromal hücre aromataz, prostaglandin E2 ve anjiyojenik faktörler salar; siklooksijenaz-2 ifade eden aktif makrofaj bu yanıtı güçlendirir ve sonuçta endometrial dokunun sağkalımı artar.
 
-Şekildeki şema, retrograd menstrüasyonla over ve tüplere ulaşan endometrial dokunun endometriotik kistler ve implantlar oluşturduğunu gösterir.
-Kilit nokta, implanttaki endometrial stromal hücre ile aktive makrofaj arasındaki etkileşimdir.
-Bu ortamda aromataz, prostaglandin E iki ve diğer proinflamatuvar mediatörler, anjiyojenik faktörler ve siklooksijenaz iki ifade edilir; östrojen de endometrial dokunun sağkalımını artırır.
-Böylece implantlar hem oluşur hem de sürdürülür.
+Uterus kaynaklı ilk teori regürjitasyon teorisidir.
+Menstrüasyon sırasında dökülen endometriyum geriye doğru akar, fallop tüpü açıklığından periton boşluğuna geçer, ektopik bölgelerde implante olur ve prolifere olur.
+Bu teori en sık odakların neden pelvik olduğunu açıklar ve en çok kabul gören teoridir.
+Ancak akciğer ya da beyin gibi uzak odakları açıklayamaz.
+Bu boşluğu uterus kaynaklı ikinci teori, benign metastaz teorisi doldurur: uterustan çıkan endometrial doku kan damarları ve lenfatik kanallar yoluyla kemik, akciğer ve beyin gibi uzak bölgelere yayılır.
+Benign metastaz ifadesi, dokunun malign olmadığı halde tümör hücreleri gibi uzağa taşındığını anlatır.
 
-1. teori regürjitasyon teorisidir.
-Menstrüel endometriyum retrograd, yani geriye doğru akar; endometrial doku fallop tüpünün açıklığından periton boşluğuna geçer ve ektopik bölgelere implante olup çoğalır.
+Uterus dışı kaynaklı teorilerin ilki metaplastik teoridir.
+Burada doku taşınmaz, yerinde oluşur.
+Endometriyumun sölomik epitelden köken aldığı varsayılır; Müllerian kanallar ve endometriyum pelvik ve abdominal mezotelden gelişir.
+Dolayısıyla periton mezoteli endometriyuma farklılaşabilir.
+Ayrıca mezonefrik kalıntılar endometriyal diferansiyasyon gösterip ektopik endometriyal doku oluşturabilir.
+İkinci teori ekstrauterin kök ya da öncü hücre teorisidir: kemik iliği kök ve öncü hücreleri endometriyum dokusuna farklılaşır.
+Bunu destekleyen bulgu, ektopik implantların ötopik endometriyumdan biyolojik olarak farklı olmasıdır.
+Ötopi, bir dokunun normal, olması gereken yerinde bulunmasıdır.
+Burası önemli, çıkmış sorularda soruldu: endometriozisi açıklayan 4 teori regürjitasyon, benign metastaz, metaplastik ve ekstrauterin kök ya da öncü hücre teorileridir.
+"Östrojen aromataz aktivite teorisi" diye bir köken teorisi yoktur.
+Aromataz, odağın sürdürülmesindeki biyolojik mekanizmadır; şimdi onu anlatacağım.
 
-2. teori benign metastaz teorisidir.
-Burada uterustan çıkan endometrial doku kan damarları ve lenfatik kanallar yoluyla yayılır.
-Bu teori kemik, akciğer ve beyin gibi uzak odakları açıklamak için gereklidir.
+@@ Endometriozis odağının biyolojisi
+Ektopik dokunun periton ortamında yaşaması, odakların ürettiği mediatörlere bağlıdır. Endometriozis odaklarında proinflamatuvar faktörler artmıştır. Burası önemli: endometriotik odaklarda özellikle düzeyi artan inflamatuvar mediatör prostaglandin E2'dir. Prostaglandin E2 inflamasyon ve ağrının ana mediatörlerindendir. Vasküler endotelyal büyüme faktörü yeni damar oluşumunu uyarır. Matriks metalloproteinazlar hücre dışı matriksi yıkarak dokuya ilerlemeyi sağlar. Aktif makrofajlardan salınan mediatörler de bu yanıtı büyütür. Sonuç üçlüdür: prostaglandin ve makrofaj ürünleriyle inflamasyon, vasküler endotelyal büyüme faktörüyle anjiyogenez, metalloproteinazlarla doku invazyonu.
 
-3. teori metaplastik teoridir.
-Endometriyumun sölomik epitelden köken aldığı varsayımına dayanır.
-Embriyolojik olarak Müllerian kanallar ve endometriyum pelvik ve abdominal mezotelden gelişir.
-Ayrıca mezonefrik kalıntılar endometriyal diferansiyasyon gösterebilir ve ektopik endometriyal doku oluşturabilir.
+Endometriozis odakları dolaşımdaki östrojene bağımlı kalmaz, kendi östrojenini üretebilir.
+Endometriozis stromal hücreleri yüksek aromataz ekspresyonu gösterir.
+Aromataz androjenleri östrojene dönüştürür; böylece lokal östrojen üretimi artar ve östrojen bağımlı büyüme güçlenir.
+Bu bir kısır döngüdür: lokal östrojen odağı büyütür, büyüyen odak daha fazla aromataz ve inflamatuvar mediatör üretir.
+Bu mekanizma, aromataz inhibitörlerinin tedavide kullanılmasının gerekçesidir.
 
-4. teori ekstrauterin kök ya da öncü hücre teorisidir.
-Kemik iliği kaynaklı kök ve öncü hücrelerin endometriyum dokusuna farklılaştığı düşünülür.
-Bunu destekleyen bulgu, ektopik endometriyal implantların ötopik endometriyumdan biyolojik olarak farklı olmasıdır.
-Ötopi, bir dokunun normal, olması gereken yerinde bulunması demektir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: endometriozisi açıklayan teoriler regürjitasyon, benign metastaz, metaplastik ve ekstrauterin kök ya da öncü hücre teorileridir.
-Östrojen aromataz aktivitesi bir teori değildir; birazdan göreceğimiz gibi odakların biyolojik bir özelliğidir.
+@@ Endometriozisin morfolojisi ve tanı kriteri
+Endometriozis odağının tipik yapısı döngüsel kanamaya uğrayan fonksiyonel endometriyumdur. Her siklusta odak içinde kanama olur ve kan dışarı atılamadığı için dokuda kalır. Odaklar mikroskopik boyuttan 1 ile 2 santimetrelik nodüllere kadar değişir, serozal yüzeyde ya da hemen altında yerleşir ve kırmızımsı kahverengi nodüller veya implantlar şeklinde görülür. Eski kaynaklar bu rengin taze kanamada kırmızı maviden, eski kanamada sarı kahverengiye kadar değiştiğini anlatır. Dikkat edin, burada adenomyozla temel bir fark vardır: endometriozis odakları döngüsel kanar, bazal tabaka kökenli adenomyoz odakları kanamaz.
 
-@@ Endometriozis Dokusunun Biyolojisi
-Endometriozis odaklarında proinflamatuvar faktörler artmıştır: prostaglandin E iki, vasküler endotelyal büyüme faktörü ve matriks metalloproteinazlar. Bunlara makrofajlardan salınan mediatörler de eklenir. Sonuçta inflamasyon, anjiyogenez, yani yeni damar oluşumu, ve doku invazyonu ortaya çıkar.
+Yaygın lezyonlarda tekrarlayan kanama organize olur.
+Fallop tüpleri, ovaryumlar ve diğer yapılar arasında yaygın fibröz yapışıklıklar gelişir ve Douglas kesesi fibrozisle kapanır, yani oblitere olur.
+Yapışıklıklar tüplerin fimbriya uçlarını tıkayabilir ve overlerin şeklini bozabilir.
+Ovaryumlarda ise tablo 3 ile 5 santimetrelik kistik kitleler biçimini alır.
+İçerikleri eski kandır ve koyu kahverengidir; bu nedenle çikolata kisti ya da endometrioma adını alır.
+Ovaryum kesitini gösteren şekilde, dejenere kan içeren çok sayıda büyük ve küçük endometriozis kisti görülür.
 
-Endometriozisin stromal hücreleri yüksek düzeyde aromataz ifade eder.
-Aromataz androjenleri östrojene çevirdiği için odakta lokal östrojen üretimi artar ve östrojene bağımlı büyüme güçlenir.
-Yani odak kendi büyüme sinyalini kendisi üretir; bu da tedavide aromataz inhibitörlerinin neden kullanıldığını açıklar.
+Tanı kriterine gelince, güncel ders slaytına göre uterus dışındaki bölgede hem endometrial bez hem endometrial stroma bulunmalıdır.
+Tek başına hemosiderin veya fibrozis tanı için yeterli değildir.
+Hemosiderin eski kanamanın, fibrozis organize kanamanın izidir; ama ikisi de başka nedenlerle oluşabilir.
+Yani hemosiderin yüklü makrofajlar tanıyı destekler, fakat tek başına endometriozis tanısı koydurmaz.
 
-@@ Endometriozis: Morfoloji ve Tanı
-Endometriozis odağında tipik olarak döngüsel kanamaya uğrayan fonksiyonel bir endometriyum bulunur. Makroskopik olarak lezyonlar mikroskobik odaklardan bir iki santimetrelik nodüllere kadar değişir. Serozal yüzeyde ya da hemen altında kırmızımsı kahverengi nodüller veya implantlar şeklinde görülür.
+@@ Endometriozisin kliniği, infertilite ve tedavi
+Endometriozisin semptomları şiddetli dismenore, disparoni, yani ağrılı cinsel ilişki ve kronik pelvik ağrıdır. Ağrının mekanizması 2 tanedir: odakların her siklusta kanamasıyla oluşan intrapelvik kanama ve organ hareketini kısıtlayan periuterin yapışıklıklar. Adet düzensizlikleri de sıktır. Tutulum yerine göre belirtiler değişir: rektum duvarı tutulursa dışkılama sırasında ağrı, uterus serozası tutulursa disparoni, mesane serozası tutulursa ağrılı idrar yapma görülür. Adenomyozda ağrı uterus duvarından kaynaklanırken, endometriozisde ağrı pelvik kanama ve yapışıklıklardan doğar.
 
-Yaygın lezyonlarda tekrarlayan kanamalar organize olur.
-Böylece fallop tüpleri, ovaryumlar ve diğer yapılar arasında yaygın fibröz yapışıklıklar gelişir ve Duglas kesesi oblitere olabilir.
-Ovaryumlarda üç ile beş santimetrelik kistik kitleler oluşur.
-İçlerindeki eski kan koyu kahverengi göründüğü için bunlara çikolata kisti ya da endometrioma denir.
-Şekilde ovaryum kesitinde, dejenere kan içeren çok sayıda büyük ve küçük endometriozis kisti görülmektedir.
+Endometriozisin en sık klinik sorunu infertilitedir ve hastaların %30 ile 40'ında görülür.
+Bu oranı, infertil kadınların yaklaşık yarısında endometriozis bulunmasıyla karıştırmayın; iki oranın paydası farklıdır.
+İnfertilite 3 basamakta gelişebilir: tübal yapışıklık nedeniyle ovumun yakalanamaması ya da taşınamaması, ovulasyon bozuklukları ve implantasyon bozuklukları.
 
-Tanı kriteri nettir: uterus dışındaki bölgede hem endometrial bez hem de endometrial stroma görülmelidir.
-Tek başına hemosiderin ya da fibrozis görmek tanı için yeterli değildir.
+Tedavi seçenekleri doğrudan odağın biyolojisini hedefler.
+Siklooksijenaz-2 inhibitörleri makrofajlardaki prostaglandin yolunu baskılayarak inflamasyon ve ağrıyı azaltır.
+Aromataz inhibitörleri stromal hücrelerdeki lokal östrojen üretimini keser.
+Bunlara hormonal baskılama ve cerrahi eklenir.
+Malign dönüşüm nadirdir, ancak endometriozis dokusu içinde karsinom gelişebilir ve risk esas olarak derin infiltratif tiptedir.
 
-@@ Endometriozis: Klinik, İnfertilite ve Tedavi
-Endometriozisin belirtileri şiddetli dismenore, disparoni, yani ağrılı cinsel ilişki, ve kronik pelvik ağrıdır. Bu ağrıların mekanizması intrapelvik kanama ve uterus çevresindeki yapışıklıklardır. Adet düzensizlikleri de sıktır.
+@@ Anormal uterin kanama: tanımlar ve nedenler
+Normal menstrüasyon, ovulatuvar bir siklusla birlikte sekretuar dönemden sonra olan ve 5 günü aşmayan kanamadır. Bunun dışındaki kanamalar anormal uterin kanamadır. Kanamanın miktarını ve zamanlamasını doğru adlandırmak gerekir. Menoraji, aşırı miktarda ya da uzun süren adet kanamasıdır; zamanlama düzenlidir, sorun miktar ve süredir. Metroraji ise adetler arası düzensiz kanamadır; eski kaynaklar bunu adet bittikten birkaç gün sonra başlayan lekelenme tarzı kanama olarak da tarif eder. Oligomenore 35 günü aşan aralıklarla seyrek adet görme, polimenore 21 gün ya da daha sık aralıklarla adet görme, hipomenore ise düzenli ama miktarı az kanamadır. Menopoz sonrası kanama her zaman araştırılmalıdır, çünkü bu dönemde endometriyumun normalde aktif olmaması kanama ciddi bir altta yatan nedene işaret edebilir.
 
-İnfertilite hastaların %30 ile kırkında görülür ve en sık klinik sorundur.
-Mekanizmaları tüplerdeki yapışıklıklar, ovulasyon bozuklukları ve implantasyon bozukluklarıdır.
+Nedenler 2 büyük gruptadır.
+Organik nedenler kronik endometrit, endometrial polipler, kaviteye doğru gelişen submukozal leiomyomlar ve endometrial neoplazmlardır.
+Ancak en sık neden yapısal bir lezyon değil, hormonal bozukluklardır; bu tabloya fonksiyonel olmayan uterin kanama, eski adıyla disfonksiyonel uterin kanama denir.
 
-Tedavi seçenekleri siklooksijenaz iki inhibitörleri, aromataz inhibitörleri, hormonal baskılama ve cerrahidir.
-Malign dönüşüm nadirdir, ancak endometriozis dokusu içinde karsinom gelişebilir.
+@@ Yaşa göre anormal uterin kanama nedenleri
+Yaşa göre nedenleri karşılaştıran tablo, yaşın ayırıcı tanıda ilk filtre olduğunu gösterir. Prepubertede neden erken pubertedir; hipotalamik, hipofizer ya da over kaynaklı olabilir. Adölesan dönemde en sık neden anovülatuvar siklustur, çünkü eksen henüz olgunlaşmamıştır; ayrıca koagülasyon bozuklukları ilk adetlerden itibaren ağır kanama yapabilir.
 
-@@ Anormal Uterin Kanama
-Önce terimleri netleştirelim. Menoraji, aşırı miktarda ya da uzun süren adet kanamasıdır. Metroraji, adetler arasındaki düzensiz kanamadır. Menopoz sonrası kanama ise her zaman araştırılmalıdır; çünkü ileride göreceğimiz gibi endometrial karsinomun başlıca belirtisidir.
+Üreme çağı neden yelpazesinin en geniş olduğu dönemdir.
+Değerlendirmeye gebelik komplikasyonlarını, yani düşük, trofoblastik hastalık ve ektopik gebeliği dışlayarak başlanır.
+Anatomik lezyonlar leiomyom, adenomyozis, polipler, endometrial hiperplazi ve karsinomdur.
+Disfonksiyonel uterin kanama ise anovülatuvar siklus ya da ovülatuvar disfonksiyonel kanama, örneğin yetersiz luteal faz şeklinde olabilir.
 
-Anormal uterin kanamanın organik nedenleri kronik endometrit, endometrial polipler, submukozal leiomyomlar ve endometrial neoplazmlardır.
-Ancak en sık neden hormonal bozukluklardır ve bu tabloya fonksiyonel olmayan uterin kanama denir.
+Perimenopozda disfonksiyonel uterin kanama, çoğunlukla anovülatuvar siklus biçiminde görülür; buna karsinom, hiperplazi ve polip gibi anatomik lezyonlar eklenir.
+Postmenopozda ise nedenler anatomik lezyonlar, yani karsinom, hiperplazi ve polipler ile endometrial atrofidir.
+İncelmiş, kırılgan atrofik endometriyum kanayabilir.
+Dikkat edin, postmenopozda disfonksiyonel kanama listede yer almaz, çünkü ovulasyon döngüsü sona ermiştir.
+Kısacası aynı kanama yakınması 15 yaşında anovülasyonu, 60 yaşında karsinomu düşündürür.
 
-Tablo, anormal uterin kanamanın nedenlerini yaş gruplarına göre karşılaştırır.
-Prepubertede neden erken pubertedir; kaynağı hipotalamus, hipofiz ya da over olabilir.
-Adölesan dönemde anovülatuvar siklus ve koagülasyon bozuklukları öne çıkar.
-Üreme çağında gebelik komplikasyonları, yani düşük, trofoblastik hastalık ve ektopik gebelik; leiomyom, adenomyozis, polip, endometrial hiperplazi ve karsinom gibi anatomik lezyonlar; ve anovülatuvar siklus ya da yetersiz luteal faz gibi ovülatuvar nedenlere bağlı disfonksiyonel kanama görülür.
-Perimenopozda çoğunlukla anovülatuvar siklusa bağlı disfonksiyonel kanama ile karsinom, hiperplazi ve polip gibi anatomik lezyonlar vardır.
-Postmenopozda ise anatomik lezyonlar ve endometrial atrofi başlıca nedenlerdir.
+@@ Fonksiyonel olmayan uterin kanama, anovülasyon ve luteal faz defekti
+Fonksiyonel olmayan uterin kanama, altta yatan yapısal bir anomali olmadan gelişen uterin kanamadır. Klinik bir terimdir ve dışlama tanısıdır; patolog bir lezyon görmez, klinisyen organik nedenleri dışlayarak bu tanıya ulaşır. En yaygın mekanizma anovülasyondur. Ovulasyon olmayınca korpus luteum oluşmaz, endometriyum progesteronla dengelenmez ve uzun süreli düzensiz östrojen uyarısı altında kırılarak düzensiz dökülür.
 
-@@ Fonksiyonel Olmayan Uterin Kanama
-Fonksiyonel olmayan uterin kanama, altta yatan yapısal bir anomali olmadan gelişen uterin kanamadır ve klinik bir terimdir. En yaygın mekanizması anovülasyon, yani ovulasyonun olmamasıdır. Anovülatuar döngüler hormonal dengesizlik sonucu ortaya çıkar ve en sık menarş, yani ilk adet dönemi ile perimenopozal dönemde görülür. Nedeni hipotalamus, hipofiz ve ovaryum eksenindeki dalgalanmalardır.
+Anovülatuvar döngüler hormonal dengesizlik sonucu gelişir ve özellikle menarş, yani ilk adet dönemi ile perimenopozal dönemde sıktır.
+Neden, hipotalamus, hipofiz ve ovaryum eksenindeki dalgalanmalardır.
+Bu nedenle anovülatuvar siklus hem adölesan hem perimenopoz satırında yer alır.
+Anovülasyonun başka nedenleri de vardır.
+Endokrin bozukluklar arasında prolaktin salgılayan hipofiz tümörleri, gonadotropin salgılatıcı hormon sekresyon bozukluğu ve düşük lüteinleştirici hormon ile folikül uyarıcı hormon düzeyleri sayılır.
+Ovaryum lezyonları arasında granüloza hücreli tümörler gibi fonksiyonel ovaryum tümörleri ve polikistik over sendromu bulunur.
+Obezite, yetersiz beslenme ve kronik sistemik hastalıklar gibi genel metabolik bozukluklar da hipotalamo hipofizer ovaryan aks üzerinden anovülasyon ve düzensiz kanama yapar; ilginçtir ki iki uç durum, fazla kilo ve yetersiz beslenme, aynı sonuca götürür.
 
-Anovülasyonun diğer nedenleri de vardır.
-Endokrin bozukluklar arasında prolaktin salgılayan hipofiz tümörleri, gonadotropin salgılatıcı hormon sekresyonunun bozulması ve düşük lüteinleştirici hormon ile folikül uyarıcı hormon düzeyleri sayılır.
-Ovaryum lezyonları arasında ise granüloza hücreli tümörler gibi fonksiyonel ovaryum tümörleri ve polikistik over sendromu yer alır.
+Her fonksiyonel kanama anovülasyondan kaynaklanmaz.
+Yetersiz luteal fazda ovulasyon olur, ama korpus luteum yetersiz progesteron üretir.
+Progesteron endometriyumu ikinci yarıda olgunlaştırıp stabilize ettiği için, eksikliğinde endometriyum erken ve düzensiz dökülür.
+Klinikte kısa luteal faz ve düşük implantasyon başarısı görülür.
+Bu tablo ovülatuvar disfonksiyonel kanamanın örneğidir.
 
-Genel metabolik bozukluklar da anovülasyona yol açar: obezite, yetersiz beslenme ve kronik sistemik hastalıklar.
-Bunlar hipotalamo hipofizer ovaryan aks üzerinden etki eder ve anovülasyon ile düzensiz kanamaya neden olur.
+@@ Düzensiz proliferatif endometrium
+Anovülasyonun endometriyumdaki karşılığını gösteren bir tablo da düzensiz proliferatif endometriumdur. Endometriyumun anovülatuvar siklusa verdiği bir cevap olduğu düşünülür ve uzamış, karşılanmamış, yani progesteronla dengelenmemiş östrojen etkisine bağlı gelişir. Perimenopozal dönemdeki kadınların hemen hemen tümünde bulunur. Mikroskopta normal proliferatif bezler arasında hafif dilate, şekilsiz bezler görülür; bazıları dar, bazıları kistik genişlemiş ve dallanmıştır. Epitel normal proliferatif faz özelliğindedir.
 
-Bir diğer neden yetersiz luteal faz, yani luteal faz defektidir.
-Burada korpus luteum yeterli progesteron üretemez.
-Klinikte luteal faz kısalır ve implantasyon başarısı düşer.
+Burası önemli, bu konu çıkmış sorularda 2 kez soruldu.
+Düzensiz proliferatif endometrium, atipili hiperplazi gibi gerçek bir premalign lezyon değildir.
+Basit hiperplaziden en önemli farkı, normal bez stroma oranının büyük ölçüde korunmuş olmasıdır; yani hiperplazideki gibi bez stroma oranında artış dikkati çekmez.
+Ayırıcı tanıda endometrial hiperplazi, endometrial polip ve kistik atrofi yer alır.
+Kistik atrofide epitel basık ve atrofiktir, proliferatif aktivite yoktur; düzensiz proliferasyon ise proliferatif aktiviteye sahip olmasıyla kistik atrofiden ayrılır.
+Hiperplaziyle arasında keskin bir sınır olmadığı için gözlemciler arası uyum düşüktür.
 
-@@ Proliferatif Lezyonlara Giriş
-Uterus korpusunun en sık proliferatif lezyonları endometrial hiperplazi, endometrial karsinom, endometrial polipler ve leiomyom ile leiomyosarkomdan oluşan düz kas tümörleridir. Bunların hepsi sıklıkla anormal uterin kanama ile seyreder. Yani kanamayla gelen bir hastada bu lezyonların hepsini düşünmeliyiz.
+@@ Endometrial hiperplazinin patogenezi ve östrojen fazlalığı
+Uterus korpusunun en sık proliferatif lezyonları endometrial hiperplazi, endometrial karsinom, endometrial polipler ve leiomyom ile leiomyosarkomdan oluşan düz kas tümörleridir. Hepsi sıklıkla anormal uterin kanama ile seyreder; ayrımları ancak doku incelemesiyle yapılır. Bu nedenle anormal kanamayla başvuran, özellikle perimenopozal ya da postmenopozal kadında bu lezyonlar ayırıcı tanının merkezindedir; yaşa göre tabloda bu dönemlerin anatomik nedenleri olarak karsinom, hiperplazi ve poliplerin sayılması bu yüzdendir.
 
-@@ Endometrial Hiperplazi: Patogenez ve Östrojen Fazlalığı
-Endometrial hiperplazinin temel mekanizması, progestine göre östrojen fazlalığıdır. Östrojen endometriyumu çoğaltır, progestin ise bu çoğalmayı dengeler. Bu denge bozulup östrojen fazlalığı uzun süreli ve belirgin olursa aşırı endometrial proliferasyon gelişir ve bu durum endometrial karsinom için önemli bir öncü zemin oluşturur.
+Endometrial hiperplazinin temel mekanizması progestine göre östrojen fazlalığıdır.
+Östrojen endometriyumu çoğaltır, progestin bu çoğalmayı durdurup olgunlaştırır.
+Progestin karşılığı olmayan östrojen proliferasyonu sınırsız sürdürür.
+Uzamış ya da belirgin östrojen fazlalığı aşırı endometrial proliferasyon yapar ve endometrial karsinom için önemli bir öncü zemin oluşturur.
+Bu, anovülasyonla kurduğumuz ilişkiyi tamamlar: ovulasyon yoksa progesteron yoktur ve endometriyum yalnız östrojen etkisinde kalır.
+Progesteronla dengelenmeden tek başına östrojen tedavisi alan postmenopozal kadınların %15 ile 30'unda hiperplazi gelişir; 10 ile 15 yıllık kullanımdan sonra endometrial kanser riski 10 kat artar, ama bu kanserler genellikle düşük derecelidir.
+Tedaviye progesteron eklenmesi riski belirgin azaltır.
 
 Östrojen fazlalığının nedenlerine bakalım.
-Obezitede yağ dokusu steroid öncüllerini östrojene dönüştürür.
+Obezitede yağ dokusundaki steroid öncülleri östrojene dönüşür.
 Eksojen östrojen, yani progestin olmadan uzun süreli östrojen tedavisi bir diğer nedendir.
-Östrojen üreten ovaryum lezyonları arasında polikistik over sendromu ve granüloza teka hücreli tümörler sayılır.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: obezite, granüloza teka hücreli tümörler, ovulasyon yetmezliği ve polikistik over sendromu östrojen fazlalığına yol açar; ama progestinle dengelenen östrojen kullanımı östrojen fazlalığı nedeni değildir.
-Risk, östrojenin progestin olmadan verilmesinden doğar.
+Östrojen üreten ovaryum lezyonları polikistik over sendromu ve granüloza teka hücreli tümörlerdir.
+Eski kaynaklar, menopoz geçişindeki ovulasyon yetmezliğini ve overin kortikal stromal hiperplazisini de nedenler arasında sayar.
 
-@@ Endometrial Hiperplazi Tipleri
-Endometrial hiperplazinin iki ana formu vardır: atipisiz hiperplazi ve atipili hiperplazi. İkisinin ortak özelliği östrojen fazlalığı zemini ve anormal bez proliferasyonudur.
+Burası önemli, bu bilgi çıkmış sorularda birkaç kez soruldu: progestin ile dengelenen östrojenik steroid kullanımı östrojen fazlalığı ya da hiperplazi nedeni değildir.
+Tehlikeli olan karşılanmamış östrojendir.
+Buna karşılık obezite, granüloza teka hücreli tümörler, ovulasyon yetmezliği, polikistik over, kortikal stromal hiperplazi ve düzensiz proliferatif endometrium hiperplazi gelişimiyle ilişkili etkenlerdir.
 
-Atipisiz endometrial hiperplazi geniş bir morfolojik spektrum gösterir.
-Temel özelliği bez stroma oranının artmasıdır: bezler sıklaşır, stroma göreli olarak azalır.
-Şeklin A panelinde hafif bez yoğunluğu ve kistik bez genişlemesi gibi mimari anormallikler görülür, ancak hücresel atipi yoktur.
+@@ Hiperplazi tipleri ve morfolojisi
+Güncel sınıflama hiperplaziyi tek bir ölçüte, hücresel atipinin varlığına göre ikiye ayırır: atipisiz hiperplazi ve atipili hiperplazi. İkisinin de zemini östrojen fazlalığı, ortak özelliği anormal bez proliferasyonudur. Eski sistemde hiperplazi yapısal olarak basit ve kompleks, sitolojik olarak atipisiz ve atipili diye 2 eksende sınıflanırdı; bugün prognozu ve tedaviyi belirleyen asıl özellik atipi olduğu için ikili ayrım kullanılır. Atipi, hücrenin, özellikle çekirdeğinin normal görünümden sapmasıdır.
 
-Atipili hiperplazide kompleks bez paternleri ve nükleer atipi vardır.
-Bu lezyona endometrial intraepitelyal neoplazi de denir.
-Şeklin B panelinde bez yoğunluğu ile birlikte hücresel atipi, C panelindeki yüksek büyütmede ise yuvarlak, veziküler çekirdekler ve belirgin nükleoller görülür.
+Atipisiz hiperplazi geniş bir morfolojik spektrum gösterir, ama ortak paydası artmış bez stroma oranıdır.
+Bezler sıklaşır, stroma göreli olarak azalır; yani kaybolmaz, bezlerin artması karşısında oransal olarak küçülür.
+Şekilde atipi içermeyen hiperplazide hafif bez yoğunluğu ve kistik bez genişlemesi gibi mimari anormallikler görülür; çekirdekler normaldir.
 
-Atipili endometrial hiperplazi edinilmiş klonal mutasyonlarla ilişkilidir; özellikle tümör baskılayıcı gen olan pe ten genindeki mutasyonlar önemlidir.
-Bu özellik atipili hiperplazinin endometrial karsinom ile aynı genetik zemini paylaştığını gösterir.
+Atipili hiperplazide mimari bozukluğa sitolojik bozukluk eklenir.
+Kompleks bez paternleri vardır, bezler sıkışır, dallanır ve düzensizleşir; nükleer atipi bulunur.
+Atipili hiperplazinin diğer adı endometrial intraepiteliyal neoplazidir ve bu ad lezyonun bir neoplazi olduğunu vurgular.
+Şekilde bez yoğunluğu ve hücresel atipi görülür; yüksek büyütmede yuvarlak, veziküler çekirdekler ve belirgin nükleoller dikkati çeker.
+Veziküler çekirdek, kromatini açılmış, içi soluk görünen çekirdektir.
 
-Klinik önemine gelince, atipili hiperplazi endometrial karsinomun öncüsü kabul edilir.
-Atipi saptandığında invaziv karsinom varlığını dışlamak için örnek dikkatle değerlendirilir.
-Tedavide doğurganlık istemeyen hastalara histerektomi uygulanır; genç ve fertilite isteyen hastalarda ise yüksek doz progestin tedavisi verilir.
+@@ Atipili ve atipisiz hiperplazi: genetik, risk ve tedavi
+Atipili hiperplazinin neden neoplazi sayıldığını genetik açıklar. Edinilmiş klonal mutasyonlarla ilişkilidir; yani lezyon aynı mutasyonu taşıyan tek bir hücrenin çoğalmasından oluşur. Özellikle tümör baskılayıcı gen PTEN mutasyonları görülür. PTEN normalde hücre çoğalmasını frenler; kaybı, östrojenle başlayan proliferasyonun bağımsızlaşmasını kolaylaştırır. Zamanla hiperplazi östrojene gereksinim duymadan çoğalabilir ve karsinoma uzanabilir. Bu genetik zemin endometrial karsinomla paylaşılır.
 
-Atipisiz hiperplazide hücresel atipi yoktur ve endometrial karsinoma ilerleme riski düşüktür, %1 ile üç arasındadır.
-Tedavide östrojen fazlalığının nedeni düzeltilir, progestin verilir ve hasta izlenir.
-Arkadaşlar, atipi kelimesi burada prognozu belirleyen anahtardır.
+Atipili hiperplazi endometrial karsinomun öncüsü kabul edilir; eski kaynaklarda karsinom gelişme riski yaklaşık %20 olarak verilir.
+Atipi saptandığında, invaziv karsinom varlığını dışlamak için örnek dikkatle değerlendirilir, çünkü örneklenmemiş bir karsinom odağı bulunabilir.
+Tedavi fertilite isteğine göre seçilir: doğurganlık istemeyenlerde histerektomi, genç ve fertilite isteyenlerde yüksek doz progestin tedavisi uygulanır.
 
-@@ Endometrial Karsinom: Genel Bakış
-Yüksek gelirli ülkelerde endometrial karsinom, kadın genital sisteminde en sık görülen kanserdir. İki ana tipi vardır: endometrioid karsinom ve seröz karsinom. Daha nadir tipler berrak hücreli karsinom ve karsinosarkom olarak da bilinen malign mikst Müllerian tümördür.
+Atipisiz hiperplazide hücresel atipi yoktur ve endometrial karsinoma ilerleme riski düşüktür, %1 ile 3 arasındadır.
+Tedavi konservatiftir: östrojen fazlalığı nedeninin düzeltilmesi, örneğin kilo verme ya da karşılanmamış östrojen tedavisinin değiştirilmesi, progestin tedavisi ve izlem.
+Kısacası atipi yoksa konservatif yaklaşım, atipi varsa karsinom öncüsü muamelesi yapılır.
 
-Endometrioid karsinom olguların yaklaşık yüzde sekseninden sorumludur, östrojen fazlalığı ile ilişkilidir ve endometrial hiperplazi zemininde gelişir.
-Seröz karsinom daha az yaygındır, çok daha agresiftir ve endometrial atrofi zemininde gelişir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: endometrium kanserlerinin en sık histolojik tipi endometrioid karsinomdur.
+@@ Endometrial metaplaziler
+Endometrial bezler hormonal ve inflamatuvar uyarılara yanıt olarak metaplastik değişiklikler gösterebilir. Bu değişiklikler non neoplastiktir, yani kanser değildir. Burası önemli, çıkmış sorularda soruldu: endometrial metaplaziler sıklıkla hiperöstrojenizmle ilişkilidir, endometrial hiperplazi ve endometrial adenokarsinomlara eşlik edebilir ve eşlik ettikleri adenokarsinomlar genellikle düşük derecelidir. Ancak metaplazilerin kendisi endometrial karsinom için yüksek bir risk faktörü değildir; çeldirici ifade buydu.
 
-@@ Endometrioid Karsinom: Patogenez ve Genetik
-Endometrioid karsinomun tipik hastası perimenopozal bir kadındır. Zemininde endometrial hiperplazi ve östrojen fazlalığı vardır. İlişkili durumlar obezite, östrojen salgılayan ovaryum tümörleri ve eksojen östrojen maruziyetidir.
+En sık görülen epitelyal metaplazi skuamöz metaplazidir; bezlerin benign görünümüyle, skuamöz metaplazi içeren iyi diferansiye adenokarsinom olan adenoakantomadan ayrılır.
+Silyalı ya da tubal metaplazide silyalı hücreler artar ve hiperplaziyle birlikte daha sık görülür.
+Sinsityal papiller metaplazi uzun süreli östrojenle birlikte izlenir.
+Müsinöz metaplazi endoservikal mukozaya benzer.
+Hobnail, yani berrak hücre metaplazisinde çekirdekleri lümene doğru kabarık uzun berrak hücreler vardır ve ayırıcı tanısı berrak hücreli adenokarsinomla yapılmalıdır.
 
-Genetik açıdan erken olaylar DNA uyumsuzluk onarım genlerindeki mutasyonlar ve pe ten tümör baskılayıcı genindeki mutasyonlardır.
-Bunların çoğu somatik, yani edinilmiş mutasyonlardır.
-Ancak germ hattı mutasyonları da vardır: pe ten geninin germ hattı mutasyonu Cowden sendromuna, DNA uyumsuzluk onarım genlerinin germ hattı mutasyonları ise Lynch sendromuna yol açar.
-Bu sendromlarda endometrial karsinom riski belirgin olarak artar.
+@@ Endometrial karsinom: genel bakış ve 2 ana kategori
+Hiperplazinin öncü zemin olduğu tablonun son halkası endometrial karsinomdur. Yüksek gelirli ülkelerde kadın genital sisteminde en sık görülen kanserdir. İki ana tipi endometrioid karsinom ve seröz karsinomdur. Daha nadir tipler berrak hücreli karsinom ve malign mikst Müllerian tümör, diğer adıyla karsinosarkomdur. Klasik sınıflamada endometrioid karsinom Tip 1, seröz karsinom Tip 2 endometrial karsinom olarak adlandırılır.
 
-Te pe elli üç mutasyonları endometrioid karsinomda da görülebilir, ancak nispeten nadirdir ve geç dönem olaylarıdır.
-Te pe elli üç mutasyonu daha çok seröz karsinom ile ilişkilidir.
+İki tip, zemin aldıkları endometriyum bakımından birbirinin tersidir.
+Endometrioid karsinom olguların yaklaşık %80'ini oluşturur, östrojen fazlalığıyla ilişkilidir ve endometrial hiperplazi zemininde gelişir.
+Burası önemli: endometrium kanserlerinin en sık görülen histolojik tipi endometrioid karsinomdur ve Tip 1 endometrial karsinomun prototipidir.
+Seröz karsinom ise daha az yaygın ama çok daha agresiftir ve endometrial atrofi zemininde, yani östrojen uyarısı olmayan incelmiş endometriyumdan gelişir.
+Tip 2 karsinomun prototipi seröz karsinomdur.
+Bu ayrım, hiperplazi karsinom sürekliliğinin yalnız endometrioid tip için geçerli olduğunu gösterir.
 
-@@ Seröz Karsinom: Patogenez ve Genetik
-Seröz endometrial karsinom daha az yaygın ama agresif bir tümördür ve olguların yaklaşık %15'ini oluşturur. Daha yaşlı, postmenopozal kadınlarda, endometrial atrofi zemininde gelişir; östrojen fazlalığı ya da hiperplazi ile ilişkili değildir.
+@@ Endometrioid karsinom: patogenez ve genetik
+Endometrioid karsinomun tipik hastası perimenopozal kadındır. Zemin endometrial hiperplazi ve östrojen fazlalığıdır. İlişkili durumlar obezite, granüloza teka hücreli tümörler gibi östrojen salgılayan ovaryum tümörleri ve eksojen östrojen maruziyetidir. Yani risk faktörleri hiperplazinin nedenleriyle birebir örtüşür. Histolojik olarak normal endometrium bezlerine benzediği için endometrioid adını alır. Burası önemli, çıkmış soruda Tip 1 kanserin özelliği olmayan şık sorulmuştu: Tip 1 endometrial karsinom genellikle perimenopozal dönemde görülür, östrojen fazlalığı önemli risk faktörüdür, normal endometrium bezlerine benzer ve büyük kısmında PTEN mutasyonu bulunur; ama endometrial atrofi zemininde gelişmez. Atrofi zemini tip 2'ye aittir.
 
-Neredeyse tüm olgularda TP53 tümör baskılayıcı geninde mutasyon vardır.
-DNA uyumsuzluk onarım geni mutasyonları ve pe ten mutasyonları ise nadirdir.
-Öncü lezyonu seröz endometrial intraepitelyal karsinomdur ve bu lezyon da sıklıkla TP53 mutasyonu taşır.
+Genetiğe geçelim.
+Endometrioid karsinomda erken olaylar DNA uyumsuzluk onarım genlerinin mutasyonları ve PTEN tümör baskılayıcı gen mutasyonlarıdır.
+Bu mutasyonların çoğu somatik, yani edinilmiştir.
+Germ hattı mutasyonları ise kalıtsal yatkınlık yaratır: germ hattı PTEN mutasyonu Cowden sendromuna, DNA uyumsuzluk onarım genlerindeki germ hattı mutasyonları Lynch sendromuna yol açar ve bu sendromlarda endometrial karsinom riski belirgin artar.
+Burası önemli: endometrioid karsinomun patogenezinde PTEN genindeki germ hattı mutasyonlar ve uyumsuzluk onarım genleri rol oynar; Tip 1 karsinomun öncül lezyonu atipili endometrial hiperplazidir.
+Eski kaynaklar KRAS mutasyonlarını da ekler.
+TP53 mutasyonları endometrioid karsinomda da görülebilir, ama nispeten nadirdir ve geç dönem olaylardır; tümör geliştikten sonra ilerleme sırasında eklenir.
+TP53 asıl olarak seröz karsinomla ilişkilidir.
 
-Seröz endometrial karsinom, overin seröz karsinomu ile morfolojik benzerlik gösterir ve biyolojik davranışları örtüşür.
-Gelişiminde pe elli üç fonksiyon kaybı merkezi rol oynar.
-Burası önemli, bu karşılaştırma çıkmış sorularda soruldu: endometrioid karsinom östrojen ve hiperplazi zemininde, atipili hiperplazi öncülüğünde, pe ten ve DNA uyumsuzluk onarım genleri mutasyonlarıyla gelişir; pe ten ve uyumsuzluk onarım genlerinin germ hattı mutasyonları da patogenezde rol oynar.
-Seröz karsinom ise atrofi zemininde, TP53 mutasyonuyla gelişir ve prognozu endometrioid karsinoma göre daha kötüdür; daha iyi değil.
-Ayrıca pe ten, pe elli üç ve uyumsuzluk onarım geni mutasyonlarının uterus tümörlerinde saptandığını unutmayın.
+@@ Seröz karsinom: patogenez, genetik ve over seröz karsinomuyla benzerlik
+Seröz karsinom olguların yaklaşık %15'ini oluşturur; daha az yaygındır ama agresiftir. Daha yaşlı postmenopozal kadınlarda, endometrial atrofi zemininde gelişir ve östrojen fazlalığı ya da hiperplaziyle ilişkili değildir. Obezite ya da karşılanmamış östrojen bu tipte belirleyici değildir. Seröz karsinomun moleküler imzası endometrioid tipin aynadaki görüntüsüdür. Neredeyse tüm olgularda TP53 tümör baskılayıcı gen mutasyonu vardır; DNA uyumsuzluk onarım ve PTEN mutasyonları ise nadirdir. Öncül lezyon seröz endometrial intraepiteliyal karsinomdur ve sıklıkla TP53 mutasyonu taşır; bu, mutasyonun patogenezde erken yer aldığını gösterir. Öncülleri yan yana koyun: endometrioid karsinomun öncüsü atipili hiperplazi, seröz karsinomun öncüsü seröz endometrial intraepiteliyal karsinomdur.
 
-@@ Endometrial Karsinomun Morfolojisi
-Endometrioid karsinom normal endometriyuma benzer. Ekzofitik bir kitle olarak ya da miyometriyumu infiltre ederek büyüyebilir. Çoğu iyi diferansiyedir ve proliferatif endometrial bezleri taklit eder. Yayılım önce miyometrial invazyonla olur, sonra komşu organlara direkt yayılım ve bölgesel lenf düğümü metastazı izler. Derecelendirme bir ile üç arasında yapılır ve bez yapısı ile nükleer atipiye dayanır.
+Seröz endometrial karsinom, endometrioid tipten çok over seröz karsinomuna benzer.
+Aralarında morfolojik benzerlik ve biyolojik davranışta örtüşme vardır.
+Gelişimde p53 fonksiyon kaybı merkezi roldedir.
+Genom bütünlüğünü koruyan bu bekçi protein kaybolunca tümör hızla genetik hasar biriktirir; seröz karsinomun itici gücü hormon değil, p53 kaybıdır.
 
-Şeklin A panelinde miyometriyumu infiltre eden, bez yapısı oluşturarak büyüyen 1. derece endometrioid karsinom görülür.
-B panelinde ağırlıklı olarak katı büyüme paterni gösteren 3. derece endometrioid karsinom vardır.
-C panelinde papilla oluşumu ve belirgin sitolojik atipi gösteren seröz karsinom, D panelinde ise malign epitel hücrelerinde pe elli üç birikimini gösteren immünohistokimyasal boyama görülür.
+Burası önemli, bir çıkmış soruda uterus kaynaklı tümörlerde saptanmayan değişiklik soruldu.
+PTEN mutasyonu, p53 mutasyonu, DNA uyumsuzluk onarım gen mutasyonları ve JAZF1 ile JJAZ1 füzyonu uterus kaynaklı tümörlerde saptanır; von Hippel-Lindau gen mutasyonu ise saptanmaz.
+
+@@ Morfoloji, derecelendirme ve p53 immünohistokimyası
+Endometrioid karsinom normal endometriyuma benzer. Kaviteye doğru ekzofitik bir kitle ya da miyometriyuma infiltratif bir tümör olarak büyür. Çoğu iyi diferansiyedir ve proliferatif endometrial bezleri taklit eder. Şekilde 1. derece endometrioid karsinom bezsel biçimde büyüyerek miyometriyumu infiltre eder; bezler normale benzese de miyometriyum içinde bulunmaları invazyonun kanıtıdır. Tümör içinde müsinöz, tubal ve skuamöz diferansiyasyon alanları görülebilir. Yayılım önce miyometrial invazyonla olur, sonra komşu organlara direkt yayılım ve bölgesel lenf düğümü metastazı gelir.
+
+Derecelendirme 1 ile 3 arasındadır ve bez yapısı ile nükleer atipiye göre yapılır.
+Eski kaynaklardaki FIGO mimari derecelendirmesinde solid alan tümörün %5'ini aşmıyorsa 1. derece, %6 ile 50 arasındaysa 2. derece, %50'nin üzerindeyse 3. derecedir; belirgin nükleer atipi dereceyi bir basamak artırabilir.
+Şekilde 3. derece endometrioid karsinom ağırlıklı olarak katı büyüme paterni gösterir.
 
 Seröz karsinom küçük hücre kümeleri ve papiller yapılar halinde büyür.
-Belirgin sitolojik atipi vardır ve bunlar yüksek dereceli tümörlerdir.
-Bazen endometrioid karsinomu taklit eden bezler oluşturabilir, ancak bu bezlerde atipi çok daha belirgindir.
+Belirgin sitolojik atipi vardır ve tümörler yüksek derecelidir.
+Bazen endometrioid karsinomu taklit eden bezler yapar, ama atipi daha belirgindir; ayrımda belirleyici olan çekirdek atipisidir.
+Şekilde papilla oluşumu ve belirgin sitolojik atipi gösteren seröz karsinom görülür.
+İmmünohistokimyada p53 için yaygın, güçlü nükleer boyanma vardır.
+Normal p53 hızla yıkılır, mutant protein ise yıkılamaz ve çekirdekte birikir; bu boyanma TP53 mutasyonuyla koreledir.
+Burası önemli: endometriyal küretajda p53 mutasyonu saptanan, nükleositoplazmik oranı oldukça artmış, yüksek atipi gösteren epitelyal tümör seröz karsinomdur.
 
-İmmünohistokimyada seröz karsinomda pe elli üç için yaygın ve güçlü nükleer boyanma görülür.
-Bunun nedeni mutant pe elli üç proteininin hücrede birikmesidir ve bu bulgu TP53 mutasyonunun varlığıyla koreledir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: küretaj materyalinde pe elli üç mutasyonu saptanan, çekirdek sitoplazma oranı çok artmış, yüksek atipi gösteren epitelyal tümör seröz karsinomdur.
+@@ Klinik özellikler ve prognoz
+Endometrial karsinom 40 yaşın altında nadirdir; pik insidans menopoz sonrası 55 ile 65 yaş arasıdır. Belirti düzensiz kanama ve özellikle menopoz sonrası kanamadır. Yayılım genellikle yavaştır; tedavi edilmezse bölgesel lenf düğümlerine ve uzak organlara yayılır. Erken dönemde kanama yapması ve yavaş yayılması, hastalığın çoğunlukla erken evrede yakalanabilmesini sağlar. Erken evre endometrioid karsinomda 5 yıllık sağkalım yaklaşık %90'dır; daha ileri evrede sağkalım hızla düşer. Prognoz belirleyicileri evre, tümör derecesi ve miyometrial invazyon derinliğidir. Her iki tipte de yaşam süresini belirleyen en önemli faktör evredir.
 
-@@ Endometrial Karsinom: Klinik ve Prognoz
-Endometrial karsinom kırk yaşın altında nadirdir; pik insidans menopoz sonrası elli beş ile 65 yaş arasıdır. Başlıca belirtiler düzensiz kanama ve menopoz sonrası kanamadır. Yayılım genellikle yavaştır, ancak tedavi edilmezse bölgesel lenf düğümlerine ve uzak organlara yayılır.
+Seröz karsinom hastaları genellikle 65 ile 70 yaş arasındadır ve obezite sıklığı endometrioid karsinoma göre daha düşüktür.
+Prognoz cerrahi evrelemeyle yakından ilişkilidir; tümör sıklıkla yüksek evrede tanı alır ve genel olarak kötü prognozludur.
+Burası önemli, bu bilgi çıkmış sorularda tekrar tekrar soruldu: seröz karsinomun prognozu endometrioid karsinomdan daha iyi değil, daha kötüdür.
+Olguların yalnız %15'ini oluştursa da ölümlerin önemli bölümünden sorumludur.
 
-Erken evre endometrioid karsinomda 5 yıllık sağkalım yaklaşık %90'dır; daha ileri evrelerde sağkalım hızla düşer.
-Prognozu belirleyen etkenler evre, tümör derecesi ve miyometrial invazyon derinliğidir.
+@@ Endometrial polip
+Endometrial polipler genellikle sapsız, yani geniş tabanlı kitlelerdir ve boyutları 0,5 ile 3 santimetre arasındadır. Daha büyük polipler endometriyumdan uterin kaviteye doğru çıkıntı yapabilir. Eski kaynaklar polipi bazal endometriyumun lokalize hiperplazisi olarak tanımlar. Histolojide doku bazal endometriyuma benzer, kistik dilate bezler ve kalın duvarlı küçük kaslı arterler içerir. Stroma klonal stromal hücrelerden oluşur ve polipin neoplastik bileşenidir. Yani polipte çoğalan asıl hücre bez epiteli değil stromadır; atipili hiperplazide ise klonal olan bez epitelidir. Burası önemli, polip histolojisi çıkmış sorularda soruldu. Biyopside doku parçasının 3 kenarının yüzey epiteliyle çevrili olması polipi düşündürür. Stroma sıklıkla fibrözdür, bazen yoğun ve hücreden zengin olabilir. Kalın duvarlı damarlar ya da ince duvarlı ektatik damarlar bulunur. Bezler düzensiz, kıvrıntılı ve dilatedir. Dikkat edin, polip içindeki bezlerde normal siklik bulgular pek izlenmez; "normal siklik bulgular hemen her zaman komşu dokuyla birlikte polipte de izlenir" ifadesi yanlıştır.
 
-Seröz karsinomlu hastalar genellikle altmış beş ile 70 yaş arasındadır ve obezite sıklığı endometrioid karsinoma göre daha düşüktür.
-Prognoz cerrahi evreleme ile yakından ilişkilidir.
-Tümör sıklıkla yüksek evrede tanı aldığı için prognoz genel olarak kötüdür.
+Polipler her yaşta görülür ve sıklıkları yaşla artar; eski kaynaklara göre 4. ve 5. dekatta sıktır.
+Klinikte anormal uterin kanama ve malignite şüphesi yaratır, ama malign dönüşüm nadirdir.
+Burası önemli: polipler endometriozis ve infertiliteyle ilişkili kabul edilir, tek başına hiperplazi gelişimi için belirgin risk oluşturmaz ve tamoksifen kullanımıyla ilişkilidir.
+Tamoksifenle ilişkili polipler tek ve büyük değil, büyük ve çok sayıdadır.
+Tedavi histeroskopik polipektomidir; karında kesi yapılmadan vajinal yoldan kamera yardımıyla polip temizlenip çıkarılır ve doku incelenerek malignite dışlanır.
 
-@@ Endometrial Polip
-Endometrial polipler genellikle sapsız kitlelerdir ve boyutları yarım ile 3 santimetre arasında değişir. Daha büyük polipler endometriyumdan uterin kaviteye doğru uzanabilir.
+@@ Çıkmış sorulardaki serviks ve HPV bilgileri
+Bu derse bağlı çıkmış sorular arasında serviksle ilgili sorular da var; onların bilgilerini de toparlayalım. Burası önemli: serviks kanseri gelişimiyle ilişkili viral patojen insan papilloma virüsüdür, yani HPV'dir. Serviks tümörlerinin büyük bölümü epitelyal kökenlidir ve HPV'nin onkojenik suşlarıyla gelişir. HPV 6 ve 11 düşük risk grubundadır ve anogenital siğillere neden olur; karsinoma dönüşme açısından yüksek riskli değildir. HPV 16 ve 18 yüksek risk grubundadır ve serviks kanseriyle en yakın ilişkili tip 16'dır. 16 ve 18, servikal intraepitelyal neoplazi ve servikal karsinom olgularının yaklaşık %70'inden sorumludur ve konak hücre genomuna entegre olma eğilimindedir. 31 ve 45 de düşük risk grubunda değildir.
 
-Histolojik olarak polip dokusu bazal endometriyuma benzer.
-Kistik olarak genişlemiş bezler ve kalın duvarlı, küçük kaslı arterler içerir.
-Stromadaki hücreler klonaldir ve polibin neoplastik bileşenini oluşturur.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: polip bazal endometriyuma benzediği için polip içindeki bezlerde normal siklik değişiklikler pek izlenmez; dilate bezler ve kalın duvarlı damarlar ise polibin tipik bulgularıdır.
+Mekanizma şöyledir: yüksek riskli HPV'nin E6 onkoproteini p53'ün yıkımına aracılık eder, E7 onkoproteini ise retinoblastom tümör baskılayıcı proteinini bozar.
+HPV enfeksiyonunda koilositoz, yani çekirdek çevresinde açık alan ve çekirdekte atipi görülebilir.
+Tümörlerin en sık görüldüğü bölge transformasyon zonudur ve prekanseröz lezyonlar gözle görülür hale gelmeden çok önce Pap smear ile saptanabilir.
+Pap smearde düşük dereceli skuamöz intraepitelyal lezyon, servikal intraepitelyal neoplazi 1'le uyumludur.
+İnvaziv serviks karsinomu için risk faktörleri yüksek riskli inatçı HPV enfeksiyonu, ilk cinsel ilişkinin erken yaşta olması, birden çok cinsel partner ve birden çok partneri olan erkeğin eşi olmaktır; ultraviyole maruziyeti risk faktörü değildir.
+Son olarak, Naboth kistleri uterin servikste yerleşir.
 
-Polipler her yaşta görülebilir ve sıklıkları yaşla artar.
-Anormal uterin kanamaya neden olabilir ve malignite şüphesi uyandırabilirler; ancak malign dönüşüm nadirdir.
-Tedavi histeroskopik polipektomidir.
-Bu işlemde polip, karında hiçbir kesi yapılmadan, vajinal yoldan kamera yardımıyla çıkarılır.
-
-@@ Uterus Leiomyomu
-Uterus leiomyomu, diğer adıyla fibroid, kadınlarda en sık görülen tümörlerdendir. Benign bir düz kas neoplazmıdır; tek olabilir ama daha sık çokludur. Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: uterusun ve kadınlarda en sık görülen benign tümörü leiomyomdur.
-
-Östrojen ve progesteron leiomyom büyümesini uyarır.
-Bu yüzden leiomyomlar reprodüktif dönemde büyür, menopoz sonrasında küçülme eğilimi gösterir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: östrojen leiomyom büyümesini inhibe etmez, tam tersine uyarır.
-
-Genetik açıdan leiomyomlarda 6. ve 12. kromozomları içeren tekrarlayan yeniden düzenlenmeler görülür; benzer düzenlenmeler endometrial poliplerde ve lipomlarda da bulunur.
-Leiomyomların yaklaşık yüzde yetmişinde med on iki geninde mutasyon vardır.
-Bu gen, ribonükleik asit polimeraz iki aracılı transkripsiyonun bir düzenleyicisini kodlar.
-Med on iki mutasyonları patogenezde sıktır; mekanizması tam bilinmese de düz kas hücresi proliferasyonunu ve gen ifadesini değiştirdiği düşünülür.
-
-Makroskopik olarak leiomyom keskin sınırlı, sert, gri beyaz bir kitledir ve kesit yüzü girdaplıdır.
-Uterus boyunca dağılmış olabilir; boyutları küçük nodüllerden uterustan büyük tümörlere kadar değişir.
-Şekilde açılmış uterusta, her biri kesitte karakteristik girdaplı görünüme sahip, çok sayıda submukozal, intramural ve subserozal ten rengi beyaz tümör görülür.
-Mikroskopta ise düz kas hücresi demetleri izlenir.
-
-Yerleşime göre üç tip vardır.
-İntramural leiomyom miyometriyumun içine gömülüdür.
-Submukozal leiomyom endometriyumun hemen altındadır.
-Subserozal leiomyom serozanın altındadır ve saplı olabilir; saplı bir leiomyom komşu organlara yapışıp kan desteğini onlardan almaya başlarsa parazitik leiomyom adını alır.
-
-Submukozal leiomyomlar ülserasyona ve anormal uterin kanamaya yol açabilir.
-Histolojide miyometriyuma benzeyen düz kas demetleri görülür; fibrozis, kalsifikasyon ve dejeneratif yumuşama odakları da bulunabilir.
-
-Leiomyomların çoğu asemptomatiktir ve rutin pelvik muayenede tesadüfen saptanır.
-Semptomatik olgularda en sık bulgu menorajidir; metroraji ve idrar yapma güçlüğü ya da kabızlık gibi bası semptomları da görülebilir.
-
-@@ Leiomyosarkom
-Leiomyosarkom, uterusun malign düz kas tümörüdür. Burası önemli, bu bilgi çıkmış sorularda soruldu: uterusun düz kas hücrelerinden köken alan malign mezenkimal tümörü leiomyosarkomdur. Leiomyomdan malign dönüşüm son derece nadirdir; tümör miyometriyumdan ya da endometrial stromal öncü hücrelerden köken alır.
-
-Klinik farkı akılda tutalım: leiomyosarkom neredeyse her zaman tektir ve genellikle menopoz sonrası kadınlarda görülür.
-Leiomyom ise sıklıkla çokludur ve genellikle premenopozal dönemde görülür.
-Leiomyosarkomun karyotipi kompleks ve oldukça değişkendir, kromozomal delesyonlar sıktır.
-Med on iki mutasyonu olguların yaklaşık yüzde otuzunda bulunur; bu oran leiomyomlardakinden düşüktür.
-
-Makroskopik olarak leiomyosarkom yumuşak, hemorajik ve nekrotik kitleler oluşturur.
-Histolojik spektrum, leiomyoma benzeyen hafif atipili tümörlerden vahşi anaplastik neoplazmlara kadar uzanır.
-Şekilde alt korpusu genişleten büyük hemorajik bir tümör ve onu çevreleyen iki leiomyom görülür; mikroskopta düzensiz büyüklükte, hiperkromatik çekirdekli tümör hücreleri ve çok sayıda mitotik figür vardır.
-
-Tanı için üç kriter birlikte değerlendirilir: tümör nekrozu, belirgin sitolojik atipi ve artmış mitotik aktivite.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: leiomyosarkom tanısı bu üçlünün birlikte değerlendirilmesine dayanır.
-Çünkü artmış mitoz sayısı, özellikle genç kadınlarda, benign düz kas tümörlerinde de görülebilir; tek başına yeterli değildir.
-
-Cerrahi sonrası leiomyosarkom sıklıkla nüks eder.
-Hematojen yolla akciğer, kemik ve beyine metastaz yapar, karın boşluğu boyunca da yayılabilir.
-Prognoz genel olarak kötüdür ve evreye ve tümör derecesine bağlıdır.
-
-Özetle arkadaşlar, adenomyozda endometrial doku miyometriyumda, endometriozisde uterus dışındadır.
-Östrojen fazlalığı hiperplaziye ve endometrioid karsinoma zemin hazırlar; seröz karsinom ise atrofi zemininde TP53 mutasyonuyla gelişir ve daha kötü seyirlidir.
-Leiomyom en sık benign uterus tümörüdür; leiomyosarkom tanısında nekroz, atipi ve mitoz birlikte değerlendirilir.
+@@ Özetle
+Özetle, endometritte nötrofil akut, plazma hücresi kronik formu gösterir. Adenomyoz bazal tabakanın miyometriyum içine büyümesi, endometriozis endometrial bez ve stromanın uterus dışında bulunmasıdır. Hiperplazinin zemini karşılanmamış östrojendir ve atipi riski belirler. Endometrioid karsinom östrojen, hiperplazi ve PTEN yoluyla, seröz karsinom atrofi zemininde TP53 yoluyla gelişir ve prognozu daha kötüdür.

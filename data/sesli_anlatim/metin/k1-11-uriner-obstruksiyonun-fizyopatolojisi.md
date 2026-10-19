@@ -3,15 +3,15 @@
 @@ Obstrüktif üropati: tanım ve temel olay
 İdrar akımını engelleyen durumların tümüne obstrüktif üropati diyoruz. Bu tıkanıklık, en dışta eksternal üretral meadan en içte renal tübüle kadar üriner yolun herhangi bir düzeyinde gelişebilir. Böbrek, renal pelvis, üreter, mesane ve üretra tek bir boşaltım hattıdır. Kadın pelvisini gösteren yan kesit şemasında uterus, serviks, vajen ve rektumun mesane ve üretraya ne kadar yakın komşu olduğu görülür. Bu komşuluk, pelvik organ hastalıklarının neden idrar yolunu tıkayabildiğini açıklar.
 
-Hastadaki klinik tabloyu dört şey belirler: obstrüksiyonun seviyesi, derecesi, süresi ve enfeksiyon varlığı.
-Yani aynı neden, bu dört özelliğe göre hastadan hastaya bambaşka bir tablo yapabilir.
-Tıkanıklığın proksimalinde ise her zaman iki olay gelişir: staz ve basınç artışı.
+Hastadaki klinik tabloyu 4 şey belirler: obstrüksiyonun seviyesi, derecesi, süresi ve enfeksiyon varlığı.
+Yani aynı neden, bu 4 özelliğe göre hastadan hastaya bambaşka bir tablo yapabilir.
+Tıkanıklığın proksimalinde ise her zaman 2 olay gelişir: staz ve basınç artışı.
 Staz, akımın yavaşlaması ya da durmasıyla idrarın beklemesidir ve bakterilerin üremesine zemin hazırlar.
 Basınç artışı ise proksimaldeki yapıları genişletir ve zamanla dokuyu hasarlar.
 Dersin geri kalanında anlatacağım bütün evreler, aslında bu iki olayın sonuçlarıdır.
 
-@@ Sınıflama: beş eksen
-Üriner obstrüksiyonu beş ayrı eksen üzerinden sınıflarız. Nedenine göre konjenital ya da edinsel olabilir; doğumsal yapısal kusurlar çocuklukta, edinsel nedenler erişkinde öne çıkar. Süresine göre akut ya da kroniktir; akut tıkanıklık genellikle ağrılı ve gürültülüdür, kronik tıkanıklık sinsi seyreder. Derecesine göre komplet ya da inkomplettir; komplet tıkanıklıkta akım tamamen durur. Etkilenime göre unilateral ya da bilateraldir.
+@@ Sınıflama: 5 eksen
+Üriner obstrüksiyonu 5 ayrı eksen üzerinden sınıflarız. Nedenine göre konjenital ya da edinsel olabilir; doğumsal yapısal kusurlar çocuklukta, edinsel nedenler erişkinde öne çıkar. Süresine göre akut ya da kroniktir; akut tıkanıklık genellikle ağrılı ve gürültülüdür, kronik tıkanıklık sinsi seyreder. Derecesine göre komplet ya da inkomplettir; komplet tıkanıklıkta akım tamamen durur. Etkilenime göre unilateral ya da bilateraldir.
 
 Seviyesine göre ise infravezikal ve supravezikal diye ikiye ayırırız.
 İnfravezikal, mesane çıkımı ve altındaki düzey, yani alt üriner sistemdir.
@@ -20,18 +20,18 @@ Bu seviye ekseni dersin bel kemiğidir; evreler, belirtiler ve acil drenaj yönt
 İnfravezikal tıkanıklık mesane düzeyinde olduğu için iki üst üriner sistemi birlikte etkileyebilir, supravezikal tıkanıklık ise çoğu zaman tek tarafı ilgilendirir.
 
 @@ Böbrek düzeyindeki nedenler
-Obstrüktif üropatinin nedenlerini üç anatomik düzeyde inceliyoruz: böbrek, üreter ve son olarak mesane ile üretra. Bir nedenin hangi düzeye ait olduğunu bilmek, ileride seviyeye göre değişen patofizyolojiyi anlamanın anahtarıdır. Her düzeyde konjenital, neoplastik, inflamatuar ve çeşitli gruplar var. Böbrek düzeyindeki nedenlerin ortak noktası, toplayıcı sistemin ya da pelvisin lümenini daraltmak veya onu dıştan sıkıştırmaktır.
+Obstrüktif üropatinin nedenlerini 3 anatomik düzeyde inceliyoruz: böbrek, üreter ve son olarak mesane ile üretra. Bir nedenin hangi düzeye ait olduğunu bilmek, ileride seviyeye göre değişen patofizyolojiyi anlamanın anahtarıdır. Her düzeyde konjenital, neoplastik, inflamatuar ve çeşitli gruplar var. Böbrek düzeyindeki nedenlerin ortak noktası, toplayıcı sistemin ya da pelvisin lümenini daraltmak veya onu dıştan sıkıştırmaktır.
 
 Konjenital renal nedenler polikistik böbrek, renal kist, üreteropelvik bileşke darlığı, peripelvik kist ve üreteropelvik bileşkede aberran damardır.
 Üreteropelvik bileşke, renal pelvisin üretere geçtiği daralma bölgesidir.
 Kistler pelvisi dıştan iter, aberran damar ise bu bileşkeyi çaprazlayarak sıkıştırır.
-Neoplastik nedenler Vilms tümörü, renal hücreli karsinom, renal pelvisin değişici epitel yani transizyonel hücreli karsinomu ve multipl miyelomdur.
-İnflamatuar nedenler tüberküloz ve Ekinokokus enfeksiyonu, metabolik neden böbrek taşlarıdır.
+Neoplastik nedenler Wilms tümörü, renal hücreli karsinom, renal pelvisin değişici epitel yani transizyonel hücreli karsinomu ve multipl miyelomdur.
+İnflamatuar nedenler tüberküloz ve Echinococcus enfeksiyonu, metabolik neden böbrek taşlarıdır.
 Çeşitli grupta nekroze olmuş papilla, travma ve renal arter anevrizması yer alır.
 Nekroze papilla dökülüp toplayıcı sistemde serbest kalınca taş gibi lümeni tıkar; renal arter anevrizması ise vasküler bir yapının toplayıcı sisteme bası yapmasına örnektir.
 
 @@ Üreter düzeyindeki nedenler
-Üreterin konjenital nedenleri en kalabalık doğumsal gruptur. Burada iki darlık var: üreterin pelvisten çıkışındaki üreteropelvik darlık ve mesaneye girişteki üreterovezikal darlık. Lümen içi yapılar olarak üreterosel, yani üreterin mesaneye açılan ucunun kistik genişlemesi, ve üreteral valv sayılır. Vezikoüreteral reflü de bu gruptadır. Anormal konum ve seyre bağlı nedenler ektopik böbrek, ovaryan ven sendromu ve retrokaval üreterdir. Retrokaval üreterde üreter vena kava inferiorun arkasından dolanır ve orada sıkışır; ovaryan ven sendromunda da çaprazlayan bir ven üretere bası yapar. Yani darlık her zaman duvar hastalığı değildir. Listeyi prun beli sendromu tamamlar.
+Üreterin konjenital nedenleri en kalabalık doğumsal gruptur. Burada 2 darlık var: üreterin pelvisten çıkışındaki üreteropelvik darlık ve mesaneye girişteki üreterovezikal darlık. Lümen içi yapılar olarak üreterosel, yani üreterin mesaneye açılan ucunun kistik genişlemesi, ve üreteral valv sayılır. Vezikoüreteral reflü de bu gruptadır. Anormal konum ve seyre bağlı nedenler ektopik böbrek, ovaryan ven sendromu ve retrokaval üreterdir. Retrokaval üreterde üreter vena kava inferiorun arkasından dolanır ve orada sıkışır; ovaryan ven sendromunda da çaprazlayan bir ven üretere bası yapar. Yani darlık her zaman duvar hastalığı değildir. Listeyi prune belly sendromu tamamlar.
 
 Üreter uzun retroperitoneal seyri nedeniyle edinsel nedenlerle de kolayca tıkanır.
 Neoplastik nedenler üreterin primer ya da metastatik karsinomu, retroperitoneal kitle ve serviks ya da rektum kanseridir; pelvik tümörler üreteri dıştan sarar ya da invaze eder.
@@ -47,7 +47,7 @@ Dikkat edin, gebelik bu derste üreterin çeşitli nedenleri arasında sayılır
 Mesane ve üretra düzeyindeki nedenler mesane çıkımını ya da üretra lümenini daraltarak boşaltımı engeller. Konjenital nedenler posterior üretral valv, fimozis, üretra darlığı, hipospadias ve epispadias ile eksternal mea darlığıdır. Posterior üretral valv, erkek arka üretrasında akımı engelleyen doğumsal bir katlantıdır. Neoplastik nedenler mesane, prostat, üretra ve penis kanseridir. İnflamatuar nedenler prostatit ya da prostat apsesi ve paraüretral apsedir.
 
 Çeşitli grupta benign prostat hiperplazisi, nöropatik mesane, üretra taşı, spina bifida ve meningomiyelosel, ilaçlar, spinal kord travmaları ve pelvik organ prolapsusları yer alır.
-Burada iki farklı mekanizma yan yana durur.
+Burada 2 farklı mekanizma yan yana durur.
 Benign prostat hiperplazisi, taş ve prolapsus mekanik bir engel oluşturur.
 Nöropatik mesane, spina bifida, spinal kord travması ve ilaçlar ise lümende darlık olmadan mesanenin boşaltma işlevini bozarak fonksiyonel bir obstrüksiyon yaratır.
 Yani obstrüksiyon her zaman anatomik bir darlık demek değildir; nörolojik ve ilaca bağlı tıkanıklıklar da aynı sonuçları doğurur.
@@ -92,7 +92,7 @@ Glob vezikalenin klinik tablosu ile bu boşaltım tuzağı birlikte akılda tutu
 @@ Kronik alt üriner sistem obstrüksiyonu
 Kronik alt üriner sistem obstrüksiyonu en sık görülen obstrüksiyon şeklidir ve en sık saptanan nedeni benign prostat hiperplazisidir. Burası önemli, bu bilgi çıkmış sorularda iki yönden soruldu: kronik infravezikal obstrüksiyonun en sık sebebi benign prostat hiperplazisidir; benign prostat hiperplazisinin yol açtığı tablo da kronik alt üriner sistem obstrüksiyonudur. Çeldiricilere dikkat edin; nörojen mesane, prostat kanseri, üretra darlığı ve mesane tümörü de infravezikal neden olabilir ama en sık neden değildir. Benign prostat hiperplazisi üst üriner sistem obstrüksiyonu, glomerülonefrit, nefrotik sendrom ya da renal arter stenozu yapmaz.
 
-Obstrüksiyon sonucunda idrar akımında üç değişiklik olur.
+Obstrüksiyon sonucunda idrar akımında 3 değişiklik olur.
 Atım hızı azalır, çünkü daralmış çıkımdan birim zamanda daha az idrar geçer.
 Atım mesafesi kısalır, çünkü akımın gücü azalmıştır.
 Kalibrasyonu, yani akımın çapı incelir.
@@ -108,18 +108,18 @@ Detrüsörün üretral direnci yenmek için daha kuvvetli kasılması, yorulduk�
 Kompansasyonun tanımlayıcı özelliği tam boşalmanın korunmasıdır.
 
 @@ İrritasyon ve dekompansasyon evreleri
-İrritasyon ya da konjesyon evresinde mesane mukozasında ödem ve konjesyon vardır; bu yüzden mesane hassas ve irritabl hâldedir. Mesane tam dolmadan işeme hissi oluşur. Pollaküri yani sık idrara çıkma, noktüri yani gece idrara kalkma, ani ve ertelenemez işeme isteği yani sıkışma ve dizüri yani ağrılı işeme gözlenir. Bu yakınmaların kaynağı tıkanıklığın kendisi değil, ödemli mukozanın aşırı duyarlılığıdır. Bu evrede detrüsör hipertrofisi meydana gelir ve elli mililitreden az bir rezidüel idrar oluşmaya başlamıştır. Kompansasyondan farkı budur: küçük de olsa ilk kez rezidü ortaya çıkar.
+İrritasyon ya da konjesyon evresinde mesane mukozasında ödem ve konjesyon vardır; bu yüzden mesane hassas ve irritabl hâldedir. Mesane tam dolmadan işeme hissi oluşur. Pollaküri yani sık idrara çıkma, noktüri yani gece idrara kalkma, ani ve ertelenemez işeme isteği yani sıkışma ve dizüri yani ağrılı işeme gözlenir. Bu yakınmaların kaynağı tıkanıklığın kendisi değil, ödemli mukozanın aşırı duyarlılığıdır. Bu evrede detrüsör hipertrofisi meydana gelir ve 50 mililitreden az bir rezidüel idrar oluşmaya başlamıştır. Kompansasyondan farkı budur: küçük de olsa ilk kez rezidü ortaya çıkar.
 
-Dekompansasyon evresinde mesane fonksiyonları daha da bozulur ve beş yüz mililitreyi aşan belirgin bir rezidüel idrar gözlenir.
+Dekompansasyon evresinde mesane fonksiyonları daha da bozulur ve 500 mililitreyi aşan belirgin bir rezidüel idrar gözlenir.
 Artan rezidü mesane duvarını gerer ve üreterlerin mesaneye girdiği trigon bölgesindeki, reflüyü önleyen üreterotrigonal kompleksi bozar.
 Bunun sonucunda vezikoüreteral reflü gelişir; ardından bilateral hidroüreteronefroz, yani üreter ve toplayıcı sistemin birlikte genişlemesi ve kronik böbrek yetmezliği ortaya çıkar.
-Rezidü miktarı evreleri ayırmada çok pratik bir ölçüttür: kompansasyonda rezidü yoktur, irritasyonda elli mililitrenin altındadır, dekompansasyonda beş yüz mililitrenin üzerindedir.
+Rezidü miktarı evreleri ayırmada çok pratik bir ölçüttür: kompansasyonda rezidü yoktur, irritasyonda 50 mililitrenin altındadır, dekompansasyonda 500 mililitrenin üzerindedir.
 
 @@ Mesane duvarının yeniden şekillenmesi ve divertikül
 İntravezikal basınç artışı ve duvardaki gerilme, mesane ağırlığında artışa ve duvarın kalınlaşmasına yol açar. Bu kalınlaşma belirli bir zaman çizelgesiyle gelişir. Erken dönem inflamasyonla karakterizedir, ardından epitel proliferasyonu başlar. 1. haftanın sonunda submukozal fibroblast hakimiyeti, 2. haftanın sonunda düz kas hipertrofisi görülür. Sonuçta Tip 3 kollajen artar ve kompliyans azalır. Kompliyans, mesanenin basıncı fazla yükseltmeden dolabilme yeteneğidir; kollajenden zengin, sertleşmiş bir mesane küçük hacim artışlarında bile yüksek basınç üretir ve bu basınç üst üriner sisteme yansır.
 
 Dekompanse aşamada obstrüksiyon ortadan kaldırılsa bile mesane fonksiyonlarında beklenen düzelme olmaz; erken tanı ve tedavinin önemi buradan gelir.
-İntravezikal basıncın iki ila 4 kat artması sonucunda duvarda ardışık deformiteler oluşur.
+İntravezikal basıncın 2 ila 4 kat artması sonucunda duvarda ardışık deformiteler oluşur.
 Trabekülasyon artışı, hipertrofik detrüsör kas demetlerinin iç yüzde kabarık bantlar yapmasıdır.
 Selül, bu demetler arasında kalan küçük mukozal cepçiklerdir.
 Sakkül ve divertikül ise selüllerin perivezikal yağ dokusu ve peritona doğru büyümesiyle meydana gelir.
@@ -127,9 +127,9 @@ Dikkat edin: trabekülasyon kas demetidir, selül mukozal cepçiktir, divertikü
 Görsellerde sistoskopide birbirini kesen kalın kas bantları görülür; divertikül görüntülerinde ise tomografide mesanenin yanında ayrı bir sıvı kesesi ve sistografide kontrastla dolan mesanenin iki yanında yuvarlak çıkıntılar izlenir.
 
 @@ Üst üriner sistem obstrüksiyonu ve üreter peristaltizmi
-Şimdi supravezikal, yani üst üriner sistem obstrüksiyonuna geçiyoruz. Obstrüksiyonun renal fonksiyonlar üzerindeki etkisini ve klinik tabloyu altı değişken belirler: şiddeti, süresi, enfeksiyon varlığı, unilateral ya da bilateral oluşu, akut ya da kronik seyri ve komplet ya da inkomplet olması. Tek taraflı tıkanıklıkta karşı böbrek fonksiyonu sürdürür, iki taraflıda ise toplam fonksiyon tehlikeye girer. Enfeksiyon, staz zemininde gelişip hasarı hızlandırır. En ağır tablo bilateral, komplet, uzun süreli ve enfekte obstrüksiyondur.
+Şimdi supravezikal, yani üst üriner sistem obstrüksiyonuna geçiyoruz. Obstrüksiyonun renal fonksiyonlar üzerindeki etkisini ve klinik tabloyu 6 değişken belirler: şiddeti, süresi, enfeksiyon varlığı, unilateral ya da bilateral oluşu, akut ya da kronik seyri ve komplet ya da inkomplet olması. Tek taraflı tıkanıklıkta karşı böbrek fonksiyonu sürdürür, iki taraflıda ise toplam fonksiyon tehlikeye girer. Enfeksiyon, staz zemininde gelişip hasarı hızlandırır. En ağır tablo bilateral, komplet, uzun süreli ve enfekte obstrüksiyondur.
 
-Üreter idrarı pasif bir boru gibi değil, aktif peristaltik dalgalarla taşır ve duvarındaki iki kas düzeni farklı görevler üstlenir.
+Üreter idrarı pasif bir boru gibi değil, aktif peristaltik dalgalarla taşır ve duvarındaki 2 kas düzeni farklı görevler üstlenir.
 Longitudinal kas lifleri idrarın aşağıya doğru iletimini sağlar.
 Sirküler kas lifleri ise üreterde oluşan yüksek basıncın böbreğe geri iletimini engeller.
 Bu görevler sınavda sık ters verilir, iletim longitudinal, geri basınç engeli sirküler liflerdir.
@@ -157,7 +157,7 @@ Neksuslar düz kas hücrelerini elektriksel olarak birbirine bağlayan temas nok
 Obstrüksiyonun 7. gününde dilate kollektör kanallarda atrofi ve nekroz başlar; yani kalıcı hasar ilk haftanın sonunda başlayabilir.
 
 @@ Üst sistemde dekompansasyon evresi
-Dekompansasyon evresinde intrapelvik ve intrakalisiyel basınç artışı sürer ve dilatasyon artar. Böbrek parankimi, içeriden genişleyen toplayıcı sistem ile dışarıdan esnemeyen renal kapsül arasında sıkışır ve iskemi ile basınç atrofisi gelişir. Basınca en fazla uğrayan damarlar, kaliksler arasındaki parankimde seyreden arkuat arterlerdir; bunlar basılanınca kan akımı azalır. 4. haftada renal medüller kalınlık %50 azalır, 8. haftada renal parankim kalınlığı yaklaşık bir santimetredir.
+Dekompansasyon evresinde intrapelvik ve intrakalisiyel basınç artışı sürer ve dilatasyon artar. Böbrek parankimi, içeriden genişleyen toplayıcı sistem ile dışarıdan esnemeyen renal kapsül arasında sıkışır ve iskemi ile basınç atrofisi gelişir. Basınca en fazla uğrayan damarlar, kaliksler arasındaki parankimde seyreden arkuat arterlerdir; bunlar basılanınca kan akımı azalır. 4. haftada renal medüller kalınlık %50 azalır, 8. haftada renal parankim kalınlığı yaklaşık 1 santimetredir.
 
 Böbrek ağırlığı dekompanse evrenin başında ödem nedeniyle artar, ileri evrede atrofi nedeniyle azalır.
 Üreter uzar, yani elongasyon gösterir ve 1 santimetre çapa kadar genişleyebilir.
@@ -165,16 +165,16 @@ Uzayan üreter kıvrılır, buna tortüozite denir; kıvrımlar arasında fibrot
 Peristaltizm azalır ve sonunda yok olur.
 6. ayda glomerül izlense bile böbrek artık nonfonksiyonedir.
 Görüntülerde ultrasonografide birbirine açılan genişlemiş kaliksler ve incelmiş parankim, pyelografide genişlemiş, kıvrımlı üreter ve pelvis görülür.
-Zaman çizelgesini şöyle aklınızda tutun: 7. gün kollektör kanal nekrozu, 4. hafta medullada yarı yarıya incelme, 8. hafta yaklaşık bir santimetrelik parankim, 6. ay nonfonksiyone böbrek.
+Zaman çizelgesini şöyle aklınızda tutun: 7. gün kollektör kanal nekrozu, 4. hafta medullada yarı yarıya incelme, 8. hafta yaklaşık 1 santimetrelik parankim, 6. ay nonfonksiyone böbrek.
 
 @@ Koruyucu mekanizmalar ve forniks rüptürü
 Pelvis içi basınç arttıkça böbrek idrar yapımını tamamen durdurmaz. İdrar sentezinin devamını sağlamaya yönelik, basınç azaltıcı koruyucu mekanizmalar devreye girebilir. Bunların en sık görüleni pyelointerstisyel reflüdür. Basınçla yırtılan papilla ve fornikslerden idrar böbrek sinüsüne ve perirenal alana geçer, oradan da hem venöz yolla hem lenfatiklerle taşınır. Görselde kontrast maddenin kaliks köşelerinden böbrek sinüsüne doğru taşıp düzensiz bulutlar oluşturduğu izlenir.
 
-2. yol pyelolenfatik reflüdür.
+İkinci yol pyelolenfatik reflüdür.
 Böbreğin lenf sıvısı hiler ve kapsüler lenfatiklerle drene olur.
 Böbrek lenfatik volümü yaklaşık idrar akımı kadardır ve üreter obstrüksiyonu, su diürezi gibi durumlarda daha da artar.
 Böbrek lenfatiklerinin akut obstrüksiyonunda ise natriürez ve diürez oluşur.
-3. yol pyelovenöz reflüdür; idrarın doğrudan venalara dönüşüdür ve en az etkili koruma sistemidir.
+Üçüncü yol pyelovenöz reflüdür; idrarın doğrudan venalara dönüşüdür ve en az etkili koruma sistemidir.
 Özetle en sık yol pyelointerstisyel, en az etkili yol pyelovenöz reflüdür.
 Bu koruyucu mekanizmalar normal işlevlerini yapacak düzeyde iseler böbrek fonksiyonlarındaki bozulma gecikir.
 
@@ -186,11 +186,11 @@ Görsellerde döküm preparatında kaliks forniksleri ve grafide böbrek çevres
 Enfekte idrar varsa bu, bakterinin kana geçmesi için açık bir kapıdır; enfekte obstrüksiyonun tehlikesi buradan gelir.
 
 @@ Süre, seviye ve kalıcı parankim kaybı
-Obstrüksiyon giderildiğinde glomerüler filtrasyon hızının ne kadarı geri döner? Temel veri köpeklerde yapılan çalışmadan gelir. İki haftalık obstrüksiyonda kontrol fonksiyonunun %46'sı üç ila 4 ay içinde geri döner. 4 haftalık obstrüksiyonda %35'i 5 ay içinde döner. 6 haftalık obstrüksiyonda ise geri dönen fonksiyon yoktur. İnsanlar için kesin veri yoktur. Ama çizgi açıktır: süre uzadıkça hem geri dönen fonksiyon azalır hem de iyileşme süresi uzar.
+Obstrüksiyon giderildiğinde glomerüler filtrasyon hızının ne kadarı geri döner? Temel veri köpeklerde yapılan çalışmadan gelir. 2 haftalık obstrüksiyonda kontrol fonksiyonunun %46'sı 3 ila 4 ay içinde geri döner. 4 haftalık obstrüksiyonda %35'i 5 ay içinde döner. 6 haftalık obstrüksiyonda ise geri dönen fonksiyon yoktur. İnsanlar için kesin veri yoktur. Ama çizgi açıktır: süre uzadıkça hem geri dönen fonksiyon azalır hem de iyileşme süresi uzar.
 
 Obstrüksiyon üreteropelvik bileşkeye ne kadar yakınsa, basınç artışının böbrek üzerine etkisi o kadar erken ve fazla olur; çünkü basıncı tamponlayacak üreter segmenti kısadır.
 Hidronefroz oluşumunda başlangıçta basınç artışı, ileri dönemde iskemi ve hemodinamik bozukluklar rol oynar.
-Hidronefrotik atrofiye bağlı olarak böbrek parankim kalınlığı dört ila altı milimetreye kadar incelir.
+Hidronefrotik atrofiye bağlı olarak böbrek parankim kalınlığı 4 ila 6 milimetreye kadar incelir.
 Obstrüksiyon kaldırılsa bile parankim kaybının geri dönüşü yoktur.
 Böbrek az miktarda ve kalitesiz idrar oluşturabilir ve atrofi kimi zaman hiç parankim kalmayıncaya kadar devam edebilir.
 Obstrüksiyonlarda üst üriner sistem hematojen, yani kan yoluyla, ve lenfojen, yani lenf yoluyla da enfekte olabilir.
@@ -201,19 +201,19 @@ Tümör nekroz faktör alfa, iskemik renal hasar süresince enflamatuar hücre i
 Böylece mekanik basıncın başlattığı süreç kalıcı bir yara dokusuna dönüşür; parankim kaybının neden geri dönmediği hücresel düzeyde de buradan anlaşılır.
 
 @@ Glomerüler filtrasyonun basınç dengesi
-Obstrüksiyonun filtrasyonu nasıl düşürdüğünü anlamak için glomerüldeki basınç dengesini bilmek gerekir. Şemada glomerül, Bowman kapsülü, getirici ve götürücü atardamar, granüler hücreler, mezangial hücreler, proksimal ve distal tüp gösterilir. Glomerül içi basınç sistemik arteriyel basıncın yaklaşık %60'ı kadardır, normalde 70 milimetre cıva civarındadır ve filtrasyonu sağlayan itici kuvvettir. Kapiller onkotik basınç yirmi beş ila 30 milimetre cıvadır ve sıvıyı kapiller içinde tutar. Bowman kapsülü içi hidrostatik basınç on ila 15 milimetre cıvadır ve geri itme kuvvetidir. Efektif filtrasyon basıncı, glomerül içi basınçtan onkotik basınç ile Bowman kapsülü içi basıncın toplamı çıkarılarak bulunur.
+Obstrüksiyonun filtrasyonu nasıl düşürdüğünü anlamak için glomerüldeki basınç dengesini bilmek gerekir. Şemada glomerül, Bowman kapsülü, getirici ve götürücü atardamar, granüler hücreler, mezangial hücreler, proksimal ve distal tüp gösterilir. Glomerül içi basınç sistemik arteriyel basıncın yaklaşık %60'ı kadardır, normalde 70 milimetre cıva civarındadır ve filtrasyonu sağlayan itici kuvvettir. Kapiller onkotik basınç 25 ila 30 milimetre cıvadır ve sıvıyı kapiller içinde tutar. Bowman kapsülü içi hidrostatik basınç 10 ila 15 milimetre cıvadır ve geri itme kuvvetidir. Efektif filtrasyon basıncı, glomerül içi basınçtan onkotik basınç ile Bowman kapsülü içi basıncın toplamı çıkarılarak bulunur.
 
-Efektif filtrasyon basıncını, dolayısıyla glomerüler filtrasyon hızını iki durum azaltır.
+Efektif filtrasyon basıncını, dolayısıyla glomerüler filtrasyon hızını 2 durum azaltır.
 1.'si sistemik arteriyel basıncın düşmesidir; derste sistemik basınç 70 milimetre cıvaya indiğinde filtrasyonun sıfırlandığı belirtilir.
-2.'si Bowman kapsülü içi basıncın artmasıdır; bu basıncın filtrasyonu tamamen durdurduğu değere stop flov preşır, yani akımı durduran basınç denir ve bu noktada filtrasyon sıfırdır.
-Obstrüksiyonla ilgili olan 2. yoldur: tıkanıklığın proksimalinde biriken idrar pelvis, kaliksler ve tübüller yoluyla Bowman kapsülüne kadar geri basınç oluşturur.
+2.'si Bowman kapsülü içi basıncın artmasıdır; bu basıncın filtrasyonu tamamen durdurduğu değere stop flow pressure, yani akımı durduran basınç denir ve bu noktada filtrasyon sıfırdır.
+Obstrüksiyonla ilgili olan ikinci yoldur: tıkanıklığın proksimalinde biriken idrar pelvis, kaliksler ve tübüller yoluyla Bowman kapsülüne kadar geri basınç oluşturur.
 
 @@ Tedavisiz obstrüksiyonda tübüler ve sistemik değişiklikler
 Obstrüksiyon tedavi edilmezse filtrasyon hızında azalma ve iskemi sonucu tübüler hasar meydana gelir; obstrüksiyon bilateral ise kronik böbrek yetmezliği gelişir. Başlangıçta idrar volümü azalır, osmolaritesi artar; çünkü tübüller henüz su geri emme yeteneğini korumaktadır. İleri dönemde ise antidiüretik hormona direnç gelişir ve idrar konsantrasyon kabiliyeti bozulur. İdrar osmolaritesi düşer; idrar dilüe, hipostenürik ve poliüri ile karakterize olur. Bu erken ve geç dönem zıtlığı sınavlarda sık kullanılır: erken dönemde az ve yoğun idrar, ileri dönemde bol ve sulandırılmış idrar.
 
-Tübüler hasarın 2. sonucu, idrar asidifikasyon kapasitesinin düşmesidir.
+Tübüler hasarın ikinci sonucu, idrar asidifikasyon kapasitesinin düşmesidir.
 Titrabl asit eliminasyonu düşer, amonyak ekskresyonu ve bikarbonat absorpsiyonu bozulur.
-Bu üç yol, böbreğin asit baz dengesini korumak için kullandığı temel yollardır.
+Bu 3 yol, böbreğin asit baz dengesini korumak için kullandığı temel yollardır.
 Hepsinin birlikte bozulması, obstrüksiyonlu hastada böbreğin hem asit yükünü atamaması hem de bikarbonatı tutamaması anlamına gelir.
 
 Sistemik olarak azotemi, yani kanda azotlu yıkım ürünlerinin birikmesi ortaya çıkar.
@@ -221,7 +221,7 @@ Hipertansiyon da gözlenir ve su ile tuz retansiyonuna bağlıdır; böbrek sody
 Obstrüksiyon düzeltildikten sonra diürez ve natriürezle, yani idrar miktarı ve idrarla sodyum atılımı artarak, hipertansiyon kaybolur.
 
 @@ Obstrüksiyon sonrası böbrek ve renal kontrbalans
-Obstrüksiyon düzeltildikten sonra böbrek fonksiyonlarının ne kadar düzeleceğini dört etmen belirler: obstrüksiyonun süresi, enfeksiyonun eşlik edip etmemesi, intrarenal ya da ekstrarenal pelvis yapısı ve pyelointerstisyel, pyelolenfatik reflü gibi koruyucu mekanizmaların etkinliği. Pelvisin böbrek dışında kalan, yani ekstrarenal kısmı genişleyerek basıncı tamponlayabilir; intrarenal pelviste ise basınç parankime daha doğrudan iletilir.
+Obstrüksiyon düzeltildikten sonra böbrek fonksiyonlarının ne kadar düzeleceğini 4 etmen belirler: obstrüksiyonun süresi, enfeksiyonun eşlik edip etmemesi, intrarenal ya da ekstrarenal pelvis yapısı ve pyelointerstisyel, pyelolenfatik reflü gibi koruyucu mekanizmaların etkinliği. Pelvisin böbrek dışında kalan, yani ekstrarenal kısmı genişleyerek basıncı tamponlayabilir; intrarenal pelviste ise basınç parankime daha doğrudan iletilir.
 
 Obstrüksiyonu ortadan kaldırılan böbrekte, normal böbreğe oranla glomerüler filtrasyon hızı azalır, renal kan akımı azalır, idrar konsantrasyon kabiliyetinde yetmezlik vardır, hidrojen ve fosfat ekskresyonu azalır ve sodyum reabsorpsiyonunda hafif bozulma olur.
 Buna karşın üriner dilüsyon yeteneği etkilenmez.
@@ -236,7 +236,7 @@ Yani kayıpta hipertrofi, düzeltmede hipotrofi; bunun ters verilmesi klasik bir
 Görselde kontrastlı tomografide iki böbrek arasında boyut ve kontrast tutulumu farkı izlenir.
 
 @@ Klinik tablo ve belirtiler
-Hasta asemptomatik olabilir, yani obstrüksiyon başka nedenle yapılan bir incelemede insidental olarak saptanır; ya da renal kolikle, yani ani, şiddetli, dalgalanan böğür ağrısıyla gelebilir. Belirtiler dört etkene göre değişir: oluşum zamanı yani akut ya da kronik oluşu, tek ya da çift taraflı oluşu, nedeni yani taş ve tümör gibi intrensek ya da retroperitoneal fibrozis ve pelvik tümör gibi ekstrensek oluşu ve komplet ya da parsiyel oluşu.
+Hasta asemptomatik olabilir, yani obstrüksiyon başka nedenle yapılan bir incelemede insidental olarak saptanır; ya da renal kolikle, yani ani, şiddetli, dalgalanan böğür ağrısıyla gelebilir. Belirtiler 4 etkene göre değişir: oluşum zamanı yani akut ya da kronik oluşu, tek ya da çift taraflı oluşu, nedeni yani taş ve tümör gibi intrensek ya da retroperitoneal fibrozis ve pelvik tümör gibi ekstrensek oluşu ve komplet ya da parsiyel oluşu.
 
 Akut obstrüksiyonda böğür ağrısı vardır ve kasığa, uyluğa yansıyabilir; buna bulantı, kusma ve titreme eşlik eder.
 Böbrek enfeksiyonu eklenirse yüksek ateş görülür.
@@ -249,7 +249,7 @@ Bilateral kronik obstrüksiyonda karın çevresi artışı, ayak bileği ödemi,
 Yani hasta ürolojik bir yakınma yerine ödem, nefes darlığı ya da bilinç değişikliğiyle başvurabilir.
 
 İnfravezikal obstrüksiyonda belirtiler zayıf idrar akımı, sıkışma ve acil işeme isteği, inkontinans yani idrar kaçırma ve noktüridir.
-Alt üriner sistem semptomları genel olarak iki gruba ayrılır.
+Alt üriner sistem semptomları genel olarak 2 gruba ayrılır.
 Depolama semptomları, diğer adıyla irritatif semptomlar, sık idrara çıkma, noktüri, sıkışma ve inkontinanstır.
 Boşaltım semptomları ise zayıf akım, tutukluk, aralıklı akım, ıkınma ve tam boşaltamama hissidir.
 
@@ -268,7 +268,7 @@ Görsellerde tıkalı tarafta erken filmde kontrast görülmezken saatler sonra 
 Kompansasyon evresindeki kaliks küntleşmesi de bu yöntemle görülür.
 
 Manyetik rezonans görüntülemede koronal kesitlerde iki böbrek, korteks ve medulla ayrımı ve toplayıcı sistem kesitsel olarak görülür.
-Nükleer tıpta kullanılan ajanlar iyot yüz otuz bir ile işaretli ortoiyodohippurat, teknesyum doksan dokuz em ile işaretli merkaptoasetiltriglisin, yani mag üç, ve yine teknesyum doksan dokuz em ile işaretli dietilentriaminpentaasetik asittir.
+Nükleer tıpta kullanılan ajanlar iyot 131 ile işaretli ortoiyodohippurat, teknesyum 99m ile işaretli merkaptoasetiltriglisin, yani MAG3, ve yine teknesyum 99m ile işaretli dietilentriaminpentaasetik asittir.
 Sintigrafide ajanın dakikalar içinde böbreklerde toplanıp mesaneye geçişi izlenir; sağ ve sol böbrek için ayrı zaman aktivite eğrileri, yani renogram çizilir.
 Böylece nükleer tıp anatomiden çok fonksiyonu, iki böbreğin katkısını ayrı ayrı gösterir.
 

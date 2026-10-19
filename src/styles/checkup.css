@@ -152,4 +152,381 @@
   .cu-tablo td { border: 0; padding: 4px 14px 6px; }
   .cu-tablo td::before { content: attr(data-l); display: block; font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); margin-bottom: 1px; }
 }
+
+@media (min-width: 1100px) {
+  .cu-icerik.is-tam-genislik { grid-column: 1 / -1; }
+}
 @media (prefers-reduced-motion: reduce) { .cu * { transition: none !important; scroll-behavior: auto !important; } }
+
+/* =============================================================================
+ * Tıbbi Biyoloji ve Genetik · Sınav kalıbı + sesli ders (components/checkup/GenetikCheckUp.tsx) — önek .gcu-
+ * .cu ile aynı dil: gölgesiz yüzey + 1 px çizgi, renk yalnız palet tokenı, mono yalnız sayıda.
+ * Geniş ekranda sesli ders: solda yapışkan aşama listesi, sağda aşama kartı. Dar ekranda liste yatay kayar.
+ * ============================================================================= */
+.gcu {
+  --gcu-r: 14px;
+  --gcu-ust: 72px;
+  width: 100%; max-width: 1240px; min-width: 0; margin: 0 auto; padding: 14px 0 40px;
+  display: flex; flex-direction: column; gap: 10px;
+  font-family: var(--font-sans); color: var(--color-ink);
+}
+.gcu :where(h1, h2, h3, p, ol, ul) { margin: 0; }
+.gcu :where(ol, ul) { list-style: none; padding: 0; }
+.gcu button, .gcu select { font: inherit; color: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.gcu button:disabled { cursor: default; opacity: .45; }
+.gcu :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.gcu svg { flex: none; width: 16px; height: 16px; }
+.gcu-mono { font-variant-numeric: tabular-nums; }
+.gcu-ust { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
+.gcu-ust svg { width: 13px; height: 13px; }
+.gcu-bold-term { font-weight: 650; color: var(--color-ink); }
+
+/* düğmeler */
+.gcu-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 34px; padding: 0 11px;
+  border: 1px solid var(--color-line); border-radius: 9px; background: var(--color-white);
+  font-size: 13px; font-weight: 560; color: var(--color-ink-2); white-space: nowrap;
+  transition: background-color 140ms, border-color 140ms;
+}
+.gcu-btn:not(:disabled):hover { background: var(--color-field); color: var(--color-ink); }
+.gcu-btn-ana { border-color: transparent; background: var(--color-accent); color: var(--color-on-accent); }
+.gcu-btn-ana:not(:disabled):hover { background: var(--color-accent-hover, var(--color-accent)); color: var(--color-on-accent); }
+.gcu-metin-btn {
+  display: inline-flex; align-items: center; gap: 5px; min-height: 32px; padding: 0 10px; border: 0; border-radius: 9px;
+  background: transparent; font-size: 13px; font-weight: 560; color: var(--color-ink-2);
+}
+.gcu-metin-btn:hover { background: var(--color-field); color: var(--color-ink); }
+.gcu-metin-btn.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
+.gcu-metin-btn svg { width: 14px; height: 14px; }
+
+/* başlık */
+.gcu-bas { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.gcu-geri { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--color-line); border-radius: 11px; background: var(--color-white); }
+.gcu-ic { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--color-accent-soft); color: var(--color-accent); }
+.gcu-ic svg { width: 19px; height: 19px; }
+.gcu-bas-t { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.gcu-bas h1 { font: 650 20px/1.2 var(--font-sans); letter-spacing: -.02em; }
+.gcu-bas p { font-size: 13px; line-height: 1.45; color: var(--color-ink-2); max-width: 68ch; }
+.gcu-bas p b { font-weight: 600; color: var(--color-ink); }
+.gcu-bas-arac { display: flex; gap: 8px; flex-wrap: wrap; }
+.gcu-pdf { position: relative; }
+.gcu-pdf-menu {
+  position: absolute; right: 0; top: calc(100% + 6px); z-index: 40; width: min(340px, calc(100vw - 32px));
+  display: flex; flex-direction: column; padding: 6px; border: 1px solid var(--color-line); border-radius: 14px;
+  background: var(--color-white); box-shadow: 0 12px 32px -12px color-mix(in srgb, var(--color-ink) 28%, transparent);
+}
+.gcu-pdf-menu button { display: flex; align-items: flex-start; gap: 10px; padding: 10px; border: 0; border-radius: 10px; background: transparent; text-align: left; }
+.gcu-pdf-menu button:not(:disabled):hover { background: var(--color-field); }
+.gcu-pdf-menu button svg { margin-top: 2px; color: var(--color-accent); }
+.gcu-pdf-menu span { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.gcu-pdf-menu b { font-size: 14px; font-weight: 600; }
+.gcu-pdf-menu small { font-size: 12.5px; line-height: 1.4; color: var(--color-ink-3); }
+
+/* ilerleme şeridi */
+.gcu-ilerleme {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px; padding: 8px 12px;
+  border: 1px solid var(--color-line); border-radius: var(--gcu-r); background: var(--color-white);
+}
+.gcu-ilerleme-oge { flex: 1 1 180px; min-width: 0; display: grid; grid-template-columns: 1fr auto; gap: 4px 8px; align-items: baseline; }
+.gcu-ilerleme-oge > span { font-size: 12px; color: var(--color-ink-3); }
+.gcu-ilerleme-oge > b { font-size: 12px; font-weight: 600; }
+.gcu-ilerleme-oge > i, .gcu-onem > i {
+  grid-column: 1 / -1; height: 3px; border-radius: 99px; background: var(--color-field); overflow: hidden; position: relative;
+}
+.gcu-ilerleme-oge > i::after, .gcu-onem > i::after {
+  content: ''; position: absolute; inset: 0 auto 0 0; width: var(--p, 0%); border-radius: inherit; background: var(--color-ok);
+  transition: width 320ms ease;
+}
+
+/* sekmeler */
+.gcu-sekme {
+  display: flex; gap: 2px; padding: 3px; border-radius: 11px; background: var(--color-field);
+  overflow-x: auto; scrollbar-width: none; position: sticky; top: var(--gcu-ust); z-index: 20;
+}
+.gcu-sekme::-webkit-scrollbar { display: none; }
+.gcu-sekme button {
+  flex: 1 0 auto; display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 32px; padding: 0 12px;
+  border: 0; border-radius: 8px; background: transparent; font-size: 13px; font-weight: 560; color: var(--color-ink-2); white-space: nowrap;
+}
+.gcu-sekme button:hover { color: var(--color-ink); }
+.gcu-sekme button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 0 0 1px var(--color-line); }
+.gcu-sekme em { font-style: normal; font-size: 11.5px; color: var(--color-ink-3); }
+.gcu-sekme svg { width: 15px; height: 15px; }
+
+/* arama + bölüm çipleri */
+.gcu-arac { display: flex; flex-direction: column; gap: 8px; }
+.gcu-ara {
+  display: flex; align-items: center; gap: 8px; height: 38px; padding: 0 6px 0 12px;
+  border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); color: var(--color-ink-3);
+}
+.gcu-ara:focus-within { border-color: var(--color-accent); }
+.gcu-ara input { flex: 1 1 auto; min-width: 0; border: 0; outline: 0; background: transparent; font: 400 14px var(--font-sans); color: var(--color-ink); }
+.gcu-ara input::-webkit-search-cancel-button { display: none; }
+.gcu-ara-sil { display: grid; place-items: center; width: 32px; height: 32px; border: 0; border-radius: 50%; background: transparent; color: var(--color-ink-3); }
+.gcu-ara-sil:hover { background: var(--color-field); }
+.gcu-cipler { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.gcu-cipler::-webkit-scrollbar { display: none; }
+.gcu-cipler button {
+  flex: none; min-height: 30px; padding: 0 11px; border: 1px solid var(--color-line); border-radius: 99px;
+  background: var(--color-white); font-size: 12.5px; font-weight: 540; color: var(--color-ink-2); white-space: nowrap;
+}
+.gcu-cipler button:hover { border-color: var(--color-line-2, var(--color-line)); color: var(--color-ink); }
+.gcu-cipler button.is-on { border-color: var(--color-accent); background: var(--color-accent-soft); color: var(--color-accent); }
+
+/* ---------- sesli ders ---------- */
+.gcu-ders { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+
+.gcu-asamalar { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: thin; scroll-snap-type: x proximity; padding-bottom: 4px; }
+.gcu-asama-grup { display: contents; }
+.gcu-asama-grup-ad { display: none; }
+.gcu-asama {
+  flex: 0 0 auto; width: 200px; display: flex; align-items: flex-start; gap: 8px; padding: 6px 9px; text-align: left;
+  border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); scroll-snap-align: start;
+  transition: background-color 140ms, border-color 140ms;
+}
+.gcu-asama:hover { background: var(--color-field); }
+.gcu-asama.is-on { border-color: var(--color-accent); background: var(--color-accent-soft); }
+.gcu-asama-no {
+  flex: none; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--color-field); font-size: 11px; font-weight: 600; color: var(--color-ink-2);
+}
+.gcu-asama.is-on .gcu-asama-no { background: var(--color-accent); color: var(--color-on-accent); }
+.gcu-asama.is-ok .gcu-asama-no { background: var(--color-ok-soft, var(--color-field)); color: var(--color-ok); }
+.gcu-asama.is-ok.is-on .gcu-asama-no { background: var(--color-ok); color: var(--color-white); }
+.gcu-asama-no svg { width: 13px; height: 13px; }
+.gcu-asama-ad {
+  font-size: 12.5px; font-weight: 540; line-height: 1.3; padding-top: 1px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+.gcu-asama-kart {
+  min-width: 0; display: flex; flex-direction: column; gap: 12px; padding: 14px 16px;
+  border: 1px solid var(--color-line); border-radius: 14px; background: var(--color-white); scroll-margin-top: calc(var(--gcu-ust) + 48px);
+  container-type: inline-size;
+}
+/* dar kartta oynatıcının ikincil düğmeleri yalnız simge (title ile adlandırılmış) */
+@container (max-width: 600px) {
+  .gcu-oynatici .gcu-btn { width: 42px; padding: 0; }
+  .gcu-oynatici .gcu-btn span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .gcu-anahtar span { font-size: 12.5px; }
+}
+.gcu-asama-bas { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 12px; align-items: start; }
+.gcu-asama-bas > .gcu-ust, .gcu-asama-bas h2, .gcu-asama-bas p { grid-column: 1; }
+.gcu-asama-bas h2 { font: 650 18px/1.25 var(--font-sans); letter-spacing: -.015em; }
+.gcu-asama-bas h2 .gcu-mono { color: var(--color-ink-3); font-weight: 500; }
+.gcu-asama-bas p { font-size: 13px; line-height: 1.45; color: var(--color-ink-2); max-width: 70ch; }
+.gcu-onem {
+  grid-column: 2; grid-row: 1 / span 3; width: 120px; display: grid; grid-template-columns: auto 1fr auto; gap: 4px 6px; align-items: center;
+  padding: 7px 10px; border: 1px solid var(--color-line); border-radius: 12px; font-size: 12px; color: var(--color-ink-3);
+}
+.gcu-onem svg { width: 14px; height: 14px; color: var(--color-warn); }
+.gcu-onem b { font-size: 15px; font-weight: 650; color: var(--color-ink); }
+.gcu-onem > i::after { background: var(--color-warn); }
+
+/* oynatıcı: kartın içinde, sekme çubuğunun altında yapışkan */
+.gcu-oynatici {
+  position: sticky; top: calc(var(--gcu-ust) + 38px); z-index: 10;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 0;
+  margin: -6px 0 -4px; background: var(--color-white); border-bottom: 1px solid var(--color-line-soft, var(--color-line));
+}
+.gcu-oynat {
+  display: inline-flex; align-items: center; gap: 7px; min-height: 34px; padding: 0 14px 0 11px;
+  border: 0; border-radius: 9px; background: var(--color-accent); color: var(--color-on-accent); font-size: 13px; font-weight: 600;
+}
+.gcu-oynat:hover { background: var(--color-accent-hover, var(--color-accent)); }
+.gcu-oynat.is-caliyor { background: var(--color-ink); color: var(--color-white); }
+.gcu-oynat svg { width: 15px; height: 15px; }
+.gcu-oynatici .gcu-btn { min-height: 34px; }
+.gcu-oynatici-bosluk { flex: 1 1 0; }
+.gcu-hiz, .gcu-anahtar { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; font-size: 12.5px; color: var(--color-ink-2); }
+.gcu-hiz select {
+  height: 30px; padding: 0 6px; border: 1px solid var(--color-line); border-radius: 9px; background: var(--color-white);
+  font-size: 13px;
+}
+.gcu-anahtar { padding: 0 6px; cursor: pointer; }
+.gcu-anahtar input { width: 16px; height: 16px; accent-color: var(--color-accent); }
+
+/* anlatım */
+.gcu-anlatim { display: flex; flex-direction: column; gap: 2px; counter-reset: gcu-c; }
+.gcu-anlatim li { counter-increment: gcu-c; }
+.gcu-anlatim button {
+  position: relative; width: 100%; display: block; padding: 6px 10px 6px 34px; border: 0; border-radius: 9px; background: transparent;
+  text-align: left; font-size: 14.5px; line-height: 1.55; color: var(--color-ink-2); transition: background-color 160ms, color 160ms;
+}
+.gcu-anlatim button::before {
+  content: counter(gcu-c); position: absolute; left: 8px; top: 8px; width: 18px; text-align: right;
+  font-variant-numeric: tabular-nums; font-size: 12px; color: var(--color-ink-3);
+}
+.gcu-anlatim button:hover { background: var(--color-field); color: var(--color-ink); }
+.gcu-anlatim button.is-okunuyor { background: var(--color-accent-soft); color: var(--color-ink); }
+.gcu-anlatim button.is-okunuyor::before { color: var(--color-accent); }
+.gcu-anlatim .gcu-bold-term { color: var(--color-ink); }
+
+/* sınav kuralı */
+.gcu-kural { display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border-radius: 11px; background: var(--color-warn-soft, var(--color-field)); }
+.gcu-kural .gcu-ust { color: var(--color-warn); }
+.gcu-kural p { font-size: 14px; line-height: 1.5; color: var(--color-ink); }
+
+/* sorular (aşama + banka ortak) */
+.gcu-asama-sorular { display: flex; flex-direction: column; gap: 8px; }
+.gcu-asama-sorular > h3, .gcu-bolum h2 { display: flex; align-items: baseline; gap: 8px; font: 650 15px/1.3 var(--font-sans); }
+.gcu-bolum h2 { font-size: 16px; letter-spacing: -.01em; }
+.gcu-asama-sorular > h3 .gcu-mono, .gcu-bolum h2 .gcu-mono { font-size: 13px; font-weight: 500; color: var(--color-ink-3); }
+.gcu-soru {
+  display: flex; flex-direction: column; gap: 8px; padding: 12px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white);
+}
+.gcu-soru.is-dogru { border-color: color-mix(in srgb, var(--color-ok) 45%, var(--color-line)); }
+.gcu-soru.is-yanlis { border-color: color-mix(in srgb, var(--color-bad) 40%, var(--color-line)); }
+.gcu-soru-bas { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+.gcu-soru-no { display: grid; place-items: center; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 8px; background: var(--color-field); font-size: 12px; font-weight: 600; }
+.gcu-tur { display: inline-flex; align-items: center; height: 20px; padding: 0 8px; border-radius: 99px; font-size: 11.5px; font-weight: 600; }
+.gcu-tur.cikmis { background: var(--color-warn-soft, var(--color-field)); color: var(--color-warn); }
+.gcu-tur.ornek { background: var(--color-field); color: var(--color-ink-2); }
+.gcu-soru-etiket { font-size: 12px; color: var(--color-ink-3); }
+.gcu-soru-kok { font-size: 14.5px; line-height: 1.5; font-weight: 500; }
+.gcu-siklar { display: flex; flex-direction: column; gap: 4px; }
+.gcu-sik { display: flex; flex-direction: column; gap: 4px; }
+.gcu-sik-btn {
+  width: 100%; display: flex; align-items: flex-start; gap: 8px; padding: 6px 10px; border: 1px solid var(--color-line); border-radius: 9px;
+  background: var(--color-white); text-align: left; font-size: 13.5px; line-height: 1.45; transition: background-color 140ms, border-color 140ms;
+}
+.gcu-sik-btn:hover { background: var(--color-field); }
+.gcu-sik-harf {
+  flex: none; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 6px; background: var(--color-field);
+  font-size: 11.5px; font-weight: 650; color: var(--color-ink-2);
+}
+.gcu-sik-metin { flex: 1 1 auto; min-width: 0; padding-top: 1px; }
+.gcu-sik-ikon { margin-top: 3px; }
+.gcu-sik-btn.is-dogru { border-color: var(--color-ok); background: var(--color-ok-tint, var(--color-ok-soft)); }
+.gcu-sik-btn.is-dogru .gcu-sik-harf { background: var(--color-ok); color: var(--color-white); }
+.gcu-sik-btn.is-dogru .gcu-sik-ikon { color: var(--color-ok); }
+.gcu-sik-btn.is-yanlis { border-color: var(--color-bad); background: var(--color-bad-soft, var(--color-field)); }
+.gcu-sik-btn.is-yanlis .gcu-sik-harf { background: var(--color-bad); color: var(--color-white); }
+.gcu-sik-btn.is-yanlis .gcu-sik-ikon { color: var(--color-bad); }
+.gcu-sik-btn.is-okunuyor { border-color: var(--color-accent); }
+.gcu-sik-not { margin-left: 38px !important; padding: 1px 0 4px 10px; border-left: 2px solid var(--color-line); font-size: 12.5px; line-height: 1.5; color: var(--color-ink-2); }
+.gcu-sik-not.is-dogru { border-left-color: var(--color-ok); color: var(--color-ink); }
+.gcu-sik-not.is-okunuyor { border-left-color: var(--color-accent); color: var(--color-ink); }
+.gcu-cozum { display: flex; gap: 8px; padding: 8px 10px; border-radius: 9px; background: var(--color-field); font-size: 13px; line-height: 1.55; }
+.gcu-cozum svg { margin-top: 2px; color: var(--color-accent); }
+
+/* aşama başvuru alanı */
+.gcu-basvuru { border: 1px solid var(--color-line); border-radius: var(--gcu-r); }
+.gcu-basvuru summary {
+  display: flex; align-items: center; gap: 8px; min-height: 38px; padding: 0 12px; cursor: pointer; list-style: none;
+  font-size: 13px; font-weight: 560; color: var(--color-ink-2);
+}
+.gcu-basvuru summary::-webkit-details-marker { display: none; }
+.gcu-basvuru summary span { flex: 1 1 auto; }
+.gcu-basvuru summary em { font-style: normal; font-size: 12px; color: var(--color-ink-3); }
+.gcu-basvuru-ok { transition: transform 160ms; }
+.gcu-basvuru[open] .gcu-basvuru-ok { transform: rotate(180deg); }
+.gcu-basvuru-ic { display: flex; flex-direction: column; gap: 8px; padding: 0 8px 8px; }
+
+.gcu-gezinti { display: flex; align-items: center; gap: 8px; border-top: 1px solid var(--color-line); padding-top: 10px; }
+.gcu-gezinti-say { flex: 1 1 auto; text-align: center; font-size: 13px; color: var(--color-ink-3); }
+
+/* diğer genetik dersleri */
+.gcu-dersler { display: flex; flex-direction: column; gap: 6px; }
+.gcu-dersler h3 { font: 620 15px/1.3 var(--font-sans); color: var(--color-ink-2); }
+.gcu-dersler-izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 6px; }
+.gcu-dersler-izgara button {
+  display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; border: 1px solid var(--color-line); border-radius: 10px;
+  background: var(--color-white); text-align: left; transition: border-color 140ms, background-color 140ms;
+}
+.gcu-dersler-izgara button:hover { background: var(--color-field); }
+.gcu-dersler-izgara button.is-on { border-color: var(--color-accent); }
+.gcu-dersler-izgara b { font-size: 13px; font-weight: 600; line-height: 1.3; }
+.gcu-dersler-izgara small { font-size: 12px; color: var(--color-ink-3); }
+
+/* ---------- tablolar / spotlar / soru-cevap ---------- */
+.gcu-bolum { display: flex; flex-direction: column; gap: 8px; padding-top: 2px; }
+.gcu-bolum-bas { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+.gcu-kart { border: 1px solid var(--color-line); border-radius: var(--gcu-r); background: var(--color-white); overflow: hidden; }
+.gcu-kart-bas { display: flex; flex-direction: column; gap: 2px; padding: 8px 12px; border-bottom: 1px solid var(--color-line); }
+.gcu-kart-bas h3 { font: 620 14.5px/1.3 var(--font-sans); }
+.gcu-tablo-kap { overflow-x: auto; }
+.gcu-tablo { width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.4; }
+.gcu-tablo thead th {
+  text-align: left; vertical-align: bottom; padding: 6px 10px; background: var(--color-field);
+  font-size: 11.5px; font-weight: 600; letter-spacing: .02em; color: var(--color-ink-2);
+}
+.gcu-tablo tbody th, .gcu-tablo td { text-align: left; vertical-align: top; padding: 6px 10px; border-top: 1px solid var(--color-line); min-width: 140px; }
+.gcu-tablo tbody th { font-weight: 600; color: var(--color-ink); background: color-mix(in srgb, var(--color-field) 45%, transparent); }
+.gcu-tablo td { color: var(--color-ink-2); }
+
+.gcu-spotlar { display: flex; flex-direction: column; }
+.gcu-spotlar li { display: flex; gap: 10px; padding: 7px 12px; border-top: 1px solid var(--color-line); }
+.gcu-spotlar li:first-child { border-top: 0; }
+.gcu-basvuru-ic .gcu-spotlar { border: 1px solid var(--color-line); border-radius: var(--gcu-r); }
+.gcu-no { flex: none; width: 22px; padding-top: 2px; text-align: right; font-variant-numeric: tabular-nums; font-size: 12px; color: var(--color-ink-3); }
+.gcu-spotlar div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.gcu-spotlar p { font-size: 13.5px; line-height: 1.45; }
+.gcu-spotlar small { font-size: 11.5px; color: var(--color-ink-3); }
+.gcu-spotlar small b { font-weight: 600; color: var(--color-warn); }
+
+.gcu-qa-izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 6px; align-items: start; }
+.gcu-qa {
+  display: flex; flex-direction: column; gap: 5px; padding: 10px 12px; border: 1px solid var(--color-line); border-radius: 11px;
+  background: var(--color-white); text-align: left; transition: border-color 140ms;
+}
+.gcu-qa:hover { border-color: var(--color-line-2, var(--color-accent)); }
+.gcu-qa.is-acik { border-color: var(--color-accent); }
+.gcu-qa > b { font-size: 13.5px; font-weight: 580; line-height: 1.45; }
+.gcu-qa-ac { font-size: 13px; font-weight: 560; color: var(--color-accent); }
+.gcu-qa-cevap { display: flex; flex-direction: column; gap: 4px; padding-top: 6px; border-top: 1px solid var(--color-line); font-size: 13.5px; line-height: 1.55; color: var(--color-ink); }
+.gcu-qa-cevap small { font-size: 13px; color: var(--color-ink-3); }
+
+.gcu-bos { padding: 28px 16px; text-align: center; border: 1px dashed var(--color-line); border-radius: var(--gcu-r); color: var(--color-ink-3); }
+
+/* geniş ekran: solda aşama listesi */
+@media (min-width: 1100px) {
+  .gcu-ders { grid-template-columns: 250px minmax(0, 1fr); column-gap: 14px; align-items: start; }
+  .gcu-asamalar {
+    flex-direction: column; gap: 2px; overflow: visible; padding: 0; position: sticky; top: calc(var(--gcu-ust) + 48px);
+    max-height: calc(100vh - var(--gcu-ust) - 72px); overflow-y: auto; scrollbar-width: thin;
+  }
+  .gcu-asama-grup { display: flex; flex-direction: column; gap: 2px; }
+  .gcu-asama-grup + .gcu-asama-grup { margin-top: 6px; }
+  .gcu-asama-grup-ad { display: flex; gap: 5px; padding: 4px 8px 2px; font-size: 10.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); line-height: 1.35; }
+  .gcu-asama { width: 100%; border-color: transparent; background: transparent; padding: 5px 8px; }
+  .gcu-asama:hover { background: var(--color-field); }
+  .gcu-asama.is-on { border-color: transparent; background: var(--color-accent-soft); }
+  .gcu-dersler { grid-column: 1 / -1; }
+}
+
+/* dar ekran */
+@media (max-width: 719px) {
+  .gcu { --gcu-ust: 53px; padding-top: 10px; gap: 8px; }
+  .gcu-bas h1 { font-size: 18px; }
+  .gcu-ic { display: none; }
+  .gcu-bas p { display: none; }
+  .gcu-ilerleme { gap: 10px; padding: 8px 10px; }
+  .gcu-ilerleme-oge { flex: 1 1 0; grid-template-columns: minmax(0, 1fr); gap: 3px; }
+  .gcu-ilerleme-oge > span { font-size: 11.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .gcu-ilerleme-oge > b { font-size: 13.5px; }
+  .gcu-ilerleme .gcu-metin-btn { flex-basis: 100%; justify-content: center; }
+  .gcu-bas-arac { width: 100%; }
+  .gcu-bas-arac > * { flex: 1 1 0; }
+  .gcu-bas-arac .gcu-btn { width: 100%; }
+  .gcu-sekme button { padding: 0 12px; }
+  .gcu-asama-kart { padding: 12px; gap: 10px; border-radius: 12px; }
+  .gcu-asama-bas { grid-template-columns: minmax(0, 1fr); }
+  .gcu-onem { grid-column: 1; grid-row: auto; width: 100%; max-width: 220px; }
+  .gcu-asama-bas h2 { font-size: 17px; }
+  .gcu-oynatici-bosluk { display: none; }
+  .gcu-anlatim button { font-size: 14px; padding-left: 28px; }
+  .gcu-anlatim button::before { left: 2px; }
+  .gcu-sik-not { margin-left: 12px !important; }
+  .gcu-gezinti .gcu-btn-ana span { white-space: normal; text-align: left; }
+  .gcu-qa-izgara { grid-template-columns: minmax(0, 1fr); }
+  .gcu-tablo-kap { overflow: visible; }
+  .gcu-tablo thead { display: none; }
+  .gcu-tablo, .gcu-tablo tbody, .gcu-tablo tr, .gcu-tablo tbody th, .gcu-tablo td { display: block; width: 100%; min-width: 0; }
+  .gcu-tablo tr { padding: 4px 0; border-top: 1px solid var(--color-line); }
+  .gcu-tablo tr:first-child { border-top: 0; }
+  .gcu-tablo tbody th { border: 0; background: transparent; padding: 10px 14px 4px; font-size: 15px; }
+  .gcu-tablo td { border: 0; padding: 4px 14px 6px; }
+  .gcu-tablo td::before { content: attr(data-l); display: block; font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); margin-bottom: 1px; }
+}
+@media (prefers-reduced-motion: reduce) { .gcu * { transition: none !important; } }

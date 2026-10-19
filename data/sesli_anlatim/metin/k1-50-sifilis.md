@@ -1,118 +1,285 @@
-# Sifiliz
+# Sifiliz: Etken, Evreler, Tanı ve Tedavi
 
 @@ Spiroketlerin yapısı
-Sifilizin etkeni spiroketler grubunda yer alır. Spiroketler spiral şekilli ve ince duvar yapılı bakterilerdir. Duvarlarını içeriden dışarıya doğru düşünelim: en içte sitoplazmik membran, onun dışında ince bir peptidoglikan tabakası ve en dışta bir dış membran bulunur. Bu dizilim, yani ince peptidoglikan ve dış membranın birlikte olması, spiroketlere Gram negatif hücreye benzer bir duvar yapısı kazandırır. Ancak bu benzerliğe rağmen spiroketler Gram boyası ile iyi boyanmaz; bu yüzden rutin Gram boyamasıyla görülmeleri beklenmez.
+Sifilizin etkeni Treponema pallidum, spiroketler adı verilen bakteri grubunda yer alır. Bakterilerin 3 temel biçimi olan kok, basil ve spiral formlar içinde spiroketler ince, uzun ve sarmal gövdeleriyle ayrılır. Spiroketlerin 2 temel yapısal özelliği vardır: spiral şekilli olmaları ve ince duvar yapısına sahip olmaları.
 
-Peki bu ince bakterileri nasıl görürüz?
-Spiroketler karanlık alan mikroskopisi ile görülür.
-Hareketlerini sağlayan flajellalar ise hücrenin dışına uzanmaz; dış membran ile sitoplazmik membran arasındaki periplazmik aralıkta yer alır.
-Bu flajellalar döndükçe hücre bir vida gibi kendi ekseni etrafında döner ve böylece spiroketlere özgü burgu hareketi ortaya çıkar.
-Yani yapı, boyanma ve hareket özellikleri birbirine bağlıdır: ince duvar Gram boyamasını zorlaştırır, iç yerleşimli flajella da burgu hareketini sağlar.
+Bu ince duvar içten dışa 3 katmandan oluşur.
+En içte, protoplazmik silindir denilen hücre içeriğini saran sitoplazmik membran bulunur.
+Onun hemen dışında ince bir peptidoglikan tabakası yer alır; peptidoglikan bakteri duvarının destek tabakasıdır ve spiroketlerde belirgin biçimde incedir.
+En dışta ise hücreyi saran ikinci bir zar, yani dış membran bulunur.
+İki zar arasında ince bir peptidoglikan tabakasının bulunduğu bu dizilim, Gram negatif hücreye benzer bir duvar yapısıdır.
+Burası önemli, sınav spotu olarak aklınızda kalsın: spiroket duvarı sitoplazmik membran, ince peptidoglikan ve dış membrandan oluşur ve Gram negatif hücre duvarına benzer.
+
+@@ Boyanma, görüntüleme ve burgu hareketi
+Gram negatif benzeri duvarlarına karşın spiroketler Gram boyası ile iyi boyanmaz; bu nedenle rutin Gram preparatında genellikle gözden kaçarlar. Bu bakteriler karanlık alan mikroskopisi ile görülür. Karanlık alan, ya da karanlık saha mikroskopisinde, karanlık zemin üzerinde parlak, kıvrımlı, canlı bakteriler izlenir. Burası önemli: spiroketler Gram boyası ile iyi boyanmaz, karanlık alan mikroskopisi ile görülür. Bu ilke, ileride sifiliz lezyonlarının doğrudan incelenmesinin de temelini oluşturur. Spiroket cinsleri kıvrımlarının biçimiyle birbirinden ayrılır. Borrelia daha gevşek ve geniş kıvrımlıdır; Treponema sık ve düzenli kıvrımlıdır; Leptospira ise çok sık sarmallıdır ve uçları kancalı görünür.
+
+Spiroketlerin hareket organeli de diğer bakterilerden farklıdır, çünkü hücrenin dışına uzanmaz.
+Dış membran ile peptidoglikan ve sitoplazmik membran arasında kalan boşluğa periplazmik aralık denir.
+Flajellalar bu periplazmik aralıkta, hücre gövdesi boyunca uzanır ve tabanları sitoplazmik membrana bağlıdır; bu yapı aksiyel filaman olarak da bilinir.
+Flajellalar döndükçe gövdeyi sarmal biçimde büker ve bakteri bir tirbuşon gibi burgu hareketiyle ilerler.
+Yani hareketin anahtarı, periplazmik aralıktaki flajella ve bunun sonucu olan burgu hareketidir.
 
 @@ Treponema cinsi ve treponematozlar
-Treponema cinsinde dört etken ve dört hastalık eşleşmesini bilmeliyiz. Treponema pallidum alt türü pallidum veneral sifilizin etkenidir; tüm dünyada yaygındır ve cinsel yolla bulaşır. Treponema pallidum alt türü pertenue yaws etkenidir; tropikal Asya, Afrika, Kuzey ve Güney Amerika'da görülür ve cilt teması ile bulaşır. Treponema pallidum alt türü endemikum bejel etkenidir; Afrika ve Orta Doğu'da görülür, cilt teması ve mukozal yolla, ayrıca kontamine yiyecek ve içecek kapları aracılığıyla bulaşır.
+Treponema cinsi, insanda farklı klinik tablolara yol açan 4 etken içerir. Bunların üçü Treponema pallidum türünün alt türleridir, 4.'sü ise ayrı bir türdür. Treponema pallidum'un pallidum alt türü veneral sifilizin etkenidir. Tüm dünyada yaygındır, belirli bir iklim kuşağıyla sınırlı değildir ve cinsel yolla bulaşır; veneral sözcüğü de bu cinsel bulaşı ifade eder. Aynı tür adını taşıyan alt türler arasında cinsel yolla bulaşan ve dünya genelinde yaygın olan yalnız pallidum alt türüdür.
 
-4. etken Treponema karateum'dur ve pinta hastalığını yapar; bu bir alt tür değil, ayrı bir türdür.
+Diğer 2 alt tür cinsel yolla değil, günlük yakın temasla bulaşır ve belirli coğrafyalarda endemiktir.
+Pertenue alt türü yaws hastalığını yapar; tropikal Asya, Afrika, Kuzey ve Güney Amerika'da görülür ve cilt teması ile bulaşır.
+Endemicum alt türü bejel etkenidir; Afrika ve Orta Doğu'da görülür.
+Bejelin bulaşı cilt teması, mukozal bulaş ve kontamine yiyecek içecek kapları ile olur.
+Yani bejeli yaws'tan ayıran özellik, cilt temasına ek olarak mukozal yol ve ortak kullanılan kaplardır.
+
+Dördüncü hastalık pintadır ve etkeni bir alt tür değil, ayrı bir tür olan Treponema carateum'dur.
 Pinta Kuzey ve Güney Amerika'da görülür ve cilt teması ile bulaşır.
-Tutulum açısından da bir ayrım vardır: yaws ve bejelde hem cilt hem kemik tutulumu görülürken, pintada yalnızca cilt tutulur, kemik tutulumu yoktur.
-Bu dersin geri kalanında yalnızca veneral sifiliz etkeni olan Treponema pallidum alt türü pallidum üzerinde duracağız.
+Treponematozları doku tutulumuna göre ikiye ayırırız.
+Veneral sifiliz, yaws ve bejel hem cilt hem kemik tutulumu yapabilir.
+Pintada ise yalnız cilt tutulur, kemik tutulumu yoktur.
+Burası önemli, sınav spotu olarak eşleşmeleri ezberleyin: pallidum veneral sifiliz, pertenue yaws, endemicum bejel, Treponema carateum pinta; kemik tutulumu yapmayan tek treponematoz pintadır.
 
-@@ Epidemiyoloji
-Dünya Sağlık Örgütü verilerine göre dünyada yaklaşık on sekiz milyon sifiliz olgusu bulunmaktadır. İki bin on altı yılında yıllık altı virgül üç milyon yeni saptanmış sifiliz olgusu bildirilmiştir. Yani sifiliz geçmişte kalmış bir hastalık değildir; bugün de önemli bir halk sağlığı sorunudur ve yayılmaya devam etmektedir.
+@@ Küresel yük ve gebelikte sifiliz
+Dünya Sağlık Örgütü verileri, sifilizin hâlâ yaygın bir halk sağlığı sorunu olduğunu gösterir. Dünyada yaklaşık 18 milyon sifiliz olgusu bulunmaktadır. 2016 verilerine göre yılda 6,3 milyon yeni sifiliz olgusu saptanmış ve yaklaşık 1 milyon gebede aktif sifiliz bildirilmiştir.
 
-Gebelik açısından tablo daha da dikkat çekicidir.
-İki bin on altı verilerine göre bir milyon gebede aktif sifiliz bulunmaktadır.
-İki bin on iki verilerinde ise sifilizli dokuz yüz otuz bin gebede üç yüz elli bin istenmeyen olay geliştiği görülmüştür.
-Bu istenmeyen olaylar ölü doğum, preterm doğum, neonatal ölüm ve enfekte bebek doğumudur.
-Kabaca hesaplarsak sifilizli gebeliklerin yaklaşık %38'i kötü sonlanmaktadır; bu da gebelikte sifilizin hem anne hem bebek için ne kadar tehlikeli olduğunu gösterir.
+Gebelikteki sifilizin sonuçları ağırdır.
+2012 verilerinde sifilizli 930 bin gebede yaklaşık 350 bin istenmeyen olay gelişmiştir.
+Bu olaylar ölü doğum, preterm doğum, neonatal ölüm ve enfekte bebek doğumudur.
+Bu oran kabaca %38'e karşılık gelir; yani sifilizli gebeliklerin önemli bir kısmı kötü sonlanır.
+Gebelikteki sifiliz, bu ağır gebelik kayıplarının önlenebilir bir nedeni olduğu için gebelerde sifilizin saptanması bir halk sağlığı önceliğidir.
 
 @@ Bulaş yolları
-Sifilizin bulaşı, bakteri taşıyan lezyonlara ve kana dayanır. En önemli yol enfekte lezyonlara, yani şankr ve kondiloma lataya direkt temastır; bu temas çoğunlukla cinsel ilişki sırasında gerçekleşir. 2. yol anneden bebeğe geçiştir; bu transplasental olarak ya da doğum sırasında olabilir. Bunların dışında kan transfüzyonu ve perkütan yaralanma da bulaş yolları arasındadır. Şankr ve kondiloma lata adlarını aklınızda tutun arkadaşlar, çünkü ilerleyen bölümlerde bulaştırıcı lezyonlar olarak yeniden karşımıza çıkacaklar.
+Sifiliz etkeni 4 yolla bulaşır. 1.'si ve en önemlisi enfekte lezyonlara doğrudan temastır. Bol treponema içeren şankr ve kondiloma lata gibi lezyonlarla temas bulaşın temelidir ve bu temasın başlıca biçimi cinsel ilişkidir. 2.'si anneden bebeğe geçiştir; bu geçiş transplasental yolla ya da doğum sırasında olur. Biraz önce sözünü ettiğimiz ölü doğum ve enfekte bebek bu yolun sonucudur. 3.'sü kan transfüzyonudur. 4.'sü ise kontamine iğne gibi deriyi delen perkütan yaralanmalardır.
+
+Burası önemli, bulaş yolları çıkmış sorularda defalarca soruldu.
+Sifiliz cinsel ilişkiyle, lezyonlara doğrudan temasla, kan nakliyle ve anneden bebeğe bulaşır.
+Buna karşılık damlacık yoluyla, yani solunum yoluyla bulaşmaz; bu şık soruda yanlış ifade olarak verildi.
+Yine aynı sorunun diğer biçimlerinde hastalığın tüm evrelerinde bulaşıcı olduğu ya da geç latent ve tersiyer evrelerde bulaşıcı olduğu ifadeleri yanlış seçenekti.
+Bulaştırıcılığın hangi evrelerle sınırlı olduğunu biraz sonra evre sınıflamasında netleştireceğiz.
+
+Çıkmış sorularda etkenin özellikleri de soruldu.
+Etken Treponema pallidum'un pallidum alt türüdür, karanlık alan mikroskobisinde incelenir, tanıda treponemal ve nontreponemal testler kullanılır ve bakteri ısıya, kuruluğa ve antiseptiklere duyarlıdır.
+Burası önemli: tanı için kültür yapmak gerekmez; bu ifade soruda yanlış seçenek olarak verildi.
+Tanı, ileride göreceğimiz gibi mikroskopi, seroloji ve moleküler testlerle konur.
 
 @@ Patogenez ve inkübasyon
-Treponema pallidum mukozal yüzeyden ya da bütünlüğü bozulmuş ciltten vücuda girer. Önce giriş yerinde çoğalır, ardından kan ve lenf yoluyla tüm vücuda yayılır. Bakteri damar endotellerinde çoğalır ve perivasküler hücrelere girer. Bu damar tropizmi önemlidir; çünkü ileride göreceğimiz endarteritis obliterans ve kardiyovasküler tutulumun temeli buradadır. İnkübasyon süresi üç ile 90 gün arasındadır, genellikle üç haftadır. Hastalığın sistemik bir hastalık olması da bu erken kan ve lenf yayılımından kaynaklanır.
+Treponema pallidum sağlam deriden giremez, bir giriş kapısına gereksinim duyar. Bakteri mukozal yüzeyden ya da bütünlüğü bozulmuş ciltten girer. Bulaş yollarındaki lezyon teması ve perkütan yaralanma bu kapıları açar. Bakteri önce giriş yerinde çoğalır ve ilk klinik lezyon bu noktada gelişir. Ardından kan ve lenf yoluyla, yani hematojen ve lenfojen yolla tüm vücuda yayılır. Bu nedenle sifiliz başlangıçta yerel görünse de kısa sürede sistemik bir enfeksiyona dönüşür.
 
-@@ Sifilizin dönemleri ve sınıflaması
-Bu slayttaki şema hastalığın doğal seyrini gösterir: inokülasyondan sonra organizma kan ve lenf yoluyla yayılır, belirtisiz inkübasyon ortalama üç haftadır. Ardından inokülasyon yerinde, örneğin penis, labia ya da vajende şankr ile primer sifiliz gelişir. Sonra döküntüyle seyreden ve hepatit, menenjit ya da glomerülonefritin eşlik edebildiği sekonder sifiliz gelir. Sekonder dönemden latent sifilize geçilir; latent dönemden sekonder döneme geri dönüş, yani relaps olabilir ve bir kısım hasta sonunda tersiyer sifilize ilerler.
+Kanla ve lenfle yayılan treponema damar duvarını hedef alır.
+Bakteri damar endotellerinde çoğalır ve perivasküler hücrelere, yani damar çevresindeki hücrelere girer.
+Burası önemli: bu endotel tropizmi, sifilizin ileri dönemlerinde göreceğimiz damar merkezli hasarın, yani meningovasküler sifilizin ve endarteritis obliteransın patogenetik temelidir.
 
-Yanındaki tablo dönemleri bulaştan sonra geçen süreye göre sınıflar.
-Erken, yani infeksiyöz sifiliz üç dönemi kapsar: on ile 90 gün arasında primer, 4 hafta ile 6 ay arasında sekonder ve 1 yıldan kısa süreli erken latent dönem.
-Geç, yani non infeksiyöz sifiliz ise 1 yıldan uzun süren geç latent dönem ile üç ile 20 yıl arasında ortaya çıkan tersiyer dönemi kapsar.
-Tersiyer sifilizin üç formu vardır: gomatöz sifiliz, kardiyovasküler sifiliz ve nörosifiliz.
-Burası önemli: erken dönem bulaştırıcıdır, geç dönem bulaştırıcı değildir; bu ayrım tedavi şemasını da belirler.
+İnkübasyon süresi, bulaştan ilk lezyona kadar geçen ve hastanın belirti göstermediği dönemdir.
+Sifilizde bu süre 3 ile 90 gün arasındadır ve genellikle 3 haftadır.
+Burası önemli, sınavda ortalama inkübasyon süresi sorulursa yanıt yaklaşık 3 haftadır; aralık ise 3 ile 90 gündür.
 
-@@ Primer sifiliz
-Primer sifiliz, yaklaşık 3 haftalık inkübasyonun ardından bakterinin giriş yerinde şankr oluşmasıyla başlar. Şankr ağrısız bir ülserdir ve bulaştırıcıdır. Ağrısız olması hastanın doktora başvurusunu geciktirebilir. Şankrdan yaklaşık 1 hafta sonra ağrısız bölgesel lenfadenopati gelişir. Burası önemli: ağrısız ülser ve ona eşlik eden ağrısız bölgesel lenfadenopati primer sifilizin tipik tablosudur.
+@@ Doğal seyir ve evrelerin zamansal sınıflaması
+Tedavi edilmeyen sifiliz birbirini izleyen evrelerden geçer. Dersteki doğal seyir şeması bu akışı özetler. İnokülasyondan sonra belirtisiz bir dönem vardır ve bakteri lenf ve kanla yayılır. Primer evrede giriş yerinde şankr gelişir; şemada penis, labia ya da vajen örnek yerleşimler olarak gösterilir. Sekonder evre döküntü dönemidir; şemadaki fotoğrafta ayak tabanlarında yaygın lekeler görülür ve döküntüye hepatit, menenjit ya da glomerülonefrit eşlik edebilir. Latent evrede belirti yoktur ama bakteri vücutta bulunur; şemada bu dönem karanlık alanda görülen spiral bakterilerle gösterilir ve latentten sekonder evreye geri dönüş bir okla işaretlenir. Tersiyer evrenin örnek görüntüsü bir cilt gomudur; benzer lezyonlar derin organlarda, santral sinir sistemi dejenerasyonu ve çıkan aort anevrizmasıyla birlikte görülebilir.
 
-Şankr yaklaşık 1 ay içinde kendiliğinden iyileşir, lenfadenopati ise daha uzun süre sebat edebilir.
-Ancak şankrın iyileşmesi hastalığın bittiği anlamına gelmez.
-Bu dönemde spiroketemi, yani kanda bakteri bulunması vardır ve bu durum organ invazyonu için kaynak olabilir.
-Primer sifilizli olguların yaklaşık üçte ikisi iyileşir.
+Evreler, bulaş sonrası geçen süreye göre iki ana gruba ayrılır ve bu ayrımın klinik önemi bulaştırıcılıktır.
+Erken ya da infeksiyöz sifiliz grubunda 3 dönem vardır: 10 ile 90 gün arasındaki primer dönem, 4 hafta ile 6 ay arasındaki sekonder dönem ve bulaştan sonraki 1 yıl içindeki erken latent dönem.
+Geç ya da non-infeksiyöz sifiliz grubunda ise 1 yıldan sonraki geç latent dönem ve bulaştan 3 ile 20 yıl sonra ortaya çıkan tersiyer dönem bulunur.
+Tersiyer sifilizin 3 biçimi vardır: gomatöz sifiliz, kardiyovasküler sifiliz ve nörosifiliz.
 
-@@ Sekonder sifiliz: cilt ve mukoza
-Sekonder sifiliz genellikle şankr oluşumundan iki ile 8 hafta sonra başlar, 24 haftaya kadar uzayabilir. Bu dönemde en sık cilt lezyonları görülür; lezyonlar maküler, makülopapüler, püstüler ya da psoriatik olabilir. Tipik cilt lezyonları kaşıntısız, simetrik, bilateral ve yaygındır. Burası önemli: el ve ayak tabanında döküntü görüldüğünde sifiliz özellikle düşünülmelidir.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: sifilizin cinsel yolla bulaştırıcı olduğu dönemler primer, sekonder ve erken latent dönemlerdir.
+Yalnız primer ya da yalnız primer ile sekonder demek eksiktir; tüm evrelerin eşit derecede bulaştırıcı olduğunu söylemek ise yanlıştır.
+1 yıllık sınır, bulaştırıcı erken sifilizi bulaştırıcı olmayan geç sifilizden ayırır.
 
-Sekonder dönemde mukoza tutulumu da olur; ağız, farinks, larinks ve vulvada eritemli, gri beyaz lezyonlar görülür.
-Vulva, skrotum, perine ve meme altı gibi nemli bölgelerde gri beyaz maküler, papüler ya da verrüköz lezyonlar gelişebilir; bunlara kondiloma lata denir.
-Kondiloma lata da tıpkı primer dönemin şankrı gibi bulaştırıcıdır.
-Slaytta kondiloma latanın görünümünü gösteren bir görsel de yer alıyor; nemli kıvrım bölgelerinde gri beyaz, kabarık lezyonlar olarak dikkat çekerler.
+@@ Primer sifiliz: şankr
+Primer sifilizin belirleyici lezyonu, bakterinin giriş yerinde oluşan şankrdır. Şankr yaklaşık 3 haftalık inkübasyondan sonra ortaya çıkar ve ağrısız bir ülserdir. Ağrısızlık, hastanın lezyonu önemsememesine ve geç başvurmasına yol açabilir. Ancak şankr bulaştırıcıdır; bol treponema içerir ve cinsel temasla bulaşın başlıca kaynağıdır.
 
-@@ Sekonder sifiliz: kıl folikülü, lenfadenopati ve organ tutulumu
-Sekonder sifilizde kıl folikülleri de tutulur; bunun sonucunda kaşlarda dökülme ve toksik alopesi görülür. Lenfadenopati genellikle inguinal, servikal, submental ve aksiller bölgelerdedir. Burası önemli: epitroklear lenfadenopati varsa sifiliz özellikle düşünülmelidir. Bu yaygın lenfadenopati, bakterinin kan ve lenf yoluyla tüm vücuda yayıldığını yansıtır.
+Burası önemli, bu bilgi çıkmış sorularda pek çok kez soruldu: primer sifiliz için şankrın bulaştırıcı olmadığı ifadesi yanlıştır.
+Aynı soruda doğru kabul edilen diğer ifadeleri de birlikte öğrenin: primer sifilizde şankr mevcuttur, şankr tedavisiz iyileşir, şankrla birlikte lenfadenopati bulunabilir ve şankr ile eşlik eden lenfadenopati genellikle ağrısızdır.
+Ağrısız olduğu için önemsiz sanılması klasik bir tuzaktır.
+Dersteki fotoğraflarda şankr dudakta, ağız içinde, peniste ve vulvada görülür.
+Lezyonlar tek, düzgün kenarlı, temiz tabanlı yuvarlak ülserlerdir.
+Oral ve genital yerleşim, giriş kapısının cinsel temas bölgesine göre değiştiğini gösterir; yani şankr genital dışı bölgelere de yerleşebilir.
 
-Bu dönemde ateş, halsizlik, kilo kaybı, farenjit ve artralji gibi sistemik belirtiler görülebilir.
-Organ tutulumu olarak hepatit, üveit, sinovit, osteit, glomerülonefrit ve santral sinir sistemi tutulumu gelişebilir.
-Santral sinir sistemi tutulumuna akut nörosifiliz denir; baş ağrısı, kusma ve ense sertliği ile seyreden menenjit ya da kraniyal sinir tutulumları şeklinde görülür.
-En sık 7. ve 8. kraniyal sinirler tutulur.
-Sekonder dönemin bulguları birkaç hafta ya da birkaç ay içinde kendiliğinden iyileşir.
+Burası önemli, çıkmış sorularda şu vaka soruldu: peniste tek, ağrısız bir ülseri olan genç erkek hastada VDRL testi pozitif saptanıyor.
+Tanı primer sifilizdir.
+Bir başka soruda peniste ağrısız, 3 santimetre çaplı, tabanı sert bir ülser ve lenfadenopati saptanmayan hastada öncelikle düşünülmesi gereken enfeksiyon yine sifilizdi.
+Bu sorularda herpes simpleks enfeksiyonu, şankroid ya da ulkus molle, lenfogranüloma venereum, granüloma inguinale ve kondiloma akuminata çeldirici olarak yer aldı.
+Dikkat edin, yumuşak şankr dediğimiz şankroid ayrı bir hastalıktır; primer sifilizin lezyonu yumuşak şankr değil, sifilitik şankrdır.
+
+@@ Primer sifiliz: lenfadenopati, spiroketemi ve seyir
+Şankrdan yaklaşık 1 hafta sonra ağrısız bölgesel lenfadenopati gelişir. Bölgesel lenfadenopati, lezyonun drene olduğu bölgedeki lenf düğümlerinin büyümesidir ve lenf yoluyla yayılımın klinik yansımasıdır. Burası önemli, bu bilgi çıkmış sorularda doğru seçenek olarak soruldu: primer sifilizde bölgesel lenf nodları ağrısızdır. Şankr yaklaşık 1 ay içinde kendiliğinden iyileşir. Lenfadenopati ise şankrdan daha uzun süre sebat edebilir; dolayısıyla şankr kaybolduktan sonra yalnız lenfadenopati saptanabilir.
+
+Primer evrede bakteri yalnız giriş yerinde kalmaz, kana da karışır.
+Kanda spiroket bulunmasına spiroketemi denir ve bu spiroketemi organ invazyonu için kaynak olabilir.
+Sonraki evrelerin çok sistemli tutulumu buradan beslenir.
+Derste primer dönem için olguların yaklaşık üçte ikisinin iyileştiği bilgisi verilir.
+Ancak görünür lezyonun kaybolması, kanla taşınan bakterinin ortadan kalktığı anlamına gelmez.
+Bu nedenle primer sifiliz tanı konduğu anda tedavi edilmelidir.
+Primer sifilizi 3 sözcükle özetleyebiliriz: ağrısız, bulaştırıcı ve kendiliğinden iyileşen; ama hastalık sürer.
+
+@@ Sekonder sifiliz: zamanlama ve deri bulguları
+Primer evrede başlayan kan yoluyla yayılım, sekonder evrede yaygın deri ve mukoza bulgularıyla görünür hâle gelir. Sekonder sifiliz genellikle şankr oluşumundan 2 ile 8 hafta sonra başlar; bu süre 24 haftaya kadar uzayabilir. Sekonder evrede en sık görülen bulgu cilt lezyonlarıdır. Lezyonlar maküler, makülopapüler, püstüler ya da psoriatik, yani sedef hastalığını andıran pullu tipte olabilir. Tipik cilt lezyonları kaşıntısız, simetrik, bilateral ve yaygındır. Dersteki görsellerde gövde ve kollarda yaygın, simetrik, pullu papüller ile ensede kabuklu püstüler lezyonlar izlenir.
+
+Tanıya en çok yönlendiren yerleşim el ve ayak tabanlarıdır.
+El ve ayak tabanı döküntüleri görüldüğünde sifiliz özellikle düşünülmelidir.
+Ders görsellerinde avuç içlerinde ve ayak tabanlarında yaygın, kırmızı kahverengi, yer yer pullu maküller ve papüller görülür; doğal seyir şemasındaki sekonder evre fotoğrafı da ayak tabanında aynı döküntüyü gösterir.
+Avuç içi ve ayak tabanı birçok döküntülü hastalıkta korunduğu için bu bölgelerin tutulumu ayırıcı tanıda yol göstericidir.
+
+Burası önemli, bu bilgi çıkmış sorularda doğru seçenek olarak soruldu: sifilizde el ayaları ve ayak tabanlarında deri tutulumu sık görülür.
+Aynı soruda yer alan yanlış ifadeleri de düzeltelim: sekonder sifilizin anogenital lezyonu kondiloma akuminata değil, kondiloma latadır; gomlarda bulaştırıcılık yoktur; primer sifilizde yumuşak şankr görülmez; nörosifilizin tersiyer olguların %80'inden fazlasını oluşturduğu ifadesi de çeldirici olarak verilmiştir.
+
+@@ Sekonder sifiliz: mukoza tutulumu ve kondiloma lata
+Sekonder evrede deri ile birlikte mukozalar da tutulur. Ağız, farinks, larinks ve vulvada eritemli zemin üzerinde gri beyaz lezyonlar görülür. Ders fotoğraflarında damakta ve yumuşak damakta eritemli, gri beyaz yamalar ile alt dudak iç yüzünde gri beyaz, hafif kabarık bir mukoza plağı izlenir. Mukoza lezyonları da treponema içerir; karanlık saha incelemesi için örnek alınabilecek lezyonlar arasındadır ve ağız yoluyla temasta bulaş kaynağı olabilir.
+
+Sekonder sifilizin bulaş açısından en önemli lezyonu kondiloma latadır.
+Kondiloma lata vulva, skrotum, perine ve meme altı gibi nemli ve sürtünmeye açık kıvrım bölgelerinde yerleşir.
+Gri beyaz maküler, papüler ya da verrüköz, yani siğil benzeri lezyonlardır.
+Ders fotoğraflarında perianal ve vulvar bölgede çok sayıda, birleşme eğiliminde, düz yüzlü, gri beyaz pembe kabarık plaklar görülür.
+
+Burası önemli: kondiloma lata bulaştırıcıdır ve bulaş yolları arasında şankrla birlikte anılan enfekte lezyondur.
+Çıkmış bir soruda sekonder sifilizin mukokutanöz lezyonlarının bulaşıcı olmadığı ifadesi yanlış seçenekti.
+Bir başka soruda ise sekonder sifilizin anogenital lezyonu kondiloma akuminata olarak verildi ve bu da yanlıştı.
+Adı benzeyen bu iki lezyonu karıştırmayın; sekonder sifilizin lezyonu kondiloma latadır.
+
+@@ Sekonder sifiliz: kıl folikülü, lenfadenopati ve sistemik belirtiler
+Sekonder evrede yaygın deri tutulumu kıl foliküllerini de etkiler. Bunun sonucunda kaşlarda dökülme ve saçlı deride, yaygın sistemik enfeksiyona bağlı saç dökülmesi olan toksik alopesi görülür. Kan yoluyla yayılan treponemanın deri ve eklerinde oluşturduğu inflamasyon kıl foliküllerini tutar. Diğer sekonder bulgular gibi alopesi de geçicidir.
+
+Primer evredeki bölgesel lenfadenopatiden farklı olarak sekonder evrede lenfadenopati yaygındır.
+Genellikle inguinal, servikal, submental, yani çene altı, ve aksiller lenf düğümleri tutulur.
+Dirseğin iç yüzünde, medial epikondil üzerinde yer alan epitroklear lenf düğümlerinin büyümesi saptandığında sifiliz özellikle düşünülmelidir.
+Burası önemli, sınav spotu olarak: sekonder sifilizin iki özellikle düşündüren ipucu el ve ayak tabanı döküntüsü ile epitroklear lenfadenopatidir.
+
+Sekonder sifiliz sistemik bir enfeksiyon evresidir ve deri bulgularına genel belirtiler eşlik eder.
+Bunlar ateş, halsizlik, kilo kaybı, farenjit ve artraljidir.
+Bu belirtiler özgül değildir ve viral enfeksiyonları taklit edebilir; tanıyı yönlendiren, eşlik eden kaşıntısız yaygın döküntü, el ve ayak tabanı tutulumu ve yaygın lenfadenopatidir.
+
+@@ Sekonder sifiliz: organ tutulumu ve akut nörosifiliz
+Primer evredeki spiroketemi, sekonder evrede organ tutulumu olarak karşımıza çıkar. Bu dönemde hepatit, üveit, sinovit, osteit, glomerülonefrit ve santral sinir sistemi tutulumu görülebilir. Üveit gözün damar tabakasının, sinovit eklem zarının, osteit kemik dokusunun inflamasyonudur. Doğal seyir şemasında da sekonder döküntüye hepatit, menenjit ya da glomerülonefritin eşlik edebileceği gösterilir.
+
+Sekonder evredeki santral sinir sistemi tutulumuna akut nörosifiliz denir.
+Akut nörosifiliz baş ağrısı, kusma ve ense sertliği ile seyreden bir menenjit tablosu ya da kraniyal sinir tutulumu şeklinde ortaya çıkar.
+En sık 7. ve 8. kraniyal sinirler, yani fasiyal ve vestibülokoklear sinirler tutulur; bunun sonucunda yüz felci ile işitme ve denge bozukluğu gelişebilir.
+Bu tablo erken sifilizin parçasıdır ve tersiyer dönemdeki kronik nörosifilizden ayrıdır.
+Sekonder sifilizin deri, mukoza, lenf düğümü, sistemik ve organ bulguları birkaç hafta ya da birkaç ay içinde kendiliğinden iyileşir.
+Ancak bulguların kaybolması hastalığın sona erdiği anlamına gelmez; hasta belirtisiz latent döneme girer.
+
+Burası önemli, bu bilgi çıkmış sorularda soruldu: sekonder sifiliz bulgularından biri olmayan seçenek tabes dorsalistir.
+El ve ayak tabanında makülopapüler döküntü, hepatit, menenjit ve kondiloma lata sekonder sifiliz bulgularıdır; tabes dorsalis ise tersiyer, parankimatöz nörosifiliz bulgusudur.
+Yine çıkmış sorularda sekonder sifilizin asemptomatik olduğu ifadesi yanlış seçenek olarak verildi.
+Gördüğünüz gibi sekonder sifiliz döküntü, lenfadenopati, sistemik ve organ bulgularıyla son derece semptomatik bir evredir; asemptomatik olan latent dönemdir.
+
+@@ Sekonder sifilizde klinik yaklaşım
+Çıkmış sorularda tekrar tekrar sorulan bir vakayı birlikte değerlendirelim. 37 yaşında bir erkek hasta gövde, bacaklar, el ve ayak tabanlarında döküntü ile başvuruyor. Döküntü dışında yakınması yok ve öyküsünde 1 yıl önce kendiliğinden geçmiş ağrısız bir penil ülser var. Avuç içi ve ayak tabanı döküntüsü ile geçirilmiş ağrısız ülser öyküsü birlikte olduğunda ilk düşünülecek tanı sekonder sifilizdir.
+
+Burası önemli: bu hastada öncelikle yapılması gerekenler sifiliz serolojisinin istenmesi, HIV serolojisinin ve hepatit serolojisinin istenmesi ile hastanın cinsel partnerinin taranması ve tedavi edilmesidir.
+Sekonder sifiliz ön tanısıyla hastayı kardiyovasküler komplikasyonlar açısından araştırmak ise öncelikli yaklaşımlar arasında yer almaz.
+Nedeni açıktır: kardiyovasküler sifiliz, bulaştan yıllar sonra gelişen tersiyer evrenin bir biçimidir; sekonder evredeki bir hastada öncelik tanının doğrulanması, eşlik edebilecek diğer cinsel yolla bulaşan enfeksiyonların araştırılması ve bulaş zincirinin kırılmasıdır.
 
 @@ Latent sifiliz
-Latent sifiliz, sekonder sifiliz bulgularının kaybolmasından tersiyer sifiliz bulgularının ortaya çıkmasına kadar geçen süredir. Bu asemptomatik bir dönemdir. İlk 1 yıl erken latent dönem, 1 yıldan sonrası ise geç latent dönem olarak adlandırılır. Erken latent dönem erken yani infeksiyöz sınıfta, geç latent dönem ise geç yani non infeksiyöz sınıfta yer alır. Latent dönem üç ile 30 yıl sürebilir.
+Sekonder bulguların kendiliğinden gerilemesiyle hastalık görünmez bir döneme girer. Latent sifiliz, sekonder sifiliz bulgularının kaybolmasından tersiyer sifiliz bulgularının ortaya çıkmasına kadar geçen süredir. Bu dönem asemptomatiktir; hastanın yakınması ve muayene bulgusu yoktur. Ancak belirti olmamasına karşın Treponema pallidum vücutta bulunmaya devam eder. Bu nedenle latent sifiliz ancak hasta aktif olarak araştırıldığında saptanabilir. Belirti yok demek, enfeksiyon yok demek değildir. Burası önemli, çıkmış sorularda doğru ifade olarak soruldu: latent sifilizde treponemal testler pozitiftir. Belirtisiz olması seropozitifliği ortadan kaldırmaz.
 
-Latent dönem sessiz olsa da hastalığın ilk dört yılında sekonder sifiliz relapsları gelişebilir ve bu relapsların %75 ile doksanı ilk yılda ortaya çıkar.
-Relaps en sık mukokutanöz bulgularla olur.
-Bir diğer önemli nokta, olguların %60 ile yetmişinde latent dönemin ömür boyu sürebilmesidir; yani hastaların çoğu tersiyer hastalığa ilerlemez.
+Latent dönem her zaman kesintisiz sessiz geçmez.
+Hastalığın ilk 4 yılında sekonder sifiliz relapsları gelişebilir ve bu relapsların %75 ile 90'ı ilk yılda görülür.
+Relaps en sık mukokutanöz bulgularla, yani deri ve mukoza lezyonlarıyla olur.
+Doğal seyir şemasındaki latentten sekondere geri dönüş oku bu relapsları gösterir.
+Mukokutanöz lezyonlar, örneğin kondiloma lata, bulaştırıcı olduğu için relaps dönemi bulaş açısından önemlidir.
+
+Latent dönem süresine göre ikiye ayrılır: ilk 1 yıl erken latent dönem, 1 yıldan sonrası geç latent dönemdir.
+Relapsların çoğunun ilk yılda olması bu yılın bulaş açısından daha riskli olmasını açıklar; erken latent dönemin erken, infeksiyöz sifiliz grubunda yer almasının nedeni budur.
+Latent dönem 3 ile 30 yıl sürebilir ve olguların %60 ile 70'inde ömür boyu sürebilir; bu hastalarda tersiyer bulgular hiç gelişmez.
+Burası önemli, sınav spotu olarak: ilk 1 yıl erken latent, sonrası geç latent; relapsların %75 ile 90'ı ilk yılda; olguların %60 ile 70'inde latent dönem ömür boyu sürer.
 
 @@ Tersiyer sifiliz ve gom
-Tersiyer sifiliz yavaş seyirli, progresif ve destrüktif lezyonlarla karakterizedir. Santral sinir sistemi, kardiyovasküler sistem, kemik, cilt ve iç organlar tutulabilir. Tersiyer dönemin tipik lezyonu gomdur. Gomlar genellikle bakteri içermeyen, Tip 4 aşırı duyarlılık sonucu gelişen granülomlardır. Yani doku yıkımını bakterinin kendisinden çok bağışıklık yanıtı yapar. Burası önemli: gom bakteri içermeyen, Tip 4 aşırı duyarlılıkla gelişen bir granülomdur.
+Latent dönemi ömür boyu sürmeyen hastalarda bulaştan 3 ile 20 yıl sonra tersiyer sifiliz gelişebilir. Tersiyer sifilizin lezyonları yavaş seyirli, progresif ve destrüktif, yani doku yıkıcıdır. Santral sinir sistemi, kardiyovasküler sistem, kemik, cilt ve iç organlar tutulabilir. Çıkmış sorularda tersiyer sifilizde nörolojik tutulumun ve gomatöz lezyonların görüldüğü doğru ifadeler olarak yer aldı.
 
+Tersiyer sifilizin karakteristik lezyonu gomdur.
+Gom bir granülomdur ve Tip 4 aşırı duyarlılık, yani T hücre aracılı gecikmiş tip bağışık yanıt sonucu gelişir.
+Dolayısıyla dokudaki hasar, bakterinin doğrudan etkisinden çok konağın aşırı hücresel yanıtından kaynaklanır ve gom genellikle bakteri içermez.
 Gom tüm doku ve organlarda olabilir, ancak genellikle cilt, kemik ve karaciğerde görülür.
-Ciltte nodüler, ülsere lezyonlar oluşturur.
-Kemiklerden genellikle tibia, fibula, klavikula ve kraniyum tutulur; hastada gece ağrıları ve lokal hassasiyet olur.
+Burası önemli: gom, bakteri içermeyen ve Tip 4 aşırı duyarlılıkla gelişen granülomdur.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: tersiyer, yani geç sifiliz lezyonu gomdur.
+Şankr primer, kondiloma lata sekonder sifilize aittir.
+Gomun sıklığının arttığı ifadesi ise soruda yanlış seçenek olarak verilmiştir.
+
+@@ Gomun yerleşimleri: cilt, kemik ve karaciğer
+Ciltte gom nodüler ülsere lezyonlar oluşturur; başlangıçta nodül olarak başlayan lezyon zamanla ülserleşir. Ders fotoğraflarında damakta ortası çökmüş, kenarları kabarık, damak dokusunu harap eden yıkıcı bir gom; alında yuvarlak, kabuklu, ortası nekrotik ülsere bir nodül; ağız köşesi ve dudakta kahverengi siyah kabukla örtülü yıkıcı bir ülser görülür. Sekonder sifiliz döküntüsü iz bırakmadan gerilerken tersiyer cilt gomu nodüler, ülsere ve destrüktiftir.
+
+Burası önemli, çıkmış sorularda soruldu: üçüncü devrinde gom oluşumu sonucu damakta perforasyona neden olabilen spesifik hastalık sifilizdir.
+Damaktaki yıkıcı gom, damak dokusunu harap ederek perforasyona yol açabilir.
+Kemik tutulumunda genellikle tibia, fibula, klavikula ve kraniyum, yani kafatası tutulur.
+Bulgular gece ağrıları ve lokal hassasiyettir.
+Tibiada gece artan ağrı ve lokal hassasiyet tersiyer sifilizin kemik gomunu düşündürmelidir.
 Karaciğer tutulumunda ise sarılık, karaciğer yetmezliği ve siroz gelişebilir.
-Hangi organda olursa olsun lezyon aynı immün mekanizmayla gelişen gomdur.
 
-@@ Nörosifiliz
-Tersiyer dönemdeki santral sinir sistemi tutulumuna nörosifiliz ya da kronik nörosifiliz denir; bunu sekonder dönemdeki akut nörosifilizden ayırmalıyız. Kronik nörosifilizin en sık tipi asemptomatik formdur. Meningovasküler sifilizde beyin, spinal kord ve meninksleri besleyen damarlar tutulur; kişilik değişikliği, baş ağrısı ve paralizi görülür. Parankimatöz nörosifilizde ise nöronlar hasar görür ve demiyelinizasyon olur; kişilik değişikliği, paranoya, reflekslerde hiperaktivite, parezi ve paralizi görülür.
+@@ Kronik nörosifiliz
+Tersiyer sifilizin santral sinir sistemi tutulumuna nörosifiliz ya da kronik nörosifiliz denir. Sekonder evredeki akut nörosifilizden farklı olarak yıllar sonra ve ilerleyici biçimde gelişir. Kronik nörosifiliz 3 tipe ayrılır: asemptomatik, meningovasküler ve parankimatöz nörosifiliz. Asemptomatik nörosifiliz en sık tiptir; santral sinir sistemi tutulumu vardır ama klinik belirti yoktur. Burası önemli: kronik nörosifilizin en sık tipi asemptomatik nörosifilizdir ve nörolojik bulgu olmaması tutulumu dışlamaz.
 
-Parankimatöz nörosifilizin iki önemli tablosu vardır.
-Tabes dorsaliste spinal kordun dorsal kök gangliyonları tutulur; parezi, parestezi, düşük ayak, ataksi ve Romberg belirtisi görülür.
-Burası önemli: tabes dorsalis dorsal kök gangliyonlarının tutulumudur ve ataksi ile Romberg belirtisi tipiktir.
-Genel pareziye gelince; irritabilite, kişilik değişikliği, baş ağrısı, unutkanlık, depresyon ve demans ile seyreder.
+Meningovasküler sifilizde beyin, spinal kord ve meninkslerin damarları tutulur.
+Treponemanın damar endotelinde çoğalması ve perivasküler hücrelere girmesi bu damar hasarının temelidir.
+Klinik olarak kişilik değişikliği, baş ağrısı ve damar tutulumuna bağlı iskemik hasarın sonucu olarak paralizi görülür.
+Parankimatöz nörosifilizde hasar damarlardan çok sinir dokusunun kendisindedir: nöronların hasarı, yani demiyelinizasyon söz konusudur.
+Bulgular kişilik değişikliği, paranoya, reflekslerde hiperaktivite, parezi ve paralizidir.
+Dikkat edin, kişilik değişikliği hem meningovasküler hem parankimatöz tipte görülebilir; ayırıcı nokta hasarın yeridir, damar mı yoksa nöron mu.
 
-@@ Kardiyovasküler sifiliz
-Kardiyovasküler sifilizin temelinde endarteritis obliterans vardır; damar endotelinin iç tabakasının enflamasyonu sonucu damar tıkanır. Hatırlarsanız bakteri en başta damar endotelinde çoğalıyordu; işte geç dönemde bunun bedeli ödenir. Sıklıkla çıkan aort tutulur ve bu bölgedeki kalsifikasyon grafilerde görülebilir. Sonuçta aort anevrizması ve aort yetmezliği gelişebilir. Koroner arter tutulumu ise anjinaya yol açar. Burası önemli: kardiyovasküler sifilizde tipik tutulum çıkan aorttur. Ayrıca tersiyer dönemde bulaştırıcılık yoktur.
+Parankimatöz nörosifilizin 2 klasik tablosu vardır.
+Tabes dorsalis spinal kordun dorsal kök gangliyonlarının tutulumudur; parezi, parestezi, düşük ayak, ataksi ve Romberg belirtisi görülür.
+Dorsal kök gangliyonları duyu iletiminden sorumlu olduğu için pozisyon duyusu bozulur; hasta dengesini gözüyle düzeltir, ayaklar bitişik dururken gözlerini kapatınca dengesi bozulur ve bu Romberg belirtisidir.
+Genel parezi ise beyni tutan biçimdir; irritabilite, kişilik değişikliği, baş ağrısı, unutkanlık, depresyon ve demansla seyreder.
+Beyin nöronlarının hasarı önce davranış ve duygu durumunda, sonra bellek ve bilişte bozulmaya yol açar ve tablo demansa ilerler.
+Bu nedenle kişilik değişikliği ve demansla gelen hastada sifiliz ayırıcı tanıda düşünülmelidir.
 
-@@ Tanıya genel bakış
-Sifiliz tanısında üç yaklaşım vardır. 1.'si karanlık saha mikroskobisidir; şankr, kondiloma lata ve mukozal lezyonlardan alınan seröz akıntı incelenir. Yani örnek bulaştırıcı lezyonlardan alınır. 2.'si serolojik testlerdir ve bunlar ikiye ayrılır. Spesifik olmayan testler ve de er el ile ar pe ar testleridir. Spesifik testler ise Treponema pallidum hemaglütinasyon testi ve floresan treponemal antikor absorbsiyon testidir. 3. yaklaşım moleküler testlerdir; burada polimeraz zincir reaksiyonu kullanılır.
+@@ Kardiyovasküler sifiliz ve tersiyer evrede bulaştırıcılık
+Kardiyovasküler sifilizin temel lezyonu endarteritis obliteranstır. Endarteritis obliterans, endotelin iç tabakasının inflamasyonu sonucu damar oklüzyonu, yani damarın tıkanmasıdır. Bu inflamasyonun başlangıç noktası yine treponemanın damar endotelinde çoğalması ve perivasküler hücrelere girmesidir. Tıkanan küçük damarların beslediği damar duvarı zayıflar ve bu zayıflık büyük damarlarda, özellikle aortta, yapısal bozukluklara zemin hazırlar.
 
-@@ Spesifik olmayan testler
-Spesifik olmayan testler bakterinin kendisine karşı oluşan antikorları tespit etmez. Bakterinin verdiği hasar sonucu dokudan kardiyolipin, lesitin ve kolesterol antijenleri salınır; bu testler işte bu antijenlere karşı oluşan immünoglobulin M ve immünoglobulin G yapısındaki antikorları saptar. Tarama testi olarak, tedavi takibinde ve nörosifiliz tanısında kullanılırlar. Primer ve sekonder sifilizde pozitiftirler. Burası önemli: bu testler tedavi ile bir ya da 2 yıl içinde negatifleştiği için tedavi takibinde kullanılır.
+Kardiyovasküler sifilizde sıklıkla çıkan aort tutulur.
+Tutulan aort duvarında kalsifikasyon gelişir ve bu kalsifikasyon grafilerde görülebilir.
+Zayıflayan duvarın genişlemesiyle aort anevrizması gelişir; doğal seyir şemasında da tersiyer sifilizde çıkan aort anevrizması vurgulanır.
+Aort kökünün genişlemesiyle kapak kapanamaz hâle gelir ve aort yetmezliği ortaya çıkar.
+Koroner arterlerin tutulumu sonucu ise anjina gelişir.
+Burası önemli, sınav spotu olarak: endarteritis obliterans sonucu sıklıkla çıkan aort tutulur; anevrizma, aort yetmezliği ve koroner tutulumla anjina görülür.
 
-@@ Spesifik testler ve karşılaştırma
-Spesifik testler ise bakterinin kendisine karşı oluşan antikorları tespit eder. Primer sifiliz döneminde pozitifleşir ve ömür boyu pozitif kalırlar. Bu nedenle tedavi takibinde kullanılamazlar. Ayrıca en erken yükselen ve en spesifik testler bunlardır. Burası önemli: spesifik testler ömür boyu pozitif kaldığı için tedavi yanıtını izlemede kullanılamaz.
+Tersiyer sifilizin klinik ağırlığı ile bulaştırıcılığı ters orantılıdır.
+Tersiyer dönemde bulaştırıcılık yoktur.
+Bunun 3 gerekçesi vardır.
+1.'si, gom genellikle bakteri içermez ve doku hasarı Tip 4 aşırı duyarlılık yanıtından kaynaklanır.
+2.'si, bulaşın başlıca kaynakları olan şankr ve kondiloma lata erken evrelere aittir.
+3.'sü, zaman sınıflamasında tersiyer sifiliz geç latent dönemle birlikte geç, non-infeksiyöz grupta yer alır.
+Burası önemli: tersiyer sifilizli hasta ağır organ hasarı taşıyabilir ama bulaştırıcı değildir; geç latent ve tersiyer evrelerde bulaşıcı olduğu ifadesi yanlıştır.
+Hastalığın ağır ve destrüktif olması bulaştırıcı olduğu anlamına gelmez.
 
-İki grubu karşılaştırırsak: spesifik olmayan testler doku hasarı antijenlerine, spesifik testler bakterinin kendisine karşı antikorları ölçer.
-Spesifik olmayan testler tedaviyle 3 yılda negatifleşir ve takipte kullanılır; spesifik testler ömür boyu pozitif kalır ve takipte kullanılmaz, buna karşılık en erken yükselen ve en özgül testlerdir.
-Kısacası tedavi yanıtını izlerken spesifik olmayan testlere, tanıyı doğrularken spesifik testlere güveniriz.
+@@ Tanı: karanlık saha mikroskobisi
+Sifiliz tanısında 3 grup yöntem kullanılır: doğrudan mikroskopi, serolojik testler ve moleküler testler. Spiroketler Gram boyası ile iyi boyanmadığından canlı bakteriler karanlık saha mikroskobisinde gösterilir. Bu inceleme için şankr, kondiloma lata ve mukozal lezyonlardan alınan seröz akıntı, yani lezyondan gelen berrak, plazma benzeri sıvı kullanılır. Bu 3 lezyon bol treponema içeren, bulaştırıcı erken evre lezyonları olduğu için doğrudan gösterim için en uygun örneklerdir.
 
-@@ Tedavi: benzatin penisilin
-Sifilizde temel tedavi benzatin penisilindir ve doz sayısı hastalığın dönemine göre değişir. Primer sifiliz, sekonder sifiliz ve erken latent sifilizde benzatin penisilin iki virgül dört milyon ünite kas içine tek doz olarak verilir. Geç latent sifiliz, gomatöz sifiliz ve kardiyovasküler sifilizde ise yine iki virgül dört milyon ünite kas içine, haftada 1 kez olmak üzere 3 hafta uygulanır. Burası önemli: erken dönem tek dozla, geç dönem haftada 1 kez 3 haftalık tedaviyle tedavi edilir.
+Serolojik testler 2 gruba ayrılır.
+Spesifik olmayan, yani nontreponemal testler VDRL ile RPR testleridir.
+Spesifik, yani treponemal testler ise Treponema pallidum hemaglütinasyon testi olan TPHA ve floresan treponemal antikor absorpsiyon testi olan FTA-ABS testidir.
+Moleküler test olarak ise etkenin genetik materyalini çoğaltarak saptayan polimeraz zincir reaksiyonu, yani PCR kullanılır.
 
-@@ Tedavi: alternatifler ve nörosifiliz
-Penisilin alerjisi varsa alternatif ilaçlar kullanılır. Doksisiklin günde 2 kez yüz miligram olarak 4 hafta verilir. Seftriakson bir gram kas içine ya da damar içine on ile 14 gün uygulanır. Azitromisin günde 1 kez beş yüz miligram olarak 1 hafta verilebilir; ancak slaytta azitromisin için direnç sorunu özellikle vurgulanmıştır, bu nedenle dikkatli olmak gerekir.
+@@ Spesifik olmayan testler: VDRL ve RPR
+VDRL ve RPR testlerinin neden spesifik olmadığını ölçtükleri antikorun kaynağı açıklar. Bu testler bakterinin kendisine karşı oluşan antikorları tespit etmez. Bakterinin verdiği hasar sonucu dokudan kardiyolipin, lesitin ve kolesterol antijenleri salınır. Testler bu antijenlere karşı oluşan immünoglobulin M ve immünoglobulin G yapısındaki antikorları saptar. Yani test treponemanın kendisini değil, doku hasarına karşı gelişen bağışık yanıtı gösterir.
 
-Nörosifiliz, oküler sifiliz ve otosifiliz yani santral sinir sistemi, göz ve kulak tutulumlarında benzatin penisilin yerine kristalize penisilin kullanılır.
-Doz günde 6 kez iki ile dört milyon ünitedir ve tedavi on ile 14 gün sürer.
-Özetle arkadaşlar, erken dönem benzatin penisilin tek doz, geç latent, gom ve kardiyovasküler sifiliz haftada 1 kez 3 hafta, nörosifiliz ise kristalize penisilin ile tedavi edilir.
-Tanıda spesifik olmayan testler takip için, spesifik testler doğrulama için kullanılır.
+Spesifik olmayan testler tarama testi olarak, tedavi takibinde ve nörosifiliz tanısında kullanılır.
+Primer ve sekonder sifilizde pozitiftir.
+Tedavi ile 1 ya da 2 yıl içinde negatifleştikleri için tedavi takibinde kullanılırlar; başarılı tedavide sonuç zamanla negatife döner.
+Burası önemli, bu iki bilgi çıkmış sorularda soruldu.
+1.'si, VDRL testi sifilizde tarama testi olarak kullanılır; bruselloz, gonore, Lyme hastalığı ya da tifo için değil.
+2.'si, sifilizin tedavi izleminde kullanılan tanı yöntemi VDRL testidir; TPHA gibi treponemal testler tedavi izleminde kullanılmaz.
+
+@@ Spesifik testler: TPHA ve FTA-ABS
+Spesifik testler treponemanın kendisine yöneliktir ve bakterinin kendisine karşı oluşan antikorları tespit eder. Primer sifiliz döneminde pozitifleşirler. Burası önemli, sınav spotu olarak: TPHA ve FTA-ABS en erken yükselen ve en spesifik testlerdir. Bakteriye özgü oldukları için tanının doğrulanmasında değerlidirler. Bu testlerin belirleyici özelliği sonuçlarının kalıcı olmasıdır. Primer dönemde pozitifleşen spesifik testler ömür boyu pozitif kalır. Bu nedenle başarılı tedaviden sonra da sonuç pozitif kalır ve spesifik testler tedavi takibinde kullanılamaz. Belirtisiz latent sifilizde de bu testler pozitiftir.
+
+İki grubu kısaca karşılaştıralım.
+Spesifik olmayan testler tedaviden sonra 3 yılda negatifleşir ve tedavi takibinde kullanılır.
+Spesifik testler ise ömür boyu pozitif kalır ve tedavi takibinde kullanılamaz.
+Hangi test tedavi izleminde kullanılır sorusunun yanıtı VDRL ve RPR, hangi test ömür boyu pozitif kalır sorusunun yanıtı ise TPHA ve FTA-ABS'tir.
+
+@@ Tedavi: benzatin penisilin şemaları
+Sifiliz tedavisinde temel ilaç benzatin penisilindir; benzatin penisilin kas içine uygulanan, uzun etkili bir penisilin preparatıdır. Doz şeması hastalığın evresine göre belirlenir. Primer sifiliz, sekonder sifiliz ve erken latent sifilizde benzatin penisilin 2,4 milyon ünite, kas içine tek doz olarak uygulanır. Bu 3 evrenin ortak noktası, zaman sınıflamasındaki erken, infeksiyöz sifiliz grubunu oluşturmalarıdır.
+
+Geç latent sifiliz, gomatöz sifiliz ve kardiyovasküler sifilizde ise aynı ilaç, yine 2,4 milyon ünite kas içine, haftada 1 kez olmak üzere 3 hafta uygulanır.
+Dikkat edin, doz miktarı 2 şemada aynıdır; fark uygulama sayısındadır: erken sifilizde tek doz, geç sifilizde haftada bir, 3 hafta.
+Tersiyer sifilizin 3 biçiminden ikisi bu şemayla tedavi edilir; nörosifiliz bu listede yer almaz.
+Burası önemli, sınav spotu olarak: primer, sekonder ve erken latent sifilizde tek doz; geç latent, gomatöz ve kardiyovasküler sifilizde haftada bir, 3 hafta.
+
+@@ Tedavi: penisilin alerjisi ve nörosifiliz
+Penisilin alerjisi olan hastada 3 alternatif ilaç vardır. Tetrasiklin grubundan doksisiklin günde 2 kez 100 miligram, 4 hafta verilir. Üçüncü kuşak sefalosporin olan seftriakson 1 gram, kas içi ya da damar içi yolla, 10 ile 14 gün uygulanır. Makrolid grubundan azitromisin günde 1 kez 500 miligram, 1 hafta verilir; ancak azitromisinde direnç önemli bir sorun olarak özellikle vurgulanır.
+
+Nörosifiliz, göz tutulumu olan oküler sifiliz ve kulak tutulumu olan otosifilizde benzatin penisilin şemaları yerine kristalize penisilin kullanılır.
+Kristalize penisilin günde birçok kez uygulanan kısa etkili bir penisilindir.
+Şema günde 6 kez, 2 ile 4 milyon ünite, 10 ile 14 gündür.
+Sekonder evrede tanımladığımız üveit de bir göz tutulumudur.
+Burası önemli: nörosifiliz, oküler sifiliz ve otosifilizde kristalize penisilin günde 6 kez 2 ile 4 milyon ünite, 10 ile 14 gün uygulanır.
+
+@@ Özetle
+Özetle, tedavi seçimi 3 soruya dayanır: hastalık erken mi geç mi, santral sinir sistemi, göz ya da kulak tutulumu var mı ve penisilin alerjisi var mı. Erken sifilizde tek doz, geç latent, gomatöz ve kardiyovasküler sifilizde haftalık 3 doz benzatin penisilin, nörosifilizde kristalize penisilin kullanılır. Tedavi yanıtı VDRL ile izlenir, TPHA ömür boyu pozitif kalır. Bulaştırıcılık ise yalnız primer, sekonder ve erken latent dönemlerle sınırlıdır.

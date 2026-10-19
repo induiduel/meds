@@ -72,6 +72,9 @@ export function useCdCevrimdisi(key: string): { kayit: CdCevrimdisiKayit | null;
   const is = useSyncExternalStore(abone, () => isler[key] || null, () => null);
   return { kayit, is };
 }
+/** Çevrimdışı merkezinin (services/cevrimdisi) okuduğu indirme durumu ve aboneliği */
+export const cdIsDurumu = (key: string): CdIndirme | null => isler[key] || null;
+export const cdAbone = abone;
 export const useCdCevrimdisiSayi = () => useSyncExternalStore(abone, () => Object.keys(kayitAnlik).length, () => 0);
 
 /* ---------------- indirme ---------------- */

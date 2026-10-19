@@ -25,6 +25,7 @@ import { registerPatolojiCozucuRoutes } from './src/services/patolojiCozucu';
 import { registerPatolojiCozucuAltRoutes } from './src/services/patolojiCozucuAlt';
 import { registerCozucuSesRoutes } from './src/services/cozucuSes';
 import { registerOgrenSesRoutes } from './src/services/ogrenSes';
+import { registerCevrimdisiKatalogRoutes } from './src/services/cevrimdisiKatalog';
 import { registerWhatsAppRoutes, runScheduledWhatsAppDigests } from './src/services/whatsappService';
 import crypto from 'crypto';
 
@@ -2295,7 +2296,7 @@ function addDeletedPastQuestion(id: string) {
 
 // Tam çıkmış listesi (~61MB JSON) her istekte yeniden örtülüp gzip'lenince Oracle'da ~1.9 sn CPU
 // harcıyor ve bu sırada tüm diğer istekler bekliyordu. Örtülü liste + gzip gövdesi kaynak değişene
-// kadar (en çok 30 sn; Faz 14 kaydı kendi önbelleğinde) bellekte tutulur, gzip iş parçacığında yapılır.
+// kadar (yazımlar sürüm sayacını artırır; güvenlik ağı 10 dk; Faz 14 kaydı kendi önbelleğinde) bellekte tutulur, gzip iş parçacığında yapılır.
 // Gövdelerin yalnız gzip'i tutulur (ham gövde ~170 MB'lık ikinci bir dize demekti); gzip desteklemeyen
 // nadir istemciye anında açılır.
 function toClientPastQuestion(raw: any): any {
@@ -2305,6 +2306,13 @@ function toClientPastQuestion(raw: any): any {
   delete q.ragChunk;
   delete q.embeddingText;
   delete q.grounding;
+  // İstemcide hiç okunmayan iç hat alanları (~3 MB)
+  delete q.sinavKimligi;
+  delete q.ozetKaniti;
+  delete q.museRedactionOriginal;
+  delete q.slideAudit;
+  delete q.lectureMatches;
+  delete q.contentOutcome;
   if (q.explanation && q.tibbi_aciklama) {
     delete q.tibbi_aciklama;
   }
@@ -2350,13 +2358,13 @@ let pastListCache: PastListCache | null = null;
 function getServedPastList(): PastListCache {
   const base = getPastQuestionsDb();
   const key = `${lastPastQuestionsMtime}:${pastQuestionsVersion}:${base.length}:${quarantineMtime()}:${mergeMtime()}:${getDeletedPastQuestions().size}`;
-  if (!pastListCache || pastListCache.key !== key || Date.now() - pastListCache.at > 30_000) {
+  if (!pastListCache || pastListCache.key !== key || Date.now() - pastListCache.at > 10 * 60_000) {
     const list = applyMergeOverlay(applyQuarantine(applyPhase14Overlay(base))).map(toClientPastQuestion);
     pastListCache = { key, at: Date.now(), list, listJson: JSON.stringify(list), bodies: new Map() };
   }
   return pastListCache;
 }
-function sendPastListBody(req: express.Request, res: express.Response, cache: PastListCache, name: string, build: () => string) {
+function pastListGzip(cache: PastListCache, name: string, build: () => string): Promise<Buffer> {
   let p = cache.bodies.get(name);
   if (!p) {
     const raw = build();
@@ -2365,6 +2373,19 @@ function sendPastListBody(req: express.Request, res: express.Response, cache: Pa
     // Eşitleme gövdesi anahtarı her değişiklikte farklıdır; eskiler birikmesin
     if (cache.bodies.size > 4) cache.bodies.delete(cache.bodies.keys().next().value as string);
   }
+  return p;
+}
+const pastListBodyJson = (served: PastListCache) => `{"success":true,"totalCount":${served.list.length},"questions":${served.listJson}}`;
+// Yeniden başlatmadan sonra ilk /cikmis ziyaretçisi listeyi kurmak için ~20 sn beklemesin: açılış
+// yükü (RAG, eşitleme) bittikten sonra liste ve gzip gövdesi arka planda hazırlanır.
+setTimeout(() => {
+  try {
+    const served = getServedPastList();
+    pastListGzip(served, 'list', () => pastListBodyJson(served)).catch(() => {});
+  } catch (e: any) { console.warn('[Çıkmış] ön ısıtma başarısız:', e?.message || e); }
+}, 45_000).unref?.();
+function sendPastListBody(req: express.Request, res: express.Response, cache: PastListCache, name: string, build: () => string) {
+  const p = pastListGzip(cache, name, build);
   p.then((gz) => {
     res.type('application/json');
     res.vary('Accept-Encoding');
@@ -2736,6 +2757,7 @@ registerPatolojiAsistanRoutes(app);
 registerPatolojiCozucuRoutes(app);
 registerPatolojiCozucuAltRoutes(app);
 registerCozucuSesRoutes(app);
+registerCevrimdisiKatalogRoutes(app);
 registerOgrenSesRoutes(app);
 
 // Gidiş-dönüş testi: NOTIFY → LISTEN → SSE zincirinin tamamını ölçer (Sistem Tanılama ekranı).
@@ -2901,7 +2923,7 @@ app.get('/api/past-exams', (req, res) => {
     }
 
     if (filtered === list) {
-      return sendPastListBody(req, res, served, 'list', () => `{"success":true,"totalCount":${list.length},"questions":${served.listJson}}`);
+      return sendPastListBody(req, res, served, 'list', () => pastListBodyJson(served));
     }
     res.json({
       success: true,

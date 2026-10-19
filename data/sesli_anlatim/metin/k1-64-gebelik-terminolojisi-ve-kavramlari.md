@@ -1,308 +1,342 @@
 # Gebelik Terminolojisi ve Kavramları
 
-@@ Gebelik, embriyo ve fetüs; gebelik yaşı
-Gebelik, ya da diğer adıyla gravidite, fertilizasyondan doğuma kadar geçen süredir. Miadında bir gebelik iki yüz 80 gün, yani 40 hafta olarak kabul edilir; obstetrideki bütün hafta ve tarih hesapları bu standart süreye dayanır. Bu süre boyunca gebelik ürünü iki dönemden geçer. Embriyo dönemi fertilizasyondan 8. haftanın sonuna kadar sürer ve organogenez bu dönemde tamamlanır. Bu sınır son adetten sayıldığında yaklaşık 10. gestasyonel haftaya karşılık gelir. 8. haftadan doğuma kadar olan dönemde ise artık fetüsten söz ederiz; burada büyüme ve olgunlaşma ön plandadır.
+@@ Gebelik tanımı ve gebelik yaşı
+Gebelik, ya da gravidite, fertilizasyondan doğuma kadar geçen süredir. Burası önemli: miadında bir gebelik 280 gün, yani 40 hafta olarak kabul edilir. Obstetrideki bütün hafta ve tarih hesapları bu standart tanıma dayanır. Bu süre boyunca gebelik ürünü 2 ayrı dönemden geçer. Döllenmeden sonraki ilk 8 haftalık dönem, yani fertilizasyondan 8. haftanın sonuna kadar olan süre embriyonik dönemdir; organogenez bu dönemde tamamlanır. 8. haftadan doğuma kadar olan dönemde ise artık fetüsten söz ederiz ve bu dönemde büyüme ile olgunlaşma ön plandadır.
 
-Gebelik yaşını iki şekilde ifade edebiliriz ve hangi başlangıç noktasını seçtiğimiz her hesabı değiştirir.
-Gestasyonel yaş, son adet tarihinin ilk gününden itibaren hesaplanan yaştır; klinikte yaygın olarak kullanılan budur ve trimester ya da term sınırları aksi söylenmedikçe hep buna göredir.
+Gebelik yaşını ifade etmenin 2 yolu vardır.
+Gestasyonel yaş, son adet tarihinin ilk gününden itibaren hesaplanan yaştır ve klinikte yaygın olarak kullanılan budur.
 Konsepsiyonel yaş ise döllenme anından itibaren hesaplanır.
 Ovülasyon siklusun ortasında olduğu için konsepsiyonel yaş, gestasyonel yaştan yaklaşık 2 hafta kısadır.
-Yani embriyo döneminin sonu konsepsiyonel olarak 8., gestasyonel olarak yaklaşık 10. haftadır; bu iki sayıyı birbirine karıştırmayın.
+Burası önemli, dikkat edin: klinik raporlarda, trimester ve term sınırlarında aksi söylenmedikçe her zaman gestasyonel yaş kullanılır.
+Bu yüzden embriyo döneminin sonu döllenmeden sayıldığında 8. hafta, son adetten sayıldığında yaklaşık 10. gestasyonel haftadır; bu 2 sayıyı birbirine karıştırmayın.
 
-@@ Gravida, parite, abortus ve yaşayan çocuk
-Obstetrik öyküyü gravida, parite, yaşayan ve abortus harfleriyle, kısaca ge pe ye a formülüyle özetleriz. Gravida gebelik sayısıdır ve sonuca bakılmaz; abortusla, ektopik gebelikle ya da doğumla biten her gebelik sayılır, şu anki gebelik de dahildir. Nulligravid, şu anda gebe olmayan ve daha önce hiç gebe kalmamış kadındır. Primigravid, hâlihazırda gebe olan ve bu gebeliği ilk gebeliği olan kadındır. Multigravid ise hâlihazırda gebe olan ve birden fazla gebeliği olan kadındır. Örneğin daha önce bir düşük yapmış ve şimdi yeniden gebe kalmış kadın gravida ikidir ve multigraviddir.
+@@ Gravida, parite ve obstetrik formül
+Obstetrik öykü G, P, Y, A harfleriyle özetlenir: gravida, parite, yaşayan ve abortus. Gravida gebelik sayısıdır ve gebeliğin sonucuna bakılmaz. Abortusla, ektopik gebelikle ya da doğumla biten her gebelik sayılır ve şu anki gebelik de dahildir. Burası önemli, çıkmış sorularda doğru ifade olarak geçti: gravida tüm düşük ve doğum sayılarını içerir. Nulligravid, şu anda gebe olmayan ve daha önce hiç gebe kalmamış kadındır. Primigravid, hâlihazırda gebe olan ve bu gebeliği ilk gebeliği olan kadındır. Multigravid ise hâlihazırda gebe olan ve birden fazla gebeliği olan kadındır. Örneğin daha önce bir düşük yapmış ve şimdi yeniden gebe olan kadın gravida 2'dir ve multigraviddir.
 
-Parite ise gebelikleri değil doğum olaylarını sayar ve eşiği 20. gebelik haftasıdır; parite, 20. gebelik haftasından sonraki doğumu nitelendirir.
-Nullipar, daha önce 20. haftadan sonra hiç doğum yapmamış kadındır; primipar yalnız bir doğum yapmış, multipar ise birden fazla doğum yapmış kadındır.
-Çoğul gebelikler gravida ve parite hesabında bir olarak sayılır, yaşayan hanesi ise bebek sayısı kadar artar.
-Yani ilk gebeliğinde ikiz doğuran kadın gravida bir, parite bir, yaşayan iki olarak yazılır.
-İkiz sorularında pariteyi bebek sayısı kadar artırma tuzağına düşmeyin.
+Parite, 20. gebelik haftası sonrasındaki doğumu nitelendirir; 20. haftadan önce sonlanan gebelik pariteye katılmaz.
+Nullipar, daha önce 20. gebelik haftası sonrası doğum yapmamış kadındır.
+Primipar daha önce yalnız bir doğum yapmış, multipar ise birden fazla doğum yapmış kadındır.
+Burası önemli, sınavda yanlış ifade olarak soruldu: parite, 500 gramdan büyük canlı doğum sayısı değildir.
+Parite 20. haftadan sonraki doğum olayını sayar; 20. haftadan sonraki ölü doğum da, bebek yaşamasa bile, pariteye eklenir.
 
-Abortus, 20. gebelik haftasından önce ya da beş yüz gramın altındaki gebelik ürününün atılmasıdır ve abortus hanesine yazılır.
-Doğum ise 20. gebelik haftasından sonra ya da beş yüz gramın üzerindeki gebelik ürününün atılmasıdır ve parite hanesine yazılır.
-20. haftadan sonraki ölü doğum da bebek yaşamasa bile abortus değil doğumdur ve pariteye eklenir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: gravida sonuca bakmadan bütün gebelikleri, ektopik gebelik ve düşükler dahil sayar; parite 20. haftadan sonraki doğum olaylarını sayar ve ikiz doğum tek doğumdur; 20. haftadan önceki kayıplar ve ektopik gebelik pariteye değil, gravidaya eklenir.
-Formül sorularında önce her gebeliği 20. hafta eşiğine göre yerleştirin, sonra çoğul gebeliğin tek sayıldığını unutmayın.
+Burası önemli: çoğul gebelikler gravida ve parite hesabında 1 olarak sayılır.
+Parite doğan bebek sayısını değil doğum olayını sayar.
+Yaşayan hanesi ise bebek sayısı kadar artar.
+Yani ikiz doğuran ve başka gebeliği olmayan bir kadın G1, P1, Y2 olarak yazılır.
 
-@@ Trimesterler ve term tanımları
-Gestasyonel yaşa göre çizilen sınırlar gebeliğin dönemlerini belirler. 1. trimester sıfırdan 13 hafta altı güne kadardır. 2. trimester 14 hafta 0 günden 27 hafta altı güne kadar sürer. 3. trimester ise 28 hafta 0 günden doğuma kadardır.
+@@ Abortus ile doğum ayrımı ve formül örnekleri
+Abortus ile doğumu ayıran ölçüt hem hafta hem ağırlıktır. Burası önemli: 20. gebelik haftasından önce ya da 500 gramın altındaki gebelik ürününün atılmasına abortus denir ve bu A hanesine yazılır. 20. gebelik haftasından sonra ya da 500 gramın üstündeki gebelik ürününün atılması ise doğumdur ve P hanesine yazılır. 20. hafta ve 500 gram eşiği, bütün formül sorularının anahtarıdır. Ektopik gebelik de 20. haftadan önce sonlandığı için abortus hanesine girer.
 
-Doğumun zamanlaması da haftalarla adlandırılır.
-37 hafta 0 günden önceki doğum preterm, yani erken doğumdur; dolayısıyla 36 hafta 6 günde olan doğum hâlâ pretermdir.
-37 hafta 0 gün ile 38 hafta 6 gün arası erken term, 39 hafta 0 gün ile 40 hafta 6 gün arası tam term, 41 hafta 0 gün ile 41 hafta 6 gün arası geç term olarak adlandırılır.
-42 hafta 0 gün ve üzerindeki gebelik ise postterm, yani sürmüş gebeliktir.
-Tam termin 39. haftada başladığını, otuz yedi ve 38. haftaların erken term olarak ayrıldığını özellikle aklınızda tutun.
+Şimdi çıkmış sorulardaki 2 örneği birlikte çözelim, burası önemli.
+Birinci kadında 2 miadında tekil vajinal doğum, sezaryenle bir canlı ikiz doğum, 9. ve 16. haftalarda 2 düşük, 24. haftada bir ölü doğum ve cerrahiyle sonlandırılmış bir tubal ektopik gebelik var.
+Gebelikleri sayarsak 2, 1, 2, 1 ve 1; gravida 7 olur.
+20. haftadan sonraki doğumlar 2 tekil doğum, tek doğum olarak sayılan ikiz ve ölü doğumdur; parite 4 olur.
+2 düşük ile ektopik gebelik abortus 3'tür.
+Yaşayan ise 2 tekil bebek ile 2 ikiz, yani 4'tür.
 
-@@ Gebelik tanısı ve semptomlar
-Gebelik tanısı şüpheden kesinliğe uzanan üç basamakta kurulur: klinik bulgu, hormon testi ve görüntüleme. İlk bulgu, menstrüel siklusu başlamış bir kadının adet görmemesi, yani sekonder amenoredir. 2. basamak insan koryonik gonadotropinin beta ünitesinin, kısaca beta ha ce genin pozitif bulunmasıdır. En düşük tespit düzeyi idrarda yirmi ile yirmi beş, serumda ise beş mili internasyonal ünite bölü mililitredir; bu yüzden serum testi daha duyarlıdır ve çok erken gebelikte idrar testi negatifken serum testi pozitif olabilir. 3. basamakta ultrasonografide gestasyonel kese, embriyo ve fetal kalp atımı gösterilir ve tanı kesinleşir.
+İkinci örnekte bir ektopik gebelik, 22. haftada ölümle sonuçlanan bir gebelik, 8. haftada ölümle sonuçlanan bir gebelik, 2 sezaryen ve 3 normal doğum var.
+22. haftadaki kayıp 20. haftayı geçtiği için doğumdur; dolayısıyla parite 2 sezaryen, 3 normal doğum ve bu ölü doğumla 6'dır.
+Ektopik gebelik ile 8. haftadaki kayıp abortus 2'dir.
+Yaşayan çocuk sayısı 5'tir, 6 değildir.
+Gravida önceki gebeliklerle 8'dir; kadın şu anda gebeyse şimdiki gebelik de eklenir ve gravida 9 olur.
+Bu kadının 2 sezaryen öyküsü olduğu için sonraki doğumunda sezaryen önerilir.
 
-Doğurganlık çağındaki kadında pek çok yakınma gebeliğin habercisi olabilir: amenore, yani adet görmeme; dismenore, yani ağrılı adet; pelvik ağrı ve karın ağrısı; senkop, yani bayılma; sersemlik ya da baş dönmesi; hipotansiyon ve taşikardi; bulantı ya da kusma; vajinal akıntı ve üriner semptomlar.
-Bu semptomlar nonspesifiktir ve tek başına tanı koydurmaz, doğrulama beta hCG ile yapılır.
-Ağrı, senkop ve hipotansiyon bir aradaysa ektopik gebelik gibi bir komplikasyon da mutlaka akla gelmelidir.
+@@ Trimesterler, term tanımları ve perinatal dönem
+Gestasyonel yaşa göre gebelik 3 trimestere ayrılır. Birinci trimester 0 ile 13 hafta 6 gün arasıdır. İkinci trimester 14 hafta 0 günden 27 hafta 6 güne kadar sürer. Üçüncü trimester 28 hafta 0 günden doğuma kadardır. Burası önemli, çıkmış soruda yanlış ifade buydu: 31 haftalık bir gebe ikinci değil, üçüncü trimesterdedir. Aynı soruda doğru kabul edilen ifadeler de şunlardı: perinatal dönem gebeliğin 20. haftasından doğum sonrası 28. güne kadar uzanır, amniyon sıvısı ve zarı fetüsü travmalardan ve ısı kaybından korur.
 
-@@ Pozitif beta hCG sonrası: yerleşim, canlılık ve kinetik
-Pozitif test yalnızca gebeliğin varlığını gösterir, yeri ve canlılığı hakkında bilgi vermez. Beta hCG pozitifleştikten sonra ilk soru gebeliğin intrauterin yerleşimli olup olmadığıdır; gebeliklerin %98'i intrauterin yerleşimlidir, kalan küçük oran ektopik gebeliği temsil eder. 2. soru, intrauterin ise gebeliğin viabl olup olmadığıdır ve bu, fetal kalp atımının varlığı ya da yokluğuyla belirlenir. Yani pozitif beta hCG ektopik gebeliği dışlamaz.
+Doğum zamanı da haftalık sınırlarla adlandırılır.
+Burası önemli: 37 hafta 0 günün altındaki doğum preterm, yani erken doğumdur.
+37 hafta 0 gün ile 38 hafta 6 gün arası erken termdir.
+39 hafta 0 gün ile 40 hafta 6 gün arası tam termdir.
+41 hafta 0 gün ile 41 hafta 6 gün arası geç termdir.
+42 hafta 0 gün ve üzeri ise postterm, yani sürmüş gebeliktir.
+Dikkat edin, 36 hafta 6 günde olan doğum hâlâ pretermdir.
+Geç term ile postterm de sık karıştırılır: 41. hafta geç term, 42. hafta ve sonrası postterm demektir.
 
-Sağlıklı intrauterin gebeliklerde beta hCG düzeyleri genellikle her bir virgül dört ile iki virgül 1 günde bir ikiye katlanır; beklenenden yavaş artış sağlıklı intrauterin gebelikle uyumlu değildir.
-Düzey, gebeliğin 8. ile 10. haftalarında anne dolaşımında yaklaşık elli bin ile yüz bin internasyonal ünite bölü litrelik maksimum seviyeye ulaşır.
-Daha sonra 18. ile 20. haftalarda yaklaşık on bin ile yirmi bin internasyonal ünite bölü litreye düşer ve bu seviyede kalır.
-Bulantı ve kusmanın en belirgin olduğu dönemin bu zirveyle örtüştüğüne dikkat edin.
+@@ Gebelik tanısı ve semptomları
+Gebelik tanısı şüpheden kesinliğe uzanan 3 basamakta kurulur. İlk bulgu, menstrüel siklusu başlamış bir kadının adet görmemesi, yani sekonder amenoredir. İkinci basamak β-hCG pozitifliğidir; insan koryonik gonadotropininin beta ünitesinin gösterilmesi. En düşük tespit düzeyi idrarda 20 ile 25 mili ünite bölü mililitre, serumda ise 5 mili ünite bölü mililitredir. Bu yüzden serum testi daha duyarlıdır ve çok erken gebelikte idrar testi negatifken serum testi pozitif olabilir. Üçüncü ve kesinleştirici basamak ultrasonografide gestasyonel kesenin, embriyonun ve fetal kalp atımının gösterilmesidir.
 
-@@ Naegele kuralı
-Beklenen doğum tarihi, son adet tarihine dayanan basit bir formülle, Naegele kuralıyla hesaplanır. Formül şöyledir: son adet tarihine 7 gün eklenir, 3 ay çıkarılır ve 1 yıl eklenir. Örneğin son adet tarihi on beş ekim 2020 beş ise, on beşe yedi eklenince yirmi iki, 10. aydan üç çıkınca 7. ay, yıla bir eklenince 2020 altı olur; beklenen doğum tarihi yirmi iki temmuz 2020 altıdır. Bu formül, son adetin ilk gününden sayılan iki yüz 80 günlük miad süresine karşılık gelir, bu yüzden başlangıç noktası daima son adetin ilk günüdür.
+Gebelikle ilişkili yakınmalar geniş ve nonspesifiktir.
+Amenore, dismenore, pelvik ağrı ve karın ağrısı; senkop, sersemlik ya da baş dönmesi, hipotansiyon ve taşikardi; bulantı ya da kusma, vajinal akıntı ve üriner semptomlar bu listede yer alır.
+Doğurganlık çağındaki kadında bu yakınmalardan biri varsa gebelik mutlaka akla gelmeli ve tanı β-hCG ile doğrulanmalıdır.
+Ağrı, senkop ve hipotansiyon bir aradaysa ektopik gebelik gibi bir komplikasyon da düşünülmelidir.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: son adet tarihi verilen bir gebenin tahmini doğum tarihi Naegele kuralıyla, yani güne yedi ekleyip aydan üç çıkararak ve yıla bir ekleyerek bulunur.
-Örneğin son adet tarihi on dokuz mayıs 2020 bir ise sonuç yirmi altı şubat 2020 ikidir; son adet tarihi yirmi üç nisan 2020 dört ise sonuç otuz ocak 2020 beştir.
-Sınavda önce günü, sonra ayı, en son yılı düzeltin; ay çıkarırken yılın değişip değişmediğine dikkat edin.
+β-hCG pozitifleştikten sonra 2 soru sorulur.
+1.'si, gebelik intrauterin yerleşimli mi?
+Gebeliklerin %98'i intrauterin yerleşimlidir; kalan küçük oran ektopik gebeliktir.
+Yani pozitif test ektopik gebeliği dışlamaz.
+İkinci soru, gebelik intrauterin ise viabl mi?
+Bunu fetal kalp atımının varlığı ya da yokluğu belirler.
 
-@@ Ultrasonografi ve fetal biyometri
-Gebeliğin görüntülenmesinde ilk yaklaşım transabdominal ultrasonografidir. Düşük frekanslı, düşük rezolüsyonlu bir incelemedir, üç ile beş megahertz arasında çalışır; düşük frekans daha derine ulaşır ama ayrıntı azdır. Curved linear, yani konveks prob kullanılır ve probun ön yüzünde yön için bir indikatör bulunur. İyi görüntü için mesane dolu olmalıdır, çünkü dolu mesane akustik pencere oluşturur ve barsakları iter. Koronal ve sagital kesitler alınmalıdır. Slayttaki görüntüde dolu mesanenin arkasında uterus, vajen ve serviks etiketli olarak izlenir.
+@@ Beta hCG kinetiği ve Naegele kuralı
+Sağlıklı intrauterin gebeliklerde β-hCG düzeyi genellikle her 1,4 ile 2,1 günde bir ikiye katlanır. Beklenenden yavaş artış sağlıklı bir intrauterin gebelikle uyumsuzdur. Hormon, maternal dolaşımda yaklaşık 50.000 ile 100.000 ünite bölü litrelik maksimum düzeye gebeliğin 8 ile 10. haftalarında ulaşır. Daha sonra 18 ile 20. haftalarda yaklaşık 10.000 ile 20.000 ünite bölü litreye düşer ve bu düzeyde kalır. Bu zirvenin, bulantı ve kusmanın belirginleştiği dönemle örtüştüğüne dikkat edin.
 
-Transvajinal ultrasonografi ise yüksek frekanslı, yüksek rezolüsyonlu bir incelemedir, beş ile on megahertz arasında çalışır ve erken gebelik yapılarını daha net gösterir.
-Vajinal prob kullanılır ve transabdominal incelemenin aksine boş mesane ile görüntü alınır.
-Önce abdominal görüntü alınmazsa transvajinal yaklaşım hasta açısından daha rahatlatıcı olabilir.
-Görüntüde uterin fundus ve serviks yakından ve yüksek çözünürlükte izlenir.
+Beklenen doğum tarihi son adet tarihine dayanan basit bir formülle, Naegele kuralıyla hesaplanır.
+Burası önemli: son adet tarihinin ilk gününe 7 gün eklenir, aydan 3 ay çıkarılır ve yıla 1 yıl eklenir.
+Formül, son adetin ilk gününden sayılan 280 günlük miad süresine karşılık gelir.
+Örneğin son adet tarihi 15 Ekim 2025 ise 15'e 7 eklenir ve 22 olur, 10. aydan 3 çıkarılır ve 7. ay olur, yıl 2026 olur; beklenen doğum tarihi 22 Temmuz 2026'dır.
 
-Erken gebelikteki olaylar dizisi şeması, transvajinal incelemede yapıların hangi sırayla görünür hâle geldiğini gösterir.
-İlk görülen yapı gestasyonel kesedir, güncel kaynaklara göre yaklaşık 5. haftada izlenir.
-Kesenin içinde 2. olarak yolk sac belirir, yaklaşık beş ile beş buçuk haftada görülür.
-Kalp atımı olan embriyo ise yaklaşık 6. haftada görülür.
-Yani sıra kese, yolk sac, embriyo ve kalp atımıdır; bu sıra bozulduğunda yerleşim ve canlılık yeniden sorgulanır.
+Burası önemli, Naegele sorusu neredeyse her yıl soruldu; çıkmış örnekleri sırayla hesaplayalım.
+Son adet tarihi 3 Mayıs 2020 ise doğum tarihi 10 Şubat 2021'dir.
+23 Nisan 2024 ise 30 Ocak 2025'tir.
+19 Mayıs 2021 ise 26 Şubat 2022'dir.
+22 Aralık 2022 ise 29 Eylül 2023'tür; burada aralıktan 3 ay geri gidince eylüle düşüldüğü için yıl yalnız 1 artar.
+11 Nisan 2023 ise 18 Ocak 2024'tür.
+Her soruda önce güne 7 ekleyin, sonra ayı 3 geri alın, en son yılı ayarlayın.
 
-İlerleyen gebelikte fetüsün boyutlarını üç temel ölçümle izleriz.
-Biparietal çap, fetal başın iki parietal kemiği arasındaki çaptır ve baş kesitinde ölçülür.
-Abdominal çevre, fetal karnın çevresidir ve karın kesitinde ölçülür.
-Femur uzunluğu ise uzun kemik kesitinde ölçülür.
-Bu üç ölçüm gebelik yaşı ile fetal büyümenin değerlendirilmesinde kullanılır ve birlikte tahmini fetal ağırlık hesabına girer.
+@@ Ultrasonografi ve erken gebelik bulguları
+Gebeliğin görüntülenmesinde ilk yaklaşım transabdominal ultrasonografidir. Burada düşük frekans ve düşük rezolüsyon söz konusudur; 3 ile 5 megahertz. Düşük frekans daha derine ulaşır ama ayrıntı azdır. Kıvrık lineer prob kullanılır ve probun ön yüzünde yön için bir işaretleyici bulunur. İyi görüntü için mesane dolu olmalıdır; dolu mesane akustik pencere oluşturur ve barsakları iter. Koronal ve sagital kesit alınmalıdır. Görüntüde dolu mesanenin arkasında uterus, vajen ve serviks izlenir.
+
+Transvajinal ultrasonografide ise yüksek frekans ve yüksek rezolüsyon vardır; 5 ile 10 megahertz.
+Vajinal prob kullanılır ve görüntü boş mesane ile alınır.
+Dikkat edin, transabdominal ile transvajinal yer değiştirilerek sorulur: dolu mesane transabdominal inceleme için gereklidir, transvajinal öncesinde mesane boşaltılır.
+Önce abdominal görüntü alınmayacaksa transvajinal yaklaşım hasta açısından daha rahatlatıcı olabilir.
+Transvajinal görüntüde uterin fundus ve serviks yakından ve yüksek çözünürlükte izlenir.
+
+Erken gebelikte yapılar belirli bir sırayla görünür hâle gelir: önce gestasyonel kese, sonra yolk kesesi, ardından embriyo ve amniyon.
+Gestasyonel kese yaklaşık 5. haftada, yolk kesesi 5 ile 5,5 haftada, kalp atımı olan embriyo ise yaklaşık 6. haftada görülür.
+Bu sıranın bozulması yerleşim ve canlılığın yeniden sorgulanmasını gerektirir.
+İlerleyen gebelikte fetal biyometri 3 temel ölçümle yapılır: baş kesitinde biparietal çap, karın kesitinde abdominal çevre ve uzun kemik kesitinde femur uzunluğu.
+Bu ölçümler gebelik yaşının ve fetal büyümenin değerlendirilmesinde kullanılır ve birlikte tahmini fetal ağırlık hesabına girer.
 
 @@ Fundus yüksekliği ve Leopold manevraları
-Karın muayenesinde fundus yüksekliği, uterus büyüklüğünün gebelik haftasıyla uyumunu gösteren basit bir göstergedir. 12. haftada fundus pelvis seviyesindedir, 20. haftada umbilikus, yani göbek seviyesindedir, 36. haftada ise ksifoid seviyesine ulaşır. Gebe uterus hafif sağa rotasyon gösterir, buna dekstrorotasyon denir; nedeni sol pelviste yer alan sigmoid kolondur ve fizyolojiktir. Fundus seviyesi ile gebelik haftası arasındaki uyumsuzluk ileri değerlendirme gerektiren bir bulgudur.
+Karın muayenesinde fundus yüksekliği, uterus büyüklüğünün gebelik haftasıyla uyumunu gösteren basit bir göstergedir. Burası önemli: 12. haftada fundus pelvis seviyesinde, 20. haftada umbilikus seviyesinde, 36. haftada ksifoid seviyesindedir. Gebe uterus hafifçe sağa döner, buna dekstrorotasyon denir; nedeni sol pelviste yer alan sigmoid kolondur ve fizyolojiktir. Fundus seviyesi ile gebelik haftası arasındaki uyumsuzluk ileri değerlendirme gerektirir.
 
-Fetüsün uterustaki durumu, karın üzerinden elle yapılan dört basamaklı Leopold manevralarıyla değerlendirilir.
-1. manevrada uterin fundus değerlendirilir ve fundusta baş mı, yani sefalik mi, yoksa makat mı, yani podalik mi olduğu anlaşılır; sert yuvarlak kitle baş, yumuşak düzensiz kitle makattır.
-2. manevrada fetal sırt, ekstremiteler ve fetal yönelim saptanır; sırtın tarafı fetal kalp sesinin dinleneceği yeri gösterir.
-3. manevrada prezentasyon, yani pelvise önde gelen kısım değerlendirilir.
-4. manevrada manevrayı yapan kişi yön değiştirir, hastanın ayak ucuna döner ve prezente olan kısmın pelvise ne kadar indiğini, yani angajmanı saptar.
+Fetüsün uterustaki durumu 4 basamaklı Leopold manevralarıyla değerlendirilir.
+Birinci manevrada uterin fundus değerlendirilir; fundusta baş mı, yani sefalik kutup mu, yoksa makat mı, yani podalik kutup mu olduğu belirlenir.
+Sert yuvarlak kitle baş, yumuşak düzensiz kitle makattır.
+İkinci manevrada fetal sırt, ekstremiteler ve fetal yönelim saptanır; sırtın tarafı fetal kalp sesinin dinleneceği yeri gösterir.
+Üçüncü manevrada prezentasyon, yani pelvise önde gelen kısım değerlendirilir.
+Dördüncü manevrada manevrayı yapan kişi yön değiştirir, hastanın ayak ucuna döner ve prezente olan kısmın pelvise ne kadar indiği saptanır.
 
-@@ Gebelik fizyolojisi: uterus ve serviks
-Gebelikte uterus fetüsü, plasentayı ve amniyon sıvısını barındırabilmek için büyük bir uyum gösterir. Normalde elli ile yetmiş gram olan uterus, miyometriyal hipertrofi sayesinde termde sekiz yüz ile bin iki yüz grama ulaşır. Uterin kavite on mililitreden beş litreye genişler; polihidramnioz ve çoğul gebelikte on litreye kadar çıkabilir. Term uterusta kan akımı dakikada beş yüz ile bin mililitredir ve bu kanın %85'i plasentaya gider. Dakikada litreye yaklaşan bu akım, term uterustan gelişen bir kanamanın neden dakikalar içinde ağır kan kaybına dönüşebileceğini açıklar.
+@@ Uterus ve serviksteki değişiklikler
+Gebelikte uterus fetüsü, plasentayı ve amniyon sıvısını barındırmak için büyük bir uyum gösterir. Normalde 50 ile 70 gram olan uterus, miyometriyal hipertrofiyle termde 800 ile 1200 grama ulaşır. Uterin kavite 10 mililitreden 5 litreye genişler; polihidramniyoz ve çoğul gebelikte daha da büyüyebilir. Term uterusta kan akımı dakikada 500 ile 1000 mililitredir ve bu kanın %85'i plasentaya gider. Bu yüksek akım, term uterustan gelişen bir kanamanın kısa sürede ağır kan kaybına dönüşebileceğini açıklar.
 
 Serviks de gebelik hormonlarının hedefidir.
-Progesteron ve östrojen etkisiyle servikal kanlanma artar ve serviks mavimsi bir görünüm alır; buna Chadwick bulgusu denir.
-Aynı hormonal etkiyle serviks yumuşar; buna da Goodell bulgusu denir.
-Progesteronun etkisiyle servikal bezlerden daha fazla muköz salgı salınır ve bu salgı servikal kanalda bir tıkaç oluşturur; buna nişane ya da show denir.
-Bu tıkaç servikal kanalı yükselen enfeksiyona karşı korur.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: gebelikte artan servikal vaskülariteyle serviksin yumuşaması Goodell bulgusudur; mavimsi renk değişikliği ise Chadwick bulgusudur.
-Kısaca Chadwick renk, Goodell kıvam değişikliğidir.
+Progesteron ve östrojenin etkisiyle servikal kanlanma artar ve serviks mavimsi bir görünüm alır; buna Chadwick bulgusu denir.
+Burası önemli, çıkmış sorularda defalarca soruldu: gebelikte artan konjesyona bağlı olarak vajen mukozası ve serviksin koyu mavi renk alması Chadwick belirtisidir.
+Aynı hormonal etkiyle, servikal dokuda artan vaskülarite sonucu serviksin yumuşamasına ise Goodell belirtisi denir.
+Bu da çıkmış sorularda tekrar tekrar soruldu, burası önemli.
+Kısa yol şöyle: renk değişikliği Chadwick, kıvam değişikliği Goodell.
+Sorularda çeldirici olarak Piskacek, Hartman ve Hegar belirtileri de verilir; renk ve yumuşama için doğru cevaplar Chadwick ve Goodell'dir.
+Ayrıca progesteron etkisiyle servikal bezlerden daha fazla muköz salgı salınır ve bu salgı servikal kanalda bir tıkaç oluşturur.
+Buna nişane denir; tıkaç servikal kanalı yükselen enfeksiyona karşı korur, atılması ise servikal değişimin başladığını gösterir.
 
-@@ Kardiyovasküler sistem ve kan
-Kardiyovasküler sistem gebeliğe en erken uyum gösteren sistemlerdendir. Kardiyak output %30 ile altmış oranında artar ve bu artışın büyük kısmı ilk trimesterde meydana gelir. Yirmi ile 24. haftalar arasında maksimum düzeye ulaşır ve doğuma kadar bu düzeyde korunur. Debi artarken periferik damar yatağı genişler: sistemik vasküler direnç azalır ve arteriyel kan basıncı düşer. Sistolik basınç yaklaşık beş ile on, diyastolik basınç yaklaşık on ile 15 milimetre cıva azalır; yani düşüş diyastolikte daha belirgindir. Kan basıncı 24. haftada en düşük noktasına ulaşır, sonra yavaş yavaş gebelik öncesi düzeylere döner.
+@@ Kardiyovasküler sistem
+Kardiyovasküler sistem gebeliğe en erken uyum gösteren sistemlerdendir. Burası önemli: kardiyak output %30 ile 60 oranında artar ve bu artışın büyük kısmı ilk trimesterde gerçekleşir. Kardiyak output 20 ile 24. haftalar arasında maksimum düzeye ulaşır ve doğuma kadar bu düzeyde korunur. Yükselen debi, artan uterin kan akımının karşılanmasına katkı sağlar.
 
-Kanın bileşenleri farklı oranlarda artar.
-Eritrosit hacmi %20 ile otuz, plazma hacmi ise %45 ile elli beş artar.
-Plazma artışı eritrosit artışını geçtiği için kan sulanır ve dilüsyonel anemi gelişir; yani eritrosit kitlesi azalmaz, düşen yalnızca konsantrasyondur.
-Lökosit sayısı gebelikte altı ile on altı milyon bölü mililitreye yükselir, doğum sırasında ve doğumdan kısa süre sonra yirmi milyon bölü mililitreye kadar çıkabilir; bu tek başına enfeksiyon göstergesi sayılmaz.
-Trombosit konsantrasyonu artan plazma hacmi nedeniyle hafifçe azalır, ancak genellikle normal sınırlar içinde kalır.
+Debi artarken periferik damar yatağı genişler; sistemik vasküler direnç azalır ve bu nedenle arteriyel kan basıncı yükselmez, aksine düşer.
+Sistolik basınç yaklaşık 5 ile 10 milimetre cıva, diyastolik basınç ise yaklaşık 10 ile 15 milimetre cıva azalır; yani düşüş diyastolikte daha belirgindir.
+Kan basıncı 24. haftada en düşük noktasına ulaşır, sonra yavaş yavaş gebelik öncesi düzeylere döner.
+Bu en düşük nokta, kardiyak outputun zirve yaptığı haftalarla örtüşür.
+
+@@ Hematolojik değişiklikler ve pıhtılaşma
+Gebelikte kanın hücresel ve sıvı bileşenleri farklı oranlarda artar. Burası önemli: eritrosit hacmi %20 ile 30 artarken plazma hacmi %45 ile 55 artar. Plazma artışı eritrosit artışını geçtiği için kan sulanır ve dilüsyonel anemi gelişir. Yani eritrosit kitlesi azalmaz, aksine artar; düşen yalnızca konsantrasyondur. Bu yüzden hemoglobin değeri gebelik öncesine göre daha düşük okunur.
+
+Beyaz küre sayısı gebelikte mililitrede 6 ile 16 milyona yükselir; doğum sırasında ve doğumdan kısa süre sonra 20 milyona kadar çıkabilir.
+Doğum çevresindeki bu lökositoz tek başına enfeksiyon göstergesi sayılmaz.
+Trombosit konsantrasyonu ise artan plazma hacmi nedeniyle hafifçe azalır, ancak genellikle normal sınırlar içinde kalır; bu da eritrositteki dilüsyonla aynı mekanizmadır.
 
 Gebelik bir hiperkoagülabilite durumudur.
-Fibrinojen ve faktör yedi ile on arasındaki koagülasyon faktörlerinin düzeyleri artar, ancak pıhtılaşma ve kanama süreleri genellikle değişmeden kalır.
+Fibrinojen ve faktör VII'den faktör X'a kadar olan pıhtılaşma faktörlerinin düzeyleri artar; buna karşın pıhtılaşma ve kanama süreleri genellikle değişmeden kalır.
 Artmış venöz staz ve hasarlı damar endoteli nedeniyle tromboembolik olayların oranı artar.
-Bu risk artışı ilk trimesterde başlar ve doğumdan sonra en az 12 hafta devam eder; yani lohusalık tromboemboli açısından güvenli bir dönem değildir.
-Bölümün sonundaki şema, kardiyak output artışını, vasküler direnç ve kan basıncı düşüşünü ve kan hacmi değişikliklerini bir arada özetler.
+Bu risk ilk trimesterde başlar ve doğumdan sonra en az 12 hafta devam eder.
+Yani lohusalık tromboemboli açısından güvenli bir dönem değildir.
 
 @@ Solunum sistemi
-Büyüyen uterus diyaframı yukarı iter ve total akciğer kapasitesinde %6'lık azalmaya yol açar. Buna karşın tidal hacim %30 ile kırk oranında artar. Tidal hacmin artışı, ekspiratuar rezerv hacminde %21'lik azalmaya neden olur. Solunum hızı sabit kalırken, artan tidal hacim nedeniyle dakika ventilasyonu da %30 ile kırk artar. Yani gebelikte solunumun hızı değil derinliği artar.
+Büyüyen uterus diyaframı yukarı iter ve total akciğer kapasitesinde %5'lik azalmaya yol açar. Buna karşın tidal hacim %30 ile 40 artar ve bu artış ekspiratuar rezerv hacminde %20'lik azalmaya neden olur. Solunum hızı sabit kalırken tidal hacim arttığı için dakika ventilasyonu %30 ile 40 artar. Yani gebelikte solunumun hızı değil derinliği artar.
 
-Dakika ventilasyonundaki artış alveolar ve arteriyel oksijen parsiyel basınçlarını yükseltir, alveolar ve arteriyel karbondioksit parsiyel basınçlarını ise düşürür.
-Arteriyel karbondioksit basıncı gebelik öncesindeki 40 milimetre cıva düzeyinden 20. haftaya kadar 30 milimetre cıvaya iner.
-Bu düşüş fetüs ile anne arasında daha büyük bir karbondioksit gradyanı yaratır ve fetüste oksijen iletimini ve karbondioksit giderimini artırır.
-Bu nedenle gebe için kırklık gebelik dışı referansı doğrudan uygulamayız.
+Artan dakika ventilasyonu alveolar ve arteriyel oksijen parsiyel basınçlarını yükseltir, alveolar ve arteriyel karbondioksit parsiyel basınçlarını ise düşürür.
+Burası önemli: arteriyel karbondioksit basıncı gebelik öncesindeki 40 milimetre cıvadan 20. haftaya kadar 30 milimetre cıvaya düşer.
+Bu düşüş fetüs ile anne arasında daha büyük bir karbondioksit gradyanı yaratır ve böylece fetüste oksijen iletimi ile karbondioksit giderimi artar.
+Gebe bir hastanın kan gazını yorumlarken gebelik dışındaki 40 referansını doğrudan uygulamayın.
 
-Azalmış karbondioksit basıncı, artmış tidal hacim ve azalmış total akciğer kapasitesi bir araya gelerek gebelerin yaklaşık %60 ile yetmişinde gebelik dispnesine yol açar.
-Gebelik dispnesi hipoksi olmaksızın gelişen subjektif bir nefessizlik hissidir.
-En sık 3. trimesterde görülür, ancak herhangi bir zamanda başlayabilir.
-Hipoksinin eşlik ettiği nefes darlığı fizyolojik kabul edilmez ve araştırılmalıdır.
+Azalmış karbondioksit basıncı, artmış tidal hacim ve azalmış total akciğer kapasitesi bir araya gelerek gebelik dispnesine yol açar.
+Gebelik dispnesi gebelerin %60 ile 70'inde görülür ve hipoksi olmaksızın ortaya çıkan subjektif bir nefessizlik hissidir.
+En sık üçüncü trimesterde görülür ama gebeliğin herhangi bir döneminde başlayabilir.
+Hipoksinin eşlik ettiği nefes darlığı ise fizyolojik kabul edilmez ve araştırılmalıdır.
 
-@@ Gastrointestinal sistem
-Yüksek östrojen, progesteron ve hCG düzeyleri, genellikle sabah bulantısı olarak adlandırılan bulantı ve kusmaya neden olur. Sabah bulantısı gebelerin yüzde yetmişinden fazlasında görülür. Adına karşın günün herhangi bir saatinde ortaya çıkabilir ve tipik olarak on dört ile 16. haftalarda düzelir. Ancak gebelerin yaklaşık %10 ile yirmisinde 20. haftadan sonra da devam edebilir.
+@@ Gastrointestinal sistem, böbrekler ve cilt
+Yüksek östrojen, progesteron ve hCG düzeyleri, sabah bulantısı denen bulantı ve kusmaya yol açar. Gebelerin %70'inden fazlasında görülür; adına karşın günün herhangi bir saatinde olabilir ve tipik olarak 14 ile 16. haftalarda düzelir. Gebelerin %10 ile 20'sinde ise 20. haftadan sonra da devam edebilir. Progesteron mide boşalma süresini uzatır ve gastroözofageal sfinkter tonusunu azaltır; buna midenin yukarı doğru yer değiştirmesi eklenince sıklıkla reflü gelişir. Progesteron kalın bağırsakta hareketliliği de azaltır, bunun sonucunda su emilimi artar ve kabızlık ortaya çıkar.
 
-Progesteronun düz kas gevşetici etkisi sindirim kanalını yavaşlatır.
-Progesteron nedeniyle mide boşalma süresi uzar ve gastroözofageal sfinkter tonusu azalır.
-Bu durum midenin yukarı doğru yer değiştirmesiyle birleşince sıklıkla reflüye neden olur.
-Kalın bağırsakta da progesteron hareketliliği azaltır; azalan hareketlilik su emilimini artırır ve bu süreç kabızlığa yol açar.
-Yani reflünün ve kabızlığın ortak paydası progesterondur.
-
-@@ Renal sistem ve cilt
-Glomerüler filtrasyon hızı gebelikte %50 oranında artar ve bu artış doğuma kadar sürer; artmış filtrasyon plazma sodyum düzeylerini korur. Artan progesteron ve prostasiklin, anjiyotensin bir reseptör modifikasyonu ile birlikte anjiyotensin ikiye karşı göreceli bir direnç oluşturur. Bu direnç anjiyotensinin vazokonstriktif etkisini dengeler ve renal arterlerin vazodilatasyonuna izin verir; renal vazodilatasyon nedeniyle hem filtrasyon hızı hem renal plazma akışı artar. Sistemik vasküler dirençteki azalma afferent ve efferent arteriyollerde de direnci azaltır, böylece glomerüler hidrostatik basınç korunur. Artan böbrek kan akımı böbrek boyutunda da artışa yol açar.
+Böbreklerde glomerüler filtrasyon hızı %50 artar ve bu artış doğuma kadar sürer; artmış filtrasyon plazma sodyum düzeylerinin korunmasını sağlar.
+Mekanizmayı şöyle kurun: artan progesteron ve prostasiklin, anjiyotensin 1 reseptör modifikasyonu ile birlikte anjiyotensin II'ye karşı göreceli bir direnç oluşturur.
+Bu direnç renal arterlerin vazodilatasyonuna izin verir; böylece hem glomerüler filtrasyon hızı hem renal plazma akışı artar.
+Sistemik vasküler dirençteki düşüş afferent ve efferent arteriyollerde de direnci azaltır; ikisi birlikte genişlediği için glomerüler hidrostatik basınç korunur.
+Artan kan akımıyla böbrek boyutu da büyür.
 
 Progesteron üreteral tonusu, peristaltizmi ve kasılma basıncını azaltarak üreterleri genişletir.
-Filtrasyon artışı kan üre nitrojenini ve kreatinini %25 azaltır; bu yüzden gebelik dışında normal görünen bir kreatinin gebede göreceli olarak yüksek sayılabilir.
-Yükselmiş filtrasyon, artmış glomerüler kapiller geçirgenlikle birleşince proteinin fraksiyonel atılımı günde üç yüz miligrama kadar artar.
-Glikoz ve ürenin daha az etkili tübüler geri emilimi de bunların atılım oranlarını artırır.
+Burası önemli: artan filtrasyon kan üre azotunu ve kreatinini %25 azaltır.
+Yükselmiş filtrasyon ve artmış glomerüler kapiller geçirgenlik birleşince fraksiyonel protein atılımı günde 300 miligrama kadar çıkabilir.
+Daha az etkili tübüler geri emilim nedeniyle glikoz ve ürenin atılımı da artar.
+Bu yüzden gebelik dışı referansa göre normal görünen bir kreatinin, gebede göreceli olarak yüksek sayılabilir.
 
-Deride de gebeliğin hormonal ortamı izlenir.
-Hiperpigmentasyondan melanosit uyarıcı hormon sorumludur; göbek hizasında orta hatta linea nigra belirir.
-Kloazma, diğer adıyla melazma gravidarum, kalıcı olabilen gebelik maskesidir.
+Deride de hormonal değişiklikler görülür ve sorumlu etken eşleşmesi sık sorulur.
+Burası önemli: hiperpigmentasyondan melanosit uyarıcı hormon sorumludur; göbek hizasında orta hatta linea nigra belirir.
+Kloazma, yani melazma gravidarum, yüzde gelişen ve kalıcı olabilen gebelik maskesidir.
 Telenjiektaziden östrojen sorumludur.
 Stria gravidarum ise kollajen kırılmasına bağlıdır ve geri dönüşsüzdür.
-Eşleşmeyi aklınızda tutun: pigmentasyon melanosit uyarıcı hormonla, telenjiektazi östrojenle, stria kollajen kırılmasıyla ilişkilidir.
+Bu eşleşmeler yer değiştirilerek sorulur; pigmentasyon melanosit uyarıcı hormon, telenjiektazi östrojen demektir.
 
 @@ Antenatal bakım modelleri
-Antenatal bakım, gebeliğin sağlıklı ilerlemesini ve riskli durumların erken saptanmasını amaçlayan planlı izlemdir. Türkiye Cumhuriyeti Sağlık Bakanlığının 2018 protokolüne göre her gebe en az 4 kez nitelikli olarak izlenmelidir. Doğum sonrasında hastanede üç, evde üç olmak üzere toplam 6 kez lohusa izlemi yapılır. Normal doğum sonrası 24 saat, sezaryen sonrası 48 saat hastanede takip edilir. Her doğumun hastanede gerçekleştirilmesi ve gerektiğinde gebenin stabilize edilerek bir üst düzey hastaneye sevk edilmesi beklenir.
+Antenatal bakım, gebeliğin sağlıklı ilerlemesini ve riskli durumların erken saptanmasını amaçlayan planlı izlemdir. Türkiye Sağlık Bakanlığının 2018 protokolüne göre her gebe en az 4 kez nitelikli olarak izlenmelidir. Doğum sonrasında hastanede 3 ve evde 3 olmak üzere toplam 6 kez lohusa izlemi yapılır. Normal doğumdan sonra 24 saat, sezaryenden sonra 48 saat hastanede takip edilir. Her doğum hastanede gerçekleştirilmeli ve gerektiğinde gebe stabilize edilerek bir üst düzey hastaneye sevk edilmelidir.
 
-Bu dört izlem haftalara şöyle dağılır: 1. izlem ilk 14 hafta içinde, 2. izlem on sekiz ile 24. haftalarda, 3. izlem yirmi sekiz ile 32. haftalarda, 4. izlem otuz altı ile 38. haftalarda yapılır.
-Her izlemde aynı sıra izlenir: iletişim, öykü alma, fizik muayene, laboratuvar testleri, gebeye verilecek ilaç desteği, bağışıklama ve tedaviler, bilgilendirme ve danışmanlık, sevk edilecek durumlar ve en son yapılan izlemin kayıt altına alınması.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: doğum öncesi bakım protokolüne göre her gebeye en az 4 kez nitelikli izlem yapılır ve yeterli bakımın ölçütlerinden biri izlemin gebeliğin ilk üç ayında, yani ilk 14 haftada başlamış olmasıdır.
-Gebeliğin 5. ya da 6. ayında başlayan izlem yeterli bakım ölçütünü karşılamaz.
+Bakanlık modelinde birinci izlem ilk 14 hafta içinde, ikinci izlem 18 ile 24. haftalarda, üçüncü izlem 28 ile 32. haftalarda, dördüncü izlem 36 ile 38. haftalarda yapılır.
+Her izlemde aynı 8 basamak izlenir: iletişim, öykü alma, fizik muayene, laboratuvar testleri, ilaç desteği ile bağışıklama ve tedaviler, bilgilendirme ve danışmanlık, sevk edilecek durumlar ve son olarak izlemin kayıt altına alınması.
 
-Uluslararası kuruluşlar daha sık temas önerir.
-Dünya Sağlık Örgütü 2015 ve 2016 önerilerinde, perinatal mortaliteyi azaltmak ve gebelerin memnuniyetini artırmak için en az sekiz izlemli modeli önerir; çünkü dört izlemli modelde perinatal ölümlerin arttığını gösteren kanıtlar vardır.
-İngiltere'nin ulusal sağlık kurumu olan Nays, 2017 önerisinde ilk izlemi 10. hafta civarında yapar; komplikasyonsuz nullipar gebeye on, komplikasyonsuz multipar gebeye yedi izlem önerir.
-Yani bu modelde izlem sayısını parite belirler.
+Uluslararası modeller daha sık temas önerir.
+Dünya Sağlık Örgütü, 2015 ve 2016 önerilerinde perinatal mortaliteyi azaltmak ve gebe memnuniyetini artırmak için en az 8 izlemli bir model önerir, çünkü 4 izlemli modelde perinatal ölümlerin arttığını gösteren kanıtlar vardır.
+İngiltere'nin NICE kılavuzunda, 2017, ilk izlem 10. hafta civarında yapılır; komplikasyonsuz nullipar gebeye 10, komplikasyonsuz multipar gebeye 7 izlem önerilir.
+Amerikan Obstetrisyen ve Jinekologlar Koleji ise komplikasyonsuz ilk gebelikte 28. haftaya kadar 4 haftada bir, 29 ile 35. haftalar arasında 2 ile 3 haftada bir, 36. haftadan sonra haftalık izlem önerir; toplam 12 ile 14 izlem eder.
+Daha önce sorunsuz gebelik geçirmiş, medikal ve obstetrik problemi olmayan multiparlarda bu sıklık azaltılabilir.
+Kurumları sayılarla eşleyin: Bakanlık 4, Dünya Sağlık Örgütü 8, NICE 10 ve 7, Amerikan kolejinde 12 ile 14.
 
-Amerikan Kadın Doğum Uzmanları Derneği, kısaca Akog ise izlem sayısı yerine haftaya göre değişen bir sıklık tanımlar ve bu öneri komplikasyonsuz ilk gebelik içindir.
-28. haftaya kadar 4 haftada bir, yirmi dokuz ile 35. haftalar arasında iki ile 3 haftada bir, 36. haftadan sonra ise haftalık izlem yapılır; toplam on iki ile on dört izlem eder.
-Daha önce sorunsuz gebelik öyküsü olan, medikal ve obstetrik problemi olmayan multipar gebelerde takip sıklığı azaltılabilir.
-Özetle sayıları kurumla eşleştirin: dört Sağlık Bakanlığı, sekiz Dünya Sağlık Örgütü, on ve yedi Nays, on iki ile on dört Akog.
+@@ İlk izlem: öykü, muayene ve risk değerlendirmesi
+İlk izlem, risklerin belirlendiği en kapsamlı izlemdir; gebeliğin ilk 14 haftasında yapılır ve 30 dakika zaman ayrılır. 14. haftadan sonra tespit edilen gebe de ilk izlem olarak değerlendirilir ve tüm basamaklar uygulanır. İletişimde kendini tanıtmak, gebenin adını öğrenip kullanmak, beden dili, uygun mesafe, göz teması, soru sorabileceğini belirtmek ve mahremiyeti sağlamak yer alır. Öyküde kişisel ve sosyokültürel bilgiler, soy geçmişi, genel tıbbi öykü, sigara, alkol ve madde alışkanlıkları, aşılanma ve menstrüel öykü sorgulanır. Obstetrik öyküde geçirilmiş abortus ve erken doğum, önceki gebelikteki fetal ve maternal komplikasyonlar, tekrarlayan gebelik kayıpları, preeklampsi, eklampsi, gestasyonel diyabet, intrauterin gelişme geriliği, makrozomi, postpartum kanama, zor doğum, sezaryen ve konjenital anomalili bebek sorulur. Üreme sağlığı öyküsü ve cinsel yolla bulaşan hastalıklar da sorgulanır.
 
-@@ İlk izlem: iletişim, öykü ve fizik muayene
-İlk izlem risklerin belirlendiği en kapsamlı izlemdir; gebeliğin ilk on dört haftasında yapılır ve 30 dakika zaman ayrılır. 14. haftadan sonra saptanan gebe de gebelik haftasına bakılmaksızın ilk izlem olarak değerlendirilir ve tüm prosedür uygulanır. İletişim basamağında hekim kendini tanıtır, gebenin adını öğrenip kullanır, beden diline, uygun mesafeye ve göz temasına dikkat eder, gebenin soru sorabileceğini belirtir ve mahremiyeti sağlar.
+Fizik muayenede boy ve kilo, arteriyel tansiyon, göğüs ve kalp oskültasyonu, pretibial ödem ve varis, anemi bulguları, gestasyonel yaş tahmini için uterus büyüklüğü ve fetal kalp atımı değerlendirilir.
+Burası önemli: preeklampsi öngörüsünde en az 1 majör ya da en az 2 minör risk faktörü varsa, kontrendikasyon yoksa 12 ile 35. haftalarda günde 80 miligram aspirin verilir.
+Majör faktörler önceki gebelikte hipertansif hastalık, kronik böbrek hastalığı, sistemik lupus eritematozus ya da antifosfolipid sendromu gibi otoimmün hastalıklar, Tip 1 ya da Tip 2 diyabet ve kronik hipertansiyondur.
+Minör faktörler ilk gebelik, 40 yaş üstü, 10 yıldan uzun gebelik aralığı, vücut kitle indeksinin 35 ve üstü olması, ailede preeklampsi öyküsü ve çoğul gebeliktir.
+Tek bir minör faktör tek başına yeterli değildir.
 
-Öykü alırken kişisel ve sosyokültürel bilgiler, soy geçmişi, genel tıbbi öykü, sigara, alkol ve madde alışkanlıkları, aşılanma ve menstrüel öykü sorgulanır.
-Obstetrik öyküde geçirilmiş abortus ve erken doğum, önceki gebelikte fetal ve maternal komplikasyonlar, tekrarlayan gebelik kayıpları, preeklampsi, eklampsi, gestasyonel diyabet, intrauterin gelişme geriliği, makrozomi, postpartum kanama, zor doğum, sezaryen ve konjenital anomalili bebek sorulur.
-Üreme sağlığı öyküsü ve cinsel yolla bulaşan hastalıklar da öğrenilir.
+Ölçülen boy ve kiloyla gebelik öncesi vücut kitle indeksi hesaplanır ve hedef kilo alımı buna göre belirlenir.
+Zayıf gebede toplam 12,5 ile 18 kilogram, haftada yaklaşık yarım kilogram; normal kilolu gebede 11,5 ile 16 kilogram, haftada yaklaşık 420 gram; fazla kilolu gebede 7 ile 11,5 kilogram, haftada yaklaşık 280 gram; obez gebede 5 ile 9 kilogram, haftada yaklaşık 220 gram önerilir.
+Haftalık hedefler ikinci ve üçüncü trimester içindir.
+Kural tektir: vücut kitle indeksi arttıkça önerilen kilo alımı azalır.
 
-Fizik muayenede boy ve kilo ölçülür, arteriyel tansiyon alınır, göğüs ve kalp oskültasyonu yapılır, pretibial ödem ve varis aranır, anemi bulguları araştırılır.
-Uterus büyüklüğü gestasyonel yaş tahmini için değerlendirilir ve fetal kalp atımı kontrol edilir.
-Muayeneyle birlikte preeklampsi riski de gözden geçirilir ve risk faktörlerine göre on iki ile 35. haftalarda aspirin profilaksisi başlanır.
+@@ Venöz tromboemboli risk puanlaması
+Gebeler ilk izlemde venöz tromboemboli risk faktörleri açısından puanlı bir formla değerlendirilir ve sistemik hastalık varsa gerekli konsültasyonlar yaptırılır. Majör cerrahiyle ilgisi olmayan geçirilmiş tromboemboli öyküsü ve yalnız birinci trimesterde ovaryan hiperstimülasyon sendromu 4 puandır. Majör cerrahi sonrası tromboemboli, yüksek riskli trombofili, kanser, kalp yetmezliği, aktif lupus, aktif inflamatuar barsak hastalığı, inflamatuar poliartropati, nefrotik sendrom, nefropatili Tip 1 diyabet, orak hücre hastalığı ve damar içi ilaç bağımlılığı gibi ciddi hastalıklar, gebelikte ya da lohusalıkta cerrahi işlem ve hiperemezis gravidarum 3 puandır. Vücut kitle indeksinin 40'ın üstünde olması ve eylemde sezaryen 2 puandır.
 
-Preeklampsi öngörüsü tablosunda majör risk faktörleri önceki gebeliklerde hipertansif hastalık, kronik böbrek hastalığı, sistemik lupus eritematozus ya da antifosfolipid sendromu gibi otoimmün hastalıklar, Tip 1 ya da Tip 2 diyabet ve kronik hipertansiyondur.
-Minör risk faktörleri ise ilk gebelik, kırk yaşın üzeri, 10 yıldan fazla gebelik aralığı, otuz beş ve üzerinde vücut kitle indeksi, ailede preeklampsi öyküsü ve çoğul gebeliktir.
-En az bir majör ya da en az iki minör risk faktörü varsa ve kontrendikasyon yoksa on iki ile 35. haftalarda aspirin önerilir; tek bir minör faktör tek başına yeterli değildir.
-
-Aynı slayttaki tablo, gebelik öncesi vücut kitle indeksine göre ideal kilo alımını gösterir; indeks kilonun boyun karesine bölünmesiyle bulunur ve haftalık hedef 2. ve 3. trimester için verilir.
-Zayıf, yani on sekiz buçuğun altındaki gebede toplam on iki buçuk ile on sekiz kilo, normal, yani on sekiz buçuk ile yirmi dört virgül dokuz arasındaki gebede on 1,5 ile on altı kilo, kilolu gebede yedi ile on 1,5 kilo, otuz ve üzerindeki obez gebede ise beş ile dokuz kilo alımı hedeflenir.
-Haftalık hedef sırasıyla yaklaşık yarım kilo, sıfır virgül kırk iki, sıfır virgül yirmi sekiz ve sıfır virgül yirmi iki kilodur.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: sağlıklı bir gebenin gebelik boyunca alacağı kilo gebelik öncesi kitle indeksine bağlıdır; normal kilolu gebe için hedef on 1,5 ile on altı kilodur ve indeks arttıkça önerilen kilo alımı azalır.
-
-@@ Venöz tromboemboli risk değerlendirmesi
-Gebeler venöz tromboemboli risk faktörleri açısından da puanlı bir formla değerlendirilir ve gerekiyorsa tromboprofilaksi başlanır; sistemik hastalık varsa gerekli konsültasyonlar yaptırılır. Formdaki en yüksek puanlı, dört puanlık faktör majör cerrahiyle ilgisi olmayan geçirilmiş tromboemboli öyküsüdür; yalnız 1. trimesterde geçerli ovaryan hiperstimülasyon sendromu da dört puandır. Üç puanlık faktörler majör cerrahi sonrası tromboemboli öyküsü, bilinen yüksek riskli trombofili, kanser, kalp yetmezliği, aktif lupus, aktif inflamatuar barsak hastalığı ve inflamatuar poliartropati, nefrotik sendrom, nefropatili Tip 1 diyabet, orak hücre hastalığı ve intravenöz ilaç bağımlılığı gibi ciddi medikal hastalıklar, gebelikte ya da lohusalıkta cerrahi işlem ve hiperemezis gravidarumdur. İki puanlık faktörler kitle indeksinin kırkın üzerinde olması ve eylemde sezaryendir.
-
-Bir puanlık faktörler arasında 1. derece akrabada tetiklenmemiş ya da östrojenle ilişkili tromboemboli, düşük riskli trombofili, 35 yaş üstü, kitle indeksinin otuzun üzerinde olması, parite üç ve üzeri, günde ondan fazla sigara, büyük variköz ven, preeklampsi, yalnız antenatal dönemde yardımcı üreme teknolojileri, çoğul gebelik, elektif sezaryen, orta pelvis ya da rotasyonel operatif doğum, yirmi dört saati aşan uzamış eylem, bir litreyi aşan ya da transfüzyon gerektiren postpartum kanama, preterm doğum, ölü doğum, sistemik enfeksiyon, üç günü aşan immobilizasyon ya da dehidratasyon ve dört saati aşan uzun yolculuk yer alır.
-Düşük riskli trombofili faktör beş Leiden heterozigotluğu ve protrombin ge yirmi 2002 yüz on a mutasyonudur; antitrombin, protein ce ya da es eksikliği, birden çok ya da homozigot düşük riskli trombofili ise yüksek risklidir.
+1 puanlık faktörler daha uzun bir listedir: birinci derece akrabada tetiklenmemiş ya da östrojenle ilişkili tromboemboli, düşük riskli trombofili, 35 yaş üstü, vücut kitle indeksinin 30'un üstünde olması, parite 3 ve üstü, günde 10'dan fazla sigara, büyük variköz ven, preeklampsi, yalnız antenatal dönemde tüp bebek tedavisi, çoğul gebelik, elektif sezaryen, orta pelvis ya da rotasyonel operatif doğum, 24 saati aşan uzamış eylem, 1 litreyi aşan ya da transfüzyon gerektiren postpartum kanama, 37 haftadan önce preterm doğum, ölü doğum, sistemik enfeksiyon, 3 günü aşan immobilizasyon ya da dehidratasyon ve 4 saati aşan uzun yolculuk.
+Düşük riskli trombofili faktör V Leiden heterozigotluğu ve protrombin mutasyonudur; yüksek riskli trombofili ise antitrombin, protein C ya da protein S eksikliği ile birden çok ya da homozigot düşük riskli trombofilidir.
 
 Toplam puan profilaksinin zamanını belirler.
-Antenatal dönemde toplam puan dört ve üzerindeyse 1. trimesterden itibaren, üç ise 28. gebelik haftasından itibaren tromboprofilaksi önerilir.
-Postnatal dönemde toplam puan iki ve üzerindeyse en az 10 gün süreyle tromboprofilaksi önerilir.
-Doğum öncesinde düşük molekül ağırlıklı heparin alan ve sezaryen ihtimali olan gebe, doğumdan 1 gün önce profilaktik dozunu almalı, ancak sabah dozu alınmadan operasyon yapılmalıdır; böylece ameliyatta kanama artmadan tromboz koruması sürdürülür.
+Burası önemli: antenatal toplam puan 4 ve üzeriyse birinci trimesterden itibaren, 3 ise 28. gebelik haftasından itibaren tromboprofilaksi önerilir.
+Postnatal toplam puan 2 ve üzeriyse en az 10 gün tromboprofilaksi yapılır.
+Doğum öncesinde düşük molekül ağırlıklı ya da anfraksiyone heparin alan ve sezaryen ihtimali olan gebe, doğumdan 1 gün önce profilaktik dozunu almalı, ancak operasyon sabah dozu alınmadan yapılmalıdır; böylece ameliyatta kanama artmadan tromboz koruması sürer.
 
-@@ İlk izlem laboratuvarı ve Rh uyuşmazlığı
-İlk izlemin 4. basamağı laboratuvar testleridir. Tam idrar tetkiki ve idrar kültürü istenir; asemptomatik bakteriüri saptanırsa yakınma olmasa da tedavi başlanır, çünkü tedavi edilmezse pyelonefrit ve erken doğum riski artar. Progesteron etkisiyle genişlemiş üreterler bakteriürinin yukarı ilerlemesini kolaylaştırır. Tam kan sayımında hemoglobin on bir gram bölü desilitrenin, ortalama eritrosit hacmi seksen femtolitrenin altındaysa demir tedavisi başlanır. Kan grubu hem anneden hem babadan istenir, gerekirse indirekt Coombs testi yapılır ve anti de immünoglobulin G, yani Rogam uygulanır. Hepatit be yüzey antijenine gebe aşılanmış olsa dahi bakılır. Ha i ve testi gebenin bilgisi ve onayı dahilinde istenir. Sifiliz taraması ve tiroid uyarıcı hormon da ilk izlem testleri arasındadır.
+@@ İlk izlem laboratuvarı ve Rezus uyuşmazlığı
+İlk izlemin laboratuvar basamağında tam idrar tetkiki ve idrar kültürü istenir. Asemptomatik bakteriüri saptanırsa yakınma olmasa da tedavi başlanır, çünkü tedavi edilmezse piyelonefrit ve erken doğum riski artar. Progesteronla genişlemiş, hipotonik üreterler bakteriürinin yukarı ilerlemesini kolaylaştırır. Tam kan sayımında hemoglobin desilitrede 11 gramın, ortalama eritrosit hacmi 80 femtolitrenin altındaysa demir tedavisi başlanır; gebelikte mikrositer aneminin en sık nedeni demir eksikliğidir.
 
-Kan grubu tayininin en önemli hedeflerinden biri Rh uyuşmazlığını saptamaktır.
-Rh uyuşmazlığı, annenin Rh negatif, bebeğin Rh pozitif olması durumudur.
-Rh izoimmünizasyonu ise fetomaternal hemoraji ile bebekten de antijeninin anneye geçmesi ve annede anti de antikorlarının oluşmasıdır.
-Bu immünoglobulin G yapısındaki antikorlar plasentayı geçerek sonraki Rh pozitif fetüsün eritrositlerini yıkabilir.
-Rh uygunsuzluğunda hiçbir şey yapılmazsa immünizasyon riski %13'tür; doğumda anti de profilaksisi ile %2'ye, buna ek olarak 28. haftada da anti de verilirse %0 virgül bire iner.
+Kan grubu hem anne hem baba için bakılır; gerekirse indirekt Coombs testi yapılır ve anti-D immünoglobulin G, yani RhoGAM uygulanır.
+Hepatit B yüzey antijeni gebe aşılanmış olsa dahi bakılır.
+HIV testi gebenin bilgisi ve onayı dahilinde istenir.
+Sifiliz taraması tüm gebelerde yapılır ve tiroid uyarıcı hormon ile tiroid işlevi değerlendirilir.
+Burası önemli, çıkmış sorularda pek çok kez soruldu: gebelik planlayan kişinin ya da gebenin ilk değerlendirmesinde sifiliz serolojisi, açlık kan şekeri, HIV serolojisi ve hemogram istenir; anti streptolizin O ise bu rutin tetkiklerden biri değildir.
+
+Rezus uyuşmazlığı, annenin Rezus negatif, bebeğin Rezus pozitif olmasıdır.
+Rezus izoimmünizasyonu ise fetomaternal hemorajiyle bebekten D antijeninin anneye geçmesi ve annede anti-D antikorlarının oluşmasıdır.
+Oluşan immünoglobulin G yapısındaki antikorlar plasentayı geçer ve sonraki Rezus pozitif fetüsün eritrositlerini yıkarak hemolitik hastalığa yol açabilir.
+Burası önemli: hiçbir şey yapılmazsa immünizasyon riski %13'tür, doğumda anti-D profilaksisiyle %2'ye, buna ek olarak 28. haftada da anti-D verilirse %0,1'e iner.
+Antenatal doz gebeliğin son dönemindeki sessiz kanamalara karşı korur, doğumdaki doz ise en büyük fetal kan geçişini kapsar.
 
 @@ Gestasyonel diyabet taraması
-Laboratuvar basamağında gebenin gestasyonel diyabet açısından risk grubunda olup olmadığı da belirlenir. Risk grubu şunlardır: dört bin beş yüz gram ve üzerinde makrozomik doğum öyküsü, gestasyonel diyabet öyküsü, otuz ve üzerinde vücut kitle indeksi, 1. derece yakınlarda diyabet öyküsü, polikistik over sendromu gibi bilinen bozulmuş glukoz toleransı, hipertansiyon ve kardiyovasküler sistem hastalığı. Bu gebelerde ilk izlemde açlık kan şekeri yüz 26 miligram bölü desilitre ya da üzerinde, veya rastgele kan şekeri iki yüz ve üzerindeyse diyabet tanısı konur. Bu değerlerin altındaysa yetmiş beş gramlık oral glukoz tolerans testi yapılır; sonuç negatifse test yirmi dört ile 28. haftalar arasında tekrarlanır, çünkü insülin direnci gebelik ilerledikçe artar.
+Gebe gestasyonel diyabet açısından risk grubundaysa glukoz değerlendirmesi beklenmeden ilk izlemde yapılır. Risk grubu şunlardır: 4500 gram ve üzeri makrozomik doğum öyküsü, önceki gebelikte gestasyonel diyabet, vücut kitle indeksinin 30 ve üzerinde olması, birinci derece yakınlarda diyabet, polikistik over sendromu gibi bilinen bozulmuş glukoz toleransı, hipertansiyon ve kardiyovasküler hastalık. Bu gebede açlık kan şekeri desilitrede 126 miligram ve üzeri ya da rastgele kan şekeri 200 miligram ve üzeriyse aşikâr diyabet tanısı konur. Değerler bunun altındaysa 75 gramlık oral glukoz tolerans testi yapılır; test negatifse 24 ile 28. haftalar arasında tekrarlanır, çünkü insülin direnci gebelik ilerledikçe artar.
 
-Tablo, yetmiş beş gramlık 2 saatlik test için iki uluslararası diyabet derneğinin tanı eşiklerini gösterir.
-Test yirmi dört ile 28. haftalarda yapılır; açlık değeri doksan iki, 1. saat yüz seksen, 2. saat yüz 53 miligram bölü desilitre ya da üzerindeyse, yani bu değerlerden yalnız biri bile eşiği aşarsa gestasyonel diyabet tanısı konur.
-İki basamaklı yaklaşımda kullanılan yüz gramlık 3 saatlik test ise en az 8 saatlik gece açlığından sonra sabah yapılır.
-Carpenter ve Coustan eşikleri açlıkta doksan beş, 1. saatte yüz seksen, 2. saatte yüz elli beş, 3. saatte yüz kırktır; Ulusal Diyabet Veri Grubu eşikleri ise yüz beş, yüz doksan, yüz altmış beş ve yüz kırk beştir.
-Genellikle iki ya da daha fazla değerin eşiği aşması pozitif kabul edilir, ancak Akog 2017 bülteni tek yüksek değerin de tanısal sayılabileceğini belirtmiştir.
-Carpenter ve Coustan değerleri daha düşüktür, çünkü eski Somogyi Nelson yöntemine dayanan eşikler günümüzün enzimatik yöntemlerine göre düzeltilmiştir.
+75 gramlık 2 saatlik testte Uluslararası Diyabet ve Gebelik Çalışma Grupları Birliği ve Amerikan Diyabet Derneği eşikleri açlıkta 92, birinci saatte 180, ikinci saatte 153 miligram bölü desilitredir.
+Bu tek basamaklı yaklaşımda değerlerden bir tanesinin bile eşiğe eşit ya da üzerinde olması tanı koydurur.
+İki basamaklı yaklaşımda kullanılan 100 gramlık 3 saatlik test ise sabah, en az 8 saatlik gece açlığından sonra yapılır.
+Carpenter-Coustan eşikleri açlıkta 95, sonra 180, 155 ve 140'tır.
+Ulusal Diyabet Veri Grubu eşikleri ise 105, 190, 165 ve 145'tir.
+Burada genellikle 2 ya da daha fazla değerin yüksek olması aranır; ancak Amerikan Obstetrisyen ve Jinekologlar Koleji 2017'de tek yüksek değerin de tanısal kabul edilebileceğini belirtmiştir.
+Carpenter-Coustan değerlerinin daha düşük olmasının nedeni, eski Somogyi-Nelson yöntemine göre türetilen eşiklerin günümüzün enzimatik yöntemlerine göre düzeltilmiş olmasıdır.
+
+Burası önemli, ilişkili bir çıkmış soruda diyabetik anne bebeklerinin yenidoğan komplikasyonları soruldu: hiperbilirubinemi, hipoglisemi, respiratuvar distres sendromu ve serum elektrolit dengesizliği görülür; hiperglisemi ise bu komplikasyonlardan biri değildir.
+Bebekte beklenen sorun şekerin yüksekliği değil, düşmesidir.
+Şıklarda gerçek komplikasyonların arasına hiperglisemi konarak tuzak kurulur, buna dikkat edin.
 
 @@ Prenatal tarama testleri
-İlk izlemde gebe ultrasonografi incelemesi ile fetal anomali ve kromozomal anöploidi tarama testleri hakkında bilgilendirilir. Tarama testleri olasılık verir, kesin tanı koymaz. Seçenekler şunlardır: anne kanındaki hücre dışı fetal DNA incelemesi, yani non invaziv prenatal test; on bir ile 14. haftalarda ense saydamlığı ölçümüyle birlikte yapılan kombine, yani ikili test; on altı ile 20. haftalar arasında maternal serum alfa fetoprotein; kombine test yapılmamışsa on beş ile 18. haftalar arasında üçlü ve dörtlü test; iki trimesterin sonuçlarını birleştiren entegre test; ve on sekiz ile 22. haftalarda ultrasonografi ile fetal anomali taraması.
+İlk izlemde gebe ultrasonografi incelemesi, fetal anomaliler ve kromozomal anöploidi tarama testleri hakkında bilgilendirilir. Tarama testi olasılık verir, kesin tanı koymaz. Seçenekler şunlardır: anne kanındaki hücre dışı fetal DNA ile yapılan non-invaziv prenatal test; 11 ile 14. haftada ense saydamlığı ölçümüyle birlikte yapılan ikili, yani kombine test; 16 ile 20. haftalarda maternal serum alfa-fetoprotein; kombine test yapılmamışsa 15 ile 18. haftalarda üçlü ya da dörtlü test; entegre test ve 18 ile 22. haftalarda ultrasonografiyle fetal anomali taraması.
 
-Anöploidi tarama tablosu her testin haftasını, Trizomi 21 saptama oranını ve ölçülen belirteçleri gösterir.
-1. trimester taraması on bir ile 14. haftalarda ense saydamlığı, gebelikle ilişkili plazma proteini a ve hCG ile yapılır, saptama oranı %82 ile seksen yedidir.
-Üçlü test on beş ile 18. haftalarda hCG, alfa fetoprotein ve konjuge olmayan östriol ile yapılır, saptama oranı %69'dur.
-Dörtlü test on beş ile 22. haftalarda bunlara dimerik inhibin a ekler ve oranı %80 bire çıkarır.
-Bu testlerde tarama pozitiflik oranı %5'te sabittir ve saptama daha erken haftalarda daha iyidir.
+Trizomi 21, yani Down sendromu için saptama oranları karşılaştırılır.
+Birinci trimester taraması ense saydamlığı, gebelikle ilişkili plazma proteini A ve hCG ile yapılır, saptama oranı %82 ile 87'dir.
+Üçlü test hCG, alfa-fetoprotein ve konjuge olmayan östriolü ölçer, saptama oranı %69'dur.
+Dörtlü testte buna dimerik inhibin A eklenir ve oran %81'e çıkar; tabloda üçlü ve dörtlü test 15 ile 22. haftalar arasında gösterilir.
+Birinci trimester ile dörtlü testi birleştiren entegre tarama %96, ardışık tarama %95, koşullu tarama %88 ile 94 saptama sağlar.
+Bu serum taramalarının hepsinde tarama pozitiflik oranı %5'tir.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: ikili test, yani ense saydamlığı ile serbest beta hCG ve gebelikle ilişkili plazma proteini a ölçümü, on bir ile 14. haftalar arasında yapılır; on altı ile 22. haftalarda yapılmaz.
-Üçlü test on beş ile 18. haftalarda, ultrasonografiyle belirlenen gebelik haftasına göre anne kanında beta hCG, alfa fetoprotein ve östriol ölçülerek yapılır.
-Tarama testleri olasılık testleridir, risk yüksek çıkarsa kesin tanı için koryon villus örneklemesi ya da amniyosentez yapılır.
+Burası önemli: Down sendromunu en yüksek oranda saptayan test hücre dışı DNA testidir.
+10. haftadan sonra yapılır, saptama oranı %99, tarama pozitiflik oranı ise yalnız %0,5'tir.
+Ancak bu da bir tarama testidir; pozitif sonuç invaziv tanı testiyle doğrulanmalıdır.
 
-Tablonun 2. yarısı birleşik stratejileri gösterir.
-Entegre taramada on ile 13. ve on beş ile 22. haftalarda önce 1. trimester taraması, sonra dörtlü test yapılır ve saptama oranı %96'dır.
-Ardışık taramada aynı iki basamakla oran %95, koşullu taramada %88 ile doksan dörttür.
-Hücre dışı DNA testi dokuz ile 10. haftadan sonra herhangi 1 haftada yapılabilir; saptama oranı %99, tarama pozitiflik oranı yalnız %0 virgül beştir.
-Yine de bir tarama testidir ve pozitif sonuç invaziv testle doğrulanır.
+@@ Prenatal tanı testleri
+Burası önemli, iki invaziv tanı testi zamanlama ve kayıp oranlarıyla yer değiştirilerek sorulur. Koryonik villus örneklemesi ilk trimesterde mevcut tek tanı testidir ve 10 ile 14. haftalar arasında yapılır. Örnekte floresan in situ hibridizasyon, karyotip, mikrodizi, moleküler test ve gen dizilimi çalışılabilir. Transservikal ya da transabdominal yaklaşımla, ultrason rehberliğinde ve amniyotik keseye girmeden koryon villusları toplanır. Dezavantajı, olguların yaklaşık %1 ile 2'sinde sonucun gerçek fetal anomali yerine sınırlı plasenta mozaisizmini yansıtabilmesidir. Bu işleme bağlı gebelik kaybı riski 455'te 1'dir.
 
-@@ Prenatal tanı testleri: koryon villus örneklemesi ve amniyosentez
-Tarama pozitif çıktığında kesin sonuç için invaziv tanı testlerine geçilir. Koryon villus örneklemesi ilk trimesterde mevcut tek tanı testidir; örnekte floresan in situ hibridizasyon, karyotip, mikrodizi, moleküler test ve gen dizilimi yapılabilir. On ile 14. haftalar arasında, transservikal ya da transabdominal yaklaşımla, ultrason rehberliğinde ve amniyotik keseye girmeden koryon villusları toplanır. Dezavantajı, sonuçların yaklaşık %1 ile ikisinin gerçek fetal kromozom anormalliği yerine sınırlı plasenta mozaisizmini yansıtabilmesidir. Gebelik kaybı riski dört yüz elli beşte birdir.
+Amniyosentez ise ikinci ya da üçüncü trimesterde mevcut tek tanı testidir ve 15. haftadan sonra herhangi bir gebelik haftasında yapılabilir.
+Ultrason rehberliğinde steril enjektörle amniyon sıvısı alınır.
+Genetik hastalıkların yanı sıra kültür ya da polimeraz zincir reaksiyonuyla fetal enfeksiyon, amniyon sıvısında alfa-fetoprotein ve asetilkolinesteraz ölçümüyle de nöral tüp defektleri değerlendirilir.
+Gebelik kaybı riski 900'de 1'dir, yani koryonik villus örneklemesinin yaklaşık yarısı kadardır.
 
-Amniyosentez ise 2. ve 3. trimesterde mevcut tek tanı testidir ve 15. haftadan sonra herhangi bir gebelik haftasında yapılabilir.
-Ultrason rehberliğinde steril enjektörle amniyotik sıvı alınarak incelemeye gönderilir.
-Genetik hastalıkların yanı sıra kültür ya da polimeraz zincir reaksiyonuyla intraamniyotik ya da fetal enfeksiyonu, amniyotik sıvıda alfa fetoprotein ve asetilkolinesteraz ölçümüyle de nöral tüp defektlerini değerlendirmek için kullanılır.
-Gebelik kaybı riski dokuz %1'dir, yani koryon villus örneklemesinin yaklaşık yarısıdır.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: koryon villus örneklemesi on ile 14. haftalarda, amniyosentez ise 15. haftadan sonra yapılır; invaziv tanı yöntemlerinin haftalarını birbirine karıştırmayın.
+@@ Gebelikte ilaç desteği ve bağışıklama
+Demir desteğinde karar hemoglobine göre verilir. Anemi varsa tedavi dozunda günde 100 ile 120 miligram demir hemen başlanır. Anemi yoksa 16. haftadan itibaren günde 40 ile 60 miligram koruyucu demir verilir. Folik asit, nöral tüp çok erken kapandığı için gebelikten önce başlanmalıdır. Gebelik planlayan her kadına gebelikten en az 1 ay önce günde 400 ile 800 mikrogram başlanır ve 12. haftaya kadar sürdürülür. Antiepileptik ilaç kullananlar, nöral tüp defektli gebelik öyküsü olanlar, diyabetliler ve obezler gibi yüksek riskli gruplarda ise gebelikten 3 ay önce günde 4 miligram yüksek doz başlanır, yine 12. haftaya kadar. Burası önemli, bu doz ve zaman eşleşmeleri sınav spotudur.
 
-@@ İlaç desteği ve bağışıklama
-İlk izlemin 5. basamağı ilaç desteği, bağışıklama ve tedavilerdir. Anemi varsa günde yüz ile yüz 20 miligram tedavi dozunda demir hemen başlanır; anemi yoksa 16. haftadan itibaren günde kırk ile 60 miligram koruyucu demir verilir. Folik asit, gebelik planlayan her kadına gebelikten en az 1 ay önce günde dört yüz ile sekiz yüz mikrogram olarak başlanır ve 12. haftaya kadar sürdürülür. Antiepileptik ilaç kullananlar, nöral tüp defektli gebelik öyküsü olanlar, diyabetliler ve obezler gibi yüksek riskli gruplarda ise gebelikten 3 ay önce günde 4 miligram yüksek doz başlanır ve yine 12. haftaya kadar devam edilir. Burası önemli, bu bilgi çıkmış sorularda soruldu: anensefali ve spina bifida gibi nöral tüp defektlerinin riskini artıran eksiklik folik asit, yani be dokuz vitamini eksikliğidir.
+D vitamini 12. haftadan itibaren günde tek doz 1200 ünite, yani 9 damla verilir ve gebe güneş ışığından yararlanma konusunda bilgilendirilir.
+Hiç aşılanmamış gebelere en az 2 doz tetanoz difteri aşısı yapılmalı ve ikinci doz doğumdan en az 2 hafta önce tamamlanmalıdır; süre yetmezse tek doz yapılmış gebe ve bebeği tetanoz açısından risk altında kabul edilir.
+Hepatit B yüzey antijeni ve yüzey antikoru negatif olan, yani ne enfekte ne bağışık olan ve gebelikte enfeksiyon riski taşıyan gebeye ikinci ya da üçüncü trimesterde 0, 1 ve 6. ay şemasıyla hepatit B aşısı yapılır.
+Grip aşısı ikinci ve üçüncü trimester grip sezonuna denk geliyorsa yapılır.
+Burası önemli: hepatit B yüzey antijeni pozitif annenin bebeğine doğumdan hemen sonra hepatit B aşısı ve hepatit B immünoglobulini birlikte uygulanır.
 
-D vitamini 12. haftadan itibaren günde tek doz bin iki yüz ünite, yani dokuz damla olarak verilir ve gebe güneş ışığı konusunda bilgilendirilir.
-Hiç aşılanmamış gebelere en az iki doz tetanoz difteri aşısı yapılmalı ve 2. doz doğumdan en az 2 hafta önce tamamlanmalıdır; yeterli süre sağlanamadıysa tek doz yapılmış gebe ve bebeği tetanoz açısından risk altında kabul edilir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: tetanoz aşısı gebelik döneminde uygulanabilen aşıdır.
-Hepatit be yüzey antijeni ve antikoru negatif olan gebede gebelikte enfeksiyon riski varsa, 2. ya da 3. trimesterde sıfır, bir ve 6. ay şemasıyla Hepatit B aşısı yapılır.
-Grip aşısı ise 2. ve 3. trimester grip sezonuna denk geliyorsa uygulanır.
+@@ Gebelikte ilaç güvenliği ve jinekolojik terminoloji
+Burası önemli, bu konu bu dersle ilişkili çıkmış sorularda soruldu. Plasentadan ilaç geçişini ve ilacın fetüse etkisini dört faktör birlikte belirler: ilacın fizikokimyasal özellikleri, maruziyetin süresi ve dozu, maruziyet anındaki plasental ve fetal gelişim evresi ve farklı fetal dokulara dağılan ilaç miktarı ile dağılım özellikleri. Gebelik risk kategorileri açısından demir sülfat, tiamin, potasyum sitrat ve liotironin A kategorisindedir; metoprolol, amoksisilin, albuterol ve adrenalin ise A kategorisinde değildir. Tokoferol, yani E vitamini, 15 günden kısa kullanıldığında A, daha uzun kullanıldığında C kategorisine girer. Aspirin D kategorisindedir. Yeni ruhsatlanıp piyasaya sürülen bir ilaç ise C kategorisinde kabul edilir.
 
-@@ Risk değerlendirme ve sevk kriterleri
-Risk değerlendirme formu yüksek riskli gebeleri saptamak için tüm gebelere uygulanır. Formdaki ölçütlerden birine bile evet yanıtı verilirse gebe kadın hastalıkları ve doğum uzmanı bulunan bir kuruma sevk edilir; tedavi, takip sıklığı ve yapılacak işlemleri uzman belirler. Obstetrik öykü bölümünde sezaryen, myomektomi, metroplasti ve septum rezeksiyonu gibi geçirilmiş uterin cerrahi, pelvik kitle, myom ve uterin malformasyon, üç ve üzeri tekrarlayan düşük, 2005 yüz gramın altında düşük doğum ağırlıklı ya da dört bin gramın üzerinde makrozomik bebek, ölü doğum, eklampsi ve preeklampsi, erken doğum, günaşımı, anomalili bebek, gestasyonel diyabet, venöz tromboemboli, ektopik gebelik, Rh uygunsuzluğu, antepartum kanama, zor ve müdahaleli doğum, plasenta previa, plasenta dekolmanı, postpartum kanama ve yenidoğan ölümü yer alır.
+Teratojenite örneklerinde de doğru bilgiyi bilin.
+Anjiyotensin dönüştürücü enzim inhibitörlerinin fetüste yaptığı böbrek hasarı genellikle geri dönüşümsüzdür.
+A vitamini türevi retinoidlerden izotretinoin ve etretinat gebelikte güvenli değildir.
+Annenin kronik madde bağımlılığı yenidoğanda yoksunluğa neden olur.
+Talidomid teratojendir.
+Gebelikte dietilstilbestrol maruziyeti dişi fetüste postpubertal dönemde vajinal adenokarsinom riski taşır.
 
-Mevcut gebelik bölümünde 18 yaş altı ve 35 yaş üstü, Rh uygunsuzluğu, çoğul gebelik, 2 yıldan sık gebelik, sigara, alkol ve madde kullanımı, beş ve üzeri doğum anlamına gelen grandmultiparite, gestasyonel diyabet, plasenta previa, venöz tromboemboli, varis, polihidramnios ya da oligohidramnios, anomalili fetüs, servikal yetmezlik, vajinal kanama ve preeklampsi eklampsi sorulur.
-Bunlara apendektomi gibi gebelikte cerrahi, yatış gerektiren hiperemezis gravidarum, preterm eylem, travma, şiddetli enfeksiyon, hemoglobinin yedinin altında olduğu ciddi anemi, preterm erken membran rüptürü, otuzun üzerinde ya da on sekizin altında kitle indeksi, infertilite tedavisi sonrası gebelik, anormal HPV ve pap smear taraması, tekrarlayan sistit ve intrauterin gelişme geriliği eklenir.
-Gebelik haftasıyla uterus büyüklüğünün uyumsuzluğu, on ile 12. haftadan itibaren el Doppleriyle ya da on altı ile 20. haftadan itibaren fetal steteskopla kalp seslerinin duyulmaması ve 20. haftadan sonra fetal hareketlerin hissedilmemesi de ölçütler arasındadır.
+Bu dersle birlikte jinekolojik semptom terminolojisi de soruldu, burası önemli.
+Dismenore ağrılı adet görmedir; ağrılı cinsel ilişki ise disparonidir ve bu ikisi şıklarda yer değiştirilir.
+Spoting, lekelenme tarzında kanamadır ve ovülasyon sırasında fizyolojik spoting görülebilir.
+Postkoital kanama serviks kanserini düşündürmelidir.
+Menstrüel siklusun 21 ile 35 günde bir olması normal kabul edilir.
+Abortus imminens düşük tehdidi demektir; örneğin 13 haftalık gebede vajinal kanama düşük tehdidi olarak adlandırılabilir.
 
-Bazı durumlarda ise anne acilen sevk edilir: ani ya da yoğun kan kaybı veya taşikardi, hipotansiyon ve hipoperfüzyon gibi şok bulgularıyla birlikte vajinal akıntı ve şuur değişikliği; sistolik yüz altmış ve diyastolik yüz 10 milimetre cıva ve üzerinde ölçümde 15 dakika sonra tekrar ölçüldüğünde hâlâ yüksek olması, yüz kırka doksanın üzerinde basınca preeklampsinin diğer bulgularının eşlik etmesi ya da basıncın 4 saat içinde yüz kırka doksanın altına düşürülememesi; konvülsiyon; ciddi karın ağrısı ya da peritoneal irritasyon; solunum güçlüğü ve hızlı solunum; şiddetli ya da sürekli baş ağrısı ve bulanık görme; iki ölçümde otuz sekiz derecenin üzerinde ateş ya da başka enfeksiyon bulguları; baldır ağrısı, kızarıklık ya da şişme; nefes darlığı ya da göğüs ağrısı; hemoglobinin yedi ya da altında olduğu ciddi anemi; sürekli idrar kaçırma ya da fekal inkontinans.
+Jinekolojik kontroller, cinsel ve üreme sağlığını korumaya yönelik, kadınlara özel tıbbi bakımdır ve jinekoloğa ilk ziyaret her yaşta olabilir.
+Obstetrik öyküde genital lezyon öyküsü önemlidir.
+Burası önemli, yanlış ifade olarak soruldu: jinekolojik muayenede vulva, vajen ve serviks görülebilir, ancak uterus doğrudan görülemez.
 
-@@ Fetal iyilik hali, kontraksiyon stres testi ve non stres test
-Antenatal dönemde fetüsün iyiliğini tek bir test değil, birbirini tamamlayan bir test ailesi gösterir. Şema bunları üç grupta toplar: klinik bulgular grubunda fetal hareketlerin izlenmesi ve fetal hareket sayımı; biyofizik skorlama grubunda non stres ve kontraksiyon stres testleri, biyofizik profil ve modifiye biyofizik profil; ultrasonografi grubunda ise amniyon sıvısı indeksi takibi ve Doppler incelemeleri. Modifiye biyofizik profil, amniyon sıvısı indeksi ile non stres testin birleşimidir.
+@@ Risk değerlendirme formu ve sevk
+Risk değerlendirme formu yüksek riskli gebeleri saptamak için tüm gebelere uygulanır. Ölçütlerden birine bile evet yanıtı verilirse gebe kadın hastalıkları ve doğum uzmanı bulunan bir kuruma sevk edilir; tedaviyi, takip sıklığını ve işlemleri uzman belirler. Obstetrik öykü bölümünde sezaryen, miyomektomi, metroplasti ve septum rezeksiyonu gibi geçirilmiş uterin cerrahi, pelvik kitle, miyom ve uterin malformasyon; 3 ve üzeri tekrarlayan düşük, 2500 gramın altında düşük doğum ağırlıklı ya da 4000 gramın üstünde makrozomik bebek, ölü doğum, erken doğum, günaşımı, anomalili bebek ve yenidoğan ölümü yer alır. Bunlara preeklampsi ve eklampsi, gestasyonel diyabet, venöz tromboemboli, ektopik gebelik, Rezus uygunsuzluğu, antepartum kanama, plasenta previa, plasenta dekolmanı, postpartum kanama ile zor ve müdahaleli doğum eklenir.
 
-Kontraksiyon stres testi, yani oksitosin challenge testi, sürekli fetal kalp hızı izlemi altında uteroplasental rezervi kasılma stresiyle sınar.
-Yeterli bir test için 10 dakikada en az üç kontraksiyon olmalı ve her biri en az kırk saniye sürmelidir.
+Mevcut gebelik bölümünde 18 yaş altı ve 35 yaş üstü, sigara, alkol ya da madde kullanımı, 5 ve üzeri doğum demek olan grandmultiparite, 2 yıldan sık gebelik, vücut kitle indeksinin 30'un üstünde ya da 18'in altında olması ve infertilite tedavisi sonrası gebelik sorgulanır.
+Rezus uygunsuzluğu, çoğul gebelik, gestasyonel diyabet, plasenta previa, tromboemboli, varis, polihidramniyoz ya da oligohidramniyoz, anomalili fetüs, servikal yetmezlik, vajinal kanama, preeklampsi, gebelikte cerrahi, yatış gerektiren hiperemezis, preterm eylem, travma, şiddetli enfeksiyon, hemoglobinin desilitrede 7 gramın altında olduğu ciddi anemi ve preterm erken membran rüptürü de ölçütlerdir.
+Anormal HPV ve smir sonucu, tekrarlayan sistit, intrauterin gelişme geriliği ve hafta ile uterus büyüklüğü uyumsuzluğu da listededir.
+Fetal iyilik açısından 10 ile 12. haftadan itibaren el Doppleriyle, 16 ile 20. haftadan itibaren fetal stetoskopla kalp seslerinin duyulmaması ve 20. haftadan sonra fetal hareketlerin hissedilmemesi sevk nedenidir.
+
+Bazı durumlarda ise gebe beklemeden acilen sevk edilir.
+Ani ya da yoğun kan kaybı, taşikardi, hipotansiyon ve hipoperfüzyon gibi şok bulguları; sistolik basıncın 160 ya da diyastolik basıncın 110 milimetre cıva ve üzerinde olup 15 dakika sonraki tekrar ölçümde hâlâ yüksek kalması; 140/90'ın üzerinde basınçla birlikte preeklampsi bulguları ya da basıncın 4 saat içinde düşürülememesi; konvülsiyon, şiddetli baş ağrısı ve bulanık görme; ciddi karın ağrısı ve peritoneal irritasyon; solunum güçlüğü, nefes darlığı ya da göğüs ağrısı; 2 ölçümde 38 derecenin üstünde ateş; baldır ağrısı, kızarıklık ya da şişme; hemoglobinin 7 ve altında olduğu ciddi anemi; sürekli idrar ya da gaita kaçırma acil sevk nedenleridir.
+Baldır bulguları derin ven trombozunu, nefes darlığı ve göğüs ağrısı pulmoner emboliyi düşündürür.
+
+@@ Fetal iyilik hali ve stres testleri
+Fetal iyilik hali tek bir testle değil, birbirini tamamlayan bir test ailesiyle değerlendirilir: fetal hareketlerin izlenmesi ve fetal hareket sayımı, non-stres testi ve kontraksiyon stres testi, biyofizik profil, amniyon sıvısı indeksi ile non-stres testinin birleşimi olan modifiye biyofizik profil, amniyon sıvısı indeksi takibi ve Doppler incelemeleri. Annenin hissettiği hareket azalması ilk uyarıdır.
+
+Kontraksiyon stres testi, ya da oksitosin çelenç testi, uterus kasılmaları sırasında fetal kalp hızının geç deselerasyon verip vermediğini sınar.
+Yeterli test için 10 dakikada her biri en az 40 saniye süren en az 3 kontraksiyon gerekir.
 Geç ya da belirgin değişken deselerasyon yoksa test negatiftir.
-Kontraksiyonların en az yarısını izleyen geç deselerasyon varsa, 10 dakikada üçten az kontraksiyon olsa bile test pozitiftir.
-Aralıklı geç ya da belirgin değişken deselerasyonlar şüpheli sonuçtur; kontraksiyonlar iki dakikadan sık ya da doksan saniyeden uzunken görülen deselerasyon ise hiperstimülasyona bağlı şüpheli sonuçtur.
-10 dakikada üçten az kontraksiyon ya da yorumlanamayan trase yetersiz testtir.
-Yanlış negatiflik %0 virgül sıfır dört, yanlış pozitiflik %35 ile altmış beştir ve normal testten sonraki 1 hafta içinde ölü doğum binde sıfır virgül üçtür; yani negatif test çok güven vericidir.
+Kontraksiyonların yarısından fazlasını geç deselerasyon izliyorsa pozitiftir.
+Aralıklı geç ya da belirgin değişken deselerasyonlar şüphelidir; kasılmalar 2 dakikadan sık ya da 90 saniyeden uzunken görülen deselerasyon hiperstimülasyona bağlı şüpheli sonuçtur.
+10 dakikada 3'ten az kasılma ya da yorumlanamayan trase yetersiz testtir.
+Yanlış negatiflik %0,04, yanlış pozitiflik %35 ile 65'tir; yani negatif test çok güven vericidir.
 
-Non stres test, sürekli fetal kalp hızı izlemiyle kendiliğinden oluşan akselerasyonları arar.
-32. haftadan sonra akselerasyon, bazalin dakikada on beş atım üzerine çıkan ve en az on beş saniye süren artıştır; 32. haftadan önce ise on atım ve on saniye yeterlidir.
-20 dakika içinde en az iki akselerasyon varsa test reaktiftir, bu süre kırk dakikaya uzatılabilir.
-Yanlış negatiflik %0 virgül iki ile sıfır virgül altmış beş, yanlış pozitiflik ise %55 ile doksandır; normal testten sonraki 1 hafta içinde ölü doğum binde bir virgül dokuzdur, yani kontraksiyon stres testine göre daha yüksektir.
+Non-stres testi kasılma olmadan kendiliğinden oluşan akselerasyonları arar.
+Akselerasyon, bazal kalp hızının saniyeler içinde dakikada 15 atımın üzerine çıkmasıdır.
+Burası önemli: 32. haftadan sonra reaktif test, kalp hızının dakikada 120 ile 160 atım olması, normal variyabilite ve 20 dakika içinde bazalden 15 atımdan fazla artan, en az 15 saniye süren en az 2 akselerasyon demektir.
+32. haftadan önce 10 saniye ve 10 atımlık artışlar yeterli kabul edilir.
+40 dakikayı aşan takipte yeterli akselerasyon yoksa test non-reaktiftir.
+Fetal uyku 20 ile 40 dakika sürebildiği için kayıt uzatılır; non-reaktif trase uyku, sedatif ilaç ya da prematüriteye bağlı olabilir ve ek testle değerlendirilir.
+Yanlış pozitiflik %55 ile 90 gibi yüksektir.
 
-Reaktif non stres test, 32. haftadan sonra dakikada yüz yirmi ile yüz altmış atımlık normal kalp hızı, normal variyabilite ve 20 dakika içinde bazalden on beş atımdan fazla artan, en az on beş saniye süren en az iki akselerasyon olarak tanımlanır.
-Non reaktif test ise kırk dakikadan uzun süren takipte yeterli akselerasyon olmamasıdır.
-Fetal uyku dönemleri yirmi ile 40 dakika sürebildiği için izlem kırk dakikaya uzatılır.
-Reaktif trasede bazal çizgiden tepe şeklinde yükselen akselerasyonlar, non reaktif trasede ise düz görünümlü bir eğri izlenir.
-Non reaktif sonuç fetal uyku, sedatif ilaçlar ya da prematüriteye bağlı olabilir, hipoksiyi kanıtlamaz; tek başına doğum nedeni değildir ve biyofizik profil ya da kontraksiyon stres testi gibi ek testlerle değerlendirilir.
+@@ Deselerasyonlar ve biyofizik profil
+Deselerasyon, fetal kalp hızının bazalin altına geçici düşüşüdür; kademeli deselerasyonlarda başlangıçtan dibe geçen süre 30 saniyeden uzundur. Erken deselerasyon kasılmayla eş zamanlı başlar ve biter, kasılma eğrisinin ayna görüntüsü gibidir; baş basısının uyardığı vagal yanıtla oluşur ve iyi huyludur. Geç deselerasyon kasılmanın tepesinden sonra başlar ve kasılma bittikten sonra bazale döner; uteroplasental yetmezliği gösterir ve tekrarlıyorsa fetal distres bulgusudur. Erken ile geç deselerasyonun biçimi benzerdir; ayrım yalnız zamanlamayla yapılır. Değişken deselerasyon ise ani başlar, 30 saniyeden kısa sürede dibe iner, biçimi ve zamanlaması kasılmayla değişir ve kord basısına bağlıdır; doğum eyleminde en sık görülen deselerasyondur.
 
-@@ Deselerasyonlar
-Deselerasyon, fetal kalp hızının bazalin altına geçici olarak düşmesidir; kademeli deselerasyonlarda başlangıçtan dip noktasına geçen süre otuz saniyeden uzundur. Erken deselerasyon kontraksiyonla eş zamanlı başlar ve biter, en dip noktası kontraksiyonun tepesine denk gelir ve kasılma eğrisinin ayna görüntüsü gibi simetrik, sığ bir yavaşlamadır. Mekanizması baş basısının vagal yanıtı uyarmasıdır; iyi huyludur, fetal hipoksiyi göstermez ve müdahale gerektirmez.
+Biyofizik profil, non-stres testi ile ultrasonografiyi birleştirir ve 5 bileşen 30 dakika içinde aranır: reaktif non-stres testi, en az 30 saniye süren en az 1 fetal solunum epizodu, en az 3 ayrı vücut hareketi, ekstremitenin ekstansiyon ve fleksiyona dönüşü ya da el açıp kapama ile gösterilen tonus ve en derin dikey cebi 2 santimetre ve üzerinde olan amniyon sıvısı.
+Her bileşen tamsa 2, değilse 0 puan alır; en yüksek skor 10'dur.
+8 ve üstü normal, 6 şüphelidir; 4'ün altındaki skor anormaldir.
+Modifiye biyofizik profilde reaktif test ile 2 santimetreden derin cep normal, non-reaktif test ya da 2 santimetre ve altı cep anormaldir.
 
-Geç deselerasyon kontraksiyonun pikinden sonra başlar, dip noktası kasılma tepesinden sonradır ve kontraksiyon bittikten sonra bazale döner; şekilde her kontraksiyondan sonra tekrarlayan benzer gecikmeli yavaşlamalar görülür.
-Biçimi erken deselerasyona benzer, ayrım zamanlamayla yapılır.
-Mekanizması uteroplasental yetmezliktir: kasılma sırasında azalan oksijen sunumu fetal hipoksemiye yol açar.
-Tekrarlayan geç deselerasyon fetal distres bulgusudur ve pozitif kontraksiyon stres testinin temelidir.
-
-Değişken deselerasyonda ise V ya da U biçimli, birbirine benzemeyen ani düşüşler görülür; başlangıçtan dibe süre otuz saniyeden kısadır ve başlangıcı, derinliği, süresi kontraksiyona göre değişir.
-Bazalden en az on beş atım düşüş, en az on beş saniye ve iki dakikadan kısa süre ölçüttür.
-Mekanizması kord basısıdır; umbilikal damarların sıkışması ani vagal ve baroreseptör yanıtı oluşturur.
-Travayda en sık görülen deselerasyon tipidir.
-Kısaca erken deselerasyon baş basısı, geç deselerasyon uteroplasental yetmezlik, değişken deselerasyon kord basısıdır.
-
-@@ Biyofizik profil
-Biyofizik profil, non stres testi ultrasonografiyle birleştirerek akut ve kronik fetal durumu birlikte gösterir. Beş bileşen 30 dakika içinde aranır: reaktif non stres test; en az otuz saniye süren en az bir fetal solunum hareketi epizodu; en az üç ayrı vücut ya da ekstremite hareketi; en az bir ekstremite ekstansiyonu ve fleksiyona dönüş ya da el açıp kapama şeklinde tonus; ve en derin vertikal amniyon cebinin iki santimetreden büyük olması. Her bileşen ölçütler tamsa iki, değilse sıfır puan alır ve en yüksek puan ondur. On üzerinden sekiz ve üzeri ya da non stres test hariç sekiz üzerinden sekiz normal, on üzerinden altı şüpheli, dört ve altı anormaldir. Yanlış negatiflik %0 virgül sıfır yedi ile sıfır virgül sıfır sekiz, yanlış pozitiflik %40 ile ellidir; ölü doğum binde sıfır virgül sekizdir.
-
-Non stres test, solunum, hareket ve tonus akut hipoksiyi, amniyon sıvısı ise kronik hipoksiyi yansıtır.
-Modifiye biyofizik profil yalnız non stres test ve en derin vertikal cepten oluşur: reaktif test ve iki santimetreden büyük cep normal, non reaktif test ya da 2 santimetre ve altındaki cep anormaldir.
-Yanlış negatiflik %0 virgül sıfır sekiz, yanlış pozitiflik %60'tır ve ölü doğum binde sıfır virgül sekizdir.
-Bileşen tablosunda anormal ölçütler ise 30 dakikada hiç solunum epizodu olmaması, üçten az vücut hareketi, yavaş ekstansiyon ve fleksiyona dönmeme ya da hiç hareket olmaması, iki santimetreden küçük cep ve 20 dakikalık kayıtta ikiden az akselerasyondur.
-
-Özetle arkadaşlar, gebelik terminolojisinde 20. hafta ve beş yüz gram eşiğini, Naegele kuralını ve trimester ile term sınırlarını; fizyolojide progesteronun ortak rolünü; antenatal bakımda en az dört izlemi, ilk on dört haftayı ve tarama testlerinin haftalarını; fetal iyilik halinde ise testlerin yorumunu ve deselerasyonların mekanizmalarını sağlam bilmeniz gerekiyor.
+Özetle, gebeliğin dili 20. hafta, 500 gram ve son adet tarihi üzerine kuruludur.
+Fizyolojide plazma artışı, düşen direnç ve progesteron etkisi ana temalardır.
+İzlemde ilk izlem, laboratuvar taramaları ve risk formu hastalığı erken yakalamayı, fetal testler ise fetüsün iyi olup olmadığını göstermeyi amaçlar.

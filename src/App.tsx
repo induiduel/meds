@@ -127,7 +127,9 @@ const DiseasesView = React.lazy(() => wrapLazy(import('./components/diseases/Dis
 const SaglikView = React.lazy(() => wrapLazy(import('./components/saglik/SaglikView').then(m => ({ default: m.SaglikView }))));
 const CanliDersView = React.lazy(() => wrapLazy(import('./components/canliDers/CanliDersView')));
 const PatolojiCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/PatolojiCheckUp')));
+const GenetikCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/GenetikCheckUp')));
 const BitirdiklerimView = React.lazy(() => wrapLazy(import('./components/takip/BitirdiklerimView')));
+const CevrimdisiView = React.lazy(() => wrapLazy(import('./components/cevrimdisi/CevrimdisiView')));
 const SinavCalismaView = React.lazy(() => wrapLazy(import('./components/SinavCalismaView').then(m => ({ default: m.SinavCalismaView }))));
 
 // Lazy-loaded Modals (Only downloaded when opened)
@@ -1841,10 +1843,24 @@ export default function App() {
           </Suspense>
         )}
 
+        {/* TAB: /genetik-check-up — TBG sınav kalıbı, tablolar, tek satırlık spotlar, soru-cevap ve çıkmış/örnek sorular */}
+        {activeTab === 'genetik_checkup' && (
+          <Suspense fallback={<ViewFallback />}>
+            <GenetikCheckUp />
+          </Suspense>
+        )}
+
         {/* TAB: /bitirdiklerim — konu konu kontrol listesi, süre, soru ve kalan tahmini */}
         {activeTab === 'bitirdiklerim' && (
           <Suspense fallback={<ViewFallback />}>
             <BitirdiklerimView />
+          </Suspense>
+        )}
+
+        {/* TAB: /cevrimdisi — çevrimdışı merkezi: ders paketlerini indir, güncelle, sil */}
+        {activeTab === 'cevrimdisi' && (
+          <Suspense fallback={<ViewFallback />}>
+            <CevrimdisiView />
           </Suspense>
         )}
 

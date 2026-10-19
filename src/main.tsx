@@ -24,6 +24,7 @@ import { installPullToRefresh } from './components/system/PullToRefresh';
 import { installNotesSync } from './services/notesSync';
 import { installUserDataAutoBackup } from './services/userDataSyncService';
 import { installPresence } from './services/presence';
+import { installEtkinlikGunlugu } from './services/etkinlikGunlugu';
 import { prefetchIdle } from './routePrefetch';
 import { installAutoReveal } from './utils/autoReveal';
 import { installSelectionShare } from './utils/selectionShare';
@@ -49,6 +50,8 @@ if (typeof window !== 'undefined') {
   if ('caches' in window) {
     void caches.has('medsoru-cd-bekleyen').then((v) => { if (v) return import('./components/canliDers/canliDersCevrimdisi').then((m) => m.cdBekleyenleriTamamla()); }).catch(() => {});
   }
+  // Çevrimdışı merkezi: yarım kalan indirmeler sürer, çevrimdışı moddaysa uygulama ve ders güncellemeleri iner (services/cevrimdisi)
+  window.setTimeout(() => { void import('./services/cevrimdisi/paketMotoru').then((m) => m.cevrimdisiBaslat()).catch(() => {}); }, 2500);
 }
 
 // Klavye açılıp kapanırken görsel alanı izle: katmanlar --vvh ile kısalır,
@@ -90,6 +93,8 @@ installNetworkBanner();
 installUpdatePrompt();
 installPullToRefresh();
 installNotesSync();
+// Günlük önce kurulur: sekme gizlenince önce son ziyaret yazılır, sonra eşitleme gönderir
+installEtkinlikGunlugu();
 installUserDataAutoBackup();
 installPresence();
 prefetchIdle();
@@ -164,7 +169,7 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
       }
       if ('caches' in window) {
         // Kullanıcının elle indirdikleri (çevrimdışı PDF'ler, canlı ders paketleri) korunur
-        const korunan = ['medsoru-pdf-offline', 'medsoru-canli-ders-offline'];
+        const korunan = ['medsoru-pdf-offline', 'medsoru-canli-ders-offline', 'medsoru-cd-bekleyen', 'medsor-paket-v1'];
         caches.keys().then((keys) => keys.filter((k) => !korunan.includes(k)).forEach((k) => caches.delete(k))).catch(() => {});
       }
     } catch (e) {}

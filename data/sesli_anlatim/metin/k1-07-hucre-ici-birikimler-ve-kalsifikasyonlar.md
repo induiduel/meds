@@ -1,58 +1,58 @@
 # Hücre İçi Birikimler ve Kalsifikasyonlar
 
 @@ Birikimin anlamı ve hücredeki yeri
-Bazı durumlarda hücreler belirli maddeleri anormal miktarlarda biriktirir. Birikim tek başına hastalık demek değildir; anlamı biriken maddeye ve miktarına bağlıdır. Biriken madde zararsız olabilir; hücrede kalır ama işlevi belirgin biçimde bozmaz ve çoğu zaman yalnızca geçmişte yaşanmış bir sürecin izidir. Ya da madde hücrenin yapısını veya işlevini bozarak hücre hasarına katkıda bulunur. Bu dersin bütününde her birikim için aynı üç soruyu soracağız: biriken madde nedir, neden birikmiştir ve dokuda neye yol açar?
+Bazı durumlarda hücreler belirli maddeleri anormal miktarlarda biriktirir. Birikim tek başına hastalık demek değildir; anlamı biriken maddeye ve miktarına bağlıdır. Biriken madde zararsız olabilir; hücrede kalır ama işlevi belirgin biçimde bozmaz ve çoğu zaman yalnızca geçmişte yaşanmış bir sürecin izidir. Ya da madde hücrenin yapısını veya işlevini bozarak hücre hasarına katkıda bulunur. Bu dersin bütününde her birikim için aynı 3 soruyu soracağız: biriken madde nedir, neden birikmiştir ve dokuda neye yol açar?
 
-Birikimin yerleştiği hücresel bölmeler üç gruptur.
+Birikimin yerleştiği hücresel bölmeler 3 gruptur.
 En sık yer sitoplazmadır; madde sitozolde damlacık ya da granül olarak görülür.
-2. yer organellerdir, özellikle de lizozomlar.
+İkinci yer organellerdir, özellikle de lizozomlar.
 Lizozom, hidrolitik enzimler içeren, hücre içi yıkımdan sorumlu organeldir; bu yüzden sindirilemeyen maddelerin toplandığı yer de odur.
-3. yer, daha seyrek olarak, çekirdektir.
+Üçüncü yer, daha seyrek olarak, çekirdektir.
 Birikimin yeri mekanizmasına ipucu verir: lizozom içinde bir birikim görüyorsanız, yıkım sisteminin aşıldığını düşünmelisiniz.
 
-@@ Dört birikim mekanizması
-Hücre içi birikimler başlıca dört mekanizmayla oluşur. 1.'si normal endojen maddenin yetersiz uzaklaştırılmasıdır; madde normaldir, sorun atılımdadır. 2.'si endojen anormal maddenin birikmesidir; hücrenin kendi ürettiği madde yapısal olarak bozuktur. 3.'sü eksojen anormal maddenin birikmesidir; dışarıdan alınan madde hücrede parçalanamaz. 4.'sü lizozomal yıkım bozukluğudur; enzim eksikliği nedeniyle substrat lizozomda kalır. Endojen vücudun kendi içinde üretilen, eksojen ise dış ortamdan alınan demektir. Burası önemli, bu dört mekanizma sınavın temel sınıflama bilgisidir.
+@@ 4 birikim mekanizması
+Hücre içi birikimler başlıca 4 mekanizmayla oluşur. 1.'si normal endojen maddenin yetersiz uzaklaştırılmasıdır; madde normaldir, sorun atılımdadır. 2.'si endojen anormal maddenin birikmesidir; hücrenin kendi ürettiği madde yapısal olarak bozuktur. 3.'sü eksojen anormal maddenin birikmesidir; dışarıdan alınan madde hücrede parçalanamaz. 4.'sü lizozomal yıkım bozukluğudur; enzim eksikliği nedeniyle substrat lizozomda kalır. Endojen vücudun kendi içinde üretilen, eksojen ise dış ortamdan alınan demektir. Burası önemli, bu 4 mekanizma sınavın temel sınıflama bilgisidir.
 
-Ders kitabındaki şekil bu yolları dört panelde gösterir.
+Ders kitabındaki şekil bu yolları 4 panelde gösterir.
 Anormal metabolizmada normal hücre, sitoplazması sarı lipid damlacıklarıyla dolu bir yağlı karaciğer hücresine dönüşür.
 Mutasyonda protein katlanması ve taşınmasındaki kusur nedeniyle anormal proteinler birikir.
 Enzim yokluğunda kompleks substrat çözünür ürünlere yıkılamaz ve lizozomal depo hastalığında endojen madde birikir.
 Sindirilemeyen madde alındığında ise fagosite edilen partiküller hücrede eksojen birikim oluşturur.
 Mekanizmayı belirlemek için önce maddenin kaynağına, yani endojen mi eksojen mi olduğuna, sonra yapısına, yani normal mi anormal mi olduğuna bakılır.
 
-@@ 1. ve 2. mekanizma
-1. mekanizmada biriken madde normal bir endojen maddedir. Hücre onu üretir, fakat yıkımı ya da sekresyonu bozulmuştur; sekresyon, hücrenin ürettiği maddeyi dışarı salmasıdır. Neden, maddenin yıkımında ya da atılımında görev alan enzimin eksikliği veya işlev bozukluğudur. İlk örnek yağlı karaciğerdir: hepatositte trigliserid birikir. Trigliserid normal bir metabolittir; sorun, onun lipoprotein olarak karaciğerden gönderilememesidir. 2. örnek nefrotik sendromdur: proksimal tübül hücrelerinde protein damlacıkları görülür. Geri emilen proteinler normaldir, ama hücrenin yıkım kapasitesini aşacak miktarda gelir. Maddenin yapısı bozuk olmadığı için neden ortadan kalktığında birikim de genellikle geriler.
+@@ Birinci ve ikinci mekanizma
+Birinci mekanizmada biriken madde normal bir endojen maddedir. Hücre onu üretir, fakat yıkımı ya da sekresyonu bozulmuştur; sekresyon, hücrenin ürettiği maddeyi dışarı salmasıdır. Neden, maddenin yıkımında ya da atılımında görev alan enzimin eksikliği veya işlev bozukluğudur. İlk örnek yağlı karaciğerdir: hepatositte trigliserid birikir. Trigliserid normal bir metabolittir; sorun, onun lipoprotein olarak karaciğerden gönderilememesidir. İkinci örnek nefrotik sendromdur: proksimal tübül hücrelerinde protein damlacıkları görülür. Geri emilen proteinler normaldir, ama hücrenin yıkım kapasitesini aşacak miktarda gelir. Maddenin yapısı bozuk olmadığı için neden ortadan kalktığında birikim de genellikle geriler.
 
-2. mekanizmada hücre kendi ürettiği, fakat yapısal olarak anormal bir proteini biriktirir ve bu protein normal yıkım yollarıyla tam parçalanamaz.
+İkinci mekanizmada hücre kendi ürettiği, fakat yapısal olarak anormal bir proteini biriktirir ve bu protein normal yıkım yollarıyla tam parçalanamaz.
 Nedenlerden biri genetik mutasyondur; proteini kodlayan gendeki değişiklik bozuk yapılı ürün oluşturur.
 Diğeri post translasyonel hatalardır; yani proteinin ribozomda sentezlendikten sonra geçirdiği katlanma ve işlenme basamaklarındaki hatalar.
-Klasik örnek alfa bir antitripsin eksikliğidir.
-Alfa bir antitripsin, karaciğerde üretilen ve proteazları baskılayan bir serum proteinidir.
-Serpina bir gen mutasyonu sonucu oluşan mutant protein karaciğerde birikir, akciğerde ise proteinin eksikliği hissedilir.
+Klasik örnek alfa-1 antitripsin eksikliğidir.
+Alfa-1 antitripsin, karaciğerde üretilen ve proteazları baskılayan bir serum proteinidir.
+SERPINA1 gen mutasyonu sonucu oluşan mutant protein karaciğerde birikir, akciğerde ise proteinin eksikliği hissedilir.
 Yani tek bir mutasyon iki organda iki farklı sonuç doğurur.
-2. örnek, bazı nörodejeneratif hastalıklarda nöronlarda toplanan yanlış katlanmış protein agregatlarıdır.
+İkinci örnek, bazı nörodejeneratif hastalıklarda nöronlarda toplanan yanlış katlanmış protein agregatlarıdır.
 
-@@ 3. ve 4. mekanizma
-3. mekanizmada biriken madde dış ortamdan gelir. Hücre bu yabancı maddeyi alır, ancak parçalayamaz ya da taşıyamaz, çünkü onu yıkacak enzim donanımı yoktur. Örnekler solunan karbon partikülleri, yani antrakoz, kristalize bir mineral tozu olan silika ve uzun mineral lifleri olan asbesttir. Bu maddeler genellikle lizozomlarda ya da makrofajlarda toplanır; makrofaj maddeyi fagosite eder, fakat sindiremediği için içinde taşır. Burada sorun hücrenin metabolizmasında değil, maddenin hücre için sindirilemez olmasındadır. Bu yüzden madde uzun yıllar dokuda kalabilir.
+@@ Üçüncü ve dördüncü mekanizma
+Üçüncü mekanizmada biriken madde dış ortamdan gelir. Hücre bu yabancı maddeyi alır, ancak parçalayamaz ya da taşıyamaz, çünkü onu yıkacak enzim donanımı yoktur. Örnekler solunan karbon partikülleri, yani antrakoz, kristalize bir mineral tozu olan silika ve uzun mineral lifleri olan asbesttir. Bu maddeler genellikle lizozomlarda ya da makrofajlarda toplanır; makrofaj maddeyi fagosite eder, fakat sindiremediği için içinde taşır. Burada sorun hücrenin metabolizmasında değil, maddenin hücre için sindirilemez olmasındadır. Bu yüzden madde uzun yıllar dokuda kalabilir.
 
-4. mekanizma lizozomal depo hastalıklarını kapsar.
+Dördüncü mekanizma lizozomal depo hastalıklarını kapsar.
 Bu hastalıklarda lizozomdaki özgül bir hidrolaz enzimi eksiktir.
 Kompleks substrat yalnızca kısmen parçalanabilir; kısmen parçalanmış ürünler lizozomda birikir ve lizozomlar genişler.
-Sfingolipid birikiminin klasik örnekleri Tay Saks ve Niman Pik hastalıklarıdır; sfingolipid, sinir dokusunda bol bulunan kompleks bir lipiddir.
+Sfingolipid birikiminin klasik örnekleri Tay-Sachs ve Niemann-Pick hastalıklarıdır; sfingolipid, sinir dokusunda bol bulunan kompleks bir lipiddir.
 Mukopolisakkaridozlarda ise mukopolisakkaritler yıkılamaz ve lizozomda toplanır.
 Her hastalıkta eksik olan enzime özgü bir substrat birikir ve hastalığın adı çoğu zaman biriken maddeden gelir.
 
-Dikkat edin, 4. mekanizma üçüncüden biriken maddenin kaynağıyla ayrılır: burada madde endojendir, sorun onu yıkacak enzimin yokluğudur.
-Dört mekanizmayı ayırmak için iki soru yeterlidir.
+Dikkat edin, dördüncü mekanizma üçüncüden biriken maddenin kaynağıyla ayrılır: burada madde endojendir, sorun onu yıkacak enzimin yokluğudur.
+4 mekanizmayı ayırmak için 2 soru yeterlidir.
 Madde endojen mi, eksojen mi?
 Endojense, yapısı mı bozuk, yoksa yıkım ya da atılım sistemi mi?
-Bu iki soruyla yağlı karaciğer 1., mutant alfa bir antitripsin 2., karbon, silika ve asbest 3., Tay Saks ve Niman Pik 4. mekanizmaya kolayca yerleşir.
+Bu 2 soruyla yağlı karaciğer birinci, mutant alfa-1 antitripsin ikinci, karbon, silika ve asbest üçüncü, Tay-Sachs ve Niemann-Pick dördüncü mekanizmaya kolayca yerleşir.
 
 @@ Lipid birikimleri ve steatozun tanımı
-Lipidler hücre içi birikimlerin en sık görülen grubudur ve biriken lipidin türü klinik tabloyu belirler. Hücre içinde en sık biriken lipidler üç tanedir: trigliseridler, yani gliserole bağlı üç yağ asidinden oluşan nötral yağlar; kolesterol ve onun yağ asidiyle esterleşmiş depo formu olan kolesteril esterler; ve membranların temel bileşeni olan fosfolipidler. Klinik karşılıkları ise steatoz, yani yağlı değişim, ateroskleroz, ksantomlar ve yağlı değişim için kullanılan eski bir terim olan yağlı dejenerasyondur. Basit bir kural koyalım: trigliserid birikimi denince steatoz, kolesterol birikimi denince ateroskleroz ve ksantom akla gelmelidir.
+Lipidler hücre içi birikimlerin en sık görülen grubudur ve biriken lipidin türü klinik tabloyu belirler. Hücre içinde en sık biriken lipidler 3 tanedir: trigliseridler, yani gliserole bağlı 3 yağ asidinden oluşan nötral yağlar; kolesterol ve onun yağ asidiyle esterleşmiş depo formu olan kolesteril esterler; ve membranların temel bileşeni olan fosfolipidler. Klinik karşılıkları ise steatoz, yani yağlı değişim, ateroskleroz, ksantomlar ve yağlı değişim için kullanılan eski bir terim olan yağlı dejenerasyondur. Basit bir kural koyalım: trigliserid birikimi denince steatoz, kolesterol birikimi denince ateroskleroz ve ksantom akla gelmelidir.
 
 Steatoz, parankimal hücrelerde trigliserid birikimidir.
-Tanımın iki anahtarı var: hücre parankim hücresidir, yani organın asıl işini yapan hücredir, ve biriken lipid trigliseriddir.
+Tanımın 2 anahtarı var: hücre parankim hücresidir, yani organın asıl işini yapan hücredir, ve biriken lipid trigliseriddir.
 Burası önemli, steatoz en sık karaciğerde görülür.
 Karaciğer lipid metabolizmasının merkezidir; yağ asitlerinin alındığı, trigliseride çevrildiği ve lipoprotein olarak gönderildiği organdır.
 Bu yoğun trafik onu steatoza en açık organ yapar.
@@ -64,9 +64,9 @@ Makrofajlarda kolesterol birikimi ise steatoz değil, ateroskleroz ve ksantomun 
 Steatoza çok farklı durumlar yol açar ve hepsi sonunda hepatositte trigliserid birikimiyle sonuçlanır. Alkol kullanımı karaciğerde yağ metabolizmasını bozar ve yağlı karaciğerin en bilinen nedenidir. Obezite ve Tip 2 diyabette dokulardan karaciğere gelen yağ asidi yükü artar. Protein kalori yetersizliğinde, trigliseridi karaciğerden taşıyacak lipoproteinlerin protein kısmının yapımı azalır. Hipokside, yani dokuya yetersiz oksijen ulaştığında, yağ asitlerinin yakılması azalır ve hücrede yağ kalır. Son olarak toksinler ve ilaçlar hepatosit metabolizmasını bozarak yağ birikimini başlatır. İlginç bir noktaya dikkat edin: steatozun nedenleri hem aşırı beslenme tarafında, yani obezite ve diyabette, hem de yetersiz beslenme tarafında, yani protein kalori yetersizliğinde bulunur. Bu çelişki gibi görünen durum sınavda sık sorulur.
 
 Patogenez, hepatositteki yağ trafiğinin giriş, işleme ve çıkış basamaklarındaki dengesizlikle açıklanır.
-1. basamakta serbest yağ asidi alımı artar; obezite ve diyabet bu basamağı zorlar.
-2. basamakta trigliserid sentezi artar; hücreye giren yağ asitleri gliserolle birleşerek trigliseride çevrilir.
-3. basamakta lipoprotein paketlenmesi ya da sekresyonu azalır.
+Birinci basamakta serbest yağ asidi alımı artar; obezite ve diyabet bu basamağı zorlar.
+İkinci basamakta trigliserid sentezi artar; hücreye giren yağ asitleri gliserolle birleşerek trigliseride çevrilir.
+Üçüncü basamakta lipoprotein paketlenmesi ya da sekresyonu azalır.
 Trigliserid normalde lipoprotein içinde paketlenip kana verilir; bu basamak bozulduğunda yağ hücreden çıkamaz.
 Protein kalori yetersizliğinde lipoprotein paketlemesi için gereken protein azaldığı için bozulan basamak işte bu çıkış basamağıdır.
 Biriken trigliserid normal bir madde olduğundan yağlı karaciğer, normal endojen maddenin yetersiz uzaklaştırılması mekanizmasının örneğidir.
@@ -97,7 +97,7 @@ Kısacası aterosklerozda birikim hücre içi köpük hücrelerle başlar, ileri
 Ksantomlar, deri ve tendonlarda makrofajlarda kolesterol birikimi sonucu oluşan lezyonlardır. Aterosklerozda olduğu gibi burada da lipid fagositik hücrelerde toplanır. Klinik olarak sarımsı nodül ve plaklar şeklinde görülürler; sarı renk biriken lipidden gelir. Nedeni kanda lipid düzeyinin yüksek olması, yani hiperlipidemi ve hiperkolesterolemidir. Burası önemli, Aşil tendonu ksantomları ailesel hiperkolesterolemide görülür; ailesel hiperkolesterolemi, kan kolesterolünün kalıtsal olarak yüksek olduğu hastalıktır. Ksantom, altta yatan lipid metabolizması bozukluğunun deride ya da tendonda görülebilen bir işaretidir; bu yüzden ksantom saptanan hastada kan lipidleri değerlendirilmelidir. Ksantom ve ateroskleroz aynı hastada birlikte bulunabilir, çünkü ikisi de kolesterol yüklü makrofaj birikimidir. Lipid bölümünü tek cümleyle bağlayalım: lipid parankim hücresindeyse ve trigliseridse steatoz, fagositik hücrede ve kolesterolse ateroskleroz ya da ksantom düşünülür.
 
 @@ Protein birikimlerinin genel ilkeleri
-Mikroskopta görülebilen protein birikimleri, lipid birikimlerinden daha az yaygındır. Üç nedeni vardır. 1.'si artmış hücre içi alımdır; hücre dışarıdan normalden fazla protein alır ve yıkım kapasitesi aşılır. 2.'si artmış sentezdir; hücre ürettiği proteini salgılayabileceğinden fazla sentezler. 3.'sü yetersiz katlanma ya da yıkımdır; yanlış katlanmış protein normal yollarla uzaklaştırılamaz. Biriken protein genellikle sitoplazmada eozinofilik damlacık ya da hiyalin görünüm verir. Eozin proteinleri pembe boyadığı için birikim pembe, homojen ve camsı görünür; hiyalin de tam olarak bu görünümü anlatan morfolojik bir terimdir. Sitoplazmada pembe, homojen damlacık görürseniz ilk düşüneceğiniz birikim proteindir; boş görünen yuvarlak vakuol ise daha çok lipidi düşündürür.
+Mikroskopta görülebilen protein birikimleri, lipid birikimlerinden daha az yaygındır. 3 nedeni vardır. 1.'si artmış hücre içi alımdır; hücre dışarıdan normalden fazla protein alır ve yıkım kapasitesi aşılır. 2.'si artmış sentezdir; hücre ürettiği proteini salgılayabileceğinden fazla sentezler. 3.'sü yetersiz katlanma ya da yıkımdır; yanlış katlanmış protein normal yollarla uzaklaştırılamaz. Biriken protein genellikle sitoplazmada eozinofilik damlacık ya da hiyalin görünüm verir. Eozin proteinleri pembe boyadığı için birikim pembe, homojen ve camsı görünür; hiyalin de tam olarak bu görünümü anlatan morfolojik bir terimdir. Sitoplazmada pembe, homojen damlacık görürseniz ilk düşüneceğiniz birikim proteindir; boş görünen yuvarlak vakuol ise daha çok lipidi düşündürür.
 
 Katlanma konusuna girmeden önce bir çıkmış soruya değinelim.
 Burası önemli, çıkmış sorularda protein katlanmasını etkileyen faktörler soruldu.
@@ -107,65 +107,65 @@ Ders notuna eklenen bir çıkmış soruda da şu bağlantı vardır: hepatosit s
 Bu da hücre içi protein birikiminin tanıda ipucu veren bir örneğidir.
 
 @@ Yanlış katlanmış protein hastalıkları ve eksiklik grubu
-Ders kitabındaki tablo, yanlış katlanmış proteinlerin neden olduğu hastalıkları hasarın asıl nedenine göre üç gruba ayırır. 1. grupta mutant protein hücre tarafından yıkılır ve hastalık proteinin yokluğundan doğar; örnekleri kistik fibrozis, ailesel hiperkolesterolemi ve Tay Saks hastalığıdır. 2. grupta yanlış katlanan protein endoplazmik retikulumda stres oluşturur ve hücre ölür; örnekleri retinitis pigmentoza ve Kroytsfeld Yakob hastalığıdır. 3. grupta her iki mekanizma birliktedir; örneği alfa bir antitripsin eksikliğidir. Tablonun notu, yanlış katlanmanın bazı moleküler alt tiplerde hem işlev bozukluğundan hem de hücre hasarından sorumlu olabildiğini ve burada yanlış katlanmanın temel mekanizma olduğu seçilmiş örneklerin verildiğini vurgular.
+Ders kitabındaki tablo, yanlış katlanmış proteinlerin neden olduğu hastalıkları hasarın asıl nedenine göre 3 gruba ayırır. Birinci grupta mutant protein hücre tarafından yıkılır ve hastalık proteinin yokluğundan doğar; örnekleri kistik fibrozis, ailesel hiperkolesterolemi ve Tay-Sachs hastalığıdır. İkinci grupta yanlış katlanan protein endoplazmik retikulumda stres oluşturur ve hücre ölür; örnekleri retinitis pigmentoza ve Creutzfeldt-Jakob hastalığıdır. Üçüncü grupta her iki mekanizma birliktedir; örneği alfa-1 antitripsin eksikliğidir. Tablonun notu, yanlış katlanmanın bazı moleküler alt tiplerde hem işlev bozukluğundan hem de hücre hasarından sorumlu olabildiğini ve burada yanlış katlanmanın temel mekanizma olduğu seçilmiş örneklerin verildiğini vurgular.
 
-Kistik fibroziste etkilenen protein, kistik fibroz transmembran iletkenlik düzenleyicisidir, kısaca ce ef te er.
+Kistik fibroziste etkilenen protein, kistik fibroz transmembran iletkenlik düzenleyicisidir, kısaca CFTR.
 Bu protein epitelde iyon taşınmasını sağlayan bir kanaldır.
 Kaybı epitel hücrelerinde iyon taşınmasında bozukluklara yol açar ve bu, kistik fibrozis tablosunun temelini oluşturur.
-Ailesel hiperkolesterolemide etkilenen protein düşük yoğunluklu lipoprotein reseptörü, yani el de el reseptörüdür.
-Bu reseptör el de eli kandan hücreye alır.
-Reseptörün kaybı ya da ciddi azalması el de el klirensini bozar; hiperkolesterolemi ve buna bağlı erken ateroskleroz gelişir.
+Ailesel hiperkolesterolemide etkilenen protein düşük yoğunluklu lipoprotein reseptörü, yani LDL reseptörüdür.
+Bu reseptör LDL'yi kandan hücreye alır.
+Reseptörün kaybı ya da ciddi azalması LDL klirensini bozar; hiperkolesterolemi ve buna bağlı erken ateroskleroz gelişir.
 Burada lipid bölümüyle bir köprü kuruluyor: klirens bozulur, kan kolesterolü yükselir, Aşil tendonu ksantomları ve erken ateroskleroz ortaya çıkar.
 
-Tay Saks hastalığında etkilenen protein heksozaminidaz enziminin alfa alt birimidir.
-Bu lizozomal enzimin eksikliği özellikle nöronlarda ge em iki gangliozidlerinin depolanmasına neden olur; sonuçta ilerleyici nöronal hasar ve nörolojik bozukluklar gelişir.
-Tay Saks bu derste iki açıdan karşımıza çıkıyor.
+Tay-Sachs hastalığında etkilenen protein heksozaminidaz enziminin alfa alt birimidir.
+Bu lizozomal enzimin eksikliği özellikle nöronlarda GM2 gangliozidlerinin depolanmasına neden olur; sonuçta ilerleyici nöronal hasar ve nörolojik bozukluklar gelişir.
+Tay-Sachs bu derste 2 açıdan karşımıza çıkıyor.
 Birikim mekanizması açısından lizozomal yıkım bozukluğudur ve lizozomda sfingolipid birikir; protein katlanması açısından ise mutant enzim alt biriminin yanlış katlanıp yıkılmasıyla oluşan bir eksiklik hastalığıdır.
-Ge em iki gangliozid bir sfingolipid olduğu için Tay Saks hem sfingolipid birikimi hem de yanlış katlanma ve eksiklik sorularında doğru yanıt olabilir.
+GM2 gangliozid bir sfingolipid olduğu için Tay-Sachs hem sfingolipid birikimi hem de yanlış katlanma ve eksiklik sorularında doğru yanıt olabilir.
 
 @@ Endoplazmik retikulum stresi ve ikili mekanizma
-2. gruptaki hastalıklarda sorun proteinin yokluğu değil, yanlış katlanmış proteinin hücreyi öldürmesidir. Endoplazmik retikulum stresi, yanlış katlanmış proteinlerin bu organelde birikmesiyle oluşan ve hücreyi apoptoza sürükleyebilen durumdur. Retinitis pigmentozada etkilenen protein rodopsindir; retinadaki fotoreseptör hücrelerin ışığa duyarlı proteinidir. Rodopsinin yanlış katlanması endoplazmik retikulum stresine, bu stres fotoreseptör hücre kaybına yol açar; sonuçta ilerleyici görme kaybı ve körlük gelişir. Yani burada hasar, rodopsinin işlev eksikliğinden çok yanlış katlanmış proteinin yarattığı stres ve hücre ölümünden kaynaklanır.
+İkinci gruptaki hastalıklarda sorun proteinin yokluğu değil, yanlış katlanmış proteinin hücreyi öldürmesidir. Endoplazmik retikulum stresi, yanlış katlanmış proteinlerin bu organelde birikmesiyle oluşan ve hücreyi apoptoza sürükleyebilen durumdur. Retinitis pigmentozada etkilenen protein rodopsindir; retinadaki fotoreseptör hücrelerin ışığa duyarlı proteinidir. Rodopsinin yanlış katlanması endoplazmik retikulum stresine, bu stres fotoreseptör hücre kaybına yol açar; sonuçta ilerleyici görme kaybı ve körlük gelişir. Yani burada hasar, rodopsinin işlev eksikliğinden çok yanlış katlanmış proteinin yarattığı stres ve hücre ölümünden kaynaklanır.
 
-Kroytsfeld Yakob hastalığında etkilenen molekül prion proteinidir.
-Normal formuna pe er pe ce, yanlış katlanmış ve birikmeye eğilimli patolojik formuna pe er pe es ce denir.
+Creutzfeldt-Jakob hastalığında etkilenen molekül prion proteinidir.
+Normal formuna PrPC, yanlış katlanmış ve birikmeye eğilimli patolojik formuna PrPSc denir.
 Normal formun patolojik forma yanlış katlanması ve birikmesi, nöronların apoptoz ve nekroza giden ölümüne yol açar ve hızlı seyirli bir nörodejenerasyon gelişir.
 Burada da hastalığı yapan proteinin eksikliği değil, yanlış katlanmış formun birikip nöronları öldürmesidir; bu yüzden retinitis pigmentoza ile aynı gruptadır.
 
-Alfa bir antitripsin eksikliği, iki mekanizmanın birlikte işlediği 3. grubun örneğidir ve mekanizmalar bölümünde andığımız Serpina bir mutasyonunun organ düzeyindeki sonuçları burada netleşir.
-Karaciğer tarafında yanlış katlanmış, işlevsiz alfa bir antitripsin hepatositlerde birikir ve endoplazmik retikulum stresine bağlı apoptoza yol açar; sonuç karaciğer hasarı ve sirozdur.
+Alfa-1 antitripsin eksikliği, 2 mekanizmanın birlikte işlediği üçüncü grubun örneğidir ve mekanizmalar bölümünde andığımız SERPINA1 mutasyonunun organ düzeyindeki sonuçları burada netleşir.
+Karaciğer tarafında yanlış katlanmış, işlevsiz alfa-1 antitripsin hepatositlerde birikir ve endoplazmik retikulum stresine bağlı apoptoza yol açar; sonuç karaciğer hasarı ve sirozdur.
 Akciğer tarafında ise karaciğerden salınamayan protein akciğere ulaşamaz ve proteaz inhibitör aktivitesi yoktur.
 Nötrofillerden salınan, elastik dokuyu yıkabilen nötrofil elastazı kontrolsüz çalışır, elastik doku yıkılır ve amfizem gelişir.
 Amfizem, alveol duvarlarının yıkımıyla distal hava boşluklarının kalıcı genişlemesidir.
-Burası önemli: alfa bir antitripsin eksikliği, karaciğerde birikime bağlı siroz ile akciğerde eksikliğe bağlı amfizemin birleşimidir.
+Burası önemli: alfa-1 antitripsin eksikliği, karaciğerde birikime bağlı siroz ile akciğerde eksikliğe bağlı amfizemin birleşimidir.
 
 @@ Tübül damlacıkları, Russell cisimcikleri ve agregatlar
 Böbrek tübül hücrelerindeki protein damlacıkları, artmış hücre içi alıma bağlı protein birikiminin örneğidir. Nefrotik sendromda glomerülden aşırı protein kaçağı olur ve filtratta protein miktarı artar. Proksimal tübül hücreleri bu proteinleri endositozla, yani hücre zarının içe katlanarak madde almasıyla, geri emer. Geri emilen protein sitoplazmada eozinofilik protein damlacıkları oluşturur. Bu birikim geri dönüşümlüdür: proteinüri, yani idrarla anormal miktarda protein atılması düzelirse damlacıklar kaybolur. Bu örnek yetersiz uzaklaştırma çerçevesine de uyar, çünkü biriken protein normaldir, yalnızca hücrenin yıkım kapasitesini aşacak miktarda gelmiştir.
 
 Plazma hücreleri, artmış sentez nedeniyle gelişen protein birikiminin klasik örneğidir.
-Plazma hücresi immünoglobulin, yani antikor üreten olgun be lenfositidir.
+Plazma hücresi immünoglobulin, yani antikor üreten olgun B lenfositidir.
 Bu hücrelerde immünoglobulinler granüllü endoplazmik retikulumda birikir.
-Genişlemiş retikulum içindeki immünoglobulin büyük, yuvarlak, eozinofilik yapılar oluşturur; bunlara Rasel cisimcikleri denir.
-Burası önemli, Rasel cisimciği plazma hücresinde immünoglobulin birikimidir ve iki klinik bağlamda görülür: çok sayıda aktif plazma hücresinin bulunduğu kronik inflamasyon ve neoplastik plazma hücrelerinin fazla immünoglobulin ürettiği plazma hücreli neoplaziler, örneğin multipl miyelom.
+Genişlemiş retikulum içindeki immünoglobulin büyük, yuvarlak, eozinofilik yapılar oluşturur; bunlara Russell cisimcikleri denir.
+Burası önemli, Russell cisimciği plazma hücresinde immünoglobulin birikimidir ve 2 klinik bağlamda görülür: çok sayıda aktif plazma hücresinin bulunduğu kronik inflamasyon ve neoplastik plazma hücrelerinin fazla immünoglobulin ürettiği plazma hücreli neoplaziler, örneğin multipl miyelom.
 
 Yanlış katlanmış proteinler, hücrenin çözüp ortadan kaldıramadığı eritilemeyen agregatlar da oluşturabilir.
-Bu, 3. nedenin, yani yetersiz katlanma ya da yıkımın morfolojik karşılığıdır.
-Alkolik hiyalin, karaciğer hepatositlerinde eozinofilik hiyalin kümeleri oluşturan bir protein agregatıdır; diğer adı Mallori Denk cisimciğidir.
-Nörofibriler yumaklar ise Alzaymır hastalığında nöronlarda görülen protein agregatlarıdır ve mekanizma ikide sözü edilen nörodejeneratif agregatların somut örneğidir.
+Bu, üçüncü nedenin, yani yetersiz katlanma ya da yıkımın morfolojik karşılığıdır.
+Alkolik hiyalin, karaciğer hepatositlerinde eozinofilik hiyalin kümeleri oluşturan bir protein agregatıdır; diğer adı Mallory-Denk cisimciğidir.
+Nörofibriler yumaklar ise Alzheimer hastalığında nöronlarda görülen protein agregatlarıdır ve mekanizma 2'de sözü edilen nörodejeneratif agregatların somut örneğidir.
 Agregatlar hücresel işlevi bozar, endoplazmik retikulum stresi ve apoptozu tetikleyebilir.
-Özetle: alım artışı tübül damlacığı, sentez artışı Rasel cisimciği, katlanma ya da yıkım yetersizliği agregatlar ve yanlış katlanma hastalıkları demektir.
+Özetle: alım artışı tübül damlacığı, sentez artışı Russell cisimciği, katlanma ya da yıkım yetersizliği agregatlar ve yanlış katlanma hastalıkları demektir.
 
 @@ Glikojen birikimleri
-Glikojen, glukozun hücre içindeki dallanmış depo formudur ve normalde sitoplazmada granüler formda bulunur. Patolojik birikim, glukoz ya da glikojen metabolizmasının bozulduğu durumlarda görülür. İki nedeni vardır. 1.'si kötü kontrollü diabetes mellitustur; kan glukozu sürekli yüksek olduğunda glukoza maruz kalan bazı hücreler fazla glikojen depolar ve bu edinsel bir nedendir. 2.'si glikojen depo hastalıkları, yani glikojenozlardır; glikojenin yapımında ya da yıkımında görev alan enzimlerin kalıtsal kusurları glikojenin hücrede kalmasına yol açar. Kısacası diyabette substrat fazladır, glikojenozlarda ise metabolizmayı yürüten enzim kusurludur.
+Glikojen, glukozun hücre içindeki dallanmış depo formudur ve normalde sitoplazmada granüler formda bulunur. Patolojik birikim, glukoz ya da glikojen metabolizmasının bozulduğu durumlarda görülür. 2 nedeni vardır. 1.'si kötü kontrollü diabetes mellitustur; kan glukozu sürekli yüksek olduğunda glukoza maruz kalan bazı hücreler fazla glikojen depolar ve bu edinsel bir nedendir. 2.'si glikojen depo hastalıkları, yani glikojenozlardır; glikojenin yapımında ya da yıkımında görev alan enzimlerin kalıtsal kusurları glikojenin hücrede kalmasına yol açar. Kısacası diyabette substrat fazladır, glikojenozlarda ise metabolizmayı yürüten enzim kusurludur.
 
 Birikimin yeri nedene göre değişir.
 Diyabette yüksek glukozlu filtratla karşılaşan böbrek tübül epiteli, kalp kası ve pankreasta insülin üreten Langerhans adacığı beta hücreleri glikojen biriktirir.
 Glikojen depo hastalıklarında ise glikojenin yoğun kullanıldığı ve depolandığı karaciğer, kalp, iskelet kası ve lökositler etkilenir.
 Mikroskopta glikojen rutin kesitte vakuole benzer boşluklar şeklinde görülür.
-Burası önemli, glikojen pe a se pozitif boyanır; pe a se, yani periyodik asit Şif boyası, glikojeni ve bazı karbonhidratları pembe mor boyayan histokimyasal bir yöntemdir.
+Burası önemli, glikojen PAS pozitif boyanır; PAS, yani periyodik asit Schiff boyası, glikojeni ve bazı karbonhidratları pembe mor boyayan histokimyasal bir yöntemdir.
 Vakuol görünümü hem lipidde hem glikojende görülebildiği için glikojeni ayırt ettiren özellik bu pozitif boyanmadır.
 
 @@ Pigmentler ve karbon
-Pigmentler dokulara renk veren renklendirici maddelerdir ve kaynaklarına göre ikiye ayrılır. Eksojen pigmentler vücut dışından gelir; bu dersteki örnek karbondur. Endojen pigmentler vücutta üretilir; lipofusin, melanin ve hemosiderin bu gruptadır. Pigmentleri ayırt ederken üç ölçüt kullanılır: kaynak, renk ve özel boyalarla gösterilebilen kimyasal içerik.
+Pigmentler dokulara renk veren renklendirici maddelerdir ve kaynaklarına göre ikiye ayrılır. Eksojen pigmentler vücut dışından gelir; bu dersteki örnek karbondur. Endojen pigmentler vücutta üretilir; lipofusin, melanin ve hemosiderin bu gruptadır. Pigmentleri ayırt ederken 3 ölçüt kullanılır: kaynak, renk ve özel boyalarla gösterilebilen kimyasal içerik.
 
 Karbon pigmentinin akciğer ve lenf düğümlerinde birikmesine antrakoz denir ve eksojen birikimin en tipik örneğidir.
 Kaynak hava kirliliği ve kömür tozudur.
@@ -178,7 +178,7 @@ Antrakoz genellikle zararsızdır, hafif birikim yalnızca bir iz olarak kalır;
 Lipofusin, aşınma pigmenti olarak da adlandırılan endojen bir pigmenttir ve uzun yıllar boyunca biriken oksidatif hasarın kalıntısıdır. Kaynağı serbest radikal aracılı lipid peroksidasyonudur; yani serbest radikallerin membran lipidlerini oksitlemesi. Bileşimi lipid protein kompleksleridir. Altın sarısı ile kahverengi arası renkte, ince granüller şeklinde görülür ve özellikle kalp, karaciğer ve beyinde bulunur. Klinik olarak hücre yaşlanmasının göstergesidir ve genellikle fonksiyonel sorun oluşturmaz.
 
 Burası önemli, bu bilgi çıkmış sorularda soruldu: yaşlı bir hastanın atrofik karaciğer biyopsisinde yaşlanmaya bağlı olarak beklenen bulgu hepatositlerde lipofusin birikimidir.
-Çeldiricileri doğru yere koyalım: interstisyumdaki amiloid hücre dışı bir birikimdir, hepatositteki glikojen diyabet ya da glikojenozları, Kupfer hücrelerindeki hemosiderin demir yükünü, Mallori Denk cisimcikleri yani alkolik hiyalin ise bir protein agregatını düşündürür; hiçbiri yaşlanmanın tipik izi değildir.
+Çeldiricileri doğru yere koyalım: interstisyumdaki amiloid hücre dışı bir birikimdir, hepatositteki glikojen diyabet ya da glikojenozları, Kupffer hücrelerindeki hemosiderin demir yükünü, Mallory-Denk cisimcikleri yani alkolik hiyalin ise bir protein agregatını düşündürür; hiçbiri yaşlanmanın tipik izi değildir.
 
 Ders kitabındaki şekil, kalp kası hücrelerindeki lipofusin granüllerini gösterir.
 Zeminde pembe boyanmış çizgili kalp kası lifleri ve mor çekirdekler vardır.
@@ -201,18 +201,18 @@ Nedenleri tekrarlanan kan nakilleriyle vücuda fazla demir girmesi, yani transf�
 @@ Hemosiderin morfolojisi ve Prusya mavisi
 Hemosiderin ışık mikroskobunda altın sarısı kahverengi granüller şeklinde görülür. Bu renk lipofusine çok benzediği için pigmentin demir içerdiği özel bir boyayla kanıtlanır. Bu boya Prusya mavisidir ve demiri mavi renkte boyar. Kahverengi pigment maviye dönüyorsa demir, yani hemosiderin içerir. Burası önemli, bu bilgi çıkmış sorularda soruldu: karaciğer biyopsisindeki kahverengi pigmentin demir, yani hemosiderin olduğuna karar vermek için uygulanan histokimyasal boya Prusya mavisidir. Lipofusin ile hemosiderin aynı renkte olduğu için sık karıştırılır; ayırt ettiren, yalnızca hemosiderinin Prusya mavisiyle boyanmasıdır. Klinik açıdan uzamış hemosideroz önemlidir; demir birikimi uzun süre devam ettiğinde dokular zarar görmeye başlar ve aşırı demir yükü özellikle kalp ve karaciğerde organ fonksiyon bozukluğuna yol açar.
 
-Ders kitabındaki şekil, karaciğer hücrelerindeki hemosiderini iki boyayla yan yana gösterir.
-1. panelde rutin hematoksilen eozin boyasında hepatosit sitoplazmalarında altın kahverengi, ince taneli pigment görülür; bu görüntü tek başına lipofusinden ayırt etmeye yetmez.
-2. panelde Prusya mavisi uygulandığında demir birikintileri koyu mavi kümeler olarak ortaya çıkar.
+Ders kitabındaki şekil, karaciğer hücrelerindeki hemosiderini 2 boyayla yan yana gösterir.
+Birinci panelde rutin hematoksilen eozin boyasında hepatosit sitoplazmalarında altın kahverengi, ince taneli pigment görülür; bu görüntü tek başına lipofusinden ayırt etmeye yetmez.
+İkinci panelde Prusya mavisi uygulandığında demir birikintileri koyu mavi kümeler olarak ortaya çıkar.
 Şeklin öğrettiği yaklaşım şudur: rutin boya pigmentin varlığını ve yerini gösterir, özel boya kimyasal kimliğini kanıtlar.
-Kahverengi pigment görünce iki soru sorun: demir var mı, ki bunu Prusya mavisi söyler, ve hücre yaşlı mı, ki bu lipofusini düşündürür.
+Kahverengi pigment görünce 2 soru sorun: demir var mı, ki bunu Prusya mavisi söyler, ve hücre yaşlı mı, ki bu lipofusini düşündürür.
 
 @@ Hücre dışı birikimler ve patolojik kalsifikasyon
-Birikimler yalnızca hücrelerin içinde olmaz. Bazı maddeler hücre dışı matrikste, yani hücreler arasındaki protein ve polisakkarit destek ağında birikir. Üç örnek vardır: hücre dışında anormal protein birikimi olan amiloidoz; eski yara ve hasar alanlarında oluşan, pembe ve homojen görünen yoğun bağ dokusu olan hiyalinize skar; ve dokularda anormal kalsiyum çökelmesi olan patolojik kalsifikasyon. Bu dersin odağı patolojik kalsifikasyondur. Hiyalin kelimesinin hem hücre içi protein birikimlerinde hem de hücre dışı skar dokusunda geçtiğine dikkat edin; ortak nokta pembe, homojen, camsı görünümdür.
+Birikimler yalnızca hücrelerin içinde olmaz. Bazı maddeler hücre dışı matrikste, yani hücreler arasındaki protein ve polisakkarit destek ağında birikir. 3 örnek vardır: hücre dışında anormal protein birikimi olan amiloidoz; eski yara ve hasar alanlarında oluşan, pembe ve homojen görünen yoğun bağ dokusu olan hiyalinize skar; ve dokularda anormal kalsiyum çökelmesi olan patolojik kalsifikasyon. Bu dersin odağı patolojik kalsifikasyondur. Hiyalin kelimesinin hem hücre içi protein birikimlerinde hem de hücre dışı skar dokusunda geçtiğine dikkat edin; ortak nokta pembe, homojen, camsı görünümdür.
 
 Patolojik kalsifikasyon anormal kalsiyum tuzu birikimidir.
 Kalsiyum normalde yalnızca kemik ve dişte mineral oluşturur; başka dokularda birikmesi patolojiktir.
-İki temel formu vardır: hasarlı dokuda gelişen distrofik kalsifikasyon ve kan kalsiyumunun yükselmesiyle ilişkili metastatik kalsifikasyon.
+2 temel formu vardır: hasarlı dokuda gelişen distrofik kalsifikasyon ve kan kalsiyumunun yükselmesiyle ilişkili metastatik kalsifikasyon.
 Klinik önemi bir yelpaze oluşturur: bazı durumlarda kalsifikasyon geçmiş bir doku hasarını gösteren sessiz bir izdir, bazı durumlarda ise yapıyı sertleştirerek organ disfonksiyonuna doğrudan neden olur.
 
 @@ Distrofik kalsifikasyon
@@ -246,17 +246,17 @@ Yani sekonder tabloda bez, böbrek yetmezliğinin yarattığı bozukluğa yanıt
 Kronik böbrek yetmezliği, metastatik kalsifikasyon nedenleri arasında sınavda en sık sorulan seçeneklerden biridir.
 
 Diğer nedenler kalsiyumun kana kemikten ya da D vitamini etkisiyle fazla girmesine dayanır.
-Kemik rezorpsiyonunun arttığı durumlar şunlardır: kemik yapımı ve yıkımının düzensizleştiği Peycet hastalığı, kemiğe yerleşip kemiği yıkan kemik metastazları ve hızla ölen tümör hücrelerinin içeriğinin kana boşaldığı tümör lizis sendromu.
+Kemik rezorpsiyonunun arttığı durumlar şunlardır: kemik yapımı ve yıkımının düzensizleştiği Paget hastalığı, kemiğe yerleşip kemiği yıkan kemik metastazları ve hızla ölen tümör hücrelerinin içeriğinin kana boşaldığı tümör lizis sendromu.
 D vitamini fazlalığı grubunda ise D vitamini intoksikasyonu ve sarkoidoz yer alır.
 Sarkoidozda granülomlardaki makrofajlar D vitaminini aktive eder ve aktif D vitamini kalsiyum emilimini artırır.
 
 Burası önemli, bu bilgi çıkmış sorularda 2 kez soruldu: hiperparatiroidizm, sarkoidoz ve kronik böbrek yetmezliği metastatik kalsifikasyona neden olur; aterom plağı ise metastatik değil, distrofik kalsifikasyonun örneğidir.
-Bu yüzden böyle bir soruda doğru yanıt ilk üç öncülün birlikte işaretlendiği seçenektir.
+Bu yüzden böyle bir soruda doğru yanıt ilk 3 öncülün birlikte işaretlendiği seçenektir.
 
-@@ Metastatik kalsifikasyonun yerleşimi ve iki formun karşılaştırması
+@@ Metastatik kalsifikasyonun yerleşimi ve 2 formun karşılaştırması
 Metastatik kalsifikasyon yaygın olsa da bazı dokuları daha sık tutar. En sık yerleşim yerleri arter duvarları, özellikle orta çaplı arterler; tübüller arasındaki destek dokusu olan böbrek interstisyumu; komşu alveolleri ayıran ince duvarlar olan akciğer alveol septaları; ve mide mukozasıdır. Böbrek, akciğer ve mide mukozası asit salgılar; bu yüzden iç ortamları alkali kalır ve kalsiyum tuzlarının çökmesine yatkın hale gelir. Mide mukozası, böbrek ve akciğer metastatik kalsifikasyonun klasik üçlüsüdür. Klinik etki çoğu olguda sessizdir. İleri olgularda ise böbrek dokusunda yaygın kalsiyum birikimi, yani nefrokalsinoz, böbrek yetmezliğine; akciğer kalsifikasyonu da solunum fonksiyon bozukluğuna yol açar.
 
-Şimdi iki formu üç ölçütle karşılaştıralım.
+Şimdi 2 formu 3 ölçütle karşılaştıralım.
 Serum kalsiyumu distrofik kalsifikasyonda normal, metastatikte yüksektir.
 Birikim yeri distrofikte nekrotik ya da hasarlı doku, metastatikte normal dokulardır.
 Tipik örnekler distrofikte kalsifiye kapak ve aterosklerotik plak, metastatikte böbrek, akciğer ve mide mukozasında yaygın kalsifikasyondur.
@@ -267,10 +267,10 @@ Seçeneklerde aterom plağı ya da kalsifiye kapak görürseniz distrofik, hiper
 @@ Yaşlanma ve birikimlerin klinik önemi
 Hücresel yaşlanma, zaman içinde biriken hasarların toplamıdır ve bu derste öğrendiğimiz birikimlerin bir kısmı yaşlanmanın doğrudan izidir. Zamanla onarılamayan DNA hasarı birikir. Protein homeostazı, yani proteinlerin sentez, katlanma ve yıkım dengesi bozulur; yanlış katlanmış proteinler daha kolay birikir. Lipofusin gibi atık pigmentler hücrede toplanır. Sonuçta hücrelerin çoğalma kapasitesi azalır ve fonksiyonel rezerv, yani dokunun artan ihtiyaca yanıt verebilmek için sahip olduğu yedek kapasite düşer. Klinik açıdan yaşlanma birçok kronik hastalık için güçlü bir risk faktörüdür.
 
-Birikimler klinikte iki farklı rol üstlenir.
+Birikimler klinikte 2 farklı rol üstlenir.
 Bazıları tanıda ipucu sağlar: hemosiderin eski kanamayı ya da demir yükünü, lipofusin hücre yaşlanmasını gösterir.
 Bazıları ise doğrudan organ disfonksiyonu nedenidir: yağlı karaciğer ilerleyerek siroza, kalsifiye kapak stenoz ve yetmezlik yoluyla kalp yetersizliğine yol açar.
-Patolog için temel üç soru şudur: biriken madde nedir, neden birikmiştir ve neye yol açmaktadır?
+Patolog için temel 3 soru şudur: biriken madde nedir, neden birikmiştir ve neye yol açmaktadır?
 Bu sorular maddenin kimliğini, mekanizmasını ve sonucunu birleştirir.
 
 Özetle, hücre içi birikimler lipidler, proteinler, glikojen ve pigmentlerden oluşur; hücre dışı birikimlerde odak kalsiyum tuzlarıdır.

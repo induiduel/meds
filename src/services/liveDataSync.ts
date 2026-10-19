@@ -25,6 +25,8 @@ async function purgeSwCache(pathPrefix: string) {
   if (typeof caches === 'undefined') return;
   try {
     for (const name of await caches.keys()) {
+      // Kullanıcının indirdiği çevrimdışı paketlere dokunulmaz (sw.js çevrimiçiyken onları zaten tazeler)
+      if (!/^medsoru-(data|runtime)-/.test(name)) continue;
       const cache = await caches.open(name);
       for (const req of await cache.keys()) {
         if (new URL(req.url).pathname.startsWith(pathPrefix)) await cache.delete(req);

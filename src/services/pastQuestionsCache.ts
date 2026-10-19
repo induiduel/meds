@@ -393,9 +393,11 @@ class PastQuestionsCacheService {
       return;
     }
 
-    // Parça parça (500'lük gruplar halinde) yazarak tarayıcı transaction zaman aşımını önle
-    const CHUNK_SIZE = 500;
+    // Parça parça yazılır: put() kaydı ana iş parçacığında kopyalar; 500'lük parça ilk yüklemede
+    // 1,5–2 sn'lik donma yapıyordu. 200'lük parçalar ve aralarında bir kare boşluk arayüzü akıcı tutar.
+    const CHUNK_SIZE = 200;
     for (let i = 0; i < slimList.length; i += CHUNK_SIZE) {
+      if (i > 0) await new Promise<void>((r) => setTimeout(r, 0));
       const chunk = slimList.slice(i, i + CHUNK_SIZE);
       await new Promise<void>((resolve) => {
         try {

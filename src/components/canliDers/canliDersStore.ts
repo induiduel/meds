@@ -21,6 +21,8 @@ export interface CdVaryant {
   sureSn: number;
   bayt: number;
   zamanlama?: [number, number][] | null;
+  /** Paragraf → 2., 3., … cümlenin seste başladığı saniye (sesteki duraklamalardan ölçülü; yoksa karakter oranı) */
+  cumleZaman?: Record<string, number[]> | null;
 }
 export interface CdListeDers {
   key: string;
@@ -214,6 +216,7 @@ let posByI = new Map<number, number>();
 let starts: number[] = [];
 let ends: number[] = [];
 let bolumBas: number[] = []; // her bölümün ilk paragrafının konumu (paras dizini)
+let cumleBas: (number[] | null)[] = []; // paras dizini → ölçülü cümle başlangıçları
 
 function parasKur(d: CdDetay | null) {
   paras = [];
@@ -230,6 +233,7 @@ function parasKur(d: CdDetay | null) {
 function zamanlamaKur() {
   starts = [];
   ends = [];
+  cumleBas = [];
   const v = st.varyantlar.find((x) => x.id === st.vid);
   const z = v?.zamanlama;
   if (paras.length && z && z.length) {
@@ -240,7 +244,15 @@ function zamanlamaKur() {
       starts.push(r[0]);
       ends.push(Number.isFinite(r[1]) ? r[1] : r[0]);
     }
-    if (ok) return void set({ zs: st.zs + 1 });
+    if (ok) {
+      const cz = v?.cumleZaman;
+      cumleBas = paras.map((p) => {
+        const t = cz?.[String(p.i)];
+        // Cümle sayısı istemcideki bölmeyle tutmuyorsa (metin değişti) tahmine dön
+        return Array.isArray(t) && t.length === cumleSinirlari(p).length - 1 ? t : null;
+      });
+      return void set({ zs: st.zs + 1 });
+    }
     starts = [];
     ends = [];
   }
@@ -257,15 +269,21 @@ function zamanlamaKur() {
   set({ zs: st.zs + 1 });
 }
 
-/** Paragrafı cümlelere böler: her cümlenin bitiş karakter konumu */
+/** Paragrafı cümlelere böler: her cümlenin bitiş karakter konumu.
+ *  scripts/sesli_anlatim/pdf_hizala.py::cumle_sinirlari ile BİREBİR aynı kural (hizalamanın cümle dizini buna dayanır):
+ *  [.!?…]+ (+ kapanan tırnak/parantez) ardından boşluk ya da metin sonu; sonraki karakter küçük harfse sınır değil
+ *  ("2. basamak", "1.'si" bölünmez). */
 function cumleSinirlari(p: ParaBilgi): number[] {
   if (p.cumleler) return p.cumleler;
   const out: number[] = [];
-  const re = /[^.!?…]+(?:[.!?…]+["'”’)\]]*\s*|$)/g;
+  const re = /[.!?…]+["'”’)\]]*(?:\s+|$)/g;
   let m: RegExpExecArray | null;
   while ((m = re.exec(p.metin))) {
     if (!m[0]) { re.lastIndex++; continue; }
-    out.push(m.index + m[0].length);
+    const e = m.index + m[0].length;
+    const sonraki = p.metin.charAt(e);
+    if (sonraki && sonraki !== sonraki.toLocaleUpperCase('tr') && sonraki === sonraki.toLocaleLowerCase('tr')) continue;
+    if (e > (out[out.length - 1] || 0)) out.push(e);
     if (re.lastIndex >= p.metin.length) break;
   }
   if (!out.length || out[out.length - 1] < p.metin.length) out.push(p.metin.length);
@@ -292,6 +310,12 @@ function konumBul(t: number) {
   }
   const p = paras[k];
   const s = cumleSinirlari(p);
+  const cb = cumleBas[k];
+  if (cb) {
+    let c = 0;
+    while (c < cb.length && cb[c] <= t + 0.05) c++;
+    return { aktif: p.i, cumle: c, bolum: p.bolum };
+  }
   const span = Math.max(0.001, ends[k] - starts[k]);
   const frac = Math.min(1, Math.max(0, (t - starts[k]) / span));
   const pos = frac * p.len;

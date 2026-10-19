@@ -23,8 +23,10 @@
   {
    "dosya": 0,
    "sayfa": 2,
-   "guven": 0.71,
+   "guven": 1.0,
    "sayfalar": [
+    2,
+    2,
     2,
     2,
     2,
@@ -38,6 +40,9 @@
    "sayfalar": [
     3,
     3,
+    3,
+    3,
+    3,
     3
    ]
   },
@@ -48,7 +53,45 @@
    "sayfalar": [
     3,
     3,
+    3,
     3
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 3,
+   "guven": 0.72,
+   "sayfalar": [
+    3,
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 3,
+   "guven": 1.0,
+   "sayfalar": [
+    3,
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 4,
+   "guven": 1.0,
+   "sayfalar": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
    ]
   },
   {
@@ -70,14 +113,28 @@
     5,
     5,
     5,
+    5,
     5
    ]
   },
   {
    "dosya": 0,
    "sayfa": 5,
-   "guven": 1.0,
+   "guven": 0.66,
    "sayfalar": [
+    5,
+    5,
+    5,
+    5
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 5,
+   "guven": 0.47,
+   "sayfalar": [
+    5,
+    5,
     5,
     5
    ]
@@ -85,10 +142,8 @@
   {
    "dosya": 0,
    "sayfa": 7,
-   "guven": 0.6,
+   "guven": 0.95,
    "sayfalar": [
-    7,
-    7,
     7,
     7,
     7,
@@ -99,10 +154,8 @@
   {
    "dosya": 0,
    "sayfa": 7,
-   "guven": 0.61,
+   "guven": 0.29,
    "sayfalar": [
-    7,
-    7,
     7,
     7,
     7,
@@ -112,11 +165,8 @@
   {
    "dosya": 0,
    "sayfa": 7,
-   "guven": 0.3,
+   "guven": 0.18,
    "sayfalar": [
-    7,
-    7,
-    7,
     7,
     7,
     7,
@@ -141,14 +191,18 @@
    "sayfalar": [
     7,
     7,
+    7,
+    7,
     7
    ]
   },
   {
    "dosya": 0,
    "sayfa": 7,
-   "guven": 0.59,
+   "guven": 1.0,
    "sayfalar": [
+    7,
+    7,
     7,
     7
    ]
@@ -166,9 +220,31 @@
   },
   {
    "dosya": 0,
+   "sayfa": 8,
+   "guven": 1.0,
+   "sayfalar": [
+    8,
+    8,
+    8,
+    8
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 8,
+   "guven": 0.68,
+   "sayfalar": [
+    8,
+    8,
+    8
+   ]
+  },
+  {
+   "dosya": 0,
    "sayfa": 9,
    "guven": 1.0,
    "sayfalar": [
+    9,
     9,
     9,
     9,
@@ -181,6 +257,28 @@
    "sayfa": 9,
    "guven": 1.0,
    "sayfalar": [
+    9,
+    9,
+    9,
+    9
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 9,
+   "guven": 1.0,
+   "sayfalar": [
+    9,
+    9,
+    9
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 9,
+   "guven": 0.49,
+   "sayfalar": [
+    9,
     9,
     9,
     9
@@ -189,7 +287,7 @@
   {
    "dosya": 0,
    "sayfa": 10,
-   "guven": 0.89,
+   "guven": 1.0,
    "sayfalar": [
     10,
     10,
@@ -211,9 +309,23 @@
   {
    "dosya": 0,
    "sayfa": 10,
-   "guven": 0.99,
+   "guven": 1.0,
    "sayfalar": [
     10,
+    10,
+    10,
+    10
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 11,
+   "guven": 1.0,
+   "sayfalar": [
+    11,
+    11,
+    11,
+    11,
     11,
     11
    ]
@@ -227,16 +339,6 @@
     11,
     11,
     11,
-    11,
-    11,
-    11
-   ]
-  },
-  {
-   "dosya": 0,
-   "sayfa": 11,
-   "guven": 1.0,
-   "sayfalar": [
     11,
     11,
     11
@@ -247,6 +349,7 @@
    "sayfa": 12,
    "guven": 1.0,
    "sayfalar": [
+    12,
     12,
     12,
     12,
@@ -270,11 +373,72 @@
    "sayfalar": [
     13,
     13,
+    13,
+    13,
     13
    ]
   },
   {
    "dosya": 0,
+   "sayfa": 13,
+   "guven": 1.0,
+   "sayfalar": [
+    13,
+    13,
+    14,
+    14,
+    14
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 14,
+   "guven": 0.93,
+   "sayfalar": [
+    14,
+    14,
+    14,
+    14
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 14,
+   "guven": 1.0,
+   "sayfalar": [
+    14,
+    14,
+    14
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 14,
+   "guven": 0.69,
+   "sayfalar": [
+    14,
+    14,
+    14,
+    14
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 14,
+   "guven": 1.0,
+   "sayfalar": [
+    14,
+    14,
+    14,
+    14,
+    13,
+    13,
+    13,
+    14
+   ]
+  },
+  {
+   "dosya": 0,
    "sayfa": 14,
    "guven": 1.0,
    "sayfalar": [
@@ -287,8 +451,9 @@
   {
    "dosya": 0,
    "sayfa": 14,
-   "guven": 0.67,
+   "guven": 0.98,
    "sayfalar": [
+    14,
     14,
     14,
     14
@@ -296,32 +461,14 @@
   },
   {
    "dosya": 0,
-   "sayfa": 14,
+   "sayfa": 15,
    "guven": 1.0,
    "sayfalar": [
-    14,
-    14,
-    14
-   ]
-  },
-  {
-   "dosya": 0,
-   "sayfa": 14,
-   "guven": 1.0,
-   "sayfalar": [
-    14,
-    14
-   ]
-  },
-  {
-   "dosya": 0,
-   "sayfa": 14,
-   "guven": 1.0,
-   "sayfalar": [
-    14,
-    14,
-    14,
-    14
+    15,
+    15,
+    15,
+    15,
+    15
    ]
   },
   {
@@ -342,6 +489,19 @@
    "sayfalar": [
     16,
     16,
+    16,
+    16,
+    16
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 16,
+   "guven": 0.96,
+   "sayfalar": [
+    16,
+    16,
+    16,
     16
    ]
   },
@@ -350,6 +510,20 @@
    "sayfa": 17,
    "guven": 1.0,
    "sayfalar": [
+    17,
+    17,
+    17,
+    17,
+    17,
+    17
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 17,
+   "guven": 0.91,
+   "sayfalar": [
+    17,
     17,
     17
    ]
@@ -360,17 +534,74 @@
    "guven": 1.0,
    "sayfalar": [
     18,
+    18,
+    18,
+    18
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 18,
+   "guven": 1.0,
+   "sayfalar": [
+    18,
+    18,
     18
    ]
   },
   {
    "dosya": 0,
    "sayfa": 19,
-   "guven": 0.45,
+   "guven": 0.9,
    "sayfalar": [
     19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 20,
+   "guven": 0.46,
+   "sayfalar": [
+    20,
     20,
     20
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 17,
+   "guven": 0.47,
+   "sayfalar": [
+    17,
+    17,
+    17,
+    17
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 17,
+   "guven": 0.34,
+   "sayfalar": [
+    17,
+    17,
+    17
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 17,
+   "guven": 0.06,
+   "sayfalar": [
+    17,
+    17
    ]
   },
   {
@@ -378,6 +609,7 @@
    "sayfa": 20,
    "guven": 1.0,
    "sayfalar": [
+    20,
     20,
     20,
     20
@@ -401,6 +633,8 @@
    "sayfalar": [
     22,
     22,
+    22,
+    22,
     22
    ]
   },
@@ -410,7 +644,30 @@
    "guven": 1.0,
    "sayfalar": [
     23,
+    23,
     23
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 23,
+   "guven": 0.41,
+   "sayfalar": [
+    23,
+    23,
+    23
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 24,
+   "guven": 0.52,
+   "sayfalar": [
+    24,
+    24,
+    24,
+    24,
+    24
    ]
   },
   {
@@ -418,6 +675,7 @@
    "sayfa": 24,
    "guven": 1.0,
    "sayfalar": [
+    24,
     24,
     24,
     24,
@@ -442,17 +700,25 @@
     26,
     26,
     26,
-    26,
-    26,
-    26,
     26
    ]
   },
   {
    "dosya": 0,
-   "sayfa": 27,
-   "guven": 0.58,
+   "sayfa": 25,
+   "guven": 1.0,
    "sayfalar": [
+    25,
+    25,
+    27
+   ]
+  },
+  {
+   "dosya": 0,
+   "sayfa": 27,
+   "guven": 1.0,
+   "sayfalar": [
+    27,
     27,
     27,
     27,
@@ -472,11 +738,8 @@
   {
    "dosya": 0,
    "sayfa": 27,
-   "guven": 1.0,
+   "guven": 0.39,
    "sayfalar": [
-    27,
-    27,
-    27,
     27,
     27,
     27
@@ -487,10 +750,6 @@
    "sayfa": 28,
    "guven": 1.0,
    "sayfalar": [
-    28,
-    28,
-    28,
-    28,
     28,
     28,
     28,

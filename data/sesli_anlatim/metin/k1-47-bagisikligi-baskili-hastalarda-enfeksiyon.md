@@ -1,428 +1,232 @@
-# Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar
-
-@@ İmmünkompromize konak ve immün yetmezlik nedenleri
-
-İmmünsupresyon, bağışıklık sisteminin bir veya birden fazla bileşeninin işlevinin baskılanmasıdır ve ilaçlar, hastalıklar ya da başka nedenlerle gelişebilir.
-İmmünkompromize konak ise doğuştan, yani primer, ya da sonradan, yani sekonder gelişen immün sistem bozuklukları nedeniyle enfeksiyonlara karşı savunma kapasitesi azalmış kişidir.
-Primer immün yetmezlikler genetik kökenli ve nadir bozukluklardır.
-Sekonder immün yetmezlikler ise sonradan gelişen ve çok daha sık görülen nedenlerdir; klinikte karşılaştığınız hastaların büyük çoğunluğu bu gruptadır.
-Şunu baştan aklınıza yazın: primer ve sekonder ayrımı sınıflama içindir, klinik karar ise bağışıklığın hangi bileşeninin bozulduğuna göre verilir.
-
-Primer immün yetmezlik örnekleri bağışıklığın kollarına göre gruplanır: be hücre defektleri, DiGeorge sendromu gibi te hücre defektleri, kronik granülomatöz hastalık gibi fagosit defektleri, kompleman eksiklikleri ve kombine immün yetmezlikler.
-Sekonder nedenler arasında hastalık olarak HIV enfeksiyonu ile lösemi ve lenfoma gibi maligniteler; ilaç olarak kortikosteroidler, kemoterapi, kalsinörin inhibitörleri ve anti te en ef ajanlar yer alır.
-Bunlara organ ve kök hücre nakli, diyabet, kronik böbrek hastalığı ve karaciğer hastalıkları gibi kronik hastalıklar, malnütrisyon, yaşlılık, yanık, travma ve büyük cerrahi eklenir.
-
-Burası önemli, bu bilgi çıkmış sorularda soruldu: yaşlılık, malnütrisyon, yanık, travma ve büyük cerrahi sekonder immün yetmezlik nedenidir; kadın cinsiyet ise bir immün yetmezlik nedeni değildir ve listede olmayan bu tür seçenekler sık kullanılan çeldiricilerdir.
-Aynı şekilde kemoterapi ve HIV enfeksiyonu doğuştan değil, sonradan gelişen yani sekonder immün yetmezlik nedenleridir.
-
-Sağlam bir bağışıklık sistemi, doğal ve kazanılmış immün yanıtın koordineli çalışmasıyla vücudu mikroorganizma invazyonundan korur.
-Doğal immünite ilk ve hızlı savunmadır; cilt ve mukoza gibi fiziksel bariyerler, nötrofil ve makrofaj gibi fagositler, doğal öldürücü hücreler, kompleman sistemi ve doğal antimikrobiyal moleküllerden oluşur.
-Kazanılmış immünitede be lenfositleri antikor üretimiyle humoral yanıtı, te lenfositleri makrofaj aktivasyonu ve sitotoksik etkiyle hücresel yanıtı oluşturur.
-Sayfadaki önemli mesaj dersin tamamının temelidir: immün sistemin hangi bileşeninin etkilendiği, hastanın yatkın olduğu enfeksiyon etkenlerini belirler ve bu bilgi korunma, erken tanı ve tedavi yaklaşımı açısından yol göstericidir.
-
-Normal immün yanıtta öz antijenlere karşı immün tolerans vardır, yani otoimmünite gelişmez; yabancı antijene ise etkili yanıt verilir, patojen elimine edilir ve enfeksiyon kontrol altına alınır.
-Şema bu dengeden üç sapmayı karşılaştırır.
-İmmün yetmezlikte patojene yetersiz ya da etkisiz yanıt verilir; sonuçları enfeksiyonlara yatkınlık, fırsatçı enfeksiyonlar, latent enfeksiyonların reaktivasyonu ve daha ağır, uzamış klinik seyirdir.
-Otoimmünitede öz antijene uygunsuz yanıt doku hasarı ve kronik inflamasyon yapar; sistemik lupus eritematozus, romatoid artrit, Tip 1 diyabet ve otoimmün tiroit hastalıkları örnektir.
-Aşırı duyarlılıkta zararsız antijene aşırı yanıt verilir; alerjik rinit, alerjik astım, ilaç alerjileri ve anafilaksi bu gruptadır.
-Bu dersin konusu yalnız ilk sapmadır.
-
-@@ Bağışıklığı baskılanmış hastada enfeksiyonların genel özellikleri
-
-Bağışıklığı baskılanmış hastada solunum ve çevreyle ilişkili enfeksiyonlar daha sık görülür; solunum yolu, gastrointestinal sistem, üriner sistem ve cilt enfeksiyonları sıktır, çünkü bu yüzeyler mikroorganizmayla ilk temas eden alanlardır.
-Latent enfeksiyonların reaktivasyon riski de artar.
-Sağlıklı kişide immün denetimle uykuda tutulan Varisella zoster virüsü (VZV) (VZV), herpes simpleks virüsü, sitomegalovirüs, Hepatit B virüsü (HBV) ve tüberküloz immünsüpresyonla reaktive olabilir.
-Reaktivasyon, dışarıdan yeni bir bulaş olmadan hastanın kendi içindeki etkenle hastalık gelişmesi demektir; bu yüzden immünsupresif tedavi başlamadan önce latent enfeksiyonların sorgulanması ve taranması önemlidir.
-
-Klinik bulgular atipik olabilir.
-Ateş, lökositoz ve tipik inflamatuvar yanıtlar olmayabilir, lokal ve radyolojik bulgular silik kalabilir; bulguyu oluşturan inflamatuvar hücreler de baskılandığı için bulgunun yokluğu enfeksiyonu dışlamaz.
-Toplumda daha seyrek görülen etkenlerle daha ağır seyirli enfeksiyonlar görülür; viral, fungal, paraziter ve fırsatçı bakteriyel patojenlerle daha sık karşılaşılır.
-Örnekler Nokardiya, Aspergillus, Pnömosistis jirovesi, sitomegalovirüs, herpes simpleks ve Varisella zoster virüsleri, Listerya, Toksoplazma ve mikobakterilerdir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: bağışıklığı baskılanmış kişide fırsatçı patojenler toplumla aynı sıklıkta değil, çok daha sık görülür; Toksoplazma, Listerya ve tüberküloz bu hastalarda beklenen etkenlerdir.
-
-Çoklu ilaç direnci olan patojenlerle enfeksiyon riski de artar; önceki antibiyotik ya da antifungal kullanımı, hastane yatışı ve invaziv girişimler bu riski yükseltir.
-Enfeksiyonlar daha hızlı ilerleyebilir ve ağır klinik tabloyla seyredebilir; sepsis, organ tutulumu ve dissemine enfeksiyonlar sık görülür ve ciddi morbidite ile mortaliteye yol açabilir.
-Bu yüzden klinik şüphe eşiği düşük tutulmalı, tanı ve tedavi gecikmeden başlatılmalıdır.
-Sonuç olarak erken tanı, uygun antimikrobiyal tedavi ve destekleyici bakım önemlidir; aşılar, toksoplazma profilaksisi ve Pnömosistis jirovesi profilaksisi gibi profilaksi yöntemleri de riskin azaltılmasında önemli rol oynar.
-Bu hastada bekle ve gör yaklaşımı yoktur.
-
-@@ Dört savunma hattı ve etken eşleşmesi
-
-Enfeksiyon riskini belirleyen dört savunma hattı vardır ve her biri bozulduğunda farklı bir etken grubu öne çıkar.
-1.'si bariyerlerdir: deri, mukozalar ve kateter bütünlüğü.
-Bozulduğunda endojen flora kaynaklı invaziv enfeksiyon riski artar.
-2.'si nötrofillerdir; bakteri ve küflere karşı erken yanıtı sağlarlar ve nötropenide bakteriyemi ile invaziv aspergilloz öne çıkar.
-3.'sü te hücreleridir; hücre içi patojenleri ve fırsatçı etkenleri kontrol ederler, bozuklukta Pnömosistis pnömonisi, sitomegalovirüs, Toksoplazma ve mikobakteriler görülür.
-4.'sü be hücreleri ve dalaktır; antikor, opsonizasyon ve kapsüllü bakterilerin temizlenmesinden sorumludurlar, bozulduğunda pnömokok, Hemofilus influenza tip be ve meningokok öne çıkar.
-
-Sekonder immün yetmezliğin klinikte en sık nedenleri HIV enfeksiyonu ve ileri immünsüpresyon; hematolojik maligniteler ve antineoplastik tedaviler; kortikosteroidler, biyolojik ajanlar ve be hücre tüketici tedaviler; hematopoetik kök hücre ve solid organ nakli; aspleni, protein kaybı, malnütrisyon ve kronik organ hastalıklarıdır.
-Unutmayın, aynı hastada birden fazla savunma mekanizması bozulabilir; bu yüzden etken listesini tek bir hatta göre daraltmamak gerekir.
-
-Bu hatları klinik yoruma çevirelim.
-Te hücre yanıtı zayıfladığında hücre içi mikroorganizmaların kontrolü güçleşir; bu nedenle Pnömosistis, sitomegalovirüs, toksoplazma ve tüberküloz akla gelir.
-Antikor eksikliğinde ve asplenide kapsüllü bakterilerin uzaklaştırılması zorlaşır; pnömokok, Hemofilus influenza tip be ve meningokok önemli örneklerdir.
-Nötropeni ve mukozal bariyer hasarında bakteriyel invazyon öne çıkar; derin ve uzamış nötropenide Kandida ve Aspergillus gibi mantarlar da önem kazanır.
-
-Eşleşme tablosu bunu ayrıntılandırır.
-Te hücre yetmezliğinde Pnömosistis jirovesi, sitomegalovirüs ve Varisella zoster virüsü (VZV) (VZV), Toksoplazma gondii, Mikobakteriyum tüberkülozis, Kriptokok ve Nokardiya beklenir.
-Antikor eksikliği ve asplenide Streptokokus pnömoniya, Hemofilus influenza tip be ve Neisserya meningitidis; bazı hastalarda ayrıca Giardiya ve enterovirüsler görülür.
-Nötropeni ve bariyer hasarında Enterobakteriyaseler, Psödomonas aeruginoza, Stafilokokus aureus ve streptokoklar, risk ve süreye bağlı olarak da Kandida ve Aspergillus öne çıkar.
-Etken listeleri mutlak değildir; klinik durum ve eşlik eden defektler önemlidir.
-
-@@ Hücresel immünite ve hücresel yetmezliğin sonuçları
-
-Hücresel immünite te lenfositleriyle yürür ve özellikle hücre içinde saklanan mikroorganizmalara karşı savunma sağlar.
-Ce de dört pozitif te hücreleri makrofaj aktivasyonu ve koordinasyon sağlar; CD8 pozitif te hücreleri enfekte hücreleri öldürür.
-Bu sistem bozulduğunda hücre içi mikroorganizmalar ve fırsatçı enfeksiyonlar öne çıkar.
-Risk, immünsüpresyonun şiddeti ve süresine bağlıdır; kısa ve hafif bir baskılanma ile uzun ve derin bir baskılanma aynı riski taşımaz.
-Hücre içindeki etken antikora görünmez; onu ancak aktive makrofaj ya da sitotoksik te hücresi temizleyebilir.
-
-Şema iki kolun nasıl çalıştığını gösterir.
-Yardımcı te hücreleri olan CD4 pozitif lenfositler, makrofaj ya da dendritik hücre gibi antijen sunan hücrenin MHC sınıf iki ile sunduğu antijeni tanır ve interferon gama, interlökin iki gibi sitokinler salgılar.
-Böylece makrofajları, CD8 pozitif lenfositleri, be hücrelerini ve diğer immün hücreleri aktive eder, be hücresine antikor yapımında yardım eder.
-Hücre içi patojenlerin eliminasyonunda makrofaj aktivasyonu kritik öneme sahiptir.
-Sitotoksik te hücreleri olan CD8 pozitif lenfositler ise MHC sınıf bir ile sunulan antijeni tanır; perforin ve granzim gibi sitotoksik moleküllerle virüsle enfekte hücreleri ve diğer hedef hücreleri apoptoza uğratarak ortadan kaldırır.
-
-Hücresel sistemin başlıca hedefleri virüsler, hücre içi bakteriler, bazı mantarlar ve parazitlerdir; dolayısıyla yetmezliğinde bu grupların yol açtığı fırsatçı enfeksiyonların görülme riski artar.
-Latent enfeksiyonların, örneğin Varisella zoster virüsünün ve tüberkülozun reaktivasyonu sıklaşır; zona ve tüberküloz reaktivasyonu hücresel bağışıklığın baskılandığını gösteren klinik ipuçlarıdır.
-Enfeksiyon kontrol altına alınamazsa daha ağır seyir ve dissemine enfeksiyonlar ortaya çıkabilir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: hücresel immün yetmezlikte sitomegalovirüs, Mikobakteriyum tüberkülozis ve Pnömosistis jirovesi enfeksiyonları görülür.
-
-@@ Hücresel immün yetmezliğin nedenleri
-
-İleri HIV enfeksiyonu, bazı hematolojik maligniteler ve allojenik kök hücre nakli te hücre yanıtını bozabilir.
-Sistemik kortikosteroidler, nakil ilaçları ve bazı biyolojik tedaviler de hücresel bağışıklığı baskılar; risk kullanılan ilacın türüne, dozuna ve süresine bağlıdır.
-Anti te en ef tedavisi alan hastalarda latent tüberkülozun reaktivasyonu özellikle önemlidir, bu nedenle tedavi öncesi uygun tarama gerekir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: HIV enfeksiyonunda oluşan en önemli immün bozukluk hücresel immün bozukluktur; HIV hümoral yetmezliğin değil, hücresel yetmezliğin nedenidir.
-
-Tablo bu nedenleri iki sütunda toplar.
-Hastalıklar sütununda ileri HIV enfeksiyonu, lenfoma ve diğer hematolojik maligniteler, allojenik kök hücre nakli ve graft versus host hastalığı vardır.
-İlaçlar sütununda sistemik glukokortikoidler, te hücre baskılayıcı nakil ilaçları ve bazı biyolojik ve sitotoksik ajanlar yer alır.
-Önemli nokta kutusu anti te en ef tedavisinin özellikle tüberküloz reaktivasyonu riskini artırdığını vurgular; risk ajanlar arasında farklıdır.
-
-@@ Hücresel yetmezlikte klinik ipuçları ve akciğer paternleri
-
-Hücresel immün yetmezlikte etkenler belirli organlarda tanınabilir tablolar oluşturur.
-Akciğerde Pnömosistis pnömonisi subakut dispne, hipoksemi ve bilateral buzlu cam görünümüyle seyreder; tüberküloz, Nokardiya ve invaziv fungal enfeksiyonlar da akciğeri tutar.
-Santral sinir sisteminde toksoplazma fokal nörolojik bulgu ve halka tarzı lezyonlar yapar, kriptokok ise subakut menenjit tablosuyla gelir.
-Viral tarafta sitomegalovirüs hastalığı ile Varisella zoster ve herpes simpleks reaktivasyonu görülür.
-Risk, immün bozukluğun türüne bağlıdır.
-
-İmmünkompromize hastada pnömoni şüphesinde akciğer grafisi normal ya da nonspesifik olabilir.
-Bunun olası nedenleri erken dönem enfeksiyon, özellikle erken dönemde Pnömosistis pnömonisi, Aspergillus gibi invaziv fungal enfeksiyonlar ve viral pnömonilerdir.
-Klinik şüphe devam ediyorsa hasta toraks bilgisayarlı tomografisiyle değerlendirilmelidir; normal grafi bu hastada pnömoniyi dışlamaz.
-Nodüler infiltrasyon ve kavitasyon paterninde invaziv aspergillozla Aspergillus türleri, Nokardiya, tüberküloz, Histoplazma ve Koksidioides gibi endemik mantarlar, Mukorales gibi diğer fungal enfeksiyonlar, septik emboliler ve atipik mikobakteriler düşünülür.
-
-Fokal konsolidasyon klasik pnömoni paternidir ve en çok bakterilerle ilişkilidir: Streptokokus pnömoniya, Stafilokokus aureus, Klebsiella, Psödomonas ve diğer Enterobakteriyaseler gibi gram negatif bakteriler ve Lejyonella.
-Tüberküloz, konsolidasyon da yapabilen Nokardiya, Aspergillus ve endemik mantarlar gibi fungal enfeksiyonlar ve septik emboliler de bu paternde yer alır.
-Diffüz interstisyel infiltrasyon ya da buzlu cam paterninde Pnömosistis pnömonisi; sitomegalovirüs, influenza, respiratuvar sinsityal virüs ve sars koronavirüs iki gibi virüsler; diffüz ya da multifokal görünüm yapabilen Lejyonella düşünülür.
-Bu paternin enfeksiyon dışı nedenleri de vardır: amiodaron, metotreksat ve bleomisin gibi ilaçların toksisitesi, akciğer ödemi, alveoler hemoraji, akut solunum sıkıntısı sendromu ve organize pnömoni.
-
-Radyolojik patern etiyolojik tanıyı daraltır ama tek başına kesin tanı koydurmaz.
-Hastanın immün yetmezlik tipi, süresi, nötropeni varlığı, profilaksi öyküsü ve klinik bulguları birlikte değerlendirilmelidir.
-İmmünkompromize hastada atipik ve birden fazla paternin bir arada bulunabileceği unutulmamalıdır.
-Klinik şüphe yüksekse toraks tomografisi ve bronkoalveoler lavaj gibi mikrobiyolojik incelemelerle ileri değerlendirme yapılır.
-
-@@ Ha i ve enfeksiyonunda CD4 eşikleri ve ilaçlara bağlı risk
-
-Ha i ve enfeksiyonunda CD4 pozitif hücre sayısı düştükçe fırsatçı enfeksiyonlar belirli bir sırayla ortaya çıkar.
-Ce de dört sayısı mikrolitrede iki yüz hücrenin altına inince Pnömosistis pnömonisi riski belirginleşir.
-Yüzün altında toksoplazma ensefaliti ve kriptokokkoz riski artar.
-Ellinin altında sitomegalovirüs retiniti ve dissemine Mikobakteriyum avium kompleksi enfeksiyonu daha olasıdır.
-Bunu iki yüzde akciğer, yüzde beyin, ellide göz ve yaygın mikobakteri diye hatırlayabilirsiniz.
-Tüberküloz ise herhangi bir CD4 düzeyinde görülebilir.
-Bu eşikler yaklaşık ilişkilerdir; antiretroviral tedavi, viral yük ve profilaksi riski değiştirir.
-
-Bu sayfa iki fırsatçı enfeksiyonun görüntülerini yan yana sunar.
-Toksoplazma ensefalitinde beyin görüntülemesinde halka tarzı kontrast tutan lezyon ve çevresinde ödem izlenir.
-Pnömosistis pnömonisinde akciğerde bilateral buzlu cam görünümü vardır.
-İkisi de hücresel immün yetmezliğin fırsatçı enfeksiyonlarıdır ve sayfa başlığının vurguladığı gibi yalnız edinsel immün yetmezlik sendromu evresinde değil, diğer sekonder immün yetmezliklerde de görülebilir.
-
-Kortikosteroid ve biyolojik ajan kullanan hastada risk tek bir değişkenle belirlenmez; doz, süre, eşlik eden ilaçlar ve altta yatan hastalık birlikte değerlendirilir.
-Uzun süreli yüksek doz steroid Pnömosistis pnömonisi ve bazı fungal enfeksiyonların riskini artırabilir.
-Anti te en ef tedavisi öncesinde latent tüberküloz taraması önemlidir.
-Pnömosistis profilaksisi ise her steroid kullanıcısına otomatik uygulanmaz; karar risk temellidir.
-Yüksek doz, uzun süre ve eşlik eden immünsupresif ilaçlar profilaksi kararını destekler.
-
-@@ Humoral immün sistem ve kompleman
-
-Humoral immün sistem, be lenfositlerinin ürettiği antikorlarla gerçekleşen adaptif bağışıklık yanıtıdır.
-Temel bileşenleri be lenfositler, plazma hücreleri, antikorlar yani immünoglobulinler ve kompleman sistemidir.
-Özellikle hücre dışı bakterilere ve kapsüllü mikroorganizmalara karşı savunmada önemlidir.
-Antikorlar nötralizasyon, opsonizasyon ve klasik kompleman yolunun aktivasyonunu sağlar.
-İmmünoglobulin M erken antikor yanıtında, immünoglobulin G ise uzun süreli sistemik humoral yanıtta önemli rol oynar.
-Kısaca hücresel immünite hücrenin içini, humoral immünite hücrenin dışını korur.
-
-Şema klasik kompleman yolunu basamak basamak gösterir.
-İmmünoglobulin M ya da G içeren antijen antikor kompleksi ce bir ku'yu aktive eder; ce dört ve ce iki üzerinden ce üçe ulaşılır.
-Ce üç be bir opsonindir; mikroorganizmayı kaplayarak fagositik hücrelere bağlanmasını sağlar.
-Ce üç a ve ce beş a anafilatoksinlerdir; inflamasyon, artmış vasküler permeabilite ve kemotaksi yaparlar, kemotakside özellikle ce beş a öne çıkar.
-Ce beş be dokuz yani membran atak kompleksi membran lizisi yapar ve özellikle gram negatif bakteriler için önemlidir.
-Kompleman sistemi hem doğal hem adaptif bağışıklıkta görev alır.
-
-Antikorların temel işlevleri dörttür.
-Nötralizasyon, toksinlerin etkisizleştirilmesi ve viral ya da bakteriyel adezyonun engellenmesidir.
-Opsonizasyon, özellikle immünoglobulin G ve ce üç be ile kaplanan mikroorganizmaların fagositozunun kolaylaşmasıdır.
-3.'sü klasik yoldan kompleman aktivasyonu, 4.'sü immünoglobulin A ile mukozal yüzeylerde adezyonun engellenmesidir.
-Sınıflara bakarsak, immünoglobulin M primer erken yanıtın ve güçlü klasik yol aktivasyonunun antikorudur.
-İmmünoglobulin G uzun süreli yanıt, nötralizasyon, opsonizasyon ve kompleman aktivasyonu yapar; plasentadan geçerek yenidoğanı korur.
-İmmünoglobulin A solunum, gastrointestinal ve genital sistemde mukozal savunma sağlar.
-İmmünoglobulin E paraziter enfeksiyonlar ve alerjik yanıtlarda, immünoglobulin D ise naif be lenfosit reseptörü olarak görev alır.
-
-@@ Hümoral yetmezlik, nedenleri ve aspleni
-
-Hümoral immün yetmezliklerde antikor üretimi yetersizdir ya da fonksiyonel antikor yanıtı bozulmuştur.
-Kapsül fagositozu zorlaştırır; antikor ve kompleman bakteriyi kaplayarak temizlenmesini kolaylaştırır.
-Bu yüzden özellikle kapsüllü bakterilere, yani Streptokokus pnömoniya, Hemofilus influenza tip be ve Neisserya meningitidise karşı savunma zayıflar.
-Klinikte tekrarlayan sinopulmoner enfeksiyonlar, yani otit, sinüzit ve pnömoni sık görülür; böyle bir öykü hümoral yetmezliği düşündürmelidir.
-Aspleni, antikor eksikliğinden farklı bir mekanizmadır; dalak opsonize bakterileri kandan süzen başlıca organdır.
-Ancak kapsüllü bakteriler iki durumda da ortak risktir.
-
-Kronik lenfositik lösemi, multipl miyelom ve anti CD20 tedavisi antikor miktarını ya da işlevini azaltabilir.
-Antikorlar bakterilerin opsonizasyonunu kolaylaştırdığı için bunların eksikliği enfeksiyonu artırır.
-Korunmada aşılama temel basamaktır; seçilmiş antikor eksikliklerinde immünoglobulin replasmanı düşünülür.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: multipl miyelom hücresel değil, hümoral immün yetmezlik nedenidir; bu ayrım çeldiricilerde sıkça kullanılır.
-
-Tablo başlıca nedenleri özetler: kronik lenfositik lösemi ve multipl miyelom, rituksimab gibi anti CD20 tedavileri, protein kaybettiren durumlar ve hipogamaglobulinemi.
-Rituksimab be hücrelerini tüketir; protein kaybında ise antikor kaybedilir.
-Karakteristik etkenler Streptokokus pnömoniya ve Hemofilus influenzadır; asplenide Neisserya meningitidis, antikor eksikliğinde ise Giardiya ayrıca vurgulanır.
-Korunma yaklaşımı aşıların gözden geçirilmesi, seçilmiş hastalarda immünoglobulin replasmanı ve asplenide ateşin acil değerlendirilmesidir.
-
-Asplenide pnömokok, meningokok ve Hemofilus influenza tip be kaynaklı invaziv enfeksiyon riski artar.
-Uygun aşılama ve hasta eğitimi kritik önemdedir.
-Asplenili hastada ateş, gecikmeden değerlendirilmesi gereken bir durumdur, çünkü enfeksiyonlar ağır ve hızlı seyredebilir; splenektomili hastada ateş saatler içinde ağır sepsise ilerleyebilir.
-
-@@ Nötropeni ve febril nötropeni tanımı
-
-Nötrofil, bakteri ve küflere karşı ilk müdahale hücresidir.
-Mutlak nötrofil sayısı mikrolitrede beş yüzün altındaysa ağır nötropeni, yüzün altındaysa çok ağır nötropeni denir.
-Risk yalnızca sayıya değil, nötropeninin süresine ve eşlik eden mukozit ile kateterlere de bağlıdır; aynı sayıdaki iki hastadan nötropenisi uzun süren ve mukoziti olanın riski daha yüksektir.
-Özellikle 7 günden uzun süren derin nötropenide invaziv küf enfeksiyonu riski yükselir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: nötropeni için mutlak nötrofil sayısının beş yüzün altında olması esas alınır ve uzamış nötropenide mantar, özellikle küf enfeksiyonu riski artar; uzamış nötropenide mantar enfeksiyonu görülmez demek yanlıştır.
-
-Febril nötropeni tıbbi acildir.
-Ateş ölçütü, tek ölçümde otuz sekiz virgül 3 derece ya da üzeri, veya 38 derece ya da üzerindeki ateşin 1 saat sürmesidir.
-Nötropeni ölçütü, mutlak nötrofil sayısının mikrolitrede beş yüzün altında olması ya da 48 saat içinde bu düzeye düşmesinin beklenmesidir.
-Enflamasyon bulguları silik olabilir, ateş tek bulgu olabilir; nötrofil yokluğunda püy ve belirgin lokal bulgu oluşmaz.
-Hemodinamik instabilite varsa sepsis yaklaşımı geciktirilmez.
-
-Burası önemli, bu bilgi çıkmış sorularda soruldu: febril nötropeni tanımı tek ölçümde otuz sekiz virgül 3 derece ya da 1 saat süren 38 derece ateş ile beş yüzün altındaki mutlak nötrofil sayısına dayanır; bin beş yüz eşiği yanlıştır.
-Febril nötropenide sorun izole hümoral immün yetmezlik değil, nötrofil eksikliğidir.
-Mukozit bariyeri bozduğu için Kandida kaynaklı kandidemi riskini artırır, uzamış nötropeni de küf mantarı enfeksiyonu riskini yükseltir.
-
-@@ Febril nötropenide ilk yaklaşım ve ampirik tedavi
-
-Febril nötropenide yaklaşım üç sütunlu bir akışla özetlenir: ilk değerlendirme, örnekleme ve tedavi.
-İlk değerlendirmede vital bulgular ve sepsis bulguları, odak muayenesi ve ilaç, profilaksi ve direnç öyküsü yer alır.
-Örneklemede antibiyotik öncesinde mümkünse periferik ve kateter kan kültürleri alınır, odak varsa hedefe yönelik örnek, laboratuvar ve gerekirse görüntüleme yapılır.
-Tedavide ampirik antibiyotik gecikmeden başlanır; yüksek riskte damar yoluyla antipsödomonal beta laktam verilir ve seçim klinik duruma ve yerel direnç verilerine göre düzenlenir.
-
-Önce vital bulgular, sepsis belirtileri ve olası enfeksiyon odağı değerlendirilir.
-Ağız mukozası, akciğerler, deri, perine ve kateter giriş yerleri incelenir; silik bulgular ancak bu hedefli muayeneyle yakalanır.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: febril nötropenide odak muayenesi ağız mukozasını, perineyi ve kateter ile port çevresini kapsar.
-Antibiyotik başlanmasını geciktirmeden, mümkünse öncesinde periferik ve kateterden kan kültürleri alınır; diğer örnekler klinik odağa göre seçilir.
-Kültür almak önemlidir ama antibiyotiği geciktirmek için gerekçe değildir.
-Yüksek riskli hastada damar yoluyla antipsödomonal beta laktam tercih edilir, çünkü nötropenide Psödomonas aeruginoza öldürücü olabilir; tedavi klinik yanıt ve kültür sonuçlarına göre yeniden değerlendirilir.
-
-Ampirik tedavi risk temellidir.
-Yüksek riskli ve yatan hastada damar yoluyla verilen antipsödomonal beta laktam seçenekleri piperasilin tazobaktam, sefepim ve meropenem ya da imipenem silastatindir; seçim yerel direnç ve hasta özelliklerine göre yapılır.
-Seçilmiş düşük riskli uygun hastada ayaktan oral tedavi düşünülebilir; siprofloksasin ile amoksisilin klavulanat birlikteliği bir seçenektir, ancak kinolon profilaksisi ve direnç dikkate alınır.
-Kinolon profilaksisi altında ateşlenen hastada bu yol uygun olmayabilir.
-
-Ek kapsam ne zaman gerekir?
-Vankomisin rutin değildir.
-Kateter enfeksiyonu, pnömoni, cilt ve yumuşak doku enfeksiyonu, hemodinamik instabilite ya da metisiline dirençli Stafilokokus aureus gibi dirençli gram pozitif etken şüphesinde değerlendirilir.
-Başlangıç tedavisi gecikmemeli; yerel antibiyogram ve klinik durum belirleyicidir.
-
-Uygun antibiyotiğe rağmen ateş sürüyorsa yeniden klinik değerlendirme gerekir, çünkü etken antibakteriyel tedavinin kapsamı dışında olabilir.
-Uzamış derin nötropenide invaziv Aspergillus ve diğer küfler önem kazanır.
-Seçilmiş hastalarda akciğer tomografisi, fungal biyobelirteçler ve mikrobiyolojik incelemeler kullanılır.
-Antifungal yaklaşım tek bir bulguya göre değil; risk, profilaksi, görüntüleme ve tanısal bulguların birlikte yorumuna göre belirlenir.
-
-@@ Nötropenik hastada fungal etkenler ve Kandida
-
-Nötropenik ve immünsuprese hastada üç mantar grubu öne çıkar.
-Kandida enfeksiyonları mukozal tutulumdan kandidemiye kadar uzanabilir; kateterler ve gastrointestinal bariyer bozukluğu invaziv enfeksiyon açısından önem taşır.
-Aspergillus özellikle derin ve uzamış nötropenide ve allojenik nakil sonrasında önem kazanır ve akciğerde nodüler infiltratlar yapabilir.
-Mukorales enfeksiyonlarında damar invazyonu ve doku nekrozu gelişebilir; hematolojik malignite, nakil ve kontrolsüz diyabet risk faktörleridir ve hızlı tanı ile tedavi gerekir.
-Kandida endojen floradan bariyer bozulunca kana geçer, Aspergillus ve Mukorales ise çevreden solunan küflerdir.
-
-Karşılaştırma tablosuna göre Kandida mukozal hastalık ya da kandidemi yapar; kateter, cerrahi ve yoğun bakımla ilişkilidir ve nötropeni dışında da görülebilir.
-Bu yüzden nötropenisi olmayan yoğun bakım hastasında kateterle ilişkili fungal enfeksiyon önce Kandidayı düşündürür.
-Aspergillus uzamış derin nötropeni ve allojenik nakil zemininde pulmoner nodüller ve halo bulgusu yapar.
-Mukorales hematolojik malignite, nakil ve kontrolsüz diyabet zemininde anjiyoinvazyon ve doku nekrozu yapar; acil tanı ve tedavi gerekir.
-Halo bulgusu Aspergillusun, siyah nekroz Mukoralesin klinik imzasıdır.
-
-Kandida türleri normalde ağız, gastrointestinal sistem, vajina ve deride kolonize olabilir ve enfeksiyonlar çoğunlukla endojen floradan kaynaklanır.
-Mukokutanöz kandidiyaza karşı savunmada özellikle Th17 ve interlökin on yedi aracılı hücresel immünite önemlidir.
-Geniş spektrumlu antibiyotikler, kortikosteroid kullanımı, diyabet, immünsupresyon ve HIV enfeksiyonu riski artırır; kserostomi, protez kullanımı ve HIV, hematolojik malignite, kemoterapi ve organ nakli gibi hücresel immün yetmezlik durumları oral kandidiyaz için ayrıca risktir.
-Kandida enfeksiyonlarında hücresel immünitenin korunması önemlidir; bu yüzden HIV enfeksiyonunda oral ve özofageal kandidiyaz sık görülür.
-
-Oral kandidiyazda eritemli mukoza üzerinde genellikle kazınabilen beyaz plaklar, yanma, ağrı, tat değişikliği ve ağızda kuruluk görülür; disfaji nadirdir ve genellikle klinik tanı yeterlidir.
-Kandida özofajitinde en sık bulgu odinofajidir; disfaji ve retrosternal ağrı eşlik eder, ateş genellikle yoktur.
-Uygun klinik tabloda ampirik antifungal tedavi başlanabilir; yanıt alınamayan ya da atipik olgularda endoskopi ve biyopsi yapılır ve mukozada beyaz plaklar görülür.
-Orofaringeal kandidiyaz her zaman özofagus tutulumu anlamına gelmez; ancak immünsuprese hastada oral kandidiyazla birlikte odinofaji ya da disfaji bulunması kandida özofajitini kuvvetle düşündürür.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: Edinsel immün yetmezlik sendromlu hastalarda görülen özofajitin en sık etkeni Kandidadır.
-
-Tedavi tutulumun yaygınlığına göre basamaklanır.
-Hafif oral kandidiyazda nistatin ve klotrimazol gibi topikal antifungaller kullanılır; yaygın ya da dirençli olgularda yedi ile 14 gün oral flukonazol verilir.
-Kandida özofajitinde ilk seçenek günde iki yüz ile dört yüz miligram oral flukonazoldür ve on dört ile 21 gün sürer; topikal tedavi özofagus mukozasına yeterince ulaşmaz.
-Alternatifler itrakonazol, vorikonazol ve kritik hastalarda ya da azol dirençli olgularda ekinokandindir.
-
-@@ Aspergilloz
-
-Aspergilloz, immünkompromize hastada önemli bir fırsatçı mantar enfeksiyonudur.
-Aspergillus türleri doğada yaygın filamentöz küf mantarlarıdır; toprak, kompost, çürüyen bitki, tahıl, yaprak ve depolanmış samanda bulunur, saksı bitkileri ve hastane inşaat ve tadilat alanları da kaynak olabilir.
-Enfeksiyon genellikle havadaki konidyumların inhalasyonuyla gelişir ve insandan insana bulaş beklenmez.
-En sık etken Aspergillus fumigatustur; diğer önemli türler Aspergillus flavus, niger ve terreustur.
-Risk grupları uzamış ve derin nötropeni, özellikle akut lösemi olmak üzere hematolojik maligniteler, allojenik hematopoetik kök hücre nakli, solid organ nakli, yüksek doz ya da uzun süreli kortikosteroid ve HIV, kötü kontrollü diyabet ile kronik akciğer hastalığı gibi diğer immünsüpresyon durumlarıdır.
-
-Üç klinik form vardır.
-İnvaziv pulmoner aspergilloz en sık formdur ve immünkompromize hastalarda, özellikle uzamış nötropenide görülür; ateş, öksürük, hemoptizi ve plöritik ağrı yapar, sinonazal, santral sinir sistemi ve dissemine tutulum da olabilir.
-Kavite ya da tüberküloz sekeli gibi kronik akciğer hastalığı olanlarda kavite içinde aspergilloma yani mantar topu, ayrıca kronik kaviter ya da kronik fibrotik form gelişir.
-Alerjik bronkopulmoner aspergilloz ise astım ya da kistik fibrozisli hastalarda Tip 1 ve Tip 3 hipersensitivite reaksiyonudur; bronşiyal obstrüksiyon, mukus tıkaçları ve yüksek total immünoglobulin E görülür.
-Bu son tablo bir enfeksiyon değil, aşırı duyarlılık tablosudur.
-
-Tanıda özellikle nötropenik ya da immünsuprese hastada klinik ve radyolojik bulgular yol gösterir.
-Yüksek çözünürlüklü toraks tomografisinde nodül, erken dönemde halo bulgusu, kavite içinde hava yarımayı, multifokal nodüler ve asiner infiltratlar görülür.
-Mikrobiyolojik olarak serum ve bronkoalveoler lavajda galaktomannan antijeni ile polimeraz zincir reaksiyonu gibi moleküler testler kullanılır.
-Kesin tanı histopatolojidir: septalı, hiyalin, yaklaşık 45 derece açıyla dallanan, genellikle üç ile altı mikrometre genişlikte hifler görülür.
-Doku ve damar invazyonu yani anjiyoinvazyon izlenebilir; hifler Grocott boyası ve periyodik asit Şif boyasıyla gösterilir.
-
-İnvaziv aspergillozda ilk seçenek damar yoluyla ya da oral vorikonazoldür.
-Alternatifler profilakside ya da yan etkilerde isavukonazol ve posakonazoldür; lipid formülasyonlu amfoterisin be intolerans, direnç ya da özel durumlarda kullanılır.
-Önlemede hastane inşaat ve tadilat alanlarında toz kontrolü, yüksek riskli alanlarda hepa filtre ve mümkünse pozitif basınçlı odalar, saksı bitkileri ve toprak içeren materyallerin bu alanlarda bulundurulmaması ve kurum pratiğine göre nötropenik hastalarda posakonazol ya da isavukonazol profilaksisi yer alır.
-Aspergilloz, uzamış nötropenisi ve ağır hücresel immünsüpresyonu olan hastada erken tanı ve tedavi gerektiren ciddi bir enfeksiyondur.
-
-İnvaziv pulmoner aspergillozda tomografi bulguları zamanla değişir ve hastalığın evresini yansıtır.
-Sıfır ile 5. gün arasındaki erken evrede, nodül ya da kitle etrafında buzlu cam dansitesi olan halo belirtisi görülür; anjiyoinvazyon ve hemorajiye bağlıdır, invaziv aspergilloz için tipiktir ama spesifik değildir.
-Beş ile 10. gün arasındaki progresyon evresinde nodül büyür, hava bronkogramlı konsolidasyon gelişir; santral nekroz ve hemoraji vardır, klinikte ateş, öksürük ve plöritik ağrı eşlik eder.
-On ile 14. günden sonraki geç evrede nekrotik dokuya bağlı kavite ve hava hilal belirtisi ortaya çıkar.
-Hava hilal belirtisi genellikle nötropeni düzelirken, yani immün rekonstitüsyonla belirginleşir ve iyileşme fazını gösterebilir.
-
-Dağılım açısından lezyonlar genellikle üst loblarda ve subplevral yerleşimlidir; multifokal, bilateral nodüller, endobronşiyal yayılımda ağaç tomurcuğu görünümü, plevral tutulum ve kaviteleşme görülebilir.
-Ayırıcı tanıda mukormikoz ve endemik mantarlar gibi diğer fungal enfeksiyonlar, tüberküloz, septik emboliler ve özellikle nodüler lezyonlarda malignite vardır.
-Bulgular evreye ve immün duruma göre değişir; radyoloji klinik, mikrobiyolojik ve immünolojik verilerle birlikte yorumlanmalıdır.
-
-@@ Mukormikoz
-
-Mukormikoz, Mukorales takımındaki küf mantarlarının neden olduğu, hızlı ilerleyen, anjiyoinvaziv bir enfeksiyondur.
-Etkenler Rizopus, Mukor, Liktaymiya ve Rizomukor gibi türlerdir ve toprak, çürüyen organik materyal ve küfte yaygın bulunur.
-Bulaş inhalasyonla, deri travmasıyla direkt inokülasyonla ya da nadiren kontamine gıdayla olur.
-Risk faktörleri özellikle diyabetik ketoasidozla seyreden kontrolsüz diyabet, özellikle akut lösemi olmak üzere hematolojik maligniteler, uzamış nötropeni, solid organ ya da hematopoetik kök hücre nakli, yüksek doz ya da uzun süreli kortikosteroid, deferoksamin kullanımı ve transfüzyonla oluşan demir yüklenmesi ve malnütrisyon, yanık, travma gibi diğer immünsupresyon durumlarıdır.
-Ketoasidoz ve serbest demir mantarın çoğalmasını kolaylaştırır.
-
-Mukormikoz anjiyoinvazyon, vasküler tromboz ve doku nekroziyle karakterizedir.
-Rino orbito serebral formda sinüzit, orbital ve serebral tutulum; ateş, yüz ve baş ağrısı, nazal konjesyon, siyah nekrotik lezyonlar, damak ve nazal mukozada nekroz, orbital ödem, oftalmopleji ve görme kaybı görülür; tomografi ve manyetik rezonans görüntülemede orbital ve serebral yayılım ile kemik destrüksiyonu izlenir.
-Pulmoner formda ateş, öksürük, hemoptizi, plöritik ağrı, hızlı progresyon ve kavitasyon olur; tomografide nodüler konsolidasyon, halo bulgusu, kaviteleşme ve plevral tutulum görülür.
-Travma, yanık ya da kateter giriş yerinde kutanöz form, özellikle immünsuprese ve prematüre bebeklerde gastrointestinal form ve birden fazla organın tutulduğu dissemine form da vardır.
-
-Tanıda klinik, radyolojik bulgular ve risk faktörleriyle şüphelenilir; kesin tanı doku biyopsisi ve histopatolojiyle konur.
-Hifler geniş, düzensiz, çoğunlukla az septalıdır ve 90 derece açıyla dallanır; kültür tür düzeyinde tanı sağlar.
-Serum ve lavaj galaktomannanı negatiftir, bu da Aspergillustan ayırımda yardımcıdır.
-Kısaca Aspergillus 45 derece, septalı ve dar; Mukorales 90 derece, az septalı ve geniştir.
-
-Tedavide ilk seçenek damar yoluyla kilogram başına günde beş ile 10 miligram lipozomal amfoterisin bedir; alternatif ya da ardışık tedavi oral veya damar yoluyla isavukonazol ya da posakonazoldür.
-Vorikonazol Mukoralese karşı etkin değildir ve kullanılmamalıdır; aspergillozda ilk seçenek olan bu ilacın mukormikozda etkisiz olması hayati bir ayrımdır.
-Uygun hastalarda enfekte ve nekrotik dokuların erken ve kapsamlı cerrahi debridmanı yapılır.
-Ek olarak hiperglisemi ve ketoasidoz düzeltilir, mümkünse immünsupresyon azaltılır.
-Önlemede yüksek riskli alanlarda hepa filtrasyonu, toprak ve organik materyalle temasın önlenmesi, inşaatta toz kontrolü, kontrolsüz diyabetin önlenmesi ve riskli hastanın dikkatli izlemi yer alır.
-Mukormikoz yüksek mortaliteli bir enfeksiyondur ve erken tanı, debridman ve risk faktörlerinin düzeltilmesi birlikte uygulanmalıdır.
-
-@@ Hematopoetik kök hücre nakli ve graft versus host hastalığı
-
-Hematopoetik kök hücre naklinde kök hücre kaynakları periferik kan, kemik iliği ve kordon kanıdır.
-Nakil, hastanın kendi hücreleriyle yapılan otolog ya da vericiden alınan hücrelerle yapılan allojenik olabilir.
-Hazırlık rejimi miyeloablatif ya da azaltılmış yoğunluklu kemoterapidir, bazı rejimlerde total radyoterapi eklenir; bu rejim nötropeni ve mukozite yol açar.
-Engraftman, verilen kök hücrelerin kemik iliğine yerleşerek kan hücresi üretimini yeniden başlatmasıdır.
-Nötrofil engraftmanı genellikle nakilden sonraki iki ile 4 hafta içinde gerçekleşir ve kök hücre kaynağına ve nakil tipine göre değişir.
-
-Enfeksiyon riskini artıran faktörler nötropeni ve lenfopeni, mukozit ve deri mukoza bariyerinin bozulması, santral venöz kateter kullanımı, alıcı ya da vericide geçirilmiş enfeksiyonlar ve latent enfeksiyonların reaktivasyonu, graft versus host hastalığı ve tedavisinde kullanılan immünsupresif ilaçlar ile immün sistemin yeniden yapılanmasının gecikmesidir.
-Görüldüğü gibi bu hastada dört savunma hattının hemen hepsi aynı anda etkilenir.
-
-Graft versus host hastalığı, allojenik nakil sonrasında verici kaynaklı immün hücrelerin alıcının dokularına karşı immün yanıt oluşturmasıdır.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: graft versus host hastalığında saldıran taraf vericinin te hücreleridir; bu hücreler alıcının dokusunu yabancı olarak tanıyıp ona reaksiyon verir.
-Rejeksiyonda ise tersine alıcı vericiyi reddeder.
-Akut form özellikle deri, gastrointestinal sistem ve karaciğeri tutar; kronik form birçok organı tutabilir ve uzun süreli immün disfonksiyona yol açar.
-Hastalık ve immünsupresif tedavisi fırsatçı enfeksiyon riskini artırır.
-Enfeksiyon riski genellikle allojenik nakil alıcılarında daha yüksektir ve nakil tipi, nötropeni süresi, graft versus host hastalığı varlığı ve immün rekonstitüsyon düzeyine göre değişir.
-
-Otolog ve allojenik nakilde enfeksiyon riskleri farklıdır.
-Hazırlık rejimi ve nötropeni erken dönemi belirler ve bu dönem her iki nakil tipinde de vardır.
-Allojenik nakilde graft versus host hastalığı ve immünsüpresyon geç dönem riskini uzatır; otolog nakilde bu hastalık beklenmediği için geç dönem riski daha kısadır.
-Nakil tipi, engraftman, profilaksi ve immün yeniden yapılanma zamanlamayı değiştirir.
-
-@@ Kök hücre naklinde enfeksiyon zaman çizelgesi ve korunma
-
-Nakil öncesi hazırlık ve engraftman öncesi dönemde nötropeni, mukozit ve kateterler ön plandadır; bu dönemde bakteriyel ve bazı fungal enfeksiyonlar görülür.
-Engraftman sonrasında nötrofiller döner, ancak hücresel bağışıklık henüz toparlanmadığı için sitomegalovirüs, Pnömosistis ve solunum yolu virüsleri önem kazanır.
-Geç dönemde graft versus host hastalığı ve süren immünsüpresyon varsa fırsatçı enfeksiyon riski devam eder; kapsüllü bakteriler ve Varisella zoster virüsü (VZV) (VZV) de önemlidir.
-Bu dönemlerin sınırları kesin değildir.
-
-Zaman çizelgesi bunu üç döneme ayırır.
-Yaklaşık ilk iki ile dört haftayı kapsayan pre engraftman döneminde baskın sorun nötropeni, mukozit ve kateterdir; gram negatif ve gram pozitif bakteriler, Kandida ve risk varsa herpes simpleks virüsü beklenir.
-Yaklaşık otuzuncu ile yüzüncü gün arasındaki erken post engraftman döneminde te hücre bozukluğu öndedir; sitomegalovirüs, Pnömosistis pnömonisi, Aspergillus ve solunum virüsleri görülür.
-Yüzüncü günden sonraki geç dönemde, özellikle graft versus host hastalığı ya da devam eden immünsüpresyon varsa, kapsüllü bakteriler, Varisella zoster virüsü (VZV) (VZV), Pnömosistis, sitomegalovirüs ve küfler öne çıkar.
-Bu aralıklar öğretici bir çerçevedir ve hastaya göre önemli ölçüde kayabilir.
-
-Kök hücre naklinde korunma katmanlı bir stratejidir: risk grubuna uygun antibakteriyel, antiviral ve antifungal profilaksi; uygun alıcılarda sitomegalovirüs için izlem ya da profilaksi stratejileri; Pnömosistis profilaksisi ve immün yeniden yapılanma sonrası yeniden aşılama.
-Nakil sonrası önceki aşı yanıtları kaybolabileceği için eski aşı kaydına güvenilmez.
-Graft versus host hastalığı varlığında geç enfeksiyon riski tekrar değerlendirilir.
-
-@@ Solid organ nakli
-
-Solid organ nakli alıcısında enfeksiyon riski dört eksenin bileşkesidir: organ tipi ve cerrahi ya da anatomik komplikasyonlar; donör ya da alıcı kaynaklı latent enfeksiyonlar; immünsüpresyonun net düzeyi ve rejeksiyon tedavileri; profilaksi, çevresel maruziyet ve toplum kaynaklı enfeksiyonlar.
-Kök hücre naklinden farklı olarak burada cerrahi ve organa özgü anatomik komplikasyonlar risk hesabına eklenir.
-
-Nakilden sonraki ilk ayda cerrahi alan, kateter ve hastane ilişkili enfeksiyonlar baskındır; donör kaynaklı enfeksiyonlar da bu dönemde ortaya çıkabilir.
-Fırsatçı enfeksiyon için immünsüpresyonun birikmesi gerektiğinden ilk ayın en olası enfeksiyonu fırsatçı değil, cerrahi alan ve hastane kaynaklı enfeksiyondur.
-1. ile 6. ay arasında immünsüpresyonun etkisiyle sitomegalovirüs, Pnömosistis, Nokardiya ve invaziv fungal enfeksiyonlar gündeme gelir; profilaksi bunların zamanlamasını değiştirebilir.
-6. aydan sonra toplum kökenli enfeksiyonlar daha sık görülür, ancak rejeksiyon tedavisi ya da yoğun immünsüpresyon alanlarda fırsatçı enfeksiyon riski yeniden artar.
-
-Klasik dönem tablosunda ilk ayda cerrahi alan ve kateter enfeksiyonları, hastane kökenli pnömoni, idrar yolu enfeksiyonu, bakteriyemi ve donör kaynaklı enfeksiyonlar; 1. ile 6. ay arasında sitomegalovirüs, Pnömosistis, Nokardiya ve invaziv fungal enfeksiyonlar; 6. aydan sonra toplum kaynaklı solunum ve üriner enfeksiyonlar yer alır.
-Profilaksi riski azaltır ya da erteler ve klasik çizelge profilaksi ve immünsüpresyonla değişebilir.
-Burası önemli, bu bilgi çıkmış sorularda soruldu: solid organ naklinin ilk ayında cerrahi alan enfeksiyonu görülür; 1. ile 6. ay arasındaki ara dönemde ise en sık viral etken sitomegalovirüstür; nakil hastasında bu dönemde gelişen fırsatçı viral tabloda ilk akla gelen etken odur.
-
-Enfeksiyon odağı nakledilen organın anatomisini izler.
-Böbrek nakli alıcılarında üriner sistem enfeksiyonları önemlidir; üreteral stentler ve ürolojik girişimler riski etkiler.
-Karaciğer naklinde safra yolları ve karın içi enfeksiyonlar öne çıkabilir; cerrahi anatomi ve biliyer komplikasyonlar dikkate alınır.
-Akciğer naklinde solunum yolu enfeksiyonları, kalp naklinden sonra ise erken dönemde cerrahi alan ve mediasten enfeksiyonları önem taşır.
-
-Geniş infografik enfeksiyonları dört kaynağa ayırır: donör kaynaklı, nosokomiyal ya da teknik, latent reaktivasyon ya da fırsatçı ve uzun dönemde toplum kökenli.
-Erken dönemin cerrahi ve hastane ilişkili, çoğunlukla alıcı kaynaklı etkenleri özellikle metisiline dirençli olanlar dahil stafilokoklar, gram negatif basiller, vankomisine dirençli enterokoklar ve Kandida türleridir.
-Akciğer naklinde aspirasyon, metisiline dirençli Stafilokokus aureus, Psödomonas ve dirençli gram negatifler; böbrek naklinde Eşerişya koli, Klebsiella, enterokok ve Psödomonas öne çıkar.
-Geniş spektrumlu antibiyotiğe bağlı Klostridioides difisil de görülür.
-Donör kaynaklı etkenler arasında herpes simpleks virüsü, sitomegalovirüs, Varisella zoster virüsü (VZV) (VZV), kuduz, Batı Nil virüsü, HIV, Şagas hastalığı etkeni Tripanozoma kruzi, sıtma ve tüberküloz vardır.
-
-Riski artıran faktörler özellikle indüksiyon ve rejeksiyon tedavisiyle yoğun immünsupresyon, nötropeni, lenfopeni, anastomoz kaçağı ve iskemi gibi cerrahi komplikasyonlar, santral venöz kateter, dren ve mekanik ventilasyon gibi invaziv girişimler ve diyabet, kronik obstrüktif akciğer hastalığı gibi komorbiditelerdir.
-İmmünsupresyonun en yoğun olduğu ara dönemde viral etkenlerden en sık olanı sitomegalovirüstür; be ka polyomavirüsü özellikle böbrek naklinde nefropati, Epstein Barr virüsü nakil sonrası lenfoproliferatif hastalık yapar; herpes simpleks, Varisella zoster, adenovirüs ve influenza da görülür.
-Fungal tarafta profilaksi yoksa Pnömosistis, Aspergillus, özellikle abdominal nakillerde Kandida, Nokardiya ve endemik mantarlar; mikobakteriyel tarafta tüberküloz ve Mikobakteriyum avium kompleksi gibi atipik mikobakteriler; paraziter tarafta Toksoplazma gondii, Strongiloides sterkoralis, Leişmanya ve endemik bölge donörlerinden Tripanozoma kruzi yer alır.
-
-6. aydan sonra toplum kökenli enfeksiyonlar baskındır: solunum yolunda Streptokokus pnömoniya, Hemofilus influenza, influenza, respiratuvar sinsityal virüs ve sars koronavirüs iki; üriner sistemde Eşerişya koli ve diğer Enterobakteriyaseler; ayrıca Nokardiya, Rodokokus, Stenotrofomonas maltofilya ve Listerya monositogenes.
-Geç fungal enfeksiyonlar özellikle akciğer naklinde Aspergillus, diyabet, demir yüklenmesi ve yoğun immünsupresyonda Mukorales ve endemik mantarlardır.
-Geç viral sorunlar özellikle rejeksiyon tedavisi sonrası sitomegalovirüs hastalığı, kronik Hepatit B ve Hepatit C, Epstein Barr virüsü ilişkili lenfoproliferatif hastalık ve İnsan papilloma virüsü (HPV) (HPV) ilişkili cilt kanserleridir.
-
-Profilaksinin etkisi de tabloda vurgulanır: sitomegalovirüs ve Pnömosistis profilaksisi enfeksiyonların zamanlamasını ve sıklığını değiştirir; özellikle akciğer naklinde antifungal profilaksi Aspergillus riskini azaltır; influenza, pnömokok ve kovid on dokuz aşıları toplum kökenli enfeksiyonları önlemede önemlidir.
-Nakil sonrası zamanlama olası etkenleri öngörmede yol göstericidir, ama risk nakil tipi, organ tipi, immünsupresyon düzeyi, rejeksiyon tedavisi ve hastaya özgü faktörlere göre değişir.
-Donör kaynaklı enfeksiyonlar akılda tutulmalı, endemik bölgelerden gelen donörler ayrıca değerlendirilmelidir.
-
-Ateşli nakil alıcısında yaklaşım dört basamaklıdır.
-Önce nakilden sonra geçen süreyi ve organ tipini sorun; bu ikisi olası etkeni ve odağı öngördürür.
-Sonra immünsüpresif ilaçları, rejeksiyon tedavisini ve profilaksiyi öğrenin.
-Kültür ve uygun tanısal örnekleri alın, ama ciddi enfeksiyonda tedaviyi geciktirmeyin.
-Son olarak ilaç etkileşimleri, böbrek fonksiyonu ve immünsüpresyon ayarı için nakil ekibiyle iş birliği yapın; antimikrobiyaller immünsupresif ilaçlarla etkileşebilir ve böbrek işlevini bozabilir.
-
-@@ Ders sentezi
-
-Üç immün bozukluğu klinikte şöyle eşleştiririz arkadaşlar.
-Te hücre bozukluğunda hücre içi ve fırsatçı etkenleri düşünürüz: Pnömosistis, sitomegalovirüs, toksoplazma ve tüberküloz.
-Antikor eksikliği ve asplenide kapsüllü bakteriler ön plandadır: pnömokok, Hemofilus influenza tip be ve meningokok.
-Nötropenide özellikle gram negatif bakteriler ve bakteriyemi riski artar; nötropeni derin ve uzun sürerse Aspergillus gibi invaziv küf enfeksiyonları da önem kazanır.
-Özet tablosu bunu Enterobakteriyaseler, Psödomonas ve Aspergillus örnekleriyle verir.
-
-Özetle akılda kalması gereken beş mesaj var.
-Önce hangi immün savunma hattının bozulduğunu belirleyin.
-Hücresel yetmezlikte fırsatçı ve hücre içi patojenleri düşünün.
-Antikor eksikliği ve asplenide kapsüllü bakterileri hatırlayın.
-Febril nötropeni acildir; kültür alın ve ampirik tedaviyi geciktirmeyin.
-Nakil enfeksiyonlarını da her zaman zaman, organ ve immünsüpresyon bağlamında değerlendirin.
+# Bağışıklığı Baskılı Hastalarda Enfeksiyon
+
+@@ Bağışıklığı baskılı konak ve genel özellikler
+Bağışıklığı baskılı hasta, tıbbi adıyla immünkompromize konak, vücudu mikroorganizma istilasına karşı koruyan savunma sisteminin bir ya da birkaç kolunda yetmezlik taşıyan kişidir. Sağlam bir bağışıklık sistemi tek parça değildir; fagositoz, kompleman sistemi, hümoral yanıt ve hücresel yanıt gibi birçok alt birimin eşgüdümüyle çalışır. Bu yapıda genetik bozukluklara bağlı, yani primer, ya da sonradan gelişen, yani kazanılmış veya sekonder yetmezlikler ortaya çıktığında enfeksiyon riski belirgin biçimde artar.
+
+Bu hastalarda enfeksiyonun bazı ortak özellikleri vardır.
+Solunum yolu her nefeste çevreyle temas ettiği için akciğer enfeksiyonları sık görülür.
+Toplumda yaygın olan sıradan enfeksiyon etkenleri bile bu hastalarda çok daha ağır seyirli bir klinik tablo oluşturur.
+Sağlam bağışıklıkta hastalık yapamayan fırsatçı patojenlerle enfeksiyon riski artar.
+Sık yatış ve sık antibiyotik kullanımı nedeniyle çoklu ilaç direnci olan patojenlerle hastalık riski yüksektir.
+Prognoz kötü, mortalite yüksektir; bu nedenle mortalite ve morbiditeyi önlemek için erken tanı ve erken tedavi zorunludur.
+
+Burası önemli, arkadaşlar: nötropeni ve ya aspleni varlığında ateş, bir acil durumdur.
+Savunmanın en kritik kollarından biri eksikken ortaya çıkan ateş, saatler içinde ağır sepsise ilerleyebilecek bir enfeksiyonun habercisi olabilir; bu hastada bekle ve gör yaklaşımı uygulanmaz.
+Bağışıklığı baskılayan durumlar geniş bir yelpazeye yayılır.
+Hematolojik maligniteler, HIV enfeksiyonu ve AIDS, kök hücre nakli, splenektomi, kalıtsal immün yetmezlikler, solid tümörler, solid organ nakli, uzun süreli kortikosteroid kullanımı, diyabet, kronik böbrek yetmezliği, karaciğer yetmezliği ve malnütrisyon bu listenin başlıca elemanlarıdır.
+Her neden savunmanın farklı bir kolunu hedeflediği için risk değerlendirmesi nedene göre yapılır.
+
+@@ Primer ve sekonder immün yetmezlikler
+Primer immün yetmezlikler genetik bozukluklara bağlı gelişir ve beş ana grupta toplanır: antikor defektleri, T hücre defektleri, kombine immün yetmezlikler, kompleman defektleri ve fagositer sistem defektleri. Doğuştan eksik kurulan bu savunma, hastayı genellikle erken yaşta tekrarlayan enfeksiyonlarla karşı karşıya bırakır.
+
+Sekonder, yani kazanılmış immün yetmezliklerin nedenleri çok daha çeşitlidir.
+Kanser kemoterapisi, nötropeni yaparak ya da kullanılan ajana özgü bir immünsüpresyonla savunmayı baskılar.
+Solid organ nakli, kök hücre nakli ve graft versus host hastalığı, immünmodülatör ilaçlar, splenektomi, siroz ve kronik böbrek yetmezliği bu grupta yer alır.
+Nütrisyonel durumlardan alkolizm ve malnütrisyon, enfeksiyon hastalıklarından AIDS de sekonder nedenlerdir.
+Fizyolojik nedenler olarak bebeklik, gebelik ve yaşlılık sayılır.
+Diğer nedenler arasında yanık, otoimmün hastalıklar ve travma bulunur.
+
+Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: kadın cinsiyet sekonder immün yetmezlik nedeni değildir.
+Dikkat edin, yaşlılık ve gebelik fizyolojik neden olarak, malnütrisyon ve alkolizm nütrisyonel neden olarak bu listede yer alır; sınavda liste dışı seçenek olarak karşınıza çıkan kadın cinsiyettir.
+
+Yaşlılarla ilgili iki klinik ayrıntı da sınavda soruldu.
+Burası önemli: yaşlılarda ağızdan ölçülen vücut sıcaklığının 37,5 derecenin üzerinde olması yüksek ateş olarak kabul edilir; yani yaşlıda ateş eşiği daha düşük tutulur.
+Ayrıca yaşlıların bakım evinde kalması da enfeksiyon açısından bir risk faktörüdür.
+
+@@ Nötropeni, hücresel ve hümoral yetmezlik nedenleri
+İmmün yetmezlikleri mekanizmaya göre üç ana eksende düşünmek pratik bir yoldur. Birinci eksen nötropenidir; temel mekanizma nötrofil sayısının azalmasıdır. Akut lenfoblastik lösemi ve akut miyeloid lösemi gibi hematolojik maligniteler ile kemoterapi bunun başlıca nedenleridir. Nötrofil sayısının milimetreküpte 500'ün altına ineceğinin öngörülmesi de bu grupta değerlendirilir.
+
+İkinci eksen hücresel immün yetmezliktir; burada T lenfosit fonksiyonu bozulmuştur.
+Hematolojik maligniteler ve graft versus host hastalığı tipik örneklerdir.
+Üçüncü eksen hümoral immün yetmezliktir; burada B lenfosit fonksiyonu bozulmuştur.
+Kronik lenfositik lösemi, lenfoma ve multipl miyelom gibi hematolojik maligniteler ile splenektomi bu grubun örnekleridir.
+Burası önemli: multipl miyelom hümoral immün yetmezlik nedenidir, hücresel değil.
+Bu bozukluklara yol açan ilaç ve durumlar arasında sitotoksik ajanlar, steroidler, monoklonal antikorlar ve allojenik kök hücre nakli de sayılır.
+
+@@ İmmün defekt ve patojen ilişkisi
+Bağışıklık sistemini dört kol olarak düşünebiliriz: mekanik bariyerler, hücresel bağışıklık, hümoral bağışıklık ve fagositer sistem. Mekanik bariyer yanık, mukozit ya da inhalasyon hasarıyla bozulur; deri ve mukoza delindiğinde mikrop kapıdan girer. AIDS evresinde ya da diğer sekonder immün yetmezliklerde görülebilen fırsatçı enfeksiyonların iki prototipi toksoplazma ensefaliti ve pnömosistis pnömonisidir.
+
+Hangi kolun bozuk olduğu, akciğer enfeksiyonunda hangi etkeni bekleyeceğimizi belirler.
+Fagosit defektinde, yani nötropenide, bakterilerden Staphylococcus aureus, Pseudomonas aeruginosa, Klebsiella pneumoniae ve Escherichia coli; mantarlardan Aspergillus ve Candida türleri öne çıkar.
+B hücre defektinde Streptococcus pneumoniae, Staphylococcus aureus, Haemophilus influenzae ve Pseudomonas aeruginosa görülür.
+Splenektomide de benzer biçimde Streptococcus pneumoniae, Staphylococcus aureus ve Haemophilus influenzae beklenir.
+
+T hücre defektinde liste çok daha geniştir.
+Bakterilerden Legionella, Nocardia ve mikobakteri türleri; mantarlardan Pneumocystis jirovecii, Cryptococcus neoformans, Histoplasma capsulatum, Coccidioides immitis ve Candida türleri; virüslerden CMV, yani sitomegalovirüs, Varicella zoster virüsü (VZV) ve herpes simpleks virüsü; parazitlerden Toxoplasma gondii ve Strongyloides stercoralis görülür.
+Steroid tedavisinde ise en geniş yelpaze vardır: Staphylococcus aureus, Legionella, Nocardia, mikobakteriler, Pseudomonas aeruginosa ve diğer gram negatif bakteriler; Aspergillus, Candida, Cryptococcus, Histoplasma ve Coccidioides; sitomegalovirüs, Varicella zoster ve herpes simpleks virüsleri; Toxoplasma ve Strongyloides.
+
+Burası önemli, iki çıkmış soru bu tablonun mantığını sordu.
+Hücresel immünitesi baskılanmış kişide, örneğin uzun süreli glukokortikoid kullananda, organ naklinde ya da ileri evre HIV enfeksiyonunda Toxoplasma gondii, Listeria monocytogenes menenjiti, Mycobacterium tuberculosis ve Pneumocystis jirovecii sık görülür; Streptococcus pneumoniae ise kapsüllü, hücre dışı bir bakteri olduğu için hümoral ve dalak savunmasıyla ilişkilidir ve hücresel yetmezliğin tipik etkeni olarak beklenmez.
+Benzer şekilde bağışıklığı baskılanmış kişilerde Toxoplasma, Listeria, tüberküloz ve pnömokok sık görülürken Clostridium tetani sık görülmesi beklenen bir etken değildir.
+
+@@ Radyolojik infiltrat paternleri
+Akciğer grafisi ya da tomografideki infiltrat paterni de olası etkeni daraltır. Nodüler infiltrat; Klebsiella ve Pseudomonas gibi bakteriyel enfeksiyonlarda, tüberkülozda, nokardiyada ve mantar enfeksiyonlarında görülür. Fokal infiltrat pnömosistis pnömonisi ve nokardiyozu düşündürür. Diffüz interstisyel infiltrat ise virüslerde görülür; ancak dikkat edin, bu patern enfeksiyon dışı nedenlerle de oluşabilir. Akut solunum sıkıntısı sendromu, ilaç toksisitesi, akciğer ödemi ve alveoler hemoraji diffüz interstisyel tabloyu taklit eden durumlardır. Yani diffüz bir tabloda yalnız enfeksiyon değil, bu taklitçiler de ayırıcı tanıda akla gelmelidir.
+
+@@ Glukokortikoidler
+Glukokortikoidlerin ana etkisi hücresel immünite üzerinedir. Bununla birlikte hem T hem B hücre cevabını baskılarlar. Alveoler makrofajların fagositik etkinliği azalır; kanda monosit, lenfosit ve eozinofiller baskılanır. Bu çok yönlü baskı sonucunda bakteriyel, viral ve fungal enfeksiyon riski birlikte artar. Burası önemli, sınav spotudur: uzun süreli glukokortikoid kullanımında iki koruyucu önlem gerekir. 1.'si Pneumocystis jirovecii profilaksisi, 2.'si latent tüberküloz tedavisidir. Granülom duvarı steroidle zayıflamadan önce uykudaki basil tedavi edilirse reaktivasyon önlenir.
+
+@@ HIV: virüs ve temel immün bozukluk
+HIV, yani İnsan immün yetmezlik virüsü (HIV), retrovirüslerin lentivirüs alt ailesine aittir. CD4 reseptörü taşıyan hücreler virüsün primer hedefidir. Virüs hedef hücrelerinde bir miktar üredikten sonra genellikle latent hale geçer. Tanıda ELISA ile saptanan anti HIV antikor varlığı Western blot yöntemiyle doğrulanmalıdır. Burası önemli: HIV onkojenik karakterde lenfotropik bir virüs değildir; bu ifade çıkmış soruda yanlış seçenek olarak soruldu.
+
+Burası önemli, çok sorulan bir bilgi: HIV enfeksiyonunda oluşan en önemli ve en karakteristik immün bozukluk, CD4 pozitif T yardımcı lenfositlerin kaybına bağlı hücresel immün yetmezliktir.
+Mekanik ya da kimyasal bariyer hasarı, izole hümoral defekt ya da fagositer hücre hasarı bu enfeksiyonun temel bozukluğu değildir.
+Bu nedenle HIV, hümoral değil hücresel immün yetmezlik nedeni olarak sınıflanır.
+
+Akut HIV enfeksiyonunda yüksek düzeyde viremi vardır ve ateş, lenfadenopati, döküntü, boğaz ağrısı yani farenjit gibi belirtiler görülebilir.
+Burası önemli: üretral akıntı akut HIV enfeksiyonunun belirtilerinden biri değildir.
+AIDS evresinde de yüksek düzeyde viremi vardır ve CD4 sayısı giderek düşer.
+HIV; dokunma, el sıkışma, sarılma gibi sosyal temaslarla bulaşmaz.
+Antiretroviral tedavi ile hastalığın eradikasyonu sağlanamaz; ancak düzenli ilaç kullanımıyla viral yük en üst düzeyde ve kalıcı olarak baskılanabilir.
+
+Burası önemli: güncel bilgilere göre HIV tanısı konan hasta, CD4 sayısı 500'ün altına düşene kadar tedavisiz izlenmez.
+Hastayı bir süre tedavisiz takip edip CD4 düşünce tedavi başlamak eski bir yaklaşımdır ve çıkmış soruda yanlış ifade olarak soruldu.
+
+@@ CD4 düzeyi ve AIDS ile ilişkili durumlar
+AIDS evresinde ya da diğer sekonder immün yetmezliklerde görülebilen durumlar, CD4 sayısı düştükçe ağırlaşan bir basamak gibi düşünülebilir. Erken dönemde persistan jeneralize lenfadenopati, akut retroviral sendrom ve aseptik menenjit görülür. Ardından pnömokokal pnömoni, pulmoner tüberküloz, zona ve orofarengeal kandidiyaz gelir. Kaposi sarkomu ve oral lökoplaki de bu basamaklarda yer alır.
+
+Daha ileri baskılanmada Pneumocystis jirovecii pnömonisi, milier tüberküloz, progresif multifokal lökoensefalopati ve dissemine herpes görülür.
+Toksoplazmoz, kriptokokkoz, kriptosporidiyoz ve mikrosporidiyoz, kandida özefajiti ve sitomegalovirüs enfeksiyonu da bu dönemin tablolarıdır.
+Listenin geri kalanında Mycobacterium avium kompleksi, servikal kanser, B hücreli lenfoma, ITP yani immün trombositopenik purpura, mononöritis multipleks, anemi, Hodgkin lenfoma, HIV erimesi, non Hodgkin lenfoma ve HIV demansı bulunur.
+Burası önemli, sınav spotudur: bu komplikasyonlar sıklıkla belirli CD4 düzeylerinde ortaya çıksa da farklı CD4 düzeylerinde de görülebilirler.
+Yani CD4 eşikleri yol gösterir ama kesin sınır değildir.
+
+Burası önemli, bu konu çıkmış sorularda en sık sorulan bilgilerden biridir.
+Amerikan Hastalık Kontrol Merkezi evrelemesinde doğrudan klinik AIDS tanısı koyduran kategori C, yani AIDS indikatörü durumlar arasında özofageal kandidiyaz, aktif pulmoner ya da ekstrapulmoner tüberküloz, primer santral sinir sistemi lenfoması ve bir aydan uzun süren kronik herpetik ülser bulunur.
+Persistan jeneralize lenfadenopati ise kategori C durumu değildir; erken dönemin bulgusudur.
+HIV pozitif bir bireyde primer santral sinir sistemi lenfoması görülürse AIDS düşünülür; uzun süren ishal, servikal lenfadenomegali, primer sifiliz ya da Hepatit B pozitifliği tek başına AIDS düşündürmez.
+
+Burası önemli, kanserlerle ilgili iki soru daha var.
+AIDS tanımlayıcı kanserler arasında invaziv servikal karsinom yer alır; karaciğer kanseri, Hodgkin lenfoma, anal kanser ve oral kavite kanseri AIDS tanımlayıcı kanser olarak sayılmaz.
+AIDS hastalarında en sık görülen neoplazi ise Kaposi sarkomudur.
+Burası önemli: HIV pozitif hastalarda tüberküloz dışı mikobakterilerden en sık enfeksiyon yapan etken Mycobacterium avium intracellulare kompleksidir ve bulaşı kontamine gıdalarla ağız yoluyla olur.
+
+@@ Yeni tanı HIV hastasına yaklaşım
+Doğrulama testiyle yeni HIV enfeksiyonu tanısı konan hastanın ilk değerlendirmesinde ayrıntılı öykü alınır ve fizik muayene yapılır. CD4 pozitif T lenfosit sayısı ve HIV RNA düzeyi, yani viral yük istenir. İl Sağlık Müdürlüğüne gönderilmek üzere bildirim formu doldurulur. Burası önemli: aile bireylerine bilgi verip hastaya izolasyon önermek yapılması gerekenlerden değildir. Virüs sosyal temasla bulaşmadığı için izolasyonun yeri yoktur ve bu seçenek çıkmış sorularda yanlış yaklaşım olarak soruldu.
+
+Burası önemli, profilaksiyle ilgili bir vaka sorusu da var.
+Yeni tanı konan, asemptomatik ve CD4 sayısı milimetreküpte 44 olarak saptanan bir hastada kemoprofilakside trimetoprim sülfametoksazol, haftada 3 forte tablet, ve klaritromisin, günde 2 kez 500 miligram, birlikte tercih edilir.
+Seftriakson ve amoksisilin klavulanat bu hastada kemoprofilaksi için seçilecek ilaçlar değildir.
+
+@@ Hümoral immünite ve aspleni
+Hümoral immün sistem B hücre aracılıklıdır. Asıl görevi hücre dışı yerleşimli mikroorganizmaları, özellikle de kapsüllü mikroorganizmaları temizlemektir. Salgılanan immünoglobulin M ve immünoglobulin G üç işlev görür: antijeni nötralize eder, komplemanı aktive eder ve opsonizasyonu sağlar. Böylece hücre dışındaki virüs, bakteri, mantar ve parazitlere karşı savunma kurulur.
+
+Hümoral sistemde eksiklik ya da fonksiyonel bozukluk olduğunda hücre dışı mikroorganizmalarla enfeksiyon riski artar.
+Nedenleri lenfositer seriyi tutan hematolojik hastalıklar, kemoterapi gibi sitotoksik ilaçlar ve protein eksikliğidir.
+İlişkili patojenler Streptococcus pneumoniae, Haemophilus influenzae, norovirüs, Hepatit B virüsü (HBV), poliomavirüslerden JC virüsü ile Campylobacter ve Helicobacter'dir.
+
+Dalak, opsonize olmamış kapsüllü bakterilerin kandan eliminasyonunu sağlar.
+Bu nedenle asplenide kapsüllü bakterilerle enfeksiyon riski artar.
+Burası önemli, sınav spotudur: splenektomi ile ilişkili patojenler Streptococcus pneumoniae, Haemophilus influenzae ve Neisseria meningitidis üçlüsüdür.
+Dikkat edin, kapsüllü bakteri dendiğinde B hücre ve dalak, hücre içi etken dendiğinde T hücre akla gelmelidir.
+
+@@ Hücresel immünite ve sitomegalovirüs
+Hücresel immün sistem T lenfositleri aracılıklıdır. Hücre içi yerleşimli mikroorganizmaların ve virüsle enfekte hücrelerin eliminasyonunu sağlar; yani virüslere ve hücre içi bakteri, mantar ve parazitlere karşı savunmanın asıl sorumlusudur. Eksiklik ya da fonksiyonel bozukluk olduğunda hücre içi mikroorganizmalarla yeni enfeksiyon ya da latent enfeksiyonun reaktivasyonu riski artar.
+
+Hücresel yetmezliğin nedenleri geniştir: lenfositer seriyi tutan hematolojik hastalıklar yani Hodgkin lenfoma, non Hodgkin lenfoma ve akut lenfoblastik lösemi; kemik iliğini infiltre eden malign ya da romatizmal hastalıklar; sitotoksik ilaçlar; hem sayısal hem fonksiyonel bozukluk yapan steroidler; alemtuzumab gibi monoklonal antikorlar; kök hücre transplantasyonu; radyasyon ve HIV enfeksiyonu.
+
+İlişkili patojenler de uzun bir listedir.
+Herpesvirüsler, sitomegalovirüs, solunum virüsleri, Listeria monocytogenes, Nocardia türleri, Mycobacterium tuberculosis, Pneumocystis jirovecii, Aspergillus ve Cryptococcus türleri, Histoplasma capsulatum, Coccidioides türleri, Talaromyces marneffei, Toxoplasma gondii, İnsan papilloma virüsü (HPV) ve BK ile JC gibi poliomavirüsler bu gruptadır.
+
+Burası önemli, çıkmış soruda doğru ifade buydu: hücresel immün yetmezlikte sitomegalovirüs, Mycobacterium tuberculosis ve Pneumocystis jirovecii gibi patojenler görülür.
+Aynı sorunun yanlış seçenekleri de öğreticidir: nötropenide en çok viral değil bakteriyel ve fungal enfeksiyonlar görülür; fırsatçı patojenler bağışıklığı baskılanmış kişide toplumdakiyle aynı şekilde görülmez; nötropeninin nedenleri ve enfeksiyon paterni tek tip değildir; uzamış nötropenide mantar enfeksiyonu görülür.
+
+Burası önemli, sitomegalovirüs ayrıca soruldu.
+Sitomegalovirüs enfeksiyonu immün yetmezliği olmayanlarda çoğunlukla asemptomatik seyreder ve tedavi önerilmez.
+İmmün yetmezliği olanlarda ağır tablolar yapabilir ve tedavide gansiklovir ve foskarnet kullanılır.
+Yenidoğanda konjenital anomalilere yol açabilir; akciğer, karaciğer ve böbrek tutulumu yapabilir.
+Solid organ nakli yapılmış bir erişkinde bir süre sonra pnömoni, retinit ve kolit gelişmesi, laboratuvarda atipik lenfositozla birlikte heterofil antikor testinin negatif bulunması en olası etken olarak sitomegalovirüsü düşündürür.
+Heterofil antikorun negatif olması, bu tabloyu Epstein-Barr virüsünden ayırmamızı sağlar.
+
+@@ Granülosit fonksiyon bozukluğu
+Granülositler bakteri ve mantarlara karşı savunma sağlar. Bu nedenle eksiklik ya da fonksiyonel bozukluk durumunda bakteriyel ve fungal enfeksiyon riski artar. Nedenleri arasında miyelositer seriyi tutan hematolojik hastalıklar; sitotoksik, antimetabolik ve antiproliferatif ilaçlar yani kemoterapi; fonksiyonel bozukluk yapan steroidler ve radyasyon sayılır. Dikkat edin, granülosit sayısı normal olsa bile işlevi bozulmuşsa aynı risk ortaya çıkar.
+
+@@ Mukoza florası ve mukozit
+Mukozalar zengin bir floraya ev sahipliği yapar. Oral florada viridans streptokoklar, enterokoklar, Capnocytophaga ve Fusobacterium türleri ile Candida türleri bulunur. İntestinal florada ise Clostridium türleri, Pseudomonas aeruginosa, Staphylococcus aureus ve enterik basiller yer alır. Oral mukozada epitel bütünlüğü bozulduğunda baskın oral flora ile hastanın immün sisteminin baş etme gücü arasındaki denge bozulur. Sağlam epitelyal bariyerin yokluğu organizmaların dokuya ve kana girişine izin verir.
+
+Burası önemli, sınav spotudur: mukozit, sistemik kemoterapi ve baş boyun radyoterapisinin en sık komplikasyonudur.
+Dil, dudak ve yanak mukozasında sık görülür.
+Klinikte eritem, ilerleyici ödem, ülserler ve disfaji görülür.
+Lezyonların üzerine sekonder fungal ve herpetik enfeksiyon gelişebilir ve febril nötropenide mukozit varlığı kandidemi riskini artırır.
+
+@@ Febril nötropeni: tanım ve etkenler
+Nötropenik hastada nötropeniye çoğu zaman lenfopeni ve deri ile mukoza bütünlüğünde bozulma eşlik eder; kateter ve mukozit bunun tipik örnekleridir. İmmün yanıt bozuk olduğu için bu hastalarda ateş ya da diğer enfeksiyon bulguları gelişmeyebilir. Febril nötropeni sıklıkla malignite ya da sistemik kemoterapi sonrasında ortaya çıkar ve bakteriyel ile fungal enfeksiyon riskinde artış görülür.
+
+Burası önemli, bu dersin en çok sorulan bilgisidir.
+Febril nötropeni, mutlak nötrofil sayısının milimetreküpte 500'ün altında olması ve vücut sıcaklığının tek ölçümde 38,3 derece ya da üzerinde, veya 1 saat boyunca 38 derece ya da üzerinde seyretmesiyle tanımlanır.
+Nötrofil sayısının 1500'ün altında olması ve ateşin 1 kez 38'in üzerinde ölçülmesi şeklindeki tanım yanlıştır.
+Yalnızca nötrofil sayısının 500'ün altında olması da febril nötropeni demek değildir; tanım için ateş ayağı gerekir.
+
+Burası önemli, aynı sorunun diğer ayakları: febril nötropenide bozukluk fagositik savunmadadır; izole hümoral immün yetmezlik yoktur.
+Mukozit varlığında kandidemi riski artar.
+7 günden uzun süren uzamış nötropenide küf mantarlarıyla, özellikle aspergillozla enfeksiyon riski artar.
+Febril nötropenide en sık etken mikroorganizmalar Escherichia coli, Klebsiella pneumoniae ve koagülaz negatif stafilokoklardır.
+Muhtemel etkenleri gruplarsak, gram pozitiflerden Staphylococcus aureus ve koagülaz negatif stafilokoklar, viridans streptokoklar ve enterokoklar; gram negatiflerden Escherichia coli, Klebsiella pneumoniae ve Pseudomonas aeruginosa; virüslerden herpes simpleks ve Varicella zoster; mantarlardan Candida ve Aspergillus sayılır.
+Burası önemli: ektima gangrenozum Pseudomonas aeruginosa ile oluşan bir deri lezyonudur.
+
+Febril nötropenide dirençli mikroorganizmalarla enfeksiyon riski artar ve direnç paternlerini bilmek gerekir.
+Escherichia coli ve Klebsiella pneumoniae genişlemiş spektrumlu beta laktamaz üretir.
+Koagülaz negatif stafilokoklar ve Staphylococcus aureus'ta metisilin direnci görülür.
+Pseudomonas aeruginosa'da karbapenem, piperasilin tazobaktam, seftazidim ve sefepim direnci; Klebsiella pneumoniae ve Acinetobacter türlerinde karbapenem direnci; Candida türlerinde azol direnci görülür.
+
+@@ Febril nötropeni: muayene ve ampirik tedavi
+Febril nötropenik hastanın değerlendirmesinde ağız mukozası ve perine bölgesi muayene edilir, kateter ve port çevresi palpe edilir, ateşin ne zaman yükseldiği sorulur. Burası önemli: febril nötropenik hastada rektal tuşe yapılmamalıdır; bu, çıkmış soruda yapılmaması gereken uygulama olarak soruldu. Burası önemli, sınav spotudur: yüksek mortalite nedeniyle antipsödomonal etkinliği olan ampirik antibiyotik tedavisi 1 saat içinde başlanmalıdır. Düşük riskli hastada ağızdan amoksisilin klavulanat ile siprofloksasin verilir ve 4 ila 24 saat sonra kontrol yapılır. Yüksek riskli hastada damar içi antipsödomonal bir beta laktam, yani sefepim, piperasilin tazobaktam, meropenem ya da imipenem verilir ve hasta günlük takip edilir.
+
+Hemodinamik instabilite devam ediyorsa antibiyotik revizyonu yapılır; örneğin sefepim meropeneme çevrilir ve vankomisin ya da ekinokandin eklenmesi düşünülür.
+Kateter ilişkili enfeksiyon, cilt ve yumuşak doku enfeksiyonu, hemodinamik instabilite ya da dirençli gram pozitif enfeksiyon şüphesinde başlangıçta glikopeptit, yani metisiline dirençli Staphylococcus aureus'a etkili bir antibiyotik verilir.
+Hasta stabilleştikten ve kültür ile antibiyogram sonuçları çıktıktan sonra spesifik tedaviye geçilir.
+Burası önemli, çıkmış soruda yanlış ifade olarak soruldu: hastanede yatan ağır yanık hastalarına rutin antibiyotik profilaksisi gerekmez.
+Yanık mekanik bariyeri bozsa da bu hastalara rutin profilaksi uygulanmaz.
+
+@@ Candida enfeksiyonları ve kriptokokus
+İmmün yetmezlikli hastada fungal enfeksiyonlar üç ana grupta toplanır: Candida türlerine, Aspergillus türlerine ve Mucor türlerine bağlı enfeksiyonlar. Candida'ya bağlı enfeksiyonlar arasında oral kandidiyazis ve kandida özefajiti öne çıkar. Kandida özefajiti oral kandidiyazisle birlikte ya da ondan ayrı görülebilir ve yutma güçlüğü olan hastalarda endoskopik muayene sırasında saptanır. Burası önemli: AIDS hastalarında görülen özofajitin en sık etkeni Candida albicans'tır.
+
+Burası önemli, kandida enfeksiyonlarının yelpazesi de soruldu.
+Candida vajinit, oral mukozada süperfisyel enfeksiyon yani pamukçuk ve özofajit yapar.
+Ayrıca tırnakta onikomikoz, tırnak kıvrımında paronişi, kıl foliküllerinde follikülit, koltuk altı ve el ayak parmak araları gibi nemli bölgelerde intertrigo ve penil deride balanit oluşturur.
+Kaposi sarkomu ise kandida enfeksiyonu sonucu meydana gelmez; hatırlayacağınız gibi AIDS ile ilişkili bir tümördür.
+
+Burası önemli, bir fırsatçı mantar daha soruldu: hem 25 hem 37 derecede maya formunda bulunan ve en önemli virülans faktörü mukopolisakkarit kapsülü olan fırsatçı mantar Cryptococcus neoformans'tır.
+Bu mantarın hücresel immün yetmezlikte ve AIDS evresinde görülen kriptokokkozun etkeni olduğunu hatırlayın.
+
+@@ Aspergilloz ve mukormikoz
+Aspergilloz; toprak, gübre, çürüyen bitki, depolanmış saman ve hububat üzerinde bulunan küf mantarlarının genellikle inhalasyon ile alınmasıyla bulaşır. Hastane içinde ve yakınındaki inşaat alanları nötropenik hastalarda nozokomiyal salgınlara yol açar; hastane odalarındaki saksı bitkileri de konidyum kaynağıdır. Burası önemli, sınav spotudur: en sık etken Aspergillus fumigatustur. İnvaziv pulmoner aspergillozda bilgisayarlı tomografide hava bronkogramlı konsolidasyon, halo belirtisi ve hava hilal belirtisi görülür.
+
+Mukormikoz, Mucorales takımındaki küf mantarlarıyla gelişen, vasküler invazyon ve doku nekrozuyla karakterize bir enfeksiyondur.
+Bu mantarlar düşük virülanslı olduğundan ancak belirli hasta gruplarında ağır hastalık yapar: kontrolsüz diyabet, immün baskılayıcı tedavi ve kortikosteroid tedavisi başlıca risk zeminleridir.
+En sık görülen form rinoserebral mukormikozdur.
+Dikkat edin, aspergillozu kaynak ve tomografi işaretleriyle, mukormikozu ise damar istilası, nekroz ve diyabet zeminiyle hatırlayın.
+
+@@ Kök hücre nakli ve graft versus host hastalığı
+Kök hücre kaynakları kemik iliği, periferik kan ve kord kanıdır. Nakil, vericiye göre allojenik ya da otolog olabilir. Nakilden önce yüksek doz kemoterapi ve tüm vücut radyoterapisinden oluşan bir hazırlık rejimi uygulanır. Nakil sonrasında kök hücrelerin kemik iliğine göç etmesi, yerleşmesi, çoğalması ve olgunlaşması sürecine engraftman denir. Kemik iliği nakillerinde engraftman süresi 2 ila 3 haftadır.
+
+Alıcı ve vericinin önceden geçirdiği enfeksiyonlar da önemlidir; alıcıda reaktivasyon ya da vericiden bulaş riski vardır.
+Graft versus host hastalığının tedavisi sırasında da enfeksiyonlar gelişebilir.
+Graft versus host hastalığı, vericiden kök hücrelerle birlikte verilen sağlıklı T lenfositlerinin oluşturduğu şiddetli immünolojik reaksiyona bağlı, organ fonksiyon bozukluğuyla giden ve sıklıkla cilt, karaciğer ve gastrointestinal sistemi tutan bir hastalıktır.
+Burası önemli, sınav spotudur: en yüksek enfeksiyon riski, yüksek immünsüpresyon nedeniyle allojenik kemik iliği alıcılarındadır.
+
+@@ Solid organ nakli alıcısında enfeksiyonlar
+Nakledilen solid organlar böbrek, karaciğer, kalp, akciğer, pankreas ve ince bağırsaktır. Enfeksiyon nedenleri dört başlıkta toplanır. 1.'si teknik ve anatomik komplikasyonlardır. 2.'si hastanede yatarken kolonizasyon ve operasyon sırasında ya da sonrasında çevreden alınan mikroorganizmalardır. 3.'sü mikroorganizma ile temas ve inokulum miktarıdır; kaynak alıcı, verici, hastane ya da toplum olabilir. 4.'sü immünsüpresyonun yoğunluğu, kullanılan immünsüpresif ajanlar ve protein kalori malnütrisyonu, nötropeni, diyabet, alkolizm, siroz ile sitomegalovirüs, Epstein-Barr virüsü (EBV) ve Hepatit B virüsü (HBV) gibi immünmodülatör virüslerdir.
+
+Burası önemli, enfeksiyonlar nakil sonrası döneme göre üç zaman diliminde incelenir.
+İlk ay içinde cerrahi alan enfeksiyonu ve nozokomiyal enfeksiyonlar öndedir.
+Kalp naklinde pnömoni ve mediastinit, akciğer naklinde pnömoni görülür; aspirasyon, ventilatör kullanımı, yoğun bakım yatışı ve kateter ilişkili enfeksiyonlar da bu dönemin sorunlarıdır.
+Çıkmış soruda da solid organ naklinin ilk ayında cerrahi alan enfeksiyonu görüldüğü doğru ifade olarak yer aldı.
+
+Birinci ile altıncı aylar arası immünsüpresyonun en yoğun olduğu dönemdir ve fırsatçı enfeksiyonlar öne çıkar.
+Sitomegalovirüs enfeksiyonu sitomegalovirüs sendromu, sitomegalovirüs hastalığı, greft hasarı ve rejeksiyonla seyredebilir.
+BK virüsü reaktivasyonu nefropatiye ve greft rejeksiyonuna yol açar.
+Epstein-Barr, Varicella zoster ve herpes simpleks virüsleri reaktive olabilir.
+İnvaziv mantar enfeksiyonlarından aspergilloz pnömoni ve beyin apsesi yapar.
+Pneumocystis jirovecii pnömonisine karşı profilaktik trimetoprim sülfametoksazol verilir.
+Kriptokokkoz meningoensefalit, toksoplazmoz miyokardit ve beyin apsesi yapar; kalp nakli alıcılarında da trimetoprim sülfametoksazol profilaksisi uygulanır.
+Listeriyoz, nokardiyoz ve tüberküloz da bu dönemin fırsatçı bakteri enfeksiyonlarıdır.
+Altıncı aydan sonra tablo greft fonksiyonuna bağlıdır.
+Greft iyi çalışıyorsa düşük doz immünsüpresyon yeterlidir; toplum kökenli enfeksiyonlar görülür ve fırsatçı enfeksiyon riski düşüktür.
+Greft rejeksiyonu nedeniyle ciddi immünsüpresyon gerekiyorsa fırsatçı enfeksiyon riski yeniden yükselir.
+
+@@ İmmünsüpresif hastaya yaklaşım ve özet
+İmmünsüpresif hastaya yaklaşımda dört soru sırayla yanıtlanır. İmmünsüpresif durumun sebebi nedir; kanser mi, otoimmün hastalık mı, immünsüpresif tedavi mi? Etkilenen immünolojik yanıt hangisidir? Konak hangi enfeksiyon etkenleri açısından risk altındadır? Hasta anti enfektif profilaksi almakta mıdır? Neden bilinmeden bozulan kol, kol bilinmeden olası etken, etken bilinmeden de doğru profilaksi ve ampirik tedavi belirlenemez.
+
+Özetle arkadaşlar, nötropenide bakteri ve mantar, hümoral yetmezlik ve asplenide kapsüllü bakteriler, hücresel yetmezlikte hücre içi etkenler ve virüsler beklenir.
+Febril nötropeni 500'ün altında nötrofil ile tanımlanan ve 1 saat içinde antipsödomonal tedavi gerektiren bir acildir.
+Nakilde ise enfeksiyon tipi, nakilden bu yana geçen zamanla belirlenir.

@@ -1,8 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 37,
-  "baslik": "Sesli ders listesi onarıldı",
+  "onem": 38,
+  "baslik": "Çevrimdışı kullanım, Genetik Check Up ve kurul takvimi",
   "maddeler": [
-    "Sesli ders ekranında bazen \"Henüz sesi hazır ders yok\" görünüp derslerin gelmemesi düzeltildi."
+    "Canlı ders metinlerinde sayılar daha okunaklı rakamlarla gösteriliyor.",
+    "Çevrimdışı kullanım altyapısı ve Genetik Check Up ekranı eklendi.",
+    "Genetik sınav asistanına yeni bölüm ve kurul takvimi verisi eklendi.",
+    "Önem listesi, çalışma eşitlemesi ve görünüm düzeltmeleri."
   ]
 }

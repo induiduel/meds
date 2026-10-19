@@ -537,7 +537,9 @@ class OfflineDatabaseService {
    * TÜM VERİTABANINI CİHAZA İNDİR (TEK TIKLA %100 ÇEVRİMDIŞI)
    */
   public async downloadEntireDatabase(
-    onProgressCallback?: (p: OfflineProgress) => void
+    onProgressCallback?: (p: OfflineProgress) => void,
+    /** yalnizSorular: desteler, özetler ve sayfa kodu atlanır (çevrimdışı merkezinde bunlar ders/paket olarak ayrıca iner) */
+    opts: { yalnizSorular?: boolean } = {}
   ): Promise<boolean> {
     if (this.isDownloading) return false;
     this.isDownloading = true;
@@ -625,7 +627,7 @@ class OfflineDatabaseService {
       // 4. AŞAMA: Öğrenme Destelerini Cihaza Yükle (%50 - %70)
       report('İnteraktif ders öğrenme desteleri önbelleğe alınıyor...', 52);
       const loadedDecks: any[] = [];
-      try {
+      if (!opts.yalnizSorular) try {
         const total = DECK_CATALOG.length;
         let count = 0;
         for (const d of DECK_CATALOG) {
@@ -707,7 +709,7 @@ class OfflineDatabaseService {
 
       // 6.5 AŞAMA: Ders Özetlerini (Summaries) Kaydet (%88 - %92)
       report('Ders özetleri önbelleğe alınıyor...', 89);
-      try {
+      if (!opts.yalnizSorular) try {
         const [k1, k2, k3, k4, k5, k6] = await Promise.all([
           import('../data/summaries/kurul1.json').then((m) => m.default || m).catch(() => []),
           import('../data/summaries/kurul2.json').then((m) => m.default || m).catch(() => []),
@@ -727,7 +729,7 @@ class OfflineDatabaseService {
 
       // 7. AŞAMA: Çevrimdışı Sayfa Modüllerini Önceden Yükle (Preload Chunks) (%92 - %96)
       report('Çevrimdışı sayfaların modülleri önbelleğe alınıyor...', 93);
-      try {
+      if (!opts.yalnizSorular) try {
         await Promise.allSettled([
           import('../components/encyclopedia/MedicalEncyclopediaView'),
           import('../components/flashcards/FlashcardsView'),

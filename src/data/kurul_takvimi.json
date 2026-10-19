@@ -1,0 +1,2460 @@
+{
+ "surum": 1,
+ "kaynak": "2026-27 D3 ders programı.pdf",
+ "egitimYili": "2026-2027",
+ "donem": 3,
+ "final": "2027-06-28",
+ "butunleme": "2027-07-16",
+ "kurullar": [
+  {
+   "kurul": 1,
+   "kod": "TIP 310",
+   "ad": "ÜROGENİTAL VE OBSTETRİK KURULU",
+   "baslangic": "2026-09-14",
+   "sinav": "2026-10-23",
+   "bitis": "2026-10-23",
+   "dersler": [
+    {
+     "tarih": "2026-09-14",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Genetik Dismorfolojide Genetik Terminoloji DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2026-09-15",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Patoloji Hücre Hasarı ve Nekroz - I: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-17",
+     "saat": "08:50-09:30",
+     "metin": "Üroloji Üriner Obstrüksiyonun Fizyopatolojisi DOÇ. DR. ÖZER BARAN"
+    },
+    {
+     "tarih": "2026-09-18",
+     "saat": "08:50-09:30",
+     "metin": "Halk Sağlığı Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri"
+    },
+    {
+     "tarih": "2026-09-15",
+     "saat": "09:40-10:20",
+     "metin": "Tıbbi Patoloji Hücre Hasarı ve Nekroz - II: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-14",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Patolojiye Giriş: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-15",
+     "saat": "10:30-11:10",
+     "metin": "Halk Sağlığı Gebelik ve Emzirme Döneminde Beslenme DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2026-09-16",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Hücre İçi Birikimler ve Kalsifikasyonlar: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-17",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Enflamasyonun Kimyasal Mediyatörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-18",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Doku Onarımı ve Yara İyileşmesi: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-14",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Hücresel Adaptasyonlar: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-16",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar: PROF. DR. HİKMET"
+    },
+    {
+     "tarih": "2026-09-17",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Kronik ve Granülomatöz Enflamasyon: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-18",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Ödem, Hiperemi, Konjesyon ve Kanama: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-16",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Genetik Kromozomal Hastalıklar ve Genetik Danışma DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2026-09-17",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2026-09-21",
+     "saat": "08:50-09:30",
+     "metin": "Enfeksiyon Hastalıkları Cinsel Yolla Bulaşan Enfeksiyonlarda Tedavi DR. ÖĞR. ÜYESİ RÜVEYDA KORKMAZER"
+    },
+    {
+     "tarih": "2026-09-22",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Patoloji Tromboz Patofizyolojisi: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-24",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Patoloji Tümör Biyolojisi ve Terminolojisi: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-25",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Patoloji Tümör İmmünolojisi ve Metastaz Mekanizmaları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-22",
+     "saat": "09.40-10:20",
+     "metin": "Tıbbi Patoloji Emboli, Enfarktüs ve Şok: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-23",
+     "saat": "09.40-10:20",
+     "metin": "Halk Sağlığı Enfeksiyon Hastalıklarının Epidemiyolojisi DR ÖĞR ÜYESİ ERKAY NACAR"
+    },
+    {
+     "tarih": "2026-09-24",
+     "saat": "09.40-10:20",
+     "metin": "Tıbbi Patoloji Karsinojenezin Moleküler Temeli: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-25",
+     "saat": "09.40-10:20",
+     "metin": "Tıbbi Patoloji Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-21",
+     "saat": "10:30-11:10",
+     "metin": "Halk Sağlığı Halk Sağlığı Tarihçesi DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2026-09-22",
+     "saat": "10:30-11:10",
+     "metin": "Enfeksiyon Hastalıkları Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler UZ. DR. MERVE KAÇAR"
+    },
+    {
+     "tarih": "2026-09-23",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Aşırı Duyarlılık ve Otoimmünite: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-24",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Genetik Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe"
+    },
+    {
+     "tarih": "2026-09-21",
+     "saat": "11:20-12:00",
+     "metin": "Halk Sağlığı Koruyucu Sağlık Hizmetleri DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2026-09-23",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Genetik, Pediatrik ve Çevresel Patoloji: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-24",
+     "saat": "11:20-12:00",
+     "metin": "Yansımaları Tıbbi Genetik Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları"
+    },
+    {
+     "tarih": "2026-09-21",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Genetik Doğumsal Kadın/Erkek Genital Gelişim Anomalileri"
+    },
+    {
+     "tarih": "2026-09-22",
+     "saat": "13:00-13:40",
+     "metin": "Halk Sağlığı Bebek Beslenmesi DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2026-09-23",
+     "saat": "13:00-13:40",
+     "metin": "Üroloji Üriner Sistem Taş Hastalıkları Fizyopatolojisi"
+    },
+    {
+     "tarih": "2026-09-24",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2026-09-21",
+     "saat": "13:50-14:30",
+     "metin": "DR ÖĞR ÜYESİ SERAP ARSLAN Tıbbi Genetik Doğumsal Kadın/Erkek Genital Gelişim Anomalileri"
+    },
+    {
+     "tarih": "2026-09-22",
+     "saat": "13:50-14:30",
+     "metin": "Halk Sağlığı Ana-Çocuk Sağlığı Düzeyinin İzlenmesi DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2026-09-23",
+     "saat": "13:50-14:30",
+     "metin": "DR ÖĞR ÜYESİ FAHRETTİN ŞAMİL UYSAL Üroloji Üriner Sistem Taş Hastalıkları Fizyopatolojisi"
+    },
+    {
+     "tarih": "2026-09-21",
+     "saat": "14:40-15:20",
+     "metin": "DR ÖĞR ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2026-09-23",
+     "saat": "14:40-15:20",
+     "metin": "DR ÖĞR ÜYESİ FAHRETTİN ŞAMİL"
+    },
+    {
+     "tarih": "2026-09-29",
+     "saat": "08:50-09:30",
+     "metin": "Enfeksiyon Hastalıkları İzolasyon Yöntemleri DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2026-10-01",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Patoloji Sistemik Hastalıklarda Böbrek Hasarı:"
+    },
+    {
+     "tarih": "2026-10-02",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Patoloji Vasküler ve Kistik Böbrek Hastalıkları:"
+    },
+    {
+     "tarih": "2026-09-29",
+     "saat": "09:40-10:20",
+     "metin": "RÜVEYDA KORKMAZER Enfeksiyon Hastalıkları İzolasyon Yöntemleri DR. ÖĞR. ÜYESİ RÜVEYDA KORKMAZER"
+    },
+    {
+     "tarih": "2026-09-30",
+     "saat": "09:40-10:20",
+     "metin": "Üroloji Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve"
+    },
+    {
+     "tarih": "2026-10-01",
+     "saat": "09:40-10:20",
+     "metin": "PROF DR HİKMET KELEŞ Tıbbi Patoloji Tübülointerstisyel Hastalıklar: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-10-02",
+     "saat": "09:40-10:20",
+     "metin": "PROF DR HİKMET KELEŞ Tıbbi Patoloji Böbrek Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-28",
+     "saat": "10:30-11:10",
+     "metin": "Enfeksiyon Hastalıkları Genital Enfeksiyonlar DR. ÖĞR. ÜYESİ RÜVEYDA KORKMAZER"
+    },
+    {
+     "tarih": "2026-09-29",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Glomeruler Hastalıklar: Nefrotik Sendrom: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-30",
+     "saat": "10:30-11:10",
+     "metin": "Semptomatolojisi Üroloji Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi"
+    },
+    {
+     "tarih": "2026-10-01",
+     "saat": "10:30-11:10",
+     "metin": "Üroloji Üriner Sistemin Spesifik Enfeksiyonları DR. ÖĞR. ÜYESİ SALİH BÜRLÜKKARA"
+    },
+    {
+     "tarih": "2026-10-02",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Mesane Hastalıkları ve Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-09-29",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Glomeruler Hastalıklar: Nefritik Sendrom: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-10-01",
+     "saat": "11:20-12:00",
+     "metin": "Üroloji Üriner Sistemin Spesifik Enfeksiyonları DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2026-09-28",
+     "saat": "12:10- 12:50",
+     "metin": "Semptomatolojisi SALİH BÜRLÜKKARA"
+    },
+    {
+     "tarih": "2026-09-28",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Genetik Prenatal Tanı Yöntemleri DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2026-09-30",
+     "saat": "13:00-13:40",
+     "metin": "Enfeksiyon Hastalıkları Cinsel yolla bulaşan hastalıklarda profilaksi ve korunma"
+    },
+    {
+     "tarih": "2026-10-01",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2026-10-05",
+     "saat": "08:50-09:30",
+     "metin": "Enfeksiyon Hastalıkları Bağışıklığı Baskılı Hastalarda Enfeksiyon UZ. DR. MERVE KAÇAR"
+    },
+    {
+     "tarih": "2026-10-06",
+     "saat": "08:50-09:30",
+     "metin": "Enfeksiyon Hastalıkları Sifilis DR. ÖĞR. ÜYESİ RÜVEYDA KORKMAZER"
+    },
+    {
+     "tarih": "2026-10-08",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Patoloji Endometrial Hiperplazi ve Kanserleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-10-09",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Patoloji Over Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-10-08",
+     "saat": "09:40-10:20",
+     "metin": "Tıbbi Patoloji Uterus Düz Kas ve Trofoblastik Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-10-09",
+     "saat": "09:40-10:20",
+     "metin": "Tıbbi Patoloji Memenin Benign Hastalıkları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-10-05",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Vulva, Vajen ve Serviks Hastalıkları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-10-06",
+     "saat": "10:30-11:10",
+     "metin": "Üroloji Üriner Sistem Enfeksiyonları Lab. Bulguları ve Tedavi DOÇ. DR. ÖZER"
+    },
+    {
+     "tarih": "2026-10-07",
+     "saat": "10:30-11:10",
+     "metin": "Enfeksiyon Hastalıkları Üriner Sistem Enfeksiyonları DR. ÖĞR. ÜYESİ RÜVEYDA KORKMAZER"
+    },
+    {
+     "tarih": "2026-10-05",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji İnvaziv Serviks Kanseri ve Endometriyozis: PROF. DR. HİKMET"
+    },
+    {
+     "tarih": "2026-10-08",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2026-10-13",
+     "saat": "08:50-09:30",
+     "metin": "Enfeksiyon Hastalıkları Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim"
+    },
+    {
+     "tarih": "2026-10-16",
+     "saat": "08:50-09:30",
+     "metin": "Kadın Hastalıkları ve Doğum Gebelik Terminolojisi/Kavramları DR. ÖĞR. ÜYESİ HİLAL EZGİ TÜRKMEN"
+    },
+    {
+     "tarih": "2026-10-13",
+     "saat": "09:40-10:20",
+     "metin": "DR ÖĞR ÜYESİ RÜVEYDA KORKMAZER Enfeksiyon Hastalıkları Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim"
+    },
+    {
+     "tarih": "2026-10-15",
+     "saat": "09:40-10:20",
+     "metin": "Enfeksiyon Hastalıkları Üretral Akıntı UZ. DR. MERVE KAÇAR"
+    },
+    {
+     "tarih": "2026-10-12",
+     "saat": "10:30-11:10",
+     "metin": "Enfeksiyon Hastalıkları İntrauterin Enfeksiyonlar DR. ÖĞR. ÜYESİ RÜVEYDA KORKMAZER"
+    },
+    {
+     "tarih": "2026-10-13",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji İmmünofarmakoloji PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2026-10-14",
+     "saat": "10:30-11:10",
+     "metin": "Kadın Hastalıkları ve Doğum Abortus DR. ÖĞR. ÜYESİ HİLAL EZGİ TÜRKMEN"
+    },
+    {
+     "tarih": "2026-10-16",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Meme Kanseri ve Moleküler Tipleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-10-15",
+     "saat": "11:20-12:00",
+     "metin": "Halk Sağlığı Türkiye’de Sağlık Hizmetleri DR. ÖĞR. ÜYESİ ERKAY NACAR"
+    },
+    {
+     "tarih": "2026-10-16",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Erkek Genital Sistem ve Prostat Hastalıkları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-10-12",
+     "saat": "13:00-13:40",
+     "metin": "Üroloji Enürezis Nokturna DR. ÖĞR. ÜYESİ SALİH BÜRLÜKKARA"
+    },
+    {
+     "tarih": "2026-10-13",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Genetik Preimplantasyon Genetik Tanı (Pgd) DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2026-10-15",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2026-10-22",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    }
+   ]
+  },
+  {
+   "kurul": 2,
+   "kod": "TIP 320",
+   "ad": "NÖROPSİKİYATRİ KURULU",
+   "baslangic": "2026-10-26",
+   "sinav": "2026-12-04",
+   "bitis": "2026-12-04",
+   "dersler": [
+    {
+     "tarih": "2026-10-26",
+     "saat": "08:50-09:30",
+     "metin": "Nöroloji Nörolojik Hastaya Yaklaşım DR. ÖĞR. ÜYESİ İRFAN YAVAŞ"
+    },
+    {
+     "tarih": "2026-10-28",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji Genel Anestezik İlaçlar DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2026-10-26",
+     "saat": "10:30-11:10",
+     "metin": "Nöroloji Bilinç Bozukluğu Olan Hastaya Yaklaşım DR. ÖĞR. ÜYESİ İRFAN YAVAŞ"
+    },
+    {
+     "tarih": "2026-10-28",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Genetik Beyin ve İskelet Sistemi Gelişimi Genetiği"
+    },
+    {
+     "tarih": "2026-10-26",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Patoloji SSS Hücresel Reaksiyonları ve Ödem / Herniasyon: PROF DR HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-10-27",
+     "saat": "13:00-13:40",
+     "metin": "Nöroloji Nörolojik Muayene DR ÖĞR ÜYESİ İRFAN YAVAŞ"
+    },
+    {
+     "tarih": "2026-10-26",
+     "saat": "13:50-14:30",
+     "metin": "Tıbbi Patoloji Serebrovasküler Hastalıklar ve İnme: PROF DR HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-10-27",
+     "saat": "14:40-15:20",
+     "metin": "Anesteziyoloji ve Reanimasyon Ağrı Yolları ve Mekanizmaları DR. ÖĞR."
+    },
+    {
+     "tarih": "2026-10-27",
+     "saat": "15:30-16:10",
+     "metin": "ÜYESİ ALPAY ATEŞ Anesteziyoloji ve Reanimasyon Ağrı Yolları ve Mekanizmaları DR. ÖĞR."
+    },
+    {
+     "tarih": "2026-10-27",
+     "saat": "16:20-17:00",
+     "metin": "ÜYESİ ALPAY ATEŞ"
+    },
+    {
+     "tarih": "2026-11-02",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji SSS İlaçları"
+    },
+    {
+     "tarih": "2026-11-06",
+     "saat": "08:50-09:30",
+     "metin": "Psikiyatri Bipolar Bozukluk"
+    },
+    {
+     "tarih": "2026-11-02",
+     "saat": "09:40-10:20",
+     "metin": "PROF DR MEHMET ÖZDEMİR Tıbbi Farmakoloji SSS İlaçları"
+    },
+    {
+     "tarih": "2026-11-03",
+     "saat": "09:40-10:20",
+     "metin": "Beyin ve Sinir Cerrahisi Kafa ve Omurilik Yaralanmaları DOÇ. DR. AYDIN"
+    },
+    {
+     "tarih": "2026-11-05",
+     "saat": "09:40-10:20",
+     "metin": "Nöroloji Periferik Nöropati"
+    },
+    {
+     "tarih": "2026-11-06",
+     "saat": "09:40-10:20",
+     "metin": "DR ÖĞR ÜYESİ NEFİSE DEMİR Psikiyatri Bipolar Bozukluk"
+    },
+    {
+     "tarih": "2026-11-02",
+     "saat": "10:30-11:10",
+     "metin": "PROF DR MEHMET ÖZDEMİR Nöroloji Baş ağrısına Yaklaşım DR. ÖĞR. ÜYESİ İRFAN YAVAŞ"
+    },
+    {
+     "tarih": "2026-11-03",
+     "saat": "10:30-11:10",
+     "metin": "SİNAN APAYDIN Beyin ve Sinir Cerrahisi Kafa ve Omurilik Yaralanmaları DOÇ. DR. AYDIN SİNAN APAYDIN"
+    },
+    {
+     "tarih": "2026-11-04",
+     "saat": "10:30-11:10",
+     "metin": "Psikiyatri Şizofrenik Bozukluklar DR. ÖĞR. ÜYESİ NEFİSE DEMİR"
+    },
+    {
+     "tarih": "2026-11-05",
+     "saat": "10:30-11:10",
+     "metin": "DR ÖĞR ÜYESİ İRFAN YAVAŞ Nöroloji Bazal Gangliyonlar ve Ekstrapiramidal Sistem"
+    },
+    {
+     "tarih": "2026-11-06",
+     "saat": "10:30-11:10",
+     "metin": "DR ÖĞR ÜYESİ NEFİSE DEMİR Psikiyatri Psikiyatrik Bozukluklarda Uygulanan Tedaviler DR. ÖĞR. ÜYESİ NEFİSE DEMİR"
+    },
+    {
+     "tarih": "2026-11-02",
+     "saat": "11:20-12:00",
+     "metin": "Nöroloji Baş ağrısına Yaklaşım DR. ÖĞR. ÜYESİ İRFAN YAVAŞ"
+    },
+    {
+     "tarih": "2026-11-03",
+     "saat": "11:20-12:00",
+     "metin": "Beyin ve Sinir Cerrahisi Medulla Spinalis lezyonları DOÇ. DR. AYDIN SİNAN APAYDIN"
+    },
+    {
+     "tarih": "2026-11-05",
+     "saat": "11:20-12:00",
+     "metin": "Nöroloji Bazal Gangliyonlar ve Ekstrapiramidal Sistem"
+    },
+    {
+     "tarih": "2026-11-06",
+     "saat": "11:20-12:00",
+     "metin": "Psikiyatri Psikiyatrik Bozukluklarda Uygulanan Tedaviler DR. ÖĞR. ÜYESİ NEFİSE DEMİR"
+    },
+    {
+     "tarih": "2026-11-02",
+     "saat": "13:00-13:40",
+     "metin": "Psikiyatri Psikiyatrik Semiyoloji DR. ÖĞR. ÜYESİ NEFİSE DEMİR"
+    },
+    {
+     "tarih": "2026-11-04",
+     "saat": "13:00-13:40",
+     "metin": "FTR Nörolojik Rehabilitasyona Giriş ve Genel İlkeler DR ÖĞR ÜYESİ ŞENGÜL METİN TARHAN"
+    },
+    {
+     "tarih": "2026-11-05",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2026-11-03",
+     "saat": "13:50-14:30",
+     "metin": "Beyin ve Sinir Cerrahisi İntrakraniyal Kitlelerde Belirti ve Bulgular DOÇ. DR. AYDIN SİNAN APAYDIN"
+    },
+    {
+     "tarih": "2026-11-04",
+     "saat": "13:50-14:30",
+     "metin": "FTR Nörolojik Rehabilitasyona Giriş ve Genel İlkeler DR ÖĞR ÜYESİ ŞENGÜL METİN"
+    },
+    {
+     "tarih": "2026-11-06",
+     "saat": "13:50-14:30",
+     "metin": "Tıbbi Farmakoloji Sedatif ve Hipnotik İlaçlar PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2026-11-09",
+     "saat": "08:50-09:30",
+     "metin": "Psikiyatri Psikosomatik Bozukluklar Doç. Dr. Zuhal KOÇ APAYDIN"
+    },
+    {
+     "tarih": "2026-11-10",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Genetik Nörolojik Hastalıklar"
+    },
+    {
+     "tarih": "2026-11-12",
+     "saat": "08:50-09:30",
+     "metin": "Nöroloji Medulla Spinalis Hastalıkları DR. ÖĞR."
+    },
+    {
+     "tarih": "2026-11-13",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji Opoid Analjezikler ve Antagonistleri"
+    },
+    {
+     "tarih": "2026-11-09",
+     "saat": "09:40-10:20",
+     "metin": "Psikiyatri Cinsel Kimlik Bozuklukları Doç. Dr. Zuhal KOÇ APAYDIN"
+    },
+    {
+     "tarih": "2026-11-10",
+     "saat": "09:40-10:20",
+     "metin": "DR ÖĞR ÜYESİ SERAP ARSLAN Tıbbi Genetik Nörolojik Hastalıklar DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2026-11-11",
+     "saat": "09:40-10:20",
+     "metin": "Tıbbi Patoloji Santral Sinir Sistemi Enfeksiyonları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-11-12",
+     "saat": "09:40-10:20",
+     "metin": "ÜYESİ İRFAN YAVAŞ Nöroloji Medulla Spinalis Hastalıkları DR. ÖĞR. ÜYESİ İRFAN YAVAŞ"
+    },
+    {
+     "tarih": "2026-11-13",
+     "saat": "09:40-10:20",
+     "metin": "PROF DR MEHMET ÖZDEMİR Tıbbi Farmakoloji Opoid Analjezikler ve Antagonistleri PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2026-11-09",
+     "saat": "10:30-11:10",
+     "metin": "Nöroloji Epilepsi DR. ÖĞR. ÜYESİ İRFAN YAVAŞ"
+    },
+    {
+     "tarih": "2026-11-10",
+     "saat": "10:30-11:10",
+     "metin": "Aile Hekimliği Aile Hekimliğinde Periyodik Muayeneler 1"
+    },
+    {
+     "tarih": "2026-11-11",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Nörodejeneratif Hastalıklar: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-11-12",
+     "saat": "10:30-11:10",
+     "metin": "Nöroloji Felçler DR. ÖĞR. ÜYESİ İRFAN YAVAŞ"
+    },
+    {
+     "tarih": "2026-11-13",
+     "saat": "10:30-11:10",
+     "metin": "Psikiyatri Unipolar Depresyon Doç. Dr. Zuhal KOÇ APAYDIN"
+    },
+    {
+     "tarih": "2026-11-11",
+     "saat": "11:20-12:00",
+     "metin": "Nöroloji Medulla Spinalis Hastalıkları DR. ÖĞR. ÜYESİ İRFAN YAVAŞ"
+    },
+    {
+     "tarih": "2026-11-13",
+     "saat": "11:20-12:00",
+     "metin": "Psikiyatri Kişilik Bozuklukları DR. ÖĞR. ÜYESİ ZÜHAL KOÇ APAYDIN"
+    },
+    {
+     "tarih": "2026-11-09",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Farmakoloji Antiepileptik İlaçlar PROF. DR. PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2026-11-10",
+     "saat": "13:00-13:40",
+     "metin": "FTR Sık görülen nörolojik Hastalıklar ve Rehabilitasyonu"
+    },
+    {
+     "tarih": "2026-11-12",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2026-11-10",
+     "saat": "13:50-14:30",
+     "metin": "DR ÖĞR ÜYESİ ŞENGÜL METİN TARHAN FTR Sık görülen nörolojik Hastalıklar ve Rehabilitasyonu"
+    },
+    {
+     "tarih": "2026-11-10",
+     "saat": "14:40-15:20",
+     "metin": "DR ÖĞR ÜYESİ ŞENGÜL METİN TARHAN"
+    },
+    {
+     "tarih": "2026-11-16",
+     "saat": "08:50-09:30",
+     "metin": "Aile Hekimliği Aile Hekimliğine Yaklaşım DR. ÖĞR. ÜYESİ M. MURAT ŞAHİN"
+    },
+    {
+     "tarih": "2026-11-19",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji Adrenoseptör Antagonist İlaçlar DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2026-11-20",
+     "saat": "08:50-09:30",
+     "metin": "Psikiyatri Dikkat Eksikliği Hiperaktivite Bozukluğu UZM. DR. PINAR DURMAZ"
+    },
+    {
+     "tarih": "2026-11-17",
+     "saat": "09:40-10:20",
+     "metin": "Tıbbi Patoloji Santral Sinir Sistemi Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-11-18",
+     "saat": "09:40-10:20",
+     "metin": "Psikiyatri Konsültasyon Liyezon Psikiyatrisi DR. ÖĞR. ÜYESİ Pınar Durmaz"
+    },
+    {
+     "tarih": "2026-11-20",
+     "saat": "09:40-10:20",
+     "metin": "Psikiyatri Dışa Atım Bozuklukları UZM. DR. PINAR DURMAZ"
+    },
+    {
+     "tarih": "2026-11-16",
+     "saat": "10:30-11:10",
+     "metin": "Psikiyatri OKB ve İlişkili Bozukluklar DR. ÖĞR. ÜYESİ NEFİSE DEMİR"
+    },
+    {
+     "tarih": "2026-11-17",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Otonom Sinir Sistemi Farmakolojisi DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2026-11-18",
+     "saat": "10:30-11:10",
+     "metin": "Psikiyatri Damgalama DR. ÖĞR. ÜYESİ Pınar Durmaz"
+    },
+    {
+     "tarih": "2026-11-19",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Lokal Anestezik İlaçlar DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2026-11-20",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Kolinoseptör Aktive Edici ve Kolinesteraz İnhibitörleri DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2026-11-16",
+     "saat": "11:20-12:00",
+     "metin": "Psikiyatri Travma ve Stres Bağlantılı Bozukluklar DR. ÖĞR. ÜYESİ NEFİSE DEMİR"
+    },
+    {
+     "tarih": "2026-11-18",
+     "saat": "11:20-12:00",
+     "metin": "Psikiyatri İntihar ve Kendine Zarar Verme DR. ÖĞR. ÜYESİ Pınar Durmaz"
+    },
+    {
+     "tarih": "2026-11-20",
+     "saat": "11:20-12:00",
+     "metin": "NAMIK BİLİCİ Tıbbi Farmakoloji Kolinoseptör Aktive Edici ve Kolinesteraz İnhibitörleri DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2026-11-16",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Farmakoloji Kolinoseptör Bloke Edici İlaçlar PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2026-11-17",
+     "saat": "13:00-13:40",
+     "metin": "Psikiyatri Nörogelişimsel Bozukluklar DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2026-11-18",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Farmakoloji Sempatomimetikler PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2026-11-19",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2026-11-17",
+     "saat": "13:50-14:30",
+     "metin": "Psikiyatri Nörogelişimsel Bozukluklar DR. ÖĞR. ÜYESİ Pınar Durmaz"
+    },
+    {
+     "tarih": "2026-11-23",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Genetik Davranış Genetiği"
+    },
+    {
+     "tarih": "2026-11-26",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji Miyorelaksan İlaçlar PROF. DR. MEHMET"
+    },
+    {
+     "tarih": "2026-11-27",
+     "saat": "08:50-09:30",
+     "metin": "Nöroloji Kraniyal Sinir Muayenesi DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2026-11-23",
+     "saat": "09:40-10:20",
+     "metin": "DR ÖĞR ÜYESİ SERAP ARSLAN Tıbbi Genetik Davranış Genetiği"
+    },
+    {
+     "tarih": "2026-11-26",
+     "saat": "09:40-10:20",
+     "metin": "ÖZDEMİR Tıbbi Farmakoloji Miyorelaksan İlaçlar PROF. DR. MEHMET"
+    },
+    {
+     "tarih": "2026-11-27",
+     "saat": "09:40-10:20",
+     "metin": "İRFAN YAVAŞ Nöroloji Kraniyal Sinir Muayenesi DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2026-11-23",
+     "saat": "10:30-11:10",
+     "metin": "DR ÖĞR ÜYESİ SERAP ARSLAN Tıbbi Genetik Nörodejeneratif Hastalıklar Genetiği DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2026-11-24",
+     "saat": "10:30-11:10",
+     "metin": "Aile Hekimliği Aile Hekimliğinde Periyodik Muayeneler 2"
+    },
+    {
+     "tarih": "2026-11-25",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Alkoller PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2026-11-26",
+     "saat": "10:30-11:10",
+     "metin": "ÖZDEMİR Aile Hekimliği Nikotin Bağımlılığı ve Tedavisi DR. ÖĞR. ÜYESİ AYBALA CEBECİK"
+    },
+    {
+     "tarih": "2026-11-27",
+     "saat": "10:30-11:10",
+     "metin": "İRFAN YAVAŞ Tıbbi Farmakoloji Antidepresan İlaçlar DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2026-11-23",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Genetik Nörodejeneratif Hastalıklar Genetiği DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2026-11-26",
+     "saat": "11:20-12:00",
+     "metin": "Aile Hekimliği Nikotin Bağımlılığı ve Tedavisi DR. ÖĞR. ÜYESİ AYBALA CEBECİK"
+    },
+    {
+     "tarih": "2026-11-27",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Farmakoloji Antidepresan İlaçlar DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2026-11-23",
+     "saat": "13:00-13:40",
+     "metin": "Psikiyatri Yaygın Anksiyete Bozukluğu Doç. Dr. Zuhal KOÇ APAYDIN"
+    },
+    {
+     "tarih": "2026-11-25",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Genetik Psikiyatrik Hastalıklar ve Genetik Analizi DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2026-11-26",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2026-11-23",
+     "saat": "13:50-14:30",
+     "metin": "Psikiyatri Panik Bozukluk Doç. Dr. Zuhal KOÇ APAYDIN"
+    },
+    {
+     "tarih": "2026-11-23",
+     "saat": "14:40-15:20",
+     "metin": "Psikiyatri Fobik Bozukluk Doç. Dr. Zuhal KOÇ"
+    },
+    {
+     "tarih": "2026-11-23",
+     "saat": "15:30-16:10",
+     "metin": "APAYDIN"
+    },
+    {
+     "tarih": "2026-12-03",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    }
+   ]
+  },
+  {
+   "kurul": 3,
+   "kod": "TIP 330",
+   "ad": "GASTROİNTESTİNAL SİSTEM KURULU",
+   "baslangic": "2026-12-07",
+   "sinav": "2027-01-22",
+   "bitis": "2027-02-05",
+   "dersler": [
+    {
+     "tarih": "2026-12-07",
+     "saat": "08:50-09:30",
+     "metin": "İç Hastalıkları Bakteriyel İshaller UZM DR. CEREN ÇEVİK"
+    },
+    {
+     "tarih": "2026-12-08",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji Sülfonamidler, Trimetoprim ve Kinolonlar DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2026-12-09",
+     "saat": "09:40-10:20",
+     "metin": "İç Hastalıkları Ülser Gastrit DR. ÖĞR. ÜYESİ KENAN KOŞAR"
+    },
+    {
+     "tarih": "2026-12-07",
+     "saat": "10:30-11:10",
+     "metin": "İç Hastalıkları Gastroenteritler UZM DR. BETÜL İVERENDİ"
+    },
+    {
+     "tarih": "2026-12-08",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Antihelmintik İlaçlar DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2026-12-10",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Özofagus Hastalıkları ve Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-12-11",
+     "saat": "10:30-11:10",
+     "metin": "İç Hastalıkları Siroz ve Komplikasyonları DR. ÖĞR. ÜYESİ KENAN KOŞAR"
+    },
+    {
+     "tarih": "2026-12-09",
+     "saat": "11:20-12:00",
+     "metin": "İç Hastalıkları Sarılıklar DR. ÖĞR. ÜYESİ KENAN KOŞAR"
+    },
+    {
+     "tarih": "2026-12-10",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Gastrit Tipleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-12-11",
+     "saat": "11:20-12:00",
+     "metin": "İç Hastalıkları Gastrointestinal Sistem Parazitozları UZM DR. CEREN ÇEVİK"
+    },
+    {
+     "tarih": "2026-12-07",
+     "saat": "13:00-13:40",
+     "metin": "İç Hastalıkları GİS Motilite Bozuklukları DR ÖĞR ÜYESİ ABDULVAHAP COŞKUN"
+    },
+    {
+     "tarih": "2026-12-08",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Farmakoloji Aminoglikozidler PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2026-12-09",
+     "saat": "13:00-13:40",
+     "metin": "İç Hastalıkları Üst GIS kanamaları DR ÖĞR ÜYESİ KENAN KOŞAR"
+    },
+    {
+     "tarih": "2026-12-10",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2026-12-07",
+     "saat": "13:50-14:30",
+     "metin": "İç Hastalıkları GİS Motilite Bozuklukları DR. ÖĞR. ÜYESİ ABDULVAHAP COŞKUN"
+    },
+    {
+     "tarih": "2026-12-08",
+     "saat": "13:50-14:30",
+     "metin": "Tıbbi Farmakoloji Tetrasiklin, Makrolit, Kloramfenikol ve Streptograminler PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2026-12-09",
+     "saat": "13:50-14:30",
+     "metin": "İç Hastalıkları Alt GIS kanamaları DR. ÖĞR. ÜYESİ KENAN KOŞAR"
+    },
+    {
+     "tarih": "2026-12-07",
+     "saat": "14:40-15:20",
+     "metin": "İç Hastalıkları Ailesel Akdeniz Ateşi DR ÖĞR ÜYESİ ABDULVAHAP COŞKUN"
+    },
+    {
+     "tarih": "2026-12-14",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -1 DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2026-12-14",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Dislipidemide Kullanılan İlaçlar PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2026-12-16",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Peptik Ülser: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-12-17",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Malabsorbsiyon ve Çölyak Hastalığı: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-12-18",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji İnflamatuar Bağırsak Hastalıkları: Crohn Hastalığı: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-12-15",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Farmakoloji Antiemetik ilaçlar DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2026-12-16",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Mide Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-12-17",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Enfeksiyöz ve Divertiküler Kolitler: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-12-14",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Farmakoloji Antifungal İlaçlar PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2026-12-15",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Farmakoloji GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -2"
+    },
+    {
+     "tarih": "2026-12-16",
+     "saat": "13:00-13:40",
+     "metin": "Enfeksiyon Hastalıkları Kolera UZ. DR. MERVE KAÇAR"
+    },
+    {
+     "tarih": "2026-12-17",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2026-12-22",
+     "saat": "08:00-08:40",
+     "metin": "Tıbbi Farmakoloji Antimikobakteriyel İlaçlar DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2026-12-24",
+     "saat": "08:50-09:30",
+     "metin": "İç Hastalıkları Sindirim Sistemi Tümörleri PROF. DR. FATİH KARATAŞ"
+    },
+    {
+     "tarih": "2026-12-21",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji İnflamatuar Bağırsak Hastalıkları: Ülseratif Kolit: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-12-24",
+     "saat": "10:30-11:10",
+     "metin": "İç Hastalıkları Kolonun Prekanseröz Lezyonları DR. ÖĞR. ÜYESİ KENAN KOŞAR"
+    },
+    {
+     "tarih": "2026-12-25",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Kolorektal Kanser Patogenezi: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-12-21",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Bağırsak Polipler ve Polipozis Sendromları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-12-25",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Kolorektal Adenokarsinom ve Apandisit: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-12-22",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Farmakoloji Antimikrobik İlaçların Klinik Kullanımı, Önemi ve Önlemleri PROF. DR. MEHMET"
+    },
+    {
+     "tarih": "2026-12-23",
+     "saat": "13:00-13:40",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Konjenital GİS Malformasyonları PROF. DR. EYLEM SEVİNÇ"
+    },
+    {
+     "tarih": "2026-12-24",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2026-12-22",
+     "saat": "13:50-14:30",
+     "metin": "Tıbbi Farmakoloji Antimikrobik İlaçların Klinik Kullanımı, Önemi ve Önlemleri PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2026-12-28",
+     "saat": "10:30-11:10",
+     "metin": "İç Hastalıkları Akut Pankreatitler DR. ÖĞR. ÜYESİ KENAN KOŞAR"
+    },
+    {
+     "tarih": "2026-12-30",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Genetik Gastrointestinal Tümörlerin Genetiği DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2026-12-31",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Akut ve Kronik Viral Hepatitler: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2026-12-31",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Yağlı Karaciğer Hastalıkları (NAFLD/NASH): PROF. DR. HİKMET"
+    },
+    {
+     "tarih": "2026-12-29",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Genetik Gastrointestinal Hastalıkların Genetiği DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2026-12-29",
+     "saat": "14:40-15:20",
+     "metin": "Tıbbi Farmakoloji Besin Zehirlenmeleri ve Zehirlenmelerde Yönetim DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2027-01-04",
+     "saat": "08:50-09:30",
+     "metin": "İç Hastalıkları Akut Hepatitler DOÇ. DR. FATİH İNCİ"
+    },
+    {
+     "tarih": "2027-01-07",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji OTC İlaçların Terapötik ve Toksik Etkileri DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2027-01-05",
+     "saat": "09:40-10:20",
+     "metin": "İç Hastalıkları Malabsorpsiyon Sendromları DR. ÖĞR. ÜYESİ NESLİHAN EKŞİ"
+    },
+    {
+     "tarih": "2027-01-07",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Kolestatik Karaciğer Hastalıkları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-01-08",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Karaciğer Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-01-07",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Karaciğer Sirozu ve Portal Hipertansiyon: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-01-08",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Kolesistit, Kolelitiyazis ve Safra Kesesi Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-01-05",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Farmakoloji Diğer Antimikrobiyaller; Dezenfektan ve Sterilizan Ajanlar DR."
+    },
+    {
+     "tarih": "2027-01-07",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-01-05",
+     "saat": "13:50-14:30",
+     "metin": "Tıbbi Farmakoloji Diğer Antimikrobiyaller; Dezenfektan ve Sterilizan Ajanlar DR. ÖĞR. ÜYESİ NAMIK"
+    },
+    {
+     "tarih": "2027-01-11",
+     "saat": "09:40-10:20",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Biliyer Atrezi ve Diğer Safra Yolu Anomalileri PROF. DR. EYLEM SEVİNÇ"
+    },
+    {
+     "tarih": "2027-01-11",
+     "saat": "10:30-11:10",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Neonatal Kolestaz PROF. DR. EYLEM SEVİNÇ"
+    },
+    {
+     "tarih": "2027-01-12",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Vazoaktif Peptidler, Eikozanoidler DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2027-01-13",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Akut ve Kronik Pankreatitler: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-01-14",
+     "saat": "10:30-11:10",
+     "metin": "Enfeksiyon Hastalıkları Zoonotik Enfeksiyonlar UZ. DR. MERVE KAÇAR"
+    },
+    {
+     "tarih": "2027-01-13",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Pankreas Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-01-11",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Farmakoloji Antiviral İlaçlar DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2027-01-12",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Farmakoloji Beta Laktam ve Diğer Hücre Duvarı ile Membran Aktif Antibiyotikler PROF."
+    },
+    {
+     "tarih": "2027-01-14",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-01-21",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER FİNAL SINAVI"
+    }
+   ]
+  },
+  {
+   "kurul": 4,
+   "kod": "TIP 340",
+   "ad": "DOLAŞIM, SOLUNUM VE TÜMÖR KURULU",
+   "baslangic": "2027-02-08",
+   "sinav": "2027-03-05",
+   "bitis": "2027-03-12",
+   "dersler": [
+    {
+     "tarih": "2027-02-11",
+     "saat": "08:50-09:30",
+     "metin": "Kardiyoloji Miyokarditler, Miyokardiyopatiler ve Kalp Tümörleri DR ÖĞR TUĞBA KAPANŞAHİN"
+    },
+    {
+     "tarih": "2027-02-12",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Genetik Tümör Mikro Çevresi, İnvazyon ve Metastaz DR ÖĞR ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2027-02-08",
+     "saat": "09:40-10:20",
+     "metin": "Tıbbi Patoloji Üst Solunum Yolu Hastalıkları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-10",
+     "saat": "09:40-10:20",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Solunum sıkıntısı olan yeni doğana yaklaşım DOÇ. DR. SADRETTİN EKMEN"
+    },
+    {
+     "tarih": "2027-02-08",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Obstrüktif Akciğer Hastalıkları - I: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-09",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Restriktif Akciğer Hastalıkları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-10",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Akut Akciğer Enfeksiyonları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-11",
+     "saat": "10:30-11:10",
+     "metin": "Göğüs Hastalıkları Plevral efüzyon ve ampiyem DR. ÖĞR. ÜYESİ R. HANDE AVCI"
+    },
+    {
+     "tarih": "2027-02-08",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Obstrüktif Akciğer Hastalıkları - II: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-09",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Pulmoner Vasküler Hastalıklar: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-10",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Kronik ve Fırsatçı Akciğer Enfeksiyonları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-08",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Genetik Ateroskleroz Genetiği DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2027-02-09",
+     "saat": "13:00-13:40",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Solunum Sist. Hastalık. Anamnez DR. ÖĞR. ÜYESİ YUSUF DENİZ"
+    },
+    {
+     "tarih": "2027-02-10",
+     "saat": "13:00-13:40",
+     "metin": "Göğüs Hastalıkları Obstrüktif ve restriktif akciğer hastalıkları DR. ÖĞR. ÜYESİ R. HANDE AVCI"
+    },
+    {
+     "tarih": "2027-02-11",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-02-09",
+     "saat": "13:50-14:30",
+     "metin": "ÇocukSağlığıve Hastalıkları Solunum Sist. Hastalık. Fizik Muayene DR. ÖĞR. ÜYESİ YUSUF DENİZ"
+    },
+    {
+     "tarih": "2027-02-09",
+     "saat": "14:40-15:20",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Solunum sistemi Semptomatolojisi DR. ÖĞR."
+    },
+    {
+     "tarih": "2027-02-10",
+     "saat": "14:40-15:20",
+     "metin": "Göğüs Hastalıkları Pnömoniler"
+    },
+    {
+     "tarih": "2027-02-09",
+     "saat": "15:30-16:10",
+     "metin": "ÜYESİ YUSUF DENİZ Çocuk Sağlığı ve Hastalıkları Solunum sistemi Semptomatolojisi DR. ÖĞR."
+    },
+    {
+     "tarih": "2027-02-10",
+     "saat": "15:30-16:10",
+     "metin": "DR ÖĞR ÜYESİ R HANDE AVCI Göğüs Hastalıkları Pnömoniler"
+    },
+    {
+     "tarih": "2027-02-09",
+     "saat": "16:20-17:00",
+     "metin": "ÜYESİ YUSUF DENİZ"
+    },
+    {
+     "tarih": "2027-02-10",
+     "saat": "16:20-17:00",
+     "metin": "DR ÖĞR ÜYESİ R HANDE AVCI"
+    },
+    {
+     "tarih": "2027-02-15",
+     "saat": "08:50-09:30",
+     "metin": "Halk Sağlığı Kanser Hastalıkları Epidemiyolojisi DOÇ."
+    },
+    {
+     "tarih": "2027-02-16",
+     "saat": "08:50-09:30",
+     "metin": "Kardiyoloji Kalp Kapak Hastalıkları PROF. DR. YEŞİM"
+    },
+    {
+     "tarih": "2027-02-19",
+     "saat": "08:50-09:30",
+     "metin": "Kardiyoloji Ritim Bozukluklarına Giriş PROF. DR."
+    },
+    {
+     "tarih": "2027-02-15",
+     "saat": "09:40-10:20",
+     "metin": "DR NERGİZ SEVİNÇ Halk Sağlığı Kardiyovasküler sistem hastalıklarının epidemiyolojisi DR. ÖĞR. ÜYESİ ERKAY"
+    },
+    {
+     "tarih": "2027-02-16",
+     "saat": "09:40-10:20",
+     "metin": "AKIN Kardiyoloji Kalp Kapak Hastalıkları PROF. DR. YEŞİM AKIN"
+    },
+    {
+     "tarih": "2027-02-18",
+     "saat": "09:40-10:20",
+     "metin": "Tıbbi Patoloji Hipertansif Damar Hastalıkları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-19",
+     "saat": "09:40-10:20",
+     "metin": "ORHAN ÖNALAN Kardiyoloji Ritim Bozukluklarına Giriş PROF. DR. ORHAN ÖNALAN"
+    },
+    {
+     "tarih": "2027-02-15",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Astım ve diğer akciğer hastalıklarının tedavisinde kullanılan ilaçlar DR. ÖĞR."
+    },
+    {
+     "tarih": "2027-02-17",
+     "saat": "10:30-11:10",
+     "metin": "Kardiyoloji Elektrokardiyografiye Giriş PROF. DR. ORHAN ÖNALAN"
+    },
+    {
+     "tarih": "2027-02-18",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Ateroskleroz Patolojisi: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-19",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Kanser kemoterapisi PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2027-02-18",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Anevrizmalar ve Diseksiyonlar: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-15",
+     "saat": "13:00-13:40",
+     "metin": "Kalp ve Damar Cerrahisi Göğüs duvarı anomalileri DOÇ. DR. ERDEM ÇETİN"
+    },
+    {
+     "tarih": "2027-02-16",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Genetik Konjenital Kardiyovasküler Bozukluklarda Genetik Mekanizmalar"
+    },
+    {
+     "tarih": "2027-02-17",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Patoloji Akciğer Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-18",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-02-16",
+     "saat": "13:50-14:30",
+     "metin": "DR ÖĞR ÜYESİ SERAP ARSLAN Tıbbi Genetik Konjenital Kardiyovasküler Bozukluklarda Genetik Mekanizmalar"
+    },
+    {
+     "tarih": "2027-02-17",
+     "saat": "13:50-14:30",
+     "metin": "Tıbbi Patoloji Plevra Hastalıkları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-19",
+     "saat": "13:50-14:30",
+     "metin": "Dahiliye Hiperlipidemiler PROF. DR. NURHAYAT ÖZKAN"
+    },
+    {
+     "tarih": "2027-02-16",
+     "saat": "14:40-15:20",
+     "metin": "DR ÖĞR ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2027-02-19",
+     "saat": "14:40-15:20",
+     "metin": "SEVENCAN Dahiliye Hiperlipidemiler PROF. DR. NURHAYAT ÖZKAN"
+    },
+    {
+     "tarih": "2027-02-22",
+     "saat": "08:50-09:30",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Fetal Dolaşım ve Neonatal adaptasyon DR. ÖĞR. ÜYESİ NESLİHAN EKŞİ"
+    },
+    {
+     "tarih": "2027-02-23",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji Antikoagülanlar ve antitrombotikler DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2027-02-25",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji Diüretikler DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2027-02-26",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Genetik Kardiyovasküler Hastalıkların Genetiği DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2027-02-22",
+     "saat": "09:40-10:20",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Siyanoz DR. ÖĞR. ÜYESİ NESLİHAN EKŞİ"
+    },
+    {
+     "tarih": "2027-02-24",
+     "saat": "09:40-10:20",
+     "metin": "Kardiyoloji Kalp Sesleri DR. ÖĞR. TUĞBA KAPANŞAHİN"
+    },
+    {
+     "tarih": "2027-02-22",
+     "saat": "10:30-11:10",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Siyanotik doğumsal kalp hastalıkları DR. ÖĞR. ÜYESİ NESLİHAN EKŞİ"
+    },
+    {
+     "tarih": "2027-02-23",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Vaskülitler: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-24",
+     "saat": "10:30-11:10",
+     "metin": "Kardiyoloji Konjenital Kalp Hastalıkları DR. ÖĞR. TUĞBA KAPANŞAHİN"
+    },
+    {
+     "tarih": "2027-02-25",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji İskemik Kalp Hastalıkları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-26",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Vazodilatörler ve Anjina Pektoris ilaçları PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2027-02-22",
+     "saat": "11:20-12:00",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Asiyanotik doğumsal kalp hastalıkları DR. ÖĞR. ÜYESİ NESLİHAN EKŞİ"
+    },
+    {
+     "tarih": "2027-02-23",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Damar Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-25",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Miyokard Enfarktüsü: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-02-22",
+     "saat": "13:00-13:40",
+     "metin": "Kardiyoloji Enfektif Endokardit DR. ÖĞR. TUĞBA KAPANŞAHİN"
+    },
+    {
+     "tarih": "2027-02-24",
+     "saat": "13:00-13:40",
+     "metin": "Kardiyoloji Hipertansiyon PROF. DR. ORHAN ÖNALAN"
+    },
+    {
+     "tarih": "2027-02-25",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-02-22",
+     "saat": "13:50-14:30",
+     "metin": "Kardiyoloji Enfektif Endokardit DR. ÖĞR. ÜYESİ TUĞBA"
+    },
+    {
+     "tarih": "2027-02-26",
+     "saat": "13:50-14:30",
+     "metin": "Enfeksiyon Hastalıkları İnfluenza UZ. DR. MERVE KAÇAR"
+    },
+    {
+     "tarih": "2027-02-22",
+     "saat": "14:40-15:20",
+     "metin": "Anestezi CPR"
+    },
+    {
+     "tarih": "2027-02-24",
+     "saat": "14:40-15:20",
+     "metin": "Kardiyoloji Perikarditler PROF. DR. ORHAN ÖNALAN"
+    },
+    {
+     "tarih": "2027-02-26",
+     "saat": "14:40-15:20",
+     "metin": "Enfeksiyon Hastalıkları İnfluenza"
+    },
+    {
+     "tarih": "2027-02-22",
+     "saat": "15:30-16:10",
+     "metin": "DOÇ DR MÜGE ARIKAN"
+    },
+    {
+     "tarih": "2027-02-26",
+     "saat": "15:30-16:10",
+     "metin": "UZ DR MERVE KAÇAR Enfeksiyon Hastalıkları Akut romatizmal ateş"
+    },
+    {
+     "tarih": "2027-03-01",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji Kardiyak aritmilerde kullanılan ilaçlar PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2027-03-02",
+     "saat": "08:50-09:30",
+     "metin": "Kardiyoloji Kalp Yetersizliği PROF. DR. YEŞİM AKIN"
+    },
+    {
+     "tarih": "2027-03-02",
+     "saat": "10:30-11:10",
+     "metin": "Kardiyoloji Koroner Kalp Hastalıkları DR. ÖĞR. ÜYESİ TUĞBA KAPANŞAHİN"
+    },
+    {
+     "tarih": "2027-03-03",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Hipertansif ve Valvüler Kalp Hastalıkları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-03-03",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Miyokardit ve Kardiyomiyopatiler: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-03-01",
+     "saat": "13:00-13:40",
+     "metin": "Kalp ve Damar Cerrahisi Enfektif endokardit ve damar içi katater enfeksiyonları"
+    },
+    {
+     "tarih": "2027-03-02",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Farmakoloji Antihipertansif İlaçlar DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2027-03-04",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-03-01",
+     "saat": "13:50-14:30",
+     "metin": "DR ÖĞR ÜYESİ CELAL SELÇUK ÜNAL Kalp ve Damar Cerrahisi Enfektif endokardit ve damar içi katater enfeksiyonları"
+    },
+    {
+     "tarih": "2027-03-01",
+     "saat": "14:40-15:20",
+     "metin": "DR ÖĞR ÜYESİ CELAL SELÇUK ÜNAL Tıbbi Farmakoloji Kalp yetersizliğinde kullanılan ilaçlar"
+    },
+    {
+     "tarih": "2027-03-01",
+     "saat": "15:30-16:10",
+     "metin": "Tıbbi Farmakoloji Kalp yetersizliğinde kullanılan ilaçlar"
+    }
+   ]
+  },
+  {
+   "kurul": 5,
+   "kod": "TIP 350",
+   "ad": "ORTOPEDİ, TRAVMATOLOJİ VE HEMATOPOETİK SİSTEM KURULU",
+   "baslangic": "2027-03-15",
+   "sinav": "2027-04-22",
+   "bitis": "2027-04-23",
+   "dersler": [
+    {
+     "tarih": "2027-03-16",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Genetik Lösemi genetik özellikler ve prognostik belirteçler DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2027-03-17",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Mikrositer Anemiler: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-03-17",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Makrositer ve Hemolitik Anemiler: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-03-15",
+     "saat": "13:00-13:40",
+     "metin": "Halk Sağlığı Sağlık Yönetimi DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2027-03-16",
+     "saat": "13:00-13:40",
+     "metin": "Halk Sağlığı Sağlığın geliştirilmesi DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2027-03-22",
+     "saat": "08:50-09:30",
+     "metin": "FTR Boyun ağrılarına yaklaşım DR. ÖĞR. ÜYESİ RAMAZAN GÜNDÜZ"
+    },
+    {
+     "tarih": "2027-03-23",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Patoloji Kanama Bozuklukları ve Trombositopeniler: PROF. DR. HİKMET"
+    },
+    {
+     "tarih": "2027-03-25",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Patoloji Hodgkin Lenfoma: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-03-26",
+     "saat": "08:50-09:30",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Çocukluk çağı anemilerine yaklaşım DR. ÖĞR. ÜYESİ TÜRKAN ÇETİNCEVİZ CÖMEZ"
+    },
+    {
+     "tarih": "2027-03-23",
+     "saat": "09:40-10:20",
+     "metin": "KELEŞ Tıbbi Patoloji Reaktif Lenfadenitler: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-03-24",
+     "saat": "09:40-10:20",
+     "metin": "Beyin ve Sinir Cerrahisi Kafatasını oluşturan kemiklerin travmaları DOÇ. DR. AYDIN SİNAN APAYDIN"
+    },
+    {
+     "tarih": "2027-03-25",
+     "saat": "09:40-10:20",
+     "metin": "Tıbbi Patoloji Non-Hodgkin B Hücreli Lenfomalar - I: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-03-26",
+     "saat": "09:40-10:20",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Çocukluk çağı anemilerine yaklaşım DR. ÖĞR. ÜYESİ TÜRKAN"
+    },
+    {
+     "tarih": "2027-03-22",
+     "saat": "10:30-11:10",
+     "metin": "İç Hastalıkları Anemi Tanı, Patofizyoloji ve Sınıflaması DR. ÖĞR. ÜYESİ ABDULVAHAP COŞKUN"
+    },
+    {
+     "tarih": "2027-03-23",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji NSAİİ, Antiromatikler, Nonopoid analjezikler ve gut tedavi ilaçları DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2027-03-25",
+     "saat": "10:30-11:10",
+     "metin": "FTR Üst ekstremitenin fonksiyonel anatomisi ve Muayene yöntemleri DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2027-03-26",
+     "saat": "10:30-11:10",
+     "metin": "ÇETİNCEVİZ CÖMEZ"
+    },
+    {
+     "tarih": "2027-03-23",
+     "saat": "11:20-12:00",
+     "metin": "NAMIK BİLİCİ Tıbbi Farmakoloji NSAİİ, Antiromatikler, Nonopoid analjezikler ve gut tedavi ilaçları DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2027-03-24",
+     "saat": "11:20-12:00",
+     "metin": "Beyin ve Sinir Cerrahisi Kafa travmasına eşlik eden erken dönem klinik sorunlar"
+    },
+    {
+     "tarih": "2027-03-25",
+     "saat": "11:20-12:00",
+     "metin": "RAMAZAN GÜNDÜZ FTR Üst ekstremitenin fonksiyonel anatomisi ve Muayene yöntemleri DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2027-03-22",
+     "saat": "12:10- 12:50",
+     "metin": "NAMIK BİLİCİ DOÇ DR AYDIN SİNAN APAYDIN RAMAZAN GÜNDÜZ"
+    },
+    {
+     "tarih": "2027-03-22",
+     "saat": "13:00-13:40",
+     "metin": "Ortopedi ve Travmatoloji Kemik, eklemve implant enfeksiyonları DOÇ. DR. YILMAZ ERGİŞİ"
+    },
+    {
+     "tarih": "2027-03-23",
+     "saat": "13:00-13:40",
+     "metin": "İç Hastalıkları Demir metabolizması ve anormallikleri, Demir eksikliği ve birikimi UZM. DR. KUTAY SARI"
+    },
+    {
+     "tarih": "2027-03-25",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-03-23",
+     "saat": "13:50-14:30",
+     "metin": "İç Hastalıkları Demir metabolizması ve anormallikleri,Demir eksikliği ve"
+    },
+    {
+     "tarih": "2027-03-26",
+     "saat": "13:50-14:30",
+     "metin": "Acil Tıp Multitravmaya Yaklaşım DR. ÖĞR. ÜYESİ MUSTAFA KÖKSAL"
+    },
+    {
+     "tarih": "2027-03-26",
+     "saat": "14:40-15:20",
+     "metin": "Acil Tıp Multitravmaya Yaklaşım DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2027-03-26",
+     "saat": "15:30-16:10",
+     "metin": "MUSTAFA KÖKSAL Acil Tıp Multitravmaya Yaklaşım"
+    },
+    {
+     "tarih": "2027-03-26",
+     "saat": "16:20-17:00",
+     "metin": "DR ÖĞR ÜYESİ MUSTAFA KÖKSAL"
+    },
+    {
+     "tarih": "2027-03-30",
+     "saat": "08:50-09:30",
+     "metin": "İç Hastalıkları Hemostaz ve anormallikleri, Kanama Pıhtılaşma bozuklukları"
+    },
+    {
+     "tarih": "2027-04-01",
+     "saat": "08:50-09:30",
+     "metin": "Acil Tıp Crush ve Kompartman Sendromu DR. ÖĞR. ÜYESİ MURAT KOYUNCU"
+    },
+    {
+     "tarih": "2027-03-31",
+     "saat": "09:40-10:20",
+     "metin": "Acil Tıp Ekstremite Travmaları DOÇ. DR. BORA ÇEKMEN"
+    },
+    {
+     "tarih": "2027-03-29",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Non-Hodgkin B Hücreli Lenfomalar - II: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-03-30",
+     "saat": "10:30-11:10",
+     "metin": "Halk Sağlığı Sağlık Eğitimi DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2027-04-01",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Akut Lösemiler: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-03-29",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji T ve NK Hücreli Lenfomalar: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-04-01",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Kronik Miyeloproliferatif Neoplaziler: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-03-29",
+     "saat": "13:00-13:40",
+     "metin": "İç Hastalıkları Megaloblastik anemiler DR. ÖĞR. ÜYESİ ABDULVAHAP COŞKUN"
+    },
+    {
+     "tarih": "2027-03-31",
+     "saat": "13:00-13:40",
+     "metin": "Ortopedi ve Travmatoloji Spondilodiskitler ve pot hastalığı DR. ÖĞR. ÜYESİ OSMAN ARIKAN"
+    },
+    {
+     "tarih": "2027-04-01",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-03-29",
+     "saat": "13:50-14:30",
+     "metin": "İç Hastalıkları Hemolitik anemiler UZM. DR. MAHMUT SAVANOĞLU"
+    },
+    {
+     "tarih": "2027-03-31",
+     "saat": "13:50-14:30",
+     "metin": "Ortopedi ve Travmatoloji Spondilodiskitler ve npot hastalığı DR. ÖĞR. ÜYESİ OSMAN ARIKAN"
+    },
+    {
+     "tarih": "2027-03-29",
+     "saat": "14:40-15:20",
+     "metin": "Ortopedi ve Travmatoloji Eklem hastalıkları patolojisi ve artritler PROF. DR. UYGAR DAŞAR"
+    },
+    {
+     "tarih": "2027-03-30",
+     "saat": "14:40-15:20",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Hemoglobinopatiler DR. ÖĞR. ÜYESİ YUSUF DENİZ"
+    },
+    {
+     "tarih": "2027-04-05",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Patoloji Enfeksiyöz ve Metabolik Kemik Hastalıkları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-04-08",
+     "saat": "08:50-09:30",
+     "metin": "Ortopedi ve Travmatoloji Kemik ve kıkırdağın konjenital hastalıkları DR. ÖĞR. ÜYESİ OSMAN ARIKAN"
+    },
+    {
+     "tarih": "2027-04-09",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji Kemik mineralizasyonu ve homeostaza etki eden ilaçlar"
+    },
+    {
+     "tarih": "2027-04-05",
+     "saat": "09:40-10:20",
+     "metin": "Tıbbi Patoloji Kemik Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-04-07",
+     "saat": "09:40-10:20",
+     "metin": "Acil Tıp Senkop, Ani Kardiyak Ölüm (AKÖ) DR. ÖĞR. ÜYESİ BÜŞRA BİLDİK"
+    },
+    {
+     "tarih": "2027-04-09",
+     "saat": "09:40-10:20",
+     "metin": "Tıbbi Farmakoloji Kemik mineralizasyonu ve homeostaza etki eden ilaçlar DR. ÖĞR. ÜYESİ NAMIK"
+    },
+    {
+     "tarih": "2027-04-05",
+     "saat": "10:30-11:10",
+     "metin": "FTR Servikal ve lomber bölgenin fonksiyonel anatomisi ve değerlendirme"
+    },
+    {
+     "tarih": "2027-04-06",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Yumuşak Doku Tümörleri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-04-08",
+     "saat": "10:30-11:10",
+     "metin": "FTR Alt ekstremitenin Fonksiyonel Anatomisi ve muayene yöntemleri"
+    },
+    {
+     "tarih": "2027-04-09",
+     "saat": "10:30-11:10",
+     "metin": "Enfeksiyon Hastalıkları Kırım-Kongo kanamalı ateşi UZ. DR. MERVE KAÇAR"
+    },
+    {
+     "tarih": "2027-04-05",
+     "saat": "11:20-12:00",
+     "metin": "DR ÖĞR ÜYESİ AHMET TEZCE FTR Servikal ve lomber bölgenin fonksiyonel anatomisi ve değerlendirme DR ÖĞR ÜYESİ AHMET TEZCE"
+    },
+    {
+     "tarih": "2027-04-06",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Artrit Patolojileri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-04-07",
+     "saat": "11:20-12:00",
+     "metin": "Acil Tıp Bilinç Bozukluğuna (Koma) Yaklaşım DR. ÖĞR. ÜYESİ BÜŞRA BİLDİK"
+    },
+    {
+     "tarih": "2027-04-08",
+     "saat": "11:20-12:00",
+     "metin": "DOÇ DR HATİCE GÜLŞAH KARATAŞ FTR Alt ekstremitenin Fonksiyonel Anatomisi ve muayene yöntemleri DOÇ DR HATİCE GÜLŞAH KARATAŞ"
+    },
+    {
+     "tarih": "2027-04-05",
+     "saat": "13:00-13:40",
+     "metin": "Göğüs Cerrahisi Göğüs travmasının tiplerine göre patolojik ve Klinik sonuçlar DR. ÖĞR."
+    },
+    {
+     "tarih": "2027-04-06",
+     "saat": "13:00-13:40",
+     "metin": "Halk Sağlığı Meslek hastalıkları DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2027-04-07",
+     "saat": "13:00-13:40",
+     "metin": "Acil Tıp İleri Kardiyak Yaşam Desteği ve Özel Durumlar DR. ÖĞR. ÜYESİ MUSTAFA"
+    },
+    {
+     "tarih": "2027-04-08",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-04-06",
+     "saat": "13:50-14:30",
+     "metin": "Halk Sağlığı İş kazaları DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2027-04-06",
+     "saat": "14:40-15:20",
+     "metin": "Halk Sağlığı Sağlığın Sosyalleştirilmesi ve Temel Sağlık Hizmetleri (TSH) DOÇ. DR."
+    },
+    {
+     "tarih": "2027-04-12",
+     "saat": "08:50-09:30",
+     "metin": "Acil Tıp Çevresel Acillere Yaklaşım DR. ÖĞR. ÜYESİ MURAT KOYUNCU"
+    },
+    {
+     "tarih": "2027-04-13",
+     "saat": "08:50-09:30",
+     "metin": "Halk Sağlığı Halk sağlığını etkileyen faktörler DR. ÖĞR. ÜYESİ ERKAY NACAR"
+    },
+    {
+     "tarih": "2027-04-15",
+     "saat": "08:50-09:30",
+     "metin": "Halk Sağlığı Çocuk Sağlığı DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2027-04-16",
+     "saat": "08:50-09:30",
+     "metin": "Acil Tıp Zehirlenmelere Yaklaşım DR. ÖĞR. ÜYESİ BÜŞRA BİLDİK"
+    },
+    {
+     "tarih": "2027-04-14",
+     "saat": "09:40-10:20",
+     "metin": "Ortopedi ve Travmatoloji Yetişkin ve çocuk kırıklarına yaklaşım DR. ÖĞR. ÜYESİ Selçuk KORKMAZER"
+    },
+    {
+     "tarih": "2027-04-15",
+     "saat": "09:40-10:20",
+     "metin": "Halk Sağlığı Okul Sağlığı DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2027-04-12",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Enflamatuar ve Vezikülobüllöz Deri Hastalıkları: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-04-13",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Dermatolojik Farmakoloji PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2027-04-14",
+     "saat": "10:30-11:10",
+     "metin": "Ortopedi ve Travmatoloji Kırık komplikasyonlarına yaklaşım DR. ÖĞR. ÜYESİ Selçuk KORKMAZER"
+    },
+    {
+     "tarih": "2027-04-15",
+     "saat": "10:30-11:10",
+     "metin": "FTR Kas-iskelet sistemi hastalıklarında Non- farmakolojik Yaklaşımlar: Egzersiz PROF DR H GÜLŞAH KARATAŞ"
+    },
+    {
+     "tarih": "2027-04-16",
+     "saat": "10:30-11:10",
+     "metin": "FTR Bel ağrılarına yaklaşım DR. ÖĞR. ÜYESİ AHMET TEZCE"
+    },
+    {
+     "tarih": "2027-04-12",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Deri Tümörleri ve Malign Melanom: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-04-14",
+     "saat": "11:20-12:00",
+     "metin": "Ortopedi ve Travmatoloji Kemiklerin tümörlerine genel yaklaşım DR. ÖĞR. ÜYESİ Selçuk KORKMAZER"
+    },
+    {
+     "tarih": "2027-04-15",
+     "saat": "11:20-12:00",
+     "metin": "FTR Kas-iskelet sistemi hastalıklarında Non- farmakolojik Yaklaşımlar: Egzersiz"
+    },
+    {
+     "tarih": "2027-04-12",
+     "saat": "12:10- 12:50",
+     "metin": "PROF DR H GÜLŞAH KARATAŞ"
+    },
+    {
+     "tarih": "2027-04-12",
+     "saat": "13:00-13:40",
+     "metin": "Ortopedi ve Travmatoloji Kemiğin edinsel hastalıkları DR. ÖĞR. ÜYESİ Selçuk"
+    },
+    {
+     "tarih": "2027-04-13",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Genetik Kan Hastalıklarının Genetiği DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2027-04-14",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Genetik Lenfoma Genetik Özellikler ve Prognostik Belirteçler DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2027-04-15",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-04-12",
+     "saat": "13:50-14:30",
+     "metin": "Ortopedi ve Travmatoloji Kemiğin edinsel hastalıkları DR. ÖĞR. ÜYESİ Selçuk KORKMAZER"
+    }
+   ]
+  },
+  {
+   "kurul": 6,
+   "kod": "TIP 360",
+   "ad": "ENDOKRİN, METABOLİZMA VE YAŞLANMA KURULU",
+   "baslangic": "2027-04-26",
+   "sinav": "2027-06-11",
+   "bitis": "2027-06-11",
+   "dersler": [
+    {
+     "tarih": "2027-04-27",
+     "saat": "08:50-09:30",
+     "metin": "İç Hastalıkları Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları"
+    },
+    {
+     "tarih": "2027-04-29",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji Hipotalamohipofizer Sistem İlaçları DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2027-04-27",
+     "saat": "09:40-10:20",
+     "metin": "PROF DR NURHAYAT ÖZKAN İç Hastalıkları Diabetes Mellitus Sınıflandırılması, Tanısı ve Komplikasyonları"
+    },
+    {
+     "tarih": "2027-04-26",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Hipofiz ve Epifiz Patolojileri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-04-27",
+     "saat": "10:30-11:10",
+     "metin": "PROF DR NURHAYAT ÖZKAN İç Hastalıkları Hipotalamus-Hipofiz hastalıklarına giriş DR. ÖĞR. ÜYESİ ABDULVAHAP COŞKUN"
+    },
+    {
+     "tarih": "2027-04-28",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Pankreatik Hormonlar ve Antidiyabetik İlaçlar PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2027-04-29",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Tiroit ve Antitiroid İlaçlar DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2027-04-26",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Tiroid ve Paratiroid Patolojileri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-04-27",
+     "saat": "11:20-12:00",
+     "metin": "İç Hastalıkları Hipotalamus-Hipofiz hastalıklarına giriş DR. ÖĞR. ÜYESİ ABDULVAHAP"
+    },
+    {
+     "tarih": "2027-04-26",
+     "saat": "12:10- 12:50",
+     "metin": "COŞKUN"
+    },
+    {
+     "tarih": "2027-04-27",
+     "saat": "13:00-13:40",
+     "metin": "İç Hastalıkları Cushing Sendromu PROF. DR. FATİH KARATAŞ"
+    },
+    {
+     "tarih": "2027-04-28",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Biyokimya Klinik Biyokimya Laboratuvar Organizasyonu"
+    },
+    {
+     "tarih": "2027-04-29",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-04-28",
+     "saat": "13:50-14:30",
+     "metin": "Tıbbi Biyokimya Klinik Biyokimya Laboratuvar Organizasyonu PROF. DR. TAHİR"
+    },
+    {
+     "tarih": "2027-05-03",
+     "saat": "08:50-09:30",
+     "metin": "İç Hastalıkları Endokrin Sistem Hastalıklarına Genel Yaklaşım PROF. DR. N. ÖZKAN"
+    },
+    {
+     "tarih": "2027-05-04",
+     "saat": "08:50-09:30",
+     "metin": "İç Hastalıkları Elektrolitler ve Endokrin Sistem Arasındaki ilişki DR. ÖĞR. ÜYESİ"
+    },
+    {
+     "tarih": "2027-05-06",
+     "saat": "08:50-09:30",
+     "metin": "İç Hastalıkları Tiroid Bezi Hastalıkları Dr. Abdulvahap Coşkun"
+    },
+    {
+     "tarih": "2027-05-07",
+     "saat": "08:50-09:30",
+     "metin": "Halk Sağlığı Önemli Beslenme Sorunları DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2027-05-03",
+     "saat": "09:40-10:20",
+     "metin": "İç Hastalıkları Endokrin Sistem Hastalıklarına Genel Yaklaşım"
+    },
+    {
+     "tarih": "2027-05-04",
+     "saat": "09:40-10:20",
+     "metin": "İç Hastalıkları Elektrolitler ve Endokrin Sistem Arasındaki ilişki"
+    },
+    {
+     "tarih": "2027-05-05",
+     "saat": "09:40-10:20",
+     "metin": "İç Hastalıkları D Vitamini Metabolizması DR. ÖĞR. ÜYESİ ABDULVAHAP COŞKUN"
+    },
+    {
+     "tarih": "2027-05-03",
+     "saat": "10:30-11:10",
+     "metin": "İç Hastalıkları Hipoglisemiler PROF. DR. N. ÖZKAN SEVENCAN"
+    },
+    {
+     "tarih": "2027-05-04",
+     "saat": "10:30-11:10",
+     "metin": "İç Hastalıkları Cinsel Farklılaşma Bozuklukları UZM. DR. CEREN ÇEVİK"
+    },
+    {
+     "tarih": "2027-05-06",
+     "saat": "10:30-11:10",
+     "metin": "Halk Sağlığı Epidemiyolojiye Giriş DR. ÖĞR. ÜYESİ ERKAY NACAR"
+    },
+    {
+     "tarih": "2027-05-07",
+     "saat": "10:30-11:10",
+     "metin": "İç Hastalıkları Paratiroid bezi hastalıkları DOÇ. DR. FATİH İNCİ"
+    },
+    {
+     "tarih": "2027-05-04",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Biyokimya K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz"
+    },
+    {
+     "tarih": "2027-05-05",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Genetik Endokrin Hastalıklar ve Genetik DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2027-05-06",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-05-04",
+     "saat": "13:50-14:30",
+     "metin": "Edilmesinde Dik Ed Hususlar PROF DR Tıbbi Biyokimya K. Biyo.da Analiz Edilen Biy. Mat., Alınma, Taşınma, Analiz Edilmesinde Dik. Ed. Hususlar"
+    },
+    {
+     "tarih": "2027-05-03",
+     "saat": "14:40-15:20",
+     "metin": "İç Hastalıkları Yaşlılıkta beslenme UZM. DR. BETÜL"
+    },
+    {
+     "tarih": "2027-05-04",
+     "saat": "14:40-15:20",
+     "metin": "PROF DR EYÜP ALTINÖZ"
+    },
+    {
+     "tarih": "2027-05-03",
+     "saat": "15:30-16:10",
+     "metin": "İ İ İç Hastalıkları Yaşlılıkta beslenme UZM. DR. BETÜL"
+    },
+    {
+     "tarih": "2027-05-03",
+     "saat": "16:20-17:00",
+     "metin": "İVERENDİ"
+    },
+    {
+     "tarih": "2027-05-10",
+     "saat": "08:50-09:30",
+     "metin": "Halk Sağlığı Yeterli ve Dengeli Beslenme DOÇ. DR. NERGİZ SEVİNÇ"
+    },
+    {
+     "tarih": "2027-05-11",
+     "saat": "08:50-09:30",
+     "metin": "İç Hastalıkları Obezite-Metabolizma-Endokrin İlişkisi PROF. DR. FATİH KARATAŞ"
+    },
+    {
+     "tarih": "2027-05-14",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Biyokimya Biyokimya Lab. Gelen Numunelerde Analiz Edilen Paket Testler PROF. DR."
+    },
+    {
+     "tarih": "2027-05-12",
+     "saat": "09:40-10:20",
+     "metin": "Psikiyatri Yaşlılığa Özgü Ruhsal Sorunlar UZM. DR. PINAR DURMAZ"
+    },
+    {
+     "tarih": "2027-05-10",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Adrenokortikosteroidler ve Agonistler PROF. DR. MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2027-05-13",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Patoloji Adrenal Bez Patolojileri: PROF. DR. HİKMET KELEŞ"
+    },
+    {
+     "tarih": "2027-05-14",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Farmakoloji Gonadal Hormonlar, inhibitör ve replasman ilaçları DR. ÖĞR. ÜYESİ NAMIK BİLİCİ"
+    },
+    {
+     "tarih": "2027-05-13",
+     "saat": "11:20-12:00",
+     "metin": "Tıbbi Patoloji Pankreas ve Nöroendokrin Tümörler ve MEN sendromu: PROF. DR. HİKMET"
+    },
+    {
+     "tarih": "2027-05-10",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Biyokimya Biyokimyasal Analizlerde Hata Kaynakları DR. ÖĞR. ÜYESİ MEHMET KARA"
+    },
+    {
+     "tarih": "2027-05-11",
+     "saat": "13:00-13:40",
+     "metin": "Halk Sağlığı Bağışıklama ve önemi DR. ÖĞR. ÜYESİ ERKAY NACAR"
+    },
+    {
+     "tarih": "2027-05-12",
+     "saat": "13:00-13:40",
+     "metin": "Tıbbi Genetik Kalıtsal Metabolik Hastalıklar Genetiği DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2027-05-13",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-05-20",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-05-24",
+     "saat": "08:50-09:30",
+     "metin": "Halk Sağlığı Mobbing"
+    },
+    {
+     "tarih": "2027-05-25",
+     "saat": "08:50-09:30",
+     "metin": "Halk Sağlığı Yaşlı Sağlığı Sorunları ve Sağlık"
+    },
+    {
+     "tarih": "2027-05-27",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Genetik Metabolik Hastalıklarda Dismorfik Bulgular ve Veziküler Trafik"
+    },
+    {
+     "tarih": "2027-05-28",
+     "saat": "08:50-09:30",
+     "metin": "Tıbbi Farmakoloji Histamin, serotonin, melatonin ve Ergot"
+    },
+    {
+     "tarih": "2027-05-24",
+     "saat": "09:40-10:20",
+     "metin": "DOÇ DR NERGİZ SEVİNÇ Halk Sağlığı Akılcı İlaç Kullanımı DOÇ. DR. NERGİZ"
+    },
+    {
+     "tarih": "2027-05-25",
+     "saat": "09:40-10:20",
+     "metin": "Hi l i Halk Sağlığı Sağlık Göstergeleri"
+    },
+    {
+     "tarih": "2027-05-27",
+     "saat": "09:40-10:20",
+     "metin": "B kl kl DR ÖĞR ÜYESİ SERAP Tıbbi Genetik Metabolik Hastalıklarda Dismorfik Bulgular ve Veziküler Trafik"
+    },
+    {
+     "tarih": "2027-05-28",
+     "saat": "09:40-10:20",
+     "metin": "Alk l idl i Tıbbi Farmakoloji Histamin, serotonin, melatonin ve Ergot Alkaloidleri"
+    },
+    {
+     "tarih": "2027-05-24",
+     "saat": "10:30-11:10",
+     "metin": "SEVİNÇ Halk Sağlığı Çevre Sağlığına Giriş ve Genel Bilgiler"
+    },
+    {
+     "tarih": "2027-05-25",
+     "saat": "10:30-11:10",
+     "metin": "DR ÖĞR ÜYESİ ERKAY NACAR"
+    },
+    {
+     "tarih": "2027-05-27",
+     "saat": "10:30-11:10",
+     "metin": "B kl kl DR ÖĞR ÜYESİ SERAP İç Hastalıkları Yaşlılıkta Beslenme Uzm. Dr BETÜL İVERENDİ"
+    },
+    {
+     "tarih": "2027-05-28",
+     "saat": "10:30-11:10",
+     "metin": "DR ÖĞR ÜYESİ NAMIK BİLİCİ Tıbbi Farmakoloji Pankreatik Hormonlar ve Antidiyabetik İlaçlar"
+    },
+    {
+     "tarih": "2027-05-24",
+     "saat": "11:20-12:00",
+     "metin": "DR ÖĞR ÜYESİ ERKAY NACAR Halk Sağlığı Çevre Sağlığına Giriş ve Genel Bilgiler"
+    },
+    {
+     "tarih": "2027-05-27",
+     "saat": "11:20-12:00",
+     "metin": "İç Hastalıkları Yaşlılıkta Beslenme Uzm. Dr BETÜL İVERENDİ"
+    },
+    {
+     "tarih": "2027-05-28",
+     "saat": "11:20-12:00",
+     "metin": "PROF DR MEHMET ÖZDEMİR Tıbbi Farmakoloji Pankreatik Hormonlar ve Antidiyabetik İlaçlar"
+    },
+    {
+     "tarih": "2027-05-24",
+     "saat": "12:10- 12:50",
+     "metin": "DR ÖĞR ÜYESİ ERKAY NACAR"
+    },
+    {
+     "tarih": "2027-05-28",
+     "saat": "12:10- 12:50",
+     "metin": "PROF DR MEHMET ÖZDEMİR"
+    },
+    {
+     "tarih": "2027-05-24",
+     "saat": "13:00-13:40",
+     "metin": "İç Hastalıkları Yaşlanmada Metabolik Sorunlar UZM. DR. BETÜL İVERENDİ"
+    },
+    {
+     "tarih": "2027-05-27",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-06-02",
+     "saat": "09:40-10:20",
+     "metin": "Çocuk Sağlığı ve Hastalıkları Çocukluk Dönemi Su Metabolizması Bozuklukları DR. ÖĞR. ÜYESİ NESLİHAN EKŞİ"
+    },
+    {
+     "tarih": "2027-06-03",
+     "saat": "09:40-10:20",
+     "metin": "Halk Sağlığı Vaka-Kontrol çalışmaları DR. ÖĞR. ÜYESİ ERKAY NACAR"
+    },
+    {
+     "tarih": "2027-06-01",
+     "saat": "10:30-11:10",
+     "metin": "Tıbbi Genetik Yaşlanma Genetiği DR. ÖĞR. ÜYESİ SERAP ARSLAN"
+    },
+    {
+     "tarih": "2027-06-03",
+     "saat": "10:30-11:10",
+     "metin": "Halk Sağlığı Kohort Çalışmaları DR. ÖĞR. ÜYESİ ERKAY NACAR"
+    },
+    {
+     "tarih": "2027-06-03",
+     "saat": "11:20-12:00",
+     "metin": "Halk Sağlığı Deneysel ve Kesitsel Çalışmalar DR. ÖĞR. ÜYESİ ERKAY NACAR"
+    },
+    {
+     "tarih": "2027-06-01",
+     "saat": "13:00-13:40",
+     "metin": "Aile Hekimliği Yaşlılık Döneminde Güvenli Yaşamın İlkeleri DR. ÖĞR. ÜYESİ M. MURAT ŞAHİN"
+    },
+    {
+     "tarih": "2027-06-02",
+     "saat": "13:00-13:40",
+     "metin": "FTR Yaşlılığa Özgü Hareket Sistemi Bozuklukları PROF. DR. H. GÜLŞAH KARATAŞ"
+    },
+    {
+     "tarih": "2027-06-03",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    },
+    {
+     "tarih": "2027-06-10",
+     "saat": "13:00-13:40",
+     "metin": "KLİNİK VE MESLEKİ BECERİLER"
+    }
+   ]
+  }
+ ]
+}

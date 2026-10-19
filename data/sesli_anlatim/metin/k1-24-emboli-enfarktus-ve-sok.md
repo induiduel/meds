@@ -1,7 +1,7 @@
 # Emboli, Enfarktüs ve Şok
 
 @@ Emboli: tanım ve tromboemboli
-Emboli, kan akımı ile taşınan ve kaynak noktasından kopmuş katı, sıvı veya gaz kitlesidir. Bu tanımın iki öğesini birlikte aklınızda tutun: kitle oluştuğu yerde kalmaz, kanla uzak bir damar yatağına taşınır; ve fiziksel olarak üç biçimde olabilir. Katı emboliye trombüs, sıvı emboliye yağ ya da amniyotik sıvı, gaz emboliye de hava veya azot kabarcıkları örnektir. Embolilerin çoğu trombüs parçalarından oluşur, bu yüzden en sık kullandığımız terim tromboembolidir.
+Emboli, kan akımı ile taşınan ve kaynak noktasından kopmuş katı, sıvı veya gaz kitlesidir. Bu tanımın 2 öğesini birlikte aklınızda tutun: kitle oluştuğu yerde kalmaz, kanla uzak bir damar yatağına taşınır; ve fiziksel olarak 3 biçimde olabilir. Katı emboliye trombüs, sıvı emboliye yağ ya da amniyotik sıvı, gaz emboliye de hava veya azot kabarcıkları örnektir. Embolilerin çoğu trombüs parçalarından oluşur, bu yüzden en sık kullandığımız terim tromboembolidir.
 
 Burası önemli, emboli tanımı çıkmış sorularda doğru bir önerme olarak defalarca geldi: emboli, kaynaklandığı yerden uzak bir yere kan yoluyla taşınan damar içi katı, sıvı veya gaz kitlesidir; neredeyse tamamı kopmuş trombüs parçalarından oluştuğu için tromboembolizm terimi kullanılır.
 Taşınan kitle damar çapı daraldıkça ilerleyemez ve küçük damarlara takılır.
@@ -10,7 +10,7 @@ Tıkanmanın derecesi, distaldeki dokunun ne kadar etkileneceğini belirler.
 
 Embolinin klinik sonucu, takıldığı dolaşım yatağına göre değişir.
 Sistemik emboli arteriyel yatağı tıkar; distaldeki doku kansız kalır ve iskemik nekroz, yani enfarktüs gelişir.
-Pulmoner emboli ise pulmoner dolaşımı tıkar ve üç ağır sonuç doğurur.
+Pulmoner emboli ise pulmoner dolaşımı tıkar ve 3 ağır sonuç doğurur.
 1.'si hipoksidir, çünkü ventile olan ama perfüze olmayan akciğer alanı gaz değişimine katılamaz.
 2.'si sağ kalp yetmezliğidir, çünkü sağ ventrikül tıkalı pulmoner yatağa karşı pompalamak zorunda kalır.
 3.'sü ani ölümdür.
@@ -26,7 +26,7 @@ Bir de tekrarlama kuralını bilin: bir pulmoner emboli geçiren hastada yeni pu
 
 Tanı tarafında da bir bilgi sınavlarda tekrar tekrar karşımıza çıktı.
 Burası önemli: ani başlayan nefes darlığı, plöritik göğüs ağrısı, taşikardi ve hemoptizi ile gelen, derin ven trombozu öyküsü olan bir hastada pulmoner tromboemboli düşündüğünüzde, tanı için günümüzde ilk tercih edilen altın standart görüntüleme yöntemi kontrastlı bilgisayarlı tomografi pulmoner anjiyografidir.
-Kısaca pulmoner be te anjiyografi de denir.
+Kısaca pulmoner BT anjiyografi de denir.
 Düz akciğer grafisi, kontrastsız tomografi, ultrasonografi, manyetik rezonans görüntüleme, ekokardiyografi ya da tek başına ventilasyon sintigrafisi bu sorunun cevabı değildir.
 
 @@ Pulmoner embolide boyut ve sonuç
@@ -59,7 +59,7 @@ Tek bir küçük emboli çoğu zaman sessizdir, ancak bu emboliler tekrar tekrar
 Eyer embolinin yaptığı ani sağ kalp yetmezliğiyle karıştırmayın: tekrarlayan küçük embolilerde süreç yavaş ilerler ve sağ ventrikülün hipertrofiyle uyum sağlamasına zaman tanır.
 Pulmoner hipertansiyonun tanı eşiği de çıkmış sorularda karşımıza çıktı.
 Burası önemli: sağ kalp kateterizasyonu ile istirahat halinde ölçülen ortalama pulmoner arter basıncı 20 milimetre cıvanın üzerinde saptanırsa pulmoner hipertansiyon tanısı konur.
-On iki, on beş, otuz beş ya da kırk beş gibi değerler bu sorunun çeldiricileriydi.
+12, 15, 35 ya da 45 gibi değerler bu sorunun çeldiricileriydi.
 
 @@ Sistemik tromboembolizm: kaynaklar ve paradoksal emboli
 Sistemik, yani arteriyel tromboemboli, arteriyel dolaşımda taşınıp sistemik arterleri tıkayan embolilerdir. Pulmoner emboliden farklı olarak kaynak bacak venleri değil, büyük ölçüde kalbin kendisidir. Burası önemli: sistemik embolilerin yaklaşık %80'i intrakardiyak mural trombüslerden köken alır. Mural trombüs, kalp boşluğunun duvarına yapışık trombüstür. Bunların yaklaşık üçte ikisi sol ventrikül enfarktüsleriyle ilişkilidir; enfarkt alanında hareket etmeyen duvar ve hasarlı endokard trombüs için zemin oluşturur. Yaklaşık dörtte biri ise dilate sol atriyumla ilişkilidir; örneğin mitral stenozda genişleyen sol atriyumda kan akımı yavaşlar ve trombüs gelişir. Sol kalpteki trombüsten kopan parça aortaya, oradan da herhangi bir sistemik artere ulaşabilir.
@@ -76,13 +76,13 @@ Venöz kaynaklı bir trombüsün sistemik arteriyel embolizasyon yapması beklen
 Kuralı şöyle özetleyin: venöz trombüs akciğere, sol kalp ve arteriyel trombüs sistemik arterlere gider; venöz trombüsün sistemik embolizasyonu yalnız paradoksal emboliyle olur.
 
 @@ Sistemik embolilerin yerleştiği bölgeler
-Arteriyel dolaşıma giren emboli kan akımının büyük kısmını alan damarlara sürüklenir. Burası önemli: sistemik embolilerin en sık hedefi yaklaşık %75'le alt ekstremite arterleridir; bacak arterlerinin tıkanması akut iskemi ve gangrene yol açabilir. 2. sık hedef yaklaşık %10'la beyindir ve sonuç embolik inmedir. Diğer hedefler bağırsağın mezenterik damarları, böbrekler ve dalaktır. Bu organların önemli kısmı uç arterle beslenir. Uç arter, kollateral desteği olmayan ve bir bölgeyi tek başına besleyen arterdir. Uç arter tıkandığında alternatif kan yolu olmadığı için enfarktüs gelişimi sıktır.
+Arteriyel dolaşıma giren emboli kan akımının büyük kısmını alan damarlara sürüklenir. Burası önemli: sistemik embolilerin en sık hedefi yaklaşık %75'le alt ekstremite arterleridir; bacak arterlerinin tıkanması akut iskemi ve gangrene yol açabilir. İkinci sık hedef yaklaşık %10'la beyindir ve sonuç embolik inmedir. Diğer hedefler bağırsağın mezenterik damarları, böbrekler ve dalaktır. Bu organların önemli kısmı uç arterle beslenir. Uç arter, kollateral desteği olmayan ve bir bölgeyi tek başına besleyen arterdir. Uç arter tıkandığında alternatif kan yolu olmadığı için enfarktüs gelişimi sıktır.
 
 @@ Yağ embolisi ve yağ embolisi sendromu
 Şimdi trombüs dışı embolilere geçiyoruz. Yağ embolisinde damarı tıkayan kitle pıhtı değil, mikroskobik yağ kürecikleridir. Burası önemli, bu bilgi çıkmış soruda doğru önerme olarak geldi: yağ embolisinde yumuşak doku ezilme yaralanmaları ve uzun kemik kırıkları sonucu dolaşıma mikroskobik yağ globülleri karışır. Patogenez şöyledir: kırık hattında kemik iliği sinüzoidleri yırtılır, kemik iliğindeki yağ hücrelerinden açığa çıkan mikroskobik yağ kürecikleri bu yırtık sinüzoidlerden venöz dolaşıma karışır ve önce akciğer kapillerlerine ulaşır. Travma sonrası mikroskobik yağ embolileri yaygındır, ancak genellikle klinik olarak sessizdir.
 
 Ciddi olgularda yağ embolisi sendromu adı verilen sistemik bir tablo gelişir.
-Burası önemli: belirtiler travmadan hemen sonra değil, bir ila 3 gün sonra ortaya çıkar ve klasik bir triad oluşturur.
+Burası önemli: belirtiler travmadan hemen sonra değil, 1 ila 3 gün sonra ortaya çıkar ve klasik bir triad oluşturur.
 1.'si solunum yetmezliğidir; dispne ve taşipne görülür, çünkü yağ kürecikleri önce akciğer kapillerlerini tıkar.
 2.'si nörolojik belirtilerdir; kürecikler beyin damarlarına ulaşınca konfüzyon ve koma gelişir.
 3.'sü peteşiyal döküntüdür; deride, özellikle gövde ve konjonktivada iğne başı büyüklüğünde noktasal kanamalar görülür.
@@ -92,10 +92,10 @@ Sendromda anemi ve trombositopeni de görülür; trombositler yağ küreciklerin
 Mekanizma yalnız fiziksel tıkanma değildir.
 Bir yanda mekanik damar tıkanması, öbür yanda yağ asidi toksisitesi vardır: kürecik yağlarından açığa çıkan serbest yağ asitleri endoteli doğrudan hasarlar.
 Trombosit aktivasyonu ve nötrofil toplanması da endotelyal hasarı artırır ve damar geçirgenliği bozulur.
-Biyokimyasal hasarın gelişmesi zaman aldığı için tablo bir ila 3 günlük gecikmeyle ortaya çıkar.
+Biyokimyasal hasarın gelişmesi zaman aldığı için tablo 1 ila 3 günlük gecikmeyle ortaya çıkar.
 
 @@ Amniyotik sıvı embolisi
-Amniyotik sıvı embolisi nadir fakat çok ciddi bir doğum komplikasyonudur. İnsidansı yaklaşık kırk bin doğumda birdir, mortalitesi ise %80'e yakındır. Burası önemli, bu bilgi çıkmış sorularda en çok tekrarlanan bilgilerden biri: emboli türleri arasında mortalitesi en yüksek olan amniyotik sıvı embolisidir; sistemik ya da pulmoner tromboemboli, yağ embolisi ve hava embolisi değil. Yanlış önerme sorularında da sık geldi: amniyotik sıvı embolisi erken postpartum dönemde görülebilen nadir bir doğum komplikasyonudur, ama mortalitesi düşük değil, aksine çok yüksektir.
+Amniyotik sıvı embolisi nadir fakat çok ciddi bir doğum komplikasyonudur. İnsidansı yaklaşık 40.000 doğumda birdir, mortalitesi ise %80'e yakındır. Burası önemli, bu bilgi çıkmış sorularda en çok tekrarlanan bilgilerden biri: emboli türleri arasında mortalitesi en yüksek olan amniyotik sıvı embolisidir; sistemik ya da pulmoner tromboemboli, yağ embolisi ve hava embolisi değil. Yanlış önerme sorularında da sık geldi: amniyotik sıvı embolisi erken postpartum dönemde görülebilen nadir bir doğum komplikasyonudur, ama mortalitesi düşük değil, aksine çok yüksektir.
 
 Patogenezde plasenta zarlarında ya da uterin damarlarda bir yırtık oluşur.
 Bu açıklıktan amniyotik sıvı ve fetal hücreler anne dolaşımına geçer, venöz yolla anne akciğerlerine ulaşır ve pulmoner mikrosirkülasyona yerleşir.
@@ -108,7 +108,7 @@ Sıklıkla yaygın damar içi pıhtılaşma, yani dissemine intravasküler koag�
 Amniyotik sıvı pıhtılaşmayı tetikleyen maddeler içerir; yaygın mikrotrombüsler oluşurken pıhtılaşma faktörleri tükenir ve kanama eğilimi ortaya çıkar.
 
 Kesin tanı çoğu zaman otopside, anne akciğer mikrosirkülasyonunda fetal materyalin gösterilmesiyle konur.
-Burada dört şey aranır: fetüs derisinden dökülen fetal skuamöz hücreler; lanugo kılları, yani anne karnındaki bebeğin vücudunu kaplayan ince, yumuşak ve renksiz tüyler; verniks kazeoza yağları, yani bebeğin cildini kaplayan beyaz, kremsi ve mumsu koruyucu tabakanın yağları; ve mukus.
+Burada 4 şey aranır: fetüs derisinden dökülen fetal skuamöz hücreler; lanugo kılları, yani anne karnındaki bebeğin vücudunu kaplayan ince, yumuşak ve renksiz tüyler; verniks kazeoza yağları, yani bebeğin cildini kaplayan beyaz, kremsi ve mumsu koruyucu tabakanın yağları; ve mukus.
 Ek bulgular pulmoner ödem, yaygın alveolar hasar ve yaygın damar içi pıhtılaşmaya bağlı fibrin trombüsleridir.
 Bu maddelerin hepsi fetüse ait olduğu için anne akciğerinde görülmeleri tanıyı kanıtlar.
 
@@ -120,11 +120,11 @@ Her iki panelde de emboli küçük akciğer damarlarındadır, çünkü iki mate
 Ayırıcı özellik damarın içeriğidir: yağ boşlukları ve ilik elemanları yağ embolisini, katmanlı skuamöz hücre girdapları amniyotik sıvı embolisini gösterir.
 
 Bu iki tabloyu şöyle karşılaştırın.
-Yağ embolisi travmaya bağlıdır, gecikmelidir, bir ila 3 gün sonra triadla ortaya çıkar ve anemi ile trombositopeni eşlik eder.
+Yağ embolisi travmaya bağlıdır, gecikmelidir, 1 ila 3 gün sonra triadla ortaya çıkar ve anemi ile trombositopeni eşlik eder.
 Amniyotik sıvı embolisi ise doğum sırasında ani başlar, sıklıkla yaygın damar içi pıhtılaşmayla seyreder ve çok ölümcüldür.
 
 @@ Hava embolisi
-Hava ya da gaz embolisinde damarı tıkayan kitle, damar içine giren hava veya gaz kabarcıklarıdır. Küçük kabarcıklar birleşerek daha büyük gaz kitleleri oluşturur ve kan akımını tıkayabilir. Kaynaklar üç başlıkta toplanır: cerrahi işlemler, özellikle obstetrik ve laparoskopik girişimler; göğüs travması; ve santral venöz kateter komplikasyonları, çünkü kateter takılırken ya da çıkarılırken venöz sisteme hava kaçabilir.
+Hava ya da gaz embolisinde damarı tıkayan kitle, damar içine giren hava veya gaz kabarcıklarıdır. Küçük kabarcıklar birleşerek daha büyük gaz kitleleri oluşturur ve kan akımını tıkayabilir. Kaynaklar 3 başlıkta toplanır: cerrahi işlemler, özellikle obstetrik ve laparoskopik girişimler; göğüs travması; ve santral venöz kateter komplikasyonları, çünkü kateter takılırken ya da çıkarılırken venöz sisteme hava kaçabilir.
 
 Sonuç hacme bağlıdır.
 Pulmoner dolaşımda tıkanma hipoksiye yol açar.
@@ -135,11 +135,11 @@ Yani küçük hacimler hipoksi, büyük hacimler hava kilidi ve ölüm demektir.
 @@ Dekompresyon hastalığı
 Burası önemli, çıkmış soruda doğru önerme olarak geldi: dekompresyon hastalığı, gaz embolisinin özel bir şeklidir ve atmosfer, yani ortam basıncındaki ani değişikliğe bağlı olarak meydana gelir. Burada gaz dışarıdan damara girmez; kanda ve dokularda zaten çözünmüş olan gaz, basınç düşünce kabarcık haline gelir. Tipik örnek, derin deniz dalışı sonrası hızlı yükselmedir. Basınç altında solunan azot, kanda ve dokularda normalden fazla çözünür. Basınç yavaş düşerse azot akciğerlerden kademeli olarak atılır. Basınç hızlı düşerse azot çözeltiden çıkar ve kan ile dokularda kabarcıklar oluşur. Kabarcıklar damarları tıkayarak iskemi yaratır, dokuların içinde de mekanik hasar yapar. Gazlı içeceğin kapağı aniden açıldığında kabarcık oluşması bu sürecin günlük hayattaki karşılığıdır.
 
-Akut formun üç görünümü vardır.
+Akut formun 3 görünümü vardır.
 Bends, yani kıvrılmalar, eklemlerde ve kaslarda şiddetli ağrıdır; hasta ağrı nedeniyle kıvrılarak durur.
-Akciğer tutulumunda ödem, kanama, fokal atelektazi ya da amfizem gelişir ve şiddetli dispne ortaya çıkar; bu tabloya çoks, yani akciğer dekompresyon hastalığı denir.
+Akciğer tutulumunda ödem, kanama, fokal atelektazi ya da amfizem gelişir ve şiddetli dispne ortaya çıkar; bu tabloya chokes, yani akciğer dekompresyon hastalığı denir.
 Beyin tutulumunda ise nörolojik defisit ve koma gelişebilir.
-Kısaca bends eklem ve kas ağrısı, çoks akciğer tutulumu ve dispnedir.
+Kısaca bends eklem ve kas ağrısı, chokes akciğer tutulumu ve dispnedir.
 
 Dekompresyon hastalığının kronik formu Keson hastalığıdır; adını basınçlı su altı çalışma odalarında, yani kesonlarda çalışan işçilerde görülmesinden alır.
 Burada tekrarlayan gaz embolileri vardır; her basınç değişiminde küçük kabarcıklar damarları kısa süreli tıkar.
@@ -147,11 +147,11 @@ Hedef doku kemiktir, özellikle uzun kemik epifizleri, ve buralarda iskemik nekr
 Epifizlerin kollateral dolaşımı sınırlı olduğu için tekrarlayan tıkanmalara dayanıksızdırlar; eklem yüzeyine yakın kemiğin ölümü zamanla, örneğin femur ve humerus başında, eklem hasarına ve ağrıya yol açar.
 Akut form dakikalar ve saatler içinde, kronik form ise yıllar içinde sinsi biçimde gelişir.
 
-Tedavi, hastalığa yol açan fizik ilkesinin tersine çevrilmesine dayanır ve iki aşamalıdır.
+Tedavi, hastalığa yol açan fizik ilkesinin tersine çevrilmesine dayanır ve 2 aşamalıdır.
 Önce hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; artan basınç kabarcıklardaki gazı yeniden çözeltide eritir.
 Ardından basınç yavaşça azaltılır.
 Amaç kabarcıkların tekrar oluşmasını önlemek ve gazın kademeli olarak emilip akciğerler yoluyla atılmasını sağlamaktır.
-Kritik nokta 2. aşamadır: basınç yeniden hızla düşürülürse aynı süreç baştan yaşanır.
+Kritik nokta ikinci aşamadır: basınç yeniden hızla düşürülürse aynı süreç baştan yaşanır.
 Böylece emboli tiplerini tamamladık: katı olarak trombüs, sıvı olarak yağ ve amniyotik sıvı, gaz olarak hava ve azot.
 
 @@ Enfarktüs: tanım ve nedenler
@@ -169,11 +169,11 @@ Torsiyon ve sıkışmada ince duvarlı venler kalın duvarlı arterlerden önce 
 Bu bilgi kırmızı enfarktta yeniden karşımıza çıkacak.
 
 @@ Enfarktüs sınıflaması: kırmızı ve beyaz enfarkt
-Enfarktüsler iki bağımsız ölçüte göre sınıflandırılır. Rengine göre kırmızı, yani hemorajik enfarktüs ve beyaz, yani anemik enfarktüs vardır. Enfeksiyon varlığına göre ise septik ve aseptik enfarktüs ayrılır; enfarktüslerin çoğu aseptiktir. Bir enfarktüs her iki eksende birden tanımlanabilir, örneğin aseptik beyaz enfarkt. Renk, enfarkt alanına ne kadar kan girebildiğini yansıtır.
+Enfarktüsler 2 bağımsız ölçüte göre sınıflandırılır. Rengine göre kırmızı, yani hemorajik enfarktüs ve beyaz, yani anemik enfarktüs vardır. Enfeksiyon varlığına göre ise septik ve aseptik enfarktüs ayrılır; enfarktüslerin çoğu aseptiktir. Bir enfarktüs her iki eksende birden tanımlanabilir, örneğin aseptik beyaz enfarkt. Renk, enfarkt alanına ne kadar kan girebildiğini yansıtır.
 
-Kırmızı enfarktüsün dört klasik koşulu vardır.
+Kırmızı enfarktüsün 4 klasik koşulu vardır.
 1.'si venöz tıkanıklıktır, örneğin testis torsiyonu; kan dokuya girer ama çıkamaz.
-2.'si çift dolaşımlı dokulardır, yani akciğer ve ince bağırsak; tıkanan damarın yerine 2. dolaşımdan gelen kan nekrotik alana dolar.
+2.'si çift dolaşımlı dokulardır, yani akciğer ve ince bağırsak; tıkanan damarın yerine ikinci dolaşımdan gelen kan nekrotik alana dolar.
 3.'sü önceden konjesyonu olan dokulardır.
 4.'sü tıkanmış bir alanda reperfüzyondur; tıkanma açıldığında kan, duvarı hasar görmüş damarlardan nekroz alanına sızar.
 Kırmızı enfarktta dokuda yaygın hemoraji vardır ve sıklıkla gevşek yapılı dokularda görülür, çünkü gevşek doku kanın enfarkt alanında toplanmasına izin verir.
@@ -193,28 +193,28 @@ Akciğer çift dolaşımlı ve gevşek olduğu için nekroz alanı kanla dolmuş
 Enfarktüsün görünümü zamanla değişir. Makroskopik olarak erken dönemde alan kızarık ve hafif sınır belirsizdir; kanlanma ve ödem nedeniyle çevreden zor ayrılır. Zamanla sınırlar belirginleşir ve anemik enfarktlar soluk ve sert hale gelir. Mikroskopik olarak çoğu organda tipik koagülatif nekroz görülür; hücre sınırları ve doku iskeleti bir süre korunur, hücreler adeta hayalet gibi görünür. Burası önemli, klasik bir sınav tuzağıdır: beyinde enfarkt her zaman sıvılaşma nekrozu yapar. Beyin dokusu lipitten zengin ve destek stroması zayıf olduğu için nekrotik alan erir ve sıvılaşır. Yani enfarktın klasik nekrozu koagülatiftir, beyin bunun istisnasıdır.
 
 @@ Enfarktüs iyileşmesi ve septik enfarktüs
-Enfarktüs alanı ölü bir dokudur ve onarım canlı kalan kenardan merkeze doğru ilerler. Kenarlarda inflamatuar yanıt saatler içinde başlar ve bir ila 2 gün içinde belirginleşir. Zamanla makrofajlar nekrotik dokuyu temizler, ölü hücre artıklarını fagosite eder. Ardından granülasyon dokusu, yani yeni kılcal damarlar ve fibroblastlardan oluşan genç bağ dokusu temizlenen alanı doldurur. Bu sıralama enfarktın yaşını tahmin etmede de kullanılır: kenarda yalnız inflamasyon erken, makrofaj ve granülasyon dokusu daha geç bir evreyi gösterir.
+Enfarktüs alanı ölü bir dokudur ve onarım canlı kalan kenardan merkeze doğru ilerler. Kenarlarda inflamatuar yanıt saatler içinde başlar ve 1 ila 2 gün içinde belirginleşir. Zamanla makrofajlar nekrotik dokuyu temizler, ölü hücre artıklarını fagosite eder. Ardından granülasyon dokusu, yani yeni kılcal damarlar ve fibroblastlardan oluşan genç bağ dokusu temizlenen alanı doldurur. Bu sıralama enfarktın yaşını tahmin etmede de kullanılır: kenarda yalnız inflamasyon erken, makrofaj ve granülasyon dokusu daha geç bir evreyi gösterir.
 
 İyileşmenin son ürünü, dokunun destek iskeletinin korunup korunmamasına bağlıdır.
 Çoğu organda sonuç skar dokusudur, çünkü nekroz parankimle birlikte stromayı da yıkar ve granülasyon dokusu olgunlaşarak fibrotik skara dönüşür.
 Bazı durumlarda, altta yatan stromal iskelet korunmuşsa, sınırlı parankim rejenerasyonu mümkündür; kalan iskelet yeni hücrelerin düzenli yerleşmesine rehberlik eder.
 Kitaptaki eski böbrek enfarktüsü örneğinde enfarkt alanı büyük bir fibrotik skarla yer değiştirmiştir; skarın büzüşmesi organ yüzeyinde çöküntü yapar.
 
-Septik enfarktüs, iskemik nekroz alanına mikroorganizmaların eklendiği enfarktüstür ve iki yolla oluşur.
+Septik enfarktüs, iskemik nekroz alanına mikroorganizmaların eklendiği enfarktüstür ve 2 yolla oluşur.
 1.'si enfekte tromboembolidir; klasik örnek, enfektif endokardit vejetasyonundan kopan parçanın hem damarı tıkaması hem de mikroorganizmayı taşımasıdır.
 2.'si, başlangıçta aseptik olan nekrotik alana sonradan mikrobiyal yerleşimdir.
 Septik enfarktta enfarkt alanı apseye dönüşebilir, inflamasyon daha yoğundur ve iyileşme organizasyon ve fibrozisle olur.
 
 @@ Enfarkt gelişimini etkileyen faktörler
-Aynı tıkanma bir organda geniş enfarkt yaparken başka bir organda hiç hasar bırakmayabilir. Bunu üç faktör belirler. 1.'si vasküler beslenmenin anatomisidir. Çift dolaşımlı organlarda, yani pulmoner ve bronşiyal arterle beslenen akciğerde ve hepatik arter ile portal venle beslenen karaciğerde, bir kaynak tıkansa da diğeri dokuyu beslemeye devam eder ve enfarkt riski azalır. Uç arter dolaşımlı organlarda, yani böbrek ve dalakta, her dal belirli bir bölgeyi tek başına besler ve enfarkt riski artar. Bu faktör daha önce gördüğümüz iki bilgiyi birleştirir: orta boy pulmoner embolinin çoğu zaman enfarkt yapmaması ve sistemik embolinin böbrek ve dalakta sıklıkla enfarkt bırakması.
+Aynı tıkanma bir organda geniş enfarkt yaparken başka bir organda hiç hasar bırakmayabilir. Bunu 3 faktör belirler. 1.'si vasküler beslenmenin anatomisidir. Çift dolaşımlı organlarda, yani pulmoner ve bronşiyal arterle beslenen akciğerde ve hepatik arter ile portal venle beslenen karaciğerde, bir kaynak tıkansa da diğeri dokuyu beslemeye devam eder ve enfarkt riski azalır. Uç arter dolaşımlı organlarda, yani böbrek ve dalakta, her dal belirli bir bölgeyi tek başına besler ve enfarkt riski artar. Bu faktör daha önce gördüğümüz iki bilgiyi birleştirir: orta boy pulmoner embolinin çoğu zaman enfarkt yapmaması ve sistemik embolinin böbrek ve dalakta sıklıkla enfarkt bırakması.
 
-2. faktör tıkanma hızıdır.
+İkinci faktör tıkanma hızıdır.
 Damar lümeni aylar ya da yıllar içinde yavaşça daralırsa, örneğin ilerleyen bir aterosklerotik plakta, komşu damarlar arasındaki küçük bağlantılar genişler ve kollateral dolaşım gelişir; damar tamamen kapansa bile doku beslenebilir ve enfarkt riski azalır.
 Ani tıkanmada, örneğin emboli ya da ani trombozda, kollateral gelişimine zaman yoktur ve enfarkt riski artar.
 Enfarktüs tanımındaki ani kesilme vurgusunun nedeni budur.
 
-3. faktör dokunun hipoksiye duyarlılığıdır.
-Burası önemli: nöronlar üç ila 4 dakikada geri dönüşümsüz hasar görür, miyokard yirmi ila 30 dakikada, fibroblastlar ise saatlerce hipoksiyi tolere edebilir.
+Üçüncü faktör dokunun hipoksiye duyarlılığıdır.
+Burası önemli: nöronlar 3 ila 4 dakikada geri dönüşümsüz hasar görür, miyokard 20 ila 30 dakikada, fibroblastlar ise saatlerce hipoksiyi tolere edebilir.
 Yüksek enerji gereksinimi ve depo yokluğu nöronu en duyarlı hücre yapar, düşük metabolik hızları da fibroblastları dayanıklı kılar.
 Bu yüzden beyin ve kalp iskemisinde müdahale için zaman penceresi çok dardır.
 En yüksek enfarkt riski, uç arterli bir organda ani bir tıkanmanın hipoksiye duyarlı bir dokuyu etkilemesidir.
@@ -225,7 +225,7 @@ Enfarktüs lokal bir dolaşım kaybıyken, şok tüm vücudun dolaşımını etk
 Burası önemli, şok tiplerini mekanizmalarıyla birlikte bilmelisiniz.
 Kardiyojenik şokta sorun miyokardın pompa yetmezliğidir.
 Klinik örnekleri miyokard enfarktüsü, ventrikül rüptürü, ventriküler aritmiler, kardiyak tamponad ve masif pulmoner embolidir.
-Üç mekanizma vardır: miyokard enfarktüsünde olduğu gibi intrinsik miyokard hasarı; perikard tamponadında olduğu gibi kalp üzerine dış bası, yani perikard boşluğundaki sıvının kalbin dolmasını engellemesi; ve masif pulmoner embolide olduğu gibi ventrikül çıkış yolunda obstrüksiyon.
+3 mekanizma vardır: miyokard enfarktüsünde olduğu gibi intrinsik miyokard hasarı; perikard tamponadında olduğu gibi kalp üzerine dış bası, yani perikard boşluğundaki sıvının kalbin dolmasını engellemesi; ve masif pulmoner embolide olduğu gibi ventrikül çıkış yolunda obstrüksiyon.
 Bu son mekanizma emboli ile şok arasındaki doğrudan bağlantıdır: eyer emboli çıkış yolunu tıkayarak kardiyojenik şok tablosu yaratır.
 
 Hipovolemik şokta kalp sağlamdır; sorun damar içindeki kan veya plazma hacminin yetersizliğidir.
@@ -236,16 +236,16 @@ Burada debinin düşmesi kalbin hastalığından değil, pompalanacak kanın yet
 Septik şokta sorun ne kalpte ne de kan kaybındadır; konağın enfeksiyona verdiği yanıttadır.
 Neden çoğunlukla mikrobiyal enfeksiyonlardır ve tabloya şiddetli sistemik inflamatuar yanıt sendromu eşlik eder.
 Klinik örnekleri yaygın mikrobiyal enfeksiyonlar, bakteriyel ve fungal sepsis ile süperantijenlerdir; süperantijen örneği toksik şok sendromudur.
-Patojenik mekanizmalar periferik vazodilatasyon ve kan göllenmesi, endotel aktivasyonu ve hasarı, lökosit aracılı doku hasarı, yaygın damar içi pıhtılaşma ve te en ef ile interlökin bir gibi sitokin kaskadlarının aşırı aktivasyonudur.
+Patojenik mekanizmalar periferik vazodilatasyon ve kan göllenmesi, endotel aktivasyonu ve hasarı, lökosit aracılı doku hasarı, yaygın damar içi pıhtılaşma ve TNF ile interlökin 1 gibi sitokin kaskadlarının aşırı aktivasyonudur.
 
-Daha nadir iki şok tipi de vardır.
+Daha nadir 2 şok tipi de vardır.
 Nörojenik şok anestezi ya da omurilik yaralanmasına bağlıdır; mekanizması generalize damar tonusu kaybıdır, damarları kasılı tutan sempatik etki kaybolur, damar yatağı genişler ve kan periferde birikir.
 Anafilaktik şok immünoglobulin E aracılı aşırı duyarlılığa bağlıdır; yaygın vazodilatasyon ve damar permeabilitesinde artış görülür.
 Bu iki tipte kan hacmi başlangıçta normaldir, ama genişleyen damar yatağı bu hacmi göreceli olarak yetersiz bırakır.
 Kısacası kalp kaynaklıysa kardiyojenik, hacim kaynaklıysa hipovolemik, damar yatağının genişlemesiyle seyrediyorsa septik, nörojenik ya da anafilaktik şok düşünürüz.
 
 @@ Septik şok: epidemiyoloji ve temel mekanizma
-Septik şok, hastane yatışlarının yaklaşık %2'si ile ilişkilidir ve yoğun bakım ünitesi hastalarının yaklaşık yarısını etkileyebilir. Amerika Birleşik Devletlerinde yıllık olgu sayısı yaklaşık yedi yüz elli bindir. Burası önemli: septik şokta en sık etken gram pozitif bakterilerdir; ardından gram negatif bakteriler ve mantarlar gelir. Gram negatif bakteriler klasik olarak sepsisle özdeşleştirilse de en sık etken gram pozitiflerdir; bu ayrım çeldirici olarak sık kullanılır. Mortalite %20 ile otuz civarındadır ve tedavideki gelişmelere rağmen hâlâ yüksektir.
+Septik şok, hastane yatışlarının yaklaşık %2'si ile ilişkilidir ve yoğun bakım ünitesi hastalarının yaklaşık yarısını etkileyebilir. Amerika Birleşik Devletlerinde yıllık olgu sayısı yaklaşık 750.000'dir. Burası önemli: septik şokta en sık etken gram pozitif bakterilerdir; ardından gram negatif bakteriler ve mantarlar gelir. Gram negatif bakteriler klasik olarak sepsisle özdeşleştirilse de en sık etken gram pozitiflerdir; bu ayrım çeldirici olarak sık kullanılır. Mortalite %20 ile 30 civarındadır ve tedavideki gelişmelere rağmen hâlâ yüksektir.
 
 Septik şokta dokuyu asıl hasarlayan mikroorganizmanın kendisi değil, konağın ona verdiği yanıttır.
 Temel olay, mikroorganizmalara karşı doğuştan ve adaptif immün yanıtın kontrolsüz sistemik aktivasyonudur; normalde lokal kalması gereken inflamatuar yanıt tüm vücuda yayılır.
@@ -259,18 +259,18 @@ Sepsiste yalnız proinflamatuar yanıt gelişmez, antiinflamatuar yanıt da gör
 Sepsisteki yaygın damar içi pıhtılaşmada trombosit sayısı artmaz, tüketildiği için azalır.
 Sepsis tanısı için kan kültüründe üreme olması da zorunlu değildir.
 
-Sepsisle ilgili bir başka çıkmış soruda dört önermenin dördü de doğruydu.
-Burası önemli: sepsis, enfeksiyon sonucu sistemik inflamatuar yanıt sendromu bulgularından iki veya daha fazlasının bulunmasıdır.
+Sepsisle ilgili bir başka çıkmış soruda 4 önermenin 4'ü de doğruydu.
+Burası önemli: sepsis, enfeksiyon sonucu sistemik inflamatuar yanıt sendromu bulgularından 2 veya daha fazlasının bulunmasıdır.
 Septik şok, yeterli sıvı tedavisine rağmen hipotansiyonla birlikte perfüzyon bozukluğu belirtilerinin devam etmesidir.
 Sepsiste merkezi sinir sistemi tutulumu olmadan bilinç değişikliği gelişebilir.
 Ve sepsiste laktat ile glukoz yükselir; bunların mekanizmasını birazdan metabolik bozukluklarda göreceğiz.
 
 @@ Septik şokta inflamatuar yanıt ve endotel hasarı
-Septik şokun ilk basamağı mikrobiyal ürünlerin tanınmasıdır. Mikroorganizmalara ait yapılar Tol benzeri reseptörler, ge proteinli reseptörler ve ce tipi lektin reseptörleri ile algılanır. Yanıt veren hücreler makrofajlar, nötrofiller, dendritik hücreler ve endotel hücreleridir. Endotelin bu listede olması önemlidir: endotel pasif bir döşeme değil, mikrobiyal ürünleri doğrudan algılayıp yanıt veren aktif bir hücredir.
+Septik şokun ilk basamağı mikrobiyal ürünlerin tanınmasıdır. Mikroorganizmalara ait yapılar Toll benzeri reseptörler, G proteinli reseptörler ve C tipi lektin reseptörleri ile algılanır. Yanıt veren hücreler makrofajlar, nötrofiller, dendritik hücreler ve endotel hücreleridir. Endotelin bu listede olması önemlidir: endotel pasif bir döşeme değil, mikrobiyal ürünleri doğrudan algılayıp yanıt veren aktif bir hücredir.
 
-Aktive hücreler çok sayıda mediyatör salgılar: te en ef, interlökin bir, interlökin altı, interlökin on iki ve interlökin on sekiz gibi proinflamatuar sitokinler; Tip 1 interferonlar; prostaglandinler ve lökotrienler gibi lipid mediyatörler; ve reaktif oksijen türleri.
-Te en ef ve interlökin bir tablonun merkezindeki sitokinlerdir.
-Kompleman sistemi de devreye girer: ce üç a mast hücresini aktive eder, ce beş a kemotaktiktir ve lökositleri çeker, ce üç be opsonindir ve mikroorganizmayı fagositoz için işaretler, ce beş be ile ce dokuz arasındaki bileşenler ise membran atak kompleksini oluşturur.
+Aktive hücreler çok sayıda mediyatör salgılar: TNF, interlökin 1, interlökin 6, interlökin 12 ve interlökin 18 gibi proinflamatuar sitokinler; Tip 1 interferonlar; prostaglandinler ve lökotrienler gibi lipid mediyatörler; ve reaktif oksijen türleri.
+TNF ve interlökin 1 tablonun merkezindeki sitokinlerdir.
+Kompleman sistemi de devreye girer: C3a mast hücresini aktive eder, C5a kemotaktiktir ve lökositleri çeker, C3b opsonindir ve mikroorganizmayı fagositoz için işaretler, C5b ile C9 arasındaki bileşenler ise membran atak kompleksini oluşturur.
 Bu mediyatörler birlikte ateş, vazodilatasyon, geçirgenlik artışı ve lökosit aktivasyonu yapar.
 
 Proinflamatuar sitokinlerin en önemli hedeflerinden biri endoteldir.
@@ -280,7 +280,7 @@ Sıkı bağlantılar zayıflar, vasküler geçirgenlik artar ve protein açısı
 Burası önemli, bir klinik paradoks: septik şokta intravenöz sıvı tedavisi bazen ödemi artırarak durumu kötüleştirebilir, çünkü geçirgen damarlardan verilen sıvının bir bölümü damar dışına kaçar.
 
 @@ Septik şokta pıhtılaşma bozukluğu
-Septik şokta pıhtılaşma dengesi belirgin biçimde pıhtılaşma lehine kayar ve bu kayma üç koldan olur. Burası önemli: 1.'si, pıhtılaşmayı başlatan doku faktörü artar; aktive monosit ve endotel yüzeyinde ifade edilir. 2.'si, doğal antikoagülanlar azalır: doku faktörü yolu inhibitörü, trombomodulin ve protein ce reseptörü düşer. 3.'sü, fibrinoliz baskılanır, çünkü plazminojen aktivatör inhibitörü bir artar ve oluşan pıhtının çözülmesi engellenir. Sonuçta hem daha fazla pıhtı oluşur hem de oluşan pıhtı çözülemez.
+Septik şokta pıhtılaşma dengesi belirgin biçimde pıhtılaşma lehine kayar ve bu kayma 3 koldan olur. Burası önemli: 1.'si, pıhtılaşmayı başlatan doku faktörü artar; aktive monosit ve endotel yüzeyinde ifade edilir. 2.'si, doğal antikoagülanlar azalır: doku faktörü yolu inhibitörü, trombomodulin ve protein C reseptörü düşer. 3.'sü, fibrinoliz baskılanır, çünkü plazminojen aktivatör inhibitörü 1 artar ve oluşan pıhtının çözülmesi engellenir. Sonuçta hem daha fazla pıhtı oluşur hem de oluşan pıhtı çözülemez.
 
 Bu prokoagülan dengenin sonucu yaygın damar içi pıhtılaşmadır ve aynı anda hem tromboz hem kanama ile seyreden paradoksal bir tablodur.
 Tromboz kolunda mikrodamarlarda fibrin açısından zengin trombüsler oluşur, küçük damarları tıkar ve doku perfüzyonu daha da bozulur.
@@ -289,11 +289,11 @@ Buna tüketim koagülopatisi denir.
 Amniyotik sıvı embolisinde gördüğümüz yaygın damar içi pıhtılaşma da aynı mantıkla gelişir.
 
 @@ Septik şokta metabolik bozukluklar ve organ disfonksiyonu
-Septik şok ara metabolizmayı da bozar. Sitokinler ve stres hormonları, yani glukagon, glukokortikoidler ve katekolaminler, glukoneogenezi artırır. Aynı zamanda kas ve yağ dokusunda glut dört, yani glukoz taşıyıcı dört ifadesi azalır ve glukoz hücre içine alınamaz. Burası önemli: sonuç insülin direnci ve hiperglisemidir. Kanda glukoz bol olduğu halde dokular onu kullanamaz.
+Septik şok ara metabolizmayı da bozar. Sitokinler ve stres hormonları, yani glukagon, glukokortikoidler ve katekolaminler, glukoneogenezi artırır. Aynı zamanda kas ve yağ dokusunda GLUT4, yani glukoz taşıyıcı 4 ifadesi azalır ve glukoz hücre içine alınamaz. Burası önemli: sonuç insülin direnci ve hiperglisemidir. Kanda glukoz bol olduğu halde dokular onu kullanamaz.
 
-Adrenal yanıt iki evrelidir.
+Adrenal yanıt 2 evrelidir.
 Başlangıçta glukokortikoid üretimi artar, sonra adrenal yetersizlik gelişebilir.
-Bunun ağır örneği Voterhaus Friderihsen sendromudur; sepsis seyrinde iki taraflı adrenal kanamaya bağlı akut adrenal yetmezliktir.
+Bunun ağır örneği Waterhouse-Friderichsen sendromudur; sepsis seyrinde iki taraflı adrenal kanamaya bağlı akut adrenal yetmezliktir.
 Bir de laktik asidoz vardır: hücresel hipoksi nedeniyle oksidatif fosforilasyon bozulur, hücre enerjiyi oksijensiz yoldan sağlamaya çalışır, anaerobik glikoliz artar ve son ürün olan laktat birikir.
 Laktat yüksekliği doku hipoperfüzyonunun biyokimyasal göstergesidir.
 
@@ -306,28 +306,28 @@ Kalbin etkilenmesi bir kısır döngü yaratır; septik şok kardiyojenik bir bi
 Sonuç çoklu organ yetmezliği ve ölümdür.
 
 Kitaptaki şema septik şokun başlıca patojenik yollarını tek bir tabloda birleştirir.
-Mikroorganizmalara ait patojenle ilişkili moleküler paternler, Tol benzeri reseptörler aracılığıyla nötrofil ve monositleri aktive eder.
+Mikroorganizmalara ait patojenle ilişkili moleküler paternler, Toll benzeri reseptörler aracılığıyla nötrofil ve monositleri aktive eder.
 Proinflamatuar kolda sitokinler, reaktif oksijen türleri, prostaglandinler, trombosit aktive edici faktör, ateş ve kompleman aktivasyonu yer alır.
-Prokoagülan kolda faktör on iki ve doku faktörü artar; doku faktörü yolu inhibitörü, trombomodulin, protein ce ve endotel protein ce reseptörü azalır, plazminojen aktivatör inhibitörü bir artar ve mikrovasküler tromboz gelişir.
+Prokoagülan kolda faktör XII ve doku faktörü artar; doku faktörü yolu inhibitörü, trombomodulin, protein C ve endotel protein C reseptörü azalır, plazminojen aktivatör inhibitörü 1 artar ve mikrovasküler tromboz gelişir.
 Endotel aktivasyonu damar sızıntısı ve ödeme yol açar.
 Nitrik oksit damar düz kasını gevşeterek hipotansiyon yapar.
 Metabolik kolda insülin direnci ve hiperglisemi vardır.
 Kontrol edilmezse bu kolların hepsi çoklu organ yetmezliğinde birleşir.
 
 @@ Şokun evreleri
-Şok, tipi ne olursa olsun üç evreden geçer. Burası önemli, evreleri sırasıyla bilin. 1. evre ilerlemeyen, yani kompansasyonlu evredir. Baroreseptör refleksleri kan basıncındaki düşüşü algılar; katekolaminler, antidiüretik hormon ve renin anjiyotensin aldosteron sistemi aktive olur. Sonuçta taşikardi gelişir ve kalp debisi korunmaya çalışılır; periferik vazokonstriksiyon deri ve kaslardan kanı çekerek beyin ve kalbe yönlendirir; böbrekte sıvı tutulumu damar içi hacmi artırır. Bu evrede hücre hasarı geri dönüşümlüdür.
+Şok, tipi ne olursa olsun 3 evreden geçer. Burası önemli, evreleri sırasıyla bilin. Birinci evre ilerlemeyen, yani kompansasyonlu evredir. Baroreseptör refleksleri kan basıncındaki düşüşü algılar; katekolaminler, antidiüretik hormon ve renin anjiyotensin aldosteron sistemi aktive olur. Sonuçta taşikardi gelişir ve kalp debisi korunmaya çalışılır; periferik vazokonstriksiyon deri ve kaslardan kanı çekerek beyin ve kalbe yönlendirir; böbrekte sıvı tutulumu damar içi hacmi artırır. Bu evrede hücre hasarı geri dönüşümlüdür.
 
-2. evre ilerleyici evredir.
+İkinci evre ilerleyici evredir.
 Kompansasyon yetersiz kalır, doku hipoperfüzyonu artar ve hipoksik hücreler anaerobik glikolize geçtiği için laktik asidoz gelişir.
 Asidoz ortamında arteriyoller kasılma yeteneğini kaybeder, yani vazomotor yanıtlar bozulur.
 Genişleyen arteriyollerden giren kan mikrosirkülasyonda göllenir, kalbe dönüş azalır ve debi daha da düşer.
 Laktik asidoz ve mikrosirkülasyonda göllenme bu evrenin imzasıdır.
-3. evre geri dönüşümsüz evredir.
+Üçüncü evre geri dönüşümsüz evredir.
 Yaygın hücre ve doku hasarı gelişir, organ fonksiyonları toparlanamaz ve dolaşım düzeltilse bile ölüm kaçınılmazdır.
 İlerleyici evre kısır döngülerin başladığı, geri dönüşümsüz evre ise tedavinin artık sonucu değiştiremediği noktadır.
 
 @@ Şokta morfoloji, klinik ve prognoz
-Şokta doku hasarının iki temel nedeni hipoksi ve mikrotrombozdur. En sık etkilenen organlar beyin, kalp, böbrekler, adrenal bezler ve gastrointestinal sistemdir. Burası önemli, şokun morfolojik bulguları şunlardır: glomerüllerde fibrin trombüsleri, yani mikrotrombozun böbrekteki izi; adrenal kortekste lipid tükenmesi, çünkü kortikal hücreler depoladıkları lipidi steroid hormon yapımında hızla kullanır ve bu artmış stres yanıtının göstergesidir; beyin ve kalpte diffüz hipoksik değişiklikler; ve akciğerde şok akciğeri denen akut solunum sıkıntısı sendromu tablosu. Akut solunum sıkıntısı sendromu ani gelişen, sıvı birikmesi ve ağır iltihaplanma ile karakterize, yaşamı tehdit eden ciddi bir solunum yetmezliğidir.
+Şokta doku hasarının 2 temel nedeni hipoksi ve mikrotrombozdur. En sık etkilenen organlar beyin, kalp, böbrekler, adrenal bezler ve gastrointestinal sistemdir. Burası önemli, şokun morfolojik bulguları şunlardır: glomerüllerde fibrin trombüsleri, yani mikrotrombozun böbrekteki izi; adrenal kortekste lipid tükenmesi, çünkü kortikal hücreler depoladıkları lipidi steroid hormon yapımında hızla kullanır ve bu artmış stres yanıtının göstergesidir; beyin ve kalpte diffüz hipoksik değişiklikler; ve akciğerde şok akciğeri denen akut solunum sıkıntısı sendromu tablosu. Akut solunum sıkıntısı sendromu ani gelişen, sıvı birikmesi ve ağır iltihaplanma ile karakterize, yaşamı tehdit eden ciddi bir solunum yetmezliğidir.
 
 Klinik görünüm tipe ve evreye göre değişir.
 Hipovolemik ve kardiyojenik şokta hipotansiyon, zayıf ve hızlı nabız, taşipne ve soğuk, nemli, soluk ya da siyanozlu cilt görülür; kompansatuvar periferik vazokonstriksiyon deriden kanı çeker.

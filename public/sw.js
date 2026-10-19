@@ -1,5 +1,5 @@
 // MeDSor Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
-const CACHE_VERSION = 'medsoru-pwa-v14';
+const CACHE_VERSION = 'medsoru-pwa-v15';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
@@ -7,6 +7,58 @@ const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
 const CD_OFFLINE_CACHE = 'medsoru-canli-ders-offline';
 /** Arka planda (Background Fetch) inen ders dosyaları; uygulama açılınca kaydedilir (canliDersCevrimdisi.ts) */
 const CD_BEKLEYEN_CACHE = 'medsoru-cd-bekleyen';
+/** Çevrimdışı merkezi paketleri (src/services/cevrimdisi/paketMotoru.ts): sürüm temizliğinde silinmez, yalnız kullanıcı siler */
+const PAKET_CACHE = 'medsor-paket-v1';
+const PAKET_SES_RE = /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses)\//;
+
+// Paket önbelleğindeki adresler (sürüm X-Paket-Surum başlığında). İstemci değiştirince PAKET_CHANGED gönderir.
+let paketler = null;
+let paketYukle = null;
+function paketleriYukle() {
+  paketYukle = caches
+    .open(PAKET_CACHE)
+    .then(async (c) => {
+      const m = new Set();
+      for (const r of await c.keys()) if (!r.url.includes('/assets/')) m.add(r.url); // derleme parçaları genel önbellek aramasıyla bulunur
+      paketler = m;
+    })
+    .catch(() => { paketler = new Set(); });
+  return paketYukle;
+}
+paketleriYukle();
+/** Paket anahtarı (istemciyle aynı kural): ses klipleri sorgusuz, diğerleri tam adres */
+const paketAnahtari = (url) => (PAKET_SES_RE.test(url.pathname) ? url.origin + url.pathname : url.href);
+
+/** Önbellekteki tam yanıttan Range isteğine 206 (yoksa 200) yanıt — ses ve PDF */
+async function aralikYaniti(req, hit, tur) {
+  const blob = await hit.blob();
+  const size = blob.size;
+  const type = hit.headers.get('Content-Type') || tur;
+  const range = req.headers.get('range');
+  const m = range && /bytes=(\d*)-(\d*)/.exec(range);
+  if (!m) {
+    return new Response(req.method === 'HEAD' ? null : blob, { status: 200, headers: { 'Content-Type': type, 'Content-Length': String(size), 'Accept-Ranges': 'bytes', 'X-From-Cache': '1' } });
+  }
+  const start = m[1] === '' ? Math.max(0, size - Number(m[2])) : Number(m[1]);
+  const end = m[1] !== '' && m[2] !== '' ? Math.min(size - 1, Number(m[2])) : size - 1;
+  if (start >= size || start > end) return new Response(null, { status: 416, headers: { 'Content-Range': `bytes */${size}` } });
+  return new Response(blob.slice(start, end + 1), {
+    status: 206,
+    headers: { 'Content-Type': type, 'Content-Length': String(end - start + 1), 'Content-Range': `bytes ${start}-${end}/${size}`, 'Accept-Ranges': 'bytes' },
+  });
+}
+
+/** Paketteki ses/PDF: aynı sürümse cihazdan, sürüm farklıysa önce ağ (ağ yoksa cihazdaki kopya) */
+async function paketDosyasi(req, url) {
+  const hit = await caches.open(PAKET_CACHE).then((c) => c.match(paketAnahtari(url)));
+  if (!hit) return fetch(req);
+  const istenen = url.searchParams.get('v');
+  const surum = hit.headers.get('X-Paket-Surum') || '';
+  if (PAKET_SES_RE.test(url.pathname) && istenen && surum && istenen !== surum) {
+    try { const r = await fetch(req); if (r.ok || r.status === 206) return r; } catch (_) { /* ağ yok: cihazdaki kopya */ }
+  }
+  return aralikYaniti(req, hit, 'audio/mpeg');
+}
 
 // Cihazdaki canlı ders sesleri: yol → sürüm (X-Cd-Surum). İstemci değiştirince CD_OFFLINE_CHANGED gönderir.
 let cdSesler = null;
@@ -114,7 +166,7 @@ self.addEventListener('activate', (event) => {
       .then((keys) => {
         return Promise.all(
           keys.map((key) => {
-            if (key !== STATIC_CACHE && key !== RUNTIME_CACHE && key !== DATA_CACHE && key !== 'medsoru-pdf-offline' && key !== CD_OFFLINE_CACHE && key !== CD_BEKLEYEN_CACHE) {
+            if (key !== STATIC_CACHE && key !== RUNTIME_CACHE && key !== DATA_CACHE && key !== 'medsoru-pdf-offline' && key !== CD_OFFLINE_CACHE && key !== CD_BEKLEYEN_CACHE && key !== PAKET_CACHE) {
               console.log('[SW] Eski önbellek temizleniyor:', key);
               return caches.delete(key);
             }
@@ -129,6 +181,18 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const req = event.request;
   const url = new URL(req.url);
+
+  // Çevrimdışı paketindeki ses klipleri ve PDF'ler (HEAD dahil: Öğren sesi önce HEAD ile varlığını sorar)
+  if ((req.method === 'GET' || req.method === 'HEAD') && url.protocol.startsWith('http') && !url.searchParams.has('indir')
+    && (PAKET_SES_RE.test(url.pathname) || url.pathname.startsWith('/api/lecture-pdf/'))) {
+    const k = paketAnahtari(url);
+    if (paketler) {
+      if (paketler.has(k)) { event.respondWith(paketDosyasi(req, url)); return; }
+    } else {
+      event.respondWith((paketYukle || paketleriYukle()).then(() => (paketler.has(k) ? paketDosyasi(req, url) : fetch(req))));
+      return;
+    }
+  }
 
   // Sadece GET isteklerini önbellekle
   if (req.method !== 'GET') {
@@ -338,6 +402,26 @@ self.addEventListener('fetch', (event) => {
       return;
     }
 
+    // Çevrimdışı paketindeki API JSON'u (ör. ders notları): ağ 1,5 sn'de yanıt verirse ağ (ve paket tazelenir), yoksa cihazdaki kopya
+    if (paketler && paketler.has(url.href)) {
+      event.respondWith((async () => {
+        const c = await caches.open(PAKET_CACHE);
+        const network = fetch(req).then(async (r) => {
+          if (r && r.status === 200) {
+            const b = await r.clone().blob();
+            await c.put(url.href, new Response(b, { headers: { 'Content-Type': r.headers.get('Content-Type') || 'application/json', 'X-Paket-Surum': '' } }));
+          }
+          return r;
+        });
+        const yavas = new Promise((ok) => setTimeout(() => ok(null), 1500));
+        const kazanan = await Promise.race([network.catch(() => null), yavas]);
+        if (kazanan && kazanan.ok) return kazanan;
+        const hit = await c.match(url.href);
+        return hit || network;
+      })());
+      return;
+    }
+
     // Büyük tam listeler IndexedDB'de tutulur; SW önbelleğine ikinci kopya yazılmaz
     // Kişiye özel yanıtlar (notlar, profil, kullanıcı verisi, kimlik başlıklı istekler) asla önbelleğe alınmaz:
     // anahtar yalnız URL olduğundan aynı cihazdaki sonraki öğrenciye verilirdi.
@@ -516,6 +600,8 @@ self.addEventListener('message', (event) => {
 
   if (data.type === 'CD_OFFLINE_CHANGED') {
     event.waitUntil(cdSesleriYukle());
+  } else if (data.type === 'PAKET_CHANGED') {
+    event.waitUntil(paketleriYukle());
   } else if (data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   } else if (data.type === 'CACHE_URLS' && Array.isArray(data.urls)) {

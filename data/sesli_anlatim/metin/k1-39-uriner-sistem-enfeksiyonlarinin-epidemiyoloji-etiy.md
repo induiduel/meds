@@ -1,9 +1,9 @@
 # Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi
 
 @@ Tanım ve yerleşime göre sınıflama
-Üriner sistem enfeksiyonu, üriner sistemde mikrobiyal patojenlerin varlığı olarak tanımlanır. Bu geniş tanım, enfeksiyonun yerleştiği yere göre adlandırılır: mesanede yerleşirse sistit, böbrekte yerleşirse piyelonefrit, yalnız idrarda bakteri bulunuyorsa bakteriüri deriz. Her üç düzeyde de tablo semptomatik ya da asemptomatik olabilir. Belirtiler çok geniş bir yelpazededir; idrar yaparken hafif bir yanmadan başlayıp bakteriyemi, sepsis ve hatta ölüme kadar uzanabilir. Burası önemli, çıkmış sorularda bu eşleştirmeler soruldu: sistit mesanenin semptomatik enfeksiyonu, akut piyelonefrit böbreğin semptomatik enfeksiyonudur ve erkek hastadaki üriner sistem enfeksiyonu komplike kabul edilir. Taş ya da kitlenin eşlik ettiği enfeksiyon ise komplike olmayan değil, komplike enfeksiyondur.
+Üriner sistem enfeksiyonu, üriner sistemde mikrobiyal patojenlerin varlığı olarak tanımlanır. Bu geniş tanım, enfeksiyonun yerleştiği yere göre adlandırılır: mesanede yerleşirse sistit, böbrekte yerleşirse piyelonefrit, yalnız idrarda bakteri bulunuyorsa bakteriüri deriz. Her 3 düzeyde de tablo semptomatik ya da asemptomatik olabilir. Belirtiler çok geniş bir yelpazededir; idrar yaparken hafif bir yanmadan başlayıp bakteriyemi, sepsis ve hatta ölüme kadar uzanabilir. Burası önemli, çıkmış sorularda bu eşleştirmeler soruldu: sistit mesanenin semptomatik enfeksiyonu, akut piyelonefrit böbreğin semptomatik enfeksiyonudur ve erkek hastadaki üriner sistem enfeksiyonu komplike kabul edilir. Taş ya da kitlenin eşlik ettiği enfeksiyon ise komplike olmayan değil, komplike enfeksiyondur.
 
-2. bir tanım konağın tepkisini öne çıkarır: üriner sistem enfeksiyonu, bakteriüri ve piyüri ile karakterize, ürotelyal epitelin bakteriyel invazyona karşı oluşturduğu enflamatuar yanıttır.
+İkinci bir tanım konağın tepkisini öne çıkarır: üriner sistem enfeksiyonu, bakteriüri ve piyüri ile karakterize, ürotelyal epitelin bakteriyel invazyona karşı oluşturduğu enflamatuar yanıttır.
 Bakteriüri mikrobiyal tarafı, piyüri yani idrarda lökosit ise ürotelyumun yanıtını gösterir.
 Bu enfeksiyonlar değişik yaş, cinsiyet ve hasta gruplarında morbiditeye yol açar; bireysel ve toplumsal sonuçları önemlidir.
 
@@ -11,37 +11,37 @@ Bu enfeksiyonlar değişik yaş, cinsiyet ve hasta gruplarında morbiditeye yol 
 Bakteriüri, idrarda bakteri bulunmasıdır ve semptomatik ya da asemptomatik olabilir. Ancak idrarda bakteri görmek her zaman enfeksiyon demek değildir. Kontaminasyon, temiz bir ortama herhangi bir yolla kir ya da mikroorganizmaların bulaşması veya bulaştırılmasıdır ve olasılığı idrar alma tekniğinin güvenilirliğine bağlıdır. En güvenilir yöntem suprapubik aspirasyondur; mesaneden karın duvarı yoluyla iğneyle idrar alınır. Ortada üretral kateterizasyon, en sonda ise işeme ile alınan orta akım idrarı gelir; orta akım idrarı üretra ve perine florasıyla temas ettiği için kontaminasyona en açık örnektir.
 
 Gerçek enfeksiyonu kontaminasyondan ayırmak için anlamlı bakteriüri deyimi kullanılır.
-Klasik tanım, orta akım idrarda mililitrede on üzeri beş koloni oluşturan birim ya da daha fazla bakteri bulunmasıdır.
+Klasik tanım, orta akım idrarda mililitrede 10⁵ koloni oluşturan birim ya da daha fazla bakteri bulunmasıdır.
 Koloni oluşturan birim, kültürde tek bir canlı bakteriden çoğalan koloniyi ifade eder.
-Eşik klinik tabloya göre değişir: kadında komplike olmayan sistitte orta akımda on üzeri üç, piyelonefritte on üzeri dört, komplike piyelonefritte on üzeri beş yeterlidir.
-Erkekte orta akım idrarda eşik on üzeri dörttür.
+Eşik klinik tabloya göre değişir: kadında komplike olmayan sistitte orta akımda 10³, piyelonefritte 10⁴, komplike piyelonefritte 10⁵ yeterlidir.
+Erkekte orta akım idrarda eşik 10⁴'tür.
 Suprapubik aspirasyonla alınan idrarda ise herhangi bir bakteri bulunması anlamlı bakteriüri kabul edilir, çünkü mesane idrarı normalde sterildir.
 
 Burası önemli, bu eşik çıkmış sorularda defalarca soruldu.
-Semptomatik hastada orta akım idrar kültüründe enfeksiyona işaret eden klasik düzey mililitrede on üzeri beş koloni oluşturan birimdir.
-Soru özellikle semptomatik kadında komplike olmayan sistiti kastediyorsa doğru cevap on üzeri üçtür.
-Yani klasik eşik on üzeri beş, kadın sistitinde on üzeri üç, erkekte on üzeri dört; bu üçlüyü birbirine karıştırmayın.
+Semptomatik hastada orta akım idrar kültüründe enfeksiyona işaret eden klasik düzey mililitrede 10⁵ koloni oluşturan birimdir.
+Soru özellikle semptomatik kadında komplike olmayan sistiti kastediyorsa doğru cevap 10³'tür.
+Yani klasik eşik 10⁵, kadın sistitinde 10³, erkekte 10⁴; bu üçlüyü birbirine karıştırmayın.
 
 @@ Asemptomatik bakteriüri ve piyüri
-Asemptomatik bakteriüri, semptomu olmayan kişide saptanan anlamlı, yani mililitrede on üzeri beşten fazla bakteriüridir. Genel kural şudur: asemptomatik bakteriürisi olan kişilerde antimikrobiyal tedavi endikasyonu yoktur, çünkü gereksiz antibiyotik direnci ve yan etkiyi artırır. Dört istisna vardır: çocuklar, yaşlılar, gebeler ve mukozal kanama riski olan invaziv girişim yapılacak hastalar. Son grupta girişim sırasındaki mukozal kanama bakterinin kana geçmesine yol açabilir. Dolayısıyla genç, sağlıklı, gebe olmayan bir kadında asemptomatik bakteriüri tedavi gerektirmez.
+Asemptomatik bakteriüri, semptomu olmayan kişide saptanan anlamlı, yani mililitrede 10⁵'ten fazla bakteriüridir. Genel kural şudur: asemptomatik bakteriürisi olan kişilerde antimikrobiyal tedavi endikasyonu yoktur, çünkü gereksiz antibiyotik direnci ve yan etkiyi artırır. 4 istisna vardır: çocuklar, yaşlılar, gebeler ve mukozal kanama riski olan invaziv girişim yapılacak hastalar. Son grupta girişim sırasındaki mukozal kanama bakterinin kana geçmesine yol açabilir. Dolayısıyla genç, sağlıklı, gebe olmayan bir kadında asemptomatik bakteriüri tedavi gerektirmez.
 
 Piyüri, normalde idrarda bulunmayan lökositlerin görülmesidir ve ürotelyal epitelin enflamatuar yanıtının göstergesidir.
-Burası önemli, piyüriyle ilgili iki yorum kuralı çıkmış sorularda ters çevrilerek soruldu.
+Burası önemli, piyüriyle ilgili 2 yorum kuralı çıkmış sorularda ters çevrilerek soruldu.
 Piyüri olmaksızın saptanan bakteriüri kontaminasyonun göstergesidir; bakteri vardır ama doku yanıtı yoktur.
 Bakteriürisiz piyüri, yani steril piyüri görülürse üriner tüberküloz, taş ve ürotelyal kanser araştırılmalıdır.
 Dikkat edin, piyürinin tanımı yalnız lökositlerdir, lökositle bakterinin birlikte görülmesi değildir.
 
 @@ Komplike olmayan ve komplike enfeksiyon
-Komplike olmayan üriner enfeksiyon, üriner sistemde yapısal ve işlevsel anomali bulunmayan hastalarda görülen idrar yolu enfeksiyonudur. Komplike üriner enfeksiyon ise bakteri bulaşma ihtimalini artıran ve tedavinin etkinliğini azaltan faktörlerin varlığında gelişir. Derste verilen şemaya göre sistit, piyelonefrit ve rekürren enfeksiyon her iki grupta da görülebilir. Kateter ilişkili enfeksiyon ve erkeklerdeki enfeksiyon ise yalnız komplike gruptadır. Ürosepsis komplike olmayan enfeksiyondan düşük riskle, komplike enfeksiyondan yüksek riskle gelişebilir.
+Komplike olmayan üriner enfeksiyon, üriner sistemde yapısal ve işlevsel anomali bulunmayan hastalarda görülen idrar yolu enfeksiyonudur. Komplike üriner enfeksiyon ise bakteri bulaşma ihtimalini artıran ve tedavinin etkinliğini azaltan faktörlerin varlığında gelişir. Derste verilen şemaya göre sistit, piyelonefrit ve rekürren enfeksiyon her 2 grupta da görülebilir. Kateter ilişkili enfeksiyon ve erkeklerdeki enfeksiyon ise yalnız komplike gruptadır. Ürosepsis komplike olmayan enfeksiyondan düşük riskle, komplike enfeksiyondan yüksek riskle gelişebilir.
 
 Burası önemli, komplike edici faktörler çıkmış sorularda sık soruldu.
 Erkek cinsiyet, böbrek taşı yani nefrolitiazis ya da ürolitiazis, nörojenik mesane, kontrolsüz diyabet, mesane tümörü, üriner obstrüksiyon, immünsüpresyon ve üretral kateter varlığı komplike edici faktörlerdir.
 Ateş yüksekliği ise komplike edici faktör değildir; ateş enfeksiyonun bir bulgusudur, zemini değil.
-Hipogonadizm, Kuşing hastalığı, hipertiroidi ve hiperlipidemi de komplike edici faktör olarak sayılmaz; bu seçeneklerin arasında doğru cevap diabetes mellitustur.
+Hipogonadizm, Cushing hastalığı, hipertiroidi ve hiperlipidemi de komplike edici faktör olarak sayılmaz; bu seçeneklerin arasında doğru cevap diabetes mellitustur.
 Komplike olmayan sınıfa giren tipik örnek genç, sağlıklı kadınlarda görülen idrar yolu enfeksiyonudur; gebelerde, üriner sistem anomalisi olanlarda, üriner sisteme girişim yapılanlarda ve erkeklerde görülen enfeksiyonlar komplike sayılır.
 
 @@ Tekrarlayan enfeksiyonlar ve edinildiği ortam
-Rekürren enfeksiyon, başarılı tedaviden sonra, genellikle iki haftadan daha kısa sürede, yeniden aynı patojenle gelişen üriner enfeksiyondur. Re-enfeksiyon, geçirilmiş enfeksiyon sonrasında dışarıdan gelen yeni bir patojenle oluşan enfeksiyondur. Bakteriyel persistans ise rekürrenslere neden olan, üriner sisteme yerleşmiş patojenlerin oluşturduğu enfeksiyonlardır; kaynak sistemin içindedir.
+Rekürren enfeksiyon, başarılı tedaviden sonra, genellikle 2 haftadan daha kısa sürede, yeniden aynı patojenle gelişen üriner enfeksiyondur. Re-enfeksiyon, geçirilmiş enfeksiyon sonrasında dışarıdan gelen yeni bir patojenle oluşan enfeksiyondur. Bakteriyel persistans ise rekürrenslere neden olan, üriner sisteme yerleşmiş patojenlerin oluşturduğu enfeksiyonlardır; kaynak sistemin içindedir.
 
 Burası önemli, bu tanım çıkmış sorularda doğrudan soruldu.
 Başarılı tedaviden sonra yeniden aynı patojenle gelişen enfeksiyonun adı rekürren enfeksiyondur.
@@ -49,107 +49,109 @@ Aynı soru bazen şöyle sorulur: tedaviden sonra 2 hafta içinde aynı bakterin
 Bu durumda seçeneklerde rekürren yoksa beklenen cevap relapstır; bazı sorularda bakteriyel persistans ile relaps aynı seçenekte birlikte verilmiştir.
 Yeni bir patojenin girdiği re-enfeksiyonu ve süperenfeksiyonu bununla karıştırmayın.
 
-Bu kavramlara iki strateji karşılık gelir.
+Bu kavramlara 2 strateji karşılık gelir.
 Antimikrobiyal profilaksi, antimikrobiyal ilaçlarla üriner sistemdeki re-enfeksiyonların önlenmesidir; cerrahi antimikrobiyal profilaksi de bu başlıktadır.
 Antimikrobiyal süpresyon ise eradike edilemeyen bir bakteriyel persistans odağının büyümesinin engellenmesidir.
 Enfeksiyonun edinildiği ortam da etkeni değiştirir.
-Nozokomiyal, yani hastane ilişkili enfeksiyonlar hospitalize kişilerde oluşur; tipik etkenler Psödomonaslar ve antimikrobiyallere dirençli diğer suşlardır.
-Hastane dışı enfeksiyonlarda etken genellikle sık görülen barsak kökenli bakterilerdir, yani Enterobakteriler ya da Enterokokus fekalis.
+Nozokomiyal, yani hastane ilişkili enfeksiyonlar hospitalize kişilerde oluşur; tipik etkenler Pseudomonas'lar ve antimikrobiyallere dirençli diğer suşlardır.
+Hastane dışı enfeksiyonlarda etken genellikle sık görülen barsak kökenli bakterilerdir, yani Enterobakteriler ya da Enterococcus faecalis.
 
 @@ İnsidans ve genel epidemiyoloji
-Tanı kriterleri ve veri kaynakları farklı olduğu için insidans tahminleri değişkendir. Amerika Birleşik Devletlerinde 1997'de yapılan ulusal bir araştırmaya göre üriner sistem enfeksiyonu nedeniyle yılda yedi milyon poliklinik ve bir milyon acil servis başvurusu olur; bunların yaklaşık yüz bini hastaneye yatırılır. Başvuru sıklığı kadınlarda %1,2, erkeklerde %0 virgül altıdır, yani kadınlarda 2 kat fazladır. Üriner sistem enfeksiyonları nozokomiyal enfeksiyonların yüzde kırkından sorumludur ve olguların çoğu üriner kateterle ilişkilidir.
+Tanı kriterleri ve veri kaynakları farklı olduğu için insidans tahminleri değişkendir. Amerika Birleşik Devletlerinde 1997'de yapılan ulusal bir araştırmaya göre üriner sistem enfeksiyonu nedeniyle yılda 7 milyon poliklinik ve 1 milyon acil servis başvurusu olur; bunların yaklaşık 100 bini hastaneye yatırılır. Başvuru sıklığı kadınlarda %1,2, erkeklerde %0,6'dır, yani kadınlarda 2 kat fazladır. Üriner sistem enfeksiyonları nozokomiyal enfeksiyonların %40'ından sorumludur ve olguların çoğu üriner kateterle ilişkilidir.
 
 Türkiye'de üriner sistem enfeksiyonlarının yaygınlığı konusunda ulusal veri yoktur.
-Sağlık Bakanlığının yayınladığı Uluslararası Hastalık Sınıflaması 10. revizyon tanı kodlarına göre tüm genitoüriner sistem hastalıklarının sıklığı %8,6; kadınlarda %8,3, erkeklerde %9,1. Tüm ölümler arasında genitoüriner sistem hastalıkları nedeniyle ölenlerin payı %4,5; kadınlarda %4,7, erkeklerde %4,3. Bu rakamların doğrudan üriner sistem enfeksiyonu insidansı olmadığını, tüm genitoüriner hastalıkları kapsadığını unutmayın.
+Sağlık Bakanlığının yayınladığı Uluslararası Hastalık Sınıflaması onuncu revizyon tanı kodlarına göre tüm genitoüriner sistem hastalıklarının sıklığı %8,6'dır; kadınlarda %8,3, erkeklerde %9,1'dir.
+Tüm ölümler arasında genitoüriner sistem hastalıkları nedeniyle ölenlerin payı %4,5'tir; kadınlarda %4,7, erkeklerde %4,3.
+Bu rakamların doğrudan üriner sistem enfeksiyonu insidansı olmadığını, tüm genitoüriner hastalıkları kapsadığını unutmayın.
 
 @@ Semptomatik enfeksiyonun epidemiyolojisi ve etkenleri
-Semptomatik enfeksiyon özellikle cinsel aktif kadınlarda erkeklere göre daha sık görülür. Yirmi dört yaşına gelene kadar her üç kadından biri en az 1 kez antibiyotik gerektiren bir enfeksiyon geçirir; kadınların %40 ile elli arasının yaşam boyu en az 1 kez geçireceği tahmin edilir. Enfeksiyon geçiren kadınların yüzde yirmisinde altı ay içinde yeniden enfeksiyon gelişir. Erkeklerde on beş ile 50 yaş arasında enfeksiyon oldukça nadirdir; bakteriüri prevalansı binde birden azdır.
+Semptomatik enfeksiyon özellikle cinsel aktif kadınlarda erkeklere göre daha sık görülür. 24 yaşına gelene kadar her 3 kadından biri en az 1 kez antibiyotik gerektiren bir enfeksiyon geçirir; kadınların %40 ile 50 arasının yaşam boyu en az 1 kez geçireceği tahmin edilir. Enfeksiyon geçiren kadınların %20'sinde 6 ay içinde yeniden enfeksiyon gelişir. Erkeklerde 15 ile 50 yaş arasında enfeksiyon oldukça nadirdir; bakteriüri prevalansı binde birden azdır.
 
 Burası önemli, çıkmış sorularda tekrarlayan enfeksiyonların genel özellikleri soruldu.
 Tekrarlayan enfeksiyonlar çocuklarda kalıcı renal hasara yol açabilir, insidansları yaş ve cinsiyete göre farklılık gösterir, reprodüktif dönemdeki kadınlarda erkeklere göre yaklaşık 50 kat daha sıktır ve çocukluk döneminde en sık neden konjenital üriner anomalilerdir.
 Daha çok erkeklerde görüldüğünü söyleyen ifade yanlıştır.
 Benzer biçimde, kadınlarda daha sık görüldüğü, erkeklerde ise artan yaşla sıklığın arttığı, hastalarda sıklıkla pollaküri ve dizüri bulunduğu ve akut böbrek hastalıklarının en sık görüleni olduğu ifadeleri doğru kabul edildi.
 
-Akut komplike olmayan enfeksiyonda en sık patojen %75 ile doksan beş arasında Eşerişya kolidir.
-Onu %5 ile on arasında Stafilokokus saprofitikus izler.
+Akut komplike olmayan enfeksiyonda en sık patojen %75 ile 95 arasında Escherichia coli'dir.
+Onu %5 ile 10 arasında Staphylococcus saprophyticus izler.
 Bazen Proteus mirabilis ve Klebsiella türleri gibi diğer gram negatif bakteriler izole edilir.
 Gram pozitifler arasında enterokoklar nadiren saptanır.
-Bu sıralamanın hastane ortamında değiştiğini, orada Psödomonas ve dirençli suşların öne çıktığını hatırlayın.
+Bu sıralamanın hastane ortamında değiştiğini, orada Pseudomonas ve dirençli suşların öne çıktığını hatırlayın.
 
 @@ Kadında ve erkekte risk faktörleri
-Kadınlarda enfeksiyon sıklığını artıran risk faktörleri iki grupta toplanır. Davranışsal nedenler geçirilmiş enfeksiyon öyküsü yani rekürren enfeksiyon, sık cinsel temas ve kontraseptif amaçlı diyafram ve spermisit kullanımıdır. Biyolojik nedenler ise östrojen eksikliği ve diyabettir. Erkeklerde enfeksiyon sıklığını artıran faktörler üriner sistemde anomali bulunması, eşcinsellik ve sünnetin olmayışıdır. Erkek tarafında burası önemli: hiv enfeksiyonu, homoseksüel ilişki, benign prostat hiperplazisi ve üriner inkontinans risk faktörleri arasında yer alırken Hepatit B enfeksiyonu yer almaz.
+Kadınlarda enfeksiyon sıklığını artıran risk faktörleri 2 grupta toplanır. Davranışsal nedenler geçirilmiş enfeksiyon öyküsü yani rekürren enfeksiyon, sık cinsel temas ve kontraseptif amaçlı diyafram ve spermisit kullanımıdır. Biyolojik nedenler ise östrojen eksikliği ve diyabettir. Erkeklerde enfeksiyon sıklığını artıran faktörler üriner sistemde anomali bulunması, eşcinsellik ve sünnetin olmayışıdır. Erkek tarafında burası önemli: HIV enfeksiyonu, homoseksüel ilişki, benign prostat hiperplazisi ve üriner inkontinans risk faktörleri arasında yer alırken Hepatit B enfeksiyonu yer almaz.
 
 Burası önemli, risk faktörleri çıkmış sorularda çok sık soruldu.
 Genç erişkin kadında spermisit, sık cinsel ilişki, diyafram kullanımı ve gebelik risk faktörüdür; pelvik organ prolapsusu bu grupta risk faktörü olarak sayılmaz.
 Kadında kısa üretra, seksüel aktivite, postmenopozal hormonal değişiklikler, hamilelik, düşük sosyoekonomik durum ve kadında prostatik sekresyonların olmaması risk faktörüdür.
 Buna karşılık östrojen fazlalığı risk faktörü değildir; risk yaratan östrojen eksikliğidir.
 Vajinal laktobasiller ise koruyucudur; vajinal laktobasil varlığı ya da laktobasillerin artması enfeksiyonu kolaylaştırmaz.
-Tekrarlayan enfeksiyon için annede idrar yolu enfeksiyonu öyküsü, ilk atağın on beş yaşından önce geçirilmesi, son 1 yılda spermisit kullanımı ve sık cinsel ilişki risk faktörüdür.
+Tekrarlayan enfeksiyon için annede idrar yolu enfeksiyonu öyküsü, ilk atağın 15 yaşından önce geçirilmesi, son 1 yılda spermisit kullanımı ve sık cinsel ilişki risk faktörüdür.
 
 @@ Asemptomatik bakteriürinin epidemiyolojisi
-Asemptomatik bakteriürinin prevalansı yaklaşık %3,5 ve yaşla birlikte artar. Altmış beş yaşın üzerinde kadınların en az yüzde yirmisinde, erkeklerin yüzde onunda saptanır. Yalnız yaşayan yaşlılarda insidans kadınlarda erkeklerden 3 kat fazladır. Huzurevi gibi kurumsal bakım alan yaşlılarda da oran kadınlarda %17 ile elli beş, erkeklerde %15 ile otuz bir arasındadır; yani her ortamda kadın üstünlüğü sürer.
+Asemptomatik bakteriürinin prevalansı yaklaşık %3,5'tir ve yaşla birlikte artar. 65 yaşın üzerinde kadınların en az %20'sinde, erkeklerin %10'unda saptanır. Yalnız yaşayan yaşlılarda insidans kadınlarda erkeklerden 3 kat fazladır. Huzurevi gibi kurumsal bakım alan yaşlılarda da oran kadınlarda %17 ile 55, erkeklerde %15 ile 31 arasındadır; yani her ortamda kadın üstünlüğü sürer.
 
-Asemptomatik bakteriürinin beş risk faktörü vardır: yaşlılık, parite yani doğum sayısı, diyabet, geçirilmiş enfeksiyon öyküsü ve düşük sosyoekonomik düzey.
+Asemptomatik bakteriürinin 5 risk faktörü vardır: yaşlılık, parite yani doğum sayısı, diyabet, geçirilmiş enfeksiyon öyküsü ve düşük sosyoekonomik düzey.
 Burası önemli, bu liste çıkmış sorularda pek çok kez soruldu ve her seferinde risk faktörü olmayan seçenek soğuk iklimdi.
 Soğuk iklimde yaşamak asemptomatik bakteriüri için tanımlanmış bir risk faktörü değildir.
 
 @@ Çocuklarda ve yaşlılarda enfeksiyon
-Ders, epidemiyolojisi farklı yedi özel grubu ayrıca inceler: çocuklar, yaşlılar, gebeler, diyabetliler, hiv ve eyds hastaları, kateterli hastalar ve ürosepsis. Üriner sistem enfeksiyonu bebek ve çocuklarda en sık görülen enfeksiyonlardan biridir. İnsidansı kesin bilinmese de yaşamın ilk bir yılında ve ergenlik döneminde en yüksek düzeye ulaştığından bimodal, yani iki tepeli bir dağılım gösterir. Yaşamın ilk üç ayında erkek çocuklarda, ilerleyen yıllarda kızlarda daha sık görülür. Ergenlik öncesi döneme kadar kız çocuklarında %3, erkek çocuklarda %1 oranında görülür.
+Ders, epidemiyolojisi farklı 7 özel grubu ayrıca inceler: çocuklar, yaşlılar, gebeler, diyabetliler, HIV ve AIDS hastaları, kateterli hastalar ve ürosepsis. Üriner sistem enfeksiyonu bebek ve çocuklarda en sık görülen enfeksiyonlardan biridir. İnsidansı kesin bilinmese de yaşamın ilk bir yılında ve ergenlik döneminde en yüksek düzeye ulaştığından bimodal, yani iki tepeli bir dağılım gösterir. Yaşamın ilk 3 ayında erkek çocuklarda, ilerleyen yıllarda kızlarda daha sık görülür. Ergenlik öncesi döneme kadar kız çocuklarında %3, erkek çocuklarda %1 oranında görülür.
 
 Burası önemli, çocuklukla ilgili bilgiler çıkmış sorularda sık soruldu.
 Erkekte enfeksiyon olasılığının kadından fazla olduğu dönem neonatal dönemdir.
 Çocuklarda enfeksiyon riskini artıran faktörler vezikoüreteral reflü, konstipasyon yani kabızlık, labial füzyon, fimozis, nörojenik mesane ve sünnetsizliktir; diabetes insipidus bu riski artırmaz.
-Önleme için kabızlıkta laksatif kullanımı, lazımlık ya da klozet kullanan çocukta ayakların altına destek konması, ikili işeme alışkanlığı ve pamuklu çamaşır önerilir; sünnet için altı yaşını beklemek ise önerilmez.
-İki yaşından küçük çocuklarda ateş, letarji, beslenme güçlüğü ve kilo alamama görülebilir, ama bu yaşta disüri beklenmez, çünkü çocuk ağrılı işemeyi ifade edemez.
+Önleme için kabızlıkta laksatif kullanımı, lazımlık ya da klozet kullanan çocukta ayakların altına destek konması, ikili işeme alışkanlığı ve pamuklu çamaşır önerilir; sünnet için 6 yaşını beklemek ise önerilmez.
+2 yaşından küçük çocuklarda ateş, letarji, beslenme güçlüğü ve kilo alamama görülebilir, ama bu yaşta disüri beklenmez, çünkü çocuk ağrılı işemeyi ifade edemez.
 Tekrarlayan enfeksiyona yol açan üriner anomaliler vezikoüreteral reflü, nörojenik mesane, üretra darlığı ve mesane divertikülüdür; tek taraflı renal agenezi bu anomaliler arasında sayılmaz.
 Enfeksiyon riskinin en düşük olduğu grup ise gebeler, çocuklar, ürogenital girişim yapılacaklar ve yaşlılarla karşılaştırıldığında adolesanlardır.
 
-Yaşlılarda üriner sistem enfeksiyonu 2. en sık enfeksiyondur ve tüm enfeksiyonların %25'ini oluşturur.
-Asemptomatik bakteriüri yaşlı kadınların yüzde ellisinden, erkeklerin yüzde otuzundan fazlasında görülür.
+Yaşlılarda üriner sistem enfeksiyonu ikinci en sık enfeksiyondur ve tüm enfeksiyonların %25'ini oluşturur.
+Asemptomatik bakteriüri yaşlı kadınların %50'sinden, erkeklerin %30'undan fazlasında görülür.
 Asemptomatik bakteriürisi olan yaşlı erkeklerde %12 oranında gram pozitif üropatojen saptanmıştır.
-Proteusun etken olduğu durumlar ise çoğunlukla böbrek taşı ve kalıcı böbrek hasarıyla ilişkilidir.
+Proteus'un etken olduğu durumlar ise çoğunlukla böbrek taşı ve kalıcı böbrek hasarıyla ilişkilidir.
 
-@@ Gebelik, diyabet ve hiv
-Hamile kadınların yaklaşık %4 ile on arasında asemptomatik bakteriüri, %1 ile dört arasında akut sistit gelişir. Çocukluğunda enfeksiyon öyküsü olan ve böbrek skarı bulunmayan gebelerde asemptomatik bakteriüri riski %27, böbrek skarı olanlarda %47 civarında artar. Akut piyelonefrit hamile kadınların %1 ile ikisinde, özellikle 2. trimesterde görülür. Gebelikte enfeksiyon riskini artıran nedenler düşük sosyoekonomik düzey, orak hücreli anemi, aşırı doğurganlık ve yeterli doğum öncesi bakım alamama, fonksiyonel ürogenital anomaliler ve diyabettir.
+@@ Gebelik, diyabet ve HIV
+Hamile kadınların yaklaşık %4 ile 10 arasında asemptomatik bakteriüri, %1 ile 4 arasında akut sistit gelişir. Çocukluğunda enfeksiyon öyküsü olan ve böbrek skarı bulunmayan gebelerde asemptomatik bakteriüri riski %27, böbrek skarı olanlarda %47 civarında artar. Akut piyelonefrit hamile kadınların %1 ile 2'sinde, özellikle ikinci trimesterde görülür. Gebelikte enfeksiyon riskini artıran nedenler düşük sosyoekonomik düzey, orak hücreli anemi, aşırı doğurganlık ve yeterli doğum öncesi bakım alamama, fonksiyonel ürogenital anomaliler ve diyabettir.
 
 Diyabet özellikle kadın hastalarda önemli bir risk faktörüdür.
-Diyabetliler, olmayanlara göre iki ile 4 kat artmış bakteriüri riskine sahiptir.
+Diyabetliler, olmayanlara göre 2 ile 4 kat artmış bakteriüri riskine sahiptir.
 Diyabetli kadınlarda asemptomatik bakteriüri %26, diyabetsizlerde %6 düzeyindedir.
 Diyabetliler arasında uzun süreli diyabet, proteinüri ve periferik nöropati önemli risk faktörleridir.
 Diyabette amfizematöz sistit ve piyelonefrit gibi ciddi komplikasyonlar görülebilir; amfizematöz, dokuda gaz birikimiyle seyreden demektir.
 Diabetes mellitus Enterobakteriyase ailesi kaynaklı akut piyelonefrit riskini artırır ve Klebsiella enfeksiyonu diyabetlilerde diyabetsizlere göre daha sıktır, %25'e karşı %12. Burası önemli, sistemik bir sebep olarak enfeksiyona yatkınlığı artıran hastalık sorulduğunda cevap diabetes mellitustur; vezikoüreteral reflü ve böbrek taşı yerel nedenlerdir, hipertansiyon ve hiperlipidemi ise yatkınlık nedeni olarak sayılmaz.
 
-Hiv seropozitif olanlarda enfeksiyon insidansı olmayanlara göre daha fazladır.
+HIV seropozitif olanlarda enfeksiyon insidansı olmayanlara göre daha fazladır.
 Bu hastalarda olasılıkla trombotik mikroanjiyopati ve immün kaynaklı glomerülonefrit akut ya da kronik böbrek yetmezliğine yol açar.
-Hiv ve eyds hastalarında baskın üropatojenler Enterokokus türleridir; komplike olmayan enfeksiyonda nadir görülen enterokokun burada baskın olduğuna dikkat edin.
+HIV ve AIDS hastalarında baskın üropatojenler Enterokokus türleridir; komplike olmayan enfeksiyonda nadir görülen enterokokun burada baskın olduğuna dikkat edin.
 
 @@ Kateter ilişkili enfeksiyon ve ürosepsis
-Hastane enfeksiyonlarının %40'ı üriner sistem kaynaklıdır ve bunların yüzde sekseninde üriner kateter bulunur. Nozokomiyal üriner enfeksiyon hastaneye yatanlarda %1 ile iki, yoğun bakımda %8 ile yirmi bir civarındadır. Yoğun bakıma kabul edilenlerin %16'sında enfeksiyon vardır ve sıklıkta pnömoni ile kan dolaşımı enfeksiyonlarından sonra 3. sıradadır. Hastaneye yatanların %15 ile yirmi beşine kateter takılır ve bunların %10 ile otuzunda bakteriüri gelişir. En sık etkenler Eşerişya koli, Psödomonas aeruginoza, Klebsiella pnömonia, Proteus mirabilis, Stafilokokus epidermidis, Enterokok türleri ve listedeki tek mantar olan Kandida türleridir.
+Hastane enfeksiyonlarının %40'ı üriner sistem kaynaklıdır ve bunların %80'inde üriner kateter bulunur. Nozokomiyal üriner enfeksiyon hastaneye yatanlarda %1 ile 2, yoğun bakımda %8 ile 21 civarındadır. Yoğun bakıma kabul edilenlerin %16'sında enfeksiyon vardır ve sıklıkta pnömoni ile kan dolaşımı enfeksiyonlarından sonra üçüncü sıradadır. Hastaneye yatanların %15 ile 25'ine kateter takılır ve bunların %10 ile 30'unda bakteriüri gelişir. En sık etkenler Escherichia coli, Pseudomonas aeruginosa, Klebsiella pneumoniae, Proteus mirabilis, Staphylococcus epidermidis, Enterokok türleri ve listedeki tek mantar olan Candida türleridir.
 
 En önemli risk faktörü kateterin kalış süresidir.
-Bir ile 30 gün arası kısa süreli kabul edilir ve 1 kez takıldığında bakteriüri riski %1 ile on, bazı yayınlarda %1 ile beş arasındadır.
+1 ile 30 gün arası kısa süreli kabul edilir ve 1 kez takıldığında bakteriüri riski %1 ile 10, bazı yayınlarda %1 ile 5 arasındadır.
 Kısa süreli kateterizasyonda etken çoğunlukla tektir, polimikrobiyal olma olasılığı %15 civarındadır; uzun süreli kateterizasyonda bu risk %95'e çıkar.
 Diğer risk faktörleri drenaj torbası, kateter ve periüretral bölgedeki kolonizasyon, diabetes mellitus, kadın olmak, böbrek fonksiyonlarında yetmezlik, kateter bakımının yetersiz olması ve antimikrobiyal tedavide yetersizliktir.
 
 Ürosepsis, sistemik enflamasyon semptomlarının eşlik ettiği bir enfeksiyondur.
 Ciddi sepsiste tabloya organ yetmezliği ve septik şok eklenir.
-Sepsiste mortalite %20 ile kırk iki arasındadır.
-Ciddi sepsis nedenleri arasında en sık pulmoner, %50, ve abdominal, %24, enfeksiyonlar görülürken üriner sistem enfeksiyonları yüzde beşinden sorumludur.
+Sepsiste mortalite %20 ile 42 arasındadır.
+Ciddi sepsis nedenleri arasında en sık pulmoner, %50, ve abdominal, %24, enfeksiyonlar görülürken üriner sistem enfeksiyonları %5'inden sorumludur.
 Sepsis erkeklerde kadınlardan daha fazla görülür.
-Ürosepsis risk faktörleri yaşlılık, diyabet ve immünsüpresyondur; immünsüprese grup içinde transplantasyon yapılanlar, kemoterapi alanlar ve eyds hastaları sayılır.
+Ürosepsis risk faktörleri yaşlılık, diyabet ve immünsüpresyondur; immünsüprese grup içinde transplantasyon yapılanlar, kemoterapi alanlar ve AIDS hastaları sayılır.
 
 @@ Patogenez
-Üriner sistem enfeksiyonu, üropatojenler ile konak arasındaki etkileşim sonucunda oluşur ve üç eksende incelenir. 1.'si bakterinin virülansıdır. Enfeksiyonun ilk koşulu bakteriyel adherens, yani bakterinin ürotelyuma tutunmasıdır. Tutunmayı bakteriyel adhezinler sağlar; bunlar fimbriyal ve afimbriyal olarak ikiye ayrılır. Fimbriyal adhezinler Tip 1, P ve S tipi fimbriyalardır; fimbriya bakteri yüzeyindeki kıl benzeri ince uzantıdır.
+Üriner sistem enfeksiyonu, üropatojenler ile konak arasındaki etkileşim sonucunda oluşur ve 3 eksende incelenir. 1.'si bakterinin virülansıdır. Enfeksiyonun ilk koşulu bakteriyel adherens, yani bakterinin ürotelyuma tutunmasıdır. Tutunmayı bakteriyel adhezinler sağlar; bunlar fimbriyal ve afimbriyal olarak ikiye ayrılır. Fimbriyal adhezinler Tip 1, P ve S tipi fimbriyalardır; fimbriya bakteri yüzeyindeki kıl benzeri ince uzantıdır.
 
-2. eksen epitel hücrelerinin reseptivite kapasitesidir, yani konak epitelinin bu adhezinleri ne ölçüde kabul ettiği.
+İkinci eksen epitel hücrelerinin reseptivite kapasitesidir, yani konak epitelinin bu adhezinleri ne ölçüde kabul ettiği.
 Ders reseptiviteyi vajinal hücreler ve mesane hücrelerinde değerlendirir.
-3. eksen konak savunma düzeneklerindeki bozukluklardır.
+Üçüncü eksen konak savunma düzeneklerindeki bozukluklardır.
 Mekanik bozukluklar obstrüksiyon ve vezikoüreteral reflüdür.
 Altta yatan hastalıklar ise diabetes mellitus, nefrokalsinozis, hiperfosfatemi, hiperkalemi, aşırı analjezik tüketimi, sülfonamid nefropatisi, gut, ağır metal zehirlenmesi ve yaşlanmadır.
 Savunma bozulduğunda düşük virülanslı bakteriler bile enfeksiyon oluşturabilir.
 
 @@ Enfeksiyonun giriş yolları
-Bakteriler üriner sisteme üç yoldan ulaşır: asendan, hematojen ve lenfojen yol. Asendan yol en sık yoldur. Üriner sistemde bakterilerin kolonize olduğu tek yer üretradır; üretrovezikal bölgenin proksimalinde idrar sterildir. Enfeksiyon yaşa ve cinsiyete göre farklılık gösterir. Kadınlarda üretranın kısa olması, intestinal bakterilerin perine ve vajen ağzında kolonize olması, vezikoüreteral reflü ve postmenopozal dönemde östrojen azlığı asendan yolu kolaylaştırır. Reflü, enfeksiyonun üst üriner sisteme taşınmasını kolaylaştırır.
+Bakteriler üriner sisteme 3 yoldan ulaşır: asendan, hematojen ve lenfojen yol. Asendan yol en sık yoldur. Üriner sistemde bakterilerin kolonize olduğu tek yer üretradır; üretrovezikal bölgenin proksimalinde idrar sterildir. Enfeksiyon yaşa ve cinsiyete göre farklılık gösterir. Kadınlarda üretranın kısa olması, intestinal bakterilerin perine ve vajen ağzında kolonize olması, vezikoüreteral reflü ve postmenopozal dönemde östrojen azlığı asendan yolu kolaylaştırır. Reflü, enfeksiyonun üst üriner sisteme taşınmasını kolaylaştırır.
 
 Burası önemli, patogenez sorularında yanlış ifade hep aynıydı: erkeklerde enfeksiyonun kadınlardan daha sık görüldüğünü söyleyen ifade yanlıştır.
 Asendan yolun en sık yol olduğu, bakterilerin kolonize olduğu yegâne yerin üretra olduğu, intestinal bakterilerin perine ve vajen ağzında kolonizasyonunun özellikle seksüel aktif çağda riski artırdığı ve reflüde üst üriner sistemin daha kolay enfekte olduğu ifadeleri doğrudur.
@@ -160,10 +162,10 @@ Burası önemli, bakterilerin böbreğe en sık hematojen yolla ulaştığını 
 Lenfojen yolda ise piyelonefrit patogenezinde renal lenfatiklerin rolü kesin değildir ve bu yol nadirdir.
 
 @@ Klinik belirtiler ve hematürinin tanımı
-Dersin 2. yarısı semptomlara ayrılmıştır ve klinik belirtiler altı başlıkta toplanır: hematüri, ağrı, alt üriner sistem semptomları, hematospermi, pnömatüri ve üretral akıntı. Hematüri, idrarda anormal miktarlarda eritrosit varlığıdır. Burası önemli, idrarda eritrosit bulunmasını anlatan terim sorulduğunda cevap hematüridir; lökosit piyüri, bakteri bakteriüri, protein proteinüri, silendir de silendirüri demektir.
+Dersin ikinci yarısı semptomlara ayrılmıştır ve klinik belirtiler 6 başlıkta toplanır: hematüri, ağrı, alt üriner sistem semptomları, hematospermi, pnömatüri ve üretral akıntı. Hematüri, idrarda anormal miktarlarda eritrosit varlığıdır. Burası önemli, idrarda eritrosit bulunmasını anlatan terim sorulduğunda cevap hematüridir; lökosit piyüri, bakteri bakteriüri, protein proteinüri, silendir de silendirüri demektir.
 
 İdrarda gözle görülebilir bir kanama olmasına makroskopik hematüri denir.
-Mikroskopik hematüri ise analiz için uygun toplanmış idrar sedimentinde bir büyük büyütme alanında üçten fazla eritrosit bulunması ve çıplak gözle idrar renginin normal olmasıdır.
+Mikroskopik hematüri ise analiz için uygun toplanmış idrar sedimentinde bir büyük büyütme alanında 3'ten fazla eritrosit bulunması ve çıplak gözle idrar renginin normal olmasıdır.
 Erişkin bir hastada hematüri, aksi ispat edilene kadar ürolojik malignite bulgusu kabul edilir; üriner enfeksiyonlarda da hematüri görülebilir ama bu, malignite araştırmasını gereksiz kılmaz.
 Burası önemli, ağrısız ve tekrarlayan hematürisi olan hastada en olası tanı mesane tümörüdür; akut sistit, üreter taşı, iyi huylu prostat büyümesi ve kronik prostatit bu soruda çeldiricidir.
 Hematürinin makroskopik ya da mikroskopik oluşu patolojinin ciddiyetiyle ilişkili değildir; basit bir sistit makroskopik, ciddi bir mesane tümörü mikroskopik hematüriyle saptanabilir.
@@ -182,7 +184,7 @@ Hematüri yalnız inflamatuvar bir durumun semptomu olabileceği gibi, inflamatu
 İdrar sedimentinin direkt bakısında izomorfik, yani düzgün biçimli eritrositler daha çok ürolojik bir patolojiyi, dismorfik yani biçimi bozulmuş eritrositler ise glomerüler hastalıkları düşündürmelidir.
 
 @@ Ağrının mekanizması ve renal kolik
-Üriner sistemi ilgilendiren ağrı obstrüksiyona ya da inflamasyona sekonderdir. Epididim, testis ve böbrek gibi parankimal organlarda inflamasyon önce ödem ve distansiyona, sonra kapsülde gerginliğe yol açar ve ağrı böyle oluşur. Mesane ve üreter gibi visseral organlarda inflamasyon genellikle mukozada sınırlı kaldığı için keskin bir ağrıdan çok rahatsız edici bir his olarak kendini gösterir. Ders ağrıyı dört başlıkta inceler: renal kolik, pelvik ağrı, skrotal ağrı ve penil ağrı.
+Üriner sistemi ilgilendiren ağrı obstrüksiyona ya da inflamasyona sekonderdir. Epididim, testis ve böbrek gibi parankimal organlarda inflamasyon önce ödem ve distansiyona, sonra kapsülde gerginliğe yol açar ve ağrı böyle oluşur. Mesane ve üreter gibi visseral organlarda inflamasyon genellikle mukozada sınırlı kaldığı için keskin bir ağrıdan çok rahatsız edici bir his olarak kendini gösterir. Ders ağrıyı 4 başlıkta inceler: renal kolik, pelvik ağrı, skrotal ağrı ve penil ağrı.
 
 Akut renal kolik, flank bölgesinde aniden başlayan, karnın alt ve ön kısmına yayılan, hastaların yaklaşık yarısında bulantı ve kusmanın eşlik ettiği çok şiddetli bir ağrıdır.
 Böbrekte ağrı reseptörleri renal kapsülde, renal toplayıcı sistemde ve üreterde uyarılır; toplayıcı sistem ve üreter özellikle obstrüksiyonla gerilerek uyarılır.
@@ -200,19 +202,19 @@ Burası önemli, böbrek ağrısıyla ilgili önermeli soruda doğru olanlar yal
 Frenik irritasyonla omuza yayılma ve hastanın sırtüstü hareketsiz yatması intraperitoneal ağrıya aittir.
 
 @@ Pelvik, skrotal ve penil ağrı
-Pelvik ağrının ilk kaynağı üreterdir. Orta üreter ağrısı alt kadranlarda, Mek Börni noktasında hissedilir ve apandisit ile divertikülitle karışır. Orta ve distal üreter ağrısı testis ya da labiumlara yayılır. Üreterin alt ucu sık işeme, sıkışma ve suprapubik rahatsızlık gibi depolama bulguları verebilir. Mesane kaynaklı pelvik ağrı, idrar retansiyonu ya da mesanenin aşırı dolmasıyla gerilme veya inflamatuvar durumlarla ortaya çıkar. Retansiyon olmaksızın görülen suprapubik ağrı nadiren ürolojik kökenlidir. Flask, yani tonusunu yitirmiş mesaneyle sonuçlanan yavaş gelişen obstrüksiyonlarda ileri derecede rezidüel idrar olsa da çoğu zaman ağrı hissedilmez. Mesanenin inflamatuvar hastalıkları çoğunlukla suprapubik rahatsızlık hissi verir; sistitli hastalar distal üretradaki irritasyona bağlı sık işeme ve dizüri tarif eder.
+Pelvik ağrının ilk kaynağı üreterdir. Orta üreter ağrısı alt kadranlarda, McBurney noktasında hissedilir ve apandisit ile divertikülitle karışır. Orta ve distal üreter ağrısı testis ya da labiumlara yayılır. Üreterin alt ucu sık işeme, sıkışma ve suprapubik rahatsızlık gibi depolama bulguları verebilir. Mesane kaynaklı pelvik ağrı, idrar retansiyonu ya da mesanenin aşırı dolmasıyla gerilme veya inflamatuvar durumlarla ortaya çıkar. Retansiyon olmaksızın görülen suprapubik ağrı nadiren ürolojik kökenlidir. Flask, yani tonusunu yitirmiş mesaneyle sonuçlanan yavaş gelişen obstrüksiyonlarda ileri derecede rezidüel idrar olsa da çoğu zaman ağrı hissedilmez. Mesanenin inflamatuvar hastalıkları çoğunlukla suprapubik rahatsızlık hissi verir; sistitli hastalar distal üretradaki irritasyona bağlı sık işeme ve dizüri tarif eder.
 
 Prostat kaynaklı ağrı, enflamasyona bağlı prostatik kapsülün ödemi ve distansiyonu nedeniyle gelişir.
 Genellikle lokalize değildir; alt abdomen, inguinal, perineal, lumbosakral, penil ve rektal ağrı olarak tarif edilir ve sık işeme, dizüri gibi irritatif semptomlarla birliktedir.
 Primer skrotal ağrı nedenleri akut epididimit, orşit, testis ya da apendiks testisin torsiyonu, skrotum duvarının enflamasyonu, hidrosel ve varikoseldir.
-Skrotum duvarı enflamasyonu içinde enfekte kıl folikülü, enfekte sebase kist ve Furniye gangreni sayılır.
+Skrotum duvarı enflamasyonu içinde enfekte kıl folikülü, enfekte sebase kist ve Fournier gangreni sayılır.
 Yansıyan skrotal ağrıda ise böbrekler ve testisler embriyolojik hayatta yakın yerleşimli olduklarından böbrek ya da retroperitondan kaynaklanan ağrı testiste hissedilir; inguinal herniler de skrotuma yansıyan ağrı yapabilir.
 
 Penis flask durumdayken görülen ağrı mesane ya da üretradaki inflamatuvar bir olaya sekonderdir ve en çok meada, yani dış üretra ağzında hissedilir; parafimozis ve balanit de flask penste ağrı yapar.
-Erekte durumdaki ağrı Peyroni hastalığı ve priapizm gibi durumlarda görülür.
+Erekte durumdaki ağrı Peyronie hastalığı ve priapizm gibi durumlarda görülür.
 
 @@ Alt üriner sistem semptomları ve depolama semptomları
-Alt üriner sistem semptomları üç grupta toplanır. Depolama semptomları irritatif nedenlerle ortaya çıkar: sıklık, noktüri, dizüri, stres inkontinans ve urge inkontinans. İşeme semptomları tıkayıcı nedenlerle ortaya çıkar: akış hızında azalma, tutukluk, aralıklı akım, ıkınma ve son damlama. İşeme sonrası semptomlar ise işeme sonrası damlama ve tam boşaltamama hissidir.
+Alt üriner sistem semptomları 3 grupta toplanır. Depolama semptomları irritatif nedenlerle ortaya çıkar: sıklık, noktüri, dizüri, stres inkontinans ve urge inkontinans. İşeme semptomları tıkayıcı nedenlerle ortaya çıkar: akış hızında azalma, tutukluk, aralıklı akım, ıkınma ve son damlama. İşeme sonrası semptomlar ise işeme sonrası damlama ve tam boşaltamama hissidir.
 
 Burası önemli, bu sınıflama dersin en çok sorulan konusudur.
 Hangisinin depolama ya da irritatif semptom olduğu sorulduğunda cevap sıklık ya da dizüridir.
@@ -223,9 +225,9 @@ Fazla idrar üretimine yani poliüriye ya da mesane kapasitesinin azalmasına ba
 Sık aralıklarla ve çok miktarda idrara çıkmanın nedenleri diabetes mellitus, diabetes insipidus, aşırı sıvı tüketimi ve obstrüksiyon giderildikten sonra gelişen postobstrüktif diürezdir.
 Ani sıkışma, ani ve karşı konulması güç bir idrar isteğidir; sıklık, noktüri ve inkontinansla birlikte görülürse aşırı aktif mesane sendromu adını alır.
 
-Noktüri, kişinin gece bir ya da daha fazla kez idrar yapmak için uyanmasıdır; kişinin işemeden önce ve sonra uyuyor olması gerekir.
-60 yaş üstü hastalarda genellikle gecede iki kereden fazla idrara çıkma noktüri kabul edilir.
-Burası önemli, noktüri sorusunda gecede üç ya da daha fazla kez uyanma, 60 yaş üstünde gecede dört kereden fazla çıkma ve noktürinin tıkayıcı bir işeme semptomu olduğu ifadeleri yanlıştır; noktüri bir depolama semptomudur.
+Noktüri, kişinin gece 1 ya da daha fazla kez idrar yapmak için uyanmasıdır; kişinin işemeden önce ve sonra uyuyor olması gerekir.
+60 yaş üstü hastalarda genellikle gecede 2 kereden fazla idrara çıkma noktüri kabul edilir.
+Burası önemli, noktüri sorusunda gecede 3 ya da daha fazla kez uyanma, 60 yaş üstünde gecede 4 kereden fazla çıkma ve noktürinin tıkayıcı bir işeme semptomu olduğu ifadeleri yanlıştır; noktüri bir depolama semptomudur.
 Doğru kabul edilen ifade, akşam saatlerinde alınan alkol ve kafein gibi diüretik etkili içeceklerin noktüri için risk faktörü olduğudur.
 Bir soruda ise gece çıkarılan idrar miktarının 24 saatlik idrar miktarının üçte birinden fazla olması doğru cevap olarak verilmiştir.
 
@@ -237,12 +239,12 @@ Sistit, üretrit, vajinit, gonokokal ya da nongonokokal üretrit, akut bakteriye
 
 Stres inkontinans, öksürme, hapşırma, gülme, aniden ayağa kalkma ya da ağır bir şey kaldırma gibi karın içi basıncını artıran günlük faaliyetler sırasında damla damla idrar kaçırmadır; en önemli nedenleri gebelik, doğum ve menopozdur.
 Urge inkontinans ise ani idrar hissiyle tuvalete yetişemeyip idrarın kaçırılmasıdır; mesanede istemsiz kasılmalar olur.
-Nedenleri idrar yolu enfeksiyonları, taş ve kum gibi mesaneyi irrite eden maddeler, bağırsak sorunları, Parkinson, Alzaymır, inme, multipl skleroz ve aşırı aktif mesane sendromudur.
+Nedenleri idrar yolu enfeksiyonları, taş ve kum gibi mesaneyi irrite eden maddeler, bağırsak sorunları, Parkinson, Alzheimer, inme, multipl skleroz ve aşırı aktif mesane sendromudur.
 
 @@ İşeme ve işeme sonrası semptomlar
-İşeme semptomları mesane çıkım obstrüksiyonu, artmış mesane basıncı ve azalmış idrar akış hızıyla karakterizedir. Daha çok erkekler için kullanılır ve enfeksiyon olmadığında çıkış obstrüksiyonu yapan patolojilerde görülür; kadınlarda ve çocuklarda farklı patolojiler benzer semptomlara yol açabilir. Akış hızında azalma, kişinin eskiye ya da başkalarına göre hissettiği akış azalmasıdır; kademeli oluşmuşsa fark edilmeyebilir. Nedenleri benign prostat hiperplazisi, üretra darlığı, detrüsör harabiyetine yol açan kronik hastalıklar, nörolojik hastalıklarda mesanenin denervasyonu ya da detrüsör sfinkter dissinerjisi, çocuklarda posterior üretral valf, üreterosel ve diğer konjenital anomaliler, kadınlarda sistosel ve rektoseldir. Tutukluk, idrar yapmaya hazır olunduğu hâlde idrara başlamanın gecikmesidir. Normalde işeme üriner sfinkter gevşedikten sonra bir saniyede başlar; mesane çıkım obstrüksiyonu olan erkeklerde bu süre uzar.
+İşeme semptomları mesane çıkım obstrüksiyonu, artmış mesane basıncı ve azalmış idrar akış hızıyla karakterizedir. Daha çok erkekler için kullanılır ve enfeksiyon olmadığında çıkış obstrüksiyonu yapan patolojilerde görülür; kadınlarda ve çocuklarda farklı patolojiler benzer semptomlara yol açabilir. Akış hızında azalma, kişinin eskiye ya da başkalarına göre hissettiği akış azalmasıdır; kademeli oluşmuşsa fark edilmeyebilir. Nedenleri benign prostat hiperplazisi, üretra darlığı, detrüsör harabiyetine yol açan kronik hastalıklar, nörolojik hastalıklarda mesanenin denervasyonu ya da detrüsör sfinkter dissinerjisi, çocuklarda posterior üretral valf, üreterosel ve diğer konjenital anomaliler, kadınlarda sistosel ve rektoseldir. Tutukluk, idrar yapmaya hazır olunduğu hâlde idrara başlamanın gecikmesidir. Normalde işeme üriner sfinkter gevşedikten sonra 1 saniyede başlar; mesane çıkım obstrüksiyonu olan erkeklerde bu süre uzar.
 
-Aralıklı akım, idrar akımının istemsiz olarak durup başlamasıdır; işeme sırasında bir ya da daha fazla kez olabilir ve genellikle prostat büyümesinin yarattığı obstrüksiyona bağlıdır.
+Aralıklı akım, idrar akımının istemsiz olarak durup başlamasıdır; işeme sırasında 1 ya da daha fazla kez olabilir ve genellikle prostat büyümesinin yarattığı obstrüksiyona bağlıdır.
 Burası önemli, bu tanım çıkmış sorularda aynen soruldu ve cevap aralıklı akımdır; başlamada gecikme tutukluk, uzayan son aşama son damlamadır.
 Ikınma, işemeyi başlatmak, sürdürmek ya da hızlandırmak için yapılan kas eforudur.
 Normalde işemenin son safhası dışında abdominal kaslarla Valsalva manevrası yapmaya gerek yoktur; ıkınma genellikle mesane çıkım obstrüksiyonunun bulgusudur.
@@ -253,16 +255,16 @@ Erkeklerde işeme sonunda prostatik ve bulber üretrada kalan idrarın mesaneye 
 Tam boşaltamama hissi ise kişinin idrarını yaptıktan sonra mesanesinin tam boşalmadığını hissetmesidir.
 
 @@ Hematospermi, pnömatüri ve üretral akıntı
-Hematospermi, seminal sıvıda kan bulunmasıdır. Hemen daima prostat ya da seminal veziküllerin özgül olmayan inflamasyonu sonucu oluşur ve genellikle haftalar içinde kendiliğinden kaybolur; etyolojik faktör nadiren saptanır. Düzelmeyen hastada genital tüberküloz açısından genital ve rektal muayene, prostat kanserini dışlamak için pe se a ve parmakla rektal muayene, prostatik üretrada transizyonel hücreli karsinomu dışlamak için idrar sitolojisi önerilir.
+Hematospermi, seminal sıvıda kan bulunmasıdır. Hemen daima prostat ya da seminal veziküllerin özgül olmayan inflamasyonu sonucu oluşur ve genellikle haftalar içinde kendiliğinden kaybolur; etyolojik faktör nadiren saptanır. Düzelmeyen hastada genital tüberküloz açısından genital ve rektal muayene, prostat kanserini dışlamak için PSA ve parmakla rektal muayene, prostatik üretrada transizyonel hücreli karsinomu dışlamak için idrar sitolojisi önerilir.
 
 Pnömatüri, idrarla birlikte hava çıkmasıdır.
 Nedenleri idrar yolları enstrümantasyonu ve üretral kateterizasyon sonrası durumlar, barsak ile mesane arasındaki fistül ve diyabetli hastalarda idrardaki yüksek konsantrasyondaki şekeri fermente ederek karbondioksit oluşturan bakterilerle gelişen enfeksiyonlardır.
-Bu bakteriler Proteus, Psödomonas ve Eşerişya kolidir ve tablonun adı amfizematöz sistittir.
+Bu bakteriler Proteus, Pseudomonas ve Escherichia coli'dir ve tablonun adı amfizematöz sistittir.
 
-Üretral akıntı, cinsel yolla bulaşan enfeksiyonların en sık bulgusudur; en sık etkenler Neisseria gonorrhoeae ve Klamidya trakomatistir.
+Üretral akıntı, cinsel yolla bulaşan enfeksiyonların en sık bulgusudur; en sık etkenler Neisseria gonorrhoeae ve Chlamydia trachomatis'tir.
 Üretritler gonokoksik ve gonokoksik olmayan olarak ikiye ayrılır.
 Akıntının Gram yaymasında Gram negatif diplokokların ve lökositlerin görülmesi gonokoksik üretrit için tanı koydurucudur.
-Gonokoksik olmayan üretritlerin %20 ile otuzunu Üreaplazma üreolitikum, Mikoplazma genitalyum ve Mikoplazma hominis oluşturur; Trikomonas vajinalis ve herpes simpleks virüsü de üretrit nedenidir.
+Gonokoksik olmayan üretritlerin %20 ile 30'unu Ureaplasma urealyticum, Mycoplasma genitalium ve Mycoplasma hominis oluşturur; Trichomonas vaginalis ve herpes simpleks virüsü de üretrit nedenidir.
 Geçirilmiş cinsel yolla bulaşan hastalık, üretral kateterizasyon, travma ya da üretral cerrahi öyküsü olmayan 40 yaş üstü erkekte üretral akıntının en sık nedeni prostat büyümesidir.
 
 @@ Sistit ve piyelonefrit
@@ -275,7 +277,7 @@ Kronik piyelonefrit ise morfolojik, radyolojik ve fonksiyonel olarak tanısı ko
 Burası önemli, piyelonefrit tanımlarını soran soruda bu dört ifade doğruydu; yanlış olan, akut piyelonefritin en sık nedeninin parankimin kan yoluyla enfeksiyonu olduğunu söyleyen ifadeydi, çünkü en sık yol asendan yoldur.
 
 @@ Prostatitler
-Prostatit, prostata lokalize enfeksiyon ve enflamasyondur. Pek çok etyolojik ajan bildirilmiş olsa da yalnız %5 ile on hastada nedeni mikroorganizmalardır. Amerikan Ulusal Sağlık Enstitüsü sınıflamasında kategori bir prostatın akut enfeksiyonu, kategori iki kronik bakteriyel enfeksiyonudur. Kategori üç A inflamatuar tiptir; prostat masajı sonrası idrar sedimentinde, semende ya da prostat sekresyonunda ondan fazla lökosit bulunur. Kategori üç B non-inflamatuar tiptir ve aynı örneklerde ondan az, önemsiz sayıda lökosit vardır. Kategori dört ise yakınması olmayan kişide infertilite ya da prostat kanseri araştırması sırasında semende ya da prostatik doku örneklerinde lökosit veya bakteri bulunmasıdır. Burası önemli, masaj sonrası belirgin, yani ondan fazla lökosit bulunmasının hangi kategoriye girdiği soruldu ve cevap kategori üç A'dır.
+Prostatit, prostata lokalize enfeksiyon ve enflamasyondur. Pek çok etyolojik ajan bildirilmiş olsa da yalnız %5 ile 10 hastada nedeni mikroorganizmalardır. Amerikan Ulusal Sağlık Enstitüsü sınıflamasında kategori I prostatın akut enfeksiyonu, kategori II kronik bakteriyel enfeksiyonudur. Kategori IIIA inflamatuar tiptir; prostat masajı sonrası idrar sedimentinde, semende ya da prostat sekresyonunda 10'dan fazla lökosit bulunur. Kategori IIIB non-inflamatuar tiptir ve aynı örneklerde 10'dan az, önemsiz sayıda lökosit vardır. Kategori IV ise yakınması olmayan kişide infertilite ya da prostat kanseri araştırması sırasında semende ya da prostatik doku örneklerinde lökosit veya bakteri bulunmasıdır. Burası önemli, masaj sonrası belirgin, yani 10'dan fazla lökosit bulunmasının hangi kategoriye girdiği soruldu ve cevap kategori IIIA'dır.
 
 Akut bakteriyel prostatitte en sık şikâyetler ani başlayan yüksek ateş, terleme, halsizlik, bulantı ve kusma, irritatif üriner semptomlar ve perineal ya da suprapubik ağrıdır.
 Sık idrara gitme, idrar yaparken yanma ve acil idrar yapma isteği de sıktır.
@@ -297,21 +299,21 @@ Burası önemli, akut bakteriyel prostatitle ilgili yanlış ifade olarak prosta
 Bir başka versiyonda ise ağrının perianal olduğu söylenerek tuzak kuruldu; doğrusu perineal ya da suprapubik ağrıdır.
 
 @@ Orşit ve epididimit
-Orşit, testisin enfeksiyona sekonder akut inflamatuar reaksiyonudur. Akut orşit testiste ani ağrı ve şişlikle karakterizedir; kronik orşit altı haftadan uzun süren, genellikle şişliksiz, ağrılı inflamatuar testisi tanımlar. En sık tip kabakulak orşitidir; postpubertal dönemde kabakulak geçirenlerin %20 ile otuzunda görülür, olguların yüzde yirmisinde bilateraldir ve testiküler atrofi ile azoospermiyle sonlanabilir. Akut enfeksiyöz orşitte etkilenen hemiskrotum eritematöz ve ödemlidir, testis palpasyonla oldukça hassastır. Kronik orşit ve orşialjide maligniteyi ayırt etmek için skrotal ultrasonografi yapılmalıdır. En önemli ayırıcı tanı, özellikle genç erkek ve erkek çocuklarda testis torsiyonudur. Dopler ultrasonografi yardımcıdır ama parsiyel torsiyonda tanı atlanabilir; şüphe varsa eksplorasyon şarttır.
+Orşit, testisin enfeksiyona sekonder akut inflamatuar reaksiyonudur. Akut orşit testiste ani ağrı ve şişlikle karakterizedir; kronik orşit 6 haftadan uzun süren, genellikle şişliksiz, ağrılı inflamatuar testisi tanımlar. En sık tip kabakulak orşitidir; postpubertal dönemde kabakulak geçirenlerin %20 ile 30'unda görülür, olguların %20'sinde bilateraldir ve testiküler atrofi ile azoospermiyle sonlanabilir. Akut enfeksiyöz orşitte etkilenen hemiskrotum eritematöz ve ödemlidir, testis palpasyonla oldukça hassastır. Kronik orşit ve orşialjide maligniteyi ayırt etmek için skrotal ultrasonografi yapılmalıdır. En önemli ayırıcı tanı, özellikle genç erkek ve erkek çocuklarda testis torsiyonudur. Dopler ultrasonografi yardımcıdır ama parsiyel torsiyonda tanı atlanabilir; şüphe varsa eksplorasyon şarttır.
 
 Epididimit, epididimin inflamasyonudur.
 Akut epididimit epididimin aniden oluşan ağrı ve şişliğiyle ortaya çıkar; şişlik ve inflamasyon genellikle epididim kuyruğundan başlar ve epididimin geri kalanına ve testise yayılabilir.
 Spermatik kord genellikle hassas ve şiştir.
 Akut enfeksiyöz ve nonenfeksiyöz epididimitler, orşitlerle aynı biçimde prezente olur; fizik muayene hassasiyeti epididime lokalize edebilir ama birçok olguda testis de etkilenmiştir.
 Testisin de tutulmasıyla tablo epididimoorşit adını alır.
-Kronik epididimitte hastalar altı haftadan uzun süren, epididim ve testise lokalize ağrı ve hassasiyetle gelir; bu yakınmalar yaşam kalitesini kötü yönde etkiler.
+Kronik epididimitte hastalar 6 haftadan uzun süren, epididim ve testise lokalize ağrı ve hassasiyetle gelir; bu yakınmalar yaşam kalitesini kötü yönde etkiler.
 
 @@ Üretritler
-Üretrit, dizüri, üretral akıntı ve ya da üretral kaşıntıyla seyreden klinik sendromdur; akıntı açık renkli, mükopürülan ya da pürülan olabilir. Enfeksiyon dışı nedenler arasında travma, Stivıns Conson sendromu ve Vegener granülomatozu gibi sistemik hastalıklar, Rayter sendromu ve spermisidler sayılır. Enfeksiyöz üretritler iki gruptur: gonokokkal üretritin etkeni Neisserya gonoredir; gonokok dışı üretritin etkenleri Chlamydia trachomatis, Üreaplazma üreolitikum, Trikomonas vajinalis, herpes simpleks virüsü ve Mikoplazma genitalyumdur. Gonore yani bel soğukluğu, erkeklerde dizüri ve üretral akıntıyla kendini gösterir, kadınlarda ise genellikle yakınmasız seyreder.
+Üretrit, dizüri, üretral akıntı ve ya da üretral kaşıntıyla seyreden klinik sendromdur; akıntı açık renkli, mükopürülan ya da pürülan olabilir. Enfeksiyon dışı nedenler arasında travma, Stevens-Johnson sendromu ve Wegener granülomatozu gibi sistemik hastalıklar, Reiter sendromu ve spermisidler sayılır. Enfeksiyöz üretritler iki gruptur: gonokokkal üretritin etkeni Neisseria gonorrhoeae'dır; gonokok dışı üretritin etkenleri Chlamydia trachomatis, Ureaplasma urealyticum, Trichomonas vaginalis, herpes simpleks virüsü ve Mycoplasma genitalium'dur. Gonore yani bel soğukluğu, erkeklerde dizüri ve üretral akıntıyla kendini gösterir, kadınlarda ise genellikle yakınmasız seyreder.
 
-İki grup dört ölçütle ayrılır.
-Gonokokkal üretritte kuluçka iki ile 7 gün, başlangıç ani, akıntı sarı ve bol, dizüri orta derecededir.
-Gonokok dışı üretritte kuluçka on ile 21 gün, başlangıç dereceli, akıntı az, açık renkli ve sulu, dizüri hafiftir.
+İki grup 4 ölçütle ayrılır.
+Gonokokkal üretritte kuluçka 2 ile 7 gün, başlangıç ani, akıntı sarı ve bol, dizüri orta derecededir.
+Gonokok dışı üretritte kuluçka 10 ile 21 gün, başlangıç dereceli, akıntı az, açık renkli ve sulu, dizüri hafiftir.
 Kesin ayrımı ise Gram yaymasında Gram negatif diplokok ve lökosit görülmesi sağlar.
 
 Özetle, bu derste sınavın en sevdiği konular anlamlı bakteriüri eşikleri, asemptomatik bakteriürinin risk faktörleri ve tedavi istisnaları, komplike edici faktörler, depolama semptomları, aralıklı akımın tanımı, akut prostatitte rektal tuşe yasağı ve gonokokkal ile gonokok dışı üretrit ayrımıdır.

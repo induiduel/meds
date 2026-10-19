@@ -1,11 +1,11 @@
 # Hücresel Adaptasyonlar
 
 @@ Hücre, homeostaz ve hücresel stres
-Hücreler çevreleriyle sürekli etkileşim içindedir. Besin, oksijen, hormon ya da mekanik yükteki her değişiklik er geç hücreye ulaşır. Hücrenin bu değişimler karşısındaki temel görevi homeostazı korumaktır. Homeostaz, değişen iç ve dış koşullara rağmen iç dengenin korunması demektir. Fizyolojik durumda hücrenin büyüklüğü, sayısı ve fonksiyonu belirli sınırlar içinde tutulur. Bu üç parametreyi aklınızda tutun, çünkü birazdan göreceğimiz her adaptasyon tipi, bunlardan birinin değişmesiyle tanımlanır.
+Hücreler çevreleriyle sürekli etkileşim içindedir. Besin, oksijen, hormon ya da mekanik yükteki her değişiklik er geç hücreye ulaşır. Hücrenin bu değişimler karşısındaki temel görevi homeostazı korumaktır. Homeostaz, değişen iç ve dış koşullara rağmen iç dengenin korunması demektir. Fizyolojik durumda hücrenin büyüklüğü, sayısı ve fonksiyonu belirli sınırlar içinde tutulur. Bu 3 parametreyi aklınızda tutun, çünkü birazdan göreceğimiz her adaptasyon tipi, bunlardan birinin değişmesiyle tanımlanır.
 
 Homeostazın sınırlarını zorlayan her etken hücre için bir strestir.
 Hücreler hem fizyolojik streslere, örneğin artan iş yüküne ya da hormon uyarısına, hem de zararlı uyaranlara maruz kalabilir.
-Stres karşısında hücrenin verebileceği üç temel yanıt vardır.
+Stres karşısında hücrenin verebileceği 3 temel yanıt vardır.
 1.'si adaptasyondur: hücre özelliklerini değiştirerek yeni koşula uyum sağlar ve canlı kalır.
 2.'si geri dönüşümlü hasardır: uyum kapasitesi aşılmıştır, ama uyaran ortadan kalkarsa hücre normale dönebilir.
 3.'sü geri dönüşümsüz hasar ve ölümdür: hasar kalıcıdır ve hücre ölür.
@@ -24,12 +24,12 @@ Adaptasyonun amacı stresi ortadan kaldırmak değil, stresle birlikte yaşayabi
 Hücre eski homeostaz düzeyine dönemediğinde yeni bir denge durumu, yani kararlı durum kurar.
 Bu yeni denge, artmış ya da azalmış talebe göre ayarlanmış ama yine kararlı bir işleyiş düzeyidir.
 Böylece hücre canlılığını, organ da işlevini sürdürür.
-Adaptasyonu iki uç arasında düşünebilirsiniz: bir yanda normal homeostaz, diğer yanda hasar.
+Adaptasyonu 2 uç arasında düşünebilirsiniz: bir yanda normal homeostaz, diğer yanda hasar.
 Adaptasyon, hücrenin hasar sınırına ulaşmadan yeni bir kararlılık bulduğu ara bölgedir.
 Yeni denge kurulamazsa ya da stres hücrenin uyum kapasitesini aşarsa hücre geri dönüşümlü hasar basamağına geçer.
 
 @@ Fizyolojik ve patolojik adaptasyon
-Adaptasyonlar, onları tetikleyen uyaranın niteliğine göre iki gruba ayrılır. Fizyolojik adaptasyon, normal uyarılara verilen yanıttır ve ortada bir hastalık yoktur. Tetikleyici, hormonlar ya da organizmanın doğal ihtiyaçlarındaki artış gibi olağan uyaranlardır. Klasik örnek gebelikte uterus ve memenin büyümesidir: gebelik hormonlarının uyarısıyla uterus artan iş yüküne, meme ise emzirme hazırlığına uyum sağlar. Uyaran ortadan kalktığında, yani doğum ve emzirme bittiğinde, bu değişiklikler büyük ölçüde geriler. Fizyolojik adaptasyonda organın işlevi korunur, hatta artar.
+Adaptasyonlar, onları tetikleyen uyaranın niteliğine göre 2 gruba ayrılır. Fizyolojik adaptasyon, normal uyarılara verilen yanıttır ve ortada bir hastalık yoktur. Tetikleyici, hormonlar ya da organizmanın doğal ihtiyaçlarındaki artış gibi olağan uyaranlardır. Klasik örnek gebelikte uterus ve memenin büyümesidir: gebelik hormonlarının uyarısıyla uterus artan iş yüküne, meme ise emzirme hazırlığına uyum sağlar. Uyaran ortadan kalktığında, yani doğum ve emzirme bittiğinde, bu değişiklikler büyük ölçüde geriler. Fizyolojik adaptasyonda organın işlevi korunur, hatta artar.
 
 Patolojik adaptasyon ise anormal ya da aşırı streslere verilen yanıttır ve bir hastalık sürecinin parçasıdır.
 Hücreyi hayatta tutar; hücre ölmek yerine değişerek direnç gösterir.
@@ -39,14 +39,14 @@ Yani patolojik adaptasyonda hayatta kalma kazanılırken işlev kısmen feda edi
 İki grubu ayıran ölçüt, uyaranın normal mi yoksa anormal ya da aşırı mı olduğu ve normal fonksiyon üzerindeki sonuçtur.
 Bu yüzden tek başına hipertrofinin varlığı, onun patolojik olduğunu göstermez.
 
-@@ Dört ana adaptasyon tipi
-Hücresel adaptasyonlar, değişen hücre özelliğine göre dört ana tipe ayrılır. Hipertrofi hücre boyutunda artıştır. Hiperplazi hücre sayısında artıştır. Atrofi hücre boyutu ve, veya, sayısında azalmadır. Metaplazi ise bir olgun hücre tipinin başka bir olgun hücre tipi ile değişmesidir. İlk üçü niceliksel değişikliktir: hücreler büyür, çoğalır ya da küçülür ve azalır. Metaplazi niteliksel bir değişimdir; değişen hücrenin sayısı ya da boyutu değil, tipi, yani fenotipidir. Atrofi tanımındaki ve veya ifadesine dikkat edin: atrofi hem hücrelerin küçülmesiyle hem de sayılarının azalmasıyla oluşabilir. Metaplazide yer değiştiren iki hücre tipi de olgun hücrelerdir.
+@@ 4 ana adaptasyon tipi
+Hücresel adaptasyonlar, değişen hücre özelliğine göre 4 ana tipe ayrılır. Hipertrofi hücre boyutunda artıştır. Hiperplazi hücre sayısında artıştır. Atrofi hücre boyutu ve, veya, sayısında azalmadır. Metaplazi ise bir olgun hücre tipinin başka bir olgun hücre tipi ile değişmesidir. İlk üçü niceliksel değişikliktir: hücreler büyür, çoğalır ya da küçülür ve azalır. Metaplazi niteliksel bir değişimdir; değişen hücrenin sayısı ya da boyutu değil, tipi, yani fenotipidir. Atrofi tanımındaki ve veya ifadesine dikkat edin: atrofi hem hücrelerin küçülmesiyle hem de sayılarının azalmasıyla oluşabilir. Metaplazide yer değiştiren iki hücre tipi de olgun hücrelerdir.
 
 Burası önemli, bu bilgi çıkmış sorularda soruldu: hipertrofi, hiperplazi, atrofi ve metaplazinin dördü de hücresel adaptasyon örneğidir; dördünün birden adaptasyon olduğunu bilmeniz beklenir.
 Yine burası önemli, apoptoz bir hücresel adaptasyon mekanizması değildir.
 Apoptoz, hücrenin kontrollü, programlı ölümüdür ve adaptasyon sınırı aşıldığında ortaya çıkan bir sonuçtur.
 Aynı şekilde displazi de adaptasyon tiplerinden biri sayılmaz; onu metaplazinin olası sonuçları arasında göreceğiz.
-Bir hücre değişikliğini yorumlarken sırayla üç soru sorun: ne değişti, boyut mu, sayı mı, tip mi?
+Bir hücre değişikliğini yorumlarken sırayla 3 soru sorun: ne değişti, boyut mu, sayı mı, tip mi?
 Uyaran normal mi, aşırı mı?
 Değişiklik geri dönebilir mi?
 
@@ -56,7 +56,7 @@ Hipertrofi, hücre boyutunda artıştır ve bu artış organın büyümesine yol
 Hipertrofinin mekanizması, yapısal proteinler ve organellerde artıştır.
 Hücre, kasılma ya da sentez kapasitesini artıracak proteinleri ve onları destekleyecek organelleri çoğaltır.
 Saf hipertrofide hücre sayısı artmaz, yalnızca hücreler büyür.
-Yani saf hipertrofinin iki koşulu vardır: hücreler büyür ve hücre sayısı değişmez.
+Yani saf hipertrofinin 2 koşulu vardır: hücreler büyür ve hücre sayısı değişmez.
 Hücre sayısı da artıyorsa olay saf hipertrofi değildir; hipertrofiye hiperplazi eşlik ediyordur.
 
 Bir dokunun strese hipertrofiyle mi yanıt vereceğini, hücrelerinin bölünme kapasitesi belirler.
@@ -66,7 +66,7 @@ Diğer dokularda ise hipertrofi ve hiperplazi birlikte olabilir.
 Burası önemli, sınavda sık kurulan bir tuzaktır: kalp ve iskelet kası bölünemediği için artan yüke saf hipertrofiyle yanıt verir; erişkin kalpte hiperplazi beklenmez, bu ikisini karıştırmayın.
 
 @@ Fizyolojik hipertrofi: gebelik uterusu ve iskelet kası
-Gebelik uterusu, fizyolojik büyümede iki adaptasyonun birlikte kullanıldığı klasik örnektir. Gebelikte uterus östrojen etkisiyle büyür. Hücresel düzeyde uterus düz kas hücrelerinde hem hipertrofi hem hiperplazi gelişir; hücreler hem büyür hem çoğalır. Sonuçta gebeliğin gerektirdiği artmış iş yüküne uyum sağlanır. Düz kas hücresi, kalp ve iskelet kasından farklı olarak bölünebildiği için iki yanıtı birlikte verebilir. Burası önemli: gebelik uterusu fizyolojik hipertrofi başlığında anlatılır, ama hücresel düzeyde hipertrofi ile hiperplazi birlikteliği vardır; yalnız hipertrofi diyen seçenek tuzaktır.
+Gebelik uterusu, fizyolojik büyümede 2 adaptasyonun birlikte kullanıldığı klasik örnektir. Gebelikte uterus östrojen etkisiyle büyür. Hücresel düzeyde uterus düz kas hücrelerinde hem hipertrofi hem hiperplazi gelişir; hücreler hem büyür hem çoğalır. Sonuçta gebeliğin gerektirdiği artmış iş yüküne uyum sağlanır. Düz kas hücresi, kalp ve iskelet kasından farklı olarak bölünebildiği için iki yanıtı birlikte verebilir. Burası önemli: gebelik uterusu fizyolojik hipertrofi başlığında anlatılır, ama hücresel düzeyde hipertrofi ile hiperplazi birlikteliği vardır; yalnız hipertrofi diyen seçenek tuzaktır.
 
 Ders kitabındaki şekil bunu makroskopik ve mikroskopik olarak gösterir.
 Makroskopik panelde gebelik geçirmemiş küçük bir uterus ile doğum sonrası kanama nedeniyle çıkarılmış, belirgin biçimde büyük bir gebelik uterusu yan yana durur.
@@ -74,7 +74,7 @@ Gebelik geçirmemiş uterusta düz kas hücreleri küçük ve iğne şeklindedir
 İki mikroskopik görüntü aynı büyütmede çekildiği için aradaki boyut farkı gerçek bir büyümeyi yansıtır.
 Mikroskopik karşılaştırmada aynı büyütme koşulu şarttır; aksi halde hücre boyutu farkı yorumlanamaz.
 
-İskelet kası, fizyolojik hipertrofinin 2. klasik örneğidir.
+İskelet kası, fizyolojik hipertrofinin ikinci klasik örneğidir.
 Uyaran artmış iş yüküdür, örneğin yoğun egzersiz ve ağırlık çalışması.
 İskelet kası liflerinde hipertrofi gelişir.
 Hücre çoğalma kapasitesi sınırlı olduğu için temel yanıt boyut artışıdır.
@@ -86,13 +86,13 @@ Gebelik uterusundan farkı da budur: uterusta hipertrofi ve hiperplazi birlikte,
 Kalp, patolojik hipertrofinin en önemli örneğidir. Burada uyaran fizyolojik bir yük değil, sürekli ve aşırı bir basınç yüküdür. Nedenler hipertansiyon ve aort stenozudur. Hipertansiyonda direnç sistemik arterlerdedir; aort stenozunda ise daralmış aort kapağı sol ventrikülün çıkışını engeller. Kaynak farklı olsa da her iki durumda sol ventrikül kanı daha yüksek bir dirence karşı pompalamak zorundadır ve sürekli artmış basınca karşı miyositlerde, yani kalp kası hücrelerinde, hipertrofi gelişir. Kalp hipertrofisi başlangıçta işlevi koruyan bir adaptasyondur, ama uyaran anormal ve sürekli olduğu için patolojik adaptasyon grubundadır. Hatırlayın: gebelik uterusu ve egzersizdeki iskelet kası fizyolojik, hipertansiyondaki kalp ise patolojik hipertrofidir.
 
 Makroskopik olarak ventrikül duvarı kalınlaşır ve kalp ağırlaşır.
-Burası önemli, sayılar doğrudan sorulur: miyokard hipertrofisinde sol ventrikül duvarı iki santimetreden kalındır; normal kalınlık bir ila 1,5 santimetredir.
+Burası önemli, sayılar doğrudan sorulur: miyokard hipertrofisinde sol ventrikül duvarı 2 santimetreden kalındır; normal kalınlık 1 ila 1,5 santimetredir.
 Bu ölçüt, otopside ya da cerrahi örnekte hipertrofinin nesnel olarak belgelenmesini sağlar.
 
 @@ Kalp hipertrofisinin mekanizması
-Miyositin büyüme kararını üç tür tetikleyici başlatır. 1.'si mekanik gerilmedir: artmış basınç yükü miyositi gerer ve bu gerilme algılanarak büyüme sinyaline dönüştürülür. 2.'si büyüme faktörleridir; örnek olarak dönüştürücü büyüme faktörü beta, insülin benzeri büyüme faktörü bir ve fibroblast büyüme faktörü sayılabilir. 3.'sü adrenerjik uyarımdır, yani sempatik sistemin uyarısı. Vazoaktif ajanlar olarak alfa adrenerjik agonistler, endotelin bir ve anjiyotensin iki de bu grupta anılır. Bu tetikleyiciler birbirini güçlendirir, hücre içinde protein sentezini artıran sinyal yollarını açar ve sonuçta miyosit çekirdeğinde kasılma proteinlerini kodlayan genlerin ifadesi artar.
+Miyositin büyüme kararını 3 tür tetikleyici başlatır. 1.'si mekanik gerilmedir: artmış basınç yükü miyositi gerer ve bu gerilme algılanarak büyüme sinyaline dönüştürülür. 2.'si büyüme faktörleridir; örnek olarak dönüştürücü büyüme faktörü beta, insülin benzeri büyüme faktörü 1 ve fibroblast büyüme faktörü sayılabilir. 3.'sü adrenerjik uyarımdır, yani sempatik sistemin uyarısı. Vazoaktif ajanlar olarak alfa adrenerjik agonistler, endotelin 1 ve anjiyotensin 2 de bu grupta anılır. Bu tetikleyiciler birbirini güçlendirir, hücre içinde protein sentezini artıran sinyal yollarını açar ve sonuçta miyosit çekirdeğinde kasılma proteinlerini kodlayan genlerin ifadesi artar.
 
-Bu sinyallerin miyositteki sonuçları üçtür.
+Bu sinyallerin miyositteki sonuçları 3'tür.
 1.'si yeni sarkomer sentezidir; sarkomer çizgili kasın temel kasılma birimidir.
 2.'si hücre başına miyofilament artışıdır; aktin ve miyozin miktarı artar ve tek hücrenin ürettiği kuvvet yükselir.
 3.'sü enerji açısından daha ekonomik izoformlara geçiştir.
@@ -100,7 +100,7 @@ Bunun klasik örneği, miyozin ağır zincirinin hızlı alfa izoformundan daha 
 Yani hipertrofi yalnızca daha fazla protein değil, aynı zamanda daha verimli protein demektir; iş yükü artarken enerji tüketimi dengelenmeye çalışılır.
 
 @@ Miyokardda adaptasyon, hasar ve ölüm
-Kitaptaki bir şema, aynı hücre tipinde, yani miyokard hücresinde, adaptasyon, hasar ve ölümün ilişkisini tek bakışta gösterir. Başlangıç noktası normal miyosittir ve buradan iki ayrı yol çıkar. Artmış yüke yanıt olarak gelişen adaptasyon hipertrofidir. Diğer yolda geri dönüşümlü hasarın nedeni iskemidir, yani dokuya kan akımının azalmasıdır. Geri dönüşümsüz hasar ise iskemik koagülatif nekrozdur; koagülatif nekroz, hücre ölümünden sonra doku yapısının bir süre korunduğu nekroz tipidir. Hipertrofi örneğinde sol ventrikül duvarının iki santimetreyi aştığı kalın kesit görülür. Bu şema, strese verilen üç temel yanıtın miyokarddaki somut karşılığıdır.
+Kitaptaki bir şema, aynı hücre tipinde, yani miyokard hücresinde, adaptasyon, hasar ve ölümün ilişkisini tek bakışta gösterir. Başlangıç noktası normal miyosittir ve buradan 2 ayrı yol çıkar. Artmış yüke yanıt olarak gelişen adaptasyon hipertrofidir. Diğer yolda geri dönüşümlü hasarın nedeni iskemidir, yani dokuya kan akımının azalmasıdır. Geri dönüşümsüz hasar ise iskemik koagülatif nekrozdur; koagülatif nekroz, hücre ölümünden sonra doku yapısının bir süre korunduğu nekroz tipidir. Hipertrofi örneğinde sol ventrikül duvarının 2 santimetreyi aştığı kalın kesit görülür. Bu şema, strese verilen 3 temel yanıtın miyokarddaki somut karşılığıdır.
 
 Geri dönüşümlü olarak hasar görmüş miyokard, makroskopik ya da ışık mikroskobik değişiklik olmadan yalnızca fonksiyonel bozulma gösterebilir; ya da hücresel şişme ve yağlanma gibi geri dönüşümlü değişiklikler taşır.
 Nekroz gösteren örnekte posterolateral sol ventrikülde, duvarın tüm kalınlığını tutan, yani transmural, açık renkli bir alan vardır; bu akut miyokard enfarktüsüdür.
@@ -111,7 +111,7 @@ Böylece canlı ve ölü miyokard çıplak gözle ayırt edilir.
 Kısacası geri dönüşümlü hasar makroskopik iz bırakmayabilir, geri dönüşümsüz hasar ise boyanmayan soluk alanla ortaya çıkar.
 
 @@ Hipertrofinin sınırları ve kalp yetmezliği
-Hipertrofi sınırsız sürdürülemez; kalp kası büyüdükçe onu destekleyen sistemler geride kalır. Üç sınır vardır. Vasküler sınır: damar sisteminin genişlemiş kası besleme kapasitesi sınırlıdır, kas kütlesi artarken damar desteği aynı ölçüde artmaz. Enerji sınırı: mitokondrinin ATP üretimi sınırlıdır ve büyüyen hücrenin enerji talebi karşılanamaz hale gelir. Sentez sınırı: biyosentetik kapasite, yani hücrenin yeni protein ve yapı üretme gücü sınırlıdır. Bu üç sınır birlikte hipertrofik miyokardı göreceli bir oksijen ve enerji açığına sürükler.
+Hipertrofi sınırsız sürdürülemez; kalp kası büyüdükçe onu destekleyen sistemler geride kalır. 3 sınır vardır. Vasküler sınır: damar sisteminin genişlemiş kası besleme kapasitesi sınırlıdır, kas kütlesi artarken damar desteği aynı ölçüde artmaz. Enerji sınırı: mitokondrinin ATP üretimi sınırlıdır ve büyüyen hücrenin enerji talebi karşılanamaz hale gelir. Sentez sınırı: biyosentetik kapasite, yani hücrenin yeni protein ve yapı üretme gücü sınırlıdır. Bu 3 sınır birlikte hipertrofik miyokardı göreceli bir oksijen ve enerji açığına sürükler.
 
 Sınırlar aşıldığında hipertrofik kalp son aşamaya girer ve dekompanse olur.
 Önce miyofibril kaybı olur; kasılma birimleri azalır ve hücre kuvvet üretme kapasitesini yitirir.
@@ -127,12 +127,12 @@ Fizyolojik hiperplazinin ilk alt tipi hormonal hiperplazidir; hormonlar hedef do
 İlk örnek ergenlik ve gebelikte meme bezleridir.
 Ergenlikte hormon uyarısıyla meme bezi epiteli çoğalır ve bez yapısı gelişir; gebelikte meme bezleri çoğalarak süt üretimine hazırlanır.
 Gebelikte memenin büyümesini fizyolojik adaptasyonun klasik örneği olarak anmıştık; şimdi bu büyümenin hücre sayısındaki artışa dayandığını görüyoruz.
-2. örnek endometriumdaki siklik proliferasyondur.
+İkinci örnek endometriumdaki siklik proliferasyondur.
 Her menstrüel siklusta endometrium, östrojen ve progesteron gibi hormonların çoğalmayı uyarmasıyla kalınlaşır ve olası bir gebeliğe hazırlanır.
 Hormon varken hücre çoğalır, hormon çekildiğinde proliferasyon durur.
 Bu sıkı bağımlılık, patolojik hiperplaziyi anlamanın temelidir.
 
-Fizyolojik hiperplazinin 2. alt tipi telafi edici, diğer adıyla kompansatuvar hiperplazidir; doku kaybı kalan hücrelerin çoğalmasıyla telafi edilir.
+Fizyolojik hiperplazinin ikinci alt tipi telafi edici, diğer adıyla kompansatuvar hiperplazidir; doku kaybı kalan hücrelerin çoğalmasıyla telafi edilir.
 Burası önemli, klasik örnek parsiyel hepatektomi sonrası karaciğerdir.
 Karaciğerin bir bölümü cerrahi olarak çıkarıldığında kalan hepatositlerde mitotik aktivite artar ve karaciğer normal kütlesine geri döner.
 Bu çoğalmayı hepatosit büyüme faktörü gibi büyüme faktörleri uyarır.
@@ -140,14 +140,14 @@ Eksik kütle tamamlanınca çoğalma durur; bu da hiperplazinin kontrollü ve am
 Hormonal hiperplaziden farkı, uyaranın hormon değil, doku kaybı ve büyüme faktörleri olmasıdır.
 
 @@ Patolojik hiperplazi ve kanser ilişkisi
-Patolojik hiperplazi, hormon ya da büyüme faktörü uyarısının aşırı veya dengesiz olmasından kaynaklanır. Burası önemli, iki klasik örneği eşleştirmeyi bilmelisiniz. İlki endometrial hiperplazidir ve nedeni östrojen ile progesteron arasındaki dengesizliktir. Östrojen endometriumu çoğaltır, progesteron bu etkiyi dengeler. Progesteronla karşılanmayan östrojen etkisi sürdükçe endometrium bezleri durmadan çoğalır. Fizyolojik siklik proliferasyonda çoğalma siklusla sınırlıyken patolojik hiperplazide bu sınır kalkar. Yani fizyolojik süreçte kullanılan aynı hormonlar, dengeleri bozulunca patolojik büyüme yaratır.
+Patolojik hiperplazi, hormon ya da büyüme faktörü uyarısının aşırı veya dengesiz olmasından kaynaklanır. Burası önemli, 2 klasik örneği eşleştirmeyi bilmelisiniz. İlki endometrial hiperplazidir ve nedeni östrojen ile progesteron arasındaki dengesizliktir. Östrojen endometriumu çoğaltır, progesteron bu etkiyi dengeler. Progesteronla karşılanmayan östrojen etkisi sürdükçe endometrium bezleri durmadan çoğalır. Fizyolojik siklik proliferasyonda çoğalma siklusla sınırlıyken patolojik hiperplazide bu sınır kalkar. Yani fizyolojik süreçte kullanılan aynı hormonlar, dengeleri bozulunca patolojik büyüme yaratır.
 
-2. örnek benign prostat hiperplazisidir.
+İkinci örnek benign prostat hiperplazisidir.
 Bu, androjen ve östrojen etkili bir hiperplazidir; prostat dokusunda hormon etkilerinin dengesi bozulur, bez ve destek dokusu hücreleri çoğalarak organı büyütür.
 Büyüyen prostat çevre yapılara bası yapabilir, ama bu bir neoplazi değildir; hormonal uyarıya bağımlı bir sayı artışıdır.
 İki örneğin ortak paydası hormon dengesizliğidir: biri östrojen progesteron, diğeri androjen östrojen ekseninde gelişir.
 
-Patolojik hiperplazinin iki genel özelliği vardır.
+Patolojik hiperplazinin 2 genel özelliği vardır.
 1.'si hormon veya büyüme faktörü dengesizliğidir; uyaran ya aşırıdır ya da dengeleyici etki eksiktir.
 2.'si uyarana bağımlılıktır: uyarı azalırsa hiperplazi gerileyebilir.
 Bu klinik açıdan çok değerlidir, çünkü tedavide hedef çoğunlukla uyaranı, örneğin hormon etkisini azaltmaktır.
@@ -164,7 +164,7 @@ Hiperplazi sorusunda önce uyaranı belirleyin: hormon mu, doku kaybı mı, yoks
 @@ Atrofi: tanım ve nedenleri
 Atrofi, hipertrofi ve hiperplazinin tersine küçülme yönünde bir adaptasyondur. Bir organ veya dokunun, hücre boyutu ve, veya, sayısında azalma ile küçülmesidir. Boyut azalmasında hücreler daha az yapı proteini ve organel içerir; sayı azalmasında popülasyondan hücre kaybı olur. Atrofik hücreler küçülmüş olsa da canlıdır ve daha düşük bir düzeyde işlev görmeye devam eder. Dikkat edin, atrofi hücre ölümüyle eş anlamlı değildir.
 
-Atrofinin altı nedeni sayılır.
+Atrofinin 6 nedeni sayılır.
 Azalmış iş yükü: kullanılmayan doku küçülür.
 Sinir kaybı: innervasyonunu yitiren kas atrofiye uğrar.
 Azalmış kan akımı, yani iskemi: yetersiz kanlanan doku küçülür.
@@ -189,15 +189,15 @@ Yaşlılıkta ise beyin atrofisi, kalp ve kas kütlesinde azalma görülür.
 Yaşlılıktaki atrofi tek bir nedene bağlı değildir; azalan kan akımı, azalan iş yükü ve hücre kaybı birleşir.
 
 @@ Atrofinin mekanizmaları
-Atrofinin hücresel temeli, protein sentezi ile yıkımı arasındaki dengenin yıkım lehine bozulmasıdır. Burası önemli, üç mekanizmayı birlikte bilmelisiniz: azalmış protein sentezi, ubikuitin proteazom sistemiyle artmış protein yıkımı ve artmış otofaji. 1.'si, azalmış protein sentezi, düşük metabolik aktiviteye bağlıdır. Azalmış iş yükü, sinir ya da hormon uyarısının kaybı ve yetersiz besin hücrenin metabolik aktivitesini düşürür; hücre yeni yapı proteini üretimini azaltır. Hipertrofide artan sentez hücreyi büyütüyordu; atrofide azalan sentez hücreyi küçültür.
+Atrofinin hücresel temeli, protein sentezi ile yıkımı arasındaki dengenin yıkım lehine bozulmasıdır. Burası önemli, 3 mekanizmayı birlikte bilmelisiniz: azalmış protein sentezi, ubikuitin proteazom sistemiyle artmış protein yıkımı ve artmış otofaji. 1.'si, azalmış protein sentezi, düşük metabolik aktiviteye bağlıdır. Azalmış iş yükü, sinir ya da hormon uyarısının kaybı ve yetersiz besin hücrenin metabolik aktivitesini düşürür; hücre yeni yapı proteini üretimini azaltır. Hipertrofide artan sentez hücreyi büyütüyordu; atrofide azalan sentez hücreyi küçültür.
 
-2. mekanizma artmış protein yıkımıdır ve bunu ubikuitin proteazom sistemi yürütür.
+İkinci mekanizma artmış protein yıkımıdır ve bunu ubikuitin proteazom sistemi yürütür.
 Proteinler önce ubikuitin ile işaretlenir; ubikuitin, yıkılacak proteine bağlanan küçük bir etiket proteindir.
 İşaretli proteinler ardından proteazomda parçalanır; proteazom, hücre içi proteinleri küçük peptidlere ayıran büyük bir protein kompleksidir.
 Sistem yalnız işaretlenen proteinleri yıktığı için hedefe yöneliktir ve atrofide yapısal proteinler bu yolla azalır.
 Böylece bir yandan az protein üretilirken öbür yandan mevcut proteinler hızla yıkılır.
 
-3. mekanizma artmış otofajidir; burada yıkım tek tek proteinler değil, organeller düzeyinde gerçekleşir.
+Üçüncü mekanizma artmış otofajidir; burada yıkım tek tek proteinler değil, organeller düzeyinde gerçekleşir.
 Otofaji, hücre içi organellerin kendi kendine yenmesidir ve otofajik vakuoller oluşur.
 Hücre kendi organellerini bu vakuoller içinde sindirir; besin ve enerji kısıtlıyken gereksiz organellerini ortadan kaldırarak hem kütlesini hem enerji ihtiyacını azaltır.
 Atrofik hücrede otofajik vakuollerin görülmesi artmış otofajinin morfolojik kanıtıdır.
@@ -230,7 +230,7 @@ Siliyalı kolumnar epitel dumandaki kimyasallara karşı hassastır; kök hücre
 
 Bu metaplazi bir kazanım ve bir kayıp getirir.
 Kazanım, kimyasal strese dayanıklılığın artmasıdır.
-Kayıplar ise iki tanedir: mukus üretimi azalır, çünkü yassı epitelde mukus salgılayan hücreler yoktur; ve mukosiliyer temizlenme azalır, çünkü silyalar kaybolduğu için mukusun yakaladığı partikül ve mikroorganizmalar yukarı taşınamaz.
+Kayıplar ise 2 tanedir: mukus üretimi azalır, çünkü yassı epitelde mukus salgılayan hücreler yoktur; ve mukosiliyer temizlenme azalır, çünkü silyalar kaybolduğu için mukusun yakaladığı partikül ve mikroorganizmalar yukarı taşınamaz.
 Bu da hava yollarında partikül ve mikroorganizma birikimine zemin hazırlar.
 Patolojik adaptasyonun hayatta tutar ama normal fonksiyonu bozar ilkesinin somut bir örneğidir.
 
@@ -257,7 +257,7 @@ Bu yüzden metaplazi çift uçlu bir kılıçtır: dayanıklılık kazandırır,
 Bir metaplazi sorusunda önce yönü belirleyin: kolumnardan yassıya mı, yassıdan kolumnara mı?
 
 @@ Otofaji
-Atrofi mekanizmaları arasında değindiğimiz otofaji, aslında hücrenin genel bir hayatta kalma programıdır. Otofaji, kelime anlamıyla kendini yeme, hücrenin kendi bileşenlerini lizozomlar içinde sindirmesidir. Lizozomlar sindirim enzimleri içeren hücre içi organellerdir. Otofajinin iki amacı vardır: besin kıtlığında enerji sağlamak ve hasarlı organelleri uzaklaştırmak. Hücre kendi bileşenlerini parçalayarak yapı taşı ve enerji elde eder; bozulmuş organelleri ortadan kaldırarak da iç kalitesini korur. Yani otofaji hem bir enerji kaynağı hem de bir hücre içi temizlik mekanizmasıdır.
+Atrofi mekanizmaları arasında değindiğimiz otofaji, aslında hücrenin genel bir hayatta kalma programıdır. Otofaji, kelime anlamıyla kendini yeme, hücrenin kendi bileşenlerini lizozomlar içinde sindirmesidir. Lizozomlar sindirim enzimleri içeren hücre içi organellerdir. Otofajinin 2 amacı vardır: besin kıtlığında enerji sağlamak ve hasarlı organelleri uzaklaştırmak. Hücre kendi bileşenlerini parçalayarak yapı taşı ve enerji elde eder; bozulmuş organelleri ortadan kaldırarak da iç kalitesini korur. Yani otofaji hem bir enerji kaynağı hem de bir hücre içi temizlik mekanizmasıdır.
 
 Otofaji sıralı bir süreçtir.
 Önce sindirilecek sitoplazma bölümü ve organeller çift zarlı otofagozom içine alınır; çift zar, otofagozomu diğer veziküllerden ayıran özelliktir.
@@ -274,6 +274,6 @@ Bu tabloların ortak noktası hücrenin uzun süren bir strese maruz kalmasıdı
 @@ Adaptasyon ile hücre ölümü arasındaki sınır
 Dersin bütün adaptasyonları stresin şiddeti ve süresi üzerinden tek bir spektrumda birleşir. Hafif ya da orta şiddette streste adaptasyon gelişir: hipertrofi, hiperplazi, atrofi, metaplazi. Şiddetli ya da kalıcı streste ise önce geri dönüşümlü, ardından geri dönüşümsüz hasar ortaya çıkar ve sonuç nekroz veya apoptozdur. Hücre ölümünün iki yolu bunlardır; adaptasyon ise ölümden önce gelen, geri dönebilen yanıttır. Klinik yorum şudur: aynı etken, doza ve süreye bağlı olarak adaptasyondan ölüme giden bir spektrum oluşturur. Örneğin basınç yükü kalpte önce hipertrofi, sınırlar aşılınca hasar yapar; azalan kan akımı hafifse atrofiye, şiddetliyse hücre ölümüne yol açar.
 
-Özetle, hücresel adaptasyonlar stres altında yeni bir denge durumu oluşturur ve dört temel tipi hipertrofi, hiperplazi, atrofi ve metaplazidir.
+Özetle, hücresel adaptasyonlar stres altında yeni bir denge durumu oluşturur ve 4 temel tipi hipertrofi, hiperplazi, atrofi ve metaplazidir.
 Otofaji hem hayatta kalma hem de hücre ölümüyle ilişkili özel bir yanıttır.
 Adaptasyonların tanınması, hasarın geri dönüşebilir olup olmadığının anlaşılmasına yardım eder: dokuda adaptasyon görmek hücrelerin hâlâ canlı ve uyum kapasitesi içinde olduğunu gösterir.

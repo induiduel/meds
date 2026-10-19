@@ -4,13 +4,13 @@
 Enfeksiyon hastalıkları insanlık tarihinin yönünü değiştiren olayların başında gelir. Tarih boyunca zaman zaman büyük salgınlara, kitlesel ölümlere, savaşların kaybedilmesine, hatta devletlerin ve medeniyetlerin yıkılmasına neden olmuşlardır. Ordular arasında yayılan bir hastalık, savaşın sonucunu silahlardan daha fazla belirleyebilmiştir; nüfusun hızla erimesi de üretimin ve yönetimin çökmesine zemin hazırlamıştır. Yani bu hastalıklar yalnız bireysel bir tıbbi sorun değil, toplumların geleceğini belirleyen bir halk sağlığı konusudur.
 
 Günümüzde enfeksiyon hastalıklarının önemi azalmış gibi görünür, ama bu izlenim yanıltıcıdır.
-Üç gerekçe vardır.
+3 gerekçe vardır.
 1.'si, bazı enfeksiyon hastalıkları hâlen önemini sürdürmektedir.
 2.'si, kaybolmaya yüz tutmuş bazı hastalıklar yeniden gündeme gelebilmektedir.
 3.'sü, daha önce olmayan ya da bilinmeyen bazı hastalıklar ortaya çıkabilmektedir.
 Bu nedenlerle bulaşıcı hastalıklar, özellikle en az gelişmiş ve gelişmekte olan ülkeler için önemli halk sağlığı sorunları arasındadır.
 
-Enfeksiyon hastalıklarıyla etkin biçimde mücadele edebilmek için iki düzeyde bilgi gerekir.
+Enfeksiyon hastalıklarıyla etkin biçimde mücadele edebilmek için 2 düzeyde bilgi gerekir.
 Bir yanda bütün enfeksiyonlarda ortak olan genel epidemiyolojik özellikler vardır: enfeksiyon zinciri, etkenin epidemiyolojik özellikleri ve konakçının savunması gibi.
 Öbür yanda her enfeksiyon hastalığının kendine has epidemiyolojik özellikleri vardır: kendine özgü kaynağı, bulaşma yolu ve duyarlı grubu.
 Genel çerçeve hangi soruların sorulacağını belirler; hastalığa özgü bilgi bu soruların yanıtını verir.
@@ -35,7 +35,7 @@ Konak ile kaynağı karıştırmayın: konak tanımı etkenin yerleşmesine daya
 Konağın enfekte olup kaynağa dönüşmesi, birazdan göreceğimiz zincirin kendini nasıl yenilediğini anlamanın temelidir.
 
 @@ Portör ve portörlük türleri
-Bulaştırıcılık, hastalık belirtilerinin varlığına bağlı değildir. Portör, hastalık etkenini taşıyıp başka konakçılara bulaştırabildiği hâlde kendisi hastalık belirtisi göstermeyen kişidir. Yani iki koşul birlikte bulunur: etkeni taşımak ve bulaştırabilmek, ama belirti göstermemek. Portörü hastadan ayıran ölçüt bulaştırıcılık değil, belirti yokluğudur. Portörlük zaman eksenine göre üç biçimde karşımıza çıkar. 1.'si, birçok enfeksiyon hastalığının kuluçka döneminde kişiler bulaştırıcı olabilir; buna inkübasyon dönemi portörlüğü denir. Kişi henüz hasta olduğunu bilmeden çevresine etkeni yayar; belirti başladığında bulaşma çoktan gerçekleşmiş olabilir. 2.'si, bazı hastalıklarda hastalık iyileştikten sonra bir süre daha bulaştırıcılık devam eder; buna konvalesan dönem portörlüğü adı verilir. 3.'sü, bazı hastalık etkenleri uzun süreli portörlüğe, yani kronik portörlüğe neden olur; derste verilen örnekler Hepatit B ve tifodur. Kronik portörlük iki yoldan gelişebilir: kişide hiçbir hastalık belirtisi olmadan portörlük meydana gelebilir ya da hastalık geçirildikten sonra kişi kronik portör olarak kalabilir.
+Bulaştırıcılık, hastalık belirtilerinin varlığına bağlı değildir. Portör, hastalık etkenini taşıyıp başka konakçılara bulaştırabildiği hâlde kendisi hastalık belirtisi göstermeyen kişidir. Yani iki koşul birlikte bulunur: etkeni taşımak ve bulaştırabilmek, ama belirti göstermemek. Portörü hastadan ayıran ölçüt bulaştırıcılık değil, belirti yokluğudur. Portörlük zaman eksenine göre 3 biçimde karşımıza çıkar. 1.'si, birçok enfeksiyon hastalığının kuluçka döneminde kişiler bulaştırıcı olabilir; buna inkübasyon dönemi portörlüğü denir. Kişi henüz hasta olduğunu bilmeden çevresine etkeni yayar; belirti başladığında bulaşma çoktan gerçekleşmiş olabilir. 2.'si, bazı hastalıklarda hastalık iyileştikten sonra bir süre daha bulaştırıcılık devam eder; buna konvalesan dönem portörlüğü adı verilir. 3.'sü, bazı hastalık etkenleri uzun süreli portörlüğe, yani kronik portörlüğe neden olur; derste verilen örnekler Hepatit B ve tifodur. Kronik portörlük iki yoldan gelişebilir: kişide hiçbir hastalık belirtisi olmadan portörlük meydana gelebilir ya da hastalık geçirildikten sonra kişi kronik portör olarak kalabilir.
 
 Hastalıkların bulaşmasında portörler hastalardan daha önemli olabilir.
 Nedeni şudur: hasta belirti gösterdiği için tanınır, kontrol altında tutulabilir ve tedavi edilir; sağlam insanların kendilerini hastadan koruması da daha kolaydır.
@@ -65,10 +65,10 @@ Dikkat edin arkadaşlar, en sık tuzak, sterilizasyona ait olan sporlar dâhil b
 Ayrım iki kelimede saklıdır: dezenfeksiyonda patojenler, sterilizasyonda sporlar dâhil bütün mikroorganizmalar.
 
 @@ Pastörizasyon, tindalizasyon, asepsi ve antisepsi
-Pastörizasyon, çeşitli ortamlardaki mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve hızlı soğutmaya dayalı bir işlemdir. Bu işlemden tam bir sterilizasyon sağlanması beklenmez. Çok yüksek sıcaklığın zararlı olacağı düşünülen süt, bazı alkoller ve meyve suları gibi sıvılar belli bir sıcaklıkta tutulur: ya altmış üç santigrat derecede 30 dakika, ya da yetmiş iki santigrat derecede on beş saniye. Ardından sıvı hızla on santigrat dereceye indirilir. Düşük sıcaklıkta uzun süre ile yüksek sıcaklıkta kısa süre aynı amaca hizmet eder.
+Pastörizasyon, çeşitli ortamlardaki mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve hızlı soğutmaya dayalı bir işlemdir. Bu işlemden tam bir sterilizasyon sağlanması beklenmez. Çok yüksek sıcaklığın zararlı olacağı düşünülen süt, bazı alkoller ve meyve suları gibi sıvılar belli bir sıcaklıkta tutulur: ya 63 santigrat derecede 30 dakika, ya da 72 santigrat derecede 15 saniye. Ardından sıvı hızla 10 santigrat dereceye indirilir. Düşük sıcaklıkta uzun süre ile yüksek sıcaklıkta kısa süre aynı amaca hizmet eder.
 
-Tindalizasyon ise yüz santigrat derecenin üstünde zarar görebilecek sıvılar için uygulanan bir sterilizasyon yöntemidir.
-Tindalize edilecek maddeler, dayanabileceği sıcaklığa göre elli beş ile yüz santigrat derece arasında yarım saat süreyle bekletilir, sonra oda sıcaklığına düşürülür.
+Tindalizasyon ise 100 santigrat derecenin üstünde zarar görebilecek sıvılar için uygulanan bir sterilizasyon yöntemidir.
+Tindalize edilecek maddeler, dayanabileceği sıcaklığa göre 55 ile 100 santigrat derece arasında yarım saat süreyle bekletilir, sonra oda sıcaklığına düşürülür.
 Bu işleme üst üste 3 gün ya da daha uzun süre devam edilir.
 Pastörizasyonla farkını netleştirelim: pastörizasyon tek seferlik hızlı ısıtma ve soğutmadır ve yalnız mikroorganizma yoğunluğunu azaltır; tindalizasyon günlerce tekrarlanan ısıtmadır ve bir sterilizasyon yöntemi olarak sınıflanır.
 
@@ -76,10 +76,10 @@ Asepsi, tıbbi ve cerrahi işlemlerin mikroorganizmalarla kirlenmeyi önleyecek 
 Antisepsi ise vücut yüzeyinde ve lezyonlarda bulunan patojen mikroorganizmaların yok edilmesi işlemidir.
 Ayırt etmek için nerede sorusunu sorun: cansız ortamdaysa dezenfeksiyon, vücut yüzeyi ve lezyondaysa antisepsi, işlemin kirlenme olmadan yürütülmesi söz konusuysa asepsi.
 
-@@ Enfeksiyon zinciri ve Şekil bir
+@@ Enfeksiyon zinciri ve Şekil 1
 Bir bulaşıcı hastalığın meydana gelmesi ve bu durumun devam edebilmesi için gerekli olan enfeksiyon kaynağı, bulaşma yolu ve yeni konakçılardan oluşan zincire enfeksiyon zinciri, ya da bulaşma zinciri adı verilir. Bütün enfeksiyon hastalıklarında bu zincirin temel halkaları aynıdır; ancak halkaların özellikleri her hastalıkta az çok farklılık gösterebilir. Örneğin kaynağın insan mı hayvan mı olduğu ya da bulaşmanın hangi yolla gerçekleştiği hastalıktan hastalığa değişir. Yani halkalar geneldir, halkaların içeriği hastalığa özgüdür.
 
-Derste zincir, Şekil bir ile bir üçgen şema hâlinde gösterilir.
+Derste zincir, Şekil 1 ile bir üçgen şema hâlinde gösterilir.
 Üst köşede kaynak yer alır; etken buradan çıkar ve bir okla sağ alt köşedeki bulaşma yoluna geçer.
 Bulaşma yolundan sol alttaki yeni konakçıya uzanan kalın ok, etkenin yeni konakçıya taşınmasını vurgular.
 Yeni konakçıdan yeniden kaynağa dönen ok ise enfekte olan konakçının yeni bir kaynağa dönüşmesini gösterir.
@@ -106,11 +106,11 @@ Enfeksiyon etkenleri genel olarak kaynaktan solunum yolu ya da anal yoldan, zama
 Örneğin solunum yolu ile kaynaktan çıkan etkenler geniş bir alana yayılarak yeni konakçılara kolaylıkla bulaşabilir; genital yoldan atılan etkenler ise ancak kaynakla çok yakın temasta bulunan kişilere bulaşabilir.
 
 @@ Bulaşma yolu ve doğrudan bulaşma
-Zincirin 2. halkası bulaşma yoludur. Bulaşma yolu, enfeksiyon etkeninin kaynaktan çıkışını, yeni konakçıya kadar taşınmasını ve yeni konakçıya giriş yolunu kapsar. Yani bulaşma yolunu yalnız taşınma olarak düşünmek eksiktir; çıkış ve giriş de tanımın içindedir. Enfeksiyon etkenleri kaynaktan çıktıktan sonra bir aracıya gerek kalmaksızın yeni konakçıya taşınabileceği gibi, çeşitli aracılar yardımıyla da taşınabilir. Buna göre doğrudan ve dolaylı bulaşmadan söz edilir.
+Zincirin ikinci halkası bulaşma yoludur. Bulaşma yolu, enfeksiyon etkeninin kaynaktan çıkışını, yeni konakçıya kadar taşınmasını ve yeni konakçıya giriş yolunu kapsar. Yani bulaşma yolunu yalnız taşınma olarak düşünmek eksiktir; çıkış ve giriş de tanımın içindedir. Enfeksiyon etkenleri kaynaktan çıktıktan sonra bir aracıya gerek kalmaksızın yeni konakçıya taşınabileceği gibi, çeşitli aracılar yardımıyla da taşınabilir. Buna göre doğrudan ve dolaylı bulaşmadan söz edilir.
 
-Doğrudan bulaşma, enfeksiyon etkeninin hiçbir aracı olmadan kaynaktan çıkıp yeni konakçıya bulaşmasıdır ve iki biçimde gerçekleşir: direkt temas ve direkt damlacık.
+Doğrudan bulaşma, enfeksiyon etkeninin hiçbir aracı olmadan kaynaktan çıkıp yeni konakçıya bulaşmasıdır ve 2 biçimde gerçekleşir: direkt temas ve direkt damlacık.
 Direkt temas, kaynak ve yeni konakçının temas hâlinde olması durumunda cilt veya mukozalar yoluyla bulaşmadır.
-Cinsel yolla bulaşan hastalıklar, örneğin eyds, sifiliz ve gonore ile cilt teması ile bulaşan hastalıklar, örneğin uyuz ve çeşitli mantar hastalıkları direkt temasla bulaşır.
+Cinsel yolla bulaşan hastalıklar, örneğin AIDS, sifiliz ve gonore ile cilt teması ile bulaşan hastalıklar, örneğin uyuz ve çeşitli mantar hastalıkları direkt temasla bulaşır.
 Genital yoldan atılan etkenlerin yalnız yakın temasla bulaşabilmesi, cinsel yolla bulaşan hastalıkların bu grupta yer almasıyla örtüşür.
 
 Direkt damlacık yolu ise öksürme ve hapşırma sırasında oluşan damlacıkların, kaynaktan çıkarken kazandıkları hızla belli bir mesafeye ulaşması ve bu mesafede bulunan konakçılar tarafından alınmasıyla oluşur.
@@ -132,7 +132,7 @@ Bu yol fekal oral yol olarak ifade edilir.
 Fekal oral yolda aracılar önce dışkıyla kirlenir, sonra etkeni ağza taşır; halkayı kırmak için bu aracıların kirlenmesini önlemek hedeflenir.
 
 @@ Vektörler, eşyalar ve yeni konakçı
-Vektörler, enfeksiyon etkenlerinin bulaşmasında rol oynayan eklem bacaklılardır ve dolaylı bulaşmanın canlı aracılarıdır. Vektörler iki biçimde rol oynar. Biyolojik vektörlükte vektör etkeni kendi vücuduna alır, onun gelişmesini ve çoğalmasını sağlar. Mekanik vektörlükte ise vektör etkeni dış yüzeylerinde taşır; etken vektörde gelişmez ve çoğalmaz, yalnız bir yerden başka yere aktarılır. Ayırt edici soru şudur: etken vektörün içinde gelişip çoğalıyor mu? Evetse biyolojik, değilse mekanik vektörlüktür.
+Vektörler, enfeksiyon etkenlerinin bulaşmasında rol oynayan eklem bacaklılardır ve dolaylı bulaşmanın canlı aracılarıdır. Vektörler 2 biçimde rol oynar. Biyolojik vektörlükte vektör etkeni kendi vücuduna alır, onun gelişmesini ve çoğalmasını sağlar. Mekanik vektörlükte ise vektör etkeni dış yüzeylerinde taşır; etken vektörde gelişmez ve çoğalmaz, yalnız bir yerden başka yere aktarılır. Ayırt edici soru şudur: etken vektörün içinde gelişip çoğalıyor mu? Evetse biyolojik, değilse mekanik vektörlüktür.
 
 Çeşitli eşyalar ve cansız varlıklar da enfeksiyonların bulaşmasında aracılık edebilir.
 Bunlar arasında kaşık, tarak, havlu gibi bireysel eşyaların ve enjektör gibi tıbbi araçların önemli bir yeri vardır.
@@ -151,7 +151,7 @@ Kaynağa yönelik olarak enfeksiyon kaynaklarının ortaya çıkarılıp tedavi 
 Bu durumların her birinde enfeksiyon zinciri kırılır; hangisinin seçileceği hastalığın halkalarının özelliklerine göre belirlenir.
 
 @@ Etkenin intrensek ve epidemiyolojik özellikleri
-Enfeksiyon etkenlerinin özellikleri iki grupta incelenir: intrensek, yani mikrobiyolojik özellikler ve epidemiyolojik özellikler. İntrensek özellikler etkende doğal olarak var olan büyüklük, şekil, hareket, yapı, enzimler, toksinler, üreme biçimi ve beslenme gibi özelliklerdir. Daha çok mikrobiyolojinin ilgi alanına giren bu özellikler, etkenin hastalık yapma durumunu da etkileyebilir. Örneğin güçlü bir ekzotoksini olan tetanoz ve difteri basilleri bu toksinleri sayesinde ağır hastalık tabloları oluşturur. Epidemiyolojik özellikler ise etken ile konakçı arasındaki ilişkilere bağlı özelliklerdir. Konakçının bulunmadığı bir ortamda bu özelliklerden söz edilemez. Kısaca toksin, enzim, şekil gibi özellikler intrensektir; konakçı olmadan tanımlanamayan özellikler epidemiyolojiktir. Şimdi bu epidemiyolojik özellikleri tek tek ele alalım.
+Enfeksiyon etkenlerinin özellikleri 2 grupta incelenir: intrensek, yani mikrobiyolojik özellikler ve epidemiyolojik özellikler. İntrensek özellikler etkende doğal olarak var olan büyüklük, şekil, hareket, yapı, enzimler, toksinler, üreme biçimi ve beslenme gibi özelliklerdir. Daha çok mikrobiyolojinin ilgi alanına giren bu özellikler, etkenin hastalık yapma durumunu da etkileyebilir. Örneğin güçlü bir ekzotoksini olan tetanoz ve difteri basilleri bu toksinleri sayesinde ağır hastalık tabloları oluşturur. Epidemiyolojik özellikler ise etken ile konakçı arasındaki ilişkilere bağlı özelliklerdir. Konakçının bulunmadığı bir ortamda bu özelliklerden söz edilemez. Kısaca toksin, enzim, şekil gibi özellikler intrensektir; konakçı olmadan tanımlanamayan özellikler epidemiyolojiktir. Şimdi bu epidemiyolojik özellikleri tek tek ele alalım.
 
 @@ Patojenite, virulans ve enfektivite
 Patojenite, enfeksiyon etkeninin hastalık yapabilme özelliğidir. Zaten bir enfeksiyonun olabilmesi için patojen bir etkenin bulunması gerekir. Ancak bir etkenin patojenliğinden söz edebilmek için, etkenin hastalık yapacağı bir konakçı olmalıdır; yani patojenlik etken ile konakçıyı birlikte ilgilendiren bir kavramdır. Patojenlik derecesini belirlemek için, etkenle enfekte olan bireyler içinde klinik belirti verenlerin oranı kullanılabilir. Paydaya dikkat edin: payda bütün toplum değil, enfekte olanlardır. Enfekte olanların çoğu belirti gösteriyorsa patojenite yüksek, çoğu belirtisiz kalıyorsa düşüktür.
@@ -164,8 +164,8 @@ Karıştırmayın: patojenite belirti veriyor mu sorusunu, virulans ne kadar ağ
 Enfektivite, enfeksiyon etkeninin konakçıda enfeksiyon oluşturabilme gücüdür ve konakçılarda enfeksiyona neden olabilecek mikroorganizma sayıları ile ölçülür.
 Az sayıda mikroorganizmanın enfeksiyon yapabildiği durumlarda enfektivitenin daha yüksek olduğu söylenebilir.
 İlişki terstir: enfeksiyon için gereken mikroorganizma sayısı ne kadar azsa enfektivite o kadar yüksektir.
-Enfektiviteyi ölçmek için deneysel araştırmalardan yararlanılarak median enfektif doz, kısaca i de elli, ve median letal doz, kısaca el de elli, gibi değerler bulunabilir.
-Median enfektif doz deney grubundaki konakçıların yarısında enfeksiyon oluşturan dozdur, median letal doz ise yarısını öldüren dozdur; i de elli ne kadar küçükse enfektivite o kadar yüksektir.
+Enfektiviteyi ölçmek için deneysel araştırmalardan yararlanılarak median enfektif doz, kısaca ID50, ve median letal doz, kısaca LD50, gibi değerler bulunabilir.
+Median enfektif doz deney grubundaki konakçıların yarısında enfeksiyon oluşturan dozdur, median letal doz ise yarısını öldüren dozdur; ID50 ne kadar küçükse enfektivite o kadar yüksektir.
 Enfektivite hem mikroorganizmanın kolay üreyebilme gibi intrensek özelliklerine hem de konakçının özelliklerine bağlıdır.
 
 @@ Tropizm, bulaşıcılık ve immünojenite
@@ -182,13 +182,13 @@ Bu özellik sayesinde konakçı enfeksiyon etkenlerini tanır, onlara karşı sp
 Yeni konakçıda hastalığı geçirme ve aşılama ile kalıcı bağışıklık sağlanabilmesinin etken tarafındaki karşılığı budur.
 
 @@ Antibiyotiklere direnç geliştirebilme
-Bir mikroorganizmanın bazı suşlarının bazı antibiyotiklere karşı dirençli olması ya da çeşitli mekanizmalarla direnç geliştirmesi antibiyotik direnci olarak ifade edilir. Bir mikroorganizmanın belli antibiyotiklere dirençli olması iki şeye bağlıdır. 1.'si mikroorganizmanın intrensek özellikleridir; örneğin beta laktamaz enzimi salgılaması. 2.'si insanların antibiyotikleri kullanma durumudur. Antibiyotiklerin uygunsuz biçimde kullanılması dirençli mikroorganizmaların yaygınlaşmasını kolaylaştırmaktadır. Böylece direnç, etkene ait bir özellikle başlayıp insan davranışıyla toplum düzeyinde bir epidemiyolojik soruna dönüşür.
+Bir mikroorganizmanın bazı suşlarının bazı antibiyotiklere karşı dirençli olması ya da çeşitli mekanizmalarla direnç geliştirmesi antibiyotik direnci olarak ifade edilir. Bir mikroorganizmanın belli antibiyotiklere dirençli olması 2 şeye bağlıdır. 1.'si mikroorganizmanın intrensek özellikleridir; örneğin beta laktamaz enzimi salgılaması. 2.'si insanların antibiyotikleri kullanma durumudur. Antibiyotiklerin uygunsuz biçimde kullanılması dirençli mikroorganizmaların yaygınlaşmasını kolaylaştırmaktadır. Böylece direnç, etkene ait bir özellikle başlayıp insan davranışıyla toplum düzeyinde bir epidemiyolojik soruna dönüşür.
 
 @@ Konakçının kademeli savunması
 Enfeksiyon etkenlerinin hedefi durumundaki konakçılar çeşitli yollarla kendini savunmaya çalışır. Bu savunmada rol oynayan faktörlere direnç faktörleri, bu direnç faktörlerinin oluşturduğu savunmaya ise bağışıklık adı verilir. Konakçı, enfeksiyon etkeni ile karşılaştığı noktadan itibaren kademeli bir savunma sistemine sahiptir. Enfeksiyon etkenlerinin konakçıyla genel olarak ilk temas ettiği dokular deri ve mukozalardır; bu nedenle savunmanın ilk kademesini de deri ve mukozalar oluşturur. Deri ve mukozaların anatomik bütünlüğü, mikroorganizmaların iç dokulara girişini büyük ölçüde önler; bütünlüğü bozulmuş deri ve mukozalardan etkenlerin girişi çok daha kolaydır. Bu pasif savunma çeşitli aktif mekanizmalarla da desteklenmiştir. Deri üzerindeki ter ve yağ bezlerinin oluşturduğu asit manto, mukozalar üzerindeki çeşitli sekresyonlar, submukozal adale hareketleri ve refleksler mikroorganizmaların ortamdan uzaklaştırılmasına yardımcı olur.
 
 Derinin hijyeni bir denge işidir.
-Derinin kirlenmesi ortamın pe hasının değişmesine ve asit mantonun bozulmasına neden olabilir.
+Derinin kirlenmesi ortamın pH'sının değişmesine ve asit mantonun bozulmasına neden olabilir.
 Aşırı temizleme de asit mantonun, hatta derinin anatomik bütünlüğünün bozulmasına yol açabilir.
 Yani etkili bir savunma için derinin anatomik ve fonksiyonel bütünlüğüne zarar vermeden deriyi temiz tutmak gerekir.
 Ne kadar çok temizlik o kadar iyi savunma düşüncesi yanlıştır.
@@ -209,7 +209,7 @@ Enfeksiyon hastalıklarında ortaya çıkan öksürük, ishal ve ateş gibi beli
 @@ Bağışıklık ve doğal bağışıklık
 Konakçının enfeksiyon etkenlerine karşı geliştirdiği direnç faktörlerinin oluşturduğu duruma bağışıklık adı verilir. Bağışıklık farklı düzeyde olabilir; yeterli olması durumunda konakçı enfeksiyon etkenleriyle karşılaşsa bile enfeksiyon olmaz. Bağışıklığı meydana geliş biçimine göre doğal ve kazanılmış olarak ikiye ayırırız. Doğal bağışıklık, enfeksiyon etkenleri ile karşılaşma söz konusu olmaksızın konakçıda doğal olarak var olan bağışıklıktır. Konakçının vücut ısısı, organ ve dokularının çeşitli özellikleri gibi faktörler doğal bağışıklığı sağlayabilir. Doğal bağışıklık sayesinde diğer canlılarda hastalık yapabilen bazı mikroorganizmalar insanlarda hastalık yapmaz; bu durumun tersi de doğrudur.
 
-Doğal bağışıklık genişten dara doğru üç düzeyde görülür.
+Doğal bağışıklık genişten dara doğru 3 düzeyde görülür.
 Türe has bağışıklık, farklı canlı türlerinin bazı mikroorganizmalara karşı bağışık olmasıdır; bu nedenle bir canlı türünü kolaylıkla enfekte edebilen bir mikroorganizma başka bir canlı türünde çoğalmayabilir.
 Irka has bağışıklık, aynı canlı türünün farklı ırklarının bir mikroorganizmaya karşı farklı düzeyde bağışık olmasıdır.
 Bireysel bağışıklık ise aynı ırkın farklı bireylerinin aynı enfeksiyon etkenine farklı düzeylerde bağışık olmasıdır.

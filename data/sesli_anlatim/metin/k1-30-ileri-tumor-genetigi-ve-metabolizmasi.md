@@ -1,190 +1,190 @@
 # İleri Tümör Genetiği ve Metabolizması
 
-@@ Altı eksende moleküler onkoloji
-Moleküler onkolojinin giriş düzeyinde özetlenen konularını burada derinleştiriyoruz. Kanser hücresinin büyüme frenlerini nasıl kaybettiğini, enerjisini nasıl yeniden programladığını ve kendine nasıl damar ağı kurduğunu altı eksende inceleyeceğiz. 1. eksen retinoblastoma proteini, kısaca er be proteini ve G bir S kontrol noktasıdır; yani hücre döngüsüne giriş kapısının ana freni. 2. eksen, genomun koruyucusu lakabıyla bilinen TP53 genidir; stres altındaki hücreyi durduran ya da ortadan kaldıran sensör.
+@@ 6 eksende moleküler onkoloji
+Moleküler onkolojinin giriş düzeyinde özetlenen konularını burada derinleştiriyoruz. Kanser hücresinin büyüme frenlerini nasıl kaybettiğini, enerjisini nasıl yeniden programladığını ve kendine nasıl damar ağı kurduğunu 6 eksende inceleyeceğiz. Birinci eksen retinoblastoma proteini, kısaca RB proteini ve G1/S kontrol noktasıdır; yani hücre döngüsüne giriş kapısının ana freni. İkinci eksen, genomun koruyucusu lakabıyla bilinen TP53 genidir; stres altındaki hücreyi durduran ya da ortadan kaldıran sensör.
 
-3. eksende te ge ef beta, yani transforme edici büyüme faktörü beta, e kadherin ve a pe ce ile vint yolu var; bunlar büyümeyi baskılayan ve doku mimarisini koruyan diğer tümör baskılayıcı sistemlerdir.
-4. eksen değişmiş hücresel metabolizma, yani Varburg etkisidir: oksijen varken bile glikolize yönelme.
-5. eksen otofaji ve onkometabolitlerdir.
-Onkometabolit, mutant bir metabolik enzimin ürettiği ve kanser gelişimini destekleyen anormal metabolittir; bunun en iyi örneği izositrat dehidrogenaz, kısaca i de ha mutasyonlarıdır.
-6. eksen anjiyogenez, yani var olan damar ağından yeni damar filizlerinin oluşması ve bunun ilaçla hedeflenmesidir.
+Üçüncü eksende TGF-β, yani transforme edici büyüme faktörü beta, E-kadherin ve APC ile Wnt yolu var; bunlar büyümeyi baskılayan ve doku mimarisini koruyan diğer tümör baskılayıcı sistemlerdir.
+Dördüncü eksen değişmiş hücresel metabolizma, yani Warburg etkisidir: oksijen varken bile glikolize yönelme.
+Beşinci eksen otofaji ve onkometabolitlerdir.
+Onkometabolit, mutant bir metabolik enzimin ürettiği ve kanser gelişimini destekleyen anormal metabolittir; bunun en iyi örneği izositrat dehidrogenaz, kısaca IDH mutasyonlarıdır.
+Altıncı eksen anjiyogenez, yani var olan damar ağından yeni damar filizlerinin oluşması ve bunun ilaçla hedeflenmesidir.
 Bu başlıklar birbirinden bağımsız değildir; sonunda hepsinin tek bir ağ içinde birbirine bağlandığını göreceğiz.
 
-@@ Er be proteini ve ilk tümör baskılayıcı gen
-Retinoblastoma proteini, hücre döngüsünde G bir fazından S fazına geçişin ana negatif düzenleyicisidir. Yani hücrenin DNA sentezine başlayıp başlamayacağına karar veren kapının bekçisidir. Er be aktif olduğu sürece hücre G bir S sınırını geçemez ve proliferasyon durur. G bir S geçişi 1 kez aşılırsa hücre de ne asını kopyalar ve bölünmeye yönelir; bu yüzden bu noktadaki fren, kanserde en sık bozulan mekanizmalardan biridir. Er be işlevini kaybederse hücre büyüme sinyali beklemeden döngüye girer; bu, kontrolsüz proliferasyonun temel adımıdır.
+@@ RB proteini ve ilk tümör baskılayıcı gen
+Retinoblastoma proteini, hücre döngüsünde G1 fazından S fazına geçişin ana negatif düzenleyicisidir. Yani hücrenin DNA sentezine başlayıp başlamayacağına karar veren kapının bekçisidir. RB aktif olduğu sürece hücre G1/S sınırını geçemez ve proliferasyon durur. G1/S geçişi 1 kez aşılırsa hücre DNA'sını kopyalar ve bölünmeye yönelir; bu yüzden bu noktadaki fren, kanserde en sık bozulan mekanizmalardan biridir. RB işlevini kaybederse hücre büyüme sinyali beklemeden döngüye girer; bu, kontrolsüz proliferasyonun temel adımıdır.
 
-Burası önemli: er be geni keşfedilen ilk tümör baskılayıcı gendir ve tümör baskılayıcı genlerin nasıl inaktive olduğunu anlatan prototip iki vuruş modeli bu gen üzerinden kurulmuştur.
+Burası önemli: RB geni keşfedilen ilk tümör baskılayıcı gendir ve tümör baskılayıcı genlerin nasıl inaktive olduğunu anlatan prototip iki vuruş modeli bu gen üzerinden kurulmuştur.
 Çocukluk çağının göz tümörü retinoblastomanın incelenmesi, tümör baskılayıcı gen kavramının doğmasını sağlamıştır.
 Tümör baskılayıcı gen, ürünü hücre proliferasyonunu frenleyen ve her iki alelinin kaybıyla kanser gelişimine katkıda bulunan gendir.
-Er be kaybı yalnız retinoblastomaya özgü değildir: kemiğin malign tümörü olan osteosarkomda ve meme, akciğer ile mesane karsinomlarında da sık görülür.
+RB kaybı yalnız retinoblastomaya özgü değildir: kemiğin malign tümörü olan osteosarkomda ve meme, akciğer ile mesane karsinomlarında da sık görülür.
 
-@@ İki vuruş hipotezi ve retinoblastomanın iki formu
-İki vuruş hipotezinin temel ilkesi şudur: bir tümör baskılayıcı genin işlevini kaybetmesi için her iki alelinin de inaktive olması gerekir. Alel, bir genin homolog kromozomlardaki iki kopyasından her biridir. 1. vuruşta alellerden biri mutasyona uğrar, ama hücre hâlâ normal davranır, çünkü diğer alel proteini üretmeye devam eder; tek sağlam alel freni çalıştırmaya yeter. 2. vuruşta kalan sağlam alel de bozulur, er be proteini artık hiç üretilmez ve fren tamamen kalkar.
+@@ 2 vuruş hipotezi ve retinoblastomanın 2 formu
+İki vuruş hipotezinin temel ilkesi şudur: bir tümör baskılayıcı genin işlevini kaybetmesi için her iki alelinin de inaktive olması gerekir. Alel, bir genin homolog kromozomlardaki iki kopyasından her biridir. Birinci vuruşta alellerden biri mutasyona uğrar, ama hücre hâlâ normal davranır, çünkü diğer alel proteini üretmeye devam eder; tek sağlam alel freni çalıştırmaya yeter. İkinci vuruşta kalan sağlam alel de bozulur, RB proteini artık hiç üretilmez ve fren tamamen kalkar.
 
 Retinoblastoma iki biçimde görülür ve fark, ilk vuruşun nereden geldiğindedir.
-Ailesel retinoblastomada germ hattında bir mutant er be aleli miras alınır; yani 1. vuruş doğuştan vücudun tüm hücrelerindedir.
-Tümör için 2. alelde tek bir somatik mutasyon, yani 2. darbe yeterlidir; bu yüzden tümör gelişme olasılığı yüksektir.
-Sporadik retinoblastomada ise doğuştan iki alel de sağlamdır ve aynı retina hücresinde her iki er be alelinde de somatik mutasyon gerekir.
+Ailesel retinoblastomada germ hattında bir mutant RB aleli miras alınır; yani birinci vuruş doğuştan vücudun tüm hücrelerindedir.
+Tümör için ikinci alelde tek bir somatik mutasyon, yani ikinci darbe yeterlidir; bu yüzden tümör gelişme olasılığı yüksektir.
+Sporadik retinoblastomada ise doğuştan iki alel de sağlamdır ve aynı retina hücresinde her iki RB alelinde de somatik mutasyon gerekir.
 İki bağımsız olayın aynı hücrede birleşmesi gerektiği için bu daha nadirdir.
 Germ hattı mutasyonu üreme hücrelerinden kalıtılıp tüm hücrelerde bulunan mutasyondur; somatik mutasyon ise sonradan belirli bir vücut hücresinde ortaya çıkar ve kalıtılmaz.
 
 Burası önemli, sınavda klasik bir tuzaktır: ailesel retinoblastomada kalıtım otozomal dominant bir eğilim gibi görünür, ancak hücre düzeyinde mutasyonun etkisi resesiftir.
-Hastalığın ortaya çıkması için retina hücresinde 2. darbenin gerçekleşmesi, yani iki alelin de kaybolması gerekir.
+Hastalığın ortaya çıkması için retina hücresinde ikinci darbenin gerçekleşmesi, yani iki alelin de kaybolması gerekir.
 
 Retinoblastomanın patogenezini gösteren şekilde iki form, ebeveyn hücrelerinden göz tümörüne kadar yan yana çizilmiştir.
-Burası önemli: er be lokusu 13. kromozomun uzun kolunda, on üç ku on dört bölgesinde yer alır ve her iki alelinin işlev kaybı retina hücrelerinin neoplastik proliferasyonuna yol açar.
-Sporadik formda ebeveynlerin germ hücreleri ve zigot normaldir; çocuğun retina hücreleri dahil tüm somatik hücreleri başlangıçta iki fonksiyonel er be kopyasına sahiptir ve şekilde yeşil boyanmıştır.
+Burası önemli: RB lokusu 13. kromozomun uzun kolunda, 13q14 bölgesinde yer alır ve her iki alelinin işlev kaybı retina hücrelerinin neoplastik proliferasyonuna yol açar.
+Sporadik formda ebeveynlerin germ hücreleri ve zigot normaldir; çocuğun retina hücreleri dahil tüm somatik hücreleri başlangıçta iki fonksiyonel RB kopyasına sahiptir ve şekilde yeşil boyanmıştır.
 Ailesel formda taşıyıcı ebeveynden gelen mutant alel zigota geçer; dönüşüme uğramamış retina hücreleri dahil tüm somatik hücreler yalnız bir fonksiyonel kopya taşır, yani heterozigottur ve kırmızı yeşil gösterilir.
 Her iki formda da tümör, iki alelini kaybetmiş, yani homozigot kayıp gösteren retina hücresinden gelişir.
 
-@@ G bir kararı ve er be'nin iki formu
-G bir fazında hücre önemli bir karar verir: bölünmeye mi gidecek, yoksa durgunluk ya da diferansiyasyon yoluna mı girecek? Er be bu kararın merkezindedir ve fosforilasyon durumuna göre iki formda bulunur. Hipofosforile er be aktif formdur; e iki ef transkripsiyon faktörlerini bağlar ve baskılar, hücre G birde kalır. Hiperfosforile er be ise inaktif formdur; e iki efi serbest bırakır ve serbest e iki ef ile G bir S geçişi ve DNA sentezi başlar. Proliferasyon sinyalleri ile er be fosforilasyonu arasındaki denge, kapının açılıp açılmayacağını belirler.
+@@ G1 kararı ve RB'nin 2 formu
+G1 fazında hücre önemli bir karar verir: bölünmeye mi gidecek, yoksa durgunluk ya da diferansiyasyon yoluna mı girecek? RB bu kararın merkezindedir ve fosforilasyon durumuna göre iki formda bulunur. Hipofosforile RB aktif formdur; E2F transkripsiyon faktörlerini bağlar ve baskılar, hücre G1'de kalır. Hiperfosforile RB ise inaktif formdur; E2F'yi serbest bırakır ve serbest E2F ile G1/S geçişi ve DNA sentezi başlar. Proliferasyon sinyalleri ile RB fosforilasyonu arasındaki denge, kapının açılıp açılmayacağını belirler.
 
-Burası önemli, çünkü sezgiye ters düşer: pek çok proteinde fosforilasyon aktivasyon demektir, ama er bede fosfat eklenmesi proteini kapatır.
-Fosforilasyon, er be'nin inaktivasyonu ve e iki efin serbestleşmesi demektir.
-Hipofosforile er be aktiftir ve e iki efi bağlar; hiperfosforile er be inaktiftir ve e iki ef serbesttir.
+Burası önemli, çünkü sezgiye ters düşer: pek çok proteinde fosforilasyon aktivasyon demektir, ama RB'de fosfat eklenmesi proteini kapatır.
+Fosforilasyon, RB'nin inaktivasyonu ve E2F'nin serbestleşmesi demektir.
+Hipofosforile RB aktiftir ve E2F'yi bağlar; hiperfosforile RB inaktiftir ve E2F serbesttir.
 
-E iki ef transkripsiyon faktörleri, S fazı için gerekli genleri aktive eder; bunlara bir örnek siklin E'dir.
-Erken G birde aktif, hipofosforile er be bu kaskadı iki katmanda durdurur.
-1.'si, e iki efe bağlanarak onun transkripsiyonu başlatmasını doğrudan engeller.
+E2F transkripsiyon faktörleri, S fazı için gerekli genleri aktive eder; bunlara bir örnek siklin E'dir.
+Erken G1'de aktif, hipofosforile RB bu kaskadı iki katmanda durdurur.
+1.'si, E2F'ye bağlanarak onun transkripsiyonu başlatmasını doğrudan engeller.
 2.'si, histon deasetilaz ve histon metiltransferaz gibi kromatin yeniden şekillendirme enzimlerini bölgeye çekerek kromatini kapalı tutar; histon deasetilaz asetil grubunu uzaklaştırır, histon metiltransferaz metil grubu ekler.
 Böylece S fazı genlerinin promotörlerine erişim kapanır.
 
 @@ Büyüme sinyalleri, siklinler ve CDK inhibitörleri
-Er be'nin rolünü gösteren şekil, onu iki karşıt sinyal grubunun nasıl yönettiğini anlatır. Bir yanda büyüme inhibitörleri vardır: te ge ef beta ve pe elli üç gibi inhibitörler, pe on altı gibi CDK inhibitörlerinin sentezini uyarır. Ce de ka inhibitörü, siklin ve siklin bağımlı kinaz komplekslerini baskılayarak er be'nin fosforilasyonunu önleyen proteindir. Böylece er be hipofosforile kalır, e iki ef ile kompleks halinde de ne aya bağlanır, kromatin faktörlerini toplar ve S fazı genlerinin transkripsiyonunu engeller; sonuç G bir S geçiş bloğudur.
+RB'nin rolünü gösteren şekil, onu iki karşıt sinyal grubunun nasıl yönettiğini anlatır. Bir yanda büyüme inhibitörleri vardır: TGF-β ve p53 gibi inhibitörler, p16 gibi CDK inhibitörlerinin sentezini uyarır. CDK inhibitörü, siklin ve siklin bağımlı kinaz komplekslerini baskılayarak RB'nin fosforilasyonunu önleyen proteindir. Böylece RB hipofosforile kalır, E2F ile kompleks halinde DNA'ya bağlanır, kromatin faktörlerini toplar ve S fazı genlerinin transkripsiyonunu engeller; sonuç G1/S geçiş bloğudur.
 
-Öbür yanda büyüme faktörleri vardır: epidermal büyüme faktörü, yani e ge ef ve trombosit kaynaklı büyüme faktörü, yani pe de ge ef, kendi reseptörlerine bağlanır.
-Büyüme faktörleri siklin D ekspresyonunu artırır; siklin D, CDK dört ya da CDK altı kinazlarıyla eşleşir.
-Siklin D ile CDK dört, siklin D ile CDK altı ve siklin E ile CDK iki kompleksleri er beyi fosforlar.
-Fosforile er be e iki efi bırakır, serbest e iki ef siklin E gibi S fazı genlerini açar ve hücre DNA sentezine girer.
+Öbür yanda büyüme faktörleri vardır: epidermal büyüme faktörü, yani EGF ve trombosit kaynaklı büyüme faktörü, yani PDGF, kendi reseptörlerine bağlanır.
+Büyüme faktörleri siklin D ekspresyonunu artırır; siklin D, CDK4 ya da CDK6 kinazlarıyla eşleşir.
+Siklin D ile CDK4, siklin D ile CDK6 ve siklin E ile CDK2 kompleksleri RB'yi fosforlar.
+Fosforile RB E2F'yi bırakır, serbest E2F siklin E gibi S fazı genlerini açar ve hücre DNA sentezine girer.
 Böylece dışarıdan gelen büyüme sinyali, tek bir kinaz kompleksi aracılığıyla hücre içindeki frene aktarılır.
-Siklin D ile CDK dört ve altı ekseni er be'nin doğrudan düzenleyicisidir; bu eksendeki kalıcı bir aktivasyon er beyi sürekli inaktif bırakabilir.
+Siklin D ile CDK4 ve 6 ekseni RB'nin doğrudan düzenleyicisidir; bu eksendeki kalıcı bir aktivasyon RB'yi sürekli inaktif bırakabilir.
 
-Bu noktada şeklin altını çizdiği genel bir kural var: hemen hemen tüm kanser hücreleri G bir S kontrol noktasında düzensizlik gösterir.
-En sık neden, er be, CDK dört, siklin D ya da CDK en iki a genlerindeki mutasyonlardır.
+Bu noktada şeklin altını çizdiği genel bir kural var: hemen hemen tüm kanser hücreleri G1/S kontrol noktasında düzensizlik gösterir.
+En sık neden, RB, CDK4, siklin D ya da CDKN2A genlerindeki mutasyonlardır.
 
-@@ Er be yolunu bozan değişiklikler ve HPV e yedi
-Er be geninin kendisi sağlam olsa bile, onu yöneten eksen bozulursa fren yine çalışmaz. Üç tip onkojenik değişiklik vurgulanır. Siklin D genlerinde amplifikasyon, yani kopya sayısı artışı, ya da aşırı ekspresyon olur; fazla siklin D er beyi sürekli fosforlar. Ce de ka dörtte aktivasyon mutasyonları ya da amplifikasyon görülür; kinaz sürekli çalışır. Ce de ka en iki a geninin kodladığı CDK inhibitörü pe on altıda ise delesyon ya da epigenetik susturma olur; epigenetik susturma, DNA dizisi değişmeden, metilasyon gibi mekanizmalarla bir genin ifadesinin kapatılmasıdır. Ortak sonuç aynıdır: er be sürekli hiperfosforile ve inaktif kalır, G bir S kontrol noktası devre dışı kalır. Dikkat edin, siklin D ve CDK dört için kazanım, pe on altı için kayıp onkojeniktir; yön tersine sorulursa tuzaktır.
+@@ RB yolunu bozan değişiklikler ve HPV E7
+RB geninin kendisi sağlam olsa bile, onu yöneten eksen bozulursa fren yine çalışmaz. 3 tip onkojenik değişiklik vurgulanır. Siklin D genlerinde amplifikasyon, yani kopya sayısı artışı, ya da aşırı ekspresyon olur; fazla siklin D RB'yi sürekli fosforlar. CDK4'te aktivasyon mutasyonları ya da amplifikasyon görülür; kinaz sürekli çalışır. CDKN2A geninin kodladığı CDK inhibitörü p16'da ise delesyon ya da epigenetik susturma olur; epigenetik susturma, DNA dizisi değişmeden, metilasyon gibi mekanizmalarla bir genin ifadesinin kapatılmasıdır. Ortak sonuç aynıdır: RB sürekli hiperfosforile ve inaktif kalır, G1/S kontrol noktası devre dışı kalır. Dikkat edin, siklin D ve CDK4 için kazanım, p16 için kayıp onkojeniktir; yön tersine sorulursa tuzaktır.
 
-Burası önemli: CDK en iki a, yani pe on altı delesyonu pankreas karsinomu, melanom ve baş boyun karsinomlarında çok sık görülür.
-Bu tümörlerde er be geni sağlam olabilir; ancak pe on altı kaybolduğu için CDK dört ve altı sürekli çalışır ve er be yine işlevsiz kalır.
-Bu, er be yolunun dolaylı inaktivasyonunun en iyi bilinen örneğidir.
-Özetle doğrudan kayıp, er be geninin kendisinin mutasyonudur ve retinoblastoma ile osteosarkomda görülür; dolaylı kayıp ise siklin D, CDK dört ya da pe on altıdaki değişikliktir.
-Her iki durumda da sonuç G bir S freninin kalkmasıdır.
+Burası önemli: CDKN2A, yani p16 delesyonu pankreas karsinomu, melanom ve baş boyun karsinomlarında çok sık görülür.
+Bu tümörlerde RB geni sağlam olabilir; ancak p16 kaybolduğu için CDK4 ve 6 sürekli çalışır ve RB yine işlevsiz kalır.
+Bu, RB yolunun dolaylı inaktivasyonunun en iyi bilinen örneğidir.
+Özetle doğrudan kayıp, RB geninin kendisinin mutasyonudur ve retinoblastoma ile osteosarkomda görülür; dolaylı kayıp ise siklin D, CDK4 ya da p16'daki değişikliktir.
+Her iki durumda da sonuç G1/S freninin kalkmasıdır.
 
-Bazı DNA virüsleri, er beyi doğrudan hedefleyen onkoproteinler üretir.
-En iyi örnek insan papilloma virüsünün, yani ha pe venin e yedi proteinidir.
-E yedi aktif formdaki hipofosforile er beye bağlanır ve onun işlevini engeller; fosforilasyona gerek kalmadan e iki efi serbest bırakır; ayrıca CDK inhibitörü pe yirmi biri de inhibe ederek frenin frenini ortadan kaldırır.
-Sonuçta hücre büyüme faktörüne gerek duymadan G bir S geçişini yapar ve hücre döngüsü üzerindeki kontrol kaybolur.
-Burada er be gen düzeyinde değil protein düzeyinde inaktive olur; yani gen sağlam olsa bile fren çalışmaz.
+Bazı DNA virüsleri, RB'yi doğrudan hedefleyen onkoproteinler üretir.
+En iyi örnek insan papilloma virüsünün, yani HPV'nin E7 proteinidir.
+E7 aktif formdaki hipofosforile RB'ye bağlanır ve onun işlevini engeller; fosforilasyona gerek kalmadan E2F'yi serbest bırakır; ayrıca CDK inhibitörü p21'i de inhibe ederek frenin frenini ortadan kaldırır.
+Sonuçta hücre büyüme faktörüne gerek duymadan G1/S geçişini yapar ve hücre döngüsü üzerindeki kontrol kaybolur.
+Burada RB gen düzeyinde değil protein düzeyinde inaktive olur; yani gen sağlam olsa bile fren çalışmaz.
 
-Er be yolunu bir cümlede toparlarsak: hangi yoldan bozulursa bozulsun, iki alelin kaybıyla doğrudan, siklin D, CDK dört ya da pe on altı değişikliğiyle dolaylı, ya da HPV e yedi ile viral olarak, son ortak nokta aynıdır.
-Er be işlevsizdir, e iki ef serbesttir ve G bir S kontrol noktası devre dışıdır.
+RB yolunu bir cümlede toparlarsak: hangi yoldan bozulursa bozulsun, iki alelin kaybıyla doğrudan, siklin D, CDK4 ya da p16 değişikliğiyle dolaylı, ya da HPV E7 ile viral olarak, son ortak nokta aynıdır.
+RB işlevsizdir, E2F serbesttir ve G1/S kontrol noktası devre dışıdır.
 
-@@ Te pe elli üç: genomun koruyucusu
-Burası önemli: TP53 geni, pe elli üç tümör baskılayıcı proteinini kodlar ve insan kanserinde en sık mutasyona uğrayan gendir. Görevi, hücreye zarar verebilecek streslere, yani DNA hasarına, hipoksiye ve onkogen aktivasyonuna yanıt vererek genom bütünlüğünü korumaktır. Pe elli üçün üç ana işlevi vardır. 1.'si geçici hücre döngüsü durdurulması, yani durgunluktur; hücreye onarım için zaman kazandırır. 2.'si kalıcı durdurulma, yani hücresel yaşlanma ya da senesenstir; hücre bir daha bölünmez. 3.'sü programlanmış hücre ölümü, yani apoptozun tetiklenmesidir. Er be yalnız G bir S kapısını yönetirken pe elli üç bir stres sensörüdür; hasarlı hücreyi durdurmak, yaşlandırmak ya da öldürmek arasında karar verir.
+@@ TP53: genomun koruyucusu
+Burası önemli: TP53 geni, p53 tümör baskılayıcı proteinini kodlar ve insan kanserinde en sık mutasyona uğrayan gendir. Görevi, hücreye zarar verebilecek streslere, yani DNA hasarına, hipoksiye ve onkogen aktivasyonuna yanıt vererek genom bütünlüğünü korumaktır. p53'ün 3 ana işlevi vardır. 1.'si geçici hücre döngüsü durdurulması, yani durgunluktur; hücreye onarım için zaman kazandırır. 2.'si kalıcı durdurulma, yani hücresel yaşlanma ya da senesenstir; hücre bir daha bölünmez. 3.'sü programlanmış hücre ölümü, yani apoptozun tetiklenmesidir. RB yalnız G1/S kapısını yönetirken p53 bir stres sensörüdür; hasarlı hücreyi durdurmak, yaşlandırmak ya da öldürmek arasında karar verir.
 
-Stres olmayan normal hücrede pe elli üç düzeyi düşüktür.
-Burası önemli: proteinin yarı ömrü yaklaşık yirmi dakikadır; sürekli üretilir ama hızla yıkılır.
-Bu düşük düzeyi sağlayan protein em de em ikidir.
-Em de em iki pe elli üçe bağlanır ve onu proteazom aracılı yıkıma hedefler; proteazom, hücre içinde işaretlenmiş proteinleri parçalayan komplekstir.
-Böylece pe elli üç birikemez ve hedef genlerini açamaz; hücre normal koşullarda gereksiz yere durdurulmaz ya da öldürülmez.
+Stres olmayan normal hücrede p53 düzeyi düşüktür.
+Burası önemli: proteinin yarı ömrü yaklaşık 20 dakikadır; sürekli üretilir ama hızla yıkılır.
+Bu düşük düzeyi sağlayan protein MDM2'dir.
+MDM2 p53'e bağlanır ve onu proteazom aracılı yıkıma hedefler; proteazom, hücre içinde işaretlenmiş proteinleri parçalayan komplekstir.
+Böylece p53 birikemez ve hedef genlerini açamaz; hücre normal koşullarda gereksiz yere durdurulmaz ya da öldürülmez.
 Kısa yarı ömrün bir faydası da hızlı yanıttır: yıkım durduğu anda protein dakikalar içinde birikebilir.
-Em de em iki, pe elli üçün doğal kapatma düğmesidir.
+MDM2, p53'ün doğal kapatma düğmesidir.
 
-@@ Pe elli üçün aktivasyonu ve hedef genleri
-Hücre DNA hasarı, hipoksi ya da onkojenik sinyal gibi bir stresle karşılaştığında pe elli üçün yıkımı durdurulur. DNA hasarını algılayan sensör kinazlar, yani a te em ve a te er kinazları aktive olur ve pe elli üçü fosforlar. Fosforile pe elli üç em de em ikiden ayrılır, yıkımdan kurtulur, stabil hale gelir ve çekirdekte birikir. Birikmiş pe elli üç hedef genlerin transkripsiyonunu başlatır. Vurgulanan hedef genler şunlardır: hücre döngüsünü durduran pe yirmi biri kodlayan CDK en bir a, DNA onarımıyla ilişkili ge a de de kırk beş ve apoptozu başlatan proapoptotik gen puma.
+@@ p53'ün aktivasyonu ve hedef genleri
+Hücre DNA hasarı, hipoksi ya da onkojenik sinyal gibi bir stresle karşılaştığında p53'ün yıkımı durdurulur. DNA hasarını algılayan sensör kinazlar, yani ATM ve ATR kinazları aktive olur ve p53'ü fosforlar. Fosforile p53 MDM2'den ayrılır, yıkımdan kurtulur, stabil hale gelir ve çekirdekte birikir. Birikmiş p53 hedef genlerin transkripsiyonunu başlatır. Vurgulanan hedef genler şunlardır: hücre döngüsünü durduran p21'i kodlayan CDKN1A, DNA onarımıyla ilişkili GADD45 ve apoptozu başlatan proapoptotik gen puma.
 
-Burası önemli ve er be ile karşılaştırıldığında güzel bir zıtlık oluşturur: pe elli üçü aktive eden olay fosforilasyondur ve bu fosforilasyon pe elli üçü em de em ikiden koparır.
-Er bede ise fosforilasyon inaktivasyon demekti.
-Akış şöyledir: stres, a te em ve a te er, pe elli üç fosforilasyonu, em de em ikiden ayrılma ve pe yirmi bir, ge a de de kırk beş, puma gibi genlerin açılması.
+Burası önemli ve RB ile karşılaştırıldığında güzel bir zıtlık oluşturur: p53'ü aktive eden olay fosforilasyondur ve bu fosforilasyon p53'ü MDM2'den koparır.
+RB'de ise fosforilasyon inaktivasyon demekti.
+Akış şöyledir: stres, ATM ve ATR, p53 fosforilasyonu, MDM2'den ayrılma ve p21, GADD45, puma gibi genlerin açılması.
 
-Pe elli üçün genom bütünlüğünü korumadaki rolünü gösteren şekil üç panelden oluşur.
-Sol panelde stressiz, sağlıklı hücre vardır; DNA hasarı yoktur ve pe elli üç düzeyi, onu parçalayan bir kompleks oluşturan em de em iki nedeniyle düşüktür.
-Orta panelde iyonize radyasyon ya da karsinojenler de ne ayı hasarlar; kinaz sensörleri pe elli üçü fosforlayıp parçalanmadan korur, pe elli üç birikir ve de ne aya bağlanır.
-Pe yirmi bir artışıyla G birde durma ve pe elli üç aracılı DNA onarımı olur.
+p53'ün genom bütünlüğünü korumadaki rolünü gösteren şekil 3 panelden oluşur.
+Sol panelde stressiz, sağlıklı hücre vardır; DNA hasarı yoktur ve p53 düzeyi, onu parçalayan bir kompleks oluşturan MDM2 nedeniyle düşüktür.
+Orta panelde iyonize radyasyon ya da karsinojenler DNA'yı hasarlar; kinaz sensörleri p53'ü fosforlayıp parçalanmadan korur, p53 birikir ve DNA'ya bağlanır.
+p21 artışıyla G1'de durma ve p53 aracılı DNA onarımı olur.
 Onarım başarılıysa hücre sağlıklı olarak döngüye döner.
-Onarım başarısızsa ya pe yirmi bir ifadesinin sürmesi ve er be'nin aktif kalmasıyla senesens, ya da proapoptotik genlerin artışıyla apoptoz gelişir.
-Sağ panelde pe elli üç işlevini kaybetmiş hücre vardır: pe elli üçe bağımlı genler aktive olmaz, hücre döngüsü durmaz, DNA onarılmaz, senesens gelişmez.
+Onarım başarısızsa ya p21 ifadesinin sürmesi ve RB'nin aktif kalmasıyla senesens, ya da proapoptotik genlerin artışıyla apoptoz gelişir.
+Sağ panelde p53 işlevini kaybetmiş hücre vardır: p53'e bağımlı genler aktive olmaz, hücre döngüsü durmaz, DNA onarılmaz, senesens gelişmez.
 Mutant hücreler çoğalır, ek mutasyonlar birikir ve sonunda malign tümör oluşur.
 
-@@ Pe yirmi bir, DNA onarımı ve em de em iki geri bildirimi
-Pe elli üçün ilk ve en hızlı yanıtı hücreyi durdurmaktır ve bunu CDK en bir a geninin ürünü pe yirmi bir aracılığıyla yapar. Pe yirmi bir siklin ve CDK komplekslerini inhibe eder, böylece G bir fazında er be'nin fosforilasyonunu önler. Er be hipofosforile ve aktif kalır, e iki ef baskılı kalır ve hücre G bir S kontrol noktasında durur. İşte pe elli üç ile er be yollarının birleştiği nokta budur: pe elli üç, pe yirmi bir üzerinden er be'nin frenini sıkar. Pe elli üç aktif tuttuğu er be ile hücreyi G birde durdurur demek, bu zincirin kısaltmasıdır.
+@@ p21, DNA onarımı ve MDM2 geri bildirimi
+p53'ün ilk ve en hızlı yanıtı hücreyi durdurmaktır ve bunu CDKN1A geninin ürünü p21 aracılığıyla yapar. p21 siklin ve CDK komplekslerini inhibe eder, böylece G1 fazında RB'nin fosforilasyonunu önler. RB hipofosforile ve aktif kalır, E2F baskılı kalır ve hücre G1/S kontrol noktasında durur. İşTP53 ile RB yollarının birleştiği nokta budur: p53, p21 üzerinden RB'nin frenini sıkar. p53 aktif tuttuğu RB ile hücreyi G1'de durdurur demek, bu zincirin kısaltmasıdır.
 
-Pe elli üç hücreyi durdurduktan sonra hasarı onarmaya çalışır ve DNA onarım genlerinin ekspresyonunu uyarır.
-Onarım başarılı olursa sistem kendini kapatır: pe elli üç, hedef genlerinden biri olan em de em ikinin transkripsiyonunu artırır; artan em de em iki pe elli üçü yeniden proteazoma gönderir ve pe elli üç kendi yıkımını sağlamış olur.
-Pe elli üç ve pe yirmi bir düzeyi düşer, er be tekrar fosforlanabilir ve hücre döngüsü yeniden başlar.
-Bu bir negatif geri bildirim döngüsüdür: pe elli üç işini bitirince kendi baskılayıcısını üretir.
-Demek ki em de em iki, hem normal hücrede pe elli üçü düşük tutan hem de onarım sonrası onu kapatan proteindir.
+p53 hücreyi durdurduktan sonra hasarı onarmaya çalışır ve DNA onarım genlerinin ekspresyonunu uyarır.
+Onarım başarılı olursa sistem kendini kapatır: p53, hedef genlerinden biri olan MDM2'nin transkripsiyonunu artırır; artan MDM2 p53'ü yeniden proteazoma gönderir ve p53 kendi yıkımını sağlamış olur.
+p53 ve p21 düzeyi düşer, RB tekrar fosforlanabilir ve hücre döngüsü yeniden başlar.
+Bu bir negatif geri bildirim döngüsüdür: p53 işini bitirince kendi baskılayıcısını üretir.
+Demek ki MDM2, hem normal hücrede p53'ü düşük tutan hem de onarım sonrası onu kapatan proteindir.
 
 @@ Onarılamayan hasar: senesens ve apoptoz
-DNA hasarı onarılamazsa pe elli üç hücreyi iki yoldan birine yönlendirir. 1. yol yaşlanma, yani senesenstir. Senesenste hücre döngüsü kalıcı olarak durur ve kromatin yapısında kalıcı değişiklikler oluşur; durma hali kromatin düzeyinde kilitlenir. Moleküler olarak pe yirmi bir ifadesi sürer ve er be aktif kalır. Dikkat edin, geçici durgunlukta hücre onarım sonrası döngüye döner; senesenste ise dönüş yoktur. Bu ayrım sık sorulan bir tuzaktır.
+DNA hasarı onarılamazsa p53 hücreyi iki yoldan birine yönlendirir. Birinci yol yaşlanma, yani senesenstir. Senesenste hücre döngüsü kalıcı olarak durur ve kromatin yapısında kalıcı değişiklikler oluşur; durma hali kromatin düzeyinde kilitlenir. Moleküler olarak p21 ifadesi sürer ve RB aktif kalır. Dikkat edin, geçici durgunlukta hücre onarım sonrası döngüye döner; senesenste ise dönüş yoktur. Bu ayrım sık sorulan bir tuzaktır.
 
-2. yol apoptozdur.
-Pe elli üç puma ve baks gibi proapoptotik genlerin ekspresyonunu artırır; bu proteinler mitokondri üzerinden apoptozun iç yolunu, yani intrinsik yolunu başlatır ve hasarlı genom ortadan kalkar.
+İkinci yol apoptozdur.
+p53 puma ve baks gibi proapoptotik genlerin ekspresyonunu artırır; bu proteinler mitokondri üzerinden apoptozun iç yolunu, yani intrinsik yolunu başlatır ve hasarlı genom ortadan kalkar.
 Senesens ve apoptozun ortak amacı, genetik olarak tehlikeli hücrelerin kalıcı olarak devre dışı bırakılmasıdır; biri hücreyi kalıcı olarak durdurur, diğeri öldürür.
-Pe elli üç kaybında bu iki güvenlik çıkışı da kapanır; hasarlı hücre hayatta kalır ve çoğalır.
+p53 kaybında bu iki güvenlik çıkışı da kapanır; hasarlı hücre hayatta kalır ve çoğalır.
 
-@@ Te pe elli üç mutasyonları ve Li Fraumeni sendromu
-Pe elli üç işlevi kanserde iki farklı yolla kaybolabilir. Sporadik kanserlerde te pe elli üçte somatik bialelik mutasyonlar, yani iki aleli birden etkileyen mutasyonlar çok yaygındır; özellikle akciğer, kolon ve meme karsinomlarında sıktır. 2. yol em de em iki amplifikasyonudur ve bazı sarkomlarda görülür: TP53 geni sağlam olsa bile artan em de em iki pe elli üçü sürekli yıkar ve işlevsiz bırakır. Bu, er be yolundaki doğrudan ve dolaylı kayıp ayrımının pe elli üçteki karşılığıdır. Pe elli üç kaybının sonucu genomik istikrarsızlık, yani mutasyonların ve kromozom değişikliklerinin artmış hızda birikmesi ve tümör gelişimini doğrudan ilerleten çoklu sürücü mutasyonların birikmesidir.
+@@ TP53 mutasyonları ve Li-Fraumeni sendromu
+p53 işlevi kanserde iki farklı yolla kaybolabilir. Sporadik kanserlerde TP53'te somatik bialelik mutasyonlar, yani iki aleli birden etkileyen mutasyonlar çok yaygındır; özellikle akciğer, kolon ve meme karsinomlarında sıktır. İkinci yol MDM2 amplifikasyonudur ve bazı sarkomlarda görülür: TP53 geni sağlam olsa bile artan MDM2 p53'ü sürekli yıkar ve işlevsiz bırakır. Bu, RB yolundaki doğrudan ve dolaylı kayıp ayrımının p53'teki karşılığıdır. p53 kaybının sonucu genomik istikrarsızlık, yani mutasyonların ve kromozom değişikliklerinin artmış hızda birikmesi ve tümör gelişimini doğrudan ilerleten çoklu sürücü mutasyonların birikmesidir.
 
 Burası önemli: Li Fraumeni sendromunda germ hattında bir mutant TP53 aleli kalıtılır.
-Herhangi bir dokuda 2. alelin somatik mutasyonuyla erken yaşta çoklu primer tümör gelişir.
+Herhangi bir dokuda ikinci alelin somatik mutasyonuyla erken yaşta çoklu primer tümör gelişir.
 Sendromda görülen tümörler sarkom, meme kanseri, lösemi, beyin tümörü ve böbreküstü bezinin korteksinden köken alan adrenal korteks karsinomudur.
-Bu sendrom, iki vuruş modelinin pe elli üçteki kalıtsal örneğidir; ailesel retinoblastomanın karşılığı gibi düşünebilirsiniz.
-Ancak bir farkı var: retinoblastomada tümör retinaya yoğunlaşırken, pe elli üç tüm dokularda koruyucu olduğu için Li Fraumeni sendromunda çok farklı organlarda çoklu primer tümör gelişir.
+Bu sendrom, iki vuruş modelinin p53'teki kalıtsal örneğidir; ailesel retinoblastomanın karşılığı gibi düşünebilirsiniz.
+Ancak bir farkı var: retinoblastomada tümör retinaya yoğunlaşırken, p53 tüm dokularda koruyucu olduğu için Li Fraumeni sendromunda çok farklı organlarda çoklu primer tümör gelişir.
 
-@@ Te ge ef beta sinyal yolu
-Transforme edici büyüme faktörü beta, normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü bir inhibitörüdür. Er be yolunda büyüme inhibitörü olarak adını andığımız te ge ef betanın mekanizması şöyledir: te ge ef beta reseptörüne bağlanır ve smad proteinleri aktive olur; fosforile smad iki ve smad üç, smad dört ile kompleks oluşturarak çekirdeğe girer. Çekirdekte pe on beş ve pe yirmi bir gibi CDK inhibitörlerinin transkripsiyonu artar; aynı anda mik ve CDK dört gibi büyümeyi teşvik eden genler baskılanır. Sonuç, G bir S geçişinde durma ve proliferasyonun baskılanmasıdır. Yani te ge ef beta iki yönden çalışır: freni artırır, gazı keser; ikisi de er beyi aktif tutmaya hizmet eder.
+@@ TGF-β sinyal yolu
+Transforme edici büyüme faktörü beta, normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü bir inhibitörüdür. RB yolunda büyüme inhibitörü olarak adını andığımız TGF-β'nın mekanizması şöyledir: TGF-β reseptörüne bağlanır ve SMAD proteinleri aktive olur; fosforile SMAD2 ve SMAD3, SMAD4 ile kompleks oluşturarak çekirdeğe girer. Çekirdekte p15 ve p21 gibi CDK inhibitörlerinin transkripsiyonu artar; aynı anda MYC ve CDK4 gibi büyümeyi teşvik eden genler baskılanır. Sonuç, G1/S geçişinde durma ve proliferasyonun baskılanmasıdır. Yani TGF-β iki yönden çalışır: freni artırır, gazı keser; ikisi de RB'yi aktif tutmaya hizmet eder.
 
-Burası önemli, bu mekanizma çıkmış sorularda doğrudan soruldu: reseptörüne bağlanarak CDK inhibitörlerinin transkripsiyonel aktivasyonuyla sonuçlanan olaylar dizisini başlatan molekül te ge ef betadır; pe elli üç, ras, mik ya da ce erb be iki değildir.
-Pe elli üç de CDK inhibitörü pe yirmi biri artırır ama bir reseptöre bağlanan dış ligand değildir.
-Yine burası önemli: smad proteinleri, smad dört dahil, te ge ef beta sinyalizasyonunda rol alır; hücre siklusu aktivasyonunda, temas inhibisyonunda ya da apoptoz inhibisyonunda değil.
+Burası önemli, bu mekanizma çıkmış sorularda doğrudan soruldu: reseptörüne bağlanarak CDK inhibitörlerinin transkripsiyonel aktivasyonuyla sonuçlanan olaylar dizisini başlatan molekül TGF-β'dır; p53, ras, MYC ya da c-erbB-2 değildir.
+p53 de CDK inhibitörü p21'i artırır ama bir reseptöre bağlanan dış ligand değildir.
+Yine burası önemli: SMAD proteinleri, SMAD4 dahil, TGF-β sinyalizasyonunda rol alır; hücre siklusu aktivasyonunda, temas inhibisyonunda ya da apoptoz inhibisyonunda değil.
 
-Birçok kanserde te ge ef beta sinyal yolu bileşenlerinde, reseptör ya da smad genlerinde mutasyonlar bulunur; örneğin pankreas ve kolon karsinomlarında te ge ef beta Tip 2 reseptörü ya da smad dört mutasyonla inaktive olabilir.
-Burası önemli, çıkmış sorularda soruldu: pankreas kanserlerinin tamamında te ge ef beta sinyal yolunun bileşenlerinden en az birinde mutasyon vardır; prostat, akciğer, meme ya da mide kanseri bu soruda doğru cevap değildir.
+Birçok kanserde TGF-β sinyal yolu bileşenlerinde, reseptör ya da SMAD genlerinde mutasyonlar bulunur; örneğin pankreas ve kolon karsinomlarında TGF-β Tip 2 reseptörü ya da SMAD4 mutasyonla inaktive olabilir.
+Burası önemli, çıkmış sorularda soruldu: pankreas kanserlerinin tamamında TGF-β sinyal yolunun bileşenlerinden en az birinde mutasyon vardır; prostat, akciğer, meme ya da mide kanseri bu soruda doğru cevap değildir.
 
-Burası önemli, te ge ef betanın iki yüzü vardır.
-Erken evrede te ge ef beta yolunun kaybı büyüme frenini kaldırır ve hücre proliferasyon baskısından kurtulur.
-İleri evrede ise te ge ef beta bazen tümör destekleyici olabilir: epitel mezenkimal geçişi, invazyon ve metastazı ve immün baskılayıcı bir mikroçevreyi destekler.
-Yani te ge ef beta yolu bağlam bağımlı olarak tümör baskılayıcı ya da tümör destekleyici davranabilir.
-Sınavda te ge ef beta her zaman tümör baskılayıcıdır ifadesi tuzaktır.
+Burası önemli, TGF-β'nın iki yüzü vardır.
+Erken evrede TGF-β yolunun kaybı büyüme frenini kaldırır ve hücre proliferasyon baskısından kurtulur.
+İleri evrede ise TGF-β bazen tümör destekleyici olabilir: epitel mezenkimal geçişi, invazyon ve metastazı ve immün baskılayıcı bir mikroçevreyi destekler.
+Yani TGF-β yolu bağlam bağımlı olarak tümör baskılayıcı ya da tümör destekleyici davranabilir.
+Sınavda TGF-β her zaman tümör baskılayıcıdır ifadesi tuzaktır.
 
-@@ E kadherin, merlin ve epitel mezenkimal geçiş
-Normal epitel hücreleri birbirine değdiğinde bölünmeyi durdurur; buna temas inhibisyonu denir. Bu sistemin iki önemli bileşeni e kadherin ve en ef ikidir. E kadherin, epitel hücrelerinde temel hücre hücre adezyon molekülüdür ve hücre polaritesi ile temas inhibisyonu için önemlidir. En ef iki geninin ürünü olan nörofibromin iki, diğer adıyla merlin, e kadherin sonrası temas inhibisyonu yolunda görev alır; e kadherin temas sinyalini başlatır, merlin bu sinyali hücre içinde iletir. Burası önemli: en ef iki kaybı nörofibromatozis tip ikiye yol açar ve bu hastalarda sinir kılıfı tümörleri ile beyin zarlarından köken alan meningiomlar gelişir.
+@@ E-kadherin, merlin ve epitel mezenkimal geçiş
+Normal epitel hücreleri birbirine değdiğinde bölünmeyi durdurur; buna temas inhibisyonu denir. Bu sistemin iki önemli bileşeni E-kadherin ve NF2'dir. E-kadherin, epitel hücrelerinde temel hücre hücre adezyon molekülüdür ve hücre polaritesi ile temas inhibisyonu için önemlidir. NF2 geninin ürünü olan nörofibromin 2, diğer adıyla merlin, E-kadherin sonrası temas inhibisyonu yolunda görev alır; E-kadherin temas sinyalini başlatır, merlin bu sinyali hücre içinde iletir. Burası önemli: NF2 kaybı nörofibromatozis tip 2'ye yol açar ve bu hastalarda sinir kılıfı tümörleri ile beyin zarlarından köken alan meningiomlar gelişir.
 
-Burası önemli: kanserde e kadherin kaybı, epitel mezenkimal geçişin kilit olayıdır.
+Burası önemli: kanserde E-kadherin kaybı, epitel mezenkimal geçişin kilit olayıdır.
 Epitel mezenkimal geçiş, epitel hücrelerinin adezyon ve polaritelerini yitirip hareketli mezenkimal özellik kazanmasıdır.
-E kadherin, sneyl ve tuist gibi transkripsiyon faktörleriyle baskılanır.
+E-kadherin, Snail ve Twist gibi transkripsiyon faktörleriyle baskılanır.
 Hücreler arası kohezyon azalır, tümör hücreleri birbirinden ayrılabilir ve çevre dokuya yayılır, yani invazyon artar.
-Böylece e kadherin kaybı hem temas inhibisyonunu kaldırarak proliferasyona, hem de hücreleri birbirinden koparak invazyona katkıda bulunur.
-Te ge ef betanın ileri evrede desteklediği epitel mezenkimal geçiş, hücre düzeyinde büyük ölçüde bu kayıp üzerinden işler.
+Böylece E-kadherin kaybı hem temas inhibisyonunu kaldırarak proliferasyona, hem de hücreleri birbirinden koparak invazyona katkıda bulunur.
+TGF-β'nın ileri evrede desteklediği epitel mezenkimal geçiş, hücre düzeyinde büyük ölçüde bu kayıp üzerinden işler.
 
-@@ A pe ce, beta katenin ve vint yolu
-A pe ce, yani adenomatöz polipozis koli proteini, sitoplazmik bir tümör baskılayıcı proteindir ve beta katenin yıkım kompleksinin parçasıdır. Hedefi olan beta kateninin hücrede iki görevi vardır. 1.'si, e kadherin ile birlikte hücre hücre adezyonunda yer alır. 2.'si, vint sinyal yolunda transkripsiyon kofaktörüdür. Vint ligandları reseptörlerine bağlandığında beta katenin yıkımı engellenir; yıkılmayan beta katenin çekirdeğe gider ve büyümeyi teşvik edici genleri aktive eder. Beta katenin, e kadherin ile a pe ce yolunu birbirine bağlayan ortak moleküldür. Burası önemli, çıkmış sorularda soruldu: temas inhibisyonunda rol alan molekül olarak a pe ce sorulmuştur; pe de ge ef, erb be bir, ras proteini ve mik ise büyümeyi teşvik eden sinyallerdir, temas inhibisyonunun bileşeni değildir.
+@@ APC, beta katenin ve WNT yolu
+APC, yani adenomatöz polipozis koli proteini, sitoplazmik bir tümör baskılayıcı proteindir ve beta katenin yıkım kompleksinin parçasıdır. Hedefi olan beta kateninin hücrede iki görevi vardır. 1.'si, E-kadherin ile birlikte hücre hücre adezyonunda yer alır. 2.'si, Wnt sinyal yolunda transkripsiyon kofaktörüdür. Wnt ligandları reseptörlerine bağlandığında beta katenin yıkımı engellenir; yıkılmayan beta katenin çekirdeğe gider ve büyümeyi teşvik edici genleri aktive eder. Beta katenin, E-kadherin ile APC yolunu birbirine bağlayan ortak moleküldür. Burası önemli, çıkmış sorularda soruldu: temas inhibisyonunda rol alan molekül olarak APC sorulmuştur; PDGF, ERBB1, ras proteini ve MYC ise büyümeyi teşvik eden sinyallerdir, temas inhibisyonunun bileşeni değildir.
 
-Beta katenin stabilitesini gösteren şekil aynı yolu üç hücrede karşılaştırır.
-Dinlenen hücrede vint yoktur; beta katenin a pe ceyi içeren makromoleküler yıkım kompleksine bağlanır ve parçalanır, hücre içi düzeyi düşük kalır ve proliferasyon olmaz.
-Vint ile uyarılan hücrede salgılanan vint molekülleri reseptöre bağlanınca yıkım kompleksi devre dışı kalır; sitoplazmik beta katenin yükselir, çekirdeğe geçer ve te ce efe bağlanır.
-Te ce ef, hücre çoğalmasında rol oynayan genleri aktive eden bir transkripsiyon faktörüdür ve proliferasyon olur.
-Te ce ef aslında te hücresi faktörü demektir; ama birçok hücre tipinde ifade edildiği için bu adlandırma yanıltıcıdır.
-Mutant a pe celi tümör hücresinde ise beta katenin yıkılamaz; burası önemli, hücre vint uyarısı yokken bile sürekli uyarılıyormuş gibi davranır ve anormal büyüme gösterir.
+Beta katenin stabilitesini gösteren şekil aynı yolu 3 hücrede karşılaştırır.
+Dinlenen hücrede Wnt yoktur; beta katenin APC'yi içeren makromoleküler yıkım kompleksine bağlanır ve parçalanır, hücre içi düzeyi düşük kalır ve proliferasyon olmaz.
+Wnt ile uyarılan hücrede salgılanan Wnt molekülleri reseptöre bağlanınca yıkım kompleksi devre dışı kalır; sitoplazmik beta katenin yükselir, çekirdeğe geçer ve TCF'ye bağlanır.
+TCF, hücre çoğalmasında rol oynayan genleri aktive eden bir transkripsiyon faktörüdür ve proliferasyon olur.
+TCF aslında T hücresi faktörü demektir; ama birçok hücre tipinde ifade edildiği için bu adlandırma yanıltıcıdır.
+Mutant APC'li tümör hücresinde ise beta katenin yıkılamaz; burası önemli, hücre Wnt uyarısı yokken bile sürekli uyarılıyormuş gibi davranır ve anormal büyüme gösterir.
 
-Normalde a pe ce, beta katenini fosforilasyon ve proteazomal yıkım için işaretler.
-A pe ce kaybında bu işaretleme yapılamaz, vint ligandı olmasa bile beta katenin birikir ve çekirdekte proliferasyonu destekleyen genleri aktive eder.
-Burası önemli: ailesel adenomatöz polipozis kolide germ hattı a pe ce mutasyonu vardır; çok sayıda adenom, yani glandüler epitelden köken alan benign neoplazm gelişir ve karsinom riski yüksektir.
-Sporadik kolon karsinomlarının da %70 ile seksen kadarında a pe ce mutasyonu bulunur.
-Yani a pe ce, kolon kanserinin hem kalıtsal hem sporadik formlarında merkezî tümör baskılayıcıdır.
+Normalde APC, beta katenini fosforilasyon ve proteazomal yıkım için işaretler.
+APC kaybında bu işaretleme yapılamaz, Wnt ligandı olmasa bile beta katenin birikir ve çekirdekte proliferasyonu destekleyen genleri aktive eder.
+Burası önemli: ailesel adenomatöz polipozis kolide germ hattı APC mutasyonu vardır; çok sayıda adenom, yani glandüler epitelden köken alan benign neoplazm gelişir ve karsinom riski yüksektir.
+Sporadik kolon karsinomlarının da %70 ile 80 kadarında APC mutasyonu bulunur.
+Yani APC, kolon kanserinin hem kalıtsal hem sporadik formlarında merkezî tümör baskılayıcıdır.
 
-Bu üç sistemin, yani te ge ef beta, e kadherin ve a pe ce ile vint yolunun ortak noktası, normalde büyümeyi baskılamaları ve doku mimarisini korumalarıdır; kanserde ise sıklıkla devre dışı kalırlar ya da tümör lehine yeniden kullanılırlar.
+Bu 3 sistemin, yani TGF-β, E-kadherin ve APC ile Wnt yolunun ortak noktası, normalde büyümeyi baskılamaları ve doku mimarisini korumalarıdır; kanserde ise sıklıkla devre dışı kalırlar ya da tümör lehine yeniden kullanılırlar.
 
-@@ Varburg etkisi
-Kanser hücresi yalnız büyüme frenlerini kaybetmez, enerji metabolizmasını da yeniden programlar. Normal hücre oksijen varlığında enerjisini mitokondriyal oksidatif fosforilasyonla, yani oksijen kullanarak yüksek verimle üretir. Tümör hücresi ise oksijen olsa bile aerobik glikoliz kullanır; buna Varburg etkisi denir. Glikozu laktata çevirir ve bu yolla ATP üretimi nispeten düşüktür. Dikkat edin, tanımdaki anahtar ifade oksijen varlığında bile glikolizdir; oksijensizlikte glikolize geçiş Varburg etkisi değildir.
+@@ Warburg etkisi
+Kanser hücresi yalnız büyüme frenlerini kaybetmez, enerji metabolizmasını da yeniden programlar. Normal hücre oksijen varlığında enerjisini mitokondriyal oksidatif fosforilasyonla, yani oksijen kullanarak yüksek verimle üretir. Tümör hücresi ise oksijen olsa bile aerobik glikoliz kullanır; buna Warburg etkisi denir. Glikozu laktata çevirir ve bu yolla ATP üretimi nispeten düşüktür. Dikkat edin, tanımdaki anahtar ifade oksijen varlığında bile glikolizdir; oksijensizlikte glikolize geçiş Warburg etkisi değildir.
 
 Peki bu verimsiz görünen yol neden avantajlıdır?
 Glikoliz ara ürünleri, nükleotid, amino asit ve lipit sentezi için karbon iskeleti sağlar.
 Hızla bölünen hücre her bölünmede genomunu, proteinlerini ve membranlarını ikiye katlamak zorundadır; asıl kısıtlayıcı ihtiyacı yalnız ATP değil, yapı taşıdır.
-Böylece Varburg etkisi tümörün anabolik ihtiyaçlarını karşılar: glikoz yakılıp tüketilmek yerine kısmen yeni hücre bileşenlerine dönüştürülür.
+Böylece Warburg etkisi tümörün anabolik ihtiyaçlarını karşılar: glikoz yakılıp tüketilmek yerine kısmen yeni hücre bileşenlerine dönüştürülür.
 
 Burası önemli, bu konu çıkmış sorularda kanser gelişimi açısından yanlış olan ifadeyi bulma şeklinde soruldu.
 Kanserde glikozun glikoliz yolunda yüksek verimle enerjiye dönüştürülmesinde artma olmaz; tersine, tümör hücresi düşük ATP verimli aerobik glikolizi seçer.
@@ -192,71 +192,71 @@ Buna karşılık apoptotik mekanizmaların işlevsel bozukluğu, oksijen ihtiyac
 Aynı soru başka bir sınavda, aşırı bölünmenin aşırı enerji ve oksijen ihtiyacını beraberinde getirdiği ifadesi yanlış kabul edilerek de soruldu.
 Buradaki mantık şudur: hızla bölünen tümör hücresinin amacı en fazla enerji değil, en fazla yapı taşıdır; bu yüzden oksijen varken bile oksijeni verimli kullanmayan glikolize yönelir.
 
-@@ Varburg etkisini yönlendiren onkogenler ve fe de ge pet
-Varburg metabolizması rastlantısal değildir; onkogenler ve tümör baskılayıcılar tarafından yönlendirilir. Ras ile pe i üç ka ve akt yolu, glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır ve lipogenez için mitokondriyal ara ürünlerin yönlendirilmesini teşvik eder. Mik, glikolitik ve glutaminolitik enzimlerin ekspresyonunu artırır; burası önemli, mikin ayırt edici metabolik özelliği glutamin bağımlılığını artırmasıdır. Te pe elli üç ise büyüme destekleyici metabolik genleri baskılar; yani normal pe elli üç Varburg metabolizmasına karşı bir frendir. Sonuçta onkogen aktivasyonu ile tümör baskılayıcı kaybı birlikte Varburg metabolizmasını sürdürülebilir hale getirir.
+@@ Warburg etkisini yönlendiren onkogenler ve FDG PET
+Warburg metabolizması rastlantısal değildir; onkogenler ve tümör baskılayıcılar tarafından yönlendirilir. Ras ile PI3K ve AKT yolu, glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır ve lipogenez için mitokondriyal ara ürünlerin yönlendirilmesini teşvik eder. MYC, glikolitik ve glutaminolitik enzimlerin ekspresyonunu artırır; burası önemli, MYC'nin ayırt edici metabolik özelliği glutamin bağımlılığını artırmasıdır. TP53 ise büyüme destekleyici metabolik genleri baskılar; yani normal p53 Warburg metabolizmasına karşı bir frendir. Sonuçta onkogen aktivasyonu ile tümör baskılayıcı kaybı birlikte Warburg metabolizmasını sürdürülebilir hale getirir.
 
 Metabolizma ve hücre büyümesini gösteren şekil, durgun ve büyüyen hücreyi yan yana koyar.
 Durgun hücre ATP üretimi için esas olarak Krebs döngüsüne güvenir, lipit ve amino asit katabolizmasından yararlanır; aç kaldığında yakıt sağlamak için otofaji, yani kendini yeme tetiklenir.
-Büyüyen hücrede, sağlıklı ya da tümör hücresi olsun, büyüme faktörü reseptör tirozin kinaza bağlanır; ras, pe i üç ka ve akt aktive olur ve hücre glikoz ile glutamin alımını önemli ölçüde artırır.
-Glikoz, glikoz altı fosfat üzerinden artmış glikolitik ara ürünlere dönüşür ve nükleotid ile amino asit sentezine gider.
+Büyüyen hücrede, sağlıklı ya da tümör hücresi olsun, büyüme faktörü reseptör tirozin kinaza bağlanır; ras, PI3K ve AKT aktive olur ve hücre glikoz ile glutamin alımını önemli ölçüde artırır.
+Glikoz, glikoz 6 fosfat üzerinden artmış glikolitik ara ürünlere dönüşür ve nükleotid ile amino asit sentezine gider.
 Fosfoenolpiruvatı piruvata çeviren piruvat kinaz basamağı düzenlenir ve piruvatın bir kısmı laktata döner.
-Mitokondriden çıkan sitrat lipogeneze, alfa ketoglutarat amino asit sentezine yönelir; glutamin ise glutamat ve alfa ketoglutarat üzerinden Krebs döngüsüne girer ve mik glutamin kullanımını artırır.
-Şekilde yıldızla işaretli moleküller, yani reseptör tirozin kinaz, ras, pe i üç ka, akt ve mik, kanserde sık mutasyona uğrayan gen ürünleridir; onkojenik işlev kazanımı bu yolları kontrolsüz büyümeye yönlendirir.
+Mitokondriden çıkan sitrat lipogeneze, alfa ketoglutarat amino asit sentezine yönelir; glutamin ise glutamat ve alfa ketoglutarat üzerinden Krebs döngüsüne girer ve MYC glutamin kullanımını artırır.
+Şekilde yıldızla işaretli moleküller, yani reseptör tirozin kinaz, ras, PI3K, AKT ve MYC, kanserde sık mutasyona uğrayan gen ürünleridir; onkojenik işlev kazanımı bu yolları kontrolsüz büyümeye yönlendirir.
 
-Varburg etkisi doğrudan bir klinik araca dönüşmüştür: florodeoksiglukoz pozitron emisyon tomografisi, kısaca ef de ge pet.
-Bu yöntemde flor on sekiz ile işaretlenmiş bir glikoz analoğu kullanılır ve glikoz alımı artmış dokular görüntülenir.
-Tümörler genellikle yüksek ef de ge tutulumu gösterir; tutulum özellikle yüksek proliferatif tümörlerde belirgindir.
-Ef de ge pet primer tümör ve metastaz taramasında ve tedavi yanıtının izlenmesinde kullanılır.
-Yani bu görüntüleme tümörün Varburg metabolizmasını, artmış glikoz alımını gösterir.
+Warburg etkisi doğrudan bir klinik araca dönüşmüştür: florodeoksiglukoz pozitron emisyon tomografisi, kısaca FDG PET.
+Bu yöntemde flor 18 ile işaretlenmiş bir glikoz analoğu kullanılır ve glikoz alımı artmış dokular görüntülenir.
+Tümörler genellikle yüksek FDG tutulumu gösterir; tutulum özellikle yüksek proliferatif tümörlerde belirgindir.
+FDG PET primer tümör ve metastaz taramasında ve tedavi yanıtının izlenmesinde kullanılır.
+Yani bu görüntüleme tümörün Warburg metabolizmasını, artmış glikoz alımını gösterir.
 
 @@ Otofaji ve tedavi direnci
-Otofaji, şiddetli besin eksikliğinde hücrenin kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlamasıdır. Normalde hücre sağkalımının adaptif bir yanıtıdır. Kanserde rolü evreye göre değişir. Erken evrede zarar görmüş organellerin temizlenmesiyle tümör baskılayıcı olabilir. Geç evrede ise besin ve hipoksi stresinde tümör hücrelerinin canlı kalmasını sağlayabilir ve tedaviye dirençli, uykuda hücre popülasyonları oluşturabilir. Burası önemli: otofaji de te ge ef beta gibi iki yüzlüdür; yalnız koruyucu değildir, geç evrede tümörü kemoterapi ve radyoterapiye karşı korur.
+Otofaji, şiddetli besin eksikliğinde hücrenin kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlamasıdır. Normalde hücre sağkalımının adaptif bir yanıtıdır. Kanserde rolü evreye göre değişir. Erken evrede zarar görmüş organellerin temizlenmesiyle tümör baskılayıcı olabilir. Geç evrede ise besin ve hipoksi stresinde tümör hücrelerinin canlı kalmasını sağlayabilir ve tedaviye dirençli, uykuda hücre popülasyonları oluşturabilir. Burası önemli: otofaji de TGF-β gibi iki yüzlüdür; yalnız koruyucu değildir, geç evrede tümörü kemoterapi ve radyoterapiye karşı korur.
 
 Kemoterapi ve radyoterapi, tümör hücresinde DNA hasarı, metabolik stres ve hipoksi oluşturur.
 Bazı tümör hücreleri otofajiyi aktive ederek bu strese dayanır, proliferasyonu yavaşlatıp uykuda kalır; bölünmeyen hücre birçok tedaviye daha az duyarlıdır.
 Klinik önemi şudur: bu uykuda hücreler tedavi sonrası nükslerde, yani hastalığın yeniden ortaya çıkmasında rol oynayabilir, çünkü daha sonra yeniden çoğalabilirler.
 Otofajiyi baskılayan inhibitörler ya da artıran indükleyiciler, yani otofaji modülatörleri, gelecekte kombinasyon tedavilerinde yer alabilir.
 
-@@ İ de ha mutasyonları ve onkometabolit
-İzositrat dehidrogenaz, Krebs döngüsünün bir enzimidir ve normalde izositratı alfa ketoglutarata çevirir. Onkojenik i de ha mutasyonlarında enzimin aktif bölgesinde spesifik bir amino asit değişimi olur. Normal izositrattan alfa ketoglutarata dönüşüm kaybolur ve enzim bunun yerine iki hidroksiglutarat üretir. Yani mutasyon enzimi yalnız kapatmaz, ona yeni ve zararlı bir işlev kazandırır. İki hidroksiglutarat, kanser gelişimini destekleyen bir onkometabolittir.
+@@ IDH mutasyonları ve onkometabolit
+İzositrat dehidrogenaz, Krebs döngüsünün bir enzimidir ve normalde izositratı alfa ketoglutarata çevirir. Onkojenik IDH mutasyonlarında enzimin aktif bölgesinde spesifik bir amino asit değişimi olur. Normal izositrattan alfa ketoglutarata dönüşüm kaybolur ve enzim bunun yerine 2-hidroksiglutarat üretir. Yani mutasyon enzimi yalnız kapatmaz, ona yeni ve zararlı bir işlev kazandırır. 2-hidroksiglutarat, kanser gelişimini destekleyen bir onkometabolittir.
 
-Burası önemli: iki hidroksiglutaratın en önemli hedefi tet iki gibi DNA demetilasyon enzimleridir.
-Tet iki, tet metilsitozin dioksigenaz ikidir.
-İki hidroksiglutarat tet ikiyi inhibe eder; tet iki kaybıyla DNA metilasyonu artar, geniş çaplı DNA ve histon metilasyon değişiklikleri gelişir ve onkojenik gen ekspresyon değişiklikleri oluşur.
-Şekilde bu yol, mitokondrideki mutant i de hadan çekirdekteki gen ifadesine kadar izlenir ve sonuç belirli hücre tiplerinde hücresel dönüşümün teşvik edilmesidir.
+Burası önemli: 2-hidroksiglutaratın en önemli hedefi TET2 gibi DNA demetilasyon enzimleridir.
+TET2, tet metilsitozin dioksigenaz 2'dir.
+2-hidroksiglutarat TET2'yi inhibe eder; TET2 kaybıyla DNA metilasyonu artar, geniş çaplı DNA ve histon metilasyon değişiklikleri gelişir ve onkojenik gen ekspresyon değişiklikleri oluşur.
+Şekilde bu yol, mitokondrideki mutant IDH'den çekirdekteki gen ifadesine kadar izlenir ve sonuç belirli hücre tiplerinde hücresel dönüşümün teşvik edilmesidir.
 Bu, tümör metabolizmasının epigenetik yeniden programlamaya bağlandığı noktadır: bir metabolit, gen ifadesini doğrudan değiştirir.
 
-İ de ha mutasyonları belirli tümörlerde yoğunlaşır: düşük ve orta dereceli gliomlar, bazı akut miyeloid lösemi alt tipleri, bazı kolanjiyokarsinomlar ve sarkomlar.
-Bu alt tipler homojen i de ha mutasyonu taşır ve belirgin bir metabolik ve epigenetik imza gösterir.
-Tedavide mutant i de hayı spesifik olarak inhibe eden ilaçlar geliştirilmiştir; özellikle akut miyeloid lösemide onaylanmış ajanlar vardır, örneğin i de ha bir için ivosidenib, i de ha iki için enasidenib.
+IDH mutasyonları belirli tümörlerde yoğunlaşır: düşük ve orta dereceli gliomlar, bazı akut miyeloid lösemi alt tipleri, bazı kolanjiyokarsinomlar ve sarkomlar.
+Bu alt tipler homojen IDH mutasyonu taşır ve belirgin bir metabolik ve epigenetik imza gösterir.
+Tedavide mutant IDH'yi spesifik olarak inhibe eden ilaçlar geliştirilmiştir; özellikle akut miyeloid lösemide onaylanmış ajanlar vardır, örneğin IDH1 için ivosidenib, IDH2 için enasidenib.
 Bu ilaçlar yalnız mutant enzimi hedefler; metabolik bir değişikliğin doğrudan tedavi hedefi olabildiğini gösterir.
 
 @@ Sürekli anjiyogenez
-Katı tümörler büyüyebilmek için oksijen ve besin taşıyacak yeni damar oluşumuna ihtiyaç duyar. Anjiyogenezin ana tetikleyicisi hipoksidir. Tümör büyüdükçe hücreler oksijensiz kalır; hipoksi, hipoksi indüklenebilir faktör bir alfayı, kısaca hif bir alfayı stabilize eder. Hif bir alfa, vasküler endotelyal büyüme faktörü, yani ve e ge ef transkripsiyonunu artırır ve ve e ge ef var olan damarlardan yeni filizlerin oluşmasını uyarır. Burası önemli: hipoksi, hif bir alfa stabilizasyonu ve ve e ge ef artışı ekseni tümör anjiyogenezinin merkezî tetikleyicisidir.
+Katı tümörler büyüyebilmek için oksijen ve besin taşıyacak yeni damar oluşumuna ihtiyaç duyar. Anjiyogenezin ana tetikleyicisi hipoksidir. Tümör büyüdükçe hücreler oksijensiz kalır; hipoksi, hipoksi indüklenebilir faktör 1 alfayı, kısaca HIF-1α'yı stabilize eder. HIF-1α, vasküler endotelyal büyüme faktörü, yani VEGF transkripsiyonunu artırır ve VEGF var olan damarlardan yeni filizlerin oluşmasını uyarır. Burası önemli: hipoksi, HIF-1α stabilizasyonu ve VEGF artışı ekseni tümör anjiyogenezinin merkezî tetikleyicisidir.
 
 Anjiyogenezi tümörün genetik değişiklikleri de yönlendirir.
-Ras ve mik gibi onkogenler ve e ge ef ile diğer anjiyojenik faktörleri artırır.
-Burası önemli: tümör baskılayıcı TP53, anti anjiyojenik bir faktör olan trombospondin birin üretimini artırır ve ve e ge efi baskılar.
-Bu, pe elli üçün hücre döngüsünü durdurma, apoptoz ve metabolik fren işlevlerine eklenen bir başka koruyucu rolüdür.
-Pe elli üç kaybolduğunda trombospondin bir azalır, ve e ge ef üzerindeki baskı kalkar ve onkogen aktivasyonu da eklenince denge belirgin biçimde anjiyogenez lehine döner.
+Ras ve MYC gibi onkogenler VEGF ile diğer anjiyojenik faktörleri artırır.
+Burası önemli: tümör baskılayıcı TP53, anti anjiyojenik bir faktör olan trombospondin 1'in üretimini artırır ve VEGF'yi baskılar.
+Bu, p53'ün hücre döngüsünü durdurma, apoptoz ve metabolik fren işlevlerine eklenen bir başka koruyucu rolüdür.
+p53 kaybolduğunda trombospondin 1 azalır, VEGF üzerindeki baskı kalkar ve onkogen aktivasyonu da eklenince denge belirgin biçimde anjiyogenez lehine döner.
 
 Tümörde oluşan yeni damarlar normal damarlara benzemez; sızıntılı, düzensiz ve yapısal olarak anormaldir.
 Bu damarlar tümöre oksijen ve besin sağlar, ayrıca metastatik hücrelerin dolaşıma girmesini kolaylaştırır.
 Yani anjiyogenez yalnız büyüme için değil, metastaz için de gereklidir.
-Tümör mikroçevresinin hücreleri de sürece katılır: tümörle ilişkili makrofajlar ve e ge ef ile fibroblast büyüme faktörü, yani ef ge ef gibi faktörler üreterek anjiyogenezi destekler.
+Tümör mikroçevresinin hücreleri de sürece katılır: tümörle ilişkili makrofajlar VEGF ile fibroblast büyüme faktörü, yani FGF gibi faktörler üreterek anjiyogenezi destekler.
 
 @@ Anti anjiyojen tedavi ve sınırları
-Burası önemli: bevasizumab, ve e ge efi nötralize eden bir monoklonal antikordur ve anjiyogenezin merkezî faktörünü doğrudan hedefler. Kolorektal, akciğer ve böbrek hücreli karsinom gibi tümörlerde kombinasyon tedavilerinin parçası olarak kullanılır. Tümör büyümesini yavaşlatabilir ve yaşam süresini genellikle yıllar değil aylar düzeyinde uzatır. Sınırları da vardır: tümörler başka anjiyojen faktörlerine geçebilir ve daha invaziv bir fenotipe kayabilir.
+Burası önemli: bevasizumab, VEGF'yi nötralize eden bir monoklonal antikordur ve anjiyogenezin merkezî faktörünü doğrudan hedefler. Kolorektal, akciğer ve böbrek hücreli karsinom gibi tümörlerde kombinasyon tedavilerinin parçası olarak kullanılır. Tümör büyümesini yavaşlatabilir ve yaşam süresini genellikle yıllar değil aylar düzeyinde uzatır. Sınırları da vardır: tümörler başka anjiyojen faktörlerine geçebilir ve daha invaziv bir fenotipe kayabilir.
 
 Genel olarak anti anjiyojen tedaviler, onkogene hedefli tedaviler kadar dramatik sonuç vermez.
-Olası mekanizmalar üçtür: anjiyojenik faktör değişimi, yani ve e ge ef baskılanınca başka faktörlere geçilmesi; stromal adaptasyon, yani tümör çevresindeki stromanın yeni koşullara uyum sağlaması; ve tümör hücrelerinin damar bağımlılığını azaltan adaptasyonlar.
+Olası mekanizmalar 3'tür: anjiyojenik faktör değişimi, yani VEGF baskılanınca başka faktörlere geçilmesi; stromal adaptasyon, yani tümör çevresindeki stromanın yeni koşullara uyum sağlaması; ve tümör hücrelerinin damar bağımlılığını azaltan adaptasyonlar.
 Klinik ders şudur: tek hedefli yaklaşımlar yerine çoklu yolakları aynı anda hedefleyen kombinasyon stratejileri gerekebilir.
-Anti ve e ge ef tedaviler kısmi ve geçici fayda sağlar.
+Anti VEGF tedaviler kısmi ve geçici fayda sağlar.
 
 @@ Ağ düzeyinde kanser ve özet
-Bu yollar ayrı ayrı anlatılsa da kanser hücresinde birbirinden bağımsız çalışmaz; bu yüzden kanser tedavisi tek yolak yerine ağ düzeyinde anlayış gerektirir. Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı şekilde bağlıdır. Örneğin TP53 hem hücre döngüsünü, hem metabolizmayı, hem de anjiyogenezi etkiler; ras ile pe i üç ka ve akt hem proliferasyonu hem glikoz alımını yönlendirir. Hedefe yönelik ilaç geliştirme iki düzeyde düşünülür: mutant i de ha gibi bireysel sürücü mutasyonlar ve er be, TP53, pe i üç ka ile akt ve anjiyogenez gibi birçok yolun kesiştiği ortak nodal noktalar. Bu moleküler bilgiler, yeni biyobelirteçlerin ve tedavi hedeflerinin keşfine temel oluşturur.
+Bu yollar ayrı ayrı anlatılsa da kanser hücresinde birbirinden bağımsız çalışmaz; bu yüzden kanser tedavisi tek yolak yerine ağ düzeyinde anlayış gerektirir. Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı şekilde bağlıdır. Örneğin TP53 hem hücre döngüsünü, hem metabolizmayı, hem de anjiyogenezi etkiler; ras ile PI3K ve AKT hem proliferasyonu hem glikoz alımını yönlendirir. Hedefe yönelik ilaç geliştirme iki düzeyde düşünülür: mutant IDH gibi bireysel sürücü mutasyonlar ve RB, TP53, PI3K ile AKT ve anjiyogenez gibi birçok yolun kesiştiği ortak nodal noktalar. Bu moleküler bilgiler, yeni biyobelirteçlerin ve tedavi hedeflerinin keşfine temel oluşturur.
 
-Özetle, er be yolu G bir S kontrol noktasının merkezindedir ve siklin D, CDK dört, pe on altı, er be ve e iki ef eksenindeki değişikliklerle birçok kanserde doğrudan ya da dolaylı kaybolur.
-Te pe elli üç stres sensörüdür ve kaybı genomik instabilite ile çoklu sürücü mutasyon birikimine yol açar.
-Te ge ef beta, e kadherin ve a pe ce ile vint yolu büyümeyi baskılar ve doku mimarisini korur.
-Tümör metabolizması Varburg etkisiyle anabolik ihtiyaçları karşılar, iki hidroksiglutarat gibi onkometabolitlerle epigenetik yeniden programlama yapar; anjiyogenez ise büyüme ve metastaz için vazgeçilmezdir.
+Özetle, RB yolu G1/S kontrol noktasının merkezindedir ve siklin D, CDK4, p16, RB ve E2F eksenindeki değişikliklerle birçok kanserde doğrudan ya da dolaylı kaybolur.
+TP53 stres sensörüdür ve kaybı genomik instabilite ile çoklu sürücü mutasyon birikimine yol açar.
+TGF-β, E-kadherin ve APC ile Wnt yolu büyümeyi baskılar ve doku mimarisini korur.
+Tümör metabolizması Warburg etkisiyle anabolik ihtiyaçları karşılar, 2-hidroksiglutarat gibi onkometabolitlerle epigenetik yeniden programlama yapar; anjiyogenez ise büyüme ve metastaz için vazgeçilmezdir.

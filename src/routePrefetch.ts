@@ -18,6 +18,7 @@ const LOADERS: Partial<Record<AppRoute, () => Promise<unknown>>> = {
   en_onemliler: () => import('./components/spots/ExamSpotsView'),
   sinav_calisma: () => import('./components/SinavCalismaView'),
   patoloji_checkup: () => import('./components/checkup/PatolojiCheckUp'),
+  genetik_checkup: () => import('./components/checkup/GenetikCheckUp'),
   bitirdiklerim: () => import('./components/takip/BitirdiklerimView'),
   summaries: () => import('./components/LectureSummariesView'),
   kazanimlar: () => import('./components/KazanimlarView'),

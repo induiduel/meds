@@ -3,12 +3,12 @@
 @@ Normal glomerül ve filtrasyon bariyeri
 Nefrotik sendromu anlamak için önce sağlam bir glomerülün haritasını kafamıza yerleştirmemiz gerekiyor. Glomerül, afferent arteriolden giren kanın bir kılcal yumakta süzüldüğü ve bu süzüntünün idrar boşluğuna geçtiği yapıdır. Kan damar kutbundan afferent arteriolle girer, efferent arteriolle çıkar. Arada kılcal halkalar bulunur; bunların lümeni fenestralı, yani pencereli bir endotelle döşelidir ve içlerinde eritrositler görülür. Kılcal halkaları ortada mezangium destekler; mezangium, mezangiyal hücreler ve mezangiyal matriksten oluşur. Kılcalların idrar tarafını ise ayak uzantılı hücreler, yani visseral epitel ya da podositler sarar. Bowman kapsülünü parietal epitel döşer ve iki epitel arasında idrar boşluğu kalır. İdrar kutbunda bu boşluk proksimal tübüle açılır.
 
-Yani glomerülün dört hücresel bileşeni vardır: endotel, mezangiyal hücre, visseral epitel ya da podosit ve parietal epitel.
+Yani glomerülün 4 hücresel bileşeni vardır: endotel, mezangiyal hücre, visseral epitel ya da podosit ve parietal epitel.
 Ders şemasındaki rat glomerülü elektron mikrografında kılcal lümen, endotel, epitel hücresi ve mezangium aynı kesitte birlikte görülür.
 Bu haritayı önemsiyoruz, çünkü birikintileri adlandırırken hep bu katmanları kullanacağız: endotelin altına yerleşen birikintiye subendotelyal, epitelin, yani podositin altına yerleşene subepitelyal, mezangiuma yerleşene mezangiyal birikinti diyeceğiz.
 
 Şimdi kılcal duvara yakından bakalım.
-Kandan idrara geçen süzüntü üç katmanlı bir filtrasyon bariyerini aşar.
+Kandan idrara geçen süzüntü 3 katmanlı bir filtrasyon bariyerini aşar.
 Kan tarafında fenestralı endotel vardır; pencereli yapı sıvının kolayca geçmesini sağlar.
 Ortada glomerüler bazal membran uzanır; bu, endotel ile podosit arasındaki ortak bazal membrandır.
 İdrar tarafında ise bazal membrana tutunan podosit ayak uzantıları bulunur; bu uzantıların içinde sinyal ve hücre iskeleti proteinlerinden oluşan bir kompleks yer alır.
@@ -17,34 +17,34 @@ Nefrin ve podosin gibi yarık diyafram proteinleri, biraz sonra göreceğimiz mi
 Bu bariyerin herhangi bir katmanı bozulursa plazma proteinleri idrara kaçar.
 
 @@ Glomerüler hasarın mekanizmaları
-Glomerüler hastalıkların önemli bir bölümü antikor aracılı hasarla oluşur ve burada üç temel mekanizma tanımlanır. 1.'si dolaşımdaki immün komplekslerin birikmesidir. Antijen ve antikor kanda birleşir, kompleks glomerül kılcalına taşınır ve ya endotel ile bazal membran arasına, yani subendotelyal alana, ya da bazal membran ile podosit arasına, yani subepitelyal alana yerleşir. Biriken antikor ve kompleman, immünfloresan incelemede bazal membran boyunca kesintili kümeler hâlinde, tanecikli, yani granüler bir boyanma deseni verir. Granüler desen, immün kompleks hastalığının immünfloresandaki imzasıdır.
+Glomerüler hastalıkların önemli bir bölümü antikor aracılı hasarla oluşur ve burada 3 temel mekanizma tanımlanır. 1.'si dolaşımdaki immün komplekslerin birikmesidir. Antijen ve antikor kanda birleşir, kompleks glomerül kılcalına taşınır ve ya endotel ile bazal membran arasına, yani subendotelyal alana, ya da bazal membran ile podosit arasına, yani subepitelyal alana yerleşir. Biriken antikor ve kompleman, immünfloresan incelemede bazal membran boyunca kesintili kümeler hâlinde, tanecikli, yani granüler bir boyanma deseni verir. Granüler desen, immün kompleks hastalığının immünfloresandaki imzasıdır.
 
-2. mekanizma in situ, yani yerinde immün kompleks oluşumudur.
+İkinci mekanizma in situ, yani yerinde immün kompleks oluşumudur.
 Burada antikor, glomerüle dışarıdan gelip yerleşmiş bir antijene ya da glomerülün kendi antijenine bağlanır; kompleks yerinde, çoğunlukla subepitelyal bölgede kurulur.
 İmmünfloresan deseni yine granülerdir.
-3. mekanizmada antikorlar doğrudan glomerüler bazal membranın yapısal antijenine bağlanır; bu anti glomerüler bazal membran antikorları, membran boyunca kesintisiz, doğrusal, yani lineer bir boyanma deseni oluşturur.
+Üçüncü mekanizmada antikorlar doğrudan glomerüler bazal membranın yapısal antijenine bağlanır; bu anti glomerüler bazal membran antikorları, membran boyunca kesintisiz, doğrusal, yani lineer bir boyanma deseni oluşturur.
 Kısacası, granüler desen immün kompleksi, lineer desen ise anti glomerüler bazal membran antikorunu düşündürür.
 
-Mekanizma hangisi olursa olsun sonuç iki ana kola ayrılır.
+Mekanizma hangisi olursa olsun sonuç 2 ana kola ayrılır.
 Bir kolda glomerüler geçirgenlik artar ve proteinüri gelişir.
 Diğer kolda kompleman aktive olur, lökositler çekilir ve inflamatuvar hasar ortaya çıkar.
 Geçirgenlik kolu ağır basarsa tablo nefrotik yöne, inflamasyon kolu ağır basarsa nefritik yöne kayar; çoğu hastalıkta ikisi değişen oranlarda birliktedir.
-Bundan sonraki her hastalıkta kendinize üç soru sorun arkadaşlar: hasar hangi katmanda, immünfloresan deseni ne ve geçirgenlik mi yoksa inflamasyon mu ağır basıyor?
+Bundan sonraki her hastalıkta kendinize 3 soru sorun arkadaşlar: hasar hangi katmanda, immünfloresan deseni ne ve geçirgenlik mi yoksa inflamasyon mu ağır basıyor?
 
 @@ Böbrek hastalıklarının klinik sendromları
-Böbrek hastalıkları klinikte birkaç ana sendrom hâlinde karşımıza çıkar ve ders tablosu bunları başlıca bulguları ve örnek hastalıklarıyla birlikte karşılaştırır. Glomerüler sendromlar iki uçta toplanır. Nefrotik sendromun başlıca bulguları proteinüri, hipoalbüminemi, hiperlipidemi ve ödemdir; primer böbrek hastalıklarından minimal değişiklik hastalığı ve membranöz nefropati, sistemik hastalıklardan ise diyabet buna örnektir. Nefritik sendromda ise hematüri, hafif proteinüri, böbrek yetmezliği ve hipertansiyon görülür; primer örnekleri postenfeksiyöz glomerulonefrit, membranoproliferatif glomerulonefrit Tip 1 ve hızlı ilerleyen glomerulonefrittir, sistemik örneği sistemik lupus eritematozustur.
+Böbrek hastalıkları klinikte birkaç ana sendrom hâlinde karşımıza çıkar ve ders tablosu bunları başlıca bulguları ve örnek hastalıklarıyla birlikte karşılaştırır. Glomerüler sendromlar 2 uçta toplanır. Nefrotik sendromun başlıca bulguları proteinüri, hipoalbüminemi, hiperlipidemi ve ödemdir; primer böbrek hastalıklarından minimal değişiklik hastalığı ve membranöz nefropati, sistemik hastalıklardan ise diyabet buna örnektir. Nefritik sendromda ise hematüri, hafif proteinüri, böbrek yetmezliği ve hipertansiyon görülür; primer örnekleri postenfeksiyöz glomerulonefrit, membranoproliferatif glomerulonefrit Tip 1 ve hızlı ilerleyen glomerulonefrittir, sistemik örneği sistemik lupus eritematozustur.
 
-Dikkat edin, proteinüri iki sendromda da bulunabilir; fark, nefrotik uçta proteinürinin ağır ve baskın olması, nefritik uçta ise hafif kalması ve öne çıkan bulgunun hematüri olmasıdır.
+Dikkat edin, proteinüri 2 sendromda da bulunabilir; fark, nefrotik uçta proteinürinin ağır ve baskın olması, nefritik uçta ise hafif kalması ve öne çıkan bulgunun hematüri olmasıdır.
 Membranoproliferatif glomerulonefrit Tip 1 tabloda nefritik örnekler arasında yer alır; ama nefrotik bulgular da verebildiği için bu derste nefrotik boyutuyla ayrıca inceleyeceğiz.
 
-Tablonun 2. yarısı, başlangıç hızına göre ayrılan iki böbrek yetmezliği sendromunu gösterir.
+Tablonun ikinci yarısı, başlangıç hızına göre ayrılan 2 böbrek yetmezliği sendromunu gösterir.
 Akut böbrek hasarı ani başlangıçlı böbrek yetmezliği ve oligüri ya da anüriyle seyreder; örnekleri akut tübüler hasar ve trombotik mikroanjiyopatidir.
 Kronik böbrek hastalığı ise progresif böbrek yetmezliğidir ve ileri evrede üremi tablosuna, yani azot artıklarının birikmesine varır; örnekleri kronik glomerüler ya da tübülointerstisyel hastalık ve nefrosklerozdur.
-Tablo bunlara ek olarak böbrek hastalıklarının iki önemli klinik bulgusunu daha anar: hipertansiyon ve sekonder hiperparatiroidi.
+Tablo bunlara ek olarak böbrek hastalıklarının 2 önemli klinik bulgusunu daha anar: hipertansiyon ve sekonder hiperparatiroidi.
 Kronik glomerüler hastalığın kronik böbrek hastalığı nedenleri arasında yer alması, kalıcı proteinüriyle seyreden nefrotik hastalıkların sonunda üremiye varabileceğini hatırlatır.
 
 @@ Nefrotik sendromun tanımı
-Nefrotik sendrom, glomerüler geçirgenliğin artmasına bağlı bir protein kaybı sendromudur; temelinde inflamasyon değil, filtrasyon bariyerinin sızdırması vardır. Burası önemli, sendromun bileşenleri ve eşik değerleri sınavda sayısal olarak sorulur. 1.'si ağır proteinüridir: erişkinde günde üç virgül beş gram ya da daha fazla protein kaybı. 2.'si hipoalbüminemidir: serum albümininin desilitrede üç gramın altına düşmesi. 3.'sü vücudun yaygın bölgelerini tutan generalize ödemdir. 4.'sü kanda lipid ve lipoprotein düzeylerinin arttığı hiperlipidemi, 5.'si ise idrarla lipid atılması, yani lipidüridir. Lipidüri en sık unutulan bileşendir. Bu bileşenler birbirinden bağımsız değildir; proteinüri zincirin ilk halkasıdır, diğerleri büyük ölçüde onun sonucudur.
+Nefrotik sendrom, glomerüler geçirgenliğin artmasına bağlı bir protein kaybı sendromudur; temelinde inflamasyon değil, filtrasyon bariyerinin sızdırması vardır. Burası önemli, sendromun bileşenleri ve eşik değerleri sınavda sayısal olarak sorulur. 1.'si ağır proteinüridir: erişkinde günde 3,5 gram ya da daha fazla protein kaybı. 2.'si hipoalbüminemidir: serum albümininin desilitrede 3 gramın altına düşmesi. 3.'sü vücudun yaygın bölgelerini tutan generalize ödemdir. 4.'sü kanda lipid ve lipoprotein düzeylerinin arttığı hiperlipidemi, 5.'si ise idrarla lipid atılması, yani lipidüridir. Lipidüri en sık unutulan bileşendir. Bu bileşenler birbirinden bağımsız değildir; proteinüri zincirin ilk halkasıdır, diğerleri büyük ölçüde onun sonucudur.
 
 @@ Nefrotik sendromun patofizyolojisi
 Şimdi bu zinciri halka halka kuralım. Ağır proteinüri, glomerüler filtrasyon bariyerinin, yani endotel, bazal membran ve podosit ile yarık diyafram düzeninin bozulmasından kaynaklanır; normalde süzülmeyen plazma proteinleri idrara geçer. Burası önemli, çıkmış bir soruda nefrotik sendromdaki proteinüriye hangi durumların yol açtığı soruldu: doğru cevap podosit hasarı ve nefrin yapısındaki bozukluktu. Mezangiyal hücre proliferasyonu ve kresent, yani hilal oluşumu ise nefrotik proteinürinin nedeni olarak sayılmaz; bunlar daha çok inflamatuvar, nefritik hasarın bulgularıdır. Kaybedilen proteinler içinde özellikle albümin öne çıkar; kayıp sürekli olduğu ve karşılanamadığı için serum albümini düşer ve hipoalbüminemi gelişir.
@@ -56,40 +56,40 @@ Albümin düşünce plazma kolloid ozmotik basıncı azalır, damar içinde sıv
 Dikkat edin, nefrotik ödemi başlatan olay protein kaybıdır; nefritik sendromdaki hipertansiyon ve böbrek yetmezliği tablosundan farklı bir mekanizmadır.
 
 Burası önemli, nefrotik sendroma bağlı asitin niteliği de çıkmış sorularda soruldu.
-Nefrotik asit düşük proteinli bir sıvıdır: asit sıvısının protein içeriği desilitrede iki virgül beş gramın altındadır ve serum ile asit arasındaki albümin farkı, yani serum asit albümin gradiyenti, desilitrede bir virgül bir gramın altında kalır.
+Nefrotik asit düşük proteinli bir sıvıdır: asit sıvısının protein içeriği desilitrede 2,5 gramın altındadır ve serum ile asit arasındaki albümin farkı, yani serum asit albümin gradiyenti, desilitrede 1,1 gramın altında kalır.
 Bu, sıvının basınç artışından değil, onkotik basınç düşüşünden kaynaklandığıyla uyumludur.
 
-Lipid bileşenleri iki ayrı yerde oluşur.
-Kandaki hiperlipidemi iki mekanizmanın toplamıdır: karaciğerde lipoprotein sentezi artar ve lipid katabolizması azalır, böylece dolaşımdaki lipidler temizlenemez.
+Lipid bileşenleri 2 ayrı yerde oluşur.
+Kandaki hiperlipidemi 2 mekanizmanın toplamıdır: karaciğerde lipoprotein sentezi artar ve lipid katabolizması azalır, böylece dolaşımdaki lipidler temizlenemez.
 İdrardaki lipidüri ise doğrudan glomerüle bağlıdır: glomerüler bazal membranın lipoproteinlere karşı geçirgenliği artar ve lipoproteinler idrara kaçar.
 Yani hiperlipidemi sistemik bir metabolik yanıt, lipidüri ise bariyer hasarının doğrudan göstergesidir.
-Bu mekanizma ileride iki morfolojik bulgunun da kaynağı olacak: minimal değişiklik hastalığında proksimal tübüllerdeki lipidler ve fokal segmental glomerulosklerozdaki köpüklü makrofajlar.
+Bu mekanizma ileride 2 morfolojik bulgunun da kaynağı olacak: minimal değişiklik hastalığında proksimal tübüllerdeki lipidler ve fokal segmental glomerulosklerozdaki köpüklü makrofajlar.
 
 Burası önemli, tübül işlevini ilgilendiren bir çıkmış soru daha var: kan şekeri yüksek olmadan idrarda şeker görülmesi, yani hiperglisemi olmaksızın renal glikozüri yapan durumlar arasında nefrotik sendrom sorulmuştur.
 Diyabetes mellitus, akromegali, Cushing sendromu ve gigantizmde glikozüri yüksek kan şekerine bağlıdır; nefrotik sendromda ise kan şekeri normal olabilir.
 
 @@ Nefrotik sendromun nedenleri
-Nefrotik sendrom nedenleri, hastalığın glomerülde mi başladığına yoksa sistemik bir hastalığın böbrek tutulumu mu olduğuna göre ikiye ayrılır. Primer glomerüler hastalıklar minimal değişiklik hastalığı, fokal segmental glomeruloskleroz, membranöz nefropati ve membranoproliferatif glomerulonefrittir. Sekonder nedenler ise diyabetik nefropati, amiloidoz, sistemik lupus eritematozus ile enfeksiyonlar, ilaçlar ve malignitelerdir. Bu derste odak primer glomerüler hastalıklardır; sekonder nedenler sonda kısaca özetlenecek. Unutmayın, bir hastalık adı iki grupta da görülebilir; örneğin membranöz nefropatinin hem primer hem sekonder formu vardır. Sınıflama, nedenin glomerülde mi sistemde mi olduğuna dayanır.
+Nefrotik sendrom nedenleri, hastalığın glomerülde mi başladığına yoksa sistemik bir hastalığın böbrek tutulumu mu olduğuna göre ikiye ayrılır. Primer glomerüler hastalıklar minimal değişiklik hastalığı, fokal segmental glomeruloskleroz, membranöz nefropati ve membranoproliferatif glomerulonefrittir. Sekonder nedenler ise diyabetik nefropati, amiloidoz, sistemik lupus eritematozus ile enfeksiyonlar, ilaçlar ve malignitelerdir. Bu derste odak primer glomerüler hastalıklardır; sekonder nedenler sonda kısaca özetlenecek. Unutmayın, bir hastalık adı 2 grupta da görülebilir; örneğin membranöz nefropatinin hem primer hem sekonder formu vardır. Sınıflama, nedenin glomerülde mi sistemde mi olduğuna dayanır.
 
 Burası önemli, primer ve sekonder ayrımı çıkmış sorularda birkaç kez soruldu.
-Henoh Şönlayn purpurası, diğer adıyla immünoglobulin A vasküliti nefriti, primer glomerül hastalığı değildir; sistemik bir vaskülit tablosuna sekonder olarak gelişen bir glomerulonefrittir.
+Henoch-Schönlein purpurası, diğer adıyla immünoglobulin A vasküliti nefriti, primer glomerül hastalığı değildir; sistemik bir vaskülit tablosuna sekonder olarak gelişen bir glomerulonefrittir.
 Buna karşılık minimal değişiklik hastalığı, fokal segmental glomeruloskleroz, yoğun birikim hastalığı ve membranöz glomerulonefrit primer glomerül hastalıkları arasında sayılır.
 Membranoproliferatif glomerulonefritin ise, birazdan göreceğimiz gibi, hepatit ve lupus gibi hastalıklara bağlı önemli bir sekonder formu vardır; bir soruda primer olmayan seçenek olarak da işaretlenmiştir.
 Bir diğer soruda da akut postenfeksiyöz glomerulonefritin, karakteristik olarak nefrotik sendroma yol açan primer glomerül lezyonları arasında yer almadığı soruldu; çünkü postenfeksiyöz glomerulonefrit nefritik sendromun örneğidir.
 
 Ders tablosu primer nedenlerin sıklığının yaşa göre belirgin biçimde değiştiğini gösterir.
-Burası önemli: çocukta minimal değişiklik hastalığı açık ara en sık nedendir ve olguların %65'ini oluşturur; fokal segmental glomeruloskleroz %10, membranöz nefropati %5, membranoproliferatif glomerulonefrit %10, immünoglobulin A nefropatisi ve diğerleri yüzde ondur.
-Erişkinde tablo tersine döner: fokal segmental glomeruloskleroz %35'le ilk sıradadır, membranöz nefropati %30'la 2. sıradadır, minimal değişiklik hastalığı %10'a iner, membranoproliferatif glomerulonefrit yine %10, immünoglobulin A nefropatisi ve diğerleri %15'tir.
+Burası önemli: çocukta minimal değişiklik hastalığı açık ara en sık nedendir ve olguların %65'ini oluşturur; fokal segmental glomeruloskleroz %10, membranöz nefropati %5, membranoproliferatif glomerulonefrit %10, immünoglobulin A nefropatisi ve diğerleri %10'dur.
+Erişkinde tablo tersine döner: fokal segmental glomeruloskleroz %35'le ilk sıradadır, membranöz nefropati %30'la ikinci sıradadır, minimal değişiklik hastalığı %10'a iner, membranoproliferatif glomerulonefrit yine %10, immünoglobulin A nefropatisi ve diğerleri %15'tir.
 Çıkmış sorularda hem çocukta en sık nedenin minimal değişiklik hastalığı, hem de erişkinde en sık primer nedenin fokal segmental glomeruloskleroz olduğu soruldu.
 Diyabetik nefropati gibi bir sistemik hastalık bu soruda primer neden sayılmaz.
 
-Tablonun 2. yarısı böbrek tutulumu olan sistemik hastalıkları sıralar.
+Tablonun ikinci yarısı böbrek tutulumu olan sistemik hastalıkları sıralar.
 Metabolik ve birikim hastalıkları olarak diyabet ve amiloidoz, otoimmün hastalık olarak sistemik lupus eritematozus yer alır.
 İlaç alımında altın, penisilamin ve eroin; enfeksiyonlarda sıtma, sifiliz, hepatit B ve HIV; malignitelerde karsinom ve melanom; çeşitli nedenler arasında ise arı sokması alerjisi ve kalıtsal nefrit sayılır.
 Bu yüzden nefrotik sendromlu bir hastada ilaç öyküsü, viral seroloji ve malignite taraması tanısal yaklaşımın parçasıdır.
 
 @@ Minimal değişiklik hastalığı: klinik profil ve patogenez
-Minimal değişiklik hastalığı çocuklarda nefrotik sendromun en sık nedenidir. En sık bir ile 7 yaş arasında görülür, ama her yaşta ortaya çıkabilir. Genellikle izole, yani saf bir nefrotik sendromdur; nefritik bulgular eşlik etmez ve böbrek fonksiyonu genellikle normaldir. Proteinüri seçicidir, yani idrarla kaybedilen protein ağırlıkla albümindir. Seçici proteinüri, bariyerin büyük proteinleri hâlâ tutabildiğini, yalnızca daha küçük albümini kaçırdığını gösterir; bu da hasarın sınırlı ve geri dönüşlü olduğuna işaret eder.
+Minimal değişiklik hastalığı çocuklarda nefrotik sendromun en sık nedenidir. En sık 1 ile 7 yaş arasında görülür, ama her yaşta ortaya çıkabilir. Genellikle izole, yani saf bir nefrotik sendromdur; nefritik bulgular eşlik etmez ve böbrek fonksiyonu genellikle normaldir. Proteinüri seçicidir, yani idrarla kaybedilen protein ağırlıkla albümindir. Seçici proteinüri, bariyerin büyük proteinleri hâlâ tutabildiğini, yalnızca daha küçük albümini kaçırdığını gösterir; bu da hasarın sınırlı ve geri dönüşlü olduğuna işaret eder.
 
 Patogenezde önde gelen hipotez podosit hasarıdır.
 Hasarlanan podositlerin ayak uzantıları birbirine kaynaşır, buna füzyon diyoruz; yarık diyafram düzeni bozulur ve glomerüler bazal membranın seçici geçirgenliği kaybolur.
@@ -103,7 +103,7 @@ Kesin mekanizma ise Robbins'e göre hâlâ belirsizdir.
 Geçirgenlik faktörü kavramı, glomerülde görülebilir bir birikinti olmadan da ağır proteinüri gelişebileceğini açıklar ve hastalığın mikroskopi bulgularının neden bu kadar sade olduğunun anahtarıdır.
 
 @@ Minimal değişiklik hastalığı: morfoloji
-Hastalık adını ışık mikroskopisindeki sade görünümden alır: glomerüller normal görünür, işte bu yüzden minimal değişiklik deriz. Polisakkarit ve glikoproteinleri vurgulayan pe a se boyasıyla bazal membranlar normal kalınlıktadır ve hücre proliferasyonu yoktur. İmmünfloresanda immünoglobulin ya da kompleman birikimi yoktur. Negatif immünfloresan, hasarın birikinti değil podosit kaynaklı olmasıyla uyumludur; granüler ya da lineer bir boyanma beklenmez.
+Hastalık adını ışık mikroskopisindeki sade görünümden alır: glomerüller normal görünür, işte bu yüzden minimal değişiklik deriz. Polisakkarit ve glikoproteinleri vurgulayan PAS boyasıyla bazal membranlar normal kalınlıktadır ve hücre proliferasyonu yoktur. İmmünfloresanda immünoglobulin ya da kompleman birikimi yoktur. Negatif immünfloresan, hasarın birikinti değil podosit kaynaklı olmasıyla uyumludur; granüler ya da lineer bir boyanma beklenmez.
 
 Tanıyı koyduran bulgu elektron mikroskopisindedir.
 Podosit ayak uzantılarının yaygın silinmesi, yani füzyonu izlenir ve elektron yoğun birikinti saptanmaz.
@@ -113,7 +113,7 @@ Tübüllerde de bir iz kalır: proksimal tübüllerde protein damlacıkları ve 
 Eski kaynaklarda bu lipid birikimi nedeniyle hastalığa lipoid nefroz da denmiştir.
 
 Burası önemli, bu morfoloji çıkmış sorularda defalarca vaka olarak soruldu.
-6 yaşında bir erkek çocukta yaygın ödem ve günde üç virgül beş gramın üzerinde proteinüri var; ışık mikroskopisinde ve immünfloresanda belirgin bulgu yok, elektron mikroskopisinde podositlerin ayak çıkıntıları silinmiş.
+6 yaşında bir erkek çocukta yaygın ödem ve günde 3,5 gramın üzerinde proteinüri var; ışık mikroskopisinde ve immünfloresanda belirgin bulgu yok, elektron mikroskopisinde podositlerin ayak çıkıntıları silinmiş.
 Akla gelmesi gereken tanı minimal değişiklik hastalığıdır; Alport sendromu, postenfeksiyöz glomerulonefrit, immünoglobulin A nefropatisi ya da membranöz nefropati değildir.
 Formülü aklınızda tutun: normal ışık mikroskopisi, negatif immünfloresan ve elektron mikroskopisinde yaygın ayak uzantısı silinmesi.
 
@@ -122,14 +122,14 @@ Bu tablo minimal değişiklik hastalığıdır ve biyopsinin ışık mikroskopis
 Diffüz hücre proliferasyonu, glomeruloskleroz, amiloid birikimi ya da kresentler beklenmez.
 
 Burası önemli, minimal değişiklik hastalığı için yanlış ifadeyi bulduran sorularda tuzak hep immünfloresandaydı.
-Kapiller duvar boyunca granüler immünoglobulin G ve ce üç birikimi ya da histopatolojide ce üç birikimi görülmesi yanlıştır, çünkü bu hastalıkta immünfloresan negatiftir.
+Kapiller duvar boyunca granüler immünoglobulin G ve C3 birikimi ya da histopatolojide C3 birikimi görülmesi yanlıştır, çünkü bu hastalıkta immünfloresan negatiftir.
 Buna karşılık çocukluk çağında en sık nefrotik sendrom nedeni olması, ışık mikroskopisinde glomerüllerin normal görünmesi, elektron mikroskopisinde yaygın ayak uzantısı silinmesi, hipertansiyonun seyrek, hiperlipideminin sık görülmesi ve steroid tedavisine iyi yanıt doğru ifadelerdir.
 
 @@ Minimal değişiklik hastalığı: klinik seyir
-Klinik başlangıç genellikle aksi hâlde sağlıklı bir çocukta ani gelişen nefrotik sendromdur ve proteinüri seçicidir. Prognoz çocuklarda çok iyidir; burası önemli, çocukların yüzde doksanından fazlası kortikosteroide yanıt verir. Steroid yanıtının bu kadar yüksek olması, hasarın yapısal bir skar değil podositte geri dönüşlü bir değişiklik olmasıyla uyumludur. Erişkinlerde ise yanıt daha yavaştır ve nüksler daha sıktır.
+Klinik başlangıç genellikle aksi hâlde sağlıklı bir çocukta ani gelişen nefrotik sendromdur ve proteinüri seçicidir. Prognoz çocuklarda çok iyidir; burası önemli, çocukların %90'ından fazlası kortikosteroide yanıt verir. Steroid yanıtının bu kadar yüksek olması, hasarın yapısal bir skar değil podositte geri dönüşlü bir değişiklik olmasıyla uyumludur. Erişkinlerde ise yanıt daha yavaştır ve nüksler daha sıktır.
 
 Ancak yanıt vermek iyileşmek demek değildir.
-Steroide yanıt veren çocukların %60 ile yetmişinden fazlasında tekrarlayan ataklar görülür; yani bu hastalıkta nüks kuraldır, istisna değildir.
+Steroide yanıt veren çocukların %60 ile 70'inden fazlasında tekrarlayan ataklar görülür; yani bu hastalıkta nüks kuraldır, istisna değildir.
 Her atak yeniden nefrotik tabloyla gelir, ama çoğu yine steroide yanıt verir.
 Küçük bir hasta grubunda ise hastalık fokal segmental glomeruloskleroza ilerler.
 Tekrarlayan ataklar ve özellikle steroid yanıtının kaybolması, altta skleroza giden bir sürecin işareti olabilir.
@@ -141,19 +141,19 @@ Fokal segmental glomeruloskleroz adını hasarın dağılımından alır. Fokal,
 Fokal segmental glomeruloskleroz tek bir hastalık değil, bir hasar paternidir; farklı nedenler aynı morfolojik son noktaya varır.
 Nefrotik sendromun sık bir nedenidir, özellikle erişkinlerde.
 Primer ve sekonder formları vardır.
-Primer, yani idiyopatik form tanımlanabilir bir neden olmadan gelişir ve Amerika Birleşik Devletleri'nde nefrotik sendromlu erişkinlerin yaklaşık yüzde otuzunu oluşturur.
+Primer, yani idiyopatik form tanımlanabilir bir neden olmadan gelişir ve Amerika Birleşik Devletleri'nde nefrotik sendromlu erişkinlerin yaklaşık %30'unu oluşturur.
 Bu yüzden bu patern saptandığında ilk iş, tablonun primer mi yoksa başka bir nedenin sonucu mu olduğunu araştırmaktır.
 
 Burası önemli, sekonder formlar sınavda eşleştirme olarak sorulur.
 İlk grup nefron kaybına adaptasyondur: obezite, tek böbrek ve kronik böbrek hastalığı; kalan nefronlar artan yükü karşılamaya çalışırken hasarlanır.
-2. grup enfeksiyonlardır ve burada HIV ilişkili nefropati yer alır.
-3. grup ilaçlardır: eroin ve bazı terapötik ajanlar.
+İkinci grup enfeksiyonlardır ve burada HIV ilişkili nefropati yer alır.
+Üçüncü grup ilaçlardır: eroin ve bazı terapötik ajanlar.
 Eroinin nefrotik sendromun sistemik nedenleri listesinde de bulunduğunu hatırlayın; bu patern o bağlantının morfolojik karşılığıdır.
-4. grup genetiktir: nefrin, podosin ve sitoskeletal proteinler gibi podosit proteinlerini kodlayan genlerde mutasyonlar.
+Dördüncü grup genetiktir: nefrin, podosin ve sitoskeletal proteinler gibi podosit proteinlerini kodlayan genlerde mutasyonlar.
 Minimal değişiklik hastalığında olası antikor hedefi olarak gördüğümüz nefrin ve podosin, burada yapısal bir kusur olarak karşımıza çıkar.
 
 @@ Fokal segmental glomeruloskleroz: patogenez
-Tüm formları birleştiren ortak tema podosit hasarı ve kaybıdır. Minimal değişiklik hastalığında podosit hasarlanıp toparlanabilirken, burada podosit kaybedilir ve geride skar kalır. Üç olası mekanizma tanımlanır. 1.'si henüz tanımlanmamış dolaşımdaki geçirgenlik faktörleridir. 2.'si podositin yapı ve işlev proteinlerindeki mutasyonlar, yani genetik bozukluklardır. 3.'sü nefron kaybı sonrası hiperfiltrasyondur. Podositin kaybedildiği bölgede bazal membran çıplak kalır ve bu segment zamanla skleroza gider.
+Tüm formları birleştiren ortak tema podosit hasarı ve kaybıdır. Minimal değişiklik hastalığında podosit hasarlanıp toparlanabilirken, burada podosit kaybedilir ve geride skar kalır. 3 olası mekanizma tanımlanır. 1.'si henüz tanımlanmamış dolaşımdaki geçirgenlik faktörleridir. 2.'si podositin yapı ve işlev proteinlerindeki mutasyonlar, yani genetik bozukluklardır. 3.'sü nefron kaybı sonrası hiperfiltrasyondur. Podositin kaybedildiği bölgede bazal membran çıplak kalır ve bu segment zamanla skleroza gider.
 
 Hiperfiltrasyon yolunu biraz açalım.
 Nefron kaybından sonra kalan glomerüller toplam filtrasyonu korumak için daha fazla çalışır ve bu glomerüllerde kapiller basınç artar.
@@ -164,7 +164,7 @@ Bu kendini besleyen bir döngüdür: sklerozla kaybedilen her glomerül, kalanla
 Segmental skleroz erken, global skleroz geç evre bulgusudur.
 
 @@ Fokal segmental glomeruloskleroz: morfoloji
-Işık mikroskopisinde fokal ve segmental skleroz odakları görülür. Bir skleroz odağında kılcal lümenler tıkanır, mezangiyal matriks artar, hiyalin materyal birikir ve sklerotik segmentte köpüklü, yani lipid yüklü makrofajlar bulunur. Köpüklü makrofajlar, nefrotik sendromdaki lipid fazlalığının ve lipoproteinlerin glomerülde tutulmasının morfolojik karşılığıdır. Ders şeklinde düşük büyütmede üç glomerülden yalnızca birinde skleroz görülür, bu fokal tutulumu gösterir; yüksek büyütmede ise tek bir glomerülün bir bölümünde skleroz ve hiyalin birikimi oklarla işaretlenir, bu da segmental tutulumu gösterir.
+Işık mikroskopisinde fokal ve segmental skleroz odakları görülür. Bir skleroz odağında kılcal lümenler tıkanır, mezangiyal matriks artar, hiyalin materyal birikir ve sklerotik segmentte köpüklü, yani lipid yüklü makrofajlar bulunur. Köpüklü makrofajlar, nefrotik sendromdaki lipid fazlalığının ve lipoproteinlerin glomerülde tutulmasının morfolojik karşılığıdır. Ders şeklinde düşük büyütmede 3 glomerülden yalnızca birinde skleroz görülür, bu fokal tutulumu gösterir; yüksek büyütmede ise tek bir glomerülün bir bölümünde skleroz ve hiyalin birikimi oklarla işaretlenir, bu da segmental tutulumu gösterir.
 
 İmmünfloresanda sklerotik segmentlerde immünoglobulin M ve kompleman kapanması, yani tuzaklanması görülür.
 Burası bir tuzaktır: bu bulgu nonspesifiktir, gerçek bir immün kompleks birikimi değil, hasarlı dokuda pasif tutulmadır.
@@ -179,29 +179,29 @@ Burası önemli, çıkmış sorularda segmental tutulumlu sklerotik alan bu hast
 Klinik tablo nefrotik sendromdur ve buna nefritik bulgular eşlik edebilir. Hematüri ve hipertansiyon minimal değişiklik hastalığına göre daha sıktır. Proteinüri seçici değildir; albüminin yanında daha büyük proteinler de kaçar. Bu, podosit kaybı ve sklerozun bariyerin boyut seçiciliğini de bozduğunu, hasarın daha kaba ve yapısal olduğunu gösterir. Nefrotik bir hastada hematüri, hipertansiyon ve seçici olmayan proteinüri varsa bu hastalık minimal değişiklik hastalığından daha olasıdır.
 
 Prognoz belirgin biçimde kötüdür.
-Burası önemli: kortikosteroidlere yanıt zayıftır ve hastaların en az %60'ı yıl içinde son dönem böbrek yetmezliğine ilerler.
+Burası önemli: kortikosteroidlere yanıt zayıftır ve hastaların en az %50'si 10 yıl içinde son dönem böbrek yetmezliğine ilerler.
 Böbrek naklinden sonra primer formun nakledilen böbrekte tekrarlaması sıktır ve bazen günler içinde ortaya çıkar.
 Nakil sonrası bu kadar hızlı tekrar, sorunun böbreğin kendisinde değil dolaşımdaki bir etkende olduğunu düşündürür; bu da dolaşan geçirgenlik faktörü hipotezini destekler.
 
 @@ Membranöz nefropati: tanım ve nedenler
-Membranöz nefropati, ilk iki hastalıktan farklı olarak bir immün kompleks hastalığıdır. Tanımı, glomerüler bazal membran boyunca subepitelyal antijen antikor komplekslerinin birikmesidir; kompleksler bazal membran ile podosit arasına yerleşir. En sık otuz ile 60 yaş arasındaki erişkinlerde görülür, yavaş, sinsi seyirli bir nefrotik sendrom yapar ve olguların çoğu idiyopatik, yani primer formdadır. Burası önemli, subepitelyal alanda immün birikim saptanması en olası hastalık sorulduğunda cevap membranöz glomerulonefrittir; ince bazal membran hastalığı, minimal değişiklik hastalığı, Alport sendromu ve fokal segmental glomerulosklerozda subepitelyal immün birikim beklenmez.
+Membranöz nefropati, ilk iki hastalıktan farklı olarak bir immün kompleks hastalığıdır. Tanımı, glomerüler bazal membran boyunca subepitelyal antijen antikor komplekslerinin birikmesidir; kompleksler bazal membran ile podosit arasına yerleşir. En sık 30 ile 60 yaş arasındaki erişkinlerde görülür, yavaş, sinsi seyirli bir nefrotik sendrom yapar ve olguların çoğu idiyopatik, yani primer formdadır. Burası önemli, subepitelyal alanda immün birikim saptanması en olası hastalık sorulduğunda cevap membranöz glomerulonefrittir; ince bazal membran hastalığı, minimal değişiklik hastalığı, Alport sendromu ve fokal segmental glomerulosklerozda subepitelyal immün birikim beklenmez.
 
 Primer membranöz nefropati olguların yaklaşık %80'i kadardır ve otoimmün bir hastalıktır: podosit antijenlerine karşı otoantikorlar gelişir.
-En sık hedef antijen, podosit yüzeyindeki fosfolipaz a iki reseptörüdür.
+En sık hedef antijen, podosit yüzeyindeki fosfolipaz A2 reseptörüdür.
 Hedef podositte olduğu için antikor podositin hemen altında antijenine bağlanır; bu, daha önce gördüğümüz in situ immün kompleks oluşumunun klasik örneğidir.
 
 Geri kalan olgular sekonder formdur ve antijen dışarıdan ya da başka bir hastalıktan gelir.
-Enfeksiyonlar arasında kronik hepatit B, sifiliz etkeni Treponema pallidum, Şistozoma türleri ve sıtma etkeni Plazmodyum türleri sayılır.
+Enfeksiyonlar arasında kronik hepatit B, sifiliz etkeni Treponema pallidum, Schistosoma türleri ve sıtma etkeni Plasmodium türleri sayılır.
 Kötü huylu tümörlerden karsinomlar ve kronik lenfositik lösemi, otoimmün hastalıklardan sistemik lupus eritematozus yer alır.
 İlaç ve ağır metaller arasında altın, cıva, penisilamin, kaptopril ve steroid olmayan antiinflamatuvar ilaçlar bulunur.
 Bu ajanlar sürekli antijen kaynağı oluşturarak subepitelyal birikime yol açar.
 Erişkinde bu tanı konduğunda, özellikle kronik hepatit B ve karsinom gibi sekonder nedenler mutlaka araştırılmalıdır; ilacın kesilmesi ya da altta yatan hastalığın tedavisi tabloyu etkileyebilir.
 
 @@ Membranöz nefropati: patogenez
-Patogenez otoimmün ve yerinde gelişen bir süreçtir. Podosit antijenlerine karşı immünoglobulin G sınıfından, çoğunlukla immünoglobulin G dört alt sınıfında otoantikorlar oluşur. Antikor, podosit yüzeyindeki antijenine bazal membranın dış yüzünde bağlanır ve in situ subepitelyal immün kompleks kurulur; yani dolaşımdan gelen hazır kompleks değil, yerinde oluşan komplekstir. Kompleksler bazal membran boyunca dizilir ve zamanla membranın yapısını değiştirir.
+Patogenez otoimmün ve yerinde gelişen bir süreçtir. Podosit antijenlerine karşı immünoglobulin G sınıfından, çoğunlukla immünoglobulin G4 alt sınıfında otoantikorlar oluşur. Antikor, podosit yüzeyindeki antijenine bazal membranın dış yüzünde bağlanır ve in situ subepitelyal immün kompleks kurulur; yani dolaşımdan gelen hazır kompleks değil, yerinde oluşan komplekstir. Kompleksler bazal membran boyunca dizilir ve zamanla membranın yapısını değiştirir.
 
 Komplekslerde kompleman bileşenleri birikmiştir, ama tablo şaşırtıcı biçimde inflamasyonsuzdur.
-Bunun nedeni, immünoglobulin G dördün klasik kompleman yolunu zayıf aktive etmesidir; bu yüzden kompleman aktivasyonunda alternatif ya da lektin yolun rolü düşünülür.
+Bunun nedeni, immünoglobulin G4'ün klasik kompleman yolunu zayıf aktive etmesidir; bu yüzden kompleman aktivasyonunda alternatif ya da lektin yolun rolü düşünülür.
 Sonuçta glomerüler geçirgenlik bariyeri bozulur ve az ya da hiç inflamasyon olmaksızın ağır proteinüri gelişir.
 Kompleksler bazal membranın idrar tarafında kaldığı için kandaki lökositlerle temas da sınırlıdır.
 Yani bu hastalıkta antikor aracılı hasarın geçirgenlik kolu baskındır ve tablo saf nefrotiktir.
@@ -211,7 +211,7 @@ Hastalık adını ışık mikroskopisindeki bazal membran kalınlaşmasından al
 
 Tanısal bulgu elektron mikroskopisindedir.
 Subepitelyal yerleşimli elektron yoğun birikintiler görülür ve bu birikintilerin arasından bazal membran materyali çıkıntılar oluşturur.
-Buna diken ve kubbe, İngilizce adıyla spayk end dom görünümü denir.
+Buna diken ve kubbe, İngilizce adıyla spike and dome görünümü denir.
 Diken, birikintiler arasından uzanan bazal membran materyalinin sivri uçlarıdır; kubbe ise dikenler arasında kalan subepitelyal birikintidir.
 Podositlerde de ayak uzantılarının yaygın silinmesi vardır.
 Ders şeklinde bazal membran, kapiller lümen, endotel, epitel hücresi ve idrar boşluğu birlikte işaretlenmiştir.
@@ -221,16 +221,16 @@ Ayak uzantısı silinmesi minimal değişiklik hastalığında, fokal segmental 
 Çıkmış sorularda subepitelyal alanda hörgüç benzeri immünoglobulin ve kompleman birikimi ifadesi de bu hastalığı anlatır, başka hastalıkların sorusunda çeldiricidir.
 
 @@ Membranöz nefropati: klinik ve prognoz
-Olguların çoğu nefrotik sendromla başvurur. Proteinüri seçici değildir ve kortikosteroidlere yanıt minimaldir. Tanı ve izlemde serumda anti fosfolipaz a iki reseptör antikorlarının saptanması kullanılır; antikor titresindeki değişiklik tedavi yanıtını yansıtabilir, titrenin düşmesi hastalık aktivitesinin azaldığını düşündürür. Bu seroloji, patogenezdeki otoantikorun doğrudan ölçülmesidir. Steroid yanıtını üç primer nedende karşılaştırırsak: minimal değişiklik hastalığında çocukların yüzde doksanından fazlası yanıt verir, fokal segmental glomerulosklerozda yanıt zayıftır, membranöz nefropatide minimaldir. Seçici proteinüri yalnız minimal değişiklik hastalığında vardır.
+Olguların çoğu nefrotik sendromla başvurur. Proteinüri seçici değildir ve kortikosteroidlere yanıt minimaldir. Tanı ve izlemde serumda anti fosfolipaz A2 reseptör antikorlarının saptanması kullanılır; antikor titresindeki değişiklik tedavi yanıtını yansıtabilir, titrenin düşmesi hastalık aktivitesinin azaldığını düşündürür. Bu seroloji, patogenezdeki otoantikorun doğrudan ölçülmesidir. Steroid yanıtını 3 primer nedende karşılaştırırsak: minimal değişiklik hastalığında çocukların %90'ından fazlası yanıt verir, fokal segmental glomerulosklerozda yanıt zayıftır, membranöz nefropatide minimaldir. Seçici proteinüri yalnız minimal değişiklik hastalığında vardır.
 
-Prognoz değişkendir ve hastalar üç yola ayrılır.
-Yaklaşık %42'yi ile 20 yıl içinde böbrek yetmezliğine ilerler.
-%10 ile otuzu spontan ya da kısmi remisyona girer.
+Prognoz değişkendir ve hastalar 3 yola ayrılır.
+Yaklaşık %40'ı 2 ile 20 yıl içinde böbrek yetmezliğine ilerler.
+%10 ile 30'u spontan ya da kısmi remisyona girer.
 Kalanlar ise kalıcı proteinüriyle stabil seyreder.
 Bu dağılım hastalığın yavaş doğasını yansıtır; yetmezliğe ilerleme bile yıllara yayılır ve kendiliğinden remisyon olasılığı onu fokal segmental glomerulosklerozdan ayıran önemli bir özelliktir.
 
 @@ Membranoproliferatif glomerulonefrit Tip 1
-Membranoproliferatif glomerulonefrit Tip 1, adını iki bileşenin birlikteliğinden alır: membranöz bileşen glomerüler bazal membran kalınlaşması, proliferatif bileşen ise mezangiyal hiperhücreliliktir. Çocuklarda ve genç erişkinlerde görülür ve nefrotik ile nefritik bulguların karışımıyla seyreder; tabloda nefritik örnekler arasında yer alması bu yüzdendir. Sekonder nedenleri hepatit B ve hepatit C gibi enfeksiyonlar, sistemik lupus eritematozus gibi otoimmün hastalıklar ve monoklonal gammopati, yani tek bir plazma hücresi klonundan aşırı immünoglobulin üretimi gibi durumlardır. İlk üç hastalıktan farklı olarak burada proliferasyon vardır ve bu, hematüri gibi nefritik bulguların eklenmesini açıklar.
+Membranoproliferatif glomerulonefrit Tip 1, adını iki bileşenin birlikteliğinden alır: membranöz bileşen glomerüler bazal membran kalınlaşması, proliferatif bileşen ise mezangiyal hiperhücreliliktir. Çocuklarda ve genç erişkinlerde görülür ve nefrotik ile nefritik bulguların karışımıyla seyreder; tabloda nefritik örnekler arasında yer alması bu yüzdendir. Sekonder nedenleri hepatit B ve hepatit C gibi enfeksiyonlar, sistemik lupus eritematozus gibi otoimmün hastalıklar ve monoklonal gammopati, yani tek bir plazma hücresi klonundan aşırı immünoglobulin üretimi gibi durumlardır. İlk 3 hastalıktan farklı olarak burada proliferasyon vardır ve bu, hematüri gibi nefritik bulguların eklenmesini açıklar.
 
 Işık mikroskopisinde glomerüller büyük ve hiperhücrelidir; mezangiyal ve endotel hücre proliferasyonu vardır ve yumak belirgin loblara ayrılarak lobüllü bir görünüm kazanır.
 Gümüş boyalı ders şeklinde mezangiyal hücre proliferasyonu, gümüşle siyah boyanan artmış mezangiyal matriks, segmental ayrılmayla bazal membran kalınlaşması, belirginleşmiş lobüler mimari ve periferik kılcalları çevreleyen hücrelerin şişmesiyle lökosit akışı, yani endokapiller proliferasyon birlikte görülür.
@@ -255,53 +255,53 @@ Seyir genellikle yavaş, kronik bir progresyondur ve çoğu hastada kalıcı pro
 Steroid, immünsüpresif ve antitrombosit tedavilerin faydası sınırlıdır.
 Sekonder form ise hepatit B ve C, kronik karaciğer hastalığı, sistemik lupus eritematozus ve kronik enfeksiyonlarla ilişkilidir ve altta yatan hastalığın tedavisiyle düzelebilir; bu yüzden her hastada sekonder neden aranması tedavi açısından belirleyicidir.
 
-@@ C üç glomerulopatisi: tanım ve patogenez
-Ce üç glomerulopatisi, immün kompleks değil kompleman sisteminin aşırı aktivasyonu ile ilişkili iki durumu kapsar: eski adı membranoproliferatif glomerulonefrit Tip 2 olan yoğun birikim hastalığı ve ce üç glomerulonefrit. Ortak özellikleri glomerülde kompleman ce üç birikimi olması, buna karşılık immünoglobulin G ya da ce bir ku ve ce dört gibi klasik yol bileşenlerinin bulunmamasıdır. Klinikte nefritik ve nefrotik karışık bir sendrom, yani proteinüri, hematüri ve hafif azotemi görülür. Tip birde immünoglobulin G ile kompleman birlikte birikir; ce üç glomerulopatisinde ise yalnız ce üç vardır. Bu, iki hastalığı ayıran temel ölçüttür.
+@@ C3 glomerulopatisi: tanım ve patogenez
+C3 glomerulopatisi, immün kompleks değil kompleman sisteminin aşırı aktivasyonu ile ilişkili iki durumu kapsar: eski adı membranoproliferatif glomerulonefrit Tip 2 olan yoğun birikim hastalığı ve C3 glomerulonefrit. Ortak özellikleri glomerülde kompleman C3 birikimi olması, buna karşılık immünoglobulin G ya da C1q ve C4 gibi klasik yol bileşenlerinin bulunmamasıdır. Klinikte nefritik ve nefrotik karışık bir sendrom, yani proteinüri, hematüri ve hafif azotemi görülür. Tip 1'de immünoglobulin G ile kompleman birlikte birikir; C3 glomerulopatisinde ise yalnız C3 vardır. Bu, iki hastalığı ayıran temel ölçüttür.
 
 Temel etken alternatif kompleman yolunun kontrolsüz aktivasyonudur.
 Alternatif yol antikora gerek duymadan çalışır; bu yüzden glomerülde immünoglobulin ya da klasik yol bileşenleri görülmez.
-Ce üç konvertazı, ce üçü yıkarak aktive eden ve normalde kısa ömürlü olan enzim kompleksidir.
-Burası önemli: ce üç nefritik faktör, bu konvertazı stabilize eden bir otoantikordur.
-Konvertaz yıkılamaz hâle gelir ve ce üç sürekli aktive olur.
+C3 konvertazı, C3'ü yıkarak aktive eden ve normalde kısa ömürlü olan enzim kompleksidir.
+Burası önemli: C3 nefritik faktör, bu konvertazı stabilize eden bir otoantikordur.
+Konvertaz yıkılamaz hâle gelir ve C3 sürekli aktive olur.
 Bu otoantikor glomerül antijenine değil kompleman enzimine bağlanır; bu yüzden glomerülde immünoglobulin birikimi beklenmez.
 
-2. neden grubu, alternatif yolu frenleyen kompleman düzenleyici proteinlerin bozukluklarıdır: Faktör H, Faktör I ve membran kofaktör proteini.
+İkinci neden grubu, alternatif yolu frenleyen kompleman düzenleyici proteinlerin bozukluklarıdır: Faktör H, Faktör I ve membran kofaktör proteini.
 Bu proteinlerde mutasyonlar ya da bunlara karşı otoantikorlar gelişebilir; yani hem kalıtsal hem edinsel bozukluk tabloya yol açar.
 Fren işlevi kaybolunca alternatif yol durdurulamaz.
-Sonuç sürekli ce üç aktivasyonu ve depolanması, glomerüler hasar ve proteinüridir.
-Bir benzetmeyle, ya gaz pedalı ce üç nefritik faktörle sabitlenir ya da fren bozulur; ikisi de aynı yere varır.
+Sonuç sürekli C3 aktivasyonu ve depolanması, glomerüler hasar ve proteinüridir.
+Bir benzetmeyle, ya gaz pedalı C3 nefritik faktörle sabitlenir ya da fren bozulur; ikisi de aynı yere varır.
 
-@@ C üç glomerulopatisi: morfoloji, klinik ve prognoz
-Işık mikroskopisinde görünüm Tip 1 membranoproliferatif glomerulonefrite benzer: hiperhücreli glomerüller, artmış mezangiyal matriks ve çift bazal membran, yani tramvay rayı görülür. Ayrımı immünfloresan sağlar: kılcal duvarlar ve mezangiumda güçlü ce üç boyanması vardır, immünoglobulin G, ce bir ku ve ce dört genellikle yoktur. Ders şeklinde bazal membran ve mezangiumda granüler ce üç be birikintileri görülür. Burası önemli, iki hastalık ışıkta aynı tramvay rayını verebilir; immünfloresanda immünoglobulin G ile kompleman varsa Tip 1 membranoproliferatif glomerulonefrit, immünoglobulin olmadan izole güçlü ce üç varsa ce üç glomerulopatisi düşünülür.
+@@ C3 glomerulopatisi: morfoloji, klinik ve prognoz
+Işık mikroskopisinde görünüm Tip 1 membranoproliferatif glomerulonefrite benzer: hiperhücreli glomerüller, artmış mezangiyal matriks ve çift bazal membran, yani tramvay rayı görülür. Ayrımı immünfloresan sağlar: kılcal duvarlar ve mezangiumda güçlü C3 boyanması vardır, immünoglobulin G, C1q ve C4 genellikle yoktur. Ders şeklinde bazal membran ve mezangiumda granüler C3b birikintileri görülür. Burası önemli, iki hastalık ışıkta aynı tramvay rayını verebilir; immünfloresanda immünoglobulin G ile kompleman varsa Tip 1 membranoproliferatif glomerulonefrit, immünoglobulin olmadan izole güçlü C3 varsa C3 glomerulopatisi düşünülür.
 
-İki alt tip elektron mikroskopisinde ayrılır.
-Ce üç glomerulonefritte mezangiyal ve subendotelyal yoğun birikintiler görülür; şekilde mezangiumda mumsu elektron yoğun birikintiler oklarla gösterilir.
+2 alt tip elektron mikroskopisinde ayrılır.
+C3 glomerulonefritte mezangiyal ve subendotelyal yoğun birikintiler görülür; şekilde mezangiumda mumsu elektron yoğun birikintiler oklarla gösterilir.
 Yoğun birikim hastalığında ise bazal membranın kendisi değişir; düzensiz, şerit benzeri, çok yoğun bir yapı kazanır ve bazal membran içinde yoğun, homojen birikintiler bulunur.
-Yani fark birikintinin konumundadır: ce üç glomerulonefritte birikintiler membranın dışında, yoğun birikim hastalığında membranın içindedir ve hastalık adını bu bulgudan alır.
+Yani fark birikintinin konumundadır: C3 glomerulonefritte birikintiler membranın dışında, yoğun birikim hastalığında membranın içindedir ve hastalık adını bu bulgudan alır.
 
-Yoğun birikim hastalığı daha çok çocuk ve genç erişkinlerde, ce üç glomerulonefrit ise erişkinlerde daha sık görülür.
-Klinikte değişken proteinüri ve hematüri vardır ve serum ce üç düzeyi genellikle düşüktür, çünkü kontrolsüz aktivasyonda ce üç sürekli tüketilir.
+Yoğun birikim hastalığı daha çok çocuk ve genç erişkinlerde, C3 glomerulonefrit ise erişkinlerde daha sık görülür.
+Klinikte değişken proteinüri ve hematüri vardır ve serum C3 düzeyi genellikle düşüktür, çünkü kontrolsüz aktivasyonda C3 sürekli tüketilir.
 Prognoz kötüdür: yaklaşık üçte biri son dönem böbrek yetmezliğine ilerler ve böbrek nakli sonrası tekrarlama oranı %85'e kadar çıkar.
 Nakilde yüksek tekrar, sorunun böbrekte değil dolaşımdaki kompleman sisteminde olmasıyla uyumludur.
-Nakilde tekrar eden iki hastalığı birlikte hatırlayın: primer fokal segmental glomeruloskleroz ve ce üç glomerulopatisi.
+Nakilde tekrar eden iki hastalığı birlikte hatırlayın: primer fokal segmental glomeruloskleroz ve C3 glomerulopatisi.
 
 @@ Sekonder nedenler: diyabet, amiloidoz ve lupus
-Sekonder nedenlerin en önemlilerinden biri diyabetik nefropatidir; tabloda nefrotik sendromun sistemik örneği olarak da diyabet verilmişti. İki temel glomerüler bulgusu vardır: glomerüler bazal membranın yaygın kalınlaşması ve mezangiumda nodül biçiminde skleroz alanları, yani nodüler glomeruloskleroz. Bu nodüllere Kimmelstil Vilson lezyonları denir ve diyabetik nefropatinin damgasıdır. Fokal segmental glomerulosklerozdaki segmental sklerozdan farklı olarak burada skleroz yuvarlak nodüller hâlinde, sistemik metabolik hastalığın sonucu olarak oluşur.
+Sekonder nedenlerin en önemlilerinden biri diyabetik nefropatidir; tabloda nefrotik sendromun sistemik örneği olarak da diyabet verilmişti. 2 temel glomerüler bulgusu vardır: glomerüler bazal membranın yaygın kalınlaşması ve mezangiumda nodül biçiminde skleroz alanları, yani nodüler glomeruloskleroz. Bu nodüllere Kimmelstiel-Wilson lezyonları denir ve diyabetik nefropatinin damgasıdır. Fokal segmental glomerulosklerozdaki segmental sklerozdan farklı olarak burada skleroz yuvarlak nodüller hâlinde, sistemik metabolik hastalığın sonucu olarak oluşur.
 
 Amiloid nefropatisinde glomerüler mezangium ve kapiller duvarlarda amiloid birikir; birikim filtrasyon bariyerinin yapısını bozar ve ağır proteinüriye yol açar.
-Sistemik lupus eritematozusta ise lupus nefriti sınıf beş, yani membranöz sınıf, nefrotik sendrom yapar; bu, lupusun membranöz nefropatinin sekonder nedenleri arasında sayılmasının karşılığıdır.
+Sistemik lupus eritematozusta ise lupus nefriti sınıf V, yani membranöz sınıf, nefrotik sendrom yapar; bu, lupusun membranöz nefropatinin sekonder nedenleri arasında sayılmasının karşılığıdır.
 Lupusun glomerülü farklı paternlerle tutabildiğini de unutmayın; nefritik sendromun sistemik örneği olarak da karşımıza çıkmıştı.
 Diyabet, amiloidoz ve lupus ayrıntılarıyla kendi derslerinde işlenir.
 
 @@ Klinik yaklaşım ve tanı
 Nefrotik sendromlu hastada klinik tablo, laboratuvar bileşenlerinin vücuttaki yansımalarından oluşur. Yaygın ödem, plazma kolloid ozmotik basıncının düşmesinin karşılığıdır. Burası önemli, hastalarda enfeksiyon eğilimi ve tromboemboli, yani damar içinde pıhtı oluşup emboli olarak taşınması eğilimi artar; bu da tablonun yalnız böbrekle sınırlı olmayıp sistemik komplikasyonları olduğunu gösterir. Hiperlipideminin klinik bulguları ise ksantom, yani deride lipid birikimiyle oluşan sarımsı lezyonlar ve lipemi, yani serumun lipidden zengin, bulanık görünümüdür.
 
-Tanıda dört basamak vardır.
+Tanıda 4 basamak vardır.
 Proteinüri düzeyi sendromu tanımlar, seçiciliği ise ayırıcı tanıya yön verir; seçici proteinüri minimal değişiklik hastalığını düşündürür.
 Böbrek fonksiyon testleri işlevin korunup korunmadığını gösterir.
-Serolojik incelemelerde otoantikorlara, örneğin anti fosfolipaz a iki reseptör antikoruna, kompleman düzeylerine, örneğin düşük ce üçe ve hepatit ile HIV gibi viral serolojilere bakılır.
+Serolojik incelemelerde otoantikorlara, örneğin anti fosfolipaz A2 reseptör antikoruna, kompleman düzeylerine, örneğin düşük C3'e ve hepatit ile HIV gibi viral serolojilere bakılır.
 Böbrek biyopsisi ise morfolojik sınıflama ve prognoz tayini için yapılır; ışık mikroskopisi, immünfloresan ve elektron mikroskopisi birlikte değerlendirilir.
 Tedavi, altta yatan nedenin tedavisi ile genel nefrotik sendrom yönetiminden oluşur.
 
 @@ Genel özet ve ayırıcı tanı
-Özetle, nefrotik sendrom ağır proteinüri, hipoalbüminemi, ödem, hiperlipidemi ve lipidüriyle tanımlanır. Minimal değişiklik hastalığı çocukta sıktır, steroide duyarlıdır, seçici proteinüri yapar ve biyopside birikinti yoktur. Fokal segmental glomeruloskleroz erişkinde sıktır, segmental skleroz gösterir, steroide dirençlidir ve prognozu kötüdür. Membranöz nefropati orta ileri yaş erişkinde subepitelyal birikinti, diken kubbe görünümü ve anti fosfolipaz a iki reseptör antikoruyla tanınır, prognozu değişkendir. Membranoproliferatif glomerulonefrit ve ce üç glomerulopatisi nefrotik ve nefritik karışık sendrom ve kompleman düzensizliğiyle seyreder; tip birde subendotelyal birikinti ve immünoglobulin G, ce üç glomerulopatisinde izole ce üç vardır. Sekonder nedenlerde ise diyabet, amiloidoz ve lupus öne çıkar.
+Özetle, nefrotik sendrom ağır proteinüri, hipoalbüminemi, ödem, hiperlipidemi ve lipidüriyle tanımlanır. Minimal değişiklik hastalığı çocukta sıktır, steroide duyarlıdır, seçici proteinüri yapar ve biyopside birikinti yoktur. Fokal segmental glomeruloskleroz erişkinde sıktır, segmental skleroz gösterir, steroide dirençlidir ve prognozu kötüdür. Membranöz nefropati orta ileri yaş erişkinde subepitelyal birikinti, diken kubbe görünümü ve anti fosfolipaz A2 reseptör antikoruyla tanınır, prognozu değişkendir. Membranoproliferatif glomerulonefrit ve C3 glomerulopatisi nefrotik ve nefritik karışık sendrom ve kompleman düzensizliğiyle seyreder; tip 1'de subendotelyal birikinti ve immünoglobulin G, C3 glomerulopatisinde izole C3 vardır. Sekonder nedenlerde ise diyabet, amiloidoz ve lupus öne çıkar.

@@ -528,22 +528,19 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
                 )}
               </>
             )}
-            {!cokDers && bt.asistan && asistanDersVar(kod) && (
-              <button type="button" className="on-hero-asistan" onClick={() => asistanAc(kod)}>
-                <span className="on-hero-asistan-i"><Headphones aria-hidden /></span>
-                <span>
-                  <b>Sesli sınav asistanıyla çalış{asistanSureHaritasi.get(kod) ? ` (~${dk(asistanSureHaritasi.get(kod)!)} dk)` : ''}</b>
-                  <small>En önemli noktaları kısaca anlatır, soru sorar, yanlışını açıklar · tam ekran</small>
-                </span>
-                <ChevronRight aria-hidden />
-              </button>
-            )}
             {!cokDers && (
-              <button type="button" className="on-hero-asistan is-cozucu" onClick={() => cozucuyuAc(kod)}>
-                <span className="on-hero-asistan-i"><Headphones aria-hidden /></span>
-                <span><b>Bu dersin sorularını sesli çöz</b><small>Çıkmış ve örnek sorular karışık · ipucu, yanlışı ele, çözümü dinle · tam ekran</small></span>
-                <ChevronRight aria-hidden />
-              </button>
+              <div className="on-hero-eylem">
+                {bt.asistan && asistanDersVar(kod) && (
+                  <button type="button" className="on-eylem is-ana" onClick={() => asistanAc(kod)}
+                    title="En önemli noktaları kısaca anlatır, soru sorar, yanlışını açıklar · tam ekran">
+                    <Headphones aria-hidden />Sesli asistanla çalış{asistanSureHaritasi.get(kod) ? <small>~{dk(asistanSureHaritasi.get(kod)!)} dk</small> : null}
+                  </button>
+                )}
+                <button type="button" className="on-eylem" onClick={() => cozucuyuAc(kod)}
+                  title="Çıkmış ve örnek sorular karışık · ipucu, yanlışı ele, çözümü dinle · tam ekran">
+                  <Headphones aria-hidden />Soruları sesli çöz
+                </button>
+              </div>
             )}
             {kod === HEPSI && <p className="on-hero-not">Süzgeç seçilmediğinde yalnız 90–100 partı görünür. Diğer partlar için süzgeçten puan seç.</p>}
           </header>

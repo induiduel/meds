@@ -499,8 +499,28 @@ function fingerprint(): string {
 
 let autoBackupRunning = false;
 let rerun = false;
+/** Gönderim olmadıysa (zayıf ağ, sunucu yanıtsız) 15 sn → 30 sn → … en çok 5 dk arayla yeniden denenir; çevrimdışıyken
+ *  'online' olayı ve tarayıcının arka plan eşitlemesi (sw.js 'sync' → MEDSORU_BACKGROUND_SYNC) tetikler. */
+let retryCount = 0;
+let retryTimer: number | undefined;
+function scheduleRetry() {
+  if (typeof window === 'undefined') return;
+  if (retryTimer) clearTimeout(retryTimer);
+  const ms = Math.min(300_000, 15_000 * 2 ** retryCount++);
+  retryTimer = window.setTimeout(() => { retryTimer = undefined; void autoBackupIfChanged(); }, ms);
+  requestBackgroundSync();
+}
+/** Bağlantı gelince tarayıcı sekme kapalı olsa bile uygulamaya haber versin (destek varsa) */
+function requestBackgroundSync() {
+  try {
+    void navigator.serviceWorker?.ready.then((reg: any) => reg.sync?.register('medsoru-sync')).catch(() => {});
+  } catch { /* desteklenmiyor */ }
+}
 async function autoBackupIfChanged(force = false): Promise<void> {
-  if (getNetState() === 'offline') return;
+  if (getNetState() === 'offline') {
+    if (hasDirtyKv()) requestBackgroundSync();
+    return;
+  }
   if (autoBackupRunning) {
     rerun = true; // gönderim sürerken gelen değişiklik kaybolmasın
     return;
@@ -510,7 +530,10 @@ async function autoBackupIfChanged(force = false): Promise<void> {
   autoBackupRunning = true;
   try {
     const r = await backupUserDataToDatabase();
-    if (r.success) lastBackedUpFingerprint = fingerprint();
+    if (r.success) {
+      lastBackedUpFingerprint = fingerprint();
+      retryCount = 0;
+    } else scheduleRetry();
   } finally {
     autoBackupRunning = false;
   }
@@ -558,7 +581,20 @@ export function installUserDataAutoBackup(): void {
     if (document.visibilityState === 'hidden') void autoBackupIfChanged();
     else void pullFromServer();
   });
-  window.addEventListener('online', () => void autoBackupIfChanged());
+  window.addEventListener('online', () => { retryCount = 0; void autoBackupIfChanged(); });
+  // sw.js arka plan eşitlemesi (bağlantı geldi): bekleyen ilerleme hemen gider
+  navigator.serviceWorker?.addEventListener?.('message', (e: MessageEvent) => {
+    if (e.data?.type === 'MEDSORU_BACKGROUND_SYNC') void autoBackupIfChanged();
+  });
+  // Ağ durumu (net.ts) zayıf/çevrimdışıdan çevrimiçine dönünce de
+  void import('./net').then(({ onNetChange, getNetState: ns }) => {
+    let once = ns();
+    onNetChange(() => {
+      const simdi = ns();
+      if (once !== 'online' && simdi === 'online') { retryCount = 0; void autoBackupIfChanged(); }
+      once = simdi;
+    });
+  });
   window.setInterval(() => {
     if (document.visibilityState === 'visible') void autoBackupIfChanged();
   }, 2 * 60 * 1000);

@@ -20,8 +20,14 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_learn_(progress|done|recent|layout|mode|toc|zoom|social|review|sessions)(_v1)?$/,
   /^medsoru_learn_feedback_local_v1$/,
   /^medsoru_learn_tour_(library|lesson)_v1$/,
+  /^medsoru_learn_attempts_v1$/,
+  /^medsoru_learn_(sort|view)$/,
+  /^medsoru_lesson_day_mode$/,
   // Canlı ders oynatma listesi ve tekrar tercihi
-  /^medsoru_canli_ders_(liste|tekrar|varsayilan_ses)_v1$/,
+  /^medsoru_canli_ders_(liste|tekrar|varsayilan_ses|konum|vurgu|tur_ders|tur_liste)_v1$/,
+  /^medsoru_canli_ders_(hiz|gorunum|tam_yazi)$/,
+  // Etkinlik günlüğü: girilen sayfalar, süre, kalınan yer (etkinlikGunlugu.ts)
+  /^medsoru_(etkinlik|son_konum)_v1$/,
   // Yıldızlı paragraflar (tekrar listesi) ve WhatsApp günlük tekrar tercihleri
   /^medsoru_yildizli_paragraflar(_v1)?$/,
   /^medsoru_whatsapp_prefs_v1$/,
@@ -43,6 +49,10 @@ const SYNC_PATTERNS: RegExp[] = [
   // Sınav Çalışması: kazanım başına çözülen sorular
   /^medsoru_sinav_calisma_(v2|son_v1)$/,
   /^medsoru_checkup_v1$/,
+  /^medsoru_genetik_checkup_(v1|answers_v1)$/,
+  /^medsoru_genetik_anlatici_(adim|soru|tamam)_v1$/,
+  /^medsoru_(test_kriter_v1|pdf_sel_v1|saglik_sina_v1|quickadd_draft_v1|nav_recent_v1)$/,
+  /^medsoru_(cikmis_gorunum|pool_segment|saglik_gorunum|saglik_yogunluk|r12_reader)$/,
   /^medsoru_calisma_takip_v1$/,
   /^medsoru_ornek_(k1_cevap|k1_ders|k1_social|havuz_social|sekme)$/,
   /^cikmis_quiz$/,
@@ -95,7 +105,7 @@ const BUNDLE_KEYS = new Set([
 /** Sık yazılan sayaçlar: profile girer ama anlık gönderim tetiklemez (dönemsel/arka plana geçişte gider). */
 const QUIET_KEYS = new Set(['medsoru_study_seconds_v1', 'medsoru_activity_v1']);
 /** Ders okurken her adımda/harekette yazılan profil anahtarları: damgalanır ama dönemsel gönderime kalır. */
-const QUIET_PROFILE = /^medsoru_(learn_(progress|done|zoom|review)(_v1)?|calisma_takip_v1)$/;
+const QUIET_PROFILE = /^medsoru_(learn_(progress|done|zoom|review|attempts)(_v1)?|calisma_takip_v1|canli_ders_konum_v1|genetik_anlatici_adim_v1|etkinlik_v1|son_konum_v1)$/;
 
 const META_KEY = 'medsoru_kv_meta_v1'; // anahtar → son yerel değişiklik zamanı
 const DIRTY_KEY = 'medsoru_kv_dirty_v1'; // henüz sunucuya gitmemiş anahtarlar
@@ -197,6 +207,9 @@ export function installProfileKvWatcher(): void {
     }
   };
 }
+
+/** Henüz sunucuya gitmemiş profil anahtarı sayısı (çevrimdışı merkezi eşitleme kartı) */
+export const dirtyKvCount = (): number => Object.keys(readObj(DIRTY_KEY)).length;
 
 /** Profil verisi değişince haber ver (`immediate`: birkaç saniye içinde gönder; değilse dönemsel gönderime bırak). */
 export function onProfileDataChange(fn: (immediate: boolean) => void): () => void {

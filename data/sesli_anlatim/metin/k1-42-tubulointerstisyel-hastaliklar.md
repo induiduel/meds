@@ -1,12 +1,12 @@
 # Tübülointerstisyel Hastalıklar
 
-@@ Genel çerçeve: üç ana grup ve ortak bulgular
-Böbrek parankiminde glomerül dışında kalan iki bölme, yani tübüller ve bunların arasındaki bağ dokusu aralığı olan interstisyum, bu konunun odağıdır. Tübüller ve interstisyum anatomik ve işlevsel olarak iç içedir; bu yüzden hastalıklarda genellikle birlikte etkilenirler. Bu hastalıkları üç büyük başlıkta inceleyeceğiz: akut ve kronik piyelonefrit, enfeksiyon dışı tübülointerstisyel nefrit ve akut tübüler hasar.
+@@ Genel çerçeve: 3 ana grup ve ortak bulgular
+Böbrek parankiminde glomerül dışında kalan 2 bölme, yani tübüller ve bunların arasındaki bağ dokusu aralığı olan interstisyum, bu konunun odağıdır. Tübüller ve interstisyum anatomik ve işlevsel olarak iç içedir; bu yüzden hastalıklarda genellikle birlikte etkilenirler. Bu hastalıkları 3 büyük başlıkta inceleyeceğiz: akut ve kronik piyelonefrit, enfeksiyon dışı tübülointerstisyel nefrit ve akut tübüler hasar.
 
-Tübülointerstisyel hastalıklar nedenlerine göre üç gruba ayrılır.
-1. grup enfeksiyonlardır; bunun temsilcisi piyelonefrit, yani böbreğin ve böbrek pelvisinin bakteriyel enfeksiyonudur.
-2. grup enfeksiyon dışı tübülointerstisyel nefrittir; ilaçlara, toksinlere, otoimmün hastalıklara ya da radyasyona bağlı gelişen bir inflamasyondur.
-3. grup akut tübüler hasardır; iskemik ya da nefrotoksik nedenlidir, yani ya kan akımı azalır ya da bir toksin tübül epitelini doğrudan zehirler.
+Tübülointerstisyel hastalıklar nedenlerine göre 3 gruba ayrılır.
+Birinci grup enfeksiyonlardır; bunun temsilcisi piyelonefrit, yani böbreğin ve böbrek pelvisinin bakteriyel enfeksiyonudur.
+İkinci grup enfeksiyon dışı tübülointerstisyel nefrittir; ilaçlara, toksinlere, otoimmün hastalıklara ya da radyasyona bağlı gelişen bir inflamasyondur.
+Üçüncü grup akut tübüler hasardır; iskemik ya da nefrotoksik nedenlidir, yani ya kan akımı azalır ya da bir toksin tübül epitelini doğrudan zehirler.
 Bu sınıflama, ayırıcı tanıda ilk soruyu belirler: tabloyu bir mikroorganizma mı, bir ilaç ya da immün süreç mi, yoksa iskemi ya da doğrudan toksik etki mi başlatmış?
 
 Glomerül hastalıklarında ön planda proteinüri ve hematüri bulunurken, tübül ve interstisyumu tutan hastalıklarda tübül işlevinin kaybı belirgindir.
@@ -14,7 +14,7 @@ Ortak klinik bulgular şunlardır: idrar konsantrasyon bozukluğu, çünkü hasa
 Bazı olgularda, özellikle hasar yaygın ve ani olduğunda, akut böbrek yetmezliği de gelişir.
 
 @@ Akut piyelonefrit: tanım ve idrar yolu enfeksiyonu spektrumu
-Akut piyelonefrit, böbrek parankiminin ve böbrek pelvisinin bakteriyel enfeksiyon sonucu gelişen süpüratif, yani irinli inflamasyonudur. Tanımdaki dört anahtar kelimeyi aklınızda tutun: parankim, pelvis, bakteriyel ve süpüratif. Piyelo kelimesi pelvisi, nefrit ise böbrek dokusunu anlatır; yani tablo yalnız toplayıcı sistemle sınırlı değildir. Süpürasyon, nötrofil ve doku yıkım ürünlerinden oluşan irin birikimidir. Akut bakteriyel inflamasyonun hücresi nötrofil olduğu için, böbrekte nötrofilden zengin bir eksüda ve apse odakları bekleriz.
+Akut piyelonefrit, böbrek parankiminin ve böbrek pelvisinin bakteriyel enfeksiyon sonucu gelişen süpüratif, yani irinli inflamasyonudur. Tanımdaki 4 anahtar kelimeyi aklınızda tutun: parankim, pelvis, bakteriyel ve süpüratif. Piyelo kelimesi pelvisi, nefrit ise böbrek dokusunu anlatır; yani tablo yalnız toplayıcı sistemle sınırlı değildir. Süpürasyon, nötrofil ve doku yıkım ürünlerinden oluşan irin birikimidir. Akut bakteriyel inflamasyonun hücresi nötrofil olduğu için, böbrekte nötrofilden zengin bir eksüda ve apse odakları bekleriz.
 
 Akut piyelonefrit tek başına duran bir hastalık değil, idrar yolu enfeksiyonu spektrumunun bir parçasıdır.
 İdrar yolu enfeksiyonları anatomik düzeye göre ikiye ayrılır.
@@ -23,30 +23,30 @@ Alt idrar yolu enfeksiyonları sistit, yani mesane enfeksiyonu, prostatit ve ür
 Bu ayrım klinikte önemlidir: alt idrar yolu enfeksiyonu çoğunlukla lokal yakınmalarla sınırlı kalırken, üst idrar yolu enfeksiyonu böbrek dokusunu tutar, sistemik bulgulara ve böbrek hasarına yol açabilir.
 Spektrum kavramı, alttaki bir enfeksiyonun yukarı ilerleyerek piyelonefrite dönüşebileceğini de hatırlatır.
 
-@@ Etkenler ve iki yayılma yolu
-Akut piyelonefrite yol açan bakteriler büyük çoğunlukla bağırsak florası kökenli, enterik gram negatif basillerdir. Burası önemli, en sık etken Eşerişya kolidir. Bunu Proteus, Klebsiella, Enterobakter ve Psödomonas türleri izler. Etkenlerin bağırsak kökenli olması rastlantı değildir; enfeksiyon çoğunlukla rektum ve perine çevresinden üretraya, oradan mesaneye ve böbreğe yükselen bakterilerle başlar.
+@@ Etkenler ve 2 yayılma yolu
+Akut piyelonefrite yol açan bakteriler büyük çoğunlukla bağırsak florası kökenli, enterik gram negatif basillerdir. Burası önemli, en sık etken Escherichia coli'dir. Bunu Proteus, Klebsiella, Enterobakter ve Pseudomonas türleri izler. Etkenlerin bağırsak kökenli olması rastlantı değildir; enfeksiyon çoğunlukla rektum ve perine çevresinden üretraya, oradan mesaneye ve böbreğe yükselen bakterilerle başlar.
 
-Bakteri böbreğe iki başlıca yoldan ulaşır.
+Bakteri böbreğe 2 başlıca yoldan ulaşır.
 1.'si ve en sık olanı asenden, yani yükselen enfeksiyondur; bakteriler alt idrar yolundan başlayıp mesaneye, üreterlere ve oradan böbreğe yükselir.
 2.'si hematogen yayılımdır; bakteriler kan dolaşımıyla böbreğe taşınır ve bu yol sepsis ya da endokardit gibi kanda bakteri bulunan durumlarda görülür.
-Burası önemli, sınav spotu olarak akılda kalsın: en sık etken Eşerişya koli, en sık yol ise asenden enfeksiyondur.
+Burası önemli, sınav spotu olarak akılda kalsın: en sık etken Escherichia coli, en sık yol ise asenden enfeksiyondur.
 
-Ders şeması bu iki yolu yan yana gösterir.
+Ders şeması bu 2 yolu yan yana gösterir.
 Asenden yolda aşağıdan yukarı doğru şu basamaklar sıralanır: girişimler, travma ve enterik bakteri kolonizasyonu bakterinin mesaneye girişini kolaylaştırır; distal üretrada bakteri kolonizasyonu olur; mesane disfonksiyonu ve idrar stazı bakterinin üremesine zemin hazırlar; yetersiz vezikoüreteral kapaktan idrar üretere geri kaçar, yani vezikoüreteral reflü gelişir; ardından intrarenal reflü ile idrar pelvis ve kalikslerden parankime kaçar ve piyelonefrit oluşur.
 Yani asenden enfeksiyon, mesane enfeksiyonu, vezikoüreteral reflü ve intrarenal reflünün bir kombinasyonudur ve kalikslerden böbrek korteksine yayılır.
-Bu yolda sık etkenler Eşerişya koli, Proteus ve Enterobakterdir.
+Bu yolda sık etkenler Escherichia coli, Proteus ve Enterobakterdir.
 
 Daha az yaygın olan hematogen enfeksiyonda ise aortadan gelen bakteriyemi, korteksin farklı yerlerinde dağınık piyelonefrit odakları oluşturur ve bu odaklar apseye dönüşebilir.
-Hematogen yolun sık etkenleri Stafilokok ve Eşerişya kolidir.
-Dikkat edin, Eşerişya koli her iki yolda da etkendir; Stafilokok hematogen yolu, Proteus ve Enterobakter ise asenden yolu düşündürür.
+Hematogen yolun sık etkenleri Stafilokok ve Escherichia coli'dir.
+Dikkat edin, Escherichia coli her iki yolda da etkendir; Stafilokok hematogen yolu, Proteus ve Enterobakter ise asenden yolu düşündürür.
 
-@@ Asenden enfeksiyonun dört basamağı
-Asenden enfeksiyon dört basamakta ilerler. 1. basamak kolonizasyondur: enterik bakteriler distal üretraya ve perineal deriye yerleşir. 2. basamak mesaneye ulaşmadır: kolonize bakteriler üretra boyunca ilerleyip mesaneye girer. Bu geçiş özellikle cinsel aktivite, kateterizasyon, yani mesaneye sonda takılması, ve sistoskopi, yani mesanenin endoskopla incelenmesi sonrasında kolaylaşır. Kateterizasyon ve sistoskopi tıbbi girişimler olduğu için enfeksiyonun bir kısmı iyatrojenik olarak gelişebilir.
+@@ Asenden enfeksiyonun 4 basamağı
+Asenden enfeksiyon 4 basamakta ilerler. Birinci basamak kolonizasyondur: enterik bakteriler distal üretraya ve perineal deriye yerleşir. İkinci basamak mesaneye ulaşmadır: kolonize bakteriler üretra boyunca ilerleyip mesaneye girer. Bu geçiş özellikle cinsel aktivite, kateterizasyon, yani mesaneye sonda takılması, ve sistoskopi, yani mesanenin endoskopla incelenmesi sonrasında kolaylaşır. Kateterizasyon ve sistoskopi tıbbi girişimler olduğu için enfeksiyonun bir kısmı iyatrojenik olarak gelişebilir.
 
-Mesaneye giren bakteri her zaman hastalık yapmaz; son iki basamak belirleyicidir.
-3. basamak mesanede çoğalmadır.
+Mesaneye giren bakteri her zaman hastalık yapmaz; son 2 basamak belirleyicidir.
+Üçüncü basamak mesanede çoğalmadır.
 Normalde düzenli işeme bakterileri dışarı atar; idrar stazı varsa bu temizlenme bozulur ve bakteriler çoğalır.
-4. basamakta enfekte idrar üreterlere reflü ile geri kaçar ve böbrek pelvisine, oradan parankime ulaşır.
+Dördüncü basamakta enfekte idrar üreterlere reflü ile geri kaçar ve böbrek pelvisine, oradan parankime ulaşır.
 Kısacası staz bakterinin çoğalmasını, reflü ise böbreğe taşınmasını sağlar; ikisi birlikte asenden piyelonefritin motorudur.
 
 Asenden basamaklar kadın anatomisinde daha kolay tamamlanır.
@@ -54,23 +54,23 @@ Kadınlarda riski artıran özellikler şunlardır: kısa üretra, bakterinin me
 Böylece her risk faktörü asenden yolun belirli bir basamağını hızlandırır.
 
 @@ Predispozan faktörler
-Predispozan faktörlerin ilk grubu, idrar akımını mekanik olarak engelleyen durumlardır. Derste üç örnek verilir: benign prostat hiperplazisi, yani prostatın iyi huylu büyümesi mesane çıkışını daraltır; rahim sarkması mesaneye ve üretraya bası yapar; taşlar idrar akımını kısmen ya da tamamen keser. Akım engellenince idrar stazı gelişir ve staz, bakterilerin atılmasını önleyip çoğalmalarına zemin hazırlar.
+Predispozan faktörlerin ilk grubu, idrar akımını mekanik olarak engelleyen durumlardır. Derste 3 örnek verilir: benign prostat hiperplazisi, yani prostatın iyi huylu büyümesi mesane çıkışını daraltır; rahim sarkması mesaneye ve üretraya bası yapar; taşlar idrar akımını kısmen ya da tamamen keser. Akım engellenince idrar stazı gelişir ve staz, bakterilerin atılmasını önleyip çoğalmalarına zemin hazırlar.
 
-2. grup mesanenin nörojenik disfonksiyonudur.
+İkinci grup mesanenin nörojenik disfonksiyonudur.
 Mesanenin düzenli ve tam boşalması sinirsel kontrole bağlıdır.
 Diyabetik nöropatide otonom sinirler hasarlanır ve mesane tam boşalamaz; omurilik hasarında mesaneyi kontrol eden yollar kesilir.
 Her iki durumda da mesanede artık idrar kalır, staz gelişir ve bakteri çoğalır.
 Mekanik obstrüksiyondan farkı, yolun açık olmasına rağmen mesanenin kasılma ve boşalma işlevinin bozuk olmasıdır.
 
-3. grup vezikoüreteral reflüdür.
+Üçüncü grup vezikoüreteral reflüdür.
 Normalde üreter mesane duvarına eğik girer ve mesane kasıldığında bu bölüm kapak gibi kapanır.
 Vezikoüreteral reflüde üreterovezikal kapak yetmezliği vardır; idrar mesaneden üretere geri kaçar ve mesanedeki enfekte idrar her işemede pelvise taşınır.
-Burası önemli, sınav spotu: vezikoüreteral reflü, çocuklarda idrar yolu enfeksiyonu olan olguların %20 ile kırkında bulunur.
+Burası önemli, sınav spotu: vezikoüreteral reflü, çocuklarda idrar yolu enfeksiyonu olan olguların %20 ile 40'ında bulunur.
 Bu yüksek oran, enfeksiyon geçiren her çocukta reflünün önemli bir olasılık olduğunu gösterir.
 
-Bunlara ek olarak üç sistemik zemin sayılır.
+Bunlara ek olarak 3 sistemik zemin sayılır.
 Gebelik idrar stazı yapar.
-Diyabet iki ayrı yoldan riski artırır: hem konak savunmasını zayıflatarak enfeksiyon riskini yükseltir, hem de diyabetik nöropatiyle nörojenik mesane yapar.
+Diyabet 2 ayrı yoldan riski artırır: hem konak savunmasını zayıflatarak enfeksiyon riskini yükseltir, hem de diyabetik nöropatiyle nörojenik mesane yapar.
 İmmünsüpresyon ise bakterinin yerleşmesini ve yayılmasını kolaylaştırır.
 Görüldüğü gibi predispozan faktörlerin çoğu ortak bir son yola çıkar: idrar stazı.
 
@@ -97,12 +97,12 @@ Akut piyelonefritin bir komplikasyonu piyonefrozdur. Piyonefrozda böbrek pelvis
 Papiller nekroz, özel bir akut piyelonefrit formudur.
 Böbrek papillalarının uçlarında iskemik ve süpüratif nekrozun birlikte görülmesidir.
 Papilla, medullanın kaliks içine uzanan uç kısmıdır ve kanlanması doğal olarak sınırlıdır; iskemi doku ölümünü, enfeksiyon ise süpürasyonu ekler.
-Papiller nekroz sıklıkla üç durumun kombinasyonu ile görülür: diyabetes mellitus, idrar yolu tıkanıklığı ve orak hücreli anemi.
+Papiller nekroz sıklıkla 3 durumun kombinasyonu ile görülür: diyabetes mellitus, idrar yolu tıkanıklığı ve orak hücreli anemi.
 Diyabet hem iskemiye hem enfeksiyona yatkınlık yaratır; tıkanıklık basınç artışı ve stazla papillaya zarar verir; orak hücreli anemide ise medullanın düşük oksijenli ortamında orak hücreler damarları tıkar.
 
 Burası önemli, bu konu çıkmış sorularda birkaç kez soruldu.
 Soruda renal papilla uçlarının iskemik ve süpüratif nekrozuna zemin hazırlayan faktörler arasında diabetes mellitus, üriner yol obstrüksiyonu, orak hücreli anemi ve analjezik kullanımı yer aldı; oligüri ise predispozan faktörlerden değildi ve doğru cevap buydu.
-Ders slaytı da orak hücreli anemiyi klasik üç zeminden biri olarak sayar; bu yüzden orak hücreli anemiyi zeminler arasında, oligüriyi ise dışarıda tutun.
+Ders slaytı da orak hücreli anemiyi klasik 3 zeminden biri olarak sayar; bu yüzden orak hücreli anemiyi zeminler arasında, oligüriyi ise dışarıda tutun.
 
 Kliniği, nekroze olan papilla parçalarının ayrılıp atılması belirler.
 Atılan parça üreterden geçerken kolik, yani şiddetli dalgalı ağrı yapar; nekrotik alanın ayrılması hematüriye yol açar; parça üreteri tıkayarak idrar akımını keser.
@@ -117,9 +117,9 @@ Piüri alt idrar yolu enfeksiyonunda da bulunabilir; lökosit silendiri ise enfe
 Akut piyelonefrit genellikle tek taraflıdır; karşı böbrek işlevini sürdürdüğü için hastalık, iki taraflı olmadıkça böbrek yetmezliğine nadiren yol açar.
 
 @@ Kronik piyelonefrit: tanım ve patogenez
-Kronik piyelonefrit, uzamış ya da tekrarlayan piyelonefrit atakları sonucu böbrekte üç değişikliğin bir arada bulunmasıdır: interstisyel inflamasyon, kaba skarlaşma ve pelvis ile kalikslerde deformite. Enfeksiyon toplayıcı sistemden başladığı için kaliksler biçim değiştirir; kaliks deformitesi, kronik piyelonefriti skar bırakan diğer böbrek hastalıklarından ayıran temel özelliktir. İlerleyici nefron kaybı yaptığı için kronik piyelonefrit, kronik böbrek hastalığının önemli bir nedenidir.
+Kronik piyelonefrit, uzamış ya da tekrarlayan piyelonefrit atakları sonucu böbrekte 3 değişikliğin bir arada bulunmasıdır: interstisyel inflamasyon, kaba skarlaşma ve pelvis ile kalikslerde deformite. Enfeksiyon toplayıcı sistemden başladığı için kaliksler biçim değiştirir; kaliks deformitesi, kronik piyelonefriti skar bırakan diğer böbrek hastalıklarından ayıran temel özelliktir. İlerleyici nefron kaybı yaptığı için kronik piyelonefrit, kronik böbrek hastalığının önemli bir nedenidir.
 
-Patogenezde en sık iki zemin vardır.
+Patogenezde en sık 2 zemin vardır.
 1.'si tıkanmaya bağlı piyelonefrittir; taş, tümör ya da prostat büyümesine bağlı idrar yolu obstrüksiyonu staz yapar ve böbreği tekrarlayan enfeksiyona açık bırakır.
 2.'si reflüye bağlı piyelonefrittir ve buna reflü nefropatisi denir; vezikoüreteral reflü zemininde enfekte idrar tekrar tekrar böbreğe taşınır.
 Her iki zemin de akut piyelonefritin predispozan faktörleriyle örtüşür; aynı zemin süreklilik kazanınca kronik tablo gelişir.
@@ -171,9 +171,9 @@ Burası önemli, sınav spotu olarak bu ilaç listesini eşleştirme biçiminde 
 Klinik mesaj açıktır: ağrı kesiciler ve mide ilaçları dahil sık kullanılan birçok ilaç bu tabloyu yapabilir.
 
 @@ İlaç kaynaklı tübülointerstisyel nefritin patogenezi
-Klinik ipuçları, mekanizmanın toksik değil immün olduğunu gösterir. Hastalık ilaç alımından bir ile 2 hafta sonra başlar; bu süre bağışıklık sisteminin ilaca karşı duyarlanması için gereken zamandır. Eozinofili ve döküntü alerjik reaksiyonun sistemik belirtileridir. Seyir idiyosenkratiktir; yani hastalığın ya da ilaca verilen tepkinin genel kural, istatistik ya da kalıplara uymayıp kişiye özgü, öngörülemez biçimde ilerlemesidir. Aynı ilaç yeniden verildiğinde tablo nükseder; bu, bağışıklık belleğinin kanıtıdır.
+Klinik ipuçları, mekanizmanın toksik değil immün olduğunu gösterir. Hastalık ilaç alımından 1 ile 2 hafta sonra başlar; bu süre bağışıklık sisteminin ilaca karşı duyarlanması için gereken zamandır. Eozinofili ve döküntü alerjik reaksiyonun sistemik belirtileridir. Seyir idiyosenkratiktir; yani hastalığın ya da ilaca verilen tepkinin genel kural, istatistik ya da kalıplara uymayıp kişiye özgü, öngörülemez biçimde ilerlemesidir. Aynı ilaç yeniden verildiğinde tablo nükseder; bu, bağışıklık belleğinin kanıtıdır.
 
-Tablo bir aşırı duyarlılık, yani hipersensitivite reaksiyonudur ve iki tip birlikte rol oynar.
+Tablo bir aşırı duyarlılık, yani hipersensitivite reaksiyonudur ve 2 tip birlikte rol oynar.
 Ani, yani Tip 1 aşırı duyarlılıkta serum immünoglobulin E düzeyi artabilir; eozinofili ve döküntü bu yanıtla uyumludur.
 T hücre aracılı, yani Tip 4 aşırı duyarlılığın göstergeleri ise pozitif deri testleri ve granülomatöz reaksiyondur.
 
@@ -191,7 +191,7 @@ Patogenezde rol oynayanlar ise şunlardır: Tip 1 ve Tip 4 aşırı duyarlılık
 Bir başka soruda da bu hastalık için yanlış olan ifade olarak doz ile ilişkili olduğu işaretlendi; ilaç kesilince böbreğin normale dönmesi, klinikte ateş, eozinofili ya da deri döküntüsü görülmesi, bazı hastalarda serum immünoglobulin E düzeyinin yüksek olması ve Tip 1 aşırı duyarlılık reaksiyonu olarak gelişmesi doğru ifadelerdi.
 
 @@ İlaç kaynaklı tübülointerstisyel nefritin morfolojisi
-Mikroskopide interstisyel ödem vardır ve interstisyum genişler. Mononükleer hücre infiltrasyonu, yani lenfositler ve makrofajlar baskındır. Sıklıkla eozinofiller ve nötrofiller de infiltrata katılır. Ders görüntülerinin ilkinde tübüler hasarla birlikte interstisyumda kronik inflamatuvar infiltrasyon, 2.'sinde ise belirgin eozinofilik infiltrasyon görülür. Eozinofilden zengin interstisyel infiltrat, ilaç kaynaklı tabloyu nötrofil baskın akut piyelonefritten ayırır.
+Mikroskopide interstisyel ödem vardır ve interstisyum genişler. Mononükleer hücre infiltrasyonu, yani lenfositler ve makrofajlar baskındır. Sıklıkla eozinofiller ve nötrofiller de infiltrata katılır. Ders görüntülerinin ilkinde tübüler hasarla birlikte interstisyumda kronik inflamatuvar infiltrasyon, ikincisinde ise belirgin eozinofilik infiltrasyon görülür. Eozinofilden zengin interstisyel infiltrat, ilaç kaynaklı tabloyu nötrofil baskın akut piyelonefritten ayırır.
 
 Bazı ilaçlarda, örneğin tiyazidler ve rifampinde, dev hücreli, nekrotik olmayan granülomlar görülür.
 Granülom, Tip 4 aşırı duyarlılığın morfolojik kanıtıdır ve ortasında nekroz yoktur.
@@ -200,53 +200,53 @@ Glomerüller çoğu ilaçta normaldir.
 İlaç kaynaklı tabloda proteinüri genellikle hafif olduğundan, belirgin proteinüri ve nefrotik tablo görülürse bu ilaç grubu akla gelmelidir.
 
 @@ İlaç kaynaklı tübülointerstisyel nefritin kliniği ve yönetimi
-Klinik tablo ilaç kullanımından bir ile 2 hafta sonra başlar. Belirtiler ateş, eozinofili, döküntü ve böbrek fonksiyon bozukluğudur. Döküntü olguların yalnızca yaklaşık %15 ile yirmi beşinde görülür; bu yüzden döküntünün olmaması tanıyı dışlamaz ve ilaç öyküsüyle zamansal ilişki en güçlü ipucudur.
+Klinik tablo ilaç kullanımından 1 ile 2 hafta sonra başlar. Belirtiler ateş, eozinofili, döküntü ve böbrek fonksiyon bozukluğudur. Döküntü olguların yalnızca yaklaşık %15 ile 25'inde görülür; bu yüzden döküntünün olmaması tanıyı dışlamaz ve ilaç öyküsüyle zamansal ilişki en güçlü ipucudur.
 
 İdrarda hematüri, az ya da hafif proteinüri ve lökositler, bazen de eozinofiller bulunur.
-Vakaların yaklaşık yüzde ellisinde oligüri ve serum kreatinin yükselmesi ile akut böbrek yetmezliği gelişir.
+Vakaların yaklaşık %50'sinde oligüri ve serum kreatinin yükselmesi ile akut böbrek yetmezliği gelişir.
 Burası önemli, sınav spotu: tedavide ilk ve en önemli adım sorumlu ilacın derhal kesilmesidir.
 Çoğu hastada iyileşme olur, ancak bu iyileşme aylar sürebilir.
 
-@@ Akut tübüler hasar: tanım ve iki tip
-Akut tübüler hasar, tübüler epitel hücrelerinde hasar ve böbrek fonksiyonunda akut düşüşle karakterize tablodur. Burası önemli, akut tübüler hasar akut böbrek yetmezliğinin en sık nedenidir. Çıkmış sorularda akut böbrek yetmezliğinin en sık nedeni, eski adıyla akut tübüler nekroz olarak soruldu; akut glomerülonefrit, akut interstisyel nefrit, prerenal ve postrenal azotemi doğru cevap değildi. Klinikte glomerüler filtrasyon hızı azalır, serum kreatinini yükselir ve oligüri ya da anüri gelişir. Oligüri, günde dört yüz mililitreden az idrar çıkarmaktır; anüride idrar çıkışı neredeyse tamamen durur.
+@@ Akut tübüler hasar: tanım ve 2 tip
+Akut tübüler hasar, tübüler epitel hücrelerinde hasar ve böbrek fonksiyonunda akut düşüşle karakterize tablodur. Burası önemli, akut tübüler hasar akut böbrek yetmezliğinin en sık nedenidir. Çıkmış sorularda akut böbrek yetmezliğinin en sık nedeni, eski adıyla akut tübüler nekroz olarak soruldu; akut glomerülonefrit, akut interstisyel nefrit, prerenal ve postrenal azotemi doğru cevap değildi. Klinikte glomerüler filtrasyon hızı azalır, serum kreatinini yükselir ve oligüri ya da anüri gelişir. Oligüri, günde 400 mililitreden az idrar çıkarmaktır; anüride idrar çıkışı neredeyse tamamen durur.
 
 İlk tip iskemik akut tübüler hasardır ve böbreğe yetersiz kan akışı sonucu gelişir.
 Nedenleri arasında şok, yani travma, kan kaybı, septisemi ve akut pankreatite bağlı dolaşım yetmezliği; küçük damar vasküliti; malign hipertansiyon ve trombotik mikroanjiyopatiler sayılır.
 Ortak sonuç, metabolik olarak aktif tübül epitelinin oksijen ve enerji yetersizliğiyle hasarlanmasıdır.
 
-2. tip nefrotoksik akut tübüler hasardır; burada sorun doğrudan tübül hücresi toksisitesidir.
-Burası önemli, nefrotoksik nedenler dört grupta eşleştirilir: ağır metallerden cıva, organik çözücülerden etilen glikol, ilaçlardan gentamisin ve radyokontrast maddeler, pigmentlerden de miyoglobin ve hemoglobin.
+İkinci tip nefrotoksik akut tübüler hasardır; burada sorun doğrudan tübül hücresi toksisitesidir.
+Burası önemli, nefrotoksik nedenler 4 grupta eşleştirilir: ağır metallerden cıva, organik çözücülerden etilen glikol, ilaçlardan gentamisin ve radyokontrast maddeler, pigmentlerden de miyoglobin ve hemoglobin.
 Miyoglobin kas yıkımında, hemoglobin eritrosit yıkımında açığa çıkar; vücudun kendi ürettiği bu maddeler tübülde birikince toksik olur.
 
 @@ Akut tübüler hasarın patogenezi
 Hasarın odağı proksimal tübül epitel hücreleridir. Bu hücreler yüksek metabolik aktiviteleri ve toksinlere maruziyetleri nedeniyle hassastır; süzülen sodyum ve suyun büyük bölümünü enerji harcayarak geri emerler ve süzülen toksinleri hücre içinde biriktirirler. Ders şeması iskemik ve toksik hasarda varsayılan sekansı gösterir: epitel hasarı bir yandan glomerüler filtrasyon hızını düşürür, öte yandan tübülleri tıkar ve sonuçta idrar çıkışı azalır, yani oligüri ve nihayetinde anüri gelişir. Şemada iskemi ayrıca afferent arteriyolde doğrudan vazokonstriksiyonla da filtrasyonu azaltır.
 
-1. mekanizma hücre membran hasarıdır.
+Birinci mekanizma hücre membran hasarıdır.
 Hasarlı hücre sodyumu geri ememez, bu yüzden distal tübüle ulaşan sodyum yükü artar.
 Bu artış tübüloglomerüler geri besleme ile algılanır ve afferent arteriyolde vazokonstriksiyon başlatılır; glomerüle gelen kan azalır ve filtrasyon düşer.
 Burası önemli, sınav spotu olarak bu zinciri sırasıyla hatırlayın: sodyum geri emilimi azalır, distal sodyum yükü artar, tübüloglomerüler geri besleme devreye girer, vazokonstriksiyon olur ve glomerüler filtrasyon hızı azalır.
 Glomerül yapısal olarak sağlamken süzme işlevinin düşmesi bu köprüyle açıklanır.
 
-2. mekanizma hücre ölümü ve dökülmedir.
+İkinci mekanizma hücre ölümü ve dökülmedir.
 Ölen ya da bağlantısını yitiren epitel hücreleri lümene düşer; tübül lümeninde hücre ve granüler döküntü birikir, lümende tıkaçlar oluşur ve intratübüler basınç artar.
 Bu geri basınç filtrasyonu daha da azaltır.
-3. mekanizma lümene ve interstisyuma sızıntıdır: süzülen sıvı hasarlı tübül duvarından geri sızar, buna geri filtrasyon diyoruz; interstisyel ödem gelişir ve artan basınç tübülleri dışarıdan sıkıştırarak çökertir.
-Üç mekanizmanın toplam sonucu glomerüler filtrasyon hızında ciddi azalma, azotemi, yani kanda azotlu atıkların birikmesi ve oligüridir.
+Üçüncü mekanizma lümene ve interstisyuma sızıntıdır: süzülen sıvı hasarlı tübül duvarından geri sızar, buna geri filtrasyon diyoruz; interstisyel ödem gelişir ve artan basınç tübülleri dışarıdan sıkıştırarak çökertir.
+3 mekanizmanın toplam sonucu glomerüler filtrasyon hızında ciddi azalma, azotemi, yani kanda azotlu atıkların birikmesi ve oligüridir.
 
 @@ Akut tübüler hasarın morfolojisi
 İki tip, hasarın yaygınlığı ve yerleşimi bakımından ayrılır. Burası önemli, bu bir sınav tuzağıdır. İskemik akut tübüler hasarda lezyonlar odaksaldır ve proksimal tübüllerin düz segmentleri ile Henle kulpunun çıkan kalın kolunda yerleşir. Hücrelerde fırça kenar kaybı, vakuolizasyon ve hücre şişmesi görülür; epitel hücreleri bazal membrandan ayrılıp lümene dökülür. Nefrotoksik akut tübüler hasarda ise proksimal tübüllerde daha yaygın nekroz vardır. Kısacası odaksal ve Henle kalın kolu iskemiyi, proksimal tübülde yaygın nekroz ise nefrotoksik tipi düşündürür.
 
 Her iki tipte de ortak bulgular vardır.
-Distal tübüller ve toplayıcı kanallarda granüler döküntü ve hücre silendirleri görülür; bu silendirler Tam Horsfal proteini, yani üromodülin ile plazma proteinlerinden oluşur.
+Distal tübüller ve toplayıcı kanallarda granüler döküntü ve hücre silendirleri görülür; bu silendirler Tamm-Horsfall proteini, yani üromodülin ile plazma proteinlerinden oluşur.
 Ayrıca interstisyel ödem ve hafif bir inflamatuvar infiltrat bulunur; inflamasyonun hafif olması, akut tübüler hasarı yoğun infiltratlı piyelonefrit ve tübülointerstisyel nefritten ayırır.
 Ders görüntülerinde tübüler epitel hücrelerinin altta yatan bazal membrandan ayrılması ve granüler döküntüler, tübül lümenlerinde nekrotik epitel hücreleri ve hücresel kalıntılar, ayrıca peritübüler kılcal damarlarda belirgin konjesyon izlenir.
 
 @@ Akut tübüler hasarın klinik seyri ve prognozu
-Burası önemli, sınav spotu: akut tübüler hasarın klinik seyri dört evrede incelenir. 1. evre başlangıç evresidir; şok ya da toksin gibi nedene maruziyetten hemen sonra başlar ve az ya da hafif oligüri ve azotemi vardır. 2. evre oligürik evredir; belirgin oligüri ve glomerüler filtrasyon hızı düşüklüğü gelişir, azotemi, asidoz, hiperkalemi ve üremi belirginleşir. Hiperkalemi kalp ritmini bozabileceği için tehlikelidir; bu evre en riskli dönemdir.
+Burası önemli, sınav spotu: akut tübüler hasarın klinik seyri 4 evrede incelenir. Birinci evre başlangıç evresidir; şok ya da toksin gibi nedene maruziyetten hemen sonra başlar ve az ya da hafif oligüri ve azotemi vardır. İkinci evre oligürik evredir; belirgin oligüri ve glomerüler filtrasyon hızı düşüklüğü gelişir, azotemi, asidoz, hiperkalemi ve üremi belirginleşir. Hiperkalemi kalp ritmini bozabileceği için tehlikelidir; bu evre en riskli dönemdir.
 
-3. evre iyileşme, yani diüretik evredir.
+Üçüncü evre iyileşme, yani diüretik evredir.
 Tübül fonksiyonu düzelmeye başlar, ancak yeni yenilenen epitel suyu ve elektrolitleri henüz tam geri ememez; bu yüzden poliüri ve elektrolit kaybı olur.
-4. evre tam iyileşmedir; böbrek fonksiyonları haftalar ile aylar içinde normale dönebilir.
+Dördüncü evre tam iyileşmedir; böbrek fonksiyonları haftalar ile aylar içinde normale dönebilir.
 Prognoza gelince, destekleyici tedavi ve gerekirse diyaliz ile hastaların çoğu iyileşir.
 Önceden kronik böbrek hastalığı varsa tam iyileşme daha az sıktır ve son dönem böbrek yetmezliğine ilerleme daha olasıdır.
 
@@ -254,7 +254,7 @@ Prognoza gelince, destekleyici tedavi ve gerekirse diyaliz ile hastaların çoğ
 Tübüller ve interstisyum, su, elektrolit ve asit baz dengesinin korunmasında merkezidir; glomerül süzer, neyin kalıp neyin atılacağına ise tübüller karar verir. Bu nedenle hasarlarında idrar konsantrasyon bozukluğu, yani poliüri ve noktüri, ayrıca özellikle potasyum ve asit baz dengesini ilgilendiren elektrolit dengesizlikleri görülür. Kronik piyelonefritin iki taraflı olgularındaki noktüri ve akut tübüler hasarın oligürik evresindeki hiperkalemi ile asidoz bunun örnekleridir.
 
 Bu grup böbrek yetmezliğinin sık nedenleri arasındadır: akut tübüler hasar, kronik piyelonefrit ve ilaç kaynaklı tübülointerstisyel nefrit.
-Tanı yaklaşımı üç adımda kurulur.
+Tanı yaklaşımı 3 adımda kurulur.
 Önce klinik öykü alınır; toksin ya da ilaç maruziyeti ve idrar yolu enfeksiyonu öyküsü sorgulanır.
 Ardından idrar bulgularına bakılır; piüri, lökosit silendirleri ve hafif proteinüri aranır.
 Gerekirse görüntüleme ve böbrek biyopsisi yapılır.

@@ -3,7 +3,7 @@
 @@ Bağışıklık gözetimi ve kanıtları
 Bu konunun iki büyük ekseni var: kanser ile bağışıklık sistemi arasındaki ilişki ve tümörün uzak dokulara yayılmasını sağlayan metastaz basamakları. Temel kavramla başlayalım: bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir. Buna bağışıklık gözetimi, İngilizce adıyla immün sürveyans diyoruz. Bağışıklık gözetimi, vücutta sürekli olarak ortaya çıkan kötü huylu hücrelerin bağışıklık sistemi tarafından tespit edilip yok edilmesidir. Mantığı şu: malign dönüşüm tek seferlik bir olay değildir, hücreler sürekli dönüşüme uğrayabilir ve gözetim bu hücreleri klinik tümöre dönüşmeden temizlemeye çalışır. Yani kanseri yalnız hücrenin kendi genetik değişikliği olarak değil, konağın bağışıklık yanıtıyla birlikte değerlendirmemiz gerekir.
 
-Gözetimin gerçekten işlediğini gösteren üç kanıt var.
+Gözetimin gerçekten işlediğini gösteren 3 kanıt var.
 1.'si, tümör infiltrasyonunun prognozla ilişkisidir: tümör dokusuna bağışıklık hücrelerinin girmesi hastalığın seyriyle ilişkilidir ve bu, bağışıklık hücrelerinin tümörle aktif olarak etkileştiğini gösterir.
 2.'si, immün yetmezlikte artmış tümör riskidir.
 Bağışıklık sistemi zayıfladığında, normalde temizlenecek malign klonlar büyüyebilir ve tümör sıklığı artar; bu, gözetimin varlığına dair en doğrudan klinik kanıttır.
@@ -12,12 +12,12 @@ Bağışıklık sistemi zayıfladığında, normalde temizlenecek malign klonlar
 @@ Tümör antijenleri ve kaynakları
 Bağışıklık sisteminin tümörü tanıyabilmesi için tümör hücresinin onu normal hücreden ayıran bir hedef taşıması gerekir. Bu hedeflere tümör antijenleri denir. Tümör antijenleri iki türlü olabilir: tümör hücrelerinde ekspresyonu artmış antijenler, yani normal hücrede de bulunan ama tümörde çok daha fazla miktarda olanlar, ya da sadece tümörde ifade edilen antijenler. Bu antijenler bağışıklık sistemi tarafından yabancı olarak algılanabilir ve antitümör yanıtı başlatabilir. Bir antijenin yabancı algılanabilmesi, bağışıklık sisteminin ona karşı tolerans geliştirmemiş olmasına bağlıdır. Tolerans, bağışıklık sisteminin bir antijene yanıt vermemesidir. Bu yüzden bir proteinin normal dokuda ne zaman, nerede ve ne miktarda bulunduğu, ona karşı yanıt oluşup oluşmayacağını belirler.
 
-Tümör antijenlerinin dört kaynağı vardır.
+Tümör antijenlerinin 4 kaynağı vardır.
 1.'si mutasyona uğramış proteinler, yani neoantijenlerdir; burada protein dizisi değişmiştir.
 2.'si normalde sınırlı dokularda ifade edilen proteinlerdir; bunlar normalde başka dokularda sessizdir.
 3.'sü viral proteinlerdir; bunlar virüs kökenlidir.
 4.'sü aşırı veya anormal koşullarda ifade edilen öz proteinlerdir; öz protein, vücudun kendi genlerinden üretilen normal proteindir.
-Dört kaynağı ezberlemek yerine her birinin neden yabancı algılandığını bilin: kimi dizi değişikliğiyle, kimi yanlış dokuda bulunmasıyla, kimi virüs kökenli olmasıyla, kimi de miktar ya da yapı anormalliğiyle bağışıklık sisteminin dikkatini çeker.
+4 kaynağı ezberlemek yerine her birinin neden yabancı algılandığını bilin: kimi dizi değişikliğiyle, kimi yanlış dokuda bulunmasıyla, kimi virüs kökenli olmasıyla, kimi de miktar ya da yapı anormalliğiyle bağışıklık sisteminin dikkatini çeker.
 
 @@ Neoantijenler ve mutasyon yükü
 Neoantijen, tümör hücresindeki sürücü veya yolcu mutasyonlar sonucu protein dizisinde yeni bir peptit oluşmasıyla ortaya çıkar. Sürücü mutasyon tümörün gelişmesine doğrudan katkı yapan mutasyondur; yolcu mutasyon ise tümör büyümesine katkısı olmayan, eşlik eden mutasyondur. Dikkat edin, yolcu mutasyonlar da neoantijen üretebilir; önemli olan yeni bir peptidin oluşmasıdır. Değişmiş amino asit dizisi, daha önce vücutta hiç bulunmamış bir peptit parçası yaratır.
@@ -29,7 +29,7 @@ Bu nedenle neoantijen en yabancı tümör antijeni türüdür.
 
 Her mutasyon yeni bir peptit üretebileceği için neoantijen sayısı tümörün taşıdığı mutasyon miktarıyla, yani mutasyon yüküyle orantılıdır.
 Burası önemli: neoantijenler yüksek mutasyon yüküne sahip tümörlerde daha fazladır.
-Üç örnek grup var.
+3 örnek grup var.
 Sigara ilişkili akciğer kanserinde tütün dumanındaki mutajenler çok sayıda mutasyon biriktirir.
 Güneş ilişkili melanomda ultraviyole ışığın oluşturduğu DNA hasarı yüksek mutasyon yükü yaratır.
 DNA onarım kusuru olan kanserlerde ise hatalar düzeltilemez ve mutasyonlar birikir.
@@ -37,10 +37,10 @@ Ortak payda şudur: yüksek mutasyon yükü daha çok neoantijen, yani bağış�
 Bu ilişkiyi tedavi yanıtında tekrar hatırlayacağız.
 
 @@ Kanser-testis, aşırı ifade ve diferansiyasyon antijenleri
-Kanser-testis antijenleri, normalde sınırlı dokularda ifade edilen proteinlerin tipik örneğidir. Normalde testis germ hücrelerinde ifade edilirler, diğer dokularda sessizdirler. Tümörlerde ise çeşitli solid tümörlerde yeniden ifade edilirler. Peki bunlara karşı neden tolerans gelişmeyebilir? Çünkü testis germ hücrelerinde majör doku uyumluluk kompleksi sınıf bir, kısaca MHC sınıf bir ekspresyonu düşüktür. Em ha ce sınıf bir, hücre içi peptitleri CD8 pozitif T hücrelerine sunan moleküldür. Antijen normal yaşamda T hücrelerine bu yolla sunulmadığı için bağışıklık sistemi onu öz olarak öğrenmez. Sonuç olarak aynı antijen bir solid tümörde ortaya çıktığında bağışıklık sistemi ona karşı yanıt geliştirebilir.
+Kanser-testis antijenleri, normalde sınırlı dokularda ifade edilen proteinlerin tipik örneğidir. Normalde testis germ hücrelerinde ifade edilirler, diğer dokularda sessizdirler. Tümörlerde ise çeşitli solid tümörlerde yeniden ifade edilirler. Peki bunlara karşı neden tolerans gelişmeyebilir? Çünkü testis germ hücrelerinde majör doku uyumluluk kompleksi sınıf I, kısaca MHC sınıf I ekspresyonu düşüktür. MHC sınıf I, hücre içi peptitleri CD8 pozitif T hücrelerine sunan moleküldür. Antijen normal yaşamda T hücrelerine bu yolla sunulmadığı için bağışıklık sistemi onu öz olarak öğrenmez. Sonuç olarak aynı antijen bir solid tümörde ortaya çıktığında bağışıklık sistemi ona karşı yanıt geliştirebilir.
 
 Vücudun kendi proteini de tümör antijeni olabilir; bunun için miktarı ya da yapısı normalden sapmalıdır.
-Aşırı ekspresyonun ders örneği her iki nö aşırı ekspresyonudur.
+Aşırı ekspresyonun ders örneği HER2/neu aşırı ekspresyonudur.
 Bu protein normalde de vardır, ancak tümördeki aşırı miktar onu bağışıklık sistemi için belirgin bir hedef yapar.
 Normal doku antijenlerinin anormal formu da olabilir: protein dizisi aynı kalsa bile glikozilasyon, yani şeker gruplarının eklenmesi, veya fosforilasyon, yani fosfat grubunun eklenmesi değişiklikleri antijenin yapısını değiştirir.
 Karıştırmayın: neoantijende değişiklik protein dizisindedir, anormal formda ise dizi aynı kalır, değişiklik glikozilasyon ya da fosforilasyon düzeyindedir.
@@ -54,36 +54,36 @@ Bu antijen grubunun ve diğer tümör antijenlerinin klinikte iki kullanımı va
 Diferansiyasyon antijeni hedeflendiğinde aynı antijeni taşıyan normal hücreler de etkilenebilir.
 
 @@ Viral tümör antijenleri
-Bazı tümörler virüslerle ilişkilidir ve bu tümörlerde virüsün proteinleri tümör antijeni işlevi görür. Dersin saydığı onkojenik virüsler şunlardır: İnsan papilloma virüsü (HPV) (HPV), yani HPV; Epstein-Barr virüsü (EBV), yani EBV; hepatit B virüsü ve hepatit C virüsü; ve Kaposi sarkomu herpes virüsü (KSHV / HHV-8), kısaca ka se ha ve. Bu sonuncunun diğer adı insan herpes virüsü sekizdir; iki adın aynı virüsü gösterdiğini bilin. Viral proteinler konağa ait olmadığından, öz toleransın hiç söz konusu olmadığı, açıkça yabancı hedeflerdir.
+Bazı tümörler virüslerle ilişkilidir ve bu tümörlerde virüsün proteinleri tümör antijeni işlevi görür. Dersin saydığı onkojenik virüsler şunlardır: İnsan papilloma virüsü (HPV), yani HPV; Epstein-Barr virüsü (EBV), yani EBV; hepatit B virüsü ve hepatit C virüsü; ve Kaposi sarkomu herpes virüsü (KSHV / HHV-8), kısaca KSHV. Bu sonuncunun diğer adı insan herpes virüsü 8'dir; iki adın aynı virüsü gösterdiğini bilin. Viral proteinler konağa ait olmadığından, öz toleransın hiç söz konusu olmadığı, açıkça yabancı hedeflerdir.
 
-Viral proteinler tümör hücresinin içinde üretilir ve MHC sınıf bir ile sunulur.
+Viral proteinler tümör hücresinin içinde üretilir ve MHC sınıf I ile sunulur.
 Bu, onları hücre içi antijenleri tanıyan sitotoksik yanıtın doğal hedefi yapar.
 İki örnek çifti iyi bilin.
-HPV proteinleri olan e altı ve e yedi, servikal karsinomlarda ifade edilir.
-E be ve proteinleri olan el em pe bir, yani latent membran proteini, ve e be en a, yani EBV nükleer antijeni, Burkit lenfoma, nazofaringeal karsinom ve benzeri EBV ilişkili tümörlerde bulunur.
-Burası önemli, eşleştirme sorularında çıkar: e altı ve e yedi HPV ile servikal karsinomu, el em pe bir ve e be en a ise EBV ile Burkit lenfoma ve nazofaringeal karsinomu gösterir.
+HPV proteinleri olan E6 ve E7, servikal karsinomlarda ifade edilir.
+EBV proteinleri olan LMP1, yani latent membran proteini, ve EBNA, yani EBV nükleer antijeni, Burkitt lenfoma, nazofaringeal karsinom ve benzeri EBV ilişkili tümörlerde bulunur.
+Burası önemli, eşleştirme sorularında çıkar: E6 ve E7 HPV ile servikal karsinomu, LMP1 ve EBNA ise EBV ile Burkitt lenfoma ve nazofaringeal karsinomu gösterir.
 
-Kısaca toparlarsak her antijen grubunun yabancılık nedeni farklıdır: neoantijende yeni dizi ve hiç tanışmamış olma, kanser-testis antijeninde testiste düşük MHC sınıf bir, aşırı ifadede miktar, anormal formda değişmiş yapı, diferansiyasyon antijeninde soy belirteci, viral antijende ise virüs kökeni.
+Kısaca toparlarsak her antijen grubunun yabancılık nedeni farklıdır: neoantijende yeni dizi ve hiç tanışmamış olma, kanser-testis antijeninde testiste düşük MHC sınıf I, aşırı ifadede miktar, anormal formda değişmiş yapı, diferansiyasyon antijeninde soy belirteci, viral antijende ise virüs kökeni.
 
 @@ Antitümör bağışıklığın hücresel bileşenleri
-Tümör antijeni tanındıktan sonra yanıtı yürüten hücreler iki düzeyde sınıflanır ve etkili antitümör bağışıklık ağırlıkla hücresel bir yanıttır. Temel efektörler sitotoksik T lenfositleri ve T yardımcı Tip 1 hücreleridir. Sitotoksik T lenfositleri CD8 pozitiftir ve tümör hücresini doğrudan öldüren ana hücrelerdir. T yardımcı Tip 1 hücreleri ise CD4 pozitif T hücreleridir; sitokin üreterek yanıtı yönlendirir ve diğer efektörleri aktive eder. Diğer katkılar doğal öldürücü hücreler, yani en ka hücreleri, makrofajlar ve antikora bağımlı hücre aracılı sitotoksisitedir.
+Tümör antijeni tanındıktan sonra yanıtı yürüten hücreler iki düzeyde sınıflanır ve etkili antitümör bağışıklık ağırlıkla hücresel bir yanıttır. Temel efektörler sitotoksik T lenfositleri ve T yardımcı Tip 1 hücreleridir. Sitotoksik T lenfositleri CD8 pozitiftir ve tümör hücresini doğrudan öldüren ana hücrelerdir. T yardımcı Tip 1 hücreleri ise CD4 pozitif T hücreleridir; sitokin üreterek yanıtı yönlendirir ve diğer efektörleri aktive eder. Diğer katkılar doğal öldürücü hücreler, yani NK hücreleri, makrofajlar ve antikora bağımlı hücre aracılı sitotoksisitedir.
 
 Burası önemli, çıkmış sorularda soruldu: CD8 eksprese eden T lenfositi sitotoksik T lenfositidir.
 Yardımcı ve düzenleyici T hücreleri ise CD4 pozitiftir; sorularda bunlar çeldirici olarak verilir.
-Antitümör bağışıklığın merkezinde CD8 pozitif sitotoksik T lenfositi ve CD4 pozitif T yardımcı Tip 1 hücresi vardır; en ka hücresi, makrofaj ve antikor aracılı öldürme destekleyici katkılardır.
+Antitümör bağışıklığın merkezinde CD8 pozitif sitotoksik T lenfositi ve CD4 pozitif T yardımcı Tip 1 hücresi vardır; NK hücresi, makrofaj ve antikor aracılı öldürme destekleyici katkılardır.
 
 @@ Sitotoksik T lenfositi yanıtı
-Sitotoksik T lenfositinin tümörü öldürebilmesi için önce o tümörün antijenine özgü olarak aktive olması gerekir. İlk adım antijen sunumudur: tümör antijenini dendritik hücreler alır ve MHC sınıf bir bağlamında çapraz sunum yapar. Çapraz sunumun anlamı şudur: dendritik hücre, kendi içinde üretmediği, dışarıdan aldığı tümör antijenini MHC sınıf bir üzerinde sunar. Böylece CD8 pozitif T hücreleri tümöre ait bir antijenle karşılaşabilir. 2. adım aktivasyondur: antijeni tanıyan, tümör antijenine özgü CD8 pozitif hücreler klon genişlemesi gösterir, yani aynı özgüllükteki hücreler çoğalarak sayıca artar. Böylece yanıt tümöre özgü olur.
+Sitotoksik T lenfositinin tümörü öldürebilmesi için önce o tümörün antijenine özgü olarak aktive olması gerekir. İlk adım antijen sunumudur: tümör antijenini dendritik hücreler alır ve MHC sınıf I bağlamında çapraz sunum yapar. Çapraz sunumun anlamı şudur: dendritik hücre, kendi içinde üretmediği, dışarıdan aldığı tümör antijenini MHC sınıf I üzerinde sunar. Böylece CD8 pozitif T hücreleri tümöre ait bir antijenle karşılaşabilir. İkinci adım aktivasyondur: antijeni tanıyan, tümör antijenine özgü CD8 pozitif hücreler klon genişlemesi gösterir, yani aynı özgüllükteki hücreler çoğalarak sayıca artar. Böylece yanıt tümöre özgü olur.
 
 Çoğalan hücreler tümör dokusuna ulaşır ve efektör faza geçer.
-Tümör hücreleri üzerindeki MHC sınıf bir ile antijen kompleksini tanırlar; tümör hücresi yüzeyinde bu kompleks yoksa tanıma gerçekleşmez.
+Tümör hücreleri üzerindeki MHC sınıf I ile antijen kompleksini tanırlar; tümör hücresi yüzeyinde bu kompleks yoksa tanıma gerçekleşmez.
 Ardından tümör hücresinde apoptoz, yani programlı hücre ölümü başlatırlar.
 İki yol vardır.
 Perforin ve granzim yolunda granüllerden salınan perforin hedef hücre zarında geçit oluşturur, granzimler bu geçitten girerek apoptozu başlatır.
 Fas ve Fas ligandı yolunda ise T hücresi üzerindeki Fas ligandı tümör hücresindeki Fas reseptörüne bağlanır ve hücre içi ölüm programını tetikler.
 Her iki yolun sonucu aynıdır: tümör hücresi enflamasyona yol açmadan, programlı biçimde ölür.
-Burası önemli: temel antitümör efektör CD8 pozitif sitotoksik T lenfositidir; MHC sınıf bir ile tanır, perforin granzim ve Fas Fas ligandı ile apoptoz yaptırır.
-Bu öldürme yeteneğinin MHC sınıf bir sunumuna bağımlı olduğunu aklınızda tutun, kaçış mekanizmalarının anahtarı burasıdır.
+Burası önemli: temel antitümör efektör CD8 pozitif sitotoksik T lenfositidir; MHC sınıf I ile tanır, perforin granzim ve Fas Fas ligandı ile apoptoz yaptırır.
+Bu öldürme yeteneğinin MHC sınıf I sunumuna bağımlı olduğunu aklınızda tutun, kaçış mekanizmalarının anahtarı burasıdır.
 
 @@ T yardımcı Tip 1 hücreleri ve makrofajlar
 T yardımcı Tip 1 hücreleri tümör hücresini doğrudan öldürmekten çok, sitokin üretimiyle diğer efektörleri güçlendirir. Ana ürünleri interferon gamadır. İnterferon gama makrofajları aktive eder ve onları tümör hücresini öldürebilen efektörlere dönüştürür. İş bölümü şöyledir: CD8 pozitif hücre hedefi doğrudan tanıyıp öldürür, CD4 pozitif T yardımcı Tip 1 hücresi ise interferon gama ile makrofajları devreye sokar ve yanıtın etki alanını genişletir.
@@ -94,7 +94,7 @@ Bu ürünler hedefe özgü bir tanıma gerektirmeden etki ettiği için makrofaj
 Bu T yardımcı Tip 1 ve makrofaj yanıtları özellikle bazı hematolojik ve solid tümörlerde önemli olabilir.
 
 @@ Tümörlere karşı antikor yanıtı
-Hümoral yanıtta antikorlar tümör antijenlerine bağlanır. Antikorun kendisi öldürmez, bağlandığı hücreyi diğer efektörler için işaretler. İki olası etkisi vardır. 1.'si antikora bağımlı hücre aracılı sitotoksisitedir: antikorla kaplanan tümör hücresi en ka hücreleri ve makrofajlar tarafından tanınıp öldürülür; antikor burada hedef ile öldürücü hücre arasında köprü kurar. 2.'si kompleman aktivasyonudur: tümör yüzeyine bağlanan antikor kompleman sistemini aktive eder ve hücre hasarına katkıda bulunur.
+Hümoral yanıtta antikorlar tümör antijenlerine bağlanır. Antikorun kendisi öldürmez, bağlandığı hücreyi diğer efektörler için işaretler. İki olası etkisi vardır. 1.'si antikora bağımlı hücre aracılı sitotoksisitedir: antikorla kaplanan tümör hücresi NK hücreleri ve makrofajlar tarafından tanınıp öldürülür; antikor burada hedef ile öldürücü hücre arasında köprü kurar. 2.'si kompleman aktivasyonudur: tümör yüzeyine bağlanan antikor kompleman sistemini aktive eder ve hücre hasarına katkıda bulunur.
 
 Antikor yanıtının sınırları vardır.
 Solid tümörlerde antikor yanıtının öldürücü etkisi genellikle sınırlıdır; antikorun kitlenin içine ulaşması ve efektör hücreleri yeterince toplaması güçtür.
@@ -105,20 +105,20 @@ Antitümör bağışıklığın asıl yükünü hücresel yanıt taşır ve her 
 @@ Bağışıklıktan kaçış: immün düzenleme ve MHC kaybı
 Gözetim varken kanserler nasıl büyüyebiliyor? Gelişmiş kanserler genellikle güçlü bağışıklık kaçış mekanizmaları gösterir. Burada kanser immün düzenlemesi kavramı devreye girer. Burası önemli: bağışıklık sistemi, tümör içindeki farklı alt klonlar arasından bağışıklık kaçış yeteneği en yüksek olanları seçer. Kolay tanınan klonlar yok edilir, tanınmayan ya da bağışıklığı baskılayan klonlar hayatta kalır ve çoğalır. Sonuçta yerleşik tümörler çoğunlukla bağışıklık tarafından zayıf tanınan ve aktif olarak immün baskı yapan hücrelerden oluşur. Yani bağışıklık sistemi tümörü tamamen yok edemediğinde, farkında olmadan ona karşı en dirençli klonları seçmiş olur.
 
-1. kaçış mekanizması MHC sınıf bir ekspresyonunun azalmasıdır.
-Beta iki mikroglobulin, MHC sınıf bir molekülünün yapısal bileşenidir; bu genin mutasyonları molekülün hücre yüzeyinde oluşmasını bozar.
+Birinci kaçış mekanizması MHC sınıf I ekspresyonunun azalmasıdır.
+Beta 2 mikroglobulin, MHC sınıf I molekülünün yapısal bileşenidir; bu genin mutasyonları molekülün hücre yüzeyinde oluşmasını bozar.
 Antijen sunma yolunun diğer bileşenlerindeki kusurlar da yüzeyde sunulan kompleksi azaltır.
 Burası önemli: sonuçta sitotoksik T lenfositleri tümör hücrelerini tanıyamaz, çünkü antijen hücrede olsa bile yüzeyde sergilenmez.
 
 Bu avantajın bir bedeli vardır.
-Em ha ce kaybı, doğrudan en ka hücre aracılı öldürülmeyi artırabilir; çünkü en ka hücreleri MHC sınıf bir taşımayan hücreleri hedef alabilir.
-Ancak tümörler en ka yanıtını da baskılayacak ek mekanizmalar kullanabilir.
-Böylece bağışıklığın kolları birbirini tamamlar: sitotoksik T lenfositi MHC sınıf bir sunan tümörü, en ka hücresi ise bunu kaybetmiş tümörü hedefler; her iki kola da direnç kazanan alt klon seçilim avantajı elde eder.
+MHC kaybı, doğrudan NK hücre aracılı öldürülmeyi artırabilir; çünkü NK hücreleri MHC sınıf I taşımayan hücreleri hedef alabilir.
+Ancak tümörler NK yanıtını da baskılayacak ek mekanizmalar kullanabilir.
+Böylece bağışıklığın kolları birbirini tamamlar: sitotoksik T lenfositi MHC sınıf I sunan tümörü, NK hücresi ise bunu kaybetmiş tümörü hedefler; her iki kola da direnç kazanan alt klon seçilim avantajı elde eder.
 
 @@ İmmün kontrol noktaları ve diğer kaçış yolları
-İmmün kontrol noktaları, T hücre yanıtını normalde sınırlayan inhibitör yollardır, yani T hücresi üzerindeki frenlerdir. Programlanmış hücre ölümü ligandı bir, kısaca pe de el bir, tümör hücreleri ve tümör çevresindeki miyeloid hücreler üzerinde ifade edilir. Programlanmış hücre ölümü bir, kısaca pe de bir, aktive T lenfositleri üzerindeki reseptördür. Pe de el birin pe de bire bağlanması T hücre aktivitesini baskılar ve sitotoksik T lenfositlerini tükenmiş fenotipe iter; sürekli inhibitör sinyal altında kalan hücrenin öldürme kapasitesi azalır. Bu mekanizmayla tümör antijenini kaybetmeden de kaçabilir. Burası önemli, klasik çeldiricidir: ligand tümör ve miyeloid hücrede, reseptör ise aktive T hücresindedir; yerleri karıştırmayın. Diğer kontrol noktası sitotoksik T lenfosit antijeni dörttür, kısaca ce te el a dört. Bu molekül T hücre aktivasyonunu negatif regüle eder, yani T hücresinin uyarılmasını frenler.
+İmmün kontrol noktaları, T hücre yanıtını normalde sınırlayan inhibitör yollardır, yani T hücresi üzerindeki frenlerdir. Programlanmış hücre ölümü ligandı 1, kısaca PD-L1, tümör hücreleri ve tümör çevresindeki miyeloid hücreler üzerinde ifade edilir. Programlanmış hücre ölümü 1, kısaca PD-1, aktive T lenfositleri üzerindeki reseptördür. PD-L1'in PD-1'e bağlanması T hücre aktivitesini baskılar ve sitotoksik T lenfositlerini tükenmiş fenotipe iter; sürekli inhibitör sinyal altında kalan hücrenin öldürme kapasitesi azalır. Bu mekanizmayla tümör antijenini kaybetmeden de kaçabilir. Burası önemli, klasik çeldiricidir: ligand tümör ve miyeloid hücrede, reseptör ise aktive T hücresindedir; yerleri karıştırmayın. Diğer kontrol noktası sitotoksik T lenfosit antijeni 4'tür, kısaca CTLA-4. Bu molekül T hücre aktivasyonunu negatif regüle eder, yani T hücresinin uyarılmasını frenler.
 
-Tümörler çözünür baskılayıcı sitokinler de kullanır: transforme edici büyüme faktörü beta, kısaca te ge ef beta, ve interlökin on.
+Tümörler çözünür baskılayıcı sitokinler de kullanır: transforme edici büyüme faktörü beta, kısaca TGF-β, ve interlökin 10.
 Bu sitokinler hücreyle temas gerekmeden tümör çevresindeki çok sayıda bağışıklık hücresini etkiler ve sitotoksik T lenfositi tümörü tanısa bile yanıtın etkinliğini azaltabilir.
 Dikkat edin, interferon gama ise tersine makrofajı aktive eden sitokindir.
 Ayrıca tümör çevresine toplanan konak kökenli baskılayıcı hücreler vardır: T düzenleyici hücreler ve miyeloid kökenli baskılayıcı hücreler.
@@ -126,21 +126,21 @@ Bunlar tümörün kendi hücreleri değildir ama tümör yararına çalışırla
 
 Son iki mekanizma antijenle ilgilidir.
 Antijen kaybında, bağışıklık yanıtının hedef aldığı tümör antijenlerini kaybeden alt klonlar seçilir; antijeni taşıyanlar yok edilirken antijensiz klonlar çoğalır.
-Antijen işlenmesindeki bozuklukta ise proteazom kusurları proteinlerin peptitlere parçalanmasını, tap adı verilen transport proteininin kusurları ise peptitlerin MHC sınıf bire yüklenmek üzere taşınmasını bozar.
+Antijen işlenmesindeki bozuklukta ise proteazom kusurları proteinlerin peptitlere parçalanmasını, TAP adı verilen transport proteininin kusurları ise peptitlerin MHC sınıf I'e yüklenmek üzere taşınmasını bozar.
 Antijen kaybında hedef ortadan kalkar, işleme bozukluğunda hedef vardır ama sunulamaz.
 Kaçış yollarını iki grupta düşünebilirsiniz: tümörün görünmez olması, yani MHC, antijen ve işleme kayıpları; ve bağışıklığın aktif baskılanması, yani kontrol noktaları, sitokinler ve baskılayıcı hücreler.
 
 @@ Çıkmış sorularda kaçış mekanizmaları
-Burası önemli, bu bilgi çıkmış sorularda birkaç kez soruldu. Kaçışta öne sürülen mekanizmalar arasında antijen negatif tümör alt kümelerinin seçici olarak çoğalması, doku uyumluluk yani MHC moleküllerinin kaybı veya azalması, tümörün immünsüpresif sitokinler salgılaması ve yüzey antijenlerinin maskelenmesi, yani antijen maskeleme vardır. Kostimülatör molekül ekspresyonunda artış ise bir kaçış mekanizması değildir. Kostimülatör moleküller T hücresinin uyarılması için gereken 2. sinyali verir; bunların artması T hücre yanıtını güçlendirir, tümörün işine yaramaz. Tersine, baskılayıcı sitokinler antijen sunan hücrelerde kostimülatör molekül üretimini azaltarak kaçışa katkıda bulunur.
+Burası önemli, bu bilgi çıkmış sorularda birkaç kez soruldu. Kaçışta öne sürülen mekanizmalar arasında antijen negatif tümör alt kümelerinin seçici olarak çoğalması, doku uyumluluk yani MHC moleküllerinin kaybı veya azalması, tümörün immünsüpresif sitokinler salgılaması ve yüzey antijenlerinin maskelenmesi, yani antijen maskeleme vardır. Kostimülatör molekül ekspresyonunda artış ise bir kaçış mekanizması değildir. Kostimülatör moleküller T hücresinin uyarılması için gereken ikinci sinyali verir; bunların artması T hücre yanıtını güçlendirir, tümörün işine yaramaz. Tersine, baskılayıcı sitokinler antijen sunan hücrelerde kostimülatör molekül üretimini azaltarak kaçışa katkıda bulunur.
 
-Burası önemli, bu da çıkmış sorularda soruldu: tümöre bağlı immün baskıya aracılık eden molekül, bir immün kontrol noktası olan ce te el a dörttür.
-Karsinoembriyonik antijen, over kanseri antijeni olarak bilinen ce a yüz yirmi beş, CD30 ve tümör testis antijenleri immün baskıya aracılık etmez; tümör testis antijenleri, gördüğümüz gibi, tersine bağışıklık yanıtının hedefi olabilen antijenlerdir.
-Bir başka soruda da tersinden soruldu: pe de bir, pe de el bir, ce te el a dört ve T düzenleyici hücre indüksiyonu tümöre bağlı immün supresyona aracılık eder; kar te hücreleri ise immün supresyona aracılık etmez, çünkü onlar tümörü öldürmek için kullanılan bir tedavidir.
+Burası önemli, bu da çıkmış sorularda soruldu: tümöre bağlı immün baskıya aracılık eden molekül, bir immün kontrol noktası olan CTLA-4'tür.
+Karsinoembriyonik antijen, over kanseri antijeni olarak bilinen CA125, CD30 ve tümör testis antijenleri immün baskıya aracılık etmez; tümör testis antijenleri, gördüğümüz gibi, tersine bağışıklık yanıtının hedefi olabilen antijenlerdir.
+Bir başka soruda da tersinden soruldu: PD-1, PD-L1, CTLA-4 ve T düzenleyici hücre indüksiyonu tümöre bağlı immün supresyona aracılık eder; CAR-T hücreleri ise immün supresyona aracılık etmez, çünkü onlar tümörü öldürmek için kullanılan bir tedavidir.
 
 @@ İmmün kontrol noktası inhibitörleri
-Kontrol noktası yolları doğrudan tedavi hedefine dönüştürülmüştür. Strateji tek cümleyle şudur: T hücreler üzerindeki frenleri kaldırmak. Tümöre özgü T hücreleri çoğu zaman vardır ama kontrol noktası sinyalleriyle baskılanmıştır; fren kalkınca yeniden işlev kazanırlar. Hedefler pe de bir, pe de el bir ve ce te el a dörttür. Pe de bir ya da pe de el bir bloke edildiğinde ligand ile reseptör bağlanamaz ve hücre tükenmiş fenotipe itilmez; ce te el a dört bloke edildiğinde aktivasyon üzerindeki negatif düzenleme kalkar. Kullanılan ilaçlar monoklonal antikorlardır: pe de bir ve pe de el bire karşı monoklonal antikorlar ile ce te el a dörde karşı monoklonal antikorlar. Bu ilaçlar tümörü doğrudan öldürmez, hastanın kendi T hücrelerinin baskılanmış öldürme kapasitesini serbest bırakır.
+Kontrol noktası yolları doğrudan tedavi hedefine dönüştürülmüştür. Strateji tek cümleyle şudur: T hücreler üzerindeki frenleri kaldırmak. Tümöre özgü T hücreleri çoğu zaman vardır ama kontrol noktası sinyalleriyle baskılanmıştır; fren kalkınca yeniden işlev kazanırlar. Hedefler PD-1, PD-L1 ve CTLA-4'tür. PD-1 ya da PD-L1 bloke edildiğinde ligand ile reseptör bağlanamaz ve hücre tükenmiş fenotipe itilmez; CTLA-4 bloke edildiğinde aktivasyon üzerindeki negatif düzenleme kalkar. Kullanılan ilaçlar monoklonal antikorlardır: PD-1 ve PD-L1'e karşı monoklonal antikorlar ile CTLA-4'e karşı monoklonal antikorlar. Bu ilaçlar tümörü doğrudan öldürmez, hastanın kendi T hücrelerinin baskılanmış öldürme kapasitesini serbest bırakır.
 
-Burası önemli: klinikte melanom, akciğer karsinomu, mesane karsinomu, Hoçkin lenfoma ve diğerlerinde yüksek yanıt oranları elde edilir.
+Burası önemli: klinikte melanom, akciğer karsinomu, mesane karsinomu, Hodgkin lenfoma ve diğerlerinde yüksek yanıt oranları elde edilir.
 Avantajları uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleri ile kalıcı bağışıklık yanıtıdır.
 Hafıza T hücreleri tümör antijenini hatırlar ve tümör yeniden ortaya çıkarsa yanıtı hızla başlatabilir; ilaç vücuttan atılsa bile bu hafıza korunabilir.
 
@@ -157,23 +157,23 @@ Bu toksisiteler genellikle kortikosteroid ve immünsüpresanlarla, yani bağış
 @@ Diğer immünoterapi yaklaşımları
 Kontrol noktası blokajı mevcut T hücrelerini serbest bırakır; diğer yaklaşımlar ise yeni bir yanıt oluşturmayı ya da T hücre sayısını artırmayı hedefler. Tümör aşıları, tümöre spesifik neoantijenleri hedefleyen kişiselleştirilmiş aşılardır: hastanın tümörüne özgü neoantijenler belirlenir ve bağışıklık sistemi bunlara karşı uyarılır; tolerans olmadığı için güçlü yanıt beklenir. Adaptif T hücre transferinde ise tümöre spesifik T hücreleri laboratuvar ortamında, yani in vitro çoğaltılır ve hastaya geri verilir; klon genişlemesi bir anlamda laboratuvarda sağlanmış olur.
 
-Kimerik antijen reseptör T hücreleri, kısaca kar te tedavisinde T hücrelerine yapay reseptörler eklenir; bu reseptör T hücresini seçilen tümör antijenine yönlendirir.
-Burası önemli: kar te özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.
+Kimerik antijen reseptör T hücreleri, kısaca CAR-T tedavisinde T hücrelerine yapay reseptörler eklenir; bu reseptör T hücresini seçilen tümör antijenine yönlendirir.
+Burası önemli: CAR-T özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.
 Sınırlamaları ciddi sitokin salınım sendromudur; aktive olan çok sayıda T hücresi aşırı sitokin salgılayarak ağır sistemik bir inflamatuvar tablo oluşturabilir.
-Ayrıca şu anda çoğunlukla hematolojik malignitelerde ve 2. basamak tedavi olarak kullanılır.
-Ayırt edin: kontrol noktası inhibitörünün yan etkisi otoimmünite benzeridir, kar te tedavisinin yan etkisi ise sitokin salınım sendromudur.
+Ayrıca şu anda çoğunlukla hematolojik malignitelerde ve ikinci basamak tedavi olarak kullanılır.
+Ayırt edin: kontrol noktası inhibitörünün yan etkisi otoimmünite benzeridir, CAR-T tedavisinin yan etkisi ise sitokin salınım sendromudur.
 
 @@ Metastazın klinik önemi ve basamakları
-Dersin 2. eksenine geçiyoruz. Burası önemli: metastaz kanser ilişkili ölümün başlıca nedenidir. Tümör evrelemesinde em durumu, yani uzak metastaz varlığı belirleyicidir; metastaz tedavi stratejisini ve prognozu şekillendirir. Neden bu kadar önemli? Çünkü cerrahi ve radyoterapi gibi lokal tedavilerle tam eradikasyon zorlaşır ve sistemik, yani tüm vücudu etkileyen tedavi ihtiyacı doğar.
+Dersin ikinci eksenine geçiyoruz. Burası önemli: metastaz kanser ilişkili ölümün başlıca nedenidir. Tümör evrelemesinde M durumu, yani uzak metastaz varlığı belirleyicidir; metastaz tedavi stratejisini ve prognozu şekillendirir. Neden bu kadar önemli? Çünkü cerrahi ve radyoterapi gibi lokal tedavilerle tam eradikasyon zorlaşır ve sistemik, yani tüm vücudu etkileyen tedavi ihtiyacı doğar.
 
 Metastaz tek bir olay değil, ardışık basamaklardan oluşan bir kaskaddır.
-1. basamak primer tümörden ayrılmadır.
+Birinci basamak primer tümörden ayrılmadır.
 2.'si hücre dışı matriks ve bazal membran invazyonudur.
 3.'sü damar içine giriş, yani intravazasyondur.
 4.'sü dolaşımda sağkalımdır, burada tümör embolileri söz konusudur.
 5.'si damar dışına çıkış, yani ekstravazasyondur.
-6.'sı mikrometastaz oluşumudur.
-7.'si ise uygun koşullarda makroskopik metastaza büyümedir.
+Altıncısı mikrometastaz oluşumudur.
+Yedincisi ise uygun koşullarda makroskopik metastaza büyümedir.
 İlk iki basamak invazyonu, sonraki üçü damar içinde taşınmayı, son ikisi yeni dokuda yerleşme ve büyümeyi temsil eder.
 Hücre bu basamakların hepsini tamamlamak zorundadır; herhangi birinde başarısızlık yayılımı durdurur.
 
@@ -187,7 +187,7 @@ Dolaşımda konak lenfoid hücreleriyle etkileşir ve trombositlerle sarılı bi
 Uzak dokuda yeniden bazal membrana tutunur, damarı terk eder ve metastatik birikim anjiyogenez ve büyümeyle metastatik tümöre dönüşür.
 
 @@ Lokal invazyon: E-kadherin kaybı ve matriks yıkımı
-Ayrılma, epitel hücreleri arasındaki bağların gevşemesiyle başlar. Normal epitelde E-kadherin aracılı güçlü hücre hücre bağlantıları vardır. Metastazın başlangıcında E-kadherin fonksiyon kaybı gelişir ve bunun üç nedeni vardır: E-kadherin gen mutasyonları, beta katenin aktivasyonu ve sneyl, tvist gibi transkripsiyon faktörleriyle baskılanma. Burası önemli: sonuçta hücreler arası kohezyon azalır ve tümör hücreleri ayrılıp hareket edebilir.
+Ayrılma, epitel hücreleri arasındaki bağların gevşemesiyle başlar. Normal epitelde E-kadherin aracılı güçlü hücre hücre bağlantıları vardır. Metastazın başlangıcında E-kadherin fonksiyon kaybı gelişir ve bunun 3 nedeni vardır: E-kadherin gen mutasyonları, beta katenin aktivasyonu ve Snail, Twist gibi transkripsiyon faktörleriyle baskılanma. Burası önemli: sonuçta hücreler arası kohezyon azalır ve tümör hücreleri ayrılıp hareket edebilir.
 
 Ayrılan hücrenin önünde iki hücre dışı matriks bariyeri vardır: bazal membran ve interstisyel bağ dokusu.
 Bunları aşmak için tümör hücreleri veya stromal hücreler proteazlar salgılar: matriks metalloproteinazlar, katepsin D ve ürokinaz tipi plazminojen aktivatörü.
@@ -205,7 +205,7 @@ Burası önemli: göç, invazyonun son basamağıdır. Hücre iskeleti, yani akt
 
 Epitel mezenkimal geçiş, epitel hücrelerinin mezenkimal fenotipe geçişidir.
 Burası önemli: E-kadherin ve diğer epitel belirteçleri azalır, vimentin ve düz kas aktini gibi mezenkimal belirteçler artar.
-Sneyl ve tvist transkripsiyon faktörleri E-kadherin gen ekspresyonunu baskılar.
+Snail ve Twist transkripsiyon faktörleri E-kadherin gen ekspresyonunu baskılar.
 Sonuçta hücre hareketliliği ve invazyon kapasitesi artar.
 Bu geçiş, E-kadherin kaybını bir programa dönüştürür: aynı faktörler hem epitel bağlarını çözer hem de hücreyi hareketli bir mezenkimal hücreye benzetir.
 İnvazyonun moleküler sırasını şöyle aklınızda tutabilirsiniz: bağların çözülmesi, matriksin yıkılması, tutunmanın değişmesi ve göç.
@@ -236,7 +236,7 @@ Bu yüzden hedef dokuya ulaşmak tek başına yetmez; destek yoksa odak mikromet
 Mikrometastaz, histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük metastatik odaklardır. Mikroskopla ya da tümöre özgü moleküler belirteçlerle gösterilebilir ama belirti oluşturmaz. Klinik önemi şudur: primer tümör lokal tedaviyle çıkarıldığında hasta hastalıksız görünebilir, ancak vücutta saptanamayan mikrometastazlar kalmış olabilir. Sistemik tedavi ihtiyacının biyolojik temeli de budur.
 
 Tümör dormansisi, tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır; kanser hücreleri vücutta çoğalmayı durdurup sessiz, uyku benzeri bir durumda kalır.
-Üç nedeni vardır.
+3 nedeni vardır.
 Yetersiz anjiyogenezde yeni damar oluşmadığı için odak büyüyemez.
 2.'si uygun stromal niş eksikliğidir; niş, hücrelerin hayatta kalmasını, büyümesini ve düzgün çalışmasını sağlayan mikroçevredir ve bu mikroçevre yapısal veya fonksiyonel olarak yetersiz kalabilir.
 3.'sü konak bağışıklık baskısıdır; bağışıklık sistemi hücreleri tamamen yok edemese de çoğalmalarını baskılayabilir.
@@ -245,12 +245,12 @@ Burası önemli: klinikte yıllar sonra geç metastaz veya nüks görülebilir; 
 @@ Metastaz potansiyeli ve moleküler değişiklikler
 Tümörlerin metastaz yapma eğilimi çok farklıdır. Burası önemli: küçük hücreli akciğer karsinomu erken ve sık metastaz yapar; bazal hücreli karsinom ve birçok primer santral sinir sistemi tümörü ise çok nadiren metastaz yapar. Tuzağa dikkat edin: bazal hücreli karsinom malign olduğu hâlde nadiren metastaz yapar, yani malign her tümör sık metastaz yapar diye düşünmeyin. Tümör boyutu büyüdükçe metastaz olasılığı artar, ancak çok küçük tümörler de metastaz yapabilir; küçük boyut metastazı dışlamaz. Metastazın bir şans faktörü mü, yoksa tümörün içsel özelliği mi olduğu halen araştırılmaktadır.
 
-Metastatik potansiyeli artıran genler şunlardır: sneyl ve tvist gibi epitel mezenkimal geçiş transkripsiyon faktörleri, matriks metalloproteinazlar, adezyon molekülleri ve kemokin reseptörleri.
-Bunların kaskadla örtüştüğüne dikkat edin: sneyl ve tvist ayrılmayı ve geçişi, metalloproteinazlar matriks yıkımını, kemokin reseptörleri ekstravazasyon ve organ tropizmini yönetir.
+Metastatik potansiyeli artıran genler şunlardır: Snail ve Twist gibi epitel mezenkimal geçiş transkripsiyon faktörleri, matriks metalloproteinazlar, adezyon molekülleri ve kemokin reseptörleri.
+Bunların kaskadla örtüştüğüne dikkat edin: Snail ve Twist ayrılmayı ve geçişi, metalloproteinazlar matriks yıkımını, kemokin reseptörleri ekstravazasyon ve organ tropizmini yönetir.
 Ancak saf metastaz onkogenlerini tanımlamak zordur; çoğu zaman aynı genler hem primer tümör büyümesini hem de metastazı destekler.
 
 @@ Kanser, bağışıklık ve metastaz ilişkisi
-İki eksen burada birleşir. İleri tümörler genellikle hem invazyon ve metastaz için özel bir gen ekspresyon profiline, hem de güçlü bağışıklık kaçış mekanizmalarına sahiptir. Bu özellikler tümör mikroçevresiyle şekillenir. Mikroçevrede tümörle ilişkili fibroblastlar, tümörle ilişkili makrofajlar, özellikle em iki fenotipindekiler, endotel ve perisitler bulunur. Burası önemli: bunların hepsi metastatik nişin hazırlanmasına katkı verir. Hatırlayın, bu makrofaj ve fibroblastlar göç için kemokin salgılıyor, makrofajlar ve endotel intravazasyona katılıyordu; niş eksikliği dormansiye yol açarken hazırlanmış niş kolonizasyonu kolaylaştırır.
+İki eksen burada birleşir. İleri tümörler genellikle hem invazyon ve metastaz için özel bir gen ekspresyon profiline, hem de güçlü bağışıklık kaçış mekanizmalarına sahiptir. Bu özellikler tümör mikroçevresiyle şekillenir. Mikroçevrede tümörle ilişkili fibroblastlar, tümörle ilişkili makrofajlar, özellikle M2 fenotipindekiler, endotel ve perisitler bulunur. Burası önemli: bunların hepsi metastatik nişin hazırlanmasına katkı verir. Hatırlayın, bu makrofaj ve fibroblastlar göç için kemokin salgılıyor, makrofajlar ve endotel intravazasyona katılıyordu; niş eksikliği dormansiye yol açarken hazırlanmış niş kolonizasyonu kolaylaştırır.
 
 Özetle, tümör immünolojisinde tümör antijenleri, sitotoksik T lenfositi yanıtı, kaçış yolları ve immünoterapiler; metastazda ise hücre ile matriks etkileşimi, epitel mezenkimal geçiş, invazyon, intravazasyon ve ekstravazasyondan oluşan çok basamaklı bir süreç var.
 Organ tropizmi ve dormansi önemli kavramlardır.

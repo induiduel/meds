@@ -588,3 +588,9 @@
   :root[data-design='v12'] { --sh-tabs-h: 54px; }
   :root[data-design='v12'] .o12-page .cx-desc { display: none; }
 }
+
+/* iOS: 16 px altı yazı alanına dokununca Safari sayfayı yakınlaştırıyor ve geri almıyordu (düğmeler/yazılar ekran
+ * dışına taşıyor, yatay kaydırma çıkıyordu). Yalnız gerçek iPhone/iPad'de (html.is-ios) yazı alanları en az 16 px. */
+:root.is-ios :is(input:not([type='checkbox'], [type='radio'], [type='range'], [type='button'], [type='submit'], [type='color'], [type='file']), textarea, select) {
+  font-size: max(16px, 1em) !important;
+}
