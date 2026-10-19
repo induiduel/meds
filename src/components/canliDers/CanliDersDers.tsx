@@ -9,6 +9,9 @@ import { ArrowLeftRight, ArrowUpDown, ChevronDown, ChevronLeft, ChevronUp, Check
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import { wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
+import { isIosBrowserTab, shouldAvoidNativeFullscreen } from '../../utils/device';
+import { openPwaInstallGuide } from '../../services/pwaService';
 import {
   cdCumleAraligi, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
@@ -26,6 +29,18 @@ import { toast } from '../ui/Toast';
 import { useYildizliMi, useYildizliSayisi, yildizToggle } from '../../services/yildizliParagrafStore';
 import { YildizliParagraflarModal } from '../study/YildizliParagraflarModal';
 import '../learn/pdf/pdfDoc.css';
+
+/** iPhone/iPad'de tarayıcı sekmesinde adres çubuğu gizlenemez: gerçek tam ekran için PWA'yı öner. */
+let pwaIpucuGosterildi = false;
+function pwaIpucu() {
+  if (pwaIpucuGosterildi || !isIosBrowserTab()) return;
+  pwaIpucuGosterildi = true;
+  toast.info(
+    'Tam ekran modu açıldı',
+    'Adres çubuğunu da tamamen gizlemek için uygulamayı Ana Ekrana ekleyebilirsin.',
+    { label: 'Nasıl eklenir?', onClick: () => openPwaInstallGuide() },
+  );
+}
 
 /** Öğenin görünür ölçeği (v12 yazı boyutu CSS zoom'u); utils/uiZoom.elementZoom ile aynı mantık. */
 function elementZoom(el: Element | null | undefined): number {
@@ -291,11 +306,17 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
       window.removeEventListener('medsor:fullscreenchange', onFs);
     };
   }, [tamEkran, oynaticiAcik]);
+  // Tam ekranda belge kaymasın: iOS Safari/Chrome adres çubuğunu geri getiren lastik kaydırma engellenir.
+  useEffect(() => {
+    if (!tamEkran) return;
+    lockScroll();
+    return () => unlockScroll();
+  }, [tamEkran]);
   useEffect(() => () => {
     document.documentElement.classList.remove('cd-tam-ekran', 'cd-tam-oynatici');
     const d = document as any;
     if (d.fullscreenElement || d.webkitFullscreenElement) {
-      void (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+      void (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
     }
   }, []);
   const tamEkranAc = () => {
@@ -311,19 +332,24 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     } catch {
       window.scrollTo(0, 0);
     }
+    if (shouldAvoidNativeFullscreen()) {
+      return;
+    }
     const req = kok.requestFullscreen || kok.webkitRequestFullscreen || kok.webkitRequestFullScreen;
-    if (req) {
+    if (!req) {
+      pwaIpucu();
+      return;
+    }
+    try {
+      const res = req.call(kok, { navigationUI: 'hide' } as FullscreenOptions);
+      if (res && typeof (res as Promise<void>).catch === 'function') {
+        (res as Promise<void>).catch(() => {});
+      }
+    } catch {
       try {
-        const res = req.call(kok, { navigationUI: 'hide' } as FullscreenOptions);
-        if (res && typeof (res as Promise<void>).catch === 'function') {
-          (res as Promise<void>).catch(() => {});
-        }
+        req.call(kok);
       } catch {
-        try {
-          req.call(kok);
-        } catch {
-          /* desteklenmiyor: sayfa içi tam ekran (cd-tam-ekran) devrede kalır */
-        }
+        pwaIpucu();
       }
     }
   };
@@ -333,7 +359,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     setTamEkran(false);
     const d = document as any;
     if (d.fullscreenElement || d.webkitFullscreenElement) {
-      void (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+      void (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
     }
     window.dispatchEvent(new CustomEvent('medsor:fullscreenchange', { detail: { active: false } }));
   };

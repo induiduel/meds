@@ -5,14 +5,16 @@
  *  Yalnız palet tokenı: açık/koyu tema kendiliğinden. Satırlar: üst çubuk · ilerleme · sahne (kendi kayar) · alt oynatıcı.
  * ============================================================================= */
 .sc { --sc-w: 760px; --sc-yardim: var(--color-ai, var(--color-accent)); --sc-zoom: 1; --sc-bar-zoom: 1;
-  position: fixed; inset: 0; z-index: 90; display: flex; flex-direction: column;
-  width: 100%; height: 100%; max-width: 100vw !important; max-height: 100dvh !important; margin: 0; box-sizing: border-box; overflow: hidden;
+  position: fixed; top: var(--vvt, 0px); right: 0; bottom: auto; left: 0; z-index: 90; display: flex; flex-direction: column;
+  width: 100%; height: var(--vvh, 100dvh); max-width: 100vw !important; max-height: var(--vvh, 100dvh) !important; margin: 0; box-sizing: border-box; overflow: hidden;
   background: var(--color-canvas); color: var(--color-ink); font-family: var(--font-sans, inherit);
   padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) 0 env(safe-area-inset-left, 0px);
   animation: sc-in .22s var(--mo-ease, ease) backwards; }
 :root.kb-open .sc { top: var(--vvt, 0px); bottom: auto; height: var(--vvh, 100dvh); }
-.sc:fullscreen, .sc:-webkit-full-screen { inset: 0; width: 100%; height: 100%; max-width: 100vw !important; max-height: 100vh !important; }
+.sc:fullscreen, .sc:-webkit-full-screen, .sc.is-tam { inset: 0; top: 0; width: 100%; height: 100dvh; max-width: 100vw !important; max-height: 100dvh !important; z-index: 200; --sc-w: min(1040px, 100%); }
 .sc.is-tam .sc-tam { background: var(--color-accent-soft); color: var(--color-accent) !important; }
+.sc.is-tam .sc-ust { padding-block: 4px; }
+.sc.is-tam .sc-sahne { padding: 12px 12px 18px; }
 @keyframes sc-in { from { opacity: 0; transform: scale(.985); } }
 .sc button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; color: inherit; }
 .sc button:disabled { cursor: default; }

@@ -12,7 +12,9 @@ import type { InteractiveDeck, SlideItem } from './InteractiveDeckView';
 import { getSlidePdfLocation } from '../../services/slidePdfMappingService';
 import { drivePreviewUrl, driveViewUrl, useDeckPdf, type DeckPdfFile } from '../../services/deckPdfService';
 import { PDF_SAVED_EVENT, removeSavedPdf, savePdfOffline, savedPdfObjectUrl } from '../../services/deviceStorage';
+import { shouldAvoidNativeFullscreen } from '../../utils/device';
 import { wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { toast } from '../ui/Toast';
 import './pdf/pdfDoc.css';
 
@@ -117,8 +119,8 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
         hadNativeFsRef.current = true;
       } else if (hadNativeFsRef.current) {
         hadNativeFsRef.current = false;
-        if (wasRecentlyScrollingOrTouching()) {
-          setMaxed(true);
+        if (!wasRecentlyScrollingOrTouching()) {
+          setMaxed(false);
         }
       }
     };
@@ -132,46 +134,37 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   const fsOn = isFs || maxed;
   const toggleFs = () => {
     const d = document as any;
-    if (maxed) {
+    if (maxed || isFs) {
       setMaxed(false);
-      if (isFs) {
+      if (isFs || d.fullscreenElement || d.webkitFullscreenElement) {
         hadNativeFsRef.current = false;
-        (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+        (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
       }
       return;
     }
-    if (isFs) {
-      hadNativeFsRef.current = false;
-      (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
-      return;
-    }
+    setMaxed(true);
+    if (shouldAvoidNativeFullscreen()) return;
     const el: any = rootRef.current;
     const req = el?.requestFullscreen || el?.webkitRequestFullscreen || el?.webkitRequestFullScreen;
-    if (!req) return setMaxed(true);
-    // İstek reddedilir ya da yanıtsız kalırsa (gömülü görünümler) ekranı kaplayan katmana geçilir
-    let settled = false;
+    if (!req) return;
     try {
-      const pr = req.call(el, { navigationUI: 'hide' });
-      pr?.then?.(() => (settled = true), () => {
-        settled = true;
-        setMaxed(true);
-      });
+      req.call(el, { navigationUI: 'hide' })?.catch?.(() => {});
     } catch {
       try {
-        const pr2 = req.call(el);
-        pr2?.then?.(() => (settled = true), () => {
-          settled = true;
-          setMaxed(true);
-        });
+        req.call(el)?.catch?.(() => {});
       } catch {
-        setMaxed(true);
-        return;
+        /* sayfa içi maxed katman aktif */
       }
     }
-    window.setTimeout(() => {
-      if (!settled && !d.fullscreenElement && !d.webkitFullscreenElement) setMaxed(true);
-    }, 1500);
   };
+  // Ekranı kaplayan PDF katmanı açıkken belge kaymasın: iOS'ta adres çubuğu geri gelmesin,
+  // alttaki ders sayfası parmakla kaymasın.
+  useEffect(() => {
+    if (!maxed) return;
+    lockScroll();
+    return () => unlockScroll();
+  }, [maxed]);
+
   // Katman modunda Esc yalnız katmanı kapatsın (dersi değil)
   useEffect(() => {
     if (!maxed) return;

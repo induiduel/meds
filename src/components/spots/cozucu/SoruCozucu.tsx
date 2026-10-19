@@ -6,6 +6,9 @@ import {
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../../services/api';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
+import { isIosBrowserTab, shouldAvoidNativeFullscreen } from '../../../utils/device';
+import { openPwaInstallGuide } from '../../../services/pwaService';
+import { toast } from '../../ui/Toast';
 import { Metin } from '../onem/OnemMadde';
 import {
   HARFLER, TERCIH_KEY, VARSAYILAN_SES, cozucuDersYukle, cozucuDizinYukle, ilerlemeOku, ilerlemeYaz, klipYolu, sesListesi, setAdi,
@@ -47,6 +50,18 @@ interface Props {
   onOzelSonuc?: (sonuc: Record<string, Sonuc>) => void;
 }
 type Durum = 'acik' | 'cozuluyor' | 'dogru' | 'gosterildi';
+
+/** iPhone/iPad'de tarayıcı sekmesinde adres çubuğu gizlenemez: gerçek tam ekran için PWA'yı öner. */
+let pwaIpucuGosterildi = false;
+function pwaIpucu() {
+  if (pwaIpucuGosterildi || !isIosBrowserTab()) return;
+  pwaIpucuGosterildi = true;
+  toast.info(
+    'Tam ekran modu açıldı',
+    'Adres çubuğunu da tamamen gizlemek için uygulamayı Ana Ekrana ekleyebilirsin.',
+    { label: 'Nasıl eklenir?', onClick: () => openPwaInstallGuide() },
+  );
+}
 /** bas/kes: klibin yalnız bu cümle aralığını çal (kök klibinden tek seçenek okumak için) */
 interface Adim { klasor: string; klip: string; metinler: string[]; onBasla?: () => void; onCumle?: (j: number) => void; bas?: number; kes?: number }
 /** Otomatik çöz ara cümleleri (ortak klipler; yoksa tarayıcı sesiyle okunur) */
@@ -582,7 +597,7 @@ export const SoruCozucu: React.FC<Props> = ({
       document.documentElement.classList.remove('is-app-fullscreen');
       const d = document as any;
       if (d.fullscreenElement || d.webkitFullscreenElement) {
-        (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+        (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
       }
     };
   }, []);
@@ -592,7 +607,7 @@ export const SoruCozucu: React.FC<Props> = ({
       setTamEkran(false);
       document.documentElement.classList.remove('is-app-fullscreen');
       if (d.fullscreenElement || d.webkitFullscreenElement) {
-        (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+        (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
       }
       return;
     }
@@ -600,15 +615,18 @@ export const SoruCozucu: React.FC<Props> = ({
     document.documentElement.classList.add('is-app-fullscreen');
     const el: any = document.documentElement;
     const req = el?.requestFullscreen || el?.webkitRequestFullscreen || el?.webkitRequestFullScreen;
-    if (req) {
+    if (!req || shouldAvoidNativeFullscreen()) {
+      pwaIpucu();
+      return;
+    }
+    try {
+      req.call(el, { navigationUI: 'hide' })?.catch?.(() => {});
+    } catch {
       try {
-        req.call(el, { navigationUI: 'hide' })?.catch?.(() => {});
+        req.call(el)?.catch?.(() => {});
       } catch {
-        try {
-          req.call(el)?.catch?.(() => {});
-        } catch {
-          /* iOS/iPadOS'ta CSS tam ekran (is-tam) kullanılır */
-        }
+        // iPhone'da gerçek tam ekran API'si yok: sayfa içi katman (is-tam) sürer.
+        pwaIpucu();
       }
     }
   };

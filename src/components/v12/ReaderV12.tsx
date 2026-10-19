@@ -18,6 +18,7 @@ import { AlignLeft, ChevronLeft, ChevronRight, Focus, Maximize2, Minimize2, More
 import { useAppearance, TEXT_PX_MAX, TEXT_PX_MIN } from '../../utils/appearance';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { detectIosDevice, openPwaInstallGuide } from '../../services/pwaService';
+import { shouldAvoidNativeFullscreen } from '../../utils/device';
 import { wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
 import { toast } from '../ui/Toast';
 import '../../styles/v12/reader.css';
@@ -250,11 +251,13 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
       setIsFs(f);
       if (f) {
         hadNativeFsRef.current = true;
-        setImmersive(false);
+        setImmersive(true);
       } else if (hadNativeFsRef.current) {
         hadNativeFsRef.current = false;
         if (wasRecentlyScrollingOrTouching()) {
           setImmersive(true);
+        } else {
+          setImmersive(false);
         }
       }
     };
@@ -269,7 +272,7 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
   const toggleFs = () => {
     setMenuOpen(false);
     const d = document as any;
-    if (immersive) {
+    if (immersive || d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
       setImmersive(false);
       if (d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
         hadNativeFsRef.current = false;
@@ -277,15 +280,10 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
       }
       return;
     }
-    if (d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
-      hadNativeFsRef.current = false;
-      (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
-      return;
-    }
+    setImmersive(true);
     const el: any = document.documentElement;
     const req = el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen;
-    if (!req) {
-      setImmersive(true);
+    if (!req || shouldAvoidNativeFullscreen()) {
       const isStandalone = window.matchMedia?.('(display-mode: standalone)').matches || (navigator as any).standalone === true;
       if (detectIosDevice() && !isStandalone) {
         toast.info(
@@ -296,28 +294,15 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
       }
       return;
     }
-    let settled = false;
     try {
-      const p = req.call(el, { navigationUI: 'hide' });
-      p?.then?.(() => (settled = true), () => {
-        settled = true;
-        setImmersive(true);
-      });
+      req.call(el, { navigationUI: 'hide' })?.catch?.(() => {});
     } catch {
       try {
-        const p2 = req.call(el);
-        p2?.then?.(() => (settled = true), () => {
-          settled = true;
-          setImmersive(true);
-        });
+        req.call(el)?.catch?.(() => {});
       } catch {
-        setImmersive(true);
-        return;
+        /* sayfa içi immersive mod aktif */
       }
     }
-    window.setTimeout(() => {
-      if (!settled && !d.fullscreenElement && !d.webkitFullscreenElement && !d.webkitCurrentFullScreenElement) setImmersive(true);
-    }, 800);
   };
 
   useLayoutEffect(() => {

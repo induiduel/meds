@@ -57,7 +57,9 @@ import { getSlidePdfLocation } from '../../../services/slidePdfMappingService';
 import { useDeckPdf } from '../../../services/deckPdfService';
 import { QuestionFocus, focusMarks } from '../../../services/questionFocus';
 import { detectIosDevice, openPwaInstallGuide } from '../../../services/pwaService';
+import { shouldAvoidNativeFullscreen } from '../../../utils/device';
 import { wasRecentlyScrollingOrTouching } from '../../../utils/fullscreen';
+import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
 import { toast } from '../../ui/Toast';
 import { deckName } from '../../../data/deckStore';
 import {
@@ -756,6 +758,12 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const [isFs, setIsFs] = useState(false);
   const [immersive, setImmersive] = useState(false);
   const hadNativeFsRef = useRef(false);
+  // Tam ekran/immersive açıkken belge kaymasın: iOS'ta adres çubuğu geri gelip katmanı kaydırmasın.
+  useEffect(() => {
+    if (!immersive) return;
+    lockScroll();
+    return () => unlockScroll();
+  }, [immersive]);
   useEffect(() => {
     const on = () => {
       const d = document as any;
@@ -763,13 +771,14 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       setIsFs(fs);
       if (fs) {
         hadNativeFsRef.current = true;
-        setImmersive(false);
+        setImmersive(true);
       } else if (hadNativeFsRef.current) {
         hadNativeFsRef.current = false;
         // Dokunmatik cihazda kaydırma hareketi yüzünden tarayıcı native fullscreen'den çıktıysa tam ekran modunu koru
         if (wasRecentlyScrollingOrTouching()) {
           setImmersive(true);
         } else {
+          setImmersive(false);
           document.documentElement.classList.remove('is-app-fullscreen');
         }
       }
@@ -784,7 +793,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const toggleFullscreen = () => {
     setToolsOpen(false);
     const d = document as any;
-    if (immersive) {
+    if (immersive || d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
       setImmersive(false);
       document.documentElement.classList.remove('is-app-fullscreen');
       if (d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
@@ -793,22 +802,16 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       }
       return;
     }
-    if (d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
-      hadNativeFsRef.current = false;
-      document.documentElement.classList.remove('is-app-fullscreen');
-      (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
-      return;
-    }
     const el: any = document.documentElement;
     el.classList.add('is-app-fullscreen');
+    setImmersive(true);
+    try {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+    } catch {
+      window.scrollTo(0, 0);
+    }
     const req = el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen;
-    if (!req) {
-      setImmersive(true);
-      try {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
-      } catch {
-        window.scrollTo(0, 0);
-      }
+    if (!req || shouldAvoidNativeFullscreen()) {
       const isStandalone = window.matchMedia?.('(display-mode: standalone)').matches || (navigator as any).standalone === true;
       if (detectIosDevice() && !isStandalone) {
         toast.info(
@@ -819,28 +822,15 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       }
       return;
     }
-    let settled = false;
     try {
-      const p = req.call(el, { navigationUI: 'hide' });
-      p?.then?.(() => (settled = true), () => {
-        settled = true;
-        setImmersive(true);
-      });
+      req.call(el, { navigationUI: 'hide' })?.catch?.(() => {});
     } catch {
       try {
-        const p2 = req.call(el);
-        p2?.then?.(() => (settled = true), () => {
-          settled = true;
-          setImmersive(true);
-        });
+        req.call(el)?.catch?.(() => {});
       } catch {
-        setImmersive(true);
-        return;
+        /* sayfa içi immersive mod zaten aktif */
       }
     }
-    window.setTimeout(() => {
-      if (!settled && !d.fullscreenElement && !d.webkitFullscreenElement && !d.webkitCurrentFullScreenElement) setImmersive(true);
-    }, 800);
   };
   const fsOn = isFs || immersive;
 
@@ -1588,8 +1578,8 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         }
       />
     ) : layout === 'A' || v12 ? (
-      <div className={`ls-A ${outlineOpen && railInline ? 'has-outline' : ''} ${notesDocked && !studioV12 ? 'x12-has-notes' : ''} ${studioV12 ? 'x12-is-studio' : ''}`}>
-        {outlineOpen && railInline && (
+      <div className={`ls-A ${outlineOpen && railInline && !immersive ? 'has-outline' : ''} ${notesDocked && !studioV12 ? 'x12-has-notes' : ''} ${studioV12 ? 'x12-is-studio' : ''}`}>
+        {outlineOpen && railInline && !immersive && (
           <nav id="lv-rail" className="ls-A-outline lv-rail" aria-label="Slaytlar">
             <LessonRail steps={steps} sections={sections} current={index} done={done} onPick={goTo} />
           </nav>
@@ -1695,7 +1685,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       <FeedbackProvider value={fbCtx}>
       <SocialProvider value={socialCtx}>
       {immersive && (
-        <button type="button" className="ls-exit-immersive" onClick={() => setImmersive(false)} aria-label="Tam ekrandan çık" title="Tam ekrandan çık (Esc)">
+        <button type="button" className="ls-exit-immersive" onClick={toggleFullscreen} aria-label="Tam ekrandan çık" title="Tam ekrandan çık (Esc)">
           <Minimize2 aria-hidden /><span>Küçült</span>
         </button>
       )}

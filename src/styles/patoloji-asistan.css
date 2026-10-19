@@ -4,14 +4,16 @@
  *  Satırlar: üst çubuk · ilerleme şeridi · sahne (kendi kayar) · alt oynatıcı. İçerik sütunu en çok 760 px.
  * ============================================================================= */
 .pa { --star: color-mix(in srgb, var(--color-warn) 55%, #b88400); --pa-w: 760px; --pa-zoom: 1; --pa-bar-zoom: 1;
-  position: fixed; inset: 0; z-index: 90; display: flex; flex-direction: column;
-  width: 100%; height: 100%; max-width: 100vw !important; max-height: 100dvh !important; margin: 0; box-sizing: border-box; overflow: hidden;
+  position: fixed; top: var(--vvt, 0px); right: 0; bottom: auto; left: 0; z-index: 90; display: flex; flex-direction: column;
+  width: 100%; height: var(--vvh, 100dvh); max-width: 100vw !important; max-height: var(--vvh, 100dvh) !important; margin: 0; box-sizing: border-box; overflow: hidden;
   background: var(--color-canvas); color: var(--color-ink); font-family: var(--font-sans, inherit);
   padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) 0 env(safe-area-inset-left, 0px);
   animation: pa-in .22s var(--mo-ease, ease) backwards; }
 :root.kb-open .pa { top: var(--vvt, 0px); bottom: auto; height: var(--vvh, 100dvh); }
-.pa:fullscreen, .pa:-webkit-full-screen { inset: 0; width: 100%; height: 100%; max-width: 100vw !important; max-height: 100vh !important; }
+.pa:fullscreen, .pa:-webkit-full-screen, .pa.is-tam { inset: 0; top: 0; width: 100%; height: 100dvh; max-width: 100vw !important; max-height: 100dvh !important; z-index: 200; --pa-w: min(1040px, 100%); }
 .pa.is-tam .pa-tam { background: var(--color-accent-soft); color: var(--color-accent) !important; }
+.pa.is-tam .pa-ust { padding-block: 4px; }
+.pa.is-tam .pa-sahne { padding: 12px 12px 18px; }
 @keyframes pa-in { from { opacity: 0; transform: scale(.985); } }
 .pa button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; color: inherit; }
 .pa button:disabled { cursor: default; }

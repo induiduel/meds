@@ -1,10 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 32,
-  "baslik": "Hesap Değişimi İlerleme Koruması ve Google + Şifre Birlikte Giriş Desteği",
+  "onem": 33,
+  "baslik": "Dokunmatik Cihaz ve Chrome Tam Ekran Kaydırma Düzeltmesi",
   "maddeler": [
-    "Google ile giriş yaptıktan sonra e-posta şifresi devre dışı kalan hesaplar için Giriş ekranına 'Şifremi unuttum / Şifre tanımla' ve Profil -> Hesap sekmesine 'Şifre belirle / değiştir' alanı eklendi; böylece aynı hesaba hem Google ile hem de e-posta + şifre ile giriş yapılabilir.",
-    "E-posta ile girişten Google ile girişe geçişte veya çıkış yapıp yeniden giriş yapıldığında çalışma ilerlemesinin silinmesine yol açan mezar taşı (v:null) hatası giderildi.",
-    "Farklı cihazlarda yapılan konu çalışmaları, çözülen sorular ve yıldızlı paragraflar artık birbirinin üzerine yazmak yerine madde bazında kayıpsız birleştiriliyor."
+    "Chrome ve mobil/dokunmatik ekranlarda tam ekrana girildiğinde tarayıcının 'Tam ekrandan çıkmak için kaydır' hareket kilidinin sayfa kaydırmayı ve bölünmüş ekran etkileşimlerini bozması engellendi.",
+    "Tam ekran modunda ana sayfa, ders anlatımı, PDF görüntüleyici, sesli ders, sınav asistanı ve soru çözücü ekranlarında kesintisiz kaydırma ve tam ekran odak görünümü iyileştirildi."
   ]
 }

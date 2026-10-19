@@ -319,28 +319,11 @@ html.theme-dark {
 }
 html, body {
   overflow-x: hidden;
+  overscroll-behavior-y: none;
   max-width: calc(100vw / var(--in-zoom, 1));
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Tam ekran veya tam sayfa oynatıcı (.ls-root, .pa, .sc, .r12-root.is-focus) açıkken arka plandaki
-   5000px'lik ana sayfa akışının (html/body) kaymasını kilitle: iOS/iPadOS WebKit'te bölünmüş ekranda
-   metin/PDF kaydırırken belge köküne (documentElement) sızan en ufak kaydırma native fullscreen'den çıkarır. */
-html:fullscreen,
-html:-webkit-full-screen,
-html.is-app-fullscreen,
-html.cd-tam-ekran,
-html:has(.ls-root, .pa, .sc, .r12-root.is-focus),
-html:fullscreen body,
-html:-webkit-full-screen body,
-html.is-app-fullscreen body,
-html.cd-tam-ekran body,
-body:has(.ls-root, .pa, .sc, .r12-root.is-focus) {
-  overflow: hidden !important;
-  overscroll-behavior: none !important;
-  height: 100% !important;
-  max-height: 100% !important;
-}
 
 body {
   background: var(--color-canvas);
@@ -1656,7 +1639,11 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-exit-immersive { position: fixed; z-index: 80; right: calc(12px + env(safe-area-inset-right, 0px)); top: calc(10px + env(safe-area-inset-top, 0px)); height: 34px; padding: 0 11px; gap: 5px; opacity: .82; transition: opacity .2s; border: 1px solid var(--color-line); border-radius: 99px; background: var(--color-white); color: var(--color-ink); font: 600 12.5px/1 var(--font-sans); box-shadow: var(--shadow-md); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
 .ls-exit-immersive svg { width: 15px; height: 15px; }
 .ls-exit-immersive:hover, .ls-exit-immersive:focus-visible { opacity: 1; }
-.ls-root.is-immersive .ls-A-main > .ls-col { padding-top: calc(20px + env(safe-area-inset-top, 0px)); }
+.ls-root.is-immersive:has(.ls-split, .ls-pdf) .ls-exit-immersive { right: auto; left: 50%; transform: translateX(-50%); top: calc(8px + env(safe-area-inset-top, 0px)); }
+/* Tam ekranda sabit çıkış hapı üstte ~44 px; içerik onun altından başlasın (üst çubuk gizli). */
+.ls-root.is-immersive .ls-A-main > .ls-col { padding-top: calc(56px + env(safe-area-inset-top, 0px)); }
+.ls-root.is-immersive .ls-B { padding-top: calc(56px + env(safe-area-inset-top, 0px)); }
+
 
 /* Araçlar menüsü */
 .ls-tools { position: relative; }
