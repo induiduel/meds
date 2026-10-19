@@ -1,0 +1,1032 @@
+{
+ "kod": "01",
+ "baslik": "Patolojiye Giriş",
+ "surum": "alt-1",
+ "sorular": [
+  {
+   "no": 1,
+   "tur": "ornek",
+   "soru": "Etiyolojik ajanın başlattığı olaylar zincirini, yani hastalığın gelişim mekanizmasını ifade eden terim hangisidir?",
+   "secenekler": {
+    "A": "Etiyoloji",
+    "B": "Patogenez",
+    "C": "Morfoloji",
+    "D": "Prognoz",
+    "E": "Epidemiyoloji"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Etiyoloji, hastalığın nedenidir; genetik ya da edinsel olabilir, ama nedenin başlattığı olaylar zincirini anlatmaz.",
+    "B": "Patogenez doğru: etiyolojik ajanın başlattığı moleküler, hücresel ve doku düzeyindeki olaylar zinciri, yani gelişim mekanizmasıdır.",
+    "C": "Morfolojik değişiklikler, hastalığın makroskobik ve mikroskobik yapısal bulgularıdır; mekanizmayı değil, ortaya çıkan görünümü tanımlar.",
+    "D": "Prognoz ile karıştırılabilir: Patoloji raporu prognoza yön verir, ama gelişim mekanizması başka bir terimle anlatılır.",
+    "E": "Hastalık sürecinin dört öğesi etiyoloji, patogenez, morfolojik değişiklikler ve klinik sonuçlardır. Epidemiyoloji bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Hastalık süreci dört öğeden oluşur; etiyoloji nedeni, patogenez gelişim mekanizmasını anlatır, ardından morfolojik değişiklikler ve klinik sonuçlar gelir.",
+   "metin": "**Soru.** Etiyolojik ajanın başlattığı olaylar zincirini, yani hastalığın gelişim mekanizmasını ifade eden terim hangisidir?\n\n**A)** Etiyoloji · **B)** Patogenez · **C)** Morfoloji · **D)** Prognoz · **E)** Epidemiyoloji\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Etiyoloji** — Etiyoloji, hastalığın nedenidir; genetik ya da edinsel olabilir, ama nedenin başlattığı olaylar zincirini anlatmaz.\n- **Patogenez** — Patogenez doğru: etiyolojik ajanın başlattığı moleküler, hücresel ve doku düzeyindeki olaylar zinciri, yani gelişim mekanizmasıdır.\n- **Morfoloji** — Morfolojik değişiklikler, hastalığın makroskobik ve mikroskobik yapısal bulgularıdır; mekanizmayı değil, ortaya çıkan görünümü tanımlar.\n- **Prognoz** — Prognoz ile karıştırılabilir: Patoloji raporu prognoza yön verir, ama gelişim mekanizması başka bir terimle anlatılır.\n- **Epidemiyoloji** — Hastalık sürecinin dört öğesi etiyoloji, patogenez, morfolojik değişiklikler ve klinik sonuçlardır. Epidemiyoloji bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Patogenez\n\n**Özet.** Hastalık süreci dört öğeden oluşur; etiyoloji nedeni, patogenez gelişim mekanizmasını anlatır, ardından morfolojik değişiklikler ve klinik sonuçlar gelir.",
+   "ses": "Etiyolojik ajanın başlattığı olaylar zincirini, yani hastalığın gelişim mekanizmasını ifade eden terim hangisidir?\nA, Etiyoloji\nBe, Patogenez\nCe, Morfoloji\nDe, Prognoz\nE, Epidemiyoloji\nSeçenekleri sırayla değerlendirelim.\nEtiyoloji, hastalığın nedenidir. Genetik ya da edinsel olabilir, ama nedenin başlattığı olaylar zincirini anlatmaz.\nPatogenez doğru. Etiyolojik ajanın başlattığı moleküler, hücresel ve doku düzeyindeki olaylar zinciri, yani gelişim mekanizmasıdır.\nMorfolojik değişiklikler, hastalığın makroskobik ve mikroskobik yapısal bulgularıdır. Mekanizmayı değil, ortaya çıkan görünümü tanımlar.\nPrognoz ile karıştırılabilir. Patoloji raporu prognoza yön verir, ama gelişim mekanizması başka bir terimle anlatılır.\nHastalık sürecinin dört öğesi etiyoloji, patogenez, morfolojik değişiklikler ve klinik sonuçlardır. Epidemiyoloji bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Patogenez\nHastalık süreci dört öğeden oluşur. Etiyoloji nedeni, patogenez gelişim mekanizmasını anlatır, ardından morfolojik değişiklikler ve klinik sonuçlar gelir.",
+   "kelime": 144
+  },
+  {
+   "no": 2,
+   "tur": "ornek",
+   "soru": "\"Omnis cellula e cellula\" ilkesini ortaya koyan ve modern patolojinin kurucusu kabul edilen bilim insanı kimdir?",
+   "secenekler": {
+    "A": "Morgagni",
+    "B": "Celsus",
+    "C": "Galen",
+    "D": "Rudolf Virchow",
+    "E": "Papanicolaou"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Morgagni, yaklaşık 700 otopsiyle hastalıkların organlara yerleştiğini gösterdi; modern patolojinin değil, patolojik anatominin kurucusudur.",
+    "B": "Celsus, De Medicina eserinde inflamasyonun dört belirtisini, yani kızarıklık, sıcaklık, ağrı ve şişliği tanımlamıştır.",
+    "C": "Galen, inflamasyonun beşinci belirtisi olan fonksiyon kaybını eklemiştir; hücresel patoloji ilkesiyle ilgisi yoktur.",
+    "D": "Rudolf Virchow doğru: 1858'deki hücresel patoloji eseriyle tüm hastalıkların hücresel temelini vurguladı, modern patolojinin kurucusudur.",
+    "E": "Papanicolaou, 1928'de servikal eksfolyatif sitolojiyle ve 1943'te Traut ile tanımlanan PAP testiyle sitopatoloji tarihine geçen isimdir."
+   },
+   "ozet": "Virchow, “omnis cellula e cellula”, yani her hücre başka bir hücreden ortaya çıkar ilkesini koydu; Morgagni ise patolojik anatominin kurucusudur.",
+   "metin": "**Soru.** \"Omnis cellula e cellula\" ilkesini ortaya koyan ve modern patolojinin kurucusu kabul edilen bilim insanı kimdir?\n\n**A)** Morgagni · **B)** Celsus · **C)** Galen · **D)** Rudolf Virchow · **E)** Papanicolaou\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Morgagni** — Morgagni, yaklaşık 700 otopsiyle hastalıkların organlara yerleştiğini gösterdi; modern patolojinin değil, patolojik anatominin kurucusudur.\n- **Celsus** — Celsus, De Medicina eserinde inflamasyonun dört belirtisini, yani kızarıklık, sıcaklık, ağrı ve şişliği tanımlamıştır.\n- **Galen** — Galen, inflamasyonun beşinci belirtisi olan fonksiyon kaybını eklemiştir; hücresel patoloji ilkesiyle ilgisi yoktur.\n- **Rudolf Virchow** — Rudolf Virchow doğru: 1858'deki hücresel patoloji eseriyle tüm hastalıkların hücresel temelini vurguladı, modern patolojinin kurucusudur.\n- **Papanicolaou** — Papanicolaou, 1928'de servikal eksfolyatif sitolojiyle ve 1943'te Traut ile tanımlanan PAP testiyle sitopatoloji tarihine geçen isimdir.\n\n**Cevap: D** — Rudolf Virchow\n\n**Özet.** Virchow, “omnis cellula e cellula”, yani her hücre başka bir hücreden ortaya çıkar ilkesini koydu; Morgagni ise patolojik anatominin kurucusudur.",
+   "ses": "Omnis sellula e sellula ilkesini ortaya koyan ve modern patolojinin kurucusu kabul edilen bilim insanı kimdir?\nA, Morgani\nBe, Selsus\nCe, Galen\nDe, Rudolf Virkov\nE, Papanikolau\nHer seçeneği tek tek ele alalım.\nMorgani, yaklaşık yedi yüz otopsiyle hastalıkların organlara yerleştiğini gösterdi. Modern patolojinin değil, patolojik anatominin kurucusudur.\nSelsus, De Medisina eserinde inflamasyonun dört belirtisini, yani kızarıklık, sıcaklık, ağrı ve şişliği tanımlamıştır.\nGalen, inflamasyonun beşinci belirtisi olan fonksiyon kaybını eklemiştir. Hücresel patoloji ilkesiyle ilgisi yoktur.\nRudolf Virkov doğru. Bin sekiz yüz elli sekizdeki hücresel patoloji eseriyle tüm hastalıkların hücresel temelini vurguladı, modern patolojinin kurucusudur.\nPapanikolau, bin dokuz yüz yirmi sekizde servikal eksfolyatif sitolojiyle ve bin dokuz yüz kırk üçte Traut ile tanımlanan pap testiyle sitopatoloji tarihine geçen isimdir.\nDoğru cevap De, Rudolf Virkov\nVirkov, omnis sellula e sellula, yani her hücre başka bir hücreden ortaya çıkar ilkesini koydu. Morgani ise patolojik anatominin kurucusudur.",
+   "kelime": 153
+  },
+  {
+   "no": 3,
+   "tur": "ornek",
+   "soru": "İnflamasyonun beşinci belirtisi olan fonksiyon kaybını (functio laesa) tanımlayan kimdir?",
+   "secenekler": {
+    "A": "Celsus",
+    "B": "Galen",
+    "C": "İbni Sina",
+    "D": "Virchow",
+    "E": "Morgagni"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Celsus, De Medicina eserinde kızarıklık, sıcaklık, ağrı ve şişlikten oluşan ilk dört belirtiyi tanımladı; beşinciyi eklemedi.",
+    "B": "Galen doğru: Celsus'un dört belirtisine beşinci olarak fonksiyon kaybını, yani functio laesa'yı ekledi.",
+    "C": "İbni Sina, El-Kanun fi't-Tıbb eserinde fizyoloji, anatomi ve hastalıklar üzerine kapsamlı gözlemler yazdı; inflamasyona belirti eklemedi.",
+    "D": "Virchow, 1858'deki hücresel patoloji eseriyle modern patolojinin kurucusu oldu; inflamasyonun beş klasik belirtisi ondan çok önce tanımlanmıştı.",
+    "E": "Morgagni, otopsilerle hastalıkların organlara yerleştiğini gösteren, patolojik anatominin kurucusudur; beşinci belirtiyle ilgisi yoktur."
+   },
+   "ozet": "Celsus rubor, calor, dolor ve tumor'u tanımladı, Galen beşinci belirti functio laesa'yı ekledi; bu beşli bugün de inflamasyonun klasik tanımıdır.",
+   "metin": "**Soru.** İnflamasyonun beşinci belirtisi olan fonksiyon kaybını (functio laesa) tanımlayan kimdir?\n\n**A)** Celsus · **B)** Galen · **C)** İbni Sina · **D)** Virchow · **E)** Morgagni\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Celsus** — Celsus, De Medicina eserinde kızarıklık, sıcaklık, ağrı ve şişlikten oluşan ilk dört belirtiyi tanımladı; beşinciyi eklemedi.\n- **Galen** — Galen doğru: Celsus'un dört belirtisine beşinci olarak fonksiyon kaybını, yani functio laesa'yı ekledi.\n- **İbni Sina** — İbni Sina, El-Kanun fi't-Tıbb eserinde fizyoloji, anatomi ve hastalıklar üzerine kapsamlı gözlemler yazdı; inflamasyona belirti eklemedi.\n- **Virchow** — Virchow, 1858'deki hücresel patoloji eseriyle modern patolojinin kurucusu oldu; inflamasyonun beş klasik belirtisi ondan çok önce tanımlanmıştı.\n- **Morgagni** — Morgagni, otopsilerle hastalıkların organlara yerleştiğini gösteren, patolojik anatominin kurucusudur; beşinci belirtiyle ilgisi yoktur.\n\n**Cevap: B** — Galen\n\n**Özet.** Celsus rubor, calor, dolor ve tumor'u tanımladı, Galen beşinci belirti functio laesa'yı ekledi; bu beşli bugün de inflamasyonun klasik tanımıdır.",
+   "ses": "İnflamasyonun beşinci belirtisi olan fonksiyon kaybını, yani funksiyo lezayı tanımlayan kimdir?\nA, Selsus\nBe, Galen\nCe, İbni Sina\nDe, Virkov\nE, Morgani\nŞıkları sırasıyla gözden geçirelim.\nSelsus, De Medisina eserinde kızarıklık, sıcaklık, ağrı ve şişlikten oluşan ilk dört belirtiyi tanımladı. Beşinciyi eklemedi.\nGalen doğru. Selsus'un dört belirtisine beşinci olarak fonksiyon kaybını, yani funksiyo lezayı ekledi.\nİbni Sina, El Kanun fit Tıb eserinde fizyoloji, anatomi ve hastalıklar üzerine kapsamlı gözlemler yazdı. İnflamasyona belirti eklemedi.\nVirkov, bin sekiz yüz elli sekizdeki hücresel patoloji eseriyle modern patolojinin kurucusu oldu. İnflamasyonun beş klasik belirtisi ondan çok önce tanımlanmıştı.\nMorgani, otopsilerle hastalıkların organlara yerleştiğini gösteren, patolojik anatominin kurucusudur. Beşinci belirtiyle ilgisi yoktur.\nDoğru cevap Be, Galen\nSelsus rubor, kalor, dolor ve tumoru tanımladı, Galen beşinci belirti funksiyo lezayı ekledi. Bu beşli bugün de inflamasyonun klasik tanımıdır.",
+   "kelime": 147
+  },
+  {
+   "no": 4,
+   "tur": "ornek",
+   "soru": "~700 otopsi ile hastalıkların belirli organlarda yerleştiğini gösteren ve patolojik anatominin kurucusu kabul edilen kişi kimdir?",
+   "secenekler": {
+    "A": "Virchow",
+    "B": "Galen",
+    "C": "Morgagni",
+    "D": "Hamdi Suat Aknar",
+    "E": "Philipp Schwartz"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Virchow, hastalıkların hücresel temelini vurgulayan modern patolojinin kurucusudur; organ düzeyindeki patolojik anatominin kurucusu değildir.",
+    "B": "Galen, 130 ile 200 yılları arasında yaşamış, inflamasyona fonksiyon kaybını ekleyen hekimdir; otopsi serisiyle ilişkili değildir.",
+    "C": "Morgagni doğru: yaklaşık 700 otopsiyle hastalıkların belirli organlara yerleştiğini gösterdi ve kliniko-patolojik yaklaşımın temelini attı.",
+    "D": "Hamdi Suat Aknar, 1909'da Darülfünun'da ilk patoloji laboratuvarını ve patoloji müzesini kuran Türk patoloğudur.",
+    "E": "Philipp Schwartz, 1933 reformundan sonra Almanya'dan gelip İstanbul'da Patolojik Anatomi Kürsüsünü yapılandıran patologdur."
+   },
+   "ozet": "Morgagni, 1761 tarihli De Sedibus et Causis Morborum eseriyle hastalıkları organlara yerleştirdi ve patolojik anatominin kurucusu oldu.",
+   "metin": "**Soru.** ~700 otopsi ile hastalıkların belirli organlarda yerleştiğini gösteren ve patolojik anatominin kurucusu kabul edilen kişi kimdir?\n\n**A)** Virchow · **B)** Galen · **C)** Morgagni · **D)** Hamdi Suat Aknar · **E)** Philipp Schwartz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Virchow** — Virchow, hastalıkların hücresel temelini vurgulayan modern patolojinin kurucusudur; organ düzeyindeki patolojik anatominin kurucusu değildir.\n- **Galen** — Galen, 130 ile 200 yılları arasında yaşamış, inflamasyona fonksiyon kaybını ekleyen hekimdir; otopsi serisiyle ilişkili değildir.\n- **Morgagni** — Morgagni doğru: yaklaşık 700 otopsiyle hastalıkların belirli organlara yerleştiğini gösterdi ve kliniko-patolojik yaklaşımın temelini attı.\n- **Hamdi Suat Aknar** — Hamdi Suat Aknar, 1909'da Darülfünun'da ilk patoloji laboratuvarını ve patoloji müzesini kuran Türk patoloğudur.\n- **Philipp Schwartz** — Philipp Schwartz, 1933 reformundan sonra Almanya'dan gelip İstanbul'da Patolojik Anatomi Kürsüsünü yapılandıran patologdur.\n\n**Cevap: C** — Morgagni\n\n**Özet.** Morgagni, 1761 tarihli De Sedibus et Causis Morborum eseriyle hastalıkları organlara yerleştirdi ve patolojik anatominin kurucusu oldu.",
+   "ses": "Yaklaşık yedi yüz otopsi ile hastalıkların belirli organlarda yerleştiğini gösteren ve patolojik anatominin kurucusu kabul edilen kişi kimdir?\nA, Virkov\nBe, Galen\nCe, Morgani\nDe, Hamdi Suat Aknar\nE, Filip Şvarts\nŞimdi seçeneklere tek tek bakalım.\nVirkov, hastalıkların hücresel temelini vurgulayan modern patolojinin kurucusudur. Organ düzeyindeki patolojik anatominin kurucusu değildir.\nGalen, yüz otuz ile iki yüz yılları arasında yaşamış, inflamasyona fonksiyon kaybını ekleyen hekimdir. Otopsi serisiyle ilişkili değildir.\nMorgani doğru. Yaklaşık yedi yüz otopsiyle hastalıkların belirli organlara yerleştiğini gösterdi ve kliniko-patolojik yaklaşımın temelini attı.\nHamdi Suat Aknar, bin dokuz yüz dokuzda Darülfünun'da ilk patoloji laboratuvarını ve patoloji müzesini kuran Türk patoloğudur.\nFilip Şvarts, bin dokuz yüz otuz üç reformundan sonra Almanya'dan gelip İstanbul'da Patolojik Anatomi Kürsüsünü yapılandıran patologdur.\nDoğru cevap Ce, Morgani\nMorgani, bin yedi yüz altmış bir tarihli De Sedibus et Kausis Morborum eseriyle hastalıkları organlara yerleştirdi ve patolojik anatominin kurucusu oldu.",
+   "kelime": 152
+  },
+  {
+   "no": 5,
+   "tur": "ornek",
+   "soru": "Rutin histopatolojide standart olarak kullanılan fiksatif hangisidir?",
+   "secenekler": {
+    "A": "Carnoy",
+    "B": "Bouin",
+    "C": "Zenker",
+    "D": "B5",
+    "E": "%10 nötral tamponlu formalin"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Carnoy, RNA ve glikojeni iyi koruyan özel bir fiksatiftir; rutin standart olarak kullanılmaz.",
+    "B": "Bouin, özellikle testis biyopsilerinde tercih edilen özel bir fiksatiftir; rutin örneklerin standardı değildir.",
+    "C": "Zenker, böbrek ve testis gibi özel dokular için kullanılan bir fiksatiftir; rutin histopatolojinin standardı değildir.",
+    "D": "B5 de özel bir fiksatiftir; kemik iliği ve lenf nodu gibi örneklerde tercih edilir, rutin standart değildir.",
+    "E": "%10 nötral tamponlu formalin doğru: 1 hacim formalin ile 9 hacim distile sudan hazırlanır ve rutin histopatolojide standarttır."
+   },
+   "ozet": "Rutin histopatolojide standart fiksatif %10 nötral tamponlu formalindir; Zenker, B5, Carnoy ve Bouin özel dokular için ayrılmıştır.",
+   "metin": "**Soru.** Rutin histopatolojide standart olarak kullanılan fiksatif hangisidir?\n\n**A)** Carnoy · **B)** Bouin · **C)** Zenker · **D)** B5 · **E)** %10 nötral tamponlu formalin\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Carnoy** — Carnoy, RNA ve glikojeni iyi koruyan özel bir fiksatiftir; rutin standart olarak kullanılmaz.\n- **Bouin** — Bouin, özellikle testis biyopsilerinde tercih edilen özel bir fiksatiftir; rutin örneklerin standardı değildir.\n- **Zenker** — Zenker, böbrek ve testis gibi özel dokular için kullanılan bir fiksatiftir; rutin histopatolojinin standardı değildir.\n- **B5** — B5 de özel bir fiksatiftir; kemik iliği ve lenf nodu gibi örneklerde tercih edilir, rutin standart değildir.\n- **%10 nötral tamponlu formalin** — %10 nötral tamponlu formalin doğru: 1 hacim formalin ile 9 hacim distile sudan hazırlanır ve rutin histopatolojide standarttır.\n\n**Cevap: E** — %10 nötral tamponlu formalin\n\n**Özet.** Rutin histopatolojide standart fiksatif %10 nötral tamponlu formalindir; Zenker, B5, Carnoy ve Bouin özel dokular için ayrılmıştır.",
+   "ses": "Rutin histopatolojide standart olarak kullanılan fiksatif hangisidir?\nA, Karnoy\nBe, Buen\nCe, Zenker\nDe, Be beş\nE, Yüzde on nötral tamponlu formalin\nSeçenekleri sırayla değerlendirelim.\nKarnoy, re ne a ve glikojeni iyi koruyan özel bir fiksatiftir. Rutin standart olarak kullanılmaz.\nBuen, özellikle testis biyopsilerinde tercih edilen özel bir fiksatiftir. Rutin örneklerin standardı değildir.\nZenker, böbrek ve testis gibi özel dokular için kullanılan bir fiksatiftir. Rutin histopatolojinin standardı değildir.\nBe beş de özel bir fiksatiftir. Kemik iliği ve lenf nodu gibi örneklerde tercih edilir, rutin standart değildir.\nYüzde on nötral tamponlu formalin doğru. Bir hacim formalin ile dokuz hacim distile sudan hazırlanır ve rutin histopatolojide standarttır.\nDoğru cevap E, Yüzde on nötral tamponlu formalin\nRutin histopatolojide standart fiksatif yüzde on nötral tamponlu formalindir. Zenker, be beş, Karnoy ve Buen özel dokular için ayrılmıştır.",
+   "kelime": 148
+  },
+  {
+   "no": 6,
+   "tur": "ornek",
+   "soru": "Fiksasyonda fiksatif hacmi doku hacminin en az kaç katı olmalıdır?",
+   "secenekler": {
+    "A": "10–20 katı",
+    "B": "2–3 katı",
+    "C": "Eşit hacim",
+    "D": "5 katı",
+    "E": "50–100 katı"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "10–20 katı doğru: fiksatif hacmi doku hacminin en az 10 ile 20 katı olmalıdır; parça kalınlığı da genellikle 3 ile 5 mm tutulur.",
+    "B": "2–3 kat yetersizdir; az fiksatifle fiksasyon yetersiz kalır, doku otoliz ve hücre ayrıntılarında silinmeyle bozulur.",
+    "C": "Eşit hacim çok azdır; fiksasyonun amacı dokuyu otoliz ve putrefaksiyondan korumaktır, bu hacim buna yetmez.",
+    "D": "5 kat, alt sınırın yarısıdır; fiksatif hacmi doku hacminin en az 10 katı olmalıdır.",
+    "E": "50–100 sayısı, elektron mikroskobu için nanometre cinsinden kesit kalınlığıdır; fiksatif hacmi için en az ölçü 10–20 kattır."
+   },
+   "ozet": "Fiksatif hacmi doku hacminin en az 10–20 katı olmalı, parça 3–5 mm kalınlıkta tutulmalı; formalin saatte yaklaşık 1 mm ilerler.",
+   "metin": "**Soru.** Fiksasyonda fiksatif hacmi doku hacminin en az kaç katı olmalıdır?\n\n**A)** 10–20 katı · **B)** 2–3 katı · **C)** Eşit hacim · **D)** 5 katı · **E)** 50–100 katı\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **10–20 katı** — 10–20 katı doğru: fiksatif hacmi doku hacminin en az 10 ile 20 katı olmalıdır; parça kalınlığı da genellikle 3 ile 5 mm tutulur.\n- **2–3 katı** — 2–3 kat yetersizdir; az fiksatifle fiksasyon yetersiz kalır, doku otoliz ve hücre ayrıntılarında silinmeyle bozulur.\n- **Eşit hacim** — Eşit hacim çok azdır; fiksasyonun amacı dokuyu otoliz ve putrefaksiyondan korumaktır, bu hacim buna yetmez.\n- **5 katı** — 5 kat, alt sınırın yarısıdır; fiksatif hacmi doku hacminin en az 10 katı olmalıdır.\n- **50–100 katı** — 50–100 sayısı, elektron mikroskobu için nanometre cinsinden kesit kalınlığıdır; fiksatif hacmi için en az ölçü 10–20 kattır.\n\n**Cevap: A** — 10–20 katı\n\n**Özet.** Fiksatif hacmi doku hacminin en az 10–20 katı olmalı, parça 3–5 mm kalınlıkta tutulmalı; formalin saatte yaklaşık 1 mm ilerler.",
+   "ses": "Fiksasyonda fiksatif hacmi doku hacminin en az kaç katı olmalıdır?\nA, on ile yirmi katı\nBe, iki ile üç katı\nCe, Eşit hacim\nDe, beş katı\nE, elli ile yüz katı\nHer seçeneği tek tek ele alalım.\nOn ile yirmi katı doğru. Fiksatif hacmi doku hacminin en az on ile yirmi katı olmalıdır. Parça kalınlığı da genellikle üç ile beş milimetre tutulur.\nİki ile üç kat yetersizdir. Az fiksatifle fiksasyon yetersiz kalır, doku otoliz ve hücre ayrıntılarında silinmeyle bozulur.\nEşit hacim çok azdır. Fiksasyonun amacı dokuyu otoliz ve putrefaksiyondan korumaktır, bu hacim buna yetmez.\nBeş kat, alt sınırın yarısıdır. Fiksatif hacmi doku hacminin en az on katı olmalıdır.\nElli ile yüz sayısı, elektron mikroskobu için nanometre cinsinden kesit kalınlığıdır. Fiksatif hacmi için en az ölçü on ile yirmi kattır.\nDoğru cevap A, on ile yirmi katı\nFiksatif hacmi doku hacminin en az on ile yirmi katı olmalı, parça üç ile beş milimetre kalınlıkta tutulmalı. Formalin saatte yaklaşık bir milimetre ilerler.",
+   "kelime": 167
+  },
+  {
+   "no": 7,
+   "tur": "ornek",
+   "soru": "Dokuda demir göstermek için kullanılan histokimyasal boya hangisidir?",
+   "secenekler": {
+    "A": "PAS",
+    "B": "Oil Red O",
+    "C": "Prusya mavisi",
+    "D": "Masson trichrome",
+    "E": "Van Gieson"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "PAS, glikojen ve nötral mukopolisakkaritleri gösteren histokimyasal boyadır; demiri göstermez.",
+    "B": "Oil Red O, lipidleri gösterir ve dondurulmuş kesitte uygulanır; demir için kullanılmaz.",
+    "C": "Prusya mavisi doğru: dokuda demiri gösteren histokimyasal boyadır.",
+    "D": "Masson trichrome, bağ dokusunu gösteren boyalardandır; demir birikimini göstermez.",
+    "E": "Van Gieson da bir bağ dokusu boyasıdır; retikülin boyalarıyla aynı gruptadır, demir göstermez."
+   },
+   "ozet": "Demir Prusya mavisiyle, glikojen PAS ile, lipid Oil Red O ile, bağ dokusu ise Masson trichrome ve Van Gieson ile gösterilir.",
+   "metin": "**Soru.** Dokuda demir göstermek için kullanılan histokimyasal boya hangisidir?\n\n**A)** PAS · **B)** Oil Red O · **C)** Prusya mavisi · **D)** Masson trichrome · **E)** Van Gieson\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **PAS** — PAS, glikojen ve nötral mukopolisakkaritleri gösteren histokimyasal boyadır; demiri göstermez.\n- **Oil Red O** — Oil Red O, lipidleri gösterir ve dondurulmuş kesitte uygulanır; demir için kullanılmaz.\n- **Prusya mavisi** — Prusya mavisi doğru: dokuda demiri gösteren histokimyasal boyadır.\n- **Masson trichrome** — Masson trichrome, bağ dokusunu gösteren boyalardandır; demir birikimini göstermez.\n- **Van Gieson** — Van Gieson da bir bağ dokusu boyasıdır; retikülin boyalarıyla aynı gruptadır, demir göstermez.\n\n**Cevap: C** — Prusya mavisi\n\n**Özet.** Demir Prusya mavisiyle, glikojen PAS ile, lipid Oil Red O ile, bağ dokusu ise Masson trichrome ve Van Gieson ile gösterilir.",
+   "ses": "Dokuda demir göstermek için kullanılan histokimyasal boya hangisidir?\nA, Pe a se\nBe, Oyl red o\nCe, Prusya mavisi\nDe, Mason trikrom\nE, Van Gizon\nŞıkları sırasıyla gözden geçirelim.\nPe a se, glikojen ve nötral mukopolisakkaritleri gösteren histokimyasal boyadır. Demiri göstermez.\nOyl red o, lipidleri gösterir ve dondurulmuş kesitte uygulanır. Demir için kullanılmaz.\nPrusya mavisi doğru. Dokuda demiri gösteren histokimyasal boyadır.\nMason trikrom, bağ dokusunu gösteren boyalardandır. Demir birikimini göstermez.\nVan Gizon da bir bağ dokusu boyasıdır. Retikülin boyalarıyla aynı gruptadır, demir göstermez.\nDoğru cevap Ce, Prusya mavisi\nDemir Prusya mavisiyle, glikojen pe a se ile, lipid oyl red o ile, bağ dokusu ise Mason trikrom ve Van Gizon ile gösterilir.",
+   "kelime": 132
+  },
+  {
+   "no": 8,
+   "tur": "ornek",
+   "soru": "Doku takibinde alkolün yerini organik solventin (ksilen) aldığı basamak hangisidir?",
+   "secenekler": {
+    "A": "Fiksasyon",
+    "B": "Dehidrasyon",
+    "C": "İnfiltrasyon",
+    "D": "Şeffaflaştırma",
+    "E": "Gömme"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Fiksasyon, dokuyu otoliz ve putrefaksiyondan korumak için yapılan ilk basamaktır; bu aşamada ksilen kullanılmaz.",
+    "B": "Dehidrasyon, artan konsantrasyonlarda etanol serileriyle suyun uzaklaştırılmasıdır; alkol bu basamakta dokuya girer, henüz çıkarılmaz.",
+    "C": "İnfiltrasyon, erimiş parafinin dokuya penetre olduğu basamaktır; solvent basamağından sonra gelir.",
+    "D": "Şeffaflaştırma doğru: alkolün yerini ksilen, toluen ya da kloroform gibi organik solvent alır ve parafinin dokuya girmesi sağlanır.",
+    "E": "Gömme, dokunun parafin dolu kalıba uygun pozisyonda yerleştirilip bloklanmasıdır; hızlı soğutma büzüşme ve çatlakları azaltır."
+   },
+   "ozet": "Sıra fiksasyon, dehidrasyon, şeffaflaştırma, infiltrasyon ve gömmedir; şeffaflaştırmada alkolün yerine ksilen geçer ki parafin dokuya girebilsin.",
+   "metin": "**Soru.** Doku takibinde alkolün yerini organik solventin (ksilen) aldığı basamak hangisidir?\n\n**A)** Fiksasyon · **B)** Dehidrasyon · **C)** İnfiltrasyon · **D)** Şeffaflaştırma · **E)** Gömme\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Fiksasyon** — Fiksasyon, dokuyu otoliz ve putrefaksiyondan korumak için yapılan ilk basamaktır; bu aşamada ksilen kullanılmaz.\n- **Dehidrasyon** — Dehidrasyon, artan konsantrasyonlarda etanol serileriyle suyun uzaklaştırılmasıdır; alkol bu basamakta dokuya girer, henüz çıkarılmaz.\n- **İnfiltrasyon** — İnfiltrasyon, erimiş parafinin dokuya penetre olduğu basamaktır; solvent basamağından sonra gelir.\n- **Şeffaflaştırma** — Şeffaflaştırma doğru: alkolün yerini ksilen, toluen ya da kloroform gibi organik solvent alır ve parafinin dokuya girmesi sağlanır.\n- **Gömme** — Gömme, dokunun parafin dolu kalıba uygun pozisyonda yerleştirilip bloklanmasıdır; hızlı soğutma büzüşme ve çatlakları azaltır.\n\n**Cevap: D** — Şeffaflaştırma\n\n**Özet.** Sıra fiksasyon, dehidrasyon, şeffaflaştırma, infiltrasyon ve gömmedir; şeffaflaştırmada alkolün yerine ksilen geçer ki parafin dokuya girebilsin.",
+   "ses": "Doku takibinde alkolün yerini organik solventin, yani ksilenin aldığı basamak hangisidir?\nA, Fiksasyon\nBe, Dehidrasyon\nCe, İnfiltrasyon\nDe, Şeffaflaştırma\nE, Gömme\nŞimdi seçeneklere tek tek bakalım.\nFiksasyon, dokuyu otoliz ve putrefaksiyondan korumak için yapılan ilk basamaktır. Bu aşamada ksilen kullanılmaz.\nDehidrasyon, artan konsantrasyonlarda etanol serileriyle suyun uzaklaştırılmasıdır. Alkol bu basamakta dokuya girer, henüz çıkarılmaz.\nİnfiltrasyon, erimiş parafinin dokuya penetre olduğu basamaktır. Solvent basamağından sonra gelir.\nŞeffaflaştırma doğru. Alkolün yerini ksilen, toluen ya da kloroform gibi organik solvent alır ve parafinin dokuya girmesi sağlanır.\nGömme, dokunun parafin dolu kalıba uygun pozisyonda yerleştirilip bloklanmasıdır. Hızlı soğutma büzüşme ve çatlakları azaltır.\nDoğru cevap De, Şeffaflaştırma\nSıra fiksasyon, dehidrasyon, şeffaflaştırma, infiltrasyon ve gömmedir. Şeffaflaştırmada alkolün yerine ksilen geçer ki parafin dokuya girebilsin.",
+   "kelime": 139
+  },
+  {
+   "no": 9,
+   "tur": "ornek",
+   "soru": "Otoliz ve hücre ayrıntılarında silinme en olası hangi artefakt nedenine bağlıdır?",
+   "secenekler": {
+    "A": "Kirli solventler",
+    "B": "Yetersiz fiksasyon",
+    "C": "Yetersiz dehidrasyon",
+    "D": "Bıçak körelmesi",
+    "E": "Fazla yapıştırıcı"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Kirli solventler bulanıklık ve arka plan kirlenmesi yapar; kirli ksilende süt benzeri bulanıklık görülür.",
+    "B": "Yetersiz fiksasyon doğru: doku otoliz ve putrefaksiyondan korunamaz, sonuçta otoliz ve hücre ayrıntılarında silinme görülür.",
+    "C": "Yetersiz dehidrasyon soluk ya da düzensiz boyanmaya yol açar; otoliz yapmaz.",
+    "D": "Bıçak körelmesi, kesitte bıçak izleri bırakan mekanik bir hatadır; hücre ayrıntılarını otolizle silmez.",
+    "E": "Fazla yapıştırıcı, lamelle kapatma aşamasına ait bir artefakttır; dokuda otolize neden olmaz."
+   },
+   "ozet": "Fiksasyon dokuyu otolizden korur; yetersiz kalırsa otoliz ve hücre ayrıntılarında silinme olur, yetersiz dehidrasyon ise soluk boyanma yapar.",
+   "metin": "**Soru.** Otoliz ve hücre ayrıntılarında silinme en olası hangi artefakt nedenine bağlıdır?\n\n**A)** Kirli solventler · **B)** Yetersiz fiksasyon · **C)** Yetersiz dehidrasyon · **D)** Bıçak körelmesi · **E)** Fazla yapıştırıcı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kirli solventler** — Kirli solventler bulanıklık ve arka plan kirlenmesi yapar; kirli ksilende süt benzeri bulanıklık görülür.\n- **Yetersiz fiksasyon** — Yetersiz fiksasyon doğru: doku otoliz ve putrefaksiyondan korunamaz, sonuçta otoliz ve hücre ayrıntılarında silinme görülür.\n- **Yetersiz dehidrasyon** — Yetersiz dehidrasyon soluk ya da düzensiz boyanmaya yol açar; otoliz yapmaz.\n- **Bıçak körelmesi** — Bıçak körelmesi, kesitte bıçak izleri bırakan mekanik bir hatadır; hücre ayrıntılarını otolizle silmez.\n- **Fazla yapıştırıcı** — Fazla yapıştırıcı, lamelle kapatma aşamasına ait bir artefakttır; dokuda otolize neden olmaz.\n\n**Cevap: B** — Yetersiz fiksasyon\n\n**Özet.** Fiksasyon dokuyu otolizden korur; yetersiz kalırsa otoliz ve hücre ayrıntılarında silinme olur, yetersiz dehidrasyon ise soluk boyanma yapar.",
+   "ses": "Otoliz ve hücre ayrıntılarında silinme en olası hangi artefakt nedenine bağlıdır?\nA, Kirli solventler\nBe, Yetersiz fiksasyon\nCe, Yetersiz dehidrasyon\nDe, Bıçak körelmesi\nE, Fazla yapıştırıcı\nSeçenekleri sırayla değerlendirelim.\nKirli solventler bulanıklık ve arka plan kirlenmesi yapar. Kirli ksilende süt benzeri bulanıklık görülür.\nYetersiz fiksasyon doğru. Doku otoliz ve putrefaksiyondan korunamaz, sonuçta otoliz ve hücre ayrıntılarında silinme görülür.\nYetersiz dehidrasyon soluk ya da düzensiz boyanmaya yol açar. Otoliz yapmaz.\nBıçak körelmesi, kesitte bıçak izleri bırakan mekanik bir hatadır. Hücre ayrıntılarını otolizle silmez.\nFazla yapıştırıcı, lamelle kapatma aşamasına ait bir artefakttır. Dokuda otolize neden olmaz.\nDoğru cevap Be, Yetersiz fiksasyon\nFiksasyon dokuyu otolizden korur. Yetersiz kalırsa otoliz ve hücre ayrıntılarında silinme olur, yetersiz dehidrasyon ise soluk boyanma yapar.",
+   "kelime": 144
+  },
+  {
+   "no": 10,
+   "tur": "ornek",
+   "soru": "Dondurma (kriostat) kesit tekniği için doğru olan hangisidir?",
+   "secenekler": {
+    "A": "Morfoloji çok iyidir",
+    "B": "Sonuç günler sürer",
+    "C": "Antijen kaybı fazladır",
+    "D": "Hızlı tanıda tercih edilir",
+    "E": "Parafin gerektirir"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Morfoloji kriostat kesitinde iyi değildir; tekniğin avantajı hızdır, doku ayrıntısı değil.",
+    "B": "Sonuç günler sürmez; kriostat tekniği yaklaşık 5 dakika gibi kısa bir sürede sonuca götürür.",
+    "C": "Antijen kaybı fazla değil, minimumdur; bu yüzden kriostat kesitleri immünohistokimyasal incelemelerde de tercih edilir.",
+    "D": "Hızlı tanıda tercih edilmesi doğru: dondurularak sertleştirilen doku kısa sürede kesilip boyanır, özellikle biyopsilerde hızlı tanı sağlar.",
+    "E": "Parafin gerekmez; sudan zengin doku dondurularak sertleştirilir ve böylece kesilebilir hale gelir."
+   },
+   "ozet": "Kriostat kesitinde doku dondurularak sertleştirilir; yaklaşık 5 dakikada sonuç verir, antijen kaybı minimumdur, ama morfoloji iyi değildir.",
+   "metin": "**Soru.** Dondurma (kriostat) kesit tekniği için doğru olan hangisidir?\n\n**A)** Morfoloji çok iyidir · **B)** Sonuç günler sürer · **C)** Antijen kaybı fazladır · **D)** Hızlı tanıda tercih edilir · **E)** Parafin gerektirir\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Morfoloji çok iyidir** — Morfoloji kriostat kesitinde iyi değildir; tekniğin avantajı hızdır, doku ayrıntısı değil.\n- **Sonuç günler sürer** — Sonuç günler sürmez; kriostat tekniği yaklaşık 5 dakika gibi kısa bir sürede sonuca götürür.\n- **Antijen kaybı fazladır** — Antijen kaybı fazla değil, minimumdur; bu yüzden kriostat kesitleri immünohistokimyasal incelemelerde de tercih edilir.\n- **Hızlı tanıda tercih edilir** — Hızlı tanıda tercih edilmesi doğru: dondurularak sertleştirilen doku kısa sürede kesilip boyanır, özellikle biyopsilerde hızlı tanı sağlar.\n- **Parafin gerektirir** — Parafin gerekmez; sudan zengin doku dondurularak sertleştirilir ve böylece kesilebilir hale gelir.\n\n**Cevap: D** — Hızlı tanıda tercih edilir\n\n**Özet.** Kriostat kesitinde doku dondurularak sertleştirilir; yaklaşık 5 dakikada sonuç verir, antijen kaybı minimumdur, ama morfoloji iyi değildir.",
+   "ses": "Dondurma, yani kriostat kesit tekniği için doğru olan hangisidir?\nA, Morfoloji çok iyidir\nBe, Sonuç günler sürer\nCe, Antijen kaybı fazladır\nDe, Hızlı tanıda tercih edilir\nE, Parafin gerektirir\nHer seçeneği tek tek ele alalım.\nMorfoloji kriostat kesitinde iyi değildir. Tekniğin avantajı hızdır, doku ayrıntısı değil.\nSonuç günler sürmez. Kriostat tekniği yaklaşık beş dakika gibi kısa bir sürede sonuca götürür.\nAntijen kaybı fazla değil, minimumdur. Bu yüzden kriostat kesitleri immünohistokimyasal incelemelerde de tercih edilir.\nHızlı tanıda tercih edilmesi doğru. Dondurularak sertleştirilen doku kısa sürede kesilip boyanır, özellikle biyopsilerde hızlı tanı sağlar.\nParafin gerekmez. Sudan zengin doku dondurularak sertleştirilir ve böylece kesilebilir hale gelir.\nDoğru cevap De, Hızlı tanıda tercih edilir\nKriostat kesitinde doku dondurularak sertleştirilir. Yaklaşık beş dakikada sonuç verir, antijen kaybı minimumdur, ama morfoloji iyi değildir.",
+   "kelime": 158
+  },
+  {
+   "no": 11,
+   "tur": "ornek",
+   "soru": "Bethesda sisteminde \"önemi belirsiz atipik skuamöz hücreler\" için kullanılan kısaltma hangisidir?",
+   "secenekler": {
+    "A": "ASC-H",
+    "B": "LSIL",
+    "C": "HSIL",
+    "D": "AGC",
+    "E": "ASC-US"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "ASC-H, yüksek dereceli skuamöz intraepitelyal lezyonun dışlanamadığı atipik skuamöz hücrelerdir; dikkat edilmesi gereken gruptur.",
+    "B": "LSIL, düşük dereceli skuamöz intraepitelyal lezyondur ve HPV ilişkili olabilir; atipik hücre değil, lezyon kategorisidir.",
+    "C": "HSIL, yüksek dereceli skuamöz intraepitelyal lezyondur; ileri tetkik gerektirir.",
+    "D": "AGC ile karıştırılabilir: Bethesda'da atipik skuamöz hücre kısaltmaları ASC ile başlar.",
+    "E": "ASC-US doğru: önemi belirsiz atipik skuamöz hücreler demektir; sondaki US, belirsiz önem anlamındadır."
+   },
+   "ozet": "ASC-US önemi belirsiz atipik skuamöz hücreleri, ASC-H ise yüksek dereceli lezyonun dışlanamadığı atipik skuamöz hücreleri ifade eder.",
+   "metin": "**Soru.** Bethesda sisteminde \"önemi belirsiz atipik skuamöz hücreler\" için kullanılan kısaltma hangisidir?\n\n**A)** ASC-H · **B)** LSIL · **C)** HSIL · **D)** AGC · **E)** ASC-US\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **ASC-H** — ASC-H, yüksek dereceli skuamöz intraepitelyal lezyonun dışlanamadığı atipik skuamöz hücrelerdir; dikkat edilmesi gereken gruptur.\n- **LSIL** — LSIL, düşük dereceli skuamöz intraepitelyal lezyondur ve HPV ilişkili olabilir; atipik hücre değil, lezyon kategorisidir.\n- **HSIL** — HSIL, yüksek dereceli skuamöz intraepitelyal lezyondur; ileri tetkik gerektirir.\n- **AGC** — AGC ile karıştırılabilir: Bethesda'da atipik skuamöz hücre kısaltmaları ASC ile başlar.\n- **ASC-US** — ASC-US doğru: önemi belirsiz atipik skuamöz hücreler demektir; sondaki US, belirsiz önem anlamındadır.\n\n**Cevap: E** — ASC-US\n\n**Özet.** ASC-US önemi belirsiz atipik skuamöz hücreleri, ASC-H ise yüksek dereceli lezyonun dışlanamadığı atipik skuamöz hücreleri ifade eder.",
+   "ses": "Betesda sisteminde önemi belirsiz atipik skuamöz hücreler için kullanılan kısaltma hangisidir?\nA, a se ce ha\nBe, le se ı le\nCe, ha se ı le\nDe, a ge ce\nE, a se ce u se\nŞıkları sırasıyla gözden geçirelim.\nA se ce ha, yüksek dereceli skuamöz intraepitelyal lezyonun dışlanamadığı atipik skuamöz hücrelerdir. Dikkat edilmesi gereken gruptur.\nLe se ı le, düşük dereceli skuamöz intraepitelyal lezyondur ve ha pe ve ilişkili olabilir. Atipik hücre değil, lezyon kategorisidir.\nHa se ı le, yüksek dereceli skuamöz intraepitelyal lezyondur. İleri tetkik gerektirir.\nAGC ile karıştırılabilir. Betesdada atipik skuamöz hücre kısaltmaları a se ce ile başlar.\nA se ce u se doğru. Önemi belirsiz atipik skuamöz hücreler demektir. Sondaki u se, belirsiz önem anlamındadır.\nDoğru cevap E, a se ce u se\nA se ce u se önemi belirsiz atipik skuamöz hücreleri, a se ce ha ise yüksek dereceli lezyonun dışlanamadığı atipik skuamöz hücreleri ifade eder.",
+   "kelime": 130
+  },
+  {
+   "no": 12,
+   "tur": "ornek",
+   "soru": "Uygun koşullarda ince iğne aspirasyon sitolojisinin tanısal doğruluğu yaklaşık ne kadardır?",
+   "secenekler": {
+    "A": "%50–60",
+    "B": "%70–75",
+    "C": "%90–95",
+    "D": "%30–40",
+    "E": "%100"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "%50–60 gerçek değerin çok altındadır; uygun koşullarda ince iğne aspirasyonu çok daha güvenilirdir.",
+    "B": "%70–75 de düşüktür; ince iğne aspirasyonunun tanısal doğruluğu bu aralığın belirgin üzerindedir.",
+    "C": "%90–95 doğru: 22 gauge civarı iğneyle negatif basınçla hücre çekilir; uygun koşullarda tanısal doğruluk bu düzeydedir.",
+    "D": "%30–40 gerçeğe uymaz; ince iğne aspirasyonu tiroid, meme ve lenf nodu gibi yüzeyel kitlelerde güvenilir bir tanı aracıdır.",
+    "E": "%100 değildir; sitolojide hücre mimarisi sınırlı kaldığı için bazen kesin tanı için histopatoloji gerekir."
+   },
+   "ozet": "İnce iğne aspirasyonunda 22 gauge civarı iğneyle hücre çekilir; uygun koşullarda tanısal doğruluk %90–95'tir, ama gerektiğinde histopatoloji gerekir.",
+   "metin": "**Soru.** Uygun koşullarda ince iğne aspirasyon sitolojisinin tanısal doğruluğu yaklaşık ne kadardır?\n\n**A)** %50–60 · **B)** %70–75 · **C)** %90–95 · **D)** %30–40 · **E)** %100\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **%50–60** — %50–60 gerçek değerin çok altındadır; uygun koşullarda ince iğne aspirasyonu çok daha güvenilirdir.\n- **%70–75** — %70–75 de düşüktür; ince iğne aspirasyonunun tanısal doğruluğu bu aralığın belirgin üzerindedir.\n- **%90–95** — %90–95 doğru: 22 gauge civarı iğneyle negatif basınçla hücre çekilir; uygun koşullarda tanısal doğruluk bu düzeydedir.\n- **%30–40** — %30–40 gerçeğe uymaz; ince iğne aspirasyonu tiroid, meme ve lenf nodu gibi yüzeyel kitlelerde güvenilir bir tanı aracıdır.\n- **%100** — %100 değildir; sitolojide hücre mimarisi sınırlı kaldığı için bazen kesin tanı için histopatoloji gerekir.\n\n**Cevap: C** — %90–95\n\n**Özet.** İnce iğne aspirasyonunda 22 gauge civarı iğneyle hücre çekilir; uygun koşullarda tanısal doğruluk %90–95'tir, ama gerektiğinde histopatoloji gerekir.",
+   "ses": "Uygun koşullarda ince iğne aspirasyon sitolojisinin tanısal doğruluğu yaklaşık ne kadardır?\nA, Yüzde elli ile altmış\nBe, Yüzde yetmiş ile yetmiş beş\nCe, Yüzde doksan ile doksan beş\nDe, Yüzde otuz ile kırk\nE, Yüzde yüz\nŞimdi seçeneklere tek tek bakalım.\nYüzde elli ile altmış gerçek değerin çok altındadır. Uygun koşullarda ince iğne aspirasyonu çok daha güvenilirdir.\nYüzde yetmiş ile yetmiş beş de düşüktür. İnce iğne aspirasyonunun tanısal doğruluğu bu aralığın belirgin üzerindedir.\nYüzde doksan ile doksan beş doğru. Yirmi iki geyç civarı iğneyle negatif basınçla hücre çekilir. Uygun koşullarda tanısal doğruluk bu düzeydedir.\nYüzde otuz ile kırk gerçeğe uymaz. İnce iğne aspirasyonu tiroid, meme ve lenf nodu gibi yüzeyel kitlelerde güvenilir bir tanı aracıdır.\nYüzde yüz değildir. Sitolojide hücre mimarisi sınırlı kaldığı için bazen kesin tanı için histopatoloji gerekir.\nDoğru cevap Ce, Yüzde doksan ile doksan beş\nİnce iğne aspirasyonunda yirmi iki geyç civarı iğneyle hücre çekilir. Uygun koşullarda tanısal doğruluk yüzde doksan ile doksan beştir, ama gerektiğinde histopatoloji gerekir.",
+   "kelime": 143
+  },
+  {
+   "no": 13,
+   "tur": "ornek",
+   "soru": "Havada kuruyan sitolojik preparatlarda kullanılan boya hangisidir?",
+   "secenekler": {
+    "A": "Papanicolaou",
+    "B": "May-Grünwald–Giemsa",
+    "C": "Hematoksilen–eozin",
+    "D": "İmmünohistokimya",
+    "E": "PAS"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Papanicolaou boyası alkol fiksasyonlu preparatlarda kullanılır; havada kuruyan preparatlara uygulanmaz.",
+    "B": "May-Grünwald–Giemsa doğru: havada kuruyan preparatlar MGG, Wright ve Diff-Quick ile boyanır.",
+    "C": "Hematoksilen–eozin, sitolojide alkol fiksasyonlu preparatlara uygulanır; histolojide de rutin boyadır.",
+    "D": "İmmünohistokimya, antijen–antikor temelli boyamadır; sitolojide alkol fiksasyonlu preparatlarda kullanılır.",
+    "E": "PAS, glikojen ve nötral mukopolisakkaritleri gösteren histokimyasal boyadır; havada kuruyan sitoloji boyaları arasında yer almaz."
+   },
+   "ozet": "Alkol fiksasyonlu preparatlar Papanicolaou, HE ve immünohistokimya ile, havada kuruyan preparatlar ise MGG, Wright ve Diff-Quick ile boyanır.",
+   "metin": "**Soru.** Havada kuruyan sitolojik preparatlarda kullanılan boya hangisidir?\n\n**A)** Papanicolaou · **B)** May-Grünwald–Giemsa · **C)** Hematoksilen–eozin · **D)** İmmünohistokimya · **E)** PAS\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Papanicolaou** — Papanicolaou boyası alkol fiksasyonlu preparatlarda kullanılır; havada kuruyan preparatlara uygulanmaz.\n- **May-Grünwald–Giemsa** — May-Grünwald–Giemsa doğru: havada kuruyan preparatlar MGG, Wright ve Diff-Quick ile boyanır.\n- **Hematoksilen–eozin** — Hematoksilen–eozin, sitolojide alkol fiksasyonlu preparatlara uygulanır; histolojide de rutin boyadır.\n- **İmmünohistokimya** — İmmünohistokimya, antijen–antikor temelli boyamadır; sitolojide alkol fiksasyonlu preparatlarda kullanılır.\n- **PAS** — PAS, glikojen ve nötral mukopolisakkaritleri gösteren histokimyasal boyadır; havada kuruyan sitoloji boyaları arasında yer almaz.\n\n**Cevap: B** — May-Grünwald–Giemsa\n\n**Özet.** Alkol fiksasyonlu preparatlar Papanicolaou, HE ve immünohistokimya ile, havada kuruyan preparatlar ise MGG, Wright ve Diff-Quick ile boyanır.",
+   "ses": "Havada kuruyan sitolojik preparatlarda kullanılan boya hangisidir?\nA, Papanikolau\nBe, May Grünvald Gimza\nCe, Hematoksilen eozin\nDe, İmmünohistokimya\nE, Pe a se\nSeçenekleri sırayla değerlendirelim.\nPapanikolau boyası alkol fiksasyonlu preparatlarda kullanılır. Havada kuruyan preparatlara uygulanmaz.\nMay Grünvald Gimza doğru. Havada kuruyan preparatlar me ge ge, Rayt ve Dif Kuik ile boyanır.\nHematoksilen eozin, sitolojide alkol fiksasyonlu preparatlara uygulanır. Histolojide de rutin boyadır.\nİmmünohistokimya, antijen antikor temelli boyamadır. Sitolojide alkol fiksasyonlu preparatlarda kullanılır.\nPe a se, glikojen ve nötral mukopolisakkaritleri gösteren histokimyasal boyadır. Havada kuruyan sitoloji boyaları arasında yer almaz.\nDoğru cevap Be, May Grünvald Gimza\nAlkol fiksasyonlu preparatlar Papanikolau, ha e ve immünohistokimya ile, havada kuruyan preparatlar ise me ge ge, Rayt ve Dif Kuik ile boyanır.",
+   "kelime": 119
+  },
+  {
+   "no": 27,
+   "tur": "cikmis",
+   "soru": "Dokuda formol hangi işlem için uygulanır?",
+   "secenekler": {
+    "A": "Dehidratasyon",
+    "B": "Saydamlaştırma",
+    "C": "Fiksasyon",
+    "D": "Sertleştirme",
+    "E": "Boyama"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Dehidratasyon dokudaki suyun uzaklaştırılmasıdır ve formolle değil, artan konsantrasyonda etanolle yapılır.",
+    "B": "Saydamlaştırma yani şeffaflaştırmada alkolün yerini ksilen, toluen, kloroform gibi organik solventler alır.",
+    "C": "Fiksasyon doğru: formol yani formalin, %10 nötral tamponlu hâliyle rutin histopatolojinin standart fiksatifidir.",
+    "D": "Sertleştirme formolün işlevi olarak tanımlanmaz; kriostat tekniğinde doku dondurularak sertleştirilir, formolün asıl işlevi fiksasyondur.",
+    "E": "Rutin boyama formolle değil hematoksilen–eozinle yapılır; gerekirse histokimya ve immünohistokimya eklenir."
+   },
+   "ozet": "Formol yani formalin fiksatiftir; fiksasyon dokuyu otoliz ve putrefaksiyondan korur, doku mimarisini ve hücresel ayrıntıları stabilize eder.",
+   "metin": "**Soru.** Dokuda formol hangi işlem için uygulanır?\n\n**A)** Dehidratasyon · **B)** Saydamlaştırma · **C)** Fiksasyon · **D)** Sertleştirme · **E)** Boyama\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Dehidratasyon** — Dehidratasyon dokudaki suyun uzaklaştırılmasıdır ve formolle değil, artan konsantrasyonda etanolle yapılır.\n- **Saydamlaştırma** — Saydamlaştırma yani şeffaflaştırmada alkolün yerini ksilen, toluen, kloroform gibi organik solventler alır.\n- **Fiksasyon** — Fiksasyon doğru: formol yani formalin, %10 nötral tamponlu hâliyle rutin histopatolojinin standart fiksatifidir.\n- **Sertleştirme** — Sertleştirme formolün işlevi olarak tanımlanmaz; kriostat tekniğinde doku dondurularak sertleştirilir, formolün asıl işlevi fiksasyondur.\n- **Boyama** — Rutin boyama formolle değil hematoksilen–eozinle yapılır; gerekirse histokimya ve immünohistokimya eklenir.\n\n**Cevap: C** — Fiksasyon\n\n**Özet.** Formol yani formalin fiksatiftir; fiksasyon dokuyu otoliz ve putrefaksiyondan korur, doku mimarisini ve hücresel ayrıntıları stabilize eder.",
+   "ses": "Dokuda formol hangi işlem için uygulanır?\nA, Dehidratasyon\nBe, Saydamlaştırma\nCe, Fiksasyon\nDe, Sertleştirme\nE, Boyama\nŞıkları sırasıyla gözden geçirelim.\nDehidratasyon dokudaki suyun uzaklaştırılmasıdır ve formolle değil, artan konsantrasyonda etanolle yapılır.\nSaydamlaştırma yani şeffaflaştırmada alkolün yerini ksilen, toluen, kloroform gibi organik solventler alır.\nFiksasyon doğru. Formol yani formalin, yüzde on nötral tamponlu hâliyle rutin histopatolojinin standart fiksatifidir.\nSertleştirme, formolün işlevi olarak tanımlanmaz. Kriostat tekniğinde doku dondurularak sertleştirilir, formolün asıl işlevi fiksasyondur.\nRutin boyama formolle değil, hematoksilen eozinle yapılır. Gerekirse histokimya ve immünohistokimya eklenir.\nDoğru cevap Ce, Fiksasyon\nFormol yani formalin fiksatiftir. Fiksasyon dokuyu otoliz ve putrefaksiyondan korur, doku mimarisini ve hücresel ayrıntıları stabilize eder.",
+   "kelime": 124
+  },
+  {
+   "no": 28,
+   "tur": "cikmis",
+   "soru": "Histolojik kesitlerin boyanmasında rutin olarak aşağıdakilerden hangisi kullanılır?",
+   "secenekler": {
+    "A": "PAS",
+    "B": "Papanicolaou",
+    "C": "Giemsa",
+    "D": "Hematoksilen-Eozin",
+    "E": "Masson trikrom"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "PAS glikojen ve nötral mukopolisakkaritleri gösteren özel histokimyasal boyadır; rutin değil, gerektiğinde eklenir.",
+    "B": "Papanicolaou doku kesitinin değil, alkol fiksasyonlu sitolojik preparatların boyasıdır.",
+    "C": "Giemsa, May-Grünwald–Giemsa olarak havada kuruyan sitolojik preparatlarda kullanılır; rutin doku boyası değildir.",
+    "D": "Hematoksilen–eozin doğru: ışık mikroskobunda parafin kesitlerin rutin boyasıdır; özel boyalar gerektiğinde eklenir.",
+    "E": "Masson trichrome bağ dokusunu gösteren özel histokimyasal boyadır; rutin boyama yerine gerektiğinde kullanılır."
+   },
+   "ozet": "Işık mikroskobunda rutin boyama hematoksilen–eozinle yapılır; PAS ve Masson trichrome gibi özel boyalar ya da immünohistokimya gerektiğinde eklenir.",
+   "metin": "**Soru.** Histolojik kesitlerin boyanmasında rutin olarak aşağıdakilerden hangisi kullanılır?\n\n**A)** PAS · **B)** Papanicolaou · **C)** Giemsa · **D)** Hematoksilen-Eozin · **E)** Masson trikrom\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **PAS** — PAS glikojen ve nötral mukopolisakkaritleri gösteren özel histokimyasal boyadır; rutin değil, gerektiğinde eklenir.\n- **Papanicolaou** — Papanicolaou doku kesitinin değil, alkol fiksasyonlu sitolojik preparatların boyasıdır.\n- **Giemsa** — Giemsa, May-Grünwald–Giemsa olarak havada kuruyan sitolojik preparatlarda kullanılır; rutin doku boyası değildir.\n- **Hematoksilen-Eozin** — Hematoksilen–eozin doğru: ışık mikroskobunda parafin kesitlerin rutin boyasıdır; özel boyalar gerektiğinde eklenir.\n- **Masson trikrom** — Masson trichrome bağ dokusunu gösteren özel histokimyasal boyadır; rutin boyama yerine gerektiğinde kullanılır.\n\n**Cevap: D** — Hematoksilen-Eozin\n\n**Özet.** Işık mikroskobunda rutin boyama hematoksilen–eozinle yapılır; PAS ve Masson trichrome gibi özel boyalar ya da immünohistokimya gerektiğinde eklenir.",
+   "ses": "Histolojik kesitlerin boyanmasında rutin olarak aşağıdakilerden hangisi kullanılır?\nA, Pe a se\nBe, Papanikolau\nCe, Giyemsa\nDe, Hematoksilen eozin\nE, Mason trikrom\nŞimdi seçeneklere tek tek bakalım.\nPe a se, glikojen ve nötral mukopolisakkaritleri gösteren özel histokimyasal boyadır. Rutin değil, gerektiğinde eklenir.\nPapanikolau, doku kesitinin değil, alkol fiksasyonlu sitolojik preparatların boyasıdır.\nGiyemsa, Mey Grünvald Giyemsa olarak havada kuruyan sitolojik preparatlarda kullanılır. Rutin doku boyası değildir.\nHematoksilen eozin doğru. Işık mikroskobunda parafin kesitlerin rutin boyasıdır, özel boyalar gerektiğinde eklenir.\nMason trikrom, bağ dokusunu gösteren özel histokimyasal boyadır. Rutin boyama yerine gerektiğinde kullanılır.\nDoğru cevap De, Hematoksilen eozin\nIşık mikroskobunda rutin boyama hematoksilen eozinle yapılır. Pe a se ve Mason trikrom gibi özel boyalar ya da immünohistokimya gerektiğinde eklenir.",
+   "kelime": 128
+  },
+  {
+   "no": 29,
+   "tur": "cikmis",
+   "soru": "Histopatolojik inceleme için dokuların hazırlanması ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+   "secenekler": {
+    "A": "Parafin, 25 °C'de sıvı hâlde bulunur.",
+    "B": "Dehidratasyon (dokudaki suyun uzaklaştırılması) ksilen ile yapılır.",
+    "C": "Mikrotom, dokudan 1-10 µm (mikrometre) kalınlığında ince kesitler almak için kullanılır.",
+    "D": "En yaygın kullanılan tespit sıvısı (fiksatif) alkoldür.",
+    "E": "Tüm dokular histopatolojik incelemede rutin olarak Giemsa ile boyanır."
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Parafin infiltrasyonda dokuya erimiş hâlde girer ve bloklamada soğutularak blok hâline gelir; 25 °C'de sıvı değildir.",
+    "B": "Dehidratasyon ksilenle değil, artan konsantrasyonda etanolle yapılır; ksilen şeffaflaştırmada kullanılır.",
+    "C": "Mikrotom ifadesi doğru: ışık mikroskobu için parafin bloklardan rotary mikrotomla 3–5 µm kalınlıkta kesit alınır.",
+    "D": "En yaygın fiksatif alkol değil, %10 nötral tamponlu formalindir; alkol dehidrasyonda kullanılır.",
+    "E": "Rutin boya Giemsa değil hematoksilen–eozindir; Giemsa havada kuruyan sitolojik preparatlarda kullanılır."
+   },
+   "ozet": "Mikrotomla ışık mikroskobu için 3–5 µm kesit alınır; dehidrasyon etanolle, şeffaflaştırma ksilenle yapılır, rutin fiksatif formalin, rutin boya hematoksilen–eozindir.",
+   "metin": "**Soru.** Histopatolojik inceleme için dokuların hazırlanması ile ilgili aşağıdaki ifadelerden hangisi doğrudur?\n\n**A)** Parafin, 25 °C'de sıvı hâlde bulunur. · **B)** Dehidratasyon (dokudaki suyun uzaklaştırılması) ksilen ile yapılır. · **C)** Mikrotom, dokudan 1-10 µm (mikrometre) kalınlığında ince kesitler almak için kullanılır. · **D)** En yaygın kullanılan tespit sıvısı (fiksatif) alkoldür. · **E)** Tüm dokular histopatolojik incelemede rutin olarak Giemsa ile boyanır.\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Parafin, 25 °C'de sıvı hâlde bulunur.** — Parafin infiltrasyonda dokuya erimiş hâlde girer ve bloklamada soğutularak blok hâline gelir; 25 °C'de sıvı değildir.\n- **Dehidratasyon (dokudaki suyun uzaklaştırılması) ksilen ile yapılır.** — Dehidratasyon ksilenle değil, artan konsantrasyonda etanolle yapılır; ksilen şeffaflaştırmada kullanılır.\n- **Mikrotom, dokudan 1-10 µm (mikrometre) kalınlığında ince kesitler almak için kullanılır.** — Mikrotom ifadesi doğru: ışık mikroskobu için parafin bloklardan rotary mikrotomla 3–5 µm kalınlıkta kesit alınır.\n- **En yaygın kullanılan tespit sıvısı (fiksatif) alkoldür.** — En yaygın fiksatif alkol değil, %10 nötral tamponlu formalindir; alkol dehidrasyonda kullanılır.\n- **Tüm dokular histopatolojik incelemede rutin olarak Giemsa ile boyanır.** — Rutin boya Giemsa değil hematoksilen–eozindir; Giemsa havada kuruyan sitolojik preparatlarda kullanılır.\n\n**Cevap: C** — Mikrotom, dokudan 1-10 µm (mikrometre) kalınlığında ince kesitler almak için kullanılır.\n\n**Özet.** Mikrotomla ışık mikroskobu için 3–5 µm kesit alınır; dehidrasyon etanolle, şeffaflaştırma ksilenle yapılır, rutin fiksatif formalin, rutin boya hematoksilen–eozindir.",
+   "ses": "Histopatolojik inceleme için dokuların hazırlanması ile ilgili aşağıdaki ifadelerden hangisi doğrudur?\nA, Parafin, yirmi beş santigrat derecede sıvı hâlde bulunur.\nBe, Dehidratasyon, yani dokudaki suyun uzaklaştırılması, ksilen ile yapılır.\nCe, Mikrotom, dokudan bir ile on mikrometre kalınlığında ince kesitler almak için kullanılır.\nDe, En yaygın kullanılan tespit sıvısı, yani fiksatif, alkoldür.\nE, Tüm dokular histopatolojik incelemede rutin olarak Giyemsa ile boyanır.\nSeçenekleri sırayla değerlendirelim.\nParafin infiltrasyonda dokuya erimiş hâlde girer ve bloklamada soğutularak blok hâline gelir. Yirmi beş santigrat derecede sıvı değildir.\nDehidratasyon ksilenle değil, artan konsantrasyonda etanolle yapılır. Ksilen şeffaflaştırmada kullanılır.\nMikrotom ifadesi doğru. Işık mikroskobu için parafin bloklardan rotari mikrotomla üç ile beş mikrometre kalınlıkta kesit alınır.\nEn yaygın fiksatif alkol değil, yüzde on nötral tamponlu formalindir. Alkol dehidrasyonda kullanılır.\nRutin boya Giyemsa değil, hematoksilen eozindir. Giyemsa havada kuruyan sitolojik preparatlarda kullanılır.\nDoğru cevap Ce, Mikrotom, dokudan bir ile on mikrometre kalınlığında ince kesitler almak için kullanılır.\nMikrotomla ışık mikroskobu için üç ile beş mikrometre kesit alınır. Dehidrasyon etanolle, şeffaflaştırma ksilenle yapılır, rutin fiksatif formalin, rutin boya hematoksilen eozindir.",
+   "kelime": 213
+  },
+  {
+   "no": 30,
+   "tur": "ornek",
+   "soru": "Hastalıklarda ortaya çıkan fonksiyonel bozuklukları inceleyen ve bu yönüyle morfolojiye odaklanan patolojiden ayrılan alan hangisidir?",
+   "secenekler": {
+    "A": "Fizyopatoloji",
+    "B": "Histopatoloji",
+    "C": "Sitopatoloji",
+    "D": "Patolojik anatomi",
+    "E": "Moleküler patoloji"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Fizyopatoloji doğru: hastalıklarda ortaya çıkan fonksiyonel bozuklukları inceler, patoloji ise morfolojik değişikliklere odaklanır.",
+    "B": "Histopatoloji, cerrahi ya da anatomik patoloji olarak dokuların mikroskobik incelemesidir; morfoloji ağırlıklı bir alt daldır.",
+    "C": "Sitopatoloji, hücre düzeyindeki patolojik değişiklikleri inceler; işlev bozukluğu değil hücre morfolojisi temel alınır.",
+    "D": "Patolojik anatomi makroskopik patolojidir; Morgagni ile kurulan, organlardaki yapısal değişiklikleri temel alan yaklaşımdır.",
+    "E": "Moleküler patoloji, PCR gibi yöntemlerle mutasyon ve gen füzyonlarını inceler; işlev bozukluğu odaklı ayrı bir yaklaşım değildir."
+   },
+   "ozet": "Patoloji morfoloji ağırlıklı, fizyopatoloji fonksiyonel bozukluk ağırlıklı yaklaşımdır; güncel eğilim ikisini entegre tanıda birleştirmektir.",
+   "metin": "**Soru.** Hastalıklarda ortaya çıkan fonksiyonel bozuklukları inceleyen ve bu yönüyle morfolojiye odaklanan patolojiden ayrılan alan hangisidir?\n\n**A)** Fizyopatoloji · **B)** Histopatoloji · **C)** Sitopatoloji · **D)** Patolojik anatomi · **E)** Moleküler patoloji\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Fizyopatoloji** — Fizyopatoloji doğru: hastalıklarda ortaya çıkan fonksiyonel bozuklukları inceler, patoloji ise morfolojik değişikliklere odaklanır.\n- **Histopatoloji** — Histopatoloji, cerrahi ya da anatomik patoloji olarak dokuların mikroskobik incelemesidir; morfoloji ağırlıklı bir alt daldır.\n- **Sitopatoloji** — Sitopatoloji, hücre düzeyindeki patolojik değişiklikleri inceler; işlev bozukluğu değil hücre morfolojisi temel alınır.\n- **Patolojik anatomi** — Patolojik anatomi makroskopik patolojidir; Morgagni ile kurulan, organlardaki yapısal değişiklikleri temel alan yaklaşımdır.\n- **Moleküler patoloji** — Moleküler patoloji, PCR gibi yöntemlerle mutasyon ve gen füzyonlarını inceler; işlev bozukluğu odaklı ayrı bir yaklaşım değildir.\n\n**Cevap: A** — Fizyopatoloji\n\n**Özet.** Patoloji morfoloji ağırlıklı, fizyopatoloji fonksiyonel bozukluk ağırlıklı yaklaşımdır; güncel eğilim ikisini entegre tanıda birleştirmektir.",
+   "ses": "Hastalıklarda ortaya çıkan fonksiyonel bozuklukları inceleyen ve bu yönüyle morfolojiye odaklanan patolojiden ayrılan alan hangisidir?\nA, Fizyopatoloji\nBe, Histopatoloji\nCe, Sitopatoloji\nDe, Patolojik anatomi\nE, Moleküler patoloji\nHer seçeneği tek tek ele alalım.\nFizyopatoloji doğru, hastalıklarda ortaya çıkan fonksiyonel bozuklukları inceler, patoloji ise morfolojik değişikliklere odaklanır.\nHistopatoloji, cerrahi ya da anatomik patoloji olarak dokuların mikroskobik incelemesidir, morfoloji ağırlıklı bir alt daldır.\nSitopatoloji, hücre düzeyindeki patolojik değişiklikleri inceler, işlev bozukluğu değil hücre morfolojisi temel alınır.\nPatolojik anatomi makroskopik patolojidir, Morgagni ile kurulan, organlardaki yapısal değişiklikleri temel alan yaklaşımdır.\nMoleküler patoloji, pe ce re gibi yöntemlerle mutasyon ve gen füzyonlarını inceler, işlev bozukluğu odaklı ayrı bir yaklaşım değildir.\nDoğru cevap A, Fizyopatoloji\nPatoloji morfoloji ağırlıklı, fizyopatoloji fonksiyonel bozukluk ağırlıklı yaklaşımdır, güncel eğilim ikisini entegre tanıda birleştirmektir.",
+   "kelime": 146
+  },
+  {
+   "no": 31,
+   "tur": "ornek",
+   "soru": "BRCA1 ve BRCA2 genleri işlevlerine göre hangi gruba girer?",
+   "secenekler": {
+    "A": "Onkogen",
+    "B": "Tümör baskılayıcı gen",
+    "C": "Kromozomal anomali",
+    "D": "Edinsel etken",
+    "E": "Büyüme faktörü geni"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Onkogen bu genlerin grubu değildir; BRCA genleri çoğalmayı uyarmaz, aksine DNA hasarını onararak kontrolsüz çoğalmayı önler.",
+    "B": "Tümör baskılayıcı gen doğru: BRCA1 ve BRCA2 DNA hasarını onarır, kontrolsüz çoğalmayı ve kanser gelişimini önler.",
+    "C": "Kromozomal anomali, Trizomi 21 gibi kromozom sayısının değiştiği durumlardır; BRCA ise bir gen mutasyonu örneğidir.",
+    "D": "Edinsel etken enfeksiyon, kimyasal ve fiziksel ajanlar gibi dış nedenlerdir; BRCA mutasyonu genetik, yani intrinsik nedendir.",
+    "E": "BRCA genleri büyümeyi uyarmaz, onarım yaparak tümör gelişimini baskılar. Büyüme faktörü geni bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "BRCA1 ve BRCA2 DNA hasarını onaran tümör baskılayıcı genlerdir; mutasyonları genetik, yani intrinsik etiyolojiye örnektir.",
+   "metin": "**Soru.** BRCA1 ve BRCA2 genleri işlevlerine göre hangi gruba girer?\n\n**A)** Onkogen · **B)** Tümör baskılayıcı gen · **C)** Kromozomal anomali · **D)** Edinsel etken · **E)** Büyüme faktörü geni\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Onkogen** — Onkogen bu genlerin grubu değildir; BRCA genleri çoğalmayı uyarmaz, aksine DNA hasarını onararak kontrolsüz çoğalmayı önler.\n- **Tümör baskılayıcı gen** — Tümör baskılayıcı gen doğru: BRCA1 ve BRCA2 DNA hasarını onarır, kontrolsüz çoğalmayı ve kanser gelişimini önler.\n- **Kromozomal anomali** — Kromozomal anomali, Trizomi 21 gibi kromozom sayısının değiştiği durumlardır; BRCA ise bir gen mutasyonu örneğidir.\n- **Edinsel etken** — Edinsel etken enfeksiyon, kimyasal ve fiziksel ajanlar gibi dış nedenlerdir; BRCA mutasyonu genetik, yani intrinsik nedendir.\n- **Büyüme faktörü geni** — BRCA genleri büyümeyi uyarmaz, onarım yaparak tümör gelişimini baskılar. Büyüme faktörü geni bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Tümör baskılayıcı gen\n\n**Özet.** BRCA1 ve BRCA2 DNA hasarını onaran tümör baskılayıcı genlerdir; mutasyonları genetik, yani intrinsik etiyolojiye örnektir.",
+   "ses": "Be re ce a bir ve be re ce a iki genleri işlevlerine göre hangi gruba girer?\nA, Onkogen\nBe, Tümör baskılayıcı gen\nCe, Kromozomal anomali\nDe, Edinsel etken\nE, Büyüme faktörü geni\nŞıkları sırasıyla gözden geçirelim.\nOnkogen bu genlerin grubu değildir, be re ce a genleri çoğalmayı uyarmaz, aksine de ne a hasarını onararak kontrolsüz çoğalmayı önler.\nTümör baskılayıcı gen doğru, be re ce a bir ve be re ce a iki de ne a hasarını onarır, kontrolsüz çoğalmayı ve kanser gelişimini önler.\nKromozomal anomali, trizomi yirmi bir gibi kromozom sayısının değiştiği durumlardır, be re ce a ise bir gen mutasyonu örneğidir.\nEdinsel etken enfeksiyon, kimyasal ve fiziksel ajanlar gibi dış nedenlerdir, be re ce a mutasyonu genetik, yani intrinsik nedendir.\nBe re ce a genleri büyümeyi uyarmaz, onarım yaparak tümör gelişimini baskılar. Büyüme faktörü geni bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Tümör baskılayıcı gen\nBe re ce a bir ve be re ce a iki, de ne a hasarını onaran tümör baskılayıcı genlerdir. Mutasyonları genetik, yani intrinsik etiyolojiye örnektir.",
+   "kelime": 157
+  },
+  {
+   "no": 32,
+   "tur": "ornek",
+   "soru": "Aşağıdakilerden hangisi edinsel, yani ekstrinsik bir hastalık nedeni değildir?",
+   "secenekler": {
+    "A": "Hipoksi",
+    "B": "Radyasyon",
+    "C": "Somatik mutasyon",
+    "D": "Beslenme bozukluğu",
+    "E": "İlaçlar"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Hipoksi, iskemik hasarla birlikte edinsel nedenler arasında sayılır; bu yüzden aranan istisna değildir.",
+    "B": "Radyasyon, travma ve ısı ile birlikte fiziksel etkenlerdendir; dışarıdan etki eden edinsel bir nedendir.",
+    "C": "Somatik mutasyon doğru: kalıtsal mutasyon ve kromozomal anomali gibi genetik, yani intrinsik nedenler arasındadır.",
+    "D": "Beslenme bozukluğu, hipoksiyle birlikte diğer edinsel nedenler grubunda yer alır; ekstrinsik bir etkendir.",
+    "E": "İlaçlar, toksinlerle birlikte kimyasal ajanlar grubundadır; edinsel nedenlere örnektir."
+   },
+   "ozet": "Genetik nedenler kalıtsal mutasyon, somatik mutasyon ve kromozomal anomalilerdir; enfeksiyöz, kimyasal, fiziksel etkenler ve hipoksi ise edinsel nedenlerdir.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi edinsel, yani ekstrinsik bir hastalık nedeni değildir?\n\n**A)** Hipoksi · **B)** Radyasyon · **C)** Somatik mutasyon · **D)** Beslenme bozukluğu · **E)** İlaçlar\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Hipoksi** — Hipoksi, iskemik hasarla birlikte edinsel nedenler arasında sayılır; bu yüzden aranan istisna değildir.\n- **Radyasyon** — Radyasyon, travma ve ısı ile birlikte fiziksel etkenlerdendir; dışarıdan etki eden edinsel bir nedendir.\n- **Somatik mutasyon** — Somatik mutasyon doğru: kalıtsal mutasyon ve kromozomal anomali gibi genetik, yani intrinsik nedenler arasındadır.\n- **Beslenme bozukluğu** — Beslenme bozukluğu, hipoksiyle birlikte diğer edinsel nedenler grubunda yer alır; ekstrinsik bir etkendir.\n- **İlaçlar** — İlaçlar, toksinlerle birlikte kimyasal ajanlar grubundadır; edinsel nedenlere örnektir.\n\n**Cevap: C** — Somatik mutasyon\n\n**Özet.** Genetik nedenler kalıtsal mutasyon, somatik mutasyon ve kromozomal anomalilerdir; enfeksiyöz, kimyasal, fiziksel etkenler ve hipoksi ise edinsel nedenlerdir.",
+   "ses": "Aşağıdakilerden hangisi edinsel, yani ekstrinsik bir hastalık nedeni değildir?\nA, Hipoksi\nBe, Radyasyon\nCe, Somatik mutasyon\nDe, Beslenme bozukluğu\nE, İlaçlar\nŞimdi seçeneklere tek tek bakalım.\nHipoksi, iskemik hasarla birlikte edinsel nedenler arasında sayılır, bu yüzden aranan istisna değildir.\nRadyasyon, travma ve ısı ile birlikte fiziksel etkenlerdendir, dışarıdan etki eden edinsel bir nedendir.\nSomatik mutasyon doğru, kalıtsal mutasyon ve kromozomal anomali gibi genetik, yani intrinsik nedenler arasındadır.\nBeslenme bozukluğu, hipoksiyle birlikte diğer edinsel nedenler grubunda yer alır, ekstrinsik bir etkendir.\nİlaçlar, toksinlerle birlikte kimyasal ajanlar grubundadır, edinsel nedenlere örnektir.\nDoğru cevap Ce, Somatik mutasyon\nGenetik nedenler kalıtsal mutasyon, somatik mutasyon ve kromozomal anomalilerdir, enfeksiyöz, kimyasal, fiziksel etkenler ve hipoksi ise edinsel nedenlerdir.",
+   "kelime": 136
+  },
+  {
+   "no": 33,
+   "tur": "ornek",
+   "soru": "Patogenezde etiyolojik ajanın başlattığı olaylardan hangisi doku/organ düzeyinde yer alır?",
+   "secenekler": {
+    "A": "Apoptoz",
+    "B": "Nekroz",
+    "C": "Adaptasyon",
+    "D": "Fibrozis",
+    "E": "Gen ekspresyonu"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Apoptoz, nekroz ve adaptasyonla birlikte hücresel düzeydeki patogenez olaylarındandır; doku düzeyinde değildir.",
+    "B": "Nekroz bir hücre ölümü biçimidir; patogenezde hücresel düzey olayı olarak sınıflanır.",
+    "C": "Adaptasyon, hücrenin zedeleyici etkene verdiği uyum yanıtıdır ve hücresel düzeyde yer alır.",
+    "D": "Fibrozis doğru: inflamasyon ve neoplazi ile birlikte doku ve organ düzeyindeki patogenez olaylarındandır.",
+    "E": "Gen ekspresyonu, sinyal yollarıyla birlikte moleküler düzey olayıdır; doku düzeyinden önce gelir."
+   },
+   "ozet": "Patogenez moleküler düzeyde sinyal yolları, hücresel düzeyde apoptoz, nekroz, adaptasyon, doku düzeyinde inflamasyon, fibrozis ve neoplazi olarak ilerler.",
+   "metin": "**Soru.** Patogenezde etiyolojik ajanın başlattığı olaylardan hangisi doku/organ düzeyinde yer alır?\n\n**A)** Apoptoz · **B)** Nekroz · **C)** Adaptasyon · **D)** Fibrozis · **E)** Gen ekspresyonu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Apoptoz** — Apoptoz, nekroz ve adaptasyonla birlikte hücresel düzeydeki patogenez olaylarındandır; doku düzeyinde değildir.\n- **Nekroz** — Nekroz bir hücre ölümü biçimidir; patogenezde hücresel düzey olayı olarak sınıflanır.\n- **Adaptasyon** — Adaptasyon, hücrenin zedeleyici etkene verdiği uyum yanıtıdır ve hücresel düzeyde yer alır.\n- **Fibrozis** — Fibrozis doğru: inflamasyon ve neoplazi ile birlikte doku ve organ düzeyindeki patogenez olaylarındandır.\n- **Gen ekspresyonu** — Gen ekspresyonu, sinyal yollarıyla birlikte moleküler düzey olayıdır; doku düzeyinden önce gelir.\n\n**Cevap: D** — Fibrozis\n\n**Özet.** Patogenez moleküler düzeyde sinyal yolları, hücresel düzeyde apoptoz, nekroz, adaptasyon, doku düzeyinde inflamasyon, fibrozis ve neoplazi olarak ilerler.",
+   "ses": "Patogenezde etiyolojik ajanın başlattığı olaylardan hangisi doku ya da organ düzeyinde yer alır?\nA, Apoptoz\nBe, Nekroz\nCe, Adaptasyon\nDe, Fibrozis\nE, Gen ekspresyonu\nSeçenekleri sırayla değerlendirelim.\nApoptoz, nekroz ve adaptasyonla birlikte hücresel düzeydeki patogenez olaylarındandır, doku düzeyinde değildir.\nNekroz bir hücre ölümü biçimidir, patogenezde hücresel düzey olayı olarak sınıflanır.\nAdaptasyon, hücrenin zedeleyici etkene verdiği uyum yanıtıdır ve hücresel düzeyde yer alır.\nFibrozis doğru, inflamasyon ve neoplazi ile birlikte doku ve organ düzeyindeki patogenez olaylarındandır.\nGen ekspresyonu, sinyal yollarıyla birlikte moleküler düzey olayıdır, doku düzeyinden önce gelir.\nDoğru cevap De, Fibrozis\nPatogenez moleküler düzeyde sinyal yolları, hücresel düzeyde apoptoz, nekroz, adaptasyon, doku düzeyinde inflamasyon, fibrozis ve neoplazi olarak ilerler.",
+   "kelime": 129
+  },
+  {
+   "no": 34,
+   "tur": "ornek",
+   "soru": "Mikroskobik bulgulardan hangisi hücresel değişiklik değil, stromal yanıt olarak sınıflanır?",
+   "secenekler": {
+    "A": "Displazi",
+    "B": "Dejenerasyon",
+    "C": "Nekroz",
+    "D": "Neoplazi",
+    "E": "Anjiyogenez"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Displazi, mikroskobik bulgularda hücresel değişiklikler arasında sayılır; stromal yanıt değildir.",
+    "B": "Dejenerasyon, hücrenin kendisinde görülen bir değişikliktir ve hücresel bulgular grubundadır.",
+    "C": "Nekroz mikroskobik incelemede hücresel değişiklik olarak sınıflanır; stromanın yanıtı değildir.",
+    "D": "Neoplazi, displazi ve nekrozla birlikte hücresel değişiklikler listesinde yer alır.",
+    "E": "Anjiyogenez doğru: inflamasyon ve fibrozisle birlikte stromal yanıt olarak sınıflanan mikroskobik bulgudur."
+   },
+   "ozet": "Hücresel değişiklikler dejenerasyon, nekroz, displazi ve neoplazidir; stromal yanıt ise inflamasyon, fibrozis ve anjiyogenezdir.",
+   "metin": "**Soru.** Mikroskobik bulgulardan hangisi hücresel değişiklik değil, stromal yanıt olarak sınıflanır?\n\n**A)** Displazi · **B)** Dejenerasyon · **C)** Nekroz · **D)** Neoplazi · **E)** Anjiyogenez\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Displazi** — Displazi, mikroskobik bulgularda hücresel değişiklikler arasında sayılır; stromal yanıt değildir.\n- **Dejenerasyon** — Dejenerasyon, hücrenin kendisinde görülen bir değişikliktir ve hücresel bulgular grubundadır.\n- **Nekroz** — Nekroz mikroskobik incelemede hücresel değişiklik olarak sınıflanır; stromanın yanıtı değildir.\n- **Neoplazi** — Neoplazi, displazi ve nekrozla birlikte hücresel değişiklikler listesinde yer alır.\n- **Anjiyogenez** — Anjiyogenez doğru: inflamasyon ve fibrozisle birlikte stromal yanıt olarak sınıflanan mikroskobik bulgudur.\n\n**Cevap: E** — Anjiyogenez\n\n**Özet.** Hücresel değişiklikler dejenerasyon, nekroz, displazi ve neoplazidir; stromal yanıt ise inflamasyon, fibrozis ve anjiyogenezdir.",
+   "ses": "Mikroskobik bulgulardan hangisi hücresel değişiklik değil, stromal yanıt olarak sınıflanır?\nA, Displazi\nBe, Dejenerasyon\nCe, Nekroz\nDe, Neoplazi\nE, Anjiyogenez\nHer seçeneği tek tek ele alalım.\nDisplazi, mikroskobik bulgularda hücresel değişiklikler arasında sayılır, stromal yanıt değildir.\nDejenerasyon, hücrenin kendisinde görülen bir değişikliktir ve hücresel bulgular grubundadır.\nNekroz mikroskobik incelemede hücresel değişiklik olarak sınıflanır, stromanın yanıtı değildir.\nNeoplazi, displazi ve nekrozla birlikte hücresel değişiklikler listesinde yer alır.\nAnjiyogenez doğru, inflamasyon ve fibrozisle birlikte stromal yanıt olarak sınıflanan mikroskobik bulgudur.\nDoğru cevap E, Anjiyogenez\nHücresel değişiklikler dejenerasyon, nekroz, displazi ve neoplazidir, stromal yanıt ise inflamasyon, fibrozis ve anjiyogenezdir.",
+   "kelime": 118
+  },
+  {
+   "no": 35,
+   "tur": "ornek",
+   "soru": "Patoloji özellikle hangi hastalık grubunda altın standart tanı yöntemidir?",
+   "secenekler": {
+    "A": "Neoplaziler",
+    "B": "Hemodinamik bozukluklar",
+    "C": "Beslenme bozuklukları",
+    "D": "Hormon bozuklukları",
+    "E": "Fonksiyonel bozukluklar"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Neoplaziler doğru: patoloji birçok hastalıkta, özellikle neoplazilerde altın standart tanı yöntemidir.",
+    "B": "Hemodinamik bozukluklar genel patolojinin konularındandır; altın standart vurgusu bu grup için yapılmaz.",
+    "C": "Beslenme bozuklukları edinsel etiyolojik nedenler arasında sayılır; patolojinin altın standart olduğu grup değildir.",
+    "D": "Hormon üretiminin artması ya da azalması yapısal değişikliğin fonksiyonel sonucudur; altın standart vurgusu burada yapılmaz.",
+    "E": "Fonksiyonel bozuklukları ağırlıklı olarak fizyopatoloji inceler; patolojinin altın standart olduğu alan bu değildir."
+   },
+   "ozet": "Patoloji özellikle neoplazilerde altın standarttır; rapor tanı, evre, derece ve cerrahi sınırı bildirerek adjuvan tedavi ve izlemi belirler.",
+   "metin": "**Soru.** Patoloji özellikle hangi hastalık grubunda altın standart tanı yöntemidir?\n\n**A)** Neoplaziler · **B)** Hemodinamik bozukluklar · **C)** Beslenme bozuklukları · **D)** Hormon bozuklukları · **E)** Fonksiyonel bozukluklar\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Neoplaziler** — Neoplaziler doğru: patoloji birçok hastalıkta, özellikle neoplazilerde altın standart tanı yöntemidir.\n- **Hemodinamik bozukluklar** — Hemodinamik bozukluklar genel patolojinin konularındandır; altın standart vurgusu bu grup için yapılmaz.\n- **Beslenme bozuklukları** — Beslenme bozuklukları edinsel etiyolojik nedenler arasında sayılır; patolojinin altın standart olduğu grup değildir.\n- **Hormon bozuklukları** — Hormon üretiminin artması ya da azalması yapısal değişikliğin fonksiyonel sonucudur; altın standart vurgusu burada yapılmaz.\n- **Fonksiyonel bozukluklar** — Fonksiyonel bozuklukları ağırlıklı olarak fizyopatoloji inceler; patolojinin altın standart olduğu alan bu değildir.\n\n**Cevap: A** — Neoplaziler\n\n**Özet.** Patoloji özellikle neoplazilerde altın standarttır; rapor tanı, evre, derece ve cerrahi sınırı bildirerek adjuvan tedavi ve izlemi belirler.",
+   "ses": "Patoloji özellikle hangi hastalık grubunda altın standart tanı yöntemidir?\nA, Neoplaziler\nBe, Hemodinamik bozukluklar\nCe, Beslenme bozuklukları\nDe, Hormon bozuklukları\nE, Fonksiyonel bozukluklar\nŞıkları sırasıyla gözden geçirelim.\nNeoplaziler doğru, patoloji birçok hastalıkta, özellikle neoplazilerde altın standart tanı yöntemidir.\nHemodinamik bozukluklar genel patolojinin konularındandır, altın standart vurgusu bu grup için yapılmaz.\nBeslenme bozuklukları edinsel etiyolojik nedenler arasında sayılır, patolojinin altın standart olduğu grup değildir.\nHormon üretiminin artması ya da azalması yapısal değişikliğin fonksiyonel sonucudur, altın standart vurgusu burada yapılmaz.\nFonksiyonel bozuklukları ağırlıklı olarak fizyopatoloji inceler, patolojinin altın standart olduğu alan bu değildir.\nDoğru cevap A, Neoplaziler\nPatoloji özellikle neoplazilerde altın standarttır, rapor tanı, evre, derece ve cerrahi sınırı bildirerek adjuvan tedavi ve izlemi belirler.",
+   "kelime": 139
+  },
+  {
+   "no": 36,
+   "tur": "ornek",
+   "soru": "Patoloğa gelen materyalde klinik bilgi yetersizse patoloğun beklenen tutumu hangisidir?",
+   "secenekler": {
+    "A": "Morfolojiye göre kesin rapor verir",
+    "B": "Raporu geciktirip bilgi ister",
+    "C": "Materyali imha eder",
+    "D": "Ön tanıyı aynen onaylar",
+    "E": "Yalnız makroskopiyi raporlar"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Morfolojiye göre kesin rapor vermek uygun değildir; değerlendirme morfoloji, klinik, radyoloji ve tedavi seçeneklerinin birlikte yorumlanmasıdır.",
+    "B": "Raporu geciktirip bilgi istemek doğru: klinik bilgi yetersizse patolog raporu geciktirebilir ve klinisyenden bilgi talep eder.",
+    "C": "Materyali imha etmek söz konusu değildir; yeterli klinik bilgi, uygun örnekleme ve yorum için zorunludur.",
+    "D": "Ön tanıyı aynen onaylamak yanlıştır; ön tanı ile patoloji uyumsuzsa klinisyen ile patoloğun teması zorunludur.",
+    "E": "Yalnız makroskopiyi raporlamak yeterli değildir; patolog örnekleri hem makroskobik hem mikroskobik olarak inceler."
+   },
+   "ozet": "Klinik bilgi yetersizse patolog raporu geciktirip bilgi ister; yaş, cinsiyet, lokalizasyon, girişim türü, radyoloji bulgusu ve ön tanı patoloğa iletilmelidir.",
+   "metin": "**Soru.** Patoloğa gelen materyalde klinik bilgi yetersizse patoloğun beklenen tutumu hangisidir?\n\n**A)** Morfolojiye göre kesin rapor verir · **B)** Raporu geciktirip bilgi ister · **C)** Materyali imha eder · **D)** Ön tanıyı aynen onaylar · **E)** Yalnız makroskopiyi raporlar\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Morfolojiye göre kesin rapor verir** — Morfolojiye göre kesin rapor vermek uygun değildir; değerlendirme morfoloji, klinik, radyoloji ve tedavi seçeneklerinin birlikte yorumlanmasıdır.\n- **Raporu geciktirip bilgi ister** — Raporu geciktirip bilgi istemek doğru: klinik bilgi yetersizse patolog raporu geciktirebilir ve klinisyenden bilgi talep eder.\n- **Materyali imha eder** — Materyali imha etmek söz konusu değildir; yeterli klinik bilgi, uygun örnekleme ve yorum için zorunludur.\n- **Ön tanıyı aynen onaylar** — Ön tanıyı aynen onaylamak yanlıştır; ön tanı ile patoloji uyumsuzsa klinisyen ile patoloğun teması zorunludur.\n- **Yalnız makroskopiyi raporlar** — Yalnız makroskopiyi raporlamak yeterli değildir; patolog örnekleri hem makroskobik hem mikroskobik olarak inceler.\n\n**Cevap: B** — Raporu geciktirip bilgi ister\n\n**Özet.** Klinik bilgi yetersizse patolog raporu geciktirip bilgi ister; yaş, cinsiyet, lokalizasyon, girişim türü, radyoloji bulgusu ve ön tanı patoloğa iletilmelidir.",
+   "ses": "Patoloğa gelen materyalde klinik bilgi yetersizse patoloğun beklenen tutumu hangisidir?\nA, Morfolojiye göre kesin rapor verir\nBe, Raporu geciktirip bilgi ister\nCe, Materyali imha eder\nDe, Ön tanıyı aynen onaylar\nE, Yalnız makroskopiyi raporlar\nŞimdi seçeneklere tek tek bakalım.\nMorfolojiye göre kesin rapor vermek uygun değildir, değerlendirme morfoloji, klinik, radyoloji ve tedavi seçeneklerinin birlikte yorumlanmasıdır.\nRaporu geciktirip bilgi istemek doğru, klinik bilgi yetersizse patolog raporu geciktirebilir ve klinisyenden bilgi talep eder.\nMateryali imha etmek söz konusu değildir, yeterli klinik bilgi, uygun örnekleme ve yorum için zorunludur.\nÖn tanıyı aynen onaylamak yanlıştır, ön tanı ile patoloji uyumsuzsa klinisyen ile patoloğun teması zorunludur.\nYalnız makroskopiyi raporlamak yeterli değildir, patolog örnekleri hem makroskobik hem mikroskobik olarak inceler.\nDoğru cevap Be, Raporu geciktirip bilgi ister\nKlinik bilgi yetersizse patolog raporu geciktirip bilgi ister, yaş, cinsiyet, lokalizasyon, girişim türü, radyoloji bulgusu ve ön tanı patoloğa iletilmelidir.",
+   "kelime": 177
+  },
+  {
+   "no": 37,
+   "tur": "ornek",
+   "soru": "Yaşayan hastadan alınan her türlü cerrahi materyali inceleyen ve otopsiyi kapsamayan alt dal hangisidir?",
+   "secenekler": {
+    "A": "Anatomik patoloji",
+    "B": "Adli patoloji",
+    "C": "Cerrahi patoloji",
+    "D": "Deneysel patoloji",
+    "E": "Ultrastrüktürel patoloji"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Anatomik patoloji daha geniş bir alandır; otopsi, rezeksiyon ve biyopsileri kapsadığı için tarif edilen alan değildir.",
+    "B": "Adli patoloji ani, beklenmedik ve şüpheli ölümlerde otopsiyle ölüm nedenini belirler; canlı hasta materyalinin alanı değildir.",
+    "C": "Cerrahi patoloji doğru: yaşayan hastadan alınan her türlü cerrahi materyali inceler, tanı, evreleme, tedavi ve prognozda doğrudan rol oynar.",
+    "D": "Deneysel patoloji, hayvan modellerinde hastalık mekanizmalarını ve tedavi yanıtını inceler; cerrahi materyal değerlendirmesi bu alanın konusu değildir.",
+    "E": "Ultrastrüktürel patoloji elektron mikroskobuyla yapılan incelemedir; materyalin kaynağına değil yönteme göre tanımlanır."
+   },
+   "ozet": "Anatomik patoloji otopsi, rezeksiyon ve biyopsileri kapsar; cerrahi patoloji ise yalnız yaşayan hastadan alınan cerrahi materyalle ilgilenir.",
+   "metin": "**Soru.** Yaşayan hastadan alınan her türlü cerrahi materyali inceleyen ve otopsiyi kapsamayan alt dal hangisidir?\n\n**A)** Anatomik patoloji · **B)** Adli patoloji · **C)** Cerrahi patoloji · **D)** Deneysel patoloji · **E)** Ultrastrüktürel patoloji\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Anatomik patoloji** — Anatomik patoloji daha geniş bir alandır; otopsi, rezeksiyon ve biyopsileri kapsadığı için tarif edilen alan değildir.\n- **Adli patoloji** — Adli patoloji ani, beklenmedik ve şüpheli ölümlerde otopsiyle ölüm nedenini belirler; canlı hasta materyalinin alanı değildir.\n- **Cerrahi patoloji** — Cerrahi patoloji doğru: yaşayan hastadan alınan her türlü cerrahi materyali inceler, tanı, evreleme, tedavi ve prognozda doğrudan rol oynar.\n- **Deneysel patoloji** — Deneysel patoloji, hayvan modellerinde hastalık mekanizmalarını ve tedavi yanıtını inceler; cerrahi materyal değerlendirmesi bu alanın konusu değildir.\n- **Ultrastrüktürel patoloji** — Ultrastrüktürel patoloji elektron mikroskobuyla yapılan incelemedir; materyalin kaynağına değil yönteme göre tanımlanır.\n\n**Cevap: C** — Cerrahi patoloji\n\n**Özet.** Anatomik patoloji otopsi, rezeksiyon ve biyopsileri kapsar; cerrahi patoloji ise yalnız yaşayan hastadan alınan cerrahi materyalle ilgilenir.",
+   "ses": "Yaşayan hastadan alınan her türlü cerrahi materyali inceleyen ve otopsiyi kapsamayan alt dal hangisidir?\nA, Anatomik patoloji\nBe, Adli patoloji\nCe, Cerrahi patoloji\nDe, Deneysel patoloji\nE, Ultrastrüktürel patoloji\nSeçenekleri sırayla değerlendirelim.\nAnatomik patoloji daha geniş bir alandır, otopsi, rezeksiyon ve biyopsileri kapsadığı için tarif edilen alan değildir.\nAdli patoloji ani, beklenmedik ve şüpheli ölümlerde otopsiyle ölüm nedenini belirler, canlı hasta materyalinin alanı değildir.\nCerrahi patoloji doğru, yaşayan hastadan alınan her türlü cerrahi materyali inceler, tanı, evreleme, tedavi ve prognozda doğrudan rol oynar.\nDeneysel patoloji, hayvan modellerinde hastalık mekanizmalarını ve tedavi yanıtını inceler, cerrahi materyal değerlendirmesi bu alanın konusu değildir.\nUltrastrüktürel patoloji elektron mikroskobuyla yapılan incelemedir, materyalin kaynağına değil yönteme göre tanımlanır.\nDoğru cevap Ce, Cerrahi patoloji\nAnatomik patoloji otopsi, rezeksiyon ve biyopsileri kapsar, cerrahi patoloji ise yalnız yaşayan hastadan alınan cerrahi materyalle ilgilenir.",
+   "kelime": 161
+  },
+  {
+   "no": 38,
+   "tur": "ornek",
+   "soru": "İnflamasyonun kızarıklık, sıcaklık, ağrı ve şişlik belirtilerini tanımlayan hekim kimdir?",
+   "secenekler": {
+    "A": "Galen",
+    "B": "Morgagni",
+    "C": "Virchow",
+    "D": "Celsus",
+    "E": "İbni Sina"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Galen dört belirtiyi değil, beşinci belirti olan fonksiyon kaybını, yani functio laesa'yı eklemiştir.",
+    "B": "Morgagni ~700 otopsiyle hastalıkların organlara yerleştiğini gösteren patolojik anatominin kurucusudur.",
+    "C": "Virchow hücresel patolojiyi kurmuş ve tüm hastalıkların hücresel temeli olduğunu vurgulamıştır; inflamasyon belirtilerini tanımlamamıştır.",
+    "D": "Celsus doğru: De Medicina eserinde inflamasyonun dört belirtisini, rubor, calor, dolor ve tumoru tanımlamıştır.",
+    "E": "İbni Sina, El-Kanun fi't-Tıbb eserinde fizyoloji, anatomi ve hastalıklar üzerine kapsamlı gözlemler yapmıştır."
+   },
+   "ozet": "İnflamasyonun dört kardinal belirtisi Celsus'a, beşinci belirti olan fonksiyon kaybı Galen'e aittir; bu beş bulgu bugün de klasik tanımdır.",
+   "metin": "**Soru.** İnflamasyonun kızarıklık, sıcaklık, ağrı ve şişlik belirtilerini tanımlayan hekim kimdir?\n\n**A)** Galen · **B)** Morgagni · **C)** Virchow · **D)** Celsus · **E)** İbni Sina\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Galen** — Galen dört belirtiyi değil, beşinci belirti olan fonksiyon kaybını, yani functio laesa'yı eklemiştir.\n- **Morgagni** — Morgagni ~700 otopsiyle hastalıkların organlara yerleştiğini gösteren patolojik anatominin kurucusudur.\n- **Virchow** — Virchow hücresel patolojiyi kurmuş ve tüm hastalıkların hücresel temeli olduğunu vurgulamıştır; inflamasyon belirtilerini tanımlamamıştır.\n- **Celsus** — Celsus doğru: De Medicina eserinde inflamasyonun dört belirtisini, rubor, calor, dolor ve tumoru tanımlamıştır.\n- **İbni Sina** — İbni Sina, El-Kanun fi't-Tıbb eserinde fizyoloji, anatomi ve hastalıklar üzerine kapsamlı gözlemler yapmıştır.\n\n**Cevap: D** — Celsus\n\n**Özet.** İnflamasyonun dört kardinal belirtisi Celsus'a, beşinci belirti olan fonksiyon kaybı Galen'e aittir; bu beş bulgu bugün de klasik tanımdır.",
+   "ses": "İnflamasyonun kızarıklık, sıcaklık, ağrı ve şişlik belirtilerini tanımlayan hekim kimdir?\nA, Galen\nBe, Morgani\nCe, Virkov\nDe, Selsus\nE, İbni Sina\nHer seçeneği tek tek ele alalım.\nGalen dört belirtiyi değil, beşinci belirti olan fonksiyon kaybını, yani funksiyo lezayı eklemiştir.\nMorgani yaklaşık yedi yüz otopsiyle hastalıkların organlara yerleştiğini gösteren patolojik anatominin kurucusudur.\nVirkov hücresel patolojiyi kurmuş ve tüm hastalıkların hücresel temeli olduğunu vurgulamıştır, inflamasyon belirtilerini tanımlamamıştır.\nSelsus doğru, De Medisina eserinde inflamasyonun dört belirtisini, rubor, kalor, dolor ve tumoru tanımlamıştır.\nİbni Sina, El Kanun fit Tıbb eserinde fizyoloji, anatomi ve hastalıklar üzerine kapsamlı gözlemler yapmıştır.\nDoğru cevap De, Selsus\nİnflamasyonun dört kardinal belirtisi Selsusa, beşinci belirti olan fonksiyon kaybı Galene aittir. Bu beş bulgu bugün de klasik tanımdır.",
+   "kelime": 137
+  },
+  {
+   "no": 39,
+   "tur": "ornek",
+   "soru": "Papanicolaou servikal sitoloji yöntemini Türkiye'ye getiren öncü kimdir?",
+   "secenekler": {
+    "A": "Hamdi Suat Aknar",
+    "B": "Philipp Schwartz",
+    "C": "Kamile Şevki Mutlu",
+    "D": "Siegfried Oberndorfer",
+    "E": "Osman Nuri Aker"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Hamdi Suat Aknar Darülfünun'da ilk patoloji laboratuvarını ve ~1800 kavanozluk patoloji müzesini kurmuştur.",
+    "B": "Philipp Schwartz 1933 reformuyla gelip Patolojik Anatomi Kürsüsünü yapılandırmış ve bugün de kullanılan arşiv sistemini kurmuştur.",
+    "C": "Kamile Şevki Mutlu, Ankara Numune Patoloji Laboratuvarını ve Ankara Üniversitesi Histoloji–Embriyoloji Kürsüsünü kurmuştur.",
+    "D": "Siegfried Oberndorfer 1933 reformuyla Almanya'dan gelen patologlardandır; sitoloji yöntemini getiren kişi değildir.",
+    "E": "Osman Nuri Aker doğru: Amerika'da Papanicolaou ile çalışmış ve servikal sitoloji yöntemini Türkiye'ye getirmiştir."
+   },
+   "ozet": "Osman Nuri Aker, Amerika'da Papanicolaou ile çalışarak servikal sitolojiyi Türkiye'ye getirmiş ve ülkemiz sitopatolojisinin öncülerinden olmuştur.",
+   "metin": "**Soru.** Papanicolaou servikal sitoloji yöntemini Türkiye'ye getiren öncü kimdir?\n\n**A)** Hamdi Suat Aknar · **B)** Philipp Schwartz · **C)** Kamile Şevki Mutlu · **D)** Siegfried Oberndorfer · **E)** Osman Nuri Aker\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Hamdi Suat Aknar** — Hamdi Suat Aknar Darülfünun'da ilk patoloji laboratuvarını ve ~1800 kavanozluk patoloji müzesini kurmuştur.\n- **Philipp Schwartz** — Philipp Schwartz 1933 reformuyla gelip Patolojik Anatomi Kürsüsünü yapılandırmış ve bugün de kullanılan arşiv sistemini kurmuştur.\n- **Kamile Şevki Mutlu** — Kamile Şevki Mutlu, Ankara Numune Patoloji Laboratuvarını ve Ankara Üniversitesi Histoloji–Embriyoloji Kürsüsünü kurmuştur.\n- **Siegfried Oberndorfer** — Siegfried Oberndorfer 1933 reformuyla Almanya'dan gelen patologlardandır; sitoloji yöntemini getiren kişi değildir.\n- **Osman Nuri Aker** — Osman Nuri Aker doğru: Amerika'da Papanicolaou ile çalışmış ve servikal sitoloji yöntemini Türkiye'ye getirmiştir.\n\n**Cevap: E** — Osman Nuri Aker\n\n**Özet.** Osman Nuri Aker, Amerika'da Papanicolaou ile çalışarak servikal sitolojiyi Türkiye'ye getirmiş ve ülkemiz sitopatolojisinin öncülerinden olmuştur.",
+   "ses": "Papanikolau servikal sitoloji yöntemini Türkiyeye getiren öncü kimdir?\nA, Hamdi Suat Aknar\nBe, Filip Şvarts\nCe, Kamile Şevki Mutlu\nDe, Zigfrid Oberndorfer\nE, Osman Nuri Aker\nŞıkları sırasıyla gözden geçirelim.\nHamdi Suat Aknar Darülfünunda ilk patoloji laboratuvarını ve yaklaşık bin sekiz yüz kavanozluk patoloji müzesini kurmuştur.\nFilip Şvarts bin dokuz yüz otuz üç reformuyla gelip Patolojik Anatomi Kürsüsünü yapılandırmış ve bugün de kullanılan arşiv sistemini kurmuştur.\nKamile Şevki Mutlu, Ankara Numune Patoloji Laboratuvarını ve Ankara Üniversitesi Histoloji Embriyoloji Kürsüsünü kurmuştur.\nZigfrid Oberndorfer bin dokuz yüz otuz üç reformuyla Almanyadan gelen patologlardandır, sitoloji yöntemini getiren kişi değildir.\nOsman Nuri Aker doğru, Amerikada Papanikolau ile çalışmış ve servikal sitoloji yöntemini Türkiyeye getirmiştir.\nDoğru cevap E, Osman Nuri Aker\nOsman Nuri Aker, Amerikada Papanikolau ile çalışarak servikal sitolojiyi Türkiyeye getirmiş ve ülkemiz sitopatolojisinin öncülerinden olmuştur.",
+   "kelime": 150
+  },
+  {
+   "no": 40,
+   "tur": "ornek",
+   "soru": "Makroskopik incelemede mikroskobik incelemenin kalitesini belirleyen kritik basamak hangisidir?",
+   "secenekler": {
+    "A": "Örnekleme",
+    "B": "Boyama",
+    "C": "Lamelle kapatma",
+    "D": "Bloklama",
+    "E": "Dehidrasyon"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Örnekleme doğru: makroskopik incelemede yapılan bu seçim, mikroskobik incelemenin kalitesini belirleyen kritik basamaktır.",
+    "B": "Boyama kesitlere renk kontrastı kazandırır; ancak hangi dokunun inceleneceğini belirleyen makroskopik basamak değildir.",
+    "C": "Lamelle kapatma, boyanmış kesitler için yapılan son basamaktır; doku seçimini belirlemez.",
+    "D": "Bloklama, dokunun parafin dolu kalıba uygun pozisyonda yerleştirilmesidir; makroskopik seçimden sonra gelir.",
+    "E": "Dehidrasyon, artan konsantrasyonda etanolle suyun uzaklaştırılmasıdır; doku takibinin bir basamağıdır."
+   },
+   "ozet": "Makroskopide organ ve lezyonun boyutu, lokalizasyonu, rengi, sınırları ve cerrahi sınırlar değerlendirilir; örnekleme mikroskobik incelemenin kalitesini belirler.",
+   "metin": "**Soru.** Makroskopik incelemede mikroskobik incelemenin kalitesini belirleyen kritik basamak hangisidir?\n\n**A)** Örnekleme · **B)** Boyama · **C)** Lamelle kapatma · **D)** Bloklama · **E)** Dehidrasyon\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Örnekleme** — Örnekleme doğru: makroskopik incelemede yapılan bu seçim, mikroskobik incelemenin kalitesini belirleyen kritik basamaktır.\n- **Boyama** — Boyama kesitlere renk kontrastı kazandırır; ancak hangi dokunun inceleneceğini belirleyen makroskopik basamak değildir.\n- **Lamelle kapatma** — Lamelle kapatma, boyanmış kesitler için yapılan son basamaktır; doku seçimini belirlemez.\n- **Bloklama** — Bloklama, dokunun parafin dolu kalıba uygun pozisyonda yerleştirilmesidir; makroskopik seçimden sonra gelir.\n- **Dehidrasyon** — Dehidrasyon, artan konsantrasyonda etanolle suyun uzaklaştırılmasıdır; doku takibinin bir basamağıdır.\n\n**Cevap: A** — Örnekleme\n\n**Özet.** Makroskopide organ ve lezyonun boyutu, lokalizasyonu, rengi, sınırları ve cerrahi sınırlar değerlendirilir; örnekleme mikroskobik incelemenin kalitesini belirler.",
+   "ses": "Makroskopik incelemede mikroskobik incelemenin kalitesini belirleyen kritik basamak hangisidir?\nA, Örnekleme\nBe, Boyama\nCe, Lamelle kapatma\nDe, Bloklama\nE, Dehidrasyon\nŞimdi seçeneklere tek tek bakalım.\nÖrnekleme doğru, makroskopik incelemede yapılan bu seçim, mikroskobik incelemenin kalitesini belirleyen kritik basamaktır.\nBoyama kesitlere renk kontrastı kazandırır, ancak hangi dokunun inceleneceğini belirleyen makroskopik basamak değildir.\nLamelle kapatma, boyanmış kesitler için yapılan son basamaktır, doku seçimini belirlemez.\nBloklama, dokunun parafin dolu kalıba uygun pozisyonda yerleştirilmesidir, makroskopik seçimden sonra gelir.\nDehidrasyon, artan konsantrasyonda etanolle suyun uzaklaştırılmasıdır, doku takibinin bir basamağıdır.\nDoğru cevap A, Örnekleme\nMakroskopide organ ve lezyonun boyutu, lokalizasyonu, rengi, sınırları ve cerrahi sınırlar değerlendirilir, örnekleme mikroskobik incelemenin kalitesini belirler.",
+   "kelime": 128
+  },
+  {
+   "no": 41,
+   "tur": "ornek",
+   "soru": "Moleküler patolojide hangisi bir gen füzyonu örneğidir?",
+   "secenekler": {
+    "A": "EGFR mutasyonu",
+    "B": "BCR–ABL1",
+    "C": "KRAS mutasyonu",
+    "D": "BRAF mutasyonu",
+    "E": "Ki-67 indeksi"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "EGFR mutasyonu, KRAS ve BRAF ile birlikte somatik mutasyon analizi örneğidir; gen füzyonu değildir.",
+    "B": "BCR–ABL1 doğru: ALK ile birlikte moleküler patolojide gen füzyonu örneği olarak sayılır.",
+    "C": "KRAS mutasyonu tek bir gende oluşan somatik mutasyondur; akciğer adenokarsinomunda mutasyon analiziyle bakılır.",
+    "D": "BRAF mutasyonu da somatik mutasyon analizinin konusudur; iki genin birleşmesiyle oluşan bir füzyon değildir.",
+    "E": "Ki-67 indeksi immünohistokimyayla bakılan proliferasyon göstergesidir; moleküler bir gen değişikliği değildir."
+   },
+   "ozet": "EGFR, KRAS ve BRAF somatik mutasyon analizine, BCR–ABL1 ve ALK ise gen füzyonuna örnektir; minimal rezidüel hastalık takibi de moleküler patolojinin uygulamasıdır.",
+   "metin": "**Soru.** Moleküler patolojide hangisi bir gen füzyonu örneğidir?\n\n**A)** EGFR mutasyonu · **B)** BCR–ABL1 · **C)** KRAS mutasyonu · **D)** BRAF mutasyonu · **E)** Ki-67 indeksi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **EGFR mutasyonu** — EGFR mutasyonu, KRAS ve BRAF ile birlikte somatik mutasyon analizi örneğidir; gen füzyonu değildir.\n- **BCR–ABL1** — BCR–ABL1 doğru: ALK ile birlikte moleküler patolojide gen füzyonu örneği olarak sayılır.\n- **KRAS mutasyonu** — KRAS mutasyonu tek bir gende oluşan somatik mutasyondur; akciğer adenokarsinomunda mutasyon analiziyle bakılır.\n- **BRAF mutasyonu** — BRAF mutasyonu da somatik mutasyon analizinin konusudur; iki genin birleşmesiyle oluşan bir füzyon değildir.\n- **Ki-67 indeksi** — Ki-67 indeksi immünohistokimyayla bakılan proliferasyon göstergesidir; moleküler bir gen değişikliği değildir.\n\n**Cevap: B** — BCR–ABL1\n\n**Özet.** EGFR, KRAS ve BRAF somatik mutasyon analizine, BCR–ABL1 ve ALK ise gen füzyonuna örnektir; minimal rezidüel hastalık takibi de moleküler patolojinin uygulamasıdır.",
+   "ses": "Moleküler patolojide hangisi bir gen füzyonu örneğidir?\nA, e ge fe re mutasyonu\nBe, be ce re a be le bir\nCe, ka ras mutasyonu\nDe, be raf mutasyonu\nE, ka i altmış yedi indeksi\nSeçenekleri sırayla değerlendirelim.\nE ge fe re mutasyonu, ka ras ve be raf ile birlikte somatik mutasyon analizi örneğidir, gen füzyonu değildir.\nBe ce re a be le bir doğru, a le ka ile birlikte moleküler patolojide gen füzyonu örneği olarak sayılır.\nKa ras mutasyonu tek bir gende oluşan somatik mutasyondur, akciğer adenokarsinomunda mutasyon analiziyle bakılır.\nBe raf mutasyonu da somatik mutasyon analizinin konusudur, iki genin birleşmesiyle oluşan bir füzyon değildir.\nKa i altmış yedi indeksi immünohistokimyayla bakılan proliferasyon göstergesidir, moleküler bir gen değişikliği değildir.\nDoğru cevap Be, be ce re a be le bir\nE ge fe re, ka ras ve be raf somatik mutasyon analizine, be ce re a be le bir ve a le ka ise gen füzyonuna örnektir. Minimal rezidüel hastalık takibi de moleküler patolojinin uygulamasıdır.",
+   "kelime": 140
+  },
+  {
+   "no": 42,
+   "tur": "ornek",
+   "soru": "Tru-cut, yani kor biyopsinin kullanıldığı organlardan biri hangisidir?",
+   "secenekler": {
+    "A": "Deri",
+    "B": "Serviks",
+    "C": "Prostat",
+    "D": "Seröz sıvılar",
+    "E": "Bronş"
+   },
+   "dogru": "C",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Deri lezyonlarında özellikle punch biyopsi kullanılır; deri, kor biyopsi için sayılan organlardan değildir.",
+    "B": "Serviks, PAP smear ile kendiliğinden dökülen hücreler üzerinden değerlendirilir; kor biyopsi organı olarak sayılmaz.",
+    "C": "Prostat doğru: tru-cut, yani kor biyopsi meme, karaciğer, böbrek ve prostatta kullanılır.",
+    "D": "Seröz sıvılar plevral, peritoneal ve perikardiyal effüzyonlardır; sitolojik olarak incelenir ve malignite saptamada kullanılır.",
+    "E": "Bronşta fırçalama ve bronş yıkama gibi sitolojik örnekleme yöntemleri kullanılır; kor biyopsi listesinde yer almaz."
+   },
+   "ozet": "Kor biyopsi meme, karaciğer, böbrek ve prostatta, punch biyopsi özellikle deride kullanılır; amaç en az invaziv yöntemle en fazla tanısal bilgidir.",
+   "metin": "**Soru.** Tru-cut, yani kor biyopsinin kullanıldığı organlardan biri hangisidir?\n\n**A)** Deri · **B)** Serviks · **C)** Prostat · **D)** Seröz sıvılar · **E)** Bronş\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Deri** — Deri lezyonlarında özellikle punch biyopsi kullanılır; deri, kor biyopsi için sayılan organlardan değildir.\n- **Serviks** — Serviks, PAP smear ile kendiliğinden dökülen hücreler üzerinden değerlendirilir; kor biyopsi organı olarak sayılmaz.\n- **Prostat** — Prostat doğru: tru-cut, yani kor biyopsi meme, karaciğer, böbrek ve prostatta kullanılır.\n- **Seröz sıvılar** — Seröz sıvılar plevral, peritoneal ve perikardiyal effüzyonlardır; sitolojik olarak incelenir ve malignite saptamada kullanılır.\n- **Bronş** — Bronşta fırçalama ve bronş yıkama gibi sitolojik örnekleme yöntemleri kullanılır; kor biyopsi listesinde yer almaz.\n\n**Cevap: C** — Prostat\n\n**Özet.** Kor biyopsi meme, karaciğer, böbrek ve prostatta, punch biyopsi özellikle deride kullanılır; amaç en az invaziv yöntemle en fazla tanısal bilgidir.",
+   "ses": "Tru kat, yani kor biyopsinin kullanıldığı organlardan biri hangisidir?\nA, Deri\nBe, Serviks\nCe, Prostat\nDe, Seröz sıvılar\nE, Bronş\nHer seçeneği tek tek ele alalım.\nDeri lezyonlarında özellikle punch biyopsi kullanılır, deri, kor biyopsi için sayılan organlardan değildir.\nServiks, pap smir ile kendiliğinden dökülen hücreler üzerinden değerlendirilir, kor biyopsi organı olarak sayılmaz.\nProstat doğru, tru kat, yani kor biyopsi meme, karaciğer, böbrek ve prostatta kullanılır.\nSeröz sıvılar plevral, peritoneal ve perikardiyal effüzyonlardır, sitolojik olarak incelenir ve malignite saptamada kullanılır.\nBronşta fırçalama ve bronş yıkama gibi sitolojik örnekleme yöntemleri kullanılır, kor biyopsi listesinde yer almaz.\nDoğru cevap Ce, Prostat\nKor biyopsi meme, karaciğer, böbrek ve prostatta, punch biyopsi özellikle deride kullanılır, amaç en az invaziv yöntemle en fazla tanısal bilgidir.",
+   "kelime": 141
+  },
+  {
+   "no": 43,
+   "tur": "ornek",
+   "soru": "Fiksatifin damar içine verildiği, daha çok deneysel çalışmalarda kullanılan uygulama yöntemi hangisidir?",
+   "secenekler": {
+    "A": "İmmersiyon",
+    "B": "İnfiltrasyon",
+    "C": "Şeffaflaştırma",
+    "D": "Perfüzyon",
+    "E": "Dehidrasyon"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "İmmersiyon, dokunun doğrudan fiksatif içine konmasıdır; rutin uygulamada en sık kullanılan yöntemdir.",
+    "B": "İnfiltrasyon, erimiş parafinin dokuya penetre olmasıdır; fiksatif uygulama yöntemi değil doku takibi basamağıdır.",
+    "C": "Şeffaflaştırma, alkolün yerini ksilen gibi organik solventin almasıdır; parafinin dokuya girmesini sağlar.",
+    "D": "Perfüzyon doğru: fiksatif damar içine verilir ve daha çok deneysel çalışmalarda ve özel durumlarda kullanılır.",
+    "E": "Dehidrasyon, artan konsantrasyonlarda etanol serileriyle dokudaki suyun uzaklaştırılmasıdır."
+   },
+   "ozet": "Fiksatif dokuya iki yolla ulaşır; rutin uygulamada en sık immersiyon, deneysel ve özel durumlarda damar içi perfüzyon kullanılır.",
+   "metin": "**Soru.** Fiksatifin damar içine verildiği, daha çok deneysel çalışmalarda kullanılan uygulama yöntemi hangisidir?\n\n**A)** İmmersiyon · **B)** İnfiltrasyon · **C)** Şeffaflaştırma · **D)** Perfüzyon · **E)** Dehidrasyon\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **İmmersiyon** — İmmersiyon, dokunun doğrudan fiksatif içine konmasıdır; rutin uygulamada en sık kullanılan yöntemdir.\n- **İnfiltrasyon** — İnfiltrasyon, erimiş parafinin dokuya penetre olmasıdır; fiksatif uygulama yöntemi değil doku takibi basamağıdır.\n- **Şeffaflaştırma** — Şeffaflaştırma, alkolün yerini ksilen gibi organik solventin almasıdır; parafinin dokuya girmesini sağlar.\n- **Perfüzyon** — Perfüzyon doğru: fiksatif damar içine verilir ve daha çok deneysel çalışmalarda ve özel durumlarda kullanılır.\n- **Dehidrasyon** — Dehidrasyon, artan konsantrasyonlarda etanol serileriyle dokudaki suyun uzaklaştırılmasıdır.\n\n**Cevap: D** — Perfüzyon\n\n**Özet.** Fiksatif dokuya iki yolla ulaşır; rutin uygulamada en sık immersiyon, deneysel ve özel durumlarda damar içi perfüzyon kullanılır.",
+   "ses": "Fiksatifin damar içine verildiği, daha çok deneysel çalışmalarda kullanılan uygulama yöntemi hangisidir?\nA, İmmersiyon\nBe, İnfiltrasyon\nCe, Şeffaflaştırma\nDe, Perfüzyon\nE, Dehidrasyon\nŞıkları sırasıyla gözden geçirelim.\nİmmersiyon, dokunun doğrudan fiksatif içine konmasıdır, rutin uygulamada en sık kullanılan yöntemdir.\nİnfiltrasyon, erimiş parafinin dokuya penetre olmasıdır, fiksatif uygulama yöntemi değil doku takibi basamağıdır.\nŞeffaflaştırma, alkolün yerini ksilen gibi organik solventin almasıdır, parafinin dokuya girmesini sağlar.\nPerfüzyon doğru, fiksatif damar içine verilir ve daha çok deneysel çalışmalarda ve özel durumlarda kullanılır.\nDehidrasyon, artan konsantrasyonlarda etanol serileriyle dokudaki suyun uzaklaştırılmasıdır.\nDoğru cevap De, Perfüzyon\nFiksatif dokuya iki yolla ulaşır, rutin uygulamada en sık immersiyon, deneysel ve özel durumlarda damar içi perfüzyon kullanılır.",
+   "kelime": 130
+  },
+  {
+   "no": 44,
+   "tur": "ornek",
+   "soru": "Formalinin dokuya ortalama penetrasyon hızı ne kadardır?",
+   "secenekler": {
+    "A": "Saatte ~5 mm",
+    "B": "Dakikada ~1 mm",
+    "C": "Günde ~1 mm",
+    "D": "Saatte ~10 mm",
+    "E": "Saatte ~1 mm"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Saatte ~5 mm gerçeğin çok üstündedir; formalin dokuya ortalama saatte ~1 mm penetre olur.",
+    "B": "Dakikada ~1 mm olamaz; formalin dokuya dakikalar içinde değil saatler içinde penetre olur.",
+    "C": "Günde ~1 mm gerçek hızın çok altındadır; bu hızla 3–5 mm kalınlığındaki parça günlerce fikse olmazdı.",
+    "D": "Saatte ~10 mm yanlış bir değerdir; 10 sayısı fiksatif hacminin doku hacminin en az 10–20 katı olması kuralından gelir.",
+    "E": "Saatte ~1 mm doğru: formalin dokuya ortalama saatte yaklaşık bir milimetre penetre olur."
+   },
+   "ozet": "Formalin saatte ortalama ~1 mm penetre olduğu için parça kalınlığı genellikle 3–5 mm tutulur; fiksatif hacmi de doku hacminin en az 10–20 katı olmalıdır.",
+   "metin": "**Soru.** Formalinin dokuya ortalama penetrasyon hızı ne kadardır?\n\n**A)** Saatte ~5 mm · **B)** Dakikada ~1 mm · **C)** Günde ~1 mm · **D)** Saatte ~10 mm · **E)** Saatte ~1 mm\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Saatte ~5 mm** — Saatte ~5 mm gerçeğin çok üstündedir; formalin dokuya ortalama saatte ~1 mm penetre olur.\n- **Dakikada ~1 mm** — Dakikada ~1 mm olamaz; formalin dokuya dakikalar içinde değil saatler içinde penetre olur.\n- **Günde ~1 mm** — Günde ~1 mm gerçek hızın çok altındadır; bu hızla 3–5 mm kalınlığındaki parça günlerce fikse olmazdı.\n- **Saatte ~10 mm** — Saatte ~10 mm yanlış bir değerdir; 10 sayısı fiksatif hacminin doku hacminin en az 10–20 katı olması kuralından gelir.\n- **Saatte ~1 mm** — Saatte ~1 mm doğru: formalin dokuya ortalama saatte yaklaşık bir milimetre penetre olur.\n\n**Cevap: E** — Saatte ~1 mm\n\n**Özet.** Formalin saatte ortalama ~1 mm penetre olduğu için parça kalınlığı genellikle 3–5 mm tutulur; fiksatif hacmi de doku hacminin en az 10–20 katı olmalıdır.",
+   "ses": "Formalinin dokuya ortalama penetrasyon hızı ne kadardır?\nA, Saatte yaklaşık beş milimetre\nBe, Dakikada yaklaşık bir milimetre\nCe, Günde yaklaşık bir milimetre\nDe, Saatte yaklaşık on milimetre\nE, Saatte yaklaşık bir milimetre\nŞimdi seçeneklere tek tek bakalım.\nSaatte yaklaşık beş milimetre gerçeğin çok üstündedir, formalin dokuya ortalama saatte yaklaşık bir milimetre penetre olur.\nDakikada yaklaşık bir milimetre olamaz, formalin dokuya dakikalar içinde değil saatler içinde penetre olur.\nGünde yaklaşık bir milimetre gerçek hızın çok altındadır, bu hızla üç ile beş milimetre kalınlığındaki parça günlerce fikse olmazdı.\nSaatte yaklaşık on milimetre yanlış bir değerdir. On sayısı fiksatif hacminin doku hacminin en az on ile yirmi katı olması kuralından gelir.\nSaatte yaklaşık bir milimetre doğru, formalin dokuya ortalama saatte yaklaşık bir milimetre penetre olur.\nDoğru cevap E, Saatte yaklaşık bir milimetre\nFormalin saatte ortalama yaklaşık bir milimetre penetre olduğu için parça kalınlığı genellikle üç ile beş milimetre tutulur. Fiksatif hacmi de doku hacminin en az on ile yirmi katı olmalıdır.",
+   "kelime": 169
+  },
+  {
+   "no": 45,
+   "tur": "ornek",
+   "soru": "Parafine gömme sırasında hızlı soğutmanın amacı hangisidir?",
+   "secenekler": {
+    "A": "Büzüşme ve çatlakları azaltmak",
+    "B": "Suyu uzaklaştırmak",
+    "C": "Otolizi önlemek",
+    "D": "Antijen kaybını azaltmak",
+    "E": "Parafinin dokuya girmesini sağlamak"
+   },
+   "dogru": "A",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Büzüşme ve çatlakları azaltmak doğru: dokuyu içeren parafin kalıbın hızlı soğutulması bu kusurları en aza indirir.",
+    "B": "Suyu uzaklaştırmak dehidrasyonun amacıdır; artan konsantrasyonda etanolle bloklamadan önce yapılır.",
+    "C": "Otolizi önlemek fiksasyonun amacıdır; parça alındıktan hemen sonra fiksatifle temas sağlanarak gerçekleşir.",
+    "D": "Antijen kaybının az olması kriostat kesitlerinin avantajıdır; parafin bloğun soğutulmasıyla ilgili değildir.",
+    "E": "Parafinin dokuya girmesini sağlamak şeffaflaştırmanın işlevidir; ardından infiltrasyonda erimiş parafin dokuya penetre olur."
+   },
+   "ozet": "Bloklamada doku parafin dolu kalıba uygun pozisyonda yerleştirilir ve hızlı soğutulur; böylece büzüşme ve çatlaklar azalır.",
+   "metin": "**Soru.** Parafine gömme sırasında hızlı soğutmanın amacı hangisidir?\n\n**A)** Büzüşme ve çatlakları azaltmak · **B)** Suyu uzaklaştırmak · **C)** Otolizi önlemek · **D)** Antijen kaybını azaltmak · **E)** Parafinin dokuya girmesini sağlamak\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Büzüşme ve çatlakları azaltmak** — Büzüşme ve çatlakları azaltmak doğru: dokuyu içeren parafin kalıbın hızlı soğutulması bu kusurları en aza indirir.\n- **Suyu uzaklaştırmak** — Suyu uzaklaştırmak dehidrasyonun amacıdır; artan konsantrasyonda etanolle bloklamadan önce yapılır.\n- **Otolizi önlemek** — Otolizi önlemek fiksasyonun amacıdır; parça alındıktan hemen sonra fiksatifle temas sağlanarak gerçekleşir.\n- **Antijen kaybını azaltmak** — Antijen kaybının az olması kriostat kesitlerinin avantajıdır; parafin bloğun soğutulmasıyla ilgili değildir.\n- **Parafinin dokuya girmesini sağlamak** — Parafinin dokuya girmesini sağlamak şeffaflaştırmanın işlevidir; ardından infiltrasyonda erimiş parafin dokuya penetre olur.\n\n**Cevap: A** — Büzüşme ve çatlakları azaltmak\n\n**Özet.** Bloklamada doku parafin dolu kalıba uygun pozisyonda yerleştirilir ve hızlı soğutulur; böylece büzüşme ve çatlaklar azalır.",
+   "ses": "Parafine gömme sırasında hızlı soğutmanın amacı hangisidir?\nA, Büzüşme ve çatlakları azaltmak\nBe, Suyu uzaklaştırmak\nCe, Otolizi önlemek\nDe, Antijen kaybını azaltmak\nE, Parafinin dokuya girmesini sağlamak\nSeçenekleri sırayla değerlendirelim.\nBüzüşme ve çatlakları azaltmak doğru, dokuyu içeren parafin kalıbın hızlı soğutulması bu kusurları en aza indirir.\nSuyu uzaklaştırmak dehidrasyonun amacıdır, artan konsantrasyonda etanolle bloklamadan önce yapılır.\nOtolizi önlemek fiksasyonun amacıdır, parça alındıktan hemen sonra fiksatifle temas sağlanarak gerçekleşir.\nAntijen kaybının az olması kriostat kesitlerinin avantajıdır, parafin bloğun soğutulmasıyla ilgili değildir.\nParafinin dokuya girmesini sağlamak şeffaflaştırmanın işlevidir, ardından infiltrasyonda erimiş parafin dokuya penetre olur.\nDoğru cevap A, Büzüşme ve çatlakları azaltmak\nBloklamada doku parafin dolu kalıba uygun pozisyonda yerleştirilir ve hızlı soğutulur, böylece büzüşme ve çatlaklar azalır.",
+   "kelime": 148
+  },
+  {
+   "no": 46,
+   "tur": "ornek",
+   "soru": "Kriostat kesitlerinin immünohistokimyasal incelemede tercih edilme nedeni hangisidir?",
+   "secenekler": {
+    "A": "Doku morfolojisinin çok iyi olması",
+    "B": "Antijen kaybının minimum olması",
+    "C": "Kalıcı parafin blok sağlaması",
+    "D": "Ultramikrotomla kesilmesi",
+    "E": "Dehidrasyon gerektirmesi"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Doku morfolojisinin iyi olması kriostatın özelliği değildir; teknik hızlıdır ancak doku morfolojisi iyi değildir.",
+    "B": "Antijen kaybının minimum olması doğru: bu yüzden kriostat kesitleri hızlı tanının yanında immünohistokimyasal incelemelerde de tercih edilir.",
+    "C": "Kalıcı parafin blok kriostatın ürünü değildir; kriostatta sudan zengin doku dondurularak sertleştirilir.",
+    "D": "Ultramikrotom elektron mikroskobu için 50–100 nm kalınlıkta kesit alır; kriostat kesitleriyle ilgisi yoktur.",
+    "E": "Dehidrasyon gerektirmek bir avantaj değildir; kriostatta doku dondurularak kesilir ve sonuç yaklaşık 5 dakikada alınır."
+   },
+   "ozet": "Kriostatta sudan zengin doku dondurularak sertleştirilir; yaklaşık 5 dakikada sonuç verir ve antijen kaybı minimumdur, ancak morfoloji iyi değildir.",
+   "metin": "**Soru.** Kriostat kesitlerinin immünohistokimyasal incelemede tercih edilme nedeni hangisidir?\n\n**A)** Doku morfolojisinin çok iyi olması · **B)** Antijen kaybının minimum olması · **C)** Kalıcı parafin blok sağlaması · **D)** Ultramikrotomla kesilmesi · **E)** Dehidrasyon gerektirmesi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Doku morfolojisinin çok iyi olması** — Doku morfolojisinin iyi olması kriostatın özelliği değildir; teknik hızlıdır ancak doku morfolojisi iyi değildir.\n- **Antijen kaybının minimum olması** — Antijen kaybının minimum olması doğru: bu yüzden kriostat kesitleri hızlı tanının yanında immünohistokimyasal incelemelerde de tercih edilir.\n- **Kalıcı parafin blok sağlaması** — Kalıcı parafin blok kriostatın ürünü değildir; kriostatta sudan zengin doku dondurularak sertleştirilir.\n- **Ultramikrotomla kesilmesi** — Ultramikrotom elektron mikroskobu için 50–100 nm kalınlıkta kesit alır; kriostat kesitleriyle ilgisi yoktur.\n- **Dehidrasyon gerektirmesi** — Dehidrasyon gerektirmek bir avantaj değildir; kriostatta doku dondurularak kesilir ve sonuç yaklaşık 5 dakikada alınır.\n\n**Cevap: B** — Antijen kaybının minimum olması\n\n**Özet.** Kriostatta sudan zengin doku dondurularak sertleştirilir; yaklaşık 5 dakikada sonuç verir ve antijen kaybı minimumdur, ancak morfoloji iyi değildir.",
+   "ses": "Kriostat kesitlerinin immünohistokimyasal incelemede tercih edilme nedeni hangisidir?\nA, Doku morfolojisinin çok iyi olması\nBe, Antijen kaybının minimum olması\nCe, Kalıcı parafin blok sağlaması\nDe, Ultramikrotomla kesilmesi\nE, Dehidrasyon gerektirmesi\nHer seçeneği tek tek ele alalım.\nDoku morfolojisinin iyi olması kriostatın özelliği değildir, teknik hızlıdır ancak doku morfolojisi iyi değildir.\nAntijen kaybının minimum olması doğru, bu yüzden kriostat kesitleri hızlı tanının yanında immünohistokimyasal incelemelerde de tercih edilir.\nKalıcı parafin blok kriostatın ürünü değildir, kriostatta sudan zengin doku dondurularak sertleştirilir.\nUltramikrotom elektron mikroskobu için elli ile yüz nanometre kalınlıkta kesit alır, kriostat kesitleriyle ilgisi yoktur.\nDehidrasyon gerektirmek bir avantaj değildir, kriostatta doku dondurularak kesilir ve sonuç yaklaşık beş dakikada alınır.\nDoğru cevap Be, Antijen kaybının minimum olması\nKriostatta sudan zengin doku dondurularak sertleştirilir. Yaklaşık beş dakikada sonuç verir ve antijen kaybı minimumdur, ancak morfoloji iyi değildir.",
+   "kelime": 167
+  },
+  {
+   "no": 47,
+   "tur": "ornek",
+   "soru": "Kesitlerde bıçak izleri artefaktının nedeni hangisidir?",
+   "secenekler": {
+    "A": "Yetersiz dehidrasyon",
+    "B": "Kirli ksilen",
+    "C": "Bıçağın körelmesi",
+    "D": "Yetersiz rehidrasyon",
+    "E": "Fazla albumin"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Yetersiz dehidrasyon soluk ya da düzensiz boyanmaya yol açar; kesitte çizik oluşturmaz.",
+    "B": "Kirli ksilen süt benzeri bulanıklık ve arka plan kirlenmesi yapar; mekanik bir iz bırakmaz.",
+    "C": "Bıçağın körelmesi doğru: kötü kesit artefaktlarından bıçak izleri körelmiş bıçağa bağlıdır.",
+    "D": "Yetersiz rehidrasyon boyama aşamasında kararsız boyanmaya neden olur; kesit yüzeyinde iz bırakmaz.",
+    "E": "Fazla albumin lamelle kapatılmış kesitlerde boya tutulmasıyla ilgili bir artefakttır; bıçak izine yol açmaz."
+   },
+   "ozet": "Bıçak izleri ve kıvrılmalar mekanik kesit hatalarıdır; bıçak izi körelmiş bıçağa bağlıdır, kıvrılmalar ise bıçak ağzına paralel oluşur.",
+   "metin": "**Soru.** Kesitlerde bıçak izleri artefaktının nedeni hangisidir?\n\n**A)** Yetersiz dehidrasyon · **B)** Kirli ksilen · **C)** Bıçağın körelmesi · **D)** Yetersiz rehidrasyon · **E)** Fazla albumin\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Yetersiz dehidrasyon** — Yetersiz dehidrasyon soluk ya da düzensiz boyanmaya yol açar; kesitte çizik oluşturmaz.\n- **Kirli ksilen** — Kirli ksilen süt benzeri bulanıklık ve arka plan kirlenmesi yapar; mekanik bir iz bırakmaz.\n- **Bıçağın körelmesi** — Bıçağın körelmesi doğru: kötü kesit artefaktlarından bıçak izleri körelmiş bıçağa bağlıdır.\n- **Yetersiz rehidrasyon** — Yetersiz rehidrasyon boyama aşamasında kararsız boyanmaya neden olur; kesit yüzeyinde iz bırakmaz.\n- **Fazla albumin** — Fazla albumin lamelle kapatılmış kesitlerde boya tutulmasıyla ilgili bir artefakttır; bıçak izine yol açmaz.\n\n**Cevap: C** — Bıçağın körelmesi\n\n**Özet.** Bıçak izleri ve kıvrılmalar mekanik kesit hatalarıdır; bıçak izi körelmiş bıçağa bağlıdır, kıvrılmalar ise bıçak ağzına paralel oluşur.",
+   "ses": "Kesitlerde bıçak izleri artefaktının nedeni hangisidir?\nA, Yetersiz dehidrasyon\nBe, Kirli ksilen\nCe, Bıçağın körelmesi\nDe, Yetersiz rehidrasyon\nE, Fazla albumin\nŞıkları sırasıyla gözden geçirelim.\nYetersiz dehidrasyon soluk ya da düzensiz boyanmaya yol açar, kesitte çizik oluşturmaz.\nKirli ksilen süt benzeri bulanıklık ve arka plan kirlenmesi yapar, mekanik bir iz bırakmaz.\nBıçağın körelmesi doğru, kötü kesit artefaktlarından bıçak izleri körelmiş bıçağa bağlıdır.\nYetersiz rehidrasyon boyama aşamasında kararsız boyanmaya neden olur, kesit yüzeyinde iz bırakmaz.\nFazla albumin lamelle kapatılmış kesitlerde boya tutulmasıyla ilgili bir artefakttır, bıçak izine yol açmaz.\nDoğru cevap Ce, Bıçağın körelmesi\nBıçak izleri ve kıvrılmalar mekanik kesit hatalarıdır, bıçak izi körelmiş bıçağa bağlıdır, kıvrılmalar ise bıçak ağzına paralel oluşur.",
+   "kelime": 138
+  },
+  {
+   "no": 48,
+   "tur": "ornek",
+   "soru": "Aşağıdakilerden hangisi bir elektron mikroskobu türüdür?",
+   "secenekler": {
+    "A": "Faz-kontrast mikroskop",
+    "B": "Polarizasyon mikroskobu",
+    "C": "Floresans mikroskobu",
+    "D": "Taramalı mikroskop",
+    "E": "Klasik ışık mikroskobu"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Faz-kontrast mikroskop ışık kullanan mikroskop türlerindendir; elektron mikroskobu değildir.",
+    "B": "Polarizasyon mikroskobu da ışık mikroskobu ailesindedir; elektron mikroskobu türleri transmisyon ve taramalıdır.",
+    "C": "Floresans mikroskobu, mikroskop türleri arasında ışık mikroskoplarından biri olarak yer alır; elektron kullanmaz.",
+    "D": "Taramalı mikroskop doğru: transmisyonla birlikte elektron mikroskobunun iki türünden biridir.",
+    "E": "Klasik ışık mikroskobu, rutin histopatolojide hematoksilen eozinli kesitlerin incelendiği temel mikroskoptur."
+   },
+   "ozet": "Elektron mikroskobunun iki türü transmisyon ve taramalı elektron mikroskobudur; faz-kontrast, polarizasyon ve floresans ışık mikroskobu türleridir.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi bir elektron mikroskobu türüdür?\n\n**A)** Faz-kontrast mikroskop · **B)** Polarizasyon mikroskobu · **C)** Floresans mikroskobu · **D)** Taramalı mikroskop · **E)** Klasik ışık mikroskobu\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Faz-kontrast mikroskop** — Faz-kontrast mikroskop ışık kullanan mikroskop türlerindendir; elektron mikroskobu değildir.\n- **Polarizasyon mikroskobu** — Polarizasyon mikroskobu da ışık mikroskobu ailesindedir; elektron mikroskobu türleri transmisyon ve taramalıdır.\n- **Floresans mikroskobu** — Floresans mikroskobu, mikroskop türleri arasında ışık mikroskoplarından biri olarak yer alır; elektron kullanmaz.\n- **Taramalı mikroskop** — Taramalı mikroskop doğru: transmisyonla birlikte elektron mikroskobunun iki türünden biridir.\n- **Klasik ışık mikroskobu** — Klasik ışık mikroskobu, rutin histopatolojide hematoksilen eozinli kesitlerin incelendiği temel mikroskoptur.\n\n**Cevap: D** — Taramalı mikroskop\n\n**Özet.** Elektron mikroskobunun iki türü transmisyon ve taramalı elektron mikroskobudur; faz-kontrast, polarizasyon ve floresans ışık mikroskobu türleridir.",
+   "ses": "Aşağıdakilerden hangisi bir elektron mikroskobu türüdür?\nA, Faz kontrast mikroskop\nBe, Polarizasyon mikroskobu\nCe, Floresans mikroskobu\nDe, Taramalı mikroskop\nE, Klasik ışık mikroskobu\nŞimdi seçeneklere tek tek bakalım.\nFaz kontrast mikroskop ışık kullanan mikroskop türlerindendir, elektron mikroskobu değildir.\nPolarizasyon mikroskobu da ışık mikroskobu ailesindedir, elektron mikroskobu türleri transmisyon ve taramalıdır.\nFloresans mikroskobu, mikroskop türleri arasında ışık mikroskoplarından biri olarak yer alır, elektron kullanmaz.\nTaramalı mikroskop doğru, transmisyonla birlikte elektron mikroskobunun iki türünden biridir.\nKlasik ışık mikroskobu, rutin histopatolojide hematoksilen eozinli kesitlerin incelendiği temel mikroskoptur.\nDoğru cevap De, Taramalı mikroskop\nElektron mikroskobunun iki türü transmisyon ve taramalı elektron mikroskobudur, faz-kontrast, polarizasyon ve floresans ışık mikroskobu türleridir.",
+   "kelime": 131
+  },
+  {
+   "no": 49,
+   "tur": "ornek",
+   "soru": "Sitopatolojinin başlıca dezavantajı hangisidir?",
+   "secenekler": {
+    "A": "Yüksek maliyet",
+    "B": "Yüksek morbidite",
+    "C": "İnvaziv olması",
+    "D": "Servikal taramada düşük duyarlılık",
+    "E": "Sınırlı hücre mimarisi"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Yüksek maliyet dezavantaj değildir; sitopatoloji uygun maliyetli ve görece ekonomik bir tanı yöntemidir.",
+    "B": "Yüksek morbidite yanlıştır; sitopatolojinin amacı minimal morbidite ile güvenilir tanıdır.",
+    "C": "İnvaziv olması bir dezavantaj sayılmaz; sitopatoloji minimal invaziv bir yöntemdir.",
+    "D": "Servikal taramada düşük duyarlılık yanlıştır; servikal taramada duyarlılık ve özgüllük yüksektir.",
+    "E": "Sınırlı hücre mimarisi doğru: bu yüzden bazı durumlarda kesin tanı için histopatoloji gerekir."
+   },
+   "ozet": "Sitopatoloji minimal invaziv ve uygun maliyetlidir; dezavantajı hücre mimarisinin sınırlı olması ve bazen kesin tanı için histopatoloji gerektirmesidir.",
+   "metin": "**Soru.** Sitopatolojinin başlıca dezavantajı hangisidir?\n\n**A)** Yüksek maliyet · **B)** Yüksek morbidite · **C)** İnvaziv olması · **D)** Servikal taramada düşük duyarlılık · **E)** Sınırlı hücre mimarisi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Yüksek maliyet** — Yüksek maliyet dezavantaj değildir; sitopatoloji uygun maliyetli ve görece ekonomik bir tanı yöntemidir.\n- **Yüksek morbidite** — Yüksek morbidite yanlıştır; sitopatolojinin amacı minimal morbidite ile güvenilir tanıdır.\n- **İnvaziv olması** — İnvaziv olması bir dezavantaj sayılmaz; sitopatoloji minimal invaziv bir yöntemdir.\n- **Servikal taramada düşük duyarlılık** — Servikal taramada düşük duyarlılık yanlıştır; servikal taramada duyarlılık ve özgüllük yüksektir.\n- **Sınırlı hücre mimarisi** — Sınırlı hücre mimarisi doğru: bu yüzden bazı durumlarda kesin tanı için histopatoloji gerekir.\n\n**Cevap: E** — Sınırlı hücre mimarisi\n\n**Özet.** Sitopatoloji minimal invaziv ve uygun maliyetlidir; dezavantajı hücre mimarisinin sınırlı olması ve bazen kesin tanı için histopatoloji gerektirmesidir.",
+   "ses": "Sitopatolojinin başlıca dezavantajı hangisidir?\nA, Yüksek maliyet\nBe, Yüksek morbidite\nCe, İnvaziv olması\nDe, Servikal taramada düşük duyarlılık\nE, Sınırlı hücre mimarisi\nSeçenekleri sırayla değerlendirelim.\nYüksek maliyet dezavantaj değildir, sitopatoloji uygun maliyetli ve görece ekonomik bir tanı yöntemidir.\nYüksek morbidite yanlıştır, sitopatolojinin amacı minimal morbidite ile güvenilir tanıdır.\nİnvaziv olması bir dezavantaj sayılmaz, sitopatoloji minimal invaziv bir yöntemdir.\nServikal taramada düşük duyarlılık yanlıştır, servikal taramada duyarlılık ve özgüllük yüksektir.\nSınırlı hücre mimarisi doğru, bu yüzden bazı durumlarda kesin tanı için histopatoloji gerekir.\nDoğru cevap E, Sınırlı hücre mimarisi\nSitopatoloji minimal invaziv ve uygun maliyetlidir, dezavantajı hücre mimarisinin sınırlı olması ve bazen kesin tanı için histopatoloji gerektirmesidir.",
+   "kelime": 136
+  },
+  {
+   "no": 50,
+   "tur": "ornek",
+   "soru": "Bethesda sisteminde yüksek dereceli lezyonun dışlanamadığı atipik skuamöz hücreler kategorisi hangisidir?",
+   "secenekler": {
+    "A": "ASC-H",
+    "B": "ASC-US",
+    "C": "LSIL",
+    "D": "HSIL",
+    "E": "Negatif"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "ASC-H doğru: yüksek dereceli skuamöz intraepitelyal lezyonun dışlanamadığı, dikkat edilmesi gereken atipik skuamöz hücrelerdir.",
+    "B": "ASC-US önemi belirsiz atipik skuamöz hücrelerdir; yüksek dereceli lezyon şüphesini vurgulamaz.",
+    "C": "LSIL düşük dereceli skuamöz intraepitelyal lezyondur ve HPV ilişkili olabilir; atipik hücre kategorisi değildir.",
+    "D": "HSIL yüksek dereceli lezyonun kendisidir ve ileri tetkik gerektirir; dışlanamayan değil, konmuş bir lezyon kategorisidir.",
+    "E": "Negatif kategori intraepitelyal lezyon veya malignite olmadığını bildirir; atipik hücre içermez."
+   },
+   "ozet": "Bethesda'da ASC-US önemi belirsiz, ASC-H ise yüksek dereceli lezyonun dışlanamadığı atipiyi bildirir; HSIL ileri tetkik gerektirir.",
+   "metin": "**Soru.** Bethesda sisteminde yüksek dereceli lezyonun dışlanamadığı atipik skuamöz hücreler kategorisi hangisidir?\n\n**A)** ASC-H · **B)** ASC-US · **C)** LSIL · **D)** HSIL · **E)** Negatif\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **ASC-H** — ASC-H doğru: yüksek dereceli skuamöz intraepitelyal lezyonun dışlanamadığı, dikkat edilmesi gereken atipik skuamöz hücrelerdir.\n- **ASC-US** — ASC-US önemi belirsiz atipik skuamöz hücrelerdir; yüksek dereceli lezyon şüphesini vurgulamaz.\n- **LSIL** — LSIL düşük dereceli skuamöz intraepitelyal lezyondur ve HPV ilişkili olabilir; atipik hücre kategorisi değildir.\n- **HSIL** — HSIL yüksek dereceli lezyonun kendisidir ve ileri tetkik gerektirir; dışlanamayan değil, konmuş bir lezyon kategorisidir.\n- **Negatif** — Negatif kategori intraepitelyal lezyon veya malignite olmadığını bildirir; atipik hücre içermez.\n\n**Cevap: A** — ASC-H\n\n**Özet.** Bethesda'da ASC-US önemi belirsiz, ASC-H ise yüksek dereceli lezyonun dışlanamadığı atipiyi bildirir; HSIL ileri tetkik gerektirir.",
+   "ses": "Betesda sisteminde yüksek dereceli lezyonun dışlanamadığı atipik skuamöz hücreler kategorisi hangisidir?\nA, a se ce ha\nBe, a se ce u se\nCe, le se i le\nDe, ha se i le\nE, Negatif\nHer seçeneği tek tek ele alalım.\nA se ce ha doğru, yüksek dereceli skuamöz intraepitelyal lezyonun dışlanamadığı, dikkat edilmesi gereken atipik skuamöz hücrelerdir.\nA se ce u se önemi belirsiz atipik skuamöz hücrelerdir, yüksek dereceli lezyon şüphesini vurgulamaz.\nLe se i le düşük dereceli skuamöz intraepitelyal lezyondur ve ha pe ve ilişkili olabilir, atipik hücre kategorisi değildir.\nHa se i le yüksek dereceli lezyonun kendisidir ve ileri tetkik gerektirir, dışlanamayan değil, konmuş bir lezyon kategorisidir.\nNegatif kategori intraepitelyal lezyon veya malignite olmadığını bildirir, atipik hücre içermez.\nDoğru cevap A, a se ce ha\nBetesdada a se ce u se önemi belirsiz, a se ce ha ise yüksek dereceli lezyonun dışlanamadığı atipiyi bildirir. Ha se i le ileri tetkik gerektirir.",
+   "kelime": 134
+  },
+  {
+   "no": 51,
+   "tur": "ornek",
+   "soru": "Solunum yolu sitolojisi özellikle hangi yerleşimdeki kitlelerde yararlıdır?",
+   "secenekler": {
+    "A": "Periferik yerleşimli",
+    "B": "Santral yerleşimli",
+    "C": "Yüzeyel yerleşimli",
+    "D": "Plevraya komşu",
+    "E": "Diyafragmaya komşu"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Solunum yolu sitolojisinin özellikle yararlı olduğu kitleler merkezde yer alır. Periferik yerleşimli kitleler bu sorudaki ayrımı sağlamaz.",
+    "B": "Santral yerleşimli doğru: balgam, bronş yıkama, BAL ve fırçalama özellikle santral yerleşimli kitlelerde yararlıdır.",
+    "C": "Yüzeyel yerleşimli kitleler, yani tiroid, meme ve lenf nodu, ince iğne aspirasyon sitolojisinin endikasyonlarıdır.",
+    "D": "Plevraya komşu kitleler ile karıştırılabilir: Plevral effüzyonlar seröz sıvı sitolojisiyle malignite açısından incelenir.",
+    "E": "Diyafragmaya komşu kitleler vurgulanan alan değildir; derin kitlelerde ultrason ya da tomografi eşliğinde ince iğne aspirasyonu yapılır."
+   },
+   "ozet": "Solunum yolu sitolojisi balgam, bronş yıkama, BAL ve fırçalamayla yapılır ve özellikle santral yerleşimli kitlelerde yararlıdır.",
+   "metin": "**Soru.** Solunum yolu sitolojisi özellikle hangi yerleşimdeki kitlelerde yararlıdır?\n\n**A)** Periferik yerleşimli · **B)** Santral yerleşimli · **C)** Yüzeyel yerleşimli · **D)** Plevraya komşu · **E)** Diyafragmaya komşu\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Periferik yerleşimli** — Solunum yolu sitolojisinin özellikle yararlı olduğu kitleler merkezde yer alır. Periferik yerleşimli kitleler bu sorudaki ayrımı sağlamaz.\n- **Santral yerleşimli** — Santral yerleşimli doğru: balgam, bronş yıkama, BAL ve fırçalama özellikle santral yerleşimli kitlelerde yararlıdır.\n- **Yüzeyel yerleşimli** — Yüzeyel yerleşimli kitleler, yani tiroid, meme ve lenf nodu, ince iğne aspirasyon sitolojisinin endikasyonlarıdır.\n- **Plevraya komşu** — Plevraya komşu kitleler ile karıştırılabilir: Plevral effüzyonlar seröz sıvı sitolojisiyle malignite açısından incelenir.\n- **Diyafragmaya komşu** — Diyafragmaya komşu kitleler vurgulanan alan değildir; derin kitlelerde ultrason ya da tomografi eşliğinde ince iğne aspirasyonu yapılır.\n\n**Cevap: B** — Santral yerleşimli\n\n**Özet.** Solunum yolu sitolojisi balgam, bronş yıkama, BAL ve fırçalamayla yapılır ve özellikle santral yerleşimli kitlelerde yararlıdır.",
+   "ses": "Solunum yolu sitolojisi özellikle hangi yerleşimdeki kitlelerde yararlıdır?\nA, Periferik yerleşimli\nBe, Santral yerleşimli\nCe, Yüzeyel yerleşimli\nDe, Plevraya komşu\nE, Diyafragmaya komşu\nŞıkları sırasıyla gözden geçirelim.\nSolunum yolu sitolojisinin özellikle yararlı olduğu kitleler merkezde yer alır. Periferik yerleşimli kitleler bu sorudaki ayrımı sağlamaz.\nSantral yerleşimli doğru, balgam, bronş yıkama, be a le ve fırçalama özellikle santral yerleşimli kitlelerde yararlıdır.\nYüzeyel yerleşimli kitleler, yani tiroid, meme ve lenf nodu, ince iğne aspirasyon sitolojisinin endikasyonlarıdır.\nPlevraya komşu kitleler ile karıştırılabilir. Plevral effüzyonlar seröz sıvı sitolojisiyle malignite açısından incelenir.\nDiyafragmaya komşu kitleler vurgulanan alan değildir, derin kitlelerde ultrason ya da tomografi eşliğinde ince iğne aspirasyonu yapılır.\nDoğru cevap Be, Santral yerleşimli\nSolunum yolu sitolojisi balgam, bronş yıkama, be a le ve fırçalamayla yapılır ve özellikle santral yerleşimli kitlelerde yararlıdır.",
+   "kelime": 150
+  },
+  {
+   "no": 52,
+   "tur": "ornek",
+   "soru": "Sitolojide molding ve üst üste binme hangi tanısal kriter grubunda değerlendirilir?",
+   "secenekler": {
+    "A": "Nükleer özellikler",
+    "B": "Sitoplazma özellikleri",
+    "C": "Hücreler arası ilişkiler",
+    "D": "Zemin",
+    "E": "Örnek yeterliliği"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Nükleer özellikler büyüklük, şekil, kromatin paterni ve nükleol sayısıdır; birbirine göre diziliş bu grupta değildir.",
+    "B": "Sitoplazma özellikleri miktar, nükleus sitoplazma oranı, boyanma paterni ve granülaritedir.",
+    "C": "Hücreler arası ilişkiler doğru: pleomorfizm, kalabalıklaşma, molding ve üst üste binme bu grupta değerlendirilir.",
+    "D": "Zemin değerlendirmesi nekroz, inflamasyon ve kanama artıklarını kapsar; dizilişi değil arka planı inceler.",
+    "E": "Örnek yeterliliği, Bethesda sisteminde yeterli skuamöz ve endoservikal hücre bulunmasıdır; tanısal kriter grubu değildir."
+   },
+   "ozet": "Sitolojide kriterler nükleer özellikler, sitoplazma, hücreler arası ilişkiler ve zemin olarak gruplanır; molding ve üst üste binme hücreler arası ilişkiye aittir.",
+   "metin": "**Soru.** Sitolojide molding ve üst üste binme hangi tanısal kriter grubunda değerlendirilir?\n\n**A)** Nükleer özellikler · **B)** Sitoplazma özellikleri · **C)** Hücreler arası ilişkiler · **D)** Zemin · **E)** Örnek yeterliliği\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Nükleer özellikler** — Nükleer özellikler büyüklük, şekil, kromatin paterni ve nükleol sayısıdır; birbirine göre diziliş bu grupta değildir.\n- **Sitoplazma özellikleri** — Sitoplazma özellikleri miktar, nükleus sitoplazma oranı, boyanma paterni ve granülaritedir.\n- **Hücreler arası ilişkiler** — Hücreler arası ilişkiler doğru: pleomorfizm, kalabalıklaşma, molding ve üst üste binme bu grupta değerlendirilir.\n- **Zemin** — Zemin değerlendirmesi nekroz, inflamasyon ve kanama artıklarını kapsar; dizilişi değil arka planı inceler.\n- **Örnek yeterliliği** — Örnek yeterliliği, Bethesda sisteminde yeterli skuamöz ve endoservikal hücre bulunmasıdır; tanısal kriter grubu değildir.\n\n**Cevap: C** — Hücreler arası ilişkiler\n\n**Özet.** Sitolojide kriterler nükleer özellikler, sitoplazma, hücreler arası ilişkiler ve zemin olarak gruplanır; molding ve üst üste binme hücreler arası ilişkiye aittir.",
+   "ses": "Sitolojide molding ve üst üste binme hangi tanısal kriter grubunda değerlendirilir?\nA, Nükleer özellikler\nBe, Sitoplazma özellikleri\nCe, Hücreler arası ilişkiler\nDe, Zemin\nE, Örnek yeterliliği\nŞimdi seçeneklere tek tek bakalım.\nNükleer özellikler büyüklük, şekil, kromatin paterni ve nükleol sayısıdır, birbirine göre diziliş bu grupta değildir.\nSitoplazma özellikleri miktar, nükleus sitoplazma oranı, boyanma paterni ve granülaritedir.\nHücreler arası ilişkiler doğru, pleomorfizm, kalabalıklaşma, molding ve üst üste binme bu grupta değerlendirilir.\nZemin değerlendirmesi nekroz, inflamasyon ve kanama artıklarını kapsar, dizilişi değil arka planı inceler.\nÖrnek yeterliliği, Betesda sisteminde yeterli skuamöz ve endoservikal hücre bulunmasıdır, tanısal kriter grubu değildir.\nDoğru cevap Ce, Hücreler arası ilişkiler\nSitolojide kriterler nükleer özellikler, sitoplazma, hücreler arası ilişkiler ve zemin olarak gruplanır, molding ve üst üste binme hücreler arası ilişkiye aittir.",
+   "kelime": 151
+  },
+  {
+   "no": 53,
+   "tur": "ornek",
+   "soru": "Akciğer adenokarsinomunun entegre tanısında immünohistokimyasal belirteç olarak kullanılan hangisidir?",
+   "secenekler": {
+    "A": "EGFR",
+    "B": "ALK",
+    "C": "KRAS",
+    "D": "TTF-1",
+    "E": "ROS1"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "EGFR akciğer adenokarsinomunda mutasyon analiziyle bakılan bir gendir; immünohistokimyasal belirteç olarak sayılmaz.",
+    "B": "ALK akciğer adenokarsinomunda füzyon analiziyle değerlendirilir; raporun moleküler ve genetik bileşeninin parçasıdır.",
+    "C": "KRAS bu tümörde mutasyon analizi listesinde yer alır; immünohistokimya değil moleküler yöntemle incelenir.",
+    "D": "TTF-1 doğru: Napsin A ile birlikte akciğer adenokarsinomunun immünohistokimyasal belirtecidir.",
+    "E": "ROS1, EGFR, ALK ve KRAS ile birlikte mutasyon ya da füzyon analizi grubunda sayılır."
+   },
+   "ozet": "Akciğer adenokarsinomunda histolojik tip, TTF-1 ve Napsin A gibi immünohistokimyasal belirteçler ve EGFR, ALK, ROS1, KRAS analizi birlikte raporlanır.",
+   "metin": "**Soru.** Akciğer adenokarsinomunun entegre tanısında immünohistokimyasal belirteç olarak kullanılan hangisidir?\n\n**A)** EGFR · **B)** ALK · **C)** KRAS · **D)** TTF-1 · **E)** ROS1\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **EGFR** — EGFR akciğer adenokarsinomunda mutasyon analiziyle bakılan bir gendir; immünohistokimyasal belirteç olarak sayılmaz.\n- **ALK** — ALK akciğer adenokarsinomunda füzyon analiziyle değerlendirilir; raporun moleküler ve genetik bileşeninin parçasıdır.\n- **KRAS** — KRAS bu tümörde mutasyon analizi listesinde yer alır; immünohistokimya değil moleküler yöntemle incelenir.\n- **TTF-1** — TTF-1 doğru: Napsin A ile birlikte akciğer adenokarsinomunun immünohistokimyasal belirtecidir.\n- **ROS1** — ROS1, EGFR, ALK ve KRAS ile birlikte mutasyon ya da füzyon analizi grubunda sayılır.\n\n**Cevap: D** — TTF-1\n\n**Özet.** Akciğer adenokarsinomunda histolojik tip, TTF-1 ve Napsin A gibi immünohistokimyasal belirteçler ve EGFR, ALK, ROS1, KRAS analizi birlikte raporlanır.",
+   "ses": "Akciğer adenokarsinomunun entegre tanısında immünohistokimyasal belirteç olarak kullanılan hangisidir?\nA, e ge fe re\nBe, a le ka\nCe, ka ras\nDe, te te fe bir\nE, re o se bir\nSeçenekleri sırayla değerlendirelim.\nE ge fe re akciğer adenokarsinomunda mutasyon analiziyle bakılan bir gendir, immünohistokimyasal belirteç olarak sayılmaz.\nA le ka akciğer adenokarsinomunda füzyon analiziyle değerlendirilir, raporun moleküler ve genetik bileşeninin parçasıdır.\nKa ras bu tümörde mutasyon analizi listesinde yer alır, immünohistokimya değil moleküler yöntemle incelenir.\nTe te fe bir doğru, napsin a ile birlikte akciğer adenokarsinomunun immünohistokimyasal belirtecidir.\nRe o se bir, e ge fe re, a le ka ve ka ras ile birlikte mutasyon ya da füzyon analizi grubunda sayılır.\nDoğru cevap De, te te fe bir\nAkciğer adenokarsinomunda histolojik tip ile te te fe bir ve napsin a gibi immünohistokimyasal belirteçler raporlanır. E ge fe re, a le ka, re o se bir ve ka ras analizi de eklenir.",
+   "kelime": 128
+  },
+  {
+   "no": 54,
+   "tur": "ornek",
+   "soru": "Dolaşımdaki tümör DNA/RNA'sı ve hücrelerinin incelenmesine dayanan yaklaşım hangisidir?",
+   "secenekler": {
+    "A": "İnce iğne aspirasyonu",
+    "B": "Kor biyopsi",
+    "C": "Eksfolyatif sitoloji",
+    "D": "İmprint sitoloji",
+    "E": "Likit biyopsi"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "İnce iğne aspirasyonu, iğne ve enjektörle negatif basınç uygulanarak kitleden hücre çekilmesidir; dolaşımdaki tümör materyalini incelemez.",
+    "B": "Kor biyopsi, yani tru-cut, meme, karaciğer, böbrek ve prostattan doku örneği alır.",
+    "C": "Eksfolyatif sitoloji serviks, idrar, balgam ve seröz sıvılardan kendiliğinden dökülen hücreleri inceler.",
+    "D": "İmprint, intraoperatif örneklemede ince iğne aspirasyonu ile birlikte kullanılan bir sitoloji yöntemidir.",
+    "E": "Likit biyopsi doğru: patolojinin geleceğinde dolaşımdaki tümör DNA'sı, RNA'sı ve hücrelerinin incelenmesi olarak yer alır."
+   },
+   "ozet": "Likit biyopsi dolaşımdaki tümör DNA'sı, RNA'sı ve hücrelerini inceler; patolojinin geleceğinde yapay zekâ destekli tanı ve multidisipliner çalışmayla birlikte yer alır.",
+   "metin": "**Soru.** Dolaşımdaki tümör DNA/RNA'sı ve hücrelerinin incelenmesine dayanan yaklaşım hangisidir?\n\n**A)** İnce iğne aspirasyonu · **B)** Kor biyopsi · **C)** Eksfolyatif sitoloji · **D)** İmprint sitoloji · **E)** Likit biyopsi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **İnce iğne aspirasyonu** — İnce iğne aspirasyonu, iğne ve enjektörle negatif basınç uygulanarak kitleden hücre çekilmesidir; dolaşımdaki tümör materyalini incelemez.\n- **Kor biyopsi** — Kor biyopsi, yani tru-cut, meme, karaciğer, böbrek ve prostattan doku örneği alır.\n- **Eksfolyatif sitoloji** — Eksfolyatif sitoloji serviks, idrar, balgam ve seröz sıvılardan kendiliğinden dökülen hücreleri inceler.\n- **İmprint sitoloji** — İmprint, intraoperatif örneklemede ince iğne aspirasyonu ile birlikte kullanılan bir sitoloji yöntemidir.\n- **Likit biyopsi** — Likit biyopsi doğru: patolojinin geleceğinde dolaşımdaki tümör DNA'sı, RNA'sı ve hücrelerinin incelenmesi olarak yer alır.\n\n**Cevap: E** — Likit biyopsi\n\n**Özet.** Likit biyopsi dolaşımdaki tümör DNA'sı, RNA'sı ve hücrelerini inceler; patolojinin geleceğinde yapay zekâ destekli tanı ve multidisipliner çalışmayla birlikte yer alır.",
+   "ses": "Dolaşımdaki tümör de ne a ve re ne a'sı ile hücrelerinin incelenmesine dayanan yaklaşım hangisidir?\nA, İnce iğne aspirasyonu\nBe, Kor biyopsi\nCe, Eksfolyatif sitoloji\nDe, İmprint sitoloji\nE, Likit biyopsi\nHer seçeneği tek tek ele alalım.\nİnce iğne aspirasyonu, iğne ve enjektörle negatif basınç uygulanarak kitleden hücre çekilmesidir, dolaşımdaki tümör materyalini incelemez.\nKor biyopsi, yani tru kat, meme, karaciğer, böbrek ve prostattan doku örneği alır.\nEksfolyatif sitoloji serviks, idrar, balgam ve seröz sıvılardan kendiliğinden dökülen hücreleri inceler.\nİmprint, intraoperatif örneklemede ince iğne aspirasyonu ile birlikte kullanılan bir sitoloji yöntemidir.\nLikit biyopsi doğru, patolojinin geleceğinde dolaşımdaki tümör de ne a'sı, re ne a'sı ve hücrelerinin incelenmesi olarak yer alır.\nDoğru cevap E, Likit biyopsi\nLikit biyopsi dolaşımdaki tümör de ne a'sı, re ne a'sı ve hücrelerini inceler. Patolojinin geleceğinde yapay zekâ destekli tanı ve multidisipliner çalışmayla birlikte yer alır.",
+   "kelime": 152
+  }
+ ]
+}

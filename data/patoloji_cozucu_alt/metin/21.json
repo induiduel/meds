@@ -1,0 +1,957 @@
+{
+ "kod": "21",
+ "baslik": "Glomerüler Hastalıklar: Nefrotik Sendrom",
+ "surum": "alt-1",
+ "sorular": [
+  {
+   "no": 1,
+   "tur": "ornek",
+   "soru": "Erişkinde nefrotik sendrom için gereken proteinüri düzeyi hangisidir?",
+   "secenekler": {
+    "A": "≥0,5 g/gün",
+    "B": "≥1 g/gün",
+    "C": "≥2 g/gün",
+    "D": "≥3,5 g/gün",
+    "E": "≥10 g/gün"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Günde 0,5 gram ağır proteinüri sayılmaz; nefrotik sendromda erişkin eşiği çok daha yüksektir.",
+    "B": "Günde 1 gram nefrotik sendrom için yetersizdir; bu sendromda protein kaybı glomerüler filtrasyon bariyerinin bozulmasına bağlıdır.",
+    "C": "Günde 2 gram da yeterli değildir; nefrotik sendromda ağır proteinüriye ödem, hiperlipidemi ve lipidüri eşlik eder.",
+    "D": "Günde 3,5 gram ve üzeri doğru: erişkinde nefrotik sendromun ağır proteinüri eşiği budur.",
+    "E": "Günde 10 gram eşik değildir; 3,5 gramı aşan her erişkin proteinürisi zaten nefrotik düzeydedir."
+   },
+   "ozet": "Erişkinde nefrotik sendrom günde 3,5 gram ve üzeri proteinüriyle tanımlanır; buna serum albümininin 3 g/dL'nin altına inmesi, yaygın ödem, hiperlipidemi ve lipidüri eşlik eder.",
+   "metin": "**Soru.** Erişkinde nefrotik sendrom için gereken proteinüri düzeyi hangisidir?\n\n**A)** ≥0,5 g/gün · **B)** ≥1 g/gün · **C)** ≥2 g/gün · **D)** ≥3,5 g/gün · **E)** ≥10 g/gün\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **≥0,5 g/gün** — Günde 0,5 gram ağır proteinüri sayılmaz; nefrotik sendromda erişkin eşiği çok daha yüksektir.\n- **≥1 g/gün** — Günde 1 gram nefrotik sendrom için yetersizdir; bu sendromda protein kaybı glomerüler filtrasyon bariyerinin bozulmasına bağlıdır.\n- **≥2 g/gün** — Günde 2 gram da yeterli değildir; nefrotik sendromda ağır proteinüriye ödem, hiperlipidemi ve lipidüri eşlik eder.\n- **≥3,5 g/gün** — Günde 3,5 gram ve üzeri doğru: erişkinde nefrotik sendromun ağır proteinüri eşiği budur.\n- **≥10 g/gün** — Günde 10 gram eşik değildir; 3,5 gramı aşan her erişkin proteinürisi zaten nefrotik düzeydedir.\n\n**Cevap: D** — ≥3,5 g/gün\n\n**Özet.** Erişkinde nefrotik sendrom günde 3,5 gram ve üzeri proteinüriyle tanımlanır; buna serum albümininin 3 g/dL'nin altına inmesi, yaygın ödem, hiperlipidemi ve lipidüri eşlik eder.",
+   "ses": "Erişkinde nefrotik sendrom için gereken proteinüri düzeyi hangisidir?\nA, günde sıfır virgül beş gram ve üzeri\nBe, günde bir gram ve üzeri\nCe, günde iki gram ve üzeri\nDe, günde üç virgül beş gram ve üzeri\nE, günde on gram ve üzeri\nSeçenekleri sırayla değerlendirelim.\nGünde sıfır virgül beş gram ağır proteinüri sayılmaz. Nefrotik sendromda erişkin eşiği çok daha yüksektir.\nGünde bir gram nefrotik sendrom için yetersizdir. Bu sendromda protein kaybı glomerüler filtrasyon bariyerinin bozulmasına bağlıdır.\nGünde iki gram da yeterli değildir. Nefrotik sendromda ağır proteinüriye ödem, hiperlipidemi ve lipidüri eşlik eder.\nGünde üç virgül beş gram ve üzeri doğru. Erişkinde nefrotik sendromun ağır proteinüri eşiği budur.\nGünde on gram eşik değildir. Üç virgül beş gramı aşan her erişkin proteinürisi zaten nefrotik düzeydedir.\nDoğru cevap De, günde üç virgül beş gram ve üzeri\nErişkinde nefrotik sendrom günde üç virgül beş gram ve üzeri proteinüriyle tanımlanır. Buna serum albümininin desilitrede üç gramın altına inmesi, yaygın ödem, hiperlipidemi ve lipidüri eşlik eder.",
+   "kelime": 154
+  },
+  {
+   "no": 2,
+   "tur": "ornek",
+   "soru": "Nefrotik sendromda ödemin temel mekanizması hangisidir?",
+   "secenekler": {
+    "A": "Plazma kolloid ozmotik basıncının azalması",
+    "B": "Lenfatik obstrüksiyon",
+    "C": "Kapiller hidrostatik basınç artışı",
+    "D": "Hipertansiyon",
+    "E": "Venöz tromboz"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Plazma kolloid ozmotik basıncının azalması doğru: hipoalbuminemi bu basıncı düşürür ve sıvı ekstravasküler alana geçer.",
+    "B": "Nefrotik ödemin kökü idrarla kaybedilen albümindir. Lenfatik obstrüksiyon bu sorudaki ayrımı sağlamaz.",
+    "C": "Kapiller hidrostatik basınç artışı ile karıştırılabilir: Nefrotik ödemde belirleyici olan, albümin kaybıyla plazmanın sıvıyı tutma gücünün düşmesidir.",
+    "D": "Hipertansiyon daha çok nefritik sendromun bulgusudur; nefrotik sendromda ödemin temel nedeni değildir.",
+    "E": "Venöz tromboz nefrotik sendromun komplikasyonudur, çünkü tromboemboli eğilimi artar; yaygın ödemin temel mekanizması değildir."
+   },
+   "ozet": "Nefrotik sendromda albümin kaybı plazma kolloid ozmotik basıncını düşürür; sıvı ekstravasküler alana geçer ve yaygın ödem gelişir.",
+   "metin": "**Soru.** Nefrotik sendromda ödemin temel mekanizması hangisidir?\n\n**A)** Plazma kolloid ozmotik basıncının azalması · **B)** Lenfatik obstrüksiyon · **C)** Kapiller hidrostatik basınç artışı · **D)** Hipertansiyon · **E)** Venöz tromboz\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Plazma kolloid ozmotik basıncının azalması** — Plazma kolloid ozmotik basıncının azalması doğru: hipoalbuminemi bu basıncı düşürür ve sıvı ekstravasküler alana geçer.\n- **Lenfatik obstrüksiyon** — Nefrotik ödemin kökü idrarla kaybedilen albümindir. Lenfatik obstrüksiyon bu sorudaki ayrımı sağlamaz.\n- **Kapiller hidrostatik basınç artışı** — Kapiller hidrostatik basınç artışı ile karıştırılabilir: Nefrotik ödemde belirleyici olan, albümin kaybıyla plazmanın sıvıyı tutma gücünün düşmesidir.\n- **Hipertansiyon** — Hipertansiyon daha çok nefritik sendromun bulgusudur; nefrotik sendromda ödemin temel nedeni değildir.\n- **Venöz tromboz** — Venöz tromboz nefrotik sendromun komplikasyonudur, çünkü tromboemboli eğilimi artar; yaygın ödemin temel mekanizması değildir.\n\n**Cevap: A** — Plazma kolloid ozmotik basıncının azalması\n\n**Özet.** Nefrotik sendromda albümin kaybı plazma kolloid ozmotik basıncını düşürür; sıvı ekstravasküler alana geçer ve yaygın ödem gelişir.",
+   "ses": "Nefrotik sendromda ödemin temel mekanizması hangisidir?\nA, Plazma kolloid ozmotik basıncının azalması\nBe, Lenfatik obstrüksiyon\nCe, Kapiller hidrostatik basınç artışı\nDe, Hipertansiyon\nE, Venöz tromboz\nHer seçeneği tek tek ele alalım.\nPlazma kolloid ozmotik basıncının azalması doğru. Hipoalbuminemi bu basıncı düşürür ve sıvı ekstravasküler alana geçer.\nNefrotik ödemin kökü idrarla kaybedilen albümindir. Lenfatik obstrüksiyon bu sorudaki ayrımı sağlamaz.\nKapiller hidrostatik basınç artışı ile karıştırılabilir. Nefrotik ödemde belirleyici olan, albümin kaybıyla plazmanın sıvıyı tutma gücünün düşmesidir.\nHipertansiyon daha çok nefritik sendromun bulgusudur. Nefrotik sendromda ödemin temel nedeni değildir.\nVenöz tromboz nefrotik sendromun komplikasyonudur, çünkü tromboemboli eğilimi artar. Yaygın ödemin temel mekanizması değildir.\nDoğru cevap A, Plazma kolloid ozmotik basıncının azalması\nNefrotik sendromda albümin kaybı plazma kolloid ozmotik basıncını düşürür. Sıvı ekstravasküler alana geçer ve yaygın ödem gelişir.",
+   "kelime": 157
+  },
+  {
+   "no": 3,
+   "tur": "ornek",
+   "soru": "Çocuklarda nefrotik sendromun en sık nedeni hangisidir?",
+   "secenekler": {
+    "A": "FSGS",
+    "B": "Membranöz nefropati",
+    "C": "Minimal değişiklik hastalığı",
+    "D": "MPGN",
+    "E": "IgA nefropatisi"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "FSGS çocukta nefrotik sendromun yaklaşık %10'unu oluşturur; erişkinde ise %35 ile öne çıkar.",
+    "B": "Membranöz nefropati çocukta yalnız %5 oranındadır; daha çok 30–60 yaş erişkinlerde görülür.",
+    "C": "Minimal değişiklik hastalığı doğru: çocuk nefrotik sendromunun %65'ini oluşturur ve en sık 1–7 yaşta görülür.",
+    "D": "MPGN çocukta da erişkinde de %10 oranında görülür; nefrotik ve nefritik bulgular bir arada bulunur.",
+    "E": "IgA nefropatisi ve diğerleri çocuk nefrotik sendromunun yalnız %10'unu oluşturur; en sık neden değildir."
+   },
+   "ozet": "Çocuklarda nefrotik sendromun en sık nedeni %65 ile minimal değişiklik hastalığıdır; erişkinde ise FSGS ve membranöz nefropati öne geçer.",
+   "metin": "**Soru.** Çocuklarda nefrotik sendromun en sık nedeni hangisidir?\n\n**A)** FSGS · **B)** Membranöz nefropati · **C)** Minimal değişiklik hastalığı · **D)** MPGN · **E)** IgA nefropatisi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **FSGS** — FSGS çocukta nefrotik sendromun yaklaşık %10'unu oluşturur; erişkinde ise %35 ile öne çıkar.\n- **Membranöz nefropati** — Membranöz nefropati çocukta yalnız %5 oranındadır; daha çok 30–60 yaş erişkinlerde görülür.\n- **Minimal değişiklik hastalığı** — Minimal değişiklik hastalığı doğru: çocuk nefrotik sendromunun %65'ini oluşturur ve en sık 1–7 yaşta görülür.\n- **MPGN** — MPGN çocukta da erişkinde de %10 oranında görülür; nefrotik ve nefritik bulgular bir arada bulunur.\n- **IgA nefropatisi** — IgA nefropatisi ve diğerleri çocuk nefrotik sendromunun yalnız %10'unu oluşturur; en sık neden değildir.\n\n**Cevap: C** — Minimal değişiklik hastalığı\n\n**Özet.** Çocuklarda nefrotik sendromun en sık nedeni %65 ile minimal değişiklik hastalığıdır; erişkinde ise FSGS ve membranöz nefropati öne geçer.",
+   "ses": "Çocuklarda nefrotik sendromun en sık nedeni hangisidir?\nA, Fokal segmental glomerüloskleroz\nBe, Membranöz nefropati\nCe, Minimal değişiklik hastalığı\nDe, Membranoproliferatif glomerülonefrit\nE, İ ge a nefropatisi\nŞıkları sırasıyla gözden geçirelim.\nFokal segmental glomerüloskleroz çocukta nefrotik sendromun yaklaşık yüzde onunu oluşturur. Erişkinde ise yüzde otuz beş ile öne çıkar.\nMembranöz nefropati çocukta yalnız yüzde beş oranındadır. Daha çok otuz ile altmış yaş erişkinlerde görülür.\nMinimal değişiklik hastalığı doğru. Çocuk nefrotik sendromunun yüzde altmış beşini oluşturur ve en sık bir ile yedi yaşta görülür.\nMembranoproliferatif glomerülonefrit çocukta da erişkinde de yüzde on oranında görülür. Nefrotik ve nefritik bulgular bir arada bulunur.\nİ ge a nefropatisi ve diğerleri çocuk nefrotik sendromunun yalnız yüzde onunu oluşturur. En sık neden değildir.\nDoğru cevap Ce, Minimal değişiklik hastalığı\nÇocuklarda nefrotik sendromun en sık nedeni yüzde altmış beş ile minimal değişiklik hastalığıdır. Erişkinde ise fokal segmental glomerüloskleroz ve membranöz nefropati öne geçer.",
+   "kelime": 145
+  },
+  {
+   "no": 4,
+   "tur": "ornek",
+   "soru": "Minimal değişiklik hastalığında tanı koyduran bulgu hangi yöntemle görülür?",
+   "secenekler": {
+    "A": "Işık mikroskobu",
+    "B": "İmmünfloresan",
+    "C": "Serum C3",
+    "D": "Anti-PLA2R",
+    "E": "Elektron mikroskobu"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Işık mikroskobunda glomerüller normal görünür; hastalığın minimal değişiklik adını alması bu yüzdendir.",
+    "B": "İmmünfloresanda immünoglobulin ya da kompleman birikimi yoktur; bu yöntem tanı koyduran bir bulgu göstermez.",
+    "C": "Serum C3 düşüklüğü C3 glomerulopatisinde görülür; minimal değişiklik hastalığının tanısında yeri yoktur.",
+    "D": "Anti-PLA2R antikorları primer membranöz nefropatinin tanı ve izleminde kullanılır; minimal değişiklik hastalığında rolü yoktur.",
+    "E": "Elektron mikroskobu doğru: tanı koyduran bulgu olan podosit ayak uzantılarının yaygın silinmesi ancak bu yöntemle görülür."
+   },
+   "ozet": "Minimal değişiklik hastalığında ışık mikroskobu ve immünfloresan normaldir; tanıyı elektron mikroskobunda podosit ayak uzantılarının yaygın silinmesi koydurur.",
+   "metin": "**Soru.** Minimal değişiklik hastalığında tanı koyduran bulgu hangi yöntemle görülür?\n\n**A)** Işık mikroskobu · **B)** İmmünfloresan · **C)** Serum C3 · **D)** Anti-PLA2R · **E)** Elektron mikroskobu\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Işık mikroskobu** — Işık mikroskobunda glomerüller normal görünür; hastalığın minimal değişiklik adını alması bu yüzdendir.\n- **İmmünfloresan** — İmmünfloresanda immünoglobulin ya da kompleman birikimi yoktur; bu yöntem tanı koyduran bir bulgu göstermez.\n- **Serum C3** — Serum C3 düşüklüğü C3 glomerulopatisinde görülür; minimal değişiklik hastalığının tanısında yeri yoktur.\n- **Anti-PLA2R** — Anti-PLA2R antikorları primer membranöz nefropatinin tanı ve izleminde kullanılır; minimal değişiklik hastalığında rolü yoktur.\n- **Elektron mikroskobu** — Elektron mikroskobu doğru: tanı koyduran bulgu olan podosit ayak uzantılarının yaygın silinmesi ancak bu yöntemle görülür.\n\n**Cevap: E** — Elektron mikroskobu\n\n**Özet.** Minimal değişiklik hastalığında ışık mikroskobu ve immünfloresan normaldir; tanıyı elektron mikroskobunda podosit ayak uzantılarının yaygın silinmesi koydurur.",
+   "ses": "Minimal değişiklik hastalığında tanı koyduran bulgu hangi yöntemle görülür?\nA, Işık mikroskobu\nBe, İmmünfloresan\nCe, Serum ce üç\nDe, Anti fosfolipaz a iki reseptör\nE, Elektron mikroskobu\nŞimdi seçeneklere tek tek bakalım.\nIşık mikroskobunda glomerüller normal görünür. Hastalığın minimal değişiklik adını alması bu yüzdendir.\nİmmünfloresanda immünoglobulin ya da kompleman birikimi yoktur. Bu yöntem tanı koyduran bir bulgu göstermez.\nSerum ce üç düşüklüğü ce üç glomerulopatisinde görülür. Minimal değişiklik hastalığının tanısında yeri yoktur.\nAnti fosfolipaz a iki reseptör antikorları primer membranöz nefropatinin tanı ve izleminde kullanılır. Minimal değişiklik hastalığında rolü yoktur.\nElektron mikroskobu doğru. Tanı koyduran bulgu olan podosit ayak uzantılarının yaygın silinmesi ancak bu yöntemle görülür.\nDoğru cevap E, Elektron mikroskobu\nMinimal değişiklik hastalığında ışık mikroskobu ve immünfloresan normaldir. Tanıyı elektron mikroskobunda podosit ayak uzantılarının yaygın silinmesi koydurur.",
+   "kelime": 142
+  },
+  {
+   "no": 5,
+   "tur": "ornek",
+   "soru": "Çocuklarda minimal değişiklik hastalığı için hangisi doğrudur?",
+   "secenekler": {
+    "A": "Seçici olmayan proteinüri",
+    "B": "Kortikosteroide yanıt çok iyidir",
+    "C": "Belirgin hematüri",
+    "D": "Subepitelyal birikintiler",
+    "E": "10 yılda böbrek yetmezliği"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Seçici olmayan proteinüri FSGS ve membranöz nefropatide görülür; minimal değişiklik hastalığında proteinüri seçicidir, ağırlıkla albümin kaçar.",
+    "B": "Kortikosteroide yanıtın çok iyi olması doğru: çocukların %90'dan fazlası yanıt verir, ancak yanıt verenlerin %60–70'inden fazlasında nüks görülür.",
+    "C": "Belirgin hematüri minimal değişiklik hastalığına uymaz; hematüri ve hipertansiyon FSGS'de bu hastalığa göre daha sıktır.",
+    "D": "Subepitelyal birikintiler membranöz nefropatinin bulgusudur; minimal değişiklik hastalığında elektron mikroskobunda birikinti yoktur.",
+    "E": "On yılda böbrek yetmezliği FSGS'nin seyridir; hastaların en az %50'si 10 yıl içinde son dönem böbrek yetmezliğine ilerler."
+   },
+   "ozet": "Minimal değişiklik hastalığında proteinüri seçicidir ve çocuklarda kortikosteroide yanıt çok iyidir; erişkinlerde yanıt daha yavaş, nüksler daha sıktır.",
+   "metin": "**Soru.** Çocuklarda minimal değişiklik hastalığı için hangisi doğrudur?\n\n**A)** Seçici olmayan proteinüri · **B)** Kortikosteroide yanıt çok iyidir · **C)** Belirgin hematüri · **D)** Subepitelyal birikintiler · **E)** 10 yılda böbrek yetmezliği\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Seçici olmayan proteinüri** — Seçici olmayan proteinüri FSGS ve membranöz nefropatide görülür; minimal değişiklik hastalığında proteinüri seçicidir, ağırlıkla albümin kaçar.\n- **Kortikosteroide yanıt çok iyidir** — Kortikosteroide yanıtın çok iyi olması doğru: çocukların %90'dan fazlası yanıt verir, ancak yanıt verenlerin %60–70'inden fazlasında nüks görülür.\n- **Belirgin hematüri** — Belirgin hematüri minimal değişiklik hastalığına uymaz; hematüri ve hipertansiyon FSGS'de bu hastalığa göre daha sıktır.\n- **Subepitelyal birikintiler** — Subepitelyal birikintiler membranöz nefropatinin bulgusudur; minimal değişiklik hastalığında elektron mikroskobunda birikinti yoktur.\n- **10 yılda böbrek yetmezliği** — On yılda böbrek yetmezliği FSGS'nin seyridir; hastaların en az %50'si 10 yıl içinde son dönem böbrek yetmezliğine ilerler.\n\n**Cevap: B** — Kortikosteroide yanıt çok iyidir\n\n**Özet.** Minimal değişiklik hastalığında proteinüri seçicidir ve çocuklarda kortikosteroide yanıt çok iyidir; erişkinlerde yanıt daha yavaş, nüksler daha sıktır.",
+   "ses": "Çocuklarda minimal değişiklik hastalığı için hangisi doğrudur?\nA, Seçici olmayan proteinüri\nBe, Kortikosteroide yanıt çok iyidir\nCe, Belirgin hematüri\nDe, Subepitelyal birikintiler\nE, on yılda böbrek yetmezliği\nSeçenekleri sırayla değerlendirelim.\nSeçici olmayan proteinüri fokal segmental glomerüloskleroz ve membranöz nefropatide görülür. Minimal değişiklik hastalığında proteinüri seçicidir, ağırlıkla albümin kaçar.\nKortikosteroide yanıtın çok iyi olması doğru. Çocukların yüzde doksandan fazlası yanıt verir, ancak yanıt verenlerin yüzde altmış ile yetmişinden fazlasında nüks görülür.\nBelirgin hematüri minimal değişiklik hastalığına uymaz. Hematüri ve hipertansiyon fokal segmental glomerülosklerozda bu hastalığa göre daha sıktır.\nSubepitelyal birikintiler membranöz nefropatinin bulgusudur. Minimal değişiklik hastalığında elektron mikroskobunda birikinti yoktur.\nOn yılda böbrek yetmezliği fokal segmental glomerülosklerozun seyridir. Hastaların en az yüzde ellisi on yıl içinde son dönem böbrek yetmezliğine ilerler.\nDoğru cevap Be, Kortikosteroide yanıt çok iyidir\nMinimal değişiklik hastalığında proteinüri seçicidir ve çocuklarda kortikosteroide yanıt çok iyidir. Erişkinlerde yanıt daha yavaş, nüksler daha sıktır.",
+   "kelime": 166
+  },
+  {
+   "no": 6,
+   "tur": "ornek",
+   "soru": "Steroid yanıtı zayıf, seçici olmayan proteinürili ve nakil sonrası sık tekrarlayan glomerüler hastalık hangisidir?",
+   "secenekler": {
+    "A": "Minimal değişiklik hastalığı",
+    "B": "Primer FSGS",
+    "C": "Membranöz nefropati",
+    "D": "Diyabetik nefropati",
+    "E": "Amiloidoz"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Minimal değişiklik hastalığında proteinüri seçicidir ve çocuklarda kortikosteroide yanıt çok iyidir; tarif edilen tabloya uymaz.",
+    "B": "Primer FSGS doğru: steroid yanıtı zayıftır, proteinüri seçici değildir ve nakilden sonra bazen günler içinde tekrarlar.",
+    "C": "Membranöz nefropati de steroide az yanıt verir ve seçici olmayan proteinüri yapar; nakil sonrası sık ve hızlı tekrarlama ise primer FSGS için vurgulanır.",
+    "D": "Diyabetik nefropati nefrotik sendromun sekonder nedenidir; glomerüler bazal membran kalınlaşması ve nodüler glomeruloskleroz yapar.",
+    "E": "Amiloidoz sekonder bir nedendir; amiloid glomerüler mezangium ve kapiller duvarlarda birikir."
+   },
+   "ozet": "Primer FSGS steroide zayıf yanıt, seçici olmayan proteinüri ve kötü prognozla seyreder; böbrek naklinden sonra sık, bazen günler içinde tekrarlar.",
+   "metin": "**Soru.** Steroid yanıtı zayıf, seçici olmayan proteinürili ve nakil sonrası sık tekrarlayan glomerüler hastalık hangisidir?\n\n**A)** Minimal değişiklik hastalığı · **B)** Primer FSGS · **C)** Membranöz nefropati · **D)** Diyabetik nefropati · **E)** Amiloidoz\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Minimal değişiklik hastalığı** — Minimal değişiklik hastalığında proteinüri seçicidir ve çocuklarda kortikosteroide yanıt çok iyidir; tarif edilen tabloya uymaz.\n- **Primer FSGS** — Primer FSGS doğru: steroid yanıtı zayıftır, proteinüri seçici değildir ve nakilden sonra bazen günler içinde tekrarlar.\n- **Membranöz nefropati** — Membranöz nefropati de steroide az yanıt verir ve seçici olmayan proteinüri yapar; nakil sonrası sık ve hızlı tekrarlama ise primer FSGS için vurgulanır.\n- **Diyabetik nefropati** — Diyabetik nefropati nefrotik sendromun sekonder nedenidir; glomerüler bazal membran kalınlaşması ve nodüler glomeruloskleroz yapar.\n- **Amiloidoz** — Amiloidoz sekonder bir nedendir; amiloid glomerüler mezangium ve kapiller duvarlarda birikir.\n\n**Cevap: B** — Primer FSGS\n\n**Özet.** Primer FSGS steroide zayıf yanıt, seçici olmayan proteinüri ve kötü prognozla seyreder; böbrek naklinden sonra sık, bazen günler içinde tekrarlar.",
+   "ses": "Steroid yanıtı zayıf, seçici olmayan proteinürili ve nakil sonrası sık tekrarlayan glomerüler hastalık hangisidir?\nA, Minimal değişiklik hastalığı\nBe, Primer fokal segmental glomerüloskleroz\nCe, Membranöz nefropati\nDe, Diyabetik nefropati\nE, Amiloidoz\nHer seçeneği tek tek ele alalım.\nMinimal değişiklik hastalığında proteinüri seçicidir ve çocuklarda kortikosteroide yanıt çok iyidir. Tarif edilen tabloya uymaz.\nPrimer fokal segmental glomerüloskleroz doğru. Steroid yanıtı zayıftır, proteinüri seçici değildir ve nakilden sonra bazen günler içinde tekrarlar.\nMembranöz nefropati de steroide az yanıt verir ve seçici olmayan proteinüri yapar. Nakil sonrası sık ve hızlı tekrarlama ise primer fokal segmental glomerüloskleroz için vurgulanır.\nDiyabetik nefropati nefrotik sendromun sekonder nedenidir. Glomerüler bazal membran kalınlaşması ve nodüler glomeruloskleroz yapar.\nAmiloidoz sekonder bir nedendir. Amiloid glomerüler mezangium ve kapiller duvarlarda birikir.\nDoğru cevap Be, Primer fokal segmental glomerüloskleroz\nPrimer fokal segmental glomerüloskleroz steroide zayıf yanıt, seçici olmayan proteinüri ve kötü prognozla seyreder. Böbrek naklinden sonra sık, bazen günler içinde tekrarlar.",
+   "kelime": 166
+  },
+  {
+   "no": 7,
+   "tur": "ornek",
+   "soru": "HIV ilişkili nefropatide görülen glomerüler hasar paterni hangisidir?",
+   "secenekler": {
+    "A": "Membranöz nefropati",
+    "B": "Minimal değişiklik",
+    "C": "C3 glomerulopatisi",
+    "D": "FSGS",
+    "E": "MPGN"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Membranöz nefropatinin sekonder nedenleri kronik hepatit B, sifiliz, sıtma, karsinomlar ve ilaçlardır; HIV ile ilişkilendirilen patern bu değildir.",
+    "B": "Minimal değişiklik hastalığı çoğunlukla aksi hâlde sağlıklı çocuklarda görülen primer bir hastalıktır; ışık mikroskobunda glomerüller normal görünür.",
+    "C": "C3 glomerulopatisi alternatif kompleman yolunun kontrolsüz aktivasyonuyla oluşur; HIV ile ilişkili bir patern değildir.",
+    "D": "FSGS doğru: HIV ilişkili nefropati, heroin ve nefron kaybına adaptasyon gibi, sekonder FSGS nedenlerindendir.",
+    "E": "MPGN tip I'in sekonder nedenleri hepatit B ve hepatit C, SLE ve monoklonal gammopatidir; HIV ilişkili nefropatinin paterni değildir."
+   },
+   "ozet": "FSGS tek bir hastalık değil, bir hasar paternidir; HIV ilişkili nefropati, heroin, nefron kaybı ve podosit gen mutasyonları sekonder FSGS yapar.",
+   "metin": "**Soru.** HIV ilişkili nefropatide görülen glomerüler hasar paterni hangisidir?\n\n**A)** Membranöz nefropati · **B)** Minimal değişiklik · **C)** C3 glomerulopatisi · **D)** FSGS · **E)** MPGN\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Membranöz nefropati** — Membranöz nefropatinin sekonder nedenleri kronik hepatit B, sifiliz, sıtma, karsinomlar ve ilaçlardır; HIV ile ilişkilendirilen patern bu değildir.\n- **Minimal değişiklik** — Minimal değişiklik hastalığı çoğunlukla aksi hâlde sağlıklı çocuklarda görülen primer bir hastalıktır; ışık mikroskobunda glomerüller normal görünür.\n- **C3 glomerulopatisi** — C3 glomerulopatisi alternatif kompleman yolunun kontrolsüz aktivasyonuyla oluşur; HIV ile ilişkili bir patern değildir.\n- **FSGS** — FSGS doğru: HIV ilişkili nefropati, heroin ve nefron kaybına adaptasyon gibi, sekonder FSGS nedenlerindendir.\n- **MPGN** — MPGN tip I'in sekonder nedenleri hepatit B ve hepatit C, SLE ve monoklonal gammopatidir; HIV ilişkili nefropatinin paterni değildir.\n\n**Cevap: D** — FSGS\n\n**Özet.** FSGS tek bir hastalık değil, bir hasar paternidir; HIV ilişkili nefropati, heroin, nefron kaybı ve podosit gen mutasyonları sekonder FSGS yapar.",
+   "ses": "Ha i ve ilişkili nefropatide görülen glomerüler hasar paterni hangisidir?\nA, Membranöz nefropati\nBe, Minimal değişiklik\nCe, Ce üç glomerulopatisi\nDe, Fokal segmental glomerüloskleroz\nE, Membranoproliferatif glomerülonefrit\nŞıkları sırasıyla gözden geçirelim.\nMembranöz nefropatinin sekonder nedenleri kronik hepatit be, sifiliz, sıtma, karsinomlar ve ilaçlardır. Ha i ve ile ilişkilendirilen patern bu değildir.\nMinimal değişiklik hastalığı çoğunlukla aksi hâlde sağlıklı çocuklarda görülen primer bir hastalıktır. Işık mikroskobunda glomerüller normal görünür.\nCe üç glomerulopatisi alternatif kompleman yolunun kontrolsüz aktivasyonuyla oluşur. Ha i ve ile ilişkili bir patern değildir.\nFokal segmental glomerüloskleroz doğru. Ha i ve ilişkili nefropati, heroin ve nefron kaybına adaptasyon gibi, sekonder fokal segmental glomerüloskleroz nedenlerindendir.\nMembranoproliferatif glomerülonefrit tip birin sekonder nedenleri hepatit be ve hepatit ce, sistemik lupus eritematozus ve monoklonal gammopatidir. Ha i ve ilişkili nefropatinin paterni değildir.\nDoğru cevap De, Fokal segmental glomerüloskleroz\nFokal segmental glomerüloskleroz tek bir hastalık değil, bir hasar paternidir. Ha i ve ilişkili nefropati, heroin, nefron kaybı ve podosit gen mutasyonları sekonder fokal segmental glomerüloskleroz yapar.",
+   "kelime": 157
+  },
+  {
+   "no": 8,
+   "tur": "ornek",
+   "soru": "Primer membranöz nefropatide en sık hedef alınan podosit antijeni hangisidir?",
+   "secenekler": {
+    "A": "Fosfolipaz A2 reseptörü",
+    "B": "Nefrin",
+    "C": "Podosin",
+    "D": "Faktör H",
+    "E": "C3 konvertaz"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Fosfolipaz A2 reseptörü doğru: primer membranöz nefropatide otoantikorlar en sık bu podosit antijenine karşıdır ve çoğunlukla IgG4 tipindedir.",
+    "B": "Nefrin yarık diyafram proteinidir; minimal değişiklik hastalığında ona karşı antikor olasılığı, FSGS'de ise gen mutasyonları tartışılır.",
+    "C": "Podosin de bir yarık diyafram proteinidir; mutasyonu genetik FSGS ile ilişkilidir, membranöz nefropatinin hedef antijeni değildir.",
+    "D": "Faktör H bir kompleman düzenleyici proteindir; mutasyonu ya da otoantikoru C3 glomerulopatisine yol açar.",
+    "E": "C3 konvertaz bir podosit antijeni değildir; onu stabilize eden C3 nefritik faktör C3 glomerulopatisinde rol oynar."
+   },
+   "ozet": "Membranöz nefropatinin yaklaşık %80'i primerdir; en sık fosfolipaz A2 reseptörüne karşı, çoğunlukla IgG4 tipi otoantikorlarla oluşur ve anti-PLA2R titresi tedavi yanıtını yansıtabilir.",
+   "metin": "**Soru.** Primer membranöz nefropatide en sık hedef alınan podosit antijeni hangisidir?\n\n**A)** Fosfolipaz A2 reseptörü · **B)** Nefrin · **C)** Podosin · **D)** Faktör H · **E)** C3 konvertaz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Fosfolipaz A2 reseptörü** — Fosfolipaz A2 reseptörü doğru: primer membranöz nefropatide otoantikorlar en sık bu podosit antijenine karşıdır ve çoğunlukla IgG4 tipindedir.\n- **Nefrin** — Nefrin yarık diyafram proteinidir; minimal değişiklik hastalığında ona karşı antikor olasılığı, FSGS'de ise gen mutasyonları tartışılır.\n- **Podosin** — Podosin de bir yarık diyafram proteinidir; mutasyonu genetik FSGS ile ilişkilidir, membranöz nefropatinin hedef antijeni değildir.\n- **Faktör H** — Faktör H bir kompleman düzenleyici proteindir; mutasyonu ya da otoantikoru C3 glomerulopatisine yol açar.\n- **C3 konvertaz** — C3 konvertaz bir podosit antijeni değildir; onu stabilize eden C3 nefritik faktör C3 glomerulopatisinde rol oynar.\n\n**Cevap: A** — Fosfolipaz A2 reseptörü\n\n**Özet.** Membranöz nefropatinin yaklaşık %80'i primerdir; en sık fosfolipaz A2 reseptörüne karşı, çoğunlukla IgG4 tipi otoantikorlarla oluşur ve anti-PLA2R titresi tedavi yanıtını yansıtabilir.",
+   "ses": "Primer membranöz nefropatide en sık hedef alınan podosit antijeni hangisidir?\nA, Fosfolipaz a iki reseptörü\nBe, Nefrin\nCe, Podosin\nDe, Faktör ha\nE, Ce üç konvertaz\nŞimdi seçeneklere tek tek bakalım.\nFosfolipaz a iki reseptörü doğru. Primer membranöz nefropatide otoantikorlar en sık bu podosit antijenine karşıdır ve çoğunlukla i ge ge dört tipindedir.\nNefrin yarık diyafram proteinidir. Minimal değişiklik hastalığında ona karşı antikor olasılığı, fokal segmental glomerülosklerozda ise gen mutasyonları tartışılır.\nPodosin de bir yarık diyafram proteinidir. Mutasyonu genetik fokal segmental glomerüloskleroz ile ilişkilidir, membranöz nefropatinin hedef antijeni değildir.\nFaktör ha bir kompleman düzenleyici proteindir. Mutasyonu ya da otoantikoru ce üç glomerulopatisine yol açar.\nCe üç konvertaz bir podosit antijeni değildir. Onu stabilize eden ce üç nefritik faktör ce üç glomerulopatisinde rol oynar.\nDoğru cevap A, Fosfolipaz a iki reseptörü\nMembranöz nefropatinin yaklaşık yüzde sekseni primerdir. En sık fosfolipaz a iki reseptörüne karşı, çoğunlukla i ge ge dört tipi otoantikorlarla oluşur. Anti fosfolipaz a iki reseptör titresi tedavi yanıtını yansıtabilir.",
+   "kelime": 163
+  },
+  {
+   "no": 9,
+   "tur": "ornek",
+   "soru": "Elektron mikroskobunda subepitelyal birikintiler ve \"spike and dome\" görünümü hangi hastalıkta görülür?",
+   "secenekler": {
+    "A": "MPGN tip I",
+    "B": "FSGS",
+    "C": "Membranöz nefropati",
+    "D": "Minimal değişiklik hastalığı",
+    "E": "Yoğun birikim hastalığı"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "MPGN tip I'de birikintiler subendotelyal ve mezangiyaldir; kılcal duvarda tramvay rayı görünümü oluşur.",
+    "B": "FSGS'de elektron mikroskobunda podosit ayak uzantılarının yaygın silinmesi görülür; immünfloresanda yalnız sklerotik segmentlerde nonspesifik IgM ve kompleman vardır.",
+    "C": "Membranöz nefropati doğru: subepitelyal elektron yoğun birikintiler arasındaki bazal membran çıkıntıları spike and dome, yani çıkıntı ve kubbe görünümü verir.",
+    "D": "Minimal değişiklik hastalığında elektron mikroskobunda ayak uzantıları silinir, ancak birikinti bulunmaz.",
+    "E": "Yoğun birikim hastalığında birikintiler bazal membranın içindedir; düzensiz, şerit benzeri çok yoğun bir yapı oluşturur."
+   },
+   "ozet": "Membranöz nefropatide immün kompleksler subepitelyal olarak in situ oluşur; elektron mikroskobunda aralarındaki bazal membran çıkıntıları spike and dome görünümü verir.",
+   "metin": "**Soru.** Elektron mikroskobunda subepitelyal birikintiler ve \"spike and dome\" görünümü hangi hastalıkta görülür?\n\n**A)** MPGN tip I · **B)** FSGS · **C)** Membranöz nefropati · **D)** Minimal değişiklik hastalığı · **E)** Yoğun birikim hastalığı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **MPGN tip I** — MPGN tip I'de birikintiler subendotelyal ve mezangiyaldir; kılcal duvarda tramvay rayı görünümü oluşur.\n- **FSGS** — FSGS'de elektron mikroskobunda podosit ayak uzantılarının yaygın silinmesi görülür; immünfloresanda yalnız sklerotik segmentlerde nonspesifik IgM ve kompleman vardır.\n- **Membranöz nefropati** — Membranöz nefropati doğru: subepitelyal elektron yoğun birikintiler arasındaki bazal membran çıkıntıları spike and dome, yani çıkıntı ve kubbe görünümü verir.\n- **Minimal değişiklik hastalığı** — Minimal değişiklik hastalığında elektron mikroskobunda ayak uzantıları silinir, ancak birikinti bulunmaz.\n- **Yoğun birikim hastalığı** — Yoğun birikim hastalığında birikintiler bazal membranın içindedir; düzensiz, şerit benzeri çok yoğun bir yapı oluşturur.\n\n**Cevap: C** — Membranöz nefropati\n\n**Özet.** Membranöz nefropatide immün kompleksler subepitelyal olarak in situ oluşur; elektron mikroskobunda aralarındaki bazal membran çıkıntıları spike and dome görünümü verir.",
+   "ses": "Elektron mikroskobunda subepitelyal birikintiler ve spayk end dom görünümü hangi hastalıkta görülür?\nA, Membranoproliferatif glomerülonefrit tip bir\nBe, Fokal segmental glomerüloskleroz\nCe, Membranöz nefropati\nDe, Minimal değişiklik hastalığı\nE, Yoğun birikim hastalığı\nSeçenekleri sırayla değerlendirelim.\nMembranoproliferatif glomerülonefrit tip birde birikintiler subendotelyal ve mezangiyaldir. Kılcal duvarda tramvay rayı görünümü oluşur.\nFokal segmental glomerülosklerozda elektron mikroskobunda podosit ayak uzantılarının yaygın silinmesi görülür. İmmünfloresanda yalnız sklerotik segmentlerde nonspesifik i ge me ve kompleman vardır.\nMembranöz nefropati doğru. Subepitelyal elektron yoğun birikintiler arasındaki bazal membran çıkıntıları spayk end dom, yani çıkıntı ve kubbe görünümü verir.\nMinimal değişiklik hastalığında elektron mikroskobunda ayak uzantıları silinir, ancak birikinti bulunmaz.\nYoğun birikim hastalığında birikintiler bazal membranın içindedir. Düzensiz, şerit benzeri çok yoğun bir yapı oluşturur.\nDoğru cevap Ce, Membranöz nefropati\nMembranöz nefropatide immün kompleksler subepitelyal olarak in situ oluşur. Elektron mikroskobunda aralarındaki bazal membran çıkıntıları spayk end dom görünümü verir.",
+   "kelime": 163
+  },
+  {
+   "no": 10,
+   "tur": "ornek",
+   "soru": "MPGN tip I'de kılcal duvarda \"tramvay rayı\" görünümünün nedeni hangisidir?",
+   "secenekler": {
+    "A": "Subepitelyal birikinti",
+    "B": "Hiyalin birikimi",
+    "C": "Amiloid birikimi",
+    "D": "Podosit kaybı",
+    "E": "Mezangiyal hücrelerin GBM içine interpozisyonu"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Subepitelyal birikinti membranöz nefropatinin bulgusudur; MPGN tip I'de birikintiler subendotelyal ve mezangiyaldir.",
+    "B": "Hiyalin birikimi FSGS'de sklerotik segmentlerde görülür; çift kontur oluşturmaz.",
+    "C": "Amiloid birikimi amiloid nefropatisinde mezangium ve kapiller duvarlarda olur; tramvay rayının nedeni değildir.",
+    "D": "Podosit kaybı FSGS'nin ortak temasıdır; kılcal duvarda çift kontura yol açmaz.",
+    "E": "Mezangiyal hücre interpozisyonu doğru: mezangiyal hücreler GBM içine girer, matriks ve immün kompleks birikimiyle birlikte çift kontur oluşur."
+   },
+   "ozet": "MPGN tip I'de GBM kalınlaşması ile mezangiyal hiperhücrelilik birlikte görülür; mezangiyal hücrelerin GBM içine interpozisyonu tramvay rayı görünümünü verir.",
+   "metin": "**Soru.** MPGN tip I'de kılcal duvarda \"tramvay rayı\" görünümünün nedeni hangisidir?\n\n**A)** Subepitelyal birikinti · **B)** Hiyalin birikimi · **C)** Amiloid birikimi · **D)** Podosit kaybı · **E)** Mezangiyal hücrelerin GBM içine interpozisyonu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Subepitelyal birikinti** — Subepitelyal birikinti membranöz nefropatinin bulgusudur; MPGN tip I'de birikintiler subendotelyal ve mezangiyaldir.\n- **Hiyalin birikimi** — Hiyalin birikimi FSGS'de sklerotik segmentlerde görülür; çift kontur oluşturmaz.\n- **Amiloid birikimi** — Amiloid birikimi amiloid nefropatisinde mezangium ve kapiller duvarlarda olur; tramvay rayının nedeni değildir.\n- **Podosit kaybı** — Podosit kaybı FSGS'nin ortak temasıdır; kılcal duvarda çift kontura yol açmaz.\n- **Mezangiyal hücrelerin GBM içine interpozisyonu** — Mezangiyal hücre interpozisyonu doğru: mezangiyal hücreler GBM içine girer, matriks ve immün kompleks birikimiyle birlikte çift kontur oluşur.\n\n**Cevap: E** — Mezangiyal hücrelerin GBM içine interpozisyonu\n\n**Özet.** MPGN tip I'de GBM kalınlaşması ile mezangiyal hiperhücrelilik birlikte görülür; mezangiyal hücrelerin GBM içine interpozisyonu tramvay rayı görünümünü verir.",
+   "ses": "Membranoproliferatif glomerülonefrit tip birde kılcal duvarda tramvay rayı görünümünün nedeni hangisidir?\nA, Subepitelyal birikinti\nBe, Hiyalin birikimi\nCe, Amiloid birikimi\nDe, Podosit kaybı\nE, Mezangiyal hücrelerin glomerüler bazal membran içine interpozisyonu\nHer seçeneği tek tek ele alalım.\nSubepitelyal birikinti membranöz nefropatinin bulgusudur. Membranoproliferatif glomerülonefrit tip birde birikintiler subendotelyal ve mezangiyaldir.\nHiyalin birikimi fokal segmental glomerülosklerozda sklerotik segmentlerde görülür. Çift kontur oluşturmaz.\nAmiloid birikimi amiloid nefropatisinde mezangium ve kapiller duvarlarda olur. Tramvay rayının nedeni değildir.\nPodosit kaybı fokal segmental glomerülosklerozun ortak temasıdır. Kılcal duvarda çift kontura yol açmaz.\nMezangiyal hücre interpozisyonu doğru. Mezangiyal hücreler glomerüler bazal membran içine girer, matriks ve immün kompleks birikimiyle birlikte çift kontur oluşur.\nDoğru cevap E, Mezangiyal hücrelerin glomerüler bazal membran içine interpozisyonu\nMembranoproliferatif glomerülonefrit tip birde glomerüler bazal membran kalınlaşması ile mezangiyal hiperhücrelilik birlikte görülür. Mezangiyal hücrelerin glomerüler bazal membran içine interpozisyonu tramvay rayı görünümünü verir.",
+   "kelime": 154
+  },
+  {
+   "no": 11,
+   "tur": "ornek",
+   "soru": "C3 glomerulopatisinde alternatif kompleman yolunu aktive eden, C3 konvertazını stabilize eden otoantikor hangisidir?",
+   "secenekler": {
+    "A": "Anti-PLA2R",
+    "B": "C3 nefritik faktör",
+    "C": "Anti-GBM",
+    "D": "Anti-nefrin",
+    "E": "Anti-C1q"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Anti-PLA2R primer membranöz nefropatinin otoantikorudur; kompleman konvertazını değil, podosit antijenini hedef alır.",
+    "B": "C3 nefritik faktör doğru: C3 konvertazını stabilize ederek alternatif kompleman yolunun kontrolsüz aktivasyonuna yol açar.",
+    "C": "Anti-GBM antikorları bazal membran antijenlerine bağlanır ve immünfloresanda doğrusal boyanma yapar; C3 glomerulopatisinde yer almaz.",
+    "D": "Anti-nefrin, minimal değişiklik hastalığında yarık diyafram proteinine karşı olası bir antikor olarak tartışılır; konvertazla ilgisi yoktur.",
+    "E": "C1q klasik yol bileşenidir ve C3 glomerulopatisinde C1q ile C4 genellikle bulunmaz. Anti-C1q bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "C3 nefritik faktör C3 konvertazını stabilize eder; faktör H, faktör I ya da MCP bozukluklarıyla birlikte alternatif yolun kontrolsüz aktivasyonu sürekli C3 birikimi yapar.",
+   "metin": "**Soru.** C3 glomerulopatisinde alternatif kompleman yolunu aktive eden, C3 konvertazını stabilize eden otoantikor hangisidir?\n\n**A)** Anti-PLA2R · **B)** C3 nefritik faktör · **C)** Anti-GBM · **D)** Anti-nefrin · **E)** Anti-C1q\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Anti-PLA2R** — Anti-PLA2R primer membranöz nefropatinin otoantikorudur; kompleman konvertazını değil, podosit antijenini hedef alır.\n- **C3 nefritik faktör** — C3 nefritik faktör doğru: C3 konvertazını stabilize ederek alternatif kompleman yolunun kontrolsüz aktivasyonuna yol açar.\n- **Anti-GBM** — Anti-GBM antikorları bazal membran antijenlerine bağlanır ve immünfloresanda doğrusal boyanma yapar; C3 glomerulopatisinde yer almaz.\n- **Anti-nefrin** — Anti-nefrin, minimal değişiklik hastalığında yarık diyafram proteinine karşı olası bir antikor olarak tartışılır; konvertazla ilgisi yoktur.\n- **Anti-C1q** — C1q klasik yol bileşenidir ve C3 glomerulopatisinde C1q ile C4 genellikle bulunmaz. Anti-C1q bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — C3 nefritik faktör\n\n**Özet.** C3 nefritik faktör C3 konvertazını stabilize eder; faktör H, faktör I ya da MCP bozukluklarıyla birlikte alternatif yolun kontrolsüz aktivasyonu sürekli C3 birikimi yapar.",
+   "ses": "Ce üç glomerulopatisinde alternatif kompleman yolunu aktive eden, ce üç konvertazını stabilize eden otoantikor hangisidir?\nA, Anti fosfolipaz a iki reseptör\nBe, Ce üç nefritik faktör\nCe, Anti glomerüler bazal membran\nDe, Anti nefrin\nE, Anti ce bir ku\nŞıkları sırasıyla gözden geçirelim.\nAnti fosfolipaz a iki reseptör primer membranöz nefropatinin otoantikorudur. Kompleman konvertazını değil, podosit antijenini hedef alır.\nCe üç nefritik faktör doğru. Ce üç konvertazını stabilize ederek alternatif kompleman yolunun kontrolsüz aktivasyonuna yol açar.\nAnti glomerüler bazal membran antikorları bazal membran antijenlerine bağlanır ve immünfloresanda doğrusal boyanma yapar. Ce üç glomerulopatisinde yer almaz.\nAnti nefrin, minimal değişiklik hastalığında yarık diyafram proteinine karşı olası bir antikor olarak tartışılır. Konvertazla ilgisi yoktur.\nCe bir ku klasik yol bileşenidir ve ce üç glomerulopatisinde ce bir ku ile ce dört genellikle bulunmaz. Anti-Cbirq bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Ce üç nefritik faktör\nCe üç nefritik faktör ce üç konvertazını stabilize eder. Ha ve i faktörleri ya da membran kofaktör proteini bozukluklarıyla birlikte alternatif yolun kontrolsüz aktivasyonu sürekli ce üç birikimi yapar.",
+   "kelime": 158
+  },
+  {
+   "no": 12,
+   "tur": "ornek",
+   "soru": "Kimmelstiel–Wilson lezyonu hangi hastalığa özgüdür?",
+   "secenekler": {
+    "A": "Amiloidoz",
+    "B": "Lupus nefriti",
+    "C": "Diyabetik nefropati",
+    "D": "FSGS",
+    "E": "Membranöz nefropati"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Amiloidozda glomerüler mezangium ve kapiller duvarlarda amiloid birikimi görülür; ayırt edici bulgusu bu birikimdir.",
+    "B": "Lupus nefriti SLE'nin böbrek tutulumudur; nefrotik sendrom yapan formu sınıf V, yani membranöz tiptir.",
+    "C": "Diyabetik nefropati doğru: GBM kalınlaşması ve nodüler glomeruloskleroz, yani Kimmelstiel–Wilson lezyonları görülür.",
+    "D": "FSGS'de bazı glomerüllerin yalnız bir kısmında skleroz, hiyalin birikimi ve köpüklü makrofajlar görülür.",
+    "E": "Membranöz nefropatide kılcal duvarlar difüz kalınlaşır ve subepitelyal birikintiler görülür; nodüler skleroz beklenmez."
+   },
+   "ozet": "Kimmelstiel–Wilson lezyonu diyabetik nefropatinin nodüler glomerulosklerozudur; buna GBM kalınlaşması eşlik eder ve diyabet nefrotik sendromun sekonder nedenidir.",
+   "metin": "**Soru.** Kimmelstiel–Wilson lezyonu hangi hastalığa özgüdür?\n\n**A)** Amiloidoz · **B)** Lupus nefriti · **C)** Diyabetik nefropati · **D)** FSGS · **E)** Membranöz nefropati\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Amiloidoz** — Amiloidozda glomerüler mezangium ve kapiller duvarlarda amiloid birikimi görülür; ayırt edici bulgusu bu birikimdir.\n- **Lupus nefriti** — Lupus nefriti SLE'nin böbrek tutulumudur; nefrotik sendrom yapan formu sınıf V, yani membranöz tiptir.\n- **Diyabetik nefropati** — Diyabetik nefropati doğru: GBM kalınlaşması ve nodüler glomeruloskleroz, yani Kimmelstiel–Wilson lezyonları görülür.\n- **FSGS** — FSGS'de bazı glomerüllerin yalnız bir kısmında skleroz, hiyalin birikimi ve köpüklü makrofajlar görülür.\n- **Membranöz nefropati** — Membranöz nefropatide kılcal duvarlar difüz kalınlaşır ve subepitelyal birikintiler görülür; nodüler skleroz beklenmez.\n\n**Cevap: C** — Diyabetik nefropati\n\n**Özet.** Kimmelstiel–Wilson lezyonu diyabetik nefropatinin nodüler glomerulosklerozudur; buna GBM kalınlaşması eşlik eder ve diyabet nefrotik sendromun sekonder nedenidir.",
+   "ses": "Kimelştil Vilson lezyonu hangi hastalığa özgüdür?\nA, Amiloidoz\nBe, Lupus nefriti\nCe, Diyabetik nefropati\nDe, Fokal segmental glomerüloskleroz\nE, Membranöz nefropati\nŞimdi seçeneklere tek tek bakalım.\nAmiloidozda glomerüler mezangium ve kapiller duvarlarda amiloid birikimi görülür. Ayırt edici bulgusu bu birikimdir.\nLupus nefriti sistemik lupus eritematozusun böbrek tutulumudur. Nefrotik sendrom yapan formu sınıf beş, yani membranöz tiptir.\nDiyabetik nefropati doğru. Glomerüler bazal membran kalınlaşması ve nodüler glomeruloskleroz, yani Kimelştil Vilson lezyonları görülür.\nFokal segmental glomerülosklerozda bazı glomerüllerin yalnız bir kısmında skleroz, hiyalin birikimi ve köpüklü makrofajlar görülür.\nMembranöz nefropatide kılcal duvarlar difüz kalınlaşır ve subepitelyal birikintiler görülür. Nodüler skleroz beklenmez.\nDoğru cevap Ce, Diyabetik nefropati\nKimelştil Vilson lezyonu diyabetik nefropatinin nodüler glomerulosklerozudur. Buna glomerüler bazal membran kalınlaşması eşlik eder ve diyabet nefrotik sendromun sekonder nedenidir.",
+   "kelime": 136
+  },
+  {
+   "no": 25,
+   "tur": "cikmis",
+   "soru": "Minimal değişiklik hastalığına bağlı nefrotik sendrom ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "secenekler": {
+    "A": "Çocuklarda nefrotik sendromun en sık nedenidir.",
+    "B": "Işık mikroskobunda glomerüller normal görünür.",
+    "C": "İmmünfloresan incelemede kapiller duvar boyunca granüler IgG ve C3 birikimi izlenir.",
+    "D": "Elektron mikroskopide podosit ayaksı çıkıntılarında yaygın silinme görülür.",
+    "E": "Çocuklarda olguların büyük çoğunluğu kortikosteroid tedavisine yanıt verir."
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Çocuklarda nefrotik sendromun en sık nedeni olması geçerli bir ifadedir; çocukta olguların yaklaşık %65'ini oluşturur, bu yüzden cevap değildir.",
+    "B": "Işık mikroskobunda glomerüllerin normal görünmesi geçerli bir ifadedir; hastalık adını bu minimal değişiklikten alır.",
+    "C": "Granüler IgG ve C3 birikimi ifadesi yanlıştır, bu yüzden doğru cevaptır; minimal değişiklik hastalığında immünfloresanda immünglobulin veya kompleman birikimi yoktur.",
+    "D": "Elektron mikroskopide podosit ayak uzantılarının yaygın silinmesi bu hastalığın temel bulgusudur; ifade geçerlidir.",
+    "E": "Çocuklarda olguların %90'dan fazlası kortikosteroide yanıt verir; ifade geçerli olduğundan cevap değildir."
+   },
+   "ozet": "Minimal değişiklik hastalığında ışık mikroskobu normaldir, immünfloresanda birikim yoktur ve belirgin bulgu elektron mikroskobunda podosit ayak uzantılarının yaygın silinmesidir.",
+   "metin": "**Soru.** Minimal değişiklik hastalığına bağlı nefrotik sendrom ile ilgili aşağıdakilerden hangisi yanlıştır?\n\n**A)** Çocuklarda nefrotik sendromun en sık nedenidir. · **B)** Işık mikroskobunda glomerüller normal görünür. · **C)** İmmünfloresan incelemede kapiller duvar boyunca granüler IgG ve C3 birikimi izlenir. · **D)** Elektron mikroskopide podosit ayaksı çıkıntılarında yaygın silinme görülür. · **E)** Çocuklarda olguların büyük çoğunluğu kortikosteroid tedavisine yanıt verir.\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Çocuklarda nefrotik sendromun en sık nedenidir.** — Çocuklarda nefrotik sendromun en sık nedeni olması geçerli bir ifadedir; çocukta olguların yaklaşık %65'ini oluşturur, bu yüzden cevap değildir.\n- **Işık mikroskobunda glomerüller normal görünür.** — Işık mikroskobunda glomerüllerin normal görünmesi geçerli bir ifadedir; hastalık adını bu minimal değişiklikten alır.\n- **İmmünfloresan incelemede kapiller duvar boyunca granüler IgG ve C3 birikimi izlenir.** — Granüler IgG ve C3 birikimi ifadesi yanlıştır, bu yüzden doğru cevaptır; minimal değişiklik hastalığında immünfloresanda immünglobulin veya kompleman birikimi yoktur.\n- **Elektron mikroskopide podosit ayaksı çıkıntılarında yaygın silinme görülür.** — Elektron mikroskopide podosit ayak uzantılarının yaygın silinmesi bu hastalığın temel bulgusudur; ifade geçerlidir.\n- **Çocuklarda olguların büyük çoğunluğu kortikosteroid tedavisine yanıt verir.** — Çocuklarda olguların %90'dan fazlası kortikosteroide yanıt verir; ifade geçerli olduğundan cevap değildir.\n\n**Cevap: C** — İmmünfloresan incelemede kapiller duvar boyunca granüler IgG ve C3 birikimi izlenir.\n\n**Özet.** Minimal değişiklik hastalığında ışık mikroskobu normaldir, immünfloresanda birikim yoktur ve belirgin bulgu elektron mikroskobunda podosit ayak uzantılarının yaygın silinmesidir.",
+   "ses": "Minimal değişiklik hastalığına bağlı nefrotik sendrom ile ilgili aşağıdakilerden hangisi yanlıştır?\nA, Çocuklarda nefrotik sendromun en sık nedenidir.\nBe, Işık mikroskobunda glomerüller normal görünür.\nCe, İmmünfloresan incelemede kapiller duvar boyunca granüler i ge ge ve ce üç birikimi izlenir.\nDe, Elektron mikroskopide podosit ayaksı çıkıntılarında yaygın silinme görülür.\nE, Çocuklarda olguların büyük çoğunluğu kortikosteroid tedavisine yanıt verir.\nSeçenekleri sırayla değerlendirelim.\nÇocuklarda nefrotik sendromun en sık nedeni olması geçerli bir ifadedir. Çocukta olguların yaklaşık yüzde altmış beşini oluşturur, bu yüzden cevap değildir.\nIşık mikroskobunda glomerüllerin normal görünmesi geçerli bir ifadedir. Hastalık adını bu minimal değişiklikten alır.\nGranüler i ge ge ve ce üç birikimi ifadesi yanlıştır, bu yüzden doğru cevaptır. Minimal değişiklik hastalığında immünfloresanda immünglobulin veya kompleman birikimi yoktur.\nElektron mikroskopide podosit ayak uzantılarının yaygın silinmesi bu hastalığın temel bulgusudur. İfade geçerlidir.\nÇocuklarda olguların yüzde doksandan fazlası kortikosteroide yanıt verir. İfade geçerli olduğundan cevap değildir.\nDoğru cevap Ce, İmmünfloresan incelemede kapiller duvar boyunca granüler i ge ge ve ce üç birikimi izlenir.\nMinimal değişiklik hastalığında ışık mikroskobu normaldir, immünfloresanda birikim yoktur ve belirgin bulgu elektron mikroskobunda podosit ayak uzantılarının yaygın silinmesidir.",
+   "kelime": 223
+  },
+  {
+   "no": 26,
+   "tur": "cikmis",
+   "soru": "Membranoproliferatif glomerülonefritte glomerüllerde izlenen spesifik morfolojik patern aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Podositlerde silinmiş ayaksı uzantılar",
+    "B": "Segmental tutulumlu sklerotik alanlar",
+    "C": "Subepitelyal alanda hörgüç benzeri immünglobulin ve kompleman birikimi",
+    "D": "Glomerül periferinde yerleşmiş küresel matriks nodülleri",
+    "E": "Çift kontür ya da tren rayı görünümü"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Podositlerde ayak uzantılarının silinmesi minimal değişiklik hastalığı ve FSGS'de belirgindir; MPGN'ye özgü patern değildir.",
+    "B": "Segmental tutulumlu sklerotik alanlar fokal segmental glomerulosklerozun paternidir.",
+    "C": "Subepitelyal alanda immünglobulin ve kompleman birikimi membranöz nefropatide görülür; MPGN tip I'de birikintiler subendotelyal ve mezangiyaldir.",
+    "D": "Nodüler glomeruloskleroz diyabetik nefropatinin Kimmelstiel–Wilson lezyonudur. Küresel matriks nodülleri bu sorudaki ayrımı sağlamaz.",
+    "E": "Çift kontür, yani tren rayı görünümü doğru: mezangiyal hücrelerin GBM içine interpozisyonu ve matriks birikimi kılcal duvarda çift kontur oluşturur."
+   },
+   "ozet": "MPGN tip I'de büyük, hiperhücreli, lobüllü glomerüller ve kılcal duvarlarda çift kontur görülür; buna mezangiyal hücrelerin GBM içine interpozisyonu neden olur.",
+   "metin": "**Soru.** Membranoproliferatif glomerülonefritte glomerüllerde izlenen spesifik morfolojik patern aşağıdakilerden hangisidir?\n\n**A)** Podositlerde silinmiş ayaksı uzantılar · **B)** Segmental tutulumlu sklerotik alanlar · **C)** Subepitelyal alanda hörgüç benzeri immünglobulin ve kompleman birikimi · **D)** Glomerül periferinde yerleşmiş küresel matriks nodülleri · **E)** Çift kontür ya da tren rayı görünümü\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Podositlerde silinmiş ayaksı uzantılar** — Podositlerde ayak uzantılarının silinmesi minimal değişiklik hastalığı ve FSGS'de belirgindir; MPGN'ye özgü patern değildir.\n- **Segmental tutulumlu sklerotik alanlar** — Segmental tutulumlu sklerotik alanlar fokal segmental glomerulosklerozun paternidir.\n- **Subepitelyal alanda hörgüç benzeri immünglobulin ve kompleman birikimi** — Subepitelyal alanda immünglobulin ve kompleman birikimi membranöz nefropatide görülür; MPGN tip I'de birikintiler subendotelyal ve mezangiyaldir.\n- **Glomerül periferinde yerleşmiş küresel matriks nodülleri** — Nodüler glomeruloskleroz diyabetik nefropatinin Kimmelstiel–Wilson lezyonudur. Küresel matriks nodülleri bu sorudaki ayrımı sağlamaz.\n- **Çift kontür ya da tren rayı görünümü** — Çift kontür, yani tren rayı görünümü doğru: mezangiyal hücrelerin GBM içine interpozisyonu ve matriks birikimi kılcal duvarda çift kontur oluşturur.\n\n**Cevap: E** — Çift kontür ya da tren rayı görünümü\n\n**Özet.** MPGN tip I'de büyük, hiperhücreli, lobüllü glomerüller ve kılcal duvarlarda çift kontur görülür; buna mezangiyal hücrelerin GBM içine interpozisyonu neden olur.",
+   "ses": "Membranoproliferatif glomerülonefritte glomerüllerde izlenen spesifik morfolojik patern aşağıdakilerden hangisidir?\nA, Podositlerde silinmiş ayaksı uzantılar\nBe, Segmental tutulumlu sklerotik alanlar\nCe, Subepitelyal alanda hörgüç benzeri immünglobulin ve kompleman birikimi\nDe, Glomerül periferinde yerleşmiş küresel matriks nodülleri\nE, Çift kontür ya da tren rayı görünümü\nHer seçeneği tek tek ele alalım.\nPodositlerde ayak uzantılarının silinmesi minimal değişiklik hastalığı ve fokal segmental glomerulosklerozda belirgindir. Membranoproliferatif glomerulonefrite özgü patern değildir.\nSegmental tutulumlu sklerotik alanlar fokal segmental glomerulosklerozun paternidir.\nSubepitelyal alanda immünglobulin ve kompleman birikimi membranöz nefropatide görülür. Me pe ge ne tip birde birikintiler subendotelyal ve mezangiyaldir.\nNodüler glomeruloskleroz diyabetik nefropatinin Kimelştil Vilson lezyonudur. Küresel matriks nodülleri bu sorudaki ayrımı sağlamaz.\nÇift kontür, yani tren rayı görünümü doğru. Mezangiyal hücrelerin ge be me içine interpozisyonu ve matriks birikimi kılcal duvarda çift kontur oluşturur.\nDoğru cevap E, Çift kontür ya da tren rayı görünümü\nMe pe ge ne tip birde büyük, hiperhücreli, lobüllü glomerüller ve kılcal duvarlarda çift kontur görülür. Buna mezangiyal hücrelerin ge be me içine interpozisyonu neden olur.",
+   "kelime": 197
+  },
+  {
+   "no": 27,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisi karakteristik olarak nefrotik sendroma yol açan birincil glomerül lezyonları içinde yer almaz?",
+   "secenekler": {
+    "A": "Fokal segmental glomerüloskleroz",
+    "B": "Minimal değişiklik hastalığı",
+    "C": "Membranöz nefropati",
+    "D": "Membranoproliferatif glomerülonefrit",
+    "E": "Akut postenfeksiyöz glomerülonefrit"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Fokal segmental glomeruloskleroz, özellikle erişkinlerde nefrotik sendromun sık primer nedenidir; bu yüzden cevap değildir.",
+    "B": "Minimal değişiklik hastalığı, çocuklarda nefrotik sendromun en sık primer glomerüler nedenidir.",
+    "C": "Membranöz nefropati, GBM boyunca subepitelyal immün kompleks birikimiyle nefrotik sendrom yapan primer lezyondur.",
+    "D": "Membranoproliferatif glomerulonefrit, nefrotik bulguların nefritik bulgularla karıştığı primer glomerüler hastalıklar arasındadır.",
+    "E": "Akut postenfeksiyöz glomerulonefrit doğru cevaptır: karakteristik olarak nefrotik değil, nefritik sendroma yol açar."
+   },
+   "ozet": "Nefrotik sendromun primer nedenleri minimal değişiklik, FSGS, membranöz nefropati ve MPGN'dir; postenfeksiyöz glomerulonefrit ise nefritik sendromun örneğidir.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi karakteristik olarak nefrotik sendroma yol açan birincil glomerül lezyonları içinde yer almaz?\n\n**A)** Fokal segmental glomerüloskleroz · **B)** Minimal değişiklik hastalığı · **C)** Membranöz nefropati · **D)** Membranoproliferatif glomerülonefrit · **E)** Akut postenfeksiyöz glomerülonefrit\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Fokal segmental glomerüloskleroz** — Fokal segmental glomeruloskleroz, özellikle erişkinlerde nefrotik sendromun sık primer nedenidir; bu yüzden cevap değildir.\n- **Minimal değişiklik hastalığı** — Minimal değişiklik hastalığı, çocuklarda nefrotik sendromun en sık primer glomerüler nedenidir.\n- **Membranöz nefropati** — Membranöz nefropati, GBM boyunca subepitelyal immün kompleks birikimiyle nefrotik sendrom yapan primer lezyondur.\n- **Membranoproliferatif glomerülonefrit** — Membranoproliferatif glomerulonefrit, nefrotik bulguların nefritik bulgularla karıştığı primer glomerüler hastalıklar arasındadır.\n- **Akut postenfeksiyöz glomerülonefrit** — Akut postenfeksiyöz glomerulonefrit doğru cevaptır: karakteristik olarak nefrotik değil, nefritik sendroma yol açar.\n\n**Cevap: E** — Akut postenfeksiyöz glomerülonefrit\n\n**Özet.** Nefrotik sendromun primer nedenleri minimal değişiklik, FSGS, membranöz nefropati ve MPGN'dir; postenfeksiyöz glomerulonefrit ise nefritik sendromun örneğidir.",
+   "ses": "Aşağıdakilerden hangisi karakteristik olarak nefrotik sendroma yol açan birincil glomerül lezyonları içinde yer almaz?\nA, Fokal segmental glomerüloskleroz\nBe, Minimal değişiklik hastalığı\nCe, Membranöz nefropati\nDe, Membranoproliferatif glomerülonefrit\nE, Akut postenfeksiyöz glomerülonefrit\nŞıkları sırasıyla gözden geçirelim.\nFokal segmental glomeruloskleroz, özellikle erişkinlerde nefrotik sendromun sık primer nedenidir. Bu yüzden cevap değildir.\nMinimal değişiklik hastalığı, çocuklarda nefrotik sendromun en sık primer glomerüler nedenidir.\nMembranöz nefropati, ge be me boyunca subepitelyal immün kompleks birikimiyle nefrotik sendrom yapan primer lezyondur.\nMembranoproliferatif glomerulonefrit, nefrotik bulguların nefritik bulgularla karıştığı primer glomerüler hastalıklar arasındadır.\nAkut postenfeksiyöz glomerulonefrit doğru cevaptır. Karakteristik olarak nefrotik değil, nefritik sendroma yol açar.\nDoğru cevap E, Akut postenfeksiyöz glomerülonefrit\nNefrotik sendromun primer nedenleri minimal değişiklik, fe se ge se, membranöz nefropati ve membranoproliferatif glomerulonefrittir. Postenfeksiyöz glomerulonefrit ise nefritik sendromun örneğidir.",
+   "kelime": 151
+  },
+  {
+   "no": 28,
+   "tur": "cikmis",
+   "soru": "Aşağıdaki durumlar veriliyor:\nI. Mezangiyal hücre proliferasyonu\nII. Podosit hasarı\nIII. Kresent (hilal) formasyonu\nIV. Nefrin yapısında bozukluk\nBunlardan hangisi/hangileri nefrotik sendromdaki proteinüriye sebep olan durumlardır?",
+   "secenekler": {
+    "A": "I, II ve III",
+    "B": "I ve III",
+    "C": "II ve IV",
+    "D": "Yalnız IV",
+    "E": "I, II, III ve IV"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "I, II ve III birlikteliği yanlıştır; dizide nefrin bozukluğu eksiktir, oysa yarık diyafram proteinlerinin bozulması podosit hasarıyla birlikte proteinürinin temelidir.",
+    "B": "I ve III, nefrotik proteinürinin temeli olarak tanımlanan podosit hasarını ve nefrin gibi yarık diyafram proteinlerinin bozulmasını dışarıda bırakır.",
+    "C": "II ve IV doğru: podosit hasarı ayak uzantılarının füzyonuna yol açar, nefrin gibi yarık diyafram proteinlerinin bozulması da seçici geçirgenliği bozar.",
+    "D": "Yalnız IV eksiktir; nefrin bozukluğu kadar podosit hasarı da proteinürinin temel nedenidir.",
+    "E": "Dördünü birden kapsamak yanlıştır; nefrotik proteinürinin temeli olarak tanımlanan mekanizmalar podosit hasarı ile nefrin ve podosin gibi yarık diyafram proteinlerinin bozulmasıdır."
+   },
+   "ozet": "Nefrotik sendromdaki proteinürinin temeli podosit hasarıdır; ayak uzantılarının füzyonu ve nefrin, podosin gibi yarık diyafram proteinlerinin bozulması filtrasyon bariyerini bozar.",
+   "metin": "**Soru.** Aşağıdaki durumlar veriliyor:\nI. Mezangiyal hücre proliferasyonu\nII. Podosit hasarı\nIII. Kresent (hilal) formasyonu\nIV. Nefrin yapısında bozukluk\nBunlardan hangisi/hangileri nefrotik sendromdaki proteinüriye sebep olan durumlardır?\n\n**A)** I, II ve III · **B)** I ve III · **C)** II ve IV · **D)** Yalnız IV · **E)** I, II, III ve IV\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **I, II ve III** — I, II ve III birlikteliği yanlıştır; dizide nefrin bozukluğu eksiktir, oysa yarık diyafram proteinlerinin bozulması podosit hasarıyla birlikte proteinürinin temelidir.\n- **I ve III** — I ve III, nefrotik proteinürinin temeli olarak tanımlanan podosit hasarını ve nefrin gibi yarık diyafram proteinlerinin bozulmasını dışarıda bırakır.\n- **II ve IV** — II ve IV doğru: podosit hasarı ayak uzantılarının füzyonuna yol açar, nefrin gibi yarık diyafram proteinlerinin bozulması da seçici geçirgenliği bozar.\n- **Yalnız IV** — Yalnız IV eksiktir; nefrin bozukluğu kadar podosit hasarı da proteinürinin temel nedenidir.\n- **I, II, III ve IV** — Dördünü birden kapsamak yanlıştır; nefrotik proteinürinin temeli olarak tanımlanan mekanizmalar podosit hasarı ile nefrin ve podosin gibi yarık diyafram proteinlerinin bozulmasıdır.\n\n**Cevap: C** — II ve IV\n\n**Özet.** Nefrotik sendromdaki proteinürinin temeli podosit hasarıdır; ayak uzantılarının füzyonu ve nefrin, podosin gibi yarık diyafram proteinlerinin bozulması filtrasyon bariyerini bozar.",
+   "ses": "Aşağıdaki durumlar veriliyor. Bir, mezangiyal hücre proliferasyonu. İki, podosit hasarı. Üç, kresent, yani hilal formasyonu. Dört, nefrin yapısında bozukluk. Bunlardan hangisi ya da hangileri nefrotik sendromdaki proteinüriye sebep olan durumlardır?\nA, bir, iki ve üç\nBe, bir ve üç\nCe, iki ve dört\nDe, yalnız dört\nE, bir, iki, üç ve dört\nŞimdi seçeneklere tek tek bakalım.\nBir, iki ve üç birlikteliği yanlıştır. Dizide nefrin bozukluğu eksiktir, oysa yarık diyafram proteinlerinin bozulması podosit hasarıyla birlikte proteinürinin temelidir.\nBir ve üç, nefrotik proteinürinin temeli olarak tanımlanan podosit hasarını ve nefrin gibi yarık diyafram proteinlerinin bozulmasını dışarıda bırakır.\nİki ve dört doğru. Podosit hasarı ayak uzantılarının füzyonuna yol açar, nefrin gibi yarık diyafram proteinlerinin bozulması da seçici geçirgenliği bozar.\nYalnız dört eksiktir. Nefrin bozukluğu kadar podosit hasarı da proteinürinin temel nedenidir.\nDördünü birden kapsamak yanlıştır. Nefrotik proteinürinin temeli olarak tanımlanan mekanizmalar, podosit hasarı ile nefrin ve podosin gibi yarık diyafram proteinlerinin bozulmasıdır.\nDoğru cevap Ce, iki ve dört\nNefrotik sendromdaki proteinürinin temeli podosit hasarıdır. Ayak uzantılarının füzyonu ve nefrin, podosin gibi yarık diyafram proteinlerinin bozulması filtrasyon bariyerini bozar.",
+   "kelime": 206
+  },
+  {
+   "no": 29,
+   "tur": "cikmis",
+   "soru": "Erişkinde en sık görülen primer nefrotik sendrom sebebi aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Diyabetik nefropati",
+    "B": "Minimal değişiklik hastalığı",
+    "C": "Goodpasture sendromu",
+    "D": "Fokal segmental glomerüloskleroz",
+    "E": "Poststreptokoksik glomerülonefrit"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Diyabetik nefropati nefrotik sendromun sekonder nedenidir; primer glomerüler hastalık sayılmaz, bu yüzden cevap değildir.",
+    "B": "Minimal değişiklik hastalığı çocuklarda en sık nedendir; erişkinde nefrotik sendromların yaklaşık %10'unu oluşturur.",
+    "C": "Erişkinde en sık primer neden FSGS'dir, onu membranöz nefropati izler. Goodpasture sendromu bu sorudaki ayrımı sağlamaz.",
+    "D": "Fokal segmental glomeruloskleroz doğru: erişkin nefrotik sendromlarının yaklaşık %35'iyle en sık primer nedendir; membranöz nefropati yaklaşık %30 ile onu izler.",
+    "E": "Poststreptokoksik glomerulonefrit, nefrotik değil nefritik sendrom yapan postenfeksiyöz glomerulonefrittir."
+   },
+   "ozet": "Nefrotik sendromun çocukta en sık nedeni minimal değişiklik hastalığı, erişkinde ise FSGS'dir; membranöz nefropati erişkinde yakın ikinci sıradadır.",
+   "metin": "**Soru.** Erişkinde en sık görülen primer nefrotik sendrom sebebi aşağıdakilerden hangisidir?\n\n**A)** Diyabetik nefropati · **B)** Minimal değişiklik hastalığı · **C)** Goodpasture sendromu · **D)** Fokal segmental glomerüloskleroz · **E)** Poststreptokoksik glomerülonefrit\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Diyabetik nefropati** — Diyabetik nefropati nefrotik sendromun sekonder nedenidir; primer glomerüler hastalık sayılmaz, bu yüzden cevap değildir.\n- **Minimal değişiklik hastalığı** — Minimal değişiklik hastalığı çocuklarda en sık nedendir; erişkinde nefrotik sendromların yaklaşık %10'unu oluşturur.\n- **Goodpasture sendromu** — Erişkinde en sık primer neden FSGS'dir, onu membranöz nefropati izler. Goodpasture sendromu bu sorudaki ayrımı sağlamaz.\n- **Fokal segmental glomerüloskleroz** — Fokal segmental glomeruloskleroz doğru: erişkin nefrotik sendromlarının yaklaşık %35'iyle en sık primer nedendir; membranöz nefropati yaklaşık %30 ile onu izler.\n- **Poststreptokoksik glomerülonefrit** — Poststreptokoksik glomerulonefrit, nefrotik değil nefritik sendrom yapan postenfeksiyöz glomerulonefrittir.\n\n**Cevap: D** — Fokal segmental glomerüloskleroz\n\n**Özet.** Nefrotik sendromun çocukta en sık nedeni minimal değişiklik hastalığı, erişkinde ise FSGS'dir; membranöz nefropati erişkinde yakın ikinci sıradadır.",
+   "ses": "Erişkinde en sık görülen primer nefrotik sendrom sebebi aşağıdakilerden hangisidir?\nA, Diyabetik nefropati\nBe, Minimal değişiklik hastalığı\nCe, Gudpasçır sendromu\nDe, Fokal segmental glomerüloskleroz\nE, Poststreptokoksik glomerülonefrit\nSeçenekleri sırayla değerlendirelim.\nDiyabetik nefropati nefrotik sendromun sekonder nedenidir. Primer glomerüler hastalık sayılmaz, bu yüzden cevap değildir.\nMinimal değişiklik hastalığı çocuklarda en sık nedendir. Erişkinde nefrotik sendromların yaklaşık yüzde onunu oluşturur.\nErişkinde en sık primer neden fokal segmental glomerulosklerozdur, onu membranöz nefropati izler. Goodpasture sendromu bu sorudaki ayrımı sağlamaz.\nFokal segmental glomeruloskleroz doğru. Erişkin nefrotik sendromlarının yaklaşık yüzde otuz beşiyle en sık primer nedendir. Membranöz nefropati yaklaşık yüzde otuz ile onu izler.\nPoststreptokoksik glomerulonefrit, nefrotik değil nefritik sendrom yapan postenfeksiyöz glomerulonefrittir.\nDoğru cevap De, Fokal segmental glomerüloskleroz\nNefrotik sendromun çocukta en sık nedeni minimal değişiklik hastalığı, erişkinde ise fokal segmental glomerulosklerozdur. Membranöz nefropati erişkinde yakın ikinci sıradadır.",
+   "kelime": 155
+  },
+  {
+   "no": 30,
+   "tur": "ornek",
+   "soru": "Yoğun birikim hastalığı eski sınıflamada hangi adla bilinir?",
+   "secenekler": {
+    "A": "MPGN tip I",
+    "B": "C3 glomerulonefrit",
+    "C": "Membranöz nefropati",
+    "D": "MPGN tip II",
+    "E": "Fokal segmental glomeruloskleroz"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "MPGN tip I, granüler IgG ve kompleman birikimiyle giden immün kompleks hastalığıdır; C3 glomerulopatisine dahil değildir.",
+    "B": "C3 glomerulonefrit, yoğun birikim hastalığıyla birlikte C3 glomerulopatisini oluşturan ikinci durumdur; onun eski adı değildir.",
+    "C": "Membranöz nefropati, subepitelyal immün kompleks birikimiyle tanımlanan ayrı bir hastalıktır; kompleman düzensizliği hastalığı değildir.",
+    "D": "MPGN tip II doğru: yoğun birikim hastalığı eski adıyla MPGN tip II'dir ve bugün C3 glomerulopatisi içinde yer alır.",
+    "E": "Fokal segmental glomeruloskleroz, podosit hasarıyla giden bir hasar paternidir; kompleman birikimiyle tanımlanmaz."
+   },
+   "ozet": "C3 glomerulopatisi, yoğun birikim hastalığı yani eski MPGN tip II ile C3 glomerulonefritten oluşur; ortak özellik IgG olmadan C3 birikimidir.",
+   "metin": "**Soru.** Yoğun birikim hastalığı eski sınıflamada hangi adla bilinir?\n\n**A)** MPGN tip I · **B)** C3 glomerulonefrit · **C)** Membranöz nefropati · **D)** MPGN tip II · **E)** Fokal segmental glomeruloskleroz\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **MPGN tip I** — MPGN tip I, granüler IgG ve kompleman birikimiyle giden immün kompleks hastalığıdır; C3 glomerulopatisine dahil değildir.\n- **C3 glomerulonefrit** — C3 glomerulonefrit, yoğun birikim hastalığıyla birlikte C3 glomerulopatisini oluşturan ikinci durumdur; onun eski adı değildir.\n- **Membranöz nefropati** — Membranöz nefropati, subepitelyal immün kompleks birikimiyle tanımlanan ayrı bir hastalıktır; kompleman düzensizliği hastalığı değildir.\n- **MPGN tip II** — MPGN tip II doğru: yoğun birikim hastalığı eski adıyla MPGN tip II'dir ve bugün C3 glomerulopatisi içinde yer alır.\n- **Fokal segmental glomeruloskleroz** — Fokal segmental glomeruloskleroz, podosit hasarıyla giden bir hasar paternidir; kompleman birikimiyle tanımlanmaz.\n\n**Cevap: D** — MPGN tip II\n\n**Özet.** C3 glomerulopatisi, yoğun birikim hastalığı yani eski MPGN tip II ile C3 glomerulonefritten oluşur; ortak özellik IgG olmadan C3 birikimidir.",
+   "ses": "Yoğun birikim hastalığı eski sınıflamada hangi adla bilinir?\nA, Me pe ge ne tip bir\nBe, Ce üç glomerulonefrit\nCe, Membranöz nefropati\nDe, Me pe ge ne tip iki\nE, Fokal segmental glomeruloskleroz\nHer seçeneği tek tek ele alalım.\nMe pe ge ne tip bir, granüler i ge ge ve kompleman birikimiyle giden immün kompleks hastalığıdır. Ce üç glomerulopatisine dahil değildir.\nCe üç glomerulonefrit, yoğun birikim hastalığıyla birlikte ce üç glomerulopatisini oluşturan ikinci durumdur. Onun eski adı değildir.\nMembranöz nefropati, subepitelyal immün kompleks birikimiyle tanımlanan ayrı bir hastalıktır. Kompleman düzensizliği hastalığı değildir.\nMe pe ge ne tip iki doğru. Yoğun birikim hastalığı eski adıyla me pe ge ne tip ikidir ve bugün ce üç glomerulopatisi içinde yer alır.\nFokal segmental glomeruloskleroz, podosit hasarıyla giden bir hasar paternidir. Kompleman birikimiyle tanımlanmaz.\nDoğru cevap De, Me pe ge ne tip iki\nCe üç glomerulopatisi, yoğun birikim hastalığı yani eski me pe ge ne tip iki ile ce üç glomerulonefritten oluşur. Ortak özellik i ge ge olmadan ce üç birikimidir.",
+   "kelime": 164
+  },
+  {
+   "no": 31,
+   "tur": "ornek",
+   "soru": "Glomerüler bazal membran antijenlerine karşı antikorlar immünfloresanda hangi deseni oluşturur?",
+   "secenekler": {
+    "A": "Doğrusal boyanma",
+    "B": "Granüler boyanma",
+    "C": "Negatif boyanma",
+    "D": "Segmental IgM tuzaklanması",
+    "E": "İzole güçlü C3 boyanması"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Doğrusal boyanma doğru: GBM boyunca bulunan antijenlere karşı antikorlar lineer bir boyama deseni oluşturur.",
+    "B": "Granüler boyanma, dolaşımda ya da yerinde oluşan immün komplekslerin GBM'de birikmesiyle görülür.",
+    "C": "Negatif boyanma minimal değişiklik hastalığında görülür; immünfloresanda immünoglobulin veya kompleman birikimi yoktur.",
+    "D": "Segmental IgM ve kompleman kapanması FSGS'nin sklerotik segmentlerinde görülen nonspesifik bulgudur.",
+    "E": "İzole güçlü C3 boyanması C3 glomerulopatisinin bulgusudur; IgG, C1q ve C4 genellikle yoktur."
+   },
+   "ozet": "İmmün kompleksler GBM'de granüler, GBM antijenlerine karşı antikorlar ise doğrusal desen verir; sonuç geçirgenlik artışı ve inflamasyonun bir birleşimi olabilir.",
+   "metin": "**Soru.** Glomerüler bazal membran antijenlerine karşı antikorlar immünfloresanda hangi deseni oluşturur?\n\n**A)** Doğrusal boyanma · **B)** Granüler boyanma · **C)** Negatif boyanma · **D)** Segmental IgM tuzaklanması · **E)** İzole güçlü C3 boyanması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Doğrusal boyanma** — Doğrusal boyanma doğru: GBM boyunca bulunan antijenlere karşı antikorlar lineer bir boyama deseni oluşturur.\n- **Granüler boyanma** — Granüler boyanma, dolaşımda ya da yerinde oluşan immün komplekslerin GBM'de birikmesiyle görülür.\n- **Negatif boyanma** — Negatif boyanma minimal değişiklik hastalığında görülür; immünfloresanda immünoglobulin veya kompleman birikimi yoktur.\n- **Segmental IgM tuzaklanması** — Segmental IgM ve kompleman kapanması FSGS'nin sklerotik segmentlerinde görülen nonspesifik bulgudur.\n- **İzole güçlü C3 boyanması** — İzole güçlü C3 boyanması C3 glomerulopatisinin bulgusudur; IgG, C1q ve C4 genellikle yoktur.\n\n**Cevap: A** — Doğrusal boyanma\n\n**Özet.** İmmün kompleksler GBM'de granüler, GBM antijenlerine karşı antikorlar ise doğrusal desen verir; sonuç geçirgenlik artışı ve inflamasyonun bir birleşimi olabilir.",
+   "ses": "Glomerüler bazal membran antijenlerine karşı antikorlar immünfloresanda hangi deseni oluşturur?\nA, Doğrusal boyanma\nBe, Granüler boyanma\nCe, Negatif boyanma\nDe, Segmental i ge me tuzaklanması\nE, İzole güçlü ce üç boyanması\nŞıkları sırasıyla gözden geçirelim.\nDoğrusal boyanma doğru, ge be me boyunca bulunan antijenlere karşı antikorlar lineer bir boyama deseni oluşturur.\nGranüler boyanma, dolaşımda ya da yerinde oluşan immün komplekslerin ge be mede birikmesiyle görülür.\nNegatif boyanma minimal değişiklik hastalığında görülür. İmmünfloresanda immünoglobulin veya kompleman birikimi yoktur.\nSegmental i ge me ve kompleman kapanması fe se ge senin sklerotik segmentlerinde görülen nonspesifik bulgudur.\nİzole güçlü ce üç boyanması ce üç glomerulopatisinin bulgusudur. İ ge ge, ce bir ku ve ce dört genellikle yoktur.\nDoğru cevap A, Doğrusal boyanma\nİmmün kompleksler ge be mede granüler, ge be me antijenlerine karşı antikorlar ise doğrusal desen verir. Sonuç geçirgenlik artışı ve inflamasyonun bir birleşimi olabilir.",
+   "kelime": 149
+  },
+  {
+   "no": 32,
+   "tur": "ornek",
+   "soru": "Sistemik lupus eritematozusta nefrotik sendroma yol açan lupus nefriti hangisidir?",
+   "secenekler": {
+    "A": "Sınıf V, membranöz",
+    "B": "Nodüler glomeruloskleroz",
+    "C": "Mezangium ve kapiller duvarda amiloid",
+    "D": "Fokal segmental skleroz",
+    "E": "Minimal değişiklik paterni"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Sınıf V, membranöz doğru: lupus nefritinin membranöz sınıfı nefrotik sendroma yol açar.",
+    "B": "Nodüler glomeruloskleroz, yani Kimmelstiel–Wilson lezyonu, diyabetik nefropatinin bulgusudur.",
+    "C": "Mezangium ve kapiller duvarda amiloid birikimi amiloid nefropatisini tanımlar; lupusa ait değildir.",
+    "D": "Fokal segmental skleroz, nefron kaybına adaptasyon, HIV ve heroin gibi nedenlerle gelişen FSGS paternidir.",
+    "E": "Minimal değişiklik paterni ışıkta normal glomerülle giden, çocukta en sık nefrotik sendrom nedenidir; lupus nefriti sınıfı değildir."
+   },
+   "ozet": "Sekonder nefrotik sendromda diyabet GBM kalınlaşması ve nodüler skleroz, amiloidoz mezangium ve kapiller duvarda amiloid, SLE ise sınıf V membranöz lupus nefriti yapar.",
+   "metin": "**Soru.** Sistemik lupus eritematozusta nefrotik sendroma yol açan lupus nefriti hangisidir?\n\n**A)** Sınıf V, membranöz · **B)** Nodüler glomeruloskleroz · **C)** Mezangium ve kapiller duvarda amiloid · **D)** Fokal segmental skleroz · **E)** Minimal değişiklik paterni\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Sınıf V, membranöz** — Sınıf V, membranöz doğru: lupus nefritinin membranöz sınıfı nefrotik sendroma yol açar.\n- **Nodüler glomeruloskleroz** — Nodüler glomeruloskleroz, yani Kimmelstiel–Wilson lezyonu, diyabetik nefropatinin bulgusudur.\n- **Mezangium ve kapiller duvarda amiloid** — Mezangium ve kapiller duvarda amiloid birikimi amiloid nefropatisini tanımlar; lupusa ait değildir.\n- **Fokal segmental skleroz** — Fokal segmental skleroz, nefron kaybına adaptasyon, HIV ve heroin gibi nedenlerle gelişen FSGS paternidir.\n- **Minimal değişiklik paterni** — Minimal değişiklik paterni ışıkta normal glomerülle giden, çocukta en sık nefrotik sendrom nedenidir; lupus nefriti sınıfı değildir.\n\n**Cevap: A** — Sınıf V, membranöz\n\n**Özet.** Sekonder nefrotik sendromda diyabet GBM kalınlaşması ve nodüler skleroz, amiloidoz mezangium ve kapiller duvarda amiloid, SLE ise sınıf V membranöz lupus nefriti yapar.",
+   "ses": "Sistemik lupus eritematozusta nefrotik sendroma yol açan lupus nefriti hangisidir?\nA, Sınıf beş, membranöz\nBe, Nodüler glomeruloskleroz\nCe, Mezangium ve kapiller duvarda amiloid\nDe, Fokal segmental skleroz\nE, Minimal değişiklik paterni\nŞimdi seçeneklere tek tek bakalım.\nSınıf beş, membranöz doğru. Lupus nefritinin membranöz sınıfı nefrotik sendroma yol açar.\nNodüler glomeruloskleroz, yani Kimmelstil Vilson lezyonu, diyabetik nefropatinin bulgusudur.\nMezangium ve kapiller duvarda amiloid birikimi amiloid nefropatisini tanımlar. Lupusa ait değildir.\nFokal segmental skleroz, nefron kaybına adaptasyon, ha i ve ve eroin gibi nedenlerle gelişen fokal segmental glomeruloskleroz paternidir.\nMinimal değişiklik paterni ışıkta normal glomerülle giden, çocukta en sık nefrotik sendrom nedenidir. Lupus nefriti sınıfı değildir.\nDoğru cevap A, Sınıf beş, membranöz\nSekonder nefrotik sendromda diyabet ge be me kalınlaşması ve nodüler skleroz, amiloidoz mezangium ve kapiller duvarda amiloid yapar. Sistemik lupus eritematozus ise sınıf beş membranöz lupus nefriti yapar.",
+   "kelime": 161
+  },
+  {
+   "no": 33,
+   "tur": "ornek",
+   "soru": "Nefrotik sendromda hipoalbümineminin tanımlayıcı serum albümin düzeyi hangisidir?",
+   "secenekler": {
+    "A": "3,5 g/dL altı",
+    "B": "3 g/dL altı",
+    "C": "2 g/dL altı",
+    "D": "4 g/dL altı",
+    "E": "1 g/dL altı"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "3,5 değeri erişkinde ağır proteinüri eşiğidir, yani günde 3,5 gram ya da daha fazla protein kaybı; albümin sınırı değildir.",
+    "B": "3 g/dL altı doğru: nefrotik sendromda hipoalbüminemi serum albümininin 3 g/dL altına düşmesidir.",
+    "C": "Hipoalbümineminin tanımlayıcı sınırı daha yüksektir. 2 g/dL altı bu sorudaki ayrımı sağlamaz.",
+    "D": "4 g/dL altı tanımda kullanılan değer değildir; albümin sınırı 3, proteinüri sınırı ise günde 3,5 gramdır.",
+    "E": "1 g/dL altı tanımda geçmeyen, çok düşük bir değerdir; nefrotik hipoalbüminemi daha yüksek bir sınırla tanımlanır."
+   },
+   "ozet": "Nefrotik sendromun bileşenleri erişkinde günde 3,5 gram ya da üzeri proteinüri, 3 g/dL altında serum albümini, generalize ödem, hiperlipidemi ve lipidüridir.",
+   "metin": "**Soru.** Nefrotik sendromda hipoalbümineminin tanımlayıcı serum albümin düzeyi hangisidir?\n\n**A)** 3,5 g/dL altı · **B)** 3 g/dL altı · **C)** 2 g/dL altı · **D)** 4 g/dL altı · **E)** 1 g/dL altı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **3,5 g/dL altı** — 3,5 değeri erişkinde ağır proteinüri eşiğidir, yani günde 3,5 gram ya da daha fazla protein kaybı; albümin sınırı değildir.\n- **3 g/dL altı** — 3 g/dL altı doğru: nefrotik sendromda hipoalbüminemi serum albümininin 3 g/dL altına düşmesidir.\n- **2 g/dL altı** — Hipoalbümineminin tanımlayıcı sınırı daha yüksektir. 2 g/dL altı bu sorudaki ayrımı sağlamaz.\n- **4 g/dL altı** — 4 g/dL altı tanımda kullanılan değer değildir; albümin sınırı 3, proteinüri sınırı ise günde 3,5 gramdır.\n- **1 g/dL altı** — 1 g/dL altı tanımda geçmeyen, çok düşük bir değerdir; nefrotik hipoalbüminemi daha yüksek bir sınırla tanımlanır.\n\n**Cevap: B** — 3 g/dL altı\n\n**Özet.** Nefrotik sendromun bileşenleri erişkinde günde 3,5 gram ya da üzeri proteinüri, 3 g/dL altında serum albümini, generalize ödem, hiperlipidemi ve lipidüridir.",
+   "ses": "Nefrotik sendromda hipoalbümineminin tanımlayıcı serum albümin düzeyi hangisidir?\nA, Üç virgül beş gram desilitre altı\nBe, Üç gram desilitre altı\nCe, İki gram desilitre altı\nDe, Dört gram desilitre altı\nE, Bir gram desilitre altı\nSeçenekleri sırayla değerlendirelim.\nÜç virgül beş değeri erişkinde ağır proteinüri eşiğidir, yani günde üç virgül beş gram ya da daha fazla protein kaybı. Albümin sınırı değildir.\nÜç gram desilitre altı doğru, nefrotik sendromda hipoalbüminemi serum albümininin üç gram desilitre altına düşmesidir.\nHipoalbümineminin tanımlayıcı sınırı daha yüksektir. iki g/dL altı bu sorudaki ayrımı sağlamaz.\nDört gram desilitre altı tanımda kullanılan değer değildir. Albümin sınırı üç, proteinüri sınırı ise günde üç virgül beş gramdır.\nBir gram desilitre altı tanımda geçmeyen, çok düşük bir değerdir. Nefrotik hipoalbüminemi daha yüksek bir sınırla tanımlanır.\nDoğru cevap Be, Üç gram desilitre altı\nNefrotik sendromun bileşenleri erişkinde günde üç virgül beş gram ya da üzeri proteinüri, üç gram desilitre altında serum albümini, generalize ödem, hiperlipidemi ve lipidüridir.",
+   "kelime": 166
+  },
+  {
+   "no": 34,
+   "tur": "ornek",
+   "soru": "FSGS'de ışık mikroskopisinde sklerotik odaklarda görülen hücre hangisidir?",
+   "secenekler": {
+    "A": "Mezangiyal hücre interpozisyonu",
+    "B": "Köpüklü makrofaj",
+    "C": "Mikrovillus oluşturan podosit",
+    "D": "Hiperhücreli lobüllü yapı",
+    "E": "Diken oluşturan epitel"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Mezangiyal hücrelerin GBM içine interpozisyonu, MPGN tip I'de çift kontur görünümünün nedenidir.",
+    "B": "Köpüklü makrofaj doğru: FSGS'nin sklerotik odaklarında hiyalin ve matriks artışıyla birlikte lipid yüklü makrofajlar görülür.",
+    "C": "Mikrovillus oluşumu ve vakuolizasyon, minimal değişiklik hastalığında elektron mikroskopisiyle görülen podosit değişikliğidir.",
+    "D": "Büyük, hiperhücreli ve lobüllü glomerül, MPGN tip I'in ışık mikroskopisi görünümüdür.",
+    "E": "Diken görünümü, membranöz nefropatide subepitelyal birikintiler arasındaki bazal membran çıkıntılarıdır; hücre değildir."
+   },
+   "ozet": "FSGS'de skleroz odaklarında kılcal lümen tıkanması, mezangiyal matriks artışı, hiyalin birikimi ve köpüklü makrofajlar görülür.",
+   "metin": "**Soru.** FSGS'de ışık mikroskopisinde sklerotik odaklarda görülen hücre hangisidir?\n\n**A)** Mezangiyal hücre interpozisyonu · **B)** Köpüklü makrofaj · **C)** Mikrovillus oluşturan podosit · **D)** Hiperhücreli lobüllü yapı · **E)** Diken oluşturan epitel\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Mezangiyal hücre interpozisyonu** — Mezangiyal hücrelerin GBM içine interpozisyonu, MPGN tip I'de çift kontur görünümünün nedenidir.\n- **Köpüklü makrofaj** — Köpüklü makrofaj doğru: FSGS'nin sklerotik odaklarında hiyalin ve matriks artışıyla birlikte lipid yüklü makrofajlar görülür.\n- **Mikrovillus oluşturan podosit** — Mikrovillus oluşumu ve vakuolizasyon, minimal değişiklik hastalığında elektron mikroskopisiyle görülen podosit değişikliğidir.\n- **Hiperhücreli lobüllü yapı** — Büyük, hiperhücreli ve lobüllü glomerül, MPGN tip I'in ışık mikroskopisi görünümüdür.\n- **Diken oluşturan epitel** — Diken görünümü, membranöz nefropatide subepitelyal birikintiler arasındaki bazal membran çıkıntılarıdır; hücre değildir.\n\n**Cevap: B** — Köpüklü makrofaj\n\n**Özet.** FSGS'de skleroz odaklarında kılcal lümen tıkanması, mezangiyal matriks artışı, hiyalin birikimi ve köpüklü makrofajlar görülür.",
+   "ses": "Fokal segmental glomerulosklerozda ışık mikroskopisinde sklerotik odaklarda görülen hücre hangisidir?\nA, Mezangiyal hücre interpozisyonu\nBe, Köpüklü makrofaj\nCe, Mikrovillus oluşturan podosit\nDe, Hiperhücreli lobüllü yapı\nE, Diken oluşturan epitel\nHer seçeneği tek tek ele alalım.\nMezangiyal hücrelerin ge be me içine interpozisyonu, me pe ge ne tip birde çift kontur görünümünün nedenidir.\nKöpüklü makrofaj doğru. Fokal segmental glomerulosklerozun sklerotik odaklarında hiyalin ve matriks artışıyla birlikte lipid yüklü makrofajlar görülür.\nMikrovillus oluşumu ve vakuolizasyon, minimal değişiklik hastalığında elektron mikroskopisiyle görülen podosit değişikliğidir.\nBüyük, hiperhücreli ve lobüllü glomerül, me pe ge ne tip birin ışık mikroskopisi görünümüdür.\nDiken görünümü, membranöz nefropatide subepitelyal birikintiler arasındaki bazal membran çıkıntılarıdır. Hücre değildir.\nDoğru cevap Be, Köpüklü makrofaj\nFokal segmental glomerulosklerozda skleroz odaklarında kılcal lümen tıkanması, mezangiyal matriks artışı, hiyalin birikimi ve köpüklü makrofajlar görülür.",
+   "kelime": 146
+  },
+  {
+   "no": 35,
+   "tur": "ornek",
+   "soru": "Nefrotik sendromda hiperlipideminin mekanizması hangisidir?",
+   "secenekler": {
+    "A": "Karaciğerde lipoprotein sentezinin artması",
+    "B": "Plazma onkotik basıncının artması",
+    "C": "GBM'nin lipoprotein geçirgenliğinin artması",
+    "D": "Proksimal tübülde lipid birikimi",
+    "E": "Mezangiyal matrikste lipid tutulması"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Karaciğerde lipoprotein sentezinin artması doğru: buna lipid katabolizmasının azalması eşlik eder ve hiperlipidemi gelişir.",
+    "B": "Plazma onkotik basıncı artmaz, tersine albümin kaybıyla azalır; bu azalma ödemin mekanizmasıdır.",
+    "C": "GBM'nin lipoproteinlere geçirgenliğinin artması lipidüriyi açıklar; kandaki lipid artışının nedeni değildir.",
+    "D": "Proksimal tübüllerde protein damlacıkları ve lipidler minimal değişiklik hastalığının tübül bulgusudur; hiperlipidemi mekanizması değildir.",
+    "E": "Mezangiyal matrikste protein ve lipid tutulması FSGS'de hiperfiltrasyonun sonucudur; sistemik hiperlipidemiyi açıklamaz."
+   },
+   "ozet": "Hiperlipidemi karaciğerde lipoprotein sentezinin artması ve lipid katabolizmasının azalmasıyla gelişir; ödem ise plazma kolloid ozmotik basıncının düşmesiyle oluşur.",
+   "metin": "**Soru.** Nefrotik sendromda hiperlipideminin mekanizması hangisidir?\n\n**A)** Karaciğerde lipoprotein sentezinin artması · **B)** Plazma onkotik basıncının artması · **C)** GBM'nin lipoprotein geçirgenliğinin artması · **D)** Proksimal tübülde lipid birikimi · **E)** Mezangiyal matrikste lipid tutulması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Karaciğerde lipoprotein sentezinin artması** — Karaciğerde lipoprotein sentezinin artması doğru: buna lipid katabolizmasının azalması eşlik eder ve hiperlipidemi gelişir.\n- **Plazma onkotik basıncının artması** — Plazma onkotik basıncı artmaz, tersine albümin kaybıyla azalır; bu azalma ödemin mekanizmasıdır.\n- **GBM'nin lipoprotein geçirgenliğinin artması** — GBM'nin lipoproteinlere geçirgenliğinin artması lipidüriyi açıklar; kandaki lipid artışının nedeni değildir.\n- **Proksimal tübülde lipid birikimi** — Proksimal tübüllerde protein damlacıkları ve lipidler minimal değişiklik hastalığının tübül bulgusudur; hiperlipidemi mekanizması değildir.\n- **Mezangiyal matrikste lipid tutulması** — Mezangiyal matrikste protein ve lipid tutulması FSGS'de hiperfiltrasyonun sonucudur; sistemik hiperlipidemiyi açıklamaz.\n\n**Cevap: A** — Karaciğerde lipoprotein sentezinin artması\n\n**Özet.** Hiperlipidemi karaciğerde lipoprotein sentezinin artması ve lipid katabolizmasının azalmasıyla gelişir; ödem ise plazma kolloid ozmotik basıncının düşmesiyle oluşur.",
+   "ses": "Nefrotik sendromda hiperlipideminin mekanizması hangisidir?\nA, Karaciğerde lipoprotein sentezinin artması\nBe, Plazma onkotik basıncının artması\nCe, Ge be menin lipoprotein geçirgenliğinin artması\nDe, Proksimal tübülde lipid birikimi\nE, Mezangiyal matrikste lipid tutulması\nŞıkları sırasıyla gözden geçirelim.\nKaraciğerde lipoprotein sentezinin artması doğru, buna lipid katabolizmasının azalması eşlik eder ve hiperlipidemi gelişir.\nPlazma onkotik basıncı artmaz, tersine albümin kaybıyla azalır. Bu azalma ödemin mekanizmasıdır.\nGe be menin lipoproteinlere geçirgenliğinin artması lipidüriyi açıklar. Kandaki lipid artışının nedeni değildir.\nProksimal tübüllerde protein damlacıkları ve lipidler minimal değişiklik hastalığının tübül bulgusudur. Hiperlipidemi mekanizması değildir.\nMezangiyal matrikste protein ve lipid tutulması fe se ge sede hiperfiltrasyonun sonucudur. Sistemik hiperlipidemiyi açıklamaz.\nDoğru cevap A, Karaciğerde lipoprotein sentezinin artması\nHiperlipidemi karaciğerde lipoprotein sentezinin artması ve lipid katabolizmasının azalmasıyla gelişir. Ödem ise plazma kolloid ozmotik basıncının düşmesiyle oluşur.",
+   "kelime": 159
+  },
+  {
+   "no": 36,
+   "tur": "ornek",
+   "soru": "GBM kalınlaşmasıyla mezangiyal hiperhücreliliği birlikte gösteren glomerüler hastalık hangisidir?",
+   "secenekler": {
+    "A": "Membranöz nefropati",
+    "B": "Minimal değişiklik hastalığı",
+    "C": "Diyabetik nefropati",
+    "D": "Fokal segmental glomeruloskleroz",
+    "E": "MPGN tip I"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Membranöz nefropatide kılcal duvar difüz kalınlaşır ama hücre proliferasyonu ve inflamasyon yoktur.",
+    "B": "Minimal değişiklik hastalığında ışık mikroskopisinde glomeruller normal görünür; kalınlaşma ya da proliferasyon yoktur.",
+    "C": "Diyabetik nefropatide GBM kalınlaşmasına mezangiyal hiperhücrelilik değil, Kimmelstiel–Wilson nodülleri eşlik eder.",
+    "D": "Fokal segmental glomeruloskleroz, glomerülün bir kısmını tutan skleroz odaklarıyla tanımlanır; proliferatif patern değildir.",
+    "E": "MPGN tip I doğru: GBM kalınlaşması ile mezangiyal hiperhücreliliği birleştiren membranöz artı proliferatif paterndir."
+   },
+   "ozet": "MPGN tip I membranöz ve proliferatif paterni birleştirir; çocuk ve genç erişkinde nefrotik ve nefritik bulguların karışımıyla gider.",
+   "metin": "**Soru.** GBM kalınlaşmasıyla mezangiyal hiperhücreliliği birlikte gösteren glomerüler hastalık hangisidir?\n\n**A)** Membranöz nefropati · **B)** Minimal değişiklik hastalığı · **C)** Diyabetik nefropati · **D)** Fokal segmental glomeruloskleroz · **E)** MPGN tip I\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Membranöz nefropati** — Membranöz nefropatide kılcal duvar difüz kalınlaşır ama hücre proliferasyonu ve inflamasyon yoktur.\n- **Minimal değişiklik hastalığı** — Minimal değişiklik hastalığında ışık mikroskopisinde glomeruller normal görünür; kalınlaşma ya da proliferasyon yoktur.\n- **Diyabetik nefropati** — Diyabetik nefropatide GBM kalınlaşmasına mezangiyal hiperhücrelilik değil, Kimmelstiel–Wilson nodülleri eşlik eder.\n- **Fokal segmental glomeruloskleroz** — Fokal segmental glomeruloskleroz, glomerülün bir kısmını tutan skleroz odaklarıyla tanımlanır; proliferatif patern değildir.\n- **MPGN tip I** — MPGN tip I doğru: GBM kalınlaşması ile mezangiyal hiperhücreliliği birleştiren membranöz artı proliferatif paterndir.\n\n**Cevap: E** — MPGN tip I\n\n**Özet.** MPGN tip I membranöz ve proliferatif paterni birleştirir; çocuk ve genç erişkinde nefrotik ve nefritik bulguların karışımıyla gider.",
+   "ses": "Ge be me kalınlaşmasıyla mezangiyal hiperhücreliliği birlikte gösteren glomerüler hastalık hangisidir?\nA, Membranöz nefropati\nBe, Minimal değişiklik hastalığı\nCe, Diyabetik nefropati\nDe, Fokal segmental glomeruloskleroz\nE, Me pe ge ne tip bir\nŞimdi seçeneklere tek tek bakalım.\nMembranöz nefropatide kılcal duvar difüz kalınlaşır ama hücre proliferasyonu ve inflamasyon yoktur.\nMinimal değişiklik hastalığında ışık mikroskopisinde glomeruller normal görünür. Kalınlaşma ya da proliferasyon yoktur.\nDiyabetik nefropatide ge be me kalınlaşmasına mezangiyal hiperhücrelilik değil, Kimmelstil Vilson nodülleri eşlik eder.\nFokal segmental glomeruloskleroz, glomerülün bir kısmını tutan skleroz odaklarıyla tanımlanır. Proliferatif patern değildir.\nMe pe ge ne tip bir doğru. Ge be me kalınlaşması ile mezangiyal hiperhücreliliği birleştiren membranöz artı proliferatif paterndir.\nDoğru cevap E, Me pe ge ne tip bir\nMe pe ge ne tip bir membranöz ve proliferatif paterni birleştirir. Çocuk ve genç erişkinde nefrotik ve nefritik bulguların karışımıyla gider.",
+   "kelime": 149
+  },
+  {
+   "no": 37,
+   "tur": "ornek",
+   "soru": "Minimal değişiklik hastalığında T hücre kökenli geçirgenlik faktörleri dışında olası kabul edilen mekanizma hangisidir?",
+   "secenekler": {
+    "A": "PLA2R otoantikoru",
+    "B": "C3 nefritik faktör",
+    "C": "Subepitelyal immün kompleks",
+    "D": "Anti-GBM antikoru",
+    "E": "Yarık diyafram proteinlerine antikor"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "PLA2R otoantikoru, primer membranöz nefropatide podosit antijenine bağlanıp subepitelyal kompleks oluşturur.",
+    "B": "C3 nefritik faktör, C3 konvertazını stabilize eden otoantikordur; C3 glomerulopatisinin nedenidir.",
+    "C": "Subepitelyal immün kompleks membranöz nefropatinin özelliğidir; minimal değişiklik hastalığında immünfloresan negatiftir.",
+    "D": "Anti-GBM antikorları bazal membran antijenine bağlanıp doğrusal desen verir; minimal değişiklikte birikim yoktur.",
+    "E": "Yarık diyafram proteinlerine antikor doğru: nefrin ve podosine karşı antikorlar, T hücre kökenli faktörlerle birlikte olası mekanizmadır."
+   },
+   "ozet": "Minimal değişiklik hastalığında podosit hasarının olası nedenleri T hücre kökenli geçirgenlik faktörleri ve yarık diyafram proteinlerine antikorlardır; kesin mekanizma belirsizdir.",
+   "metin": "**Soru.** Minimal değişiklik hastalığında T hücre kökenli geçirgenlik faktörleri dışında olası kabul edilen mekanizma hangisidir?\n\n**A)** PLA2R otoantikoru · **B)** C3 nefritik faktör · **C)** Subepitelyal immün kompleks · **D)** Anti-GBM antikoru · **E)** Yarık diyafram proteinlerine antikor\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **PLA2R otoantikoru** — PLA2R otoantikoru, primer membranöz nefropatide podosit antijenine bağlanıp subepitelyal kompleks oluşturur.\n- **C3 nefritik faktör** — C3 nefritik faktör, C3 konvertazını stabilize eden otoantikordur; C3 glomerulopatisinin nedenidir.\n- **Subepitelyal immün kompleks** — Subepitelyal immün kompleks membranöz nefropatinin özelliğidir; minimal değişiklik hastalığında immünfloresan negatiftir.\n- **Anti-GBM antikoru** — Anti-GBM antikorları bazal membran antijenine bağlanıp doğrusal desen verir; minimal değişiklikte birikim yoktur.\n- **Yarık diyafram proteinlerine antikor** — Yarık diyafram proteinlerine antikor doğru: nefrin ve podosine karşı antikorlar, T hücre kökenli faktörlerle birlikte olası mekanizmadır.\n\n**Cevap: E** — Yarık diyafram proteinlerine antikor\n\n**Özet.** Minimal değişiklik hastalığında podosit hasarının olası nedenleri T hücre kökenli geçirgenlik faktörleri ve yarık diyafram proteinlerine antikorlardır; kesin mekanizma belirsizdir.",
+   "ses": "Minimal değişiklik hastalığında te hücre kökenli geçirgenlik faktörleri dışında olası kabul edilen mekanizma hangisidir?\nA, Pe le a iki re otoantikoru\nBe, Ce üç nefritik faktör\nCe, Subepitelyal immün kompleks\nDe, Anti ge be me antikoru\nE, Yarık diyafram proteinlerine antikor\nSeçenekleri sırayla değerlendirelim.\nPe le a iki re otoantikoru, primer membranöz nefropatide podosit antijenine bağlanıp subepitelyal kompleks oluşturur.\nCe üç nefritik faktör, ce üç konvertazını stabilize eden otoantikordur. Ce üç glomerulopatisinin nedenidir.\nSubepitelyal immün kompleks membranöz nefropatinin özelliğidir. Minimal değişiklik hastalığında immünfloresan negatiftir.\nAnti ge be me antikorları bazal membran antijenine bağlanıp doğrusal desen verir. Minimal değişiklikte birikim yoktur.\nYarık diyafram proteinlerine antikor doğru, nefrin ve podosine karşı antikorlar, te hücre kökenli faktörlerle birlikte olası mekanizmadır.\nDoğru cevap E, Yarık diyafram proteinlerine antikor\nMinimal değişiklik hastalığında podosit hasarının olası nedenleri te hücre kökenli geçirgenlik faktörleri ve yarık diyafram proteinlerine antikorlardır. Kesin mekanizma belirsizdir.",
+   "kelime": 157
+  },
+  {
+   "no": 38,
+   "tur": "ornek",
+   "soru": "Minimal değişiklik hastalığında elektron mikroskopisinde ayak uzantısı silinmesine eşlik eden podosit değişikliği hangisidir?",
+   "secenekler": {
+    "A": "Subepitelyal yoğun birikinti",
+    "B": "Vakuolizasyon ve mikrovillus oluşumu",
+    "C": "Subendotelyal birikinti",
+    "D": "Mezangiyal hücre interpozisyonu",
+    "E": "GBM içi şerit birikim"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Subepitelyal yoğun birikinti membranöz nefropatinin bulgusudur; minimal değişiklikte elektron yoğun birikinti yoktur.",
+    "B": "Vakuolizasyon ve mikrovillus oluşumu doğru: yaygın ayak uzantısı silinmesine bunlar ve bazen podositin GBM'den ayrılması eşlik eder.",
+    "C": "Subendotelyal birikinti MPGN tip I'de mezangiyal birikintilerle birlikte görülür.",
+    "D": "Mezangiyal hücrelerin GBM içine interpozisyonu MPGN tip I'deki tramvay rayı görünümünün nedenidir.",
+    "E": "GBM içinde şerit benzeri yoğun birikim, yoğun birikim hastalığının elektron mikroskopisi bulgusudur."
+   },
+   "ozet": "Minimal değişiklik hastalığında ışık mikroskopisi normal, immünfloresan negatiftir; elektron mikroskopisinde yaygın ayak uzantısı silinmesi, vakuolizasyon ve mikrovillus oluşumu görülür.",
+   "metin": "**Soru.** Minimal değişiklik hastalığında elektron mikroskopisinde ayak uzantısı silinmesine eşlik eden podosit değişikliği hangisidir?\n\n**A)** Subepitelyal yoğun birikinti · **B)** Vakuolizasyon ve mikrovillus oluşumu · **C)** Subendotelyal birikinti · **D)** Mezangiyal hücre interpozisyonu · **E)** GBM içi şerit birikim\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Subepitelyal yoğun birikinti** — Subepitelyal yoğun birikinti membranöz nefropatinin bulgusudur; minimal değişiklikte elektron yoğun birikinti yoktur.\n- **Vakuolizasyon ve mikrovillus oluşumu** — Vakuolizasyon ve mikrovillus oluşumu doğru: yaygın ayak uzantısı silinmesine bunlar ve bazen podositin GBM'den ayrılması eşlik eder.\n- **Subendotelyal birikinti** — Subendotelyal birikinti MPGN tip I'de mezangiyal birikintilerle birlikte görülür.\n- **Mezangiyal hücre interpozisyonu** — Mezangiyal hücrelerin GBM içine interpozisyonu MPGN tip I'deki tramvay rayı görünümünün nedenidir.\n- **GBM içi şerit birikim** — GBM içinde şerit benzeri yoğun birikim, yoğun birikim hastalığının elektron mikroskopisi bulgusudur.\n\n**Cevap: B** — Vakuolizasyon ve mikrovillus oluşumu\n\n**Özet.** Minimal değişiklik hastalığında ışık mikroskopisi normal, immünfloresan negatiftir; elektron mikroskopisinde yaygın ayak uzantısı silinmesi, vakuolizasyon ve mikrovillus oluşumu görülür.",
+   "ses": "Minimal değişiklik hastalığında elektron mikroskopisinde ayak uzantısı silinmesine eşlik eden podosit değişikliği hangisidir?\nA, Subepitelyal yoğun birikinti\nBe, Vakuolizasyon ve mikrovillus oluşumu\nCe, Subendotelyal birikinti\nDe, Mezangiyal hücre interpozisyonu\nE, Ge be me içi şerit birikim\nHer seçeneği tek tek ele alalım.\nSubepitelyal yoğun birikinti membranöz nefropatinin bulgusudur. Minimal değişiklikte elektron yoğun birikinti yoktur.\nVakuolizasyon ve mikrovillus oluşumu doğru, yaygın ayak uzantısı silinmesine bunlar ve bazen podositin ge be meden ayrılması eşlik eder.\nSubendotelyal birikinti me pe ge ne tip birde mezangiyal birikintilerle birlikte görülür.\nMezangiyal hücrelerin ge be me içine interpozisyonu me pe ge ne tip birdeki tramvay rayı görünümünün nedenidir.\nGe be me içinde şerit benzeri yoğun birikim, yoğun birikim hastalığının elektron mikroskopisi bulgusudur.\nDoğru cevap Be, Vakuolizasyon ve mikrovillus oluşumu\nMinimal değişiklik hastalığında ışık mikroskopisi normal, immünfloresan negatiftir. Elektron mikroskopisinde yaygın ayak uzantısı silinmesi, vakuolizasyon ve mikrovillus oluşumu görülür.",
+   "kelime": 161
+  },
+  {
+   "no": 39,
+   "tur": "ornek",
+   "soru": "Minimal değişiklik hastalığında steroide yanıt veren çocukların ne kadarında tekrarlayan ataklar görülür?",
+   "secenekler": {
+    "A": "%5'ten az",
+    "B": "%10–30",
+    "C": "Yaklaşık %40",
+    "D": "%60–70'ten fazla",
+    "E": "%90'dan fazla"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "%5'ten az ifadesi nüks sıklığını olduğundan çok düşük gösterir; yanıt verenlerin çoğunda tekrarlayan atak olur.",
+    "B": "%10–30, membranöz nefropatide spontan veya kısmi remisyona giren hasta oranıdır.",
+    "C": "Yaklaşık %40, membranöz nefropatide 2–20 yılda böbrek yetmezliğine ilerleyen hasta oranıdır.",
+    "D": "%60–70'ten fazla doğru: steroide yanıt veren çocukların büyük kısmında tekrarlayan ataklar görülür.",
+    "E": "%90'dan fazla, minimal değişiklikte kortikosteroide yanıt veren çocukların oranıdır; nüks oranı değildir."
+   },
+   "ozet": "Minimal değişiklik hastalığında çocukların %90'dan fazlası kortikosteroide yanıt verir; yanıt verenlerin %60–70'ten fazlasında nüks olur, küçük bir grup FSGS'ye ilerler.",
+   "metin": "**Soru.** Minimal değişiklik hastalığında steroide yanıt veren çocukların ne kadarında tekrarlayan ataklar görülür?\n\n**A)** %5'ten az · **B)** %10–30 · **C)** Yaklaşık %40 · **D)** %60–70'ten fazla · **E)** %90'dan fazla\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **%5'ten az** — %5'ten az ifadesi nüks sıklığını olduğundan çok düşük gösterir; yanıt verenlerin çoğunda tekrarlayan atak olur.\n- **%10–30** — %10–30, membranöz nefropatide spontan veya kısmi remisyona giren hasta oranıdır.\n- **Yaklaşık %40** — Yaklaşık %40, membranöz nefropatide 2–20 yılda böbrek yetmezliğine ilerleyen hasta oranıdır.\n- **%60–70'ten fazla** — %60–70'ten fazla doğru: steroide yanıt veren çocukların büyük kısmında tekrarlayan ataklar görülür.\n- **%90'dan fazla** — %90'dan fazla, minimal değişiklikte kortikosteroide yanıt veren çocukların oranıdır; nüks oranı değildir.\n\n**Cevap: D** — %60–70'ten fazla\n\n**Özet.** Minimal değişiklik hastalığında çocukların %90'dan fazlası kortikosteroide yanıt verir; yanıt verenlerin %60–70'ten fazlasında nüks olur, küçük bir grup FSGS'ye ilerler.",
+   "ses": "Minimal değişiklik hastalığında steroide yanıt veren çocukların ne kadarında tekrarlayan ataklar görülür?\nA, Yüzde beşten az\nBe, Yüzde on ile otuz\nCe, Yaklaşık yüzde kırk\nDe, Yüzde altmış ile yetmişten fazla\nE, Yüzde doksandan fazla\nŞıkları sırasıyla gözden geçirelim.\nYüzde beşten az ifadesi nüks sıklığını olduğundan çok düşük gösterir. Yanıt verenlerin çoğunda tekrarlayan atak olur.\nYüzde on ile otuz, membranöz nefropatide spontan veya kısmi remisyona giren hasta oranıdır.\nYaklaşık yüzde kırk, membranöz nefropatide iki ile yirmi yılda böbrek yetmezliğine ilerleyen hasta oranıdır.\nYüzde altmış ile yetmişten fazla doğru, steroide yanıt veren çocukların büyük kısmında tekrarlayan ataklar görülür.\nYüzde doksandan fazla, minimal değişiklikte kortikosteroide yanıt veren çocukların oranıdır. Nüks oranı değildir.\nDoğru cevap De, Yüzde altmış ile yetmişten fazla\nMinimal değişiklik hastalığında çocukların yüzde doksandan fazlası kortikosteroide yanıt verir. Yanıt verenlerin yüzde altmış ile yetmişten fazlasında nüks olur, küçük bir grup fe se ge seye ilerler.",
+   "kelime": 141
+  },
+  {
+   "no": 40,
+   "tur": "ornek",
+   "soru": "Hangisi sekonder FSGS'de nefron kaybına adaptasyon grubunda yer alır?",
+   "secenekler": {
+    "A": "Obezite",
+    "B": "HIV ilişkili nefropati",
+    "C": "Eroin kullanımı",
+    "D": "Nefrin gen mutasyonu",
+    "E": "Kronik hepatit B"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Obezite doğru: tek böbrek ve kronik böbrek hastalığıyla birlikte nefron kaybına adaptasyon grubunda sekonder FSGS nedenidir.",
+    "B": "HIV ilişkili nefropati sekonder FSGS'nin enfeksiyon grubundadır; adaptasyon grubunda sayılmaz.",
+    "C": "Eroin, bazı terapötik ajanlarla birlikte sekonder FSGS'nin ilaç grubunda yer alır.",
+    "D": "Nefrin gen mutasyonu, podosit proteinlerini kodlayan genlerle ilgili genetik FSGS nedenlerindendir.",
+    "E": "Kronik hepatit B, sekonder membranöz nefropati ve MPGN nedenidir; sekonder FSGS grupları arasında sayılmaz."
+   },
+   "ozet": "Sekonder FSGS nefron kaybına adaptasyon, HIV ilişkili nefropati gibi enfeksiyonlar, eroin gibi ilaçlar ve podosit proteini gen mutasyonlarıyla gelişir.",
+   "metin": "**Soru.** Hangisi sekonder FSGS'de nefron kaybına adaptasyon grubunda yer alır?\n\n**A)** Obezite · **B)** HIV ilişkili nefropati · **C)** Eroin kullanımı · **D)** Nefrin gen mutasyonu · **E)** Kronik hepatit B\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Obezite** — Obezite doğru: tek böbrek ve kronik böbrek hastalığıyla birlikte nefron kaybına adaptasyon grubunda sekonder FSGS nedenidir.\n- **HIV ilişkili nefropati** — HIV ilişkili nefropati sekonder FSGS'nin enfeksiyon grubundadır; adaptasyon grubunda sayılmaz.\n- **Eroin kullanımı** — Eroin, bazı terapötik ajanlarla birlikte sekonder FSGS'nin ilaç grubunda yer alır.\n- **Nefrin gen mutasyonu** — Nefrin gen mutasyonu, podosit proteinlerini kodlayan genlerle ilgili genetik FSGS nedenlerindendir.\n- **Kronik hepatit B** — Kronik hepatit B, sekonder membranöz nefropati ve MPGN nedenidir; sekonder FSGS grupları arasında sayılmaz.\n\n**Cevap: A** — Obezite\n\n**Özet.** Sekonder FSGS nefron kaybına adaptasyon, HIV ilişkili nefropati gibi enfeksiyonlar, eroin gibi ilaçlar ve podosit proteini gen mutasyonlarıyla gelişir.",
+   "ses": "Hangisi sekonder fe se ge sede nefron kaybına adaptasyon grubunda yer alır?\nA, Obezite\nBe, Ha i ve ilişkili nefropati\nCe, Eroin kullanımı\nDe, Nefrin gen mutasyonu\nE, Kronik hepatit be\nŞimdi seçeneklere tek tek bakalım.\nObezite doğru, tek böbrek ve kronik böbrek hastalığıyla birlikte nefron kaybına adaptasyon grubunda sekonder fe se ge se nedenidir.\nHa i ve ilişkili nefropati sekonder fe se ge senin enfeksiyon grubundadır. Adaptasyon grubunda sayılmaz.\nEroin, bazı terapötik ajanlarla birlikte sekonder fe se ge senin ilaç grubunda yer alır.\nNefrin gen mutasyonu, podosit proteinlerini kodlayan genlerle ilgili genetik fe se ge se nedenlerindendir.\nKronik hepatit be, sekonder membranöz nefropati ve me pe ge ne nedenidir. Sekonder fe se ge se grupları arasında sayılmaz.\nDoğru cevap A, Obezite\nSekonder fe se ge se nefron kaybına adaptasyon, ha i ve ilişkili nefropati gibi enfeksiyonlar, eroin gibi ilaçlar ve podosit proteini gen mutasyonlarıyla gelişir.",
+   "kelime": 145
+  },
+  {
+   "no": 41,
+   "tur": "ornek",
+   "soru": "FSGS'de nefron kaybı sonrası hiperfiltrasyonda kalan glomerüllerde ne artar?",
+   "secenekler": {
+    "A": "Plazma onkotik basıncı",
+    "B": "Podosit sayısı",
+    "C": "Glomerüler kapiller basınç",
+    "D": "Serum C3 düzeyi",
+    "E": "Proteinüri seçiciliği"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Plazma onkotik basıncı nefrotik sendromda albümin kaybıyla azalır; bu azalma ödemin mekanizmasıdır.",
+    "B": "Podosit sayısı artmaz; FSGS'nin tüm formlarındaki ortak tema podosit hasarı ve kaybıdır.",
+    "C": "Glomerüler kapiller basınç doğru: hiperfiltrasyonda kapiller basınç artar, protein ve lipidler mezangiyal matrikste tutulur.",
+    "D": "Serum C3 düzeyi FSGS'de değil, C3 glomerulopatisinde değişir ve genellikle düşüktür.",
+    "E": "Proteinüri seçiciliği FSGS'de korunmaz; FSGS'de proteinüri seçici değildir."
+   },
+   "ozet": "Nefron kaybı sonrası hiperfiltrasyonda kapiller basınç artar, protein ve lipidler mezangiyal matrikste tutulur; segmental skleroz ve hiyalinizasyon zamanla global skleroza ilerler.",
+   "metin": "**Soru.** FSGS'de nefron kaybı sonrası hiperfiltrasyonda kalan glomerüllerde ne artar?\n\n**A)** Plazma onkotik basıncı · **B)** Podosit sayısı · **C)** Glomerüler kapiller basınç · **D)** Serum C3 düzeyi · **E)** Proteinüri seçiciliği\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Plazma onkotik basıncı** — Plazma onkotik basıncı nefrotik sendromda albümin kaybıyla azalır; bu azalma ödemin mekanizmasıdır.\n- **Podosit sayısı** — Podosit sayısı artmaz; FSGS'nin tüm formlarındaki ortak tema podosit hasarı ve kaybıdır.\n- **Glomerüler kapiller basınç** — Glomerüler kapiller basınç doğru: hiperfiltrasyonda kapiller basınç artar, protein ve lipidler mezangiyal matrikste tutulur.\n- **Serum C3 düzeyi** — Serum C3 düzeyi FSGS'de değil, C3 glomerulopatisinde değişir ve genellikle düşüktür.\n- **Proteinüri seçiciliği** — Proteinüri seçiciliği FSGS'de korunmaz; FSGS'de proteinüri seçici değildir.\n\n**Cevap: C** — Glomerüler kapiller basınç\n\n**Özet.** Nefron kaybı sonrası hiperfiltrasyonda kapiller basınç artar, protein ve lipidler mezangiyal matrikste tutulur; segmental skleroz ve hiyalinizasyon zamanla global skleroza ilerler.",
+   "ses": "Fe se ge sede nefron kaybı sonrası hiperfiltrasyonda kalan glomerüllerde ne artar?\nA, Plazma onkotik basıncı\nBe, Podosit sayısı\nCe, Glomerüler kapiller basınç\nDe, Serum ce üç düzeyi\nE, Proteinüri seçiciliği\nSeçenekleri sırayla değerlendirelim.\nPlazma onkotik basıncı nefrotik sendromda albümin kaybıyla azalır. Bu azalma ödemin mekanizmasıdır.\nPodosit sayısı artmaz. Fe se ge senin tüm formlarındaki ortak tema podosit hasarı ve kaybıdır.\nGlomerüler kapiller basınç doğru, hiperfiltrasyonda kapiller basınç artar, protein ve lipidler mezangiyal matrikste tutulur.\nSerum ce üç düzeyi fe se ge sede değil, ce üç glomerulopatisinde değişir ve genellikle düşüktür.\nProteinüri seçiciliği fe se ge sede korunmaz. Fe se ge sede proteinüri seçici değildir.\nDoğru cevap Ce, Glomerüler kapiller basınç\nNefron kaybı sonrası hiperfiltrasyonda kapiller basınç artar, protein ve lipidler mezangiyal matrikste tutulur. Segmental skleroz ve hiyalinizasyon zamanla global skleroza ilerler.",
+   "kelime": 144
+  },
+  {
+   "no": 42,
+   "tur": "ornek",
+   "soru": "FSGS'de sklerotik segmentlerde immünfloresanda görülen bulgu hangisidir?",
+   "secenekler": {
+    "A": "Granüler IgG ve C3 birikimi",
+    "B": "Doğrusal IgG boyanması",
+    "C": "İzole güçlü C3 boyanması",
+    "D": "Hiç boyanma olmaması",
+    "E": "Nonspesifik IgM ve kompleman"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Granüler IgG ve C3 birikimi immün kompleks hastalıklarında, örneğin membranöz nefropatide görülür.",
+    "B": "Doğrusal IgG boyanması GBM antijenlerine karşı antikorların oluşturduğu desendir.",
+    "C": "İzole güçlü C3 boyanması C3 glomerulopatisinin immünfloresan bulgusudur.",
+    "D": "Hiç boyanma olmaması minimal değişiklik hastalığında beklenir; FSGS'nin sklerotik segmentlerinde boyanma vardır.",
+    "E": "Nonspesifik IgM ve kompleman doğru: FSGS'de sklerotik segmentlerde IgM ve kompleman kapanması nonspesifik olarak görülür."
+   },
+   "ozet": "FSGS'de ışıkta segmental skleroz ve köpüklü makrofajlar, immünfloresanda nonspesifik IgM ve kompleman, elektron mikroskopisinde ayak uzantısı silinmesi görülür.",
+   "metin": "**Soru.** FSGS'de sklerotik segmentlerde immünfloresanda görülen bulgu hangisidir?\n\n**A)** Granüler IgG ve C3 birikimi · **B)** Doğrusal IgG boyanması · **C)** İzole güçlü C3 boyanması · **D)** Hiç boyanma olmaması · **E)** Nonspesifik IgM ve kompleman\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Granüler IgG ve C3 birikimi** — Granüler IgG ve C3 birikimi immün kompleks hastalıklarında, örneğin membranöz nefropatide görülür.\n- **Doğrusal IgG boyanması** — Doğrusal IgG boyanması GBM antijenlerine karşı antikorların oluşturduğu desendir.\n- **İzole güçlü C3 boyanması** — İzole güçlü C3 boyanması C3 glomerulopatisinin immünfloresan bulgusudur.\n- **Hiç boyanma olmaması** — Hiç boyanma olmaması minimal değişiklik hastalığında beklenir; FSGS'nin sklerotik segmentlerinde boyanma vardır.\n- **Nonspesifik IgM ve kompleman** — Nonspesifik IgM ve kompleman doğru: FSGS'de sklerotik segmentlerde IgM ve kompleman kapanması nonspesifik olarak görülür.\n\n**Cevap: E** — Nonspesifik IgM ve kompleman\n\n**Özet.** FSGS'de ışıkta segmental skleroz ve köpüklü makrofajlar, immünfloresanda nonspesifik IgM ve kompleman, elektron mikroskopisinde ayak uzantısı silinmesi görülür.",
+   "ses": "Fe se ge sede sklerotik segmentlerde immünfloresanda görülen bulgu hangisidir?\nA, Granüler i ge ge ve ce üç birikimi\nBe, Doğrusal i ge ge boyanması\nCe, İzole güçlü ce üç boyanması\nDe, Hiç boyanma olmaması\nE, Nonspesifik i ge me ve kompleman\nHer seçeneği tek tek ele alalım.\nGranüler i ge ge ve ce üç birikimi immün kompleks hastalıklarında, örneğin membranöz nefropatide görülür.\nDoğrusal i ge ge boyanması ge be me antijenlerine karşı antikorların oluşturduğu desendir.\nİzole güçlü ce üç boyanması ce üç glomerulopatisinin immünfloresan bulgusudur.\nHiç boyanma olmaması minimal değişiklik hastalığında beklenir. Fe se ge senin sklerotik segmentlerinde boyanma vardır.\nNonspesifik i ge me ve kompleman doğru, fe se ge sede sklerotik segmentlerde i ge me ve kompleman kapanması nonspesifik olarak görülür.\nDoğru cevap E, Nonspesifik i ge me ve kompleman\nFe se ge sede ışıkta segmental skleroz ve köpüklü makrofajlar, immünfloresanda nonspesifik i ge me ve kompleman, elektron mikroskopisinde ayak uzantısı silinmesi görülür.",
+   "kelime": 154
+  },
+  {
+   "no": 43,
+   "tur": "ornek",
+   "soru": "Membranöz nefropatide immün kompleks nasıl oluşur?",
+   "secenekler": {
+    "A": "Dolaşımdan subendotelyal birikimle",
+    "B": "İn situ subepitelyal olarak",
+    "C": "GBM'ye doğrusal antikor bağlanmasıyla",
+    "D": "Mezangiumda C3 nefritik faktörle",
+    "E": "GBM içinde yoğun birikimle"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Subendotelyal birikinti MPGN tip I'deki birikinti yerleşimine uyar; membranöz nefropatide kompleks yerinde oluşur.",
+    "B": "İn situ subepitelyal oluşum doğru: podosit antijenlerine karşı IgG4 otoantikorlar kompleksi yerinde, subepitelyal alanda kurar.",
+    "C": "GBM'ye doğrusal antikor bağlanması anti-GBM antikorlarının mekanizmasıdır; membranöz nefropatide desen granülerdir.",
+    "D": "C3 nefritik faktör, C3 glomerulopatisinde C3 konvertazını stabilize eden otoantikordur.",
+    "E": "GBM içinde yoğun birikim, yoğun birikim hastalığının, yani eski MPGN tip II'nin bulgusudur."
+   },
+   "ozet": "Membranöz nefropatide podosit antijenlerine, en sık PLA2R'ye karşı IgG4 otoantikorlar in situ subepitelyal kompleks oluşturur; inflamasyon az ya da hiç yoktur.",
+   "metin": "**Soru.** Membranöz nefropatide immün kompleks nasıl oluşur?\n\n**A)** Dolaşımdan subendotelyal birikimle · **B)** İn situ subepitelyal olarak · **C)** GBM'ye doğrusal antikor bağlanmasıyla · **D)** Mezangiumda C3 nefritik faktörle · **E)** GBM içinde yoğun birikimle\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Dolaşımdan subendotelyal birikimle** — Subendotelyal birikinti MPGN tip I'deki birikinti yerleşimine uyar; membranöz nefropatide kompleks yerinde oluşur.\n- **İn situ subepitelyal olarak** — İn situ subepitelyal oluşum doğru: podosit antijenlerine karşı IgG4 otoantikorlar kompleksi yerinde, subepitelyal alanda kurar.\n- **GBM'ye doğrusal antikor bağlanmasıyla** — GBM'ye doğrusal antikor bağlanması anti-GBM antikorlarının mekanizmasıdır; membranöz nefropatide desen granülerdir.\n- **Mezangiumda C3 nefritik faktörle** — C3 nefritik faktör, C3 glomerulopatisinde C3 konvertazını stabilize eden otoantikordur.\n- **GBM içinde yoğun birikimle** — GBM içinde yoğun birikim, yoğun birikim hastalığının, yani eski MPGN tip II'nin bulgusudur.\n\n**Cevap: B** — İn situ subepitelyal olarak\n\n**Özet.** Membranöz nefropatide podosit antijenlerine, en sık PLA2R'ye karşı IgG4 otoantikorlar in situ subepitelyal kompleks oluşturur; inflamasyon az ya da hiç yoktur.",
+   "ses": "Membranöz nefropatide immün kompleks nasıl oluşur?\nA, Dolaşımdan subendotelyal birikimle\nBe, İn situ subepitelyal olarak\nCe, Ge be meye doğrusal antikor bağlanmasıyla\nDe, Mezangiumda ce üç nefritik faktörle\nE, Ge be me içinde yoğun birikimle\nŞıkları sırasıyla gözden geçirelim.\nSubendotelyal birikinti me pe ge ne tip birdeki birikinti yerleşimine uyar. Membranöz nefropatide kompleks yerinde oluşur.\nİn situ subepitelyal oluşum doğru, podosit antijenlerine karşı i ge ge dört otoantikorlar kompleksi yerinde, subepitelyal alanda kurar.\nGe be meye doğrusal antikor bağlanması anti-ge be me antikorlarının mekanizmasıdır. Membranöz nefropatide desen granülerdir.\nCe üç nefritik faktör, ce üç glomerulopatisinde ce üç konvertazını stabilize eden otoantikordur.\nGe be me içinde yoğun birikim, yoğun birikim hastalığının, yani eski me pe ge ne tip ikinin bulgusudur.\nDoğru cevap Be, İn situ subepitelyal olarak\nMembranöz nefropatide podosit antijenlerine, en sık pe le a iki re'ye karşı i ge ge dört otoantikorlar in situ subepitelyal kompleks oluşturur. İnflamasyon az ya da hiç yoktur.",
+   "kelime": 160
+  },
+  {
+   "no": 44,
+   "tur": "ornek",
+   "soru": "Membranöz nefropatide elektron mikroskopisindeki diken görünümü neye karşılık gelir?",
+   "secenekler": {
+    "A": "Subepitelyal birikintinin kendisi",
+    "B": "Mezangiyal hücre interpozisyonu",
+    "C": "Köpüklü makrofaj",
+    "D": "Birikintiler arası bazal membran çıkıntısı",
+    "E": "Mezangiyal nodüler skleroz"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Subepitelyal birikintinin kendisi kubbe kısmına karşılık gelir; diken, birikintiler arasındaki bazal membran materyalidir.",
+    "B": "Mezangiyal hücre interpozisyonu MPGN tip I'deki tramvay rayı görünümünün nedenidir.",
+    "C": "Köpüklü makrofajlar FSGS'nin sklerotik segmentlerinde görülen lipid yüklü hücrelerdir.",
+    "D": "Birikintiler arası bazal membran çıkıntısı doğru: subepitelyal birikintiler arasındaki bazal membran materyalinin sivri uçları dikeni oluşturur.",
+    "E": "Mezangiyal nodüler skleroz diyabetik nefropatideki Kimmelstiel–Wilson lezyonlarına karşılık gelir."
+   },
+   "ozet": "Membranöz nefropatide subepitelyal elektron yoğun birikintiler ve aralarındaki bazal membran çıkıntıları diken ve kubbe görünümü verir; ayak uzantıları da yaygın silinmiştir.",
+   "metin": "**Soru.** Membranöz nefropatide elektron mikroskopisindeki diken görünümü neye karşılık gelir?\n\n**A)** Subepitelyal birikintinin kendisi · **B)** Mezangiyal hücre interpozisyonu · **C)** Köpüklü makrofaj · **D)** Birikintiler arası bazal membran çıkıntısı · **E)** Mezangiyal nodüler skleroz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Subepitelyal birikintinin kendisi** — Subepitelyal birikintinin kendisi kubbe kısmına karşılık gelir; diken, birikintiler arasındaki bazal membran materyalidir.\n- **Mezangiyal hücre interpozisyonu** — Mezangiyal hücre interpozisyonu MPGN tip I'deki tramvay rayı görünümünün nedenidir.\n- **Köpüklü makrofaj** — Köpüklü makrofajlar FSGS'nin sklerotik segmentlerinde görülen lipid yüklü hücrelerdir.\n- **Birikintiler arası bazal membran çıkıntısı** — Birikintiler arası bazal membran çıkıntısı doğru: subepitelyal birikintiler arasındaki bazal membran materyalinin sivri uçları dikeni oluşturur.\n- **Mezangiyal nodüler skleroz** — Mezangiyal nodüler skleroz diyabetik nefropatideki Kimmelstiel–Wilson lezyonlarına karşılık gelir.\n\n**Cevap: D** — Birikintiler arası bazal membran çıkıntısı\n\n**Özet.** Membranöz nefropatide subepitelyal elektron yoğun birikintiler ve aralarındaki bazal membran çıkıntıları diken ve kubbe görünümü verir; ayak uzantıları da yaygın silinmiştir.",
+   "ses": "Membranöz nefropatide elektron mikroskopisindeki diken görünümü neye karşılık gelir?\nA, Subepitelyal birikintinin kendisi\nBe, Mezangiyal hücre interpozisyonu\nCe, Köpüklü makrofaj\nDe, Birikintiler arası bazal membran çıkıntısı\nE, Mezangiyal nodüler skleroz\nŞimdi seçeneklere tek tek bakalım.\nSubepitelyal birikintinin kendisi kubbe kısmına karşılık gelir. Diken, birikintiler arasındaki bazal membran materyalidir.\nMezangiyal hücre interpozisyonu me pe ge ne tip birdeki tramvay rayı görünümünün nedenidir.\nKöpüklü makrofajlar fe se ge senin sklerotik segmentlerinde görülen lipid yüklü hücrelerdir.\nBirikintiler arası bazal membran çıkıntısı doğru, subepitelyal birikintiler arasındaki bazal membran materyalinin sivri uçları dikeni oluşturur.\nMezangiyal nodüler skleroz diyabetik nefropatideki Kimmelstil Vilson lezyonlarına karşılık gelir.\nDoğru cevap De, Birikintiler arası bazal membran çıkıntısı\nMembranöz nefropatide subepitelyal elektron yoğun birikintiler ve aralarındaki bazal membran çıkıntıları diken ve kubbe görünümü verir. Ayak uzantıları da yaygın silinmiştir.",
+   "kelime": 154
+  },
+  {
+   "no": 45,
+   "tur": "ornek",
+   "soru": "Membranöz nefropatide proteinüri ve kortikosteroid yanıtı için hangisi doğrudur?",
+   "secenekler": {
+    "A": "Seçici; yanıt çok iyi",
+    "B": "Seçici değil; yanıt çok iyi",
+    "C": "Seçici değil; yanıt minimal",
+    "D": "Seçici; yanıt minimal",
+    "E": "Seçici; yanıt yavaş, nüks sık"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Seçici proteinüri ve çok iyi kortikosteroid yanıtı, çocuklarda minimal değişiklik hastalığının özelliğidir.",
+    "B": "Seçici olmayan proteinüri doğru olsa da membranöz nefropatide kortikosteroid yanıtı çok iyi değil, minimaldir.",
+    "C": "Seçici değil, yanıt minimal doğru: membranöz nefropatide proteinüri seçici değildir ve kortikosteroidlere yanıt minimaldir.",
+    "D": "Membranöz nefropatide proteinüri seçici değildir; seçici proteinüri ağırlıkla albümin kaybı olarak minimal değişiklik hastalığına aittir.",
+    "E": "Yavaş yanıt ve sık nüks, erişkin minimal değişiklik hastalığını tanımlar; o hastalıkta proteinüri seçicidir."
+   },
+   "ozet": "Membranöz nefropatide proteinüri seçici değildir ve kortikosteroid yanıtı minimaldir; minimal değişiklik hastalığında ise proteinüri seçici, çocukta yanıt çok iyidir.",
+   "metin": "**Soru.** Membranöz nefropatide proteinüri ve kortikosteroid yanıtı için hangisi doğrudur?\n\n**A)** Seçici; yanıt çok iyi · **B)** Seçici değil; yanıt çok iyi · **C)** Seçici değil; yanıt minimal · **D)** Seçici; yanıt minimal · **E)** Seçici; yanıt yavaş, nüks sık\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Seçici; yanıt çok iyi** — Seçici proteinüri ve çok iyi kortikosteroid yanıtı, çocuklarda minimal değişiklik hastalığının özelliğidir.\n- **Seçici değil; yanıt çok iyi** — Seçici olmayan proteinüri doğru olsa da membranöz nefropatide kortikosteroid yanıtı çok iyi değil, minimaldir.\n- **Seçici değil; yanıt minimal** — Seçici değil, yanıt minimal doğru: membranöz nefropatide proteinüri seçici değildir ve kortikosteroidlere yanıt minimaldir.\n- **Seçici; yanıt minimal** — Membranöz nefropatide proteinüri seçici değildir; seçici proteinüri ağırlıkla albümin kaybı olarak minimal değişiklik hastalığına aittir.\n- **Seçici; yanıt yavaş, nüks sık** — Yavaş yanıt ve sık nüks, erişkin minimal değişiklik hastalığını tanımlar; o hastalıkta proteinüri seçicidir.\n\n**Cevap: C** — Seçici değil; yanıt minimal\n\n**Özet.** Membranöz nefropatide proteinüri seçici değildir ve kortikosteroid yanıtı minimaldir; minimal değişiklik hastalığında ise proteinüri seçici, çocukta yanıt çok iyidir.",
+   "ses": "Membranöz nefropatide proteinüri ve kortikosteroid yanıtı için hangisi doğrudur?\nA, Seçici, yanıt çok iyi\nBe, Seçici değil, yanıt çok iyi\nCe, Seçici değil, yanıt minimal\nDe, Seçici, yanıt minimal\nE, Seçici, yanıt yavaş, nüks sık\nSeçenekleri sırayla değerlendirelim.\nSeçici proteinüri ve çok iyi kortikosteroid yanıtı, çocuklarda minimal değişiklik hastalığının özelliğidir.\nSeçici olmayan proteinüri doğru olsa da membranöz nefropatide kortikosteroid yanıtı çok iyi değil, minimaldir.\nSeçici değil, yanıt minimal doğru, membranöz nefropatide proteinüri seçici değildir ve kortikosteroidlere yanıt minimaldir.\nMembranöz nefropatide proteinüri seçici değildir. Seçici proteinüri ağırlıkla albümin kaybı olarak minimal değişiklik hastalığına aittir.\nYavaş yanıt ve sık nüks, erişkin minimal değişiklik hastalığını tanımlar. O hastalıkta proteinüri seçicidir.\nDoğru cevap Ce, Seçici değil, yanıt minimal\nMembranöz nefropatide proteinüri seçici değildir ve kortikosteroid yanıtı minimaldir. Minimal değişiklik hastalığında ise proteinüri seçici, çocukta yanıt çok iyidir.",
+   "kelime": 171
+  },
+  {
+   "no": 46,
+   "tur": "ornek",
+   "soru": "MPGN tip I'de elektron yoğun birikintiler nerede bulunur?",
+   "secenekler": {
+    "A": "Subepitelyal alanda",
+    "B": "GBM içinde şerit hâlinde",
+    "C": "Subendotelyal ve mezangiyal",
+    "D": "Yalnız proksimal tübüllerde",
+    "E": "Birikinti bulunmaz"
+   },
+   "dogru": "C",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Subepitelyal birikintiler membranöz nefropatinin bulgusudur ve inflamasyonsuz ağır proteinüriyle ilişkilidir.",
+    "B": "GBM içinde şerit benzeri yoğun birikim, yoğun birikim hastalığında, yani eski MPGN tip II'de görülür.",
+    "C": "Subendotelyal ve mezangiyal doğru: MPGN tip I'de elektron yoğun birikintiler subendotelyal ve mezangiyal yerleşimlidir.",
+    "D": "Proksimal tübüllerde protein damlacıkları ve lipidler minimal değişiklik hastalığının bulgusudur; glomerül birikintisi değildir.",
+    "E": "Birikinti bulunmaması minimal değişiklik hastalığına uyar; MPGN tip I'de immünfloresanda granüler IgG ve kompleman vardır."
+   },
+   "ozet": "MPGN tip I'de glomerüller büyük, hiperhücreli ve lobüllüdür; immünfloresanda granüler IgG ve kompleman, elektron mikroskopisinde subendotelyal ve mezangiyal birikintiler görülür.",
+   "metin": "**Soru.** MPGN tip I'de elektron yoğun birikintiler nerede bulunur?\n\n**A)** Subepitelyal alanda · **B)** GBM içinde şerit hâlinde · **C)** Subendotelyal ve mezangiyal · **D)** Yalnız proksimal tübüllerde · **E)** Birikinti bulunmaz\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Subepitelyal alanda** — Subepitelyal birikintiler membranöz nefropatinin bulgusudur ve inflamasyonsuz ağır proteinüriyle ilişkilidir.\n- **GBM içinde şerit hâlinde** — GBM içinde şerit benzeri yoğun birikim, yoğun birikim hastalığında, yani eski MPGN tip II'de görülür.\n- **Subendotelyal ve mezangiyal** — Subendotelyal ve mezangiyal doğru: MPGN tip I'de elektron yoğun birikintiler subendotelyal ve mezangiyal yerleşimlidir.\n- **Yalnız proksimal tübüllerde** — Proksimal tübüllerde protein damlacıkları ve lipidler minimal değişiklik hastalığının bulgusudur; glomerül birikintisi değildir.\n- **Birikinti bulunmaz** — Birikinti bulunmaması minimal değişiklik hastalığına uyar; MPGN tip I'de immünfloresanda granüler IgG ve kompleman vardır.\n\n**Cevap: C** — Subendotelyal ve mezangiyal\n\n**Özet.** MPGN tip I'de glomerüller büyük, hiperhücreli ve lobüllüdür; immünfloresanda granüler IgG ve kompleman, elektron mikroskopisinde subendotelyal ve mezangiyal birikintiler görülür.",
+   "ses": "Me pe ge ne tip birde elektron yoğun birikintiler nerede bulunur?\nA, Subepitelyal alanda\nBe, Ge be me içinde şerit hâlinde\nCe, Subendotelyal ve mezangiyal\nDe, Yalnız proksimal tübüllerde\nE, Birikinti bulunmaz\nHer seçeneği tek tek ele alalım.\nSubepitelyal birikintiler membranöz nefropatinin bulgusudur ve inflamasyonsuz ağır proteinüriyle ilişkilidir.\nGe be me içinde şerit benzeri yoğun birikim, yoğun birikim hastalığında, yani eski me pe ge ne tip ikide görülür.\nSubendotelyal ve mezangiyal doğru, me pe ge ne tip birde elektron yoğun birikintiler subendotelyal ve mezangiyal yerleşimlidir.\nProksimal tübüllerde protein damlacıkları ve lipidler minimal değişiklik hastalığının bulgusudur. Glomerül birikintisi değildir.\nBirikinti bulunmaması minimal değişiklik hastalığına uyar. Me pe ge ne tip birde immünfloresanda granüler i ge ge ve kompleman vardır.\nDoğru cevap Ce, Subendotelyal ve mezangiyal\nMe pe ge ne tip birde glomerüller büyük, hiperhücreli ve lobüllüdür. İmmünfloresanda granüler i ge ge ve kompleman, elektron mikroskopisinde subendotelyal ve mezangiyal birikintiler görülür.",
+   "kelime": 157
+  },
+  {
+   "no": 47,
+   "tur": "ornek",
+   "soru": "C3 glomerulopatisinde mutasyon veya otoantikorla bozulabilen kompleman düzenleyici protein hangisidir?",
+   "secenekler": {
+    "A": "C1q",
+    "B": "C4",
+    "C": "Fosfolipaz A2 reseptörü",
+    "D": "Nefrin",
+    "E": "Faktör H"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "C1q klasik yol bileşenidir; C3 glomerulopatisinde glomerülde C1q birikimi yoktur.",
+    "B": "C4 de klasik yol bileşenidir; C3 glomerulopatisinde IgG, C1q ve C4 genellikle bulunmaz.",
+    "C": "Fosfolipaz A2 reseptörü, primer membranöz nefropatide otoantikorların en sık hedef aldığı podosit antijenidir.",
+    "D": "Nefrin, yarık diyaframı oluşturan podosit proteinidir; gen mutasyonları genetik FSGS'ye yol açar.",
+    "E": "Faktör H doğru: membran kofaktör proteini gibi düzenleyicilerle birlikte mutasyonu veya otoantikoru alternatif yolu kontrolsüz bırakır."
+   },
+   "ozet": "C3 glomerulopatisinde alternatif kompleman yolu kontrolsüz aktive olur; nedenleri C3 nefritik faktör ile faktör H ve MCP gibi düzenleyici protein bozukluklarıdır.",
+   "metin": "**Soru.** C3 glomerulopatisinde mutasyon veya otoantikorla bozulabilen kompleman düzenleyici protein hangisidir?\n\n**A)** C1q · **B)** C4 · **C)** Fosfolipaz A2 reseptörü · **D)** Nefrin · **E)** Faktör H\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **C1q** — C1q klasik yol bileşenidir; C3 glomerulopatisinde glomerülde C1q birikimi yoktur.\n- **C4** — C4 de klasik yol bileşenidir; C3 glomerulopatisinde IgG, C1q ve C4 genellikle bulunmaz.\n- **Fosfolipaz A2 reseptörü** — Fosfolipaz A2 reseptörü, primer membranöz nefropatide otoantikorların en sık hedef aldığı podosit antijenidir.\n- **Nefrin** — Nefrin, yarık diyaframı oluşturan podosit proteinidir; gen mutasyonları genetik FSGS'ye yol açar.\n- **Faktör H** — Faktör H doğru: membran kofaktör proteini gibi düzenleyicilerle birlikte mutasyonu veya otoantikoru alternatif yolu kontrolsüz bırakır.\n\n**Cevap: E** — Faktör H\n\n**Özet.** C3 glomerulopatisinde alternatif kompleman yolu kontrolsüz aktive olur; nedenleri C3 nefritik faktör ile faktör H ve MCP gibi düzenleyici protein bozukluklarıdır.",
+   "ses": "Ce üç glomerulopatisinde mutasyon veya otoantikorla bozulabilen kompleman düzenleyici protein hangisidir?\nA, Ce bir ku\nBe, Ce dört\nCe, Fosfolipaz a iki reseptörü\nDe, Nefrin\nE, Faktör ha\nŞıkları sırasıyla gözden geçirelim.\nCe bir ku klasik yol bileşenidir. Ce üç glomerulopatisinde glomerülde ce bir ku birikimi yoktur.\nCe dört de klasik yol bileşenidir. Ce üç glomerulopatisinde i ge ge, ce bir ku ve ce dört genellikle bulunmaz.\nFosfolipaz a iki reseptörü, primer membranöz nefropatide otoantikorların en sık hedef aldığı podosit antijenidir.\nNefrin, yarık diyaframı oluşturan podosit proteinidir. Gen mutasyonları genetik fe se ge seye yol açar.\nFaktör ha doğru, membran kofaktör proteini gibi düzenleyicilerle birlikte mutasyonu veya otoantikoru alternatif yolu kontrolsüz bırakır.\nDoğru cevap E, Faktör ha\nCe üç glomerulopatisinde alternatif kompleman yolu kontrolsüz aktive olur. Nedenleri ce üç nefritik faktör ile faktör ha ve me ce pe gibi düzenleyici protein bozukluklarıdır.",
+   "kelime": 142
+  },
+  {
+   "no": 48,
+   "tur": "ornek",
+   "soru": "C3 glomerulopatisi ile MPGN tip I'in ışık mikroskopisindeki ortak bulgusu hangisidir?",
+   "secenekler": {
+    "A": "Normal glomerüller",
+    "B": "Çift bazal membran",
+    "C": "Nodüler glomeruloskleroz",
+    "D": "Segmental skleroz",
+    "E": "Kılcal duvarda diken görünümü"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Normal glomerüller minimal değişiklik hastalığının ışık mikroskopisi bulgusudur.",
+    "B": "Çift bazal membran doğru: C3 glomerulopatisi de MPGN tip I gibi hiperhücreli glomerül ve tramvay rayı görünümü verir.",
+    "C": "Nodüler glomeruloskleroz, Kimmelstiel–Wilson lezyonu olarak diyabetik nefropatinin bulgusudur.",
+    "D": "Segmental skleroz FSGS'nin ışık mikroskopisindeki temel bulgusudur.",
+    "E": "Diken görünümü membranöz nefropatide elektron mikroskopisiyle görülür; ışıkta kılcal duvarlar difüz kalınlaşır."
+   },
+   "ozet": "C3 glomerulopatisi ışıkta MPGN tip I'e benzer ve tramvay rayı verir; immünfloresanda IgG olmadan güçlü C3 boyanması onu ayırır.",
+   "metin": "**Soru.** C3 glomerulopatisi ile MPGN tip I'in ışık mikroskopisindeki ortak bulgusu hangisidir?\n\n**A)** Normal glomerüller · **B)** Çift bazal membran · **C)** Nodüler glomeruloskleroz · **D)** Segmental skleroz · **E)** Kılcal duvarda diken görünümü\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Normal glomerüller** — Normal glomerüller minimal değişiklik hastalığının ışık mikroskopisi bulgusudur.\n- **Çift bazal membran** — Çift bazal membran doğru: C3 glomerulopatisi de MPGN tip I gibi hiperhücreli glomerül ve tramvay rayı görünümü verir.\n- **Nodüler glomeruloskleroz** — Nodüler glomeruloskleroz, Kimmelstiel–Wilson lezyonu olarak diyabetik nefropatinin bulgusudur.\n- **Segmental skleroz** — Segmental skleroz FSGS'nin ışık mikroskopisindeki temel bulgusudur.\n- **Kılcal duvarda diken görünümü** — Diken görünümü membranöz nefropatide elektron mikroskopisiyle görülür; ışıkta kılcal duvarlar difüz kalınlaşır.\n\n**Cevap: B** — Çift bazal membran\n\n**Özet.** C3 glomerulopatisi ışıkta MPGN tip I'e benzer ve tramvay rayı verir; immünfloresanda IgG olmadan güçlü C3 boyanması onu ayırır.",
+   "ses": "Ce üç glomerulopatisi ile me pe ge ne tip birin ışık mikroskopisindeki ortak bulgusu hangisidir?\nA, Normal glomerüller\nBe, Çift bazal membran\nCe, Nodüler glomeruloskleroz\nDe, Segmental skleroz\nE, Kılcal duvarda diken görünümü\nŞimdi seçeneklere tek tek bakalım.\nNormal glomerüller minimal değişiklik hastalığının ışık mikroskopisi bulgusudur.\nÇift bazal membran doğru, ce üç glomerulopatisi de me pe ge ne tip bir gibi hiperhücreli glomerül ve tramvay rayı görünümü verir.\nNodüler glomeruloskleroz, Kimmelstil Vilson lezyonu olarak diyabetik nefropatinin bulgusudur.\nSegmental skleroz fe se ge senin ışık mikroskopisindeki temel bulgusudur.\nDiken görünümü membranöz nefropatide elektron mikroskopisiyle görülür. Işıkta kılcal duvarlar difüz kalınlaşır.\nDoğru cevap Be, Çift bazal membran\nCe üç glomerulopatisi ışıkta me pe ge ne tip bire benzer ve tramvay rayı verir. İmmünfloresanda i ge ge olmadan güçlü ce üç boyanması onu ayırır.",
+   "kelime": 142
+  },
+  {
+   "no": 49,
+   "tur": "ornek",
+   "soru": "Amiloid nefropatisinde amiloid glomerülde nerede birikir?",
+   "secenekler": {
+    "A": "Yalnız proksimal tübüllerde",
+    "B": "Bowman kapsülü parietal epitelinde",
+    "C": "Podosit sitoplazmasında",
+    "D": "Mezangium ve kapiller duvarlarda",
+    "E": "Yalnız interstisyumda"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Proksimal tübüllerde protein damlacıkları ve lipidler minimal değişiklik hastalığının bulgusudur; amiloid birikim yeri değildir.",
+    "B": "Parietal epitel Bowman kapsülünü döşer; amiloid nefropatisinin birikim yeri olarak tanımlanmaz.",
+    "C": "Podosit sitoplazmasında vakuolizasyon minimal değişiklik hastalığında görülür; amiloid birikimiyle ilgili değildir.",
+    "D": "Mezangium ve kapiller duvarlar doğru: amiloid nefropatisinde amiloid glomerüler mezangium ve kapiller duvarlarda birikir.",
+    "E": "Yalnız interstisyumda birikim amiloid nefropatisine uymaz; interstisyel fibrozis ileri evre FSGS'de gelişir."
+   },
+   "ozet": "Diyabet GBM kalınlaşması ve Kimmelstiel–Wilson nodülleri, amiloidoz mezangium ve kapiller duvarda amiloid, SLE ise sınıf V lupus nefritiyle nefrotik sendrom yapar.",
+   "metin": "**Soru.** Amiloid nefropatisinde amiloid glomerülde nerede birikir?\n\n**A)** Yalnız proksimal tübüllerde · **B)** Bowman kapsülü parietal epitelinde · **C)** Podosit sitoplazmasında · **D)** Mezangium ve kapiller duvarlarda · **E)** Yalnız interstisyumda\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Yalnız proksimal tübüllerde** — Proksimal tübüllerde protein damlacıkları ve lipidler minimal değişiklik hastalığının bulgusudur; amiloid birikim yeri değildir.\n- **Bowman kapsülü parietal epitelinde** — Parietal epitel Bowman kapsülünü döşer; amiloid nefropatisinin birikim yeri olarak tanımlanmaz.\n- **Podosit sitoplazmasında** — Podosit sitoplazmasında vakuolizasyon minimal değişiklik hastalığında görülür; amiloid birikimiyle ilgili değildir.\n- **Mezangium ve kapiller duvarlarda** — Mezangium ve kapiller duvarlar doğru: amiloid nefropatisinde amiloid glomerüler mezangium ve kapiller duvarlarda birikir.\n- **Yalnız interstisyumda** — Yalnız interstisyumda birikim amiloid nefropatisine uymaz; interstisyel fibrozis ileri evre FSGS'de gelişir.\n\n**Cevap: D** — Mezangium ve kapiller duvarlarda\n\n**Özet.** Diyabet GBM kalınlaşması ve Kimmelstiel–Wilson nodülleri, amiloidoz mezangium ve kapiller duvarda amiloid, SLE ise sınıf V lupus nefritiyle nefrotik sendrom yapar.",
+   "ses": "Amiloid nefropatisinde amiloid glomerülde nerede birikir?\nA, Yalnız proksimal tübüllerde\nBe, Bowman kapsülü parietal epitelinde\nCe, Podosit sitoplazmasında\nDe, Mezangium ve kapiller duvarlarda\nE, Yalnız interstisyumda\nSeçenekleri sırayla değerlendirelim.\nProksimal tübüllerde protein damlacıkları ve lipidler minimal değişiklik hastalığının bulgusudur. Amiloid birikim yeri değildir.\nParietal epitel Bowman kapsülünü döşer. Amiloid nefropatisinin birikim yeri olarak tanımlanmaz.\nPodosit sitoplazmasında vakuolizasyon minimal değişiklik hastalığında görülür. Amiloid birikimiyle ilgili değildir.\nMezangium ve kapiller duvarlar doğru, amiloid nefropatisinde amiloid glomerüler mezangium ve kapiller duvarlarda birikir.\nYalnız interstisyumda birikim amiloid nefropatisine uymaz. İnterstisyel fibrozis ileri evre fe se ge sede gelişir.\nDoğru cevap De, Mezangium ve kapiller duvarlarda\nDiyabet ge be me kalınlaşması ve Kimmelstil Vilson nodülleri, amiloidoz mezangium ve kapiller duvarda amiloid, sistemik lupus eritematozus ise sınıf beş lupus nefritiyle nefrotik sendrom yapar.",
+   "kelime": 151
+  },
+  {
+   "no": 50,
+   "tur": "ornek",
+   "soru": "Nefrotik sendromda böbrek biyopsisinin amacı hangisidir?",
+   "secenekler": {
+    "A": "Morfolojik sınıflama ve prognoz tayini",
+    "B": "Proteinüri seçiciliğini ölçmek",
+    "C": "Viral serolojiyi belirlemek",
+    "D": "Kompleman düzeyini ölçmek",
+    "E": "Böbrek fonksiyonunu ölçmek"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Morfolojik sınıflama ve prognoz tayini doğru: böbrek biyopsisi nefrotik sendromda bu amaçla yapılır.",
+    "B": "Proteinüri düzeyi ve seçiciliği tanının ayrı bir basamağıdır; seçici proteinüri minimal değişiklik hastalığını düşündürür.",
+    "C": "Viral seroloji, otoantikor ve kompleman incelemeleriyle birlikte serolojik basamaktır; biyopsiyle yapılmaz.",
+    "D": "Kompleman düzeyi serolojik incelemelerle değerlendirilir; örneğin C3 glomerulopatisinde serum C3 genellikle düşüktür.",
+    "E": "Böbrek fonksiyonu fonksiyon testleriyle değerlendirilir; biyopsinin amacı morfolojik değerlendirmedir."
+   },
+   "ozet": "Nefrotik sendrom tanısında proteinüri düzeyi ve seçiciliği, böbrek fonksiyon testleri, serolojik incelemeler ve sınıflama ile prognoz için böbrek biyopsisi kullanılır.",
+   "metin": "**Soru.** Nefrotik sendromda böbrek biyopsisinin amacı hangisidir?\n\n**A)** Morfolojik sınıflama ve prognoz tayini · **B)** Proteinüri seçiciliğini ölçmek · **C)** Viral serolojiyi belirlemek · **D)** Kompleman düzeyini ölçmek · **E)** Böbrek fonksiyonunu ölçmek\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Morfolojik sınıflama ve prognoz tayini** — Morfolojik sınıflama ve prognoz tayini doğru: böbrek biyopsisi nefrotik sendromda bu amaçla yapılır.\n- **Proteinüri seçiciliğini ölçmek** — Proteinüri düzeyi ve seçiciliği tanının ayrı bir basamağıdır; seçici proteinüri minimal değişiklik hastalığını düşündürür.\n- **Viral serolojiyi belirlemek** — Viral seroloji, otoantikor ve kompleman incelemeleriyle birlikte serolojik basamaktır; biyopsiyle yapılmaz.\n- **Kompleman düzeyini ölçmek** — Kompleman düzeyi serolojik incelemelerle değerlendirilir; örneğin C3 glomerulopatisinde serum C3 genellikle düşüktür.\n- **Böbrek fonksiyonunu ölçmek** — Böbrek fonksiyonu fonksiyon testleriyle değerlendirilir; biyopsinin amacı morfolojik değerlendirmedir.\n\n**Cevap: A** — Morfolojik sınıflama ve prognoz tayini\n\n**Özet.** Nefrotik sendrom tanısında proteinüri düzeyi ve seçiciliği, böbrek fonksiyon testleri, serolojik incelemeler ve sınıflama ile prognoz için böbrek biyopsisi kullanılır.",
+   "ses": "Nefrotik sendromda böbrek biyopsisinin amacı hangisidir?\nA, Morfolojik sınıflama ve prognoz tayini\nBe, Proteinüri seçiciliğini ölçmek\nCe, Viral serolojiyi belirlemek\nDe, Kompleman düzeyini ölçmek\nE, Böbrek fonksiyonunu ölçmek\nHer seçeneği tek tek ele alalım.\nMorfolojik sınıflama ve prognoz tayini doğru, böbrek biyopsisi nefrotik sendromda bu amaçla yapılır.\nProteinüri düzeyi ve seçiciliği tanının ayrı bir basamağıdır. Seçici proteinüri minimal değişiklik hastalığını düşündürür.\nViral seroloji, otoantikor ve kompleman incelemeleriyle birlikte serolojik basamaktır. Biyopsiyle yapılmaz.\nKompleman düzeyi serolojik incelemelerle değerlendirilir. Örneğin ce üç glomerulopatisinde serum ce üç genellikle düşüktür.\nBöbrek fonksiyonu fonksiyon testleriyle değerlendirilir. Biyopsinin amacı morfolojik değerlendirmedir.\nDoğru cevap A, Morfolojik sınıflama ve prognoz tayini\nNefrotik sendrom tanısında proteinüri düzeyi ve seçiciliği, böbrek fonksiyon testleri, serolojik incelemeler ve sınıflama ile prognoz için böbrek biyopsisi kullanılır.",
+   "kelime": 155
+  }
+ ]
+}

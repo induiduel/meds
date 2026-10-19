@@ -30,28 +30,43 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
     let t = 0;
     const olc = () => {
       t = 0;
+      const kok = document.documentElement;
+      const tamFs = kok.classList.contains('cd-tam-ekran') || kok.classList.contains('is-app-fullscreen');
       const tabs = document.querySelector<HTMLElement>('.s12-tabs, .sh-tabs');
       let b = 0;
-      if (tabs && getComputedStyle(tabs).display !== 'none') {
+      if (!tamFs && tabs && getComputedStyle(tabs).display !== 'none') {
         const r = tabs.getBoundingClientRect();
         if (r.height > 0 && r.top < window.innerHeight) b = Math.max(0, window.innerHeight - r.top);
       }
       setAlt(b);
-      document.documentElement.style.setProperty('--cd-dock-h', `${Math.round(el.offsetHeight + b)}px`);
+      const gizli = getComputedStyle(el).display === 'none';
+      kok.style.setProperty('--cd-dock-h', `${gizli ? 0 : Math.round(el.offsetHeight + b)}px`);
       window.dispatchEvent(new Event('cd:dock'));
     };
     const plan = () => { if (!t) t = window.setTimeout(olc, 30); };
+    const fsPlan = () => {
+      olc();
+      window.setTimeout(olc, 100);
+    };
     olc();
     const ro = new ResizeObserver(plan);
     ro.observe(el);
     const tabs = document.querySelector('.s12-tabs, .sh-tabs');
     if (tabs) ro.observe(tabs);
     window.addEventListener('resize', plan);
+    window.addEventListener('cd:tam-ekran', fsPlan);
+    window.addEventListener('medsor:fullscreenchange', fsPlan);
+    document.addEventListener('fullscreenchange', fsPlan);
+    document.addEventListener('webkitfullscreenchange', fsPlan);
     document.documentElement.classList.add('cd-dock-acik');
     return () => {
       window.clearTimeout(t);
       ro.disconnect();
       window.removeEventListener('resize', plan);
+      window.removeEventListener('cd:tam-ekran', fsPlan);
+      window.removeEventListener('medsor:fullscreenchange', fsPlan);
+      document.removeEventListener('fullscreenchange', fsPlan);
+      document.removeEventListener('webkitfullscreenchange', fsPlan);
       document.documentElement.classList.remove('cd-dock-acik');
       document.documentElement.style.removeProperty('--cd-dock-h');
       window.dispatchEvent(new Event('cd:dock'));

@@ -1,0 +1,92 @@
+/* =============================================================================
+ * MeDSor · Patoloji alternatif sesli soru çözücü (/alternatif-cozucu)
+ * .ac-*  liste (ac-liste-sayfa) ve oynatıcı (ac-oynatici). Yalnız palet tokenı.
+ * ============================================================================= */
+.ac { --ac-w: 980px; width: 100%; max-width: var(--ac-w); margin: 0 auto; padding: 18px 16px 28px; box-sizing: border-box; color: var(--color-ink); font-family: var(--font-sans, inherit); }
+.ac button { font: inherit; cursor: pointer; color: inherit; }
+.ac :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+/* ---- liste ---- */
+.ac-baslik { margin-bottom: 14px; }
+.ac-baslik-t { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.ac-baslik-t h2 { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 22px; font-weight: 800; letter-spacing: -.01em; }
+.ac-baslik-t h2 svg { width: 21px; height: 21px; color: var(--color-accent); }
+.ac-sayi { font-size: 12.5px; font-weight: 600; color: var(--color-ink-3); }
+.ac-aciklama { margin: 6px 0 12px; font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); max-width: 72ch; }
+.ac-ara input { width: 100%; height: 42px; padding: 0 14px; border-radius: var(--radius-lg, 12px); border: 1px solid var(--color-line); background: var(--color-white); font-size: 14px; }
+
+.ac-liste { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.ac-satir { width: 100%; display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: var(--radius-lg, 14px); border: 1px solid var(--color-line); background: var(--color-white); text-align: left; transition: border-color .15s, transform .15s, box-shadow .15s; }
+.ac-satir:hover { border-color: var(--color-accent); box-shadow: 0 4px 14px rgba(0,0,0,.06); transform: translateY(-1px); }
+.ac-no { flex: 0 0 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; font-size: 13px; font-weight: 800; color: var(--color-accent); background: var(--color-accent-soft); }
+.ac-satir-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.ac-satir-t b { font-size: 14.5px; font-weight: 700; line-height: 1.3; }
+.ac-satir-t small { font-size: 12px; color: var(--color-ink-3); }
+.ac-cubuk { height: 4px; border-radius: 999px; background: var(--color-field); overflow: hidden; margin-top: 3px; }
+.ac-cubuk i { display: block; height: 100%; background: var(--color-accent); border-radius: inherit; }
+.ac-durum { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 700; color: var(--color-accent); white-space: nowrap; }
+.ac-durum svg { width: 15px; height: 15px; }
+
+.ac-bos { padding: 40px 16px; text-align: center; color: var(--color-ink-3); }
+
+/* ---- oynatıcı ---- */
+.ac-oynatici { max-width: 900px; padding-bottom: 96px; }
+.ac-ust { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 6px 0 10px; border-bottom: 1px solid var(--color-line); }
+.ac-ust-t { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.ac-ust-t b { font-size: 14.5px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ac-ust-t small { font-size: 11.5px; color: var(--color-ink-3); }
+.ac-ust-sag { display: flex; gap: 6px; }
+.ac-ikon { width: 36px; height: 36px; border: 0; border-radius: 10px; display: grid; place-items: center; background: var(--color-field); color: var(--color-ink-2); }
+.ac-ikon:hover:not(:disabled) { background: var(--color-accent-soft); color: var(--color-accent); }
+.ac-ikon:disabled { opacity: .35; }
+.ac-ikon svg { width: 18px; height: 18px; }
+
+.ac-ilerleme { height: 3px; border-radius: 999px; background: var(--color-field); margin: 10px 0 0; overflow: hidden; }
+.ac-ilerleme i { display: block; height: 100%; background: var(--color-accent); transition: width .2s; }
+
+.ac-sahne { padding: 14px 0 8px; }
+.ac-soru { padding: 16px 18px; border: 1px solid var(--color-line); border-radius: var(--radius-lg, 14px); background: var(--color-white); }
+.ac-kok { margin: 0 0 12px; font-size: 16px; font-weight: 700; line-height: 1.45; }
+.ac-secenek { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.ac-secenek li { display: flex; align-items: flex-start; gap: 10px; padding: 9px 11px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-canvas); font-size: 14px; line-height: 1.4; }
+.ac-secenek li.is-dogru { border-color: var(--color-accent); background: var(--color-accent-soft); font-weight: 600; }
+.ac-harf { flex: 0 0 22px; height: 22px; border-radius: 7px; display: grid; place-items: center; background: var(--color-field); font-size: 11.5px; font-weight: 800; color: var(--color-ink-2); }
+.ac-secenek li.is-dogru .ac-harf { background: var(--color-accent); color: #fff; }
+.ac-tik { margin-left: auto; color: var(--color-accent); font-weight: 800; }
+
+.ac-cozum { margin-top: 14px; padding: 16px 18px; border: 1px solid var(--color-line); border-radius: var(--radius-lg, 14px); background: var(--color-white); }
+.ac-cozum h3 { display: flex; align-items: center; gap: 7px; margin: 0 0 8px; font-size: 12.5px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); }
+.ac-cozum h3 svg { width: 15px; height: 15px; }
+.ac-giris { margin: 0 0 10px; font-size: 13.5px; color: var(--color-ink-2); }
+.ac-aciklama { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.ac-aciklama li { display: flex; flex-direction: column; gap: 3px; padding-left: 11px; border-left: 3px solid var(--color-line); }
+.ac-aciklama li.is-dogru { border-left-color: var(--color-accent); }
+.ac-aciklama b { font-size: 13.5px; font-weight: 700; }
+.ac-aciklama span { font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); }
+.ac-cevap { margin-top: 14px; padding: 10px 12px; border-radius: 10px; background: var(--color-accent-soft); color: var(--color-accent); font-size: 14px; font-weight: 600; }
+.ac-ozet { margin: 12px 0 0; padding-top: 12px; border-top: 1px dashed var(--color-line); font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); }
+
+/* ---- alt çubuk ---- */
+.ac-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; align-items: center; gap: 12px; padding: 10px max(16px, calc((100vw - 900px) / 2)) calc(10px + env(safe-area-inset-bottom, 0px)); background: color-mix(in srgb, var(--color-white) 94%, transparent); backdrop-filter: blur(10px); border-top: 1px solid var(--color-line); }
+.ac-oynat { flex: 0 0 48px; height: 48px; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--color-accent); color: #fff; box-shadow: 0 4px 12px color-mix(in srgb, var(--color-accent) 40%, transparent); }
+.ac-oynat svg { width: 21px; height: 21px; }
+.ac-zaman { flex: 1; min-width: 90px; display: flex; flex-direction: column; gap: 2px; }
+.ac-zaman input { width: 100%; accent-color: var(--color-accent); }
+.ac-zaman small { font-size: 11px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.ac-hiz { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--color-ink-3); }
+.ac-hiz select { height: 30px; padding: 0 6px; border-radius: 8px; border: 1px solid var(--color-line); background: var(--color-white); font-size: 12px; }
+.ac-oto { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); font-size: 12.5px; font-weight: 600; color: var(--color-ink-2); }
+.ac-oto svg { width: 14px; height: 14px; }
+.ac-oto.is-acik { border-color: var(--color-accent); background: var(--color-accent-soft); color: var(--color-accent); }
+.ac-dinlenen { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--color-ink-3); white-space: nowrap; }
+.ac-dinlenen svg { width: 14px; height: 14px; }
+
+@media (max-width: 640px) {
+  .ac { padding: 12px 12px 24px; }
+  .ac-oynatici { padding-bottom: 110px; }
+  .ac-bar { gap: 8px; padding-left: 12px; padding-right: 12px; flex-wrap: wrap; }
+  .ac-zaman { order: 3; flex-basis: 100%; }
+  .ac-oto { margin-left: auto; }
+  .ac-dinlenen { display: none; }
+  .ac-kok { font-size: 15px; }
+}

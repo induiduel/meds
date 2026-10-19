@@ -152,6 +152,7 @@ const FlashcardsView = React.lazy(() => wrapLazy(import('./components/flashcards
 const SearchView = React.lazy(() => wrapLazy(import('./components/search/SearchView').then(m => ({ default: m.SearchView }))));
 const InteractiveDeckView = React.lazy(() => wrapLazy(import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView }))));
 const ExamSpotsView = React.lazy(() => wrapLazy(import('./components/spots/ExamSpotsView').then(m => ({ default: m.ExamSpotsView }))));
+const AlternatifCozucuView = React.lazy(() => wrapLazy(import('./components/altCozucu/AlternatifCozucuView').then(m => ({ default: m.default }))));
 const MedicalEncyclopediaView = React.lazy(() => wrapLazy(import('./components/encyclopedia/MedicalEncyclopediaView').then(m => ({ default: m.MedicalEncyclopediaView }))));
 const ManageConsole = React.lazy(() => wrapLazy(import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole }))));
 const OfflineDatabaseModal = React.lazy(() => wrapLazy(import('./components/pwa/OfflineDatabaseModal').then(m => ({ default: m.OfflineDatabaseModal }))));
@@ -1671,6 +1672,13 @@ export default function App() {
         {(activeTab === 'spots' || activeTab === 'soru_cozucu' || activeTab === 'en_onemliler') && (
           <Suspense fallback={<ViewFallback />}>
             <ExamSpotsView key={activeTab} gorunum={activeTab === 'soru_cozucu' ? 'cozucu' : activeTab === 'en_onemliler' ? 'onem' : 'spot'} />
+          </Suspense>
+        )}
+
+        {/* TAB: Patoloji alternatif sesli çözücü (/alternatif-cozucu) */}
+        {activeTab === 'alternatif_cozucu' && (
+          <Suspense fallback={<ViewFallback />}>
+            <AlternatifCozucuView />
           </Suspense>
         )}
 

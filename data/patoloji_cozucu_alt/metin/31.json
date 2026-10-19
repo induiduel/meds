@@ -1,0 +1,857 @@
+{
+ "kod": "31",
+ "baslik": "Ovidukt ve Ovaryum Patolojisi",
+ "surum": "alt-1",
+ "sorular": [
+  {
+   "no": 1,
+   "tur": "ornek",
+   "soru": "Süpüratif salpingitin en sık etkeni hangisidir?",
+   "secenekler": {
+    "A": "Chlamydia trachomatis",
+    "B": "Mycobacterium tuberculosis",
+    "C": "Neisseria gonorrhoeae",
+    "D": "Escherichia coli",
+    "E": "Candida albicans"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Chlamydia trachomatis süpüratif salpingitin ikinci sıradaki etkenidir; en sık etkenden geri kalan olguların çoğunu oluşturur.",
+    "B": "Mycobacterium tuberculosis tüberküloz salpingit yapar; endemik bölgelerde infertilitenin önemli nedenidir, süpüratif formun en sık etkeni değildir.",
+    "C": "Neisseria gonorrhoeae doğru: süpüratif salpingit olgularının %60’tan fazlasının etkenidir.",
+    "D": "Escherichia coli ile karıştırılabilir: Süpüratif salpingit sıklıkla polimikrobiyal olsa da en sık iki etken Neisseria ve Chlamydia türleridir.",
+    "E": "Candida albicans bu tablonun etkeni değil; süpüratif salpingit pürülan organizmalarla gelişen, pelvik inflamatuvar hastalığın parçası olan bir enfeksiyondur."
+   },
+   "ozet": "Süpüratif salpingitin en sık etkeni %60’tan fazla oranla Neisseria gonorrhoeae, ikincisi Chlamydia trachomatis’tir; tüp hasarı ektopik gebelik ve kalıcı infertilite riski getirir.",
+   "metin": "**Soru.** Süpüratif salpingitin en sık etkeni hangisidir?\n\n**A)** Chlamydia trachomatis · **B)** Mycobacterium tuberculosis · **C)** Neisseria gonorrhoeae · **D)** Escherichia coli · **E)** Candida albicans\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Chlamydia trachomatis** — Chlamydia trachomatis süpüratif salpingitin ikinci sıradaki etkenidir; en sık etkenden geri kalan olguların çoğunu oluşturur.\n- **Mycobacterium tuberculosis** — Mycobacterium tuberculosis tüberküloz salpingit yapar; endemik bölgelerde infertilitenin önemli nedenidir, süpüratif formun en sık etkeni değildir.\n- **Neisseria gonorrhoeae** — Neisseria gonorrhoeae doğru: süpüratif salpingit olgularının %60’tan fazlasının etkenidir.\n- **Escherichia coli** — Escherichia coli ile karıştırılabilir: Süpüratif salpingit sıklıkla polimikrobiyal olsa da en sık iki etken Neisseria ve Chlamydia türleridir.\n- **Candida albicans** — Candida albicans bu tablonun etkeni değil; süpüratif salpingit pürülan organizmalarla gelişen, pelvik inflamatuvar hastalığın parçası olan bir enfeksiyondur.\n\n**Cevap: C** — Neisseria gonorrhoeae\n\n**Özet.** Süpüratif salpingitin en sık etkeni %60’tan fazla oranla Neisseria gonorrhoeae, ikincisi Chlamydia trachomatis’tir; tüp hasarı ektopik gebelik ve kalıcı infertilite riski getirir.",
+   "ses": "Süpüratif salpingitin en sık etkeni hangisidir?\nA, Klamidya trakomatis\nBe, Mikobakteryum tüberkülozis\nCe, Nayserya gonore\nDe, Eşerişya koli\nE, Kandida albikans\nSeçenekleri sırayla değerlendirelim.\nKlamidya trakomatis süpüratif salpingitin ikinci sıradaki etkenidir. En sık etkenden geri kalan olguların çoğunu oluşturur.\nMikobakteryum tüberkülozis tüberküloz salpingit yapar. Endemik bölgelerde infertilitenin önemli nedenidir, süpüratif formun en sık etkeni değildir.\nNayserya gonore doğru. Süpüratif salpingit olgularının yüzde altmıştan fazlasının etkenidir.\nEscherichia coli ile karıştırılabilir. Süpüratif salpingit sıklıkla polimikrobiyal olsa da en sık iki etken Nayserya ve Klamidya türleridir.\nKandida albikans bu tablonun etkeni değil. Süpüratif salpingit pürülan organizmalarla gelişen, pelvik inflamatuvar hastalığın parçası olan bir enfeksiyondur.\nDoğru cevap Ce, Nayserya gonore\nSüpüratif salpingitin en sık etkeni yüzde altmıştan fazla oranla Nayserya gonore, ikincisi Klamidya trakomatistir. Tüp hasarı ektopik gebelik ve kalıcı infertilite riski getirir.",
+   "kelime": 154
+  },
+  {
+   "no": 2,
+   "tur": "ornek",
+   "soru": "Birçok yüksek dereceli seröz over karsinomunun öncüsü olarak kabul edilen lezyon nerededir?",
+   "secenekler": {
+    "A": "Fallop tüpü fimbriyası",
+    "B": "Ovaryum korteksi",
+    "C": "Endometriyum",
+    "D": "Serviks",
+    "E": "Omentum"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Fallop tüpü fimbriyası doğru: seröz tüp içi epitelyal karsinom, yani STIC burada bulunur ve %90’ında TP53 mutasyonu taşır.",
+    "B": "Ovaryum korteksi bu öncü lezyonun yeri değildir; geleneksel görüş tümörü ovaryan sayarken yeni kanıtlar tüp kökenini gösterir.",
+    "C": "Endometriyum bu lezyonun yeri değil; STIC uterin seröz karsinomun öncüsüne benzese de uterusta bulunmaz.",
+    "D": "BRCA taşıyıcılarının profilaktik salpingo ooforektomi örneklerinde STIC sık bulunur. Serviks bu sorudaki ayrımı sağlamaz.",
+    "E": "Omentum öncü lezyonun yeri değil, yayılım alanıdır; bu tümörler tanı anında sıklıkla omentum ve periton tutulumuyla ileri evrededir."
+   },
+   "ozet": "Birçok yüksek dereceli seröz over karsinomu fallop tüpünün fimbriyal ucundaki STIC’ten gelişir; uç overe yakın ve peritona açık olduğundan tanıda yayılım sıktır.",
+   "metin": "**Soru.** Birçok yüksek dereceli seröz over karsinomunun öncüsü olarak kabul edilen lezyon nerededir?\n\n**A)** Fallop tüpü fimbriyası · **B)** Ovaryum korteksi · **C)** Endometriyum · **D)** Serviks · **E)** Omentum\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Fallop tüpü fimbriyası** — Fallop tüpü fimbriyası doğru: seröz tüp içi epitelyal karsinom, yani STIC burada bulunur ve %90’ında TP53 mutasyonu taşır.\n- **Ovaryum korteksi** — Ovaryum korteksi bu öncü lezyonun yeri değildir; geleneksel görüş tümörü ovaryan sayarken yeni kanıtlar tüp kökenini gösterir.\n- **Endometriyum** — Endometriyum bu lezyonun yeri değil; STIC uterin seröz karsinomun öncüsüne benzese de uterusta bulunmaz.\n- **Serviks** — BRCA taşıyıcılarının profilaktik salpingo ooforektomi örneklerinde STIC sık bulunur. Serviks bu sorudaki ayrımı sağlamaz.\n- **Omentum** — Omentum öncü lezyonun yeri değil, yayılım alanıdır; bu tümörler tanı anında sıklıkla omentum ve periton tutulumuyla ileri evrededir.\n\n**Cevap: A** — Fallop tüpü fimbriyası\n\n**Özet.** Birçok yüksek dereceli seröz over karsinomu fallop tüpünün fimbriyal ucundaki STIC’ten gelişir; uç overe yakın ve peritona açık olduğundan tanıda yayılım sıktır.",
+   "ses": "Birçok yüksek dereceli seröz over karsinomunun öncüsü olarak kabul edilen lezyon nerededir?\nA, Fallop tüpü fimbriyası\nBe, Ovaryum korteksi\nCe, Endometriyum\nDe, Serviks\nE, Omentum\nHer seçeneği tek tek ele alalım.\nFallop tüpü fimbriyası doğru. Seröz tüp içi epitelyal karsinom burada bulunur ve yüzde doksanında te pe elli üç mutasyonu taşır.\nOvaryum korteksi bu öncü lezyonun yeri değildir. Geleneksel görüş tümörü ovaryan sayarken yeni kanıtlar tüp kökenini gösterir.\nEndometriyum bu lezyonun yeri değil. Seröz tübal intraepitelyal karsinom, uterin seröz karsinomun öncüsüne benzese de uterusta bulunmaz.\nBe re ce a taşıyıcılarının profilaktik salpingo ooforektomi örneklerinde seröz tübal intraepitelyal karsinom sık bulunur. Serviks bu sorudaki ayrımı sağlamaz.\nOmentum öncü lezyonun yeri değil, yayılım alanıdır. Bu tümörler tanı anında sıklıkla omentum ve periton tutulumuyla ileri evrededir.\nDoğru cevap A, Fallop tüpü fimbriyası\nBirçok yüksek dereceli seröz over karsinomu fallop tüpünün fimbriyal ucundaki seröz tübal intraepitelyal karsinomdan gelişir. Uç overe yakın ve peritona açık olduğundan tanıda yayılım sıktır.",
+   "kelime": 165
+  },
+  {
+   "no": 3,
+   "tur": "ornek",
+   "soru": "Polikistik over sendromunda ovaryumda beklenmeyen bulgu hangisidir?",
+   "secenekler": {
+    "A": "Subkortikal kistler",
+    "B": "Kalın fibrotik kapsül",
+    "C": "Luteinize teka hiperplazisi",
+    "D": "Belirgin korpus luteum",
+    "E": "İki kat büyük over"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Subkortikal kistler polikistik overin tipik bulgusudur; 0,5–1,5 cm çaplı, granüloza hücreli kistik foliküllerdir.",
+    "B": "Kalın, fibrotik over kapsülü polikistik over sendromunda beklenen histolojik bulgudur.",
+    "C": "Hiperplastik ve luteinize teka interna polikistik overin beklenen histolojik bulguları arasındadır.",
+    "D": "Belirgin korpus luteum doğru, yani beklenmeyen bulgudur: kronik anovülasyon olduğundan polikistik overde belirgin korpus luteum yoktur.",
+    "E": "Overin normal boyutun yaklaşık iki katına büyümesi polikistik over sendromunda tipiktir."
+   },
+   "ozet": "Polikistik overde boyut iki katına çıkar, subkortikal kistler, kalın fibrotik kapsül ve luteinize teka hiperplazisi görülür; ovulasyon olmadığından belirgin korpus luteum yoktur.",
+   "metin": "**Soru.** Polikistik over sendromunda ovaryumda beklenmeyen bulgu hangisidir?\n\n**A)** Subkortikal kistler · **B)** Kalın fibrotik kapsül · **C)** Luteinize teka hiperplazisi · **D)** Belirgin korpus luteum · **E)** İki kat büyük over\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Subkortikal kistler** — Subkortikal kistler polikistik overin tipik bulgusudur; 0,5–1,5 cm çaplı, granüloza hücreli kistik foliküllerdir.\n- **Kalın fibrotik kapsül** — Kalın, fibrotik over kapsülü polikistik over sendromunda beklenen histolojik bulgudur.\n- **Luteinize teka hiperplazisi** — Hiperplastik ve luteinize teka interna polikistik overin beklenen histolojik bulguları arasındadır.\n- **Belirgin korpus luteum** — Belirgin korpus luteum doğru, yani beklenmeyen bulgudur: kronik anovülasyon olduğundan polikistik overde belirgin korpus luteum yoktur.\n- **İki kat büyük over** — Overin normal boyutun yaklaşık iki katına büyümesi polikistik over sendromunda tipiktir.\n\n**Cevap: D** — Belirgin korpus luteum\n\n**Özet.** Polikistik overde boyut iki katına çıkar, subkortikal kistler, kalın fibrotik kapsül ve luteinize teka hiperplazisi görülür; ovulasyon olmadığından belirgin korpus luteum yoktur.",
+   "ses": "Polikistik over sendromunda ovaryumda beklenmeyen bulgu hangisidir?\nA, Subkortikal kistler\nBe, Kalın fibrotik kapsül\nCe, Luteinize teka hiperplazisi\nDe, Belirgin korpus luteum\nE, İki kat büyük over\nŞıkları sırasıyla gözden geçirelim.\nSubkortikal kistler polikistik overin tipik bulgusudur. Yarım ile bir buçuk santimetre çaplı, granüloza hücreli kistik foliküllerdir.\nKalın, fibrotik over kapsülü polikistik over sendromunda beklenen histolojik bulgudur.\nHiperplastik ve luteinize teka interna polikistik overin beklenen histolojik bulguları arasındadır.\nBelirgin korpus luteum doğru, yani beklenmeyen bulgudur. Kronik anovülasyon olduğundan polikistik overde belirgin korpus luteum yoktur.\nOverin normal boyutun yaklaşık iki katına büyümesi polikistik over sendromunda tipiktir.\nDoğru cevap De, Belirgin korpus luteum\nPolikistik overde boyut iki katına çıkar, subkortikal kistler, kalın fibrotik kapsül ve luteinize teka hiperplazisi görülür. Ovulasyon olmadığından belirgin korpus luteum yoktur.",
+   "kelime": 152
+  },
+  {
+   "no": 4,
+   "tur": "ornek",
+   "soru": "Malign ovaryum tümörlerinin yaklaşık %90'ı hangi kökenlidir?",
+   "secenekler": {
+    "A": "Germ hücre",
+    "B": "Yüzey epiteli",
+    "C": "Seks kord-stroma",
+    "D": "Metastatik",
+    "E": "Mezenkimal"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Germ hücreli tümörler, seks kord stromal tümörlerle birlikte tümörlerin %20–30’unu, malign over tümörlerinin ise %10’dan azını oluşturur.",
+    "B": "Yüzey epiteli doğru: yüzey ve fallop tüpü epitelinden gelişen tümörler malign over tümörlerinin yaklaşık %90’ını oluşturur.",
+    "C": "Seks kord stromal grup granüloza hücreli tümör ve tekoma fibroma gibi tümörleri içerir; malign over tümörleri içindeki payı küçüktür.",
+    "D": "Metastatik tümörler malign over tümörlerinin yalnızca yaklaşık %5’ini oluşturur ve çoğunlukla iki taraflıdır.",
+    "E": "Mezenkimal köken ile karıştırılabilir: Primer over neoplazmlarının çoğu Müllerian epitel farklılaşması gösterir."
+   },
+   "ozet": "Malign over tümörlerinin yaklaşık %90’ı yüzey epitelinden gelişir; germ hücreli ve seks kord stromal tümörler malignlerin %10’undan azını oluşturur.",
+   "metin": "**Soru.** Malign ovaryum tümörlerinin yaklaşık %90'ı hangi kökenlidir?\n\n**A)** Germ hücre · **B)** Yüzey epiteli · **C)** Seks kord-stroma · **D)** Metastatik · **E)** Mezenkimal\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Germ hücre** — Germ hücreli tümörler, seks kord stromal tümörlerle birlikte tümörlerin %20–30’unu, malign over tümörlerinin ise %10’dan azını oluşturur.\n- **Yüzey epiteli** — Yüzey epiteli doğru: yüzey ve fallop tüpü epitelinden gelişen tümörler malign over tümörlerinin yaklaşık %90’ını oluşturur.\n- **Seks kord-stroma** — Seks kord stromal grup granüloza hücreli tümör ve tekoma fibroma gibi tümörleri içerir; malign over tümörleri içindeki payı küçüktür.\n- **Metastatik** — Metastatik tümörler malign over tümörlerinin yalnızca yaklaşık %5’ini oluşturur ve çoğunlukla iki taraflıdır.\n- **Mezenkimal** — Mezenkimal köken ile karıştırılabilir: Primer over neoplazmlarının çoğu Müllerian epitel farklılaşması gösterir.\n\n**Cevap: B** — Yüzey epiteli\n\n**Özet.** Malign over tümörlerinin yaklaşık %90’ı yüzey epitelinden gelişir; germ hücreli ve seks kord stromal tümörler malignlerin %10’undan azını oluşturur.",
+   "ses": "Malign ovaryum tümörlerinin yaklaşık yüzde doksanı hangi kökenlidir?\nA, Germ hücre\nBe, Yüzey epiteli\nCe, Seks kord stroma\nDe, Metastatik\nE, Mezenkimal\nŞimdi seçeneklere tek tek bakalım.\nGerm hücreli tümörler, seks kord stromal tümörlerle birlikte tümörlerin yüzde yirmi ile otuzunu, malign over tümörlerinin ise yüzde ondan azını oluşturur.\nYüzey epiteli doğru. Yüzey ve fallop tüpü epitelinden gelişen tümörler malign over tümörlerinin yaklaşık yüzde doksanını oluşturur.\nSeks kord stromal grup granüloza hücreli tümör ve tekoma fibroma gibi tümörleri içerir. Malign over tümörleri içindeki payı küçüktür.\nMetastatik tümörler malign over tümörlerinin yalnızca yaklaşık yüzde beşini oluşturur ve çoğunlukla iki taraflıdır.\nMezenkimal köken ile karıştırılabilir. Primer over neoplazmlarının çoğu Müllerian epitel farklılaşması gösterir.\nDoğru cevap Be, Yüzey epiteli\nMalign over tümörlerinin yaklaşık yüzde doksanı yüzey epitelinden gelişir. Germ hücreli ve seks kord stromal tümörler malignlerin yüzde onundan azını oluşturur.",
+   "kelime": 151
+  },
+  {
+   "no": 5,
+   "tur": "ornek",
+   "soru": "Düşük dereceli seröz over karsinomunda genellikle vahşi tip olan gen hangisidir?",
+   "secenekler": {
+    "A": "KRAS",
+    "B": "BRAF",
+    "C": "ERBB2",
+    "D": "PTEN",
+    "E": "TP53"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "KRAS düşük dereceli seröz karsinomda sık mutasyona uğrayan genlerden biridir; vahşi tip kalan gen bu değildir.",
+    "B": "BRAF da düşük dereceli seröz karsinomda sık mutasyonludur; benign ya da borderline lezyondan basamaklı ilerlemeye eşlik eder.",
+    "C": "ERBB2, düşük dereceli seröz karsinomda KRAS ve BRAF ile birlikte sık mutasyona uğrayan genler arasındadır.",
+    "D": "PTEN mutasyonu endometrioid ve berrak hücreli over karsinomlarında sıktır; düşük dereceli seröz karsinomun tanımlayıcı geni değildir.",
+    "E": "TP53 doğru: düşük dereceli seröz karsinomda genelde vahşi tiptir; buna karşılık yüksek dereceli seröz karsinomun %95’inde mutasyonludur."
+   },
+   "ozet": "Düşük dereceli seröz karsinom KRAS, BRAF ve ERBB2 mutasyonlarıyla basamaklı gelişir ve TP53 vahşi tiptir; yüksek dereceli tipte ise TP53 mutasyonu %95’tir.",
+   "metin": "**Soru.** Düşük dereceli seröz over karsinomunda genellikle vahşi tip olan gen hangisidir?\n\n**A)** KRAS · **B)** BRAF · **C)** ERBB2 · **D)** PTEN · **E)** TP53\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **KRAS** — KRAS düşük dereceli seröz karsinomda sık mutasyona uğrayan genlerden biridir; vahşi tip kalan gen bu değildir.\n- **BRAF** — BRAF da düşük dereceli seröz karsinomda sık mutasyonludur; benign ya da borderline lezyondan basamaklı ilerlemeye eşlik eder.\n- **ERBB2** — ERBB2, düşük dereceli seröz karsinomda KRAS ve BRAF ile birlikte sık mutasyona uğrayan genler arasındadır.\n- **PTEN** — PTEN mutasyonu endometrioid ve berrak hücreli over karsinomlarında sıktır; düşük dereceli seröz karsinomun tanımlayıcı geni değildir.\n- **TP53** — TP53 doğru: düşük dereceli seröz karsinomda genelde vahşi tiptir; buna karşılık yüksek dereceli seröz karsinomun %95’inde mutasyonludur.\n\n**Cevap: E** — TP53\n\n**Özet.** Düşük dereceli seröz karsinom KRAS, BRAF ve ERBB2 mutasyonlarıyla basamaklı gelişir ve TP53 vahşi tiptir; yüksek dereceli tipte ise TP53 mutasyonu %95’tir.",
+   "ses": "Düşük dereceli seröz over karsinomunda genellikle vahşi tip olan gen hangisidir?\nA, Ka ras\nBe, Be raf\nCe, E re be be iki\nDe, Pe te e ne\nE, Te pe elli üç\nSeçenekleri sırayla değerlendirelim.\nKa ras düşük dereceli seröz karsinomda sık mutasyona uğrayan genlerden biridir. Vahşi tip kalan gen bu değildir.\nBe raf da düşük dereceli seröz karsinomda sık mutasyonludur. Benign ya da borderline lezyondan basamaklı ilerlemeye eşlik eder.\nE re be be iki, düşük dereceli seröz karsinomda ka ras ve be raf ile birlikte sık mutasyona uğrayan genler arasındadır.\nPe te e ne mutasyonu endometrioid ve berrak hücreli over karsinomlarında sıktır. Düşük dereceli seröz karsinomun tanımlayıcı geni değildir.\nTe pe elli üç doğru. Düşük dereceli seröz karsinomda genelde vahşi tiptir, buna karşılık yüksek dereceli seröz karsinomun yüzde doksan beşinde mutasyonludur.\nDoğru cevap E, Te pe elli üç\nDüşük dereceli seröz karsinom ka ras, be raf ve e re be be iki mutasyonlarıyla basamaklı gelişir, te pe elli üç ise vahşi tiptir. Yüksek dereceli tipte te pe elli üç mutasyonu yüzde doksan beştir.",
+   "kelime": 153
+  },
+  {
+   "no": 6,
+   "tur": "ornek",
+   "soru": "Konsantrik kalsifikasyonlar (psammoma cisimcikleri) en sık hangi over tümöründe görülür?",
+   "secenekler": {
+    "A": "Seröz tümör",
+    "B": "Müsinöz tümör",
+    "C": "Disgerminom",
+    "D": "Olgun teratom",
+    "E": "Tekoma"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Seröz tümör doğru: psammoma cisimcikleri tüm seröz tümör tiplerinde sıktır, ancak neoplaziye özgü değildir.",
+    "B": "Müsinöz tümör müsin üreten epitelle döşeli, yoğun müsinöz sıvı içeren çok kistik bir kitledir; psammoma cisimciği onun özelliği değildir.",
+    "C": "Disgerminom testis seminomunun karşılığıdır; berrak sitoplazmalı büyük hücreler ve stromada lenfosit ile granülom içerir.",
+    "D": "Olgun teratom üç germ yaprağından olgun dokular içerir; kesitte kıl, yağ bezi salgısı, diş ve kemik görülebilir.",
+    "E": "Tekoma lipid yüklü teka hücreleri ve fibroblastlardan oluşan, çoğu hormonal olarak inaktif bir seks kord stromal tümördür."
+   },
+   "ozet": "Psammoma cisimcikleri konsantrik kalsifikasyonlardır ve tüm seröz tümör tiplerinde sık görülür; ancak neoplaziye özgü bir bulgu değildir.",
+   "metin": "**Soru.** Konsantrik kalsifikasyonlar (psammoma cisimcikleri) en sık hangi over tümöründe görülür?\n\n**A)** Seröz tümör · **B)** Müsinöz tümör · **C)** Disgerminom · **D)** Olgun teratom · **E)** Tekoma\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Seröz tümör** — Seröz tümör doğru: psammoma cisimcikleri tüm seröz tümör tiplerinde sıktır, ancak neoplaziye özgü değildir.\n- **Müsinöz tümör** — Müsinöz tümör müsin üreten epitelle döşeli, yoğun müsinöz sıvı içeren çok kistik bir kitledir; psammoma cisimciği onun özelliği değildir.\n- **Disgerminom** — Disgerminom testis seminomunun karşılığıdır; berrak sitoplazmalı büyük hücreler ve stromada lenfosit ile granülom içerir.\n- **Olgun teratom** — Olgun teratom üç germ yaprağından olgun dokular içerir; kesitte kıl, yağ bezi salgısı, diş ve kemik görülebilir.\n- **Tekoma** — Tekoma lipid yüklü teka hücreleri ve fibroblastlardan oluşan, çoğu hormonal olarak inaktif bir seks kord stromal tümördür.\n\n**Cevap: A** — Seröz tümör\n\n**Özet.** Psammoma cisimcikleri konsantrik kalsifikasyonlardır ve tüm seröz tümör tiplerinde sık görülür; ancak neoplaziye özgü bir bulgu değildir.",
+   "ses": "Konsantrik kalsifikasyonlar, yani psamoma cisimcikleri, en sık hangi over tümöründe görülür?\nA, Seröz tümör\nBe, Müsinöz tümör\nCe, Disgerminom\nDe, Olgun teratom\nE, Tekoma\nHer seçeneği tek tek ele alalım.\nSeröz tümör doğru. Psamoma cisimcikleri tüm seröz tümör tiplerinde sıktır, ancak neoplaziye özgü değildir.\nMüsinöz tümör müsin üreten epitelle döşeli, yoğun müsinöz sıvı içeren çok kistik bir kitledir. Psamoma cisimciği onun özelliği değildir.\nDisgerminom testis seminomunun karşılığıdır. Berrak sitoplazmalı büyük hücreler ve stromada lenfosit ile granülom içerir.\nOlgun teratom üç germ yaprağından olgun dokular içerir. Kesitte kıl, yağ bezi salgısı, diş ve kemik görülebilir.\nTekoma lipid yüklü teka hücreleri ve fibroblastlardan oluşan, çoğu hormonal olarak inaktif bir seks kord stromal tümördür.\nDoğru cevap A, Seröz tümör\nPsamoma cisimcikleri konsantrik kalsifikasyonlardır ve tüm seröz tümör tiplerinde sık görülür. Ancak neoplaziye özgü bir bulgu değildir.",
+   "kelime": 157
+  },
+  {
+   "no": 7,
+   "tur": "ornek",
+   "soru": "Ovaryumu bilateral tutan, GİS kökenli metastatik müsinöz adenokarsinom hangisidir?",
+   "secenekler": {
+    "A": "Struma ovarii",
+    "B": "Granüloza hücreli tümör",
+    "C": "Krukenberg tümörü",
+    "D": "Brenner tümörü",
+    "E": "Disgerminom"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Struma ovarii tamamen olgun tiroid dokusundan oluşan monodermal teratomdur; hipertiroidizm yapabilen, tek taraflı küçük bir kitledir.",
+    "B": "Granüloza hücreli tümör tek taraflı bir seks kord stromal tümördür; sıklıkla fazla östrojen salgılar, metastaz değildir.",
+    "C": "Krukenberg tümörü doğru: gastrointestinal kökenli metastatik müsinöz adenokarsinomdur ve sıklıkla iki overi birlikte tutar.",
+    "D": "Brenner tümörü ile karıştırılabilir: İki taraflı müsinöz over kitlesinde önce metastaz düşünülür, çünkü primer müsinöz tümörler nadiren iki taraflıdır.",
+    "E": "Disgerminom genç yaşta, %80–90 oranında tek taraflı görülen, radyosensitif malign germ hücreli tümördür."
+   },
+   "ozet": "Krukenberg tümörü gastrointestinal kökenli, mühür yüzük hücreleri içerebilen metastatik müsinöz adenokarsinomdur; iki taraflılık onu primer müsinöz over tümöründen ayırır.",
+   "metin": "**Soru.** Ovaryumu bilateral tutan, GİS kökenli metastatik müsinöz adenokarsinom hangisidir?\n\n**A)** Struma ovarii · **B)** Granüloza hücreli tümör · **C)** Krukenberg tümörü · **D)** Brenner tümörü · **E)** Disgerminom\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Struma ovarii** — Struma ovarii tamamen olgun tiroid dokusundan oluşan monodermal teratomdur; hipertiroidizm yapabilen, tek taraflı küçük bir kitledir.\n- **Granüloza hücreli tümör** — Granüloza hücreli tümör tek taraflı bir seks kord stromal tümördür; sıklıkla fazla östrojen salgılar, metastaz değildir.\n- **Krukenberg tümörü** — Krukenberg tümörü doğru: gastrointestinal kökenli metastatik müsinöz adenokarsinomdur ve sıklıkla iki overi birlikte tutar.\n- **Brenner tümörü** — Brenner tümörü ile karıştırılabilir: İki taraflı müsinöz over kitlesinde önce metastaz düşünülür, çünkü primer müsinöz tümörler nadiren iki taraflıdır.\n- **Disgerminom** — Disgerminom genç yaşta, %80–90 oranında tek taraflı görülen, radyosensitif malign germ hücreli tümördür.\n\n**Cevap: C** — Krukenberg tümörü\n\n**Özet.** Krukenberg tümörü gastrointestinal kökenli, mühür yüzük hücreleri içerebilen metastatik müsinöz adenokarsinomdur; iki taraflılık onu primer müsinöz over tümöründen ayırır.",
+   "ses": "Ovaryumu iki taraflı tutan, gastrointestinal sistem kökenli metastatik müsinöz adenokarsinom hangisidir?\nA, Struma ovari\nBe, Granüloza hücreli tümör\nCe, Krukenberg tümörü\nDe, Brenner tümörü\nE, Disgerminom\nŞıkları sırasıyla gözden geçirelim.\nStruma ovari tamamen olgun tiroid dokusundan oluşan monodermal teratomdur. Hipertiroidizm yapabilen, tek taraflı küçük bir kitledir.\nGranüloza hücreli tümör tek taraflı bir seks kord stromal tümördür. Sıklıkla fazla östrojen salgılar, metastaz değildir.\nKrukenberg tümörü doğru. Gastrointestinal kökenli metastatik müsinöz adenokarsinomdur ve sıklıkla iki overi birlikte tutar.\nBrenner tümörü ile karıştırılabilir. İki taraflı müsinöz over kitlesinde önce metastaz düşünülür, çünkü primer müsinöz tümörler nadiren iki taraflıdır.\nDisgerminom genç yaşta, yüzde seksen ile doksan oranında tek taraflı görülen, radyosensitif malign germ hücreli tümördür.\nDoğru cevap Ce, Krukenberg tümörü\nKrukenberg tümörü gastrointestinal kökenli, mühür yüzük hücreleri içerebilen metastatik müsinöz adenokarsinomdur. İki taraflılık onu primer müsinöz over tümöründen ayırır.",
+   "kelime": 157
+  },
+  {
+   "no": 8,
+   "tur": "ornek",
+   "soru": "Psödomiksoma peritoninin en sık kökeni hangisidir?",
+   "secenekler": {
+    "A": "Ovaryum",
+    "B": "Mide",
+    "C": "Kolon",
+    "D": "Apendiks",
+    "E": "Pankreas"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Ovaryumun müsinöz tümörleri rüptürde peritona yayılabilir, ancak bu implantların çoğu kendiliğinden geriler; en sık köken değildir.",
+    "B": "Mide gastrointestinal sistemin parçasıdır, ama psödomiksoma peritonide en sık köken olarak öne çıkan organ değildir.",
+    "C": "Kolon da gastrointestinal bir köken olabilir; ancak psödomiksoma peritoninin en sık çıkış yeri olarak bu organ sayılmaz.",
+    "D": "Apendiks doğru: psödomiksoma peritoni çoğu olguda gastrointestinal kökenlidir ve en sık apendiksten gelişir.",
+    "E": "Pankreas ile karıştırılabilir: Psödomiksoma peritoni mukus üreten tümör hücrelerinin peritona implantasyonuyla oluşur ve en sık başka bir organdan çıkar."
+   },
+   "ozet": "Psödomiksoma peritoni, mukus üreten tümör hücresi implantlarıyla peritonda yoğun müsin birikimidir; çoğunlukla gastrointestinal kökenlidir ve en sık apendiksten çıkar.",
+   "metin": "**Soru.** Psödomiksoma peritoninin en sık kökeni hangisidir?\n\n**A)** Ovaryum · **B)** Mide · **C)** Kolon · **D)** Apendiks · **E)** Pankreas\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Ovaryum** — Ovaryumun müsinöz tümörleri rüptürde peritona yayılabilir, ancak bu implantların çoğu kendiliğinden geriler; en sık köken değildir.\n- **Mide** — Mide gastrointestinal sistemin parçasıdır, ama psödomiksoma peritonide en sık köken olarak öne çıkan organ değildir.\n- **Kolon** — Kolon da gastrointestinal bir köken olabilir; ancak psödomiksoma peritoninin en sık çıkış yeri olarak bu organ sayılmaz.\n- **Apendiks** — Apendiks doğru: psödomiksoma peritoni çoğu olguda gastrointestinal kökenlidir ve en sık apendiksten gelişir.\n- **Pankreas** — Pankreas ile karıştırılabilir: Psödomiksoma peritoni mukus üreten tümör hücrelerinin peritona implantasyonuyla oluşur ve en sık başka bir organdan çıkar.\n\n**Cevap: D** — Apendiks\n\n**Özet.** Psödomiksoma peritoni, mukus üreten tümör hücresi implantlarıyla peritonda yoğun müsin birikimidir; çoğunlukla gastrointestinal kökenlidir ve en sık apendiksten çıkar.",
+   "ses": "Psödomiksoma peritoninin en sık kökeni hangisidir?\nA, Ovaryum\nBe, Mide\nCe, Kolon\nDe, Apendiks\nE, Pankreas\nŞimdi seçeneklere tek tek bakalım.\nOvaryumun müsinöz tümörleri rüptürde peritona yayılabilir, ancak bu implantların çoğu kendiliğinden geriler. En sık köken değildir.\nMide gastrointestinal sistemin parçasıdır, ama psödomiksoma peritonide en sık köken olarak öne çıkan organ değildir.\nKolon da gastrointestinal bir köken olabilir. Ancak psödomiksoma peritoninin en sık çıkış yeri olarak bu organ sayılmaz.\nApendiks doğru. Psödomiksoma peritoni çoğu olguda gastrointestinal kökenlidir ve en sık apendiksten gelişir.\nPankreas ile karıştırılabilir. Psödomiksoma peritoni mukus üreten tümör hücrelerinin peritona implantasyonuyla oluşur ve en sık başka bir organdan çıkar.\nDoğru cevap De, Apendiks\nPsödomiksoma peritoni, mukus üreten tümör hücresi implantlarıyla peritonda yoğun müsin birikimidir. Çoğunlukla gastrointestinal kökenlidir ve en sık apendiksten çıkar.",
+   "kelime": 146
+  },
+  {
+   "no": 9,
+   "tur": "ornek",
+   "soru": "Postmenopozal kadında östrojen salgılayan over tümörü en olası hangisidir?",
+   "secenekler": {
+    "A": "Sertoli-Leydig tümörü",
+    "B": "Granüloza hücreli tümör",
+    "C": "Disgerminom",
+    "D": "Koriokarsinom",
+    "E": "Fibroma"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Sertoli Leydig hücreli tümör testis gelişimini taklit eder; çoğu olguda maskülinizan ya da defeminizan etki yapar, pik yaşı 2.–3. dekattır.",
+    "B": "Granüloza hücreli tümör doğru: en sık postmenopozal dönemde görülür ve sıklıkla fazla östrojen salgılar; %5–25 oranında malign olabilir.",
+    "C": "Disgerminom 20’li yaşlarda görülen, gonadal disgenezi ile ilişkili germ hücreli tümördür; postmenopozal dönemin tümörü değildir.",
+    "D": "Over koriokarsinomu çoğunlukla 30 yaş altında görülür; hCG salgılar ve kemoterapiye dirençlidir.",
+    "E": "Fibroma, tekoma fibroma grubundadır; çoğu hormonal olarak inaktiftir ve Meigs sendromuyla ilişkilidir."
+   },
+   "ozet": "Granüloza hücreli tümör en sık postmenopozal kadında görülür ve östrojen salgılar; bu östrojen fazlalığı endometrial hiperplazi ve kanamaya yol açar.",
+   "metin": "**Soru.** Postmenopozal kadında östrojen salgılayan over tümörü en olası hangisidir?\n\n**A)** Sertoli-Leydig tümörü · **B)** Granüloza hücreli tümör · **C)** Disgerminom · **D)** Koriokarsinom · **E)** Fibroma\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Sertoli-Leydig tümörü** — Sertoli Leydig hücreli tümör testis gelişimini taklit eder; çoğu olguda maskülinizan ya da defeminizan etki yapar, pik yaşı 2.–3. dekattır.\n- **Granüloza hücreli tümör** — Granüloza hücreli tümör doğru: en sık postmenopozal dönemde görülür ve sıklıkla fazla östrojen salgılar; %5–25 oranında malign olabilir.\n- **Disgerminom** — Disgerminom 20’li yaşlarda görülen, gonadal disgenezi ile ilişkili germ hücreli tümördür; postmenopozal dönemin tümörü değildir.\n- **Koriokarsinom** — Over koriokarsinomu çoğunlukla 30 yaş altında görülür; hCG salgılar ve kemoterapiye dirençlidir.\n- **Fibroma** — Fibroma, tekoma fibroma grubundadır; çoğu hormonal olarak inaktiftir ve Meigs sendromuyla ilişkilidir.\n\n**Cevap: B** — Granüloza hücreli tümör\n\n**Özet.** Granüloza hücreli tümör en sık postmenopozal kadında görülür ve östrojen salgılar; bu östrojen fazlalığı endometrial hiperplazi ve kanamaya yol açar.",
+   "ses": "Postmenopozal kadında östrojen salgılayan over tümörü en olası hangisidir?\nA, Sertoli Laydig tümörü\nBe, Granüloza hücreli tümör\nCe, Disgerminom\nDe, Koryokarsinom\nE, Fibroma\nSeçenekleri sırayla değerlendirelim.\nSertoli Laydig hücreli tümör testis gelişimini taklit eder. Çoğu olguda maskülinizan ya da defeminizan etki yapar, pik yaşı ikinci ile üçüncü dekattır.\nGranüloza hücreli tümör doğru. En sık postmenopozal dönemde görülür ve sıklıkla fazla östrojen salgılar, yüzde beş ile yirmi beş oranında malign olabilir.\nDisgerminom yirmili yaşlarda görülen, gonadal disgenezi ile ilişkili germ hücreli tümördür. Postmenopozal dönemin tümörü değildir.\nOver koriokarsinomu çoğunlukla otuz yaş altında görülür. Ha ce ge salgılar ve kemoterapiye dirençlidir.\nFibroma, tekoma fibroma grubundadır. Çoğu hormonal olarak inaktiftir ve Megs sendromuyla ilişkilidir.\nDoğru cevap Be, Granüloza hücreli tümör\nGranüloza hücreli tümör en sık postmenopozal kadında görülür ve östrojen salgılar. Bu östrojen fazlalığı endometrial hiperplazi ve kanamaya yol açar.",
+   "kelime": 153
+  },
+  {
+   "no": 10,
+   "tur": "ornek",
+   "soru": "Over tümörüyle birlikte asit ve hidrotoraks (Meigs sendromu) en çok hangisinde görülür?",
+   "secenekler": {
+    "A": "Disgerminom",
+    "B": "Seröz kistadenom",
+    "C": "Struma ovarii",
+    "D": "Olgun teratom",
+    "E": "Tekoma-fibroma"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Disgerminom radyosensitif malign germ hücreli tümördür; yalnızca yaklaşık üçte biri metastaz yapar, kür oranı yaklaşık %80’dir.",
+    "B": "Seröz kistadenom benign bir yüzey epitel tümörüdür; seröz tümörlerde asit gelişimi ise malign formdaki metastatik yayılımla ilişkilidir.",
+    "C": "Struma ovarii olgun tiroid dokusu içeren monodermal teratomdur; tipik klinik etkisi hipertiroidizmdir.",
+    "D": "Olgun teratomun önemli komplikasyonu %10–15 oranında torsiyondur; asit ve hidrotoraks birlikteliği onun özelliği değildir.",
+    "E": "Tekoma fibroma doğru: olguların yaklaşık %40’ında asit ve hidrotoraks birlikte görülür, buna Meigs sendromu denir."
+   },
+   "ozet": "Tekoma fibroma lipid yüklü teka hücreleri ve fibroblastlardan oluşur, çoğu hormonal olarak inaktiftir; olguların yaklaşık %40’ında Meigs sendromu görülür.",
+   "metin": "**Soru.** Over tümörüyle birlikte asit ve hidrotoraks (Meigs sendromu) en çok hangisinde görülür?\n\n**A)** Disgerminom · **B)** Seröz kistadenom · **C)** Struma ovarii · **D)** Olgun teratom · **E)** Tekoma-fibroma\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Disgerminom** — Disgerminom radyosensitif malign germ hücreli tümördür; yalnızca yaklaşık üçte biri metastaz yapar, kür oranı yaklaşık %80’dir.\n- **Seröz kistadenom** — Seröz kistadenom benign bir yüzey epitel tümörüdür; seröz tümörlerde asit gelişimi ise malign formdaki metastatik yayılımla ilişkilidir.\n- **Struma ovarii** — Struma ovarii olgun tiroid dokusu içeren monodermal teratomdur; tipik klinik etkisi hipertiroidizmdir.\n- **Olgun teratom** — Olgun teratomun önemli komplikasyonu %10–15 oranında torsiyondur; asit ve hidrotoraks birlikteliği onun özelliği değildir.\n- **Tekoma-fibroma** — Tekoma fibroma doğru: olguların yaklaşık %40’ında asit ve hidrotoraks birlikte görülür, buna Meigs sendromu denir.\n\n**Cevap: E** — Tekoma-fibroma\n\n**Özet.** Tekoma fibroma lipid yüklü teka hücreleri ve fibroblastlardan oluşur, çoğu hormonal olarak inaktiftir; olguların yaklaşık %40’ında Meigs sendromu görülür.",
+   "ses": "Over tümörüyle birlikte asit ve hidrotoraks, yani Megs sendromu, en çok hangisinde görülür?\nA, Disgerminom\nBe, Seröz kistadenom\nCe, Struma ovari\nDe, Olgun teratom\nE, Tekoma fibroma\nHer seçeneği tek tek ele alalım.\nDisgerminom radyosensitif malign germ hücreli tümördür. Yalnızca yaklaşık üçte biri metastaz yapar, kür oranı yaklaşık yüzde seksendir.\nSeröz kistadenom benign bir yüzey epitel tümörüdür. Seröz tümörlerde asit gelişimi ise malign formdaki metastatik yayılımla ilişkilidir.\nStruma ovari olgun tiroid dokusu içeren monodermal teratomdur. Tipik klinik etkisi hipertiroidizmdir.\nOlgun teratomun önemli komplikasyonu yüzde on ile on beş oranında torsiyondur. Asit ve hidrotoraks birlikteliği onun özelliği değildir.\nTekoma fibroma doğru. Olguların yaklaşık yüzde kırkında asit ve hidrotoraks birlikte görülür, buna Megs sendromu denir.\nDoğru cevap E, Tekoma fibroma\nTekoma fibroma lipid yüklü teka hücreleri ve fibroblastlardan oluşur, çoğu hormonal olarak inaktiftir. Olguların yaklaşık yüzde kırkında Megs sendromu görülür.",
+   "kelime": 153
+  },
+  {
+   "no": 11,
+   "tur": "ornek",
+   "soru": "Olgun kistik teratomun en sık komplikasyonu hangisidir?",
+   "secenekler": {
+    "A": "Torsiyon",
+    "B": "Malign dönüşüm",
+    "C": "Limbik ensefalit",
+    "D": "Hipertiroidi",
+    "E": "Karsinoid sendrom"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Torsiyon doğru: olgun teratomların %10–15’inde görülür ve akut cerrahi acil tablosu yaratır.",
+    "B": "Malign dönüşüm olgun teratomda yaklaşık %1 ile nadirdir; gelişirse çoğunlukla skuamöz hücreli karsinomdur.",
+    "C": "Limbik ensefalit olgun sinir dokusu içeren teratomlarda görülen nadir, otoimmün paraneoplastik bir tablodur; rezeksiyonla sıklıkla geriler.",
+    "D": "Hipertiroidi olgun kistik teratomun değil, tiroid dokusundan oluşan struma ovariinin klinik sonucudur.",
+    "E": "Karsinoid sendrom nadir görülen over karsinoidinin bulgusudur; olgun kistik teratomun sık komplikasyonu değildir."
+   },
+   "ozet": "Olgun kistik teratomun en sık komplikasyonu %10–15 oranında torsiyondur; malign dönüşüm yaklaşık %1 ile nadirdir ve çoğunlukla skuamöz hücreli karsinomdur.",
+   "metin": "**Soru.** Olgun kistik teratomun en sık komplikasyonu hangisidir?\n\n**A)** Torsiyon · **B)** Malign dönüşüm · **C)** Limbik ensefalit · **D)** Hipertiroidi · **E)** Karsinoid sendrom\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Torsiyon** — Torsiyon doğru: olgun teratomların %10–15’inde görülür ve akut cerrahi acil tablosu yaratır.\n- **Malign dönüşüm** — Malign dönüşüm olgun teratomda yaklaşık %1 ile nadirdir; gelişirse çoğunlukla skuamöz hücreli karsinomdur.\n- **Limbik ensefalit** — Limbik ensefalit olgun sinir dokusu içeren teratomlarda görülen nadir, otoimmün paraneoplastik bir tablodur; rezeksiyonla sıklıkla geriler.\n- **Hipertiroidi** — Hipertiroidi olgun kistik teratomun değil, tiroid dokusundan oluşan struma ovariinin klinik sonucudur.\n- **Karsinoid sendrom** — Karsinoid sendrom nadir görülen over karsinoidinin bulgusudur; olgun kistik teratomun sık komplikasyonu değildir.\n\n**Cevap: A** — Torsiyon\n\n**Özet.** Olgun kistik teratomun en sık komplikasyonu %10–15 oranında torsiyondur; malign dönüşüm yaklaşık %1 ile nadirdir ve çoğunlukla skuamöz hücreli karsinomdur.",
+   "ses": "Olgun kistik teratomun en sık komplikasyonu hangisidir?\nA, Torsiyon\nBe, Malign dönüşüm\nCe, Limbik ensefalit\nDe, Hipertiroidi\nE, Karsinoid sendrom\nŞıkları sırasıyla gözden geçirelim.\nTorsiyon doğru. Olgun teratomların yüzde on ile on beşinde görülür ve akut cerrahi acil tablosu yaratır.\nMalign dönüşüm olgun teratomda yaklaşık yüzde bir ile nadirdir. Gelişirse çoğunlukla skuamöz hücreli karsinomdur.\nLimbik ensefalit olgun sinir dokusu içeren teratomlarda görülen nadir, otoimmün paraneoplastik bir tablodur. Rezeksiyonla sıklıkla geriler.\nHipertiroidi olgun kistik teratomun değil, tiroid dokusundan oluşan struma ovarinin klinik sonucudur.\nKarsinoid sendrom nadir görülen over karsinoidinin bulgusudur. Olgun kistik teratomun sık komplikasyonu değildir.\nDoğru cevap A, Torsiyon\nOlgun kistik teratomun en sık komplikasyonu yüzde on ile on beş oranında torsiyondur. Malign dönüşüm yaklaşık yüzde bir ile nadirdir ve çoğunlukla skuamöz hücreli karsinomdur.",
+   "kelime": 139
+  },
+  {
+   "no": 12,
+   "tur": "ornek",
+   "soru": "Hipertiroidizme yol açabilen monodermal teratom hangisidir?",
+   "secenekler": {
+    "A": "Dermoid kist",
+    "B": "Olgunlaşmamış teratom",
+    "C": "Struma ovarii",
+    "D": "Over karsinoidi",
+    "E": "Disgerminom"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Dermoid kist olgun kistik teratomdur; üç germ yaprağından dokular içerir, monodermal değildir.",
+    "B": "Olgunlaşmamış teratom embriyonel dokulara benzeyen malign teratomdur; metastaz riski olgunlaşmamış nöroepitel oranıyla ilişkilidir.",
+    "C": "Struma ovarii doğru: tamamen olgun tiroid dokusundan oluşan en sık monodermal teratomdur ve hipertiroidizme yol açabilir.",
+    "D": "Over karsinoidi de monodermal teratomdur, ancak hipertiroidi değil karsinoid sendrom yapabilir.",
+    "E": "Disgerminom teratom değil, testis seminomunun karşılığı olan malign germ hücreli tümördür."
+   },
+   "ozet": "Struma ovarii en sık monodermal teratomdur; tamamen olgun tiroid dokusundan oluşur, küçük, katı, tek taraflı kahverengi kitle yapar ve hipertiroidizme yol açabilir.",
+   "metin": "**Soru.** Hipertiroidizme yol açabilen monodermal teratom hangisidir?\n\n**A)** Dermoid kist · **B)** Olgunlaşmamış teratom · **C)** Struma ovarii · **D)** Over karsinoidi · **E)** Disgerminom\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Dermoid kist** — Dermoid kist olgun kistik teratomdur; üç germ yaprağından dokular içerir, monodermal değildir.\n- **Olgunlaşmamış teratom** — Olgunlaşmamış teratom embriyonel dokulara benzeyen malign teratomdur; metastaz riski olgunlaşmamış nöroepitel oranıyla ilişkilidir.\n- **Struma ovarii** — Struma ovarii doğru: tamamen olgun tiroid dokusundan oluşan en sık monodermal teratomdur ve hipertiroidizme yol açabilir.\n- **Over karsinoidi** — Over karsinoidi de monodermal teratomdur, ancak hipertiroidi değil karsinoid sendrom yapabilir.\n- **Disgerminom** — Disgerminom teratom değil, testis seminomunun karşılığı olan malign germ hücreli tümördür.\n\n**Cevap: C** — Struma ovarii\n\n**Özet.** Struma ovarii en sık monodermal teratomdur; tamamen olgun tiroid dokusundan oluşur, küçük, katı, tek taraflı kahverengi kitle yapar ve hipertiroidizme yol açabilir.",
+   "ses": "Hipertiroidizme yol açabilen monodermal teratom hangisidir?\nA, Dermoid kist\nBe, Olgunlaşmamış teratom\nCe, Struma ovari\nDe, Over karsinoidi\nE, Disgerminom\nŞimdi seçeneklere tek tek bakalım.\nDermoid kist olgun kistik teratomdur. Üç germ yaprağından dokular içerir, monodermal değildir.\nOlgunlaşmamış teratom embriyonel dokulara benzeyen malign teratomdur. Metastaz riski olgunlaşmamış nöroepitel oranıyla ilişkilidir.\nStruma ovari doğru. Tamamen olgun tiroid dokusundan oluşan en sık monodermal teratomdur ve hipertiroidizme yol açabilir.\nOver karsinoidi de monodermal teratomdur, ancak hipertiroidi değil karsinoid sendrom yapabilir.\nDisgerminom teratom değil, testis seminomunun karşılığı olan malign germ hücreli tümördür.\nDoğru cevap Ce, Struma ovari\nStruma ovari en sık monodermal teratomdur. Tamamen olgun tiroid dokusundan oluşur, küçük, katı, tek taraflı kahverengi kitle yapar ve hipertiroidizme yol açabilir.",
+   "kelime": 141
+  },
+  {
+   "no": 13,
+   "tur": "ornek",
+   "soru": "CA-125'in klinikte en büyük faydası hangisidir?",
+   "secenekler": {
+    "A": "Genel popülasyon taraması",
+    "B": "Histolojik tip belirleme",
+    "C": "Erken evre tanı",
+    "D": "Tedavi yanıtı izlemi",
+    "E": "Germ hücreli tümör tanısı"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Genel popülasyon taramasında CA-125’in değeri sınırlıdır; erken tümörlerin çoğu saptanamaz.",
+    "B": "Histolojik tip belirlemek CA-125’in işlevi değil; bu belirteç epitelyal over kanserli kadınların %75–90’ında yükselen bir serum glikoproteinidir.",
+    "C": "Erken evre tanıda CA-125 güvenilir değildir; overe sınırlı kanserde olguların %50’sine kadarında normal çıkar.",
+    "D": "Tedavi yanıtı izlemi doğru: CA-125’in en büyük faydası tanı sonrası tedavi yanıtını izlemek ve nüksü saptamaktır.",
+    "E": "Germ hücreli tümör tanısı CA-125’in kullanım alanı değil; bu belirteç epitelyal over kanserinde ve birçok benign durumda yükselir."
+   },
+   "ozet": "CA-125 tarama için sınırlıdır, çünkü erken kanserde sık normaldir ve benign durumlarda da yükselir; en büyük faydası tedavi yanıtı ve nüks izlemidir.",
+   "metin": "**Soru.** CA-125'in klinikte en büyük faydası hangisidir?\n\n**A)** Genel popülasyon taraması · **B)** Histolojik tip belirleme · **C)** Erken evre tanı · **D)** Tedavi yanıtı izlemi · **E)** Germ hücreli tümör tanısı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Genel popülasyon taraması** — Genel popülasyon taramasında CA-125’in değeri sınırlıdır; erken tümörlerin çoğu saptanamaz.\n- **Histolojik tip belirleme** — Histolojik tip belirlemek CA-125’in işlevi değil; bu belirteç epitelyal over kanserli kadınların %75–90’ında yükselen bir serum glikoproteinidir.\n- **Erken evre tanı** — Erken evre tanıda CA-125 güvenilir değildir; overe sınırlı kanserde olguların %50’sine kadarında normal çıkar.\n- **Tedavi yanıtı izlemi** — Tedavi yanıtı izlemi doğru: CA-125’in en büyük faydası tanı sonrası tedavi yanıtını izlemek ve nüksü saptamaktır.\n- **Germ hücreli tümör tanısı** — Germ hücreli tümör tanısı CA-125’in kullanım alanı değil; bu belirteç epitelyal over kanserinde ve birçok benign durumda yükselir.\n\n**Cevap: D** — Tedavi yanıtı izlemi\n\n**Özet.** CA-125 tarama için sınırlıdır, çünkü erken kanserde sık normaldir ve benign durumlarda da yükselir; en büyük faydası tedavi yanıtı ve nüks izlemidir.",
+   "ses": "Ce a yüz yirmi beşin klinikte en büyük faydası hangisidir?\nA, Genel popülasyon taraması\nBe, Histolojik tip belirleme\nCe, Erken evre tanı\nDe, Tedavi yanıtı izlemi\nE, Germ hücreli tümör tanısı\nSeçenekleri sırayla değerlendirelim.\nGenel popülasyon taramasında ce a yüz yirmi beşin değeri sınırlıdır. Erken tümörlerin çoğu saptanamaz.\nHistolojik tip belirlemek ce a yüz yirmi beşin işlevi değil. Bu belirteç epitelyal over kanserli kadınların yüzde yetmiş beş ile doksanında yükselen bir serum glikoproteinidir.\nErken evre tanıda ce a yüz yirmi beş güvenilir değildir. Overe sınırlı kanserde olguların yüzde ellisine kadarında normal çıkar.\nTedavi yanıtı izlemi doğru. Ce a yüz yirmi beşin en büyük faydası tanı sonrası tedavi yanıtını izlemek ve nüksü saptamaktır.\nGerm hücreli tümör tanısı ce a yüz yirmi beşin kullanım alanı değil. Bu belirteç epitelyal over kanserinde ve birçok benign durumda yükselir.\nDoğru cevap De, Tedavi yanıtı izlemi\nCe a yüz yirmi beş tarama için sınırlıdır, çünkü erken kanserde sık normaldir ve benign durumlarda da yükselir. En büyük faydası tedavi yanıtı ve nüks izlemidir.",
+   "kelime": 166
+  },
+  {
+   "no": 27,
+   "tur": "cikmis",
+   "soru": "Uzun süreli kombine oral kontraseptif kullanımının, ovulasyon sayısını azaltma mekanizmasıyla riskini belirgin şekilde düşürdüğü kanser hangisidir?",
+   "secenekler": {
+    "A": "Serviks kanseri",
+    "B": "Over kanseri",
+    "C": "Endometrium kanseri",
+    "D": "Kolon kanseri",
+    "E": "Akciğer kanseri"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Ovulasyon baskılanmasıyla riskin azalması yumurtlamanın gerçekleştiği organın karsinomu için tanımlanır. Serviks kanseri bu sorudaki ayrımı sağlamaz.",
+    "B": "Over kanseri doğru: uzun süreli oral kontraseptif kullanımı ovulasyonu baskılayarak over karsinomu riskini azaltır.",
+    "C": "Endometrial karsinom riski polikistik over sendromunda artar, östrojen fazlalığı da endometrial hiperplaziye yol açar. Endometrium kanseri bu sorudaki ayrımı sağlamaz.",
+    "D": "Kolon kanseri ile karıştırılabilir: Gastrointestinal sistem daha çok overe metastaz yapan Krukenberg tümörlerinin primer odağı olarak önemlidir.",
+    "E": "Akciğerin küçük hücreli karsinomu daha çok limbik ensefalitle en sık ilişkili tümör olarak anılır. Akciğer kanseri bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Over karsinomu riskini ileri yaş, erken menarş, geç menopoz, nulliparite ve aile öyküsü artırır; uzun süreli oral kontraseptif kullanımı ovulasyonu baskılayarak riski azaltır.",
+   "metin": "**Soru.** Uzun süreli kombine oral kontraseptif kullanımının, ovulasyon sayısını azaltma mekanizmasıyla riskini belirgin şekilde düşürdüğü kanser hangisidir?\n\n**A)** Serviks kanseri · **B)** Over kanseri · **C)** Endometrium kanseri · **D)** Kolon kanseri · **E)** Akciğer kanseri\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Serviks kanseri** — Ovulasyon baskılanmasıyla riskin azalması yumurtlamanın gerçekleştiği organın karsinomu için tanımlanır. Serviks kanseri bu sorudaki ayrımı sağlamaz.\n- **Over kanseri** — Over kanseri doğru: uzun süreli oral kontraseptif kullanımı ovulasyonu baskılayarak over karsinomu riskini azaltır.\n- **Endometrium kanseri** — Endometrial karsinom riski polikistik over sendromunda artar, östrojen fazlalığı da endometrial hiperplaziye yol açar. Endometrium kanseri bu sorudaki ayrımı sağlamaz.\n- **Kolon kanseri** — Kolon kanseri ile karıştırılabilir: Gastrointestinal sistem daha çok overe metastaz yapan Krukenberg tümörlerinin primer odağı olarak önemlidir.\n- **Akciğer kanseri** — Akciğerin küçük hücreli karsinomu daha çok limbik ensefalitle en sık ilişkili tümör olarak anılır. Akciğer kanseri bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Over kanseri\n\n**Özet.** Over karsinomu riskini ileri yaş, erken menarş, geç menopoz, nulliparite ve aile öyküsü artırır; uzun süreli oral kontraseptif kullanımı ovulasyonu baskılayarak riski azaltır.",
+   "ses": "Uzun süreli kombine oral kontraseptif kullanımının, ovulasyon sayısını azaltma mekanizmasıyla riskini belirgin şekilde düşürdüğü kanser hangisidir?\nA, Serviks kanseri\nBe, Over kanseri\nCe, Endometrium kanseri\nDe, Kolon kanseri\nE, Akciğer kanseri\nŞıkları sırasıyla gözden geçirelim.\nOvulasyon baskılanmasıyla riskin azalması yumurtlamanın gerçekleştiği organın karsinomu için tanımlanır. Serviks kanseri bu sorudaki ayrımı sağlamaz.\nOver kanseri doğru. Uzun süreli oral kontraseptif kullanımı ovulasyonu baskılayarak over karsinomu riskini azaltır.\nEndometrial karsinom riski polikistik over sendromunda artar, östrojen fazlalığı da endometrial hiperplaziye yol açar. Endometrium kanseri bu sorudaki ayrımı sağlamaz.\nKolon kanseri ile karıştırılabilir. Gastrointestinal sistem daha çok overe metastaz yapan Krukenberg tümörlerinin primer odağı olarak önemlidir.\nAkciğerin küçük hücreli karsinomu daha çok limbik ensefalitle en sık ilişkili tümör olarak anılır. Akciğer kanseri bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Over kanseri\nOver karsinomu riskini ileri yaş, erken menarş, geç menopoz, nulliparite ve aile öyküsü artırır. Uzun süreli oral kontraseptif kullanımı ovulasyonu baskılayarak riski azaltır.",
+   "kelime": 177
+  },
+  {
+   "no": 28,
+   "tur": "cikmis",
+   "soru": "Germ hücrelerinden köken alan over tümörü aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Fibrom",
+    "B": "Brenner tümörü",
+    "C": "Seröz tümör",
+    "D": "Disgerminom",
+    "E": "Sertoli-Leydig hücreli tümör"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Fibrom germ hücreli değil, seks kord-stromal kökenlidir; teka hücreleri ve fibroblastlardan oluşan tekoma-fibroma grubunda yer alır.",
+    "B": "Over tümörleri yüzey epiteli, germ hücreleri ve seks kord-stromal hücreler olmak üzere üç kökenden gelişir. Brenner tümörü bu sorudaki ayrımı sağlamaz.",
+    "C": "Seröz tümör yüzey epitel kökenlidir; Müllerian epitel farklılaşması gösteren en sık yüzey epitel tümörüdür.",
+    "D": "Disgerminom doğru: germ hücre kökenlidir ve testis seminomunun overdeki karşılığıdır; 20'li yaşlarda sıktır ve radyosensitiftir.",
+    "E": "Sertoli–Leydig hücreli tümör seks kord-stromal kökenlidir; testis gelişimini taklit eder ve çoğu olguda maskülinizan etki yapar."
+   },
+   "ozet": "Over tümörleri yüzey epiteli, germ hücreleri ve seks kord-stromal hücrelerden köken alır; disgerminom germ hücreli, fibrom ve Sertoli–Leydig tümörü seks kord-stromal gruptadır.",
+   "metin": "**Soru.** Germ hücrelerinden köken alan over tümörü aşağıdakilerden hangisidir?\n\n**A)** Fibrom · **B)** Brenner tümörü · **C)** Seröz tümör · **D)** Disgerminom · **E)** Sertoli-Leydig hücreli tümör\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Fibrom** — Fibrom germ hücreli değil, seks kord-stromal kökenlidir; teka hücreleri ve fibroblastlardan oluşan tekoma-fibroma grubunda yer alır.\n- **Brenner tümörü** — Over tümörleri yüzey epiteli, germ hücreleri ve seks kord-stromal hücreler olmak üzere üç kökenden gelişir. Brenner tümörü bu sorudaki ayrımı sağlamaz.\n- **Seröz tümör** — Seröz tümör yüzey epitel kökenlidir; Müllerian epitel farklılaşması gösteren en sık yüzey epitel tümörüdür.\n- **Disgerminom** — Disgerminom doğru: germ hücre kökenlidir ve testis seminomunun overdeki karşılığıdır; 20'li yaşlarda sıktır ve radyosensitiftir.\n- **Sertoli-Leydig hücreli tümör** — Sertoli–Leydig hücreli tümör seks kord-stromal kökenlidir; testis gelişimini taklit eder ve çoğu olguda maskülinizan etki yapar.\n\n**Cevap: D** — Disgerminom\n\n**Özet.** Over tümörleri yüzey epiteli, germ hücreleri ve seks kord-stromal hücrelerden köken alır; disgerminom germ hücreli, fibrom ve Sertoli–Leydig tümörü seks kord-stromal gruptadır.",
+   "ses": "Germ hücrelerinden köken alan over tümörü aşağıdakilerden hangisidir?\nA, Fibrom\nBe, Brenner tümörü\nCe, Seröz tümör\nDe, Disgerminom\nE, Sertoli Laydig hücreli tümör\nŞimdi seçeneklere tek tek bakalım.\nFibrom germ hücreli değil, seks kord stromal kökenlidir. Teka hücreleri ve fibroblastlardan oluşan tekoma fibroma grubunda yer alır.\nOver tümörleri yüzey epiteli, germ hücreleri ve seks kord stromal hücreler olmak üzere üç kökenden gelişir. Brenner tümörü bu sorudaki ayrımı sağlamaz.\nSeröz tümör yüzey epitel kökenlidir. Müleryan epitel farklılaşması gösteren en sık yüzey epitel tümörüdür.\nDisgerminom doğru. Germ hücre kökenlidir ve testis seminomunun overdeki karşılığıdır, yirmili yaşlarda sıktır ve radyosensitiftir.\nSertoli Laydig hücreli tümör seks kord stromal kökenlidir. Testis gelişimini taklit eder ve çoğu olguda maskülinizan etki yapar.\nDoğru cevap De, Disgerminom\nOver tümörleri yüzey epiteli, germ hücreleri ve seks kord stromal hücrelerden köken alır. Disgerminom germ hücreli, fibrom ve Sertoli Laydig tümörü seks kord stromal gruptadır.",
+   "kelime": 161
+  },
+  {
+   "no": 29,
+   "tur": "cikmis",
+   "soru": "Aşağıdaki over tümörlerinden hangisinde paraneoplastik komplikasyon olarak limbik ensefalit gelişebilir?",
+   "secenekler": {
+    "A": "Seröz tümör",
+    "B": "Teratom",
+    "C": "Müsinöz tümör",
+    "D": "Fibrotekom",
+    "E": "Endometrioid tümör"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Seröz tümörler periton yüzeyine ve omentuma yayılma eğilimi ve asitle tanınır. Seröz tümör bu sorudaki ayrımı sağlamaz.",
+    "B": "Teratom doğru: olgun sinir dokusu içeren teratomlu kadınlarda nadir paraneoplastik tablo olarak limbik ensefalit gelişebilir.",
+    "C": "Bu tümörün önemli özelliği rüptürde peritona yayılarak müsin birikimine yol açabilmesidir. Müsinöz tümör bu sorudaki ayrımı sağlamaz.",
+    "D": "Fibrotekom ile karıştırılabilir: Bu tümörde olguların yaklaşık %40'ında asit ve hidrotoraks, yani Meigs sendromu görülür.",
+    "E": "Sıklıkla endometriozisle gelişir ve %15–20 olguda eş zamanlı endometrial karsinom bulunur. Endometrioid tümör bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Limbik ensefalit, olgun sinir dokusu içeren teratomlarda görülen otoimmün mekanizmalı nadir bir paraneoplastik tablodur ve tümör rezeksiyonundan sonra sıklıkla geriler.",
+   "metin": "**Soru.** Aşağıdaki over tümörlerinden hangisinde paraneoplastik komplikasyon olarak limbik ensefalit gelişebilir?\n\n**A)** Seröz tümör · **B)** Teratom · **C)** Müsinöz tümör · **D)** Fibrotekom · **E)** Endometrioid tümör\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Seröz tümör** — Seröz tümörler periton yüzeyine ve omentuma yayılma eğilimi ve asitle tanınır. Seröz tümör bu sorudaki ayrımı sağlamaz.\n- **Teratom** — Teratom doğru: olgun sinir dokusu içeren teratomlu kadınlarda nadir paraneoplastik tablo olarak limbik ensefalit gelişebilir.\n- **Müsinöz tümör** — Bu tümörün önemli özelliği rüptürde peritona yayılarak müsin birikimine yol açabilmesidir. Müsinöz tümör bu sorudaki ayrımı sağlamaz.\n- **Fibrotekom** — Fibrotekom ile karıştırılabilir: Bu tümörde olguların yaklaşık %40'ında asit ve hidrotoraks, yani Meigs sendromu görülür.\n- **Endometrioid tümör** — Sıklıkla endometriozisle gelişir ve %15–20 olguda eş zamanlı endometrial karsinom bulunur. Endometrioid tümör bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Teratom\n\n**Özet.** Limbik ensefalit, olgun sinir dokusu içeren teratomlarda görülen otoimmün mekanizmalı nadir bir paraneoplastik tablodur ve tümör rezeksiyonundan sonra sıklıkla geriler.",
+   "ses": "Aşağıdaki over tümörlerinden hangisinde paraneoplastik komplikasyon olarak limbik ensefalit gelişebilir?\nA, Seröz tümör\nBe, Teratom\nCe, Müsinöz tümör\nDe, Fibrotekom\nE, Endometrioid tümör\nSeçenekleri sırayla değerlendirelim.\nSeröz tümörler periton yüzeyine ve omentuma yayılma eğilimi ve asitle tanınır. Seröz tümör bu sorudaki ayrımı sağlamaz.\nTeratom doğru. Olgun sinir dokusu içeren teratomlu kadınlarda nadir paraneoplastik tablo olarak limbik ensefalit gelişebilir.\nBu tümörün önemli özelliği rüptürde peritona yayılarak müsin birikimine yol açabilmesidir. Müsinöz tümör bu sorudaki ayrımı sağlamaz.\nFibrotekom ile karıştırılabilir. Bu tümörde olguların yaklaşık yüzde kırkında asit ve hidrotoraks, yani Megs sendromu görülür.\nSıklıkla endometriozisle gelişir ve yüzde on beş ile yirmi olguda eş zamanlı endometrial karsinom bulunur. Endometrioid tümör bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Teratom\nLimbik ensefalit, olgun sinir dokusu içeren teratomlarda görülen otoimmün mekanizmalı nadir bir paraneoplastik tablodur ve tümör rezeksiyonundan sonra sıklıkla geriler.",
+   "kelime": 156
+  },
+  {
+   "no": 30,
+   "tur": "cikmis",
+   "soru": "Polikistik over sendromunda aşağıdakilerden hangisi beklenmez?",
+   "secenekler": {
+    "A": "Hirsutizm",
+    "B": "Oligomenore",
+    "C": "İnfertilite",
+    "D": "Hipoandrojenizm",
+    "E": "Kalınlaşmış fibrotik over kapsülü altında hiperplastik ve luteinize teka interna hücreleriyle çevrili çok sayıda foliküler kist"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Hirsutizm, erkek tipi bölgelerde kalın ve koyu kılların aşırı artmasıdır; polikistik over sendromunun klinik spektrumunda yer alır.",
+    "B": "Oligomenore, polikistik over sendromundaki adet düzensizliklerinin bir biçimidir ve ovulasyon disfonksiyonunu yansıtır.",
+    "C": "İnfertilite, kronik anovülasyona bağlı azalmış doğurganlık olarak polikistik over sendromunda beklenir.",
+    "D": "Hipoandrojenizm doğru: polikistik over sendromunun temelinde androjen azlığı değil, androjen fazlalığı vardır.",
+    "E": "Kalın fibrotik kapsül altında hiperplastik, luteinize teka interna ile çevrili çok sayıda kistik folikül polikistik overin tipik histolojisidir."
+   },
+   "ozet": "Polikistik over sendromu androjen fazlalığı ve ovulasyon disfonksiyonuyla karakterizedir; hirsutizm, adet düzensizliği ve azalmış doğurganlık görülür, hipoandrojenizm beklenmez.",
+   "metin": "**Soru.** Polikistik over sendromunda aşağıdakilerden hangisi beklenmez?\n\n**A)** Hirsutizm · **B)** Oligomenore · **C)** İnfertilite · **D)** Hipoandrojenizm · **E)** Kalınlaşmış fibrotik over kapsülü altında hiperplastik ve luteinize teka interna hücreleriyle çevrili çok sayıda foliküler kist\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Hirsutizm** — Hirsutizm, erkek tipi bölgelerde kalın ve koyu kılların aşırı artmasıdır; polikistik over sendromunun klinik spektrumunda yer alır.\n- **Oligomenore** — Oligomenore, polikistik over sendromundaki adet düzensizliklerinin bir biçimidir ve ovulasyon disfonksiyonunu yansıtır.\n- **İnfertilite** — İnfertilite, kronik anovülasyona bağlı azalmış doğurganlık olarak polikistik over sendromunda beklenir.\n- **Hipoandrojenizm** — Hipoandrojenizm doğru: polikistik over sendromunun temelinde androjen azlığı değil, androjen fazlalığı vardır.\n- **Kalınlaşmış fibrotik over kapsülü altında hiperplastik ve luteinize teka interna hücreleriyle çevrili çok sayıda foliküler kist** — Kalın fibrotik kapsül altında hiperplastik, luteinize teka interna ile çevrili çok sayıda kistik folikül polikistik overin tipik histolojisidir.\n\n**Cevap: D** — Hipoandrojenizm\n\n**Özet.** Polikistik over sendromu androjen fazlalığı ve ovulasyon disfonksiyonuyla karakterizedir; hirsutizm, adet düzensizliği ve azalmış doğurganlık görülür, hipoandrojenizm beklenmez.",
+   "ses": "Polikistik over sendromunda aşağıdakilerden hangisi beklenmez?\nA, Hirsutizm\nBe, Oligomenore\nCe, İnfertilite\nDe, Hipoandrojenizm\nE, Kalınlaşmış fibrotik over kapsülü altında hiperplastik ve luteinize teka interna hücreleriyle çevrili çok sayıda foliküler kist\nHer seçeneği tek tek ele alalım.\nHirsutizm, erkek tipi bölgelerde kalın ve koyu kılların aşırı artmasıdır. Polikistik over sendromunun klinik spektrumunda yer alır.\nOligomenore, polikistik over sendromundaki adet düzensizliklerinin bir biçimidir ve ovulasyon disfonksiyonunu yansıtır.\nİnfertilite, kronik anovülasyona bağlı azalmış doğurganlık olarak polikistik over sendromunda beklenir.\nHipoandrojenizm doğru. Polikistik over sendromunun temelinde androjen azlığı değil, androjen fazlalığı vardır.\nKalın fibrotik kapsül altında hiperplastik, luteinize teka interna ile çevrili çok sayıda kistik folikül polikistik overin tipik histolojisidir.\nDoğru cevap De, Hipoandrojenizm\nPolikistik over sendromu androjen fazlalığı ve ovulasyon disfonksiyonuyla karakterizedir. Hirsutizm, adet düzensizliği ve azalmış doğurganlık görülür, hipoandrojenizm beklenmez.",
+   "kelime": 166
+  },
+  {
+   "no": 31,
+   "tur": "cikmis",
+   "soru": "Over tümörleri arasında bilateral olma ihtimali en düşük olan aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Borderline seröz tümör",
+    "B": "Endometrioid karsinom",
+    "C": "Clear cell karsinom",
+    "D": "Malign seröz tümör",
+    "E": "Müsinöz tümör"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Borderline seröz tümörlerin yaklaşık %30'u bilateraldir; bu oran en düşük bilateraliteye sahip gruptan belirgin olarak yüksektir.",
+    "B": "Endometrioid karsinomun yaklaşık %20'si bilateraldir; bu nedenle bilateral olma ihtimali en düşük tümör değildir.",
+    "C": "Bu nadir malignite endometrioid adenokarsinom varyantı kabul edilir. Clear cell, yani berrak hücreli karsinom bu sorudaki ayrımı sağlamaz.",
+    "D": "Malign seröz tümörlerin yaklaşık %65'i bilateraldir; bilateral olma olasılığı en yüksek primer over tümörlerindendir.",
+    "E": "Müsinöz tümör doğru: bilateral olma olasılığı düşüktür; benignlerde %5, borderline olanlarda %10, malignlerde %5'in altındadır."
+   },
+   "ozet": "Primer müsinöz over tümörleri nadiren bilateraldir; bu nedenle bilateral müsinöz tümörde, overi sıklıkla iki taraflı tutan Krukenberg metastazı akla gelmelidir.",
+   "metin": "**Soru.** Over tümörleri arasında bilateral olma ihtimali en düşük olan aşağıdakilerden hangisidir?\n\n**A)** Borderline seröz tümör · **B)** Endometrioid karsinom · **C)** Clear cell karsinom · **D)** Malign seröz tümör · **E)** Müsinöz tümör\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Borderline seröz tümör** — Borderline seröz tümörlerin yaklaşık %30'u bilateraldir; bu oran en düşük bilateraliteye sahip gruptan belirgin olarak yüksektir.\n- **Endometrioid karsinom** — Endometrioid karsinomun yaklaşık %20'si bilateraldir; bu nedenle bilateral olma ihtimali en düşük tümör değildir.\n- **Clear cell karsinom** — Bu nadir malignite endometrioid adenokarsinom varyantı kabul edilir. Clear cell, yani berrak hücreli karsinom bu sorudaki ayrımı sağlamaz.\n- **Malign seröz tümör** — Malign seröz tümörlerin yaklaşık %65'i bilateraldir; bilateral olma olasılığı en yüksek primer over tümörlerindendir.\n- **Müsinöz tümör** — Müsinöz tümör doğru: bilateral olma olasılığı düşüktür; benignlerde %5, borderline olanlarda %10, malignlerde %5'in altındadır.\n\n**Cevap: E** — Müsinöz tümör\n\n**Özet.** Primer müsinöz over tümörleri nadiren bilateraldir; bu nedenle bilateral müsinöz tümörde, overi sıklıkla iki taraflı tutan Krukenberg metastazı akla gelmelidir.",
+   "ses": "Over tümörleri arasında bilateral olma ihtimali en düşük olan aşağıdakilerden hangisidir?\nA, Sınırda seröz tümör\nBe, Endometrioid karsinom\nCe, Klir sel karsinom\nDe, Malign seröz tümör\nE, Müsinöz tümör\nŞıkları sırasıyla gözden geçirelim.\nSınırda seröz tümörlerin yaklaşık yüzde otuzu bilateraldir. Bu oran en düşük bilateraliteye sahip gruptan belirgin olarak yüksektir.\nEndometrioid karsinomun yaklaşık yüzde yirmisi bilateraldir. Bu nedenle bilateral olma ihtimali en düşük tümör değildir.\nBu nadir malignite endometrioid adenokarsinom varyantı kabul edilir. Clear cell, yani berrak hücreli karsinom bu sorudaki ayrımı sağlamaz.\nMalign seröz tümörlerin yaklaşık yüzde altmış beşi bilateraldir. Bilateral olma olasılığı en yüksek primer over tümörlerindendir.\nMüsinöz tümör doğru. Bilateral olma olasılığı düşüktür, benignlerde yüzde beş, sınırda olanlarda yüzde on, malignlerde yüzde beşin altındadır.\nDoğru cevap E, Müsinöz tümör\nPrimer müsinöz over tümörleri nadiren bilateraldir. Bu nedenle bilateral müsinöz tümörde, overi sıklıkla iki taraflı tutan Krukenberg metastazı akla gelmelidir.",
+   "kelime": 165
+  },
+  {
+   "no": 32,
+   "tur": "ornek",
+   "soru": "Salpingit iyileşirken tüp ile ovaryum arasında oluşan yapışıklıklar en çok hangisinin riskini artırır?",
+   "secenekler": {
+    "A": "Endometriozis",
+    "B": "Folikül kisti",
+    "C": "Ektopik gebelik",
+    "D": "Psödomiksoma peritoni",
+    "E": "Tubal seröz karsinom"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Endometriozis fallop tüpünde görülebilen ayrı bir önemli durumdur; salpingit yapışıklıklarının sonucu olarak gelişmez.",
+    "B": "Folikül kisti yırtılmamış Graaf folikülünden gelişen, normal fizyolojinin bir varyantıdır; inflamasyon ve yapışıklıkla ilişkili değildir.",
+    "C": "Ektopik gebelik doğru: salpingit sonrası tüp ile ovaryum ve tüp kıvrımları arasındaki yapışıklıklar tüp dışı gebelik riskini artırır.",
+    "D": "Psödomiksoma peritoni peritonda yoğun müsin birikimidir ve en sık apendiks kökenlidir; salpingitle ilişkili değildir.",
+    "E": "Fimbriyal uçtaki seröz tübal intraepitelyal karsinom TP53 mutasyonlu bir öncü lezyondur; enfeksiyon sonrası yapışıklıklardan gelişmez."
+   },
+   "ozet": "Salpingitte zincir enfeksiyon, inflamasyon, skar ve yapışıklıktır; yapışıklıklar ektopik gebelik riskini artırır, lümen tıkanırsa kalıcı infertilite gelişir.",
+   "metin": "**Soru.** Salpingit iyileşirken tüp ile ovaryum arasında oluşan yapışıklıklar en çok hangisinin riskini artırır?\n\n**A)** Endometriozis · **B)** Folikül kisti · **C)** Ektopik gebelik · **D)** Psödomiksoma peritoni · **E)** Tubal seröz karsinom\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Endometriozis** — Endometriozis fallop tüpünde görülebilen ayrı bir önemli durumdur; salpingit yapışıklıklarının sonucu olarak gelişmez.\n- **Folikül kisti** — Folikül kisti yırtılmamış Graaf folikülünden gelişen, normal fizyolojinin bir varyantıdır; inflamasyon ve yapışıklıkla ilişkili değildir.\n- **Ektopik gebelik** — Ektopik gebelik doğru: salpingit sonrası tüp ile ovaryum ve tüp kıvrımları arasındaki yapışıklıklar tüp dışı gebelik riskini artırır.\n- **Psödomiksoma peritoni** — Psödomiksoma peritoni peritonda yoğun müsin birikimidir ve en sık apendiks kökenlidir; salpingitle ilişkili değildir.\n- **Tubal seröz karsinom** — Fimbriyal uçtaki seröz tübal intraepitelyal karsinom TP53 mutasyonlu bir öncü lezyondur; enfeksiyon sonrası yapışıklıklardan gelişmez.\n\n**Cevap: C** — Ektopik gebelik\n\n**Özet.** Salpingitte zincir enfeksiyon, inflamasyon, skar ve yapışıklıktır; yapışıklıklar ektopik gebelik riskini artırır, lümen tıkanırsa kalıcı infertilite gelişir.",
+   "ses": "Salpingit iyileşirken tüp ile ovaryum arasında oluşan yapışıklıklar en çok hangisinin riskini artırır?\nA, Endometriozis\nBe, Folikül kisti\nCe, Ektopik gebelik\nDe, Psödomiksoma peritoni\nE, Tubal seröz karsinom\nŞimdi seçeneklere tek tek bakalım.\nEndometriozis fallop tüpünde görülebilen ayrı bir önemli durumdur. Salpingit yapışıklıklarının sonucu olarak gelişmez.\nFolikül kisti yırtılmamış Graaf folikülünden gelişen, normal fizyolojinin bir varyantıdır. İnflamasyon ve yapışıklıkla ilişkili değildir.\nEktopik gebelik doğru. Salpingit sonrası tüp ile ovaryum ve tüp kıvrımları arasındaki yapışıklıklar tüp dışı gebelik riskini artırır.\nPsödomiksoma peritoni peritonda yoğun müsin birikimidir ve en sık apendiks kökenlidir. Salpingitle ilişkili değildir.\nFimbriyal uçtaki seröz tübal intraepitelyal karsinom, te pe elli üç mutasyonlu bir öncü lezyondur. Enfeksiyon sonrası yapışıklıklardan gelişmez.\nDoğru cevap Ce, Ektopik gebelik\nSalpingitte zincir enfeksiyon, inflamasyon, skar ve yapışıklıktır. Yapışıklıklar ektopik gebelik riskini artırır, lümen tıkanırsa kalıcı infertilite gelişir.",
+   "kelime": 157
+  },
+  {
+   "no": 33,
+   "tur": "ornek",
+   "soru": "Fallop tüpü kökenli seröz karsinomun tanıda sıklıkla ileri evrede olmasının temel nedeni hangisidir?",
+   "secenekler": {
+    "A": "Erken hematojen yayılım",
+    "B": "TP53'ün vahşi tip olması",
+    "C": "Yavaş basamaklı progresyon",
+    "D": "Hormon salgısı olmaması",
+    "E": "Fimbriyal ucun periton boşluğuna açıklığı"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Hematojen yayılım bu tümörün ileri evrede yakalanma nedeni olarak tanımlanmaz; seröz tümörler periton yüzeyi ve omentum boyunca yayılır.",
+    "B": "TP53 vahşi tip olması düşük dereceli seröz karsinomun özelliğidir; tüp kökenli yüksek dereceli seröz karsinomda TP53 mutanttır.",
+    "C": "Yavaş, basamaklı progresyon düşük dereceli seröz karsinoma aittir; yüksek dereceli seröz karsinom hızlı gelişir.",
+    "D": "Hormon salgısı seks kord stromal tümörlerin özelliğidir; tüp kökenli seröz karsinomun geç fark edilmesini açıklayan etken değildir.",
+    "E": "Fimbriyal uç doğru: hem ovaryuma yakın hem de periton boşluğuna açıktır; bu yüzden tanıda ovaryum, omentum ve periton yayılımı sıktır."
+   },
+   "ozet": "Fimbriyal uç ovaryuma yakın ve periton boşluğuna açık olduğundan tüp kökenli seröz karsinom tanıda sıklıkla ovaryum, omentum ve periton tutulumuyla ileri evrededir.",
+   "metin": "**Soru.** Fallop tüpü kökenli seröz karsinomun tanıda sıklıkla ileri evrede olmasının temel nedeni hangisidir?\n\n**A)** Erken hematojen yayılım · **B)** TP53'ün vahşi tip olması · **C)** Yavaş basamaklı progresyon · **D)** Hormon salgısı olmaması · **E)** Fimbriyal ucun periton boşluğuna açıklığı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Erken hematojen yayılım** — Hematojen yayılım bu tümörün ileri evrede yakalanma nedeni olarak tanımlanmaz; seröz tümörler periton yüzeyi ve omentum boyunca yayılır.\n- **TP53'ün vahşi tip olması** — TP53 vahşi tip olması düşük dereceli seröz karsinomun özelliğidir; tüp kökenli yüksek dereceli seröz karsinomda TP53 mutanttır.\n- **Yavaş basamaklı progresyon** — Yavaş, basamaklı progresyon düşük dereceli seröz karsinoma aittir; yüksek dereceli seröz karsinom hızlı gelişir.\n- **Hormon salgısı olmaması** — Hormon salgısı seks kord stromal tümörlerin özelliğidir; tüp kökenli seröz karsinomun geç fark edilmesini açıklayan etken değildir.\n- **Fimbriyal ucun periton boşluğuna açıklığı** — Fimbriyal uç doğru: hem ovaryuma yakın hem de periton boşluğuna açıktır; bu yüzden tanıda ovaryum, omentum ve periton yayılımı sıktır.\n\n**Cevap: E** — Fimbriyal ucun periton boşluğuna açıklığı\n\n**Özet.** Fimbriyal uç ovaryuma yakın ve periton boşluğuna açık olduğundan tüp kökenli seröz karsinom tanıda sıklıkla ovaryum, omentum ve periton tutulumuyla ileri evrededir.",
+   "ses": "Fallop tüpü kökenli seröz karsinomun tanıda sıklıkla ileri evrede olmasının temel nedeni hangisidir?\nA, Erken hematojen yayılım\nBe, te pe elli üçün vahşi tip olması\nCe, Yavaş basamaklı progresyon\nDe, Hormon salgısı olmaması\nE, Fimbriyal ucun periton boşluğuna açıklığı\nSeçenekleri sırayla değerlendirelim.\nHematojen yayılım bu tümörün ileri evrede yakalanma nedeni olarak tanımlanmaz. Seröz tümörler periton yüzeyi ve omentum boyunca yayılır.\nTe pe elli üçün vahşi tip olması düşük dereceli seröz karsinomun özelliğidir. Tüp kökenli yüksek dereceli seröz karsinomda bu gen mutanttır.\nYavaş, basamaklı progresyon düşük dereceli seröz karsinoma aittir. Yüksek dereceli seröz karsinom hızlı gelişir.\nHormon salgısı seks kord stromal tümörlerin özelliğidir. Tüp kökenli seröz karsinomun geç fark edilmesini açıklayan etken değildir.\nFimbriyal uç doğru. Hem ovaryuma yakın hem de periton boşluğuna açıktır. Bu yüzden tanıda ovaryum, omentum ve periton yayılımı sıktır.\nDoğru cevap E, Fimbriyal ucun periton boşluğuna açıklığı\nFimbriyal uç ovaryuma yakın ve periton boşluğuna açık olduğundan tüp kökenli seröz karsinom tanıda sıklıkla ovaryum, omentum ve periton tutulumuyla ileri evrededir.",
+   "kelime": 190
+  },
+  {
+   "no": 34,
+   "tur": "ornek",
+   "soru": "Büyük folikül kistlerinde döşeyici granüloza hücrelerinin belirgin olmamasının nedeni hangisidir?",
+   "secenekler": {
+    "A": "Basınç atrofisi",
+    "B": "Luteinizasyon",
+    "C": "Kist rüptürü",
+    "D": "Stromal invazyon",
+    "E": "Teka interna hiperplazisi"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Basınç atrofisi doğru: kist büyüdükçe içteki basınç döşeyici hücrelerde atrofi yapar, bu yüzden büyük kistlerde bu hücreler seçilemeyebilir.",
+    "B": "Luteinizasyon hücrelerin luteal özellik kazanmasıdır; küçük kistlerin luteal hücrelerle döşenmesini açıklar, hücre kaybını değil.",
+    "C": "Kist rüptürü fonksiyonel kistlerin en önemli komplikasyonudur; intraperitoneal kanama ve akut karın yapar, döşeyici hücre kaybını açıklamaz.",
+    "D": "Stromal invazyon karsinomu borderline tümörden ayıran ölçüttür; fizyolojik bir varyant olan folikül kistinde yoktur.",
+    "E": "Hiperplastik luteinize teka interna polikistik over sendromunun bulgusudur; büyük folikül kistindeki hücre kaybının nedeni değildir."
+   },
+   "ozet": "Küçük folikül ve luteal kistler granüloza ya da luteal hücrelerle döşelidir; kist büyüdükçe basınç atrofisi gelişir ve döşeyici hücreler belirsizleşir.",
+   "metin": "**Soru.** Büyük folikül kistlerinde döşeyici granüloza hücrelerinin belirgin olmamasının nedeni hangisidir?\n\n**A)** Basınç atrofisi · **B)** Luteinizasyon · **C)** Kist rüptürü · **D)** Stromal invazyon · **E)** Teka interna hiperplazisi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Basınç atrofisi** — Basınç atrofisi doğru: kist büyüdükçe içteki basınç döşeyici hücrelerde atrofi yapar, bu yüzden büyük kistlerde bu hücreler seçilemeyebilir.\n- **Luteinizasyon** — Luteinizasyon hücrelerin luteal özellik kazanmasıdır; küçük kistlerin luteal hücrelerle döşenmesini açıklar, hücre kaybını değil.\n- **Kist rüptürü** — Kist rüptürü fonksiyonel kistlerin en önemli komplikasyonudur; intraperitoneal kanama ve akut karın yapar, döşeyici hücre kaybını açıklamaz.\n- **Stromal invazyon** — Stromal invazyon karsinomu borderline tümörden ayıran ölçüttür; fizyolojik bir varyant olan folikül kistinde yoktur.\n- **Teka interna hiperplazisi** — Hiperplastik luteinize teka interna polikistik over sendromunun bulgusudur; büyük folikül kistindeki hücre kaybının nedeni değildir.\n\n**Cevap: A** — Basınç atrofisi\n\n**Özet.** Küçük folikül ve luteal kistler granüloza ya da luteal hücrelerle döşelidir; kist büyüdükçe basınç atrofisi gelişir ve döşeyici hücreler belirsizleşir.",
+   "ses": "Büyük folikül kistlerinde döşeyici granüloza hücrelerinin belirgin olmamasının nedeni hangisidir?\nA, Basınç atrofisi\nBe, Luteinizasyon\nCe, Kist rüptürü\nDe, Stromal invazyon\nE, Teka interna hiperplazisi\nHer seçeneği tek tek ele alalım.\nBasınç atrofisi doğru. Kist büyüdükçe içteki basınç döşeyici hücrelerde atrofi yapar, bu yüzden büyük kistlerde bu hücreler seçilemeyebilir.\nLuteinizasyon hücrelerin luteal özellik kazanmasıdır. Küçük kistlerin luteal hücrelerle döşenmesini açıklar, hücre kaybını değil.\nKist rüptürü fonksiyonel kistlerin en önemli komplikasyonudur. İntraperitoneal kanama ve akut karın yapar, döşeyici hücre kaybını açıklamaz.\nStromal invazyon karsinomu borderline tümörden ayıran ölçüttür. Fizyolojik bir varyant olan folikül kistinde yoktur.\nHiperplastik luteinize teka interna polikistik over sendromunun bulgusudur. Büyük folikül kistindeki hücre kaybının nedeni değildir.\nDoğru cevap A, Basınç atrofisi\nKüçük folikül ve luteal kistler granüloza ya da luteal hücrelerle döşelidir. Kist büyüdükçe basınç atrofisi gelişir ve döşeyici hücreler belirsizleşir.",
+   "kelime": 161
+  },
+  {
+   "no": 35,
+   "tur": "ornek",
+   "soru": "Polikistik over sendromunun etiyolojisinde androjen fazlalığını açıkladığı düşünülen bozukluk hangisidir?",
+   "secenekler": {
+    "A": "Leydig hücreli tümör",
+    "B": "Korpus luteum persistansı",
+    "C": "Granüloza hücre hiperplazisi",
+    "D": "Androjen biyosentez enzim düzensizliği",
+    "E": "Östrojen fazlalığı"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Leydig hücreli tümörler androjen üreten fonksiyonel seks kord stromal tümörlerdir; polikistik over sendromunun nedeni değildir.",
+    "B": "Korpus luteum bu sendromda belirgin değildir, çünkü ovulasyon gerçekleşmez; persistansı söz konusu olamaz.",
+    "C": "Granüloza hücreleri bu sendromda kistik folikülleri döşer; hiperplastik ve luteinize olan yapı teka internadır.",
+    "D": "Androjen biyosentez enzimlerindeki düzensizlik doğru: çevresel ve genetik faktörlerle birlikte sendromun merkezindeki androjen fazlalığını açıklar.",
+    "E": "Östrojen fazlalığı granüloza hücreli tümörün özelliğidir; polikistik over sendromunun merkezinde androjen fazlalığı vardır."
+   },
+   "ozet": "Polikistik over sendromu androjen fazlalığı ve ovulasyon disfonksiyonuyla tanımlanır; etiyolojide çevresel ve genetik faktörler ile androjen biyosentez enzimlerinde düzensizlik rol oynar.",
+   "metin": "**Soru.** Polikistik over sendromunun etiyolojisinde androjen fazlalığını açıkladığı düşünülen bozukluk hangisidir?\n\n**A)** Leydig hücreli tümör · **B)** Korpus luteum persistansı · **C)** Granüloza hücre hiperplazisi · **D)** Androjen biyosentez enzim düzensizliği · **E)** Östrojen fazlalığı\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Leydig hücreli tümör** — Leydig hücreli tümörler androjen üreten fonksiyonel seks kord stromal tümörlerdir; polikistik over sendromunun nedeni değildir.\n- **Korpus luteum persistansı** — Korpus luteum bu sendromda belirgin değildir, çünkü ovulasyon gerçekleşmez; persistansı söz konusu olamaz.\n- **Granüloza hücre hiperplazisi** — Granüloza hücreleri bu sendromda kistik folikülleri döşer; hiperplastik ve luteinize olan yapı teka internadır.\n- **Androjen biyosentez enzim düzensizliği** — Androjen biyosentez enzimlerindeki düzensizlik doğru: çevresel ve genetik faktörlerle birlikte sendromun merkezindeki androjen fazlalığını açıklar.\n- **Östrojen fazlalığı** — Östrojen fazlalığı granüloza hücreli tümörün özelliğidir; polikistik over sendromunun merkezinde androjen fazlalığı vardır.\n\n**Cevap: D** — Androjen biyosentez enzim düzensizliği\n\n**Özet.** Polikistik over sendromu androjen fazlalığı ve ovulasyon disfonksiyonuyla tanımlanır; etiyolojide çevresel ve genetik faktörler ile androjen biyosentez enzimlerinde düzensizlik rol oynar.",
+   "ses": "Polikistik over sendromunun etiyolojisinde androjen fazlalığını açıkladığı düşünülen bozukluk hangisidir?\nA, Leydig hücreli tümör\nBe, Korpus luteum persistansı\nCe, Granüloza hücre hiperplazisi\nDe, Androjen biyosentez enzim düzensizliği\nE, Östrojen fazlalığı\nŞıkları sırasıyla gözden geçirelim.\nLeydig hücreli tümörler androjen üreten fonksiyonel seks kord stromal tümörlerdir. Polikistik over sendromunun nedeni değildir.\nKorpus luteum bu sendromda belirgin değildir, çünkü ovulasyon gerçekleşmez. Persistansı söz konusu olamaz.\nGranüloza hücreleri bu sendromda kistik folikülleri döşer. Hiperplastik ve luteinize olan yapı teka internadır.\nAndrojen biyosentez enzimlerindeki düzensizlik doğru. Çevresel ve genetik faktörlerle birlikte sendromun merkezindeki androjen fazlalığını açıklar.\nÖstrojen fazlalığı granüloza hücreli tümörün özelliğidir. Polikistik over sendromunun merkezinde androjen fazlalığı vardır.\nDoğru cevap De, Androjen biyosentez enzim düzensizliği\nPolikistik over sendromu androjen fazlalığı ve ovulasyon disfonksiyonuyla tanımlanır. Etiyolojide çevresel ve genetik faktörler ile androjen biyosentez enzimlerinde düzensizlik rol oynar.",
+   "kelime": 164
+  },
+  {
+   "no": 36,
+   "tur": "ornek",
+   "soru": "Primer yüzey epitel over neoplazmlarının çoğu hangi epitel farklılaşmasını gösterir?",
+   "secenekler": {
+    "A": "Gastrointestinal epitel",
+    "B": "Trofoblastik epitel",
+    "C": "Müllerian epitel",
+    "D": "Skuamöz epitel",
+    "E": "Sertoli hücre"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Gastrointestinal kökenli müsinöz adenokarsinom overe Krukenberg tümörü olarak metastaz yapar; primer yüzey epitel tümörlerinin farklılaşma yönü değildir.",
+    "B": "Trofoblastik farklılaşma sitotrofoblast ve sinsityotrofoblast içeren koriokarsinomda görülür; bu bir germ hücreli tümördür.",
+    "C": "Müllerian farklılaşma doğru: primer over neoplazmlarının çoğu bu farklılaşmayı gösterir ve seröz, müsinöz, endometrioid tipleri oluşturur.",
+    "D": "Skuamöz farklılaşma olgun kistik teratomdaki malign transformasyonun en sık tipidir; yüzey epitel tümörlerinin temel farklılaşması değildir.",
+    "E": "Sertoli hücre yapıları testis gelişimini taklit eden Sertoli-Leydig hücreli tümörde görülür; bu seks kord-stromal bir tümördür."
+   },
+   "ozet": "Yüzey epitel tümörleri Müllerian farklılaşma gösterir; seröz, müsinöz ve endometrioid tiplerin her birinin benign, borderline ve malign formu olabilir.",
+   "metin": "**Soru.** Primer yüzey epitel over neoplazmlarının çoğu hangi epitel farklılaşmasını gösterir?\n\n**A)** Gastrointestinal epitel · **B)** Trofoblastik epitel · **C)** Müllerian epitel · **D)** Skuamöz epitel · **E)** Sertoli hücre\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Gastrointestinal epitel** — Gastrointestinal kökenli müsinöz adenokarsinom overe Krukenberg tümörü olarak metastaz yapar; primer yüzey epitel tümörlerinin farklılaşma yönü değildir.\n- **Trofoblastik epitel** — Trofoblastik farklılaşma sitotrofoblast ve sinsityotrofoblast içeren koriokarsinomda görülür; bu bir germ hücreli tümördür.\n- **Müllerian epitel** — Müllerian farklılaşma doğru: primer over neoplazmlarının çoğu bu farklılaşmayı gösterir ve seröz, müsinöz, endometrioid tipleri oluşturur.\n- **Skuamöz epitel** — Skuamöz farklılaşma olgun kistik teratomdaki malign transformasyonun en sık tipidir; yüzey epitel tümörlerinin temel farklılaşması değildir.\n- **Sertoli hücre** — Sertoli hücre yapıları testis gelişimini taklit eden Sertoli-Leydig hücreli tümörde görülür; bu seks kord-stromal bir tümördür.\n\n**Cevap: C** — Müllerian epitel\n\n**Özet.** Yüzey epitel tümörleri Müllerian farklılaşma gösterir; seröz, müsinöz ve endometrioid tiplerin her birinin benign, borderline ve malign formu olabilir.",
+   "ses": "Primer yüzey epitel over neoplazmlarının çoğu hangi epitel farklılaşmasını gösterir?\nA, Gastrointestinal epitel\nBe, Trofoblastik epitel\nCe, Müleryan epitel\nDe, Skuamöz epitel\nE, Sertoli hücre\nŞimdi seçeneklere tek tek bakalım.\nGastrointestinal kökenli müsinöz adenokarsinom overe Krukenberg tümörü olarak metastaz yapar. Primer yüzey epitel tümörlerinin farklılaşma yönü değildir.\nTrofoblastik farklılaşma sitotrofoblast ve sinsityotrofoblast içeren koriokarsinomda görülür. Bu bir germ hücreli tümördür.\nMüleryan farklılaşma doğru. Primer over neoplazmlarının çoğu bu farklılaşmayı gösterir ve seröz, müsinöz, endometrioid tipleri oluşturur.\nSkuamöz farklılaşma olgun kistik teratomdaki malign transformasyonun en sık tipidir. Yüzey epitel tümörlerinin temel farklılaşması değildir.\nSertoli hücre yapıları testis gelişimini taklit eden Sertoli Leydig hücreli tümörde görülür. Bu seks kord stromal bir tümördür.\nDoğru cevap Ce, Müleryan epitel\nYüzey epitel tümörleri Müleryan farklılaşma gösterir. Seröz, müsinöz ve endometrioid tiplerin her birinin benign, borderline ve malign formu olabilir.",
+   "kelime": 159
+  },
+  {
+   "no": 37,
+   "tur": "ornek",
+   "soru": "Tip I over karsinogenezinde benign kistadenom ile düşük dereceli karsinom arasındaki ara basamak hangisidir?",
+   "secenekler": {
+    "A": "Borderline tümör",
+    "B": "STIC",
+    "C": "İnklüzyon kisti",
+    "D": "Endometrial hiperplazi",
+    "E": "Yüksek dereceli seröz karsinom"
+   },
+   "dogru": "A",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Borderline tümör doğru: tip I yolunda kistadenom ya da endometriozis önce borderline tümöre, oradan düşük dereceli karsinoma basamaklı ilerler.",
+    "B": "STIC, yani seröz tübal intraepitelyal karsinom, fimbriyadaki öncü lezyondur; tip II yolunda yüksek dereceli seröz karsinomun başlangıcıdır.",
+    "C": "İnklüzyon kistleri tip II tümörlerin intraepitelyal öncüller aracılığıyla gelişebildiği yapılardır; tip I basamağı değildir.",
+    "D": "Endometrial hiperplazi östrojen fazlalığının endometriyumdaki sonucudur; over karsinogenezinde bir ara basamak değildir.",
+    "E": "Yüksek dereceli seröz karsinom tip II karsinomdur; basamaklı ilerleme göstermez, hızlı gelişir."
+   },
+   "ozet": "Tip I karsinomlar benign lezyondan borderline tümöre ve düşük dereceli karsinoma basamaklı ilerler; tip II yüksek dereceli seröz karsinom ise çoğu kez STIC'ten gelişir.",
+   "metin": "**Soru.** Tip I over karsinogenezinde benign kistadenom ile düşük dereceli karsinom arasındaki ara basamak hangisidir?\n\n**A)** Borderline tümör · **B)** STIC · **C)** İnklüzyon kisti · **D)** Endometrial hiperplazi · **E)** Yüksek dereceli seröz karsinom\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Borderline tümör** — Borderline tümör doğru: tip I yolunda kistadenom ya da endometriozis önce borderline tümöre, oradan düşük dereceli karsinoma basamaklı ilerler.\n- **STIC** — STIC, yani seröz tübal intraepitelyal karsinom, fimbriyadaki öncü lezyondur; tip II yolunda yüksek dereceli seröz karsinomun başlangıcıdır.\n- **İnklüzyon kisti** — İnklüzyon kistleri tip II tümörlerin intraepitelyal öncüller aracılığıyla gelişebildiği yapılardır; tip I basamağı değildir.\n- **Endometrial hiperplazi** — Endometrial hiperplazi östrojen fazlalığının endometriyumdaki sonucudur; over karsinogenezinde bir ara basamak değildir.\n- **Yüksek dereceli seröz karsinom** — Yüksek dereceli seröz karsinom tip II karsinomdur; basamaklı ilerleme göstermez, hızlı gelişir.\n\n**Cevap: A** — Borderline tümör\n\n**Özet.** Tip I karsinomlar benign lezyondan borderline tümöre ve düşük dereceli karsinoma basamaklı ilerler; tip II yüksek dereceli seröz karsinom ise çoğu kez STIC'ten gelişir.",
+   "ses": "Tip bir over karsinogenezinde, benign kistadenom ile düşük dereceli karsinom arasındaki ara basamak hangisidir?\nA, Borderline tümör\nBe, seröz tübal intraepitelyal karsinom\nCe, İnklüzyon kisti\nDe, Endometrial hiperplazi\nE, Yüksek dereceli seröz karsinom\nSeçenekleri sırayla değerlendirelim.\nBorderline tümör doğru. Tip bir yolunda kistadenom ya da endometriozis önce borderline tümöre, oradan düşük dereceli karsinoma basamaklı ilerler.\nSeröz tübal intraepitelyal karsinom fimbriyadaki öncü lezyondur. Tip iki yolunda yüksek dereceli seröz karsinomun başlangıcıdır.\nİnklüzyon kistleri tip iki tümörlerin intraepitelyal öncüller aracılığıyla gelişebildiği yapılardır. Tip bir basamağı değildir.\nEndometrial hiperplazi östrojen fazlalığının endometriyumdaki sonucudur. Over karsinogenezinde bir ara basamak değildir.\nYüksek dereceli seröz karsinom tip iki karsinomdur. Basamaklı ilerleme göstermez, hızlı gelişir.\nDoğru cevap A, Borderline tümör\nTip bir karsinomlar benign lezyondan borderline tümöre ve düşük dereceli karsinoma basamaklı ilerler. Tip iki yüksek dereceli seröz karsinom ise çoğu kez seröz tübal intraepitelyal karsinomdan gelişir.",
+   "kelime": 164
+  },
+  {
+   "no": 38,
+   "tur": "ornek",
+   "soru": "BRCA1/BRCA2 taşıyıcılarında 70 yaşına kadar ovaryum kanseri gelişme riski ne kadardır?",
+   "secenekler": {
+    "A": "%5–10",
+    "B": "%8–10",
+    "C": "%75–90",
+    "D": "%20–60",
+    "E": "Yaklaşık %1"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "%5–10 ovaryum kanserlerinin ailesel olan bölümüdür; bunların çoğu BRCA1 ya da BRCA2 mutasyonuyla ilişkilidir.",
+    "B": "%8–10 sporadik ovaryum kanserlerinde BRCA mutasyonunun bulunma oranıdır; taşıyıcıdaki bireysel risk değildir.",
+    "C": "%75–90 epitelyal ovaryum kanserli kadınlarda CA-125 belirtecinin yükseldiği orandır; kalıtsal riski göstermez.",
+    "D": "%20–60 doğru: BRCA taşıyıcılarında 70 yaşına kadar ovaryum kanseri gelişme riski bu aralıktadır.",
+    "E": "Yaklaşık %1 olgun kistik teratomda malign transformasyonun görülme oranıdır; BRCA taşıyıcılığıyla ilgisi yoktur."
+   },
+   "ozet": "Ovaryum kanserlerinin %5–10'u ailesel ve çoğu BRCA ilişkilidir; taşıyıcılarda 70 yaşına kadar risk %20–60, sporadik olgularda BRCA mutasyonu yalnız %8–10'dur.",
+   "metin": "**Soru.** BRCA1/BRCA2 taşıyıcılarında 70 yaşına kadar ovaryum kanseri gelişme riski ne kadardır?\n\n**A)** %5–10 · **B)** %8–10 · **C)** %75–90 · **D)** %20–60 · **E)** Yaklaşık %1\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **%5–10** — %5–10 ovaryum kanserlerinin ailesel olan bölümüdür; bunların çoğu BRCA1 ya da BRCA2 mutasyonuyla ilişkilidir.\n- **%8–10** — %8–10 sporadik ovaryum kanserlerinde BRCA mutasyonunun bulunma oranıdır; taşıyıcıdaki bireysel risk değildir.\n- **%75–90** — %75–90 epitelyal ovaryum kanserli kadınlarda CA-125 belirtecinin yükseldiği orandır; kalıtsal riski göstermez.\n- **%20–60** — %20–60 doğru: BRCA taşıyıcılarında 70 yaşına kadar ovaryum kanseri gelişme riski bu aralıktadır.\n- **Yaklaşık %1** — Yaklaşık %1 olgun kistik teratomda malign transformasyonun görülme oranıdır; BRCA taşıyıcılığıyla ilgisi yoktur.\n\n**Cevap: D** — %20–60\n\n**Özet.** Ovaryum kanserlerinin %5–10'u ailesel ve çoğu BRCA ilişkilidir; taşıyıcılarda 70 yaşına kadar risk %20–60, sporadik olgularda BRCA mutasyonu yalnız %8–10'dur.",
+   "ses": "Be re ce a bir ya da be re ce a iki taşıyıcılarında, yetmiş yaşına kadar ovaryum kanseri gelişme riski ne kadardır?\nA, yüzde beş ile on\nBe, yüzde sekiz ile on\nCe, yüzde yetmiş beş ile doksan\nDe, yüzde yirmi ile altmış\nE, yaklaşık yüzde bir\nHer seçeneği tek tek ele alalım.\nYüzde beş ile on, ovaryum kanserlerinin ailesel olan bölümüdür. Bunların çoğu be re ce a bir ya da be re ce a iki mutasyonuyla ilişkilidir.\nYüzde sekiz ile on, sporadik ovaryum kanserlerinde be re ce a mutasyonunun bulunma oranıdır. Taşıyıcıdaki bireysel risk değildir.\nYüzde yetmiş beş ile doksan, epitelyal ovaryum kanserli kadınlarda ce a yüz yirmi beş belirtecinin yükseldiği orandır.\nYüzde yirmi ile altmış doğru. Be re ce a taşıyıcılarında yetmiş yaşına kadar ovaryum kanseri gelişme riski bu aralıktadır.\nYaklaşık yüzde bir, olgun kistik teratomda malign transformasyonun görülme oranıdır. Be re ce a taşıyıcılığıyla ilgisi yoktur.\nDoğru cevap De, yüzde yirmi ile altmış\nOvaryum kanserlerinin yüzde beş ile onu ailesel ve çoğu be re ce a ilişkilidir. Taşıyıcılarda yetmiş yaşına kadar risk yüzde yirmi ile altmıştır.",
+   "kelime": 139
+  },
+  {
+   "no": 39,
+   "tur": "ornek",
+   "soru": "Borderline seröz tümörü seröz karsinomdan ayıran temel histolojik ölçüt hangisidir?",
+   "secenekler": {
+    "A": "Psammoma cisimcikleri",
+    "B": "Stromal invazyon yokluğu",
+    "C": "Silyalı kolumnar epitel",
+    "D": "Papiller çıkıntılar",
+    "E": "Periton implantı varlığı"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Psammoma cisimcikleri tüm seröz tümör tiplerinde sık görülen konsantrik kalsifikasyonlardır; neoplaziye özgü değildir, bu ayırımı yapamaz.",
+    "B": "Stromal invazyonun yokluğu doğru: borderline seröz tümörde atipi azdır ve tipik olarak stromal invazyon yoktur, karsinomda ise stromaya invazyon vardır.",
+    "C": "Silyalı tek katlı kolumnar epitel benign seröz kistadenomu döşeyen epiteldir; borderline tümörü karsinomdan ayırmaz.",
+    "D": "Papiller çıkıntılar borderline tümörde de bulunur, malign tümörlerde daha belirgindir; tek başına ayırıcı ölçüt değildir.",
+    "E": "Periton implantları borderline tümörde de görülebilir ama genelde invaziv değildir; implantın varlığı tek başına bu ayırımı yapmaz."
+   },
+   "ozet": "Borderline seröz tümör az atipili ve stromal invazyonsuzdur; yüksek dereceli seröz karsinomda belirgin atipi, karmaşık papiller yapılar ve stromal invazyon bulunur.",
+   "metin": "**Soru.** Borderline seröz tümörü seröz karsinomdan ayıran temel histolojik ölçüt hangisidir?\n\n**A)** Psammoma cisimcikleri · **B)** Stromal invazyon yokluğu · **C)** Silyalı kolumnar epitel · **D)** Papiller çıkıntılar · **E)** Periton implantı varlığı\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Psammoma cisimcikleri** — Psammoma cisimcikleri tüm seröz tümör tiplerinde sık görülen konsantrik kalsifikasyonlardır; neoplaziye özgü değildir, bu ayırımı yapamaz.\n- **Stromal invazyon yokluğu** — Stromal invazyonun yokluğu doğru: borderline seröz tümörde atipi azdır ve tipik olarak stromal invazyon yoktur, karsinomda ise stromaya invazyon vardır.\n- **Silyalı kolumnar epitel** — Silyalı tek katlı kolumnar epitel benign seröz kistadenomu döşeyen epiteldir; borderline tümörü karsinomdan ayırmaz.\n- **Papiller çıkıntılar** — Papiller çıkıntılar borderline tümörde de bulunur, malign tümörlerde daha belirgindir; tek başına ayırıcı ölçüt değildir.\n- **Periton implantı varlığı** — Periton implantları borderline tümörde de görülebilir ama genelde invaziv değildir; implantın varlığı tek başına bu ayırımı yapmaz.\n\n**Cevap: B** — Stromal invazyon yokluğu\n\n**Özet.** Borderline seröz tümör az atipili ve stromal invazyonsuzdur; yüksek dereceli seröz karsinomda belirgin atipi, karmaşık papiller yapılar ve stromal invazyon bulunur.",
+   "ses": "Borderline seröz tümörü seröz karsinomdan ayıran temel histolojik ölçüt hangisidir?\nA, Psammoma cisimcikleri\nBe, Stromal invazyon yokluğu\nCe, Silyalı kolumnar epitel\nDe, Papiller çıkıntılar\nE, Periton implantı varlığı\nŞıkları sırasıyla gözden geçirelim.\nPsammoma cisimcikleri tüm seröz tümör tiplerinde sık görülen konsantrik kalsifikasyonlardır. Neoplaziye özgü değildir, bu ayırımı yapamaz.\nStromal invazyonun yokluğu doğru. Borderline seröz tümörde atipi azdır ve tipik olarak stromal invazyon yoktur, karsinomda ise stromaya invazyon vardır.\nSilyalı tek katlı kolumnar epitel benign seröz kistadenomu döşeyen epiteldir. Borderline tümörü karsinomdan ayırmaz.\nPapiller çıkıntılar borderline tümörde de bulunur, malign tümörlerde daha belirgindir. Tek başına ayırıcı ölçüt değildir.\nPeriton implantları borderline tümörde de görülebilir ama genelde invaziv değildir. İmplantın varlığı tek başına bu ayırımı yapmaz.\nDoğru cevap Be, Stromal invazyon yokluğu\nBorderline seröz tümör az atipili ve stromal invazyonsuzdur. Yüksek dereceli seröz karsinomda belirgin atipi, karmaşık papiller yapılar ve stromal invazyon bulunur.",
+   "kelime": 171
+  },
+  {
+   "no": 40,
+   "tur": "ornek",
+   "soru": "Seröz over tümörlerinde prognozla en yakından ilişkili etkenler hangisidir?",
+   "secenekler": {
+    "A": "Bilateralite ve kist boyutu",
+    "B": "Psammoma ve silya varlığı",
+    "C": "Histoloji ve periton tutulumu",
+    "D": "CA-125 düzeyi ve yaş",
+    "E": "KRAS ve BRAF mutasyonu"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Benign seröz tümörlerin yaklaşık %25'i bilateraldir ve çapları 30–40 cm'ye ulaşabilir; bunlar prognozun ana belirleyicisi değildir.",
+    "B": "Psammoma cisimcikleri ve silyalı hücreler seröz tümörlerin tanısal histolojik özellikleridir; prognozu belirlemez.",
+    "C": "Histoloji ve periton tutulumu doğru: periton tutulumu olan malign seröz tümörde beş yıllık sağkalım yaklaşık %25'e düşer.",
+    "D": "CA-125 tanı sonrası tedavi yanıtının izlenmesinde ve nüksün saptanmasında kullanılır; prognozu belirleyen etken olarak tanımlanmaz.",
+    "E": "KRAS ve BRAF mutasyonları düşük dereceli seröz karsinomda sıktır; prognozla en yakından ilişkili etken olarak geçmez."
+   },
+   "ozet": "Seröz tümörlerde prognoz histoloji ve periton tutulumuyla ilişkilidir; overe sınırlı malign tümörde beş yıllık sağkalım yaklaşık %70, periton tutulumunda yaklaşık %25'tir.",
+   "metin": "**Soru.** Seröz over tümörlerinde prognozla en yakından ilişkili etkenler hangisidir?\n\n**A)** Bilateralite ve kist boyutu · **B)** Psammoma ve silya varlığı · **C)** Histoloji ve periton tutulumu · **D)** CA-125 düzeyi ve yaş · **E)** KRAS ve BRAF mutasyonu\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Bilateralite ve kist boyutu** — Benign seröz tümörlerin yaklaşık %25'i bilateraldir ve çapları 30–40 cm'ye ulaşabilir; bunlar prognozun ana belirleyicisi değildir.\n- **Psammoma ve silya varlığı** — Psammoma cisimcikleri ve silyalı hücreler seröz tümörlerin tanısal histolojik özellikleridir; prognozu belirlemez.\n- **Histoloji ve periton tutulumu** — Histoloji ve periton tutulumu doğru: periton tutulumu olan malign seröz tümörde beş yıllık sağkalım yaklaşık %25'e düşer.\n- **CA-125 düzeyi ve yaş** — CA-125 tanı sonrası tedavi yanıtının izlenmesinde ve nüksün saptanmasında kullanılır; prognozu belirleyen etken olarak tanımlanmaz.\n- **KRAS ve BRAF mutasyonu** — KRAS ve BRAF mutasyonları düşük dereceli seröz karsinomda sıktır; prognozla en yakından ilişkili etken olarak geçmez.\n\n**Cevap: C** — Histoloji ve periton tutulumu\n\n**Özet.** Seröz tümörlerde prognoz histoloji ve periton tutulumuyla ilişkilidir; overe sınırlı malign tümörde beş yıllık sağkalım yaklaşık %70, periton tutulumunda yaklaşık %25'tir.",
+   "ses": "Seröz over tümörlerinde prognozla en yakından ilişkili etkenler hangisidir?\nA, Bilateralite ve kist boyutu\nBe, Psammoma ve silya varlığı\nCe, Histoloji ve periton tutulumu\nDe, ce a yüz yirmi beş düzeyi ve yaş\nE, ke ras ve be raf mutasyonu\nŞimdi seçeneklere tek tek bakalım.\nBenign seröz tümörlerin yaklaşık yüzde yirmi beşi bilateraldir ve çapları otuz ile kırk santimetreye ulaşabilir. Bunlar prognozun ana belirleyicisi değildir.\nPsammoma cisimcikleri ve silyalı hücreler seröz tümörlerin tanısal histolojik özellikleridir. Prognozu belirlemez.\nHistoloji ve periton tutulumu doğru. Periton tutulumu olan malign seröz tümörde beş yıllık sağkalım yaklaşık yüzde yirmi beşe düşer.\nCe a yüz yirmi beş tanı sonrası tedavi yanıtının izlenmesinde ve nüksün saptanmasında kullanılır. Prognozu belirleyen etken olarak tanımlanmaz.\nKe ras ve be raf mutasyonları düşük dereceli seröz karsinomda sıktır. Prognozla en yakından ilişkili etken olarak geçmez.\nDoğru cevap Ce, Histoloji ve periton tutulumu\nSeröz tümörlerde prognoz histoloji ve periton tutulumuyla ilişkilidir. Overe sınırlı malign tümörde beş yıllık sağkalım yaklaşık yüzde yetmiş, periton tutulumunda yaklaşık yüzde yirmi beştir.",
+   "kelime": 180
+  },
+  {
+   "no": 41,
+   "tur": "ornek",
+   "soru": "Müsinöz over karsinomunda sonucu belirleyen ana faktör hangisidir?",
+   "secenekler": {
+    "A": "Histolojik tip",
+    "B": "KRAS mutasyonu",
+    "C": "Bilateralite",
+    "D": "Kist boyutu",
+    "E": "Evre"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Histolojik tip açısından müsinöz karsinomun prognozu seröz karsinomdan biraz daha iyidir; ancak tip, sonucu belirlemede evreden daha az önemlidir.",
+    "B": "KRAS mutasyonu benign olanlar dahil tüm müsinöz over tümörlerinde sıktır; bu yüzden sonucu belirleyen ana faktör değildir.",
+    "C": "Primer müsinöz tümörlerin bilateral olma olasılığı düşüktür; bilateralite daha çok Krukenberg metastazını düşündüren tanısal bir işarettir.",
+    "D": "Kist boyutu açısından müsinöz tümörler seröz tümörlerden daha büyük olma eğilimindedir; ancak boyut sonucu belirleyen faktör değildir.",
+    "E": "Evre doğru: müsinöz karsinomda sonucu belirleyen ana faktör evredir ve histolojik tipin seröz ya da müsinöz olmasından daha önemlidir."
+   },
+   "ozet": "Müsinöz karsinomun prognozu seröz karsinomdan biraz daha iyidir; ancak sonucu belirleyen ana faktör evredir ve evre histolojik tipten daha önemlidir.",
+   "metin": "**Soru.** Müsinöz over karsinomunda sonucu belirleyen ana faktör hangisidir?\n\n**A)** Histolojik tip · **B)** KRAS mutasyonu · **C)** Bilateralite · **D)** Kist boyutu · **E)** Evre\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Histolojik tip** — Histolojik tip açısından müsinöz karsinomun prognozu seröz karsinomdan biraz daha iyidir; ancak tip, sonucu belirlemede evreden daha az önemlidir.\n- **KRAS mutasyonu** — KRAS mutasyonu benign olanlar dahil tüm müsinöz over tümörlerinde sıktır; bu yüzden sonucu belirleyen ana faktör değildir.\n- **Bilateralite** — Primer müsinöz tümörlerin bilateral olma olasılığı düşüktür; bilateralite daha çok Krukenberg metastazını düşündüren tanısal bir işarettir.\n- **Kist boyutu** — Kist boyutu açısından müsinöz tümörler seröz tümörlerden daha büyük olma eğilimindedir; ancak boyut sonucu belirleyen faktör değildir.\n- **Evre** — Evre doğru: müsinöz karsinomda sonucu belirleyen ana faktör evredir ve histolojik tipin seröz ya da müsinöz olmasından daha önemlidir.\n\n**Cevap: E** — Evre\n\n**Özet.** Müsinöz karsinomun prognozu seröz karsinomdan biraz daha iyidir; ancak sonucu belirleyen ana faktör evredir ve evre histolojik tipten daha önemlidir.",
+   "ses": "Müsinöz over karsinomunda sonucu belirleyen ana faktör hangisidir?\nA, Histolojik tip\nBe, ke ras mutasyonu\nCe, Bilateralite\nDe, Kist boyutu\nE, Evre\nSeçenekleri sırayla değerlendirelim.\nHistolojik tip açısından müsinöz karsinomun prognozu seröz karsinomdan biraz daha iyidir. Ancak tip, sonucu belirlemede evreden daha az önemlidir.\nKe ras mutasyonu benign olanlar dahil tüm müsinöz over tümörlerinde sıktır. Bu yüzden sonucu belirleyen ana faktör değildir.\nPrimer müsinöz tümörlerin bilateral olma olasılığı düşüktür. Bilateralite daha çok Krukenberg metastazını düşündüren tanısal bir işarettir.\nKist boyutu açısından müsinöz tümörler seröz tümörlerden daha büyük olma eğilimindedir. Ancak boyut sonucu belirleyen faktör değildir.\nEvre doğru. Müsinöz karsinomda sonucu belirleyen ana faktör evredir ve histolojik tipin seröz ya da müsinöz olmasından daha önemlidir.\nDoğru cevap E, Evre\nMüsinöz karsinomun prognozu seröz karsinomdan biraz daha iyidir. Ancak sonucu belirleyen ana faktör evredir ve evre histolojik tipten daha önemlidir.",
+   "kelime": 161
+  },
+  {
+   "no": 42,
+   "tur": "ornek",
+   "soru": "Endometrioid over karsinomlu hastaların %15–20'sinde hangisi eş zamanlı bulunur?",
+   "secenekler": {
+    "A": "Endometrial karsinom",
+    "B": "Psödomiksoma peritoni",
+    "C": "Meigs sendromu",
+    "D": "STIC",
+    "E": "Krukenberg tümörü"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Endometrial karsinom doğru: endometrioid over karsinomlu hastaların %15–20'sinde eş zamanlı bulunur ve ikisi PTEN ile PI3K-AKT zeminini paylaşır.",
+    "B": "Psödomiksoma peritoni peritonda yoğun müsin birikimidir; en sık apendiks kökenlidir ve endometrioid karsinoma eşlik eden tablo değildir.",
+    "C": "Meigs sendromu asit ve hidrotoraksın birlikteliğidir; tekoma-fibroma olgularının yaklaşık %40'ında görülür.",
+    "D": "STIC, yani seröz tübal intraepitelyal karsinom, yüksek dereceli seröz karsinomun öncüsüdür; endometrioid karsinomla birlikte tanımlanmaz.",
+    "E": "Krukenberg tümörü gastrointestinal kökenli, overi sıklıkla bilateral tutan metastatik müsinöz adenokarsinomdur."
+   },
+   "ozet": "Endometrioid over karsinomu sıklıkla endometriozisle gelişir, %20'si bilateraldir ve %15–20'sinde eş zamanlı endometrial karsinom bulunur; ortak mutasyon PTEN'dir.",
+   "metin": "**Soru.** Endometrioid over karsinomlu hastaların %15–20'sinde hangisi eş zamanlı bulunur?\n\n**A)** Endometrial karsinom · **B)** Psödomiksoma peritoni · **C)** Meigs sendromu · **D)** STIC · **E)** Krukenberg tümörü\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Endometrial karsinom** — Endometrial karsinom doğru: endometrioid over karsinomlu hastaların %15–20'sinde eş zamanlı bulunur ve ikisi PTEN ile PI3K-AKT zeminini paylaşır.\n- **Psödomiksoma peritoni** — Psödomiksoma peritoni peritonda yoğun müsin birikimidir; en sık apendiks kökenlidir ve endometrioid karsinoma eşlik eden tablo değildir.\n- **Meigs sendromu** — Meigs sendromu asit ve hidrotoraksın birlikteliğidir; tekoma-fibroma olgularının yaklaşık %40'ında görülür.\n- **STIC** — STIC, yani seröz tübal intraepitelyal karsinom, yüksek dereceli seröz karsinomun öncüsüdür; endometrioid karsinomla birlikte tanımlanmaz.\n- **Krukenberg tümörü** — Krukenberg tümörü gastrointestinal kökenli, overi sıklıkla bilateral tutan metastatik müsinöz adenokarsinomdur.\n\n**Cevap: A** — Endometrial karsinom\n\n**Özet.** Endometrioid over karsinomu sıklıkla endometriozisle gelişir, %20'si bilateraldir ve %15–20'sinde eş zamanlı endometrial karsinom bulunur; ortak mutasyon PTEN'dir.",
+   "ses": "Endometrioid over karsinomlu hastaların yüzde on beş ile yirmisinde hangisi eş zamanlı bulunur?\nA, Endometrial karsinom\nBe, Psödomiksoma peritoni\nCe, Meygs sendromu\nDe, seröz tübal intraepitelyal karsinom\nE, Krukenberg tümörü\nHer seçeneği tek tek ele alalım.\nEndometrial karsinom doğru. Endometrioid over karsinomlu hastaların yüzde on beş ile yirmisinde eş zamanlı bulunur, ikisi ortak moleküler zemini paylaşır.\nPsödomiksoma peritoni peritonda yoğun müsin birikimidir. En sık apendiks kökenlidir ve endometrioid karsinoma eşlik eden tablo değildir.\nMeygs sendromu asit ve hidrotoraksın birlikteliğidir. Tekoma fibroma olgularının yaklaşık yüzde kırkında görülür.\nSeröz tübal intraepitelyal karsinom yüksek dereceli seröz karsinomun öncüsüdür. Endometrioid karsinomla birlikte tanımlanmaz.\nKrukenberg tümörü gastrointestinal kökenli, overi sıklıkla bilateral tutan metastatik müsinöz adenokarsinomdur.\nDoğru cevap A, Endometrial karsinom\nEndometrioid over karsinomu sıklıkla endometriozisle gelişir ve yüzde on beş ile yirmisinde eş zamanlı endometrial karsinom bulunur. Ortak mutasyon pe te ne genindedir.",
+   "kelime": 150
+  },
+  {
+   "no": 43,
+   "tur": "ornek",
+   "soru": "Hipersekretuar gebelik endometriyumuna benzeyen, bol berrak sitoplazmalı büyük hücrelerden oluşan over karsinomu hangisidir?",
+   "secenekler": {
+    "A": "Disgerminom",
+    "B": "Endometrioid karsinom",
+    "C": "Seröz karsinom",
+    "D": "Berrak hücreli karsinom",
+    "E": "Müsinöz karsinom"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Disgerminom da berrak sitoplazmalı büyük hücrelerden oluşur, ama testis seminomunun karşılığı olan germ hücreli bir tümördür ve karsinom değildir.",
+    "B": "Endometrioid karsinom endometriyuma benzeyen tübüler bezlerle tanınır; berrak hücreli karsinom ise onun bir varyantı kabul edilir.",
+    "C": "Seröz karsinom karmaşık, çok katmanlı papiller yapılar ve psammoma cisimcikleriyle tanınır; gebelik endometriyumu görünümü vermez.",
+    "D": "Berrak hücreli karsinom doğru: bol berrak sitoplazmalı büyük epitel hücrelerinden oluşur ve hipersekretuar gebelik endometriyumuna benzer.",
+    "E": "Müsinöz karsinomda kistler müsin üreten epitelle döşelidir ve kist içeriği yoğun müsinöz sıvıdır."
+   },
+   "ozet": "Berrak hücreli karsinom hipersekretuar gebelik endometriyumunu andırır, endometriozisle birlikte olabilir ve endometrioid adenokarsinom varyantıdır; disgerminomun berrak hücreleri ise germ hücre kökenlidir.",
+   "metin": "**Soru.** Hipersekretuar gebelik endometriyumuna benzeyen, bol berrak sitoplazmalı büyük hücrelerden oluşan over karsinomu hangisidir?\n\n**A)** Disgerminom · **B)** Endometrioid karsinom · **C)** Seröz karsinom · **D)** Berrak hücreli karsinom · **E)** Müsinöz karsinom\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Disgerminom** — Disgerminom da berrak sitoplazmalı büyük hücrelerden oluşur, ama testis seminomunun karşılığı olan germ hücreli bir tümördür ve karsinom değildir.\n- **Endometrioid karsinom** — Endometrioid karsinom endometriyuma benzeyen tübüler bezlerle tanınır; berrak hücreli karsinom ise onun bir varyantı kabul edilir.\n- **Seröz karsinom** — Seröz karsinom karmaşık, çok katmanlı papiller yapılar ve psammoma cisimcikleriyle tanınır; gebelik endometriyumu görünümü vermez.\n- **Berrak hücreli karsinom** — Berrak hücreli karsinom doğru: bol berrak sitoplazmalı büyük epitel hücrelerinden oluşur ve hipersekretuar gebelik endometriyumuna benzer.\n- **Müsinöz karsinom** — Müsinöz karsinomda kistler müsin üreten epitelle döşelidir ve kist içeriği yoğun müsinöz sıvıdır.\n\n**Cevap: D** — Berrak hücreli karsinom\n\n**Özet.** Berrak hücreli karsinom hipersekretuar gebelik endometriyumunu andırır, endometriozisle birlikte olabilir ve endometrioid adenokarsinom varyantıdır; disgerminomun berrak hücreleri ise germ hücre kökenlidir.",
+   "ses": "Hipersekretuar gebelik endometriyumuna benzeyen, bol berrak sitoplazmalı büyük hücrelerden oluşan over karsinomu hangisidir?\nA, Disgerminom\nBe, Endometrioid karsinom\nCe, Seröz karsinom\nDe, Berrak hücreli karsinom\nE, Müsinöz karsinom\nŞıkları sırasıyla gözden geçirelim.\nDisgerminom da berrak sitoplazmalı büyük hücrelerden oluşur, ama testis seminomunun karşılığı olan germ hücreli bir tümördür ve karsinom değildir.\nEndometrioid karsinom endometriyuma benzeyen tübüler bezlerle tanınır. Berrak hücreli karsinom ise onun bir varyantı kabul edilir.\nSeröz karsinom karmaşık, çok katmanlı papiller yapılar ve psammoma cisimcikleriyle tanınır. Gebelik endometriyumu görünümü vermez.\nBerrak hücreli karsinom doğru. Bol berrak sitoplazmalı büyük epitel hücrelerinden oluşur ve hipersekretuar gebelik endometriyumuna benzer.\nMüsinöz karsinomda kistler müsin üreten epitelle döşelidir ve kist içeriği yoğun müsinöz sıvıdır.\nDoğru cevap De, Berrak hücreli karsinom\nBerrak hücreli karsinom hipersekretuar gebelik endometriyumunu andırır, endometriozisle birlikte olabilir ve endometrioid adenokarsinom varyantıdır. Disgerminomun berrak hücreleri ise germ hücre kökenlidir.",
+   "kelime": 165
+  },
+  {
+   "no": 44,
+   "tur": "ornek",
+   "soru": "Overde hCG salgılayan, erken ve yaygın metastaz yapan, kemoterapiye dirençli germ hücreli tümör hangisidir?",
+   "secenekler": {
+    "A": "Disgerminom",
+    "B": "Koriokarsinom",
+    "C": "Olgunlaşmamış teratom",
+    "D": "Granüloza hücreli tümör",
+    "E": "Struma ovarii"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Disgerminom da malign germ hücreli tümördür, ancak yalnız üçte biri metastaz yapar, radyosensitiftir ve kür oranı yaklaşık %80'dir.",
+    "B": "Koriokarsinom doğru: sitotrofoblast ve sinsityotrofoblast içerir, hCG salgılar, erken ve yaygın metastaz yapar ve kemoterapiye dirençlidir.",
+    "C": "Olgunlaşmamış teratomda metastaz riski olgunlaşmamış nöroepitelin oranıyla ilişkilidir; hormon salgısıyla tanınmaz.",
+    "D": "Granüloza hücreli tümör seks kord-stromal bir tümördür ve hCG değil, sıklıkla fazla miktarda östrojen salgılar.",
+    "E": "Struma ovarii olgun tiroid dokusundan oluşan monodermal teratomdur; hipertiroidizme yol açabilir."
+   },
+   "ozet": "Koriokarsinom plasental koriokarsinomla özdeştir, hCG salgılar ve kemoterapiye dirençlidir; disgerminom ise radyosensitiftir ve kür oranı yaklaşık %80'dir.",
+   "metin": "**Soru.** Overde hCG salgılayan, erken ve yaygın metastaz yapan, kemoterapiye dirençli germ hücreli tümör hangisidir?\n\n**A)** Disgerminom · **B)** Koriokarsinom · **C)** Olgunlaşmamış teratom · **D)** Granüloza hücreli tümör · **E)** Struma ovarii\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Disgerminom** — Disgerminom da malign germ hücreli tümördür, ancak yalnız üçte biri metastaz yapar, radyosensitiftir ve kür oranı yaklaşık %80'dir.\n- **Koriokarsinom** — Koriokarsinom doğru: sitotrofoblast ve sinsityotrofoblast içerir, hCG salgılar, erken ve yaygın metastaz yapar ve kemoterapiye dirençlidir.\n- **Olgunlaşmamış teratom** — Olgunlaşmamış teratomda metastaz riski olgunlaşmamış nöroepitelin oranıyla ilişkilidir; hormon salgısıyla tanınmaz.\n- **Granüloza hücreli tümör** — Granüloza hücreli tümör seks kord-stromal bir tümördür ve hCG değil, sıklıkla fazla miktarda östrojen salgılar.\n- **Struma ovarii** — Struma ovarii olgun tiroid dokusundan oluşan monodermal teratomdur; hipertiroidizme yol açabilir.\n\n**Cevap: B** — Koriokarsinom\n\n**Özet.** Koriokarsinom plasental koriokarsinomla özdeştir, hCG salgılar ve kemoterapiye dirençlidir; disgerminom ise radyosensitiftir ve kür oranı yaklaşık %80'dir.",
+   "ses": "Overde insan koryonik gonadotropini salgılayan, erken ve yaygın metastaz yapan, kemoterapiye dirençli germ hücreli tümör hangisidir?\nA, Disgerminom\nBe, Koriokarsinom\nCe, Olgunlaşmamış teratom\nDe, Granüloza hücreli tümör\nE, Struma ovarii\nŞimdi seçeneklere tek tek bakalım.\nDisgerminom da malign germ hücreli tümördür, ancak yalnız üçte biri metastaz yapar, radyosensitiftir ve kür oranı yaklaşık yüzde seksendir.\nKoriokarsinom doğru. Sitotrofoblast ve sinsityotrofoblast içerir, insan koryonik gonadotropini salgılar ve kemoterapiye dirençlidir.\nOlgunlaşmamış teratomda metastaz riski olgunlaşmamış nöroepitelin oranıyla ilişkilidir. Hormon salgısıyla tanınmaz.\nGranüloza hücreli tümör seks kord stromal bir tümördür ve sıklıkla fazla miktarda östrojen salgılar.\nStruma ovarii olgun tiroid dokusundan oluşan monodermal teratomdur. Hipertiroidizme yol açabilir.\nDoğru cevap Be, Koriokarsinom\nKoriokarsinom plasental koriokarsinomla özdeştir, insan koryonik gonadotropini salgılar ve kemoterapiye dirençlidir. Disgerminom ise radyosensitiftir.",
+   "kelime": 151
+  },
+  {
+   "no": 45,
+   "tur": "ornek",
+   "soru": "Olgunlaşmamış teratomu olgun teratomdan ayıran temel özellik hangisidir?",
+   "secenekler": {
+    "A": "Üç germ yaprağı dokusu",
+    "B": "Deri benzeri epidermal astar",
+    "C": "Embriyonel ya da fetal benzeri dokular",
+    "D": "Keçeleşmiş kıl ve yağ",
+    "E": "Sağ overde yerleşim"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Ektoderm, endoderm ve mezoderm kökenli dokular olgun teratomda da bulunur; bu nedenle iki tipi birbirinden ayırmaz.",
+    "B": "Deri benzeri epidermal astar olgun kistik teratomun, yani dermoid kistin özelliğidir.",
+    "C": "Embriyonel ya da fetal benzeri dokular doğru: olgunlaşmamış teratomun bileşenleri olgunlaşmamış fetal dokuya benzer, olgun teratomda ise dokular olgundur.",
+    "D": "Keçeleşmiş kıllar ve yağ bezi salgısı olgun kistik teratomun kesit yüzünde görülen bulgulardır.",
+    "E": "Sağ overde daha sık yerleşim ve tek taraflılık olgun teratomun özelliğidir; olgunlaşmamış teratomu ayırmaz."
+   },
+   "ozet": "Olgunlaşmamış teratom embriyonel ya da fetal benzeri dokular içerir, genellikle büyük ve katıdır; metastaz riski olgunlaşmamış nöroepitelin oranıyla ilişkilidir.",
+   "metin": "**Soru.** Olgunlaşmamış teratomu olgun teratomdan ayıran temel özellik hangisidir?\n\n**A)** Üç germ yaprağı dokusu · **B)** Deri benzeri epidermal astar · **C)** Embriyonel ya da fetal benzeri dokular · **D)** Keçeleşmiş kıl ve yağ · **E)** Sağ overde yerleşim\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Üç germ yaprağı dokusu** — Ektoderm, endoderm ve mezoderm kökenli dokular olgun teratomda da bulunur; bu nedenle iki tipi birbirinden ayırmaz.\n- **Deri benzeri epidermal astar** — Deri benzeri epidermal astar olgun kistik teratomun, yani dermoid kistin özelliğidir.\n- **Embriyonel ya da fetal benzeri dokular** — Embriyonel ya da fetal benzeri dokular doğru: olgunlaşmamış teratomun bileşenleri olgunlaşmamış fetal dokuya benzer, olgun teratomda ise dokular olgundur.\n- **Keçeleşmiş kıl ve yağ** — Keçeleşmiş kıllar ve yağ bezi salgısı olgun kistik teratomun kesit yüzünde görülen bulgulardır.\n- **Sağ overde yerleşim** — Sağ overde daha sık yerleşim ve tek taraflılık olgun teratomun özelliğidir; olgunlaşmamış teratomu ayırmaz.\n\n**Cevap: C** — Embriyonel ya da fetal benzeri dokular\n\n**Özet.** Olgunlaşmamış teratom embriyonel ya da fetal benzeri dokular içerir, genellikle büyük ve katıdır; metastaz riski olgunlaşmamış nöroepitelin oranıyla ilişkilidir.",
+   "ses": "Olgunlaşmamış teratomu olgun teratomdan ayıran temel özellik hangisidir?\nA, Üç germ yaprağı dokusu\nBe, Deri benzeri epidermal astar\nCe, Embriyonel ya da fetal benzeri dokular\nDe, Keçeleşmiş kıl ve yağ\nE, Sağ overde yerleşim\nSeçenekleri sırayla değerlendirelim.\nEktoderm, endoderm ve mezoderm kökenli dokular olgun teratomda da bulunur. Bu nedenle iki tipi birbirinden ayırmaz.\nDeri benzeri epidermal astar olgun kistik teratomun, yani dermoid kistin özelliğidir.\nEmbriyonel ya da fetal benzeri dokular doğru. Olgunlaşmamış teratomun bileşenleri olgunlaşmamış fetal dokuya benzer, olgun teratomda ise dokular olgundur.\nKeçeleşmiş kıllar ve yağ bezi salgısı olgun kistik teratomun kesit yüzünde görülen bulgulardır.\nSağ overde daha sık yerleşim ve tek taraflılık olgun teratomun özelliğidir. Olgunlaşmamış teratomu ayırmaz.\nDoğru cevap Ce, Embriyonel ya da fetal benzeri dokular\nOlgunlaşmamış teratom embriyonel ya da fetal benzeri dokular içerir, genellikle büyük ve katıdır. Metastaz riski olgunlaşmamış nöroepitelin oranıyla ilişkilidir.",
+   "kelime": 176
+  },
+  {
+   "no": 46,
+   "tur": "ornek",
+   "soru": "Karsinoid sendroma neden olabilen monodermal teratom hangisidir?",
+   "secenekler": {
+    "A": "Over karsinoidi",
+    "B": "Struma ovarii",
+    "C": "Dermoid kist",
+    "D": "Olgunlaşmamış teratom",
+    "E": "Disgerminom"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Over karsinoidi doğru: nadir görülen bir monodermal teratomdur ve karsinoid sendroma neden olabilir.",
+    "B": "Struma ovarii en sık monodermal teratomdur; tamamen olgun tiroid dokusundan oluşur ve hipertiroidizme yol açabilir.",
+    "C": "Dermoid kist üç germ yaprağından olgun dokular içeren olgun kistik teratomdur; tek dokulu, yani monodermal değildir.",
+    "D": "Olgunlaşmamış teratom embriyonel benzeri dokular içeren malign teratomdur; tek bir özelleşmiş dokudan oluşmaz.",
+    "E": "Disgerminom teratom değildir; testis seminomunun karşılığı olan, radyosensitif germ hücreli bir tümördür."
+   },
+   "ozet": "Monodermal teratomlar tamamen özelleşmiş tek dokudan oluşur; struma ovarii hipertiroidizme, nadir görülen over karsinoidi ise karsinoid sendroma yol açabilir.",
+   "metin": "**Soru.** Karsinoid sendroma neden olabilen monodermal teratom hangisidir?\n\n**A)** Over karsinoidi · **B)** Struma ovarii · **C)** Dermoid kist · **D)** Olgunlaşmamış teratom · **E)** Disgerminom\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Over karsinoidi** — Over karsinoidi doğru: nadir görülen bir monodermal teratomdur ve karsinoid sendroma neden olabilir.\n- **Struma ovarii** — Struma ovarii en sık monodermal teratomdur; tamamen olgun tiroid dokusundan oluşur ve hipertiroidizme yol açabilir.\n- **Dermoid kist** — Dermoid kist üç germ yaprağından olgun dokular içeren olgun kistik teratomdur; tek dokulu, yani monodermal değildir.\n- **Olgunlaşmamış teratom** — Olgunlaşmamış teratom embriyonel benzeri dokular içeren malign teratomdur; tek bir özelleşmiş dokudan oluşmaz.\n- **Disgerminom** — Disgerminom teratom değildir; testis seminomunun karşılığı olan, radyosensitif germ hücreli bir tümördür.\n\n**Cevap: A** — Over karsinoidi\n\n**Özet.** Monodermal teratomlar tamamen özelleşmiş tek dokudan oluşur; struma ovarii hipertiroidizme, nadir görülen over karsinoidi ise karsinoid sendroma yol açabilir.",
+   "ses": "Karsinoid sendroma neden olabilen monodermal teratom hangisidir?\nA, Over karsinoidi\nBe, Struma ovarii\nCe, Dermoid kist\nDe, Olgunlaşmamış teratom\nE, Disgerminom\nHer seçeneği tek tek ele alalım.\nOver karsinoidi doğru. Nadir görülen bir monodermal teratomdur ve karsinoid sendroma neden olabilir.\nStruma ovarii en sık monodermal teratomdur. Tamamen olgun tiroid dokusundan oluşur ve hipertiroidizme yol açabilir.\nDermoid kist üç germ yaprağından olgun dokular içeren olgun kistik teratomdur. Tek dokulu, yani monodermal değildir.\nOlgunlaşmamış teratom embriyonel benzeri dokular içeren malign teratomdur. Tek bir özelleşmiş dokudan oluşmaz.\nDisgerminom teratom değildir. Testis seminomunun karşılığı olan, radyosensitif germ hücreli bir tümördür.\nDoğru cevap A, Over karsinoidi\nMonodermal teratomlar tamamen özelleşmiş tek dokudan oluşur. Struma ovarii hipertiroidizme, nadir görülen over karsinoidi ise karsinoid sendroma yol açabilir.",
+   "kelime": 146
+  },
+  {
+   "no": 47,
+   "tur": "ornek",
+   "soru": "CA-125'in tarama testi olarak değerinin sınırlı olmasının nedeni hangisidir?",
+   "secenekler": {
+    "A": "Yalnız müsinöz tümörde yükselmesi",
+    "B": "Germ hücreli tümöre özgü olması",
+    "C": "Tedaviyle değişmemesi",
+    "D": "Erken evrede sıklıkla normal olması",
+    "E": "İleri evrede yükselmemesi"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "CA-125 yalnız müsinöz tümöre özgü değildir; birçok benign durumda ve ovaryum dışı kanserlerde de yükselebilir.",
+    "B": "CA-125 germ hücreli tümör belirteci olarak tanımlanmaz; epitelyal ovaryum kanserli kadınların %75–90'ında yükselen bir glikoproteindir.",
+    "C": "CA-125 tedaviyle değişir; en büyük faydası tanı sonrası tedavi yanıtının izlenmesi ve nüksün saptanmasıdır.",
+    "D": "Erken evrede sık normal kalması doğru: overe sınırlı kanserde CA-125 olguların %50'sine kadarında normaldir ve benign durumlarda da yükselir.",
+    "E": "İleri evrede CA-125 yükselmeme eğiliminde değildir; hastaların çoğu tanıda yüksek evrededir ve belirteç epitelyal kanserlerin çoğunda artar."
+   },
+   "ozet": "CA-125 epitelyal over kanserlerinin %75–90'ında yükselir; ancak erken evrede %50'ye kadar normal olabilir ve benign durumlarda da artar, bu yüzden en çok izlemde değerlidir.",
+   "metin": "**Soru.** CA-125'in tarama testi olarak değerinin sınırlı olmasının nedeni hangisidir?\n\n**A)** Yalnız müsinöz tümörde yükselmesi · **B)** Germ hücreli tümöre özgü olması · **C)** Tedaviyle değişmemesi · **D)** Erken evrede sıklıkla normal olması · **E)** İleri evrede yükselmemesi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Yalnız müsinöz tümörde yükselmesi** — CA-125 yalnız müsinöz tümöre özgü değildir; birçok benign durumda ve ovaryum dışı kanserlerde de yükselebilir.\n- **Germ hücreli tümöre özgü olması** — CA-125 germ hücreli tümör belirteci olarak tanımlanmaz; epitelyal ovaryum kanserli kadınların %75–90'ında yükselen bir glikoproteindir.\n- **Tedaviyle değişmemesi** — CA-125 tedaviyle değişir; en büyük faydası tanı sonrası tedavi yanıtının izlenmesi ve nüksün saptanmasıdır.\n- **Erken evrede sıklıkla normal olması** — Erken evrede sık normal kalması doğru: overe sınırlı kanserde CA-125 olguların %50'sine kadarında normaldir ve benign durumlarda da yükselir.\n- **İleri evrede yükselmemesi** — İleri evrede CA-125 yükselmeme eğiliminde değildir; hastaların çoğu tanıda yüksek evrededir ve belirteç epitelyal kanserlerin çoğunda artar.\n\n**Cevap: D** — Erken evrede sıklıkla normal olması\n\n**Özet.** CA-125 epitelyal over kanserlerinin %75–90'ında yükselir; ancak erken evrede %50'ye kadar normal olabilir ve benign durumlarda da artar, bu yüzden en çok izlemde değerlidir.",
+   "ses": "Ce a yüz yirmi beşin tarama testi olarak değerinin sınırlı olmasının nedeni hangisidir?\nA, Yalnız müsinöz tümörde yükselmesi\nBe, Germ hücreli tümöre özgü olması\nCe, Tedaviyle değişmemesi\nDe, Erken evrede sıklıkla normal olması\nE, İleri evrede yükselmemesi\nŞıkları sırasıyla gözden geçirelim.\nCe a yüz yirmi beş yalnız müsinöz tümöre özgü değildir. Birçok benign durumda ve ovaryum dışı kanserlerde de yükselebilir.\nCe a yüz yirmi beş germ hücreli tümör belirteci olarak tanımlanmaz. Epitelyal ovaryum kanserli kadınların yüzde yetmiş beş ile doksanında yükselir.\nCe a yüz yirmi beş tedaviyle değişir. En büyük faydası tanı sonrası tedavi yanıtının izlenmesi ve nüksün saptanmasıdır.\nErken evrede sık normal kalması doğru. Overe sınırlı kanserde ce a yüz yirmi beş olguların yüzde ellisine kadarında normaldir.\nİleri evrede ce a yüz yirmi beş yükselmeme eğiliminde değildir. Hastaların çoğu tanıda yüksek evrededir ve belirteç çoğunda artar.\nDoğru cevap De, Erken evrede sıklıkla normal olması\nCe a yüz yirmi beş epitelyal over kanserlerinin çoğunda yükselir. Ancak erken evrede yarıya kadar normal olabilir, bu yüzden en çok izlemde değerlidir.",
+   "kelime": 185
+  }
+ ]
+}

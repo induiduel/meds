@@ -1,0 +1,782 @@
+{
+ "kod": "24",
+ "baslik": "Tübülointerstisyel Hastalıklar",
+ "surum": "alt-1",
+ "sorular": [
+  {
+   "no": 1,
+   "tur": "ornek",
+   "soru": "Akut piyelonefritin en sık etkeni hangisidir?",
+   "secenekler": {
+    "A": "Escherichia coli",
+    "B": "Proteus",
+    "C": "Klebsiella",
+    "D": "Pseudomonas",
+    "E": "Staphylococcus aureus"
+   },
+   "dogru": "A",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Escherichia coli doğru: akut piyelonefriti en sık enterik gram-negatif basiller yapar, bunların başında E. coli gelir.",
+    "B": "Proteus yükselen enfeksiyonun sık etkenlerindendir; ancak en sık etken değildir.",
+    "C": "Klebsiella gram-negatif bir enterik basildir; akut piyelonefrit yapabilir, ama listenin başında yer almaz.",
+    "D": "Pseudomonas türleri de piyelonefrite yol açabilen enterik basiller arasında sayılır; en sık etken başka bir basildir.",
+    "E": "Staphylococcus aureus daha çok hematogen yayılımla, bakteriyemi sırasında böbreğe ulaşır; yükselen enfeksiyonun tipik etkeni değildir."
+   },
+   "ozet": "Akut piyelonefritin en sık etkeni E. coli'dir; Proteus, Klebsiella, Enterobacter ve Pseudomonas gibi enterik gram-negatif basiller çoğunlukla yükselen yolla böbreğe ulaşır.",
+   "metin": "**Soru.** Akut piyelonefritin en sık etkeni hangisidir?\n\n**A)** Escherichia coli · **B)** Proteus · **C)** Klebsiella · **D)** Pseudomonas · **E)** Staphylococcus aureus\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Escherichia coli** — Escherichia coli doğru: akut piyelonefriti en sık enterik gram-negatif basiller yapar, bunların başında E. coli gelir.\n- **Proteus** — Proteus yükselen enfeksiyonun sık etkenlerindendir; ancak en sık etken değildir.\n- **Klebsiella** — Klebsiella gram-negatif bir enterik basildir; akut piyelonefrit yapabilir, ama listenin başında yer almaz.\n- **Pseudomonas** — Pseudomonas türleri de piyelonefrite yol açabilen enterik basiller arasında sayılır; en sık etken başka bir basildir.\n- **Staphylococcus aureus** — Staphylococcus aureus daha çok hematogen yayılımla, bakteriyemi sırasında böbreğe ulaşır; yükselen enfeksiyonun tipik etkeni değildir.\n\n**Cevap: A** — Escherichia coli\n\n**Özet.** Akut piyelonefritin en sık etkeni E. coli'dir; Proteus, Klebsiella, Enterobacter ve Pseudomonas gibi enterik gram-negatif basiller çoğunlukla yükselen yolla böbreğe ulaşır.",
+   "ses": "Akut piyelonefritin en sık etkeni hangisidir?\nA, Eşerişya koli\nBe, Proteus\nCe, Klebsiella\nDe, Psödomonas\nE, Stafilokokus aureus\nSeçenekleri sırayla değerlendirelim.\nEşerişya koli doğru. Akut piyelonefriti en sık enterik gram negatif basiller yapar, bunların başında e koli gelir.\nProteus yükselen enfeksiyonun sık etkenlerindendir. Ancak en sık etken değildir.\nKlebsiella gram negatif bir enterik basildir. Akut piyelonefrit yapabilir, ama listenin başında yer almaz.\nPsödomonas türleri de piyelonefrite yol açabilen enterik basiller arasında sayılır. En sık etken başka bir basildir.\nStafilokokus aureus daha çok hematogen yayılımla, bakteriyemi sırasında böbreğe ulaşır. Yükselen enfeksiyonun tipik etkeni değildir.\nDoğru cevap A, Eşerişya koli\nAkut piyelonefritin en sık etkeni e kolidir. Proteus, Klebsiella, Enterobakter ve Psödomonas gibi enterik gram negatif basiller çoğunlukla yükselen yolla böbreğe ulaşır.",
+   "kelime": 141
+  },
+  {
+   "no": 2,
+   "tur": "ornek",
+   "soru": "Akut piyelonefritte en sık yayılma yolu hangisidir?",
+   "secenekler": {
+    "A": "Hematogen",
+    "B": "Asenden (yükselen)",
+    "C": "Lenfatik",
+    "D": "Doğrudan komşuluk",
+    "E": "Perinöral"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Hematogen yayılım daha az yaygındır; sepsis ya da endokardit gibi bakteriyemik durumlarda görülür.",
+    "B": "Asenden yol doğru: enterik bakteriler distal üretrayı kolonize eder, mesanede çoğalır ve reflüyle böbreğe ulaşır.",
+    "C": "Lenfatik yayılım ile karıştırılabilir: Böbreğe ulaşmanın iki başlıca yolu yükselen ve hematogen yoldur.",
+    "D": "Kadınlarda kısa üretra ve rektuma yakınlık yükselen enfeksiyon riskini artırır. Doğrudan komşuluk bu sorudaki ayrımı sağlamaz.",
+    "E": "Perinöral yayılım ile karıştırılabilir: Yükselen enfeksiyonu idrar stazı ve vezikoüreteral reflü kolaylaştırır."
+   },
+   "ozet": "Akut piyelonefritin en sık yolu asenden enfeksiyondur; bakteriler alt idrar yolundan mesaneye, vezikoüreteral ve intrarenal reflüyle böbreğe çıkar, hematogen yol daha azdır.",
+   "metin": "**Soru.** Akut piyelonefritte en sık yayılma yolu hangisidir?\n\n**A)** Hematogen · **B)** Asenden (yükselen) · **C)** Lenfatik · **D)** Doğrudan komşuluk · **E)** Perinöral\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Hematogen** — Hematogen yayılım daha az yaygındır; sepsis ya da endokardit gibi bakteriyemik durumlarda görülür.\n- **Asenden (yükselen)** — Asenden yol doğru: enterik bakteriler distal üretrayı kolonize eder, mesanede çoğalır ve reflüyle böbreğe ulaşır.\n- **Lenfatik** — Lenfatik yayılım ile karıştırılabilir: Böbreğe ulaşmanın iki başlıca yolu yükselen ve hematogen yoldur.\n- **Doğrudan komşuluk** — Kadınlarda kısa üretra ve rektuma yakınlık yükselen enfeksiyon riskini artırır. Doğrudan komşuluk bu sorudaki ayrımı sağlamaz.\n- **Perinöral** — Perinöral yayılım ile karıştırılabilir: Yükselen enfeksiyonu idrar stazı ve vezikoüreteral reflü kolaylaştırır.\n\n**Cevap: B** — Asenden (yükselen)\n\n**Özet.** Akut piyelonefritin en sık yolu asenden enfeksiyondur; bakteriler alt idrar yolundan mesaneye, vezikoüreteral ve intrarenal reflüyle böbreğe çıkar, hematogen yol daha azdır.",
+   "ses": "Akut piyelonefritte en sık yayılma yolu hangisidir?\nA, Hematogen\nBe, Asenden, yani yükselen\nCe, Lenfatik\nDe, Doğrudan komşuluk\nE, Perinöral\nHer seçeneği tek tek ele alalım.\nHematogen yayılım daha az yaygındır. Sepsis ya da endokardit gibi bakteriyemik durumlarda görülür.\nAsenden yol doğru. Enterik bakteriler distal üretrayı kolonize eder, mesanede çoğalır ve reflüyle böbreğe ulaşır.\nLenfatik yayılım ile karıştırılabilir. Böbreğe ulaşmanın iki başlıca yolu yükselen ve hematogen yoldur.\nKadınlarda kısa üretra ve rektuma yakınlık yükselen enfeksiyon riskini artırır. Doğrudan komşuluk bu sorudaki ayrımı sağlamaz.\nPerinöral yayılım ile karıştırılabilir. Yükselen enfeksiyonu idrar stazı ve vezikoüreteral reflü kolaylaştırır.\nDoğru cevap Be, Asenden, yani yükselen\nAkut piyelonefritin en sık yolu asenden enfeksiyondur. Bakteriler alt idrar yolundan mesaneye, vezikoüreteral ve intrarenal reflüyle böbreğe çıkar, hematogen yol daha azdır.",
+   "kelime": 145
+  },
+  {
+   "no": 3,
+   "tur": "ornek",
+   "soru": "Akut piyelonefritte enfeksiyonun böbrek parankimine ulaştığını gösteren idrar bulgusu hangisidir?",
+   "secenekler": {
+    "A": "Eritrosit silendiri",
+    "B": "Bakteriüri",
+    "C": "Lökosit silendiri",
+    "D": "Glukozüri",
+    "E": "Hyalin silendir"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Piyelonefritte enflamatuvar hücre nötrofildir ve kortekste sarımsı apseler oluşur. Eritrosit silendiri bu sorudaki ayrımı sağlamaz.",
+    "B": "Bakteriüri akut piyelonefritte görülür, ancak enfeksiyonun mesanede mi böbrekte mi olduğunu göstermez.",
+    "C": "Lökosit silendiri doğru: nötrofiller toplayıcı kanallara uzanır, bu da enflamasyonun böbrek parankiminde olduğunu gösterir.",
+    "D": "Glukozüri ile karıştırılabilir: Akut piyelonefritin idrar bulguları piüri, bakteriüri ve hematüridir.",
+    "E": "Akut piyelonefritte glomerüller genellikle korunur, enflamasyon tübül ve interstisyumdadır. Hyalin silendir bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Akut piyelonefritte nötrofilden zengin enflamasyon toplayıcı kanallara uzanır; idrarda lökosit silendirleri görülür ve bu bulgu enfeksiyonun böbrek düzeyinde olduğunu gösterir.",
+   "metin": "**Soru.** Akut piyelonefritte enfeksiyonun böbrek parankimine ulaştığını gösteren idrar bulgusu hangisidir?\n\n**A)** Eritrosit silendiri · **B)** Bakteriüri · **C)** Lökosit silendiri · **D)** Glukozüri · **E)** Hyalin silendir\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Eritrosit silendiri** — Piyelonefritte enflamatuvar hücre nötrofildir ve kortekste sarımsı apseler oluşur. Eritrosit silendiri bu sorudaki ayrımı sağlamaz.\n- **Bakteriüri** — Bakteriüri akut piyelonefritte görülür, ancak enfeksiyonun mesanede mi böbrekte mi olduğunu göstermez.\n- **Lökosit silendiri** — Lökosit silendiri doğru: nötrofiller toplayıcı kanallara uzanır, bu da enflamasyonun böbrek parankiminde olduğunu gösterir.\n- **Glukozüri** — Glukozüri ile karıştırılabilir: Akut piyelonefritin idrar bulguları piüri, bakteriüri ve hematüridir.\n- **Hyalin silendir** — Akut piyelonefritte glomerüller genellikle korunur, enflamasyon tübül ve interstisyumdadır. Hyalin silendir bu sorudaki ayrımı sağlamaz.\n\n**Cevap: C** — Lökosit silendiri\n\n**Özet.** Akut piyelonefritte nötrofilden zengin enflamasyon toplayıcı kanallara uzanır; idrarda lökosit silendirleri görülür ve bu bulgu enfeksiyonun böbrek düzeyinde olduğunu gösterir.",
+   "ses": "Akut piyelonefritte enfeksiyonun böbrek parankimine ulaştığını gösteren idrar bulgusu hangisidir?\nA, Eritrosit silendiri\nBe, Bakteriüri\nCe, Lökosit silendiri\nDe, Glukozüri\nE, Hyalin silendir\nŞıkları sırasıyla gözden geçirelim.\nPiyelonefritte enflamatuvar hücre nötrofildir ve kortekste sarımsı apseler oluşur. Eritrosit silendiri bu sorudaki ayrımı sağlamaz.\nBakteriüri akut piyelonefritte görülür, ancak enfeksiyonun mesanede mi böbrekte mi olduğunu göstermez.\nLökosit silendiri doğru. Nötrofiller toplayıcı kanallara uzanır, bu da enflamasyonun böbrek parankiminde olduğunu gösterir.\nGlukozüri ile karıştırılabilir. Akut piyelonefritin idrar bulguları piüri, bakteriüri ve hematüridir.\nAkut piyelonefritte glomerüller genellikle korunur, enflamasyon tübül ve interstisyumdadır. Hyalin silendir bu sorudaki ayrımı sağlamaz.\nDoğru cevap Ce, Lökosit silendiri\nAkut piyelonefritte nötrofilden zengin enflamasyon toplayıcı kanallara uzanır. İdrarda lökosit silendirleri görülür ve bu bulgu enfeksiyonun böbrek düzeyinde olduğunu gösterir.",
+   "kelime": 144
+  },
+  {
+   "no": 4,
+   "tur": "ornek",
+   "soru": "Papiller nekroza zemin hazırlayan durum hangisidir?",
+   "secenekler": {
+    "A": "Hipertiroidi",
+    "B": "IgA nefropatisi",
+    "C": "Alport sendromu",
+    "D": "Diyabetes mellitus",
+    "E": "Lupus"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Hipertiroidi ile karıştırılabilir: Papiller nekroz böbrek papillalarının uçlarında iskemik ve süpüratif nekrozdur.",
+    "B": "Papiller nekroz akut piyelonefritin özel bir formudur. IgA nefropatisi bu sorudaki ayrımı sağlamaz.",
+    "C": "Alport sendromu ile karıştırılabilir: Papiller nekrozda atılan papilla parçaları kolik, hematüri ve tıkanma yapar.",
+    "D": "Diyabetes mellitus doğru: papiller nekroz sıklıkla diyabet, idrar yolu tıkanıklığı ve orak hücreli anemi zemininde gelişir.",
+    "E": "Lupus ile karıştırılabilir: Papiller nekrozun prognozu kötüdür, yaygın parankim hasarıyla ilişkilidir."
+   },
+   "ozet": "Papiller nekroz, papilla uçlarında iskemik ve süpüratif nekrozdur; sıklıkla diyabet, idrar yolu tıkanıklığı ve orak hücreli anemi zemininde gelişir.",
+   "metin": "**Soru.** Papiller nekroza zemin hazırlayan durum hangisidir?\n\n**A)** Hipertiroidi · **B)** IgA nefropatisi · **C)** Alport sendromu · **D)** Diyabetes mellitus · **E)** Lupus\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Hipertiroidi** — Hipertiroidi ile karıştırılabilir: Papiller nekroz böbrek papillalarının uçlarında iskemik ve süpüratif nekrozdur.\n- **IgA nefropatisi** — Papiller nekroz akut piyelonefritin özel bir formudur. IgA nefropatisi bu sorudaki ayrımı sağlamaz.\n- **Alport sendromu** — Alport sendromu ile karıştırılabilir: Papiller nekrozda atılan papilla parçaları kolik, hematüri ve tıkanma yapar.\n- **Diyabetes mellitus** — Diyabetes mellitus doğru: papiller nekroz sıklıkla diyabet, idrar yolu tıkanıklığı ve orak hücreli anemi zemininde gelişir.\n- **Lupus** — Lupus ile karıştırılabilir: Papiller nekrozun prognozu kötüdür, yaygın parankim hasarıyla ilişkilidir.\n\n**Cevap: D** — Diyabetes mellitus\n\n**Özet.** Papiller nekroz, papilla uçlarında iskemik ve süpüratif nekrozdur; sıklıkla diyabet, idrar yolu tıkanıklığı ve orak hücreli anemi zemininde gelişir.",
+   "ses": "Papiller nekroza zemin hazırlayan durum hangisidir?\nA, Hipertiroidi\nBe, İ ge a nefropatisi\nCe, Alport sendromu\nDe, Diyabetes mellitus\nE, Lupus\nŞimdi seçeneklere tek tek bakalım.\nHipertiroidi ile karıştırılabilir. Papiller nekroz böbrek papillalarının uçlarında iskemik ve süpüratif nekrozdur.\nPapiller nekroz akut piyelonefritin özel bir formudur. IgA nefropatisi bu sorudaki ayrımı sağlamaz.\nAlport sendromu ile karıştırılabilir. Papiller nekrozda atılan papilla parçaları kolik, hematüri ve tıkanma yapar.\nDiyabetes mellitus doğru. Papiller nekroz sıklıkla diyabet, idrar yolu tıkanıklığı ve orak hücreli anemi zemininde gelişir.\nLupus ile karıştırılabilir. Papiller nekrozun prognozu kötüdür, yaygın parankim hasarıyla ilişkilidir.\nDoğru cevap De, Diyabetes mellitus\nPapiller nekroz, papilla uçlarında iskemik ve süpüratif nekrozdur. Sıklıkla diyabet, idrar yolu tıkanıklığı ve orak hücreli anemi zemininde gelişir.",
+   "kelime": 139
+  },
+  {
+   "no": 5,
+   "tur": "ornek",
+   "soru": "Kronik piyelonefritin makroskopik bulgusu hangisidir?",
+   "secenekler": {
+    "A": "Simetrik ince granüler yüzey",
+    "B": "Pire ısırığı görünümü",
+    "C": "Çok sayıda büyük kist",
+    "D": "Sarımsı kortikal apseler",
+    "E": "Kaliks üzerinde kaba kortikomedüller skar"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Kronik piyelonefritte skarlaşma genellikle asimetriktir. Simetrik ince granüler yüzey bu sorudaki ayrımı sağlamaz.",
+    "B": "Pire ısırığı görünümü ile karıştırılabilir: Kronik piyelonefrit enfeksiyon ataklarıyla fokal ya da yaygın skarlaşma yapar.",
+    "C": "Kronik piyelonefritte tübüller atrofik ya da dilate olur, lümende kolloid döküntü bulunur. Çok sayıda büyük kist bu sorudaki ayrımı sağlamaz.",
+    "D": "Sarımsı kortikal apseler akut piyelonefritin makroskopik bulgusudur; kronik formda değil, aktif süpüratif enflamasyonda görülür.",
+    "E": "Kaliks üzerinde kaba kortikomedüller skar doğru: kronik piyelonefritte skarlar papillalara komşu yerleşir, kalikslerde küntleşme ve deformite eşlik eder."
+   },
+   "ozet": "Kronik piyelonefritte kalikslerin üzerinde, papillalara komşu kaba kortikomedüller skarlar ve kaliks deformitesi görülür; skarlaşma çoğunlukla asimetriktir.",
+   "metin": "**Soru.** Kronik piyelonefritin makroskopik bulgusu hangisidir?\n\n**A)** Simetrik ince granüler yüzey · **B)** Pire ısırığı görünümü · **C)** Çok sayıda büyük kist · **D)** Sarımsı kortikal apseler · **E)** Kaliks üzerinde kaba kortikomedüller skar\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Simetrik ince granüler yüzey** — Kronik piyelonefritte skarlaşma genellikle asimetriktir. Simetrik ince granüler yüzey bu sorudaki ayrımı sağlamaz.\n- **Pire ısırığı görünümü** — Pire ısırığı görünümü ile karıştırılabilir: Kronik piyelonefrit enfeksiyon ataklarıyla fokal ya da yaygın skarlaşma yapar.\n- **Çok sayıda büyük kist** — Kronik piyelonefritte tübüller atrofik ya da dilate olur, lümende kolloid döküntü bulunur. Çok sayıda büyük kist bu sorudaki ayrımı sağlamaz.\n- **Sarımsı kortikal apseler** — Sarımsı kortikal apseler akut piyelonefritin makroskopik bulgusudur; kronik formda değil, aktif süpüratif enflamasyonda görülür.\n- **Kaliks üzerinde kaba kortikomedüller skar** — Kaliks üzerinde kaba kortikomedüller skar doğru: kronik piyelonefritte skarlar papillalara komşu yerleşir, kalikslerde küntleşme ve deformite eşlik eder.\n\n**Cevap: E** — Kaliks üzerinde kaba kortikomedüller skar\n\n**Özet.** Kronik piyelonefritte kalikslerin üzerinde, papillalara komşu kaba kortikomedüller skarlar ve kaliks deformitesi görülür; skarlaşma çoğunlukla asimetriktir.",
+   "ses": "Kronik piyelonefritin makroskopik bulgusu hangisidir?\nA, Simetrik ince granüler yüzey\nBe, Pire ısırığı görünümü\nCe, Çok sayıda büyük kist\nDe, Sarımsı kortikal apseler\nE, Kaliks üzerinde kaba kortikomedüller skar\nSeçenekleri sırayla değerlendirelim.\nKronik piyelonefritte skarlaşma genellikle asimetriktir. Simetrik ince granüler yüzey bu sorudaki ayrımı sağlamaz.\nPire ısırığı görünümü ile karıştırılabilir. Kronik piyelonefrit enfeksiyon ataklarıyla fokal ya da yaygın skarlaşma yapar.\nKronik piyelonefritte tübüller atrofik ya da dilate olur, lümende kolloid döküntü bulunur. Çok sayıda büyük kist bu sorudaki ayrımı sağlamaz.\nSarımsı kortikal apseler akut piyelonefritin makroskopik bulgusudur. Kronik formda değil, aktif süpüratif enflamasyonda görülür.\nKaliks üzerinde kaba kortikomedüller skar doğru. Kronik piyelonefritte skarlar papillalara komşu yerleşir, kalikslerde küntleşme ve deformite eşlik eder.\nDoğru cevap E, Kaliks üzerinde kaba kortikomedüller skar\nKronik piyelonefritte kalikslerin üzerinde, papillalara komşu kaba kortikomedüller skarlar ve kaliks deformitesi görülür. Skarlaşma çoğunlukla asimetriktir.",
+   "kelime": 172
+  },
+  {
+   "no": 6,
+   "tur": "ornek",
+   "soru": "Kronik piyelonefritte tübül lümenindeki 'tiroid foliküllerini andıran' görünüm hangisidir?",
+   "secenekler": {
+    "A": "Kolloid döküntüler",
+    "B": "Lökosit silendiri",
+    "C": "Tamm-Horsfall silendiri",
+    "D": "Amiloid",
+    "E": "Kalsiyum kristali"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Kolloid döküntüler doğru: kronik piyelonefritte atrofik ve dilate tübül lümenlerinde tiroid foliküllerini andıran materyal bulunur.",
+    "B": "Lökosit silendiri akut piyelonefritte nötrofillerin toplayıcı kanallara uzanmasıyla idrarda görülen bulgudur.",
+    "C": "Tamm-Horsfall silendiri akut tübüler hasarda distal tübül ve toplayıcı kanallarda üromodülin ve plazma proteinlerinden oluşur.",
+    "D": "Kronik piyelonefritte interstisyumda lenfosit, plazma hücresi ve nötrofil infiltrasyonu ile yamalı fibrozis vardır. Amiloid bu sorudaki ayrımı sağlamaz.",
+    "E": "Kalsiyum kristali ile karıştırılabilir: Tiroid benzeri görünüm, kronik piyelonefritte tübül atrofisi ve dilatasyonuna eşlik eder."
+   },
+   "ozet": "Kronik piyelonefritte tübüller atrofik ve dilatedir; lümendeki kolloid döküntüler tiroid foliküllerini andırır, interstisyumda yamalı fibrozis ve kronik iltihap bulunur.",
+   "metin": "**Soru.** Kronik piyelonefritte tübül lümenindeki 'tiroid foliküllerini andıran' görünüm hangisidir?\n\n**A)** Kolloid döküntüler · **B)** Lökosit silendiri · **C)** Tamm-Horsfall silendiri · **D)** Amiloid · **E)** Kalsiyum kristali\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Kolloid döküntüler** — Kolloid döküntüler doğru: kronik piyelonefritte atrofik ve dilate tübül lümenlerinde tiroid foliküllerini andıran materyal bulunur.\n- **Lökosit silendiri** — Lökosit silendiri akut piyelonefritte nötrofillerin toplayıcı kanallara uzanmasıyla idrarda görülen bulgudur.\n- **Tamm-Horsfall silendiri** — Tamm-Horsfall silendiri akut tübüler hasarda distal tübül ve toplayıcı kanallarda üromodülin ve plazma proteinlerinden oluşur.\n- **Amiloid** — Kronik piyelonefritte interstisyumda lenfosit, plazma hücresi ve nötrofil infiltrasyonu ile yamalı fibrozis vardır. Amiloid bu sorudaki ayrımı sağlamaz.\n- **Kalsiyum kristali** — Kalsiyum kristali ile karıştırılabilir: Tiroid benzeri görünüm, kronik piyelonefritte tübül atrofisi ve dilatasyonuna eşlik eder.\n\n**Cevap: A** — Kolloid döküntüler\n\n**Özet.** Kronik piyelonefritte tübüller atrofik ve dilatedir; lümendeki kolloid döküntüler tiroid foliküllerini andırır, interstisyumda yamalı fibrozis ve kronik iltihap bulunur.",
+   "ses": "Kronik piyelonefritte tübül lümenindeki tiroid foliküllerini andıran görünüm hangisidir?\nA, Kolloid döküntüler\nBe, Lökosit silendiri\nCe, Tam Horsfol silendiri\nDe, Amiloid\nE, Kalsiyum kristali\nHer seçeneği tek tek ele alalım.\nKolloid döküntüler doğru. Kronik piyelonefritte atrofik ve dilate tübül lümenlerinde tiroid foliküllerini andıran materyal bulunur.\nLökosit silendiri akut piyelonefritte nötrofillerin toplayıcı kanallara uzanmasıyla idrarda görülen bulgudur.\nTam Horsfol silendiri akut tübüler hasarda distal tübül ve toplayıcı kanallarda üromodülin ve plazma proteinlerinden oluşur.\nKronik piyelonefritte interstisyumda lenfosit, plazma hücresi ve nötrofil infiltrasyonu ile yamalı fibrozis vardır. Amiloid bu sorudaki ayrımı sağlamaz.\nKalsiyum kristali ile karıştırılabilir. Tiroid benzeri görünüm, kronik piyelonefritte tübül atrofisi ve dilatasyonuna eşlik eder.\nDoğru cevap A, Kolloid döküntüler\nKronik piyelonefritte tübüller atrofik ve dilatedir. Lümendeki kolloid döküntüler tiroid foliküllerini andırır, interstisyumda yamalı fibrozis ve kronik iltihap bulunur.",
+   "kelime": 153
+  },
+  {
+   "no": 7,
+   "tur": "ornek",
+   "soru": "Antibiyotik başlandıktan 10 gün sonra ateş, döküntü, eozinofili ve kreatinin artışı gelişen hastada en olası tanı hangisidir?",
+   "secenekler": {
+    "A": "Akut piyelonefrit",
+    "B": "İlaç kaynaklı akut TIN",
+    "C": "Poststreptokokal GN",
+    "D": "Papiller nekroz",
+    "E": "Kronik piyelonefrit"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Akut piyelonefrit ani ateş, yan ağrısı, piüri ve lökosit silendirleriyle seyreder; eozinofili ve döküntü beklenmez.",
+    "B": "İlaca bağlı akut TIN doğru: ilaçtan 1–2 hafta sonra ateş, eozinofili, döküntü ve böbrek fonksiyon bozukluğu başlar.",
+    "C": "Antibiyotikten sonra eozinofili ve döküntü, tübül ve interstisyumdaki aşırı duyarlılığı düşündürür. Poststreptokokal GN bu sorudaki ayrımı sağlamaz.",
+    "D": "Papiller nekroz diyabet, tıkanıklık ve orak hücreli anemi zemininde gelişir; kolik ve hematüriyle seyreder.",
+    "E": "Kronik piyelonefrit tekrarlayan enfeksiyon atakları sonucu kaba skarlaşma yapar; antibiyotikten günler sonra başlayan alerjik tablo değildir."
+   },
+   "ozet": "İlaca bağlı akut TIN, ilaç alımından 1–2 hafta sonra ateş, eozinofili, döküntü ve böbrek fonksiyon bozukluğuyla başlar; sorumlu ilacın derhal kesilmesi gerekir.",
+   "metin": "**Soru.** Antibiyotik başlandıktan 10 gün sonra ateş, döküntü, eozinofili ve kreatinin artışı gelişen hastada en olası tanı hangisidir?\n\n**A)** Akut piyelonefrit · **B)** İlaç kaynaklı akut TIN · **C)** Poststreptokokal GN · **D)** Papiller nekroz · **E)** Kronik piyelonefrit\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Akut piyelonefrit** — Akut piyelonefrit ani ateş, yan ağrısı, piüri ve lökosit silendirleriyle seyreder; eozinofili ve döküntü beklenmez.\n- **İlaç kaynaklı akut TIN** — İlaca bağlı akut TIN doğru: ilaçtan 1–2 hafta sonra ateş, eozinofili, döküntü ve böbrek fonksiyon bozukluğu başlar.\n- **Poststreptokokal GN** — Antibiyotikten sonra eozinofili ve döküntü, tübül ve interstisyumdaki aşırı duyarlılığı düşündürür. Poststreptokokal GN bu sorudaki ayrımı sağlamaz.\n- **Papiller nekroz** — Papiller nekroz diyabet, tıkanıklık ve orak hücreli anemi zemininde gelişir; kolik ve hematüriyle seyreder.\n- **Kronik piyelonefrit** — Kronik piyelonefrit tekrarlayan enfeksiyon atakları sonucu kaba skarlaşma yapar; antibiyotikten günler sonra başlayan alerjik tablo değildir.\n\n**Cevap: B** — İlaç kaynaklı akut TIN\n\n**Özet.** İlaca bağlı akut TIN, ilaç alımından 1–2 hafta sonra ateş, eozinofili, döküntü ve böbrek fonksiyon bozukluğuyla başlar; sorumlu ilacın derhal kesilmesi gerekir.",
+   "ses": "Antibiyotik başlandıktan on gün sonra ateş, döküntü, eozinofili ve kreatinin artışı gelişen hastada en olası tanı hangisidir?\nA, Akut piyelonefrit\nBe, İlaç kaynaklı akut tübülointerstisyel nefrit\nCe, Poststreptokokal glomerülonefrit\nDe, Papiller nekroz\nE, Kronik piyelonefrit\nŞıkları sırasıyla gözden geçirelim.\nAkut piyelonefrit ani ateş, yan ağrısı, piüri ve lökosit silendirleriyle seyreder. Eozinofili ve döküntü beklenmez.\nİlaca bağlı akut tübülointerstisyel nefrit doğru. İlaçtan bir ile iki hafta sonra ateş, eozinofili, döküntü ve böbrek fonksiyon bozukluğu başlar.\nAntibiyotikten sonra eozinofili ve döküntü, tübül ve interstisyumdaki aşırı duyarlılığı düşündürür. Poststreptokokal GN bu sorudaki ayrımı sağlamaz.\nPapiller nekroz diyabet, tıkanıklık ve orak hücreli anemi zemininde gelişir. Kolik ve hematüriyle seyreder.\nKronik piyelonefrit tekrarlayan enfeksiyon atakları sonucu kaba skarlaşma yapar. Antibiyotikten günler sonra başlayan alerjik tablo değildir.\nDoğru cevap Be, İlaç kaynaklı akut tübülointerstisyel nefrit\nİlaca bağlı akut tübülointerstisyel nefrit, ilaç alımından bir ile iki hafta sonra ateş, eozinofili, döküntü ve böbrek fonksiyon bozukluğuyla başlar. Sorumlu ilacın derhal kesilmesi gerekir.",
+   "kelime": 175
+  },
+  {
+   "no": 8,
+   "tur": "ornek",
+   "soru": "İlaç kaynaklı TIN patogenezinde ilacın tübül bileşenlerine bağlanarak oluşturduğu yapı hangisidir?",
+   "secenekler": {
+    "A": "İmmün kompleks",
+    "B": "Amiloid",
+    "C": "Neoantijen",
+    "D": "Süperantijen",
+    "E": "Otoantikor"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "İmmün kompleks ile karıştırılabilir: İlaca bağlı TIN tip I ve tip IV aşırı duyarlılık reaksiyonlarıyla gelişir.",
+    "B": "İlaca bağlı TIN'de interstisyel ödem ve lenfosit, makrofaj, eozinofil infiltrasyonu görülür. Amiloid bu sorudaki ayrımı sağlamaz.",
+    "C": "Neoantijen doğru: tübüllerce salgılanan ilaç hücre bileşenlerine kovalent bağlanır, oluşan neoantijene karşı bağışıklık yanıtı hasar yapar.",
+    "D": "Bazı ilaçlarda, örneğin tiyazid ve rifampinde, dev hücreli nekrotik olmayan granülomlar görülür. Süperantijen bu sorudaki ayrımı sağlamaz.",
+    "E": "Otoantikor ile karıştırılabilir: Tip IV aşırı duyarlılıkta deri testleri pozitif olabilir, tip I aşırı duyarlılıkta serum IgE artabilir."
+   },
+   "ozet": "İlaca bağlı TIN'de ilaç tübüllerce salgılanır ve hücre bileşenlerine kovalent bağlanarak neoantijen oluşturur; buna karşı tip I ya da tip IV aşırı duyarlılık tübülointerstisyel hasar yapar.",
+   "metin": "**Soru.** İlaç kaynaklı TIN patogenezinde ilacın tübül bileşenlerine bağlanarak oluşturduğu yapı hangisidir?\n\n**A)** İmmün kompleks · **B)** Amiloid · **C)** Neoantijen · **D)** Süperantijen · **E)** Otoantikor\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **İmmün kompleks** — İmmün kompleks ile karıştırılabilir: İlaca bağlı TIN tip I ve tip IV aşırı duyarlılık reaksiyonlarıyla gelişir.\n- **Amiloid** — İlaca bağlı TIN'de interstisyel ödem ve lenfosit, makrofaj, eozinofil infiltrasyonu görülür. Amiloid bu sorudaki ayrımı sağlamaz.\n- **Neoantijen** — Neoantijen doğru: tübüllerce salgılanan ilaç hücre bileşenlerine kovalent bağlanır, oluşan neoantijene karşı bağışıklık yanıtı hasar yapar.\n- **Süperantijen** — Bazı ilaçlarda, örneğin tiyazid ve rifampinde, dev hücreli nekrotik olmayan granülomlar görülür. Süperantijen bu sorudaki ayrımı sağlamaz.\n- **Otoantikor** — Otoantikor ile karıştırılabilir: Tip IV aşırı duyarlılıkta deri testleri pozitif olabilir, tip I aşırı duyarlılıkta serum IgE artabilir.\n\n**Cevap: C** — Neoantijen\n\n**Özet.** İlaca bağlı TIN'de ilaç tübüllerce salgılanır ve hücre bileşenlerine kovalent bağlanarak neoantijen oluşturur; buna karşı tip I ya da tip IV aşırı duyarlılık tübülointerstisyel hasar yapar.",
+   "ses": "İlaç kaynaklı tübülointerstisyel nefrit patogenezinde ilacın tübül bileşenlerine bağlanarak oluşturduğu yapı hangisidir?\nA, İmmün kompleks\nBe, Amiloid\nCe, Neoantijen\nDe, Süperantijen\nE, Otoantikor\nŞimdi seçeneklere tek tek bakalım.\nİmmün kompleks ile karıştırılabilir. İlaca bağlı tübülointerstisyel nefrit tip bir ve tip dört aşırı duyarlılık reaksiyonlarıyla gelişir.\nİlaca bağlı tübülointerstisyel nefritte interstisyel ödem ve lenfosit, makrofaj, eozinofil infiltrasyonu görülür. Amiloid bu sorudaki ayrımı sağlamaz.\nNeoantijen doğru. Tübüllerce salgılanan ilaç hücre bileşenlerine kovalent bağlanır, oluşan neoantijene karşı bağışıklık yanıtı hasar yapar.\nBazı ilaçlarda, örneğin tiyazid ve rifampinde, dev hücreli nekrotik olmayan granülomlar görülür. Süperantijen bu sorudaki ayrımı sağlamaz.\nOtoantikor ile karıştırılabilir. Tip dört aşırı duyarlılıkta deri testleri pozitif olabilir, tip bir aşırı duyarlılıkta serum i ge e artabilir.\nDoğru cevap Ce, Neoantijen\nİlaca bağlı tübülointerstisyel nefritte ilaç tübüllerce salgılanır ve hücre bileşenlerine kovalent bağlanarak neoantijen oluşturur. Buna karşı tip bir ya da tip dört aşırı duyarlılık tübülointerstisyel hasar yapar.",
+   "kelime": 163
+  },
+  {
+   "no": 9,
+   "tur": "ornek",
+   "soru": "Akut böbrek yetmezliğinin en sık nedeni hangisidir?",
+   "secenekler": {
+    "A": "Kronik piyelonefrit",
+    "B": "İlaç kaynaklı TIN",
+    "C": "Papiller nekroz",
+    "D": "Akut tübüler hasar",
+    "E": "Hidronefroz"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Kronik piyelonefrit sinsi başlangıçlı, yavaş ilerleyen böbrek yetmezliği yapar; kronik böbrek hastalığının önemli nedenidir.",
+    "B": "İlaca bağlı TIN olguların yaklaşık %50'sinde akut böbrek yetmezliği yapar, ancak en sık neden değildir.",
+    "C": "Papiller nekroz akut piyelonefritin özel bir formudur; kötü prognozludur, ama akut böbrek yetmezliğinin en sık nedeni değildir.",
+    "D": "Akut tübüler hasar doğru: iskemik ya da nefrotoksik tübül epitel hasarı akut böbrek yetmezliğinin en sık nedenidir.",
+    "E": "Akut böbrek yetmezliği tabloları arasında en sık olanı tübül epitel hücrelerinin hasarıdır. Hidronefroz bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Akut tübüler hasar akut böbrek yetmezliğinin en sık nedenidir; tübül epitel hasarı GFR'yi düşürür, oligüri ve serum kreatinin yükselmesi gelişir.",
+   "metin": "**Soru.** Akut böbrek yetmezliğinin en sık nedeni hangisidir?\n\n**A)** Kronik piyelonefrit · **B)** İlaç kaynaklı TIN · **C)** Papiller nekroz · **D)** Akut tübüler hasar · **E)** Hidronefroz\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kronik piyelonefrit** — Kronik piyelonefrit sinsi başlangıçlı, yavaş ilerleyen böbrek yetmezliği yapar; kronik böbrek hastalığının önemli nedenidir.\n- **İlaç kaynaklı TIN** — İlaca bağlı TIN olguların yaklaşık %50'sinde akut böbrek yetmezliği yapar, ancak en sık neden değildir.\n- **Papiller nekroz** — Papiller nekroz akut piyelonefritin özel bir formudur; kötü prognozludur, ama akut böbrek yetmezliğinin en sık nedeni değildir.\n- **Akut tübüler hasar** — Akut tübüler hasar doğru: iskemik ya da nefrotoksik tübül epitel hasarı akut böbrek yetmezliğinin en sık nedenidir.\n- **Hidronefroz** — Akut böbrek yetmezliği tabloları arasında en sık olanı tübül epitel hücrelerinin hasarıdır. Hidronefroz bu sorudaki ayrımı sağlamaz.\n\n**Cevap: D** — Akut tübüler hasar\n\n**Özet.** Akut tübüler hasar akut böbrek yetmezliğinin en sık nedenidir; tübül epitel hasarı GFR'yi düşürür, oligüri ve serum kreatinin yükselmesi gelişir.",
+   "ses": "Akut böbrek yetmezliğinin en sık nedeni hangisidir?\nA, Kronik piyelonefrit\nBe, İlaç kaynaklı tübülointerstisyel nefrit\nCe, Papiller nekroz\nDe, Akut tübüler hasar\nE, Hidronefroz\nSeçenekleri sırayla değerlendirelim.\nKronik piyelonefrit sinsi başlangıçlı, yavaş ilerleyen böbrek yetmezliği yapar. Kronik böbrek hastalığının önemli nedenidir.\nİlaca bağlı tübülointerstisyel nefrit olguların yaklaşık yüzde ellisinde akut böbrek yetmezliği yapar, ancak en sık neden değildir.\nPapiller nekroz akut piyelonefritin özel bir formudur. Kötü prognozludur, ama akut böbrek yetmezliğinin en sık nedeni değildir.\nAkut tübüler hasar doğru. İskemik ya da nefrotoksik tübül epitel hasarı akut böbrek yetmezliğinin en sık nedenidir.\nAkut böbrek yetmezliği tabloları arasında en sık olanı tübül epitel hücrelerinin hasarıdır. Hidronefroz bu sorudaki ayrımı sağlamaz.\nDoğru cevap De, Akut tübüler hasar\nAkut tübüler hasar akut böbrek yetmezliğinin en sık nedenidir. Tübül epitel hasarı glomerüler filtrasyon hızını düşürür, oligüri ve serum kreatinin yükselmesi gelişir.",
+   "kelime": 160
+  },
+  {
+   "no": 10,
+   "tur": "ornek",
+   "soru": "Aşağıdakilerden hangisi nefrotoksik akut tübüler hasar nedenidir?",
+   "secenekler": {
+    "A": "Septik şok",
+    "B": "Travmatik kan kaybı",
+    "C": "Akut pankreatit",
+    "D": "Malign hipertansiyon",
+    "E": "Gentamisin"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Septik şok iskemik akut tübüler hasar nedenidir; böbreğe yetersiz kan akışıyla hasar yapar.",
+    "B": "Travmatik kan kaybı şok yoluyla iskemik akut tübüler hasara neden olur.",
+    "C": "Akut pankreatit de şok tablosu yaparak iskemik tipte akut tübüler hasara yol açar.",
+    "D": "Malign hipertansiyon, küçük damar vasküliti ve trombotik mikroanjiyopatilerle birlikte iskemik akut tübüler hasar nedenidir.",
+    "E": "Gentamisin doğru: tübül hücresine doğrudan toksik etki yapan ilaçlardandır; radyokontrast, cıva ve etilen glikol de nefrotoksik nedenlerdir."
+   },
+   "ozet": "Nefrotoksik akut tübüler hasarda tübül hücresi doğrudan zarar görür; nedenler gentamisin, radyokontrast, cıva, etilen glikol ve miyoglobin ile hemoglobin gibi pigmentlerdir.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi nefrotoksik akut tübüler hasar nedenidir?\n\n**A)** Septik şok · **B)** Travmatik kan kaybı · **C)** Akut pankreatit · **D)** Malign hipertansiyon · **E)** Gentamisin\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Septik şok** — Septik şok iskemik akut tübüler hasar nedenidir; böbreğe yetersiz kan akışıyla hasar yapar.\n- **Travmatik kan kaybı** — Travmatik kan kaybı şok yoluyla iskemik akut tübüler hasara neden olur.\n- **Akut pankreatit** — Akut pankreatit de şok tablosu yaparak iskemik tipte akut tübüler hasara yol açar.\n- **Malign hipertansiyon** — Malign hipertansiyon, küçük damar vasküliti ve trombotik mikroanjiyopatilerle birlikte iskemik akut tübüler hasar nedenidir.\n- **Gentamisin** — Gentamisin doğru: tübül hücresine doğrudan toksik etki yapan ilaçlardandır; radyokontrast, cıva ve etilen glikol de nefrotoksik nedenlerdir.\n\n**Cevap: E** — Gentamisin\n\n**Özet.** Nefrotoksik akut tübüler hasarda tübül hücresi doğrudan zarar görür; nedenler gentamisin, radyokontrast, cıva, etilen glikol ve miyoglobin ile hemoglobin gibi pigmentlerdir.",
+   "ses": "Aşağıdakilerden hangisi nefrotoksik akut tübüler hasar nedenidir?\nA, Septik şok\nBe, Travmatik kan kaybı\nCe, Akut pankreatit\nDe, Malign hipertansiyon\nE, Gentamisin\nHer seçeneği tek tek ele alalım.\nSeptik şok iskemik akut tübüler hasar nedenidir. Böbreğe yetersiz kan akışıyla hasar yapar.\nTravmatik kan kaybı şok yoluyla iskemik akut tübüler hasara neden olur.\nAkut pankreatit de şok tablosu yaparak iskemik tipte akut tübüler hasara yol açar.\nMalign hipertansiyon, küçük damar vasküliti ve trombotik mikroanjiyopatilerle birlikte iskemik akut tübüler hasar nedenidir.\nGentamisin doğru. Tübül hücresine doğrudan toksik etki yapan ilaçlardandır. Radyokontrast, cıva ve etilen glikol de nefrotoksik nedenlerdir.\nDoğru cevap E, Gentamisin\nNefrotoksik akut tübüler hasarda tübül hücresi doğrudan zarar görür. Nedenler gentamisin, radyokontrast, cıva, etilen glikol ve miyoglobin ile hemoglobin gibi pigmentlerdir.",
+   "kelime": 148
+  },
+  {
+   "no": 11,
+   "tur": "ornek",
+   "soru": "Akut tübüler hasarda distal tübül silendirlerinin ana bileşeni hangisidir?",
+   "secenekler": {
+    "A": "Tamm-Horsfall proteini",
+    "B": "Bence Jones proteini",
+    "C": "Miyoglobin",
+    "D": "Fibrin",
+    "E": "IgA"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Tamm-Horsfall proteini doğru: distal tübül ve toplayıcı kanallardaki silendirler bu proteinden, yani üromodülinden ve plazma proteinlerinden oluşur.",
+    "B": "Bence Jones proteini ile karıştırılabilir: Akut tübüler hasarda silendirler granüler döküntü ve dökülen hücrelerle birlikte oluşur.",
+    "C": "Miyoglobin bir pigmenttir ve nefrotoksik akut tübüler hasar nedenidir; silendirlerin ana bileşeni değildir.",
+    "D": "Fibrin ile karıştırılabilir: Akut tübüler hasarda epitel hücreleri bazal membrandan ayrılıp lümene dökülür.",
+    "E": "Akut tübüler hasar bir immün kompleks hastalığı değil, tübül epitel hasarıdır. IgA bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Akut tübüler hasarda distal tübül ve toplayıcı kanallarda granüler döküntü ve hücre silendirleri oluşur; bunlar Tamm-Horsfall proteini, yani üromodülin, ve plazma proteinlerinden yapılır.",
+   "metin": "**Soru.** Akut tübüler hasarda distal tübül silendirlerinin ana bileşeni hangisidir?\n\n**A)** Tamm-Horsfall proteini · **B)** Bence Jones proteini · **C)** Miyoglobin · **D)** Fibrin · **E)** IgA\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Tamm-Horsfall proteini** — Tamm-Horsfall proteini doğru: distal tübül ve toplayıcı kanallardaki silendirler bu proteinden, yani üromodülinden ve plazma proteinlerinden oluşur.\n- **Bence Jones proteini** — Bence Jones proteini ile karıştırılabilir: Akut tübüler hasarda silendirler granüler döküntü ve dökülen hücrelerle birlikte oluşur.\n- **Miyoglobin** — Miyoglobin bir pigmenttir ve nefrotoksik akut tübüler hasar nedenidir; silendirlerin ana bileşeni değildir.\n- **Fibrin** — Fibrin ile karıştırılabilir: Akut tübüler hasarda epitel hücreleri bazal membrandan ayrılıp lümene dökülür.\n- **IgA** — Akut tübüler hasar bir immün kompleks hastalığı değil, tübül epitel hasarıdır. IgA bu sorudaki ayrımı sağlamaz.\n\n**Cevap: A** — Tamm-Horsfall proteini\n\n**Özet.** Akut tübüler hasarda distal tübül ve toplayıcı kanallarda granüler döküntü ve hücre silendirleri oluşur; bunlar Tamm-Horsfall proteini, yani üromodülin, ve plazma proteinlerinden yapılır.",
+   "ses": "Akut tübüler hasarda distal tübül silendirlerinin ana bileşeni hangisidir?\nA, Tam Horsfol proteini\nBe, Bens Cons proteini\nCe, Miyoglobin\nDe, Fibrin\nE, İ ge a\nŞıkları sırasıyla gözden geçirelim.\nTam Horsfol proteini doğru. Distal tübül ve toplayıcı kanallardaki silendirler bu proteinden, yani üromodülinden ve plazma proteinlerinden oluşur.\nBence Jones proteini ile karıştırılabilir. Akut tübüler hasarda silendirler granüler döküntü ve dökülen hücrelerle birlikte oluşur.\nMiyoglobin bir pigmenttir ve nefrotoksik akut tübüler hasar nedenidir. Silendirlerin ana bileşeni değildir.\nFibrin ile karıştırılabilir. Akut tübüler hasarda epitel hücreleri bazal membrandan ayrılıp lümene dökülür.\nAkut tübüler hasar bir immün kompleks hastalığı değil, tübül epitel hasarıdır. IgA bu sorudaki ayrımı sağlamaz.\nDoğru cevap A, Tam Horsfol proteini\nAkut tübüler hasarda distal tübül ve toplayıcı kanallarda granüler döküntü ve hücre silendirleri oluşur. Bunlar Tam Horsfol proteini, yani üromodülin, ve plazma proteinlerinden yapılır.",
+   "kelime": 154
+  },
+  {
+   "no": 12,
+   "tur": "ornek",
+   "soru": "Akut tübüler hasarın iyileşme evresinde beklenen bulgu hangisidir?",
+   "secenekler": {
+    "A": "Anüri",
+    "B": "Poliüri",
+    "C": "Hiperkalemi artışı",
+    "D": "Hematüri",
+    "E": "Oligüri"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Anüri iyileşme evresinde beklenmez; idrar çıkışının en düşük olduğu dönem oligürik evredir.",
+    "B": "Poliüri doğru: iyileşme, yani diüretik evrede tübül fonksiyonu düzelmeye başlar, idrar miktarı artar ve elektrolit kaybı olur.",
+    "C": "Hiperkalemi artışı oligürik evrede azotemi, asidoz ve üremiyle birlikte belirgindir; iyileşme evresinde elektrolit kaybı öne çıkar.",
+    "D": "Akut tübüler hasarın evreleri idrar miktarındaki değişimle tanımlanır. Hematüri bu sorudaki ayrımı sağlamaz.",
+    "E": "Oligüri oligürik evrenin bulgusudur; belirgin oligüri ve GFR düşüklüğü bu evreyi tanımlar."
+   },
+   "ozet": "Akut tübüler hasar başlangıç, oligürik, iyileşme ve tam iyileşme evrelerinden geçer; diüretik evrede tübül fonksiyonu düzelirken poliüri ve elektrolit kaybı görülür.",
+   "metin": "**Soru.** Akut tübüler hasarın iyileşme evresinde beklenen bulgu hangisidir?\n\n**A)** Anüri · **B)** Poliüri · **C)** Hiperkalemi artışı · **D)** Hematüri · **E)** Oligüri\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Anüri** — Anüri iyileşme evresinde beklenmez; idrar çıkışının en düşük olduğu dönem oligürik evredir.\n- **Poliüri** — Poliüri doğru: iyileşme, yani diüretik evrede tübül fonksiyonu düzelmeye başlar, idrar miktarı artar ve elektrolit kaybı olur.\n- **Hiperkalemi artışı** — Hiperkalemi artışı oligürik evrede azotemi, asidoz ve üremiyle birlikte belirgindir; iyileşme evresinde elektrolit kaybı öne çıkar.\n- **Hematüri** — Akut tübüler hasarın evreleri idrar miktarındaki değişimle tanımlanır. Hematüri bu sorudaki ayrımı sağlamaz.\n- **Oligüri** — Oligüri oligürik evrenin bulgusudur; belirgin oligüri ve GFR düşüklüğü bu evreyi tanımlar.\n\n**Cevap: B** — Poliüri\n\n**Özet.** Akut tübüler hasar başlangıç, oligürik, iyileşme ve tam iyileşme evrelerinden geçer; diüretik evrede tübül fonksiyonu düzelirken poliüri ve elektrolit kaybı görülür.",
+   "ses": "Akut tübüler hasarın iyileşme evresinde beklenen bulgu hangisidir?\nA, Anüri\nBe, Poliüri\nCe, Hiperkalemi artışı\nDe, Hematüri\nE, Oligüri\nŞimdi seçeneklere tek tek bakalım.\nAnüri iyileşme evresinde beklenmez. İdrar çıkışının en düşük olduğu dönem oligürik evredir.\nPoliüri doğru. İyileşme, yani diüretik evrede tübül fonksiyonu düzelmeye başlar, idrar miktarı artar ve elektrolit kaybı olur.\nHiperkalemi artışı oligürik evrede azotemi, asidoz ve üremiyle birlikte belirgindir. İyileşme evresinde elektrolit kaybı öne çıkar.\nAkut tübüler hasarın evreleri idrar miktarındaki değişimle tanımlanır. Hematüri bu sorudaki ayrımı sağlamaz.\nOligüri oligürik evrenin bulgusudur. Belirgin oligüri ve glomerüler filtrasyon hızı düşüklüğü bu evreyi tanımlar.\nDoğru cevap Be, Poliüri\nAkut tübüler hasar başlangıç, oligürik, iyileşme ve tam iyileşme evrelerinden geçer. Diüretik evrede tübül fonksiyonu düzelirken poliüri ve elektrolit kaybı görülür.",
+   "kelime": 142
+  },
+  {
+   "no": 25,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisi akut ilaca bağlı gelişen interstisyel nefritin (hipersensitivite nedenli) patogenezinde rol oynamaz?",
+   "secenekler": {
+    "A": "Tip I ve Tip IV hipersensitivite ilişkili reaksiyonlar",
+    "B": "Doza bağlı olarak değişen immün yanıt gelişimi",
+    "C": "İlaçların tübül sekresyonu sırasında hapten gibi davranması",
+    "D": "IgE ve hücre aracılı immün reaksiyonlar",
+    "E": "Lenfosit, makrofaj infiltrasyonu ve eozinofil varlığı ile hasar oluşumu"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Tip I ve Tip IV aşırı duyarlılık reaksiyonları ilaca bağlı TIN'in temel mekanizmasıdır; ifade doğru olduğu için cevap değildir.",
+    "B": "Doza bağlı immün yanıt ifadesi yanlıştır; ilaca bağlı TIN idiosenkratik, yani kişiye özgü seyreder, bu yüzden doğru cevaptır.",
+    "C": "İlacın tübüllerden salgılanırken hücre bileşenlerine kovalent bağlanıp neoantijen oluşturması patogenezin parçasıdır; cevap değildir.",
+    "D": "IgE ve hücre aracılı reaksiyonlar rol oynar; Tip I'de serum IgE artabilir, Tip IV'te deri testleri pozitif olur.",
+    "E": "Lenfosit, makrofaj ve eozinofil infiltrasyonu ilaca bağlı TIN'in tipik morfolojisidir; ifade doğru olduğu için cevap değildir."
+   },
+   "ozet": "İlaca bağlı TIN, ilaçla oluşan neoantijenlere karşı Tip I ve Tip IV aşırı duyarlılık reaksiyonudur; doza bağlı değil, idiosenkratik seyreder ve tekrar maruziyette nükseder.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi akut ilaca bağlı gelişen interstisyel nefritin (hipersensitivite nedenli) patogenezinde rol oynamaz?\n\n**A)** Tip I ve Tip IV hipersensitivite ilişkili reaksiyonlar · **B)** Doza bağlı olarak değişen immün yanıt gelişimi · **C)** İlaçların tübül sekresyonu sırasında hapten gibi davranması · **D)** IgE ve hücre aracılı immün reaksiyonlar · **E)** Lenfosit, makrofaj infiltrasyonu ve eozinofil varlığı ile hasar oluşumu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Tip I ve Tip IV hipersensitivite ilişkili reaksiyonlar** — Tip I ve Tip IV aşırı duyarlılık reaksiyonları ilaca bağlı TIN'in temel mekanizmasıdır; ifade doğru olduğu için cevap değildir.\n- **Doza bağlı olarak değişen immün yanıt gelişimi** — Doza bağlı immün yanıt ifadesi yanlıştır; ilaca bağlı TIN idiosenkratik, yani kişiye özgü seyreder, bu yüzden doğru cevaptır.\n- **İlaçların tübül sekresyonu sırasında hapten gibi davranması** — İlacın tübüllerden salgılanırken hücre bileşenlerine kovalent bağlanıp neoantijen oluşturması patogenezin parçasıdır; cevap değildir.\n- **IgE ve hücre aracılı immün reaksiyonlar** — IgE ve hücre aracılı reaksiyonlar rol oynar; Tip I'de serum IgE artabilir, Tip IV'te deri testleri pozitif olur.\n- **Lenfosit, makrofaj infiltrasyonu ve eozinofil varlığı ile hasar oluşumu** — Lenfosit, makrofaj ve eozinofil infiltrasyonu ilaca bağlı TIN'in tipik morfolojisidir; ifade doğru olduğu için cevap değildir.\n\n**Cevap: B** — Doza bağlı olarak değişen immün yanıt gelişimi\n\n**Özet.** İlaca bağlı TIN, ilaçla oluşan neoantijenlere karşı Tip I ve Tip IV aşırı duyarlılık reaksiyonudur; doza bağlı değil, idiosenkratik seyreder ve tekrar maruziyette nükseder.",
+   "ses": "Aşağıdakilerden hangisi aşırı duyarlılık nedenli, akut ilaca bağlı gelişen interstisyel nefritin patogenezinde rol oynamaz?\nA, Tip bir ve tip dört hipersensitivite ilişkili reaksiyonlar\nBe, Doza bağlı olarak değişen immün yanıt gelişimi\nCe, İlaçların tübül sekresyonu sırasında hapten gibi davranması\nDe, İ ge e ve hücre aracılı immün reaksiyonlar\nE, Lenfosit, makrofaj infiltrasyonu ve eozinofil varlığı ile hasar oluşumu\nSeçenekleri sırayla değerlendirelim.\nTip bir ve Tip dört aşırı duyarlılık reaksiyonları ilaca bağlı tübülointerstisyel nefritin temel mekanizmasıdır. İfade doğru olduğu için cevap değildir.\nDoza bağlı immün yanıt ifadesi yanlıştır. İlaca bağlı tübülointerstisyel nefrit idiosenkratik, yani kişiye özgü seyreder, bu yüzden doğru cevaptır.\nİlacın tübüllerden salgılanırken hücre bileşenlerine kovalent bağlanıp neoantijen oluşturması patogenezin parçasıdır. Cevap değildir.\nİ ge e ve hücre aracılı reaksiyonlar rol oynar. Tip bir reaksiyonda serum i ge e artabilir, tip dört reaksiyonda deri testleri pozitif olur.\nLenfosit, makrofaj ve eozinofil infiltrasyonu ilaca bağlı tübülointerstisyel nefritin tipik morfolojisidir. İfade doğru olduğu için cevap değildir.\nDoğru cevap Be, Doza bağlı olarak değişen immün yanıt gelişimi\nİlaca bağlı tübülointerstisyel nefrit, ilaçla oluşan neoantijenlere karşı Tip bir ve Tip dört aşırı duyarlılık reaksiyonudur. Doza bağlı değil, idiosenkratik seyreder ve tekrar maruziyette nükseder.",
+   "kelime": 230
+  },
+  {
+   "no": 26,
+   "tur": "cikmis",
+   "soru": "Tiroidizasyon bulgusunun görüldüğü böbrek patolojisi aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Akut piyelonefrit",
+    "B": "Renal papiller nekroz",
+    "C": "Kronik sistit",
+    "D": "Kronik piyelonefrit",
+    "E": "Kronik glomerülonefrit"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Akut piyelonefritte tübül ve interstisyumda nötrofilden zengin enflamasyon ve kortikal apseler görülür; tiroidizasyon kronik dönemin bulgusudur.",
+    "B": "Renal papiller nekroz papilla uçlarında iskemik ve süpüratif nekrozdur; akut piyelonefritin özel bir formudur.",
+    "C": "Kronik sistit ile karıştırılabilir: Sistit alt idrar yolu enfeksiyonudur, tiroidizasyon ise böbrek tübüllerinde görülür.",
+    "D": "Kronik piyelonefrit doğru: atrofik ve dilate tübül lümenlerinde tiroid foliküllerini andıran kolloid döküntüler, yani tiroidizasyon görülür.",
+    "E": "Kronik glomerülonefrit ile karıştırılabilir: Tiroidizasyon tübül lümenindeki kolloid döküntülerle tanımlanır ve kronik piyelonefrite aittir."
+   },
+   "ozet": "Kronik piyelonefritte yamalı interstisyel fibrozis, kronik iltihap ve atrofik tübüllerde tiroid foliküllerini andıran kolloid döküntüler, yani tiroidizasyon görülür.",
+   "metin": "**Soru.** Tiroidizasyon bulgusunun görüldüğü böbrek patolojisi aşağıdakilerden hangisidir?\n\n**A)** Akut piyelonefrit · **B)** Renal papiller nekroz · **C)** Kronik sistit · **D)** Kronik piyelonefrit · **E)** Kronik glomerülonefrit\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Akut piyelonefrit** — Akut piyelonefritte tübül ve interstisyumda nötrofilden zengin enflamasyon ve kortikal apseler görülür; tiroidizasyon kronik dönemin bulgusudur.\n- **Renal papiller nekroz** — Renal papiller nekroz papilla uçlarında iskemik ve süpüratif nekrozdur; akut piyelonefritin özel bir formudur.\n- **Kronik sistit** — Kronik sistit ile karıştırılabilir: Sistit alt idrar yolu enfeksiyonudur, tiroidizasyon ise böbrek tübüllerinde görülür.\n- **Kronik piyelonefrit** — Kronik piyelonefrit doğru: atrofik ve dilate tübül lümenlerinde tiroid foliküllerini andıran kolloid döküntüler, yani tiroidizasyon görülür.\n- **Kronik glomerülonefrit** — Kronik glomerülonefrit ile karıştırılabilir: Tiroidizasyon tübül lümenindeki kolloid döküntülerle tanımlanır ve kronik piyelonefrite aittir.\n\n**Cevap: D** — Kronik piyelonefrit\n\n**Özet.** Kronik piyelonefritte yamalı interstisyel fibrozis, kronik iltihap ve atrofik tübüllerde tiroid foliküllerini andıran kolloid döküntüler, yani tiroidizasyon görülür.",
+   "ses": "Tiroidizasyon bulgusunun görüldüğü böbrek patolojisi aşağıdakilerden hangisidir?\nA, Akut piyelonefrit\nBe, Renal papiller nekroz\nCe, Kronik sistit\nDe, Kronik piyelonefrit\nE, Kronik glomerülonefrit\nHer seçeneği tek tek ele alalım.\nAkut piyelonefritte tübül ve interstisyumda nötrofilden zengin enflamasyon ve kortikal apseler görülür. Tiroidizasyon kronik dönemin bulgusudur.\nRenal papiller nekroz papilla uçlarında iskemik ve süpüratif nekrozdur. Akut piyelonefritin özel bir formudur.\nKronik sistit ile karıştırılabilir. Sistit alt idrar yolu enfeksiyonudur, tiroidizasyon ise böbrek tübüllerinde görülür.\nKronik piyelonefrit doğru. Atrofik ve dilate tübül lümenlerinde tiroid foliküllerini andıran kolloid döküntüler, yani tiroidizasyon görülür.\nKronik glomerülonefrit ile karıştırılabilir. Tiroidizasyon tübül lümenindeki kolloid döküntülerle tanımlanır ve kronik piyelonefrite aittir.\nDoğru cevap De, Kronik piyelonefrit\nKronik piyelonefritte yamalı interstisyel fibrozis, kronik iltihap ve atrofik tübüllerde tiroid foliküllerini andıran kolloid döküntüler, yani tiroidizasyon görülür.",
+   "kelime": 154
+  },
+  {
+   "no": 27,
+   "tur": "ornek",
+   "soru": "Tübülointerstisyel hastalıklarda genellikle görülen ortak işlev bozukluğu hangisidir?",
+   "secenekler": {
+    "A": "Nefrotik düzeyde proteinüri",
+    "B": "İdrar konsantrasyon bozukluğu",
+    "C": "Eritrosit silendirli hematüri",
+    "D": "Hipoalbuminemi ve ödem",
+    "E": "Hilal oluşumu"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Nefrotik düzeyde proteinüri glomerül hastalıklarının bulgusudur; tübülointerstisyel hastalıkta proteinüri genellikle hafiftir.",
+    "B": "İdrar konsantrasyon bozukluğu doğru: tübüller ve interstisyum su ve elektrolit dengesinde merkezidir; hasarlarında poliüri ve elektrolit sorunları gelişir.",
+    "C": "Eritrosit silendirli hematüri glomerüler kökenli nefritik tabloyu gösterir; tübülointerstisyel hastalığın ortak bulgusu değildir.",
+    "D": "Hipoalbuminemi ve ödem nefrotik sendromun bileşenleridir ve glomerüler protein kaybına bağlıdır.",
+    "E": "Hilal oluşumu Bowman boşluğunda gelişen glomerüler bir lezyondur."
+   },
+   "ozet": "Tübüller ve interstisyum su, elektrolit ve asit–baz dengesinde merkezidir; hasarlarında idrar konsantrasyon bozukluğu, poliüri ve elektrolit sorunları görülür.",
+   "metin": "**Soru.** Tübülointerstisyel hastalıklarda genellikle görülen ortak işlev bozukluğu hangisidir?\n\n**A)** Nefrotik düzeyde proteinüri · **B)** İdrar konsantrasyon bozukluğu · **C)** Eritrosit silendirli hematüri · **D)** Hipoalbuminemi ve ödem · **E)** Hilal oluşumu\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Nefrotik düzeyde proteinüri** — Nefrotik düzeyde proteinüri glomerül hastalıklarının bulgusudur; tübülointerstisyel hastalıkta proteinüri genellikle hafiftir.\n- **İdrar konsantrasyon bozukluğu** — İdrar konsantrasyon bozukluğu doğru: tübüller ve interstisyum su ve elektrolit dengesinde merkezidir; hasarlarında poliüri ve elektrolit sorunları gelişir.\n- **Eritrosit silendirli hematüri** — Eritrosit silendirli hematüri glomerüler kökenli nefritik tabloyu gösterir; tübülointerstisyel hastalığın ortak bulgusu değildir.\n- **Hipoalbuminemi ve ödem** — Hipoalbuminemi ve ödem nefrotik sendromun bileşenleridir ve glomerüler protein kaybına bağlıdır.\n- **Hilal oluşumu** — Hilal oluşumu Bowman boşluğunda gelişen glomerüler bir lezyondur.\n\n**Cevap: B** — İdrar konsantrasyon bozukluğu\n\n**Özet.** Tübüller ve interstisyum su, elektrolit ve asit–baz dengesinde merkezidir; hasarlarında idrar konsantrasyon bozukluğu, poliüri ve elektrolit sorunları görülür.",
+   "ses": "Tübülointerstisyel hastalıklarda genellikle görülen ortak işlev bozukluğu hangisidir?\nA, Nefrotik düzeyde proteinüri\nBe, İdrar konsantrasyon bozukluğu\nCe, Eritrosit silendirli hematüri\nDe, Hipoalbuminemi ve ödem\nE, Hilal oluşumu\nŞıkları sırasıyla gözden geçirelim.\nNefrotik düzeyde proteinüri glomerül hastalıklarının bulgusudur. Tübülointerstisyel hastalıkta proteinüri genellikle hafiftir.\nİdrar konsantrasyon bozukluğu doğru. Tübüller ve interstisyum su ve elektrolit dengesinde merkezidir, hasarlarında poliüri ve elektrolit sorunları gelişir.\nEritrosit silendirli hematüri glomerüler kökenli nefritik tabloyu gösterir. Tübülointerstisyel hastalığın ortak bulgusu değildir.\nHipoalbuminemi ve ödem nefrotik sendromun bileşenleridir ve glomerüler protein kaybına bağlıdır.\nHilal oluşumu Bowman boşluğunda gelişen glomerüler bir lezyondur.\nDoğru cevap Be, İdrar konsantrasyon bozukluğu\nTübüller ve interstisyum su, elektrolit ve asit baz dengesinde merkezidir. Hasarlarında idrar konsantrasyon bozukluğu, poliüri ve elektrolit sorunları görülür.",
+   "kelime": 147
+  },
+  {
+   "no": 28,
+   "tur": "ornek",
+   "soru": "Asenden enfeksiyonda mesaneye ulaşan bakterilerin çoğalmasını kolaylaştıran durum hangisidir?",
+   "secenekler": {
+    "A": "İdrar stazı",
+    "B": "Hematogen yayılım",
+    "C": "Kateterizasyon",
+    "D": "Glomerüler hasar",
+    "E": "Tübüler sekresyon"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "İdrar stazı doğru: asenden enfeksiyonun üçüncü basamağı olan mesanede çoğalma, idrar stazı varsa kolaylaşır.",
+    "B": "Hematogen yayılım bakterinin kan yoluyla böbreğe ulaşmasıdır; mesanede çoğalma basamağıyla ilgisi yoktur.",
+    "C": "Kateterizasyon bakterinin mesaneye ulaşmasını kolaylaştıran ikinci basamağın olayıdır; çoğalmayı değil girişi kolaylaştırır.",
+    "D": "Akut piyelonefritte glomerüller genellikle korunur. Glomerüler hasar bu sorudaki ayrımı sağlamaz.",
+    "E": "Tübüler sekresyon ilaca bağlı tübülointerstisyel nefritte ilacın tübül hücreleriyle temasını sağlar."
+   },
+   "ozet": "Asenden enfeksiyon kolonizasyon, mesaneye ulaşma, mesanede çoğalma ve reflü basamaklarıyla ilerler; idrar stazı çoğalmayı kolaylaştırır.",
+   "metin": "**Soru.** Asenden enfeksiyonda mesaneye ulaşan bakterilerin çoğalmasını kolaylaştıran durum hangisidir?\n\n**A)** İdrar stazı · **B)** Hematogen yayılım · **C)** Kateterizasyon · **D)** Glomerüler hasar · **E)** Tübüler sekresyon\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **İdrar stazı** — İdrar stazı doğru: asenden enfeksiyonun üçüncü basamağı olan mesanede çoğalma, idrar stazı varsa kolaylaşır.\n- **Hematogen yayılım** — Hematogen yayılım bakterinin kan yoluyla böbreğe ulaşmasıdır; mesanede çoğalma basamağıyla ilgisi yoktur.\n- **Kateterizasyon** — Kateterizasyon bakterinin mesaneye ulaşmasını kolaylaştıran ikinci basamağın olayıdır; çoğalmayı değil girişi kolaylaştırır.\n- **Glomerüler hasar** — Akut piyelonefritte glomerüller genellikle korunur. Glomerüler hasar bu sorudaki ayrımı sağlamaz.\n- **Tübüler sekresyon** — Tübüler sekresyon ilaca bağlı tübülointerstisyel nefritte ilacın tübül hücreleriyle temasını sağlar.\n\n**Cevap: A** — İdrar stazı\n\n**Özet.** Asenden enfeksiyon kolonizasyon, mesaneye ulaşma, mesanede çoğalma ve reflü basamaklarıyla ilerler; idrar stazı çoğalmayı kolaylaştırır.",
+   "ses": "Asenden enfeksiyonda mesaneye ulaşan bakterilerin çoğalmasını kolaylaştıran durum hangisidir?\nA, İdrar stazı\nBe, Hematogen yayılım\nCe, Kateterizasyon\nDe, Glomerüler hasar\nE, Tübüler sekresyon\nŞimdi seçeneklere tek tek bakalım.\nİdrar stazı doğru. Asenden enfeksiyonun üçüncü basamağı olan mesanede çoğalma, idrar stazı varsa kolaylaşır.\nHematogen yayılım bakterinin kan yoluyla böbreğe ulaşmasıdır. Mesanede çoğalma basamağıyla ilgisi yoktur.\nKateterizasyon bakterinin mesaneye ulaşmasını kolaylaştıran ikinci basamağın olayıdır. Çoğalmayı değil girişi kolaylaştırır.\nAkut piyelonefritte glomerüller genellikle korunur. Glomerüler hasar bu sorudaki ayrımı sağlamaz.\nTübüler sekresyon ilaca bağlı tübülointerstisyel nefritte ilacın tübül hücreleriyle temasını sağlar.\nDoğru cevap A, İdrar stazı\nAsenden enfeksiyon kolonizasyon, mesaneye ulaşma, mesanede çoğalma ve reflü basamaklarıyla ilerler. İdrar stazı çoğalmayı kolaylaştırır.",
+   "kelime": 134
+  },
+  {
+   "no": 29,
+   "tur": "ornek",
+   "soru": "Akut piyelonefrite idrar akımını mekanik olarak engelleyerek zemin hazırlayan durum hangisidir?",
+   "secenekler": {
+    "A": "Diyabetik nöropati",
+    "B": "Omurilik hasarı",
+    "C": "İmmünsüpresyon",
+    "D": "Rahim sarkması",
+    "E": "Vezikoüreteral reflü"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Diyabetik nöropati mesanenin nörojenik disfonksiyonuna yol açar; burada yol açıktır, boşalma işlevi bozuktur.",
+    "B": "Omurilik hasarı, diyabetik nöropati gibi mesanenin nörojenik disfonksiyonuna yol açar; idrar akımını mekanik olarak engellemez.",
+    "C": "İmmünsüpresyon gebelik ve diyabetle birlikte diğer predispozan faktörler arasında sayılır; idrar akımını engellemez.",
+    "D": "Rahim sarkması doğru: benign prostat hiperplazisi ve taşlarla birlikte idrar akımını engelleyen durumlardandır.",
+    "E": "Vezikoüreteral reflü üreterovezikal kapak yetmezliğidir; idrar engellenmez, geri kaçar."
+   },
+   "ozet": "İdrar akımını engelleyen durumlar benign prostat hiperplazisi, rahim sarkması ve taşlardır; nörojenik mesane ve reflü ayrı predispozan gruplardır.",
+   "metin": "**Soru.** Akut piyelonefrite idrar akımını mekanik olarak engelleyerek zemin hazırlayan durum hangisidir?\n\n**A)** Diyabetik nöropati · **B)** Omurilik hasarı · **C)** İmmünsüpresyon · **D)** Rahim sarkması · **E)** Vezikoüreteral reflü\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Diyabetik nöropati** — Diyabetik nöropati mesanenin nörojenik disfonksiyonuna yol açar; burada yol açıktır, boşalma işlevi bozuktur.\n- **Omurilik hasarı** — Omurilik hasarı, diyabetik nöropati gibi mesanenin nörojenik disfonksiyonuna yol açar; idrar akımını mekanik olarak engellemez.\n- **İmmünsüpresyon** — İmmünsüpresyon gebelik ve diyabetle birlikte diğer predispozan faktörler arasında sayılır; idrar akımını engellemez.\n- **Rahim sarkması** — Rahim sarkması doğru: benign prostat hiperplazisi ve taşlarla birlikte idrar akımını engelleyen durumlardandır.\n- **Vezikoüreteral reflü** — Vezikoüreteral reflü üreterovezikal kapak yetmezliğidir; idrar engellenmez, geri kaçar.\n\n**Cevap: D** — Rahim sarkması\n\n**Özet.** İdrar akımını engelleyen durumlar benign prostat hiperplazisi, rahim sarkması ve taşlardır; nörojenik mesane ve reflü ayrı predispozan gruplardır.",
+   "ses": "Akut piyelonefrite idrar akımını mekanik olarak engelleyerek zemin hazırlayan durum hangisidir?\nA, Diyabetik nöropati\nBe, Omurilik hasarı\nCe, İmmünsüpresyon\nDe, Rahim sarkması\nE, Vezikoüreteral reflü\nSeçenekleri sırayla değerlendirelim.\nDiyabetik nöropati mesanenin nörojenik disfonksiyonuna yol açar. Burada yol açıktır, boşalma işlevi bozuktur.\nOmurilik hasarı, diyabetik nöropati gibi mesanenin nörojenik disfonksiyonuna yol açar. İdrar akımını mekanik olarak engellemez.\nİmmünsüpresyon gebelik ve diyabetle birlikte diğer predispozan faktörler arasında sayılır. İdrar akımını engellemez.\nRahim sarkması doğru. Benign prostat hiperplazisi ve taşlarla birlikte idrar akımını engelleyen durumlardandır.\nVezikoüreteral reflü üreterovezikal kapak yetmezliğidir. İdrar engellenmez, geri kaçar.\nDoğru cevap De, Rahim sarkması\nİdrar akımını engelleyen durumlar benign prostat hiperplazisi, rahim sarkması ve taşlardır. Nörojenik mesane ve reflü ayrı predispozan gruplardır.",
+   "kelime": 140
+  },
+  {
+   "no": 30,
+   "tur": "ornek",
+   "soru": "İdrar yolu enfeksiyonu geçiren çocuklarda vezikoüreteral reflü yaklaşık hangi oranda bulunur?",
+   "secenekler": {
+    "A": "%1–5",
+    "B": "%5–10",
+    "C": "%20–40",
+    "D": "%60–70",
+    "E": "%90'dan fazla"
+   },
+   "dogru": "C",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "%1–5 oranı bu soru için çok düşüktür; reflü enfeksiyon geçiren çocukların belirgin bir bölümünde bulunur.",
+    "B": "%5–10 oranı da gerçek değerin altındadır; reflü bundan çok daha sık görülür.",
+    "C": "%20–40 doğru: vezikoüreteral reflü, idrar yolu enfeksiyonu olan çocukların beşte biri ile beşte ikisinde bulunur.",
+    "D": "%60–70 oranı yüksektir; reflü enfeksiyonlu çocukların çoğunluğunda değil, bir bölümünde vardır.",
+    "E": "%90'dan fazla oranı yanlıştır; reflü her enfeksiyonlu çocukta bulunmaz."
+   },
+   "ozet": "Vezikoüreteral reflü üreterovezikal kapak yetmezliğidir ve idrar yolu enfeksiyonlu çocukların %20–40'ında bulunur.",
+   "metin": "**Soru.** İdrar yolu enfeksiyonu geçiren çocuklarda vezikoüreteral reflü yaklaşık hangi oranda bulunur?\n\n**A)** %1–5 · **B)** %5–10 · **C)** %20–40 · **D)** %60–70 · **E)** %90'dan fazla\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **%1–5** — %1–5 oranı bu soru için çok düşüktür; reflü enfeksiyon geçiren çocukların belirgin bir bölümünde bulunur.\n- **%5–10** — %5–10 oranı da gerçek değerin altındadır; reflü bundan çok daha sık görülür.\n- **%20–40** — %20–40 doğru: vezikoüreteral reflü, idrar yolu enfeksiyonu olan çocukların beşte biri ile beşte ikisinde bulunur.\n- **%60–70** — %60–70 oranı yüksektir; reflü enfeksiyonlu çocukların çoğunluğunda değil, bir bölümünde vardır.\n- **%90'dan fazla** — %90'dan fazla oranı yanlıştır; reflü her enfeksiyonlu çocukta bulunmaz.\n\n**Cevap: C** — %20–40\n\n**Özet.** Vezikoüreteral reflü üreterovezikal kapak yetmezliğidir ve idrar yolu enfeksiyonlu çocukların %20–40'ında bulunur.",
+   "ses": "İdrar yolu enfeksiyonu geçiren çocuklarda vezikoüreteral reflü yaklaşık hangi oranda bulunur?\nA, Yüzde bir ile beş\nBe, Yüzde beş ile on\nCe, Yüzde yirmi ile kırk\nDe, Yüzde altmış ile yetmiş\nE, Yüzde doksandan fazla\nHer seçeneği tek tek ele alalım.\nYüzde bir ile beş oranı çok düşüktür. Reflü enfeksiyon geçiren çocukların belirgin bir bölümünde bulunur.\nYüzde beş ile on oranı da gerçek değerin altındadır. Reflü bundan çok daha sık görülür.\nYüzde yirmi ile kırk doğru. Vezikoüreteral reflü, idrar yolu enfeksiyonu olan çocukların beşte biri ile beşte ikisinde bulunur.\nYüzde altmış ile yetmiş oranı yüksektir. Reflü enfeksiyonlu çocukların çoğunluğunda değil, bir bölümünde vardır.\nYüzde doksandan fazla oranı yanlıştır. Reflü her enfeksiyonlu çocukta bulunmaz.\nDoğru cevap Ce, Yüzde yirmi ile kırk\nVezikoüreteral reflü üreterovezikal kapak yetmezliğidir ve idrar yolu enfeksiyonlu çocukların yüzde yirmi ile kırkında bulunur.",
+   "kelime": 129
+  },
+  {
+   "no": 31,
+   "tur": "ornek",
+   "soru": "Akut piyelonefritin makroskopik bulgusu hangisidir?",
+   "secenekler": {
+    "A": "Kalikslerde küntleşme",
+    "B": "Kortikomedüller kaba skar",
+    "C": "Asimetrik küçük böbrek",
+    "D": "Kortikal incelme",
+    "E": "Kortikal yüzeyde sarımsı apseler"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Kalikslerde küntleşme ve deformasyon kronik piyelonefritin makroskopik bulgusudur.",
+    "B": "Kortikomedüller kaba skar tekrarlayan ataklar sonucu gelişir ve kronik piyelonefriti gösterir.",
+    "C": "Küçülmüş, asimetrik böbrek kronik piyelonefritin radyolojik görünümüdür.",
+    "D": "Kortikal incelme kaliks deformitesiyle birlikte kronik piyelonefritte radyolojide görülür.",
+    "E": "Kortikal yüzeyde sarımsı apseler doğru: akut süpüratif inflamasyonda yüzeyde sarımsı, kabarık apseler oluşur."
+   },
+   "ozet": "Akut piyelonefritte kortikal yüzeyde sarımsı kabarık apseler görülür; kaba skar ve kaliks deformitesi kronik piyelonefrite aittir.",
+   "metin": "**Soru.** Akut piyelonefritin makroskopik bulgusu hangisidir?\n\n**A)** Kalikslerde küntleşme · **B)** Kortikomedüller kaba skar · **C)** Asimetrik küçük böbrek · **D)** Kortikal incelme · **E)** Kortikal yüzeyde sarımsı apseler\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kalikslerde küntleşme** — Kalikslerde küntleşme ve deformasyon kronik piyelonefritin makroskopik bulgusudur.\n- **Kortikomedüller kaba skar** — Kortikomedüller kaba skar tekrarlayan ataklar sonucu gelişir ve kronik piyelonefriti gösterir.\n- **Asimetrik küçük böbrek** — Küçülmüş, asimetrik böbrek kronik piyelonefritin radyolojik görünümüdür.\n- **Kortikal incelme** — Kortikal incelme kaliks deformitesiyle birlikte kronik piyelonefritte radyolojide görülür.\n- **Kortikal yüzeyde sarımsı apseler** — Kortikal yüzeyde sarımsı apseler doğru: akut süpüratif inflamasyonda yüzeyde sarımsı, kabarık apseler oluşur.\n\n**Cevap: E** — Kortikal yüzeyde sarımsı apseler\n\n**Özet.** Akut piyelonefritte kortikal yüzeyde sarımsı kabarık apseler görülür; kaba skar ve kaliks deformitesi kronik piyelonefrite aittir.",
+   "ses": "Akut piyelonefritin makroskopik bulgusu hangisidir?\nA, Kalikslerde küntleşme\nBe, Kortikomedüller kaba skar\nCe, Asimetrik küçük böbrek\nDe, Kortikal incelme\nE, Kortikal yüzeyde sarımsı apseler\nŞıkları sırasıyla gözden geçirelim.\nKalikslerde küntleşme ve deformasyon kronik piyelonefritin makroskopik bulgusudur.\nKortikomedüller kaba skar tekrarlayan ataklar sonucu gelişir ve kronik piyelonefriti gösterir.\nKüçülmüş, asimetrik böbrek kronik piyelonefritin radyolojik görünümüdür.\nKortikal incelme kaliks deformitesiyle birlikte kronik piyelonefritte radyolojide görülür.\nKortikal yüzeyde sarımsı apseler doğru. Akut süpüratif inflamasyonda yüzeyde sarımsı, kabarık apseler oluşur.\nDoğru cevap E, Kortikal yüzeyde sarımsı apseler\nAkut piyelonefritte kortikal yüzeyde sarımsı kabarık apseler görülür. Kaba skar ve kaliks deformitesi kronik piyelonefrite aittir.",
+   "kelime": 130
+  },
+  {
+   "no": 32,
+   "tur": "ornek",
+   "soru": "Akut piyelonefritte tübül ve interstisyumdaki inflamasyonun baskın hücresi hangisidir?",
+   "secenekler": {
+    "A": "Nötrofil",
+    "B": "Eozinofil",
+    "C": "Plazma hücresi",
+    "D": "Dev hücre",
+    "E": "Mast hücresi"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Nötrofil doğru: akut piyelonefritte tübül ve interstisyumda nötrofilden zengin inflamasyon vardır ve toplayıcı kanallara uzanabilir.",
+    "B": "Eozinofil ilaca bağlı tübülointerstisyel nefritte infiltrata sık katılan hücredir.",
+    "C": "Plazma hücresi lenfositlerle birlikte kronik piyelonefritin infiltratında görülür.",
+    "D": "Dev hücreler tiyazid ve rifampine bağlı nefritte nekrotik olmayan granülomlarda bulunur.",
+    "E": "Mast hücresi ile karıştırılabilir: Akut piyelonefrit infiltratı nötrofil baskındır."
+   },
+   "ozet": "Akut piyelonefritte tübüller ve interstisyumda nötrofilden zengin inflamasyon vardır; nötrofiller toplayıcı kanallara uzanıp lökosit silendiri oluşturur.",
+   "metin": "**Soru.** Akut piyelonefritte tübül ve interstisyumdaki inflamasyonun baskın hücresi hangisidir?\n\n**A)** Nötrofil · **B)** Eozinofil · **C)** Plazma hücresi · **D)** Dev hücre · **E)** Mast hücresi\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Nötrofil** — Nötrofil doğru: akut piyelonefritte tübül ve interstisyumda nötrofilden zengin inflamasyon vardır ve toplayıcı kanallara uzanabilir.\n- **Eozinofil** — Eozinofil ilaca bağlı tübülointerstisyel nefritte infiltrata sık katılan hücredir.\n- **Plazma hücresi** — Plazma hücresi lenfositlerle birlikte kronik piyelonefritin infiltratında görülür.\n- **Dev hücre** — Dev hücreler tiyazid ve rifampine bağlı nefritte nekrotik olmayan granülomlarda bulunur.\n- **Mast hücresi** — Mast hücresi ile karıştırılabilir: Akut piyelonefrit infiltratı nötrofil baskındır.\n\n**Cevap: A** — Nötrofil\n\n**Özet.** Akut piyelonefritte tübüller ve interstisyumda nötrofilden zengin inflamasyon vardır; nötrofiller toplayıcı kanallara uzanıp lökosit silendiri oluşturur.",
+   "ses": "Akut piyelonefritte tübül ve interstisyumdaki inflamasyonun baskın hücresi hangisidir?\nA, Nötrofil\nBe, Eozinofil\nCe, Plazma hücresi\nDe, Dev hücre\nE, Mast hücresi\nŞimdi seçeneklere tek tek bakalım.\nNötrofil doğru. Akut piyelonefritte tübül ve interstisyumda nötrofilden zengin inflamasyon vardır ve toplayıcı kanallara uzanabilir.\nEozinofil ilaca bağlı tübülointerstisyel nefritte infiltrata sık katılan hücredir.\nPlazma hücresi lenfositlerle birlikte kronik piyelonefritin infiltratında görülür.\nDev hücreler tiyazid ve rifampine bağlı nefritte nekrotik olmayan granülomlarda bulunur.\nMast hücresi ile karıştırılabilir. Akut piyelonefrit infiltratı nötrofil baskındır.\nDoğru cevap A, Nötrofil\nAkut piyelonefritte tübüller ve interstisyumda nötrofilden zengin inflamasyon vardır. Nötrofiller toplayıcı kanallara uzanıp lökosit silendiri oluşturur.",
+   "kelime": 124
+  },
+  {
+   "no": 33,
+   "tur": "ornek",
+   "soru": "Böbrek pelvisi, kaliksler ve üreterin irinle dolması hangi komplikasyondur?",
+   "secenekler": {
+    "A": "Papiller nekroz",
+    "B": "Kortikal apse",
+    "C": "Piyonefroz",
+    "D": "Reflü nefropatisi",
+    "E": "Tiroidizasyon"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Papiller nekroz papilla uçlarının iskemik ve süpüratif nekrozudur.",
+    "B": "Kortikal apse irinin parankim içinde birikmesidir; toplayıcı sistemi doldurmaz.",
+    "C": "Piyonefroz doğru: akut piyelonefritin bu komplikasyonunda pelvis, kaliksler ve üreter irinle dolar.",
+    "D": "Reflü nefropatisi vezikoüreteral reflü zemininde gelişen kronik piyelonefrittir.",
+    "E": "Tiroidizasyon kronik piyelonefritte tübül lümenlerinin kolloid döküntüyle dolmasıdır."
+   },
+   "ozet": "Piyonefroz akut piyelonefritin komplikasyonudur; pelvis, kaliksler ve üreter irinle dolar, apse ise parankim içindedir.",
+   "metin": "**Soru.** Böbrek pelvisi, kaliksler ve üreterin irinle dolması hangi komplikasyondur?\n\n**A)** Papiller nekroz · **B)** Kortikal apse · **C)** Piyonefroz · **D)** Reflü nefropatisi · **E)** Tiroidizasyon\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Papiller nekroz** — Papiller nekroz papilla uçlarının iskemik ve süpüratif nekrozudur.\n- **Kortikal apse** — Kortikal apse irinin parankim içinde birikmesidir; toplayıcı sistemi doldurmaz.\n- **Piyonefroz** — Piyonefroz doğru: akut piyelonefritin bu komplikasyonunda pelvis, kaliksler ve üreter irinle dolar.\n- **Reflü nefropatisi** — Reflü nefropatisi vezikoüreteral reflü zemininde gelişen kronik piyelonefrittir.\n- **Tiroidizasyon** — Tiroidizasyon kronik piyelonefritte tübül lümenlerinin kolloid döküntüyle dolmasıdır.\n\n**Cevap: C** — Piyonefroz\n\n**Özet.** Piyonefroz akut piyelonefritin komplikasyonudur; pelvis, kaliksler ve üreter irinle dolar, apse ise parankim içindedir.",
+   "ses": "Böbrek pelvisi, kaliksler ve üreterin irinle dolması hangi komplikasyondur?\nA, Papiller nekroz\nBe, Kortikal apse\nCe, Piyonefroz\nDe, Reflü nefropatisi\nE, Tiroidizasyon\nSeçenekleri sırayla değerlendirelim.\nPapiller nekroz papilla uçlarının iskemik ve süpüratif nekrozudur.\nKortikal apse irinin parankim içinde birikmesidir. Toplayıcı sistemi doldurmaz.\nPiyonefroz doğru. Akut piyelonefritin bu komplikasyonunda pelvis, kaliksler ve üreter irinle dolar.\nReflü nefropatisi vezikoüreteral reflü zemininde gelişen kronik piyelonefrittir.\nTiroidizasyon kronik piyelonefritte tübül lümenlerinin kolloid döküntüyle dolmasıdır.\nDoğru cevap Ce, Piyonefroz\nPiyonefroz akut piyelonefritin komplikasyonudur. Pelvis, kaliksler ve üreter irinle dolar, apse ise parankim içindedir.",
+   "kelime": 113
+  },
+  {
+   "no": 34,
+   "tur": "ornek",
+   "soru": "Papiller nekrozun sıklıkla birlikte görüldüğü klasik üç durumdan biri hangisidir?",
+   "secenekler": {
+    "A": "Gebelik",
+    "B": "Orak hücreli anemi",
+    "C": "İmmünsüpresyon",
+    "D": "Vezikoüreteral reflü",
+    "E": "Omurilik hasarı"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Gebelik idrar stazı yaparak akut piyelonefrite zemin hazırlar; papiller nekrozun klasik üçlüsünde yoktur.",
+    "B": "Orak hücreli anemi doğru: diyabet ve idrar yolu tıkanıklığıyla birlikte papiller nekrozun klasik üç zemininden biridir.",
+    "C": "İmmünsüpresyon akut piyelonefritin sistemik predispozan faktörüdür; papiller nekroz üçlüsünde sayılmaz.",
+    "D": "Vezikoüreteral reflü akut ve kronik piyelonefritin önemli zeminidir; papiller nekroz üçlüsünde yer almaz.",
+    "E": "Omurilik hasarı mesanenin nörojenik disfonksiyonuyla piyelonefrite zemin hazırlar."
+   },
+   "ozet": "Papiller nekroz papilla uçlarının iskemik ve süpüratif nekrozudur; diyabet, idrar yolu tıkanıklığı ve orak hücreli anemi zemininde görülür, prognozu kötüdür.",
+   "metin": "**Soru.** Papiller nekrozun sıklıkla birlikte görüldüğü klasik üç durumdan biri hangisidir?\n\n**A)** Gebelik · **B)** Orak hücreli anemi · **C)** İmmünsüpresyon · **D)** Vezikoüreteral reflü · **E)** Omurilik hasarı\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Gebelik** — Gebelik idrar stazı yaparak akut piyelonefrite zemin hazırlar; papiller nekrozun klasik üçlüsünde yoktur.\n- **Orak hücreli anemi** — Orak hücreli anemi doğru: diyabet ve idrar yolu tıkanıklığıyla birlikte papiller nekrozun klasik üç zemininden biridir.\n- **İmmünsüpresyon** — İmmünsüpresyon akut piyelonefritin sistemik predispozan faktörüdür; papiller nekroz üçlüsünde sayılmaz.\n- **Vezikoüreteral reflü** — Vezikoüreteral reflü akut ve kronik piyelonefritin önemli zeminidir; papiller nekroz üçlüsünde yer almaz.\n- **Omurilik hasarı** — Omurilik hasarı mesanenin nörojenik disfonksiyonuyla piyelonefrite zemin hazırlar.\n\n**Cevap: B** — Orak hücreli anemi\n\n**Özet.** Papiller nekroz papilla uçlarının iskemik ve süpüratif nekrozudur; diyabet, idrar yolu tıkanıklığı ve orak hücreli anemi zemininde görülür, prognozu kötüdür.",
+   "ses": "Papiller nekrozun sıklıkla birlikte görüldüğü klasik üç durumdan biri hangisidir?\nA, Gebelik\nBe, Orak hücreli anemi\nCe, İmmünsüpresyon\nDe, Vezikoüreteral reflü\nE, Omurilik hasarı\nHer seçeneği tek tek ele alalım.\nGebelik idrar stazı yaparak akut piyelonefrite zemin hazırlar. Papiller nekrozun klasik üçlüsünde yoktur.\nOrak hücreli anemi doğru. Diyabet ve idrar yolu tıkanıklığıyla birlikte papiller nekrozun klasik üç zemininden biridir.\nİmmünsüpresyon akut piyelonefritin sistemik predispozan faktörüdür. Papiller nekroz üçlüsünde sayılmaz.\nVezikoüreteral reflü akut ve kronik piyelonefritin önemli zeminidir. Papiller nekroz üçlüsünde yer almaz.\nOmurilik hasarı mesanenin nörojenik disfonksiyonuyla piyelonefrite zemin hazırlar.\nDoğru cevap Be, Orak hücreli anemi\nPapiller nekroz papilla uçlarının iskemik ve süpüratif nekrozudur. Diyabet, idrar yolu tıkanıklığı ve orak hücreli anemi zemininde görülür, prognozu kötüdür.",
+   "kelime": 142
+  },
+  {
+   "no": 35,
+   "tur": "ornek",
+   "soru": "Akut piyelonefritin böbrek yetmezliğine nadiren yol açmasının nedeni hangisidir?",
+   "secenekler": {
+    "A": "Hematüri görülmemesi",
+    "B": "Bakteriüri olmaması",
+    "C": "Genellikle tek taraflı olması",
+    "D": "Nötrofillerin azlığı",
+    "E": "Hematogen yayılımın sık olması"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Akut piyelonefritte idrarda bakteriüri ile birlikte hematüri de görülebilir. Hematüri görülmemesi bu sorudaki ayrımı sağlamaz.",
+    "B": "Bakteriüri olmaması yanlıştır; akut piyelonefritte idrarda bakteriüri görülür.",
+    "C": "Tek taraflı tutulum doğru: karşı böbrek çalıştığı için hastalık iki taraflı olmadıkça böbrek yetmezliği nadirdir.",
+    "D": "Nötrofillerin azlığı yanlıştır; inflamasyon nötrofilden zengindir.",
+    "E": "Hematogen yayılım daha az yaygın yoldur; en sık yol asenden enfeksiyondur."
+   },
+   "ozet": "Akut piyelonefrit genellikle tek taraflıdır; iki taraflı olmadıkça böbrek yetmezliğine nadiren yol açar.",
+   "metin": "**Soru.** Akut piyelonefritin böbrek yetmezliğine nadiren yol açmasının nedeni hangisidir?\n\n**A)** Hematüri görülmemesi · **B)** Bakteriüri olmaması · **C)** Genellikle tek taraflı olması · **D)** Nötrofillerin azlığı · **E)** Hematogen yayılımın sık olması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Hematüri görülmemesi** — Akut piyelonefritte idrarda bakteriüri ile birlikte hematüri de görülebilir. Hematüri görülmemesi bu sorudaki ayrımı sağlamaz.\n- **Bakteriüri olmaması** — Bakteriüri olmaması yanlıştır; akut piyelonefritte idrarda bakteriüri görülür.\n- **Genellikle tek taraflı olması** — Tek taraflı tutulum doğru: karşı böbrek çalıştığı için hastalık iki taraflı olmadıkça böbrek yetmezliği nadirdir.\n- **Nötrofillerin azlığı** — Nötrofillerin azlığı yanlıştır; inflamasyon nötrofilden zengindir.\n- **Hematogen yayılımın sık olması** — Hematogen yayılım daha az yaygın yoldur; en sık yol asenden enfeksiyondur.\n\n**Cevap: C** — Genellikle tek taraflı olması\n\n**Özet.** Akut piyelonefrit genellikle tek taraflıdır; iki taraflı olmadıkça böbrek yetmezliğine nadiren yol açar.",
+   "ses": "Akut piyelonefritin böbrek yetmezliğine nadiren yol açmasının nedeni hangisidir?\nA, Hematüri görülmemesi\nBe, Bakteriüri olmaması\nCe, Genellikle tek taraflı olması\nDe, Nötrofillerin azlığı\nE, Hematogen yayılımın sık olması\nŞıkları sırasıyla gözden geçirelim.\nAkut piyelonefritte idrarda bakteriüri ile birlikte hematüri de görülebilir. Hematüri görülmemesi bu sorudaki ayrımı sağlamaz.\nBakteriüri olmaması yanlıştır. Akut piyelonefritte idrarda bakteriüri görülür.\nTek taraflı tutulum doğru. Karşı böbrek çalıştığı için hastalık iki taraflı olmadıkça böbrek yetmezliği nadirdir.\nNötrofillerin azlığı yanlıştır. İnflamasyon nötrofilden zengindir.\nHematogen yayılım daha az yaygın yoldur. En sık yol asenden enfeksiyondur.\nDoğru cevap Ce, Genellikle tek taraflı olması\nAkut piyelonefrit genellikle tek taraflıdır. İki taraflı olmadıkça böbrek yetmezliğine nadiren yol açar.",
+   "kelime": 138
+  },
+  {
+   "no": 36,
+   "tur": "ornek",
+   "soru": "Kronik piyelonefritte görülen proteinürinin nedeni hangisidir?",
+   "secenekler": {
+    "A": "Sekonder glomeruloskleroz",
+    "B": "Podosit silinmesi",
+    "C": "Hilal oluşumu",
+    "D": "İmmün kompleks birikimi",
+    "E": "Proksimal tübül nekrozu"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Sekonder glomeruloskleroz doğru: kronik piyelonefritte proteinüri bu ikincil glomerül sklerozuyla ilişkilidir.",
+    "B": "Podosit ayak uzantılarında silinme steroid olmayan antiinflamatuvar ilaçlara bağlı nefritte nefrotik tablo yapar.",
+    "C": "Hilal oluşumu ile karıştırılabilir: Kronik piyelonefritte glomerüllerdeki değişiklik sklerozdur.",
+    "D": "Kronik piyelonefrit tekrarlayan bakteriyel enfeksiyonla gelişir. İmmün kompleks birikimi bu sorudaki ayrımı sağlamaz.",
+    "E": "Proksimal tübüllerde yaygın nekroz nefrotoksik akut tübüler hasarın bulgusudur."
+   },
+   "ozet": "Kronik piyelonefritte proteinüri sekonder glomerulosklerozla ilişkilidir; glomerüller normal, sklerotik veya segmental tutulmuş olabilir.",
+   "metin": "**Soru.** Kronik piyelonefritte görülen proteinürinin nedeni hangisidir?\n\n**A)** Sekonder glomeruloskleroz · **B)** Podosit silinmesi · **C)** Hilal oluşumu · **D)** İmmün kompleks birikimi · **E)** Proksimal tübül nekrozu\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Sekonder glomeruloskleroz** — Sekonder glomeruloskleroz doğru: kronik piyelonefritte proteinüri bu ikincil glomerül sklerozuyla ilişkilidir.\n- **Podosit silinmesi** — Podosit ayak uzantılarında silinme steroid olmayan antiinflamatuvar ilaçlara bağlı nefritte nefrotik tablo yapar.\n- **Hilal oluşumu** — Hilal oluşumu ile karıştırılabilir: Kronik piyelonefritte glomerüllerdeki değişiklik sklerozdur.\n- **İmmün kompleks birikimi** — Kronik piyelonefrit tekrarlayan bakteriyel enfeksiyonla gelişir. İmmün kompleks birikimi bu sorudaki ayrımı sağlamaz.\n- **Proksimal tübül nekrozu** — Proksimal tübüllerde yaygın nekroz nefrotoksik akut tübüler hasarın bulgusudur.\n\n**Cevap: A** — Sekonder glomeruloskleroz\n\n**Özet.** Kronik piyelonefritte proteinüri sekonder glomerulosklerozla ilişkilidir; glomerüller normal, sklerotik veya segmental tutulmuş olabilir.",
+   "ses": "Kronik piyelonefritte görülen proteinürinin nedeni hangisidir?\nA, Sekonder glomeruloskleroz\nBe, Podosit silinmesi\nCe, Hilal oluşumu\nDe, İmmün kompleks birikimi\nE, Proksimal tübül nekrozu\nŞimdi seçeneklere tek tek bakalım.\nSekonder glomeruloskleroz doğru. Kronik piyelonefritte proteinüri bu ikincil glomerül sklerozuyla ilişkilidir.\nPodosit ayak uzantılarında silinme steroid olmayan antiinflamatuvar ilaçlara bağlı nefritte nefrotik tablo yapar.\nHilal oluşumu ile karıştırılabilir. Kronik piyelonefritte glomerüllerdeki değişiklik sklerozdur.\nKronik piyelonefrit tekrarlayan bakteriyel enfeksiyonla gelişir. İmmün kompleks birikimi bu sorudaki ayrımı sağlamaz.\nProksimal tübüllerde yaygın nekroz nefrotoksik akut tübüler hasarın bulgusudur.\nDoğru cevap A, Sekonder glomeruloskleroz\nKronik piyelonefritte proteinüri sekonder glomerulosklerozla ilişkilidir. Glomerüller normal, sklerotik veya segmental tutulmuş olabilir.",
+   "kelime": 130
+  },
+  {
+   "no": 37,
+   "tur": "ornek",
+   "soru": "Kronik piyelonefritte idrar incelemesi için hangisi doğrudur?",
+   "secenekler": {
+    "A": "Bakteriüri her zaman yoğundur",
+    "B": "Eozinofili tipiktir",
+    "C": "Eritrosit silendiri tanısaldır",
+    "D": "Nefrotik proteinüri kuraldır",
+    "E": "Az veya hiç bakteri olabilir"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Yoğun bakteriüri akut piyelonefritte tipiktir; kronik formda idrar ataklar arasında steril olabilir.",
+    "B": "İdrarda eozinofil ilaca bağlı tübülointerstisyel nefritte bazen görülür.",
+    "C": "Eritrosit silendiri glomerüler kökenli hematüriyi gösterir; kronik piyelonefritin tanısal bulgusu değildir.",
+    "D": "Kronik piyelonefritte proteinüri sekonder glomerulosklerozla gelişir; nefrotik düzey kural değildir.",
+    "E": "Az veya hiç bakteri olabilir doğru: kronik piyelonefritte idrarda bakteri az bulunabilir ya da hiç olmayabilir."
+   },
+   "ozet": "Kronik piyelonefritte idrarda az veya hiç bakteri olabilir; proteinüri vardır ve radyolojide küçülmüş asimetrik böbrek, kaliks deformitesi görülür.",
+   "metin": "**Soru.** Kronik piyelonefritte idrar incelemesi için hangisi doğrudur?\n\n**A)** Bakteriüri her zaman yoğundur · **B)** Eozinofili tipiktir · **C)** Eritrosit silendiri tanısaldır · **D)** Nefrotik proteinüri kuraldır · **E)** Az veya hiç bakteri olabilir\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Bakteriüri her zaman yoğundur** — Yoğun bakteriüri akut piyelonefritte tipiktir; kronik formda idrar ataklar arasında steril olabilir.\n- **Eozinofili tipiktir** — İdrarda eozinofil ilaca bağlı tübülointerstisyel nefritte bazen görülür.\n- **Eritrosit silendiri tanısaldır** — Eritrosit silendiri glomerüler kökenli hematüriyi gösterir; kronik piyelonefritin tanısal bulgusu değildir.\n- **Nefrotik proteinüri kuraldır** — Kronik piyelonefritte proteinüri sekonder glomerulosklerozla gelişir; nefrotik düzey kural değildir.\n- **Az veya hiç bakteri olabilir** — Az veya hiç bakteri olabilir doğru: kronik piyelonefritte idrarda bakteri az bulunabilir ya da hiç olmayabilir.\n\n**Cevap: E** — Az veya hiç bakteri olabilir\n\n**Özet.** Kronik piyelonefritte idrarda az veya hiç bakteri olabilir; proteinüri vardır ve radyolojide küçülmüş asimetrik böbrek, kaliks deformitesi görülür.",
+   "ses": "Kronik piyelonefritte idrar incelemesi için hangisi doğrudur?\nA, Bakteriüri her zaman yoğundur\nBe, Eozinofili tipiktir\nCe, Eritrosit silendiri tanısaldır\nDe, Nefrotik proteinüri kuraldır\nE, Az veya hiç bakteri olabilir\nSeçenekleri sırayla değerlendirelim.\nYoğun bakteriüri akut piyelonefritte tipiktir. Kronik formda idrar ataklar arasında steril olabilir.\nİdrarda eozinofil ilaca bağlı tübülointerstisyel nefritte bazen görülür.\nEritrosit silendiri glomerüler kökenli hematüriyi gösterir. Kronik piyelonefritin tanısal bulgusu değildir.\nKronik piyelonefritte proteinüri sekonder glomerulosklerozla gelişir. Nefrotik düzey kural değildir.\nAz veya hiç bakteri olabilir doğru. Kronik piyelonefritte idrarda bakteri az bulunabilir ya da hiç olmayabilir.\nDoğru cevap E, Az veya hiç bakteri olabilir\nKronik piyelonefritte idrarda az veya hiç bakteri olabilir. Proteinüri vardır ve radyolojide küçülmüş asimetrik böbrek, kaliks deformitesi görülür.",
+   "kelime": 149
+  },
+  {
+   "no": 38,
+   "tur": "ornek",
+   "soru": "İlaca bağlı akut TIN'de ani, yani tip I aşırı duyarlılığın göstergesi olabilen bulgu hangisidir?",
+   "secenekler": {
+    "A": "Pozitif deri testi",
+    "B": "Granülomatöz reaksiyon",
+    "C": "Serum IgE artışı",
+    "D": "Lökosit silendiri",
+    "E": "Kolloid döküntü"
+   },
+   "dogru": "C",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Pozitif deri testi T hücre aracılı, yani tip IV aşırı duyarlılığın göstergesidir.",
+    "B": "Granülomatöz reaksiyon tip IV aşırı duyarlılığın morfolojik kanıtıdır.",
+    "C": "Serum IgE artışı doğru: ani, yani tip I aşırı duyarlılık reaksiyonunda serum IgE düzeyi yükselebilir.",
+    "D": "Lökosit silendiri akut piyelonefritte enfeksiyonun böbrekte olduğunu gösterir.",
+    "E": "Kolloid döküntü kronik piyelonefritte tiroidizasyon görünümünü oluşturur."
+   },
+   "ozet": "İlaca bağlı TIN'de tip I ve tip IV aşırı duyarlılık birlikte rol oynar: IgE artışı ani tipi, deri testi ve granülom T hücre aracılı tipi gösterir.",
+   "metin": "**Soru.** İlaca bağlı akut TIN'de ani, yani tip I aşırı duyarlılığın göstergesi olabilen bulgu hangisidir?\n\n**A)** Pozitif deri testi · **B)** Granülomatöz reaksiyon · **C)** Serum IgE artışı · **D)** Lökosit silendiri · **E)** Kolloid döküntü\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Pozitif deri testi** — Pozitif deri testi T hücre aracılı, yani tip IV aşırı duyarlılığın göstergesidir.\n- **Granülomatöz reaksiyon** — Granülomatöz reaksiyon tip IV aşırı duyarlılığın morfolojik kanıtıdır.\n- **Serum IgE artışı** — Serum IgE artışı doğru: ani, yani tip I aşırı duyarlılık reaksiyonunda serum IgE düzeyi yükselebilir.\n- **Lökosit silendiri** — Lökosit silendiri akut piyelonefritte enfeksiyonun böbrekte olduğunu gösterir.\n- **Kolloid döküntü** — Kolloid döküntü kronik piyelonefritte tiroidizasyon görünümünü oluşturur.\n\n**Cevap: C** — Serum IgE artışı\n\n**Özet.** İlaca bağlı TIN'de tip I ve tip IV aşırı duyarlılık birlikte rol oynar: IgE artışı ani tipi, deri testi ve granülom T hücre aracılı tipi gösterir.",
+   "ses": "İlaca bağlı akut tübülointerstisyel nefritte ani, yani tip bir aşırı duyarlılığın göstergesi olabilen bulgu hangisidir?\nA, Pozitif deri testi\nBe, Granülomatöz reaksiyon\nCe, Serum i ge e artışı\nDe, Lökosit silendiri\nE, Kolloid döküntü\nHer seçeneği tek tek ele alalım.\nPozitif deri testi te hücre aracılı, yani tip dört aşırı duyarlılığın göstergesidir.\nGranülomatöz reaksiyon tip dört aşırı duyarlılığın morfolojik kanıtıdır.\nSerum i ge e artışı doğru. Ani, yani tip bir aşırı duyarlılık reaksiyonunda serum i ge e düzeyi yükselebilir.\nLökosit silendiri akut piyelonefritte enfeksiyonun böbrekte olduğunu gösterir.\nKolloid döküntü kronik piyelonefritte tiroidizasyon görünümünü oluşturur.\nDoğru cevap Ce, Serum i ge e artışı\nİlaca bağlı tübülointerstisyel nefritte tip bir ve tip dört aşırı duyarlılık birlikte rol oynar. İ ge e artışı ani tipi, deri testi ve granülom tip dördü gösterir.",
+   "kelime": 148
+  },
+  {
+   "no": 39,
+   "tur": "ornek",
+   "soru": "İlaca bağlı TIN'de podosit ayak uzantılarında silinmeyle nefrotik sendrom eklenebilen ilaç grubu hangisidir?",
+   "secenekler": {
+    "A": "Penisilinler",
+    "B": "Tiyazidler",
+    "C": "Proton pompa inhibitörleri",
+    "D": "Steroid olmayan antiinflamatuvarlar",
+    "E": "Rifampin"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Penisilinler, özellikle ampisilin, akut nefritin sık sorumlusudur, ama glomerüller bu ilaçlarda normal kalır.",
+    "B": "Tiyazidler dev hücreli, nekrotik olmayan granülomlarla ilişkilidir; nefrotik tablo bu gruba özgü değildir.",
+    "C": "Proton pompa inhibitörleri, örneğin omeprazol, nefrit yapabilir ama glomerüler tutulumla tanınmaz.",
+    "D": "Steroid olmayan antiinflamatuvarlar doğru: bu ilaçlarda podosit ayak uzantılarında silinme ve nefrotik sendrom eklenebilir.",
+    "E": "Rifampin tiyazidler gibi granülomatöz reaksiyonla ilişkilidir; glomerüller genellikle normaldir."
+   },
+   "ozet": "İlaca bağlı TIN'de glomerüller çoğu ilaçta normaldir; steroid olmayan antiinflamatuvarlarda podosit silinmesi ve nefrotik sendrom eklenebilir.",
+   "metin": "**Soru.** İlaca bağlı TIN'de podosit ayak uzantılarında silinmeyle nefrotik sendrom eklenebilen ilaç grubu hangisidir?\n\n**A)** Penisilinler · **B)** Tiyazidler · **C)** Proton pompa inhibitörleri · **D)** Steroid olmayan antiinflamatuvarlar · **E)** Rifampin\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Penisilinler** — Penisilinler, özellikle ampisilin, akut nefritin sık sorumlusudur, ama glomerüller bu ilaçlarda normal kalır.\n- **Tiyazidler** — Tiyazidler dev hücreli, nekrotik olmayan granülomlarla ilişkilidir; nefrotik tablo bu gruba özgü değildir.\n- **Proton pompa inhibitörleri** — Proton pompa inhibitörleri, örneğin omeprazol, nefrit yapabilir ama glomerüler tutulumla tanınmaz.\n- **Steroid olmayan antiinflamatuvarlar** — Steroid olmayan antiinflamatuvarlar doğru: bu ilaçlarda podosit ayak uzantılarında silinme ve nefrotik sendrom eklenebilir.\n- **Rifampin** — Rifampin tiyazidler gibi granülomatöz reaksiyonla ilişkilidir; glomerüller genellikle normaldir.\n\n**Cevap: D** — Steroid olmayan antiinflamatuvarlar\n\n**Özet.** İlaca bağlı TIN'de glomerüller çoğu ilaçta normaldir; steroid olmayan antiinflamatuvarlarda podosit silinmesi ve nefrotik sendrom eklenebilir.",
+   "ses": "İlaca bağlı tübülointerstisyel nefritte podosit ayak uzantılarında silinmeyle nefrotik sendrom eklenebilen ilaç grubu hangisidir?\nA, Penisilinler\nBe, Tiyazidler\nCe, Proton pompa inhibitörleri\nDe, Steroid olmayan antiinflamatuvarlar\nE, Rifampin\nŞıkları sırasıyla gözden geçirelim.\nPenisilinler, özellikle ampisilin, akut nefritin sık sorumlusudur, ama glomerüller bu ilaçlarda normal kalır.\nTiyazidler dev hücreli, nekrotik olmayan granülomlarla ilişkilidir. Nefrotik tablo bu gruba özgü değildir.\nProton pompa inhibitörleri, örneğin omeprazol, nefrit yapabilir ama glomerüler tutulumla tanınmaz.\nSteroid olmayan antiinflamatuvarlar doğru. Bu ilaçlarda podosit ayak uzantılarında silinme ve nefrotik sendrom eklenebilir.\nRifampin tiyazidler gibi granülomatöz reaksiyonla ilişkilidir. Glomerüller genellikle normaldir.\nDoğru cevap De, Steroid olmayan antiinflamatuvarlar\nİlaca bağlı tübülointerstisyel nefritte glomerüller çoğu ilaçta normaldir. Steroid olmayan antiinflamatuvarlarda podosit silinmesi ve nefrotik sendrom eklenebilir.",
+   "kelime": 139
+  },
+  {
+   "no": 40,
+   "tur": "ornek",
+   "soru": "Akut tübüler hasarda oligüri için günlük idrar miktarı sınırı hangisidir?",
+   "secenekler": {
+    "A": "<400 mL",
+    "B": "<100 mL",
+    "C": "<800 mL",
+    "D": "<1000 mL",
+    "E": "<1500 mL"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Günde 400 mL'den az idrar doğru: akut tübüler hasarda oligüri bu sınırla tanımlanır.",
+    "B": "100 mL sınırı oligüri tanımı için fazla düşüktür; tanım günde 400 mL'nin altıdır.",
+    "C": "800 mL sınırı oligüri tanımı değildir; daha düşük bir eşik kullanılır.",
+    "D": "1000 mL sınırı oligüri tanımı değildir; bu miktar eşiğin oldukça üstündedir.",
+    "E": "1500 mL sınırı oligüri tanımına uymaz; eşik bunun çok altındadır."
+   },
+   "ozet": "Akut tübüler hasarda GFR azalır, kreatinin yükselir; günde 400 mL'den az idrar oligüridir, ağır olguda anüri gelişebilir.",
+   "metin": "**Soru.** Akut tübüler hasarda oligüri için günlük idrar miktarı sınırı hangisidir?\n\n**A)** <400 mL · **B)** <100 mL · **C)** <800 mL · **D)** <1000 mL · **E)** <1500 mL\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **<400 mL** — Günde 400 mL'den az idrar doğru: akut tübüler hasarda oligüri bu sınırla tanımlanır.\n- **<100 mL** — 100 mL sınırı oligüri tanımı için fazla düşüktür; tanım günde 400 mL'nin altıdır.\n- **<800 mL** — 800 mL sınırı oligüri tanımı değildir; daha düşük bir eşik kullanılır.\n- **<1000 mL** — 1000 mL sınırı oligüri tanımı değildir; bu miktar eşiğin oldukça üstündedir.\n- **<1500 mL** — 1500 mL sınırı oligüri tanımına uymaz; eşik bunun çok altındadır.\n\n**Cevap: A** — <400 mL\n\n**Özet.** Akut tübüler hasarda GFR azalır, kreatinin yükselir; günde 400 mL'den az idrar oligüridir, ağır olguda anüri gelişebilir.",
+   "ses": "Akut tübüler hasarda oligüri için günlük idrar miktarı sınırı hangisidir?\nA, Dört yüz mililitreden az\nBe, Yüz mililitreden az\nCe, Sekiz yüz mililitreden az\nDe, Bin mililitreden az\nE, Bin beş yüz mililitreden az\nŞimdi seçeneklere tek tek bakalım.\nGünde dört yüz mililitreden az idrar doğru. Akut tübüler hasarda oligüri bu sınırla tanımlanır.\nYüz mililitre sınırı oligüri tanımı için fazla düşüktür. Tanım günde dört yüz mililitrenin altıdır.\nSekiz yüz mililitre sınırı oligüri tanımı değildir. Daha düşük bir eşik kullanılır.\nBin mililitre sınırı oligüri tanımı değildir. Bu miktar eşiğin oldukça üstündedir.\nBin beş yüz mililitre sınırı oligüri tanımına uymaz. Eşik bunun çok altındadır.\nDoğru cevap A, Dört yüz mililitreden az\nAkut tübüler hasarda glomerüler filtrasyon hızı azalır, kreatinin yükselir. Günde dört yüz mililitreden az idrar oligüridir, ağır olguda anüri gelişebilir.",
+   "kelime": 137
+  },
+  {
+   "no": 41,
+   "tur": "ornek",
+   "soru": "Akut tübüler hasarda hücre ölümü ve dökülme GFR'yi hangi yolla azaltır?",
+   "secenekler": {
+    "A": "Tübüloglomerüler geri besleme",
+    "B": "İntratübüler basınç artışı",
+    "C": "Geri filtrasyon",
+    "D": "Efferent arteriyol dilatasyonu",
+    "E": "Glomerüler bazal membran yırtığı"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Tübüloglomerüler geri besleme hücre membran hasarı mekanizmasıdır; artan distal sodyum vazokonstriksiyon başlatır.",
+    "B": "İntratübüler basınç artışı doğru: dökülen hücre ve granüler döküntü lümende tıkaç yapar, basınç artar ve filtrasyon düşer.",
+    "C": "Geri filtrasyon üçüncü mekanizmadır; sıvı hasarlı duvardan interstisyuma sızar ve ödem yapar.",
+    "D": "Efferent arteriyol dilatasyonu ile karıştırılabilir: Akut tübüler hasarda afferent arteriyolde vazokonstriksiyon vardır.",
+    "E": "Akut tübüler hasarda temel olay tübül epitel hücrelerinin hasarıdır. Glomerüler bazal membran yırtığı bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Akut tübüler hasarda üç mekanizma vardır: membran hasarıyla tübüloglomerüler geri besleme, dökülmeyle lümende tıkaç ve basınç artışı, sızıntıyla interstisyel ödem.",
+   "metin": "**Soru.** Akut tübüler hasarda hücre ölümü ve dökülme GFR'yi hangi yolla azaltır?\n\n**A)** Tübüloglomerüler geri besleme · **B)** İntratübüler basınç artışı · **C)** Geri filtrasyon · **D)** Efferent arteriyol dilatasyonu · **E)** Glomerüler bazal membran yırtığı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Tübüloglomerüler geri besleme** — Tübüloglomerüler geri besleme hücre membran hasarı mekanizmasıdır; artan distal sodyum vazokonstriksiyon başlatır.\n- **İntratübüler basınç artışı** — İntratübüler basınç artışı doğru: dökülen hücre ve granüler döküntü lümende tıkaç yapar, basınç artar ve filtrasyon düşer.\n- **Geri filtrasyon** — Geri filtrasyon üçüncü mekanizmadır; sıvı hasarlı duvardan interstisyuma sızar ve ödem yapar.\n- **Efferent arteriyol dilatasyonu** — Efferent arteriyol dilatasyonu ile karıştırılabilir: Akut tübüler hasarda afferent arteriyolde vazokonstriksiyon vardır.\n- **Glomerüler bazal membran yırtığı** — Akut tübüler hasarda temel olay tübül epitel hücrelerinin hasarıdır. Glomerüler bazal membran yırtığı bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — İntratübüler basınç artışı\n\n**Özet.** Akut tübüler hasarda üç mekanizma vardır: membran hasarıyla tübüloglomerüler geri besleme, dökülmeyle lümende tıkaç ve basınç artışı, sızıntıyla interstisyel ödem.",
+   "ses": "Akut tübüler hasarda hücre ölümü ve dökülme glomerüler filtrasyon hızını hangi yolla azaltır?\nA, Tübüloglomerüler geri besleme\nBe, İntratübüler basınç artışı\nCe, Geri filtrasyon\nDe, Efferent arteriyol dilatasyonu\nE, Glomerüler bazal membran yırtığı\nSeçenekleri sırayla değerlendirelim.\nTübüloglomerüler geri besleme hücre membran hasarı mekanizmasıdır. Artan distal sodyum vazokonstriksiyon başlatır.\nİntratübüler basınç artışı doğru. Dökülen hücre ve granüler döküntü lümende tıkaç yapar, basınç artar ve filtrasyon düşer.\nGeri filtrasyon üçüncü mekanizmadır. Sıvı hasarlı duvardan interstisyuma sızar ve ödem yapar.\nEfferent arteriyol dilatasyonu ile karıştırılabilir. Akut tübüler hasarda afferent arteriyolde vazokonstriksiyon vardır.\nAkut tübüler hasarda temel olay tübül epitel hücrelerinin hasarıdır. Glomerüler bazal membran yırtığı bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, İntratübüler basınç artışı\nAkut tübüler hasarda üç mekanizma vardır. Membran hasarıyla tübüloglomerüler geri besleme, dökülmeyle lümende tıkaç ve basınç artışı, sızıntıyla interstisyel ödem.",
+   "kelime": 162
+  },
+  {
+   "no": 42,
+   "tur": "ornek",
+   "soru": "İskemik akut tübüler hasarda odaksal lezyonların tipik yerleşimi hangisidir?",
+   "secenekler": {
+    "A": "Glomerüler yumak",
+    "B": "Toplayıcı kanallar",
+    "C": "Papilla uçları",
+    "D": "Henle çıkan kalın kolu",
+    "E": "Bowman kapsülü"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Glomerüler yumak ile karıştırılabilir: Akut tübüler hasar tübül epitelinin hasarıdır.",
+    "B": "Toplayıcı kanallarda her iki tipte ortak olarak granüler döküntü ve silendirler görülür; lezyonun odağı burası değildir.",
+    "C": "Papilla uçlarında iskemik ve süpüratif nekroz papiller nekrozun özelliğidir.",
+    "D": "Henle çıkan kalın kolu doğru: iskemik tipte odaksal lezyonlar proksimal tübül düz segmentleri ve Henle çıkan kalın kolunda yerleşir.",
+    "E": "Bowman kapsülü ile karıştırılabilir: İskemik lezyonlar tübül epitelindedir."
+   },
+   "ozet": "İskemik akut tübüler hasarda lezyonlar odaksaldır ve proksimal tübül düz segmenti ile Henle çıkan kalın kolundadır; nefrotoksik tipte proksimal tübülde yaygın nekroz vardır.",
+   "metin": "**Soru.** İskemik akut tübüler hasarda odaksal lezyonların tipik yerleşimi hangisidir?\n\n**A)** Glomerüler yumak · **B)** Toplayıcı kanallar · **C)** Papilla uçları · **D)** Henle çıkan kalın kolu · **E)** Bowman kapsülü\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Glomerüler yumak** — Glomerüler yumak ile karıştırılabilir: Akut tübüler hasar tübül epitelinin hasarıdır.\n- **Toplayıcı kanallar** — Toplayıcı kanallarda her iki tipte ortak olarak granüler döküntü ve silendirler görülür; lezyonun odağı burası değildir.\n- **Papilla uçları** — Papilla uçlarında iskemik ve süpüratif nekroz papiller nekrozun özelliğidir.\n- **Henle çıkan kalın kolu** — Henle çıkan kalın kolu doğru: iskemik tipte odaksal lezyonlar proksimal tübül düz segmentleri ve Henle çıkan kalın kolunda yerleşir.\n- **Bowman kapsülü** — Bowman kapsülü ile karıştırılabilir: İskemik lezyonlar tübül epitelindedir.\n\n**Cevap: D** — Henle çıkan kalın kolu\n\n**Özet.** İskemik akut tübüler hasarda lezyonlar odaksaldır ve proksimal tübül düz segmenti ile Henle çıkan kalın kolundadır; nefrotoksik tipte proksimal tübülde yaygın nekroz vardır.",
+   "ses": "İskemik akut tübüler hasarda odaksal lezyonların tipik yerleşimi hangisidir?\nA, Glomerüler yumak\nBe, Toplayıcı kanallar\nCe, Papilla uçları\nDe, Henle çıkan kalın kolu\nE, Bowman kapsülü\nHer seçeneği tek tek ele alalım.\nGlomerüler yumak ile karıştırılabilir. Akut tübüler hasar tübül epitelinin hasarıdır.\nToplayıcı kanallarda her iki tipte ortak olarak granüler döküntü ve silendirler görülür. Lezyonun odağı burası değildir.\nPapilla uçlarında iskemik ve süpüratif nekroz papiller nekrozun özelliğidir.\nHenle çıkan kalın kolu doğru. İskemik tipte odaksal lezyonlar proksimal tübül düz segmentleri ve Henle çıkan kalın kolunda yerleşir.\nBowman kapsülü ile karıştırılabilir. İskemik lezyonlar tübül epitelindedir.\nDoğru cevap De, Henle çıkan kalın kolu\nİskemik akut tübüler hasarda lezyonlar odaksaldır ve proksimal tübül düz segmenti ile Henle çıkan kalın kolundadır. Nefrotoksik tipte proksimal tübülde yaygın nekroz vardır.",
+   "kelime": 153
+  },
+  {
+   "no": 43,
+   "tur": "ornek",
+   "soru": "Akut tübüler hasarın oligürik evresinde belirginleşen elektrolit bozukluğu hangisidir?",
+   "secenekler": {
+    "A": "Hipokalemi",
+    "B": "Hiperkalemi",
+    "C": "Hipernatremi",
+    "D": "Hiperkalsemi",
+    "E": "Metabolik alkaloz"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Hipokalemi bu evrede beklenmez; elektrolit kaybı iyileşme evresindeki poliüride olur.",
+    "B": "Hiperkalemi doğru: oligürik evrede azotemi, asidoz ve üremiyle birlikte potasyum yükselir.",
+    "C": "Oligürik evrede belirginleşen bozukluk potasyum yüksekliğidir. Hipernatremi bu sorudaki ayrımı sağlamaz.",
+    "D": "Hiperkalsemi ile karıştırılabilir: Oligürik evrenin tipik bulguları arasında sayılmaz.",
+    "E": "Oligürik evrede alkaloz değil asidoz belirginleşir. Metabolik alkaloz bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Akut tübüler hasarın oligürik evresinde azotemi, asidoz, hiperkalemi ve üremi belirginleşir; iyileşme evresinde ise poliüri ve elektrolit kaybı olur.",
+   "metin": "**Soru.** Akut tübüler hasarın oligürik evresinde belirginleşen elektrolit bozukluğu hangisidir?\n\n**A)** Hipokalemi · **B)** Hiperkalemi · **C)** Hipernatremi · **D)** Hiperkalsemi · **E)** Metabolik alkaloz\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Hipokalemi** — Hipokalemi bu evrede beklenmez; elektrolit kaybı iyileşme evresindeki poliüride olur.\n- **Hiperkalemi** — Hiperkalemi doğru: oligürik evrede azotemi, asidoz ve üremiyle birlikte potasyum yükselir.\n- **Hipernatremi** — Oligürik evrede belirginleşen bozukluk potasyum yüksekliğidir. Hipernatremi bu sorudaki ayrımı sağlamaz.\n- **Hiperkalsemi** — Hiperkalsemi ile karıştırılabilir: Oligürik evrenin tipik bulguları arasında sayılmaz.\n- **Metabolik alkaloz** — Oligürik evrede alkaloz değil asidoz belirginleşir. Metabolik alkaloz bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Hiperkalemi\n\n**Özet.** Akut tübüler hasarın oligürik evresinde azotemi, asidoz, hiperkalemi ve üremi belirginleşir; iyileşme evresinde ise poliüri ve elektrolit kaybı olur.",
+   "ses": "Akut tübüler hasarın oligürik evresinde belirginleşen elektrolit bozukluğu hangisidir?\nA, Hipokalemi\nBe, Hiperkalemi\nCe, Hipernatremi\nDe, Hiperkalsemi\nE, Metabolik alkaloz\nŞıkları sırasıyla gözden geçirelim.\nHipokalemi bu evrede beklenmez. Elektrolit kaybı iyileşme evresindeki poliüride olur.\nHiperkalemi doğru. Oligürik evrede azotemi, asidoz ve üremiyle birlikte potasyum yükselir.\nOligürik evrede belirginleşen bozukluk potasyum yüksekliğidir. Hipernatremi bu sorudaki ayrımı sağlamaz.\nHiperkalsemi ile karıştırılabilir. Oligürik evrenin tipik bulguları arasında sayılmaz.\nOligürik evrede alkaloz değil asidoz belirginleşir. Metabolik alkaloz bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Hiperkalemi\nAkut tübüler hasarın oligürik evresinde azotemi, asidoz, hiperkalemi ve üremi belirginleşir. İyileşme evresinde ise poliüri ve elektrolit kaybı olur.",
+   "kelime": 123
+  }
+ ]
+}

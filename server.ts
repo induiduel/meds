@@ -22,6 +22,7 @@ import { registerSesliAnlatimRoutes } from './src/services/sesliAnlatim';
 import { registerCanliDersRoutes } from './src/services/canliDers';
 import { registerPatolojiAsistanRoutes } from './src/services/patolojiAsistan';
 import { registerPatolojiCozucuRoutes } from './src/services/patolojiCozucu';
+import { registerPatolojiCozucuAltRoutes } from './src/services/patolojiCozucuAlt';
 import { registerCozucuSesRoutes } from './src/services/cozucuSes';
 import { registerOgrenSesRoutes } from './src/services/ogrenSes';
 import crypto from 'crypto';
@@ -2732,6 +2733,7 @@ registerSesliAnlatimRoutes(app, requireAdmin, (ev, data) => broadcastRealtimeEve
 registerCanliDersRoutes(app);
 registerPatolojiAsistanRoutes(app);
 registerPatolojiCozucuRoutes(app);
+registerPatolojiCozucuAltRoutes(app);
 registerCozucuSesRoutes(app);
 registerOgrenSesRoutes(app);
 

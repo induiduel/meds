@@ -1,0 +1,882 @@
+{
+ "kod": "23",
+ "baslik": "Sistemik Hastalıklarda Böbrek Hasarı",
+ "surum": "alt-1",
+ "sorular": [
+  {
+   "no": 1,
+   "tur": "ornek",
+   "soru": "Diyabetik nefropatiye özgü nodüler lezyon hangisidir?",
+   "secenekler": {
+    "A": "Kimmelstiel-Wilson glomerulosklerozu",
+    "B": "Soğan zarı lezyonu",
+    "C": "Tel halka lezyonu",
+    "D": "Hilal oluşumu",
+    "E": "Pire ısırığı görünümü"
+   },
+   "dogru": "A",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Kimmelstiel-Wilson glomerulosklerozu doğru: diyabetik nefropatide GBM kalınlaşması ve difüz mezangial sklerozla birlikte nodüler lezyon oluşur.",
+    "B": "Soğan zarı lezyonu malign hipertansiyonda interlobüler arterlerde konsantrik intimal hücre proliferasyonudur.",
+    "C": "Diyabete özgü lezyon nodüler glomerulosklerozdur ve klinik tablo mikroalbüminüriyle başlar. Tel halka lezyonu bu sorudaki ayrımı sağlamaz.",
+    "D": "Hilal oluşumu küçük damar vaskülitlerinde pauci-immün hızlı ilerleyen glomerulonefritin bulgusudur.",
+    "E": "Pire ısırığı görünümü malign nefrosklerozda kortikal yüzeydeki küçük peteşiyal kanamalardır."
+   },
+   "ozet": "Diyabetik nefropatide GBM kalınlaşması, difüz mezangial skleroz ve nodüler Kimmelstiel-Wilson glomerulosklerozu görülür; klinik mikroalbüminüriyle başlar, sıklıkla nefrotik sendroma varır.",
+   "metin": "**Soru.** Diyabetik nefropatiye özgü nodüler lezyon hangisidir?\n\n**A)** Kimmelstiel-Wilson glomerulosklerozu · **B)** Soğan zarı lezyonu · **C)** Tel halka lezyonu · **D)** Hilal oluşumu · **E)** Pire ısırığı görünümü\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kimmelstiel-Wilson glomerulosklerozu** — Kimmelstiel-Wilson glomerulosklerozu doğru: diyabetik nefropatide GBM kalınlaşması ve difüz mezangial sklerozla birlikte nodüler lezyon oluşur.\n- **Soğan zarı lezyonu** — Soğan zarı lezyonu malign hipertansiyonda interlobüler arterlerde konsantrik intimal hücre proliferasyonudur.\n- **Tel halka lezyonu** — Diyabete özgü lezyon nodüler glomerulosklerozdur ve klinik tablo mikroalbüminüriyle başlar. Tel halka lezyonu bu sorudaki ayrımı sağlamaz.\n- **Hilal oluşumu** — Hilal oluşumu küçük damar vaskülitlerinde pauci-immün hızlı ilerleyen glomerulonefritin bulgusudur.\n- **Pire ısırığı görünümü** — Pire ısırığı görünümü malign nefrosklerozda kortikal yüzeydeki küçük peteşiyal kanamalardır.\n\n**Cevap: A** — Kimmelstiel-Wilson glomerulosklerozu\n\n**Özet.** Diyabetik nefropatide GBM kalınlaşması, difüz mezangial skleroz ve nodüler Kimmelstiel-Wilson glomerulosklerozu görülür; klinik mikroalbüminüriyle başlar, sıklıkla nefrotik sendroma varır.",
+   "ses": "Diyabetik nefropatiye özgü nodüler lezyon hangisidir?\nA, Kimelştil Vilson glomerulosklerozu\nBe, Soğan zarı lezyonu\nCe, Tel halka lezyonu\nDe, Hilal oluşumu\nE, Pire ısırığı görünümü\nSeçenekleri sırayla değerlendirelim.\nKimelştil Vilson glomerulosklerozu doğru. Diyabetik nefropatide glomerüler bazal membran kalınlaşması ve difüz mezangial sklerozla birlikte nodüler lezyon oluşur.\nSoğan zarı lezyonu malign hipertansiyonda interlobüler arterlerde konsantrik intimal hücre proliferasyonudur.\nDiyabete özgü lezyon nodüler glomerulosklerozdur ve klinik tablo mikroalbüminüriyle başlar. Tel halka lezyonu bu sorudaki ayrımı sağlamaz.\nHilal oluşumu küçük damar vaskülitlerinde pausi immün hızlı ilerleyen glomerulonefritin bulgusudur.\nPire ısırığı görünümü malign nefrosklerozda kortikal yüzeydeki küçük peteşiyal kanamalardır.\nDoğru cevap A, Kimelştil Vilson glomerulosklerozu\nDiyabetik nefropatide glomerüler bazal membran kalınlaşması, difüz mezangial skleroz ve nodüler Kimelştil Vilson glomerulosklerozu görülür. Klinik mikroalbüminüriyle başlar, sıklıkla nefrotik sendroma varır.",
+   "kelime": 144
+  },
+  {
+   "no": 2,
+   "tur": "ornek",
+   "soru": "Böbrek biyopsisinde Kongo kırmızısı ile elma yeşili çift kırınım hangi hastalığı gösterir?",
+   "secenekler": {
+    "A": "Diyabetik nefropati",
+    "B": "Amiloidoz",
+    "C": "Lupus nefriti",
+    "D": "Benign nefroskleroz",
+    "E": "TTP"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Diyabetik nefropatide GBM kalınlaşması ve nodüler glomeruloskleroz görülür; Kongo kırmızısı boyanması beklenmez.",
+    "B": "Amiloidoz doğru: böbrek biyopsisinde Kongo kırmızısı pozitifliği ve elma yeşili çift kırınım amiloid birikimini gösterir.",
+    "C": "Lupus nefriti, tip III aşırı duyarlılığın prototipi olan SLE'de immün kompleks birikimiyle oluşur.",
+    "D": "Benign nefrosklerozda uzun süreli hipertansiyonla arteriyol duvarında homojen pembe hiyalin kalınlaşma, yani hiyalin arteriyoloskleroz gelişir.",
+    "E": "TTP'de ADAMTS13 eksikliği ultra büyük vWF multimerleri ve yaygın mikrotromboz yapar."
+   },
+   "ozet": "Amiloid nefropatisinde amiloid glomerüler mezangium ve kılcal duvarlarda birikir; tanı biyopside Kongo kırmızısı pozitifliği ve elma yeşili çift kırınımla konur.",
+   "metin": "**Soru.** Böbrek biyopsisinde Kongo kırmızısı ile elma yeşili çift kırınım hangi hastalığı gösterir?\n\n**A)** Diyabetik nefropati · **B)** Amiloidoz · **C)** Lupus nefriti · **D)** Benign nefroskleroz · **E)** TTP\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Diyabetik nefropati** — Diyabetik nefropatide GBM kalınlaşması ve nodüler glomeruloskleroz görülür; Kongo kırmızısı boyanması beklenmez.\n- **Amiloidoz** — Amiloidoz doğru: böbrek biyopsisinde Kongo kırmızısı pozitifliği ve elma yeşili çift kırınım amiloid birikimini gösterir.\n- **Lupus nefriti** — Lupus nefriti, tip III aşırı duyarlılığın prototipi olan SLE'de immün kompleks birikimiyle oluşur.\n- **Benign nefroskleroz** — Benign nefrosklerozda uzun süreli hipertansiyonla arteriyol duvarında homojen pembe hiyalin kalınlaşma, yani hiyalin arteriyoloskleroz gelişir.\n- **TTP** — TTP'de ADAMTS13 eksikliği ultra büyük vWF multimerleri ve yaygın mikrotromboz yapar.\n\n**Cevap: B** — Amiloidoz\n\n**Özet.** Amiloid nefropatisinde amiloid glomerüler mezangium ve kılcal duvarlarda birikir; tanı biyopside Kongo kırmızısı pozitifliği ve elma yeşili çift kırınımla konur.",
+   "ses": "Böbrek biyopsisinde Kongo kırmızısı ile elma yeşili çift kırınım hangi hastalığı gösterir?\nA, Diyabetik nefropati\nBe, Amiloidoz\nCe, Lupus nefriti\nDe, Benign nefroskleroz\nE, Trombotik trombositopenik purpura\nHer seçeneği tek tek ele alalım.\nDiyabetik nefropatide glomerüler bazal membran kalınlaşması ve nodüler glomeruloskleroz görülür. Kongo kırmızısı boyanması beklenmez.\nAmiloidoz doğru. Böbrek biyopsisinde Kongo kırmızısı pozitifliği ve elma yeşili çift kırınım amiloid birikimini gösterir.\nLupus nefriti, tip üç aşırı duyarlılığın prototipi olan sistemik lupus eritematozusta immün kompleks birikimiyle oluşur.\nBenign nefrosklerozda uzun süreli hipertansiyonla arteriyol duvarında homojen pembe hiyalin kalınlaşma, yani hiyalin arteriyoloskleroz gelişir.\nTrombotik trombositopenik purpurada a de a me te se on üç eksikliği ultra büyük von Villebrand faktör multimerleri ve yaygın mikrotromboz yapar.\nDoğru cevap Be, Amiloidoz\nAmiloid nefropatisinde amiloid glomerüler mezangium ve kılcal duvarlarda birikir. Tanı biyopside Kongo kırmızısı pozitifliği ve elma yeşili çift kırınımla konur.",
+   "kelime": 146
+  },
+  {
+   "no": 3,
+   "tur": "ornek",
+   "soru": "Granülomatozisli poliangiitte böbrekte beklenen tutulum hangisidir?",
+   "secenekler": {
+    "A": "Membranöz nefropati",
+    "B": "Mezangiyal IgA birikimi",
+    "C": "Pauci-immün RPGN",
+    "D": "Nodüler glomeruloskleroz",
+    "E": "Sepet örgüsü GBM"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Küçük damar vaskülitlerinde böbrekte hilal oluşumu ve minimal immün birikim görülür. Membranöz nefropati bu sorudaki ayrımı sağlamaz.",
+    "B": "Mezangiyal IgA birikimi ile karıştırılabilir: Vaskülitlerde seroloji antinötrofil sitoplazmik antikorlarla, PR3 ya da MPO-ANCA ile yapılır.",
+    "C": "Pauci-immün RPGN doğru: granülomatozisli poliangiitte hilal oluşumu ve minimal immün birikimle hızlı ilerleyen glomerulonefrit gelişir.",
+    "D": "Nodüler glomeruloskleroz diyabetik nefropatinin Kimmelstiel-Wilson lezyonudur; vaskülitte beklenmez.",
+    "E": "Vaskülitte nefritik sendroma ateş, kilo kaybı, artrit ve sinüs-akciğer bulguları eşlik eder. Sepet örgüsü GBM bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Granülomatozisli poliangiit, mikroskopik poliangiit ve eozinofilik granülomatozisli poliangiit böbrekte pauci-immün RPGN yapar; hilal oluşur, immün birikim minimaldir ve ANCA sıklıkla pozitiftir.",
+   "metin": "**Soru.** Granülomatozisli poliangiitte böbrekte beklenen tutulum hangisidir?\n\n**A)** Membranöz nefropati · **B)** Mezangiyal IgA birikimi · **C)** Pauci-immün RPGN · **D)** Nodüler glomeruloskleroz · **E)** Sepet örgüsü GBM\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Membranöz nefropati** — Küçük damar vaskülitlerinde böbrekte hilal oluşumu ve minimal immün birikim görülür. Membranöz nefropati bu sorudaki ayrımı sağlamaz.\n- **Mezangiyal IgA birikimi** — Mezangiyal IgA birikimi ile karıştırılabilir: Vaskülitlerde seroloji antinötrofil sitoplazmik antikorlarla, PR3 ya da MPO-ANCA ile yapılır.\n- **Pauci-immün RPGN** — Pauci-immün RPGN doğru: granülomatozisli poliangiitte hilal oluşumu ve minimal immün birikimle hızlı ilerleyen glomerulonefrit gelişir.\n- **Nodüler glomeruloskleroz** — Nodüler glomeruloskleroz diyabetik nefropatinin Kimmelstiel-Wilson lezyonudur; vaskülitte beklenmez.\n- **Sepet örgüsü GBM** — Vaskülitte nefritik sendroma ateş, kilo kaybı, artrit ve sinüs-akciğer bulguları eşlik eder. Sepet örgüsü GBM bu sorudaki ayrımı sağlamaz.\n\n**Cevap: C** — Pauci-immün RPGN\n\n**Özet.** Granülomatozisli poliangiit, mikroskopik poliangiit ve eozinofilik granülomatozisli poliangiit böbrekte pauci-immün RPGN yapar; hilal oluşur, immün birikim minimaldir ve ANCA sıklıkla pozitiftir.",
+   "ses": "Granülomatozisli poliangiitte böbrekte beklenen tutulum hangisidir?\nA, Membranöz nefropati\nBe, Mezangiyal i ge a birikimi\nCe, Pausi immün hızlı ilerleyen glomerülonefrit\nDe, Nodüler glomeruloskleroz\nE, Sepet örgüsü glomerüler bazal membran\nŞıkları sırasıyla gözden geçirelim.\nKüçük damar vaskülitlerinde böbrekte hilal oluşumu ve minimal immün birikim görülür. Membranöz nefropati bu sorudaki ayrımı sağlamaz.\nMezangiyal IgA birikimi ile karıştırılabilir. Vaskülitlerde seroloji antinötrofil sitoplazmik antikorlarla, pe re üç ya da me pe o a ne ce a ile yapılır.\nPausi immün hızlı ilerleyen glomerülonefrit doğru. Granülomatozisli poliangiitte hilal oluşumu ve minimal immün birikimle hızlı ilerleyen glomerulonefrit gelişir.\nNodüler glomeruloskleroz diyabetik nefropatinin Kimelştil Vilson lezyonudur. Vaskülitte beklenmez.\nVaskülitte nefritik sendroma ateş, kilo kaybı, artrit ve sinüs akciğer bulguları eşlik eder. Sepet örgüsü GBM bu sorudaki ayrımı sağlamaz.\nDoğru cevap Ce, Pausi immün hızlı ilerleyen glomerülonefrit\nGranülomatozisli poliangiit, mikroskopik poliangiit ve eozinofilik granülomatozisli poliangiit böbrekte pausi immün hızlı ilerleyen glomerülonefrit yapar. Hilal oluşur, immün birikim minimaldir ve a ne ce a sıklıkla pozitiftir.",
+   "kelime": 157
+  },
+  {
+   "no": 4,
+   "tur": "ornek",
+   "soru": "Kanlı ishal sonrası hemolitik anemi, trombositopeni ve oligüri gelişen çocukta en olası etken hangisidir?",
+   "secenekler": {
+    "A": "Streptococcus pyogenes",
+    "B": "Staphylococcus aureus",
+    "C": "Hepatit B virüsü",
+    "D": "E. coli O157:H7",
+    "E": "Treponema pallidum"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Streptococcus pyogenes ile karıştırılabilir: Kanlı ishal sonrası HUS'un etkeni Şiga toksini üreten bakterilerdir.",
+    "B": "Şiga toksini, reseptörü bol olduğu için glomerüler endotele özellikle zarar verir. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.",
+    "C": "Hepatit B virüsü böbreği glomerüler hastalık yoluyla etkileyen bir enfeksiyondur; kanlı ishal ve HUS tablosu yapmaz.",
+    "D": "E. coli O157:H7 doğru: Şiga toksini üreten bu suş kanlı ishal sonrası hemolitik üremik sendrom yapar; çocuklarda akut böbrek yetmezliğinin sık nedenidir.",
+    "E": "Treponema pallidum, yani sifiliz, glomerüler tutulum yapan enfeksiyonlardandır; Şiga toksini aracılı HUS etkeni değildir."
+   },
+   "ozet": "Şiga toksini aracılı HUS'ta etken özellikle E. coli O157:H7'dir; toksin endoteli hasarlar, kanlı ishali hemolitik anemi, trombositopeni ve oligüri izler.",
+   "metin": "**Soru.** Kanlı ishal sonrası hemolitik anemi, trombositopeni ve oligüri gelişen çocukta en olası etken hangisidir?\n\n**A)** Streptococcus pyogenes · **B)** Staphylococcus aureus · **C)** Hepatit B virüsü · **D)** E. coli O157:H7 · **E)** Treponema pallidum\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Streptococcus pyogenes** — Streptococcus pyogenes ile karıştırılabilir: Kanlı ishal sonrası HUS'un etkeni Şiga toksini üreten bakterilerdir.\n- **Staphylococcus aureus** — Şiga toksini, reseptörü bol olduğu için glomerüler endotele özellikle zarar verir. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.\n- **Hepatit B virüsü** — Hepatit B virüsü böbreği glomerüler hastalık yoluyla etkileyen bir enfeksiyondur; kanlı ishal ve HUS tablosu yapmaz.\n- **E. coli O157:H7** — E. coli O157:H7 doğru: Şiga toksini üreten bu suş kanlı ishal sonrası hemolitik üremik sendrom yapar; çocuklarda akut böbrek yetmezliğinin sık nedenidir.\n- **Treponema pallidum** — Treponema pallidum, yani sifiliz, glomerüler tutulum yapan enfeksiyonlardandır; Şiga toksini aracılı HUS etkeni değildir.\n\n**Cevap: D** — E. coli O157:H7\n\n**Özet.** Şiga toksini aracılı HUS'ta etken özellikle E. coli O157:H7'dir; toksin endoteli hasarlar, kanlı ishali hemolitik anemi, trombositopeni ve oligüri izler.",
+   "ses": "Kanlı ishal sonrası hemolitik anemi, trombositopeni ve oligüri gelişen çocukta en olası etken hangisidir?\nA, Streptokokus piyojenez\nBe, Stafilokokus aureus\nCe, Hepatit be virüsü\nDe, E koli o yüz elli yedi ha yedi\nE, Treponema pallidum\nŞimdi seçeneklere tek tek bakalım.\nStreptococcus pyogenes ile karıştırılabilir. Kanlı ishal sonrası hemolitik üremik sendromun etkeni Şiga toksini üreten bakterilerdir.\nŞiga toksini, reseptörü bol olduğu için glomerüler endotele özellikle zarar verir. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.\nHepatit be virüsü böbreği glomerüler hastalık yoluyla etkileyen bir enfeksiyondur. Kanlı ishal ve hemolitik üremik sendrom tablosu yapmaz.\nE koli o yüz elli yedi ha yedi doğru. Şiga toksini üreten bu suş kanlı ishal sonrası hemolitik üremik sendrom yapar. Çocuklarda akut böbrek yetmezliğinin sık nedenidir.\nTreponema pallidum, yani sifiliz, glomerüler tutulum yapan enfeksiyonlardandır. Şiga toksini aracılı hemolitik üremik sendrom etkeni değildir.\nDoğru cevap De, E koli o yüz elli yedi ha yedi\nŞiga toksini aracılı hemolitik üremik sendromda etken özellikle e koli o yüz elli yedi ha yedidir. Toksin endoteli hasarlar, kanlı ishali hemolitik anemi, trombositopeni ve oligüri izler.",
+   "kelime": 173
+  },
+  {
+   "no": 5,
+   "tur": "ornek",
+   "soru": "Kompleman aracılı TMA'yı Şiga toksini aracılı HUS'tan ayıran özellik hangisidir?",
+   "secenekler": {
+    "A": "Trombositopeni",
+    "B": "Şistositler",
+    "C": "Böbrek yetmezliği",
+    "D": "Mikrovasküler tromboz",
+    "E": "Prodromal diyare olmaması"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Trombositopeni her iki tabloda da vardır; trombosit tüketimi tüm trombotik mikroanjiyopatilerin ortak özelliğidir.",
+    "B": "Şistositler her iki tabloda da görülür; mekanik eritrosit hasarı mikroanjiyopatik hemolitik anemi yapar.",
+    "C": "Böbrek yetmezliği ayırt ettirmez; kompleman aracılı TMA'da da sıklıkla ani başlangıçlı böbrek yetmezliği gelişir.",
+    "D": "Mikrovasküler tromboz iki tabloda da ortaktır; endotel hasarı ve trombosit agregasyonu tüm TMA'ların temelidir.",
+    "E": "Prodromal diyare olmaması doğru: kompleman aracılı TMA'da genellikle öncül ishal yoktur, Şiga toksini aracılı HUS ise kanlı ishalle başlar."
+   },
+   "ozet": "Kompleman aracılı TMA, faktör H, faktör I ya da MCP kusurlarıyla alternatif yolun kontrolsüz aktivasyonundan doğar; genellikle prodromal diyare yoktur ve prognozu Şiga toksini aracılı HUS'tan daha kötüdür.",
+   "metin": "**Soru.** Kompleman aracılı TMA'yı Şiga toksini aracılı HUS'tan ayıran özellik hangisidir?\n\n**A)** Trombositopeni · **B)** Şistositler · **C)** Böbrek yetmezliği · **D)** Mikrovasküler tromboz · **E)** Prodromal diyare olmaması\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Trombositopeni** — Trombositopeni her iki tabloda da vardır; trombosit tüketimi tüm trombotik mikroanjiyopatilerin ortak özelliğidir.\n- **Şistositler** — Şistositler her iki tabloda da görülür; mekanik eritrosit hasarı mikroanjiyopatik hemolitik anemi yapar.\n- **Böbrek yetmezliği** — Böbrek yetmezliği ayırt ettirmez; kompleman aracılı TMA'da da sıklıkla ani başlangıçlı böbrek yetmezliği gelişir.\n- **Mikrovasküler tromboz** — Mikrovasküler tromboz iki tabloda da ortaktır; endotel hasarı ve trombosit agregasyonu tüm TMA'ların temelidir.\n- **Prodromal diyare olmaması** — Prodromal diyare olmaması doğru: kompleman aracılı TMA'da genellikle öncül ishal yoktur, Şiga toksini aracılı HUS ise kanlı ishalle başlar.\n\n**Cevap: E** — Prodromal diyare olmaması\n\n**Özet.** Kompleman aracılı TMA, faktör H, faktör I ya da MCP kusurlarıyla alternatif yolun kontrolsüz aktivasyonundan doğar; genellikle prodromal diyare yoktur ve prognozu Şiga toksini aracılı HUS'tan daha kötüdür.",
+   "ses": "Kompleman aracılı trombotik mikroanjiyopatiyi Şiga toksini aracılı hemolitik üremik sendromdan ayıran özellik hangisidir?\nA, Trombositopeni\nBe, Şistositler\nCe, Böbrek yetmezliği\nDe, Mikrovasküler tromboz\nE, Prodromal diyare olmaması\nSeçenekleri sırayla değerlendirelim.\nTrombositopeni her iki tabloda da vardır. Trombosit tüketimi tüm trombotik mikroanjiyopatilerin ortak özelliğidir.\nŞistositler her iki tabloda da görülür. Mekanik eritrosit hasarı mikroanjiyopatik hemolitik anemi yapar.\nBöbrek yetmezliği ayırt ettirmez. Kompleman aracılı trombotik mikroanjiyopatide de sıklıkla ani başlangıçlı böbrek yetmezliği gelişir.\nMikrovasküler tromboz iki tabloda da ortaktır. Endotel hasarı ve trombosit agregasyonu tüm trombotik mikroanjiyopatilerin temelidir.\nProdromal diyare olmaması doğru. Kompleman aracılı trombotik mikroanjiyopatide genellikle öncül ishal yoktur, Şiga toksini aracılı hemolitik üremik sendrom ise kanlı ishalle başlar.\nDoğru cevap E, Prodromal diyare olmaması\nKompleman aracılı trombotik mikroanjiyopati, faktör ha, faktör bir ya da membran kofaktör proteini kusurlarıyla alternatif yolun kontrolsüz aktivasyonundan doğar. Genellikle prodromal diyare yoktur ve prognozu Şiga toksini aracılı hemolitik üremik sendromdan daha kötüdür.",
+   "kelime": 160
+  },
+  {
+   "no": 6,
+   "tur": "ornek",
+   "soru": "TTP patogenezinde eksik olan enzim hangisidir?",
+   "secenekler": {
+    "A": "ADAMTS13",
+    "B": "Faktör H",
+    "C": "Faktör I",
+    "D": "C1 inhibitörü",
+    "E": "Membran kofaktör proteini"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "ADAMTS13 doğru: ultra büyük vWF multimerlerini parçalayan bu proteaz, edinilmiş otoantikor ya da gen mutasyonuyla eksilir.",
+    "B": "Faktör H alternatif kompleman yolunu negatif düzenler; kusuru kompleman aracılı TMA yapar.",
+    "C": "Faktör I de alternatif yolun negatif düzenleyicisidir; eksikliği TTP'ye değil, kompleman aracılı TMA'ya yol açar.",
+    "D": "TTP'de eksik olan, ultra büyük multimerleri parçalayan proteazdır. C1 inhibitörü bu sorudaki ayrımı sağlamaz.",
+    "E": "Membran kofaktör proteini bir kompleman düzenleyicisidir; kusuru TTP ile değil, kompleman aracılı TMA ile ilişkilidir."
+   },
+   "ozet": "TTP'de ADAMTS13 eksikliğinde ultra büyük vWF multimerleri parçalanamaz; yaygın trombosit agregasyonu ateş, trombositopeni, hemolitik anemi, nörolojik belirtiler ve böbrek anormalliklerinden oluşan pentadı yapar.",
+   "metin": "**Soru.** TTP patogenezinde eksik olan enzim hangisidir?\n\n**A)** ADAMTS13 · **B)** Faktör H · **C)** Faktör I · **D)** C1 inhibitörü · **E)** Membran kofaktör proteini\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **ADAMTS13** — ADAMTS13 doğru: ultra büyük vWF multimerlerini parçalayan bu proteaz, edinilmiş otoantikor ya da gen mutasyonuyla eksilir.\n- **Faktör H** — Faktör H alternatif kompleman yolunu negatif düzenler; kusuru kompleman aracılı TMA yapar.\n- **Faktör I** — Faktör I de alternatif yolun negatif düzenleyicisidir; eksikliği TTP'ye değil, kompleman aracılı TMA'ya yol açar.\n- **C1 inhibitörü** — TTP'de eksik olan, ultra büyük multimerleri parçalayan proteazdır. C1 inhibitörü bu sorudaki ayrımı sağlamaz.\n- **Membran kofaktör proteini** — Membran kofaktör proteini bir kompleman düzenleyicisidir; kusuru TTP ile değil, kompleman aracılı TMA ile ilişkilidir.\n\n**Cevap: A** — ADAMTS13\n\n**Özet.** TTP'de ADAMTS13 eksikliğinde ultra büyük vWF multimerleri parçalanamaz; yaygın trombosit agregasyonu ateş, trombositopeni, hemolitik anemi, nörolojik belirtiler ve böbrek anormalliklerinden oluşan pentadı yapar.",
+   "ses": "Trombotik trombositopenik purpura patogenezinde eksik olan enzim hangisidir?\nA, A de a me te se on üç\nBe, Faktör ha\nCe, Faktör bir\nDe, Ce bir inhibitörü\nE, Membran kofaktör proteini\nHer seçeneği tek tek ele alalım.\nA de a me te se on üç doğru. Ultra büyük von Villebrand faktör multimerlerini parçalayan bu proteaz, edinilmiş otoantikor ya da gen mutasyonuyla eksilir.\nFaktör ha alternatif kompleman yolunu negatif düzenler. Kusuru kompleman aracılı trombotik mikroanjiyopati yapar.\nFaktör bir de alternatif yolun negatif düzenleyicisidir. Eksikliği trombotik trombositopenik purpuraya değil, kompleman aracılı trombotik mikroanjiyopatiye yol açar.\nTrombotik trombositopenik purpurada eksik olan, ultra büyük multimerleri parçalayan proteazdır. Cbir inhibitörü bu sorudaki ayrımı sağlamaz.\nMembran kofaktör proteini bir kompleman düzenleyicisidir. Kusuru trombotik trombositopenik purpura ile değil, kompleman aracılı trombotik mikroanjiyopati ile ilişkilidir.\nDoğru cevap A, A de a me te se on üç\nTrombotik trombositopenik purpurada a de a me te se on üç eksikliğinde ultra büyük von Villebrand faktör multimerleri parçalanamaz. Yaygın trombosit agregasyonu ateş, trombositopeni, hemolitik anemi, nörolojik belirtiler ve böbrek anormalliklerinden oluşan pentadı yapar.",
+   "kelime": 153
+  },
+  {
+   "no": 7,
+   "tur": "ornek",
+   "soru": "Trombotik mikroanjiyopatide periferik yaymada görülen parçalanmış eritrositler hangisidir?",
+   "secenekler": {
+    "A": "Sferositler",
+    "B": "Şistositler",
+    "C": "Hedef hücreler",
+    "D": "Orak hücreler",
+    "E": "Akantositler"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Trombotik mikroanjiyopatide eritrositler daralmış damarlarda mekanik olarak parçalanır. Sferositler bu sorudaki ayrımı sağlamaz.",
+    "B": "Şistositler doğru: trombüslü küçük damarlardan geçerken parçalanan eritrositlerdir ve mikroanjiyopatik hemolitik anemiyi gösterir.",
+    "C": "Mikroanjiyopatik hemolitik aneminin morfolojik izi parçalanmış eritrositlerdir. Hedef hücreler bu sorudaki ayrımı sağlamaz.",
+    "D": "Orak hücreler ile karıştırılabilir: Trombotik mikroanjiyopatide eritrositler trombosit açısından zengin trombüslerin bulunduğu kılcallarda hasarlanır.",
+    "E": "Trombotik mikroanjiyopatide mikrovasküler tromboz, mikroanjiyopatik hemolitik anemi ve trombositopeni birlikte görülür. Akantositler bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Trombotik mikroanjiyopatide trombosit açısından zengin trombüsler küçük damarları daraltır; buradan geçen eritrositler mekanik olarak parçalanır ve şistositler oluşur.",
+   "metin": "**Soru.** Trombotik mikroanjiyopatide periferik yaymada görülen parçalanmış eritrositler hangisidir?\n\n**A)** Sferositler · **B)** Şistositler · **C)** Hedef hücreler · **D)** Orak hücreler · **E)** Akantositler\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Sferositler** — Trombotik mikroanjiyopatide eritrositler daralmış damarlarda mekanik olarak parçalanır. Sferositler bu sorudaki ayrımı sağlamaz.\n- **Şistositler** — Şistositler doğru: trombüslü küçük damarlardan geçerken parçalanan eritrositlerdir ve mikroanjiyopatik hemolitik anemiyi gösterir.\n- **Hedef hücreler** — Mikroanjiyopatik hemolitik aneminin morfolojik izi parçalanmış eritrositlerdir. Hedef hücreler bu sorudaki ayrımı sağlamaz.\n- **Orak hücreler** — Orak hücreler ile karıştırılabilir: Trombotik mikroanjiyopatide eritrositler trombosit açısından zengin trombüslerin bulunduğu kılcallarda hasarlanır.\n- **Akantositler** — Trombotik mikroanjiyopatide mikrovasküler tromboz, mikroanjiyopatik hemolitik anemi ve trombositopeni birlikte görülür. Akantositler bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Şistositler\n\n**Özet.** Trombotik mikroanjiyopatide trombosit açısından zengin trombüsler küçük damarları daraltır; buradan geçen eritrositler mekanik olarak parçalanır ve şistositler oluşur.",
+   "ses": "Trombotik mikroanjiyopatide periferik yaymada görülen parçalanmış eritrositler hangisidir?\nA, Sferositler\nBe, Şistositler\nCe, Hedef hücreler\nDe, Orak hücreler\nE, Akantositler\nŞıkları sırasıyla gözden geçirelim.\nTrombotik mikroanjiyopatide eritrositler daralmış damarlarda mekanik olarak parçalanır. Sferositler bu sorudaki ayrımı sağlamaz.\nŞistositler doğru. Trombüslü küçük damarlardan geçerken parçalanan eritrositlerdir ve mikroanjiyopatik hemolitik anemiyi gösterir.\nMikroanjiyopatik hemolitik aneminin morfolojik izi parçalanmış eritrositlerdir. Hedef hücreler bu sorudaki ayrımı sağlamaz.\nOrak hücreler ile karıştırılabilir. Trombotik mikroanjiyopatide eritrositler trombosit açısından zengin trombüslerin bulunduğu kılcallarda hasarlanır.\nTrombotik mikroanjiyopatide mikrovasküler tromboz, mikroanjiyopatik hemolitik anemi ve trombositopeni birlikte görülür. Akantositler bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Şistositler\nTrombotik mikroanjiyopatide trombosit açısından zengin trombüsler küçük damarları daraltır. Buradan geçen eritrositler mekanik olarak parçalanır ve şistositler oluşur.",
+   "kelime": 139
+  },
+  {
+   "no": 8,
+   "tur": "ornek",
+   "soru": "Benign nefrosklerozun karakteristik damar lezyonu hangisidir?",
+   "secenekler": {
+    "A": "Fibrinoid nekroz",
+    "B": "Soğan zarı lezyonu",
+    "C": "Hiyalin arteriyoloskleroz",
+    "D": "Granülomatöz vaskülit",
+    "E": "Kolesterol embolisi"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Fibrinoid nekroz malign hipertansiyonda şiddetli endotel hasarının sonucudur; arteriyol duvarı homojen, granüler eozinofilik görünür.",
+    "B": "Soğan zarı lezyonu malign hipertansiyonda konsantrik intimal hücre proliferasyonuyla oluşan hiperplastik arteriyolosklerozdur.",
+    "C": "Hiyalin arteriyoloskleroz doğru: uzun süreli hipertansiyonda plazma proteinleri ve matris birikimi arteriyol duvarını homojen pembe kalınlaştırır.",
+    "D": "Benign nefroskleroz uzun süreli hipertansiyonda endotel hasarı ve plazma proteinlerinin damar duvarına sızmasıyla başlar. Granülomatöz vaskülit bu sorudaki ayrımı sağlamaz.",
+    "E": "Kolesterol embolisi ile karıştırılabilir: Benign nefrosklerozda lümen daralması kronik iskemiyle tübül atrofisi ve interstisyel fibrozis yapar."
+   },
+   "ozet": "Benign nefrosklerozda uzun süreli hipertansiyon endotel hasarı yapar; plazma proteinleri ve matris birikerek hiyalin arteriyoloskleroz oluşturur, daralan lümen tübül atrofisine yol açar.",
+   "metin": "**Soru.** Benign nefrosklerozun karakteristik damar lezyonu hangisidir?\n\n**A)** Fibrinoid nekroz · **B)** Soğan zarı lezyonu · **C)** Hiyalin arteriyoloskleroz · **D)** Granülomatöz vaskülit · **E)** Kolesterol embolisi\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Fibrinoid nekroz** — Fibrinoid nekroz malign hipertansiyonda şiddetli endotel hasarının sonucudur; arteriyol duvarı homojen, granüler eozinofilik görünür.\n- **Soğan zarı lezyonu** — Soğan zarı lezyonu malign hipertansiyonda konsantrik intimal hücre proliferasyonuyla oluşan hiperplastik arteriyolosklerozdur.\n- **Hiyalin arteriyoloskleroz** — Hiyalin arteriyoloskleroz doğru: uzun süreli hipertansiyonda plazma proteinleri ve matris birikimi arteriyol duvarını homojen pembe kalınlaştırır.\n- **Granülomatöz vaskülit** — Benign nefroskleroz uzun süreli hipertansiyonda endotel hasarı ve plazma proteinlerinin damar duvarına sızmasıyla başlar. Granülomatöz vaskülit bu sorudaki ayrımı sağlamaz.\n- **Kolesterol embolisi** — Kolesterol embolisi ile karıştırılabilir: Benign nefrosklerozda lümen daralması kronik iskemiyle tübül atrofisi ve interstisyel fibrozis yapar.\n\n**Cevap: C** — Hiyalin arteriyoloskleroz\n\n**Özet.** Benign nefrosklerozda uzun süreli hipertansiyon endotel hasarı yapar; plazma proteinleri ve matris birikerek hiyalin arteriyoloskleroz oluşturur, daralan lümen tübül atrofisine yol açar.",
+   "ses": "Benign nefrosklerozun karakteristik damar lezyonu hangisidir?\nA, Fibrinoid nekroz\nBe, Soğan zarı lezyonu\nCe, Hiyalin arteriyoloskleroz\nDe, Granülomatöz vaskülit\nE, Kolesterol embolisi\nŞimdi seçeneklere tek tek bakalım.\nFibrinoid nekroz malign hipertansiyonda şiddetli endotel hasarının sonucudur. Arteriyol duvarı homojen, granüler eozinofilik görünür.\nSoğan zarı lezyonu malign hipertansiyonda konsantrik intimal hücre proliferasyonuyla oluşan hiperplastik arteriyolosklerozdur.\nHiyalin arteriyoloskleroz doğru. Uzun süreli hipertansiyonda plazma proteinleri ve matris birikimi arteriyol duvarını homojen pembe kalınlaştırır.\nBenign nefroskleroz uzun süreli hipertansiyonda endotel hasarı ve plazma proteinlerinin damar duvarına sızmasıyla başlar. Granülomatöz vaskülit bu sorudaki ayrımı sağlamaz.\nKolesterol embolisi ile karıştırılabilir. Benign nefrosklerozda lümen daralması kronik iskemiyle tübül atrofisi ve interstisyel fibrozis yapar.\nDoğru cevap Ce, Hiyalin arteriyoloskleroz\nBenign nefrosklerozda uzun süreli hipertansiyon endotel hasarı yapar. Plazma proteinleri ve matris birikerek hiyalin arteriyoloskleroz oluşturur, daralan lümen tübül atrofisine yol açar.",
+   "kelime": 160
+  },
+  {
+   "no": 9,
+   "tur": "ornek",
+   "soru": "Benign nefrosklerozda böbreğin makroskopik görünümü hangisidir?",
+   "secenekler": {
+    "A": "Pire ısırığı görünümü",
+    "B": "Asimetrik kaba skar",
+    "C": "Büyümüş soluk böbrek",
+    "D": "Simetrik küçük, ince granüler",
+    "E": "Kistik genişlemiş böbrek"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Pire ısırığı görünümü malign hipertansiyonda görülür; kortikal yüzeyde küçük peteşiyal kanamalar vardır.",
+    "B": "Asimetrik kaba skar piyelonefrit kökenli kronik böbrek hastalığının yüzey görünümüdür.",
+    "C": "Benign nefrosklerozda böbrekler büyümez, aksine küçülür. Büyümüş soluk böbrek bu sorudaki ayrımı sağlamaz.",
+    "D": "Simetrik küçük, ince granüler doğru: benign nefrosklerozda böbrekler simetrik küçülür, skarlaşma yüzeye ince granüler görünüm verir.",
+    "E": "Polikistik hastalıklar kronik böbrek hastalığının ayrı, kistik bir neden grubudur. Kistik böbrek bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Benign nefrosklerozda böbrekler simetrik olarak küçülür ve yüzey ince granülerdir; mikroskopide hiyalin arteriyoloskleroz, tübül atrofisi ve interstisyel fibrozis görülür.",
+   "metin": "**Soru.** Benign nefrosklerozda böbreğin makroskopik görünümü hangisidir?\n\n**A)** Pire ısırığı görünümü · **B)** Asimetrik kaba skar · **C)** Büyümüş soluk böbrek · **D)** Simetrik küçük, ince granüler · **E)** Kistik genişlemiş böbrek\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Pire ısırığı görünümü** — Pire ısırığı görünümü malign hipertansiyonda görülür; kortikal yüzeyde küçük peteşiyal kanamalar vardır.\n- **Asimetrik kaba skar** — Asimetrik kaba skar piyelonefrit kökenli kronik böbrek hastalığının yüzey görünümüdür.\n- **Büyümüş soluk böbrek** — Benign nefrosklerozda böbrekler büyümez, aksine küçülür. Büyümüş soluk böbrek bu sorudaki ayrımı sağlamaz.\n- **Simetrik küçük, ince granüler** — Simetrik küçük, ince granüler doğru: benign nefrosklerozda böbrekler simetrik küçülür, skarlaşma yüzeye ince granüler görünüm verir.\n- **Kistik genişlemiş böbrek** — Polikistik hastalıklar kronik böbrek hastalığının ayrı, kistik bir neden grubudur. Kistik böbrek bu sorudaki ayrımı sağlamaz.\n\n**Cevap: D** — Simetrik küçük, ince granüler\n\n**Özet.** Benign nefrosklerozda böbrekler simetrik olarak küçülür ve yüzey ince granülerdir; mikroskopide hiyalin arteriyoloskleroz, tübül atrofisi ve interstisyel fibrozis görülür.",
+   "ses": "Benign nefrosklerozda böbreğin makroskopik görünümü hangisidir?\nA, Pire ısırığı görünümü\nBe, Asimetrik kaba skar\nCe, Büyümüş soluk böbrek\nDe, Simetrik küçük, ince granüler\nE, Kistik genişlemiş böbrek\nSeçenekleri sırayla değerlendirelim.\nPire ısırığı görünümü malign hipertansiyonda görülür. Kortikal yüzeyde küçük peteşiyal kanamalar vardır.\nAsimetrik kaba skar piyelonefrit kökenli kronik böbrek hastalığının yüzey görünümüdür.\nBenign nefrosklerozda böbrekler büyümez, aksine küçülür. Büyümüş soluk böbrek bu sorudaki ayrımı sağlamaz.\nSimetrik küçük, ince granüler doğru. Benign nefrosklerozda böbrekler simetrik küçülür, skarlaşma yüzeye ince granüler görünüm verir.\nPolikistik hastalıklar kronik böbrek hastalığının ayrı, kistik bir neden grubudur. Kistik böbrek bu sorudaki ayrımı sağlamaz.\nDoğru cevap De, Simetrik küçük, ince granüler\nBenign nefrosklerozda böbrekler simetrik olarak küçülür ve yüzey ince granülerdir. Mikroskopide hiyalin arteriyoloskleroz, tübül atrofisi ve interstisyel fibrozis görülür.",
+   "kelime": 156
+  },
+  {
+   "no": 10,
+   "tur": "ornek",
+   "soru": "Malign hipertansiyonda interlobüler arterlerde görülen lezyon hangisidir?",
+   "secenekler": {
+    "A": "Hiyalin arteriyoloskleroz",
+    "B": "Amiloid birikimi",
+    "C": "Tel halka",
+    "D": "Nodüler skleroz",
+    "E": "Soğan zarı görünümü"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Hiyalin arteriyoloskleroz benign nefrosklerozun arteriyol lezyonudur; uzun süreli hipertansiyonda plazma proteinleri birikir.",
+    "B": "Amiloid birikimi amiloid nefropatisinde mezangium ve kılcal duvarlarda olur; hipertansif damar lezyonu değildir.",
+    "C": "Tel halka ile karıştırılabilir: Malign hipertansiyonda arteriyollerde homojen eozinofilik fibrinoid nekroz da görülür.",
+    "D": "Nodüler skleroz diyabetik nefropatide Kimmelstiel-Wilson lezyonudur; arter duvarında değil, glomerülde gelişir.",
+    "E": "Soğan zarı görünümü doğru: malign hipertansiyonda interlobüler arterlerde konsantrik intimal hücre proliferasyonu hiperplastik arteriyoloskleroz yapar."
+   },
+   "ozet": "Malign hipertansiyonda arteriyollerde fibrinoid nekroz, interlobüler arterlerde ise konsantrik intimal proliferasyonla soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür.",
+   "metin": "**Soru.** Malign hipertansiyonda interlobüler arterlerde görülen lezyon hangisidir?\n\n**A)** Hiyalin arteriyoloskleroz · **B)** Amiloid birikimi · **C)** Tel halka · **D)** Nodüler skleroz · **E)** Soğan zarı görünümü\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Hiyalin arteriyoloskleroz** — Hiyalin arteriyoloskleroz benign nefrosklerozun arteriyol lezyonudur; uzun süreli hipertansiyonda plazma proteinleri birikir.\n- **Amiloid birikimi** — Amiloid birikimi amiloid nefropatisinde mezangium ve kılcal duvarlarda olur; hipertansif damar lezyonu değildir.\n- **Tel halka** — Tel halka ile karıştırılabilir: Malign hipertansiyonda arteriyollerde homojen eozinofilik fibrinoid nekroz da görülür.\n- **Nodüler skleroz** — Nodüler skleroz diyabetik nefropatide Kimmelstiel-Wilson lezyonudur; arter duvarında değil, glomerülde gelişir.\n- **Soğan zarı görünümü** — Soğan zarı görünümü doğru: malign hipertansiyonda interlobüler arterlerde konsantrik intimal hücre proliferasyonu hiperplastik arteriyoloskleroz yapar.\n\n**Cevap: E** — Soğan zarı görünümü\n\n**Özet.** Malign hipertansiyonda arteriyollerde fibrinoid nekroz, interlobüler arterlerde ise konsantrik intimal proliferasyonla soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür.",
+   "ses": "Malign hipertansiyonda interlobüler arterlerde görülen lezyon hangisidir?\nA, Hiyalin arteriyoloskleroz\nBe, Amiloid birikimi\nCe, Tel halka\nDe, Nodüler skleroz\nE, Soğan zarı görünümü\nHer seçeneği tek tek ele alalım.\nHiyalin arteriyoloskleroz benign nefrosklerozun arteriyol lezyonudur. Uzun süreli hipertansiyonda plazma proteinleri birikir.\nAmiloid birikimi amiloid nefropatisinde mezangium ve kılcal duvarlarda olur. Hipertansif damar lezyonu değildir.\nTel halka ile karıştırılabilir. Malign hipertansiyonda arteriyollerde homojen eozinofilik fibrinoid nekroz da görülür.\nNodüler skleroz diyabetik nefropatide Kimelştil Vilson lezyonudur. Arter duvarında değil, glomerülde gelişir.\nSoğan zarı görünümü doğru. Malign hipertansiyonda interlobüler arterlerde konsantrik intimal hücre proliferasyonu hiperplastik arteriyoloskleroz yapar.\nDoğru cevap E, Soğan zarı görünümü\nMalign hipertansiyonda arteriyollerde fibrinoid nekroz, interlobüler arterlerde ise konsantrik intimal proliferasyonla soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür.",
+   "kelime": 144
+  },
+  {
+   "no": 11,
+   "tur": "ornek",
+   "soru": "Malign nefrosklerozda böbrek yüzeyinde görülen 'pire ısırığı' görünümünün nedeni hangisidir?",
+   "secenekler": {
+    "A": "Peteşiyal kanamalar",
+    "B": "Kortikal kistler",
+    "C": "Kaba skarlar",
+    "D": "Amiloid birikimi",
+    "E": "Abse odakları"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Peteşiyal kanamalar doğru: malign nefrosklerozda kortikal yüzeydeki küçük peteşiler pire ısırığı görünümü verir.",
+    "B": "Kortikal kistler ile karıştırılabilir: Malign nefrosklerozda böbrekler normal boyutta ya da küçülmüş olabilir.",
+    "C": "Kaba skarlar piyelonefrit kökenli kronik böbrek hastalığında asimetrik, düzensiz skarlaşma olarak görülür.",
+    "D": "Amiloid birikimi Kongo kırmızısıyla elma yeşili çift kırınım veren fibriller protein birikimidir; yüzeyde peteşi yapmaz.",
+    "E": "Malign hipertansiyon bir enfeksiyon değil, akut vasküler hasar tablosudur. Abse odakları bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Malign nefrosklerozda kortikal yüzeydeki küçük peteşiyal kanamalar pire ısırığı görünümü verir; mikroskopide fibrinoid nekroz ve soğan zarı lezyonu eşlik eder.",
+   "metin": "**Soru.** Malign nefrosklerozda böbrek yüzeyinde görülen 'pire ısırığı' görünümünün nedeni hangisidir?\n\n**A)** Peteşiyal kanamalar · **B)** Kortikal kistler · **C)** Kaba skarlar · **D)** Amiloid birikimi · **E)** Abse odakları\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Peteşiyal kanamalar** — Peteşiyal kanamalar doğru: malign nefrosklerozda kortikal yüzeydeki küçük peteşiler pire ısırığı görünümü verir.\n- **Kortikal kistler** — Kortikal kistler ile karıştırılabilir: Malign nefrosklerozda böbrekler normal boyutta ya da küçülmüş olabilir.\n- **Kaba skarlar** — Kaba skarlar piyelonefrit kökenli kronik böbrek hastalığında asimetrik, düzensiz skarlaşma olarak görülür.\n- **Amiloid birikimi** — Amiloid birikimi Kongo kırmızısıyla elma yeşili çift kırınım veren fibriller protein birikimidir; yüzeyde peteşi yapmaz.\n- **Abse odakları** — Malign hipertansiyon bir enfeksiyon değil, akut vasküler hasar tablosudur. Abse odakları bu sorudaki ayrımı sağlamaz.\n\n**Cevap: A** — Peteşiyal kanamalar\n\n**Özet.** Malign nefrosklerozda kortikal yüzeydeki küçük peteşiyal kanamalar pire ısırığı görünümü verir; mikroskopide fibrinoid nekroz ve soğan zarı lezyonu eşlik eder.",
+   "ses": "Malign nefrosklerozda böbrek yüzeyinde görülen pire ısırığı görünümünün nedeni hangisidir?\nA, Peteşiyal kanamalar\nBe, Kortikal kistler\nCe, Kaba skarlar\nDe, Amiloid birikimi\nE, Abse odakları\nŞıkları sırasıyla gözden geçirelim.\nPeteşiyal kanamalar doğru. Malign nefrosklerozda kortikal yüzeydeki küçük peteşiler pire ısırığı görünümü verir.\nKortikal kistler ile karıştırılabilir. Malign nefrosklerozda böbrekler normal boyutta ya da küçülmüş olabilir.\nKaba skarlar piyelonefrit kökenli kronik böbrek hastalığında asimetrik, düzensiz skarlaşma olarak görülür.\nAmiloid birikimi Kongo kırmızısıyla elma yeşili çift kırınım veren fibriller protein birikimidir. Yüzeyde peteşi yapmaz.\nMalign hipertansiyon bir enfeksiyon değil, akut vasküler hasar tablosudur. Abse odakları bu sorudaki ayrımı sağlamaz.\nDoğru cevap A, Peteşiyal kanamalar\nMalign nefrosklerozda kortikal yüzeydeki küçük peteşiyal kanamalar pire ısırığı görünümü verir. Mikroskopide fibrinoid nekroz ve soğan zarı lezyonu eşlik eder.",
+   "kelime": 149
+  },
+  {
+   "no": 12,
+   "tur": "ornek",
+   "soru": "Malign hipertansiyonda ölümün en sık nedeni hangisidir?",
+   "secenekler": {
+    "A": "Serebral kanama",
+    "B": "Üremi",
+    "C": "Kalp yetmezliği",
+    "D": "Sepsis",
+    "E": "Pulmoner emboli"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Serebral kanama en sık ölüm nedeni değildir; kalp yetmezliğiyle birlikte toplam payı yalnız %10'dur.",
+    "B": "Üremi doğru: malign hipertansiyonda ölümlerin %90'ı üremiye bağlıdır.",
+    "C": "Kalp yetmezliği de azınlıktaki ölüm nedenlerindendir; malign hipertansiyonda sistolik basınç genellikle 200 mmHg'nin üzerindedir.",
+    "D": "Zamanında tedaviyle hastaların yaklaşık %50'si 5 yıl veya daha uzun yaşar. Sepsis bu sorudaki ayrımı sağlamaz.",
+    "E": "Pulmoner emboli ile karıştırılabilir: Malign hipertansiyon papilödem, ensefalopati ve kısa sürede akut böbrek yetmezliğiyle seyreder."
+   },
+   "ozet": "Malign hipertansiyonda ölümlerin %90'ı üremiden, %10'u serebral kanama ya da kalp yetmezliğinden olur; hastalık tıbbi bir acil durumdur.",
+   "metin": "**Soru.** Malign hipertansiyonda ölümün en sık nedeni hangisidir?\n\n**A)** Serebral kanama · **B)** Üremi · **C)** Kalp yetmezliği · **D)** Sepsis · **E)** Pulmoner emboli\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Serebral kanama** — Serebral kanama en sık ölüm nedeni değildir; kalp yetmezliğiyle birlikte toplam payı yalnız %10'dur.\n- **Üremi** — Üremi doğru: malign hipertansiyonda ölümlerin %90'ı üremiye bağlıdır.\n- **Kalp yetmezliği** — Kalp yetmezliği de azınlıktaki ölüm nedenlerindendir; malign hipertansiyonda sistolik basınç genellikle 200 mmHg'nin üzerindedir.\n- **Sepsis** — Zamanında tedaviyle hastaların yaklaşık %50'si 5 yıl veya daha uzun yaşar. Sepsis bu sorudaki ayrımı sağlamaz.\n- **Pulmoner emboli** — Pulmoner emboli ile karıştırılabilir: Malign hipertansiyon papilödem, ensefalopati ve kısa sürede akut böbrek yetmezliğiyle seyreder.\n\n**Cevap: B** — Üremi\n\n**Özet.** Malign hipertansiyonda ölümlerin %90'ı üremiden, %10'u serebral kanama ya da kalp yetmezliğinden olur; hastalık tıbbi bir acil durumdur.",
+   "ses": "Malign hipertansiyonda ölümün en sık nedeni hangisidir?\nA, Serebral kanama\nBe, Üremi\nCe, Kalp yetmezliği\nDe, Sepsis\nE, Pulmoner emboli\nŞimdi seçeneklere tek tek bakalım.\nSerebral kanama en sık ölüm nedeni değildir. Kalp yetmezliğiyle birlikte toplam payı yalnız yüzde ondur.\nÜremi doğru. Malign hipertansiyonda ölümlerin yüzde doksanı üremiye bağlıdır.\nKalp yetmezliği de azınlıktaki ölüm nedenlerindendir. Malign hipertansiyonda sistolik basınç genellikle iki yüz milimetre cıvanın üzerindedir.\nZamanında tedaviyle hastaların yaklaşık yüzde ellisi beş yıl veya daha uzun yaşar. Sepsis bu sorudaki ayrımı sağlamaz.\nPulmoner emboli ile karıştırılabilir. Malign hipertansiyon papilödem, ensefalopati ve kısa sürede akut böbrek yetmezliğiyle seyreder.\nDoğru cevap Be, Üremi\nMalign hipertansiyonda ölümlerin yüzde doksanı üremiden, yüzde onu serebral kanama ya da kalp yetmezliğinden olur. Hastalık tıbbi bir acil durumdur.",
+   "kelime": 139
+  },
+  {
+   "no": 13,
+   "tur": "ornek",
+   "soru": "Kronik böbrek hastalığında piyelonefrit kökenli böbreğin yüzey görünümü hangisidir?",
+   "secenekler": {
+    "A": "Yaygın ince granüler",
+    "B": "Pire ısırığı",
+    "C": "Asimetrik düzensiz skarlaşma",
+    "D": "Düzgün ve büyümüş",
+    "E": "Nodüler"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Yaygın ince granüler yüzey vasküler ya da glomerüler kökenli kronik böbrek hastalığında görülür.",
+    "B": "Pire ısırığı görünümü malign nefrosklerozun kortikal peteşiyal kanamalarıdır; piyelonefritle ilişkili değildir.",
+    "C": "Asimetrik düzensiz skarlaşma doğru: piyelonefrit kökenli kronik böbrek hastalığında skarlar iki böbreği eşit tutmaz.",
+    "D": "Düzgün ve büyümüş böbrek ile karıştırılabilir: Kronik böbrek hastalığında böbrekler büzüşmüş ve küçüktür.",
+    "E": "Nodüler lezyon, diyabetik nefropatide glomerül düzeyindeki Kimmelstiel-Wilson glomerulosklerozudur. Nodüler görünüm bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Kronik böbrek hastalığında vasküler ya da glomerüler kökende yüzey yaygın granülerdir; piyelonefrit kökenli olguda ise asimetrik, düzensiz skarlaşma görülür.",
+   "metin": "**Soru.** Kronik böbrek hastalığında piyelonefrit kökenli böbreğin yüzey görünümü hangisidir?\n\n**A)** Yaygın ince granüler · **B)** Pire ısırığı · **C)** Asimetrik düzensiz skarlaşma · **D)** Düzgün ve büyümüş · **E)** Nodüler\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Yaygın ince granüler** — Yaygın ince granüler yüzey vasküler ya da glomerüler kökenli kronik böbrek hastalığında görülür.\n- **Pire ısırığı** — Pire ısırığı görünümü malign nefrosklerozun kortikal peteşiyal kanamalarıdır; piyelonefritle ilişkili değildir.\n- **Asimetrik düzensiz skarlaşma** — Asimetrik düzensiz skarlaşma doğru: piyelonefrit kökenli kronik böbrek hastalığında skarlar iki böbreği eşit tutmaz.\n- **Düzgün ve büyümüş** — Düzgün ve büyümüş böbrek ile karıştırılabilir: Kronik böbrek hastalığında böbrekler büzüşmüş ve küçüktür.\n- **Nodüler** — Nodüler lezyon, diyabetik nefropatide glomerül düzeyindeki Kimmelstiel-Wilson glomerulosklerozudur. Nodüler görünüm bu sorudaki ayrımı sağlamaz.\n\n**Cevap: C** — Asimetrik düzensiz skarlaşma\n\n**Özet.** Kronik böbrek hastalığında vasküler ya da glomerüler kökende yüzey yaygın granülerdir; piyelonefrit kökenli olguda ise asimetrik, düzensiz skarlaşma görülür.",
+   "ses": "Kronik böbrek hastalığında piyelonefrit kökenli böbreğin yüzey görünümü hangisidir?\nA, Yaygın ince granüler\nBe, Pire ısırığı\nCe, Asimetrik düzensiz skarlaşma\nDe, Düzgün ve büyümüş\nE, Nodüler\nSeçenekleri sırayla değerlendirelim.\nYaygın ince granüler yüzey vasküler ya da glomerüler kökenli kronik böbrek hastalığında görülür.\nPire ısırığı görünümü malign nefrosklerozun kortikal peteşiyal kanamalarıdır. Piyelonefritle ilişkili değildir.\nAsimetrik düzensiz skarlaşma doğru. Piyelonefrit kökenli kronik böbrek hastalığında skarlar iki böbreği eşit tutmaz.\nDüzgün ve büyümüş böbrek ile karıştırılabilir. Kronik böbrek hastalığında böbrekler büzüşmüş ve küçüktür.\nNodüler lezyon, diyabetik nefropatide glomerül düzeyindeki Kimelştil Vilson glomerulosklerozudur. Nodüler görünüm bu sorudaki ayrımı sağlamaz.\nDoğru cevap Ce, Asimetrik düzensiz skarlaşma\nKronik böbrek hastalığında vasküler ya da glomerüler kökende yüzey yaygın granülerdir. Piyelonefrit kökenli olguda ise asimetrik, düzensiz skarlaşma görülür.",
+   "kelime": 148
+  },
+  {
+   "no": 14,
+   "tur": "ornek",
+   "soru": "Kronik böbrek hastalığında kalan nefronlarda ilerlemeyi başlatan adaptif değişiklik hangisidir?",
+   "secenekler": {
+    "A": "Tübüler hiperplazi",
+    "B": "Mezangiyal IgA birikimi",
+    "C": "Hilal oluşumu",
+    "D": "Hiperfiltrasyon",
+    "E": "Amiloid birikimi"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Tübüler hiperplazi ile karıştırılabilir: Kronik böbrek hastalığında tübüllerde atrofi gelişir.",
+    "B": "İlerleyen dönemde kalan nefronlarda mezangiumda biriken matriks skleroz yapar. Mezangiyal IgA birikimi bu sorudaki ayrımı sağlamaz.",
+    "C": "Hilal oluşumu küçük damar vaskülitlerinde pauci-immün hızlı ilerleyen glomerulonefritin bulgusudur; nefron kaybına adaptasyon değildir.",
+    "D": "Hiperfiltrasyon doğru: kalan nefronlarda GFR artar, glomerüler hipertrofi ve kapiller hipertansiyon zamanla skleroz ve yeni nefron kaybı yapar.",
+    "E": "Amiloid birikimi amiloidozda fibriller proteinlerin ekstrasellüler birikimidir; adaptif bir değişiklik değildir."
+   },
+   "ozet": "Nefron kaybında kalan nefronlar hiperfiltrasyonla uyum sağlar; glomerüler hipertrofi ve kapiller hipertansiyon zamanla proteinüri ve skleroz yapar, kendi kendini besleyen bir kayıp döngüsü başlar.",
+   "metin": "**Soru.** Kronik böbrek hastalığında kalan nefronlarda ilerlemeyi başlatan adaptif değişiklik hangisidir?\n\n**A)** Tübüler hiperplazi · **B)** Mezangiyal IgA birikimi · **C)** Hilal oluşumu · **D)** Hiperfiltrasyon · **E)** Amiloid birikimi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Tübüler hiperplazi** — Tübüler hiperplazi ile karıştırılabilir: Kronik böbrek hastalığında tübüllerde atrofi gelişir.\n- **Mezangiyal IgA birikimi** — İlerleyen dönemde kalan nefronlarda mezangiumda biriken matriks skleroz yapar. Mezangiyal IgA birikimi bu sorudaki ayrımı sağlamaz.\n- **Hilal oluşumu** — Hilal oluşumu küçük damar vaskülitlerinde pauci-immün hızlı ilerleyen glomerulonefritin bulgusudur; nefron kaybına adaptasyon değildir.\n- **Hiperfiltrasyon** — Hiperfiltrasyon doğru: kalan nefronlarda GFR artar, glomerüler hipertrofi ve kapiller hipertansiyon zamanla skleroz ve yeni nefron kaybı yapar.\n- **Amiloid birikimi** — Amiloid birikimi amiloidozda fibriller proteinlerin ekstrasellüler birikimidir; adaptif bir değişiklik değildir.\n\n**Cevap: D** — Hiperfiltrasyon\n\n**Özet.** Nefron kaybında kalan nefronlar hiperfiltrasyonla uyum sağlar; glomerüler hipertrofi ve kapiller hipertansiyon zamanla proteinüri ve skleroz yapar, kendi kendini besleyen bir kayıp döngüsü başlar.",
+   "ses": "Kronik böbrek hastalığında kalan nefronlarda ilerlemeyi başlatan adaptif değişiklik hangisidir?\nA, Tübüler hiperplazi\nBe, Mezangiyal i ge a birikimi\nCe, Hilal oluşumu\nDe, Hiperfiltrasyon\nE, Amiloid birikimi\nHer seçeneği tek tek ele alalım.\nTübüler hiperplazi ile karıştırılabilir. Kronik böbrek hastalığında tübüllerde atrofi gelişir.\nİlerleyen dönemde kalan nefronlarda mezangiumda biriken matriks skleroz yapar. Mezangiyal IgA birikimi bu sorudaki ayrımı sağlamaz.\nHilal oluşumu küçük damar vaskülitlerinde pausi immün hızlı ilerleyen glomerulonefritin bulgusudur. Nefron kaybına adaptasyon değildir.\nHiperfiltrasyon doğru. Kalan nefronlarda glomerüler filtrasyon hızı artar, glomerüler hipertrofi ve kapiller hipertansiyon zamanla skleroz ve yeni nefron kaybı yapar.\nAmiloid birikimi amiloidozda fibriller proteinlerin ekstrasellüler birikimidir. Adaptif bir değişiklik değildir.\nDoğru cevap De, Hiperfiltrasyon\nNefron kaybında kalan nefronlar hiperfiltrasyonla uyum sağlar. Glomerüler hipertrofi ve kapiller hipertansiyon zamanla proteinüri ve skleroz yapar, kendi kendini besleyen bir kayıp döngüsü başlar.",
+   "kelime": 155
+  },
+  {
+   "no": 29,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisi hemolitik üremik sendromun (HÜS) patogenezi ile ilişkili değildir?",
+   "secenekler": {
+    "A": "Shiga benzeri toksin salınımı",
+    "B": "Faktör I eksikliği",
+    "C": "CD46 eksikliği",
+    "D": "ADAMTS13 eksikliği",
+    "E": "Faktör H eksikliği"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Şiga benzeri toksin salınımı, E. coli ve Shigella ile gelişen Şiga toksini aracılı HUS'un temel mekanizmasıdır; bu yüzden cevap değildir.",
+    "B": "Faktör I eksikliği alternatif kompleman yolunun düzenlenmesini bozar ve eskiden atipik HUS denen kompleman aracılı TMA'ya yol açar.",
+    "C": "Kompleman aracılı TMA'da kontrolsüz kompleman aktivasyonu endotel hasarı ve mikrovasküler tromboz yapar. CD46 eksikliği bu sorudaki ayrımı sağlamaz.",
+    "D": "ADAMTS13 eksikliği HUS ile değil, TTP ile ilişkilidir; ultra büyük vWF multimerleri parçalanamaz, bu yüzden doğru cevaptır.",
+    "E": "Faktör H eksikliği alternatif kompleman yolunu kontrolsüz bırakır ve kompleman aracılı TMA, yani eski adıyla atipik HUS yapar."
+   },
+   "ozet": "HUS, Şiga toksini aracılı formda ya da Faktör H, Faktör I ve MCP gibi düzenleyicilerin kusuruyla kompleman aracılı formda gelişir; ADAMTS13 eksikliği ise TTP'ye yol açar.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi hemolitik üremik sendromun (HÜS) patogenezi ile ilişkili değildir?\n\n**A)** Shiga benzeri toksin salınımı · **B)** Faktör I eksikliği · **C)** CD46 eksikliği · **D)** ADAMTS13 eksikliği · **E)** Faktör H eksikliği\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Shiga benzeri toksin salınımı** — Şiga benzeri toksin salınımı, E. coli ve Shigella ile gelişen Şiga toksini aracılı HUS'un temel mekanizmasıdır; bu yüzden cevap değildir.\n- **Faktör I eksikliği** — Faktör I eksikliği alternatif kompleman yolunun düzenlenmesini bozar ve eskiden atipik HUS denen kompleman aracılı TMA'ya yol açar.\n- **CD46 eksikliği** — Kompleman aracılı TMA'da kontrolsüz kompleman aktivasyonu endotel hasarı ve mikrovasküler tromboz yapar. CD46 eksikliği bu sorudaki ayrımı sağlamaz.\n- **ADAMTS13 eksikliği** — ADAMTS13 eksikliği HUS ile değil, TTP ile ilişkilidir; ultra büyük vWF multimerleri parçalanamaz, bu yüzden doğru cevaptır.\n- **Faktör H eksikliği** — Faktör H eksikliği alternatif kompleman yolunu kontrolsüz bırakır ve kompleman aracılı TMA, yani eski adıyla atipik HUS yapar.\n\n**Cevap: D** — ADAMTS13 eksikliği\n\n**Özet.** HUS, Şiga toksini aracılı formda ya da Faktör H, Faktör I ve MCP gibi düzenleyicilerin kusuruyla kompleman aracılı formda gelişir; ADAMTS13 eksikliği ise TTP'ye yol açar.",
+   "ses": "Aşağıdakilerden hangisi hemolitik üremik sendromun patogenezi ile ilişkili değildir?\nA, Şiga benzeri toksin salınımı\nBe, Faktör bir eksikliği\nCe, Ce de kırk altı eksikliği\nDe, A de a me te se on üç eksikliği\nE, Faktör ha eksikliği\nSeçenekleri sırayla değerlendirelim.\nŞiga benzeri toksin salınımı, e koli ve Şigella ile gelişen Şiga toksini aracılı hemolitik üremik sendromun temel mekanizmasıdır. Bu yüzden cevap değildir.\nFaktör bir eksikliği alternatif kompleman yolunun düzenlenmesini bozar ve eskiden atipik hemolitik üremik sendrom denen kompleman aracılı trombotik mikroanjiyopatiye yol açar.\nKompleman aracılı trombotik mikroanjiyopatide kontrolsüz kompleman aktivasyonu endotel hasarı ve mikrovasküler tromboz yapar. CDkırk altı eksikliği bu sorudaki ayrımı sağlamaz.\nA de a me te se on üç eksikliği hemolitik üremik sendrom ile değil, trombotik trombositopenik purpura ile ilişkilidir. Ultra büyük fon Villebrand faktör multimerleri parçalanamaz, bu yüzden doğru cevaptır.\nFaktör ha eksikliği alternatif kompleman yolunu kontrolsüz bırakır ve kompleman aracılı trombotik mikroanjiyopati, yani eski adıyla atipik hemolitik üremik sendrom yapar.\nDoğru cevap De, A de a me te se on üç eksikliği\nHemolitik üremik sendrom, Şiga toksini aracılı formda ya da Faktör ha, Faktör bir ve me ce pe gibi düzenleyicilerin kusuruyla kompleman aracılı formda gelişir. A de a me te se on üç eksikliği ise trombotik trombositopenik purpuraya yol açar.",
+   "kelime": 185
+  },
+  {
+   "no": 30,
+   "tur": "cikmis",
+   "soru": "Diyabetik nefropatinin en erken klinik bulgusu aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Glukozüri",
+    "B": "Ketonüri",
+    "C": "Nefrotik düzeyde proteinüri",
+    "D": "Mikroalbüminüri",
+    "E": "Poliüri"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Glukozüri ile karıştırılabilir: Diyabetik nefropatide böbrek hasarının ilk göstergesi idrardaki albümin artışıdır.",
+    "B": "Diyabetik nefropatinin klinik seyri albüminüri düzeyindeki artışla izlenir. Ketonüri bu sorudaki ayrımı sağlamaz.",
+    "C": "Nefrotik düzeyde proteinüri diyabetik nefropatide sık görülür ama ilerlemiş dönemin bulgusudur; başlangıç bulgusu değildir.",
+    "D": "Mikroalbüminüri doğru: diyabetik nefropati başlangıçta mikroalbüminüriyle ortaya çıkar, sonra makroalbüminüriye ilerler.",
+    "E": "Poliüri ile karıştırılabilir: Diyabetik nefropatide ilk böbrek bulgusu idrarda az miktarda albümin saptanmasıdır."
+   },
+   "ozet": "Diyabetik nefropati başlangıçta mikroalbüminüriyle kendini gösterir, zamanla makroalbüminüriye ve sıklıkla nefrotik sendroma ilerler.",
+   "metin": "**Soru.** Diyabetik nefropatinin en erken klinik bulgusu aşağıdakilerden hangisidir?\n\n**A)** Glukozüri · **B)** Ketonüri · **C)** Nefrotik düzeyde proteinüri · **D)** Mikroalbüminüri · **E)** Poliüri\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Glukozüri** — Glukozüri ile karıştırılabilir: Diyabetik nefropatide böbrek hasarının ilk göstergesi idrardaki albümin artışıdır.\n- **Ketonüri** — Diyabetik nefropatinin klinik seyri albüminüri düzeyindeki artışla izlenir. Ketonüri bu sorudaki ayrımı sağlamaz.\n- **Nefrotik düzeyde proteinüri** — Nefrotik düzeyde proteinüri diyabetik nefropatide sık görülür ama ilerlemiş dönemin bulgusudur; başlangıç bulgusu değildir.\n- **Mikroalbüminüri** — Mikroalbüminüri doğru: diyabetik nefropati başlangıçta mikroalbüminüriyle ortaya çıkar, sonra makroalbüminüriye ilerler.\n- **Poliüri** — Poliüri ile karıştırılabilir: Diyabetik nefropatide ilk böbrek bulgusu idrarda az miktarda albümin saptanmasıdır.\n\n**Cevap: D** — Mikroalbüminüri\n\n**Özet.** Diyabetik nefropati başlangıçta mikroalbüminüriyle kendini gösterir, zamanla makroalbüminüriye ve sıklıkla nefrotik sendroma ilerler.",
+   "ses": "Diyabetik nefropatinin en erken klinik bulgusu aşağıdakilerden hangisidir?\nA, Glukozüri\nBe, Ketonüri\nCe, Nefrotik düzeyde proteinüri\nDe, Mikroalbüminüri\nE, Poliüri\nHer seçeneği tek tek ele alalım.\nGlukozüri ile karıştırılabilir. Diyabetik nefropatide böbrek hasarının ilk göstergesi idrardaki albümin artışıdır.\nDiyabetik nefropatinin klinik seyri albüminüri düzeyindeki artışla izlenir. Ketonüri bu sorudaki ayrımı sağlamaz.\nNefrotik düzeyde proteinüri diyabetik nefropatide sık görülür ama ilerlemiş dönemin bulgusudur. Başlangıç bulgusu değildir.\nMikroalbüminüri doğru. Diyabetik nefropati başlangıçta mikroalbüminüriyle ortaya çıkar, sonra makroalbüminüriye ilerler.\nPoliüri ile karıştırılabilir. Diyabetik nefropatide ilk böbrek bulgusu idrarda az miktarda albümin saptanmasıdır.\nDoğru cevap De, Mikroalbüminüri\nDiyabetik nefropati başlangıçta mikroalbüminüriyle kendini gösterir, zamanla makroalbüminüriye ve sıklıkla nefrotik sendroma ilerler.",
+   "kelime": 130
+  },
+  {
+   "no": 31,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisinde böbrek arteriyollerinin duvarında soğan zarı benzeri konsantrik laminer fibröz kalınlaşmalar ve fibrinoid nekroz izlenir?",
+   "secenekler": {
+    "A": "Renal ateroskleroz",
+    "B": "Hiperplastik arterioloskleroz",
+    "C": "Hiyalin arterioloskleroz",
+    "D": "Anevrizma",
+    "E": "Granülomatöz vaskülit"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Soğan zarı görünümü malign hipertansiyonda konsantrik intimal hücre proliferasyonuyla oluşur. Renal ateroskleroz bu sorudaki ayrımı sağlamaz.",
+    "B": "Hiperplastik arterioloskleroz doğru: malign hipertansiyonda damar duvarı proliferasyonu soğan zarı görünümü verir, arteriyollerde fibrinoid nekroz eşlik eder.",
+    "C": "Hiyalin arterioloskleroz benign nefrosklerozun lezyonudur; arteriyol duvarında homojen, pembe hiyalin kalınlaşma vardır.",
+    "D": "Anevrizma ile karıştırılabilir: Malign nefrosklerozda arteriyol duvarında fibrinoid nekroz ve konsantrik proliferasyon görülür.",
+    "E": "Soğan zarı ve fibrinoid nekroz, sistolik basıncın genellikle 200 mmHg'yi aştığı malign hipertansiyonun damar lezyonlarıdır. Granülomatöz vaskülit bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Malign hipertansiyonda şiddetli endotel hasarı arteriyollerde fibrinoid nekroz, damar duvarı proliferasyonu ise soğan zarı görünümlü hiperplastik arterioloskleroz yapar.",
+   "metin": "**Soru.** Aşağıdakilerden hangisinde böbrek arteriyollerinin duvarında soğan zarı benzeri konsantrik laminer fibröz kalınlaşmalar ve fibrinoid nekroz izlenir?\n\n**A)** Renal ateroskleroz · **B)** Hiperplastik arterioloskleroz · **C)** Hiyalin arterioloskleroz · **D)** Anevrizma · **E)** Granülomatöz vaskülit\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Renal ateroskleroz** — Soğan zarı görünümü malign hipertansiyonda konsantrik intimal hücre proliferasyonuyla oluşur. Renal ateroskleroz bu sorudaki ayrımı sağlamaz.\n- **Hiperplastik arterioloskleroz** — Hiperplastik arterioloskleroz doğru: malign hipertansiyonda damar duvarı proliferasyonu soğan zarı görünümü verir, arteriyollerde fibrinoid nekroz eşlik eder.\n- **Hiyalin arterioloskleroz** — Hiyalin arterioloskleroz benign nefrosklerozun lezyonudur; arteriyol duvarında homojen, pembe hiyalin kalınlaşma vardır.\n- **Anevrizma** — Anevrizma ile karıştırılabilir: Malign nefrosklerozda arteriyol duvarında fibrinoid nekroz ve konsantrik proliferasyon görülür.\n- **Granülomatöz vaskülit** — Soğan zarı ve fibrinoid nekroz, sistolik basıncın genellikle 200 mmHg'yi aştığı malign hipertansiyonun damar lezyonlarıdır. Granülomatöz vaskülit bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Hiperplastik arterioloskleroz\n\n**Özet.** Malign hipertansiyonda şiddetli endotel hasarı arteriyollerde fibrinoid nekroz, damar duvarı proliferasyonu ise soğan zarı görünümlü hiperplastik arterioloskleroz yapar.",
+   "ses": "Aşağıdakilerden hangisinde böbrek arteriyollerinin duvarında soğan zarı benzeri konsantrik laminer fibröz kalınlaşmalar ve fibrinoid nekroz izlenir?\nA, Renal ateroskleroz\nBe, Hiperplastik arterioloskleroz\nCe, Hiyalin arterioloskleroz\nDe, Anevrizma\nE, Granülomatöz vaskülit\nŞıkları sırasıyla gözden geçirelim.\nSoğan zarı görünümü malign hipertansiyonda konsantrik intimal hücre proliferasyonuyla oluşur. Renal ateroskleroz bu sorudaki ayrımı sağlamaz.\nHiperplastik arterioloskleroz doğru. Malign hipertansiyonda damar duvarı proliferasyonu soğan zarı görünümü verir, arteriyollerde fibrinoid nekroz eşlik eder.\nHiyalin arterioloskleroz benign nefrosklerozun lezyonudur. Arteriyol duvarında homojen, pembe hiyalin kalınlaşma vardır.\nAnevrizma ile karıştırılabilir. Malign nefrosklerozda arteriyol duvarında fibrinoid nekroz ve konsantrik proliferasyon görülür.\nSoğan zarı ve fibrinoid nekroz, sistolik basıncın genellikle iki yüz milimetre cıvayı aştığı malign hipertansiyonun damar lezyonlarıdır. Granülomatöz vaskülit bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Hiperplastik arterioloskleroz\nMalign hipertansiyonda şiddetli endotel hasarı arteriyollerde fibrinoid nekroz, damar duvarı proliferasyonu ise soğan zarı görünümlü hiperplastik arterioloskleroz yapar.",
+   "kelime": 162
+  },
+  {
+   "no": 32,
+   "tur": "ornek",
+   "soru": "Glomerüler tutulum yapan sistemik nedenlerden hangisi ilaç grubunda yer alır?",
+   "secenekler": {
+    "A": "Penisilamin",
+    "B": "Treponema pallidum",
+    "C": "Melanom",
+    "D": "Amiloidoz",
+    "E": "Hepatit B virüsü"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Penisilamin doğru: altın ve eroinle birlikte glomerüler tutulum yapan ilaçlar arasında sayılır.",
+    "B": "Treponema pallidum, yani sifiliz etkeni, glomerüler tutulum yapan enfeksiyon nedenleri arasındadır; ilaç değildir.",
+    "C": "Melanom, karsinomlarla birlikte glomerüler tutulum yapan malignite nedenlerindendir.",
+    "D": "Amiloidoz, fibriller proteinlerin birikimiyle glomerülü tutan ayrı bir sistemik nedendir; ilaç grubunda yer almaz.",
+    "E": "Hepatit B virüsü glomerüler tutulum yapan enfeksiyon nedenlerindendir; sıtma, sifiliz ve HIV ile aynı gruptadır."
+   },
+   "ozet": "Glomerüler tutulum yapan ilaçlar altın, penisilamin ve eroindir; enfeksiyonlar, maligniteler, diyabet ve amiloidoz ayrı nedenlerdir.",
+   "metin": "**Soru.** Glomerüler tutulum yapan sistemik nedenlerden hangisi ilaç grubunda yer alır?\n\n**A)** Penisilamin · **B)** Treponema pallidum · **C)** Melanom · **D)** Amiloidoz · **E)** Hepatit B virüsü\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Penisilamin** — Penisilamin doğru: altın ve eroinle birlikte glomerüler tutulum yapan ilaçlar arasında sayılır.\n- **Treponema pallidum** — Treponema pallidum, yani sifiliz etkeni, glomerüler tutulum yapan enfeksiyon nedenleri arasındadır; ilaç değildir.\n- **Melanom** — Melanom, karsinomlarla birlikte glomerüler tutulum yapan malignite nedenlerindendir.\n- **Amiloidoz** — Amiloidoz, fibriller proteinlerin birikimiyle glomerülü tutan ayrı bir sistemik nedendir; ilaç grubunda yer almaz.\n- **Hepatit B virüsü** — Hepatit B virüsü glomerüler tutulum yapan enfeksiyon nedenlerindendir; sıtma, sifiliz ve HIV ile aynı gruptadır.\n\n**Cevap: A** — Penisilamin\n\n**Özet.** Glomerüler tutulum yapan ilaçlar altın, penisilamin ve eroindir; enfeksiyonlar, maligniteler, diyabet ve amiloidoz ayrı nedenlerdir.",
+   "ses": "Glomerüler tutulum yapan sistemik nedenlerden hangisi ilaç grubunda yer alır?\nA, Penisilamin\nBe, Treponema pallidum\nCe, Melanom\nDe, Amiloidoz\nE, Hepatit be virüsü\nŞimdi seçeneklere tek tek bakalım.\nPenisilamin doğru. Altın ve eroinle birlikte glomerüler tutulum yapan ilaçlar arasında sayılır.\nTreponema pallidum, yani sifiliz etkeni, glomerüler tutulum yapan enfeksiyon nedenleri arasındadır. İlaç değildir.\nMelanom, karsinomlarla birlikte glomerüler tutulum yapan malignite nedenlerindendir.\nAmiloidoz, fibriller proteinlerin birikimiyle glomerülü tutan ayrı bir sistemik nedendir. İlaç grubunda yer almaz.\nHepatit be virüsü glomerüler tutulum yapan enfeksiyon nedenlerindendir. Sıtma, sifiliz ve ha i ve ile aynı gruptadır.\nDoğru cevap A, Penisilamin\nGlomerüler tutulum yapan ilaçlar altın, penisilamin ve eroindir. Enfeksiyonlar, maligniteler, diyabet ve amiloidoz ayrı nedenlerdir.",
+   "kelime": 134
+  },
+  {
+   "no": 33,
+   "tur": "ornek",
+   "soru": "SLE hangi aşırı duyarlılık reaksiyonunun prototipidir?",
+   "secenekler": {
+    "A": "Tip I",
+    "B": "Tip II",
+    "C": "Tip III",
+    "D": "Tip IV",
+    "E": "Kompleman regülasyon defekti"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Lupusta hasarı immün kompleksler yapar. Tip I aşırı duyarlılık bu sorudaki ayrımı sağlamaz.",
+    "B": "Tip II aşırı duyarlılık ile karıştırılabilir: Lupus böbreğinde birikim kompleks hâlindedir.",
+    "C": "Tip III doğru: lupus immün kompleks aracılı aşırı duyarlılığın prototipidir ve kompleksler glomerülde birikir.",
+    "D": "Tip IV aşırı duyarlılık ile karıştırılabilir: Lupusta mezangial, subendotelyal ve subepitelyal kompleks birikimi vardır.",
+    "E": "Kompleman regülasyon defekti kompleman aracılı trombotik mikroanjiyopatinin mekanizmasıdır."
+   },
+   "ozet": "SLE tip III, yani immün kompleks aracılı aşırı duyarlılığın prototipidir; böbrek başlıca hedef organdır.",
+   "metin": "**Soru.** SLE hangi aşırı duyarlılık reaksiyonunun prototipidir?\n\n**A)** Tip I · **B)** Tip II · **C)** Tip III · **D)** Tip IV · **E)** Kompleman regülasyon defekti\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Tip I** — Lupusta hasarı immün kompleksler yapar. Tip I aşırı duyarlılık bu sorudaki ayrımı sağlamaz.\n- **Tip II** — Tip II aşırı duyarlılık ile karıştırılabilir: Lupus böbreğinde birikim kompleks hâlindedir.\n- **Tip III** — Tip III doğru: lupus immün kompleks aracılı aşırı duyarlılığın prototipidir ve kompleksler glomerülde birikir.\n- **Tip IV** — Tip IV aşırı duyarlılık ile karıştırılabilir: Lupusta mezangial, subendotelyal ve subepitelyal kompleks birikimi vardır.\n- **Kompleman regülasyon defekti** — Kompleman regülasyon defekti kompleman aracılı trombotik mikroanjiyopatinin mekanizmasıdır.\n\n**Cevap: C** — Tip III\n\n**Özet.** SLE tip III, yani immün kompleks aracılı aşırı duyarlılığın prototipidir; böbrek başlıca hedef organdır.",
+   "ses": "Sistemik lupus eritematozus hangi aşırı duyarlılık reaksiyonunun prototipidir?\nA, Tip bir\nBe, Tip iki\nCe, Tip üç\nDe, Tip dört\nE, Kompleman regülasyon defekti\nSeçenekleri sırayla değerlendirelim.\nLupusta hasarı immün kompleksler yapar. Tip I aşırı duyarlılık bu sorudaki ayrımı sağlamaz.\nTip II aşırı duyarlılık ile karıştırılabilir. Lupus böbreğinde birikim kompleks hâlindedir.\nTip üç doğru. Lupus immün kompleks aracılı aşırı duyarlılığın prototipidir ve kompleksler glomerülde birikir.\nTip IV aşırı duyarlılık ile karıştırılabilir. Lupusta mezangial, subendotelyal ve subepitelyal kompleks birikimi vardır.\nKompleman regülasyon defekti kompleman aracılı trombotik mikroanjiyopatinin mekanizmasıdır.\nDoğru cevap Ce, Tip üç\nSistemik lupus eritematozus tip üç, yani immün kompleks aracılı aşırı duyarlılığın prototipidir. Böbrek başlıca hedef organdır.",
+   "kelime": 132
+  },
+  {
+   "no": 34,
+   "tur": "ornek",
+   "soru": "Lupus nefritinde böbrek tutulumunun klinik tablosu genellikle hangisidir?",
+   "secenekler": {
+    "A": "Saf nefrotik sendrom",
+    "B": "Saf nefritik sendrom",
+    "C": "İzole tübüler disfonksiyon",
+    "D": "Kanlı diyare sonrası oligüri",
+    "E": "Nefritik ve nefrotik karışım"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Saf nefrotik tablo lupusun genel tablosu değildir; nefrotik sendrom daha çok amiloid nefropatisinin tablosudur.",
+    "B": "Saf nefritik tablo lupusun genel tablosu değildir; ağır proteinüri de sıklıkla bulunur.",
+    "C": "İzole tübüler disfonksiyon ile karıştırılabilir: Lupusta asıl hasar glomerüllerdeki immün komplekslerle olur.",
+    "D": "Kanlı diyare sonrası oligüri Şiga toksini aracılı hemolitik üremik sendromun tablosudur.",
+    "E": "Nefritik ve nefrotik karışım doğru: lupusta glomerüllerde yaygın immün kompleks birikimi vardır ve klinik iki tablonun karışımıdır."
+   },
+   "ozet": "Lupus nefritinde nefritik ve nefrotik bulgular karışık görülür; böbrek tutulumu prognozu belirgin şekilde kötüleştirir.",
+   "metin": "**Soru.** Lupus nefritinde böbrek tutulumunun klinik tablosu genellikle hangisidir?\n\n**A)** Saf nefrotik sendrom · **B)** Saf nefritik sendrom · **C)** İzole tübüler disfonksiyon · **D)** Kanlı diyare sonrası oligüri · **E)** Nefritik ve nefrotik karışım\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Saf nefrotik sendrom** — Saf nefrotik tablo lupusun genel tablosu değildir; nefrotik sendrom daha çok amiloid nefropatisinin tablosudur.\n- **Saf nefritik sendrom** — Saf nefritik tablo lupusun genel tablosu değildir; ağır proteinüri de sıklıkla bulunur.\n- **İzole tübüler disfonksiyon** — İzole tübüler disfonksiyon ile karıştırılabilir: Lupusta asıl hasar glomerüllerdeki immün komplekslerle olur.\n- **Kanlı diyare sonrası oligüri** — Kanlı diyare sonrası oligüri Şiga toksini aracılı hemolitik üremik sendromun tablosudur.\n- **Nefritik ve nefrotik karışım** — Nefritik ve nefrotik karışım doğru: lupusta glomerüllerde yaygın immün kompleks birikimi vardır ve klinik iki tablonun karışımıdır.\n\n**Cevap: E** — Nefritik ve nefrotik karışım\n\n**Özet.** Lupus nefritinde nefritik ve nefrotik bulgular karışık görülür; böbrek tutulumu prognozu belirgin şekilde kötüleştirir.",
+   "ses": "Lupus nefritinde böbrek tutulumunun klinik tablosu genellikle hangisidir?\nA, Saf nefrotik sendrom\nBe, Saf nefritik sendrom\nCe, İzole tübüler disfonksiyon\nDe, Kanlı diyare sonrası oligüri\nE, Nefritik ve nefrotik karışım\nHer seçeneği tek tek ele alalım.\nSaf nefrotik tablo lupusun genel tablosu değildir. Nefrotik sendrom daha çok amiloid nefropatisinin tablosudur.\nSaf nefritik tablo lupusun genel tablosu değildir. Ağır proteinüri de sıklıkla bulunur.\nİzole tübüler disfonksiyon ile karıştırılabilir. Lupusta asıl hasar glomerüllerdeki immün komplekslerle olur.\nKanlı diyare sonrası oligüri Şiga toksini aracılı hemolitik üremik sendromun tablosudur.\nNefritik ve nefrotik karışım doğru. Lupusta glomerüllerde yaygın immün kompleks birikimi vardır ve klinik iki tablonun karışımıdır.\nDoğru cevap E, Nefritik ve nefrotik karışım\nLupus nefritinde nefritik ve nefrotik bulgular karışık görülür. Böbrek tutulumu prognozu belirgin şekilde kötüleştirir.",
+   "kelime": 157
+  },
+  {
+   "no": 35,
+   "tur": "ornek",
+   "soru": "Diyabetik nefropatide mezangial matriksin glomerül boyunca yaygın arttığı lezyon hangisidir?",
+   "secenekler": {
+    "A": "Nodüler glomeruloskleroz",
+    "B": "Difüz mezangial skleroz",
+    "C": "Hiyalin arteriyoloskleroz",
+    "D": "Glomerüler bazal membran kalınlaşması",
+    "E": "Amiloid birikimi"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Nodüler glomeruloskleroz, yani Kimmelstiel-Wilson lezyonunda matriks odaksal nodüller yapar; yaygın değildir.",
+    "B": "Difüz mezangial skleroz doğru: diyabette mezangial matriks glomerül boyunca yaygın biçimde artar.",
+    "C": "Hiyalin arteriyoloskleroz arteriyol duvarının lezyonudur; benign nefrosklerozun temel damar bulgusudur.",
+    "D": "Glomerüler bazal membran kalınlaşması kılcal duvarın lezyonudur; mezangial matriks artışı değildir.",
+    "E": "Amiloid birikimi fibriller proteinlerin ekstrasellüler birikimidir; amiloid nefropatisinde görülür."
+   },
+   "ozet": "Diyabetik nefropatinin üç glomerüler lezyonu GBM kalınlaşması, difüz mezangial skleroz ve nodüler Kimmelstiel-Wilson glomerulosklerozudur.",
+   "metin": "**Soru.** Diyabetik nefropatide mezangial matriksin glomerül boyunca yaygın arttığı lezyon hangisidir?\n\n**A)** Nodüler glomeruloskleroz · **B)** Difüz mezangial skleroz · **C)** Hiyalin arteriyoloskleroz · **D)** Glomerüler bazal membran kalınlaşması · **E)** Amiloid birikimi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Nodüler glomeruloskleroz** — Nodüler glomeruloskleroz, yani Kimmelstiel-Wilson lezyonunda matriks odaksal nodüller yapar; yaygın değildir.\n- **Difüz mezangial skleroz** — Difüz mezangial skleroz doğru: diyabette mezangial matriks glomerül boyunca yaygın biçimde artar.\n- **Hiyalin arteriyoloskleroz** — Hiyalin arteriyoloskleroz arteriyol duvarının lezyonudur; benign nefrosklerozun temel damar bulgusudur.\n- **Glomerüler bazal membran kalınlaşması** — Glomerüler bazal membran kalınlaşması kılcal duvarın lezyonudur; mezangial matriks artışı değildir.\n- **Amiloid birikimi** — Amiloid birikimi fibriller proteinlerin ekstrasellüler birikimidir; amiloid nefropatisinde görülür.\n\n**Cevap: B** — Difüz mezangial skleroz\n\n**Özet.** Diyabetik nefropatinin üç glomerüler lezyonu GBM kalınlaşması, difüz mezangial skleroz ve nodüler Kimmelstiel-Wilson glomerulosklerozudur.",
+   "ses": "Diyabetik nefropatide mezangial matriksin glomerül boyunca yaygın arttığı lezyon hangisidir?\nA, Nodüler glomeruloskleroz\nBe, Difüz mezangial skleroz\nCe, Hiyalin arteriyoloskleroz\nDe, Glomerüler bazal membran kalınlaşması\nE, Amiloid birikimi\nŞıkları sırasıyla gözden geçirelim.\nNodüler glomeruloskleroz, yani Kimmelstil Vilson lezyonunda matriks odaksal nodüller yapar. Yaygın değildir.\nDifüz mezangial skleroz doğru. Diyabette mezangial matriks glomerül boyunca yaygın biçimde artar.\nHiyalin arteriyoloskleroz arteriyol duvarının lezyonudur. Benign nefrosklerozun temel damar bulgusudur.\nGlomerüler bazal membran kalınlaşması kılcal duvarın lezyonudur. Mezangial matriks artışı değildir.\nAmiloid birikimi fibriller proteinlerin ekstrasellüler birikimidir. Amiloid nefropatisinde görülür.\nDoğru cevap Be, Difüz mezangial skleroz\nDiyabetik nefropatinin üç glomerüler lezyonu bazal membran kalınlaşması, difüz mezangial skleroz ve nodüler Kimmelstil Vilson glomerulosklerozudur.",
+   "kelime": 135
+  },
+  {
+   "no": 36,
+   "tur": "ornek",
+   "soru": "Böbrekte amiloid başlıca nerede birikir?",
+   "secenekler": {
+    "A": "Tübül epitel sitoplazmasında",
+    "B": "Bowman boşluğunda hilal olarak",
+    "C": "Glomerüler mezangium ve kılcal duvar",
+    "D": "Yalnız interlobüler arterlerde",
+    "E": "Yalnız peritübüler bazal membranda"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Tübül epitel sitoplazması ile karıştırılabilir: Amiloid hücre içinde değil, ekstrasellüler alanda birikir.",
+    "B": "Bowman boşluğunda hilal oluşumu küçük damar vaskülitlerine bağlı pauci-immün RPGN'nin bulgusudur.",
+    "C": "Glomerüler mezangium ve kılcal duvar doğru: amiloid başlıca burada birikir ve nefrotik sendroma yol açar.",
+    "D": "İnterlobüler arterlerde soğan zarı lezyonu malign hipertansiyonda görülür; amiloid yalnız damarlarla sınırlı değildir.",
+    "E": "Tübüler ve peritübüler bazal membran birikimi lupus nefritinde bazen görülen immün kompleks yerleşimidir."
+   },
+   "ozet": "Amiloid böbrekte başlıca glomerüler mezangium ve kılcal duvarlarda birikir; tübüller ve damarlar da tutulabilir, tablo nefrotik sendromdur.",
+   "metin": "**Soru.** Böbrekte amiloid başlıca nerede birikir?\n\n**A)** Tübül epitel sitoplazmasında · **B)** Bowman boşluğunda hilal olarak · **C)** Glomerüler mezangium ve kılcal duvar · **D)** Yalnız interlobüler arterlerde · **E)** Yalnız peritübüler bazal membranda\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Tübül epitel sitoplazmasında** — Tübül epitel sitoplazması ile karıştırılabilir: Amiloid hücre içinde değil, ekstrasellüler alanda birikir.\n- **Bowman boşluğunda hilal olarak** — Bowman boşluğunda hilal oluşumu küçük damar vaskülitlerine bağlı pauci-immün RPGN'nin bulgusudur.\n- **Glomerüler mezangium ve kılcal duvar** — Glomerüler mezangium ve kılcal duvar doğru: amiloid başlıca burada birikir ve nefrotik sendroma yol açar.\n- **Yalnız interlobüler arterlerde** — İnterlobüler arterlerde soğan zarı lezyonu malign hipertansiyonda görülür; amiloid yalnız damarlarla sınırlı değildir.\n- **Yalnız peritübüler bazal membranda** — Tübüler ve peritübüler bazal membran birikimi lupus nefritinde bazen görülen immün kompleks yerleşimidir.\n\n**Cevap: C** — Glomerüler mezangium ve kılcal duvar\n\n**Özet.** Amiloid böbrekte başlıca glomerüler mezangium ve kılcal duvarlarda birikir; tübüller ve damarlar da tutulabilir, tablo nefrotik sendromdur.",
+   "ses": "Böbrekte amiloid başlıca nerede birikir?\nA, Tübül epitel sitoplazmasında\nBe, Bowman boşluğunda hilal olarak\nCe, Glomerüler mezangium ve kılcal duvar\nDe, Yalnız interlobüler arterlerde\nE, Yalnız peritübüler bazal membranda\nŞimdi seçeneklere tek tek bakalım.\nTübül epitel sitoplazması ile karıştırılabilir. Amiloid hücre içinde değil, ekstrasellüler alanda birikir.\nBowman boşluğunda hilal oluşumu küçük damar vaskülitlerine bağlı pausi immün hızlı ilerleyen glomerülonefritin bulgusudur.\nGlomerüler mezangium ve kılcal duvar doğru. Amiloid başlıca burada birikir ve nefrotik sendroma yol açar.\nİnterlobüler arterlerde soğan zarı lezyonu malign hipertansiyonda görülür. Amiloid yalnız damarlarla sınırlı değildir.\nTübüler ve peritübüler bazal membran birikimi lupus nefritinde bazen görülen immün kompleks yerleşimidir.\nDoğru cevap Ce, Glomerüler mezangium ve kılcal duvar\nAmiloid böbrekte başlıca glomerüler mezangium ve kılcal duvarlarda birikir. Tübüller ve damarlar da tutulabilir, tablo nefrotik sendromdur.",
+   "kelime": 159
+  },
+  {
+   "no": 37,
+   "tur": "ornek",
+   "soru": "Trombotik mikroanjiyopatide trombositopeninin mekanizması hangisidir?",
+   "secenekler": {
+    "A": "Kemik iliğinde yapım azlığı",
+    "B": "Mekanik eritrosit hasarı",
+    "C": "Dalakta sekestrasyon",
+    "D": "Trombüslerde tüketim",
+    "E": "Kompleman aracılı lizis"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Buradaki düşüklük yapımdan değil kullanılmaktan olur. Kemik iliğinde yapım azlığı bu sorudaki ayrımı sağlamaz.",
+    "B": "Mekanik eritrosit hasarı şistositlerle mikroanjiyopatik hemolitik anemiyi açıklar; trombosit düşüklüğünü açıklamaz.",
+    "C": "Trombotik mikroanjiyopatide trombositler küçük damar trombüslerinde harcanır. Dalakta sekestrasyon bu sorudaki ayrımı sağlamaz.",
+    "D": "Trombüslerde tüketim doğru: endotel hasarında trombositler aktive olup kümeleşir ve trombosit zengin trombüslerde harcanır.",
+    "E": "Kompleman kusuru endotel hasarı yapar, trombositopeni yine tüketimle olur. Kompleman aracılı lizis bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Trombotik mikroanjiyopatide endotel hasarı ve trombosit agregasyonu trombosit zengin trombüsler yapar; trombositopeni bu tüketime bağlıdır.",
+   "metin": "**Soru.** Trombotik mikroanjiyopatide trombositopeninin mekanizması hangisidir?\n\n**A)** Kemik iliğinde yapım azlığı · **B)** Mekanik eritrosit hasarı · **C)** Dalakta sekestrasyon · **D)** Trombüslerde tüketim · **E)** Kompleman aracılı lizis\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kemik iliğinde yapım azlığı** — Buradaki düşüklük yapımdan değil kullanılmaktan olur. Kemik iliğinde yapım azlığı bu sorudaki ayrımı sağlamaz.\n- **Mekanik eritrosit hasarı** — Mekanik eritrosit hasarı şistositlerle mikroanjiyopatik hemolitik anemiyi açıklar; trombosit düşüklüğünü açıklamaz.\n- **Dalakta sekestrasyon** — Trombotik mikroanjiyopatide trombositler küçük damar trombüslerinde harcanır. Dalakta sekestrasyon bu sorudaki ayrımı sağlamaz.\n- **Trombüslerde tüketim** — Trombüslerde tüketim doğru: endotel hasarında trombositler aktive olup kümeleşir ve trombosit zengin trombüslerde harcanır.\n- **Kompleman aracılı lizis** — Kompleman kusuru endotel hasarı yapar, trombositopeni yine tüketimle olur. Kompleman aracılı lizis bu sorudaki ayrımı sağlamaz.\n\n**Cevap: D** — Trombüslerde tüketim\n\n**Özet.** Trombotik mikroanjiyopatide endotel hasarı ve trombosit agregasyonu trombosit zengin trombüsler yapar; trombositopeni bu tüketime bağlıdır.",
+   "ses": "Trombotik mikroanjiyopatide trombositopeninin mekanizması hangisidir?\nA, Kemik iliğinde yapım azlığı\nBe, Mekanik eritrosit hasarı\nCe, Dalakta sekestrasyon\nDe, Trombüslerde tüketim\nE, Kompleman aracılı lizis\nSeçenekleri sırayla değerlendirelim.\nBuradaki düşüklük yapımdan değil kullanılmaktan olur. Kemik iliğinde yapım azlığı bu sorudaki ayrımı sağlamaz.\nMekanik eritrosit hasarı şistositlerle mikroanjiyopatik hemolitik anemiyi açıklar. Trombosit düşüklüğünü açıklamaz.\nTrombotik mikroanjiyopatide trombositler küçük damar trombüslerinde harcanır. Dalakta sekestrasyon bu sorudaki ayrımı sağlamaz.\nTrombüslerde tüketim doğru. Endotel hasarında trombositler aktive olup kümeleşir ve trombosit zengin trombüslerde harcanır.\nKompleman kusuru endotel hasarı yapar, trombositopeni yine tüketimle olur. Kompleman aracılı lizis bu sorudaki ayrımı sağlamaz.\nDoğru cevap De, Trombüslerde tüketim\nTrombotik mikroanjiyopatide endotel hasarı ve trombosit agregasyonu trombosit zengin trombüsler yapar. Trombositopeni bu tüketime bağlıdır.",
+   "kelime": 146
+  },
+  {
+   "no": 38,
+   "tur": "ornek",
+   "soru": "Trombotik mikroanjiyopatide böbrekte ağır iskemik hasarın vardığı en ağır sonuç hangisidir?",
+   "secenekler": {
+    "A": "Papiller nekroz",
+    "B": "Kortikal nekroz",
+    "C": "Nodüler glomeruloskleroz",
+    "D": "Hiyalin arteriyoloskleroz",
+    "E": "Hilal oluşumu"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Papiller nekroz ile karıştırılabilir: Trombotik mikroanjiyopatide ağır iskemi böbreğin dış tabakasını etkiler.",
+    "B": "Kortikal nekroz doğru: glomerüler kılcal ve arteriyollerdeki trombüsler iskemiye, şiddetli olgularda korteks nekrozuna yol açar.",
+    "C": "Nodüler glomeruloskleroz diyabetik nefropatinin patognomonik lezyonudur.",
+    "D": "Hiyalin arteriyoloskleroz benign nefrosklerozda plazma proteinleri ve matrisin duvarda birikimidir.",
+    "E": "Hilal oluşumu küçük damar vaskülitlerine bağlı pauci-immün RPGN'de görülür."
+   },
+   "ozet": "Trombotik mikroanjiyopatide glomerüler kılcal ve arteriyol trombüsleri iskemik hasar yapar; şiddetli olgularda kortikal nekroz gelişir.",
+   "metin": "**Soru.** Trombotik mikroanjiyopatide böbrekte ağır iskemik hasarın vardığı en ağır sonuç hangisidir?\n\n**A)** Papiller nekroz · **B)** Kortikal nekroz · **C)** Nodüler glomeruloskleroz · **D)** Hiyalin arteriyoloskleroz · **E)** Hilal oluşumu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Papiller nekroz** — Papiller nekroz ile karıştırılabilir: Trombotik mikroanjiyopatide ağır iskemi böbreğin dış tabakasını etkiler.\n- **Kortikal nekroz** — Kortikal nekroz doğru: glomerüler kılcal ve arteriyollerdeki trombüsler iskemiye, şiddetli olgularda korteks nekrozuna yol açar.\n- **Nodüler glomeruloskleroz** — Nodüler glomeruloskleroz diyabetik nefropatinin patognomonik lezyonudur.\n- **Hiyalin arteriyoloskleroz** — Hiyalin arteriyoloskleroz benign nefrosklerozda plazma proteinleri ve matrisin duvarda birikimidir.\n- **Hilal oluşumu** — Hilal oluşumu küçük damar vaskülitlerine bağlı pauci-immün RPGN'de görülür.\n\n**Cevap: B** — Kortikal nekroz\n\n**Özet.** Trombotik mikroanjiyopatide glomerüler kılcal ve arteriyol trombüsleri iskemik hasar yapar; şiddetli olgularda kortikal nekroz gelişir.",
+   "ses": "Trombotik mikroanjiyopatide böbrekte ağır iskemik hasarın vardığı en ağır sonuç hangisidir?\nA, Papiller nekroz\nBe, Kortikal nekroz\nCe, Nodüler glomeruloskleroz\nDe, Hiyalin arteriyoloskleroz\nE, Hilal oluşumu\nHer seçeneği tek tek ele alalım.\nPapiller nekroz ile karıştırılabilir. Trombotik mikroanjiyopatide ağır iskemi böbreğin dış tabakasını etkiler.\nKortikal nekroz doğru. Glomerüler kılcal ve arteriyollerdeki trombüsler iskemiye, şiddetli olgularda korteks nekrozuna yol açar.\nNodüler glomeruloskleroz diyabetik nefropatinin patognomonik lezyonudur.\nHiyalin arteriyoloskleroz benign nefrosklerozda plazma proteinleri ve matrisin duvarda birikimidir.\nHilal oluşumu küçük damar vaskülitlerine bağlı pausi immün hızlı ilerleyen glomerülonefritte görülür.\nDoğru cevap Be, Kortikal nekroz\nTrombotik mikroanjiyopatide glomerüler kılcal ve arteriyol trombüsleri iskemik hasar yapar. Şiddetli olgularda kortikal nekroz gelişir.",
+   "kelime": 131
+  },
+  {
+   "no": 39,
+   "tur": "ornek",
+   "soru": "Glomerüler endotelin Şiga toksinine özellikle hassas olmasının nedeni hangisidir?",
+   "secenekler": {
+    "A": "Toksin reseptörü ifade etmesi",
+    "B": "ADAMTS13 üretmemesi",
+    "C": "Faktör H eksikliği",
+    "D": "Bazal membranın incelmesi",
+    "E": "İmmün kompleks birikimi"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Toksin reseptörü ifadesi doğru: glomerüler endotel Şiga toksini reseptörü taşıdığı için toksine özellikle hassastır.",
+    "B": "ADAMTS13 eksikliği trombotik trombositopenik purpuranın temel kusurudur; Şiga toksininin hedef seçimini açıklamaz.",
+    "C": "Faktör H kusuru alternatif kompleman yolunun frenini bozar ve kompleman aracılı trombotik mikroanjiyopati yapar.",
+    "D": "Bazal membranın incelmesi ile karıştırılabilir: Toksin doğrudan endotel hücresini hedefler.",
+    "E": "İmmün kompleks birikimi lupus nefritinin mekanizmasıdır; Şiga toksini endotele doğrudan etki eder."
+   },
+   "ozet": "Glomerüler endotel Şiga toksini reseptörü ifade eder; toksin düşük dozda endoteli aktive eder, yüksek dozda hücreyi öldürür.",
+   "metin": "**Soru.** Glomerüler endotelin Şiga toksinine özellikle hassas olmasının nedeni hangisidir?\n\n**A)** Toksin reseptörü ifade etmesi · **B)** ADAMTS13 üretmemesi · **C)** Faktör H eksikliği · **D)** Bazal membranın incelmesi · **E)** İmmün kompleks birikimi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Toksin reseptörü ifade etmesi** — Toksin reseptörü ifadesi doğru: glomerüler endotel Şiga toksini reseptörü taşıdığı için toksine özellikle hassastır.\n- **ADAMTS13 üretmemesi** — ADAMTS13 eksikliği trombotik trombositopenik purpuranın temel kusurudur; Şiga toksininin hedef seçimini açıklamaz.\n- **Faktör H eksikliği** — Faktör H kusuru alternatif kompleman yolunun frenini bozar ve kompleman aracılı trombotik mikroanjiyopati yapar.\n- **Bazal membranın incelmesi** — Bazal membranın incelmesi ile karıştırılabilir: Toksin doğrudan endotel hücresini hedefler.\n- **İmmün kompleks birikimi** — İmmün kompleks birikimi lupus nefritinin mekanizmasıdır; Şiga toksini endotele doğrudan etki eder.\n\n**Cevap: A** — Toksin reseptörü ifade etmesi\n\n**Özet.** Glomerüler endotel Şiga toksini reseptörü ifade eder; toksin düşük dozda endoteli aktive eder, yüksek dozda hücreyi öldürür.",
+   "ses": "Glomerüler endotelin Şiga toksinine özellikle hassas olmasının nedeni hangisidir?\nA, Toksin reseptörü ifade etmesi\nBe, A de a me te se on üç üretmemesi\nCe, Faktör ha eksikliği\nDe, Bazal membranın incelmesi\nE, İmmün kompleks birikimi\nŞıkları sırasıyla gözden geçirelim.\nToksin reseptörü ifadesi doğru. Glomerüler endotel Şiga toksini reseptörü taşıdığı için toksine özellikle hassastır.\nA de a me te se on üç eksikliği trombotik trombositopenik purpuranın temel kusurudur. Şiga toksininin hedef seçimini açıklamaz.\nFaktör ha kusuru alternatif kompleman yolunun frenini bozar ve kompleman aracılı trombotik mikroanjiyopati yapar.\nBazal membranın incelmesi ile karıştırılabilir. Toksin doğrudan endotel hücresini hedefler.\nİmmün kompleks birikimi lupus nefritinin mekanizmasıdır. Şiga toksini endotele doğrudan etki eder.\nDoğru cevap A, Toksin reseptörü ifade etmesi\nGlomerüler endotel Şiga toksini reseptörü ifade eder. Toksin düşük dozda endoteli aktive eder, yüksek dozda hücreyi öldürür.",
+   "kelime": 151
+  },
+  {
+   "no": 40,
+   "tur": "ornek",
+   "soru": "E. coli dışında Şiga toksini aracılı HUS'a yol açan etken hangisidir?",
+   "secenekler": {
+    "A": "Streptococcus pneumoniae",
+    "B": "Treponema pallidum",
+    "C": "Plasmodium falciparum",
+    "D": "Staphylococcus aureus",
+    "E": "Shigella dysenteriae"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Streptococcus pneumoniae ile karıştırılabilir: Şiga toksini üreten etkenler E. coli ve dizanteri basilidir.",
+    "B": "Treponema pallidum sifiliz etkenidir; glomerüler tutulum yapan sistemik enfeksiyonlar arasında sayılır.",
+    "C": "Plasmodium falciparum sıtma etkenidir; glomerüler tutulum yapan sistemik enfeksiyonlardandır.",
+    "D": "Şiga toksini üretmez. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.",
+    "E": "Shigella dysenteriae doğru: aynı toksini üreterek E. coli gibi endotel hasarı ve hemolitik üremik sendrom yapar."
+   },
+   "ozet": "Şiga toksini aracılı HUS etkenleri Şiga toksini üreten E. coli, özellikle O157:H7, ve Shigella dysenteriae'dir.",
+   "metin": "**Soru.** E. coli dışında Şiga toksini aracılı HUS'a yol açan etken hangisidir?\n\n**A)** Streptococcus pneumoniae · **B)** Treponema pallidum · **C)** Plasmodium falciparum · **D)** Staphylococcus aureus · **E)** Shigella dysenteriae\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Streptococcus pneumoniae** — Streptococcus pneumoniae ile karıştırılabilir: Şiga toksini üreten etkenler E. coli ve dizanteri basilidir.\n- **Treponema pallidum** — Treponema pallidum sifiliz etkenidir; glomerüler tutulum yapan sistemik enfeksiyonlar arasında sayılır.\n- **Plasmodium falciparum** — Plasmodium falciparum sıtma etkenidir; glomerüler tutulum yapan sistemik enfeksiyonlardandır.\n- **Staphylococcus aureus** — Şiga toksini üretmez. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.\n- **Shigella dysenteriae** — Shigella dysenteriae doğru: aynı toksini üreterek E. coli gibi endotel hasarı ve hemolitik üremik sendrom yapar.\n\n**Cevap: E** — Shigella dysenteriae\n\n**Özet.** Şiga toksini aracılı HUS etkenleri Şiga toksini üreten E. coli, özellikle O157:H7, ve Shigella dysenteriae'dir.",
+   "ses": "E koli dışında Şiga toksini aracılı hemolitik üremik sendroma yol açan etken hangisidir?\nA, Streptokokus pnömonia\nBe, Treponema pallidum\nCe, Plazmodyum falsiparum\nDe, Stafilokokus aureus\nE, Şigella dizanteri\nŞimdi seçeneklere tek tek bakalım.\nStreptococcus pneumoniae ile karıştırılabilir. Şiga toksini üreten etkenler e koli ve dizanteri basilidir.\nTreponema pallidum sifiliz etkenidir. Glomerüler tutulum yapan sistemik enfeksiyonlar arasında sayılır.\nPlazmodyum falsiparum sıtma etkenidir. Glomerüler tutulum yapan sistemik enfeksiyonlardandır.\nŞiga toksini üretmez. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.\nŞigella dizanteri doğru. Aynı toksini üreterek e koli gibi endotel hasarı ve hemolitik üremik sendrom yapar.\nDoğru cevap E, Şigella dizanteri\nŞiga toksini aracılı hemolitik üremik sendrom etkenleri Şiga toksini üreten e koli, özellikle o yüz elli yedi ha yedi, ve Şigella dizanteridir.",
+   "kelime": 136
+  },
+  {
+   "no": 41,
+   "tur": "ornek",
+   "soru": "Kompleman aracılı TMA'da kusurlu olan faktör H, faktör I ve MCP'nin normal işlevi hangisidir?",
+   "secenekler": {
+    "A": "Klasik yolu başlatmak",
+    "B": "vWF multimerlerini parçalamak",
+    "C": "Alternatif yolu frenlemek",
+    "D": "Trombosit agregasyonunu artırmak",
+    "E": "Endotelini artırmak"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Bu faktörler bir yolu başlatmaz, frenler. Klasik yolu başlatmak bu sorudaki ayrımı sağlamaz.",
+    "B": "Ultra büyük vWF multimerlerini parçalamak ADAMTS13 proteazının görevidir; eksikliği trombotik trombositopenik purpura yapar.",
+    "C": "Alternatif yolu frenlemek doğru: bu faktörler alternatif kompleman yolunu negatif düzenler, kusurlarında kompleman kontrolsüz aktive olur.",
+    "D": "Trombosit agregasyonunu artırmak bu faktörlerin işlevi değildir; agregasyon endotel hasarının sonucudur.",
+    "E": "Endotelin artışı Şiga toksininin düşük dozda endotele etkisidir ve vazokonstriksiyon yapar."
+   },
+   "ozet": "Faktör H, faktör I ve MCP alternatif kompleman yolunu negatif düzenler; kusurlarında kontrolsüz kompleman aktivasyonu endotel hasarı ve mikrovasküler tromboz yapar.",
+   "metin": "**Soru.** Kompleman aracılı TMA'da kusurlu olan faktör H, faktör I ve MCP'nin normal işlevi hangisidir?\n\n**A)** Klasik yolu başlatmak · **B)** vWF multimerlerini parçalamak · **C)** Alternatif yolu frenlemek · **D)** Trombosit agregasyonunu artırmak · **E)** Endotelini artırmak\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Klasik yolu başlatmak** — Bu faktörler bir yolu başlatmaz, frenler. Klasik yolu başlatmak bu sorudaki ayrımı sağlamaz.\n- **vWF multimerlerini parçalamak** — Ultra büyük vWF multimerlerini parçalamak ADAMTS13 proteazının görevidir; eksikliği trombotik trombositopenik purpura yapar.\n- **Alternatif yolu frenlemek** — Alternatif yolu frenlemek doğru: bu faktörler alternatif kompleman yolunu negatif düzenler, kusurlarında kompleman kontrolsüz aktive olur.\n- **Trombosit agregasyonunu artırmak** — Trombosit agregasyonunu artırmak bu faktörlerin işlevi değildir; agregasyon endotel hasarının sonucudur.\n- **Endotelini artırmak** — Endotelin artışı Şiga toksininin düşük dozda endotele etkisidir ve vazokonstriksiyon yapar.\n\n**Cevap: C** — Alternatif yolu frenlemek\n\n**Özet.** Faktör H, faktör I ve MCP alternatif kompleman yolunu negatif düzenler; kusurlarında kontrolsüz kompleman aktivasyonu endotel hasarı ve mikrovasküler tromboz yapar.",
+   "ses": "Kompleman aracılı trombotik mikroanjiyopatide kusurlu olan faktör ha ve faktör bir ile membran kofaktör proteininin normal işlevi hangisidir?\nA, Klasik yolu başlatmak\nBe, Ve çift ve fe multimerlerini parçalamak\nCe, Alternatif yolu frenlemek\nDe, Trombosit agregasyonunu artırmak\nE, Endotelini artırmak\nSeçenekleri sırayla değerlendirelim.\nBu faktörler bir yolu başlatmaz, frenler. Klasik yolu başlatmak bu sorudaki ayrımı sağlamaz.\nUltra büyük ve çift ve fe multimerlerini parçalamak a de a me te se on üç proteazının görevidir. Eksikliği trombotik trombositopenik purpura yapar.\nAlternatif yolu frenlemek doğru. Bu faktörler alternatif kompleman yolunu negatif düzenler, kusurlarında kompleman kontrolsüz aktive olur.\nTrombosit agregasyonunu artırmak bu faktörlerin işlevi değildir. Agregasyon endotel hasarının sonucudur.\nEndotelin artışı Şiga toksininin düşük dozda endotele etkisidir ve vazokonstriksiyon yapar.\nDoğru cevap Ce, Alternatif yolu frenlemek\nFaktör ha ve faktör bir ile membran kofaktör proteini alternatif kompleman yolunu frenler. Kusurlarında kontrolsüz kompleman aktivasyonu endotel hasarı ve tromboz yapar.",
+   "kelime": 158
+  },
+  {
+   "no": 42,
+   "tur": "ornek",
+   "soru": "Edinilmiş TTP'de ADAMTS13 eksikliğinin nedeni hangisidir?",
+   "secenekler": {
+    "A": "Gen mutasyonu",
+    "B": "İnhibitör otoantikor",
+    "C": "Şiga toksini",
+    "D": "C3 nefritik faktör",
+    "E": "Faktör H kusuru"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Gen mutasyonu ADAMTS13 eksikliğinin kalıtsal formunun nedenidir; edinilmiş form değildir.",
+    "B": "İnhibitör otoantikor doğru: edinilmiş formda ADAMTS13'e karşı gelişen otoantikor enzimi etkisizleştirir.",
+    "C": "Şiga toksini endotel hasarıyla hemolitik üremik sendrom yapar; proteaz eksikliğine yol açmaz.",
+    "D": "C3 nefritik faktör kompleman aracılı trombotik mikroanjiyopatinin edinilmiş nedenlerindendir.",
+    "E": "Faktör H kusuru alternatif kompleman yolunun kontrolsüz aktivasyonuyla kompleman aracılı forma yol açar."
+   },
+   "ozet": "ADAMTS13 eksikliği edinilmiş formda inhibitör otoantikorla, kalıtsal formda gen mutasyonlarıyla olur; parçalanmayan vWF multimerleri mikrotromboz yapar.",
+   "metin": "**Soru.** Edinilmiş TTP'de ADAMTS13 eksikliğinin nedeni hangisidir?\n\n**A)** Gen mutasyonu · **B)** İnhibitör otoantikor · **C)** Şiga toksini · **D)** C3 nefritik faktör · **E)** Faktör H kusuru\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Gen mutasyonu** — Gen mutasyonu ADAMTS13 eksikliğinin kalıtsal formunun nedenidir; edinilmiş form değildir.\n- **İnhibitör otoantikor** — İnhibitör otoantikor doğru: edinilmiş formda ADAMTS13'e karşı gelişen otoantikor enzimi etkisizleştirir.\n- **Şiga toksini** — Şiga toksini endotel hasarıyla hemolitik üremik sendrom yapar; proteaz eksikliğine yol açmaz.\n- **C3 nefritik faktör** — C3 nefritik faktör kompleman aracılı trombotik mikroanjiyopatinin edinilmiş nedenlerindendir.\n- **Faktör H kusuru** — Faktör H kusuru alternatif kompleman yolunun kontrolsüz aktivasyonuyla kompleman aracılı forma yol açar.\n\n**Cevap: B** — İnhibitör otoantikor\n\n**Özet.** ADAMTS13 eksikliği edinilmiş formda inhibitör otoantikorla, kalıtsal formda gen mutasyonlarıyla olur; parçalanmayan vWF multimerleri mikrotromboz yapar.",
+   "ses": "Edinilmiş trombotik trombositopenik purpurada a de a me te se on üç eksikliğinin nedeni hangisidir?\nA, Gen mutasyonu\nBe, İnhibitör otoantikor\nCe, Şiga toksini\nDe, Ce üç nefritik faktör\nE, Faktör ha kusuru\nHer seçeneği tek tek ele alalım.\nGen mutasyonu a de a me te se on üç eksikliğinin kalıtsal formunun nedenidir. Edinilmiş form değildir.\nİnhibitör otoantikor doğru. Edinilmiş formda a de a me te se on üçe karşı gelişen otoantikor enzimi etkisizleştirir.\nŞiga toksini endotel hasarıyla hemolitik üremik sendrom yapar. Proteaz eksikliğine yol açmaz.\nCe üç nefritik faktör kompleman aracılı trombotik mikroanjiyopatinin edinilmiş nedenlerindendir.\nFaktör ha kusuru alternatif kompleman yolunun kontrolsüz aktivasyonuyla kompleman aracılı forma yol açar.\nDoğru cevap Be, İnhibitör otoantikor\nA de a me te se on üç eksikliği edinilmiş formda inhibitör otoantikorla, kalıtsal formda gen mutasyonlarıyla olur. Parçalanmayan ve çift ve fe multimerleri mikrotromboz yapar.",
+   "kelime": 134
+  },
+  {
+   "no": 43,
+   "tur": "ornek",
+   "soru": "TTP'de böbrek tutulumu için hangisi doğrudur?",
+   "secenekler": {
+    "A": "HUS'a göre daha az olabilir",
+    "B": "Hiç görülmez",
+    "C": "Kanlı diyareyle başlar",
+    "D": "Nodüler skleroz yapar",
+    "E": "Hiyalin arteriyoloskleroz yapar"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "HUS'a göre daha az etkilenme doğru: böbrek anormallikleri klasik beşlide yer alır, ama böbrek hemolitik üremik sendroma göre daha az etkilenmiş olabilir.",
+    "B": "Hiç görülmez ifadesi yanlıştır; böbrek anormallikleri klasik pentadın bir bileşenidir.",
+    "C": "Kanlı diyareyle başlangıç Şiga toksini aracılı hemolitik üremik sendromun özelliğidir.",
+    "D": "Nodüler glomeruloskleroz diyabetik nefropatinin patognomonik lezyonudur.",
+    "E": "Hiyalin arteriyoloskleroz benign nefrosklerozun temel damar lezyonudur."
+   },
+   "ozet": "TTP'nin klasik pentadı ateş, trombositopeni, mikroanjiyopatik hemolitik anemi, nörolojik belirtiler ve böbrek anormallikleridir; böbrek HUS'a göre daha az etkilenmiş olabilir.",
+   "metin": "**Soru.** TTP'de böbrek tutulumu için hangisi doğrudur?\n\n**A)** HUS'a göre daha az olabilir · **B)** Hiç görülmez · **C)** Kanlı diyareyle başlar · **D)** Nodüler skleroz yapar · **E)** Hiyalin arteriyoloskleroz yapar\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **HUS'a göre daha az olabilir** — HUS'a göre daha az etkilenme doğru: böbrek anormallikleri klasik beşlide yer alır, ama böbrek hemolitik üremik sendroma göre daha az etkilenmiş olabilir.\n- **Hiç görülmez** — Hiç görülmez ifadesi yanlıştır; böbrek anormallikleri klasik pentadın bir bileşenidir.\n- **Kanlı diyareyle başlar** — Kanlı diyareyle başlangıç Şiga toksini aracılı hemolitik üremik sendromun özelliğidir.\n- **Nodüler skleroz yapar** — Nodüler glomeruloskleroz diyabetik nefropatinin patognomonik lezyonudur.\n- **Hiyalin arteriyoloskleroz yapar** — Hiyalin arteriyoloskleroz benign nefrosklerozun temel damar lezyonudur.\n\n**Cevap: A** — HUS'a göre daha az olabilir\n\n**Özet.** TTP'nin klasik pentadı ateş, trombositopeni, mikroanjiyopatik hemolitik anemi, nörolojik belirtiler ve böbrek anormallikleridir; böbrek HUS'a göre daha az etkilenmiş olabilir.",
+   "ses": "Trombotik trombositopenik purpurada böbrek tutulumu için hangisi doğrudur?\nA, Hemolitik üremik sendroma göre daha az olabilir\nBe, Hiç görülmez\nCe, Kanlı diyareyle başlar\nDe, Nodüler skleroz yapar\nE, Hiyalin arteriyoloskleroz yapar\nŞıkları sırasıyla gözden geçirelim.\nHemolitik üremik sendroma göre daha az etkilenme doğru. Böbrek anormallikleri klasik beşlide yer alır, ama tutulum daha hafif olabilir.\nHiç görülmez ifadesi yanlıştır. Böbrek anormallikleri klasik pentadın bir bileşenidir.\nKanlı diyareyle başlangıç Şiga toksini aracılı hemolitik üremik sendromun özelliğidir.\nNodüler glomeruloskleroz diyabetik nefropatinin patognomonik lezyonudur.\nHiyalin arteriyoloskleroz benign nefrosklerozun temel damar lezyonudur.\nDoğru cevap A, Hemolitik üremik sendroma göre daha az olabilir\nTrombotik trombositopenik purpurada böbrek anormallikleri klasik beşlide yer alır. Ancak böbrek hemolitik üremik sendroma göre daha az etkilenmiş olabilir.",
+   "kelime": 147
+  },
+  {
+   "no": 44,
+   "tur": "ornek",
+   "soru": "Trombotik mikroanjiyopatide glomerüler kılcal duvarında görülen morfolojik bulgu hangisidir?",
+   "secenekler": {
+    "A": "Nodüler glomeruloskleroz",
+    "B": "Amiloid birikimi",
+    "C": "Mezangial immün kompleks",
+    "D": "Subendotelyal şişlik",
+    "E": "Hiyalin arteriyoloskleroz"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Nodüler glomeruloskleroz matriksin odaksal birikimidir ve diyabete özgüdür.",
+    "B": "Amiloid birikimi Kongo kırmızısı pozitif fibriller depozittir ve amiloid nefropatisinde görülür.",
+    "C": "Mezangial immün kompleks birikimi lupus nefritinde görülür; trombotik mikroanjiyopatinin temeli ise endotel hasarı ve trombüstür.",
+    "D": "Subendotelyal şişlik doğru: endotel hasarıyla endotel altındaki alan genişler, bazal membran da ikileşip bölünebilir.",
+    "E": "Hiyalin arteriyoloskleroz arteriyol duvarında homojen pembe kalınlaşmadır ve benign nefrosklerozda görülür."
+   },
+   "ozet": "Trombotik mikroanjiyopatide kılcal ve arteriyollerde trombüs, subendotelyal şişlik ve bazal membran duplikasyonu görülür; ağır olguda kortikal nekroz gelişir.",
+   "metin": "**Soru.** Trombotik mikroanjiyopatide glomerüler kılcal duvarında görülen morfolojik bulgu hangisidir?\n\n**A)** Nodüler glomeruloskleroz · **B)** Amiloid birikimi · **C)** Mezangial immün kompleks · **D)** Subendotelyal şişlik · **E)** Hiyalin arteriyoloskleroz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Nodüler glomeruloskleroz** — Nodüler glomeruloskleroz matriksin odaksal birikimidir ve diyabete özgüdür.\n- **Amiloid birikimi** — Amiloid birikimi Kongo kırmızısı pozitif fibriller depozittir ve amiloid nefropatisinde görülür.\n- **Mezangial immün kompleks** — Mezangial immün kompleks birikimi lupus nefritinde görülür; trombotik mikroanjiyopatinin temeli ise endotel hasarı ve trombüstür.\n- **Subendotelyal şişlik** — Subendotelyal şişlik doğru: endotel hasarıyla endotel altındaki alan genişler, bazal membran da ikileşip bölünebilir.\n- **Hiyalin arteriyoloskleroz** — Hiyalin arteriyoloskleroz arteriyol duvarında homojen pembe kalınlaşmadır ve benign nefrosklerozda görülür.\n\n**Cevap: D** — Subendotelyal şişlik\n\n**Özet.** Trombotik mikroanjiyopatide kılcal ve arteriyollerde trombüs, subendotelyal şişlik ve bazal membran duplikasyonu görülür; ağır olguda kortikal nekroz gelişir.",
+   "ses": "Trombotik mikroanjiyopatide glomerüler kılcal duvarında görülen morfolojik bulgu hangisidir?\nA, Nodüler glomeruloskleroz\nBe, Amiloid birikimi\nCe, Mezangial immün kompleks\nDe, Subendotelyal şişlik\nE, Hiyalin arteriyoloskleroz\nŞimdi seçeneklere tek tek bakalım.\nNodüler glomeruloskleroz matriksin odaksal birikimidir ve diyabete özgüdür.\nAmiloid birikimi Kongo kırmızısı pozitif fibriller depozittir ve amiloid nefropatisinde görülür.\nMezangial immün kompleks birikimi lupus nefritinde görülür. Trombotik mikroanjiyopatinin temeli ise endotel hasarı ve trombüstür.\nSubendotelyal şişlik doğru. Endotel hasarıyla endotel altındaki alan genişler, bazal membran da ikileşip bölünebilir.\nHiyalin arteriyoloskleroz arteriyol duvarında homojen pembe kalınlaşmadır ve benign nefrosklerozda görülür.\nDoğru cevap De, Subendotelyal şişlik\nTrombotik mikroanjiyopatide kılcal ve arteriyollerde trombüs, subendotelyal şişlik ve bazal membran duplikasyonu görülür. Ağır olguda kortikal nekroz gelişir.",
+   "kelime": 140
+  },
+  {
+   "no": 45,
+   "tur": "ornek",
+   "soru": "Tedavisiz mortalitesi yaklaşık %90 olan TTP'de prognozu belirgin iyileştiren tedavi hangisidir?",
+   "secenekler": {
+    "A": "Diyaliz",
+    "B": "Plazma değişimi",
+    "C": "Böbrek nakli",
+    "D": "Kan basıncı kontrolü",
+    "E": "Sıkı glisemik kontrol"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Diyaliz, Şiga toksini aracılı hemolitik üremik sendromda kısa dönem iyi iyileşme sağlar.",
+    "B": "Plazma değişimi doğru: trombotik trombositopenik purpurada prognozu belirgin biçimde iyileştirir.",
+    "C": "Böbrek nakli, diyalizle birlikte son dönem böbrek hastalığında seçeneklerden biridir; bu hastalıkta prognozu düzelten tedavi değildir.",
+    "D": "Kan basıncının hızlı ve kontrollü düşürülmesi malign hipertansiyonun acil tedavisidir.",
+    "E": "Bu hastalığın mortalitesini düşüren yöntem dolaşımdaki plazmayı değiştirmeye dayanır. Sıkı glisemik kontrol bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "TTP tedavi edilmezse mortalitesi yaklaşık %90'dır; plazma değişimi ile prognoz belirgin biçimde iyileşir.",
+   "metin": "**Soru.** Tedavisiz mortalitesi yaklaşık %90 olan TTP'de prognozu belirgin iyileştiren tedavi hangisidir?\n\n**A)** Diyaliz · **B)** Plazma değişimi · **C)** Böbrek nakli · **D)** Kan basıncı kontrolü · **E)** Sıkı glisemik kontrol\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Diyaliz** — Diyaliz, Şiga toksini aracılı hemolitik üremik sendromda kısa dönem iyi iyileşme sağlar.\n- **Plazma değişimi** — Plazma değişimi doğru: trombotik trombositopenik purpurada prognozu belirgin biçimde iyileştirir.\n- **Böbrek nakli** — Böbrek nakli, diyalizle birlikte son dönem böbrek hastalığında seçeneklerden biridir; bu hastalıkta prognozu düzelten tedavi değildir.\n- **Kan basıncı kontrolü** — Kan basıncının hızlı ve kontrollü düşürülmesi malign hipertansiyonun acil tedavisidir.\n- **Sıkı glisemik kontrol** — Bu hastalığın mortalitesini düşüren yöntem dolaşımdaki plazmayı değiştirmeye dayanır. Sıkı glisemik kontrol bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Plazma değişimi\n\n**Özet.** TTP tedavi edilmezse mortalitesi yaklaşık %90'dır; plazma değişimi ile prognoz belirgin biçimde iyileşir.",
+   "ses": "Tedavisiz mortalitesi yaklaşık yüzde doksan olan trombotik trombositopenik purpurada prognozu belirgin iyileştiren tedavi hangisidir?\nA, Diyaliz\nBe, Plazma değişimi\nCe, Böbrek nakli\nDe, Kan basıncı kontrolü\nE, Sıkı glisemik kontrol\nSeçenekleri sırayla değerlendirelim.\nDiyaliz, Şiga toksini aracılı hemolitik üremik sendromda kısa dönem iyi iyileşme sağlar.\nPlazma değişimi doğru. Trombotik trombositopenik purpurada prognozu belirgin biçimde iyileştirir.\nBöbrek nakli, diyalizle birlikte son dönem böbrek hastalığında seçeneklerden biridir. Bu hastalıkta prognozu düzelten tedavi değildir.\nKan basıncının hızlı ve kontrollü düşürülmesi malign hipertansiyonun acil tedavisidir.\nBu hastalığın mortalitesini düşüren yöntem dolaşımdaki plazmayı değiştirmeye dayanır. Sıkı glisemik kontrol bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Plazma değişimi\nTrombotik trombositopenik purpura tedavi edilmezse mortalitesi yaklaşık yüzde doksandır. Plazma değişimi ile prognoz belirgin biçimde iyileşir.",
+   "kelime": 140
+  },
+  {
+   "no": 46,
+   "tur": "ornek",
+   "soru": "Benign nefroskleroz için hangisi doğrudur?",
+   "secenekler": {
+    "A": "Pire ısırığı görünümü vardır",
+    "B": "Fibrinoid nekroz tipiktir",
+    "C": "Böbrekler asimetrik küçüktür",
+    "D": "Üremi tek başına nadirdir",
+    "E": "Soğan zarı lezyonu tipiktir"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Pire ısırığı görünümü malign nefrosklerozda kortikal yüzeydeki peteşiyal kanamalardır.",
+    "B": "Fibrinoid nekroz şiddetli endotel hasarına bağlıdır ve malign nefrosklerozun lezyonudur.",
+    "C": "Benign nefrosklerozda böbrekler simetrik küçülür; asimetrik skarlaşma piyelonefrit kökenini düşündürür.",
+    "D": "Üremi doğru: benign hipertansiyonda tek başına böbrek yetmezliği ve üremi nadirdir, hafif yetmezlik ve hafif proteinüri sıktır.",
+    "E": "Soğan zarı lezyonu hiperplastik arteriyolosklerozdur ve malign hipertansiyonda görülür."
+   },
+   "ozet": "Benign nefrosklerozda hafif böbrek yetmezliği ve hafif proteinüri sıktır; üremi tek başına nadirdir, ağır hipertansiyon ve diyabet riski artırır.",
+   "metin": "**Soru.** Benign nefroskleroz için hangisi doğrudur?\n\n**A)** Pire ısırığı görünümü vardır · **B)** Fibrinoid nekroz tipiktir · **C)** Böbrekler asimetrik küçüktür · **D)** Üremi tek başına nadirdir · **E)** Soğan zarı lezyonu tipiktir\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Pire ısırığı görünümü vardır** — Pire ısırığı görünümü malign nefrosklerozda kortikal yüzeydeki peteşiyal kanamalardır.\n- **Fibrinoid nekroz tipiktir** — Fibrinoid nekroz şiddetli endotel hasarına bağlıdır ve malign nefrosklerozun lezyonudur.\n- **Böbrekler asimetrik küçüktür** — Benign nefrosklerozda böbrekler simetrik küçülür; asimetrik skarlaşma piyelonefrit kökenini düşündürür.\n- **Üremi tek başına nadirdir** — Üremi doğru: benign hipertansiyonda tek başına böbrek yetmezliği ve üremi nadirdir, hafif yetmezlik ve hafif proteinüri sıktır.\n- **Soğan zarı lezyonu tipiktir** — Soğan zarı lezyonu hiperplastik arteriyolosklerozdur ve malign hipertansiyonda görülür.\n\n**Cevap: D** — Üremi tek başına nadirdir\n\n**Özet.** Benign nefrosklerozda hafif böbrek yetmezliği ve hafif proteinüri sıktır; üremi tek başına nadirdir, ağır hipertansiyon ve diyabet riski artırır.",
+   "ses": "Benign nefroskleroz için hangisi doğrudur?\nA, Pire ısırığı görünümü vardır\nBe, Fibrinoid nekroz tipiktir\nCe, Böbrekler asimetrik küçüktür\nDe, Üremi tek başına nadirdir\nE, Soğan zarı lezyonu tipiktir\nHer seçeneği tek tek ele alalım.\nPire ısırığı görünümü malign nefrosklerozda kortikal yüzeydeki peteşiyal kanamalardır.\nFibrinoid nekroz şiddetli endotel hasarına bağlıdır ve malign nefrosklerozun lezyonudur.\nBenign nefrosklerozda böbrekler simetrik küçülür. Asimetrik skarlaşma piyelonefrit kökenini düşündürür.\nÜremi doğru. Benign hipertansiyonda tek başına böbrek yetmezliği ve üremi nadirdir, hafif yetmezlik ve hafif proteinüri sıktır.\nSoğan zarı lezyonu hiperplastik arteriyolosklerozdur ve malign hipertansiyonda görülür.\nDoğru cevap De, Üremi tek başına nadirdir\nBenign nefrosklerozda hafif böbrek yetmezliği ve hafif proteinüri sıktır. Üremi tek başına nadirdir, ağır hipertansiyon ve diyabet riski artırır.",
+   "kelime": 150
+  },
+  {
+   "no": 47,
+   "tur": "ornek",
+   "soru": "Kronik böbrek hastalığının tübülointerstisyel nedeni hangisidir?",
+   "secenekler": {
+    "A": "Amiloidoz",
+    "B": "Nefroskleroz",
+    "C": "Trombotik mikroanjiyopati",
+    "D": "Polikistik hastalık",
+    "E": "Piyelonefrit"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Amiloidoz glomerüler yoldan kronik böbrek hastalığına götüren nedenlerdendir.",
+    "B": "Nefroskleroz, hipertansiyona bağlı damar hasarıyla vasküler nedenler grubundadır.",
+    "C": "Trombotik mikroanjiyopati damar hasarıyla ilerlediği için vasküler nedenler arasında yer alır.",
+    "D": "Polikistik hastalıklar kistik nedenler grubunu oluşturur.",
+    "E": "Piyelonefrit doğru: tübülointerstisyel nefritle birlikte bu grubun nedenidir."
+   },
+   "ozet": "Kronik böbrek hastalığı nedenleri glomerüler, tübülointerstisyel, vasküler ve kistik olarak gruplanır; piyelonefrit ve TIN tübülointerstisyel gruptadır.",
+   "metin": "**Soru.** Kronik böbrek hastalığının tübülointerstisyel nedeni hangisidir?\n\n**A)** Amiloidoz · **B)** Nefroskleroz · **C)** Trombotik mikroanjiyopati · **D)** Polikistik hastalık · **E)** Piyelonefrit\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Amiloidoz** — Amiloidoz glomerüler yoldan kronik böbrek hastalığına götüren nedenlerdendir.\n- **Nefroskleroz** — Nefroskleroz, hipertansiyona bağlı damar hasarıyla vasküler nedenler grubundadır.\n- **Trombotik mikroanjiyopati** — Trombotik mikroanjiyopati damar hasarıyla ilerlediği için vasküler nedenler arasında yer alır.\n- **Polikistik hastalık** — Polikistik hastalıklar kistik nedenler grubunu oluşturur.\n- **Piyelonefrit** — Piyelonefrit doğru: tübülointerstisyel nefritle birlikte bu grubun nedenidir.\n\n**Cevap: E** — Piyelonefrit\n\n**Özet.** Kronik böbrek hastalığı nedenleri glomerüler, tübülointerstisyel, vasküler ve kistik olarak gruplanır; piyelonefrit ve TIN tübülointerstisyel gruptadır.",
+   "ses": "Kronik böbrek hastalığının tübülointerstisyel nedeni hangisidir?\nA, Amiloidoz\nBe, Nefroskleroz\nCe, Trombotik mikroanjiyopati\nDe, Polikistik hastalık\nE, Piyelonefrit\nŞıkları sırasıyla gözden geçirelim.\nAmiloidoz glomerüler yoldan kronik böbrek hastalığına götüren nedenlerdendir.\nNefroskleroz, hipertansiyona bağlı damar hasarıyla vasküler nedenler grubundadır.\nTrombotik mikroanjiyopati damar hasarıyla ilerlediği için vasküler nedenler arasında yer alır.\nPolikistik hastalıklar kistik nedenler grubunu oluşturur.\nPiyelonefrit doğru. Tübülointerstisyel nefritle birlikte bu grubun nedenidir.\nDoğru cevap E, Piyelonefrit\nKronik böbrek hastalığı nedenleri glomerüler, tübülointerstisyel, vasküler ve kistik olarak gruplanır. Piyelonefrit ve tübülointerstisyel nefrit ikinci gruptadır.",
+   "kelime": 107
+  },
+  {
+   "no": 48,
+   "tur": "ornek",
+   "soru": "İlerlemiş kronik böbrek hastalığında beklenen elektrolit ve asit–baz bozukluğu hangisidir?",
+   "secenekler": {
+    "A": "Hipopotasemi ve metabolik alkaloz",
+    "B": "Hiperpotasemi ve metabolik asidoz",
+    "C": "Hipopotasemi ve metabolik asidoz",
+    "D": "Hiperpotasemi ve metabolik alkaloz",
+    "E": "Hipernatremi ve respiratuvar asidoz"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Hipopotasemi ve metabolik alkaloz ile karıştırılabilir: İlerleyen dönemde potasyum yükselir ve asidoz gelişir.",
+    "B": "Hiperpotasemi ve metabolik asidoz doğru: kronik böbrek hastalığının ilerleyen döneminde bu iki bozukluk birlikte görülür.",
+    "C": "Hipopotasemi ve metabolik asidoz ile karıştırılabilir: Asidoz gelişse de potasyum düşmez, yükselir.",
+    "D": "Potasyum yükselse de tabloya alkaloz değil asidoz eşlik eder. Hiperpotasemi ve metabolik alkaloz bu sorudaki ayrımı sağlamaz.",
+    "E": "Hipernatremi ve respiratuvar asidoz ile karıştırılabilir: Buradaki bozukluk metabolik kökenlidir."
+   },
+   "ozet": "İlerlemiş kronik böbrek hastalığında hiperpotasemi ve metabolik asidoz gelişir; anemi ve kemik mineral bozuklukları eşlik eder.",
+   "metin": "**Soru.** İlerlemiş kronik böbrek hastalığında beklenen elektrolit ve asit–baz bozukluğu hangisidir?\n\n**A)** Hipopotasemi ve metabolik alkaloz · **B)** Hiperpotasemi ve metabolik asidoz · **C)** Hipopotasemi ve metabolik asidoz · **D)** Hiperpotasemi ve metabolik alkaloz · **E)** Hipernatremi ve respiratuvar asidoz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Hipopotasemi ve metabolik alkaloz** — Hipopotasemi ve metabolik alkaloz ile karıştırılabilir: İlerleyen dönemde potasyum yükselir ve asidoz gelişir.\n- **Hiperpotasemi ve metabolik asidoz** — Hiperpotasemi ve metabolik asidoz doğru: kronik böbrek hastalığının ilerleyen döneminde bu iki bozukluk birlikte görülür.\n- **Hipopotasemi ve metabolik asidoz** — Hipopotasemi ve metabolik asidoz ile karıştırılabilir: Asidoz gelişse de potasyum düşmez, yükselir.\n- **Hiperpotasemi ve metabolik alkaloz** — Potasyum yükselse de tabloya alkaloz değil asidoz eşlik eder. Hiperpotasemi ve metabolik alkaloz bu sorudaki ayrımı sağlamaz.\n- **Hipernatremi ve respiratuvar asidoz** — Hipernatremi ve respiratuvar asidoz ile karıştırılabilir: Buradaki bozukluk metabolik kökenlidir.\n\n**Cevap: B** — Hiperpotasemi ve metabolik asidoz\n\n**Özet.** İlerlemiş kronik böbrek hastalığında hiperpotasemi ve metabolik asidoz gelişir; anemi ve kemik mineral bozuklukları eşlik eder.",
+   "ses": "İlerlemiş kronik böbrek hastalığında beklenen elektrolit ve asit baz bozukluğu hangisidir?\nA, Hipopotasemi ve metabolik alkaloz\nBe, Hiperpotasemi ve metabolik asidoz\nCe, Hipopotasemi ve metabolik asidoz\nDe, Hiperpotasemi ve metabolik alkaloz\nE, Hipernatremi ve respiratuvar asidoz\nŞimdi seçeneklere tek tek bakalım.\nHipopotasemi ve metabolik alkaloz ile karıştırılabilir. İlerleyen dönemde potasyum yükselir ve asidoz gelişir.\nHiperpotasemi ve metabolik asidoz doğru. Kronik böbrek hastalığının ilerleyen döneminde bu iki bozukluk birlikte görülür.\nHipopotasemi ve metabolik asidoz ile karıştırılabilir. Asidoz gelişse de potasyum düşmez, yükselir.\nPotasyum yükselse de tabloya alkaloz değil asidoz eşlik eder. Hiperpotasemi ve metabolik alkaloz bu sorudaki ayrımı sağlamaz.\nHipernatremi ve respiratuvar asidoz ile karıştırılabilir. Buradaki bozukluk metabolik kökenlidir.\nDoğru cevap Be, Hiperpotasemi ve metabolik asidoz\nİlerlemiş kronik böbrek hastalığında hiperpotasemi ve metabolik asidoz gelişir. Anemi ve kemik mineral bozuklukları eşlik eder.",
+   "kelime": 167
+  },
+  {
+   "no": 49,
+   "tur": "ornek",
+   "soru": "APOL1 genindeki belirli polimorfizmler böbrek hastalığı riskini artırırken hangi özelliği sağlar?",
+   "secenekler": {
+    "A": "Sıtmaya direnç",
+    "B": "Tripanosom enfeksiyonuna direnç",
+    "C": "HIV enfeksiyonuna direnç",
+    "D": "Diyabete karşı koruma",
+    "E": "Hipertansiyona karşı koruma"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Bu varyantın koruduğu enfeksiyon başka bir parazittir. Sıtmaya direnç bu sorudaki ayrımı sağlamaz.",
+    "B": "Tripanosom enfeksiyonuna direnç doğru: bu polimorfizmler tripanosoma karşı korurken böbrek hastalığı riskini artırır.",
+    "C": "Bu genin bilinen koruyucu etkisi tripanosomlara karşıdır. HIV direnci bu sorudaki ayrımı sağlamaz.",
+    "D": "Diyabete karşı koruma ile karıştırılabilir: Bu varyant bir enfeksiyona karşı direnç sağlar.",
+    "E": "Varyant böbrek hastalığı riskini artırır, korumaz. Hipertansiyona karşı koruma bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Afrika kökenli Amerikalılarda kronik böbrek hastalığı yaklaşık 5 kat sıktır; APOL1 polimorfizmleri tripanosoma direnç sağlarken böbrek riskini artırır.",
+   "metin": "**Soru.** APOL1 genindeki belirli polimorfizmler böbrek hastalığı riskini artırırken hangi özelliği sağlar?\n\n**A)** Sıtmaya direnç · **B)** Tripanosom enfeksiyonuna direnç · **C)** HIV enfeksiyonuna direnç · **D)** Diyabete karşı koruma · **E)** Hipertansiyona karşı koruma\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Sıtmaya direnç** — Bu varyantın koruduğu enfeksiyon başka bir parazittir. Sıtmaya direnç bu sorudaki ayrımı sağlamaz.\n- **Tripanosom enfeksiyonuna direnç** — Tripanosom enfeksiyonuna direnç doğru: bu polimorfizmler tripanosoma karşı korurken böbrek hastalığı riskini artırır.\n- **HIV enfeksiyonuna direnç** — Bu genin bilinen koruyucu etkisi tripanosomlara karşıdır. HIV direnci bu sorudaki ayrımı sağlamaz.\n- **Diyabete karşı koruma** — Diyabete karşı koruma ile karıştırılabilir: Bu varyant bir enfeksiyona karşı direnç sağlar.\n- **Hipertansiyona karşı koruma** — Varyant böbrek hastalığı riskini artırır, korumaz. Hipertansiyona karşı koruma bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Tripanosom enfeksiyonuna direnç\n\n**Özet.** Afrika kökenli Amerikalılarda kronik böbrek hastalığı yaklaşık 5 kat sıktır; APOL1 polimorfizmleri tripanosoma direnç sağlarken böbrek riskini artırır.",
+   "ses": "A pe o le bir genindeki belirli polimorfizmler böbrek hastalığı riskini artırırken hangi özelliği sağlar?\nA, Sıtmaya direnç\nBe, Tripanosom enfeksiyonuna direnç\nCe, Ha i ve enfeksiyonuna direnç\nDe, Diyabete karşı koruma\nE, Hipertansiyona karşı koruma\nSeçenekleri sırayla değerlendirelim.\nBu varyantın koruduğu enfeksiyon başka bir parazittir. Sıtmaya direnç bu sorudaki ayrımı sağlamaz.\nTripanosom enfeksiyonuna direnç doğru. Bu polimorfizmler tripanosoma karşı korurken böbrek hastalığı riskini artırır.\nBu genin bilinen koruyucu etkisi tripanosomlara karşıdır. HIV direnci bu sorudaki ayrımı sağlamaz.\nDiyabete karşı koruma ile karıştırılabilir. Bu varyant bir enfeksiyona karşı direnç sağlar.\nVaryant böbrek hastalığı riskini artırır, korumaz. Hipertansiyona karşı koruma bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Tripanosom enfeksiyonuna direnç\nAfrika kökenli Amerikalılarda kronik böbrek hastalığı yaklaşık beş kat sıktır. A pe o le bir polimorfizmleri tripanosoma direnç sağlarken böbrek riskini artırır.",
+   "kelime": 152
+  }
+ ]
+}

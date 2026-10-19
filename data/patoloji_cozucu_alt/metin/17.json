@@ -1,0 +1,1032 @@
+{
+ "kod": "17",
+ "baslik": "Karsinojenezin Moleküler Temeli",
+ "surum": "alt-1",
+ "sorular": [
+  {
+   "no": 1,
+   "tur": "ornek",
+   "soru": "\"İki vuruş hipotezi\" hangi gen grubu için geçerlidir?",
+   "secenekler": {
+    "A": "Onkogenler",
+    "B": "Proto-onkogenler",
+    "C": "Tümör baskılayıcı genler",
+    "D": "Yolcu mutasyonlar",
+    "E": "Onkomirler"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Onkogenlerde tek alelin mutasyonu genellikle yeterlidir; etkileri dominanttır, bu yüzden iki vuruş gerekmez.",
+    "B": "Proto-onkogenler işlev kazanımı mutasyonuyla onkogene dönüşür; bu dönüşüm iki alelin kaybı değil, bir işlev kazancıdır.",
+    "C": "Tümör baskılayıcı genler doğru: büyüme frenini oluşturdukları için çoğu durumda iki alelin de inaktive olması gerekir.",
+    "D": "Yolcu mutasyonlar bir gen grubu değildir; DNA onarım kusurlarında sürücü mutasyonlarla birlikte çok sayıda biriken mutasyonlardandır.",
+    "E": "Onkomirler onkojenik etkili mikroRNA'lardır; tümör baskılayıcı genin mRNA'sını hedefleyip proteinini azaltırlar."
+   },
+   "ozet": "İki vuruş hipotezi tümör baskılayıcı genler içindir, iki alel de kaybedilmelidir; onkogenlerde ise tek alelin mutasyonu genellikle yeterlidir.",
+   "metin": "**Soru.** \"İki vuruş hipotezi\" hangi gen grubu için geçerlidir?\n\n**A)** Onkogenler · **B)** Proto-onkogenler · **C)** Tümör baskılayıcı genler · **D)** Yolcu mutasyonlar · **E)** Onkomirler\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Onkogenler** — Onkogenlerde tek alelin mutasyonu genellikle yeterlidir; etkileri dominanttır, bu yüzden iki vuruş gerekmez.\n- **Proto-onkogenler** — Proto-onkogenler işlev kazanımı mutasyonuyla onkogene dönüşür; bu dönüşüm iki alelin kaybı değil, bir işlev kazancıdır.\n- **Tümör baskılayıcı genler** — Tümör baskılayıcı genler doğru: büyüme frenini oluşturdukları için çoğu durumda iki alelin de inaktive olması gerekir.\n- **Yolcu mutasyonlar** — Yolcu mutasyonlar bir gen grubu değildir; DNA onarım kusurlarında sürücü mutasyonlarla birlikte çok sayıda biriken mutasyonlardandır.\n- **Onkomirler** — Onkomirler onkojenik etkili mikroRNA'lardır; tümör baskılayıcı genin mRNA'sını hedefleyip proteinini azaltırlar.\n\n**Cevap: C** — Tümör baskılayıcı genler\n\n**Özet.** İki vuruş hipotezi tümör baskılayıcı genler içindir, iki alel de kaybedilmelidir; onkogenlerde ise tek alelin mutasyonu genellikle yeterlidir.",
+   "ses": "İki vuruş hipotezi hangi gen grubu için geçerlidir?\nA, Onkogenler\nBe, Proto onkogenler\nCe, Tümör baskılayıcı genler\nDe, Yolcu mutasyonlar\nE, Onkomirler\nSeçenekleri sırayla değerlendirelim.\nOnkogenlerde tek alelin mutasyonu genellikle yeterlidir. Etkileri dominanttır, bu yüzden iki vuruş gerekmez.\nProto onkogenler işlev kazanımı mutasyonuyla onkogene dönüşür. Bu dönüşüm iki alelin kaybı değil, bir işlev kazancıdır.\nTümör baskılayıcı genler doğru. Büyüme frenini oluşturdukları için çoğu durumda iki alelin de inaktive olması gerekir.\nYolcu mutasyonlar bir gen grubu değildir. De ne a onarım kusurlarında sürücü mutasyonlarla birlikte çok sayıda biriken mutasyonlardandır.\nOnkomirler onkojenik etkili mikro re ne a molekülleridir. Tümör baskılayıcı genin me re ne asını hedefleyip proteinini azaltırlar.\nDoğru cevap Ce, Tümör baskılayıcı genler\nİki vuruş hipotezi tümör baskılayıcı genler içindir, iki alel de kaybedilmelidir. Onkogenlerde ise tek alelin mutasyonu genellikle yeterlidir.",
+   "kelime": 144
+  },
+  {
+   "no": 2,
+   "tur": "ornek",
+   "soru": "Burkitt lenfomada t(8;14) ile aşırı eksprese olan onkogen hangisidir?",
+   "secenekler": {
+    "A": "BCL2",
+    "B": "MYC",
+    "C": "ABL",
+    "D": "HER2",
+    "E": "RAS"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "BCL2, foliküler lenfomadaki 14;18 translokasyonuyla aşırı eksprese olur ve apoptozu baskılar.",
+    "B": "MYC doğru: 8;14 translokasyonu bu onkogeni immünoglobulin ağır zincir lokusuna taşır ve aşırı ekspresyonuna yol açar.",
+    "C": "ABL, kronik miyeloid lösemide 9;22 translokasyonuyla BCR ile füzyon yapar ve konstitütif aktif tirozin kinaz oluşturur.",
+    "D": "HER2, meme karsinomlarının yaklaşık %20'sinde translokasyonla değil, amplifikasyonla yani kopya sayısı artışıyla aktifleşir.",
+    "E": "RAS gen ailesi nokta mutasyonlarıyla aktive olur; Burkitt lenfomadaki translokasyonun hedefi değildir."
+   },
+   "ozet": "Burkitt lenfomada 8;14 translokasyonu MYC onkogenini immünoglobulin ağır zincir lokusuna taşır; foliküler lenfomadaki 14;18 ise BCL2 genini taşır.",
+   "metin": "**Soru.** Burkitt lenfomada t(8;14) ile aşırı eksprese olan onkogen hangisidir?\n\n**A)** BCL2 · **B)** MYC · **C)** ABL · **D)** HER2 · **E)** RAS\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **BCL2** — BCL2, foliküler lenfomadaki 14;18 translokasyonuyla aşırı eksprese olur ve apoptozu baskılar.\n- **MYC** — MYC doğru: 8;14 translokasyonu bu onkogeni immünoglobulin ağır zincir lokusuna taşır ve aşırı ekspresyonuna yol açar.\n- **ABL** — ABL, kronik miyeloid lösemide 9;22 translokasyonuyla BCR ile füzyon yapar ve konstitütif aktif tirozin kinaz oluşturur.\n- **HER2** — HER2, meme karsinomlarının yaklaşık %20'sinde translokasyonla değil, amplifikasyonla yani kopya sayısı artışıyla aktifleşir.\n- **RAS** — RAS gen ailesi nokta mutasyonlarıyla aktive olur; Burkitt lenfomadaki translokasyonun hedefi değildir.\n\n**Cevap: B** — MYC\n\n**Özet.** Burkitt lenfomada 8;14 translokasyonu MYC onkogenini immünoglobulin ağır zincir lokusuna taşır; foliküler lenfomadaki 14;18 ise BCL2 genini taşır.",
+   "ses": "Burkit lenfomada sekiz on dört translokasyonu ile aşırı eksprese olan onkogen hangisidir?\nA, Be ce le iki\nBe, Mik\nCe, A be le\nDe, Her tu\nE, Ras\nHer seçeneği tek tek ele alalım.\nBe ce le iki, foliküler lenfomadaki on dört on sekiz translokasyonuyla aşırı eksprese olur ve apoptozu baskılar.\nMik doğru. Sekiz on dört translokasyonu bu onkogeni immünoglobulin ağır zincir lokusuna taşır ve aşırı ekspresyonuna yol açar.\nA be le, kronik miyeloid lösemide dokuz yirmi iki translokasyonuyla be ce re ile füzyon yapar ve konstitütif aktif tirozin kinaz oluşturur.\nHer tu, meme karsinomlarının yaklaşık yüzde yirmisinde translokasyonla değil, amplifikasyonla yani kopya sayısı artışıyla aktifleşir.\nRas gen ailesi nokta mutasyonlarıyla aktive olur. Burkit lenfomadaki translokasyonun hedefi değildir.\nDoğru cevap Be, Mik\nBurkit lenfomada sekiz on dört translokasyonu mik onkogenini immünoglobulin ağır zincir lokusuna taşır. Foliküler lenfomadaki on dört on sekiz ise be ce le iki genini taşır.",
+   "kelime": 137
+  },
+  {
+   "no": 3,
+   "tur": "ornek",
+   "soru": "Foliküler lenfomada t(14;18) sonucu oluşan temel etki hangisidir?",
+   "secenekler": {
+    "A": "Tirozin kinaz aktivasyonu",
+    "B": "p53 yıkımı",
+    "C": "MYC aşırı ekspresyonu",
+    "D": "Apoptozun baskılanması",
+    "E": "RB inaktivasyonu"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Tirozin kinaz aktivasyonu, kronik miyeloid lösemideki BCR-ABL füzyonunun sonucudur; foliküler lenfomanın mekanizması değildir.",
+    "B": "p53 yıkımı, yüksek riskli HPV'nin E6 onkoproteininin etkisidir; bir translokasyon sonucu değildir.",
+    "C": "MYC aşırı ekspresyonu, Burkitt lenfomadaki 8;14 translokasyonunun sonucudur.",
+    "D": "Apoptozun baskılanması doğru: 14;18 ile BCL2 immünoglobulin ağır zincir lokusuna taşınır, antiapoptotik BCL2 aşırı eksprese olur.",
+    "E": "RB inaktivasyonu, 13q14 delesyonunda ya da HPV E7'nin RB ile etkileşmesinde görülür; bu translokasyonun etkisi değildir."
+   },
+   "ozet": "Foliküler lenfomada 14;18 translokasyonu antiapoptotik BCL2'yi aşırı eksprese ettirir ve apoptozu baskılar; Burkitt lenfomadaki 8;14 ise MYC düzeyini artırır.",
+   "metin": "**Soru.** Foliküler lenfomada t(14;18) sonucu oluşan temel etki hangisidir?\n\n**A)** Tirozin kinaz aktivasyonu · **B)** p53 yıkımı · **C)** MYC aşırı ekspresyonu · **D)** Apoptozun baskılanması · **E)** RB inaktivasyonu\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Tirozin kinaz aktivasyonu** — Tirozin kinaz aktivasyonu, kronik miyeloid lösemideki BCR-ABL füzyonunun sonucudur; foliküler lenfomanın mekanizması değildir.\n- **p53 yıkımı** — p53 yıkımı, yüksek riskli HPV'nin E6 onkoproteininin etkisidir; bir translokasyon sonucu değildir.\n- **MYC aşırı ekspresyonu** — MYC aşırı ekspresyonu, Burkitt lenfomadaki 8;14 translokasyonunun sonucudur.\n- **Apoptozun baskılanması** — Apoptozun baskılanması doğru: 14;18 ile BCL2 immünoglobulin ağır zincir lokusuna taşınır, antiapoptotik BCL2 aşırı eksprese olur.\n- **RB inaktivasyonu** — RB inaktivasyonu, 13q14 delesyonunda ya da HPV E7'nin RB ile etkileşmesinde görülür; bu translokasyonun etkisi değildir.\n\n**Cevap: D** — Apoptozun baskılanması\n\n**Özet.** Foliküler lenfomada 14;18 translokasyonu antiapoptotik BCL2'yi aşırı eksprese ettirir ve apoptozu baskılar; Burkitt lenfomadaki 8;14 ise MYC düzeyini artırır.",
+   "ses": "Foliküler lenfomada on dört on sekiz translokasyonu sonucu oluşan temel etki hangisidir?\nA, Tirozin kinaz aktivasyonu\nBe, Pe elli üç yıkımı\nCe, Mik aşırı ekspresyonu\nDe, Apoptozun baskılanması\nE, Re be inaktivasyonu\nŞıkları sırasıyla gözden geçirelim.\nTirozin kinaz aktivasyonu, kronik miyeloid lösemideki be ce re a be le füzyonunun sonucudur. Foliküler lenfomanın mekanizması değildir.\nPe elli üç yıkımı, yüksek riskli ha pe venin e altı onkoproteininin etkisidir. Bir translokasyon sonucu değildir.\nMik aşırı ekspresyonu, Burkit lenfomadaki sekiz on dört translokasyonunun sonucudur.\nApoptozun baskılanması doğru. On dört on sekiz ile be ce le iki immünoglobulin ağır zincir lokusuna taşınır, antiapoptotik be ce le iki aşırı eksprese olur.\nRe be inaktivasyonu, on üç ku on dört delesyonunda ya da ha pe ve e yedinin re be ile etkileşmesinde görülür. Bu translokasyonun etkisi değildir.\nDoğru cevap De, Apoptozun baskılanması\nFoliküler lenfomada on dört on sekiz translokasyonu antiapoptotik be ce le ikiyi aşırı eksprese ettirir ve apoptozu baskılar. Burkit lenfomadaki sekiz on dört ise mik düzeyini artırır.",
+   "kelime": 147
+  },
+  {
+   "no": 4,
+   "tur": "ornek",
+   "soru": "Kronik miyeloid lösemide Philadelphia kromozomunu oluşturan translokasyon hangisidir?",
+   "secenekler": {
+    "A": "t(9;22)",
+    "B": "t(8;14)",
+    "C": "t(14;18)",
+    "D": "t(11;14)",
+    "E": "t(15;17)"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "9;22 translokasyonu doğru: Philadelphia kromozomunu oluşturur, BCR-ABL füzyon geni konstitütif aktif tirozin kinaz kodlar.",
+    "B": "8;14 translokasyonu Burkitt lenfomaya aittir ve MYC onkogenini immünoglobulin ağır zincir lokusuna taşır.",
+    "C": "14;18 translokasyonu foliküler lenfomaya aittir; BCL2 aşırı ekspresyonuyla apoptozu baskılar.",
+    "D": "Kronik miyeloid lösemideki translokasyon BCR-ABL füzyon genini oluşturur. 11;14 translokasyonu bu sorudaki ayrımı sağlamaz.",
+    "E": "15;17 translokasyonu ile karıştırılabilir: Philadelphia kromozomu, BCR ile ABL'nin birleştiği türev 22. kromozomdur."
+   },
+   "ozet": "Philadelphia kromozomu 9;22 translokasyonuyla oluşur; BCR-ABL tirozin kinazı, imatinib gibi tirozin kinaz inhibitörleriyle hedeflenebilir.",
+   "metin": "**Soru.** Kronik miyeloid lösemide Philadelphia kromozomunu oluşturan translokasyon hangisidir?\n\n**A)** t(9;22) · **B)** t(8;14) · **C)** t(14;18) · **D)** t(11;14) · **E)** t(15;17)\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **t(9;22)** — 9;22 translokasyonu doğru: Philadelphia kromozomunu oluşturur, BCR-ABL füzyon geni konstitütif aktif tirozin kinaz kodlar.\n- **t(8;14)** — 8;14 translokasyonu Burkitt lenfomaya aittir ve MYC onkogenini immünoglobulin ağır zincir lokusuna taşır.\n- **t(14;18)** — 14;18 translokasyonu foliküler lenfomaya aittir; BCL2 aşırı ekspresyonuyla apoptozu baskılar.\n- **t(11;14)** — Kronik miyeloid lösemideki translokasyon BCR-ABL füzyon genini oluşturur. 11;14 translokasyonu bu sorudaki ayrımı sağlamaz.\n- **t(15;17)** — 15;17 translokasyonu ile karıştırılabilir: Philadelphia kromozomu, BCR ile ABL'nin birleştiği türev 22. kromozomdur.\n\n**Cevap: A** — t(9;22)\n\n**Özet.** Philadelphia kromozomu 9;22 translokasyonuyla oluşur; BCR-ABL tirozin kinazı, imatinib gibi tirozin kinaz inhibitörleriyle hedeflenebilir.",
+   "ses": "Kronik miyeloid lösemide Filadelfiya kromozomunu oluşturan translokasyon hangisidir?\nA, Te dokuz yirmi iki\nBe, Te sekiz on dört\nCe, Te on dört on sekiz\nDe, Te on bir on dört\nE, Te on beş on yedi\nŞimdi seçeneklere tek tek bakalım.\nDokuz yirmi iki translokasyonu doğru. Filadelfiya kromozomunu oluşturur, be ce re a be le füzyon geni konstitütif aktif tirozin kinaz kodlar.\nSekiz on dört translokasyonu Burkit lenfomaya aittir ve mik onkogenini immünoglobulin ağır zincir lokusuna taşır.\nOn dört on sekiz translokasyonu foliküler lenfomaya aittir. Be ce le iki aşırı ekspresyonuyla apoptozu baskılar.\nKronik miyeloid lösemideki translokasyon be ce re a be le füzyon genini oluşturur. on bir;on dört translokasyonu bu sorudaki ayrımı sağlamaz.\non beş;on yedi translokasyonu ile karıştırılabilir. Filadelfiya kromozomu, be ce re ile a be lenin birleştiği türev yirmi ikinci kromozomdur.\nDoğru cevap A, Te dokuz yirmi iki\nFiladelfiya kromozomu dokuz yirmi iki translokasyonuyla oluşur. Be ce re a be le tirozin kinazı, imatinib gibi tirozin kinaz inhibitörleriyle hedeflenebilir.",
+   "kelime": 127
+  },
+  {
+   "no": 5,
+   "tur": "ornek",
+   "soru": "Nöroblastomda kötü prognozla ilişkili gen amplifikasyonu hangisidir?",
+   "secenekler": {
+    "A": "HER2",
+    "B": "BCL2",
+    "C": "TP53",
+    "D": "RB",
+    "E": "MYCN"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "HER2 amplifikasyonu meme karsinomlarının yaklaşık %20'sinde görülür ve HER2 hedefli tedaviye yanıtı belirler.",
+    "B": "BCL2, foliküler lenfomada amplifikasyonla değil 14;18 translokasyonuyla aşırı eksprese olur.",
+    "C": "TP53 tümör baskılayıcı gendir; kanserde inaktive edici nokta mutasyonu ya da 17p delesyonuyla işlevini yitirir.",
+    "D": "RB geni 13q14 delesyonuyla kaybedilir; bu kayıp retinoblastom ve osteosarkomla ilişkilidir.",
+    "E": "MYCN doğru: nöroblastomda amplifiye olur, çift dakikalar ya da homojen boyanan bölgeler olarak görülür ve kötü prognoz gösterir."
+   },
+   "ozet": "Amplifikasyon onkogenin kopya sayısını artırıp ürününü aşırı eksprese ettirir; nöroblastomda MYCN, meme karsinomunda HER2 amplifikasyonu klinik önem taşır.",
+   "metin": "**Soru.** Nöroblastomda kötü prognozla ilişkili gen amplifikasyonu hangisidir?\n\n**A)** HER2 · **B)** BCL2 · **C)** TP53 · **D)** RB · **E)** MYCN\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **HER2** — HER2 amplifikasyonu meme karsinomlarının yaklaşık %20'sinde görülür ve HER2 hedefli tedaviye yanıtı belirler.\n- **BCL2** — BCL2, foliküler lenfomada amplifikasyonla değil 14;18 translokasyonuyla aşırı eksprese olur.\n- **TP53** — TP53 tümör baskılayıcı gendir; kanserde inaktive edici nokta mutasyonu ya da 17p delesyonuyla işlevini yitirir.\n- **RB** — RB geni 13q14 delesyonuyla kaybedilir; bu kayıp retinoblastom ve osteosarkomla ilişkilidir.\n- **MYCN** — MYCN doğru: nöroblastomda amplifiye olur, çift dakikalar ya da homojen boyanan bölgeler olarak görülür ve kötü prognoz gösterir.\n\n**Cevap: E** — MYCN\n\n**Özet.** Amplifikasyon onkogenin kopya sayısını artırıp ürününü aşırı eksprese ettirir; nöroblastomda MYCN, meme karsinomunda HER2 amplifikasyonu klinik önem taşır.",
+   "ses": "Nöroblastomda kötü prognozla ilişkili gen amplifikasyonu hangisidir?\nA, Her tu\nBe, Be ce le iki\nCe, Te pe elli üç\nDe, Re be\nE, Mik ne\nSeçenekleri sırayla değerlendirelim.\nHer tu amplifikasyonu meme karsinomlarının yaklaşık yüzde yirmisinde görülür ve her tu hedefli tedaviye yanıtı belirler.\nBe ce le iki, foliküler lenfomada amplifikasyonla değil, on dört on sekiz translokasyonuyla aşırı eksprese olur.\nTe pe elli üç tümör baskılayıcı gendir. Kanserde inaktive edici nokta mutasyonu ya da on yedi pe delesyonuyla işlevini yitirir.\nRe be geni on üç ku on dört delesyonuyla kaybedilir. Bu kayıp retinoblastom ve osteosarkomla ilişkilidir.\nMik ne doğru. Nöroblastomda amplifiye olur, çift dakikalar ya da homojen boyanan bölgeler olarak görülür ve kötü prognoz gösterir.\nDoğru cevap E, Mik ne\nAmplifikasyon onkogenin kopya sayısını artırıp ürününü aşırı eksprese ettirir. Nöroblastomda mik ne, meme karsinomunda her tu amplifikasyonu klinik önem taşır.",
+   "kelime": 131
+  },
+  {
+   "no": 6,
+   "tur": "ornek",
+   "soru": "Kanserde tümör baskılayıcı gen promotörlerinde tipik olarak görülen epigenetik değişiklik hangisidir?",
+   "secenekler": {
+    "A": "Hipometilasyon",
+    "B": "Hipermetilasyon",
+    "C": "Amplifikasyon",
+    "D": "Translokasyon",
+    "E": "Nokta mutasyonu"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Hipometilasyon kanserde genom genelinde, yani global olarak görülür ve genomik instabiliteye katkıda bulunur.",
+    "B": "Hipermetilasyon doğru: tümör baskılayıcı gen promotörlerinde DNA dizisi değişmeden ekspresyonu susturur.",
+    "C": "Amplifikasyon epigenetik değil, gen kopya sayısını artıran genetik bir lezyondur; onkogen ürününü artırır.",
+    "D": "Translokasyon kromozomlar arası segment değişimidir; füzyon gen ya da aşırı ekspresyon yaratan yapısal bir genetik lezyondur.",
+    "E": "Nokta mutasyonu DNA dizisini değiştiren genetik lezyondur; örneğin TP53'ü inaktive eder, epigenetik değildir."
+   },
+   "ozet": "Kanserde genom genelinde hipometilasyon, tümör baskılayıcı gen promotörlerinde ise hipermetilasyon görülür; hipermetilasyon geni dizisini değiştirmeden susturur.",
+   "metin": "**Soru.** Kanserde tümör baskılayıcı gen promotörlerinde tipik olarak görülen epigenetik değişiklik hangisidir?\n\n**A)** Hipometilasyon · **B)** Hipermetilasyon · **C)** Amplifikasyon · **D)** Translokasyon · **E)** Nokta mutasyonu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Hipometilasyon** — Hipometilasyon kanserde genom genelinde, yani global olarak görülür ve genomik instabiliteye katkıda bulunur.\n- **Hipermetilasyon** — Hipermetilasyon doğru: tümör baskılayıcı gen promotörlerinde DNA dizisi değişmeden ekspresyonu susturur.\n- **Amplifikasyon** — Amplifikasyon epigenetik değil, gen kopya sayısını artıran genetik bir lezyondur; onkogen ürününü artırır.\n- **Translokasyon** — Translokasyon kromozomlar arası segment değişimidir; füzyon gen ya da aşırı ekspresyon yaratan yapısal bir genetik lezyondur.\n- **Nokta mutasyonu** — Nokta mutasyonu DNA dizisini değiştiren genetik lezyondur; örneğin TP53'ü inaktive eder, epigenetik değildir.\n\n**Cevap: B** — Hipermetilasyon\n\n**Özet.** Kanserde genom genelinde hipometilasyon, tümör baskılayıcı gen promotörlerinde ise hipermetilasyon görülür; hipermetilasyon geni dizisini değiştirmeden susturur.",
+   "ses": "Kanserde tümör baskılayıcı gen promotörlerinde tipik olarak görülen epigenetik değişiklik hangisidir?\nA, Hipometilasyon\nBe, Hipermetilasyon\nCe, Amplifikasyon\nDe, Translokasyon\nE, Nokta mutasyonu\nHer seçeneği tek tek ele alalım.\nHipometilasyon kanserde genom genelinde, yani global olarak görülür ve genomik instabiliteye katkıda bulunur.\nHipermetilasyon doğru. Tümör baskılayıcı gen promotörlerinde, de ne a dizisi değişmeden ekspresyonu susturur.\nAmplifikasyon epigenetik değil, gen kopya sayısını artıran genetik bir lezyondur. Onkogen ürününü artırır.\nTranslokasyon kromozomlar arası segment değişimidir. Füzyon gen ya da aşırı ekspresyon yaratan yapısal bir genetik lezyondur.\nNokta mutasyonu de ne a dizisini değiştiren genetik lezyondur. Örneğin te pe elli üçü inaktive eder, epigenetik değildir.\nDoğru cevap Be, Hipermetilasyon\nKanserde genom genelinde hipometilasyon, tümör baskılayıcı gen promotörlerinde ise hipermetilasyon görülür. Hipermetilasyon geni dizisini değiştirmeden susturur.",
+   "kelime": 137
+  },
+  {
+   "no": 7,
+   "tur": "ornek",
+   "soru": "Lynch sendromunda (HNPCC) tümörlerde saptanan tipik bulgu hangisidir?",
+   "secenekler": {
+    "A": "Pirimidin dimeri",
+    "B": "Philadelphia kromozomu",
+    "C": "Mikrosatellit instabilitesi",
+    "D": "Çift dakikalar",
+    "E": "Kromozom kırıkları"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Pirimidin dimeri ultraviyole ışınlarının oluşturduğu hasardır; nükleotid eksizyon onarımıyla düzeltilir, kseroderma pigmentozumla ilişkilidir.",
+    "B": "Philadelphia kromozomu kronik miyeloid lösemideki 9;22 translokasyonudur; bir onarım kusuru bulgusu değildir.",
+    "C": "Mikrosatellit instabilitesi doğru: uyumsuzluk onarımı bozulunca 1–6 bazlık tekrar dizilerinin uzunluğu değişir.",
+    "D": "Çift dakikalar gen amplifikasyonunun sitogenetik bulgusudur; örneğin nöroblastomdaki MYCN amplifikasyonunda görülür.",
+    "E": "Kromozom kırıkları homolog rekombinasyon kusurlarında görülür; Bloom sendromu, ataksi-telanjiektazi ve Fanconi anemisi buna örnektir."
+   },
+   "ozet": "Lynch sendromunda uyumsuzluk onarım genlerinden birinde germ hattı mutasyonu, ikinci alelde de somatik ikinci darbe vardır; sonuç mikrosatellit instabilitesidir.",
+   "metin": "**Soru.** Lynch sendromunda (HNPCC) tümörlerde saptanan tipik bulgu hangisidir?\n\n**A)** Pirimidin dimeri · **B)** Philadelphia kromozomu · **C)** Mikrosatellit instabilitesi · **D)** Çift dakikalar · **E)** Kromozom kırıkları\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Pirimidin dimeri** — Pirimidin dimeri ultraviyole ışınlarının oluşturduğu hasardır; nükleotid eksizyon onarımıyla düzeltilir, kseroderma pigmentozumla ilişkilidir.\n- **Philadelphia kromozomu** — Philadelphia kromozomu kronik miyeloid lösemideki 9;22 translokasyonudur; bir onarım kusuru bulgusu değildir.\n- **Mikrosatellit instabilitesi** — Mikrosatellit instabilitesi doğru: uyumsuzluk onarımı bozulunca 1–6 bazlık tekrar dizilerinin uzunluğu değişir.\n- **Çift dakikalar** — Çift dakikalar gen amplifikasyonunun sitogenetik bulgusudur; örneğin nöroblastomdaki MYCN amplifikasyonunda görülür.\n- **Kromozom kırıkları** — Kromozom kırıkları homolog rekombinasyon kusurlarında görülür; Bloom sendromu, ataksi-telanjiektazi ve Fanconi anemisi buna örnektir.\n\n**Cevap: C** — Mikrosatellit instabilitesi\n\n**Özet.** Lynch sendromunda uyumsuzluk onarım genlerinden birinde germ hattı mutasyonu, ikinci alelde de somatik ikinci darbe vardır; sonuç mikrosatellit instabilitesidir.",
+   "ses": "Linç sendromunda, yani kalıtsal polipozsuz kolorektal kanserde, tümörlerde saptanan tipik bulgu hangisidir?\nA, Pirimidin dimeri\nBe, Filadelfiya kromozomu\nCe, Mikrosatellit instabilitesi\nDe, Çift dakikalar\nE, Kromozom kırıkları\nŞıkları sırasıyla gözden geçirelim.\nPirimidin dimeri ultraviyole ışınlarının oluşturduğu hasardır. Nükleotid eksizyon onarımıyla düzeltilir, kseroderma pigmentozumla ilişkilidir.\nFiladelfiya kromozomu kronik miyeloid lösemideki dokuz yirmi iki translokasyonudur. Bir onarım kusuru bulgusu değildir.\nMikrosatellit instabilitesi doğru. Uyumsuzluk onarımı bozulunca bir ile altı bazlık tekrar dizilerinin uzunluğu değişir.\nÇift dakikalar gen amplifikasyonunun sitogenetik bulgusudur. Örneğin nöroblastomdaki mik ne amplifikasyonunda görülür.\nKromozom kırıkları homolog rekombinasyon kusurlarında görülür. Blum sendromu, ataksi telanjiektazi ve Fankoni anemisi buna örnektir.\nDoğru cevap Ce, Mikrosatellit instabilitesi\nLinç sendromunda uyumsuzluk onarım genlerinden birinde germ hattı mutasyonu, ikinci alelde de somatik ikinci darbe vardır. Sonuç mikrosatellit instabilitesidir.",
+   "kelime": 140
+  },
+  {
+   "no": 8,
+   "tur": "ornek",
+   "soru": "Uygunsuz saklanan tahıllarda bulunan ve hepatosellüler karsinomla güçlü ilişkili dolaylı karsinojen hangisidir?",
+   "secenekler": {
+    "A": "Benzo[a]piren",
+    "B": "Azo boyalar",
+    "C": "Alkilleyici ajanlar",
+    "D": "Aflatoksin B1",
+    "E": "Aromatik aminler"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Benzo[a]piren bir polisiklik aromatik hidrokarbondur; tütün dumanı, ızgara ve tütsülenmiş etlerde bulunur.",
+    "B": "Azo boyalar, dolaylı etkili karsinojenler arasında aromatik aminlerle aynı grupta yer alır ve mesane kanseri riskini artırır.",
+    "C": "Alkilleyici ajanlar doğrudan etkili karsinojenlerdir; metabolik aktivasyon gerektirmez, yıllar sonra akut miyeloid lösemi riskini artırabilir.",
+    "D": "Aflatoksin B1 doğru: Aspergillus türlerince üretilir, uygunsuz saklanan tahıl ve yemişlerde bulunur, hepatosellüler karsinomla güçlü ilişkilidir.",
+    "E": "Aromatik aminler, kimya ve kauçuk endüstrisinde çalışanlarda mesane kanseri riskini artıran dolaylı etkili karsinojenlerdir."
+   },
+   "ozet": "Aflatoksin B1, uygunsuz saklanan tahıl ve yemişlerde bulunan dolaylı etkili karsinojendir ve hepatosellüler karsinomla güçlü ilişkilidir; alkilleyici ajanlar ise doğrudan etkilidir.",
+   "metin": "**Soru.** Uygunsuz saklanan tahıllarda bulunan ve hepatosellüler karsinomla güçlü ilişkili dolaylı karsinojen hangisidir?\n\n**A)** Benzo[a]piren · **B)** Azo boyalar · **C)** Alkilleyici ajanlar · **D)** Aflatoksin B1 · **E)** Aromatik aminler\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Benzo[a]piren** — Benzo[a]piren bir polisiklik aromatik hidrokarbondur; tütün dumanı, ızgara ve tütsülenmiş etlerde bulunur.\n- **Azo boyalar** — Azo boyalar, dolaylı etkili karsinojenler arasında aromatik aminlerle aynı grupta yer alır ve mesane kanseri riskini artırır.\n- **Alkilleyici ajanlar** — Alkilleyici ajanlar doğrudan etkili karsinojenlerdir; metabolik aktivasyon gerektirmez, yıllar sonra akut miyeloid lösemi riskini artırabilir.\n- **Aflatoksin B1** — Aflatoksin B1 doğru: Aspergillus türlerince üretilir, uygunsuz saklanan tahıl ve yemişlerde bulunur, hepatosellüler karsinomla güçlü ilişkilidir.\n- **Aromatik aminler** — Aromatik aminler, kimya ve kauçuk endüstrisinde çalışanlarda mesane kanseri riskini artıran dolaylı etkili karsinojenlerdir.\n\n**Cevap: D** — Aflatoksin B1\n\n**Özet.** Aflatoksin B1, uygunsuz saklanan tahıl ve yemişlerde bulunan dolaylı etkili karsinojendir ve hepatosellüler karsinomla güçlü ilişkilidir; alkilleyici ajanlar ise doğrudan etkilidir.",
+   "ses": "Uygunsuz saklanan tahıllarda bulunan ve hepatosellüler karsinomla güçlü ilişkili dolaylı karsinojen hangisidir?\nA, Benzo a piren\nBe, Azo boyalar\nCe, Alkilleyici ajanlar\nDe, Aflatoksin be bir\nE, Aromatik aminler\nŞimdi seçeneklere tek tek bakalım.\nBenzo a piren bir polisiklik aromatik hidrokarbondur. Tütün dumanı, ızgara ve tütsülenmiş etlerde bulunur.\nAzo boyalar, dolaylı etkili karsinojenler arasında aromatik aminlerle aynı grupta yer alır ve mesane kanseri riskini artırır.\nAlkilleyici ajanlar doğrudan etkili karsinojenlerdir. Metabolik aktivasyon gerektirmez, yıllar sonra akut miyeloid lösemi riskini artırabilir.\nAflatoksin be bir doğru. Aspergillus türlerince üretilir, uygunsuz saklanan tahıl ve yemişlerde bulunur, hepatosellüler karsinomla güçlü ilişkilidir.\nAromatik aminler, kimya ve kauçuk endüstrisinde çalışanlarda mesane kanseri riskini artıran dolaylı etkili karsinojenlerdir.\nDoğru cevap De, Aflatoksin be bir\nAflatoksin be bir, uygunsuz saklanan tahıl ve yemişlerde bulunan dolaylı etkili karsinojendir ve hepatosellüler karsinomla güçlü ilişkilidir. Alkilleyici ajanlar ise doğrudan etkilidir.",
+   "kelime": 157
+  },
+  {
+   "no": 9,
+   "tur": "ornek",
+   "soru": "Kimyasal karsinogenezde promotörler için hangisi doğrudur?",
+   "secenekler": {
+    "A": "Kalıcı DNA hasarı yapar",
+    "B": "Tek doz yeterlidir",
+    "C": "Başlatıcıdan önce etkilidir",
+    "D": "Tek başına tümör oluşturur",
+    "E": "Başlatılmış hücrelerin klonal proliferasyonunu uyarır"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Kalıcı DNA hasarı, yani mutasyon, başlangıç aşamasının ürünüdür; bunu promotör değil başlatıcı ajan oluşturur.",
+    "B": "Tek dozun yeterli olabilmesi başlatıcıya özgüdür; promotörün etkili olması için ise tekrarlayan maruziyet gerekir.",
+    "C": "Promotör başlatıcıdan önce değil, ancak başlatıcıdan sonra verildiğinde etkilidir; önce kalıcı hasarın oluşmuş olması gerekir.",
+    "D": "Promotör tek başına tümör oluşturmaz; yalnızca önceden başlatılmış hücreler üzerinde etkilidir.",
+    "E": "Başlatılmış hücrelerin klonal proliferasyonunu uyarmak doğru: promotör bu yolla preneoplastik klon oluşturur, ek mutasyonlara zemin hazırlar."
+   },
+   "ozet": "Başlatıcı tek dozla bile kalıcı DNA hasarı yapabilir; promotör ise başlatıcıdan sonra, tekrarlayan maruziyetle başlatılmış hücrelerin klonal çoğalmasını uyarır.",
+   "metin": "**Soru.** Kimyasal karsinogenezde promotörler için hangisi doğrudur?\n\n**A)** Kalıcı DNA hasarı yapar · **B)** Tek doz yeterlidir · **C)** Başlatıcıdan önce etkilidir · **D)** Tek başına tümör oluşturur · **E)** Başlatılmış hücrelerin klonal proliferasyonunu uyarır\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kalıcı DNA hasarı yapar** — Kalıcı DNA hasarı, yani mutasyon, başlangıç aşamasının ürünüdür; bunu promotör değil başlatıcı ajan oluşturur.\n- **Tek doz yeterlidir** — Tek dozun yeterli olabilmesi başlatıcıya özgüdür; promotörün etkili olması için ise tekrarlayan maruziyet gerekir.\n- **Başlatıcıdan önce etkilidir** — Promotör başlatıcıdan önce değil, ancak başlatıcıdan sonra verildiğinde etkilidir; önce kalıcı hasarın oluşmuş olması gerekir.\n- **Tek başına tümör oluşturur** — Promotör tek başına tümör oluşturmaz; yalnızca önceden başlatılmış hücreler üzerinde etkilidir.\n- **Başlatılmış hücrelerin klonal proliferasyonunu uyarır** — Başlatılmış hücrelerin klonal proliferasyonunu uyarmak doğru: promotör bu yolla preneoplastik klon oluşturur, ek mutasyonlara zemin hazırlar.\n\n**Cevap: E** — Başlatılmış hücrelerin klonal proliferasyonunu uyarır\n\n**Özet.** Başlatıcı tek dozla bile kalıcı DNA hasarı yapabilir; promotör ise başlatıcıdan sonra, tekrarlayan maruziyetle başlatılmış hücrelerin klonal çoğalmasını uyarır.",
+   "ses": "Kimyasal karsinogenezde promotörler için hangisi doğrudur?\nA, Kalıcı de ne a hasarı yapar\nBe, Tek doz yeterlidir\nCe, Başlatıcıdan önce etkilidir\nDe, Tek başına tümör oluşturur\nE, Başlatılmış hücrelerin klonal proliferasyonunu uyarır\nSeçenekleri sırayla değerlendirelim.\nKalıcı de ne a hasarı, yani mutasyon, başlangıç aşamasının ürünüdür. Bunu promotör değil başlatıcı ajan oluşturur.\nTek dozun yeterli olabilmesi başlatıcıya özgüdür. Promotörün etkili olması için ise tekrarlayan maruziyet gerekir.\nPromotör başlatıcıdan önce değil, ancak başlatıcıdan sonra verildiğinde etkilidir. Önce kalıcı hasarın oluşmuş olması gerekir.\nPromotör tek başına tümör oluşturmaz. Yalnızca önceden başlatılmış hücreler üzerinde etkilidir.\nBaşlatılmış hücrelerin klonal proliferasyonunu uyarmak doğru. Promotör bu yolla preneoplastik klon oluşturur, ek mutasyonlara zemin hazırlar.\nDoğru cevap E, Başlatılmış hücrelerin klonal proliferasyonunu uyarır\nBaşlatıcı tek dozla bile kalıcı de ne a hasarı yapabilir. Promotör ise başlatıcıdan sonra, tekrarlayan maruziyetle başlatılmış hücrelerin klonal çoğalmasını uyarır.",
+   "kelime": 166
+  },
+  {
+   "no": 10,
+   "tur": "ornek",
+   "soru": "HPV E6 onkoproteininin temel hedefi hangisidir?",
+   "secenekler": {
+    "A": "p53",
+    "B": "RB",
+    "C": "E2F",
+    "D": "BCL2",
+    "E": "NF-κB"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "p53 doğru: E6 p53'e bağlanıp yıkımını artırır, ayrıca telomeraz ekspresyonunu uyarır.",
+    "B": "RB, E6'nın değil E7'nin hedefidir; E7 RB ile etkileşerek E2F'yi serbest bırakır.",
+    "C": "E2F, E7'nin RB'den ayırıp serbest bıraktığı ve transkripsiyonel aktivasyonu sağlayan faktördür; E6'nın hedefi değildir.",
+    "D": "BCL2 antiapoptotik bir proteindir; foliküler lenfomada translokasyonla aşırı eksprese olur.",
+    "E": "NF-κB yolu, HTLV-1'in Tax proteini ve Epstein-Barr virüsünün latent membran proteini 1 tarafından aktive edilir."
+   },
+   "ozet": "Yüksek riskli HPV'de E6 p53'ün yıkımını artırır, E7 ise RB'ye bağlanarak E2F'yi serbest bırakır; sonuç kontrolsüz hücre döngüsü ve ölümsüzleşmedir.",
+   "metin": "**Soru.** HPV E6 onkoproteininin temel hedefi hangisidir?\n\n**A)** p53 · **B)** RB · **C)** E2F · **D)** BCL2 · **E)** NF-κB\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **p53** — p53 doğru: E6 p53'e bağlanıp yıkımını artırır, ayrıca telomeraz ekspresyonunu uyarır.\n- **RB** — RB, E6'nın değil E7'nin hedefidir; E7 RB ile etkileşerek E2F'yi serbest bırakır.\n- **E2F** — E2F, E7'nin RB'den ayırıp serbest bıraktığı ve transkripsiyonel aktivasyonu sağlayan faktördür; E6'nın hedefi değildir.\n- **BCL2** — BCL2 antiapoptotik bir proteindir; foliküler lenfomada translokasyonla aşırı eksprese olur.\n- **NF-κB** — NF-κB yolu, HTLV-1'in Tax proteini ve Epstein-Barr virüsünün latent membran proteini 1 tarafından aktive edilir.\n\n**Cevap: A** — p53\n\n**Özet.** Yüksek riskli HPV'de E6 p53'ün yıkımını artırır, E7 ise RB'ye bağlanarak E2F'yi serbest bırakır; sonuç kontrolsüz hücre döngüsü ve ölümsüzleşmedir.",
+   "ses": "Ha pe ve e altı onkoproteininin temel hedefi hangisidir?\nA, Pe elli üç\nBe, Re be\nCe, E iki fe\nDe, Be ce le iki\nE, Ne fe kappa be\nHer seçeneği tek tek ele alalım.\nPe elli üç doğru. E altı, pe elli üçe bağlanıp yıkımını artırır, ayrıca telomeraz ekspresyonunu uyarır.\nRe be, e altının değil e yedinin hedefidir. E yedi re be ile etkileşerek e iki feyi serbest bırakır.\nE iki fe, e yedinin re beden ayırıp serbest bıraktığı ve transkripsiyonel aktivasyonu sağlayan faktördür. E altının hedefi değildir.\nBe ce le iki antiapoptotik bir proteindir. Foliküler lenfomada translokasyonla aşırı eksprese olur.\nNe fe kappa be yolu, ha te le ve birin taks proteini ve Epstein Barr virüsünün latent membran proteini bir tarafından aktive edilir.\nDoğru cevap A, Pe elli üç\nYüksek riskli ha pe vede e altı pe elli üçün yıkımını artırır, e yedi ise re beye bağlanarak e iki feyi serbest bırakır. Sonuç kontrolsüz hücre döngüsü ve ölümsüzleşmedir.",
+   "kelime": 130
+  },
+  {
+   "no": 11,
+   "tur": "ornek",
+   "soru": "HTLV-1 ile ilişkili tümör hangisidir?",
+   "secenekler": {
+    "A": "Burkitt lenfoma",
+    "B": "Erişkin T hücreli lösemi/lenfoma",
+    "C": "Nazofaringeal karsinom",
+    "D": "Kaposi sarkomu",
+    "E": "MALT lenfoma"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Burkitt lenfoma, Epstein-Barr virüsüyle ilişkili B hücreli tümördür; MYC içeren 8;14 translokasyonu taşır.",
+    "B": "Erişkin T hücreli lösemi ya da lenfoma doğru: HTLV-1 CD4 pozitif T hücrelerine yönelir, Tax proteini T hücre proliferasyonunu uyarır.",
+    "C": "Nazofaringeal karsinom, Epstein-Barr virüsüyle ilişkili tümörlerdendir; HTLV-1 ile ilişkilendirilmez.",
+    "D": "Kaposi sarkomu, adını taşıyan Kaposi sarkomu herpes virüsü, yani HHV-8 ile ilişkilidir.",
+    "E": "MALT lenfoma, Helicobacter pylori ile antijen uyarılı B hücre proliferasyonundan gelişir."
+   },
+   "ozet": "HTLV-1, CD4 pozitif T hücrelerine tropizmli bir retrovirüstür; Tax proteini NF-κB yolunu aktive eder ve 40–60 yıllık latent dönemden sonra erişkin T hücreli lösemi ya da lenfoma gelişir.",
+   "metin": "**Soru.** HTLV-1 ile ilişkili tümör hangisidir?\n\n**A)** Burkitt lenfoma · **B)** Erişkin T hücreli lösemi/lenfoma · **C)** Nazofaringeal karsinom · **D)** Kaposi sarkomu · **E)** MALT lenfoma\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Burkitt lenfoma** — Burkitt lenfoma, Epstein-Barr virüsüyle ilişkili B hücreli tümördür; MYC içeren 8;14 translokasyonu taşır.\n- **Erişkin T hücreli lösemi/lenfoma** — Erişkin T hücreli lösemi ya da lenfoma doğru: HTLV-1 CD4 pozitif T hücrelerine yönelir, Tax proteini T hücre proliferasyonunu uyarır.\n- **Nazofaringeal karsinom** — Nazofaringeal karsinom, Epstein-Barr virüsüyle ilişkili tümörlerdendir; HTLV-1 ile ilişkilendirilmez.\n- **Kaposi sarkomu** — Kaposi sarkomu, adını taşıyan Kaposi sarkomu herpes virüsü, yani HHV-8 ile ilişkilidir.\n- **MALT lenfoma** — MALT lenfoma, Helicobacter pylori ile antijen uyarılı B hücre proliferasyonundan gelişir.\n\n**Cevap: B** — Erişkin T hücreli lösemi/lenfoma\n\n**Özet.** HTLV-1, CD4 pozitif T hücrelerine tropizmli bir retrovirüstür; Tax proteini NF-κB yolunu aktive eder ve 40–60 yıllık latent dönemden sonra erişkin T hücreli lösemi ya da lenfoma gelişir.",
+   "ses": "Ha te le ve bir ile ilişkili tümör hangisidir?\nA, Burkit lenfoma\nBe, Erişkin te hücreli lösemi ya da lenfoma\nCe, Nazofaringeal karsinom\nDe, Kaposi sarkomu\nE, Me a le te lenfoma\nŞıkları sırasıyla gözden geçirelim.\nBurkit lenfoma, Epstein Barr virüsüyle ilişkili be hücreli tümördür. Mik içeren sekiz on dört translokasyonu taşır.\nErişkin te hücreli lösemi ya da lenfoma doğru. Ha te le ve bir ce de dört pozitif te hücrelerine yönelir, taks proteini te hücre proliferasyonunu uyarır.\nNazofaringeal karsinom, Epstein Barr virüsüyle ilişkili tümörlerdendir. Ha te le ve bir ile ilişkilendirilmez.\nKaposi sarkomu, adını taşıyan Kaposi sarkomu herpes virüsü, yani insan herpes virüsü sekiz ile ilişkilidir.\nMe a le te lenfoma, Helikobakter pilori ile antijen uyarılı be hücre proliferasyonundan gelişir.\nDoğru cevap Be, Erişkin te hücreli lösemi ya da lenfoma\nHa te le ve bir, ce de dört pozitif te hücrelerine tropizmli bir retrovirüstür. Taks proteini ne fe kappa be yolunu aktive eder, kırk ile altmış yıllık latent dönemden sonra erişkin te hücreli lösemi ya da lenfoma gelişir.",
+   "kelime": 155
+  },
+  {
+   "no": 12,
+   "tur": "ornek",
+   "soru": "Erken evrede H. pylori eradikasyonu ile gerileyebilen tümör hangisidir?",
+   "secenekler": {
+    "A": "Mide adenokarsinomu",
+    "B": "Hepatosellüler karsinom",
+    "C": "MALT lenfoma",
+    "D": "Burkitt lenfoma",
+    "E": "Foliküler lenfoma"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Mide adenokarsinomu da Helicobacter pylori ile ilişkilidir, ancak kronik gastritten intestinal metaplazi ve displaziye uzanan çok basamaklı bir yolla gelişir.",
+    "B": "Hepatosellüler karsinom, uygunsuz saklanan tahıllardaki aflatoksin B1 ile güçlü ilişkili bir karaciğer tümörüdür.",
+    "C": "MALT lenfoma doğru: antijen uyarılı B hücre proliferasyonudur, erken evrede Helicobacter pylori eradikasyonuyla gerileyebilir.",
+    "D": "Burkitt lenfoma, MYC içeren 8;14 translokasyonuyla gelişen agresif B hücreli tümördür ve Epstein-Barr virüsüyle ilişkilidir.",
+    "E": "Foliküler lenfoma, 14;18 translokasyonuyla BCL2'nin aşırı eksprese olduğu ve apoptozun baskılandığı lenfomadır."
+   },
+   "ozet": "Helicobacter pylori hem mide adenokarsinomu hem MALT lenfomasıyla ilişkilidir; antijen uyarılı B hücre proliferasyonu olan MALT lenfoma, erken evrede eradikasyonla gerileyebilir.",
+   "metin": "**Soru.** Erken evrede H. pylori eradikasyonu ile gerileyebilen tümör hangisidir?\n\n**A)** Mide adenokarsinomu · **B)** Hepatosellüler karsinom · **C)** MALT lenfoma · **D)** Burkitt lenfoma · **E)** Foliküler lenfoma\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Mide adenokarsinomu** — Mide adenokarsinomu da Helicobacter pylori ile ilişkilidir, ancak kronik gastritten intestinal metaplazi ve displaziye uzanan çok basamaklı bir yolla gelişir.\n- **Hepatosellüler karsinom** — Hepatosellüler karsinom, uygunsuz saklanan tahıllardaki aflatoksin B1 ile güçlü ilişkili bir karaciğer tümörüdür.\n- **MALT lenfoma** — MALT lenfoma doğru: antijen uyarılı B hücre proliferasyonudur, erken evrede Helicobacter pylori eradikasyonuyla gerileyebilir.\n- **Burkitt lenfoma** — Burkitt lenfoma, MYC içeren 8;14 translokasyonuyla gelişen agresif B hücreli tümördür ve Epstein-Barr virüsüyle ilişkilidir.\n- **Foliküler lenfoma** — Foliküler lenfoma, 14;18 translokasyonuyla BCL2'nin aşırı eksprese olduğu ve apoptozun baskılandığı lenfomadır.\n\n**Cevap: C** — MALT lenfoma\n\n**Özet.** Helicobacter pylori hem mide adenokarsinomu hem MALT lenfomasıyla ilişkilidir; antijen uyarılı B hücre proliferasyonu olan MALT lenfoma, erken evrede eradikasyonla gerileyebilir.",
+   "ses": "Erken evrede Helikobakter pilori eradikasyonu ile gerileyebilen tümör hangisidir?\nA, Mide adenokarsinomu\nBe, Hepatosellüler karsinom\nCe, Me a le te lenfoma\nDe, Burkit lenfoma\nE, Foliküler lenfoma\nŞimdi seçeneklere tek tek bakalım.\nMide adenokarsinomu da Helikobakter pilori ile ilişkilidir, ancak kronik gastritten intestinal metaplazi ve displaziye uzanan çok basamaklı bir yolla gelişir.\nHepatosellüler karsinom, uygunsuz saklanan tahıllardaki aflatoksin be bir ile güçlü ilişkili bir karaciğer tümörüdür.\nMe a le te lenfoma doğru. Antijen uyarılı be hücre proliferasyonudur, erken evrede Helikobakter pilori eradikasyonuyla gerileyebilir.\nBurkit lenfoma, mik içeren sekiz on dört translokasyonuyla gelişen agresif be hücreli tümördür ve Epstein Barr virüsüyle ilişkilidir.\nFoliküler lenfoma, on dört on sekiz translokasyonuyla be ce le ikinin aşırı eksprese olduğu ve apoptozun baskılandığı lenfomadır.\nDoğru cevap Ce, Me a le te lenfoma\nHelikobakter pilori hem mide adenokarsinomu hem me a le te lenfomasıyla ilişkilidir. Antijen uyarılı be hücre proliferasyonu olan me a le te lenfoma, erken evrede eradikasyonla gerileyebilir.",
+   "kelime": 156
+  },
+  {
+   "no": 25,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisi karsinogenez mekanizmalarında görev alan etkenlerden biridir?",
+   "secenekler": {
+    "A": "Staphylococcus aureus enfeksiyonu",
+    "B": "Hücrelerin temas inhibisyonuna duyarlılığının artması",
+    "C": "Hayflick limitinin telomeraz aktivasyonuyla aşılması",
+    "D": "Tümör belirteci (kanser marker) yüksekliği",
+    "E": "Aşırı kilo verme"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Karsinogenezde rol alan bakteri örneği, mide adenokarsinomu ve MALT lenfomasıyla ilişkili Helicobacter pylori'dir. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.",
+    "B": "Temas inhibisyonuna duyarlılığın artması büyümenin frenlenmesi demektir; kanser hücreleri ise büyüme engelleyici sinyallere duyarsızdır.",
+    "C": "Telomeraz aktivasyonu doğru: telomeraz artışı hücreyi ölümsüzleştirir, HPV E6 da telomerazı uyararak etki eder; sınırsız çoğalma kanserin ayırt edici özelliğidir.",
+    "D": "Tümör belirteci yüksekliği bir karsinogenez mekanizması değildir; kanser, sürücü mutasyonların kademeli birikimiyle gelişir.",
+    "E": "Aşırı kilo verme bir karsinogenez mekanizması değildir; karsinogenez kimyasal, fiziksel, viral ve bakteriyel ajanlarla şekillenen çok aşamalı bir süreçtir."
+   },
+   "ozet": "Telomeraz ekspresyonunun artması hücreyi ölümsüzleştirir ve sınırsız çoğalma potansiyeli sağlar; HPV E6 da telomerazı uyararak karsinogeneze katkı yapar.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi karsinogenez mekanizmalarında görev alan etkenlerden biridir?\n\n**A)** Staphylococcus aureus enfeksiyonu · **B)** Hücrelerin temas inhibisyonuna duyarlılığının artması · **C)** Hayflick limitinin telomeraz aktivasyonuyla aşılması · **D)** Tümör belirteci (kanser marker) yüksekliği · **E)** Aşırı kilo verme\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Staphylococcus aureus enfeksiyonu** — Karsinogenezde rol alan bakteri örneği, mide adenokarsinomu ve MALT lenfomasıyla ilişkili Helicobacter pylori'dir. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.\n- **Hücrelerin temas inhibisyonuna duyarlılığının artması** — Temas inhibisyonuna duyarlılığın artması büyümenin frenlenmesi demektir; kanser hücreleri ise büyüme engelleyici sinyallere duyarsızdır.\n- **Hayflick limitinin telomeraz aktivasyonuyla aşılması** — Telomeraz aktivasyonu doğru: telomeraz artışı hücreyi ölümsüzleştirir, HPV E6 da telomerazı uyararak etki eder; sınırsız çoğalma kanserin ayırt edici özelliğidir.\n- **Tümör belirteci (kanser marker) yüksekliği** — Tümör belirteci yüksekliği bir karsinogenez mekanizması değildir; kanser, sürücü mutasyonların kademeli birikimiyle gelişir.\n- **Aşırı kilo verme** — Aşırı kilo verme bir karsinogenez mekanizması değildir; karsinogenez kimyasal, fiziksel, viral ve bakteriyel ajanlarla şekillenen çok aşamalı bir süreçtir.\n\n**Cevap: C** — Hayflick limitinin telomeraz aktivasyonuyla aşılması\n\n**Özet.** Telomeraz ekspresyonunun artması hücreyi ölümsüzleştirir ve sınırsız çoğalma potansiyeli sağlar; HPV E6 da telomerazı uyararak karsinogeneze katkı yapar.",
+   "ses": "Aşağıdakilerden hangisi karsinogenez mekanizmalarında görev alan etkenlerden biridir?\nA, Stafilokokus aureus enfeksiyonu\nBe, Hücrelerin temas inhibisyonuna duyarlılığının artması\nCe, Hayflik limitinin telomeraz aktivasyonuyla aşılması\nDe, Tümör belirteci, yani kanser markır yüksekliği\nE, Aşırı kilo verme\nSeçenekleri sırayla değerlendirelim.\nKarsinogenezde rol alan bakteri örneği, mide adenokarsinomu ve me a le te lenfomasıyla ilişkili Helikobakter pilori bakterisidir. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.\nTemas inhibisyonuna duyarlılığın artması büyümenin frenlenmesi demektir. Kanser hücreleri ise büyüme engelleyici sinyallere duyarsızdır.\nTelomeraz aktivasyonu doğru. Telomeraz artışı hücreyi ölümsüzleştirir, ha pe ve e altı da telomerazı uyararak etki eder. Sınırsız çoğalma kanserin ayırt edici özelliğidir.\nTümör belirteci yüksekliği bir karsinogenez mekanizması değildir. Kanser, sürücü mutasyonların kademeli birikimiyle gelişir.\nAşırı kilo verme bir karsinogenez mekanizması değildir. Karsinogenez kimyasal, fiziksel, viral ve bakteriyel ajanlarla şekillenen çok aşamalı bir süreçtir.\nDoğru cevap Ce, Hayflik limitinin telomeraz aktivasyonuyla aşılması\nTelomeraz ekspresyonunun artması hücreyi ölümsüzleştirir ve sınırsız çoğalma potansiyeli sağlar. Ha pe ve e altı da telomerazı uyararak karsinogeneze katkı yapar.",
+   "kelime": 186
+  },
+  {
+   "no": 26,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisi tümör baskılayıcı fonksiyon görür?",
+   "secenekler": {
+    "A": "KRAS",
+    "B": "MYC",
+    "C": "TP53",
+    "D": "BCL2",
+    "E": "ERBB2 (HER2)"
+   },
+   "dogru": "C",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "KRAS, RAS gen ailesinin üyesidir; nokta mutasyonla işlev kazanan bir onkogendir.",
+    "B": "MYC bir onkogendir; Burkitt lenfomada translokasyonla aşırı eksprese olur.",
+    "C": "TP53 doğru: tümör baskılayıcı gendir; inaktive edici nokta mutasyonları ya da 17p delesyonuyla işlevini yitirir.",
+    "D": "BCL2 antiapoptotik bir gendir; foliküler lenfomada aşırı ekspresyonuyla hücre ölümünü engeller.",
+    "E": "ERBB2, yani HER2 amplifikasyonla aşırı eksprese olan bir onkogendir; meme karsinomlarının yaklaşık %20'sinde görülür."
+   },
+   "ozet": "Tümör baskılayıcı genler büyümeyi frenler ve genomu korur, işlev kaybıyla kansere izin verir; TP53 bunun örneğidir, KRAS, MYC ve ERBB2 ise onkogendir.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi tümör baskılayıcı fonksiyon görür?\n\n**A)** KRAS · **B)** MYC · **C)** TP53 · **D)** BCL2 · **E)** ERBB2 (HER2)\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **KRAS** — KRAS, RAS gen ailesinin üyesidir; nokta mutasyonla işlev kazanan bir onkogendir.\n- **MYC** — MYC bir onkogendir; Burkitt lenfomada translokasyonla aşırı eksprese olur.\n- **TP53** — TP53 doğru: tümör baskılayıcı gendir; inaktive edici nokta mutasyonları ya da 17p delesyonuyla işlevini yitirir.\n- **BCL2** — BCL2 antiapoptotik bir gendir; foliküler lenfomada aşırı ekspresyonuyla hücre ölümünü engeller.\n- **ERBB2 (HER2)** — ERBB2, yani HER2 amplifikasyonla aşırı eksprese olan bir onkogendir; meme karsinomlarının yaklaşık %20'sinde görülür.\n\n**Cevap: C** — TP53\n\n**Özet.** Tümör baskılayıcı genler büyümeyi frenler ve genomu korur, işlev kaybıyla kansere izin verir; TP53 bunun örneğidir, KRAS, MYC ve ERBB2 ise onkogendir.",
+   "ses": "Aşağıdakilerden hangisi tümör baskılayıcı fonksiyon görür?\nA, Ka ras\nBe, Mik\nCe, Te pe elli üç\nDe, Be ce le iki\nE, E re be be iki, yani her tu\nHer seçeneği tek tek ele alalım.\nKa ras, ras gen ailesinin üyesidir. Nokta mutasyonla işlev kazanan bir onkogendir.\nMik bir onkogendir. Burkit lenfomada translokasyonla aşırı eksprese olur.\nTe pe elli üç doğru. Tümör baskılayıcı gendir, inaktive edici nokta mutasyonları ya da on yedi pe delesyonuyla işlevini yitirir.\nBe ce le iki antiapoptotik bir gendir. Foliküler lenfomada aşırı ekspresyonuyla hücre ölümünü engeller.\nE re be be iki, yani her tu amplifikasyonla aşırı eksprese olan bir onkogendir. Meme karsinomlarının yaklaşık yüzde yirmisinde görülür.\nDoğru cevap Ce, Te pe elli üç\nTümör baskılayıcı genler büyümeyi frenler ve genomu korur, işlev kaybıyla kansere izin verir. Te pe elli üç bunun örneğidir, ka ras, mik ve e re be be iki ise onkogendir.",
+   "kelime": 132
+  },
+  {
+   "no": 27,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisi kansere sebep olabilen (onkojenik) enfeksiyon etkenlerinden biri değildir?",
+   "secenekler": {
+    "A": "Varisella zoster virüsü (VZV)",
+    "B": "Hepatit B virüsü (HBV)",
+    "C": "Hepatit C virüsü (HCV)",
+    "D": "İnsan papilloma virüsü (HPV)",
+    "E": "Epstein-Barr virüsü (EBV)"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Varisella zoster virüsü doğru: onkojenik virüsler arasında HPV, EBV, HBV, HCV, HTLV-1 ve Kaposi sarkomu herpes virüsü sayılır; varisella zoster bu listede yer almaz.",
+    "B": "Hepatit B virüsü onkojenik DNA virüslerindendir; kronik enflamasyon ve rejenerasyonla da kanser gelişimine katkı yapar.",
+    "C": "Hepatit C virüsü, HPV, EBV ve HBV ile birlikte küresel kanserlerin yaklaşık %15–20'sinden sorumlu virüsler arasındadır.",
+    "D": "İnsan papilloma virüsünün yüksek riskli tipleri servikal, anogenital ve orofarenks skuamöz hücreli karsinomlarına yol açar.",
+    "E": "Epstein–Barr virüsü Burkitt lenfoma, Hodgkin lenfoma alt tipleri ve nazofaringeal karsinomla ilişkili onkojenik bir herpes virüsüdür."
+   },
+   "ozet": "HPV, EBV, HBV ve HCV gibi virüsler küresel kanserlerin yaklaşık %15–20'sinden sorumludur; varisella zoster virüsü onkojenik virüsler arasında yer almaz.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi kansere sebep olabilen (onkojenik) enfeksiyon etkenlerinden biri değildir?\n\n**A)** Varisella zoster virüsü (VZV) · **B)** Hepatit B virüsü (HBV) · **C)** Hepatit C virüsü (HCV) · **D)** İnsan papilloma virüsü (HPV) · **E)** Epstein-Barr virüsü (EBV)\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Varisella zoster virüsü (VZV)** — Varisella zoster virüsü doğru: onkojenik virüsler arasında HPV, EBV, HBV, HCV, HTLV-1 ve Kaposi sarkomu herpes virüsü sayılır; varisella zoster bu listede yer almaz.\n- **Hepatit B virüsü (HBV)** — Hepatit B virüsü onkojenik DNA virüslerindendir; kronik enflamasyon ve rejenerasyonla da kanser gelişimine katkı yapar.\n- **Hepatit C virüsü (HCV)** — Hepatit C virüsü, HPV, EBV ve HBV ile birlikte küresel kanserlerin yaklaşık %15–20'sinden sorumlu virüsler arasındadır.\n- **İnsan papilloma virüsü (HPV)** — İnsan papilloma virüsünün yüksek riskli tipleri servikal, anogenital ve orofarenks skuamöz hücreli karsinomlarına yol açar.\n- **Epstein-Barr virüsü (EBV)** — Epstein–Barr virüsü Burkitt lenfoma, Hodgkin lenfoma alt tipleri ve nazofaringeal karsinomla ilişkili onkojenik bir herpes virüsüdür.\n\n**Cevap: A** — Varisella zoster virüsü (VZV)\n\n**Özet.** HPV, EBV, HBV ve HCV gibi virüsler küresel kanserlerin yaklaşık %15–20'sinden sorumludur; varisella zoster virüsü onkojenik virüsler arasında yer almaz.",
+   "ses": "Aşağıdakilerden hangisi kansere sebep olabilen, yani onkojenik enfeksiyon etkenlerinden biri değildir?\nA, Varisella zoster virüsü, ve ze ve\nBe, Hepatit be virüsü, ha be ve\nCe, Hepatit ce virüsü, ha ce ve\nDe, İnsan papilloma virüsü, ha pe ve\nE, Epstein Bar virüsü, e be ve\nŞıkları sırasıyla gözden geçirelim.\nVarisella zoster virüsü doğru. Onkojenik virüsler arasında ha pe ve, e be ve, ha be ve, ha ce ve, ha te le ve bir ve Kaposi sarkomu herpes virüsü sayılır. Varisella zoster bu listede yer almaz.\nHepatit be virüsü onkojenik de ne a virüslerindendir. Kronik enflamasyon ve rejenerasyonla da kanser gelişimine katkı yapar.\nHepatit ce virüsü, ha pe ve, e be ve ve ha be ve ile birlikte küresel kanserlerin yaklaşık yüzde on beş ile yirmisinden sorumlu virüsler arasındadır.\nİnsan papilloma virüsünün yüksek riskli tipleri servikal, anogenital ve orofarenks skuamöz hücreli karsinomlarına yol açar.\nEpstein Bar virüsü Burkit lenfoma, Hoçkin lenfoma alt tipleri ve nazofaringeal karsinomla ilişkili onkojenik bir herpes virüsüdür.\nDoğru cevap A, Varisella zoster virüsü, ve ze ve\nHa pe ve, e be ve, ha be ve ve ha ce ve gibi virüsler küresel kanserlerin yaklaşık yüzde on beş ile yirmisinden sorumludur. Varisella zoster virüsü onkojenik virüsler arasında yer almaz.",
+   "kelime": 187
+  },
+  {
+   "no": 28,
+   "tur": "cikmis",
+   "soru": "Lenfoma, lenfoproliferatif hastalıklar ve diğer tümörlerin oluşumuna da neden olabilen, gamaherpes virüs alt grubunun bir üyesi olan ve Kaposi sarkomlarının etiyolojisinde %95 oranında saptanan virüs hangisidir?",
+   "secenekler": {
+    "A": "İnsan papilloma virüsü (HPV)",
+    "B": "Staphylococcus aureus",
+    "C": "Sitomegalovirüs (CMV)",
+    "D": "Epstein-Barr virüsü (EBV)",
+    "E": "İnsan herpes virüsü 8 (HHV-8)"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "İnsan papilloma virüsünün yüksek riskli tipleri servikal skuamöz hücreli karsinoma yol açar; Kaposi sarkomunun etkeni değildir.",
+    "B": "Onkojenik mikrobiyal etkenler RNA ve DNA virüsleri ile Helicobacter pylori gibi bakterilerdir. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.",
+    "C": "Sitomegalovirüs ile karıştırılabilir: Onkojenik DNA virüsleri listesinde yer almaz.",
+    "D": "Epstein–Barr virüsü bir herpes virüsüdür ancak Burkitt lenfoma, Hodgkin lenfoma alt tipleri ve nazofaringeal karsinomla ilişkilidir.",
+    "E": "İnsan herpes virüsü 8 doğru: Kaposi sarkomu herpes virüsü, yani KSHV olarak da adlandırılan onkojenik bir DNA virüsüdür."
+   },
+   "ozet": "Kaposi sarkomu herpes virüsü, yani HHV-8, onkojenik DNA virüslerindendir; EBV de herpes ailesindendir ama B hücre tümörleri ve nazofaringeal karsinomla ilişkilidir.",
+   "metin": "**Soru.** Lenfoma, lenfoproliferatif hastalıklar ve diğer tümörlerin oluşumuna da neden olabilen, gamaherpes virüs alt grubunun bir üyesi olan ve Kaposi sarkomlarının etiyolojisinde %95 oranında saptanan virüs hangisidir?\n\n**A)** İnsan papilloma virüsü (HPV) · **B)** Staphylococcus aureus · **C)** Sitomegalovirüs (CMV) · **D)** Epstein-Barr virüsü (EBV) · **E)** İnsan herpes virüsü 8 (HHV-8)\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **İnsan papilloma virüsü (HPV)** — İnsan papilloma virüsünün yüksek riskli tipleri servikal skuamöz hücreli karsinoma yol açar; Kaposi sarkomunun etkeni değildir.\n- **Staphylococcus aureus** — Onkojenik mikrobiyal etkenler RNA ve DNA virüsleri ile Helicobacter pylori gibi bakterilerdir. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.\n- **Sitomegalovirüs (CMV)** — Sitomegalovirüs ile karıştırılabilir: Onkojenik DNA virüsleri listesinde yer almaz.\n- **Epstein-Barr virüsü (EBV)** — Epstein–Barr virüsü bir herpes virüsüdür ancak Burkitt lenfoma, Hodgkin lenfoma alt tipleri ve nazofaringeal karsinomla ilişkilidir.\n- **İnsan herpes virüsü 8 (HHV-8)** — İnsan herpes virüsü 8 doğru: Kaposi sarkomu herpes virüsü, yani KSHV olarak da adlandırılan onkojenik bir DNA virüsüdür.\n\n**Cevap: E** — İnsan herpes virüsü 8 (HHV-8)\n\n**Özet.** Kaposi sarkomu herpes virüsü, yani HHV-8, onkojenik DNA virüslerindendir; EBV de herpes ailesindendir ama B hücre tümörleri ve nazofaringeal karsinomla ilişkilidir.",
+   "ses": "Lenfoma, lenfoproliferatif hastalıklar ve diğer tümörlere de neden olabilen virüs, gamaherpes virüs alt grubunun bir üyesidir. Kaposi sarkomlarının etiyolojisinde yüzde doksan beş oranında saptanan bu virüs hangisidir?\nA, İnsan papilloma virüsü, ha pe ve\nBe, Stafilokokus aureus\nCe, Sitomegalovirüs, ce me ve\nDe, Epstein Bar virüsü, e be ve\nE, İnsan herpes virüsü sekiz, ha ha ve sekiz\nŞimdi seçeneklere tek tek bakalım.\nİnsan papilloma virüsünün yüksek riskli tipleri servikal skuamöz hücreli karsinoma yol açar. Kaposi sarkomunun etkeni değildir.\nOnkojenik mikrobiyal etkenler re ne a ve de ne a virüsleri ile Helikobakter pilori gibi bakterilerdir. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.\nSitomegalovirüs ile karıştırılabilir. Onkojenik de ne a virüsleri listesinde yer almaz.\nEpstein Bar virüsü bir herpes virüsüdür ancak Burkit lenfoma, Hoçkin lenfoma alt tipleri ve nazofaringeal karsinomla ilişkilidir.\nİnsan herpes virüsü sekiz doğru. Kaposi sarkomu herpes virüsü, yani ka se ha ve olarak da adlandırılan onkojenik bir de ne a virüsüdür.\nDoğru cevap E, İnsan herpes virüsü sekiz, ha ha ve sekiz\nKaposi sarkomu herpes virüsü, yani ha ha ve sekiz, onkojenik de ne a virüslerindendir. E be ve de herpes ailesindendir ama be hücre tümörleri ve nazofaringeal karsinomla ilişkilidir.",
+   "kelime": 191
+  },
+  {
+   "no": 29,
+   "tur": "ornek",
+   "soru": "Anjiyogenez, invazyon ve bağışıklık kaçışını düzenleyen kanser geni sınıfı hangisidir?",
+   "secenekler": {
+    "A": "Onkogenler",
+    "B": "Tümör–konak etkileşim genleri",
+    "C": "Apoptozu düzenleyen genler",
+    "D": "Tümör baskılayıcı genler",
+    "E": "DNA onarım genleri"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Onkogenler, proto-onkogenlerin işlev kazanımıyla oluşur ve büyümeyi teşvik eden onkoproteinler kodlar.",
+    "B": "Tümör–konak etkileşim genleri doğru: anjiyogenez, invazyon ve bağışıklık kaçışını düzenleyen dördüncü kanser geni sınıfıdır.",
+    "C": "Apoptozu düzenleyen genler, hücre sağkalımını ya da ölümünü belirler; BCL2 ailesi bu grubun örneğidir.",
+    "D": "Tümör baskılayıcı genler, hücre proliferasyonunu ve genom bütünlüğünü frenleyen gen sınıfıdır.",
+    "E": "DNA onarım genlerinin kusuru genomik instabiliteye yol açar; anjiyogenez ve bağışıklık kaçışını düzenleyen sınıf değildir."
+   },
+   "ozet": "Kanser genleri dört sınıftır: onkogenler, tümör baskılayıcılar, apoptoz genleri ve tümör–konak etkileşim genleri. Sonuncusu VEGF, MMP ve PD-L1 gibi molekülleri kapsar.",
+   "metin": "**Soru.** Anjiyogenez, invazyon ve bağışıklık kaçışını düzenleyen kanser geni sınıfı hangisidir?\n\n**A)** Onkogenler · **B)** Tümör–konak etkileşim genleri · **C)** Apoptozu düzenleyen genler · **D)** Tümör baskılayıcı genler · **E)** DNA onarım genleri\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Onkogenler** — Onkogenler, proto-onkogenlerin işlev kazanımıyla oluşur ve büyümeyi teşvik eden onkoproteinler kodlar.\n- **Tümör–konak etkileşim genleri** — Tümör–konak etkileşim genleri doğru: anjiyogenez, invazyon ve bağışıklık kaçışını düzenleyen dördüncü kanser geni sınıfıdır.\n- **Apoptozu düzenleyen genler** — Apoptozu düzenleyen genler, hücre sağkalımını ya da ölümünü belirler; BCL2 ailesi bu grubun örneğidir.\n- **Tümör baskılayıcı genler** — Tümör baskılayıcı genler, hücre proliferasyonunu ve genom bütünlüğünü frenleyen gen sınıfıdır.\n- **DNA onarım genleri** — DNA onarım genlerinin kusuru genomik instabiliteye yol açar; anjiyogenez ve bağışıklık kaçışını düzenleyen sınıf değildir.\n\n**Cevap: B** — Tümör–konak etkileşim genleri\n\n**Özet.** Kanser genleri dört sınıftır: onkogenler, tümör baskılayıcılar, apoptoz genleri ve tümör–konak etkileşim genleri. Sonuncusu VEGF, MMP ve PD-L1 gibi molekülleri kapsar.",
+   "ses": "Anjiyogenez, invazyon ve bağışıklık kaçışını düzenleyen kanser geni sınıfı hangisidir?\nA, Onkogenler\nBe, Tümör ile konak etkileşim genleri\nCe, Apoptozu düzenleyen genler\nDe, Tümör baskılayıcı genler\nE, de ne a onarım genleri\nSeçenekleri sırayla değerlendirelim.\nOnkogenler, proto-onkogenlerin işlev kazanımıyla oluşur ve büyümeyi teşvik eden onkoproteinler kodlar.\nTümör ile konak etkileşim genleri doğru, anjiyogenez, invazyon ve bağışıklık kaçışını düzenleyen dördüncü kanser geni sınıfıdır.\nApoptozu düzenleyen genler, hücre sağkalımını ya da ölümünü belirler. Be ce le iki ailesi bu grubun örneğidir.\nTümör baskılayıcı genler, hücre proliferasyonunu ve genom bütünlüğünü frenleyen gen sınıfıdır.\nde ne a onarım genlerinin kusuru genomik instabiliteye yol açar. Anjiyogenez ve bağışıklık kaçışını düzenleyen sınıf değildir.\nDoğru cevap Be, Tümör ile konak etkileşim genleri\nKanser genleri dört sınıftır, onkogenler, tümör baskılayıcılar, apoptoz genleri ve tümör ile konak etkileşim genleri. Sonuncusu ve e ge fe, me me pe ve pe de le bir gibi molekülleri kapsar.",
+   "kelime": 153
+  },
+  {
+   "no": 30,
+   "tur": "ornek",
+   "soru": "Birçok solid tümörde baskın genetik lezyon tipi hangisidir?",
+   "secenekler": {
+    "A": "Translokasyon",
+    "B": "Gen amplifikasyonu",
+    "C": "Anöploidi",
+    "D": "Nokta mutasyon",
+    "E": "MikroRNA değişikliği"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Translokasyon, kromozomlar arası segment değişimidir ve özellikle lösemi ile lenfomalarda sıktır.",
+    "B": "Gen amplifikasyonu, MYCN ve HER2 örneklerindeki gibi gen kopya sayısının artışıdır; solid tümörlerde baskın lezyon tipi değildir.",
+    "C": "Anöploidi, haploid sayının katı olmayan kromozom sayısıdır; genomik istikrarsızlık göstergesidir ama baskın lezyon tipi olarak tanımlanmaz.",
+    "D": "Nokta mutasyon doğru: RAS'ta işlev kazanımı, TP53'te işlev kaybı yapabilen ve birçok solid tümörde baskın olan lezyon tipidir.",
+    "E": "MikroRNA değişiklikleri onkogen ya da tümör baskılayıcı protein düzeyini değiştirir; solid tümörlerde baskın lezyon tipi değildir."
+   },
+   "ozet": "Nokta mutasyonlar birçok solid tümörde baskın lezyondur; translokasyonlar ise özellikle hematolojik malignitelerde, yani lösemi ve lenfomalarda sıktır.",
+   "metin": "**Soru.** Birçok solid tümörde baskın genetik lezyon tipi hangisidir?\n\n**A)** Translokasyon · **B)** Gen amplifikasyonu · **C)** Anöploidi · **D)** Nokta mutasyon · **E)** MikroRNA değişikliği\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Translokasyon** — Translokasyon, kromozomlar arası segment değişimidir ve özellikle lösemi ile lenfomalarda sıktır.\n- **Gen amplifikasyonu** — Gen amplifikasyonu, MYCN ve HER2 örneklerindeki gibi gen kopya sayısının artışıdır; solid tümörlerde baskın lezyon tipi değildir.\n- **Anöploidi** — Anöploidi, haploid sayının katı olmayan kromozom sayısıdır; genomik istikrarsızlık göstergesidir ama baskın lezyon tipi olarak tanımlanmaz.\n- **Nokta mutasyon** — Nokta mutasyon doğru: RAS'ta işlev kazanımı, TP53'te işlev kaybı yapabilen ve birçok solid tümörde baskın olan lezyon tipidir.\n- **MikroRNA değişikliği** — MikroRNA değişiklikleri onkogen ya da tümör baskılayıcı protein düzeyini değiştirir; solid tümörlerde baskın lezyon tipi değildir.\n\n**Cevap: D** — Nokta mutasyon\n\n**Özet.** Nokta mutasyonlar birçok solid tümörde baskın lezyondur; translokasyonlar ise özellikle hematolojik malignitelerde, yani lösemi ve lenfomalarda sıktır.",
+   "ses": "Birçok solid tümörde baskın genetik lezyon tipi hangisidir?\nA, Translokasyon\nBe, Gen amplifikasyonu\nCe, Anöploidi\nDe, Nokta mutasyon\nE, mikro re ne a değişikliği\nHer seçeneği tek tek ele alalım.\nTranslokasyon, kromozomlar arası segment değişimidir ve özellikle lösemi ile lenfomalarda sıktır.\nGen amplifikasyonu, mik en ve her tu örneklerindeki gibi gen kopya sayısının artışıdır. Solid tümörlerde baskın lezyon tipi değildir.\nAnöploidi, haploid sayının katı olmayan kromozom sayısıdır. Genomik istikrarsızlık göstergesidir ama baskın lezyon tipi olarak tanımlanmaz.\nNokta mutasyon doğru, rasta işlev kazanımı, te pe elli üçte işlev kaybı yapabilen ve birçok solid tümörde baskın olan lezyon tipidir.\nmikro re ne a değişiklikleri onkogen ya da tümör baskılayıcı protein düzeyini değiştirir. Solid tümörlerde baskın lezyon tipi değildir.\nDoğru cevap De, Nokta mutasyon\nNokta mutasyonlar birçok solid tümörde baskın lezyondur. Translokasyonlar ise özellikle hematolojik malignitelerde, yani lösemi ve lenfomalarda sıktır.",
+   "kelime": 152
+  },
+  {
+   "no": 31,
+   "tur": "ornek",
+   "soru": "17p delesyonu hangi genin kaybına yol açar?",
+   "secenekler": {
+    "A": "RB",
+    "B": "MYCN",
+    "C": "TP53",
+    "D": "HER2",
+    "E": "BCL2"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "RB gen kaybı 13q14 delesyonunun sonucudur ve retinoblastom ile osteosarkomda görülür.",
+    "B": "MYCN bir onkogendir; delesyonla değil, amplifikasyonla nöroblastomda kötü prognoza yol açar.",
+    "C": "TP53 doğru: 17p delesyonu TP53 gen kaybına yol açar; delesyonlar tümör baskılayıcıların bialelik inaktivasyonuna katkı sağlar.",
+    "D": "HER2 bir onkogendir; meme karsinomlarının yaklaşık yüzde yirmisinde amplifiye olur, delesyonla kaybolmaz.",
+    "E": "BCL2, foliküler lenfomada translokasyonla aşırı eksprese olan antiapoptotik gendir; 17p delesyonuyla ilişkili değildir."
+   },
+   "ozet": "Delesyonlar tümör baskılayıcı genleri kaybettirir: 13q14 delesyonu RB, 17p delesyonu TP53 kaybına yol açar. Onkogenler ise amplifikasyon ya da translokasyonla aktive olur.",
+   "metin": "**Soru.** 17p delesyonu hangi genin kaybına yol açar?\n\n**A)** RB · **B)** MYCN · **C)** TP53 · **D)** HER2 · **E)** BCL2\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **RB** — RB gen kaybı 13q14 delesyonunun sonucudur ve retinoblastom ile osteosarkomda görülür.\n- **MYCN** — MYCN bir onkogendir; delesyonla değil, amplifikasyonla nöroblastomda kötü prognoza yol açar.\n- **TP53** — TP53 doğru: 17p delesyonu TP53 gen kaybına yol açar; delesyonlar tümör baskılayıcıların bialelik inaktivasyonuna katkı sağlar.\n- **HER2** — HER2 bir onkogendir; meme karsinomlarının yaklaşık yüzde yirmisinde amplifiye olur, delesyonla kaybolmaz.\n- **BCL2** — BCL2, foliküler lenfomada translokasyonla aşırı eksprese olan antiapoptotik gendir; 17p delesyonuyla ilişkili değildir.\n\n**Cevap: C** — TP53\n\n**Özet.** Delesyonlar tümör baskılayıcı genleri kaybettirir: 13q14 delesyonu RB, 17p delesyonu TP53 kaybına yol açar. Onkogenler ise amplifikasyon ya da translokasyonla aktive olur.",
+   "ses": "on yedi pe delesyonu hangi genin kaybına yol açar?\nA, re be\nBe, mik en\nCe, te pe elli üç\nDe, her tu\nE, be ce le iki\nŞıkları sırasıyla gözden geçirelim.\nre be gen kaybı on üç ku on dört delesyonunun sonucudur ve retinoblastom ile osteosarkomda görülür.\nmik en bir onkogendir. Delesyonla değil, amplifikasyonla nöroblastomda kötü prognoza yol açar.\nte pe elli üç doğru, on yedi pe delesyonu te pe elli üç gen kaybına yol açar. Delesyonlar tümör baskılayıcıların bialelik inaktivasyonuna katkı sağlar.\nher tu bir onkogendir. Meme karsinomlarının yaklaşık yüzde yirmisinde amplifiye olur, delesyonla kaybolmaz.\nbe ce le iki, foliküler lenfomada translokasyonla aşırı eksprese olan antiapoptotik gendir. On yedi pe delesyonuyla ilişkili değildir.\nDoğru cevap Ce, te pe elli üç\nDelesyonlar tümör baskılayıcı genleri kaybettirir, on üç ku on dört delesyonu re be, on yedi pe delesyonu te pe elli üç kaybına yol açar. Onkogenler ise amplifikasyon ya da translokasyonla aktive olur.",
+   "kelime": 132
+  },
+  {
+   "no": 32,
+   "tur": "ornek",
+   "soru": "Anöploidinin başlıca nedeni hangisidir?",
+   "secenekler": {
+    "A": "Mitoz kontrol noktası kusurları",
+    "B": "Promotör hipermetilasyonu",
+    "C": "Pirimidin dimerleri",
+    "D": "Uyumsuzluk onarımı kusuru",
+    "E": "Telomeraz aktivasyonu"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Mitoz kontrol noktası kusurları doğru: kromozom ayrılma hatalarıyla birlikte, haploid sayının katı olmayan kromozom sayısına yol açar.",
+    "B": "Promotör hipermetilasyonu, DNA dizisini değiştirmeden tümör baskılayıcı gen ekspresyonunu susturan epigenetik değişikliktir.",
+    "C": "Pirimidin dimerleri ultraviyole ışınlarının oluşturduğu DNA lezyonlarıdır; nükleotid eksizyon onarımıyla düzeltilir.",
+    "D": "Uyumsuzluk onarımı kusuru, replikasyondaki yanlış baz eşleşmelerini düzeltemez ve mikrosatellit instabilitesine yol açar.",
+    "E": "Telomeraz aktivasyonu sınırsız çoğalma potansiyeli sağlar; kromozom sayısı bozukluğunun nedeni değildir."
+   },
+   "ozet": "Anöploidi, mitoz kontrol noktası kusurları ve kromozom ayrılma hatalarıyla oluşur; onkogen dozunu artırıp tümör baskılayıcı gen dozunu azaltır.",
+   "metin": "**Soru.** Anöploidinin başlıca nedeni hangisidir?\n\n**A)** Mitoz kontrol noktası kusurları · **B)** Promotör hipermetilasyonu · **C)** Pirimidin dimerleri · **D)** Uyumsuzluk onarımı kusuru · **E)** Telomeraz aktivasyonu\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Mitoz kontrol noktası kusurları** — Mitoz kontrol noktası kusurları doğru: kromozom ayrılma hatalarıyla birlikte, haploid sayının katı olmayan kromozom sayısına yol açar.\n- **Promotör hipermetilasyonu** — Promotör hipermetilasyonu, DNA dizisini değiştirmeden tümör baskılayıcı gen ekspresyonunu susturan epigenetik değişikliktir.\n- **Pirimidin dimerleri** — Pirimidin dimerleri ultraviyole ışınlarının oluşturduğu DNA lezyonlarıdır; nükleotid eksizyon onarımıyla düzeltilir.\n- **Uyumsuzluk onarımı kusuru** — Uyumsuzluk onarımı kusuru, replikasyondaki yanlış baz eşleşmelerini düzeltemez ve mikrosatellit instabilitesine yol açar.\n- **Telomeraz aktivasyonu** — Telomeraz aktivasyonu sınırsız çoğalma potansiyeli sağlar; kromozom sayısı bozukluğunun nedeni değildir.\n\n**Cevap: A** — Mitoz kontrol noktası kusurları\n\n**Özet.** Anöploidi, mitoz kontrol noktası kusurları ve kromozom ayrılma hatalarıyla oluşur; onkogen dozunu artırıp tümör baskılayıcı gen dozunu azaltır.",
+   "ses": "Anöploidinin başlıca nedeni hangisidir?\nA, Mitoz kontrol noktası kusurları\nBe, Promotör hipermetilasyonu\nCe, Pirimidin dimerleri\nDe, Uyumsuzluk onarımı kusuru\nE, Telomeraz aktivasyonu\nŞimdi seçeneklere tek tek bakalım.\nMitoz kontrol noktası kusurları doğru, kromozom ayrılma hatalarıyla birlikte, haploid sayının katı olmayan kromozom sayısına yol açar.\nPromotör hipermetilasyonu, de ne a dizisini değiştirmeden tümör baskılayıcı gen ekspresyonunu susturan epigenetik değişikliktir.\nPirimidin dimerleri ultraviyole ışınlarının oluşturduğu de ne a lezyonlarıdır. Nükleotid eksizyon onarımıyla düzeltilir.\nUyumsuzluk onarımı kusuru, replikasyondaki yanlış baz eşleşmelerini düzeltemez ve mikrosatellit instabilitesine yol açar.\nTelomeraz aktivasyonu sınırsız çoğalma potansiyeli sağlar. Kromozom sayısı bozukluğunun nedeni değildir.\nDoğru cevap A, Mitoz kontrol noktası kusurları\nAnöploidi, mitoz kontrol noktası kusurları ve kromozom ayrılma hatalarıyla oluşur. Onkogen dozunu artırıp tümör baskılayıcı gen dozunu azaltır.",
+   "kelime": 146
+  },
+  {
+   "no": 33,
+   "tur": "ornek",
+   "soru": "Onkogen mRNA'sını baskılayan bir miRNA'nın kaybı hangi sonuca yol açar?",
+   "secenekler": {
+    "A": "Onkoprotein azalması",
+    "B": "Tümör baskılayıcı protein artışı",
+    "C": "Gen amplifikasyonu",
+    "D": "DNA hipermetilasyonu",
+    "E": "Onkoprotein artışı"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Onkoprotein azalması tersi bir sonuçtur; onkogen mRNA'sını baskılayan molekül kaybolunca baskı kalkar.",
+    "B": "Tümör baskılayıcı protein artışı bu kayıpla oluşmaz; tümör baskılayıcı protein, onun mRNA'sını hedefleyen miRNA artınca azalır.",
+    "C": "Gen amplifikasyonu gen kopya sayısının artışıdır; miRNA kaybı kopya sayısını değil, translasyonu etkiler.",
+    "D": "DNA hipermetilasyonu, tümör baskılayıcı gen promotörlerini susturan epigenetik mekanizmadır; miRNA kaybının sonucu değildir.",
+    "E": "Onkoprotein artışı doğru: onkogen mRNA'sını baskılayan miRNA kaybolunca translasyon serbestleşir ve onkoprotein artar."
+   },
+   "ozet": "MikroRNA'lar hedef mRNA'nın translasyonunu baskılar ya da yıkar. Onkogen mRNA'sını baskılayan miRNA kaybı onkoproteini artırır.",
+   "metin": "**Soru.** Onkogen mRNA'sını baskılayan bir miRNA'nın kaybı hangi sonuca yol açar?\n\n**A)** Onkoprotein azalması · **B)** Tümör baskılayıcı protein artışı · **C)** Gen amplifikasyonu · **D)** DNA hipermetilasyonu · **E)** Onkoprotein artışı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Onkoprotein azalması** — Onkoprotein azalması tersi bir sonuçtur; onkogen mRNA'sını baskılayan molekül kaybolunca baskı kalkar.\n- **Tümör baskılayıcı protein artışı** — Tümör baskılayıcı protein artışı bu kayıpla oluşmaz; tümör baskılayıcı protein, onun mRNA'sını hedefleyen miRNA artınca azalır.\n- **Gen amplifikasyonu** — Gen amplifikasyonu gen kopya sayısının artışıdır; miRNA kaybı kopya sayısını değil, translasyonu etkiler.\n- **DNA hipermetilasyonu** — DNA hipermetilasyonu, tümör baskılayıcı gen promotörlerini susturan epigenetik mekanizmadır; miRNA kaybının sonucu değildir.\n- **Onkoprotein artışı** — Onkoprotein artışı doğru: onkogen mRNA'sını baskılayan miRNA kaybolunca translasyon serbestleşir ve onkoprotein artar.\n\n**Cevap: E** — Onkoprotein artışı\n\n**Özet.** MikroRNA'lar hedef mRNA'nın translasyonunu baskılar ya da yıkar. Onkogen mRNA'sını baskılayan miRNA kaybı onkoproteini artırır.",
+   "ses": "Onkogen me re ne asını baskılayan bir mikro re ne anın kaybı hangi sonuca yol açar?\nA, Onkoprotein azalması\nBe, Tümör baskılayıcı protein artışı\nCe, Gen amplifikasyonu\nDe, de ne a hipermetilasyonu\nE, Onkoprotein artışı\nSeçenekleri sırayla değerlendirelim.\nOnkoprotein azalması tersi bir sonuçtur. Onkogen me re ne asını baskılayan molekül kaybolunca baskı kalkar.\nTümör baskılayıcı protein artışı bu kayıpla oluşmaz. Tümör baskılayıcı protein, onun me re ne asını hedefleyen mikro re ne a artınca azalır.\nGen amplifikasyonu gen kopya sayısının artışıdır. Mikro re ne a kaybı kopya sayısını değil, translasyonu etkiler.\nde ne a hipermetilasyonu, tümör baskılayıcı gen promotörlerini susturan epigenetik mekanizmadır. Mikro re ne a kaybının sonucu değildir.\nOnkoprotein artışı doğru, onkogen me re ne asını baskılayan mikro re ne a kaybolunca translasyon serbestleşir ve onkoprotein artar.\nDoğru cevap E, Onkoprotein artışı\nmikro re ne alar hedef me re ne anın translasyonunu baskılar ya da yıkar. Onkogen me re ne asını baskılayan mikro re ne a kaybı onkoproteini artırır.",
+   "kelime": 146
+  },
+  {
+   "no": 34,
+   "tur": "ornek",
+   "soru": "Kanserde global DNA hipometilasyonunun temel sonucu hangisidir?",
+   "secenekler": {
+    "A": "Tümör baskılayıcı genin susturulması",
+    "B": "Mikrosatellit instabilitesi",
+    "C": "Pirimidin dimeri oluşumu",
+    "D": "Genomik instabiliteye katkı",
+    "E": "Füzyon gen oluşumu"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Tümör baskılayıcı genin susturulması, global hipometilasyonun değil, promotörlerdeki hipermetilasyonun sonucudur.",
+    "B": "Mikrosatellit instabilitesi uyumsuzluk onarımı kusurunun sonucudur; kısa tekrar dizilerinin uzunluğunun değişmesidir.",
+    "C": "Pirimidin dimerleri ultraviyole ışınlarının DNA'da oluşturduğu lezyonlardır; metilasyon değişikliğiyle ilişkili değildir.",
+    "D": "Genomik instabiliteye katkı doğru: kanserde global DNA hipometilasyonu genomik instabiliteye katkıda bulunur.",
+    "E": "Füzyon gen oluşumu translokasyonun sonucudur; BCR-ABL buna örnektir, metilasyonla oluşmaz."
+   },
+   "ozet": "Epigenetik değişiklikler DNA dizisi değişmeden ekspresyonu değiştirir: global hipometilasyon genomik instabiliteye katkı yapar, promotör hipermetilasyonu ise tümör baskılayıcıyı susturur.",
+   "metin": "**Soru.** Kanserde global DNA hipometilasyonunun temel sonucu hangisidir?\n\n**A)** Tümör baskılayıcı genin susturulması · **B)** Mikrosatellit instabilitesi · **C)** Pirimidin dimeri oluşumu · **D)** Genomik instabiliteye katkı · **E)** Füzyon gen oluşumu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Tümör baskılayıcı genin susturulması** — Tümör baskılayıcı genin susturulması, global hipometilasyonun değil, promotörlerdeki hipermetilasyonun sonucudur.\n- **Mikrosatellit instabilitesi** — Mikrosatellit instabilitesi uyumsuzluk onarımı kusurunun sonucudur; kısa tekrar dizilerinin uzunluğunun değişmesidir.\n- **Pirimidin dimeri oluşumu** — Pirimidin dimerleri ultraviyole ışınlarının DNA'da oluşturduğu lezyonlardır; metilasyon değişikliğiyle ilişkili değildir.\n- **Genomik instabiliteye katkı** — Genomik instabiliteye katkı doğru: kanserde global DNA hipometilasyonu genomik instabiliteye katkıda bulunur.\n- **Füzyon gen oluşumu** — Füzyon gen oluşumu translokasyonun sonucudur; BCR-ABL buna örnektir, metilasyonla oluşmaz.\n\n**Cevap: D** — Genomik instabiliteye katkı\n\n**Özet.** Epigenetik değişiklikler DNA dizisi değişmeden ekspresyonu değiştirir: global hipometilasyon genomik instabiliteye katkı yapar, promotör hipermetilasyonu ise tümör baskılayıcıyı susturur.",
+   "ses": "Kanserde global de ne a hipometilasyonunun temel sonucu hangisidir?\nA, Tümör baskılayıcı genin susturulması\nBe, Mikrosatellit instabilitesi\nCe, Pirimidin dimeri oluşumu\nDe, Genomik instabiliteye katkı\nE, Füzyon gen oluşumu\nHer seçeneği tek tek ele alalım.\nTümör baskılayıcı genin susturulması, global hipometilasyonun değil, promotörlerdeki hipermetilasyonun sonucudur.\nMikrosatellit instabilitesi uyumsuzluk onarımı kusurunun sonucudur. Kısa tekrar dizilerinin uzunluğunun değişmesidir.\nPirimidin dimerleri ultraviyole ışınlarının de ne ada oluşturduğu lezyonlardır. Metilasyon değişikliğiyle ilişkili değildir.\nGenomik instabiliteye katkı doğru, kanserde global de ne a hipometilasyonu genomik instabiliteye katkıda bulunur.\nFüzyon gen oluşumu translokasyonun sonucudur. Be ce re a be le buna örnektir, metilasyonla oluşmaz.\nDoğru cevap De, Genomik instabiliteye katkı\nEpigenetik değişiklikler de ne a dizisi değişmeden ekspresyonu değiştirir, global hipometilasyon genomik instabiliteye katkı yapar, promotör hipermetilasyonu ise tümör baskılayıcıyı susturur.",
+   "kelime": 144
+  },
+  {
+   "no": 35,
+   "tur": "ornek",
+   "soru": "Mikrosatellit instabilitesi hangi değişikliği ifade eder?",
+   "secenekler": {
+    "A": "Kromozom sayısının değişmesi",
+    "B": "Kısa tekrar dizilerinin uzunluk değişimi",
+    "C": "Gen kopya sayısının artması",
+    "D": "Promotör metilasyonu",
+    "E": "Pirimidin dimeri birikimi"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Kromozom sayısının değişmesi anöploidiyi tanımlar; mikrosatellit instabilitesi değildir.",
+    "B": "Kısa tekrar dizilerinin uzunluk değişimi doğru: mikrosatellit instabilitesi bir ile altı bazlık tekrar dizilerinin uzunluğundaki değişikliktir.",
+    "C": "Gen kopya sayısının artması amplifikasyondur; çift dakikalar ya da homojen boyanan bölgeler olarak görülür.",
+    "D": "Promotör metilasyonu epigenetik bir değişikliktir; DNA dizisini değiştirmeden ekspresyonu susturur.",
+    "E": "Pirimidin dimeri birikimi nükleotid eksizyon onarımı kusurunun, örneğin kseroderma pigmentozumun sonucudur."
+   },
+   "ozet": "Uyumsuzluk onarımı replikasyondaki yanlış eşleşmeleri düzeltir; kusurunda 1–6 bazlık tekrar dizilerinin uzunluğu değişir, bu mikrosatellit instabilitesidir.",
+   "metin": "**Soru.** Mikrosatellit instabilitesi hangi değişikliği ifade eder?\n\n**A)** Kromozom sayısının değişmesi · **B)** Kısa tekrar dizilerinin uzunluk değişimi · **C)** Gen kopya sayısının artması · **D)** Promotör metilasyonu · **E)** Pirimidin dimeri birikimi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kromozom sayısının değişmesi** — Kromozom sayısının değişmesi anöploidiyi tanımlar; mikrosatellit instabilitesi değildir.\n- **Kısa tekrar dizilerinin uzunluk değişimi** — Kısa tekrar dizilerinin uzunluk değişimi doğru: mikrosatellit instabilitesi bir ile altı bazlık tekrar dizilerinin uzunluğundaki değişikliktir.\n- **Gen kopya sayısının artması** — Gen kopya sayısının artması amplifikasyondur; çift dakikalar ya da homojen boyanan bölgeler olarak görülür.\n- **Promotör metilasyonu** — Promotör metilasyonu epigenetik bir değişikliktir; DNA dizisini değiştirmeden ekspresyonu susturur.\n- **Pirimidin dimeri birikimi** — Pirimidin dimeri birikimi nükleotid eksizyon onarımı kusurunun, örneğin kseroderma pigmentozumun sonucudur.\n\n**Cevap: B** — Kısa tekrar dizilerinin uzunluk değişimi\n\n**Özet.** Uyumsuzluk onarımı replikasyondaki yanlış eşleşmeleri düzeltir; kusurunda 1–6 bazlık tekrar dizilerinin uzunluğu değişir, bu mikrosatellit instabilitesidir.",
+   "ses": "Mikrosatellit instabilitesi hangi değişikliği ifade eder?\nA, Kromozom sayısının değişmesi\nBe, Kısa tekrar dizilerinin uzunluk değişimi\nCe, Gen kopya sayısının artması\nDe, Promotör metilasyonu\nE, Pirimidin dimeri birikimi\nŞıkları sırasıyla gözden geçirelim.\nKromozom sayısının değişmesi anöploidiyi tanımlar. Mikrosatellit instabilitesi değildir.\nKısa tekrar dizilerinin uzunluk değişimi doğru, mikrosatellit instabilitesi bir ile altı bazlık tekrar dizilerinin uzunluğundaki değişikliktir.\nGen kopya sayısının artması amplifikasyondur. Çift dakikalar ya da homojen boyanan bölgeler olarak görülür.\nPromotör metilasyonu epigenetik bir değişikliktir. De ne a dizisini değiştirmeden ekspresyonu susturur.\nPirimidin dimeri birikimi nükleotid eksizyon onarımı kusurunun, örneğin kseroderma pigmentozumun sonucudur.\nDoğru cevap Be, Kısa tekrar dizilerinin uzunluk değişimi\nUyumsuzluk onarımı replikasyondaki yanlış eşleşmeleri düzeltir. Kusurunda bir ile altı bazlık tekrar dizilerinin uzunluğu değişir, bu mikrosatellit instabilitesidir.",
+   "kelime": 149
+  },
+  {
+   "no": 36,
+   "tur": "ornek",
+   "soru": "DNA'ya zarar veren ajanlara aşırı duyarlılık ve kromozomal kırıklar hangi onarım kusurunun özelliğidir?",
+   "secenekler": {
+    "A": "Uyumsuzluk onarımı",
+    "B": "Nükleotid eksizyon onarımı",
+    "C": "Polimeraz düzeltme okuması",
+    "D": "Homolog rekombinasyon",
+    "E": "Telomer bakımı"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Uyumsuzluk onarımı kusuru mikrosatellit instabilitesiyle karakterizedir ve Lynch sendromunda görülür.",
+    "B": "Nükleotid eksizyon onarımı kusuru, ultraviyolenin oluşturduğu pirimidin dimerlerinin onarılamadığı kseroderma pigmentozumda görülür.",
+    "C": "Polimeraz düzeltme okuması kusuru, nokta mutasyon oranında büyük artış yapar; kromozomal kırıklarla tanımlanmaz.",
+    "D": "Homolog rekombinasyon doğru: kusurunda DNA'ya zarar veren ajanlara aşırı duyarlılık, kromozomal kırıklar ve yeniden düzenlemeler görülür.",
+    "E": "Telomer bakımı bir DNA onarım yolu olarak sayılmaz; telomeraz ekspresyonu ölümsüzlükle ilişkilidir."
+   },
+   "ozet": "Homolog rekombinasyon kusurları Bloom, ataksi–telanjiektazi ve Fanconi anemisinde görülür; DNA hasarlayıcılara aşırı duyarlılık ve kromozomal kırıklar tipiktir.",
+   "metin": "**Soru.** DNA'ya zarar veren ajanlara aşırı duyarlılık ve kromozomal kırıklar hangi onarım kusurunun özelliğidir?\n\n**A)** Uyumsuzluk onarımı · **B)** Nükleotid eksizyon onarımı · **C)** Polimeraz düzeltme okuması · **D)** Homolog rekombinasyon · **E)** Telomer bakımı\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Uyumsuzluk onarımı** — Uyumsuzluk onarımı kusuru mikrosatellit instabilitesiyle karakterizedir ve Lynch sendromunda görülür.\n- **Nükleotid eksizyon onarımı** — Nükleotid eksizyon onarımı kusuru, ultraviyolenin oluşturduğu pirimidin dimerlerinin onarılamadığı kseroderma pigmentozumda görülür.\n- **Polimeraz düzeltme okuması** — Polimeraz düzeltme okuması kusuru, nokta mutasyon oranında büyük artış yapar; kromozomal kırıklarla tanımlanmaz.\n- **Homolog rekombinasyon** — Homolog rekombinasyon doğru: kusurunda DNA'ya zarar veren ajanlara aşırı duyarlılık, kromozomal kırıklar ve yeniden düzenlemeler görülür.\n- **Telomer bakımı** — Telomer bakımı bir DNA onarım yolu olarak sayılmaz; telomeraz ekspresyonu ölümsüzlükle ilişkilidir.\n\n**Cevap: D** — Homolog rekombinasyon\n\n**Özet.** Homolog rekombinasyon kusurları Bloom, ataksi–telanjiektazi ve Fanconi anemisinde görülür; DNA hasarlayıcılara aşırı duyarlılık ve kromozomal kırıklar tipiktir.",
+   "ses": "de ne aya zarar veren ajanlara aşırı duyarlılık ve kromozomal kırıklar hangi onarım kusurunun özelliğidir?\nA, Uyumsuzluk onarımı\nBe, Nükleotid eksizyon onarımı\nCe, Polimeraz düzeltme okuması\nDe, Homolog rekombinasyon\nE, Telomer bakımı\nŞimdi seçeneklere tek tek bakalım.\nUyumsuzluk onarımı kusuru mikrosatellit instabilitesiyle karakterizedir ve Lynch sendromunda görülür.\nNükleotid eksizyon onarımı kusuru, ultraviyolenin oluşturduğu pirimidin dimerlerinin onarılamadığı kseroderma pigmentozumda görülür.\nPolimeraz düzeltme okuması kusuru, nokta mutasyon oranında büyük artış yapar. Kromozomal kırıklarla tanımlanmaz.\nHomolog rekombinasyon doğru, kusurunda de ne aya zarar veren ajanlara aşırı duyarlılık, kromozomal kırıklar ve yeniden düzenlemeler görülür.\nTelomer bakımı bir de ne a onarım yolu olarak sayılmaz. Telomeraz ekspresyonu ölümsüzlükle ilişkilidir.\nDoğru cevap De, Homolog rekombinasyon\nHomolog rekombinasyon kusurları Bloom, ataksi ile telanjiektazi ve Fanconi anemisinde görülür. De ne a hasarlayıcılara aşırı duyarlılık ve kromozomal kırıklar tipiktir.",
+   "kelime": 149
+  },
+  {
+   "no": 37,
+   "tur": "ornek",
+   "soru": "DNA polimeraz düzeltme okuması kusurlu tümörlerin immün kontrol noktası inhibitörlerine iyi yanıtının nedeni hangisidir?",
+   "secenekler": {
+    "A": "Yüksek neoantijen yükü",
+    "B": "Mikrosatellit stabilitesi",
+    "C": "Füzyon gen oluşumu",
+    "D": "Düşük mutasyon oranı",
+    "E": "Global hipermetilasyon"
+   },
+   "dogru": "A",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Yüksek neoantijen yükü doğru: düzeltme okuması kusuru nokta mutasyonları çok artırır, oluşan neoantijenler immün kontrol noktası inhibitörlerine yanıtı iyileştirir.",
+    "B": "Mikrosatellit stabilitesi bu kusuru tanımlamaz; mikrosatellit instabilitesi uyumsuzluk onarımı kusurunun bulgusudur.",
+    "C": "Füzyon gen oluşumu translokasyonun sonucudur; polimeraz düzeltme kusurunun özelliği değildir.",
+    "D": "Düşük mutasyon oranı tam tersidir; düzeltme okuması kusurunda nokta mutasyon oranı büyük ölçüde artar.",
+    "E": "Global hipermetilasyon tanımlanan bir mekanizma değildir; kanserde global düzeyde tipik olan hipometilasyondur."
+   },
+   "ozet": "DNA polimeraz 3'→5' ekzonükleaz aktivitesiyle hataları düzeltir; kusurunda nokta mutasyonlar artar, yüksek neoantijen yükü immün kontrol noktası inhibitörlerine iyi yanıt sağlar.",
+   "metin": "**Soru.** DNA polimeraz düzeltme okuması kusurlu tümörlerin immün kontrol noktası inhibitörlerine iyi yanıtının nedeni hangisidir?\n\n**A)** Yüksek neoantijen yükü · **B)** Mikrosatellit stabilitesi · **C)** Füzyon gen oluşumu · **D)** Düşük mutasyon oranı · **E)** Global hipermetilasyon\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Yüksek neoantijen yükü** — Yüksek neoantijen yükü doğru: düzeltme okuması kusuru nokta mutasyonları çok artırır, oluşan neoantijenler immün kontrol noktası inhibitörlerine yanıtı iyileştirir.\n- **Mikrosatellit stabilitesi** — Mikrosatellit stabilitesi bu kusuru tanımlamaz; mikrosatellit instabilitesi uyumsuzluk onarımı kusurunun bulgusudur.\n- **Füzyon gen oluşumu** — Füzyon gen oluşumu translokasyonun sonucudur; polimeraz düzeltme kusurunun özelliği değildir.\n- **Düşük mutasyon oranı** — Düşük mutasyon oranı tam tersidir; düzeltme okuması kusurunda nokta mutasyon oranı büyük ölçüde artar.\n- **Global hipermetilasyon** — Global hipermetilasyon tanımlanan bir mekanizma değildir; kanserde global düzeyde tipik olan hipometilasyondur.\n\n**Cevap: A** — Yüksek neoantijen yükü\n\n**Özet.** DNA polimeraz 3'→5' ekzonükleaz aktivitesiyle hataları düzeltir; kusurunda nokta mutasyonlar artar, yüksek neoantijen yükü immün kontrol noktası inhibitörlerine iyi yanıt sağlar.",
+   "ses": "de ne a polimeraz düzeltme okuması kusurlu tümörlerin immün kontrol noktası inhibitörlerine iyi yanıtının nedeni hangisidir?\nA, Yüksek neoantijen yükü\nBe, Mikrosatellit stabilitesi\nCe, Füzyon gen oluşumu\nDe, Düşük mutasyon oranı\nE, Global hipermetilasyon\nSeçenekleri sırayla değerlendirelim.\nYüksek neoantijen yükü doğru, düzeltme okuması kusuru nokta mutasyonları çok artırır, oluşan neoantijenler immün kontrol noktası inhibitörlerine yanıtı iyileştirir.\nMikrosatellit stabilitesi bu kusuru tanımlamaz. Mikrosatellit instabilitesi uyumsuzluk onarımı kusurunun bulgusudur.\nFüzyon gen oluşumu translokasyonun sonucudur. Polimeraz düzeltme kusurunun özelliği değildir.\nDüşük mutasyon oranı tam tersidir. Düzeltme okuması kusurunda nokta mutasyon oranı büyük ölçüde artar.\nGlobal hipermetilasyon tanımlanan bir mekanizma değildir. Kanserde global düzeyde tipik olan hipometilasyondur.\nDoğru cevap A, Yüksek neoantijen yükü\nDe ne a polimeraz, üç üssü beş üssü ekzonükleaz aktivitesiyle hataları düzeltir. Kusurunda nokta mutasyonlar artar, yüksek neoantijen yükü immün kontrol noktası inhibitörlerine iyi yanıt sağlar.",
+   "kelime": 158
+  },
+  {
+   "no": 38,
+   "tur": "ornek",
+   "soru": "Lenfoma ve lösemilerdeki translokasyonların temelinde hangi fizyolojik süreç yatar?",
+   "secenekler": {
+    "A": "Antijen reseptör gen çeşitlenmesi",
+    "B": "Nükleotid eksizyon onarımı",
+    "C": "Global DNA hipometilasyonu",
+    "D": "Mitoz kontrol noktası işlevi",
+    "E": "Telomeraz ekspresyonu"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Antijen reseptör gen çeşitlenmesi doğru: RAG1, RAG2 ve AID ile yapılan yanlış rekombinasyon ve sınıf değişimi translokasyonlara yol açar.",
+    "B": "Nükleotid eksizyon onarımı, ultraviyolenin oluşturduğu pirimidin dimerlerini çıkarır; lenfoid translokasyonların temeli değildir.",
+    "C": "Global DNA hipometilasyonu genomik instabiliteye katkı yapar, ama lenfoid hücrelere özgü translokasyonları açıklamaz.",
+    "D": "Mitoz kontrol noktası kusuru anöploidiye yol açar; lenfoid hücrelerdeki düzenlenmiş kararsızlıkla ilgili değildir.",
+    "E": "Telomeraz ekspresyonu hücreye ölümsüzlük kazandırır; translokasyonların kaynağı değildir."
+   },
+   "ozet": "Lenfoid hücrelerde immunoglobulin ve T hücresi reseptörü genleri RAG1, RAG2 ve AID ile çeşitlenir. Yanlış rekombinasyon ve sınıf değişimi lenfoid tümörlerdeki translokasyonların temelidir.",
+   "metin": "**Soru.** Lenfoma ve lösemilerdeki translokasyonların temelinde hangi fizyolojik süreç yatar?\n\n**A)** Antijen reseptör gen çeşitlenmesi · **B)** Nükleotid eksizyon onarımı · **C)** Global DNA hipometilasyonu · **D)** Mitoz kontrol noktası işlevi · **E)** Telomeraz ekspresyonu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Antijen reseptör gen çeşitlenmesi** — Antijen reseptör gen çeşitlenmesi doğru: RAG1, RAG2 ve AID ile yapılan yanlış rekombinasyon ve sınıf değişimi translokasyonlara yol açar.\n- **Nükleotid eksizyon onarımı** — Nükleotid eksizyon onarımı, ultraviyolenin oluşturduğu pirimidin dimerlerini çıkarır; lenfoid translokasyonların temeli değildir.\n- **Global DNA hipometilasyonu** — Global DNA hipometilasyonu genomik instabiliteye katkı yapar, ama lenfoid hücrelere özgü translokasyonları açıklamaz.\n- **Mitoz kontrol noktası işlevi** — Mitoz kontrol noktası kusuru anöploidiye yol açar; lenfoid hücrelerdeki düzenlenmiş kararsızlıkla ilgili değildir.\n- **Telomeraz ekspresyonu** — Telomeraz ekspresyonu hücreye ölümsüzlük kazandırır; translokasyonların kaynağı değildir.\n\n**Cevap: A** — Antijen reseptör gen çeşitlenmesi\n\n**Özet.** Lenfoid hücrelerde immunoglobulin ve T hücresi reseptörü genleri RAG1, RAG2 ve AID ile çeşitlenir. Yanlış rekombinasyon ve sınıf değişimi lenfoid tümörlerdeki translokasyonların temelidir.",
+   "ses": "Lenfoma ve lösemilerdeki translokasyonların temelinde hangi fizyolojik süreç yatar?\nA, Antijen reseptör gen çeşitlenmesi\nBe, Nükleotid eksizyon onarımı\nCe, Global de ne a hipometilasyonu\nDe, Mitoz kontrol noktası işlevi\nE, Telomeraz ekspresyonu\nHer seçeneği tek tek ele alalım.\nAntijen reseptör gen çeşitlenmesi doğru, re a ge bir, re a ge iki ve a i de ile yapılan yanlış rekombinasyon ve sınıf değişimi translokasyonlara yol açar.\nNükleotid eksizyon onarımı, ultraviyolenin oluşturduğu pirimidin dimerlerini çıkarır. Lenfoid translokasyonların temeli değildir.\nGlobal de ne a hipometilasyonu genomik instabiliteye katkı yapar, ama lenfoid hücrelere özgü translokasyonları açıklamaz.\nMitoz kontrol noktası kusuru anöploidiye yol açar. Lenfoid hücrelerdeki düzenlenmiş kararsızlıkla ilgili değildir.\nTelomeraz ekspresyonu hücreye ölümsüzlük kazandırır. Translokasyonların kaynağı değildir.\nDoğru cevap A, Antijen reseptör gen çeşitlenmesi\nLenfoid hücrelerde immunoglobulin ve te hücresi reseptörü genleri re a ge bir, re a ge iki ve a i de ile çeşitlenir. Yanlış rekombinasyon ve sınıf değişimi lenfoid tümörlerdeki translokasyonların temelidir.",
+   "kelime": 164
+  },
+  {
+   "no": 39,
+   "tur": "ornek",
+   "soru": "İnvaziv kanser stroması hangi dokuyla yakın paralellik gösterir?",
+   "secenekler": {
+    "A": "Granülomatöz inflamasyon",
+    "B": "Normal parankim",
+    "C": "Hiyalin kıkırdak",
+    "D": "Amiloid birikimi",
+    "E": "İyileşen yara stroması"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Granülomatöz inflamasyon bu benzerlik için tanımlanmaz; tümörle ilişkili inflamatuvar hücreler makrofaj, nötrofil ve lenfositlerdir.",
+    "B": "Normal parankim tümörün dönüşmüş komponentiyle karıştırılmamalı; benzerlik stromanın onarım sürecine benzemesidir.",
+    "C": "Hiyalin kıkırdak bir doku tipidir; invaziv kanser stromasının benzetildiği onarım dokusu değildir.",
+    "D": "Amiloid birikimi tümörü destekleyen inflamasyonun özelliği değildir; bu süreçte büyüme faktörleri ve proteazlar öne çıkar.",
+    "E": "İyileşen yara stroması doğru: invaziv kanser ile iyileşen yara stroması arasında büyüme, anjiyogenez ve matriks yeniden şekillenmesi yönünden yakın paralellik vardır."
+   },
+   "ozet": "İnvaziv tümörlerde kronik inflamatuvar infiltrasyon büyümeyi, anjiyogenezi, invazyonu ve bağışıklık kaçışını destekler; bu stroma iyileşen yaraya çok benzer.",
+   "metin": "**Soru.** İnvaziv kanser stroması hangi dokuyla yakın paralellik gösterir?\n\n**A)** Granülomatöz inflamasyon · **B)** Normal parankim · **C)** Hiyalin kıkırdak · **D)** Amiloid birikimi · **E)** İyileşen yara stroması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Granülomatöz inflamasyon** — Granülomatöz inflamasyon bu benzerlik için tanımlanmaz; tümörle ilişkili inflamatuvar hücreler makrofaj, nötrofil ve lenfositlerdir.\n- **Normal parankim** — Normal parankim tümörün dönüşmüş komponentiyle karıştırılmamalı; benzerlik stromanın onarım sürecine benzemesidir.\n- **Hiyalin kıkırdak** — Hiyalin kıkırdak bir doku tipidir; invaziv kanser stromasının benzetildiği onarım dokusu değildir.\n- **Amiloid birikimi** — Amiloid birikimi tümörü destekleyen inflamasyonun özelliği değildir; bu süreçte büyüme faktörleri ve proteazlar öne çıkar.\n- **İyileşen yara stroması** — İyileşen yara stroması doğru: invaziv kanser ile iyileşen yara stroması arasında büyüme, anjiyogenez ve matriks yeniden şekillenmesi yönünden yakın paralellik vardır.\n\n**Cevap: E** — İyileşen yara stroması\n\n**Özet.** İnvaziv tümörlerde kronik inflamatuvar infiltrasyon büyümeyi, anjiyogenezi, invazyonu ve bağışıklık kaçışını destekler; bu stroma iyileşen yaraya çok benzer.",
+   "ses": "İnvaziv kanser stroması hangi dokuyla yakın paralellik gösterir?\nA, Granülomatöz inflamasyon\nBe, Normal parankim\nCe, Hiyalin kıkırdak\nDe, Amiloid birikimi\nE, İyileşen yara stroması\nŞıkları sırasıyla gözden geçirelim.\nGranülomatöz inflamasyon bu benzerlik için tanımlanmaz. Tümörle ilişkili inflamatuvar hücreler makrofaj, nötrofil ve lenfositlerdir.\nNormal parankim tümörün dönüşmüş komponentiyle karıştırılmamalı. Benzerlik stromanın onarım sürecine benzemesidir.\nHiyalin kıkırdak bir doku tipidir. Invaziv kanser stromasının benzetildiği onarım dokusu değildir.\nAmiloid birikimi tümörü destekleyen inflamasyonun özelliği değildir. Bu süreçte büyüme faktörleri ve proteazlar öne çıkar.\nİyileşen yara stroması doğru, invaziv kanser ile iyileşen yara stroması arasında büyüme, anjiyogenez ve matriks yeniden şekillenmesi yönünden yakın paralellik vardır.\nDoğru cevap E, İyileşen yara stroması\nİnvaziv tümörlerde kronik inflamatuvar infiltrasyon büyümeyi, anjiyogenezi, invazyonu ve bağışıklık kaçışını destekler. Bu stroma iyileşen yaraya çok benzer.",
+   "kelime": 153
+  },
+  {
+   "no": 40,
+   "tur": "ornek",
+   "soru": "Kimyasal karsinojenlerin çoğunun DNA ile kovalent bağ kurmasını sağlayan özellik hangisidir?",
+   "secenekler": {
+    "A": "Elektrofil gruplar",
+    "B": "Lipofilik yapı",
+    "C": "Yüksek molekül ağırlığı",
+    "D": "Hidrofilik gruplar",
+    "E": "Asidik ortam"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Elektrofil gruplar doğru: mutajenik kimyasal karsinojenlerin çoğu, DNA ile kovalent bağ oluşturan elektrofil gruplar içerir.",
+    "B": "Lipofilik yapı bu bağlanmanın tanımlanan nedeni değildir; DNA ile kovalent bağı elektrofil gruplar kurar.",
+    "C": "Yüksek molekül ağırlığı karsinojenite ölçütü değildir; önemli olan DNA ile tepkimeye giren reaktif gruptur.",
+    "D": "Hidrofilik gruplar DNA'ya kovalent bağlanmayı açıklamaz; kimyasal karsinojenlerin ortak özelliği elektrofil karakterdir.",
+    "E": "Asidik ortam bir molekül özelliği değildir; karsinojenin DNA'ya bağlanması elektrofil gruplarla olur."
+   },
+   "ozet": "Kimyasal karsinojenlerin çoğu mutajeniktir ve DNA ile kovalent bağ kuran elektrofil gruplar içerir; hedefleri RAS ve TP53 gibi onkogen ve tümör baskılayıcı genlerdir.",
+   "metin": "**Soru.** Kimyasal karsinojenlerin çoğunun DNA ile kovalent bağ kurmasını sağlayan özellik hangisidir?\n\n**A)** Elektrofil gruplar · **B)** Lipofilik yapı · **C)** Yüksek molekül ağırlığı · **D)** Hidrofilik gruplar · **E)** Asidik ortam\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Elektrofil gruplar** — Elektrofil gruplar doğru: mutajenik kimyasal karsinojenlerin çoğu, DNA ile kovalent bağ oluşturan elektrofil gruplar içerir.\n- **Lipofilik yapı** — Lipofilik yapı bu bağlanmanın tanımlanan nedeni değildir; DNA ile kovalent bağı elektrofil gruplar kurar.\n- **Yüksek molekül ağırlığı** — Yüksek molekül ağırlığı karsinojenite ölçütü değildir; önemli olan DNA ile tepkimeye giren reaktif gruptur.\n- **Hidrofilik gruplar** — Hidrofilik gruplar DNA'ya kovalent bağlanmayı açıklamaz; kimyasal karsinojenlerin ortak özelliği elektrofil karakterdir.\n- **Asidik ortam** — Asidik ortam bir molekül özelliği değildir; karsinojenin DNA'ya bağlanması elektrofil gruplarla olur.\n\n**Cevap: A** — Elektrofil gruplar\n\n**Özet.** Kimyasal karsinojenlerin çoğu mutajeniktir ve DNA ile kovalent bağ kuran elektrofil gruplar içerir; hedefleri RAS ve TP53 gibi onkogen ve tümör baskılayıcı genlerdir.",
+   "ses": "Kimyasal karsinojenlerin çoğunun de ne a ile kovalent bağ kurmasını sağlayan özellik hangisidir?\nA, Elektrofil gruplar\nBe, Lipofilik yapı\nCe, Yüksek molekül ağırlığı\nDe, Hidrofilik gruplar\nE, Asidik ortam\nŞimdi seçeneklere tek tek bakalım.\nElektrofil gruplar doğru, mutajenik kimyasal karsinojenlerin çoğu, de ne a ile kovalent bağ oluşturan elektrofil gruplar içerir.\nLipofilik yapı bu bağlanmanın tanımlanan nedeni değildir. De ne a ile kovalent bağı elektrofil gruplar kurar.\nYüksek molekül ağırlığı karsinojenite ölçütü değildir. Önemli olan de ne a ile tepkimeye giren reaktif gruptur.\nHidrofilik gruplar de ne aya kovalent bağlanmayı açıklamaz. Kimyasal karsinojenlerin ortak özelliği elektrofil karakterdir.\nAsidik ortam bir molekül özelliği değildir. Karsinojenin de ne aya bağlanması elektrofil gruplarla olur.\nDoğru cevap A, Elektrofil gruplar\nKimyasal karsinojenlerin çoğu mutajeniktir ve de ne a ile kovalent bağ kuran elektrofil gruplar içerir. Hedefleri ras ve te pe elli üç gibi onkogen ve tümör baskılayıcı genlerdir.",
+   "kelime": 155
+  },
+  {
+   "no": 41,
+   "tur": "ornek",
+   "soru": "Dolaylı etkili karsinojenlerin çoğunu aktive eden enzim sistemi hangisidir?",
+   "secenekler": {
+    "A": "Telomeraz",
+    "B": "Sitokrom P-450 enzimleri",
+    "C": "Matriks metalloproteinazlar",
+    "D": "Tirozin kinazlar",
+    "E": "DNA polimeraz"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Telomeraz, telomerleri koruyup hücreye ölümsüzlük kazandıran enzimdir; karsinojen aktivasyonunda görev almaz.",
+    "B": "Sitokrom P-450 enzimleri doğru: dolaylı etkili karsinojenlerin çoğu bu enzimlerle aktif kanserojene dönüştürülür.",
+    "C": "Matriks metalloproteinazlar hücre dışı matriksi yeniden şekillendirip invazyonu kolaylaştırır; karsinojen aktivasyonu yapmaz.",
+    "D": "Tirozin kinazlar büyüme sinyallerini iletir; BCR-ABL buna örnektir, karsinojen metabolizmasında görevli değildir.",
+    "E": "DNA polimeraz replikasyon ve düzeltme okumasında görevlidir; dolaylı karsinojenleri aktive etmez."
+   },
+   "ozet": "Doğrudan etkili karsinojenler metabolik aktivasyon gerektirmez; dolaylı etkililer ise çoğunlukla sitokrom P-450 enzimleriyle aktif kanserojene dönüştürülür.",
+   "metin": "**Soru.** Dolaylı etkili karsinojenlerin çoğunu aktive eden enzim sistemi hangisidir?\n\n**A)** Telomeraz · **B)** Sitokrom P-450 enzimleri · **C)** Matriks metalloproteinazlar · **D)** Tirozin kinazlar · **E)** DNA polimeraz\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Telomeraz** — Telomeraz, telomerleri koruyup hücreye ölümsüzlük kazandıran enzimdir; karsinojen aktivasyonunda görev almaz.\n- **Sitokrom P-450 enzimleri** — Sitokrom P-450 enzimleri doğru: dolaylı etkili karsinojenlerin çoğu bu enzimlerle aktif kanserojene dönüştürülür.\n- **Matriks metalloproteinazlar** — Matriks metalloproteinazlar hücre dışı matriksi yeniden şekillendirip invazyonu kolaylaştırır; karsinojen aktivasyonu yapmaz.\n- **Tirozin kinazlar** — Tirozin kinazlar büyüme sinyallerini iletir; BCR-ABL buna örnektir, karsinojen metabolizmasında görevli değildir.\n- **DNA polimeraz** — DNA polimeraz replikasyon ve düzeltme okumasında görevlidir; dolaylı karsinojenleri aktive etmez.\n\n**Cevap: B** — Sitokrom P-450 enzimleri\n\n**Özet.** Doğrudan etkili karsinojenler metabolik aktivasyon gerektirmez; dolaylı etkililer ise çoğunlukla sitokrom P-450 enzimleriyle aktif kanserojene dönüştürülür.",
+   "ses": "Dolaylı etkili karsinojenlerin çoğunu aktive eden enzim sistemi hangisidir?\nA, Telomeraz\nBe, Sitokrom pe dört yüz elli enzimleri\nCe, Matriks metalloproteinazlar\nDe, Tirozin kinazlar\nE, de ne a polimeraz\nSeçenekleri sırayla değerlendirelim.\nTelomeraz, telomerleri koruyup hücreye ölümsüzlük kazandıran enzimdir. Karsinojen aktivasyonunda görev almaz.\nSitokrom pe dört yüz elli enzimleri doğru, dolaylı etkili karsinojenlerin çoğu bu enzimlerle aktif kanserojene dönüştürülür.\nMatriks metalloproteinazlar hücre dışı matriksi yeniden şekillendirip invazyonu kolaylaştırır. Karsinojen aktivasyonu yapmaz.\nTirozin kinazlar büyüme sinyallerini iletir. Be ce re a be le buna örnektir, karsinojen metabolizmasında görevli değildir.\nde ne a polimeraz replikasyon ve düzeltme okumasında görevlidir. Dolaylı karsinojenleri aktive etmez.\nDoğru cevap Be, Sitokrom pe dört yüz elli enzimleri\nDoğrudan etkili karsinojenler metabolik aktivasyon gerektirmez. Dolaylı etkililer ise çoğunlukla sitokrom pe dört yüz elli enzimleriyle aktif kanserojene dönüştürülür.",
+   "kelime": 135
+  },
+  {
+   "no": 42,
+   "tur": "ornek",
+   "soru": "Kimya ve kauçuk endüstrisinde aromatik amin ve azo boya maruziyeti hangi kanser riskini artırır?",
+   "secenekler": {
+    "A": "Hepatosellüler karsinom",
+    "B": "Akciğer karsinomu",
+    "C": "Akut miyeloid lösemi",
+    "D": "Mide adenokarsinomu",
+    "E": "Mesane kanseri"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Hepatosellüler karsinom, uygunsuz saklanan tahıllardaki aflatoksin B1 ile güçlü ilişkilidir.",
+    "B": "Akciğer karsinomu, tütün dumanında bulunan polisiklik aromatik hidrokarbonlarla ilişkilendirilir.",
+    "C": "Akut miyeloid lösemi, alkilleyici kemoterapi ilaçlarıyla yıllar sonra riski artan tümördür.",
+    "D": "Mide adenokarsinomu, kronik gastrit zeminiyle Helicobacter pylori enfeksiyonuyla ilişkilidir.",
+    "E": "Mesane kanseri doğru: kimya ve kauçuk endüstrisinde aromatik amin ve azo boya maruziyeti mesane kanseri riskini artırır."
+   },
+   "ozet": "Dolaylı etkili karsinojenlerden polisiklik aromatik hidrokarbonlar tütün dumanı ve yakıtlarda, aromatik aminler ve azo boyalar mesane kanseri, aflatoksin B1 ise hepatosellüler karsinomla ilişkilidir.",
+   "metin": "**Soru.** Kimya ve kauçuk endüstrisinde aromatik amin ve azo boya maruziyeti hangi kanser riskini artırır?\n\n**A)** Hepatosellüler karsinom · **B)** Akciğer karsinomu · **C)** Akut miyeloid lösemi · **D)** Mide adenokarsinomu · **E)** Mesane kanseri\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Hepatosellüler karsinom** — Hepatosellüler karsinom, uygunsuz saklanan tahıllardaki aflatoksin B1 ile güçlü ilişkilidir.\n- **Akciğer karsinomu** — Akciğer karsinomu, tütün dumanında bulunan polisiklik aromatik hidrokarbonlarla ilişkilendirilir.\n- **Akut miyeloid lösemi** — Akut miyeloid lösemi, alkilleyici kemoterapi ilaçlarıyla yıllar sonra riski artan tümördür.\n- **Mide adenokarsinomu** — Mide adenokarsinomu, kronik gastrit zeminiyle Helicobacter pylori enfeksiyonuyla ilişkilidir.\n- **Mesane kanseri** — Mesane kanseri doğru: kimya ve kauçuk endüstrisinde aromatik amin ve azo boya maruziyeti mesane kanseri riskini artırır.\n\n**Cevap: E** — Mesane kanseri\n\n**Özet.** Dolaylı etkili karsinojenlerden polisiklik aromatik hidrokarbonlar tütün dumanı ve yakıtlarda, aromatik aminler ve azo boyalar mesane kanseri, aflatoksin B1 ise hepatosellüler karsinomla ilişkilidir.",
+   "ses": "Kimya ve kauçuk endüstrisinde aromatik amin ve azo boya maruziyeti hangi kanser riskini artırır?\nA, Hepatosellüler karsinom\nBe, Akciğer karsinomu\nCe, Akut miyeloid lösemi\nDe, Mide adenokarsinomu\nE, Mesane kanseri\nHer seçeneği tek tek ele alalım.\nHepatosellüler karsinom, uygunsuz saklanan tahıllardaki aflatoksin be bir ile güçlü ilişkilidir.\nAkciğer karsinomu, tütün dumanında bulunan polisiklik aromatik hidrokarbonlarla ilişkilendirilir.\nAkut miyeloid lösemi, alkilleyici kemoterapi ilaçlarıyla yıllar sonra riski artan tümördür.\nMide adenokarsinomu, kronik gastrit zeminiyle Helikobakter pilori enfeksiyonuyla ilişkilidir.\nMesane kanseri doğru, kimya ve kauçuk endüstrisinde aromatik amin ve azo boya maruziyeti mesane kanseri riskini artırır.\nDoğru cevap E, Mesane kanseri\nDolaylı etkili karsinojenlerden polisiklik aromatik hidrokarbonlar tütün dumanı ve yakıtlarda, aromatik aminler ve azo boyalar mesane kanseri, aflatoksin be bir ise hepatosellüler karsinomla ilişkilidir.",
+   "kelime": 148
+  },
+  {
+   "no": 43,
+   "tur": "ornek",
+   "soru": "Bir promotörün tümör oluşturabilmesi için hangisi gereklidir?",
+   "secenekler": {
+    "A": "Tek doz maruziyet",
+    "B": "Başlatıcıdan önce uygulanması",
+    "C": "Başlatıcıdan sonra tekrarlayan maruziyet",
+    "D": "Kalıcı DNA hasarı oluşturması",
+    "E": "Metabolik aktivasyon gerekmemesi"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Tek doz maruziyet başlatıcının özelliğidir; başlatıcı tek dozla kalıcı DNA hasarı oluşturabilir.",
+    "B": "Başlatıcıdan önce uygulanan promotör etkisizdir; uyarabileceği başlatılmış bir hücre henüz yoktur.",
+    "C": "Başlatıcıdan sonra tekrarlayan maruziyet doğru: promotör tek başına tümör yapmaz, başlatılmış hücrelerin klonal çoğalmasını tekrarlayan maruziyetle uyarır.",
+    "D": "Kalıcı DNA hasarı oluşturmak başlatıcının işidir; promotör mutasyon yapmaz, çoğalmayı uyarır.",
+    "E": "Metabolik aktivasyon gerekmemesi doğrudan etkili karsinojenlerin özelliğidir; promotörün etkinlik koşulu değildir."
+   },
+   "ozet": "Başlatıcı tek dozla kalıcı DNA hasarı yapabilir; promotör ise ancak başlatıcıdan sonra ve tekrarlayan maruziyetle başlatılmış hücrelerin klonal çoğalmasını uyararak etkili olur.",
+   "metin": "**Soru.** Bir promotörün tümör oluşturabilmesi için hangisi gereklidir?\n\n**A)** Tek doz maruziyet · **B)** Başlatıcıdan önce uygulanması · **C)** Başlatıcıdan sonra tekrarlayan maruziyet · **D)** Kalıcı DNA hasarı oluşturması · **E)** Metabolik aktivasyon gerekmemesi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Tek doz maruziyet** — Tek doz maruziyet başlatıcının özelliğidir; başlatıcı tek dozla kalıcı DNA hasarı oluşturabilir.\n- **Başlatıcıdan önce uygulanması** — Başlatıcıdan önce uygulanan promotör etkisizdir; uyarabileceği başlatılmış bir hücre henüz yoktur.\n- **Başlatıcıdan sonra tekrarlayan maruziyet** — Başlatıcıdan sonra tekrarlayan maruziyet doğru: promotör tek başına tümör yapmaz, başlatılmış hücrelerin klonal çoğalmasını tekrarlayan maruziyetle uyarır.\n- **Kalıcı DNA hasarı oluşturması** — Kalıcı DNA hasarı oluşturmak başlatıcının işidir; promotör mutasyon yapmaz, çoğalmayı uyarır.\n- **Metabolik aktivasyon gerekmemesi** — Metabolik aktivasyon gerekmemesi doğrudan etkili karsinojenlerin özelliğidir; promotörün etkinlik koşulu değildir.\n\n**Cevap: C** — Başlatıcıdan sonra tekrarlayan maruziyet\n\n**Özet.** Başlatıcı tek dozla kalıcı DNA hasarı yapabilir; promotör ise ancak başlatıcıdan sonra ve tekrarlayan maruziyetle başlatılmış hücrelerin klonal çoğalmasını uyararak etkili olur.",
+   "ses": "Bir promotörün tümör oluşturabilmesi için hangisi gereklidir?\nA, Tek doz maruziyet\nBe, Başlatıcıdan önce uygulanması\nCe, Başlatıcıdan sonra tekrarlayan maruziyet\nDe, Kalıcı de ne a hasarı oluşturması\nE, Metabolik aktivasyon gerekmemesi\nŞıkları sırasıyla gözden geçirelim.\nTek doz maruziyet başlatıcının özelliğidir. Başlatıcı tek dozla kalıcı de ne a hasarı oluşturabilir.\nBaşlatıcıdan önce uygulanan promotör etkisizdir. Uyarabileceği başlatılmış bir hücre henüz yoktur.\nBaşlatıcıdan sonra tekrarlayan maruziyet doğru, promotör tek başına tümör yapmaz, başlatılmış hücrelerin klonal çoğalmasını tekrarlayan maruziyetle uyarır.\nKalıcı de ne a hasarı oluşturmak başlatıcının işidir. Promotör mutasyon yapmaz, çoğalmayı uyarır.\nMetabolik aktivasyon gerekmemesi doğrudan etkili karsinojenlerin özelliğidir. Promotörün etkinlik koşulu değildir.\nDoğru cevap Ce, Başlatıcıdan sonra tekrarlayan maruziyet\nBaşlatıcı tek dozla kalıcı de ne a hasarı yapabilir. Promotör ise ancak başlatıcıdan sonra ve tekrarlayan maruziyetle başlatılmış hücrelerin klonal çoğalmasını uyararak etkili olur.",
+   "kelime": 158
+  },
+  {
+   "no": 44,
+   "tur": "ornek",
+   "soru": "İyonlaştırıcı radyasyona bağlı kanserlerden en kısa latent dönemle ortaya çıkan hangisidir?",
+   "secenekler": {
+    "A": "Tiroid karsinomu",
+    "B": "Meme karsinomu",
+    "C": "Akciğer karsinomu",
+    "D": "Kolon karsinomu",
+    "E": "Lösemiler"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Tiroid karsinomu radyasyonla ilişkilidir ve Çernobil sonrası artmıştır, ama en kısa latent dönemli kanser değildir.",
+    "B": "Meme karsinomu radyasyonla gelişebilen solid tümörlerdendir; latent dönemi lösemilerden uzundur.",
+    "C": "Akciğer karsinomu radon gibi iyonlaştırıcı etkenlerle ilişkilidir, ancak en kısa latent dönem lösemilere aittir.",
+    "D": "Kolon karsinomu da radyasyonla ilişkili solid tümörlerdendir; lösemiler kadar erken ortaya çıkmaz.",
+    "E": "Lösemiler doğru: iyonlaştırıcı radyasyon sonrası yaklaşık yedi yıllık latent dönemle ortaya çıkan kanserlerdir."
+   },
+   "ozet": "İyonlaştırıcı radyasyon DNA çift sarmal kırıkları yapar; lösemiler yaklaşık 7 yıllık latent dönemle ilk ortaya çıkar, tiroid, meme, akciğer ve kolon karsinomları da gelişir.",
+   "metin": "**Soru.** İyonlaştırıcı radyasyona bağlı kanserlerden en kısa latent dönemle ortaya çıkan hangisidir?\n\n**A)** Tiroid karsinomu · **B)** Meme karsinomu · **C)** Akciğer karsinomu · **D)** Kolon karsinomu · **E)** Lösemiler\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Tiroid karsinomu** — Tiroid karsinomu radyasyonla ilişkilidir ve Çernobil sonrası artmıştır, ama en kısa latent dönemli kanser değildir.\n- **Meme karsinomu** — Meme karsinomu radyasyonla gelişebilen solid tümörlerdendir; latent dönemi lösemilerden uzundur.\n- **Akciğer karsinomu** — Akciğer karsinomu radon gibi iyonlaştırıcı etkenlerle ilişkilidir, ancak en kısa latent dönem lösemilere aittir.\n- **Kolon karsinomu** — Kolon karsinomu da radyasyonla ilişkili solid tümörlerdendir; lösemiler kadar erken ortaya çıkmaz.\n- **Lösemiler** — Lösemiler doğru: iyonlaştırıcı radyasyon sonrası yaklaşık yedi yıllık latent dönemle ortaya çıkan kanserlerdir.\n\n**Cevap: E** — Lösemiler\n\n**Özet.** İyonlaştırıcı radyasyon DNA çift sarmal kırıkları yapar; lösemiler yaklaşık 7 yıllık latent dönemle ilk ortaya çıkar, tiroid, meme, akciğer ve kolon karsinomları da gelişir.",
+   "ses": "İyonlaştırıcı radyasyona bağlı kanserlerden en kısa latent dönemle ortaya çıkan hangisidir?\nA, Tiroid karsinomu\nBe, Meme karsinomu\nCe, Akciğer karsinomu\nDe, Kolon karsinomu\nE, Lösemiler\nŞimdi seçeneklere tek tek bakalım.\nTiroid karsinomu radyasyonla ilişkilidir ve Çernobil sonrası artmıştır, ama en kısa latent dönemli kanser değildir.\nMeme karsinomu radyasyonla gelişebilen solid tümörlerdendir. Latent dönemi lösemilerden uzundur.\nAkciğer karsinomu radon gibi iyonlaştırıcı etkenlerle ilişkilidir, ancak en kısa latent dönem lösemilere aittir.\nKolon karsinomu da radyasyonla ilişkili solid tümörlerdendir. Lösemiler kadar erken ortaya çıkmaz.\nLösemiler doğru, iyonlaştırıcı radyasyon sonrası yaklaşık yedi yıllık latent dönemle ortaya çıkan kanserlerdir.\nDoğru cevap E, Lösemiler\nİyonlaştırıcı radyasyon de ne a çift sarmal kırıkları yapar. Lösemiler yaklaşık yedi yıllık latent dönemle ilk ortaya çıkar, tiroid, meme, akciğer ve kolon karsinomları da gelişir.",
+   "kelime": 148
+  },
+  {
+   "no": 45,
+   "tur": "ornek",
+   "soru": "Yoğun aralıklı güneş maruziyeti özellikle hangi kanser için risklidir?",
+   "secenekler": {
+    "A": "Bazal hücreli karsinom",
+    "B": "Melanom",
+    "C": "Skuamöz hücreli karsinom",
+    "D": "Tiroid karsinomu",
+    "E": "Lösemi"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Bazal hücreli karsinom ultraviyole ilişkili deri kanserlerindendir, ama yoğun aralıklı maruziyetin özellikle vurgulandığı tümör değildir.",
+    "B": "Melanom doğru: ultraviyole ilişkili deri kanserleri içinde yoğun aralıklı maruziyetin özellikle riskli olduğu tümördür.",
+    "C": "Skuamöz hücreli karsinom da ultraviyole ile ilişkilidir; yoğun aralıklı maruziyetin özel risk oluşturduğu tümör olarak belirtilmez.",
+    "D": "Tiroid karsinomu iyonlaştırıcı radyasyonla, örneğin Çernobil sonrası artan kanserdir; güneş ışığıyla ilişkili değildir.",
+    "E": "Lösemi iyonlaştırıcı radyasyonla en kısa latent dönemde gelişen kanserdir; ultraviyole maruziyetiyle ilişkili değildir."
+   },
+   "ozet": "Ultraviyole, özellikle UVB, pirimidin dimerleri yaparak melanom, skuamöz ve bazal hücreli karsinoma yol açar. Yoğun aralıklı maruziyet özellikle melanom için risklidir.",
+   "metin": "**Soru.** Yoğun aralıklı güneş maruziyeti özellikle hangi kanser için risklidir?\n\n**A)** Bazal hücreli karsinom · **B)** Melanom · **C)** Skuamöz hücreli karsinom · **D)** Tiroid karsinomu · **E)** Lösemi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Bazal hücreli karsinom** — Bazal hücreli karsinom ultraviyole ilişkili deri kanserlerindendir, ama yoğun aralıklı maruziyetin özellikle vurgulandığı tümör değildir.\n- **Melanom** — Melanom doğru: ultraviyole ilişkili deri kanserleri içinde yoğun aralıklı maruziyetin özellikle riskli olduğu tümördür.\n- **Skuamöz hücreli karsinom** — Skuamöz hücreli karsinom da ultraviyole ile ilişkilidir; yoğun aralıklı maruziyetin özel risk oluşturduğu tümör olarak belirtilmez.\n- **Tiroid karsinomu** — Tiroid karsinomu iyonlaştırıcı radyasyonla, örneğin Çernobil sonrası artan kanserdir; güneş ışığıyla ilişkili değildir.\n- **Lösemi** — Lösemi iyonlaştırıcı radyasyonla en kısa latent dönemde gelişen kanserdir; ultraviyole maruziyetiyle ilişkili değildir.\n\n**Cevap: B** — Melanom\n\n**Özet.** Ultraviyole, özellikle UVB, pirimidin dimerleri yaparak melanom, skuamöz ve bazal hücreli karsinoma yol açar. Yoğun aralıklı maruziyet özellikle melanom için risklidir.",
+   "ses": "Yoğun aralıklı güneş maruziyeti özellikle hangi kanser için risklidir?\nA, Bazal hücreli karsinom\nBe, Melanom\nCe, Skuamöz hücreli karsinom\nDe, Tiroid karsinomu\nE, Lösemi\nSeçenekleri sırayla değerlendirelim.\nBazal hücreli karsinom ultraviyole ilişkili deri kanserlerindendir, ama yoğun aralıklı maruziyetin özellikle vurgulandığı tümör değildir.\nMelanom doğru, ultraviyole ilişkili deri kanserleri içinde yoğun aralıklı maruziyetin özellikle riskli olduğu tümördür.\nSkuamöz hücreli karsinom da ultraviyole ile ilişkilidir. Yoğun aralıklı maruziyetin özel risk oluşturduğu tümör olarak belirtilmez.\nTiroid karsinomu iyonlaştırıcı radyasyonla, örneğin Çernobil sonrası artan kanserdir. Güneş ışığıyla ilişkili değildir.\nLösemi iyonlaştırıcı radyasyonla en kısa latent dönemde gelişen kanserdir. Ultraviyole maruziyetiyle ilişkili değildir.\nDoğru cevap Be, Melanom\nUltraviyole, özellikle u ve be, pirimidin dimerleri yaparak melanom, skuamöz ve bazal hücreli karsinoma yol açar. Yoğun aralıklı maruziyet özellikle melanom için risklidir.",
+   "kelime": 150
+  },
+  {
+   "no": 46,
+   "tur": "ornek",
+   "soru": "Tümörle ilişkili enflamatuvar hücrelerin hücre dışı matriksi yeniden şekillendirerek invazyonu kolaylaştırdığı moleküller hangisidir?",
+   "secenekler": {
+    "A": "Epidermal büyüme faktörü",
+    "B": "VEGF",
+    "C": "Matriks metalloproteinazlar",
+    "D": "TGF-β",
+    "E": "Sitokrom P-450 enzimleri"
+   },
+   "dogru": "C",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Epidermal büyüme faktörü, enflamatuvar hücrelerin salgıladığı büyümeyi uyarıcı faktördür; matriksi yeniden şekillendirmez.",
+    "B": "VEGF, enflamatuvar hücrelerin anjiyogenezi artırmak için salgıladığı faktördür; invazyonu matriks yıkımıyla sağlamaz.",
+    "C": "Matriks metalloproteinazlar doğru: hücre dışı matriksi yeniden şekillendirir, tümör hücre göçünü ve invazyonu kolaylaştırır.",
+    "D": "TGF-β üretimi, düzenleyici T hücreleriyle birlikte bağışıklık baskılayıcı mikroçevre oluşturur; matriks yeniden şekillenmesinden sorumlu değildir.",
+    "E": "Sitokrom P-450 enzimleri, dolaylı etkili kimyasal karsinojenleri metabolik olarak aktive eder; enflamatuvar hücrelerin invazyon aracı değildir."
+   },
+   "ozet": "Enflamatuvar hücreler tümörü dört yoldan destekler: EGF ile büyüme, matriks metalloproteinazlarla matriks yeniden şekillenmesi ve invazyon sağlanır. VEGF ile anjiyogenez, Treg, MDSC ve TGF-β ile bağışıklık baskılanması olur.",
+   "metin": "**Soru.** Tümörle ilişkili enflamatuvar hücrelerin hücre dışı matriksi yeniden şekillendirerek invazyonu kolaylaştırdığı moleküller hangisidir?\n\n**A)** Epidermal büyüme faktörü · **B)** VEGF · **C)** Matriks metalloproteinazlar · **D)** TGF-β · **E)** Sitokrom P-450 enzimleri\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Epidermal büyüme faktörü** — Epidermal büyüme faktörü, enflamatuvar hücrelerin salgıladığı büyümeyi uyarıcı faktördür; matriksi yeniden şekillendirmez.\n- **VEGF** — VEGF, enflamatuvar hücrelerin anjiyogenezi artırmak için salgıladığı faktördür; invazyonu matriks yıkımıyla sağlamaz.\n- **Matriks metalloproteinazlar** — Matriks metalloproteinazlar doğru: hücre dışı matriksi yeniden şekillendirir, tümör hücre göçünü ve invazyonu kolaylaştırır.\n- **TGF-β** — TGF-β üretimi, düzenleyici T hücreleriyle birlikte bağışıklık baskılayıcı mikroçevre oluşturur; matriks yeniden şekillenmesinden sorumlu değildir.\n- **Sitokrom P-450 enzimleri** — Sitokrom P-450 enzimleri, dolaylı etkili kimyasal karsinojenleri metabolik olarak aktive eder; enflamatuvar hücrelerin invazyon aracı değildir.\n\n**Cevap: C** — Matriks metalloproteinazlar\n\n**Özet.** Enflamatuvar hücreler tümörü dört yoldan destekler: EGF ile büyüme, matriks metalloproteinazlarla matriks yeniden şekillenmesi ve invazyon sağlanır. VEGF ile anjiyogenez, Treg, MDSC ve TGF-β ile bağışıklık baskılanması olur.",
+   "ses": "Tümörle ilişkili enflamatuvar hücrelerin hücre dışı matriksi yeniden şekillendirerek invazyonu kolaylaştırdığı moleküller hangisidir?\nA, Epidermal büyüme faktörü\nBe, ve e ge fe\nCe, Matriks metalloproteinazlar\nDe, te ge fe beta\nE, Sitokrom pe dört yüz elli enzimleri\nHer seçeneği tek tek ele alalım.\nEpidermal büyüme faktörü, enflamatuvar hücrelerin salgıladığı büyümeyi uyarıcı faktördür. Matriksi yeniden şekillendirmez.\nve e ge fe, enflamatuvar hücrelerin anjiyogenezi artırmak için salgıladığı faktördür. İnvazyonu matriks yıkımıyla sağlamaz.\nMatriks metalloproteinazlar doğru, hücre dışı matriksi yeniden şekillendirir, tümör hücre göçünü ve invazyonu kolaylaştırır.\nte ge fe beta üretimi, düzenleyici te hücreleriyle birlikte bağışıklık baskılayıcı mikroçevre oluşturur. Matriks yeniden şekillenmesinden sorumlu değildir.\nSitokrom pe dört yüz elli enzimleri, dolaylı etkili kimyasal karsinojenleri metabolik olarak aktive eder. Enflamatuvar hücrelerin invazyon aracı değildir.\nDoğru cevap Ce, Matriks metalloproteinazlar\nEnflamatuvar hücreler tümörü dört yoldan destekler. E ge fe ile büyüme, matriks metalloproteinazlarla matriks yeniden şekillenmesi ve invazyon sağlanır. Ve e ge fe ile anjiyogenez, te re ge, me de se ce ve te ge fe beta ile bağışıklık baskılanması olur.",
+   "kelime": 163
+  },
+  {
+   "no": 47,
+   "tur": "ornek",
+   "soru": "Yüksek riskli HPV'nin E6 proteininin p53 yıkımı dışındaki etkisi hangisidir?",
+   "secenekler": {
+    "A": "Telomeraz ekspresyonunu uyarma",
+    "B": "p21 inhibisyonu",
+    "C": "RB'ye bağlanma",
+    "D": "E2F'yi serbest bırakma",
+    "E": "CD40 taklidi"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Telomeraz ekspresyonunu uyarma doğru: E6, p53'ün yıkımını artırmanın yanında telomeraz yani TERT ekspresyonunu uyarır.",
+    "B": "p21 inhibisyonu da E7'ye aittir; E7 siklin bağımlı kinaz inhibitörü p21'i inhibe eder.",
+    "C": "RB'ye bağlanma E7'nin etkisidir; E7 RB ile etkileşerek E2F'yi serbest bırakır.",
+    "D": "E2F'yi serbest bırakma E7'nin RB ile etkileşmesinin sonucudur; E6'nın etkisi değildir.",
+    "E": "CD40 taklidi EBV'nin LMP1 proteinine aittir; NF-κB yolunu aktive eder, HPV ile ilgisi yoktur."
+   },
+   "ozet": "HPV E6, p53'e bağlanıp yıkımını artırır ve telomeraz ekspresyonunu uyarır; E7 ise RB ile etkileşip E2F'yi serbest bırakır ve p21'i inhibe eder.",
+   "metin": "**Soru.** Yüksek riskli HPV'nin E6 proteininin p53 yıkımı dışındaki etkisi hangisidir?\n\n**A)** Telomeraz ekspresyonunu uyarma · **B)** p21 inhibisyonu · **C)** RB'ye bağlanma · **D)** E2F'yi serbest bırakma · **E)** CD40 taklidi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Telomeraz ekspresyonunu uyarma** — Telomeraz ekspresyonunu uyarma doğru: E6, p53'ün yıkımını artırmanın yanında telomeraz yani TERT ekspresyonunu uyarır.\n- **p21 inhibisyonu** — p21 inhibisyonu da E7'ye aittir; E7 siklin bağımlı kinaz inhibitörü p21'i inhibe eder.\n- **RB'ye bağlanma** — RB'ye bağlanma E7'nin etkisidir; E7 RB ile etkileşerek E2F'yi serbest bırakır.\n- **E2F'yi serbest bırakma** — E2F'yi serbest bırakma E7'nin RB ile etkileşmesinin sonucudur; E6'nın etkisi değildir.\n- **CD40 taklidi** — CD40 taklidi EBV'nin LMP1 proteinine aittir; NF-κB yolunu aktive eder, HPV ile ilgisi yoktur.\n\n**Cevap: A** — Telomeraz ekspresyonunu uyarma\n\n**Özet.** HPV E6, p53'e bağlanıp yıkımını artırır ve telomeraz ekspresyonunu uyarır; E7 ise RB ile etkileşip E2F'yi serbest bırakır ve p21'i inhibe eder.",
+   "ses": "Yüksek riskli ha pe venin e altı proteininin pe elli üç yıkımı dışındaki etkisi hangisidir?\nA, Telomeraz ekspresyonunu uyarma\nBe, pe yirmi bir inhibisyonu\nCe, re beye bağlanma\nDe, e iki feyi serbest bırakma\nE, ce de kırk taklidi\nŞıkları sırasıyla gözden geçirelim.\nTelomeraz ekspresyonunu uyarma doğru, e altı, pe elli üçün yıkımını artırmanın yanında telomeraz yani te e re te ekspresyonunu uyarır.\npe yirmi bir inhibisyonu da e yediye aittir. E yedi siklin bağımlı kinaz inhibitörü pe yirmi biri inhibe eder.\nre beye bağlanma e yedinin etkisidir. E yedi re be ile etkileşerek e iki feyi serbest bırakır.\ne iki feyi serbest bırakma e yedinin re be ile etkileşmesinin sonucudur. E altının etkisi değildir.\nce de kırk taklidi e be venin le me pe bir proteinine aittir. Ne fe kappa be yolunu aktive eder, ha pe ve ile ilgisi yoktur.\nDoğru cevap A, Telomeraz ekspresyonunu uyarma\nha pe ve e altı, pe elli üçe bağlanıp yıkımını artırır ve telomeraz ekspresyonunu uyarır. E yedi ise re be ile etkileşip e iki feyi serbest bırakır ve pe yirmi biri inhibe eder.",
+   "kelime": 151
+  },
+  {
+   "no": 48,
+   "tur": "ornek",
+   "soru": "İnvaziv servikal kanserde HPV genomunun durumu hangisidir?",
+   "secenekler": {
+    "A": "Episomal",
+    "B": "Konak genomuna entegre",
+    "C": "Hücreden tamamen kaybolmuş",
+    "D": "Yalnız sitoplazmada",
+    "E": "Çift dakikalar halinde"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Episomal yani entegrasyonsuz HPV genomu öncü servikal lezyonlarda görülür; invaziv kanserin özelliği değildir.",
+    "B": "Konak genomuna entegre doğru: invaziv kanserde viral negatif düzenleyici bölge bozulur, E6 ve E7 aşırı eksprese olur.",
+    "C": "HPV genomu invaziv kanserde kaybolmaz; aksine konak genomuna yerleşerek onkoproteinlerini aşırı eksprese eder.",
+    "D": "Yalnız sitoplazmada bulunma tanımlanan bir durum değildir; invaziv kanserde viral DNA konak kromozomuna entegredir.",
+    "E": "Çift dakikalar, gen amplifikasyonunda görülen kromozom dışı DNA parçalarıdır; HPV genomunun durumu değildir."
+   },
+   "ozet": "Öncü servikal lezyonda HPV genomu episomaldir; invaziv kanserde konak genomuna entegre olur, negatif düzenleyici bölge bozulur ve E6 ile E7 aşırı eksprese edilir.",
+   "metin": "**Soru.** İnvaziv servikal kanserde HPV genomunun durumu hangisidir?\n\n**A)** Episomal · **B)** Konak genomuna entegre · **C)** Hücreden tamamen kaybolmuş · **D)** Yalnız sitoplazmada · **E)** Çift dakikalar halinde\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Episomal** — Episomal yani entegrasyonsuz HPV genomu öncü servikal lezyonlarda görülür; invaziv kanserin özelliği değildir.\n- **Konak genomuna entegre** — Konak genomuna entegre doğru: invaziv kanserde viral negatif düzenleyici bölge bozulur, E6 ve E7 aşırı eksprese olur.\n- **Hücreden tamamen kaybolmuş** — HPV genomu invaziv kanserde kaybolmaz; aksine konak genomuna yerleşerek onkoproteinlerini aşırı eksprese eder.\n- **Yalnız sitoplazmada** — Yalnız sitoplazmada bulunma tanımlanan bir durum değildir; invaziv kanserde viral DNA konak kromozomuna entegredir.\n- **Çift dakikalar halinde** — Çift dakikalar, gen amplifikasyonunda görülen kromozom dışı DNA parçalarıdır; HPV genomunun durumu değildir.\n\n**Cevap: B** — Konak genomuna entegre\n\n**Özet.** Öncü servikal lezyonda HPV genomu episomaldir; invaziv kanserde konak genomuna entegre olur, negatif düzenleyici bölge bozulur ve E6 ile E7 aşırı eksprese edilir.",
+   "ses": "İnvaziv servikal kanserde ha pe ve genomunun durumu hangisidir?\nA, Episomal\nBe, Konak genomuna entegre\nCe, Hücreden tamamen kaybolmuş\nDe, Yalnız sitoplazmada\nE, Çift dakikalar halinde\nŞimdi seçeneklere tek tek bakalım.\nEpisomal yani entegrasyonsuz ha pe ve genomu öncü servikal lezyonlarda görülür. Invaziv kanserin özelliği değildir.\nKonak genomuna entegre doğru, invaziv kanserde viral negatif düzenleyici bölge bozulur, e altı ve e yedi aşırı eksprese olur.\nha pe ve genomu invaziv kanserde kaybolmaz. Aksine konak genomuna yerleşerek onkoproteinlerini aşırı eksprese eder.\nYalnız sitoplazmada bulunma tanımlanan bir durum değildir. Invaziv kanserde viral de ne a konak kromozomuna entegredir.\nÇift dakikalar, gen amplifikasyonunda görülen kromozom dışı de ne a parçalarıdır. Ha pe ve genomunun durumu değildir.\nDoğru cevap Be, Konak genomuna entegre\nÖncü servikal lezyonda ha pe ve genomu episomaldir. Invaziv kanserde konak genomuna entegre olur, negatif düzenleyici bölge bozulur ve e altı ile e yedi aşırı eksprese edilir.",
+   "kelime": 157
+  },
+  {
+   "no": 49,
+   "tur": "ornek",
+   "soru": "Translokasyonla proto-onkogenin güçlü bir promotör ya da enhancer altına taşınmasının sonucu hangisidir?",
+   "secenekler": {
+    "A": "Füzyon gen oluşumu",
+    "B": "Gen kopya sayısı artışı",
+    "C": "Aşırı ekspresyon",
+    "D": "Promotör hipermetilasyonu",
+    "E": "İşlev kaybı"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Füzyon gen oluşumu, translokasyonun diğer etkisidir; iki gen birleşir ve yeni kimerik onkoprotein oluşur, promotör altına taşınmada bu olmaz.",
+    "B": "Gen kopya sayısı artışı, amplifikasyonun tanımıdır; translokasyonda segment değişimi olur, kopya sayısı artmaz.",
+    "C": "Aşırı ekspresyon doğru: güçlü promotör ya da enhancer altına taşınan proto-onkogen aşırı eksprese edilir.",
+    "D": "Promotör hipermetilasyonu, tümör baskılayıcı genleri susturan epigenetik değişikliktir; translokasyonun sonucu değildir.",
+    "E": "İşlev kaybı tümör baskılayıcı genlerin inaktivasyonunda görülür; proto-onkogen onkogene işlev kazanımıyla dönüşür."
+   },
+   "ozet": "Translokasyonun iki temel etkisi vardır: proto-onkogenin güçlü promotör ya da enhancer altına taşınmasıyla aşırı ekspresyon ve füzyon genle yeni kimerik onkoprotein.",
+   "metin": "**Soru.** Translokasyonla proto-onkogenin güçlü bir promotör ya da enhancer altına taşınmasının sonucu hangisidir?\n\n**A)** Füzyon gen oluşumu · **B)** Gen kopya sayısı artışı · **C)** Aşırı ekspresyon · **D)** Promotör hipermetilasyonu · **E)** İşlev kaybı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Füzyon gen oluşumu** — Füzyon gen oluşumu, translokasyonun diğer etkisidir; iki gen birleşir ve yeni kimerik onkoprotein oluşur, promotör altına taşınmada bu olmaz.\n- **Gen kopya sayısı artışı** — Gen kopya sayısı artışı, amplifikasyonun tanımıdır; translokasyonda segment değişimi olur, kopya sayısı artmaz.\n- **Aşırı ekspresyon** — Aşırı ekspresyon doğru: güçlü promotör ya da enhancer altına taşınan proto-onkogen aşırı eksprese edilir.\n- **Promotör hipermetilasyonu** — Promotör hipermetilasyonu, tümör baskılayıcı genleri susturan epigenetik değişikliktir; translokasyonun sonucu değildir.\n- **İşlev kaybı** — İşlev kaybı tümör baskılayıcı genlerin inaktivasyonunda görülür; proto-onkogen onkogene işlev kazanımıyla dönüşür.\n\n**Cevap: C** — Aşırı ekspresyon\n\n**Özet.** Translokasyonun iki temel etkisi vardır: proto-onkogenin güçlü promotör ya da enhancer altına taşınmasıyla aşırı ekspresyon ve füzyon genle yeni kimerik onkoprotein.",
+   "ses": "Translokasyonla proto-onkogenin güçlü bir promotör ya da enhansır altına taşınmasının sonucu hangisidir?\nA, Füzyon gen oluşumu\nBe, Gen kopya sayısı artışı\nCe, Aşırı ekspresyon\nDe, Promotör hipermetilasyonu\nE, İşlev kaybı\nSeçenekleri sırayla değerlendirelim.\nFüzyon gen oluşumu, translokasyonun diğer etkisidir. İki gen birleşir ve yeni kimerik onkoprotein oluşur, promotör altına taşınmada bu olmaz.\nGen kopya sayısı artışı, amplifikasyonun tanımıdır. Translokasyonda segment değişimi olur, kopya sayısı artmaz.\nAşırı ekspresyon doğru, güçlü promotör ya da enhansır altına taşınan proto-onkogen aşırı eksprese edilir.\nPromotör hipermetilasyonu, tümör baskılayıcı genleri susturan epigenetik değişikliktir. Translokasyonun sonucu değildir.\nİşlev kaybı tümör baskılayıcı genlerin inaktivasyonunda görülür. Proto-onkogen onkogene işlev kazanımıyla dönüşür.\nDoğru cevap Ce, Aşırı ekspresyon\nTranslokasyonun iki temel etkisi vardır. Proto-onkogenin güçlü promotör ya da enhansır altına taşınmasıyla aşırı ekspresyon ve füzyon genle yeni kimerik onkoprotein.",
+   "kelime": 158
+  },
+  {
+   "no": 50,
+   "tur": "ornek",
+   "soru": "EBV'nin CD40 sinyalini taklit ederek NF-κB yolunu aktive eden proteini hangisidir?",
+   "secenekler": {
+    "A": "EBNA2",
+    "B": "Tax",
+    "C": "E6",
+    "D": "LMP1",
+    "E": "E7"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "EBNA2, EBV'nin nükleer antijenidir; siklin D ve SRC ailesi gibi büyüme yollarını destekler, CD40 taklidi yapmaz.",
+    "B": "Tax, HTLV-1'in NF-κB'yi aktive eden proteinidir; EBV'ye ait değildir.",
+    "C": "E6, HPV'nin p53 yıkımını artıran onkoproteinidir; EBV ile ilgili değildir.",
+    "D": "LMP1 doğru: latent membran proteini 1, CD40 sinyalini taklit eder ve NF-κB yolunu aktive eder.",
+    "E": "E7, HPV'nin RB ile etkileşip E2F'yi serbest bırakan onkoproteinidir."
+   },
+   "ozet": "EBV'nin LMP1 proteini CD40 sinyalini taklit edip NF-κB'yi aktive eder. EBNA2 ise siklin D ve SRC ailesi gibi büyüme yollarını destekler.",
+   "metin": "**Soru.** EBV'nin CD40 sinyalini taklit ederek NF-κB yolunu aktive eden proteini hangisidir?\n\n**A)** EBNA2 · **B)** Tax · **C)** E6 · **D)** LMP1 · **E)** E7\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **EBNA2** — EBNA2, EBV'nin nükleer antijenidir; siklin D ve SRC ailesi gibi büyüme yollarını destekler, CD40 taklidi yapmaz.\n- **Tax** — Tax, HTLV-1'in NF-κB'yi aktive eden proteinidir; EBV'ye ait değildir.\n- **E6** — E6, HPV'nin p53 yıkımını artıran onkoproteinidir; EBV ile ilgili değildir.\n- **LMP1** — LMP1 doğru: latent membran proteini 1, CD40 sinyalini taklit eder ve NF-κB yolunu aktive eder.\n- **E7** — E7, HPV'nin RB ile etkileşip E2F'yi serbest bırakan onkoproteinidir.\n\n**Cevap: D** — LMP1\n\n**Özet.** EBV'nin LMP1 proteini CD40 sinyalini taklit edip NF-κB'yi aktive eder. EBNA2 ise siklin D ve SRC ailesi gibi büyüme yollarını destekler.",
+   "ses": "e be venin ce de kırk sinyalini taklit ederek ne fe kappa be yolunu aktive eden proteini hangisidir?\nA, e be ne a iki\nBe, te a iks\nCe, e altı\nDe, le me pe bir\nE, e yedi\nHer seçeneği tek tek ele alalım.\ne be ne a iki, e be venin nükleer antijenidir. Siklin de ve se re ce ailesi gibi büyüme yollarını destekler, ce de kırk taklidi yapmaz.\nte a iks, ha te le ve birin ne fe kappa beyi aktive eden proteinidir. E be veye ait değildir.\ne altı, ha pe venin pe elli üç yıkımını artıran onkoproteinidir. E be ve ile ilgili değildir.\nle me pe bir doğru, latent membran proteini bir, ce de kırk sinyalini taklit eder ve ne fe kappa be yolunu aktive eder.\ne yedi, ha pe venin re be ile etkileşip e iki feyi serbest bırakan onkoproteinidir.\nDoğru cevap De, le me pe bir\ne be venin le me pe bir proteini ce de kırk sinyalini taklit edip ne fe kappa beyi aktive eder. e be ne a iki ise siklin de ve se re ce ailesi gibi büyüme yollarını destekler.",
+   "kelime": 133
+  },
+  {
+   "no": 51,
+   "tur": "ornek",
+   "soru": "H. pylori ilişkili mide adenokarsinomu gelişiminde atrofik gastritten sonraki basamak hangisidir?",
+   "secenekler": {
+    "A": "Displazi",
+    "B": "Kronik gastrit",
+    "C": "Ülser",
+    "D": "Karsinom",
+    "E": "İntestinal metaplazi"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Displazi, metaplaziden sonra gelir ve karsinomdan hemen önceki basamaktır.",
+    "B": "Kronik gastrit dizinin başlangıcıdır; atrofik gastritten önce yer alır.",
+    "C": "Ülser, Helicobacter pylori'nin kronik gastritle birlikte neden olduğu bir durumdur; adenokarsinom basamaklarında yer almaz.",
+    "D": "Karsinom dizinin son basamağıdır; displaziden sonra gelişir.",
+    "E": "İntestinal metaplazi doğru: kronik gastrit, atrofik gastrit, intestinal metaplazi, displazi ve karsinom sırası izlenir."
+   },
+   "ozet": "H. pylori adenokarsinomu kronik gastrit, atrofik gastrit, intestinal metaplazi, displazi ve karsinom sırasıyla gelişir; aracılar reaktif oksijen türleri, sitokinler ve büyüme faktörleridir.",
+   "metin": "**Soru.** H. pylori ilişkili mide adenokarsinomu gelişiminde atrofik gastritten sonraki basamak hangisidir?\n\n**A)** Displazi · **B)** Kronik gastrit · **C)** Ülser · **D)** Karsinom · **E)** İntestinal metaplazi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Displazi** — Displazi, metaplaziden sonra gelir ve karsinomdan hemen önceki basamaktır.\n- **Kronik gastrit** — Kronik gastrit dizinin başlangıcıdır; atrofik gastritten önce yer alır.\n- **Ülser** — Ülser, Helicobacter pylori'nin kronik gastritle birlikte neden olduğu bir durumdur; adenokarsinom basamaklarında yer almaz.\n- **Karsinom** — Karsinom dizinin son basamağıdır; displaziden sonra gelişir.\n- **İntestinal metaplazi** — İntestinal metaplazi doğru: kronik gastrit, atrofik gastrit, intestinal metaplazi, displazi ve karsinom sırası izlenir.\n\n**Cevap: E** — İntestinal metaplazi\n\n**Özet.** H. pylori adenokarsinomu kronik gastrit, atrofik gastrit, intestinal metaplazi, displazi ve karsinom sırasıyla gelişir; aracılar reaktif oksijen türleri, sitokinler ve büyüme faktörleridir.",
+   "ses": "Helikobakter pilori ilişkili mide adenokarsinomu gelişiminde atrofik gastritten sonraki basamak hangisidir?\nA, Displazi\nBe, Kronik gastrit\nCe, Ülser\nDe, Karsinom\nE, İntestinal metaplazi\nŞıkları sırasıyla gözden geçirelim.\nDisplazi, metaplaziden sonra gelir ve karsinomdan hemen önceki basamaktır.\nKronik gastrit dizinin başlangıcıdır. Atrofik gastritten önce yer alır.\nÜlser, Helikobakter pilorinin kronik gastritle birlikte neden olduğu bir durumdur. Adenokarsinom basamaklarında yer almaz.\nKarsinom dizinin son basamağıdır. Displaziden sonra gelişir.\nİntestinal metaplazi doğru, kronik gastrit, atrofik gastrit, intestinal metaplazi, displazi ve karsinom sırası izlenir.\nDoğru cevap E, İntestinal metaplazi\nHelikobakter pilori adenokarsinomu kronik gastrit, atrofik gastrit, intestinal metaplazi, displazi ve karsinom sırasıyla gelişir. Aracılar reaktif oksijen türleri, sitokinler ve büyüme faktörleridir.",
+   "kelime": 131
+  },
+  {
+   "no": 52,
+   "tur": "ornek",
+   "soru": "Karsinogenezde ek mutasyonlarla agresif fenotipin kazanıldığı aşama hangisidir?",
+   "secenekler": {
+    "A": "Başlangıç",
+    "B": "Promosyon",
+    "C": "İlerleme",
+    "D": "Metaplazi",
+    "E": "Hiperplazi"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Başlangıç, kalıcı DNA hasarının oluştuğu ilk aşamadır; agresif fenotip bu aşamada kazanılmaz.",
+    "B": "Promosyon, mutasyona uğramış hücrelerin klonal genişlemesidir; ek mutasyonlarla agresifleşme sonraki aşamadadır.",
+    "C": "İlerleme doğru: ek mutasyonların biriktiği ve agresif fenotipin kazanıldığı aşamadır; dirençli alt klonlar seçilir.",
+    "D": "Metaplazi bir hücre tipinin başka bir olgun tiple yer değiştirmesidir; karsinogenezin üç aşamasından biri değildir.",
+    "E": "Hiperplazi hücre sayısındaki artıştır; çok aşamalı karsinogenezin başlangıç, promosyon ve ilerleme aşamalarından biri değildir."
+   },
+   "ozet": "Karsinogenez başlangıç yani kalıcı DNA hasarı, promosyon yani klonal genişleme ve ilerleme yani ek mutasyonlarla agresif fenotip aşamalarından oluşur; sonuçta genetik heterojenlik gelişir.",
+   "metin": "**Soru.** Karsinogenezde ek mutasyonlarla agresif fenotipin kazanıldığı aşama hangisidir?\n\n**A)** Başlangıç · **B)** Promosyon · **C)** İlerleme · **D)** Metaplazi · **E)** Hiperplazi\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Başlangıç** — Başlangıç, kalıcı DNA hasarının oluştuğu ilk aşamadır; agresif fenotip bu aşamada kazanılmaz.\n- **Promosyon** — Promosyon, mutasyona uğramış hücrelerin klonal genişlemesidir; ek mutasyonlarla agresifleşme sonraki aşamadadır.\n- **İlerleme** — İlerleme doğru: ek mutasyonların biriktiği ve agresif fenotipin kazanıldığı aşamadır; dirençli alt klonlar seçilir.\n- **Metaplazi** — Metaplazi bir hücre tipinin başka bir olgun tiple yer değiştirmesidir; karsinogenezin üç aşamasından biri değildir.\n- **Hiperplazi** — Hiperplazi hücre sayısındaki artıştır; çok aşamalı karsinogenezin başlangıç, promosyon ve ilerleme aşamalarından biri değildir.\n\n**Cevap: C** — İlerleme\n\n**Özet.** Karsinogenez başlangıç yani kalıcı DNA hasarı, promosyon yani klonal genişleme ve ilerleme yani ek mutasyonlarla agresif fenotip aşamalarından oluşur; sonuçta genetik heterojenlik gelişir.",
+   "ses": "Karsinogenezde ek mutasyonlarla agresif fenotipin kazanıldığı aşama hangisidir?\nA, Başlangıç\nBe, Promosyon\nCe, İlerleme\nDe, Metaplazi\nE, Hiperplazi\nŞimdi seçeneklere tek tek bakalım.\nBaşlangıç, kalıcı de ne a hasarının oluştuğu ilk aşamadır. Agresif fenotip bu aşamada kazanılmaz.\nPromosyon, mutasyona uğramış hücrelerin klonal genişlemesidir. Ek mutasyonlarla agresifleşme sonraki aşamadadır.\nİlerleme doğru, ek mutasyonların biriktiği ve agresif fenotipin kazanıldığı aşamadır. Dirençli alt klonlar seçilir.\nMetaplazi bir hücre tipinin başka bir olgun tiple yer değiştirmesidir. Karsinogenezin üç aşamasından biri değildir.\nHiperplazi hücre sayısındaki artıştır. Çok aşamalı karsinogenezin başlangıç, promosyon ve ilerleme aşamalarından biri değildir.\nDoğru cevap Ce, İlerleme\nKarsinogenez başlangıç yani kalıcı de ne a hasarı, promosyon yani klonal genişleme ve ilerleme yani ek mutasyonlarla agresif fenotip aşamalarından oluşur. Sonuçta genetik heterojenlik gelişir.",
+   "kelime": 138
+  },
+  {
+   "no": 53,
+   "tur": "ornek",
+   "soru": "Aşağıdakilerden hangisi bir immün kontrol noktası inhibitörü hedefidir?",
+   "secenekler": {
+    "A": "BCR-ABL",
+    "B": "ERBB2",
+    "C": "BRAF V600E",
+    "D": "CTLA-4",
+    "E": "VEGF"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "BCR-ABL, kronik miyeloid lösemide tirozin kinaz inhibitörleriyle hedeflenen füzyon onkoproteinidir.",
+    "B": "ERBB2, amplifiye olduğu meme karsinomlarında hedefe yönelik tedavinin hedefidir.",
+    "C": "BRAF V600E, hedefe yönelik tedavinin hedeflediği bir sürücü mutasyondur; immün kontrol noktası değildir.",
+    "D": "CTLA-4 doğru: PD-1 ve PD-L1 ile birlikte blokajı immün kontrol noktası inhibitörlerinin hedefidir.",
+    "E": "VEGF, anjiyogenezi düzenleyen tümör–konak etkileşim molekülüdür; immün kontrol noktası değildir."
+   },
+   "ozet": "Hedefe yönelik tedaviler BCR-ABL, ERBB2 ve BRAF V600E'yi hedefler. İmmün kontrol noktası inhibitörleri ise PD-1, PD-L1 ve CTLA-4'ü bloke eder.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi bir immün kontrol noktası inhibitörü hedefidir?\n\n**A)** BCR-ABL · **B)** ERBB2 · **C)** BRAF V600E · **D)** CTLA-4 · **E)** VEGF\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **BCR-ABL** — BCR-ABL, kronik miyeloid lösemide tirozin kinaz inhibitörleriyle hedeflenen füzyon onkoproteinidir.\n- **ERBB2** — ERBB2, amplifiye olduğu meme karsinomlarında hedefe yönelik tedavinin hedefidir.\n- **BRAF V600E** — BRAF V600E, hedefe yönelik tedavinin hedeflediği bir sürücü mutasyondur; immün kontrol noktası değildir.\n- **CTLA-4** — CTLA-4 doğru: PD-1 ve PD-L1 ile birlikte blokajı immün kontrol noktası inhibitörlerinin hedefidir.\n- **VEGF** — VEGF, anjiyogenezi düzenleyen tümör–konak etkileşim molekülüdür; immün kontrol noktası değildir.\n\n**Cevap: D** — CTLA-4\n\n**Özet.** Hedefe yönelik tedaviler BCR-ABL, ERBB2 ve BRAF V600E'yi hedefler. İmmün kontrol noktası inhibitörleri ise PD-1, PD-L1 ve CTLA-4'ü bloke eder.",
+   "ses": "Aşağıdakilerden hangisi bir immün kontrol noktası inhibitörü hedefidir?\nA, be ce re a be le\nBe, e re be be iki\nCe, be raf ve altı yüz e\nDe, ce te le a dört\nE, ve e ge fe\nSeçenekleri sırayla değerlendirelim.\nbe ce re a be le, kronik miyeloid lösemide tirozin kinaz inhibitörleriyle hedeflenen füzyon onkoproteinidir.\ne re be be iki, amplifiye olduğu meme karsinomlarında hedefe yönelik tedavinin hedefidir.\nbe raf ve altı yüz e, hedefe yönelik tedavinin hedeflediği bir sürücü mutasyondur. Immün kontrol noktası değildir.\nce te le a dört doğru, pe de bir ve pe de le bir ile birlikte blokajı immün kontrol noktası inhibitörlerinin hedefidir.\nve e ge fe, anjiyogenezi düzenleyen tümör ile konak etkileşim molekülüdür. Immün kontrol noktası değildir.\nDoğru cevap De, ce te le a dört\nHedefe yönelik tedaviler be ce re a be le, e re be be iki ve be raf ve altı yüz eyi hedefler. İmmün kontrol noktası inhibitörleri ise pe de bir, pe de le bir ve ce te le a dörtü bloke eder.",
+   "kelime": 124
+  }
+ ]
+}

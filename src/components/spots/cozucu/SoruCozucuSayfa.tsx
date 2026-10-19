@@ -6,6 +6,7 @@ import { bransTanim, type Brans } from '../brans';
 import { getCozucuSureGruplari, dk } from '../sure/spotsSureVeri';
 import { SpotsSureDiyalog } from '../sure/SpotsSureDiyalog';
 import { useSpotCozucuStats, fmtSureDk } from '../../../services/spotCozucuIstatistik';
+import { navigateTo, pathFor } from '../../../router';
 import '../../../styles/soru-cozucu.css';
 
 /**
@@ -112,6 +113,12 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
           <Clock aria-hidden />
           <span>Süreler</span>
         </button>
+        {brans === 'patoloji' && (
+          <button type="button" className="scs-btn-sure" onClick={() => navigateTo(pathFor('alternatif_cozucu'))} title="Her soru baştan sona anlatılan alternatif çözücü">
+            <Headphones aria-hidden />
+            <span>Alternatif anlatım</span>
+          </button>
+        )}
       </div>
 
       <ul className="scs-liste is-satir">

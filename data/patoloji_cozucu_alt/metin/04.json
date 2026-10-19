@@ -1,0 +1,707 @@
+{
+ "kod": "04",
+ "baslik": "Hücresel Adaptasyonlar",
+ "surum": "alt-1",
+ "sorular": [
+  {
+   "no": 1,
+   "tur": "ornek",
+   "soru": "Bir olgun hücre tipinin başka bir olgun hücre tipiyle yer değiştirmesine ne ad verilir?",
+   "secenekler": {
+    "A": "Hiperplazi",
+    "B": "Hipertrofi",
+    "C": "Metaplazi",
+    "D": "Atrofi",
+    "E": "Displazi"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Hiperplazi, hücre sayısındaki artıştır; hücre tipi değişmez, yalnız çoğalır.",
+    "B": "Hipertrofi, hücre boyutundaki artıştır; yapısal proteinler ve organeller artar, hücre tipi aynı kalır.",
+    "C": "Metaplazi doğru: bir olgun hücre tipinin, strese daha dayanıklı başka bir olgun hücre tipiyle yer değiştirmesidir.",
+    "D": "Atrofi, hücre boyutu ya da sayısındaki azalmayla organın küçülmesidir; hücre tipi değişmez.",
+    "E": "Displazi, dört temel adaptasyon tipinden biri değildir; uzamış metaplazi displazi ve malign dönüşüm için zemin oluşturabilir."
+   },
+   "ozet": "Metaplazi bir olgun hücre tipinin başka bir olgun tiple yer değiştirmesidir; genellikle kök hücrelerin farklı yönde yeniden programlanmasıyla olur.",
+   "metin": "**Soru.** Bir olgun hücre tipinin başka bir olgun hücre tipiyle yer değiştirmesine ne ad verilir?\n\n**A)** Hiperplazi · **B)** Hipertrofi · **C)** Metaplazi · **D)** Atrofi · **E)** Displazi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Hiperplazi** — Hiperplazi, hücre sayısındaki artıştır; hücre tipi değişmez, yalnız çoğalır.\n- **Hipertrofi** — Hipertrofi, hücre boyutundaki artıştır; yapısal proteinler ve organeller artar, hücre tipi aynı kalır.\n- **Metaplazi** — Metaplazi doğru: bir olgun hücre tipinin, strese daha dayanıklı başka bir olgun hücre tipiyle yer değiştirmesidir.\n- **Atrofi** — Atrofi, hücre boyutu ya da sayısındaki azalmayla organın küçülmesidir; hücre tipi değişmez.\n- **Displazi** — Displazi, dört temel adaptasyon tipinden biri değildir; uzamış metaplazi displazi ve malign dönüşüm için zemin oluşturabilir.\n\n**Cevap: C** — Metaplazi\n\n**Özet.** Metaplazi bir olgun hücre tipinin başka bir olgun tiple yer değiştirmesidir; genellikle kök hücrelerin farklı yönde yeniden programlanmasıyla olur.",
+   "ses": "Bir olgun hücre tipinin başka bir olgun hücre tipiyle yer değiştirmesine ne ad verilir?\nA, Hiperplazi\nBe, Hipertrofi\nCe, Metaplazi\nDe, Atrofi\nE, Displazi\nSeçenekleri sırayla değerlendirelim.\nHiperplazi, hücre sayısındaki artıştır. Hücre tipi değişmez, yalnız çoğalır.\nHipertrofi, hücre boyutundaki artıştır. Yapısal proteinler ve organeller artar, hücre tipi aynı kalır.\nMetaplazi doğru. Bir olgun hücre tipinin, strese daha dayanıklı başka bir olgun hücre tipiyle yer değiştirmesidir.\nAtrofi, hücre boyutu ya da sayısındaki azalmayla organın küçülmesidir. Hücre tipi değişmez.\nDisplazi, dört temel adaptasyon tipinden biri değildir. Uzamış metaplazi displazi ve malign dönüşüm için zemin oluşturabilir.\nDoğru cevap Ce, Metaplazi\nMetaplazi bir olgun hücre tipinin başka bir olgun tiple yer değiştirmesidir. Genellikle kök hücrelerin farklı yönde yeniden programlanmasıyla olur.",
+   "kelime": 138
+  },
+  {
+   "no": 2,
+   "tur": "ornek",
+   "soru": "Uzun süreli hipertansiyonu olan hastada sol ventrikül duvarı kalınlaşmıştır. En olası adaptasyon hangisidir?",
+   "secenekler": {
+    "A": "Hiperplazi",
+    "B": "Hipertrofi",
+    "C": "Atrofi",
+    "D": "Metaplazi",
+    "E": "Displazi"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Hiperplazi, hücre sayısında artıştır ve bölünebilen hücre popülasyonu gerektirir; kalp kası hücrelerinin bölünme kapasitesi sınırlıdır.",
+    "B": "Hipertrofi doğru: sürekli artmış basınca karşı miyositler büyür, yeni sarkomer sentezlenir; ventrikül duvarı kalınlaşır ve kalp ağırlaşır.",
+    "C": "Atrofi organın küçülmesidir; azalmış iş yükünde görülür, burada ise iş yükü artmıştır.",
+    "D": "Metaplazi, bir olgun hücre tipinin başka bir olgun tiple değişmesidir; kalp kasının basınca yanıtı bu değildir.",
+    "E": "Displazi ile karıştırılabilir: Duvar kalınlaşması, miyositlerde hücre başına miyofilament artışı ve daha ekonomik izoformlara geçişle açıklanır."
+   },
+   "ozet": "Hipertansiyon ve aort stenozunda kalp hipertrofisi gelişir; bu sınırlı bir uyumdur, uzarsa miyofibril kaybı, ventrikül dilatasyonu ve kalp yetmezliği ortaya çıkar.",
+   "metin": "**Soru.** Uzun süreli hipertansiyonu olan hastada sol ventrikül duvarı kalınlaşmıştır. En olası adaptasyon hangisidir?\n\n**A)** Hiperplazi · **B)** Hipertrofi · **C)** Atrofi · **D)** Metaplazi · **E)** Displazi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Hiperplazi** — Hiperplazi, hücre sayısında artıştır ve bölünebilen hücre popülasyonu gerektirir; kalp kası hücrelerinin bölünme kapasitesi sınırlıdır.\n- **Hipertrofi** — Hipertrofi doğru: sürekli artmış basınca karşı miyositler büyür, yeni sarkomer sentezlenir; ventrikül duvarı kalınlaşır ve kalp ağırlaşır.\n- **Atrofi** — Atrofi organın küçülmesidir; azalmış iş yükünde görülür, burada ise iş yükü artmıştır.\n- **Metaplazi** — Metaplazi, bir olgun hücre tipinin başka bir olgun tiple değişmesidir; kalp kasının basınca yanıtı bu değildir.\n- **Displazi** — Displazi ile karıştırılabilir: Duvar kalınlaşması, miyositlerde hücre başına miyofilament artışı ve daha ekonomik izoformlara geçişle açıklanır.\n\n**Cevap: B** — Hipertrofi\n\n**Özet.** Hipertansiyon ve aort stenozunda kalp hipertrofisi gelişir; bu sınırlı bir uyumdur, uzarsa miyofibril kaybı, ventrikül dilatasyonu ve kalp yetmezliği ortaya çıkar.",
+   "ses": "Uzun süreli hipertansiyonu olan hastada sol ventrikül duvarı kalınlaşmıştır. En olası adaptasyon hangisidir?\nA, Hiperplazi\nBe, Hipertrofi\nCe, Atrofi\nDe, Metaplazi\nE, Displazi\nHer seçeneği tek tek ele alalım.\nHiperplazi, hücre sayısında artıştır ve bölünebilen hücre popülasyonu gerektirir. Kalp kası hücrelerinin bölünme kapasitesi sınırlıdır.\nHipertrofi doğru. Sürekli artmış basınca karşı miyositler büyür, yeni sarkomer sentezlenir. Ventrikül duvarı kalınlaşır ve kalp ağırlaşır.\nAtrofi organın küçülmesidir. Azalmış iş yükünde görülür, burada ise iş yükü artmıştır.\nMetaplazi, bir olgun hücre tipinin başka bir olgun tiple değişmesidir. Kalp kasının basınca yanıtı bu değildir.\nDisplazi ile karıştırılabilir. Duvar kalınlaşması, miyositlerde hücre başına miyofilament artışı ve daha ekonomik izoformlara geçişle açıklanır.\nDoğru cevap Be, Hipertrofi\nHipertansiyon ve aort stenozunda kalp hipertrofisi gelişir. Bu sınırlı bir uyumdur, uzarsa miyofibril kaybı, ventrikül dilatasyonu ve kalp yetmezliği ortaya çıkar.",
+   "kelime": 152
+  },
+  {
+   "no": 3,
+   "tur": "ornek",
+   "soru": "Saf hipertrofinin görüldüğü, bölünme kapasitesi sınırlı doku hangisidir?",
+   "secenekler": {
+    "A": "Karaciğer",
+    "B": "Endometrium",
+    "C": "Meme bezi",
+    "D": "Kalp kası",
+    "E": "Prostat"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Karaciğer bölünebilir hücrelerden oluşur; parsiyel hepatektomi sonrası hepatositler çoğalır, yani telafi edici hiperplazi görülür.",
+    "B": "Endometrium hormon etkisiyle siklik proliferasyon gösterir; bu fizyolojik hiperplazidir, saf hipertrofi değil.",
+    "C": "Meme bezleri ergenlik ve gebelikte hormon etkisiyle hiperplazi gösterir; hücreleri bölünebilir.",
+    "D": "Kalp kası doğru: bölünme kapasitesi sınırlı olduğundan artmış iş yüküne hücre sayısını değil boyutunu artırarak, yani saf hipertrofiyle yanıt verir.",
+    "E": "Prostatta androjen ve östrojen etkisiyle benign prostat hiperplazisi gelişir; burada hücre sayısı artar."
+   },
+   "ozet": "Saf hipertrofide hücre sayısı artmaz, hücreler büyür; bu özellikle bölünme kapasitesi sınırlı kalp ve iskelet kasında görülür.",
+   "metin": "**Soru.** Saf hipertrofinin görüldüğü, bölünme kapasitesi sınırlı doku hangisidir?\n\n**A)** Karaciğer · **B)** Endometrium · **C)** Meme bezi · **D)** Kalp kası · **E)** Prostat\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Karaciğer** — Karaciğer bölünebilir hücrelerden oluşur; parsiyel hepatektomi sonrası hepatositler çoğalır, yani telafi edici hiperplazi görülür.\n- **Endometrium** — Endometrium hormon etkisiyle siklik proliferasyon gösterir; bu fizyolojik hiperplazidir, saf hipertrofi değil.\n- **Meme bezi** — Meme bezleri ergenlik ve gebelikte hormon etkisiyle hiperplazi gösterir; hücreleri bölünebilir.\n- **Kalp kası** — Kalp kası doğru: bölünme kapasitesi sınırlı olduğundan artmış iş yüküne hücre sayısını değil boyutunu artırarak, yani saf hipertrofiyle yanıt verir.\n- **Prostat** — Prostatta androjen ve östrojen etkisiyle benign prostat hiperplazisi gelişir; burada hücre sayısı artar.\n\n**Cevap: D** — Kalp kası\n\n**Özet.** Saf hipertrofide hücre sayısı artmaz, hücreler büyür; bu özellikle bölünme kapasitesi sınırlı kalp ve iskelet kasında görülür.",
+   "ses": "Saf hipertrofinin görüldüğü, bölünme kapasitesi sınırlı doku hangisidir?\nA, Karaciğer\nBe, Endometrium\nCe, Meme bezi\nDe, Kalp kası\nE, Prostat\nŞıkları sırasıyla gözden geçirelim.\nKaraciğer bölünebilir hücrelerden oluşur. Parsiyel hepatektomi sonrası hepatositler çoğalır, yani telafi edici hiperplazi görülür.\nEndometrium hormon etkisiyle siklik proliferasyon gösterir. Bu fizyolojik hiperplazidir, saf hipertrofi değil.\nMeme bezleri ergenlik ve gebelikte hormon etkisiyle hiperplazi gösterir. Hücreleri bölünebilir.\nKalp kası doğru. Bölünme kapasitesi sınırlı olduğundan artmış iş yüküne hücre sayısını değil boyutunu artırarak, yani saf hipertrofiyle yanıt verir.\nProstatta androjen ve östrojen etkisiyle benign prostat hiperplazisi gelişir. Burada hücre sayısı artar.\nDoğru cevap De, Kalp kası\nSaf hipertrofide hücre sayısı artmaz, hücreler büyür. Bu özellikle bölünme kapasitesi sınırlı kalp ve iskelet kasında görülür.",
+   "kelime": 140
+  },
+  {
+   "no": 4,
+   "tur": "ornek",
+   "soru": "Gebelikte uterus düz kas hücrelerinde görülen değişiklik hangisidir?",
+   "secenekler": {
+    "A": "Yalnız hipertrofi",
+    "B": "Yalnız hiperplazi",
+    "C": "Metaplazi",
+    "D": "Atrofi",
+    "E": "Hipertrofi ve hiperplazi"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Yalnız hipertrofi eksik bir yanıttır; uterus düz kası bölünebildiği için büyümeye hücre sayısı artışı da katkı verir.",
+    "B": "Yalnız hiperplazi de eksiktir; gebelikte düz kas hücreleri büyük, şişkin hipertrofik hücrelere dönüşür.",
+    "C": "Metaplazi hücre tipinin değişmesidir; gebelikte uterus düz kası yine düz kas olarak kalır.",
+    "D": "Atrofi küçülmedir; uterusta menopoz sonrası endokrin atrofi görülür, gebelikte ise tersine büyüme olur.",
+    "E": "Hipertrofi ve hiperplazi doğru: gebelikte östrojen etkisiyle uterus düz kas hücreleri hem büyür hem çoğalır, artmış iş yüküne uyum sağlanır."
+   },
+   "ozet": "Gebelik uterusu fizyolojik adaptasyonun örneğidir; östrojen etkisiyle düz kas hücrelerinde hipertrofi ve hiperplazi birlikte görülür.",
+   "metin": "**Soru.** Gebelikte uterus düz kas hücrelerinde görülen değişiklik hangisidir?\n\n**A)** Yalnız hipertrofi · **B)** Yalnız hiperplazi · **C)** Metaplazi · **D)** Atrofi · **E)** Hipertrofi ve hiperplazi\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Yalnız hipertrofi** — Yalnız hipertrofi eksik bir yanıttır; uterus düz kası bölünebildiği için büyümeye hücre sayısı artışı da katkı verir.\n- **Yalnız hiperplazi** — Yalnız hiperplazi de eksiktir; gebelikte düz kas hücreleri büyük, şişkin hipertrofik hücrelere dönüşür.\n- **Metaplazi** — Metaplazi hücre tipinin değişmesidir; gebelikte uterus düz kası yine düz kas olarak kalır.\n- **Atrofi** — Atrofi küçülmedir; uterusta menopoz sonrası endokrin atrofi görülür, gebelikte ise tersine büyüme olur.\n- **Hipertrofi ve hiperplazi** — Hipertrofi ve hiperplazi doğru: gebelikte östrojen etkisiyle uterus düz kas hücreleri hem büyür hem çoğalır, artmış iş yüküne uyum sağlanır.\n\n**Cevap: E** — Hipertrofi ve hiperplazi\n\n**Özet.** Gebelik uterusu fizyolojik adaptasyonun örneğidir; östrojen etkisiyle düz kas hücrelerinde hipertrofi ve hiperplazi birlikte görülür.",
+   "ses": "Gebelikte uterus düz kas hücrelerinde görülen değişiklik hangisidir?\nA, Yalnız hipertrofi\nBe, Yalnız hiperplazi\nCe, Metaplazi\nDe, Atrofi\nE, Hipertrofi ve hiperplazi\nŞimdi seçeneklere tek tek bakalım.\nYalnız hipertrofi eksik bir yanıttır. Uterus düz kası bölünebildiği için büyümeye hücre sayısı artışı da katkı verir.\nYalnız hiperplazi de eksiktir. Gebelikte düz kas hücreleri büyük, şişkin hipertrofik hücrelere dönüşür.\nMetaplazi hücre tipinin değişmesidir. Gebelikte uterus düz kası yine düz kas olarak kalır.\nAtrofi küçülmedir. Uterusta menopoz sonrası endokrin atrofi görülür, gebelikte ise tersine büyüme olur.\nHipertrofi ve hiperplazi doğru. Gebelikte östrojen etkisiyle uterus düz kas hücreleri hem büyür hem çoğalır, artmış iş yüküne uyum sağlanır.\nDoğru cevap E, Hipertrofi ve hiperplazi\nGebelik uterusu fizyolojik adaptasyonun örneğidir. Östrojen etkisiyle düz kas hücrelerinde hipertrofi ve hiperplazi birlikte görülür.",
+   "kelime": 150
+  },
+  {
+   "no": 5,
+   "tur": "ornek",
+   "soru": "Parsiyel hepatektomi sonrası karaciğerin normal kütlesine dönmesi hangi adaptasyona örnektir?",
+   "secenekler": {
+    "A": "Telafi edici hiperplazi",
+    "B": "Hormonal hiperplazi",
+    "C": "Patolojik hipertrofi",
+    "D": "Metaplazi",
+    "E": "Endokrin atrofi"
+   },
+   "dogru": "A",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Telafi edici hiperplazi doğru: kalan hepatositlerde mitotik aktivite artar, hepatosit büyüme faktörü gibi etkenlerle karaciğer normal kütlesine döner.",
+    "B": "Hormonal hiperplazi, ergenlik ve gebelikte meme bezlerinde ya da endometriumda hormonların hücre çoğalmasını uyarmasıdır.",
+    "C": "Patolojik hipertrofi, örneğin hipertansiyonda kalp miyositlerinin büyümesidir; hücre sayısı artmaz.",
+    "D": "Metaplazi bir olgun hücre tipinin başka bir tiple değişmesidir; burada hepatositler yine hepatosit olarak çoğalır.",
+    "E": "Endokrin atrofi, örneğin menopoz sonrası uterus ve overlerin küçülmesidir; burada ise organ büyüyerek kütlesini geri kazanır."
+   },
+   "ozet": "Parsiyel hepatektomi sonrası kalan hepatositlerin çoğalması telafi edici fizyolojik hiperplazidir; hormonal hiperplazi ise meme ve endometriumda görülür.",
+   "metin": "**Soru.** Parsiyel hepatektomi sonrası karaciğerin normal kütlesine dönmesi hangi adaptasyona örnektir?\n\n**A)** Telafi edici hiperplazi · **B)** Hormonal hiperplazi · **C)** Patolojik hipertrofi · **D)** Metaplazi · **E)** Endokrin atrofi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Telafi edici hiperplazi** — Telafi edici hiperplazi doğru: kalan hepatositlerde mitotik aktivite artar, hepatosit büyüme faktörü gibi etkenlerle karaciğer normal kütlesine döner.\n- **Hormonal hiperplazi** — Hormonal hiperplazi, ergenlik ve gebelikte meme bezlerinde ya da endometriumda hormonların hücre çoğalmasını uyarmasıdır.\n- **Patolojik hipertrofi** — Patolojik hipertrofi, örneğin hipertansiyonda kalp miyositlerinin büyümesidir; hücre sayısı artmaz.\n- **Metaplazi** — Metaplazi bir olgun hücre tipinin başka bir tiple değişmesidir; burada hepatositler yine hepatosit olarak çoğalır.\n- **Endokrin atrofi** — Endokrin atrofi, örneğin menopoz sonrası uterus ve overlerin küçülmesidir; burada ise organ büyüyerek kütlesini geri kazanır.\n\n**Cevap: A** — Telafi edici hiperplazi\n\n**Özet.** Parsiyel hepatektomi sonrası kalan hepatositlerin çoğalması telafi edici fizyolojik hiperplazidir; hormonal hiperplazi ise meme ve endometriumda görülür.",
+   "ses": "Parsiyel hepatektomi sonrası karaciğerin normal kütlesine dönmesi hangi adaptasyona örnektir?\nA, Telafi edici hiperplazi\nBe, Hormonal hiperplazi\nCe, Patolojik hipertrofi\nDe, Metaplazi\nE, Endokrin atrofi\nSeçenekleri sırayla değerlendirelim.\nTelafi edici hiperplazi doğru. Kalan hepatositlerde mitotik aktivite artar, hepatosit büyüme faktörü gibi etkenlerle karaciğer normal kütlesine döner.\nHormonal hiperplazi, ergenlik ve gebelikte meme bezlerinde ya da endometriumda hormonların hücre çoğalmasını uyarmasıdır.\nPatolojik hipertrofi, örneğin hipertansiyonda kalp miyositlerinin büyümesidir. Hücre sayısı artmaz.\nMetaplazi bir olgun hücre tipinin başka bir tiple değişmesidir. Burada hepatositler yine hepatosit olarak çoğalır.\nEndokrin atrofi, örneğin menopoz sonrası uterus ve overlerin küçülmesidir. Burada ise organ büyüyerek kütlesini geri kazanır.\nDoğru cevap A, Telafi edici hiperplazi\nParsiyel hepatektomi sonrası kalan hepatositlerin çoğalması telafi edici fizyolojik hiperplazidir. Hormonal hiperplazi ise meme ve endometriumda görülür.",
+   "kelime": 151
+  },
+  {
+   "no": 6,
+   "tur": "ornek",
+   "soru": "Uzamış endometrial hiperplazi hangi riski artırır?",
+   "secenekler": {
+    "A": "Endometrium kanseri",
+    "B": "Adenomiyozis",
+    "C": "Uterus atrofisi",
+    "D": "Leiomiyom",
+    "E": "Skuamöz metaplazi"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Endometrium kanseri doğru: uzamış ve kontrolsüz hiperplazi neoplaziye zemin hazırlar, endometrial hiperplazide endometrium kanseri riski artar.",
+    "B": "Endometrial hiperplazinin nedeni östrojen ile progesteron arasındaki dengesizliktir. Adenomiyozis bu sorudaki ayrımı sağlamaz.",
+    "C": "Uterus atrofisi menopoz sonrası endokrin uyarı kaybıyla gelişir; hiperplazinin değil, hormon eksikliğinin sonucudur.",
+    "D": "Patolojik hiperplazide büyüme kontrolü hâlâ kısmen korunur ve uyarı kesilince büyüme durur. Leiomiyom bu sorudaki ayrımı sağlamaz.",
+    "E": "Skuamöz, yani yassı epitel metaplazisi, sigara içenlerin bronşunda görülen değişikliktir; endometrial hiperplazinin sonucu değildir."
+   },
+   "ozet": "Patolojik hiperplazi uyarı kesilince durabilir; ancak uzamış ve kontrolsüz hiperplazi neoplaziye zemin hazırlar, endometrial hiperplazi endometrium kanseri riskini artırır.",
+   "metin": "**Soru.** Uzamış endometrial hiperplazi hangi riski artırır?\n\n**A)** Endometrium kanseri · **B)** Adenomiyozis · **C)** Uterus atrofisi · **D)** Leiomiyom · **E)** Skuamöz metaplazi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Endometrium kanseri** — Endometrium kanseri doğru: uzamış ve kontrolsüz hiperplazi neoplaziye zemin hazırlar, endometrial hiperplazide endometrium kanseri riski artar.\n- **Adenomiyozis** — Endometrial hiperplazinin nedeni östrojen ile progesteron arasındaki dengesizliktir. Adenomiyozis bu sorudaki ayrımı sağlamaz.\n- **Uterus atrofisi** — Uterus atrofisi menopoz sonrası endokrin uyarı kaybıyla gelişir; hiperplazinin değil, hormon eksikliğinin sonucudur.\n- **Leiomiyom** — Patolojik hiperplazide büyüme kontrolü hâlâ kısmen korunur ve uyarı kesilince büyüme durur. Leiomiyom bu sorudaki ayrımı sağlamaz.\n- **Skuamöz metaplazi** — Skuamöz, yani yassı epitel metaplazisi, sigara içenlerin bronşunda görülen değişikliktir; endometrial hiperplazinin sonucu değildir.\n\n**Cevap: A** — Endometrium kanseri\n\n**Özet.** Patolojik hiperplazi uyarı kesilince durabilir; ancak uzamış ve kontrolsüz hiperplazi neoplaziye zemin hazırlar, endometrial hiperplazi endometrium kanseri riskini artırır.",
+   "ses": "Uzamış endometrial hiperplazi hangi riski artırır?\nA, Endometrium kanseri\nBe, Adenomiyozis\nCe, Uterus atrofisi\nDe, Leiomiyom\nE, Skuamöz metaplazi\nHer seçeneği tek tek ele alalım.\nEndometrium kanseri doğru. Uzamış ve kontrolsüz hiperplazi neoplaziye zemin hazırlar, endometrial hiperplazide endometrium kanseri riski artar.\nEndometrial hiperplazinin nedeni östrojen ile progesteron arasındaki dengesizliktir. Adenomiyozis bu sorudaki ayrımı sağlamaz.\nUterus atrofisi menopoz sonrası endokrin uyarı kaybıyla gelişir. Hiperplazinin değil, hormon eksikliğinin sonucudur.\nPatolojik hiperplazide büyüme kontrolü hâlâ kısmen korunur ve uyarı kesilince büyüme durur. Leiomiyom bu sorudaki ayrımı sağlamaz.\nSkuamöz, yani yassı epitel metaplazisi, sigara içenlerin bronşunda görülen değişikliktir. Endometrial hiperplazinin sonucu değildir.\nDoğru cevap A, Endometrium kanseri\nPatolojik hiperplazi uyarı kesilince durabilir. Ancak uzamış ve kontrolsüz hiperplazi neoplaziye zemin hazırlar, endometrial hiperplazi endometrium kanseri riskini artırır.",
+   "kelime": 147
+  },
+  {
+   "no": 7,
+   "tur": "ornek",
+   "soru": "Alçıya alınan ekstremitede kas kitlesi kaybı hangi atrofi tipidir?",
+   "secenekler": {
+    "A": "Endokrin atrofi",
+    "B": "Senil atrofi",
+    "C": "İnnervasyon kaybı",
+    "D": "Kullanılmama atrofisi",
+    "E": "İskemik atrofi"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Endokrin atrofi, endokrin uyarı kaybıyla gelişir; örneği menopoz sonrası uterus ve overlerin küçülmesidir.",
+    "B": "Senil atrofi yaşlanmaya bağlıdır; yaşlılıkta beyin atrofisi, kalp ve kas kütlesinde azalma görülür.",
+    "C": "İnnervasyon kaybına bağlı atrofi, motor sinir lezyonu sonrası kasın küçülmesidir; alçıdaki ekstremitede sorun sinir değil, azalmış iş yüküdür.",
+    "D": "Kullanılmama atrofisi doğru: alçıya alınan ekstremitede azalmış iş yükü nedeniyle kas kitlesi kaybolur.",
+    "E": "İskemik atrofi azalmış kan akımına bağlıdır; örneğin beyin atrofisi yaşlanmaya ve azalan kan akışına bağlıdır."
+   },
+   "ozet": "Atrofinin nedenleri azalmış iş yükü, sinir kaybı, iskemi, yetersiz beslenme, endokrin uyarı kaybı ve yaşlanmadır; alçıdaki kas kaybı kullanılmama atrofisidir.",
+   "metin": "**Soru.** Alçıya alınan ekstremitede kas kitlesi kaybı hangi atrofi tipidir?\n\n**A)** Endokrin atrofi · **B)** Senil atrofi · **C)** İnnervasyon kaybı · **D)** Kullanılmama atrofisi · **E)** İskemik atrofi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Endokrin atrofi** — Endokrin atrofi, endokrin uyarı kaybıyla gelişir; örneği menopoz sonrası uterus ve overlerin küçülmesidir.\n- **Senil atrofi** — Senil atrofi yaşlanmaya bağlıdır; yaşlılıkta beyin atrofisi, kalp ve kas kütlesinde azalma görülür.\n- **İnnervasyon kaybı** — İnnervasyon kaybına bağlı atrofi, motor sinir lezyonu sonrası kasın küçülmesidir; alçıdaki ekstremitede sorun sinir değil, azalmış iş yüküdür.\n- **Kullanılmama atrofisi** — Kullanılmama atrofisi doğru: alçıya alınan ekstremitede azalmış iş yükü nedeniyle kas kitlesi kaybolur.\n- **İskemik atrofi** — İskemik atrofi azalmış kan akımına bağlıdır; örneğin beyin atrofisi yaşlanmaya ve azalan kan akışına bağlıdır.\n\n**Cevap: D** — Kullanılmama atrofisi\n\n**Özet.** Atrofinin nedenleri azalmış iş yükü, sinir kaybı, iskemi, yetersiz beslenme, endokrin uyarı kaybı ve yaşlanmadır; alçıdaki kas kaybı kullanılmama atrofisidir.",
+   "ses": "Alçıya alınan ekstremitede kas kitlesi kaybı hangi atrofi tipidir?\nA, Endokrin atrofi\nBe, Senil atrofi\nCe, İnnervasyon kaybı\nDe, Kullanılmama atrofisi\nE, İskemik atrofi\nŞıkları sırasıyla gözden geçirelim.\nEndokrin atrofi, endokrin uyarı kaybıyla gelişir. Örneği menopoz sonrası uterus ve overlerin küçülmesidir.\nSenil atrofi yaşlanmaya bağlıdır. Yaşlılıkta beyin atrofisi, kalp ve kas kütlesinde azalma görülür.\nİnnervasyon kaybına bağlı atrofi, motor sinir lezyonu sonrası kasın küçülmesidir. Alçıdaki ekstremitede sorun sinir değil, azalmış iş yüküdür.\nKullanılmama atrofisi doğru. Alçıya alınan ekstremitede azalmış iş yükü nedeniyle kas kitlesi kaybolur.\nİskemik atrofi azalmış kan akımına bağlıdır. Örneğin beyin atrofisi yaşlanmaya ve azalan kan akışına bağlıdır.\nDoğru cevap De, Kullanılmama atrofisi\nAtrofinin nedenleri azalmış iş yükü, sinir kaybı, iskemi, yetersiz beslenme, endokrin uyarı kaybı ve yaşlanmadır. Alçıdaki kas kaybı kullanılmama atrofisidir.",
+   "kelime": 152
+  },
+  {
+   "no": 8,
+   "tur": "ornek",
+   "soru": "Atrofide artmış protein yıkımından sorumlu sistem hangisidir?",
+   "secenekler": {
+    "A": "Kaspaz kaskadı",
+    "B": "Ubikuitin–proteazom sistemi",
+    "C": "Kompleman sistemi",
+    "D": "Sitokrom P450",
+    "E": "Fosfolipaz"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Kaspaz kaskadı ile karıştırılabilir: Atrofi uzun ve şiddetli olursa hücreler apoptoza gidebilir, ama protein yıkımını başka bir sistem yürütür.",
+    "B": "Ubikuitin–proteazom sistemi doğru: atrofide proteinler ubikuitinle işaretlenir ve proteazomda parçalanır.",
+    "C": "Kompleman sistemi ile karıştırılabilir: Atrofide protein sentezi de düşük metabolik aktiviteye bağlı olarak azalır.",
+    "D": "Atrofide protein yıkımının yanı sıra otofaji de artar ve otofajik vakuoller oluşur. Sitokrom P450 bu sorudaki ayrımı sağlamaz.",
+    "E": "Fosfolipaz ile karıştırılabilir: Atrofi, kısıtlı koşullarda hayatta kalmak için enerji tasarrufu sağlayan bir adaptasyondur."
+   },
+   "ozet": "Atrofide protein sentezi azalır, yıkımı artar; proteinler ubikuitinle işaretlenip proteazomda parçalanır, ayrıca otofaji artar.",
+   "metin": "**Soru.** Atrofide artmış protein yıkımından sorumlu sistem hangisidir?\n\n**A)** Kaspaz kaskadı · **B)** Ubikuitin–proteazom sistemi · **C)** Kompleman sistemi · **D)** Sitokrom P450 · **E)** Fosfolipaz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Kaspaz kaskadı** — Kaspaz kaskadı ile karıştırılabilir: Atrofi uzun ve şiddetli olursa hücreler apoptoza gidebilir, ama protein yıkımını başka bir sistem yürütür.\n- **Ubikuitin–proteazom sistemi** — Ubikuitin–proteazom sistemi doğru: atrofide proteinler ubikuitinle işaretlenir ve proteazomda parçalanır.\n- **Kompleman sistemi** — Kompleman sistemi ile karıştırılabilir: Atrofide protein sentezi de düşük metabolik aktiviteye bağlı olarak azalır.\n- **Sitokrom P450** — Atrofide protein yıkımının yanı sıra otofaji de artar ve otofajik vakuoller oluşur. Sitokrom P450 bu sorudaki ayrımı sağlamaz.\n- **Fosfolipaz** — Fosfolipaz ile karıştırılabilir: Atrofi, kısıtlı koşullarda hayatta kalmak için enerji tasarrufu sağlayan bir adaptasyondur.\n\n**Cevap: B** — Ubikuitin–proteazom sistemi\n\n**Özet.** Atrofide protein sentezi azalır, yıkımı artar; proteinler ubikuitinle işaretlenip proteazomda parçalanır, ayrıca otofaji artar.",
+   "ses": "Atrofide artmış protein yıkımından sorumlu sistem hangisidir?\nA, Kaspaz kaskadı\nBe, Ubikuitin proteazom sistemi\nCe, Kompleman sistemi\nDe, Sitokrom pe dört yüz elli\nE, Fosfolipaz\nŞimdi seçeneklere tek tek bakalım.\nKaspaz kaskadı ile karıştırılabilir. Atrofi uzun ve şiddetli olursa hücreler apoptoza gidebilir, ama protein yıkımını başka bir sistem yürütür.\nUbikuitin proteazom sistemi doğru. Atrofide proteinler ubikuitinle işaretlenir ve proteazomda parçalanır.\nKompleman sistemi ile karıştırılabilir. Atrofide protein sentezi de düşük metabolik aktiviteye bağlı olarak azalır.\nAtrofide protein yıkımının yanı sıra otofaji de artar ve otofajik vakuoller oluşur. Sitokrom Pdört yüz elli bu sorudaki ayrımı sağlamaz.\nFosfolipaz ile karıştırılabilir. Atrofi, kısıtlı koşullarda hayatta kalmak için enerji tasarrufu sağlayan bir adaptasyondur.\nDoğru cevap Be, Ubikuitin proteazom sistemi\nAtrofide protein sentezi azalır, yıkımı artar. Proteinler ubikuitinle işaretlenip proteazomda parçalanır, ayrıca otofaji artar.",
+   "kelime": 146
+  },
+  {
+   "no": 9,
+   "tur": "ornek",
+   "soru": "Sigara içen bireyde bronş epitelinde en olası değişiklik hangisidir?",
+   "secenekler": {
+    "A": "Kolumnar metaplazi",
+    "B": "Kemik metaplazisi",
+    "C": "Yassı epitel metaplazisi",
+    "D": "Atrofi",
+    "E": "Hipertrofi"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Kolumnar metaplazi, reflüde alt özofagusta yassı epitelin kolumnar epitele dönüşmesidir; bronşta dönüşümün yönü terstir.",
+    "B": "Kemik metaplazisi mezenkimal bir metaplazidir; travma odaklarında ve skar dokusunda yumuşak dokuda kemik oluşumudur.",
+    "C": "Yassı epitel metaplazisi doğru: sigara dumanıyla siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele döner, kimyasal strese dayanıklılık artar.",
+    "D": "Atrofi hücre boyutu ya da sayısının azalmasıdır; sigarada bronş epitelinin tipi değişir, küçülme beklenmez.",
+    "E": "Hipertrofi hücre boyutunun artmasıdır; özellikle kalp ve iskelet kasında görülür, bronş epitelinin sigaraya yanıtı değildir."
+   },
+   "ozet": "Sigarada bronşun siliyalı kolumnar epiteli yassı epitele döner; dayanıklılık artar ama mukus üretimi ve mukosiliyer temizlenme azalır.",
+   "metin": "**Soru.** Sigara içen bireyde bronş epitelinde en olası değişiklik hangisidir?\n\n**A)** Kolumnar metaplazi · **B)** Kemik metaplazisi · **C)** Yassı epitel metaplazisi · **D)** Atrofi · **E)** Hipertrofi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kolumnar metaplazi** — Kolumnar metaplazi, reflüde alt özofagusta yassı epitelin kolumnar epitele dönüşmesidir; bronşta dönüşümün yönü terstir.\n- **Kemik metaplazisi** — Kemik metaplazisi mezenkimal bir metaplazidir; travma odaklarında ve skar dokusunda yumuşak dokuda kemik oluşumudur.\n- **Yassı epitel metaplazisi** — Yassı epitel metaplazisi doğru: sigara dumanıyla siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele döner, kimyasal strese dayanıklılık artar.\n- **Atrofi** — Atrofi hücre boyutu ya da sayısının azalmasıdır; sigarada bronş epitelinin tipi değişir, küçülme beklenmez.\n- **Hipertrofi** — Hipertrofi hücre boyutunun artmasıdır; özellikle kalp ve iskelet kasında görülür, bronş epitelinin sigaraya yanıtı değildir.\n\n**Cevap: C** — Yassı epitel metaplazisi\n\n**Özet.** Sigarada bronşun siliyalı kolumnar epiteli yassı epitele döner; dayanıklılık artar ama mukus üretimi ve mukosiliyer temizlenme azalır.",
+   "ses": "Sigara içen bireyde bronş epitelinde en olası değişiklik hangisidir?\nA, Kolumnar metaplazi\nBe, Kemik metaplazisi\nCe, Yassı epitel metaplazisi\nDe, Atrofi\nE, Hipertrofi\nSeçenekleri sırayla değerlendirelim.\nKolumnar metaplazi, reflüde alt özofagusta yassı epitelin kolumnar epitele dönüşmesidir. Bronşta dönüşümün yönü terstir.\nKemik metaplazisi mezenkimal bir metaplazidir. Travma odaklarında ve skar dokusunda yumuşak dokuda kemik oluşumudur.\nYassı epitel metaplazisi doğru. Sigara dumanıyla siliyalı psödostratifiye kolumnar epitel yassı çok katlı epitele döner, kimyasal strese dayanıklılık artar.\nAtrofi hücre boyutu ya da sayısının azalmasıdır. Sigarada bronş epitelinin tipi değişir, küçülme beklenmez.\nHipertrofi hücre boyutunun artmasıdır. Özellikle kalp ve iskelet kasında görülür, bronş epitelinin sigaraya yanıtı değildir.\nDoğru cevap Ce, Yassı epitel metaplazisi\nSigarada bronşun siliyalı kolumnar epiteli yassı epitele döner. Dayanıklılık artar ama mukus üretimi ve mukosiliyer temizlenme azalır.",
+   "kelime": 151
+  },
+  {
+   "no": 10,
+   "tur": "ornek",
+   "soru": "Kronik gastroözofageal reflüde alt özofagusta görülen metaplazi hangisidir?",
+   "secenekler": {
+    "A": "Kolumnar epitele dönüşüm",
+    "B": "Yassı epitele dönüşüm",
+    "C": "Kemik oluşumu",
+    "D": "Kıkırdak oluşumu",
+    "E": "Ürotelyal dönüşüm"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Kolumnar epitele dönüşüm doğru: kronik reflüde alt özofagusun çok katlı yassı epiteli Barrett tipi kolumnar epitele döner.",
+    "B": "Yassı epitele dönüşüm, sigara içenlerin bronşunda görülen metaplazidir; özofagusun normal epiteli zaten çok katlı yassıdır.",
+    "C": "Kemik oluşumu mezenkimal metaplazidir; travma odakları ve skar dokusu gibi yumuşak dokularda görülür.",
+    "D": "Reflüde değişen yapı bağ dokusu değil, özofagusu örten epiteldir. Kıkırdak oluşumu bu sorudaki ayrımı sağlamaz.",
+    "E": "Ürotelyal dönüşüm ile karıştırılabilir: Reflüdeki metaplazi klinik olarak adenokarsinom için zemin oluşturabilir."
+   },
+   "ozet": "Kronik reflüde alt özofagusun yassı epiteli Barrett tipi kolumnar epitele döner; bu metaplazi adenokarsinom için zemin oluşturabilir.",
+   "metin": "**Soru.** Kronik gastroözofageal reflüde alt özofagusta görülen metaplazi hangisidir?\n\n**A)** Kolumnar epitele dönüşüm · **B)** Yassı epitele dönüşüm · **C)** Kemik oluşumu · **D)** Kıkırdak oluşumu · **E)** Ürotelyal dönüşüm\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Kolumnar epitele dönüşüm** — Kolumnar epitele dönüşüm doğru: kronik reflüde alt özofagusun çok katlı yassı epiteli Barrett tipi kolumnar epitele döner.\n- **Yassı epitele dönüşüm** — Yassı epitele dönüşüm, sigara içenlerin bronşunda görülen metaplazidir; özofagusun normal epiteli zaten çok katlı yassıdır.\n- **Kemik oluşumu** — Kemik oluşumu mezenkimal metaplazidir; travma odakları ve skar dokusu gibi yumuşak dokularda görülür.\n- **Kıkırdak oluşumu** — Reflüde değişen yapı bağ dokusu değil, özofagusu örten epiteldir. Kıkırdak oluşumu bu sorudaki ayrımı sağlamaz.\n- **Ürotelyal dönüşüm** — Ürotelyal dönüşüm ile karıştırılabilir: Reflüdeki metaplazi klinik olarak adenokarsinom için zemin oluşturabilir.\n\n**Cevap: A** — Kolumnar epitele dönüşüm\n\n**Özet.** Kronik reflüde alt özofagusun yassı epiteli Barrett tipi kolumnar epitele döner; bu metaplazi adenokarsinom için zemin oluşturabilir.",
+   "ses": "Kronik gastroözofageal reflüde alt özofagusta görülen metaplazi hangisidir?\nA, Kolumnar epitele dönüşüm\nBe, Yassı epitele dönüşüm\nCe, Kemik oluşumu\nDe, Kıkırdak oluşumu\nE, Ürotelyal dönüşüm\nHer seçeneği tek tek ele alalım.\nKolumnar epitele dönüşüm doğru. Kronik reflüde alt özofagusun çok katlı yassı epiteli Barret tipi kolumnar epitele döner.\nYassı epitele dönüşüm, sigara içenlerin bronşunda görülen metaplazidir. Özofagusun normal epiteli zaten çok katlı yassıdır.\nKemik oluşumu mezenkimal metaplazidir. Travma odakları ve skar dokusu gibi yumuşak dokularda görülür.\nReflüde değişen yapı bağ dokusu değil, özofagusu örten epiteldir. Kıkırdak oluşumu bu sorudaki ayrımı sağlamaz.\nÜrotelyal dönüşüm ile karıştırılabilir. Reflüdeki metaplazi klinik olarak adenokarsinom için zemin oluşturabilir.\nDoğru cevap A, Kolumnar epitele dönüşüm\nKronik reflüde alt özofagusun yassı epiteli Barret tipi kolumnar epitele döner. Bu metaplazi adenokarsinom için zemin oluşturabilir.",
+   "kelime": 155
+  },
+  {
+   "no": 21,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisi hücresel adaptasyon mekanizmalarından biri değildir?",
+   "secenekler": {
+    "A": "Metaplazi",
+    "B": "Hipertrofi",
+    "C": "Atrofi",
+    "D": "Apoptoz",
+    "E": "Hiperplazi"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Metaplazi bir adaptasyondur; olgun hücre tipi strese daha dayanıklı başka bir olgun tiple yer değiştirir.",
+    "B": "Hipertrofi bir adaptasyondur; hücre boyutu artar ve özellikle bölünme kapasitesi sınırlı kalp ve iskelet kasında görülür.",
+    "C": "Atrofi bir adaptasyondur; kısıtlı koşullarda hayatta kalmak için enerji tasarrufu sağlayan küçülmedir.",
+    "D": "Apoptoz doğru cevap, çünkü adaptasyon değil hücre ölümüdür; şiddetli ya da kalıcı stresin yol açtığı geri dönüşümsüz hasar sonucu gelişir.",
+    "E": "Hiperplazi bir adaptasyondur; bölünebilir hücre popülasyonunda hücre sayısı artar ve organ büyür."
+   },
+   "ozet": "Dört temel hücresel adaptasyon hipertrofi, hiperplazi, atrofi ve metaplazidir; apoptoz ve nekroz şiddetli ya da kalıcı stres sonucu gelişen hücre ölümü biçimleridir.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi hücresel adaptasyon mekanizmalarından biri değildir?\n\n**A)** Metaplazi · **B)** Hipertrofi · **C)** Atrofi · **D)** Apoptoz · **E)** Hiperplazi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Metaplazi** — Metaplazi bir adaptasyondur; olgun hücre tipi strese daha dayanıklı başka bir olgun tiple yer değiştirir.\n- **Hipertrofi** — Hipertrofi bir adaptasyondur; hücre boyutu artar ve özellikle bölünme kapasitesi sınırlı kalp ve iskelet kasında görülür.\n- **Atrofi** — Atrofi bir adaptasyondur; kısıtlı koşullarda hayatta kalmak için enerji tasarrufu sağlayan küçülmedir.\n- **Apoptoz** — Apoptoz doğru cevap, çünkü adaptasyon değil hücre ölümüdür; şiddetli ya da kalıcı stresin yol açtığı geri dönüşümsüz hasar sonucu gelişir.\n- **Hiperplazi** — Hiperplazi bir adaptasyondur; bölünebilir hücre popülasyonunda hücre sayısı artar ve organ büyür.\n\n**Cevap: D** — Apoptoz\n\n**Özet.** Dört temel hücresel adaptasyon hipertrofi, hiperplazi, atrofi ve metaplazidir; apoptoz ve nekroz şiddetli ya da kalıcı stres sonucu gelişen hücre ölümü biçimleridir.",
+   "ses": "Aşağıdakilerden hangisi hücresel adaptasyon mekanizmalarından biri değildir?\nA, Metaplazi\nBe, Hipertrofi\nCe, Atrofi\nDe, Apoptoz\nE, Hiperplazi\nSeçenekleri sırayla değerlendirelim.\nMetaplazi bir adaptasyondur. Olgun hücre tipi strese daha dayanıklı başka bir olgun tiple yer değiştirir.\nHipertrofi bir adaptasyondur. Hücre boyutu artar ve özellikle bölünme kapasitesi sınırlı kalp ve iskelet kasında görülür.\nAtrofi bir adaptasyondur. Kısıtlı koşullarda hayatta kalmak için enerji tasarrufu sağlayan küçülmedir.\nApoptoz doğru cevap, çünkü adaptasyon değil hücre ölümüdür. Şiddetli ya da kalıcı stresin yol açtığı geri dönüşümsüz hasar sonucu gelişir.\nHiperplazi bir adaptasyondur. Bölünebilir hücre popülasyonunda hücre sayısı artar ve organ büyür.\nDoğru cevap De, Apoptoz\nDört temel hücresel adaptasyon hipertrofi, hiperplazi, atrofi ve metaplazidir. Apoptoz ve nekroz şiddetli ya da kalıcı stres sonucu gelişen hücre ölümü biçimleridir.",
+   "kelime": 143
+  },
+  {
+   "no": 22,
+   "tur": "ornek",
+   "soru": "Fizyolojik adaptasyonu patolojik adaptasyondan ayıran temel özellik hangisidir?",
+   "secenekler": {
+    "A": "Hücre sayısının artması",
+    "B": "Uyaranın normal nitelikte olması",
+    "C": "Geri dönüşümlü olması",
+    "D": "Hücre boyutunun artması",
+    "E": "Yeni denge kurulması"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Hücre sayısının artması iki grubu ayırmaz; hiperplazi hem gebelikte memede fizyolojik, hem endometrial hiperplazide patolojik olarak görülür.",
+    "B": "Uyaranın normal nitelikte olması doğru. Fizyolojik adaptasyon normal uyarılara, patolojik adaptasyon ise anormal ya da aşırı streslere verilen yanıttır.",
+    "C": "Geri dönüşümlülük ayırt ettirmez; adaptasyonun tanımı gereği hem fizyolojik hem patolojik adaptasyon geri dönüşümlü değişikliktir.",
+    "D": "Hücre boyutunun artması, yani hipertrofi, gebelik uterusunda fizyolojik, hipertansiyondaki kalpte patolojiktir; bu yüzden grubu belirlemez.",
+    "E": "Yeni denge kurulması her adaptasyonun amacıdır; fizyolojik ve patolojik adaptasyonun ortak özelliği olduğu için ayırıcı değildir."
+   },
+   "ozet": "Fizyolojik adaptasyon normal uyarılara verilen yanıttır; patolojik adaptasyon anormal ya da aşırı strese yanıttır, hücreyi hayatta tutar ama normal fonksiyon bozulabilir.",
+   "metin": "**Soru.** Fizyolojik adaptasyonu patolojik adaptasyondan ayıran temel özellik hangisidir?\n\n**A)** Hücre sayısının artması · **B)** Uyaranın normal nitelikte olması · **C)** Geri dönüşümlü olması · **D)** Hücre boyutunun artması · **E)** Yeni denge kurulması\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Hücre sayısının artması** — Hücre sayısının artması iki grubu ayırmaz; hiperplazi hem gebelikte memede fizyolojik, hem endometrial hiperplazide patolojik olarak görülür.\n- **Uyaranın normal nitelikte olması** — Uyaranın normal nitelikte olması doğru. Fizyolojik adaptasyon normal uyarılara, patolojik adaptasyon ise anormal ya da aşırı streslere verilen yanıttır.\n- **Geri dönüşümlü olması** — Geri dönüşümlülük ayırt ettirmez; adaptasyonun tanımı gereği hem fizyolojik hem patolojik adaptasyon geri dönüşümlü değişikliktir.\n- **Hücre boyutunun artması** — Hücre boyutunun artması, yani hipertrofi, gebelik uterusunda fizyolojik, hipertansiyondaki kalpte patolojiktir; bu yüzden grubu belirlemez.\n- **Yeni denge kurulması** — Yeni denge kurulması her adaptasyonun amacıdır; fizyolojik ve patolojik adaptasyonun ortak özelliği olduğu için ayırıcı değildir.\n\n**Cevap: B** — Uyaranın normal nitelikte olması\n\n**Özet.** Fizyolojik adaptasyon normal uyarılara verilen yanıttır; patolojik adaptasyon anormal ya da aşırı strese yanıttır, hücreyi hayatta tutar ama normal fonksiyon bozulabilir.",
+   "ses": "Fizyolojik adaptasyonu patolojik adaptasyondan ayıran temel özellik hangisidir?\nA, Hücre sayısının artması\nBe, Uyaranın normal nitelikte olması\nCe, Geri dönüşümlü olması\nDe, Hücre boyutunun artması\nE, Yeni denge kurulması\nHer seçeneği tek tek ele alalım.\nHücre sayısının artması iki grubu ayırmaz. Hiperplazi hem gebelikte memede fizyolojik, hem endometrial hiperplazide patolojik olarak görülür.\nUyaranın normal nitelikte olması doğru. Fizyolojik adaptasyon normal uyarılara, patolojik adaptasyon ise anormal ya da aşırı streslere verilen yanıttır.\nGeri dönüşümlülük ayırt ettirmez. Adaptasyonun tanımı gereği hem fizyolojik hem patolojik adaptasyon geri dönüşümlü değişikliktir.\nHücre boyutunun artması, yani hipertrofi, gebelik uterusunda fizyolojik, hipertansiyondaki kalpte patolojiktir. Bu yüzden grubu belirlemez.\nYeni denge kurulması her adaptasyonun amacıdır. Fizyolojik ve patolojik adaptasyonun ortak özelliği olduğu için ayırıcı değildir.\nDoğru cevap Be, Uyaranın normal nitelikte olması\nFizyolojik adaptasyon normal uyarılara verilen yanıttır. Patolojik adaptasyon anormal ya da aşırı strese yanıttır, hücreyi hayatta tutar ama normal fonksiyon bozulabilir.",
+   "kelime": 178
+  },
+  {
+   "no": 23,
+   "tur": "ornek",
+   "soru": "Saf hipertrofi için hangisi doğrudur?",
+   "secenekler": {
+    "A": "Hücre sayısı artmaz",
+    "B": "Hücreler bölünerek çoğalır",
+    "C": "Hücre tipi değişir",
+    "D": "Organ küçülür",
+    "E": "Yapısal proteinler azalır"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Hücre sayısının artmaması doğru. Saf hipertrofide yalnız hücreler büyür; sayı da artıyorsa hipertrofiye hiperplazi eşlik ediyordur.",
+    "B": "Bölünerek çoğalma hiperplazidir, yani hücre sayısında artıştır; saf hipertrofide hücreler bölünmez, yalnız büyür.",
+    "C": "Hücre tipinin değişmesi metaplazinin özelliğidir; hipertrofide hücrenin tipi korunur, boyutu artar.",
+    "D": "Organ küçülmesi atrofide görülür; hipertrofi ise hücre boyutunu artırarak organın büyümesine yol açar.",
+    "E": "Yapısal proteinlerin azalması atrofiye uyar; hipertrofinin mekanizması yapısal proteinlerde ve organellerde artıştır."
+   },
+   "ozet": "Saf hipertrofide hücre sayısı artmaz, hücreler yapısal protein ve organel artışıyla büyür; sayı da artıyorsa tabloya hiperplazi eşlik ediyordur.",
+   "metin": "**Soru.** Saf hipertrofi için hangisi doğrudur?\n\n**A)** Hücre sayısı artmaz · **B)** Hücreler bölünerek çoğalır · **C)** Hücre tipi değişir · **D)** Organ küçülür · **E)** Yapısal proteinler azalır\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Hücre sayısı artmaz** — Hücre sayısının artmaması doğru. Saf hipertrofide yalnız hücreler büyür; sayı da artıyorsa hipertrofiye hiperplazi eşlik ediyordur.\n- **Hücreler bölünerek çoğalır** — Bölünerek çoğalma hiperplazidir, yani hücre sayısında artıştır; saf hipertrofide hücreler bölünmez, yalnız büyür.\n- **Hücre tipi değişir** — Hücre tipinin değişmesi metaplazinin özelliğidir; hipertrofide hücrenin tipi korunur, boyutu artar.\n- **Organ küçülür** — Organ küçülmesi atrofide görülür; hipertrofi ise hücre boyutunu artırarak organın büyümesine yol açar.\n- **Yapısal proteinler azalır** — Yapısal proteinlerin azalması atrofiye uyar; hipertrofinin mekanizması yapısal proteinlerde ve organellerde artıştır.\n\n**Cevap: A** — Hücre sayısı artmaz\n\n**Özet.** Saf hipertrofide hücre sayısı artmaz, hücreler yapısal protein ve organel artışıyla büyür; sayı da artıyorsa tabloya hiperplazi eşlik ediyordur.",
+   "ses": "Saf hipertrofi için hangisi doğrudur?\nA, Hücre sayısı artmaz\nBe, Hücreler bölünerek çoğalır\nCe, Hücre tipi değişir\nDe, Organ küçülür\nE, Yapısal proteinler azalır\nŞıkları sırasıyla gözden geçirelim.\nHücre sayısının artmaması doğru. Saf hipertrofide yalnız hücreler büyür. Sayı da artıyorsa hipertrofiye hiperplazi eşlik ediyordur.\nBölünerek çoğalma hiperplazidir, yani hücre sayısında artıştır. Saf hipertrofide hücreler bölünmez, yalnız büyür.\nHücre tipinin değişmesi metaplazinin özelliğidir. Hipertrofide hücrenin tipi korunur, boyutu artar.\nOrgan küçülmesi atrofide görülür. Hipertrofi ise hücre boyutunu artırarak organın büyümesine yol açar.\nYapısal proteinlerin azalması atrofiye uyar. Hipertrofinin mekanizması yapısal proteinlerde ve organellerde artıştır.\nDoğru cevap A, Hücre sayısı artmaz\nSaf hipertrofide hücre sayısı artmaz, hücreler yapısal protein ve organel artışıyla büyür. Sayı da artıyorsa tabloya hiperplazi eşlik ediyordur.",
+   "kelime": 149
+  },
+  {
+   "no": 24,
+   "tur": "ornek",
+   "soru": "Yoğun ağırlık çalışmasında iskelet kasının temel hücresel yanıtı hangisidir?",
+   "secenekler": {
+    "A": "Liflerde metaplazi",
+    "B": "Lif sayısında artış",
+    "C": "Liflerde boyut artışı",
+    "D": "Hipertrofi ve hiperplazi birlikte",
+    "E": "Liflerde protein yıkımı"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Metaplazi bir olgun hücre tipinin başka bir tiple yer değiştirmesidir; iş yükü artan iskelet kasında hücre tipi değişmez.",
+    "B": "Lif sayısında artış hiperplazi olurdu; iskelet kasının çoğalma kapasitesi sınırlı olduğu için artan yüke sayı artışıyla yanıt veremez.",
+    "C": "Liflerde boyut artışı doğru. Artmış iş yükünde iskelet kası liflerinde hipertrofi gelişir, çünkü hücre çoğalma kapasitesi sınırlıdır.",
+    "D": "Hipertrofi ile hiperplazinin birlikteliği gebelik uterusu düz kasında görülür; iskelet kasında temel yanıt yalnız büyümedir.",
+    "E": "Protein yıkımının artması atrofinin mekanizmasıdır; artan iş yükünde ise yapısal protein ve organeller artar."
+   },
+   "ozet": "İskelet kası ağırlık çalışmasında fizyolojik hipertrofi gösterir; çoğalma kapasitesi sınırlı olduğu için temel yanıt boyut artışıdır, gebelik uterusunda ise hiperplazi de eklenir.",
+   "metin": "**Soru.** Yoğun ağırlık çalışmasında iskelet kasının temel hücresel yanıtı hangisidir?\n\n**A)** Liflerde metaplazi · **B)** Lif sayısında artış · **C)** Liflerde boyut artışı · **D)** Hipertrofi ve hiperplazi birlikte · **E)** Liflerde protein yıkımı\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Liflerde metaplazi** — Metaplazi bir olgun hücre tipinin başka bir tiple yer değiştirmesidir; iş yükü artan iskelet kasında hücre tipi değişmez.\n- **Lif sayısında artış** — Lif sayısında artış hiperplazi olurdu; iskelet kasının çoğalma kapasitesi sınırlı olduğu için artan yüke sayı artışıyla yanıt veremez.\n- **Liflerde boyut artışı** — Liflerde boyut artışı doğru. Artmış iş yükünde iskelet kası liflerinde hipertrofi gelişir, çünkü hücre çoğalma kapasitesi sınırlıdır.\n- **Hipertrofi ve hiperplazi birlikte** — Hipertrofi ile hiperplazinin birlikteliği gebelik uterusu düz kasında görülür; iskelet kasında temel yanıt yalnız büyümedir.\n- **Liflerde protein yıkımı** — Protein yıkımının artması atrofinin mekanizmasıdır; artan iş yükünde ise yapısal protein ve organeller artar.\n\n**Cevap: C** — Liflerde boyut artışı\n\n**Özet.** İskelet kası ağırlık çalışmasında fizyolojik hipertrofi gösterir; çoğalma kapasitesi sınırlı olduğu için temel yanıt boyut artışıdır, gebelik uterusunda ise hiperplazi de eklenir.",
+   "ses": "Yoğun ağırlık çalışmasında iskelet kasının temel hücresel yanıtı hangisidir?\nA, Liflerde metaplazi\nBe, Lif sayısında artış\nCe, Liflerde boyut artışı\nDe, Hipertrofi ve hiperplazi birlikte\nE, Liflerde protein yıkımı\nŞimdi seçeneklere tek tek bakalım.\nMetaplazi bir olgun hücre tipinin başka bir tiple yer değiştirmesidir. İş yükü artan iskelet kasında hücre tipi değişmez.\nLif sayısında artış hiperplazi olurdu. İskelet kasının çoğalma kapasitesi sınırlı olduğu için artan yüke sayı artışıyla yanıt veremez.\nLiflerde boyut artışı doğru. Artmış iş yükünde iskelet kası liflerinde hipertrofi gelişir, çünkü hücre çoğalma kapasitesi sınırlıdır.\nHipertrofi ile hiperplazinin birlikteliği gebelik uterusu düz kasında görülür. İskelet kasında temel yanıt yalnız büyümedir.\nProtein yıkımının artması atrofinin mekanizmasıdır. Artan iş yükünde ise yapısal protein ve organeller artar.\nDoğru cevap Ce, Liflerde boyut artışı\nİskelet kası ağırlık çalışmasında fizyolojik hipertrofi gösterir. Çoğalma kapasitesi sınırlı olduğu için temel yanıt boyut artışıdır, gebelik uterusunda ise hiperplazi de eklenir.",
+   "kelime": 176
+  },
+  {
+   "no": 25,
+   "tur": "ornek",
+   "soru": "Aort stenozuna bağlı sol ventrikül duvar kalınlaşması hangisine örnektir?",
+   "secenekler": {
+    "A": "Fizyolojik hipertrofi",
+    "B": "Telafi edici hiperplazi",
+    "C": "Hormonal hiperplazi",
+    "D": "Patolojik hipertrofi",
+    "E": "Mezenkimal metaplazi"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Fizyolojik hipertrofi normal uyarılarla gelişir, örneğin egzersizde iskelet kası ya da gebelikte uterus; aort stenozundaki basınç yükü normal bir uyaran değildir.",
+    "B": "Telafi edici hiperplazi doku kaybının hücre çoğalmasıyla karşılanmasıdır, parsiyel hepatektomi sonrası karaciğer gibi; miyositler çoğalarak yanıt vermez.",
+    "C": "Hormonal hiperplazi hormonların hücre çoğalmasını uyarmasıdır, ergenlikte meme bezleri gibi; kalp kasında hücre sayısı artmaz.",
+    "D": "Patolojik hipertrofi doğru. Aort stenozu ve hipertansiyonda sürekli artmış basınca karşı miyositlerde hipertrofi gelişir, duvar kalınlaşır ve kalp ağırlaşır.",
+    "E": "Mezenkimal metaplazi yumuşak dokuda, travma odaklarında ya da skarda kemik oluşumudur; kalınlaşan ventrikülde hücre tipi değişmez."
+   },
+   "ozet": "Hipertansiyon ve aort stenozu, sürekli artmış basınçla kalpte patolojik hipertrofi yapar; ventrikül duvarı kalınlaşır, kalp ağırlaşır.",
+   "metin": "**Soru.** Aort stenozuna bağlı sol ventrikül duvar kalınlaşması hangisine örnektir?\n\n**A)** Fizyolojik hipertrofi · **B)** Telafi edici hiperplazi · **C)** Hormonal hiperplazi · **D)** Patolojik hipertrofi · **E)** Mezenkimal metaplazi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Fizyolojik hipertrofi** — Fizyolojik hipertrofi normal uyarılarla gelişir, örneğin egzersizde iskelet kası ya da gebelikte uterus; aort stenozundaki basınç yükü normal bir uyaran değildir.\n- **Telafi edici hiperplazi** — Telafi edici hiperplazi doku kaybının hücre çoğalmasıyla karşılanmasıdır, parsiyel hepatektomi sonrası karaciğer gibi; miyositler çoğalarak yanıt vermez.\n- **Hormonal hiperplazi** — Hormonal hiperplazi hormonların hücre çoğalmasını uyarmasıdır, ergenlikte meme bezleri gibi; kalp kasında hücre sayısı artmaz.\n- **Patolojik hipertrofi** — Patolojik hipertrofi doğru. Aort stenozu ve hipertansiyonda sürekli artmış basınca karşı miyositlerde hipertrofi gelişir, duvar kalınlaşır ve kalp ağırlaşır.\n- **Mezenkimal metaplazi** — Mezenkimal metaplazi yumuşak dokuda, travma odaklarında ya da skarda kemik oluşumudur; kalınlaşan ventrikülde hücre tipi değişmez.\n\n**Cevap: D** — Patolojik hipertrofi\n\n**Özet.** Hipertansiyon ve aort stenozu, sürekli artmış basınçla kalpte patolojik hipertrofi yapar; ventrikül duvarı kalınlaşır, kalp ağırlaşır.",
+   "ses": "Aort stenozuna bağlı sol ventrikül duvar kalınlaşması hangisine örnektir?\nA, Fizyolojik hipertrofi\nBe, Telafi edici hiperplazi\nCe, Hormonal hiperplazi\nDe, Patolojik hipertrofi\nE, Mezenkimal metaplazi\nSeçenekleri sırayla değerlendirelim.\nFizyolojik hipertrofi normal uyarılarla gelişir, örneğin egzersizde iskelet kası ya da gebelikte uterus. Aort stenozundaki basınç yükü normal bir uyaran değildir.\nTelafi edici hiperplazi doku kaybının hücre çoğalmasıyla karşılanmasıdır, parsiyel hepatektomi sonrası karaciğer gibi. Miyositler çoğalarak yanıt vermez.\nHormonal hiperplazi hormonların hücre çoğalmasını uyarmasıdır, ergenlikte meme bezleri gibi. Kalp kasında hücre sayısı artmaz.\nPatolojik hipertrofi doğru. Aort stenozu ve hipertansiyonda sürekli artmış basınca karşı miyositlerde hipertrofi gelişir, duvar kalınlaşır ve kalp ağırlaşır.\nMezenkimal metaplazi yumuşak dokuda, travma odaklarında ya da skarda kemik oluşumudur. Kalınlaşan ventrikülde hücre tipi değişmez.\nDoğru cevap De, Patolojik hipertrofi\nHipertansiyon ve aort stenozu, sürekli artmış basınçla kalpte patolojik hipertrofi yapar. Ventrikül duvarı kalınlaşır, kalp ağırlaşır.",
+   "kelime": 165
+  },
+  {
+   "no": 26,
+   "tur": "ornek",
+   "soru": "Kalp hipertrofisini tetikleyen etkenlerden biri hangisidir?",
+   "secenekler": {
+    "A": "Ubikuitin–proteazom aktivasyonu",
+    "B": "Artmış otofaji",
+    "C": "Adrenerjik uyarım",
+    "D": "Endokrin uyarı kaybı",
+    "E": "Azalmış kan akımı"
+   },
+   "dogru": "C",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Ubikuitin proteazom sistemi proteinleri işaretleyip parçalar; atrofide protein yıkımını artırır, miyositi büyütmez.",
+    "B": "Artmış otofaji organellerin kendi kendine yenmesidir ve atrofinin mekanizmalarındandır; hipertrofiyi başlatmaz.",
+    "C": "Adrenerjik uyarım doğru. Mekanik gerilme ve büyüme faktörleriyle birlikte kalp hipertrofisinin üç tetikleyicisinden biridir.",
+    "D": "Endokrin uyarı kaybı atrofi nedenidir, menopoz sonrası uterus ve overlerin küçülmesi gibi; büyümeyi değil küçülmeyi başlatır.",
+    "E": "Azalmış kan akımı, yani iskemi, atrofiye ya da miyokardda geri dönüşümlü hasara yol açar; hipertrofinin tetikleyicisi değildir."
+   },
+   "ozet": "Kalp hipertrofisini mekanik gerilme, büyüme faktörleri ve adrenerjik uyarım tetikler; protein yıkımı, otofaji ve uyarı kaybı ise atrofiye yöneltir.",
+   "metin": "**Soru.** Kalp hipertrofisini tetikleyen etkenlerden biri hangisidir?\n\n**A)** Ubikuitin–proteazom aktivasyonu · **B)** Artmış otofaji · **C)** Adrenerjik uyarım · **D)** Endokrin uyarı kaybı · **E)** Azalmış kan akımı\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Ubikuitin–proteazom aktivasyonu** — Ubikuitin proteazom sistemi proteinleri işaretleyip parçalar; atrofide protein yıkımını artırır, miyositi büyütmez.\n- **Artmış otofaji** — Artmış otofaji organellerin kendi kendine yenmesidir ve atrofinin mekanizmalarındandır; hipertrofiyi başlatmaz.\n- **Adrenerjik uyarım** — Adrenerjik uyarım doğru. Mekanik gerilme ve büyüme faktörleriyle birlikte kalp hipertrofisinin üç tetikleyicisinden biridir.\n- **Endokrin uyarı kaybı** — Endokrin uyarı kaybı atrofi nedenidir, menopoz sonrası uterus ve overlerin küçülmesi gibi; büyümeyi değil küçülmeyi başlatır.\n- **Azalmış kan akımı** — Azalmış kan akımı, yani iskemi, atrofiye ya da miyokardda geri dönüşümlü hasara yol açar; hipertrofinin tetikleyicisi değildir.\n\n**Cevap: C** — Adrenerjik uyarım\n\n**Özet.** Kalp hipertrofisini mekanik gerilme, büyüme faktörleri ve adrenerjik uyarım tetikler; protein yıkımı, otofaji ve uyarı kaybı ise atrofiye yöneltir.",
+   "ses": "Kalp hipertrofisini tetikleyen etkenlerden biri hangisidir?\nA, Ubikuitin proteazom aktivasyonu\nBe, Artmış otofaji\nCe, Adrenerjik uyarım\nDe, Endokrin uyarı kaybı\nE, Azalmış kan akımı\nHer seçeneği tek tek ele alalım.\nUbikuitin proteazom sistemi proteinleri işaretleyip parçalar. Atrofide protein yıkımını artırır, miyositi büyütmez.\nArtmış otofaji organellerin kendi kendine yenmesidir ve atrofinin mekanizmalarındandır. Hipertrofiyi başlatmaz.\nAdrenerjik uyarım doğru. Mekanik gerilme ve büyüme faktörleriyle birlikte kalp hipertrofisinin üç tetikleyicisinden biridir.\nEndokrin uyarı kaybı atrofi nedenidir, menopoz sonrası uterus ve overlerin küçülmesi gibi. Büyümeyi değil küçülmeyi başlatır.\nAzalmış kan akımı, yani iskemi, atrofiye ya da miyokardda geri dönüşümlü hasara yol açar. Hipertrofinin tetikleyicisi değildir.\nDoğru cevap Ce, Adrenerjik uyarım\nKalp hipertrofisini mekanik gerilme, büyüme faktörleri ve adrenerjik uyarım tetikler. Protein yıkımı, otofaji ve uyarı kaybı ise atrofiye yöneltir.",
+   "kelime": 152
+  },
+  {
+   "no": 27,
+   "tur": "ornek",
+   "soru": "Hipertrofinin kalp yetmezliğine ilerlemesinde rol oynayan sınırlardan biri hangisidir?",
+   "secenekler": {
+    "A": "Mitokondri ATP üretiminin sınırlı olması",
+    "B": "Miyositlerin hızla bölünmesi",
+    "C": "Protein yıkımının durması",
+    "D": "Damar desteğinin sınırsız artması",
+    "E": "Kas hücre tipinin değişmesi"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Mitokondri a te pe üretiminin sınırlı olması doğru. Damar sisteminin besleme kapasitesi ve biyosentetik kapasiteyle birlikte hipertrofinin üç sınırından biridir.",
+    "B": "Miyositlerin hızla bölünmesi beklenmez; kalp kası bölünme kapasitesi sınırlı bir dokudur ve artan yüke yalnız büyüyerek yanıt verir.",
+    "C": "Protein yıkımının durması hipertrofinin sınırı olarak sayılmaz; sınırlardan biri tersine biyosentetik kapasitenin, yani yapım gücünün sınırlı olmasıdır.",
+    "D": "Damar desteği sınırsız artmaz; tersine, damar sisteminin genişlemiş kası besleme kapasitesi sınırlıdır ve bu da bir sınırdır.",
+    "E": "Hücre tipinin değişmesi metaplazinin özelliğidir; kalp yetmezliğine giden yolda miyofibril kaybı ve ventrikül dilatasyonu görülür."
+   },
+   "ozet": "Hipertrofinin üç sınırı damar sisteminin sınırlı besleme kapasitesi, mitokondrinin sınırlı ATP üretimi ve sınırlı biyosentetik kapasitedir; aşılınca miyofibril kaybı, dilatasyon ve yetmezlik gelişir.",
+   "metin": "**Soru.** Hipertrofinin kalp yetmezliğine ilerlemesinde rol oynayan sınırlardan biri hangisidir?\n\n**A)** Mitokondri ATP üretiminin sınırlı olması · **B)** Miyositlerin hızla bölünmesi · **C)** Protein yıkımının durması · **D)** Damar desteğinin sınırsız artması · **E)** Kas hücre tipinin değişmesi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Mitokondri ATP üretiminin sınırlı olması** — Mitokondri a te pe üretiminin sınırlı olması doğru. Damar sisteminin besleme kapasitesi ve biyosentetik kapasiteyle birlikte hipertrofinin üç sınırından biridir.\n- **Miyositlerin hızla bölünmesi** — Miyositlerin hızla bölünmesi beklenmez; kalp kası bölünme kapasitesi sınırlı bir dokudur ve artan yüke yalnız büyüyerek yanıt verir.\n- **Protein yıkımının durması** — Protein yıkımının durması hipertrofinin sınırı olarak sayılmaz; sınırlardan biri tersine biyosentetik kapasitenin, yani yapım gücünün sınırlı olmasıdır.\n- **Damar desteğinin sınırsız artması** — Damar desteği sınırsız artmaz; tersine, damar sisteminin genişlemiş kası besleme kapasitesi sınırlıdır ve bu da bir sınırdır.\n- **Kas hücre tipinin değişmesi** — Hücre tipinin değişmesi metaplazinin özelliğidir; kalp yetmezliğine giden yolda miyofibril kaybı ve ventrikül dilatasyonu görülür.\n\n**Cevap: A** — Mitokondri ATP üretiminin sınırlı olması\n\n**Özet.** Hipertrofinin üç sınırı damar sisteminin sınırlı besleme kapasitesi, mitokondrinin sınırlı ATP üretimi ve sınırlı biyosentetik kapasitedir; aşılınca miyofibril kaybı, dilatasyon ve yetmezlik gelişir.",
+   "ses": "Hipertrofinin kalp yetmezliğine ilerlemesinde rol oynayan sınırlardan biri hangisidir?\nA, Mitokondri a te pe üretiminin sınırlı olması\nBe, Miyositlerin hızla bölünmesi\nCe, Protein yıkımının durması\nDe, Damar desteğinin sınırsız artması\nE, Kas hücre tipinin değişmesi\nŞıkları sırasıyla gözden geçirelim.\nMitokondri a te pe üretiminin sınırlı olması doğru. Damar sisteminin besleme kapasitesi ve biyosentetik kapasiteyle birlikte hipertrofinin üç sınırından biridir.\nMiyositlerin hızla bölünmesi beklenmez. Kalp kası bölünme kapasitesi sınırlı bir dokudur ve artan yüke yalnız büyüyerek yanıt verir.\nProtein yıkımının durması hipertrofinin sınırı olarak sayılmaz. Sınırlardan biri tersine biyosentetik kapasitenin, yani yapım gücünün sınırlı olmasıdır.\nDamar desteği sınırsız artmaz. Tersine, damar sisteminin genişlemiş kası besleme kapasitesi sınırlıdır ve bu da bir sınırdır.\nHücre tipinin değişmesi metaplazinin özelliğidir. Kalp yetmezliğine giden yolda miyofibril kaybı ve ventrikül dilatasyonu görülür.\nDoğru cevap A, Mitokondri a te pe üretiminin sınırlı olması\nHipertrofinin üç sınırı damar sisteminin sınırlı besleme kapasitesi, mitokondrinin sınırlı a te pe üretimi ve sınırlı biyosentetik kapasitedir. Aşılınca miyofibril kaybı, dilatasyon ve yetmezlik gelişir.",
+   "kelime": 191
+  },
+  {
+   "no": 28,
+   "tur": "ornek",
+   "soru": "Endometriumdaki siklik proliferasyon hangi adaptasyona örnektir?",
+   "secenekler": {
+    "A": "Telafi edici hiperplazi",
+    "B": "Patolojik hiperplazi",
+    "C": "Fizyolojik hipertrofi",
+    "D": "Metaplazi",
+    "E": "Hormonal hiperplazi"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Telafi edici hiperplazide doku kaybı kalan hücrelerin çoğalmasıyla karşılanır, parsiyel hepatektomi sonrası karaciğer gibi; siklik endometriumda doku kaybı tetikleyici değildir.",
+    "B": "Patolojik hiperplazi hormon dengesizliğiyle gelişir, endometrial hiperplazideki östrojen progesteron dengesizliği gibi; olağan siklik çoğalma fizyolojiktir.",
+    "C": "Fizyolojik hipertrofi hücre boyutundaki artıştır, egzersizdeki iskelet kası gibi; siklik proliferasyonda hücre sayısı artar.",
+    "D": "Metaplazi olgun bir hücre tipinin başka bir olgun tiple yer değiştirmesidir; siklik endometriumda hücre tipi değişmez.",
+    "E": "Hormonal hiperplazi doğru. Endometriumdaki siklik proliferasyonda östrojen ve progesteron gibi hormonlar hücre çoğalmasını uyarır."
+   },
+   "ozet": "Fizyolojik hiperplazi hormonal ya da telafi edici olur; ergenlik ve gebelikte meme bezleri ile siklik endometrium hormonal, hepatektomi sonrası karaciğer ise telafi edici örnektir.",
+   "metin": "**Soru.** Endometriumdaki siklik proliferasyon hangi adaptasyona örnektir?\n\n**A)** Telafi edici hiperplazi · **B)** Patolojik hiperplazi · **C)** Fizyolojik hipertrofi · **D)** Metaplazi · **E)** Hormonal hiperplazi\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Telafi edici hiperplazi** — Telafi edici hiperplazide doku kaybı kalan hücrelerin çoğalmasıyla karşılanır, parsiyel hepatektomi sonrası karaciğer gibi; siklik endometriumda doku kaybı tetikleyici değildir.\n- **Patolojik hiperplazi** — Patolojik hiperplazi hormon dengesizliğiyle gelişir, endometrial hiperplazideki östrojen progesteron dengesizliği gibi; olağan siklik çoğalma fizyolojiktir.\n- **Fizyolojik hipertrofi** — Fizyolojik hipertrofi hücre boyutundaki artıştır, egzersizdeki iskelet kası gibi; siklik proliferasyonda hücre sayısı artar.\n- **Metaplazi** — Metaplazi olgun bir hücre tipinin başka bir olgun tiple yer değiştirmesidir; siklik endometriumda hücre tipi değişmez.\n- **Hormonal hiperplazi** — Hormonal hiperplazi doğru. Endometriumdaki siklik proliferasyonda östrojen ve progesteron gibi hormonlar hücre çoğalmasını uyarır.\n\n**Cevap: E** — Hormonal hiperplazi\n\n**Özet.** Fizyolojik hiperplazi hormonal ya da telafi edici olur; ergenlik ve gebelikte meme bezleri ile siklik endometrium hormonal, hepatektomi sonrası karaciğer ise telafi edici örnektir.",
+   "ses": "Endometriumdaki siklik proliferasyon hangi adaptasyona örnektir?\nA, Telafi edici hiperplazi\nBe, Patolojik hiperplazi\nCe, Fizyolojik hipertrofi\nDe, Metaplazi\nE, Hormonal hiperplazi\nŞimdi seçeneklere tek tek bakalım.\nTelafi edici hiperplazide doku kaybı kalan hücrelerin çoğalmasıyla karşılanır, parsiyel hepatektomi sonrası karaciğer gibi. Siklik endometriumda doku kaybı tetikleyici değildir.\nPatolojik hiperplazi hormon dengesizliğiyle gelişir, endometrial hiperplazideki östrojen progesteron dengesizliği gibi. Olağan siklik çoğalma fizyolojiktir.\nFizyolojik hipertrofi hücre boyutundaki artıştır, egzersizdeki iskelet kası gibi. Siklik proliferasyonda hücre sayısı artar.\nMetaplazi olgun bir hücre tipinin başka bir olgun tiple yer değiştirmesidir. Siklik endometriumda hücre tipi değişmez.\nHormonal hiperplazi doğru. Endometriumdaki siklik proliferasyonda östrojen ve progesteron gibi hormonlar hücre çoğalmasını uyarır.\nDoğru cevap E, Hormonal hiperplazi\nFizyolojik hiperplazi hormonal ya da telafi edici olur. Ergenlik ve gebelikte meme bezleri ile siklik endometrium hormonal, hepatektomi sonrası karaciğer ise telafi edici örnektir.",
+   "kelime": 161
+  },
+  {
+   "no": 29,
+   "tur": "ornek",
+   "soru": "Parsiyel hepatektomi sonrası kalan hepatositlerde çoğalmayı uyaran etken hangisidir?",
+   "secenekler": {
+    "A": "Östrojen",
+    "B": "Hepatosit büyüme faktörü",
+    "C": "Androjen",
+    "D": "Adrenerjik uyarım",
+    "E": "Progesteron"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Östrojen hormonal hiperplazinin uyaranıdır, örneğin siklik endometrium ve gebelik uterusunda; karaciğerin telafi edici büyümesini başlatmaz.",
+    "B": "Hepatosit büyüme faktörü doğru. Telafi edici hiperplazide kalan hepatositlerde mitotik aktivite artar ve karaciğer normal kütlesine döner.",
+    "C": "Androjen, östrojenle birlikte benign prostat hiperplazisinde etkili hormondur; karaciğerin kayıptan sonraki büyümesiyle ilgisi yoktur.",
+    "D": "Adrenerjik uyarım kalp hipertrofisinin tetikleyicilerindendir; hepatositlerde çoğalmayı başlatan etken değildir.",
+    "E": "Progesteron, östrojenle birlikte endometrium ve memede hormonal hiperplaziyi düzenler; hepatektomi sonrası çoğalmanın uyaranı değildir."
+   },
+   "ozet": "Parsiyel hepatektomi sonrası karaciğer, hepatosit büyüme faktörü gibi büyüme faktörlerinin uyarısıyla telafi edici hiperplazi gösterir ve normal kütlesine geri döner.",
+   "metin": "**Soru.** Parsiyel hepatektomi sonrası kalan hepatositlerde çoğalmayı uyaran etken hangisidir?\n\n**A)** Östrojen · **B)** Hepatosit büyüme faktörü · **C)** Androjen · **D)** Adrenerjik uyarım · **E)** Progesteron\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Östrojen** — Östrojen hormonal hiperplazinin uyaranıdır, örneğin siklik endometrium ve gebelik uterusunda; karaciğerin telafi edici büyümesini başlatmaz.\n- **Hepatosit büyüme faktörü** — Hepatosit büyüme faktörü doğru. Telafi edici hiperplazide kalan hepatositlerde mitotik aktivite artar ve karaciğer normal kütlesine döner.\n- **Androjen** — Androjen, östrojenle birlikte benign prostat hiperplazisinde etkili hormondur; karaciğerin kayıptan sonraki büyümesiyle ilgisi yoktur.\n- **Adrenerjik uyarım** — Adrenerjik uyarım kalp hipertrofisinin tetikleyicilerindendir; hepatositlerde çoğalmayı başlatan etken değildir.\n- **Progesteron** — Progesteron, östrojenle birlikte endometrium ve memede hormonal hiperplaziyi düzenler; hepatektomi sonrası çoğalmanın uyaranı değildir.\n\n**Cevap: B** — Hepatosit büyüme faktörü\n\n**Özet.** Parsiyel hepatektomi sonrası karaciğer, hepatosit büyüme faktörü gibi büyüme faktörlerinin uyarısıyla telafi edici hiperplazi gösterir ve normal kütlesine geri döner.",
+   "ses": "Parsiyel hepatektomi sonrası kalan hepatositlerde çoğalmayı uyaran etken hangisidir?\nA, Östrojen\nBe, Hepatosit büyüme faktörü\nCe, Androjen\nDe, Adrenerjik uyarım\nE, Progesteron\nSeçenekleri sırayla değerlendirelim.\nÖstrojen hormonal hiperplazinin uyaranıdır, örneğin siklik endometrium ve gebelik uterusunda. Karaciğerin telafi edici büyümesini başlatmaz.\nHepatosit büyüme faktörü doğru. Telafi edici hiperplazide kalan hepatositlerde mitotik aktivite artar ve karaciğer normal kütlesine döner.\nAndrojen, östrojenle birlikte benign prostat hiperplazisinde etkili hormondur. Karaciğerin kayıptan sonraki büyümesiyle ilgisi yoktur.\nAdrenerjik uyarım kalp hipertrofisinin tetikleyicilerindendir. Hepatositlerde çoğalmayı başlatan etken değildir.\nProgesteron, östrojenle birlikte endometrium ve memede hormonal hiperplaziyi düzenler. Hepatektomi sonrası çoğalmanın uyaranı değildir.\nDoğru cevap Be, Hepatosit büyüme faktörü\nParsiyel hepatektomi sonrası karaciğer, hepatosit büyüme faktörü gibi büyüme faktörlerinin uyarısıyla telafi edici hiperplazi gösterir ve normal kütlesine geri döner.",
+   "kelime": 146
+  },
+  {
+   "no": 30,
+   "tur": "ornek",
+   "soru": "Endometrial hiperplazinin gelişimindeki hormonal durum hangisidir?",
+   "secenekler": {
+    "A": "Androjen/östrojen etkisi",
+    "B": "Endokrin uyarı kaybı",
+    "C": "Östrojen/progesteron dengesizliği",
+    "D": "Hepatosit büyüme faktörü artışı",
+    "E": "Adrenerjik uyarım"
+   },
+   "dogru": "C",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Androjen ve östrojen etkisi benign prostat hiperplazisinin hormonal temelidir; endometriumda gelişen patolojik hiperplaziyi açıklamaz.",
+    "B": "Endokrin uyarı kaybı atrofiye yol açar, menopoz sonrası uterusun küçülmesi gibi; hiperplazide ise uyarı artmış ya da dengesizdir.",
+    "C": "Östrojen progesteron dengesizliği doğru. Endometrial hiperplazi bu hormon dengesizliğiyle gelişen patolojik hiperplazidir ve uzarsa endometrium kanseri riskini artırır.",
+    "D": "Hepatosit büyüme faktörü parsiyel hepatektomi sonrası karaciğerin telafi edici hiperplazisini uyarır; endometriumla ilgili değildir.",
+    "E": "Adrenerjik uyarım kalp hipertrofisini tetikleyen etkenlerdendir; endometrial hiperplazinin nedeni değildir."
+   },
+   "ozet": "Patolojik hiperplazi hormon dengesizliğiyle oluşur; endometrial hiperplazide östrojen ile progesteron, benign prostat hiperplazisinde androjen ile östrojen etkisi rol oynar.",
+   "metin": "**Soru.** Endometrial hiperplazinin gelişimindeki hormonal durum hangisidir?\n\n**A)** Androjen/östrojen etkisi · **B)** Endokrin uyarı kaybı · **C)** Östrojen/progesteron dengesizliği · **D)** Hepatosit büyüme faktörü artışı · **E)** Adrenerjik uyarım\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Androjen/östrojen etkisi** — Androjen ve östrojen etkisi benign prostat hiperplazisinin hormonal temelidir; endometriumda gelişen patolojik hiperplaziyi açıklamaz.\n- **Endokrin uyarı kaybı** — Endokrin uyarı kaybı atrofiye yol açar, menopoz sonrası uterusun küçülmesi gibi; hiperplazide ise uyarı artmış ya da dengesizdir.\n- **Östrojen/progesteron dengesizliği** — Östrojen progesteron dengesizliği doğru. Endometrial hiperplazi bu hormon dengesizliğiyle gelişen patolojik hiperplazidir ve uzarsa endometrium kanseri riskini artırır.\n- **Hepatosit büyüme faktörü artışı** — Hepatosit büyüme faktörü parsiyel hepatektomi sonrası karaciğerin telafi edici hiperplazisini uyarır; endometriumla ilgili değildir.\n- **Adrenerjik uyarım** — Adrenerjik uyarım kalp hipertrofisini tetikleyen etkenlerdendir; endometrial hiperplazinin nedeni değildir.\n\n**Cevap: C** — Östrojen/progesteron dengesizliği\n\n**Özet.** Patolojik hiperplazi hormon dengesizliğiyle oluşur; endometrial hiperplazide östrojen ile progesteron, benign prostat hiperplazisinde androjen ile östrojen etkisi rol oynar.",
+   "ses": "Endometrial hiperplazinin gelişimindeki hormonal durum hangisidir?\nA, Androjen ve östrojen etkisi\nBe, Endokrin uyarı kaybı\nCe, Östrojen progesteron dengesizliği\nDe, Hepatosit büyüme faktörü artışı\nE, Adrenerjik uyarım\nHer seçeneği tek tek ele alalım.\nAndrojen ve östrojen etkisi benign prostat hiperplazisinin hormonal temelidir. Endometriumda gelişen patolojik hiperplaziyi açıklamaz.\nEndokrin uyarı kaybı atrofiye yol açar, menopoz sonrası uterusun küçülmesi gibi. Hiperplazide ise uyarı artmış ya da dengesizdir.\nÖstrojen progesteron dengesizliği doğru. Endometrial hiperplazi bu hormon dengesizliğiyle gelişen patolojik hiperplazidir ve uzarsa endometrium kanseri riskini artırır.\nHepatosit büyüme faktörü parsiyel hepatektomi sonrası karaciğerin telafi edici hiperplazisini uyarır. Endometriumla ilgili değildir.\nAdrenerjik uyarım kalp hipertrofisini tetikleyen etkenlerdendir. Endometrial hiperplazinin nedeni değildir.\nDoğru cevap Ce, Östrojen progesteron dengesizliği\nPatolojik hiperplazi hormon dengesizliğiyle oluşur. Endometrial hiperplazide östrojen ile progesteron, benign prostat hiperplazisinde androjen ile östrojen etkisi rol oynar.",
+   "kelime": 158
+  },
+  {
+   "no": 31,
+   "tur": "ornek",
+   "soru": "Aterosklerotik serebrovasküler hastalığı olan yaşlı bir erkekte beyin atrofisi hangi nedenlere bağlıdır?",
+   "secenekler": {
+    "A": "Sinir kaybı ve kullanılmama",
+    "B": "Endokrin uyarı kaybı",
+    "C": "Yaşlanma ve azalan kan akışı",
+    "D": "Yetersiz beslenme",
+    "E": "Artmış iş yükü"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Sinir kaybı ve kullanılmama kas atrofisinin nedenleridir, örneğin motor sinir lezyonu ya da alçıya alınan ekstremite; bu olgudaki beyin atrofisini açıklamaz.",
+    "B": "Endokrin uyarı kaybı hormona bağımlı dokuları küçültür, menopoz sonrası uterus ve overler gibi; beyin atrofisinin nedeni değildir.",
+    "C": "Yaşlanma ve azalan kan akışı doğru. Bu olguda senil atrofi ile iskemi birleşir; beyin maddesi kaybı girusları daraltır, sulkusları genişletir.",
+    "D": "Yetersiz beslenme atrofi nedenlerinden biridir, ancak bu olguda öne çıkan etkenler ileri yaş ve damar hastalığına bağlı kan akımı azalmasıdır.",
+    "E": "Artmış iş yükü atrofi değil hipertrofi yapar, egzersizde iskelet kası gibi; atrofi tersine azalmış iş yüküyle gelişir."
+   },
+   "ozet": "Yaşlı ve aterosklerotik serebrovasküler hastalığı olan kişide beyin atrofisi yaşlanma ve azalan kan akışına bağlıdır; giruslar daralır, sulkuslar genişler.",
+   "metin": "**Soru.** Aterosklerotik serebrovasküler hastalığı olan yaşlı bir erkekte beyin atrofisi hangi nedenlere bağlıdır?\n\n**A)** Sinir kaybı ve kullanılmama · **B)** Endokrin uyarı kaybı · **C)** Yaşlanma ve azalan kan akışı · **D)** Yetersiz beslenme · **E)** Artmış iş yükü\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Sinir kaybı ve kullanılmama** — Sinir kaybı ve kullanılmama kas atrofisinin nedenleridir, örneğin motor sinir lezyonu ya da alçıya alınan ekstremite; bu olgudaki beyin atrofisini açıklamaz.\n- **Endokrin uyarı kaybı** — Endokrin uyarı kaybı hormona bağımlı dokuları küçültür, menopoz sonrası uterus ve overler gibi; beyin atrofisinin nedeni değildir.\n- **Yaşlanma ve azalan kan akışı** — Yaşlanma ve azalan kan akışı doğru. Bu olguda senil atrofi ile iskemi birleşir; beyin maddesi kaybı girusları daraltır, sulkusları genişletir.\n- **Yetersiz beslenme** — Yetersiz beslenme atrofi nedenlerinden biridir, ancak bu olguda öne çıkan etkenler ileri yaş ve damar hastalığına bağlı kan akımı azalmasıdır.\n- **Artmış iş yükü** — Artmış iş yükü atrofi değil hipertrofi yapar, egzersizde iskelet kası gibi; atrofi tersine azalmış iş yüküyle gelişir.\n\n**Cevap: C** — Yaşlanma ve azalan kan akışı\n\n**Özet.** Yaşlı ve aterosklerotik serebrovasküler hastalığı olan kişide beyin atrofisi yaşlanma ve azalan kan akışına bağlıdır; giruslar daralır, sulkuslar genişler.",
+   "ses": "Aterosklerotik serebrovasküler hastalığı olan yaşlı bir erkekte beyin atrofisi hangi nedenlere bağlıdır?\nA, Sinir kaybı ve kullanılmama\nBe, Endokrin uyarı kaybı\nCe, Yaşlanma ve azalan kan akışı\nDe, Yetersiz beslenme\nE, Artmış iş yükü\nŞıkları sırasıyla gözden geçirelim.\nSinir kaybı ve kullanılmama kas atrofisinin nedenleridir, örneğin motor sinir lezyonu ya da alçıya alınan ekstremite. Bu olgudaki beyin atrofisini açıklamaz.\nEndokrin uyarı kaybı hormona bağımlı dokuları küçültür, menopoz sonrası uterus ve overler gibi. Beyin atrofisinin nedeni değildir.\nYaşlanma ve azalan kan akışı doğru. Bu olguda senil atrofi ile iskemi birleşir. Beyin maddesi kaybı girusları daraltır, sulkusları genişletir.\nYetersiz beslenme atrofi nedenlerinden biridir, ancak bu olguda öne çıkan etkenler ileri yaş ve damar hastalığına bağlı kan akımı azalmasıdır.\nArtmış iş yükü atrofi değil hipertrofi yapar, egzersizde iskelet kası gibi. Atrofi tersine azalmış iş yüküyle gelişir.\nDoğru cevap Ce, Yaşlanma ve azalan kan akışı\nYaşlı ve aterosklerotik serebrovasküler hastalığı olan kişide beyin atrofisi yaşlanma ve azalan kan akışına bağlıdır. Giruslar daralır, sulkuslar genişler.",
+   "kelime": 194
+  },
+  {
+   "no": 32,
+   "tur": "ornek",
+   "soru": "Motor sinir lezyonu sonrası kasta gelişen atrofi hangisidir?",
+   "secenekler": {
+    "A": "Endokrin atrofi",
+    "B": "İnnervasyon kaybı atrofisi",
+    "C": "Senil atrofi",
+    "D": "Kullanılmama atrofisi",
+    "E": "Patolojik hiperplazi"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Endokrin atrofi hormon uyarısı azalınca gelişir, menopoz sonrası uterus ve overlerde küçülme gibi; sinir lezyonuyla ilgili değildir.",
+    "B": "İnnervasyon kaybı atrofisi doğru. Motor sinir lezyonu sonrası kası uyaran sinyal kesilir ve sinir kaybına bağlı kas atrofisi gelişir.",
+    "C": "Senil atrofi yaşlanmaya bağlıdır, beyin atrofisi ve kalp ile kas kütlesinde azalma gibi; burada neden sinir lezyonudur.",
+    "D": "Kullanılmama atrofisi azalmış iş yüküne bağlıdır, alçıya alınan ekstremitede kas kitlesi kaybı gibi; sinir sağlamdır.",
+    "E": "Patolojik hiperplazi hücre sayısında artıştır ve hormon dengesizliğiyle gelişir; kas küçülmesini açıklamaz."
+   },
+   "ozet": "Motor sinir lezyonu sonrası kas atrofisi innervasyon kaybına bağlıdır; alçıda kas kitlesi kaybı kullanılmama, menopozda uterusun küçülmesi endokrin atrofidir.",
+   "metin": "**Soru.** Motor sinir lezyonu sonrası kasta gelişen atrofi hangisidir?\n\n**A)** Endokrin atrofi · **B)** İnnervasyon kaybı atrofisi · **C)** Senil atrofi · **D)** Kullanılmama atrofisi · **E)** Patolojik hiperplazi\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Endokrin atrofi** — Endokrin atrofi hormon uyarısı azalınca gelişir, menopoz sonrası uterus ve overlerde küçülme gibi; sinir lezyonuyla ilgili değildir.\n- **İnnervasyon kaybı atrofisi** — İnnervasyon kaybı atrofisi doğru. Motor sinir lezyonu sonrası kası uyaran sinyal kesilir ve sinir kaybına bağlı kas atrofisi gelişir.\n- **Senil atrofi** — Senil atrofi yaşlanmaya bağlıdır, beyin atrofisi ve kalp ile kas kütlesinde azalma gibi; burada neden sinir lezyonudur.\n- **Kullanılmama atrofisi** — Kullanılmama atrofisi azalmış iş yüküne bağlıdır, alçıya alınan ekstremitede kas kitlesi kaybı gibi; sinir sağlamdır.\n- **Patolojik hiperplazi** — Patolojik hiperplazi hücre sayısında artıştır ve hormon dengesizliğiyle gelişir; kas küçülmesini açıklamaz.\n\n**Cevap: B** — İnnervasyon kaybı atrofisi\n\n**Özet.** Motor sinir lezyonu sonrası kas atrofisi innervasyon kaybına bağlıdır; alçıda kas kitlesi kaybı kullanılmama, menopozda uterusun küçülmesi endokrin atrofidir.",
+   "ses": "Motor sinir lezyonu sonrası kasta gelişen atrofi hangisidir?\nA, Endokrin atrofi\nBe, İnnervasyon kaybı atrofisi\nCe, Senil atrofi\nDe, Kullanılmama atrofisi\nE, Patolojik hiperplazi\nŞimdi seçeneklere tek tek bakalım.\nEndokrin atrofi hormon uyarısı azalınca gelişir, menopoz sonrası uterus ve overlerde küçülme gibi. Sinir lezyonuyla ilgili değildir.\nİnnervasyon kaybı atrofisi doğru. Motor sinir lezyonu sonrası kası uyaran sinyal kesilir ve sinir kaybına bağlı kas atrofisi gelişir.\nSenil atrofi yaşlanmaya bağlıdır, beyin atrofisi ve kalp ile kas kütlesinde azalma gibi. Burada neden sinir lezyonudur.\nKullanılmama atrofisi azalmış iş yüküne bağlıdır, alçıya alınan ekstremitede kas kitlesi kaybı gibi. Sinir sağlamdır.\nPatolojik hiperplazi hücre sayısında artıştır ve hormon dengesizliğiyle gelişir. Kas küçülmesini açıklamaz.\nDoğru cevap Be, İnnervasyon kaybı atrofisi\nMotor sinir lezyonu sonrası kas atrofisi innervasyon kaybına bağlıdır. Alçıda kas kitlesi kaybı kullanılmama, menopozda uterusun küçülmesi endokrin atrofidir.",
+   "kelime": 162
+  },
+  {
+   "no": 33,
+   "tur": "ornek",
+   "soru": "Atrofide azalmış protein sentezinin nedeni hangisidir?",
+   "secenekler": {
+    "A": "Ubikuitinle işaretlenme",
+    "B": "Artmış otofaji",
+    "C": "Kök hücre programlanması",
+    "D": "Düşük metabolik aktivite",
+    "E": "Adrenerjik uyarım"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Ubikuitinle işaretlenme proteinlerin proteazomda parçalanmasını sağlar; bu sentezin azalması değil, yıkımın artmasıdır.",
+    "B": "Artmış otofaji organellerin kendi kendine yenmesidir; atrofinin yıkım mekanizmalarındandır, sentezi açıklamaz.",
+    "C": "Kök hücrelerin farklı yönde yeniden programlanması metaplazinin mekanizmasıdır; atrofide protein sentezini düşürmez.",
+    "D": "Düşük metabolik aktivite doğru. Atrofide protein sentezi düşük metabolik aktiviteye bağlı olarak azalır.",
+    "E": "Adrenerjik uyarım kalp hipertrofisini tetikler ve protein sentezini artırır; atrofideki azalmanın nedeni değildir."
+   },
+   "ozet": "Atrofide düşük metabolik aktiviteye bağlı protein sentezi azalır, ubikuitin proteazom sistemiyle protein yıkımı ve otofaji artar.",
+   "metin": "**Soru.** Atrofide azalmış protein sentezinin nedeni hangisidir?\n\n**A)** Ubikuitinle işaretlenme · **B)** Artmış otofaji · **C)** Kök hücre programlanması · **D)** Düşük metabolik aktivite · **E)** Adrenerjik uyarım\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Ubikuitinle işaretlenme** — Ubikuitinle işaretlenme proteinlerin proteazomda parçalanmasını sağlar; bu sentezin azalması değil, yıkımın artmasıdır.\n- **Artmış otofaji** — Artmış otofaji organellerin kendi kendine yenmesidir; atrofinin yıkım mekanizmalarındandır, sentezi açıklamaz.\n- **Kök hücre programlanması** — Kök hücrelerin farklı yönde yeniden programlanması metaplazinin mekanizmasıdır; atrofide protein sentezini düşürmez.\n- **Düşük metabolik aktivite** — Düşük metabolik aktivite doğru. Atrofide protein sentezi düşük metabolik aktiviteye bağlı olarak azalır.\n- **Adrenerjik uyarım** — Adrenerjik uyarım kalp hipertrofisini tetikler ve protein sentezini artırır; atrofideki azalmanın nedeni değildir.\n\n**Cevap: D** — Düşük metabolik aktivite\n\n**Özet.** Atrofide düşük metabolik aktiviteye bağlı protein sentezi azalır, ubikuitin proteazom sistemiyle protein yıkımı ve otofaji artar.",
+   "ses": "Atrofide azalmış protein sentezinin nedeni hangisidir?\nA, Ubikuitinle işaretlenme\nBe, Artmış otofaji\nCe, Kök hücre programlanması\nDe, Düşük metabolik aktivite\nE, Adrenerjik uyarım\nSeçenekleri sırayla değerlendirelim.\nUbikuitinle işaretlenme proteinlerin proteazomda parçalanmasını sağlar. Bu sentezin azalması değil, yıkımın artmasıdır.\nArtmış otofaji organellerin kendi kendine yenmesidir. Atrofinin yıkım mekanizmalarındandır, sentezi açıklamaz.\nKök hücrelerin farklı yönde yeniden programlanması metaplazinin mekanizmasıdır. Atrofide protein sentezini düşürmez.\nDüşük metabolik aktivite doğru. Atrofide protein sentezi düşük metabolik aktiviteye bağlı olarak azalır.\nAdrenerjik uyarım kalp hipertrofisini tetikler ve protein sentezini artırır. Atrofideki azalmanın nedeni değildir.\nDoğru cevap De, Düşük metabolik aktivite\nAtrofide düşük metabolik aktiviteye bağlı protein sentezi azalır, ubikuitin proteazom sistemiyle protein yıkımı ve otofaji artar.",
+   "kelime": 138
+  },
+  {
+   "no": 34,
+   "tur": "ornek",
+   "soru": "Metaplazinin amacı hangisidir?",
+   "secenekler": {
+    "A": "Strese dayanıklı hücre tipiyle uyum",
+    "B": "Hücre sayısını artırmak",
+    "C": "Enerji tasarrufu sağlamak",
+    "D": "Organı büyütmek",
+    "E": "Hasarlı organelleri uzaklaştırmak"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Strese dayanıklı hücre tipiyle uyum doğru. Metaplazi, mevcut stres ortamına daha dayanıklı olgun bir hücre tipiyle adaptasyonu amaçlar.",
+    "B": "Hücre sayısını artırmak hiperplazinin işidir; metaplazide sayı değil, olgun hücrenin tipi değişir.",
+    "C": "Enerji tasarrufu, kısıtlı koşullarda hayatta kalmayı sağlayan atrofinin amacıdır; metaplazinin amacı değildir.",
+    "D": "Organı büyütmek hipertrofi ve hiperplazinin sonucudur; metaplazi organı büyütmez, hücre tipini değiştirir.",
+    "E": "Hasarlı organelleri uzaklaştırmak otofajinin amaçlarından biridir; metaplazinin amacı değildir."
+   },
+   "ozet": "Metaplazi, olgun bir hücre tipinin strese daha dayanıklı başka bir olgun tiple yer değiştirmesidir; sayı artışı hiperplazi, enerji tasarrufu atrofi, organel temizliği otofajidir.",
+   "metin": "**Soru.** Metaplazinin amacı hangisidir?\n\n**A)** Strese dayanıklı hücre tipiyle uyum · **B)** Hücre sayısını artırmak · **C)** Enerji tasarrufu sağlamak · **D)** Organı büyütmek · **E)** Hasarlı organelleri uzaklaştırmak\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Strese dayanıklı hücre tipiyle uyum** — Strese dayanıklı hücre tipiyle uyum doğru. Metaplazi, mevcut stres ortamına daha dayanıklı olgun bir hücre tipiyle adaptasyonu amaçlar.\n- **Hücre sayısını artırmak** — Hücre sayısını artırmak hiperplazinin işidir; metaplazide sayı değil, olgun hücrenin tipi değişir.\n- **Enerji tasarrufu sağlamak** — Enerji tasarrufu, kısıtlı koşullarda hayatta kalmayı sağlayan atrofinin amacıdır; metaplazinin amacı değildir.\n- **Organı büyütmek** — Organı büyütmek hipertrofi ve hiperplazinin sonucudur; metaplazi organı büyütmez, hücre tipini değiştirir.\n- **Hasarlı organelleri uzaklaştırmak** — Hasarlı organelleri uzaklaştırmak otofajinin amaçlarından biridir; metaplazinin amacı değildir.\n\n**Cevap: A** — Strese dayanıklı hücre tipiyle uyum\n\n**Özet.** Metaplazi, olgun bir hücre tipinin strese daha dayanıklı başka bir olgun tiple yer değiştirmesidir; sayı artışı hiperplazi, enerji tasarrufu atrofi, organel temizliği otofajidir.",
+   "ses": "Metaplazinin amacı hangisidir?\nA, Strese dayanıklı hücre tipiyle uyum\nBe, Hücre sayısını artırmak\nCe, Enerji tasarrufu sağlamak\nDe, Organı büyütmek\nE, Hasarlı organelleri uzaklaştırmak\nHer seçeneği tek tek ele alalım.\nStrese dayanıklı hücre tipiyle uyum doğru. Metaplazi, mevcut stres ortamına daha dayanıklı olgun bir hücre tipiyle adaptasyonu amaçlar.\nHücre sayısını artırmak hiperplazinin işidir. Metaplazide sayı değil, olgun hücrenin tipi değişir.\nEnerji tasarrufu, kısıtlı koşullarda hayatta kalmayı sağlayan atrofinin amacıdır. Metaplazinin amacı değildir.\nOrganı büyütmek hipertrofi ve hiperplazinin sonucudur. Metaplazi organı büyütmez, hücre tipini değiştirir.\nHasarlı organelleri uzaklaştırmak otofajinin amaçlarından biridir. Metaplazinin amacı değildir.\nDoğru cevap A, Strese dayanıklı hücre tipiyle uyum\nMetaplazi, olgun bir hücre tipinin strese daha dayanıklı başka bir olgun tiple yer değiştirmesidir. Sayı artışı hiperplazi, enerji tasarrufu atrofi, organel temizliği otofajidir.",
+   "kelime": 157
+  },
+  {
+   "no": 35,
+   "tur": "ornek",
+   "soru": "Mezenkimal metaplazi için hangisi doğrudur?",
+   "secenekler": {
+    "A": "Yalnız epitelde görülür",
+    "B": "Uyumdan çok reaktif bir değişimdir",
+    "C": "Kolumnar epitel gelişir",
+    "D": "Hormon dengesizliğiyle gelişir",
+    "E": "Adenokarsinom zemini oluşturur"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Metaplazi yalnız epitelde değil mezenkimal dokuda da görülür; örneği yumuşak dokuda kemik oluşumudur.",
+    "B": "Uyumdan çok reaktif bir değişim olması doğru. Mezenkimal metaplazi, yumuşak dokuda travma odaklarında ve skarda kemik oluşumudur ve genellikle patolojik süreçlere eşlik eder.",
+    "C": "Kolumnar epitel gelişimi reflüde alt özofagusta görülen Barrett tipi epitel metaplazisidir; mezenkimal metaplazide kemik oluşur.",
+    "D": "Hormon dengesizliği patolojik hiperplazinin nedenidir, endometrial hiperplazi gibi; mezenkimal metaplazi travma ve skar zemininde gelişir.",
+    "E": "Adenokarsinom zemini, reflüye bağlı Barrett metaplazisinin klinik önemidir; mezenkimal metaplazi için bu özellik tanımlanmaz."
+   },
+   "ozet": "Mezenkimal metaplazi yumuşak dokuda travma odaklarında ve skar dokusunda kemik oluşumudur; patolojik süreçlere eşlik eder ve uyumdan çok reaktif bir değişimdir.",
+   "metin": "**Soru.** Mezenkimal metaplazi için hangisi doğrudur?\n\n**A)** Yalnız epitelde görülür · **B)** Uyumdan çok reaktif bir değişimdir · **C)** Kolumnar epitel gelişir · **D)** Hormon dengesizliğiyle gelişir · **E)** Adenokarsinom zemini oluşturur\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Yalnız epitelde görülür** — Metaplazi yalnız epitelde değil mezenkimal dokuda da görülür; örneği yumuşak dokuda kemik oluşumudur.\n- **Uyumdan çok reaktif bir değişimdir** — Uyumdan çok reaktif bir değişim olması doğru. Mezenkimal metaplazi, yumuşak dokuda travma odaklarında ve skarda kemik oluşumudur ve genellikle patolojik süreçlere eşlik eder.\n- **Kolumnar epitel gelişir** — Kolumnar epitel gelişimi reflüde alt özofagusta görülen Barrett tipi epitel metaplazisidir; mezenkimal metaplazide kemik oluşur.\n- **Hormon dengesizliğiyle gelişir** — Hormon dengesizliği patolojik hiperplazinin nedenidir, endometrial hiperplazi gibi; mezenkimal metaplazi travma ve skar zemininde gelişir.\n- **Adenokarsinom zemini oluşturur** — Adenokarsinom zemini, reflüye bağlı Barrett metaplazisinin klinik önemidir; mezenkimal metaplazi için bu özellik tanımlanmaz.\n\n**Cevap: B** — Uyumdan çok reaktif bir değişimdir\n\n**Özet.** Mezenkimal metaplazi yumuşak dokuda travma odaklarında ve skar dokusunda kemik oluşumudur; patolojik süreçlere eşlik eder ve uyumdan çok reaktif bir değişimdir.",
+   "ses": "Mezenkimal metaplazi için hangisi doğrudur?\nA, Yalnız epitelde görülür\nBe, Uyumdan çok reaktif bir değişimdir\nCe, Kolumnar epitel gelişir\nDe, Hormon dengesizliğiyle gelişir\nE, Adenokarsinom zemini oluşturur\nŞıkları sırasıyla gözden geçirelim.\nMetaplazi yalnız epitelde değil mezenkimal dokuda da görülür. Örneği yumuşak dokuda kemik oluşumudur.\nUyumdan çok reaktif bir değişim olması doğru. Mezenkimal metaplazi, yumuşak dokuda travma odaklarında ve skarda kemik oluşumudur ve genellikle patolojik süreçlere eşlik eder.\nKolumnar epitel gelişimi reflüde alt özofagusta görülen Barrett tipi epitel metaplazisidir. Mezenkimal metaplazide kemik oluşur.\nHormon dengesizliği patolojik hiperplazinin nedenidir, endometrial hiperplazi gibi. Mezenkimal metaplazi travma ve skar zemininde gelişir.\nAdenokarsinom zemini, reflüye bağlı Barrett metaplazisinin klinik önemidir. Mezenkimal metaplazi için bu özellik tanımlanmaz.\nDoğru cevap Be, Uyumdan çok reaktif bir değişimdir\nMezenkimal metaplazi yumuşak dokuda travma odaklarında ve skar dokusunda kemik oluşumudur. Patolojik süreçlere eşlik eder ve uyumdan çok reaktif bir değişimdir.",
+   "kelime": 174
+  },
+  {
+   "no": 36,
+   "tur": "ornek",
+   "soru": "Uzamış metaplazi hangisi için zemin oluşturur?",
+   "secenekler": {
+    "A": "Atrofi",
+    "B": "Telafi edici hiperplazi",
+    "C": "Fizyolojik hipertrofi",
+    "D": "Koagülatif nekroz",
+    "E": "Displazi ve malign dönüşüm"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Atrofi hücre boyutu ve veya sayısında azalmadır; uzamış metaplazinin sonucu olarak tanımlanmaz.",
+    "B": "Telafi edici hiperplazi doku kaybını kalan hücrelerin çoğalmasıyla karşılar; metaplazinin ilerleyişiyle ilgili değildir.",
+    "C": "Fizyolojik hipertrofi normal uyarıya, örneğin egzersize verilen boyut artışıdır; metaplazinin uzun vadeli sonucu değildir.",
+    "D": "Koagülatif nekroz, miyokardda iskemik geri dönüşümsüz hasarın karşılığıdır; uzamış metaplazinin sonucu olarak sayılmaz.",
+    "E": "Displazi ve malign dönüşüm doğru. Metaplazi strese dayanıklılık kazandırır, ama uzarsa displazi ve malign dönüşüm için zemin oluşturur."
+   },
+   "ozet": "Metaplazi çift uçlu kılıçtır; yeni hücre strese dayanıklıdır, fakat normal fonksiyonlar kaybolabilir ve uzamış metaplazi displazi ile malign dönüşüm için zemin olur.",
+   "metin": "**Soru.** Uzamış metaplazi hangisi için zemin oluşturur?\n\n**A)** Atrofi · **B)** Telafi edici hiperplazi · **C)** Fizyolojik hipertrofi · **D)** Koagülatif nekroz · **E)** Displazi ve malign dönüşüm\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Atrofi** — Atrofi hücre boyutu ve veya sayısında azalmadır; uzamış metaplazinin sonucu olarak tanımlanmaz.\n- **Telafi edici hiperplazi** — Telafi edici hiperplazi doku kaybını kalan hücrelerin çoğalmasıyla karşılar; metaplazinin ilerleyişiyle ilgili değildir.\n- **Fizyolojik hipertrofi** — Fizyolojik hipertrofi normal uyarıya, örneğin egzersize verilen boyut artışıdır; metaplazinin uzun vadeli sonucu değildir.\n- **Koagülatif nekroz** — Koagülatif nekroz, miyokardda iskemik geri dönüşümsüz hasarın karşılığıdır; uzamış metaplazinin sonucu olarak sayılmaz.\n- **Displazi ve malign dönüşüm** — Displazi ve malign dönüşüm doğru. Metaplazi strese dayanıklılık kazandırır, ama uzarsa displazi ve malign dönüşüm için zemin oluşturur.\n\n**Cevap: E** — Displazi ve malign dönüşüm\n\n**Özet.** Metaplazi çift uçlu kılıçtır; yeni hücre strese dayanıklıdır, fakat normal fonksiyonlar kaybolabilir ve uzamış metaplazi displazi ile malign dönüşüm için zemin olur.",
+   "ses": "Uzamış metaplazi hangisi için zemin oluşturur?\nA, Atrofi\nBe, Telafi edici hiperplazi\nCe, Fizyolojik hipertrofi\nDe, Koagülatif nekroz\nE, Displazi ve malign dönüşüm\nŞimdi seçeneklere tek tek bakalım.\nAtrofi hücre boyutu ve veya sayısında azalmadır. Uzamış metaplazinin sonucu olarak tanımlanmaz.\nTelafi edici hiperplazi doku kaybını kalan hücrelerin çoğalmasıyla karşılar. Metaplazinin ilerleyişiyle ilgili değildir.\nFizyolojik hipertrofi normal uyarıya, örneğin egzersize verilen boyut artışıdır. Metaplazinin uzun vadeli sonucu değildir.\nKoagülatif nekroz, miyokardda iskemik geri dönüşümsüz hasarın karşılığıdır. Uzamış metaplazinin sonucu olarak sayılmaz.\nDisplazi ve malign dönüşüm doğru. Metaplazi strese dayanıklılık kazandırır, ama uzarsa displazi ve malign dönüşüm için zemin oluşturur.\nDoğru cevap E, Displazi ve malign dönüşüm\nMetaplazi çift uçlu kılıçtır. Yeni hücre strese dayanıklıdır, fakat normal fonksiyonlar kaybolabilir ve uzamış metaplazi displazi ile malign dönüşüm için zemin olur.",
+   "kelime": 156
+  },
+  {
+   "no": 37,
+   "tur": "ornek",
+   "soru": "Otofajinin amaçlarından biri hangisidir?",
+   "secenekler": {
+    "A": "Hücre sayısını artırmak",
+    "B": "Yeni sarkomer sentezlemek",
+    "C": "Hasarlı organelleri uzaklaştırmak",
+    "D": "Hücre tipini değiştirmek",
+    "E": "Proteinleri ubikuitinle işaretlemek"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Hücre sayısını artırmak hiperplazinin özelliğidir; otofaji hücre çoğalmasıyla değil, hücre içi bileşenlerin sindirimiyle ilgilidir.",
+    "B": "Yeni sarkomer sentezi kalp hipertrofisinin sonucudur; otofaji yapım değil, lizozomlarda yıkım sürecidir.",
+    "C": "Hasarlı organelleri uzaklaştırmak doğru. Otofajinin iki amacı besin kıtlığında enerji sağlamak ve hasarlı organelleri uzaklaştırmaktır.",
+    "D": "Hücre tipini değiştirmek metaplazinin özelliğidir ve kök hücrelerin yeniden programlanmasıyla olur; otofajinin amacı değildir.",
+    "E": "Ubikuitinle işaretleme, proteinlerin proteazomda parçalanmasını sağlayan ayrı bir yıkım yoludur; otofaji ise lizozomlarda gerçekleşir."
+   },
+   "ozet": "Otofaji, hücrenin kendi bileşenlerini lizozomlarda sindirmesidir; besin kıtlığında enerji sağlar ve hasarlı organelleri uzaklaştırır, aşırı otofaji ise apoptozla sonuçlanabilir.",
+   "metin": "**Soru.** Otofajinin amaçlarından biri hangisidir?\n\n**A)** Hücre sayısını artırmak · **B)** Yeni sarkomer sentezlemek · **C)** Hasarlı organelleri uzaklaştırmak · **D)** Hücre tipini değiştirmek · **E)** Proteinleri ubikuitinle işaretlemek\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Hücre sayısını artırmak** — Hücre sayısını artırmak hiperplazinin özelliğidir; otofaji hücre çoğalmasıyla değil, hücre içi bileşenlerin sindirimiyle ilgilidir.\n- **Yeni sarkomer sentezlemek** — Yeni sarkomer sentezi kalp hipertrofisinin sonucudur; otofaji yapım değil, lizozomlarda yıkım sürecidir.\n- **Hasarlı organelleri uzaklaştırmak** — Hasarlı organelleri uzaklaştırmak doğru. Otofajinin iki amacı besin kıtlığında enerji sağlamak ve hasarlı organelleri uzaklaştırmaktır.\n- **Hücre tipini değiştirmek** — Hücre tipini değiştirmek metaplazinin özelliğidir ve kök hücrelerin yeniden programlanmasıyla olur; otofajinin amacı değildir.\n- **Proteinleri ubikuitinle işaretlemek** — Ubikuitinle işaretleme, proteinlerin proteazomda parçalanmasını sağlayan ayrı bir yıkım yoludur; otofaji ise lizozomlarda gerçekleşir.\n\n**Cevap: C** — Hasarlı organelleri uzaklaştırmak\n\n**Özet.** Otofaji, hücrenin kendi bileşenlerini lizozomlarda sindirmesidir; besin kıtlığında enerji sağlar ve hasarlı organelleri uzaklaştırır, aşırı otofaji ise apoptozla sonuçlanabilir.",
+   "ses": "Otofajinin amaçlarından biri hangisidir?\nA, Hücre sayısını artırmak\nBe, Yeni sarkomer sentezlemek\nCe, Hasarlı organelleri uzaklaştırmak\nDe, Hücre tipini değiştirmek\nE, Proteinleri ubikuitinle işaretlemek\nSeçenekleri sırayla değerlendirelim.\nHücre sayısını artırmak hiperplazinin özelliğidir. Otofaji hücre çoğalmasıyla değil, hücre içi bileşenlerin sindirimiyle ilgilidir.\nYeni sarkomer sentezi kalp hipertrofisinin sonucudur. Otofaji yapım değil, lizozomlarda yıkım sürecidir.\nHasarlı organelleri uzaklaştırmak doğru. Otofajinin iki amacı besin kıtlığında enerji sağlamak ve hasarlı organelleri uzaklaştırmaktır.\nHücre tipini değiştirmek metaplazinin özelliğidir ve kök hücrelerin yeniden programlanmasıyla olur. Otofajinin amacı değildir.\nUbikuitinle işaretleme, proteinlerin proteazomda parçalanmasını sağlayan ayrı bir yıkım yoludur. Otofaji ise lizozomlarda gerçekleşir.\nDoğru cevap Ce, Hasarlı organelleri uzaklaştırmak\nOtofaji, hücrenin kendi bileşenlerini lizozomlarda sindirmesidir. Besin kıtlığında enerji sağlar ve hasarlı organelleri uzaklaştırır, aşırı otofaji ise apoptozla sonuçlanabilir.",
+   "kelime": 153
+  },
+  {
+   "no": 38,
+   "tur": "ornek",
+   "soru": "Şiddetli ve kalıcı streste hücrede sonunda hangisi gelişir?",
+   "secenekler": {
+    "A": "Hipertrofi",
+    "B": "Metaplazi",
+    "C": "Atrofi",
+    "D": "Nekroz veya apoptoz",
+    "E": "Hiperplazi"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Hipertrofi hafif ya da orta şiddette streste gelişen bir adaptasyondur; hücre canlı kalır.",
+    "B": "Metaplazi hafif ya da orta streste gelişen, geri dönebilen bir adaptasyondur; ölüm sonucu değildir.",
+    "C": "Atrofi kısıtlı koşullarda hayatta kalmayı sağlayan bir adaptasyondur; şiddetli ve kalıcı stresin son noktası değildir.",
+    "D": "Nekroz veya apoptoz doğru. Şiddetli ve kalıcı streste önce geri dönüşümlü, sonra geri dönüşümsüz hasar gelişir ve hücre ölür.",
+    "E": "Hiperplazi hafif ya da orta streste görülen bir adaptasyondur, örneğin hormon uyarısında; hücre ölümü değildir."
+   },
+   "ozet": "Aynı etken doz ve süreye göre spektrum oluşturur; hafif ya da orta streste adaptasyon, şiddetli ve kalıcı streste hasar ve sonunda nekroz veya apoptoz gelişir.",
+   "metin": "**Soru.** Şiddetli ve kalıcı streste hücrede sonunda hangisi gelişir?\n\n**A)** Hipertrofi · **B)** Metaplazi · **C)** Atrofi · **D)** Nekroz veya apoptoz · **E)** Hiperplazi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Hipertrofi** — Hipertrofi hafif ya da orta şiddette streste gelişen bir adaptasyondur; hücre canlı kalır.\n- **Metaplazi** — Metaplazi hafif ya da orta streste gelişen, geri dönebilen bir adaptasyondur; ölüm sonucu değildir.\n- **Atrofi** — Atrofi kısıtlı koşullarda hayatta kalmayı sağlayan bir adaptasyondur; şiddetli ve kalıcı stresin son noktası değildir.\n- **Nekroz veya apoptoz** — Nekroz veya apoptoz doğru. Şiddetli ve kalıcı streste önce geri dönüşümlü, sonra geri dönüşümsüz hasar gelişir ve hücre ölür.\n- **Hiperplazi** — Hiperplazi hafif ya da orta streste görülen bir adaptasyondur, örneğin hormon uyarısında; hücre ölümü değildir.\n\n**Cevap: D** — Nekroz veya apoptoz\n\n**Özet.** Aynı etken doz ve süreye göre spektrum oluşturur; hafif ya da orta streste adaptasyon, şiddetli ve kalıcı streste hasar ve sonunda nekroz veya apoptoz gelişir.",
+   "ses": "Şiddetli ve kalıcı streste hücrede sonunda hangisi gelişir?\nA, Hipertrofi\nBe, Metaplazi\nCe, Atrofi\nDe, Nekroz veya apoptoz\nE, Hiperplazi\nHer seçeneği tek tek ele alalım.\nHipertrofi hafif ya da orta şiddette streste gelişen bir adaptasyondur. Hücre canlı kalır.\nMetaplazi hafif ya da orta streste gelişen, geri dönebilen bir adaptasyondur. Ölüm sonucu değildir.\nAtrofi kısıtlı koşullarda hayatta kalmayı sağlayan bir adaptasyondur. Şiddetli ve kalıcı stresin son noktası değildir.\nNekroz veya apoptoz doğru. Şiddetli ve kalıcı streste önce geri dönüşümlü, sonra geri dönüşümsüz hasar gelişir ve hücre ölür.\nHiperplazi hafif ya da orta streste görülen bir adaptasyondur, örneğin hormon uyarısında. Hücre ölümü değildir.\nDoğru cevap De, Nekroz veya apoptoz\nAynı etken doz ve süreye göre spektrum oluşturur. Hafif ya da orta streste adaptasyon, şiddetli ve kalıcı streste hasar ve sonunda nekroz veya apoptoz gelişir.",
+   "kelime": 157
+  }
+ ]
+}

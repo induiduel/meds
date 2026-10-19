@@ -499,7 +499,13 @@
 }
 :root.is-app-fullscreen .sh-main {
   padding-top: max(12px, env(safe-area-inset-top, 0px)) !important;
-  padding-bottom: max(20px, env(safe-area-inset-bottom, 0px)) !important;
+  padding-bottom: calc(max(20px, env(safe-area-inset-bottom, 0px)) + var(--cd-dock-h, 0px)) !important;
+}
+:root.is-app-fullscreen.cd-ders-acik .sh-main {
+  padding-bottom: 0 !important;
+}
+:root.is-app-fullscreen .on-arac-1 {
+  padding-right: 138px;
 }
 .s12-fs-exit {
   position: fixed;
@@ -524,6 +530,10 @@
 .s12-fs-exit:hover, .s12-fs-exit:focus-visible { opacity: 1; }
 .s12-fs-exit:active { transform: scale(.96); }
 .s12-fs-exit > svg { width: 14px; height: 14px; }
+@media (max-width: 640px) {
+  .s12-fs-exit { padding: 0 9px; height: 32px; font-size: 11px; }
+  :root.is-app-fullscreen .on-arac-1 { padding-right: 120px; }
+}
 :root:has(.ls-root, .r12-root, .sr-root, .cd-ders.is-tam, .pa, .sc) .s12-fs-exit {
   display: none !important;
 }

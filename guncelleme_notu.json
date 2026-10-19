@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 29,
-  "baslik": "Gerçek Tam Ekran Açılışı ve Bölünmüş Ekran Kaydırma Kilidi Düzeltmesi",
+  "onem": 30,
+  "baslik": "Tam Ekran İlerleme Çubuğu, Kompakt Alt Bar Düzeltmeleri ve Alternatif Sesli Çözücü",
   "maddeler": [
-    "Tüm cihazlarda (iOS, iPadOS, Android ve Masaüstü) Tam Ekran düğmesinin gerçek tarayıcı tam ekranını (Fullscreen API) doğrudan açması sağlandı.",
-    "Tam ekran modunda bölünmüş ekranda (Metin + PDF) kaydırma yaparken arka plan belge köküne (html/body) kayma sızması ve üst/alt sınır aşımı kilitlenerek tam ekrandan kendiliğinden çıkma sorunu giderildi.",
-    "Sesli derste Metin + PDF bölünmüş ekran boyut (%20–%80) ve düzen (Yan Yana / Üst-Alt / PDF ⇄ Metin) kontrolleri eklendi."
+    "Sesli ders, Soru çözücü ve Sınav asistanında tam ekran modunda gizlenen ilerleme çubukları görünür hale getirildi; çok yer kaplayan ilerleme alanları kompakt şeritlere dönüştürüldü.",
+    "Alt çubukların (footer ve ses oynatıcı dock) ekran dışına taşması, yazı büyütmeyle kayması ve mobilde iki satıra bölünmesi giderilerek tüm cihazlarda tek satırda ekrana tam oturması sağlandı.",
+    "Patoloji için her sorunun baştan sona sesli anlatıldığı ve otomatik ilerleyen Alternatif Sesli Soru Çözücü (/alternatif-cozucu, 35 ders · 1.254 soru) eklendi."
   ]
 }

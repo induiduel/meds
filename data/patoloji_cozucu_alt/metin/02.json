@@ -1,0 +1,832 @@
+{
+ "kod": "02",
+ "baslik": "Hücre Hasarı ve Nekroz – I",
+ "surum": "alt-1",
+ "sorular": [
+  {
+   "no": 1,
+   "tur": "ornek",
+   "soru": "Geri dönüşümlü hücre hasarının en erken morfolojik bulgusu hangisidir?",
+   "secenekler": {
+    "A": "Yağlanma",
+    "B": "Karyoreksis",
+    "C": "Hücresel şişme",
+    "D": "Karyolizis",
+    "E": "Kalsifikasyon"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Yağlanma da geri dönüşümlü bir bulgudur; trigliseridlerin sitoplazmik vakuollerde birikimidir, ama en erken bulgu değildir.",
+    "B": "Karyoreksis, piknotik çekirdeğin parçalanmasıdır; geri dönüşümsüz hasarın, yani nekrozun nükleer bulgusudur.",
+    "C": "Hücresel şişme doğru: ATP azalınca Na⁺/K⁺ ATPaz pompası bozulur, hücreye su girer; bu en erken geri dönüşümlü bulgudur.",
+    "D": "Karyolizis, bazofilinin kaybolup çekirdeğin solmasıdır; nekrozda görülür, geri dönüşümlü hasarda değil.",
+    "E": "Kalsifikasyon nekrotik hücrelerin akıbetidir; yağ asitleri kalsiyumla birleşir ve zamanla distrofik kalsifikasyon gelişir."
+   },
+   "ozet": "Hidropik değişim, yani hücresel şişme, geri dönüşümlü hasarın en erken bulgusudur; karyoreksis ve karyolizis ise nekrozda görülür.",
+   "metin": "**Soru.** Geri dönüşümlü hücre hasarının en erken morfolojik bulgusu hangisidir?\n\n**A)** Yağlanma · **B)** Karyoreksis · **C)** Hücresel şişme · **D)** Karyolizis · **E)** Kalsifikasyon\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Yağlanma** — Yağlanma da geri dönüşümlü bir bulgudur; trigliseridlerin sitoplazmik vakuollerde birikimidir, ama en erken bulgu değildir.\n- **Karyoreksis** — Karyoreksis, piknotik çekirdeğin parçalanmasıdır; geri dönüşümsüz hasarın, yani nekrozun nükleer bulgusudur.\n- **Hücresel şişme** — Hücresel şişme doğru: ATP azalınca Na⁺/K⁺ ATPaz pompası bozulur, hücreye su girer; bu en erken geri dönüşümlü bulgudur.\n- **Karyolizis** — Karyolizis, bazofilinin kaybolup çekirdeğin solmasıdır; nekrozda görülür, geri dönüşümlü hasarda değil.\n- **Kalsifikasyon** — Kalsifikasyon nekrotik hücrelerin akıbetidir; yağ asitleri kalsiyumla birleşir ve zamanla distrofik kalsifikasyon gelişir.\n\n**Cevap: C** — Hücresel şişme\n\n**Özet.** Hidropik değişim, yani hücresel şişme, geri dönüşümlü hasarın en erken bulgusudur; karyoreksis ve karyolizis ise nekrozda görülür.",
+   "ses": "Geri dönüşümlü hücre hasarının en erken morfolojik bulgusu hangisidir?\nA, Yağlanma\nBe, Karyoreksis\nCe, Hücresel şişme\nDe, Karyolizis\nE, Kalsifikasyon\nSeçenekleri sırayla değerlendirelim.\nYağlanma da geri dönüşümlü bir bulgudur. Trigliseridlerin sitoplazmik vakuollerde birikimidir, ama en erken bulgu değildir.\nKaryoreksis, piknotik çekirdeğin parçalanmasıdır. Geri dönüşümsüz hasarın, yani nekrozun nükleer bulgusudur.\nHücresel şişme doğru. A te pe azalınca sodyum potasyum a te pe az pompası bozulur, hücreye su girer. Bu en erken geri dönüşümlü bulgudur.\nKaryolizis, bazofilinin kaybolup çekirdeğin solmasıdır. Nekrozda görülür, geri dönüşümlü hasarda değil.\nKalsifikasyon nekrotik hücrelerin akıbetidir. Yağ asitleri kalsiyumla birleşir ve zamanla distrofik kalsifikasyon gelişir.\nDoğru cevap Ce, Hücresel şişme\nHidropik değişim, yani hücresel şişme, geri dönüşümlü hasarın en erken bulgusudur. Karyoreksis ve karyolizis ise nekrozda görülür.",
+   "kelime": 136
+  },
+  {
+   "no": 2,
+   "tur": "ornek",
+   "soru": "Hücresel şişmenin temel mekanizması hangisidir?",
+   "secenekler": {
+    "A": "Na⁺/K⁺ ATPaz pompasının bozulması",
+    "B": "Lizozom rüptürü",
+    "C": "DNA parçalanması",
+    "D": "Kaspaz aktivasyonu",
+    "E": "Trigliserid birikimi"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Na⁺/K⁺ ATPaz pompasının bozulması doğru: ATP eksikliğinde pompa çalışamaz, sodyum ve su hücre içine girer, hücre şişer.",
+    "B": "Lizozom rüptürü, nekrozda elektron mikroskobunda görülen bir bulgudur; geri dönüşümlü şişmenin mekanizması değildir.",
+    "C": "DNA ve kromatin parçalanması nekrozda piknoz, karyoreksis ve karyolizise yol açar; hücresel şişmeyle ilgili değildir.",
+    "D": "Hücresel şişme, enerji eksikliğinde suyun hücreye girmesiyle oluşan geri dönüşümlü bir değişikliktir. Kaspaz aktivasyonu bu sorudaki ayrımı sağlamaz.",
+    "E": "Trigliserid birikimi yağlanmanın, yani steatozun tanımıdır; ayrı bir geri dönüşümlü değişikliktir, şişmenin mekanizması değildir."
+   },
+   "ozet": "ATP azalınca Na⁺/K⁺ ATPaz pompası bozulur, sodyum ve su hücreye girer; ışık mikroskobunda ER dilatasyonuna karşılık gelen berrak vakuoller görülür.",
+   "metin": "**Soru.** Hücresel şişmenin temel mekanizması hangisidir?\n\n**A)** Na⁺/K⁺ ATPaz pompasının bozulması · **B)** Lizozom rüptürü · **C)** DNA parçalanması · **D)** Kaspaz aktivasyonu · **E)** Trigliserid birikimi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Na⁺/K⁺ ATPaz pompasının bozulması** — Na⁺/K⁺ ATPaz pompasının bozulması doğru: ATP eksikliğinde pompa çalışamaz, sodyum ve su hücre içine girer, hücre şişer.\n- **Lizozom rüptürü** — Lizozom rüptürü, nekrozda elektron mikroskobunda görülen bir bulgudur; geri dönüşümlü şişmenin mekanizması değildir.\n- **DNA parçalanması** — DNA ve kromatin parçalanması nekrozda piknoz, karyoreksis ve karyolizise yol açar; hücresel şişmeyle ilgili değildir.\n- **Kaspaz aktivasyonu** — Hücresel şişme, enerji eksikliğinde suyun hücreye girmesiyle oluşan geri dönüşümlü bir değişikliktir. Kaspaz aktivasyonu bu sorudaki ayrımı sağlamaz.\n- **Trigliserid birikimi** — Trigliserid birikimi yağlanmanın, yani steatozun tanımıdır; ayrı bir geri dönüşümlü değişikliktir, şişmenin mekanizması değildir.\n\n**Cevap: A** — Na⁺/K⁺ ATPaz pompasının bozulması\n\n**Özet.** ATP azalınca Na⁺/K⁺ ATPaz pompası bozulur, sodyum ve su hücreye girer; ışık mikroskobunda ER dilatasyonuna karşılık gelen berrak vakuoller görülür.",
+   "ses": "Hücresel şişmenin temel mekanizması hangisidir?\nA, Sodyum potasyum a te pe az pompasının bozulması\nBe, Lizozom rüptürü\nCe, De ne a parçalanması\nDe, Kaspaz aktivasyonu\nE, Trigliserid birikimi\nHer seçeneği tek tek ele alalım.\nSodyum potasyum a te pe az pompasının bozulması doğru. A te pe eksikliğinde pompa çalışamaz, sodyum ve su hücre içine girer, hücre şişer.\nLizozom rüptürü, nekrozda elektron mikroskobunda görülen bir bulgudur. Geri dönüşümlü şişmenin mekanizması değildir.\nDe ne a ve kromatin parçalanması nekrozda piknoz, karyoreksis ve karyolizise yol açar. Hücresel şişmeyle ilgili değildir.\nHücresel şişme, enerji eksikliğinde suyun hücreye girmesiyle oluşan geri dönüşümlü bir değişikliktir. Kaspaz aktivasyonu bu sorudaki ayrımı sağlamaz.\nTrigliserid birikimi yağlanmanın, yani steatozun tanımıdır. Ayrı bir geri dönüşümlü değişikliktir, şişmenin mekanizması değildir.\nDoğru cevap A, Sodyum potasyum a te pe az pompasının bozulması\nA te pe azalınca sodyum potasyum a te pe az pompası bozulur, sodyum ve su hücreye girer. Işık mikroskobunda endoplazmik retikulum dilatasyonuna karşılık gelen berrak vakuoller görülür.",
+   "kelime": 161
+  },
+  {
+   "no": 3,
+   "tur": "ornek",
+   "soru": "Geri dönüşümlü hücre hasarını geri dönüşümsüzden ayıran özellik hangisidir?",
+   "secenekler": {
+    "A": "Karyoreksis",
+    "B": "Lizozom rüptürü",
+    "C": "İçerik sızıntısı",
+    "D": "İnflamatuvar yanıt",
+    "E": "Membran bütünlüğünün korunması"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Karyoreksis, piknotik çekirdeğin parçalanmasıdır; DNA ve kromatin bütünlüğünün bozulduğu geri dönüşümsüz hasarı gösterir.",
+    "B": "Lizozom rüptürü, nekrozda elektron mikroskobunda görülen bir bulgudur; geri dönüşümsüz hasarı gösterir.",
+    "C": "İçerik sızıntısı, hücre ve organel zarları parçalandığında olur; nekrozun temel özelliğidir.",
+    "D": "İnflamatuvar yanıt, nekrotik hücreden sızan içeriğe çevre dokunun tepkisidir; geri dönüşümsüz hasarın sonucudur.",
+    "E": "Membran bütünlüğünün korunması doğru: geri dönüşümlü hasarda fonksiyon ve morfoloji bozulur ama zar sağlam kalır, uyarı kalkınca hücre normale döner."
+   },
+   "ozet": "Geri dönüşümlü hasarda membran bütünlüğü korunur; zarlarda kalıcı hasar, içerik sızıntısı ve inflamasyon ise geri dönüşümsüz hasarı, yani nekrozu gösterir.",
+   "metin": "**Soru.** Geri dönüşümlü hücre hasarını geri dönüşümsüzden ayıran özellik hangisidir?\n\n**A)** Karyoreksis · **B)** Lizozom rüptürü · **C)** İçerik sızıntısı · **D)** İnflamatuvar yanıt · **E)** Membran bütünlüğünün korunması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Karyoreksis** — Karyoreksis, piknotik çekirdeğin parçalanmasıdır; DNA ve kromatin bütünlüğünün bozulduğu geri dönüşümsüz hasarı gösterir.\n- **Lizozom rüptürü** — Lizozom rüptürü, nekrozda elektron mikroskobunda görülen bir bulgudur; geri dönüşümsüz hasarı gösterir.\n- **İçerik sızıntısı** — İçerik sızıntısı, hücre ve organel zarları parçalandığında olur; nekrozun temel özelliğidir.\n- **İnflamatuvar yanıt** — İnflamatuvar yanıt, nekrotik hücreden sızan içeriğe çevre dokunun tepkisidir; geri dönüşümsüz hasarın sonucudur.\n- **Membran bütünlüğünün korunması** — Membran bütünlüğünün korunması doğru: geri dönüşümlü hasarda fonksiyon ve morfoloji bozulur ama zar sağlam kalır, uyarı kalkınca hücre normale döner.\n\n**Cevap: E** — Membran bütünlüğünün korunması\n\n**Özet.** Geri dönüşümlü hasarda membran bütünlüğü korunur; zarlarda kalıcı hasar, içerik sızıntısı ve inflamasyon ise geri dönüşümsüz hasarı, yani nekrozu gösterir.",
+   "ses": "Geri dönüşümlü hücre hasarını geri dönüşümsüzden ayıran özellik hangisidir?\nA, Karyoreksis\nBe, Lizozom rüptürü\nCe, İçerik sızıntısı\nDe, İnflamatuvar yanıt\nE, Membran bütünlüğünün korunması\nŞıkları sırasıyla gözden geçirelim.\nKaryoreksis, piknotik çekirdeğin parçalanmasıdır. De ne a ve kromatin bütünlüğünün bozulduğu geri dönüşümsüz hasarı gösterir.\nLizozom rüptürü, nekrozda elektron mikroskobunda görülen bir bulgudur. Geri dönüşümsüz hasarı gösterir.\nİçerik sızıntısı, hücre ve organel zarları parçalandığında olur. Nekrozun temel özelliğidir.\nİnflamatuvar yanıt, nekrotik hücreden sızan içeriğe çevre dokunun tepkisidir. Geri dönüşümsüz hasarın sonucudur.\nMembran bütünlüğünün korunması doğru. Geri dönüşümlü hasarda fonksiyon ve morfoloji bozulur ama zar sağlam kalır, uyarı kalkınca hücre normale döner.\nDoğru cevap E, Membran bütünlüğünün korunması\nGeri dönüşümlü hasarda membran bütünlüğü korunur. Zarlarda kalıcı hasar, içerik sızıntısı ve inflamasyon ise geri dönüşümsüz hasarı, yani nekrozu gösterir.",
+   "kelime": 150
+  },
+  {
+   "no": 4,
+   "tur": "ornek",
+   "soru": "Kalp kasında tam iskemide geri dönüşümsüz hasar ne kadar sürede gelişebilir?",
+   "secenekler": {
+    "A": "1–2 dakika",
+    "B": "20–30 dakika",
+    "C": "2–3 saat",
+    "D": "12 saat",
+    "E": "24 saat"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "1–2 dakika gerçek değerin çok altındadır; kalp kası bu kadar kısa bir tam iskemide geri dönüşümsüz hasara uğramaz.",
+    "B": "20–30 dakika doğru: kalp kası, tam iskemide yaklaşık 20 ile 30 dakika içinde geri dönüşümsüz hasara uğrayabilir.",
+    "C": "2–3 saat, iskelet kasının tolere edebildiği tam iskemi süresidir; kalp kası çok daha erken hasarlanır.",
+    "D": "12 saat çok geç bir süredir; kalp kası daha ilk yarım saat içinde geri dönüşümsüz hasara uğrayabilir.",
+    "E": "24 saat çok geçtir; bu süre nekrotik çekirdeğin tamamen kaybolabildiği 1–2 günlük döneme yakındır, kalp kasında kalıcı hasar ise yarım saat dolmadan gelişebilir."
+   },
+   "ozet": "Aynı strese hücreler farklı yanıt verir; kalp kası 20–30 dakikada geri dönüşümsüz hasara uğrarken iskelet kası 2–3 saat tam iskemiyi tolere edebilir.",
+   "metin": "**Soru.** Kalp kasında tam iskemide geri dönüşümsüz hasar ne kadar sürede gelişebilir?\n\n**A)** 1–2 dakika · **B)** 20–30 dakika · **C)** 2–3 saat · **D)** 12 saat · **E)** 24 saat\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **1–2 dakika** — 1–2 dakika gerçek değerin çok altındadır; kalp kası bu kadar kısa bir tam iskemide geri dönüşümsüz hasara uğramaz.\n- **20–30 dakika** — 20–30 dakika doğru: kalp kası, tam iskemide yaklaşık 20 ile 30 dakika içinde geri dönüşümsüz hasara uğrayabilir.\n- **2–3 saat** — 2–3 saat, iskelet kasının tolere edebildiği tam iskemi süresidir; kalp kası çok daha erken hasarlanır.\n- **12 saat** — 12 saat çok geç bir süredir; kalp kası daha ilk yarım saat içinde geri dönüşümsüz hasara uğrayabilir.\n- **24 saat** — 24 saat çok geçtir; bu süre nekrotik çekirdeğin tamamen kaybolabildiği 1–2 günlük döneme yakındır, kalp kasında kalıcı hasar ise yarım saat dolmadan gelişebilir.\n\n**Cevap: B** — 20–30 dakika\n\n**Özet.** Aynı strese hücreler farklı yanıt verir; kalp kası 20–30 dakikada geri dönüşümsüz hasara uğrarken iskelet kası 2–3 saat tam iskemiyi tolere edebilir.",
+   "ses": "Kalp kasında tam iskemide geri dönüşümsüz hasar ne kadar sürede gelişebilir?\nA, Bir ile iki dakika\nBe, Yirmi ile otuz dakika\nCe, İki ile üç saat\nDe, On iki saat\nE, Yirmi dört saat\nŞimdi seçeneklere tek tek bakalım.\nBir ile iki dakika gerçek değerin çok altındadır. Kalp kası bu kadar kısa bir tam iskemide geri dönüşümsüz hasara uğramaz.\nYirmi ile otuz dakika doğru. Kalp kası, tam iskemide yaklaşık yirmi ile otuz dakika içinde geri dönüşümsüz hasara uğrayabilir.\nİki ile üç saat, iskelet kasının tolere edebildiği tam iskemi süresidir. Kalp kası çok daha erken hasarlanır.\nOn iki saat çok geç bir süredir. Kalp kası daha ilk yarım saat içinde geri dönüşümsüz hasara uğrayabilir.\nYirmi dört saat çok geçtir. Bu süre nekrotik çekirdeğin tamamen kaybolabildiği bir ile iki günlük döneme yakındır, kalp kasında kalıcı hasar ise yarım saat dolmadan gelişebilir.\nDoğru cevap Be, Yirmi ile otuz dakika\nAynı strese hücreler farklı yanıt verir. Kalp kası yirmi ile otuz dakikada geri dönüşümsüz hasara uğrarken iskelet kası iki ile üç saat tam iskemiyi tolere edebilir.",
+   "kelime": 175
+  },
+  {
+   "no": 5,
+   "tur": "ornek",
+   "soru": "Nekrozda piknotik çekirdeğin parçalanmasına ne ad verilir?",
+   "secenekler": {
+    "A": "Piknoz",
+    "B": "Karyolizis",
+    "C": "Karyoreksis",
+    "D": "Kromatin yoğunlaşması",
+    "E": "Vakuolizasyon"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Piknoz, çekirdeğin büzülüp bazofilisinin arttığı aşamadır; parçalanma henüz yoktur.",
+    "B": "Karyolizis, bazofilinin kaybolup çekirdeğin solmasıdır; parçalanma değil, silinme görüntüsüdür.",
+    "C": "Karyoreksis doğru: piknotik çekirdeğin parçalara ayrılmasıdır; DNA ve kromatin parçalanmasının üç görüntüsünden biridir.",
+    "D": "Kromatin yoğunlaşması geri dönüşümlü hasarın özelliklerindendir; nekrotik çekirdeğin parçalanması değildir.",
+    "E": "Vakuolizasyon, nekrozda sitoplazmada görülen bir değişikliktir; çekirdeğin parçalanmasını anlatmaz."
+   },
+   "ozet": "Piknozda çekirdek büzülür, karyoreksiste piknotik çekirdek parçalanır, karyoliziste bazofili kaybolur ve çekirdek solar; 1–2 günde tamamen kaybolabilir.",
+   "metin": "**Soru.** Nekrozda piknotik çekirdeğin parçalanmasına ne ad verilir?\n\n**A)** Piknoz · **B)** Karyolizis · **C)** Karyoreksis · **D)** Kromatin yoğunlaşması · **E)** Vakuolizasyon\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Piknoz** — Piknoz, çekirdeğin büzülüp bazofilisinin arttığı aşamadır; parçalanma henüz yoktur.\n- **Karyolizis** — Karyolizis, bazofilinin kaybolup çekirdeğin solmasıdır; parçalanma değil, silinme görüntüsüdür.\n- **Karyoreksis** — Karyoreksis doğru: piknotik çekirdeğin parçalara ayrılmasıdır; DNA ve kromatin parçalanmasının üç görüntüsünden biridir.\n- **Kromatin yoğunlaşması** — Kromatin yoğunlaşması geri dönüşümlü hasarın özelliklerindendir; nekrotik çekirdeğin parçalanması değildir.\n- **Vakuolizasyon** — Vakuolizasyon, nekrozda sitoplazmada görülen bir değişikliktir; çekirdeğin parçalanmasını anlatmaz.\n\n**Cevap: C** — Karyoreksis\n\n**Özet.** Piknozda çekirdek büzülür, karyoreksiste piknotik çekirdek parçalanır, karyoliziste bazofili kaybolur ve çekirdek solar; 1–2 günde tamamen kaybolabilir.",
+   "ses": "Nekrozda piknotik çekirdeğin parçalanmasına ne ad verilir?\nA, Piknoz\nBe, Karyolizis\nCe, Karyoreksis\nDe, Kromatin yoğunlaşması\nE, Vakuolizasyon\nSeçenekleri sırayla değerlendirelim.\nPiknoz, çekirdeğin büzülüp bazofilisinin arttığı aşamadır. Parçalanma henüz yoktur.\nKaryolizis, bazofilinin kaybolup çekirdeğin solmasıdır. Parçalanma değil, silinme görüntüsüdür.\nKaryoreksis doğru. Piknotik çekirdeğin parçalara ayrılmasıdır. De ne a ve kromatin parçalanmasının üç görüntüsünden biridir.\nKromatin yoğunlaşması geri dönüşümlü hasarın özelliklerindendir. Nekrotik çekirdeğin parçalanması değildir.\nVakuolizasyon, nekrozda sitoplazmada görülen bir değişikliktir. Çekirdeğin parçalanmasını anlatmaz.\nDoğru cevap Ce, Karyoreksis\nPiknozda çekirdek büzülür, karyoreksiste piknotik çekirdek parçalanır, karyoliziste bazofili kaybolur ve çekirdek solar. Bir ile iki günde tamamen kaybolabilir.",
+   "kelime": 115
+  },
+  {
+   "no": 6,
+   "tur": "ornek",
+   "soru": "Nekrotik hücrede artmış eozinofilinin nedeni hangisidir?",
+   "secenekler": {
+    "A": "Glikojen artışı",
+    "B": "Ribozom artışı",
+    "C": "Yağ birikimi",
+    "D": "Denatüre proteinlere eozin bağlanması",
+    "E": "Kalsiyum birikimi"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Glikojen nekrozda artmaz, kaybolur; glikojen kaybı ve protein denatürasyonu sitoplazmaya camsı homojen görünüm verir.",
+    "B": "Ribozom artmaz; nekrozda RNA kaybolur ve bazofili azalır, bu da eozinofiliyi belirginleştirir.",
+    "C": "Yağ birikimi, yani yağlanma, geri dönüşümlü hasarın özelliğidir; trigliseridler vakuollerde birikir, eozinofiliyi açıklamaz.",
+    "D": "Denatüre proteinlere eozin bağlanması doğru: nekrotik hücrede denatüre olan proteinler eozini bağlar ve sitoplazma daha eozinofilik görünür.",
+    "E": "Kalsiyum birikimi nekrotik hücrelerin geç akıbetidir; yağ asitleri kalsiyumla birleşip distrofik kalsifikasyon yapar."
+   },
+   "ozet": "Nekrotik hücrede artmış eozinofilinin iki nedeni vardır: denatüre proteinlere eozin bağlanması ve RNA kaybıyla bazofilinin azalması.",
+   "metin": "**Soru.** Nekrotik hücrede artmış eozinofilinin nedeni hangisidir?\n\n**A)** Glikojen artışı · **B)** Ribozom artışı · **C)** Yağ birikimi · **D)** Denatüre proteinlere eozin bağlanması · **E)** Kalsiyum birikimi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Glikojen artışı** — Glikojen nekrozda artmaz, kaybolur; glikojen kaybı ve protein denatürasyonu sitoplazmaya camsı homojen görünüm verir.\n- **Ribozom artışı** — Ribozom artmaz; nekrozda RNA kaybolur ve bazofili azalır, bu da eozinofiliyi belirginleştirir.\n- **Yağ birikimi** — Yağ birikimi, yani yağlanma, geri dönüşümlü hasarın özelliğidir; trigliseridler vakuollerde birikir, eozinofiliyi açıklamaz.\n- **Denatüre proteinlere eozin bağlanması** — Denatüre proteinlere eozin bağlanması doğru: nekrotik hücrede denatüre olan proteinler eozini bağlar ve sitoplazma daha eozinofilik görünür.\n- **Kalsiyum birikimi** — Kalsiyum birikimi nekrotik hücrelerin geç akıbetidir; yağ asitleri kalsiyumla birleşip distrofik kalsifikasyon yapar.\n\n**Cevap: D** — Denatüre proteinlere eozin bağlanması\n\n**Özet.** Nekrotik hücrede artmış eozinofilinin iki nedeni vardır: denatüre proteinlere eozin bağlanması ve RNA kaybıyla bazofilinin azalması.",
+   "ses": "Nekrotik hücrede artmış eozinofilinin nedeni hangisidir?\nA, Glikojen artışı\nBe, Ribozom artışı\nCe, Yağ birikimi\nDe, Denatüre proteinlere eozin bağlanması\nE, Kalsiyum birikimi\nHer seçeneği tek tek ele alalım.\nGlikojen nekrozda artmaz, kaybolur. Glikojen kaybı ve protein denatürasyonu sitoplazmaya camsı homojen görünüm verir.\nRibozom artmaz. Nekrozda re ne a kaybolur ve bazofili azalır, bu da eozinofiliyi belirginleştirir.\nYağ birikimi, yani yağlanma, geri dönüşümlü hasarın özelliğidir. Trigliseridler vakuollerde birikir, eozinofiliyi açıklamaz.\nDenatüre proteinlere eozin bağlanması doğru. Nekrotik hücrede denatüre olan proteinler eozini bağlar ve sitoplazma daha eozinofilik görünür.\nKalsiyum birikimi nekrotik hücrelerin geç akıbetidir. Yağ asitleri kalsiyumla birleşip distrofik kalsifikasyon yapar.\nDoğru cevap De, Denatüre proteinlere eozin bağlanması\nNekrotik hücrede artmış eozinofilinin iki nedeni vardır. Denatüre proteinlere eozin bağlanması ve re ne a kaybıyla bazofilinin azalması.",
+   "kelime": 150
+  },
+  {
+   "no": 7,
+   "tur": "ornek",
+   "soru": "Böbrek arter tıkanması sonrası kama şeklinde soluk alan saptanıyor. En olası nekroz hangisidir?",
+   "secenekler": {
+    "A": "Koagülatif",
+    "B": "Sıvılaşma",
+    "C": "Kazeöz",
+    "D": "Yağ",
+    "E": "Fibrinoid"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Koagülatif nekroz doğru: kalp, böbrek ve dalaktaki iskemik enfarktların tipik nekrozudur; doku sert, soluk ve kurudur.",
+    "B": "Sıvılaşma nekrozunda doku tamamen erir ve viskoz sıvıya döner; iskemik enfarktlarda ise istisna olarak beyinde görülür.",
+    "C": "Arter tıkanmasına bağlı böbrek enfarktüsü kama şeklinde, belirgin kenarlı bir koagülatif nekroz alanıdır. Kazeöz nekroz bu sorudaki ayrımı sağlamaz.",
+    "D": "Yağ nekrozu ile karıştırılabilir: Böbrekte iskemik enfarkt, proteinlerin denatüre olduğu ve proteolizin geciktiği nekroz tipiyle gelişir.",
+    "E": "İskemik enfarktın mikroskobisinde çekirdek kaybına karşın hücre konturları korunur. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "İskemik enfarktların tipik nekrozu koagülatif nekrozdur; kama şeklindeki böbrek enfarktüsünde hücreler çekirdeklerini kaybeder ama konturlarını korur.",
+   "metin": "**Soru.** Böbrek arter tıkanması sonrası kama şeklinde soluk alan saptanıyor. En olası nekroz hangisidir?\n\n**A)** Koagülatif · **B)** Sıvılaşma · **C)** Kazeöz · **D)** Yağ · **E)** Fibrinoid\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Koagülatif** — Koagülatif nekroz doğru: kalp, böbrek ve dalaktaki iskemik enfarktların tipik nekrozudur; doku sert, soluk ve kurudur.\n- **Sıvılaşma** — Sıvılaşma nekrozunda doku tamamen erir ve viskoz sıvıya döner; iskemik enfarktlarda ise istisna olarak beyinde görülür.\n- **Kazeöz** — Arter tıkanmasına bağlı böbrek enfarktüsü kama şeklinde, belirgin kenarlı bir koagülatif nekroz alanıdır. Kazeöz nekroz bu sorudaki ayrımı sağlamaz.\n- **Yağ** — Yağ nekrozu ile karıştırılabilir: Böbrekte iskemik enfarkt, proteinlerin denatüre olduğu ve proteolizin geciktiği nekroz tipiyle gelişir.\n- **Fibrinoid** — İskemik enfarktın mikroskobisinde çekirdek kaybına karşın hücre konturları korunur. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz.\n\n**Cevap: A** — Koagülatif\n\n**Özet.** İskemik enfarktların tipik nekrozu koagülatif nekrozdur; kama şeklindeki böbrek enfarktüsünde hücreler çekirdeklerini kaybeder ama konturlarını korur.",
+   "ses": "Böbrek arter tıkanması sonrası kama şeklinde soluk alan saptanıyor. En olası nekroz hangisidir?\nA, Koagülatif\nBe, Sıvılaşma\nCe, Kazeöz\nDe, Yağ\nE, Fibrinoid\nŞıkları sırasıyla gözden geçirelim.\nKoagülatif nekroz doğru. Kalp, böbrek ve dalaktaki iskemik enfarktların tipik nekrozudur. Doku sert, soluk ve kurudur.\nSıvılaşma nekrozunda doku tamamen erir ve viskoz sıvıya döner. İskemik enfarktlarda ise istisna olarak beyinde görülür.\nArter tıkanmasına bağlı böbrek enfarktüsü kama şeklinde, belirgin kenarlı bir koagülatif nekroz alanıdır. Kazeöz nekroz bu sorudaki ayrımı sağlamaz.\nYağ nekrozu ile karıştırılabilir. Böbrekte iskemik enfarkt, proteinlerin denatüre olduğu ve proteolizin geciktiği nekroz tipiyle gelişir.\nİskemik enfarktın mikroskobisinde çekirdek kaybına karşın hücre konturları korunur. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz.\nDoğru cevap A, Koagülatif\nİskemik enfarktların tipik nekrozu koagülatif nekrozdur. Kama şeklindeki böbrek enfarktüsünde hücreler çekirdeklerini kaybeder ama konturlarını korur.",
+   "kelime": 151
+  },
+  {
+   "no": 8,
+   "tur": "ornek",
+   "soru": "İskemik enfarktında koagülatif değil sıvılaşma nekrozu görülen organ hangisidir?",
+   "secenekler": {
+    "A": "Kalp",
+    "B": "Böbrek",
+    "C": "Dalak",
+    "D": "Beyin",
+    "E": "Karaciğer"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Kalp enfarktlarında tipik olarak koagülatif nekroz görülür; kalp kası 20–30 dakikalık tam iskemide geri dönüşümsüz hasara uğrayabilir.",
+    "B": "Böbrek enfarktüsü koagülatif nekrozun klasik örneğidir; kama şeklinde, belirgin kenarlı bir alan oluşur.",
+    "C": "Dalak, kalp ve böbrekle birlikte, iskemik enfarktında koagülatif nekroz görülen organlardandır.",
+    "D": "Beyin doğru: beyin infarktları kuralın istisnasıdır; hipoksik ölümde doku erir ve sıvılaşma nekrozu gelişir.",
+    "E": "Karaciğer ile karıştırılabilir: Karaciğer, trigliseridlerin biriktiği yağlanmanın en sık görüldüğü organlardandır."
+   },
+   "ozet": "İskemik enfarktlar kalp, böbrek ve dalakta koagülatif nekroz yapar; beyin istisnadır ve infarktında sıvılaşma nekrozu görülür.",
+   "metin": "**Soru.** İskemik enfarktında koagülatif değil sıvılaşma nekrozu görülen organ hangisidir?\n\n**A)** Kalp · **B)** Böbrek · **C)** Dalak · **D)** Beyin · **E)** Karaciğer\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Kalp** — Kalp enfarktlarında tipik olarak koagülatif nekroz görülür; kalp kası 20–30 dakikalık tam iskemide geri dönüşümsüz hasara uğrayabilir.\n- **Böbrek** — Böbrek enfarktüsü koagülatif nekrozun klasik örneğidir; kama şeklinde, belirgin kenarlı bir alan oluşur.\n- **Dalak** — Dalak, kalp ve böbrekle birlikte, iskemik enfarktında koagülatif nekroz görülen organlardandır.\n- **Beyin** — Beyin doğru: beyin infarktları kuralın istisnasıdır; hipoksik ölümde doku erir ve sıvılaşma nekrozu gelişir.\n- **Karaciğer** — Karaciğer ile karıştırılabilir: Karaciğer, trigliseridlerin biriktiği yağlanmanın en sık görüldüğü organlardandır.\n\n**Cevap: D** — Beyin\n\n**Özet.** İskemik enfarktlar kalp, böbrek ve dalakta koagülatif nekroz yapar; beyin istisnadır ve infarktında sıvılaşma nekrozu görülür.",
+   "ses": "İskemik enfarktında koagülatif değil sıvılaşma nekrozu görülen organ hangisidir?\nA, Kalp\nBe, Böbrek\nCe, Dalak\nDe, Beyin\nE, Karaciğer\nŞimdi seçeneklere tek tek bakalım.\nKalp enfarktlarında tipik olarak koagülatif nekroz görülür. Kalp kası yirmi ile otuz dakikalık tam iskemide geri dönüşümsüz hasara uğrayabilir.\nBöbrek enfarktüsü koagülatif nekrozun klasik örneğidir. Kama şeklinde, belirgin kenarlı bir alan oluşur.\nDalak, kalp ve böbrekle birlikte, iskemik enfarktında koagülatif nekroz görülen organlardandır.\nBeyin doğru. Beyin infarktları kuralın istisnasıdır. Hipoksik ölümde doku erir ve sıvılaşma nekrozu gelişir.\nKaraciğer ile karıştırılabilir. Karaciğer, trigliseridlerin biriktiği yağlanmanın en sık görüldüğü organlardandır.\nDoğru cevap De, Beyin\nİskemik enfarktlar kalp, böbrek ve dalakta koagülatif nekroz yapar. Beyin istisnadır ve infarktında sıvılaşma nekrozu görülür.",
+   "kelime": 132
+  },
+  {
+   "no": 9,
+   "tur": "ornek",
+   "soru": "Püy oluşturan bakteri enfeksiyonlarında görülen nekroz tipi hangisidir?",
+   "secenekler": {
+    "A": "Koagülatif",
+    "B": "Kazeöz",
+    "C": "Fibrinoid",
+    "D": "Yağ",
+    "E": "Sıvılaşma"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Koagülatif nekroz, iskemik enfarktların tipik nekrozudur; proteoliz gecikir ve doku mimarisi birkaç gün korunur.",
+    "B": "Kazeöz nekroz ile karıştırılabilir: Püy oluşturan enfeksiyonlarda enzimler dokuyu eritir, mimari korunmaz.",
+    "C": "Püy, sarı-krem renkli nekrotik materyaldir ve dokunun erimesiyle oluşur. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz.",
+    "D": "Yağ nekrozu ile karıştırılabilir: Enfeksiyonda biriken püy lokalize olduğunda apse adını alır.",
+    "E": "Sıvılaşma nekrozu doğru: lökosit ve mikrobiyal enzimler dokuyu sıvılaştırır, viskoz sıvı yani püy oluşur."
+   },
+   "ozet": "Püy oluşturan bakteri ve mantar enfeksiyonlarında sıvılaşma nekrozu görülür; püy sarı-krem nekrotik materyaldir, lokalize birikimine apse denir.",
+   "metin": "**Soru.** Püy oluşturan bakteri enfeksiyonlarında görülen nekroz tipi hangisidir?\n\n**A)** Koagülatif · **B)** Kazeöz · **C)** Fibrinoid · **D)** Yağ · **E)** Sıvılaşma\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Koagülatif** — Koagülatif nekroz, iskemik enfarktların tipik nekrozudur; proteoliz gecikir ve doku mimarisi birkaç gün korunur.\n- **Kazeöz** — Kazeöz nekroz ile karıştırılabilir: Püy oluşturan enfeksiyonlarda enzimler dokuyu eritir, mimari korunmaz.\n- **Fibrinoid** — Püy, sarı-krem renkli nekrotik materyaldir ve dokunun erimesiyle oluşur. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz.\n- **Yağ** — Yağ nekrozu ile karıştırılabilir: Enfeksiyonda biriken püy lokalize olduğunda apse adını alır.\n- **Sıvılaşma** — Sıvılaşma nekrozu doğru: lökosit ve mikrobiyal enzimler dokuyu sıvılaştırır, viskoz sıvı yani püy oluşur.\n\n**Cevap: E** — Sıvılaşma\n\n**Özet.** Püy oluşturan bakteri ve mantar enfeksiyonlarında sıvılaşma nekrozu görülür; püy sarı-krem nekrotik materyaldir, lokalize birikimine apse denir.",
+   "ses": "Püy oluşturan bakteri enfeksiyonlarında görülen nekroz tipi hangisidir?\nA, Koagülatif\nBe, Kazeöz\nCe, Fibrinoid\nDe, Yağ\nE, Sıvılaşma\nSeçenekleri sırayla değerlendirelim.\nKoagülatif nekroz, iskemik enfarktların tipik nekrozudur. Proteoliz gecikir ve doku mimarisi birkaç gün korunur.\nKazeöz nekroz ile karıştırılabilir. Püy oluşturan enfeksiyonlarda enzimler dokuyu eritir, mimari korunmaz.\nPüy, sarı-krem renkli nekrotik materyaldir ve dokunun erimesiyle oluşur. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz.\nYağ nekrozu ile karıştırılabilir. Enfeksiyonda biriken püy lokalize olduğunda apse adını alır.\nSıvılaşma nekrozu doğru. Lökosit ve mikrobiyal enzimler dokuyu sıvılaştırır, viskoz sıvı yani püy oluşur.\nDoğru cevap E, Sıvılaşma\nPüy oluşturan bakteri ve mantar enfeksiyonlarında sıvılaşma nekrozu görülür. Püy sarı-krem nekrotik materyaldir, lokalize birikimine apse denir.",
+   "kelime": 131
+  },
+  {
+   "no": 10,
+   "tur": "ornek",
+   "soru": "Islak gangren için doğru olan hangisidir?",
+   "secenekler": {
+    "A": "Klasik histolojik tiptir",
+    "B": "Enfeksiyonla sıvılaşma eklenir",
+    "C": "Beyinde görülür",
+    "D": "Yağ asitleri sabunlaşır",
+    "E": "Apoptozla oluşur"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Klasik histolojik tip değildir; gangrenöz nekroz klinik bir terimdir ve geniş bir koagülatif nekroz alanını tanımlar.",
+    "B": "Enfeksiyonla sıvılaşma eklenmesi doğru: geniş koagülatif nekroz alanına enfeksiyon eklenince ikincil sıvılaşma olur ve buna ıslak gangren denir.",
+    "C": "Beyinde değil, genellikle alt ekstremitede, kan akımının kesildiği alanlarda görülür.",
+    "D": "Yağ asitlerinin kalsiyumla birleşmesi nekrotik hücrelerde kalsifikasyonla ilişkilidir; ıslak gangrenin tanımı değildir.",
+    "E": "Apoptoz programlı, düzenlenmiş hücre ölümüdür; gangren ise kan akımı kesilen dokuda gelişen geniş nekrozdur."
+   },
+   "ozet": "Gangren klinik bir terimdir; genellikle alt ekstremitede geniş koagülatif nekrozu anlatır, enfeksiyonla ikincil sıvılaşma eklenirse ıslak gangren olur.",
+   "metin": "**Soru.** Islak gangren için doğru olan hangisidir?\n\n**A)** Klasik histolojik tiptir · **B)** Enfeksiyonla sıvılaşma eklenir · **C)** Beyinde görülür · **D)** Yağ asitleri sabunlaşır · **E)** Apoptozla oluşur\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Klasik histolojik tiptir** — Klasik histolojik tip değildir; gangrenöz nekroz klinik bir terimdir ve geniş bir koagülatif nekroz alanını tanımlar.\n- **Enfeksiyonla sıvılaşma eklenir** — Enfeksiyonla sıvılaşma eklenmesi doğru: geniş koagülatif nekroz alanına enfeksiyon eklenince ikincil sıvılaşma olur ve buna ıslak gangren denir.\n- **Beyinde görülür** — Beyinde değil, genellikle alt ekstremitede, kan akımının kesildiği alanlarda görülür.\n- **Yağ asitleri sabunlaşır** — Yağ asitlerinin kalsiyumla birleşmesi nekrotik hücrelerde kalsifikasyonla ilişkilidir; ıslak gangrenin tanımı değildir.\n- **Apoptozla oluşur** — Apoptoz programlı, düzenlenmiş hücre ölümüdür; gangren ise kan akımı kesilen dokuda gelişen geniş nekrozdur.\n\n**Cevap: B** — Enfeksiyonla sıvılaşma eklenir\n\n**Özet.** Gangren klinik bir terimdir; genellikle alt ekstremitede geniş koagülatif nekrozu anlatır, enfeksiyonla ikincil sıvılaşma eklenirse ıslak gangren olur.",
+   "ses": "Islak gangren için doğru olan hangisidir?\nA, Klasik histolojik tiptir\nBe, Enfeksiyonla sıvılaşma eklenir\nCe, Beyinde görülür\nDe, Yağ asitleri sabunlaşır\nE, Apoptozla oluşur\nHer seçeneği tek tek ele alalım.\nKlasik histolojik tip değildir. Gangrenöz nekroz klinik bir terimdir ve geniş bir koagülatif nekroz alanını tanımlar.\nEnfeksiyonla sıvılaşma eklenmesi doğru. Geniş koagülatif nekroz alanına enfeksiyon eklenince ikincil sıvılaşma olur ve buna ıslak gangren denir.\nBeyinde değil, genellikle alt ekstremitede, kan akımının kesildiği alanlarda görülür.\nYağ asitlerinin kalsiyumla birleşmesi nekrotik hücrelerde kalsifikasyonla ilişkilidir. Islak gangrenin tanımı değildir.\nApoptoz programlı, düzenlenmiş hücre ölümüdür. Gangren ise kan akımı kesilen dokuda gelişen geniş nekrozdur.\nDoğru cevap Be, Enfeksiyonla sıvılaşma eklenir\nGangren klinik bir terimdir. Genellikle alt ekstremitede geniş koagülatif nekrozu anlatır, enfeksiyonla ikincil sıvılaşma eklenirse ıslak gangren olur.",
+   "kelime": 154
+  },
+  {
+   "no": 11,
+   "tur": "ornek",
+   "soru": "Nekroz için doğru olan hangisidir?",
+   "secenekler": {
+    "A": "Fizyolojik olabilir",
+    "B": "Programlı ölümdür",
+    "C": "İnflamasyon yapmaz",
+    "D": "Her zaman patolojiktir",
+    "E": "Membran sağlamdır"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Fizyolojik olabilen ölüm apoptozdur; nekroz hiçbir zaman fizyolojik değildir.",
+    "B": "Programlı, düzenlenmiş hücre ölümü apoptozdur; nekroz programlı değil, kazara gelişen bir ölümdür.",
+    "C": "İnflamasyon yapmaz ifadesi yanlıştır; nekrozda hücre içeriği dışarı sızar ve çevre dokuda inflamatuvar yanıt oluşur.",
+    "D": "Her zaman patolojik olması doğru: nekroz kazara hücre ölümüdür, şiddetli enerji yetersizliği ya da toksik hasarla gelişir.",
+    "E": "Membran sağlamlığı geri dönüşümlü hasarın özelliğidir; nekrozda hücre ve organel zarları parçalanır."
+   },
+   "ozet": "Nekroz kazara gelişen ve her zaman patolojik olan hücre ölümüdür; zarlar parçalanır, içerik sızar, inflamasyon olur, apoptoz ise fizyolojik de olabilir.",
+   "metin": "**Soru.** Nekroz için doğru olan hangisidir?\n\n**A)** Fizyolojik olabilir · **B)** Programlı ölümdür · **C)** İnflamasyon yapmaz · **D)** Her zaman patolojiktir · **E)** Membran sağlamdır\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Fizyolojik olabilir** — Fizyolojik olabilen ölüm apoptozdur; nekroz hiçbir zaman fizyolojik değildir.\n- **Programlı ölümdür** — Programlı, düzenlenmiş hücre ölümü apoptozdur; nekroz programlı değil, kazara gelişen bir ölümdür.\n- **İnflamasyon yapmaz** — İnflamasyon yapmaz ifadesi yanlıştır; nekrozda hücre içeriği dışarı sızar ve çevre dokuda inflamatuvar yanıt oluşur.\n- **Her zaman patolojiktir** — Her zaman patolojik olması doğru: nekroz kazara hücre ölümüdür, şiddetli enerji yetersizliği ya da toksik hasarla gelişir.\n- **Membran sağlamdır** — Membran sağlamlığı geri dönüşümlü hasarın özelliğidir; nekrozda hücre ve organel zarları parçalanır.\n\n**Cevap: D** — Her zaman patolojiktir\n\n**Özet.** Nekroz kazara gelişen ve her zaman patolojik olan hücre ölümüdür; zarlar parçalanır, içerik sızar, inflamasyon olur, apoptoz ise fizyolojik de olabilir.",
+   "ses": "Nekroz için doğru olan hangisidir?\nA, Fizyolojik olabilir\nBe, Programlı ölümdür\nCe, İnflamasyon yapmaz\nDe, Her zaman patolojiktir\nE, Membran sağlamdır\nŞıkları sırasıyla gözden geçirelim.\nFizyolojik olabilen ölüm apoptozdur. Nekroz hiçbir zaman fizyolojik değildir.\nProgramlı, düzenlenmiş hücre ölümü apoptozdur. Nekroz programlı değil, kazara gelişen bir ölümdür.\nİnflamasyon yapmaz ifadesi yanlıştır. Nekrozda hücre içeriği dışarı sızar ve çevre dokuda inflamatuvar yanıt oluşur.\nHer zaman patolojik olması doğru. Nekroz kazara hücre ölümüdür, şiddetli enerji yetersizliği ya da toksik hasarla gelişir.\nMembran sağlamlığı geri dönüşümlü hasarın özelliğidir. Nekrozda hücre ve organel zarları parçalanır.\nDoğru cevap De, Her zaman patolojiktir\nNekroz kazara gelişen ve her zaman patolojik olan hücre ölümüdür. Zarlar parçalanır, içerik sızar, inflamasyon olur, apoptoz ise fizyolojik de olabilir.",
+   "kelime": 145
+  },
+  {
+   "no": 23,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisi en sık görülen nekroz tipidir?",
+   "secenekler": {
+    "A": "Kazeifikasyon nekrozu",
+    "B": "Fibrinoid nekroz",
+    "C": "Yağ nekrozu",
+    "D": "Koagülasyon nekrozu",
+    "E": "Likefaksiyon nekrozu"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Kazeifikasyon nekrozu doku nekrozu kalıplarından biridir, ancak en sık görülen tip değildir.",
+    "B": "Fibrinoid nekroz da nekroz kalıpları arasında sayılır; en sık görülen nekroz tipi bu değildir.",
+    "C": "En sık görülen tip iskemik enfarktların tipik nekrozudur. Yağ nekrozu bu sorudaki ayrımı sağlamaz.",
+    "D": "Koagülasyon nekrozu doğru: en sık görülen nekroz tipidir ve kalp, böbrek, dalak gibi organlarda iskemik enfarktların tipik nekrozudur.",
+    "E": "Likefaksiyon nekrozu püy oluşturan enfeksiyonlarda ve beyin infarktlarında görülür; en sık tip değildir."
+   },
+   "ozet": "Koagülatif nekroz en sık görülen nekroz tipidir; kalp, böbrek ve dalak enfarktlarında görülür, beyin infarktında ise sıvılaşma nekrozu gelişir.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi en sık görülen nekroz tipidir?\n\n**A)** Kazeifikasyon nekrozu · **B)** Fibrinoid nekroz · **C)** Yağ nekrozu · **D)** Koagülasyon nekrozu · **E)** Likefaksiyon nekrozu\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kazeifikasyon nekrozu** — Kazeifikasyon nekrozu doku nekrozu kalıplarından biridir, ancak en sık görülen tip değildir.\n- **Fibrinoid nekroz** — Fibrinoid nekroz da nekroz kalıpları arasında sayılır; en sık görülen nekroz tipi bu değildir.\n- **Yağ nekrozu** — En sık görülen tip iskemik enfarktların tipik nekrozudur. Yağ nekrozu bu sorudaki ayrımı sağlamaz.\n- **Koagülasyon nekrozu** — Koagülasyon nekrozu doğru: en sık görülen nekroz tipidir ve kalp, böbrek, dalak gibi organlarda iskemik enfarktların tipik nekrozudur.\n- **Likefaksiyon nekrozu** — Likefaksiyon nekrozu püy oluşturan enfeksiyonlarda ve beyin infarktlarında görülür; en sık tip değildir.\n\n**Cevap: D** — Koagülasyon nekrozu\n\n**Özet.** Koagülatif nekroz en sık görülen nekroz tipidir; kalp, böbrek ve dalak enfarktlarında görülür, beyin infarktında ise sıvılaşma nekrozu gelişir.",
+   "ses": "Aşağıdakilerden hangisi en sık görülen nekroz tipidir?\nA, Kazeifikasyon nekrozu\nBe, Fibrinoid nekroz\nCe, Yağ nekrozu\nDe, Koagülasyon nekrozu\nE, Likefaksiyon nekrozu\nŞıkları sırasıyla gözden geçirelim.\nKazeifikasyon nekrozu doku nekrozu kalıplarından biridir, ancak en sık görülen tip değildir.\nFibrinoid nekroz da nekroz kalıpları arasında sayılır. En sık görülen nekroz tipi bu değildir.\nEn sık görülen tip, iskemik enfarktların tipik nekrozudur. Yağ nekrozu bu sorudaki ayrımı sağlamaz.\nKoagülasyon nekrozu doğru. En sık görülen nekroz tipidir ve kalp, böbrek, dalak gibi organlarda iskemik enfarktların tipik nekrozudur.\nLikefaksiyon nekrozu püy oluşturan enfeksiyonlarda ve beyin infarktlarında görülür. En sık tip değildir.\nDoğru cevap De, Koagülasyon nekrozu\nKoagülatif nekroz en sık görülen nekroz tipidir. Kalp, böbrek ve dalak enfarktlarında görülür, beyin infarktında ise sıvılaşma nekrozu gelişir.",
+   "kelime": 148
+  },
+  {
+   "no": 24,
+   "tur": "cikmis",
+   "soru": "Enzimatik proteinlerin de denatüre olması (yapılarının bozulması) nedeniyle hücrelerin enzimlerle parçalanmasının geciktiği, hücre sınırlarının ve doku mimarisinin bir süre korunduğu nekroz türü aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Koagülasyon nekrozu",
+    "B": "Likefaksiyon nekrozu",
+    "C": "Kazeöz nekroz",
+    "D": "Yağ nekrozu",
+    "E": "Fibrinoid nekroz"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Koagülasyon nekrozu doğru: yapısal proteinler ve enzimler birlikte denatüre olur, proteoliz gecikir ve doku mimarisi birkaç gün korunur.",
+    "B": "Likefaksiyon nekrozunda tersine doku lökosit ve mikrobiyal enzimlerle tamamen erir ve viskoz sıvıya döner.",
+    "C": "Kazeöz nekroz kalıplar arasında sayılır ama burada tanımlanan değildir; enzimler de denatüre olunca proteolizin gecikmesi koagülatif nekrozun mekanizmasıdır.",
+    "D": "Korunmuş hücre sınırları kalp, böbrek ve dalak enfarktlarında görülen kalıbın özelliğidir. Yağ nekrozu bu sorudaki ayrımı sağlamaz.",
+    "E": "Fibrinoid nekroz da tanımlanan tablo değildir; doku mimarisinin birkaç gün korunması en sık görülen nekroz tipine özgüdür."
+   },
+   "ozet": "Koagülatif nekrozda yapısal proteinler ile enzimler birlikte denatüre olur, proteoliz gecikir ve doku mimarisi birkaç gün korunur; doku sert, soluk ve kurudur.",
+   "metin": "**Soru.** Enzimatik proteinlerin de denatüre olması (yapılarının bozulması) nedeniyle hücrelerin enzimlerle parçalanmasının geciktiği, hücre sınırlarının ve doku mimarisinin bir süre korunduğu nekroz türü aşağıdakilerden hangisidir?\n\n**A)** Koagülasyon nekrozu · **B)** Likefaksiyon nekrozu · **C)** Kazeöz nekroz · **D)** Yağ nekrozu · **E)** Fibrinoid nekroz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Koagülasyon nekrozu** — Koagülasyon nekrozu doğru: yapısal proteinler ve enzimler birlikte denatüre olur, proteoliz gecikir ve doku mimarisi birkaç gün korunur.\n- **Likefaksiyon nekrozu** — Likefaksiyon nekrozunda tersine doku lökosit ve mikrobiyal enzimlerle tamamen erir ve viskoz sıvıya döner.\n- **Kazeöz nekroz** — Kazeöz nekroz kalıplar arasında sayılır ama burada tanımlanan değildir; enzimler de denatüre olunca proteolizin gecikmesi koagülatif nekrozun mekanizmasıdır.\n- **Yağ nekrozu** — Korunmuş hücre sınırları kalp, böbrek ve dalak enfarktlarında görülen kalıbın özelliğidir. Yağ nekrozu bu sorudaki ayrımı sağlamaz.\n- **Fibrinoid nekroz** — Fibrinoid nekroz da tanımlanan tablo değildir; doku mimarisinin birkaç gün korunması en sık görülen nekroz tipine özgüdür.\n\n**Cevap: A** — Koagülasyon nekrozu\n\n**Özet.** Koagülatif nekrozda yapısal proteinler ile enzimler birlikte denatüre olur, proteoliz gecikir ve doku mimarisi birkaç gün korunur; doku sert, soluk ve kurudur.",
+   "ses": "Enzimatik proteinler de denatüre olur, yani yapıları bozulur. Bu nedenle hücrelerin enzimlerle parçalanması gecikir, hücre sınırları ve doku mimarisi bir süre korunur. Bu nekroz türü aşağıdakilerden hangisidir?\nA, Koagülasyon nekrozu\nBe, Likefaksiyon nekrozu\nCe, Kazeöz nekroz\nDe, Yağ nekrozu\nE, Fibrinoid nekroz\nŞimdi seçeneklere tek tek bakalım.\nKoagülasyon nekrozu doğru. Yapısal proteinler ve enzimler birlikte denatüre olur, proteoliz gecikir ve doku mimarisi birkaç gün korunur.\nLikefaksiyon nekrozunda tersine doku, lökosit ve mikrobiyal enzimlerle tamamen erir ve viskoz sıvıya döner.\nKazeöz nekroz kalıplar arasında sayılır, ama burada tanımlanan değildir. Enzimler de denatüre olunca proteolizin gecikmesi koagülatif nekrozun mekanizmasıdır.\nKorunmuş hücre sınırları, kalp, böbrek ve dalak enfarktlarında görülen kalıbın özelliğidir. Yağ nekrozu bu sorudaki ayrımı sağlamaz.\nFibrinoid nekroz da tanımlanan tablo değildir. Doku mimarisinin birkaç gün korunması, en sık görülen nekroz tipine özgüdür.\nDoğru cevap A, Koagülasyon nekrozu\nKoagülatif nekrozda yapısal proteinler ile enzimler birlikte denatüre olur, proteoliz gecikir ve doku mimarisi birkaç gün korunur. Doku sert, soluk ve kurudur.",
+   "kelime": 182
+  },
+  {
+   "no": 25,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisi hücrede geri dönüşümlü zedelenme bulgusudur?",
+   "secenekler": {
+    "A": "Karyoreksis",
+    "B": "Piknoz",
+    "C": "Karyoliz",
+    "D": "Nekroz",
+    "E": "Yağlı değişiklik"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Karyoreksis piknotik çekirdeğin parçalanmasıdır; nekrozun nükleer bulgusudur ve geri dönüşümsüzdür.",
+    "B": "Piknozda çekirdek büzülür ve bazofilisi artar; DNA ve kromatin parçalanmasına bağlı nekroz bulgusudur.",
+    "C": "Karyolizde bazofili kaybolur ve çekirdek solar; bu da nekrozda görülen geri dönüşümsüz bir değişikliktir.",
+    "D": "Nekroz geri dönüşümsüz hasarın sonucu olan hücre ölümüdür; zarlar parçalanır ve çevrede inflamasyon gelişir.",
+    "E": "Yağlı değişiklik doğru: trigliseridlerin sitoplazmik vakuollerde birikimidir ve özellikle karaciğer ile kalpte görülen geri dönüşümlü bulgudur."
+   },
+   "ozet": "Yağlanma ve hücresel şişme geri dönüşümlü hasarın bulgularıdır; piknoz, karyoreksis ve karyolizis ise nekrozun nükleer değişiklikleridir.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi hücrede geri dönüşümlü zedelenme bulgusudur?\n\n**A)** Karyoreksis · **B)** Piknoz · **C)** Karyoliz · **D)** Nekroz · **E)** Yağlı değişiklik\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Karyoreksis** — Karyoreksis piknotik çekirdeğin parçalanmasıdır; nekrozun nükleer bulgusudur ve geri dönüşümsüzdür.\n- **Piknoz** — Piknozda çekirdek büzülür ve bazofilisi artar; DNA ve kromatin parçalanmasına bağlı nekroz bulgusudur.\n- **Karyoliz** — Karyolizde bazofili kaybolur ve çekirdek solar; bu da nekrozda görülen geri dönüşümsüz bir değişikliktir.\n- **Nekroz** — Nekroz geri dönüşümsüz hasarın sonucu olan hücre ölümüdür; zarlar parçalanır ve çevrede inflamasyon gelişir.\n- **Yağlı değişiklik** — Yağlı değişiklik doğru: trigliseridlerin sitoplazmik vakuollerde birikimidir ve özellikle karaciğer ile kalpte görülen geri dönüşümlü bulgudur.\n\n**Cevap: E** — Yağlı değişiklik\n\n**Özet.** Yağlanma ve hücresel şişme geri dönüşümlü hasarın bulgularıdır; piknoz, karyoreksis ve karyolizis ise nekrozun nükleer değişiklikleridir.",
+   "ses": "Aşağıdakilerden hangisi hücrede geri dönüşümlü zedelenme bulgusudur?\nA, Karyoreksis\nBe, Piknoz\nCe, Karyoliz\nDe, Nekroz\nE, Yağlı değişiklik\nSeçenekleri sırayla değerlendirelim.\nKaryoreksis, piknotik çekirdeğin parçalanmasıdır. Nekrozun nükleer bulgusudur ve geri dönüşümsüzdür.\nPiknozda çekirdek büzülür ve bazofilisi artar. De ne a ve kromatin parçalanmasına bağlı nekroz bulgusudur.\nKaryolizde bazofili kaybolur ve çekirdek solar. Bu da nekrozda görülen geri dönüşümsüz bir değişikliktir.\nNekroz, geri dönüşümsüz hasarın sonucu olan hücre ölümüdür. Zarlar parçalanır ve çevrede inflamasyon gelişir.\nYağlı değişiklik doğru. Trigliseridlerin sitoplazmik vakuollerde birikimidir ve özellikle karaciğer ile kalpte görülen geri dönüşümlü bulgudur.\nDoğru cevap E, Yağlı değişiklik\nYağlanma ve hücresel şişme geri dönüşümlü hasarın bulgularıdır. Piknoz, karyoreksis ve karyolizis ise nekrozun nükleer değişiklikleridir.",
+   "kelime": 132
+  },
+  {
+   "no": 26,
+   "tur": "cikmis",
+   "soru": "Akut miyokard enfarktüsü geçiren bir hastanın kalp kası örneğinde, kanlanması bozulan bölgedeki hücrelerin geri dönüşümsüz olarak öldüğü ve çevrelerinde iltihabi yanıt geliştiği görülüyor. Bu hücre ölümü genel olarak nasıl adlandırılır?",
+   "secenekler": {
+    "A": "Apoptoz",
+    "B": "İnflamasyon",
+    "C": "Otoliz",
+    "D": "Nekroz",
+    "E": "Kazeifikasyon"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Apoptoz programlı, düzenlenmiş hücre ölümüdür ve fizyolojik de olabilir; iskemideki kazara ölüm ve çevre inflamasyonu nekroza aittir.",
+    "B": "İnflamasyon bir hücre ölümü tipi değildir; nekrozda hücre içeriği dışarı sızınca çevre dokuda gelişen yanıttır.",
+    "C": "Otoliz ile karıştırılabilir: Geri dönüşümsüz hasarla ölen ve çevresinde inflamatuar yanıt oluşan hücrelerin ölümü nekroz olarak adlandırılır.",
+    "D": "Nekroz doğru: zarların parçalandığı, içeriğin sızıp çevrede inflamatuar yanıt oluşturduğu, her zaman patolojik hücre ölümüdür.",
+    "E": "Kazeifikasyon bir doku nekrozu kalıbıdır; kalp kasında iskemik enfarktın tipik kalıbı koagülatif nekrozdur."
+   },
+   "ozet": "İskemide gelişen, zar parçalanmasıyla içeriğin sızdığı ve çevrede inflamasyon uyandıran hücre ölümü nekrozdur; kalp enfarktında koagülatif tiptedir.",
+   "metin": "**Soru.** Akut miyokard enfarktüsü geçiren bir hastanın kalp kası örneğinde, kanlanması bozulan bölgedeki hücrelerin geri dönüşümsüz olarak öldüğü ve çevrelerinde iltihabi yanıt geliştiği görülüyor. Bu hücre ölümü genel olarak nasıl adlandırılır?\n\n**A)** Apoptoz · **B)** İnflamasyon · **C)** Otoliz · **D)** Nekroz · **E)** Kazeifikasyon\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Apoptoz** — Apoptoz programlı, düzenlenmiş hücre ölümüdür ve fizyolojik de olabilir; iskemideki kazara ölüm ve çevre inflamasyonu nekroza aittir.\n- **İnflamasyon** — İnflamasyon bir hücre ölümü tipi değildir; nekrozda hücre içeriği dışarı sızınca çevre dokuda gelişen yanıttır.\n- **Otoliz** — Otoliz ile karıştırılabilir: Geri dönüşümsüz hasarla ölen ve çevresinde inflamatuar yanıt oluşan hücrelerin ölümü nekroz olarak adlandırılır.\n- **Nekroz** — Nekroz doğru: zarların parçalandığı, içeriğin sızıp çevrede inflamatuar yanıt oluşturduğu, her zaman patolojik hücre ölümüdür.\n- **Kazeifikasyon** — Kazeifikasyon bir doku nekrozu kalıbıdır; kalp kasında iskemik enfarktın tipik kalıbı koagülatif nekrozdur.\n\n**Cevap: D** — Nekroz\n\n**Özet.** İskemide gelişen, zar parçalanmasıyla içeriğin sızdığı ve çevrede inflamasyon uyandıran hücre ölümü nekrozdur; kalp enfarktında koagülatif tiptedir.",
+   "ses": "Akut miyokard enfarktüsü geçiren bir hastanın kalp kası örneği inceleniyor. Kanlanması bozulan bölgedeki hücrelerin geri dönüşümsüz olarak öldüğü ve çevrelerinde iltihabi yanıt geliştiği görülüyor. Bu hücre ölümü genel olarak nasıl adlandırılır?\nA, Apoptoz\nBe, İnflamasyon\nCe, Otoliz\nDe, Nekroz\nE, Kazeifikasyon\nHer seçeneği tek tek ele alalım.\nApoptoz programlı, düzenlenmiş hücre ölümüdür ve fizyolojik de olabilir. İskemideki kazara ölüm ve çevre inflamasyonu nekroza aittir.\nİnflamasyon bir hücre ölümü tipi değildir. Nekrozda hücre içeriği dışarı sızınca çevre dokuda gelişen yanıttır.\nOtoliz ile karıştırılabilir. Geri dönüşümsüz hasarla ölen ve çevresinde inflamatuar yanıt oluşan hücrelerin ölümü, nekroz olarak adlandırılır.\nNekroz doğru. Zarların parçalandığı, içeriğin sızıp çevrede inflamatuar yanıt oluşturduğu, her zaman patolojik hücre ölümüdür.\nKazeifikasyon bir doku nekrozu kalıbıdır. Kalp kasında iskemik enfarktın tipik kalıbı koagülatif nekrozdur.\nDoğru cevap De, Nekroz\nİskemide gelişen, zar parçalanmasıyla içeriğin sızdığı ve çevrede inflamasyon uyandıran hücre ölümü nekrozdur. Kalp enfarktında koagülatif tiptedir.",
+   "kelime": 166
+  },
+  {
+   "no": 27,
+   "tur": "ornek",
+   "soru": "Fizyolojik stres ya da zararlı uyarana maruz kalan hücre yeni bir dengeye ulaşırsa bu yanıt nasıl adlandırılır?",
+   "secenekler": {
+    "A": "Adaptasyon",
+    "B": "Nekroz",
+    "C": "Apoptoz",
+    "D": "Geri dönüşümlü hasar",
+    "E": "Geri dönüşümsüz hasar"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Adaptasyon doğru: strese uğrayan hücre zarar görmeden yeni bir dengeye ulaşırsa bu yanıt adaptasyondur.",
+    "B": "Nekroz, şiddetli enerji yetersizliği ya da toksik hasarla gelişen, her zaman patolojik olan kazara hücre ölümüdür.",
+    "C": "Apoptoz programlı, düzenlenmiş hücre ölümüdür; yeni denge değil hücrenin ortadan kalkmasıdır.",
+    "D": "Geri dönüşümlü hasarda fonksiyon ve morfoloji bozulur; uyum değil, uyarı kalkınca düzelebilen bir hasardır.",
+    "E": "Geri dönüşümsüz hasar kalıcı ya da şiddetli stresle sınırın aşılmasıdır ve hücre ölümüyle sonuçlanır."
+   },
+   "ozet": "Strese hücresel yanıt ya adaptasyonla yeni dengedir ya da hasardır; hasar geri dönüşümlü kalabilir veya geri dönüşümsüz olup hücre ölümüne gider.",
+   "metin": "**Soru.** Fizyolojik stres ya da zararlı uyarana maruz kalan hücre yeni bir dengeye ulaşırsa bu yanıt nasıl adlandırılır?\n\n**A)** Adaptasyon · **B)** Nekroz · **C)** Apoptoz · **D)** Geri dönüşümlü hasar · **E)** Geri dönüşümsüz hasar\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Adaptasyon** — Adaptasyon doğru: strese uğrayan hücre zarar görmeden yeni bir dengeye ulaşırsa bu yanıt adaptasyondur.\n- **Nekroz** — Nekroz, şiddetli enerji yetersizliği ya da toksik hasarla gelişen, her zaman patolojik olan kazara hücre ölümüdür.\n- **Apoptoz** — Apoptoz programlı, düzenlenmiş hücre ölümüdür; yeni denge değil hücrenin ortadan kalkmasıdır.\n- **Geri dönüşümlü hasar** — Geri dönüşümlü hasarda fonksiyon ve morfoloji bozulur; uyum değil, uyarı kalkınca düzelebilen bir hasardır.\n- **Geri dönüşümsüz hasar** — Geri dönüşümsüz hasar kalıcı ya da şiddetli stresle sınırın aşılmasıdır ve hücre ölümüyle sonuçlanır.\n\n**Cevap: A** — Adaptasyon\n\n**Özet.** Strese hücresel yanıt ya adaptasyonla yeni dengedir ya da hasardır; hasar geri dönüşümlü kalabilir veya geri dönüşümsüz olup hücre ölümüne gider.",
+   "ses": "Fizyolojik stres ya da zararlı uyarana maruz kalan hücre yeni bir dengeye ulaşırsa bu yanıt nasıl adlandırılır?\nA, Adaptasyon\nBe, Nekroz\nCe, Apoptoz\nDe, Geri dönüşümlü hasar\nE, Geri dönüşümsüz hasar\nŞıkları sırasıyla gözden geçirelim.\nAdaptasyon doğru, strese uğrayan hücre zarar görmeden yeni bir dengeye ulaşırsa bu yanıt adaptasyondur.\nNekroz, şiddetli enerji yetersizliği ya da toksik hasarla gelişen, her zaman patolojik olan kazara hücre ölümüdür.\nApoptoz programlı, düzenlenmiş hücre ölümüdür, yeni denge değil hücrenin ortadan kalkmasıdır.\nGeri dönüşümlü hasarda fonksiyon ve morfoloji bozulur, uyum değil, uyarı kalkınca düzelebilen bir hasardır.\nGeri dönüşümsüz hasar kalıcı ya da şiddetli stresle sınırın aşılmasıdır ve hücre ölümüyle sonuçlanır.\nDoğru cevap A, Adaptasyon\nStrese hücresel yanıt ya adaptasyonla yeni dengedir ya da hasardır, hasar geri dönüşümlü kalabilir veya geri dönüşümsüz olup hücre ölümüne gider.",
+   "kelime": 155
+  },
+  {
+   "no": 28,
+   "tur": "ornek",
+   "soru": "Karbon monoksit zehirlenmesinde hipoksinin mekanizması hangisidir?",
+   "secenekler": {
+    "A": "Arter tıkanması",
+    "B": "Hemoglobine CO bağlanması",
+    "C": "Hemoglobin miktarının azalması",
+    "D": "Kanın oksijenlenmesinde azalma",
+    "E": "Şiddetli kan kaybı"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Arter tıkanması iskemik hipoksi nedenidir; kan akımı azalır ya da kesilir.",
+    "B": "Hemoglobine CO bağlanması doğru: karbon monoksit hemoglobine bağlanır ve oksijen taşınması bozulur.",
+    "C": "Hemoglobin miktarının azalması aneminin hipoksi mekanizmasıdır; karbon monoksit zehirlenmesinde hemoglobin azalmaz.",
+    "D": "Kanın oksijenlenmesinde azalma akciğer hastalıklarına bağlı hipoksinin mekanizmasıdır.",
+    "E": "Şiddetli kan kaybı ya da şok ayrı bir hipoksi nedenidir; zehirlenmeyle ilgili değildir."
+   },
+   "ozet": "Hipoksinin nedenleri arter tıkanması, akciğer hastalıkları, anemi, karbon monoksit zehirlenmesi ve şoktur; karbon monoksit hemoglobine bağlanarak hipoksi yapar.",
+   "metin": "**Soru.** Karbon monoksit zehirlenmesinde hipoksinin mekanizması hangisidir?\n\n**A)** Arter tıkanması · **B)** Hemoglobine CO bağlanması · **C)** Hemoglobin miktarının azalması · **D)** Kanın oksijenlenmesinde azalma · **E)** Şiddetli kan kaybı\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Arter tıkanması** — Arter tıkanması iskemik hipoksi nedenidir; kan akımı azalır ya da kesilir.\n- **Hemoglobine CO bağlanması** — Hemoglobine CO bağlanması doğru: karbon monoksit hemoglobine bağlanır ve oksijen taşınması bozulur.\n- **Hemoglobin miktarının azalması** — Hemoglobin miktarının azalması aneminin hipoksi mekanizmasıdır; karbon monoksit zehirlenmesinde hemoglobin azalmaz.\n- **Kanın oksijenlenmesinde azalma** — Kanın oksijenlenmesinde azalma akciğer hastalıklarına bağlı hipoksinin mekanizmasıdır.\n- **Şiddetli kan kaybı** — Şiddetli kan kaybı ya da şok ayrı bir hipoksi nedenidir; zehirlenmeyle ilgili değildir.\n\n**Cevap: B** — Hemoglobine CO bağlanması\n\n**Özet.** Hipoksinin nedenleri arter tıkanması, akciğer hastalıkları, anemi, karbon monoksit zehirlenmesi ve şoktur; karbon monoksit hemoglobine bağlanarak hipoksi yapar.",
+   "ses": "Karbon monoksit zehirlenmesinde hipoksinin mekanizması hangisidir?\nA, Arter tıkanması\nBe, Hemoglobine karbon monoksit bağlanması\nCe, Hemoglobin miktarının azalması\nDe, Kanın oksijenlenmesinde azalma\nE, Şiddetli kan kaybı\nŞimdi seçeneklere tek tek bakalım.\nArter tıkanması iskemik hipoksi nedenidir, kan akımı azalır ya da kesilir.\nHemoglobine karbon monoksit bağlanması doğru, karbon monoksit hemoglobine bağlanır ve oksijen taşınması bozulur.\nHemoglobin miktarının azalması aneminin hipoksi mekanizmasıdır, karbon monoksit zehirlenmesinde hemoglobin azalmaz.\nKanın oksijenlenmesinde azalma akciğer hastalıklarına bağlı hipoksinin mekanizmasıdır.\nŞiddetli kan kaybı ya da şok ayrı bir hipoksi nedenidir, zehirlenmeyle ilgili değildir.\nDoğru cevap Be, Hemoglobine karbon monoksit bağlanması\nHipoksinin nedenleri arter tıkanması, akciğer hastalıkları, anemi, karbon monoksit zehirlenmesi ve şoktur, karbon monoksit hemoglobine bağlanarak hipoksi yapar.",
+   "kelime": 140
+  },
+  {
+   "no": 29,
+   "tur": "ornek",
+   "soru": "Aşağıdakilerden hangisi çevresel değil, yaşam tarzı toksini olarak sınıflanır?",
+   "secenekler": {
+    "A": "Asbest",
+    "B": "Böcek ilaçları",
+    "C": "Hava kirleticileri",
+    "D": "Etanol",
+    "E": "Karbon monoksit"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Asbest çevresel toksinler arasında sayılır; kişinin yaşam tarzıyla aldığı bir madde değildir.",
+    "B": "Böcek ilaçları hava kirleticileriyle birlikte çevresel toksinler grubundadır.",
+    "C": "Hava kirleticileri çevresel toksinlerin klasik örneğidir; yaşam tarzı toksini değildir.",
+    "D": "Etanol doğru: alkol, sigara dumanıyla birlikte yaşam tarzı toksinleri grubunda yer alır.",
+    "E": "Karbon monoksit çevresel toksinler listesinde yer alır ve hemoglobine bağlanarak hipoksi yapar."
+   },
+   "ozet": "Çevresel toksinler hava kirleticileri, böcek ilaçları, karbon monoksit ve asbesttir; yaşam tarzı toksinleri ise sigara dumanı ve etanoldür.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi çevresel değil, yaşam tarzı toksini olarak sınıflanır?\n\n**A)** Asbest · **B)** Böcek ilaçları · **C)** Hava kirleticileri · **D)** Etanol · **E)** Karbon monoksit\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Asbest** — Asbest çevresel toksinler arasında sayılır; kişinin yaşam tarzıyla aldığı bir madde değildir.\n- **Böcek ilaçları** — Böcek ilaçları hava kirleticileriyle birlikte çevresel toksinler grubundadır.\n- **Hava kirleticileri** — Hava kirleticileri çevresel toksinlerin klasik örneğidir; yaşam tarzı toksini değildir.\n- **Etanol** — Etanol doğru: alkol, sigara dumanıyla birlikte yaşam tarzı toksinleri grubunda yer alır.\n- **Karbon monoksit** — Karbon monoksit çevresel toksinler listesinde yer alır ve hemoglobine bağlanarak hipoksi yapar.\n\n**Cevap: D** — Etanol\n\n**Özet.** Çevresel toksinler hava kirleticileri, böcek ilaçları, karbon monoksit ve asbesttir; yaşam tarzı toksinleri ise sigara dumanı ve etanoldür.",
+   "ses": "Aşağıdakilerden hangisi çevresel değil, yaşam tarzı toksini olarak sınıflanır?\nA, Asbest\nBe, Böcek ilaçları\nCe, Hava kirleticileri\nDe, Etanol\nE, Karbon monoksit\nSeçenekleri sırayla değerlendirelim.\nAsbest çevresel toksinler arasında sayılır, kişinin yaşam tarzıyla aldığı bir madde değildir.\nBöcek ilaçları hava kirleticileriyle birlikte çevresel toksinler grubundadır.\nHava kirleticileri çevresel toksinlerin klasik örneğidir, yaşam tarzı toksini değildir.\nEtanol doğru, alkol, sigara dumanıyla birlikte yaşam tarzı toksinleri grubunda yer alır.\nKarbon monoksit çevresel toksinler listesinde yer alır ve hemoglobine bağlanarak hipoksi yapar.\nDoğru cevap De, Etanol\nÇevresel toksinler hava kirleticileri, böcek ilaçları, karbon monoksit ve asbesttir, yaşam tarzı toksinleri ise sigara dumanı ve etanoldür.",
+   "kelime": 126
+  },
+  {
+   "no": 30,
+   "tur": "ornek",
+   "soru": "Aşağıdakilerden hangisi enfeksiyöz ajanların hücre hasarı yapma mekanizmalarından biri değildir?",
+   "secenekler": {
+    "A": "Toksin üretimi",
+    "B": "Hücre içinde replikasyon",
+    "C": "Aşırı bağışıklık yanıtı",
+    "D": "Kronik bağışıklık yanıtı",
+    "E": "Yanlış katlanmış protein birikimi"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Toksin üretimi, enfeksiyöz ajanların doğrudan hasar yapma mekanizmalarından biridir.",
+    "B": "Hücre içine girerek replikasyon, patojenlerin hücreye zarar verme yollarından biridir.",
+    "C": "Aşırı bağışıklık yanıtını tetiklemek enfeksiyöz ajanların dolaylı hasar mekanizmasıdır.",
+    "D": "Kronik bağışıklık yanıtı tetiklemek de patojenlerin hasar yollarından sayılır; inflamasyonla sekonder doku hasarı yapar.",
+    "E": "Yanlış katlanmış protein birikimi doğru: bu, enfeksiyöz değil genetik anormalliklerin hasar mekanizmasıdır."
+   },
+   "ozet": "Enfeksiyöz ajanlar toksin üretimi, hücre içinde replikasyon ve aşırı ya da kronik bağışıklık yanıtıyla hasar yapar; yanlış katlanmış protein birikimi genetik mekanizmadır.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi enfeksiyöz ajanların hücre hasarı yapma mekanizmalarından biri değildir?\n\n**A)** Toksin üretimi · **B)** Hücre içinde replikasyon · **C)** Aşırı bağışıklık yanıtı · **D)** Kronik bağışıklık yanıtı · **E)** Yanlış katlanmış protein birikimi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Toksin üretimi** — Toksin üretimi, enfeksiyöz ajanların doğrudan hasar yapma mekanizmalarından biridir.\n- **Hücre içinde replikasyon** — Hücre içine girerek replikasyon, patojenlerin hücreye zarar verme yollarından biridir.\n- **Aşırı bağışıklık yanıtı** — Aşırı bağışıklık yanıtını tetiklemek enfeksiyöz ajanların dolaylı hasar mekanizmasıdır.\n- **Kronik bağışıklık yanıtı** — Kronik bağışıklık yanıtı tetiklemek de patojenlerin hasar yollarından sayılır; inflamasyonla sekonder doku hasarı yapar.\n- **Yanlış katlanmış protein birikimi** — Yanlış katlanmış protein birikimi doğru: bu, enfeksiyöz değil genetik anormalliklerin hasar mekanizmasıdır.\n\n**Cevap: E** — Yanlış katlanmış protein birikimi\n\n**Özet.** Enfeksiyöz ajanlar toksin üretimi, hücre içinde replikasyon ve aşırı ya da kronik bağışıklık yanıtıyla hasar yapar; yanlış katlanmış protein birikimi genetik mekanizmadır.",
+   "ses": "Aşağıdakilerden hangisi enfeksiyöz ajanların hücre hasarı yapma mekanizmalarından biri değildir?\nA, Toksin üretimi\nBe, Hücre içinde replikasyon\nCe, Aşırı bağışıklık yanıtı\nDe, Kronik bağışıklık yanıtı\nE, Yanlış katlanmış protein birikimi\nHer seçeneği tek tek ele alalım.\nToksin üretimi, enfeksiyöz ajanların doğrudan hasar yapma mekanizmalarından biridir.\nHücre içine girerek replikasyon, patojenlerin hücreye zarar verme yollarından biridir.\nAşırı bağışıklık yanıtını tetiklemek enfeksiyöz ajanların dolaylı hasar mekanizmasıdır.\nKronik bağışıklık yanıtı tetiklemek de patojenlerin hasar yollarından sayılır, inflamasyonla sekonder doku hasarı yapar.\nYanlış katlanmış protein birikimi doğru, bu, enfeksiyöz değil genetik anormalliklerin hasar mekanizmasıdır.\nDoğru cevap E, Yanlış katlanmış protein birikimi\nEnfeksiyöz ajanlar toksin üretimi, hücre içinde replikasyon ve aşırı ya da kronik bağışıklık yanıtıyla hasar yapar, yanlış katlanmış protein birikimi genetik mekanizmadır.",
+   "kelime": 151
+  },
+  {
+   "no": 31,
+   "tur": "ornek",
+   "soru": "Onkogenler genetik anormalliklerde hangi hasar mekanizmasına örnektir?",
+   "secenekler": {
+    "A": "Fonksiyon kaybı",
+    "B": "Kromozom bozukluğu",
+    "C": "Yanlış katlanmış protein birikimi",
+    "D": "Nokta mutasyonu",
+    "E": "Fonksiyon kazanımı"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Fonksiyon kaybı enzim eksikliklerinin mekanizmasıdır; onkogenler işlev yitirmez.",
+    "B": "Kromozom bozukluğu Down sendromu gibi tabloların türüdür; bir mekanizma değil anormallik tipidir.",
+    "C": "Yanlış katlanmış protein birikimi ayrı bir genetik hasar mekanizmasıdır; onkogenlerin örneği değildir.",
+    "D": "Nokta mutasyonu orak hücreli anemide görülen anormallik tipidir; mekanizma sınıflamasında yer almaz.",
+    "E": "Fonksiyon kazanımı doğru: onkogenler genetik anormalliklerde fonksiyon kazanımı mekanizmasının örneğidir."
+   },
+   "ozet": "Genetik anormallikler fonksiyon kaybı, yani enzim eksiklikleri, fonksiyon kazanımı, yani onkogenler ve yanlış katlanmış protein birikimiyle hasar yapar; kanserde merkezi rol oynar.",
+   "metin": "**Soru.** Onkogenler genetik anormalliklerde hangi hasar mekanizmasına örnektir?\n\n**A)** Fonksiyon kaybı · **B)** Kromozom bozukluğu · **C)** Yanlış katlanmış protein birikimi · **D)** Nokta mutasyonu · **E)** Fonksiyon kazanımı\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Fonksiyon kaybı** — Fonksiyon kaybı enzim eksikliklerinin mekanizmasıdır; onkogenler işlev yitirmez.\n- **Kromozom bozukluğu** — Kromozom bozukluğu Down sendromu gibi tabloların türüdür; bir mekanizma değil anormallik tipidir.\n- **Yanlış katlanmış protein birikimi** — Yanlış katlanmış protein birikimi ayrı bir genetik hasar mekanizmasıdır; onkogenlerin örneği değildir.\n- **Nokta mutasyonu** — Nokta mutasyonu orak hücreli anemide görülen anormallik tipidir; mekanizma sınıflamasında yer almaz.\n- **Fonksiyon kazanımı** — Fonksiyon kazanımı doğru: onkogenler genetik anormalliklerde fonksiyon kazanımı mekanizmasının örneğidir.\n\n**Cevap: E** — Fonksiyon kazanımı\n\n**Özet.** Genetik anormallikler fonksiyon kaybı, yani enzim eksiklikleri, fonksiyon kazanımı, yani onkogenler ve yanlış katlanmış protein birikimiyle hasar yapar; kanserde merkezi rol oynar.",
+   "ses": "Onkogenler genetik anormalliklerde hangi hasar mekanizmasına örnektir?\nA, Fonksiyon kaybı\nBe, Kromozom bozukluğu\nCe, Yanlış katlanmış protein birikimi\nDe, Nokta mutasyonu\nE, Fonksiyon kazanımı\nŞıkları sırasıyla gözden geçirelim.\nFonksiyon kaybı enzim eksikliklerinin mekanizmasıdır, onkogenler işlev yitirmez.\nKromozom bozukluğu Davn sendromu gibi tabloların türüdür, bir mekanizma değil anormallik tipidir.\nYanlış katlanmış protein birikimi ayrı bir genetik hasar mekanizmasıdır, onkogenlerin örneği değildir.\nNokta mutasyonu orak hücreli anemide görülen anormallik tipidir, mekanizma sınıflamasında yer almaz.\nFonksiyon kazanımı doğru, onkogenler genetik anormalliklerde fonksiyon kazanımı mekanizmasının örneğidir.\nDoğru cevap E, Fonksiyon kazanımı\nGenetik anormallikler fonksiyon kaybı, yani enzim eksiklikleri, fonksiyon kazanımı, yani onkogenler ve yanlış katlanmış protein birikimiyle hasar yapar, kanserde merkezi rol oynar.",
+   "kelime": 138
+  },
+  {
+   "no": 32,
+   "tur": "ornek",
+   "soru": "Dalgıçlarda görülen dekompresyon hastalığı hangi fiziksel etkenle hücre hasarına örnektir?",
+   "secenekler": {
+    "A": "Mekanik travma",
+    "B": "İyonizan radyasyon",
+    "C": "Ani basınç değişikliği",
+    "D": "Elektrik çarpması",
+    "E": "Aşırı soğuk"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Mekanik travma fiziksel etkenlerdendir; ancak dalgıçlık hastalığının nedeni değildir.",
+    "B": "İyonizan radyasyon, ultraviyole ile birlikte radyasyona bağlı fiziksel hasar nedenidir.",
+    "C": "Ani basınç değişikliği doğru: dalgıçlıktaki dekompresyon hastalığı bu fiziksel etkenin örneğidir.",
+    "D": "Elektrik çarpması ayrı bir fiziksel etkendir; basınçla ilişkili değildir.",
+    "E": "Aşırı soğuk donmaya yol açan fiziksel etkendir; dalgıçlık hastalığını açıklamaz."
+   },
+   "ozet": "Fiziksel etkenler mekanik travma, yanık ya da donma, iyonizan ve ultraviyole radyasyon, elektrik çarpması ve dekompresyon hastalığı gibi ani basınç değişiklikleridir.",
+   "metin": "**Soru.** Dalgıçlarda görülen dekompresyon hastalığı hangi fiziksel etkenle hücre hasarına örnektir?\n\n**A)** Mekanik travma · **B)** İyonizan radyasyon · **C)** Ani basınç değişikliği · **D)** Elektrik çarpması · **E)** Aşırı soğuk\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Mekanik travma** — Mekanik travma fiziksel etkenlerdendir; ancak dalgıçlık hastalığının nedeni değildir.\n- **İyonizan radyasyon** — İyonizan radyasyon, ultraviyole ile birlikte radyasyona bağlı fiziksel hasar nedenidir.\n- **Ani basınç değişikliği** — Ani basınç değişikliği doğru: dalgıçlıktaki dekompresyon hastalığı bu fiziksel etkenin örneğidir.\n- **Elektrik çarpması** — Elektrik çarpması ayrı bir fiziksel etkendir; basınçla ilişkili değildir.\n- **Aşırı soğuk** — Aşırı soğuk donmaya yol açan fiziksel etkendir; dalgıçlık hastalığını açıklamaz.\n\n**Cevap: C** — Ani basınç değişikliği\n\n**Özet.** Fiziksel etkenler mekanik travma, yanık ya da donma, iyonizan ve ultraviyole radyasyon, elektrik çarpması ve dekompresyon hastalığı gibi ani basınç değişiklikleridir.",
+   "ses": "Dalgıçlarda görülen dekompresyon hastalığı hangi fiziksel etkenle hücre hasarına örnektir?\nA, Mekanik travma\nBe, İyonizan radyasyon\nCe, Ani basınç değişikliği\nDe, Elektrik çarpması\nE, Aşırı soğuk\nŞimdi seçeneklere tek tek bakalım.\nMekanik travma fiziksel etkenlerdendir, ancak dalgıçlık hastalığının nedeni değildir.\nİyonizan radyasyon, ultraviyole ile birlikte radyasyona bağlı fiziksel hasar nedenidir.\nAni basınç değişikliği doğru, dalgıçlıktaki dekompresyon hastalığı bu fiziksel etkenin örneğidir.\nElektrik çarpması ayrı bir fiziksel etkendir, basınçla ilişkili değildir.\nAşırı soğuk donmaya yol açan fiziksel etkendir, dalgıçlık hastalığını açıklamaz.\nDoğru cevap Ce, Ani basınç değişikliği\nFiziksel etkenler mekanik travma, yanık ya da donma, iyonizan ve ultraviyole radyasyon, elektrik çarpması ve dekompresyon hastalığı gibi ani basınç değişiklikleridir.",
+   "kelime": 135
+  },
+  {
+   "no": 33,
+   "tur": "ornek",
+   "soru": "Aynı zararlı etken düşük dozda etki ettiğinde beklenen sonuç hangisidir?",
+   "secenekler": {
+    "A": "Nekroz",
+    "B": "Apoptoz",
+    "C": "Distrofik kalsifikasyon",
+    "D": "Geri dönüşümlü hasar",
+    "E": "Gangrenöz nekroz"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Nekroz, aynı etkenin yüksek dozda etki ettiğinde ortaya çıkan sonuçlardan biridir.",
+    "B": "Apoptoz da yüksek dozda etkiyle gelişebilen hücre ölümü biçimidir; düşük dozun sonucu değildir.",
+    "C": "Distrofik kalsifikasyon, nekrotik hücrelerde zamanla gelişen bir akıbettir; düşük doz hasarın sonucu değildir.",
+    "D": "Geri dönüşümlü hasar doğru: aynı etken düşük dozda geri dönüşümlü hasar, yüksek dozda nekroz veya apoptoz yapar.",
+    "E": "Gangrenöz nekroz geniş koagülatif nekroz alanını tanımlayan klinik terimdir; ağır hasarın sonucudur."
+   },
+   "ozet": "Hücre hasarının sonucu etkenin türü, süresi ve şiddetine bağlıdır; aynı etken düşük dozda geri dönüşümlü hasar, yüksek dozda nekroz veya apoptoz yapar.",
+   "metin": "**Soru.** Aynı zararlı etken düşük dozda etki ettiğinde beklenen sonuç hangisidir?\n\n**A)** Nekroz · **B)** Apoptoz · **C)** Distrofik kalsifikasyon · **D)** Geri dönüşümlü hasar · **E)** Gangrenöz nekroz\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Nekroz** — Nekroz, aynı etkenin yüksek dozda etki ettiğinde ortaya çıkan sonuçlardan biridir.\n- **Apoptoz** — Apoptoz da yüksek dozda etkiyle gelişebilen hücre ölümü biçimidir; düşük dozun sonucu değildir.\n- **Distrofik kalsifikasyon** — Distrofik kalsifikasyon, nekrotik hücrelerde zamanla gelişen bir akıbettir; düşük doz hasarın sonucu değildir.\n- **Geri dönüşümlü hasar** — Geri dönüşümlü hasar doğru: aynı etken düşük dozda geri dönüşümlü hasar, yüksek dozda nekroz veya apoptoz yapar.\n- **Gangrenöz nekroz** — Gangrenöz nekroz geniş koagülatif nekroz alanını tanımlayan klinik terimdir; ağır hasarın sonucudur.\n\n**Cevap: D** — Geri dönüşümlü hasar\n\n**Özet.** Hücre hasarının sonucu etkenin türü, süresi ve şiddetine bağlıdır; aynı etken düşük dozda geri dönüşümlü hasar, yüksek dozda nekroz veya apoptoz yapar.",
+   "ses": "Aynı zararlı etken düşük dozda etki ettiğinde beklenen sonuç hangisidir?\nA, Nekroz\nBe, Apoptoz\nCe, Distrofik kalsifikasyon\nDe, Geri dönüşümlü hasar\nE, Gangrenöz nekroz\nSeçenekleri sırayla değerlendirelim.\nNekroz, aynı etkenin yüksek dozda etki ettiğinde ortaya çıkan sonuçlardan biridir.\nApoptoz da yüksek dozda etkiyle gelişebilen hücre ölümü biçimidir, düşük dozun sonucu değildir.\nDistrofik kalsifikasyon, nekrotik hücrelerde zamanla gelişen bir akıbettir, düşük doz hasarın sonucu değildir.\nGeri dönüşümlü hasar doğru, aynı etken düşük dozda geri dönüşümlü hasar, yüksek dozda nekroz veya apoptoz yapar.\nGangrenöz nekroz geniş koagülatif nekroz alanını tanımlayan klinik terimdir, ağır hasarın sonucudur.\nDoğru cevap De, Geri dönüşümlü hasar\nHücre hasarının sonucu etkenin türü, süresi ve şiddetine bağlıdır, aynı etken düşük dozda geri dönüşümlü hasar, yüksek dozda nekroz veya apoptoz yapar.",
+   "kelime": 147
+  },
+  {
+   "no": 34,
+   "tur": "ornek",
+   "soru": "Hücre hasarında hücre ölümü ile morfolojik değişiklikler arasındaki zaman ilişkisi için hangisi doğrudur?",
+   "secenekler": {
+    "A": "Makroskopik değişiklik ölümden önce gelir",
+    "B": "Işık mikroskobik değişiklik ölümden önce gelir",
+    "C": "Hücre ölümü morfolojik değişikliklerden önce gelir",
+    "D": "Fonksiyon kaybı ölümden sonra başlar",
+    "E": "Ölüm ve morfoloji eş zamanlıdır"
+   },
+   "dogru": "C",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Makroskopik değişiklik en geç görülen değişikliktir; hücre ölümünden önce değil, çok sonra ortaya çıkar.",
+    "B": "Işık mikroskobik değişiklikler de hücre ölümünden sonra belirir; ölü hücre hemen tanınamaz.",
+    "C": "Hücre ölümü morfolojik değişikliklerden önce gelir doğru: ölüm, ultrastrüktürel, ışık mikroskobik ve makroskopik değişikliklerden önce oluşur.",
+    "D": "Fonksiyon kaybı ölümden sonra başlamaz; hücreler hasardan sonra hızla işlevsiz kalır ama canlı kalabilir.",
+    "E": "Ölüm ve morfoloji eş zamanlı değildir; morfolojik değişiklikler hücre ölümünü belli bir gecikmeyle izler."
+   },
+   "ozet": "Hasar başlayınca hücre hızla işlevsiz kalır ama canlı kalabilir; hücre ölümü ise ultrastrüktürel, ışık mikroskobik ve makroskopik değişikliklerden önce gelir.",
+   "metin": "**Soru.** Hücre hasarında hücre ölümü ile morfolojik değişiklikler arasındaki zaman ilişkisi için hangisi doğrudur?\n\n**A)** Makroskopik değişiklik ölümden önce gelir · **B)** Işık mikroskobik değişiklik ölümden önce gelir · **C)** Hücre ölümü morfolojik değişikliklerden önce gelir · **D)** Fonksiyon kaybı ölümden sonra başlar · **E)** Ölüm ve morfoloji eş zamanlıdır\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Makroskopik değişiklik ölümden önce gelir** — Makroskopik değişiklik en geç görülen değişikliktir; hücre ölümünden önce değil, çok sonra ortaya çıkar.\n- **Işık mikroskobik değişiklik ölümden önce gelir** — Işık mikroskobik değişiklikler de hücre ölümünden sonra belirir; ölü hücre hemen tanınamaz.\n- **Hücre ölümü morfolojik değişikliklerden önce gelir** — Hücre ölümü morfolojik değişikliklerden önce gelir doğru: ölüm, ultrastrüktürel, ışık mikroskobik ve makroskopik değişikliklerden önce oluşur.\n- **Fonksiyon kaybı ölümden sonra başlar** — Fonksiyon kaybı ölümden sonra başlamaz; hücreler hasardan sonra hızla işlevsiz kalır ama canlı kalabilir.\n- **Ölüm ve morfoloji eş zamanlıdır** — Ölüm ve morfoloji eş zamanlı değildir; morfolojik değişiklikler hücre ölümünü belli bir gecikmeyle izler.\n\n**Cevap: C** — Hücre ölümü morfolojik değişikliklerden önce gelir\n\n**Özet.** Hasar başlayınca hücre hızla işlevsiz kalır ama canlı kalabilir; hücre ölümü ise ultrastrüktürel, ışık mikroskobik ve makroskopik değişikliklerden önce gelir.",
+   "ses": "Hücre hasarında hücre ölümü ile morfolojik değişiklikler arasındaki zaman ilişkisi için hangisi doğrudur?\nA, Makroskopik değişiklik ölümden önce gelir\nBe, Işık mikroskobik değişiklik ölümden önce gelir\nCe, Hücre ölümü morfolojik değişikliklerden önce gelir\nDe, Fonksiyon kaybı ölümden sonra başlar\nE, Ölüm ve morfoloji eş zamanlıdır\nHer seçeneği tek tek ele alalım.\nMakroskopik değişiklik en geç görülen değişikliktir, hücre ölümünden önce değil, çok sonra ortaya çıkar.\nIşık mikroskobik değişiklikler de hücre ölümünden sonra belirir, ölü hücre hemen tanınamaz.\nHücre ölümü morfolojik değişikliklerden önce gelir doğru, ölüm, ultrastrüktürel, ışık mikroskobik ve makroskopik değişikliklerden önce oluşur.\nFonksiyon kaybı ölümden sonra başlamaz, hücreler hasardan sonra hızla işlevsiz kalır ama canlı kalabilir.\nÖlüm ve morfoloji eş zamanlı değildir, morfolojik değişiklikler hücre ölümünü belli bir gecikmeyle izler.\nDoğru cevap Ce, Hücre ölümü morfolojik değişikliklerden önce gelir\nHasar başlayınca hücre hızla işlevsiz kalır ama canlı kalabilir, hücre ölümü ise ultrastrüktürel, ışık mikroskobik ve makroskopik değişikliklerden önce gelir.",
+   "kelime": 194
+  },
+  {
+   "no": 35,
+   "tur": "ornek",
+   "soru": "Yağlanmada, yani steatozda sitoplazmik vakuollerde biriken madde hangisidir?",
+   "secenekler": {
+    "A": "Glikojen",
+    "B": "Su ve sodyum",
+    "C": "Kalsiyum",
+    "D": "Trigliseridler",
+    "E": "Fosfolipidler"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Glikojen kaybı nekrozda sitoplazmanın camsı görünümüne katkıda bulunur; yağlanmada biriken madde değildir.",
+    "B": "Su ve sodyum girişi hücresel şişmenin mekanizmasıdır; yağlanmada biriken madde değildir.",
+    "C": "Kalsiyum nekrotik hücrelerde yağ asitleriyle birleşip distrofik kalsifikasyon yapar; steatozla ilgili değildir.",
+    "D": "Trigliseridler doğru: yağlanma, trigliseridlerin sitoplazmik vakuollerde birikmesidir.",
+    "E": "Fosfolipidler nekrozdaki miyelin figürlerinin kaynağıdır; yağlanmada vakuollerde biriken madde değildir."
+   },
+   "ozet": "Yağlanma trigliseridlerin sitoplazmik vakuollerde birikimidir; en sık karaciğer ve kalp kasında görülür, nedenleri alkol, obezite, diyabet, hipoksi ve toksinlerdir.",
+   "metin": "**Soru.** Yağlanmada, yani steatozda sitoplazmik vakuollerde biriken madde hangisidir?\n\n**A)** Glikojen · **B)** Su ve sodyum · **C)** Kalsiyum · **D)** Trigliseridler · **E)** Fosfolipidler\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Glikojen** — Glikojen kaybı nekrozda sitoplazmanın camsı görünümüne katkıda bulunur; yağlanmada biriken madde değildir.\n- **Su ve sodyum** — Su ve sodyum girişi hücresel şişmenin mekanizmasıdır; yağlanmada biriken madde değildir.\n- **Kalsiyum** — Kalsiyum nekrotik hücrelerde yağ asitleriyle birleşip distrofik kalsifikasyon yapar; steatozla ilgili değildir.\n- **Trigliseridler** — Trigliseridler doğru: yağlanma, trigliseridlerin sitoplazmik vakuollerde birikmesidir.\n- **Fosfolipidler** — Fosfolipidler nekrozdaki miyelin figürlerinin kaynağıdır; yağlanmada vakuollerde biriken madde değildir.\n\n**Cevap: D** — Trigliseridler\n\n**Özet.** Yağlanma trigliseridlerin sitoplazmik vakuollerde birikimidir; en sık karaciğer ve kalp kasında görülür, nedenleri alkol, obezite, diyabet, hipoksi ve toksinlerdir.",
+   "ses": "Yağlanmada, yani steatozda sitoplazmik vakuollerde biriken madde hangisidir?\nA, Glikojen\nBe, Su ve sodyum\nCe, Kalsiyum\nDe, Trigliseridler\nE, Fosfolipidler\nŞıkları sırasıyla gözden geçirelim.\nGlikojen kaybı nekrozda sitoplazmanın camsı görünümüne katkıda bulunur, yağlanmada biriken madde değildir.\nSu ve sodyum girişi hücresel şişmenin mekanizmasıdır, yağlanmada biriken madde değildir.\nKalsiyum nekrotik hücrelerde yağ asitleriyle birleşip distrofik kalsifikasyon yapar, steatozla ilgili değildir.\nTrigliseridler doğru, yağlanma, trigliseridlerin sitoplazmik vakuollerde birikmesidir.\nFosfolipidler nekrozdaki miyelin figürlerinin kaynağıdır, yağlanmada vakuollerde biriken madde değildir.\nDoğru cevap De, Trigliseridler\nYağlanma trigliseridlerin sitoplazmik vakuollerde birikimidir, en sık karaciğer ve kalp kasında görülür, nedenleri alkol, obezite, diyabet, hipoksi ve toksinlerdir.",
+   "kelime": 123
+  },
+  {
+   "no": 36,
+   "tur": "ornek",
+   "soru": "Geri dönüşümsüz olması beklenen geç hasarda şişmiş mitokondrilerdeki elektron yoğun birikintiler neyi içerir?",
+   "secenekler": {
+    "A": "Trigliserid",
+    "B": "Glikojen",
+    "C": "Fosfolipid",
+    "D": "Su ve sodyum",
+    "E": "Kalsiyum ve protein"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Trigliserid sitoplazmik vakuollerde yağlanmayı oluşturur; mitokondrideki yoğun birikintilerin içeriği değildir.",
+    "B": "Glikojen nekrozda kaybedilir; mitokondriyal birikintilerin yapısında yer almaz.",
+    "C": "Fosfolipid hücre zarından türeyerek miyelin figürlerini oluşturur; mitokondriyal birikinti değildir.",
+    "D": "Su ve sodyum hücresel şişmede hücreye girer; elektron yoğun birikinti oluşturmaz.",
+    "E": "Kalsiyum ve protein doğru: geç hasarda şişmiş mitokondrilerdeki elektron yoğun birikintiler çökelmiş kalsiyum ve proteinlerdir."
+   },
+   "ozet": "Geri dönüşümlü hasarda mitokondriler hafif şişer; geç, geri dönüşümsüz hasarda belirgin şişmiş mitokondrilerde çökelmiş kalsiyum ve protein birikintileri görülür.",
+   "metin": "**Soru.** Geri dönüşümsüz olması beklenen geç hasarda şişmiş mitokondrilerdeki elektron yoğun birikintiler neyi içerir?\n\n**A)** Trigliserid · **B)** Glikojen · **C)** Fosfolipid · **D)** Su ve sodyum · **E)** Kalsiyum ve protein\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Trigliserid** — Trigliserid sitoplazmik vakuollerde yağlanmayı oluşturur; mitokondrideki yoğun birikintilerin içeriği değildir.\n- **Glikojen** — Glikojen nekrozda kaybedilir; mitokondriyal birikintilerin yapısında yer almaz.\n- **Fosfolipid** — Fosfolipid hücre zarından türeyerek miyelin figürlerini oluşturur; mitokondriyal birikinti değildir.\n- **Su ve sodyum** — Su ve sodyum hücresel şişmede hücreye girer; elektron yoğun birikinti oluşturmaz.\n- **Kalsiyum ve protein** — Kalsiyum ve protein doğru: geç hasarda şişmiş mitokondrilerdeki elektron yoğun birikintiler çökelmiş kalsiyum ve proteinlerdir.\n\n**Cevap: E** — Kalsiyum ve protein\n\n**Özet.** Geri dönüşümlü hasarda mitokondriler hafif şişer; geç, geri dönüşümsüz hasarda belirgin şişmiş mitokondrilerde çökelmiş kalsiyum ve protein birikintileri görülür.",
+   "ses": "Geri dönüşümsüz olması beklenen geç hasarda şişmiş mitokondrilerdeki elektron yoğun birikintiler neyi içerir?\nA, Trigliserid\nBe, Glikojen\nCe, Fosfolipid\nDe, Su ve sodyum\nE, Kalsiyum ve protein\nŞimdi seçeneklere tek tek bakalım.\nTrigliserid sitoplazmik vakuollerde yağlanmayı oluşturur, mitokondrideki yoğun birikintilerin içeriği değildir.\nGlikojen nekrozda kaybedilir, mitokondriyal birikintilerin yapısında yer almaz.\nFosfolipid hücre zarından türeyerek miyelin figürlerini oluşturur, mitokondriyal birikinti değildir.\nSu ve sodyum hücresel şişmede hücreye girer, elektron yoğun birikinti oluşturmaz.\nKalsiyum ve protein doğru, geç hasarda şişmiş mitokondrilerdeki elektron yoğun birikintiler çökelmiş kalsiyum ve proteinlerdir.\nDoğru cevap E, Kalsiyum ve protein\nGeri dönüşümlü hasarda mitokondriler hafif şişer, geç, geri dönüşümsüz hasarda belirgin şişmiş mitokondrilerde çökelmiş kalsiyum ve protein birikintileri görülür.",
+   "kelime": 137
+  },
+  {
+   "no": 37,
+   "tur": "ornek",
+   "soru": "Aşağıdakilerden hangisi nekroz ve apoptoz dışında sayılan hücre ölümü tiplerinden biridir?",
+   "secenekler": {
+    "A": "Ferroptoz",
+    "B": "Karyoreksis",
+    "C": "Piknoz",
+    "D": "Hidropik değişim",
+    "E": "Steatoz"
+   },
+   "dogru": "A",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Ferroptoz doğru: nekroptoz ve piroptozla birlikte nekroz ve apoptoz dışındaki hücre ölümü tiplerindendir.",
+    "B": "Karyoreksis, nekrozda piknotik çekirdeğin parçalanmasıdır; ayrı bir hücre ölümü tipi değildir.",
+    "C": "Piknoz, nekrozda çekirdeğin büzülmesidir; bir ölüm tipi değil nükleer değişikliktir.",
+    "D": "Hidropik değişim, yani hücresel şişme, geri dönüşümlü hasarın en erken bulgusudur.",
+    "E": "Steatoz, yani yağlanma, geri dönüşümlü hasarın bulgularındandır; hücre ölümü tipi değildir."
+   },
+   "ozet": "Hücre ölümünün başlıca tipleri nekroz ve apoptozdur; nekroptoz, piroptoz ve ferroptoz diğer tipler olarak sayılır.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi nekroz ve apoptoz dışında sayılan hücre ölümü tiplerinden biridir?\n\n**A)** Ferroptoz · **B)** Karyoreksis · **C)** Piknoz · **D)** Hidropik değişim · **E)** Steatoz\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Ferroptoz** — Ferroptoz doğru: nekroptoz ve piroptozla birlikte nekroz ve apoptoz dışındaki hücre ölümü tiplerindendir.\n- **Karyoreksis** — Karyoreksis, nekrozda piknotik çekirdeğin parçalanmasıdır; ayrı bir hücre ölümü tipi değildir.\n- **Piknoz** — Piknoz, nekrozda çekirdeğin büzülmesidir; bir ölüm tipi değil nükleer değişikliktir.\n- **Hidropik değişim** — Hidropik değişim, yani hücresel şişme, geri dönüşümlü hasarın en erken bulgusudur.\n- **Steatoz** — Steatoz, yani yağlanma, geri dönüşümlü hasarın bulgularındandır; hücre ölümü tipi değildir.\n\n**Cevap: A** — Ferroptoz\n\n**Özet.** Hücre ölümünün başlıca tipleri nekroz ve apoptozdur; nekroptoz, piroptoz ve ferroptoz diğer tipler olarak sayılır.",
+   "ses": "Aşağıdakilerden hangisi nekroz ve apoptoz dışında sayılan hücre ölümü tiplerinden biridir?\nA, Ferroptoz\nBe, Karyoreksis\nCe, Piknoz\nDe, Hidropik değişim\nE, Steatoz\nSeçenekleri sırayla değerlendirelim.\nFerroptoz doğru, nekroptoz ve piroptozla birlikte nekroz ve apoptoz dışındaki hücre ölümü tiplerindendir.\nKaryoreksis, nekrozda piknotik çekirdeğin parçalanmasıdır, ayrı bir hücre ölümü tipi değildir.\nPiknoz, nekrozda çekirdeğin büzülmesidir, bir ölüm tipi değil nükleer değişikliktir.\nHidropik değişim, yani hücresel şişme, geri dönüşümlü hasarın en erken bulgusudur.\nSteatoz, yani yağlanma, geri dönüşümlü hasarın bulgularındandır, hücre ölümü tipi değildir.\nDoğru cevap A, Ferroptoz\nHücre ölümünün başlıca tipleri nekroz ve apoptozdur, nekroptoz, piroptoz ve ferroptoz diğer tipler olarak sayılır.",
+   "kelime": 123
+  },
+  {
+   "no": 38,
+   "tur": "ornek",
+   "soru": "Nekrotik hücrelerde hücre zarı fosfolipidlerinden türeyen oluşumlar hangisidir?",
+   "secenekler": {
+    "A": "Amorf yoğunluklar",
+    "B": "Miyelin figürleri",
+    "C": "Berrak vakuoller",
+    "D": "Mikrovilluslar",
+    "E": "Apse"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Amorf yoğunluklar nekrozda mitokondrilerde görülen birikintilerdir; zar fosfolipidlerinden türemez.",
+    "B": "Miyelin figürleri doğru: nekrotik hücrelerde hücre zarı fosfolipidlerinden türeyen oluşumlardır.",
+    "C": "Berrak vakuoller hücresel şişmede ışık mikroskobunda görülür ve ER dilatasyonuna karşılık gelir.",
+    "D": "Mikrovilluslar hücre yüzeyindeki normal yapılardır; geri dönüşümlü hasarda kaybolurlar.",
+    "E": "Apse, sıvılaşma nekrozunda püyün lokalize birikimidir; hücre içi bir oluşum değildir."
+   },
+   "ozet": "Nekrotik hücreleri hücre içi ve lökosit enzimleri sindirir; zar fosfolipidlerinden miyelin figürleri oluşur, yağ asitleri kalsiyumla birleşip distrofik kalsifikasyon yapabilir.",
+   "metin": "**Soru.** Nekrotik hücrelerde hücre zarı fosfolipidlerinden türeyen oluşumlar hangisidir?\n\n**A)** Amorf yoğunluklar · **B)** Miyelin figürleri · **C)** Berrak vakuoller · **D)** Mikrovilluslar · **E)** Apse\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Amorf yoğunluklar** — Amorf yoğunluklar nekrozda mitokondrilerde görülen birikintilerdir; zar fosfolipidlerinden türemez.\n- **Miyelin figürleri** — Miyelin figürleri doğru: nekrotik hücrelerde hücre zarı fosfolipidlerinden türeyen oluşumlardır.\n- **Berrak vakuoller** — Berrak vakuoller hücresel şişmede ışık mikroskobunda görülür ve ER dilatasyonuna karşılık gelir.\n- **Mikrovilluslar** — Mikrovilluslar hücre yüzeyindeki normal yapılardır; geri dönüşümlü hasarda kaybolurlar.\n- **Apse** — Apse, sıvılaşma nekrozunda püyün lokalize birikimidir; hücre içi bir oluşum değildir.\n\n**Cevap: B** — Miyelin figürleri\n\n**Özet.** Nekrotik hücreleri hücre içi ve lökosit enzimleri sindirir; zar fosfolipidlerinden miyelin figürleri oluşur, yağ asitleri kalsiyumla birleşip distrofik kalsifikasyon yapabilir.",
+   "ses": "Nekrotik hücrelerde hücre zarı fosfolipidlerinden türeyen oluşumlar hangisidir?\nA, Amorf yoğunluklar\nBe, Miyelin figürleri\nCe, Berrak vakuoller\nDe, Mikrovilluslar\nE, Apse\nHer seçeneği tek tek ele alalım.\nAmorf yoğunluklar nekrozda mitokondrilerde görülen birikintilerdir, zar fosfolipidlerinden türemez.\nMiyelin figürleri doğru, nekrotik hücrelerde hücre zarı fosfolipidlerinden türeyen oluşumlardır.\nBerrak vakuoller hücresel şişmede ışık mikroskobunda görülür ve e re dilatasyonuna karşılık gelir.\nMikrovilluslar hücre yüzeyindeki normal yapılardır, geri dönüşümlü hasarda kaybolurlar.\nApse, sıvılaşma nekrozunda püyün lokalize birikimidir, hücre içi bir oluşum değildir.\nDoğru cevap Be, Miyelin figürleri\nNekrotik hücreleri hücre içi ve lökosit enzimleri sindirir, zar fosfolipidlerinden miyelin figürleri oluşur, yağ asitleri kalsiyumla birleşip distrofik kalsifikasyon yapabilir.",
+   "kelime": 128
+  },
+  {
+   "no": 39,
+   "tur": "ornek",
+   "soru": "Nekrozda çevre dokuda inflamatuar yanıt oluşmasının temel nedeni hangisidir?",
+   "secenekler": {
+    "A": "Kromatin yoğunlaşması",
+    "B": "ER dilatasyonu",
+    "C": "Hücre içeriğinin dışarı sızması",
+    "D": "Glikojen birikimi",
+    "E": "Membran bütünlüğünün korunması"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Kromatin yoğunlaşması geri dönüşümlü hasarın bulgusudur; zar sağlamken inflamasyon başlatmaz.",
+    "B": "ER dilatasyonu geri dönüşümlü hasarda görülür ve berrak vakuollere karşılık gelir; inflamasyonun nedeni değildir.",
+    "C": "Hücre içeriğinin dışarı sızması doğru: nekrozda hücre ve organel zarları parçalanır, içerik sızar ve çevrede inflamatuar yanıt oluşur.",
+    "D": "Glikojen birikimi nekrozun özelliği değildir; nekrozda aksine glikojen kaybı olur.",
+    "E": "Membran bütünlüğünün korunması geri dönüşümlü hasarın özelliğidir; nekrozda zarlar parçalanır."
+   },
+   "ozet": "Nekrozda hücre ve organel zarları parçalanır, içerik dışarı sızar ve çevre dokuda inflamatuar yanıt oluşur; geri dönüşümlü hasarda ise membran bütünlüğü korunur.",
+   "metin": "**Soru.** Nekrozda çevre dokuda inflamatuar yanıt oluşmasının temel nedeni hangisidir?\n\n**A)** Kromatin yoğunlaşması · **B)** ER dilatasyonu · **C)** Hücre içeriğinin dışarı sızması · **D)** Glikojen birikimi · **E)** Membran bütünlüğünün korunması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kromatin yoğunlaşması** — Kromatin yoğunlaşması geri dönüşümlü hasarın bulgusudur; zar sağlamken inflamasyon başlatmaz.\n- **ER dilatasyonu** — ER dilatasyonu geri dönüşümlü hasarda görülür ve berrak vakuollere karşılık gelir; inflamasyonun nedeni değildir.\n- **Hücre içeriğinin dışarı sızması** — Hücre içeriğinin dışarı sızması doğru: nekrozda hücre ve organel zarları parçalanır, içerik sızar ve çevrede inflamatuar yanıt oluşur.\n- **Glikojen birikimi** — Glikojen birikimi nekrozun özelliği değildir; nekrozda aksine glikojen kaybı olur.\n- **Membran bütünlüğünün korunması** — Membran bütünlüğünün korunması geri dönüşümlü hasarın özelliğidir; nekrozda zarlar parçalanır.\n\n**Cevap: C** — Hücre içeriğinin dışarı sızması\n\n**Özet.** Nekrozda hücre ve organel zarları parçalanır, içerik dışarı sızar ve çevre dokuda inflamatuar yanıt oluşur; geri dönüşümlü hasarda ise membran bütünlüğü korunur.",
+   "ses": "Nekrozda çevre dokuda inflamatuar yanıt oluşmasının temel nedeni hangisidir?\nA, Kromatin yoğunlaşması\nBe, E re dilatasyonu\nCe, Hücre içeriğinin dışarı sızması\nDe, Glikojen birikimi\nE, Membran bütünlüğünün korunması\nŞıkları sırasıyla gözden geçirelim.\nKromatin yoğunlaşması geri dönüşümlü hasarın bulgusudur, zar sağlamken inflamasyon başlatmaz.\nE re dilatasyonu geri dönüşümlü hasarda görülür ve berrak vakuollere karşılık gelir, inflamasyonun nedeni değildir.\nHücre içeriğinin dışarı sızması doğru, nekrozda hücre ve organel zarları parçalanır, içerik sızar ve çevrede inflamatuar yanıt oluşur.\nGlikojen birikimi nekrozun özelliği değildir, nekrozda aksine glikojen kaybı olur.\nMembran bütünlüğünün korunması geri dönüşümlü hasarın özelliğidir, nekrozda zarlar parçalanır.\nDoğru cevap Ce, Hücre içeriğinin dışarı sızması\nNekrozda hücre ve organel zarları parçalanır, içerik dışarı sızar ve çevre dokuda inflamatuar yanıt oluşur, geri dönüşümlü hasarda ise membran bütünlüğü korunur.",
+   "kelime": 152
+  },
+  {
+   "no": 40,
+   "tur": "ornek",
+   "soru": "Nekrozda çekirdeğin büzülüp bazofilisinin arttığı değişiklik hangisidir?",
+   "secenekler": {
+    "A": "Karyoreksis",
+    "B": "Karyolizis",
+    "C": "Kromatin yoğunlaşması",
+    "D": "Piknoz",
+    "E": "Vakuolizasyon"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Karyoreksis, büzülmüş çekirdeğin parçalanmasıdır; büzülmenin kendisi değildir.",
+    "B": "Karyolizis bazofili kaybıyla çekirdeğin solmasıdır; bazofili artmaz, azalır.",
+    "C": "Kromatin yoğunlaşması geri dönüşümlü hasarın bulgusudur; nekrozun nükleer değişikliği olarak sayılmaz.",
+    "D": "Piknoz doğru: nekrozda çekirdek büzülür ve bazofilisi artar; ardından karyoreksis gelişir.",
+    "E": "Vakuolizasyon nekrozda sitoplazmada görülen bir değişikliktir; çekirdeğe ait değildir."
+   },
+   "ozet": "DNA ve kromatin parçalanmasıyla nekrozda piknoz, karyoreksis ve karyolizis görülür; çekirdek 1–2 gün içinde tamamen kaybolabilir.",
+   "metin": "**Soru.** Nekrozda çekirdeğin büzülüp bazofilisinin arttığı değişiklik hangisidir?\n\n**A)** Karyoreksis · **B)** Karyolizis · **C)** Kromatin yoğunlaşması · **D)** Piknoz · **E)** Vakuolizasyon\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Karyoreksis** — Karyoreksis, büzülmüş çekirdeğin parçalanmasıdır; büzülmenin kendisi değildir.\n- **Karyolizis** — Karyolizis bazofili kaybıyla çekirdeğin solmasıdır; bazofili artmaz, azalır.\n- **Kromatin yoğunlaşması** — Kromatin yoğunlaşması geri dönüşümlü hasarın bulgusudur; nekrozun nükleer değişikliği olarak sayılmaz.\n- **Piknoz** — Piknoz doğru: nekrozda çekirdek büzülür ve bazofilisi artar; ardından karyoreksis gelişir.\n- **Vakuolizasyon** — Vakuolizasyon nekrozda sitoplazmada görülen bir değişikliktir; çekirdeğe ait değildir.\n\n**Cevap: D** — Piknoz\n\n**Özet.** DNA ve kromatin parçalanmasıyla nekrozda piknoz, karyoreksis ve karyolizis görülür; çekirdek 1–2 gün içinde tamamen kaybolabilir.",
+   "ses": "Nekrozda çekirdeğin büzülüp bazofilisinin arttığı değişiklik hangisidir?\nA, Karyoreksis\nBe, Karyolizis\nCe, Kromatin yoğunlaşması\nDe, Piknoz\nE, Vakuolizasyon\nŞimdi seçeneklere tek tek bakalım.\nKaryoreksis, büzülmüş çekirdeğin parçalanmasıdır, büzülmenin kendisi değildir.\nKaryolizis bazofili kaybıyla çekirdeğin solmasıdır, bazofili artmaz, azalır.\nKromatin yoğunlaşması geri dönüşümlü hasarın bulgusudur, nekrozun nükleer değişikliği olarak sayılmaz.\nPiknoz doğru, nekrozda çekirdek büzülür ve bazofilisi artar, ardından karyoreksis gelişir.\nVakuolizasyon nekrozda sitoplazmada görülen bir değişikliktir, çekirdeğe ait değildir.\nDoğru cevap De, Piknoz\nDe ne a ve kromatin parçalanmasıyla nekrozda piknoz, karyoreksis ve karyolizis görülür. Çekirdek bir ile iki gün içinde tamamen kaybolabilir.",
+   "kelime": 112
+  },
+  {
+   "no": 41,
+   "tur": "ornek",
+   "soru": "Koagülatif nekrozun makroskopik görünümü hangisidir?",
+   "secenekler": {
+    "A": "Viskoz sıvı kıvamında",
+    "B": "Sarı-krem, püylü",
+    "C": "Soluk, turgoru artmış",
+    "D": "Lokalize apse boşluğu",
+    "E": "Sert, soluk, kuru"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Viskoz sıvı kıvamı sıvılaşma nekrozunun özelliğidir; dokunun tamamen erimesiyle oluşur.",
+    "B": "Sarı-krem, püylü görünüm sıvılaşma nekrozunda görülen püyün, yani irinin özelliğidir.",
+    "C": "Soluk, turgoru artmış görünüm, birçok hücrede hidropik değişim olan organın geri dönüşümlü hasar bulgusudur.",
+    "D": "Lokalize apse boşluğu, sıvılaşma nekrozunda püyün bir yerde birikmesiyle oluşur.",
+    "E": "Sert, soluk, kuru doğru: koagülatif nekrozda doku sert, soluk ve kurudur; doku mimarisi birkaç gün korunur."
+   },
+   "ozet": "Koagülatif nekrozda yapısal proteinler ve enzimler denatüre olur, proteoliz gecikir; doku sert, soluk, kuru görünür ve mimari birkaç gün korunur.",
+   "metin": "**Soru.** Koagülatif nekrozun makroskopik görünümü hangisidir?\n\n**A)** Viskoz sıvı kıvamında · **B)** Sarı-krem, püylü · **C)** Soluk, turgoru artmış · **D)** Lokalize apse boşluğu · **E)** Sert, soluk, kuru\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Viskoz sıvı kıvamında** — Viskoz sıvı kıvamı sıvılaşma nekrozunun özelliğidir; dokunun tamamen erimesiyle oluşur.\n- **Sarı-krem, püylü** — Sarı-krem, püylü görünüm sıvılaşma nekrozunda görülen püyün, yani irinin özelliğidir.\n- **Soluk, turgoru artmış** — Soluk, turgoru artmış görünüm, birçok hücrede hidropik değişim olan organın geri dönüşümlü hasar bulgusudur.\n- **Lokalize apse boşluğu** — Lokalize apse boşluğu, sıvılaşma nekrozunda püyün bir yerde birikmesiyle oluşur.\n- **Sert, soluk, kuru** — Sert, soluk, kuru doğru: koagülatif nekrozda doku sert, soluk ve kurudur; doku mimarisi birkaç gün korunur.\n\n**Cevap: E** — Sert, soluk, kuru\n\n**Özet.** Koagülatif nekrozda yapısal proteinler ve enzimler denatüre olur, proteoliz gecikir; doku sert, soluk, kuru görünür ve mimari birkaç gün korunur.",
+   "ses": "Koagülatif nekrozun makroskopik görünümü hangisidir?\nA, Viskoz sıvı kıvamında\nBe, Sarı krem, püylü\nCe, Soluk, turgoru artmış\nDe, Lokalize apse boşluğu\nE, Sert, soluk, kuru\nSeçenekleri sırayla değerlendirelim.\nViskoz sıvı kıvamı sıvılaşma nekrozunun özelliğidir, dokunun tamamen erimesiyle oluşur.\nSarı krem, püylü görünüm sıvılaşma nekrozunda görülen püyün, yani irinin özelliğidir.\nSoluk, turgoru artmış görünüm, birçok hücrede hidropik değişim olan organın geri dönüşümlü hasar bulgusudur.\nLokalize apse boşluğu, sıvılaşma nekrozunda püyün bir yerde birikmesiyle oluşur.\nSert, soluk, kuru doğru, koagülatif nekrozda doku sert, soluk ve kurudur, doku mimarisi birkaç gün korunur.\nDoğru cevap E, Sert, soluk, kuru\nKoagülatif nekrozda yapısal proteinler ve enzimler denatüre olur, proteoliz gecikir, doku sert, soluk, kuru görünür ve mimari birkaç gün korunur.",
+   "kelime": 144
+  },
+  {
+   "no": 42,
+   "tur": "ornek",
+   "soru": "Koagülatif nekroz alanında zaman içinde ölü hücre kalıntılarını temizleyen hücre hangisidir?",
+   "secenekler": {
+    "A": "Makrofajlar",
+    "B": "Fibroblastlar",
+    "C": "Lenfositler",
+    "D": "Plazma hücreleri",
+    "E": "Eritrositler"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Makrofajlar doğru: koagülatif nekrozda lökositler birikir, enzimler ölü hücreleri sindirir ve kalıntıları makrofajlar temizler.",
+    "B": "Koagülatif nekroz alanında kalıntıları temizleyen hücre makrofajdır. Fibroblastlar bu sorudaki ayrımı sağlamaz.",
+    "C": "Lenfositler kalıntı temizliğiyle tanımlanmaz; nekroz alanında önce lökositler birikir.",
+    "D": "Plazma hücreleri bu temizlik sürecinde yer almaz; ölü hücreleri lökosit enzimleri sindirir.",
+    "E": "Eritrositler oksijen taşır; nekrotik kalıntıların temizlenmesinde rolleri yoktur."
+   },
+   "ozet": "Koagülatif nekroz kalp, böbrek ve dalak enfarktlarının tipik nekrozudur; zamanla lökositler birikir, enzimler sindirir ve makrofajlar kalıntıları temizler.",
+   "metin": "**Soru.** Koagülatif nekroz alanında zaman içinde ölü hücre kalıntılarını temizleyen hücre hangisidir?\n\n**A)** Makrofajlar · **B)** Fibroblastlar · **C)** Lenfositler · **D)** Plazma hücreleri · **E)** Eritrositler\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Makrofajlar** — Makrofajlar doğru: koagülatif nekrozda lökositler birikir, enzimler ölü hücreleri sindirir ve kalıntıları makrofajlar temizler.\n- **Fibroblastlar** — Koagülatif nekroz alanında kalıntıları temizleyen hücre makrofajdır. Fibroblastlar bu sorudaki ayrımı sağlamaz.\n- **Lenfositler** — Lenfositler kalıntı temizliğiyle tanımlanmaz; nekroz alanında önce lökositler birikir.\n- **Plazma hücreleri** — Plazma hücreleri bu temizlik sürecinde yer almaz; ölü hücreleri lökosit enzimleri sindirir.\n- **Eritrositler** — Eritrositler oksijen taşır; nekrotik kalıntıların temizlenmesinde rolleri yoktur.\n\n**Cevap: A** — Makrofajlar\n\n**Özet.** Koagülatif nekroz kalp, böbrek ve dalak enfarktlarının tipik nekrozudur; zamanla lökositler birikir, enzimler sindirir ve makrofajlar kalıntıları temizler.",
+   "ses": "Koagülatif nekroz alanında zaman içinde ölü hücre kalıntılarını temizleyen hücre hangisidir?\nA, Makrofajlar\nBe, Fibroblastlar\nCe, Lenfositler\nDe, Plazma hücreleri\nE, Eritrositler\nHer seçeneği tek tek ele alalım.\nMakrofajlar doğru, koagülatif nekrozda lökositler birikir, enzimler ölü hücreleri sindirir ve kalıntıları makrofajlar temizler.\nKoagülatif nekroz alanında kalıntıları temizleyen hücre makrofajdır. Fibroblastlar bu sorudaki ayrımı sağlamaz.\nLenfositler kalıntı temizliğiyle tanımlanmaz, nekroz alanında önce lökositler birikir.\nPlazma hücreleri bu temizlik sürecinde yer almaz, ölü hücreleri lökosit enzimleri sindirir.\nEritrositler oksijen taşır, nekrotik kalıntıların temizlenmesinde rolleri yoktur.\nDoğru cevap A, Makrofajlar\nKoagülatif nekroz kalp, böbrek ve dalak enfarktlarının tipik nekrozudur, zamanla lökositler birikir, enzimler sindirir ve makrofajlar kalıntıları temizler.",
+   "kelime": 128
+  },
+  {
+   "no": 43,
+   "tur": "ornek",
+   "soru": "Sıvılaşma nekrozunda nekrotik materyalin lokalize birikimine ne ad verilir?",
+   "secenekler": {
+    "A": "Püy",
+    "B": "Apse",
+    "C": "Gangren",
+    "D": "Enfarkt",
+    "E": "Kazeöz nekroz"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Püy, yani irin, sarı-krem nekrotik materyalin kendisidir; lokalize birikimin adı değildir.",
+    "B": "Apse doğru: sıvılaşma nekrozunda püyün lokalize birikimine apse denir.",
+    "C": "Gangren klinik bir terimdir; geniş koagülatif nekroz alanını tanımlar.",
+    "D": "Enfarkt iskemiye bağlı nekroz alanıdır; kalp, böbrek ve dalakta koagülatif nekroz yapar.",
+    "E": "Kazeöz nekroz ayrı bir doku nekrozu kalıbıdır; püy birikiminin adı değildir."
+   },
+   "ozet": "Sıvılaşma nekrozunda doku lökosit ve mikrobiyal enzimlerle erir; oluşan sarı-krem materyal püy, onun lokalize birikimi apsedir.",
+   "metin": "**Soru.** Sıvılaşma nekrozunda nekrotik materyalin lokalize birikimine ne ad verilir?\n\n**A)** Püy · **B)** Apse · **C)** Gangren · **D)** Enfarkt · **E)** Kazeöz nekroz\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Püy** — Püy, yani irin, sarı-krem nekrotik materyalin kendisidir; lokalize birikimin adı değildir.\n- **Apse** — Apse doğru: sıvılaşma nekrozunda püyün lokalize birikimine apse denir.\n- **Gangren** — Gangren klinik bir terimdir; geniş koagülatif nekroz alanını tanımlar.\n- **Enfarkt** — Enfarkt iskemiye bağlı nekroz alanıdır; kalp, böbrek ve dalakta koagülatif nekroz yapar.\n- **Kazeöz nekroz** — Kazeöz nekroz ayrı bir doku nekrozu kalıbıdır; püy birikiminin adı değildir.\n\n**Cevap: B** — Apse\n\n**Özet.** Sıvılaşma nekrozunda doku lökosit ve mikrobiyal enzimlerle erir; oluşan sarı-krem materyal püy, onun lokalize birikimi apsedir.",
+   "ses": "Sıvılaşma nekrozunda nekrotik materyalin lokalize birikimine ne ad verilir?\nA, Püy\nBe, Apse\nCe, Gangren\nDe, Enfarkt\nE, Kazeöz nekroz\nŞıkları sırasıyla gözden geçirelim.\nPüy, yani irin, sarı krem nekrotik materyalin kendisidir, lokalize birikimin adı değildir.\nApse doğru, sıvılaşma nekrozunda püyün lokalize birikimine apse denir.\nGangren klinik bir terimdir, geniş koagülatif nekroz alanını tanımlar.\nEnfarkt iskemiye bağlı nekroz alanıdır, kalp, böbrek ve dalakta koagülatif nekroz yapar.\nKazeöz nekroz ayrı bir doku nekrozu kalıbıdır, püy birikiminin adı değildir.\nDoğru cevap Be, Apse\nSıvılaşma nekrozunda doku lökosit ve mikrobiyal enzimlerle erir, oluşan sarı krem materyal püy, onun lokalize birikimi apsedir.",
+   "kelime": 119
+  },
+  {
+   "no": 44,
+   "tur": "ornek",
+   "soru": "Gangrenöz nekroz için hangisi doğrudur?",
+   "secenekler": {
+    "A": "Özgün bir histolojik tiptir",
+    "B": "Temelde sıvılaşma nekrozudur",
+    "C": "Klinik bir terimdir",
+    "D": "En sık beyinde görülür",
+    "E": "Enfeksiyon eklenince kuru gangren olur"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Özgün bir histolojik tip değildir; gangrenöz nekroz klasik histolojik bir tip sayılmaz.",
+    "B": "Temelde sıvılaşma nekrozu değildir; gangren geniş koagülatif nekroz alanını tanımlar.",
+    "C": "Klinik bir terimdir doğru: gangrenöz nekroz histolojik tip değil, geniş koagülatif nekroz alanını anlatan klinik terimdir.",
+    "D": "En sık beyinde görülmez; gangren genellikle alt ekstremitede, kan akımının kesildiği alanlarda gelişir.",
+    "E": "Enfeksiyon eklenince kuru değil, ikincil sıvılaşmayla ıslak gangren olur."
+   },
+   "ozet": "Gangrenöz nekroz genellikle alt ekstremitede kan akımı kesilince gelişen geniş koagülatif nekrozu tanımlayan klinik terimdir; enfeksiyon eklenirse ıslak gangren olur.",
+   "metin": "**Soru.** Gangrenöz nekroz için hangisi doğrudur?\n\n**A)** Özgün bir histolojik tiptir · **B)** Temelde sıvılaşma nekrozudur · **C)** Klinik bir terimdir · **D)** En sık beyinde görülür · **E)** Enfeksiyon eklenince kuru gangren olur\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Özgün bir histolojik tiptir** — Özgün bir histolojik tip değildir; gangrenöz nekroz klasik histolojik bir tip sayılmaz.\n- **Temelde sıvılaşma nekrozudur** — Temelde sıvılaşma nekrozu değildir; gangren geniş koagülatif nekroz alanını tanımlar.\n- **Klinik bir terimdir** — Klinik bir terimdir doğru: gangrenöz nekroz histolojik tip değil, geniş koagülatif nekroz alanını anlatan klinik terimdir.\n- **En sık beyinde görülür** — En sık beyinde görülmez; gangren genellikle alt ekstremitede, kan akımının kesildiği alanlarda gelişir.\n- **Enfeksiyon eklenince kuru gangren olur** — Enfeksiyon eklenince kuru değil, ikincil sıvılaşmayla ıslak gangren olur.\n\n**Cevap: C** — Klinik bir terimdir\n\n**Özet.** Gangrenöz nekroz genellikle alt ekstremitede kan akımı kesilince gelişen geniş koagülatif nekrozu tanımlayan klinik terimdir; enfeksiyon eklenirse ıslak gangren olur.",
+   "ses": "Gangrenöz nekroz için hangisi doğrudur?\nA, Özgün bir histolojik tiptir\nBe, Temelde sıvılaşma nekrozudur\nCe, Klinik bir terimdir\nDe, En sık beyinde görülür\nE, Enfeksiyon eklenince kuru gangren olur\nŞimdi seçeneklere tek tek bakalım.\nÖzgün bir histolojik tip değildir, gangrenöz nekroz klasik histolojik bir tip sayılmaz.\nTemelde sıvılaşma nekrozu değildir, gangren geniş koagülatif nekroz alanını tanımlar.\nKlinik bir terimdir doğru, gangrenöz nekroz histolojik tip değil, geniş koagülatif nekroz alanını anlatan klinik terimdir.\nEn sık beyinde görülmez, gangren genellikle alt ekstremitede, kan akımının kesildiği alanlarda gelişir.\nEnfeksiyon eklenince kuru değil, ikincil sıvılaşmayla ıslak gangren olur.\nDoğru cevap Ce, Klinik bir terimdir\nGangrenöz nekroz genellikle alt ekstremitede kan akımı kesilince gelişen geniş koagülatif nekrozu tanımlayan klinik terimdir, enfeksiyon eklenirse ıslak gangren olur.",
+   "kelime": 156
+  }
+ ]
+}

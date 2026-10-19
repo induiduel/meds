@@ -1,0 +1,1082 @@
+{
+ "kod": "13",
+ "baslik": "Emboli, Enfarktüs ve Şok",
+ "surum": "alt-1",
+ "sorular": [
+  {
+   "no": 1,
+   "tur": "ornek",
+   "soru": "Pulmoner embolilerin %95'ten fazlasının kaynağı hangisidir?",
+   "secenekler": {
+    "A": "Sol ventrikül mural trombüsü",
+    "B": "Derin ven trombozu",
+    "C": "Aort anevrizması",
+    "D": "Kapak vejetasyonu",
+    "E": "Sol atriyum trombüsü"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Sol ventrikül mural trombüsü, özellikle enfarktüs sonrası, sistemik arteriyel embolilerin başlıca kökenidir; pulmoner değil, arteriyel yatağı tıkar.",
+    "B": "Derin ven trombozu doğru: pulmoner embolilerin %95'ten fazlası özellikle diz üstündeki popliteal, femoral ve iliak venlerdeki trombüslerden kopar.",
+    "C": "Aort anevrizması sistemik arteriyel embolilerin diğer kökenlerinden biridir; buradan kopan parça pulmoner dolaşıma değil, sistemik arterlere gider.",
+    "D": "Kapak vejetasyonu da sistemik emboli kökenleri arasındadır; enfekte olduğunda septik enfarktüse yol açabilir, pulmoner embolinin ana kökeni değildir.",
+    "E": "Sol atriyum trombüsü, mitral stenozdaki gibi dilate atriyumda oluşur ve sistemik arteriyel embolilerin önemli bir kökenidir."
+   },
+   "ozet": "Pulmoner emboliler venöz sistemden sağ kalp yoluyla pulmoner artere ulaşır; %95'ten fazlası diz üstü derin bacak venlerindeki trombozdan köken alır.",
+   "metin": "**Soru.** Pulmoner embolilerin %95'ten fazlasının kaynağı hangisidir?\n\n**A)** Sol ventrikül mural trombüsü · **B)** Derin ven trombozu · **C)** Aort anevrizması · **D)** Kapak vejetasyonu · **E)** Sol atriyum trombüsü\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Sol ventrikül mural trombüsü** — Sol ventrikül mural trombüsü, özellikle enfarktüs sonrası, sistemik arteriyel embolilerin başlıca kökenidir; pulmoner değil, arteriyel yatağı tıkar.\n- **Derin ven trombozu** — Derin ven trombozu doğru: pulmoner embolilerin %95'ten fazlası özellikle diz üstündeki popliteal, femoral ve iliak venlerdeki trombüslerden kopar.\n- **Aort anevrizması** — Aort anevrizması sistemik arteriyel embolilerin diğer kökenlerinden biridir; buradan kopan parça pulmoner dolaşıma değil, sistemik arterlere gider.\n- **Kapak vejetasyonu** — Kapak vejetasyonu da sistemik emboli kökenleri arasındadır; enfekte olduğunda septik enfarktüse yol açabilir, pulmoner embolinin ana kökeni değildir.\n- **Sol atriyum trombüsü** — Sol atriyum trombüsü, mitral stenozdaki gibi dilate atriyumda oluşur ve sistemik arteriyel embolilerin önemli bir kökenidir.\n\n**Cevap: B** — Derin ven trombozu\n\n**Özet.** Pulmoner emboliler venöz sistemden sağ kalp yoluyla pulmoner artere ulaşır; %95'ten fazlası diz üstü derin bacak venlerindeki trombozdan köken alır.",
+   "ses": "Pulmoner embolilerin yüzde doksan beşten fazlasının kaynağı hangisidir?\nA, Sol ventrikül mural trombüsü\nBe, Derin ven trombozu\nCe, Aort anevrizması\nDe, Kapak vejetasyonu\nE, Sol atriyum trombüsü\nSeçenekleri sırayla değerlendirelim.\nSol ventrikül mural trombüsü, özellikle enfarktüs sonrası, sistemik arteriyel embolilerin başlıca kökenidir. Pulmoner değil, arteriyel yatağı tıkar.\nDerin ven trombozu doğru. Pulmoner embolilerin yüzde doksan beşten fazlası özellikle diz üstündeki popliteal, femoral ve iliak venlerdeki trombüslerden kopar.\nAort anevrizması sistemik arteriyel embolilerin diğer kökenlerinden biridir. Buradan kopan parça pulmoner dolaşıma değil, sistemik arterlere gider.\nKapak vejetasyonu da sistemik emboli kökenleri arasındadır. Enfekte olduğunda septik enfarktüse yol açabilir, pulmoner embolinin ana kökeni değildir.\nSol atriyum trombüsü, mitral stenozdaki gibi dilate atriyumda oluşur ve sistemik arteriyel embolilerin önemli bir kökenidir.\nDoğru cevap Be, Derin ven trombozu\nPulmoner emboliler venöz sistemden sağ kalp yoluyla pulmoner artere ulaşır. Yüzde doksan beşten fazlası diz üstü derin bacak venlerindeki trombozdan köken alır.",
+   "kelime": 171
+  },
+  {
+   "no": 2,
+   "tur": "ornek",
+   "soru": "Ana pulmoner arter bifürkasyonunu tıkayan büyük emboliye ne ad verilir?",
+   "secenekler": {
+    "A": "Paradoksal emboli",
+    "B": "Hava kilidi",
+    "C": "Septik emboli",
+    "D": "Yağ embolisi",
+    "E": "Eyer emboli"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Paradoksal emboli venöz sistemden köken alıp sistemik arterlere geçen emboli türüdür; tıkadığı yerle değil, izlediği yolla tanımlanır.",
+    "B": "Hava kilidi, damara büyük miktarda gaz girdiğinde kalp içinde oluşur ve ölüme yol açar; pulmoner arterdeki trombüs değildir.",
+    "C": "Septik emboli, enfektif endokardit vejetasyonu gibi enfekte trombüslerden kopar ve tıkadığı alanda apse gelişebilir; adı yerleşim yerini değil, enfeksiyonu anlatır.",
+    "D": "Yağ embolisi uzun kemik kırığında kemik iliğinden dolaşıma karışan mikroskobik yağ küreciklerinden oluşur; ana pulmoner arteri tıkayan büyük kitle değildir.",
+    "E": "Eyer emboli doğru: ana pulmoner arteri ya da bifürkasyonunu tıkayan büyük emboli ani ölüm veya akut sağ kalp yetmezliği yapar."
+   },
+   "ozet": "Büyük emboli ana pulmoner arterin çatallanma noktasına eyer gibi oturur ve ani ölüme ya da akut sağ kalp yetmezliğine yol açar; küçük emboliler çoğunlukla sessizdir.",
+   "metin": "**Soru.** Ana pulmoner arter bifürkasyonunu tıkayan büyük emboliye ne ad verilir?\n\n**A)** Paradoksal emboli · **B)** Hava kilidi · **C)** Septik emboli · **D)** Yağ embolisi · **E)** Eyer emboli\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Paradoksal emboli** — Paradoksal emboli venöz sistemden köken alıp sistemik arterlere geçen emboli türüdür; tıkadığı yerle değil, izlediği yolla tanımlanır.\n- **Hava kilidi** — Hava kilidi, damara büyük miktarda gaz girdiğinde kalp içinde oluşur ve ölüme yol açar; pulmoner arterdeki trombüs değildir.\n- **Septik emboli** — Septik emboli, enfektif endokardit vejetasyonu gibi enfekte trombüslerden kopar ve tıkadığı alanda apse gelişebilir; adı yerleşim yerini değil, enfeksiyonu anlatır.\n- **Yağ embolisi** — Yağ embolisi uzun kemik kırığında kemik iliğinden dolaşıma karışan mikroskobik yağ küreciklerinden oluşur; ana pulmoner arteri tıkayan büyük kitle değildir.\n- **Eyer emboli** — Eyer emboli doğru: ana pulmoner arteri ya da bifürkasyonunu tıkayan büyük emboli ani ölüm veya akut sağ kalp yetmezliği yapar.\n\n**Cevap: E** — Eyer emboli\n\n**Özet.** Büyük emboli ana pulmoner arterin çatallanma noktasına eyer gibi oturur ve ani ölüme ya da akut sağ kalp yetmezliğine yol açar; küçük emboliler çoğunlukla sessizdir.",
+   "ses": "Ana pulmoner arter bifürkasyonunu tıkayan büyük emboliye ne ad verilir?\nA, Paradoksal emboli\nBe, Hava kilidi\nCe, Septik emboli\nDe, Yağ embolisi\nE, Eyer emboli\nHer seçeneği tek tek ele alalım.\nParadoksal emboli venöz sistemden köken alıp sistemik arterlere geçen emboli türüdür. Tıkadığı yerle değil, izlediği yolla tanımlanır.\nHava kilidi, damara büyük miktarda gaz girdiğinde kalp içinde oluşur ve ölüme yol açar. Pulmoner arterdeki trombüs değildir.\nSeptik emboli, enfektif endokardit vejetasyonu gibi enfekte trombüslerden kopar ve tıkadığı alanda apse gelişebilir. Adı yerleşim yerini değil, enfeksiyonu anlatır.\nYağ embolisi uzun kemik kırığında kemik iliğinden dolaşıma karışan mikroskobik yağ küreciklerinden oluşur. Ana pulmoner arteri tıkayan büyük kitle değildir.\nEyer emboli doğru. Ana pulmoner arteri ya da bifürkasyonunu tıkayan büyük emboli ani ölüm veya akut sağ kalp yetmezliği yapar.\nDoğru cevap E, Eyer emboli\nBüyük emboli ana pulmoner arterin çatallanma noktasına eyer gibi oturur ve ani ölüme ya da akut sağ kalp yetmezliğine yol açar. Küçük emboliler çoğunlukla sessizdir.",
+   "kelime": 183
+  },
+  {
+   "no": 3,
+   "tur": "ornek",
+   "soru": "Sistemik arteriyel embolilerin yaklaşık %80'inin kaynağı hangisidir?",
+   "secenekler": {
+    "A": "Derin ven trombozu",
+    "B": "Aort anevrizması",
+    "C": "İntrakardiyak mural trombüs",
+    "D": "Ülserli plak",
+    "E": "Kapak vejetasyonu"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Derin ven trombozu pulmoner embolilerin %95'ten fazlasının kökenidir; sistemik arterlere ancak paradoksal emboliyle ulaşabilir.",
+    "B": "Aort anevrizması sistemik embolilerin daha az görülen kökenlerindendir; büyük çoğunluk kalbin içinden gelir.",
+    "C": "İntrakardiyak mural trombüs doğru: sistemik embolilerin yaklaşık %80'i buradan köken alır; en çok sol ventrikül enfarktüsü ve dilate sol atriyum zemininde oluşur.",
+    "D": "Ülserleşmiş aterosklerotik plak sistemik embolilerin diğer kökenleri arasındadır, fakat çoğunluğu oluşturmaz.",
+    "E": "Kapak vejetasyonu da sistemik emboli verir ve enfekteyse septik enfarktüse yol açabilir; yine de çoğunluğu oluşturan kalp içi mural trombüstür."
+   },
+   "ozet": "Sistemik embolilerin yaklaşık %80'i kalp içindeki mural trombüslerden köken alır; bunların yaklaşık üçte ikisi sol ventrikül enfarktüsüne, dörtte biri dilate sol atriyuma bağlıdır.",
+   "metin": "**Soru.** Sistemik arteriyel embolilerin yaklaşık %80'inin kaynağı hangisidir?\n\n**A)** Derin ven trombozu · **B)** Aort anevrizması · **C)** İntrakardiyak mural trombüs · **D)** Ülserli plak · **E)** Kapak vejetasyonu\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Derin ven trombozu** — Derin ven trombozu pulmoner embolilerin %95'ten fazlasının kökenidir; sistemik arterlere ancak paradoksal emboliyle ulaşabilir.\n- **Aort anevrizması** — Aort anevrizması sistemik embolilerin daha az görülen kökenlerindendir; büyük çoğunluk kalbin içinden gelir.\n- **İntrakardiyak mural trombüs** — İntrakardiyak mural trombüs doğru: sistemik embolilerin yaklaşık %80'i buradan köken alır; en çok sol ventrikül enfarktüsü ve dilate sol atriyum zemininde oluşur.\n- **Ülserli plak** — Ülserleşmiş aterosklerotik plak sistemik embolilerin diğer kökenleri arasındadır, fakat çoğunluğu oluşturmaz.\n- **Kapak vejetasyonu** — Kapak vejetasyonu da sistemik emboli verir ve enfekteyse septik enfarktüse yol açabilir; yine de çoğunluğu oluşturan kalp içi mural trombüstür.\n\n**Cevap: C** — İntrakardiyak mural trombüs\n\n**Özet.** Sistemik embolilerin yaklaşık %80'i kalp içindeki mural trombüslerden köken alır; bunların yaklaşık üçte ikisi sol ventrikül enfarktüsüne, dörtte biri dilate sol atriyuma bağlıdır.",
+   "ses": "Sistemik arteriyel embolilerin yaklaşık yüzde sekseninin kaynağı hangisidir?\nA, Derin ven trombozu\nBe, Aort anevrizması\nCe, İntrakardiyak mural trombüs\nDe, Ülserli plak\nE, Kapak vejetasyonu\nŞıkları sırasıyla gözden geçirelim.\nDerin ven trombozu pulmoner embolilerin yüzde doksan beşten fazlasının kökenidir. Sistemik arterlere ancak paradoksal emboliyle ulaşabilir.\nAort anevrizması sistemik embolilerin daha az görülen kökenlerindendir. Büyük çoğunluk kalbin içinden gelir.\nİntrakardiyak mural trombüs doğru. Sistemik embolilerin yaklaşık yüzde sekseni buradan köken alır. En çok sol ventrikül enfarktüsü ve dilate sol atriyum zemininde oluşur.\nÜlserleşmiş aterosklerotik plak sistemik embolilerin diğer kökenleri arasındadır, fakat çoğunluğu oluşturmaz.\nKapak vejetasyonu da sistemik emboli verir ve enfekteyse septik enfarktüse yol açabilir. Yine de çoğunluğu oluşturan kalp içi mural trombüstür.\nDoğru cevap Ce, İntrakardiyak mural trombüs\nSistemik embolilerin yaklaşık yüzde sekseni kalp içindeki mural trombüslerden köken alır. Bunların yaklaşık üçte ikisi sol ventrikül enfarktüsüne, dörtte biri dilate sol atriyuma bağlıdır.",
+   "kelime": 166
+  },
+  {
+   "no": 4,
+   "tur": "ornek",
+   "soru": "Uzun kemik kırığından 2 gün sonra dispne, konfüzyon ve peteşiyal döküntü gelişen hastada en olası tanı hangisidir?",
+   "secenekler": {
+    "A": "Yağ embolisi sendromu",
+    "B": "Amniyotik sıvı embolisi",
+    "C": "Hava embolisi",
+    "D": "Dekompresyon hastalığı",
+    "E": "Septik emboli"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Yağ embolisi sendromu doğru: travmadan 1–3 gün sonra solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntü üçlüsüyle ortaya çıkar.",
+    "B": "Amniyotik sıvı embolisi doğumda gelişir; ani dispne, siyanoz, şok ve sıklıkla yaygın damar içi pıhtılaşma ile seyreder, kırıkla ilişkisi yoktur.",
+    "C": "Hava embolisi cerrahi, göğüs travması ya da santral venöz kateterle damara gaz girmesidir; peteşiyal döküntü ile tanımlanmaz.",
+    "D": "Dekompresyon hastalığı hızlı basınç düşüşünde çözünmüş azotun kabarcık oluşturmasıdır; dalış sonrası gelişir, kırık sonrası değil.",
+    "E": "Septik emboli enfekte trombüsten, örneğin endokardit vejetasyonundan kopar; travma sonrası bu üçlü tabloyu açıklamaz."
+   },
+   "ozet": "Uzun kemik kırığında kemik iliğinden yağ kürecikleri dolaşıma karışır; ciddi olguda 1–3 gün sonra solunum yetmezliği, nörolojik bulgu ve peteşi üçlüsü görülür.",
+   "metin": "**Soru.** Uzun kemik kırığından 2 gün sonra dispne, konfüzyon ve peteşiyal döküntü gelişen hastada en olası tanı hangisidir?\n\n**A)** Yağ embolisi sendromu · **B)** Amniyotik sıvı embolisi · **C)** Hava embolisi · **D)** Dekompresyon hastalığı · **E)** Septik emboli\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Yağ embolisi sendromu** — Yağ embolisi sendromu doğru: travmadan 1–3 gün sonra solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntü üçlüsüyle ortaya çıkar.\n- **Amniyotik sıvı embolisi** — Amniyotik sıvı embolisi doğumda gelişir; ani dispne, siyanoz, şok ve sıklıkla yaygın damar içi pıhtılaşma ile seyreder, kırıkla ilişkisi yoktur.\n- **Hava embolisi** — Hava embolisi cerrahi, göğüs travması ya da santral venöz kateterle damara gaz girmesidir; peteşiyal döküntü ile tanımlanmaz.\n- **Dekompresyon hastalığı** — Dekompresyon hastalığı hızlı basınç düşüşünde çözünmüş azotun kabarcık oluşturmasıdır; dalış sonrası gelişir, kırık sonrası değil.\n- **Septik emboli** — Septik emboli enfekte trombüsten, örneğin endokardit vejetasyonundan kopar; travma sonrası bu üçlü tabloyu açıklamaz.\n\n**Cevap: A** — Yağ embolisi sendromu\n\n**Özet.** Uzun kemik kırığında kemik iliğinden yağ kürecikleri dolaşıma karışır; ciddi olguda 1–3 gün sonra solunum yetmezliği, nörolojik bulgu ve peteşi üçlüsü görülür.",
+   "ses": "Uzun kemik kırığından iki gün sonra dispne, konfüzyon ve peteşiyal döküntü gelişen hastada en olası tanı hangisidir?\nA, Yağ embolisi sendromu\nBe, Amniyotik sıvı embolisi\nCe, Hava embolisi\nDe, Dekompresyon hastalığı\nE, Septik emboli\nŞimdi seçeneklere tek tek bakalım.\nYağ embolisi sendromu doğru. Travmadan bir ile üç gün sonra solunum yetmezliği, nörolojik belirtiler ve peteşiyal döküntü üçlüsüyle ortaya çıkar.\nAmniyotik sıvı embolisi doğumda gelişir. Ani dispne, siyanoz, şok ve sıklıkla yaygın damar içi pıhtılaşma ile seyreder, kırıkla ilişkisi yoktur.\nHava embolisi cerrahi, göğüs travması ya da santral venöz kateterle damara gaz girmesidir. Peteşiyal döküntü ile tanımlanmaz.\nDekompresyon hastalığı hızlı basınç düşüşünde çözünmüş azotun kabarcık oluşturmasıdır. Dalış sonrası gelişir, kırık sonrası değil.\nSeptik emboli enfekte trombüsten, örneğin endokardit vejetasyonundan kopar. Travma sonrası bu üçlü tabloyu açıklamaz.\nDoğru cevap A, Yağ embolisi sendromu\nUzun kemik kırığında kemik iliğinden yağ kürecikleri dolaşıma karışır. Ciddi olguda bir ile üç gün sonra solunum yetmezliği, nörolojik bulgu ve peteşi üçlüsü görülür.",
+   "kelime": 180
+  },
+  {
+   "no": 5,
+   "tur": "ornek",
+   "soru": "Akciğer mikrosirkülasyonunda fetal skuamöz hücre ve lanugo kılları hangi emboli tipinde görülür?",
+   "secenekler": {
+    "A": "Yağ embolisi",
+    "B": "Tromboemboli",
+    "C": "Hava embolisi",
+    "D": "Amniyotik sıvı embolisi",
+    "E": "Septik emboli"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Yağ embolisinde akciğer damarlarında hematopoetik elemanlar ve yağ hücreleri görülür; fetal hücre ve lanugo beklenmez.",
+    "B": "Tromboemboli kopmuş trombüs parçasıdır ve embolilerin çoğunu oluşturur; içinde fetal skuamöz hücre bulunmaz.",
+    "C": "Hava embolisinde damarı tıkayan şey gaz kabarcığıdır; dokuda fetal kökenli hücre ya da kıl görülmez.",
+    "D": "Amniyotik sıvı embolisi doğru: akciğer mikrosirkülasyonunda fetal skuamöz hücreler, lanugo, verniks kazeoza yağları ve mukus bulunur.",
+    "E": "Septik emboli mikroorganizma taşıyan enfekte trombüstür; tıkadığı alan apseye dönüşebilir, fetal elemanlar içermez."
+   },
+   "ozet": "Amniyotik sıvı embolisinde plasenta zarı ya da uterin damar yırtığından fetal hücreler anne dolaşımına geçer; mortalite %80'e yakındır ve sıklıkla DIC gelişir.",
+   "metin": "**Soru.** Akciğer mikrosirkülasyonunda fetal skuamöz hücre ve lanugo kılları hangi emboli tipinde görülür?\n\n**A)** Yağ embolisi · **B)** Tromboemboli · **C)** Hava embolisi · **D)** Amniyotik sıvı embolisi · **E)** Septik emboli\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Yağ embolisi** — Yağ embolisinde akciğer damarlarında hematopoetik elemanlar ve yağ hücreleri görülür; fetal hücre ve lanugo beklenmez.\n- **Tromboemboli** — Tromboemboli kopmuş trombüs parçasıdır ve embolilerin çoğunu oluşturur; içinde fetal skuamöz hücre bulunmaz.\n- **Hava embolisi** — Hava embolisinde damarı tıkayan şey gaz kabarcığıdır; dokuda fetal kökenli hücre ya da kıl görülmez.\n- **Amniyotik sıvı embolisi** — Amniyotik sıvı embolisi doğru: akciğer mikrosirkülasyonunda fetal skuamöz hücreler, lanugo, verniks kazeoza yağları ve mukus bulunur.\n- **Septik emboli** — Septik emboli mikroorganizma taşıyan enfekte trombüstür; tıkadığı alan apseye dönüşebilir, fetal elemanlar içermez.\n\n**Cevap: D** — Amniyotik sıvı embolisi\n\n**Özet.** Amniyotik sıvı embolisinde plasenta zarı ya da uterin damar yırtığından fetal hücreler anne dolaşımına geçer; mortalite %80'e yakındır ve sıklıkla DIC gelişir.",
+   "ses": "Akciğer mikrosirkülasyonunda fetal skuamöz hücre ve lanugo kılları hangi emboli tipinde görülür?\nA, Yağ embolisi\nBe, Tromboemboli\nCe, Hava embolisi\nDe, Amniyotik sıvı embolisi\nE, Septik emboli\nSeçenekleri sırayla değerlendirelim.\nYağ embolisinde akciğer damarlarında hematopoetik elemanlar ve yağ hücreleri görülür. Fetal hücre ve lanugo beklenmez.\nTromboemboli kopmuş trombüs parçasıdır ve embolilerin çoğunu oluşturur. İçinde fetal skuamöz hücre bulunmaz.\nHava embolisinde damarı tıkayan şey gaz kabarcığıdır. Dokuda fetal kökenli hücre ya da kıl görülmez.\nAmniyotik sıvı embolisi doğru. Akciğer mikrosirkülasyonunda fetal skuamöz hücreler, lanugo, verniks kazeoza yağları ve mukus bulunur.\nSeptik emboli mikroorganizma taşıyan enfekte trombüstür. Tıkadığı alan apseye dönüşebilir, fetal elemanlar içermez.\nDoğru cevap De, Amniyotik sıvı embolisi\nAmniyotik sıvı embolisinde plasenta zarı ya da uterin damar yırtığından fetal hücreler anne dolaşımına geçer. Mortalite yüzde seksene yakındır ve sıklıkla yaygın damar içi pıhtılaşma gelişir.",
+   "kelime": 157
+  },
+  {
+   "no": 6,
+   "tur": "ornek",
+   "soru": "Dekompresyon hastalığında kabarcıkları oluşturan gaz hangisidir?",
+   "secenekler": {
+    "A": "Oksijen",
+    "B": "Azot",
+    "C": "Karbondioksit",
+    "D": "Karbonmonoksit",
+    "E": "Helyum"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Oksijen ile karıştırılabilir: Derin dalıştan hızlı yükselişte çözeltiden çıkıp kabarcık yapan gaz azottur.",
+    "B": "Azot doğru: basınç altında solunan azot kanda ve dokularda çözünür, basınç hızla düşünce çözeltiden çıkarak kabarcık oluşturur.",
+    "C": "Karbondioksit kabarcıkların sorumlusu değildir; azot kabarcıkları eklem ve kaslarda şiddetli ağrıya, yani bends tablosuna yol açar.",
+    "D": "Karbonmonoksit dekompresyonla ilişkili değildir; azot kabarcıkları akciğerde ödem, kanama ve şiddetli dispneye, beyinde nörolojik defisite yol açar.",
+    "E": "Helyum bu tabloda geçen gaz değildir; tedavide hasta yüksek basınç odasına alınır, azot yeniden çözünür ve basınç yavaşça azaltılır."
+   },
+   "ozet": "Basınç altında solunan azot dokularda çözünür; ortam basıncı ani düşerse çözeltiden çıkar ve gaz embolisi gibi davranan kabarcıklar oluşturur.",
+   "metin": "**Soru.** Dekompresyon hastalığında kabarcıkları oluşturan gaz hangisidir?\n\n**A)** Oksijen · **B)** Azot · **C)** Karbondioksit · **D)** Karbonmonoksit · **E)** Helyum\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Oksijen** — Oksijen ile karıştırılabilir: Derin dalıştan hızlı yükselişte çözeltiden çıkıp kabarcık yapan gaz azottur.\n- **Azot** — Azot doğru: basınç altında solunan azot kanda ve dokularda çözünür, basınç hızla düşünce çözeltiden çıkarak kabarcık oluşturur.\n- **Karbondioksit** — Karbondioksit kabarcıkların sorumlusu değildir; azot kabarcıkları eklem ve kaslarda şiddetli ağrıya, yani bends tablosuna yol açar.\n- **Karbonmonoksit** — Karbonmonoksit dekompresyonla ilişkili değildir; azot kabarcıkları akciğerde ödem, kanama ve şiddetli dispneye, beyinde nörolojik defisite yol açar.\n- **Helyum** — Helyum bu tabloda geçen gaz değildir; tedavide hasta yüksek basınç odasına alınır, azot yeniden çözünür ve basınç yavaşça azaltılır.\n\n**Cevap: B** — Azot\n\n**Özet.** Basınç altında solunan azot dokularda çözünür; ortam basıncı ani düşerse çözeltiden çıkar ve gaz embolisi gibi davranan kabarcıklar oluşturur.",
+   "ses": "Dekompresyon hastalığında kabarcıkları oluşturan gaz hangisidir?\nA, Oksijen\nBe, Azot\nCe, Karbondioksit\nDe, Karbonmonoksit\nE, Helyum\nHer seçeneği tek tek ele alalım.\nOksijen ile karıştırılabilir. Derin dalıştan hızlı yükselişte çözeltiden çıkıp kabarcık yapan gaz azottur.\nAzot doğru. Basınç altında solunan azot kanda ve dokularda çözünür, basınç hızla düşünce çözeltiden çıkarak kabarcık oluşturur.\nKarbondioksit kabarcıkların sorumlusu değildir. Azot kabarcıkları eklem ve kaslarda şiddetli ağrıya, yani bendz tablosuna yol açar.\nKarbonmonoksit dekompresyonla ilişkili değildir. Azot kabarcıkları akciğerde ödem, kanama ve şiddetli dispneye, beyinde nörolojik defisite yol açar.\nHelyum bu tabloda geçen gaz değildir. Tedavide hasta yüksek basınç odasına alınır, azot yeniden çözünür ve basınç yavaşça azaltılır.\nDoğru cevap Be, Azot\nBasınç altında solunan azot dokularda çözünür. Ortam basıncı ani düşerse çözeltiden çıkar ve gaz embolisi gibi davranan kabarcıklar oluşturur.",
+   "kelime": 149
+  },
+  {
+   "no": 7,
+   "tur": "ornek",
+   "soru": "Dekompresyon hastalığının kronik formu (Caisson hastalığı) hangi bulguyla karakterizedir?",
+   "secenekler": {
+    "A": "Akciğer ödemi",
+    "B": "Eklem ağrısı (bends)",
+    "C": "Peteşiyal döküntü",
+    "D": "Hava kilidi",
+    "E": "Uzun kemik epifizlerinde iskemik nekroz"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Akciğer ödemi, kanama ve atelektazi dekompresyon hastalığının akut akciğer tutulumudur; şiddetli dispneyle seyreder, kronik formun bulgusu değildir.",
+    "B": "Eklem ve kaslardaki şiddetli ağrı, yani bends, akut formun tablosudur; kronik formu tanımlamaz.",
+    "C": "Peteşiyal döküntü yağ embolisi sendromunun üçlüsüne aittir; gövde ve konjonktivada görülür, dekompresyonla ilişkili değildir.",
+    "D": "Hava kilidi, damara giren büyük miktarda havanın kalp içinde akımı durdurmasıdır; ölümcül akut bir tablodur, Caisson hastalığı değildir.",
+    "E": "Uzun kemik epifizlerinde iskemik nekroz doğru: kronik formda tekrarlayan gaz embolileri bu bölgelerde iskemi yaratır."
+   },
+   "ozet": "Caisson hastalığı dekompresyonun kronik formudur; tekrarlayan gaz embolileri özellikle uzun kemik epifizlerinde iskemik nekroz yapar, akut form ise ağrı ve dispneyle gelir.",
+   "metin": "**Soru.** Dekompresyon hastalığının kronik formu (Caisson hastalığı) hangi bulguyla karakterizedir?\n\n**A)** Akciğer ödemi · **B)** Eklem ağrısı (bends) · **C)** Peteşiyal döküntü · **D)** Hava kilidi · **E)** Uzun kemik epifizlerinde iskemik nekroz\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Akciğer ödemi** — Akciğer ödemi, kanama ve atelektazi dekompresyon hastalığının akut akciğer tutulumudur; şiddetli dispneyle seyreder, kronik formun bulgusu değildir.\n- **Eklem ağrısı (bends)** — Eklem ve kaslardaki şiddetli ağrı, yani bends, akut formun tablosudur; kronik formu tanımlamaz.\n- **Peteşiyal döküntü** — Peteşiyal döküntü yağ embolisi sendromunun üçlüsüne aittir; gövde ve konjonktivada görülür, dekompresyonla ilişkili değildir.\n- **Hava kilidi** — Hava kilidi, damara giren büyük miktarda havanın kalp içinde akımı durdurmasıdır; ölümcül akut bir tablodur, Caisson hastalığı değildir.\n- **Uzun kemik epifizlerinde iskemik nekroz** — Uzun kemik epifizlerinde iskemik nekroz doğru: kronik formda tekrarlayan gaz embolileri bu bölgelerde iskemi yaratır.\n\n**Cevap: E** — Uzun kemik epifizlerinde iskemik nekroz\n\n**Özet.** Caisson hastalığı dekompresyonun kronik formudur; tekrarlayan gaz embolileri özellikle uzun kemik epifizlerinde iskemik nekroz yapar, akut form ise ağrı ve dispneyle gelir.",
+   "ses": "Dekompresyon hastalığının kronik formu, yani Keson hastalığı, hangi bulguyla karakterizedir?\nA, Akciğer ödemi\nBe, Eklem ağrısı, bends\nCe, Peteşiyal döküntü\nDe, Hava kilidi\nE, Uzun kemik epifizlerinde iskemik nekroz\nŞıkları sırasıyla gözden geçirelim.\nAkciğer ödemi, kanama ve atelektazi dekompresyon hastalığının akut akciğer tutulumudur. Şiddetli dispneyle seyreder, kronik formun bulgusu değildir.\nEklem ve kaslardaki şiddetli ağrı, yani bendz, akut formun tablosudur. Kronik formu tanımlamaz.\nPeteşiyal döküntü yağ embolisi sendromunun üçlüsüne aittir. Gövde ve konjonktivada görülür, dekompresyonla ilişkili değildir.\nHava kilidi, damara giren büyük miktarda havanın kalp içinde akımı durdurmasıdır. Ölümcül akut bir tablodur, Keson hastalığı değildir.\nUzun kemik epifizlerinde iskemik nekroz doğru. Kronik formda tekrarlayan gaz embolileri bu bölgelerde iskemi yaratır.\nDoğru cevap E, Uzun kemik epifizlerinde iskemik nekroz\nKeson hastalığı dekompresyonun kronik formudur. Tekrarlayan gaz embolileri özellikle uzun kemik epifizlerinde iskemik nekroz yapar, akut form ise ağrı ve dispneyle gelir.",
+   "kelime": 170
+  },
+  {
+   "no": 8,
+   "tur": "ornek",
+   "soru": "Kırmızı (hemorajik) enfarktüs en tipik hangi organda görülür?",
+   "secenekler": {
+    "A": "Böbrek",
+    "B": "Dalak",
+    "C": "Akciğer",
+    "D": "Kalp",
+    "E": "Beyin"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Böbrek katı ve uç arter dolaşımlı bir organdır; burada kama şeklinde, soluk beyaz enfarkt gelişir.",
+    "B": "Dalakta tıkanma, sınırları keskin ve kama biçimli soluk bir alan bırakır; bu beyaz enfarkttır.",
+    "C": "Akciğer doğru: çift dolaşımlı ve gevşek yapılı bir doku olduğundan enfarktı yaygın hemorajili, yani kırmızıdır.",
+    "D": "Kalp katı ve uç arter dolaşımlı bir organdır; miyokard enfarktı soluk, anemik tiptedir ve koagülatif nekroz gösterir.",
+    "E": "Beyin enfarktının ayırt edici yanı rengi değil nekroz tipidir; beyinde her zaman sıvılaşma nekrozu görülür."
+   },
+   "ozet": "Kırmızı enfarkt venöz tıkanma, akciğer ve ince bağırsak gibi çift dolaşımlı dokular, önceden konjesyonlu doku ve reperfüzyonda görülür; kalp, dalak ve böbrekte beyaz enfarkt oluşur.",
+   "metin": "**Soru.** Kırmızı (hemorajik) enfarktüs en tipik hangi organda görülür?\n\n**A)** Böbrek · **B)** Dalak · **C)** Akciğer · **D)** Kalp · **E)** Beyin\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Böbrek** — Böbrek katı ve uç arter dolaşımlı bir organdır; burada kama şeklinde, soluk beyaz enfarkt gelişir.\n- **Dalak** — Dalakta tıkanma, sınırları keskin ve kama biçimli soluk bir alan bırakır; bu beyaz enfarkttır.\n- **Akciğer** — Akciğer doğru: çift dolaşımlı ve gevşek yapılı bir doku olduğundan enfarktı yaygın hemorajili, yani kırmızıdır.\n- **Kalp** — Kalp katı ve uç arter dolaşımlı bir organdır; miyokard enfarktı soluk, anemik tiptedir ve koagülatif nekroz gösterir.\n- **Beyin** — Beyin enfarktının ayırt edici yanı rengi değil nekroz tipidir; beyinde her zaman sıvılaşma nekrozu görülür.\n\n**Cevap: C** — Akciğer\n\n**Özet.** Kırmızı enfarkt venöz tıkanma, akciğer ve ince bağırsak gibi çift dolaşımlı dokular, önceden konjesyonlu doku ve reperfüzyonda görülür; kalp, dalak ve böbrekte beyaz enfarkt oluşur.",
+   "ses": "Kırmızı, yani hemorajik enfarktüs en tipik hangi organda görülür?\nA, Böbrek\nBe, Dalak\nCe, Akciğer\nDe, Kalp\nE, Beyin\nŞimdi seçeneklere tek tek bakalım.\nBöbrek katı ve uç arter dolaşımlı bir organdır. Burada kama şeklinde, soluk beyaz enfarkt gelişir.\nDalakta tıkanma, sınırları keskin ve kama biçimli soluk bir alan bırakır. Bu beyaz enfarkttır.\nAkciğer doğru. Çift dolaşımlı ve gevşek yapılı bir doku olduğundan enfarktı yaygın hemorajili, yani kırmızıdır.\nKalp katı ve uç arter dolaşımlı bir organdır. Miyokard enfarktı soluk, anemik tiptedir ve koagülatif nekroz gösterir.\nBeyin enfarktının ayırt edici yanı rengi değil nekroz tipidir. Beyinde her zaman sıvılaşma nekrozu görülür.\nDoğru cevap Ce, Akciğer\nKırmızı enfarkt venöz tıkanma, akciğer ve ince bağırsak gibi çift dolaşımlı dokular, önceden konjesyonlu doku ve reperfüzyonda görülür. Kalp, dalak ve böbrekte beyaz enfarkt oluşur.",
+   "kelime": 150
+  },
+  {
+   "no": 9,
+   "tur": "ornek",
+   "soru": "Böbrekte kama şeklinde soluk, sınırları belirgin enfarkt alanı hangi enfarkt tipidir?",
+   "secenekler": {
+    "A": "Anemik (beyaz) enfarkt",
+    "B": "Septik enfarkt",
+    "C": "Hemorajik enfarkt",
+    "D": "Venöz enfarkt",
+    "E": "Sıvılaşma enfarktı"
+   },
+   "dogru": "A",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Anemik, yani beyaz enfarkt doğru: kalp, dalak ve böbrek gibi uç arter dolaşımlı katı organlarda soluk, sınırları belirgin ve kama şeklinde olur.",
+    "B": "Septik enfarkt, enfekte tromboemboli ya da nekrotik alana sonradan yerleşen mikroplarla oluşur; apseye dönüşebilir, tanımı rengine göre değildir.",
+    "C": "Hemorajik enfarkt kırmızı renklidir ve akciğer gibi çift dolaşımlı, gevşek dokularda görülür; böbrekteki soluk alana uymaz.",
+    "D": "Venöz tıkanma, örneğin testis torsiyonu, kırmızı enfarkt yapar; soluk ve kama şeklinde alan oluşturmaz.",
+    "E": "Sıvılaşma beyindeki enfarktın nekroz tipidir; böbrekte enfarkt koagülatif nekrozla olur ve rengine göre beyaz ya da kırmızı diye ayrılır."
+   },
+   "ozet": "Uç arter dolaşımlı katı organlarda enfarkt soluk, sınırları belirgin ve kama şeklindedir; tabanı organ yüzeyine, ucu tıkalı damara bakar.",
+   "metin": "**Soru.** Böbrekte kama şeklinde soluk, sınırları belirgin enfarkt alanı hangi enfarkt tipidir?\n\n**A)** Anemik (beyaz) enfarkt · **B)** Septik enfarkt · **C)** Hemorajik enfarkt · **D)** Venöz enfarkt · **E)** Sıvılaşma enfarktı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Anemik (beyaz) enfarkt** — Anemik, yani beyaz enfarkt doğru: kalp, dalak ve böbrek gibi uç arter dolaşımlı katı organlarda soluk, sınırları belirgin ve kama şeklinde olur.\n- **Septik enfarkt** — Septik enfarkt, enfekte tromboemboli ya da nekrotik alana sonradan yerleşen mikroplarla oluşur; apseye dönüşebilir, tanımı rengine göre değildir.\n- **Hemorajik enfarkt** — Hemorajik enfarkt kırmızı renklidir ve akciğer gibi çift dolaşımlı, gevşek dokularda görülür; böbrekteki soluk alana uymaz.\n- **Venöz enfarkt** — Venöz tıkanma, örneğin testis torsiyonu, kırmızı enfarkt yapar; soluk ve kama şeklinde alan oluşturmaz.\n- **Sıvılaşma enfarktı** — Sıvılaşma beyindeki enfarktın nekroz tipidir; böbrekte enfarkt koagülatif nekrozla olur ve rengine göre beyaz ya da kırmızı diye ayrılır.\n\n**Cevap: A** — Anemik (beyaz) enfarkt\n\n**Özet.** Uç arter dolaşımlı katı organlarda enfarkt soluk, sınırları belirgin ve kama şeklindedir; tabanı organ yüzeyine, ucu tıkalı damara bakar.",
+   "ses": "Böbrekte kama şeklinde soluk, sınırları belirgin enfarkt alanı hangi enfarkt tipidir?\nA, Anemik, beyaz enfarkt\nBe, Septik enfarkt\nCe, Hemorajik enfarkt\nDe, Venöz enfarkt\nE, Sıvılaşma enfarktı\nSeçenekleri sırayla değerlendirelim.\nAnemik, yani beyaz enfarkt doğru. Kalp, dalak ve böbrek gibi uç arter dolaşımlı katı organlarda soluk, sınırları belirgin ve kama şeklinde olur.\nSeptik enfarkt, enfekte tromboemboli ya da nekrotik alana sonradan yerleşen mikroplarla oluşur. Apseye dönüşebilir, tanımı rengine göre değildir.\nHemorajik enfarkt kırmızı renklidir ve akciğer gibi çift dolaşımlı, gevşek dokularda görülür. Böbrekteki soluk alana uymaz.\nVenöz tıkanma, örneğin testis torsiyonu, kırmızı enfarkt yapar. Soluk ve kama şeklinde alan oluşturmaz.\nSıvılaşma beyindeki enfarktın nekroz tipidir. Böbrekte enfarkt koagülatif nekrozla olur ve rengine göre beyaz ya da kırmızı diye ayrılır.\nDoğru cevap A, Anemik, beyaz enfarkt\nUç arter dolaşımlı katı organlarda enfarkt soluk, sınırları belirgin ve kama şeklindedir. Tabanı organ yüzeyine, ucu tıkalı damara bakar.",
+   "kelime": 172
+  },
+  {
+   "no": 10,
+   "tur": "ornek",
+   "soru": "Beyin enfarktüsünde görülen nekroz tipi hangisidir?",
+   "secenekler": {
+    "A": "Koagülatif nekroz",
+    "B": "Fibrinoid nekroz",
+    "C": "Kazeöz nekroz",
+    "D": "Sıvılaşma nekrozu",
+    "E": "Yağ nekrozu"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Koagülatif nekroz çoğu organdaki enfarktın tipik nekroz biçimidir; beyin bu kuralın istisnasıdır.",
+    "B": "Enfarktüste beklenen iki biçim koagülatif ve sıvılaşma nekrozudur. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz.",
+    "C": "Kazeöz nekroz enfarktüsle tanımlanan bir nekroz tipi değildir; beyindeki iskemik nekroz her zaman sıvılaşma biçimindedir.",
+    "D": "Sıvılaşma nekrozu doğru: beyin enfarktüsünde mikroskopide her zaman sıvılaşma nekrozu görülür.",
+    "E": "Yağ nekrozu enfarktüs tipleri arasında yer almaz; beyinde iskemik alan katılaşmaz, sıvılaşır."
+   },
+   "ozet": "Enfarktüs çoğu organda koagülatif nekroz yapar; beyin bunun istisnasıdır ve burada her zaman sıvılaşma nekrozu görülür.",
+   "metin": "**Soru.** Beyin enfarktüsünde görülen nekroz tipi hangisidir?\n\n**A)** Koagülatif nekroz · **B)** Fibrinoid nekroz · **C)** Kazeöz nekroz · **D)** Sıvılaşma nekrozu · **E)** Yağ nekrozu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Koagülatif nekroz** — Koagülatif nekroz çoğu organdaki enfarktın tipik nekroz biçimidir; beyin bu kuralın istisnasıdır.\n- **Fibrinoid nekroz** — Enfarktüste beklenen iki biçim koagülatif ve sıvılaşma nekrozudur. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz.\n- **Kazeöz nekroz** — Kazeöz nekroz enfarktüsle tanımlanan bir nekroz tipi değildir; beyindeki iskemik nekroz her zaman sıvılaşma biçimindedir.\n- **Sıvılaşma nekrozu** — Sıvılaşma nekrozu doğru: beyin enfarktüsünde mikroskopide her zaman sıvılaşma nekrozu görülür.\n- **Yağ nekrozu** — Yağ nekrozu enfarktüs tipleri arasında yer almaz; beyinde iskemik alan katılaşmaz, sıvılaşır.\n\n**Cevap: D** — Sıvılaşma nekrozu\n\n**Özet.** Enfarktüs çoğu organda koagülatif nekroz yapar; beyin bunun istisnasıdır ve burada her zaman sıvılaşma nekrozu görülür.",
+   "ses": "Beyin enfarktüsünde görülen nekroz tipi hangisidir?\nA, Koagülatif nekroz\nBe, Fibrinoid nekroz\nCe, Kazeöz nekroz\nDe, Sıvılaşma nekrozu\nE, Yağ nekrozu\nHer seçeneği tek tek ele alalım.\nKoagülatif nekroz çoğu organdaki enfarktın tipik nekroz biçimidir. Beyin bu kuralın istisnasıdır.\nEnfarktüste beklenen iki biçim koagülatif ve sıvılaşma nekrozudur. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz.\nKazeöz nekroz enfarktüsle tanımlanan bir nekroz tipi değildir. Beyindeki iskemik nekroz her zaman sıvılaşma biçimindedir.\nSıvılaşma nekrozu doğru. Beyin enfarktüsünde mikroskopide her zaman sıvılaşma nekrozu görülür.\nYağ nekrozu enfarktüs tipleri arasında yer almaz. Beyinde iskemik alan katılaşmaz, sıvılaşır.\nDoğru cevap De, Sıvılaşma nekrozu\nEnfarktüs çoğu organda koagülatif nekroz yapar. Beyin bunun istisnasıdır ve burada her zaman sıvılaşma nekrozu görülür.",
+   "kelime": 139
+  },
+  {
+   "no": 11,
+   "tur": "ornek",
+   "soru": "Hipoksiye en duyarlı olup 3–4 dakikada geri dönüşümsüz hasar gören hücre hangisidir?",
+   "secenekler": {
+    "A": "Fibroblast",
+    "B": "Nöron",
+    "C": "Hepatosit",
+    "D": "Miyokard hücresi",
+    "E": "Düz kas"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Fibroblastlar hipoksiye en dayanıklı hücrelerdendir; saatlerce oksijensizliği tolere edebilir.",
+    "B": "Nöron doğru: hipoksiye en duyarlı hücredir ve yalnızca 3–4 dakikada geri dönüşümsüz hasar görür.",
+    "C": "Hepatositin hipoksiye dayanma süresi bu konuda tanımlanmaz; duyarlılık sıralaması nöron, miyokard ve en dayanıklı olan fibroblast şeklindedir.",
+    "D": "Miyokard hücresi 20–30 dakikalık iskemide geri dönüşümsüz hasar görür; duyarlıdır ama nörondan daha dayanıklıdır.",
+    "E": "Dokunun hipoksiye duyarlılığı enfarkt riskini belirler ve en kısa süre nöronlara aittir. Düz kas hücresi bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Dokunun hipoksiye duyarlılığı enfarkt gelişimini etkiler: nöronlar 3–4 dakikada, miyokard 20–30 dakikada geri dönüşümsüz hasar görür, fibroblastlar saatlerce dayanır.",
+   "metin": "**Soru.** Hipoksiye en duyarlı olup 3–4 dakikada geri dönüşümsüz hasar gören hücre hangisidir?\n\n**A)** Fibroblast · **B)** Nöron · **C)** Hepatosit · **D)** Miyokard hücresi · **E)** Düz kas\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Fibroblast** — Fibroblastlar hipoksiye en dayanıklı hücrelerdendir; saatlerce oksijensizliği tolere edebilir.\n- **Nöron** — Nöron doğru: hipoksiye en duyarlı hücredir ve yalnızca 3–4 dakikada geri dönüşümsüz hasar görür.\n- **Hepatosit** — Hepatositin hipoksiye dayanma süresi bu konuda tanımlanmaz; duyarlılık sıralaması nöron, miyokard ve en dayanıklı olan fibroblast şeklindedir.\n- **Miyokard hücresi** — Miyokard hücresi 20–30 dakikalık iskemide geri dönüşümsüz hasar görür; duyarlıdır ama nörondan daha dayanıklıdır.\n- **Düz kas** — Dokunun hipoksiye duyarlılığı enfarkt riskini belirler ve en kısa süre nöronlara aittir. Düz kas hücresi bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Nöron\n\n**Özet.** Dokunun hipoksiye duyarlılığı enfarkt gelişimini etkiler: nöronlar 3–4 dakikada, miyokard 20–30 dakikada geri dönüşümsüz hasar görür, fibroblastlar saatlerce dayanır.",
+   "ses": "Hipoksiye en duyarlı olup üç ile dört dakikada geri dönüşümsüz hasar gören hücre hangisidir?\nA, Fibroblast\nBe, Nöron\nCe, Hepatosit\nDe, Miyokard hücresi\nE, Düz kas\nŞıkları sırasıyla gözden geçirelim.\nFibroblastlar hipoksiye en dayanıklı hücrelerdendir. Saatlerce oksijensizliği tolere edebilir.\nNöron doğru. Hipoksiye en duyarlı hücredir ve yalnızca üç ile dört dakikada geri dönüşümsüz hasar görür.\nHepatositin hipoksiye dayanma süresi bu konuda tanımlanmaz. Duyarlılık sıralaması nöron, miyokard ve en dayanıklı olan fibroblast şeklindedir.\nMiyokard hücresi yirmi ile otuz dakikalık iskemide geri dönüşümsüz hasar görür. Duyarlıdır ama nörondan daha dayanıklıdır.\nDokunun hipoksiye duyarlılığı enfarkt riskini belirler ve en kısa süre nöronlara aittir. Düz kas hücresi bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Nöron\nDokunun hipoksiye duyarlılığı enfarkt gelişimini etkiler. Nöronlar üç ile dört dakikada, miyokard yirmi ile otuz dakikada geri dönüşümsüz hasar görür, fibroblastlar saatlerce dayanır.",
+   "kelime": 148
+  },
+  {
+   "no": 12,
+   "tur": "ornek",
+   "soru": "Septik şok etkenleri arasında en sık olan hangisidir?",
+   "secenekler": {
+    "A": "Gram-negatif bakteriler",
+    "B": "Parazitler",
+    "C": "Mantarlar",
+    "D": "Virüsler",
+    "E": "Gram-pozitif bakteriler"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Gram-negatif bakteriler septik şokun önemli etkenidir, ancak sıklıkta ikinci sıradadır.",
+    "B": "Parazitler septik şokun sık etkenleri arasında sayılmaz; sıralama gram-pozitif bakteriler, gram-negatif bakteriler ve mantarlar şeklindedir.",
+    "C": "Mantarlar fungal sepsisle septik şok yapabilir, fakat sıklıkta bakterilerin gerisinde, üçüncü sıradadır.",
+    "D": "Septik şok çoğunlukla bakteriyel enfeksiyonlarla gelişir ve mortalitesi hâlâ %20–30 civarındadır. Virüsler bu sorudaki ayrımı sağlamaz.",
+    "E": "Gram-pozitif bakteriler doğru: septik şokun en sık etkenidir; onları gram-negatif bakteriler ve mantarlar izler."
+   },
+   "ozet": "Septik şokta en sık etken gram-pozitif bakterilerdir, ardından gram-negatifler ve mantarlar gelir; mortalite hâlâ %20–30 civarındadır.",
+   "metin": "**Soru.** Septik şok etkenleri arasında en sık olan hangisidir?\n\n**A)** Gram-negatif bakteriler · **B)** Parazitler · **C)** Mantarlar · **D)** Virüsler · **E)** Gram-pozitif bakteriler\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Gram-negatif bakteriler** — Gram-negatif bakteriler septik şokun önemli etkenidir, ancak sıklıkta ikinci sıradadır.\n- **Parazitler** — Parazitler septik şokun sık etkenleri arasında sayılmaz; sıralama gram-pozitif bakteriler, gram-negatif bakteriler ve mantarlar şeklindedir.\n- **Mantarlar** — Mantarlar fungal sepsisle septik şok yapabilir, fakat sıklıkta bakterilerin gerisinde, üçüncü sıradadır.\n- **Virüsler** — Septik şok çoğunlukla bakteriyel enfeksiyonlarla gelişir ve mortalitesi hâlâ %20–30 civarındadır. Virüsler bu sorudaki ayrımı sağlamaz.\n- **Gram-pozitif bakteriler** — Gram-pozitif bakteriler doğru: septik şokun en sık etkenidir; onları gram-negatif bakteriler ve mantarlar izler.\n\n**Cevap: E** — Gram-pozitif bakteriler\n\n**Özet.** Septik şokta en sık etken gram-pozitif bakterilerdir, ardından gram-negatifler ve mantarlar gelir; mortalite hâlâ %20–30 civarındadır.",
+   "ses": "Septik şok etkenleri arasında en sık olan hangisidir?\nA, Gram negatif bakteriler\nBe, Parazitler\nCe, Mantarlar\nDe, Virüsler\nE, Gram pozitif bakteriler\nŞimdi seçeneklere tek tek bakalım.\nGram negatif bakteriler septik şokun önemli etkenidir, ancak sıklıkta ikinci sıradadır.\nParazitler septik şokun sık etkenleri arasında sayılmaz. Sıralama gram pozitif bakteriler, gram negatif bakteriler ve mantarlar şeklindedir.\nMantarlar fungal sepsisle septik şok yapabilir, fakat sıklıkta bakterilerin gerisinde, üçüncü sıradadır.\nSeptik şok çoğunlukla bakteriyel enfeksiyonlarla gelişir ve mortalitesi hâlâ yüzde yirmi ile otuz civarındadır. Virüsler bu sorudaki ayrımı sağlamaz.\nGram pozitif bakteriler doğru. Septik şokun en sık etkenidir. Onları gram negatif bakteriler ve mantarlar izler.\nDoğru cevap E, Gram pozitif bakteriler\nSeptik şokta en sık etken gram pozitif bakterilerdir, ardından gram negatifler ve mantarlar gelir. Mortalite hâlâ yüzde yirmi ile otuz civarındadır.",
+   "kelime": 137
+  },
+  {
+   "no": 13,
+   "tur": "ornek",
+   "soru": "Septik şokta fibrinolizin baskılanmasından sorumlu artan molekül hangisidir?",
+   "secenekler": {
+    "A": "t-PA",
+    "B": "Trombomodulin",
+    "C": "PAI-1",
+    "D": "TFPI",
+    "E": "Protein C"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Septik şokta fibrinolizi baskılayan, düzeyi artan molekül plazminojen aktivatör inhibitörü-1'dir. t-PA bu sorudaki ayrımı sağlamaz.",
+    "B": "Trombomodulin antikoagülan bir faktördür ve septik şokta azalır; artan değil, düşen moleküldür.",
+    "C": "PAI-1 doğru: plazminojen aktivatör inhibitörü-1 septik şokta artar, fibrinolizi baskılar ve mikrodamarlarda fibrinden zengin trombüslerin kalmasına yol açar.",
+    "D": "TFPI, yani doku faktörü yolu inhibitörü, antikoagülandır ve septik şokta azalır; bu da pıhtılaşmayı kolaylaştırır.",
+    "E": "Protein C yolu septik şokta zayıflar, çünkü endotelde protein C reseptörü azalır; bu bir antikoagülan kaybıdır, fibrinolizi frenleyen artış değildir."
+   },
+   "ozet": "Septik şokta doku faktörü artar, TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artışı fibrinolizi baskılar ve yaygın damar içi pıhtılaşma gelişir.",
+   "metin": "**Soru.** Septik şokta fibrinolizin baskılanmasından sorumlu artan molekül hangisidir?\n\n**A)** t-PA · **B)** Trombomodulin · **C)** PAI-1 · **D)** TFPI · **E)** Protein C\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **t-PA** — Septik şokta fibrinolizi baskılayan, düzeyi artan molekül plazminojen aktivatör inhibitörü-1'dir. t-PA bu sorudaki ayrımı sağlamaz.\n- **Trombomodulin** — Trombomodulin antikoagülan bir faktördür ve septik şokta azalır; artan değil, düşen moleküldür.\n- **PAI-1** — PAI-1 doğru: plazminojen aktivatör inhibitörü-1 septik şokta artar, fibrinolizi baskılar ve mikrodamarlarda fibrinden zengin trombüslerin kalmasına yol açar.\n- **TFPI** — TFPI, yani doku faktörü yolu inhibitörü, antikoagülandır ve septik şokta azalır; bu da pıhtılaşmayı kolaylaştırır.\n- **Protein C** — Protein C yolu septik şokta zayıflar, çünkü endotelde protein C reseptörü azalır; bu bir antikoagülan kaybıdır, fibrinolizi frenleyen artış değildir.\n\n**Cevap: C** — PAI-1\n\n**Özet.** Septik şokta doku faktörü artar, TFPI, trombomodulin ve protein C reseptörü azalır; PAI-1 artışı fibrinolizi baskılar ve yaygın damar içi pıhtılaşma gelişir.",
+   "ses": "Septik şokta fibrinolizin baskılanmasından sorumlu artan molekül hangisidir?\nA, te pe a\nBe, Trombomodulin\nCe, pe a i bir\nDe, te fe pe i\nE, Protein ce\nSeçenekleri sırayla değerlendirelim.\nSeptik şokta fibrinolizi baskılayan, düzeyi artan molekül plazminojen aktivatör inhibitörü birdir. t-PA bu sorudaki ayrımı sağlamaz.\nTrombomodulin antikoagülan bir faktördür ve septik şokta azalır. Artan değil, düşen moleküldür.\nPe a i bir doğru. Plazminojen aktivatör inhibitörü bir septik şokta artar, fibrinolizi baskılar ve mikrodamarlarda fibrinden zengin trombüslerin kalmasına yol açar.\nTe fe pe i, yani doku faktörü yolu inhibitörü, antikoagülandır ve septik şokta azalır. Bu da pıhtılaşmayı kolaylaştırır.\nProtein ce yolu septik şokta zayıflar, çünkü endotelde protein ce reseptörü azalır. Bu bir antikoagülan kaybıdır, fibrinolizi frenleyen artış değildir.\nDoğru cevap Ce, pe a i bir\nSeptik şokta doku faktörü artar, te fe pe i, trombomodulin ve protein ce reseptörü azalır. Pe a i bir artışı fibrinolizi baskılar ve yaygın damar içi pıhtılaşma gelişir.",
+   "kelime": 151
+  },
+  {
+   "no": 14,
+   "tur": "ornek",
+   "soru": "Erken septik şokta cildin sıcak ve kızarık olmasının nedeni hangisidir?",
+   "secenekler": {
+    "A": "Periferik vazodilatasyon",
+    "B": "Hipovolemi",
+    "C": "Periferik vazokonstriksiyon",
+    "D": "Taşikardi",
+    "E": "Anemi"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Periferik vazodilatasyon doğru: erken septik şokta periferdeki damarlar genişler, cilt sıcak ve kızarık olabilir.",
+    "B": "Hipovolemi kan ya da plazma hacmi kaybıdır; hipovolemik şokta cilt soğuk, nemli ve soluktur.",
+    "C": "Periferik vazokonstriksiyon kompansasyonlu evrede katekolaminlerle gelişen yanıttır; damar genişlemesinin tersidir, sıcak ve kızarık cildi açıklamaz.",
+    "D": "Taşikardi kompansasyonlu evrede baroreseptör refleksleriyle gelişen kalp hızı artışıdır; cildin sıcak ve kızarık olmasını açıklamaz.",
+    "E": "Anemi yağ embolisi sendromunda trombositopeniyle birlikte görülebilir; septik şokta cildin sıcak ve kızarık olmasının nedeni değildir."
+   },
+   "ozet": "Erken septik şokta periferik vazodilatasyon cildi sıcak ve kızarık yapar; hipovolemik ve kardiyojenik şokta ise cilt soğuk, nemli, soluk ya da siyanozludur.",
+   "metin": "**Soru.** Erken septik şokta cildin sıcak ve kızarık olmasının nedeni hangisidir?\n\n**A)** Periferik vazodilatasyon · **B)** Hipovolemi · **C)** Periferik vazokonstriksiyon · **D)** Taşikardi · **E)** Anemi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Periferik vazodilatasyon** — Periferik vazodilatasyon doğru: erken septik şokta periferdeki damarlar genişler, cilt sıcak ve kızarık olabilir.\n- **Hipovolemi** — Hipovolemi kan ya da plazma hacmi kaybıdır; hipovolemik şokta cilt soğuk, nemli ve soluktur.\n- **Periferik vazokonstriksiyon** — Periferik vazokonstriksiyon kompansasyonlu evrede katekolaminlerle gelişen yanıttır; damar genişlemesinin tersidir, sıcak ve kızarık cildi açıklamaz.\n- **Taşikardi** — Taşikardi kompansasyonlu evrede baroreseptör refleksleriyle gelişen kalp hızı artışıdır; cildin sıcak ve kızarık olmasını açıklamaz.\n- **Anemi** — Anemi yağ embolisi sendromunda trombositopeniyle birlikte görülebilir; septik şokta cildin sıcak ve kızarık olmasının nedeni değildir.\n\n**Cevap: A** — Periferik vazodilatasyon\n\n**Özet.** Erken septik şokta periferik vazodilatasyon cildi sıcak ve kızarık yapar; hipovolemik ve kardiyojenik şokta ise cilt soğuk, nemli, soluk ya da siyanozludur.",
+   "ses": "Erken septik şokta cildin sıcak ve kızarık olmasının nedeni hangisidir?\nA, Periferik vazodilatasyon\nBe, Hipovolemi\nCe, Periferik vazokonstriksiyon\nDe, Taşikardi\nE, Anemi\nHer seçeneği tek tek ele alalım.\nPeriferik vazodilatasyon doğru. Erken septik şokta periferdeki damarlar genişler, cilt sıcak ve kızarık olabilir.\nHipovolemi kan ya da plazma hacmi kaybıdır. Hipovolemik şokta cilt soğuk, nemli ve soluktur.\nPeriferik vazokonstriksiyon kompansasyonlu evrede katekolaminlerle gelişen yanıttır. Damar genişlemesinin tersidir, sıcak ve kızarık cildi açıklamaz.\nTaşikardi kompansasyonlu evrede baroreseptör refleksleriyle gelişen kalp hızı artışıdır. Cildin sıcak ve kızarık olmasını açıklamaz.\nAnemi yağ embolisi sendromunda trombositopeniyle birlikte görülebilir. Septik şokta cildin sıcak ve kızarık olmasının nedeni değildir.\nDoğru cevap A, Periferik vazodilatasyon\nErken septik şokta periferik vazodilatasyon cildi sıcak ve kızarık yapar. Hipovolemik ve kardiyojenik şokta ise cilt soğuk, nemli, soluk ya da siyanozludur.",
+   "kelime": 153
+  },
+  {
+   "no": 15,
+   "tur": "ornek",
+   "soru": "Laktik asidozun geliştiği şok evresi hangisidir?",
+   "secenekler": {
+    "A": "Kompansasyonlu evre",
+    "B": "Kronik evre",
+    "C": "Geri dönüşümsüz evre",
+    "D": "İlerleyici evre",
+    "E": "İyileşme evresi"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Kompansasyonlu evrede baroreseptör refleksleri, katekolaminler ve renin–anjiyotensin–aldosteron sistemi devrededir; taşikardi ve vazokonstriksiyonla şok ilerlemez.",
+    "B": "Kronik evre şok evreleri arasında yer almaz; uzayan şok geri dönüşümsüz doku hasarı ve ölümle sonuçlanır.",
+    "C": "Geri dönüşümsüz evrede yaygın hücre ve doku hasarı vardır, organlar toparlanamaz; laktik asidozun ilk geliştiği evre bu değildir.",
+    "D": "İlerleyici evre doğru: doku hipoperfüzyonu artar, laktik asidoz gelişir, vazomotor yanıtlar bozulur ve mikrosirkülasyonda kan göllenir.",
+    "E": "İyileşme evresi şok evreleri arasında yer almaz; şok kompansasyonlu, ilerleyici ve geri dönüşümsüz olmak üzere üç evrede incelenir."
+   },
+   "ozet": "Şok üç evrede ilerler; ikinci, yani ilerleyici evrede hipoperfüzyon artar, oksidatif fosforilasyon bozulur ve anaerobik glikolizle laktik asidoz gelişir.",
+   "metin": "**Soru.** Laktik asidozun geliştiği şok evresi hangisidir?\n\n**A)** Kompansasyonlu evre · **B)** Kronik evre · **C)** Geri dönüşümsüz evre · **D)** İlerleyici evre · **E)** İyileşme evresi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kompansasyonlu evre** — Kompansasyonlu evrede baroreseptör refleksleri, katekolaminler ve renin–anjiyotensin–aldosteron sistemi devrededir; taşikardi ve vazokonstriksiyonla şok ilerlemez.\n- **Kronik evre** — Kronik evre şok evreleri arasında yer almaz; uzayan şok geri dönüşümsüz doku hasarı ve ölümle sonuçlanır.\n- **Geri dönüşümsüz evre** — Geri dönüşümsüz evrede yaygın hücre ve doku hasarı vardır, organlar toparlanamaz; laktik asidozun ilk geliştiği evre bu değildir.\n- **İlerleyici evre** — İlerleyici evre doğru: doku hipoperfüzyonu artar, laktik asidoz gelişir, vazomotor yanıtlar bozulur ve mikrosirkülasyonda kan göllenir.\n- **İyileşme evresi** — İyileşme evresi şok evreleri arasında yer almaz; şok kompansasyonlu, ilerleyici ve geri dönüşümsüz olmak üzere üç evrede incelenir.\n\n**Cevap: D** — İlerleyici evre\n\n**Özet.** Şok üç evrede ilerler; ikinci, yani ilerleyici evrede hipoperfüzyon artar, oksidatif fosforilasyon bozulur ve anaerobik glikolizle laktik asidoz gelişir.",
+   "ses": "Laktik asidozun geliştiği şok evresi hangisidir?\nA, Kompansasyonlu evre\nBe, Kronik evre\nCe, Geri dönüşümsüz evre\nDe, İlerleyici evre\nE, İyileşme evresi\nŞıkları sırasıyla gözden geçirelim.\nKompansasyonlu evrede baroreseptör refleksleri, katekolaminler ve renin anjiyotensin aldosteron sistemi devrededir. Taşikardi ve vazokonstriksiyonla şok ilerlemez.\nKronik evre şok evreleri arasında yer almaz. Uzayan şok geri dönüşümsüz doku hasarı ve ölümle sonuçlanır.\nGeri dönüşümsüz evrede yaygın hücre ve doku hasarı vardır, organlar toparlanamaz. Laktik asidozun ilk geliştiği evre bu değildir.\nİlerleyici evre doğru. Doku hipoperfüzyonu artar, laktik asidoz gelişir, vazomotor yanıtlar bozulur ve mikrosirkülasyonda kan göllenir.\nİyileşme evresi şok evreleri arasında yer almaz. Şok kompansasyonlu, ilerleyici ve geri dönüşümsüz olmak üzere üç evrede incelenir.\nDoğru cevap De, İlerleyici evre\nŞok üç evrede ilerler. İkinci, yani ilerleyici evrede hipoperfüzyon artar, oksidatif fosforilasyon bozulur ve anaerobik glikolizle laktik asidoz gelişir.",
+   "kelime": 160
+  },
+  {
+   "no": 31,
+   "tur": "cikmis",
+   "soru": "Emboli ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "secenekler": {
+    "A": "Emboli kaynaklandığı yerden uzak bir yere kan yolu ile taşınan intravasküler katı, sıvı veya gaz kitlesidir.",
+    "B": "Neredeyse tamamı kopmuş trombüs parçaları ile oluştuğundan tromboembolizm terimi kullanılır.",
+    "C": "Amniyotik sıvı embolisi erken postpartum dönemde görülen doğumun nadir görülen bir komplikasyonudur ve mortalitesi düşüktür.",
+    "D": "Yağ embolisinde yumuşak doku ezilme hasarları ve uzun kemik kırıkları sonucu dolaşıma mikroskobik yağ globülleri karışır.",
+    "E": "Hava embolisinin özel bir şekli atmosfer basıncındaki ani değişikliğe bağlı olarak meydana gelen dekompresyon hastalığıdır."
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Emboli tanımı doğrudur: kan akımıyla taşınan, köken aldığı yerden kopmuş katı, sıvı ya da gaz kitlesidir.",
+    "B": "Embolilerin çoğu trombüs parçalarından oluştuğu için tromboemboli terimi kullanılır; ifade doğrudur.",
+    "C": "Amniyotik sıvı embolisinin mortalitesi düşük değil, %80'e yakındır; ifade yanlış olduğu için doğru cevaptır.",
+    "D": "Yağ embolisinde kemik iliği sinüzoidleri yırtılır ve mikroskobik yağ kürecikleri dolaşıma karışır; ifade doğrudur.",
+    "E": "Dekompresyon hastalığı ortam basıncının ani azalmasıyla gelişen özel bir gaz embolisi formudur; ifade doğrudur."
+   },
+   "ozet": "Amniyotik sıvı embolisi nadirdir, yaklaşık 40.000 doğumda bir görülür, ama mortalitesi %80'e yakındır ve sıklıkla DIC gelişir.",
+   "metin": "**Soru.** Emboli ile ilgili aşağıdakilerden hangisi yanlıştır?\n\n**A)** Emboli kaynaklandığı yerden uzak bir yere kan yolu ile taşınan intravasküler katı, sıvı veya gaz kitlesidir. · **B)** Neredeyse tamamı kopmuş trombüs parçaları ile oluştuğundan tromboembolizm terimi kullanılır. · **C)** Amniyotik sıvı embolisi erken postpartum dönemde görülen doğumun nadir görülen bir komplikasyonudur ve mortalitesi düşüktür. · **D)** Yağ embolisinde yumuşak doku ezilme hasarları ve uzun kemik kırıkları sonucu dolaşıma mikroskobik yağ globülleri karışır. · **E)** Hava embolisinin özel bir şekli atmosfer basıncındaki ani değişikliğe bağlı olarak meydana gelen dekompresyon hastalığıdır.\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Emboli kaynaklandığı yerden uzak bir yere kan yolu ile taşınan intravasküler katı, sıvı veya gaz kitlesidir.** — Emboli tanımı doğrudur: kan akımıyla taşınan, köken aldığı yerden kopmuş katı, sıvı ya da gaz kitlesidir.\n- **Neredeyse tamamı kopmuş trombüs parçaları ile oluştuğundan tromboembolizm terimi kullanılır.** — Embolilerin çoğu trombüs parçalarından oluştuğu için tromboemboli terimi kullanılır; ifade doğrudur.\n- **Amniyotik sıvı embolisi erken postpartum dönemde görülen doğumun nadir görülen bir komplikasyonudur ve mortalitesi düşüktür.** — Amniyotik sıvı embolisinin mortalitesi düşük değil, %80'e yakındır; ifade yanlış olduğu için doğru cevaptır.\n- **Yağ embolisinde yumuşak doku ezilme hasarları ve uzun kemik kırıkları sonucu dolaşıma mikroskobik yağ globülleri karışır.** — Yağ embolisinde kemik iliği sinüzoidleri yırtılır ve mikroskobik yağ kürecikleri dolaşıma karışır; ifade doğrudur.\n- **Hava embolisinin özel bir şekli atmosfer basıncındaki ani değişikliğe bağlı olarak meydana gelen dekompresyon hastalığıdır.** — Dekompresyon hastalığı ortam basıncının ani azalmasıyla gelişen özel bir gaz embolisi formudur; ifade doğrudur.\n\n**Cevap: C** — Amniyotik sıvı embolisi erken postpartum dönemde görülen doğumun nadir görülen bir komplikasyonudur ve mortalitesi düşüktür.\n\n**Özet.** Amniyotik sıvı embolisi nadirdir, yaklaşık 40.000 doğumda bir görülür, ama mortalitesi %80'e yakındır ve sıklıkla DIC gelişir.",
+   "ses": "Emboli ile ilgili aşağıdakilerden hangisi yanlıştır?\nA, Emboli kaynaklandığı yerden uzak bir yere kan yolu ile taşınan intravasküler katı, sıvı veya gaz kitlesidir.\nBe, Neredeyse tamamı kopmuş trombüs parçaları ile oluştuğundan tromboembolizm terimi kullanılır.\nCe, Amniyotik sıvı embolisi erken postpartum dönemde görülen doğumun nadir görülen bir komplikasyonudur ve mortalitesi düşüktür.\nDe, Yağ embolisinde yumuşak doku ezilme hasarları ve uzun kemik kırıkları sonucu dolaşıma mikroskobik yağ globülleri karışır.\nE, Hava embolisinin özel bir şekli atmosfer basıncındaki ani değişikliğe bağlı olarak meydana gelen dekompresyon hastalığıdır.\nŞıkları sırasıyla gözden geçirelim.\nEmboli tanımı doğrudur. Kan akımıyla taşınan, köken aldığı yerden kopmuş katı, sıvı ya da gaz kitlesidir.\nEmbolilerin çoğu trombüs parçalarından oluştuğu için tromboemboli terimi kullanılır. İfade doğrudur.\nAmniyotik sıvı embolisinin mortalitesi düşük değil, yüzde seksene yakındır. İfade yanlış olduğu için doğru cevaptır.\nYağ embolisinde kemik iliği sinüzoidleri yırtılır ve mikroskobik yağ kürecikleri dolaşıma karışır. İfade doğrudur.\nDekompresyon hastalığı ortam basıncının ani azalmasıyla gelişen özel bir gaz embolisi formudur. İfade doğrudur.\nDoğru cevap Ce, Amniyotik sıvı embolisi erken postpartum dönemde görülen doğumun nadir görülen bir komplikasyonudur ve mortalitesi düşüktür.\nAmniyotik sıvı embolisi nadirdir, yaklaşık kırk bin doğumda bir görülür, ama mortalitesi yüzde seksene yakındır ve sıklıkla de i ce gelişir.",
+   "kelime": 280
+  },
+  {
+   "no": 32,
+   "tur": "cikmis",
+   "soru": "I. Kalp\nII. Dalak\nIII. Böbrek\nIV. Akciğer\nYukarıdaki organlardan hangilerinde tipik olarak beyaz (anemik, iskemik) infarktüs görülür?",
+   "secenekler": {
+    "A": "I, II ve III",
+    "B": "I ve III",
+    "C": "II ve IV",
+    "D": "Yalnız IV",
+    "E": "I, II, III ve IV"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Kalp, dalak ve böbrek doğru: bu katı, uç arter dolaşımlı organlarda enfarkt soluk, sınırları belirgin ve kama şeklindedir.",
+    "B": "Yalnız kalp ve böbrek eksik bir seçimdir; dalak da uç arter dolaşımlı katı organ olarak beyaz enfarkt gösterir.",
+    "C": "Dalak ve akciğer birlikteliği yanlıştır; akciğer çift dolaşımlı olduğundan enfarktı tipik olarak kırmızı, yani hemorajiktir.",
+    "D": "Yalnız akciğer seçimi tersini söyler; akciğer kırmızı enfarktın tipik organıdır, uç arter dolaşımlı katı organlar ise beyaz enfarkt yapar.",
+    "E": "Dört organın tümü yanlıştır; kalp, dalak ve böbrek beyaz, akciğer ise kırmızı enfarkt gösterir."
+   },
+   "ozet": "Beyaz enfarktüs katı, uç arter dolaşımlı kalp, dalak ve böbrekte görülür; akciğer ve ince bağırsak gibi çift dolaşımlı dokularda enfarkt kırmızıdır.",
+   "metin": "**Soru.** I. Kalp\nII. Dalak\nIII. Böbrek\nIV. Akciğer\nYukarıdaki organlardan hangilerinde tipik olarak beyaz (anemik, iskemik) infarktüs görülür?\n\n**A)** I, II ve III · **B)** I ve III · **C)** II ve IV · **D)** Yalnız IV · **E)** I, II, III ve IV\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **I, II ve III** — Kalp, dalak ve böbrek doğru: bu katı, uç arter dolaşımlı organlarda enfarkt soluk, sınırları belirgin ve kama şeklindedir.\n- **I ve III** — Yalnız kalp ve böbrek eksik bir seçimdir; dalak da uç arter dolaşımlı katı organ olarak beyaz enfarkt gösterir.\n- **II ve IV** — Dalak ve akciğer birlikteliği yanlıştır; akciğer çift dolaşımlı olduğundan enfarktı tipik olarak kırmızı, yani hemorajiktir.\n- **Yalnız IV** — Yalnız akciğer seçimi tersini söyler; akciğer kırmızı enfarktın tipik organıdır, uç arter dolaşımlı katı organlar ise beyaz enfarkt yapar.\n- **I, II, III ve IV** — Dört organın tümü yanlıştır; kalp, dalak ve böbrek beyaz, akciğer ise kırmızı enfarkt gösterir.\n\n**Cevap: A** — I, II ve III\n\n**Özet.** Beyaz enfarktüs katı, uç arter dolaşımlı kalp, dalak ve böbrekte görülür; akciğer ve ince bağırsak gibi çift dolaşımlı dokularda enfarkt kırmızıdır.",
+   "ses": "Bir, kalp. İki, dalak. Üç, böbrek. Dört, akciğer. Yukarıdaki organlardan hangilerinde tipik olarak beyaz, yani anemik, iskemik infarktüs görülür?\nA, Bir, iki ve üç\nBe, Bir ve üç\nCe, İki ve dört\nDe, Yalnız dört\nE, Bir, iki, üç ve dört\nŞimdi seçeneklere tek tek bakalım.\nKalp, dalak ve böbrek doğru. Bu katı, uç arter dolaşımlı organlarda enfarkt soluk, sınırları belirgin ve kama şeklindedir.\nYalnız kalp ve böbrek eksik bir seçimdir. Dalak da uç arter dolaşımlı katı organ olarak beyaz enfarkt gösterir.\nDalak ve akciğer birlikteliği yanlıştır. Akciğer çift dolaşımlı olduğundan enfarktı tipik olarak kırmızı, yani hemorajiktir.\nYalnız akciğer seçimi tersini söyler. Akciğer kırmızı enfarktın tipik organıdır, uç arter dolaşımlı katı organlar ise beyaz enfarkt yapar.\nDört organın tümü yanlıştır. Kalp, dalak ve böbrek beyaz, akciğer ise kırmızı enfarkt gösterir.\nDoğru cevap A, Bir, iki ve üç\nBeyaz enfarktüs katı, uç arter dolaşımlı kalp, dalak ve böbrekte görülür. Akciğer ve ince bağırsak gibi çift dolaşımlı dokularda enfarkt kırmızıdır.",
+   "kelime": 191
+  },
+  {
+   "no": 33,
+   "tur": "cikmis",
+   "soru": "Pulmoner tromboemboli sonrasında kalp yetersizliği olan bir hastada gelişen akciğer enfarktüsünün plevra tabanlı, kama biçiminde ve parlak koyu kırmızı renkte hemorajik (kırmızı) enfarkt görünümünde olmasının temel anatomik nedeni hangisidir?",
+   "secenekler": {
+    "A": "Akciğerin yalnızca pulmoner arterden kan alması",
+    "B": "Akciğerin hem pulmoner arterden hem de bronşiyal arterlerden çift kan akımı alması",
+    "C": "Akciğerde venöz göllenmenin hiç bulunmaması",
+    "D": "Alveollerde sürfaktan miktarının artmış olması",
+    "E": "Akciğerde lenfatik dolaşımın bulunmaması"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Yalnızca tek arterden beslenme uç arter dolaşımlı organların özelliğidir ve beyaz enfarkt yapar; akciğer böyle değildir.",
+    "B": "Çift kan akımı doğru: akciğer çift dolaşımlı bir dokudur, bu yüzden enfarktı hemorajik olur; sol kalp yetmezliği orta emboliyi bile enfarkta çevirebilir.",
+    "C": "Venöz göllenmenin olmaması hemorajiyi açıklamaz; önceden konjesyonu olan dokular tersine kırmızı enfarktüse yatkındır.",
+    "D": "Sürfaktan miktarı ile karıştırılabilir: Enfarktın rengini ve gelişimini dokunun vasküler beslenme anatomisi belirler.",
+    "E": "Kırmızı enfarktüs çift dolaşımlı, gevşek yapılı dokularda yaygın hemoraji ile karakterizedir. Lenfatik dolaşım bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Akciğer ve ince bağırsak gibi çift dolaşımlı dokularda enfarkt kırmızıdır; akciğerde orta emboli normalde enfarkt yapmaz, sol kalp yetmezliğinde ise enfarkt gelişir.",
+   "metin": "**Soru.** Pulmoner tromboemboli sonrasında kalp yetersizliği olan bir hastada gelişen akciğer enfarktüsünün plevra tabanlı, kama biçiminde ve parlak koyu kırmızı renkte hemorajik (kırmızı) enfarkt görünümünde olmasının temel anatomik nedeni hangisidir?\n\n**A)** Akciğerin yalnızca pulmoner arterden kan alması · **B)** Akciğerin hem pulmoner arterden hem de bronşiyal arterlerden çift kan akımı alması · **C)** Akciğerde venöz göllenmenin hiç bulunmaması · **D)** Alveollerde sürfaktan miktarının artmış olması · **E)** Akciğerde lenfatik dolaşımın bulunmaması\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Akciğerin yalnızca pulmoner arterden kan alması** — Yalnızca tek arterden beslenme uç arter dolaşımlı organların özelliğidir ve beyaz enfarkt yapar; akciğer böyle değildir.\n- **Akciğerin hem pulmoner arterden hem de bronşiyal arterlerden çift kan akımı alması** — Çift kan akımı doğru: akciğer çift dolaşımlı bir dokudur, bu yüzden enfarktı hemorajik olur; sol kalp yetmezliği orta emboliyi bile enfarkta çevirebilir.\n- **Akciğerde venöz göllenmenin hiç bulunmaması** — Venöz göllenmenin olmaması hemorajiyi açıklamaz; önceden konjesyonu olan dokular tersine kırmızı enfarktüse yatkındır.\n- **Alveollerde sürfaktan miktarının artmış olması** — Sürfaktan miktarı ile karıştırılabilir: Enfarktın rengini ve gelişimini dokunun vasküler beslenme anatomisi belirler.\n- **Akciğerde lenfatik dolaşımın bulunmaması** — Kırmızı enfarktüs çift dolaşımlı, gevşek yapılı dokularda yaygın hemoraji ile karakterizedir. Lenfatik dolaşım bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Akciğerin hem pulmoner arterden hem de bronşiyal arterlerden çift kan akımı alması\n\n**Özet.** Akciğer ve ince bağırsak gibi çift dolaşımlı dokularda enfarkt kırmızıdır; akciğerde orta emboli normalde enfarkt yapmaz, sol kalp yetmezliğinde ise enfarkt gelişir.",
+   "ses": "Pulmoner tromboemboli sonrasında kalp yetersizliği olan bir hastada akciğer enfarktüsü gelişiyor. Enfarktın plevra tabanlı, kama biçiminde ve parlak koyu kırmızı renkte, hemorajik görünümde olmasının temel anatomik nedeni hangisidir?\nA, Akciğerin yalnızca pulmoner arterden kan alması\nBe, Akciğerin hem pulmoner arterden hem de bronşiyal arterlerden çift kan akımı alması\nCe, Akciğerde venöz göllenmenin hiç bulunmaması\nDe, Alveollerde sürfaktan miktarının artmış olması\nE, Akciğerde lenfatik dolaşımın bulunmaması\nSeçenekleri sırayla değerlendirelim.\nYalnızca tek arterden beslenme uç arter dolaşımlı organların özelliğidir ve beyaz enfarkt yapar. Akciğer böyle değildir.\nÇift kan akımı doğru. Akciğer çift dolaşımlı bir dokudur, bu yüzden enfarktı hemorajik olur. Sol kalp yetmezliği orta emboliyi bile enfarkta çevirebilir.\nVenöz göllenmenin olmaması hemorajiyi açıklamaz. Önceden konjesyonu olan dokular tersine kırmızı enfarktüse yatkındır.\nSürfaktan miktarı ile karıştırılabilir. Enfarktın rengini ve gelişimini dokunun vasküler beslenme anatomisi belirler.\nKırmızı enfarktüs çift dolaşımlı, gevşek yapılı dokularda yaygın hemoraji ile karakterizedir. Lenfatik dolaşım bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Akciğerin hem pulmoner arterden hem de bronşiyal arterlerden çift kan akımı alması\nAkciğer ve ince bağırsak gibi çift dolaşımlı dokularda enfarkt kırmızıdır. Akciğerde orta emboli normalde enfarkt yapmaz, sol kalp yetmezliğinde ise enfarkt gelişir.",
+   "kelime": 236
+  },
+  {
+   "no": 34,
+   "tur": "cikmis",
+   "soru": "Sistemik arteriyel embolilerin en sık yerleştiği bölge aşağıdakilerden hangisidir?",
+   "secenekler": {
+    "A": "Alt ekstremiteler (bacaklar)",
+    "B": "Gastrointestinal sistem (sindirim sistemi)",
+    "C": "Kalp",
+    "D": "Akciğer",
+    "E": "Beyin"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Alt ekstremiteler doğru: sistemik arteriyel emboliler en sık, yaklaşık %75 oranında alt ekstremite arterlerine yerleşir.",
+    "B": "Gastrointestinal sistemin mezenterik damarları sistemik embolilerin diğer hedefleri arasındadır; en sık yer değildir.",
+    "C": "Kalp, sistemik embolilerin yerleştiği yer değil, sol ventrikül ve sol atriyumdaki mural trombüslerle embolilerin başlıca köken aldığı organdır.",
+    "D": "Akciğer sistemik değil, pulmoner embolilerin hedefidir; derin ven trombüslerinden kopan emboliler sağ kalp yoluyla buraya ulaşır.",
+    "E": "Beyin, yaklaşık %10 ile sistemik embolilerin ikinci sıklıkta yerleştiği bölgedir; birinci sırada değildir."
+   },
+   "ozet": "Sistemik emboliler en sık alt ekstremite arterlerine, yaklaşık %75, ikinci sıklıkta beyne, yaklaşık %10, yerleşir; diğer hedefler bağırsak, böbrek ve dalaktır.",
+   "metin": "**Soru.** Sistemik arteriyel embolilerin en sık yerleştiği bölge aşağıdakilerden hangisidir?\n\n**A)** Alt ekstremiteler (bacaklar) · **B)** Gastrointestinal sistem (sindirim sistemi) · **C)** Kalp · **D)** Akciğer · **E)** Beyin\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Alt ekstremiteler (bacaklar)** — Alt ekstremiteler doğru: sistemik arteriyel emboliler en sık, yaklaşık %75 oranında alt ekstremite arterlerine yerleşir.\n- **Gastrointestinal sistem (sindirim sistemi)** — Gastrointestinal sistemin mezenterik damarları sistemik embolilerin diğer hedefleri arasındadır; en sık yer değildir.\n- **Kalp** — Kalp, sistemik embolilerin yerleştiği yer değil, sol ventrikül ve sol atriyumdaki mural trombüslerle embolilerin başlıca köken aldığı organdır.\n- **Akciğer** — Akciğer sistemik değil, pulmoner embolilerin hedefidir; derin ven trombüslerinden kopan emboliler sağ kalp yoluyla buraya ulaşır.\n- **Beyin** — Beyin, yaklaşık %10 ile sistemik embolilerin ikinci sıklıkta yerleştiği bölgedir; birinci sırada değildir.\n\n**Cevap: A** — Alt ekstremiteler (bacaklar)\n\n**Özet.** Sistemik emboliler en sık alt ekstremite arterlerine, yaklaşık %75, ikinci sıklıkta beyne, yaklaşık %10, yerleşir; diğer hedefler bağırsak, böbrek ve dalaktır.",
+   "ses": "Sistemik arteriyel embolilerin en sık yerleştiği bölge aşağıdakilerden hangisidir?\nA, Alt ekstremiteler, yani bacaklar\nBe, Gastrointestinal sistem, yani sindirim sistemi\nCe, Kalp\nDe, Akciğer\nE, Beyin\nHer seçeneği tek tek ele alalım.\nAlt ekstremiteler doğru. Sistemik arteriyel emboliler en sık, yaklaşık yüzde yetmiş beş oranında alt ekstremite arterlerine yerleşir.\nGastrointestinal sistemin mezenterik damarları sistemik embolilerin diğer hedefleri arasındadır. En sık yer değildir.\nKalp, sistemik embolilerin yerleştiği yer değil, sol ventrikül ve sol atriyumdaki mural trombüslerle embolilerin başlıca köken aldığı organdır.\nAkciğer sistemik değil, pulmoner embolilerin hedefidir. Derin ven trombüslerinden kopan emboliler sağ kalp yoluyla buraya ulaşır.\nBeyin, yaklaşık yüzde on ile sistemik embolilerin ikinci sıklıkta yerleştiği bölgedir. Birinci sırada değildir.\nDoğru cevap A, Alt ekstremiteler, yani bacaklar\nSistemik emboliler en sık alt ekstremite arterlerine, yaklaşık yüzde yetmiş beş, ikinci sıklıkta beyne, yaklaşık yüzde on, yerleşir. Diğer hedefler bağırsak, böbrek ve dalaktır.",
+   "kelime": 159
+  },
+  {
+   "no": 35,
+   "tur": "cikmis",
+   "soru": "Sepsis patogenezi ile ilgili aşağıdakilerden hangisi doğrudur?",
+   "secenekler": {
+    "A": "Konak yanıtının düzensizleşmesiyle sitokin fırtınası gelişir",
+    "B": "Lipopolisakkarit (endotoksin) gram pozitif bakterilerin hücre duvarında bulunur",
+    "C": "Sepsiste yalnız proinflamatuvar yanıt gelişir, antiinflamatuvar yanıt görülmez",
+    "D": "Sepsiste gelişen DİK tablosunda trombosit sayısı artar",
+    "E": "Sepsis tanısı için kan kültüründe üreme olması zorunludur"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Düzensiz konak yanıtı ve sitokin fırtınası doğru: septik şokun temel olayı immün yanıtın kontrolsüz sistemik aktivasyonu ve sitokin kaskadlarının aşırı aktivasyonudur.",
+    "B": "Lipopolisakkaritin yeri ile karıştırılabilir: Mikrobiyal ürünler TLR'ler aracılığıyla tanınır ve makrofaj, nötrofil ve endoteli uyarır.",
+    "C": "Septik şokun özü, doğuştan ve adaptif immün yanıtın kontrolsüz sistemik aktivasyonudur. Yalnız proinflamatuvar yanıt ifadesi bu sorudaki ayrımı sağlamaz.",
+    "D": "Trombosit sayısının artması yanlıştır; yaygın damar içi pıhtılaşmada trombositler ve pıhtılaşma faktörleri tüketilir, kanama eğilimi gelişir.",
+    "E": "Septik şokun etkenleri gram pozitif, gram negatif bakteriler ve mantarlardır, tablo ise kontrolsüz konak yanıtıyla oluşur. Kan kültürü zorunluluğu bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Septik şokta mikrobiyal ürünler TLR'lerle tanınır, TNF ve IL-1 gibi sitokinler kontrolsüz salınır; bu aşırı immün aktivasyon vazodilatasyon, kapiller sızıntı ve DIC'ye yol açar.",
+   "metin": "**Soru.** Sepsis patogenezi ile ilgili aşağıdakilerden hangisi doğrudur?\n\n**A)** Konak yanıtının düzensizleşmesiyle sitokin fırtınası gelişir · **B)** Lipopolisakkarit (endotoksin) gram pozitif bakterilerin hücre duvarında bulunur · **C)** Sepsiste yalnız proinflamatuvar yanıt gelişir, antiinflamatuvar yanıt görülmez · **D)** Sepsiste gelişen DİK tablosunda trombosit sayısı artar · **E)** Sepsis tanısı için kan kültüründe üreme olması zorunludur\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Konak yanıtının düzensizleşmesiyle sitokin fırtınası gelişir** — Düzensiz konak yanıtı ve sitokin fırtınası doğru: septik şokun temel olayı immün yanıtın kontrolsüz sistemik aktivasyonu ve sitokin kaskadlarının aşırı aktivasyonudur.\n- **Lipopolisakkarit (endotoksin) gram pozitif bakterilerin hücre duvarında bulunur** — Lipopolisakkaritin yeri ile karıştırılabilir: Mikrobiyal ürünler TLR'ler aracılığıyla tanınır ve makrofaj, nötrofil ve endoteli uyarır.\n- **Sepsiste yalnız proinflamatuvar yanıt gelişir, antiinflamatuvar yanıt görülmez** — Septik şokun özü, doğuştan ve adaptif immün yanıtın kontrolsüz sistemik aktivasyonudur. Yalnız proinflamatuvar yanıt ifadesi bu sorudaki ayrımı sağlamaz.\n- **Sepsiste gelişen DİK tablosunda trombosit sayısı artar** — Trombosit sayısının artması yanlıştır; yaygın damar içi pıhtılaşmada trombositler ve pıhtılaşma faktörleri tüketilir, kanama eğilimi gelişir.\n- **Sepsis tanısı için kan kültüründe üreme olması zorunludur** — Septik şokun etkenleri gram pozitif, gram negatif bakteriler ve mantarlardır, tablo ise kontrolsüz konak yanıtıyla oluşur. Kan kültürü zorunluluğu bu sorudaki ayrımı sağlamaz.\n\n**Cevap: A** — Konak yanıtının düzensizleşmesiyle sitokin fırtınası gelişir\n\n**Özet.** Septik şokta mikrobiyal ürünler TLR'lerle tanınır, TNF ve IL-1 gibi sitokinler kontrolsüz salınır; bu aşırı immün aktivasyon vazodilatasyon, kapiller sızıntı ve DIC'ye yol açar.",
+   "ses": "Sepsis patogenezi ile ilgili aşağıdakilerden hangisi doğrudur?\nA, Konak yanıtının düzensizleşmesiyle sitokin fırtınası gelişir\nBe, Lipopolisakkarit, yani endotoksin, gram pozitif bakterilerin hücre duvarında bulunur\nCe, Sepsiste yalnız proinflamatuvar yanıt gelişir, antiinflamatuvar yanıt görülmez\nDe, Sepsiste gelişen de i ka tablosunda trombosit sayısı artar\nE, Sepsis tanısı için kan kültüründe üreme olması zorunludur\nŞıkları sırasıyla gözden geçirelim.\nDüzensiz konak yanıtı ve sitokin fırtınası doğru. Septik şokun temel olayı immün yanıtın kontrolsüz sistemik aktivasyonu ve sitokin kaskadlarının aşırı aktivasyonudur.\nLipopolisakkaritin yeri ile karıştırılabilir. Mikrobiyal ürünler te le re reseptörleri aracılığıyla tanınır ve makrofaj, nötrofil ve endoteli uyarır.\nSeptik şokun özü, doğuştan ve adaptif immün yanıtın kontrolsüz sistemik aktivasyonudur. Yalnız proinflamatuvar yanıt ifadesi bu sorudaki ayrımı sağlamaz.\nTrombosit sayısının artması yanlıştır. Yaygın damar içi pıhtılaşmada trombositler ve pıhtılaşma faktörleri tüketilir, kanama eğilimi gelişir.\nSeptik şokun etkenleri gram pozitif, gram negatif bakteriler ve mantarlardır, tablo ise kontrolsüz konak yanıtıyla oluşur. Kan kültürü zorunluluğu bu sorudaki ayrımı sağlamaz.\nDoğru cevap A, Konak yanıtının düzensizleşmesiyle sitokin fırtınası gelişir\nSeptik şokta mikrobiyal ürünler te le re reseptörleriyle tanınır, te ne fe ve i le bir gibi sitokinler kontrolsüz salınır. Bu aşırı immün aktivasyon vazodilatasyon, kapiller sızıntı ve de i ceye yol açar.",
+   "kelime": 234
+  },
+  {
+   "no": 36,
+   "tur": "ornek",
+   "soru": "Embolilerin büyük çoğunluğu hangi materyalden oluşur?",
+   "secenekler": {
+    "A": "Yağ kürecikleri",
+    "B": "Trombüs parçaları",
+    "C": "Gaz kabarcıkları",
+    "D": "Amniyotik sıvı",
+    "E": "Fetal skuamöz hücreler"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Yağ kürecikleri uzun kemik kırığı ve ezilme yaralanmasından sonra dolaşıma karışır; yaygındır ama çoğu sessizdir ve embolilerin çoğunu oluşturmaz.",
+    "B": "Trombüs parçaları doğru: embolilerin çoğu kopmuş trombüs parçasından oluşur ve bu tabloya tromboemboli denir.",
+    "C": "Gaz kabarcıkları hava embolisi ve dekompresyon hastalığında görülür; bunlar özel ve daha nadir emboli biçimleridir.",
+    "D": "Amniyotik sıvı embolisi nadir fakat çok ciddi bir doğum komplikasyonudur; embolilerin küçük bir kısmını oluşturur.",
+    "E": "Fetal skuamöz hücreler amniyotik sıvı embolisinde akciğer mikrodolaşımında görülür; nadir bir emboli tipinin bulgusudur."
+   },
+   "ozet": "Emboli kanla taşınan katı, sıvı ya da gaz kitledir; çoğu trombüs parçasıdır ve tromboemboli adını alır. Yağ, hava ve amniyotik sıvı embolileri daha nadirdir.",
+   "metin": "**Soru.** Embolilerin büyük çoğunluğu hangi materyalden oluşur?\n\n**A)** Yağ kürecikleri · **B)** Trombüs parçaları · **C)** Gaz kabarcıkları · **D)** Amniyotik sıvı · **E)** Fetal skuamöz hücreler\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Yağ kürecikleri** — Yağ kürecikleri uzun kemik kırığı ve ezilme yaralanmasından sonra dolaşıma karışır; yaygındır ama çoğu sessizdir ve embolilerin çoğunu oluşturmaz.\n- **Trombüs parçaları** — Trombüs parçaları doğru: embolilerin çoğu kopmuş trombüs parçasından oluşur ve bu tabloya tromboemboli denir.\n- **Gaz kabarcıkları** — Gaz kabarcıkları hava embolisi ve dekompresyon hastalığında görülür; bunlar özel ve daha nadir emboli biçimleridir.\n- **Amniyotik sıvı** — Amniyotik sıvı embolisi nadir fakat çok ciddi bir doğum komplikasyonudur; embolilerin küçük bir kısmını oluşturur.\n- **Fetal skuamöz hücreler** — Fetal skuamöz hücreler amniyotik sıvı embolisinde akciğer mikrodolaşımında görülür; nadir bir emboli tipinin bulgusudur.\n\n**Cevap: B** — Trombüs parçaları\n\n**Özet.** Emboli kanla taşınan katı, sıvı ya da gaz kitledir; çoğu trombüs parçasıdır ve tromboemboli adını alır. Yağ, hava ve amniyotik sıvı embolileri daha nadirdir.",
+   "ses": "Embolilerin büyük çoğunluğu hangi materyalden oluşur?\nA, Yağ kürecikleri\nBe, Trombüs parçaları\nCe, Gaz kabarcıkları\nDe, Amniyotik sıvı\nE, Fetal skuamöz hücreler\nŞimdi seçeneklere tek tek bakalım.\nYağ kürecikleri uzun kemik kırığı ve ezilme yaralanmasından sonra dolaşıma karışır, yaygındır ama çoğu sessizdir ve embolilerin çoğunu oluşturmaz.\nTrombüs parçaları doğru, embolilerin çoğu kopmuş trombüs parçasından oluşur ve bu tabloya tromboemboli denir.\nGaz kabarcıkları hava embolisi ve dekompresyon hastalığında görülür, bunlar özel ve daha nadir emboli biçimleridir.\nAmniyotik sıvı embolisi nadir fakat çok ciddi bir doğum komplikasyonudur, embolilerin küçük bir kısmını oluşturur.\nFetal skuamöz hücreler amniyotik sıvı embolisinde akciğer mikrodolaşımında görülür, nadir bir emboli tipinin bulgusudur.\nDoğru cevap Be, Trombüs parçaları\nEmboli kanla taşınan katı, sıvı ya da gaz kitledir, çoğu trombüs parçasıdır ve tromboemboli adını alır. Yağ, hava ve amniyotik sıvı embolileri daha nadirdir.",
+   "kelime": 161
+  },
+  {
+   "no": 37,
+   "tur": "ornek",
+   "soru": "Akciğere ulaşan tromboemboliler en sık hangi yapıdaki trombüslerden kopar?",
+   "secenekler": {
+    "A": "Dilate sol atriyum",
+    "B": "Sol ventrikül duvarı",
+    "C": "Aort anevrizması",
+    "D": "Diz üstü derin bacak venleri",
+    "E": "Kalp kapak vejetasyonları"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Dilate sol atriyum, örneğin mitral stenozda, sistemik arteriyel embolilere köken veren mural trombüslerin zeminidir; akciğere emboli göndermez.",
+    "B": "Sol ventrikül duvarındaki mural trombüs, özellikle enfarktüs sonrası, sistemik arteriyel embolilerin en sık köken yeridir.",
+    "C": "Aort anevrizması sistemik arteriyel embolilerin diğer köken yerleri arasındadır; buradan kopan parça sistemik arterlere gider.",
+    "D": "Diz üstü derin bacak venleri doğru: popliteal, femoral ve iliak venlerdeki trombüs sağ kalp yoluyla pulmoner artere ulaşır.",
+    "E": "Kalp kapak vejetasyonları sistemik embolilerin diğer köken yerlerindendir; sol kalpten kopan parça akciğere değil sistemik arterlere gider."
+   },
+   "ozet": "Pulmoner embolilerin %95'ten fazlası derin ven trombozundan, özellikle diz üstündeki popliteal, femoral ve iliak venlerden köken alır. Emboli venöz sistemden sağ kalbe, oradan pulmoner artere gider.",
+   "metin": "**Soru.** Akciğere ulaşan tromboemboliler en sık hangi yapıdaki trombüslerden kopar?\n\n**A)** Dilate sol atriyum · **B)** Sol ventrikül duvarı · **C)** Aort anevrizması · **D)** Diz üstü derin bacak venleri · **E)** Kalp kapak vejetasyonları\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Dilate sol atriyum** — Dilate sol atriyum, örneğin mitral stenozda, sistemik arteriyel embolilere köken veren mural trombüslerin zeminidir; akciğere emboli göndermez.\n- **Sol ventrikül duvarı** — Sol ventrikül duvarındaki mural trombüs, özellikle enfarktüs sonrası, sistemik arteriyel embolilerin en sık köken yeridir.\n- **Aort anevrizması** — Aort anevrizması sistemik arteriyel embolilerin diğer köken yerleri arasındadır; buradan kopan parça sistemik arterlere gider.\n- **Diz üstü derin bacak venleri** — Diz üstü derin bacak venleri doğru: popliteal, femoral ve iliak venlerdeki trombüs sağ kalp yoluyla pulmoner artere ulaşır.\n- **Kalp kapak vejetasyonları** — Kalp kapak vejetasyonları sistemik embolilerin diğer köken yerlerindendir; sol kalpten kopan parça akciğere değil sistemik arterlere gider.\n\n**Cevap: D** — Diz üstü derin bacak venleri\n\n**Özet.** Pulmoner embolilerin %95'ten fazlası derin ven trombozundan, özellikle diz üstündeki popliteal, femoral ve iliak venlerden köken alır. Emboli venöz sistemden sağ kalbe, oradan pulmoner artere gider.",
+   "ses": "Akciğere ulaşan tromboemboliler en sık hangi yapıdaki trombüslerden kopar?\nA, Dilate sol atriyum\nBe, Sol ventrikül duvarı\nCe, Aort anevrizması\nDe, Diz üstü derin bacak venleri\nE, Kalp kapak vejetasyonları\nSeçenekleri sırayla değerlendirelim.\nDilate sol atriyum, örneğin mitral stenozda, sistemik arteriyel embolilere köken veren mural trombüslerin zeminidir, akciğere emboli göndermez.\nSol ventrikül duvarındaki mural trombüs, özellikle enfarktüs sonrası, sistemik arteriyel embolilerin en sık köken yeridir.\nAort anevrizması sistemik arteriyel embolilerin diğer köken yerleri arasındadır, buradan kopan parça sistemik arterlere gider.\nDiz üstü derin bacak venleri doğru, popliteal, femoral ve iliak venlerdeki trombüs sağ kalp yoluyla pulmoner artere ulaşır.\nKalp kapak vejetasyonları sistemik embolilerin diğer köken yerlerindendir, sol kalpten kopan parça akciğere değil sistemik arterlere gider.\nDoğru cevap De, Diz üstü derin bacak venleri\nPulmoner embolilerin yüzde doksan beşten fazlası derin ven trombozundan, özellikle diz üstündeki popliteal, femoral ve iliak venlerden köken alır. Emboli venöz sistemden sağ kalbe, oradan pulmoner artere gider.",
+   "kelime": 182
+  },
+  {
+   "no": 38,
+   "tur": "ornek",
+   "soru": "Klinik olarak sessiz kalan küçük pulmoner embolilerin çoğunun zamanla akıbeti nedir?",
+   "secenekler": {
+    "A": "Organize olup duvara katılma",
+    "B": "Eyer emboliye dönüşme",
+    "C": "Akut sağ kalp yetmezliği",
+    "D": "Pulmoner enfarkt",
+    "E": "Paradoksal emboli"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Organize olup duvara katılma doğru: çoğu küçük emboli klinik olarak sessizdir, zamanla organize olur ve damar duvarına entegre olur.",
+    "B": "Eyer emboli, ana pulmoner arteri ya da bifürkasyonunu tıkayan büyük embolidir; küçük embolinin akıbeti değildir.",
+    "C": "Akut sağ kalp yetmezliği ana pulmoner arteri tıkayan büyük embolinin sonucudur; bu emboli ani ölüme de yol açabilir.",
+    "D": "Pulmoner enfarkt distal arteriyollere yerleşen küçük embolilerde ya da sol kalp yetmezliği zemininde gelişir; sessiz kalan embolinin akıbeti değildir.",
+    "E": "Paradoksal emboli venöz sistemden çıkıp sistemik arteriyel dolaşıma geçen embolidir; pulmoner embolinin akıbeti değildir."
+   },
+   "ozet": "Pulmoner embolilerin çoğu küçüktür ve klinik olarak sessizdir; zamanla organize olup damar duvarına katılır. Büyük emboli ise eyer emboli olarak ani ölüm ya da akut sağ kalp yetmezliği yapar.",
+   "metin": "**Soru.** Klinik olarak sessiz kalan küçük pulmoner embolilerin çoğunun zamanla akıbeti nedir?\n\n**A)** Organize olup duvara katılma · **B)** Eyer emboliye dönüşme · **C)** Akut sağ kalp yetmezliği · **D)** Pulmoner enfarkt · **E)** Paradoksal emboli\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Organize olup duvara katılma** — Organize olup duvara katılma doğru: çoğu küçük emboli klinik olarak sessizdir, zamanla organize olur ve damar duvarına entegre olur.\n- **Eyer emboliye dönüşme** — Eyer emboli, ana pulmoner arteri ya da bifürkasyonunu tıkayan büyük embolidir; küçük embolinin akıbeti değildir.\n- **Akut sağ kalp yetmezliği** — Akut sağ kalp yetmezliği ana pulmoner arteri tıkayan büyük embolinin sonucudur; bu emboli ani ölüme de yol açabilir.\n- **Pulmoner enfarkt** — Pulmoner enfarkt distal arteriyollere yerleşen küçük embolilerde ya da sol kalp yetmezliği zemininde gelişir; sessiz kalan embolinin akıbeti değildir.\n- **Paradoksal emboli** — Paradoksal emboli venöz sistemden çıkıp sistemik arteriyel dolaşıma geçen embolidir; pulmoner embolinin akıbeti değildir.\n\n**Cevap: A** — Organize olup duvara katılma\n\n**Özet.** Pulmoner embolilerin çoğu küçüktür ve klinik olarak sessizdir; zamanla organize olup damar duvarına katılır. Büyük emboli ise eyer emboli olarak ani ölüm ya da akut sağ kalp yetmezliği yapar.",
+   "ses": "Klinik olarak sessiz kalan küçük pulmoner embolilerin çoğunun zamanla akıbeti nedir?\nA, Organize olup duvara katılma\nBe, Eyer emboliye dönüşme\nCe, Akut sağ kalp yetmezliği\nDe, Pulmoner enfarkt\nE, Paradoksal emboli\nHer seçeneği tek tek ele alalım.\nOrganize olup duvara katılma doğru, çoğu küçük emboli klinik olarak sessizdir, zamanla organize olur ve damar duvarına entegre olur.\nEyer emboli, ana pulmoner arteri ya da bifürkasyonunu tıkayan büyük embolidir, küçük embolinin akıbeti değildir.\nAkut sağ kalp yetmezliği ana pulmoner arteri tıkayan büyük embolinin sonucudur, bu emboli ani ölüme de yol açabilir.\nPulmoner enfarkt distal arteriyollere yerleşen küçük embolilerde ya da sol kalp yetmezliği zemininde gelişir, sessiz kalan embolinin akıbeti değildir.\nParadoksal emboli venöz sistemden çıkıp sistemik arteriyel dolaşıma geçen embolidir, pulmoner embolinin akıbeti değildir.\nDoğru cevap A, Organize olup duvara katılma\nPulmoner embolilerin çoğu küçüktür ve klinik olarak sessizdir, zamanla organize olup damar duvarına katılır. Büyük emboli ise eyer emboli olarak ani ölüm ya da akut sağ kalp yetmezliği yapar.",
+   "kelime": 190
+  },
+  {
+   "no": 39,
+   "tur": "ornek",
+   "soru": "Akciğerde sıklıkla enfarktüs oluşturan pulmoner emboli hangisidir?",
+   "secenekler": {
+    "A": "Eyer emboli",
+    "B": "Orta büyüklükte emboli",
+    "C": "Distal arteriyol embolisi",
+    "D": "Paradoksal emboli",
+    "E": "Yağ embolisi"
+   },
+   "dogru": "C",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Eyer emboli ana pulmoner arter bifürkasyonunu tıkar; enfarkt gelişmeden ani ölüm ya da akut sağ kalp yetmezliği yapar.",
+    "B": "Orta büyüklükte emboli akciğerin çift dolaşımı sayesinde normalde enfarkt yapmayabilir; ancak sol kalp yetmezliğinde enfarkta yol açar.",
+    "C": "Distal arteriyol embolisi doğru: küçük arteriyollere yerleşen emboliler sıklıkla enfarktüs oluşturur ve tablo enfeksiyonla karışabilir.",
+    "D": "Paradoksal emboli venöz sistemden çıkıp sistemik arterleri tıkayan embolidir; akciğer enfarktıyla ilgili değildir.",
+    "E": "Yağ embolisi uzun kemik kırıklarından sonra görülür; mikroskobik olguların çoğu klinik olarak sessizdir."
+   },
+   "ozet": "Distal arteriyollere yerleşen küçük pulmoner emboliler sıklıkla enfarktüs oluşturur. Orta büyüklükte emboli ise çift dolaşım nedeniyle ancak sol kalp yetmezliği ya da hipoperfüzyonda enfarkt yapar.",
+   "metin": "**Soru.** Akciğerde sıklıkla enfarktüs oluşturan pulmoner emboli hangisidir?\n\n**A)** Eyer emboli · **B)** Orta büyüklükte emboli · **C)** Distal arteriyol embolisi · **D)** Paradoksal emboli · **E)** Yağ embolisi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Eyer emboli** — Eyer emboli ana pulmoner arter bifürkasyonunu tıkar; enfarkt gelişmeden ani ölüm ya da akut sağ kalp yetmezliği yapar.\n- **Orta büyüklükte emboli** — Orta büyüklükte emboli akciğerin çift dolaşımı sayesinde normalde enfarkt yapmayabilir; ancak sol kalp yetmezliğinde enfarkta yol açar.\n- **Distal arteriyol embolisi** — Distal arteriyol embolisi doğru: küçük arteriyollere yerleşen emboliler sıklıkla enfarktüs oluşturur ve tablo enfeksiyonla karışabilir.\n- **Paradoksal emboli** — Paradoksal emboli venöz sistemden çıkıp sistemik arterleri tıkayan embolidir; akciğer enfarktıyla ilgili değildir.\n- **Yağ embolisi** — Yağ embolisi uzun kemik kırıklarından sonra görülür; mikroskobik olguların çoğu klinik olarak sessizdir.\n\n**Cevap: C** — Distal arteriyol embolisi\n\n**Özet.** Distal arteriyollere yerleşen küçük pulmoner emboliler sıklıkla enfarktüs oluşturur. Orta büyüklükte emboli ise çift dolaşım nedeniyle ancak sol kalp yetmezliği ya da hipoperfüzyonda enfarkt yapar.",
+   "ses": "Akciğerde sıklıkla enfarktüs oluşturan pulmoner emboli hangisidir?\nA, Eyer emboli\nBe, Orta büyüklükte emboli\nCe, Distal arteriyol embolisi\nDe, Paradoksal emboli\nE, Yağ embolisi\nŞıkları sırasıyla gözden geçirelim.\nEyer emboli ana pulmoner arter bifürkasyonunu tıkar, enfarkt gelişmeden ani ölüm ya da akut sağ kalp yetmezliği yapar.\nOrta büyüklükte emboli akciğerin çift dolaşımı sayesinde normalde enfarkt yapmayabilir, ancak sol kalp yetmezliğinde enfarkta yol açar.\nDistal arteriyol embolisi doğru, küçük arteriyollere yerleşen emboliler sıklıkla enfarktüs oluşturur ve tablo enfeksiyonla karışabilir.\nParadoksal emboli venöz sistemden çıkıp sistemik arterleri tıkayan embolidir, akciğer enfarktıyla ilgili değildir.\nYağ embolisi uzun kemik kırıklarından sonra görülür, mikroskobik olguların çoğu klinik olarak sessizdir.\nDoğru cevap Ce, Distal arteriyol embolisi\nDistal arteriyollere yerleşen küçük pulmoner emboliler sıklıkla enfarktüs oluşturur. Orta büyüklükte emboli ise çift dolaşım nedeniyle ancak sol kalp yetmezliği ya da hipoperfüzyonda enfarkt yapar.",
+   "kelime": 164
+  },
+  {
+   "no": 40,
+   "tur": "ornek",
+   "soru": "Tekrarlayan küçük pulmoner embolilerin uzun dönem sonucu hangisidir?",
+   "secenekler": {
+    "A": "Eyer emboli",
+    "B": "Akut sağ kalp yetmezliği",
+    "C": "Sol ventrikül enfarktüsü",
+    "D": "Paradoksal emboli",
+    "E": "Kor pulmonale"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Eyer emboli tek bir büyük embolinin ana pulmoner arter bifürkasyonunu tıkamasıdır; tekrarlayan küçük embolilerin sonucu değildir.",
+    "B": "Akut sağ kalp yetmezliği büyük embolide aniden gelişir; tekrarlayan küçük embolilerde süreç yavaş ilerler.",
+    "C": "Sol ventrikül enfarktüsü sistemik embolilere köken veren mural trombüslerin en sık zeminidir; pulmoner embolinin sonucu değildir.",
+    "D": "Paradoksal emboli venöz kökenli embolinin sistemik arteriyel dolaşıma geçmesidir; tekrarlayan pulmoner embolilerin sonucu değildir.",
+    "E": "Kor pulmonale doğru: tekrarlayan küçük emboliler kronik tromboembolik pulmoner hipertansiyona, sonra sağ ventrikül hipertrofisi ve yetmezliğine yol açar."
+   },
+   "ozet": "Tekrarlayan küçük pulmoner emboliler kronik tromboembolik pulmoner hipertansiyon yapar; sağ ventrikül hipertrofisi ve yetmezliği, yani kor pulmonale gelişir.",
+   "metin": "**Soru.** Tekrarlayan küçük pulmoner embolilerin uzun dönem sonucu hangisidir?\n\n**A)** Eyer emboli · **B)** Akut sağ kalp yetmezliği · **C)** Sol ventrikül enfarktüsü · **D)** Paradoksal emboli · **E)** Kor pulmonale\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Eyer emboli** — Eyer emboli tek bir büyük embolinin ana pulmoner arter bifürkasyonunu tıkamasıdır; tekrarlayan küçük embolilerin sonucu değildir.\n- **Akut sağ kalp yetmezliği** — Akut sağ kalp yetmezliği büyük embolide aniden gelişir; tekrarlayan küçük embolilerde süreç yavaş ilerler.\n- **Sol ventrikül enfarktüsü** — Sol ventrikül enfarktüsü sistemik embolilere köken veren mural trombüslerin en sık zeminidir; pulmoner embolinin sonucu değildir.\n- **Paradoksal emboli** — Paradoksal emboli venöz kökenli embolinin sistemik arteriyel dolaşıma geçmesidir; tekrarlayan pulmoner embolilerin sonucu değildir.\n- **Kor pulmonale** — Kor pulmonale doğru: tekrarlayan küçük emboliler kronik tromboembolik pulmoner hipertansiyona, sonra sağ ventrikül hipertrofisi ve yetmezliğine yol açar.\n\n**Cevap: E** — Kor pulmonale\n\n**Özet.** Tekrarlayan küçük pulmoner emboliler kronik tromboembolik pulmoner hipertansiyon yapar; sağ ventrikül hipertrofisi ve yetmezliği, yani kor pulmonale gelişir.",
+   "ses": "Tekrarlayan küçük pulmoner embolilerin uzun dönem sonucu hangisidir?\nA, Eyer emboli\nBe, Akut sağ kalp yetmezliği\nCe, Sol ventrikül enfarktüsü\nDe, Paradoksal emboli\nE, Kor pulmonale\nŞimdi seçeneklere tek tek bakalım.\nEyer emboli tek bir büyük embolinin ana pulmoner arter bifürkasyonunu tıkamasıdır, tekrarlayan küçük embolilerin sonucu değildir.\nAkut sağ kalp yetmezliği büyük embolide aniden gelişir, tekrarlayan küçük embolilerde süreç yavaş ilerler.\nSol ventrikül enfarktüsü sistemik embolilere köken veren mural trombüslerin en sık zeminidir, pulmoner embolinin sonucu değildir.\nParadoksal emboli venöz kökenli embolinin sistemik arteriyel dolaşıma geçmesidir, tekrarlayan pulmoner embolilerin sonucu değildir.\nKor pulmonale doğru, tekrarlayan küçük emboliler kronik tromboembolik pulmoner hipertansiyona, sonra sağ ventrikül hipertrofisi ve yetmezliğine yol açar.\nDoğru cevap E, Kor pulmonale\nTekrarlayan küçük pulmoner emboliler kronik tromboembolik pulmoner hipertansiyon yapar, sağ ventrikül hipertrofisi ve yetmezliği, yani kor pulmonale gelişir.",
+   "kelime": 162
+  },
+  {
+   "no": 41,
+   "tur": "ornek",
+   "soru": "Venöz sistemde oluşan bir trombüsün sistemik arteriyel dolaşımda emboli yapmasına ne ad verilir?",
+   "secenekler": {
+    "A": "Eyer emboli",
+    "B": "Paradoksal emboli",
+    "C": "Enfekte tromboemboli",
+    "D": "Tromboembolik hipertansiyon",
+    "E": "Mural trombüs"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Eyer emboli ana pulmoner arter bifürkasyonunu tıkayan büyük pulmoner embolidir; sistemik dolaşıma geçmez.",
+    "B": "Paradoksal emboli doğru: venöz sistemden köken alan emboli, sistemik arteriyel embolilerin köken yerleri arasında bu adla yer alır.",
+    "C": "Enfekte tromboemboli, örneğin enfektif endokardit vejetasyonundan kopar ve septik enfarktüse yol açar; venöz kökenle tanımlanmaz.",
+    "D": "Tromboembolik hipertansiyon tekrarlayan küçük pulmoner embolilerin sonucudur; sistemik arteriyel emboli değildir.",
+    "E": "Mural trombüs kalp boşluklarında oluşur ve sistemik embolilerin yaklaşık %80'inin köken yeridir; venöz kökenli değildir."
+   },
+   "ozet": "Sistemik arteriyel embolilerin çoğu intrakardiyak mural trombüslerden köken alır; venöz sistemden çıkıp sistemik dolaşıma geçen emboliye paradoksal emboli denir.",
+   "metin": "**Soru.** Venöz sistemde oluşan bir trombüsün sistemik arteriyel dolaşımda emboli yapmasına ne ad verilir?\n\n**A)** Eyer emboli · **B)** Paradoksal emboli · **C)** Enfekte tromboemboli · **D)** Tromboembolik hipertansiyon · **E)** Mural trombüs\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Eyer emboli** — Eyer emboli ana pulmoner arter bifürkasyonunu tıkayan büyük pulmoner embolidir; sistemik dolaşıma geçmez.\n- **Paradoksal emboli** — Paradoksal emboli doğru: venöz sistemden köken alan emboli, sistemik arteriyel embolilerin köken yerleri arasında bu adla yer alır.\n- **Enfekte tromboemboli** — Enfekte tromboemboli, örneğin enfektif endokardit vejetasyonundan kopar ve septik enfarktüse yol açar; venöz kökenle tanımlanmaz.\n- **Tromboembolik hipertansiyon** — Tromboembolik hipertansiyon tekrarlayan küçük pulmoner embolilerin sonucudur; sistemik arteriyel emboli değildir.\n- **Mural trombüs** — Mural trombüs kalp boşluklarında oluşur ve sistemik embolilerin yaklaşık %80'inin köken yeridir; venöz kökenli değildir.\n\n**Cevap: B** — Paradoksal emboli\n\n**Özet.** Sistemik arteriyel embolilerin çoğu intrakardiyak mural trombüslerden köken alır; venöz sistemden çıkıp sistemik dolaşıma geçen emboliye paradoksal emboli denir.",
+   "ses": "Venöz sistemde oluşan bir trombüsün sistemik arteriyel dolaşımda emboli yapmasına ne ad verilir?\nA, Eyer emboli\nBe, Paradoksal emboli\nCe, Enfekte tromboemboli\nDe, Tromboembolik hipertansiyon\nE, Mural trombüs\nSeçenekleri sırayla değerlendirelim.\nEyer emboli ana pulmoner arter bifürkasyonunu tıkayan büyük pulmoner embolidir, sistemik dolaşıma geçmez.\nParadoksal emboli doğru, venöz sistemden köken alan emboli, sistemik arteriyel embolilerin köken yerleri arasında bu adla yer alır.\nEnfekte tromboemboli, örneğin enfektif endokardit vejetasyonundan kopar ve septik enfarktüse yol açar, venöz kökenle tanımlanmaz.\nTromboembolik hipertansiyon tekrarlayan küçük pulmoner embolilerin sonucudur, sistemik arteriyel emboli değildir.\nMural trombüs kalp boşluklarında oluşur ve sistemik embolilerin yaklaşık yüzde sekseninin köken yeridir. Venöz kökenli değildir.\nDoğru cevap Be, Paradoksal emboli\nSistemik arteriyel embolilerin çoğu intrakardiyak mural trombüslerden köken alır, venöz sistemden çıkıp sistemik dolaşıma geçen emboliye paradoksal emboli denir.",
+   "kelime": 154
+  },
+  {
+   "no": 42,
+   "tur": "ornek",
+   "soru": "Sistemik embolilere köken veren intrakardiyak mural trombüslerin yaklaşık dörtte biri hangi zeminde gelişir?",
+   "secenekler": {
+    "A": "Sol ventrikül enfarktüsü",
+    "B": "Aort anevrizması",
+    "C": "Kapak vejetasyonu",
+    "D": "Dilate sol atriyum",
+    "E": "Derin ven trombozu"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Sol ventrikül enfarktüsü mural trombüslerin en sık zeminidir ve yaklaşık üçte ikisini oluşturur; dörtte birlik pay ona ait değildir.",
+    "B": "Aort anevrizması intrakardiyak mural trombüs dışında kalan diğer sistemik emboli köken yerleri arasında sayılır.",
+    "C": "Kapak vejetasyonu da kalp içi mural trombüs grubunun dışında, diğer sistemik emboli köken yerlerinden biridir.",
+    "D": "Dilate sol atriyum doğru: örneğin mitral stenozda genişleyen atriyum, mural trombüslerin yaklaşık dörtte birinin zeminidir.",
+    "E": "Derin ven trombozu pulmoner embolilerin köken yeridir; sistemik dolaşıma ancak paradoksal emboli olarak geçer."
+   },
+   "ozet": "Sistemik embolilerin yaklaşık %80'i intrakardiyak mural trombüslerden gelir; bunların üçte ikisi sol ventrikül enfarktüsü, dörtte biri mitral stenoz gibi nedenlerle dilate sol atriyum zemininde gelişir.",
+   "metin": "**Soru.** Sistemik embolilere köken veren intrakardiyak mural trombüslerin yaklaşık dörtte biri hangi zeminde gelişir?\n\n**A)** Sol ventrikül enfarktüsü · **B)** Aort anevrizması · **C)** Kapak vejetasyonu · **D)** Dilate sol atriyum · **E)** Derin ven trombozu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Sol ventrikül enfarktüsü** — Sol ventrikül enfarktüsü mural trombüslerin en sık zeminidir ve yaklaşık üçte ikisini oluşturur; dörtte birlik pay ona ait değildir.\n- **Aort anevrizması** — Aort anevrizması intrakardiyak mural trombüs dışında kalan diğer sistemik emboli köken yerleri arasında sayılır.\n- **Kapak vejetasyonu** — Kapak vejetasyonu da kalp içi mural trombüs grubunun dışında, diğer sistemik emboli köken yerlerinden biridir.\n- **Dilate sol atriyum** — Dilate sol atriyum doğru: örneğin mitral stenozda genişleyen atriyum, mural trombüslerin yaklaşık dörtte birinin zeminidir.\n- **Derin ven trombozu** — Derin ven trombozu pulmoner embolilerin köken yeridir; sistemik dolaşıma ancak paradoksal emboli olarak geçer.\n\n**Cevap: D** — Dilate sol atriyum\n\n**Özet.** Sistemik embolilerin yaklaşık %80'i intrakardiyak mural trombüslerden gelir; bunların üçte ikisi sol ventrikül enfarktüsü, dörtte biri mitral stenoz gibi nedenlerle dilate sol atriyum zemininde gelişir.",
+   "ses": "Sistemik embolilere köken veren intrakardiyak mural trombüslerin yaklaşık dörtte biri hangi zeminde gelişir?\nA, Sol ventrikül enfarktüsü\nBe, Aort anevrizması\nCe, Kapak vejetasyonu\nDe, Dilate sol atriyum\nE, Derin ven trombozu\nHer seçeneği tek tek ele alalım.\nSol ventrikül enfarktüsü mural trombüslerin en sık zeminidir ve yaklaşık üçte ikisini oluşturur, dörtte birlik pay ona ait değildir.\nAort anevrizması intrakardiyak mural trombüs dışında kalan diğer sistemik emboli köken yerleri arasında sayılır.\nKapak vejetasyonu da kalp içi mural trombüs grubunun dışında, diğer sistemik emboli köken yerlerinden biridir.\nDilate sol atriyum doğru, örneğin mitral stenozda genişleyen atriyum, mural trombüslerin yaklaşık dörtte birinin zeminidir.\nDerin ven trombozu pulmoner embolilerin köken yeridir, sistemik dolaşıma ancak paradoksal emboli olarak geçer.\nDoğru cevap De, Dilate sol atriyum\nSistemik embolilerin yaklaşık yüzde sekseni intrakardiyak mural trombüslerden gelir. Bunların üçte ikisi sol ventrikül enfarktüsü, dörtte biri mitral stenoz gibi nedenlerle dilate sol atriyum zemininde gelişir.",
+   "kelime": 175
+  },
+  {
+   "no": 43,
+   "tur": "ornek",
+   "soru": "Alt ekstremite arterlerinden sonra sistemik embolilerin en sık yerleştiği organ hangisidir?",
+   "secenekler": {
+    "A": "Beyin",
+    "B": "Böbrek",
+    "C": "Dalak",
+    "D": "Bağırsak",
+    "E": "Akciğer"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Beyin doğru: sistemik emboliler alt ekstremite arterlerinden sonra en sık, yaklaşık %10 oranında beyne yerleşir.",
+    "B": "Böbrek sistemik embolilerin diğer hedefleri arasındadır; uç arter dolaşımı nedeniyle tıkanma sıklıkla enfarkt yapar.",
+    "C": "Dalak da diğer hedeflerdendir; uç arter dolaşımlı olduğu için burada beyaz enfarkt gelişir.",
+    "D": "Bağırsak mezenterik damarları sistemik embolilerin diğer hedefleri arasında sayılır; beyinden daha az etkilenir.",
+    "E": "Akciğer sistemik değil pulmoner embolilerin hedefidir; sistemik arteriyel emboli buraya ulaşmaz."
+   },
+   "ozet": "Sistemik emboliler en sık alt ekstremite arterlerine, yaklaşık %75 oranında, sonra beyne, yaklaşık %10 oranında yerleşir. Uç arter tıkanması nedeniyle enfarktüs gelişimi sıktır.",
+   "metin": "**Soru.** Alt ekstremite arterlerinden sonra sistemik embolilerin en sık yerleştiği organ hangisidir?\n\n**A)** Beyin · **B)** Böbrek · **C)** Dalak · **D)** Bağırsak · **E)** Akciğer\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Beyin** — Beyin doğru: sistemik emboliler alt ekstremite arterlerinden sonra en sık, yaklaşık %10 oranında beyne yerleşir.\n- **Böbrek** — Böbrek sistemik embolilerin diğer hedefleri arasındadır; uç arter dolaşımı nedeniyle tıkanma sıklıkla enfarkt yapar.\n- **Dalak** — Dalak da diğer hedeflerdendir; uç arter dolaşımlı olduğu için burada beyaz enfarkt gelişir.\n- **Bağırsak** — Bağırsak mezenterik damarları sistemik embolilerin diğer hedefleri arasında sayılır; beyinden daha az etkilenir.\n- **Akciğer** — Akciğer sistemik değil pulmoner embolilerin hedefidir; sistemik arteriyel emboli buraya ulaşmaz.\n\n**Cevap: A** — Beyin\n\n**Özet.** Sistemik emboliler en sık alt ekstremite arterlerine, yaklaşık %75 oranında, sonra beyne, yaklaşık %10 oranında yerleşir. Uç arter tıkanması nedeniyle enfarktüs gelişimi sıktır.",
+   "ses": "Alt ekstremite arterlerinden sonra sistemik embolilerin en sık yerleştiği organ hangisidir?\nA, Beyin\nBe, Böbrek\nCe, Dalak\nDe, Bağırsak\nE, Akciğer\nŞıkları sırasıyla gözden geçirelim.\nBeyin doğru, sistemik emboliler alt ekstremite arterlerinden sonra en sık, yaklaşık yüzde on oranında beyne yerleşir.\nBöbrek sistemik embolilerin diğer hedefleri arasındadır, uç arter dolaşımı nedeniyle tıkanma sıklıkla enfarkt yapar.\nDalak da diğer hedeflerdendir, uç arter dolaşımlı olduğu için burada beyaz enfarkt gelişir.\nBağırsak mezenterik damarları sistemik embolilerin diğer hedefleri arasında sayılır, beyinden daha az etkilenir.\nAkciğer sistemik değil pulmoner embolilerin hedefidir, sistemik arteriyel emboli buraya ulaşmaz.\nDoğru cevap A, Beyin\nSistemik emboliler en sık alt ekstremite arterlerine, yaklaşık yüzde yetmiş beş oranında, sonra beyne, yaklaşık yüzde on oranında yerleşir. Uç arter tıkanması nedeniyle enfarktüs gelişimi sıktır.",
+   "kelime": 140
+  },
+  {
+   "no": 44,
+   "tur": "ornek",
+   "soru": "Yağ embolisinde yağ küreciklerinin dolaşıma karışmasını sağlayan olay hangisidir?",
+   "secenekler": {
+    "A": "Plasenta zarında yırtık",
+    "B": "Ateromatöz plak ülserasyonu",
+    "C": "Kemik iliği sinüzoid yırtığı",
+    "D": "Santral venöz kateter",
+    "E": "Ortam basıncının azalması"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Plasenta zarında yırtık, amniyotik sıvı ve fetal hücrelerin anne dolaşımına geçmesine yol açar; amniyotik sıvı embolisinin mekanizmasıdır.",
+    "B": "Ateromatöz plak ülserasyonu sistemik arteriyel embolilerin köken yerleri arasındadır; yağ embolisini açıklamaz.",
+    "C": "Kemik iliği sinüzoid yırtığı doğru: uzun kemik kırığı ya da ezilme yaralanmasında sinüzoidler yırtılır ve mikroskobik yağ kürecikleri dolaşıma karışır.",
+    "D": "Santral venöz kateter komplikasyonları hava embolisinin nedenleri arasındadır; yağ embolisi oluşturmaz.",
+    "E": "Ortam basıncının ani azalması dekompresyon hastalığının nedenidir; çözünmüş azot kabarcık oluşturur."
+   },
+   "ozet": "Yağ embolisi uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidlerinin yırtılmasıyla oluşur. Travma sonrası mikroskobik yağ embolileri yaygındır, çoğu klinik olarak sessizdir.",
+   "metin": "**Soru.** Yağ embolisinde yağ küreciklerinin dolaşıma karışmasını sağlayan olay hangisidir?\n\n**A)** Plasenta zarında yırtık · **B)** Ateromatöz plak ülserasyonu · **C)** Kemik iliği sinüzoid yırtığı · **D)** Santral venöz kateter · **E)** Ortam basıncının azalması\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Plasenta zarında yırtık** — Plasenta zarında yırtık, amniyotik sıvı ve fetal hücrelerin anne dolaşımına geçmesine yol açar; amniyotik sıvı embolisinin mekanizmasıdır.\n- **Ateromatöz plak ülserasyonu** — Ateromatöz plak ülserasyonu sistemik arteriyel embolilerin köken yerleri arasındadır; yağ embolisini açıklamaz.\n- **Kemik iliği sinüzoid yırtığı** — Kemik iliği sinüzoid yırtığı doğru: uzun kemik kırığı ya da ezilme yaralanmasında sinüzoidler yırtılır ve mikroskobik yağ kürecikleri dolaşıma karışır.\n- **Santral venöz kateter** — Santral venöz kateter komplikasyonları hava embolisinin nedenleri arasındadır; yağ embolisi oluşturmaz.\n- **Ortam basıncının azalması** — Ortam basıncının ani azalması dekompresyon hastalığının nedenidir; çözünmüş azot kabarcık oluşturur.\n\n**Cevap: C** — Kemik iliği sinüzoid yırtığı\n\n**Özet.** Yağ embolisi uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidlerinin yırtılmasıyla oluşur. Travma sonrası mikroskobik yağ embolileri yaygındır, çoğu klinik olarak sessizdir.",
+   "ses": "Yağ embolisinde yağ küreciklerinin dolaşıma karışmasını sağlayan olay hangisidir?\nA, Plasenta zarında yırtık\nBe, Ateromatöz plak ülserasyonu\nCe, Kemik iliği sinüzoid yırtığı\nDe, Santral venöz kateter\nE, Ortam basıncının azalması\nŞimdi seçeneklere tek tek bakalım.\nPlasenta zarında yırtık, amniyotik sıvı ve fetal hücrelerin anne dolaşımına geçmesine yol açar, amniyotik sıvı embolisinin mekanizmasıdır.\nAteromatöz plak ülserasyonu sistemik arteriyel embolilerin köken yerleri arasındadır, yağ embolisini açıklamaz.\nKemik iliği sinüzoid yırtığı doğru, uzun kemik kırığı ya da ezilme yaralanmasında sinüzoidler yırtılır ve mikroskobik yağ kürecikleri dolaşıma karışır.\nSantral venöz kateter komplikasyonları hava embolisinin nedenleri arasındadır, yağ embolisi oluşturmaz.\nOrtam basıncının ani azalması dekompresyon hastalığının nedenidir, çözünmüş azot kabarcık oluşturur.\nDoğru cevap Ce, Kemik iliği sinüzoid yırtığı\nYağ embolisi uzun kemik kırıkları ve yumuşak doku ezilmesinde kemik iliği sinüzoidlerinin yırtılmasıyla oluşur. Travma sonrası mikroskobik yağ embolileri yaygındır, çoğu klinik olarak sessizdir.",
+   "kelime": 170
+  },
+  {
+   "no": 45,
+   "tur": "ornek",
+   "soru": "Yağ embolisi sendromunda mekanik damar tıkanmasına eşlik eden temel hasar mekanizması hangisidir?",
+   "secenekler": {
+    "A": "IgE aracılı vazodilatasyon",
+    "B": "Azot kabarcığı oluşumu",
+    "C": "Kalp içinde hava kilidi",
+    "D": "Fetal hücre geçişi",
+    "E": "Yağ asidi toksisitesi"
+   },
+   "dogru": "E",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "IgE aracılı aşırı duyarlılık anafilaktik şokun mekanizmasıdır; yaygın vazodilatasyon ve geçirgenlik artışı yapar.",
+    "B": "Azot kabarcığı oluşumu dekompresyon hastalığının mekanizmasıdır; basınç hızla düşünce azot çözeltiden çıkar.",
+    "C": "Kalp içinde hava kilidi büyük miktarda hava embolisinde ölüme yol açan olaydır; yağ embolisiyle ilgili değildir.",
+    "D": "Fetal hücrelerin anne dolaşımına geçmesi amniyotik sıvı embolisinin patogenezidir; yağ embolisinde görülmez.",
+    "E": "Yağ asidi toksisitesi doğru: mekanik tıkanmaya eklenir; trombosit aktivasyonu ve nötrofil toplanmasıyla endotel hasarı gelişir."
+   },
+   "ozet": "Yağ embolisi sendromu mekanik damar tıkanması ile yağ asidi toksisitesinin birleşimidir; trombosit aktivasyonu ve nötrofil toplanması endotel hasarı yapar, anemi ve trombositopeni eşlik eder.",
+   "metin": "**Soru.** Yağ embolisi sendromunda mekanik damar tıkanmasına eşlik eden temel hasar mekanizması hangisidir?\n\n**A)** IgE aracılı vazodilatasyon · **B)** Azot kabarcığı oluşumu · **C)** Kalp içinde hava kilidi · **D)** Fetal hücre geçişi · **E)** Yağ asidi toksisitesi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **IgE aracılı vazodilatasyon** — IgE aracılı aşırı duyarlılık anafilaktik şokun mekanizmasıdır; yaygın vazodilatasyon ve geçirgenlik artışı yapar.\n- **Azot kabarcığı oluşumu** — Azot kabarcığı oluşumu dekompresyon hastalığının mekanizmasıdır; basınç hızla düşünce azot çözeltiden çıkar.\n- **Kalp içinde hava kilidi** — Kalp içinde hava kilidi büyük miktarda hava embolisinde ölüme yol açan olaydır; yağ embolisiyle ilgili değildir.\n- **Fetal hücre geçişi** — Fetal hücrelerin anne dolaşımına geçmesi amniyotik sıvı embolisinin patogenezidir; yağ embolisinde görülmez.\n- **Yağ asidi toksisitesi** — Yağ asidi toksisitesi doğru: mekanik tıkanmaya eklenir; trombosit aktivasyonu ve nötrofil toplanmasıyla endotel hasarı gelişir.\n\n**Cevap: E** — Yağ asidi toksisitesi\n\n**Özet.** Yağ embolisi sendromu mekanik damar tıkanması ile yağ asidi toksisitesinin birleşimidir; trombosit aktivasyonu ve nötrofil toplanması endotel hasarı yapar, anemi ve trombositopeni eşlik eder.",
+   "ses": "Yağ embolisi sendromunda mekanik damar tıkanmasına eşlik eden temel hasar mekanizması hangisidir?\nA, i ge e aracılı vazodilatasyon\nBe, Azot kabarcığı oluşumu\nCe, Kalp içinde hava kilidi\nDe, Fetal hücre geçişi\nE, Yağ asidi toksisitesi\nSeçenekleri sırayla değerlendirelim.\nİ ge e aracılı aşırı duyarlılık anafilaktik şokun mekanizmasıdır. Yaygın vazodilatasyon ve geçirgenlik artışı yapar.\nAzot kabarcığı oluşumu dekompresyon hastalığının mekanizmasıdır, basınç hızla düşünce azot çözeltiden çıkar.\nKalp içinde hava kilidi büyük miktarda hava embolisinde ölüme yol açan olaydır, yağ embolisiyle ilgili değildir.\nFetal hücrelerin anne dolaşımına geçmesi amniyotik sıvı embolisinin patogenezidir, yağ embolisinde görülmez.\nYağ asidi toksisitesi doğru, mekanik tıkanmaya eklenir, trombosit aktivasyonu ve nötrofil toplanmasıyla endotel hasarı gelişir.\nDoğru cevap E, Yağ asidi toksisitesi\nYağ embolisi sendromu mekanik damar tıkanması ile yağ asidi toksisitesinin birleşimidir, trombosit aktivasyonu ve nötrofil toplanması endotel hasarı yapar, anemi ve trombositopeni eşlik eder.",
+   "kelime": 167
+  },
+  {
+   "no": 46,
+   "tur": "ornek",
+   "soru": "Amniyotik sıvı embolisinde sıvının anne dolaşımına geçmesinin nedeni hangisidir?",
+   "secenekler": {
+    "A": "Kemik iliği sinüzoid yırtığı",
+    "B": "Plasenta zarı veya uterin damar yırtığı",
+    "C": "Derin ven trombozu",
+    "D": "Ortam basıncının ani düşmesi",
+    "E": "Göğüs travması"
+   },
+   "dogru": "B",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Kemik iliği sinüzoidlerinin yırtılması uzun kemik kırığında yağ embolisine yol açar; amniyotik sıvı geçişini açıklamaz.",
+    "B": "Plasenta zarı veya uterin damar yırtığı doğru: bu yırtıktan amniyotik sıvı ve fetal hücreler anne dolaşımına geçer.",
+    "C": "Derin ven trombozu pulmoner tromboembolinin köken yeridir; amniyotik sıvı embolisi trombüsle oluşmaz.",
+    "D": "Ortam basıncının ani düşmesi dekompresyon hastalığına yol açar; kanda çözünmüş azot kabarcık oluşturur.",
+    "E": "Göğüs travması hava embolisinin nedenleri arasındadır; amniyotik sıvı embolisinin nedeni değildir."
+   },
+   "ozet": "Amniyotik sıvı embolisinde plasenta zarlarındaki ya da uterin damarlardaki yırtıktan amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; tabloya sıklıkla yaygın damar içi pıhtılaşma eşlik eder.",
+   "metin": "**Soru.** Amniyotik sıvı embolisinde sıvının anne dolaşımına geçmesinin nedeni hangisidir?\n\n**A)** Kemik iliği sinüzoid yırtığı · **B)** Plasenta zarı veya uterin damar yırtığı · **C)** Derin ven trombozu · **D)** Ortam basıncının ani düşmesi · **E)** Göğüs travması\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Kemik iliği sinüzoid yırtığı** — Kemik iliği sinüzoidlerinin yırtılması uzun kemik kırığında yağ embolisine yol açar; amniyotik sıvı geçişini açıklamaz.\n- **Plasenta zarı veya uterin damar yırtığı** — Plasenta zarı veya uterin damar yırtığı doğru: bu yırtıktan amniyotik sıvı ve fetal hücreler anne dolaşımına geçer.\n- **Derin ven trombozu** — Derin ven trombozu pulmoner tromboembolinin köken yeridir; amniyotik sıvı embolisi trombüsle oluşmaz.\n- **Ortam basıncının ani düşmesi** — Ortam basıncının ani düşmesi dekompresyon hastalığına yol açar; kanda çözünmüş azot kabarcık oluşturur.\n- **Göğüs travması** — Göğüs travması hava embolisinin nedenleri arasındadır; amniyotik sıvı embolisinin nedeni değildir.\n\n**Cevap: B** — Plasenta zarı veya uterin damar yırtığı\n\n**Özet.** Amniyotik sıvı embolisinde plasenta zarlarındaki ya da uterin damarlardaki yırtıktan amniyotik sıvı ve fetal hücreler anne dolaşımına geçer; tabloya sıklıkla yaygın damar içi pıhtılaşma eşlik eder.",
+   "ses": "Amniyotik sıvı embolisinde sıvının anne dolaşımına geçmesinin nedeni hangisidir?\nA, Kemik iliği sinüzoid yırtığı\nBe, Plasenta zarı veya uterin damar yırtığı\nCe, Derin ven trombozu\nDe, Ortam basıncının ani düşmesi\nE, Göğüs travması\nHer seçeneği tek tek ele alalım.\nKemik iliği sinüzoidlerinin yırtılması uzun kemik kırığında yağ embolisine yol açar, amniyotik sıvı geçişini açıklamaz.\nPlasenta zarı veya uterin damar yırtığı doğru, bu yırtıktan amniyotik sıvı ve fetal hücreler anne dolaşımına geçer.\nDerin ven trombozu pulmoner tromboembolinin köken yeridir, amniyotik sıvı embolisi trombüsle oluşmaz.\nOrtam basıncının ani düşmesi dekompresyon hastalığına yol açar, kanda çözünmüş azot kabarcık oluşturur.\nGöğüs travması hava embolisinin nedenleri arasındadır, amniyotik sıvı embolisinin nedeni değildir.\nDoğru cevap Be, Plasenta zarı veya uterin damar yırtığı\nAmniyotik sıvı embolisinde plasenta zarlarındaki ya da uterin damarlardaki yırtıktan amniyotik sıvı ve fetal hücreler anne dolaşımına geçer, tabloya sıklıkla yaygın damar içi pıhtılaşma eşlik eder.",
+   "kelime": 178
+  },
+  {
+   "no": 47,
+   "tur": "ornek",
+   "soru": "Büyük miktarda hava embolisinde ölüme yol açan olay hangisidir?",
+   "secenekler": {
+    "A": "Yağ asidi toksisitesi",
+    "B": "Eyer emboli",
+    "C": "Epifizde iskemik nekroz",
+    "D": "Kalp içinde hava kilidi",
+    "E": "Fetal hücre embolisi"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Yağ asidi toksisitesi, yağ embolisi sendromunda mekanik tıkanmaya eşlik eden endotel hasarı mekanizmasıdır.",
+    "B": "Eyer emboli ana pulmoner arter bifürkasyonunu tıkayan büyük trombüs embolisidir; gaz kabarcığıyla oluşmaz.",
+    "C": "Epifizde iskemik nekroz, dekompresyon hastalığının kronik formu olan Caisson hastalığının bulgusudur.",
+    "D": "Kalp içinde hava kilidi doğru: büyük miktarda hava kalp içinde birikerek kan akımını durdurur ve ölüme yol açar.",
+    "E": "Fetal hücre embolisi amniyotik sıvı embolisinde akciğer mikrodolaşımında görülür; gaz embolisiyle ilgisi yoktur."
+   },
+   "ozet": "Hava embolisi cerrahi işlemler, göğüs travması ve santral venöz kateter nedeniyle gelişebilir; kabarcıklar pulmoner dolaşımı tıkayıp hipoksi, büyük miktarda ise kalp içinde hava kilidiyle ölüm yapar.",
+   "metin": "**Soru.** Büyük miktarda hava embolisinde ölüme yol açan olay hangisidir?\n\n**A)** Yağ asidi toksisitesi · **B)** Eyer emboli · **C)** Epifizde iskemik nekroz · **D)** Kalp içinde hava kilidi · **E)** Fetal hücre embolisi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Yağ asidi toksisitesi** — Yağ asidi toksisitesi, yağ embolisi sendromunda mekanik tıkanmaya eşlik eden endotel hasarı mekanizmasıdır.\n- **Eyer emboli** — Eyer emboli ana pulmoner arter bifürkasyonunu tıkayan büyük trombüs embolisidir; gaz kabarcığıyla oluşmaz.\n- **Epifizde iskemik nekroz** — Epifizde iskemik nekroz, dekompresyon hastalığının kronik formu olan Caisson hastalığının bulgusudur.\n- **Kalp içinde hava kilidi** — Kalp içinde hava kilidi doğru: büyük miktarda hava kalp içinde birikerek kan akımını durdurur ve ölüme yol açar.\n- **Fetal hücre embolisi** — Fetal hücre embolisi amniyotik sıvı embolisinde akciğer mikrodolaşımında görülür; gaz embolisiyle ilgisi yoktur.\n\n**Cevap: D** — Kalp içinde hava kilidi\n\n**Özet.** Hava embolisi cerrahi işlemler, göğüs travması ve santral venöz kateter nedeniyle gelişebilir; kabarcıklar pulmoner dolaşımı tıkayıp hipoksi, büyük miktarda ise kalp içinde hava kilidiyle ölüm yapar.",
+   "ses": "Büyük miktarda hava embolisinde ölüme yol açan olay hangisidir?\nA, Yağ asidi toksisitesi\nBe, Eyer emboli\nCe, Epifizde iskemik nekroz\nDe, Kalp içinde hava kilidi\nE, Fetal hücre embolisi\nŞıkları sırasıyla gözden geçirelim.\nYağ asidi toksisitesi, yağ embolisi sendromunda mekanik tıkanmaya eşlik eden endotel hasarı mekanizmasıdır.\nEyer emboli ana pulmoner arter bifürkasyonunu tıkayan büyük trombüs embolisidir, gaz kabarcığıyla oluşmaz.\nEpifizde iskemik nekroz, dekompresyon hastalığının kronik formu olan keson hastalığının bulgusudur.\nKalp içinde hava kilidi doğru, büyük miktarda hava kalp içinde birikerek kan akımını durdurur ve ölüme yol açar.\nFetal hücre embolisi amniyotik sıvı embolisinde akciğer mikrodolaşımında görülür, gaz embolisiyle ilgisi yoktur.\nDoğru cevap De, Kalp içinde hava kilidi\nHava embolisi cerrahi işlemler, göğüs travması ve santral venöz kateter nedeniyle gelişebilir, kabarcıklar pulmoner dolaşımı tıkayıp hipoksi, büyük miktarda ise kalp içinde hava kilidiyle ölüm yapar.",
+   "kelime": 166
+  },
+  {
+   "no": 48,
+   "tur": "ornek",
+   "soru": "Ateroskleroz zemininde gelişen ve enfarktüsün en sık nedenlerinden olan süreç hangisidir?",
+   "secenekler": {
+    "A": "Vazospazm",
+    "B": "Vasküler torsiyon",
+    "C": "Arteriyel tromboz",
+    "D": "Fıtık kesesinde sıkışma",
+    "E": "Dıştan tümör basısı"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Vazospazm enfarktüsün daha nadir nedenleri arasındadır; en sık nedenler damar içinde oluşan ya da taşınan kitlelerdir.",
+    "B": "Vasküler torsiyon, örneğin testis torsiyonu ya da volvulus, enfarktüsün nadir nedenlerindendir.",
+    "C": "Arteriyel tromboz doğru: arteriyel emboliyle birlikte enfarktüsün en sık nedenidir.",
+    "D": "Fıtık kesesinde sıkışma da travmatik vasküler rüptür gibi enfarktüsün nadir nedenleri arasında yer alır.",
+    "E": "Dıştan tümör basısı, dissekan aort anevrizması ya da ödem gibi dış basılarla birlikte nadir nedenlerdendir."
+   },
+   "ozet": "Enfarktüs kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır; en sık nedenleri arteriyel tromboz ve arteriyel embolidir. Vazospazm, torsiyon ve dış bası daha nadirdir.",
+   "metin": "**Soru.** Ateroskleroz zemininde gelişen ve enfarktüsün en sık nedenlerinden olan süreç hangisidir?\n\n**A)** Vazospazm · **B)** Vasküler torsiyon · **C)** Arteriyel tromboz · **D)** Fıtık kesesinde sıkışma · **E)** Dıştan tümör basısı\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Vazospazm** — Vazospazm enfarktüsün daha nadir nedenleri arasındadır; en sık nedenler damar içinde oluşan ya da taşınan kitlelerdir.\n- **Vasküler torsiyon** — Vasküler torsiyon, örneğin testis torsiyonu ya da volvulus, enfarktüsün nadir nedenlerindendir.\n- **Arteriyel tromboz** — Arteriyel tromboz doğru: arteriyel emboliyle birlikte enfarktüsün en sık nedenidir.\n- **Fıtık kesesinde sıkışma** — Fıtık kesesinde sıkışma da travmatik vasküler rüptür gibi enfarktüsün nadir nedenleri arasında yer alır.\n- **Dıştan tümör basısı** — Dıştan tümör basısı, dissekan aort anevrizması ya da ödem gibi dış basılarla birlikte nadir nedenlerdendir.\n\n**Cevap: C** — Arteriyel tromboz\n\n**Özet.** Enfarktüs kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır; en sık nedenleri arteriyel tromboz ve arteriyel embolidir. Vazospazm, torsiyon ve dış bası daha nadirdir.",
+   "ses": "Ateroskleroz zemininde gelişen ve enfarktüsün en sık nedenlerinden olan süreç hangisidir?\nA, Vazospazm\nBe, Vasküler torsiyon\nCe, Arteriyel tromboz\nDe, Fıtık kesesinde sıkışma\nE, Dıştan tümör basısı\nŞimdi seçeneklere tek tek bakalım.\nVazospazm enfarktüsün daha nadir nedenleri arasındadır, en sık nedenler damar içinde oluşan ya da taşınan kitlelerdir.\nVasküler torsiyon, örneğin testis torsiyonu ya da volvulus, enfarktüsün nadir nedenlerindendir.\nArteriyel tromboz doğru, arteriyel emboliyle birlikte enfarktüsün en sık nedenidir.\nFıtık kesesinde sıkışma da travmatik vasküler rüptür gibi enfarktüsün nadir nedenleri arasında yer alır.\nDıştan tümör basısı, dissekan aort anevrizması ya da ödem gibi dış basılarla birlikte nadir nedenlerdendir.\nDoğru cevap Ce, Arteriyel tromboz\nEnfarktüs kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır, en sık nedenleri arteriyel tromboz ve arteriyel embolidir. Vazospazm, torsiyon ve dış bası daha nadirdir.",
+   "kelime": 155
+  },
+  {
+   "no": 49,
+   "tur": "ornek",
+   "soru": "Tıkanmış bir alanda reperfüzyon gelişmesi hangi enfarkt tipine yol açar?",
+   "secenekler": {
+    "A": "Kırmızı enfarkt",
+    "B": "Beyaz enfarkt",
+    "C": "Septik enfarkt",
+    "D": "Sıvılaşma nekrozu",
+    "E": "Fibrotik skar"
+   },
+   "dogru": "A",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Kırmızı enfarkt doğru: reperfüzyonda, venöz tıkanıklıkta ve çift dolaşımlı dokularda dokuda yaygın hemoraji gelişir.",
+    "B": "Beyaz enfarkt kalp, dalak ve böbrek gibi katı, uç arter dolaşımlı organlarda gelişir; reperfüzyonla ilişkili değildir.",
+    "C": "Septik enfarkt enfekte tromboemboli ya da sonradan mikrobiyal yerleşimle oluşur; renk değil enfeksiyon ölçütüyle tanımlanır.",
+    "D": "Sıvılaşma nekrozu beyin enfarktlarının mikroskobik bulgusudur; reperfüzyonun belirlediği bir enfarkt tipi değildir.",
+    "E": "Fibrotik skar enfarktın iyileşme sonucudur; makrofaj temizliği ve granülasyon dokusundan sonra gelişir."
+   },
+   "ozet": "Kırmızı enfarkt venöz tıkanıklık, çift dolaşımlı ve önceden konjesyonlu dokular ile tıkalı alanda reperfüzyon durumlarında görülür. Beyaz enfarkt ise uç arter dolaşımlı katı organlara özgüdür.",
+   "metin": "**Soru.** Tıkanmış bir alanda reperfüzyon gelişmesi hangi enfarkt tipine yol açar?\n\n**A)** Kırmızı enfarkt · **B)** Beyaz enfarkt · **C)** Septik enfarkt · **D)** Sıvılaşma nekrozu · **E)** Fibrotik skar\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kırmızı enfarkt** — Kırmızı enfarkt doğru: reperfüzyonda, venöz tıkanıklıkta ve çift dolaşımlı dokularda dokuda yaygın hemoraji gelişir.\n- **Beyaz enfarkt** — Beyaz enfarkt kalp, dalak ve böbrek gibi katı, uç arter dolaşımlı organlarda gelişir; reperfüzyonla ilişkili değildir.\n- **Septik enfarkt** — Septik enfarkt enfekte tromboemboli ya da sonradan mikrobiyal yerleşimle oluşur; renk değil enfeksiyon ölçütüyle tanımlanır.\n- **Sıvılaşma nekrozu** — Sıvılaşma nekrozu beyin enfarktlarının mikroskobik bulgusudur; reperfüzyonun belirlediği bir enfarkt tipi değildir.\n- **Fibrotik skar** — Fibrotik skar enfarktın iyileşme sonucudur; makrofaj temizliği ve granülasyon dokusundan sonra gelişir.\n\n**Cevap: A** — Kırmızı enfarkt\n\n**Özet.** Kırmızı enfarkt venöz tıkanıklık, çift dolaşımlı ve önceden konjesyonlu dokular ile tıkalı alanda reperfüzyon durumlarında görülür. Beyaz enfarkt ise uç arter dolaşımlı katı organlara özgüdür.",
+   "ses": "Tıkanmış bir alanda reperfüzyon gelişmesi hangi enfarkt tipine yol açar?\nA, Kırmızı enfarkt\nBe, Beyaz enfarkt\nCe, Septik enfarkt\nDe, Sıvılaşma nekrozu\nE, Fibrotik skar\nSeçenekleri sırayla değerlendirelim.\nKırmızı enfarkt doğru, reperfüzyonda, venöz tıkanıklıkta ve çift dolaşımlı dokularda dokuda yaygın hemoraji gelişir.\nBeyaz enfarkt kalp, dalak ve böbrek gibi katı, uç arter dolaşımlı organlarda gelişir, reperfüzyonla ilişkili değildir.\nSeptik enfarkt enfekte tromboemboli ya da sonradan mikrobiyal yerleşimle oluşur, renk değil enfeksiyon ölçütüyle tanımlanır.\nSıvılaşma nekrozu beyin enfarktlarının mikroskobik bulgusudur, reperfüzyonun belirlediği bir enfarkt tipi değildir.\nFibrotik skar enfarktın iyileşme sonucudur, makrofaj temizliği ve granülasyon dokusundan sonra gelişir.\nDoğru cevap A, Kırmızı enfarkt\nKırmızı enfarkt venöz tıkanıklık, çift dolaşımlı ve önceden konjesyonlu dokular ile tıkalı alanda reperfüzyon durumlarında görülür. Beyaz enfarkt ise uç arter dolaşımlı katı organlara özgüdür.",
+   "kelime": 154
+  },
+  {
+   "no": 50,
+   "tur": "ornek",
+   "soru": "Enfarktüs iyileşmesinde sınırlı parankim rejenerasyonu hangi koşulda mümkündür?",
+   "secenekler": {
+    "A": "Kollateral dolaşım gelişmesi",
+    "B": "Enfarktın septik olması",
+    "C": "Sıvılaşma nekrozu gelişmesi",
+    "D": "Tıkanmanın ani olması",
+    "E": "Stromal iskeletin korunması"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Kollateral dolaşım gelişmesi yavaş tıkanmada enfarkt riskini azaltır; iyileşmede rejenerasyonu belirleyen koşul değildir.",
+    "B": "Enfarktın septik olması apse gelişimine yol açabilir; daha yoğun inflamasyonla organizasyon ve fibrozis ile iyileşir.",
+    "C": "Sıvılaşma nekrozu beyin enfarktlarında görülür; rejenerasyon olanağı sağlayan bir koşul değildir.",
+    "D": "Tıkanmanın ani olması enfarkt riskini artırır; kollateral gelişimine zaman tanımaz.",
+    "E": "Stromal iskeletin korunması doğru: alttaki iskelet sağlam kalmışsa sınırlı parankim rejenerasyonu mümkündür, aksi halde skar gelişir."
+   },
+   "ozet": "Enfarktta makrofajlar nekrotik dokuyu temizler, granülasyon dokusu gelişir ve çoğu organda skar oluşur. Altta yatan stromal iskelet korunmuşsa sınırlı parankim rejenerasyonu olabilir.",
+   "metin": "**Soru.** Enfarktüs iyileşmesinde sınırlı parankim rejenerasyonu hangi koşulda mümkündür?\n\n**A)** Kollateral dolaşım gelişmesi · **B)** Enfarktın septik olması · **C)** Sıvılaşma nekrozu gelişmesi · **D)** Tıkanmanın ani olması · **E)** Stromal iskeletin korunması\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Kollateral dolaşım gelişmesi** — Kollateral dolaşım gelişmesi yavaş tıkanmada enfarkt riskini azaltır; iyileşmede rejenerasyonu belirleyen koşul değildir.\n- **Enfarktın septik olması** — Enfarktın septik olması apse gelişimine yol açabilir; daha yoğun inflamasyonla organizasyon ve fibrozis ile iyileşir.\n- **Sıvılaşma nekrozu gelişmesi** — Sıvılaşma nekrozu beyin enfarktlarında görülür; rejenerasyon olanağı sağlayan bir koşul değildir.\n- **Tıkanmanın ani olması** — Tıkanmanın ani olması enfarkt riskini artırır; kollateral gelişimine zaman tanımaz.\n- **Stromal iskeletin korunması** — Stromal iskeletin korunması doğru: alttaki iskelet sağlam kalmışsa sınırlı parankim rejenerasyonu mümkündür, aksi halde skar gelişir.\n\n**Cevap: E** — Stromal iskeletin korunması\n\n**Özet.** Enfarktta makrofajlar nekrotik dokuyu temizler, granülasyon dokusu gelişir ve çoğu organda skar oluşur. Altta yatan stromal iskelet korunmuşsa sınırlı parankim rejenerasyonu olabilir.",
+   "ses": "Enfarktüs iyileşmesinde sınırlı parankim rejenerasyonu hangi koşulda mümkündür?\nA, Kollateral dolaşım gelişmesi\nBe, Enfarktın septik olması\nCe, Sıvılaşma nekrozu gelişmesi\nDe, Tıkanmanın ani olması\nE, Stromal iskeletin korunması\nHer seçeneği tek tek ele alalım.\nKollateral dolaşım gelişmesi yavaş tıkanmada enfarkt riskini azaltır, iyileşmede rejenerasyonu belirleyen koşul değildir.\nEnfarktın septik olması apse gelişimine yol açabilir, daha yoğun inflamasyonla organizasyon ve fibrozis ile iyileşir.\nSıvılaşma nekrozu beyin enfarktlarında görülür, rejenerasyon olanağı sağlayan bir koşul değildir.\nTıkanmanın ani olması enfarkt riskini artırır, kollateral gelişimine zaman tanımaz.\nStromal iskeletin korunması doğru, alttaki iskelet sağlam kalmışsa sınırlı parankim rejenerasyonu mümkündür, aksi halde skar gelişir.\nDoğru cevap E, Stromal iskeletin korunması\nEnfarktta makrofajlar nekrotik dokuyu temizler, granülasyon dokusu gelişir ve çoğu organda skar oluşur. Altta yatan stromal iskelet korunmuşsa sınırlı parankim rejenerasyonu olabilir.",
+   "kelime": 159
+  },
+  {
+   "no": 51,
+   "tur": "ornek",
+   "soru": "Enfektif endokardit vejetasyonundan kopan emboliyle oluşan enfarktüsü aseptik enfarktüsten ayıran özellik hangisidir?",
+   "secenekler": {
+    "A": "Kama şekli",
+    "B": "Apseye dönüşebilmesi",
+    "C": "Koagülatif nekroz",
+    "D": "Granülasyon dokusu oluşumu",
+    "E": "Kenarda inflamatuar yanıt"
+   },
+   "dogru": "B",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Kama şekli, tabanı organ yüzeyine bakan beyaz enfarktların tipik biçimidir; enfeksiyonla ilgili ayırt edici özellik değildir.",
+    "B": "Apseye dönüşebilmesi doğru: septik enfarktüste enfarkt alanı apseye dönüşebilir ve inflamasyon daha yoğundur.",
+    "C": "Koagülatif nekroz beyin dışındaki çoğu organ enfarktında görülür; septik ve aseptik enfarktta ortaktır.",
+    "D": "Granülasyon dokusu oluşumu her enfarktın iyileşmesinde makrofaj temizliğinden sonra görülür.",
+    "E": "Kenarda inflamatuar yanıt her enfarktta saatler içinde başlar ve 1–2 gün içinde belirginleşir."
+   },
+   "ozet": "Septik enfarktüs enfekte tromboemboli ya da nekrotik alana sonradan mikrobiyal yerleşimle oluşur; alan apseye dönüşebilir, inflamasyon daha yoğundur ve organizasyon ile fibrozisle iyileşir.",
+   "metin": "**Soru.** Enfektif endokardit vejetasyonundan kopan emboliyle oluşan enfarktüsü aseptik enfarktüsten ayıran özellik hangisidir?\n\n**A)** Kama şekli · **B)** Apseye dönüşebilmesi · **C)** Koagülatif nekroz · **D)** Granülasyon dokusu oluşumu · **E)** Kenarda inflamatuar yanıt\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kama şekli** — Kama şekli, tabanı organ yüzeyine bakan beyaz enfarktların tipik biçimidir; enfeksiyonla ilgili ayırt edici özellik değildir.\n- **Apseye dönüşebilmesi** — Apseye dönüşebilmesi doğru: septik enfarktüste enfarkt alanı apseye dönüşebilir ve inflamasyon daha yoğundur.\n- **Koagülatif nekroz** — Koagülatif nekroz beyin dışındaki çoğu organ enfarktında görülür; septik ve aseptik enfarktta ortaktır.\n- **Granülasyon dokusu oluşumu** — Granülasyon dokusu oluşumu her enfarktın iyileşmesinde makrofaj temizliğinden sonra görülür.\n- **Kenarda inflamatuar yanıt** — Kenarda inflamatuar yanıt her enfarktta saatler içinde başlar ve 1–2 gün içinde belirginleşir.\n\n**Cevap: B** — Apseye dönüşebilmesi\n\n**Özet.** Septik enfarktüs enfekte tromboemboli ya da nekrotik alana sonradan mikrobiyal yerleşimle oluşur; alan apseye dönüşebilir, inflamasyon daha yoğundur ve organizasyon ile fibrozisle iyileşir.",
+   "ses": "Enfektif endokardit vejetasyonundan kopan emboliyle oluşan enfarktüsü aseptik enfarktüsten ayıran özellik hangisidir?\nA, Kama şekli\nBe, Apseye dönüşebilmesi\nCe, Koagülatif nekroz\nDe, Granülasyon dokusu oluşumu\nE, Kenarda inflamatuar yanıt\nŞıkları sırasıyla gözden geçirelim.\nKama şekli, tabanı organ yüzeyine bakan beyaz enfarktların tipik biçimidir, enfeksiyonla ilgili ayırt edici özellik değildir.\nApseye dönüşebilmesi doğru, septik enfarktüste enfarkt alanı apseye dönüşebilir ve inflamasyon daha yoğundur.\nKoagülatif nekroz beyin dışındaki çoğu organ enfarktında görülür, septik ve aseptik enfarktta ortaktır.\nGranülasyon dokusu oluşumu her enfarktın iyileşmesinde makrofaj temizliğinden sonra görülür.\nKenarda inflamatuar yanıt her enfarktta saatler içinde başlar ve bir ile iki gün içinde belirginleşir.\nDoğru cevap Be, Apseye dönüşebilmesi\nSeptik enfarktüs enfekte tromboemboli ya da nekrotik alana sonradan mikrobiyal yerleşimle oluşur, alan apseye dönüşebilir, inflamasyon daha yoğundur ve organizasyon ile fibrozisle iyileşir.",
+   "kelime": 155
+  },
+  {
+   "no": 52,
+   "tur": "ornek",
+   "soru": "Hipoksiye en uzun süre dayanabilen, saatlerce tolere edebilen hücre hangisidir?",
+   "secenekler": {
+    "A": "Nöron",
+    "B": "Miyokard hücresi",
+    "C": "Böbrek tübül hücresi",
+    "D": "Fibroblast",
+    "E": "Hepatosit"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Nöron hipoksiye en duyarlı hücredir; 3–4 dakikada geri dönüşümsüz hasar görür.",
+    "B": "Miyokard hücresi yaklaşık 20–30 dakikada geri dönüşümsüz hasar görür; saatlerce dayanamaz.",
+    "C": "Böbrek tübül hücresi ile karıştırılabilir: Hipoksiye saatlerce dayanıklılık bağ dokusu hücresine özgü olarak tanımlanır.",
+    "D": "Fibroblast doğru: hipoksiyi saatlerce tolere edebilir; doku duyarlılığı sıralamasında en dayanıklı uçtadır.",
+    "E": "Hepatosit ile karıştırılabilir: Karaciğerin enfarkttan korunması hücre dayanıklılığına değil çift dolaşımına bağlanır."
+   },
+   "ozet": "Dokunun hipoksiye duyarlılığı enfarkt gelişimini etkiler; nöronlar 3–4 dakikada, miyokard 20–30 dakikada geri dönüşümsüz hasar görürken fibroblastlar saatlerce dayanabilir.",
+   "metin": "**Soru.** Hipoksiye en uzun süre dayanabilen, saatlerce tolere edebilen hücre hangisidir?\n\n**A)** Nöron · **B)** Miyokard hücresi · **C)** Böbrek tübül hücresi · **D)** Fibroblast · **E)** Hepatosit\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Nöron** — Nöron hipoksiye en duyarlı hücredir; 3–4 dakikada geri dönüşümsüz hasar görür.\n- **Miyokard hücresi** — Miyokard hücresi yaklaşık 20–30 dakikada geri dönüşümsüz hasar görür; saatlerce dayanamaz.\n- **Böbrek tübül hücresi** — Böbrek tübül hücresi ile karıştırılabilir: Hipoksiye saatlerce dayanıklılık bağ dokusu hücresine özgü olarak tanımlanır.\n- **Fibroblast** — Fibroblast doğru: hipoksiyi saatlerce tolere edebilir; doku duyarlılığı sıralamasında en dayanıklı uçtadır.\n- **Hepatosit** — Hepatosit ile karıştırılabilir: Karaciğerin enfarkttan korunması hücre dayanıklılığına değil çift dolaşımına bağlanır.\n\n**Cevap: D** — Fibroblast\n\n**Özet.** Dokunun hipoksiye duyarlılığı enfarkt gelişimini etkiler; nöronlar 3–4 dakikada, miyokard 20–30 dakikada geri dönüşümsüz hasar görürken fibroblastlar saatlerce dayanabilir.",
+   "ses": "Hipoksiye en uzun süre dayanabilen, saatlerce tolere edebilen hücre hangisidir?\nA, Nöron\nBe, Miyokard hücresi\nCe, Böbrek tübül hücresi\nDe, Fibroblast\nE, Hepatosit\nŞimdi seçeneklere tek tek bakalım.\nNöron hipoksiye en duyarlı hücredir. Üç ile dört dakikada geri dönüşümsüz hasar görür.\nMiyokard hücresi yaklaşık yirmi ile otuz dakikada geri dönüşümsüz hasar görür. Saatlerce dayanamaz.\nBöbrek tübül hücresi ile karıştırılabilir. Hipoksiye saatlerce dayanıklılık bağ dokusu hücresine özgü olarak tanımlanır.\nFibroblast doğru, hipoksiyi saatlerce tolere edebilir, doku duyarlılığı sıralamasında en dayanıklı uçtadır.\nHepatosit ile karıştırılabilir. Karaciğerin enfarkttan korunması hücre dayanıklılığına değil çift dolaşımına bağlanır.\nDoğru cevap De, Fibroblast\nDokunun hipoksiye duyarlılığı enfarkt gelişimini etkiler. Nöronlar üç ile dört dakikada, miyokard yirmi ile otuz dakikada geri dönüşümsüz hasar görürken fibroblastlar saatlerce dayanabilir.",
+   "kelime": 136
+  },
+  {
+   "no": 53,
+   "tur": "ornek",
+   "soru": "Omurilik yaralanmasına bağlı şokun temel mekanizması hangisidir?",
+   "secenekler": {
+    "A": "Miyokard pompa yetmezliği",
+    "B": "Plazma hacmi kaybı",
+    "C": "Generalize damar tonusu kaybı",
+    "D": "IgE aracılı vazodilatasyon",
+    "E": "Sitokin kaskadı aktivasyonu"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Miyokard pompa yetmezliği kardiyojenik şokun mekanizmasıdır; miyokard enfarktüsü, aritmi ve tamponadda görülür.",
+    "B": "Plazma hacmi kaybı hipovolemik şokun mekanizmasıdır; ciddi yanık ve sıvı kaybında görülür.",
+    "C": "Generalize damar tonusu kaybı doğru: anestezi ya da omurilik yaralanmasına bağlı nörojenik şokun temel mekanizmasıdır.",
+    "D": "IgE aracılı vazodilatasyon anafilaktik şokta görülür; buna damar permeabilitesi artışı eşlik eder.",
+    "E": "Sitokin kaskadının aşırı aktivasyonu septik şokun mekanizmalarındandır; TNF ve IL-1 rol oynar."
+   },
+   "ozet": "Nörojenik şok anestezi ya da omurilik yaralanmasına bağlı generalize damar tonusu kaybıyla oluşur. Anafilaktik şok ise IgE aracılı yaygın vazodilatasyon ve geçirgenlik artışıyla gelişir.",
+   "metin": "**Soru.** Omurilik yaralanmasına bağlı şokun temel mekanizması hangisidir?\n\n**A)** Miyokard pompa yetmezliği · **B)** Plazma hacmi kaybı · **C)** Generalize damar tonusu kaybı · **D)** IgE aracılı vazodilatasyon · **E)** Sitokin kaskadı aktivasyonu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Miyokard pompa yetmezliği** — Miyokard pompa yetmezliği kardiyojenik şokun mekanizmasıdır; miyokard enfarktüsü, aritmi ve tamponadda görülür.\n- **Plazma hacmi kaybı** — Plazma hacmi kaybı hipovolemik şokun mekanizmasıdır; ciddi yanık ve sıvı kaybında görülür.\n- **Generalize damar tonusu kaybı** — Generalize damar tonusu kaybı doğru: anestezi ya da omurilik yaralanmasına bağlı nörojenik şokun temel mekanizmasıdır.\n- **IgE aracılı vazodilatasyon** — IgE aracılı vazodilatasyon anafilaktik şokta görülür; buna damar permeabilitesi artışı eşlik eder.\n- **Sitokin kaskadı aktivasyonu** — Sitokin kaskadının aşırı aktivasyonu septik şokun mekanizmalarındandır; TNF ve IL-1 rol oynar.\n\n**Cevap: C** — Generalize damar tonusu kaybı\n\n**Özet.** Nörojenik şok anestezi ya da omurilik yaralanmasına bağlı generalize damar tonusu kaybıyla oluşur. Anafilaktik şok ise IgE aracılı yaygın vazodilatasyon ve geçirgenlik artışıyla gelişir.",
+   "ses": "Omurilik yaralanmasına bağlı şokun temel mekanizması hangisidir?\nA, Miyokard pompa yetmezliği\nBe, Plazma hacmi kaybı\nCe, Generalize damar tonusu kaybı\nDe, i ge e aracılı vazodilatasyon\nE, Sitokin kaskadı aktivasyonu\nSeçenekleri sırayla değerlendirelim.\nMiyokard pompa yetmezliği kardiyojenik şokun mekanizmasıdır, miyokard enfarktüsü, aritmi ve tamponadda görülür.\nPlazma hacmi kaybı hipovolemik şokun mekanizmasıdır, ciddi yanık ve sıvı kaybında görülür.\nGeneralize damar tonusu kaybı doğru, anestezi ya da omurilik yaralanmasına bağlı nörojenik şokun temel mekanizmasıdır.\nİ ge e aracılı vazodilatasyon anafilaktik şokta görülür. Buna damar permeabilitesi artışı eşlik eder.\nSitokin kaskadının aşırı aktivasyonu septik şokun mekanizmalarındandır. Te ne fe ve i le bir rol oynar.\nDoğru cevap Ce, Generalize damar tonusu kaybı\nNörojenik şok anestezi ya da omurilik yaralanmasına bağlı generalize damar tonusu kaybıyla oluşur. Anafilaktik şok ise i ge e aracılı yaygın vazodilatasyon ve geçirgenlik artışıyla gelişir.",
+   "kelime": 158
+  },
+  {
+   "no": 54,
+   "tur": "ornek",
+   "soru": "Septik şokta protein açısından zengin ödem sıvısı birikiminin temel nedeni hangisidir?",
+   "secenekler": {
+    "A": "Sıkı bağlantıların zayıflaması",
+    "B": "Periferik vazokonstriksiyon",
+    "C": "Böbrekte sıvı tutulumu",
+    "D": "Trombomodulin artışı",
+    "E": "Glukoz alımının bozulması"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Sıkı bağlantıların zayıflaması doğru: proinflamatuar sitokinler endoteli aktive eder, geçirgenlik artar ve protein zengin ödem sıvısı birikir.",
+    "B": "Periferik vazokonstriksiyon şokun kompanse evresinde görülür; septik şokta ise yaygın vazodilatasyon vardır.",
+    "C": "Böbrekte sıvı tutulumu kompanse evrede renin anjiyotensin aldosteron sistemiyle gelişir; protein zengin ödemi açıklamaz.",
+    "D": "Trombomodulin septik şokta artmaz, azalır; bu değişiklik pıhtılaşma bozukluğuna katkıda bulunur.",
+    "E": "Glukoz alımının bozulması GLUT-4 ekspresyonunun azalmasına bağlı metabolik bir bozukluktur; ödemle ilgili değildir."
+   },
+   "ozet": "Septik şokta sitokinlerle aktive olan endotelde yapışma molekülleri artar ve sıkı bağlantılar zayıflar; protein zengin ödem sıvısı birikir, intravenöz sıvı tedavisi bazen ödemi artırabilir.",
+   "metin": "**Soru.** Septik şokta protein açısından zengin ödem sıvısı birikiminin temel nedeni hangisidir?\n\n**A)** Sıkı bağlantıların zayıflaması · **B)** Periferik vazokonstriksiyon · **C)** Böbrekte sıvı tutulumu · **D)** Trombomodulin artışı · **E)** Glukoz alımının bozulması\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Sıkı bağlantıların zayıflaması** — Sıkı bağlantıların zayıflaması doğru: proinflamatuar sitokinler endoteli aktive eder, geçirgenlik artar ve protein zengin ödem sıvısı birikir.\n- **Periferik vazokonstriksiyon** — Periferik vazokonstriksiyon şokun kompanse evresinde görülür; septik şokta ise yaygın vazodilatasyon vardır.\n- **Böbrekte sıvı tutulumu** — Böbrekte sıvı tutulumu kompanse evrede renin anjiyotensin aldosteron sistemiyle gelişir; protein zengin ödemi açıklamaz.\n- **Trombomodulin artışı** — Trombomodulin septik şokta artmaz, azalır; bu değişiklik pıhtılaşma bozukluğuna katkıda bulunur.\n- **Glukoz alımının bozulması** — Glukoz alımının bozulması GLUT-4 ekspresyonunun azalmasına bağlı metabolik bir bozukluktur; ödemle ilgili değildir.\n\n**Cevap: A** — Sıkı bağlantıların zayıflaması\n\n**Özet.** Septik şokta sitokinlerle aktive olan endotelde yapışma molekülleri artar ve sıkı bağlantılar zayıflar; protein zengin ödem sıvısı birikir, intravenöz sıvı tedavisi bazen ödemi artırabilir.",
+   "ses": "Septik şokta protein açısından zengin ödem sıvısı birikiminin temel nedeni hangisidir?\nA, Sıkı bağlantıların zayıflaması\nBe, Periferik vazokonstriksiyon\nCe, Böbrekte sıvı tutulumu\nDe, Trombomodulin artışı\nE, Glukoz alımının bozulması\nHer seçeneği tek tek ele alalım.\nSıkı bağlantıların zayıflaması doğru, proinflamatuar sitokinler endoteli aktive eder, geçirgenlik artar ve protein zengin ödem sıvısı birikir.\nPeriferik vazokonstriksiyon şokun kompanse evresinde görülür, septik şokta ise yaygın vazodilatasyon vardır.\nBöbrekte sıvı tutulumu kompanse evrede renin anjiyotensin aldosteron sistemiyle gelişir, protein zengin ödemi açıklamaz.\nTrombomodulin septik şokta artmaz, azalır, bu değişiklik pıhtılaşma bozukluğuna katkıda bulunur.\nGlukoz alımının bozulması ge le u te dört ekspresyonunun azalmasına bağlı metabolik bir bozukluktur. Ödemle ilgili değildir.\nDoğru cevap A, Sıkı bağlantıların zayıflaması\nSeptik şokta sitokinlerle aktive olan endotelde yapışma molekülleri artar ve sıkı bağlantılar zayıflar, protein zengin ödem sıvısı birikir, intravenöz sıvı tedavisi bazen ödemi artırabilir.",
+   "kelime": 162
+  },
+  {
+   "no": 55,
+   "tur": "ornek",
+   "soru": "Septik şokta yaygın damar içi pıhtılaşmaya rağmen kanama eğilimi gelişmesinin nedeni hangisidir?",
+   "secenekler": {
+    "A": "PAI-1 artışı",
+    "B": "Doku faktörü artışı",
+    "C": "Fibrinolizin baskılanması",
+    "D": "Protein C reseptörü azalması",
+    "E": "Faktör ve trombosit tüketimi"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "PAI-1 artışı fibrinolizi baskılar ve pıhtıların çözülmesini engeller; kanamayı değil trombozu kolaylaştırır.",
+    "B": "Doku faktörü artışı pıhtılaşmayı başlatır ve yaygın damar içi pıhtılaşmaya katkıda bulunur; kanama eğilimini açıklamaz.",
+    "C": "Fibrinolizin baskılanması mikrodamarlarda fibrin zengin trombüslerin kalıcı olmasına yol açar; kanama nedeni değildir.",
+    "D": "Protein C reseptörü azalması antikoagülan etkiyi zayıflatır; dengeyi pıhtılaşma yönüne kaydırır.",
+    "E": "Faktör ve trombosit tüketimi doğru: yaygın pıhtılaşmada pıhtılaşma faktörleri ve trombositler tükenir, aynı anda kanama eğilimi gelişir."
+   },
+   "ozet": "Septik şokta doku faktörü artar, antikoagülanlar azalır ve PAI-1 artışıyla fibrinoliz baskılanır; mikrodamarlarda fibrin trombüsleri oluşurken faktör ve trombosit tüketimi kanama eğilimi yaratır.",
+   "metin": "**Soru.** Septik şokta yaygın damar içi pıhtılaşmaya rağmen kanama eğilimi gelişmesinin nedeni hangisidir?\n\n**A)** PAI-1 artışı · **B)** Doku faktörü artışı · **C)** Fibrinolizin baskılanması · **D)** Protein C reseptörü azalması · **E)** Faktör ve trombosit tüketimi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **PAI-1 artışı** — PAI-1 artışı fibrinolizi baskılar ve pıhtıların çözülmesini engeller; kanamayı değil trombozu kolaylaştırır.\n- **Doku faktörü artışı** — Doku faktörü artışı pıhtılaşmayı başlatır ve yaygın damar içi pıhtılaşmaya katkıda bulunur; kanama eğilimini açıklamaz.\n- **Fibrinolizin baskılanması** — Fibrinolizin baskılanması mikrodamarlarda fibrin zengin trombüslerin kalıcı olmasına yol açar; kanama nedeni değildir.\n- **Protein C reseptörü azalması** — Protein C reseptörü azalması antikoagülan etkiyi zayıflatır; dengeyi pıhtılaşma yönüne kaydırır.\n- **Faktör ve trombosit tüketimi** — Faktör ve trombosit tüketimi doğru: yaygın pıhtılaşmada pıhtılaşma faktörleri ve trombositler tükenir, aynı anda kanama eğilimi gelişir.\n\n**Cevap: E** — Faktör ve trombosit tüketimi\n\n**Özet.** Septik şokta doku faktörü artar, antikoagülanlar azalır ve PAI-1 artışıyla fibrinoliz baskılanır; mikrodamarlarda fibrin trombüsleri oluşurken faktör ve trombosit tüketimi kanama eğilimi yaratır.",
+   "ses": "Septik şokta yaygın damar içi pıhtılaşmaya rağmen kanama eğilimi gelişmesinin nedeni hangisidir?\nA, pe a i bir artışı\nBe, Doku faktörü artışı\nCe, Fibrinolizin baskılanması\nDe, Protein ce reseptörü azalması\nE, Faktör ve trombosit tüketimi\nŞıkları sırasıyla gözden geçirelim.\nPe a i bir artışı fibrinolizi baskılar ve pıhtıların çözülmesini engeller. Kanamayı değil trombozu kolaylaştırır.\nDoku faktörü artışı pıhtılaşmayı başlatır ve yaygın damar içi pıhtılaşmaya katkıda bulunur, kanama eğilimini açıklamaz.\nFibrinolizin baskılanması mikrodamarlarda fibrin zengin trombüslerin kalıcı olmasına yol açar, kanama nedeni değildir.\nProtein ce reseptörü azalması antikoagülan etkiyi zayıflatır, dengeyi pıhtılaşma yönüne kaydırır.\nFaktör ve trombosit tüketimi doğru, yaygın pıhtılaşmada pıhtılaşma faktörleri ve trombositler tükenir, aynı anda kanama eğilimi gelişir.\nDoğru cevap E, Faktör ve trombosit tüketimi\nSeptik şokta doku faktörü artar, antikoagülanlar azalır ve pe a i bir artışıyla fibrinoliz baskılanır. Mikrodamarlarda fibrin trombüsleri oluşurken faktör ve trombosit tüketimi kanama eğilimi yaratır.",
+   "kelime": 166
+  },
+  {
+   "no": 56,
+   "tur": "ornek",
+   "soru": "Septik şokta başlangıçtaki glukokortikoid artışının ardından gelişebilen adrenal tablo hangisidir?",
+   "secenekler": {
+    "A": "Adrenal hiperfonksiyon",
+    "B": "Waterhouse–Friderichsen sendromu",
+    "C": "Laktik asidoz",
+    "D": "Kortekste lipid birikimi",
+    "E": "İnsülin direnci"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Adrenal hiperfonksiyon septik şokta yalnız başlangıçtaki glukokortikoid artışını anlatır; ardından gelişen tablo yetersizliktir.",
+    "B": "Waterhouse–Friderichsen sendromu doğru: başlangıçta glukokortikoid üretimi artar, sonra adrenal yetersizlik gelişebilir.",
+    "C": "Laktik asidoz, oksidatif fosforilasyon bozulunca anaerobik glikolizin artmasıyla gelişen metabolik bozukluktur; adrenal tablo değildir.",
+    "D": "Kortekste lipid birikimi beklenmez; şokta adrenal kortekste tersine lipid tükenmesi görülür.",
+    "E": "İnsülin direnci, sitokin ve stres hormonlarının glukoneogenezi artırması ve GLUT-4 azalmasıyla gelişir; adrenal tablo değildir."
+   },
+   "ozet": "Septik şokta başlangıçta glukokortikoid üretimi artar, ardından adrenal yetersizlik, yani Waterhouse–Friderichsen sendromu gelişebilir. Şokta adrenal kortekste lipid tükenmesi görülür.",
+   "metin": "**Soru.** Septik şokta başlangıçtaki glukokortikoid artışının ardından gelişebilen adrenal tablo hangisidir?\n\n**A)** Adrenal hiperfonksiyon · **B)** Waterhouse–Friderichsen sendromu · **C)** Laktik asidoz · **D)** Kortekste lipid birikimi · **E)** İnsülin direnci\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Adrenal hiperfonksiyon** — Adrenal hiperfonksiyon septik şokta yalnız başlangıçtaki glukokortikoid artışını anlatır; ardından gelişen tablo yetersizliktir.\n- **Waterhouse–Friderichsen sendromu** — Waterhouse–Friderichsen sendromu doğru: başlangıçta glukokortikoid üretimi artar, sonra adrenal yetersizlik gelişebilir.\n- **Laktik asidoz** — Laktik asidoz, oksidatif fosforilasyon bozulunca anaerobik glikolizin artmasıyla gelişen metabolik bozukluktur; adrenal tablo değildir.\n- **Kortekste lipid birikimi** — Kortekste lipid birikimi beklenmez; şokta adrenal kortekste tersine lipid tükenmesi görülür.\n- **İnsülin direnci** — İnsülin direnci, sitokin ve stres hormonlarının glukoneogenezi artırması ve GLUT-4 azalmasıyla gelişir; adrenal tablo değildir.\n\n**Cevap: B** — Waterhouse–Friderichsen sendromu\n\n**Özet.** Septik şokta başlangıçta glukokortikoid üretimi artar, ardından adrenal yetersizlik, yani Waterhouse–Friderichsen sendromu gelişebilir. Şokta adrenal kortekste lipid tükenmesi görülür.",
+   "ses": "Septik şokta başlangıçtaki glukokortikoid artışının ardından gelişebilen adrenal tablo hangisidir?\nA, Adrenal hiperfonksiyon\nBe, Vaterhaus Friderikşen sendromu\nCe, Laktik asidoz\nDe, Kortekste lipid birikimi\nE, İnsülin direnci\nŞimdi seçeneklere tek tek bakalım.\nAdrenal hiperfonksiyon septik şokta yalnız başlangıçtaki glukokortikoid artışını anlatır, ardından gelişen tablo yetersizliktir.\nVaterhaus Friderikşen sendromu doğru, başlangıçta glukokortikoid üretimi artar, sonra adrenal yetersizlik gelişebilir.\nLaktik asidoz, oksidatif fosforilasyon bozulunca anaerobik glikolizin artmasıyla gelişen metabolik bozukluktur. Adrenal tablo değildir.\nKortekste lipid birikimi beklenmez, şokta adrenal kortekste tersine lipid tükenmesi görülür.\nİnsülin direnci, sitokin ve stres hormonlarının glukoneogenezi artırması ve ge le u te dört azalmasıyla gelişir. Adrenal tablo değildir.\nDoğru cevap Be, Vaterhaus Friderikşen sendromu\nSeptik şokta başlangıçta glukokortikoid üretimi artar, ardından adrenal yetersizlik, yani Vaterhaus Friderikşen sendromu gelişebilir. Şokta adrenal kortekste lipid tükenmesi görülür.",
+   "kelime": 147
+  },
+  {
+   "no": 57,
+   "tur": "ornek",
+   "soru": "Şokta adrenal kortekste görülen tipik morfolojik değişiklik hangisidir?",
+   "secenekler": {
+    "A": "Fibrin trombüsleri",
+    "B": "Diffüz hipoksik değişiklik",
+    "C": "Lipid tükenmesi",
+    "D": "Yaygın alveolar hasar",
+    "E": "Akut tübüler nekroz"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Fibrin trombüsleri şokta özellikle glomerüllerde görülür; mikrotromboza bağlı böbrek bulgusudur.",
+    "B": "Diffüz hipoksik değişiklik şokta beyin ve kalpte görülen bulgudur; adrenal korteksin tipik değişikliği değildir.",
+    "C": "Lipid tükenmesi doğru: şokta adrenal kortekste lipid tükenmesi tipik morfolojik değişikliktir.",
+    "D": "Yaygın alveolar hasar bir akciğer bulgusudur, amniyotik sıvı embolisinde de görülür; adrenal bezde beklenmez.",
+    "E": "Akut tübüler nekroz septik şokta böbrekte gelişir ve oligüri ya da anüriye yol açar."
+   },
+   "ozet": "Şokta hipoksi ve mikrotrombozla glomerüllerde fibrin trombüsleri, adrenal kortekste lipid tükenmesi, beyin ve kalpte diffüz hipoksik değişiklik, akciğerde şok akciğeri gelişir.",
+   "metin": "**Soru.** Şokta adrenal kortekste görülen tipik morfolojik değişiklik hangisidir?\n\n**A)** Fibrin trombüsleri · **B)** Diffüz hipoksik değişiklik · **C)** Lipid tükenmesi · **D)** Yaygın alveolar hasar · **E)** Akut tübüler nekroz\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Fibrin trombüsleri** — Fibrin trombüsleri şokta özellikle glomerüllerde görülür; mikrotromboza bağlı böbrek bulgusudur.\n- **Diffüz hipoksik değişiklik** — Diffüz hipoksik değişiklik şokta beyin ve kalpte görülen bulgudur; adrenal korteksin tipik değişikliği değildir.\n- **Lipid tükenmesi** — Lipid tükenmesi doğru: şokta adrenal kortekste lipid tükenmesi tipik morfolojik değişikliktir.\n- **Yaygın alveolar hasar** — Yaygın alveolar hasar bir akciğer bulgusudur, amniyotik sıvı embolisinde de görülür; adrenal bezde beklenmez.\n- **Akut tübüler nekroz** — Akut tübüler nekroz septik şokta böbrekte gelişir ve oligüri ya da anüriye yol açar.\n\n**Cevap: C** — Lipid tükenmesi\n\n**Özet.** Şokta hipoksi ve mikrotrombozla glomerüllerde fibrin trombüsleri, adrenal kortekste lipid tükenmesi, beyin ve kalpte diffüz hipoksik değişiklik, akciğerde şok akciğeri gelişir.",
+   "ses": "Şokta adrenal kortekste görülen tipik morfolojik değişiklik hangisidir?\nA, Fibrin trombüsleri\nBe, Diffüz hipoksik değişiklik\nCe, Lipid tükenmesi\nDe, Yaygın alveolar hasar\nE, Akut tübüler nekroz\nSeçenekleri sırayla değerlendirelim.\nFibrin trombüsleri şokta özellikle glomerüllerde görülür, mikrotromboza bağlı böbrek bulgusudur.\nDiffüz hipoksik değişiklik şokta beyin ve kalpte görülen bulgudur, adrenal korteksin tipik değişikliği değildir.\nLipid tükenmesi doğru, şokta adrenal kortekste lipid tükenmesi tipik morfolojik değişikliktir.\nYaygın alveolar hasar bir akciğer bulgusudur, amniyotik sıvı embolisinde de görülür, adrenal bezde beklenmez.\nAkut tübüler nekroz septik şokta böbrekte gelişir ve oligüri ya da anüriye yol açar.\nDoğru cevap Ce, Lipid tükenmesi\nŞokta hipoksi ve mikrotrombozla glomerüllerde fibrin trombüsleri, adrenal kortekste lipid tükenmesi, beyin ve kalpte diffüz hipoksik değişiklik, akciğerde şok akciğeri gelişir.",
+   "kelime": 148
+  },
+  {
+   "no": 58,
+   "tur": "ornek",
+   "soru": "Uygun tedavi ile genç ve sağlıklı bireylerde en yüksek sağkalımın beklendiği şok tipi hangisidir?",
+   "secenekler": {
+    "A": "Kardiyojenik şok",
+    "B": "Septik şok",
+    "C": "Masif emboliye bağlı şok",
+    "D": "Hipovolemik şok",
+    "E": "Geri dönüşümsüz evrede şok"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Kardiyojenik şok en iyi bakıma rağmen yüksek mortaliteye sahiptir; miyokard pompa yetmezliğine bağlıdır.",
+    "B": "Septik şok en iyi bakıma rağmen yüksek mortalitelidir; ölüm oranı %20–30 civarındadır.",
+    "C": "Masif emboliye bağlı şok, ventrikül çıkış yolunun tıkanmasıyla oluşan kardiyojenik şoktur; prognozu kötü gruptadır.",
+    "D": "Hipovolemik şok doğru: genç ve sağlıklı bireylerde uygun tedaviyle sağkalım %90'ın üzerindedir.",
+    "E": "Geri dönüşümsüz evrede yaygın hücre hasarı vardır; organ fonksiyonları toparlanamaz ve ölüm kaçınılmazdır."
+   },
+   "ozet": "Hipovolemik şokta genç ve sağlıklı bireylerde uygun tedaviyle sağkalım %90'ı aşar; kardiyojenik ve septik şokta mortalite yüksektir. Prognoz neden, süre, şiddet, eşlik eden hastalık ve tedaviye yanıta bağlıdır.",
+   "metin": "**Soru.** Uygun tedavi ile genç ve sağlıklı bireylerde en yüksek sağkalımın beklendiği şok tipi hangisidir?\n\n**A)** Kardiyojenik şok · **B)** Septik şok · **C)** Masif emboliye bağlı şok · **D)** Hipovolemik şok · **E)** Geri dönüşümsüz evrede şok\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Kardiyojenik şok** — Kardiyojenik şok en iyi bakıma rağmen yüksek mortaliteye sahiptir; miyokard pompa yetmezliğine bağlıdır.\n- **Septik şok** — Septik şok en iyi bakıma rağmen yüksek mortalitelidir; ölüm oranı %20–30 civarındadır.\n- **Masif emboliye bağlı şok** — Masif emboliye bağlı şok, ventrikül çıkış yolunun tıkanmasıyla oluşan kardiyojenik şoktur; prognozu kötü gruptadır.\n- **Hipovolemik şok** — Hipovolemik şok doğru: genç ve sağlıklı bireylerde uygun tedaviyle sağkalım %90'ın üzerindedir.\n- **Geri dönüşümsüz evrede şok** — Geri dönüşümsüz evrede yaygın hücre hasarı vardır; organ fonksiyonları toparlanamaz ve ölüm kaçınılmazdır.\n\n**Cevap: D** — Hipovolemik şok\n\n**Özet.** Hipovolemik şokta genç ve sağlıklı bireylerde uygun tedaviyle sağkalım %90'ı aşar; kardiyojenik ve septik şokta mortalite yüksektir. Prognoz neden, süre, şiddet, eşlik eden hastalık ve tedaviye yanıta bağlıdır.",
+   "ses": "Uygun tedavi ile genç ve sağlıklı bireylerde en yüksek sağkalımın beklendiği şok tipi hangisidir?\nA, Kardiyojenik şok\nBe, Septik şok\nCe, Masif emboliye bağlı şok\nDe, Hipovolemik şok\nE, Geri dönüşümsüz evrede şok\nHer seçeneği tek tek ele alalım.\nKardiyojenik şok en iyi bakıma rağmen yüksek mortaliteye sahiptir, miyokard pompa yetmezliğine bağlıdır.\nSeptik şok en iyi bakıma rağmen yüksek mortalitelidir. Ölüm oranı yüzde yirmi ile otuz civarındadır.\nMasif emboliye bağlı şok, ventrikül çıkış yolunun tıkanmasıyla oluşan kardiyojenik şoktur, prognozu kötü gruptadır.\nHipovolemik şok doğru, genç ve sağlıklı bireylerde uygun tedaviyle sağkalım yüzde doksanın üzerindedir.\nGeri dönüşümsüz evrede yaygın hücre hasarı vardır, organ fonksiyonları toparlanamaz ve ölüm kaçınılmazdır.\nDoğru cevap De, Hipovolemik şok\nHipovolemik şokta genç ve sağlıklı bireylerde uygun tedaviyle sağkalım yüzde doksanı aşar. Kardiyojenik ve septik şokta mortalite yüksektir, prognoz neden, süre, şiddet, eşlik eden hastalık ve tedaviye yanıta bağlıdır.",
+   "kelime": 167
+  }
+ ]
+}

@@ -1,0 +1,982 @@
+{
+ "kod": "07",
+ "baslik": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+ "surum": "alt-1",
+ "sorular": [
+  {
+   "no": 1,
+   "tur": "ornek",
+   "soru": "Akut inflamasyonda baskın hücresel infiltrat hangisidir?",
+   "secenekler": {
+    "A": "Lenfositler",
+    "B": "Plazma hücreleri",
+    "C": "Nötrofiller",
+    "D": "Makrofajlar",
+    "E": "Eozinofiller"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Lenfositler kronik inflamasyonun mononükleer hücreleridir; viral enfeksiyonların erken döneminde de baskın olabilir.",
+    "B": "Plazma hücreleri, aktif lenfosit ve makrofajlarla birlikte bazı aşırı duyarlılık reaksiyonlarında baskındır; akut yanıtın tipik hücresi değildir.",
+    "C": "Nötrofiller doğru: akut inflamasyon ödem ve nötrofil ağırlıklı infiltrasyonla karakterizedir, özellikle ilk altı ile yirmi dört saatte.",
+    "D": "Makrofajlar yirmi dört ile kırk sekiz saatten sonra baskınlaşır; kronik inflamasyonda lenfositlerle birlikte öne çıkar.",
+    "E": "Eozinofiller alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilir; tipik akut inflamasyonun hücresi değildir."
+   },
+   "ozet": "Akut inflamasyonda ödem ve **nötrofil** ağırlıklı infiltrasyon görülür; kronik inflamasyonda ise monosit, makrofaj ve lenfosit gibi mononükleer hücreler, doku yıkımı ve fibrozis öne çıkar.",
+   "metin": "**Soru.** Akut inflamasyonda baskın hücresel infiltrat hangisidir?\n\n**A)** Lenfositler · **B)** Plazma hücreleri · **C)** Nötrofiller · **D)** Makrofajlar · **E)** Eozinofiller\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Lenfositler** — Lenfositler kronik inflamasyonun mononükleer hücreleridir; viral enfeksiyonların erken döneminde de baskın olabilir.\n- **Plazma hücreleri** — Plazma hücreleri, aktif lenfosit ve makrofajlarla birlikte bazı aşırı duyarlılık reaksiyonlarında baskındır; akut yanıtın tipik hücresi değildir.\n- **Nötrofiller** — Nötrofiller doğru: akut inflamasyon ödem ve nötrofil ağırlıklı infiltrasyonla karakterizedir, özellikle ilk altı ile yirmi dört saatte.\n- **Makrofajlar** — Makrofajlar yirmi dört ile kırk sekiz saatten sonra baskınlaşır; kronik inflamasyonda lenfositlerle birlikte öne çıkar.\n- **Eozinofiller** — Eozinofiller alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilir; tipik akut inflamasyonun hücresi değildir.\n\n**Cevap: C** — Nötrofiller\n\n**Özet.** Akut inflamasyonda ödem ve **nötrofil** ağırlıklı infiltrasyon görülür; kronik inflamasyonda ise monosit, makrofaj ve lenfosit gibi mononükleer hücreler, doku yıkımı ve fibrozis öne çıkar.",
+   "ses": "Akut inflamasyonda baskın hücresel infiltrat hangisidir?\nA, Lenfositler\nBe, Plazma hücreleri\nCe, Nötrofiller\nDe, Makrofajlar\nE, Eozinofiller\nSeçenekleri sırayla değerlendirelim.\nLenfositler kronik inflamasyonun mononükleer hücreleridir. Viral enfeksiyonların erken döneminde de baskın olabilir.\nPlazma hücreleri, aktif lenfosit ve makrofajlarla birlikte bazı aşırı duyarlılık reaksiyonlarında baskındır. Akut yanıtın tipik hücresi değildir.\nNötrofiller doğru. Akut inflamasyon ödem ve nötrofil ağırlıklı infiltrasyonla karakterizedir, özellikle ilk altı ile yirmi dört saatte.\nMakrofajlar yirmi dört ile kırk sekiz saatten sonra baskınlaşır. Kronik inflamasyonda lenfositlerle birlikte öne çıkar.\nEozinofiller alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilir. Tipik akut inflamasyonun hücresi değildir.\nDoğru cevap Ce, Nötrofiller\nAkut inflamasyonda ödem ve nötrofil ağırlıklı infiltrasyon görülür. Kronik inflamasyonda ise monosit, makrofaj ve lenfosit gibi mononükleer hücreler, doku yıkımı ve fibrozis öne çıkar.",
+   "kelime": 146
+  },
+  {
+   "no": 2,
+   "tur": "ornek",
+   "soru": "Akut inflamasyonda vasküler olayların özellikle gerçekleştiği damar segmenti hangisidir?",
+   "secenekler": {
+    "A": "Postkapiller venüller",
+    "B": "Büyük arterler",
+    "C": "Aorta",
+    "D": "Lenfatik kanallar",
+    "E": "Büyük venler"
+   },
+   "dogru": "A",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Postkapiller venüller doğru: vazodilatasyon, geçirgenlik artışı ve lökosit göçü özellikle bu küçük damarlarda gerçekleşir.",
+    "B": "Akut inflamasyonun damar değişiklikleri küçük damarların genişlemesiyle başlar. Büyük arterler bu sorudaki ayrımı sağlamaz.",
+    "C": "Aorta ile karıştırılabilir: Vazodilatasyonda önce arterioller genişler, sonra kapiller yatakta kan akımı artar.",
+    "D": "Lenfatik kanallar ödem sıvısını boşaltmaya çalışır; bunların inflamasyonu lenfanjittir ve deride kızarık çizgiler yapar.",
+    "E": "Büyük venler ile karıştırılabilir: Sıvı ve lökositin damar dışına çıktığı yer mikrovasküler düzeydir."
+   },
+   "ozet": "Akut inflamasyonun üç bileşeni, yani vazodilatasyon, mikrovasküler geçirgenlik artışı ve lökosit göçü, özellikle **postkapiller venüllerde** gerçekleşir.",
+   "metin": "**Soru.** Akut inflamasyonda vasküler olayların özellikle gerçekleştiği damar segmenti hangisidir?\n\n**A)** Postkapiller venüller · **B)** Büyük arterler · **C)** Aorta · **D)** Lenfatik kanallar · **E)** Büyük venler\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Postkapiller venüller** — Postkapiller venüller doğru: vazodilatasyon, geçirgenlik artışı ve lökosit göçü özellikle bu küçük damarlarda gerçekleşir.\n- **Büyük arterler** — Akut inflamasyonun damar değişiklikleri küçük damarların genişlemesiyle başlar. Büyük arterler bu sorudaki ayrımı sağlamaz.\n- **Aorta** — Aorta ile karıştırılabilir: Vazodilatasyonda önce arterioller genişler, sonra kapiller yatakta kan akımı artar.\n- **Lenfatik kanallar** — Lenfatik kanallar ödem sıvısını boşaltmaya çalışır; bunların inflamasyonu lenfanjittir ve deride kızarık çizgiler yapar.\n- **Büyük venler** — Büyük venler ile karıştırılabilir: Sıvı ve lökositin damar dışına çıktığı yer mikrovasküler düzeydir.\n\n**Cevap: A** — Postkapiller venüller\n\n**Özet.** Akut inflamasyonun üç bileşeni, yani vazodilatasyon, mikrovasküler geçirgenlik artışı ve lökosit göçü, özellikle **postkapiller venüllerde** gerçekleşir.",
+   "ses": "Akut inflamasyonda vasküler olayların özellikle gerçekleştiği damar segmenti hangisidir?\nA, Postkapiller venüller\nBe, Büyük arterler\nCe, Aorta\nDe, Lenfatik kanallar\nE, Büyük venler\nHer seçeneği tek tek ele alalım.\nPostkapiller venüller doğru. Vazodilatasyon, geçirgenlik artışı ve lökosit göçü özellikle bu küçük damarlarda gerçekleşir.\nAkut inflamasyonun damar değişiklikleri küçük damarların genişlemesiyle başlar. Büyük arterler bu sorudaki ayrımı sağlamaz.\nAorta ile karıştırılabilir. Vazodilatasyonda önce arterioller genişler, sonra kapiller yatakta kan akımı artar.\nLenfatik kanallar ödem sıvısını boşaltmaya çalışır. Bunların inflamasyonu lenfanjittir ve deride kızarık çizgiler yapar.\nBüyük venler ile karıştırılabilir. Sıvı ve lökositin damar dışına çıktığı yer mikrovasküler düzeydir.\nDoğru cevap A, Postkapiller venüller\nAkut inflamasyonun üç bileşeni, yani vazodilatasyon, mikrovasküler geçirgenlik artışı ve lökosit göçü, özellikle postkapiller venüllerde gerçekleşir.",
+   "kelime": 144
+  },
+  {
+   "no": 3,
+   "tur": "ornek",
+   "soru": "Akut inflamasyonda vasküler geçirgenlik artışının en sık mekanizması hangisidir?",
+   "secenekler": {
+    "A": "Direkt endotel hasarı",
+    "B": "Lökosit aracılı hasar",
+    "C": "Anjiyogenez",
+    "D": "Endotel hücre kasılması",
+    "E": "Bazal membran yıkımı"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Direkt endotel hasarı yanık, toksin ve ağır travmada görülür; daha nadirdir ve uzun süreli sızıntı yapar.",
+    "B": "Lökosit aracılı endotel hasarı ek bir mekanizmadır ve özellikle venüllerde görülür; en sık neden değildir.",
+    "C": "Anjiyogenez sırasında olgunlaşmamış damarlar sızdırabilir; ancak bu geçirgenlik artışının en sık nedeni değildir.",
+    "D": "Endotel hücre kasılması doğru: histamin, bradikinin ve lökotrienlerle tetiklenir, hücreler arasında geçici aralıklar açar.",
+    "E": "Bazal membranı lökositler göç sırasında kollajenazlarla aşar. Bazal membran yıkımı bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Geçirgenlik artışının en sık nedeni histamin, bradikinin ve lökotrienlerle tetiklenen **endotel hücre kasılmasıdır**; direkt endotel hasarı daha nadirdir ve uzun süreli sızıntı yapar.",
+   "metin": "**Soru.** Akut inflamasyonda vasküler geçirgenlik artışının en sık mekanizması hangisidir?\n\n**A)** Direkt endotel hasarı · **B)** Lökosit aracılı hasar · **C)** Anjiyogenez · **D)** Endotel hücre kasılması · **E)** Bazal membran yıkımı\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Direkt endotel hasarı** — Direkt endotel hasarı yanık, toksin ve ağır travmada görülür; daha nadirdir ve uzun süreli sızıntı yapar.\n- **Lökosit aracılı hasar** — Lökosit aracılı endotel hasarı ek bir mekanizmadır ve özellikle venüllerde görülür; en sık neden değildir.\n- **Anjiyogenez** — Anjiyogenez sırasında olgunlaşmamış damarlar sızdırabilir; ancak bu geçirgenlik artışının en sık nedeni değildir.\n- **Endotel hücre kasılması** — Endotel hücre kasılması doğru: histamin, bradikinin ve lökotrienlerle tetiklenir, hücreler arasında geçici aralıklar açar.\n- **Bazal membran yıkımı** — Bazal membranı lökositler göç sırasında kollajenazlarla aşar. Bazal membran yıkımı bu sorudaki ayrımı sağlamaz.\n\n**Cevap: D** — Endotel hücre kasılması\n\n**Özet.** Geçirgenlik artışının en sık nedeni histamin, bradikinin ve lökotrienlerle tetiklenen **endotel hücre kasılmasıdır**; direkt endotel hasarı daha nadirdir ve uzun süreli sızıntı yapar.",
+   "ses": "Akut inflamasyonda vasküler geçirgenlik artışının en sık mekanizması hangisidir?\nA, Direkt endotel hasarı\nBe, Lökosit aracılı hasar\nCe, Anjiyogenez\nDe, Endotel hücre kasılması\nE, Bazal membran yıkımı\nŞıkları sırasıyla gözden geçirelim.\nDirekt endotel hasarı yanık, toksin ve ağır travmada görülür. Daha nadirdir ve uzun süreli sızıntı yapar.\nLökosit aracılı endotel hasarı ek bir mekanizmadır ve özellikle venüllerde görülür. En sık neden değildir.\nAnjiyogenez sırasında olgunlaşmamış damarlar sızdırabilir. Ancak bu geçirgenlik artışının en sık nedeni değildir.\nEndotel hücre kasılması doğru. Histamin, bradikinin ve lökotrienlerle tetiklenir, hücreler arasında geçici aralıklar açar.\nBazal membranı lökositler göç sırasında kollajenazlarla aşar. Bazal membran yıkımı bu sorudaki ayrımı sağlamaz.\nDoğru cevap De, Endotel hücre kasılması\nGeçirgenlik artışının en sık nedeni histamin, bradikinin ve lökotrienlerle tetiklenen endotel hücre kasılmasıdır. Direkt endotel hasarı daha nadirdir ve uzun süreli sızıntı yapar.",
+   "kelime": 162
+  },
+  {
+   "no": 4,
+   "tur": "ornek",
+   "soru": "Eksüdayı transüdadan ayıran özellik hangisidir?",
+   "secenekler": {
+    "A": "Düşük protein içeriği",
+    "B": "Hücre içermemesi",
+    "C": "Onkotik basınç azalmasıyla oluşması",
+    "D": "Yalnız albümin içermesi",
+    "E": "Yüksek protein ve hücresel kalıntı"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Düşük protein içeriği transüdanın özelliğidir; transüdada protein çoğunlukla albümindir.",
+    "B": "Hücre içermemek transüdaya aittir; transüdada az ya da hiç hücre bulunmaz.",
+    "C": "Onkotik basınç azalmasıyla oluşmak transüdanın mekanizmasıdır; inflamasyon olmadan da gelişebilir.",
+    "D": "Eksüda proteinden zengindir, geçirgenlik artınca plazma proteinleri damar dışına çıkar. Yalnız albümin içermesi bu sorudaki ayrımı sağlamaz.",
+    "E": "Yüksek protein ve hücresel kalıntı doğru: eksüda, inflamasyona bağlı damar geçirgenliği artışıyla oluşur."
+   },
+   "ozet": "**Eksüda** yüksek proteinli ve hücresel kalıntılıdır, inflamasyondaki geçirgenlik artışını gösterir; transüda ise düşük proteinli, az hücreli ve hidrostatik ya da onkotik basınç dengesizliğiyle oluşur.",
+   "metin": "**Soru.** Eksüdayı transüdadan ayıran özellik hangisidir?\n\n**A)** Düşük protein içeriği · **B)** Hücre içermemesi · **C)** Onkotik basınç azalmasıyla oluşması · **D)** Yalnız albümin içermesi · **E)** Yüksek protein ve hücresel kalıntı\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Düşük protein içeriği** — Düşük protein içeriği transüdanın özelliğidir; transüdada protein çoğunlukla albümindir.\n- **Hücre içermemesi** — Hücre içermemek transüdaya aittir; transüdada az ya da hiç hücre bulunmaz.\n- **Onkotik basınç azalmasıyla oluşması** — Onkotik basınç azalmasıyla oluşmak transüdanın mekanizmasıdır; inflamasyon olmadan da gelişebilir.\n- **Yalnız albümin içermesi** — Eksüda proteinden zengindir, geçirgenlik artınca plazma proteinleri damar dışına çıkar. Yalnız albümin içermesi bu sorudaki ayrımı sağlamaz.\n- **Yüksek protein ve hücresel kalıntı** — Yüksek protein ve hücresel kalıntı doğru: eksüda, inflamasyona bağlı damar geçirgenliği artışıyla oluşur.\n\n**Cevap: E** — Yüksek protein ve hücresel kalıntı\n\n**Özet.** **Eksüda** yüksek proteinli ve hücresel kalıntılıdır, inflamasyondaki geçirgenlik artışını gösterir; transüda ise düşük proteinli, az hücreli ve hidrostatik ya da onkotik basınç dengesizliğiyle oluşur.",
+   "ses": "Eksüdayı transüdadan ayıran özellik hangisidir?\nA, Düşük protein içeriği\nBe, Hücre içermemesi\nCe, Onkotik basınç azalmasıyla oluşması\nDe, Yalnız albümin içermesi\nE, Yüksek protein ve hücresel kalıntı\nŞimdi seçeneklere tek tek bakalım.\nDüşük protein içeriği transüdanın özelliğidir. Transüdada protein çoğunlukla albümindir.\nHücre içermemek transüdaya aittir. Transüdada az ya da hiç hücre bulunmaz.\nOnkotik basınç azalmasıyla oluşmak transüdanın mekanizmasıdır. İnflamasyon olmadan da gelişebilir.\nEksüda proteinden zengindir, geçirgenlik artınca plazma proteinleri damar dışına çıkar. Yalnız albümin içermesi bu sorudaki ayrımı sağlamaz.\nYüksek protein ve hücresel kalıntı doğru. Eksüda, inflamasyona bağlı damar geçirgenliği artışıyla oluşur.\nDoğru cevap E, Yüksek protein ve hücresel kalıntı\nEksüda yüksek proteinli ve hücresel kalıntılıdır, inflamasyondaki geçirgenlik artışını gösterir. Transüda ise düşük proteinli, az hücreli ve hidrostatik ya da onkotik basınç dengesizliğiyle oluşur.",
+   "kelime": 158
+  },
+  {
+   "no": 5,
+   "tur": "ornek",
+   "soru": "Lökositlerin endotel üzerinde yuvarlanmasını sağlayan moleküller hangisidir?",
+   "secenekler": {
+    "A": "İntegrinler",
+    "B": "Selektinler",
+    "C": "PECAM-1",
+    "D": "Kollajenazlar",
+    "E": "Kemokinler"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "İntegrinler kemokinlerle yüksek afiniteli forma geçer ve sıkı adezyonu sağlar; lökosit bu basamakta yuvarlanmayı durdurur.",
+    "B": "Selektinler doğru: karbonhidrat içeren ligandlara düşük afiniteyle bağlanır, lökositi tutup bırakarak yuvarlanmasını sağlar.",
+    "C": "PECAM-1, transmigrasyonda lökositlerin endotel hücreleri arasından geçişini sağlayan ana moleküldür.",
+    "D": "Kollajenazlar lökositlerin salgıladığı enzimlerdir; damar dışına çıkarken bazal membranı aşmayı sağlar.",
+    "E": "Kemokinler endotel yüzeyinde lökositleri aktive eder ve integrinlerin bağlanma gücünü artırır."
+   },
+   "ozet": "Yuvarlanmayı **selektinler** sağlar: endotelde P ve E selektin, lökositte L selektin bulunur; sıkı adezyon ise integrinlerle olur.",
+   "metin": "**Soru.** Lökositlerin endotel üzerinde yuvarlanmasını sağlayan moleküller hangisidir?\n\n**A)** İntegrinler · **B)** Selektinler · **C)** PECAM-1 · **D)** Kollajenazlar · **E)** Kemokinler\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **İntegrinler** — İntegrinler kemokinlerle yüksek afiniteli forma geçer ve sıkı adezyonu sağlar; lökosit bu basamakta yuvarlanmayı durdurur.\n- **Selektinler** — Selektinler doğru: karbonhidrat içeren ligandlara düşük afiniteyle bağlanır, lökositi tutup bırakarak yuvarlanmasını sağlar.\n- **PECAM-1** — PECAM-1, transmigrasyonda lökositlerin endotel hücreleri arasından geçişini sağlayan ana moleküldür.\n- **Kollajenazlar** — Kollajenazlar lökositlerin salgıladığı enzimlerdir; damar dışına çıkarken bazal membranı aşmayı sağlar.\n- **Kemokinler** — Kemokinler endotel yüzeyinde lökositleri aktive eder ve integrinlerin bağlanma gücünü artırır.\n\n**Cevap: B** — Selektinler\n\n**Özet.** Yuvarlanmayı **selektinler** sağlar: endotelde P ve E selektin, lökositte L selektin bulunur; sıkı adezyon ise integrinlerle olur.",
+   "ses": "Lökositlerin endotel üzerinde yuvarlanmasını sağlayan moleküller hangisidir?\nA, İntegrinler\nBe, Selektinler\nCe, Pe e ce a me bir\nDe, Kollajenazlar\nE, Kemokinler\nSeçenekleri sırayla değerlendirelim.\nİntegrinler kemokinlerle yüksek afiniteli forma geçer ve sıkı adezyonu sağlar. Lökosit bu basamakta yuvarlanmayı durdurur.\nSelektinler doğru. Karbonhidrat içeren ligandlara düşük afiniteyle bağlanır, lökositi tutup bırakarak yuvarlanmasını sağlar.\nPe e ce a me bir, transmigrasyonda lökositlerin endotel hücreleri arasından geçişini sağlayan ana moleküldür.\nKollajenazlar lökositlerin salgıladığı enzimlerdir. Damar dışına çıkarken bazal membranı aşmayı sağlar.\nKemokinler endotel yüzeyinde lökositleri aktive eder ve integrinlerin bağlanma gücünü artırır.\nDoğru cevap Be, Selektinler\nYuvarlanmayı selektinler sağlar. Endotelde pe ve e selektin, lökositte le selektin bulunur. Sıkı adezyon ise integrinlerle olur.",
+   "kelime": 123
+  },
+  {
+   "no": 6,
+   "tur": "ornek",
+   "soru": "Lökositlerin endotel hücreleri arasından geçişinde (diapedez) ana molekül hangisidir?",
+   "secenekler": {
+    "A": "E-selektin",
+    "B": "ICAM-1",
+    "C": "PECAM-1 (CD31)",
+    "D": "VCAM-1",
+    "E": "L-selektin"
+   },
+   "dogru": "C",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "E-selektin uyarıyla aktive endotelde indüklenir ve yuvarlanmayı sağlar.",
+    "B": "ICAM-1, TNF ve IL-1 etkisiyle endotelde eksprese edilen integrin ligandıdır; sıkı adezyonu sağlar.",
+    "C": "PECAM-1, yani CD31, doğru: sıkı yapışmadan sonra lökositlerin endotel hücreleri arasından sıkışarak geçişini sağlar.",
+    "D": "VCAM-1, aktive endotelde VLA-4 integrininin ligandıdır; geçişte değil sıkı yapışmada görev alır.",
+    "E": "L-selektin lökositlerin üzerindedir ve yuvarlanma basamağında görev alır."
+   },
+   "ozet": "Transmigrasyonda ana molekül **PECAM-1**, yani CD31'dir; lökosit endotel hücreleri arasından geçer, bazal membranı ise kollajenazlarla aşar.",
+   "metin": "**Soru.** Lökositlerin endotel hücreleri arasından geçişinde (diapedez) ana molekül hangisidir?\n\n**A)** E-selektin · **B)** ICAM-1 · **C)** PECAM-1 (CD31) · **D)** VCAM-1 · **E)** L-selektin\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **E-selektin** — E-selektin uyarıyla aktive endotelde indüklenir ve yuvarlanmayı sağlar.\n- **ICAM-1** — ICAM-1, TNF ve IL-1 etkisiyle endotelde eksprese edilen integrin ligandıdır; sıkı adezyonu sağlar.\n- **PECAM-1 (CD31)** — PECAM-1, yani CD31, doğru: sıkı yapışmadan sonra lökositlerin endotel hücreleri arasından sıkışarak geçişini sağlar.\n- **VCAM-1** — VCAM-1, aktive endotelde VLA-4 integrininin ligandıdır; geçişte değil sıkı yapışmada görev alır.\n- **L-selektin** — L-selektin lökositlerin üzerindedir ve yuvarlanma basamağında görev alır.\n\n**Cevap: C** — PECAM-1 (CD31)\n\n**Özet.** Transmigrasyonda ana molekül **PECAM-1**, yani CD31'dir; lökosit endotel hücreleri arasından geçer, bazal membranı ise kollajenazlarla aşar.",
+   "ses": "Lökositlerin endotel hücreleri arasından geçişinde, yani diapedezde, ana molekül hangisidir?\nA, E selektin\nBe, İ ce a me bir\nCe, Pe e ce a me bir, ce de otuz bir\nDe, Ve ce a me bir\nE, Le selektin\nHer seçeneği tek tek ele alalım.\nE selektin uyarıyla aktive endotelde indüklenir ve yuvarlanmayı sağlar.\nİ ce a me bir, te ne fe ve interlökin bir etkisiyle endotelde eksprese edilen integrin ligandıdır. Sıkı adezyonu sağlar.\nPe e ce a me bir, yani ce de otuz bir, doğru. Sıkı yapışmadan sonra lökositlerin endotel hücreleri arasından sıkışarak geçişini sağlar.\nVe ce a me bir, aktive endotelde ve le a dört integrininin ligandıdır. Geçişte değil sıkı yapışmada görev alır.\nLe selektin lökositlerin üzerindedir ve yuvarlanma basamağında görev alır.\nDoğru cevap Ce, Pe e ce a me bir, ce de otuz bir\nTransmigrasyonda ana molekül pe e ce a me bir, yani ce de otuz birdir. Lökosit endotel hücreleri arasından geçer, bazal membranı ise kollajenazlarla aşar.",
+   "kelime": 125
+  },
+  {
+   "no": 7,
+   "tur": "ornek",
+   "soru": "İntegrin mutasyonu olan çocukta en olası klinik bulgu hangisidir?",
+   "secenekler": {
+    "A": "Tekrarlayan bakteriyel enfeksiyonlar",
+    "B": "Hiperkalsemi",
+    "C": "Erken yaşlanma",
+    "D": "Amfizem",
+    "E": "Aplastik anemi"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Tekrarlayan bakteriyel enfeksiyonlar doğru: integrin mutasyonları lökosit adezyon eksikliği sendromlarına yol açar ve bu enfeksiyonlar tablonun klinik bulgusudur.",
+    "B": "Hiperkalsemi ile karıştırılabilir: İntegrin kusurunda sorun lökositlerin endotele sıkı yapışamamasıdır.",
+    "C": "Lökosit adezyon eksikliği sendromları integrin ya da selektin ligand mutasyonlarıyla oluşur. Erken yaşlanma bu sorudaki ayrımı sağlamaz.",
+    "D": "Amfizem ile karıştırılabilir: İntegrin bozukluğunun ikinci tipik bulgusu yara iyileşmesinde gecikmedir.",
+    "E": "İntegrinler sıkı adezyonda aktive endoteldeki ICAM-1 ile VCAM-1 gibi ligandlara bağlanır. Aplastik anemi bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "İntegrin ya da selektin ligand mutasyonları **lökosit adezyon eksikliği** sendromlarına yol açar; tekrarlayan bakteriyel enfeksiyonlar ve gecikmiş yara iyileşmesi görülür.",
+   "metin": "**Soru.** İntegrin mutasyonu olan çocukta en olası klinik bulgu hangisidir?\n\n**A)** Tekrarlayan bakteriyel enfeksiyonlar · **B)** Hiperkalsemi · **C)** Erken yaşlanma · **D)** Amfizem · **E)** Aplastik anemi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Tekrarlayan bakteriyel enfeksiyonlar** — Tekrarlayan bakteriyel enfeksiyonlar doğru: integrin mutasyonları lökosit adezyon eksikliği sendromlarına yol açar ve bu enfeksiyonlar tablonun klinik bulgusudur.\n- **Hiperkalsemi** — Hiperkalsemi ile karıştırılabilir: İntegrin kusurunda sorun lökositlerin endotele sıkı yapışamamasıdır.\n- **Erken yaşlanma** — Lökosit adezyon eksikliği sendromları integrin ya da selektin ligand mutasyonlarıyla oluşur. Erken yaşlanma bu sorudaki ayrımı sağlamaz.\n- **Amfizem** — Amfizem ile karıştırılabilir: İntegrin bozukluğunun ikinci tipik bulgusu yara iyileşmesinde gecikmedir.\n- **Aplastik anemi** — İntegrinler sıkı adezyonda aktive endoteldeki ICAM-1 ile VCAM-1 gibi ligandlara bağlanır. Aplastik anemi bu sorudaki ayrımı sağlamaz.\n\n**Cevap: A** — Tekrarlayan bakteriyel enfeksiyonlar\n\n**Özet.** İntegrin ya da selektin ligand mutasyonları **lökosit adezyon eksikliği** sendromlarına yol açar; tekrarlayan bakteriyel enfeksiyonlar ve gecikmiş yara iyileşmesi görülür.",
+   "ses": "İntegrin mutasyonu olan çocukta en olası klinik bulgu hangisidir?\nA, Tekrarlayan bakteriyel enfeksiyonlar\nBe, Hiperkalsemi\nCe, Erken yaşlanma\nDe, Amfizem\nE, Aplastik anemi\nŞıkları sırasıyla gözden geçirelim.\nTekrarlayan bakteriyel enfeksiyonlar doğru. İntegrin mutasyonları lökosit adezyon eksikliği sendromlarına yol açar ve bu enfeksiyonlar tablonun klinik bulgusudur.\nHiperkalsemi ile karıştırılabilir. İntegrin kusurunda sorun lökositlerin endotele sıkı yapışamamasıdır.\nLökosit adezyon eksikliği sendromları integrin ya da selektin ligand mutasyonlarıyla oluşur. Erken yaşlanma bu sorudaki ayrımı sağlamaz.\nAmfizem ile karıştırılabilir. İntegrin bozukluğunun ikinci tipik bulgusu yara iyileşmesinde gecikmedir.\nİntegrinler sıkı adezyonda aktive endoteldeki i ce a me bir ile ve ce a me bir gibi ligandlara bağlanır. Aplastik anemi bu sorudaki ayrımı sağlamaz.\nDoğru cevap A, Tekrarlayan bakteriyel enfeksiyonlar\nİntegrin ya da selektin ligand mutasyonları lökosit adezyon eksikliği sendromlarına yol açar. Tekrarlayan bakteriyel enfeksiyonlar ve gecikmiş yara iyileşmesi görülür.",
+   "kelime": 152
+  },
+  {
+   "no": 8,
+   "tur": "ornek",
+   "soru": "Aşağıdakilerden hangisi bir kemoatraktandır?",
+   "secenekler": {
+    "A": "Histamin",
+    "B": "Kompleman C5a",
+    "C": "PECAM-1",
+    "D": "Bradikinin",
+    "E": "Albümin"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Histamin, endotel hücre kasılmasıyla damar geçirgenliğini artıran bir aracıdır; lökosit çekici olarak sayılmaz.",
+    "B": "Kompleman C5a doğru: bakteriyel N-formil peptidler, IL-8 gibi kemokinler ve lökotrien B4 ile birlikte başlıca kemoatraktanlardandır.",
+    "C": "PECAM-1 transmigrasyon molekülüdür; lökositin endotel hücreleri arasından geçişini sağlar.",
+    "D": "Bradikinin, histamin gibi endotel kasılmasını tetikleyerek geçirgenliği artırır; kemotaksi aracısı olarak sayılmaz.",
+    "E": "Albümin, transüdada çoğunlukla bulunan plazma proteinidir; lökosit çekici bir madde değildir."
+   },
+   "ozet": "Kemotakside lökositler kimyasal gradyana doğru göç eder; başlıca kemoatraktanlar N-formil peptidler, IL-8 gibi kemokinler, **C5a** ve LTB4'tür.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi bir kemoatraktandır?\n\n**A)** Histamin · **B)** Kompleman C5a · **C)** PECAM-1 · **D)** Bradikinin · **E)** Albümin\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Histamin** — Histamin, endotel hücre kasılmasıyla damar geçirgenliğini artıran bir aracıdır; lökosit çekici olarak sayılmaz.\n- **Kompleman C5a** — Kompleman C5a doğru: bakteriyel N-formil peptidler, IL-8 gibi kemokinler ve lökotrien B4 ile birlikte başlıca kemoatraktanlardandır.\n- **PECAM-1** — PECAM-1 transmigrasyon molekülüdür; lökositin endotel hücreleri arasından geçişini sağlar.\n- **Bradikinin** — Bradikinin, histamin gibi endotel kasılmasını tetikleyerek geçirgenliği artırır; kemotaksi aracısı olarak sayılmaz.\n- **Albümin** — Albümin, transüdada çoğunlukla bulunan plazma proteinidir; lökosit çekici bir madde değildir.\n\n**Cevap: B** — Kompleman C5a\n\n**Özet.** Kemotakside lökositler kimyasal gradyana doğru göç eder; başlıca kemoatraktanlar N-formil peptidler, IL-8 gibi kemokinler, **C5a** ve LTB4'tür.",
+   "ses": "Aşağıdakilerden hangisi bir kemoatraktandır?\nA, Histamin\nBe, Kompleman ce beş a\nCe, Pe e ce a me bir\nDe, Bradikinin\nE, Albümin\nŞimdi seçeneklere tek tek bakalım.\nHistamin, endotel hücre kasılmasıyla damar geçirgenliğini artıran bir aracıdır. Lökosit çekici olarak sayılmaz.\nKompleman ce beş a doğru. Bakteriyel ne formil peptidler, interlökin sekiz gibi kemokinler ve lökotrien be dört ile birlikte başlıca kemoatraktanlardandır.\nPe e ce a me bir transmigrasyon molekülüdür. Lökositin endotel hücreleri arasından geçişini sağlar.\nBradikinin, histamin gibi endotel kasılmasını tetikleyerek geçirgenliği artırır. Kemotaksi aracısı olarak sayılmaz.\nAlbümin, transüdada çoğunlukla bulunan plazma proteinidir. Lökosit çekici bir madde değildir.\nDoğru cevap Be, Kompleman ce beş a\nKemotakside lökositler kimyasal gradyana doğru göç eder. Başlıca kemoatraktanlar ne formil peptidler, interlökin sekiz gibi kemokinler, ce beş a ve lökotrien be dörttür.",
+   "kelime": 126
+  },
+  {
+   "no": 9,
+   "tur": "ornek",
+   "soru": "Akut inflamasyonda 24–48 saatten sonra baskın hale gelen hücre hangisidir?",
+   "secenekler": {
+    "A": "Nötrofil",
+    "B": "Eozinofil",
+    "C": "Mast hücresi",
+    "D": "Monosit/makrofaj",
+    "E": "Trombosit"
+   },
+   "dogru": "D",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Nötrofil ilk 6–24 saatte baskındır; kısa ömürlüdür ve dokuda yalnız 1–2 gün yaşar.",
+    "B": "Eozinofil alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilir; olağan akut yanıtın ikinci dalgası değildir.",
+    "C": "Mast hücresi, dokuda yerleşik bekçi hücrelerden biridir; etkeni tanır ve aracıları salar, sonradan baskınlaşmaz.",
+    "D": "Monosit ve makrofaj doğru: yirmi dört ile kırk sekiz saatten sonra baskın hale gelir ve dokuda daha uzun yaşar.",
+    "E": "Trombosit, aktive endotelle birlikte P selektin eksprese eder; inflamatuvar infiltratta baskınlaşan hücre değildir."
+   },
+   "ozet": "İlk 6–24 saatte kısa ömürlü nötrofiller, 24–48 saatten sonra ise daha uzun ömürlü **monosit ve makrofajlar** baskındır.",
+   "metin": "**Soru.** Akut inflamasyonda 24–48 saatten sonra baskın hale gelen hücre hangisidir?\n\n**A)** Nötrofil · **B)** Eozinofil · **C)** Mast hücresi · **D)** Monosit/makrofaj · **E)** Trombosit\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Nötrofil** — Nötrofil ilk 6–24 saatte baskındır; kısa ömürlüdür ve dokuda yalnız 1–2 gün yaşar.\n- **Eozinofil** — Eozinofil alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilir; olağan akut yanıtın ikinci dalgası değildir.\n- **Mast hücresi** — Mast hücresi, dokuda yerleşik bekçi hücrelerden biridir; etkeni tanır ve aracıları salar, sonradan baskınlaşmaz.\n- **Monosit/makrofaj** — Monosit ve makrofaj doğru: yirmi dört ile kırk sekiz saatten sonra baskın hale gelir ve dokuda daha uzun yaşar.\n- **Trombosit** — Trombosit, aktive endotelle birlikte P selektin eksprese eder; inflamatuvar infiltratta baskınlaşan hücre değildir.\n\n**Cevap: D** — Monosit/makrofaj\n\n**Özet.** İlk 6–24 saatte kısa ömürlü nötrofiller, 24–48 saatten sonra ise daha uzun ömürlü **monosit ve makrofajlar** baskındır.",
+   "ses": "Akut inflamasyonda yirmi dört ile kırk sekiz saatten sonra baskın hale gelen hücre hangisidir?\nA, Nötrofil\nBe, Eozinofil\nCe, Mast hücresi\nDe, Monosit ya da makrofaj\nE, Trombosit\nSeçenekleri sırayla değerlendirelim.\nNötrofil ilk altı ile yirmi dört saatte baskındır. Kısa ömürlüdür ve dokuda yalnız bir ile iki gün yaşar.\nEozinofil alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilir. Olağan akut yanıtın ikinci dalgası değildir.\nMast hücresi, dokuda yerleşik bekçi hücrelerden biridir. Etkeni tanır ve aracıları salar, sonradan baskınlaşmaz.\nMonosit ve makrofaj doğru. Yirmi dört ile kırk sekiz saatten sonra baskın hale gelir ve dokuda daha uzun yaşar.\nTrombosit, aktive endotelle birlikte pe selektin eksprese eder. İnflamatuvar infiltratta baskınlaşan hücre değildir.\nDoğru cevap De, Monosit ya da makrofaj\nİlk altı ile yirmi dört saatte kısa ömürlü nötrofiller, yirmi dört ile kırk sekiz saatten sonra ise daha uzun ömürlü monosit ve makrofajlar baskındır.",
+   "kelime": 142
+  },
+  {
+   "no": 10,
+   "tur": "ornek",
+   "soru": "Nötrofillerde en güçlü bakterisidal sistem hangisidir?",
+   "secenekler": {
+    "A": "iNOS–NO sistemi",
+    "B": "Lizozim",
+    "C": "Kaspaz kaskadı",
+    "D": "NET oluşumu",
+    "E": "H₂O₂–MPO–halojen sistemi"
+   },
+   "dogru": "E",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "iNOS–NO sistemi esas olarak makrofajlarda çalışır; argininden nitrik oksit üretir, nötrofilde düşük düzeydedir.",
+    "B": "Azurofil ve spesifik granüllerden gelen lizozomal enzimler fagolizozom içinde yıkım yapar. Lizozim bu sorudaki ayrımı sağlamaz.",
+    "C": "Kaspaz kaskadı ile karıştırılabilir: Fagolizozomda mikroplar reaktif oksijen türleri, nitrik oksit ve lizozomal enzimlerle yıkılır.",
+    "D": "NET oluşumu, kromatin ve granül proteinlerinden oluşan ağlarla mikropları hücre dışında yakalar; bu sırada nötrofil ölür.",
+    "E": "H₂O₂–MPO–halojen sistemi doğru: miyeloperoksidaz hidrojen peroksiti hipoklorite çevirir ve en güçlü bakterisidal yol budur."
+   },
+   "ozet": "NADPH oksidaz oksijeni süperoksite, sonra H₂O₂'ye çevirir; **miyeloperoksidaz** bunu hipoklorite dönüştürür ve bu sistem en güçlü bakterisidal yoldur.",
+   "metin": "**Soru.** Nötrofillerde en güçlü bakterisidal sistem hangisidir?\n\n**A)** iNOS–NO sistemi · **B)** Lizozim · **C)** Kaspaz kaskadı · **D)** NET oluşumu · **E)** H₂O₂–MPO–halojen sistemi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **iNOS–NO sistemi** — iNOS–NO sistemi esas olarak makrofajlarda çalışır; argininden nitrik oksit üretir, nötrofilde düşük düzeydedir.\n- **Lizozim** — Azurofil ve spesifik granüllerden gelen lizozomal enzimler fagolizozom içinde yıkım yapar. Lizozim bu sorudaki ayrımı sağlamaz.\n- **Kaspaz kaskadı** — Kaspaz kaskadı ile karıştırılabilir: Fagolizozomda mikroplar reaktif oksijen türleri, nitrik oksit ve lizozomal enzimlerle yıkılır.\n- **NET oluşumu** — NET oluşumu, kromatin ve granül proteinlerinden oluşan ağlarla mikropları hücre dışında yakalar; bu sırada nötrofil ölür.\n- **H₂O₂–MPO–halojen sistemi** — H₂O₂–MPO–halojen sistemi doğru: miyeloperoksidaz hidrojen peroksiti hipoklorite çevirir ve en güçlü bakterisidal yol budur.\n\n**Cevap: E** — H₂O₂–MPO–halojen sistemi\n\n**Özet.** NADPH oksidaz oksijeni süperoksite, sonra H₂O₂'ye çevirir; **miyeloperoksidaz** bunu hipoklorite dönüştürür ve bu sistem en güçlü bakterisidal yoldur.",
+   "ses": "Nötrofillerde en güçlü bakterisidal sistem hangisidir?\nA, İndüklenebilir nitrik oksit sentaz ve nitrik oksit sistemi\nBe, Lizozim\nCe, Kaspaz kaskadı\nDe, Ne e te oluşumu\nE, Hidrojen peroksit, miyeloperoksidaz, halojen sistemi\nHer seçeneği tek tek ele alalım.\nİndüklenebilir nitrik oksit sentaz sistemi esas olarak makrofajlarda çalışır. Argininden nitrik oksit üretir, nötrofilde düşük düzeydedir.\nAzurofil ve spesifik granüllerden gelen lizozomal enzimler fagolizozom içinde yıkım yapar. Lizozim bu sorudaki ayrımı sağlamaz.\nKaspaz kaskadı ile karıştırılabilir. Fagolizozomda mikroplar reaktif oksijen türleri, nitrik oksit ve lizozomal enzimlerle yıkılır.\nNe e te oluşumu, kromatin ve granül proteinlerinden oluşan ağlarla mikropları hücre dışında yakalar. Bu sırada nötrofil ölür.\nHidrojen peroksit, miyeloperoksidaz, halojen sistemi doğru. Miyeloperoksidaz hidrojen peroksiti hipoklorite çevirir ve en güçlü bakterisidal yol budur.\nDoğru cevap E, Hidrojen peroksit, miyeloperoksidaz, halojen sistemi\nNe a de pe ha oksidaz oksijeni süperoksite, sonra hidrojen peroksite çevirir. Miyeloperoksidaz bunu hipoklorite dönüştürür ve bu sistem en güçlü bakterisidal yoldur.",
+   "kelime": 149
+  },
+  {
+   "no": 11,
+   "tur": "ornek",
+   "soru": "Aşağıdakilerden hangisi bir opsonindir?",
+   "secenekler": {
+    "A": "C3b",
+    "B": "C5a",
+    "C": "IL-8",
+    "D": "LTB4",
+    "E": "Histamin"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "C3b doğru: IgG, iC3b ve bazı plazma lektinleriyle birlikte mikrobu kaplayan ve fagositozu kolaylaştıran opsonindir.",
+    "B": "C5a bir kompleman parçasıdır ama opsonin değil, lökositleri bölgeye çeken bir kemoatraktandır.",
+    "C": "IL-8 bir kemokindir; lökositlerin kimyasal gradyana doğru göçünü sağlar, mikrobu kaplamaz.",
+    "D": "LTB4, yani lökotrien B4, N-formil peptidler gibi bir kemoatraktandır; fagositoz için kaplama görevi görmez.",
+    "E": "Histamin, endotel hücre kasılmasıyla vasküler geçirgenliği artırır; opsonin değildir."
+   },
+   "ozet": "Opsoninler mikrobu kaplayıp fagositozu kolaylaştırır: IgG, **C3b** ve iC3b, bazı plazma lektinleri; C5a, IL-8 ve LTB4 ise kemoatraktandır.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi bir opsonindir?\n\n**A)** C3b · **B)** C5a · **C)** IL-8 · **D)** LTB4 · **E)** Histamin\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **C3b** — C3b doğru: IgG, iC3b ve bazı plazma lektinleriyle birlikte mikrobu kaplayan ve fagositozu kolaylaştıran opsonindir.\n- **C5a** — C5a bir kompleman parçasıdır ama opsonin değil, lökositleri bölgeye çeken bir kemoatraktandır.\n- **IL-8** — IL-8 bir kemokindir; lökositlerin kimyasal gradyana doğru göçünü sağlar, mikrobu kaplamaz.\n- **LTB4** — LTB4, yani lökotrien B4, N-formil peptidler gibi bir kemoatraktandır; fagositoz için kaplama görevi görmez.\n- **Histamin** — Histamin, endotel hücre kasılmasıyla vasküler geçirgenliği artırır; opsonin değildir.\n\n**Cevap: A** — C3b\n\n**Özet.** Opsoninler mikrobu kaplayıp fagositozu kolaylaştırır: IgG, **C3b** ve iC3b, bazı plazma lektinleri; C5a, IL-8 ve LTB4 ise kemoatraktandır.",
+   "ses": "Aşağıdakilerden hangisi bir opsonindir?\nA, Ce üç be\nBe, Ce beş a\nCe, İnterlökin sekiz\nDe, Lökotrien be dört\nE, Histamin\nŞıkları sırasıyla gözden geçirelim.\nCe üç be doğru. İ ge ge, i ce üç be ve bazı plazma lektinleriyle birlikte mikrobu kaplayan ve fagositozu kolaylaştıran opsonindir.\nCe beş a bir kompleman parçasıdır ama opsonin değil, lökositleri bölgeye çeken bir kemoatraktandır.\nİnterlökin sekiz bir kemokindir. Lökositlerin kimyasal gradyana doğru göçünü sağlar, mikrobu kaplamaz.\nLökotrien be dört, ne formil peptidler gibi bir kemoatraktandır. Fagositoz için kaplama görevi görmez.\nHistamin, endotel hücre kasılmasıyla vasküler geçirgenliği artırır. Opsonin değildir.\nDoğru cevap A, Ce üç be\nOpsoninler mikrobu kaplayıp fagositozu kolaylaştırır. Bunlar i ge ge, ce üç be, i ce üç be ve bazı plazma lektinleridir. Ce beş a, interlökin sekiz ve lökotrien be dört ise kemoatraktandır.",
+   "kelime": 123
+  },
+  {
+   "no": 12,
+   "tur": "ornek",
+   "soru": "Perikard yüzeyinde fibrin birikimi olan ve çözünmezse yapışıklığa yol açan inflamasyon hangisidir?",
+   "secenekler": {
+    "A": "Seröz",
+    "B": "Pürülan",
+    "C": "Ülseratif",
+    "D": "Fibrinöz",
+    "E": "Granülomatöz"
+   },
+   "dogru": "D",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Seröz inflamasyonda serum benzeri, hafif proteinli ve az hücreli sıvı birikir; deri büllerinde ve seröz boşluk efüzyonlarında görülür.",
+    "B": "Pürülan inflamasyon, nötrofil, nekrotik kalıntı ve bakteri içeren irin oluşumuyla karakterizedir.",
+    "C": "Ülseratif inflamasyon, nekrotik dokunun dökülmesiyle bir yüzeyde lokalize doku kaybıdır.",
+    "D": "Fibrinöz inflamasyon doğru: fibrinojenden zengin eksüda zarlarda fibrin olarak birikir; çözünmezse organizasyonla fibrozis ve yapışıklık olur.",
+    "E": "Granülomatöz inflamasyon ile karıştırılabilir: Akut inflamasyonun morfolojik kalıpları seröz, fibrinöz, pürülan ve ülseratiftir."
+   },
+   "ozet": "**Fibrinöz inflamasyonda** fibrin plevra, perikard ve periton zarlarında birikir; fibrinolizle çözünebilir, çözünmezse organizasyonla fibrozis ve yapışıklık gelişir.",
+   "metin": "**Soru.** Perikard yüzeyinde fibrin birikimi olan ve çözünmezse yapışıklığa yol açan inflamasyon hangisidir?\n\n**A)** Seröz · **B)** Pürülan · **C)** Ülseratif · **D)** Fibrinöz · **E)** Granülomatöz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Seröz** — Seröz inflamasyonda serum benzeri, hafif proteinli ve az hücreli sıvı birikir; deri büllerinde ve seröz boşluk efüzyonlarında görülür.\n- **Pürülan** — Pürülan inflamasyon, nötrofil, nekrotik kalıntı ve bakteri içeren irin oluşumuyla karakterizedir.\n- **Ülseratif** — Ülseratif inflamasyon, nekrotik dokunun dökülmesiyle bir yüzeyde lokalize doku kaybıdır.\n- **Fibrinöz** — Fibrinöz inflamasyon doğru: fibrinojenden zengin eksüda zarlarda fibrin olarak birikir; çözünmezse organizasyonla fibrozis ve yapışıklık olur.\n- **Granülomatöz** — Granülomatöz inflamasyon ile karıştırılabilir: Akut inflamasyonun morfolojik kalıpları seröz, fibrinöz, pürülan ve ülseratiftir.\n\n**Cevap: D** — Fibrinöz\n\n**Özet.** **Fibrinöz inflamasyonda** fibrin plevra, perikard ve periton zarlarında birikir; fibrinolizle çözünebilir, çözünmezse organizasyonla fibrozis ve yapışıklık gelişir.",
+   "ses": "Perikard yüzeyinde fibrin birikimi olan ve çözünmezse yapışıklığa yol açan inflamasyon hangisidir?\nA, Seröz\nBe, Pürülan\nCe, Ülseratif\nDe, Fibrinöz\nE, Granülomatöz\nŞimdi seçeneklere tek tek bakalım.\nSeröz inflamasyonda serum benzeri, hafif proteinli ve az hücreli sıvı birikir. Deri büllerinde ve seröz boşluk efüzyonlarında görülür.\nPürülan inflamasyon, nötrofil, nekrotik kalıntı ve bakteri içeren irin oluşumuyla karakterizedir.\nÜlseratif inflamasyon, nekrotik dokunun dökülmesiyle bir yüzeyde lokalize doku kaybıdır.\nFibrinöz inflamasyon doğru. Fibrinojenden zengin eksüda zarlarda fibrin olarak birikir. Çözünmezse organizasyonla fibrozis ve yapışıklık olur.\nGranülomatöz inflamasyon ile karıştırılabilir. Akut inflamasyonun morfolojik kalıpları seröz, fibrinöz, pürülan ve ülseratiftir.\nDoğru cevap De, Fibrinöz\nFibrinöz inflamasyonda fibrin plevra, perikard ve periton zarlarında birikir. Fibrinolizle çözünebilir, çözünmezse organizasyonla fibrozis ve yapışıklık gelişir.",
+   "kelime": 138
+  },
+  {
+   "no": 13,
+   "tur": "ornek",
+   "soru": "Staphylococcus aureus enfeksiyonunda lokalize irin koleksiyonuna ne ad verilir?",
+   "secenekler": {
+    "A": "Ülser",
+    "B": "Büll",
+    "C": "Apse",
+    "D": "Granülom",
+    "E": "Efüzyon"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Ülser, nekrotik dokunun dökülmesiyle mukoza ya da deri yüzeyinde oluşan lokalize doku kaybıdır; irin koleksiyonu değildir.",
+    "B": "Büll, seröz inflamasyonda deride yanık ya da viral enfeksiyon sonrası oluşan sıvı dolu kabarcıktır.",
+    "C": "Apse doğru: lokalize irin koleksiyonudur; ortasında nekroz, çevresinde canlı nötrofiller ve fibrozis bulunur.",
+    "D": "Granülom ile karıştırılabilir: Piyojenik bakteriler nötrofilden zengin irin oluşturan pürülan inflamasyon yapar.",
+    "E": "Efüzyon, plevra, perikard ya da periton boşluğunda biriken, genelde steril seröz sıvıdır."
+   },
+   "ozet": "Staphylococcus aureus gibi piyojenik bakteriler pürülan inflamasyon yapar; irinin lokalize koleksiyonu **apsedir**.",
+   "metin": "**Soru.** Staphylococcus aureus enfeksiyonunda lokalize irin koleksiyonuna ne ad verilir?\n\n**A)** Ülser · **B)** Büll · **C)** Apse · **D)** Granülom · **E)** Efüzyon\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Ülser** — Ülser, nekrotik dokunun dökülmesiyle mukoza ya da deri yüzeyinde oluşan lokalize doku kaybıdır; irin koleksiyonu değildir.\n- **Büll** — Büll, seröz inflamasyonda deride yanık ya da viral enfeksiyon sonrası oluşan sıvı dolu kabarcıktır.\n- **Apse** — Apse doğru: lokalize irin koleksiyonudur; ortasında nekroz, çevresinde canlı nötrofiller ve fibrozis bulunur.\n- **Granülom** — Granülom ile karıştırılabilir: Piyojenik bakteriler nötrofilden zengin irin oluşturan pürülan inflamasyon yapar.\n- **Efüzyon** — Efüzyon, plevra, perikard ya da periton boşluğunda biriken, genelde steril seröz sıvıdır.\n\n**Cevap: C** — Apse\n\n**Özet.** Staphylococcus aureus gibi piyojenik bakteriler pürülan inflamasyon yapar; irinin lokalize koleksiyonu **apsedir**.",
+   "ses": "Stafilokokus aureus enfeksiyonunda lokalize irin koleksiyonuna ne ad verilir?\nA, Ülser\nBe, Büll\nCe, Apse\nDe, Granülom\nE, Efüzyon\nSeçenekleri sırayla değerlendirelim.\nÜlser, nekrotik dokunun dökülmesiyle mukoza ya da deri yüzeyinde oluşan lokalize doku kaybıdır. İrin koleksiyonu değildir.\nBüll, seröz inflamasyonda deride yanık ya da viral enfeksiyon sonrası oluşan sıvı dolu kabarcıktır.\nApse doğru. Lokalize irin koleksiyonudur. Ortasında nekroz, çevresinde canlı nötrofiller ve fibrozis bulunur.\nGranülom ile karıştırılabilir. Piyojenik bakteriler nötrofilden zengin irin oluşturan pürülan inflamasyon yapar.\nEfüzyon, plevra, perikard ya da periton boşluğunda biriken, genelde steril seröz sıvıdır.\nDoğru cevap Ce, Apse\nStafilokokus aureus gibi piyojenik bakteriler pürülan inflamasyon yapar. İrinin lokalize koleksiyonu apsedir.",
+   "kelime": 127
+  },
+  {
+   "no": 27,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisi inflamasyon sırasında lökositlerin damar lümeninden dokuya göçü sırasında izlediği hareketlerin doğru sıralamasıdır?",
+   "secenekler": {
+    "A": "Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi",
+    "B": "Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon",
+    "C": "Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi",
+    "D": "Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon",
+    "E": "Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Bu sıralama doğru: staz ile marjinasyon, selektinlerle yuvarlanma, integrinlerle sıkı adezyon, PECAM-1 ile transmigrasyon ve en son kemotaksiyle hedefe göç gelir.",
+    "B": "Yuvarlanmayla başlayan bu dizi yanlış; lökosit önce marjinasyonla damar duvarına yaklaşmalıdır, kemotaksi de adezyondan önce değil en sonda gelir.",
+    "C": "Adezyonla başlayan bu dizi yanlış; sıkı adezyon, lökosit duvara yaklaşıp selektinlerle yuvarlandıktan sonra integrinlerle gerçekleşir.",
+    "D": "Kemotaksiyle başlayan bu dizi yanlış; kemotaksi, damar dışına çıkan lökositin kimyasal gradyana doğru hedefe yöneldiği son basamaktır.",
+    "E": "Transmigrasyonla başlayan bu dizi yanlış; endotel hücreleri arasından geçiş, ancak lökosit integrinlerle sıkıca yapıştıktan sonra olur."
+   },
+   "ozet": "Lökosit göçü marjinasyon, yuvarlanma, sıkı adezyon, transmigrasyon ve kemotaksi sırasıyla ilerler; yuvarlanmayı selektinler, adezyonu integrinler, geçişi PECAM-1 sağlar.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi inflamasyon sırasında lökositlerin damar lümeninden dokuya göçü sırasında izlediği hareketlerin doğru sıralamasıdır?\n\n**A)** Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi · **B)** Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon · **C)** Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi · **D)** Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon · **E)** Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi** — Bu sıralama doğru: staz ile marjinasyon, selektinlerle yuvarlanma, integrinlerle sıkı adezyon, PECAM-1 ile transmigrasyon ve en son kemotaksiyle hedefe göç gelir.\n- **Yuvarlanma - Marjinasyon - Kemotaksi - Adezyon - Transmigrasyon** — Yuvarlanmayla başlayan bu dizi yanlış; lökosit önce marjinasyonla damar duvarına yaklaşmalıdır, kemotaksi de adezyondan önce değil en sonda gelir.\n- **Adezyon - Marjinasyon - Yuvarlanma - Transmigrasyon - Kemotaksi** — Adezyonla başlayan bu dizi yanlış; sıkı adezyon, lökosit duvara yaklaşıp selektinlerle yuvarlandıktan sonra integrinlerle gerçekleşir.\n- **Kemotaksi - Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon** — Kemotaksiyle başlayan bu dizi yanlış; kemotaksi, damar dışına çıkan lökositin kimyasal gradyana doğru hedefe yöneldiği son basamaktır.\n- **Transmigrasyon - Marjinasyon - Yuvarlanma - Adezyon - Kemotaksi** — Transmigrasyonla başlayan bu dizi yanlış; endotel hücreleri arasından geçiş, ancak lökosit integrinlerle sıkıca yapıştıktan sonra olur.\n\n**Cevap: A** — Marjinasyon - Yuvarlanma - Adezyon - Transmigrasyon - Kemotaksi\n\n**Özet.** Lökosit göçü marjinasyon, yuvarlanma, sıkı adezyon, transmigrasyon ve kemotaksi sırasıyla ilerler; yuvarlanmayı selektinler, adezyonu integrinler, geçişi PECAM-1 sağlar.",
+   "ses": "Aşağıdakilerden hangisi inflamasyon sırasında lökositlerin damar lümeninden dokuya göçü sırasında izlediği hareketlerin doğru sıralamasıdır?\nA, Marjinasyon, yuvarlanma, adezyon, transmigrasyon, kemotaksi\nBe, Yuvarlanma, marjinasyon, kemotaksi, adezyon, transmigrasyon\nCe, Adezyon, marjinasyon, yuvarlanma, transmigrasyon, kemotaksi\nDe, Kemotaksi, marjinasyon, yuvarlanma, adezyon, transmigrasyon\nE, Transmigrasyon, marjinasyon, yuvarlanma, adezyon, kemotaksi\nŞıkları sırasıyla gözden geçirelim.\nBu sıralama doğru. Staz ile marjinasyon, selektinlerle yuvarlanma, integrinlerle sıkı adezyon, pe e ce a me bir ile transmigrasyon ve en son kemotaksiyle hedefe göç gelir.\nYuvarlanmayla başlayan bu dizi yanlış. Lökosit önce marjinasyonla damar duvarına yaklaşmalıdır, kemotaksi de adezyondan önce değil en sonda gelir.\nAdezyonla başlayan bu dizi yanlış. Sıkı adezyon, lökosit duvara yaklaşıp selektinlerle yuvarlandıktan sonra integrinlerle gerçekleşir.\nKemotaksiyle başlayan bu dizi yanlış. Kemotaksi, damar dışına çıkan lökositin kimyasal gradyana doğru hedefe yöneldiği son basamaktır.\nTransmigrasyonla başlayan bu dizi yanlış. Endotel hücreleri arasından geçiş, ancak lökosit integrinlerle sıkıca yapıştıktan sonra olur.\nDoğru cevap A, Marjinasyon, yuvarlanma, adezyon, transmigrasyon, kemotaksi\nLökosit göçü marjinasyon, yuvarlanma, sıkı adezyon, transmigrasyon ve kemotaksi sırasıyla ilerler. Yuvarlanmayı selektinler, adezyonu integrinler, geçişi pe e ce a me bir sağlar.",
+   "kelime": 248
+  },
+  {
+   "no": 28,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisi lökositlerden, ölü hücre artıklarından ve mikroorganizmalardan zengin inflamatuar sıvı materyalin tanımıdır?",
+   "secenekler": {
+    "A": "Pü",
+    "B": "Eksüda",
+    "C": "Transüda",
+    "D": "Ödem",
+    "E": "Transmigrasyon"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Pü doğru: irin nötrofiller, nekrotik hücre kalıntıları, ödem sıvısı ve çoğu kez bakterilerden oluşur; pürülan inflamasyonun ürünüdür.",
+    "B": "Eksüda, artmış damar geçirgenliğiyle oluşan yüksek proteinli sıvının genel adıdır; tanımdaki lökosit ve mikrop zenginliği daha özel bir ürünü anlatır.",
+    "C": "Transüda düşük proteinli, az ya da hiç hücre içermeyen sıvıdır; inflamasyon olmadan basınç dengesizliğiyle oluşur.",
+    "D": "Ödem, interstisyel doku ya da seröz boşlukta aşırı sıvı birikimidir; eksüda ya da transüda olabilir, hücre zenginliğini tanımlamaz.",
+    "E": "Transmigrasyon bir sıvı değil, lökositin PECAM-1 aracılığıyla endotel hücreleri arasından damar dışına geçtiği basamaktır."
+   },
+   "ozet": "İrin, yani pü, nötrofiller, nekrotik hücre kalıntıları, ödem sıvısı ve bakterilerden oluşur; Staphylococcus aureus gibi piyojenik bakterilerin yaptığı pürülan inflamasyonun ürünüdür.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi lökositlerden, ölü hücre artıklarından ve mikroorganizmalardan zengin inflamatuar sıvı materyalin tanımıdır?\n\n**A)** Pü · **B)** Eksüda · **C)** Transüda · **D)** Ödem · **E)** Transmigrasyon\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Pü** — Pü doğru: irin nötrofiller, nekrotik hücre kalıntıları, ödem sıvısı ve çoğu kez bakterilerden oluşur; pürülan inflamasyonun ürünüdür.\n- **Eksüda** — Eksüda, artmış damar geçirgenliğiyle oluşan yüksek proteinli sıvının genel adıdır; tanımdaki lökosit ve mikrop zenginliği daha özel bir ürünü anlatır.\n- **Transüda** — Transüda düşük proteinli, az ya da hiç hücre içermeyen sıvıdır; inflamasyon olmadan basınç dengesizliğiyle oluşur.\n- **Ödem** — Ödem, interstisyel doku ya da seröz boşlukta aşırı sıvı birikimidir; eksüda ya da transüda olabilir, hücre zenginliğini tanımlamaz.\n- **Transmigrasyon** — Transmigrasyon bir sıvı değil, lökositin PECAM-1 aracılığıyla endotel hücreleri arasından damar dışına geçtiği basamaktır.\n\n**Cevap: A** — Pü\n\n**Özet.** İrin, yani pü, nötrofiller, nekrotik hücre kalıntıları, ödem sıvısı ve bakterilerden oluşur; Staphylococcus aureus gibi piyojenik bakterilerin yaptığı pürülan inflamasyonun ürünüdür.",
+   "ses": "Aşağıdakilerden hangisi lökositlerden, ölü hücre artıklarından ve mikroorganizmalardan zengin inflamatuar sıvı materyalin tanımıdır?\nA, Pü\nBe, Eksüda\nCe, Transüda\nDe, Ödem\nE, Transmigrasyon\nŞimdi seçeneklere tek tek bakalım.\nPü doğru. İrin nötrofiller, nekrotik hücre kalıntıları, ödem sıvısı ve çoğu kez bakterilerden oluşur. Pürülan inflamasyonun ürünüdür.\nEksüda, artmış damar geçirgenliğiyle oluşan yüksek proteinli sıvının genel adıdır. Tanımdaki lökosit ve mikrop zenginliği daha özel bir ürünü anlatır.\nTransüda düşük proteinli, az ya da hiç hücre içermeyen sıvıdır. İnflamasyon olmadan basınç dengesizliğiyle oluşur.\nÖdem, interstisyel doku ya da seröz boşlukta aşırı sıvı birikimidir. Eksüda ya da transüda olabilir, hücre zenginliğini tanımlamaz.\nTransmigrasyon bir sıvı değil, lökositin pe e ce a me bir aracılığıyla endotel hücreleri arasından damar dışına geçtiği basamaktır.\nDoğru cevap A, Pü\nİrin, yani pü, nötrofiller, nekrotik hücre kalıntıları, ödem sıvısı ve bakterilerden oluşur. Stafilokokus aureus gibi piyojenik bakterilerin yaptığı pürülan inflamasyonun ürünüdür.",
+   "kelime": 159
+  },
+  {
+   "no": 29,
+   "tur": "cikmis",
+   "soru": "İnflamasyon sırasında lökositlerin damar endoteline tutunması ve damar dışına geçmesiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+   "secenekler": {
+    "A": "Endotel yüzeyindeki VCAM-1, lökosit yüzeyindeki Mac-1 integrinine bağlanır.",
+    "B": "Endotel yüzeyindeki ICAM-1, lökosit yüzeyindeki LFA-1 integrinine bağlanır.",
+    "C": "Lökositlerin endotele sıkı adezyonunda (sağlam şekilde tutunmasında) integrinler görev alır.",
+    "D": "Lökositlerin transmigrasyonunda (endotel hücreleri arasından damar dışına geçmesinde) PECAM-1 (CD31) görev alır.",
+    "E": "Lökositlerin endotel üzerinde yuvarlanmasında (rolling) selektinler görev alır."
+   },
+   "dogru": "A",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "VCAM-1 ile Mac-1 eşleşmesi yanlıştır, bu yüzden doğru cevaptır; VCAM-1 VLA-4 ile, Mac-1 ise ICAM-1 ile eşleşir.",
+    "B": "ICAM-1 ile LFA-1 eşleşmesi gerçek bir bilgidir; aktive endotelde eksprese edilen ICAM-1, lökositlerdeki LFA-1 integrinine bağlanır.",
+    "C": "Sıkı adezyonda integrinlerin görev alması gerçek bir bilgidir; kemokinlerle yüksek afiniteye geçen integrinler lökositin yuvarlanmasını durdurur.",
+    "D": "Transmigrasyonda PECAM-1 görev alır; CD31 olarak da bilinen bu molekül endotel hücreleri arasından geçişin ana molekülüdür.",
+    "E": "Yuvarlanmada selektinlerin görev alması gerçek bir bilgidir; düşük afiniteli bağlanmaları yuvarlanmayı sağlar ama tam durmayı sağlamaz."
+   },
+   "ozet": "Selektinler yuvarlanmayı, integrinler sıkı adezyonu, PECAM-1 transmigrasyonu sağlar; LFA-1 ve Mac-1 ICAM-1 ile, VLA-4 ise VCAM-1 ile eşleşir.",
+   "metin": "**Soru.** İnflamasyon sırasında lökositlerin damar endoteline tutunması ve damar dışına geçmesiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?\n\n**A)** Endotel yüzeyindeki VCAM-1, lökosit yüzeyindeki Mac-1 integrinine bağlanır. · **B)** Endotel yüzeyindeki ICAM-1, lökosit yüzeyindeki LFA-1 integrinine bağlanır. · **C)** Lökositlerin endotele sıkı adezyonunda (sağlam şekilde tutunmasında) integrinler görev alır. · **D)** Lökositlerin transmigrasyonunda (endotel hücreleri arasından damar dışına geçmesinde) PECAM-1 (CD31) görev alır. · **E)** Lökositlerin endotel üzerinde yuvarlanmasında (rolling) selektinler görev alır.\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Endotel yüzeyindeki VCAM-1, lökosit yüzeyindeki Mac-1 integrinine bağlanır.** — VCAM-1 ile Mac-1 eşleşmesi yanlıştır, bu yüzden doğru cevaptır; VCAM-1 VLA-4 ile, Mac-1 ise ICAM-1 ile eşleşir.\n- **Endotel yüzeyindeki ICAM-1, lökosit yüzeyindeki LFA-1 integrinine bağlanır.** — ICAM-1 ile LFA-1 eşleşmesi gerçek bir bilgidir; aktive endotelde eksprese edilen ICAM-1, lökositlerdeki LFA-1 integrinine bağlanır.\n- **Lökositlerin endotele sıkı adezyonunda (sağlam şekilde tutunmasında) integrinler görev alır.** — Sıkı adezyonda integrinlerin görev alması gerçek bir bilgidir; kemokinlerle yüksek afiniteye geçen integrinler lökositin yuvarlanmasını durdurur.\n- **Lökositlerin transmigrasyonunda (endotel hücreleri arasından damar dışına geçmesinde) PECAM-1 (CD31) görev alır.** — Transmigrasyonda PECAM-1 görev alır; CD31 olarak da bilinen bu molekül endotel hücreleri arasından geçişin ana molekülüdür.\n- **Lökositlerin endotel üzerinde yuvarlanmasında (rolling) selektinler görev alır.** — Yuvarlanmada selektinlerin görev alması gerçek bir bilgidir; düşük afiniteli bağlanmaları yuvarlanmayı sağlar ama tam durmayı sağlamaz.\n\n**Cevap: A** — Endotel yüzeyindeki VCAM-1, lökosit yüzeyindeki Mac-1 integrinine bağlanır.\n\n**Özet.** Selektinler yuvarlanmayı, integrinler sıkı adezyonu, PECAM-1 transmigrasyonu sağlar; LFA-1 ve Mac-1 ICAM-1 ile, VLA-4 ise VCAM-1 ile eşleşir.",
+   "ses": "İnflamasyon sırasında lökositlerin damar endoteline tutunması ve damar dışına geçmesiyle ilgili aşağıdaki ifadelerden hangisi yanlıştır?\nA, Endotel yüzeyindeki ve ce a me bir, lökosit yüzeyindeki me a ce bir integrinine bağlanır.\nBe, Endotel yüzeyindeki i ce a me bir, lökosit yüzeyindeki le fe a bir integrinine bağlanır.\nCe, Lökositlerin endotele sıkı adezyonunda, yani sağlam şekilde tutunmasında, integrinler görev alır.\nDe, Lökositlerin transmigrasyonunda, yani endotel hücreleri arasından damar dışına geçmesinde, pe e ce a me bir, yani ce de otuz bir, görev alır.\nE, Lökositlerin endotel üzerinde yuvarlanmasında, yani roling sırasında, selektinler görev alır.\nSeçenekleri sırayla değerlendirelim.\nVe ce a me bir ile me a ce bir eşleşmesi yanlıştır, bu yüzden doğru cevaptır. Ve ce a me bir, ve le a dört ile, me a ce bir ise i ce a me bir ile eşleşir.\nİ ce a me bir ile le fe a bir eşleşmesi gerçek bir bilgidir. Aktive endotelde eksprese edilen i ce a me bir, lökositlerdeki le fe a bir integrinine bağlanır.\nSıkı adezyonda integrinlerin görev alması gerçek bir bilgidir. Kemokinlerle yüksek afiniteye geçen integrinler lökositin yuvarlanmasını durdurur.\nTransmigrasyonda pe e ce a me bir görev alır. Ce de otuz bir olarak da bilinen bu molekül endotel hücreleri arasından geçişin ana molekülüdür.\nYuvarlanmada selektinlerin görev alması gerçek bir bilgidir. Düşük afiniteli bağlanmaları yuvarlanmayı sağlar ama tam durmayı sağlamaz.\nDoğru cevap A, Endotel yüzeyindeki ve ce a me bir, lökosit yüzeyindeki me a ce bir integrinine bağlanır.\nSelektinler yuvarlanmayı, integrinler sıkı adezyonu, pe e ce a me bir transmigrasyonu sağlar. Le fe a bir ve me a ce bir i ce a me bir ile, ve le a dört ise ve ce a me bir ile eşleşir.",
+   "kelime": 242
+  },
+  {
+   "no": 30,
+   "tur": "cikmis",
+   "soru": "Aşağıdakilerden hangisi inflamasyonun kardinal belirtilerinden değildir?",
+   "secenekler": {
+    "A": "Sıcaklık (calor)",
+    "B": "Kızarıklık (rubor)",
+    "C": "Şişme (tumor)",
+    "D": "Nekroz",
+    "E": "Ağrı (dolor)"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Sıcaklık, yani calor, klasik beş bulgudan biridir; artmış kan akımına bağlı lokal ısı artışıdır.",
+    "B": "Kızarıklık, yani rubor, vazodilatasyonla artan kan akımının yansımasıdır ve kardinal belirtilerdendir.",
+    "C": "Şişme, yani tumor, artmış geçirgenlikle damar dışına çıkan sıvı ve proteinin oluşturduğu ödemin yansımasıdır.",
+    "D": "Nekroz doğru: kardinal belirti değil, inflamasyonun nedenlerinden biridir; klasik beş bulgu ısı, kızarıklık, şişlik, ağrı ve fonksiyon kaybıdır.",
+    "E": "Ağrı, yani dolor, kardinal belirtilerdendir; klasik bulgular vasküler değişiklikler ve lökosit aktivasyonunun klinik yansımalarıdır."
+   },
+   "ozet": "Klasik beş bulgu calor, rubor, tumor, dolor ve functio laesadır; nekroz ise bir belirti değil, inflamasyonu başlatan nedenlerdendir.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi inflamasyonun kardinal belirtilerinden değildir?\n\n**A)** Sıcaklık (calor) · **B)** Kızarıklık (rubor) · **C)** Şişme (tumor) · **D)** Nekroz · **E)** Ağrı (dolor)\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Sıcaklık (calor)** — Sıcaklık, yani calor, klasik beş bulgudan biridir; artmış kan akımına bağlı lokal ısı artışıdır.\n- **Kızarıklık (rubor)** — Kızarıklık, yani rubor, vazodilatasyonla artan kan akımının yansımasıdır ve kardinal belirtilerdendir.\n- **Şişme (tumor)** — Şişme, yani tumor, artmış geçirgenlikle damar dışına çıkan sıvı ve proteinin oluşturduğu ödemin yansımasıdır.\n- **Nekroz** — Nekroz doğru: kardinal belirti değil, inflamasyonun nedenlerinden biridir; klasik beş bulgu ısı, kızarıklık, şişlik, ağrı ve fonksiyon kaybıdır.\n- **Ağrı (dolor)** — Ağrı, yani dolor, kardinal belirtilerdendir; klasik bulgular vasküler değişiklikler ve lökosit aktivasyonunun klinik yansımalarıdır.\n\n**Cevap: D** — Nekroz\n\n**Özet.** Klasik beş bulgu calor, rubor, tumor, dolor ve functio laesadır; nekroz ise bir belirti değil, inflamasyonu başlatan nedenlerdendir.",
+   "ses": "Aşağıdakilerden hangisi inflamasyonun kardinal belirtilerinden değildir?\nA, Sıcaklık, kalor\nBe, Kızarıklık, rubor\nCe, Şişme, tumor\nDe, Nekroz\nE, Ağrı, dolor\nHer seçeneği tek tek ele alalım.\nSıcaklık, yani kalor, klasik beş bulgudan biridir. Artmış kan akımına bağlı lokal ısı artışıdır.\nKızarıklık, yani rubor, vazodilatasyonla artan kan akımının yansımasıdır ve kardinal belirtilerdendir.\nŞişme, yani tumor, artmış geçirgenlikle damar dışına çıkan sıvı ve proteinin oluşturduğu ödemin yansımasıdır.\nNekroz doğru. Kardinal belirti değil, inflamasyonun nedenlerinden biridir. Klasik beş bulgu ısı, kızarıklık, şişlik, ağrı ve fonksiyon kaybıdır.\nAğrı, yani dolor, kardinal belirtilerdendir. Klasik bulgular vasküler değişiklikler ve lökosit aktivasyonunun klinik yansımalarıdır.\nDoğru cevap De, Nekroz\nKlasik beş bulgu kalor, rubor, tumor, dolor ve funksiyo lezadır. Nekroz ise bir belirti değil, inflamasyonu başlatan nedenlerdendir.",
+   "kelime": 145
+  },
+  {
+   "no": 31,
+   "tur": "cikmis",
+   "soru": "Aşağıdaki olaylardan hangisi sonucunda hücreler fagositoza açık hâle gelir?",
+   "secenekler": {
+    "A": "Opsonizasyon",
+    "B": "Kemotaksi",
+    "C": "Diapedez",
+    "D": "Marjinasyon",
+    "E": "Ekzositoz"
+   },
+   "dogru": "A",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Opsonizasyon doğru: IgG, C3b, iC3b ve bazı lektinler mikrobu kaplar; opsonin kaplı mikroplar çok daha etkin fagosite edilir.",
+    "B": "Kemotaksi, lökositin C5a ve IL-8 gibi kimyasal madde gradyanına doğru hareketidir; mikrobu fagositoza hazırlamaz.",
+    "C": "Diapedez, lökositin PECAM-1 aracılığıyla endotel hücreleri arasından sıkışarak damar dışına geçmesidir.",
+    "D": "Marjinasyon, staz gelişince lökositlerin damar merkezinden duvara yaklaşmasıdır; göçün ilk basamağıdır.",
+    "E": "Fagositoz tanıma ve bağlanma, yutma, öldürme ve parçalama aşamalarıyla gerçekleşir. Ekzositoz bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Opsonin, fagositlerin daha kolay tanıdığı kaplama molekülüdür; IgG, C3b ve iC3b ile kaplanan mikroplar çok daha etkin fagosite edilir.",
+   "metin": "**Soru.** Aşağıdaki olaylardan hangisi sonucunda hücreler fagositoza açık hâle gelir?\n\n**A)** Opsonizasyon · **B)** Kemotaksi · **C)** Diapedez · **D)** Marjinasyon · **E)** Ekzositoz\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Opsonizasyon** — Opsonizasyon doğru: IgG, C3b, iC3b ve bazı lektinler mikrobu kaplar; opsonin kaplı mikroplar çok daha etkin fagosite edilir.\n- **Kemotaksi** — Kemotaksi, lökositin C5a ve IL-8 gibi kimyasal madde gradyanına doğru hareketidir; mikrobu fagositoza hazırlamaz.\n- **Diapedez** — Diapedez, lökositin PECAM-1 aracılığıyla endotel hücreleri arasından sıkışarak damar dışına geçmesidir.\n- **Marjinasyon** — Marjinasyon, staz gelişince lökositlerin damar merkezinden duvara yaklaşmasıdır; göçün ilk basamağıdır.\n- **Ekzositoz** — Fagositoz tanıma ve bağlanma, yutma, öldürme ve parçalama aşamalarıyla gerçekleşir. Ekzositoz bu sorudaki ayrımı sağlamaz.\n\n**Cevap: A** — Opsonizasyon\n\n**Özet.** Opsonin, fagositlerin daha kolay tanıdığı kaplama molekülüdür; IgG, C3b ve iC3b ile kaplanan mikroplar çok daha etkin fagosite edilir.",
+   "ses": "Aşağıdaki olaylardan hangisi sonucunda hücreler fagositoza açık hâle gelir?\nA, Opsonizasyon\nBe, Kemotaksi\nCe, Diapedez\nDe, Marjinasyon\nE, Ekzositoz\nŞıkları sırasıyla gözden geçirelim.\nOpsonizasyon doğru. İ ge ge, ce üç be, i ce üç be ve bazı lektinler mikrobu kaplar. Opsonin kaplı mikroplar çok daha etkin fagosite edilir.\nKemotaksi, lökositin ce beş a ve i le sekiz gibi kimyasal madde gradyanına doğru hareketidir. Mikrobu fagositoza hazırlamaz.\nDiapedez, lökositin pe e ce a me bir aracılığıyla endotel hücreleri arasından sıkışarak damar dışına geçmesidir.\nMarjinasyon, staz gelişince lökositlerin damar merkezinden duvara yaklaşmasıdır. Göçün ilk basamağıdır.\nFagositoz tanıma ve bağlanma, yutma, öldürme ve parçalama aşamalarıyla gerçekleşir. Ekzositoz bu sorudaki ayrımı sağlamaz.\nDoğru cevap A, Opsonizasyon\nOpsonin, fagositlerin daha kolay tanıdığı kaplama molekülüdür. İ ge ge, ce üç be ve i ce üç be ile kaplanan mikroplar çok daha etkin fagosite edilir.",
+   "kelime": 137
+  },
+  {
+   "no": 32,
+   "tur": "ornek",
+   "soru": "Aşağıdakilerden hangisi enflamasyon sürecinin işlevlerinden biri değildir?",
+   "secenekler": {
+    "A": "Lökositleri dokudan uzak tutmak",
+    "B": "Zararlı etkeni ortadan kaldırmak",
+    "C": "Nekrotik dokuyu temizlemek",
+    "D": "Doku onarımını başlatmak",
+    "E": "Plazma proteinlerini dokuya taşımak"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Lökositleri dokudan uzak tutmak doğru cevaptır, çünkü enflamasyon tam tersini yapar. Kanda dolaşan lökositleri ihtiyaç duyulan dokuya taşıyıp orada aktive eder.",
+    "B": "Zararlı etkeni, yani mikrop ya da toksini ortadan kaldırmak enflamasyonun ilk amacıdır. Bu yüzden sorulan istisna değildir.",
+    "C": "Nekrotik hücre ve dokuları temizlemek enflamasyonun amaçlarındandır. Ölü doku temizlenmezse hasarlı alan kalıcı lezyona döner.",
+    "D": "Doku onarımını başlatmak enflamasyonun üçüncü amacıdır. Zararlı etken ortadan kalkınca enflamasyon geriler ve onarım başlar.",
+    "E": "Plazma proteinlerini dokuya taşımak enflamasyonun gerçek işlevidir. Kompleman gibi proteinler normalde kanda dolaşır, enflamasyon onları dokuya getirip aktive eder."
+   },
+   "ozet": "Enflamasyonun amacı zararlı etkeni kaldırmak, nekrotik dokuyu temizlemek ve onarımı başlatmaktır. Bunun için kanda dolaşan lökosit ve proteinleri dokuya taşır.",
+   "metin": "**Soru.** Aşağıdakilerden hangisi enflamasyon sürecinin işlevlerinden biri değildir?\n\n**A)** Lökositleri dokudan uzak tutmak · **B)** Zararlı etkeni ortadan kaldırmak · **C)** Nekrotik dokuyu temizlemek · **D)** Doku onarımını başlatmak · **E)** Plazma proteinlerini dokuya taşımak\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Lökositleri dokudan uzak tutmak** — Lökositleri dokudan uzak tutmak doğru cevaptır, çünkü enflamasyon tam tersini yapar. Kanda dolaşan lökositleri ihtiyaç duyulan dokuya taşıyıp orada aktive eder.\n- **Zararlı etkeni ortadan kaldırmak** — Zararlı etkeni, yani mikrop ya da toksini ortadan kaldırmak enflamasyonun ilk amacıdır. Bu yüzden sorulan istisna değildir.\n- **Nekrotik dokuyu temizlemek** — Nekrotik hücre ve dokuları temizlemek enflamasyonun amaçlarındandır. Ölü doku temizlenmezse hasarlı alan kalıcı lezyona döner.\n- **Doku onarımını başlatmak** — Doku onarımını başlatmak enflamasyonun üçüncü amacıdır. Zararlı etken ortadan kalkınca enflamasyon geriler ve onarım başlar.\n- **Plazma proteinlerini dokuya taşımak** — Plazma proteinlerini dokuya taşımak enflamasyonun gerçek işlevidir. Kompleman gibi proteinler normalde kanda dolaşır, enflamasyon onları dokuya getirip aktive eder.\n\n**Cevap: A** — Lökositleri dokudan uzak tutmak\n\n**Özet.** Enflamasyonun amacı zararlı etkeni kaldırmak, nekrotik dokuyu temizlemek ve onarımı başlatmaktır. Bunun için kanda dolaşan lökosit ve proteinleri dokuya taşır.",
+   "ses": "Aşağıdakilerden hangisi enflamasyon sürecinin işlevlerinden biri değildir?\nA, Lökositleri dokudan uzak tutmak\nBe, Zararlı etkeni ortadan kaldırmak\nCe, Nekrotik dokuyu temizlemek\nDe, Doku onarımını başlatmak\nE, Plazma proteinlerini dokuya taşımak\nŞimdi seçeneklere tek tek bakalım.\nLökositleri dokudan uzak tutmak doğru cevaptır, çünkü enflamasyon tam tersini yapar. Kanda dolaşan lökositleri ihtiyaç duyulan dokuya taşıyıp orada aktive eder.\nZararlı etkeni, yani mikrop ya da toksini ortadan kaldırmak enflamasyonun ilk amacıdır. Bu yüzden sorulan istisna değildir.\nNekrotik hücre ve dokuları temizlemek enflamasyonun amaçlarındandır. Ölü doku temizlenmezse hasarlı alan kalıcı lezyona döner.\nDoku onarımını başlatmak enflamasyonun üçüncü amacıdır. Zararlı etken ortadan kalkınca enflamasyon geriler ve onarım başlar.\nPlazma proteinlerini dokuya taşımak enflamasyonun gerçek işlevidir. Kompleman gibi proteinler normalde kanda dolaşır, enflamasyon onları dokuya getirip aktive eder.\nDoğru cevap A, Lökositleri dokudan uzak tutmak\nEnflamasyonun amacı zararlı etkeni kaldırmak, nekrotik dokuyu temizlemek ve onarımı başlatmaktır. Bunun için kanda dolaşan lökosit ve proteinleri dokuya taşır.",
+   "kelime": 184
+  },
+  {
+   "no": 33,
+   "tur": "ornek",
+   "soru": "Enflamatuvar yanıtın zararsız çevresel antijenlere yönelmesi hangi tabloya yol açar?",
+   "secenekler": {
+    "A": "Otoimmün hastalık",
+    "B": "Alerji",
+    "C": "Uzamış enfeksiyon",
+    "D": "Septik şok",
+    "E": "Akciğer fibrozisi"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Otoimmün hastalık da yanlış hedeflenmiş yanıttır, ancak burada yanıt kişinin kendi dokularına yönelir, çevresel antijenlere değil.",
+    "B": "Alerji doğru: yanıt zararsız çevresel antijenlere karşı geliştiğinde alerjiler ortaya çıkar. Bu, yanıtın yanlış hedeflenmesinin bir biçimidir.",
+    "C": "Uzamış enfeksiyon, etken yok edilemediğinde gelişir. Örneği Mycobacterium tuberculosis gibi ortadan kaldırılması güç mikroplardır.",
+    "D": "Septik şok, hasarın başlıca sitokinlerle oluştuğu akut bir bozukluktur. Çevresel antijene yönelik yanıt değildir.",
+    "E": "Akciğer fibrozisi, etken yok edilemeyip yanıt uzayınca gelişen kronik bir sonuçtur. Hasarda makrofajlar ve fibroblastlar rol oynar."
+   },
+   "ozet": "Enflamasyon iki yolla zarar verir. Yanıt yanlış hedeflenirse otoimmünite ya da alerji, etken yok edilemezse uzamış enfeksiyon, kronik inflamasyon ve fibrozis gelişir.",
+   "metin": "**Soru.** Enflamatuvar yanıtın zararsız çevresel antijenlere yönelmesi hangi tabloya yol açar?\n\n**A)** Otoimmün hastalık · **B)** Alerji · **C)** Uzamış enfeksiyon · **D)** Septik şok · **E)** Akciğer fibrozisi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Otoimmün hastalık** — Otoimmün hastalık da yanlış hedeflenmiş yanıttır, ancak burada yanıt kişinin kendi dokularına yönelir, çevresel antijenlere değil.\n- **Alerji** — Alerji doğru: yanıt zararsız çevresel antijenlere karşı geliştiğinde alerjiler ortaya çıkar. Bu, yanıtın yanlış hedeflenmesinin bir biçimidir.\n- **Uzamış enfeksiyon** — Uzamış enfeksiyon, etken yok edilemediğinde gelişir. Örneği Mycobacterium tuberculosis gibi ortadan kaldırılması güç mikroplardır.\n- **Septik şok** — Septik şok, hasarın başlıca sitokinlerle oluştuğu akut bir bozukluktur. Çevresel antijene yönelik yanıt değildir.\n- **Akciğer fibrozisi** — Akciğer fibrozisi, etken yok edilemeyip yanıt uzayınca gelişen kronik bir sonuçtur. Hasarda makrofajlar ve fibroblastlar rol oynar.\n\n**Cevap: B** — Alerji\n\n**Özet.** Enflamasyon iki yolla zarar verir. Yanıt yanlış hedeflenirse otoimmünite ya da alerji, etken yok edilemezse uzamış enfeksiyon, kronik inflamasyon ve fibrozis gelişir.",
+   "ses": "Enflamatuvar yanıtın zararsız çevresel antijenlere yönelmesi hangi tabloya yol açar?\nA, Otoimmün hastalık\nBe, Alerji\nCe, Uzamış enfeksiyon\nDe, Septik şok\nE, Akciğer fibrozisi\nSeçenekleri sırayla değerlendirelim.\nOtoimmün hastalık da yanlış hedeflenmiş yanıttır, ancak burada yanıt kişinin kendi dokularına yönelir, çevresel antijenlere değil.\nAlerji doğru. Yanıt zararsız çevresel antijenlere karşı geliştiğinde alerjiler ortaya çıkar. Bu, yanıtın yanlış hedeflenmesinin bir biçimidir.\nUzamış enfeksiyon, etken yok edilemediğinde gelişir. Örneği Mikobakterium tüberkülozis gibi ortadan kaldırılması güç mikroplardır.\nSeptik şok, hasarın başlıca sitokinlerle oluştuğu akut bir bozukluktur. Çevresel antijene yönelik yanıt değildir.\nAkciğer fibrozisi, etken yok edilemeyip yanıt uzayınca gelişen kronik bir sonuçtur. Hasarda makrofajlar ve fibroblastlar rol oynar.\nDoğru cevap Be, Alerji\nEnflamasyon iki yolla zarar verir. Yanıt yanlış hedeflenirse otoimmünite ya da alerji, etken yok edilemezse uzamış enfeksiyon, kronik inflamasyon ve fibrozis gelişir.",
+   "kelime": 157
+  },
+  {
+   "no": 34,
+   "tur": "ornek",
+   "soru": "Kronik inflamasyonun hücresel infiltratını başlıca hangileri oluşturur?",
+   "secenekler": {
+    "A": "Nötrofiller",
+    "B": "Eozinofiller",
+    "C": "Monosit/makrofaj ve lenfositler",
+    "D": "Trombositler",
+    "E": "Mast hücreleri"
+   },
+   "dogru": "C",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Nötrofiller akut inflamasyonun başlıca hücresidir. Akut yanıt ödem ve nötrofil ağırlıklı infiltrasyonla tanınır.",
+    "B": "Eozinofiller alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilir. Kronik inflamasyonun genel infiltratı değildir.",
+    "C": "Monosit, makrofaj ve lenfositler doğru: kronik inflamasyon mononükleer hücreler, doku yıkımı ve fibrozis ile karakterizedir.",
+    "D": "Trombositler inflamatuvar infiltratın hücresi değildir. Kronik inflamasyonda mononükleer hücreler baskındır.",
+    "E": "Mast hücreleri dokuda yerleşik bekçi hücrelerdir ve uyarıldıklarında aracı madde salarlar. Kronik infiltratın ana hücresi değildir."
+   },
+   "ozet": "Kronik inflamasyonda infiltrat monosit, makrofaj ve lenfositlerden oluşur ve fibrozis şiddetli olabilir. Akut inflamasyonda ise başlıca nötrofiller vardır ve fibrozis yoktur.",
+   "metin": "**Soru.** Kronik inflamasyonun hücresel infiltratını başlıca hangileri oluşturur?\n\n**A)** Nötrofiller · **B)** Eozinofiller · **C)** Monosit/makrofaj ve lenfositler · **D)** Trombositler · **E)** Mast hücreleri\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Nötrofiller** — Nötrofiller akut inflamasyonun başlıca hücresidir. Akut yanıt ödem ve nötrofil ağırlıklı infiltrasyonla tanınır.\n- **Eozinofiller** — Eozinofiller alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilir. Kronik inflamasyonun genel infiltratı değildir.\n- **Monosit/makrofaj ve lenfositler** — Monosit, makrofaj ve lenfositler doğru: kronik inflamasyon mononükleer hücreler, doku yıkımı ve fibrozis ile karakterizedir.\n- **Trombositler** — Trombositler inflamatuvar infiltratın hücresi değildir. Kronik inflamasyonda mononükleer hücreler baskındır.\n- **Mast hücreleri** — Mast hücreleri dokuda yerleşik bekçi hücrelerdir ve uyarıldıklarında aracı madde salarlar. Kronik infiltratın ana hücresi değildir.\n\n**Cevap: C** — Monosit/makrofaj ve lenfositler\n\n**Özet.** Kronik inflamasyonda infiltrat monosit, makrofaj ve lenfositlerden oluşur ve fibrozis şiddetli olabilir. Akut inflamasyonda ise başlıca nötrofiller vardır ve fibrozis yoktur.",
+   "ses": "Kronik inflamasyonun hücresel infiltratını başlıca hangileri oluşturur?\nA, Nötrofiller\nBe, Eozinofiller\nCe, Monosit, makrofaj ve lenfositler\nDe, Trombositler\nE, Mast hücreleri\nHer seçeneği tek tek ele alalım.\nNötrofiller akut inflamasyonun başlıca hücresidir. Akut yanıt ödem ve nötrofil ağırlıklı infiltrasyonla tanınır.\nEozinofiller alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilir. Kronik inflamasyonun genel infiltratı değildir.\nMonosit, makrofaj ve lenfositler doğru. Kronik inflamasyon mononükleer hücreler, doku yıkımı ve fibrozis ile karakterizedir.\nTrombositler inflamatuvar infiltratın hücresi değildir. Kronik inflamasyonda mononükleer hücreler baskındır.\nMast hücreleri dokuda yerleşik bekçi hücrelerdir ve uyarıldıklarında aracı madde salarlar. Kronik infiltratın ana hücresi değildir.\nDoğru cevap Ce, Monosit, makrofaj ve lenfositler\nKronik inflamasyonda infiltrat monosit, makrofaj ve lenfositlerden oluşur ve fibrozis şiddetli olabilir. Akut inflamasyonda ise başlıca nötrofiller vardır ve fibrozis yoktur.",
+   "kelime": 146
+  },
+  {
+   "no": 35,
+   "tur": "ornek",
+   "soru": "Enflamasyonun 5R basamaklarından yanıtın kontrolü ve sonlanmasını ifade eden hangisidir?",
+   "secenekler": {
+    "A": "Recognition",
+    "B": "Recruitment",
+    "C": "Removal",
+    "D": "Regulation",
+    "E": "Repair"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Recognition ilk basamaktır ve zararlı etkenin tanınmasını ifade eder. Yanıtın sonlanmasıyla ilgili değildir.",
+    "B": "Recruitment ikinci basamaktır. Lökositlerin ve plazma proteinlerinin bölgeye toplanmasını ifade eder.",
+    "C": "Removal üçüncü basamaktır ve etkenin ortadan kaldırılmasıdır. Yanıtın kontrolü bundan sonra gelir.",
+    "D": "Regulation doğru: dördüncü basamaktır ve yanıtın kontrolünü ve sonlanmasını sağlar.",
+    "E": "Repair beşinci ve son basamaktır. Doku onarımının başlatılmasını ifade eder."
+   },
+   "ozet": "5R sırası tanıma, toplama, uzaklaştırma, düzenleme ve onarımdır. Yanıtın kontrolü ve sonlanması Regulation basamağıdır.",
+   "metin": "**Soru.** Enflamasyonun 5R basamaklarından yanıtın kontrolü ve sonlanmasını ifade eden hangisidir?\n\n**A)** Recognition · **B)** Recruitment · **C)** Removal · **D)** Regulation · **E)** Repair\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Recognition** — Recognition ilk basamaktır ve zararlı etkenin tanınmasını ifade eder. Yanıtın sonlanmasıyla ilgili değildir.\n- **Recruitment** — Recruitment ikinci basamaktır. Lökositlerin ve plazma proteinlerinin bölgeye toplanmasını ifade eder.\n- **Removal** — Removal üçüncü basamaktır ve etkenin ortadan kaldırılmasıdır. Yanıtın kontrolü bundan sonra gelir.\n- **Regulation** — Regulation doğru: dördüncü basamaktır ve yanıtın kontrolünü ve sonlanmasını sağlar.\n- **Repair** — Repair beşinci ve son basamaktır. Doku onarımının başlatılmasını ifade eder.\n\n**Cevap: D** — Regulation\n\n**Özet.** 5R sırası tanıma, toplama, uzaklaştırma, düzenleme ve onarımdır. Yanıtın kontrolü ve sonlanması Regulation basamağıdır.",
+   "ses": "Enflamasyonun beş re basamaklarından yanıtın kontrolü ve sonlanmasını ifade eden hangisidir?\nA, Rekognişın\nBe, Rikrutmınt\nCe, Rimuval\nDe, Regülasyon\nE, Ripeyr\nŞıkları sırasıyla gözden geçirelim.\nRekognişın ilk basamaktır ve zararlı etkenin tanınmasını ifade eder. Yanıtın sonlanmasıyla ilgili değildir.\nRikrutmınt ikinci basamaktır. Lökositlerin ve plazma proteinlerinin bölgeye toplanmasını ifade eder.\nRimuval üçüncü basamaktır ve etkenin ortadan kaldırılmasıdır. Yanıtın kontrolü bundan sonra gelir.\nRegülasyon doğru. Dördüncü basamaktır ve yanıtın kontrolünü ve sonlanmasını sağlar.\nRipeyr beşinci ve son basamaktır. Doku onarımının başlatılmasını ifade eder.\nDoğru cevap De, Regülasyon\nBeş re sırası tanıma, toplama, uzaklaştırma, düzenleme ve onarımdır. Yanıtın kontrolü ve sonlanması regülasyon basamağıdır.",
+   "kelime": 120
+  },
+  {
+   "no": 36,
+   "tur": "ornek",
+   "soru": "Mikropları dokuda ilk tanıyan yerleşik bekçi hücrelerden biri hangisidir?",
+   "secenekler": {
+    "A": "Mast hücresi",
+    "B": "Nötrofil",
+    "C": "Eozinofil",
+    "D": "Plazma hücresi",
+    "E": "Kandaki monosit"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Mast hücresi doğru: doku makrofajları ve dendritik hücrelerle birlikte dokuda yerleşik bekçi hücrelerdendir.",
+    "B": "Nötrofil normalde kanda dolaşır, bölgeye sonradan toplanır. Yerleşik bekçi hücre değil, akut yanıtın erken gelen fagositidir.",
+    "C": "Eozinofil alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilen hücredir. Bekçi hücreler arasında sayılmaz.",
+    "D": "Plazma hücresi bazı aşırı duyarlılık reaksiyonlarında baskın olabilir. Mikropları ilk tanıyan yerleşik bekçi hücre değildir.",
+    "E": "Kandaki monosit dolaşımdadır, dokuya geçince makrofaja dönüşür. Henüz dokuda yerleşik bir bekçi hücre değildir."
+   },
+   "ozet": "Yerleşik bekçi hücreler doku makrofajları, dendritik hücreler ve mast hücreleridir. Nötrofil ve monosit ise kandan sonradan toplanır.",
+   "metin": "**Soru.** Mikropları dokuda ilk tanıyan yerleşik bekçi hücrelerden biri hangisidir?\n\n**A)** Mast hücresi · **B)** Nötrofil · **C)** Eozinofil · **D)** Plazma hücresi · **E)** Kandaki monosit\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Mast hücresi** — Mast hücresi doğru: doku makrofajları ve dendritik hücrelerle birlikte dokuda yerleşik bekçi hücrelerdendir.\n- **Nötrofil** — Nötrofil normalde kanda dolaşır, bölgeye sonradan toplanır. Yerleşik bekçi hücre değil, akut yanıtın erken gelen fagositidir.\n- **Eozinofil** — Eozinofil alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilen hücredir. Bekçi hücreler arasında sayılmaz.\n- **Plazma hücresi** — Plazma hücresi bazı aşırı duyarlılık reaksiyonlarında baskın olabilir. Mikropları ilk tanıyan yerleşik bekçi hücre değildir.\n- **Kandaki monosit** — Kandaki monosit dolaşımdadır, dokuya geçince makrofaja dönüşür. Henüz dokuda yerleşik bir bekçi hücre değildir.\n\n**Cevap: A** — Mast hücresi\n\n**Özet.** Yerleşik bekçi hücreler doku makrofajları, dendritik hücreler ve mast hücreleridir. Nötrofil ve monosit ise kandan sonradan toplanır.",
+   "ses": "Mikropları dokuda ilk tanıyan yerleşik bekçi hücrelerden biri hangisidir?\nA, Mast hücresi\nBe, Nötrofil\nCe, Eozinofil\nDe, Plazma hücresi\nE, Kandaki monosit\nŞimdi seçeneklere tek tek bakalım.\nMast hücresi doğru. Doku makrofajları ve dendritik hücrelerle birlikte dokuda yerleşik bekçi hücrelerdendir.\nNötrofil normalde kanda dolaşır, bölgeye sonradan toplanır. Yerleşik bekçi hücre değil, akut yanıtın erken gelen fagositidir.\nEozinofil alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilen hücredir. Bekçi hücreler arasında sayılmaz.\nPlazma hücresi bazı aşırı duyarlılık reaksiyonlarında baskın olabilir. Mikropları ilk tanıyan yerleşik bekçi hücre değildir.\nKandaki monosit dolaşımdadır, dokuya geçince makrofaja dönüşür. Henüz dokuda yerleşik bir bekçi hücre değildir.\nDoğru cevap A, Mast hücresi\nYerleşik bekçi hücreler doku makrofajları, dendritik hücreler ve mast hücreleridir. Nötrofil ve monosit ise kandan sonradan toplanır.",
+   "kelime": 146
+  },
+  {
+   "no": 37,
+   "tur": "ornek",
+   "soru": "Transüdanın içerdiği düşük miktardaki protein çoğunlukla hangisidir?",
+   "secenekler": {
+    "A": "Fibrinojen",
+    "B": "Albümin",
+    "C": "İmmünoglobulin G",
+    "D": "Kompleman C3b",
+    "E": "Fibronektin"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Fibrinojen büyük bir plazma proteinidir. Damar kaçağı büyüdüğünde dışarı çıkar ve fibrinöz enflamasyonda fibrin birikimine yol açar.",
+    "B": "Albümin doğru: transüda düşük protein içeriklidir ve bu protein çoğunlukla albümindir. Az hücre içerir ya da hiç içermez.",
+    "C": "İmmünoglobulin G bir opsonin olan antikor sınıfıdır. Transüdadaki baskın protein değildir.",
+    "D": "Kompleman C3b mikrobu kaplayarak fagositozu kolaylaştıran bir opsonindir. Transüdanın içeriğini tanımlamaz.",
+    "E": "Fibronektin, fibrinle birlikte lökositin içinde ilerlediği hücre dışı matriksin bileşenidir. Transüda proteini değildir."
+   },
+   "ozet": "Transüda düşük proteinli, çoğunlukla albümin içeren ve az hücreli sıvıdır. Eksüda ise yüksek proteinli ve hücresel kalıntı içerir.",
+   "metin": "**Soru.** Transüdanın içerdiği düşük miktardaki protein çoğunlukla hangisidir?\n\n**A)** Fibrinojen · **B)** Albümin · **C)** İmmünoglobulin G · **D)** Kompleman C3b · **E)** Fibronektin\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Fibrinojen** — Fibrinojen büyük bir plazma proteinidir. Damar kaçağı büyüdüğünde dışarı çıkar ve fibrinöz enflamasyonda fibrin birikimine yol açar.\n- **Albümin** — Albümin doğru: transüda düşük protein içeriklidir ve bu protein çoğunlukla albümindir. Az hücre içerir ya da hiç içermez.\n- **İmmünoglobulin G** — İmmünoglobulin G bir opsonin olan antikor sınıfıdır. Transüdadaki baskın protein değildir.\n- **Kompleman C3b** — Kompleman C3b mikrobu kaplayarak fagositozu kolaylaştıran bir opsonindir. Transüdanın içeriğini tanımlamaz.\n- **Fibronektin** — Fibronektin, fibrinle birlikte lökositin içinde ilerlediği hücre dışı matriksin bileşenidir. Transüda proteini değildir.\n\n**Cevap: B** — Albümin\n\n**Özet.** Transüda düşük proteinli, çoğunlukla albümin içeren ve az hücreli sıvıdır. Eksüda ise yüksek proteinli ve hücresel kalıntı içerir.",
+   "ses": "Transüdanın içerdiği düşük miktardaki protein çoğunlukla hangisidir?\nA, Fibrinojen\nBe, Albümin\nCe, İmmünoglobulin ge\nDe, Kompleman ce üç be\nE, Fibronektin\nSeçenekleri sırayla değerlendirelim.\nFibrinojen büyük bir plazma proteinidir. Damar kaçağı büyüdüğünde dışarı çıkar ve fibrinöz enflamasyonda fibrin birikimine yol açar.\nAlbümin doğru. Transüda düşük protein içeriklidir ve bu protein çoğunlukla albümindir. Az hücre içerir ya da hiç içermez.\nİmmünoglobulin ge bir opsonin olan antikor sınıfıdır. Transüdadaki baskın protein değildir.\nKompleman ce üç be mikrobu kaplayarak fagositozu kolaylaştıran bir opsonindir. Transüdanın içeriğini tanımlamaz.\nFibronektin, fibrinle birlikte lökositin içinde ilerlediği hücre dışı matriksin bileşenidir. Transüda proteini değildir.\nDoğru cevap Be, Albümin\nTransüda düşük proteinli, çoğunlukla albümin içeren ve az hücreli sıvıdır. Eksüda ise yüksek proteinli ve hücresel kalıntı içerir.",
+   "kelime": 138
+  },
+  {
+   "no": 38,
+   "tur": "ornek",
+   "soru": "Onarım sırasında yeni oluşan damarlardan sıvı sızmasının nedeni hangisidir?",
+   "secenekler": {
+    "A": "Histaminle endotel kasılması",
+    "B": "Yanığa bağlı endotel ölümü",
+    "C": "Hidrostatik basınç artışı",
+    "D": "Damarların olgunlaşmamış olması",
+    "E": "Kolloid ozmotik basınç azalması"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Histaminle endotel kasılması geçirgenlik artışının en sık mekanizmasıdır. Hızlı ve geçicidir, onarım evresine özgü değildir.",
+    "B": "Yanığa bağlı endotel ölümü direkt endotel hasarıdır ve uzun süreli sızıntı yapar. Yeni oluşan damarların sorunu değildir.",
+    "C": "Hidrostatik basınç artışı damar duvarı sağlamken transüda oluşturur. Yeni damarlardaki sızıntıyı açıklamaz.",
+    "D": "Damarların olgunlaşmamış olması doğru: anjiyogenez sırasında oluşan yeni damarlar henüz olgunlaşmadığı için sızdırır.",
+    "E": "Kolloid ozmotik basınç azalması da inflamasyon olmadan transüdaya yol açan bir basınç dengesizliğidir. Yeni damarların sorunu değildir."
+   },
+   "ozet": "Geçirgenlik artışında en sık mekanizma endotel kasılmasıdır. Daha nadir olarak direkt endotel hasarı, lökosit aracılı hasar ve anjiyogenezdeki olgunlaşmamış damarların sızıntısı görülür.",
+   "metin": "**Soru.** Onarım sırasında yeni oluşan damarlardan sıvı sızmasının nedeni hangisidir?\n\n**A)** Histaminle endotel kasılması · **B)** Yanığa bağlı endotel ölümü · **C)** Hidrostatik basınç artışı · **D)** Damarların olgunlaşmamış olması · **E)** Kolloid ozmotik basınç azalması\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Histaminle endotel kasılması** — Histaminle endotel kasılması geçirgenlik artışının en sık mekanizmasıdır. Hızlı ve geçicidir, onarım evresine özgü değildir.\n- **Yanığa bağlı endotel ölümü** — Yanığa bağlı endotel ölümü direkt endotel hasarıdır ve uzun süreli sızıntı yapar. Yeni oluşan damarların sorunu değildir.\n- **Hidrostatik basınç artışı** — Hidrostatik basınç artışı damar duvarı sağlamken transüda oluşturur. Yeni damarlardaki sızıntıyı açıklamaz.\n- **Damarların olgunlaşmamış olması** — Damarların olgunlaşmamış olması doğru: anjiyogenez sırasında oluşan yeni damarlar henüz olgunlaşmadığı için sızdırır.\n- **Kolloid ozmotik basınç azalması** — Kolloid ozmotik basınç azalması da inflamasyon olmadan transüdaya yol açan bir basınç dengesizliğidir. Yeni damarların sorunu değildir.\n\n**Cevap: D** — Damarların olgunlaşmamış olması\n\n**Özet.** Geçirgenlik artışında en sık mekanizma endotel kasılmasıdır. Daha nadir olarak direkt endotel hasarı, lökosit aracılı hasar ve anjiyogenezdeki olgunlaşmamış damarların sızıntısı görülür.",
+   "ses": "Onarım sırasında yeni oluşan damarlardan sıvı sızmasının nedeni hangisidir?\nA, Histaminle endotel kasılması\nBe, Yanığa bağlı endotel ölümü\nCe, Hidrostatik basınç artışı\nDe, Damarların olgunlaşmamış olması\nE, Kolloid ozmotik basınç azalması\nHer seçeneği tek tek ele alalım.\nHistaminle endotel kasılması geçirgenlik artışının en sık mekanizmasıdır. Hızlı ve geçicidir, onarım evresine özgü değildir.\nYanığa bağlı endotel ölümü direkt endotel hasarıdır ve uzun süreli sızıntı yapar. Yeni oluşan damarların sorunu değildir.\nHidrostatik basınç artışı damar duvarı sağlamken transüda oluşturur. Yeni damarlardaki sızıntıyı açıklamaz.\nDamarların olgunlaşmamış olması doğru. Anjiyogenez sırasında oluşan yeni damarlar henüz olgunlaşmadığı için sızdırır.\nKolloid ozmotik basınç azalması da inflamasyon olmadan transüdaya yol açan bir basınç dengesizliğidir. Yeni damarların sorunu değildir.\nDoğru cevap De, Damarların olgunlaşmamış olması\nGeçirgenlik artışında en sık mekanizma endotel kasılmasıdır. Daha nadir olarak direkt endotel hasarı, lökosit aracılı hasar ve anjiyogenezdeki olgunlaşmamış damarların sızıntısı görülür.",
+   "kelime": 173
+  },
+  {
+   "no": 39,
+   "tur": "ornek",
+   "soru": "Akut inflamasyonda staz gelişmesine yol açan temel değişiklik hangisidir?",
+   "secenekler": {
+    "A": "Lenf akımının artması",
+    "B": "Lökositlerin yuvarlanması",
+    "C": "Endotelde PECAM-1 ifadesi",
+    "D": "Arteriollerin daralması",
+    "E": "Kan viskozitesinin artması"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Lenf akımının artması, damar dışındaki ödem sıvısını boşaltmaya çalışır. Damar içindeki akımı yavaşlatmaz.",
+    "B": "Lökositlerin yuvarlanması stazın nedeni değil sonucudur. Akım yavaşlayınca marjinasyon, ardından yuvarlanma olur.",
+    "C": "Endotelde PECAM-1 ifadesi, lökositin endotel hücreleri arasından geçtiği transmigrasyonun ana molekülüdür. Kan akımını yavaşlatmaz.",
+    "D": "Arteriollerin daralması ile karıştırılabilir: Akut inflamasyonda önce arterioller genişler ve kapiller yatakta kan akımı artar.",
+    "E": "Kan viskozitesinin artması doğru: sıvı ve protein kaybı kanı koyulaştırır, kan akımı yavaşlar ve staz gelişir."
+   },
+   "ozet": "Geçirgenlik artışıyla kaybedilen sıvı ve protein kan viskozitesini artırır ve staz gelişir. Mikroskopide küçük damarlar eritrositlerle doludur, buna vasküler konjesyon denir.",
+   "metin": "**Soru.** Akut inflamasyonda staz gelişmesine yol açan temel değişiklik hangisidir?\n\n**A)** Lenf akımının artması · **B)** Lökositlerin yuvarlanması · **C)** Endotelde PECAM-1 ifadesi · **D)** Arteriollerin daralması · **E)** Kan viskozitesinin artması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Lenf akımının artması** — Lenf akımının artması, damar dışındaki ödem sıvısını boşaltmaya çalışır. Damar içindeki akımı yavaşlatmaz.\n- **Lökositlerin yuvarlanması** — Lökositlerin yuvarlanması stazın nedeni değil sonucudur. Akım yavaşlayınca marjinasyon, ardından yuvarlanma olur.\n- **Endotelde PECAM-1 ifadesi** — Endotelde PECAM-1 ifadesi, lökositin endotel hücreleri arasından geçtiği transmigrasyonun ana molekülüdür. Kan akımını yavaşlatmaz.\n- **Arteriollerin daralması** — Arteriollerin daralması ile karıştırılabilir: Akut inflamasyonda önce arterioller genişler ve kapiller yatakta kan akımı artar.\n- **Kan viskozitesinin artması** — Kan viskozitesinin artması doğru: sıvı ve protein kaybı kanı koyulaştırır, kan akımı yavaşlar ve staz gelişir.\n\n**Cevap: E** — Kan viskozitesinin artması\n\n**Özet.** Geçirgenlik artışıyla kaybedilen sıvı ve protein kan viskozitesini artırır ve staz gelişir. Mikroskopide küçük damarlar eritrositlerle doludur, buna vasküler konjesyon denir.",
+   "ses": "Akut inflamasyonda staz gelişmesine yol açan temel değişiklik hangisidir?\nA, Lenf akımının artması\nBe, Lökositlerin yuvarlanması\nCe, Endotelde pe e ce a me bir ifadesi\nDe, Arteriollerin daralması\nE, Kan viskozitesinin artması\nŞıkları sırasıyla gözden geçirelim.\nLenf akımının artması, damar dışındaki ödem sıvısını boşaltmaya çalışır. Damar içindeki akımı yavaşlatmaz.\nLökositlerin yuvarlanması stazın nedeni değil sonucudur. Akım yavaşlayınca marjinasyon, ardından yuvarlanma olur.\nEndotelde pe e ce a me bir ifadesi, lökositin endotel hücreleri arasından geçtiği transmigrasyonun ana molekülüdür. Kan akımını yavaşlatmaz.\nArteriollerin daralması ile karıştırılabilir. Akut inflamasyonda önce arterioller genişler ve kapiller yatakta kan akımı artar.\nKan viskozitesinin artması doğru. Sıvı ve protein kaybı kanı koyulaştırır, kan akımı yavaşlar ve staz gelişir.\nDoğru cevap E, Kan viskozitesinin artması\nGeçirgenlik artışıyla kaybedilen sıvı ve protein kan viskozitesini artırır ve staz gelişir. Mikroskopide küçük damarlar eritrositlerle doludur, buna vasküler konjesyon denir.",
+   "kelime": 158
+  },
+  {
+   "no": 40,
+   "tur": "ornek",
+   "soru": "Bekçi hücrelerde mikropları ve hasarlı hücreleri tanıyıp sitokin üretimini başlatan reseptörler hangileridir?",
+   "secenekler": {
+    "A": "G proteinine bağlı reseptörler",
+    "B": "Selektinler",
+    "C": "Toll-benzeri reseptörler",
+    "D": "İntegrinler",
+    "E": "PECAM-1"
+   },
+   "dogru": "C",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "G proteinine bağlı reseptörler kemoatraktanlara bağlanır. Aktin polimerizasyonuyla lökositin gradyana doğru göçünü sağlar.",
+    "B": "Selektinler karbonhidrat içeren ligandlara düşük afiniteyle bağlanan yapışma reseptörleridir. Yuvarlanmayı sağlar.",
+    "C": "Toll-benzeri reseptörler doğru. NOD-benzeri reseptörlerle birlikte mikropları tanır, TNF ve IL-1 gibi sitokinlerin üretimini başlatır.",
+    "D": "İntegrinler kemokin etkisiyle yüksek afiniteli forma geçip endotel ligandlarına bağlanır. Sıkı adezyonu sağlar.",
+    "E": "PECAM-1, yani CD31, lökositin endotel hücreleri arasından geçtiği transmigrasyonun ana molekülüdür."
+   },
+   "ozet": "Doku makrofajları, dendritik hücreler ve mast hücreleri mikropları Toll-benzeri ve NOD-benzeri reseptörlerle tanır. Sonuçta TNF, IL-1 gibi sitokinler üretilir ve inflamasyon başlar.",
+   "metin": "**Soru.** Bekçi hücrelerde mikropları ve hasarlı hücreleri tanıyıp sitokin üretimini başlatan reseptörler hangileridir?\n\n**A)** G proteinine bağlı reseptörler · **B)** Selektinler · **C)** Toll-benzeri reseptörler · **D)** İntegrinler · **E)** PECAM-1\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **G proteinine bağlı reseptörler** — G proteinine bağlı reseptörler kemoatraktanlara bağlanır. Aktin polimerizasyonuyla lökositin gradyana doğru göçünü sağlar.\n- **Selektinler** — Selektinler karbonhidrat içeren ligandlara düşük afiniteyle bağlanan yapışma reseptörleridir. Yuvarlanmayı sağlar.\n- **Toll-benzeri reseptörler** — Toll-benzeri reseptörler doğru. NOD-benzeri reseptörlerle birlikte mikropları tanır, TNF ve IL-1 gibi sitokinlerin üretimini başlatır.\n- **İntegrinler** — İntegrinler kemokin etkisiyle yüksek afiniteli forma geçip endotel ligandlarına bağlanır. Sıkı adezyonu sağlar.\n- **PECAM-1** — PECAM-1, yani CD31, lökositin endotel hücreleri arasından geçtiği transmigrasyonun ana molekülüdür.\n\n**Cevap: C** — Toll-benzeri reseptörler\n\n**Özet.** Doku makrofajları, dendritik hücreler ve mast hücreleri mikropları Toll-benzeri ve NOD-benzeri reseptörlerle tanır. Sonuçta TNF, IL-1 gibi sitokinler üretilir ve inflamasyon başlar.",
+   "ses": "Bekçi hücrelerde mikropları ve hasarlı hücreleri tanıyıp sitokin üretimini başlatan reseptörler hangileridir?\nA, Ge proteinine bağlı reseptörler\nBe, Selektinler\nCe, Toll benzeri reseptörler\nDe, İntegrinler\nE, Pe e ce a me bir\nŞimdi seçeneklere tek tek bakalım.\nGe proteinine bağlı reseptörler kemoatraktanlara bağlanır. Aktin polimerizasyonuyla lökositin gradyana doğru göçünü sağlar.\nSelektinler karbonhidrat içeren ligandlara düşük afiniteyle bağlanan yapışma reseptörleridir. Yuvarlanmayı sağlar.\nToll benzeri reseptörler doğru. Nod benzeri reseptörlerle birlikte mikropları tanır, te ne fe ve i le bir gibi sitokinlerin üretimini başlatır.\nİntegrinler kemokin etkisiyle yüksek afiniteli forma geçip endotel ligandlarına bağlanır. Sıkı adezyonu sağlar.\nPe e ce a me bir, yani ce de otuz bir, lökositin endotel hücreleri arasından geçtiği transmigrasyonun ana molekülüdür.\nDoğru cevap Ce, Toll benzeri reseptörler\nDoku makrofajları, dendritik hücreler ve mast hücreleri mikropları toll benzeri ve nod benzeri reseptörlerle tanır. Sonuçta te ne fe, i le bir gibi sitokinler üretilir ve inflamasyon başlar.",
+   "kelime": 147
+  },
+  {
+   "no": 41,
+   "tur": "ornek",
+   "soru": "Endotelde ICAM-1 ve VCAM-1 gibi integrin ligandlarının ifadesini uyaran sitokinler hangileridir?",
+   "secenekler": {
+    "A": "Kemokinler",
+    "B": "Histamin ve bradikinin",
+    "C": "TNF ve IL-1",
+    "D": "Lökotrien B4",
+    "E": "İnterferon gama"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Kemokinler endotel yüzeyinde sunulur ve lökositteki integrinleri yüksek afiniteli forma geçirir. Ligand ifadesini değil, integrin afinitesini artırırlar.",
+    "B": "Histamin ve bradikinin endotel hücre kasılmasını tetikleyip geçici geçirgenlik artışı yapar. Integrin ligandı ifadesini uyarmaz.",
+    "C": "TNF ve IL-1 doğru: endotel bu sitokinlerin etkisiyle ICAM-1 ve VCAM-1 gibi integrin ligandlarını eksprese eder.",
+    "D": "Lökotrien B4, araşidonik asitten türeyen bir kemoatraktandır. Lökositin hedefe göçünü yönlendirir.",
+    "E": "Endotelde integrin ligandlarının ifadesini TNF ve IL-1 uyarır. İnterferon gama bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "Sıkı adezyon iki yönlüdür. Kemokinler lökosit integrinini yüksek afiniteli forma geçirir, TNF ve IL-1 ise endotelde ICAM-1 ve VCAM-1 ifadesini artırır.",
+   "metin": "**Soru.** Endotelde ICAM-1 ve VCAM-1 gibi integrin ligandlarının ifadesini uyaran sitokinler hangileridir?\n\n**A)** Kemokinler · **B)** Histamin ve bradikinin · **C)** TNF ve IL-1 · **D)** Lökotrien B4 · **E)** İnterferon gama\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kemokinler** — Kemokinler endotel yüzeyinde sunulur ve lökositteki integrinleri yüksek afiniteli forma geçirir. Ligand ifadesini değil, integrin afinitesini artırırlar.\n- **Histamin ve bradikinin** — Histamin ve bradikinin endotel hücre kasılmasını tetikleyip geçici geçirgenlik artışı yapar. Integrin ligandı ifadesini uyarmaz.\n- **TNF ve IL-1** — TNF ve IL-1 doğru: endotel bu sitokinlerin etkisiyle ICAM-1 ve VCAM-1 gibi integrin ligandlarını eksprese eder.\n- **Lökotrien B4** — Lökotrien B4, araşidonik asitten türeyen bir kemoatraktandır. Lökositin hedefe göçünü yönlendirir.\n- **İnterferon gama** — Endotelde integrin ligandlarının ifadesini TNF ve IL-1 uyarır. İnterferon gama bu sorudaki ayrımı sağlamaz.\n\n**Cevap: C** — TNF ve IL-1\n\n**Özet.** Sıkı adezyon iki yönlüdür. Kemokinler lökosit integrinini yüksek afiniteli forma geçirir, TNF ve IL-1 ise endotelde ICAM-1 ve VCAM-1 ifadesini artırır.",
+   "ses": "Endotelde i ce a me bir ve ve ce a me bir gibi integrin ligandlarının ifadesini uyaran sitokinler hangileridir?\nA, Kemokinler\nBe, Histamin ve bradikinin\nCe, Te ne fe ve i le bir\nDe, Lökotrien be dört\nE, İnterferon gama\nSeçenekleri sırayla değerlendirelim.\nKemokinler endotel yüzeyinde sunulur ve lökositteki integrinleri yüksek afiniteli forma geçirir. Ligand ifadesini değil, integrin afinitesini artırırlar.\nHistamin ve bradikinin endotel hücre kasılmasını tetikleyip geçici geçirgenlik artışı yapar. Integrin ligandı ifadesini uyarmaz.\nTe ne fe ve i le bir doğru. Endotel bu sitokinlerin etkisiyle integrin ligandlarını eksprese eder.\nLökotrien be dört, araşidonik asitten türeyen bir kemoatraktandır. Lökositin hedefe göçünü yönlendirir.\nEndotelde integrin ligandlarının ifadesini te ne fe ve i le bir uyarır. İnterferon gama bu sorudaki ayrımı sağlamaz.\nDoğru cevap Ce, Te ne fe ve i le bir\nSıkı adezyon iki yönlüdür. Kemokinler lökosit integrinini yüksek afiniteli forma geçirir, te ne fe ve i le bir ise endotelde ligand ifadesini artırır.",
+   "kelime": 158
+  },
+  {
+   "no": 42,
+   "tur": "ornek",
+   "soru": "Kemoatraktan reseptörüne bağlandıktan sonra lökositin ilerlemesini sağlayan hücre içi olay hangisidir?",
+   "secenekler": {
+    "A": "Degranülasyon",
+    "B": "Respiratuvar patlama",
+    "C": "Opsonizasyon",
+    "D": "Aktin polimerizasyonu",
+    "E": "Fagolizozom oluşumu"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Degranülasyon nötrofilin uyarana verdiği temel yanıttır ve enzim salınımıyla ilgilidir. Hücrenin hedefe hareketini sağlamaz.",
+    "B": "Respiratuvar patlama, fagosit oksidaz kompleksiyle hızla reaktif oksijen türü üretimidir. Öldürmeye hizmet eder, göçe değil.",
+    "C": "Opsonizasyon mikrobun IgG ya da C3b gibi moleküllerle kaplanmasıdır. Fagositozu kolaylaştırır, lökosit hareketiyle ilgisi yoktur.",
+    "D": "Aktin polimerizasyonu doğru: G proteinine bağlı reseptörden gelen sinyal aktin polimerizasyonunu ve hücre iskeletinin yeniden düzenlenmesini başlatır.",
+    "E": "Fagolizozom oluşumu fagozomun lizozomla birleşmesidir. Fagositozun öldürme ve parçalama aşamasına aittir."
+   },
+   "ozet": "Kemoatraktanlar G proteinine bağlı reseptörlere bağlanır, ardından aktin polimerizasyonu ve hücre iskeleti yeniden düzenlenmesiyle lökosit gradyana doğru ilerler.",
+   "metin": "**Soru.** Kemoatraktan reseptörüne bağlandıktan sonra lökositin ilerlemesini sağlayan hücre içi olay hangisidir?\n\n**A)** Degranülasyon · **B)** Respiratuvar patlama · **C)** Opsonizasyon · **D)** Aktin polimerizasyonu · **E)** Fagolizozom oluşumu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Degranülasyon** — Degranülasyon nötrofilin uyarana verdiği temel yanıttır ve enzim salınımıyla ilgilidir. Hücrenin hedefe hareketini sağlamaz.\n- **Respiratuvar patlama** — Respiratuvar patlama, fagosit oksidaz kompleksiyle hızla reaktif oksijen türü üretimidir. Öldürmeye hizmet eder, göçe değil.\n- **Opsonizasyon** — Opsonizasyon mikrobun IgG ya da C3b gibi moleküllerle kaplanmasıdır. Fagositozu kolaylaştırır, lökosit hareketiyle ilgisi yoktur.\n- **Aktin polimerizasyonu** — Aktin polimerizasyonu doğru: G proteinine bağlı reseptörden gelen sinyal aktin polimerizasyonunu ve hücre iskeletinin yeniden düzenlenmesini başlatır.\n- **Fagolizozom oluşumu** — Fagolizozom oluşumu fagozomun lizozomla birleşmesidir. Fagositozun öldürme ve parçalama aşamasına aittir.\n\n**Cevap: D** — Aktin polimerizasyonu\n\n**Özet.** Kemoatraktanlar G proteinine bağlı reseptörlere bağlanır, ardından aktin polimerizasyonu ve hücre iskeleti yeniden düzenlenmesiyle lökosit gradyana doğru ilerler.",
+   "ses": "Kemoatraktan reseptörüne bağlandıktan sonra lökositin ilerlemesini sağlayan hücre içi olay hangisidir?\nA, Degranülasyon\nBe, Respiratuvar patlama\nCe, Opsonizasyon\nDe, Aktin polimerizasyonu\nE, Fagolizozom oluşumu\nHer seçeneği tek tek ele alalım.\nDegranülasyon nötrofilin uyarana verdiği temel yanıttır ve enzim salınımıyla ilgilidir. Hücrenin hedefe hareketini sağlamaz.\nRespiratuvar patlama, fagosit oksidaz kompleksiyle hızla reaktif oksijen türü üretimidir. Öldürmeye hizmet eder, göçe değil.\nOpsonizasyon mikrobun i ge ge ya da ce üç be gibi moleküllerle kaplanmasıdır. Fagositozu kolaylaştırır, lökosit hareketiyle ilgisi yoktur.\nAktin polimerizasyonu doğru. Ge proteinine bağlı reseptörden gelen sinyal aktin polimerizasyonunu ve hücre iskeletinin yeniden düzenlenmesini başlatır.\nFagolizozom oluşumu fagozomun lizozomla birleşmesidir. Fagositozun öldürme ve parçalama aşamasına aittir.\nDoğru cevap De, Aktin polimerizasyonu\nKemoatraktanlar ge proteinine bağlı reseptörlere bağlanır, ardından aktin polimerizasyonu ve hücre iskeleti yeniden düzenlenmesiyle lökosit gradyana doğru ilerler.",
+   "kelime": 150
+  },
+  {
+   "no": 43,
+   "tur": "ornek",
+   "soru": "Akut inflamasyonun ilk saatlerinde nötrofillerin baskın olmasının nedenlerinden biri hangisidir?",
+   "secenekler": {
+    "A": "Dokuda uzun ömürlü olmaları",
+    "B": "Dokuda yerleşik bulunmaları",
+    "C": "Yeni gen transkripsiyonuna bağımlılık",
+    "D": "iNOS ile NO üretmeleri",
+    "E": "Kemokinlere hızlı yanıt vermeleri"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Dokuda uzun ömürlü olmak makrofaja aittir. Nötrofil kısa ömürlüdür, dokuda birkaç gün yaşar.",
+    "B": "Dokuda yerleşik bulunmak bazı makrofajlara özgüdür, örneğin Kupffer hücreleri ve mikroglia. Nötrofiller kandan toplanır.",
+    "C": "Yeni gen transkripsiyonuna bağımlı, daha yavaş ve uzun süreli yanıt makrofajın özelliğidir. Nötrofil hızlı ve kısa süreli yanıt verir.",
+    "D": "iNOS ile NO üretimi makrofajda belirgindir. Nötrofilde nitrik oksit üretimi düşük düzeydedir ya da yoktur.",
+    "E": "Kemokinlere hızlı yanıt vermeleri doğru: nötrofiller kanda daha çoktur ve kemokinlere hızlı yanıt verir, bu yüzden ilk altı ile yirmi dört saatte baskındır."
+   },
+   "ozet": "Nötrofiller kanda daha çok olduğu ve kemokinlere hızlı yanıt verdiği için erken baskındır. Kısa ömürlü oldukları için yirmi dört ile kırk sekiz saatten sonra yerlerini makrofajlar alır.",
+   "metin": "**Soru.** Akut inflamasyonun ilk saatlerinde nötrofillerin baskın olmasının nedenlerinden biri hangisidir?\n\n**A)** Dokuda uzun ömürlü olmaları · **B)** Dokuda yerleşik bulunmaları · **C)** Yeni gen transkripsiyonuna bağımlılık · **D)** iNOS ile NO üretmeleri · **E)** Kemokinlere hızlı yanıt vermeleri\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Dokuda uzun ömürlü olmaları** — Dokuda uzun ömürlü olmak makrofaja aittir. Nötrofil kısa ömürlüdür, dokuda birkaç gün yaşar.\n- **Dokuda yerleşik bulunmaları** — Dokuda yerleşik bulunmak bazı makrofajlara özgüdür, örneğin Kupffer hücreleri ve mikroglia. Nötrofiller kandan toplanır.\n- **Yeni gen transkripsiyonuna bağımlılık** — Yeni gen transkripsiyonuna bağımlı, daha yavaş ve uzun süreli yanıt makrofajın özelliğidir. Nötrofil hızlı ve kısa süreli yanıt verir.\n- **iNOS ile NO üretmeleri** — iNOS ile NO üretimi makrofajda belirgindir. Nötrofilde nitrik oksit üretimi düşük düzeydedir ya da yoktur.\n- **Kemokinlere hızlı yanıt vermeleri** — Kemokinlere hızlı yanıt vermeleri doğru: nötrofiller kanda daha çoktur ve kemokinlere hızlı yanıt verir, bu yüzden ilk altı ile yirmi dört saatte baskındır.\n\n**Cevap: E** — Kemokinlere hızlı yanıt vermeleri\n\n**Özet.** Nötrofiller kanda daha çok olduğu ve kemokinlere hızlı yanıt verdiği için erken baskındır. Kısa ömürlü oldukları için yirmi dört ile kırk sekiz saatten sonra yerlerini makrofajlar alır.",
+   "ses": "Akut inflamasyonun ilk saatlerinde nötrofillerin baskın olmasının nedenlerinden biri hangisidir?\nA, Dokuda uzun ömürlü olmaları\nBe, Dokuda yerleşik bulunmaları\nCe, Yeni gen transkripsiyonuna bağımlılık\nDe, İndüklenebilir nitrik oksit sentaz ile nitrik oksit\nE, Kemokinlere hızlı yanıt vermeleri\nŞıkları sırasıyla gözden geçirelim.\nDokuda uzun ömürlü olmak makrofaja aittir. Nötrofil kısa ömürlüdür, dokuda birkaç gün yaşar.\nDokuda yerleşik bulunmak bazı makrofajlara özgüdür, örneğin Kupfer hücreleri ve mikroglia. Nötrofiller kandan toplanır.\nYeni gen transkripsiyonuna bağımlı, daha yavaş ve uzun süreli yanıt makrofajın özelliğidir. Nötrofil hızlı ve kısa süreli yanıt verir.\nİndüklenebilir nitrik oksit sentaz ile nitrik oksit üretimi makrofajda belirgindir. Nötrofilde düşük düzeydedir ya da yoktur.\nKemokinlere hızlı yanıt vermeleri doğru. Nötrofiller kanda daha çoktur ve kemokinlere hızlı yanıt verir, bu yüzden ilk altı ile yirmi dört saatte baskındır.\nDoğru cevap E, Kemokinlere hızlı yanıt vermeleri\nNötrofiller kanda daha çok olduğu ve kemokinlere hızlı yanıt verdiği için erken baskındır. Kısa ömürlü oldukları için yirmi dört ile kırk sekiz saatten sonra yerlerini makrofajlar alır.",
+   "kelime": 192
+  },
+  {
+   "no": 44,
+   "tur": "ornek",
+   "soru": "Nötrofil ve makrofaj karşılaştırıldığında hangisi nötrofilde temel yanıttır?",
+   "secenekler": {
+    "A": "Sitokin gen transkripsiyonu",
+    "B": "Degranülasyon",
+    "C": "iNOS ile NO üretimi",
+    "D": "Uzun süreli düzenleyici yanıt",
+    "E": "Dokuda yıllarca yaşama"
+   },
+   "dogru": "B",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Sitokin gen transkripsiyonu makrofajın başlıca işlevlerindendir. Nötrofilde sitokin üretimi düşük düzeydedir ya da yoktur.",
+    "B": "Degranülasyon doğru: nötrofilde temel yanıttır ve hücre iskeletinin yeniden düzenlenmesiyle indüklenir. Makrofajda belirgin bir özellik değildir.",
+    "C": "iNOS ile NO üretimi, iNOS geninin transkripsiyonel aktivasyonundan sonra makrofajda indüklenir. Nötrofilde düşüktür ya da yoktur.",
+    "D": "Uzun süreli düzenleyici yanıt makrofajı ayırt eden özelliktir. Nötrofil hızlı ve kısa süreli yanıt verir.",
+    "E": "Dokuda yıllarca yaşama doku yerleşik makrofajlara aittir. Nötrofilin dokudaki ömrü bir ile iki gündür."
+   },
+   "ozet": "Nötrofilin yanıtı hızlı ve kısa sürelidir. Degranülasyon, respiratuvar patlama, NET oluşumu ve lizozomal enzim sekresyonu nötrofilde, NO ve sitokin üretimi makrofajda belirgindir.",
+   "metin": "**Soru.** Nötrofil ve makrofaj karşılaştırıldığında hangisi nötrofilde temel yanıttır?\n\n**A)** Sitokin gen transkripsiyonu · **B)** Degranülasyon · **C)** iNOS ile NO üretimi · **D)** Uzun süreli düzenleyici yanıt · **E)** Dokuda yıllarca yaşama\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Sitokin gen transkripsiyonu** — Sitokin gen transkripsiyonu makrofajın başlıca işlevlerindendir. Nötrofilde sitokin üretimi düşük düzeydedir ya da yoktur.\n- **Degranülasyon** — Degranülasyon doğru: nötrofilde temel yanıttır ve hücre iskeletinin yeniden düzenlenmesiyle indüklenir. Makrofajda belirgin bir özellik değildir.\n- **iNOS ile NO üretimi** — iNOS ile NO üretimi, iNOS geninin transkripsiyonel aktivasyonundan sonra makrofajda indüklenir. Nötrofilde düşüktür ya da yoktur.\n- **Uzun süreli düzenleyici yanıt** — Uzun süreli düzenleyici yanıt makrofajı ayırt eden özelliktir. Nötrofil hızlı ve kısa süreli yanıt verir.\n- **Dokuda yıllarca yaşama** — Dokuda yıllarca yaşama doku yerleşik makrofajlara aittir. Nötrofilin dokudaki ömrü bir ile iki gündür.\n\n**Cevap: B** — Degranülasyon\n\n**Özet.** Nötrofilin yanıtı hızlı ve kısa sürelidir. Degranülasyon, respiratuvar patlama, NET oluşumu ve lizozomal enzim sekresyonu nötrofilde, NO ve sitokin üretimi makrofajda belirgindir.",
+   "ses": "Nötrofil ve makrofaj karşılaştırıldığında hangisi nötrofilde temel yanıttır?\nA, Sitokin gen transkripsiyonu\nBe, Degranülasyon\nCe, İndüklenebilir nitrik oksit sentaz ile nitrik oksit\nDe, Uzun süreli düzenleyici yanıt\nE, Dokuda yıllarca yaşama\nŞimdi seçeneklere tek tek bakalım.\nSitokin gen transkripsiyonu makrofajın başlıca işlevlerindendir. Nötrofilde sitokin üretimi düşük düzeydedir ya da yoktur.\nDegranülasyon doğru. Nötrofilde temel yanıttır ve hücre iskeletinin yeniden düzenlenmesiyle indüklenir. Makrofajda belirgin bir özellik değildir.\nİndüklenebilir nitrik oksit sentaz ile nitrik oksit üretimi makrofajda indüklenir. Nötrofilde düşüktür ya da yoktur.\nUzun süreli düzenleyici yanıt makrofajı ayırt eden özelliktir. Nötrofil hızlı ve kısa süreli yanıt verir.\nDokuda yıllarca yaşama doku yerleşik makrofajlara aittir. Nötrofilin dokudaki ömrü bir ile iki gündür.\nDoğru cevap Be, Degranülasyon\nNötrofilin yanıtı hızlı ve kısa sürelidir. Degranülasyon, respiratuvar patlama ve hücre dışı tuzak oluşumu nötrofilde, nitrik oksit ve sitokin üretimi makrofajda belirgindir.",
+   "kelime": 166
+  },
+  {
+   "no": 45,
+   "tur": "ornek",
+   "soru": "Akut inflamasyonda nötrofil baskınlığının günlerce sürebildiği durum hangisidir?",
+   "secenekler": {
+    "A": "Viral enfeksiyon",
+    "B": "Alerjik reaksiyon",
+    "C": "Pseudomonas enfeksiyonu",
+    "D": "Parazit enfeksiyonu",
+    "E": "Aşırı duyarlılık reaksiyonu"
+   },
+   "dogru": "C",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Viral enfeksiyonlarda sürecin erken döneminde nötrofil değil lenfosit hâkimiyeti görülebilir.",
+    "B": "Alerjik reaksiyonlarda nötrofil yerine eozinofiller baskın olabilir.",
+    "C": "Pseudomonas enfeksiyonu doğru: bu enfeksiyonlarda nötrofil baskınlığı günlerce sürebilir.",
+    "D": "Bazı parazit enfeksiyonlarında da eozinofiller baskın olabilir. Uzamış nötrofil baskınlığı beklenmez.",
+    "E": "Bazı aşırı duyarlılık reaksiyonlarında aktif lenfositler, makrofajlar ve plazma hücreleri baskındır."
+   },
+   "ozet": "Kuralın istisnaları infiltrat tipiyle etkeni düşündürür. Pseudomonas’ta uzamış nötrofil, viral enfeksiyonda erken lenfosit, alerji ve bazı parazitlerde eozinofil görülür.",
+   "metin": "**Soru.** Akut inflamasyonda nötrofil baskınlığının günlerce sürebildiği durum hangisidir?\n\n**A)** Viral enfeksiyon · **B)** Alerjik reaksiyon · **C)** Pseudomonas enfeksiyonu · **D)** Parazit enfeksiyonu · **E)** Aşırı duyarlılık reaksiyonu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Viral enfeksiyon** — Viral enfeksiyonlarda sürecin erken döneminde nötrofil değil lenfosit hâkimiyeti görülebilir.\n- **Alerjik reaksiyon** — Alerjik reaksiyonlarda nötrofil yerine eozinofiller baskın olabilir.\n- **Pseudomonas enfeksiyonu** — Pseudomonas enfeksiyonu doğru: bu enfeksiyonlarda nötrofil baskınlığı günlerce sürebilir.\n- **Parazit enfeksiyonu** — Bazı parazit enfeksiyonlarında da eozinofiller baskın olabilir. Uzamış nötrofil baskınlığı beklenmez.\n- **Aşırı duyarlılık reaksiyonu** — Bazı aşırı duyarlılık reaksiyonlarında aktif lenfositler, makrofajlar ve plazma hücreleri baskındır.\n\n**Cevap: C** — Pseudomonas enfeksiyonu\n\n**Özet.** Kuralın istisnaları infiltrat tipiyle etkeni düşündürür. Pseudomonas’ta uzamış nötrofil, viral enfeksiyonda erken lenfosit, alerji ve bazı parazitlerde eozinofil görülür.",
+   "ses": "Akut inflamasyonda nötrofil baskınlığının günlerce sürebildiği durum hangisidir?\nA, Viral enfeksiyon\nBe, Alerjik reaksiyon\nCe, Psödomonas enfeksiyonu\nDe, Parazit enfeksiyonu\nE, Aşırı duyarlılık reaksiyonu\nSeçenekleri sırayla değerlendirelim.\nViral enfeksiyonlarda sürecin erken döneminde nötrofil değil lenfosit hâkimiyeti görülebilir.\nAlerjik reaksiyonlarda nötrofil yerine eozinofiller baskın olabilir.\nPsödomonas enfeksiyonu doğru. Bu enfeksiyonlarda nötrofil baskınlığı günlerce sürebilir.\nBazı parazit enfeksiyonlarında da eozinofiller baskın olabilir. Uzamış nötrofil baskınlığı beklenmez.\nBazı aşırı duyarlılık reaksiyonlarında aktif lenfositler, makrofajlar ve plazma hücreleri baskındır.\nDoğru cevap Ce, Psödomonas enfeksiyonu\nKuralın istisnaları infiltrat tipiyle etkeni düşündürür. Psödomonasta uzamış nötrofil, viral enfeksiyonda erken lenfosit, alerji ve bazı parazitlerde eozinofil görülür.",
+   "kelime": 127
+  },
+  {
+   "no": 46,
+   "tur": "ornek",
+   "soru": "Fagositozda mikrobun yüzeyini kaplama molekülü gerekmeden doğrudan tanıyan yapı hangisidir?",
+   "secenekler": {
+    "A": "IgG reseptörü",
+    "B": "C3b reseptörü",
+    "C": "Lektin reseptörü",
+    "D": "Mannoz reseptörü",
+    "E": "Selektin"
+   },
+   "dogru": "D",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "IgG reseptörü bir opsonin reseptörüdür. Ancak IgG sınıfı antikorla kaplanmış mikrobu tanır.",
+    "B": "C3b reseptörü de opsonin reseptörüdür. Kompleman C3b ile kaplanmış mikrobu tanır.",
+    "C": "Lektin reseptörü, mikrobu kaplayan plazma lektinlerini tanır. Plazma lektinleri opsonin olduğu için bu tanıma opsonine bağlıdır.",
+    "D": "Mannoz reseptörü doğru: çöpçü reseptörlerle birlikte mikrobu doğrudan tanıyan yüzey reseptörüdür, opsonin gerektirmez.",
+    "E": "Selektin bir fagositoz reseptörü değildir. Endotel ve lökositte bulunur, lökositin yuvarlanmasını sağlar."
+   },
+   "ozet": "Fagositozun ilk aşaması tanıma ve bağlanmadır. Mannoz ve çöpçü reseptörler mikrobu doğrudan, opsonin reseptörleri ise IgG, C3b ve lektinlerle kaplı mikrobu tanır.",
+   "metin": "**Soru.** Fagositozda mikrobun yüzeyini kaplama molekülü gerekmeden doğrudan tanıyan yapı hangisidir?\n\n**A)** IgG reseptörü · **B)** C3b reseptörü · **C)** Lektin reseptörü · **D)** Mannoz reseptörü · **E)** Selektin\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **IgG reseptörü** — IgG reseptörü bir opsonin reseptörüdür. Ancak IgG sınıfı antikorla kaplanmış mikrobu tanır.\n- **C3b reseptörü** — C3b reseptörü de opsonin reseptörüdür. Kompleman C3b ile kaplanmış mikrobu tanır.\n- **Lektin reseptörü** — Lektin reseptörü, mikrobu kaplayan plazma lektinlerini tanır. Plazma lektinleri opsonin olduğu için bu tanıma opsonine bağlıdır.\n- **Mannoz reseptörü** — Mannoz reseptörü doğru: çöpçü reseptörlerle birlikte mikrobu doğrudan tanıyan yüzey reseptörüdür, opsonin gerektirmez.\n- **Selektin** — Selektin bir fagositoz reseptörü değildir. Endotel ve lökositte bulunur, lökositin yuvarlanmasını sağlar.\n\n**Cevap: D** — Mannoz reseptörü\n\n**Özet.** Fagositozun ilk aşaması tanıma ve bağlanmadır. Mannoz ve çöpçü reseptörler mikrobu doğrudan, opsonin reseptörleri ise IgG, C3b ve lektinlerle kaplı mikrobu tanır.",
+   "ses": "Fagositozda mikrobun yüzeyini kaplama molekülü gerekmeden doğrudan tanıyan yapı hangisidir?\nA, İ ge ge reseptörü\nBe, Ce üç be reseptörü\nCe, Lektin reseptörü\nDe, Mannoz reseptörü\nE, Selektin\nHer seçeneği tek tek ele alalım.\nİ ge ge reseptörü bir opsonin reseptörüdür. Ancak i ge ge sınıfı antikorla kaplanmış mikrobu tanır.\nCe üç be reseptörü de opsonin reseptörüdür. Kompleman ce üç be ile kaplanmış mikrobu tanır.\nLektin reseptörü, mikrobu kaplayan plazma lektinlerini tanır. Plazma lektinleri opsonin olduğu için bu tanıma opsonine bağlıdır.\nMannoz reseptörü doğru. Çöpçü reseptörlerle birlikte mikrobu doğrudan tanıyan yüzey reseptörüdür, opsonin gerektirmez.\nSelektin bir fagositoz reseptörü değildir. Endotel ve lökositte bulunur, lökositin yuvarlanmasını sağlar.\nDoğru cevap De, Mannoz reseptörü\nFagositozun ilk aşaması tanıma ve bağlanmadır. Mannoz ve çöpçü reseptörler mikrobu doğrudan, opsonin reseptörleri ise i ge ge, ce üç be ve lektinlerle kaplı mikrobu tanır.",
+   "kelime": 147
+  },
+  {
+   "no": 47,
+   "tur": "ornek",
+   "soru": "Miyeloperoksidaz klor varlığında hidrojen peroksiti hangi ürüne çevirir?",
+   "secenekler": {
+    "A": "Süperoksit",
+    "B": "Peroksinitrit",
+    "C": "Hidroksil radikali",
+    "D": "Nitrik oksit",
+    "E": "Hipoklorit"
+   },
+   "dogru": "E",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Süperoksit, NADPH oksidazın oksijenden ürettiği ilk üründür. Hidrojen peroksitten önce gelen basamaktır.",
+    "B": "Peroksinitrit, nitrik oksidin süperoksitle birleşmesiyle oluşur. Özellikle makrofajlarda güçlü oksidan etki yapar.",
+    "C": "Miyeloperoksidaz klor varlığında hidrojen peroksiti hipoklorite çevirir. Hidroksil radikali bu sorudaki ayrımı sağlamaz.",
+    "D": "Nitrik oksit, makrofajlarda iNOS tarafından argininden üretilir. Miyeloperoksidaz ürünü değildir.",
+    "E": "Hipoklorit doğru: nötrofil granüllerindeki miyeloperoksidaz, klor varlığında hidrojen peroksiti hipoklorite çevirir."
+   },
+   "ozet": "Zincir oksijen, NADPH oksidazla süperoksit, ardından hidrojen peroksit ve miyeloperoksidaz ile hipoklorit şeklindedir. Bu sistem nötrofilin en güçlü bakterisidal yoludur.",
+   "metin": "**Soru.** Miyeloperoksidaz klor varlığında hidrojen peroksiti hangi ürüne çevirir?\n\n**A)** Süperoksit · **B)** Peroksinitrit · **C)** Hidroksil radikali · **D)** Nitrik oksit · **E)** Hipoklorit\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Süperoksit** — Süperoksit, NADPH oksidazın oksijenden ürettiği ilk üründür. Hidrojen peroksitten önce gelen basamaktır.\n- **Peroksinitrit** — Peroksinitrit, nitrik oksidin süperoksitle birleşmesiyle oluşur. Özellikle makrofajlarda güçlü oksidan etki yapar.\n- **Hidroksil radikali** — Miyeloperoksidaz klor varlığında hidrojen peroksiti hipoklorite çevirir. Hidroksil radikali bu sorudaki ayrımı sağlamaz.\n- **Nitrik oksit** — Nitrik oksit, makrofajlarda iNOS tarafından argininden üretilir. Miyeloperoksidaz ürünü değildir.\n- **Hipoklorit** — Hipoklorit doğru: nötrofil granüllerindeki miyeloperoksidaz, klor varlığında hidrojen peroksiti hipoklorite çevirir.\n\n**Cevap: E** — Hipoklorit\n\n**Özet.** Zincir oksijen, NADPH oksidazla süperoksit, ardından hidrojen peroksit ve miyeloperoksidaz ile hipoklorit şeklindedir. Bu sistem nötrofilin en güçlü bakterisidal yoludur.",
+   "ses": "Miyeloperoksidaz klor varlığında hidrojen peroksiti hangi ürüne çevirir?\nA, Süperoksit\nBe, Peroksinitrit\nCe, Hidroksil radikali\nDe, Nitrik oksit\nE, Hipoklorit\nŞıkları sırasıyla gözden geçirelim.\nSüperoksit, ne a de pe ha oksidazın oksijenden ürettiği ilk üründür. Hidrojen peroksitten önce gelen basamaktır.\nPeroksinitrit, nitrik oksidin süperoksitle birleşmesiyle oluşur. Özellikle makrofajlarda güçlü oksidan etki yapar.\nMiyeloperoksidaz klor varlığında hidrojen peroksiti hipoklorite çevirir. Hidroksil radikali bu sorudaki ayrımı sağlamaz.\nNitrik oksit, makrofajlarda indüklenebilir nitrik oksit sentaz tarafından argininden üretilir. Miyeloperoksidaz ürünü değildir.\nHipoklorit doğru. Nötrofil granüllerindeki miyeloperoksidaz, klor varlığında hidrojen peroksiti hipoklorite çevirir.\nDoğru cevap E, Hipoklorit\nZincir oksijen, ne a de pe ha oksidazla süperoksit, ardından hidrojen peroksit ve miyeloperoksidaz ile hipoklorit şeklindedir. Bu sistem nötrofilin en güçlü bakterisidal yoludur.",
+   "kelime": 130
+  },
+  {
+   "no": 48,
+   "tur": "ornek",
+   "soru": "Makrofajda güçlü oksidan peroksinitrit hangi iki molekülün birleşmesiyle oluşur?",
+   "secenekler": {
+    "A": "Nitrik oksit ve süperoksit",
+    "B": "Hidrojen peroksit ve klor",
+    "C": "Arginin ve oksijen",
+    "D": "Süperoksit ve demir",
+    "E": "Hipoklorit ve nitrik oksit"
+   },
+   "dogru": "A",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Nitrik oksit ve süperoksit doğru: makrofajda iNOS ile üretilen nitrik oksit süperoksitle birleşerek peroksinitriti oluşturur.",
+    "B": "Hidrojen peroksit ve klor, miyeloperoksidaz aracılığıyla hipokloriti oluşturur. Peroksinitrit oluşumuna katılmaz.",
+    "C": "Arginin, nitrik oksidin üretildiği aminoasittir. Oksijenle doğrudan birleşip peroksinitrit oluşturmaz.",
+    "D": "Süperoksit tek başına peroksinitrit yapmaz. Peroksinitrit için makrofajda argininden üretilen nitrik oksit gerekir.",
+    "E": "Hipoklorit nötrofilde miyeloperoksidazın ürünüdür. Peroksinitritin yapıtaşı değildir."
+   },
+   "ozet": "Makrofajda iNOS argininden nitrik oksit üretir. Nitrik oksit süperoksitle birleşip peroksinitriti oluşturur ve güçlü oksidan etkiyle mikrobu öldürür.",
+   "metin": "**Soru.** Makrofajda güçlü oksidan peroksinitrit hangi iki molekülün birleşmesiyle oluşur?\n\n**A)** Nitrik oksit ve süperoksit · **B)** Hidrojen peroksit ve klor · **C)** Arginin ve oksijen · **D)** Süperoksit ve demir · **E)** Hipoklorit ve nitrik oksit\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Nitrik oksit ve süperoksit** — Nitrik oksit ve süperoksit doğru: makrofajda iNOS ile üretilen nitrik oksit süperoksitle birleşerek peroksinitriti oluşturur.\n- **Hidrojen peroksit ve klor** — Hidrojen peroksit ve klor, miyeloperoksidaz aracılığıyla hipokloriti oluşturur. Peroksinitrit oluşumuna katılmaz.\n- **Arginin ve oksijen** — Arginin, nitrik oksidin üretildiği aminoasittir. Oksijenle doğrudan birleşip peroksinitrit oluşturmaz.\n- **Süperoksit ve demir** — Süperoksit tek başına peroksinitrit yapmaz. Peroksinitrit için makrofajda argininden üretilen nitrik oksit gerekir.\n- **Hipoklorit ve nitrik oksit** — Hipoklorit nötrofilde miyeloperoksidazın ürünüdür. Peroksinitritin yapıtaşı değildir.\n\n**Cevap: A** — Nitrik oksit ve süperoksit\n\n**Özet.** Makrofajda iNOS argininden nitrik oksit üretir. Nitrik oksit süperoksitle birleşip peroksinitriti oluşturur ve güçlü oksidan etkiyle mikrobu öldürür.",
+   "ses": "Makrofajda güçlü oksidan peroksinitrit hangi iki molekülün birleşmesiyle oluşur?\nA, Nitrik oksit ve süperoksit\nBe, Hidrojen peroksit ve klor\nCe, Arginin ve oksijen\nDe, Süperoksit ve demir\nE, Hipoklorit ve nitrik oksit\nŞimdi seçeneklere tek tek bakalım.\nNitrik oksit ve süperoksit doğru. Makrofajda indüklenebilir nitrik oksit sentaz ile üretilen nitrik oksit süperoksitle birleşerek peroksinitriti oluşturur.\nHidrojen peroksit ve klor, miyeloperoksidaz aracılığıyla hipokloriti oluşturur. Peroksinitrit oluşumuna katılmaz.\nArginin, nitrik oksidin üretildiği aminoasittir. Oksijenle doğrudan birleşip peroksinitrit oluşturmaz.\nSüperoksit tek başına peroksinitrit yapmaz. Peroksinitrit için makrofajda argininden üretilen nitrik oksit gerekir.\nHipoklorit nötrofilde miyeloperoksidazın ürünüdür. Peroksinitritin yapıtaşı değildir.\nDoğru cevap A, Nitrik oksit ve süperoksit\nMakrofajda indüklenebilir nitrik oksit sentaz argininden nitrik oksit üretir. Nitrik oksit süperoksitle birleşip peroksinitriti oluşturur ve mikrobu öldürür.",
+   "kelime": 153
+  },
+  {
+   "no": 49,
+   "tur": "ornek",
+   "soru": "Nötrofil hücre dışı tuzakları hangi yapılardan oluşur?",
+   "secenekler": {
+    "A": "Fibrin ve fibronektin",
+    "B": "Kromatin ve granül proteinleri",
+    "C": "Kompleman ve antikor",
+    "D": "Albümin ve fibrinojen",
+    "E": "Kollajen ve elastin"
+   },
+   "dogru": "B",
+   "giris": "Seçenekleri sırayla değerlendirelim.",
+   "aciklamalar": {
+    "A": "Fibrin ve fibronektin, lökositin damar dışında içinde ilerlediği hücre dışı matriksin bileşenleridir. Tuzak ağının yapısı değildir.",
+    "B": "Kromatin ve granül proteinleri doğru: tuzaklar de ne a ve histondan oluşan kromatin ile granül proteinlerinden kurulu ağlardır.",
+    "C": "Kompleman ve antikor plazma proteinleridir ve opsonin olarak mikrobu kaplar. Hücre dışı tuzağı oluşturmaz.",
+    "D": "Albümin ve fibrinojen damar dışına sızan plazma proteinleridir. Albümin transüdada, fibrinojen fibrinöz eksüdada öne çıkar.",
+    "E": "Tuzak ağı nötrofilin kendi kromatini ve granül proteinlerinden oluşur. Kollajen ve elastin bu sorudaki ayrımı sağlamaz."
+   },
+   "ozet": "NET’ler kromatin ve granül proteinlerinden oluşur ve hücre dışında mikropları yakalayıp öldürür. Oluşurken nötrofil çekirdeğini kaybeder ve ölür, sepsiste kanda da görülebilir.",
+   "metin": "**Soru.** Nötrofil hücre dışı tuzakları hangi yapılardan oluşur?\n\n**A)** Fibrin ve fibronektin · **B)** Kromatin ve granül proteinleri · **C)** Kompleman ve antikor · **D)** Albümin ve fibrinojen · **E)** Kollajen ve elastin\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Fibrin ve fibronektin** — Fibrin ve fibronektin, lökositin damar dışında içinde ilerlediği hücre dışı matriksin bileşenleridir. Tuzak ağının yapısı değildir.\n- **Kromatin ve granül proteinleri** — Kromatin ve granül proteinleri doğru: tuzaklar de ne a ve histondan oluşan kromatin ile granül proteinlerinden kurulu ağlardır.\n- **Kompleman ve antikor** — Kompleman ve antikor plazma proteinleridir ve opsonin olarak mikrobu kaplar. Hücre dışı tuzağı oluşturmaz.\n- **Albümin ve fibrinojen** — Albümin ve fibrinojen damar dışına sızan plazma proteinleridir. Albümin transüdada, fibrinojen fibrinöz eksüdada öne çıkar.\n- **Kollajen ve elastin** — Tuzak ağı nötrofilin kendi kromatini ve granül proteinlerinden oluşur. Kollajen ve elastin bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Kromatin ve granül proteinleri\n\n**Özet.** NET’ler kromatin ve granül proteinlerinden oluşur ve hücre dışında mikropları yakalayıp öldürür. Oluşurken nötrofil çekirdeğini kaybeder ve ölür, sepsiste kanda da görülebilir.",
+   "ses": "Nötrofil hücre dışı tuzakları hangi yapılardan oluşur?\nA, Fibrin ve fibronektin\nBe, Kromatin ve granül proteinleri\nCe, Kompleman ve antikor\nDe, Albümin ve fibrinojen\nE, Kollajen ve elastin\nSeçenekleri sırayla değerlendirelim.\nFibrin ve fibronektin, lökositin damar dışında içinde ilerlediği hücre dışı matriksin bileşenleridir. Tuzak ağının yapısı değildir.\nKromatin ve granül proteinleri doğru. Tuzaklar de ne a ve histondan oluşan kromatin ile granül proteinlerinden kurulu ağlardır.\nKompleman ve antikor plazma proteinleridir ve opsonin olarak mikrobu kaplar. Hücre dışı tuzağı oluşturmaz.\nAlbümin ve fibrinojen damar dışına sızan plazma proteinleridir. Albümin transüdada, fibrinojen fibrinöz eksüdada öne çıkar.\nTuzak ağı nötrofilin kendi kromatini ve granül proteinlerinden oluşur. Kollajen ve elastin bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Kromatin ve granül proteinleri\nNötrofil hücre dışı tuzakları kromatin ve granül proteinlerinden oluşur ve mikropları yakalayıp öldürür. Oluşurken nötrofil çekirdeğini kaybeder ve ölür.",
+   "kelime": 172
+  },
+  {
+   "no": 50,
+   "tur": "ornek",
+   "soru": "Yanık sonrası deride oluşan sıvı dolu bül hangi enflamasyon kalıbına örnektir?",
+   "secenekler": {
+    "A": "Fibrinöz",
+    "B": "Pürülan",
+    "C": "Seröz",
+    "D": "Ülseratif",
+    "E": "Apse"
+   },
+   "dogru": "C",
+   "giris": "Her seçeneği tek tek ele alalım.",
+   "aciklamalar": {
+    "A": "Fibrinöz enflamasyon, fibrinojenden zengin eksüda ve fibrin birikimiyle olur. Sıklıkla plevra, perikard ve periton zarlarında görülür.",
+    "B": "Pürülan enflamasyon irin oluşumuyla karakterizedir. Nedeni Staphylococcus aureus gibi piyojenik bakterilerdir.",
+    "C": "Seröz enflamasyon doğru: serum benzeri, hafif proteinli sıvı birikimidir. Yanık ya da viral enfeksiyon sonrası büller tipik örneğidir.",
+    "D": "Ülseratif enflamasyon, nekrotik dokunun dökülmesiyle yüzeyde oluşan lokalize doku kaybıdır. Sıvı dolu kabarcık değildir.",
+    "E": "Apse lokalize irin koleksiyonudur. Ortasında nekroz, çevresinde canlı nötrofiller ve fibrozis bulunur."
+   },
+   "ozet": "Seröz enflamasyon serum benzeri, hafif proteinli, genellikle steril ve az hücreli sıvı birikimidir. Deri bülleri ve plevra, perikard, periton efüzyonlarında görülür.",
+   "metin": "**Soru.** Yanık sonrası deride oluşan sıvı dolu bül hangi enflamasyon kalıbına örnektir?\n\n**A)** Fibrinöz · **B)** Pürülan · **C)** Seröz · **D)** Ülseratif · **E)** Apse\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Fibrinöz** — Fibrinöz enflamasyon, fibrinojenden zengin eksüda ve fibrin birikimiyle olur. Sıklıkla plevra, perikard ve periton zarlarında görülür.\n- **Pürülan** — Pürülan enflamasyon irin oluşumuyla karakterizedir. Nedeni Staphylococcus aureus gibi piyojenik bakterilerdir.\n- **Seröz** — Seröz enflamasyon doğru: serum benzeri, hafif proteinli sıvı birikimidir. Yanık ya da viral enfeksiyon sonrası büller tipik örneğidir.\n- **Ülseratif** — Ülseratif enflamasyon, nekrotik dokunun dökülmesiyle yüzeyde oluşan lokalize doku kaybıdır. Sıvı dolu kabarcık değildir.\n- **Apse** — Apse lokalize irin koleksiyonudur. Ortasında nekroz, çevresinde canlı nötrofiller ve fibrozis bulunur.\n\n**Cevap: C** — Seröz\n\n**Özet.** Seröz enflamasyon serum benzeri, hafif proteinli, genellikle steril ve az hücreli sıvı birikimidir. Deri bülleri ve plevra, perikard, periton efüzyonlarında görülür.",
+   "ses": "Yanık sonrası deride oluşan sıvı dolu bül hangi enflamasyon kalıbına örnektir?\nA, Fibrinöz\nBe, Pürülan\nCe, Seröz\nDe, Ülseratif\nE, Apse\nHer seçeneği tek tek ele alalım.\nFibrinöz enflamasyon, fibrinojenden zengin eksüda ve fibrin birikimiyle olur. Sıklıkla plevra, perikard ve periton zarlarında görülür.\nPürülan enflamasyon irin oluşumuyla karakterizedir. Nedeni Stafilokokus aureus gibi piyojenik bakterilerdir.\nSeröz enflamasyon doğru. Serum benzeri, hafif proteinli sıvı birikimidir. Yanık ya da viral enfeksiyon sonrası büller tipik örneğidir.\nÜlseratif enflamasyon, nekrotik dokunun dökülmesiyle yüzeyde oluşan lokalize doku kaybıdır. Sıvı dolu kabarcık değildir.\nApse lokalize irin koleksiyonudur. Ortasında nekroz, çevresinde canlı nötrofiller ve fibrozis bulunur.\nDoğru cevap Ce, Seröz\nSeröz enflamasyon serum benzeri, hafif proteinli, genellikle steril ve az hücreli sıvı birikimidir. Deri bülleri ve plevra, perikard, periton efüzyonlarında görülür.",
+   "kelime": 145
+  },
+  {
+   "no": 51,
+   "tur": "ornek",
+   "soru": "Kronik fazdaki ülserin tabanında tipik olarak hangisi bulunur?",
+   "secenekler": {
+    "A": "Kenarda nötrofil infiltrasyonu",
+    "B": "Fibrin ağı",
+    "C": "Seröz sıvı birikimi",
+    "D": "Granülasyon dokusu ve skar",
+    "E": "Lokalize irin koleksiyonu"
+   },
+   "dogru": "D",
+   "giris": "Şıkları sırasıyla gözden geçirelim.",
+   "aciklamalar": {
+    "A": "Kenarda nötrofil infiltrasyonu ülserin akut fazına aittir. Kronik fazın tabanını tanımlamaz.",
+    "B": "Fibrin ağı fibrinöz enflamasyonun bulgusudur. Plevra, perikard ve periton zarlarında fibrin birikimiyle görülür.",
+    "C": "Seröz sıvı birikimi seröz enflamasyonu tanımlar. Deri bülleri ve boşluk efüzyonlarında görülür.",
+    "D": "Granülasyon dokusu ve skar doğru: kronik fazda ülser tabanında onarım dokusu ve skar bulunur.",
+    "E": "Lokalize irin koleksiyonu apsenin tanımıdır. Ortasında nekroz, çevresinde canlı nötrofiller ve fibrozis bulunur."
+   },
+   "ozet": "Ülser nekrotik dokunun dökülmesiyle yüzeyde oluşan lokalize doku kaybıdır. Akut fazda kenarlarda nötrofil, kronik fazda tabanda granülasyon dokusu ve skar görülür.",
+   "metin": "**Soru.** Kronik fazdaki ülserin tabanında tipik olarak hangisi bulunur?\n\n**A)** Kenarda nötrofil infiltrasyonu · **B)** Fibrin ağı · **C)** Seröz sıvı birikimi · **D)** Granülasyon dokusu ve skar · **E)** Lokalize irin koleksiyonu\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kenarda nötrofil infiltrasyonu** — Kenarda nötrofil infiltrasyonu ülserin akut fazına aittir. Kronik fazın tabanını tanımlamaz.\n- **Fibrin ağı** — Fibrin ağı fibrinöz enflamasyonun bulgusudur. Plevra, perikard ve periton zarlarında fibrin birikimiyle görülür.\n- **Seröz sıvı birikimi** — Seröz sıvı birikimi seröz enflamasyonu tanımlar. Deri bülleri ve boşluk efüzyonlarında görülür.\n- **Granülasyon dokusu ve skar** — Granülasyon dokusu ve skar doğru: kronik fazda ülser tabanında onarım dokusu ve skar bulunur.\n- **Lokalize irin koleksiyonu** — Lokalize irin koleksiyonu apsenin tanımıdır. Ortasında nekroz, çevresinde canlı nötrofiller ve fibrozis bulunur.\n\n**Cevap: D** — Granülasyon dokusu ve skar\n\n**Özet.** Ülser nekrotik dokunun dökülmesiyle yüzeyde oluşan lokalize doku kaybıdır. Akut fazda kenarlarda nötrofil, kronik fazda tabanda granülasyon dokusu ve skar görülür.",
+   "ses": "Kronik fazdaki ülserin tabanında tipik olarak hangisi bulunur?\nA, Kenarda nötrofil infiltrasyonu\nBe, Fibrin ağı\nCe, Seröz sıvı birikimi\nDe, Granülasyon dokusu ve skar\nE, Lokalize irin koleksiyonu\nŞıkları sırasıyla gözden geçirelim.\nKenarda nötrofil infiltrasyonu ülserin akut fazına aittir. Kronik fazın tabanını tanımlamaz.\nFibrin ağı fibrinöz enflamasyonun bulgusudur. Plevra, perikard ve periton zarlarında fibrin birikimiyle görülür.\nSeröz sıvı birikimi seröz enflamasyonu tanımlar. Deri bülleri ve boşluk efüzyonlarında görülür.\nGranülasyon dokusu ve skar doğru. Kronik fazda ülser tabanında onarım dokusu ve skar bulunur.\nLokalize irin koleksiyonu apsenin tanımıdır. Ortasında nekroz, çevresinde canlı nötrofiller ve fibrozis bulunur.\nDoğru cevap De, Granülasyon dokusu ve skar\nÜlser nekrotik dokunun dökülmesiyle yüzeyde oluşan lokalize doku kaybıdır. Akut fazda kenarlarda nötrofil, kronik fazda tabanda granülasyon dokusu ve skar görülür.",
+   "kelime": 155
+  },
+  {
+   "no": 52,
+   "tur": "ornek",
+   "soru": "Yaygın doku tahribatında ya da yenilenemeyen dokular etkilendiğinde akut enflamasyonun beklenen sonucu hangisidir?",
+   "secenekler": {
+    "A": "Tam iyileşme",
+    "B": "Kronik inflamasyona ilerleme",
+    "C": "Seröz efüzyon",
+    "D": "Apse oluşumu",
+    "E": "Skarlı iyileşme"
+   },
+   "dogru": "E",
+   "giris": "Şimdi seçeneklere tek tek bakalım.",
+   "aciklamalar": {
+    "A": "Tam iyileşme, yani rezolüsyon, zararlı etken kısa süreli ve doku hasarı minimal olduğunda gelişir. Doku tamamen normale döner.",
+    "B": "Kronik inflamasyona ilerleme, etken ortadan kaldırılamadığında ya da iyileşme süreci bozulduğunda olur. Yaygın tahribatın doğrudan sonucu değildir.",
+    "C": "Seröz efüzyon bir sonlanma biçimi değil, hafif proteinli sıvı birikimiyle giden morfolojik bir kalıptır.",
+    "D": "Apse, pürülan inflamasyonun bir odakta sınırlanmasıdır. Akut enflamasyonun üç olası sonucundan biri değildir.",
+    "E": "Skarlı iyileşme doğru: yaygın tahribatta ya da yenilenemeyen dokular etkilendiğinde hasarlı alan fibröz dokuyla onarılır."
+   },
+   "ozet": "Akut enflamasyon tam iyileşme, skarlı iyileşme ya da kronik inflamasyona ilerleme ile sonlanır. Yaygın tahribat ve yenilenemeyen doku fibrozisle, kalıcı etken kronikleşmeyle sonuçlanır.",
+   "metin": "**Soru.** Yaygın doku tahribatında ya da yenilenemeyen dokular etkilendiğinde akut enflamasyonun beklenen sonucu hangisidir?\n\n**A)** Tam iyileşme · **B)** Kronik inflamasyona ilerleme · **C)** Seröz efüzyon · **D)** Apse oluşumu · **E)** Skarlı iyileşme\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Tam iyileşme** — Tam iyileşme, yani rezolüsyon, zararlı etken kısa süreli ve doku hasarı minimal olduğunda gelişir. Doku tamamen normale döner.\n- **Kronik inflamasyona ilerleme** — Kronik inflamasyona ilerleme, etken ortadan kaldırılamadığında ya da iyileşme süreci bozulduğunda olur. Yaygın tahribatın doğrudan sonucu değildir.\n- **Seröz efüzyon** — Seröz efüzyon bir sonlanma biçimi değil, hafif proteinli sıvı birikimiyle giden morfolojik bir kalıptır.\n- **Apse oluşumu** — Apse, pürülan inflamasyonun bir odakta sınırlanmasıdır. Akut enflamasyonun üç olası sonucundan biri değildir.\n- **Skarlı iyileşme** — Skarlı iyileşme doğru: yaygın tahribatta ya da yenilenemeyen dokular etkilendiğinde hasarlı alan fibröz dokuyla onarılır.\n\n**Cevap: E** — Skarlı iyileşme\n\n**Özet.** Akut enflamasyon tam iyileşme, skarlı iyileşme ya da kronik inflamasyona ilerleme ile sonlanır. Yaygın tahribat ve yenilenemeyen doku fibrozisle, kalıcı etken kronikleşmeyle sonuçlanır.",
+   "ses": "Yaygın doku tahribatında ya da yenilenemeyen dokular etkilendiğinde akut enflamasyonun beklenen sonucu hangisidir?\nA, Tam iyileşme\nBe, Kronik inflamasyona ilerleme\nCe, Seröz efüzyon\nDe, Apse oluşumu\nE, Skarlı iyileşme\nŞimdi seçeneklere tek tek bakalım.\nTam iyileşme, yani rezolüsyon, zararlı etken kısa süreli ve doku hasarı minimal olduğunda gelişir. Doku tamamen normale döner.\nKronik inflamasyona ilerleme, etken ortadan kaldırılamadığında ya da iyileşme süreci bozulduğunda olur. Yaygın tahribatın doğrudan sonucu değildir.\nSeröz efüzyon bir sonlanma biçimi değil, hafif proteinli sıvı birikimiyle giden morfolojik bir kalıptır.\nApse, pürülan inflamasyonun bir odakta sınırlanmasıdır. Akut enflamasyonun üç olası sonucundan biri değildir.\nSkarlı iyileşme doğru. Yaygın tahribatta ya da yenilenemeyen dokular etkilendiğinde hasarlı alan fibröz dokuyla onarılır.\nDoğru cevap E, Skarlı iyileşme\nAkut enflamasyon tam iyileşme, skarlı iyileşme ya da kronik inflamasyona ilerleme ile sonlanır. Yaygın tahribat ve yenilenemeyen doku fibrozisle, kalıcı etken kronikleşmeyle sonuçlanır.",
+   "kelime": 167
+  }
+ ]
+}
