@@ -176,7 +176,7 @@ export function metinParagraflari(md: string): MetinParagraf[] {
   let bolumBaslik = '';
   let tampon: string[] = [];
   const bitir = () => {
-    const t = tampon.join(' ').replace(/\s+/g, ' ').trim();
+    const t = tampon.join('\n').replace(/[ \t]+/g, ' ').trim();
     if (t) {
       paragraflar.push({ t, bolumBasi, bolumBaslik });
       bolumBasi = false;

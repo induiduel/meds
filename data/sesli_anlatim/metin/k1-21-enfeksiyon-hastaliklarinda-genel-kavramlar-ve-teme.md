@@ -3,22 +3,41 @@
 @@ Enfeksiyon ve enfeksiyon hastalığı
 Enfeksiyon, bir mikroorganizmanın konağa girmesi, yerleşmesi ve ya da çoğalmasıdır. Bu tanımın hiçbir yerinde belirti şartı olmadığına dikkat edin. Mikroorganizma konağa girip çoğalsa bile klinik belirti ve bulguların ortaya çıkması zorunlu değildir. Yani enfeksiyon asemptomatik, diğer adıyla subklinik seyredebilir; kişi hasta görünmez ama enfektedir.
 
-Klinik belirti ve bulgular geliştiğinde ise artık enfeksiyon hastalığından söz ederiz. Aradaki ilişkiyi bir küme gibi düşünün: her enfeksiyon hastalığı bir enfeksiyondur, ancak her enfeksiyon, enfeksiyon hastalığı ile sonuçlanmaz. Burası önemli, sınavın klasik tuzağıdır: enfeksiyonu hastalıkla eşitlemek yanlıştır; subklinik tablo da enfeksiyon sayılır.
+Klinik belirti ve bulgular geliştiğinde ise artık enfeksiyon hastalığından söz ederiz.
+Aradaki ilişkiyi bir küme gibi düşünün: her enfeksiyon hastalığı bir enfeksiyondur, ancak her enfeksiyon, enfeksiyon hastalığı ile sonuçlanmaz.
+Burası önemli, sınavın klasik tuzağıdır: enfeksiyonu hastalıkla eşitlemek yanlıştır; subklinik tablo da enfeksiyon sayılır.
 
 @@ Enfeksiyon hastalıklarının genel belirtileri
 Enfeksiyonlar lokal ya da sistemik belirti ve bulgularla seyredebilir ve bu bulguları tutulan sisteme göre gruplarız. Genel bulgular ateş, üşüme titreme, halsizlik ve iştahsızlıktır; hemen her enfeksiyonda görülebilen, özgül olmayan bulgulardır. Kardiyovasküler sistemde taşikardi sık görülür; ağır enfeksiyon ya da sepsiste ise hipotansiyon ve dolaşım bozukluğu gelişir ve bu, tablonun ağırlaştığını gösterir. Solunum sisteminde boğaz ağrısı, burun akıntısı, öksürük, balgam ve dispne, yani nefes darlığı; gastrointestinal sistemde bulantı, kusma, karın ağrısı ve ishal görülür.
 
-Lenfatik sistemde lokal ya da jeneralize lenfadenopati, bazı enfeksiyonlarda ise lenf düğümünün kendisinin iltihabı olan lenfadenit görülür. Hematolojik ve retiküloendotelyal sistemde lökositoz ya da lökopeni, trombositopeni, anemi ve hepatosplenomegali, yani karaciğer ve dalağın birlikte büyümesi saptanabilir. Dikkat edin, lökosit sayısı iki yönde de değişebilir; enfeksiyonu yalnız lökositozla eşleştirmek yanlıştır. Deri ve mukozalarda döküntü, peteşi ya da purpura, vezikül, ülser ve eskar, yani siyah kabuklu nekrotik lezyon görülebilir. Santral sinir sisteminde baş ağrısı, ense sertliği, bilinç değişikliği, fokal nörolojik bulgular ve nöbet ortaya çıkabilir.
+Lenfatik sistemde lokal ya da jeneralize lenfadenopati, bazı enfeksiyonlarda ise lenf düğümünün kendisinin iltihabı olan lenfadenit görülür.
+Hematolojik ve retiküloendotelyal sistemde lökositoz ya da lökopeni, trombositopeni, anemi ve hepatosplenomegali, yani karaciğer ve dalağın birlikte büyümesi saptanabilir.
+Dikkat edin, lökosit sayısı iki yönde de değişebilir; enfeksiyonu yalnız lökositozla eşleştirmek yanlıştır.
+Deri ve mukozalarda döküntü, peteşi ya da purpura, vezikül, ülser ve eskar, yani siyah kabuklu nekrotik lezyon görülebilir.
+Santral sinir sisteminde baş ağrısı, ense sertliği, bilinç değişikliği, fokal nörolojik bulgular ve nöbet ortaya çıkabilir.
 
 @@ Ateş, sepsis ve deri tablolarıyla ilgili çıkmış bilgiler
 Ateş bu genel bulguların başında geldiği için çıkmış sorularda patogenezi de soruldu. Burası önemli: termoregülasyon merkezi anterior hipotalamus ve preoptik alandır, posterior hipotalamus değil; bu merkez periferik ve santral mekanizmalarla denetlenir. Ateş oluşumunda en önemli adım, ateşi tetikleyen prostaglandin E ikinin üretilmesidir. Endojen pirojenler hipotalamusta prostaglandin E iki sentezini artırarak ısı ayar noktasını yükseltir; azaltıp düşürdüğünü söyleyen ifade yanlıştır. İnterlökin bir ve tümör nekroz faktör alfa ise endojen pirojenlerdir. Ayrıca her enfeksiyonda ateş olmaz ve her ateş de enfeksiyon demek değildir.
 
-Burası önemli: ayar noktası yükselince vücut ısıyı artırmaya çalışır. Deride vazokonstriksiyon, titreme, ısı üretiminde artış ve adrenalin ile tiroksin etkisiyle kimyasal ısı üretimi vücut ısısını artıran mekanizmalardır. Deride vazodilatasyon ise tam tersine ısı kaybettirir, yani ısıyı artıran mekanizmalardan biri değildir. Ateşin fizyolojik etkilerinden biri taşikardidir; bazal metabolizma, sıvı ve oksijen ihtiyacı ile solunum hızı azalmaz, artar.
+Burası önemli: ayar noktası yükselince vücut ısıyı artırmaya çalışır.
+Deride vazokonstriksiyon, titreme, ısı üretiminde artış ve adrenalin ile tiroksin etkisiyle kimyasal ısı üretimi vücut ısısını artıran mekanizmalardır.
+Deride vazodilatasyon ise tam tersine ısı kaybettirir, yani ısıyı artıran mekanizmalardan biri değildir.
+Ateşin fizyolojik etkilerinden biri taşikardidir; bazal metabolizma, sıvı ve oksijen ihtiyacı ile solunum hızı azalmaz, artar.
 
-Burası önemli, ateşin yararları da soruldu: ateşte T ve B hücre aktivasyonu, nötrofil migrasyonu, interferon üretimi ve nötrofillerin antibakteriyel madde üretimi artar. Taşikardiye bağlı koroner yetersizlik gelişmesi ise bir yarar değil, zarardır. Ateşli hastaya yaklaşımda titremesi olan hasta örtülür, oksijen desteği ve sıvı replasmanı yapılır, etiyolojiye yönelik tetkikler istenir. Burası önemli: semptomatik soğutmada nabız alınan bölgelere ılık suyla ıslatılmış bez konur; buz kalıpları ve buzlu suyla soğuk uygulama, soğuk su banyosu ya da sıvı kısıtlaması yapılmaz, titreme anında da hasta soyulmaz.
+Burası önemli, ateşin yararları da soruldu: ateşte T ve B hücre aktivasyonu, nötrofil migrasyonu, interferon üretimi ve nötrofillerin antibakteriyel madde üretimi artar.
+Taşikardiye bağlı koroner yetersizlik gelişmesi ise bir yarar değil, zarardır.
+Ateşli hastaya yaklaşımda titremesi olan hasta örtülür, oksijen desteği ve sıvı replasmanı yapılır, etiyolojiye yönelik tetkikler istenir.
+Burası önemli: semptomatik soğutmada nabız alınan bölgelere ılık suyla ıslatılmış bez konur; buz kalıpları ve buzlu suyla soğuk uygulama, soğuk su banyosu ya da sıvı kısıtlaması yapılmaz, titreme anında da hasta soyulmaz.
 
-Sepsisteki hipotansiyon ve dolaşım bozukluğu ile ilgili skorlar da sınavda karşınıza çıktı. Burası önemli: sofa skorunda kardiyovasküler sistem yani hipotansiyon, koagülasyon yani trombositopeni, solunum yani arteriyel oksijen basıncının solunan oksijen oranına bölümü ve böbrek fonksiyonu yani kreatinin ya da idrar çıkışı irdelenir; ateş bu kriterlerden değildir. Buna karşılık sistemik inflamatuvar yanıt sendromu kriterleri ateş ya da hipotermi, takipne, lökositoz ve taşikardidir; arteriyel hipotansiyon bu sendromun kriterleri arasında yer almaz. Burası önemli: bakteriyel enfeksiyonu viral ve diğer nedenlerden ayırmada ce reaktif proteinle birlikte bakılan ve doğruluğu daha yüksek akut faz belirteci prokalsitonindir.
-Deri bulgularıyla bağlantılı birkaç tablo da çıkmış sorularda geldi. Burası önemli: yüksek ateş, bulantı, kusma, şuur bulanıklığı ve şiddetli ağrıyla gelen, bacağında şişlik, kızarıklık, ısı artışı ve palpasyonda tahta sertliği olan hastada en olası tanı nekrotizan fasiittir; selülit, erizipel, karbonkül ya da deri apsesi değildir. Yeşil tırnak sendromunun etkeni ise Psödomonas aeruginozadır. Burası önemli, gazlı gangren etkeni Klostridyum türlerinin en önemli toksini, lesitinaz ve sfingomiyelinaz aktivitesi olan bir enzim olan alfa toksindir. Spontan, yani travmatik olmayan gazlı gangrende nötropeni, intestinal malignite ve diyabet risk faktörleridir; hipertansiyon ise risk faktörlerinden biri değildir.
+Sepsisteki hipotansiyon ve dolaşım bozukluğu ile ilgili skorlar da sınavda karşınıza çıktı.
+Burası önemli: sofa skorunda kardiyovasküler sistem yani hipotansiyon, koagülasyon yani trombositopeni, solunum yani arteriyel oksijen basıncının solunan oksijen oranına bölümü ve böbrek fonksiyonu yani kreatinin ya da idrar çıkışı irdelenir; ateş bu kriterlerden değildir.
+Buna karşılık sistemik inflamatuvar yanıt sendromu kriterleri ateş ya da hipotermi, takipne, lökositoz ve taşikardidir; arteriyel hipotansiyon bu sendromun kriterleri arasında yer almaz.
+Burası önemli: bakteriyel enfeksiyonu viral ve diğer nedenlerden ayırmada ce reaktif proteinle birlikte bakılan ve doğruluğu daha yüksek akut faz belirteci prokalsitonindir.
+Deri bulgularıyla bağlantılı birkaç tablo da çıkmış sorularda geldi.
+Burası önemli: yüksek ateş, bulantı, kusma, şuur bulanıklığı ve şiddetli ağrıyla gelen, bacağında şişlik, kızarıklık, ısı artışı ve palpasyonda tahta sertliği olan hastada en olası tanı nekrotizan fasiittir; selülit, erizipel, karbonkül ya da deri apsesi değildir.
+Yeşil tırnak sendromunun etkeni ise Psödomonas aeruginozadır.
+Burası önemli, gazlı gangren etkeni Klostridyum türlerinin en önemli toksini, lesitinaz ve sfingomiyelinaz aktivitesi olan bir enzim olan alfa toksindir.
+Spontan, yani travmatik olmayan gazlı gangrende nötropeni, intestinal malignite ve diyabet risk faktörleridir; hipertansiyon ise risk faktörlerinden biri değildir.
 
 @@ Patojen, nonpatojen ve belirleyici üç faktör
 Hastalık oluşturan mikroorganizmalara patojen, hastalık oluşturmayan zararsız mikroorganizmalara ise nonpatojen denir. Ancak bir enfeksiyonun gelişip gelişmeyeceği yalnızca mikroba bağlı değildir. Burası önemli, enfeksiyonun gelişimini belirleyen başlıca üç faktör vardır: mikroorganizmanın virülansı, yani hastalık yapma gücü; vücuda giren mikroorganizma miktarı, yani enfeksiyon dozu; ve konağın duyarlılığı, yani bağışıklık durumu. Bu üçü bir denge gibi çalışır. Virülansı yüksek bir etkende düşük doz bile yeterli olabilir; savunması zayıf bir konakta ise daha az virülan bir etken de hastalık yapabilir. Sonucu bu üç faktör birlikte belirler.
@@ -26,161 +45,305 @@ Hastalık oluşturan mikroorganizmalara patojen, hastalık oluşturmayan zarars�
 @@ Mikroorganizmaların sınıflandırılması
 Mikroorganizmaları hücresel yapılarına göre üç ana gruba ayırıyoruz. 1. grup aselüler, yani hücresiz ajanlardır: prionlar, viroidler ve virüsler. Bunlarda hücre ve hücre zarı yoktur, ancak canlı hücre içinde çoğalabilirler. Hücresel dal ise çekirdek zarı ve zarlı organeli olmayan prokaryotlar ile gerçek çekirdekli, zarlı organelli ökaryotlar olarak ikiye ayrılır.
 
-Tek hücreli prokaryotlar bakteriler, klamidyalar, mikoplazmalar ve riketsiyalardır. Tek hücreli ökaryotlar maya mantarlar ve protozoonlardır. Çok hücreliler ise küf mantarlar, helmintler ve artropodlardır; bitki, hayvan ve insan da bu gruptadır. Dikkat edin, mantarlar iki yerde geçer: maya tek hücreli, küf çok hücreli ökaryottur. Klamidya, mikoplazma ve riketsiya da virüs değil, prokaryottur.
+Tek hücreli prokaryotlar bakteriler, klamidyalar, mikoplazmalar ve riketsiyalardır.
+Tek hücreli ökaryotlar maya mantarlar ve protozoonlardır.
+Çok hücreliler ise küf mantarlar, helmintler ve artropodlardır; bitki, hayvan ve insan da bu gruptadır.
+Dikkat edin, mantarlar iki yerde geçer: maya tek hücreli, küf çok hücreli ökaryottur.
+Klamidya, mikoplazma ve riketsiya da virüs değil, prokaryottur.
 
-Burası önemli, bu soru çıkmış sorularda defalarca tekrarlandı: verilen seçenekler arasında prokaryot olan Nayseriya gonoredir, çünkü bir bakteridir. HPV, yani insan papilloma virüsü aselüler bir virüstür; Kandida albikans maya mantarı, Trikomonas vajinalis bir protozoon, Sarkoptes skabiei ise bir artropoddur. Bunların hiçbiri prokaryot değildir.
+Burası önemli, bu soru çıkmış sorularda defalarca tekrarlandı: verilen seçenekler arasında prokaryot olan Nayseriya gonoredir, çünkü bir bakteridir.
+HPV, yani İnsan papilloma virüsü (HPV) (HPV) aselüler bir virüstür; Kandida albikans maya mantarı, Trikomonas vajinalis bir protozoon, Sarkoptes skabiei ise bir artropoddur.
+Bunların hiçbiri prokaryot değildir.
 
 @@ Prionlar
 Prionlar küçük enfeksiyöz proteinlerdir ve aselüler ajanların en sıra dışı üyesidir. Tamamen protein yapısındadırlar, DNA ya da RNA gibi nükleik asit içermezler ve en küçük virüslerden bile en az yüz kat küçüktürler. İnsanlardaki prion hastalıkları Kroyçfeld Yakob hastalığı, deli dana hastalığı, yani sığırlardaki prion hastalığının insana geçişiyle ilişkili tablo, ölümcül ailevi uykusuzluk ve Kuru'dur. Slayttaki görseller de prionun beyni hedef aldığını vurgular.
 
-Prionlar kronik, progresif ve dejeneratif tipte merkezi sinir sistemi bozukluklarına neden olur. Fiziksel ve kimyasal inaktivasyona dirençlidirler, bu yüzden dekontaminasyonları zordur. Bir paradoksa da dikkat edin: nükleik asit içermezler, ancak replike olabilirler. İnsan prion hastalıklarının ortak özellikleri şunlardır: majör patolojik bulgular merkezi sinir sistemindedir, inkübasyon dönemleri uzundur, örneğin Kuru hastalığında otuz yıl, ve seyir progresif ve fataldir. Burası önemli: bu üçlüyü, yani merkezi sinir sistemi tutulumu, uzun inkübasyon ve fatal seyri birlikte hatırlayın.
+Prionlar kronik, progresif ve dejeneratif tipte merkezi sinir sistemi bozukluklarına neden olur.
+Fiziksel ve kimyasal inaktivasyona dirençlidirler, bu yüzden dekontaminasyonları zordur.
+Bir paradoksa da dikkat edin: nükleik asit içermezler, ancak replike olabilirler.
+İnsan prion hastalıklarının ortak özellikleri şunlardır: majör patolojik bulgular merkezi sinir sistemindedir, inkübasyon dönemleri uzundur, örneğin Kuru hastalığında 30 yıl, ve seyir progresif ve fataldir.
+Burası önemli: bu üçlüyü, yani merkezi sinir sistemi tutulumu, uzun inkübasyon ve fatal seyri birlikte hatırlayın.
 
-Burası önemli, prionlarla ilgili dört ifadenin dördü de doğru kabul edildi: prionlar filtre edilebilen ajanlardır, onlara karşı inflamatuvar yanıt gelişmez, serolojik tanı konulamaz ve nükleik asitleri bulunmaz. Bunun nedeni, patolojik prion proteininin konağın kendi proteininin hatalı katlanmış bir biçimi olmasıdır; bağışıklık sistemi onu yabancı olarak algılamaz ve antikor yanıtı oluşmaz.
+Burası önemli, prionlarla ilgili dört ifadenin dördü de doğru kabul edildi: prionlar filtre edilebilen ajanlardır, onlara karşı inflamatuvar yanıt gelişmez, serolojik tanı konulamaz ve nükleik asitleri bulunmaz.
+Bunun nedeni, patolojik prion proteininin konağın kendi proteininin hatalı katlanmış bir biçimi olmasıdır; bağışıklık sistemi onu yabancı olarak algılamaz ve antikor yanıtı oluşmaz.
 
 @@ Enfeksiyon etkenlerinin ana grupları
 Klinik pratikte bakterileri biçim ve biyolojik özelliklerine göre beş grupta örnekleriz. Koklar Stafilokokus, Streptokokus, Enterokokus ve Nayseriyadır. Basiller Eşerişya koli, Klebsiella türleri, Psödomonas aeruginoza ve Mikobakteryum tüberkülozistir. Kıvrık ya da spiral bakteriler Vibriyo, Kampilobakter ve Helikobakterdir. Spiroketler Treponema, Borelya ve Leptospiradır. Atipik bakteriler ise Mikoplazma, Klamidya ya da Klamidofila ve Riketsiyadır. Dikkat edin, Helikobakter ve Kampilobakter kıvrık bakteridir ama spiroket değildir.
 
-Virüsleri taşıdıkları genetik materyalin türüne göre ikiye ayırırız. DNA virüsleri herpesvirüsler, adenovirüs ve parvovirüs gibi virüslerdir; uçuk etkeni herpes simpleks virüsü de bu ailededir. RNA virüsleri ise influenza, sars koronavirüs iki, HIV, kızamık, kabakulak ve kuduz virüsleridir. Bir virüsü tanımlarken ilk sorulan soru genomunun DNA mı RNA mı olduğudur.
+Virüsleri taşıdıkları genetik materyalin türüne göre ikiye ayırırız.
+DNA virüsleri herpesvirüsler, adenovirüs ve parvovirüs gibi virüslerdir; uçuk etkeni herpes simpleks virüsü de bu ailededir.
+RNA virüsleri ise influenza, sars koronavirüs iki, HIV, kızamık, kabakulak ve kuduz virüsleridir.
+Bir virüsü tanımlarken ilk sorulan soru genomunun DNA mı RNA mı olduğudur.
 
-Mantarları üç grupta toplarız: Kandida ve Kriptokokus gibi mayalar, Aspergillus ve Mukorales gibi küfler, ve koşullara göre farklı morfolojide bulunabilen dimorfik mantarlar. Parazitler ise protozoonlar, yani Plazmodyum, Entamöba, Giardiya, Toksoplazma ve Trikomonas; nematod, sestod ve trematodlardan oluşan helmintler; ve konağın vücut yüzeyinde yaşayan Sarkoptes skabiei ve bitler gibi ektoparazitlerdir. Uyuz, bit, kene ve sivrisinek gibi canlılar ayrıca vektör olarak başka etkenleri de taşır.
+Mantarları üç grupta toplarız: Kandida ve Kriptokokus gibi mayalar, Aspergillus ve Mukorales gibi küfler, ve koşullara göre farklı morfolojide bulunabilen dimorfik mantarlar.
+Parazitler ise protozoonlar, yani Plazmodyum, Entamöba, Giardiya, Toksoplazma ve Trikomonas; nematod, sestod ve trematodlardan oluşan helmintler; ve konağın vücut yüzeyinde yaşayan Sarkoptes skabiei ve bitler gibi ektoparazitlerdir.
+Uyuz, bit, kene ve sivrisinek gibi canlılar ayrıca vektör olarak başka etkenleri de taşır.
 
 @@ Virüslerin yapısı ve biyolojisi
 Virüste genetik bilgiyi taşıyan nükleik asit, RNA ya da DNA'dır, ikisi birlikte değil. Bu nükleik asit kapsid adı verilen protein bir kılıfla çevrilidir ve kapsid, kapsomer denen alt birimlerden oluşur. Nükleik asit ile kapsidin oluşturduğu bütün yapıya nükleokapsid denir. Bazı virüslerde kapsidi çevreleyen glikoprotein ya da lipoprotein yapıda bir zarf bulunur. Slayttaki çizim iki tipi yan yana gösterir: yalnız nükleokapsidden oluşan çıplak virüs ve yüzeyinde çıkıntılar taşıyan zarflı virüs. Zarfın yalnız bazı virüslerde bulunduğuna dikkat edin; bu ifade sınavda sık çevrilir.
 
-Virüsler yalnızca canlı hücrelerde çoğalır; enfekte ettikleri hücrenin sistemlerini kullanarak replike olurlar. Yalnızca elektron mikroskobuyla görülebilirler, ışık mikroskobuyla görülemezler. Laboratuvarda da yapay besiyerinde değil, ancak canlı sistemlerde, yani embriyonlu yumurta, hücre kültürü ya da deney hayvanında üretilirler. Ayrıca bakterileri tutan filtrelerden geçebilirler. Slayttaki şema bir retrovirüs olan HIV'yi örnekler: yüzeyde ge pe yüz yirmi ve ge pe kırk bir glikoproteinlerini taşıyan lipid zarf, içte matriks, kapsid, viral RNA genomu ile revers transkriptaz, integraz ve proteaz enzimleri yer alır.
+Virüsler yalnızca canlı hücrelerde çoğalır; enfekte ettikleri hücrenin sistemlerini kullanarak replike olurlar.
+Yalnızca elektron mikroskobuyla görülebilirler, ışık mikroskobuyla görülemezler.
+Laboratuvarda da yapay besiyerinde değil, ancak canlı sistemlerde, yani embriyonlu yumurta, hücre kültürü ya da deney hayvanında üretilirler.
+Ayrıca bakterileri tutan filtrelerden geçebilirler.
+Slayttaki şema bir retrovirüs olan HIV'yi örnekler: yüzeyde ge pe yüz yirmi ve ge pe kırk bir glikoproteinlerini taşıyan lipid zarf, içte matriks, kapsid, viral RNA genomu ile revers transkriptaz, integraz ve proteaz enzimleri yer alır.
 
-Burası önemli, viral replikasyonun basamak sırası soruldu: önce hedef hücrenin tanınması ve tutunma, sonra penetrasyon ve soyulma, ardından sentez, en son da toplanma ve salınma gelir. Burası önemli: DNA virüsleri genellikle konak hücre çekirdeğinde replike olur; replikasyonu konak hücrenin sitoplazmasında gerçekleşen DNA virüsü pox virüstür.
+Burası önemli, viral replikasyonun basamak sırası soruldu: önce hedef hücrenin tanınması ve tutunma, sonra penetrasyon ve soyulma, ardından sentez, en son da toplanma ve salınma gelir.
+Burası önemli: DNA virüsleri genellikle konak hücre çekirdeğinde replike olur; replikasyonu konak hücrenin sitoplazmasında gerçekleşen DNA virüsü pox virüstür.
 
 @@ Virüslerin neden olduğu hastalıklar ve klinik grupları
 Virüsler geniş bir hastalık yelpazesi oluşturur. Kızamık, kızamıkçık, kabakulak, çocuk felci yani poliomiyelit ve suçiçeği çocukluk çağı hastalıklarıdır. Kuduz, HIV enfeksiyonu ve edinsel immün yetmezlik sendromu, herpes simpleks enfeksiyonu yani uçuk, viral hepatitler A, B, C, D ve E, Ebola ve sars, yani şiddetli akut solunum sendromu da viral hastalıklardır. Dikkat edin, nezle ile grip ayrı tablolardır: soğuk algınlığı ya da nezlenin etkeni rinovirüs, gribin etkeni influenzadır.
 
-Klinik önemi olan virüsler yaptıkları enfeksiyonlara göre de sınıflandırılır. Alt solunum yolu enfeksiyonlarında influenza, parainfluenza, respiratuvar sinsisyal virüs ve adenovirüs; enterik enfeksiyonlarda rotavirüs, astrovirüs ve kalisivirüs; ürogenital enfeksiyonda herpes simpleks virüsü Tip 2 ve HPV; hepatitte hepatit A, B, C, D ve E virüsleri öne çıkar. Ateşli öksürük ve dispnede önce alt solunum yolu virüsleri, ishalde ise enterik virüsler, özellikle rotavirüs düşünülür.
+Klinik önemi olan virüsler yaptıkları enfeksiyonlara göre de sınıflandırılır.
+Alt solunum yolu enfeksiyonlarında influenza, parainfluenza, respiratuvar sinsisyal virüs ve adenovirüs; enterik enfeksiyonlarda rotavirüs, astrovirüs ve kalisivirüs; ürogenital enfeksiyonda herpes simpleks virüsü Tip 2 ve HPV; hepatitte hepatit A, B, C, D ve E virüsleri öne çıkar.
+Ateşli öksürük ve dispnede önce alt solunum yolu virüsleri, ishalde ise enterik virüsler, özellikle rotavirüs düşünülür.
 
-Tablonun 2. kısmı virüsleri tropizm ve uzun vadeli sonuçlarına göre gruplar. Onkojenik, yani tümör virüslerinden DNA tümör virüsleri HPV, EBV, insan herpes virüsü sekiz ve hepatit be virüsüdür; RNA tümör virüsleri ise retrovirüslerdir, hepatit ce virüsü derste soru işaretiyle, yani tartışmalı olarak gösterilmiştir. Nörotropik virüsler poliovirüs, kabakulak virüsü, kuduz virüsü, arbovirüsler ve herpes simpleks virüsü tip birdir. Perinatal enfeksiyon etkenleri ise rubella, sitomegalovirüs, hepatit be virüsü, HIV, herpes simpleks virüsü ve varisella zoster virüsüdür. Hepatit be virüsünün hem onkojenik hem perinatal listede yer aldığına dikkat edin.
+Tablonun 2. kısmı virüsleri tropizm ve uzun vadeli sonuçlarına göre gruplar.
+Onkojenik, yani tümör virüslerinden DNA tümör virüsleri HPV, EBV, İnsan herpes virüsü 8 (HHV-8) ve Hepatit B virüsüdür; RNA tümör virüsleri ise retrovirüslerdir, Hepatit C virüsü (HCV) derste soru işaretiyle, yani tartışmalı olarak gösterilmiştir.
+Nörotropik virüsler poliovirüs, kabakulak virüsü, kuduz virüsü, arbovirüsler ve herpes simpleks virüsü tip birdir.
+Perinatal enfeksiyon etkenleri ise rubella, sitomegalovirüs, Hepatit B virüsü (HBV), HIV, herpes simpleks virüsü ve Varisella zoster virüsüdür.
+Hepatit be virüsünün hem onkojenik hem perinatal listede yer aldığına dikkat edin.
 
-Burası önemli, adenovirüs çıkmış sorularda iki kez soruldu: çocuk yaş grubunda akut febril farenjit, faringokonjonktival ateş, hemorajik sistit ve ishal tablolarının etkeni adenovirüstür. Burası önemli: ekovirüs, koksaki virüs, poliovirüs ve rinovirüs pikornavirüs ailesindendir; koronavirüs bu ailede değildir. Koksaki A virüsleri herpanjina, el ayak ağız hastalığı, akut hemorajik konjonktivit ve infantil diyarenin etkenleri arasındadır; plörodini, yani Bornholm hastalığı ise koksaki A virüslerinin yaptığı tablolardan sayılmaz.
+Burası önemli, adenovirüs çıkmış sorularda 2 kez soruldu: çocuk yaş grubunda akut febril farenjit, faringokonjonktival ateş, hemorajik sistit ve ishal tablolarının etkeni adenovirüstür.
+Burası önemli: ekovirüs, koksaki virüs, poliovirüs ve rinovirüs pikornavirüs ailesindendir; koronavirüs bu ailede değildir.
+Koksaki A virüsleri herpanjina, el ayak ağız hastalığı, akut hemorajik konjonktivit ve infantil diyarenin etkenleri arasındadır; plörodini, yani Bornholm hastalığı ise koksaki A virüslerinin yaptığı tablolardan sayılmaz.
 
 @@ Bakterilerin sınıflandırılması ve hücre yapısı
 Bakteriler büyüklük, morfoloji, boyanma özellikleri, hareket, oksijen kullanımı ile kapsül ya da spor varlığına göre sınıflandırılır. Işık ya da elektron mikroskobunda üç biçimde görülürler: yuvarlak olan kok, çomak biçimli basil ve sarmal biçimli spiral. Virüslerden farklı olarak ışık mikroskobunda da görülebildiklerine dikkat edin. Boyanma özelliklerine göre gram pozitif ya da gram negatif olarak ayrılırlar; gram boyamada mor kalanlar gram pozitiftir. Oksijen kullanımı ve toleransına göre de oksijen varlığında üreyen aerop, oksijensiz ortamda üreyen anaerop ve her iki koşulda üreyebilen fakültatif anaerop olabilirler.
 
-Slayttaki görseller bakterinin iki tanı yüzünü gösterir: kanlı agar plağında çizgi ekimle elde edilmiş krem beyaz, yuvarlak koloniler ve gram boyamada mor boyanan, kümeler oluşturan yuvarlak hücreler, yani gram pozitif koklar. Kanlı agar gibi cansız besiyerinde üreme bakterinin özelliğidir; virüsler burada üremez.
+Slayttaki görseller bakterinin iki tanı yüzünü gösterir: kanlı agar plağında çizgi ekimle elde edilmiş krem beyaz, yuvarlak koloniler ve gram boyamada mor boyanan, kümeler oluşturan yuvarlak hücreler, yani gram pozitif koklar.
+Kanlı agar gibi cansız besiyerinde üreme bakterinin özelliğidir; virüsler burada üremez.
 
-Bakteri hücresinin temel bileşenleri sitoplazma, sitoplazmik membran, hücre duvarı ve genomdur. Hücre duvarı mikoplazma dışında tüm prokaryotlarda vardır ve bakterinin gram boyanma özelliğinden sorumludur. Genom, bakterinin ortasında tek bir kromozom, yani çift iplikli çembersel DNA'dır. Şemada ayrıca protein sentezi yapan ribozomlar, membranın içe kıvrımı olan mezozom ve kromozom dışındaki küçük DNA parçası olan plazmid işaretlenmiştir. Her bakteride bulunmayan ek yapılar ise kapsül, flagella, pili ya da fimbria ve spordur. Kapsül hücre duvarının dışındaki örtüdür ve bakteriyi konak savunmasından korur; flagella yani kamçı hareket organelidir; pili yüzeylere tutunmada rol oynayan ince uzantılardır; spor ise olumsuz koşullara dayanıklı formdur.
+Bakteri hücresinin temel bileşenleri sitoplazma, sitoplazmik membran, hücre duvarı ve genomdur.
+Hücre duvarı mikoplazma dışında tüm prokaryotlarda vardır ve bakterinin gram boyanma özelliğinden sorumludur.
+Genom, bakterinin ortasında tek 1 kromozom, yani çift iplikli çembersel DNA'dır.
+Şemada ayrıca protein sentezi yapan ribozomlar, membranın içe kıvrımı olan mezozom ve kromozom dışındaki küçük DNA parçası olan plazmid işaretlenmiştir.
+Her bakteride bulunmayan ek yapılar ise kapsül, flagella, pili ya da fimbria ve spordur.
+Kapsül hücre duvarının dışındaki örtüdür ve bakteriyi konak savunmasından korur; flagella yani kamçı hareket organelidir; pili yüzeylere tutunmada rol oynayan ince uzantılardır; spor ise olumsuz koşullara dayanıklı formdur.
 
 @@ Klamidyalar ve mikoplazmalar
 Atipik bakterilerin ilk üyesi klamidyalardır. Klamidya pnömoni farenjit, sinüzit, bronşit ve pnömoni yapar. Chlamydia trachomatis neonatal enfeksiyon, lenfogranuloma venereum, üretrit ve pelvik inflamatuvar hastalık yapar. Klamidya psitasi ise psittakoz etkenidir. Slayttaki akciğer grafisinde iki akciğerde, özellikle alt ve orta zonlarda yamalı pnömonik infiltrasyonlar görülür.
 
-Klamidyaları ayıran üç biyolojik özellik vardır. Hücre duvarı vardır, ancak peptidoglikan tabaka yoktur. Ate pe sentezleyemez ve protein sentezi için konağın ate pe'sine ihtiyaç duyar; bu yüzden enerji paraziti olarak anılır. Ve zorunlu hücre içi mikroorganizmadır. Virüsler gibi zorunlu hücre içidir, ama virüslerden farklı olarak prokaryot hücre yapısı ve hücre duvarı taşır.
+Klamidyaları ayıran üç biyolojik özellik vardır.
+Hücre duvarı vardır, ancak peptidoglikan tabaka yoktur.
+Ate pe sentezleyemez ve protein sentezi için konağın ate pe'sine ihtiyaç duyar; bu yüzden enerji paraziti olarak anılır.
+Ve zorunlu hücre içi mikroorganizmadır.
+Virüsler gibi zorunlu hücre içidir, ama virüslerden farklı olarak prokaryot hücre yapısı ve hücre duvarı taşır.
 
-Mikoplazmalarda ise Mikoplazma pnömoni atipik pnömoni, Mikoplazma hominis ve Mikoplazma genitalyum üretrit, yani genitoüriner enfeksiyon yapar. Burası önemli, mikoplazma ile klamidya sık karıştırılır: mikoplazmada hücre duvarı yoktur, bu yüzden gram ile boyanmaz ve duvarı hedefleyen beta laktam antibiyotiklere dirençlidir. Hücre zarında kolesterol vardır ve yapay besiyerinde üretilebilir, yani zorunlu hücre içi değildir. Kısacası hücre duvarı yokluğu mikoplazmaya, enerji parazitliği klamidyaya aittir. Slayttaki grafi ve tomografide bir akciğer alanında yoğun konsolidasyon ve çevresinde buzlu cam, yamalı infiltrasyonlar görülür.
+Mikoplazmalarda ise Mikoplazma pnömoni atipik pnömoni, Mikoplazma hominis ve Mikoplazma genitalyum üretrit, yani genitoüriner enfeksiyon yapar.
+Burası önemli, mikoplazma ile klamidya sık karıştırılır: mikoplazmada hücre duvarı yoktur, bu yüzden gram ile boyanmaz ve duvarı hedefleyen beta laktam antibiyotiklere dirençlidir.
+Hücre zarında kolesterol vardır ve yapay besiyerinde üretilebilir, yani zorunlu hücre içi değildir.
+Kısacası hücre duvarı yokluğu mikoplazmaya, enerji parazitliği klamidyaya aittir.
+Slayttaki grafi ve tomografide bir akciğer alanında yoğun konsolidasyon ve çevresinde buzlu cam, yamalı infiltrasyonlar görülür.
 
 @@ Riketsiyalar
 Riketsiyalar iki gruba ayrılır. Benekli ateş grubunda Riketsiya riketsi Kayalık Dağlar benekli ateşini, Riketsiya konori ise Akdeniz benekli ateşini yapar. Burası önemli: Akdeniz benekli ateşi Türkiye açısından önemlidir ve karakteristik bulgusu taş nuar, yani inokülasyon eskarıdır. Bu, etkenin deriye girdiği yerde, eritemli bir halenin ortasında oluşan koyu, kabuklu, nekrotik merkezli küçük lezyondur ve genel bulgulardaki eskarın riketsiyal örneğidir.
 
-Tifüs grubunda Riketsiya provazeki epidemik tifüsü, Riketsiya tifi ise endemik tifüsü yapar. Tüm riketsiyalar zorunlu hücre içidir, kok ya da basil biçiminde görülebilen pleomorfik mikroorganizmalardır ve çoğu artropodlarla insanlara bulaşır. Böylece üç atipik bakterinin imzası ortaya çıkar: klamidyada ate pe bağımlılığı, mikoplazmada duvar yokluğu, riketsiyada artropodla bulaş.
+Tifüs grubunda Riketsiya provazeki epidemik tifüsü, Riketsiya tifi ise endemik tifüsü yapar.
+Tüm riketsiyalar zorunlu hücre içidir, kok ya da basil biçiminde görülebilen pleomorfik mikroorganizmalardır ve çoğu artropodlarla insanlara bulaşır.
+Böylece üç atipik bakterinin imzası ortaya çıkar: klamidyada ate pe bağımlılığı, mikoplazmada duvar yokluğu, riketsiyada artropodla bulaş.
 
 @@ Mantarlar ve mikozlar
 Ökaryotlar mantarlar, yani funguslar, algler ve protozoonlardır. İnsanlardaki mantar hastalıkları tutulumun derinliğine göre sınıflanır. Yüzeyel mikozlarda Malassezya türleri pitiriyazis versikolor yapar. Kutanöz mikozlarda dermatofitler, yani Trikofiton, Mikrosporum ve Epidermofiton deri, saç ve tırnak enfeksiyonları yapar. Subkutan mikozlar sporotrikoz ve kromoblastomikozdur. Sistemik, yani derin mikozlar ise ikiye ayrılır: endemik ya da primer olanlar Histoplazma, Blastomises ve Koksidioides; fırsatçı olanlar ise Kandida, Aspergillus, Kriptokokus, Mukorales ve Pnömosistis jirovesidir. Burası önemli, subkutan mikozdan sporotrikozun etkeni soruldu: travma yoluyla vücuda girip lenfatiklerin izlediği yol boyunca ağrısız subkutan nodüllere ve ülsere lezyonlara yol açan, Gomori metenamin gümüşleme boyasında oval ya da puro şeklinde maya formu görülen etken Sporotriks şenkidir.
 
-Burası önemli, sistemik mikoz etkeni dimorfik mantarlarla ilgili yanlış ifade iki kez soruldu: bu mantarlar insandan insana bulaşmaz. Doğru olanlar şunlardır: dünyada belli coğrafi bölgelerle sınırlı endemik enfeksiyonlara neden olurlar, sıklıkla doğadan solunum yoluyla alınıp akciğerlerde enfeksiyon yaparlar, hem sağlıklı hem immünsüprese kişilerde hastalık yaparlar ve amfoterisin B genellikle etkilidir. Dimorfik mantarlar doğada küf, vücut sıcaklığında dokuda maya formunda bulunur.
+Burası önemli, sistemik mikoz etkeni dimorfik mantarlarla ilgili yanlış ifade 2 kez soruldu: bu mantarlar insandan insana bulaşmaz.
+Doğru olanlar şunlardır: dünyada belli coğrafi bölgelerle sınırlı endemik enfeksiyonlara neden olurlar, sıklıkla doğadan solunum yoluyla alınıp akciğerlerde enfeksiyon yaparlar, hem sağlıklı hem immünsüprese kişilerde hastalık yaparlar ve amfoterisin B genellikle etkilidir.
+Dimorfik mantarlar doğada küf, vücut sıcaklığında dokuda maya formunda bulunur.
 
-Mayalar tek hücreli ökaryotik mantarlardır; örnekleri Kandida albikans ve Kriptokokus neoformanstır. Oval ya da yuvarlak görünürler ve çoğu tomurcuklanma ile ürer. Slayttaki görsellerde krem beyaz, parlak maya kolonileri, mor boyanan oval hücrelerden çıkan tomurcuklar ve dil yüzeyini kaplayan beyaz sarımsı plaklarla oral kandidiyaz görülür. Küfler ise çok hücreli ökaryotik mantarlardır; örnek Aspergillus fumigatustur. Kültürde ortası koyu yeşil gri, kenarları beyaz, pamuksu kadifemsi geniş koloniler yapar; mikroskopide uzun bir sap olan konidiyoforun ucundaki şişkin baştan zincirler halinde dökülen yuvarlak sporlar, yani konidyalar görülür.
+Mayalar tek hücreli ökaryotik mantarlardır; örnekleri Kandida albikans ve Kriptokokus neoformanstır.
+Oval ya da yuvarlak görünürler ve çoğu tomurcuklanma ile ürer.
+Slayttaki görsellerde krem beyaz, parlak maya kolonileri, mor boyanan oval hücrelerden çıkan tomurcuklar ve dil yüzeyini kaplayan beyaz sarımsı plaklarla oral kandidiyaz görülür.
+Küfler ise çok hücreli ökaryotik mantarlardır; örnek Aspergillus fumigatustur.
+Kültürde ortası koyu yeşil gri, kenarları beyaz, pamuksu kadifemsi geniş koloniler yapar; mikroskopide uzun bir sap olan konidiyoforun ucundaki şişkin baştan zincirler halinde dökülen yuvarlak sporlar, yani konidyalar görülür.
 
-Mantar laboratuvarıyla ilgili üç bilgi de soruldu. Burası önemli: zigospor eşeyli bir spordur; makrokonidya, mikrokonidya, blastospor ve artrospor ise eşeysizdir. Burası önemli: mantarların direkt, boyasız mikroskobik incelemesinde %10 potasyum hidroksit çözeltisi kullanılır. Burası önemli: bakteri üremesini engellemek için kloramfenikol, saprofitik mantarları engellemek için sikloheksimid içeren, mantarların kültür ve izolasyonunda kullanılan besiyeri Saburo dekstroz agardır.
+Mantar laboratuvarıyla ilgili üç bilgi de soruldu.
+Burası önemli: zigospor eşeyli bir spordur; makrokonidya, mikrokonidya, blastospor ve artrospor ise eşeysizdir.
+Burası önemli: mantarların direkt, boyasız mikroskobik incelemesinde %10 potasyum hidroksit çözeltisi kullanılır.
+Burası önemli: bakteri üremesini engellemek için kloramfenikol, saprofitik mantarları engellemek için sikloheksimid içeren, mantarların kültür ve izolasyonunda kullanılan besiyeri Saburo dekstroz agardır.
 
 @@ Protozoonlar
 Protozoonlar tek hücreli, hücre duvarı olmayan ökaryotik mikroorganizmalardır. Hücre duvarsızlıkları onları mantarlardan, gerçek çekirdekleri bakterilerden ayırır. Neden oldukları hastalıklar şunlardır: sıtma yani malarya etkeni Plazmodyum türleri; toksoplazmoz etkeni Toksoplazma gondi; kutanöz leişmanyazis yani şark çıbanı etkeni Leişmanya türleri; amebiyaz yani amipli dizanteri etkeni Entamöba histolitika; trikomoniyaz etkeni Trikomonas vajinalis; ve giardiyaz etkeni Giardiya duodenalis, diğer adıyla Giardiya lamblia.
 
-Mikroskobik görüntülerde Plazmodyum falsiparum kan yaymasında eritrositlerin içinde küçük halka biçimli formlar olarak, bazen bir eritrositte birden fazla halka halinde görülür; diğer görüntüdeki hilal ya da muz biçimli form gametosittir. Giardiya lamblia armut biçimli, iki çekirdekli, kamçılı bir trofozoittir ve çekirdekleri bir yüz görünümü verir. Leişmanya donovani iğ biçimli, kamçılı formlar halinde görülür. Entamöba histolitika trofozoitlerinde ise eritrosit fagositozu ve çekirdekte küçük, merkezi yerleşimli karyozom tanısaldır.
+Mikroskobik görüntülerde Plazmodyum falsiparum kan yaymasında eritrositlerin içinde küçük halka biçimli formlar olarak, bazen bir eritrositte birden fazla halka halinde görülür; diğer görüntüdeki hilal ya da muz biçimli form gametosittir.
+Giardiya lamblia armut biçimli, iki çekirdekli, kamçılı bir trofozoittir ve çekirdekleri bir yüz görünümü verir.
+Leişmanya donovani iğ biçimli, kamçılı formlar halinde görülür.
+Entamöba histolitika trofozoitlerinde ise eritrosit fagositozu ve çekirdekte küçük, merkezi yerleşimli karyozom tanısaldır.
 
-Burası önemli, sıtmayla ilgili çıkmış bilgiler: Türkiye artık sıtma için endemik bir ülke değildir, Türkiye'de iki bin on bir yılında sıtma elimine edilmiştir. Hem ülkemizde hem dünyada en sık görülen sıtma etkeni Plazmodyum vivakstır. Sıtmada üşüme, titreme ve yüksek ateş, hemolize bağlı anemi görülür; nöbetlerin periyodu etkenin türüne göre değişir; şiddetli sıtmada koma, metabolik asidoz ve akut böbrek yetmezliği izlenebilir. Korunmada hastaları bulup tedavi etmek önemlidir; sıtma hastasının izleminde temas ve hava yolu izolasyonu önerilmez. Burası önemli: Plazmodyum, Tripanozoma, Leişmanya ve Toksoplazma kanda saptanabilir, ancak Entamöba kanda tespit edilemez. Burası önemli: Diyentamöba fragilis ve Trikomonas vajinalisin kist şekli yoktur; Entamöba histolitika ve Balantidyum koli ise kist oluşturur.
+Burası önemli, sıtmayla ilgili çıkmış bilgiler: Türkiye artık sıtma için endemik bir ülke değildir, Türkiye'de 2011 yılında sıtma elimine edilmiştir.
+Hem ülkemizde hem dünyada en sık görülen sıtma etkeni Plazmodyum vivakstır.
+Sıtmada üşüme, titreme ve yüksek ateş, hemolize bağlı anemi görülür; nöbetlerin periyodu etkenin türüne göre değişir; şiddetli sıtmada koma, metabolik asidoz ve akut böbrek yetmezliği izlenebilir.
+Korunmada hastaları bulup tedavi etmek önemlidir; sıtma hastasının izleminde temas ve hava yolu izolasyonu önerilmez.
+Burası önemli: Plazmodyum, Tripanozoma, Leişmanya ve Toksoplazma kanda saptanabilir, ancak Entamöba kanda tespit edilemez.
+Burası önemli: Diyentamöba fragilis ve Trikomonas vajinalisin kist şekli yoktur; Entamöba histolitika ve Balantidyum koli ise kist oluşturur.
 
 @@ Helmintler
 Helmintler, yani solucanlar çok hücreli parazitlerdir ve üç gruba ayrılır. Nematodlar yuvarlak solucanlardır: askariyaz etkeni Askaris lumbrikoides; enterobiyaz ya da oksiyüriyaz etkeni Enterobius vermikularis, yani kıl kurdu; ankilostomiyaz etkenleri Ankilostoma duodenale ve Nekator amerikanus, yani kancalı kurt; strongiloidiyaz etkeni Strongiloides sterkoralis. Ankilostomiyazın iki etkeni olduğuna dikkat edin.
 
-Sestodlar şeritlerdir: taeniyaz etkenleri Tenya saginata ve Tenya solyum; sistiserkoz etkeni Tenya solyum larvası; kistik ekinokokkoz yani hidatik kist etkeni Ekinokokus granulozustur. Tenya solyumun iki tablo yaptığını hatırlayın: erişkin form taeniyaz, larva formu sistiserkoz. Slayttaki görselde Tenya saginata uzun, yassı ve çok sayıda segmentten oluşan şerit biçiminde görülür; bu segmentli yapı sestodların şerit adını açıklar. Trematodlar ise kelebeklerdir: fasiyoliyaz etkeni Fasiola hepatika ve şistozomiyaz etkeni Şistozoma türleri.
+Sestodlar şeritlerdir: taeniyaz etkenleri Tenya saginata ve Tenya solyum; sistiserkoz etkeni Tenya solyum larvası; kistik ekinokokkoz yani hidatik kist etkeni Ekinokokus granulozustur.
+Tenya solyumun iki tablo yaptığını hatırlayın: erişkin form taeniyaz, larva formu sistiserkoz.
+Slayttaki görselde Tenya saginata uzun, yassı ve çok sayıda segmentten oluşan şerit biçiminde görülür; bu segmentli yapı sestodların şerit adını açıklar.
+Trematodlar ise kelebeklerdir: fasiyoliyaz etkeni Fasiola hepatika ve şistozomiyaz etkeni Şistozoma türleri.
 
-Burası önemli, helmint grupları sınavda sıkça eşleştirilir: Tenya ve Ekinokokus sestod, Askaris ve Enterobius nematod, Fasiola ve Şistozoma trematoddur. Çıkmış soruda ayrıca akciğerde enfeksiyon yapan trematodun Paragonimus vestermani olduğu soruldu; Fasiola hepatika, Şistozoma türleri ve Fasiolopsis buski bu soruda doğru cevap değildir.
+Burası önemli, helmint grupları sınavda sıkça eşleştirilir: Tenya ve Ekinokokus sestod, Askaris ve Enterobius nematod, Fasiola ve Şistozoma trematoddur.
+Çıkmış soruda ayrıca akciğerde enfeksiyon yapan trematodun Paragonimus vestermani olduğu soruldu; Fasiola hepatika, Şistozoma türleri ve Fasiolopsis buski bu soruda doğru cevap değildir.
 
 @@ Artropodlar ve vektörler
 Artropodlar iki nedenle tıbbi öneme sahiptir: kendileri doğrudan hastalığa neden olabilirler, örneğin uyuz etkeni Sarkoptes skabiei ve bitler; ya da enfeksiyon etkenlerini vektör olarak taşıyabilirler. Vektörler patojen mikroorganizmaları enfekte konak ya da rezervuardan alarak duyarlı konağa taşır. Taşınma biyolojik ya da mekanik olabilir: biyolojik taşımada etken vektörün vücudunda gelişir ya da çoğalır, mekanik taşımada ise vücut yüzeyinde ya da ağız parçalarında değişmeden taşınır. Slayttaki görselde deriye tutunmuş, kan emen bir kene görülür.
 
-Burası önemli, her vektör belirli hastalıklarla eşleşir. Pire veba yani Yersinya pestis ve murin tifüs yani Riketsiya tifi için vektördür. Kene Kırım Kongo kanamalı ateşi, Layme borelyozu, riketsiyozlar, tularemi ve babesiyozu taşır. Sivrisinek sıtma, deng, sarı humma, çikungunya, Zika ve Batı Nil virüsü enfeksiyonunu taşır. Tatarcık, yani Flebotomus leişmanyazis ve tatarcık hummasını taşır. Bit, yani Pedikulus ise epidemik tifüs, siper ateşi ve bit kaynaklı dönek ateş için vektör olabilir.
+Burası önemli, her vektör belirli hastalıklarla eşleşir.
+Pire veba yani Yersinya pestis ve murin tifüs yani Riketsiya tifi için vektördür.
+Kene Kırım Kongo kanamalı ateşi, Layme borelyozu, riketsiyozlar, tularemi ve babesiyozu taşır.
+Sivrisinek sıtma, deng, sarı humma, çikungunya, Zika ve Batı Nil virüsü enfeksiyonunu taşır.
+Tatarcık, yani Flebotomus leişmanyazis ve tatarcık hummasını taşır.
+Bit, yani Pedikulus ise epidemik tifüs, siper ateşi ve bit kaynaklı dönek ateş için vektör olabilir.
 
-Böylece tifüs çifti tamamlanır: epidemik tifüs etkeni Riketsiya provazeki ve vektörü bit; endemik ya da murin tifüs etkeni Riketsiya tifi ve vektörü piredir. Aynı şekilde Leişmanya tatarcıkla, Plazmodyum sivrisinekle taşınır. Türkiye açısından Kırım Kongo kanamalı ateşi ve Akdeniz benekli ateşi keneyle ilişkili önemli tablolardır.
+Böylece tifüs çifti tamamlanır: epidemik tifüs etkeni Riketsiya provazeki ve vektörü bit; endemik ya da murin tifüs etkeni Riketsiya tifi ve vektörü piredir.
+Aynı şekilde Leişmanya tatarcıkla, Plazmodyum sivrisinekle taşınır.
+Türkiye açısından Kırım Kongo kanamalı ateşi ve Akdeniz benekli ateşi keneyle ilişkili önemli tablolardır.
 
 @@ Patogenez terimleri ve enfeksiyonu etkileyen faktörler
 İnvazyon, mikroorganizmanın konak hücrelere ya da dokulara girişi ve vücutta yayılmasıdır; yüzeyde kalmanın ötesine geçildiğini anlatır. Taşıyıcı ise asemptomatik enfeksiyonu olan ve etkeni başka bir insana bulaştıran kişidir; yani hasta değildir ama bulaştırıcıdır.
 
-Fırsatçı ya da opportunistik patojen, normal koşullarda hastalık oluşturma potansiyeli sınırlı olan, ancak konak savunmasının bozulması, normal mikrobiyotanın değişmesi ya da uygun anatomik bölgeye ulaşması gibi koşullarda hastalığa neden olabilen mikroorganizmadır. Burası önemli, eşleşmeleri bilin: Kandida türleri immünsüpresyon ve antibiyotik kullanımında, Pnömosistis jirovesi hücresel immün yetmezlikte, Klostridioides difisil ise antibiyotiklerle bağırsak mikrobiyotasının bozulması sonrasında hastalık yapar.
+Fırsatçı ya da opportunistik patojen, normal koşullarda hastalık oluşturma potansiyeli sınırlı olan, ancak konak savunmasının bozulması, normal mikrobiyotanın değişmesi ya da uygun anatomik bölgeye ulaşması gibi koşullarda hastalığa neden olabilen mikroorganizmadır.
+Burası önemli, eşleşmeleri bilin: Kandida türleri immünsüpresyon ve antibiyotik kullanımında, Pnömosistis jirovesi hücresel immün yetmezlikte, Klostridioides difisil ise antibiyotiklerle bağırsak mikrobiyotasının bozulması sonrasında hastalık yapar.
 
-Patojenite, bir mikroorganizmanın konakta hastalık oluşturabilme kapasitesidir; patojen bir mikroorganizmayla enfekte olan her bireyde klinik hastalık gelişmeyebilir. Virülans ise patojenitenin derecesidir, yani oluşturduğu hastalığın şiddeti ya da ağırlığıdır; aynı türün farklı suşları farklı virülansa sahip olabilir. Burası önemli, bu tanım iki kez soruldu: bir mikroorganizmanın hastalık oluşturma yeteneğinin derecesine virülans denir. Hastalık oluşturabilme yeteneği ya da kapasitesi ise patojenitedir; çeldiricilerdeki invazyonsuz yerleşme kolonizasyonu, dokuya girip yayılma invazyonu, toksin üretme yeteneği ise toksijeniteyi anlatır.
-Mikroorganizmaya ait faktörler virülans faktörleri, adezinler ve kolonizasyon yeteneği, kapsül, toksinler, doku invazyonunu kolaylaştıran enzimler, biyofilm oluşturma ve konak immün yanıtından kaçış mekanizmalarıdır. Adezinler konak yüzeyine tutunmayı sağlar; biyofilm ise yüzeylerde koruyucu bir topluluk oluşturmaktır ve özellikle kateter, protez gibi yabancı cisimlerde önemlidir.
+Patojenite, bir mikroorganizmanın konakta hastalık oluşturabilme kapasitesidir; patojen bir mikroorganizmayla enfekte olan her bireyde klinik hastalık gelişmeyebilir.
+Virülans ise patojenitenin derecesidir, yani oluşturduğu hastalığın şiddeti ya da ağırlığıdır; aynı türün farklı suşları farklı virülansa sahip olabilir.
+Burası önemli, bu tanım 2 kez soruldu: bir mikroorganizmanın hastalık oluşturma yeteneğinin derecesine virülans denir.
+Hastalık oluşturabilme yeteneği ya da kapasitesi ise patojenitedir; çeldiricilerdeki invazyonsuz yerleşme kolonizasyonu, dokuya girip yayılma invazyonu, toksin üretme yeteneği ise toksijeniteyi anlatır.
+Mikroorganizmaya ait faktörler virülans faktörleri, adezinler ve kolonizasyon yeteneği, kapsül, toksinler, doku invazyonunu kolaylaştıran enzimler, biyofilm oluşturma ve konak immün yanıtından kaçış mekanizmalarıdır.
+Adezinler konak yüzeyine tutunmayı sağlar; biyofilm ise yüzeylerde koruyucu bir topluluk oluşturmaktır ve özellikle kateter, protez gibi yabancı cisimlerde önemlidir.
 
-Konağa ait faktörlerin ilki yaştır: yenidoğanlar, küçük çocuklar ve ileri yaştaki bireylerde bazı enfeksiyonlara duyarlılık artabilir. Biyolojik cinsiyet ve hormonal faktörler nedeniyle bazı enfeksiyonlar erkeklerde ya da kadınlarda daha sık görülür. Beslenme durumunda özellikle malnütrisyon, bağışıklık yanıtını bozarak enfeksiyon riskini artırır. İmmün durumda konjenital ya da edinsel immün yetmezlik ve immünsüpresif tedaviler; komorbiditelerde diyabet, kronik böbrek ve karaciğer hastalıkları önemlidir.
+Konağa ait faktörlerin ilki yaştır: yenidoğanlar, küçük çocuklar ve ileri yaştaki bireylerde bazı enfeksiyonlara duyarlılık artabilir.
+Biyolojik cinsiyet ve hormonal faktörler nedeniyle bazı enfeksiyonlar erkeklerde ya da kadınlarda daha sık görülür.
+Beslenme durumunda özellikle malnütrisyon, bağışıklık yanıtını bozarak enfeksiyon riskini artırır.
+İmmün durumda konjenital ya da edinsel immün yetmezlik ve immünsüpresif tedaviler; komorbiditelerde diyabet, kronik böbrek ve karaciğer hastalıkları önemlidir.
 
-Diğer konak faktörleri savunmanın dışarıdan bozulmasını anlatır. Cerrahi, travma ve yanık anatomik bariyerleri bozar. Kateter, protez ve implant gibi invaziv girişimler ve yabancı cisimler hem giriş yolu hem biyofilm için yüzey sağlar. Mikrobiyotanın bozulmasında en önemli neden antibiyotik kullanımıdır ve bu, Klostridioides difisil gibi fırsatçıların önünü açar. Son olarak aşılama durumu ve önceki bağışıklık konağın korumasını belirler. Kateterli bir hastada hem invaziv girişim hem bariyer bozulması bir aradadır.
+Diğer konak faktörleri savunmanın dışarıdan bozulmasını anlatır.
+Cerrahi, travma ve yanık anatomik bariyerleri bozar.
+Kateter, protez ve implant gibi invaziv girişimler ve yabancı cisimler hem giriş yolu hem biyofilm için yüzey sağlar.
+Mikrobiyotanın bozulmasında en önemli neden antibiyotik kullanımıdır ve bu, Klostridioides difisil gibi fırsatçıların önünü açar.
+Son olarak aşılama durumu ve önceki bağışıklık konağın korumasını belirler.
+Kateterli bir hastada hem invaziv girişim hem bariyer bozulması bir aradadır.
 
 @@ Normal mikrobiyota ve kolonizasyon
 Normal mikrobiyota, yani flora, sağlıklı bireylerin deri ve mukozalarında normal olarak bulunan, çoğunlukla hastalığa neden olmadan konakla birlikte yaşayan mikroorganizmalar topluluğudur. Kolonizasyon ise bir mikroorganizmanın konakta yerleşmesi ve çoğalması, ancak doku invazyonu ya da klinik hastalık oluşturmamasıdır. Örneğin burunda Stafilokokus aureus saptanması kolonizasyondur; aynı bakterinin deri ve yumuşak doku enfeksiyonu oluşturması ise enfeksiyondur.
 
-Burası önemli, konak parazit ilişkisiyle ilgili çıkmış soruda doğru ifade şuydu: kolonize olmuş mikroorganizmanın vücutta bağışık yanıt oluşturmasına infeksiyon denir. Çeldiricileri de düzeltelim: bir tarafın yarar sağlayıp diğerinin zarar görmediği ilişki parazitik ilişki değildir; endojen infeksiyon mikroorganizmaların yüzeylere yerleşmesi değil, flora üyeleriyle oluşan enfeksiyondur; fırsatçı patojenler sağlıklı kişilerde değil, savunması bozulmuş konakta hastalık yapar; mikrobiyota da enfeksiyonu etkileyen konağa ait bir faktördür.
+Burası önemli, konak parazit ilişkisiyle ilgili çıkmış soruda doğru ifade şuydu: kolonize olmuş mikroorganizmanın vücutta bağışık yanıt oluşturmasına infeksiyon denir.
+Çeldiricileri de düzeltelim: bir tarafın yarar sağlayıp diğerinin zarar görmediği ilişki parazitik ilişki değildir; endojen infeksiyon mikroorganizmaların yüzeylere yerleşmesi değil, flora üyeleriyle oluşan enfeksiyondur; fırsatçı patojenler sağlıklı kişilerde değil, savunması bozulmuş konakta hastalık yapar; mikrobiyota da enfeksiyonu etkileyen konağa ait bir faktördür.
 
-Normal mikrobiyota üyeleri genellikle konağa zarar vermez, ancak bazı koşullarda fırsatçı enfeksiyonlara neden olabilir. Bunu kolaylaştıran başlıca durumlar bağışıklık sisteminin baskılanması; cerrahi, travma, yanık gibi nedenlerle anatomik bariyerlerin bozulması; mikroorganizmaların normal yerleşim bölgelerinden steril bölgelere geçmesi; kateter ve diğer invaziv cihazların kullanılması; ve geniş spektrumlu ya da uzun süreli antibiyotik kullanımıdır. Antibiyotik hem mikrobiyota dengesini bozar, buna disbiyoz denir, hem de dirençli mikroorganizmaları seçer. Klasik örnek Eşerişya kolidir: bağırsak mikrobiyotasının üyesi olarak orada hastalık yapmadan bulunur, ama üriner sisteme geçerse üriner sistem enfeksiyonuna yol açabilir.
+Normal mikrobiyota üyeleri genellikle konağa zarar vermez, ancak bazı koşullarda fırsatçı enfeksiyonlara neden olabilir.
+Bunu kolaylaştıran başlıca durumlar bağışıklık sisteminin baskılanması; cerrahi, travma, yanık gibi nedenlerle anatomik bariyerlerin bozulması; mikroorganizmaların normal yerleşim bölgelerinden steril bölgelere geçmesi; kateter ve diğer invaziv cihazların kullanılması; ve geniş spektrumlu ya da uzun süreli antibiyotik kullanımıdır.
+Antibiyotik hem mikrobiyota dengesini bozar, buna disbiyoz denir, hem de dirençli mikroorganizmaları seçer.
+Klasik örnek Eşerişya kolidir: bağırsak mikrobiyotasının üyesi olarak orada hastalık yapmadan bulunur, ama üriner sisteme geçerse üriner sistem enfeksiyonuna yol açabilir.
 
 @@ Flora bulunan ve steril bölgeler
 Normal vücut florası deri, ağız, burun, boğaz, göz ve konjonktiva, üst solunum yolları, sindirim kanalı, genital organlar ve dış kulak yolunda bulunur. Floranın bulunmadığı, yani steril bölgeler ise merkezi sinir sistemi ve beyin omurilik sıvısı; trakea, bronşlar ve akciğerlerden oluşan alt solunum yolları; dolaşım sistemi; mesane, üreter, böbrekler ve serviksten oluşan üst ürogenital bölgeler; ve vücut boşluklarıdır.
 
-Burası önemli, bu bilgi çıkmış sorularda en çok tekrarlanan bilgidir: normalde mikrobiyal flora bulunmayan bölge üreterdir. Özofagus, konjonktiva, kolon ve vajende ise flora vardır. Burası önemli, aynı mantıkla normal vücut florası üyelerinin bulunmadığı bölge kan dolaşımıdır; deri, ağız boşluğu, burun, üst solunum yolları, genital organlar ve sindirim kanalında flora bulunur. Steril bölgeden mikroorganizma üremesi bu yüzden anlamlıdır.
+Burası önemli, bu bilgi çıkmış sorularda en çok tekrarlanan bilgidir: normalde mikrobiyal flora bulunmayan bölge üreterdir.
+Özofagus, konjonktiva, kolon ve vajende ise flora vardır.
+Burası önemli, aynı mantıkla normal vücut florası üyelerinin bulunmadığı bölge kan dolaşımıdır; deri, ağız boşluğu, burun, üst solunum yolları, genital organlar ve sindirim kanalında flora bulunur.
+Steril bölgeden mikroorganizma üremesi bu yüzden anlamlıdır.
 
-Flora bakterileri hastalık oluşturmaksızın organizmayla dengeli bir şekilde yaşar. Deride Stafilokokus epidermidis ve Propiyonibakteryum akne, bağırsakta Bakteroides fragilis ve Enterobakteriyase üyeleri buna örnektir. Slayttaki vücut şeması her bölgenin florasını ayrı gösterir: konjonktiva ve dış kulakta koagülaz negatif stafilokoklar baskındır, konjonktivada Hemofilus ve streptokoklar da yer alır; burun, ağız ve orofarenkste viridans streptokoklar, koagülaz negatif stafilokoklar, Stafilokokus aureus, Nayseriya, Streptokokus pnömoni ve anaeroblar; mide ve ince bağırsakta Streptokokus, Laktobasillus ve az sayıda diğer bakteri; kalın bağırsakta Bakteroides, Klostridyum, Eşerişya koli ve diğer enterik bakteriler; üretra ve vajinada koagülaz negatif stafilokok ve difteroidler, vajinada ayrıca Laktobasillus bulunur.
+Flora bakterileri hastalık oluşturmaksızın organizmayla dengeli bir şekilde yaşar.
+Deride Stafilokokus epidermidis ve Propiyonibakteryum akne, bağırsakta Bakteroides fragilis ve Enterobakteriyase üyeleri buna örnektir.
+Slayttaki vücut şeması her bölgenin florasını ayrı gösterir: konjonktiva ve dış kulakta koagülaz negatif stafilokoklar baskındır, konjonktivada Hemofilus ve streptokoklar da yer alır; burun, ağız ve orofarenkste viridans streptokoklar, koagülaz negatif stafilokoklar, Stafilokokus aureus, Nayseriya, Streptokokus pnömoni ve anaeroblar; mide ve ince bağırsakta Streptokokus, Laktobasillus ve az sayıda diğer bakteri; kalın bağırsakta Bakteroides, Klostridyum, Eşerişya koli ve diğer enterik bakteriler; üretra ve vajinada koagülaz negatif stafilokok ve difteroidler, vajinada ayrıca Laktobasillus bulunur.
 
 @@ Bölgelere göre normal mikrobiyota
 Deri mikrobiyotası anatomik bölgeye, nem ve sebum miktarına göre değişir. Başlıca üyeleri koagülaz negatif stafilokoklar, özellikle Stafilokokus epidermidis; özellikle sebase yani yağlı bölgelerde Kutibakteryum akne, ki Propiyonibakteryum aknenin güncel adıdır; difteroidler denen Korinebakteryum türleri; bazı bireylerde kolonizasyon yapan Stafilokokus aureus; ve Mikrokokus türleridir. Mantar olarak özellikle Malassezya, daha az oranda Kandida bulunur. Malassezya hem deri florası üyesi hem de pitiriyazis versikolor etkenidir.
 
-Üst solunum yollarında nazal kavitede Korinebakteryum, Kutibakteryum ve Stafilokokus epidermidis gibi koagülaz negatif stafilokoklar bulunur. Burası önemli: erişkinlerin yaklaşık yüzde yirmisinde kalıcı nazal Stafilokokus aureus taşıyıcılığı vardır. Orofarenkste viridans grup streptokoklar, Korinebakteryum ve anaerob bakteriler bulunur. Sağlıklı bireylerde potansiyel patojenler de asemptomatik olarak kolonize olabilir: Streptokokus pnömoni, Streptokokus piyojenes, Hemofilus influenza ve Nayseriya menenjitidis. Yani sağlıklı kişide boğazda bu bakterilerin bulunması tek başına hastalık kanıtı değildir.
+Üst solunum yollarında nazal kavitede Korinebakteryum, Kutibakteryum ve Stafilokokus epidermidis gibi koagülaz negatif stafilokoklar bulunur.
+Burası önemli: erişkinlerin yaklaşık yüzde yirmisinde kalıcı nazal Stafilokokus aureus taşıyıcılığı vardır.
+Orofarenkste viridans grup streptokoklar, Korinebakteryum ve anaerob bakteriler bulunur.
+Sağlıklı bireylerde potansiyel patojenler de asemptomatik olarak kolonize olabilir: Streptokokus pnömoni, Streptokokus piyojenes, Hemofilus influenza ve Nayseriya menenjitidis.
+Yani sağlıklı kişide boğazda bu bakterilerin bulunması tek başına hastalık kanıtı değildir.
 
-Gastrointestinal sistemde mikroorganizma yoğunluğu mideden kolona doğru belirgin olarak artar; bileşimi anatomik bölge, pH, oksijen düzeyi, safra asitleri, diyet ve ilaçlardan etkilenir. Ağız boşluğunda viridans grup streptokoklar, Aktinomises, Nayseriya, Veyonella, Prevotella ve Fuzobakteryum türleri, çeşitli anaeroblar ve bazı bireylerde Kandida bulunur. Midede düşük pH nedeniyle mikrobiyal yoğunluk düşüktür ve aside toleran mikroorganizmalar bulunabilir; Helicobacter pylori bazı bireylerde mide mukozasını kolonize eder ve prevalansı yaş ve coğrafi bölgeye göre önemli ölçüde değişir.
+Gastrointestinal sistemde mikroorganizma yoğunluğu mideden kolona doğru belirgin olarak artar; bileşimi anatomik bölge, pH, oksijen düzeyi, safra asitleri, diyet ve ilaçlardan etkilenir.
+Ağız boşluğunda viridans grup streptokoklar, Aktinomises, Nayseriya, Veyonella, Prevotella ve Fuzobakteryum türleri, çeşitli anaeroblar ve bazı bireylerde Kandida bulunur.
+Midede düşük pH nedeniyle mikrobiyal yoğunluk düşüktür ve aside toleran mikroorganizmalar bulunabilir; Helicobacter pylori bazı bireylerde mide mukozasını kolonize eder ve prevalansı yaş ve coğrafi bölgeye göre önemli ölçüde değişir.
 
-İnce bağırsakta duodenum ve jejunumda yoğunluk görece düşüktür; Streptokokus, Laktobasillus ve Enterokokus bulunabilir. Distal ileumda bakteri yoğunluğu giderek artar ve flora kolon florasına benzemeye başlar; anaeroblar ve Enterobakterales üyeleri artar. Burası önemli: kolon vücuttaki en yoğun ve en çeşitli mikrobiyal topluluklardan birini barındırır ve burada anaerob bakteriler baskındır. Başlıca gruplar Bakteroides ve diğer anaeroblar, Enterobakterales ve Enterokokus türleridir; Kandida ve Sakaromises gibi mantarlar da bağırsak florasının parçası olabilir.
+İnce bağırsakta duodenum ve jejunumda yoğunluk görece düşüktür; Streptokokus, Laktobasillus ve Enterokokus bulunabilir.
+Distal ileumda bakteri yoğunluğu giderek artar ve flora kolon florasına benzemeye başlar; anaeroblar ve Enterobakterales üyeleri artar.
+Burası önemli: kolon vücuttaki en yoğun ve en çeşitli mikrobiyal topluluklardan birini barındırır ve burada anaerob bakteriler baskındır.
+Başlıca gruplar Bakteroides ve diğer anaeroblar, Enterobakterales ve Enterokokus türleridir; Kandida ve Sakaromises gibi mantarlar da bağırsak florasının parçası olabilir.
 
-Ürogenital sistemde distal üretra, deri ve perine florasına benzer mikroorganizmalarla kolonize olabilir: koagülaz negatif stafilokoklar, Korinebakteryum, Streptokokus ve Enterokokus türleri ve bazı bireylerde Enterobakterales üyeleri. Bu nedenle uygun teknikle alınmayan idrar örneklerinde periüretral mikroorganizmalar kontaminasyona neden olabilir. Mesane ve idrar klasik olarak steril kabul edilirdi; günümüzde ise sağlıklı mesanede düşük biyokütleli bir üriner mikrobiyota, yani ürobiyom bulunduğu gösterilmiştir. Ancak mikrobiyota varlığı üriner sistem enfeksiyonu anlamına gelmez.
+Ürogenital sistemde distal üretra, deri ve perine florasına benzer mikroorganizmalarla kolonize olabilir: koagülaz negatif stafilokoklar, Korinebakteryum, Streptokokus ve Enterokokus türleri ve bazı bireylerde Enterobakterales üyeleri.
+Bu nedenle uygun teknikle alınmayan idrar örneklerinde periüretral mikroorganizmalar kontaminasyona neden olabilir.
+Mesane ve idrar klasik olarak steril kabul edilirdi; günümüzde ise sağlıklı mesanede düşük biyokütleli bir üriner mikrobiyota, yani ürobiyom bulunduğu gösterilmiştir.
+Ancak mikrobiyota varlığı üriner sistem enfeksiyonu anlamına gelmez.
 
-Vajinal mikrobiyota yaş, hormonal durum, gebelik, menstrüel siklus ve pH gibi faktörlere göre değişir. Üreme çağındaki birçok sağlıklı kadında Laktobasillus türleri baskındır ve laktik asit üretimiyle asidik vajinal pH'ın korunmasına katkıda bulunur. Gardnerella, Prevotella ve çeşitli anaeroblar düşük miktarlarda bulunabilir; mikrobiyal dengenin bozulması bakteriyel vajinozis ile ilişkili olabilir. Bu da disbiyozun vajinadaki karşılığıdır.
+Vajinal mikrobiyota yaş, hormonal durum, gebelik, menstrüel siklus ve pH gibi faktörlere göre değişir.
+Üreme çağındaki birçok sağlıklı kadında Laktobasillus türleri baskındır ve laktik asit üretimiyle asidik vajinal pH'ın korunmasına katkıda bulunur.
+Gardnerella, Prevotella ve çeşitli anaeroblar düşük miktarlarda bulunabilir; mikrobiyal dengenin bozulması bakteriyel vajinozis ile ilişkili olabilir.
+Bu da disbiyozun vajinadaki karşılığıdır.
 
 @@ Endojen ve ekzojen enfeksiyon, epidemiyolojik terimler
 Endojen enfeksiyon, normal flora üyesi mikroorganizmalarla, yani deri ve mukoza yüzeyindeki mikroorganizmalarla oluşan enfeksiyondur. Örneğin deri mikrobiyotasındaki koagülaz negatif stafilokoklar kateter ilişkili kan dolaşımı enfeksiyonu, Kandida türleri ise immünsüpresyon ya da bariyer bozukluğunda invaziv kandidiyaz yapar. Ekzojen enfeksiyon ise insanlar, hayvanlar ya da damar içi sıvılar gibi dış bir kaynaktan bulaş yoluyla oluşan enfeksiyondur.
 
-Rezervuar, patojen mikroorganizmanın insan dışında yaşadığı ekolojik ortamdır; Lejyonella için tatlı sular, Borelya için küçük kemiriciler örnektir. Konak, mikroorganizmanın üzerinde yaşadığı canlıdır. Portör, yani taşıyıcı, bir patojeni taşıyan ve klinik hastalık bulguları göstermeden etkeni başkalarına bulaştırabilen kişidir; Salmonella tifinin kronik asemptomatik taşıyıcılığı klasik örnektir. Kaynak ise mikroorganizmayı bulaştıran canlı ya da cansız ortamdır. Rezervuar ile kaynağı, portör ile vektörü karıştırmayın.
+Rezervuar, patojen mikroorganizmanın insan dışında yaşadığı ekolojik ortamdır; Lejyonella için tatlı sular, Borelya için küçük kemiriciler örnektir.
+Konak, mikroorganizmanın üzerinde yaşadığı canlıdır.
+Portör, yani taşıyıcı, bir patojeni taşıyan ve klinik hastalık bulguları göstermeden etkeni başkalarına bulaştırabilen kişidir; Salmonella tifinin kronik asemptomatik taşıyıcılığı klasik örnektir.
+Kaynak ise mikroorganizmayı bulaştıran canlı ya da cansız ortamdır.
+Rezervuar ile kaynağı, portör ile vektörü karıştırmayın.
 
-Burası önemli, epidemiyolojik terimlerle ilgili soruda yanlış olan tanım dezenfeksiyon tanımıydı: cansız ortamların sporlar dahil bütün patojen mikroorganizmalardan temizlenmesi dezenfeksiyon değildir. Doğru verilen tanımlar şunlardır: konak, enfeksiyon etkeninin yerleştiği makroorganizmadır; portör, etkeni taşıyıp bulaştırabildiği halde kendisi belirti göstermeyen kişidir; inkübasyon süresi, etkenin alınmasından belirtilerin ortaya çıkışına kadar geçen süredir; pastörizasyon ise mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve soğutmaya dayalı bir işlemdir.
+Burası önemli, epidemiyolojik terimlerle ilgili soruda yanlış olan tanım dezenfeksiyon tanımıydı: cansız ortamların sporlar dahil bütün patojen mikroorganizmalardan temizlenmesi dezenfeksiyon değildir.
+Doğru verilen tanımlar şunlardır: konak, enfeksiyon etkeninin yerleştiği makroorganizmadır; portör, etkeni taşıyıp bulaştırabildiği halde kendisi belirti göstermeyen kişidir; inkübasyon süresi, etkenin alınmasından belirtilerin ortaya çıkışına kadar geçen süredir; pastörizasyon ise mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve soğutmaya dayalı bir işlemdir.
 
-Hastalığın toplumdaki sıklığını beklenen düzeyle karşılaştırarak tanımlarız. Endemi, bir enfeksiyon etkeninin ya da hastalığın belirli bir coğrafyada ya da toplulukta alışılmış sıklıkta görülmesidir. Epidemi, yani salgın, bir hastalığın ya da sağlıkla ilgili olayın belli bir bölgede beklenenden daha fazla görülmesidir. Pandemi ise dünyada birden fazla ülkede ya da kıtada, çok geniş bir alanda yayılan salgın hastalıklara verilen genel isimdir. Epidemik ve endemik tifüs ile endemik mikozlar adlarını bu kavramlardan alır.
+Hastalığın toplumdaki sıklığını beklenen düzeyle karşılaştırarak tanımlarız.
+Endemi, bir enfeksiyon etkeninin ya da hastalığın belirli bir coğrafyada ya da toplulukta alışılmış sıklıkta görülmesidir.
+Epidemi, yani salgın, bir hastalığın ya da sağlıkla ilgili olayın belli bir bölgede beklenenden daha fazla görülmesidir.
+Pandemi ise dünyada birden fazla ülkede ya da kıtada, çok geniş bir alanda yayılan salgın hastalıklara verilen genel isimdir.
+Epidemik ve endemik tifüs ile endemik mikozlar adlarını bu kavramlardan alır.
 
-Burası önemli, iki ayrı soruda bu ayrım soruldu: bir hastalığın belli bir bölgede, belli bir dönemde beklenenden anlamlı ölçüde fazla görülmesi epidemidir. Bir bölgede bir hastalığın ya da etkenin uzun süre belli bir düzeyde seyretmesi ise endemidir. Bu iki tanım sporadi, pandemi ve seküler değişimle karıştırılmamalıdır.
+Burası önemli, iki ayrı soruda bu ayrım soruldu: bir hastalığın belli bir bölgede, belli bir dönemde beklenenden anlamlı ölçüde fazla görülmesi epidemidir.
+Bir bölgede bir hastalığın ya da etkenin uzun süre belli bir düzeyde seyretmesi ise endemidir.
+Bu iki tanım sporadi, pandemi ve seküler değişimle karıştırılmamalıdır.
 
 @@ Enfeksiyon zinciri
 Mikroorganizmanın enfeksiyon oluşturabilmesi için belirli aşamalardan geçmesi gerekir; bu aşamalar zincirine enfeksiyon zinciri denir. Altı halkası vardır. 1. halka etkendir: bakteri, virüs, fungus ya da parazit. 2.'si kaynaktır: insanlar, hayvanlar, böcekler; enfekte canlı, su, toprak. 3.'sü kaynaktan çıkıştır: solunum, gastrointestinal ve genitoüriner yollar; balgam, tükürük, idrar, dışkı, kan, meni ve vajen sekresyonu. 4.'sü taşınma, yani bulaşmadır: doğrudan temas ya da gıda, eller, araç gereç gibi dolaylı yollar; hava, toz, portör ve vektör. 5.'si yeni konakçıya giriş kapısıdır: solunum yolu, gastrointestinal yol, deri ve mukozalar, yani ağız, burun, göz, kulak ve vajen. 6.'sı duyarlı konaktır: immün durum, beslenme, kronik hastalık, immünsüpresif ilaç kullanımı, travma, yaşlılık ve çocukluk.
 
-Burası önemli: enfeksiyon zincirini oluşturan altı halkadan biri engellendiği takdirde enfeksiyon oluşamaz. Bu zincir iyi bilinip gerekli önlemler alınırsa bulaşıcı hastalıklardan korunmak mümkündür. Slayttaki ayrıntılı şema zinciri hastane ortamına uyarlar. Canlı kaynaklar semptomatik ya da asemptomatik enfeksiyonu, florası ya da kolonizasyonu olan kişilerdir: hastanın kendisi ya da başka hasta, sağlık personeli, hasta yakını ve ziyaretçi. Hastanın kendi florasının kaynak olması, endojen enfeksiyonun zincirdeki karşılığıdır. Cansız kaynaklar alet, yüzey, su, hava ve yiyeceklerdir. Çıkış kapıları solunum yolu, yani konuşma, öksürme, hapşırma, aspirasyon ve ventilatör; genitoüriner sistem, yani kateter ve cinsel yolla bulaşan hastalıklar; gastrointestinal sistem, yani kusma ve gayta; cilt ve mukoza, yani yara ve kesi; kan, yani iğne batması ve kan transfüzyonu; ve transplasental yoldur.
+Burası önemli: enfeksiyon zincirini oluşturan altı halkadan biri engellendiği takdirde enfeksiyon oluşamaz.
+Bu zincir iyi bilinip gerekli önlemler alınırsa bulaşıcı hastalıklardan korunmak mümkündür.
+Slayttaki ayrıntılı şema zinciri hastane ortamına uyarlar.
+Canlı kaynaklar semptomatik ya da asemptomatik enfeksiyonu, florası ya da kolonizasyonu olan kişilerdir: hastanın kendisi ya da başka hasta, sağlık personeli, hasta yakını ve ziyaretçi.
+Hastanın kendi florasının kaynak olması, endojen enfeksiyonun zincirdeki karşılığıdır.
+Cansız kaynaklar alet, yüzey, su, hava ve yiyeceklerdir.
+Çıkış kapıları solunum yolu, yani konuşma, öksürme, hapşırma, aspirasyon ve ventilatör; genitoüriner sistem, yani kateter ve cinsel yolla bulaşan hastalıklar; gastrointestinal sistem, yani kusma ve gayta; cilt ve mukoza, yani yara ve kesi; kan, yani iğne batması ve kan transfüzyonu; ve transplasental yoldur.
 
-Taşınma temas, damlacık, solunum ve vektör aracılı olabilir ve sonucu mikroorganizma yükü, virülansı ve patojenitesi belirler. Giriş kapıları solunum sistemi, genitoüriner sistem, gastrointestinal sistem, cilt ve mukoza, parenteral yol, yani enjeksiyon gibi sindirim kanalı dışı yol, ve transplasental yoldur. Duyarlı kişiyi fiziksel bariyer ile hücresel ve hümoral immünite, kateter, diyabet, HIV, sitomegalovirüs, malignite ve organ nakli gibi eşlik eden hastalıklar, kemoterapi ve steroid gibi ilaçlar ve antibiyotikle bozulan flora belirler.
+Taşınma temas, damlacık, solunum ve vektör aracılı olabilir ve sonucu mikroorganizma yükü, virülansı ve patojenitesi belirler.
+Giriş kapıları solunum sistemi, genitoüriner sistem, gastrointestinal sistem, cilt ve mukoza, parenteral yol, yani enjeksiyon gibi sindirim kanalı dışı yol, ve transplasental yoldur.
+Duyarlı kişiyi fiziksel bariyer ile hücresel ve hümoral immünite, kateter, diyabet, HIV, sitomegalovirüs, malignite ve organ nakli gibi eşlik eden hastalıklar, kemoterapi ve steroid gibi ilaçlar ve antibiyotikle bozulan flora belirler.
 
-Enfeksiyonların önlenmesinde temel amaç, zincirin herhangi bir halkasını kırmaktır. Burası önemli: el hijyeni bulaşma yolunu, aşılama duyarlı konağı, izolasyon önlemleri ise özellikle çıkış kapısı ve bulaşma yolunu hedefleyerek zincirin kırılmasına katkı sağlar. Tek bir halka yeterli olduğu için tek bir etkili önlem bile zinciri kırabilir.
+Enfeksiyonların önlenmesinde temel amaç, zincirin herhangi bir halkasını kırmaktır.
+Burası önemli: el hijyeni bulaşma yolunu, aşılama duyarlı konağı, izolasyon önlemleri ise özellikle çıkış kapısı ve bulaşma yolunu hedefleyerek zincirin kırılmasına katkı sağlar.
+Tek bir halka yeterli olduğu için tek bir etkili önlem bile zinciri kırabilir.
 
 @@ Bakterilerin giriş yolları ve zoonozlar
 Bazı bakterilerin organizmaya giriş yolları bir tabloyla verilir. Sindirim yoluyla girenler Salmonella ve Şigella türleri, Yersinya enterokolitika, enterotoksijenik Eşerişya koli, Vibriyo ve Kampilobakter türleri, Klostridyum botulinum, Basillus sereus, Listerya ve Brusella türleridir. Solunum yoluyla girenler Mikobakteryum, Nokardiya, Lejyonella, Bordetella türleri, Mikoplazma pnömoni, Klamidya psitasi ve Klamidya pnömonidir.
 
-Doğrudan penetrasyonla girenler dört alt yolda toplanır. Travmayla Klostridyum tetani ve Erizipelotriks rusiyopatiye; artropod ısırmasıyla Borelya türleri ve Yersinya pestis; cinsel yolla Nayseriya gonore, Treponema pallidum ve Chlamydia trachomatis; transplasental yolla ise Treponema pallidum girer. Treponema pallidumun hem cinsel hem transplasental yolda yer aldığına dikkat edin.
+Doğrudan penetrasyonla girenler dört alt yolda toplanır.
+Travmayla Klostridyum tetani ve Erizipelotriks rusiyopatiye; artropod ısırmasıyla Borelya türleri ve Yersinya pestis; cinsel yolla Nayseriya gonore, Treponema pallidum ve Chlamydia trachomatis; transplasental yolla ise Treponema pallidum girer.
+Treponema pallidumun hem cinsel hem transplasental yolda yer aldığına dikkat edin.
 
-Kaynağı hayvan olan etkenlerle meydana gelen enfeksiyon hastalıklarına zoonozlar denir. Sığır bruselloz, şarbon, salmonelloz ve kü ateşinin; koyun ve keçi bruselloz, kü ateşi ve şarbonun kaynağıdır. Köpek kuduz ve kistik ekinokokkozun, kedi toksoplazmoz ve kedi tırmığı hastalığının kaynağıdır. Kemiriciler leptospiroz, hantavirüs enfeksiyonları ve vebanın; kuşlar psittakoz ve bazı zoonotik influenza enfeksiyonlarının; tavşan ve yabani tavşan ise tularemi hastalığının kaynağıdır.
+Kaynağı hayvan olan etkenlerle meydana gelen enfeksiyon hastalıklarına zoonozlar denir.
+Sığır bruselloz, şarbon, salmonelloz ve kü ateşinin; koyun ve keçi bruselloz, kü ateşi ve şarbonun kaynağıdır.
+Köpek kuduz ve kistik ekinokokkozun, kedi toksoplazmoz ve kedi tırmığı hastalığının kaynağıdır.
+Kemiriciler leptospiroz, hantavirüs enfeksiyonları ve vebanın; kuşlar psittakoz ve bazı zoonotik influenza enfeksiyonlarının; tavşan ve yabani tavşan ise tularemi hastalığının kaynağıdır.
 
-Burası önemli, zoonoz eşleşmeleri sınavın sevdiği konulardandır: tavşan tularemi, kuş psittakoz, kedi toksoplazmoz, köpek kuduz ve kistik ekinokokkoz. Aynı hastalıkta kaynak ve vektörün farklı olabildiğine de dikkat edin: vebada kaynak kemirici, vektör piredir; tularemide kaynak tavşandır, vektörlerden biri ise kenedir.
+Burası önemli, zoonoz eşleşmeleri sınavın sevdiği konulardandır: tavşan tularemi, kuş psittakoz, kedi toksoplazmoz, köpek kuduz ve kistik ekinokokkoz.
+Aynı hastalıkta kaynak ve vektörün farklı olabildiğine de dikkat edin: vebada kaynak kemirici, vektör piredir; tularemide kaynak tavşandır, vektörlerden biri ise kenedir.
 
 @@ Enfeksiyon hastalığının seyri
 Enfeksiyon hastalıklarının seyrinde beş temel basamak vardır. 1.'si etkenle karşılaşma ve enfektif ajanın alınmasıdır. 2.'si inkübasyon dönemidir: enfeksiyon etkeninin vücuda girmesinden prodromal belirtilerin ortaya çıkmasına kadar geçen dönemdir ve bu dönemde semptom ve bulgu yoktur. Prion hastalıklarında bu dönemin çok uzun olabildiğini, Kuru'da otuz yıla vardığını hatırlayın. 3.'sü prodromal dönemdir: inkübasyon döneminin sonundan tipik klinik bulguların ortaya çıkmasına kadar geçen, genellikle özgül olmayan belirti ve bulguların bulunduğu dönemdir. Ateş, baş ağrısı, iştahsızlık, halsizlik, sırt ve bacak ağrıları ve mide bulantısı görülür.
 
-4.'sü hastalık, yani klinik dönemdir: hastalığa ait karakteristik klinik belirti ve bulguların belirginleştiği dönemdir. Hastalık iyileşme, kronikleşme, sekel gelişimi ya da ölümle sonuçlanabilir. 5.'si nekahat, yani konvalesan dönemdir: akut klinik bulguların gerilediği ve kişinin iyileşme sürecine girdiği dönemdir. Belirti ve bulgular azalır ya da kaybolur, fonksiyonlar giderek normale döner, ancak halsizlik ve yorgunluk bir süre devam edebilir. Bazı hastalarda sekel ya da kalıcı fonksiyon kaybı gelişebilir. Burası önemli: inkübasyon belirtisiz, prodrom ise özgül olmayan belirtilerle giden dönemdir. Burası önemli, bir tuzak daha: bazı enfeksiyonlarda bulaştırıcılık klinik iyileşmeden sonra da sürebilir. Yani nekahatteki kişi kendini iyi hissetse de bulaştırıcı olabilir; bunu portörlük kavramıyla birlikte düşünün.
+4.'sü hastalık, yani klinik dönemdir: hastalığa ait karakteristik klinik belirti ve bulguların belirginleştiği dönemdir.
+Hastalık iyileşme, kronikleşme, sekel gelişimi ya da ölümle sonuçlanabilir.
+5.'si nekahat, yani konvalesan dönemdir: akut klinik bulguların gerilediği ve kişinin iyileşme sürecine girdiği dönemdir.
+Belirti ve bulgular azalır ya da kaybolur, fonksiyonlar giderek normale döner, ancak halsizlik ve yorgunluk bir süre devam edebilir.
+Bazı hastalarda sekel ya da kalıcı fonksiyon kaybı gelişebilir.
+Burası önemli: inkübasyon belirtisiz, prodrom ise özgül olmayan belirtilerle giden dönemdir.
+Burası önemli, bir tuzak daha: bazı enfeksiyonlarda bulaştırıcılık klinik iyileşmeden sonra da sürebilir.
+Yani nekahatteki kişi kendini iyi hissetse de bulaştırıcı olabilir; bunu portörlük kavramıyla birlikte düşünün.
 
 @@ Özetle
 Özetle, enfeksiyon belirti şartı taşımayan bir yerleşme ve çoğalmadır; sonucu virülans, doz ve konak duyarlılığı birlikte belirler. Etkenleri aselüler, prokaryot ve ökaryot gruplarıyla, normal florayı ve steril bölgeleri, enfeksiyon zincirinin altı halkasını ve hastalığın beş dönemini birbirine bağlayarak öğrendiğinizde, bir enfeksiyonu etkeni, kaynağı, vektörü, giriş kapısı ve seyriyle birlikte düşünebilirsiniz.

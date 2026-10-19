@@ -3,14 +3,34 @@
 @@ Nefritik sendromun tanımı
 Nefritik sendrom, glomerüler enflamasyonla ilişkili klinik bir sendromdur. Glomerülonefrit dediğimiz şey de zaten glomerüllerin enflamatuvar hastalığıdır. Bu derste nefritik tablo yapan beş hastalık grubunu göreceğiz: akut enfeksiyon sonrası glomerülonefrit, hızlı ilerleyen ya da hilal glomerülonefriti, lupus nefriti, immünoglobulin A nefropatisi ve kalıtsal nefritler. Amacımız bu hastalıkları yalnız adlarıyla değil, biyopsideki morfolojik imzalarıyla ayırt edebilmek. Her hastalıkta aynı sırayı izleyeceğiz: patogenez, ışık mikroskopisi, immünfloresan, elektron mikroskopisi ve en sonda klinik ile prognoz.
 
-Nefritik sendromun beş temel bileşeni vardır. 1.'si ve en belirgini hematüridir, yani idrarda eritrosit bulunması. Hematüri mikroskopik olabilir, yalnız idrar sedimentinde görülür; ya da makroskopik olabilir, idrarın rengi gözle görülür biçimde değişir. Nefritik hematüriye çoğunlukla eritrosit silendirleri eşlik eder. Silendir, böbrek tübüllerinde eritrositlerin proteinlerle birleşerek kalıp hâlinde katılaşmasıyla oluşur. Silendir tübülün kalıbı olduğu için içindeki eritrositlerin nefron içinden, yani glomerülden geldiğini kanıtlar. Bu yüzden eritrosit silendiri, hematürinin glomerüler kaynaklı olduğunu gösteren ve nefritik sendromu düşündüren en değerli idrar bulgusudur.
+Nefritik sendromun beş temel bileşeni vardır.
+1.'si ve en belirgini hematüridir, yani idrarda eritrosit bulunması.
+Hematüri mikroskopik olabilir, yalnız idrar sedimentinde görülür; ya da makroskopik olabilir, idrarın rengi gözle görülür biçimde değişir.
+Nefritik hematüriye çoğunlukla eritrosit silendirleri eşlik eder.
+Silendir, böbrek tübüllerinde eritrositlerin proteinlerle birleşerek kalıp hâlinde katılaşmasıyla oluşur.
+Silendir tübülün kalıbı olduğu için içindeki eritrositlerin nefron içinden, yani glomerülden geldiğini kanıtlar.
+Bu yüzden eritrosit silendiri, hematürinin glomerüler kaynaklı olduğunu gösteren ve nefritik sendromu düşündüren en değerli idrar bulgusudur.
 
-Kalan dört bileşene geçelim. Proteinüri genellikle subnefrotik düzeydedir; yani protein kaybı nefrotik sendromdaki kadar ağır değildir ve bu, nefritik tabloyu nefrotikten ayıran ilk ipucudur. Azotemi, serum üre ve kreatinin düzeylerinin artmasıdır; böbreğin atık maddeleri temizleyemediğini gösterir. Oligüri, idrar miktarının azalmasıdır. Hipertansiyon ise renin anjiyotensin aldosteron sisteminin aktivasyonuna bağlıdır. Burası önemli, sınav spotu olarak formülü aklınızda tutun: hematüri, subnefrotik proteinüri, azotemi, oligüri ve hipertansiyon. Bu beş bulgu rastgele bir arada değildir; hepsi glomerül enflamasyonunun farklı sonuçlarıdır.
+Kalan dört bileşene geçelim.
+Proteinüri genellikle subnefrotik düzeydedir; yani protein kaybı nefrotik sendromdaki kadar ağır değildir ve bu, nefritik tabloyu nefrotikten ayıran ilk ipucudur.
+Azotemi, serum üre ve kreatinin düzeylerinin artmasıdır; böbreğin atık maddeleri temizleyemediğini gösterir.
+Oligüri, idrar miktarının azalmasıdır.
+Hipertansiyon ise renin anjiyotensin aldosteron sisteminin aktivasyonuna bağlıdır.
+Burası önemli, sınav spotu olarak formülü aklınızda tutun: hematüri, subnefrotik proteinüri, azotemi, oligüri ve hipertansiyon.
+Bu beş bulgu rastgele bir arada değildir; hepsi glomerül enflamasyonunun farklı sonuçlarıdır.
 
 @@ Patofizyoloji: bariyer ve filtrasyon
 Bu bulguların hepsi glomerül kılcallarında başlayan enflamasyondan türer. İlk olay, glomerüler kılcal duvarlara lökositlerin infiltre olması ve kılcal hasarın gelişmesidir. Hasarlı kılcal duvar, normalde geçirmediği yapıları geçirmeye başlar ve bariyer bozulur: eritrositler ve proteinler filtrata geçer. Filtrata geçen eritrositler hematüriyi, proteinler proteinüriyi oluşturur; tübüllerde birleşen eritrosit ve proteinler de silendir yapar. Yani hematüri ve proteinüri ayrı süreçler değil, enflamasyonun bozduğu aynı glomerüler filtrasyon bariyerinin iki sonucudur.
 
-Kalan üç bulgu filtrasyonun azalmasından doğar. Enflamasyonun etkilediği kılcallarda glomerüler filtrasyon hızı düşer. Daha az idrar oluşur, bu oligüridir; üre ve kreatinin atılamaz, bu da azotemidir. Azalan glomerül perfüzyonu renin salınımını artırır ve renin anjiyotensin sistemi uyarılır. Anjiyotensin damarları daraltır, yani vazokonstriksiyon olur; aynı zamanda sodyum ve su tutulur, hacim artar. Bu ikisinin sonucu hipertansiyondur. Sodyum ve su tutulumu yalnız hipertansiyonu değil, nefritik hastalarda görülen ödemi de açıklar. Kısacası, hematüri ve proteinüri bariyerden, oligüri ve azotemi filtrasyon hızının düşmesinden, hipertansiyon reninden kaynaklanır. Her bulguyu bir mekanizmaya bağlayabilirseniz, sonraki hastalıkların klinik tablolarını ezberlemeden açıklayabilirsiniz.
+Kalan üç bulgu filtrasyonun azalmasından doğar.
+Enflamasyonun etkilediği kılcallarda glomerüler filtrasyon hızı düşer.
+Daha az idrar oluşur, bu oligüridir; üre ve kreatinin atılamaz, bu da azotemidir.
+Azalan glomerül perfüzyonu renin salınımını artırır ve renin anjiyotensin sistemi uyarılır.
+Anjiyotensin damarları daraltır, yani vazokonstriksiyon olur; aynı zamanda sodyum ve su tutulur, hacim artar.
+Bu ikisinin sonucu hipertansiyondur.
+Sodyum ve su tutulumu yalnız hipertansiyonu değil, nefritik hastalarda görülen ödemi de açıklar.
+Kısacası, hematüri ve proteinüri bariyerden, oligüri ve azotemi filtrasyon hızının düşmesinden, hipertansiyon reninden kaynaklanır.
+Her bulguyu bir mekanizmaya bağlayabilirseniz, sonraki hastalıkların klinik tablolarını ezberlemeden açıklayabilirsiniz.
 
 @@ Başlıca nedenler
 Nefritik sendrom yapan hastalıklar beş başlıkta toplanır. 1.'si akut enfeksiyon sonrası glomerülonefrittir; özellikle poststreptokokal formu. 2.'si hızlı ilerleyen ya da hilal glomerülonefritidir; İngilizce adının kısaltmasıyla da anılır. Bunun üç immünolojik tipi vardır: glomerüler bazal membrana karşı antikorların olduğu anti glomerüler bazal membran tipi, immün kompleks tipi ve pausi immün tip. Pausi, az demektir; bu tipte glomerülde belirgin immün birikim görülmez ve tablo, küçük kan damarlarında iltihap ve hasara yol açan, bağışıklık sistemiyle ilişkili otoimmün bir vaskülitle, yani anka ilişkili vaskülitle bağlantılıdır. Anka, antinötrofil sitoplazmik antikor demektir. 3. neden sistemik lupus eritematozusla ilişkili lupus nefriti, 4.'sü immünoglobulin A nefropatisi, 5.'si ise kalıtsal nefritlerdir: Alport sendromu ve ince bazal membran hastalığı.
@@ -18,49 +38,91 @@ Nefritik sendrom yapan hastalıklar beş başlıkta toplanır. 1.'si akut enfeks
 @@ Primer glomerüler hastalıklar tablosu: nefrotik kutup
 Robbins'in primer glomerüler hastalıkları özetleyen tablosu, her hastalığı en sık klinik tablo, patogenez, ışık mikroskopisi, immünfloresan ve elektron mikroskopisi açısından karşılaştırır. Nefritik hastalıkları tanımak için önce bu tablonun nefrotik ve karışık kutbunu hızlıca hatırlayalım, çünkü ayırıcı tanıda hep bunlarla karşılaştıracağız.
 
-Minimal değişiklik hastalığı nefrotik sendrom yapar. Nedeni bilinmez, temel olay podosit hasarıdır. Işık mikroskopisinde glomerüller çoğunlukla normal görünür, immünfloresan negatiftir. Elektron mikroskopisinde podosit ayak çıkıntılarında yaygın effasman, yani silinme vardır ve depozit yoktur. Yani bu hastalığı gösteren tek yöntem elektron mikroskopisidir; enflamasyon içermediği için nefritik değil nefrotik tablo yapar.
+Minimal değişiklik hastalığı nefrotik sendrom yapar.
+Nedeni bilinmez, temel olay podosit hasarıdır.
+Işık mikroskopisinde glomerüller çoğunlukla normal görünür, immünfloresan negatiftir.
+Elektron mikroskopisinde podosit ayak çıkıntılarında yaygın effasman, yani silinme vardır ve depozit yoktur.
+Yani bu hastalığı gösteren tek yöntem elektron mikroskopisidir; enflamasyon içermediği için nefritik değil nefrotik tablo yapar.
 
-Fokal segmental glomerüloskleroz da adını dağılımından alır. Fokal, glomerüllerin yalnız bir kısmının tutulması; segmental, tutulan glomerülün de yalnız bir bölümünün etkilenmesi demektir. Bu bölgelerde skleroz ve hiyalinoz gelişir. Klinikte nefrotik sendrom ya da nefrotik olmayan düzeyde proteinüri görülür. Nedeni bilinmez; azalmış fonksiyonel böbrek kitlesine adaptif yanıt ve olası dolaşımsal plazma faktörleri öne çıkar. İmmünfloresan genellikle negatiftir, ancak sklerotik alanlarda immünoglobulin M ve ce üç birikimi görülebilir; bu boyanma immün kompleks hastalığı anlamına gelmez, skleroz alanına takılan proteinleri yansıtır. Elektron mikroskopisinde ayak çıkıntılarında effasman ve segmental epitel denudasyonu, yani podosit kaybı görülür.
+Fokal segmental glomerüloskleroz da adını dağılımından alır.
+Fokal, glomerüllerin yalnız bir kısmının tutulması; segmental, tutulan glomerülün de yalnız bir bölümünün etkilenmesi demektir.
+Bu bölgelerde skleroz ve hiyalinoz gelişir.
+Klinikte nefrotik sendrom ya da nefrotik olmayan düzeyde proteinüri görülür.
+Nedeni bilinmez; azalmış fonksiyonel böbrek kitlesine adaptif yanıt ve olası dolaşımsal plazma faktörleri öne çıkar.
+İmmünfloresan genellikle negatiftir, ancak sklerotik alanlarda immünoglobulin M ve ce üç birikimi görülebilir; bu boyanma immün kompleks hastalığı anlamına gelmez, skleroz alanına takılan proteinleri yansıtır.
+Elektron mikroskopisinde ayak çıkıntılarında effasman ve segmental epitel denudasyonu, yani podosit kaybı görülür.
 
-Membranöz nefropati de nefrotik sendrom yapar, ama bir immün kompleks hastalığıdır. Patogenezde in situ, yani yerinde immün kompleks oluşumu vardır; primer olguların çoğunda pe le a iki er antijenine karşı antikorlar bulunur. Işık mikroskopisinde diffüz kapiller duvar kalınlaşması ve subepitelyal spayk, yani diken oluşumu görülür. İmmünfloresanda bazal membran boyunca granüler immünoglobulin G ve ce üç, elektron mikroskopisinde kapiller duvar boyunca subepitelyal depozitler vardır. Antikor dolaşımdan gelir ama kompleks, antijenin bulunduğu podosit tarafında kurulur; depozitin subepitelyal olmasının nedeni budur.
+Membranöz nefropati de nefrotik sendrom yapar, ama bir immün kompleks hastalığıdır.
+Patogenezde in situ, yani yerinde immün kompleks oluşumu vardır; primer olguların çoğunda pe le a iki er antijenine karşı antikorlar bulunur.
+Işık mikroskopisinde diffüz kapiller duvar kalınlaşması ve subepitelyal spayk, yani diken oluşumu görülür.
+İmmünfloresanda bazal membran boyunca granüler immünoglobulin G ve ce üç, elektron mikroskopisinde kapiller duvar boyunca subepitelyal depozitler vardır.
+Antikor dolaşımdan gelir ama kompleks, antijenin bulunduğu podosit tarafında kurulur; depozitin subepitelyal olmasının nedeni budur.
 
 @@ Karışık kutup: membranoproliferatif glomerülonefrit ve ce üç glomerülopatisi
 Membranoproliferatif glomerülonefrit, tabloda immün kompleks aracılı form olarak, esas olarak eski Tip 1 olarak verilir. Klinikte nefrotik ve nefritik sendrom bir arada görülebilir. Işık mikroskopisinde membranoproliferatif patern vardır: mezangiyal proliferasyon, kapiller duvar kalınlaşması ve bazal membranda bölünme. Bu bölünme çift kontur oluşturur ve buna tram trek, yani tren rayı görünümü denir. İmmünfloresanda bazal membran ve mezangium boyunca granüler immünoglobulin G, ce üç, ce bir ku ve ce dört birikir; ce bir ku ve ce dört, kompleman sisteminin klasik yolla aktive olduğunu gösterir. Elektron mikroskopisinde başlıca subendotelyal depozitler görülür. Subendotelyal yerleşim, bu hastalığı subepitelyal depozitli membranöz nefropatiden ayırır.
 
-Ce üç glomerülopatisi iki hastalığı kapsar: yoğun depo hastalığı ve ce üç glomerülonefriti. Klinik tablo nefrotik ya da nefritik sendrom veya nefrotik olmayan proteinüridir. Burada hasar antijen antikor kompleksinden değil, kompleman düzensizliğinden kaynaklanır: alternatif kompleman yolu sürekli aktiftir ve bunun nedeni kompleman regülasyonundaki antikor aracılı ya da kalıtsal defektlerdir. Işık mikroskopisinde mezangiyal proliferatif ya da membranoproliferatif patern görülür. İmmünfloresanda belirgin ce üç birikimi vardır, immünoglobulinler az ya da yoktur. Elektron mikroskopisinde mezangiyal, intramembranöz ve subendotelyal, elektron yoğun ya da mumsu depozitler görülür; yoğun depo hastalığında depozit bazal membran içinde bant tarzındadır. Dikkat edin, ce üç var ama immünoglobulin yok deseni bu hastalığı membranoproliferatif glomerülonefritten ayırır.
+Ce üç glomerülopatisi iki hastalığı kapsar: yoğun depo hastalığı ve ce üç glomerülonefriti.
+Klinik tablo nefrotik ya da nefritik sendrom veya nefrotik olmayan proteinüridir.
+Burada hasar antijen antikor kompleksinden değil, kompleman düzensizliğinden kaynaklanır: alternatif kompleman yolu sürekli aktiftir ve bunun nedeni kompleman regülasyonundaki antikor aracılı ya da kalıtsal defektlerdir.
+Işık mikroskopisinde mezangiyal proliferatif ya da membranoproliferatif patern görülür.
+İmmünfloresanda belirgin ce üç birikimi vardır, immünoglobulinler az ya da yoktur.
+Elektron mikroskopisinde mezangiyal, intramembranöz ve subendotelyal, elektron yoğun ya da mumsu depozitler görülür; yoğun depo hastalığında depozit bazal membran içinde bant tarzındadır.
+Dikkat edin, ce üç var ama immünoglobulin yok deseni bu hastalığı membranoproliferatif glomerülonefritten ayırır.
 
 Özetle depozit yeri anahtar ayırıcıdır: minimal değişiklik hastalığında depozit yoktur, membranöz nefropatide subepitelyal, membranoproliferatif glomerülonefritte subendotelyal, yoğun depo hastalığında ise bazal membran içinde bant tarzındadır.
 
 @@ Akut enfeksiyon sonrası glomerülonefrit: tanım ve etkenler
 Akut enfeksiyon sonrası glomerülonefrit, bir enfeksiyonun ardından glomerüllerde immün kompleks birikmesiyle gelişen, diffüz glomerüler enflamasyon ve hasar oluşturan hastalıktır. Diffüz demek, glomerüllerin hemen tamamının tutulması demektir; nefritik bulguların belirgin olmasının nedeni de bu yaygın tutulumdur. Tablodaki en sık klinik karşılığı nefritik sendromdur.
 
-Klasik örnek poststreptokokal glomerülonefrittir, ama tek tetikleyici streptokok değildir. Diğer bakteriyel tetikleyiciler Streptokokus pnömonia ve Stafilokokus aureus'tur. Viral tetikleyiciler arasında kabakulak, kızamık, suçiçeği, hepatit be ve hepatit ce virüsleri sayılır.
+Klasik örnek poststreptokokal glomerülonefrittir, ama tek tetikleyici streptokok değildir.
+Diğer bakteriyel tetikleyiciler Streptokokus pnömonia ve Stafilokokus aureus'tur.
+Viral tetikleyiciler arasında kabakulak, kızamık, suçiçeği, Hepatit B ve Hepatit C virüsleri sayılır.
 
 @@ Poststreptokokal glomerülonefritin patogenezi
 Poststreptokokal glomerülonefriti her streptokok enfeksiyonu oluşturmaz. Etken, nefritojenik denen, yani glomerülonefrit oluşturma yeteneği olan A grubu beta hemolitik streptokok suşlarıdır. Streptokok antijenleri, örneğin streptokok ekzotoksin be, konakta oluşan spesifik antikorlarla bağlanarak immün kompleks oluşturur. Bu kompleks iki yolla glomerüle ulaşabilir. Ya dolaşımda oluşup glomerülde birikir, ya da antijen önce glomerüle yerleşir, buna planted, yani ekilmiş antijen deriz, ve antikoru orada, yerinde bağlar. Yani hastalık doğrudan bakteriyel invazyon değil, bir immün kompleks hastalığıdır. Antikor yanıtının gelişmesi zaman aldığı için böbrek bulguları enfeksiyonla eşzamanlı değil, bir süre sonra ortaya çıkar.
 
-Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: poststreptokokal glomerülonefritte immün kompleksler glomerülde birikir, hastalık en sık beta hemolitik streptokokların nefritojenik suşlarıyla ilişkilidir, birikim in situ ya da dolaşan komplekslerle olabilir ve glomerülde granüler tarzda immünoglobulin G ve kompleman birikimi bulunur. Bu dört ifadenin hepsi doğrudur. Aynı sorularda çeldirici olarak bazal membranda subendotelyal tram trek çift kontur görünümü de verilmiştir; hatırlayın, tram trek membranoproliferatif glomerülonefritin bulgusudur, poststreptokokal glomerülonefritin değil.
+Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: poststreptokokal glomerülonefritte immün kompleksler glomerülde birikir, hastalık en sık beta hemolitik streptokokların nefritojenik suşlarıyla ilişkilidir, birikim in situ ya da dolaşan komplekslerle olabilir ve glomerülde granüler tarzda immünoglobulin G ve kompleman birikimi bulunur.
+Bu dört ifadenin hepsi doğrudur.
+Aynı sorularda çeldirici olarak bazal membranda subendotelyal tram trek çift kontur görünümü de verilmiştir; hatırlayın, tram trek membranoproliferatif glomerülonefritin bulgusudur, poststreptokokal glomerülonefritin değil.
 
 @@ Kompleman aktivasyonu ve birikim yerleri
 Glomerüle yerleşen immün kompleksler kompleman sistemini harekete geçirir ve enflamasyonu başlatır. Bu hastalıkta kompleman klasik yol üzerinden aktive olur. Kompleman bileşenleri tükenir, özellikle ce üç tüketilir; serumda ce üç düşüklüğünün temeli budur. Kompleman aktivasyonu lökositleri glomerüle çeker ve biraz sonra göreceğimiz nötrofil ve monosit infiltrasyonunun kaynağı da budur.
 
-Burası önemli, çıkmış soruların en sık tekrar eden tuzağı burada: poststreptokokal glomerülonefrit primer olarak alternatif kompleman yolağını aktive eder ifadesi yanlıştır. Doğrusu, kompleman klasik yolla aktive olur ve ce üç tüketilir. Alternatif yolun sürekli çalıştığı hastalık, az önce gördüğümüz ce üç glomerülopatisidir. Bu iki hastalığı kompleman yolu üzerinden birbirinden ayırın.
+Burası önemli, çıkmış soruların en sık tekrar eden tuzağı burada: poststreptokokal glomerülonefrit primer olarak alternatif kompleman yolağını aktive eder ifadesi yanlıştır.
+Doğrusu, kompleman klasik yolla aktive olur ve ce üç tüketilir.
+Alternatif yolun sürekli çalıştığı hastalık, az önce gördüğümüz ce üç glomerülopatisidir.
+Bu iki hastalığı kompleman yolu üzerinden birbirinden ayırın.
 
-Kompleksler glomerüler bazal membran boyunca ve mezangiumda birikir. Bazal membrana göre konumları iki yönlüdür: hem subepitelyal, yani podosit tarafında, hem de subendotelyal, yani kılcal lümen tarafında yerleşebilirler.
+Kompleksler glomerüler bazal membran boyunca ve mezangiumda birikir.
+Bazal membrana göre konumları iki yönlüdür: hem subepitelyal, yani podosit tarafında, hem de subendotelyal, yani kılcal lümen tarafında yerleşebilirler.
 
 @@ Akut enfeksiyon sonrası glomerülonefritin morfolojisi
 Işık mikroskopisinde tablo diffüz glomerülonefrittir; hemen tüm glomerüller etkilenir ve glomerüller hücreden zengin, dolu görünür. Bu hiperhücreliliğin iki kaynağı vardır. 1.'si proliferasyondur: endotel ve mezangiyal hücreler çoğalır, buna tabloda diffüz endokapiller proliferasyon denir. 2.'si infiltrasyondur: nötrofil ve monositler glomerüle göç eder. Ağır hasarı gösteren kılcal duvarlarda fokal nekroz da görülebilir. Ders şeklinde glomerül yumağı, kapiller içi lökositler ve muhtemelen glomerül hücrelerinin proliferasyonu nedeniyle hücreden zengin görünür, kılcal lümenler belirgin değildir. Endokapiller proliferasyon ve kılcallara dolan lökositler lümenleri daraltır; bu da filtrasyonun azalmasını, yani oligüri ve azotemiyi morfolojik olarak açıklar.
 
-İmmünfloresanda kılcal duvar ve mezangiumda granüler immünoglobulin G ve ce üç birikimi görülür. Bu görünüme topaklı pürüzlü, İngilizce deyişle lampi bampi denir; şekilde belirgin, kaba taneli birikimler dikkat çeker. Elektron mikroskopisinde ise subepitelyal, hamp denen, kambur ya da hörgüç tarzında elektron yoğun birikintiler vardır. Şekildeki üç panel aynı hastalığı üç yöntemle eşleştirir: immünfloresandaki kaba taneler, elektron mikroskopisinde bazal membranın podosit tarafına yerleşmiş kambur biçimli koyu depozitlere karşılık gelir.
+İmmünfloresanda kılcal duvar ve mezangiumda granüler immünoglobulin G ve ce üç birikimi görülür.
+Bu görünüme topaklı pürüzlü, İngilizce deyişle lampi bampi denir; şekilde belirgin, kaba taneli birikimler dikkat çeker.
+Elektron mikroskopisinde ise subepitelyal, hamp denen, kambur ya da hörgüç tarzında elektron yoğun birikintiler vardır.
+Şekildeki üç panel aynı hastalığı üç yöntemle eşleştirir: immünfloresandaki kaba taneler, elektron mikroskopisinde bazal membranın podosit tarafına yerleşmiş kambur biçimli koyu depozitlere karşılık gelir.
 
-Burası önemli, bu bilgi çıkmış sorularda birçok kez soruldu: elektron mikroskopisinde bazal membrana karşı yuvalanmış subepitelyal hörgüçler, yani hamp depozitler, ki yanlarında subendotelyal ve intramembranöz birikimler de bulunabilir, ya da glomerüllerde hörgüç benzeri nodüler immün depolanma, akut postenfeksiyöz yani poststreptokokal glomerülonefrit için tipiktir. Dikkat edin, bu bulgu membranöz nefropatiyle karıştırılır. Membranöz nefropatide de depozitler subepitelyaldir, ama düzenli diken görünümü oluşturur ve tablo nefrotiktir. Minimal değişiklik hastalığında ise depozit hiç yoktur.
+Burası önemli, bu bilgi çıkmış sorularda birçok kez soruldu: elektron mikroskopisinde bazal membrana karşı yuvalanmış subepitelyal hörgüçler, yani hamp depozitler, ki yanlarında subendotelyal ve intramembranöz birikimler de bulunabilir, ya da glomerüllerde hörgüç benzeri nodüler immün depolanma, akut postenfeksiyöz yani poststreptokokal glomerülonefrit için tipiktir.
+Dikkat edin, bu bulgu membranöz nefropatiyle karıştırılır.
+Membranöz nefropatide de depozitler subepitelyaldir, ama düzenli diken görünümü oluşturur ve tablo nefrotiktir.
+Minimal değişiklik hastalığında ise depozit hiç yoktur.
 
 @@ Klinik tablo, laboratuvar ve prognoz
-Tipik hasta bir çocuktur. Tablo, üst solunum yolu ya da deri streptokok enfeksiyonundan bir ila dört hafta sonra başlar; bu aralık, antijene karşı antikor oluşup immün komplekslerin birikmesi için geçen süredir. Klinikte akut nefritik sendrom görülür: makroskopik hematüri nedeniyle kola rengi idrar, özellikle göz çevresinde, yani periorbital ödem, hipertansiyon, oligüri ve azotemi. Her bulgu öğrendiğimiz bir mekanizmaya bağlanır: kola rengi idrar bariyer hasarından, oligüri ve azotemi filtrasyon hızının düşmesinden, ödem ve hipertansiyon sodyum ve su tutulumundan kaynaklanır. Burası önemli, sınav spotu: boğaz ya da deri enfeksiyonundan bir ila dört hafta sonra kola rengi idrar ve periorbital ödemle gelen çocuk, poststreptokokal glomerülonefritin klasik sunumudur.
+Tipik hasta bir çocuktur. Tablo, üst solunum yolu ya da deri streptokok enfeksiyonundan bir ila 4 hafta sonra başlar; bu aralık, antijene karşı antikor oluşup immün komplekslerin birikmesi için geçen süredir. Klinikte akut nefritik sendrom görülür: makroskopik hematüri nedeniyle kola rengi idrar, özellikle göz çevresinde, yani periorbital ödem, hipertansiyon, oligüri ve azotemi. Her bulgu öğrendiğimiz bir mekanizmaya bağlanır: kola rengi idrar bariyer hasarından, oligüri ve azotemi filtrasyon hızının düşmesinden, ödem ve hipertansiyon sodyum ve su tutulumundan kaynaklanır. Burası önemli, sınav spotu: boğaz ya da deri enfeksiyonundan bir ila 4 hafta sonra kola rengi idrar ve periorbital ödemle gelen çocuk, poststreptokokal glomerülonefritin klasik sunumudur.
 
-Laboratuvarda iki bulgu patogenezi serumda görünür kılar. Serum kompleman ce üç düzeyi düşüktür, çünkü klasik yol aktive olmuş ve ce üç tüketilmiştir. Anti streptolizin o, kısaca a se o titreleri ise yüksektir; bu, yakın zamanda geçirilmiş streptokok enfeksiyonunu gösterir ve yalnız poststreptokokal olgularda beklenir. Streptokok dışı etkenlerle gelişen enfeksiyon sonrası glomerülonefritte a se o yükselmesi beklenmez. Yani ce üç düşüklüğü immün mekanizmayı, a se o yüksekliği tetikleyiciyi gösterir.
+Laboratuvarda iki bulgu patogenezi serumda görünür kılar.
+Serum kompleman ce üç düzeyi düşüktür, çünkü klasik yol aktive olmuş ve ce üç tüketilmiştir.
+Anti streptolizin o, kısaca a se o titreleri ise yüksektir; bu, yakın zamanda geçirilmiş streptokok enfeksiyonunu gösterir ve yalnız poststreptokokal olgularda beklenir.
+Streptokok dışı etkenlerle gelişen enfeksiyon sonrası glomerülonefritte a se o yükselmesi beklenmez.
+Yani ce üç düşüklüğü immün mekanizmayı, a se o yüksekliği tetikleyiciyi gösterir.
 
-Prognoz yaşa göre belirgin farklıdır. Çocuklarda olguların %90 beşinden fazlası tam iyileşir; az bir kısmı ise hızlı ilerleyen glomerülonefrite ya da kronik glomerülonefrite ilerler. Erişkinlerde prognoz daha kötüdür; olguların %10 beş ile elli arasındaki bölümü kronik böbrek hastalığına ilerleyebilir. Seyir, başlangıçtaki lezyon şiddeti ve eşlik eden hastalıklarla ilişkilidir. Burası önemli, sınav kuralı olarak: enfeksiyon sonrası glomerülonefrit çocuklarda iyi, erişkinlerde daha kötü prognozludur.
+Prognoz yaşa göre belirgin farklıdır.
+Çocuklarda olguların %95'inden fazlası tam iyileşir; az bir kısmı ise hızlı ilerleyen glomerülonefrite ya da kronik glomerülonefrite ilerler.
+Erişkinlerde prognoz daha kötüdür; olguların %15 ile elli arasındaki bölümü kronik böbrek hastalığına ilerleyebilir.
+Seyir, başlangıçtaki lezyon şiddeti ve eşlik eden hastalıklarla ilişkilidir.
+Burası önemli, sınav kuralı olarak: enfeksiyon sonrası glomerülonefrit çocuklarda iyi, erişkinlerde daha kötü prognozludur.
 
 @@ Hızlı ilerleyen glomerülonefrit: tanım ve klinik
 Hızlı ilerleyen glomerülonefrit, nefritik sendromun en agresif biçimidir ve tanımın merkezinde zaman vardır: haftalar ya da aylar içinde hızla böbrek yetmezliğine ilerleyen nefritik sendromdur. Klinikte şiddetli oligüri, hızlı azotemi artışı ve sıklıkla nefrotik aralığa yaklaşan proteinüri görülür. Morfolojik ayırıcı özelliği Bowman boşluğunda hilal oluşumudur; İngilizcede kresent denir ve bu nedenle hastalığa hilal şeklinde ya da kresentik glomerülonefrit de denir. Bu tablo tek bir hastalık değil, klinik ve morfolojik bir tablodur: farklı immün mekanizmalar aynı sonuca, yani hilal oluşumuna ve hızlı böbrek kaybına götürür.
@@ -68,71 +130,135 @@ Hızlı ilerleyen glomerülonefrit, nefritik sendromun en agresif biçimidir ve 
 @@ Hızlı ilerleyen glomerülonefritin üç immünolojik tipi
 Tip 1, anti glomerüler bazal membran antikor hastalığıdır. Burada otoantikorlar doğrudan bazal membranı hedefler; hedef antijen Tip 4 kollajenin alfa üç zinciridir. Klinik örneği Gudpaşçır hastalığıdır. İmmünfloresanda bazal membran boyunca lineer, yani doğrusal immünoglobulin G birikimi görülür, ce üç de aynı desende boyanır. Neden lineer? Çünkü antijen bazal membranın kendisidir ve membran boyunca düzgün dağılmıştır; antikor her yere bağlanır ve kılcal duvarları izleyen kesintisiz, ince bir şerit oluşur. Ders şeklinde bu lineer desen, granüler desenle yan yana gösterilir. Ayrıca Tip 4 kollajenin alfa üç zinciri akciğer alveol bazal membranında da bulunduğu için Gudpaşçır sendromunda akciğer kanaması, yani hemoptizi ile hilalli glomerülonefritin birlikte görülebileceği de vurgulanır.
 
-Tip 2, immün kompleks aracılı formdur. Burada hasarı glomerülde biriken immün kompleksler başlatır. Bu ayrı bir hastalık değil, bildiğimiz immün kompleks hastalıklarının ağır, hilal yapan biçimidir. Nedenleri enfeksiyon sonrası glomerülonefrit, sistemik lupus eritematozus, immünoglobulin A nefropatisi ve Henoh Şönlayn purpurasıdır. Henoh Şönlayn purpurası, immünoglobulin A vasküliti olarak da bilinir; küçük kan damarlarının iltihabıyla karakterize, genellikle çocukluk çağında görülen bir bağışıklık sistemi hastalığıdır. İmmünfloresanda granüler, yani taneli, noktasal immünoglobulin ve kompleman birikimi görülür; granüler desen immün kompleks birikiminin karakteristik özelliğidir. Bu tipte altta yatan hastalığın kendi özellikleri de korunur.
+Tip 2, immün kompleks aracılı formdur.
+Burada hasarı glomerülde biriken immün kompleksler başlatır.
+Bu ayrı bir hastalık değil, bildiğimiz immün kompleks hastalıklarının ağır, hilal yapan biçimidir.
+Nedenleri enfeksiyon sonrası glomerülonefrit, sistemik lupus eritematozus, immünoglobulin A nefropatisi ve Henoh Şönlayn purpurasıdır.
+Henoh Şönlayn purpurası, immünoglobulin A vasküliti olarak da bilinir; küçük kan damarlarının iltihabıyla karakterize, genellikle çocukluk çağında görülen bir bağışıklık sistemi hastalığıdır.
+İmmünfloresanda granüler, yani taneli, noktasal immünoglobulin ve kompleman birikimi görülür; granüler desen immün kompleks birikiminin karakteristik özelliğidir.
+Bu tipte altta yatan hastalığın kendi özellikleri de korunur.
 
-Tip 3, pausi immün tiptir. Glomerülde hasar ağırdır ama immünfloresan neredeyse boştur, belirgin immünoglobulin ya da kompleman birikimi yoktur. Sıklıkla anka pozitiftir: ya proteinaz üçe karşı pe er üç anka, ya da miyeloperoksidaza karşı em pe o anka. Pausi immün tip, anka ilişkili sistemik vaskülitlerin bir bileşenidir; yani böbrek dışı küçük damarlar da tutulabilir. Dikkat edin, immünfloresan negatifliği minimal değişiklik hastalığında da vardır, ama orada ışık mikroskopisi normaldir ve tablo nefrotiktir; burada ise immünfloresan negatifken ışık mikroskopisinde hilal ve nekroz vardır. Burası önemli, sınav spotu: Tip 1 anti glomerüler bazal membran ve lineer immünoglobulin G, Tip 2 immün kompleks ve granüler desen, Tip 3 pausi immün ve anka.
+Tip 3, pausi immün tiptir.
+Glomerülde hasar ağırdır ama immünfloresan neredeyse boştur, belirgin immünoglobulin ya da kompleman birikimi yoktur.
+Sıklıkla anka pozitiftir: ya proteinaz üçe karşı pe er üç anka, ya da miyeloperoksidaza karşı em pe o anka.
+Pausi immün tip, anka ilişkili sistemik vaskülitlerin bir bileşenidir; yani böbrek dışı küçük damarlar da tutulabilir.
+Dikkat edin, immünfloresan negatifliği minimal değişiklik hastalığında da vardır, ama orada ışık mikroskopisi normaldir ve tablo nefrotiktir; burada ise immünfloresan negatifken ışık mikroskopisinde hilal ve nekroz vardır.
+Burası önemli, sınav spotu: Tip 1 anti glomerüler bazal membran ve lineer immünoglobulin G, Tip 2 immün kompleks ve granüler desen, Tip 3 pausi immün ve anka.
 
 @@ Hilal morfolojisi, immünfloresan ve elektron mikroskopisi
 Üç tipin ortak ışık mikroskopisi bulgusu, Bowman kapsülü boşluğunda gelişen hilaldir. Hilalin iki bileşeni vardır: Bowman kapsülünü döşeyen parietal epitel hücrelerinin proliferasyonu ve bu hücre kitlesine katılan monosit ve diğer lökositlerin göçü. Hilale kapiller duvarlarda segmental nekroz ve bazal membran kırıkları eşlik eder. Tabloda bu süreç, Bowman boşluğuna doğru ekstrakapiller proliferasyon olarak tanımlanır; yani çoğalma kılcalın içinde değil, dışında olur. Dikkat edin, enfeksiyon sonrası glomerülonefritte proliferasyon kılcal içidir, yani endokapillerdir; burada ise ekstrakapillerdir. Ders şeklinde, pas boyalı kesitte, glomerül yumakları Bowman kapsülü içinde sıkışmış, çevrelerinde hilal şeklinde çoğalan epitel hücreleri ve lökosit kitlesi görülür.
 
-Burası önemli, bu bilgi çıkmış sorularda birkaç kez soruldu: glomerüler hastalığın hızlı ve progresif seyredeceğinin göstergesi olan mikroskopik değişiklik, Bowman kapsülü içinde yarım ay, yani kresent şeklinde parietal epitel proliferasyonudur. Çeldirici şıklar olarak verilen nodüler mezangiyal skleroz, yani Kimmelstil Vilson lezyonu, diffüz glomerüloskleroz, bazal membran kalınlaşması ve podosit ayak çıkıntılarında düzleşme bu anlamı taşımaz.
+Burası önemli, bu bilgi çıkmış sorularda birkaç kez soruldu: glomerüler hastalığın hızlı ve progresif seyredeceğinin göstergesi olan mikroskopik değişiklik, Bowman kapsülü içinde yarım ay, yani kresent şeklinde parietal epitel proliferasyonudur.
+Çeldirici şıklar olarak verilen nodüler mezangiyal skleroz, yani Kimmelstil Vilson lezyonu, diffüz glomerüloskleroz, bazal membran kalınlaşması ve podosit ayak çıkıntılarında düzleşme bu anlamı taşımaz.
 
-Hilal üç tipte de ortak olduğundan tipleri immünfloresan ayırır. Anti glomerüler bazal membran tipinde bazal membran boyunca lineer immünoglobulin G ve ce üç, immün kompleks tipinde granüler immünoglobulin ve kompleman, pausi immün tipte ise immünoglobulin ve kompleman için negatif ya da minimal boyanma görülür; pausi immün tipte hilallerde fibrin bulunur. Elektron mikroskopisinde ortak bulgu bazal membran yırtıkları ve fibrin sızıntısıdır; fibrin Bowman boşluğuna geçer ve hilal oluşumunu uyaran olay da budur. İmmün kompleks formlarında ayrıca elektron yoğun birikintiler görülür, pausi immün tipte belirgin depozit yoktur. Ders şeklindeki elektron mikrografı, bazal membranın karakteristik kırışıklığını ve oklarla gösterilen odaksal bozulmaları gösterir.
+Hilal üç tipte de ortak olduğundan tipleri immünfloresan ayırır.
+Anti glomerüler bazal membran tipinde bazal membran boyunca lineer immünoglobulin G ve ce üç, immün kompleks tipinde granüler immünoglobulin ve kompleman, pausi immün tipte ise immünoglobulin ve kompleman için negatif ya da minimal boyanma görülür; pausi immün tipte hilallerde fibrin bulunur.
+Elektron mikroskopisinde ortak bulgu bazal membran yırtıkları ve fibrin sızıntısıdır; fibrin Bowman boşluğuna geçer ve hilal oluşumunu uyaran olay da budur.
+İmmün kompleks formlarında ayrıca elektron yoğun birikintiler görülür, pausi immün tipte belirgin depozit yoktur.
+Ders şeklindeki elektron mikrografı, bazal membranın karakteristik kırışıklığını ve oklarla gösterilen odaksal bozulmaları gösterir.
 
 @@ Hızlı ilerleyen glomerülonefritin kliniği, prognozu ve tedavisi
 Klinik sunum hızla kötüleşen bir nefritik sendromdur: şiddetli oligüri ya da idrar çıkışının durması demek olan anüri, hızla artan azotemi ve bazen nefrotik aralığa yakın proteinüri. Tedavi edilmezse haftalar ya da aylar içinde son dönem böbrek yetmezliği gelişir. Prognozu belirleyen iki faktör vardır: hilal içeren glomerül yüzdesi ve tanı anındaki böbrek fonksiyon düzeyi. Hilalli glomerül oranının yüzde sekseninin altında olması daha iyi prognoz gösterir. Burası önemli, sınav spotu: oran yükseldikçe böbrek kaybı riski artar; hastalık ne kadar erken yakalanırsa hilal oranı o kadar düşük, böbrek işlevi o kadar korunmuş olur.
 
-Tedavi, immün mekanizmayı hedefler ve gecikmeye tahammülü yoktur. İmmünsüpresif ajanlar, yani steroidler ve siklofosfamid, hasarı sürdüren immün yanıtı baskılamak için tüm tiplerin temelidir. Anti glomerüler bazal membran ya da anka ilişkili olgularda buna plazmaferez eklenir; mantığı, hasara yol açan dolaşımdaki antikorları plazmadan uzaklaştırmaktır. Bu yüzden immünfloresan ve serolojinin hızla değerlendirilmesi gerekir: lineer boyanma ya da anka pozitifliği plazmaferez kararını etkiler.
+Tedavi, immün mekanizmayı hedefler ve gecikmeye tahammülü yoktur.
+İmmünsüpresif ajanlar, yani steroidler ve siklofosfamid, hasarı sürdüren immün yanıtı baskılamak için tüm tiplerin temelidir.
+Anti glomerüler bazal membran ya da anka ilişkili olgularda buna plazmaferez eklenir; mantığı, hasara yol açan dolaşımdaki antikorları plazmadan uzaklaştırmaktır.
+Bu yüzden immünfloresan ve serolojinin hızla değerlendirilmesi gerekir: lineer boyanma ya da anka pozitifliği plazmaferez kararını etkiler.
 
 @@ Lupus nefriti: giriş ve altı sınıf
 Sistemik lupus eritematozus, çoklu organ tutulumuna sahip sistemik otoimmün bir hastalıktır ve böbrek, bu hastalıkta tutulan en önemli organlardan biridir. Böbrek hasarı çoğunlukla immün kompleks birikimiyle ilişkilidir; kompleksler mezangiuma, subendotelyal ya da subepitelyal alana yerleşebilir. Lupus nefriti, glomerüler lezyon paternlerine göre altı sınıfa ayrılır; sınıflama klinik bulguya değil, biyopsideki morfolojiye dayanır.
 
-Sınıf bir minimal mezangiyal, sınıf iki mezangiyal proliferatif lupus nefritidir. Sınıf üç fokal lupus nefritidir ve glomerüllerin yüzde ellisinden azı tutulur. Sınıf dört diffüz lupus nefritidir ve glomerüllerin yüzde ellisi ya da daha fazlası tutulur. Sınıf beş membranöz lupus nefriti, sınıf altı ise glomerüllerin yüzde doksanı ya da daha fazlasının sklerotik olduğu ileri sklerozan lupus nefritidir. Bunu bir ilerleme çizgisi gibi düşünün: bir ve iki mezangiumla sınırlı, üç ve dört proliferatif, beş membranöz desen, altı ise geri dönüşsüz son evre. Burası önemli, sınav spotu: sınıf üç ile dört arasındaki sınır %50 glomerül tutulumu, sınıf altının eşiği ise %90 sklerozdur.
+Sınıf bir minimal mezangiyal, sınıf iki mezangiyal proliferatif lupus nefritidir.
+Sınıf üç fokal lupus nefritidir ve glomerüllerin yüzde ellisinden azı tutulur.
+Sınıf dört diffüz lupus nefritidir ve glomerüllerin %50'si ya da daha fazlası tutulur.
+Sınıf beş membranöz lupus nefriti, sınıf altı ise glomerüllerin %90'ı ya da daha fazlasının sklerotik olduğu ileri sklerozan lupus nefritidir.
+Bunu bir ilerleme çizgisi gibi düşünün: bir ve iki mezangiumla sınırlı, üç ve dört proliferatif, beş membranöz desen, altı ise geri dönüşsüz son evre.
+Burası önemli, sınav spotu: sınıf üç ile dört arasındaki sınır %50 glomerül tutulumu, sınıf altının eşiği ise %90 sklerozdur.
 
 @@ Lupus nefriti: sınıf bir, iki ve üç
 Sınıf bir ve iki, immün komplekslerin mezangiumla sınırlı kaldığı hafif formlardır. Sınıf birde mezangiumda immün kompleks birikimi vardır, ama ışık mikroskopisi normaldir; birikim yalnız immünfloresan ya da elektron mikroskopisiyle görülür. Hasta asemptomatiktir, idrar ve kreatinin normaldir. Sınıf ikide ışık mikroskopisinde mezangiyal hücre ve matriks artışı ve mezangiyal granüler immün kompleks birikimi vardır. Klinikte hafif proteinüri ya da mikroskopik hematüri görülür; nadiren nefrotik sendrom ya da böbrek yetmezliği gelişir. İki sınıfı ayıran şey ışık mikroskopisidir.
 
-Sınıf üçte lezyonlar mezangiumu aşar ve kılcal duvarı tutar, ama tüm glomerüllerin yüzde ellisinden azı etkilenir. Tutulan glomerülde lezyon segmental ya da global olabilir. Lökosit infiltrasyonu, kapiller nekroz, hiyalin trombüsler, yani kılcal lümende camsı görünümlü tıkaçlar, endotel ve mezangiyal hücre proliferasyonu görülür; ekstrakapiller proliferasyon ve hilal oluşumu da görülebilir. Klinik, hafif hematüri ve proteinüriden akut böbrek yetmezliğine kadar değişir. Ders şeklinde, saat on bir ve iki yönünde iki odaksal nekrotizan lezyonu olan odaksal proliferatif glomerülonefrit görülür; bu olguda ekstrakapiller proliferasyon belirgin değildir. Sınıf üçteki hilal oluşumu, lupus nefritinin neden immün kompleks aracılı hızlı ilerleyen glomerülonefrit nedenleri arasında sayıldığını açıklar.
+Sınıf üçte lezyonlar mezangiumu aşar ve kılcal duvarı tutar, ama tüm glomerüllerin yüzde ellisinden azı etkilenir.
+Tutulan glomerülde lezyon segmental ya da global olabilir.
+Lökosit infiltrasyonu, kapiller nekroz, hiyalin trombüsler, yani kılcal lümende camsı görünümlü tıkaçlar, endotel ve mezangiyal hücre proliferasyonu görülür; ekstrakapiller proliferasyon ve hilal oluşumu da görülebilir.
+Klinik, hafif hematüri ve proteinüriden akut böbrek yetmezliğine kadar değişir.
+Ders şeklinde, saat on bir ve iki yönünde iki odaksal nekrotizan lezyonu olan odaksal proliferatif glomerülonefrit görülür; bu olguda ekstrakapiller proliferasyon belirgin değildir.
+Sınıf üçteki hilal oluşumu, lupus nefritinin neden immün kompleks aracılı hızlı ilerleyen glomerülonefrit nedenleri arasında sayıldığını açıklar.
 
 @@ Lupus nefriti: sınıf dört ve tel halka
-Burası önemli, sınav spotu: sınıf dört, yani diffüz lupus nefriti, en yaygın ve en şiddetli formdur. Glomerüllerin yüzde ellisi ya da daha fazlası tutulur. Endotel, mezangiyal ve epitel hücrelerinde belirgin proliferasyon vardır; ders şeklinde glomerül boyunca hücre sayısındaki belirgin artış dikkat çeker. Hilal oluşumu sıktır. Klinikte hematüri, ağır proteinüri, hipertansiyon ve orta ile şiddetli arasında böbrek yetmezliği görülür.
+Burası önemli, sınav spotu: sınıf dört, yani diffüz lupus nefriti, en yaygın ve en şiddetli formdur. Glomerüllerin %50'si ya da daha fazlası tutulur. Endotel, mezangiyal ve epitel hücrelerinde belirgin proliferasyon vardır; ders şeklinde glomerül boyunca hücre sayısındaki belirgin artış dikkat çeker. Hilal oluşumu sıktır. Klinikte hematüri, ağır proteinüri, hipertansiyon ve orta ile şiddetli arasında böbrek yetmezliği görülür.
 
-Sınıf dördün en tanınır bulgusu subendotelyal immün kompleks birikimidir. Bu birikim ışık mikroskopisinde kılcal duvarı kalın, parlak ve sert bir halka gibi gösterir; buna tel halka, İngilizce vayr lup lezyonu denir ve pas boyasında birkaç tel halka içeren glomerül gösterilir. Elektron mikroskopisinde tel halkalara karşılık gelen, bazal membrandaki yoğun subendotelyal birikimler görülür. İmmünfloresanda granüler desende immünoglobulin G birikimi vardır; genel olarak immünfloresan ve elektron mikroskopisinde yaygın immün kompleks birikimi bulunur. Yani ışık mikroskopisindeki tel halka, elektron mikroskopisindeki subendotelyal depozite ve immünfloresandaki granüler immünoglobulin G'ye karşılık gelir. Ek olarak, lupus nefritinde immünfloresanda immünoglobulin G, A ve M ile ce üç ve ce bir kunun birlikte boyandığı, tam ev ya da ful haus denen desenin karakteristik olduğu belirtilir.
+Sınıf dördün en tanınır bulgusu subendotelyal immün kompleks birikimidir.
+Bu birikim ışık mikroskopisinde kılcal duvarı kalın, parlak ve sert bir halka gibi gösterir; buna tel halka, İngilizce vayr lup lezyonu denir ve pas boyasında birkaç tel halka içeren glomerül gösterilir.
+Elektron mikroskopisinde tel halkalara karşılık gelen, bazal membrandaki yoğun subendotelyal birikimler görülür.
+İmmünfloresanda granüler desende immünoglobulin G birikimi vardır; genel olarak immünfloresan ve elektron mikroskopisinde yaygın immün kompleks birikimi bulunur.
+Yani ışık mikroskopisindeki tel halka, elektron mikroskopisindeki subendotelyal depozite ve immünfloresandaki granüler immünoglobulin G'ye karşılık gelir.
+Ek olarak, lupus nefritinde immünfloresanda immünoglobulin G, A ve M ile ce üç ve ce bir kunun birlikte boyandığı, tam ev ya da ful haus denen desenin karakteristik olduğu belirtilir.
 
 @@ Lupus nefriti: sınıf beş, altı ve klinik
 Sınıf beş, membranöz lupus nefritidir ve idiyopatik membranöz nefropatiye benzer. Subepitelyal immün kompleksler kılcal duvarı kalınlaştırır ve nefrotik sendrom sıktır. Bu sınıf diğer lupus sınıflarıyla birlikte de görülebilir. Lupusta depozit yeri tabloyu belirler: subendotelyal birikim, yani sınıf dört, proliferasyon ve nefritik bulgular yapar; subepitelyal birikim, yani sınıf beş, kılcal duvar kalınlaşması ve nefrotik sendrom yapar. Lupusta genelde karışık tablo vardır; saf nefrotik tablo sınıf beşi düşündürür.
 
-Sınıf altı, ileri sklerozan lupus nefritidir ve geri dönüşsüz son evredir. Glomerüllerin yüzde doksanı ya da daha fazlası sklerotiktir ve tablo son dönem böbrek hastalığını temsil eder. İnterstisyel fibrozis ve tübül atrofisi belirgindir; çünkü glomerüller sklerozla kaybolunca bağlı tübüller de işlevsizleşip atrofiye uğrar, aralarındaki interstisyum fibrozla dolar.
+Sınıf altı, ileri sklerozan lupus nefritidir ve geri dönüşsüz son evredir.
+Glomerüllerin %90'ı ya da daha fazlası sklerotiktir ve tablo son dönem böbrek hastalığını temsil eder.
+İnterstisyel fibrozis ve tübül atrofisi belirgindir; çünkü glomerüller sklerozla kaybolunca bağlı tübüller de işlevsizleşip atrofiye uğrar, aralarındaki interstisyum fibrozla dolar.
 
-Sistemik lupusun klinik spektrumu çok geniştir. Böbrek bulguları genellikle karışık nefrotik ve nefritik tablodur: hematüri ve eritrosit silendirleri nefritik bileşeni, çoğu zaman nefrotik düzeye varan proteinüri nefrotik bileşeni oluşturur; hipertansiyon da eşlik eder. Burası önemli, sınav spotu: böbrek tutulumu kötü prognoz belirtecidir ve böbrek yetmezliği sistemik lupus eritematozusta sık ölüm nedenidir. Ayrıca lupus nefritinde özellikle sınıf üç ve dört ağır formlardır.
+Sistemik lupusun klinik spektrumu çok geniştir.
+Böbrek bulguları genellikle karışık nefrotik ve nefritik tablodur: hematüri ve eritrosit silendirleri nefritik bileşeni, çoğu zaman nefrotik düzeye varan proteinüri nefrotik bileşeni oluşturur; hipertansiyon da eşlik eder.
+Burası önemli, sınav spotu: böbrek tutulumu kötü prognoz belirtecidir ve böbrek yetmezliği sistemik lupus eritematozusta sık ölüm nedenidir.
+Ayrıca lupus nefritinde özellikle sınıf üç ve dört ağır formlardır.
 
 @@ İmmünoglobulin A nefropatisi: tanım ve patogenez
 İmmünoglobulin A nefropatisi, diğer adıyla Berjer hastalığı, mezangiumda immünoglobulin A baskın immün kompleks birikimiyle tanımlanır. Burası önemli, sınav spotu: dünya çapında en sık primer glomerüler hastalıktır ve tekrarlayan hematürinin en sık nedenidir. Klinik sendrom genellikle nefritik özelliklidir: makroskopik ya da mikroskopik hematüri ve hafif ile orta arasında proteinüri. Tabloda en sık klinik tablo, tekrarlayan hematüri ve buna eşlik edebilen hafif orta proteinüri olarak verilir; yani tek bir ağır atak değil, tekrarlayan hematüri epizotları söz konusudur.
 
-Patogenezin temel olayı, yetersiz glikozile, yani galaktoz eksik immünoglobulin A üretimidir. Bu anormal immünoglobulin A mezangiumda birikme eğilimindedir ve açıkta kalan en asetilgalaktozamin içeriği nedeniyle immünojenik olabilir; yani galaktoz eksikliği normalde örtülü olan şeker yapısını açığa çıkarır. İmmünoglobulin G ve immünoglobulin A otoantikorları bu anormal molekülü hedef alır ve oluşan immün kompleksler dolaşımda ve mezangiumda birikir. Böylece hastalık, vücudun kendi ürettiği kusurlu immünoglobulin A'ya karşı gelişen bir immün kompleks hastalığına dönüşür.
+Patogenezin temel olayı, yetersiz glikozile, yani galaktoz eksik immünoglobulin A üretimidir.
+Bu anormal immünoglobulin A mezangiumda birikme eğilimindedir ve açıkta kalan en asetilgalaktozamin içeriği nedeniyle immünojenik olabilir; yani galaktoz eksikliği normalde örtülü olan şeker yapısını açığa çıkarır.
+İmmünoglobulin G ve immünoglobulin A otoantikorları bu anormal molekülü hedef alır ve oluşan immün kompleksler dolaşımda ve mezangiumda birikir.
+Böylece hastalık, vücudun kendi ürettiği kusurlu immünoglobulin A'ya karşı gelişen bir immün kompleks hastalığına dönüşür.
 
-Kompleman ise alternatif ve lektin yolları ile aktive olur; klasik yolun erken bileşenleri olan ce bir ku ve ce dört genelde yoktur. Ayırıcı tanıda bunu kullanırız: poststreptokokal glomerülonefritte klasik yol çalışır ve ce üç tüketilir; membranoproliferatif glomerülonefritte ce bir ku ve ce dört birikir; immünoglobulin A nefropatisinde ise ce bir ku ve ce dört beklenmez.
+Kompleman ise alternatif ve lektin yolları ile aktive olur; klasik yolun erken bileşenleri olan ce bir ku ve ce dört genelde yoktur.
+Ayırıcı tanıda bunu kullanırız: poststreptokokal glomerülonefritte klasik yol çalışır ve ce üç tüketilir; membranoproliferatif glomerülonefritte ce bir ku ve ce dört birikir; immünoglobulin A nefropatisinde ise ce bir ku ve ce dört beklenmez.
 
 @@ İmmünoglobulin A nefropatisi: morfoloji
 Işık mikroskopisi bulguları değişkendir ve tek başına tanı koydurmaz. Hafif olgularda glomerüller normal olabilir. En tipik görünüm belirgin mezangiyal genişleme ve hiperhücreliliktir; daha ağır olgularda fokal ya da diffüz proliferatif glomerülonefrit, nadiren de kresentik, yani hilalli glomerülonefrit görülür. Tablo bunu mezangiyal proliferatif ya da fokal endokapiller proliferatif glomerülonefrit olarak özetler. Ders şeklinde mezangiyal proliferasyon ve matriks artışı görülür; değişiklik kılcallar arasındaki mezangiumda yoğunlaşmıştır. Nadir hilalli olgular, bu hastalığın immün kompleks aracılı hızlı ilerleyen glomerülonefrit nedenleri arasında neden sayıldığını açıklar.
 
-Tanıyı immünfloresan koyar. Mezangiumda immünoglobulin A birikimi vardır; genellikle ce üç ve properdin eşlik eder, daha az sıklıkla immünoglobulin G ya da M görülür. Klasik yol bileşenleri genellikle yoktur. Properdin alternatif kompleman yolunun bileşenidir; varlığı alternatif yol katılımını doğrular. Şekilde boyanma kılcal halkaları değil, glomerülün merkezindeki dallanan mezangiyal alanları izler. Elektron mikroskopisinde mezangiyal ve paramezangiyal elektron yoğun birikintiler görülür. Yani bu hastalıkta subepitelyal hamp ya da subendotelyal tel halka beklenmez, depozit yeri mezangiumdur.
+Tanıyı immünfloresan koyar.
+Mezangiumda immünoglobulin A birikimi vardır; genellikle ce üç ve properdin eşlik eder, daha az sıklıkla immünoglobulin G ya da M görülür.
+Klasik yol bileşenleri genellikle yoktur.
+Properdin alternatif kompleman yolunun bileşenidir; varlığı alternatif yol katılımını doğrular.
+Şekilde boyanma kılcal halkaları değil, glomerülün merkezindeki dallanan mezangiyal alanları izler.
+Elektron mikroskopisinde mezangiyal ve paramezangiyal elektron yoğun birikintiler görülür.
+Yani bu hastalıkta subepitelyal hamp ya da subendotelyal tel halka beklenmez, depozit yeri mezangiumdur.
 
 @@ İmmünoglobulin A nefropatisi: klinik ve Henoh Şönlayn purpurası
-Hastalık çocuklar ve genç erişkinlerde sıktır. Tipik klinik, üst solunum yolu enfeksiyonu, ki bu sıklıkla viraldir, ya da gastrointestinal veya üriner enfeksiyondan sonraki bir iki gün içinde gelen makroskopik hematüri ataklarıdır. Olguların yaklaşık %30 ile kırkında asemptomatik mikroskopik hematüri görülür; nefrotik sendrom ve hızlı ilerleyen glomerülonefrit nadirdir. Burası önemli, sınav tuzağı: zaman aralığı ayırıcıdır. Enfeksiyondan bir iki gün sonra gelen hematüri immünoglobulin A nefropatisini, enfeksiyondan bir ila dört hafta sonra gelen nefritik tablo poststreptokokal glomerülonefriti düşündürür.
+Hastalık çocuklar ve genç erişkinlerde sıktır. Tipik klinik, üst solunum yolu enfeksiyonu, ki bu sıklıkla viraldir, ya da gastrointestinal veya üriner enfeksiyondan sonraki 3 gün içinde gelen makroskopik hematüri ataklarıdır. Olguların yaklaşık %30 ile kırkında asemptomatik mikroskopik hematüri görülür; nefrotik sendrom ve hızlı ilerleyen glomerülonefrit nadirdir. Burası önemli, sınav tuzağı: zaman aralığı ayırıcıdır. Enfeksiyondan 3 gün sonra gelen hematüri immünoglobulin A nefropatisini, enfeksiyondan bir ila 4 hafta sonra gelen nefritik tablo poststreptokokal glomerülonefriti düşündürür.
 
-Seyir değişkendir. Birçok hasta onlarca yıl normal böbrek fonksiyonuyla yaşar, ama hastaların %20 beş ile elli arasındaki bölümü yirmi yıl içinde son dönem böbrek yetmezliğine ilerler. Böbrek naklinden sonra immünoglobulin A birikiminin nüksü sıktır; çünkü sorun böbrekte değil, sistemik olarak üretilen anormal immünoglobulin A'dadır ve yeni böbrek de aynı dolaşımdaki komplekslere maruz kalır.
+Seyir değişkendir.
+Birçok hasta onlarca yıl normal böbrek fonksiyonuyla yaşar, ama hastaların %25 ile elli arasındaki bölümü 20 yıl içinde son dönem böbrek yetmezliğine ilerler.
+Böbrek naklinden sonra immünoglobulin A birikiminin nüksü sıktır; çünkü sorun böbrekte değil, sistemik olarak üretilen anormal immünoglobulin A'dadır ve yeni böbrek de aynı dolaşımdaki komplekslere maruz kalır.
 
-Henoh Şönlayn purpurasını, yani immünoglobulin A vaskülitini, immün kompleks aracılı hızlı ilerleyen glomerülonefrit nedenleri arasında görmüştük. Bu, immünoglobulin A içeren komplekslerin vücuttaki küçük damarlarda da biriktiği sistemik bir vaskülittir; bacaklarda ve kalçada döküntü şeklinde purpura, eklem ağrıları, karın ağrısı ve böbrek tutulumu yapar ve böbrek biyopsisi immünoglobulin A nefropatisiyle aynıdır. Burası önemli, bu bilgi çıkmış sorularda soruldu: üst solunum yolu enfeksiyonundan birkaç gün sonra karın ve alt ekstremitede döküntü, hematüri, karın ve eklem ağrılarıyla gelen bir çocuğun böbrek biyopsisinde beklenen bulgu, mezangiyal alanda immünoglobulin A birikimi ve mezangiyal artıştır. Lineer antikor birikimi, subepitelyal hörgüçler ya da ışık mikroskopisinde normal glomerül ve podosit silinmesi bu tabloya uymaz.
+Henoh Şönlayn purpurasını, yani immünoglobulin A vaskülitini, immün kompleks aracılı hızlı ilerleyen glomerülonefrit nedenleri arasında görmüştük.
+Bu, immünoglobulin A içeren komplekslerin vücuttaki küçük damarlarda da biriktiği sistemik bir vaskülittir; bacaklarda ve kalçada döküntü şeklinde purpura, eklem ağrıları, karın ağrısı ve böbrek tutulumu yapar ve böbrek biyopsisi immünoglobulin A nefropatisiyle aynıdır.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: üst solunum yolu enfeksiyonundan birkaç gün sonra karın ve alt ekstremitede döküntü, hematüri, karın ve eklem ağrılarıyla gelen bir çocuğun böbrek biyopsisinde beklenen bulgu, mezangiyal alanda immünoglobulin A birikimi ve mezangiyal artıştır.
+Lineer antikor birikimi, subepitelyal hörgüçler ya da ışık mikroskopisinde normal glomerül ve podosit silinmesi bu tabloya uymaz.
 
 @@ Kalıtsal nefritler ve Alport sendromu
 Kalıtsal nefritler immün kompleks ya da otoantikordan değil, yapısal bir protein kusurundan kaynaklanır: bunlar glomerüler bazal membranın Tip 4 kollajen bozukluklarıdır. En önemli iki form Alport sendromu ve ince bazal membran hastalığıdır. Ortak özellikleri hematüridir, çoğunlukla mikroskopik. Ayrımı ilerleyicilik ve böbrek dışı bulgular sağlar: Alport sendromunda ilerleyici böbrek yetmezliği, işitme ve göz bozuklukları vardır; ince bazal membran hastalığı ise ilerlemeyen, genellikle iyi huylu bir tablodur. Burası önemli, bu bilgi çıkmış sorularda soruldu: herediter, yani kalıtsal glomerül hastalıklarından biri Alport sendromudur. Aynı soruda çeldirici olarak verilen minimal değişiklik hastalığı, fokal segmental glomerüloskleroz, membranoproliferatif glomerülonefrit ve membranöz nefropati kalıtsal nefrit değildir.
 
-Alport sendromu çoğunlukla iks kromozomuna bağlı kalıtılır; kol dört a beş geninde mutasyon vardır ve bu gen Tip 4 kollajenin alfa beş zincirini kodlar. Otozomal resesif ya da dominant formlarda alfa üç veya alfa dört zinciri genlerinde mutasyon bulunur. Tip 4 kollajen glomerüler bazal membran, koklea, yani iç kulak, lens ve kornea yapısı için kritiktir; molekülün bu dağılımı hastalığın organ tutulumunu doğrudan açıklar. Hatırlayın, anti glomerüler bazal membran hastalığında otoantikorun hedefi de Tip 4 kollajenin alfa üç zinciriydi; Alport sendromunda ise aynı protein ailesi antikorla değil genetik kusurla bozulur.
+Alport sendromu çoğunlukla iks kromozomuna bağlı kalıtılır; kol dört a beş geninde mutasyon vardır ve bu gen Tip 4 kollajenin alfa beş zincirini kodlar.
+Otozomal resesif ya da dominant formlarda alfa üç veya alfa dört zinciri genlerinde mutasyon bulunur.
+Tip 4 kollajen glomerüler bazal membran, koklea, yani iç kulak, lens ve kornea yapısı için kritiktir; molekülün bu dağılımı hastalığın organ tutulumunu doğrudan açıklar.
+Hatırlayın, anti glomerüler bazal membran hastalığında otoantikorun hedefi de Tip 4 kollajenin alfa üç zinciriydi; Alport sendromunda ise aynı protein ailesi antikorla değil genetik kusurla bozulur.
 
-Klinik yaşa bağlı ilerler. Beş ile yirmi yaş arasında makroskopik ya da mikroskopik hematüri ve proteinüri, yirmi ile elli yaş arasında ilerleyici böbrek yetmezliği gelişir. Ek bulgular sensörinöral işitme kaybı ile gözde lens dislokasyonu, posterior katarakt ve kornea distrofileridir.
+Klinik yaşa bağlı ilerler.
+Beş ile 20 yaş arasında makroskopik ya da mikroskopik hematüri ve proteinüri, yirmi ile 50 yaş arasında ilerleyici böbrek yetmezliği gelişir.
+Ek bulgular sensörinöral işitme kaybı ile gözde lens dislokasyonu, posterior katarakt ve kornea distrofileridir.
 
-Işık mikroskopisinde spesifik bulgu yoktur; tanı elektron mikroskopisine dayanır. Erken dönemde bazal membran ince ve düzensizdir. Zamanla lamina densada ayrılma ve düzensizlik, bazal membranda kalınlaşma ve incelme odakları gelişir ve klasik sepet örgüsü, İngilizce basket viv görünümü ortaya çıkar. İmmünohistokimyada bazal membranda Tip 4 kollajen alfa zincir deseninde değişiklik görülür. Ders şeklindeki ileri evre elektron mikrografında bazal membranın düzensiz kalınlaşması, lamina densanın lamelasyonu, yani katmanlara ayrılması ve seyrekleşme odakları görülür; bu değişiklikler başka hastalıklarda da olabilir, ama kalıtsal nefritte en belirgin ve yaygındır. Burası önemli, bu bilgi çıkmış sorularda soruldu: bazal membranda düzensiz kalınlaşma ve incelme odaklarıyla birlikte lamina densada laminasyon ve ayrılma sonucu oluşan sepet örgüsü görünümü herediter nefritin bulgusudur.
+Işık mikroskopisinde spesifik bulgu yoktur; tanı elektron mikroskopisine dayanır.
+Erken dönemde bazal membran ince ve düzensizdir.
+Zamanla lamina densada ayrılma ve düzensizlik, bazal membranda kalınlaşma ve incelme odakları gelişir ve klasik sepet örgüsü, İngilizce basket viv görünümü ortaya çıkar.
+İmmünohistokimyada bazal membranda Tip 4 kollajen alfa zincir deseninde değişiklik görülür.
+Ders şeklindeki ileri evre elektron mikrografında bazal membranın düzensiz kalınlaşması, lamina densanın lamelasyonu, yani katmanlara ayrılması ve seyrekleşme odakları görülür; bu değişiklikler başka hastalıklarda da olabilir, ama kalıtsal nefritte en belirgin ve yaygındır.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: bazal membranda düzensiz kalınlaşma ve incelme odaklarıyla birlikte lamina densada laminasyon ve ayrılma sonucu oluşan sepet örgüsü görünümü herediter nefritin bulgusudur.
 
 @@ İnce bazal membran hastalığı
 İnce bazal membran hastalığı, glomerüler bazal membranın difüz incelmesiyle karakterize kalıtsal glomerüler hastalıktır ve kalıtsal nefritlerin iyi huylu ucudur. Vakaların yaklaşık yüzde kırkında kol dört a üç ya da kol dört a dört genlerinde heterozigot mutasyonlar vardır, geri kalanında neden belirsizdir. Klinikte genellikle kalıcı, asemptomatik mikroskopik hematüri görülür; nefrotik sendrom ya da böbrek yetmezliği gelişimi nadirdir. Elektron mikroskopisinde bazal membran düzgün biçimde incelmiştir ve seyir iyi huylu, genellikle ilerlemeyendir. Dikkat edin, düzgün incelme ince bazal membran hastalığını, düzensiz incelme ve kalınlaşmayla sepet örgüsü Alport sendromunu gösterir. Burası önemli, sınav tuzağı: iki hastalık da Tip 4 kollajen bozukluğudur ve hematüri yapar; onları ilerleme ve böbrek dışı bulgular ayırır.
@@ -140,7 +266,10 @@ Işık mikroskopisinde spesifik bulgu yoktur; tanı elektron mikroskopisine daya
 @@ Nefritik sendromda klinik yaklaşım
 Akut nefritik sendrom genellikle acil bir durumdur; oligüri, hipertansiyon ve azotemi belirgin olabilir. Tanının ilk basamağı idrar analizidir: eritrositler ve glomerüler kaynağı gösteren eritrosit silendirleri aranır, proteinüri düzeyi değerlendirilir. Biyokimyada kreatinin, üre, elektrolitler ve kompleman düzeyleri bakılır; kompleman düzeyi nedeni daraltmada yol göstericidir, örneğin poststreptokokal glomerülonefritte ce üç düşer.
 
-Seroloji nedene işaret eder: anti streptolizin o poststreptokokal glomerülonefriti, anti DNA lupus nefritini, anka pausi immün tipi, anti glomerüler bazal membran antikoru Gudpaşçır hastalığını, viral markerler ise hepatit be ve hepatit ce gibi enfeksiyon sonrası tetikleyicileri düşündürür. Böbrek biyopsisi morfolojik sınıfı ve immün paterni belirler; örneğin lupus sınıfını ya da hızlı ilerleyen glomerülonefritin tipini ortaya koyar. Tedavi nedene spesifik tedavi ile destek tedavinin birleşimidir; destek tedavi sıvı dengesi ve kan basıncı kontrolünü içerir. Klinik yönetimin hedefi, erken tanı, nedene yönelik immünsüpresyon ve destek tedavi ile böbrek fonksiyonunu korumaktır.
+Seroloji nedene işaret eder: anti streptolizin o poststreptokokal glomerülonefriti, anti DNA lupus nefritini, anka pausi immün tipi, anti glomerüler bazal membran antikoru Gudpaşçır hastalığını, viral markerler ise Hepatit B ve Hepatit C gibi enfeksiyon sonrası tetikleyicileri düşündürür.
+Böbrek biyopsisi morfolojik sınıfı ve immün paterni belirler; örneğin lupus sınıfını ya da hızlı ilerleyen glomerülonefritin tipini ortaya koyar.
+Tedavi nedene spesifik tedavi ile destek tedavinin birleşimidir; destek tedavi sıvı dengesi ve kan basıncı kontrolünü içerir.
+Klinik yönetimin hedefi, erken tanı, nedene yönelik immünsüpresyon ve destek tedavi ile böbrek fonksiyonunu korumaktır.
 
 @@ Özetle
-Özetle bir biyopsiyi okurken üç soru sorun. İmmünfloresan deseni ne: lineer immünoglobulin G anti glomerüler bazal membran hastalığını, granüler desen immün kompleks hastalıklarını, mezangiyal immünoglobulin A immünoglobulin A nefropatisini, negatif boyanma ile hilal pausi immün tipi gösterir. Depozit nerede: subepitelyal hamp enfeksiyon sonrası glomerülonefriti, subendotelyal tel halka lupus sınıf dördü, mezangiyal depozit immünoglobulin A nefropatisini işaret eder; depozit yok ama bazal membran yapısı bozuksa Alport ya da ince bazal membran hastalığı düşünülür. Klinik zamanlama nasıl: enfeksiyondan bir ila dört hafta sonra poststreptokokal glomerülonefrit, bir iki gün sonra immünoglobulin A nefropatisi, haftalar ya da aylar içinde böbrek yetmezliği ise hızlı ilerleyen glomerülonefrit.
+Özetle bir biyopsiyi okurken üç soru sorun. İmmünfloresan deseni ne: lineer immünoglobulin G anti glomerüler bazal membran hastalığını, granüler desen immün kompleks hastalıklarını, mezangiyal immünoglobulin A immünoglobulin A nefropatisini, negatif boyanma ile hilal pausi immün tipi gösterir. Depozit nerede: subepitelyal hamp enfeksiyon sonrası glomerülonefriti, subendotelyal tel halka lupus sınıf dördü, mezangiyal depozit immünoglobulin A nefropatisini işaret eder; depozit yok ama bazal membran yapısı bozuksa Alport ya da ince bazal membran hastalığı düşünülür. Klinik zamanlama nasıl: enfeksiyondan bir ila 4 hafta sonra poststreptokokal glomerülonefrit, 3 gün sonra immünoglobulin A nefropatisi, haftalar ya da aylar içinde böbrek yetmezliği ise hızlı ilerleyen glomerülonefrit.

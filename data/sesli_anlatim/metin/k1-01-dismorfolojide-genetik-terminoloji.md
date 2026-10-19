@@ -3,187 +3,413 @@
 @@ Genetik, tıbbi genetik ve alt dalları
 Genetik, yaşayan tüm organizmalarda kalıtım ve farklılıklarla ilgilenen bilim dalıdır. Tıbbi genetik ise aynı soruları yalnızca insan için sorar: bir özellik kuşaktan kuşağa nasıl geçer ve bireyler arasındaki farklılık nereden kaynaklanır? İnsan genetiği ve tıbbi genetik, çalışılan biyolojik düzeye göre kendi içinde özelleşmiş alanlara ayrılır.
 
-Sitogenetik kromozomları çalışır; kromozomların sayı ve yapı değişiklikleri ışık mikroskobu düzeyinde değerlendirilir. Moleküler genetik, genlerin yapısını ve fonksiyonunu inceler; burada değişiklikler DNA dizisi düzeyindedir. Popülasyon genetiği ise insan topluluklarındaki genetik farklılıkları ve alel sıklıklarını, yani bir gen varyantının toplumdaki görülme oranını araştırır.
+Sitogenetik kromozomları çalışır; kromozomların sayı ve yapı değişiklikleri ışık mikroskobu düzeyinde değerlendirilir.
+Moleküler genetik, genlerin yapısını ve fonksiyonunu inceler; burada değişiklikler DNA dizisi düzeyindedir.
+Popülasyon genetiği ise insan topluluklarındaki genetik farklılıkları ve alel sıklıklarını, yani bir gen varyantının toplumdaki görülme oranını araştırır.
 
-Üç alan daha doğrudan gelişim süreci, hasta ve aileyle ilgilidir. Gelişimsel genetik, gelişmenin genetik kontrolünü çalışır; embriyonun doğru zamanda doğru yapıyı nasıl kurduğunu sorar. Klinik genetik, genetiğin hasta tanı ve bakımına uygulandığı alandır; muayene, test seçimi ve sonuçların yorumlanması bu alana girer. Genetik danışma ise hastaya psikolojik ve eğitim desteğiyle birlikte genetik risk bilgilerinin verildiği, hasta ve ailesiyle ilgilenen yeni bir sağlık mesleğidir. Dikkat edin, genetik danışma yalnızca bir risk sayısı söylemek değildir; psikolojik ve eğitim desteği tanımın parçasıdır.
+Üç alan daha doğrudan gelişim süreci, hasta ve aileyle ilgilidir.
+Gelişimsel genetik, gelişmenin genetik kontrolünü çalışır; embriyonun doğru zamanda doğru yapıyı nasıl kurduğunu sorar.
+Klinik genetik, genetiğin hasta tanı ve bakımına uygulandığı alandır; muayene, test seçimi ve sonuçların yorumlanması bu alana girer.
+Genetik danışma ise hastaya psikolojik ve eğitim desteğiyle birlikte genetik risk bilgilerinin verildiği, hasta ve ailesiyle ilgilenen yeni bir sağlık mesleğidir.
+Dikkat edin, genetik danışma yalnızca bir risk sayısı söylemek değildir; psikolojik ve eğitim desteği tanımın parçasıdır.
 
 @@ Kromozomal düzensizlikler
-Kromozomal düzensizlikler sayısal ve yapısal olmak üzere iki ana gruba ayrılır. Sayısal düzensizliklerde kromozomların yapısı korunur, ancak hücredeki kromozom sayısı değişir. Bunun iki biçimi vardır. Öploidi, haploid takımın, yani en'in tam katlarından oluşan sayı değişikliğidir. Normal diploid hücre iki en taşır; triploid hücre üç en, tetraploid hücre dört en kromozom içerir. Anöploidi ise tek tek kromozomların fazlalığı ya da eksikliğidir ve takımın tam katı değildir. İki en artı bir, bir kromozomun fazladan kopyasıdır, yani trizomi örüntüsüdür. İki en eksi bir ise bir kromozomun eksik olmasıdır, yani monozomi örüntüsüdür. Kısacası öploidide bütün takım çoğalır, anöploidide yalnız tek bir kromozomun sayısı değişir.
+Kromozomal düzensizlikler sayısal ve yapısal olmak üzere iki ana gruba ayrılır. Sayısal düzensizliklerde kromozomların yapısı korunur, ancak hücredeki kromozom sayısı değişir. Bunun iki biçimi vardır. Öploidi, haploid takımın, yani en'in tam katlarından oluşan sayı değişikliğidir. Normal diploid hücre iki en taşır; triploid hücre üç en, tetraploid hücre dört en kromozom içerir. Anöploidi ise tek tek kromozomların fazlalığı ya da eksikliğidir ve takımın tam katı değildir. İki en artı bir, 1 kromozomun fazladan kopyasıdır, yani trizomi örüntüsüdür. İki en eksi bir ise 1 kromozomun eksik olmasıdır, yani monozomi örüntüsüdür. Kısacası öploidide bütün takım çoğalır, anöploidide yalnız tek 1 kromozomun sayısı değişir.
 
-Yapısal düzensizliklerde kromozom sayısı aynı kalabilir; bozukluk, kromozomun kırılıp yeniden birleşmesi sonucu yapısında ortaya çıkar. Yedi yapısal düzensizlik sayılır. Translokasyon ya da yer değiştirme, bir kromozom parçasının başka bir kromozoma taşınmasıdır. Delesyon ya da eksilme, kromozomdan bir parçanın kopup kaybolmasıdır. Duplikasyon ya da artma, bir bölgenin fazladan kopyalanmasıdır; şemada kardeş kromatitten kopan parçanın eklenmesiyle gösterilir. İnversiyon ya da ters dönme, kopan parçanın ters yönde aynı kromozoma yeniden yerleşmesidir. Halka kromozom, kromozomun iki ucunun birleşerek halka oluşturmasıdır. İzokromozom, kolları birbirinin aynısı olan anormal kromozomdur. Marker kromozom ise kökeni standart yöntemle belirlenemeyen ek yapısal kromozomdur.
+Yapısal düzensizliklerde kromozom sayısı aynı kalabilir; bozukluk, kromozomun kırılıp yeniden birleşmesi sonucu yapısında ortaya çıkar.
+Yedi yapısal düzensizlik sayılır.
+Translokasyon ya da yer değiştirme, 1 kromozom parçasının başka bir kromozoma taşınmasıdır.
+Delesyon ya da eksilme, kromozomdan bir parçanın kopup kaybolmasıdır.
+Duplikasyon ya da artma, bir bölgenin fazladan kopyalanmasıdır; şemada kardeş kromatitten kopan parçanın eklenmesiyle gösterilir.
+İnversiyon ya da ters dönme, kopan parçanın ters yönde aynı kromozoma yeniden yerleşmesidir.
+Halka kromozom, kromozomun iki ucunun birleşerek halka oluşturmasıdır.
+İzokromozom, kolları birbirinin aynısı olan anormal kromozomdur.
+Marker kromozom ise kökeni standart yöntemle belirlenemeyen ek yapısal kromozomdur.
 
-Dikkat edin, kromozom mutasyonu örneklerini soran sorularda nokta mutasyonu klasik çeldiricidir. Nokta mutasyonu tek nükleotid düzeyindedir ve bu yapısal düzensizlikler listesinde yer almaz.
+Dikkat edin, kromozom mutasyonu örneklerini soran sorularda nokta mutasyonu klasik çeldiricidir.
+Nokta mutasyonu tek nükleotid düzeyindedir ve bu yapısal düzensizlikler listesinde yer almaz.
 
 @@ Dismorfolojinin tanımı ve tarihçesi
 Dismorfoloji, klinik genetiğin doğumsal yapısal farklılıklara odaklanan dalıdır. Adı Yunanca kökenlidir: dis, hastalık ya da anormallik; morf ise biçim anlamına gelir. Yani dismorfoloji kelime anlamıyla anormal biçimin bilimidir. Bu dalın üç görevi vardır: fiziksel gelişimdeki farklılıkları incelemek, normal morfogenezden, yani doku ve organların biçim kazanma sürecinden sapmaları değerlendirmek ve doğumsal defektler üzerine uzmanlaşmak. Alanın karmaşıklığı tek bir sayıyla özetlenir: iki binin üzerinde tanımlanmış sendrom vardır.
 
-Dismorfoloji terimi ilk kez bin dokuz yüz altmış yılında Doktor Deyvid Smit tarafından tanımlanmıştır. Bir özelliğin dismorfik sayılması için karşılaştırma ölçütü bellidir: aynı yaş ve etnik kökenden bireylerde yaygın olarak bulunmayan fiziksel özelliklere sahip olmak. Dismorfolojinin konusu konjenital malformasyonlar, yani doğumda bulunan yapısal defektlerdir.
+Dismorfoloji terimi ilk kez 1960 yılında Doktor Deyvid Smit tarafından tanımlanmıştır.
+Bir özelliğin dismorfik sayılması için karşılaştırma ölçütü bellidir: aynı yaş ve etnik kökenden bireylerde yaygın olarak bulunmayan fiziksel özelliklere sahip olmak.
+Dismorfolojinin konusu konjenital malformasyonlar, yani doğumda bulunan yapısal defektlerdir.
 
-Burası önemli: tüm yenidoğanların yüzde üçünde en az bir malformasyon görülür. Bu defektler vücudun dışında ya da içinde olabilir; sporadik, yani ailede başka örneği olmadan tek başına ortaya çıkabilir ya da kalıtsal olabilir; minör ya da majör, tekli ya da çoklu olabilir. Dersin felsefesi şu cümlede özetlenir: ne kadar çok görülürse o kadar çok bilinir, ne kadar çok bilinirse o kadar çok görülür.
+Burası önemli: tüm yenidoğanların yüzde üçünde en az bir malformasyon görülür.
+Bu defektler vücudun dışında ya da içinde olabilir; sporadik, yani ailede başka örneği olmadan tek başına ortaya çıkabilir ya da kalıtsal olabilir; minör ya da majör, tekli ya da çoklu olabilir.
+Dersin felsefesi şu cümlede özetlenir: ne kadar çok görülürse o kadar çok bilinir, ne kadar çok bilinirse o kadar çok görülür.
 
-Konjenital anomali iki kelimeden oluşur ve her biri ayrı bir anlam taşır. Konjenital, doğumda mevcut olan, yani doğumsal demektir. Anomali ise anormal gelişim ya da normal dışı yapısal özellik anlamına gelir.
+Konjenital anomali iki kelimeden oluşur ve her biri ayrı bir anlam taşır.
+Konjenital, doğumda mevcut olan, yani doğumsal demektir.
+Anomali ise anormal gelişim ya da normal dışı yapısal özellik anlamına gelir.
 
-Dismorfolojinin sınırını çizmek için metabolik hastalıklarla karşılaştırma yapılır. Metabolik hastalıkta genellikle yapı normal, fakat fonksiyon anormaldir; organ biçim olarak sağlam görünür ama biyokimyasal işlev bozuktur. Dismorfolojide ise anormal yapı vardır ve buna anormal fonksiyon eşlik edebilir ya da etmeyebilir. Yapısal sapma esastır; bu sapmalar majör ya da minör dismorfizm olarak derecelendirilir. Yani dismorfolojide ayırt edici öge yapının bozuk olmasıdır. Yapısı normal fakat işlevi bozuk bir tablo dismorfolojiden çok metabolik hastalığı düşündürür.
+Dismorfolojinin sınırını çizmek için metabolik hastalıklarla karşılaştırma yapılır.
+Metabolik hastalıkta genellikle yapı normal, fakat fonksiyon anormaldir; organ biçim olarak sağlam görünür ama biyokimyasal işlev bozuktur.
+Dismorfolojide ise anormal yapı vardır ve buna anormal fonksiyon eşlik edebilir ya da etmeyebilir.
+Yapısal sapma esastır; bu sapmalar majör ya da minör dismorfizm olarak derecelendirilir.
+Yani dismorfolojide ayırt edici öge yapının bozuk olmasıdır.
+Yapısı normal fakat işlevi bozuk bir tablo dismorfolojiden çok metabolik hastalığı düşündürür.
 
 @@ Büyüklüğe göre sınıflama: minör anomaliler
 Konjenital anomaliler üç eksende sınıflandırılır: büyüklüklerine göre, oluşum şekline göre ve birlikte görülmelerine göre. Büyüklük ekseninde iki grup vardır: minör anomaliler ve majör anomaliler.
 
-Minör anomalinin tanımı üç ölçüte dayanır. 1.'si önemdir: bilinen bir medikal, cerrahi ya da kozmetik önemi yoktur ya da çok azdır. 2.'si sıklıktır: popülasyonun yüzde dördünden daha azında görülen farklılıklardır. 3.'sü sonuçtur: ciddi medikal ya da kozmetik sonuçlara yol açmayan morfolojik özelliklerdir. Burası önemli: minör anomali eşiği popülasyonun yüzde dördüdür. Slayttaki örnek görsel epikantal kıvrımı gösterir; iç göz köşesini örten bu deri katlantısı tek başına sağlık sorunu yaratmayan tipik bir minör anomalidir.
+Minör anomalinin tanımı üç ölçüte dayanır.
+1.'si önemdir: bilinen bir medikal, cerrahi ya da kozmetik önemi yoktur ya da çok azdır.
+2.'si sıklıktır: popülasyonun yüzde dördünden daha azında görülen farklılıklardır.
+3.'sü sonuçtur: ciddi medikal ya da kozmetik sonuçlara yol açmayan morfolojik özelliklerdir.
+Burası önemli: minör anomali eşiği popülasyonun yüzde dördüdür.
+Slayttaki örnek görsel epikantal kıvrımı gösterir; iç göz köşesini örten bu deri katlantısı tek başına sağlık sorunu yaratmayan tipik bir minör anomalidir.
 
-Her minör anomalinin tanı değeri aynı değildir. Bir bulgunun kaç sendromda görüldüğü, ayırıcı tanıyı ne kadar daralttığını belirler. Nonspesifik minör anomaliler çok sayıda sendroma eşlik eder ve tek başına tanıyı daraltmaz. Hipertelorizm, yani gözler arası mesafenin artması, yaklaşık dört yüz sendromda görülür. Blefarofimozis, yani göz kapağı aralığının dar olması yaklaşık yüz, telekantus, yani iç göz köşeleri arası mesafenin artması yaklaşık doksan, hipotelorizm ise yaklaşık seksen sendromda görülür. Spesifik minör anomaliler ise az sayıda sendroma eşlik eder ve ayırıcı tanıyı belirgin biçimde daraltır. Göz kapağı kolobomu yaklaşık otuz bir, saçın ön kısmındaki pigmentsiz beyaz tutam olan beyaz perçem yaklaşık yirmi bir, iki irisin ya da tek irisin bölümlerinin farklı renkte olması demek olan iris heterokromisi yaklaşık on üç, tek ön kesici diş ise yaklaşık on bir sendromda görülür. Slayttaki tabloda blefarofimozis hem nonspesifik hem spesifik sütunda yer alır. Hipertelorizm en sık rastlanan ama en az yol gösteren bulgudur; tek ön kesici diş ya da beyaz perçem gibi spesifik bulgular tanıya çok daha fazla katkı verir. Telekantusta iç göz köşeleri arası mesafe artmıştır ama göz bebekleri arası mesafe normaldir; hipertelorizmde ise gerçek göz aralığı genişlemiştir.
+Her minör anomalinin tanı değeri aynı değildir.
+Bir bulgunun kaç sendromda görüldüğü, ayırıcı tanıyı ne kadar daralttığını belirler.
+Nonspesifik minör anomaliler çok sayıda sendroma eşlik eder ve tek başına tanıyı daraltmaz.
+Hipertelorizm, yani gözler arası mesafenin artması, yaklaşık dört yüz sendromda görülür.
+Blefarofimozis, yani göz kapağı aralığının dar olması yaklaşık yüz, telekantus, yani iç göz köşeleri arası mesafenin artması yaklaşık doksan, hipotelorizm ise yaklaşık seksen sendromda görülür.
+Spesifik minör anomaliler ise az sayıda sendroma eşlik eder ve ayırıcı tanıyı belirgin biçimde daraltır.
+Göz kapağı kolobomu yaklaşık otuz bir, saçın ön kısmındaki pigmentsiz beyaz tutam olan beyaz perçem yaklaşık yirmi bir, iki irisin ya da tek irisin bölümlerinin farklı renkte olması demek olan iris heterokromisi yaklaşık on üç, tek ön kesici diş ise yaklaşık on bir sendromda görülür.
+Slayttaki tabloda blefarofimozis hem nonspesifik hem spesifik sütunda yer alır.
+Hipertelorizm en sık rastlanan ama en az yol gösteren bulgudur; tek ön kesici diş ya da beyaz perçem gibi spesifik bulgular tanıya çok daha fazla katkı verir.
+Telekantusta iç göz köşeleri arası mesafe artmıştır ama göz bebekleri arası mesafe normaldir; hipertelorizmde ise gerçek göz aralığı genişlemiştir.
 
 @@ Majör anomali ve yarık damak tuzağı
 Büyüklük ekseninin 2. grubu majör anomalilerdir. Bunlar ciddi sağlık ve kozmetik problemlere yol açan anomalilerdir; normal spektrumdan sapmadır ve bu grup anomaliler ya da malformasyonlar olarak da adlandırılır. Slayttaki görsel, yüz ve kafada belirgin yapısal sapması olan bir bebeği göstererek majör anomalinin sağlık ve kozmetik yükünü örnekler. Bir majör anomali saptandığında hemen bir klinik soru doğar: bu anomali izole mi, yoksa multipl mi? Bu soru hem tanıyı hem tekrarlama riskini değiştirir. Soruyu yanıtlamak için merkezi sinir sistemi, kardiyovasküler sistem ve gastrointestinal sistem görüntülenmelidir, çünkü iç organ anomalileri dış muayenede görülmez.
 
-Burası önemli, bu bilgi çıkmış sorularda birden fazla kez soruldu: yarık damak ve yarık dudak minör anomali değildir, majör anomalidir. Ciddi sağlık ve kozmetik sorun yarattığı için majör grupta yer alır ve aynı zamanda bir malformasyondur. Sorularda bunun karşısına minör anomaliler çeldirici olarak konur. Avuç içinde tek transvers palmar çizgi olan simian çizgisi, epikantal kıvrım, kulak kepçesinde hafif rotasyon anomalisi, 5. parmakta hafif eğrilik olan klinodaktili, beyaz perçem, telekantus, hipertelorizm ve iris heterokromisi minör anomalilerdir. Yani minör anomali sayılırken yarık dudak ya da damak listeye asla girmez.
+Burası önemli, bu bilgi çıkmış sorularda birden fazla kez soruldu: yarık damak ve yarık dudak minör anomali değildir, majör anomalidir.
+Ciddi sağlık ve kozmetik sorun yarattığı için majör grupta yer alır ve aynı zamanda bir malformasyondur.
+Sorularda bunun karşısına minör anomaliler çeldirici olarak konur.
+Avuç içinde tek transvers palmar çizgi olan simian çizgisi, epikantal kıvrım, kulak kepçesinde hafif rotasyon anomalisi, 5. parmakta hafif eğrilik olan klinodaktili, beyaz perçem, telekantus, hipertelorizm ve iris heterokromisi minör anomalilerdir.
+Yani minör anomali sayılırken yarık dudak ya da damak listeye asla girmez.
 
 @@ Gelişim dönemine ve oluşum şekline göre sınıflama
 Dismorfizmin tipi, hatanın intrauterin gelişimin hangi döneminde oluştuğuna bağlıdır. Slayttaki tablo iki dönemi karşılaştırır. Embriyonik dönem dokuların kurulduğu evredir ve üç gelişim basamağı vardır: proliferasyon, yani hücrelerin çoğalması; farklılaşma, yani hücrelerin belirli işleve göre özelleşmesi; ve organizasyon, yani hücrelerin doku ve yapı halinde düzenlenmesi. Bu basamaklardaki hatalar malformasyon, displazi ve duraklama olarak ortaya çıkar.
 
-Fetal dönemde ise organlar ve yapılar oluşmuştur; organizasyon sürerken dış faktörlerin etkisiyle deformasyon gelişir. Burası önemli: embriyonik dönemde malformasyon, displazi ve duraklama; fetal dönemde ise dış faktörlerle deformasyon ortaya çıkar. Hatanın dönemi tipini belirler: içsel doku kurma hataları embriyonik dönemin, oluşmuş yapıya dışarıdan gelen mekanik etkiler ise fetal dönemin ürünüdür.
+Fetal dönemde ise organlar ve yapılar oluşmuştur; organizasyon sürerken dış faktörlerin etkisiyle deformasyon gelişir.
+Burası önemli: embriyonik dönemde malformasyon, displazi ve duraklama; fetal dönemde ise dış faktörlerle deformasyon ortaya çıkar.
+Hatanın dönemi tipini belirler: içsel doku kurma hataları embriyonik dönemin, oluşmuş yapıya dışarıdan gelen mekanik etkiler ise fetal dönemin ürünüdür.
 
-Sınıflamanın 2. ekseni oluşum şekli, yani etiyopatogenezdir. Konjenital tek primer defektler oluşum mekanizmasına göre dört gruba ayrılır. Deformasyon mekanik etkilerle oluşur. Malformasyon hatalı oluşum, yani konjenital biçim bozukluğudur. Displazi regülasyon bozulmasıdır; doku ve organ oluşumundaki hücrelerde bozukluk vardır. Disrupsiyon ise kalıcı şekil bozukluğudur; normal olarak gelişim gösteren bir yapının destrüksiyon, yani yıkım sonucunda kalıcı olarak şekil bozukluğuna uğramasıdır. Dört defektin ortak noktası primer olmalarıdır; farkları mekanizmalarıdır ve mekanizma tekrarlama riskini, dolayısıyla danışmayı doğrudan değiştirir.
+Sınıflamanın 2. ekseni oluşum şekli, yani etiyopatogenezdir.
+Konjenital tek primer defektler oluşum mekanizmasına göre dört gruba ayrılır.
+Deformasyon mekanik etkilerle oluşur.
+Malformasyon hatalı oluşum, yani konjenital biçim bozukluğudur.
+Displazi regülasyon bozulmasıdır; doku ve organ oluşumundaki hücrelerde bozukluk vardır.
+Disrupsiyon ise kalıcı şekil bozukluğudur; normal olarak gelişim gösteren bir yapının destrüksiyon, yani yıkım sonucunda kalıcı olarak şekil bozukluğuna uğramasıdır.
+Dört defektin ortak noktası primer olmalarıdır; farkları mekanizmalarıdır ve mekanizma tekrarlama riskini, dolayısıyla danışmayı doğrudan değiştirir.
 
-Deformasyon, fetusta normal gelişen yapının dış mekanik etkilere maruz kalması sonucunda oluşan yapısal bozukluktur. Yapının genetik programı sağlamdır; sorun dışarıdan gelen kuvvettir. Normal gelişen organlarda kompresyon, yani bası, konstrüksiyon, yani kısıtlanma, ve hareketsizlik sonucu oluşur. Sıklıkla kıkırdak, kemik ve eklemleri tutar ve doğum sonrası geri dönüşümlüdür; bası kalkınca yapı düzelme eğilimindedir. Örnek olarak pes ekinovarus, yani İngilizce adıyla klab fut, ayrıca kalça çıkığı ve kraniyofasiyal şekil bozukluğu gösterilebilir. Tekrarlama riski altta yatan nedene bağlı olarak değişkendir. Deformasyonun nedenleri üç döneme ayrılır: antenatal dönemde fetal ve maternal nedenler, natal dönemde verteks ve makat gelişi, postnatal dönemde ise prematürite ve hipotonisite.
+Deformasyon, fetusta normal gelişen yapının dış mekanik etkilere maruz kalması sonucunda oluşan yapısal bozukluktur.
+Yapının genetik programı sağlamdır; sorun dışarıdan gelen kuvvettir.
+Normal gelişen organlarda kompresyon, yani bası, konstrüksiyon, yani kısıtlanma, ve hareketsizlik sonucu oluşur.
+Sıklıkla kıkırdak, kemik ve eklemleri tutar ve doğum sonrası geri dönüşümlüdür; bası kalkınca yapı düzelme eğilimindedir.
+Örnek olarak pes ekinovarus, yani İngilizce adıyla klab fut, ayrıca kalça çıkığı ve kraniyofasiyal şekil bozukluğu gösterilebilir.
+Tekrarlama riski altta yatan nedene bağlı olarak değişkendir.
+Deformasyonun nedenleri üç döneme ayrılır: antenatal dönemde fetal ve maternal nedenler, natal dönemde verteks ve makat gelişi, postnatal dönemde ise prematürite ve hipotonisite.
 
-Burası önemli: deformasyonun iki ayırt edici özelliği vardır; yapı başlangıçta normaldir ve bozukluk doğumdan sonra geri dönebilir. Çıkmış bir soruda tam olarak bu soruldu: oligohidramniyosa bağlı kraniyofasiyal basıklık ve talipes deformitesi bir deformasyon örneğidir. Amniyotik sıvı azalınca uterus duvarı normal gelişmiş fetusu sıkıştırır; yüz basıklaşır, ayak içe dönük kalır. Aynı soruda çeldirici olarak verilen tabloların hiçbiri deformasyon değildir. Yarık dudak ve damak ile nöral tüp defekti, yani spina bifida malformasyondur. Amniyotik banda bağlı ekstremite amputasyonu disrupsiyondur. Trizomi yirmi bire bağlı çoklu organ anomalileri ise bir sendromdur.
+Burası önemli: deformasyonun iki ayırt edici özelliği vardır; yapı başlangıçta normaldir ve bozukluk doğumdan sonra geri dönebilir.
+Çıkmış bir soruda tam olarak bu soruldu: oligohidramniyosa bağlı kraniyofasiyal basıklık ve talipes deformitesi bir deformasyon örneğidir.
+Amniyotik sıvı azalınca uterus duvarı normal gelişmiş fetusu sıkıştırır; yüz basıklaşır, ayak içe dönük kalır.
+Aynı soruda çeldirici olarak verilen tabloların hiçbiri deformasyon değildir.
+Yarık dudak ve damak ile nöral tüp defekti, yani spina bifida malformasyondur.
+Amniyotik banda bağlı ekstremite amputasyonu disrupsiyondur.
+Trizomi yirmi bire bağlı çoklu organ anomalileri ise bir sendromdur.
 
-Deformasyon yalnızca rahim içinde değil, doğumdan sonra da gelişebilir. İki klasik örnek bu iki zaman dilimini temsil eder. Antenatal deformasyona örnek transvers duruştur: fetusun rahimde enine pozisyonda kalması yüz ve gövdeye sürekli bası uygular. Sonuçta düz yüz, çene gelişiminin sınırlanması ve skolyoz ortaya çıkar.
+Deformasyon yalnızca rahim içinde değil, doğumdan sonra da gelişebilir.
+İki klasik örnek bu iki zaman dilimini temsil eder.
+Antenatal deformasyona örnek transvers duruştur: fetusun rahimde enine pozisyonda kalması yüz ve gövdeye sürekli bası uygular.
+Sonuçta düz yüz, çene gelişiminin sınırlanması ve skolyoz ortaya çıkar.
 
-Postnatal deformasyona örnek prematüre yenidoğandır. Prematüre bebekler daha hipotoniktir ve sürekli belli bir pozisyonda yatırıldıklarında yumuşak kafatası biçim değiştirir. Sonuçta skafosefali, yani kafatasının öne arkaya uzayıp daralması, ve plagiosefali, yani kafatasının asimetrik yassılaşması gelişebilir.
+Postnatal deformasyona örnek prematüre yenidoğandır.
+Prematüre bebekler daha hipotoniktir ve sürekli belli bir pozisyonda yatırıldıklarında yumuşak kafatası biçim değiştirir.
+Sonuçta skafosefali, yani kafatasının öne arkaya uzayıp daralması, ve plagiosefali, yani kafatasının asimetrik yassılaşması gelişebilir.
 
 @@ Disrupsiyon
 Slaytta disrupsiyon, duraklama adıyla da anılır. Tanımı şudur: intrauterin dönemde normal biçimini alacak şekilde oluşmakta olan bir yapının, bir nedenden dolayı normal gelişimini tamamlayamadan gelişiminin duraklamasıdır. Yapının potansiyeli normaldir; gelişim dışarıdan ya da dolaşım yoluyla kesilir. Buna iki temel mekanizma sebep olur. 1.'si dokunun yıkımına neden olan dış mekanik ajanların varlığıdır; en iyi örnek amniyotik bantlardır. Amniyotik bantlar, amniyon zarından ayrılan, fetal yapılara sarılıp onları boğan lifli şeritlerdir. Amniyotik bant sekansında parmak ve ekstremitelerde halka şeklinde boğulma ve amputasyonlar izlenir. 2.'si, normal gelişen vücut kısmında kan akışının kesintiye uğramasıdır; buna bağlı infarktüs, nekroz ya da yapıların rezorpsiyonu, yani emilerek ortadan kalkması gelişir. Bu mekanizmanın örnekleri duodenal ve intestinal atreziler ile gastroşizistir.
 
-Disrupsiyonda bütünüyle oluşmuş yapılar intrinsik ya da ekstrinsik nedenlerle majör yıkıma uğrar. İntrinsik nedenler kanama ve iskemidir; ekstrinsik neden amniyotik banttır. Birçok doku tipi aynı anda etkilenir; deri, kas ve kemik birlikte tutulabilir. Defekt belli bir anatomik bölgeye sınırlıdır ve embriyolojik gelişimden bağımsızdır, yani embriyolojik sınırlara uymaz. Örnekleri şunlardır: amniyotik bantlara bağlı ekstremite amputasyonları ya da fasiyal kleftler, yani yüz yarıkları; talidomid gibi ilaçlara bağlı embriyopatiler; vasküler nedenlere bağlı oluşan gastroşizis ve beyin dokusunda yıkım sonrası oluşan kistik boşluk olan porensefalik kist.
+Disrupsiyonda bütünüyle oluşmuş yapılar intrinsik ya da ekstrinsik nedenlerle majör yıkıma uğrar.
+İntrinsik nedenler kanama ve iskemidir; ekstrinsik neden amniyotik banttır.
+Birçok doku tipi aynı anda etkilenir; deri, kas ve kemik birlikte tutulabilir.
+Defekt belli bir anatomik bölgeye sınırlıdır ve embriyolojik gelişimden bağımsızdır, yani embriyolojik sınırlara uymaz.
+Örnekleri şunlardır: amniyotik bantlara bağlı ekstremite amputasyonları ya da fasiyal kleftler, yani yüz yarıkları; talidomid gibi ilaçlara bağlı embriyopatiler; vasküler nedenlere bağlı oluşan gastroşizis ve beyin dokusunda yıkım sonrası oluşan kistik boşluk olan porensefalik kist.
 
-Burası önemli: disrupsiyonda genetik program sağlamdır, bu nedenle tekrarlama riski çok düşüktür. Ayrıca sınavın klasik tuzağı şudur: gastroşizis ve amniyotik bant amputasyonu malformasyon değil disrupsiyondur; klab fut ise deformasyondur.
+Burası önemli: disrupsiyonda genetik program sağlamdır, bu nedenle tekrarlama riski çok düşüktür.
+Ayrıca sınavın klasik tuzağı şudur: gastroşizis ve amniyotik bant amputasyonu malformasyon değil disrupsiyondur; klab fut ise deformasyondur.
 
 @@ Displazi ve malformasyon
 Displazi, vücuttaki belli bir dokuda anormal hücresel organizasyonun yapısal değişikliklere neden olmasıdır. Belirli bir doku tipinde hücresel organizasyon bozukluğu sonucu ortaya çıkan morfogenez hatasıdır. Hücre düzeyinde enzim yapımı ya da yapısal protein sentezi bozulur. Örnekleri depo hastalıkları, iskelet displazileri ve ektodermal displazilerdir. Slayttaki görsellerde iskelet displazisinde kısa boylu çocuklar, ektodermal displazide ise az sayıda ve sivri, konik dişler görülür; her iki tabloda da sorun tek bir doku tipindedir. Displastik durumlar süreklilik gösterir. Burası önemli: dokuda intrinsik bir bozukluk olduğundan, doku büyüdükçe ya da fonksiyon gördükçe klinik bulgular ağırlaşır. Displazi ile deformasyon bu açıdan zıt seyirlidir: deformasyon zamanla düzelme eğilimindedir, displazi ise doku büyüdükçe ağırlaşır.
 
-Malformasyon, organogenez döneminde bir yapının ya da organın yapısında lokalize bir hatadan ortaya çıkan, kalıcı, primer bir yapısal defekttir. Doku ya da organ sisteminin erken gelişimindeki duraklama, gecikme ya da yanlış yönlenme sonucu kalıcı yapısal anomaliler oluşur. Hata yapının kendi gelişim programındadır; dış etki gerektirmez ve kendiliğinden geri dönmez. Konjenital kalp hastalıkları, yarık damak ve yarık dudak ile spina bifida, yani vertebra arkının kapanmamasıyla giden nöral tüp defekti, malformasyona örnek verilebilir. Malformasyon izole olarak görülebileceği gibi bir sendromun, sekansın ya da assosiasyonun komponenti de olabilir.
+Malformasyon, organogenez döneminde bir yapının ya da organın yapısında lokalize bir hatadan ortaya çıkan, kalıcı, primer bir yapısal defekttir.
+Doku ya da organ sisteminin erken gelişimindeki duraklama, gecikme ya da yanlış yönlenme sonucu kalıcı yapısal anomaliler oluşur.
+Hata yapının kendi gelişim programındadır; dış etki gerektirmez ve kendiliğinden geri dönmez.
+Konjenital kalp hastalıkları, yarık damak ve yarık dudak ile spina bifida, yani vertebra arkının kapanmamasıyla giden nöral tüp defekti, malformasyona örnek verilebilir.
+Malformasyon izole olarak görülebileceği gibi bir sendromun, sekansın ya da assosiasyonun komponenti de olabilir.
 
-Dört primer defekti bir arada hatırlayalım. Geri dönüşümlü olan deformasyondur; doku büyüdükçe ilerleyen displazidir; tekrarlama riski çok düşük olan yıkım disrupsiyondur; organogenezde primer hata ise malformasyondur.
+Dört primer defekti bir arada hatırlayalım.
+Geri dönüşümlü olan deformasyondur; doku büyüdükçe ilerleyen displazidir; tekrarlama riski çok düşük olan yıkım disrupsiyondur; organogenezde primer hata ise malformasyondur.
 
 @@ Birlikte görülmeye göre sınıflama: izole anomaliler ve sekans
 Sınıflamanın 3. ekseni anomalilerin birlikte görülme biçimidir. Dört grup tanımlanır: tek bir sistemi etkileyen izole defektler, sekanslar, sendromlar ve assosiasyonlar.
 
-İzole anomali tek organ sistemini tutar. Kalıtımı tek gen ya da multifaktöriyeldir; multifaktöriyel, birden çok gen ve çevresel etkenin birlikte rol oynaması demektir. Örnekleri yarık dudak ve damak, mide çıkışındaki kasın kalınlaşarak daraldığı pilor stenozu, doğumsal kalça çıkığı ve konjenital kalp hastalığıdır. Görselde tek taraflı yarık dudaklı bir çocuk vardır; dış görünüşte tek bir defekt bulunsa bile kalp ya da beyin anomalisi eşlik edebilir. Bu yüzden izole mi, multipl mi sorusu yanıtlanmadan izole denmez; merkezi sinir sistemi, kardiyovasküler sistem ve gastrointestinal sistem görüntülenmelidir.
+İzole anomali tek organ sistemini tutar.
+Kalıtımı tek gen ya da multifaktöriyeldir; multifaktöriyel, birden çok gen ve çevresel etkenin birlikte rol oynaması demektir.
+Örnekleri yarık dudak ve damak, mide çıkışındaki kasın kalınlaşarak daraldığı pilor stenozu, doğumsal kalça çıkığı ve konjenital kalp hastalığıdır.
+Görselde tek taraflı yarık dudaklı bir çocuk vardır; dış görünüşte tek bir defekt bulunsa bile kalp ya da beyin anomalisi eşlik edebilir.
+Bu yüzden izole mi, multipl mi sorusu yanıtlanmadan izole denmez; merkezi sinir sistemi, kardiyovasküler sistem ve gastrointestinal sistem görüntülenmelidir.
 
-Sekans, erken morfogenez döneminde altta yatan tek primer defekte sekonder olarak görülen anomalilerin eşlik etmesidir. Primer malformasyonun ek defektleri belirlediği durumlardır; anomaliler bir zincirin halkaları gibi birbirine bağlıdır. Başlatıcı yapısal bozukluk malformasyon, deformasyon, disrupsiyon ya da displazi olabilir. Tekrarlama riski, primer defektin görülme riskine göre değişir. Kalıtımı tek gen ya da multifaktöriyeldir. Potter sekansı ve meningomiyelosel sekansı en bilinen sekans örnekleridir. Nöral tüp defekti sekansında primer defekt spina bifidadır; spina bifida sekonder olarak hidrosefaliye, yani beyin ventriküllerinde beyin omurilik sıvısının birikmesine, ve pes ekinovarus gibi ayak deformitelerine neden olur.
+Sekans, erken morfogenez döneminde altta yatan tek primer defekte sekonder olarak görülen anomalilerin eşlik etmesidir.
+Primer malformasyonun ek defektleri belirlediği durumlardır; anomaliler bir zincirin halkaları gibi birbirine bağlıdır.
+Başlatıcı yapısal bozukluk malformasyon, deformasyon, disrupsiyon ya da displazi olabilir.
+Tekrarlama riski, primer defektin görülme riskine göre değişir.
+Kalıtımı tek gen ya da multifaktöriyeldir.
+Potter sekansı ve meningomiyelosel sekansı en bilinen sekans örnekleridir.
+Nöral tüp defekti sekansında primer defekt spina bifidadır; spina bifida sekonder olarak hidrosefaliye, yani beyin ventriküllerinde beyin omurilik sıvısının birikmesine, ve pes ekinovarus gibi ayak deformitelerine neden olur.
 
 @@ Potter sekansı
 Potter sekansı, bir malformasyonun zincirleme deformasyonlara yol açtığı en klasik sekanstır. Primer defekt bilateral renal agenezidir, yani iki böbreğin de hiç gelişmemesidir. Fetal idrar yapılamaz ve amniyotik sıvı azalır; bu oligohidramniyostur. Sıvı yastığı ortadan kalkınca fetal yüz ve ekstremitelerde kompresyon oluşur ve bu kompresyon deformasyona neden olur. Öte yandan bronş dallanması sırasında amniyotik sıvı sirkülasyonu olmadığı için akciğer maturasyonu bozulur ve olgular doğum sonrası kısa sürede kaybedilir.
 
-Potter sekansının akış şeması, oligohidramniyosun birkaç farklı başlangıçtan gelişebileceğini de gösterir. Renal agenezide idrar hiç yapılmaz. Üretra ya da mesane boynunda obstrüksiyonda idrar yapılır ama amniyon boşluğuna ulaşamaz. Amniyotik sıvının kronik kaybında ise sıvı yapılsa da sürekli kaybedilir. Hepsinin ortak yolu oligohidramniyostur. Sonuçlar yassılmış yüz özellikleri, pulmoner hipoplazi, talipes ekinovarus, konjenital kalça displazisi ve ağır olgularda ölümdür; şemada ölüm pulmoner hipoplazinin devamında yer alır.
+Potter sekansının akış şeması, oligohidramniyosun birkaç farklı başlangıçtan gelişebileceğini de gösterir.
+Renal agenezide idrar hiç yapılmaz.
+Üretra ya da mesane boynunda obstrüksiyonda idrar yapılır ama amniyon boşluğuna ulaşamaz.
+Amniyotik sıvının kronik kaybında ise sıvı yapılsa da sürekli kaybedilir.
+Hepsinin ortak yolu oligohidramniyostur.
+Sonuçlar yassılmış yüz özellikleri, pulmoner hipoplazi, talipes ekinovarus, konjenital kalça displazisi ve ağır olgularda ölümdür; şemada ölüm pulmoner hipoplazinin devamında yer alır.
 
-Burası önemli: Potter sekansında zincir bilateral renal agenezi, oligohidramniyos, yüz ve ekstremite kompresyonu ve pulmoner hipoplazi şeklinde ilerler. Ölüm nedeni böbrek yokluğundan çok pulmoner hipoplazidir, çünkü akciğer gelişimi amniyotik sıvıya bağımlıdır. Bir de tuzak var: Potter bir sendrom değil, sekanstır.
+Burası önemli: Potter sekansında zincir bilateral renal agenezi, oligohidramniyos, yüz ve ekstremite kompresyonu ve pulmoner hipoplazi şeklinde ilerler.
+Ölüm nedeni böbrek yokluğundan çok pulmoner hipoplazidir, çünkü akciğer gelişimi amniyotik sıvıya bağımlıdır.
+Bir de tuzak var: Potter bir sendrom değil, sekanstır.
 
 @@ Assosiasyon
 Assosiasyon, klinik prezentasyonu değişkenlik gösteren çeşitli anomalilerin rastgele görülme olasılığından daha sık bir araya geldiği anomaliler topluluğudur. Etiyopatogenezinde bileşenlerin embriyonik oluşum süreçleri aynı değildir, aralarında komşuluk ilişkisi yoktur; genelde sporadik gözlenir ve belli bir kalıtım modeliyle ilişkilendirilemez.
 
-En bilinen örnek Vakterl assosiasyonudur. Harfleri şöyle açılır: vertebral anomali, anal atrezi, kardiyak anomali, trakeoözofageal fistül, renal anomali ve ekstremite, yani İngilizce limb anomalisi. 2. örnek Murks assosiasyonudur: Müller kanalı aplazisi, renal aplazi ve servikotorasik somit displazisi. Burası önemli: anal atrezili her bebekte özofagus, vertebra, kalp ve böbreklere bakmak gerekir. Yani tek bir bileşen bulunduğunda diğerleri aktif olarak aranır.
+En bilinen örnek Vakterl assosiasyonudur.
+Harfleri şöyle açılır: vertebral anomali, anal atrezi, kardiyak anomali, trakeoözofageal fistül, renal anomali ve ekstremite, yani İngilizce limb anomalisi.
+2. örnek Murks assosiasyonudur: Müller kanalı aplazisi, renal aplazi ve servikotorasik somit displazisi.
+Burası önemli: anal atrezili her bebekte özofagus, vertebra, kalp ve böbreklere bakmak gerekir.
+Yani tek bir bileşen bulunduğunda diğerleri aktif olarak aranır.
 
-Assosiasyonda defektler iki ya da daha fazla olacak şekilde ve herhangi bir kombinasyonda birlikte görülebilir; her hastada tüm bileşenler bulunmaz. Öngörülebilen bir kalıtım modeli ve bilinen ortak bir etiyolojisi olmadığı için sendrom olarak sınıflandırılamaz. Tekrarlama riski oldukça düşüktür. Genetik danışma için assosiasyonun sendromdan ayırt edilmesi önemlidir, çünkü sendromda ortak neden ve kalıtım modeli olduğundan risk farklı hesaplanır. Burası önemli: Vakterl bir sendrom değil assosiasyondur.
+Assosiasyonda defektler iki ya da daha fazla olacak şekilde ve herhangi bir kombinasyonda birlikte görülebilir; her hastada tüm bileşenler bulunmaz.
+Öngörülebilen bir kalıtım modeli ve bilinen ortak bir etiyolojisi olmadığı için sendrom olarak sınıflandırılamaz.
+Tekrarlama riski oldukça düşüktür.
+Genetik danışma için assosiasyonun sendromdan ayırt edilmesi önemlidir, çünkü sendromda ortak neden ve kalıtım modeli olduğundan risk farklı hesaplanır.
+Burası önemli: Vakterl bir sendrom değil assosiasyondur.
 
 @@ Sendrom
 Sendrom kelimesi eski Yunancada birlikte giden anlamına gelir. Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması sendrom olarak adlandırılır. Aynı bulgular farklı hastalarda tekrar tekrar aynı birliktelikte görülür ve bu tekrarlayan örüntü sendromu tanınabilir kılar. Bir sendrom tanımlanınca farklı olgular karşılaştırılarak etiyolojisi, klinik spektrumu ve patogenezi belirlenmeye çalışılır. Slaytta Angelman sendromlu çocuklar gösterilir; farklı yaşlarda benzer yüz görünümü ve el duruşu kalıbı örnekler. Sekanstan farkı, anomalilerin tek bir primer defektin zincirleme sonuçları olarak değil, birlikte giden bir örüntü olarak ortaya çıkmasıdır.
 
-Bir sendromun çok sistemli doğası, aynı hastada bir arada görülen bulgu listesiyle en iyi anlaşılır. Derste örnek olarak verilen bulgu kümesi, klasik olarak Trizomi 21, yani Down sendromu tablosudur. Dış görünümde tipik dismorfik yüz görünümü, avuç içinde simian çizgisi ve 1. ile 2. ayak parmakları arasındaki mesafede artış vardır. Motor mental gerilik, kaslarda hipotoni ve eklem gevşekliği görülür. Konjenital kalp defektleri, duodenal stenoz ya da atrezi, kalın barsakta ganglion hücrelerinin doğuştan yokluğu olan Hirşprung hastalığı ve diğer gastrointestinal malformasyonlar eşlik eder. Bunlara immün sistem bozuklukları, lösemide risk artışı, hipotiroidi ve sensörinöral işitme kaybı eklenir. Bu listede minör ve majör anomaliler aynı kalıbın parçası olarak birlikte yer alır.
+Bir sendromun çok sistemli doğası, aynı hastada bir arada görülen bulgu listesiyle en iyi anlaşılır.
+Derste örnek olarak verilen bulgu kümesi, klasik olarak Trizomi 21, yani Down sendromu tablosudur.
+Dış görünümde tipik dismorfik yüz görünümü, avuç içinde simian çizgisi ve 1. ile 2. ayak parmakları arasındaki mesafede artış vardır.
+Motor mental gerilik, kaslarda hipotoni ve eklem gevşekliği görülür.
+Konjenital kalp defektleri, duodenal stenoz ya da atrezi, kalın barsakta ganglion hücrelerinin doğuştan yokluğu olan Hirşprung hastalığı ve diğer gastrointestinal malformasyonlar eşlik eder.
+Bunlara immün sistem bozuklukları, lösemide risk artışı, hipotiroidi ve sensörinöral işitme kaybı eklenir.
+Bu listede minör ve majör anomaliler aynı kalıbın parçası olarak birlikte yer alır.
 
-Sendromu tanımlayan ölçütler şunlardır: tanımlanabilen bir kalıtım şekli ya da ortak bir etiyolojik nedeni vardır; iki ya da daha çok sistem etkilenir; ve konjenital malformasyonların birlikteliği durumudur. Sendromların etiyolojisinde beş grup yer alır: kromozomal anomaliler; mikroskopta görülemeyecek kadar küçük kromozom parçası kayıplarıyla oluşan mikrodelesyon sendromları; tek gen defektleri; poligenik, yani birden çok genin etkisiyle belirlenen hastalıklar; ve gebelikte embriyoya zarar veren dış etkenler olan teratojenler. Özetle sekans bir zincirdir, sendrom ortak bir nedendir, assosiasyon ise istatistiksel bir birlikteliktir ve riski düşüktür.
+Sendromu tanımlayan ölçütler şunlardır: tanımlanabilen bir kalıtım şekli ya da ortak bir etiyolojik nedeni vardır; iki ya da daha çok sistem etkilenir; ve konjenital malformasyonların birlikteliği durumudur.
+Sendromların etiyolojisinde beş grup yer alır: kromozomal anomaliler; mikroskopta görülemeyecek kadar küçük kromozom parçası kayıplarıyla oluşan mikrodelesyon sendromları; tek gen defektleri; poligenik, yani birden çok genin etkisiyle belirlenen hastalıklar; ve gebelikte embriyoya zarar veren dış etkenler olan teratojenler.
+Özetle sekans bir zincirdir, sendrom ortak bir nedendir, assosiasyon ise istatistiksel bir birlikteliktir ve riski düşüktür.
 
 @@ Konjenital anomalilerin sıklığı ve etiyolojisi
 Konjenital anomalilerin yenidoğanda sıklığı %2 ile dört arasındadır. Bu anomaliler birlikte görülme gruplarına göre şöyle dağılır: izole majör anomali %60 ile altmış beş, sendromlar %20, Potter sekansı gibi sekanslar %8 ile on üç, Vakterl gibi assosiasyonlar ise %3. Burası önemli: en büyük grup izole majör anomalidir, en seyrek grup assosiasyondur. Sıralama büyükten küçüğe izole majör anomali, sendrom, sekans ve assosiasyon şeklindedir.
 
-Gelişimsel defektlerin özet şeması iki sınıflamayı birleştirir. Tek primer defektler deformasyon, disrupsiyon, displazi ve malformasyondur. Çoklu defektler ise sendrom, assosiasyon ve sekanstır.
+Gelişimsel defektlerin özet şeması iki sınıflamayı birleştirir.
+Tek primer defektler deformasyon, disrupsiyon, displazi ve malformasyondur.
+Çoklu defektler ise sendrom, assosiasyon ve sekanstır.
 
-Konjenital anomalilerin etiyolojisine baktığımızda dağılım, dismorfolojinin neden bu kadar zorlu bir alan olduğunu gösterir. Etiyolojisi bilinmeyenler %50 ile altmış ile en büyük gruptur. Multifaktöriyel nedenler %20 ile yirmi beştir ve bilinen nedenler içinde en sıktır. Çevresel faktörler %7 ile on, mutant genler, yani tek gen nedenleri %7 ile sekiz, kromozomal anomaliler ise %6 ile yedidir. Burası önemli: konjenital anomalilerin yarısından fazlasında neden bilinmez.
+Konjenital anomalilerin etiyolojisine baktığımızda dağılım, dismorfolojinin neden bu kadar zorlu bir alan olduğunu gösterir.
+Etiyolojisi bilinmeyenler %50 ile altmış ile en büyük gruptur.
+Multifaktöriyel nedenler %20 ile yirmi beştir ve bilinen nedenler içinde en sıktır.
+Çevresel faktörler %7 ile on, mutant genler, yani tek gen nedenleri %7 ile sekiz, kromozomal anomaliler ise %6 ile yedidir.
+Burası önemli: konjenital anomalilerin yarısından fazlasında neden bilinmez.
 
 @@ Dismorfik hastaya yaklaşım ve öykü
 Dismorfik muayene, belirli durumlardan biri saptandığında başlatılır. Bunlar anormal büyüme ve oranlar, yani büyümede gecikme ya da aşırı büyüme; anormal ya da alışılmadık yüz ve vücut özellikleri, yani doğum defektleri, ikiden fazla minör ya da bir majör anomali; anormal genitalya ya da erken veya geç puberte; psikomotor gerilik, konuşmada gecikme ya da mental retardasyon; ve anormal nöromüsküler fonksiyon, körlük ya da sağırlıktır.
 
-Dismorfik hastada öykü, anomalinin nedenini gösterebilecek en değerli araçtır. Özgeçmiş ve soygeçmişte ebeveynlerin yaşı, sağlığı, mesleği, hastalıkları ve daha önceki gebelikleri sorulur. Annenin kullandığı ilaçlar, alkol ya da bağımlılık yapıcı maddeler, gebelikte ateş, döküntü ya da hastalık öyküsü sorgulanır. Fetal hareketler ile polihidramniyos ya da oligohidramniyos olup olmadığı öğrenilir. Çocuğun doğum ağırlığı, boyu ve baş çevresi kaydedilir. Üç kuşaklı pedigri çizilir, tüm sistemler muayene edilir, tetkikler, grafiler ve fotoğraf alınır. Hasta ex olmuşsa otopsi ve gerekli görülen spesifik analizler önerilmeli, fotoğraf ve grafi gibi tanı için gerekli görüntüler ve bilgiler kaydedilmelidir.
+Dismorfik hastada öykü, anomalinin nedenini gösterebilecek en değerli araçtır.
+Özgeçmiş ve soygeçmişte ebeveynlerin yaşı, sağlığı, mesleği, hastalıkları ve daha önceki gebelikleri sorulur.
+Annenin kullandığı ilaçlar, alkol ya da bağımlılık yapıcı maddeler, gebelikte ateş, döküntü ya da hastalık öyküsü sorgulanır.
+Fetal hareketler ile polihidramniyos ya da oligohidramniyos olup olmadığı öğrenilir.
+Çocuğun doğum ağırlığı, boyu ve baş çevresi kaydedilir.
+Üç kuşaklı pedigri çizilir, tüm sistemler muayene edilir, tetkikler, grafiler ve fotoğraf alınır.
+Hasta ex olmuşsa otopsi ve gerekli görülen spesifik analizler önerilmeli, fotoğraf ve grafi gibi tanı için gerekli görüntüler ve bilgiler kaydedilmelidir.
 
-İki kavram birbirinden ayrılmalıdır. Dismorfik çocuk, 1. derece akrabalarda mevcut olmayan üç ya da daha fazla minör anomaliye sahip çocuktur. Dismorfolojik değerlendirme ise bir ya da birden fazla konjenital anomalinin varlığında gerekir. Burası önemli: dismorfik çocuk tanımında eşik üç minör anomalidir ve aile karşılaştırması zorunludur; anne, baba ya da kardeşte de bulunan bir bulgu ailesel kabul edilir ve sayılmaz. Dismorfik çocuğa yaklaşımda önemli noktalar anamnez, en az üç kuşağı kapsayan aile öyküsü, dikkatli ve detaylı ölçümlerin alındığı fizik muayene, fotoğraflama, genetik testleri içeren tetkik, veri tabanları taraması ve genetik danışmadır.
+İki kavram birbirinden ayrılmalıdır.
+Dismorfik çocuk, 1. derece akrabalarda mevcut olmayan üç ya da daha fazla minör anomaliye sahip çocuktur.
+Dismorfolojik değerlendirme ise bir ya da birden fazla konjenital anomalinin varlığında gerekir.
+Burası önemli: dismorfik çocuk tanımında eşik üç minör anomalidir ve aile karşılaştırması zorunludur; anne, baba ya da kardeşte de bulunan bir bulgu ailesel kabul edilir ve sayılmaz.
+Dismorfik çocuğa yaklaşımda önemli noktalar anamnez, en az üç kuşağı kapsayan aile öyküsü, dikkatli ve detaylı ölçümlerin alındığı fizik muayene, fotoğraflama, genetik testleri içeren tetkik, veri tabanları taraması ve genetik danışmadır.
 
 @@ Anamnez, Apgar skoru ve pedigri
 Anamnez iki zaman dilimine ayrılır. Prenatal öyküde anne yaşı ve parite, yani doğum sayısı sorulur. Torç sorgulanır; bu, annedeki bir enfeksiyon etkeninin plasenta aracılığıyla ya da doğum sırasında bebeğe geçmesidir. Fetal hareketler, gebelik komplikasyonları, teratojen maruziyeti, prenatal tanı sonuçları, tarama testleri ve ultrasonografi bulguları da prenatal öykünün parçasıdır. Perinatal öyküde gebelik süresi, prezentasyon, yani doğumda fetusun önde gelen kısmı, ve doğum şekli, doğum süreci ve ilaç kullanımı, Apgar skoru ve komplikasyonlar ile neonatal süreç sorgulanır.
 
-Apgar skoru, doğumdan sonra bebeklerin standart şekilde değerlendirilmesine olanak sağlayan skorlama sistemidir. Her biri sıfır, bir ya da iki puan alabilen beş bileşenden oluşur: renk, kalp hızı, refleksler, kas tonusu ve solunum. Toplam puan sekiz ile on arasındaysa normal, dört ile yedi arasındaysa oksijene ihtiyaç var, dördün altındaysa şiddetli oksijen yetersizliği var demektir.
+Apgar skoru, doğumdan sonra bebeklerin standart şekilde değerlendirilmesine olanak sağlayan skorlama sistemidir.
+Her biri sıfır, bir ya da iki puan alabilen beş bileşenden oluşur: renk, kalp hızı, refleksler, kas tonusu ve solunum.
+Toplam puan sekiz ile on arasındaysa normal, dört ile yedi arasındaysa oksijene ihtiyaç var, dördün altındaysa şiddetli oksijen yetersizliği var demektir.
 
-Aile öyküsünde üç jenerasyonlu pedigri esastır. Sorgulanacak başlıklar etnik köken; diğer çocuklarda boy değişiklikleri, kafa şekilleri ve öğrenme güçlükleri; yenidoğan ölümleri; malformasyonlu doğmuş tüm çocuklar; akrabalık; aktarılan hastalıklar; infertilite ve tekrarlayan gebelik kaybıdır. Öykünün güvenilirliği konusunda iki uyarı vardır. Çoğu aile önce negatif öykü verir; ailede kimsede yok yanıtı ilk görüşmede sık alınır ve çoğu zaman yanıltıcıdır, bu yüzden sorular tekrarlanmalı ve somutlaştırılmalıdır. Pozitif öyküler ise doğrulanmadan kabul edilmemelidir.
+Aile öyküsünde üç jenerasyonlu pedigri esastır.
+Sorgulanacak başlıklar etnik köken; diğer çocuklarda boy değişiklikleri, kafa şekilleri ve öğrenme güçlükleri; yenidoğan ölümleri; malformasyonlu doğmuş tüm çocuklar; akrabalık; aktarılan hastalıklar; infertilite ve tekrarlayan gebelik kaybıdır.
+Öykünün güvenilirliği konusunda iki uyarı vardır.
+Çoğu aile önce negatif öykü verir; ailede kimsede yok yanıtı ilk görüşmede sık alınır ve çoğu zaman yanıltıcıdır, bu yüzden sorular tekrarlanmalı ve somutlaştırılmalıdır.
+Pozitif öyküler ise doğrulanmadan kabul edilmemelidir.
 
-Ders kitabından alınan dört aile ağacı, pedigrinin tanıya nasıl yol gösterdiğini örnekler. Karelerle erkekler, dairelerle kadınlar, dolu sembollerle hastalar gösterilir. Akraba evliliği ile birlikte aynı kuşakta farklı cinsiyetlerde birden fazla hasta varsa otozomal resesif kalıtım düşünülür; ebeveynler sağlıklıdır, hastalık kardeşler arasında görülür. Vertikal kalıtım ve erkekten erkeğe geçiş varsa otozomal dominant kalıtım düşünülür; her kuşakta hasta vardır. Yalnızca erkekler etkileniyor ve erkekten erkeğe geçiş yoksa iks kromozomuna bağlı resesif kalıtım düşünülür; hastalık taşıyıcı kadınlar üzerinden aktarılır. Erkekten erkeğe geçiş iks kromozomuna bağlı kalıtımı dışlar, çünkü baba oğluna iks değil ye kromozomu verir. Çok sayıda abortus ya da ölü doğum öyküsü ise ebeveynlerden birinde dengeli kromozomal anomali olduğunu düşündürür; dengeli anomalide kromozom parçaları materyal kaybı ya da fazlası olmadan yer değiştirmiştir.
+Ders kitabından alınan dört aile ağacı, pedigrinin tanıya nasıl yol gösterdiğini örnekler.
+Karelerle erkekler, dairelerle kadınlar, dolu sembollerle hastalar gösterilir.
+Akraba evliliği ile birlikte aynı kuşakta farklı cinsiyetlerde birden fazla hasta varsa otozomal resesif kalıtım düşünülür; ebeveynler sağlıklıdır, hastalık kardeşler arasında görülür.
+Vertikal kalıtım ve erkekten erkeğe geçiş varsa otozomal dominant kalıtım düşünülür; her kuşakta hasta vardır.
+Yalnızca erkekler etkileniyor ve erkekten erkeğe geçiş yoksa iks kromozomuna bağlı resesif kalıtım düşünülür; hastalık taşıyıcı kadınlar üzerinden aktarılır.
+Erkekten erkeğe geçiş iks kromozomuna bağlı kalıtımı dışlar, çünkü baba oğluna iks değil ye kromozomu verir.
+Çok sayıda abortus ya da ölü doğum öyküsü ise ebeveynlerden birinde dengeli kromozomal anomali olduğunu düşündürür; dengeli anomalide kromozom parçaları materyal kaybı ya da fazlası olmadan yer değiştirmiştir.
 
 @@ Fizik muayene: ölçümler, kafa ve yüz
 Dismorfik hastanın fizik muayenesi ölçümle başlar. Boy, ağırlık ve baş çevresi persantil eğrilerine göre değerlendirilir; persantil, bir ölçümün aynı yaş ve cinsiyetteki dağılımdaki sırasıdır. Ardından başta yüz dismorfolojisi olmak üzere tüm sistemler tek tek gözden geçirilir. Majör malformasyonlar kadar minör anomaliler de kaydedilir, hastanın elindeki tüm laboratuvar sonuçları, raporlar ve grafiler incelenir, ölçümler ve fotoğraflar alınır.
 
-Slaytta örnek olarak Kornelya de Lanj sendromu verilir. Nadir görülen; büyüme geriliği, mental retardasyon, tipik yüz görünümü, orta hatta birleşen kalın kaşlar, yani sinofris, dar, ince ve aşağı dönük üst dudak ve ekstremitelerin kısa olması demek olan mikromeli ile karakterize bir sendromdur.
+Slaytta örnek olarak Kornelya de Lanj sendromu verilir.
+Nadir görülen; büyüme geriliği, mental retardasyon, tipik yüz görünümü, orta hatta birleşen kalın kaşlar, yani sinofris, dar, ince ve aşağı dönük üst dudak ve ekstremitelerin kısa olması demek olan mikromeli ile karakterize bir sendromdur.
 
-Bazı genel bulgular tek başına sendrom adı vermez ama altta yatan olası bir etiyolojik neden olduğunu düşündürür. Bunlar hipotoni; 3. persantilin altında, yani eksi üç standart sapmanın altında boy olarak tanımlanan kısa yapı; doksan 7. persantilin üzerinde, yani artı üç standart sapmanın üzerinde boy olarak tanımlanan uzun yapı; boy ve kilonun eksi üç standart sapmanın altında olduğu gelişme geriliği; kilonun artı üç standart sapmanın üzerinde olduğu obezite; baş çevresinin eksi üç standart sapmanın altında olduğu mikrosefali ve artı üç standart sapmanın üzerinde olduğu makrosefalidir. Kısa gövdeli ya da kısa ekstremiteli olabilen orantısız kısa yapı ve başını tutma, oturma ve konuşma zamanı gibi gelişim basamaklarının geri kalması da bu listededir.
+Bazı genel bulgular tek başına sendrom adı vermez ama altta yatan olası bir etiyolojik neden olduğunu düşündürür.
+Bunlar hipotoni; 3. persantilin altında, yani eksi üç standart sapmanın altında boy olarak tanımlanan kısa yapı; 97. persantilin üzerinde, yani artı üç standart sapmanın üzerinde boy olarak tanımlanan uzun yapı; boy ve kilonun eksi üç standart sapmanın altında olduğu gelişme geriliği; kilonun artı üç standart sapmanın üzerinde olduğu obezite; baş çevresinin eksi üç standart sapmanın altında olduğu mikrosefali ve artı üç standart sapmanın üzerinde olduğu makrosefalidir.
+Kısa gövdeli ya da kısa ekstremiteli olabilen orantısız kısa yapı ve başını tutma, oturma ve konuşma zamanı gibi gelişim basamaklarının geri kalması da bu listededir.
 
-Kafa ve yüz şekli, dismorfik muayenenin ilk bakışta değerlendirilen bölümüdür. Makrosefali normalden büyük, mikrosefali normalden küçük kafatasıdır. Brakisefali kafatasının arkasının düz olması, trigonosefali ise baş yapısının üçgenimsi olmasıdır. Daha önce gördüğümüz skafosefali ve plagiosefali de bu muayenede tanınır. Yüz biçiminde uzun yüz, kaba yüz ve üçgen yüz görünümü tanımlanır.
+Kafa ve yüz şekli, dismorfik muayenenin ilk bakışta değerlendirilen bölümüdür.
+Makrosefali normalden büyük, mikrosefali normalden küçük kafatasıdır.
+Brakisefali kafatasının arkasının düz olması, trigonosefali ise baş yapısının üçgenimsi olmasıdır.
+Daha önce gördüğümüz skafosefali ve plagiosefali de bu muayenede tanınır.
+Yüz biçiminde uzun yüz, kaba yüz ve üçgen yüz görünümü tanımlanır.
 
-Göz ve kulak bölgesi minör anomalilerin en sık arandığı alanlardır. Gözlerde palpebral aralığın, yani alt ve üst göz kapakları arasındaki açıklığın eğimi değerlendirilir; çizimlerde yukarı çekik, düz ve aşağı çekik eğimler karşılaştırılır. Ön yüz çizimlerinde iç göz köşeleri arası mesafe gösterilir; bu ölçüm telekantus ve hipertelorizm gibi bulguları ayırmaya yarar. Kulaklarda yeri, yapısı ve büyüklüğü değerlendirilir. Kulak kepçesinin bölümleri heliks, yani dış kenar; skafa; antiheliks; dış kulak kanalı; kanalın önündeki küçük çıkıntı olan tragus; antitragus ve kulak memesi olan lobüldür. Kulak önünde deri çıkıntıları ve yapısı bozuk kulak kepçeleri tipik örneklerdir.
+Göz ve kulak bölgesi minör anomalilerin en sık arandığı alanlardır.
+Gözlerde palpebral aralığın, yani alt ve üst göz kapakları arasındaki açıklığın eğimi değerlendirilir; çizimlerde yukarı çekik, düz ve aşağı çekik eğimler karşılaştırılır.
+Ön yüz çizimlerinde iç göz köşeleri arası mesafe gösterilir; bu ölçüm telekantus ve hipertelorizm gibi bulguları ayırmaya yarar.
+Kulaklarda yeri, yapısı ve büyüklüğü değerlendirilir.
+Kulak kepçesinin bölümleri heliks, yani dış kenar; skafa; antiheliks; dış kulak kanalı; kanalın önündeki küçük çıkıntı olan tragus; antitragus ve kulak memesi olan lobüldür.
+Kulak önünde deri çıkıntıları ve yapısı bozuk kulak kepçeleri tipik örneklerdir.
 
-Burunda görünüş, burun deliklerinin durumu ve burun kökü değerlendirilir. Gaga burun, yani belirgin ve öne uzanan, gagayı andıran burun, Sekel sendromunda görülen örnektir. Bifid burun ise burun ucunun ortadan çatallanmış görünümüdür. Ağızda dudak yapısı, filtrum, yani burun ile üst dudak arasındaki dikey oluk, damak, dişlerin yerleştiği alveolar yapı ve dil incelenir. Düz yani silik filtrum ve ince üst dudak önemli bir dismorfik ipucudur.
+Burunda görünüş, burun deliklerinin durumu ve burun kökü değerlendirilir.
+Gaga burun, yani belirgin ve öne uzanan, gagayı andıran burun, Sekel sendromunda görülen örnektir.
+Bifid burun ise burun ucunun ortadan çatallanmış görünümüdür.
+Ağızda dudak yapısı, filtrum, yani burun ile üst dudak arasındaki dikey oluk, damak, dişlerin yerleştiği alveolar yapı ve dil incelenir.
+Düz yani silik filtrum ve ince üst dudak önemli bir dismorfik ipucudur.
 
 @@ Dismorfik hastada tanı yöntemleri ve yeni nesil dizileme
-Dismorfik hastada genetik testler üç gruptadır ve her biri farklı büyüklükteki bir değişikliği görür. Sitogenetikte karyotip ile kromozomlar mikroskopta sıralanır; sayı ve büyük yapısal değişiklikler görülür. Moleküler sitogenetikte kromozomlar üzerinde floresan işaretli problarla belirli bölgeler incelenir. Moleküler genetikte DNA düzeyinde gen dizisi incelenir; görselde polimeraz zincir reaksiyonu, yani pe ce er ürünlerinin agaroz jelde merdiven belirteciyle birlikte doğrulanması gösterilir. Bu üç grup büyükten küçüğe bir çözünürlük sıralaması oluşturur.
+Dismorfik hastada genetik testler üç gruptadır ve her biri farklı büyüklükteki bir değişikliği görür. Sitogenetikte karyotip ile kromozomlar mikroskopta sıralanır; sayı ve büyük yapısal değişiklikler görülür. Moleküler sitogenetikte kromozomlar üzerinde floresan işaretli problarla belirli bölgeler incelenir. Moleküler genetikte DNA düzeyinde gen dizisi incelenir; görselde polimeraz zincir reaksiyonu, yani PCR ürünlerinin agaroz jelde merdiven belirteciyle birlikte doğrulanması gösterilir. Bu üç grup büyükten küçüğe bir çözünürlük sıralaması oluşturur.
 
-Yeni nesil dizileme, aynı anda çok sayıda DNA parçasının dizilenmesini sağlayan moleküler genetik yöntemidir. Görseldeki iş akışı DNA ya da er ne a ile başlar; örnek hazırlığı ve kütüphane oluşturma, klonal amplifikasyon, pozitif partiküllerin ayrılması, çipe yükleme ve dizileme ile sürer ve veri analiziyle biter. Yeni nesil dizileme farklı ölçeklerde uygulanır. Tek gen düzeyinde genin protein kodlayan bölümü olan ekzonlar, kodlamayan ara bölümler olan intronlar ve ekzon intron kavşakları incelenir. Gen panellerinde belirli bir klinik tabloyla ilişkili gen grubu birlikte dizilenir. Ekzom analizinde tüm ekzom dizileme ve klinik ekzom dizileme yapılır. Genom analizinde ise tüm genom dizilenir.
+Yeni nesil dizileme, aynı anda çok sayıda DNA parçasının dizilenmesini sağlayan moleküler genetik yöntemidir.
+Görseldeki iş akışı DNA ya da er ne a ile başlar; örnek hazırlığı ve kütüphane oluşturma, klonal amplifikasyon, pozitif partiküllerin ayrılması, çipe yükleme ve dizileme ile sürer ve veri analiziyle biter.
+Yeni nesil dizileme farklı ölçeklerde uygulanır.
+Tek gen düzeyinde genin protein kodlayan bölümü olan ekzonlar, kodlamayan ara bölümler olan intronlar ve ekzon intron kavşakları incelenir.
+Gen panellerinde belirli bir klinik tabloyla ilişkili gen grubu birlikte dizilenir.
+Ekzom analizinde tüm ekzom dizileme ve klinik ekzom dizileme yapılır.
+Genom analizinde ise tüm genom dizilenir.
 
 @@ Varyant yorumu ve sınıflandırma
-Analiz sonunda her hasta için gen adı, kromozom konumu, varyantın intronik, ekzonik ya da splays bölgesinde olup olmadığı ve toplum sıklıklarıyla dolu yüzlerce satırlık bir varyant listesi elde edilir; tanı bu listenin süzülmesiyle konur. Sınıflandırmada kullanılan kaynaklar şunlardır. Annovar, Vast ve Snip ef gibi varyant açıklayıcı programlar varyantı intronik, intragenik, splays ya da ekzonik olarak tanımlar. Popülasyon veri tabanları, yani Eksak, Bin Genom ve Nomad, majör ve minör alel toplum frekanslarını verir. Hasta veri tabanlarında verilerin güvenilirliği, kaynağı ve analiz yöntemi sorgulanır. Literatür taranır. Polifen iki, Sift ve Mutasyon Teyster gibi in siliko, yani bilgisayar ortamında öngörü yapan değerlendirme programları kullanılır. Bu araçların tek başına öngörü doğruluğu %60 beş ile seksen düzeyindedir; birlikte kullanıldığında yüzde doksana yaklaşır.
+Analiz sonunda her hasta için gen adı, kromozom konumu, varyantın intronik, ekzonik ya da splays bölgesinde olup olmadığı ve toplum sıklıklarıyla dolu yüzlerce satırlık bir varyant listesi elde edilir; tanı bu listenin süzülmesiyle konur. Sınıflandırmada kullanılan kaynaklar şunlardır. Annovar, Vast ve Snip ef gibi varyant açıklayıcı programlar varyantı intronik, intragenik, splays ya da ekzonik olarak tanımlar. Popülasyon veri tabanları, yani Eksak, Bin Genom ve Nomad, majör ve minör alel toplum frekanslarını verir. Hasta veri tabanlarında verilerin güvenilirliği, kaynağı ve analiz yöntemi sorgulanır. Literatür taranır. Polifen iki, Sift ve Mutasyon Teyster gibi in siliko, yani bilgisayar ortamında öngörü yapan değerlendirme programları kullanılır. Bu araçların tek başına öngörü doğruluğu %65 ile seksen düzeyindedir; birlikte kullanıldığında %90'a yaklaşır.
 
-Varyantların yorumlanmasında Amerikan Tıbbi Genetik ve Genomik Koleji ile Moleküler Patoloji Derneği'nin ortak standartları, kısaca a ce em ge kılavuzu kullanılır. Kanıtlar türlerine ve güçlerine göre derecelendirilir. Benign tarafta güçlü ve destekleyici; patojenik tarafta destekleyici, orta, güçlü ve çok güçlü kanıt düzeyleri vardır. Kanıt türleri arasında popülasyon, hesaplamalı, fonksiyonel, segregasyon, de novo ve veri tabanı verileri vardır. Örneğin fonksiyon kaybının bilinen mekanizma olduğu gende null varyant çok güçlü, doğrulanmış de novo varyant güçlü, popülasyon veri tabanlarında bulunmama orta düzey patojenik kanıttır; hastalık için fazla yüksek toplum frekansı ise benign kanıttır.
+Varyantların yorumlanmasında Amerikan Tıbbi Genetik ve Genomik Koleji ile Moleküler Patoloji Derneği'nin ortak standartları, kısaca a ce em ge kılavuzu kullanılır.
+Kanıtlar türlerine ve güçlerine göre derecelendirilir.
+Benign tarafta güçlü ve destekleyici; patojenik tarafta destekleyici, orta, güçlü ve çok güçlü kanıt düzeyleri vardır.
+Kanıt türleri arasında popülasyon, hesaplamalı, fonksiyonel, segregasyon, de novo ve veri tabanı verileri vardır.
+Örneğin fonksiyon kaybının bilinen mekanizma olduğu gende null varyant çok güçlü, doğrulanmış de novo varyant güçlü, popülasyon veri tabanlarında bulunmama orta düzey patojenik kanıttır; hastalık için fazla yüksek toplum frekansı ise benign kanıttır.
 
-Burası önemli: kanıtlar birleştirildiğinde her varyant beş sınıftan birine yerleştirilir. Benign yani iyi huylu, muhtemelen benign, klinik önemi belirsiz varyant, muhtemelen patojenik ve patojenik. Klinik önemi belirsiz varyant bir tanı değildir; bugün belirsiz olan varyant yeni veriyle ileride benign ya da patojenik sınıfa geçebilir. Bu yüzden hangi sınıfın nasıl raporlanacağı dikkatle belirlenmeli ve veri tabanları yıllık ya da altı ayda bir yeniden değerlendirilmelidir.
+Burası önemli: kanıtlar birleştirildiğinde her varyant beş sınıftan birine yerleştirilir.
+Benign yani iyi huylu, muhtemelen benign, klinik önemi belirsiz varyant, muhtemelen patojenik ve patojenik.
+Klinik önemi belirsiz varyant bir tanı değildir; bugün belirsiz olan varyant yeni veriyle ileride benign ya da patojenik sınıfa geçebilir.
+Bu yüzden hangi sınıfın nasıl raporlanacağı dikkatle belirlenmeli ve veri tabanları yıllık ya da 6 ayda bir yeniden değerlendirilmelidir.
 
 @@ Genetik testle tanı alan olgular ve tanı algoritması
 Dersteki olgu fotoğrafları, genetik testlerin dismorfik hastada nasıl tanı koydurduğunu gösterir. Her sendrom, kalıtsal hastalıkların çevrim içi kataloğu olan Omim'deki numarasıyla tanımlanır; örneğin frajil iks sendromunun numarası üç yüz bin altı yüz yirmi dört, yirmi iki ku on bir nokta iki delesyon sendromunun numarası yüz seksen sekiz bin dört yüzdür. Tanı alan diğer sendromlar Çarç sendromu, Knoblok sendromu ve Kokeyn sendromudur. Kopya sayısı değişikliklerine örnek olarak altı ku yirmi beş nokta bir mikrodelesyonu, on beş ku on bir nokta iki mikrodelesyonu ve iks ku on bir nokta iki mikroduplikasyonu gösterilir. Nörogelişimsel örnekler ise otozomal dominant mental retardasyon tip otuz iki, yani Arboleda Tam sendromu, ve otizm yatkınlığı on sekizdir; Omim kaydında makrosefali, otizm, zihinsel yetersizlik ve nöbet gibi bulgular yüzdeleriyle listelenir. Bu küçük değişiklikler karyotipte görülmez.
 
-Multipl konjenital anomali ve mental retardasyonu olan hastada genetik yaklaşım bir algoritma izler. Başlangıç noktası klinik, laboratuvar ve radyolojik değerlendirmedir; ardından tek bir soru sorulur: belirli bir sendrom şüphesi var mı? Şüphe varsa sendroma yönelik hedefe spesifik testler yapılır: floresan in situ hibridizasyon, yani fiş; yeni nesil dizileme panelleri; Sanger sekanslama ve em el pe a gibi testler. Şüphe yoksa basamaklı yol izlenir. İlk aşama karyotiplemedir. Karyotip normalse mikroarray analizi yapılır. Mikroarray normalse klinik özelliklere yönelik gen panelleri düşünülür. Son tercih ise tüm ekzom dizi analizidir. Burası önemli: sendrom şüphesi yoksa ilk test karyotip, son tercih tüm ekzom dizi analizidir.
+Multipl konjenital anomali ve mental retardasyonu olan hastada genetik yaklaşım bir algoritma izler.
+Başlangıç noktası klinik, laboratuvar ve radyolojik değerlendirmedir; ardından tek bir soru sorulur: belirli bir sendrom şüphesi var mı?
+Şüphe varsa sendroma yönelik hedefe spesifik testler yapılır: floresan in situ hibridizasyon, yani fiş; yeni nesil dizileme panelleri; Sanger sekanslama ve em el pe a gibi testler.
+Şüphe yoksa basamaklı yol izlenir.
+İlk aşama karyotiplemedir.
+Karyotip normalse mikroarray analizi yapılır.
+Mikroarray normalse klinik özelliklere yönelik gen panelleri düşünülür.
+Son tercih ise tüm ekzom dizi analizidir.
+Burası önemli: sendrom şüphesi yoksa ilk test karyotip, son tercih tüm ekzom dizi analizidir.
 
-Tüm ekzom dizi analizinin algoritmada en sona konmasının somut nedenleri vardır. Pahalıdır ve geri ödeme kapsamı tartışmalıdır. Yaklaşık yirmi bin genin kodlayan bölgeleri incelendiği için analizi zordur. Çok uzun süreçte sonuçlanır. Her hasta için on ile on beş bin arası varyant çıkar. Ayrıca her genomik anomaliyi göstermez; özellikle büyük delesyonlar ve duplikasyonlar kaçabilir. Bu nedenle ilk aşamada kullanılması gereken bir test değildir ve karyotip analizi ile ileri moleküler sitogenetik tetkikler yapılmamış bir hastadan tüm ekzom dizi analizi çalışılması önerilmez.
+Tüm ekzom dizi analizinin algoritmada en sona konmasının somut nedenleri vardır.
+Pahalıdır ve geri ödeme kapsamı tartışmalıdır.
+Yaklaşık yirmi bin genin kodlayan bölgeleri incelendiği için analizi zordur.
+Çok uzun süreçte sonuçlanır.
+Her hasta için on ile on beş bin arası varyant çıkar.
+Ayrıca her genomik anomaliyi göstermez; özellikle büyük delesyonlar ve duplikasyonlar kaçabilir.
+Bu nedenle ilk aşamada kullanılması gereken bir test değildir ve karyotip analizi ile ileri moleküler sitogenetik tetkikler yapılmamış bir hastadan tüm ekzom dizi analizi çalışılması önerilmez.
 
 @@ Kaynaklar, genetik danışma ve tanı olasılığı
 İki binin üzerinde sendrom olduğundan dismorfolog hafızaya değil kaynaklara dayanır. Başvurulan referans kitapların başında Smit'in tanınabilir malformasyon örüntüleri atlası gelir; baş ve boyun sendromları, insan malformasyonları, genetik tanı ve danışma atlasları ile Oksford klinik genetik başvuru kitabı da kullanılır. Genetik hastalıkları taramada kullanılan veri tabanları Omim, Fenomayzır, Gugıl Akademik, Pab Med, nadir hastalıklar veri tabanı olan Orfanet, Cin Tests, Londra Dismorfoloji Veri Tabanı ile Londra Nörogenetik Veri Tabanı ve Posum'dur.
 
-Genetik danışma, tanı konduktan sonra aileyle kurulan yapılandırılmış bir süreçtir ve dört bileşeni vardır: tanı, risk tayini, seçenekleri tartışma, uzun dönem iletişim ve destek. Üç temel terim karıştırılmamalıdır. Konsültant, genetik danışma veren kişidir. Proband ya da indeks vaka, etkilenmiş aile bireyidir. Pedigri ise aile ağacıdır.
+Genetik danışma, tanı konduktan sonra aileyle kurulan yapılandırılmış bir süreçtir ve dört bileşeni vardır: tanı, risk tayini, seçenekleri tartışma, uzun dönem iletişim ve destek.
+Üç temel terim karıştırılmamalıdır.
+Konsültant, genetik danışma veren kişidir.
+Proband ya da indeks vaka, etkilenmiş aile bireyidir.
+Pedigri ise aile ağacıdır.
 
-Genetik danışma, kalıtsal bir hastalık taşıyan ya da taşıma riski bulunan kişilere ve bu kişilerin akrabalarına; hastalığın seyri ve tedavi yöntemleri, tekrarlama riskleri ve çözüm yolları ile birlikte hangi dönemlerde hangi testlerin yapılması gerektiği ve bunların sonuçlarıyla ilgili bilgi verilmesidir. Danışmanın görevi, tartışılan hastalıkla ilgili bilgileri aileye doğru ve tam olarak aktarmak ve çözüm yolları sunmaktır. Burası önemli: bu nedenle genetik danışma hiçbir zaman yönlendirici olmamalıdır; danışman seçenekleri eksiksiz anlatır ama aile adına karar vermez. Bu süreç öykü, aile ağacı oluşturulması, muayene, tanı, danışmanlık ve izlemi kapsar.
+Genetik danışma, kalıtsal bir hastalık taşıyan ya da taşıma riski bulunan kişilere ve bu kişilerin akrabalarına; hastalığın seyri ve tedavi yöntemleri, tekrarlama riskleri ve çözüm yolları ile birlikte hangi dönemlerde hangi testlerin yapılması gerektiği ve bunların sonuçlarıyla ilgili bilgi verilmesidir.
+Danışmanın görevi, tartışılan hastalıkla ilgili bilgileri aileye doğru ve tam olarak aktarmak ve çözüm yolları sunmaktır.
+Burası önemli: bu nedenle genetik danışma hiçbir zaman yönlendirici olmamalıdır; danışman seçenekleri eksiksiz anlatır ama aile adına karar vermez.
+Bu süreç öykü, aile ağacı oluşturulması, muayene, tanı, danışmanlık ve izlemi kapsar.
 
-Tüm araçlar kullanıldığında bile dismorfik çocukların bir bölümü tanısız kalır. Tanı konma olasılığı kromozom anomalilerinde yaklaşık %10, tek gen hastalıklarında yaklaşık %20 iki, teratojenlerde yaklaşık yüzde beştir. Olguların yüzde ellisine ise tanı konulamaz. Değerlendirmede amaç yalnızca bir isim koymak değildir; embriyogenezde patolojinin ne zaman ve hangi dokularda oluştuğu sorusunun cevabı aranır. Slayttaki penguen fotoğrafı tanıdaki zorluğu özetler: birbirine çok benzeyen bireyler arasında hangisinin dismorfik olduğunu anlamak zor olabilir.
+Tüm araçlar kullanıldığında bile dismorfik çocukların bir bölümü tanısız kalır.
+Tanı konma olasılığı kromozom anomalilerinde yaklaşık %10, tek gen hastalıklarında yaklaşık %22, teratojenlerde yaklaşık %5'tir.
+Olguların yüzde ellisine ise tanı konulamaz.
+Değerlendirmede amaç yalnızca bir isim koymak değildir; embriyogenezde patolojinin ne zaman ve hangi dokularda oluştuğu sorusunun cevabı aranır.
+Slayttaki penguen fotoğrafı tanıdaki zorluğu özetler: birbirine çok benzeyen bireyler arasında hangisinin dismorfik olduğunu anlamak zor olabilir.
 
 @@ Örnek sendromlar: Vilyams ve Prader Vili
 Vilyams sendromu otozomal dominant geçişlidir. Vakaların %90 ile doksan beşinden, elastin, yani e el en genini içeren yedi ku on bir nokta yirmi üç bölgesindeki delesyonlar sorumludur. Tipik bulguları mental retardasyon, kısa boy, elfin yüz denen tipik yüz görünümü, aort kapağının hemen üstünde aortun daralması olan supravalvüler aort stenozu ve infantil hiperkalsemidir. Zekâ bölümü genellikle elli ile altmış arasındadır. Burası önemli: supravalvüler aort stenozu, infantil hiperkalsemi ve elfin yüz birlikteliği Vilyams sendromunu düşündürür ve altta yedi ku on bir nokta yirmi üç delesyonu vardır.
 
-Prader Vili sendromu davranışsal fenotipiyle tanınan bir sendromdur. Çoğu hastada hiperfaji, yani aşırı yeme isteği, ayrıca obsesyonlar ve kompülsiyonlar gözlenir. Çoğu hastada ağlama ya da gülme nöbetleri de görülür ve sıklıkla davranış adaptasyonunda bozukluk eşlik eder. Hiperfaji bu sendromun klinik açıdan en önemli bulgusudur, çünkü kontrol edilmediğinde ağır obeziteye yol açar.
+Prader Vili sendromu davranışsal fenotipiyle tanınan bir sendromdur.
+Çoğu hastada hiperfaji, yani aşırı yeme isteği, ayrıca obsesyonlar ve kompülsiyonlar gözlenir.
+Çoğu hastada ağlama ya da gülme nöbetleri de görülür ve sıklıkla davranış adaptasyonunda bozukluk eşlik eder.
+Hiperfaji bu sendromun klinik açıdan en önemli bulgusudur, çünkü kontrol edilmediğinde ağır obeziteye yol açar.
 
 @@ Frajil iks sendromu
-Frajil iks sendromunun adı sitogenetik bir gözlemden gelir. Bin dokuz yüz yetmiş yedide mental geriliği olan erkeklerin bir bölümünde iks kromozomunun ucunda frajil, yani kırılgan bir bölge saptanmış ve bu bölge sitogenetik belirteç olarak kullanılmıştır. Frajil iks en sık görülen tek gen hastalığıdır ve en sık iks kromozomuna bağlı mental retardasyon nedenidir. Erkeklerde orta derece mental retardasyonun Down sendromundan sonra en sık nedenidir. Burası önemli: frajil iks en sık iks kromozomuna bağlı mental retardasyon nedenidir ve erkekteki orta derece mental retardasyonda Down sendromundan sonra 2. sıradadır. Sıklığı üç bin yedi yüz on yedide bir ile sekiz bin dokuz yüz on sekizde bir arasındadır; erkeklerde yaklaşık dört binde bir, kadınlarda yaklaşık altı binde birdir. Aile hikâyesi olan ve doğumsal anomalisi olmayan erkeklerdeki mental retardasyonun %3 ile altısını oluşturur.
+Frajil iks sendromunun adı sitogenetik bir gözlemden gelir. 1977'de mental geriliği olan erkeklerin bir bölümünde iks kromozomunun ucunda frajil, yani kırılgan bir bölge saptanmış ve bu bölge sitogenetik belirteç olarak kullanılmıştır. Frajil iks en sık görülen tek gen hastalığıdır ve en sık iks kromozomuna bağlı mental retardasyon nedenidir. Erkeklerde orta derece mental retardasyonun Down sendromundan sonra en sık nedenidir. Burası önemli: frajil iks en sık iks kromozomuna bağlı mental retardasyon nedenidir ve erkekteki orta derece mental retardasyonda Down sendromundan sonra 2. sıradadır. Sıklığı üç 1717'de bir ile sekiz 1918'de bir arasındadır; erkeklerde yaklaşık dört binde bir, kadınlarda yaklaşık altı binde birdir. Aile hikâyesi olan ve doğumsal anomalisi olmayan erkeklerdeki mental retardasyonun %3 ile altısını oluşturur.
 
-Frajil iks bir dinamik mutasyon hastalığıdır; yani mutasyonun büyüklüğü kuşaktan kuşağa değişir. Ef em er bir geninin beş prime ucundaki çevrilmeyen bölgede, ce ge ge üçlü tekrar dizisi bulunur. Normalde tekrar sayısı yaklaşık beş ile elli arasındadır. Tekrar sayısının ellinin üstüne çıkmasıyla, yani elli ile iki yüz arasında, kişide premutasyon oluşur. Sonraki kuşaklarda sayının iki yüzün üzerine çıkmasıyla tam mutasyon oluşur. Tam mutasyonlu bireylerde genin promoter bölgesi metillendiği için aktivitesi kaybolur ve ef em er bir proteini kısmen ya da tümüyle yapılamaz. Burası önemli: elliden fazla tekrar premutasyon, iki yüzden fazla tekrar tam mutasyondur. Hastalık proteinin yapısının bozulmasından değil, promoter metilasyonuyla genin susturulmasından kaynaklanır.
+Frajil iks bir dinamik mutasyon hastalığıdır; yani mutasyonun büyüklüğü kuşaktan kuşağa değişir.
+Ef em er bir geninin beş prime ucundaki çevrilmeyen bölgede, ce ge ge üçlü tekrar dizisi bulunur.
+Normalde tekrar sayısı yaklaşık beş ile elli arasındadır.
+Tekrar sayısının ellinin üstüne çıkmasıyla, yani elli ile iki yüz arasında, kişide premutasyon oluşur.
+Sonraki kuşaklarda sayının iki yüzün üzerine çıkmasıyla tam mutasyon oluşur.
+Tam mutasyonlu bireylerde genin promoter bölgesi metillendiği için aktivitesi kaybolur ve ef em er bir proteini kısmen ya da tümüyle yapılamaz.
+Burası önemli: elliden fazla tekrar premutasyon, iki yüzden fazla tekrar tam mutasyondur.
+Hastalık proteinin yapısının bozulmasından değil, promoter metilasyonuyla genin susturulmasından kaynaklanır.
 
-Fiziksel özellikler uzun ve ince yüz, büyük ve belirgin kulaklar ve puberte sonrasında belirginleşen makroorşidizm, yani testislerin büyük olmasıdır. Olguların yüzde sekseninde bu bulgulardan en az biri vardır. Diğer özellikler çift eklemli parmaklar ve hiperekstansibilite, düz tabanlık, periorbital dolgunluk, pektus ekskavatum denen çökük göğüs kafesi ve skolyozdur.
+Fiziksel özellikler uzun ve ince yüz, büyük ve belirgin kulaklar ve puberte sonrasında belirginleşen makroorşidizm, yani testislerin büyük olmasıdır.
+Olguların yüzde sekseninde bu bulgulardan en az biri vardır.
+Diğer özellikler çift eklemli parmaklar ve hiperekstansibilite, düz tabanlık, periorbital dolgunluk, pektus ekskavatum denen çökük göğüs kafesi ve skolyozdur.
 
-Davranışsal özellikler çoğu zaman fiziksel bulgulardan önce dikkat çeker. Bunlar dikkat eksikliği ve hiperaktivite; öfke nöbetleri ve duygu boşalımlarıyla giden duygulanım değişikliği; konvülziyonlar; ses, ışık ve koku gibi dış uyaranları algılama ve yorumlama sorunları; ve otistik bulgulardır. Otistik bulgular el sallama, el ısırma, göz kontağı kuramama ve dokunmaya reaksiyondur. Otizm %60 oranında görülür.
+Davranışsal özellikler çoğu zaman fiziksel bulgulardan önce dikkat çeker.
+Bunlar dikkat eksikliği ve hiperaktivite; öfke nöbetleri ve duygu boşalımlarıyla giden duygulanım değişikliği; konvülziyonlar; ses, ışık ve koku gibi dış uyaranları algılama ve yorumlama sorunları; ve otistik bulgulardır.
+Otistik bulgular el sallama, el ısırma, göz kontağı kuramama ve dokunmaya reaksiyondur.
+Otizm %60 oranında görülür.
 
 @@ Sendromları tanımadaki güçlükler
 Sendrom tanısı neden zordur? Ders yedi neden sayar. 1.'si hastanın bulgularını tam olarak tanımlayamamaktır; eksik muayene, eksik laboratuvar ve görüntüleme sonuçları ya da doğru terminolojinin kullanılamaması buna yol açar. 2.'si çok nadir sendromların tüm bulgularının yeterince bilinmemesidir. 3.'sü değişken ekspressivitedir; aynı genetik değişiklik farklı bireylerde farklı ağırlıkta bulgu verir. 4.'sü azalmış penetranstır; genetik değişikliği taşıyan bireylerin bir kısmında klinik bulgu ortaya çıkmaz. 5.'si pleiotropidir; bir gen birden fazla fenotip oluşturur, yani tek bir gen kusuru birbirinden ilgisiz görünen sistemleri etkiler. 6.'sı belirli bir cinsiyetin etkilendiği, örneğin hipospadias ya da klitoris hipertrofisi gibi, ya da belirli cinsiyetle sınırlı, örneğin ailesel prostat kanseri gibi durumlardır. 7.'si etiyolojik heterojenitedir; farklı nedenler benzer klinik tablo oluşturabilir.
 
-Burası önemli: pleiotropi, bir genin birden fazla fenotip oluşturmasıdır. Sınavda pleiotropi etiyolojik heterojeniteyle karıştırılır; heterojenite ise tersidir, farklı nedenlerin aynı tabloyu yapmasıdır.
+Burası önemli: pleiotropi, bir genin birden fazla fenotip oluşturmasıdır.
+Sınavda pleiotropi etiyolojik heterojeniteyle karıştırılır; heterojenite ise tersidir, farklı nedenlerin aynı tabloyu yapmasıdır.
 
 @@ Yaklaşım algoritmaları ve tanı sonrası önlemler
 Ders kitabından alınan algoritma, konjenital anomalili hastada özgeçmiş ve muayeneyle başlar ve ilk olarak anomalinin izole mi, çoklu mu olduğunu sorar. İzole anomali minörse ve normal varyasyonsa aileye rahatlatıcı bilgi verilir; majörse tedavi ve danışma planlanır. Çoklu anomalide yalnız minör anomaliler varsa ve majör anomali eşlik etmiyorsa yine rahatlatıcı bilgi verilir. Minör ve majör anomaliler birlikte ise tutulum biçimine bakılır: tek doku tipi tutulumu displaziyi, birden fazla doku tutulumu ise malformasyon, duraklama ya da deformasyonu düşündürür. Son basamakta dokunun yıkımı duraklamaya, kemik ve eklemlerin mekanik etkilenmesi deformasyon dizisine ya da sendroma götürür. Çoklu malformasyonda sekonder anomalilere neden olan bir primer anomali varsa tablo malformasyon dizisi, yani sekanstır; yoksa sendrom, assosiasyon ya da komplekstir.
 
-Çoklu malformasyonu olan hastada dört soruluk bir karar akışı da izlenir. 1. soru: sekonder anomalilere neden olan primer malformasyon var mı? Varsa tablo dizidir, yani sekanstır ve tekrarlama riski primer malformasyona göre verilir. Yoksa 2. soru: bilinen bir dismorfik sendrom var mı? Varsa tanı mümkünse karyotip ve moleküler testlerle laboratuvarda desteklenir ve danışma verilir. Yoksa 3. soru: tanımlanmış bir assosiasyon var mı? Varsa tekrarlama için düşük risk danışması verilir. Hiçbiri değilse dismorfoloji veri tabanı taranır; tanı konursa ilgili yol izlenir, konamazsa malformasyonların tedavisi için hasta yönlendirilir ve izlenir.
+Çoklu malformasyonu olan hastada dört soruluk bir karar akışı da izlenir.
+1. soru: sekonder anomalilere neden olan primer malformasyon var mı?
+Varsa tablo dizidir, yani sekanstır ve tekrarlama riski primer malformasyona göre verilir.
+Yoksa 2. soru: bilinen bir dismorfik sendrom var mı?
+Varsa tanı mümkünse karyotip ve moleküler testlerle laboratuvarda desteklenir ve danışma verilir.
+Yoksa 3. soru: tanımlanmış bir assosiasyon var mı?
+Varsa tekrarlama için düşük risk danışması verilir.
+Hiçbiri değilse dismorfoloji veri tabanı taranır; tanı konursa ilgili yol izlenir, konamazsa malformasyonların tedavisi için hasta yönlendirilir ve izlenir.
 
-Muayene sırasında karşılaşılan anomalinin izole mi yoksa sendromik mi olduğunun ayrımını yapmak çok önemlidir. İzole anomalide tüm sistem muayenesi yapılır; bebeğin açık bıngıldağından yapılan transfontanel ultrasonografi, batın ve pelvik ultrasonografi ve akciğer grafisi ile iç organlar taranır. İzole diyebilmek için mutlaka diğer organ ve sistemlerde anomali olmadığından emin olmak gerekir. Sendromda minör ve majör anomalilerin listesi çıkarılır ve hasta majör anomaliye göre prenatal başlangıçlı kısa boy, aşırı büyüme, erken yaşlanma, ektodermal bulgular ya da iskelet bulguları gibi bir gruba yerleştirilir. Kromozom analizi, diğer laboratuvar testleri ve röntgen gibi gerekli analizler yapılır; kalıtım modeli, moleküler tanı ve prenatal tanı olasılıkları sorgulanır. Tanısı bilinmeyen olguda ise tüm klinik bilgiler, fotoğraflar, tüm tetkik sonuçları ve hastaya ve ailesine ait DNA örnekleri saklanır. Tanısını koyamadığımız olgularda daha sonra bulunabilecek tanı ve yöntemler için izlem ve gerekli belgelerin arşivlenmesi yapılmalıdır.
+Muayene sırasında karşılaşılan anomalinin izole mi yoksa sendromik mi olduğunun ayrımını yapmak çok önemlidir.
+İzole anomalide tüm sistem muayenesi yapılır; bebeğin açık bıngıldağından yapılan transfontanel ultrasonografi, batın ve pelvik ultrasonografi ve akciğer grafisi ile iç organlar taranır.
+İzole diyebilmek için mutlaka diğer organ ve sistemlerde anomali olmadığından emin olmak gerekir.
+Sendromda minör ve majör anomalilerin listesi çıkarılır ve hasta majör anomaliye göre prenatal başlangıçlı kısa boy, aşırı büyüme, erken yaşlanma, ektodermal bulgular ya da iskelet bulguları gibi bir gruba yerleştirilir.
+Kromozom analizi, diğer laboratuvar testleri ve röntgen gibi gerekli analizler yapılır; kalıtım modeli, moleküler tanı ve prenatal tanı olasılıkları sorgulanır.
+Tanısı bilinmeyen olguda ise tüm klinik bilgiler, fotoğraflar, tüm tetkik sonuçları ve hastaya ve ailesine ait DNA örnekleri saklanır.
+Tanısını koyamadığımız olgularda daha sonra bulunabilecek tanı ve yöntemler için izlem ve gerekli belgelerin arşivlenmesi yapılmalıdır.
 
-Tanı konduğunda süreç bitmez; üç başlıkta önlem alınır. 1.'si tedavidir: semptomatik tedavi ve varsa altta yatan nedene yönelik tedavi. 2.'si danışma vermektir: tanı ile ilgili, hastalığın prognozu ile ilgili, nasıl bir bakım ve izlem yapılması gerektiği ile ilgili, tekrarlama riski ve fertilite ile ilgili danışma. 3.'sü izlemdir: hastanın düzenli kontrollere çağrılarak izlenmesi, olası komplikasyonlar açısından takip ve risk altındaki aile üyelerinin takibi.
+Tanı konduğunda süreç bitmez; üç başlıkta önlem alınır.
+1.'si tedavidir: semptomatik tedavi ve varsa altta yatan nedene yönelik tedavi.
+2.'si danışma vermektir: tanı ile ilgili, hastalığın prognozu ile ilgili, nasıl bir bakım ve izlem yapılması gerektiği ile ilgili, tekrarlama riski ve fertilite ile ilgili danışma.
+3.'sü izlemdir: hastanın düzenli kontrollere çağrılarak izlenmesi, olası komplikasyonlar açısından takip ve risk altındaki aile üyelerinin takibi.
 
 Özetle, bu dersin özü şudur: bulguyu doğru terimle tanımlayın, onu büyüklük, oluşum şekli ve birliktelik eksenlerinde sınıflayın, doğru testi doğru sırayla isteyin ve aileye yönlendirmeden, doğru ve eksiksiz danışma verin.

@@ -3,195 +3,397 @@
 @@ Normal immün yanıt ve doğal immün sistem
 İmmün sistemi baskılayan ilaçlar, organ ya da doku nakillerinden sonra gelişebilecek rejeksiyonun, yani reddin önlenmesinde ve bağışıklık sistemindeki bozukluklardan kaynaklanan bazı hastalıkların tedavisinde önemli bir yere sahiptir. Bağışıklık yanıtını artıran ya da sistemin farklı bileşenleri arasındaki dengeyi değiştiren ilaçlar ise kanser, eyds, otoimmün ve inflamatuvar hastalıkların tedavisinde kullanılabilir. İmmün sistemin temel görevi, vücudu hastalık yapıcı patojenlerden korumak ve oluşan hastalıkları ortadan kaldırmaktır. Normal bir immün sistem, vücudun kendi hücre ve dokularını yabancı maddelerden ayırt edebilir. Daha önce tanıdığı ve zarar vermeyen antijenlere tolerans gösterirken, vücuda giren zararlı patojenlere karşı güçlü bir bağışıklık yanıtı oluşturur.
 
-Doğal immün sistem, bakteri, virüs, mantar ve parazit gibi istilacı patojenlere karşı savunmanın ilk basamağıdır ve üç temel bileşenden oluşur. 1.'si mekanik bileşenlerdir; patojenlerin girişini engelleyen fiziksel bariyerler, yani deri, özellikle epidermis, ve mukus. 2.'si biyokimyasal komponentlerdir; antimikrobiyal peptit ve proteinler, kompleman sistemi, enzimler, interferonlar, asidik pe ha ve serbest radikaller patojenlerin etkisiz hale getirilmesine yardım eder. 3.'sü hücresel bileşenlerdir; patojenleri tanıyan, yok eden ya da bağışıklık yanıtını başlatan nötrofiller, monositler, makrofajlar, doğal öldürücü yani en ka hücreleri ve doğal öldürücü te hücreleri, yani en ka te hücreleri.
+Doğal immün sistem, bakteri, virüs, mantar ve parazit gibi istilacı patojenlere karşı savunmanın ilk basamağıdır ve üç temel bileşenden oluşur.
+1.'si mekanik bileşenlerdir; patojenlerin girişini engelleyen fiziksel bariyerler, yani deri, özellikle epidermis, ve mukus.
+2.'si biyokimyasal komponentlerdir; antimikrobiyal peptit ve proteinler, kompleman sistemi, enzimler, interferonlar, asidik pe ha ve serbest radikaller patojenlerin etkisiz hale getirilmesine yardım eder.
+3.'sü hücresel bileşenlerdir; patojenleri tanıyan, yok eden ya da bağışıklık yanıtını başlatan nötrofiller, monositler, makrofajlar, doğal öldürücü yani en ka hücreleri ve doğal öldürücü te hücreleri, yani en ka te hücreleri.
 
-Doğal immünite, edinsel immüniteden farklı olarak enfeksiyon oluşmadan önce vardır. Tekrarlayan enfeksiyonlarla güçlenmez ve genel olarak belirli bir antijene özgü değildir. Deri ve mukozalar ilk savunma bariyeridir; bu bariyerler bozulduğunda inflamasyon adı verilen hızlı bir doğal immün yanıt gelişir. Patojenlerin ortadan kaldırılmasında lizozim gibi biyokimyasal maddeler ve kompleman sistemi önemli rol oynar.
+Doğal immünite, edinsel immüniteden farklı olarak enfeksiyon oluşmadan önce vardır.
+Tekrarlayan enfeksiyonlarla güçlenmez ve genel olarak belirli bir antijene özgü değildir.
+Deri ve mukozalar ilk savunma bariyeridir; bu bariyerler bozulduğunda inflamasyon adı verilen hızlı bir doğal immün yanıt gelişir.
+Patojenlerin ortadan kaldırılmasında lizozim gibi biyokimyasal maddeler ve kompleman sistemi önemli rol oynar.
 
 @@ Kompleman sistemi ve hücre göçü
 Burası önemli, kompleman ürünlerinin görevlerini birbirine karıştırmayın. Ce üç be bir opsonindir; patojenin yüzeyini kaplar ve fagositler tarafından tanınıp yok edilmesini kolaylaştırır. Ce üç a ve ce beş a ise kemotaktik ürünlerdir; bağışıklık hücrelerini enfeksiyon bölgesine çeker, makrofaj ve nötrofillerin fagositozunu artırır.
 
-Enfeksiyon sırasında gelişen inflamatuvar yanıt, nötrofil ve monositlerin kandan enfeksiyon bölgesindeki dokulara geçişini sağlar. Bu göçü, endotel ve bağışıklık hücrelerinin salgıladığı kemokinler yönlendirir; özellikle makrofaj kemotaktik protein ve makrofaj inflamatuvar protein bir rol oynar. Hücrelerin damardan dokuya geçişi, hücre yüzeyindeki reseptörlerle aktive endotel hücrelerindeki ligandların etkileşimi sayesinde olur. Doğal yanıt başarılı olursa patojenler fagosite edilir, parçalanır ve ortadan kaldırılır; böylece enfeksiyon önlenir ya da hastalığın süresi ve şiddeti azalır.
+Enfeksiyon sırasında gelişen inflamatuvar yanıt, nötrofil ve monositlerin kandan enfeksiyon bölgesindeki dokulara geçişini sağlar.
+Bu göçü, endotel ve bağışıklık hücrelerinin salgıladığı kemokinler yönlendirir; özellikle makrofaj kemotaktik protein ve makrofaj inflamatuvar protein bir rol oynar.
+Hücrelerin damardan dokuya geçişi, hücre yüzeyindeki reseptörlerle aktive endotel hücrelerindeki ligandların etkileşimi sayesinde olur.
+Doğal yanıt başarılı olursa patojenler fagosite edilir, parçalanır ve ortadan kaldırılır; böylece enfeksiyon önlenir ya da hastalığın süresi ve şiddeti azalır.
 
-Şekilde komplemanın doğal immünitedeki rolü özetleniyor. Kompleman, aktivasyon sırasında fragmanlara ayrılan ce birden ce dokuza kadar dokuz proteinden oluşur. 1. panelde ce üç a ve ce beş a fagositleri inflamasyon bölgesine çeker, burada patojenler sindirilip parçalanır. 2. panelde ce beş be, ce altı, ce yedi, ce sekiz ve ce dokuz birleşerek bakteriyi lize eden membran atak kompleksini oluşturur. 3. panelde ce üç be bakteriyi kaplayan bir opsonin olarak fagositlerin onu içeri almasını ve sindirmesini artırır.
+Şekilde komplemanın doğal immünitedeki rolü özetleniyor.
+Kompleman, aktivasyon sırasında fragmanlara ayrılan ce birden ce dokuza kadar dokuz proteinden oluşur.
+1. panelde ce üç a ve ce beş a fagositleri inflamasyon bölgesine çeker, burada patojenler sindirilip parçalanır.
+2. panelde ce beş be, ce altı, ce yedi, ce sekiz ve ce dokuz birleşerek bakteriyi lize eden membran atak kompleksini oluşturur.
+3. panelde ce üç be bakteriyi kaplayan bir opsonin olarak fagositlerin onu içeri almasını ve sindirmesini artırır.
 
 @@ En ka hücreleri ve doğal yanıtın diğer hücreleri
 Monosit ve nötrofillere ek olarak en ka hücreleri, en ka te hücreleri ve gama delta te hücreleri de doğal immün yanıta katkıda bulunur. Bu hücreler interferon gama ve interlökin on yedi salgılayarak dokudaki dendritik hücre ve makrofajları aktive eder, nötrofilleri enfeksiyon bölgesine yönlendirir. En ka hücreleri, önceden aktive edilmeye gerek olmadan virüsle enfekte hücreleri ve tümör hücrelerini tanıyıp öldürebilir. Etkinlikleri, yüzeylerindeki öldürücü hücre immünoglobulin benzeri reseptörlerle düzenlenir; bu reseptörler hedef hücredeki majör histokompatibilite kompleksi, yani büyük doku uygunluk kompleksi sınıf bir moleküllerini tanır.
 
-Mantık şöyle: en ka hücresi normal hücrede sınıf bir molekülünü gördüğünde inhibitör bir sinyal oluşur ve sağlıklı hücre öldürülmez. Bazı tümör hücreleri ve virüsle enfekte hücreler ise sınıf bir düzeyini azaltır. İnhibitör reseptör yeterince uyarılamayınca en ka hücresi aktive olur ve hedefi yok eder. Burası önemli, öldürme perforin ve granzim içeren sitotoksik granüllerle olur ve bu maddeler hedef hücrede programlanmış hücre ölümünü, yani apoptozu başlatır.
+Mantık şöyle: en ka hücresi normal hücrede sınıf bir molekülünü gördüğünde inhibitör bir sinyal oluşur ve sağlıklı hücre öldürülmez.
+Bazı tümör hücreleri ve virüsle enfekte hücreler ise sınıf bir düzeyini azaltır.
+İnhibitör reseptör yeterince uyarılamayınca en ka hücresi aktive olur ve hedefi yok eder.
+Burası önemli, öldürme perforin ve granzim içeren sitotoksik granüllerle olur ve bu maddeler hedef hücrede programlanmış hücre ölümünü, yani apoptozu başlatır.
 
 @@ Edinsel immün sistem
 Edinsel immün sistem, doğal immün sistemin enfeksiyonu kontrol etmekte yetersiz kaldığı durumlarda devreye girer ve patojenleri daha etkili, hedefe yönelik biçimde tanır. Üç temel özelliği vardır. Antijen özgüllüğü, yani her antijene karşı özgül bir yanıt. Kendini ve yabancıyı ayırt etme, yani öz antijenleri öz olmayanlardan ayırma. Ve immünolojik bellek; daha önce karşılaşılan antijen tekrar geldiğinde daha hızlı ve güçlü yanıt. Edinsel yanıt iki kolla yürür: humoral immünite antikor üreten be lenfositleriyle, hücresel immünite ise te lenfositlerinin aktivasyonuyla gerçekleşir.
 
-Spesifik edinsel immünitenin başlatılmasına dendritik hücreler, makrofajlar ve be lenfositlerinden oluşan profesyonel antijen sunan hücreler katılır. Bu hücreler partiküler antijenleri fagosite eder ya da protein antijenlerini endositozla alır ve enzimatik olarak peptitlere yıkar. Peptitler sınıf bir ya da sınıf iki majör histokompatibilite proteinlerine yüklenerek te hücre reseptörüne sunulur. Burası önemli, te hücresinin aktivasyonu için iki sinyal gerekir. 1. sinyal, te hücre reseptörünün peptit yüklü majör histokompatibilite molekülüyle birleşmesidir. 2. sinyal, antijen sunan hücredeki ce de kırk, CD80 ve CD80 altı gibi eş uyaran moleküllerin uygun ligandlarına bağlanmasıdır.
+Spesifik edinsel immünitenin başlatılmasına dendritik hücreler, makrofajlar ve be lenfositlerinden oluşan profesyonel antijen sunan hücreler katılır.
+Bu hücreler partiküler antijenleri fagosite eder ya da protein antijenlerini endositozla alır ve enzimatik olarak peptitlere yıkar.
+Peptitler sınıf bir ya da sınıf iki majör histokompatibilite proteinlerine yüklenerek te hücre reseptörüne sunulur.
+Burası önemli, te hücresinin aktivasyonu için iki sinyal gerekir.
+1. sinyal, te hücre reseptörünün peptit yüklü majör histokompatibilite molekülüyle birleşmesidir.
+2. sinyal, antijen sunan hücredeki ce de kırk, CD80 ve CD80 altı gibi eş uyaran moleküllerin uygun ligandlarına bağlanmasıdır.
 
-Te lenfositleri timusta gelişir ve burada kendine ait antijenleri yabancılardan ayırmayı öğrenir. Öz antijenlere yüksek afiniteyle bağlanan te hücreleri apoptozla elenir. Yabancı antijenleri öz majör histokompatibilite molekülleri aracılığıyla tanıyabilenler gelişimine devam eder, periferik dokulara geçer ve sunulan antijenle karşılaşınca aktive olur. Aktivasyondan sonra salgıladıkları sitokinlere göre farklı yardımcı te hücre alt grupları tanımlanır; temel olanlar te ha bir ve te ha iki hücreleridir. Bu ayrım insanlarda farelerdeki kadar kesin değildir. Te ha bir hücreleri interferon gama, interlökin iki ve interlökin on iki ile ilişkilidir; makrofajları, sitotoksik te lenfositlerini ve en ka hücrelerini aktive ederek hücresel yanıtı destekler.
+Te lenfositleri timusta gelişir ve burada kendine ait antijenleri yabancılardan ayırmayı öğrenir.
+Öz antijenlere yüksek afiniteyle bağlanan te hücreleri apoptozla elenir.
+Yabancı antijenleri öz majör histokompatibilite molekülleri aracılığıyla tanıyabilenler gelişimine devam eder, periferik dokulara geçer ve sunulan antijenle karşılaşınca aktive olur.
+Aktivasyondan sonra salgıladıkları sitokinlere göre farklı yardımcı te hücre alt grupları tanımlanır; temel olanlar Th1 ve Th2 hücreleridir.
+Bu ayrım insanlarda farelerdeki kadar kesin değildir.
+Te ha bir hücreleri interferon gama, interlökin iki ve interlökin on iki ile ilişkilidir; makrofajları, sitotoksik te lenfositlerini ve en ka hücrelerini aktive ederek hücresel yanıtı destekler.
 
-Te ha iki hücreleri başlıca interlökin dört, beş, altı, on ve on üçü üretir; bu sitokinler be lenfositlerinin çoğalmasını ve antikor üreten plazma hücrelerine farklılaşmasını destekler. Karşılaştıralım: hücre dışı bakteriler genellikle te ha iki ağırlıklı yanıtı uyarır ve nötralizan antikor üretimi artar. Mikobakteri gibi hücre içinde yaşayan mikroorganizmalar ise makrofajları aktive eden te ha bir tipi yanıtı uyarır. Ce de sekiz te lenfositleri, yani sitotoksik te hücreleri, virüsle enfekte hücreler ve tümör hücrelerinin sunduğu hücre içinde işlenmiş endojen antijenleri tanır ve bu hücreleri doğrudan öldürür.
+Te ha iki hücreleri başlıca interlökin dört, beş, altı, on ve on üçü üretir; bu sitokinler be lenfositlerinin çoğalmasını ve antikor üreten plazma hücrelerine farklılaşmasını destekler.
+Karşılaştıralım: hücre dışı bakteriler genellikle Th2 ağırlıklı yanıtı uyarır ve nötralizan antikor üretimi artar.
+Mikobakteri gibi hücre içinde yaşayan mikroorganizmalar ise makrofajları aktive eden Th1 tipi yanıtı uyarır.
+Ce de sekiz te lenfositleri, yani sitotoksik te hücreleri, virüsle enfekte hücreler ve tümör hücrelerinin sunduğu hücre içinde işlenmiş endojen antijenleri tanır ve bu hücreleri doğrudan öldürür.
 
-Bir be hücresi antijenle karşılaşınca onu tanır, işler ve parçalarını CD4 yardımcı te hücrelerine sunar. Ce de dört hücreleri interlökin dört ve beş gibi sitokinlerle be hücresinin çoğalmasını ve farklılaşmasını destekler; be hücresi bellek hücresine ve plazma hücresine dönüşür. İlk antikor yanıtında immünoglobulin M üretilir. Aynı antijenle tekrar karşılaşıldığında daha güçlü ikincil yanıt oluşur ve sınıf değişimiyle immünoglobulin G, A ya da E üretimi artar. Antikorlar fagositozu kolaylaştırır, hücresel sitotoksisiteyi destekler ve komplemanı aktive eder; böylece patojenler etkisizleşir, inflamatuvar yanıt oluşur ve özellikle bakteriler lizisle yok edilir.
+Bir be hücresi antijenle karşılaşınca onu tanır, işler ve parçalarını CD4 yardımcı te hücrelerine sunar.
+Ce de dört hücreleri interlökin dört ve beş gibi sitokinlerle be hücresinin çoğalmasını ve farklılaşmasını destekler; be hücresi bellek hücresine ve plazma hücresine dönüşür.
+İlk antikor yanıtında immünoglobulin M üretilir.
+Aynı antijenle tekrar karşılaşıldığında daha güçlü ikincil yanıt oluşur ve sınıf değişimiyle immünoglobulin G, A ya da E üretimi artar.
+Antikorlar fagositozu kolaylaştırır, hücresel sitotoksisiteyi destekler ve komplemanı aktive eder; böylece patojenler etkisizleşir, inflamatuvar yanıt oluşur ve özellikle bakteriler lizisle yok edilir.
 
 @@ Anormal immün yanıtlar ve Tip 1 aşırı duyarlılık
 Normal çalışan bir immün sistem toksinleri nötralize eder, virüsleri etkisiz hale getirir, anormal ya da tümörleşmiş hücreleri yok eder ve patojenleri ortadan kaldırır. Ancak yanıtın aşırı ya da yanlış çalışması üç tür soruna yol açar. Aşırı duyarlılık, aşırı yanıt sonucu doku hasarıdır. Otoimmünite, sistemin vücudun kendi antijenlerine tepki vermesidir. Bağışıklık yetmezliği ise uygun hedeflere yeterli yanıt oluşturulamaması ve temel savunmanın zayıflamasıdır.
 
-Aşırı duyarlılık antikor aracılı ve hücre aracılı olarak sınıflandırılır. Burası önemli, Tip 1, iki ve üç antikor aracılıdır; Tip 4 ise hücre aracılıdır. Aşırı duyarlılık iki aşamada gelişir. Sensitizasyon fazı antijenle ilk karşılaşmada oluşur; efektör faz immünolojik bellek içerir ve sonraki maruziyetlerde doku patolojisiyle sonuçlanır. Tip 1, yani ani aşırı duyarlılık immünoglobulin E aracılıdır ve antijenle tekrar karşılaşan hastada sıklıkla dakikalar içinde belirti verir.
+Aşırı duyarlılık antikor aracılı ve hücre aracılı olarak sınıflandırılır.
+Burası önemli, Tip 1, iki ve üç antikor aracılıdır; Tip 4 ise hücre aracılıdır.
+Aşırı duyarlılık iki aşamada gelişir.
+Sensitizasyon fazı antijenle ilk karşılaşmada oluşur; efektör faz immünolojik bellek içerir ve sonraki maruziyetlerde doku patolojisiyle sonuçlanır.
+Tip 1, yani ani aşırı duyarlılık immünoglobulin E aracılıdır ve antijenle tekrar karşılaşan hastada sıklıkla dakikalar içinde belirti verir.
 
-Tip 1 reaksiyon, kan bazofilleri ve doku mast hücrelerinin membranına bağlı immünoglobulin E'nin antijen tarafından çapraz bağlanmasıyla ortaya çıkar. Çapraz bağlanma degranülasyona ve histamin, lökotrienler ve eozinofil kemotaktik faktör gibi maddelerin salınmasına yol açar; sonuç anafilaksi, astım, saman nezlesi ya da ürtikerdir. Böcek sokması, bazı gıdaların yutulması ya da ilaç aşırı duyarlılığıyla gelişen sistemik anafilaksi acil müdahale gerektirir. Mekanizmayı sırayla düşünün: alerjene ilk maruziyet, yani duyarlılık aşaması, alerjene özgü be hücrelerinden farklılaşan plazma hücrelerinde immünoglobulin E üretimine yol açar.
+Tip 1 reaksiyon, kan bazofilleri ve doku mast hücrelerinin membranına bağlı immünoglobulin E'nin antijen tarafından çapraz bağlanmasıyla ortaya çıkar.
+Çapraz bağlanma degranülasyona ve histamin, lökotrienler ve eozinofil kemotaktik faktör gibi maddelerin salınmasına yol açar; sonuç anafilaksi, astım, saman nezlesi ya da ürtikerdir.
+Böcek sokması, bazı gıdaların yutulması ya da ilaç aşırı duyarlılığıyla gelişen sistemik anafilaksi acil müdahale gerektirir.
+Mekanizmayı sırayla düşünün: alerjene ilk maruziyet, yani duyarlılık aşaması, alerjene özgü be hücrelerinden farklılaşan plazma hücrelerinde immünoglobulin E üretimine yol açar.
 
-Salgılanan immünoglobulin E, bazofil ve mast hücrelerindeki kendine özgü reseptörlere bağlanır. Alerjene tekrar maruz kalınınca membrana bağlı immünoglobulin E çapraz bağlanır; granüller boşalır, salınan mediatörler vazodilatasyon, düz kas kasılması ve artmış vasküler geçirgenlik yapar. İşte Tip 1 aşırı duyarlılığın klinik belirtileri buradan gelir. Burası önemli, omalizumab immünoglobulin E'nin mast hücresi ve bazofillerdeki reseptörüne bağlanmasını önleyerek degranülasyonu engeller.
+Salgılanan immünoglobulin E, bazofil ve mast hücrelerindeki kendine özgü reseptörlere bağlanır.
+Alerjene tekrar maruz kalınınca membrana bağlı immünoglobulin E çapraz bağlanır; granüller boşalır, salınan mediatörler vazodilatasyon, düz kas kasılması ve artmış vasküler geçirgenlik yapar.
+İşte Tip 1 aşırı duyarlılığın klinik belirtileri buradan gelir.
+Burası önemli, omalizumab immünoglobulin E'nin mast hücresi ve bazofillerdeki reseptörüne bağlanmasını önleyerek degranülasyonu engeller.
 
 @@ Tip 2, üç ve dört aşırı duyarlılık
 Tip 2 aşırı duyarlılık, yabancı antijenle immünoglobulin M ya da G'nin bağlanması ve antijen antikor kompleksi oluşmasıyla gelişir. Uygun çapraz karşılaştırma yapılmamış kanla görülen transfüzyon reaksiyonu tipik örnektir; transfüze edilen kırmızı kan hücreleri membran atak kompleksiyle lize edilir. Yenidoğanın hemolitik hastalığında ar ha negatif annenin yaptığı anti ar ha immünoglobulin G antikorları plasentayı geçer, ar ha pozitif fetüsün kırmızı hücrelerine bağlanır ve onları hasara uğratır. Tip 2 reaksiyon, alerjik hastalara penisilin gibi bir ilaç verilmesiyle de gelişebilir.
 
-Tip 3 aşırı duyarlılıkta dolaşımda yüksek düzeydeki antijen antikor kompleksleri doku ve damar bazal membranlarında birikir. Birikim ve nötrofillerden salınan litik enzimler deri döküntüsü, glomerülonefrit ve artrit oluşturur. Belirtiler sıklıkla antijenle karşılaşmadan üç dört gün sonra ortaya çıkar. Tip 4 ise gecikmiş tip aşırı duyarlılıktır; ilk üç tipten farklı olarak hücre aracılıdır ve hassaslaştıran antijene maruziyetten iki üç gün içinde yanıt oluşturur.
+Tip 3 aşırı duyarlılıkta dolaşımda yüksek düzeydeki antijen antikor kompleksleri doku ve damar bazal membranlarında birikir.
+Birikim ve nötrofillerden salınan litik enzimler deri döküntüsü, glomerülonefrit ve artrit oluşturur.
+Belirtiler sıklıkla antijenle karşılaşmadan 7 gün sonra ortaya çıkar.
+Tip 4 ise gecikmiş tip aşırı duyarlılıktır; ilk üç tipten farklı olarak hücre aracılıdır ve hassaslaştıran antijene maruziyetten 5 gün içinde yanıt oluşturur.
 
-Gecikmiş tip aşırı duyarlılık, antijene özgü te ha bir hücreleri nedeniyle gelişir ve antijene özgü olmayan makrofajların birikimiyle karakterize lokal inflamatuvar yanıt doğurur. Genellikle zararlı sayılsa da, Mikobakteryum tüberkülozis ve Layşmanya suşları gibi hücre içi patojenlerin temizlenmesinde çok etkilidir. Klinik örneği tüberkülin aşırı duyarlılığıdır. Tüberkülozla karşılaşma deri testiyle belirlenir; pozitif yanıtta enjeksiyon bölgesine makrofaj ve te hücresi akışı nedeniyle endurasyon, yani yumuşak dokunun lokal sertleşmesi, ve kızarıklık görülür.
+Gecikmiş tip aşırı duyarlılık, antijene özgü Th1 hücreleri nedeniyle gelişir ve antijene özgü olmayan makrofajların birikimiyle karakterize lokal inflamatuvar yanıt doğurur.
+Genellikle zararlı sayılsa da, Mikobakteryum tüberkülozis ve Layşmanya suşları gibi hücre içi patojenlerin temizlenmesinde çok etkilidir.
+Klinik örneği tüberkülin aşırı duyarlılığıdır.
+Tüberkülozla karşılaşma deri testiyle belirlenir; pozitif yanıtta enjeksiyon bölgesine makrofaj ve te hücresi akışı nedeniyle endurasyon, yani yumuşak dokunun lokal sertleşmesi, ve kızarıklık görülür.
 
 @@ Otoimmünite ve immün yetmezlik
 Vücut kendine karşı toleransını kaybettiğinde ya da öz dokularını yabancı hücrelerden ayıramadığında otoimmün hastalıklar ortaya çıkar. Bu durum, kendi antijenlerini hedefleyen hücresel ya da humoral yanıtlara ortam hazırlayan öze reaktif te ve be lenfositlerinden kaynaklanır. Örnekler romatoid artrit, psoriazis, sistemik lupus eritematozus, multipl skleroz ve insüline bağlı, yani Tip 1 diyabetes mellitustur.
 
-Otoimmüniteyi açıklayan üç mekanizma öne sürülmüştür. 1.'si, daha önce immün sistemden ayrı tutulmuş antijenlerin öze reaktif lenfositlerle karşılaşması. 2.'si, işgalci patojenlerle moleküler benzeşme; patojenin antijenik determinantlarına yönelen yanıt, benzer ya da aynı epitopları taşıyan normal konak hücrelerini de vurur. 3.'sü, normalde sınıf iki majör histokompatibilite molekülü taşımayan hücrelerde, örneğin pankreas adacık beta hücrelerinde, bu molekülün uygunsuz ekspresyonu.
+Otoimmüniteyi açıklayan üç mekanizma öne sürülmüştür.
+1.'si, daha önce immün sistemden ayrı tutulmuş antijenlerin öze reaktif lenfositlerle karşılaşması.
+2.'si, işgalci patojenlerle moleküler benzeşme; patojenin antijenik determinantlarına yönelen yanıt, benzer ya da aynı epitopları taşıyan normal konak hücrelerini de vurur.
+3.'sü, normalde sınıf iki majör histokompatibilite molekülü taşımayan hücrelerde, örneğin pankreas adacık beta hücrelerinde, bu molekülün uygunsuz ekspresyonu.
 
-İmmün yetmezlik hastalıkları, immün sistemin yetersiz işlev görmesiyle oluşur; sonuçları enfeksiyonlara yatkınlık, ağır seyir ve hastalığın uzamasıdır. İmmün yetmezlik doğuştan, yani konjenital olabilir ya da bakteriyel veya viral enfeksiyonlar ve bazı ilaç tedavileri gibi dış etkenlerle sonradan gelişebilir. Bu kişiler, sağlıklı bireyde hastalık yapmayan ya da hafif hastalık yapan fırsatçı mikroorganizmalara karşı savunmasızdır. Başlıca konjenital örnekler iks kromozomuna bağlı agamaglobulinemi, DiCorc sendromu ve adenozin deaminaz eksikliğine bağlı ağır kombine immün yetmezliktir.
+İmmün yetmezlik hastalıkları, immün sistemin yetersiz işlev görmesiyle oluşur; sonuçları enfeksiyonlara yatkınlık, ağır seyir ve hastalığın uzamasıdır.
+İmmün yetmezlik doğuştan, yani konjenital olabilir ya da bakteriyel veya viral enfeksiyonlar ve bazı ilaç tedavileri gibi dış etkenlerle sonradan gelişebilir.
+Bu kişiler, sağlıklı bireyde hastalık yapmayan ya da hafif hastalık yapan fırsatçı mikroorganizmalara karşı savunmasızdır.
+Başlıca konjenital örnekler iks kromozomuna bağlı agamaglobulinemi, DiCorc sendromu ve adenozin deaminaz eksikliğine bağlı ağır kombine immün yetmezliktir.
 
-İks kromozomuna bağlı agamaglobulinemi özellikle erkeklerde görülür; be hücrelerinin olgunlaşıp plazma hücresine dönüşmesi bozulur. Antikor üretimi yetersizdir; hücresel yanıt büyük ölçüde korunsa da tekrarlayan bakteriyel enfeksiyonlara yatkınlık vardır. DiCorc sendromu genellikle yirmi 2. kromozomdaki genetik bir bozukluktan kaynaklanır. Timus gelişimi bozulduğu için te hücrelerinin gelişimi ve işlevi azalır. Be hücreleri ve antikor yanıtı kısmen korunsa da te hücre yardımı yetersiz olduğundan bağışıklık yanıtı tam etkili olamaz.
+İks kromozomuna bağlı agamaglobulinemi özellikle erkeklerde görülür; be hücrelerinin olgunlaşıp plazma hücresine dönüşmesi bozulur.
+Antikor üretimi yetersizdir; hücresel yanıt büyük ölçüde korunsa da tekrarlayan bakteriyel enfeksiyonlara yatkınlık vardır.
+DiCorc sendromu genellikle 22. kromozomdaki genetik bir bozukluktan kaynaklanır.
+Timus gelişimi bozulduğu için te hücrelerinin gelişimi ve işlevi azalır.
+Be hücreleri ve antikor yanıtı kısmen korunsa da te hücre yardımı yetersiz olduğundan bağışıklık yanıtı tam etkili olamaz.
 
-Adenozin deaminaz enzimi, lenfositler için özellikle toksik olan deoksi ATP birikimini önler. Enzim eksik olursa deoksi ATP birikir, te ve be lenfositleri ölür; hem hücresel hem humoral bağışıklık ciddi biçimde bozulur ve ağır kombine immün yetmezlik gelişir. Burası önemli, kısaca karşılaştıralım: DiCorc sendromunda timus gelişimi bozuktur ve te hücreleri azalır; adenozin deaminaz eksikliğinde toksik deoksi ATP birikir, te ve be hücreleri birlikte ölür ve ağır kombine immün yetmezlik ortaya çıkar.
+Adenozin deaminaz enzimi, lenfositler için özellikle toksik olan deoksi ATP birikimini önler.
+Enzim eksik olursa deoksi ATP birikir, te ve be lenfositleri ölür; hem hücresel hem humoral bağışıklık ciddi biçimde bozulur ve ağır kombine immün yetmezlik gelişir.
+Burası önemli, kısaca karşılaştıralım: DiCorc sendromunda timus gelişimi bozuktur ve te hücreleri azalır; adenozin deaminaz eksikliğinde toksik deoksi ATP birikir, te ve be hücreleri birlikte ölür ve ağır kombine immün yetmezlik ortaya çıkar.
 
 @@ İmmünosüpresif tedavi ve glukokortikoidler
 İmmünosüpresif ajanlar, abartılı ya da uygunsuz immün yanıtların zararlı etkilerini önlemede ya da en aza indirmede çok etkilidir. Ne yazık ki aynı ilaçlar hastalığa neden olma, enfeksiyon ve kötü huylu tümör riskini artırma potansiyeli de taşır. Glukokortikoidler, yani kortikosteroidler, lenfoid hücreler üzerinde baskılayıcı etkisi olan hormonal ilaçlardır. Lenf düğümleri ve dalaktaki lenfoid hücre sayısını azaltırlar; buna karşılık kemik iliğindeki miyeloid ve eritroid kök hücrelerde belirgin toksik etki oluşturmazlar.
 
-Glukokortikoidler bazı te hücre alt gruplarına sitotoksik etki gösterebilir; ancak baskılayıcı etki yalnız hücre öldürmeden değil, bağışıklık hücrelerinin işlevini değiştirmekten de kaynaklanır. Hücresel immüniteyi humoral immüniteden daha fazla baskılarlar. Yine de tedavinin başında yeni antikor oluşumu azalır; tedavi uzarsa önceden oluşmuş antikor yanıtları da zamanla düşebilir. Glukokortikoidler alerjik reaksiyonların azaltılmasında, astımda ve istenmeyen immün yanıtları önlemek için, örneğin kan ürünleri ya da kemoterapi öncesinde ön tedavi olarak kullanılır.
+Glukokortikoidler bazı te hücre alt gruplarına sitotoksik etki gösterebilir; ancak baskılayıcı etki yalnız hücre öldürmeden değil, bağışıklık hücrelerinin işlevini değiştirmekten de kaynaklanır.
+Hücresel immüniteyi humoral immüniteden daha fazla baskılarlar.
+Yine de tedavinin başında yeni antikor oluşumu azalır; tedavi uzarsa önceden oluşmuş antikor yanıtları da zamanla düşebilir.
+Glukokortikoidler alerjik reaksiyonların azaltılmasında, astımda ve istenmeyen immün yanıtları önlemek için, örneğin kan ürünleri ya da kemoterapi öncesinde ön tedavi olarak kullanılır.
 
-Tablo, immünosüpresiflerin klinik kullanımını hastalığa göre karşılaştırıyor. İdiyopatik trombositopenik purpurada prednizon, vinkristin, bazen siklofosfamid, merkaptopürin ya da azatioprin, sıklıkla yüksek doz gama globülin, plazma immünoadsorpsiyonu ya da plazma değişimi kullanılır. Otoimmün hemolitik anemide prednizon, siklofosfamid, klorambusil, merkaptopürin, azatioprin ve yüksek doz gama globülin; akut glomerülonefritte prednizon, merkaptopürin ve siklofosfamid; edinsel faktör on üç antikorlarında siklofosfamid artı faktör on üç verilir. Tüm bu gruplarda yanıt genellikle iyidir.
+Tablo, immünosüpresiflerin klinik kullanımını hastalığa göre karşılaştırıyor.
+İdiyopatik trombositopenik purpurada prednizon, vinkristin, bazen siklofosfamid, merkaptopürin ya da azatioprin, sıklıkla yüksek doz gama globülin, plazma immünoadsorpsiyonu ya da plazma değişimi kullanılır.
+Otoimmün hemolitik anemide prednizon, siklofosfamid, klorambusil, merkaptopürin, azatioprin ve yüksek doz gama globülin; akut glomerülonefritte prednizon, merkaptopürin ve siklofosfamid; edinsel faktör on üç antikorlarında siklofosfamid artı faktör on üç verilir.
+Tüm bu gruplarda yanıt genellikle iyidir.
 
-Lupus, romatoid artrit, skleroderma, dermatomiyozit, miks bağ doku hastalığı, multipl skleroz, Vegener granülomatozu, kronik aktif hepatit, lipoid nefroz ve inflamatuvar barsak hastalığını kapsayan otoreaktif doku bozukluklarında prednizon, siklofosfamid, metotreksat, interferon alfa ve beta, azatioprin, siklosporin, infliksimab, etanersept ve adalimumab kullanılır; yanıt sıkça iyi ama değişkendir. İzoimmün bir hastalık olan yenidoğanın hemolitik hastalığında ar ha sıfır de immünoglobulini kullanılır ve yanıt mükemmeldir. Böbrek ve kalp naklinde siklosporin, azatioprin, prednizon, antilenfosit globulin, o ka te üç, takrolimus, basiliksimab, daklizumab ve sirolimus; karaciğer naklinde siklosporin, prednizon, azatioprin, takrolimus ve sirolimus; kemik iliği naklinde siklosporin, siklofosfamid, prednizon, metotreksat ve antilenfosit globulin yer alır. Basiliksimab ve daklizumab yalnız böbrek nakli için onaylıdır. Hücre proliferasyonunu engellemek için koroner stentlerde sirolimus emdirilmiş stent, neovasküler maküler dejenerasyonda ranibizumab ve endikasyon dışı bevasizumab kullanılır.
+Lupus, romatoid artrit, skleroderma, dermatomiyozit, miks bağ doku hastalığı, multipl skleroz, Vegener granülomatozu, kronik aktif hepatit, lipoid nefroz ve inflamatuvar barsak hastalığını kapsayan otoreaktif doku bozukluklarında prednizon, siklofosfamid, metotreksat, interferon alfa ve beta, azatioprin, siklosporin, infliksimab, etanersept ve adalimumab kullanılır; yanıt sıkça iyi ama değişkendir.
+İzoimmün bir hastalık olan yenidoğanın hemolitik hastalığında ar ha sıfır de immünoglobulini kullanılır ve yanıt mükemmeldir.
+Böbrek ve kalp naklinde siklosporin, azatioprin, prednizon, antilenfosit globulin, o ka te üç, takrolimus, basiliksimab, daklizumab ve sirolimus; karaciğer naklinde siklosporin, prednizon, azatioprin, takrolimus ve sirolimus; kemik iliği naklinde siklosporin, siklofosfamid, prednizon, metotreksat ve antilenfosit globulin yer alır.
+Basiliksimab ve daklizumab yalnız böbrek nakli için onaylıdır.
+Hücre proliferasyonunu engellemek için koroner stentlerde sirolimus emdirilmiş stent, neovasküler maküler dejenerasyonda ranibizumab ve endikasyon dışı bevasizumab kullanılır.
 
 @@ Kalsinörin inhibitörleri: siklosporin
 Siklosporin, yani siklosporin A, güçlü bir immünosüpresiftir. Organ nakillerinde, hematopoietik kök hücre nakli sonrası gelişebilen graft versus host hastalığının tedavisinde ve bazı otoimmün hastalıklarda kullanılır. Özellikle te lenfositlerinin aktivasyonunu, te hücre reseptörü uyarıldıktan sonraki erken aşamada baskılar. Mekanizma zinciri şöyle: siklosporin, immünofilin adlı hücre içi protein sınıfından siklofiline bağlanır. Siklosporin siklofilin kompleksi, hücre içi bir fosfataz olan kalsinörini inhibe eder.
 
-Kalsinörin, aktive te hücrelerinin nükleer faktörü olan en ef a te adlı transkripsiyon faktörünün aktivasyonu için gereklidir; bu faktör özellikle interlökin iki olmak üzere sitokin üretiminde rol oynar. Burası önemli, siklosporin kalsinörini inhibe ederek en ef a te aktivasyonunu engeller; sonuçta interlökin iki, interlökin üç, interferon gama ve diğer bazı sitokinlerin üretimi azalır ve te hücre aktivasyonu baskılanır. İlaç oral ya da intravenöz verilebilir. Oral emilimi tam ve düzenli değildir; bu yüzden hastalar arasında biyoyararlanım büyük farklılık gösterebilir.
+Kalsinörin, aktive te hücrelerinin nükleer faktörü olan en ef a te adlı transkripsiyon faktörünün aktivasyonu için gereklidir; bu faktör özellikle interlökin iki olmak üzere sitokin üretiminde rol oynar.
+Burası önemli, siklosporin kalsinörini inhibe ederek en ef a te aktivasyonunu engeller; sonuçta interlökin iki, interlökin üç, interferon gama ve diğer bazı sitokinlerin üretimi azalır ve te hücre aktivasyonu baskılanır.
+İlaç oral ya da intravenöz verilebilir.
+Oral emilimi tam ve düzenli değildir; bu yüzden hastalar arasında biyoyararlanım büyük farklılık gösterebilir.
 
-Oftalmik siklosporin ciddi kuru göz sendromu ve oküler graft versus host hastalığında kullanılır; akciğer naklinde inhale siklosporin araştırılmaktadır. Toksisiteleri çeşitlidir: nefrotoksisite, hipertansiyon, hiperglisemi, karaciğer disfonksiyonu, hiperkalemi, değişken mental durum, nöbet ve hirsutizm. Siklosporin tek başına ya da başta glukokortikoidler olmak üzere diğer immünosüpresiflerle birlikte kullanılabilir.
+Oftalmik siklosporin ciddi kuru göz sendromu ve oküler graft versus host hastalığında kullanılır; akciğer naklinde inhale siklosporin araştırılmaktadır.
+Toksisiteleri çeşitlidir: nefrotoksisite, hipertansiyon, hiperglisemi, karaciğer disfonksiyonu, hiperkalemi, değişken mental durum, nöbet ve hirsutizm.
+Siklosporin tek başına ya da başta glukokortikoidler olmak üzere diğer immünosüpresiflerle birlikte kullanılabilir.
 
-Kadaverik böbrek, pankreas ve karaciğer naklinde tek başına başarıyla kullanılabilir; kalp naklinde de etkilidir. Metotreksatla kombinasyonu, allojenik kök hücre naklinden sonra graft versus host hastalığını önlemede standart profilaktik rejimdir. Üveit, romatoid artrit, psoriazis yani sedef hastalığı gibi pek çok otoimmün hastalıkta ve astımda faydalı olduğu gösterilmiştir.
+Kadaverik böbrek, pankreas ve karaciğer naklinde tek başına başarıyla kullanılabilir; kalp naklinde de etkilidir.
+Metotreksatla kombinasyonu, allojenik kök hücre naklinden sonra graft versus host hastalığını önlemede standart profilaktik rejimdir.
+Üveit, romatoid artrit, psoriazis yani sedef hastalığı gibi pek çok otoimmün hastalıkta ve astımda faydalı olduğu gösterilmiştir.
 
 @@ Takrolimus
 Takrolimus, ef ka beş yüz altı olarak da bilinir; Streptomyces tsukubaensis tarafından sentezlenen immünosüpresif bir makrolid antibiyotiktir. Siklosporinden farklı olarak ef ka bağlayıcı protein adlı immünofiline bağlanır; ama oluşan kompleks yine kalsinörini inhibe eder ve te hücresine özgü en ef a te aktivasyonunu engeller. Yani bağlandığı immünofilin farklı, son hedef aynıdır. Takrolimus immün yanıtı inhibe etmede siklosporinden on ila yüz kat daha etkindir ve organ ile kök hücre nakli gibi aynı endikasyonlarda kullanılır. Standart rejeksiyon tedavileri, hatta anti te hücre antikorları başarısız olduğunda bile etkili olabilir.
 
-Takrolimus organ reddinin önlenmesi ve kontrolünde önemli bir seçenektir. İntravenöz ya da oral verilebilir; intravenöz formun yarılanma ömrü yaklaşık dokuz ile on iki saattir. Toksisiteleri siklosporine benzer: nefrotoksisite, nörotoksisite, hiperglisemi, hipertansiyon, hiperkalemi ve gastrointestinal şikayetler. Takrolimus merhemi son dönemde atopik dermatit ve psoriazis tedavisinde kullanılmaktadır.
+Takrolimus organ reddinin önlenmesi ve kontrolünde önemli bir seçenektir.
+İntravenöz ya da oral verilebilir; intravenöz formun yarılanma ömrü yaklaşık dokuz ile on iki saattir.
+Toksisiteleri siklosporine benzer: nefrotoksisite, nörotoksisite, hiperglisemi, hipertansiyon, hiperkalemi ve gastrointestinal şikayetler.
+Takrolimus merhemi son dönemde atopik dermatit ve psoriazis tedavisinde kullanılmaktadır.
 
 @@ Proliferasyon sinyal inhibitörleri ve tofasitinib
 Proliferasyon sinyal inhibitörleri yeni nesil bir immünosüpresif gruptur: sirolimus, yani rapamisin, ve everolimus. Mekanizmaları kalsinörin inhibitörlerinden farklıdır. Sirolimus ve everolimus, ef ka beş yüz altı bağlayıcı protein on iki adlı immünofiline bağlanır. Burası önemli, oluşan kompleks kalsinörini değil, memeli rapamisin hedefi denen em tor'u inhibe eder. Em tor hücre büyümesi, proliferasyonu, anjiyogenez ve metabolizmanın düzenlenmesinde rol oynar; inhibisyonu özellikle te hücrelerinin çoğalmasını ve aktivasyonunu azaltır.
 
-Sirolimus Streptomyces hygroscopicus tarafından yapılan bir makrolid antibiyotiktir ve yapısal olarak takrolimusa benzer. Yalnız oral formu vardır; yarılanma ömrü yaklaşık altmış saat, everolimusunki yaklaşık kırk üç saattir. İkisi de hızla emilir; sitokrom pe dört yüz elli ve pe glikoproteinin substratı oldukları için eliminasyonları siklosporin ve takrolimusa benzer. Sirolimus tek başına ya da kortikosteroidler, siklosporin, takrolimus ve mikofenolat mofetille birlikte solid organ allograftlarının reddini önlemede kullanılır. Hematopoietik kök hücre naklinde profilakside ve steroide dirençli akut ve kronik graft versus host hastalığında da kullanılır.
+Sirolimus Streptomyces hygroscopicus tarafından yapılan bir makrolid antibiyotiktir ve yapısal olarak takrolimusa benzer.
+Yalnız oral formu vardır; yarılanma ömrü yaklaşık 60 saat, everolimusunki yaklaşık kırk üç saattir.
+İkisi de hızla emilir; sitokrom pe dört yüz elli ve pe glikoproteinin substratı oldukları için eliminasyonları siklosporin ve takrolimusa benzer.
+Sirolimus tek başına ya da kortikosteroidler, siklosporin, takrolimus ve mikofenolat mofetille birlikte solid organ allograftlarının reddini önlemede kullanılır.
+Hematopoietik kök hücre naklinde profilakside ve steroide dirençli akut ve kronik graft versus host hastalığında da kullanılır.
 
-Topikal sirolimus bazı dermatolojik bozukluklarda, siklosporinle birlikte de üveoretinitte kullanılır. Kalsinörin inhibitörlerinde başlıca endişe nefrotoksisitedir; sirolimusta renal toksisite genelde görülmediği için solid organ ve kök hücre naklinde sıklıkla ilk tercih edilir. Tofasitinib ise sitokin ya da büyüme faktörü sinyaline yanıt olarak hematopoezi ve bağışıklık hücre işlevini uyaran Janus kinazları inhibe eder. Dolaşımdaki en ka hücrelerini, serum immünoglobulinlerini ve ce reaktif proteini azaltır; orta ya da şiddetli romatoid artritli yetişkinlerde onaylıdır.
+Topikal sirolimus bazı dermatolojik bozukluklarda, siklosporinle birlikte de üveoretinitte kullanılır.
+Kalsinörin inhibitörlerinde başlıca endişe nefrotoksisitedir; sirolimusta renal toksisite genelde görülmediği için solid organ ve kök hücre naklinde sıklıkla ilk tercih edilir.
+Tofasitinib ise sitokin ya da büyüme faktörü sinyaline yanıt olarak hematopoezi ve bağışıklık hücre işlevini uyaran Janus kinazları inhibe eder.
+Dolaşımdaki en ka hücrelerini, serum immünoglobulinlerini ve ce reaktif proteini azaltır; orta ya da şiddetli romatoid artritli yetişkinlerde onaylıdır.
 
 @@ Mikofenolat mofetil ve talidomid
 Mikofenolat mofetil, Penisilyum glaukus küfünden elde edilen yarı sentetik bir mikofenolik asit türevidir. İn vitro olarak mitojen ve lenfosit yanıtlarını, muhtemelen pürinlerin de novo sentezini inhibe ederek ortadan kaldırır. Oral ve intravenöz formu vardır; oral form hızla mikofenolik aside metabolize olur. Solid organ alıcılarının dirençli rejeksiyonlarında ve siklosporin ile takrolimusu tolere edemeyen hastalarda prednizonla birlikte alternatif olarak kullanılır.
 
-Antiproliferatif özelliği, onu kalp nakli alıcılarında kronik allograft vaskülopatisini azaltmak ve önlemek için ilk seçenek yapmıştır. Hematopoietik kök hücre alıcılarında akut ve kronik graft versus host hastalığının profilaksi ve tedavisinde de kullanılır. Toksisiteleri bulantı, kusma, diyare ve karın ağrısı gibi gastrointestinal rahatsızlık, baş ağrısı, hipertansiyon ve başlıca nötropeni şeklinde geçici miyelosüpresyondur.
+Antiproliferatif özelliği, onu kalp nakli alıcılarında kronik allograft vaskülopatisini azaltmak ve önlemek için ilk seçenek yapmıştır.
+Hematopoietik kök hücre alıcılarında akut ve kronik graft versus host hastalığının profilaksi ve tedavisinde de kullanılır.
+Toksisiteleri bulantı, kusma, diyare ve karın ağrısı gibi gastrointestinal rahatsızlık, baş ağrısı, hipertansiyon ve başlıca nötropeni şeklinde geçici miyelosüpresyondur.
 
-Talidomid, gebelikteki yıkıcı teratojenik etkileri nedeniyle bin dokuz yüz altmışlı yıllarda piyasadan çekilmiş sedatif bir ilaçtır. İmmünomodülatör etkisi vardır; anjiyogenezi inhibe eder, anti inflamatuvar etki gösterir. Tümör nekroz faktörü alfayı inhibe eder, nötrofil fagositozunu azaltır, interlökin on yapımını artırır ve te hücreleriyle etkileşerek hücre aracılı immüniteyi artırır.
+Talidomid, gebelikteki yıkıcı teratojenik etkileri nedeniyle 1960'lı yıllarda piyasadan çekilmiş sedatif bir ilaçtır.
+İmmünomodülatör etkisi vardır; anjiyogenezi inhibe eder, anti inflamatuvar etki gösterir.
+Tümör nekroz faktörü alfayı inhibe eder, nötrofil fagositozunu azaltır, interlökin on yapımını artırır ve te hücreleriyle etkileşerek hücre aracılı immüniteyi artırır.
 
-Bugün multipl miyelomun tanı anındaki tedavisinde ve tekrarlayan dirençli hastalıkta kullanılır; hastalar sıklıkla başlangıçtan iki üç ay içinde yanıt işaretleri gösterir. Deksametazonla birlikte multipl miyelomda yanıt oranı yüzde doksanlara ulaşır. Miyelomdaki başarı üzerine miyelodisplastik sendrom, akut miyelojen lösemi, graft versus host hastalığı ve kolon kanseri, renal hücreli karsinom, melanom ve prostat kanseri gibi solid tümörlerde, farklı sonuçlar veren pek çok çalışma yapılmıştır.
+Bugün multipl miyelomun tanı anındaki tedavisinde ve tekrarlayan dirençli hastalıkta kullanılır; hastalar sıklıkla başlangıçtan 5 ay içinde yanıt işaretleri gösterir.
+Deksametazonla birlikte multipl miyelomda yanıt oranı yüzde doksanlara ulaşır.
+Miyelomdaki başarı üzerine miyelodisplastik sendrom, akut miyelojen lösemi, graft versus host hastalığı ve kolon kanseri, renal hücreli karsinom, melanom ve prostat kanseri gibi solid tümörlerde, farklı sonuçlar veren pek çok çalışma yapılmıştır.
 
-Talidomid yıllarca lepranın bazı belirtilerinde kullanılmıştır; lupus eritematozusun deri belirtilerinde de kullanılır. Yan etki profili geniştir; en önemli toksisitesi teratojenitedir. Diğerleri periferik nöropati, konstipasyon, döküntü, halsizlik, hipotiroidizm ve artmış derin ven trombozu riskidir. Lenalidomid hayvan ve in vitro çalışmalarda talidomide benzer etki gösterir, fakat toksisitesi ve özellikle teratojenitesi daha azdır. Pomalidomid ise multipl miyelom ve miyelodisplazide kullanılır.
+Talidomid yıllarca lepranın bazı belirtilerinde kullanılmıştır; lupus eritematozusun deri belirtilerinde de kullanılır.
+Yan etki profili geniştir; en önemli toksisitesi teratojenitedir.
+Diğerleri periferik nöropati, konstipasyon, döküntü, halsizlik, hipotiroidizm ve artmış derin ven trombozu riskidir.
+Lenalidomid hayvan ve in vitro çalışmalarda talidomide benzer etki gösterir, fakat toksisitesi ve özellikle teratojenitesi daha azdır.
+Pomalidomid ise multipl miyelom ve miyelodisplazide kullanılır.
 
 @@ Sitotoksik ajanlar: azatioprin ve siklofosfamid
 Azatioprin merkaptopürinin ön ilacıdır ve onun gibi antimetabolit olarak çalışır; insanlarda immünosüpresyon için merkaptopürinden daha yaygın kullanılır. Gastrointestinal yoldan iyi emilir ve başlıca merkaptopürine dönüşür. Az miktarda değişmemiş ilaç ve merkaptopürin böbrekle atıldığı için anefrik ya da anürik hastalarda toksisite iki kata yakın artabilir. Burası önemli, ilacın inaktivasyonunun çoğu ksantin oksidaza bağlıdır; bu yüzden hiperürisemi için allopurinol kullanan hastalarda doz dörtte bir ya da üçte birine indirilmelidir.
 
-Azatioprin ve merkaptopürin, antijenik uyarıdan sonra lenfoid hücre proliferasyonu için gerekli aşamalarda pürin nükleik asit metabolizmasına müdahale ederek immünosüpresyon yapar. Hücresel immünitenin yanı sıra primer ve sekonder serum antikor yanıtları da bloke edilebilir. Böbrek naklinin korunmasında kesin yararlıdır, diğer nakillerde de önemli etkileri vardır. Akut glomerülonefritte ve sistemik lupusun böbrek tutulumunda belli başarıyla, ayrıca romatoid artrit, Crohn hastalığı ve multipl sklerozda yararla kullanılır.
+Azatioprin ve merkaptopürin, antijenik uyarıdan sonra lenfoid hücre proliferasyonu için gerekli aşamalarda pürin nükleik asit metabolizmasına müdahale ederek immünosüpresyon yapar.
+Hücresel immünitenin yanı sıra primer ve sekonder serum antikor yanıtları da bloke edilebilir.
+Böbrek naklinin korunmasında kesin yararlıdır, diğer nakillerde de önemli etkileri vardır.
+Akut glomerülonefritte ve sistemik lupusun böbrek tutulumunda belli başarıyla, ayrıca romatoid artrit, Crohn hastalığı ve multipl sklerozda yararla kullanılır.
 
-Bu iki ilacın ana toksik etkisi, sıklıkla lökopeniyle, bazen anemi ve trombositopeniyle seyreden kemik iliği süpresyonudur. Cilt döküntüsü, ateş, bulantı, kusma ve bazen ishal de görülür, çoğunlukla yüksek dozlarda. Alkilleyici ajanlardan siklofosfamid en etkin immünosüpresiflerden biridir. Çoğalan lenfoid hücreleri ortadan kaldırır ama bazı hücrelerde de ene ve diğer molekülleri alkiller. Çok yüksek dozlarda, örneğin birkaç gün boyunca intravenöz olarak kilogram başına yüz yirmi miligramın üzerinde, antijenle eş zamanlı ya da hemen ardından verilirse yeni bir antijene özgü tolerans gelişebilir.
+Bu iki ilacın ana toksik etkisi, sıklıkla lökopeniyle, bazen anemi ve trombositopeniyle seyreden kemik iliği süpresyonudur.
+Cilt döküntüsü, ateş, bulantı, kusma ve bazen ishal de görülür, çoğunlukla yüksek dozlarda.
+Alkilleyici ajanlardan siklofosfamid en etkin immünosüpresiflerden biridir.
+Çoğalan lenfoid hücreleri ortadan kaldırır ama bazı hücrelerde de ene ve diğer molekülleri alkiller.
+Çok yüksek dozlarda, örneğin birkaç gün boyunca intravenöz olarak kilogram başına yüz yirmi miligramın üzerinde, antijenle eş zamanlı ya da hemen ardından verilirse yeni bir antijene özgü tolerans gelişebilir.
 
-Daha düşük dozlarda lupus dahil otoimmün hastalıklarda, kanamalı hastalarda, otoimmün hemolitik anemide ve antikor aracılı saf kırmızı hücre aplazisinde etkilidir. İlik ya da immün hücre greftlerine tolerans oluştursa da, vericinin doku uyumu düşükse ciddi hatta ölümcül olabilen graft versus host hastalığını engellemez. Burası önemli, siklofosfamid hemorajik sistite yol açabilir ve bu durum mesna ile önlenebilir ya da tedavi edilebilir. Diğer yan etkileri bulantı, kusma, kardiyak toksisite ve elektrolit bozukluklarıdır.
+Daha düşük dozlarda lupus dahil otoimmün hastalıklarda, kanamalı hastalarda, otoimmün hemolitik anemide ve antikor aracılı saf kırmızı hücre aplazisinde etkilidir.
+İlik ya da immün hücre greftlerine tolerans oluştursa da, vericinin doku uyumu düşükse ciddi hatta ölümcül olabilen graft versus host hastalığını engellemez.
+Burası önemli, siklofosfamid hemorajik sistite yol açabilir ve bu durum mesna ile önlenebilir ya da tedavi edilebilir.
+Diğer yan etkileri bulantı, kusma, kardiyak toksisite ve elektrolit bozukluklarıdır.
 
 @@ Pirimidin sentez inhibitörleri, hidroksiklorokin ve diğer sitotoksikler
 Leflunomid, pürin değil pirimidin sentezini inhibe eden bir ön ilaçtır. Oral olarak aktiftir ve aktif metabolitinin yarı ömrü birkaç haftadır. Başlıca aktif metaboliti teriflunomiddir. Burası önemli, ikisi de pirimidin sentezinde yer alan mitokondriyal enzim dihidroorotat dehidrojenazı geri dönüşümlü olarak inhibe eder ve sonuçta lenfosit aktivasyonu azalır. Leflunomid bugün yalnız romatoid artritte onaylıdır; mikofenolat mofetille kombinasyonu otoimmün ve inflamatuvar deri hastalıklarında ve solid organ allograftlarının korunmasında araştırılmaktadır. Toksisitesi karaciğer hasarı, karaciğer enzimlerinde yükselme, böbrek bozukluğu ve teratojenik etkilerdir.
 
-Hidroksiklorokin immünosüpresif özellikli bir antimalaryal ajandır. Lizozomal ve endozomal kompartmanda pe ha'yı yükselterek hücre içi antijen işlenmesini ve peptitlerin sınıf iki majör histokompatibilite moleküllerine yüklenmesini baskıladığı, böylece te hücre aktivasyonunu azalttığı düşünülür. Romatoid artrit ve sistemik lupus eritematozus gibi otoimmün hastalıklarda, ayrıca allojenik kök hücre naklinden sonra graft versus host hastalığının tedavi ve önlenmesinde kullanılır. Vinkristin, metotreksat ve sitarabin gibi diğer sitotoksik ajanların da immünosüpresif etkisi vardır.
+Hidroksiklorokin immünosüpresif özellikli bir antimalaryal ajandır.
+Lizozomal ve endozomal kompartmanda pe ha'yı yükselterek hücre içi antijen işlenmesini ve peptitlerin sınıf iki majör histokompatibilite moleküllerine yüklenmesini baskıladığı, böylece te hücre aktivasyonunu azalttığı düşünülür.
+Romatoid artrit ve sistemik lupus eritematozus gibi otoimmün hastalıklarda, ayrıca allojenik kök hücre naklinden sonra graft versus host hastalığının tedavi ve önlenmesinde kullanılır.
+Vinkristin, metotreksat ve sitarabin gibi diğer sitotoksik ajanların da immünosüpresif etkisi vardır.
 
-Antibiyotik daktinomisin, gelişmekte olan böbrek nakli reddinde belli ölçüde başarıyla kullanılmaktadır. Vinkristin prednizona dirençli idiyopatik trombositopenik purpurada yararlı görünmektedir. Vinblastinin hücre içinde mikrotübül ünitelerine bağlanarak in vitro mast hücre degranülasyonunu ve histamin ile diğer vazoaktif maddelerin salınımını engellediği gösterilmiştir. Pentostatin, lenfoid malignitelerde antineoplastik olarak kullanılan bir adenozin deaminaz inhibitörüdür ve derin lenfopeniye neden olur.
+Antibiyotik daktinomisin, gelişmekte olan böbrek nakli reddinde belli ölçüde başarıyla kullanılmaktadır.
+Vinkristin prednizona dirençli idiyopatik trombositopenik purpurada yararlı görünmektedir.
+Vinblastinin hücre içinde mikrotübül ünitelerine bağlanarak in vitro mast hücre degranülasyonunu ve histamin ile diğer vazoaktif maddelerin salınımını engellediği gösterilmiştir.
+Pentostatin, lenfoid malignitelerde antineoplastik olarak kullanılan bir adenozin deaminaz inhibitörüdür ve derin lenfopeniye neden olur.
 
 @@ Multipl skleroz ilaçları
 Amerikan Gıda ve İlaç Dairesi'nin onayladığı üç immünomodülatör yalnız tekrarlayan multipl sklerozda kullanılır. 1.'si dimetil fumarattır, fumarik asidin metil esteri. Kesin mekanizması bilinmez; ancak nükleer faktör eritroid iki ilişkili faktör iki yolunu aktive ettiği görülmektedir. Bu yolun aktivasyonu demiyelinizasyona katkı veren oksidatif stresi azaltır ve sinir hücrelerini inflamasyondan korumaya yardım eder. Oral verilir. Lenfopeni önemli olabileceğinden kan sayımı düzenli izlenmelidir. Başlangıçta kızarma yaygındır; diğer yan etkiler bulantı, ishal, karın ağrısı, karaciğer enzimlerinde artış ve eozinofilidir.
 
-Glatiramer asetat, sabit mol oranında sentetik polipeptitlerden ve dört amino asitten, yani el glutamik asit, el alanin, el lizin ve el tirozinden oluşan bir karışımdır. Multipl sklerozdaki immünomodülasyon mekanizması bilinmez; çalışmalar, merkezi sinir sistemine göç eden baskılayıcı te hücrelerini indükleyip aktive ederek miyelin antijenlerine karşı yanıtı düzenlediğini düşündürür. İntravenöz değil, deri altı enjeksiyonla değişken doz ve programlarda verilir. Toksisiteleri cilt aşırı duyarlılığı ve nadiren enjeksiyon yerinde lipoatrofi ile cilt nekrozudur.
+Glatiramer asetat, sabit mol oranında sentetik polipeptitlerden ve dört amino asitten, yani el glutamik asit, el alanin, el lizin ve el tirozinden oluşan bir karışımdır.
+Multipl sklerozdaki immünomodülasyon mekanizması bilinmez; çalışmalar, merkezi sinir sistemine göç eden baskılayıcı te hücrelerini indükleyip aktive ederek miyelin antijenlerine karşı yanıtı düzenlediğini düşündürür.
+İntravenöz değil, deri altı enjeksiyonla değişken doz ve programlarda verilir.
+Toksisiteleri cilt aşırı duyarlılığı ve nadiren enjeksiyon yerinde lipoatrofi ile cilt nekrozudur.
 
-Fingolimod hidroklorür, mantar metaboliti miriosinden türetilmiş, oral yoldan aktif bir sfingozin bir fosfat reseptör modülatörüdür. Bu reseptörün alt tip biri lenf düğümleri ve timustan lenfosit çıkışını kontrol eder. Fingolimod, fingolimod fosfata dönüşür, reseptöre bağlanır ve periferde ve merkezi sinir sisteminde dolaşan lenfosit sayısını azaltır. Reseptörler nöronlarda da bulunduğundan ilaç nörodejenerasyon, gliozis ve endojen onarım mekanizmalarını da etkileyebilir; multipl sklerozda hastalık aktivitesini değiştirmek için lenfopeniye yol açar.
+Fingolimod hidroklorür, mantar metaboliti miriosinden türetilmiş, oral yoldan aktif bir sfingozin bir fosfat reseptör modülatörüdür.
+Bu reseptörün alt tip biri lenf düğümleri ve timustan lenfosit çıkışını kontrol eder.
+Fingolimod, fingolimod fosfata dönüşür, reseptöre bağlanır ve periferde ve merkezi sinir sisteminde dolaşan lenfosit sayısını azaltır.
+Reseptörler nöronlarda da bulunduğundan ilaç nörodejenerasyon, gliozis ve endojen onarım mekanizmalarını da etkileyebilir; multipl sklerozda hastalık aktivitesini değiştirmek için lenfopeniye yol açar.
 
-Burası önemli, fingolimod bradikardi ve ku te aralığı uzaması gibi ciddi kardiyak toksisite yapabilir; bu yüzden ilk dozdan sonra altı saat kardiyak izlem gerekir. Miyokard enfarktüsü ya da kalp yetmezliği gibi önceden rahatsızlığı olanlarda kontrendikedir. Daha az görülen yan etkiler maküler ödem, karaciğer enzim yüksekliği, baş ağrısı, ishal ve öksürüktür; ilaç başlıca sitokrom pe dört yüz elli sistemiyle metabolize edilir. Siponimod, sekonder progresif multipl skleroz için yeni bir oral ajandır; lenfositlerdeki ve diğer hücrelerdeki sfingozin bir fosfat reseptörlerine bağlanır ve lenfositlerin merkezi sinir sistemine göçünü engeller.
+Burası önemli, fingolimod bradikardi ve ku te aralığı uzaması gibi ciddi kardiyak toksisite yapabilir; bu yüzden ilk dozdan sonra 6 saat kardiyak izlem gerekir.
+Miyokard enfarktüsü ya da kalp yetmezliği gibi önceden rahatsızlığı olanlarda kontrendikedir.
+Daha az görülen yan etkiler maküler ödem, karaciğer enzim yüksekliği, baş ağrısı, ishal ve öksürüktür; ilaç başlıca sitokrom pe dört yüz elli sistemiyle metabolize edilir.
+Siponimod, sekonder progresif multipl skleroz için yeni bir oral ajandır; lenfositlerdeki ve diğer hücrelerdeki sfingozin bir fosfat reseptörlerine bağlanır ve lenfositlerin merkezi sinir sistemine göçünü engeller.
 
 @@ İmmünosüpresif antikorlar ve adlandırma
 Moleküler biyoloji, monoklonal antikor geliştirmek için kullanılmıştır. Bu teknikle HIV gibi virüslere, bakteriyel proteinlere, tümör antijenlerine ve hatta sitokinlere karşı spesifik antikorlar geliştirilmiş, bazıları insanda kullanım onayı almıştır. Diğer genetik mühendislik teknikleri, fare monoklonal antikorlarının antijenitesini azaltmak ve yarılanma ömrünü uzatmak için kimerik ve insansılaştırılmış versiyonlar üretmeyi içerir.
 
-İnsana verilen fare antikorları, insan anti fare antikorları denen hama yanıtına yol açar ve fare proteini çok hızlı yıkılır. İnsansılaştırmada fare antikorunun yalnız değişken, antijene özgü bölgeleri korunur, geri kalanı insan karşılıklarıyla değiştirilir. Burası önemli, adlandırma eklerine dikkat edin: umab ya da zumab ile bitenler insansılaştırılmış antikorlar, imab ya da ksimab ile bitenler kimerik ürünlerdir.
+İnsana verilen fare antikorları, insan anti fare antikorları denen hama yanıtına yol açar ve fare proteini çok hızlı yıkılır.
+İnsansılaştırmada fare antikorunun yalnız değişken, antijene özgü bölgeleri korunur, geri kalanı insan karşılıklarıyla değiştirilir.
+Burası önemli, adlandırma eklerine dikkat edin: umab ya da zumab ile bitenler insansılaştırılmış antikorlar, imab ya da ksimab ile bitenler kimerik ürünlerdir.
 
-İnsan organ naklinin yaygınlaşmasıyla antilenfosit globulin yeniden önem kazanmıştır. Antilenfosit ve antitimosit globulin, özellikle nakil programlarında pek çok merkezde kullanılır. Antiserum genellikle at, koyun ya da tavşanların insan lenfoid hücreleriyle immünize edilmesiyle elde edilir. Antilenfosit globulin başlıca kan ile lenf arasında dolaşan küçük, uzun ömürlü periferik lenfositlere etki eder.
+İnsan organ naklinin yaygınlaşmasıyla antilenfosit globulin yeniden önem kazanmıştır.
+Antilenfosit ve antitimosit globulin, özellikle nakil programlarında pek çok merkezde kullanılır.
+Antiserum genellikle at, koyun ya da tavşanların insan lenfoid hücreleriyle immünize edilmesiyle elde edilir.
+Antilenfosit globulin başlıca kan ile lenf arasında dolaşan küçük, uzun ömürlü periferik lenfositlere etki eder.
 
-Te hücreleri yıkılınca ya da inaktive olunca gecikmiş tip aşırı duyarlılık ve hücresel immünite bozulur, humoral antikor yapımı ise görece sağlam kalır. Bu antikorların yüksek özgüllüğü bazı otoimmün bozukluklarda seçiciliği artırır, toksisiteyi azaltır ve hastalık seyrini değiştirir. Nakilde antilenfosit globulin ve monoklonal antikorlar immünosüpresyonun başlatılmasında, rejeksiyonun ve steroide dirençli rejeksiyonun tedavisinde kullanılabilir.
+Te hücreleri yıkılınca ya da inaktive olunca gecikmiş tip aşırı duyarlılık ve hücresel immünite bozulur, humoral antikor yapımı ise görece sağlam kalır.
+Bu antikorların yüksek özgüllüğü bazı otoimmün bozukluklarda seçiciliği artırır, toksisiteyi azaltır ve hastalık seyrini değiştirir.
+Nakilde antilenfosit globulin ve monoklonal antikorlar immünosüpresyonun başlatılmasında, rejeksiyonun ve steroide dirençli rejeksiyonun tedavisinde kullanılabilir.
 
-Antilenfosit ve antitimosit globulinin siklosporinle birlikte kemik iliği alıcılarında hazırlık amacıyla kullanımı başarılı olmuştur. Yan etkilerin çoğu yabancı bir protein enjeksiyonuna bağlıdır. Enjeksiyon yerinde sıklıkla lokal ağrı ve eritem gelişir; bu bir Tip 3 aşırı duyarlılıktır. Humoral mekanizmalar aktif kaldığından, yabancı immünoglobulin G'ye karşı deri reaksiyonu veren ve presipite olan antikorlar oluşabilir.
+Antilenfosit ve antitimosit globulinin siklosporinle birlikte kemik iliği alıcılarında hazırlık amacıyla kullanımı başarılı olmuştur.
+Yan etkilerin çoğu yabancı bir protein enjeksiyonuna bağlıdır.
+Enjeksiyon yerinde sıklıkla lokal ağrı ve eritem gelişir; bu bir Tip 3 aşırı duyarlılıktır.
+Humoral mekanizmalar aktif kaldığından, yabancı immünoglobulin G'ye karşı deri reaksiyonu veren ve presipite olan antikorlar oluşabilir.
 
 @@ İntravenöz immünoglobulin, ar ha sıfır de ve hiperimmün preparatlar
 İmmün modülasyonda bir başka yol, poliklonal insan immünoglobulininin intravenöz kullanımıdır. Bu preparat, sıklıkla immünoglobulin G, binlerce sağlıklı vericiden toplanan havuzdan hazırlanır ve tek bir spesifik hedefi yoktur. Kilogram başına iki gram gibi yüksek dozlarda, immünoglobulin yetersizliklerinden otoimmün bozukluklara, HIV hastalığından kemik iliği nakline kadar geniş bir kullanım alanı vardır. Sistemik lupus eritematozus ve dirençli idiyopatik trombositopenik purpurada iyi klinik yanıt alınır. Mekanizması tam bilinmese de çeşitli immün sendromlarda klinik yarar sağlar.
 
-İmmünofarmakolojinin en erken büyük ilerlemelerinden biri, yenidoğanın ar ha hemolitik hastalığını önleme tekniğidir. Temel fikir şu: yabancı antijene karşı birincil antikor yanıtı, karşılaşma sırasında o antijene özgü antikor pasif olarak verilirse bloke edilebilir. Ar ha sıfır de immünoglobulini, kırmızı hücrelerdeki ar ha sıfır de antijenine karşı yüksek titrede antikor içeren %10 beşlik konsantre bir insan immünoglobulin G çözeltisidir. Ar ha negatif annenin de antijeniyle duyarlanması genellikle ar ha pozitif bebeğin doğumunda fetal kırmızı hücrelerin anne dolaşımına sızmasıyla olur.
+İmmünofarmakolojinin en erken büyük ilerlemelerinden biri, yenidoğanın ar ha hemolitik hastalığını önleme tekniğidir.
+Temel fikir şu: yabancı antijene karşı birincil antikor yanıtı, karşılaşma sırasında o antijene özgü antikor pasif olarak verilirse bloke edilebilir.
+Ar ha sıfır de immünoglobulini, kırmızı hücrelerdeki ar ha sıfır de antijenine karşı yüksek titrede antikor içeren %15'lik konsantre bir insan immünoglobulin G çözeltisidir.
+Ar ha negatif annenin de antijeniyle duyarlanması genellikle ar ha pozitif bebeğin doğumunda fetal kırmızı hücrelerin anne dolaşımına sızmasıyla olur.
 
-Duyarlanma düşük ya da ektopik gebeliklerde de olabilir. Sonraki gebeliklerde maternal antikor 3. trimesterde fetüse geçer ve eritroblastozis fetalise, yani yenidoğanın hemolitik hastalığına yol açar. Burası önemli, ar ha negatif anneye ar ha pozitif bebeğin doğumundan sonraki yirmi dört ile yetmiş iki saat içinde ar ha sıfır de antikoru yapılırsa annenin kendi antikor yanıtı baskılanır. Çünkü bebeğin kırmızı hücreleri, anne be hücre yanıtı oluşturamadan dolaşımdan temizlenir. Böyle tedavi edilen annenin sonraki gebeliklerinde yenidoğanın ar ha hemolitik hastalığı görülmez.
+Duyarlanma düşük ya da ektopik gebeliklerde de olabilir.
+Sonraki gebeliklerde maternal antikor 3. trimesterde fetüse geçer ve eritroblastozis fetalise, yani yenidoğanın hemolitik hastalığına yol açar.
+Burası önemli, ar ha negatif anneye ar ha pozitif bebeğin doğumundan sonraki yirmi dört ile 72 saat içinde ar ha sıfır de antikoru yapılırsa annenin kendi antikor yanıtı baskılanır.
+Çünkü bebeğin kırmızı hücreleri, anne be hücre yanıtı oluşturamadan dolaşımdan temizlenir.
+Böyle tedavi edilen annenin sonraki gebeliklerinde yenidoğanın ar ha hemolitik hastalığı görülmez.
 
-Hiperimmünoglobulinler, virüs ya da toksin gibi belli ajanlara karşı yüksek titrede antikoru olan seçilmiş insan ya da hayvan vericilerinin havuzundan hazırlanan preparatlardır. Respiratuvar sinsityal virüs, sitomegalovirüs, varisella zoster, insan herpes virüsü üç, hepatit be virüsü, kuduz, tetanoz ve dijoksin zehirlenmesinde kullanılabilirler. Yüksek titrede antikorların pasif transferiyle enfeksiyon riskini ya da ciddiyetini azaltırlar. Kuduz hiperimmünoglobulini yara çevresine ve intravenöz verilir; tetanoz hiperimmünoglobulini profilakside intravenöz uygulanır. Yılan hiperimmünoglobulinleri, yani antivenomlar, at ya da küçükbaş kökenlidir.
+Hiperimmünoglobulinler, virüs ya da toksin gibi belli ajanlara karşı yüksek titrede antikoru olan seçilmiş insan ya da hayvan vericilerinin havuzundan hazırlanan preparatlardır.
+Respiratuvar sinsityal virüs, sitomegalovirüs, Varisella zoster, insan herpes virüsü üç, Hepatit B virüsü (HBV), kuduz, tetanoz ve dijoksin zehirlenmesinde kullanılabilirler.
+Yüksek titrede antikorların pasif transferiyle enfeksiyon riskini ya da ciddiyetini azaltırlar.
+Kuduz hiperimmünoglobulini yara çevresine ve intravenöz verilir; tetanoz hiperimmünoglobulini profilakside intravenöz uygulanır.
+Yılan hiperimmünoglobulinleri, yani antivenomlar, at ya da küçükbaş kökenlidir.
 
 @@ Antitümör monoklonal antikorlar
 Alemtuzumab, normal ve malign be ve te lenfositleri, en ka hücreleri, monosit, makrofaj ve küçük bir granülosit grubunda bulunan ce de elli ikiye bağlanan, kappa zincirli, insansılaştırılmış bir immünoglobulin G birdir. Alkilleyici ajan almış ve fludarabine yanıtsız be hücreli kronik lenfositik lösemide onaylıdır. Daratumumab, miyelom hücrelerinde aşırı eksprese edilen CD30 sekize bağlanır; tek başına ya da proteazom inhibitörleri gibi ilaçlarla, standart tedaviye dirençli multipl miyelomda onaylıdır.
 
-Elotuzumab, diğer miyelom ilaçlarıyla birlikte nükseden multipl miyelomda onaylıdır. Miyelom hücrelerindeki sinyal veren lenfositik aktivasyon molekülü ef yediye bağlanır ve antikor bağımlı hücre aracılı sitotoksisiteyle tümör hücrelerini öldürtür. Dinutuksimab, gangliozid de ikiye bağlanan bir monoklonal antikordur; granülosit makrofaj koloni uyarıcı faktör, interlökin iki ve on üç sis retinoik asitle birlikte, tedaviye kısmi yanıt veren yüksek riskli nöroblastomlu çocuklarda onaylıdır.
+Elotuzumab, diğer miyelom ilaçlarıyla birlikte nükseden multipl miyelomda onaylıdır.
+Miyelom hücrelerindeki sinyal veren lenfositik aktivasyon molekülü ef yediye bağlanır ve antikor bağımlı hücre aracılı sitotoksisiteyle tümör hücrelerini öldürtür.
+Dinutuksimab, gangliozid de ikiye bağlanan bir monoklonal antikordur; granülosit makrofaj koloni uyarıcı faktör, interlökin iki ve on üç sis retinoik asitle birlikte, tedaviye kısmi yanıt veren yüksek riskli nöroblastomlu çocuklarda onaylıdır.
 
-Anti damar endotel büyüme faktörü antikorları ve bu faktörün reseptörüne yönelik antikorlar, faktörün özellikle endotel hücrelerindeki reseptörüne bağlanmasını önleyerek kan damarı büyümesini, yani anjiyogenezi engelleyen anti anjiyojenik ilaçlardır. Bevasizumab, damar endotel büyüme faktörüne bağlanan insansılaştırılmış bir immünoglobulin G bir antikorudur ve tümörlerde damar gelişimini inhibe ettiği gösterilmiştir.
+Anti damar endotel büyüme faktörü antikorları ve bu faktörün reseptörüne yönelik antikorlar, faktörün özellikle endotel hücrelerindeki reseptörüne bağlanmasını önleyerek kan damarı büyümesini, yani anjiyogenezi engelleyen anti anjiyojenik ilaçlardır.
+Bevasizumab, damar endotel büyüme faktörüne bağlanan insansılaştırılmış bir immünoglobulin G bir antikorudur ve tümörlerde damar gelişimini inhibe ettiği gösterilmiştir.
 
-Bevasizumab, metastatik kolorektal kanserde tek başına ya da beş florourasil temelli kemoterapiyle birlikte ilk seçenek olarak onaylıdır. Ayrıca skuamöz küçük hücreli dışı akciğer kanseri, glioblastoma multiforme, interferon alfa ile metastatik böbrek kanseri, serviks kanseri ve kemoterapiyle birlikte epitel kökenli over, fallop tüpü ya da primer periton kanserinde onaylıdır. Anti anjiyojenik olduğu için cerrahi sonrası iyileşme tamamlanana kadar kullanılmamalıdır. Hastalar kanama, gastrointestinal perforasyon ve yara iyileşmesi sorunları açısından izlenmelidir.
+Bevasizumab, metastatik kolorektal kanserde tek başına ya da beş florourasil temelli kemoterapiyle birlikte ilk seçenek olarak onaylıdır.
+Ayrıca skuamöz küçük hücreli dışı akciğer kanseri, glioblastoma multiforme, interferon alfa ile metastatik böbrek kanseri, serviks kanseri ve kemoterapiyle birlikte epitel kökenli over, fallop tüpü ya da primer periton kanserinde onaylıdır.
+Anti anjiyojenik olduğu için cerrahi sonrası iyileşme tamamlanana kadar kullanılmamalıdır.
+Hastalar kanama, gastrointestinal perforasyon ve yara iyileşmesi sorunları açısından izlenmelidir.
 
-Ranibizumab, damar endotel büyüme faktörü a'ya bağlanan rekombinant insansılaştırılmış bir immünoglobulin G birdir. Yaşa bağlı makula dejenerasyonu, retinal ven tıkanıklığı sonrası makula ödemi, diyabetik makula ödemi ve ani bulanıklık ya da görme kaybında göz içine, yani intravitreal enjeksiyonla kullanılır. Pegaptanib hücre dışı büyüme faktörüne bağlanır ve makula dejenerasyonunu yavaşlatmak için yine intravitreal verilir. Ramusirumab, tümör hücrelerindeki damar endotel büyüme faktörü reseptörü ikiye antagonist olarak bağlanan bir insan monoklonal antikorudur; metastatik kolon kanseri, küçük hücreli akciğer kanseri, mide ya da gastroözofageal adenokarsinom ve hepatoselüler karsinomda onaylıdır.
+Ranibizumab, damar endotel büyüme faktörü a'ya bağlanan rekombinant insansılaştırılmış bir immünoglobulin G birdir.
+Yaşa bağlı makula dejenerasyonu, retinal ven tıkanıklığı sonrası makula ödemi, diyabetik makula ödemi ve ani bulanıklık ya da görme kaybında göz içine, yani intravitreal enjeksiyonla kullanılır.
+Pegaptanib hücre dışı büyüme faktörüne bağlanır ve makula dejenerasyonunu yavaşlatmak için yine intravitreal verilir.
+Ramusirumab, tümör hücrelerindeki damar endotel büyüme faktörü reseptörü ikiye antagonist olarak bağlanan bir insan monoklonal antikorudur; metastatik kolon kanseri, küçük hücreli akciğer kanseri, mide ya da gastroözofageal adenokarsinom ve hepatoselüler karsinomda onaylıdır.
 
-Epidermal büyüme faktörü reseptörünü hedefleyen antikorlara gelelim. Setuksimab bu reseptöre karşı bir insan fare kimerik monoklonal antikorudur; reseptör pozitif metastatik kolorektal kanserde ve radyoterapiyle birlikte baş boyun kanserinde kullanılır. Nesitumumab, gemsitabin ve sisplatinle birlikte metastatik skuamöz küçük hücreli dışı akciğer kanserinde kullanılan, aynı reseptörü hedefleyen tamamen insan kaynaklı bir antikordur. Dermatolojik ve infüzyonla ilişkili toksisite yaygın olsa da, setuksimaba göre avantajı tamamen insan olması, yani hama yanıtı yapmaması ve bu yüzden dolaşımda daha uzun kalmasıdır.
+Epidermal büyüme faktörü reseptörünü hedefleyen antikorlara gelelim.
+Setuksimab bu reseptöre karşı bir insan fare kimerik monoklonal antikorudur; reseptör pozitif metastatik kolorektal kanserde ve radyoterapiyle birlikte baş boyun kanserinde kullanılır.
+Nesitumumab, gemsitabin ve sisplatinle birlikte metastatik skuamöz küçük hücreli dışı akciğer kanserinde kullanılan, aynı reseptörü hedefleyen tamamen insan kaynaklı bir antikordur.
+Dermatolojik ve infüzyonla ilişkili toksisite yaygın olsa da, setuksimaba göre avantajı tamamen insan olması, yani hama yanıtı yapmaması ve bu yüzden dolaşımda daha uzun kalmasıdır.
 
-Panitumumab, tamamen insan kaynaklı, kappa hafif zincirli bir immünoglobulin G iki antikorudur; reseptörü eksprese eden ilerleyici metastatik kolorektal kanserde onaylıdır. Rituksimab, normal ve malign be lenfositlerindeki ce de yirmiye bağlanan kimerik fare insan immünoglobulin G birdir; anti tümör nekroz faktörü tedavisinin başarısız olduğu romatoid artritte metotreksatla birlikte de onaylıdır. Trastuzumab, insan epidermal büyüme faktörü reseptörü iki, yani her iki nü proteininin hücre dışı bölümüne bağlanan insansılaştırılmış bir antikordur. Her iki nü pozitif meme kanseri ile metastatik mide ve gastroözofageal bileşke adenokarsinomunda onaylıdır; tek başına meme kanserinde yaklaşık %10 beş ile yirmi remisyon sağlar.
+Panitumumab, tamamen insan kaynaklı, kappa hafif zincirli bir immünoglobulin G iki antikorudur; reseptörü eksprese eden ilerleyici metastatik kolorektal kanserde onaylıdır.
+Rituksimab, normal ve malign be lenfositlerindeki ce de yirmiye bağlanan kimerik fare insan immünoglobulin G birdir; anti tümör nekroz faktörü tedavisinin başarısız olduğu romatoid artritte metotreksatla birlikte de onaylıdır.
+Trastuzumab, insan epidermal büyüme faktörü reseptörü iki, yani her iki nü proteininin hücre dışı bölümüne bağlanan insansılaştırılmış bir antikordur.
+Her iki nü pozitif meme kanseri ile metastatik mide ve gastroözofageal bileşke adenokarsinomunda onaylıdır; tek başına meme kanserinde yaklaşık %15 ile yirmi remisyon sağlar.
 
-Bazı antikorlar izotop ve toksinleri tümöre taşır. Arkitumomab, teknesyum doksan dokuz em ile işaretlenmiş, karsinoembriyonik antijene karşı bir fare antikor parçasıdır ve metastatik kolorektal kanserde yayılımı görüntülemek için, yani immünosintigrafide kullanılır. Kapromab pendetid, prostata özgü membran antijenine karşı bir fare monoklonal antikorudur; prostat kanserinde ve prostatektomi sonrası prostata özgü belirteç düzeyi yükselen hastalarda yaygınlığı belirlemek için immünosintigrafide kullanılır. İbritumomab tiyuksetan, itriyum doksan ya da indiyum yüz on bir ile işaretlenmiş anti CD20 fare antikorudur.
+Bazı antikorlar izotop ve toksinleri tümöre taşır.
+Arkitumomab, teknesyum doksan dokuz em ile işaretlenmiş, karsinoembriyonik antijene karşı bir fare antikor parçasıdır ve metastatik kolorektal kanserde yayılımı görüntülemek için, yani immünosintigrafide kullanılır.
+Kapromab pendetid, prostata özgü membran antijenine karşı bir fare monoklonal antikorudur; prostat kanserinde ve prostatektomi sonrası prostata özgü belirteç düzeyi yükselen hastalarda yaygınlığı belirlemek için immünosintigrafide kullanılır.
+İbritumomab tiyuksetan, itriyum doksan ya da indiyum yüz on bir ile işaretlenmiş anti CD20 fare antikorudur.
 
 @@ İmmünomodülatör antikorlar ve füzyon proteinleri
 Adalimumab, sertolizumab pegol, etanersept, golimumab ve infliksimab, romatoid artrit ve benzeri inflamatuvar hastalıklarda önemli bir proinflamatuvar sitokin olan tümör nekroz faktörü alfayı bağlar. Bu sitokinin reseptörüne bağlanması engellenince interlökin bir ve interlökin altı gibi inflamatuvar sitokinler ve lökosit aktivasyonu ile göçünde rol alan yapışma molekülleri baskılanır. Adalimumab tamamen insan kaynaklı bir immünoglobulin G birdir; romatoid artrit, juvenil idiyopatik artrit, psoriatik artrit, ankilozan spondilit, Crohn hastalığı ve plak tipi psoriazisde onaylıdır.
 
-Sertolizumab pegol tümör nekroz faktörü alfayı nötralize eder; Crohn hastalığı ve romatoid artritte endikedir. Etanersept, insan immünoglobulin G bir sabit bölgelerinin tümör nekroz faktörü reseptörüyle birleştirilmesiyle oluşan dimerik bir füzyon proteinidir; erişkin romatoid artrit, poliartiküler juvenil idiyopatik artrit, ankilozan spondilit ve psoriatik artritte onaylıdır. Golimumab, çözünür ve membrana bağlı tümör nekroz faktörü alfaya bağlanan bir insan antikorudur; romatoid artrit, ankilozan spondilit ve psoriatik artritte kullanılır. İnfliksimab ise intravenöz uygulanan bir immünoglobulin G bir antikorudur.
+Sertolizumab pegol tümör nekroz faktörü alfayı nötralize eder; Crohn hastalığı ve romatoid artritte endikedir.
+Etanersept, insan immünoglobulin G bir sabit bölgelerinin tümör nekroz faktörü reseptörüyle birleştirilmesiyle oluşan dimerik bir füzyon proteinidir; erişkin romatoid artrit, poliartiküler juvenil idiyopatik artrit, ankilozan spondilit ve psoriatik artritte onaylıdır.
+Golimumab, çözünür ve membrana bağlı tümör nekroz faktörü alfaya bağlanan bir insan antikorudur; romatoid artrit, ankilozan spondilit ve psoriatik artritte kullanılır.
+İnfliksimab ise intravenöz uygulanan bir immünoglobulin G bir antikorudur.
 
-Abatasept, sitotoksik te lenfosit ilişkili antijen dördün hücre dışı bölümüyle insan immünoglobulin G birin birleştirildiği rekombinant bir füzyon proteinidir. Burası önemli, CD80 ya da CD80 altıya bağlanır; böylece te hücresindeki CD20 sekiz bağlanamaz, yani 2. sinyal kesilir, te hücresi aktive olamaz ve sitokin salınmaz. Romatoid artrit ve juvenil idiyopatik artritte onaylıdır. Anti tümör nekroz faktörü ajanlarda olduğu gibi hastalar izlenmeli ve başlamadan önce latent tüberküloz açısından tedavi edilmelidir.
+Abatasept, sitotoksik te lenfosit ilişkili antijen dördün hücre dışı bölümüyle insan immünoglobulin G birin birleştirildiği rekombinant bir füzyon proteinidir.
+Burası önemli, CD80 ya da CD80 altıya bağlanır; böylece te hücresindeki CD20 sekiz bağlanamaz, yani 2. sinyal kesilir, te hücresi aktive olamaz ve sitokin salınmaz.
+Romatoid artrit ve juvenil idiyopatik artritte onaylıdır.
+Anti tümör nekroz faktörü ajanlarda olduğu gibi hastalar izlenmeli ve başlamadan önce latent tüberküloz açısından tedavi edilmelidir.
 
-Alefasept, lökosit fonksiyon ilişkili antijen üçün ce de iki bağlayan parçasıyla insan immünoglobulin G bir ef se bölgesinin birleştirildiği bir füzyon proteinidir ve plak tipi psoriazisde onaylıdır. Periferik te hücre sayısı izlenmeli, CD4 düzeyi mikrolitrede iki yüz elli hücrenin altına düşerse ilaç kesilmelidir. Basiliksimab, aktive te lenfositlerindeki interlökin iki reseptörünün alfa zinciri olan CD20 beşe bağlanan kimerik bir fare insan antikorudur; daklizumab da aynı alfa alt birime bağlanan insansılaştırılmış bir antikordur. İkisi de böbrek naklinde akut rejeksiyon profilaksisinde endikedir.
+Alefasept, lökosit fonksiyon ilişkili antijen üçün ce de iki bağlayan parçasıyla insan immünoglobulin G bir ef se bölgesinin birleştirildiği bir füzyon proteinidir ve plak tipi psoriazisde onaylıdır.
+Periferik te hücre sayısı izlenmeli, CD4 düzeyi mikrolitrede iki yüz elli hücrenin altına düşerse ilaç kesilmelidir.
+Basiliksimab, aktive te lenfositlerindeki interlökin iki reseptörünün alfa zinciri olan CD20 beşe bağlanan kimerik bir fare insan antikorudur; daklizumab da aynı alfa alt birime bağlanan insansılaştırılmış bir antikordur.
+İkisi de böbrek naklinde akut rejeksiyon profilaksisinde endikedir.
 
-Natalizumab, nötrofiller dışındaki tüm lökositlerin yüzeyindeki yapıya bağlanan insansılaştırılmış bir immünoglobulin G dört antikorudur; geleneksel tedaviye yetersiz yanıt veren multipl skleroz ve Crohn hastalığında endikedir. Omalizumab, rekombinant insansılaştırılmış bir anti immünoglobulin E antikorudur; inhale steroide dirençli erişkin ve ergen alerjik astımında onaylıdır. Tosilizumab, çözünür ya da membrana bağlı interlökin altı reseptörüne bağlanan insansılaştırılmış bir antikordur ve interlökin altı aracılı sinyali keserek inflamasyonu baskılar.
+Natalizumab, nötrofiller dışındaki tüm lökositlerin yüzeyindeki yapıya bağlanan insansılaştırılmış bir immünoglobulin G dört antikorudur; geleneksel tedaviye yetersiz yanıt veren multipl skleroz ve Crohn hastalığında endikedir.
+Omalizumab, rekombinant insansılaştırılmış bir anti immünoglobulin E antikorudur; inhale steroide dirençli erişkin ve ergen alerjik astımında onaylıdır.
+Tosilizumab, çözünür ya da membrana bağlı interlökin altı reseptörüne bağlanan insansılaştırılmış bir antikordur ve interlökin altı aracılı sinyali keserek inflamasyonu baskılar.
 
-Ustekinumab, interlökin on iki ve interlökin yirmi üçün ortak pe kırk alt birimine bağlanan bir insan antikorudur; bu iki sitokinin reseptörlerine bağlanmasını ve lenfositlerdeki sinyali engeller. Orta ve ağır plak tipi psoriazisde endikedir. Absiksimab, aktive trombositlerdeki glikoprotein iki be üç a integrin reseptörüne bağlanan fare insan antikorunun bir parçasıdır; perkütan koroner girişimde kardiyak iskemik komplikasyonları önlemede yardımcı olarak kullanılır.
+Ustekinumab, interlökin on iki ve interlökin yirmi üçün ortak pe kırk alt birimine bağlanan bir insan antikorudur; bu iki sitokinin reseptörlerine bağlanmasını ve lenfositlerdeki sinyali engeller.
+Orta ve ağır plak tipi psoriazisde endikedir.
+Absiksimab, aktive trombositlerdeki glikoprotein iki be üç a integrin reseptörüne bağlanan fare insan antikorunun bir parçasıdır; perkütan koroner girişimde kardiyak iskemik komplikasyonları önlemede yardımcı olarak kullanılır.
 
-Denosumab, nükleer faktör kappa be ligandı reseptör aktivatörünün ligandına, yani rank liganda özgü bir insan immünoglobulin G iki antikorudur. Kemik rezorpsiyonundan sorumlu osteoklastların olgunlaşmasını engeller; yüksek kırık riskli osteoporozu olan postmenopozal kadınlarda endikedir. Ekulizumab, komplemanın ce beş komponentine bağlanan insansılaştırılmış bir antikordur. Kırmızı hücre lizisine bağlı damar içi hemolizi inhibe ederek anemi, halsizlik, tromboz ve hemoglobinemi gibi belirtileri önler.
+Denosumab, nükleer faktör kappa be ligandı reseptör aktivatörünün ligandına, yani rank liganda özgü bir insan immünoglobulin G iki antikorudur.
+Kemik rezorpsiyonundan sorumlu osteoklastların olgunlaşmasını engeller; yüksek kırık riskli osteoporozu olan postmenopozal kadınlarda endikedir.
+Ekulizumab, komplemanın ce beş komponentine bağlanan insansılaştırılmış bir antikordur.
+Kırmızı hücre lizisine bağlı damar içi hemolizi inhibe ederek anemi, halsizlik, tromboz ve hemoglobinemi gibi belirtileri önler.
 
-Palivizumab, rekombinant DNA teknolojisiyle üretilen ve respiratuvar sinsityal virüsün yaptığı ciddi hastalıkları önlemek için kullanılan bir monoklonal antikordur. Prematüre doğum ya da kalp veya akciğer hastalığı gibi nedenlerle yüksek risk taşıyan bebeklere önerilir. En sık yan etkileri ateş ve döküntüdür.
+Palivizumab, rekombinant DNA teknolojisiyle üretilen ve respiratuvar sinsityal virüsün yaptığı ciddi hastalıkları önlemek için kullanılan bir monoklonal antikordur.
+Prematüre doğum ya da kalp veya akciğer hastalığı gibi nedenlerle yüksek risk taşıyan bebeklere önerilir.
+En sık yan etkileri ateş ve döküntüdür.
 
 @@ Transplantasyon ve rejeksiyon tipleri
 İmmünosüpresifler sıklıkla iki durumda kullanılır: transplantasyon ve otoimmün bozukluklar. Organ naklinde yakın doku uyumu, greft reddi olasılığını ve yoğun immünosüpresyon gereğini azaltır. Hastalar nakil öncesinde antitimosit globulin, daklizumab ya da basiliksimab içeren bir rejime alınabilir. Solid organ alıcısında dört tip rejeksiyon gelişebilir: hiperakut, akselere, akut ve kronik.
 
-Burası önemli, hiperakut rejeksiyon, verici organa karşı önceden var olan anti kan grubu antikorları gibi antikorlarla gelişir; nakilden saatler içinde olur, immünosüpresif ilaçlarla durdurulamaz ve hızlı nekroz ile organ yetmezliğine yol açar. Akselere rejeksiyon iki ile yedi gün sonra, hem antikor hem te hücresi aracılığıyla gelişir ve o da ilaçlarla durdurulamaz. Humoral ya da antikor aracılı rejeksiyon böbrek naklinde nadirdir ama genellikle greft kaybıyla sonuçlanır. Akut rejeksiyon günler ya da aylar içinde gelişir ve esas olarak hücresel immüniteyle ilgilidir. Azatioprin, mikofenolat mofetil, siklosporin, takrolimus, glukokortikoidler, siklofosfamid, metotreksat ve sirolimus gibi ilaçlarla sıklıkla geri döndürülebilir.
+Burası önemli, hiperakut rejeksiyon, verici organa karşı önceden var olan anti kan grubu antikorları gibi antikorlarla gelişir; nakilden saatler içinde olur, immünosüpresif ilaçlarla durdurulamaz ve hızlı nekroz ile organ yetmezliğine yol açar.
+Akselere rejeksiyon iki ile 7 gün sonra, hem antikor hem te hücresi aracılığıyla gelişir ve o da ilaçlarla durdurulamaz.
+Humoral ya da antikor aracılı rejeksiyon böbrek naklinde nadirdir ama genellikle greft kaybıyla sonuçlanır.
+Akut rejeksiyon günler ya da aylar içinde gelişir ve esas olarak hücresel immüniteyle ilgilidir.
+Azatioprin, mikofenolat mofetil, siklosporin, takrolimus, glukokortikoidler, siklofosfamid, metotreksat ve sirolimus gibi ilaçlarla sıklıkla geri döndürülebilir.
 
-Kronik rejeksiyon nakilden aylar hatta yıllar sonra ortaya çıkar; organın damar yapısında kalınlaşma ve fibrozla karakterizedir ve hem hücresel hem humoral bağışıklığı ilgilendirir. Graft versus host hastalığı ise çok sıktır ve allojenik nakil alanların çoğunda gelişir; siklosporin, metotreksat gibi profilaktik tedaviye rağmen sıklıkla ortaya çıkar. Akut formu ilk yüz gün içinde gelişir ve deri döküntüsü, ağır diyare ya da hepatotoksisiteyle kendini gösterir. Tedaviye mutlaka yüksek doz kortikosteroidle başlanır; mikofenolat mofetil, sirolimus, takrolimus, daklizumab ve diğer ilaçlar değişen başarıyla eklenir.
+Kronik rejeksiyon nakilden aylar hatta yıllar sonra ortaya çıkar; organın damar yapısında kalınlaşma ve fibrozla karakterizedir ve hem hücresel hem humoral bağışıklığı ilgilendirir.
+Graft versus host hastalığı ise çok sıktır ve allojenik nakil alanların çoğunda gelişir; siklosporin, metotreksat gibi profilaktik tedaviye rağmen sıklıkla ortaya çıkar.
+Akut formu ilk yüz gün içinde gelişir ve deri döküntüsü, ağır diyare ya da hepatotoksisiteyle kendini gösterir.
+Tedaviye mutlaka yüksek doz kortikosteroidle başlanır; mikofenolat mofetil, sirolimus, takrolimus, daklizumab ve diğer ilaçlar değişen başarıyla eklenir.
 
 @@ Otoimmün bozukluklar, immünomodülasyon ve sitokinler
 İmmünosüpresif tedaviyle otoimmün hemolitik anemi, idiyopatik trombositopenik purpura, Tip 1 diyabet, Haşimoto tiroiditi ve temporal arterit gibi pek çok durumda remisyon sağlanabilir. Kronik astımda da kullanılır; burada siklosporin sıklıkla etkilidir, sirolimus da bir seçenektir. İmmün yanıtı baskılamak yerine değiştiren ajanların gelişmesiyle immünomodülasyon farmakolojinin önemli bir alanı olmuştur; gerekçe, bu ilaçların seçici ya da genel immün yetersizliği olan hastalarda immün yanıtı artırabilmesidir.
 
-Sitokinler farklı işlevli, büyük ve heterojen bir protein grubudur. Bir kısmı lenforetiküler hücrelerde sentezlenen bağışıklık düzenleyici proteinlerdir; immün sistem işlevlerinde ve hematopoezin kontrolünde rol oynarlar. Antiproliferatif, antimikrobiyal ve antitümör etkileri de vardır. Yeni keşfedilenlerin çoğu interlökin olarak sınıflandırılır ve tanımlanma sırasına göre numaralandırılır. Tümör nekroz faktörü alfa, interferon gama, interlökin iki, granülosit koloni uyarıcı faktör ve granülosit makrofaj koloni uyarıcı faktör gibi çoğu sitokinin serum yarılanma ömrü dakikalar kadar kısadır.
+Sitokinler farklı işlevli, büyük ve heterojen bir protein grubudur.
+Bir kısmı lenforetiküler hücrelerde sentezlenen bağışıklık düzenleyici proteinlerdir; immün sistem işlevlerinde ve hematopoezin kontrolünde rol oynarlar.
+Antiproliferatif, antimikrobiyal ve antitümör etkileri de vardır.
+Yeni keşfedilenlerin çoğu interlökin olarak sınıflandırılır ve tanımlanma sırasına göre numaralandırılır.
+Tümör nekroz faktörü alfa, interferon gama, interlökin iki, granülosit koloni uyarıcı faktör ve granülosit makrofaj koloni uyarıcı faktör gibi çoğu sitokinin serum yarılanma ömrü dakikalar kadar kısadır.
 
-İnterferonlar üç ailedir: alfa, beta ve gama. Alfa ve beta, Tip 1 interferonları oluşturur; hedef hücrede aynı reseptöre etki eden, asitte kararlı proteinlerdir. Tip 2 interferon olan gama ise asitte kararsızdır ve farklı bir reseptöre etki eder. Tip 1 interferonlar genellikle viral enfeksiyonlarla indüklenir; alfayı lökositler, betayı fibroblast ve epitel hücreleri sentezler. Gama ise çoğunlukla aktive te hücrelerinin ürünüdür.
+İnterferonlar üç ailedir: alfa, beta ve gama.
+Alfa ve beta, Tip 1 interferonları oluşturur; hedef hücrede aynı reseptöre etki eden, asitte kararlı proteinlerdir.
+Tip 2 interferon olan gama ise asitte kararsızdır ve farklı bir reseptöre etki eder.
+Tip 1 interferonlar genellikle viral enfeksiyonlarla indüklenir; alfayı lökositler, betayı fibroblast ve epitel hücreleri sentezler.
+Gama ise çoğunlukla aktive te hücrelerinin ürünüdür.
 
-İnterferonlar makrofaj, en ka hücresi ve sitotoksik te lenfosit aktivasyonu dahil bağışıklığı artırıcı özelliklere sahiptir. Burası önemli, endikasyonları karıştırmayın: interferon alfa saçaklı hücreli lösemi, kronik miyelojen lösemi, malign melanom ve Kaposi sarkomu gibi neoplazmalarda ve hepatit be ile hepatit ce enfeksiyonlarında kullanılır. İnterferon beta multipl sklerozda onaylıdır. İnterferon gama kronik granülomatöz hastalıkta, interlökin iki ise metastatik böbrek hücreli karsinom ve malign melanomda onaylıdır.
+İnterferonlar makrofaj, en ka hücresi ve sitotoksik te lenfosit aktivasyonu dahil bağışıklığı artırıcı özelliklere sahiptir.
+Burası önemli, endikasyonları karıştırmayın: interferon alfa saçaklı hücreli lösemi, kronik miyelojen lösemi, malign melanom ve Kaposi sarkomu gibi neoplazmalarda ve Hepatit B ile Hepatit C enfeksiyonlarında kullanılır.
+İnterferon beta multipl sklerozda onaylıdır.
+İnterferon gama kronik granülomatöz hastalıkta, interlökin iki ise metastatik böbrek hücreli karsinom ve malign melanomda onaylıdır.
 
-İmmünomodülasyonun yeni uygulamalarından biri, interlökin bir ve tümör nekroz faktörü alfa gibi sitokinlerin patogenezde rol aldığı septik şok ve inflamatuvar hastalıklarda sitokin inhibitörlerinin kullanılmasıdır. Anakinra, hastalık modifiye edici antiromatizmal ilaçlara yanıt vermeyen erişkin romatoid artritte onaylıdır. Özellikle ailesel Akdeniz ateşinin sık görüldüğü ülkelerde, kolşisine yanıtsız hastalar düşünüldüğünde önemli bir hasta grubuna büyük avantaj sağlamıştır. Kanakinumab, interlökin bir betaya karşı insan rekombinant monoklonal antikorudur; dirençli ailesel Akdeniz ateşi, diğer otoinflamatuvar periyodik ateş sendromları ve son zamanlarda akut gutta kullanılır. Tek uygulama yolu deri altı enjeksiyondur.
+İmmünomodülasyonun yeni uygulamalarından biri, interlökin bir ve tümör nekroz faktörü alfa gibi sitokinlerin patogenezde rol aldığı septik şok ve inflamatuvar hastalıklarda sitokin inhibitörlerinin kullanılmasıdır.
+Anakinra, hastalık modifiye edici antiromatizmal ilaçlara yanıt vermeyen erişkin romatoid artritte onaylıdır.
+Özellikle ailesel Akdeniz ateşinin sık görüldüğü ülkelerde, kolşisine yanıtsız hastalar düşünüldüğünde önemli bir hasta grubuna büyük avantaj sağlamıştır.
+Kanakinumab, interlökin bir betaya karşı insan rekombinant monoklonal antikorudur; dirençli ailesel Akdeniz ateşi, diğer otoinflamatuvar periyodik ateş sendromları ve son zamanlarda akut gutta kullanılır.
+Tek uygulama yolu deri altı enjeksiyondur.
 

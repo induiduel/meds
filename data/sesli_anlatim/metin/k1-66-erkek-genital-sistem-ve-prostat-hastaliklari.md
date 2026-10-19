@@ -3,7 +3,11 @@
 @@ Penis Şekil Bozuklukları
 Penisin şekil bozukluklarıyla başlıyoruz. Hipospadiasta üretranın dış açıklığı penisin ventral, yani alt yüzüne açılır. Yaklaşık üç yüz canlı erkek doğumda bir görülür. Açıklık genellikle distaldedir, yani uca yakındır; bazen ise proksimalde, köke yakın yerleşir. Epispadiasta ise durum tam tersidir; üretral açıklık dorsal, yani üst yüzdedir. İkisini karıştırmamak için şöyle düşünün: hipo aşağı, epi yukarı demektir. Her iki anomalinin ortak komplikasyonu meatus darlığıdır. Dış açıklık dar olduğunda idrar yolu tıkanır, idrar göllenir ve bunun sonucunda idrar yolu enfeksiyonu riski artar.
 
-Hipospadias tek başına kalmayabilir. Kasık fıtığı, inmemiş testis yani kriptorşizm ve diğer genitoüriner anomalilerle birlikte görülebilir. Bu yüzden hipospadiaslı bir çocukta testislerin yerini ve diğer ürogenital yapıları mutlaka değerlendirmek gerekir. Klinik önemi iki başlıkta toplanır: idrar akımının bozulması ve ileride fertilite sorunları. Fertilite sorunu, ejakülatın yönünün değişmesi ve darlık nedeniyle ortaya çıkar.
+Hipospadias tek başına kalmayabilir.
+Kasık fıtığı, inmemiş testis yani kriptorşizm ve diğer genitoüriner anomalilerle birlikte görülebilir.
+Bu yüzden hipospadiaslı bir çocukta testislerin yerini ve diğer ürogenital yapıları mutlaka değerlendirmek gerekir.
+Klinik önemi iki başlıkta toplanır: idrar akımının bozulması ve ileride fertilite sorunları.
+Fertilite sorunu, ejakülatın yönünün değişmesi ve darlık nedeniyle ortaya çıkar.
 
 
 @@ Balanit, Balanopostit ve Fimozis
@@ -11,15 +15,31 @@ Penisin inflamatuvar hastalıklarına geçelim. Balanit, penis başının yani g
 
 
 @@ Penisin Neoplazileri
-Penisin malign tümörlerinin %90 beşi skuamöz hücreli karsinomdur. Yüksek kaynaklı ülkelerde çok nadirdir; düşük kaynaklı ülkelerde ise erkek kanserlerinin %10 ile yirmisini oluşturur. Tipik hasta kırk yaş üzerindeki sünnetsiz erkektir. Penis skuamöz hücreli karsinomunun risk faktörlerini sayalım: düşük sosyoekonomik durum, yetersiz hijyen, sigara içme, kronik inflamasyon ve HPV, yani insan papilloma virüsü enfeksiyonu. Virüs tipleri içinde özellikle yüksek riskli tip on altı ve on sekiz önemlidir. Görüyorsunuz, sünnetsizlik ve kötü hijyen hem balanopostitin hem de karsinomun ortak zeminidir.
+Penisin malign tümörlerinin %95'i skuamöz hücreli karsinomdur. Yüksek kaynaklı ülkelerde çok nadirdir; düşük kaynaklı ülkelerde ise erkek kanserlerinin %10 ile yirmisini oluşturur. Tipik hasta 40 yaş üzerindeki sünnetsiz erkektir. Penis skuamöz hücreli karsinomunun risk faktörlerini sayalım: düşük sosyoekonomik durum, yetersiz hijyen, sigara içme, kronik inflamasyon ve HPV, yani İnsan papilloma virüsü (HPV) (HPV) enfeksiyonu. Virüs tipleri içinde özellikle yüksek riskli tip on altı ve on sekiz önemlidir. Görüyorsunuz, sünnetsizlik ve kötü hijyen hem balanopostitin hem de karsinomun ortak zeminidir.
 
-Penis intraepiteliyal neoplazisi, kısaca pe i en, penis skuamöz hücreli karsinomunun öncü lezyonudur. Tipik olarak yaşlı erkeklerde, penis gövdesi ve skrotumda görülür; makroskopik olarak tek bir plak şeklindedir. Histolojide epidermisin tüm kalınlığı boyunca displazi vardır, ancak alttaki stromaya invazyon yoktur. Hastaların yaklaşık yüzde onunda sonraki yıllarda invaziv karsinom gelişir.
+Penis intraepiteliyal neoplazisi, kısaca pe i en, penis skuamöz hücreli karsinomunun öncü lezyonudur.
+Tipik olarak yaşlı erkeklerde, penis gövdesi ve skrotumda görülür; makroskopik olarak tek bir plak şeklindedir.
+Histolojide epidermisin tüm kalınlığı boyunca displazi vardır, ancak alttaki stromaya invazyon yoktur.
+Hastaların yaklaşık yüzde onunda sonraki yıllarda invaziv karsinom gelişir.
 
-Şekil on altı noktası birde yüksek dereceli bir penis intraepiteliyal neoplazisi görüyorsunuz. Sağlam bazal membranın üzerindeki epitel gecikmiş olgunlaşma ve düzensizlik gösterir. Daha yüksek büyütmede biri bazal tabakanın üzerinde olmak üzere birkaç mitoz figürü dikkati çeker. Kilit nokta şudur: bazal membran sağlamdır, yani lezyon henüz invaziv değildir.
+Şekil on altı noktası birde yüksek dereceli bir penis intraepiteliyal neoplazisi görüyorsunuz.
+Sağlam bazal membranın üzerindeki epitel gecikmiş olgunlaşma ve düzensizlik gösterir.
+Daha yüksek büyütmede biri bazal tabakanın üzerinde olmak üzere birkaç mitoz figürü dikkati çeker.
+Kilit nokta şudur: bazal membran sağlamdır, yani lezyon henüz invaziv değildir.
 
-İnvaziv skuamöz hücreli karsinom tipik olarak penis başında ve sünnet derisinde yerleşir. Başlangıçta gri, kabuklu, papüler bir lezyondur. İnvazyon geliştikçe düzensiz kenarlı, sert, ülseratif bir kitleye dönüşür. Şekil on altı noktası ikide penis başının ülserleşmiş, infiltratif bir kitle tarafından deforme edildiğini görüyorsunuz. HPV ilişkisinde yine özellikle tip on altı ve on sekiz öne çıkar.
+İnvaziv skuamöz hücreli karsinom tipik olarak penis başında ve sünnet derisinde yerleşir.
+Başlangıçta gri, kabuklu, papüler bir lezyondur.
+İnvazyon geliştikçe düzensiz kenarlı, sert, ülseratif bir kitleye dönüşür.
+Şekil on altı noktası ikide penis başının ülserleşmiş, infiltratif bir kitle tarafından deforme edildiğini görüyorsunuz.
+HPV ilişkisinde yine özellikle tip on altı ve on sekiz öne çıkar.
 
-Histolojik olarak tümör çoğunlukla keratinize skuamöz hücreli karsinomdur. Prognoz tümör evresiyle yakından ilişkilidir. Kötü prognostik özellikler şunlardır: üç ya da daha fazla veya bilateral kasık lenf nodu metastazı ve pelvik lenf nodu tutulumu. Verrüköz karsinom, penis skuamöz karsinomunun HPV ile ilişkisiz varyantıdır. Papiller yapıdadır, neredeyse hiç sitolojik atipi göstermez ve kenarları yuvarlak, derine doğru iten tarzdadır. Davranışı da buna uygundur: lokal invazivdir ama metastaz yapmaz. Yani masum görünen ama yerel olarak ilerleyen bir tümördür.
+Histolojik olarak tümör çoğunlukla keratinize skuamöz hücreli karsinomdur.
+Prognoz tümör evresiyle yakından ilişkilidir.
+Kötü prognostik özellikler şunlardır: üç ya da daha fazla veya bilateral kasık lenf nodu metastazı ve pelvik lenf nodu tutulumu.
+Verrüköz karsinom, penis skuamöz karsinomunun HPV ile ilişkisiz varyantıdır.
+Papiller yapıdadır, neredeyse hiç sitolojik atipi göstermez ve kenarları yuvarlak, derine doğru iten tarzdadır.
+Davranışı da buna uygundur: lokal invazivdir ama metastaz yapmaz.
+Yani masum görünen ama yerel olarak ilerleyen bir tümördür.
 
 
 @@ Skrotum ve Skrotal Sıvı Birikimleri
@@ -27,144 +47,293 @@ Skrotum ve testise geçiyoruz. Skrotum derisinde lokal mantar enfeksiyonları ve
 
 
 @@ Kriptorşizm
-Kriptorşizm, testisin skrotuma tam ya da kısmen inmemesidir. Bir yaşındaki erkek çocukların yaklaşık yüzde birinde görülür. Sonuçları üç başlıkta toplanır: testis fonksiyon bozukluğu, özellikle bilateral olgularda infertilite ve testis kanseri riskinde artış. Normal inişi hatırlayalım. Gebeliğin 3. ayında testis karından pelvise iner; gebeliğin son iki ayında ise inguinal kanaldan geçerek skrotuma ulaşır. Prematüre bebekte doğumda iniş henüz tamamlanmamış olabilir. Bu yüzden kriptorşizm tanısı için bir yaşına kadar beklenir. Olguların yaklaşık %20 beşi bilateraldir.
+Kriptorşizm, testisin skrotuma tam ya da kısmen inmemesidir. 1 yaşındaki erkek çocukların yaklaşık yüzde birinde görülür. Sonuçları üç başlıkta toplanır: testis fonksiyon bozukluğu, özellikle bilateral olgularda infertilite ve testis kanseri riskinde artış. Normal inişi hatırlayalım. Gebeliğin 3. ayında testis karından pelvise iner; gebeliğin son iki ayında ise inguinal kanaldan geçerek skrotuma ulaşır. Prematüre bebekte doğumda iniş henüz tamamlanmamış olabilir. Bu yüzden kriptorşizm tanısı için bir yaşına kadar beklenir. Olguların yaklaşık %25'i bilateraldir.
 
-İnmemiş testis zamanla atrofik hale gelir ve iki taraflı kriptorşizm kısırlıkla sonuçlanır. Dikkat edin, tek taraflı kriptorşizmde bile karşı taraftaki normal yerleşimli testiste atrofi ve kanser riski artar. Testis kanserli olguların yaklaşık yüzde onunda kriptorşizm öyküsü vardır. Karşı testisin de etkilenmesi bize muhtemel mekanizmayı anlatır: sorun iniş bozukluğunun kendisinden çok intrensek, yani gonadın kendisinde bulunan bir defekttir.
+İnmemiş testis zamanla atrofik hale gelir ve iki taraflı kriptorşizm kısırlıkla sonuçlanır.
+Dikkat edin, tek taraflı kriptorşizmde bile karşı taraftaki normal yerleşimli testiste atrofi ve kanser riski artar.
+Testis kanserli olguların yaklaşık yüzde onunda kriptorşizm öyküsü vardır.
+Karşı testisin de etkilenmesi bize muhtemel mekanizmayı anlatır: sorun iniş bozukluğunun kendisinden çok intrensek, yani gonadın kendisinde bulunan bir defekttir.
 
-Morfolojiye bakalım. İnmemiş testis küçük ve serttir. İki yaşından sonra histolojide bazal membran kalınlaşması, spermatogonyaların kaybı ve interstisyel stromada artış görülür; Leydig hücreleri ise görece belirgin kalır. Germ hücreli neoplazi in situ sıklıkla mevcuttur ve gelecekteki germ hücreli tümörlerin öncüsüdür. Bu nedenle altı ile on iki ay arasında orşiopeksi önerilir. Orşiopeksi, doğumdan sonra skrotuma inmemiş olan bir ya da iki testisin cerrahi olarak torbaya indirilmesi ve sabitlenmesidir.
+Morfolojiye bakalım.
+İnmemiş testis küçük ve serttir.
+İki yaşından sonra histolojide bazal membran kalınlaşması, spermatogonyaların kaybı ve interstisyel stromada artış görülür; Leydig hücreleri ise görece belirgin kalır.
+Germ hücreli neoplazi in situ sıklıkla mevcuttur ve gelecekteki germ hücreli tümörlerin öncüsüdür.
+Bu nedenle altı ile 12 ay arasında orşiopeksi önerilir.
+Orşiopeksi, doğumdan sonra skrotuma inmemiş olan bir ya da iki testisin cerrahi olarak torbaya indirilmesi ve sabitlenmesidir.
 
 
 @@ Testis ve Epididimin Enflamatuvar Lezyonları
 Testis ve epididimin enflamasyonu çoğunlukla epididimisten başlar ve testise yayılır. Nedenler dört başlıkta toplanır: spesifik olmayan epididimit ve orşit, kabakulak orşiti, tüberküloz ve otoimmun orşit. Spesifik olmayan epididimit ve orşit alt üriner sistem enfeksiyonuyla başlar. Enfeksiyon vas deferens boyunca ya da spermatik kordun lenfatikleri aracılığıyla epididim ve testise ulaşır. Klinikte testis şiş ve hassastır; histolojide nötrofil ağırlıklı akut inflamasyon görülür. Burası önemli, bu bilgi çıkmış sorularda soruldu: bakteriyel orşit kan yoluyla değil, idrar yolundan yukarı doğru yayılımla oluşur. Başlangıç noktası alt üriner sistem enfeksiyonu olduğu için etkenler de idrar yolu enfeksiyonu yapan bakterilerdir; soruda doğru kabul edilen ifade, etkenin e koli ve diğer üropatojen bakteriler olmasıdır. Parotitten birkaç gün sonra ortaya çıkan tablo ise bakteriyel orşit değil, kabakulak orşitidir.
 
-Kabakulakta çocuklarda testis tutulumu nadirdir; ama ergenlik sonrası erkeklerin %20 ile otuzunda testis tutulur. Parotit başladıktan yaklaşık bir hafta sonra akut interstisyel orşit gelişir. Buna rağmen kısırlık nadirdir. Testis tüberkülozu ise granülomatöz inflamasyonun en sık nedenidir. Genellikle epididimisten testise yayılır ve histolojide klasik tüberküloz granülomları görülür. Otoimmun orşit bazen travma sonrasında, normalde bağışıklık sisteminden yalıtılmış olan testis antijenlerinin açığa çıkmasını takiben gelişir. Histolojide granülomatöz inflamasyon vardır. Klinik sonuç testis hacminde azalma ve infertilite riskidir.
+Kabakulakta çocuklarda testis tutulumu nadirdir; ama ergenlik sonrası erkeklerin %20 ile otuzunda testis tutulur.
+Parotit başladıktan yaklaşık 1 hafta sonra akut interstisyel orşit gelişir.
+Buna rağmen kısırlık nadirdir.
+Testis tüberkülozu ise granülomatöz inflamasyonun en sık nedenidir.
+Genellikle epididimisten testise yayılır ve histolojide klasik tüberküloz granülomları görülür.
+Otoimmun orşit bazen travma sonrasında, normalde bağışıklık sisteminden yalıtılmış olan testis antijenlerinin açığa çıkmasını takiben gelişir.
+Histolojide granülomatöz inflamasyon vardır.
+Klinik sonuç testis hacminde azalma ve infertilite riskidir.
 
 
 @@ Testis Torsiyonu
 Testis torsiyonunda spermatik kord kendi etrafında bükülür. Bükülme önce ince duvarlı venleri kapatır, venöz drenaj tıkanır; daha kalın duvarlı arterler ise nispeten açık kalır. Kan gelmeye devam eder ama çıkamaz; sonuç şiddetli venöz konjesyon ve enfarkttır. İki tipi vardır: intrauterin dönemde ya da doğumdan hemen sonra görülen neonatal torsiyon ve genç ergen erkeklerde sık görülen erişkin torsiyonu.
 
-Şekildeki testiste koyu renk değişikliğini görüyorsunuz. Bu renk, spermatik kordun bükülmesi venöz drenajı kestiğinde meydana gelen kanama ve enfarktüsün sonucudur. Erişkin torsiyonunun nedeni, testisin skrotuma fiksasyonunda bilateral anatomik bir kusurdur; testisin mobilitesi artmıştır. Klinikte ani başlayan, şiddetli testis ağrısı vardır ve bu bir ürolojik acil durumdur. İlk altı saat içinde manuel detorsiyon yapılırsa testis yaşamı korunabilir; sonrasında kalıcı hasar riski yüksektir. Kusur iki taraflı olduğu için önlem olarak karşı tarafa da orşiopeksi yapılır. Burası önemli, bu bilgi çıkmış sorularda soruldu: akut enfeksiyöz orşit tablosuyla gelen genç bir erkekte atlanmaması gereken en önemli ayırıcı tanı testis torsiyonudur. Çünkü orşit beklenebilir, ama torsiyonda saatlerle yarışırız.
+Şekildeki testiste koyu renk değişikliğini görüyorsunuz.
+Bu renk, spermatik kordun bükülmesi venöz drenajı kestiğinde meydana gelen kanama ve enfarktüsün sonucudur.
+Erişkin torsiyonunun nedeni, testisin skrotuma fiksasyonunda bilateral anatomik bir kusurdur; testisin mobilitesi artmıştır.
+Klinikte ani başlayan, şiddetli testis ağrısı vardır ve bu bir ürolojik acil durumdur.
+İlk 6 saat içinde manuel detorsiyon yapılırsa testis yaşamı korunabilir; sonrasında kalıcı hasar riski yüksektir.
+Kusur iki taraflı olduğu için önlem olarak karşı tarafa da orşiopeksi yapılır.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: akut enfeksiyöz orşit tablosuyla gelen genç bir erkekte atlanmaması gereken en önemli ayırıcı tanı testis torsiyonudur.
+Çünkü orşit beklenebilir, ama torsiyonda saatlerle yarışırız.
 
 
 @@ Testis Germ Hücreli Tümörleri: Genel Bakış
-Testis tümörlerinin yaklaşık %90 beşi germ hücreli tümördür ve bunların neredeyse hepsi malign davranır. Sertoli ve Leydig hücrelerinden köken alan seks kord stromal tümörler ise nadirdir ve çoğu benigndir. Bu yüzden odağımız germ hücreli tümörler. Germ hücreli tümörler en sık genç erişkin erkeklerde görülür. Afrika ve Asya'da insidans düşüktür, ancak küresel insidans artmaktadır. Risk artıran durumlar şunlardır: aile öyküsü, ki baba ya da oğulda tümör varsa risk dört kat, erkek kardeşte varsa sekiz ile on kat artar; her iki testiste de riski artıran kriptorşizm; androjen duyarsızlığı ve gonadal disgenezi gibi interseks sendromları; ve önceden geçirilmiş germ hücreli tümör, ki bu durumda karşı testiste risk artar.
+Testis tümörlerinin yaklaşık %95'i germ hücreli tümördür ve bunların neredeyse hepsi malign davranır. Sertoli ve Leydig hücrelerinden köken alan seks kord stromal tümörler ise nadirdir ve çoğu benigndir. Bu yüzden odağımız germ hücreli tümörler. Germ hücreli tümörler en sık genç erişkin erkeklerde görülür. Afrika ve Asya'da insidans düşüktür, ancak küresel insidans artmaktadır. Risk artıran durumlar şunlardır: aile öyküsü, ki baba ya da oğulda tümör varsa risk 4 kat, erkek kardeşte varsa sekiz ile 10 kat artar; her iki testiste de riski artıran kriptorşizm; androjen duyarsızlığı ve gonadal disgenezi gibi interseks sendromları; ve önceden geçirilmiş germ hücreli tümör, ki bu durumda karşı testiste risk artar.
 
-Germ hücreli neoplazi in situ, ergenlik sonrası germ hücre tümörlerinin öncüsüdür. Kriptorşid testiste sıktır ve tümörün bitişiğindeki normal görünen dokuda bulunur. Genetik olarak bu tümörlerde on 2. kromozomun kısa kolunda ek kopyalar vardır; bu çoğunlukla izokromozom on iki pe şeklindedir. Tümörlerin yaklaşık %20 beşinde kit onkogeni mutasyonu bulunur.
+Germ hücreli neoplazi in situ, ergenlik sonrası germ hücre tümörlerinin öncüsüdür.
+Kriptorşid testiste sıktır ve tümörün bitişiğindeki normal görünen dokuda bulunur.
+Genetik olarak bu tümörlerde 12. kromozomun kısa kolunda ek kopyalar vardır; bu çoğunlukla izokromozom on iki pe şeklindedir.
+Tümörlerin yaklaşık %25'inde kit onkogeni mutasyonu bulunur.
 
-Ana sınıflama ikiye ayrılır: seminom ve nonseminomatöz germ hücreli tümörler. Seminom testis germ hücreli tümörlerinin yaklaşık yüzde ellisini oluşturur ve overin disgerminomuna, santral sinir sisteminin germinomuna benzer. Nonseminomatöz grupta embriyonel karsinom, yolk kesesi tümörü, koryokarsinom, teratom ve karışık tipler yer alır.
+Ana sınıflama ikiye ayrılır: seminom ve nonseminomatöz germ hücreli tümörler.
+Seminom testis germ hücreli tümörlerinin yaklaşık yüzde ellisini oluşturur ve overin disgerminomuna, santral sinir sisteminin germinomuna benzer.
+Nonseminomatöz grupta embriyonel karsinom, yolk kesesi tümörü, koryokarsinom, teratom ve karışık tipler yer alır.
 
 
 @@ Seminom ve Spermatositik Tümör
 Seminom makroskopik olarak iyi sınırlı, yumuşak, gri beyaz bir kitledir ve çoğunlukla testisten dışa doğru çıkıntı yapar. Büyük tümörlerde koagülatif nekroz odakları görülebilir. Histolojide büyük, homojen hücreler, belirgin hücre sınırları, berrak ve glikojenden zengin sitoplazma, yuvarlak çekirdek ve belirgin nükleol vardır. Tümör ince fibröz septalarla bölünür ve septalarda lenfosit infiltrasyonu bulunur; bazen granülomatöz reaksiyon da eşlik eder.
 
-Şekil on altı noktası üçte seminomun iyi sınırlanmış, soluk, homojen bir kitle olarak göründüğünü izliyorsunuz. Şekil on altı noktası dörtte ise mikroskopide belirgin hücre sınırları, soluk çekirdekler, belirgin nükleoller ve seyrek lenfositik infiltrasyon gösteren büyük hücreler görülüyor. Seminom vakalarının yaklaşık %10 beşinde sinsityotrofoblast hücreleri bulunur. Bu olgularda serum hCG, yani insan koryonik gonadotropini minimal düzeyde artar. Bu artış erken evrede olguların yaklaşık %10 ile on beşinde, yaygın hastalıkta ise %30 ile ellisinde görülür. Sinsityotrofoblast varlığı prognozu değiştirmez ve hCG düzeyleri koryokarsinomdakinden çok daha düşüktür.
+Şekil on altı noktası üçte seminomun iyi sınırlanmış, soluk, homojen bir kitle olarak göründüğünü izliyorsunuz.
+Şekil on altı noktası dörtte ise mikroskopide belirgin hücre sınırları, soluk çekirdekler, belirgin nükleoller ve seyrek lenfositik infiltrasyon gösteren büyük hücreler görülüyor.
+Seminom vakalarının yaklaşık %15'inde sinsityotrofoblast hücreleri bulunur.
+Bu olgularda serum hCG, yani insan koryonik gonadotropini minimal düzeyde artar.
+Bu artış erken evrede olguların yaklaşık %10 ile on beşinde, yaygın hastalıkta ise %30 ile ellisinde görülür.
+Sinsityotrofoblast varlığı prognozu değiştirmez ve hCG düzeyleri koryokarsinomdakinden çok daha düşüktür.
 
-Spermatositik tümörün önceki adı spermatositik seminomdur. Tüm germ hücreli neoplazilerin %1 ile ikisini oluşturur ve tipik hasta altmış beş yaş üzerindeki erkektir. Yavaş büyür, metastaz yapmaz ve cerrahi tedaviden sonra prognozu mükemmeldir. Genetik olarak klasik seminomdan ayrılır: germ hücreli neoplazi in situ ile ilişkili değildir, izokromozom on iki pe taşımaz; karakteristik değişikliği 9. kromozomun uzun kolunun kazanımıdır.
+Spermatositik tümörün önceki adı spermatositik seminomdur.
+Tüm germ hücreli neoplazilerin %1 ile ikisini oluşturur ve tipik hasta 65 yaş üzerindeki erkektir.
+Yavaş büyür, metastaz yapmaz ve cerrahi tedaviden sonra prognozu mükemmeldir.
+Genetik olarak klasik seminomdan ayrılır: germ hücreli neoplazi in situ ile ilişkili değildir, izokromozom on iki pe taşımaz; karakteristik değişikliği 9. kromozomun uzun kolunun kazanımıdır.
 
 
 @@ Embriyonel Karsinom ve Yolk Kesesi Tümörü
 Embriyonel karsinom kötü sınırlı, invaziv bir kitledir; sıklıkla kanama ve nekroz içerir ve primer odak küçük olabilir. Histolojide büyük tümör hücreleri, bazofilik sitoplazma, belirsiz hücre sınırları, büyük çekirdek ve belirgin nükleol vardır. Hücreler katı tabakalar, ilkel bez yapıları ve düzensiz papiller yapılar oluşturur. Çoğu olguda diğer germ hücre bileşenleriyle karışık bulunur.
 
-Şekil on altı noktası beşte, seminomun homojen görünümünün aksine, embriyonel karsinomun hemorajik olduğunu görüyorsunuz. Şekil on altı noktası altıda ise farklılaşmamış hücre tabakaları, ilkel bez benzeri yapılar ve büyük, hiperkromatik çekirdekler dikkat çeker. Seminomda belirgin hücre sınırı ve berrak sitoplazma, embriyonel karsinomda belirsiz sınır ve bazofilik sitoplazma; bu karşıtlığı unutmayın.
+Şekil on altı noktası beşte, seminomun homojen görünümünün aksine, embriyonel karsinomun hemorajik olduğunu görüyorsunuz.
+Şekil on altı noktası altıda ise farklılaşmamış hücre tabakaları, ilkel bez benzeri yapılar ve büyük, hiperkromatik çekirdekler dikkat çeker.
+Seminomda belirgin hücre sınırı ve berrak sitoplazma, embriyonel karsinomda belirsiz sınır ve bazofilik sitoplazma; bu karşıtlığı unutmayın.
 
-Yolk kesesi tümörü üç yaş altındaki çocuklarda en sık görülen primer testis tümörüdür ve bu yaş grubunda prognozu çok iyidir. Ergenlik sonrasında nadiren saf olarak görülür; çoğunlukla embriyonel karsinom ve diğer bileşenlerle karışıktır. Histolojide düşük kübik ile kolumnar arasında hücreler, mikrokistik ve retiküler yani dantel benzeri patern, tabakalar, bezler ve papiller yapılar bulunur. En karakteristik bulgu Şiller Düval cisimcikleridir; bunlar ilkel glomerül benzeri yapılardır. Şekil on altı noktası yedide gevşek, mikrokistik doku alanları ve gelişmekte olan bir glomerülü andıran bu papiller yapıları görüyorsunuz. Yolk kesesi tümöründe sitoplazmada eozinofilik hiyalin globüller bulunur. Bunlar alfa bir antitripsin ve alfa fetoprotein içerir ve immünohistokimya ile gösterilir. Serum alfa fetoproteini yolk kesesi tümörünün laboratuvar belirtecidir; ancak bazı embriyonel karsinom ve teratomlarda da yükselebilir.
+Yolk kesesi tümörü 3 yaş altındaki çocuklarda en sık görülen primer testis tümörüdür ve bu yaş grubunda prognozu çok iyidir.
+Ergenlik sonrasında nadiren saf olarak görülür; çoğunlukla embriyonel karsinom ve diğer bileşenlerle karışıktır.
+Histolojide düşük kübik ile kolumnar arasında hücreler, mikrokistik ve retiküler yani dantel benzeri patern, tabakalar, bezler ve papiller yapılar bulunur.
+En karakteristik bulgu Şiller Düval cisimcikleridir; bunlar ilkel glomerül benzeri yapılardır.
+Şekil on altı noktası yedide gevşek, mikrokistik doku alanları ve gelişmekte olan bir glomerülü andıran bu papiller yapıları görüyorsunuz.
+Yolk kesesi tümöründe sitoplazmada eozinofilik hiyalin globüller bulunur.
+Bunlar alfa bir antitripsin ve alfa fetoprotein içerir ve immünohistokimya ile gösterilir.
+Serum alfa fetoproteini yolk kesesi tümörünün laboratuvar belirtecidir; ancak bazı embriyonel karsinom ve teratomlarda da yükselebilir.
 
 
 @@ Koryokarsinom ve Teratom
 Koryokarsinom çok malign bir germ hücreli tümördür ve plasental trofoblast benzeri hücrelere farklılaşır. Klinikte ilginç bir paradoks vardır: primer testis kitlesi küçüktür, ama tanı anında akciğer, beyin, karaciğer gibi organlarda yaygın metastaz sıktır. Yapısında küçük, kübik, sitotrofoblast benzeri hücre tabakaları ve bunların üzerinde büyük, eozinofilik, sinsityotrofoblast benzeri hücreler bulunur; çok sayıda koyu ve pleomorfik çekirdek görülür. Sıklıkla şiddetli kanama ve nekroz vardır. İmmünohistokimyada sinsityotrofoblast hücreleri hCG pozitiftir ve serum hCG düzeyi her zaman yüksektir. Şekil on altı noktası sekizde tek, merkezi çekirdekli sitotrofoblastik hücreleri, eozinofilik sitoplazmaya gömülü çok sayıda koyu çekirdekli sinsityotrofoblastik hücreleri ve belirgin kanama ile nekrozu görüyorsunuz.
 
-Teratom, germ hücrelerinin birden çok somatik hat boyunca farklılaşmasıdır ve her yaşta görülebilir. Burada yaş çok belirleyicidir. Ergenlik öncesi, yani prepubertal tip teratomda saf teratom yaygındır, germ hücreli neoplazi in situ ya da izokromozom on iki pe yoktur ve klinik seyir benigndir. Erişkinde ise saf teratom nadirdir, %2 ile üç arasındadır; çoğunlukla karışık tümörlerin bir parçasıdır ve genellikle malign kabul edilir. Burası önemli, bu bilgi çıkmış sorularda soruldu: puberte öncesinde benign, puberte sonrasında malign davranan testis tümörü teratomdur.
+Teratom, germ hücrelerinin birden çok somatik hat boyunca farklılaşmasıdır ve her yaşta görülebilir.
+Burada yaş çok belirleyicidir.
+Ergenlik öncesi, yani prepubertal tip teratomda saf teratom yaygındır, germ hücreli neoplazi in situ ya da izokromozom on iki pe yoktur ve klinik seyir benigndir.
+Erişkinde ise saf teratom nadirdir, %2 ile üç arasındadır; çoğunlukla karışık tümörlerin bir parçasıdır ve genellikle malign kabul edilir.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: puberte öncesinde benign, puberte sonrasında malign davranan testis tümörü teratomdur.
 
-Makroskopik olarak teratom heterojen bir kitledir; solid ve kistik alanlarla kıkırdak adacıkları içerir. Mikroskopide sinir dokusu, kas demetleri, kıkırdak adacıkları, deri ekleriyle birlikte ya da onlarsız skuamöz epitel, tiroid benzeri dokular, bronş epiteli, bağırsak duvarı ve beyin dokusu gibi yapılar görülebilir. Bu elemanlar olgun yani erişkin tip doku olabileceği gibi, olgunlaşmamış yani embriyonik ya da fetal tip doku da olabilir.
+Makroskopik olarak teratom heterojen bir kitledir; solid ve kistik alanlarla kıkırdak adacıkları içerir.
+Mikroskopide sinir dokusu, kas demetleri, kıkırdak adacıkları, deri ekleriyle birlikte ya da onlarsız skuamöz epitel, tiroid benzeri dokular, bronş epiteli, bağırsak duvarı ve beyin dokusu gibi yapılar görülebilir.
+Bu elemanlar olgun yani erişkin tip doku olabileceği gibi, olgunlaşmamış yani embriyonik ya da fetal tip doku da olabilir.
 
-Şekillerde koronal kesilmiş küçük bir testis tümörünün mavimsi kıkırdak ile kırmızı ve beyaz tümör dokusunun karışımından oluştuğunu görüyorsunuz; mikroskopide çoğunlukla teratom, yer yer de embriyonel karsinom alanları vardır. Şekil on altı noktası dokuzda ise düzensiz biçimde bir araya gelmiş bezler, kıkırdak, düz kas ve olgunlaşmamış stroma izleniyor. Somatik tipte maligniteli teratomda teratomun içinde germ hücresi dışı bir malignite gelişir. Örnekler skuamöz hücreli karsinom, adenokarsinom ve sarkomlardır. Bu tümörler germ hücreli tümörlere etkili olan kemoterapiye dirençlidir; tek kür umudu cerrahi rezeksiyondur.
+Şekillerde koronal kesilmiş küçük bir testis tümörünün mavimsi kıkırdak ile kırmızı ve beyaz tümör dokusunun karışımından oluştuğunu görüyorsunuz; mikroskopide çoğunlukla teratom, yer yer de embriyonel karsinom alanları vardır.
+Şekil on altı noktası dokuzda ise düzensiz biçimde bir araya gelmiş bezler, kıkırdak, düz kas ve olgunlaşmamış stroma izleniyor.
+Somatik tipte maligniteli teratomda teratomun içinde germ hücresi dışı bir malignite gelişir.
+Örnekler skuamöz hücreli karsinom, adenokarsinom ve sarkomlardır.
+Bu tümörler germ hücreli tümörlere etkili olan kemoterapiye dirençlidir; tek kür umudu cerrahi rezeksiyondur.
 
 
 @@ Testis Tümörlerinde Klinik, Yayılım ve Belirteçler
 Testis tümörlerinin en sık bulgusu ağrısız testis kitlesidir. Hidroselden farklı olarak bu kitle transilluminasyon negatiftir, çünkü solid dokudan ışık geçmez. Biyopsi tümörün yayılması riskini taşır ve skrotal derinin de çıkarılmasını gerektirir. Bu nedenle katı testis kitlelerinde standart yaklaşım, kitleyi malign kabul edip inguinal yoldan radikal orşiektomi yapmaktır.
 
-Yayılım açısından seminom ile nonseminomatöz tümörleri karşılaştıralım. Seminom genellikle uzun süre testisle sınırlı kalır ve tanıda büyük kitleler oluşturabilir. İlk metastazını iliak ve paraaortik lenf nodlarına yapar; hematojen metastaz geç dönemde olur. Nonseminomatöz tümörlerde ise lenfatik ve hematojen yayılım daha erkendir; en sık metastaz yerleri akciğer ve karaciğerdir. Önemli bir nokta, metastazın histolojisinin primer tümörden farklı olabilmesidir.
+Yayılım açısından seminom ile nonseminomatöz tümörleri karşılaştıralım.
+Seminom genellikle uzun süre testisle sınırlı kalır ve tanıda büyük kitleler oluşturabilir.
+İlk metastazını iliak ve paraaortik lenf nodlarına yapar; hematojen metastaz geç dönemde olur.
+Nonseminomatöz tümörlerde ise lenfatik ve hematojen yayılım daha erkendir; en sık metastaz yerleri akciğer ve karaciğerdir.
+Önemli bir nokta, metastazın histolojisinin primer tümörden farklı olabilmesidir.
 
-Tümör belirteçleri iki nedenle önemlidir: tanıya yardımcı olurlar ve tedavi yanıtını izlemeyi sağlarlar. Önemli serum belirteçleri hCG, alfa fetoprotein ve laktat dehidrogenazdır. Tablo on altı noktası bir testis tümörlerini zirve yaşı, morfolojisi ve belirteçleriyle özetliyor. Seminom en sık kırk ile elli yaşlarında görülür; açık sitoplazmalı, uniform poligonal hücre tabakaları ve stromada lenfositler vardır; hastaların yüzde onunda hCG yüksektir. Embriyonel karsinom yirmi ile otuz yaşlarında görülür; kötü diferansiye, polimorf hücreler kordonlar, tabakalar ya da papiller yapılar oluşturur, çoğunda bir miktar yolk kesesi ve koryokarsinom hücresi bulunur ve alfa fetoprotein yüksek olabilir. Spermatositik tümör elli ile altmış yaşlarında görülür; küçük, orta ve büyük poligonal hücrelerden oluşur, inflamatuvar infiltrasyon içermez ve belirteçleri negatiftir.
+Tümör belirteçleri iki nedenle önemlidir: tanıya yardımcı olurlar ve tedavi yanıtını izlemeyi sağlarlar.
+Önemli serum belirteçleri hCG, alfa fetoprotein ve laktat dehidrogenazdır.
+Tablo on altı noktası bir testis tümörlerini zirve yaşı, morfolojisi ve belirteçleriyle özetliyor.
+Seminom en sık kırk ile elli yaşlarında görülür; açık sitoplazmalı, uniform poligonal hücre tabakaları ve stromada lenfositler vardır; hastaların yüzde onunda hCG yüksektir.
+Embriyonel karsinom yirmi ile otuz yaşlarında görülür; kötü diferansiye, polimorf hücreler kordonlar, tabakalar ya da papiller yapılar oluşturur, çoğunda bir miktar yolk kesesi ve koryokarsinom hücresi bulunur ve alfa fetoprotein yüksek olabilir.
+Spermatositik tümör elli ile altmış yaşlarında görülür; küçük, orta ve büyük poligonal hücrelerden oluşur, inflamatuvar infiltrasyon içermez ve belirteçleri negatiftir.
 
-Tablonun devamında yolk kesesi tümörünün zirve yaşı üçtür; kötü diferansiye yassı, kübik ya da kolumnar hücrelerden oluşur ve hastaların yüzde doksanında alfa fetoprotein yüksektir. Koryokarsinom yirmi ile otuz yaşlarında görülür; villus oluşumu olmaksızın sitotrofoblast ve sinsityotrofoblast hücrelerinden oluşur ve hastaların yüzde yüzünde hCG yüksektir. Teratom her yaşta görülür; ektoderm, mezoderm ve endodermin üçünden de farklı derecelerde diferansiye dokular içerir ve hastaların %20 ile yirmi beşinde alfa fetoprotein yüksektir. Mikst tümör on beş ile otuz yaşlarında görülür, sıklıkla teratom ve embriyonel karsinom içerir; belirteçleri karışıma göre değişir.
+Tablonun devamında yolk kesesi tümörünün zirve yaşı üçtür; kötü diferansiye yassı, kübik ya da kolumnar hücrelerden oluşur ve hastaların yüzde doksanında alfa fetoprotein yüksektir.
+Koryokarsinom yirmi ile otuz yaşlarında görülür; villus oluşumu olmaksızın sitotrofoblast ve sinsityotrofoblast hücrelerinden oluşur ve hastaların yüzde yüzünde hCG yüksektir.
+Teratom her yaşta görülür; ektoderm, mezoderm ve endodermin üçünden de farklı derecelerde diferansiye dokular içerir ve hastaların %20 ile yirmi beşinde alfa fetoprotein yüksektir.
+Mikst tümör on beş ile otuz yaşlarında görülür, sıklıkla teratom ve embriyonel karsinom içerir; belirteçleri karışıma göre değişir.
 
-Belirteçleri tümör tipleriyle eşleştirelim. Ha ce ge koryokarsinomda daima yüksektir; sinsityotrofoblast içeren diğer tümörlerde ise hafif yükselir. Alfa fetoprotein yolk kesesi tümörü bileşeninin varlığını gösterir; bazı embriyonel karsinom ve teratomlarda da yükselir. Laktat dehidrogenaz ise tümör kitlesiyle koreledir; nonspesifiktir ama tümör yükünün göstergesidir.
+Belirteçleri tümör tipleriyle eşleştirelim.
+Ha ce ge koryokarsinomda daima yüksektir; sinsityotrofoblast içeren diğer tümörlerde ise hafif yükselir.
+Alfa fetoprotein yolk kesesi tümörü bileşeninin varlığını gösterir; bazı embriyonel karsinom ve teratomlarda da yükselir.
+Laktat dehidrogenaz ise tümör kitlesiyle koreledir; nonspesifiktir ama tümör yükünün göstergesidir.
 
-Tedavi ve prognoza gelince, seminom radyoterapiye duyarlıdır ve kemoterapiye de iyi yanıt verir. Evre 1 ve iki seminomda orşiektomi, gerekirse radyoterapi ya da kemoterapi ile %90 beş kür sağlanır. Nonseminomatöz tümörler daha agresiftir ve erken metastaz yapar; ancak agresif kemoterapiyle yaklaşık %90 tam remisyon elde edilir. Saf embriyonel karsinom karışık tümörlerden daha agresiftir. Koryokarsinomun baskın olduğu tümörlerde ise prognoz en kötüdür.
+Tedavi ve prognoza gelince, seminom radyoterapiye duyarlıdır ve kemoterapiye de iyi yanıt verir.
+Evre 1 ve iki seminomda orşiektomi, gerekirse radyoterapi ya da kemoterapi ile %95 kür sağlanır.
+Nonseminomatöz tümörler daha agresiftir ve erken metastaz yapar; ancak agresif kemoterapiyle yaklaşık %90 tam remisyon elde edilir.
+Saf embriyonel karsinom karışık tümörlerden daha agresiftir.
+Koryokarsinomun baskın olduğu tümörlerde ise prognoz en kötüdür.
 
 
 @@ Prostatın Zonal Anatomisi ve Normal Histolojisi
 Prostata geçiyoruz. Prostatın biyolojik zonları periferik zon, geçiş zonu ve santral ile periüretral zon gibi diğer zonlardır. Lezyonların dağılımı bu zonlara göre çok farklıdır. Benign prostat hiperplazisi çoğunlukla geçiş zonunda gelişir; karsinom ise %70 ile seksen oranında periferik zondan çıkar. Bunun klinik yansıması şudur: periferik zondaki tümörler rektal muayeneyle ele gelebilir, geçiş zonu hiperplazisi ise üretrayı sardığı için üretral tıkanma semptomlarına yol açar.
 
-Normal prostat bezleri iki hücre katmanından oluşur: bazalde düz bir hücre tabakası ve üstte salgı yapan kolumnar hücreler. Stroma düz kas ve fibröz doku karışımıdır. Bu normal yapı, benign prostat hiperplazisi ile karsinomun histolojik ayırımında temel oluşturur; özellikle bazal hücre tabakasını aklınızda tutun.
+Normal prostat bezleri iki hücre katmanından oluşur: bazalde düz bir hücre tabakası ve üstte salgı yapan kolumnar hücreler.
+Stroma düz kas ve fibröz doku karışımıdır.
+Bu normal yapı, benign prostat hiperplazisi ile karsinomun histolojik ayırımında temel oluşturur; özellikle bazal hücre tabakasını aklınızda tutun.
 
 
 @@ Prostatit
 Prostatitin üç ana tipi vardır: akut bakteriyel prostatit, kronik bakteriyel prostatit ve kronik pelvik ağrı sendromu olarak da bilinen kronik abakteriyel prostatit. Bunların dışında daha nadir görülen granülomatöz prostatit vardır; prostatta sertleşme oluşturabilir ve prostat kanserini taklit eder. Prostatitte histoloji spesifik olmadığı için tanı amacıyla genelde biyopsi yapılmaz; üstelik enfekte prostatın biyopsisi sepsis riski taşır. İstisna granülomatöz prostatittir: sert nodüller oluşturduğu için kanseri ekarte etmek amacıyla biyopsi gerekebilir.
 
-Amerika Birleşik Devletleri'nde granülomatöz prostatitin en sık nedeni, yüzeyel mesane kanserinin tedavisinde mesane içine verilen BCG uygulamasıdır. Diğer nedenler arasında immün baskılı hastalarda mantar enfeksiyonları ve spesifik olmayan granülomatöz prostatit yer alır. Spesifik olmayan formda yırtılmış prostat duktus ve asinuslarından sızan sıvılara karşı yabancı cisim reaksiyonu gelişir.
+Amerika Birleşik Devletleri'nde granülomatöz prostatitin en sık nedeni, yüzeyel mesane kanserinin tedavisinde mesane içine verilen BCG uygulamasıdır.
+Diğer nedenler arasında immün baskılı hastalarda mantar enfeksiyonları ve spesifik olmayan granülomatöz prostatit yer alır.
+Spesifik olmayan formda yırtılmış prostat duktus ve asinuslarından sızan sıvılara karşı yabancı cisim reaksiyonu gelişir.
 
-Akut bakteriyel prostatit ani başlar; ateş, titreme, dizüri, perineal ağrı ve mesane çıkış tıkanıklığıyla gelir ve sepsis riski taşır. Dijital rektal muayenede prostat aşırı hassastır; bu nedenle prostata bası yapmak kontrendikedir. Tanı idrar kültürü ve klinik bulgularla konur. Kronik bakteriyel prostatitte asemptomatik dönemler ve aralıklı tekrarlayan idrar yolu enfeksiyonları vardır; bel ağrısı, dizüri, perineal ya da suprapubik rahatsızlık görülür. Tanı prostat salgısında lökosit ve kültürde bakteri gösterilerek konur. Kronik abakteriyel prostatit yani pelvik ağrı sendromu klinik olarak benzerdir, ama idrar yolu enfeksiyonu öyküsü yoktur. Prostat salgısında lökositler artmıştır, fakat kültürde bakteri üremez. Etiyolojisi bilinmez ve bir dışlama tanısıdır.
+Akut bakteriyel prostatit ani başlar; ateş, titreme, dizüri, perineal ağrı ve mesane çıkış tıkanıklığıyla gelir ve sepsis riski taşır.
+Dijital rektal muayenede prostat aşırı hassastır; bu nedenle prostata bası yapmak kontrendikedir.
+Tanı idrar kültürü ve klinik bulgularla konur.
+Kronik bakteriyel prostatitte asemptomatik dönemler ve aralıklı tekrarlayan idrar yolu enfeksiyonları vardır; bel ağrısı, dizüri, perineal ya da suprapubik rahatsızlık görülür.
+Tanı prostat salgısında lökosit ve kültürde bakteri gösterilerek konur.
+Kronik abakteriyel prostatit yani pelvik ağrı sendromu klinik olarak benzerdir, ama idrar yolu enfeksiyonu öyküsü yoktur.
+Prostat salgısında lökositler artmıştır, fakat kültürde bakteri üremez.
+Etiyolojisi bilinmez ve bir dışlama tanısıdır.
 
 
 @@ Benign Prostat Hiperplazisi: Tanım ve Patogenez
-Benign prostat hiperplazisi, stromal ve glandüler elemanların birlikte proliferasyonudur ve elli yaş üzerindeki erkeklerde en sık görülen benign prostat hastalığıdır. Sıklığı yaşla artar ve seksenli yaşlarda yaklaşık yüzde doksana ulaşır. Klinik önemi, üriner tıkanıklığın sık nedenlerinden biri olmasıdır. Patogenezin merkezinde androjen bağımlı büyüme vardır. Bunu iki gözlem destekler: ergenlikten önce kastre edilmiş erkeklerde ve androjen aktivitesinin bozuk olduğu genetik hastalıklarda benign prostat hiperplazisi görülmez. Asıl etkili hormon dihidrotestosterondur ve testosterondan on kat daha potenttir. Prostatta testosterondan beş alfa redüktaz Tip 2 enzimiyle sentezlenir. Dihidrotestosteron nükleer androjen reseptörüne bağlanır ve prostat epitel ile stromal hücrelerinin proliferasyonunu ve yaşamını destekler.
+Benign prostat hiperplazisi, stromal ve glandüler elemanların birlikte proliferasyonudur ve 50 yaş üzerindeki erkeklerde en sık görülen benign prostat hastalığıdır. Sıklığı yaşla artar ve seksenli yaşlarda yaklaşık %90'a ulaşır. Klinik önemi, üriner tıkanıklığın sık nedenlerinden biri olmasıdır. Patogenezin merkezinde androjen bağımlı büyüme vardır. Bunu iki gözlem destekler: ergenlikten önce kastre edilmiş erkeklerde ve androjen aktivitesinin bozuk olduğu genetik hastalıklarda benign prostat hiperplazisi görülmez. Asıl etkili hormon dihidrotestosterondur ve testosterondan 10 kat daha potenttir. Prostatta testosterondan beş alfa redüktaz Tip 2 enzimiyle sentezlenir. Dihidrotestosteron nükleer androjen reseptörüne bağlanır ve prostat epitel ile stromal hücrelerinin proliferasyonunu ve yaşamını destekler.
 
-Dihidrotestosteron büyüme faktörü üretimini uyarır, stromal proliferasyonu artırır ve epitel hücre ölümünü azaltır. Yaşlanmayla testosteron düşer, buna karşılık östrojen nispeten sabit kalır ya da periferik dönüşümle artar. Epitel ve stromal hücrelerde östrojen reseptörleri bulunur ve östrojenler dihidrotestosteronla sinerjistik etki göstererek büyümeyi tetikleyebilir. Yani yaşlı erkekte androjen ve östrojen birlikte prostatı büyütür.
+Dihidrotestosteron büyüme faktörü üretimini uyarır, stromal proliferasyonu artırır ve epitel hücre ölümünü azaltır.
+Yaşlanmayla testosteron düşer, buna karşılık östrojen nispeten sabit kalır ya da periferik dönüşümle artar.
+Epitel ve stromal hücrelerde östrojen reseptörleri bulunur ve östrojenler dihidrotestosteronla sinerjistik etki göstererek büyümeyi tetikleyebilir.
+Yani yaşlı erkekte androjen ve östrojen birlikte prostatı büyütür.
 
 
 @@ Benign Prostat Hiperplazisi: Morfoloji ve Klinik
-Benign prostat hiperplazisinde prostat normalin üç ile beş katı ağırlığa, yani altmış ile yüz gram ya da daha fazlasına ulaşır. Büyüme geçiş zonundadır ve üretrayı yarık benzeri bir lümene sıkıştırır. Makroskopik olarak çok sayıda hiperplastik nodül vardır; nodüllerin rengi ve kıvamı stromal ya da glandüler bileşimin ağırlığına göre değişir ve nodüller solid ya da kistik olabilir.
+Benign prostat hiperplazisinde prostat normalin üç ile 5 katı ağırlığa, yani altmış ile yüz gram ya da daha fazlasına ulaşır. Büyüme geçiş zonundadır ve üretrayı yarık benzeri bir lümene sıkıştırır. Makroskopik olarak çok sayıda hiperplastik nodül vardır; nodüllerin rengi ve kıvamı stromal ya da glandüler bileşimin ağırlığına göre değişir ve nodüller solid ya da kistik olabilir.
 
-Şekil on altı noktası onda erişkin prostatı görüyorsunuz. Normal prostat santral zon, periferik zon, geçiş zonu ve periüretral zon gibi farklı bölgeler içerir. Karsinomların çoğu organın periferik bezlerinden kaynaklanırken, nodüler hiperplazi daha merkezi konumdaki bezlerden kaynaklanır. Şekil on altı noktası on birde iyi tanımlanmış nodüllerin üretrayı yarık benzeri bir lümene sıkıştırdığını, düşük büyütmede üretranın her iki yanında hiperplastik bez nodüllerini görüyorsunuz. Bazı olgularda nodülerlik bezsel proliferasyondan çok stromal proliferasyondan kaynaklanır. Yüksek büyütmede büyük, papiller kıvrımlı hiperplastik bezler vardır ve adenokarsinomdan farklı olarak bazal hücreler mevcuttur.
+Şekil on altı noktası onda erişkin prostatı görüyorsunuz.
+Normal prostat santral zon, periferik zon, geçiş zonu ve periüretral zon gibi farklı bölgeler içerir.
+Karsinomların çoğu organın periferik bezlerinden kaynaklanırken, nodüler hiperplazi daha merkezi konumdaki bezlerden kaynaklanır.
+Şekil on altı noktası on birde iyi tanımlanmış nodüllerin üretrayı yarık benzeri bir lümene sıkıştırdığını, düşük büyütmede üretranın her iki yanında hiperplastik bez nodüllerini görüyorsunuz.
+Bazı olgularda nodülerlik bezsel proliferasyondan çok stromal proliferasyondan kaynaklanır.
+Yüksek büyütmede büyük, papiller kıvrımlı hiperplastik bezler vardır ve adenokarsinomdan farklı olarak bazal hücreler mevcuttur.
 
-Histolojide nodüller değişen oranlarda glandüler proliferasyon ve fibromüsküler stroma içerir. Hiperplastik bezlerin lümenini uzun kolumnar epitel döşer ve periferde bazal hücre tabakası bulunur. Malign bezlerden en önemli farkı, bazal tabakanın korunmuş olmasıdır. Lümende sıklıkla korpora amilasea görülür; bunlar lamine, proteinden zengin sekresyon kitleleridir. Şekilde yuvarlak pembe bir konkresyon olarak tipik bir korpora amilasea örneğini görüyorsunuz.
+Histolojide nodüller değişen oranlarda glandüler proliferasyon ve fibromüsküler stroma içerir.
+Hiperplastik bezlerin lümenini uzun kolumnar epitel döşer ve periferde bazal hücre tabakası bulunur.
+Malign bezlerden en önemli farkı, bazal tabakanın korunmuş olmasıdır.
+Lümende sıklıkla korpora amilasea görülür; bunlar lamine, proteinden zengin sekresyon kitleleridir.
+Şekilde yuvarlak pembe bir konkresyon olarak tipik bir korpora amilasea örneğini görüyorsunuz.
 
-Klinik bulguların iki ana mekanizması vardır: prostat hacminin artması ve alfa adrenerjik aracılı stromal düz kas tonusu. Mesane buna detrusor hipertrofisi ve dilatasyonla yanıt verir. İnkomplet boşalma sonucu postmiksiyonel rezidü oluşur; bu, idrar yaptıktan sonra mesanede kalan idrar miktarıdır. Semptomlar sık idrara çıkma, noktüri, idrarı başlatma ve bitirmede zorluk, ince ve kesik idrar akımı, taşma inkontinansı ve dizüridir. Komplikasyonlar alt ve üst üriner enfeksiyon, tam tıkanmada ağrılı mesane distansiyonu ve uzamış tıkanmada hidronefrozdur. Şekilde benign prostat hiperplazisine bağlı mesane duvarı hipertrofisi ve trabekülasyonu görülüyor.
+Klinik bulguların iki ana mekanizması vardır: prostat hacminin artması ve alfa adrenerjik aracılı stromal düz kas tonusu.
+Mesane buna detrusor hipertrofisi ve dilatasyonla yanıt verir.
+İnkomplet boşalma sonucu postmiksiyonel rezidü oluşur; bu, idrar yaptıktan sonra mesanede kalan idrar miktarıdır.
+Semptomlar sık idrara çıkma, noktüri, idrarı başlatma ve bitirmede zorluk, ince ve kesik idrar akımı, taşma inkontinansı ve dizüridir.
+Komplikasyonlar alt ve üst üriner enfeksiyon, tam tıkanmada ağrılı mesane distansiyonu ve uzamış tıkanmada hidronefrozdur.
+Şekilde benign prostat hiperplazisine bağlı mesane duvarı hipertrofisi ve trabekülasyonu görülüyor.
 
-Tedavi medikal ve cerrahidir. Alfa bir adrenerjik blokerler prostat düz kasını gevşetir; beş alfa redüktaz inhibitörleri ise testosteronun dihidrotestosterona dönüşümünü engeller. Tıbbi tedaviye dirençli olgularda cerrahi seçenekler transüretral prostat rezeksiyonu, yüksek yoğunluklu odaklanmış ultrason, lazer tedavisi, hipertermi, elektrovaporizasyon ve radyofrekans ablasyondur.
+Tedavi medikal ve cerrahidir.
+Alfa bir adrenerjik blokerler prostat düz kasını gevşetir; beş alfa redüktaz inhibitörleri ise testosteronun dihidrotestosterona dönüşümünü engeller.
+Tıbbi tedaviye dirençli olgularda cerrahi seçenekler transüretral prostat rezeksiyonu, yüksek yoğunluklu odaklanmış ultrason, lazer tedavisi, hipertermi, elektrovaporizasyon ve radyofrekans ablasyondur.
 
 
 @@ Prostat Adenokarsinomu: Epidemiyoloji ve Patogenez
-Prostat adenokarsinomu erkeklerde en sık görülen kanserdir; 2020 iki yılında Amerika Birleşik Devletleri'nde erkek kanserlerinin yaklaşık %20 birini oluşturmuştur. Kansere bağlı ölümlerde akciğer kanserinden sonra 2. sıradadır. Yaşla güçlü ilişkisi vardır: otopsilerde ellili yaşlarda yaklaşık %20, yetmiş ile seksen yaşlarında ise yaklaşık %70 prevalans saptanır. Doğal seyri çok değişkendir; bir uçta agresif ve hızla öldüren formlar, öbür uçta yavaş ilerleyen, klinik önemi düşük formlar bulunur.
+Prostat adenokarsinomu erkeklerde en sık görülen kanserdir; 2020 iki yılında Amerika Birleşik Devletleri'nde erkek kanserlerinin yaklaşık %21'ini oluşturmuştur. Kansere bağlı ölümlerde akciğer kanserinden sonra 2. sıradadır. Yaşla güçlü ilişkisi vardır: otopsilerde ellili yaşlarda yaklaşık %20, yetmiş ile seksen yaşlarında ise yaklaşık %70 prevalans saptanır. Doğal seyri çok değişkendir; bir uçta agresif ve hızla öldüren formlar, öbür uçta yavaş ilerleyen, klinik önemi düşük formlar bulunur.
 
-Amerika Birleşik Devletleri'nde Afrika kökenli Amerikalı erkeklerde prostat kanserinden ölüm oranı, Avrupa kökenli Amerikalıların iki katından fazladır. Bunun nedeni kısmen biyolojik farklılıklardır, ama önemli ölçüde tarama ve tedaviye eşit olmayan erişimdir. Androjenler prostat karsinogenezi ve progresyonunda merkezi rol oynar. Kurulu tümörlerin bile çoğu cerrahi ya da medikal kastrasyona geçici olarak yanıt verir. Zamanla direnç gelişir ve üç mekanizma öne çıkar: androjen reseptör geninin amplifikasyonu, ki bu düşük androjen düzeylerine duyarlılığı artırır; reseptör mutasyonları, ki bunlar liganddan bağımsız aktivasyon sağlar; ve alternatif sinyal yollarının aktivasyonu, ki bu da androjen reseptör sinyaline bağımlılığı azaltır.
+Amerika Birleşik Devletleri'nde Afrika kökenli Amerikalı erkeklerde prostat kanserinden ölüm oranı, Avrupa kökenli Amerikalıların 2 katından fazladır.
+Bunun nedeni kısmen biyolojik farklılıklardır, ama önemli ölçüde tarama ve tedaviye eşit olmayan erişimdir.
+Androjenler prostat karsinogenezi ve progresyonunda merkezi rol oynar.
+Kurulu tümörlerin bile çoğu cerrahi ya da medikal kastrasyona geçici olarak yanıt verir.
+Zamanla direnç gelişir ve üç mekanizma öne çıkar: androjen reseptör geninin amplifikasyonu, ki bu düşük androjen düzeylerine duyarlılığı artırır; reseptör mutasyonları, ki bunlar liganddan bağımsız aktivasyon sağlar; ve alternatif sinyal yollarının aktivasyonu, ki bu da androjen reseptör sinyaline bağımlılığı azaltır.
 
-Kalıtım önemlidir; 1. derece akrabasında prostat kanseri olan erkekte risk yaklaşık iki kat artar. Çok sayıda germ hattı varyantı tanımlanmıştır. Önemli genler arasında mik düzenleyici bölgeleri, BRCA2 gibi homolog rekombinasyon genleri ve DNA uyumsuzluk onarım genleri sayılır. Çevresel faktörler arasında kızarmış kırmızı et ve hayvansal yağdan zengin Batı tipi diyet, radyasyon, oksidanlar ve östrojenler yer alır.
+Kalıtım önemlidir; 1. derece akrabasında prostat kanseri olan erkekte risk yaklaşık 2 kat artar.
+Çok sayıda germ hattı varyantı tanımlanmıştır.
+Önemli genler arasında mik düzenleyici bölgeleri, BRCA2 gibi homolog rekombinasyon genleri ve DNA uyumsuzluk onarım genleri sayılır.
+Çevresel faktörler arasında kızarmış kırmızı et ve hayvansal yağdan zengin Batı tipi diyet, radyasyon, oksidanlar ve östrojenler yer alır.
 
-Sık genetik değişikliklerin başında e te es transkripsiyon faktörü gen füzyonları gelir. Te em pe er es es iki ile e te es ailesi genleri arasındaki füzyonda, e er ge gibi e te es onkogenleri androjenle düzenlenen bir promotörün kontrolüne girer. Diğer değişiklikler mik amplifikasyonu ve pe te e en delesyonudur; pe te e en kaybı hücre büyümesini artırır ve antiandrojen tedaviye direnç ile ilişkilidir. İleri evrede TP53 kaybı, er be delesyonu ve androjen reseptör geni amplifikasyonu görülür. Epigenetik olarak ge es te pe bir promotor metilasyonu erken bir olaydır; ayrıca hücre döngüsü, genomik stabilite ve vint sinyal yolu genleri susturulur.
+Sık genetik değişikliklerin başında e te es transkripsiyon faktörü gen füzyonları gelir.
+Te em pe er es es iki ile e te es ailesi genleri arasındaki füzyonda, e er ge gibi e te es onkogenleri androjenle düzenlenen bir promotörün kontrolüne girer.
+Diğer değişiklikler mik amplifikasyonu ve pe te e en delesyonudur; pe te e en kaybı hücre büyümesini artırır ve antiandrojen tedaviye direnç ile ilişkilidir.
+İleri evrede TP53 kaybı, er be delesyonu ve androjen reseptör geni amplifikasyonu görülür.
+Epigenetik olarak ge es te pe bir promotor metilasyonu erken bir olaydır; ayrıca hücre döngüsü, genomik stabilite ve vint sinyal yolu genleri susturulur.
 
 
 @@ Prostat Adenokarsinomu: Morfoloji ve Glison Derecelendirmesi
-Karsinomların yaklaşık yüzde yetmişi periferik zondan çıkar ve klasik olarak posterior yerleşimlidir; bu nedenle dijital rektal muayenede ele gelebilir. Makroskopik olarak granüler, sert bir alan şeklindedir ve bazen ayırt etmek zordur. İleri lezyonlar komşu bezleri infiltre eden, belirsiz sınırlı, sert, gri beyaz odaklar olarak görülür. Şekil on altı noktası on ikide arka tarafta yer alan kanser dokusunun katı görünümünün, karşı taraftaki iyi huylu periferik bölgenin süngerimsi görünümüyle tezat oluşturduğunu görüyorsunuz.
+Karsinomların yaklaşık %70'i periferik zondan çıkar ve klasik olarak posterior yerleşimlidir; bu nedenle dijital rektal muayenede ele gelebilir. Makroskopik olarak granüler, sert bir alan şeklindedir ve bazen ayırt etmek zordur. İleri lezyonlar komşu bezleri infiltre eden, belirsiz sınırlı, sert, gri beyaz odaklar olarak görülür. Şekil on altı noktası on ikide arka tarafta yer alan kanser dokusunun katı görünümünün, karşı taraftaki iyi huylu periferik bölgenin süngerimsi görünümüyle tezat oluşturduğunu görüyorsunuz.
 
-Tümörlerin çoğu orta derecede diferansiye, iyi tanımlanmış bezler oluşturan adenokarsinomdur. Malign bezler benign bezlerden daha küçüktür, tek sıra kübik ya da alçak kolumnar epitelle döşelidir ve bazal hücre tabakası yoktur. Bezler sıkı paketlenmiştir; dallanma ve papiller kıvrım azdır. Nükleer özellikler büyümüş, yuvarlak ya da oval çekirdekler ve belirgin nükleollerdir; pleomorfizm genelde hafiftir ve mitotik figürler nadirdir. Şekil on altı noktası on üçte büyük iyi huylu bezler arasına sıkışmış küçük malign bezleri ve bunların büyük çekirdeklerini, belirgin nükleollerini ve koyu sitoplazmalarını görüyorsunuz.
+Tümörlerin çoğu orta derecede diferansiye, iyi tanımlanmış bezler oluşturan adenokarsinomdur.
+Malign bezler benign bezlerden daha küçüktür, tek sıra kübik ya da alçak kolumnar epitelle döşelidir ve bazal hücre tabakası yoktur.
+Bezler sıkı paketlenmiştir; dallanma ve papiller kıvrım azdır.
+Nükleer özellikler büyümüş, yuvarlak ya da oval çekirdekler ve belirgin nükleollerdir; pleomorfizm genelde hafiftir ve mitotik figürler nadirdir.
+Şekil on altı noktası on üçte büyük iyi huylu bezler arasına sıkışmış küçük malign bezleri ve bunların büyük çekirdeklerini, belirgin nükleollerini ve koyu sitoplazmalarını görüyorsunuz.
 
-Yüksek dereceli tümörlerde düzensiz ve pürüzlü bezler, kribriform yapılar, solid hücre tabakaları ve tek hücre infiltrasyonu görülür. Kribriform, kalbur ya da süzgeç benzeri boşluklu görünüm demektir. Yüksek dereceli prostat intraepiteliyal neoplazisi neoplastik bir öncü lezyondur; prostatektomi örneklerinin yaklaşık yüzde sekseninde bulunur ve moleküler değişiklikleri invaziv kanserle benzerdir.
+Yüksek dereceli tümörlerde düzensiz ve pürüzlü bezler, kribriform yapılar, solid hücre tabakaları ve tek hücre infiltrasyonu görülür.
+Kribriform, kalbur ya da süzgeç benzeri boşluklu görünüm demektir.
+Yüksek dereceli prostat intraepiteliyal neoplazisi neoplastik bir öncü lezyondur; prostatektomi örneklerinin yaklaşık yüzde sekseninde bulunur ve moleküler değişiklikleri invaziv kanserle benzerdir.
 
-Glison derecelendirme sistemi, bez paternine göre birden beşe kadar beş derece tanımlar. 1. derece iyi diferansiye ve benign prostata benzer. 5. derecede bez yoktur; tümör kordonlar, solid yuvalar ve tek hücre infiltrasyonu yapar. Ara dereceler orta paternlerdir. Tümörlerin çoğu birden fazla patern içerir. En yaygın patern, yani alanın yarısından fazlasını oluşturan patern primer derecedir; 2. en sık patern sekonder derecedir. İkisinin toplamı Glison skorunu verir; örneğin üç artı dört eşittir yedi ya da dört artı üç eşittir yedi.
+Glison derecelendirme sistemi, bez paternine göre birden beşe kadar 5 derece tanımlar.
+1. derece iyi diferansiye ve benign prostata benzer.
+5. derecede bez yoktur; tümör kordonlar, solid yuvalar ve tek hücre infiltrasyonu yapar.
+Ara dereceler orta paternlerdir.
+Tümörlerin çoğu birden fazla patern içerir.
+En yaygın patern, yani alanın yarısından fazlasını oluşturan patern primer derecedir; 2. en sık patern sekonder derecedir.
+İkisinin toplamı Glison skorunu verir; örneğin üç artı dört eşittir yedi ya da dört artı üç eşittir yedi.
 
-Şekil on altı noktası on dörtte üç örnek var. İlkinde tek katlı epitelle kaplı, düzgün boyutlu, birbirine bitişik malign bezlerden oluşan düşük dereceli tümör görülür; Glison skoru bir artı bir eşittir ikidir. İkincide merkezi lümenleri geçen çok sayıda hücresel köprü içeren büyük kribriform bezlerle derece dört bir odak vardır. Üçüncüde bez oluşumu olmayan malign hücre tabakalarından oluşan, Glison skoru beş artı beş eşittir on olan derece grubu beş adenokarsinomu görülür.
+Şekil on altı noktası on dörtte üç örnek var.
+İlkinde tek katlı epitelle kaplı, düzgün boyutlu, birbirine bitişik malign bezlerden oluşan düşük dereceli tümör görülür; Glison skoru bir artı bir eşittir ikidir.
+İkincide merkezi lümenleri geçen çok sayıda hücresel köprü içeren büyük kribriform bezlerle derece dört bir odak vardır.
+Üçüncüde bez oluşumu olmayan malign hücre tabakalarından oluşan, Glison skoru beş artı beş eşittir on olan derece grubu beş adenokarsinomu görülür.
 
-İğne biyopsisiyle saptanan tedavi edilebilir kanserlerin çoğunun Glison skoru altı ya da yedidir. Glison sekiz ile on arası tümörler genellikle ileri evrededir ve tedavi şansı daha düşüktür. Güncel uygulamada Glison skorları beş derece grubuna dönüştürülür ve her grup farklı bir prognozla ilişkilidir.
+İğne biyopsisiyle saptanan tedavi edilebilir kanserlerin çoğunun Glison skoru altı ya da yedidir.
+Glison sekiz ile on arası tümörler genellikle ileri evrededir ve tedavi şansı daha düşüktür.
+Güncel uygulamada Glison skorları 5 derece grubuna dönüştürülür ve her grup farklı bir prognozla ilişkilidir.
 
 
 @@ Prostat Kanseri: Klinik, Kemik Metastazı ve Pe Se A
 Amerika Birleşik Devletleri'nde olguların çoğu, yüksek prostat spesifik antijen nedeniyle yapılan biyopside saptanan küçük, asemptomatik lezyonlardır. Tümörlerin %70 ile sekseni periferik zondadır ve bir kısmı rektal muayenede sert nodül olarak ele gelir. Periferik yerleşim nedeniyle, benign prostat hiperplazisinden farklı olarak erken dönemde üretral tıkanma yapma olasılığı daha azdır. Lokal ileri tümör seminal vezikülleri ve periüretral dokuyu invaze eder, mesane duvarını ve nadiren rektumu infiltre eder.
 
-Geç evrede aksiyal iskelete metastaz yapar. Bu metastazların özelliği osteoblastik, yani kemik üreten lezyonlar olmasıdır ve radyonüklid kemik sintigrafisinde artmış alım gösterirler. Diğer kanserlerin çoğu ise kemikte litik lezyonlar yapar; bu fark ayırıcı tanıda önemlidir. Şekilde omur gövdeleri içindeki osteoblastik prostat karsinomu metastazını görüyorsunuz. Burası önemli, bu bilgi çıkmış sorularda soruldu: prostat kanserinde kemik metastazları tipik olarak osteoblastiktir ve radyonüklid kemik taramasında saptanabilir. Aynı soruda yanlış ifadelere dikkat edin; prostat spesifik antijen kanser dışında da yükselebilir ve prostat kanserlerinin önemli kısmı yavaş seyirlidir.
+Geç evrede aksiyal iskelete metastaz yapar.
+Bu metastazların özelliği osteoblastik, yani kemik üreten lezyonlar olmasıdır ve radyonüklid kemik sintigrafisinde artmış alım gösterirler.
+Diğer kanserlerin çoğu ise kemikte litik lezyonlar yapar; bu fark ayırıcı tanıda önemlidir.
+Şekilde omur gövdeleri içindeki osteoblastik prostat karsinomu metastazını görüyorsunuz.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: prostat kanserinde kemik metastazları tipik olarak osteoblastiktir ve radyonüklid kemik taramasında saptanabilir.
+Aynı soruda yanlış ifadelere dikkat edin; prostat spesifik antijen kanser dışında da yükselebilir ve prostat kanserlerinin önemli kısmı yavaş seyirlidir.
 
-Prostat spesifik antijen, prostat epitel hücrelerinin ürünüdür ve normalde ejakülatta bulunur. Tarama testi olarak duyarlılığı ve özgüllüğü sınırlıdır. Yanlış pozitif sonuç benign prostat hiperplazisi, prostatit ve biyopsi ya da kateter gibi prostat manipülasyonlarından kaynaklanabilir. Yanlış negatiflik de önemlidir: organ sınırlı kanseri olan hastaların %20 ile kırkında prostat spesifik antijen düşük ya da normaldir.
+Prostat spesifik antijen, prostat epitel hücrelerinin ürünüdür ve normalde ejakülatta bulunur.
+Tarama testi olarak duyarlılığı ve özgüllüğü sınırlıdır.
+Yanlış pozitif sonuç benign prostat hiperplazisi, prostatit ve biyopsi ya da kateter gibi prostat manipülasyonlarından kaynaklanabilir.
+Yanlış negatiflik de önemlidir: organ sınırlı kanseri olan hastaların %20 ile kırkında prostat spesifik antijen düşük ya da normaldir.
 
-Prostat spesifik antijen taraması klinik olarak önemsiz, yavaş seyirli kanserlerin aşırı tanısına ve bunun sonucunda aşırı tedaviye, morbiditeye ve maliyete yol açar. Büyük çalışmalarda prostat kanseri mortalitesinde azalma ya minimal olmuş ya da hiç görülmemiştir. Bu nedenle tarama testi olarak değeri belirsizdir ve karar bireyselleştirilmelidir.
+Prostat spesifik antijen taraması klinik olarak önemsiz, yavaş seyirli kanserlerin aşırı tanısına ve bunun sonucunda aşırı tedaviye, morbiditeye ve maliyete yol açar.
+Büyük çalışmalarda prostat kanseri mortalitesinde azalma ya minimal olmuş ya da hiç görülmemiştir.
+Bu nedenle tarama testi olarak değeri belirsizdir ve karar bireyselleştirilmelidir.
 
-Buna karşılık tanı konduktan sonra prostat spesifik antijen, tedavi yanıtını izlemek için çok değerlidir. Örneğin radikal prostatektomi ya da radyoterapiden sonra düzeyin yükselmesi rekürrens ya da metastatik hastalığı düşündürür. Aynı şekilde androjen deprivasyon tedavisi sırasında düzeylerin değişimi prognostik bilgi verir.
+Buna karşılık tanı konduktan sonra prostat spesifik antijen, tedavi yanıtını izlemek için çok değerlidir.
+Örneğin radikal prostatektomi ya da radyoterapiden sonra düzeyin yükselmesi rekürrens ya da metastatik hastalığı düşündürür.
+Aynı şekilde androjen deprivasyon tedavisi sırasında düzeylerin değişimi prognostik bilgi verir.
 
 
 @@ Prostat Kanseri: Tedavi ve Prognoz
-Tedavi seçenekleri radikal prostatektomi, radyoterapi, seçilmiş düşük riskli olgularda aktif izlem ve cerrahi ya da kimyasal kastrasyonla androjen deprivasyonudur. Erken evre hastalıkta on beş yıllık sağkalım yüzde doksanın üzerindedir. Prostatektomi sonrası prognozu patolojik evre, cerrahi sınırlar ve Glison derecesi belirler.
+Tedavi seçenekleri radikal prostatektomi, radyoterapi, seçilmiş düşük riskli olgularda aktif izlem ve cerrahi ya da kimyasal kastrasyonla androjen deprivasyonudur. Erken evre hastalıkta 15 yıllık sağkalım %90'ın üzerindedir. Prostatektomi sonrası prognozu patolojik evre, cerrahi sınırlar ve Glison derecesi belirler.
 
-Erkeklerde androjenin ana kaynağı testosteron üreten testislerdir; adrenal bez de düşük miktarda androjen üretir. Androjen yoksunluk tedavisinde luteinleştirici hormon salgılatıcı hormon agonistleri kullanılır. Bu ilaçlar başta luteinleştirici hormonu artırır, ancak sürekli uyarı hipofizi duyarsızlaştırır; luteinleştirici hormon üretimi durur ve testisin androjen üretimi azalır. Gerektiğinde tedaviye antiandrojen eklenir. Kısıtlılığı şudur: tümörlerin çoğu zamanla androjenden bağımsız klonlar geliştirir ve hastalık ilerleyerek ölüme yol açar.
+Erkeklerde androjenin ana kaynağı testosteron üreten testislerdir; adrenal bez de düşük miktarda androjen üretir.
+Androjen yoksunluk tedavisinde luteinleştirici hormon salgılatıcı hormon agonistleri kullanılır.
+Bu ilaçlar başta luteinleştirici hormonu artırır, ancak sürekli uyarı hipofizi duyarsızlaştırır; luteinleştirici hormon üretimi durur ve testisin androjen üretimi azalır.
+Gerektiğinde tedaviye antiandrojen eklenir.
+Kısıtlılığı şudur: tümörlerin çoğu zamanla androjenden bağımsız klonlar geliştirir ve hastalık ilerleyerek ölüme yol açar.
 
-Özetle, testiste ağrısız, transilluminasyon negatif kitle malign kabul edilip inguinal yoldan çıkarılır ve belirteçler tipi ile tedavi yanıtını gösterir. Akut skrotal ağrıda torsiyon ilk altı saatte çözülmesi gereken acildir. Prostatta hiperplazi geçiş zonunda, karsinom periferik zonda gelişir; bazal hücre tabakasının varlığı benign, yokluğu malign bezi işaret eder ve kemik metastazları osteoblastiktir.
+Özetle, testiste ağrısız, transilluminasyon negatif kitle malign kabul edilip inguinal yoldan çıkarılır ve belirteçler tipi ile tedavi yanıtını gösterir.
+Akut skrotal ağrıda torsiyon ilk 6 saatte çözülmesi gereken acildir.
+Prostatta hiperplazi geçiş zonunda, karsinom periferik zonda gelişir; bazal hücre tabakasının varlığı benign, yokluğu malign bezi işaret eder ve kemik metastazları osteoblastiktir.

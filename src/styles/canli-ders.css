@@ -111,7 +111,7 @@
 .cd-bolum-ad { position: sticky; top: -8px; z-index: 1; margin: 0 -20px 6px; padding: 10px 20px 8px; background: var(--color-white); border-bottom: 1px solid var(--color-line-soft, var(--color-line));
   font-size: 13px; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; color: var(--color-ink-3); }
 .cd-p { margin: 0 -10px; padding: 8px 10px; border-radius: 10px; font-size: var(--read-size, 16px); line-height: 1.68; color: var(--color-ink-2); cursor: pointer;
-  content-visibility: auto; contain-intrinsic-size: auto 120px; transition: background-color .25s, color .25s; }
+  content-visibility: auto; contain-intrinsic-size: auto 120px; transition: background-color .25s, color .25s; white-space: pre-line; }
 .cd-p:hover { background: var(--color-canvas); }
 .cd-p-sar { position: relative; }
 .cd-p-sar .cd-p { padding-right: 38px; }

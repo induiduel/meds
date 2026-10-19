@@ -3,76 +3,142 @@
 @@ Fertilizasyon ve erken embriyonik gelişim
 Fertilizasyon, yani döllenme ya da konsepsiyon, bir spermin ovuma girmesiyle gerçekleşir. İnsanda embriyonun gelişimi, gametogenezle oluşan oosit ile spermin bu birleşmesiyle başlar. Ovum ve spermin bir araya gelmesi gerekir ve bu olayda birçok biyolojik faktör rol oynar. Döllenme sırasında oluşan dişi pronükleus ile erkek pronükleus birleşir ve tek hücreli zigot ortaya çıkar. Zigot ilk bölünmeyle iki hücreli konseptusa dönüşür. Konseptus ise yalnız embriyoyu değil, fertilize ovumdan köken alan hücrelerin tümünü anlatır.
 
-Fertilizasyonun üç önemli görevi vardır. 1.'si, sperm yumurta hücresine kendi haploid kromozom takımını verir; böylece zigotta diploid sayı yeniden kurulur. 2.'si, memelilerde ve pek çok canlıda cinsiyeti belirler; genetik cinsiyet sonradan kazanılmaz, fertilizasyon anında spermin getirdiği setle belirlenir. 3.'sü, sperm yumurta hücresinde bazı reaksiyonları uyararak hücre bölünmelerini ve embriyonik gelişimi başlatır.
+Fertilizasyonun üç önemli görevi vardır.
+1.'si, sperm yumurta hücresine kendi haploid kromozom takımını verir; böylece zigotta diploid sayı yeniden kurulur.
+2.'si, memelilerde ve pek çok canlıda cinsiyeti belirler; genetik cinsiyet sonradan kazanılmaz, fertilizasyon anında spermin getirdiği setle belirlenir.
+3.'sü, sperm yumurta hücresinde bazı reaksiyonları uyararak hücre bölünmelerini ve embriyonik gelişimi başlatır.
 
-Zigot bölünmeye başladıktan kısa süre sonra konseptusun kendi genleri, dört ya da sekiz hücreli aşamada aktifleşir. On altı hücreli aşamaya morula denir; tuba içinde ilerleyen dut biçimli bir hücre kümesidir. Otuz iki hücreli aşama blastosisttir; içinde sıvı dolu bir kavite bulunur ve uterus duvarına implante olur. Fertilizasyondan sonraki 6. günde konseptus hCG üretmeye başlar ve implantasyon gerçekleşir.
+Zigot bölünmeye başladıktan kısa süre sonra konseptusun kendi genleri, dört ya da sekiz hücreli aşamada aktifleşir.
+On altı hücreli aşamaya morula denir; tuba içinde ilerleyen dut biçimli bir hücre kümesidir.
+Otuz iki hücreli aşama blastosisttir; içinde sıvı dolu bir kavite bulunur ve uterus duvarına implante olur.
+Fertilizasyondan sonraki 6. günde konseptus hCG üretmeye başlar ve implantasyon gerçekleşir.
 
 @@ Cinsiyetin düzeyleri, kromozomal cinsiyet ve Barr cisimciği
 Bir bireyin cinsiyeti tek bir özellik değildir; birbirinin üzerine kurulan katmanlardan oluşur. En altta kromozom yapısıyla belirlenen genetik cinsiyet vardır. Onun üzerinde gonadın testis mi over mi olduğunu anlatan gonadal cinsiyet gelir. Ardından iç ve dış genitalyanın yapısı, pubertede gelişen ikincil seks karakterleri ve en üstte toplumun bireye yüklediği cinsiyet rolü yer alır. Normalde bu düzeyler birbirini izler ve uyumludur. Herhangi bir düzeydeki uyumsuzluk, örneğin iks ye karyotipe karşın dişi dış genitalya, cinsiyet gelişim bozukluklarının temel mantığını oluşturur.
 
-İnsan hücresinde kırk altı kromozom, yani yirmi üç çift bulunur ve her ebeveynden bir haploid set gelir. Bu çiftlerden biri cinsiyet kromozomudur; bunlara gonozom denir ve X ile Y olarak adlandırılır. Geri kalan yirmi iki çift otozomdur. Normal kadın karyotipi kırk altı iks iks, normal erkek karyotipi kırk altı iks yedir. Dişide cinsiyet kromozom çifti simetriktir; erkekte ise çiftin üyeleri birbirinden farklı şekil ve biçimdedir.
+İnsan hücresinde 46 kromozom, yani yirmi üç çift bulunur ve her ebeveynden bir haploid set gelir.
+Bu çiftlerden biri cinsiyet kromozomudur; bunlara gonozom denir ve X ile Y olarak adlandırılır.
+Geri kalan yirmi iki çift otozomdur.
+Normal kadın karyotipi kırk altı iks iks, normal erkek karyotipi kırk altı iks yedir.
+Dişide cinsiyet kromozom çifti simetriktir; erkekte ise çiftin üyeleri birbirinden farklı şekil ve biçimdedir.
 
-Erkek cinsiyetini Y kromozomu belirler. Memelilerde kromozom çifti üyeleri mayoz bölünme sırasında ayrılır; bu nedenle spermlerin bir kısmı X, bir kısmı Y taşır. Ovum ise her zaman X kromozomu taşır. Sonuçta X taşıyan sperm dişi, Y taşıyan sperm erkek zigot oluşturur ve fertilizasyon anında genetik olarak dişi ya da erkek olma şansı eşittir. Yani cinsiyeti belirleyen gamet spermdir.
+Erkek cinsiyetini Y kromozomu belirler.
+Memelilerde kromozom çifti üyeleri mayoz bölünme sırasında ayrılır; bu nedenle spermlerin bir kısmı X, bir kısmı Y taşır.
+Ovum ise her zaman X kromozomu taşır.
+Sonuçta X taşıyan sperm dişi, Y taşıyan sperm erkek zigot oluşturur ve fertilizasyon anında genetik olarak dişi ya da erkek olma şansı eşittir.
+Yani cinsiyeti belirleyen gamet spermdir.
 
-Genotipik ve fenotipik cinsiyet arasındaki farklar, çekirdekte seks kromatininin varlığı ya da yokluğuyla ayırt edilebilir. Seks kromatini Barr cisimciğidir ve inaktif X kromozomunu temsil eder. Dişide iki X'ten biri interfazda yoğunlaşır, inaktif kalır ve çekirdek zarına yakın koyu bir kitle olarak görülür. Barr cisimciği sayısı toplam X sayısının bir eksiğidir; normal kadında bir, normal erkekte sıfırdır. Bu inaktivasyonu açıklayan görüş Lyon hipotezidir: erken embriyonik dönemde dişi hücrelerindeki iki X'ten biri rastgele ve kalıcı olarak inaktive edilir.
+Genotipik ve fenotipik cinsiyet arasındaki farklar, çekirdekte seks kromatininin varlığı ya da yokluğuyla ayırt edilebilir.
+Seks kromatini Barr cisimciğidir ve inaktif X kromozomunu temsil eder.
+Dişide iki X'ten biri interfazda yoğunlaşır, inaktif kalır ve çekirdek zarına yakın koyu bir kitle olarak görülür.
+Barr cisimciği sayısı toplam X sayısının bir eksiğidir; normal kadında bir, normal erkekte sıfırdır.
+Bu inaktivasyonu açıklayan görüş Lyon hipotezidir: erken embriyonik dönemde dişi hücrelerindeki iki X'ten biri rastgele ve kalıcı olarak inaktive edilir.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: fizyolojik mozaisizmin gerekçesi Lyon hipotezidir. İnaktivasyon rastgele olduğu için normal bir kadında bazı hücrelerde anneden gelen X, bazılarında babadan gelen X aktiftir; yani sağlıklı bir kadın doğal olarak iki farklı hücre dizisi taşır. Mozaik Törnır ya da kanser ise patolojik örneklerdir.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: fizyolojik mozaisizmin gerekçesi Lyon hipotezidir.
+İnaktivasyon rastgele olduğu için normal bir kadında bazı hücrelerde anneden gelen X, bazılarında babadan gelen X aktiftir; yani sağlıklı bir kadın doğal olarak iki farklı hücre dizisi taşır.
+Mozaik Törnır ya da kanser ise patolojik örneklerdir.
 
 @@ Normal cinsiyet gelişiminin dört aşaması ve Jost deneyi
 Normal cinsiyet gelişimi birbirini izleyen dört büyük aşamada gerçekleşir. 1.'si fertilizasyon ve genetik cinsiyetin belirlenmesidir. 2.'si her iki cinsiyette ortak olan organların gelişimidir. 3.'sü gonadal diferansiyasyon, yani ortak gonad taslağının testis ya da overe dönüşmesidir. 4.'sü, gonadın salgıladığı hormonlara göre iç kanalların ve dış genitalyanın gelişimidir. Cinsiyet gelişim bozuklukları bu dört aşamadan herhangi birindeki aksaklıkla ortaya çıkar.
 
-Genetik cinsiyet fertilizasyonda belirlenir, ancak bu kararın vücuda yansıması iki cinsiyette farklı işler. Erkek gelişimi, maskülinizasyon için gerekli olan testislerin gelişimini uyaran gen ya da genlere bağlıdır. Kadın gelişimi ise, overler hariç, spesifik genetik bilgilerin yokluğunda gerçekleşir. Yumurtalıkların varlığı genital organların fetal farklılaşması üzerinde hiçbir etkiye sahip değildir.
+Genetik cinsiyet fertilizasyonda belirlenir, ancak bu kararın vücuda yansıması iki cinsiyette farklı işler.
+Erkek gelişimi, maskülinizasyon için gerekli olan testislerin gelişimini uyaran gen ya da genlere bağlıdır.
+Kadın gelişimi ise, overler hariç, spesifik genetik bilgilerin yokluğunda gerçekleşir.
+Yumurtalıkların varlığı genital organların fetal farklılaşması üzerinde hiçbir etkiye sahip değildir.
 
-Bunu en iyi Alfred Jost'un bin dokuz yüz kırk yedi yılındaki tavşan deneyi gösterir. Dişi fetusun overleri çıkarıldığında hayvan erişkin dişi olarak gelişir. Erkek fetusun testisleri çıkarıldığında da erişkin dişi olarak gelişir. Demek ki gonad yoksa genital yapılar dişi yönde gelişir; erkek fenotipi için testis ve onun hormonları zorunludur, over ise fetal genital farklılaşmayı yönlendirmez.
+Bunu en iyi Alfred Jost'un 1947 yılındaki tavşan deneyi gösterir.
+Dişi fetusun overleri çıkarıldığında hayvan erişkin dişi olarak gelişir.
+Erkek fetusun testisleri çıkarıldığında da erişkin dişi olarak gelişir.
+Demek ki gonad yoksa genital yapılar dişi yönde gelişir; erkek fenotipi için testis ve onun hormonları zorunludur, over ise fetal genital farklılaşmayı yönlendirmez.
 
 @@ Y kromozomu, es er ye geni ve genital sistemin bileşenleri
 En az bir Y kromozomuna sahip tüm embriyolar erkek olarak gelişir; X sayısı artsa bile Y varlığında yön erkektir. Burası önemli, bu genel kural sınavda sık vurgulanır. Y kromozomunda yer alan es er ye, yani seks belirleyici bölge, diğer adıyla testis belirleyici faktör, fetusta testis gelişimini sağlar. Over gelişiminde ise anahtar gen olarak daks bir gösterilir.
 
-Kadın ve erkekte üreme organları üç bileşenden oluşur: dış genitalya, gonadlar ve bu ikisi arasındaki kanal sistemi. Bu üç bileşen farklı embriyolojik tabakalardan köken alır ve gelişim boyunca üriner sistem ve arka barsakla yakın ilişki içindedir. Bu yakınlık, genital anomalilerin üriner ya da kloakal anomalilerle birlikte görülebilmesini açıklar. Genital sistemin olgunlaşması doğumdan sonra tamamlanır, ancak asıl önemli gelişimler intrauterin hayatta olur. Başlangıçta genital sistem bipotent bir gonad taslağına sahiptir; yani aynı taslak hem testise hem overe dönüşebilir.
+Kadın ve erkekte üreme organları üç bileşenden oluşur: dış genitalya, gonadlar ve bu ikisi arasındaki kanal sistemi.
+Bu üç bileşen farklı embriyolojik tabakalardan köken alır ve gelişim boyunca üriner sistem ve arka barsakla yakın ilişki içindedir.
+Bu yakınlık, genital anomalilerin üriner ya da kloakal anomalilerle birlikte görülebilmesini açıklar.
+Genital sistemin olgunlaşması doğumdan sonra tamamlanır, ancak asıl önemli gelişimler intrauterin hayatta olur.
+Başlangıçta genital sistem bipotent bir gonad taslağına sahiptir; yani aynı taslak hem testise hem overe dönüşebilir.
 
-Kırk altı iks iks ve kırk altı iks ye fetuslar başlangıçta benzer seks organlarına sahiptir. Ortak taslaklar üç tanedir: gonadal kıvrımlar, internal kanallar ve eksternal genitalya. Bu yapıların her birini farklı bir sinyal yönlendirir: gonadal kıvrımı genler, iç kanalları gonad hormonları, dış genitalyayı ise androjen etkisi.
+Kırk altı iks iks ve kırk altı iks ye fetuslar başlangıçta benzer seks organlarına sahiptir.
+Ortak taslaklar üç tanedir: gonadal kıvrımlar, internal kanallar ve eksternal genitalya.
+Bu yapıların her birini farklı bir sinyal yönlendirir: gonadal kıvrımı genler, iç kanalları gonad hormonları, dış genitalyayı ise androjen etkisi.
 
 @@ Volf ve Müller kanalları, testis hormonları
 Dişi ve erkek embriyolarda iki çift genital kanal bulunur. Mezonefrik kanal, yani Volf kanalı, erkek üreme sistemini; paramezonefrik kanal, yani Müller kanalı, dişi üreme sistemini geliştirir. Fenotipik gelişimin yönü Y kromozomunun varlığına bağlıdır. Es er ye geni Y kromozomunun kısa kolunda, ye pe on bir nokta üç bölgesinde bulunur ve farklılaşmamış gonaddan testis gelişimine neden olur.
 
-Testis oluştuktan sonra kanalların kaderini iki hücreden salınan iki hormon belirler. Sertoli hücreleri Müller inhibe edici faktörü, diğer adıyla anti Müller hormonu salgılar; iki ad aynı molekülü anlatır ve bu hormon Müller kanallarının gerilemesini sağlar. Leydig hücreleri ise testosteron salgılar; testosteron Volf kanallarının korunup erkek iç genital yapılara dönüşmesini sağlar. Testis yoksa iki hormon da yoktur; Müller kanalları kendiliğinden gelişir, Volf kanalları geriler. Burası önemli, bu klasik bir sınav tuzağıdır: testosteron Müller kanalını baskılamaz. Müller gerilemesini Sertoli kaynaklı anti Müller hormon yapar, testosteron ise Volf kanalını korur.
+Testis oluştuktan sonra kanalların kaderini iki hücreden salınan iki hormon belirler.
+Sertoli hücreleri Müller inhibe edici faktörü, diğer adıyla anti Müller hormonu salgılar; iki ad aynı molekülü anlatır ve bu hormon Müller kanallarının gerilemesini sağlar.
+Leydig hücreleri ise testosteron salgılar; testosteron Volf kanallarının korunup erkek iç genital yapılara dönüşmesini sağlar.
+Testis yoksa iki hormon da yoktur; Müller kanalları kendiliğinden gelişir, Volf kanalları geriler.
+Burası önemli, bu klasik bir sınav tuzağıdır: testosteron Müller kanalını baskılamaz.
+Müller gerilemesini Sertoli kaynaklı anti Müller hormon yapar, testosteron ise Volf kanalını korur.
 
 @@ Gonadal farklılaşma ve gen ağı
 Gonadal farklılaşmanın merkezindeki olay gonadal kıvrımın over ya da testise farklılaşmasıdır. Erkekte bunu es er ye sağlar; kadında es er ye yokluğunda diğer genlerin ekspresyonu gonadı overe yönlendirir, yani over gelişimi de aktif bir programdır. Cinsiyet farklılaşmasını tek bir gen yönetmez; testis belirleyici faktörle birlikte pek çok gen bu süreci yönlendirir. Es er ye, Y kromozomunda cinsiyeti belirleyen gendir. Soks dokuz otozomal testis belirleyici gendir; slaytta lokusu on yedi ku otuz dört olarak yazılır, güncel genetik kaynaklarda on yedi ku yirmi dört bölgesinde gösterilir. Daks bir, X kromozomunda lokalize ve potansiyel olarak testisi baskılayan gendir. Es ef bir, es er ye ile erkek gelişimi yolağı arasındaki bağlantıyı sağlar. Ve te bir normal renal ve gonadal gelişim için gereklidir. Vint dört ise otozomda, bir pe otuz beş bölgesinde yer alan potansiyel over belirleyici gendir.
 
-Bu genler birbirinden bağımsız değildir. Soks dokuz, es er ye dizisine çok benzeyen bir diziye sahiptir ve es er ye geni olmasa bile ekstra bir soks dokuz kopyası erkek gelişimini sağlar. Es ef bir bipotansiyel gonad gelişimi için gereklidir ve soks dokuz ile birlikte anti Müller hormonun transkripsiyon düzeyini artırır. Vint dört, daks bir ekspresyonunu aktive eder. Vint dört eksikliğinde over gelişimi düzensizleşir ve gonadda testise özgü belirteçler eksprese olur; yani vint dört testis programını aktif olarak baskılar.
+Bu genler birbirinden bağımsız değildir.
+Soks dokuz, es er ye dizisine çok benzeyen bir diziye sahiptir ve es er ye geni olmasa bile ekstra bir soks dokuz kopyası erkek gelişimini sağlar.
+Es ef bir bipotansiyel gonad gelişimi için gereklidir ve soks dokuz ile birlikte anti Müller hormonun transkripsiyon düzeyini artırır.
+Vint dört, daks bir ekspresyonunu aktive eder.
+Vint dört eksikliğinde over gelişimi düzensizleşir ve gonadda testise özgü belirteçler eksprese olur; yani vint dört testis programını aktif olarak baskılar.
 
-Seksüel fenotip yolaklarını özetleyen şemada genital kıvrımdan bipotansiyel gonada geçişte es ef bir, ve te bir ve el ha iks dokuz rol alır; over kolunda granüloza ve teka hücreleri folikülleri, foliküller de östrojeni oluşturur. Ayrıntılı şemada soks dokuzu ef ge ef dokuz ve pe ge de iki güçlendirir; daks bir, foks el iki, vint dört ve er es pe o bir ise beta katenin üzerinden soks dokuzu baskılar. Androjen reseptörü Volf kanalı ve dış genitalyada, anti Müller hormon reseptörü Müller kanalında etkiyi aracılar.
+Seksüel fenotip yolaklarını özetleyen şemada genital kıvrımdan bipotansiyel gonada geçişte es ef bir, ve te bir ve el ha iks dokuz rol alır; over kolunda granüloza ve teka hücreleri folikülleri, foliküller de östrojeni oluşturur.
+Ayrıntılı şemada soks dokuzu ef ge ef dokuz ve pe ge de iki güçlendirir; daks bir, foks el iki, vint dört ve er es pe o bir ise beta katenin üzerinden soks dokuzu baskılar.
+Androjen reseptörü Volf kanalı ve dış genitalyada, anti Müller hormon reseptörü Müller kanalında etkiyi aracılar.
 
-Erken dönemde dört anahtar olay sırayla gerçekleşir: primordial germ hücreleri ürogenital kıvrımlara göç eder; ve te bir ve es ef bir yönlendirmesiyle bipotansiyel gonad farklılaşır; es er ye ve soks dokuz aktivasyonuyla testis oluşur; daks bir ve vint dört aracılığıyla soks dokuzun baskılanması ise overyen farklılaşmayı sağlar. Yani testis ve over kararı soks dokuz düzeyine bağlı bir terazidir.
+Erken dönemde dört anahtar olay sırayla gerçekleşir: primordial germ hücreleri ürogenital kıvrımlara göç eder; ve te bir ve es ef bir yönlendirmesiyle bipotansiyel gonad farklılaşır; es er ye ve soks dokuz aktivasyonuyla testis oluşur; daks bir ve vint dört aracılığıyla soks dokuzun baskılanması ise overyen farklılaşmayı sağlar.
+Yani testis ve over kararı soks dokuz düzeyine bağlı bir terazidir.
 
 @@ Gonadal disgenezi genetiği
 Gonad gelişimini yöneten genlerdeki bozukluklar, gonadın hiç oluşmamasından cinsiyet tersinmesine uzanan tablolar yaratır. Ve te bir ya da es ef bir eksikliğinde, iks iks ya da iks ye bireyde germ hücresi içermeyen, çizgi şeklinde işlevsiz bir gonad, yani strik gonad oluşur. İks ye bireyde es er ye ya da soks dokuz eksikliği testiküler gelişimi engeller; sonuç dişi fenotipli pür gonadal disgenezidir. Testis olmadığı için anti Müller hormon ve testosteron yoktur, bu nedenle iks ye bireyde dişi iç ve dış genitalya gelişir. Kırk altı iks ye gonadal disgenezinin bu tablosu Svayer sendromu olarak da bilinir.
 
-Tersine, iks iks bireyde es er ye gen ekspresyonu varsa testis gelişir ve kırk altı iks iks erkek tablosu ortaya çıkar. Mozaik halde, fenotipi çeşitli olan karışık gonadal disgenezi tablolarında ise aşırı daks bir ekspresyonu rol oynar. Konuyla ilgili tablo kalıtım biçimlerini de verir: ve te bir ve soks dokuz otozomal dominant, es er ye Y'ye bağlıdır; de em er te bir mikroskopik delesyonla, daks bir ve vint dört ise duplikasyonla disgenetik testis yapar. Hormon sentez bozukluklarında ise gonad testistir.
+Tersine, iks iks bireyde es er ye gen ekspresyonu varsa testis gelişir ve kırk altı iks iks erkek tablosu ortaya çıkar.
+Mozaik halde, fenotipi çeşitli olan karışık gonadal disgenezi tablolarında ise aşırı daks bir ekspresyonu rol oynar.
+Konuyla ilgili tablo kalıtım biçimlerini de verir: ve te bir ve soks dokuz otozomal dominant, es er ye Y'ye bağlıdır; de em er te bir mikroskopik delesyonla, daks bir ve vint dört ise duplikasyonla disgenetik testis yapar.
+Hormon sentez bozukluklarında ise gonad testistir.
 
 @@ Eksternal genitalya ve dihidrotestosteron
 Dış genital yapıların farklılaşması dihidrotestosteronun varlığı ya da yokluğuyla ilişkilidir. Testisten salınan testosteron, beş alfa redüktaz enzimiyle, A halkasındaki çift bağın indirgenmesiyle dihidrotestosterona dönüşür. Her iki cinsiyet aynı yapılarla başlar ve testosteron ile dihidrotestosteron etkisiyle farklılaşır. Dihidrotestosteron eksikliğinde eksternal genital yapılar dişi yönünde gelişir. Erişkinde dihidrotestosteron saç kaybına da neden olur; erkek tipi kellik bu etkiyle ilişkilidir.
 
-Farklılaşmamış evrede dört taslak vardır: genital tüberkül, ürogenital kıvrım, ürogenital sinüs ve labioskrotal kabartı. Dihidrotestosteron eksikliğinde genital tüberkül klitorise, labioskrotal kabartı labia majöre, ürogenital kıvrımlar labia minöre dönüşür. Dihidrotestosteron varlığında genital tüberkül penise, labioskrotal kabartı skrotuma dönüşür; ürogenital kıvrımlar ise üretral oluğun iki yanında birleşerek penil üretrayı kapatır ve orta hattaki skrotal rafe bu birleşmenin izidir. Burası önemli: klitoris ile penis, labia majör ile skrotum homolog yapılardır; kısmi dihidrotestosteron etkisi bu yapıların arada kalmasına, yani ambigus görünüme yol açar.
+Farklılaşmamış evrede dört taslak vardır: genital tüberkül, ürogenital kıvrım, ürogenital sinüs ve labioskrotal kabartı.
+Dihidrotestosteron eksikliğinde genital tüberkül klitorise, labioskrotal kabartı labia majöre, ürogenital kıvrımlar labia minöre dönüşür.
+Dihidrotestosteron varlığında genital tüberkül penise, labioskrotal kabartı skrotuma dönüşür; ürogenital kıvrımlar ise üretral oluğun iki yanında birleşerek penil üretrayı kapatır ve orta hattaki skrotal rafe bu birleşmenin izidir.
+Burası önemli: klitoris ile penis, labia majör ile skrotum homolog yapılardır; kısmi dihidrotestosteron etkisi bu yapıların arada kalmasına, yani ambigus görünüme yol açar.
 
 @@ Ürogenital katlantının genleri: es ef bir ve ve te bir
 Gonad ve böbreğin ortak çıkış noktası ürogenital katlantıdır. Bu yapının oluşumundaki defektler, gonadın daha sonraki farklılaşmasındaki defektlere göre daha ağır klinik tablolar oluşturur. Ürogenital katlantının oluşumunda es ef bir, yani en er beş a bir, ve te bir, paks iki, e em iks iki ve el ha iks dokuz genleri rol oynar. Es ef bir ve ve te bir erken embriyonel dönemde birçok yolakta görev alan hayati genlerdir; yokluklarında ürogenital katlantı oluşumu baskılanır. E em iks iki ve el ha iks dokuz ile ilgili insanda tanımlanmış bir hastalık yoktur; bunun nedeni bu genlerdeki defektlerin yaşamla bağdaşmayacak kadar ağır anomalilere yol açması olabilir.
 
-Es ef bir yalnız gonadda değil endokrin sistemin birçok basamağında görev yapar. Hipotalamohipofizer gonadal aksın gelişiminden sorumludur, adrenal ve gonadal steroidlerin sentezini düzenler ve hipotalamik ventral nükleusun gelişimini kontrol eder. Gonad, böbrek ve adrenal korteks gelişiminde önemlidir. Gonad ve adrenal korteksi aynı anda etkilediği için es ef bir kaybında gonadal disgenezi ile birlikte adrenal yetmezlik beklenir.
+Es ef bir yalnız gonadda değil endokrin sistemin birçok basamağında görev yapar.
+Hipotalamohipofizer gonadal aksın gelişiminden sorumludur, adrenal ve gonadal steroidlerin sentezini düzenler ve hipotalamik ventral nükleusun gelişimini kontrol eder.
+Gonad, böbrek ve adrenal korteks gelişiminde önemlidir.
+Gonad ve adrenal korteksi aynı anda etkilediği için es ef bir kaybında gonadal disgenezi ile birlikte adrenal yetmezlik beklenir.
 
-Ve te bir hem bipotansiyel gonad hem böbrek gelişimi için hayati öneme sahiptir. Heterozigot mutasyonlarda etkilenen gen bölgesine göre farklı klinik tablolar gelişir: gonadal disgenezi, fokal segmental glomerüloskleroz ve Vilms tümörü. Kırk altı iks ye cinsiyet gelişim bozukluğu olgularının %3 ila dördünde ve te bir mutasyonu görülür; kırk altı iks iks olgularda ise nefrotik problemler ortaya çıkar. Pratik kural şudur: genital bulguya böbrek bulgusu eşlik ediyorsa ve te bir, adrenal bulgu eşlik ediyorsa es ef bir düşünülür.
+Ve te bir hem bipotansiyel gonad hem böbrek gelişimi için hayati öneme sahiptir.
+Heterozigot mutasyonlarda etkilenen gen bölgesine göre farklı klinik tablolar gelişir: gonadal disgenezi, fokal segmental glomerüloskleroz ve Vilms tümörü.
+Kırk altı iks ye cinsiyet gelişim bozukluğu olgularının %3 ila dördünde ve te bir mutasyonu görülür; kırk altı iks iks olgularda ise nefrotik problemler ortaya çıkar.
+Pratik kural şudur: genital bulguya böbrek bulgusu eşlik ediyorsa ve te bir, adrenal bulgu eşlik ediyorsa es ef bir düşünülür.
 
 @@ Testis yolu: es er ye, soks dokuz ve destek genleri
-Testis gelişiminde es er ye, soks dokuz, ef ge ef dokuz, de em er te bir, es ef bir, ve te bir ve daks bir genleri görev alır. Bipotansiyel gonaddan testis gelişimi sırasında en önemli gen es er yedir. Bipotansiyel gonaddan testis ya da over gelişimi post konsepsiyonel 6. haftanın sonunda gerçekleşir. Es er ye yalnızca presertoli hücrelerinde ve çok kısa bir süre eksprese olur; ekspresyonu kırk 1. günde pik yapar ve ardından ani bir düşüşe geçer. Burası önemli: es er ye testise doğrudan etki etmez, etkisini soks dokuz geni üzerinden gösterir.
+Testis gelişiminde es er ye, soks dokuz, ef ge ef dokuz, de em er te bir, es ef bir, ve te bir ve daks bir genleri görev alır. Bipotansiyel gonaddan testis gelişimi sırasında en önemli gen es er yedir. Bipotansiyel gonaddan testis ya da over gelişimi post konsepsiyonel 6. haftanın sonunda gerçekleşir. Es er ye yalnızca presertoli hücrelerinde ve çok kısa bir süre eksprese olur; ekspresyonu 41. günde pik yapar ve ardından ani bir düşüşe geçer. Burası önemli: es er ye testise doğrudan etki etmez, etkisini soks dokuz geni üzerinden gösterir.
 
-Es er ye geninin kaybı ya da yanlış kromozoma taşınması iki karşıt tablo yaratır. Kırk altı iks ye cinsiyet gelişim bozukluğu olgularının %10 ila on beşinde es er ye geninde inaktive edici mutasyonlar görülür; testis gelişmez ve dişi yönlü fenotip ortaya çıkar. Es er yenin X kromozomuna ya da otozomal kromozomlardan birine translokasyonu ise kırk altı iks iks cinsiyet gelişim bozukluğunun önemli bir kısmını oluşturur; Y olmamasına karşın es er ye taşıyan bireyde testis gelişir.
+Es er ye geninin kaybı ya da yanlış kromozoma taşınması iki karşıt tablo yaratır.
+Kırk altı iks ye cinsiyet gelişim bozukluğu olgularının %10 ila on beşinde es er ye geninde inaktive edici mutasyonlar görülür; testis gelişmez ve dişi yönlü fenotip ortaya çıkar.
+Es er yenin X kromozomuna ya da otozomal kromozomlardan birine translokasyonu ise kırk altı iks iks cinsiyet gelişim bozukluğunun önemli bir kısmını oluşturur; Y olmamasına karşın es er ye taşıyan bireyde testis gelişir.
 
-Soks dokuz gelişimsel bir gendir ve es er ye ekspresyonuyla eş zamanlı olarak Sertoli hücrelerinden eksprese olur; ekspresyonu erken testis gelişimi için hayati öneme sahiptir. Bazı durumlarda soks dokuz, es er yeden bağımsız olarak cinsiyet gelişim bozukluğuna neden olabilir. Es ef bir ve es er ye, soks dokuz üzerindeki etkilerini tesko adı verilen, soks dokuzun testise özgü güçlendirici çekirdek elemanı üzerinden gerçekleştirir. Soks dokuz bozuklukları hem iks iks hem iks ye cinsiyet gelişim bozukluğuna neden olabilir.
+Soks dokuz gelişimsel bir gendir ve es er ye ekspresyonuyla eş zamanlı olarak Sertoli hücrelerinden eksprese olur; ekspresyonu erken testis gelişimi için hayati öneme sahiptir.
+Bazı durumlarda soks dokuz, es er yeden bağımsız olarak cinsiyet gelişim bozukluğuna neden olabilir.
+Es ef bir ve es er ye, soks dokuz üzerindeki etkilerini tesko adı verilen, soks dokuzun testise özgü güçlendirici çekirdek elemanı üzerinden gerçekleştirir.
+Soks dokuz bozuklukları hem iks iks hem iks ye cinsiyet gelişim bozukluğuna neden olabilir.
 
-Soks dokuzun heterozigot fonksiyon kaybı mutasyonları kırk altı iks ye cinsiyet gelişim bozukluğu ve kampomelik displaziye neden olur; kampomelik displazi uzun kemiklerde eğrilikle giden bir iskelet displazisidir. Soks dokuz duplikasyonları ise kırk altı iks iks cinsiyet gelişim bozukluğu ile ilişkilidir. Yani soks dokuz kaybı iks ye bireyi, fazlalığı iks iks bireyi tersine çevirir; iskelet anomalisi ile iks ye cinsiyet tersinmesi birlikteliği soks dokuzu düşündürür.
+Soks dokuzun heterozigot fonksiyon kaybı mutasyonları kırk altı iks ye cinsiyet gelişim bozukluğu ve kampomelik displaziye neden olur; kampomelik displazi uzun kemiklerde eğrilikle giden bir iskelet displazisidir.
+Soks dokuz duplikasyonları ise kırk altı iks iks cinsiyet gelişim bozukluğu ile ilişkilidir.
+Yani soks dokuz kaybı iks ye bireyi, fazlalığı iks iks bireyi tersine çevirir; iskelet anomalisi ile iks ye cinsiyet tersinmesi birlikteliği soks dokuzu düşündürür.
 
-Es er yenin kısa sinyali geçtikten sonra bir destek ağı devreye girer. Ef ge ef dokuz, soks dokuz düzeyinin yüksek kalması için Sertoli hücrelerini uyarır ve aynı zamanda vint dört ekspresyonunu baskılayarak over gelişimini engeller. Pe ge de iki, soks dokuz ekspresyonunun belirli seviyelerde tutulmasını sağlar. De em er te bir ise geç seks determinasyonu ve erken testis farklılaşması basamaklarında görevlidir.
+Es er yenin kısa sinyali geçtikten sonra bir destek ağı devreye girer.
+Ef ge ef dokuz, soks dokuz düzeyinin yüksek kalması için Sertoli hücrelerini uyarır ve aynı zamanda vint dört ekspresyonunu baskılayarak over gelişimini engeller.
+Pe ge de iki, soks dokuz ekspresyonunun belirli seviyelerde tutulmasını sağlar.
+De em er te bir ise geç seks determinasyonu ve erken testis farklılaşması basamaklarında görevlidir.
 
 @@ Daks bir: doza duyarlı gen
 Daks bir X kromozomunda yer alır ve hem testis hem over gelişimi için gereklidir. Adrenal bez, gonadlar, hipotalamus ve hipofizden eksprese olur. Fetal hayatta başlayan ekspresyonu kadında devam ederken erkekte düşüş gösterir. Daks bir kopya sayısı artışları iks ye cinsiyet gelişim bozukluğuna neden olur; fazla daks bir soks dokuzu baskılayarak testis gelişimini bozar. İnaktive edici mutasyonları ise çoğunlukla erkeklerin etkilendiği X'e bağlı konjenital adrenal hipoplaziye neden olur. Dikkat edin, adrenal hipoplazi ile ileride göreceğimiz konjenital adrenal hiperplazi sık karıştırılır; daks bir kaybı hipoplazi yapar.
@@ -80,112 +146,231 @@ Daks bir X kromozomunda yer alır ve hem testis hem over gelişimi için gerekli
 @@ Over yolu: er es pe o bir, vint dört, beta katenin ve foks el iki
 Over gelişimi için dört gen büyük öneme sahiptir: er es pe o bir, vint dört, beta katenini kodlayan ce te en en be bir ve foks el iki. Es er yenin yokluğunda bu dört gen pregranüloza hücrelerinde soks dokuz ve ef ge ef dokuz etkisini baskılar. Er es pe o bir, vint dört ve foks el iki, beta katenin ekspresyonunu artırarak soks dokuzu baskılar.
 
-Burası önemli, bu iki bilgi çıkmış sorularda soruldu. Gonadal farklılaşmada dişi, yani over yönünde gelişimi yönlendiren genler birlikte foks el iki, er es pe o bir ve vint dörttür. Erkek, yani testis yönünde gelişimi başlatan temel genler ise es er ye, soks dokuz ve es ef birdir. Çeldirici olarak verilen ve te bir, paks iki, e em iks iki ve el ha iks dokuz ise ürogenital katlantının genleridir.
+Burası önemli, bu iki bilgi çıkmış sorularda soruldu.
+Gonadal farklılaşmada dişi, yani over yönünde gelişimi yönlendiren genler birlikte foks el iki, er es pe o bir ve vint dörttür.
+Erkek, yani testis yönünde gelişimi başlatan temel genler ise es er ye, soks dokuz ve es ef birdir.
+Çeldirici olarak verilen ve te bir, paks iki, e em iks iki ve el ha iks dokuz ise ürogenital katlantının genleridir.
 
-Vint dört, vint beta katenin sinyal yolağında görevlidir. Müller kanal oluşumunda, androjenik hormonların üretiminin kontrolünde ve oosit gelişiminde rol oynar. Heterozigot mutasyonlarında kadınlarda Mülleriyan aplazi ve overyan disfonksiyon görülür ve bu kişilerde belirgin androjen fazlalığı vardır. Homozigot mutasyonlarında serkal sendromu görülür: cinsiyet tersinmesi ile birlikte böbrek, adrenal ve akciğerlerin anormal gelişimi. Heterozigot fonksiyon kazancı mutasyonlarında ise kırk altı iks ye olgularda dişi karakterler gelişir.
+Vint dört, vint beta katenin sinyal yolağında görevlidir.
+Müller kanal oluşumunda, androjenik hormonların üretiminin kontrolünde ve oosit gelişiminde rol oynar.
+Heterozigot mutasyonlarında kadınlarda Mülleriyan aplazi ve overyan disfonksiyon görülür ve bu kişilerde belirgin androjen fazlalığı vardır.
+Homozigot mutasyonlarında serkal sendromu görülür: cinsiyet tersinmesi ile birlikte böbrek, adrenal ve akciğerlerin anormal gelişimi.
+Heterozigot fonksiyon kazancı mutasyonlarında ise kırk altı iks ye olgularda dişi karakterler gelişir.
 
-Foks el iki, fetal hayatta ürogenital katlantıda, postnatal ve erişkin dönemde ise over ve göz kapağında eksprese olur. Erkek yönünde gelişimin hayat boyu baskılanması için foks el iki düzeyinin korunması gerekir. Heterozigot mutasyonları be pe e es sendromuna neden olur: blefarofimozis, yani göz aralığının daralması; pitozis, yani göz kapağı düşüklüğü; ve epikantus inversus. Göz kapağı anomalisi ile over yetmezliğinin birlikteliği foks el ikiyi düşündürür.
+Foks el iki, fetal hayatta ürogenital katlantıda, postnatal ve erişkin dönemde ise over ve göz kapağında eksprese olur.
+Erkek yönünde gelişimin hayat boyu baskılanması için foks el iki düzeyinin korunması gerekir.
+Heterozigot mutasyonları be pe e es sendromuna neden olur: blefarofimozis, yani göz aralığının daralması; pitozis, yani göz kapağı düşüklüğü; ve epikantus inversus.
+Göz kapağı anomalisi ile over yetmezliğinin birlikteliği foks el ikiyi düşündürür.
 
 @@ Son basamak: testosteron, anti Müller hormon ve kolesterol
 Diferansiye gonadlar oluştuktan sonra son basamak, iç ve dış genital organların gelişmesi ve uygun seks steroidlerinin salgılanmasıdır. Leydig hücrelerinden salınan testosteron ve Sertoli hücrelerinden salınan anti Müller hormon, erkek yönde gelişimin en önemli iki faktörüdür. Testosteron Volf yapılarının gelişimini, testisin inguinal kanaldan inişini, fallik büyümeyi, labioskrotal katlantıların birleşimini ve penil üretranın gelişimini sağlar; dış genital etkileri büyük ölçüde dihidrotestosterona dönüşüm aracılığıyla gerçekleşir. Anti Müller hormon ise Müller yapılarının baskılanmasını sağlar.
 
-Testosteron kolesterol türevi bir hormondur. Bu nedenle kolesterol metabolizmasını etkileyen defektler cinsiyet gelişim bozukluğu ile sonuçlanır. Klasik örnek, de ha ce er yedi geninde oluşan mutasyonlarla ortaya çıkan Smit Lemli Opitz sendromudur; bu gen kolesterol sentezinin son basamağını yürüten yedi dehidrokolesterol redüktazı kodlar. İks ye bireyde yetersiz testosteron üretimi, eksik virilizasyon ve kuşkulu dış genitalya ile kendini gösterebilir; bu yüzden Smit Lemli Opitz sendromu ambigus genitalya ayırıcı tanısında yer alır.
+Testosteron kolesterol türevi bir hormondur.
+Bu nedenle kolesterol metabolizmasını etkileyen defektler cinsiyet gelişim bozukluğu ile sonuçlanır.
+Klasik örnek, de ha ce er yedi geninde oluşan mutasyonlarla ortaya çıkan Smit Lemli Opitz sendromudur; bu gen kolesterol sentezinin son basamağını yürüten yedi dehidrokolesterol redüktazı kodlar.
+İks ye bireyde yetersiz testosteron üretimi, eksik virilizasyon ve kuşkulu dış genitalya ile kendini gösterebilir; bu yüzden Smit Lemli Opitz sendromu ambigus genitalya ayırıcı tanısında yer alır.
 
-Embriyonel dönemin gen haritasında testis basamağında gata dört ve ce be iks iki de yer alır; bu ikisi es er ye ekspresyonunun düzenlenmesine katkı verir. Ve te bir ve es ef bir haritada hem ürogenital katlantı hem testis basamağında görünür; bu yüzden kayıpları hem erken hem geç basamakları etkiler.
+Embriyonel dönemin gen haritasında testis basamağında gata dört ve ce be iks iki de yer alır; bu ikisi es er ye ekspresyonunun düzenlenmesine katkı verir.
+Ve te bir ve es ef bir haritada hem ürogenital katlantı hem testis basamağında görünür; bu yüzden kayıpları hem erken hem geç basamakları etkiler.
 
 @@ Cinsiyet gelişim bozukluklarının sınıflaması: kırk altı iks iks
 Cinsiyet gelişimi sürecini kontrol eden genlerdeki ve kromozomlardaki mutasyonlar ya da değişiklikler cinsiyet gelişim bozukluklarına neden olur. Genetik defektli cinsiyet gelişim bozuklukları üç gruba ayrılır: cinsiyet kromozom bozuklukları, kırk altı iks iks bozuklukları ve kırk altı iks ye bozuklukları. Bu sınıflamanın ölçütü fenotip değil karyotiptir; ilk yapılacak karyotip analizi hastayı doğrudan bu üç gruptan birine yerleştirir.
 
-Kırk altı iks iks grubunda ilk başlık over gelişim bozukluklarıdır: gonadal disgenezi, aynı bireyde over ve testis dokusunun bulunduğu ovotestiküler bozukluk ve örneğin es er ye ya da soks dokuz duplikasyonuyla testis gelişen testiküler bozukluk. 2. başlık, %6 ila yetmiş oranında bildirilen androjen fazlalığıdır. Fetal kaynaklı androjen fazlalığının nedenleri yirmi bir hidroksilaz eksikliği, on bir beta hidroksilaz eksikliği, üç beta hidroksisteroid dehidrogenaz eksikliği, pe dört yüz elli oksiredüktaz eksikliği ve glukokortikoid reseptör defektidir. Fetal androjen fazlalığının %90 beşi yirmi bir hidroksilaz eksikliğine bağlıdır; over ve Müller yapıları normal olsa da fazla androjen dış genitalyayı erkek yönüne iter.
+Kırk altı iks iks grubunda ilk başlık over gelişim bozukluklarıdır: gonadal disgenezi, aynı bireyde over ve testis dokusunun bulunduğu ovotestiküler bozukluk ve örneğin es er ye ya da soks dokuz duplikasyonuyla testis gelişen testiküler bozukluk.
+2. başlık, %6 ila yetmiş oranında bildirilen androjen fazlalığıdır.
+Fetal kaynaklı androjen fazlalığının nedenleri yirmi bir hidroksilaz eksikliği, on bir beta hidroksilaz eksikliği, üç beta hidroksisteroid dehidrogenaz eksikliği, pe dört yüz elli oksiredüktaz eksikliği ve glukokortikoid reseptör defektidir.
+Fetal androjen fazlalığının %95'i yirmi bir hidroksilaz eksikliğine bağlıdır; over ve Müller yapıları normal olsa da fazla androjen dış genitalyayı erkek yönüne iter.
 
-Androjen fetoplasental kaynaklı da olabilir: aromataz eksikliğinde androjenler östrojene çevrilemez ve birikir; oksiredüktaz eksikliği de bu grupta yer alır. Anne kaynaklı nedenler annede virilizan tümör ve çok nadiren androjenik ilaçlardır; bu yüzden kırk altı iks iks bir bebekte virilizasyon görüldüğünde anne öyküsü mutlaka sorgulanmalıdır. Diğer başlığında kloakal anomalilerle giden sendromik birliktelikler, murks gibi Müller agenezi ve hipoplazileri, modi beş gibi uterus anomalileri, Mekkuzik Kaufman gibi vajinal atrezi ve labial adezyon bulunur.
+Androjen fetoplasental kaynaklı da olabilir: aromataz eksikliğinde androjenler östrojene çevrilemez ve birikir; oksiredüktaz eksikliği de bu grupta yer alır.
+Anne kaynaklı nedenler annede virilizan tümör ve çok nadiren androjenik ilaçlardır; bu yüzden kırk altı iks iks bir bebekte virilizasyon görüldüğünde anne öyküsü mutlaka sorgulanmalıdır.
+Diğer başlığında kloakal anomalilerle giden sendromik birliktelikler, murks gibi Müller agenezi ve hipoplazileri, modi beş gibi uterus anomalileri, Mekkuzik Kaufman gibi vajinal atrezi ve labial adezyon bulunur.
 
 @@ Kırk altı iks ye ve cinsiyet kromozom bozuklukları
 Kırk altı iks ye grubunda sorun ya testisin oluşumunda ya da androjenin üretimi ve etkisindedir. Testis gelişim bozuklukları; es er ye, soks dokuz, es ef bir ve ve te bir ile ilişkili komplet ya da parsiyel gonadal disgenezi, ovotestiküler bozukluk ve gelişen testis dokusunun sonradan kaybolduğu testis regresyonudur. Androjen sentez ya da etkisindeki yetersizliklerin ilki Leydig hücre agenezisi ya da cevapsızlığıdır. Androjen sentez bozuklukları ise beş alfa redüktaz iki eksikliği, el ha reseptör mutasyonları, lipoid adrenal hiperplaziye yol açan star defekti, on yedi yirmi liyaz eksikliği, üç beta hidroksisteroid dehidrogenaz eksikliği, pe dört yüz elli oksiredüktaz eksikliği ve on yedi beta hidroksisteroid dehidrogenaz eksikliğidir.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: on bir beta hidroksilaz eksikliği kırk altı iks ye cinsiyet gelişim bozukluğu etiyolojisinde yer almaz. On bir beta ve yirmi bir hidroksilaz eksiklikleri androjen fazlalığı yaparak kırk altı iks iks bozukluğuna neden olur. Buna karşılık on yedi alfa hidroksilaz, yirmi yirmi iki desmolaz ve on yedi yirmi liyaz eksiklikleri androjen sentezini azalttığı için kırk altı iks ye tarafındadır. Yine çıkmış sorularda sorulduğu üzere hem kırk altı iks ye hem kırk altı iks iks etiyolojisinde yer alan enzim defekti üç beta hidroksisteroid dehidrogenaz eksikliğidir; pe dört yüz elli oksiredüktaz eksikliği de her iki listede bulunur.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: on bir beta hidroksilaz eksikliği kırk altı iks ye cinsiyet gelişim bozukluğu etiyolojisinde yer almaz.
+On bir beta ve yirmi bir hidroksilaz eksiklikleri androjen fazlalığı yaparak kırk altı iks iks bozukluğuna neden olur.
+Buna karşılık on yedi alfa hidroksilaz, yirmi yirmi iki desmolaz ve on yedi yirmi liyaz eksiklikleri androjen sentezini azalttığı için kırk altı iks ye tarafındadır.
+Yine çıkmış sorularda sorulduğu üzere hem kırk altı iks ye hem kırk altı iks iks etiyolojisinde yer alan enzim defekti üç beta hidroksisteroid dehidrogenaz eksikliğidir; pe dört yüz elli oksiredüktaz eksikliği de her iki listede bulunur.
 
-Kırk altı iks ye grubunun 3. başlığı androjen bağımlı hedef doku defektleridir; burada testosteron üretimi normaldir ama sorun reseptör düzeyindedir. Androjen duyarsızlık sendromunun komplet formu, yani testiküler feminizasyon, parsiyel ve hafif formları bu başlıktadır. 4. başlık persistan Müller kanalı sendromudur; anti Müller hormon ya da reseptörü işlev görmediği için erkek bireyde Müller yapıları kalıcıdır, testosteron etkisi ise normaldir. Diğer başlığında sendromik birliktelikler, kloakal anomaliler ve izole hipospadias bulunur.
+Kırk altı iks ye grubunun 3. başlığı androjen bağımlı hedef doku defektleridir; burada testosteron üretimi normaldir ama sorun reseptör düzeyindedir.
+Androjen duyarsızlık sendromunun komplet formu, yani testiküler feminizasyon, parsiyel ve hafif formları bu başlıktadır.
+4. başlık persistan Müller kanalı sendromudur; anti Müller hormon ya da reseptörü işlev görmediği için erkek bireyde Müller yapıları kalıcıdır, testosteron etkisi ise normaldir.
+Diğer başlığında sendromik birliktelikler, kloakal anomaliler ve izole hipospadias bulunur.
 
-3. ana grup cinsiyet kromozom bozukluklarıdır. Kırk yedi iks iks ye, Klaynfelter sendromu ve varyantlarıdır. Kırk beş iks, Törnır sendromu ve varyantlarıdır. Kırk beş iks, kırk altı iks ye mozaikliği miks gonadal disgenezidir. Kırk altı iks iks, kırk altı iks ye ise kimerizmdir. Mozaiklik ile kimerizmi karıştırmayın: mozaiklik tek zigottan sonradan oluşan hücre dizisi farkıdır, kimerizm ise iki ayrı zigottan köken alan hücrelerin tek bireyde bulunmasıdır.
+3. ana grup cinsiyet kromozom bozukluklarıdır.
+Kırk yedi iks iks ye, Klaynfelter sendromu ve varyantlarıdır.
+Kırk beş iks, Törnır sendromu ve varyantlarıdır.
+Kırk beş iks, kırk altı iks ye mozaikliği miks gonadal disgenezidir.
+Kırk altı iks iks, kırk altı iks ye ise kimerizmdir.
+Mozaiklik ile kimerizmi karıştırmayın: mozaiklik tek zigottan sonradan oluşan hücre dizisi farkıdır, kimerizm ise iki ayrı zigottan köken alan hücrelerin tek bireyde bulunmasıdır.
 
 @@ Varyantlar ve terminoloji
-Bireylerin büyük bölümü erkek ya da dişi olarak gelişir; yüzde birden azında varyantlar gözlenir. Nedenleri kromozomal varyantlar, gen mutasyonları ve eksternal koşullardır. Bazı önemli terimler şunlardır. Jinekomasti erkekte meme gelişimidir. Hipospadias, erkek çocukların cinsel organının ucunda olması gereken dış idrar deliğinin penisin alt tarafında bir yere açılmasıdır; ürogenital kıvrımların orta hatta tam birleşememesinin sonucudur ve açıklığın yerine göre glanülerden perineale uzanan tiplere ayrılır.
+Bireylerin büyük bölümü erkek ya da dişi olarak gelişir; %1'den azında varyantlar gözlenir. Nedenleri kromozomal varyantlar, gen mutasyonları ve eksternal koşullardır. Bazı önemli terimler şunlardır. Jinekomasti erkekte meme gelişimidir. Hipospadias, erkek çocukların cinsel organının ucunda olması gereken dış idrar deliğinin penisin alt tarafında bir yere açılmasıdır; ürogenital kıvrımların orta hatta tam birleşememesinin sonucudur ve açıklığın yerine göre glanülerden perineale uzanan tiplere ayrılır.
 
-Eski terminoloji gonad dokusuna dayanır. Hermafrodit, hem erkek hem dişi özellikleri birlikte bulunduran bireydir. Gerçek hermafroditte hem testiküler hem overyan doku birliktedir; bazen ayrı organlar halindedir, çoğunlukla ise farklı parçaları olan tek bir organ, yani ovotestis şeklindedir. Erkek psödohermafroditte testisler vardır, overler yoktur; kadın psödohermafroditte overler vardır, testisler yoktur. Yani psödohermafroditizmde adı gonad belirler.
+Eski terminoloji gonad dokusuna dayanır.
+Hermafrodit, hem erkek hem dişi özellikleri birlikte bulunduran bireydir.
+Gerçek hermafroditte hem testiküler hem overyan doku birliktedir; bazen ayrı organlar halindedir, çoğunlukla ise farklı parçaları olan tek bir organ, yani ovotestis şeklindedir.
+Erkek psödohermafroditte testisler vardır, overler yoktur; kadın psödohermafroditte overler vardır, testisler yoktur.
+Yani psödohermafroditizmde adı gonad belirler.
 
-Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: doğumsal olarak cinsel anatomisi tipik kadın ya da erkek cinsiyet özellikleri göstermeyen kişilere interseks ya da interseksüel denir; hermafrodit yerine bugün bu terim kullanılır. Biseksüel, transseksüel, homoseksüel ve heteroseksüel terimleri cinsel yönelim ve kimlikle ilgilidir, doğumsal anatomiyi anlatmaz.
+Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: doğumsal olarak cinsel anatomisi tipik kadın ya da erkek cinsiyet özellikleri göstermeyen kişilere interseks ya da interseksüel denir; hermafrodit yerine bugün bu terim kullanılır.
+Biseksüel, transseksüel, homoseksüel ve heteroseksüel terimleri cinsel yönelim ve kimlikle ilgilidir, doğumsal anatomiyi anlatmaz.
 
 @@ Kromozomal varyantlar ve Klaynfelter sendromu
-Mayozda normalde her germ hücresi her kromozom çiftinden bir tane alır. Bazen mayoz hatası sonucu sperm ya da yumurta hücresinde iki kopya ya da sıfır kopya bulunur; örneğin Daun sendromunda germ hücresinde iki kopya yirmi 1. kromozom vardır. Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır. En sık kırk beş ya da kırk yedi kromozomlu tablolar görülür; kırk sekiz ya da kırk dokuz kromozomlu tipler daha nadirdir ve kırk dokuz iks iks iks iks ye tablosunda şiddetli mental yetmezlik vardır.
+Mayozda normalde her germ hücresi her kromozom çiftinden bir tane alır. Bazen mayoz hatası sonucu sperm ya da yumurta hücresinde iki kopya ya da sıfır kopya bulunur; örneğin Daun sendromunda germ hücresinde iki kopya 21. kromozom vardır. Seks kromozomlarının sayısal anomalilerinde fenotip daha ılımlıdır. En sık kırk beş ya da 47 kromozomlu tablolar görülür; kırk sekiz ya da 49 kromozomlu tipler daha nadirdir ve kırk dokuz iks iks iks iks ye tablosunda şiddetli mental yetmezlik vardır.
 
-Klaynfelter sendromu, yani kırk yedi iks iks ye, en sık gözlenen seks kromozom varyantıdır ve beş yüz erkek doğumda bir görülür. Burası önemli, bu sıklık sınavda sık sorulur. Y kromozomu bulunduğu için birey erkektir. Testisler küçük, testosteron düzeyi düşüktür ve çoğunluğu sterildir. Pubertede yüz ve vücut kıllanması azalmıştır. Fenotipte meme gelişimi ve geniş kalça, uzun boy ve fiziksel olarak çok kuvvetli olmayan bir yapı görülür. Sessiz mizaçlıdırlar, dil ve öğrenme problemleri vardır, konuşma ve okumayı öğrenmede yavaştırlar. Testosteron replasman tedavisi bazı fiziksel semptomlar için yardımcıdır. Kırk altı iks iks erkeklerde es er ye geni X kromozomunda lokalizedir; Y kromozomu olmamasına karşın testis gelişir ve bu bireylerde Klaynfelter görüntüsü vardır. Bu, daha önce anlattığımız es er ye translokasyonunun klinik karşılığıdır.
+Klaynfelter sendromu, yani kırk yedi iks iks ye, en sık gözlenen seks kromozom varyantıdır ve beş yüz erkek doğumda bir görülür.
+Burası önemli, bu sıklık sınavda sık sorulur.
+Y kromozomu bulunduğu için birey erkektir.
+Testisler küçük, testosteron düzeyi düşüktür ve çoğunluğu sterildir.
+Pubertede yüz ve vücut kıllanması azalmıştır.
+Fenotipte meme gelişimi ve geniş kalça, uzun boy ve fiziksel olarak çok kuvvetli olmayan bir yapı görülür.
+Sessiz mizaçlıdırlar, dil ve öğrenme problemleri vardır, konuşma ve okumayı öğrenmede yavaştırlar.
+Testosteron replasman tedavisi bazı fiziksel semptomlar için yardımcıdır.
+Kırk altı iks iks erkeklerde es er ye geni X kromozomunda lokalizedir; Y kromozomu olmamasına karşın testis gelişir ve bu bireylerde Klaynfelter görüntüsü vardır.
+Bu, daha önce anlattığımız es er ye translokasyonunun klinik karşılığıdır.
 
 @@ Törnır sendromu, kırk yedi iks ye ye ve kırk yedi iks iks iks
-Törnır sendromunda yalnız tek X kromozomu vardır; Y olmadığı için primer gonad overdir ve birey kırk beş iks karyotipli bir kadındır. İki bin beş yüz canlı kız doğumda bir görülür. Burası önemli: spontan abortusların yüzde onunun nedeni kırk beş iks karyotiptir ve Törnır embriyolarının %90 sekizi doğumdan önce kaybedilir. Overler fonksiyonel değildir, rudimenter overler ve strik gonad yapıları vardır; kırk beş iks kadınlar sterildir. Seks hormonu üretimi olmadığından pubertede sekonder seksüel özellikler gelişmez; meme gelişimi zayıftır ve menstrüasyon yoktur.
+Törnır sendromunda yalnız tek X kromozomu vardır; Y olmadığı için primer gonad overdir ve birey kırk beş iks karyotipli bir kadındır. İki bin beş yüz canlı kız doğumda bir görülür. Burası önemli: spontan abortusların yüzde onunun nedeni kırk beş iks karyotiptir ve Törnır embriyolarının %98'i doğumdan önce kaybedilir. Overler fonksiyonel değildir, rudimenter overler ve strik gonad yapıları vardır; kırk beş iks kadınlar sterildir. Seks hormonu üretimi olmadığından pubertede sekonder seksüel özellikler gelişmez; meme gelişimi zayıftır ve menstrüasyon yoktur.
 
-Fizik özellikler kısa boy, düşük saç çizgisi, yele boyun, yani boynun iki yanında kanat benzeri deri katlantısı, böbrek ve dolaşım sistemi anomalileridir; çizimde aort darlığı, kalkan göğüs ve kısa 4. metakarp da işaretlenir. Akıl yürütme ve matematikte problem yaşarlar, diğerlerinin duygularını anlamada zorluk gibi sosyal güçlükler vardır. Tedavide büyüme hormonu ve östrojen kullanılır. Sınavda Klaynfelter ile Törnır yer değiştirilerek sorulur: Klaynfelter uzun boylu ve testosteronla, Törnır kısa boylu ve büyüme hormonu ile östrojenle tedavi edilir.
+Fizik özellikler kısa boy, düşük saç çizgisi, yele boyun, yani boynun iki yanında kanat benzeri deri katlantısı, böbrek ve dolaşım sistemi anomalileridir; çizimde aort darlığı, kalkan göğüs ve kısa 4. metakarp da işaretlenir.
+Akıl yürütme ve matematikte problem yaşarlar, diğerlerinin duygularını anlamada zorluk gibi sosyal güçlükler vardır.
+Tedavide büyüme hormonu ve östrojen kullanılır.
+Sınavda Klaynfelter ile Törnır yer değiştirilerek sorulur: Klaynfelter uzun boylu ve testosteronla, Törnır kısa boylu ve büyüme hormonu ile östrojenle tedavi edilir.
 
-Kırk yedi iks ye ye bin canlı erkek doğumda bir görülür. Çoğu tanı almaz, genellikle normal görünürler. Fiziksel olarak çok aktiftirler, hafif öğrenme ve konuşma güçlüğü olabilir. Fertildirler, nadiren iki Y kromozomunu oğullarına aktarabilirler; prenatal tanı gereklidir. Kırk yedi iks iks iks de bin canlı kız doğumda bir görülür. Semptomlarda çeşitlilik vardır, bazı olgularda hiç semptom olmayabilir. Pasif ve sessizdirler, motor ve dil yetenekleri ile duygusal olgunluk geridir, bazılarında zekâ düzeyi çok düşüktür. Fertilite normaldir. Yani fertilite bu iki tabloda korunur, Klaynfelter ve Törnır'de ise bozulur. Gen mutasyonlarına bağlı varyantlar kromozom anomalilerine göre daha seyrektir; insidansı on bin de birdir. Kalıtım kalıbı önemlidir. Kromozomal varyantlar çoğunlukla sporadiktir, gen mutasyonları ise genellikle kalıtsaldır ve çoğu zaman aile öyküsü vardır.
+Kırk yedi iks ye ye bin canlı erkek doğumda bir görülür.
+Çoğu tanı almaz, genellikle normal görünürler.
+Fiziksel olarak çok aktiftirler, hafif öğrenme ve konuşma güçlüğü olabilir.
+Fertildirler, nadiren iki Y kromozomunu oğullarına aktarabilirler; prenatal tanı gereklidir.
+Kırk yedi iks iks iks de bin canlı kız doğumda bir görülür.
+Semptomlarda çeşitlilik vardır, bazı olgularda hiç semptom olmayabilir.
+Pasif ve sessizdirler, motor ve dil yetenekleri ile duygusal olgunluk geridir, bazılarında zekâ düzeyi çok düşüktür.
+Fertilite normaldir.
+Yani fertilite bu iki tabloda korunur, Klaynfelter ve Törnır'de ise bozulur.
+Gen mutasyonlarına bağlı varyantlar kromozom anomalilerine göre daha seyrektir; insidansı on bin de birdir.
+Kalıtım kalıbı önemlidir.
+Kromozomal varyantlar çoğunlukla sporadiktir, gen mutasyonları ise genellikle kalıtsaldır ve çoğu zaman aile öyküsü vardır.
 
 @@ Miks gonadal disgenezi ve kırk altı iks ye gonadal disgenezi genleri
 Miks gonadal disgenezi, kırk beş iks ve kırk altı iks ye hücre dizilerinin birlikte bulunduğu mozaik bir tablodur. Klinik bulgular değişken, fenotip heterojendir; doğumda kısmi virilizasyon ve ambigus genitalyadan Törnır sendromuna ya da normal kadın veya erkek fenotipine kadar uzanır. Erkek yönünde gelişenlerde kriptorşidizm, kısmi testis disgenezisi ve hipospadias görülebilir; kadın yönünde gelişenlerde değişen derecelerde virilizasyon ve Törnır fenotipi izlenir. Müller yapıları genellikle vardır. Burası önemli: en yaygın özellik, genellikle bir tarafta disgenetik testis, diğer tarafta strik gonad bulunan asimetrik gonad gelişimidir. Erken tanı almayan hastalar infertilite şikâyetiyle başvurduklarında tanı alır.
 
-Kırk altı iks ye gonadal disgenezi nedenlerini gösteren tabloda eşlik eden bulgu genin ipucudur. Es er ye izole gonadal disgenezi yapar. Soks dokuz kampomelik displazi ile, es ef bir adrenal yetmezlik ile, ve te bir Deni Draş, Freyzır ve vagr sendromları ile birlikte görülür. A te er iks geni alfa talasemi ve mental retardasyon ile, a er iks geni lizensefali ve epilepsi ile, de em er te bir ise dokuz pe delesyonu ve mental retardasyon ile birliktedir. Vint dört ve daks bir duplikasyonları ise over yolu genlerinin fazlalığıyla testis gelişimini baskılar.
+Kırk altı iks ye gonadal disgenezi nedenlerini gösteren tabloda eşlik eden bulgu genin ipucudur.
+Es er ye izole gonadal disgenezi yapar.
+Soks dokuz kampomelik displazi ile, es ef bir adrenal yetmezlik ile, ve te bir Deni Draş, Freyzır ve vagr sendromları ile birlikte görülür.
+A te er iks geni alfa talasemi ve mental retardasyon ile, a er iks geni lizensefali ve epilepsi ile, de em er te bir ise dokuz pe delesyonu ve mental retardasyon ile birliktedir.
+Vint dört ve daks bir duplikasyonları ise over yolu genlerinin fazlalığıyla testis gelişimini baskılar.
 
 @@ En sık üç hastalık ve beş alfa redüktaz iki eksikliği
 Cinsiyet gelişim bozukluklarında en yaygın üç hastalık beş alfa redüktaz iki enzim eksikliği, androjen duyarsızlık sendromu ve konjenital adrenal hiperplazidir. Burası önemli, bu üçlü sınavın çekirdeğidir. İlk ikisi kırk altı iks ye, 3.'sü kırk altı iks iks bireyleri ilgilendirir ve üçü birlikte ambigus genitalya ayırıcı tanısının çekirdeğini oluşturur.
 
-Beş alfa redüktaz testosteronu dihidrotestosterona dönüştürür ve dihidrotestosteron erkek eksternal genitalya gelişiminden sorumludur. Hastalık resesif kalıtılır; her iki allel mutant olduğunda ortaya çıkar. Doğumda inmemiş testis vardır ve erkek gelişim kanalları mevcuttur, çünkü testosteron normaldir. Dış genitalya dişi ile ambigus arasındadır: çok küçük penis ve hipospadias genişlemiş klitoris gibi görünür, kısa bir vajina bulunur ve çocuk genellikle kız olarak büyütülür.
+Beş alfa redüktaz testosteronu dihidrotestosterona dönüştürür ve dihidrotestosteron erkek eksternal genitalya gelişiminden sorumludur.
+Hastalık resesif kalıtılır; her iki allel mutant olduğunda ortaya çıkar.
+Doğumda inmemiş testis vardır ve erkek gelişim kanalları mevcuttur, çünkü testosteron normaldir.
+Dış genitalya dişi ile ambigus arasındadır: çok küçük penis ve hipospadias genişlemiş klitoris gibi görünür, kısa bir vajina bulunur ve çocuk genellikle kız olarak büyütülür.
 
-Pubertede testosteron üretimi artar, belirli ölçüde dihidrotestosteron üretimi gerçekleşir ve erkek görünümü gelişir: testisler iner, penis büyür, yüzde kıllanma başlar, ses kalınlaşır, kaslar gelişir. Kız olarak büyütülmüş bir çocukta pubertede ses kalınlaşması, kas gelişimi ve penis büyümesi bu hastalığı düşündürmelidir.
+Pubertede testosteron üretimi artar, belirli ölçüde dihidrotestosteron üretimi gerçekleşir ve erkek görünümü gelişir: testisler iner, penis büyür, yüzde kıllanma başlar, ses kalınlaşır, kaslar gelişir.
+Kız olarak büyütülmüş bir çocukta pubertede ses kalınlaşması, kas gelişimi ve penis büyümesi bu hastalığı düşündürmelidir.
 
-Hastalık es er de beş a iki genindeki mutasyonlardan kaynaklanır; en sık gözlenen mutasyon pe el elli beş kudur. Otozomal resesif kalıtılır ve kırk altı iks ye bozukluğuna sebep olan en önemli hastalıklardan biridir. Bulgular hipospadiastan ambigus genitalyaya kadar geniş bir spektrumdadır. Testosteron ve östrojen düzeyi normal ya da yüksek, dihidrotestosteron ise düşüktür. Bebekler kriptorşidizm, mikrofallus, psödovajina ve perineoskrotal hipospadiasın eşlik ettiği karışık bir genitalya ile doğar ve genelde kız olarak yetiştirilir.
+Hastalık es er de beş a iki genindeki mutasyonlardan kaynaklanır; en sık gözlenen mutasyon pe el elli beş kudur.
+Otozomal resesif kalıtılır ve kırk altı iks ye bozukluğuna sebep olan en önemli hastalıklardan biridir.
+Bulgular hipospadiastan ambigus genitalyaya kadar geniş bir spektrumdadır.
+Testosteron ve östrojen düzeyi normal ya da yüksek, dihidrotestosteron ise düşüktür.
+Bebekler kriptorşidizm, mikrofallus, psödovajina ve perineoskrotal hipospadiasın eşlik ettiği karışık bir genitalya ile doğar ve genelde kız olarak yetiştirilir.
 
 @@ Androjen duyarsızlık sendromu
 Androjen duyarsızlık sendromu, diğer adıyla testiküler feminizasyon, X'e bağlı kalıtım sergiler ve kırk altı iks ye bozukluğunun en sık tiplerindendir. Androjenler erkek gelişimi için androjen reseptörü üzerinden işlev görür ve bu reseptörün geni X kromozomu üzerindedir. Bu gendeki fonksiyon kaybı mutasyonları periferde androjen direnci ve değişik derecelerde yetersiz virilizasyon yaratır. Direncin derecesine göre üç sınıf vardır: komplet, parsiyel ve hafif androjen duyarsızlığı.
 
-Komplet formda dış genital yapı normal dişi görünümündedir. Vajen kısa ve kördür; Volf kanalı yapıları ve prostat yoktur, çünkü testosteron da dihidrotestosteron gibi aynı reseptör üzerinden etki eder. Bu bireyler kırk altı iks ye karyotipli, normal fenotipli kızlar olduğu için büyük oranda puberteye kadar klinik bir durum ortaya çıkmaz. Sıklığı yirmi bin doğumda birdir. Testisler normaldir ve testosteron üretir, ancak reseptör eksikliği nedeniyle hormona yanıt yoktur. Vas deferens, epididim ve seminal veziküller yoktur. Testislerden Müller inhibe edici madde üretimi ise vardır; bu yüzden uterus, fallop tüpleri ve üst vajina da dejenere olur. Sonuç, hem Volf hem Müller türevlerinden yoksun bir iç genital yapıdır.
+Komplet formda dış genital yapı normal dişi görünümündedir.
+Vajen kısa ve kördür; Volf kanalı yapıları ve prostat yoktur, çünkü testosteron da dihidrotestosteron gibi aynı reseptör üzerinden etki eder.
+Bu bireyler kırk altı iks ye karyotipli, normal fenotipli kızlar olduğu için büyük oranda puberteye kadar klinik bir durum ortaya çıkmaz.
+Sıklığı yirmi bin doğumda birdir.
+Testisler normaldir ve testosteron üretir, ancak reseptör eksikliği nedeniyle hormona yanıt yoktur.
+Vas deferens, epididim ve seminal veziküller yoktur.
+Testislerden Müller inhibe edici madde üretimi ise vardır; bu yüzden uterus, fallop tüpleri ve üst vajina da dejenere olur.
+Sonuç, hem Volf hem Müller türevlerinden yoksun bir iç genital yapıdır.
 
-Dihidrotestosteron olsa dış genitalya erkek yönde gelişirdi; ancak testosteron ve dihidrotestosteron aynı reseptörü kullandığı için dış genitalya dişi yönde gelişir ve vajinanın alt üçte ikisi bulunur. Pubertede testislerden testosteron salınmaya devam eder ve aromataz testosteronu estradiole çevirir; böylece kadına yönelik sekonder seksüel karakterler, özellikle meme gelişimi ortaya çıkar. Menstrüasyon yoktur, pubik ve koltuk altı kıllanması seyrek ya da yoktur. İnmemiş testisler nadiren kanseröz hale dönüşebildiği için cerrahi olarak çıkarılmaları gerekir; birey normal kadın yönünde gelişir.
+Dihidrotestosteron olsa dış genitalya erkek yönde gelişirdi; ancak testosteron ve dihidrotestosteron aynı reseptörü kullandığı için dış genitalya dişi yönde gelişir ve vajinanın alt üçte ikisi bulunur.
+Pubertede testislerden testosteron salınmaya devam eder ve aromataz testosteronu estradiole çevirir; böylece kadına yönelik sekonder seksüel karakterler, özellikle meme gelişimi ortaya çıkar.
+Menstrüasyon yoktur, pubik ve koltuk altı kıllanması seyrek ya da yoktur.
+İnmemiş testisler nadiren kanseröz hale dönüşebildiği için cerrahi olarak çıkarılmaları gerekir; birey normal kadın yönünde gelişir.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: testiküler feminizasyonda karyotip kırk altı iks yedir, fenotipik olarak dişi dış genital yapı vardır, hastalık X'e bağlı resesif geçer ve testisler genellikle karın içinde ya da inguinal kanalda bulunur. Yanlış olan ifade "normal erkek meme yapısı vardır" ifadesidir; aromatizasyonla oluşan estradiol sayesinde kadın tipi meme gelişimi görülür.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: testiküler feminizasyonda karyotip kırk altı iks yedir, fenotipik olarak dişi dış genital yapı vardır, hastalık X'e bağlı resesif geçer ve testisler genellikle karın içinde ya da inguinal kanalda bulunur.
+Yanlış olan ifade "normal erkek meme yapısı vardır" ifadesidir; aromatizasyonla oluşan estradiol sayesinde kadın tipi meme gelişimi görülür.
 
-Parsiyel formun klinik olarak tanınması daha kolaydır, çünkü doğumda ambigus genitalya tablosuyla karşımıza çıkar. Hafif formda bulgular çok daha hafiftir ve genital yapılar yalnızca yetersiz virilizasyon gösterebilir. Androjen reseptörü geninde beş yüzün üzerinde mutasyon tanımlıdır ve genotip fenotip ilişkisi kurmak zordur; bunun sebebi gende tekrar sayısı içeren bölgelerin bulunmasıdır.
+Parsiyel formun klinik olarak tanınması daha kolaydır, çünkü doğumda ambigus genitalya tablosuyla karşımıza çıkar.
+Hafif formda bulgular çok daha hafiftir ve genital yapılar yalnızca yetersiz virilizasyon gösterebilir.
+Androjen reseptörü geninde beş yüzün üzerinde mutasyon tanımlıdır ve genotip fenotip ilişkisi kurmak zordur; bunun sebebi gende tekrar sayısı içeren bölgelerin bulunmasıdır.
 
-Parsiyel androjen duyarsızlığı Rayfenştayn sendromu olarak da bilinir. Hafif düzeyde etkili mutasyonlar reseptörü tamamen etkisiz bırakmaz, vücudun testosterona yanıtı farklı olur ve çok geniş yelpazede ambigus genitalya görülür. Erkek yönü baskın olanlarda hipospadias, anormal skrotum ve küçük penis; kadın yönü baskın olanlarda genişlemiş klitoris, birleşik labia, ayrı vajinal ve üretral açıklıklar; ambigus olanlarda ise bir santimetreden küçük mikrofallus, labia benzeri skrotum, hipospadias ve jinekomasti görülür. Hafif formda ise tamamen erkek görünüm vardır, iç ve dış yapılar erkektir, pubertede maskülinizasyon düzensizlikleri görülür. Parsiyel olguların bazılarında pubertede her iki yönde cinsiyet kimliği değişimi tercih edilebilmektedir.
+Parsiyel androjen duyarsızlığı Rayfenştayn sendromu olarak da bilinir.
+Hafif düzeyde etkili mutasyonlar reseptörü tamamen etkisiz bırakmaz, vücudun testosterona yanıtı farklı olur ve çok geniş yelpazede ambigus genitalya görülür.
+Erkek yönü baskın olanlarda hipospadias, anormal skrotum ve küçük penis; kadın yönü baskın olanlarda genişlemiş klitoris, birleşik labia, ayrı vajinal ve üretral açıklıklar; ambigus olanlarda ise bir santimetreden küçük mikrofallus, labia benzeri skrotum, hipospadias ve jinekomasti görülür.
+Hafif formda ise tamamen erkek görünüm vardır, iç ve dış yapılar erkektir, pubertede maskülinizasyon düzensizlikleri görülür.
+Parsiyel olguların bazılarında pubertede her iki yönde cinsiyet kimliği değişimi tercih edilebilmektedir.
 
-Bu iki kırk altı iks ye hastalığını karşılaştırın: ikisi de dişi görünümlü doğabilir. Beş alfa redüktaz eksikliğinde kalıtım otozomal resesiftir, Volf yapıları vardır ve pubertede erkekleşme olur. Komplet androjen duyarsızlığında kalıtım X'e bağlıdır, Volf yapıları yoktur ve pubertede kadınlaşma olur.
+Bu iki kırk altı iks ye hastalığını karşılaştırın: ikisi de dişi görünümlü doğabilir.
+Beş alfa redüktaz eksikliğinde kalıtım otozomal resesiftir, Volf yapıları vardır ve pubertede erkekleşme olur.
+Komplet androjen duyarsızlığında kalıtım X'e bağlıdır, Volf yapıları yoktur ve pubertede kadınlaşma olur.
 
 @@ Konjenital adrenal hiperplazi: mekanizma ve formlar
 Konjenital adrenal hiperplazi, kırk altı iks iks bozukluğunda kuşkulu genital yapıya neden olan en önemli mekanizmadır; cinsiyet steroid biyosentezindeki bozukluklar fetal hayatta androjen fazlalığı yaratır. Kuşkulu genitalyalı kırk altı iks iks bir olguda gonadların palpe edilememesi, Müller yapılarının varlığı ve yüksek on yedi hidroksiprogesteron düzeyi bu hastalık için tanı koydurucudur.
 
-Adrenal bezler üç grup steroid üretir: stres yanıtı için kortizol, tuz dengesi için aldosteron ve erkek seks hormonları olan androjenler. Bunlar kolesterolden biyokimyasal yolaklarla yapılır ve yolaklardaki herhangi bir mutasyon ilgili enzimin inaktivasyonuna neden olur. Olguların %90 beşinde mutant enzim yirmi bir hidroksilazdır; başka bir slaytta bu oran %90 olarak verilir.
+Adrenal bezler üç grup steroid üretir: stres yanıtı için kortizol, tuz dengesi için aldosteron ve erkek seks hormonları olan androjenler.
+Bunlar kolesterolden biyokimyasal yolaklarla yapılır ve yolaklardaki herhangi bir mutasyon ilgili enzimin inaktivasyonuna neden olur.
+Olguların %95'inde mutant enzim yirmi bir hidroksilazdır; başka bir slaytta bu oran %90 olarak verilir.
 
-Yirmi bir hidroksilaz kortizol ve aldosteron yapımında gereklidir. Kortizol hipofizden salınan a ce te haya yanıt olarak salgılanır. Yeterli kortizol yapılamazsa a ce te ha artar, sürekli uyarılan adrenal bez büyür ve adrenal hiperplazi gelişir; uyarılan sentez de androjen yoluna kayarak androjen fazlalığını artırır.
+Yirmi bir hidroksilaz kortizol ve aldosteron yapımında gereklidir.
+Kortizol hipofizden salınan a ce te haya yanıt olarak salgılanır.
+Yeterli kortizol yapılamazsa a ce te ha artar, sürekli uyarılan adrenal bez büyür ve adrenal hiperplazi gelişir; uyarılan sentez de androjen yoluna kayarak androjen fazlalığını artırır.
 
-Burası önemli, bu bilgi çıkmış sorularda birkaç kez soruldu: on yedi hidroksiprogesteron düzeyinde belirgin yükseklik saptanan bir yenidoğanda en olası tanı yirmi bir hidroksilaz eksikliğine bağlı konjenital adrenal hiperplazidir. Çeldirici olarak verilen androjen duyarsızlığı, Klaynfelter, Törnır, Addison hastalığı ya da primer hiperaldosteronizm bu öncülü yükseltmez.
+Burası önemli, bu bilgi çıkmış sorularda birkaç kez soruldu: on yedi hidroksiprogesteron düzeyinde belirgin yükseklik saptanan bir yenidoğanda en olası tanı yirmi bir hidroksilaz eksikliğine bağlı konjenital adrenal hiperplazidir.
+Çeldirici olarak verilen androjen duyarsızlığı, Klaynfelter, Törnır, Addison hastalığı ya da primer hiperaldosteronizm bu öncülü yükseltmez.
 
-Steroid sentez basamaklarında dört gende defekt görülebilir: üç beta hidroksisteroid dehidrogenaz tip ikiyi kodlayan ha es de üç be iki, yirmi bir hidroksilazı kodlayan sip yirmi bir a iki, on bir beta hidroksilazı kodlayan sip on bir be bir ve sitokrom pe dört yüz elli oksiredüktazı kodlayan por geni. Ha es de üç be iki ve por genlerindeki defektler her iki cinsiyette de kuşkulu genitalyaya sebep olur; bu, sınıflamada bu iki enzimin hem kırk altı iks iks hem kırk altı iks ye listesinde yer almasıyla örtüşür.
+Steroid sentez basamaklarında dört gende defekt görülebilir: üç beta hidroksisteroid dehidrogenaz tip ikiyi kodlayan ha es de üç be iki, yirmi bir hidroksilazı kodlayan sip yirmi bir a iki, on bir beta hidroksilazı kodlayan sip on bir be bir ve sitokrom pe dört yüz elli oksiredüktazı kodlayan por geni.
+Ha es de üç be iki ve por genlerindeki defektler her iki cinsiyette de kuşkulu genitalyaya sebep olur; bu, sınıflamada bu iki enzimin hem kırk altı iks iks hem kırk altı iks ye listesinde yer almasıyla örtüşür.
 
-Yirmi bir hidroksilaz eksikliğinde glukokortikoid ve mineralokortikoid eksikliği ile androjen fazlalığı vardır. Androjen fazlalığı tüm olgularda virilizasyona neden olur, bazı olgularda tuz kaybettirici bir tablo ortaya çıkar. Klasik ve nonklasik iki formu vardır. Klasik form ciddi enzim eksikliğinin eşlik ettiği prenatal başlangıçlı tablodur ve kendi içinde ikiye ayrılır: aldosteron üretiminin yetersiz olduğu tuz kaybettirici tip %70 beş, basit virilizan tip %20 beştir. Burası önemli: tuz kaybettirici yenidoğanlar hayati risk altındadır. Nonklasik tipte hiperandrojenizm bulguları postnatal başlar ve daha hafiftir. Enzim aktivitesini yüzde onun altına düşüren mutasyonlar klasik, aktiviteyi %20 ila elli düşürenler nonklasik tablo yapar. Sık mutasyonları içeren gen panelleriyle olguların %80 ila doksan sekizinde moleküler tanı konabilir.
+Yirmi bir hidroksilaz eksikliğinde glukokortikoid ve mineralokortikoid eksikliği ile androjen fazlalığı vardır.
+Androjen fazlalığı tüm olgularda virilizasyona neden olur, bazı olgularda tuz kaybettirici bir tablo ortaya çıkar.
+Klasik ve nonklasik iki formu vardır.
+Klasik form ciddi enzim eksikliğinin eşlik ettiği prenatal başlangıçlı tablodur ve kendi içinde ikiye ayrılır: aldosteron üretiminin yetersiz olduğu tuz kaybettirici tip %75, basit virilizan tip %25'tir.
+Burası önemli: tuz kaybettirici yenidoğanlar hayati risk altındadır.
+Nonklasik tipte hiperandrojenizm bulguları postnatal başlar ve daha hafiftir.
+Enzim aktivitesini yüzde onun altına düşüren mutasyonlar klasik, aktiviteyi %20 ila elli düşürenler nonklasik tablo yapar.
+Sık mutasyonları içeren gen panelleriyle olguların %80 ila doksan sekizinde moleküler tanı konabilir.
 
 @@ Konjenital adrenal hiperplazinin kliniği ve prenatal yönetimi
 Erkek fetusta etki farklıdır. Fazla androjen belirgin bir genital anomali yaratmaz; asıl tehlike tuz dengesinin düzenlenmesindeki hata nedeniyle gelişen aşırı tuz kaybıdır ve bu tablo ölüme neden olabilir. Genital ipucu olmadığı için gözden kaçabilir. Kız fetusta ise sorun adrenal androjenlerdir: overler ve Müller kanalları normaldir, ana etki bölgesi eksternal genitallerdir. Genişlemiş klitoris, skrotum benzeri labia füzyonu ve kısmen ya da tamamen kapalı vajinal açıklık görülür. Burası önemli, bu bilgi çıkmış sorularda soruldu: konjenital adrenal hiperplazi, genetik olarak kız çocuklarında en sık gözlenen standart dışı genital gelişim nedenidir ve yenidoğanda ambigus genitalyanın en sık sebebidir.
 
-Doğumdaki görünüm çok değişkendir; bazı kız bebekler inmemiş testisli normal erkek gibi görünebilir, ancak kromozom yapısı iks iks, gonadlar over, uterus ve fallop tüpleri normaldir. Normal çocuklukta çok az androjen üretilirken bu hastalıkta yaşam boyu aşırı androjen üretimi vardır. Sonuçta hızlı büyüme ama kemik büyüme plaklarında erken kapanma ve çok kısa boy, menstrüel problemlerle giden erken puberte ve erkekte çok az sperm üretimi görülür. Tedavide aldosteron ve kortizol replasmanı gerekir; kortizol replasmanı a ce te ha aktivitesini hafifleterek androjen üretimini azaltır.
+Doğumdaki görünüm çok değişkendir; bazı kız bebekler inmemiş testisli normal erkek gibi görünebilir, ancak kromozom yapısı iks iks, gonadlar over, uterus ve fallop tüpleri normaldir.
+Normal çocuklukta çok az androjen üretilirken bu hastalıkta yaşam boyu aşırı androjen üretimi vardır.
+Sonuçta hızlı büyüme ama kemik büyüme plaklarında erken kapanma ve çok kısa boy, menstrüel problemlerle giden erken puberte ve erkekte çok az sperm üretimi görülür.
+Tedavide aldosteron ve kortizol replasmanı gerekir; kortizol replasmanı a ce te ha aktivitesini hafifleterek androjen üretimini azaltır.
 
-Bu hastalık prenatal ve postnatal dönemde sıkı takip gerektirir. Özellikle risk taşıyan dişi fetusların prenatal tanı alması, oluşabilecek cinsiyet gelişim bozukluğunu engellemek açısından önemlidir. Çocuklarında risk olan aileler gebelik öncesi genetik danışma almalı ve gebelik fark edildiğinde genetik uzmanına başvurmalıdır. Kadın doğum ve endokrinoloji ile birlikte konsültasyon yapılır.
+Bu hastalık prenatal ve postnatal dönemde sıkı takip gerektirir.
+Özellikle risk taşıyan dişi fetusların prenatal tanı alması, oluşabilecek cinsiyet gelişim bozukluğunu engellemek açısından önemlidir.
+Çocuklarında risk olan aileler gebelik öncesi genetik danışma almalı ve gebelik fark edildiğinde genetik uzmanına başvurmalıdır.
+Kadın doğum ve endokrinoloji ile birlikte konsültasyon yapılır.
 
-Burası önemli, bu bilgi çıkmış sorularda en çok tekrarlanan sorudur: konjenital adrenal hiperplazi riski taşıyan gebelikte anne adayına olabildiğince erken, 6. ila 8. haftada deksametazon başlanması, etkilenmiş kız bebekte oluşabilecek virilizasyonu ve kuşkulu genital yapıyı engeller. Deksametazon plasentayı geçen bir glukokortikoiddir; fetal a ce te hayı baskılayarak fetal adrenal androjen üretimini azaltır. Fludrokortizon, prednizolon, aldosteron, androstenedion, vazopressin ya da anjiyotensin bu amaçla kullanılmaz.
+Burası önemli, bu bilgi çıkmış sorularda en çok tekrarlanan sorudur: konjenital adrenal hiperplazi riski taşıyan gebelikte anne adayına olabildiğince erken, 6. ila 8. haftada deksametazon başlanması, etkilenmiş kız bebekte oluşabilecek virilizasyonu ve kuşkulu genital yapıyı engeller.
+Deksametazon plasentayı geçen bir glukokortikoiddir; fetal a ce te hayı baskılayarak fetal adrenal androjen üretimini azaltır.
+Fludrokortizon, prednizolon, aldosteron, androstenedion, vazopressin ya da anjiyotensin bu amaçla kullanılmaz.
 
-Ardından koryon villus örneklemesi ya da amniyosentez ile fetusun cinsiyeti ve taşıdığı mutasyonlar belirlenir. Compound heterozigot ya da homozigot mutasyon taşıyan etkilenmiş kız fetusta tedavi gebelik sonuna kadar sürer. Heterozigot taşıyıcı ya da mutasyon taşımayan fetusta ve etkilenmiş erkek fetusta ilaç kesilir, çünkü amaç yalnızca kız fetusta dış genital virilizasyonu önlemektir. Hasta bebeklerin doğumdan sonra acil değerlendirilmesi önemlidir.
+Ardından koryon villus örneklemesi ya da amniyosentez ile fetusun cinsiyeti ve taşıdığı mutasyonlar belirlenir.
+Compound heterozigot ya da homozigot mutasyon taşıyan etkilenmiş kız fetusta tedavi gebelik sonuna kadar sürer.
+Heterozigot taşıyıcı ya da mutasyon taşımayan fetusta ve etkilenmiş erkek fetusta ilaç kesilir, çünkü amaç yalnızca kız fetusta dış genital virilizasyonu önlemektir.
+Hasta bebeklerin doğumdan sonra acil değerlendirilmesi önemlidir.
 
 @@ Cinsiyet gelişim bozukluklarına genel yaklaşım
-Doğru tanı için belirli bir algoritma izlenmelidir. Burası önemli: ilk analiz karyotip analizidir. Hızlı tanı gerektiğinde ku ef pe ce er ve fiş yöntemleri kullanılabilir, ancak klasik karyotipleme mutlaka atlanmamalıdır. Algoritma şöyledir: cinsiyet kromozomları için karyotip, gonadların ve uterusun varlığı için pelvik ultrasonografi, sodyum, potasyum ve kan şekeri ölçümü, plazma on yedi hidroksiprogesteron düzeyi ve testosteron düzeyi. Kırk altı iks iks olgularda öncelikle akla gelmesi gereken tanı konjenital adrenal hiperplazidir ve tuz kaybettirici formu hızla değerlendirilmelidir. Kırk altı iks ye olgularda androjen biyosentez defektleri ve beş alfa redüktaz iki eksikliği akla gelmelidir. Kırk altı iks ye grubunu aydınlatmak genetik açıdan zordur; tüm yöntemler kullanılsa bile olguların %20 ila yirmi beşine genetik tanı konamaz.
+Doğru tanı için belirli bir algoritma izlenmelidir. Burası önemli: ilk analiz karyotip analizidir. Hızlı tanı gerektiğinde ku ef PCR ve fiş yöntemleri kullanılabilir, ancak klasik karyotipleme mutlaka atlanmamalıdır. Algoritma şöyledir: cinsiyet kromozomları için karyotip, gonadların ve uterusun varlığı için pelvik ultrasonografi, sodyum, potasyum ve kan şekeri ölçümü, plazma on yedi hidroksiprogesteron düzeyi ve testosteron düzeyi. Kırk altı iks iks olgularda öncelikle akla gelmesi gereken tanı konjenital adrenal hiperplazidir ve tuz kaybettirici formu hızla değerlendirilmelidir. Kırk altı iks ye olgularda androjen biyosentez defektleri ve beş alfa redüktaz iki eksikliği akla gelmelidir. Kırk altı iks ye grubunu aydınlatmak genetik açıdan zordur; tüm yöntemler kullanılsa bile olguların %20 ila yirmi beşine genetik tanı konamaz.
 
-Tanı akış şeması gonadların ele gelip gelmemesiyle başlar. Gonadlar palpabl ve karyotip kırk altı iks iks ise, serviks ve uterus yoksa biyopside testis bulunur; varsa over ve testis birlikte bulunur ve tanı gerçek hermafroditizmdir. Kırk altı iks ye ya da Y içeren mozaik karyotipte uterus varsa biyopside disgenetik testis ve strik gonad görülür ve tanı parsiyel gonadal disgenezidir. Uterus yoksa hCG uyarı testi yapılır: testosteron düşükse testosteron sentez defekti, testosteron normal ama testosteronun dihidrotestosterona oranı yüksekse beş alfa redüktaz eksikliği, bu oran normal ve Müller inhibe edici faktör yüksekse parsiyel androjen duyarsızlığı düşünülür.
+Tanı akış şeması gonadların ele gelip gelmemesiyle başlar.
+Gonadlar palpabl ve karyotip kırk altı iks iks ise, serviks ve uterus yoksa biyopside testis bulunur; varsa over ve testis birlikte bulunur ve tanı gerçek hermafroditizmdir.
+Kırk altı iks ye ya da Y içeren mozaik karyotipte uterus varsa biyopside disgenetik testis ve strik gonad görülür ve tanı parsiyel gonadal disgenezidir.
+Uterus yoksa hCG uyarı testi yapılır: testosteron düşükse testosteron sentez defekti, testosteron normal ama testosteronun dihidrotestosterona oranı yüksekse beş alfa redüktaz eksikliği, bu oran normal ve Müller inhibe edici faktör yüksekse parsiyel androjen duyarsızlığı düşünülür.
 
-Gonadlar palpe edilemiyorsa ve karyotip kırk altı iks iks, uterus mevcutsa hormonal incelemeye geçilir. On yedi hidroksiprogesteron yüksekse yirmi bir hidroksilaz eksikliği, dihidrotestosteron ve deoksikortizol yüksekse on bir beta hidroksilaz eksikliği tanısı konur. On yedi hidroksiprogesteron normalse gonadal biyopsiye gidilir ve over ile testis birlikte saptanırsa tanı gerçek hermafroditizmdir.
+Gonadlar palpe edilemiyorsa ve karyotip kırk altı iks iks, uterus mevcutsa hormonal incelemeye geçilir.
+On yedi hidroksiprogesteron yüksekse yirmi bir hidroksilaz eksikliği, dihidrotestosteron ve deoksikortizol yüksekse on bir beta hidroksilaz eksikliği tanısı konur.
+On yedi hidroksiprogesteron normalse gonadal biyopsiye gidilir ve over ile testis birlikte saptanırsa tanı gerçek hermafroditizmdir.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: Svayer sendromu, yani kırk altı iks ye pür gonadal disgenezi, yenidoğanda ambigus genitalya ayırıcı tanısında yer almaz; çünkü testis hiç gelişmediğinden dış genitalya kuşkulu değil, tamamen dişi görünümdedir. Buna karşılık Smit Lemli Opitz sendromu, konjenital adrenal hiperplazi, testiküler feminizasyon ve beş alfa redüktaz eksikliği ayırıcı tanıda yer alır.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: Svayer sendromu, yani kırk altı iks ye pür gonadal disgenezi, yenidoğanda ambigus genitalya ayırıcı tanısında yer almaz; çünkü testis hiç gelişmediğinden dış genitalya kuşkulu değil, tamamen dişi görünümdedir.
+Buna karşılık Smit Lemli Opitz sendromu, konjenital adrenal hiperplazi, testiküler feminizasyon ve beş alfa redüktaz eksikliği ayırıcı tanıda yer alır.

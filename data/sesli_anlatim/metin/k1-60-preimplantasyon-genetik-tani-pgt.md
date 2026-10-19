@@ -3,166 +3,312 @@
 @@ Tanım ve temel ilke
 Preimplantasyon genetik tanı, kısaca pe ge de, yardımlı üreme tekniğiyle elde edilen embriyoların laboratuvar ortamında teste tabi tutulması, sağlıklı olanlarının belirlenmesi ve yalnız bu embriyoların anneye transfer edilmesi işlemidir. Yani genetik tanı gebelik başlamadan, embriyo rahme yerleşmeden önce konur. Bu iş farklı disiplinlerin koordineli çalışmasını gerektirir: kadın doğum uzmanı, embriyolog ve genetik uzmanı birlikte çalışır. Elimizdeki genetik materyal çok azdır, tek ya da birkaç hücre; üstelik testler kısa ve sınırlı bir zaman diliminde tamamlanmak zorundadır.
 
-Burası önemli: pe ge de'nin en önemli yararı, hastayı olası bir gebelik terminasyonundan, yani medikal abortustan korumasıdır. Klasik prenatal tanıda gebelik oluştuktan sonra hasta fetüs saptanırsa gebeliği sonlandırmak gündeme gelir; pe ge de'de ise hastalıklı embriyo hiç transfer edilmediği için bu ikilem baştan ortadan kalkar.
+Burası önemli: pe ge de'nin en önemli yararı, hastayı olası bir gebelik terminasyonundan, yani medikal abortustan korumasıdır.
+Klasik prenatal tanıda gebelik oluştuktan sonra hasta fetüs saptanırsa gebeliği sonlandırmak gündeme gelir; pe ge de'de ise hastalıklı embriyo hiç transfer edilmediği için bu ikilem baştan ortadan kalkar.
 
-Biraz daha teknik bir tanımla söylersek: in vitro fertilizasyon, yani tüp bebek uygulamasında, uterusa yerleştirilecek embriyoların seçimi sırasında, bu embriyoların belirli genetik hastalıkları taşıyıp taşımadığını anlamak için moleküler ya da moleküler sitogenetik tekniklerin kullanılmasıdır. Kısacası iki bileşen var: tüp bebekle embriyo seçimi ve bu seçimi yönlendiren genetik test.
+Biraz daha teknik bir tanımla söylersek: in vitro fertilizasyon, yani tüp bebek uygulamasında, uterusa yerleştirilecek embriyoların seçimi sırasında, bu embriyoların belirli genetik hastalıkları taşıyıp taşımadığını anlamak için moleküler ya da moleküler sitogenetik tekniklerin kullanılmasıdır.
+Kısacası iki bileşen var: tüp bebekle embriyo seçimi ve bu seçimi yönlendiren genetik test.
 
 @@ Preimplantasyon genetik tarama ve tekrarlama riski
 Bunun yanında bir de preimplantasyon genetik tarama vardır, kısaca pe ge es. Burada amaç tüp bebek tedavilerinde gebelik başarısını artırmaktır. Anneye transfer edilecek aday embriyolarda anöploidi taraması yapılır ve yalnız öploid, yani kromozom sayısı normal olan embriyo ya da embriyolar endometriyuma transfer edilir. Bu yöntem, Down sendromu gibi risklerin arttığı ileri anne yaşı olgularında yaygın olarak kullanılır. Aradaki farkı aklınızda şöyle tutun arkadaşlar: pe ge de, ailede bilinen belirli bir hastalığa yönelik tanıdır; pe ge es ise kromozom sayısına yönelik bir taramadır. Güncel adlandırmada pe ge es, pe ge te a olarak da anılır.
 
-Mendelyen kalıtılan birçok hastalıkta tekrarlama riski %20 beş ya da %50 gibi yüksek oranlardadır. Bu kadar yüksek riskin söz konusu olduğu ailelerde yeni gebeliğin sağlıklı bir bebek doğumuyla sonuçlanmasında pe ge de'nin, prenatal tanıya göre çok büyük bir avantajı vardır. Çünkü prenatal tanıda her dört gebelikten biri ya da ikisinde sonlandırma kararıyla karşılaşabilirsiniz; pe ge de bu yükü gebelik öncesine taşır.
+Mendelyen kalıtılan birçok hastalıkta tekrarlama riski %25 ya da %50 gibi yüksek oranlardadır.
+Bu kadar yüksek riskin söz konusu olduğu ailelerde yeni gebeliğin sağlıklı bir bebek doğumuyla sonuçlanmasında pe ge de'nin, prenatal tanıya göre çok büyük bir avantajı vardır.
+Çünkü prenatal tanıda her dört gebelikten biri ya da ikisinde sonlandırma kararıyla karşılaşabilirsiniz; pe ge de bu yükü gebelik öncesine taşır.
 
 @@ Tarihçe ve teknolojik ilerleme
-Tarihçeye bakalım. Bin dokuz yüz altmış yedide Robert Edwards ve Richard Gardner ilk embriyo biyopsisini tavşan embriyolarında yaptılar. Bin dokuz yüz yetmiş sekizde Louise Brown, ilk tüp bebek olarak dünyaya geldi. Bin dokuz yüz seksen dokuzda Alan Handyside, X'e bağlı resesif bir hastalıkta ilk insan embriyosu biyopsisini ve ilk pe ge de uygulamasını gerçekleştirdi. Bin dokuz yüz doksanda ise ilk sağlıklı pe ge de'li bebek doğdu. Günümüzde orak hücre anemisi, beta talasemi ve kistik fibrozis gibi pek çok hastalıkta, ayrıca kemik iliği nakli gereken olgularda ha le a uyumlu kardeş amaçlı pe ge de uygulamaları yaygın olarak kullanılmaktadır.
+Tarihçeye bakalım. 1967'de Robert Edwards ve Richard Gardner ilk embriyo biyopsisini tavşan embriyolarında yaptılar. 1978'de Louise Brown, ilk tüp bebek olarak dünyaya geldi. 1989'da Alan Handyside, X'e bağlı resesif bir hastalıkta ilk insan embriyosu biyopsisini ve ilk pe ge de uygulamasını gerçekleştirdi. 1990'da ise ilk sağlıklı pe ge de'li bebek doğdu. Günümüzde orak hücre anemisi, beta talasemi ve kistik fibrozis gibi pek çok hastalıkta, ayrıca kemik iliği nakli gereken olgularda ha le a uyumlu kardeş amaçlı pe ge de uygulamaları yaygın olarak kullanılmaktadır.
 
-Teknolojik ilerlemeler sayesinde anöploidi taraması yapılabilir hale gelmiş ve implantasyon başarısı artırılmıştır. Bu amaçla özellikle mikroarray yöntemi, fiş uygulamalarının yerini almıştır. Pe ce er tabanlı analiz yöntemleri de anöploidi taramalarında kullanılmıştır. Yeni nesil dizileme platformlarıyla ise anöploidi taramasıyla birlikte aynı anda ilgili tek gen hastalığının tanısı da yapılabilir hale gelmiştir. Yani bugün tek bir analizle hem kromozom sayısına hem de belirli bir gene bakabiliyoruz.
+Teknolojik ilerlemeler sayesinde anöploidi taraması yapılabilir hale gelmiş ve implantasyon başarısı artırılmıştır.
+Bu amaçla özellikle mikroarray yöntemi, fiş uygulamalarının yerini almıştır.
+Pe ce er tabanlı analiz yöntemleri de anöploidi taramalarında kullanılmıştır.
+Yeni nesil dizileme platformlarıyla ise anöploidi taramasıyla birlikte aynı anda ilgili tek gen hastalığının tanısı da yapılabilir hale gelmiştir.
+Yani bugün tek bir analizle hem kromozom sayısına hem de belirli bir gene bakabiliyoruz.
 
 @@ Endikasyonlar
 Teorik olarak prenatal ve postnatal dönemde genetik analizi yapılabilen tüm durumlar için pe ge de yapılabilir. Ancak mozaiklik, mitokondriyal hastalıklar ve epigenetik değişiklikler gibi durumlarda pe ge de zorluklar taşır. Endikasyon alanı çok geniştir: tek gen hastalıkları için taşıyıcı olan ya da hasta çocuk öyküsü olan aileler, otuz beş yaşından sonra tüp bebek yöntemine başvuran çiftler, iki ya da daha fazla tüp bebek başarısızlığı olan çiftler, yapısal kromozom anomalisi olanlar ve ha le a uyumlu kardeş isteyen çiftler.
 
-Endikasyonları gruplarsak iki ana başlık çıkar. 1.'si tek gen hastalıklarıdır; geni bilinen ve tanısı konabilen hastalıklar ile X'e bağlı hastalıklar bu gruptadır, X'e bağlı hastalıklarda cinsiyet tayini de gündeme gelir. 2.'si kromozom anomalileridir; sayısal anomaliler, yani anöploidiler ve trizomiler ile yapısal anomaliler bu gruptadır.
+Endikasyonları gruplarsak iki ana başlık çıkar.
+1.'si tek gen hastalıklarıdır; geni bilinen ve tanısı konabilen hastalıklar ile X'e bağlı hastalıklar bu gruptadır, X'e bağlı hastalıklarda cinsiyet tayini de gündeme gelir.
+2.'si kromozom anomalileridir; sayısal anomaliler, yani anöploidiler ve trizomiler ile yapısal anomaliler bu gruptadır.
 
 Daha ayrıntılı bir listeyle sayarsak: çiftlerde genetik ya da kalıtsal bir hastalık taşıyıcılığı ya da hastalığın kendisinin bulunması, daha önce genetik hastalığı olan çocuk ya da çocuklara sahip olunması, genetik yatkınlık gösteren hastalıkların tanımlanması, ileri maternal yaş, tekrarlayan gebelik kayıpları, erkek infertilitesi ve translokasyon ile inversiyon taşıyıcılığı pe ge de endikasyonlarıdır.
 
-Peki pe ge de kimlere yapılır? Fertilite problemleri nedeniyle zaten tüp bebek uygulanacak çiftlerde uygulanabilir. Ciddi genetik bozukluklar açısından risk altındaki ailelerde, konvansiyonel prenatal tanı testleriyle gebeliği sonlandırmak geç olacağı için tercih edilebilir. Ayrıca geç ortaya çıkan otozomal dominant hastalıklar açısından risk altındaki ailelerde de tercih edilebilir.
+Peki pe ge de kimlere yapılır?
+Fertilite problemleri nedeniyle zaten tüp bebek uygulanacak çiftlerde uygulanabilir.
+Ciddi genetik bozukluklar açısından risk altındaki ailelerde, konvansiyonel prenatal tanı testleriyle gebeliği sonlandırmak geç olacağı için tercih edilebilir.
+Ayrıca geç ortaya çıkan otozomal dominant hastalıklar açısından risk altındaki ailelerde de tercih edilebilir.
 
 @@ Kromozom düzensizliklerinde pe ge de
-Kromozomal dengeli taşıyıcılıklar, pe ge de uygulamalarında oldukça önemli bir yer tutar. Embriyolardaki kromozom bozuklukları sayısal ya da yapısal düzeyde olabilir. Bir kromozomun tamamını içeren bozukluklara anöploidi denir ve bunlar genellikle maternal mayoz bir hatalarından kaynaklanır. Bu tür düzensizlikler pe ge es yöntemiyle araştırılır; ileri maternal yaş, tekrarlayan tüp bebek başarısızlıkları ve ilk trimester gebelik kayıpları olan eşlerde yapılır.
+Kromozomal dengeli taşıyıcılıklar, pe ge de uygulamalarında oldukça önemli bir yer tutar. Embriyolardaki kromozom bozuklukları sayısal ya da yapısal düzeyde olabilir. 1 kromozomun tamamını içeren bozukluklara anöploidi denir ve bunlar genellikle maternal mayoz bir hatalarından kaynaklanır. Bu tür düzensizlikler pe ge es yöntemiyle araştırılır; ileri maternal yaş, tekrarlayan tüp bebek başarısızlıkları ve ilk trimester gebelik kayıpları olan eşlerde yapılır.
 
-Dengeli translokasyon taşıyıcılığı pe ge de'de önemli bir endikasyon grubudur. Translokasyon ya da inversiyon taşıyan eşler dengesiz segregasyon ürünleri oluşturabildiği, hatta bu durum infertilite nedenleri arasında yer aldığı için tüp bebek uygulamalarına yönlendirilir. Sayılara dikkat edin: dengeli translokasyon taşıyıcılığı yenidoğan popülasyonunda binde iki, infertil çiftlerde binde altı, ilk trimester kayıplarında ise %6 oranındadır. Yani gebelik kaybı yaşayan grupta taşıyıcılık belirgin olarak yüksektir.
+Dengeli translokasyon taşıyıcılığı pe ge de'de önemli bir endikasyon grubudur.
+Translokasyon ya da inversiyon taşıyan eşler dengesiz segregasyon ürünleri oluşturabildiği, hatta bu durum infertilite nedenleri arasında yer aldığı için tüp bebek uygulamalarına yönlendirilir.
+Sayılara dikkat edin: dengeli translokasyon taşıyıcılığı yenidoğan popülasyonunda binde iki, infertil çiftlerde binde altı, ilk trimester kayıplarında ise %6 oranındadır.
+Yani gebelik kaybı yaşayan grupta taşıyıcılık belirgin olarak yüksektir.
 
-Segregasyon tiplerine gelelim. Dengeli gamet ve dengeli embriyo veren segregasyon tipi alternate segregasyondur. Adjacent bir ve adjacent iki segregasyonları ise dengesiz gamet ve embriyolara neden olur. Bu üç tipe sık rastlanır. Tam trizomi ya da monozomilere neden olan üçe bir interchange segregasyonu ile derivatif kromozomun eşlik ettiği dengesiz yapıdaki üçe bir tersiyer segregasyona daha az rastlanır. Dengeli translokasyon taşıyan eşleri bekleyen olasılıklar şunlardır: infertilite, tekrarlayan gebelik kayıpları ve dengesiz kromozomlu, anomalili bebek doğumu.
+Segregasyon tiplerine gelelim.
+Dengeli gamet ve dengeli embriyo veren segregasyon tipi alternate segregasyondur.
+Adjacent bir ve adjacent iki segregasyonları ise dengesiz gamet ve embriyolara neden olur.
+Bu üç tipe sık rastlanır.
+Tam trizomi ya da monozomilere neden olan üçe bir interchange segregasyonu ile derivatif kromozomun eşlik ettiği dengesiz yapıdaki üçe bir tersiyer segregasyona daha az rastlanır.
+Dengeli translokasyon taşıyan eşleri bekleyen olasılıklar şunlardır: infertilite, tekrarlayan gebelik kayıpları ve dengesiz kromozomlu, anomalili bebek doğumu.
 
-Sayısal kromozom anomalilerini, yani anöploidileri bir kez daha vurgulayalım. Kromozomal bozukluklar sayısal ve yapısal olabilir; sayısal olanlar anöploidilerdir ve maternal mayoz bir hatası kaynaklıdır. Tekrarlayan gebelik kayıplarının ve tüp bebek başarısızlıklarının birçok nedeni vardır, ancak bunların en önemlisi sayısal kromozom anomalileridir.
+Sayısal kromozom anomalilerini, yani anöploidileri 1 kez daha vurgulayalım.
+Kromozomal bozukluklar sayısal ve yapısal olabilir; sayısal olanlar anöploidilerdir ve maternal mayoz bir hatası kaynaklıdır.
+Tekrarlayan gebelik kayıplarının ve tüp bebek başarısızlıklarının birçok nedeni vardır, ancak bunların en önemlisi sayısal kromozom anomalileridir.
 
-Yapısal kromozom anomalileri ise dengeli translokasyonlar, insersiyon, inversiyon, delesyon ve duplikasyonlardır. Özellikle dengeli translokasyonlar tekrarlayan gebelik kayıplarının önemli nedenlerindendir ve pe ge de için önemli bir endikasyondur. Resiprokal translokasyon iki kromozom arasında karşılıklı parça değişimidir. Robertsonian translokasyon ise iki akrosentrik kromozom arasında olan translokasyondur. Dengeli translokasyon taşıyıcılarında dengesiz yapıda embriyo oluşma oranı %20 ile %100 arasında değişir.
+Yapısal kromozom anomalileri ise dengeli translokasyonlar, insersiyon, inversiyon, delesyon ve duplikasyonlardır.
+Özellikle dengeli translokasyonlar tekrarlayan gebelik kayıplarının önemli nedenlerindendir ve pe ge de için önemli bir endikasyondur.
+Resiprokal translokasyon 2 kromozom arasında karşılıklı parça değişimidir.
+Robertsonian translokasyon ise iki akrosentrik kromozom arasında olan translokasyondur.
+Dengeli translokasyon taşıyıcılarında dengesiz yapıda embriyo oluşma oranı %20 ile %100 arasında değişir.
 
 @@ Tek gen hastalıklarında pe ge de ve haplotipleme
 Günümüzde dört binin üzerinde tek gen hastalığı tanımlıdır. Otozomal resesif hastalıklarda ebeveynlerin her ikisinin hasta ya da taşıyıcı olması, otozomal dominant hastalıklarda ise ebeveynlerden birinin hasta olması pe ge de endikasyonu doğurur. Bugün geni bilinen tüm tek gen hastalıkları için pe ge de uygulanabilir; özellikle otozomal resesif talasemi, kistik fibrozis ve kas hastalıkları ile otozomal dominant Huntington hastalığı örnek verilebilir.
 
-Tek gen hastalıklarında ilginç bir yaklaşım şudur: hastalığa neden olan mutasyonun kendisi analiz edilmeden, doğrudan hastalık yapıcı genin bulunduğu bölgeye yönelik kısa ardışık tekrar, yani es te er analizi yapılarak pe ge de yapılabilir. Bu yöntemde ilgili gene komşu aleller takip edilir ve aynı kromozom bölgesinin referans kişiden aktarılıp aktarılmadığı kontrol edilir. Buna preimplantasyon genetik haplotipleme denir. Özellikle mutasyona özgü test imkânı olmayan olgularda oldukça etkili ve çözüm odaklı bir yöntemdir.
+Tek gen hastalıklarında ilginç bir yaklaşım şudur: hastalığa neden olan mutasyonun kendisi analiz edilmeden, doğrudan hastalık yapıcı genin bulunduğu bölgeye yönelik kısa ardışık tekrar, yani es te er analizi yapılarak pe ge de yapılabilir.
+Bu yöntemde ilgili gene komşu aleller takip edilir ve aynı kromozom bölgesinin referans kişiden aktarılıp aktarılmadığı kontrol edilir.
+Buna preimplantasyon genetik haplotipleme denir.
+Özellikle mutasyona özgü test imkânı olmayan olgularda oldukça etkili ve çözüm odaklı bir yöntemdir.
 
-Haplotiplemede es te er seçimi önemlidir; en az sekiz adet es te er kullanılmalı ve bunlar hedeflenen gene yakın ve bilgi verici olmalıdır. Haplotipleme yalnız tek gen hastalıklarında kullanılabilir. Akraba evliliği ise haplotip ve es te er oluşturmayı olumsuz etkiler, çünkü ebeveynlerin alelleri birbirine benzediğinde hangi kromozomun kimden geldiğini ayırt etmek zorlaşır.
+Haplotiplemede es te er seçimi önemlidir; en az sekiz adet es te er kullanılmalı ve bunlar hedeflenen gene yakın ve bilgi verici olmalıdır.
+Haplotipleme yalnız tek gen hastalıklarında kullanılabilir.
+Akraba evliliği ise haplotip ve es te er oluşturmayı olumsuz etkiler, çünkü ebeveynlerin alelleri birbirine benzediğinde hangi kromozomun kimden geldiğini ayırt etmek zorlaşır.
 
-Es te er yerine tüm genomda yaygın olarak bulunan tek nükleotid polimorfizmleri, yani snipler kullanılırsa sniplere dayalı haplotip analizi yapılır. Bunun platformu İllumina firmasının karyomapping sistemidir. Bu teknik tüm genom boyunca bağlantı analizi yapılmasını sağlar ve teorik olarak kalıtılan tüm hastalıklar için uygundur. Temel prensip aynıdır: ilgilenilen gene komşu aleller takip edilerek aynı kromozom bölgesinin referans kişiden aktarılıp aktarılmadığı saptanır. Fark şudur: karyomapping bölgesel değil, tüm genom boyunca snip taraması yapar.
+Es te er yerine tüm genomda yaygın olarak bulunan tek nükleotid polimorfizmleri, yani snipler kullanılırsa sniplere dayalı haplotip analizi yapılır.
+Bunun platformu İllumina firmasının karyomapping sistemidir.
+Bu teknik tüm genom boyunca bağlantı analizi yapılmasını sağlar ve teorik olarak kalıtılan tüm hastalıklar için uygundur.
+Temel prensip aynıdır: ilgilenilen gene komşu aleller takip edilerek aynı kromozom bölgesinin referans kişiden aktarılıp aktarılmadığı saptanır.
+Fark şudur: karyomapping bölgesel değil, tüm genom boyunca snip taraması yapar.
 
-Karyomappingin avantajları üç maddedir. 1.'si, snipler tüm genomda sık ve homojen dağıldığı için tüm genomun homojen analizine imkân verir. 2.'si, tüm genom tarandığından ilgili gen bölgesindeki rekombinasyon hata payı en aza iner. 3.'sü, hastaya özgü tasarım ve ön hazırlık gerektirmez. Uygulamada anne, baba ve hastalığı olan bir bireyin DNA örnekleri izole edilir, snip taraması yapılır ve mikroenjeksiyonla elde edilen embriyoların sniplerinin hangi ebeveynden geldiği ortaya konur. Bu platformla genom boyunca üç yüz bin snip analiz edilebilir; bu da yeterli güvenilirlik ve çözünürlükte tanı imkânı sunar.
+Karyomappingin avantajları üç maddedir.
+1.'si, snipler tüm genomda sık ve homojen dağıldığı için tüm genomun homojen analizine imkân verir.
+2.'si, tüm genom tarandığından ilgili gen bölgesindeki rekombinasyon hata payı en aza iner.
+3.'sü, hastaya özgü tasarım ve ön hazırlık gerektirmez.
+Uygulamada anne, baba ve hastalığı olan bir bireyin DNA örnekleri izole edilir, snip taraması yapılır ve mikroenjeksiyonla elde edilen embriyoların sniplerinin hangi ebeveynden geldiği ortaya konur.
+Bu platformla genom boyunca üç yüz bin snip analiz edilebilir; bu da yeterli güvenilirlik ve çözünürlükte tanı imkânı sunar.
 
 @@ Kalıtım paternine göre pe ge de
-Otozomal dominant kalıtımda hasta kişinin çocuklarında hastalığın ortaya çıkma olasılığı her gebelikte yüzde ellidir. Mendel kalıtımına uyar, dikey bir kalıtım paterni gösterir ve hastalık her kuşakta gözlenir. Ancak bazen Mendel kalıtımından sapmalar olur; sıklıkla de novo durumlardan kaynaklanır, yani etkilenmiş bir ebeveyn yoktur. Yine de gonadal mozaisizm göz ardı edilmemeli, değişken ekspresivite ve penetrans kaybı da incelenmelidir. Huntington hastalığında pe ge de uygulaması buna örnektir.
+Otozomal dominant kalıtımda hasta kişinin çocuklarında hastalığın ortaya çıkma olasılığı her gebelikte %50'dir. Mendel kalıtımına uyar, dikey bir kalıtım paterni gösterir ve hastalık her kuşakta gözlenir. Ancak bazen Mendel kalıtımından sapmalar olur; sıklıkla de novo durumlardan kaynaklanır, yani etkilenmiş bir ebeveyn yoktur. Yine de gonadal mozaisizm göz ardı edilmemeli, değişken ekspresivite ve penetrans kaybı da incelenmelidir. Huntington hastalığında pe ge de uygulaması buna örnektir.
 
-Otozomal dominant kalıtımda bireylerde fenotipik bulguların şiddeti ve ortaya çıkış şekli farklı olabilir; penetrans eksikliği ve değişken ekspresivite hem hastalık yönetimini hem genetik danışmanlığı zorlaştırır. Bu nedenle pe ge de'de her dominant durumun kendine özgü özellikleri göz önünde tutulmalıdır. Huntington hastalığında etik bir sorun vardır: çiftlerin çoğu kendisinde hastalık olup olmadığını bilmek istemez. Bu durumda ebeveyn taraması yapılmadan ve raporlanmadan, hastalıksız embriyolar analiz edilerek anneye transfer edilir.
+Otozomal dominant kalıtımda bireylerde fenotipik bulguların şiddeti ve ortaya çıkış şekli farklı olabilir; penetrans eksikliği ve değişken ekspresivite hem hastalık yönetimini hem genetik danışmanlığı zorlaştırır.
+Bu nedenle pe ge de'de her dominant durumun kendine özgü özellikleri göz önünde tutulmalıdır.
+Huntington hastalığında etik bir sorun vardır: çiftlerin çoğu kendisinde hastalık olup olmadığını bilmek istemez.
+Bu durumda ebeveyn taraması yapılmadan ve raporlanmadan, hastalıksız embriyolar analiz edilerek anneye transfer edilir.
 
-Otozomal resesif kalıtım her kuşakta kendini göstermez, yatay bir kalıtım paterni sergiler. Akraba evliliklerinde risk artar. İki cinsiyet eşit tutulur, hastalığın seyri ve şiddeti de aynıdır. Heterozigot anne ve babanın hasta çocuk sahibi olma riski %20 beş, taşıyıcı çocuk sahibi olma olasılığı %50, sağlıklı çocuk şansı ise %20 beştir. Hasta çocukta mutasyon homozigottur.
+Otozomal resesif kalıtım her kuşakta kendini göstermez, yatay bir kalıtım paterni sergiler.
+Akraba evliliklerinde risk artar.
+İki cinsiyet eşit tutulur, hastalığın seyri ve şiddeti de aynıdır.
+Heterozigot anne ve babanın hasta çocuk sahibi olma riski %25, taşıyıcı çocuk sahibi olma olasılığı %50, sağlıklı çocuk şansı ise %25'tir.
+Hasta çocukta mutasyon homozigottur.
 
-Otozomal resesif durumlarda pe ge de'den önce ayrıntılı bir pedigri çizilmeli ve riskler iyi saptanmalıdır. Pe ge de uygulanan resesif hastalıklara hemoglobinopatiler, spinal müsküler atrofi, kistik fibrozis ve metabolik hastalıklar örnektir. Uygulamada hastalığa ait mutasyonun yanında, testin güvenilirliğini ve doğruluğunu artırmak için bilgi verici markerlerin tasarlanması ve test platformuna yeterli sayıda eklenmesi gerekir.
+Otozomal resesif durumlarda pe ge de'den önce ayrıntılı bir pedigri çizilmeli ve riskler iyi saptanmalıdır.
+Pe ge de uygulanan resesif hastalıklara hemoglobinopatiler, spinal müsküler atrofi, kistik fibrozis ve metabolik hastalıklar örnektir.
+Uygulamada hastalığa ait mutasyonun yanında, testin güvenilirliğini ve doğruluğunu artırmak için bilgi verici markerlerin tasarlanması ve test platformuna yeterli sayıda eklenmesi gerekir.
 
-Pe ge de sonrasında fetüsün durumu uygun haftada prenatal tanı yöntemiyle, yani amniyosentez ya da koryon villus örneklemesiyle kontrol edilmelidir. Tek gen hastalıklarına yönelik uygulamalarda eşler testin güvenilirlik oranları, hata payları ve diğer olası riskler hakkında yeterince bilgilendirilmeli, tüm prosedürü anladıklarından emin olunmalı ve onay beyanı imzalatılmalıdır. Pe ge de ile elde edilen gebeliğin prenatal tanıyla kontrol edilmesini istemeyen çiftlerden de imzalı onam formu alınmalıdır.
+Pe ge de sonrasında fetüsün durumu uygun haftada prenatal tanı yöntemiyle, yani amniyosentez ya da koryon villus örneklemesiyle kontrol edilmelidir.
+Tek gen hastalıklarına yönelik uygulamalarda eşler testin güvenilirlik oranları, hata payları ve diğer olası riskler hakkında yeterince bilgilendirilmeli, tüm prosedürü anladıklarından emin olunmalı ve onay beyanı imzalatılmalıdır.
+Pe ge de ile elde edilen gebeliğin prenatal tanıyla kontrol edilmesini istemeyen çiftlerden de imzalı onam formu alınmalıdır.
 
-X'e bağlı resesif hastalıklarda kadınlar heterozigot taşıyıcıdır, erkekler ise hemizigot ve hastadır. Taşıyıcı annenin kız çocuklarının yüzde ellisi taşıyıcı olur, erkek çocuklar ise hasta olabilir. X inaktivasyonuna bağlı olarak kız çocuklarda da hastalık görülebilir. Duchenne kas distrofisi, Şarko Mari Tut hastalığı, frajil X, hemofili A ve B, hiper immünoglobulin M sendromu ve Wiskott Aldrich sendromu gibi birçok X'e bağlı hastalık için pe ge de uygulanmaktadır.
+X'e bağlı resesif hastalıklarda kadınlar heterozigot taşıyıcıdır, erkekler ise hemizigot ve hastadır.
+Taşıyıcı annenin kız çocuklarının %50'si taşıyıcı olur, erkek çocuklar ise hasta olabilir.
+X inaktivasyonuna bağlı olarak kız çocuklarda da hastalık görülebilir.
+Duchenne kas distrofisi, Şarko Mari Tut hastalığı, frajil X, hemofili A ve B, hiper immünoglobulin M sendromu ve Wiskott Aldrich sendromu gibi birçok X'e bağlı hastalık için pe ge de uygulanmaktadır.
 
 @@ Preimplantasyon genetik taramanın endikasyonları
 Tüp bebek uygulamasının başarılı olabilmesi için tarama testleri önemlidir. Embriyolar genetik taramadan geçirilir ve anöploid embriyolar elenir, çünkü tüp bebek başarısı embriyonun genetik yapısıyla doğrudan ilişkilidir. Pe ge es özellikle ileri anne yaşı, tekrarlayan tüp bebek başarısızlıkları, tekrarlayan gebelik kayıpları, ilk trimester düşükleri ve şiddetli erkek infertilitesi olgularında yaygın olarak kullanılır. Bu endikasyonların ortak paydası artmış anöploidi riskidir.
 
-Yöntem olarak multicolor fiş, array karşılaştırmalı genomik hibridizasyon ve blastomerden anöploidi taraması kullanılmıştır. Günümüzde ise blastokist aşamasında trofoektoderm biyopsisi alınarak mikroarray yöntemiyle pe ge es uygulanmaktadır.
+Yöntem olarak multicolor fiş, array karşılaştırmalı genomik hibridizasyon ve blastomerden anöploidi taraması kullanılmıştır.
+Günümüzde ise blastokist aşamasında trofoektoderm biyopsisi alınarak mikroarray yöntemiyle pe ge es uygulanmaktadır.
 
-İleri anne yaşında pe ge es'e bakalım. Tüp bebek uygulamalarında temel amaç infertil ya da subfertil çiftlerin sağlıklı bebek sahibi olmasıdır. Oysa preimplantasyon embriyoların önemli bir kısmı kromozom anomalisi taşır ve bu anomaliler anne yaşıyla birlikte artar. Bunları saptamak için önceleri multicolor fiş kullanılmış, bu sayede hızlı sonuç ve ploidi bozuklukları hakkında bilgi elde edilmiştir. Pe ge es, translokasyon taşıyıcılarında anöploidi taramasının yanı sıra eş zamanlı olarak dengeli embriyoların seçilmesini de sağlar.
+İleri anne yaşında pe ge es'e bakalım.
+Tüp bebek uygulamalarında temel amaç infertil ya da subfertil çiftlerin sağlıklı bebek sahibi olmasıdır.
+Oysa preimplantasyon embriyoların önemli bir kısmı kromozom anomalisi taşır ve bu anomaliler anne yaşıyla birlikte artar.
+Bunları saptamak için önceleri multicolor fiş kullanılmış, bu sayede hızlı sonuç ve ploidi bozuklukları hakkında bilgi elde edilmiştir.
+Pe ge es, translokasyon taşıyıcılarında anöploidi taramasının yanı sıra eş zamanlı olarak dengeli embriyoların seçilmesini de sağlar.
 
-Tekrarlayan gebelik kayıplarında gebelik kaybının nedeni, kaybın olduğu gebelik haftasına göre değişir. Tekrarlayan gebelik kaybı fertil dönemdeki kadınların yüzde beşinde görülür. İleri gebelik haftasındaki kayıplar maternal sistemik hastalıklar, uterin nedenler ve servikal yetmezlikten kaynaklanırken, erken gebelik haftasındaki kayıplar fetüsteki kromozom düzensizliklerinden kaynaklanır. Abort materyallerinin yüzde ellisinde kromozom anomalisi bulunur; eşlerde dengeli translokasyon taşıyıcılığı ise %5 oranındadır.
+Tekrarlayan gebelik kayıplarında gebelik kaybının nedeni, kaybın olduğu gebelik haftasına göre değişir.
+Tekrarlayan gebelik kaybı fertil dönemdeki kadınların yüzde beşinde görülür.
+İleri gebelik haftasındaki kayıplar maternal sistemik hastalıklar, uterin nedenler ve servikal yetmezlikten kaynaklanırken, erken gebelik haftasındaki kayıplar fetüsteki kromozom düzensizliklerinden kaynaklanır.
+Abort materyallerinin yüzde ellisinde kromozom anomalisi bulunur; eşlerde dengeli translokasyon taşıyıcılığı ise %5 oranındadır.
 
-Daha önce anormal öykülü düşüğü olanlarda translokasyon saptanma oranı yüksektir ve kadınlarda erkeklere göre daha sıktır. Eşlerden birinde translokasyon taşıyıcılığı saptanması, pe ge de destekli tüp bebek tedavisi endikasyonudur. Bu eşlere anöploidi taraması eşliğinde tüp bebek uygulaması ve genetik danışmanlık eşliğinde oluşacak gebeliğin izlenmesi önerilir.
+Daha önce anormal öykülü düşüğü olanlarda translokasyon saptanma oranı yüksektir ve kadınlarda erkeklere göre daha sıktır.
+Eşlerden birinde translokasyon taşıyıcılığı saptanması, pe ge de destekli tüp bebek tedavisi endikasyonudur.
+Bu eşlere anöploidi taraması eşliğinde tüp bebek uygulaması ve genetik danışmanlık eşliğinde oluşacak gebeliğin izlenmesi önerilir.
 
-Tekrarlayan başarısız tüp bebek denemelerinde, yani tekrarlayan implantasyon başarısızlığında da pe ge es kullanılır. Tanım şudur: iyi kalitede embriyo transferine rağmen üç ya da daha fazla tüp bebek başarısızlığı. Nedenleri arasında uterin problemler, yetersiz endometriyum proliferasyonu, hidrosalpenks gibi tubal bozukluklar ve olası genetik, hormonal, metabolik, hematolojik ve immünolojik sebepler vardır. Yapısal ve sayısal kromozom düzensizlikleri bu olgularda artış gösterir. Burada iki eşiği karıştırmayın arkadaşlar: genel pe ge de endikasyonu için iki ya da daha fazla tüp bebek başarısızlığı yeterliyken, tekrarlayan implantasyon başarısızlığı tanımı üç ya da daha fazla başarısızlıktır.
+Tekrarlayan başarısız tüp bebek denemelerinde, yani tekrarlayan implantasyon başarısızlığında da pe ge es kullanılır.
+Tanım şudur: iyi kalitede embriyo transferine rağmen üç ya da daha fazla tüp bebek başarısızlığı.
+Nedenleri arasında uterin problemler, yetersiz endometriyum proliferasyonu, hidrosalpenks gibi tubal bozukluklar ve olası genetik, hormonal, metabolik, hematolojik ve immünolojik sebepler vardır.
+Yapısal ve sayısal kromozom düzensizlikleri bu olgularda artış gösterir.
+Burada iki eşiği karıştırmayın arkadaşlar: genel pe ge de endikasyonu için iki ya da daha fazla tüp bebek başarısızlığı yeterliyken, tekrarlayan implantasyon başarısızlığı tanımı üç ya da daha fazla başarısızlıktır.
 
-Şiddetli erkek infertilitesinde, şiddetli infertil erkeklerden intrasitoplazmik sperm enjeksiyonuyla, yani mikroenjeksiyonla elde edilen embriyolarda anöploidi riski artar. Mikroenjeksiyonun ardından oositin fertilize olup klivaja girmesi ve düzenli mitotik aktivite gösterebilmesi için düzenli bir genom ve sentriyol aktivitesi gerekir. Bu olgulardaki artmış anöploidi oranları pe ge es ile elenerek gebelik başarısı artırılabilir.
+Şiddetli erkek infertilitesinde, şiddetli infertil erkeklerden intrasitoplazmik sperm enjeksiyonuyla, yani mikroenjeksiyonla elde edilen embriyolarda anöploidi riski artar.
+Mikroenjeksiyonun ardından oositin fertilize olup klivaja girmesi ve düzenli mitotik aktivite gösterebilmesi için düzenli bir genom ve sentriyol aktivitesi gerekir.
+Bu olgulardaki artmış anöploidi oranları pe ge es ile elenerek gebelik başarısı artırılabilir.
 
 @@ Ha le a uyumlu kardeş amaçlı pe ge de
 İnsanlarda bağışıklık sistemiyle ilgili birçok gen tanımlıdır ve bunların çoğu 6. kromozomun kısa kolunda yer alır. Bunlar insan lökosit antijeni, kısaca ha le a genleridir. Organ naklinde en önemli faktör alıcı ve vericide ha le a uyumlu doku ya da organ bulunmasıdır. Beta talasemi, Fankoni aplastik anemisi, orak hücre anemisi ve akut lösemiler gibi birçok ağır kan hastalığının en etkili tedavisi allojenik kök hücre transplantasyonudur ve en iyi sonuç tamamen ha le a uyumlu kardeş vericiden yapılan nakille elde edilir. İşte ha le a uyumlu embriyo seçildiğinde pe ge de bir tedavi yöntemi olarak karşımıza çıkar.
 
-Bu yaklaşımın en büyük sıkıntısı, hem ha le a uyumlu hem de mutasyon açısından normal embriyoyu seçme olasılığının düşük olmasıdır. Pe ge de ile ilk ha le a tiplemesi iki bin bir yılında Verlinsky ve arkadaşları tarafından Fankoni aplastik anemisi için, mutasyon analiziyle birleştirilerek yapılmıştır. Ülkemizde ha le a tiplemesini tek gen hastalıklarıyla birlikte ilk uygulayan Kahraman ve arkadaşlarıdır. İki bin üç ile iki bin on üç arasında iki yüz kırk iki çifte uygulanmış; bunların yüz yetmişi hemoglobinopati, kırk sekizi hematolojik malignite, dokuzu kemik iliği yetmezliği, yedisi metabolik hastalık, beşi immün yetmezlik sendromu, üçü nadir tek gen hastalığıdır. Sonuçta seksen çift, doksan dört sağlıklı ve ha le a uyumlu bebek sahibi olmuştur.
+Bu yaklaşımın en büyük sıkıntısı, hem ha le a uyumlu hem de mutasyon açısından normal embriyoyu seçme olasılığının düşük olmasıdır.
+Pe ge de ile ilk ha le a tiplemesi 2001 yılında Verlinsky ve arkadaşları tarafından Fankoni aplastik anemisi için, mutasyon analiziyle birleştirilerek yapılmıştır.
+Ülkemizde ha le a tiplemesini tek gen hastalıklarıyla birlikte ilk uygulayan Kahraman ve arkadaşlarıdır.
+İki bin üç ile 2013 arasında iki yüz kırk iki çifte uygulanmış; bunların yüz yetmişi hemoglobinopati, kırk sekizi hematolojik malignite, dokuzu kemik iliği yetmezliği, yedisi metabolik hastalık, beşi immün yetmezlik sendromu, üçü nadir tek gen hastalığıdır.
+Sonuçta seksen çift, doksan dört sağlıklı ve ha le a uyumlu bebek sahibi olmuştur.
 
-Ha le a uyumlu donör yoksa, hasta çocuk için ha le a uyumlu kardeş amaçlı pe ge de tek alternatiftir. En önemli problemlerden biri transfer edilebilecek az sayıda embriyo bulunması ve dolayısıyla gebelik şansının azalmasıdır. Diğer zorluklar ovulasyon indüksiyonuna hasta yanıtının öngörülememesi, beklenenden az yumurta elde edilmesi, gebelik oranlarının öngörülememesi ve yüksek maliyettir. Bir diğer husus da mikroenjeksiyon zorunluluğudur; bu, sperm ya da diğer hücrelere ait kontaminasyonu önlemek için gereklidir.
+Ha le a uyumlu donör yoksa, hasta çocuk için ha le a uyumlu kardeş amaçlı pe ge de tek alternatiftir.
+En önemli problemlerden biri transfer edilebilecek az sayıda embriyo bulunması ve dolayısıyla gebelik şansının azalmasıdır.
+Diğer zorluklar ovulasyon indüksiyonuna hasta yanıtının öngörülememesi, beklenenden az yumurta elde edilmesi, gebelik oranlarının öngörülememesi ve yüksek maliyettir.
+Bir diğer husus da mikroenjeksiyon zorunluluğudur; bu, sperm ya da diğer hücrelere ait kontaminasyonu önlemek için gereklidir.
 
 Bu aileye genetik danışmanlık verilirken testlerin güvenilirlik oranı, hastanın gebe kalabilme yüzdesi, doğacak bebek için öngörülen bir risk olup olmadığı, doğacak çocuğun dokularının hasta çocuğa en erken ne zaman verilebileceği, tedavi başarısı ve beklentiler anlatılmalı, aileden imzalı onam formu alınmalıdır.
 
-Testin güvenilirliğini olumsuz etkileyen riskler üç tanedir: allel drop out, yani iki alelden birinin çoğaltılamayıp görünmemesi, DNA kontaminasyonu ve amplifikasyon kaybı, yani hiç sonuca ulaşamamak. Bu riskleri en aza indirmek için laboratuvar koşulları optimal olmalı, kontaminasyon riski bulunmamalı, uygun donanımlı cihazlar bulunmalı ve hedef DNA bölgesine komşu yeterli sayıda bilgi verici marker teste dahil edilmelidir.
+Testin güvenilirliğini olumsuz etkileyen riskler üç tanedir: allel drop out, yani iki alelden birinin çoğaltılamayıp görünmemesi, DNA kontaminasyonu ve amplifikasyon kaybı, yani hiç sonuca ulaşamamak.
+Bu riskleri en aza indirmek için laboratuvar koşulları optimal olmalı, kontaminasyon riski bulunmamalı, uygun donanımlı cihazlar bulunmalı ve hedef DNA bölgesine komşu yeterli sayıda bilgi verici marker teste dahil edilmelidir.
 
 @@ Klinik uygulama ve genetik danışmanlık
 Pe ge de, genetik hastalıkların tekrarlanmasını önlemede çok önemli bir araçtır ve en önemli yararı, daha önce de söylediğimiz gibi, anne adayının medikal düşükten korunmasıdır. Embriyoların genetik taramasında fiş, mikroarray, snip, es te er ve yeni nesil dizileme teknikleri kullanılır.
 
-Hasta hazırlığı ve genetik danışmanlıkta uygulanacak tanı yöntemleri hakkında ayrıntılı bilgi verilmeli; yöntemin güven aralığı, yararları ve riskleri anlatılmalı, hastanın soruları yanıtlanmalıdır. Bilgilendirilmiş onam formları her iki eşe ayrı ayrı imzalatılmalıdır. Unutmayın, yalnız genetik tanının eksiksiz yapılması yetmez, tüp bebek işleminin de başarılı olması gerekir.
+Hasta hazırlığı ve genetik danışmanlıkta uygulanacak tanı yöntemleri hakkında ayrıntılı bilgi verilmeli; yöntemin güven aralığı, yararları ve riskleri anlatılmalı, hastanın soruları yanıtlanmalıdır.
+Bilgilendirilmiş onam formları her iki eşe ayrı ayrı imzalatılmalıdır.
+Unutmayın, yalnız genetik tanının eksiksiz yapılması yetmez, tüp bebek işleminin de başarılı olması gerekir.
 
-Danışmanlıkta iki düzey vardır. Genel düzeyde pe ge de yapılacak hastalığın özellikleri, tedavi olanakları, komplikasyonları, prognozu, kalıtım riski ve çevresel faktörlerin olası etkileri anlatılır. Özel düzeyde ise yöntemin sağlıklı embriyoyu seçme gücü, yanılma olasılığı ve gebelik şansı anlatılır. Hastalar bilgilendirilirken azalmış penetrans, değişken ekspresivite, mitokondriyal durumlar, trinükleotid tekrar hastalıkları, de novo mutasyonlar, genetik heterojenite, fenokopi, genokopi ve germinal mozaisizm mutlaka dikkate alınmalıdır.
+Danışmanlıkta iki düzey vardır.
+Genel düzeyde pe ge de yapılacak hastalığın özellikleri, tedavi olanakları, komplikasyonları, prognozu, kalıtım riski ve çevresel faktörlerin olası etkileri anlatılır.
+Özel düzeyde ise yöntemin sağlıklı embriyoyu seçme gücü, yanılma olasılığı ve gebelik şansı anlatılır.
+Hastalar bilgilendirilirken azalmış penetrans, değişken ekspresivite, mitokondriyal durumlar, trinükleotid tekrar hastalıkları, de novo mutasyonlar, genetik heterojenite, fenokopi, genokopi ve germinal mozaisizm mutlaka dikkate alınmalıdır.
 
-Hasta hazırlığında kadın doğum uzmanı, tüp bebek işleminden önce gebeliğe engel olabilecek miyom, enfeksiyon ve spermiyogram bozuklukları gibi durumları tedavi eder. Genetik uzmanı pedigride gerekli görülen alt, üst ve aynı kuşaktaki kişilerden ve eşlerden kan örneği alır; mutasyonlar ve hedef bölgeler için bilgi verici marker tasarımını tamamlar. Tüm hazırlık bittiğinde ovulasyon indüksiyonu başlar. Yumurta toplama günü toplam oosit sayısı, fertilizasyon ve klivaj günlerinde de embriyolar sayılır. Bu hazırlığa set up aşaması da denir ve bazı durumlarda mutlaka gereklidir: resiprokal translokasyonlar, inversiyonlar, marker kromozom, tek gen hastalıkları, kansere yatkınlık ve mitokondriyal hastalıklar.
+Hasta hazırlığında kadın doğum uzmanı, tüp bebek işleminden önce gebeliğe engel olabilecek miyom, enfeksiyon ve spermiyogram bozuklukları gibi durumları tedavi eder.
+Genetik uzmanı pedigride gerekli görülen alt, üst ve aynı kuşaktaki kişilerden ve eşlerden kan örneği alır; mutasyonlar ve hedef bölgeler için bilgi verici marker tasarımını tamamlar.
+Tüm hazırlık bittiğinde ovulasyon indüksiyonu başlar.
+Yumurta toplama günü toplam oosit sayısı, fertilizasyon ve klivaj günlerinde de embriyolar sayılır.
+Bu hazırlığa set up aşaması da denir ve bazı durumlarda mutlaka gereklidir: resiprokal translokasyonlar, inversiyonlar, marker kromozom, tek gen hastalıkları, kansere yatkınlık ve mitokondriyal hastalıklar.
 
 @@ Ovulasyon indüksiyonu, oosit toplama ve mikroenjeksiyon
-Başarı için doğru hasta seçimi ve başarılı bir ovulasyon indüksiyonu programı gerekir. Ovulasyon indüksiyonu yumurtlamanın uyarılmasıdır; amaç metafaz iki aşamasında, uygun sayıda ve sağlıklı oosit elde etmektir. Metafaz iki otuz altı saatte gerçekleşir. Oosit toplama işlemi, hCG enjeksiyonundan otuz beş ile otuz altı saat sonrasına planlanır ve olabildiğince çok oosit toplanması hedeflenir. İdeal oosit sayısı sekiz ile on üç arasıdır. Beşin altında oosit gebelik oranını azaltır, yirminin üzerinde oosit ise over hiperstimülasyon sendromuna yol açabilir.
+Başarı için doğru hasta seçimi ve başarılı bir ovulasyon indüksiyonu programı gerekir. Ovulasyon indüksiyonu yumurtlamanın uyarılmasıdır; amaç metafaz iki aşamasında, uygun sayıda ve sağlıklı oosit elde etmektir. Metafaz iki 36 saatte gerçekleşir. Oosit toplama işlemi, hCG enjeksiyonundan otuz beş ile 36 saat sonrasına planlanır ve olabildiğince çok oosit toplanması hedeflenir. İdeal oosit sayısı sekiz ile on üç arasıdır. Beşin altında oosit gebelik oranını azaltır, yirminin üzerinde oosit ise over hiperstimülasyon sendromuna yol açabilir.
 
-Oosit toplama sırasında oositleri etkileyen en önemli parametreler ısı, osmolarite ve pe ha değişimleridir. İşlem transvajinal ultrasonografi eşliğinde, lokal ya da genel anestezi altında yapılır. Folikül sıvısı aspire edilir ve oosit aranmak üzere embriyoloji laboratuvarına gönderilir. Stereo mikroskop altında bulunan oositler Pastör pipetiyle toplanıp kültür ortamına alınır, üç dört saat inkübe edilir, sonra denüdasyona alınır.
+Oosit toplama sırasında oositleri etkileyen en önemli parametreler ısı, osmolarite ve pe ha değişimleridir.
+İşlem transvajinal ultrasonografi eşliğinde, lokal ya da genel anestezi altında yapılır.
+Folikül sıvısı aspire edilir ve oosit aranmak üzere embriyoloji laboratuvarına gönderilir.
+Stereo mikroskop altında bulunan oositler Pastör pipetiyle toplanıp kültür ortamına alınır, 7 saat inkübe edilir, sonra denüdasyona alınır.
 
-Denüdasyon, oositin kümülüs ve korona hücrelerinden ayrılmasıdır; mikroenjeksiyon öncesi bu hücrelerin temizlenmesi gerekir. Hiyalüronidaz enzimi içeren solüsyon ve cam Pastör pipetleri kullanılır; enzimin konsantrasyonu ve oositin maruz kalma süresi iyi ayarlanmalıdır. Temizlenen oositler değerlendirilir: polar cisimcik varsa oosit metafaz iki, yoksa metafaz bir aşamasındadır; germinal vezikül görülüyorsa daha da erken, germinal vezikül evresindedir. Ardından mikroenjeksiyona alınır.
+Denüdasyon, oositin kümülüs ve korona hücrelerinden ayrılmasıdır; mikroenjeksiyon öncesi bu hücrelerin temizlenmesi gerekir.
+Hiyalüronidaz enzimi içeren solüsyon ve cam Pastör pipetleri kullanılır; enzimin konsantrasyonu ve oositin maruz kalma süresi iyi ayarlanmalıdır.
+Temizlenen oositler değerlendirilir: polar cisimcik varsa oosit metafaz iki, yoksa metafaz bir aşamasındadır; germinal vezikül görülüyorsa daha da erken, germinal vezikül evresindedir.
+Ardından mikroenjeksiyona alınır.
 
-İntrasitoplazmik sperm enjeksiyonu, tek bir spermin oosit sitoplazmasına mekanik olarak yerleştirilmesidir; mikromanipülatör ve cam mikropipetler kullanılır. İnfertilite, bir yıl boyunca korunmasız ilişkiye rağmen çocuk sahibi olunamamasıdır ve kadın ya da erkek kaynaklı olabilir. Tedavi planlanırken infertilitenin nedeni, süresi, kadının yaşı ve sosyal durumu gibi faktörler dikkate alınır.
+İntrasitoplazmik sperm enjeksiyonu, tek bir spermin oosit sitoplazmasına mekanik olarak yerleştirilmesidir; mikromanipülatör ve cam mikropipetler kullanılır.
+İnfertilite, 1 yıl boyunca korunmasız ilişkiye rağmen çocuk sahibi olunamamasıdır ve kadın ya da erkek kaynaklı olabilir.
+Tedavi planlanırken infertilitenin nedeni, süresi, kadının yaşı ve sosyal durumu gibi faktörler dikkate alınır.
 
-Mikroenjeksiyon endikasyonları şunlardır: ejakülattaki total sperm konsantrasyonunun mililitrede iki milyonun altında olması, sperm motilitesinin yüzde beşin altında olması, normal morfolojinin yüzde dörtten az olması, spermin cerrahi yöntemle elde edilmesi gereken durumlar ve oosit sayısının üçten az olması. Burası önemli: pe ge de uygulanacak her olguda mikroenjeksiyon mutlak olarak tercih edilmelidir, çünkü klasik yöntemde yumurtanın etrafındaki fazla spermler incelenecek hücreyi kontamine edebilir. Laboratuvarda gamet hücreleri mikroenjeksiyonla birleştirilir ve embriyolar elde edilir. Tüm prosedür boyunca hücrelerin hasar görmemesi, kaybedilmemesi ve kontaminasyona yol açacak hatalardan kaçınılması hayati önem taşır.
+Mikroenjeksiyon endikasyonları şunlardır: ejakülattaki total sperm konsantrasyonunun mililitrede iki milyonun altında olması, sperm motilitesinin yüzde beşin altında olması, normal morfolojinin %4'ten az olması, spermin cerrahi yöntemle elde edilmesi gereken durumlar ve oosit sayısının üçten az olması.
+Burası önemli: pe ge de uygulanacak her olguda mikroenjeksiyon mutlak olarak tercih edilmelidir, çünkü klasik yöntemde yumurtanın etrafındaki fazla spermler incelenecek hücreyi kontamine edebilir.
+Laboratuvarda gamet hücreleri mikroenjeksiyonla birleştirilir ve embriyolar elde edilir.
+Tüm prosedür boyunca hücrelerin hasar görmemesi, kaybedilmemesi ve kontaminasyona yol açacak hatalardan kaçınılması hayati önem taşır.
 
 @@ Embriyo biyopsi yöntemleri ve polar cisim biyopsisi
 Pe ge de için laboratuvarlarda farklı biyopsi yöntemleri kullanılır; temelde üç yöntem vardır ve bunlar tek başına ya da tanıyı doğrulamak için birlikte kullanılabilir. 1.'si döllenme öncesi ve sonrasında polar cisim biyopsisi, 2.'si bölünme aşamasında blastomer biyopsisi, 3.'sü trofoektoderm dokusundan trofoblast hücrelerinin biyopsisidir.
 
-Hangi yöntem seçilirse seçilsin bazı ilkeler geçerlidir. Biyopsi zamanlaması, taranacak genetik hataların doğru tanımlanmasına izin vermelidir. Saptanan anomali embriyodaki gerçek bir anormalliğe karşılık gelmelidir. Transfer için embriyo seçimine olanak verecek zamanda tanı alınmalıdır. Ve biyopsi embriyoya zarar vermemelidir.
+Hangi yöntem seçilirse seçilsin bazı ilkeler geçerlidir.
+Biyopsi zamanlaması, taranacak genetik hataların doğru tanımlanmasına izin vermelidir.
+Saptanan anomali embriyodaki gerçek bir anormalliğe karşılık gelmelidir.
+Transfer için embriyo seçimine olanak verecek zamanda tanı alınmalıdır.
+Ve biyopsi embriyoya zarar vermemelidir.
 
-1. polar cisim biyopsisi bir gamet biyopsisidir ve metafaz iki aşamasındaki oositten yapılır. 2. polar cisim biyopsisi ise iki pronükleuslu, yani fertilize olmuş oositten yapılır. Blastomer ve trofoektoderm biyopsileri ise embriyonel biyopsi teknikleridir. Polar cisim biyopsisiyle oositin genel sağlık durumu ortaya konabilir; X'e bağlı hastalıklar ve maternal yaşa bağlı anöploidiler gibi durumlarda sıklıkla kullanılır.
+1. polar cisim biyopsisi bir gamet biyopsisidir ve metafaz iki aşamasındaki oositten yapılır.
+2. polar cisim biyopsisi ise iki pronükleuslu, yani fertilize olmuş oositten yapılır.
+Blastomer ve trofoektoderm biyopsileri ise embriyonel biyopsi teknikleridir.
+Polar cisim biyopsisiyle oositin genel sağlık durumu ortaya konabilir; X'e bağlı hastalıklar ve maternal yaşa bağlı anöploidiler gibi durumlarda sıklıkla kullanılır.
 
-Polar hücreler, yumurtanın olgunlaşması ve döllenmesi sırasında mayoz bölünmede atılan yan ürünlerdir; 1. ve 2. olmak üzere iki çeşittir. Yumurta, yumurtalıktan atıldıktan sonra genetik yapısının yarısını 1. polar cisimle hücre dışına atar. Crossing over yoksa 1. polar cisim yumurtanın genetik yapısının tam bir kopyasını taşır. Sperm ile birleştikten sonra bir kopya daha 2. polar cisim olarak atılır. Embriyolardaki sayısal kromozom anomalilerinin büyük kısmı 1. polar cisim aşamasında oluşur. Ancak yöntemin dezavantajları daha fazladır; örneğin paternal ve mitotik kaynaklı anöploidileri saptayamaz.
+Polar hücreler, yumurtanın olgunlaşması ve döllenmesi sırasında mayoz bölünmede atılan yan ürünlerdir; 1. ve 2. olmak üzere iki çeşittir.
+Yumurta, yumurtalıktan atıldıktan sonra genetik yapısının yarısını 1. polar cisimle hücre dışına atar.
+Crossing over yoksa 1. polar cisim yumurtanın genetik yapısının tam bir kopyasını taşır.
+Sperm ile birleştikten sonra bir kopya daha 2. polar cisim olarak atılır.
+Embriyolardaki sayısal kromozom anomalilerinin büyük kısmı 1. polar cisim aşamasında oluşur.
+Ancak yöntemin dezavantajları daha fazladır; örneğin paternal ve mitotik kaynaklı anöploidileri saptayamaz.
 
-Polar cisim biyopsisi embriyo biyopsisinin yasal olmadığı ülkelerde kullanılabilir. Alınmasının oosite zararı yoktur ve maternal mutasyonlar ile mayoz hatalarını gösterir. Ancak bu yaklaşım muhtemelen bölünme aşamasından sonraki embriyo gelişimine zarar vererek canlı doğum oranını azalttığı için günümüzde nadiren kullanılmaktadır.
+Polar cisim biyopsisi embriyo biyopsisinin yasal olmadığı ülkelerde kullanılabilir.
+Alınmasının oosite zararı yoktur ve maternal mutasyonlar ile mayoz hatalarını gösterir.
+Ancak bu yaklaşım muhtemelen bölünme aşamasından sonraki embriyo gelişimine zarar vererek canlı doğum oranını azalttığı için günümüzde nadiren kullanılmaktadır.
 
-Polar cisim biyopsisi fertilizasyondan önce ya da sonra uygulanabilir. Avantajı, embriyo transferinden önce genetik analiz için daha uzun süre kalmasıdır. Dezavantajı ise mitotik hataları teşhis etmek ve cinsiyet tayini için kullanılamamasıdır; ayrıca zaman alıcı ve maliyetlidir. Çoğunlukla ileri anne yaşında anöploidiler, X'e bağlı anomaliler ve translokasyonları saptamak için tercih edilir. Polar cisimler parçalanabilir; bu durum biyopsiyi zorlaştırır ve tüm parçalar alınmazsa yanlış tanıya yol açabilir.
+Polar cisim biyopsisi fertilizasyondan önce ya da sonra uygulanabilir.
+Avantajı, embriyo transferinden önce genetik analiz için daha uzun süre kalmasıdır.
+Dezavantajı ise mitotik hataları teşhis etmek ve cinsiyet tayini için kullanılamamasıdır; ayrıca zaman alıcı ve maliyetlidir.
+Çoğunlukla ileri anne yaşında anöploidiler, X'e bağlı anomaliler ve translokasyonları saptamak için tercih edilir.
+Polar cisimler parçalanabilir; bu durum biyopsiyi zorlaştırır ve tüm parçalar alınmazsa yanlış tanıya yol açabilir.
 
 @@ Blastomer ve trofoektoderm biyopsisi
-Klivaj, yani blastomer aşamasında biyopside blastomer analizi fertilizasyondan itibaren 3. günde, altmış sekiz ile yetmiş 2. saatler arasında, embriyonun altı ile sekiz hücreli aşamasında yapılır. Uzun süre pe ge de'de en çok kullanılan yöntem olmuştur, ancak günümüzde yerini blastokist biyopsisine bırakmıştır. Otozomal dominant ve resesif hastalıklarda, ha le a amaçlı pe ge de'de, translokasyon taşıyıcılığında ve anöploidi taramasında yaygın olarak kullanılmıştır.
+Klivaj, yani blastomer aşamasında biyopside blastomer analizi fertilizasyondan itibaren 3. günde, altmış sekiz ile 72. saatler arasında, embriyonun altı ile sekiz hücreli aşamasında yapılır. Uzun süre pe ge de'de en çok kullanılan yöntem olmuştur, ancak günümüzde yerini blastokist biyopsisine bırakmıştır. Otozomal dominant ve resesif hastalıklarda, ha le a amaçlı pe ge de'de, translokasyon taşıyıcılığında ve anöploidi taramasında yaygın olarak kullanılmıştır.
 
-Teknik olarak zona pellusidada açılan bir açıklıktan biyopsi pipeti yerleştirilir, çekirdek içeren hedef blastomer pipete aspire edilir ve yavaşça ortama bırakılır. Bu işlem tipik olarak in vitro gelişimin 3. gününde, bölünme aşamasında yapılır.
+Teknik olarak zona pellusidada açılan bir açıklıktan biyopsi pipeti yerleştirilir, çekirdek içeren hedef blastomer pipete aspire edilir ve yavaşça ortama bırakılır.
+Bu işlem tipik olarak in vitro gelişimin 3. gününde, bölünme aşamasında yapılır.
 
-Blastokist biyopsisinde trofoektoderm hücreleri alınır. En önemli avantajı birden fazla hücre örneği alınabilmesidir. İç hücre kitlesine, yani embriyoyu oluşturacak çıkıntıya uzak olduğu için daha etik ve güvenlidir. Dezavantajları ise geç dönemde yapılması, embriyo dondurma işleminin birlikte yapılması gerekliliği ve zaman problemidir.
+Blastokist biyopsisinde trofoektoderm hücreleri alınır.
+En önemli avantajı birden fazla hücre örneği alınabilmesidir.
+İç hücre kitlesine, yani embriyoyu oluşturacak çıkıntıya uzak olduğu için daha etik ve güvenlidir.
+Dezavantajları ise geç dönemde yapılması, embriyo dondurma işleminin birlikte yapılması gerekliliği ve zaman problemidir.
 
-Trofoektoderm biyopsisi döllenmeden sonraki 5. günde yapılır ve birçok yönden diğer iki yönteme üstündür. Tek seferde altı yedi hücre alınabilir ve teknik daha kolaydır. Embriyo için kritik hücreler alınmadığından embriyonun tutunma şansı artar. Blastokist aşamasına ulaşan embriyoların implantasyon potansiyeli yüksek olduğundan daha az sayıda embriyo transferiyle yetinilir ve çoğul gebelikler önlenir.
+Trofoektoderm biyopsisi döllenmeden sonraki 5. günde yapılır ve birçok yönden diğer iki yönteme üstündür.
+Tek seferde altı yedi hücre alınabilir ve teknik daha kolaydır.
+Embriyo için kritik hücreler alınmadığından embriyonun tutunma şansı artar.
+Blastokist aşamasına ulaşan embriyoların implantasyon potansiyeli yüksek olduğundan daha az sayıda embriyo transferiyle yetinilir ve çoğul gebelikler önlenir.
 
-Blastokist biyopsisini gösteren şekilde adım adım şunu görüyoruz: zona pellusidadaki bir açıklıktan dışarı çıkıntı yapan trofoektodermle genişleyen blastokist; bu açıklık 3. ya da 4. günde mikrolazerle oluşturulur. Ardından çıkıntı yapan trofoektoderm hücreleri aspire edilir, lazer atışlarıyla hücreler arasındaki sıkı bağlantılar kırılır ve sonunda iki ile dokuz arasında trofoektoderm hücresi elde edilir.
+Blastokist biyopsisini gösteren şekilde adım adım şunu görüyoruz: zona pellusidadaki bir açıklıktan dışarı çıkıntı yapan trofoektodermle genişleyen blastokist; bu açıklık 3. ya da 4. günde mikrolazerle oluşturulur.
+Ardından çıkıntı yapan trofoektoderm hücreleri aspire edilir, lazer atışlarıyla hücreler arasındaki sıkı bağlantılar kırılır ve sonunda iki ile dokuz arasında trofoektoderm hücresi elde edilir.
 
-Trofoektoderm tabakası plasentayı oluşturur; fetüs oluşumunda yer almayan bu dokunun örneklenmesinin embriyonik canlılık riskini azalttığı düşünülür. Yine de biyopsi tamamen risksiz değildir; uygun olmayan boyutta bir biyopsi pe ge de sonuçlarını, hatta canlı doğum oranlarını olumsuz etkileyebilir, bu yüzden uygulayıcının bilgi ve deneyimi önemlidir.
+Trofoektoderm tabakası plasentayı oluşturur; fetüs oluşumunda yer almayan bu dokunun örneklenmesinin embriyonik canlılık riskini azalttığı düşünülür.
+Yine de biyopsi tamamen risksiz değildir; uygun olmayan boyutta bir biyopsi pe ge de sonuçlarını, hatta canlı doğum oranlarını olumsuz etkileyebilir, bu yüzden uygulayıcının bilgi ve deneyimi önemlidir.
 
-Özetle blastokist biyopsisi fertilizasyondan dört beş gün sonra yapılır. Zona pellusida lazer, asit Tyrode solüsyonu ya da keskin cam pipetle açılır ve beş ile sekiz hücre alınır. İki üç düzine hücrelik bir kayıp bile canlılığı etkilemez. En az zararlı ve en fazla DNA elde edilen yöntemdir.
+Özetle blastokist biyopsisi fertilizasyondan 9 gün sonra yapılır.
+Zona pellusida lazer, asit Tyrode solüsyonu ya da keskin cam pipetle açılır ve beş ile sekiz hücre alınır.
+İki üç düzine hücrelik bir kayıp bile canlılığı etkilemez.
+En az zararlı ve en fazla DNA elde edilen yöntemdir.
 
-Şekildeki üç yöntemi yan yana koyalım: polar cisim biyopsisi, sekiz ile on hücreli bölünme aşamasında blastomer biyopsisi ve blastokist aşamasında trofoektoderm biyopsisi. Karşılaştırma tablosunun kilit noktası şudur: blastomer incelemesi embriyonun kendisi hakkında bilgi verir ve her iki ebeveynden kaynaklanan sorunlarda uygulanabilir. Polar cisimcik incelemesi ise yalnız anne kaynaklı genetik risklerde uygulanabilir.
+Şekildeki üç yöntemi yan yana koyalım: polar cisim biyopsisi, sekiz ile on hücreli bölünme aşamasında blastomer biyopsisi ve blastokist aşamasında trofoektoderm biyopsisi.
+Karşılaştırma tablosunun kilit noktası şudur: blastomer incelemesi embriyonun kendisi hakkında bilgi verir ve her iki ebeveynden kaynaklanan sorunlarda uygulanabilir.
+Polar cisimcik incelemesi ise yalnız anne kaynaklı genetik risklerde uygulanabilir.
 
-@@ Pe ge de genetik testleri ve tek hücre pe ce er
+@@ Pe ge de genetik testleri ve tek hücre PCR
 Genetik testlere geçelim. Pe ce er, yani polimeraz zincir reaksiyonu ve tüm genom amplifikasyonu kullanılır. Tüm genom amplifikasyonu, çok az miktardaki DNA örneğinden genomik analiz yapılacağı zaman analizden önce DNA miktarını artırmak için uygulanır. Fiş, DNA'yı izole etmeden bulunduğu ortamda analiz etmeyi sağlar ve blastomerlerden anöploidi taramasında kullanılır. Bir de mikroarray vardır.
 
-Pe ce er tek gen hastalıklarının tanısında kullanılır. Pe ge de yapılacak hastalık için bilgi verici marker analizleri yapılır, marker primerleri seçilir ve mutasyona özgü minisekanslama primerleri tasarlanır. Anne ve babadan gelen aleller belirlenir, embriyolarda bu alellerin geçişi izlenir ve mutasyonlu ile normal aleller ayırt edilir.
+Pe ce er tek gen hastalıklarının tanısında kullanılır.
+Pe ge de yapılacak hastalık için bilgi verici marker analizleri yapılır, marker primerleri seçilir ve mutasyona özgü minisekanslama primerleri tasarlanır.
+Anne ve babadan gelen aleller belirlenir, embriyolarda bu alellerin geçişi izlenir ve mutasyonlu ile normal aleller ayırt edilir.
 
-Tek hücre pe ce er yönteminde biyopsiyle alınan blastomer hücreleri, içinde lizis, yani eritme solüsyonu bulunan tüplere aktarılır. Böylece serbest kalan saf DNA üzerinde, hastalığın bulunduğu bölgeyi milyonlarca kopya halinde çoğaltan özel primerlerle bir dizi enzimatik reaksiyon uygulanır. Ardından mutasyon analiziyle sağlıklı ve hastalıklı embriyolar ayırt edilir.
+Tek hücre PCR yönteminde biyopsiyle alınan blastomer hücreleri, içinde lizis, yani eritme solüsyonu bulunan tüplere aktarılır.
+Böylece serbest kalan saf DNA üzerinde, hastalığın bulunduğu bölgeyi milyonlarca kopya halinde çoğaltan özel primerlerle bir dizi enzimatik reaksiyon uygulanır.
+Ardından mutasyon analiziyle sağlıklı ve hastalıklı embriyolar ayırt edilir.
 
-Güncel adlandırmayı netleştirelim. Preimplantasyon genetik test üç alt tipe ayrılır. Pe ge te a sayısal kromozom anomalilerinin, pe ge te es er yapısal kromozom anomalilerinin, pe ge te em ise monogenik, yani tek gen hastalıklarının tespitidir. Şemada ayrıca örnek miktarları görülür: polar cisimde bir iki hücre, blastomer biyopsisinde bir iki hücre, trofoektodermde beş ile on hücre alınır.
+Güncel adlandırmayı netleştirelim.
+Preimplantasyon genetik test üç alt tipe ayrılır.
+Pe ge te a sayısal kromozom anomalilerinin, pe ge te es er yapısal kromozom anomalilerinin, pe ge te em ise monogenik, yani tek gen hastalıklarının tespitidir.
+Şemada ayrıca örnek miktarları görülür: polar cisimde bir iki hücre, blastomer biyopsisinde bir iki hücre, trofoektodermde beş ile on hücre alınır.
 
 İmplantasyon öncesi embriyonun canlılığını belirleyen faktörler de şemada sıralanmıştır: maternal ve paternal faktörler, optimal stimülasyon protokolleri ve gamet maturasyonu, optimal gamet ve embriyo manipülasyonu, optimal kültür şartları, başarılı embriyo seçimi, başarılı bir embriyo transferi ve optimal rahim içi ortam.
 
 @@ Floresan in situ hibridizasyon
 Floresan in situ hibridizasyon, kısaca fiş, sayısal ve yapısal kromozom bozuklukları için kullanılan bir yöntemdir. Biyopsiyle alınan hücrelerin cam lama fiksasyonu, floresan işaretli probun uygulanması, ardından denatürasyon, hibridizasyon ve son olarak yıkama aşamalarından oluşur. Anöploidi taramasında on üç, on sekiz, yirmi bir, X ve Y kromozomlarına bakılır. Fiş özellikle dengeli translokasyonlar gibi yapısal kromozom anomalilerinde kullanılır.
 
-İnterfaz fiş, pe ge te es er ve pe ge te a için, X'e bağlı hastalıklarda cinsiyet seçimi için ve hedef bölgeye özgü analizler için kullanılır. 3. ve 5. gün embriyolarına uygulanabilir; translokasyon, inversiyon, delesyon, duplikasyon ve insersiyonlarda kullanılır ve aile çalışması gerektirir. Dezavantajları floresan işaretleme ve analizin deneyimli personel gerektirmesi, sinyallerin üst üste binmesi, DNA bütünlüğünün bozulmasıyla parçalı prob bağlanması, subtelomerik bölgeler ile on megabazın altındaki değişikliklerin analizinin güç olması ve çapraz hibridizasyon gösteren problardır.
+İnterfaz fiş, pe ge te es er ve pe ge te a için, X'e bağlı hastalıklarda cinsiyet seçimi için ve hedef bölgeye özgü analizler için kullanılır.
+3. ve 5. gün embriyolarına uygulanabilir; translokasyon, inversiyon, delesyon, duplikasyon ve insersiyonlarda kullanılır ve aile çalışması gerektirir.
+Dezavantajları floresan işaretleme ve analizin deneyimli personel gerektirmesi, sinyallerin üst üste binmesi, DNA bütünlüğünün bozulmasıyla parçalı prob bağlanması, subtelomerik bölgeler ile on megabazın altındaki değişikliklerin analizinin güç olması ve çapraz hibridizasyon gösteren problardır.
 
-Örnek fiş görüntülerinde normal bir blastomer ile anormal blastomerler karşılaştırılır: on üç, on altı, on sekiz, yirmi bir ve yirmi iki numaralı kromozomlar farklı renklerle işaretlenmiştir. Görüntülerde normal blastomer, monozomi yirmi bir ile trizomi yirmi iki taşıyan blastomer, karmaşık anöploid blastomer ve triploid blastomer örnekleri vardır. Yani fişte her renkli noktayı sayarak kromozom sayısını okuruz.
+Örnek fiş görüntülerinde normal bir blastomer ile anormal blastomerler karşılaştırılır: on üç, on altı, on sekiz, yirmi bir ve yirmi iki numaralı kromozomlar farklı renklerle işaretlenmiştir.
+Görüntülerde normal blastomer, monozomi yirmi bir ile trizomi yirmi iki taşıyan blastomer, karmaşık anöploid blastomer ve triploid blastomer örnekleri vardır.
+Yani fişte her renkli noktayı sayarak kromozom sayısını okuruz.
 
 @@ Mikroarray ve dizileme
-Array karşılaştırmalı genomik hibridizasyon, DNA miktarındaki doz farklarını saptayan yeni moleküler genetik yöntemlerden biridir. Embriyodaki sayısal ve yapısal kromozom anomalileri tek işlemle anlaşılabilir; yirmi dört kromozomun anöploidileri, delesyon, duplikasyon ve dengeli translokasyonlar saptanabilir. Böylece tüm kromozomlar incelenebilir. Ancak önemli bir dezavantajı vardır: işlem yaklaşık dört beş gün sürdüğü için embriyonun dondurulmasını zorunlu kılar.
+Array karşılaştırmalı genomik hibridizasyon, DNA miktarındaki doz farklarını saptayan yeni moleküler genetik yöntemlerden biridir. Embriyodaki sayısal ve yapısal kromozom anomalileri tek işlemle anlaşılabilir; 24 kromozomun anöploidileri, delesyon, duplikasyon ve dengeli translokasyonlar saptanabilir. Böylece tüm kromozomlar incelenebilir. Ancak önemli bir dezavantajı vardır: işlem yaklaşık 9 gün sürdüğü için embriyonun dondurulmasını zorunlu kılar.
 
-Dizileme özellikle tek gen hastalıkları için kullanılır. Pe ge de'de yaygın kullanılan iki dizileme yöntemi vardır: yeni nesil dizileme ve Sanger dizilemesi. Biyopsiden sonra hücre lizis solüsyonuna atılır, genomik DNA serbest kalır ve hastalık bölgesine özgü primerlerle milyonlarca kopya elde edilir.
+Dizileme özellikle tek gen hastalıkları için kullanılır.
+Pe ge de'de yaygın kullanılan iki dizileme yöntemi vardır: yeni nesil dizileme ve Sanger dizilemesi.
+Biyopsiden sonra hücre lizis solüsyonuna atılır, genomik DNA serbest kalır ve hastalık bölgesine özgü primerlerle milyonlarca kopya elde edilir.
 
-Daha sonra dizilemeyle hastalığa neden olan mutasyon ya da mikrodelesyon gibi patolojilere bakılır. Farkı aklınızda tutun: Sanger dizi analizi yalnız tek gen hastalıklarındaki patolojileri analiz edebilirken, yeni nesil dizi analiziyle hem tek gen hastalıklarına bakılabilir hem de anöploidi taraması yapılabilir.
+Daha sonra dizilemeyle hastalığa neden olan mutasyon ya da mikrodelesyon gibi patolojilere bakılır.
+Farkı aklınızda tutun: Sanger dizi analizi yalnız tek gen hastalıklarındaki patolojileri analiz edebilirken, yeni nesil dizi analiziyle hem tek gen hastalıklarına bakılabilir hem de anöploidi taraması yapılabilir.
 
-Akışı bir kez daha özetleyelim: in vitro fertilizasyon yapılır, dört ile sekiz hücre aşamasında blastomer biyopsisi alınır, alınan hücrede genetik tanı testi uygulanır. Kromozom için fiş ile on üç, on sekiz, yirmi bir, X ve Y kromozomlarına, tek gen için pe ce er ve dizi analizine başvurulur.
+Akışı 1 kez daha özetleyelim: in vitro fertilizasyon yapılır, dört ile sekiz hücre aşamasında blastomer biyopsisi alınır, alınan hücrede genetik tanı testi uygulanır.
+Kromozom için fiş ile on üç, on sekiz, yirmi bir, X ve Y kromozomlarına, tek gen için PCR ve dizi analizine başvurulur.
 
 @@ Polar cisimle dolaylı genotipleme
 Pe ge de polar cisimcik incelenerek de yapılabilir. Polar cisimcik incelemesi dolaylı bir genotip tayin yöntemidir. 1. polar cisimcik 1. mayozda ovumdan ayrılır; bu sırada ovum ve 1. polar cisimcik her kromozom çiftinin farklı bir homoloğunu alır. Bunun sonucu şudur: otozomal resesif bir mutasyon için heterozigot olan bir anne adayında polar cisimcikte mutasyon saptanırsa, oosit normal aleli taşıyor demektir. Polar cisimciğe bakarak yumurtanın kendisine dokunmadan onun genotipini çıkarıyoruz, bu yüzden dolaylı diyoruz.
@@ -170,24 +316,36 @@ Pe ge de polar cisimcik incelenerek de yapılabilir. Polar cisimcik incelemesi d
 @@ Sorunlar, güvenilirlik ve mozaisizm
 Pe ge de'nin sorunlarına gelince, tüp bebekle doğan çocuklarda doğumsal anomaliler normal popülasyona göre biraz daha fazla görülmektedir. Bunun kültür koşullarından mı, yoksa embriyoya uygulanan mekanik işlemlerden mi kaynaklandığı soru işaretidir.
 
-Non invaziv preimplantasyon genetik test de gündemdedir. Şu anda trofoektoderm biyopsisi embriyonun genetik analizi için sağlam ve güvenilir bir DNA kaynağıdır. Bu biyopsinin embriyonun üreme potansiyelini etkilemediği gösterilmiş olsa da embriyoya müdahalenin azaltılmasına ya da tamamen önlenmesine yönelik ilgi giderek artmaktadır.
+Non invaziv preimplantasyon genetik test de gündemdedir.
+Şu anda trofoektoderm biyopsisi embriyonun genetik analizi için sağlam ve güvenilir bir DNA kaynağıdır.
+Bu biyopsinin embriyonun üreme potansiyelini etkilemediği gösterilmiş olsa da embriyoya müdahalenin azaltılmasına ya da tamamen önlenmesine yönelik ilgi giderek artmaktadır.
 
-Pe ge de testleri tek hücreden ya da sınırlı sayıda hücreden yapıldığı için doğruluk ve güvenilirlik oranları riskle doğrudan ilişkilidir. Yani hücre ne kadar azsa hata payı o kadar önem kazanır.
+Pe ge de testleri tek hücreden ya da sınırlı sayıda hücreden yapıldığı için doğruluk ve güvenilirlik oranları riskle doğrudan ilişkilidir.
+Yani hücre ne kadar azsa hata payı o kadar önem kazanır.
 
-Mozaisizmde anöploidi mayotik kaynaklıysa embriyodaki tüm hücreler etkilenir; bu durumda stimülasyon protokolleri ve bunların oosit üzerindeki etkilerine odaklanılabilir. Anöploidi mitotik kaynaklıysa laboratuvar koşullarına odaklanılır. Çalışmalar embriyonik mozaisizm oranlarının laboratuvarlar arasında ciddi farklılık gösterdiğini, bazılarında yüzde otuza kadar çıktığını ortaya koymuştur. Bu fark, modern laboratuvar koşullarının uzun süreli kültür sırasında mitoz bölünme hatalarını tetikleyebildiğini düşündürür.
+Mozaisizmde anöploidi mayotik kaynaklıysa embriyodaki tüm hücreler etkilenir; bu durumda stimülasyon protokolleri ve bunların oosit üzerindeki etkilerine odaklanılabilir.
+Anöploidi mitotik kaynaklıysa laboratuvar koşullarına odaklanılır.
+Çalışmalar embriyonik mozaisizm oranlarının laboratuvarlar arasında ciddi farklılık gösterdiğini, bazılarında %30'a kadar çıktığını ortaya koymuştur.
+Bu fark, modern laboratuvar koşullarının uzun süreli kültür sırasında mitoz bölünme hatalarını tetikleyebildiğini düşündürür.
 
 @@ Monogenik hastalıklarda bağlantı analizi
-Monogenik hastalıklarda iki temel yaklaşım vardır: bağlantı analizleri ve yeni nesil dizi analizleri. Bağlantı analizi tek gen hastalığı taşıyıcılığında en sık kullanılan pe ge te em yöntemidir. Burada özgün mutasyonun kendisi incelenmez; mutasyon lokusunda yer alan polimorfik belirteçlere, yani es te er bölgelerine bakılır. Aile çalışması ve kapsamlı bir hazırlık aşaması gerekir. Basamaklar DNA ekstraksiyonu, multipleks pe ce er ve kapiller elektroforezdir. Dikkat edilecek tuzaklar allel drop out ve kontaminasyondur; ayrıca polimorfik es te er bölgelerinin bilgi verici olmaması da sorun yaratır.
+Monogenik hastalıklarda iki temel yaklaşım vardır: bağlantı analizleri ve yeni nesil dizi analizleri. Bağlantı analizi tek gen hastalığı taşıyıcılığında en sık kullanılan pe ge te em yöntemidir. Burada özgün mutasyonun kendisi incelenmez; mutasyon lokusunda yer alan polimorfik belirteçlere, yani es te er bölgelerine bakılır. Aile çalışması ve kapsamlı bir hazırlık aşaması gerekir. Basamaklar DNA ekstraksiyonu, multipleks PCR ve kapiller elektroforezdir. Dikkat edilecek tuzaklar allel drop out ve kontaminasyondur; ayrıca polimorfik es te er bölgelerinin bilgi verici olmaması da sorun yaratır.
 
 Retinoblastom örneğinde de bu mantığı görüyoruz: er be bir genine komşu belirteçlerle her embriyo için mutasyon taşıyıp taşımadığı belirlenir; bazı embriyolar mutasyonsuz, bazıları mutasyonlu çıkar ve yalnız mutasyonsuz olanlar transfer için uygundur.
 
 @@ Pe ge te uygulanabilen hastalıklar
 Pe ge te uygulanabilen hastalıklar tablosu kalıtım tipine göre düzenlenmiştir. Otozomal resesif grupta kistik fibrozis, Tay Saks hastalığı, beta talasemi, orak hücreli anemi, Rh grubu tayini, spinal müsküler atrofi, adrenogenital sendrom yani konjenital adrenal hiperplazi, epidermolizis bülloza, Goşe hastalığı, Fankoni anemisi ve ha le a uyumu yer alır. Üçlü tekrar hastalıkları grubunda frajil X, miyotonik distrofi ve Huntington hastalığı vardır.
 
-Otozomal dominant grupta Marfan sendromu, Şarko Mari Tut hastalığı Tip 1 A, Kruzon sendromu, nörofibromatozis Tip 2, osteogenezis imperfekta Tip 1 ve dört, Stickler sendromu, tüberoz skleroz, familyal adenomatöz polipozis koli, Li Fraumeni sendromu ve retinoblastom bulunur. X'e bağlı grupta ise Leş Nihan sendromu, Duchenne kas distrofisi, Şarko Mari Tut hastalığı, retinitis pigmentoza, ornitin transkarbamilaz eksikliği, hemofili, agamaglobulinemi, Alport sendromu, Hunter sendromu yani mukopolisakkaridoz Tip 2 ve orofasiyal dijital sendrom Tip 1 yer alır.
+Otozomal dominant grupta Marfan sendromu, Şarko Mari Tut hastalığı Tip 1 A, Kruzon sendromu, nörofibromatozis Tip 2, osteogenezis imperfekta Tip 1 ve dört, Stickler sendromu, tüberoz skleroz, familyal adenomatöz polipozis koli, Li Fraumeni sendromu ve retinoblastom bulunur.
+X'e bağlı grupta ise Leş Nihan sendromu, Duchenne kas distrofisi, Şarko Mari Tut hastalığı, retinitis pigmentoza, ornitin transkarbamilaz eksikliği, hemofili, agamaglobulinemi, Alport sendromu, Hunter sendromu yani mukopolisakkaridoz Tip 2 ve orofasiyal dijital sendrom Tip 1 yer alır.
 
 Bir başka şema da pe ge te sürecini toplar: kromozom bozuklukları, yapısal kromozom bozuklukları, tek gen hastalıkları ve ha le a uyumu için trofoektoderm biyopsisinden elde edilen örnek, yeni nesil dizileme gibi moleküler yöntemlerle incelenir.
 
-Ülkemizde pe ge te ile tüp bebek yapılabilecek kalıtsal hastalıklar resmi bir listede tanımlanmıştır. Bu listede beta talasemi, kalıtsal faktör sekiz ve faktör dokuz eksiklikleri, adenozin deaminaz eksikliği, dallı zincirli amino asit ve yağ asidi metabolizması bozuklukları, üre siklusu bozuklukları, sfingolipid ve lipid depo bozuklukları, mukopolisakkaridozlar, kistik fibrozis, ataksi telenjiektazi, spinal müsküler atrofi ve Duchenne müsküler distrofisi gibi hastalıklar vardır. Her hastalık için anne ya da babanın taşıyıcılığının veya hasta çocuğun belgelenmesi ve en az bir tıbbi genetik uzmanının yer aldığı beş kişilik sağlık kurulu raporu gerekir.
+Ülkemizde pe ge te ile tüp bebek yapılabilecek kalıtsal hastalıklar resmi bir listede tanımlanmıştır.
+Bu listede beta talasemi, kalıtsal faktör sekiz ve faktör dokuz eksiklikleri, adenozin deaminaz eksikliği, dallı zincirli amino asit ve yağ asidi metabolizması bozuklukları, üre siklusu bozuklukları, sfingolipid ve lipid depo bozuklukları, mukopolisakkaridozlar, kistik fibrozis, ataksi telenjiektazi, spinal müsküler atrofi ve Duchenne müsküler distrofisi gibi hastalıklar vardır.
+Her hastalık için anne ya da babanın taşıyıcılığının veya hasta çocuğun belgelenmesi ve en az bir tıbbi genetik uzmanının yer aldığı beş kişilik sağlık kurulu raporu gerekir.
 
-Özetle, preimplantasyon genetik tanı embriyoyu transferden önce inceleyerek hastayı medikal abortustan korur. Pe ge te a sayısal, pe ge te es er yapısal anomalilere, pe ge te em tek gen hastalıklarına yöneliktir. Günümüzde 5. gün trofoektoderm biyopsisi ve geniş kapsamlı moleküler yöntemler öne çıkar; mikroenjeksiyon zorunludur. Sınırlarımız ise az sayıda hücre, mozaisizm ve hata payıdır.
+Özetle, preimplantasyon genetik tanı embriyoyu transferden önce inceleyerek hastayı medikal abortustan korur.
+Pe ge te a sayısal, pe ge te es er yapısal anomalilere, pe ge te em tek gen hastalıklarına yöneliktir.
+Günümüzde 5. gün trofoektoderm biyopsisi ve geniş kapsamlı moleküler yöntemler öne çıkar; mikroenjeksiyon zorunludur.
+Sınırlarımız ise az sayıda hücre, mozaisizm ve hata payıdır.

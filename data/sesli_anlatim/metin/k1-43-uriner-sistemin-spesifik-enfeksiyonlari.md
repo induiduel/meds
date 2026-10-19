@@ -5,156 +5,323 @@ Alt üriner sistem enfeksiyonları mesaneyi ve üretrayı tutan enfeksiyonlardı
 
 Burası önemli: alt üriner sistemde en sık form akut sistit, üst üriner sistemde ise biraz sonra göreceğimiz gibi akut piyelonefrittir.
 
-Sistit, hastanın zeminine göre komplike ve komplike olmayan diye ikiye ayrılır. Komplike olmayan sistit, sağlıklı ve gebe olmayan kadınlarda, üriner sisteminde bilinen anatomik ya da fonksiyonel bir bozukluk bulunmayan zeminde gelişen alt üriner sistem enfeksiyonudur. Tıkanıklık, taş, reflü ya da işeme bozukluğu gibi bir zemin varsa tablo artık komplike olmayan sayılmaz. Gebelik, erkek cinsiyet ve bilinen üriner anomali bu tanımın dışında kalır. Yapısal sorunu olmayan genç kadında enfeksiyon kısa süreli, oral tedaviye iyi yanıt veren bir tablodur ve ileri görüntüleme genellikle gerekmez.
+Sistit, hastanın zeminine göre komplike ve komplike olmayan diye ikiye ayrılır.
+Komplike olmayan sistit, sağlıklı ve gebe olmayan kadınlarda, üriner sisteminde bilinen anatomik ya da fonksiyonel bir bozukluk bulunmayan zeminde gelişen alt üriner sistem enfeksiyonudur.
+Tıkanıklık, taş, reflü ya da işeme bozukluğu gibi bir zemin varsa tablo artık komplike olmayan sayılmaz.
+Gebelik, erkek cinsiyet ve bilinen üriner anomali bu tanımın dışında kalır.
+Yapısal sorunu olmayan genç kadında enfeksiyon kısa süreli, oral tedaviye iyi yanıt veren bir tablodur ve ileri görüntüleme genellikle gerekmez.
 
-Sistit kadınlarda son derece sıktır: her üç kadından biri yirmi dört yaşına kadar en az bir sistit atağı geçirir. Enfeksiyon asendan yolla gelişir; yani perine ve üretra çevresine yerleşen bakteriler üretradan mesaneye tırmanır. Kısa kadın üretrası ve perine kolonizasyonu bu tırmanışı kolaylaştırır. Burası önemli: en sık etken Eşerişya koli olup olguların %70 beş ile doksanından sorumludur. 2. sırada genç kadınlarda görülen, gram pozitif, koagülaz negatif bir stafilokok olan Stafilokokus saprofitikus gelir. Diğer etkenler Klebsiella ve Proteus türleridir.
+Sistit kadınlarda son derece sıktır: her üç kadından biri yirmi dört yaşına kadar en az bir sistit atağı geçirir.
+Enfeksiyon asendan yolla gelişir; yani perine ve üretra çevresine yerleşen bakteriler üretradan mesaneye tırmanır.
+Kısa kadın üretrası ve perine kolonizasyonu bu tırmanışı kolaylaştırır.
+Burası önemli: en sık etken Eşerişya koli olup olguların %75 ile doksanından sorumludur.
+2. sırada genç kadınlarda görülen, gram pozitif, koagülaz negatif bir stafilokok olan Stafilokokus saprofitikus gelir.
+Diğer etkenler Klebsiella ve Proteus türleridir.
 
 @@ Sistitin kliniği, tanısı ve tedavisi
 Sistitin kliniği mesane mukozasının irritasyonuna bağlı işeme yakınmalarıyla tanınır. İdrar yaparken yanma, yani dizüri, inflame mukozadan idrarın geçişiyle ortaya çıkar. Sık idrara çıkma, yani pollaküri, irrite mesanenin küçük hacimlerde boşalma isteğinden kaynaklanır. Ani ve ertelenemeyen idrar yapma ihtiyacına urgency denir. Mesanenin bulunduğu alt karın orta hattında suprapubik ağrı ya da rahatsızlık hissedilir. Bazen inflame ve kırılgan mukozanın kanamasıyla hematüri görülür; idrar bulanık ya da kötü kokulu olabilir. Bu tabloda ateş ve yan ağrısı beklenmez; bunların varlığı enfeksiyonun böbreğe ilerlediğini düşündürür.
 
-Tanıda önce tam idrar tetkiki yapılır ve piyüri, hematüri ve bakteriüri aranır. Piyüri idrarda lökosit artışı, bakteriüri ise idrarda bakteri bulunmasıdır. Nitrit testinin pozitif olması, idrardaki nitratı nitrite çeviren Eşerişya koli gibi gram negatif bakterilerin varlığını destekler. Burası önemli: sistitte kesin tanı idrar kültürüyle konur; etken üretilir ve antibiyotik duyarlılığı belirlenir. Ancak pratikte, komplike olmayan olguda genellikle tam idrar tetkiki yeterlidir ve kültür her hastada zorunlu değildir.
+Tanıda önce tam idrar tetkiki yapılır ve piyüri, hematüri ve bakteriüri aranır.
+Piyüri idrarda lökosit artışı, bakteriüri ise idrarda bakteri bulunmasıdır.
+Nitrit testinin pozitif olması, idrardaki nitratı nitrite çeviren Eşerişya koli gibi gram negatif bakterilerin varlığını destekler.
+Burası önemli: sistitte kesin tanı idrar kültürüyle konur; etken üretilir ve antibiyotik duyarlılığı belirlenir.
+Ancak pratikte, komplike olmayan olguda genellikle tam idrar tetkiki yeterlidir ve kültür her hastada zorunlu değildir.
 
-Komplike olmayan sistit kısa süreli oral antibiyotiklerle tedavi edilir. Fosfomisin üç gram tek doz verilir; tek doz uygulaması uyumu kolaylaştırır. Nitrofurantoin yüz miligram günde iki kez kullanılır. Trimetoprim sülfametoksazol ise trimetoprim yüz altmış, sülfametoksazol sekiz yüz miligram olacak şekilde günde iki kez, üç gün uygulanır. Bu ajanlar idrarda yüksek konsantrasyona ulaşarak mesanedeki enfeksiyonu hedefler. Seçim yerel direnç durumuna ve hastanın özelliklerine göre yapılır, kültür yapıldıysa sonuca göre düzenlenir. Burası önemli, sınavda doz ve süre eşleşmesi sorulur: fosfomisin tek doz, trimetoprim sülfametoksazol üç gün.
+Komplike olmayan sistit kısa süreli oral antibiyotiklerle tedavi edilir.
+Fosfomisin üç gram tek doz verilir; tek doz uygulaması uyumu kolaylaştırır.
+Nitrofurantoin yüz miligram günde 2 kez kullanılır.
+Trimetoprim sülfametoksazol ise trimetoprim yüz altmış, sülfametoksazol sekiz yüz miligram olacak şekilde günde 2 kez, 3 gün uygulanır.
+Bu ajanlar idrarda yüksek konsantrasyona ulaşarak mesanedeki enfeksiyonu hedefler.
+Seçim yerel direnç durumuna ve hastanın özelliklerine göre yapılır, kültür yapıldıysa sonuca göre düzenlenir.
+Burası önemli, sınavda doz ve süre eşleşmesi sorulur: fosfomisin tek doz, trimetoprim sülfametoksazol 3 gün.
 
 @@ Üst üriner sistem enfeksiyonları ve akut piyelonefrit
 Üst üriner sistem enfeksiyonları böbrek parankimini ve renal pelvisi tutar; renal pelvis, böbreğin toplayıcı sisteminin üretere açılan huni biçimli bölümüdür. Bu grubun en sık görülen formu akut piyelonefrittir. Yayılımda en sık yol yine asendan yoldur: mesanedeki bakteriler üreter boyunca böbreğe tırmanır, bu yüzden piyelonefrit sıklıkla bir alt sistem enfeksiyonunun devamı olarak gelişir. Daha nadiren bakteriler böbreğe kan yoluyla, yani hematojen yolla ulaşır.
 
-Akut piyelonefrit böbreğin akut bakteriyel enfeksiyonudur. Tabloyu ateş, yan ağrısı ve bulantı kusma tanımlar. Yan ağrısı inflame ve gerilen böbrek kapsülünden, ateş ise parankimdeki enfeksiyona verilen sistemik yanıttan kaynaklanır. Dikkat edin, sistitte ateş ve yan ağrısı beklenmezken piyelonefritte bunlar temel bulgulardır. Akut piyelonefrit komplike ve komplike olmayan diye ikiye ayrılır. Bu ayrım, hastada enfeksiyonu ağırlaştıran bir risk faktörünün olup olmamasına dayanır ve hastanın ayaktan mı yatarak mı tedavi edileceğini belirler.
+Akut piyelonefrit böbreğin akut bakteriyel enfeksiyonudur.
+Tabloyu ateş, yan ağrısı ve bulantı kusma tanımlar.
+Yan ağrısı inflame ve gerilen böbrek kapsülünden, ateş ise parankimdeki enfeksiyona verilen sistemik yanıttan kaynaklanır.
+Dikkat edin, sistitte ateş ve yan ağrısı beklenmezken piyelonefritte bunlar temel bulgulardır.
+Akut piyelonefrit komplike ve komplike olmayan diye ikiye ayrılır.
+Bu ayrım, hastada enfeksiyonu ağırlaştıran bir risk faktörünün olup olmamasına dayanır ve hastanın ayaktan mı yatarak mı tedavi edileceğini belirler.
 
 @@ Komplike piyelonefrit risk faktörleri
 Komplike piyelonefrit, enfeksiyonun temizlenmesini zorlaştıran bir zeminde gelişen piyelonefrittir. Risk faktörlerini iki grupta düşünmek kolaylık sağlar. İlk grup idrar akımını ve anatomiyi bozan durumlardır. Üriner obstrüksiyonda akımın durması bakterinin yıkanmasını engeller ve yüksek basınçla parankime yayılımı kolaylaştırır. Erkeklerde üriner sistem enfeksiyonu doğası gereği komplike kabul edilir ve altta yatan bir sorun aranır. Kateter ya da taş gibi yabancı cisimler bakteriye tutunma yüzeyi sağlar. Gebelikte gelişen üriner enfeksiyon da komplike sayılır. Rezidü idrar, yani işeme sonrası mesanede kalan idrar, bakterinin çoğalacağı durgun bir ortam oluşturur.
 
-2. grup konak savunmasını zayıflatan ya da bakteriyi dışarıdan sisteme taşıyan durumlardır. Diyabetes mellitus bağışıklık yanıtını zayıflatır ve glukozürili idrar bakteriye uygun bir ortam oluşturur. Vezikoüreteral reflü, idrarın mesaneden üreter ve böbreğe geri kaçmasıdır ve bakteriyi doğrudan üst sisteme taşır. İmmünsupresyonda enfeksiyon kolay yayılır ve ağır seyreder. Üriner sisteme yapılan girişimsel işlemler bakteriyi içeri taşıyabilir. Hastane kaynaklı enfeksiyonlar ise dirençli etkenler nedeniyle güç tedavi edilir. Bu iki grup birlikte komplike piyelonefritin on risk faktörünü oluşturur.
+2. grup konak savunmasını zayıflatan ya da bakteriyi dışarıdan sisteme taşıyan durumlardır.
+Diyabetes mellitus bağışıklık yanıtını zayıflatır ve glukozürili idrar bakteriye uygun bir ortam oluşturur.
+Vezikoüreteral reflü, idrarın mesaneden üreter ve böbreğe geri kaçmasıdır ve bakteriyi doğrudan üst sisteme taşır.
+İmmünsupresyonda enfeksiyon kolay yayılır ve ağır seyreder.
+Üriner sisteme yapılan girişimsel işlemler bakteriyi içeri taşıyabilir.
+Hastane kaynaklı enfeksiyonlar ise dirençli etkenler nedeniyle güç tedavi edilir.
+Bu iki grup birlikte komplike piyelonefritin on risk faktörünü oluşturur.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: üriner obstrüksiyon, yabancı cisim, gebelerde üriner enfeksiyon ve immünsupresyon komplike piyelonefrit için risk faktörüdür; ancak genç kadınlarda görülen üriner sistem enfeksiyonu, yani komplike olmayan sistit zemini, bir risk faktörü değildir. Sağlıklı genç kadın tam da komplike olmayan tablonun tanımıdır.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: üriner obstrüksiyon, yabancı cisim, gebelerde üriner enfeksiyon ve immünsupresyon komplike piyelonefrit için risk faktörüdür; ancak genç kadınlarda görülen üriner sistem enfeksiyonu, yani komplike olmayan sistit zemini, bir risk faktörü değildir.
+Sağlıklı genç kadın tam da komplike olmayan tablonun tanımıdır.
 
 @@ Akut piyelonefritte tanı ve tedavi
 Piyelonefrit tanısı laboratuvar, kültür ve fizik muayenenin birleştirilmesiyle konur. Tam idrar tetkiki piyüri ve bakteriüri gibi enfeksiyon bulgularını gösterir. İdrar kültürü etkeni ve antibiyotik duyarlılığını belirler. Fizik muayenede kostovertebral açı hassasiyeti pozitiftir ve ateş vardır; kostovertebral açı hassasiyeti, böbrek hizasında sırtta perküsyonla ortaya çıkan hassasiyettir. Görüntüleme her hastada gerekmez; risk faktörü olanlarda, acil cerrahi durum şüphesi olanlarda ve tedaviye cevap vermeyenlerde yapılır. Amaç obstrüksiyon ya da apse gibi müdahale gerektiren bir nedeni göstermektir.
 
-Tedavide ilk karar hastanın yatırılıp yatırılmayacağıdır. Komplike piyelonefritli hastalar ile komplike olmayan ama şiddetli semptomlu hastalar hastaneye yatırılır. Tedavinin iki ayağı hidrasyon ve antibiyoterapidir; hidrasyon ateş ve kusmaya bağlı sıvı kaybını yerine koyar. Tedavi yedi ile yirmi bir gün sürer. Kültür sonucu beklenmeden ampirik tedavi başlanır, ardından idrar kültürü sonucuna göre tedavi düzenlenir.
+Tedavide ilk karar hastanın yatırılıp yatırılmayacağıdır.
+Komplike piyelonefritli hastalar ile komplike olmayan ama şiddetli semptomlu hastalar hastaneye yatırılır.
+Tedavinin iki ayağı hidrasyon ve antibiyoterapidir; hidrasyon ateş ve kusmaya bağlı sıvı kaybını yerine koyar.
+Tedavi yedi ile 21 gün sürer.
+Kültür sonucu beklenmeden ampirik tedavi başlanır, ardından idrar kültürü sonucuna göre tedavi düzenlenir.
 
-Burası önemli, ampirik tedavinin tanımı sorulmuştur: ampirik tedavi, etken belirlenmeden olası patojene ve onun duyarlı olabileceği ajana göre başlanan tedavidir. Dikkat edin, kültür sonucuna göre başlanan tedavi ampirik değil etkene yönelik tedavidir; cerrahi girişim öncesi ya da enfeksiyon gelişmesi beklenen durumlarda verilen antibiyotik ise profilaksidir.
+Burası önemli, ampirik tedavinin tanımı sorulmuştur: ampirik tedavi, etken belirlenmeden olası patojene ve onun duyarlı olabileceği ajana göre başlanan tedavidir.
+Dikkat edin, kültür sonucuna göre başlanan tedavi ampirik değil etkene yönelik tedavidir; cerrahi girişim öncesi ya da enfeksiyon gelişmesi beklenen durumlarda verilen antibiyotik ise profilaksidir.
 
-Hafif ve orta şiddette semptomları olan hastada piyelonefrit ayaktan, beş ile on dört gün süren oral tedaviyle yönetilebilir. Florokinolon grubundan siprofloksasin beş yüz miligram günde iki kez, yedi gün verilir. Trimetoprim sülfametoksazol yüz altmış ve sekiz yüz miligram dozunda günde iki kez, on dört gün verilir. Burada dikkat edin: aynı doz sistitte üç gün verilirken piyelonefritte süre on dört güne uzar, çünkü parankim enfeksiyonu daha uzun tedavi gerektirir. Oral sefalosporin olan sefpodoksim ise iki yüz miligram günde iki kez, on gün kullanılır.
+Hafif ve orta şiddette semptomları olan hastada piyelonefrit ayaktan, beş ile 14 gün süren oral tedaviyle yönetilebilir.
+Florokinolon grubundan siprofloksasin beş yüz miligram günde 2 kez, 7 gün verilir.
+Trimetoprim sülfametoksazol yüz altmış ve sekiz yüz miligram dozunda günde 2 kez, 14 gün verilir.
+Burada dikkat edin: aynı doz sistitte 3 gün verilirken piyelonefritte süre on dört güne uzar, çünkü parankim enfeksiyonu daha uzun tedavi gerektirir.
+Oral sefalosporin olan sefpodoksim ise iki yüz miligram günde 2 kez, 10 gün kullanılır.
 
-Yatırılan ya da oral alamayan hastada parenteral tedaviye geçilir. Siprofloksasin dört yüz miligram günde iki kez verilir; oral doz beş yüz, damar içi doz dört yüz miligramdır. Levofloksasin yedi yüz elli miligram günde tek doz, 3. kuşak sefalosporin olan seftriakson ise bir ile iki gram günde tek doz uygulanır. Klinik düzelme ve kültür sonucu elde edilince tedavi duyarlılığa göre düzenlenir ve toplam süre tamamlanır.
+Yatırılan ya da oral alamayan hastada parenteral tedaviye geçilir.
+Siprofloksasin dört yüz miligram günde 2 kez verilir; oral doz beş yüz, damar içi doz dört yüz miligramdır.
+Levofloksasin yedi yüz 50 miligram günde tek doz, 3. kuşak sefalosporin olan seftriakson ise bir ile iki gram günde tek doz uygulanır.
+Klinik düzelme ve kültür sonucu elde edilince tedavi duyarlılığa göre düzenlenir ve toplam süre tamamlanır.
 
 @@ Genitoüriner tüberküloz: tanım, yayılım ve etken
 Şimdi spesifik enfeksiyonların en önemlisine, genitoüriner tüberküloza geçiyoruz. Genitoüriner tüberküloz, Mikobakteriyum tüberkülozis kompleksinin üriner sistemi, genital sistemi ya da her ikisini birden tutmasıdır. Burası önemli: genellikle yeni bir enfeksiyon değil, daha önce geçirilmiş tüberküloz enfeksiyonunun reaktivasyonu sonucu ortaya çıkar. Basil yıllar önce vücuda girmiş, sessiz bir odakta canlı kalmış ve bağışıklık dengesinin bozulduğu bir dönemde yeniden çoğalmaya başlamıştır. Bu nedenle tablo akut bir enfeksiyon gibi değil, primer enfeksiyondan çok sonra ortaya çıkan, yavaş gelişen bir hastalık olarak karşımıza çıkar.
 
-Böbrekler çoğunlukla hematojen yayılımla tutulur; bu, nonspesifik üriner enfeksiyondaki asendan yolun tam tersidir. Böbrekteki odaktan enfeksiyon idrarla aşağı taşınarak üreter, mesane ve diğer üriner yapılara ilerleyebilir. Yani yön yukarıdan aşağıyadır: böbrek giriş kapısı, alt üriner yapılar ve genital organlar ikincil tutulum alanlarıdır. Erkeklerde genital tutulum epididim, prostat ve testiste görülür. Hastalık uzun süre sessiz ya da nonspesifik seyredebilir, bu yüzden tanı sıklıkla gecikir.
+Böbrekler çoğunlukla hematojen yayılımla tutulur; bu, nonspesifik üriner enfeksiyondaki asendan yolun tam tersidir.
+Böbrekteki odaktan enfeksiyon idrarla aşağı taşınarak üreter, mesane ve diğer üriner yapılara ilerleyebilir.
+Yani yön yukarıdan aşağıyadır: böbrek giriş kapısı, alt üriner yapılar ve genital organlar ikincil tutulum alanlarıdır.
+Erkeklerde genital tutulum epididim, prostat ve testiste görülür.
+Hastalık uzun süre sessiz ya da nonspesifik seyredebilir, bu yüzden tanı sıklıkla gecikir.
 
-Etken gram pozitif, çomak şeklinde, hareketsiz, sporsuz ve kapsülsüz bir bakteridir. En önemli özelliği aside dirençli olmasıdır: hücre duvarındaki yüksek lipid içeriği boyayı tutar ve asit alkolle renksizleşmez. Bu yüzden aside dirençli basil diye adlandırılır ve Zil Nilsen boyasıyla gösterilir. Derste gösterilen preparatta mavi yeşil zemin üzerinde ince, kırmızı pembe, hafif kıvrık çomaklar seçilir; bu kırmızı çomaklar aside dirençli basillerdir.
+Etken gram pozitif, çomak şeklinde, hareketsiz, sporsuz ve kapsülsüz bir bakteridir.
+En önemli özelliği aside dirençli olmasıdır: hücre duvarındaki yüksek lipid içeriği boyayı tutar ve asit alkolle renksizleşmez.
+Bu yüzden aside dirençli basil diye adlandırılır ve Zil Nilsen boyasıyla gösterilir.
+Derste gösterilen preparatta mavi yeşil zemin üzerinde ince, kırmızı pembe, hafif kıvrık çomaklar seçilir; bu kırmızı çomaklar aside dirençli basillerdir.
 
 @@ Akciğer dışı tüberküloz: epidemiyoloji, patogenez ve klinik
-Genitoüriner tüberküloz, akciğer dışı tüberkülozun bir formudur. Akciğer dışı tüberküloz tüm tüberküloz vakalarının yaklaşık %10 beş ile yirmi beşini oluşturur. Kişide tek başına ya da akciğer tutulumuyla birlikte görülebilir; dolayısıyla akciğerin normal olması akciğer dışı tüberkülozu dışlamaz. Özellikle HIV pozitif kişilerde sıktır, çünkü hücresel bağışıklığın bozulması basilin yayılımını kolaylaştırır. Ha ı ve pozitif kişilerde tablo şöyle dağılır: %30 sekizde tek başına akciğer tüberkülozu, %30 ikide akciğer dışı ve akciğer tüberkülozu birlikte, yüzde otuzda ise tek başına akciğer dışı tüberküloz görülür.
+Genitoüriner tüberküloz, akciğer dışı tüberkülozun bir formudur. Akciğer dışı tüberküloz tüm tüberküloz vakalarının yaklaşık %15 ile yirmi beşini oluşturur. Kişide tek başına ya da akciğer tutulumuyla birlikte görülebilir; dolayısıyla akciğerin normal olması akciğer dışı tüberkülozu dışlamaz. Özellikle HIV pozitif kişilerde sıktır, çünkü hücresel bağışıklığın bozulması basilin yayılımını kolaylaştırır. Ha ı ve pozitif kişilerde tablo şöyle dağılır: %30 sekizde tek başına akciğer tüberkülozu, %30 ikide akciğer dışı ve akciğer tüberkülozu birlikte, %30'da ise tek başına akciğer dışı tüberküloz görülür.
 
-Basilin ilk yerleştiği yer genellikle akciğer dokusudur ve basil kısa sürede lenf nodlarına taşınır. Hastalığın gidişini iki etken belirler: enfeksiyöz bakteri miktarı ve hücresel immünite. Sıklıkla hücresel immünitenin etkisiyle yayılım sınırlanır ve klinik bulgu vermeyen bir odak oluşur. Akciğerdeki odak ve ilgili lenf nodu tutulumu birlikte primer kompleksi oluşturur. Bu sessiz odaktaki basiller ileride başka organlarda hastalık oluşturabilir; akciğer dışı tüberkülozun kaynağı budur.
+Basilin ilk yerleştiği yer genellikle akciğer dokusudur ve basil kısa sürede lenf nodlarına taşınır.
+Hastalığın gidişini iki etken belirler: enfeksiyöz bakteri miktarı ve hücresel immünite.
+Sıklıkla hücresel immünitenin etkisiyle yayılım sınırlanır ve klinik bulgu vermeyen bir odak oluşur.
+Akciğerdeki odak ve ilgili lenf nodu tutulumu birlikte primer kompleksi oluşturur.
+Bu sessiz odaktaki basiller ileride başka organlarda hastalık oluşturabilir; akciğer dışı tüberkülozun kaynağı budur.
 
-Akciğer dışı tüberküloz neredeyse her organı tutabilir. Tutulum alanları arasında lenf nodları, kemik ve eklemler, santral sinir sistemi, plevra, larinks, perikard, genitoüriner sistem, periton ve diğer organlar sayılır. Miliyer tüberkülozda ise basil kan yoluyla yaygın yayılarak darı tanesi büyüklüğünde çok sayıda küçük odak oluşturur.
+Akciğer dışı tüberküloz neredeyse her organı tutabilir.
+Tutulum alanları arasında lenf nodları, kemik ve eklemler, santral sinir sistemi, plevra, larinks, perikard, genitoüriner sistem, periton ve diğer organlar sayılır.
+Miliyer tüberkülozda ise basil kan yoluyla yaygın yayılarak darı tanesi büyüklüğünde çok sayıda küçük odak oluşturur.
 
-Klinikte iki katman vardır. Ateş, halsizlik, gece terlemesi, iştahsızlık ve kilo kaybından oluşan genel semptomlar olguların yalnızca üçte birinde görülür; yokluğu tüberkülozu dışlamaz. Bunun yanında tutulum yerine göre değişen semptomlar vardır: üriner sistem şikâyetleri üriner sistem tüberkülozunu, baş ağrısı ve konfüzyon tüberküloz menenjitini, sırt ve bel ağrısı vertebra tüberkülozunu, ses kısıklığı ise larinks tüberkülozunu düşündürür. Derste özellikle vurgulanan uyarı şudur: ülkemiz tüberküloz açısından endemik bir ülkedir ve tüberküloz, enfeksiyon hastalıklarının ayırıcı tanısında mutlaka akılda tutulmalıdır.
+Klinikte iki katman vardır.
+Ateş, halsizlik, gece terlemesi, iştahsızlık ve kilo kaybından oluşan genel semptomlar olguların yalnızca üçte birinde görülür; yokluğu tüberkülozu dışlamaz.
+Bunun yanında tutulum yerine göre değişen semptomlar vardır: üriner sistem şikâyetleri üriner sistem tüberkülozunu, baş ağrısı ve konfüzyon tüberküloz menenjitini, sırt ve bel ağrısı vertebra tüberkülozunu, ses kısıklığı ise larinks tüberkülozunu düşündürür.
+Derste özellikle vurgulanan uyarı şudur: ülkemiz tüberküloz açısından endemik bir ülkedir ve tüberküloz, enfeksiyon hastalıklarının ayırıcı tanısında mutlaka akılda tutulmalıdır.
 
-Akciğer dışı tüberkülozda genel yaklaşım ayrıntılı anamnez ve fizik muayeneyle başlar; geçirilmiş tüberküloz, temas öyküsü ve sistemik semptomlar sorgulanır. Tutulan organdan alınan örnek, örneğin idrar, değerlendirilir: aside dirençli basil boyaması basili doğrudan gösterir, kültür basili üretir ve kesin tanı sağlar, polimeraz zincir reaksiyonu ile moleküler değerlendirme ise basilin genetik materyalini hızla saptar. Pe pe de, yani tüberkülin deri testiyle basile karşı bağışıklık yanıtı değerlendirilir. Akciğer tüberkülozu da mutlaka araştırılır: posteroanterior akciğer grafisi çekilir ve balgamda aside dirençli basil boyaması yapılır.
+Akciğer dışı tüberkülozda genel yaklaşım ayrıntılı anamnez ve fizik muayeneyle başlar; geçirilmiş tüberküloz, temas öyküsü ve sistemik semptomlar sorgulanır.
+Tutulan organdan alınan örnek, örneğin idrar, değerlendirilir: aside dirençli basil boyaması basili doğrudan gösterir, kültür basili üretir ve kesin tanı sağlar, polimeraz zincir reaksiyonu ile moleküler değerlendirme ise basilin genetik materyalini hızla saptar.
+Pe pe de, yani tüberkülin deri testiyle basile karşı bağışıklık yanıtı değerlendirilir.
+Akciğer tüberkülozu da mutlaka araştırılır: posteroanterior akciğer grafisi çekilir ve balgamda aside dirençli basil boyaması yapılır.
 
 @@ Üriner tüberküloz: epidemiyoloji ve böbrekte yerleşim
-Üriner tüberkülozun sayısal özellikleri sınavlarda sık sorulur. Genellikle hematojen yayılım sonrası gelişir. Hastaların %50 iki ile yetmiş altısında aktif ya da geçirilmiş tüberküloz öyküsü vardır; dolayısıyla öykünün olmaması tanıyı dışlamaz. Hastalık primer enfeksiyondan beş ile yirmi beş yıl sonra ortaya çıkar. Yaklaşık %70 olguda tutulum tek taraflıdır; hematojen ekilme iki böbreğe olsa da klinik hastalık çoğunlukla bir tarafta gelişir. Erkeklerde kadınlardan daha sık görülür.
+Üriner tüberkülozun sayısal özellikleri sınavlarda sık sorulur. Genellikle hematojen yayılım sonrası gelişir. Hastaların %52 ile yetmiş altısında aktif ya da geçirilmiş tüberküloz öyküsü vardır; dolayısıyla öykünün olmaması tanıyı dışlamaz. Hastalık primer enfeksiyondan beş ile 25 yıl sonra ortaya çıkar. Yaklaşık %70 olguda tutulum tek taraflıdır; hematojen ekilme iki böbreğe olsa da klinik hastalık çoğunlukla bir tarafta gelişir. Erkeklerde kadınlardan daha sık görülür.
 
-Burası önemli, bu bilgi çıkmış sorularda birden fazla kez soruldu: üriner tüberküloz yaklaşık %70 oranında tek taraflıdır, iki taraflı değil. Soru kökü bu sayıyı bilateral tutulum gibi vererek yanlış ifade oluşturur. Aynı sorularda doğru seçenekler de şunlardı: basil primer akciğer odağından böbreğe hematojen yolla ulaşır, hastaların yarısından fazlasında tüberküloz öyküsü vardır, primer enfeksiyonla böbrek tutulumunun kliniğe yansıması arasında beş ile yirmi beş yıllık latent dönem bulunur ve tipik laboratuvar bulgusu aside dirençli basile bağlı steril piyüridir.
+Burası önemli, bu bilgi çıkmış sorularda birden fazla kez soruldu: üriner tüberküloz yaklaşık %70 oranında tek taraflıdır, iki taraflı değil.
+Soru kökü bu sayıyı bilateral tutulum gibi vererek yanlış ifade oluşturur.
+Aynı sorularda doğru seçenekler de şunlardı: basil primer akciğer odağından böbreğe hematojen yolla ulaşır, hastaların yarısından fazlasında tüberküloz öyküsü vardır, primer enfeksiyonla böbrek tutulumunun kliniğe yansıması arasında beş ile 25 yıllık latent dönem bulunur ve tipik laboratuvar bulgusu aside dirençli basile bağlı steril piyüridir.
 
-Basilin böbrekteki ilk yerleşim noktası da önemlidir. Mikobakteriyum tüberkülozis kan yoluyla renal korteksteki glomerüllerin jukstaglomerüler aparatına gelip yerleşir. Derste gösterilen şemada akciğerdeki basillerden böbreğe uzanan bir ok ve üzerinde iki ile yirmi yıl sonra ifadesi vardır; yani akciğer enfeksiyonu ile böbrekte hastalık arasında yıllar geçer. Kortekste yerleşen odak ilerledikçe papilla ve toplayıcı sisteme açılır, basil idrara geçer ve aşağıya yayılır.
+Basilin böbrekteki ilk yerleşim noktası da önemlidir.
+Mikobakteriyum tüberkülozis kan yoluyla renal korteksteki glomerüllerin jukstaglomerüler aparatına gelip yerleşir.
+Derste gösterilen şemada akciğerdeki basillerden böbreğe uzanan bir ok ve üzerinde iki ile 20 yıl sonra ifadesi vardır; yani akciğer enfeksiyonu ile böbrekte hastalık arasında yıllar geçer.
+Kortekste yerleşen odak ilerledikçe papilla ve toplayıcı sisteme açılır, basil idrara geçer ve aşağıya yayılır.
 
-Üriner tüberküloz yavaş seyirlidir ve tipik olarak primer akciğer enfeksiyonundan on beş ile yirmi yıl sonra ortaya çıkar. Olguların yaklaşık yarısı yirmi ile kırk yaş arasında görülür. Burası önemli: erkeklerde iki kat daha sık görülür; kadınlarda daha sık olduğunu söyleyen ifade çıkmış sorularda yanlış şık olarak kullanıldı. Olguların yüzde onunda taş hastalığı, %10 beşinde idrar yolu enfeksiyonu birlikteliği vardır. Yaygın bilateral tutulum olmadıkça renal fonksiyon normaldir, çünkü tek böbrek hasarlansa da karşı böbrek fonksiyonu korur. Bu yüzden normal böbrek fonksiyon testleri üriner tüberkülozu dışlamaz.
+Üriner tüberküloz yavaş seyirlidir ve tipik olarak primer akciğer enfeksiyonundan on beş ile 20 yıl sonra ortaya çıkar.
+Olguların yaklaşık yarısı yirmi ile 40 yaş arasında görülür.
+Burası önemli: erkeklerde 2 kat daha sık görülür; kadınlarda daha sık olduğunu söyleyen ifade çıkmış sorularda yanlış şık olarak kullanıldı.
+Olguların yüzde onunda taş hastalığı, %15'inde idrar yolu enfeksiyonu birlikteliği vardır.
+Yaygın bilateral tutulum olmadıkça renal fonksiyon normaldir, çünkü tek böbrek hasarlansa da karşı böbrek fonksiyonu korur.
+Bu yüzden normal böbrek fonksiyon testleri üriner tüberkülozu dışlamaz.
 
 @@ Üriner tüberkülozun kliniği ve steril piyüri
 Genitoüriner tüberkülozun klinik prezentasyonu genellikle sinsi ve nonspesifiktir; hastalık çoğu zaman sıradan bir idrar yolu enfeksiyonu gibi görünür. Dizüri, pollaküri ve urgency gibi irritatif semptomlar sistitte öğrendiğimiz tablonun aynısıdır. Suprapubik ağrı mesane tutulumunu, hematüri mukoza ve parankim hasarını yansıtır. Yan ya da flank ağrısı böbrek tutulumu ve üreter darlığına bağlı tıkanıklıkla ilişkilidir. Tekrarlayan üriner enfeksiyon benzeri semptomlar özellikle uyarıcıdır: standart antibiyotiklerle geçmeyen ya da sürekli tekrarlayan sistit yakınmaları tüberkülozu düşündürmelidir.
 
-Üriner tüberkülozda ağrılı ve sık idrara çıkma, yan ağrısı, hematüri, bazen ateş ve halsizlik görülür. Hematüri olguların yüzde onunda makroskopik, yüzde ellisinde mikroskopiktir. Burası önemli: böbrek tüberkülozunun laboratuvar imzası steril piyüri, hematüri ve proteinüridir. Steril piyüri, idrarda lökosit artışı olduğu halde rutin idrar kültüründe bakteri üremamesidir, çünkü tüberküloz basili standart besiyerlerinde üremez. Olguların yüzde yirmisinde ise hiç klinik semptom olmayabilir ve tanı rastlantısal bir laboratuvar bulgusuyla konabilir.
+Üriner tüberkülozda ağrılı ve sık idrara çıkma, yan ağrısı, hematüri, bazen ateş ve halsizlik görülür.
+Hematüri olguların yüzde onunda makroskopik, yüzde ellisinde mikroskopiktir.
+Burası önemli: böbrek tüberkülozunun laboratuvar imzası steril piyüri, hematüri ve proteinüridir.
+Steril piyüri, idrarda lökosit artışı olduğu halde rutin idrar kültüründe bakteri üremamesidir, çünkü tüberküloz basili standart besiyerlerinde üremez.
+Olguların yüzde yirmisinde ise hiç klinik semptom olmayabilir ve tanı rastlantısal bir laboratuvar bulgusuyla konabilir.
 
 @@ Üriner tüberkülozda patolojik değişiklikler ve tutulum oranları
 Böbrek tüberkülozu kortekste başlayan odaktan papillaya ve toplayıcı sisteme doğru ilerleyen yıkıcı bir süreçtir. Önce renal parankimal tutulum olur; kortekste yerleşen granülomatöz odaklar parankime yayılır. Odaklar papillaya ulaşınca papiller nekroz gelişir. Nekrotik materyal toplayıcı sisteme boşalınca parankimde kaviteler oluşur, yani kavitasyon gelişir ve basil bu yolla idrara geçer. İyileşme girişimi fibrozis ve skar bırakır, kaliks boyunlarını daraltabilir. Eski kazeöz odaklarda kalsiyum birikir ve kalsifikasyon gelişir. Görüldüğü gibi yıkım ve onarım süreçleri birlikte yürür.
 
-Böbrekten idrara geçen basiller aşağıdaki yapılarda kronik inflamasyon ve fibrozis oluşturur. Üreterde kronik granülomatöz inflamasyon duvarı kalınlaştırır, fibrozis lümeni daraltarak striktür yapar, darlık idrar akımını engeller ve obstrüksiyonla birlikte hidronefroz gelişir. Mesanede kronik inflamasyon ve duvar kalınlaşması olur, fibrozis mesanenin genişleyebilirliğini azaltır ve kapasite düşer. İleri dönemde küçük, sert, az idrar alabilen kontrakte mesane gelişir; sürekli pollakürinin nedeni budur.
+Böbrekten idrara geçen basiller aşağıdaki yapılarda kronik inflamasyon ve fibrozis oluşturur.
+Üreterde kronik granülomatöz inflamasyon duvarı kalınlaştırır, fibrozis lümeni daraltarak striktür yapar, darlık idrar akımını engeller ve obstrüksiyonla birlikte hidronefroz gelişir.
+Mesanede kronik inflamasyon ve duvar kalınlaşması olur, fibrozis mesanenin genişleyebilirliğini azaltır ve kapasite düşer.
+İleri dönemde küçük, sert, az idrar alabilen kontrakte mesane gelişir; sürekli pollakürinin nedeni budur.
 
-Üriner sistemde tutulum sıklığı yukarıdan aşağıya azalır. Burası önemli: üriner sistemde en sık böbrek tutulur, yaklaşık %80. Üreter %30 oranında tutulur ve üreterlerde striktürlerin, yani darlıkların gelişmesine yol açar. Mesane %20 oranında tutulur ve mesanede enflamasyona ve kontraktüre neden olur. Genital sistem tutulumu yüzde ondur. Son dönemde camcı macunu böbrek, yani kazeöz materyalle dolu, kalsifiye ve fonksiyonsuz böbrek oluşur. Gelişen kazeokavernöz patoloji nedeniyle böbrek fonksiyonunu tamamen yitirir; buna otonefrektomi denir, böbrek sanki kendiliğinden çıkarılmış gibi işlevsizleşir.
+Üriner sistemde tutulum sıklığı yukarıdan aşağıya azalır.
+Burası önemli: üriner sistemde en sık böbrek tutulur, yaklaşık %80. Üreter %30 oranında tutulur ve üreterlerde striktürlerin, yani darlıkların gelişmesine yol açar.
+Mesane %20 oranında tutulur ve mesanede enflamasyona ve kontraktüre neden olur.
+Genital sistem tutulumu yüzde ondur.
+Son dönemde camcı macunu böbrek, yani kazeöz materyalle dolu, kalsifiye ve fonksiyonsuz böbrek oluşur.
+Gelişen kazeokavernöz patoloji nedeniyle böbrek fonksiyonunu tamamen yitirir; buna otonefrektomi denir, böbrek sanki kendiliğinden çıkarılmış gibi işlevsizleşir.
 
-Genital tutulum fizik muayenede karakteristik bulgular verir. Vas deferens tutulmuşsa muayenede nodüler ya da tespih tanesi gibidir; kanal boyunca ardışık granülomatöz nodüller ele gelir. Prostat ve epididim sert ve nodülerdir. Skrotumda akıntılı fistül görülebilir; kazeöz odak cilde açılır. Üretra tutulumu nadirdir ve işeme sırasında mesane ve üretranın kontrastlı görüntülendiği voiding sistoüretrografi ile gösterilebilir. Penis tüberkülozu yüzeyel ülser şeklindedir.
+Genital tutulum fizik muayenede karakteristik bulgular verir.
+Vas deferens tutulmuşsa muayenede nodüler ya da tespih tanesi gibidir; kanal boyunca ardışık granülomatöz nodüller ele gelir.
+Prostat ve epididim sert ve nodülerdir.
+Skrotumda akıntılı fistül görülebilir; kazeöz odak cilde açılır.
+Üretra tutulumu nadirdir ve işeme sırasında mesane ve üretranın kontrastlı görüntülendiği voiding sistoüretrografi ile gösterilebilir.
+Penis tüberkülozu yüzeyel ülser şeklindedir.
 
 @@ Üriner tüberkülozda laboratuvar tanısı
-Laboratuvar tanısı idrarın rutin incelemesiyle başlar. Olguların yüzde doksanında idrarda eritrosit, lökosit ve asit pe ha görülür. Rutin idrar kültüründe olguların yüzde yirmisinde Eşerişya koli süperenfeksiyonu saptanır; bu yüzden kültürde Eşerişya koli üremesi tüberkülozu dışlamaz ve tedaviye rağmen süren piyüri şüphe uyandırmalıdır. Tek bir spesifik kültürün pozitif olma oranı %70 üçtür. Basil idrara aralıklı geçtiği için üç gün boyunca sabah ilk idrarda yapılan spesifik kültürle tanının başarı şansı yüzde doksana çıkar.
+Laboratuvar tanısı idrarın rutin incelemesiyle başlar. Olguların yüzde doksanında idrarda eritrosit, lökosit ve asit pe ha görülür. Rutin idrar kültüründe olguların yüzde yirmisinde Eşerişya koli süperenfeksiyonu saptanır; bu yüzden kültürde Eşerişya koli üremesi tüberkülozu dışlamaz ve tedaviye rağmen süren piyüri şüphe uyandırmalıdır. Tek bir spesifik kültürün pozitif olma oranı %73'tür. Basil idrara aralıklı geçtiği için 3 gün boyunca sabah ilk idrarda yapılan spesifik kültürle tanının başarı şansı %90'a çıkar.
 
-Kültür haftalar sürdüğü için hızlı yöntemler tanıyı destekler. Üç gün sabahki ilk idrar örneği Zil Nilsen, ısıtma gerektirmeyen Kinyun ya da floresan mikroskopta değerlendirilen fluorokrom boyasıyla boyanarak aside dirençli basil araştırılabilir. Polimeraz zincir reaksiyonu tanıda oldukça güvenilir ve hızlı bir yöntemdir, güvenilirliği %90 altı olarak verilir. Pe pe de deri testi genitoüriner tüberkülozlu hastaların yaklaşık %10 beşinde nonreaktif olabilir; yani negatif deri testi tanıyı dışlamaz. Hastaların %20 ile ellisinde akciğer grafisinde pulmoner hastalık görülmez; normal grafi de tanıyı dışlamaz.
+Kültür haftalar sürdüğü için hızlı yöntemler tanıyı destekler.
+3 gün sabahki ilk idrar örneği Zil Nilsen, ısıtma gerektirmeyen Kinyun ya da floresan mikroskopta değerlendirilen fluorokrom boyasıyla boyanarak aside dirençli basil araştırılabilir.
+Polimeraz zincir reaksiyonu tanıda oldukça güvenilir ve hızlı bir yöntemdir, güvenilirliği %96 olarak verilir.
+Pe pe de deri testi genitoüriner tüberkülozlu hastaların yaklaşık %15'inde nonreaktif olabilir; yani negatif deri testi tanıyı dışlamaz.
+Hastaların %20 ile ellisinde akciğer grafisinde pulmoner hastalık görülmez; normal grafi de tanıyı dışlamaz.
 
 Burası önemli, çıkmış sorularda doğru ifade olarak yer aldı: üriner tüberküloz şüphesinde sabah ardışık üç idrar örneğinde aside dirençli basil boyaması ve tüberküloz basili deoksiribonükleik asidi için nükleik asit amplifikasyon testi yapılır.
 
 @@ Üriner tüberkülozda radyoloji ve sistoskopi
-Direkt grafide tüberkülomlardaki zayıf kalsifikasyonlar görülebilir; bu, patolojide anlattığımız kalsifikasyonun radyolojik karşılığıdır. Derste sol böbrek tüberkülozlu bir hastanın direkt grafisinde böbrek alanında kalsifikasyonlar, intravenöz piyelografisinde ise distal sol üreterde darlık gösterilir. Kontrastlı grafiler, yani intravenöz piyelografi, %90 üç oranında anormal bulgu verir. Toplayıcı sistemlerde darlıklar ve dilatasyonlar, parankimde bozulmalar saptanır. Kalikslerde güve yeniği manzarası görülür; papiller nekroz ve kavitasyon kaliks kenarlarını düzensiz, yenmiş gibi gösterir.
+Direkt grafide tüberkülomlardaki zayıf kalsifikasyonlar görülebilir; bu, patolojide anlattığımız kalsifikasyonun radyolojik karşılığıdır. Derste sol böbrek tüberkülozlu bir hastanın direkt grafisinde böbrek alanında kalsifikasyonlar, intravenöz piyelografisinde ise distal sol üreterde darlık gösterilir. Kontrastlı grafiler, yani intravenöz piyelografi, %93 oranında anormal bulgu verir. Toplayıcı sistemlerde darlıklar ve dilatasyonlar, parankimde bozulmalar saptanır. Kalikslerde güve yeniği manzarası görülür; papiller nekroz ve kavitasyon kaliks kenarlarını düzensiz, yenmiş gibi gösterir.
 
-Geç dönemde böbrek tamamen fonksiyonunu yitirir, yani otonefrektomi gelişir; grafilerde böbrek alanında kalsifiye, işlevsiz bir böbrek gölgesi izlenir. Üreterdeki değişiklikler tek ya da çok sayıda darlık, dilatasyon ve tespihleşme ya da tirbuşon görüntüsüdür; darlık ve genişleme bölgelerinin art arda gelmesi tespih tanesi, kısalıp kıvrılması ise tirbuşon görünümü verir. Mesane küçük ve kontrakte olabilir; derste sol böbrek tüberkülozlu hastanın sistogramında fibrozise bağlı olarak mesanenin sol yarısının büzüştüğü, ayrıca bir kaliksin tıkandığı ve ağır kaliks parankim yıkımı gösterilir.
+Geç dönemde böbrek tamamen fonksiyonunu yitirir, yani otonefrektomi gelişir; grafilerde böbrek alanında kalsifiye, işlevsiz bir böbrek gölgesi izlenir.
+Üreterdeki değişiklikler tek ya da çok sayıda darlık, dilatasyon ve tespihleşme ya da tirbuşon görüntüsüdür; darlık ve genişleme bölgelerinin art arda gelmesi tespih tanesi, kısalıp kıvrılması ise tirbuşon görünümü verir.
+Mesane küçük ve kontrakte olabilir; derste sol böbrek tüberkülozlu hastanın sistogramında fibrozise bağlı olarak mesanenin sol yarısının büzüştüğü, ayrıca bir kaliksin tıkandığı ve ağır kaliks parankim yıkımı gösterilir.
 
-Kontrastlı bilgisayarlı tomografi kesitlerinde kalikslerde genişleme, parankimde incelme, düzensiz hipodens alanlar ve kalsifik odaklar izlenir; bu bulgular kavitasyon ve hidronefrozla uyumludur. Makroskopik kesitte pelvis ve üreteri içine alan böbrek tüberkülozunda parankimde çok sayıda beyaz sarı kazeöz odak, kaviteler ve kalınlaşmış pelvis ve üreter duvarı görülür. İntravenöz piyelografide toplayıcı sistemin distorsiyonu ve solda üreterde belirgin dilatasyon izlenir. Bir çocukta böbrekte miliyer tüberkülozda ise böbrek yüzeyinde darı tanesi büyüklüğünde çok sayıda küçük odak görülür; bu, hematojen yaygın yayılımın makroskopik karşılığıdır.
+Kontrastlı bilgisayarlı tomografi kesitlerinde kalikslerde genişleme, parankimde incelme, düzensiz hipodens alanlar ve kalsifik odaklar izlenir; bu bulgular kavitasyon ve hidronefrozla uyumludur.
+Makroskopik kesitte pelvis ve üreteri içine alan böbrek tüberkülozunda parankimde çok sayıda beyaz sarı kazeöz odak, kaviteler ve kalınlaşmış pelvis ve üreter duvarı görülür.
+İntravenöz piyelografide toplayıcı sistemin distorsiyonu ve solda üreterde belirgin dilatasyon izlenir.
+Bir çocukta böbrekte miliyer tüberkülozda ise böbrek yüzeyinde darı tanesi büyüklüğünde çok sayıda küçük odak görülür; bu, hematojen yaygın yayılımın makroskopik karşılığıdır.
 
-Mesane tüberkülozu sistoskopide karakteristik görünümler verir. Üreter orifisi ödemle retrakte olur ve golf çukuru orifisi denen görünüm oluşur; çevredeki duvarda rijidite vardır. Fibrozis orifisi yukarı çekip açık bir deliğe çevirir ve bu durum reflüye zemin hazırlar. Üreteral orifise doğru tüberküller, yani basil yüklü idrarın ilk temas ettiği orifis çevresinde küçük sarımsı granülomlar görülür. Mesanede büyük ve küçük tüberküloz ülserleri bulunur. Evrelere göre ayrıca üreter orifisinde akut enflamasyon, tüberküloz büllöz granülomatozis, iyileşmiş tüberkülozda skar ve ülserli akut tüberküloz sistiti görülebilir.
+Mesane tüberkülozu sistoskopide karakteristik görünümler verir.
+Üreter orifisi ödemle retrakte olur ve golf çukuru orifisi denen görünüm oluşur; çevredeki duvarda rijidite vardır.
+Fibrozis orifisi yukarı çekip açık bir deliğe çevirir ve bu durum reflüye zemin hazırlar.
+Üreteral orifise doğru tüberküller, yani basil yüklü idrarın ilk temas ettiği orifis çevresinde küçük sarımsı granülomlar görülür.
+Mesanede büyük ve küçük tüberküloz ülserleri bulunur.
+Evrelere göre ayrıca üreter orifisinde akut enflamasyon, tüberküloz büllöz granülomatozis, iyileşmiş tüberkülozda skar ve ülserli akut tüberküloz sistiti görülebilir.
 
 @@ Ayırıcı tanı, erkek genital tüberkülozu ve tedavi
 Üriner tüberkülozun bulguları başka hastalıklarda da görülebildiğinden ayırıcı tanı geniştir. Kronik nonspesifik sistit ve piyelonefrit benzer irritatif semptomlar ve piyüri verir; rutin kültürde etken üremesi ayırt ettirir. Medüller sünger böbrekte medüller kalsifikasyon ve toplayıcı kanal genişlemesi radyolojide tüberküloza benzeyebilir. İnvaziv transizyonel hücreli karsinom hematüri ve mesane duvar değişikliğiyle karışabilir. Renal amiloidoz proteinüri ve böbrek tutulumuyla ayırıcı tanıya girer. Şistozoma hematobiyum infestasyonu mesanede kronik inflamasyon, hematüri ve kalsifikasyon yapan parazitik bir enfeksiyondur. Koksidiyoidomikoz enfeksiyonları ise granülomatöz inflamasyon yapan mantar enfeksiyonlarıdır.
 
-Erkek genital sistem tüberkülozu çoğunlukla böbrek tüberkülozunun devamıdır ve olguların yüzde sekseni renal tüberkülozla birliktedir. Renal odaktan prostat, veziküla seminalis, epididim, testis ve diğer organlara yayılır. En sık klinik tablo orşit ve epididimittir. Skrotal kitle, apse ve sinüs gelişimi önemlidir; kronik drene olan skrotal sinüs genellikle vardır. Oligospermi sıktır ve tedaviye çok zor cevap verir. Bilgisayarlı tomografide prostatta kalsifikasyon ve çevrede diffüz granülasyon dokusu görülür. Testiküler tüberkülozlu bir hastanın pelvis tomografisinde sol testiste büyük, düzensiz, mikst solid ve kistik bir kitle izlenir; bu tablo tümörle karışabilir.
+Erkek genital sistem tüberkülozu çoğunlukla böbrek tüberkülozunun devamıdır ve olguların %80'i renal tüberkülozla birliktedir.
+Renal odaktan prostat, veziküla seminalis, epididim, testis ve diğer organlara yayılır.
+En sık klinik tablo orşit ve epididimittir.
+Skrotal kitle, apse ve sinüs gelişimi önemlidir; kronik drene olan skrotal sinüs genellikle vardır.
+Oligospermi sıktır ve tedaviye çok zor cevap verir.
+Bilgisayarlı tomografide prostatta kalsifikasyon ve çevrede diffüz granülasyon dokusu görülür.
+Testiküler tüberkülozlu bir hastanın pelvis tomografisinde sol testiste büyük, düzensiz, mikst solid ve kistik bir kitle izlenir; bu tablo tümörle karışabilir.
 
-Üriner tüberküloz tedavisinde standart tedavi protokolü uygulanır ve standart tedavi süresi altı aydır. Böbrek tüberkülozunda özel sorun iyileşme sürecidir: basil öldükçe yerine fibrozis geçer, skatrizasyon ve obstrüksiyon gelişebilir. Obstrüksiyon varlığında steroid başlanır ve cerrahi yaklaşım gerekir. Kadın genital sistem tüberkülozunda obstrüksiyon ve fibroziste steroid önerilir; apse, fistül ve tuba rekonstrüksiyonunda ise cerrahi uygulanır.
+Üriner tüberküloz tedavisinde standart tedavi protokolü uygulanır ve standart tedavi süresi altı aydır.
+Böbrek tüberkülozunda özel sorun iyileşme sürecidir: basil öldükçe yerine fibrozis geçer, skatrizasyon ve obstrüksiyon gelişebilir.
+Obstrüksiyon varlığında steroid başlanır ve cerrahi yaklaşım gerekir.
+Kadın genital sistem tüberkülozunda obstrüksiyon ve fibroziste steroid önerilir; apse, fistül ve tuba rekonstrüksiyonunda ise cerrahi uygulanır.
 
 @@ Prostatit: tanım, histopatoloji ve etiyoloji
-Prostatit, prostat bezinin enfeksiyonu ve enflamasyonudur ve alt üriner sistem semptomlarıyla kendini gösterir. Elli yaş altı erkeklerde en sık, elli yaş üstünde ise 3. sıklıkta görülen ürolojik enfeksiyondur. Prevalansı %1 virgül sekiz ile sekiz virgül iki arasındadır ve tekrarlama riski %20 ile elli gibi yüksek bir orandadır. Dikkat edin, hastaların yüzde onundan azında bakteriyel bir enfeksiyon saptanabilir; yani prostatitlerin büyük çoğunluğu bakteriyel değildir. Histopatolojide prostatik doku enflamatuvar hücrelerle patolojik olarak infiltre olmuştur ve bundan infiltratif lenfositler ve makrofajlar sorumludur.
+Prostatit, prostat bezinin enfeksiyonu ve enflamasyonudur ve alt üriner sistem semptomlarıyla kendini gösterir. 50 yaş altı erkeklerde en sık, 50 yaş üstünde ise 3. sıklıkta görülen ürolojik enfeksiyondur. Prevalansı %1,8 ile sekiz virgül iki arasındadır ve tekrarlama riski %20 ile elli gibi yüksek bir orandadır. Dikkat edin, hastaların yüzde onundan azında bakteriyel bir enfeksiyon saptanabilir; yani prostatitlerin büyük çoğunluğu bakteriyel değildir. Histopatolojide prostatik doku enflamatuvar hücrelerle patolojik olarak infiltre olmuştur ve bundan infiltratif lenfositler ve makrofajlar sorumludur.
 
-Bakteriyel prostatit genellikle üretral enfeksiyonun asendan yolla intraprostatik reflüsü sonucu gelişir; enfekte idrar prostat kanallarına geri kaçar. Girişimsel risk faktörleri transrektal prostat biyopsisi, transüretral girişimler, ürodinami ve üretral kateterizasyondur. Zemin hastalıkları ise benign prostat hiperplazisi, üretra darlığı ve cinsel yolla bulaşan hastalıklardır.
+Bakteriyel prostatit genellikle üretral enfeksiyonun asendan yolla intraprostatik reflüsü sonucu gelişir; enfekte idrar prostat kanallarına geri kaçar.
+Girişimsel risk faktörleri transrektal prostat biyopsisi, transüretral girişimler, ürodinami ve üretral kateterizasyondur.
+Zemin hastalıkları ise benign prostat hiperplazisi, üretra darlığı ve cinsel yolla bulaşan hastalıklardır.
 
-Burası önemli, çıkmış sorularda soruldu: prostatitin en sık etkeni Eşerişya kolidir. Diğer etkenler Psödomonas aeruginoza, Klebsiella, Enterokok, Enterobakter ve Proteustur. Cinsel aktif çağda ise Neisseria gonorrhoeae ve Chlamydia trachomatis düşünülür; bu etkenler üretritle başlayıp prostata ulaşabilir. Hastaların yaklaşık yüzde onunda idrar kültüründe bakteri saptanmasına rağmen hastaların yarısı antibiyotikle tedavi edilir; bu, prostatitte antibiyotiklerin gereğinden fazla kullanıldığını gösterir.
+Burası önemli, çıkmış sorularda soruldu: prostatitin en sık etkeni Eşerişya kolidir.
+Diğer etkenler Psödomonas aeruginoza, Klebsiella, Enterokok, Enterobakter ve Proteustur.
+Cinsel aktif çağda ise Neisseria gonorrhoeae ve Chlamydia trachomatis düşünülür; bu etkenler üretritle başlayıp prostata ulaşabilir.
+Hastaların yaklaşık yüzde onunda idrar kültüründe bakteri saptanmasına rağmen hastaların yarısı antibiyotikle tedavi edilir; bu, prostatitte antibiyotiklerin gereğinden fazla kullanıldığını gösterir.
 
-Non bakteriyel prostatitin etiyolojisinde, prostatın periferik zonundaki duktusların yapısal bozukluğuna bağlı olarak drenajın sağlıklı olmaması sorumlu tutulur; salgı kanallarda birikir ve inflamasyonu tetikler. Ayrıca benign prostat hiperplazisi ve üretra darlığı gibi işeme disfonksiyonu yapan durumlarda, idrar steril olsa bile prostatik kanallara idrar reflüsü olur ve prostat bezinde irritasyon ve enflamasyona yol açar. Böylece aynı reflü mekanizması, idrar enfekteyse bakteriyel, steril ise non bakteriyel prostatite neden olur.
+Non bakteriyel prostatitin etiyolojisinde, prostatın periferik zonundaki duktusların yapısal bozukluğuna bağlı olarak drenajın sağlıklı olmaması sorumlu tutulur; salgı kanallarda birikir ve inflamasyonu tetikler.
+Ayrıca benign prostat hiperplazisi ve üretra darlığı gibi işeme disfonksiyonu yapan durumlarda, idrar steril olsa bile prostatik kanallara idrar reflüsü olur ve prostat bezinde irritasyon ve enflamasyona yol açar.
+Böylece aynı reflü mekanizması, idrar enfekteyse bakteriyel, steril ise non bakteriyel prostatite neden olur.
 
 @@ Prostatit sınıflaması ve dört kap testi
 Prostatit, Amerika Birleşik Devletleri Ulusal Sağlık Enstitülerinin sınıflamasına göre dört kategoride incelenir. Kategori bir akut bakteriyel prostatit, kategori iki kronik bakteriyel prostatit, kategori üç kronik non bakteriyel prostatittir. Kategori üç kendi içinde ikiye ayrılır: üç A enflamatuvar kronik non bakteriyel prostatittir ve lökosit pozitiftir; üç B ise non enflamatuvar kronik non bakteriyel prostatittir ve lökosit negatiftir. Kategori dört asemptomatik enflamatuvar prostatittir; semptom yoktur ve enflamasyon yalnızca histolojik olarak, örneğin başka nedenle alınan dokuda saptanır. Burası önemli, üç A ile üç B arasındaki fark lökosit varlığıdır.
 
-En yaygın kategori kategori üçtür. Genitoüriner ağrı ile, yani son altı ayda en az üç ay süren kronik pelvik ağrı ile tanımlanır. Değerlendirmede Mirs ve Steyminin bin dokuz yüz altmış sekizde tanımladığı dört kap testi kullanılır. 1. kapa ilk on mililitre idrar alınır ve üretral hastalığı gösterir; ardından yüz ile yüz elli mililitre idrar dışarı atılır. 2. kapa sonraki on mililitre alınır ve mesane patolojilerini gösterir. 3. kapa prostat masajı sonrası prostatik sıvı, 4. kapa ise prostat masajı sonrası on mililitre idrar alınır. Masaj sonrası örneklerde lökosit ya da bakterinin artması kaynağın prostat olduğunu gösterir. Daha pratik, basitleştirilmiş bir iki kap testi de vardır.
+En yaygın kategori kategori üçtür.
+Genitoüriner ağrı ile, yani son 6 ayda en az 3 ay süren kronik pelvik ağrı ile tanımlanır.
+Değerlendirmede Mirs ve Steyminin 1968'de tanımladığı dört kap testi kullanılır.
+1. kapa ilk 10 mililitre idrar alınır ve üretral hastalığı gösterir; ardından yüz ile yüz 50 mililitre idrar dışarı atılır.
+2. kapa sonraki 10 mililitre alınır ve mesane patolojilerini gösterir.
+3. kapa prostat masajı sonrası prostatik sıvı, 4. kapa ise prostat masajı sonrası 10 mililitre idrar alınır.
+Masaj sonrası örneklerde lökosit ya da bakterinin artması kaynağın prostat olduğunu gösterir.
+Daha pratik, basitleştirilmiş bir iki kap testi de vardır.
 
 @@ Prostatitte klinik ve tanı
 Akut bakteriyel prostatit ani başlayan alt üriner sistem semptomlarıyla gelir. Suprapubik, perineal ya da rektal ağrı, menide kan bulunması yani hematospermi ve ağrılı ejakülasyon görülür. Ateş, üşüme ve titreme gibi sistemik bulgular vardır. Dijital rektal muayene çok dikkatli yapılmalıdır, çünkü inflame prostata kuvvetli bası bakterilerin kana geçmesine ve sepsise yol açabilir.
 
-Kronik bakteriyel prostatitte semptomlar son altı ayda en az üç ay devam eder. Tablo alt üriner sistem semptomları ile ağrıdan oluşur. Ağrı en sık perinededir; ayrıca testiküler, penil ya da suprapubik olabilir. Erektil disfonksiyon ve libido azalması görülür, anksiyete ve stres eşlik eder ve kronik ağrıyla karşılıklı olarak birbirini besler. Kategori dört ise patolojik tanıdır.
+Kronik bakteriyel prostatitte semptomlar son 6 ayda en az 3 ay devam eder.
+Tablo alt üriner sistem semptomları ile ağrıdan oluşur.
+Ağrı en sık perinededir; ayrıca testiküler, penil ya da suprapubik olabilir.
+Erektil disfonksiyon ve libido azalması görülür, anksiyete ve stres eşlik eder ve kronik ağrıyla karşılıklı olarak birbirini besler.
+Kategori dört ise patolojik tanıdır.
 
-Akut bakteriyel prostatitte tanı anamnez ve fizik muayeneyle konur. Tam idrar tetkiki ve idrar kültürü yapılır; yüksek ateş varsa kan kültürü alınır; ce reaktif protein ve sedimantasyon bakılır. Üretrit sonrası gelişen tablolarda üretral akıntı incelenir. Burası önemli: akut bakteriyel prostatitte dört kap testi kullanılmaz, çünkü prostat masajı sepsis riski taşır. Prostat spesifik antijen de bakılmaz, çünkü enflamasyon onu yükseltir; ölçüm en az iki ay sonra yapılır. Antibiyotik tedavisi sonrası ateş düşmüyorsa prostatik apse düşünülmelidir.
+Akut bakteriyel prostatitte tanı anamnez ve fizik muayeneyle konur.
+Tam idrar tetkiki ve idrar kültürü yapılır; yüksek ateş varsa kan kültürü alınır; ce reaktif protein ve sedimantasyon bakılır.
+Üretrit sonrası gelişen tablolarda üretral akıntı incelenir.
+Burası önemli: akut bakteriyel prostatitte dört kap testi kullanılmaz, çünkü prostat masajı sepsis riski taşır.
+Prostat spesifik antijen de bakılmaz, çünkü enflamasyon onu yükseltir; ölçüm en az 2 ay sonra yapılır.
+Antibiyotik tedavisi sonrası ateş düşmüyorsa prostatik apse düşünülmelidir.
 
-Kronik bakteriyel prostatit ve kronik pelvik ağrı sendromunda anamnez ve fizik muayenenin yanında idrar kültürü ve prostatik sıvı kültürü yapılır. Altın standart bir tanı yöntemi yoktur; esas olan diğer patolojilerin ekartasyonudur. Bu amaçla dijital rektal muayene, prostat spesifik antijen, idrar akım hızını ölçen üroflovmetri ve sistoskopi kullanılır. Semptom yükü ve klinik fenotip uluslararası prostat semptom skoru ve Yupoint sınıflamasıyla değerlendirilir. Dikkat edin, akut formda yasaklanan prostat sıvısı incelemesi ve prostat spesifik antijen, kronik formda tanı sürecinin parçasıdır.
+Kronik bakteriyel prostatit ve kronik pelvik ağrı sendromunda anamnez ve fizik muayenenin yanında idrar kültürü ve prostatik sıvı kültürü yapılır.
+Altın standart bir tanı yöntemi yoktur; esas olan diğer patolojilerin ekartasyonudur.
+Bu amaçla dijital rektal muayene, prostat spesifik antijen, idrar akım hızını ölçen üroflovmetri ve sistoskopi kullanılır.
+Semptom yükü ve klinik fenotip uluslararası prostat semptom skoru ve Yupoint sınıflamasıyla değerlendirilir.
+Dikkat edin, akut formda yasaklanan prostat sıvısı incelemesi ve prostat spesifik antijen, kronik formda tanı sürecinin parçasıdır.
 
 @@ Prostatit tedavisi
-Akut bakteriyel prostatitte yaklaşık %10 beş hastada hospitalizasyon gerekir. Yatış endikasyonları biyopsi ya da transüretral girişim sonrası gelişen tablo, sepsis şüphesi ve ayaktan tedavinin başarısızlığıdır. Tedavide 3. kuşak sefalosporinler ya da parenteral florokinolonlar kullanılır, tedaviye aminoglikozitler eklenebilir ve kültür sonucuna göre tedavi düzenlenir. Cinsel yolla bulaşan hastalık şüphesi varsa azitromisin ve doksisiklin verilir. Semptomlar geriledikten sonra iki ile dört hafta oral tedaviye devam edilir. Tedaviye yanıt yoksa nonsteroid antiinflamatuvar ilaçlar, alfa bloker ve suprapubik drenaj uygulanır; suprapubik drenaj, ödemli prostatın tıkadığı mesaneyi üretraya kateter geçirmeden karın ön duvarından boşaltır.
+Akut bakteriyel prostatitte yaklaşık %15 hastada hospitalizasyon gerekir. Yatış endikasyonları biyopsi ya da transüretral girişim sonrası gelişen tablo, sepsis şüphesi ve ayaktan tedavinin başarısızlığıdır. Tedavide 3. kuşak sefalosporinler ya da parenteral florokinolonlar kullanılır, tedaviye aminoglikozitler eklenebilir ve kültür sonucuna göre tedavi düzenlenir. Cinsel yolla bulaşan hastalık şüphesi varsa azitromisin ve doksisiklin verilir. Semptomlar geriledikten sonra iki ile 4 hafta oral tedaviye devam edilir. Tedaviye yanıt yoksa nonsteroid antiinflamatuvar ilaçlar, alfa bloker ve suprapubik drenaj uygulanır; suprapubik drenaj, ödemli prostatın tıkadığı mesaneyi üretraya kateter geçirmeden karın ön duvarından boşaltır.
 
-Kronik bakteriyel prostatit ve kronik pelvik ağrı sendromunda tedavi çok yönlüdür. Alfa blokerler mesane boynu ve prostat düz kasını gevşeterek semptomları azaltır. Antibiyotik olarak florokinolon, azitromisin, doksisiklin ve metronidazol kullanılır. Ağrı ve nöropatik bileşen için nonsteroid antiinflamatuvar ilaçlar, trisiklik antidepresanlar, gabapentin ve pregabalin verilir. Tek ajanla yanıt sınırlı olduğundan kombinasyon tedavileri önerilir.
+Kronik bakteriyel prostatit ve kronik pelvik ağrı sendromunda tedavi çok yönlüdür.
+Alfa blokerler mesane boynu ve prostat düz kasını gevşeterek semptomları azaltır.
+Antibiyotik olarak florokinolon, azitromisin, doksisiklin ve metronidazol kullanılır.
+Ağrı ve nöropatik bileşen için nonsteroid antiinflamatuvar ilaçlar, trisiklik antidepresanlar, gabapentin ve pregabalin verilir.
+Tek ajanla yanıt sınırlı olduğundan kombinasyon tedavileri önerilir.
 
 @@ Orşit
 Orşit testisin enflamasyonudur. İzole orşit nadirdir; tablo çoğunlukla epididimoorşit şeklindedir. Ani testis ağrısı ve şişlikle başlar. İzole orşit genellikle viral nedenlidir ve klasik örneği kabakulak orşitidir. Bakteriyel etkenler yaşa göre değişir: çocuklarda ve yaşlılarda en sık etken idrar yolu enfeksiyonudur, gençlerde ise Neisseria gonorrhoeae, Chlamydia trachomatis ve Treponema gibi cinsel yolla bulaşan etkenler öne çıkar. Bunların dışında mikobakteriyel enfeksiyonlar, mesane kanserinde kullanılan BCG tedavisi, granülomatöz orşit, fungal enfeksiyonlar ve Brusella orşiti de nedenler arasındadır.
 
-Burası önemli, bakteriyel orşitin özelliği çıkmış sorularda soruldu: bakteriyel orşitin etkeni Eşerişya koli ve diğer üropatojen bakterilerdir, yani idrar yolu enfeksiyonu kökenlidir. Çeldiricilere dikkat edin: parotitten sonra ortaya çıkma kabakulak, yani viral orşitin özelliğidir; Brusella bir neden olsa da en sık etken değildir.
+Burası önemli, bakteriyel orşitin özelliği çıkmış sorularda soruldu: bakteriyel orşitin etkeni Eşerişya koli ve diğer üropatojen bakterilerdir, yani idrar yolu enfeksiyonu kökenlidir.
+Çeldiricilere dikkat edin: parotitten sonra ortaya çıkma kabakulak, yani viral orşitin özelliğidir; Brusella bir neden olsa da en sık etken değildir.
 
-Klinikte ani başlayan testiküler ağrı ve şişlik, skrotum cildinde ısı artışı ve eritematöz görünüm vardır. Ani skrotal ağrının diğer nedenleri, özellikle cerrahi acil olanlar mutlaka dışlanmalıdır. Burası önemli, çıkmış sorularda soruldu: akut enfeksiyöz orşit tablosuyla gelen genç bir erkekte yapılması gereken en önemli ayırıcı tanı testis torsiyonudur.
+Klinikte ani başlayan testiküler ağrı ve şişlik, skrotum cildinde ısı artışı ve eritematöz görünüm vardır.
+Ani skrotal ağrının diğer nedenleri, özellikle cerrahi acil olanlar mutlaka dışlanmalıdır.
+Burası önemli, çıkmış sorularda soruldu: akut enfeksiyöz orşit tablosuyla gelen genç bir erkekte yapılması gereken en önemli ayırıcı tanı testis torsiyonudur.
 
-Tedavide yatak istirahati testis hareketini azaltarak ağrıyı hafifletir. Skrotal elevasyon, yani skrotumun yukarı kaldırılması, venöz ve lenfatik dönüşü kolaylaştırıp ödemi azaltır. Soğuk uygulama ödemi ve ağrıyı azaltır. Nonsteroid antiinflamatuvar ilaçlar antienflamatuvar ve analjezik etki sağlar. Bakteriyel etken düşünüldüğünde antibiyotik verilir. Burası önemli, bu soru çıkmış sınavlarda defalarca tekrarlandı: kabakulak orşitinde soğuk uygulama, skrotal elevasyon, analjezik ve yatak istirahatinin yeri vardır, ancak antiviral tedavinin yeri yoktur. Viral orşitte destek tedavisi esastır.
+Tedavide yatak istirahati testis hareketini azaltarak ağrıyı hafifletir.
+Skrotal elevasyon, yani skrotumun yukarı kaldırılması, venöz ve lenfatik dönüşü kolaylaştırıp ödemi azaltır.
+Soğuk uygulama ödemi ve ağrıyı azaltır.
+Nonsteroid antiinflamatuvar ilaçlar antienflamatuvar ve analjezik etki sağlar.
+Bakteriyel etken düşünüldüğünde antibiyotik verilir.
+Burası önemli, bu soru çıkmış sınavlarda defalarca tekrarlandı: kabakulak orşitinde soğuk uygulama, skrotal elevasyon, analjezik ve yatak istirahatinin yeri vardır, ancak antiviral tedavinin yeri yoktur.
+Viral orşitte destek tedavisi esastır.
 
 @@ Epididimit
 Epididimit, epididimin enflamasyonudur ve ani ağrı ve şişmeyle başlar. İdrar yolu enfeksiyonuna sekonder gelişebilir; cinsel yolla bulaşan hastalıklar, viral, fungal ve otoimmün nedenler de rol oynar. Antiaritmik bir ilaç olan amiodaron ile uyarılmış, enfeksiyon dışı bir epididimit de tanımlanmıştır. Enflamatuvar süreç epididim kuyruğunda başlar, tüm epididime ve testise yayılır; böylece epididimit ilerledikçe epididimoorşite dönüşür.
 
-Epididimit benign prostat hiperplazisi, üretra darlığı, idrar yolu enfeksiyonu ve tüberküloz zemininde gelişir; akım bozukluğu yapan durumlar enfekte idrarın vas deferense reflüsünü kolaylaştırır. Muayenede epididimler endüre, yani sertleşmiştir ve dizüri eşlik edebilir. Skrotum ödemli ve hiperemiktir, epididim ağrılı ve şiştir, ateş eşlik edebilir. Tanı için idrar kültürü ve üretral akıntı örneği alınır. Tüberküloz şüphesinde sabah ardışık üç idrar örneğinde aside dirençli basil boyaması ve tüberküloz basili deoksiribonükleik asidi için nükleik asit amplifikasyon testi taraması yapılır.
+Epididimit benign prostat hiperplazisi, üretra darlığı, idrar yolu enfeksiyonu ve tüberküloz zemininde gelişir; akım bozukluğu yapan durumlar enfekte idrarın vas deferense reflüsünü kolaylaştırır.
+Muayenede epididimler endüre, yani sertleşmiştir ve dizüri eşlik edebilir.
+Skrotum ödemli ve hiperemiktir, epididim ağrılı ve şiştir, ateş eşlik edebilir.
+Tanı için idrar kültürü ve üretral akıntı örneği alınır.
+Tüberküloz şüphesinde sabah ardışık üç idrar örneğinde aside dirençli basil boyaması ve tüberküloz basili deoksiribonükleik asidi için nükleik asit amplifikasyon testi taraması yapılır.
 
-Tedavide yatak istirahati, nonsteroid antiinflamatuvar ilaçlar ve etkene yönelik antibiyotik kullanılır. Kronik epididimitte tedavi başarısızlığında epididimektomi uygulanabilir, ancak bu cerrahiyle tedavi başarısı yalnızca yüzde ellidir. Bu nedenle cerrahi son seçenek olarak düşünülür.
+Tedavide yatak istirahati, nonsteroid antiinflamatuvar ilaçlar ve etkene yönelik antibiyotik kullanılır.
+Kronik epididimitte tedavi başarısızlığında epididimektomi uygulanabilir, ancak bu cerrahiyle tedavi başarısı yalnızca %50'dir.
+Bu nedenle cerrahi son seçenek olarak düşünülür.
 
 @@ Kist hidatik
 Kist hidatik, böbreği nadiren tutan parazitik bir enfeksiyondur. Etkeni Ekinokokus granülozustur ve bulaş oral yolladır. Larvalar kan ve lenf dolaşımı ile iç organlara yerleşir. Köpek ve kedi ana konakçı, insan ara konakçıdır; hastalık yalnızca ara konakçılarda gelişir. En sık karaciğerde yerleşir, izole böbrek tutulumu nadirdir.
 
-Burası önemli, çıkmış sorularda soruldu: Ekinokokus granülozus etrafı düzgün, yuvarlak, tek bir kist oluşturur. Aynı sorudaki yanlış ifadelere dikkat edin: en sık tutulan organ akciğer değil karaciğerdir, insan ana değil ara konakçıdır ve kesin tanı tek başına ultrasonografiyle konmaz.
+Burası önemli, çıkmış sorularda soruldu: Ekinokokus granülozus etrafı düzgün, yuvarlak, tek bir kist oluşturur.
+Aynı sorudaki yanlış ifadelere dikkat edin: en sık tutulan organ akciğer değil karaciğerdir, insan ana değil ara konakçıdır ve kesin tanı tek başına ultrasonografiyle konmaz.
 
-Renal kist büyüdükçe yan ağrısı ortaya çıkar. Kist toplayıcı sisteme açılırsa üreter ve mesane tutulumu gelişir; renal kolik, hematüri ve hidatüri görülür. Hidatüri, idrarla kız kist ve membran parçalarının atılmasıdır. Tanı anamnez, fizik muayene, klinik, radyoloji ve serolojik testlerle konur; serolojik testler indirekt hemaglütinasyon, Eliza ve indirekt floresan antikor testidir. Kist genellikle ultrasonografi ile rastlantısal olarak saptanır. Derste gösterilen tomografide sol böbrek lojunda yaklaşık on beş santimetrelik, ince duvarlı, içinde kıvrımlı iç zarlar seçilen büyük bir kistik lezyon izlenir.
+Renal kist büyüdükçe yan ağrısı ortaya çıkar.
+Kist toplayıcı sisteme açılırsa üreter ve mesane tutulumu gelişir; renal kolik, hematüri ve hidatüri görülür.
+Hidatüri, idrarla kız kist ve membran parçalarının atılmasıdır.
+Tanı anamnez, fizik muayene, klinik, radyoloji ve serolojik testlerle konur; serolojik testler indirekt hemaglütinasyon, Eliza ve indirekt floresan antikor testidir.
+Kist genellikle ultrasonografi ile rastlantısal olarak saptanır.
+Derste gösterilen tomografide sol böbrek lojunda yaklaşık on beş santimetrelik, ince duvarlı, içinde kıvrımlı iç zarlar seçilen büyük bir kistik lezyon izlenir.
 
-Temel tedavi cerrahidir: kistektomi, parsiyel ya da total nefrektomi uygulanır. Kist rüptüre olursa kist sıvısındaki parazit antijenleri anafilaktik reaksiyona yol açabilir; bu yüzden cerrahide kist bütünlüğünün korunması esastır. Medikal tedavide prazikuantel, mebendazol ve albendazol kullanılır. Medikal tedaviye ameliyattan yedi ile on gün önce başlanır ve üç ile altı ay devam edilir.
+Temel tedavi cerrahidir: kistektomi, parsiyel ya da total nefrektomi uygulanır.
+Kist rüptüre olursa kist sıvısındaki parazit antijenleri anafilaktik reaksiyona yol açabilir; bu yüzden cerrahide kist bütünlüğünün korunması esastır.
+Medikal tedavide prazikuantel, mebendazol ve albendazol kullanılır.
+Medikal tedaviye ameliyattan yedi ile 10 gün önce başlanır ve üç ile 6 ay devam edilir.
 
 @@ Özetle
-Özetle, sistit asendan yolla gelişir, en sık etkeni Eşerişya kolidir ve tek doz fosfomisinle tedavi edilebilir. Piyelonefritte ateş, yan ağrısı ve kostovertebral açı hassasiyeti böbrek tutulumunu gösterir. Üriner tüberküloz hematojen yolla gelen bir reaktivasyondur, steril piyüriyle kendini gösterir ve altı ay tedavi edilir. Prostatitte en sık kategori üçtür ve akut formda dört kap testi yapılmaz. Kabakulak orşitinde antiviral tedavinin yeri yoktur, kist hidatikte ise tedavi cerrahi ve antiparaziter ilaçlardır.
+Özetle, sistit asendan yolla gelişir, en sık etkeni Eşerişya kolidir ve tek doz fosfomisinle tedavi edilebilir. Piyelonefritte ateş, yan ağrısı ve kostovertebral açı hassasiyeti böbrek tutulumunu gösterir. Üriner tüberküloz hematojen yolla gelen bir reaktivasyondur, steril piyüriyle kendini gösterir ve 6 ay tedavi edilir. Prostatitte en sık kategori üçtür ve akut formda dört kap testi yapılmaz. Kabakulak orşitinde antiviral tedavinin yeri yoktur, kist hidatikte ise tedavi cerrahi ve antiparaziter ilaçlardır.

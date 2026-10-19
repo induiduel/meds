@@ -3,7 +3,10 @@
 @@ Üretritin tanımı ve genel özellikleri
 Üretrit, üretranın inflamasyonudur. Bu inflamasyon sıklıkla enfeksiyöz nedenlere, bazen de enfeksiyon dışı nedenlere bağlıdır ve daha çok erkeklerde görülür. Hasta dizüri, üretral kaşıntı, yanma, ağrı ya da üretral akıntıyla gelebilir; ama tablo tamamen asemptomatik de olabilir. Akıntı mükoid, mükopürülan ya da pürülan nitelikte olabilir. Etkenler sıklıkla cinsel yolla bulaştığı için üretriti bir cinsel yolla bulaşan enfeksiyon sendromu olarak düşünmeliyiz.
 
-En sık etkenler Neyserya gonorea, Chlamydia trachomatis ve Mikoplazma genitalyumdur. Üreaplazma üreolitikum, Üreaplazma parvum ve Mikoplazma hominis de sık saptanır. Birden fazla patojenle enfeksiyon sıktır; bu yüzden ampirik tedavi planlarken partnerin tedavisini de mutlaka düşünmeliyiz. Enfeksiyon dışı nedenler de var: kronik üretra irritasyonu, idrarda yoğun kristal bulunması, alkol kullanımı ve cinsel partnerin kullandığı spermisid gibi kimyasallar.
+En sık etkenler Neyserya gonorea, Chlamydia trachomatis ve Mikoplazma genitalyumdur.
+Üreaplazma üreolitikum, Üreaplazma parvum ve Mikoplazma hominis de sık saptanır.
+Birden fazla patojenle enfeksiyon sıktır; bu yüzden ampirik tedavi planlarken partnerin tedavisini de mutlaka düşünmeliyiz.
+Enfeksiyon dışı nedenler de var: kronik üretra irritasyonu, idrarda yoğun kristal bulunması, alkol kullanımı ve cinsel partnerin kullandığı spermisid gibi kimyasallar.
 
 @@ Normal üretra florası ve kültürün yorumu
 Distal üretrada deri ve perine florası bulunabilir. Bunlar laktobasiller, streptokoklar ve koagülaz negatif stafilokoklardır. Bu nedenle kültürde bir mikroorganizmanın üremesi tek başına etkeni göstermez. Sonucu her zaman klinik bulgular ve örneğin türüyle birlikte yorumlarız. Yani belirti yokluğu üretriti dışlamadığı gibi, kültürde üreyen her bakteri de etken değildir.
@@ -11,79 +14,142 @@ Distal üretrada deri ve perine florası bulunabilir. Bunlar laktobasiller, stre
 @@ Cinsel yolla bulaşan enfeksiyonların klinik tabloları
 Cinsel yolla bulaşan enfeksiyonlar tuttukları bölgeye göre farklı tablolar oluşturur ve slayttaki tablo bunları bölge bölge karşılaştırır. Üretra tutulursa üretrit gelişir; üretral akıntı, dizüri, üretral kaşıntı ya da irritasyon görülür. Vajina ve serviks tutulumunda vajinit ve servisit olur; anormal vajinal akıntı, kaşıntı ya da yanma vardır, servisit varlığında ilişki sonrası ya da ara kanama eklenir. Üst genital sistem tutulduğunda pelvik inflamatuvar hastalık gelişir; alt abdominal ya da pelvik ağrı, disparoni ve bazen ateş görülür. Epididimitte genellikle tek taraflı skrotal ağrı, şişlik ve hassasiyet vardır.
 
-Genital ve perianal bölgede vezikül, erozyon ya da ülser, siğil ve diğer lezyonlar görülebilir. İnguinal lenf düğümlerinde lenfadenopati olur; bazı enfeksiyonlarda bu ağrılı bir buboya dönüşür. Anorektal bölge tutulduğunda proktit gelişir; anorektal ağrı, akıntı, kanama ve tenesmus görülür. Orofaringeal tutulum ise sıklıkla belirtisizdir, bazen boğaz ağrısı ya da oral ülserle kendini gösterir. Burada iki noktaya dikkat edin. Cinsel yolla bulaşan enfeksiyonlar sıklıkla asemptomatiktir; belirti olmaması enfeksiyonu dışlamaz. 2.'si, vajinal akıntı tek başına cinsel yolla bulaşan enfeksiyon göstergesi değildir; bakteriyel vajinozis, kandidiyazis ve enfeksiyon dışı nedenler de değerlendirilmelidir.
+Genital ve perianal bölgede vezikül, erozyon ya da ülser, siğil ve diğer lezyonlar görülebilir.
+İnguinal lenf düğümlerinde lenfadenopati olur; bazı enfeksiyonlarda bu ağrılı bir buboya dönüşür.
+Anorektal bölge tutulduğunda proktit gelişir; anorektal ağrı, akıntı, kanama ve tenesmus görülür.
+Orofaringeal tutulum ise sıklıkla belirtisizdir, bazen boğaz ağrısı ya da oral ülserle kendini gösterir.
+Burada iki noktaya dikkat edin.
+Cinsel yolla bulaşan enfeksiyonlar sıklıkla asemptomatiktir; belirti olmaması enfeksiyonu dışlamaz.
+2.'si, vajinal akıntı tek başına cinsel yolla bulaşan enfeksiyon göstergesi değildir; bakteriyel vajinozis, kandidiyazis ve enfeksiyon dışı nedenler de değerlendirilmelidir.
 
 @@ Sendromik yaklaşım
 Sendromik yaklaşımda hastanın başvurduğu sendromdan yola çıkarak olası etkenleri düşünürüz. Ancak bu yaklaşım etkeni kesin olarak belirlemez; uygun testlerle desteklenmelidir. Bakteriyel vajinozis ve kandidiyazisin klasik cinsel yolla bulaşan enfeksiyon olmadığını da unutmayın. Burası önemli: ani başlayan şiddetli skrotal ağrıda testis torsiyonu acilen dışlanmalıdır.
 
-Tabloya geçelim. Vajinal akıntıda vajinal nedenler bakteriyel vajinozis, vulvovajinal kandidiyazis ve Trikomonas vajinalistir; servisit nedenleri ise Neyserya gonorea ve Klamidya trakomatistir. Üretral akıntı ve üretritte Neyserya gonorea, Chlamydia trachomatis ve Mikoplazma genitalyum, bazı olgularda da Trikomonas vajinalis etkendir. Genital ülserde herpes simpleks virüsü Tip 1 ve Tip 2 ile Treponema pallidum öndedir; epidemiyolojiye göre şankroid ve lenfogranüloma venereum da düşünülür.
+Tabloya geçelim.
+Vajinal akıntıda vajinal nedenler bakteriyel vajinozis, vulvovajinal kandidiyazis ve Trikomonas vajinalistir; servisit nedenleri ise Neyserya gonorea ve Klamidya trakomatistir.
+Üretral akıntı ve üretritte Neyserya gonorea, Chlamydia trachomatis ve Mikoplazma genitalyum, bazı olgularda da Trikomonas vajinalis etkendir.
+Genital ülserde herpes simpleks virüsü Tip 1 ve Tip 2 ile Treponema pallidum öndedir; epidemiyolojiye göre şankroid ve lenfogranüloma venereum da düşünülür.
 
-Alt abdominal ağrı ve pelvik inflamatuvar hastalıkta Neyserya gonorea, Chlamydia trachomatis, vajinal flora bakterileri ve anaeroblar, bazı olgularda da Mikoplazma genitalyum sorumludur. Skrotal ağrı ve şişlikle giden epididimitte Chlamydia trachomatis ve Neyserya gonorea, risk faktörlerine göre enterik bakteriler etkendir. İnguinal lenfadenopati ve buboda, Klamidya trakomatisin el bir ile el üç serovarlarının yaptığı lenfogranüloma venereum ile Hemofilus dükreyinin yaptığı şankroid akla gelir. Proktitte Neyserya gonorea, lenfogranüloma venereum dahil Chlamydia trachomatis, herpes simpleks virüsü ve Treponema pallidum vardır. Neonatal konjonktivitte ise başlıca etkenler Neyserya gonorea ve Klamidya trakomatistir.
+Alt abdominal ağrı ve pelvik inflamatuvar hastalıkta Neyserya gonorea, Chlamydia trachomatis, vajinal flora bakterileri ve anaeroblar, bazı olgularda da Mikoplazma genitalyum sorumludur.
+Skrotal ağrı ve şişlikle giden epididimitte Chlamydia trachomatis ve Neyserya gonorea, risk faktörlerine göre enterik bakteriler etkendir.
+İnguinal lenfadenopati ve buboda, Klamidya trakomatisin el bir ile el üç serovarlarının yaptığı lenfogranüloma venereum ile Hemofilus dükreyinin yaptığı şankroid akla gelir.
+Proktitte Neyserya gonorea, lenfogranüloma venereum dahil Chlamydia trachomatis, herpes simpleks virüsü ve Treponema pallidum vardır.
+Neonatal konjonktivitte ise başlıca etkenler Neyserya gonorea ve Klamidya trakomatistir.
 
 @@ Üretral akıntının etiyolojisi
 Şimdi klamidya enfeksiyonu ve üretral akıntının etkenlerine geçiyoruz. Üretriti iki ana gruba ayırırız. Gonokokal üretritin etkeni Neyserya gonoreadır. Nongonokokal üretritte ise Chlamydia trachomatis ve Mikoplazma genitalyum öndedir. Diğer etkenler Trikomonas vajinalis, herpes simpleks virüsü ve adenovirüstür. Bazı olgularda ise etken saptanamaz. Burası önemli: akıntının rengi ya da miktarı etkeni kesin olarak ayırmaz. Gonokokta pürülan akıntı sık görülür, nongonokokal üretritte daha az akıntı olabilir; ama bu yalnızca bir eğilimdir. Ayrım için mikroskopi ve nükleik asit amplifikasyon testi gerekir.
 
-Etiyoloji tablosunda gonokoksik üretritin etkeni Neyserya gonoreadır ve Chlamydia trachomatis ile birlikte enfeksiyon görülebilir. Nongonokoksik üretritte Chlamydia trachomatis olguların yaklaşık %10 beş ile kırkından sorumludur. Mikoplazma genitalyum ise bu tabloda %10 ile yirmi beş, özet slaytında %10 beş ile yirmi beş oranında verilir; persistan ya da tekrarlayan üretritte özellikle önemlidir. Diğer enfeksiyöz nedenler Trikomonas vajinalis, herpes simpleks virüsü ve adenovirüstür; sıklıkları topluma ve temas biçimine göre değişir.
+Etiyoloji tablosunda gonokoksik üretritin etkeni Neyserya gonoreadır ve Chlamydia trachomatis ile birlikte enfeksiyon görülebilir.
+Nongonokoksik üretritte Chlamydia trachomatis olguların yaklaşık %15 ile kırkından sorumludur.
+Mikoplazma genitalyum ise bu tabloda %10 ile yirmi beş, özet slaytında %15 ile yirmi beş oranında verilir; persistan ya da tekrarlayan üretritte özellikle önemlidir.
+Diğer enfeksiyöz nedenler Trikomonas vajinalis, herpes simpleks virüsü ve adenovirüstür; sıklıkları topluma ve temas biçimine göre değişir.
 
-Daha nadir enfeksiyöz nedenler Neyserya meningitidis, Hemofilus türleri ve enterik bakterilerdir; oral temas ya da insertif anal ilişki öyküsü tanıya yön verebilir. Etkeni belirlenemeyen nongonokoksik üretrit de vardır: kapsamlı incelemeye rağmen olguların yaklaşık yarısında etken bulunamayabilir. Enfeksiyon dışı nedenler ise kimyasal irritasyon, mekanik travma, kateterizasyon ya da üretral enstrümantasyondur ve enfeksiyöz nedenlerle ayırıcı tanısı yapılmalıdır. Etiyoloji listesinde Üreaplazma üreolitikum da yer alır. Gonokokun sıklıkla klamidya enfeksiyonuyla birlikte bulunduğunu bir kez daha vurgulayayım.
+Daha nadir enfeksiyöz nedenler Neyserya meningitidis, Hemofilus türleri ve enterik bakterilerdir; oral temas ya da insertif anal ilişki öyküsü tanıya yön verebilir.
+Etkeni belirlenemeyen nongonokoksik üretrit de vardır: kapsamlı incelemeye rağmen olguların yaklaşık yarısında etken bulunamayabilir.
+Enfeksiyon dışı nedenler ise kimyasal irritasyon, mekanik travma, kateterizasyon ya da üretral enstrümantasyondur ve enfeksiyöz nedenlerle ayırıcı tanısı yapılmalıdır.
+Etiyoloji listesinde Üreaplazma üreolitikum da yer alır.
+Gonokokun sıklıkla klamidya enfeksiyonuyla birlikte bulunduğunu 1 kez daha vurgulayayım.
 
 @@ Cinsel öykü ve muayene
 Üretral akıntılı hastada cinsel öykü almak mahremiyet ister. Yargılamayan bir dil kullanırız ve gizliliği güvence altına alırız. Partnerleri, temas türünü ve ilgili anatomik bölgeleri sorarız. Kondom kullanımı ve son temasın zamanı, önceki cinsel yolla bulaşan enfeksiyonlar, antibiyotik kullanımı ve partnerin semptomları da öyküde yer almalıdır.
 
-Muayenede meatus, akıntı, ülser ve testisler değerlendirilir. Ateş ve testis ağrısı varsa epididimit, epididimoorşit ya da skrotal abse düşünülür. Ani şiddetli testis ağrısında torsiyon açısından acil değerlendirme gerekir. Üretrite artrit, döküntü ya da göz tutulumu eşlik ediyorsa bu bulgular dissemine enfeksiyonu ama aynı zamanda reaktif artriti de düşündürür. Reaktif artrit, eski adıyla Rayter sendromu, üretrit sonrası gelişebilen, artrit ile konjonktivit ya da üveitin eşlik edebildiği inflamatuvar bir tablodur.
+Muayenede meatus, akıntı, ülser ve testisler değerlendirilir.
+Ateş ve testis ağrısı varsa epididimit, epididimoorşit ya da skrotal abse düşünülür.
+Ani şiddetli testis ağrısında torsiyon açısından acil değerlendirme gerekir.
+Üretrite artrit, döküntü ya da göz tutulumu eşlik ediyorsa bu bulgular dissemine enfeksiyonu ama aynı zamanda reaktif artriti de düşündürür.
+Reaktif artrit, eski adıyla Rayter sendromu, üretrit sonrası gelişebilen, artrit ile konjonktivit ya da üveitin eşlik edebildiği inflamatuvar bir tablodur.
 
 @@ Üretrit tanısı
 Semptomatik hastada üretrit tanısı için şu ölçütlerden herhangi biri yeterlidir. 1.'si mukoid, mukopürülan ya da pürülan üretral akıntı. 2.'si akıntının Gram ya da metilen mavisi boyamasında, büyük büyütme alanında iki ya da beş ve üzerinde polimorfonükleer lökosit görülmesi. 3.'sü ilk idrar sedimentinde büyük büyütme alanında on ve üzerinde polimorfonükleer lökosit ya da pozitif lökosit esteraz. Burası önemli: hücre içi Gram negatif diplokok görülürse gonokokal üretrit; lökosit var ama diplokok yoksa nongonokoksik üretrit tanısı konur. Mümkünse Gram boyama, ilk idrar mikroskobisi ve lökosit esteraz gibi hasta başı tanı yöntemleri kullanılmalıdır.
 
-Etken izolasyonu için üretral akıntıdan Gram boyama ve metilen mavisi boyama, endoüretral kültür ve nükleik asit amplifikasyon testi kullanılır. Lökosit eşiği rehberlere göre farklıdır. İngiliz Cinsel Sağlık ve HIV Derneğinin 2020 altı önerisi ortalama beş ve üzeri polimorfonükleer lökosittir. Amerikan Hastalık Kontrol ve Önleme Merkezleri ise ortama göre iki ya da beş ve üzeri lökosit eşiğini kabul eder.
+Etken izolasyonu için üretral akıntıdan Gram boyama ve metilen mavisi boyama, endoüretral kültür ve nükleik asit amplifikasyon testi kullanılır.
+Lökosit eşiği rehberlere göre farklıdır.
+İngiliz Cinsel Sağlık ve HIV Derneğinin 2020 altı önerisi ortalama beş ve üzeri polimorfonükleer lökosittir.
+Amerikan Hastalık Kontrol ve Önleme Merkezleri ise ortama göre iki ya da beş ve üzeri lökosit eşiğini kabul eder.
 
 @@ Üretral akıntının Gram boyaması
 Üretral akıntının Gram boyaması hem üretritin hem de gonokok enfeksiyonunun varlığını belgelemede son derece yüksek duyarlılık ve özgüllüğe sahiptir. Olası gonokok enfeksiyonu tanısı, Gram boyamada Gram negatif diplokok içeren lökositlerin ya da metilen mavisi boyamada hücre içi pembe diplokokların gösterilmesiyle konur. Nongonokoksik üretrit ise akıntının mikroskopisinde lökosit varken Gram negatif diplokok olmamasıyla tanımlanır.
 
-Bir uyarı yapayım arkadaşlar. Distal üretra, deri ya da vajen girişi yani introital flora ile kolonize olduğundan, Gram boyalı preparatta çeşitli Gram pozitif ya da Gram negatif bakterilerin görülmesinin tanı değeri yoktur. Tanıyı belirleyen, lökositler ve onların içindeki Gram negatif diplokoklardır.
+Bir uyarı yapayım arkadaşlar.
+Distal üretra, deri ya da vajen girişi yani introital flora ile kolonize olduğundan, Gram boyalı preparatta çeşitli Gram pozitif ya da Gram negatif bakterilerin görülmesinin tanı değeri yoktur.
+Tanıyı belirleyen, lökositler ve onların içindeki Gram negatif diplokoklardır.
 
 @@ Gonore: etken, bulaş ve klinik
 Gonore halk arasında bel soğukluğu olarak bilinir. Cinsel, rektal, oral ve perinatal yolla bulaşır. Etkeni Neyserya gonorea, yani gonokoktur ve Gram negatif bir diplokoktur. Tek doğal konakçısı insandır. İnkübasyon süresi üç ile on gündür. Gonokok enfeksiyonlarına karşı bağışıklık ya çok azdır ya da hiç yoktur; bu yüzden kişi tekrar tekrar enfekte olabilir. Gonokok üretra ve endoserviks gibi alt genital organların mukozasını, rektumu, orofarinksi ve konjonktivayı etkileyebilir.
 
-Burası önemli: gonore enfeksiyonu olan kişilerin yüzde kırkında Chlamydia trachomatis ile koinfeksiyon saptanmıştır. Komplike olmayan gonokok enfeksiyonu erkeklerde üretral akıntı ve dizüriyle, yani üretrit tablosuyla seyreder. Kadınlarda gonore sıklıkla asemptomatiktir; enfekte kadınların yarısından azında anormal vajinal akıntı, dizüri, alt abdominal rahatsızlık ve disparoni görülür ve bu bir servisit tablosudur. Rektal enfeksiyonlar her iki cinste de genellikle asemptomatiktir.
+Burası önemli: gonore enfeksiyonu olan kişilerin yüzde kırkında Chlamydia trachomatis ile koinfeksiyon saptanmıştır.
+Komplike olmayan gonokok enfeksiyonu erkeklerde üretral akıntı ve dizüriyle, yani üretrit tablosuyla seyreder.
+Kadınlarda gonore sıklıkla asemptomatiktir; enfekte kadınların yarısından azında anormal vajinal akıntı, dizüri, alt abdominal rahatsızlık ve disparoni görülür ve bu bir servisit tablosudur.
+Rektal enfeksiyonlar her iki cinste de genellikle asemptomatiktir.
 
-Erkeklerde en sık tablo akut üretrittir. Oral seksle %5 oranında faringeal gonore gelişir ve olguların yüzde onu asemptomatiktir. Komplikasyonlar arasında en sık epididimit görülür; prostatit, periüretral abse, penil ödem, üretral yapışıklık ve dissemine gonokokal enfeksiyon da gelişebilir. Kadınlarda enfeksiyon endoserviks, üretra, rektum ve farenksi tutabilir ve %50 asemptomatiktir. Kadındaki başlıca komplikasyon endometrit, salpenjit, tuboovaryan abse ve pelvik peritoniti içeren pelvik inflamatuvar hastalıktır; bunun sonucunda infertilite ve ektopik gebelik gelişebilir. Gonokoksik üretritin ana belirtisi pürülan, kirli koyu yeşil ya da sarı renkli üretral akıntıdır. Başlangıçta üretrada yanma, eksternal meatusta kızarıklık ve mukopürülan akıntı görülür. İki üç gün sonra idrar yaparken yanma hissi ve ağrılı ereksiyon eklenir.
+Erkeklerde en sık tablo akut üretrittir.
+Oral seksle %5 oranında faringeal gonore gelişir ve olguların %10'u asemptomatiktir.
+Komplikasyonlar arasında en sık epididimit görülür; prostatit, periüretral abse, penil ödem, üretral yapışıklık ve dissemine gonokokal enfeksiyon da gelişebilir.
+Kadınlarda enfeksiyon endoserviks, üretra, rektum ve farenksi tutabilir ve %50 asemptomatiktir.
+Kadındaki başlıca komplikasyon endometrit, salpenjit, tuboovaryan abse ve pelvik peritoniti içeren pelvik inflamatuvar hastalıktır; bunun sonucunda infertilite ve ektopik gebelik gelişebilir.
+Gonokoksik üretritin ana belirtisi pürülan, kirli koyu yeşil ya da sarı renkli üretral akıntıdır.
+Başlangıçta üretrada yanma, eksternal meatusta kızarıklık ve mukopürülan akıntı görülür.
+İki üç gün sonra idrar yaparken yanma hissi ve ağrılı ereksiyon eklenir.
 
 @@ Gonokokun klinik tabloları ve komplikasyonları
 Bu tablo gonokokun hasta grubuna göre lokal enfeksiyonlarını ve sekellerini karşılaştırır. Erkekte lokal enfeksiyon üretrittir; komplikasyon epididimit, nadiren de infertilitedir. Kadında servisit ve üretrit görülür; komplikasyon olan pelvik inflamatuvar hastalık endometrit, salpenjit ve tuboovaryan apseyi kapsar ve infertilite, ektopik gebelik ve kronik pelvik ağrıya yol açar. Her iki cinsiyette rektal enfeksiyon ya da proktit, faringeal enfeksiyon ve konjonktivit olabilir; oküler enfeksiyonda kornea hasarı ve görme kaybı gelişebilir.
 
-Dissemine enfeksiyon her iki cinsiyette görülür ve bu hastalarda genital enfeksiyon belirtisiz olabilir. Artralji, tenosinovit, püstüler deri lezyonları ve septik artrit tabloya hakimdir; nadiren menenjit ve endokardit gelişir. Yenidoğanda ise oftalmia neonatorum görülür; kornea perforasyonu ve körlüğe, nadiren sepsis, artrit ve menenjite yol açabilir.
+Dissemine enfeksiyon her iki cinsiyette görülür ve bu hastalarda genital enfeksiyon belirtisiz olabilir.
+Artralji, tenosinovit, püstüler deri lezyonları ve septik artrit tabloya hakimdir; nadiren menenjit ve endokardit gelişir.
+Yenidoğanda ise oftalmia neonatorum görülür; kornea perforasyonu ve körlüğe, nadiren sepsis, artrit ve menenjite yol açabilir.
 
 @@ Gonore tanısı
 Gonore tanısında önce anamnez ve muayene gelir: akıntı, dizüri, cinsel temas öyküsü, temas bölgeleri ve eşlik eden bulgular değerlendirilir. Ardından inflamasyonu gösteririz. Üretral yaymada polimorfonükleer lökosit artışı, ilk akım idrarda lökosit esteraz pozitifliği ya da sedimentte büyük büyütme alanında on ve üzerinde lökosit üretriti destekler.
 
-Burası önemli: semptomatik erkekte üretral akıntının Gram boyamasında hücre içi Gram negatif diplokok görülmesi gonokoksik üretrit lehinedir ve bu durumda duyarlılık %90 beşin üzerinde, özgüllük %90 dokuzun üzerindedir. Nükleik asit amplifikasyon testi gonokok ve klamidya tanısında tercih edilen yöntemdir. Erkeklerde ilk akım idrar, kadınlarda vajinal sürüntü optimal örneklerdir. Temas öyküsüne göre rektal ve faringeal sürüntü de alınır ve bu ekstragenital örneklerde o örnek türü için onaylanmış ya da valide edilmiş test kullanılır. Gonokok kültürü özellikle tedavi başarısızlığı ya da direnç şüphesinde gereklidir, çünkü antibiyotik duyarlılık testini mümkün kılar. Örnek alma, taşıma ve inkübasyon koşulları kültür sonucunu etkiler.
+Burası önemli: semptomatik erkekte üretral akıntının Gram boyamasında hücre içi Gram negatif diplokok görülmesi gonokoksik üretrit lehinedir ve bu durumda duyarlılık %95'in üzerinde, özgüllük %90 dokuzun üzerindedir.
+Nükleik asit amplifikasyon testi gonokok ve klamidya tanısında tercih edilen yöntemdir.
+Erkeklerde ilk akım idrar, kadınlarda vajinal sürüntü optimal örneklerdir.
+Temas öyküsüne göre rektal ve faringeal sürüntü de alınır ve bu ekstragenital örneklerde o örnek türü için onaylanmış ya da valide edilmiş test kullanılır.
+Gonokok kültürü özellikle tedavi başarısızlığı ya da direnç şüphesinde gereklidir, çünkü antibiyotik duyarlılık testini mümkün kılar.
+Örnek alma, taşıma ve inkübasyon koşulları kültür sonucunu etkiler.
 
-Mikroskopinin sınırlarını da bilmeliyiz. Semptomatik erkekte tanısal değeri yüksek olsa da semptomsuz erkekte duyarlılık %30 ile elliye düşer. Servikal akıntı örneğinde mikroskopinin performansı düşüktür; faringeal ve rektal enfeksiyonlarda da duyarlılığı düşüktür. Bu yüzden mikroskopi asemptomatik bireylerde tarama amacıyla kullanılmamalıdır. Erkekte gonokoksik üretrit kültüründe Neyserya gonorea izolasyonu için laboratuvarda çikolata agar, Tayer Martin agar ve modifiye Martin Luis agar besiyerleri kullanılır. Koloniler kırk sekiz ile yetmiş iki saatte ürer. Burada üremenin kendisi önemlidir, koloni sayısı önemsizdir.
+Mikroskopinin sınırlarını da bilmeliyiz.
+Semptomatik erkekte tanısal değeri yüksek olsa da semptomsuz erkekte duyarlılık %30 ile elliye düşer.
+Servikal akıntı örneğinde mikroskopinin performansı düşüktür; faringeal ve rektal enfeksiyonlarda da duyarlılığı düşüktür.
+Bu yüzden mikroskopi asemptomatik bireylerde tarama amacıyla kullanılmamalıdır.
+Erkekte gonokoksik üretrit kültüründe Neyserya gonorea izolasyonu için laboratuvarda çikolata agar, Tayer Martin agar ve modifiye Martin Luis agar besiyerleri kullanılır.
+Koloniler kırk sekiz ile 72 saatte ürer.
+Burada üremenin kendisi önemlidir, koloni sayısı önemsizdir.
 
 @@ Gonokoksik üretrit tedavisi
 Gonokokta kromozomal mutasyonlar sonucu penisilin ve tetrasikline direnç gelişmiştir. Artan kinolon direnci nedeniyle kinolonlar da ampirik tedavide önerilmemektedir. Tedavi ederken diğer cinsel yolla bulaşan hastalıkları, özellikle HIV ve sifilizi araştırmak çok önemlidir. Burası önemli: komplike olmayan gonore tedavisinde seftriakson kullanılır. Dünya Sağlık Örgütünün 2020 dört ve İngiliz Cinsel Sağlık ve HIV Derneğinin 2020 beş önerisi, bir gram kas içine tek doz seftriaksondur. Amerikan Hastalık Kontrol ve Önleme Merkezlerinin 2020 bir rehberi ise yüz elli kilogramın altındaki hastada beş yüz miligram, yüz elli kilogram ve üzerindeki hastada bir gram kas içine tek doz önerir.
 
 @@ Nongonokoksik üretrit ve Chlamydia trachomatis
-Nongonokoksik üretritin en sık etkeni Klamidya trakomatistir. İnkübasyon süresi genellikle daha uzundur, iki ile otuz beş gün arasındadır. Üretral akıntı sıklıkla mukopürülan ya da seröz niteliktedir. Gram boyamada bol lökosit görülüp Gram negatif diplokok görülmemesi nongonokoksik üretrit lehinedir. Tanıda kültür pratik bir yöntem değildir; nükleik asit amplifikasyon testi tercih edilir.
+Nongonokoksik üretritin en sık etkeni Klamidya trakomatistir. İnkübasyon süresi genellikle daha uzundur, iki ile 35 gün arasındadır. Üretral akıntı sıklıkla mukopürülan ya da seröz niteliktedir. Gram boyamada bol lökosit görülüp Gram negatif diplokok görülmemesi nongonokoksik üretrit lehinedir. Tanıda kültür pratik bir yöntem değildir; nükleik asit amplifikasyon testi tercih edilir.
 
-Klamidya trakomatisin klinik tablolarına bakalım. Erkekte üretrit, epididimit, proktit ve konjonktivit yapar; komplikasyon olarak reaktif artrit ve nadiren epididimitle ilişkili fertilite sorunları gelişir. Kadında servisit, üretrit, proktit ve konjonktivit görülür. Komplikasyonlar endometrit ve salpenjiti içeren pelvik inflamatuvar hastalık, Fits Hyu Kurtis sendromu olarak bilinen perihepatit, tubal infertilite, ektopik gebelik, kronik pelvik ağrı ve reaktif artrittir. Yenidoğanda inklüzyon konjonktiviti ve afebril pnömoni görülür; uzamış solunum semptomları olabilir ama kalıcı pulmoner sekeller net olarak gösterilmemiştir. Nongonokoksik üretrit tanısında üretral akıntının Gram boyamasında lökosit vardır ama mikroorganizma yoktur. Kültür pratik değildir ve klamidya için nükleik asit amplifikasyon testi önerilir.
+Klamidya trakomatisin klinik tablolarına bakalım.
+Erkekte üretrit, epididimit, proktit ve konjonktivit yapar; komplikasyon olarak reaktif artrit ve nadiren epididimitle ilişkili fertilite sorunları gelişir.
+Kadında servisit, üretrit, proktit ve konjonktivit görülür.
+Komplikasyonlar endometrit ve salpenjiti içeren pelvik inflamatuvar hastalık, Fits Hyu Kurtis sendromu olarak bilinen perihepatit, tubal infertilite, ektopik gebelik, kronik pelvik ağrı ve reaktif artrittir.
+Yenidoğanda inklüzyon konjonktiviti ve afebril pnömoni görülür; uzamış solunum semptomları olabilir ama kalıcı pulmoner sekeller net olarak gösterilmemiştir.
+Nongonokoksik üretrit tanısında üretral akıntının Gram boyamasında lökosit vardır ama mikroorganizma yoktur.
+Kültür pratik değildir ve klamidya için nükleik asit amplifikasyon testi önerilir.
 
 @@ Nongonokoksik üretrit tedavisi
-Nongonokokal üretritte ilk seçenek doksisiklindir: yüz miligram ağızdan, günde iki kez, yedi gün. Tedavinin sonucu etkene, hastanın uyumuna ve yeniden temasa bağlıdır. Burası önemli: tek doz bir gram azitromisin, İngiliz Cinsel Sağlık ve HIV Derneğinin 2020 altı önerisinde artık önerilmez.
+Nongonokokal üretritte ilk seçenek doksisiklindir: yüz miligram ağızdan, günde 2 kez, 7 gün. Tedavinin sonucu etkene, hastanın uyumuna ve yeniden temasa bağlıdır. Burası önemli: tek doz bir gram azitromisin, İngiliz Cinsel Sağlık ve HIV Derneğinin 2020 altı önerisinde artık önerilmez.
 
-Amerikan Hastalık Kontrol ve Önleme Merkezlerinin 2020 bir rehberinde hem nongonokoksik üretrit hem de Chlamydia trachomatis için 1. tercih, günde iki kez yüz miligram doksisiklin, ağızdan yedi gündür. Nongonokoksik üretritte alternatif olarak bir gram tek doz azitromisin ya da 1. gün beş yüz miligram, 2. ile 5. günler arasında iki yüz elli miligram azitromisin verilebilir; günde dört kez beş yüz miligram eritromisin yedi gün de seçenekler arasındadır. Klamidya trakomatiste alternatifler bir gram tek doz azitromisin, günde bir kez beş yüz miligram levofloksasin yedi gün ya da iki yüz ile dört yüz miligram ofloksasin yedi gündür.
+Amerikan Hastalık Kontrol ve Önleme Merkezlerinin 2020 bir rehberinde hem nongonokoksik üretrit hem de Chlamydia trachomatis için 1. tercih, günde 2 kez yüz miligram doksisiklin, ağızdan yedi gündür.
+Nongonokoksik üretritte alternatif olarak bir gram tek doz azitromisin ya da 1. gün beş yüz miligram, 2. ile 5. günler arasında iki yüz 50 miligram azitromisin verilebilir; günde 4 kez beş yüz miligram eritromisin 7 gün de seçenekler arasındadır.
+Klamidya trakomatiste alternatifler bir gram tek doz azitromisin, günde 1 kez beş yüz miligram levofloksasin 7 gün ya da iki yüz ile dört yüz miligram ofloksasin yedi gündür.
 
-Nongonokoksik üretritli erkeklerin tanıdan önceki altmış gün içindeki tüm cinsel eşleri klamidyaya karşı tedavi edilmelidir. Tedavi edildiğinde üretrit sekelsiz iyileşir. Tedavi edilmezse gonokoksik üretrit olgularının çoğu altı ay, nongonokoksik üretrit olgularının çoğu üç ay içinde asemptomatik hale gelir; yani yakınma geçer ama bulaştırıcılık ve komplikasyon riski ortadan kalkmış sayılmaz. Korunmada cinsel eşlerin tedavisi, partner sayısının azaltılması ve kondom kullanımı önemlidir.
+Nongonokoksik üretritli erkeklerin tanıdan önceki 60 gün içindeki tüm cinsel eşleri klamidyaya karşı tedavi edilmelidir.
+Tedavi edildiğinde üretrit sekelsiz iyileşir.
+Tedavi edilmezse gonokoksik üretrit olgularının çoğu 6 ay, nongonokoksik üretrit olgularının çoğu 3 ay içinde asemptomatik hale gelir; yani yakınma geçer ama bulaştırıcılık ve komplikasyon riski ortadan kalkmış sayılmaz.
+Korunmada cinsel eşlerin tedavisi, partner sayısının azaltılması ve kondom kullanımı önemlidir.
 
 @@ Ampirik tedavi ve patojene yönelik tedavi
-Klinikte şu soruyu sorarız: ne zaman ampirik, ne zaman tanı öncelikli tedavi? Şüpheli gonokokal enfeksiyonda bir ile iki gram seftriakson kas içine ya da damar içine tek doz verilir ve buna yüz miligram doksisiklin, ağızdan günde iki kez, yedi gün eklenir. 2. ilaç eşlik edebilen klamidyayı kapsar. Doksisiklin alerjisinde seftriaksona ek olarak dört günlük azitromisin verilir: 1. gün bir gram, 2. ile 4. günler beş yüz miligram, ağızdan. Şüpheli nongonokokal enfeksiyonda yüz miligram doksisiklin günde iki kez yedi gün verilir; alternatifi yine dört günlük azitromisin rejimidir, yani bir gram, ardından üç gün beş yüz miligram. Patojen saptandığında tedavi etkene göre şekillenir. Mikoplazma hominis ve Üreaplazma parvum genellikle kolonizasyondur ve tedavi gerektirmez. Üretral bölgede Üreaplazma üreolitikum saptanması da genellikle klinik önemi olmayan bir kolonizasyondur; yalnızca tek etkense ve hasta semptomatikse tedavi edilir.
+Klinikte şu soruyu sorarız: ne zaman ampirik, ne zaman tanı öncelikli tedavi? Şüpheli gonokokal enfeksiyonda bir ile iki gram seftriakson kas içine ya da damar içine tek doz verilir ve buna yüz miligram doksisiklin, ağızdan günde 2 kez, 7 gün eklenir. 2. ilaç eşlik edebilen klamidyayı kapsar. Doksisiklin alerjisinde seftriaksona ek olarak 4 günlük azitromisin verilir: 1. gün bir gram, 2. ile 4. günler beş yüz miligram, ağızdan. Şüpheli nongonokokal enfeksiyonda yüz miligram doksisiklin günde 2 kez 7 gün verilir; alternatifi yine 4 günlük azitromisin rejimidir, yani bir gram, ardından 3 gün beş yüz miligram. Patojen saptandığında tedavi etkene göre şekillenir. Mikoplazma hominis ve Üreaplazma parvum genellikle kolonizasyondur ve tedavi gerektirmez. Üretral bölgede Üreaplazma üreolitikum saptanması da genellikle klinik önemi olmayan bir kolonizasyondur; yalnızca tek etkense ve hasta semptomatikse tedavi edilir.
 
 @@ Üretritte izlem
-Akut üretritli hastaya antibiyotik bitiminden sonra en az bir hafta cinsel perhiz önerilir; semptom sürerse bu süre uzar. Semptom başlangıcından önceki haftalardaki cinsel partnerler bilgilendirilir, test edilir ve gerekirse tedavi edilir. Tedaviden sonra iki haftadan uzun süren ya da yineleyen semptomda hasta yeniden değerlendirilir. Burası önemli: ilk tanı Neyserya gonorea, Chlamydia trachomatis ya da Mikoplazma genitalyum ise tedaviden altı ile on iki hafta sonra kür testi yapılır. Üretrit tanısı alan hastaya HIV ve diğer cinsel yolla bulaşan enfeksiyonlar için test de önerilmelidir.
+Akut üretritli hastaya antibiyotik bitiminden sonra en az 1 hafta cinsel perhiz önerilir; semptom sürerse bu süre uzar. Semptom başlangıcından önceki haftalardaki cinsel partnerler bilgilendirilir, test edilir ve gerekirse tedavi edilir. Tedaviden sonra iki haftadan uzun süren ya da yineleyen semptomda hasta yeniden değerlendirilir. Burası önemli: ilk tanı Neyserya gonorea, Chlamydia trachomatis ya da Mikoplazma genitalyum ise tedaviden altı ile 12 hafta sonra kür testi yapılır. Üretrit tanısı alan hastaya HIV ve diğer cinsel yolla bulaşan enfeksiyonlar için test de önerilmelidir.
 
 @@ Gonokoksik ve nongonokoksik üretrit ayrımı
 Karşılaştırma tablosu iki üretrit tipini etken, Gram boyama, belirti ve tanı açısından yan yana koyar. Gonokoksik üretritin etkeni Neyserya gonoreadır; Gram boyamada hücre içi Gram negatif diplokoklar görülür ve tipik olarak bol, pürülan, sarı yeşil akıntı ile dizüri vardır. Tanı Gram boyamada diplokok tespitiyle konur. Nongonokoksik üretritte etkenler Chlamydia trachomatis ve Mikoplazma genitalyum başta olmak üzere çeşitlidir. Hücre içi diplokok görülmez, polimorfonükleer lökositler görülür. Akıntı genellikle mukoid ya da berraktır, dizüri olur ve asemptomatik olgular yaygındır. Tanı, Gram boyamada diplokok yokluğu ve negatif gonore testiyle gonorenin dışlanmasına dayanır.
 
 @@ Özet
-Özetle arkadaşlar, nongonokoksik üretritte Chlamydia trachomatis olguların %10 beş ile kırkından, Mikoplazma genitalyum %10 beş ile yirmi beşinden sorumludur. Semptomatik erkekte polimorfonükleer lökositler içinde Gram negatif diplokok görülmesi gonokok enfeksiyonu için yüksek özgüllüğe sahiptir. Gonokokal ve klamidyal koenfeksiyon görülebileceği için her iki etken için de nükleik asit amplifikasyon testi yapılmalıdır. Nongonokoksik üretrit ise üretral inflamasyonun gösterildiği ama Gram boyamada hücre içi Gram negatif diplokokun saptanmadığı tablodur. Son olarak şunları aklınızda tutun. Akıntının görünümü etkeni kesin belirlemez. Nükleik asit amplifikasyon testi etkeni, kültür ise gonokokun antibiyotik duyarlılığını gösterir. Gonorede seftriakson, nongonokoksik üretritte doksisiklin temel seçeneklerdir. Partner yönetimi ve izlem de tedavinin ayrılmaz bir parçasıdır.
+Özetle arkadaşlar, nongonokoksik üretritte Chlamydia trachomatis olguların %15 ile kırkından, Mikoplazma genitalyum %15 ile yirmi beşinden sorumludur. Semptomatik erkekte polimorfonükleer lökositler içinde Gram negatif diplokok görülmesi gonokok enfeksiyonu için yüksek özgüllüğe sahiptir. Gonokokal ve klamidyal koenfeksiyon görülebileceği için her iki etken için de nükleik asit amplifikasyon testi yapılmalıdır. Nongonokoksik üretrit ise üretral inflamasyonun gösterildiği ama Gram boyamada hücre içi Gram negatif diplokokun saptanmadığı tablodur. Son olarak şunları aklınızda tutun. Akıntının görünümü etkeni kesin belirlemez. Nükleik asit amplifikasyon testi etkeni, kültür ise gonokokun antibiyotik duyarlılığını gösterir. Gonorede seftriakson, nongonokoksik üretritte doksisiklin temel seçeneklerdir. Partner yönetimi ve izlem de tedavinin ayrılmaz bir parçasıdır.

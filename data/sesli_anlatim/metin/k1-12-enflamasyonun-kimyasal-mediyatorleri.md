@@ -3,161 +3,353 @@
 @@ Mediyatörlerin tanımı ve ortak özellikleri
 Enflamasyonun kimyasal mediyatörleri, enflamatuvar reaksiyonları başlatan, güçlendiren ve düzenleyen çözünebilir moleküllerdir. Bu tanımdaki üç fiili birlikte aklınızda tutun: başlatmak, güçlendirmek ve düzenlemek. Yani mediyatör yalnızca hasar veren bir molekül değildir, yanıtı kontrol eden bir sinyaldir. Akut enflamasyonda damar ve lökosit olaylarını yöneten şey, işte bu kimyasal sinyallerdir. Kaynaklarına göre iki büyük gruba ayrılırlar. Hücre kaynaklı mediyatörler doku hücrelerinde ya hazır depolanmış bulunur ya da uyarıdan sonra sentezlenir. Plazma kaynaklı mediyatörler ise dolaşımdaki plazma proteinlerinden köken alır.
 
-Mediyatörler kimyasal olarak çok farklı olsa da davranışlarında ortak kurallar vardır. 1.'si, genellikle lokal olarak, yani enflamasyon bölgesinde ya da hemen yakınında üretilirler; böylece etki hasar alanına odaklanır. 2.'si, çoğu kısa ömürlüdür; hızla yıkılır ya da inaktive edilir. Uyarı kesildiğinde yanıt da söner ve enflamasyonun kendini sınırlamasının temeli budur. 3.'sü, üretimleri mikrobiyal ürünlere ve hasarlı hücrelerden salınan moleküllere yanıt olarak artar. 4.'sü ve klinik açıdan en önemlisi: aşırı ya da kontrolsüz üretim, doku hasarının önemli bir nedeni olabilir. Yani aynı koruyucu moleküller, kontrolden çıktığında hastalığın kendisine dönüşür.
+Mediyatörler kimyasal olarak çok farklı olsa da davranışlarında ortak kurallar vardır.
+1.'si, genellikle lokal olarak, yani enflamasyon bölgesinde ya da hemen yakınında üretilirler; böylece etki hasar alanına odaklanır.
+2.'si, çoğu kısa ömürlüdür; hızla yıkılır ya da inaktive edilir.
+Uyarı kesildiğinde yanıt da söner ve enflamasyonun kendini sınırlamasının temeli budur.
+3.'sü, üretimleri mikrobiyal ürünlere ve hasarlı hücrelerden salınan moleküllere yanıt olarak artar.
+4.'sü ve klinik açıdan en önemlisi: aşırı ya da kontrolsüz üretim, doku hasarının önemli bir nedeni olabilir.
+Yani aynı koruyucu moleküller, kontrolden çıktığında hastalığın kendisine dönüşür.
 
 @@ Hücre kaynaklı mediyatörler
 Hücre kaynaklı mediyatörler, dokuda nöbet tutan ve enflamasyona katılan hücrelerden salınır. Kaynak hücreler doku makrofajları, dendritik hücreler, mast hücreleri, nötrofiller ve trombositler ile endotel ve epitel hücreleridir. Bu mediyatörlerde yanıtın hızını belirleyen şey, mediyatörün hücrede nasıl hazırlandığıdır ve iki üretim biçimi vardır.
 
-1. biçim hazır depodan salınımdır. Mediyatör önceden oluşturulmuş granüllerde bekler ve uyarıyla hızla dışarı verilir; bunun klasik örneği histamindir. 2. biçim uyarı sonrası yeni sentezdir. Burada mediyatör ancak uyarı geldikten sonra üretilir, bu nedenle etkisi daha geç başlar. Örnekleri prostaglandinler, lökotrienler ve sitokinlerdir. Dikkat edin, sınavda bu ayrım sık sorulur: hazır depolanan histamin ilk dakikalarda etki eder; prostaglandin, lökotrien ve sitokinler ise sentez gerektirdiği için gecikmeli devreye girer.
+1. biçim hazır depodan salınımdır.
+Mediyatör önceden oluşturulmuş granüllerde bekler ve uyarıyla hızla dışarı verilir; bunun klasik örneği histamindir.
+2. biçim uyarı sonrası yeni sentezdir.
+Burada mediyatör ancak uyarı geldikten sonra üretilir, bu nedenle etkisi daha geç başlar.
+Örnekleri prostaglandinler, lökotrienler ve sitokinlerdir.
+Dikkat edin, sınavda bu ayrım sık sorulur: hazır depolanan histamin ilk dakikalarda etki eder; prostaglandin, lökotrien ve sitokinler ise sentez gerektirdiği için gecikmeli devreye girer.
 
 @@ Plazma kaynaklı mediyatörler
 Plazma kaynaklı mediyatörler hücre granüllerinde değil, kanın içinde hazır bekler; ama bu hâlleriyle etkisizdirler. Başlıca kaynakları karaciğerdir. Karaciğer bu proteinleri sentezleyip dolaşıma verir ve dolaşımda genellikle inaktif prekürsör, yani etkisiz öncül şeklinde bulunurlar. Aktivasyonları proteolitik basamaklarla olur: bir enzim bir sonrakini keserek aktive eder ve sinyal her basamakta büyür. Bu proteolitik basamaklı sistemler üç tanedir: kompleman sistemi, kinin sistemi ve koagülasyon ile fibrinolitik sistem.
 
-Bu mediyatörler her yerde dolaşır, ama yalnızca enflamasyon bölgesinde aktive olur. İnaktif öncül biçimi, yanlış yerde etki oluşmasını önleyen bir güvenlik kilidi gibidir. Kaynak sorusu geldiğinde önce hücre mi plazma mı ayrımını yapın: plazma kaynaklı denince karaciğer kökenli kompleman, kinin ve koagülasyon sistemleri akla gelmelidir.
+Bu mediyatörler her yerde dolaşır, ama yalnızca enflamasyon bölgesinde aktive olur.
+İnaktif öncül biçimi, yanlış yerde etki oluşmasını önleyen bir güvenlik kilidi gibidir.
+Kaynak sorusu geldiğinde önce hücre mi plazma mı ayrımını yapın: plazma kaynaklı denince karaciğer kökenli kompleman, kinin ve koagülasyon sistemleri akla gelmelidir.
 
 @@ Başlıca mediyatörler: kaynak ve etki tablosu
 Robbins'teki başlıca mediyatörler tablosu, her mediyatörü kaynağı ve ana etkisiyle eşleştirir. İlk satırlar hücre kaynaklı mediyatörlerin çekirdeğidir. Histaminin kaynağı mast hücreleri, bazofiller ve trombositlerdir; etkileri vazodilatasyon, artmış vasküler permeabilite ve endotel aktivasyonudur. Prostaglandinler mast hücreleri ve lökositlerden kaynaklanır; etkileri vazodilatasyon ve ateştir. Lökotrienler de mast hücreleri ve lökositlerden kaynaklanır; etkileri artmış vasküler permeabilite, kemotaksis, lökosit adezyonu ve aktivasyonudur. Kemotaksis, hücrenin kimyasal bir yoğunluk farkı boyunca yönlü hareketidir.
 
-Sitokinler, yani tümör nekroz faktörü ile interlökin bir ve interlökin altı, makrofajlar, endotel hücreleri ve mast hücrelerinden salınır. Bu tablodaki tek grup olarak hem lokal hem sistemik etki gösterirler. Lokal etkileri endotel aktivasyonu, yani adezyon moleküllerinin artmış ekspresyonudur. Sistemik etkileri ise ateş, metabolik anormallikler ve hipotansiyon, yani şoktur. Şok tablosu, sitokinlerin sistemik etkisinden doğar.
+Sitokinler, yani tümör nekroz faktörü ile interlökin bir ve interlökin altı, makrofajlar, endotel hücreleri ve mast hücrelerinden salınır.
+Bu tablodaki tek grup olarak hem lokal hem sistemik etki gösterirler.
+Lokal etkileri endotel aktivasyonu, yani adezyon moleküllerinin artmış ekspresyonudur.
+Sistemik etkileri ise ateş, metabolik anormallikler ve hipotansiyon, yani şoktur.
+Şok tablosu, sitokinlerin sistemik etkisinden doğar.
 
-Tablonun 2. yarısı lökosit çağıran mediyatörlerle plazma kaynaklıları bir araya getirir. Kemokinlerin kaynağı lökositler ve aktive makrofajlardır; etkileri kemotaksis ve lökosit aktivasyonudur. Trombosit aktive edici faktör, kısaca paf, lökositler ve mast hücrelerinden salınır ve etki yelpazesi geniştir: vazodilatasyon, artmış vasküler permeabilite, lökosit adezyonu, kemotaksis, degranülasyon ve oksidatif patlama. Oksidatif patlama, fagositlerde reaktif oksijen türlerinin hızla üretilmesidir. Kompleman bileşenleri plazma kökenlidir ve karaciğerde sentezlenir. Lökosit kemotaksisi ve aktivasyonu yapar, membran atak kompleksiyle hedefi doğrudan öldürür ve mast hücresini uyararak vazodilatasyona yol açar. Kininler de plazma kökenlidir, karaciğerde sentezlenip kinin sistemi üzerinden oluşur; etkileri artmış vasküler permeabilite, düz kas kontraksiyonu, vazodilatasyon ve ağrıdır. Tablodaki plazma kaynaklı iki grup kompleman ve kininlerdir; doğrudan öldürme yapabilen tek grup ise komplemandır.
+Tablonun 2. yarısı lökosit çağıran mediyatörlerle plazma kaynaklıları bir araya getirir.
+Kemokinlerin kaynağı lökositler ve aktive makrofajlardır; etkileri kemotaksis ve lökosit aktivasyonudur.
+Trombosit aktive edici faktör, kısaca paf, lökositler ve mast hücrelerinden salınır ve etki yelpazesi geniştir: vazodilatasyon, artmış vasküler permeabilite, lökosit adezyonu, kemotaksis, degranülasyon ve oksidatif patlama.
+Oksidatif patlama, fagositlerde reaktif oksijen türlerinin hızla üretilmesidir.
+Kompleman bileşenleri plazma kökenlidir ve karaciğerde sentezlenir.
+Lökosit kemotaksisi ve aktivasyonu yapar, membran atak kompleksiyle hedefi doğrudan öldürür ve mast hücresini uyararak vazodilatasyona yol açar.
+Kininler de plazma kökenlidir, karaciğerde sentezlenip kinin sistemi üzerinden oluşur; etkileri artmış vasküler permeabilite, düz kas kontraksiyonu, vazodilatasyon ve ağrıdır.
+Tablodaki plazma kaynaklı iki grup kompleman ve kininlerdir; doğrudan öldürme yapabilen tek grup ise komplemandır.
 
 @@ Enflamatuvar reaksiyonlara göre mediyatörler
 2. önemli tablo bakışı tersine çevirir: mediyatörden değil, reaksiyondan başlar ve her reaksiyonun sorumlularını sıralar. Vazodilatasyonun başlıca mediyatörü histamindir. Artmış vasküler permeabilitenin sorumluları histamin, ce üç a ve ce beş a ile lökotrien C dört, D dört ve E dörttür. Burada ince bir nokta var: ce üç a ve ce beş a permeabiliteyi doğrudan değil, mast hücreleri ve diğer hücrelerden vazoaktif amin salındırarak artırır.
 
-Kemotaksi, lökosit toplanması ve aktivasyonunun mediyatörleri tümör nekroz faktörü, interlökin bir, kemokinler, ce üç a, ce beş a ve lökotrien B dörttür. Burası önemli, sınav spotu olarak ateş ve ağrı eşleşmelerini ezberleyin. Ateşin mediyatörleri interlökin bir, tümör nekroz faktörü ve prostaglandinlerdir. Ağrının mediyatörleri prostaglandinler, bradikinin ve nöropeptitlerdir. Görüldüğü gibi ateş ve ağrının ortak mediyatörü prostaglandinlerdir. Son olarak doku hasarından lökositlerin lizozomal enzimleri ve reaktif oksijen türleri sorumludur.
+Kemotaksi, lökosit toplanması ve aktivasyonunun mediyatörleri tümör nekroz faktörü, interlökin bir, kemokinler, ce üç a, ce beş a ve lökotrien B dörttür.
+Burası önemli, sınav spotu olarak ateş ve ağrı eşleşmelerini ezberleyin.
+Ateşin mediyatörleri interlökin bir, tümör nekroz faktörü ve prostaglandinlerdir.
+Ağrının mediyatörleri prostaglandinler, bradikinin ve nöropeptitlerdir.
+Görüldüğü gibi ateş ve ağrının ortak mediyatörü prostaglandinlerdir.
+Son olarak doku hasarından lökositlerin lizozomal enzimleri ve reaktif oksijen türleri sorumludur.
 
 @@ Vazoaktif aminler ve histamin
 Vazoaktif aminler, enflamatuvar uyarıdan sonra sahneye ilk çıkan mediyatörlerdendir. Burası önemli, sınav spotu: vazoaktif aminler en erken etkili mediyatörlerdendir. Hücrelerde hazır bulundukları için sentez beklemeden etki eder ve vasküler değişikliklerin ilk dalgasını oluştururlar. Başlıca iki amin vardır: histamin ve serotonin. Ortak etkileri vazodilatasyon, vasküler geçirgenlik artışı ve düz kaslar üzerine çeşitli etkilerdir. Etki hızlı başlar ama kalıcı değildir; daha sonra devreye giren sentezlenen mediyatörler yanıtı sürdürür.
 
-Histaminin kaynakları mast hücreleri, bazofiller ve trombositlerdir. Burası önemli: histaminin en zengin kaynağı mast hücresidir. Mast hücresi damar çevresindeki bağ dokusunda yerleşir ve histamini granüller içinde önceden depolanmış hâlde taşır. Uygun uyarı geldiğinde granül içeriği dışarı boşaltılır; buna degranülasyon denir. Histamin bu sayede çok kısa sürede dokuya ulaşır.
+Histaminin kaynakları mast hücreleri, bazofiller ve trombositlerdir.
+Burası önemli: histaminin en zengin kaynağı mast hücresidir.
+Mast hücresi damar çevresindeki bağ dokusunda yerleşir ve histamini granüller içinde önceden depolanmış hâlde taşır.
+Uygun uyarı geldiğinde granül içeriği dışarı boşaltılır; buna degranülasyon denir.
+Histamin bu sayede çok kısa sürede dokuya ulaşır.
 
-Mast hücresi degranülasyonunu tetikleyen uyarılar oldukça çeşitlidir. 1.'si immünoglobulin E aracılı reaksiyonlardır ve alerjik yanıtın temel tetikleyicisidir. 2.'si kompleman anafilatoksinleri, yani ce üç a ve ce beş a'dır. 3.'sü fiziksel hasardır: travma, ısı ve soğuk, antikor gerekmeden histamin salındırabilir. 4.'sü bazı nöropeptitler ve sitokinlerdir; örneğin interlökin bir ve interlökin sekiz. Dolayısıyla degranülasyon yalnızca alerjiye özgü değildir.
+Mast hücresi degranülasyonunu tetikleyen uyarılar oldukça çeşitlidir.
+1.'si immünoglobulin E aracılı reaksiyonlardır ve alerjik yanıtın temel tetikleyicisidir.
+2.'si kompleman anafilatoksinleri, yani ce üç a ve ce beş a'dır.
+3.'sü fiziksel hasardır: travma, ısı ve soğuk, antikor gerekmeden histamin salındırabilir.
+4.'sü bazı nöropeptitler ve sitokinlerdir; örneğin interlökin bir ve interlökin sekiz.
+Dolayısıyla degranülasyon yalnızca alerjiye özgü değildir.
 
-Histamin damar ağacının farklı segmentlerinde farklı etki gösterir. Arteriollerde vazodilatasyon yapar; bölgeye gelen kan akımı artar, kızarıklık ve sıcaklık buradan doğar. Venüllerde ise endotel hücre kasılmasına yol açar: endotel hücreleri büzülür, aralarında boşluklar açılır ve proteinden zengin sıvı damar dışına sızar. Bu geçirgenlik artışı geçicidir, çünkü histamin kısa ömürlüdür. Histamin bu etkilerini endotel yüzeyindeki ha bir reseptörleri üzerinden gösterir. Klinik olarak alerji ve ürtikerde önemlidir; ürtikerde deride görülen kaşıntılı, kabarık ve kızarık lezyonlar histaminin damar etkilerinin yansımasıdır. Ha bir antagonisti antihistaminikler bu reseptörleri bloke ederek etki gösterir. Dikkat edin, antihistaminikler histamin salınımını değil, histaminin reseptöre bağlanmasını engeller.
+Histamin damar ağacının farklı segmentlerinde farklı etki gösterir.
+Arteriollerde vazodilatasyon yapar; bölgeye gelen kan akımı artar, kızarıklık ve sıcaklık buradan doğar.
+Venüllerde ise endotel hücre kasılmasına yol açar: endotel hücreleri büzülür, aralarında boşluklar açılır ve proteinden zengin sıvı damar dışına sızar.
+Bu geçirgenlik artışı geçicidir, çünkü histamin kısa ömürlüdür.
+Histamin bu etkilerini endotel yüzeyindeki ha bir reseptörleri üzerinden gösterir.
+Klinik olarak alerji ve ürtikerde önemlidir; ürtikerde deride görülen kaşıntılı, kabarık ve kızarık lezyonlar histaminin damar etkilerinin yansımasıdır.
+Ha bir antagonisti antihistaminikler bu reseptörleri bloke ederek etki gösterir.
+Dikkat edin, antihistaminikler histamin salınımını değil, histaminin reseptöre bağlanmasını engeller.
 
 @@ Serotonin
 Serotonin, vazoaktif amin ailesinin 2. üyesidir, ama histaminin aynası değildir. Kaynağı trombositler ve bazı nöroendokrin hücrelerdir. Vazoaktif bir amin olmasına karşın baskın etkisi vazokonstriksiyondur. Enflamasyondaki rolü histamine göre daha az belirgindir ve tam önemi net değildir. Bu yüzden akut enflamasyonun erken vasküler fazında ana amin histamindir.
 
-Burası önemli, bu bir sınav tuzağıdır. Her ikisi de vazoaktif amin olduğu için serotonin de vazodilatör sanılır. Oysa histamin damarı genişletir, trombositlerden salınan serotonin ise ağırlıklı olarak damarı daraltır. Kısacası histamin için mast hücresi, ha bir reseptörü ve venülde geçici sızıntı; serotonin için trombosit ve vazokonstriksiyon akılda kalmalıdır.
+Burası önemli, bu bir sınav tuzağıdır.
+Her ikisi de vazoaktif amin olduğu için serotonin de vazodilatör sanılır.
+Oysa histamin damarı genişletir, trombositlerden salınan serotonin ise ağırlıklı olarak damarı daraltır.
+Kısacası histamin için mast hücresi, ha bir reseptörü ve venülde geçici sızıntı; serotonin için trombosit ve vazokonstriksiyon akılda kalmalıdır.
 
 @@ Araşidonik asit ve eikozanoid yolları
 Lipid mediyatörlerin büyük bölümü tek bir yağ asidinden doğar: araşidonik asit. Araşidonik asit, membran fosfolipitlerinden türetilen yirmi karbonlu çoklu doymamış bir yağ asididir. Dinlenme hâlinde membran fosfolipitlerinin içinde esterleşmiş olarak bulunur ve bu hâlde mediyatör üretimine katılamaz. Uyarı geldiğinde fosfolipaz A iki enzimi araşidonik asidi membrandan keserek serbest bırakır. Burası önemli, sınav spotu: araşidonik asit fosfolipaz A iki ile serbestleşir ve kortikosteroidler fosfolipaz A ikiyi inhibe eder. Bu basamak tüm araşidonik asit türevlerinin ortak giriş kapısıdır; kapı kapanırsa sonraki tüm ürünler azalır.
 
-Serbest araşidonik asitten türeyen lipid mediyatörlere eikozanoidler denir. Dört eikozanoid ailesi vardır: prostaglandinler, tromboksanlar, lökotrienler ve lipoksinler. Hangi aileye dönüşeceğini iki ana enzim yolu belirler. Siklooksijenaz yolu prostaglandinleri ve tromboksanı, lipoksijenaz yolu ise lökotrienleri ve lipoksinleri üretir. Eikozanoidler ge proteinine bağlı reseptörlere bağlanarak çok sayıda enflamatuvar yanıtı düzenler. Bu enzim ve ürün eşleşmesi konunun temelidir; siklooksijenaz yolunu baskılamak lökotrien üretimini durdurmaz.
+Serbest araşidonik asitten türeyen lipid mediyatörlere eikozanoidler denir.
+Dört eikozanoid ailesi vardır: prostaglandinler, tromboksanlar, lökotrienler ve lipoksinler.
+Hangi aileye dönüşeceğini iki ana enzim yolu belirler.
+Siklooksijenaz yolu prostaglandinleri ve tromboksanı, lipoksijenaz yolu ise lökotrienleri ve lipoksinleri üretir.
+Eikozanoidler ge proteinine bağlı reseptörlere bağlanarak çok sayıda enflamatuvar yanıtı düzenler.
+Bu enzim ve ürün eşleşmesi konunun temelidir; siklooksijenaz yolunu baskılamak lökotrien üretimini durdurmaz.
 
-Araşidonik asit metabolizması şeması bu yolları enzim basamaklarıyla gösterir. Siklooksijenaz kolunda araşidonik asit önce prostaglandin G iki, ardından prostaglandin H iki ara ürününe çevrilir. Bunlar son ürün değil ara üründür. Prostaglandin H ikiden üç kol ayrılır. 1.'si prostasiklindir; vazodilatasyon yapar ve trombosit agregasyonunu inhibe eder. 2.'si trombositte üretilen tromboksan A ikidir; trombosit agregasyonu ve vazokonstriksiyon yapar. 3.'sü mast hücrelerinden kaynaklanan prostaglandin D iki ve prostaglandin E ikidir; vazodilatasyon ve artmış vasküler permeabilite yapar.
+Araşidonik asit metabolizması şeması bu yolları enzim basamaklarıyla gösterir.
+Siklooksijenaz kolunda araşidonik asit önce prostaglandin G iki, ardından prostaglandin H iki ara ürününe çevrilir.
+Bunlar son ürün değil ara üründür.
+Prostaglandin H ikiden üç kol ayrılır.
+1.'si prostasiklindir; vazodilatasyon yapar ve trombosit agregasyonunu inhibe eder.
+2.'si trombositte üretilen tromboksan A ikidir; trombosit agregasyonu ve vazokonstriksiyon yapar.
+3.'sü mast hücrelerinden kaynaklanan prostaglandin D iki ve prostaglandin E ikidir; vazodilatasyon ve artmış vasküler permeabilite yapar.
 
-Şemanın lipoksijenaz kolunda araşidonik asit, beş lipoksijenaz ile önce beş hidroperoksieikozatetraenoik aside, oradan lökotrien A dörde dönüşür. Lökotrien A dörtten bir yanda lökotrien B dört, diğer yanda lökotrien C dört, D dört ve E dört dizisi oluşur. Lökotrien B dört nötrofil adezyonu ve kemotaksisi yapar ve nötrofil için kemoatraktandır; lökotrien C dört, D dört ve E dört bronkospazm ve artmış vasküler permeabilite yapar. Lipoksinler ise iki hücrenin iş birliğiyle oluşur: lökositte oluşan öncül lipoksinler trombosite geçer ve orada on iki lipoksijenaz ile aktif lipoksin A dört ve lipoksin B dörde dönüşür; aktif lipoksinler trombosit ve nötrofil etkileşiminde nötrofil adezyonunu ve kemotaksisini baskılar.
+Şemanın lipoksijenaz kolunda araşidonik asit, beş lipoksijenaz ile önce beş hidroperoksieikozatetraenoik aside, oradan lökotrien A dörde dönüşür.
+Lökotrien A dörtten bir yanda lökotrien B dört, diğer yanda lökotrien C dört, D dört ve E dört dizisi oluşur.
+Lökotrien B dört nötrofil adezyonu ve kemotaksisi yapar ve nötrofil için kemoatraktandır; lökotrien C dört, D dört ve E dört bronkospazm ve artmış vasküler permeabilite yapar.
+Lipoksinler ise iki hücrenin iş birliğiyle oluşur: lökositte oluşan öncül lipoksinler trombosite geçer ve orada on iki lipoksijenaz ile aktif lipoksin A dört ve lipoksin B dörde dönüşür; aktif lipoksinler trombosit ve nötrofil etkileşiminde nötrofil adezyonunu ve kemotaksisini baskılar.
 
-Şemada klinik olarak faydalı enzim ve reseptör antagonistleri kırmızı renkle işaretlenmiştir. Steroidler fosfolipaz A iki basamağını, koks bir ve koks iki inhibitörleri, aspirin ve indometazin siklooksijenaz basamağını, lipoksijenaz inhibitörleri beş lipoksijenaz basamağını hedefler. Lökotrien reseptör antagonistleri lökotrienlerin etkilerini inhibe eder ve klinikte astım tedavisinde kullanılır.
+Şemada klinik olarak faydalı enzim ve reseptör antagonistleri kırmızı renkle işaretlenmiştir.
+Steroidler fosfolipaz A iki basamağını, koks bir ve koks iki inhibitörleri, aspirin ve indometazin siklooksijenaz basamağını, lipoksijenaz inhibitörleri beş lipoksijenaz basamağını hedefler.
+Lökotrien reseptör antagonistleri lökotrienlerin etkilerini inhibe eder ve klinikte astım tedavisinde kullanılır.
 
 @@ Eikozanoidlerin etkileri ve prostaglandinler
 Araşidonik asit metabolitlerinin başlıca etkileri tablosu, aynı aileden moleküllerin bile birbirine zıt vasküler etki gösterebildiğini ortaya koyar. Vazodilatasyonu prostaglandinler yapar: prostasiklin, prostaglandin E bir, prostaglandin E iki ve prostaglandin D iki. Vazokonstriksiyonu tromboksan A iki ile lökotrien C dört, D dört ve E dört yapar. Artmış vasküler permeabiliteyi lökotrien C dört, D dört ve E dört yapar. Kemotaksi ve lökosit adezyonu ise lökotrien B dördün işidir. Buradan iki çıkarım yapılır: lökotrien C dört, D dört ve E dört hem vazokonstriksiyon hem permeabilite artışı yapar; lökotrien B dört ise damar tonusuyla değil, lökositin yönlendirilmesiyle ilgilidir.
 
-Prostaglandinler tek bir hücre tipine ait değildir. Mast hücreleri, makrofajlar, endotel hücreleri ve diğer birçok hücre tarafından üretilirler. Üretimi yöneten siklooksijenazın iki izoenzimi vardır. Burası önemli, sık ters sorulan bir tuzaktır. Koks bir konstitütiftir, yani uyarıdan bağımsız sürekli üretilir ve böbrek, mide gibi dokularda homeostatik işlevleri sürdürür. Koks iki ise enflamatuvar uyarı ile indüklenir ve enflamasyon bölgesindeki prostaglandin artışından sorumludur. Kısacası koks bir bakım enzimi, koks iki enflamasyon enzimidir. Enflamasyonda önemli prostanoidler prostaglandin E iki, prostaglandin D iki, prostaglandin F iki alfa, prostasiklin ve tromboksan A ikidir.
+Prostaglandinler tek bir hücre tipine ait değildir.
+Mast hücreleri, makrofajlar, endotel hücreleri ve diğer birçok hücre tarafından üretilirler.
+Üretimi yöneten siklooksijenazın iki izoenzimi vardır.
+Burası önemli, sık ters sorulan bir tuzaktır.
+Koks bir konstitütiftir, yani uyarıdan bağımsız sürekli üretilir ve böbrek, mide gibi dokularda homeostatik işlevleri sürdürür.
+Koks iki ise enflamatuvar uyarı ile indüklenir ve enflamasyon bölgesindeki prostaglandin artışından sorumludur.
+Kısacası koks bir bakım enzimi, koks iki enflamasyon enzimidir.
+Enflamasyonda önemli prostanoidler prostaglandin E iki, prostaglandin D iki, prostaglandin F iki alfa, prostasiklin ve tromboksan A ikidir.
 
-Prostaglandin D iki, başlıca mast hücresi ürünüdür. Vazodilatasyon yapar, vasküler geçirgenliği artırarak ödeme katkıda bulunur ve nötrofiller için kemoatraktandır. Böylece mast hücresi iki dalga hâlinde etki eder: önce granüldeki histamin, ardından yeni sentezlenen prostaglandin D iki. Şemada da prostaglandin D iki ve prostaglandin E iki, mast hücresi kaynaklı vazodilatör ve permeabilite artırıcı ürünler olarak birlikte gösterilir.
+Prostaglandin D iki, başlıca mast hücresi ürünüdür.
+Vazodilatasyon yapar, vasküler geçirgenliği artırarak ödeme katkıda bulunur ve nötrofiller için kemoatraktandır.
+Böylece mast hücresi iki dalga hâlinde etki eder: önce granüldeki histamin, ardından yeni sentezlenen prostaglandin D iki.
+Şemada da prostaglandin D iki ve prostaglandin E iki, mast hücresi kaynaklı vazodilatör ve permeabilite artırıcı ürünler olarak birlikte gösterilir.
 
-Prostaglandin E iki, enflamasyonun en çok hissedilen iki bulgusunun, ateş ve ağrının merkezindedir. Vazodilatördür, ateş ve ağrı oluşumunda önemlidir. Ağrıdaki rolü şöyledir: duyusal sinirleri sensitize eder, yani duyarlılaştırır ve ağrı eşiğini düşürür. Böylece normalde ağrı oluşturmayan uyarılar bile ağrılı algılanır. Burası önemli, sınav spotu: prostaglandin E iki ateş ve ağrıdan sorumludur, prostaglandin D iki ise başlıca mast hücresi ürünüdür.
+Prostaglandin E iki, enflamasyonun en çok hissedilen iki bulgusunun, ateş ve ağrının merkezindedir.
+Vazodilatördür, ateş ve ağrı oluşumunda önemlidir.
+Ağrıdaki rolü şöyledir: duyusal sinirleri sensitize eder, yani duyarlılaştırır ve ağrı eşiğini düşürür.
+Böylece normalde ağrı oluşturmayan uyarılar bile ağrılı algılanır.
+Burası önemli, sınav spotu: prostaglandin E iki ateş ve ağrıdan sorumludur, prostaglandin D iki ise başlıca mast hücresi ürünüdür.
 
 @@ Tromboksan A iki ve prostasiklin dengesi
 Tromboksan A iki, trombositler tarafından üretilir. Güçlü trombosit agregasyonu yapar, yani trombositlerin birbirine yapışarak kümeleşmesini sağlar ve vazokonstriksiyon yapar. Bu iki etki birlikte hem akımı yavaşlatır hem de trombosit tıkacını güçlendirir; bu hemostaz için yararlıyken damar içinde kontrolsüz kaldığında tromboza zemin hazırlar.
 
-Prostasiklin ise tromboksanın fizyolojik karşıtıdır. Endotel hücrelerinde üretilir; vazodilatasyon yapar ve trombosit agregasyonunu inhibe eder. Tromboksan A iki ile prostasiklin arasındaki denge, trombüs oluşumu ve önlenmesinde kritiktir. Tromboksan baskın olursa agregasyon ve vazokonstriksiyon öne geçer, tromboz eğilimi artar; prostasiklin baskın olursa damar açık kalır ve trombositler kümeleşmez. Burası önemli, bu çifti karıştırmayın: tromboksan trombositten çıkar, agregasyon ve vazokonstriksiyon yapar; prostasiklin endotelden çıkar, vazodilatasyon ve agregasyon inhibisyonu yapar. Kaynakları ve etkileri birbirinin tam tersidir.
+Prostasiklin ise tromboksanın fizyolojik karşıtıdır.
+Endotel hücrelerinde üretilir; vazodilatasyon yapar ve trombosit agregasyonunu inhibe eder.
+Tromboksan A iki ile prostasiklin arasındaki denge, trombüs oluşumu ve önlenmesinde kritiktir.
+Tromboksan baskın olursa agregasyon ve vazokonstriksiyon öne geçer, tromboz eğilimi artar; prostasiklin baskın olursa damar açık kalır ve trombositler kümeleşmez.
+Burası önemli, bu çifti karıştırmayın: tromboksan trombositten çıkar, agregasyon ve vazokonstriksiyon yapar; prostasiklin endotelden çıkar, vazodilatasyon ve agregasyon inhibisyonu yapar.
+Kaynakları ve etkileri birbirinin tam tersidir.
 
 @@ Lökotrienler ve lipoksinler
 Lökotrienler, lipoksijenaz yolunun başlıca proenflamatuvar ürünleridir. Üretici hücreler lökositler, özellikle nötrofiller ve mast hücreleridir. Başlıca enzim beş lipoksijenazdır; bu enzimin baskılanması hem lökotrien B dördü hem diğer lökotrienleri azaltır. Temel lökotrienler iki gruptur: lökotrien B dört ile lökotrien C dört, D dört ve E dört.
 
-Lökotrien B dört, güçlü bir nötrofil kemoatraktanıdır. Nötrofilleri bölgeye çeker, nötrofil adezyonunu artırır ve nötrofillerde reaktif oksijen türlerinin üretimini artırır. Bu üç etki bir zincir oluşturur: nötrofil önce çağrılır, sonra endotele yapışır ve sonunda aktive olarak öldürücü ürünlerini üretir. Reaktif oksijen türlerinin doku hasarı mediyatörleri arasında yer alması, bu etkinin aşırısının dokuya da zarar verebileceğini gösterir.
+Lökotrien B dört, güçlü bir nötrofil kemoatraktanıdır.
+Nötrofilleri bölgeye çeker, nötrofil adezyonunu artırır ve nötrofillerde reaktif oksijen türlerinin üretimini artırır.
+Bu üç etki bir zincir oluşturur: nötrofil önce çağrılır, sonra endotele yapışır ve sonunda aktive olarak öldürücü ürünlerini üretir.
+Reaktif oksijen türlerinin doku hasarı mediyatörleri arasında yer alması, bu etkinin aşırısının dokuya da zarar verebileceğini gösterir.
 
-Lökotrien C dört, D dört ve E dört birlikte sisteinil lökotrienler olarak anılır. Güçlü bronkokonstriksiyon yaparlar, damar düz kasında vazokonstriksiyon oluştururlar ve venül permeabilitesinde belirgin artışa yol açarlar. Bu nedenle astım patogenezinde önemli rol oynarlar; hava yolundaki daralma ve ödem bu etkilerin birleşimidir. Burası önemli, sınav tuzağı: kemotaksi lökotrien B dördün işidir; bronkokonstriksiyon ve astım ise sisteinil lökotrienlerin işidir.
+Lökotrien C dört, D dört ve E dört birlikte sisteinil lökotrienler olarak anılır.
+Güçlü bronkokonstriksiyon yaparlar, damar düz kasında vazokonstriksiyon oluştururlar ve venül permeabilitesinde belirgin artışa yol açarlar.
+Bu nedenle astım patogenezinde önemli rol oynarlar; hava yolundaki daralma ve ödem bu etkilerin birleşimidir.
+Burası önemli, sınav tuzağı: kemotaksi lökotrien B dördün işidir; bronkokonstriksiyon ve astım ise sisteinil lökotrienlerin işidir.
 
-Araşidonik asitten türeyen her molekül enflamasyonu artırmaz. Lipoksinler lökosit ve trombosit etkileşimleriyle oluşan anti enflamatuvar eikozanoidlerdir. Nötrofil kemotaksisini ve adezyonunu inhibe eder, lökosit toplanmasını sınırlarlar. Enflamasyonun çözünme fazında önemlidirler ve yanıtın kapanmasına katkı verirler. Yani etkileri lökotrien B dördün tam tersidir: lökotrien B dört nötrofili çağırıp yapıştırırken lipoksinler bu iki adımı da baskılar. Tüm eikozanoidlerin proenflamatuvar olduğu ifadesi bu yüzden yanlıştır.
+Araşidonik asitten türeyen her molekül enflamasyonu artırmaz.
+Lipoksinler lökosit ve trombosit etkileşimleriyle oluşan anti enflamatuvar eikozanoidlerdir.
+Nötrofil kemotaksisini ve adezyonunu inhibe eder, lökosit toplanmasını sınırlarlar.
+Enflamasyonun çözünme fazında önemlidirler ve yanıtın kapanmasına katkı verirler.
+Yani etkileri lökotrien B dördün tam tersidir: lökotrien B dört nötrofili çağırıp yapıştırırken lipoksinler bu iki adımı da baskılar.
+Tüm eikozanoidlerin proenflamatuvar olduğu ifadesi bu yüzden yanlıştır.
 
 @@ Eikozanoidleri hedefleyen ilaçlar ve kortikosteroidler
 Eikozanoidleri hedefleyen ilaçların en yaygın grubu siklooksijenaz inhibitörleridir. Aspirin ve ibuprofen gibi non steroid antienflamatuvar ilaçlar koks bir ve koks ikiyi birlikte inhibe eder. Sonuçta prostaglandin sentezi azalır ve ağrı ile ateş azalır. Bu, ateş ve ağrının ortak mediyatörünün prostaglandinler olmasının doğrudan sonucudur. Bu ilaçlar yalnız siklooksijenaz yolunu etkiler; lökotrien üretimi baskılanmaz.
 
-Seçici koks iki inhibitörleri yalnızca enflamasyona bağlı prostaglandinleri hedefler; amaç koks bire bağlı mide ve böbrek işlevlerini korumaktır. Ancak bu seçiciliğin bir bedeli vardır. Burası önemli, sınav spotu: seçici koks iki inhibitörleri tromboksan ve prostasiklin dengesini bozarak tromboz riskini artırabilir. Mantığı şudur: trombositteki tromboksan bu ilaçlarla baskılanmazken endoteldeki prostasiklin üretimi azalabilir ve denge agregasyon ile vazokonstriksiyon lehine kayar.
+Seçici koks iki inhibitörleri yalnızca enflamasyona bağlı prostaglandinleri hedefler; amaç koks bire bağlı mide ve böbrek işlevlerini korumaktır.
+Ancak bu seçiciliğin bir bedeli vardır.
+Burası önemli, sınav spotu: seçici koks iki inhibitörleri tromboksan ve prostasiklin dengesini bozarak tromboz riskini artırabilir.
+Mantığı şudur: trombositteki tromboksan bu ilaçlarla baskılanmazken endoteldeki prostasiklin üretimi azalabilir ve denge agregasyon ile vazokonstriksiyon lehine kayar.
 
-Lökotrien yolu iki farklı noktadan hedeflenir. Beş lipoksijenaz inhibitörlerinin örneği zileutondur ve lökotrien üretimini azaltır. Lökotrien reseptör antagonistlerinin örneği zafirlukast ve benzerleridir; sisteinil lökotrien bir reseptörünü bloke ederler. Bu ilaçların klinik kullanım alanları alerjik astım ve alerjik rinittir. Zileuton sentezi engellediği için hem lökotrien B dört hem sisteinil lökotrienler azalır; zafirlukast ise yalnız sisteinil lökotrienlerin reseptör düzeyindeki etkisini keser.
+Lökotrien yolu iki farklı noktadan hedeflenir.
+Beş lipoksijenaz inhibitörlerinin örneği zileutondur ve lökotrien üretimini azaltır.
+Lökotrien reseptör antagonistlerinin örneği zafirlukast ve benzerleridir; sisteinil lökotrien bir reseptörünü bloke ederler.
+Bu ilaçların klinik kullanım alanları alerjik astım ve alerjik rinittir.
+Zileuton sentezi engellediği için hem lökotrien B dört hem sisteinil lökotrienler azalır; zafirlukast ise yalnız sisteinil lökotrienlerin reseptör düzeyindeki etkisini keser.
 
-Kortikosteroidler güçlü anti enflamatuvar ilaçlardır ve gücünü birden çok basamağı aynı anda hedeflemesinden alır. Fosfolipaz A ikiyi inhibe ederek araşidonik asit salınımını azaltır; böylece hem siklooksijenaz hem lipoksijenaz ürünleri düşer. Ayrıca koks iki ekspresyonunu, interlökin bir ve tümör nekroz faktörü gibi proenflamatuvar sitokinlerin üretimini ve indüklenebilir nitrik oksit sentaz ekspresyonunu azaltır. Sonuçta hem eikozanoid hem sitokin yanıtı baskılanır. Basamak ne kadar yukarıdaysa etki o kadar geniştir: fosfolipaz A iki blokajı tüm eikozanoidleri, reseptör blokajı yalnız bir grubu etkiler.
+Kortikosteroidler güçlü anti enflamatuvar ilaçlardır ve gücünü birden çok basamağı aynı anda hedeflemesinden alır.
+Fosfolipaz A ikiyi inhibe ederek araşidonik asit salınımını azaltır; böylece hem siklooksijenaz hem lipoksijenaz ürünleri düşer.
+Ayrıca koks iki ekspresyonunu, interlökin bir ve tümör nekroz faktörü gibi proenflamatuvar sitokinlerin üretimini ve indüklenebilir nitrik oksit sentaz ekspresyonunu azaltır.
+Sonuçta hem eikozanoid hem sitokin yanıtı baskılanır.
+Basamak ne kadar yukarıdaysa etki o kadar geniştir: fosfolipaz A iki blokajı tüm eikozanoidleri, reseptör blokajı yalnız bir grubu etkiler.
 
 @@ Sitokinler, tümör nekroz faktörü ve interlökin bir
 Eikozanoidler lipit yapılıyken sitokinler protein yapılı mediyatörlerdir. Sitokinler, bağışıklık ve enflamatuvar yanıtları düzenleyen ve bunlara aracılık eden proteinlerdir. Kaynakları aktif lenfositler, makrofajlar, dendritik hücreler, endotel ve epitel hücreleri ile fibroblastlardır. Bu derste akut enflamasyonda önemli olan sitokinler ele alınır: tümör nekroz faktörü, interlökin bir, interlökin altı, interlökin on yedi ve kısaca Tip 1 interferonlar. Sitokinler uyarı sonrası sentezlendiği için histamin gibi anında değil, daha geç belirginleşen bir etki gösterir.
 
-Tümör nekroz faktörünün kaynakları makrofajlar, te lenfositleri ve mast hücreleridir. İnterlökin birin kaynakları ise makrofajlar, dendritik hücreler, bazı epitel hücreleri ve endotel hücreleridir. İkisinin ortak başlıca kaynağı makrofajdır. Üretimlerini tetikleyenler lipopolisakkarit gibi mikrobiyal ürünler, nekrotik hücre ürünleri ve diğer enflamatuvar uyaranlardır. Tetikleyicilerin hem enfeksiyon hem steril hasar kökenli olması, bu sitokinlerin mikrop olmadan da üretilebileceğini gösterir.
+Tümör nekroz faktörünün kaynakları makrofajlar, te lenfositleri ve mast hücreleridir.
+İnterlökin birin kaynakları ise makrofajlar, dendritik hücreler, bazı epitel hücreleri ve endotel hücreleridir.
+İkisinin ortak başlıca kaynağı makrofajdır.
+Üretimlerini tetikleyenler lipopolisakkarit gibi mikrobiyal ürünler, nekrotik hücre ürünleri ve diğer enflamatuvar uyaranlardır.
+Tetikleyicilerin hem enfeksiyon hem steril hasar kökenli olması, bu sitokinlerin mikrop olmadan da üretilebileceğini gösterir.
 
-Tümör nekroz faktörü ve interlökin birin enflamasyon bölgesindeki ilk hedefi endoteldir. Endotel aktivasyonunda E ve P selektin ekspresyonu artar; selektinler lökositin endotel üzerinde ilk temasını sağlar. İntegrin ligandları olan ikam ve vikam artar; bunlar lökositin endotele sıkı tutunmasını sağlar. Prokoagülan aktivite de artar, yani endotel yüzeyi pıhtılaşmayı kolaylaştıran bir yüzeye dönüşür. Bu sitokinler lökositlerin adezyonunu ve göçünü artırır ve özellikle nötrofiller ile makrofajları aktive eder. Fibroblastlarda ise kolajen sentezini ve proliferasyonu artırırlar; bu etki özellikle interlökin bir için belirgindir ve enflamasyonun onarım ile fibrozisle bağlantısını gösterir.
+Tümör nekroz faktörü ve interlökin birin enflamasyon bölgesindeki ilk hedefi endoteldir.
+Endotel aktivasyonunda E ve P selektin ekspresyonu artar; selektinler lökositin endotel üzerinde ilk temasını sağlar.
+İntegrin ligandları olan ikam ve vikam artar; bunlar lökositin endotele sıkı tutunmasını sağlar.
+Prokoagülan aktivite de artar, yani endotel yüzeyi pıhtılaşmayı kolaylaştıran bir yüzeye dönüşür.
+Bu sitokinler lökositlerin adezyonunu ve göçünü artırır ve özellikle nötrofiller ile makrofajları aktive eder.
+Fibroblastlarda ise kolajen sentezini ve proliferasyonu artırırlar; bu etki özellikle interlökin bir için belirgindir ve enflamasyonun onarım ile fibrozisle bağlantısını gösterir.
 
-Akut enflamasyonda sitokinlerin rollerini gösteren şekil üç panelden oluşur. Lokal enflamasyon panelinde tümör nekroz faktörü ve interlökin bir endoteli aktive eder; adezyon molekülü ekspresyonu ve permeabilite artar, aktive endotel de interlökin bir ve kemokin salgılayarak sinyali büyütür. Aynı sitokinlerle uyarılan makrofaj interlökin bir, interlökin altı ve kemokin salgılar; nötrofilin diğer uyaranlara yanıtı güçlenir. İnterlökin bir ve interlökin altı ile uyarılan te hücresi interlökin on yedi salgılar, interlökin on yedi de diğer hücrelerden kemokin salınımını artırır.
+Akut enflamasyonda sitokinlerin rollerini gösteren şekil üç panelden oluşur.
+Lokal enflamasyon panelinde tümör nekroz faktörü ve interlökin bir endoteli aktive eder; adezyon molekülü ekspresyonu ve permeabilite artar, aktive endotel de interlökin bir ve kemokin salgılayarak sinyali büyütür.
+Aynı sitokinlerle uyarılan makrofaj interlökin bir, interlökin altı ve kemokin salgılar; nötrofilin diğer uyaranlara yanıtı güçlenir.
+İnterlökin bir ve interlökin altı ile uyarılan te hücresi interlökin on yedi salgılar, interlökin on yedi de diğer hücrelerden kemokin salınımını artırır.
 
 @@ Sistemik etkiler: ateş, akut faz yanıtı ve lökositoz
 Sitokinler yüksek düzeyde üretildiğinde dolaşıma geçer ve uzak organlarda koruyucu bir sistemik yanıt başlatır. Şeklin orta paneli bunu organ organ gösterir. Beyinde tümör nekroz faktörü ve interlökin bir ateş oluşturur; bunu hipotalamusta prostaglandin E iki aracılığıyla yaparlar. Burası önemli, bu bilgi çıkmış sorularda soruldu: sitokin aracılı ateşin merkezi hipotalamustur. Tümör nekroz faktörünün medulla oblongatadaki bir ateş merkezini uyararak ateş yaptığı ifadesi yanlıştır. Ateşin son ortak mediyatörü hipotalamustaki prostaglandin E ikidir ve non steroid antienflamatuvar ilaçların ateş düşürmesi bu basamağın baskılanmasıyla ilgilidir.
 
-Burası önemli, çıkmış sorularda ateşin yararları da soruldu. Ateşin yararları arasında te ve be hücre aktivasyonunda artış, nötrofil migrasyonunda artış, interferon üretiminde artış ve nötrofillerin antibakteriyel madde üretiminde artış sayılır. Taşikardi nedeniyle koroner yetersizlik gelişmesi ise bir yarar değil, ateşin zararlı bir sonucudur; soruda doğru cevap olarak bu seçenek arandı.
+Burası önemli, çıkmış sorularda ateşin yararları da soruldu.
+Ateşin yararları arasında te ve be hücre aktivasyonunda artış, nötrofil migrasyonunda artış, interferon üretiminde artış ve nötrofillerin antibakteriyel madde üretiminde artış sayılır.
+Taşikardi nedeniyle koroner yetersizlik gelişmesi ise bir yarar değil, ateşin zararlı bir sonucudur; soruda doğru cevap olarak bu seçenek arandı.
 
-Karaciğerde akut faz yanıtı gelişir ve akut faz proteinleri üretilir: ce er pe, yani ce reaktif protein, serum amiloid A ve fibrinojen. Ce reaktif protein, enflamasyon ya da enfeksiyon durumlarında karaciğerin üreterek kana saldığı bir proteindir. Şekilde karaciğeri uyaran sitokinler interlökin bir ve interlökin altıdır. Kemik iliğinde ise lökosit üretimi ve salınımı artar ve lökositoz gelişir; şekilde bunun için tümör nekroz faktörü, interlökin bir ve interlökin altı gösterilir.
+Karaciğerde akut faz yanıtı gelişir ve akut faz proteinleri üretilir: ce er pe, yani ce reaktif protein, serum amiloid A ve fibrinojen.
+Ce reaktif protein, enflamasyon ya da enfeksiyon durumlarında karaciğerin üreterek kana saldığı bir proteindir.
+Şekilde karaciğeri uyaran sitokinler interlökin bir ve interlökin altıdır.
+Kemik iliğinde ise lökosit üretimi ve salınımı artar ve lökositoz gelişir; şekilde bunun için tümör nekroz faktörü, interlökin bir ve interlökin altı gösterilir.
 
-Burası önemli, çıkmış sorularda sitokinlerle ilgili yanlış ifade soruldu. İnterlökin bir, interlökin altı ve tümör nekroz faktörü ateş yüksekliğinin oluşmasında rol oynar. İnterlökin sekiz kemotaksis mekanizmasında rol alır. Endotel, nötrofil ve makrofajdaki yüzey reseptörlerine lipopolisakkaritin bağlanması interlökin altı sentezini uyarır. Sitokinler akut faz reaktanlarının salınımında rol oynar. Yanlış olan ifade, interlökin birin antienflamatuvar bir sitokin olduğudur; interlökin bir, tümör nekroz faktörüyle birlikte akut enflamasyonun ana proenflamatuvar sitokinidir.
+Burası önemli, çıkmış sorularda sitokinlerle ilgili yanlış ifade soruldu.
+İnterlökin bir, interlökin altı ve tümör nekroz faktörü ateş yüksekliğinin oluşmasında rol oynar.
+İnterlökin sekiz kemotaksis mekanizmasında rol alır.
+Endotel, nötrofil ve makrofajdaki yüzey reseptörlerine lipopolisakkaritin bağlanması interlökin altı sentezini uyarır.
+Sitokinler akut faz reaktanlarının salınımında rol oynar.
+Yanlış olan ifade, interlökin birin antienflamatuvar bir sitokin olduğudur; interlökin bir, tümör nekroz faktörüyle birlikte akut enflamasyonun ana proenflamatuvar sitokinidir.
 
 @@ Sistemik patolojik etkiler, sepsis ve septik şok
 Sitokin düzeyi çok yükseldiğinde koruyucu sistemik yanıt zararlı hâle gelir ve bu tablonun baş aktörü tümör nekroz faktörüdür. Sepsiste ve sistemik enflamatuvar yanıt sendromunda yüksek tümör nekroz faktörü düzeyleri vazodilatasyona, miyokard depresyonuna, yani kalp kasının kasılma gücünün azalmasına ve düşük kan basıncına, yani şoka yol açar. Kaşeksiye, yani kilo kaybı ve iştahsızlığa da neden olur. Şeklin sağ panelinde bunlara ek olarak damar içinde trombüs, iskelet kasında insülin direnci ve yağ dokusu kaybı gösterilir. Sistemik enflamatuvar yanıt sendromu, enfeksiyon, travma, yanık ya da büyük cerrahi gibi ağır stres faktörlerine karşı verilen yaygın ve kontrolsüz enflamatuvar cevaptır.
 
-Burası önemli, bu bilgi çıkmış sorularda soruldu: sepsiste görülen vazodilatasyon, miyokard depresyonu, hipotansiyon ve şok, insülin direnci ve kaşeksinin ortaya çıkmasında merkezi rolü oynadığı düşünülen sitokin tümör nekroz faktörüdür. Bir başka sınav tuzağı da şudur: interlökin bir tümör nekroz faktörüne benzer etkiler gösterir ama özellikle ateşte daha belirgin rol oynar; tümör nekroz faktörü ise sistemik olarak kaşeksiye yol açar.
+Burası önemli, bu bilgi çıkmış sorularda soruldu: sepsiste görülen vazodilatasyon, miyokard depresyonu, hipotansiyon ve şok, insülin direnci ve kaşeksinin ortaya çıkmasında merkezi rolü oynadığı düşünülen sitokin tümör nekroz faktörüdür.
+Bir başka sınav tuzağı da şudur: interlökin bir tümör nekroz faktörüne benzer etkiler gösterir ama özellikle ateşte daha belirgin rol oynar; tümör nekroz faktörü ise sistemik olarak kaşeksiye yol açar.
 
-Burası önemli, sepsis patogenezi de çıkmış sorularda soruldu. Patojenle ilişkili moleküler paternler mikroorganizmada, bunları tanıyan patern tanıma reseptörleri ise konakta bulunur ve birbirini tanır. Bu etkileşim sonucunda fagositoz, sitokin üretimi ve opsonizasyon gerçekleşir. Vazoaktif aminler, nitrik oksit ve lipopolisakkarit vasküler permeabilite artışına neden olur. Miyokard kontraktilitesinin bozulması ve vasküler tonusun azalması sonucunda hipotansiyon ortaya çıkar.
+Burası önemli, sepsis patogenezi de çıkmış sorularda soruldu.
+Patojenle ilişkili moleküler paternler mikroorganizmada, bunları tanıyan patern tanıma reseptörleri ise konakta bulunur ve birbirini tanır.
+Bu etkileşim sonucunda fagositoz, sitokin üretimi ve opsonizasyon gerçekleşir.
+Vazoaktif aminler, nitrik oksit ve lipopolisakkarit vasküler permeabilite artışına neden olur.
+Miyokard kontraktilitesinin bozulması ve vasküler tonusun azalması sonucunda hipotansiyon ortaya çıkar.
 
-Burası önemli, septik şokla ilgili şu bilgiler de soruldu. Septik hastaların yarısına varan bir kısmında dissemine intravasküler koagülasyon komplikasyonu gelişebilir. Septik şok gram pozitif ve gram negatif bakteriler ile mantarlar tarafından tetiklenebilir. İnsülin direnci ve hiperglisemi görülebilir. Böbrek, karaciğer, akciğer ve kalp başta olmak üzere çoklu organ yetmezliğine yol açabilir. Ce reaktif protein ve prokalsitonin gibi akut enflamasyon belirteçleri ise septik şokta düşmez, yükselir; düşer diyen ifade yanlıştır.
+Burası önemli, septik şokla ilgili şu bilgiler de soruldu.
+Septik hastaların yarısına varan bir kısmında dissemine intravasküler koagülasyon komplikasyonu gelişebilir.
+Septik şok gram pozitif ve gram negatif bakteriler ile mantarlar tarafından tetiklenebilir.
+İnsülin direnci ve hiperglisemi görülebilir.
+Böbrek, karaciğer, akciğer ve kalp başta olmak üzere çoklu organ yetmezliğine yol açabilir.
+Ce reaktif protein ve prokalsitonin gibi akut enflamasyon belirteçleri ise septik şokta düşmez, yükselir; düşer diyen ifade yanlıştır.
 
 @@ İnterlökin altı, interlökin on yedi, interferonlar ve kronik enflamasyon sitokinleri
 Tümör nekroz faktörü ve interlökin bir dışında üç sitokin daha öne çıkar. İnterlökin altının kaynağı makrofajlar ve diğer hücre tipleridir. Burası önemli, sınav spotu: interlökin altı akut faz protein üretiminde önemlidir ve özellikle karaciğerde akut faz yanıtını, yani ce reaktif protein, serum amiloid A ve fibrinojen üretimini uyararak önemli sistemik etkiler oluşturur.
 
-İnterlökin on yedi, te ha on yedi hücrelerinden salınır ve nötrofil alımını destekler. Psöriyazis ve romatoid artrit gibi bazı kronik enflamatuvar hastalıklarda rol oynar. Burası önemli, bu bilgi çıkmış sorularda soruldu. Akut apandisit tanısı muskularis propriada nötrofil lökosit varlığını gerektirir; akut enflamasyonun karakteristiği olan bu nötrofil infiltrasyonunda ve pürülan yanıtın gelişiminde rol oynayan temel sitokin interlökin on yedidir. Tip 1 interferonlar ise antiviral savunmada önemlidir ve enflamasyonun bazı sistemik belirtilerine katkıda bulunur.
+İnterlökin on yedi, Th17 hücrelerinden salınır ve nötrofil alımını destekler.
+Psöriyazis ve romatoid artrit gibi bazı kronik enflamatuvar hastalıklarda rol oynar.
+Burası önemli, bu bilgi çıkmış sorularda soruldu.
+Akut apandisit tanısı muskularis propriada nötrofil lökosit varlığını gerektirir; akut enflamasyonun karakteristiği olan bu nötrofil infiltrasyonunda ve pürülan yanıtın gelişiminde rol oynayan temel sitokin interlökin on yedidir.
+Tip 1 interferonlar ise antiviral savunmada önemlidir ve enflamasyonun bazı sistemik belirtilerine katkıda bulunur.
 
-Sitokin tablosu sitokinleri akut ve kronik enflamasyondaki rollerine göre ayırır. Akut grupta tümör nekroz faktörü, endotelde adezyon molekülü ekspresyonunu ve diğer sitokinlerin salgılanmasını uyarır ve ateş, iştahsızlık, kaşeksi ve akut faz yanıtı gibi sistemik etkiler gösterir. İnterlökin bir benzer etkilere sahiptir ama ateş gelişiminde daha belirgin rol oynar. İnterlökin altı karaciğerde akut faz yanıtını uyarır. Kemokinler de bu gruptadır.
+Sitokin tablosu sitokinleri akut ve kronik enflamasyondaki rollerine göre ayırır.
+Akut grupta tümör nekroz faktörü, endotelde adezyon molekülü ekspresyonunu ve diğer sitokinlerin salgılanmasını uyarır ve ateş, iştahsızlık, kaşeksi ve akut faz yanıtı gibi sistemik etkiler gösterir.
+İnterlökin bir benzer etkilere sahiptir ama ateş gelişiminde daha belirgin rol oynar.
+İnterlökin altı karaciğerde akut faz yanıtını uyarır.
+Kemokinler de bu gruptadır.
 
-Kronik enflamasyonda öne çıkan sitokinlerden interlökin on iki dendritik hücre ve makrofaj kaynaklıdır; interferon gama üretimini artırır, te ha bir yanıtını güçlendirir ve makrofaj aktivasyonunu destekler. İnterferon gama te lenfositleri ve doğal öldürücü hücrelerden salınır; makrofajları aktive eder, onların mikropları ve tümör hücrelerini öldürme kapasitesini artırır ve kronik hücresel immün yanıtın temel sitokinidir. İnterlökin on yedi ise nötrofil ve monositlerin enflamasyon bölgesine toplanmasını sağlar ve birçok kronik enflamatuvar hastalıkta önemlidir. Tablonun notlarına göre burada yalnız en önemli sitokinler özetlenmiştir; akut ve kronik sitokinler arasında belirgin örtüşme vardır ve akut gruptaki sitokinlerin tamamı kronik süreçlere de katkıda bulunabilir.
+Kronik enflamasyonda öne çıkan sitokinlerden interlökin on iki dendritik hücre ve makrofaj kaynaklıdır; interferon gama üretimini artırır, Th1 yanıtını güçlendirir ve makrofaj aktivasyonunu destekler.
+İnterferon gama te lenfositleri ve doğal öldürücü hücrelerden salınır; makrofajları aktive eder, onların mikropları ve tümör hücrelerini öldürme kapasitesini artırır ve kronik hücresel immün yanıtın temel sitokinidir.
+İnterlökin on yedi ise nötrofil ve monositlerin enflamasyon bölgesine toplanmasını sağlar ve birçok kronik enflamatuvar hastalıkta önemlidir.
+Tablonun notlarına göre burada yalnız en önemli sitokinler özetlenmiştir; akut ve kronik sitokinler arasında belirgin örtüşme vardır ve akut gruptaki sitokinlerin tamamı kronik süreçlere de katkıda bulunabilir.
 
 @@ Kemokinler
 Kemokinler, sekiz ila on kilodalton ağırlığında küçük sitokinlerdir ve temel işlevleri lökositler için kemoatraktan olmaktır. Yaklaşık kırk kemokin ve yirmi civarında kemokin reseptörü vardır. Kaynakları makrofajlar, endotel hücreleri, te lenfositler, mast hücreleri ve diğer pek çok hücre tipidir. Hücre dışı matrikste ve endotel yüzeyinde proteoglikanlara bağlanarak tutulurlar; böylece kan akımıyla yıkanıp gitmezler ve lökositin izleyeceği bir yoğunluk farkı oluşur. Protein yapılarındaki korunmuş sistein kalıntıları arasındaki aminoasit sayısına göre dört ana gruba ayrılırlar ve bu grupların hedef hücre özgüllükleri kısmen farklıdır.
 
-Kemokinler işlevlerine göre iki sınıfa ayrılır. İnflamatuvar kemokinler mikroplar ve doku hasarı ile indüklenir, lökosit adezyonunu ve kemotaksisini artırır. Homeostatik kemokinler ise doku mimarisinin korunmasında görev alır: te ve be hücrelerinin lenf düğümlerindeki bölgelere yerleşimini sağlar, organ gelişimine ve lenfoid doku organizasyonuna katkıda bulunur. Yani kemokinlerin yalnızca enflamasyonda üretildiği ifadesi yanlıştır. Burası önemli, sınav spotu: kemotaksi ve lökosit toplanmasının başlıca mediyatörleri kemokinler, lökotrien B dört ve ce beş a'dır.
+Kemokinler işlevlerine göre iki sınıfa ayrılır.
+İnflamatuvar kemokinler mikroplar ve doku hasarı ile indüklenir, lökosit adezyonunu ve kemotaksisini artırır.
+Homeostatik kemokinler ise doku mimarisinin korunmasında görev alır: te ve be hücrelerinin lenf düğümlerindeki bölgelere yerleşimini sağlar, organ gelişimine ve lenfoid doku organizasyonuna katkıda bulunur.
+Yani kemokinlerin yalnızca enflamasyonda üretildiği ifadesi yanlıştır.
+Burası önemli, sınav spotu: kemotaksi ve lökosit toplanmasının başlıca mediyatörleri kemokinler, lökotrien B dört ve ce beş a'dır.
 
 @@ Kompleman sistemi ve aktivasyon yolları
 Kompleman sistemi, çözünebilir plazma proteinleri ve membran reseptörlerinden oluşur. Konak savunmasında, özellikle bakterilere karşı görev alır ve üç ana işlevi opsonizasyon, kemotaksi ve hücre lizisidir. Opsonizasyon, mikrobun fagositozu kolaylaştıran moleküllerle kaplanmasıdır. Başlıca bileşenler ce birden ce dokuza kadar olan proteinlerdir; etkin bileşenlerin bazıları ce üç ve ce beşin parçalanma ürünleridir. Kompleman bir proteolitik kaskaddır: dolaşımda inaktif bekleyen proteinler enflamasyon bölgesinde sırayla kesilerek aktive olur.
 
-Kompleman üç yolla aktive olur. Klasik yolda antijen ve antikor kompleksi, yani immünoglobulin G ya da immünoglobulin M içeren kompleks ce biri bağlayıp aktive eder; antikor gerektiren yol budur. Alternatif yol, lipopolisakkarit ve polisakkaritler gibi mikrobiyal yüzey molekülleriyle tetiklenir. Lektin yolu ise mannoz bağlayıcı lektinin mikrobiyal karbonhidratlara, yani mikrobiyal mannoz kalıntılarına bağlanmasıyla başlar. Üç yolun ortak noktası ce üç konvertaz oluşumu ve ce üçün ce üç a ile ce üç be'ye parçalanmasıdır. Ce üçün parçalanması komplemanın tüm efektör işlevlerinin başlangıcıdır.
+Kompleman üç yolla aktive olur.
+Klasik yolda antijen ve antikor kompleksi, yani immünoglobulin G ya da immünoglobulin M içeren kompleks ce biri bağlayıp aktive eder; antikor gerektiren yol budur.
+Alternatif yol, lipopolisakkarit ve polisakkaritler gibi mikrobiyal yüzey molekülleriyle tetiklenir.
+Lektin yolu ise mannoz bağlayıcı lektinin mikrobiyal karbonhidratlara, yani mikrobiyal mannoz kalıntılarına bağlanmasıyla başlar.
+Üç yolun ortak noktası ce üç konvertaz oluşumu ve ce üçün ce üç a ile ce üç be'ye parçalanmasıdır.
+Ce üçün parçalanması komplemanın tüm efektör işlevlerinin başlangıcıdır.
 
-Kompleman aktivasyonu şeması, ce üç konvertazdan sonra açılan üç efektör kolu gösterir. Ce beş a ve ce üç a enflamasyonu yönetir: lökositleri bölgeye çağırır ve aktive eder, mikroplar lökositlerce yok edilir. Ce üç be mikrop yüzeyine çöker; fagositteki ce üç be reseptörü bunu tanır ve mikrop fagosite edilir. Membran atak kompleksi oluşur ve mikrop lizise uğrar. Yani kompleman işlevleri ce üç ve diğer kompleman proteinlerinin parçalanma ürünleri ile membran atak kompleksi aracılığıyla sağlanır.
+Kompleman aktivasyonu şeması, ce üç konvertazdan sonra açılan üç efektör kolu gösterir.
+Ce beş a ve ce üç a enflamasyonu yönetir: lökositleri bölgeye çağırır ve aktive eder, mikroplar lökositlerce yok edilir.
+Ce üç be mikrop yüzeyine çöker; fagositteki ce üç be reseptörü bunu tanır ve mikrop fagosite edilir.
+Membran atak kompleksi oluşur ve mikrop lizise uğrar.
+Yani kompleman işlevleri ce üç ve diğer kompleman proteinlerinin parçalanma ürünleri ile membran atak kompleksi aracılığıyla sağlanır.
 
 @@ Komplemanın ana etkileri
 Komplemanın enflamatuvar rolünü küçük parçalanma ürünleri üstlenir. Ce üç a, ce dört a ve ce beş a mast hücrelerinden histamin salınımını uyarır ve bu yüzden anafilatoksin olarak adlandırılır; vazodilatasyon ve geçirgenlik artışı bu yolla dolaylı olarak gelişir. Ce beş a ayrıca nötrofiller ve monositler için güçlü bir kemotaktik ajandır.
 
-Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: kompleman sisteminde kemotakside görev alan ve anafilatoksin olarak bilinen bileşen ce beş a'dır. Ce üç tek başına, ce altı ya da ce beş be ile ce dokuz arasındaki kompleks bu sorunun cevabı değildir.
+Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: kompleman sisteminde kemotakside görev alan ve anafilatoksin olarak bilinen bileşen ce beş a'dır.
+Ce üç tek başına, ce altı ya da ce beş be ile ce dokuz arasındaki kompleks bu sorunun cevabı değildir.
 
-Komplemanın iki doğrudan antimikrobiyal işlevi vardır. Opsonizasyonda ce üç be ve onun inaktive formu olan i ce üç be mikropları kaplar ve fagosit reseptörlerine bağlanarak fagositozu artırır; opsonize mikrop çok daha kolay tanınır ve yutulur. Burası önemli, bu da çıkmış sorularda defalarca soruldu: kompleman sisteminde opsonizasyon ve fagositozda görevli bileşen ce üç be'dir. Ce üç a ile ce üç be sık karıştırılır; ce üç a anafilatoksindir, ce üç be ise opsonindir.
+Komplemanın iki doğrudan antimikrobiyal işlevi vardır.
+Opsonizasyonda ce üç be ve onun inaktive formu olan i ce üç be mikropları kaplar ve fagosit reseptörlerine bağlanarak fagositozu artırır; opsonize mikrop çok daha kolay tanınır ve yutulur.
+Burası önemli, bu da çıkmış sorularda defalarca soruldu: kompleman sisteminde opsonizasyon ve fagositozda görevli bileşen ce üç be'dir.
+Ce üç a ile ce üç be sık karıştırılır; ce üç a anafilatoksindir, ce üç be ise opsonindir.
 
-Hücre lizisinde ce beş be'den ce dokuza kadar olan bileşenler birleşerek membran atak kompleksini oluşturur. Bu kompleks hedef hücre zarında por açar ve hücreyi lizise uğratır. Özellikle Neisserya türlerinin öldürülmesinde önemlidir; bu yüzden membran atak kompleksi oluşumunu bozan durumlar Neisserya enfeksiyonlarına karşı savunmayı zayıflatır. Kısacası kemotaksi ce beş a, opsonizasyon ce üç be, liziz membran atak kompleksidir.
+Hücre lizisinde ce beş be'den ce dokuza kadar olan bileşenler birleşerek membran atak kompleksini oluşturur.
+Bu kompleks hedef hücre zarında por açar ve hücreyi lizise uğratır.
+Özellikle Neisserya türlerinin öldürülmesinde önemlidir; bu yüzden membran atak kompleksi oluşumunu bozan durumlar Neisserya enfeksiyonlarına karşı savunmayı zayıflatır.
+Kısacası kemotaksi ce beş a, opsonizasyon ce üç be, liziz membran atak kompleksidir.
 
 @@ Kompleman düzenleyici proteinler
 Kompleman güçlü bir kaskad olduğu için sıkı bir frene ihtiyaç duyar; düzenleyici proteinler aşırı aktivasyonu engeller ve konak dokusunu korur. Ce bir inhibitörü klasik yolu sınırlar; eksikliğinde kalıtsal anjiyoödem gelişir. Bu tablo tekrarlayan ödem ataklarıyla kendini gösterir. Bu örnek, düzenleyici proteinlerin pasif değil, enflamasyonun sınırlarını çizen aktif kontrol noktaları olduğunu gösterir.
 
-Bozunmayı hızlandıran faktör, kısaca daf ile ce de elli dokuz, ge pe i bağlantılı proteinlerdir. Glikozilfosfatidilinositol, yani ge pe i, hücre zarındaki bazı proteinleri hücre dışı ortama bağlayan özel bir glikolipit yapıdır ve bu çapaya sahip proteinlere ge pe i bağlı proteinler denir. Daf ve ce de elli dokuz, ce üç konvertaz ve membran atak kompleksi oluşumunu sınırlar. Eksiklikleri paroksismal noktürnal hemoglobinüriye yol açar; bu durumda eritrositler kendi yüzeylerindeki kompleman saldırısına karşı korumasız kalır ve lizise uğrar.
+Bozunmayı hızlandıran faktör, kısaca daf ile ce de elli dokuz, ge pe i bağlantılı proteinlerdir.
+Glikozilfosfatidilinositol, yani ge pe i, hücre zarındaki bazı proteinleri hücre dışı ortama bağlayan özel bir glikolipit yapıdır ve bu çapaya sahip proteinlere ge pe i bağlı proteinler denir.
+Daf ve ce de elli dokuz, ce üç konvertaz ve membran atak kompleksi oluşumunu sınırlar.
+Eksiklikleri paroksismal noktürnal hemoglobinüriye yol açar; bu durumda eritrositler kendi yüzeylerindeki kompleman saldırısına karşı korumasız kalır ve lizise uğrar.
 
-Faktör H, ce üç konvertaz inaktivasyonunu destekler; böylece ce üçün sürekli parçalanması ve kaskadın büyümesi önlenir. Mutasyonları hemolitik üremik sendrom ve ıslak maküler dejenerasyonla ilişkilidir. Burası önemli, sınav spotu olarak bu üç eşleşmeyi bilin: ce bir inhibitörü eksikliği kalıtsal anjiyoödem, daf ve ce de elli dokuz eksikliği paroksismal noktürnal hemoglobinüri, faktör H mutasyonu hemolitik üremik sendrom ve ıslak maküler dejenerasyon.
+Faktör H, ce üç konvertaz inaktivasyonunu destekler; böylece ce üçün sürekli parçalanması ve kaskadın büyümesi önlenir.
+Mutasyonları hemolitik üremik sendrom ve ıslak maküler dejenerasyonla ilişkilidir.
+Burası önemli, sınav spotu olarak bu üç eşleşmeyi bilin: ce bir inhibitörü eksikliği kalıtsal anjiyoödem, daf ve ce de elli dokuz eksikliği paroksismal noktürnal hemoglobinüri, faktör H mutasyonu hemolitik üremik sendrom ve ıslak maküler dejenerasyon.
 
 @@ Kininler, trombosit aktive edici faktör, nitrik oksit ve nöropeptitler
 Kallikrein ve kinin sistemi, plazma kaynaklı proteolitik sistemlerden biridir. Plazma kininojenlerinden kallikrein aracılığıyla bradikinin oluşur. Bradikinin vasküler geçirgenliği artırır, düz kas kontraksiyonu yapar, arteriollerde vazodilatasyon oluşturur ve ağrı oluşumuna katkıda bulunur. Kısa ömürlüdür; kinazlar tarafından hızla yıkılır, bu yüzden etkisi kısa sürer. Bradikinin, prostaglandinler ve nöropeptitlerle birlikte ağrı mediyatörleri arasında yer alır.
 
-Trombosit aktive edici faktör, yani paf, fosfolipit türevi bir mediyatördür. Kaynak hücreleri trombositler, bazofiller, mast hücreleri, nötrofiller, makrofajlar ve endotel hücreleridir. Trombosit agregasyonu, vazokonstriksiyon ve bronkokonstriksiyon yapar. Düşük dozda ise tersine vazodilatasyon ve artmış vasküler geçirgenlik oluşturur. Yani etkisi doza göre yön değiştirir. Akut enflamasyondaki gerçek önemi hâlen tartışmalıdır.
+Trombosit aktive edici faktör, yani paf, fosfolipit türevi bir mediyatördür.
+Kaynak hücreleri trombositler, bazofiller, mast hücreleri, nötrofiller, makrofajlar ve endotel hücreleridir.
+Trombosit agregasyonu, vazokonstriksiyon ve bronkokonstriksiyon yapar.
+Düşük dozda ise tersine vazodilatasyon ve artmış vasküler geçirgenlik oluşturur.
+Yani etkisi doza göre yön değiştirir.
+Akut enflamasyondaki gerçek önemi hâlen tartışmalıdır.
 
-Nitrik oksit, mediyatörler arasında alışılmadık bir yapıya sahiptir: çözünür bir gazdır. Üç farklı enzimle üretilir: endotelde e nos, nöronlarda n nos ve makrofajlarda indüklenebilir i nos. Enflamasyonda iki rolü vardır. Endotel kaynaklı nitrik oksit vazodilatasyon yapar. Makrofajda i nos ile üretilen nitrik oksit ise peroksinitrit oluşturarak mikrobisidal, yani mikrop öldürücü etki gösterir. Kortikosteroidlerin i nos ekspresyonunu azalttığını hatırlayın.
+Nitrik oksit, mediyatörler arasında alışılmadık bir yapıya sahiptir: çözünür bir gazdır.
+Üç farklı enzimle üretilir: endotelde e nos, nöronlarda n nos ve makrofajlarda indüklenebilir i nos.
+Enflamasyonda iki rolü vardır.
+Endotel kaynaklı nitrik oksit vazodilatasyon yapar.
+Makrofajda i nos ile üretilen nitrik oksit ise peroksinitrit oluşturarak mikrobisidal, yani mikrop öldürücü etki gösterir.
+Kortikosteroidlerin i nos ekspresyonunu azalttığını hatırlayın.
 
-Nöropeptitler enflamasyonu sinir sistemine bağlar. Kaynakları duyusal sinirler ve bazı lökositlerdir; önemli örneği P maddesi, yani substans pe'dir. Etkileri ağrı sinyal iletimi, vasküler geçirgenlik artışı ve düz kas kontraksiyonudur. Enflamatuvar yanıtın başlatılmasına ve düzenlenmesine katkıda bulunurlar. Ağrı mediyatörleri birbirini güçlendirir: prostaglandin E iki ağrı eşiğini düşürürken bradikinin ve P maddesi ağrı sinyalini üretir ve iletir.
+Nöropeptitler enflamasyonu sinir sistemine bağlar.
+Kaynakları duyusal sinirler ve bazı lökositlerdir; önemli örneği P maddesi, yani substans pe'dir.
+Etkileri ağrı sinyal iletimi, vasküler geçirgenlik artışı ve düz kas kontraksiyonudur.
+Enflamatuvar yanıtın başlatılmasına ve düzenlenmesine katkıda bulunurlar.
+Ağrı mediyatörleri birbirini güçlendirir: prostaglandin E iki ağrı eşiğini düşürürken bradikinin ve P maddesi ağrı sinyalini üretir ve iletir.
 
 @@ Mediyatörlerin fazlalığı, sinerjisi ve genel özet
 Görünen karmaşaya rağmen bu kalabalık bilinçli bir güvenlik tasarımıdır. Çok sayıda mediyatör birbirini güçlendiren ve yedekleyen etkilere sahiptir. Örneğin permeabilite artışı histamin, ce üç a, ce beş a ve sisteinil lökotrienlerle; kemotaksi kemokinler, ce beş a ve lökotrien B dört ile sağlanır. Bu fazlalık enflamasyonun güçlü ve dayanıklı olmasını sağlar, ama bir sonucu da vardır: bir yolu bloklamak çoğu zaman yanıtı tamamen durdurmaz. Bu nedenle tedavi, belirli stratejik düğüm noktalarını hedefler: siklooksijenaz, lökotrien yolu, tümör nekroz faktörü, interlökin bir, interlökin altı, interlökin on yedi ve kompleman.
 
-Özetle, enflamasyonun kimyasal mediyatörleri hücresel ve plazma kökenlidir. Histamin ve serotonin erken vazodilatasyon ve permeabilite artışı sağlar. Prostaglandinler, lökotrienler ve lipoksinler vasküler tonus, permeabilite, ağrı, ateş ve lökosit hareketini düzenler. Sitokinler ve kemokinler lökosit alımı, aktivasyonu ve sistemik yanıtların ana kurgulayıcılarıdır. Kompleman sistemi opsonizasyon, kemotaksi, hücre lizisi ve mast hücre aktivasyonunda rol oynar; kininler, paf, nitrik oksit ve nöropeptitler ise vasküler reaksiyonları, ağrıyı ve diğer yanıtları modüle eder. Klinik açıdan birçok anti enflamatuvar ilaç, bu mediyatör yollarını hedef alarak etki gösterir.
+Özetle, enflamasyonun kimyasal mediyatörleri hücresel ve plazma kökenlidir.
+Histamin ve serotonin erken vazodilatasyon ve permeabilite artışı sağlar.
+Prostaglandinler, lökotrienler ve lipoksinler vasküler tonus, permeabilite, ağrı, ateş ve lökosit hareketini düzenler.
+Sitokinler ve kemokinler lökosit alımı, aktivasyonu ve sistemik yanıtların ana kurgulayıcılarıdır.
+Kompleman sistemi opsonizasyon, kemotaksi, hücre lizisi ve mast hücre aktivasyonunda rol oynar; kininler, paf, nitrik oksit ve nöropeptitler ise vasküler reaksiyonları, ağrıyı ve diğer yanıtları modüle eder.
+Klinik açıdan birçok anti enflamatuvar ilaç, bu mediyatör yollarını hedef alarak etki gösterir.
