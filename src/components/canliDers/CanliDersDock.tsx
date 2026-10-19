@@ -93,7 +93,7 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
       if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
       const t = e.target as HTMLElement | null;
       if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
-      if (t?.closest('[role="slider"], [role="dialog"], [role="menu"], [role="alertdialog"]')) return;
+      if (t?.closest?.('[role="slider"], [role="dialog"], [role="menu"], [role="alertdialog"]')) return;
       if (e.key === ' ' || e.code === 'Space') {
         if (t && /^(BUTTON|A)$/.test(t.tagName)) return; // odaktaki düğme kendi işini yapar
         e.preventDefault();

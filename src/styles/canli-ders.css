@@ -87,7 +87,7 @@
 }
 
 /* ---------- ders ekranı ---------- */
-.cd-ders { display: flex; flex-direction: column; gap: 8px; min-height: 320px; width: 100%; }
+.cd-ders { display: flex; flex-direction: column; gap: 8px; min-height: 180px; width: 100%; }
 .cd-ders-bas { display: flex; align-items: center; gap: 10px; min-width: 0; flex: none; }
 .cd-geri { display: inline-flex; align-items: center; gap: 2px; height: 32px; padding: 0 8px 0 4px; border-radius: 9px; color: var(--color-ink-2); font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; flex: none; }
 .cd-geri > svg { width: 18px; height: 18px; }
@@ -596,8 +596,12 @@
 .cd-daha-menu > .cd-btn, .cd-daha-menu > .cd-cd-grup, .cd-daha-menu > .cd-cd-grup > .cd-btn { justify-content: flex-start; width: 100%; }
 .cd-daha-menu .cd-btn.is-ikon { width: 100%; padding: 0 12px; }
 .cd-daha-satir { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 36px; padding: 0 4px 0 8px; font-size: 13px; font-weight: 600; color: var(--color-ink-2); }
+.cd-daha-satir > :first-child { flex: none; white-space: nowrap; }
+.cd-daha-satir > :not(:first-child) { min-width: 0; }
 .cd-dock-daha .cd-daha-menu { min-width: 260px; }
-@media (max-width: 640px) { .cd-dock-daha .cd-daha-menu { right: auto; left: 50%; transform: translateX(-50%); min-width: min(280px, calc(100vw - 32px)); } }
+@media (max-width: 640px) { .cd-dock-daha .cd-daha-menu { min-width: min(280px, calc(100vw - 32px)); } }
+/* yatay sığdırma CanliDersDaha.tsx'te (iç açılır menüler kırpılmasın diye overflow verilmez) */
+.cd-daha-menu { max-width: calc(100vw - 16px); box-sizing: border-box; }
 .cd-parca { font-style: normal; font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 6px; background: var(--color-accent-soft, rgba(0,0,0,.06)); color: var(--color-ink-2); margin-right: 4px; vertical-align: 1px; }
 
 /* konu anlatım süreleri özeti */
@@ -823,4 +827,26 @@
   .cd-liste .cd-no, .cd-satir-sure { display: none; }
   .cd-serit .cd-gorunum { width: 100%; }
   .cd-serit .cd-gorunum > button { flex: 1; padding: 0 8px; }
+}
+
+/* ---------- telefon yatay / kısa ekran (≤ 500 px yükseklik) ----------
+ * 844×390'da üst çubuk + iki satırlık ders başlığı + oynatıcı metne ~60 px bırakıyordu. Ders açıkken uygulama üst
+ * çubuğu gizlenir (sol menü yerinde), başlık tek satıra iner, oynatıcının "Bölüm" satırı saklanır (bölüm listesi düğmede). */
+@media (max-height: 500px) and (orientation: landscape) {
+  :root.cd-ders-acik { --sh-top-h: 0px !important; --sh-top-vis: 0px !important; --sh-tabs-h: 0px !important; }
+  :root.cd-ders-acik :is(.s12-top, .sh-top, .s12-tabs, .sh-tabs) { display: none !important; }
+  .cd-ders { gap: 6px; }
+  .cd-ders-bas { flex-wrap: nowrap; gap: 6px; }
+  .cd-ders-bas .cd-geri { font-size: 0; gap: 0; width: 32px; padding: 0; justify-content: center; }
+  .cd-ders-ad { flex: 1 1 auto; font-size: 14.5px; }
+  .cd-ders-bas .cd-sekmeler button > svg { display: none; }
+  .cd-ders-takip .kt-btn span { display: none; }
+  .cd-ders-takip .kt-btn { width: 34px; padding: 0; }
+  .cd-ders-uc .cd-btn-yildizli { width: 34px; padding: 0; justify-content: center; }
+  .cd-ders-uc .cd-btn-yildizli > span { display: none; }
+  .cd-tam { padding: 4px 10px; gap: 0; }
+  .cd-tam .cd-simdi { display: none; }
+  .cd-metin { padding-bottom: 50vh; }
+  .cd-basla { bottom: 8px; }
+  .cd-basla-btn small { display: none; }
 }

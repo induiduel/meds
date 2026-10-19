@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 38,
-  "baslik": "Çevrimdışı kullanım, Genetik Check Up ve kurul takvimi",
+  "onem": 39,
+  "baslik": "Sesli derste daha iyi takip, iPhone/iPad düzeltmeleri",
   "maddeler": [
-    "Canlı ders metinlerinde sayılar daha okunaklı rakamlarla gösteriliyor.",
-    "Çevrimdışı kullanım altyapısı ve Genetik Check Up ekranı eklendi.",
-    "Genetik sınav asistanına yeni bölüm ve kurul takvimi verisi eklendi.",
-    "Önem listesi, çalışma eşitlemesi ve görünüm düzeltmeleri."
+    "Sesli derste okunan cümle artık sesle birebir eşleşiyor; vurgu kaymıyor.",
+    "Paragrafa dokununca takip oradan sürüyor; uzak atlamalarda metin doğru yere gidiyor.",
+    "iPhone ve iPad'de kaydırırken metnin zıplaması ve yazı alanlarında sayfanın yakınlaşması giderildi.",
+    "Tablet ve telefonda taşan düğmeler, menüler ve telefon yatay düzeni düzeltildi."
   ]
 }

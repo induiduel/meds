@@ -385,7 +385,8 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
         if (tr.height > 0 && tr.top < alt) alt = Math.min(alt, tr.top);
       }
       const z = elementZoom(el) || 1;
-      setYuk(Math.max(320, (alt - Math.max(0, top) - 10) / z));
+      // Telefon yatayda (390 px) 320 alt sınırı bölmeyi oynatıcının altına itiyordu
+      setYuk(Math.max(180, (alt - Math.max(0, top) - 10) / z));
     };
     const plan = () => { if (!t) t = window.setTimeout(olc, 30); };
     olc();
