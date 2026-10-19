@@ -15,6 +15,31 @@ type WebkitElement = HTMLElement & {
 const APP_FS_CLASS = 'is-app-fullscreen';
 const FS_EVENT = 'medsor:fullscreenchange';
 
+let lastTouchOrScrollAt = 0;
+if (typeof window !== 'undefined') {
+  const markTouch = () => {
+    lastTouchOrScrollAt = Date.now();
+  };
+  window.addEventListener('touchstart', markTouch, { passive: true, capture: true });
+  window.addEventListener('touchmove', markTouch, { passive: true, capture: true });
+  window.addEventListener('scroll', markTouch, { passive: true, capture: true });
+}
+
+export function isIosWebKit(): boolean {
+  if (typeof navigator === 'undefined') return false;
+  const ua = navigator.userAgent || '';
+  if (/iPad|iPhone|iPod/.test(ua)) return true;
+  if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) return true;
+  if (typeof CSS !== 'undefined' && typeof CSS.supports === 'function' && CSS.supports('-webkit-touch-callout', 'none')) {
+    return true;
+  }
+  return false;
+}
+
+export function wasRecentlyScrollingOrTouching( thresholdMs = 1200 ): boolean {
+  return Date.now() - lastTouchOrScrollAt < thresholdMs;
+}
+
 export function getNativeFullscreenElement(): Element | null {
   if (typeof document === 'undefined') return null;
   const d = document as WebkitDocument;
@@ -27,6 +52,7 @@ export function isNativeFullscreen(): boolean {
 
 export function isNativeFullscreenSupported(el?: HTMLElement | null): boolean {
   if (typeof document === 'undefined') return false;
+  if (isIosWebKit()) return false;
   const target = (el || document.documentElement) as WebkitElement;
   return typeof target.requestFullscreen === 'function' || typeof target.webkitRequestFullscreen === 'function' || typeof target.webkitRequestFullScreen === 'function';
 }
@@ -43,10 +69,10 @@ function notifyFullscreenChange() {
 
 /**
  * Her platformda (iPhone Safari, iPhone Chrome, iPad, Android, Masaüstü) çalışan tam ekran açıcı.
- * - Tarayıcı Fullscreen API destekliyorsa (Masaüstü, Android, iPad) doğrudan tam ekrana geçer.
- * - Desteklemiyorsa veya reddederse (iPhone Safari / iPhone Chrome) uygulama kabuğunu gizleyen
- *   gerçek tam ekran görünüm katmanını (`html.is-app-fullscreen`) etkinleştirir ve adres çubuğunu
- *   küçültmek için sayfayı en üste kaydırır.
+ * - iOS / iPadOS WebKit'te native `webkitRequestFullscreen` dikey kaydırma hareketini (özellikle bölünmüş
+ *   ekranda metin/PDF kaydırırken) "tam ekrandan çıkma hareketi" sanıp tam ekranı otomatik kapattığı için
+ *   iOS/iPadOS cihazlarda doğrudan kilitli CSS Tam Ekran katmanı (`html.is-app-fullscreen`) kullanılır.
+ * - Masaüstü ve Android'de hem `html.is-app-fullscreen` hem native Fullscreen API etkinleştirilir.
  */
 export async function enterFullscreen(el?: HTMLElement | null): Promise<boolean> {
   if (typeof document === 'undefined') return false;
@@ -58,6 +84,11 @@ export async function enterFullscreen(el?: HTMLElement | null): Promise<boolean>
     window.scrollTo(0, 0);
   }
   notifyFullscreenChange();
+
+  // iOS ve iPadOS'ta WebKit native fullscreen kaydırma sırasında kendiliğinden kapandığı için çağrılmaz
+  if (isIosWebKit()) {
+    return true;
+  }
 
   const target = (el || root) as WebkitElement;
   const req = target.requestFullscreen || target.webkitRequestFullscreen || target.webkitRequestFullScreen;
@@ -73,7 +104,6 @@ export async function enterFullscreen(el?: HTMLElement | null): Promise<boolean>
     notifyFullscreenChange();
     return true;
   } catch {
-    // iPhone / iOS WebKit veya gömülü görünümde Fullscreen API reddedilirse CSS tam ekran kipi aktif kalır
     notifyFullscreenChange();
     return true;
   }
@@ -111,13 +141,14 @@ export function useAppFullscreen(): [boolean, (el?: HTMLElement | null) => void,
 
   useEffect(() => {
     const sync = () => {
-      // Eğer kullanıcı tarayıcının kendi Esc / küçült düğmesiyle native tam ekrandan çıktıysa sınıfı da temizle
       setActive(isAppFullscreen());
     };
     const onNativeChange = () => {
+      // Dokunmatik cihazda kaydırma sırasında tarayıcı native tam ekrandan çıksa bile uygulama tam ekranını koru
       if (!isNativeFullscreen() && document.documentElement.classList.contains(APP_FS_CLASS)) {
-        // Native fullscreen kapandıysa uygulama tam ekran sınıfını da kapat
-        document.documentElement.classList.remove(APP_FS_CLASS);
+        if (!isIosWebKit() && !wasRecentlyScrollingOrTouching()) {
+          document.documentElement.classList.remove(APP_FS_CLASS);
+        }
       }
       sync();
     };

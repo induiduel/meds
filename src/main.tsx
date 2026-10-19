@@ -71,6 +71,10 @@ if (typeof window !== 'undefined') {
   vv?.addEventListener('resize', update, { passive: true });
   vv?.addEventListener('scroll', update, { passive: true });
   window.addEventListener('resize', update, { passive: true });
+  const onFs = () => { update(); setTimeout(update, 120); };
+  document.addEventListener('fullscreenchange', onFs, { passive: true });
+  document.addEventListener('webkitfullscreenchange', onFs, { passive: true });
+  window.addEventListener('medsor:fullscreenchange', onFs, { passive: true });
   document.addEventListener('focusin', () => setTimeout(update, 250));
   document.addEventListener('focusout', () => setTimeout(update, 250));
 })();

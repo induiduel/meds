@@ -12,6 +12,7 @@ import type { InteractiveDeck, SlideItem } from './InteractiveDeckView';
 import { getSlidePdfLocation } from '../../services/slidePdfMappingService';
 import { drivePreviewUrl, driveViewUrl, useDeckPdf, type DeckPdfFile } from '../../services/deckPdfService';
 import { PDF_SAVED_EVENT, removeSavedPdf, savePdfOffline, savedPdfObjectUrl } from '../../services/deviceStorage';
+import { isIosWebKit, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
 import { toast } from '../ui/Toast';
 import './pdf/pdfDoc.css';
 
@@ -104,11 +105,23 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   }, [query, searchOpen]);
   useEffect(() => setHitIdx(0), [debounced]);
 
-  /* --- tam ekran: görüntüleyicinin kendisi; API yoksa ekranı kaplayan katman --- */
+  /* --- tam ekran: görüntüleyicinin kendisi; API yoksa ya da iOS/iPadOS ise ekranı kaplayan katman --- */
   const [isFs, setIsFs] = useState(false);
   const [maxed, setMaxed] = useState(false);
+  const hadNativeFsRef = useRef(false);
   useEffect(() => {
-    const on = () => setIsFs(((document as any).fullscreenElement || (document as any).webkitFullscreenElement) === rootRef.current && !!rootRef.current);
+    const on = () => {
+      const fs = ((document as any).fullscreenElement || (document as any).webkitFullscreenElement) === rootRef.current && !!rootRef.current;
+      setIsFs(fs);
+      if (fs) {
+        hadNativeFsRef.current = true;
+      } else if (hadNativeFsRef.current) {
+        hadNativeFsRef.current = false;
+        if (isIosWebKit() || wasRecentlyScrollingOrTouching()) {
+          setMaxed(true);
+        }
+      }
+    };
     document.addEventListener('fullscreenchange', on);
     document.addEventListener('webkitfullscreenchange', on);
     return () => {
@@ -119,13 +132,21 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   const fsOn = isFs || maxed;
   const toggleFs = () => {
     const d = document as any;
-    if (maxed) return setMaxed(false);
+    if (maxed) {
+      setMaxed(false);
+      if (isFs) {
+        hadNativeFsRef.current = false;
+        (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+      }
+      return;
+    }
     if (isFs) {
+      hadNativeFsRef.current = false;
       (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
       return;
     }
     const el: any = rootRef.current;
-    const req = el?.requestFullscreen || el?.webkitRequestFullscreen;
+    const req = !isIosWebKit() && (el?.requestFullscreen || el?.webkitRequestFullscreen);
     if (!req) return setMaxed(true);
     // İstek reddedilir ya da yanıtsız kalırsa (gömülü görünümler) ekranı kaplayan katmana geçilir
     let settled = false;

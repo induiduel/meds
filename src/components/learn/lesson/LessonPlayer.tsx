@@ -56,7 +56,8 @@ import { penPalette, SlideDrawingCanvas, setDrawingGlobalState, useDrawingGlobal
 import { getSlidePdfLocation } from '../../../services/slidePdfMappingService';
 import { useDeckPdf } from '../../../services/deckPdfService';
 import { QuestionFocus, focusMarks } from '../../../services/questionFocus';
-import { openPwaInstallGuide } from '../../../services/pwaService';
+import { detectIosDevice, openPwaInstallGuide } from '../../../services/pwaService';
+import { wasRecentlyScrollingOrTouching } from '../../../utils/fullscreen';
 import { toast } from '../../ui/Toast';
 import { deckName } from '../../../data/deckStore';
 import {
@@ -579,7 +580,14 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const pdfInfo = useDeckPdf(deck.id);
   const pdfLoc = useMemo(() => getSlidePdfLocation(deck.id, step.slide.slideNumber, step.slide, n, pdfInfo?.slides), [deck.id, step, n, pdfInfo?.slides]);
   const [pdfPage, setPdfPage] = useState(pdfLoc.primaryPage);
-  useEffect(() => setPdfPage(pdfLoc.primaryPage), [pdfLoc.primaryPage]);
+  const pdfUserScrolledPage = useRef<number | null>(null);
+  useEffect(() => {
+    if (pdfUserScrolledPage.current !== null) {
+      pdfUserScrolledPage.current = null;
+      return;
+    }
+    setPdfPage(pdfLoc.primaryPage);
+  }, [pdfLoc.primaryPage]);
   // PDF'te kaydırılan sayfa başka bir adımın bölümüne düşerse ders o adıma geçer (özet/tekrar adımları tüm PDF'i
   // kapsadığı için hedef olmaz). Adım değişiminden hemen sonraki programlı kaydırma sayılmaz; kısa bekleme ile süzülür.
   const stepPdfRanges = useMemo(() => steps.map((s) => {
@@ -608,7 +616,10 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       stepPdfRanges.forEach((r, i) => {
         if (inside(r) && (best < 0 || Math.abs(i - index) < Math.abs(best - index))) best = i;
       });
-      if (best >= 0 && best !== index) goToRef.current(best);
+      if (best >= 0 && best !== index) {
+        pdfUserScrolledPage.current = page;
+        goToRef.current(best);
+      }
     }, 650);
   }, [stepPdfRanges, index]);
   const kaz = useMemo(() => matchKazanim(step, kazIndex[deck.id], pdfLoc.primaryPage, `${deck.title} ${deck.discipline || ''}`), [step, kazIndex, deck.id, deck.title, deck.discipline, pdfLoc.primaryPage]);
@@ -744,12 +755,22 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   /* --- tam ekran (destek yoksa odak modu) --- */
   const [isFs, setIsFs] = useState(false);
   const [immersive, setImmersive] = useState(false);
+  const hadNativeFsRef = useRef(false);
   useEffect(() => {
     const on = () => {
       const d = document as any;
       const fs = !!(d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement);
       setIsFs(fs);
-      if (fs) setImmersive(false);
+      if (fs) {
+        hadNativeFsRef.current = true;
+        setImmersive(false);
+      } else if (hadNativeFsRef.current) {
+        hadNativeFsRef.current = false;
+        // Dokunmatik cihazda kaydırma hareketi yüzünden tarayıcı native fullscreen'den çıktıysa tam ekran modunu koru
+        if (detectIosDevice() || wasRecentlyScrollingOrTouching()) {
+          setImmersive(true);
+        }
+      }
     };
     document.addEventListener('fullscreenchange', on);
     document.addEventListener('webkitfullscreenchange', on);
@@ -758,22 +779,35 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       document.removeEventListener('webkitfullscreenchange', on);
     };
   }, []);
-  // Tam ekran tüm ekranı kaplar: belge kökü tam ekrana alınır (ders katmanı sabit konumlu, ekranı doldurur).
-  // API yoksa (iPhone Safari / Chrome) ya da istek reddedilir/yanıtsız kalırsa yalnız arayüzü gizleyen tam ekran moduna geçilir.
+  // Tam ekran tüm ekranı kaplar: iOS / iPadOS WebKit'te native fullscreen dikey kaydırma sırasında otomatik
+  // kapandığı için iOS/iPadOS'ta doğrudan kilitli CSS tam ekran (`immersive`) kullanılır.
   const toggleFullscreen = () => {
     setToolsOpen(false);
     const d = document as any;
-    if (immersive) return setImmersive(false);
+    if (immersive) {
+      setImmersive(false);
+      if (d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
+        hadNativeFsRef.current = false;
+        (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
+      }
+      return;
+    }
     if (d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
+      hadNativeFsRef.current = false;
       (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
       return;
     }
     const el: any = document.documentElement;
-    const req = el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen;
+    const req = !detectIosDevice() && (el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen);
     if (!req) {
       setImmersive(true);
+      try {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+      } catch {
+        window.scrollTo(0, 0);
+      }
       const isStandalone = window.matchMedia?.('(display-mode: standalone)').matches || (navigator as any).standalone === true;
-      if (/iPhone|iPod/.test(navigator.userAgent) && !isStandalone) {
+      if (detectIosDevice() && !isStandalone) {
         toast.info(
           'Tam ekran ders modu açıldı',
           'Adres çubuğunu da tamamen gizlemek için uygulamayı Ana Ekrana ekleyebilirsin.',

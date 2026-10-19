@@ -5,9 +5,10 @@
  * kaydırınca/PDF'i gezince takip 8 sn durur ve "Canlı konuma dön" çıkar. Oynatıcı alt çubuktadır (CanliDersDock).
  */
 import React, { Suspense, lazy, memo, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { ChevronDown, ChevronLeft, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, ScrollText } from 'lucide-react';
+import { ArrowLeftRight, ArrowUpDown, ChevronDown, ChevronLeft, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
+import { isIosWebKit, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
 import {
   cdCumleAraligi, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
@@ -83,6 +84,15 @@ const YAZI_KEY = 'medsoru_canli_ders_tam_yazi';
 const YAZI_ENAZ = 14;
 const YAZI_ENCOK = 40;
 
+/** Metin + PDF bölünmüş ekran dinamik boyut ve düzen tercihleri */
+type BolmeYon = 'oto' | 'yan-yana' | 'ust-alt';
+const BOLME_ORAN_KEY = 'medsoru_canli_ders_bolme_oran';
+const BOLME_YON_KEY = 'medsoru_canli_ders_bolme_yon';
+const BOLME_TERS_KEY = 'medsoru_canli_ders_bolme_ters';
+const ORAN_MIN = 20;
+const ORAN_MAX = 80;
+const oranSinirla = (v: number) => Math.max(ORAN_MIN, Math.min(ORAN_MAX, Math.round(v)));
+
 const VURGU_ANAHTAR = 'medsoru_canli_ders_vurgu_v1';
 
 function useVurguAcik(): [boolean, (v: boolean) => void] {
@@ -104,7 +114,48 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     setGorunumDurum(g);
     try { localStorage.setItem(GORUNUM_KEY, g); } catch { /* yok */ }
   };
+
+  // Metin + PDF bölünmüş ekran dinamik boyut (%20-%80), yön (yan yana / üst-alt) ve sıra (PDF ↔ Metin)
+  const [bolmeOran, setBolmeOranDurum] = useState<number>(() => {
+    try {
+      const n = Number(localStorage.getItem(BOLME_ORAN_KEY));
+      if (Number.isFinite(n) && n >= ORAN_MIN && n <= ORAN_MAX) return Math.round(n);
+    } catch { /* yok */ }
+    return 50;
+  });
+  const setBolmeOran = useCallback((n: number | ((prev: number) => number)) => {
+    setBolmeOranDurum((prev) => {
+      const v = oranSinirla(typeof n === 'function' ? n(prev) : n);
+      try { localStorage.setItem(BOLME_ORAN_KEY, String(v)); } catch { /* yok */ }
+      return v;
+    });
+  }, []);
+
+  const [bolmeYon, setBolmeYonDurum] = useState<BolmeYon>(() => {
+    try {
+      const v = localStorage.getItem(BOLME_YON_KEY);
+      if (v === 'oto' || v === 'yan-yana' || v === 'ust-alt') return v;
+    } catch { /* yok */ }
+    return 'oto';
+  });
+  const setBolmeYon = useCallback((y: BolmeYon) => {
+    setBolmeYonDurum(y);
+    try { localStorage.setItem(BOLME_YON_KEY, y); } catch { /* yok */ }
+  }, []);
+
+  const [bolmeTers, setBolmeTersDurum] = useState<boolean>(() => {
+    try { return localStorage.getItem(BOLME_TERS_KEY) === '1'; } catch { return false; }
+  });
+  const setBolmeTers = useCallback((t: boolean | ((prev: boolean) => boolean)) => {
+    setBolmeTersDurum((prev) => {
+      const v = typeof t === 'function' ? t(prev) : t;
+      try { localStorage.setItem(BOLME_TERS_KEY, v ? '1' : '0'); } catch { /* yok */ }
+      return v;
+    });
+  }, []);
+
   const [tamEkran, setTamEkran] = useState(false);
+  const hadNativeFsRef = useRef(false);
   const [yazi, setYaziDurum] = useState<number>(() => { try { return Number(localStorage.getItem(YAZI_KEY)) || 20; } catch { return 20; } });
   const setYazi = (n: number | ((y: number) => number)) => setYaziDurum((y) => {
     const v = Math.min(YAZI_ENCOK, Math.max(YAZI_ENAZ, typeof n === 'function' ? n(y) : n));
@@ -115,6 +166,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
   const [yildizModalAcik, setYildizModalAcik] = useState(false);
   const yildizSayisi = useYildizliSayisi();
   const rootRef = useRef<HTMLDivElement>(null);
+  const govdeRef = useRef<HTMLDivElement>(null);
   const [yuk, setYuk] = useState<number | null>(null);
   const caliyorKey = useCd((s) => s.key);
   const caliyorBaslik = useCd((s) => s.baslik);
@@ -182,7 +234,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
   }, []);
 
   // Tam ekran: kabuk (menü, üst çubuk, alt sekmeler) gizlenir; oynatıcı saklı, "Oynatıcı" ile açılır.
-  // Tarayıcı tam ekranı da istenir (destekleyen yerde); Esc ya da tarayıcıdan çıkış modu kapatır.
+  // iOS/iPadOS WebKit'te tarayıcı native fullscreen dikey kaydırmada otomatik çıktığı için yalnız masaüstü/Android'de istenir.
   useEffect(() => {
     const kok = document.documentElement;
     kok.classList.toggle('cd-tam-ekran', tamEkran);
@@ -200,7 +252,16 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     };
     const onFs = () => {
       const d = document as any;
-      if (!d.fullscreenElement && !d.webkitFullscreenElement) setTamEkran(false);
+      const fs = Boolean(d.fullscreenElement || d.webkitFullscreenElement);
+      if (fs) {
+        hadNativeFsRef.current = true;
+      } else if (hadNativeFsRef.current) {
+        hadNativeFsRef.current = false;
+        // iOS/iPadOS veya kaydırma sırasında tetiklenen tarayıcı tam ekran çıkışlarında sayfa içi tam ekranda kal!
+        if (!isIosWebKit() && !wasRecentlyScrollingOrTouching()) {
+          setTamEkran(false);
+        }
+      }
     };
     document.addEventListener('keydown', onKey);
     document.addEventListener('fullscreenchange', onFs);
@@ -226,6 +287,8 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     } catch {
       window.scrollTo(0, 0);
     }
+    // iOS/iPadOS cihazlarda WebKit'in dikey kaydırmada tam ekrandan çıkma hatasını önlemek için sayfa içi kilitli tam ekran kullanılır
+    if (isIosWebKit()) return;
     const kok = document.documentElement as HTMLElement & { webkitRequestFullscreen?: () => void };
     try {
       if (kok.requestFullscreen) void kok.requestFullscreen({ navigationUI: 'hide' }).catch(() => {});
@@ -233,6 +296,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     } catch { /* desteklenmiyor: yalnız sayfa içi tam ekran */ }
   };
   const tamEkranKapat = () => {
+    hadNativeFsRef.current = false;
     setTamEkran(false);
     const d = document as any;
     if (d.fullscreenElement || d.webkitFullscreenElement) {
@@ -300,6 +364,26 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
   const mod: Gorunum = pdfVar ? gorunum : 'metin';
   const metinGoster = mod !== 'pdf';
   const pdfGoster = mod !== 'metin';
+  const aktifYon: 'yan-yana' | 'ust-alt' = bolmeYon === 'oto' ? (genis ? 'yan-yana' : 'ust-alt') : bolmeYon;
+  const pdfOran = bolmeTers ? 100 - bolmeOran : bolmeOran;
+  const metinOran = 100 - pdfOran;
+
+  const setPdfOranHedef = (hedefPdf: number) => {
+    setBolmeOran(bolmeTers ? 100 - hedefPdf : hedefPdf);
+  };
+
+  const govdeStil: React.CSSProperties | undefined = mod === 'ikisi'
+    ? (aktifYon === 'yan-yana'
+      ? { gridTemplateColumns: `minmax(0, ${bolmeOran}fr) 14px minmax(0, ${100 - bolmeOran}fr)`, gridTemplateRows: 'minmax(0, 1fr)' }
+      : { gridTemplateColumns: 'minmax(0, 1fr)', gridTemplateRows: `minmax(0, ${bolmeOran}fr) 14px minmax(0, ${100 - bolmeOran}fr)` })
+    : undefined;
+
+  const birinciBolme = bolmeTers
+    ? <CdMetinBolme key="metin" detay={detay} canli={buDers} />
+    : <CdPdfBolme key="pdf" detay={detay} canli={buDers} />;
+  const ikinciBolme = bolmeTers
+    ? <CdPdfBolme key="pdf" detay={detay} canli={buDers} />
+    : <CdMetinBolme key="metin" detay={detay} canli={buDers} />;
 
   return (
     <div
@@ -326,6 +410,51 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
                   {g.ikon} <span>{g.ad}</span>
                 </button>
               ))}
+            </div>
+          )}
+          {mod === 'ikisi' && (
+            <div className="cd-duzen-arac" role="group" aria-label="Metin ve PDF bölme düzeni ve boyutu">
+              <button
+                type="button"
+                className="cd-duzen-btn"
+                onClick={() => setBolmeYon(aktifYon === 'yan-yana' ? 'ust-alt' : 'yan-yana')}
+                title={aktifYon === 'yan-yana' ? 'Üst-alt düzene geç' : 'Yan yana düzene geç'}
+                aria-label={aktifYon === 'yan-yana' ? 'Üst-alt düzene geç' : 'Yan yana düzene geç'}
+              >
+                {aktifYon === 'yan-yana' ? <Rows2 aria-hidden /> : <Columns2 aria-hidden />}
+                <span className="cd-duzen-etiket">{aktifYon === 'yan-yana' ? 'Üst-Alt' : 'Yan Yana'}</span>
+              </button>
+              <button
+                type="button"
+                className={`cd-duzen-btn${bolmeTers ? ' is-on' : ''}`}
+                onClick={() => setBolmeTers((t) => !t)}
+                title={bolmeTers ? 'Konumu değiştir (Şu an: Metin önce, PDF sonra)' : 'Konumu değiştir (Şu an: PDF önce, Metin sonra)'}
+                aria-label="Metin ve PDF yerini değiştir"
+              >
+                {aktifYon === 'yan-yana' ? <ArrowLeftRight aria-hidden /> : <ArrowUpDown aria-hidden />}
+                <span className="cd-duzen-etiket">{bolmeTers ? 'Metin⇄PDF' : 'PDF⇄Metin'}</span>
+              </button>
+              <div className="cd-oran-grup" role="group" aria-label="PDF ve Metin boyut oranı">
+                {[
+                  { pdf: 35, ad: 'Metin+' },
+                  { pdf: 50, ad: '50:50' },
+                  { pdf: 65, ad: 'PDF+' },
+                ].map((p) => {
+                  const secili = Math.abs(pdfOran - p.pdf) <= 4;
+                  return (
+                    <button
+                      key={p.pdf}
+                      type="button"
+                      className={`cd-oran-hap${secili ? ' is-on' : ''}`}
+                      onClick={() => setPdfOranHedef(p.pdf)}
+                      title={`PDF %${p.pdf} · Metin %${100 - p.pdf}`}
+                      aria-pressed={secili}
+                    >
+                      {p.ad}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           )}
         </div>
@@ -410,9 +539,33 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
           </button>
         </div>
       )}
-      <div className={`cd-govde${mod === 'ikisi' ? (genis ? ' is-iki' : ' is-ust-alt') : ''}`}>
-        {pdfGoster && <CdPdfBolme detay={detay} canli={buDers} />}
-        {metinGoster && <CdMetinBolme detay={detay} canli={buDers} />}
+      <div
+        ref={govdeRef}
+        className={`cd-govde${mod === 'ikisi' ? (aktifYon === 'yan-yana' ? ' is-iki' : ' is-ust-alt') : ''}`}
+        style={govdeStil}
+      >
+        {mod === 'ikisi' ? (
+          <>
+            {birinciBolme}
+            <CdBolmeAyrac
+              govdeRef={govdeRef}
+              yon={aktifYon}
+              oran={bolmeOran}
+              ters={bolmeTers}
+              pdfOran={pdfOran}
+              metinOran={metinOran}
+              onOran={setBolmeOran}
+              onTers={() => setBolmeTers((t) => !t)}
+              onYon={() => setBolmeYon(aktifYon === 'yan-yana' ? 'ust-alt' : 'yan-yana')}
+            />
+            {ikinciBolme}
+          </>
+        ) : (
+          <>
+            {pdfGoster && <CdPdfBolme detay={detay} canli={buDers} />}
+            {metinGoster && <CdMetinBolme detay={detay} canli={buDers} />}
+          </>
+        )}
       </div>
       {tanitim.tur}
       {yildizModalAcik && (
@@ -427,6 +580,120 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
           }}
         />
       )}
+    </div>
+  );
+}
+
+/** Metin + PDF arasında sürüklenebilir, dokunmatik ve klavye destekli dinamik boyut ayırıcı */
+function CdBolmeAyrac({
+  govdeRef,
+  yon,
+  oran,
+  ters,
+  pdfOran,
+  metinOran,
+  onOran,
+  onTers,
+  onYon,
+}: {
+  govdeRef: React.RefObject<HTMLDivElement | null>;
+  yon: 'yan-yana' | 'ust-alt';
+  oran: number;
+  ters: boolean;
+  pdfOran: number;
+  metinOran: number;
+  onOran: (n: number | ((prev: number) => number)) => void;
+  onTers: () => void;
+  onYon: () => void;
+}) {
+  const [surukleniyor, setSurukleniyor] = useState(false);
+
+  const konumdanOran = useCallback((clientX: number, clientY: number) => {
+    const el = govdeRef.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    if (yon === 'yan-yana') {
+      if (r.width <= 0) return;
+      onOran(((clientX - r.left) / r.width) * 100);
+    } else {
+      if (r.height <= 0) return;
+      onOran(((clientY - r.top) / r.height) * 100);
+    }
+  }, [govdeRef, yon, onOran]);
+
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    if ((e.target as HTMLElement).closest('button')) return;
+    e.preventDefault();
+    e.currentTarget.setPointerCapture(e.pointerId);
+    setSurukleniyor(true);
+  };
+
+  const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!surukleniyor) return;
+    konumdanOran(e.clientX, e.clientY);
+  };
+
+  const onPointerEnd = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!surukleniyor) return;
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    }
+    setSurukleniyor(false);
+  };
+
+  const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    const ileri = yon === 'yan-yana' ? e.key === 'ArrowRight' : e.key === 'ArrowDown';
+    const geri = yon === 'yan-yana' ? e.key === 'ArrowLeft' : e.key === 'ArrowUp';
+    if (ileri) { e.preventDefault(); onOran((v) => v + 5); }
+    else if (geri) { e.preventDefault(); onOran((v) => v - 5); }
+    else if (e.key === 'Home') { e.preventDefault(); onOran(30); }
+    else if (e.key === 'End') { e.preventDefault(); onOran(70); }
+    else if (e.key === 'Enter' || e.key === '0') { e.preventDefault(); onOran(50); }
+  };
+
+  const birinciAd = ters ? 'Metin' : 'PDF';
+  const ikinciAd = ters ? 'PDF' : 'Metin';
+  const birinciYuzde = ters ? metinOran : pdfOran;
+  const ikinciYuzde = ters ? pdfOran : metinOran;
+
+  return (
+    <div
+      role="separator"
+      tabIndex={0}
+      aria-orientation={yon === 'yan-yana' ? 'vertical' : 'horizontal'}
+      aria-label="Metin ve PDF bölme boyutunu ayarla (sürükle, ok tuşlarıyla kaydır, çift tıkla sıfırla)"
+      aria-valuenow={oran}
+      aria-valuemin={ORAN_MIN}
+      aria-valuemax={ORAN_MAX}
+      title="Sürükleyerek boyutu ayarla · Çift tıkla %50/%50 eşitle"
+      className={`cd-ayrac is-${yon}${surukleniyor ? ' is-surukleniyor' : ''}`}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerEnd}
+      onPointerCancel={onPointerEnd}
+      onDoubleClick={() => onOran(50)}
+      onKeyDown={onKeyDown}
+    >
+      <span className="cd-ayrac-tutamac" aria-hidden />
+      <span className="cd-ayrac-deger" aria-hidden>
+        {birinciAd} %{birinciYuzde} · {ikinciAd} %{ikinciYuzde}
+      </span>
+      <div className="cd-ayrac-hizli" onPointerDown={(e) => e.stopPropagation()}>
+        <button type="button" onClick={() => onOran(35)} className={Math.abs(oran - 35) <= 4 ? 'is-on' : ''} title={`${birinciAd} %35 · ${ikinciAd} %65`}>35</button>
+        <button type="button" onClick={() => onOran(50)} className={Math.abs(oran - 50) <= 4 ? 'is-on' : ''} title="Eşitle (%50 / %50)">50</button>
+        <button type="button" onClick={() => onOran(65)} className={Math.abs(oran - 65) <= 4 ? 'is-on' : ''} title={`${birinciAd} %65 · ${ikinciAd} %35`}>65</button>
+        <button type="button" onClick={onTers} title="PDF ve Metin yerini değiştir" aria-label="PDF ve Metin yerini değiştir">
+          {yon === 'yan-yana' ? <ArrowLeftRight aria-hidden /> : <ArrowUpDown aria-hidden />}
+        </button>
+        <button type="button" onClick={onYon} title={yon === 'yan-yana' ? 'Üst-alt düzene geç' : 'Yan yana düzene geç'} aria-label="Bölme yönünü değiştir">
+          {yon === 'yan-yana' ? <Rows2 aria-hidden /> : <Columns2 aria-hidden />}
+        </button>
+        {oran !== 50 && (
+          <button type="button" onClick={() => onOran(50)} title="Varsayılan boyuta sıfırla (%50)" aria-label="Boyutu sıfırla">
+            <RotateCcw aria-hidden />
+          </button>
+        )}
+      </div>
     </div>
   );
 }

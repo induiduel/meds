@@ -17,7 +17,8 @@ import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from
 import { AlignLeft, ChevronLeft, ChevronRight, Focus, Maximize2, Minimize2, MoreVertical } from 'lucide-react';
 import { useAppearance, TEXT_PX_MAX, TEXT_PX_MIN } from '../../utils/appearance';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
-import { openPwaInstallGuide } from '../../services/pwaService';
+import { detectIosDevice, openPwaInstallGuide } from '../../services/pwaService';
+import { wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
 import { toast } from '../ui/Toast';
 import '../../styles/v12/reader.css';
 
@@ -241,12 +242,21 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
   const tocOpen = !focus && (wide ? tocPref : tocPop);
   const showMargin = !!margin && roomy && !focus;
 
+  const hadNativeFsRef = useRef(false);
   useEffect(() => {
     const on = () => {
       const d = document as any;
       const f = !!(d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement);
       setIsFs(f);
-      if (f) setImmersive(false);
+      if (f) {
+        hadNativeFsRef.current = true;
+        setImmersive(false);
+      } else if (hadNativeFsRef.current) {
+        hadNativeFsRef.current = false;
+        if (detectIosDevice() || wasRecentlyScrollingOrTouching()) {
+          setImmersive(true);
+        }
+      }
     };
     document.addEventListener('fullscreenchange', on);
     document.addEventListener('webkitfullscreenchange', on);
@@ -261,18 +271,23 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
     const d = document as any;
     if (immersive) {
       setImmersive(false);
+      if (d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
+        hadNativeFsRef.current = false;
+        (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
+      }
       return;
     }
     if (d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
+      hadNativeFsRef.current = false;
       (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
       return;
     }
     const el: any = document.documentElement;
-    const req = el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen;
+    const req = !detectIosDevice() && (el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen);
     if (!req) {
       setImmersive(true);
       const isStandalone = window.matchMedia?.('(display-mode: standalone)').matches || (navigator as any).standalone === true;
-      if (/iPhone|iPod/.test(navigator.userAgent) && !isStandalone) {
+      if (detectIosDevice() && !isStandalone) {
         toast.info(
           'Tam ekran okuma modu açıldı',
           'Adres çubuğunu da tamamen gizlemek için uygulamayı Ana Ekrana ekleyebilirsin.',

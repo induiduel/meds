@@ -42,13 +42,22 @@ export const PWA_GUIDE_OPEN_EVENT = 'medsor:open-pwa-install-guide';
 export function detectIosDevice(): boolean {
   if (typeof navigator === 'undefined') return false;
   const ua = navigator.userAgent || '';
-  return /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  if (/iPad|iPhone|iPod/.test(ua)) return true;
+  if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) return true;
+  if (typeof CSS !== 'undefined' && typeof CSS.supports === 'function' && CSS.supports('-webkit-touch-callout', 'none')) {
+    return true;
+  }
+  return false;
 }
 
 export function detectIpadDevice(): boolean {
   if (typeof navigator === 'undefined') return false;
   const ua = navigator.userAgent || '';
-  return /iPad/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  if (/iPad/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) return true;
+  if (detectIosDevice() && typeof window !== 'undefined' && Math.min(window.screen.width, window.screen.height) >= 700) {
+    return true;
+  }
+  return false;
 }
 
 export function detectIosBrowser(): IosBrowserType {

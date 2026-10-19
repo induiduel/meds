@@ -533,6 +533,8 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
         if (ogrenAcik) setOgrenAcik(false);
         else if (adimPanelAcik) setAdimPanelAcik(false);
         else if (dersMenu) setDersMenu(false);
+        else if (ayarAcik) setAyarAcik(false);
+        else if (tamEkran) setTamEkran(false);
         else onClose();
         return;
       }
@@ -574,7 +576,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   useEffect(() => {
     const f = () => {
       const nativeFs = !!(document.fullscreenElement || (document as any).webkitFullscreenElement);
-      if (nativeFs) setTamEkran(true);
+      setTamEkran(nativeFs);
     };
     document.addEventListener('fullscreenchange', f);
     document.addEventListener('webkitfullscreenchange', f);
@@ -597,13 +599,15 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
       return;
     }
     setTamEkran(true);
+    const isIos = typeof CSS !== 'undefined' && typeof CSS.supports === 'function' && CSS.supports('-webkit-touch-callout', 'none');
+    if (isIos) return;
     const el: any = kokRef.current?.closest('.pa') || document.documentElement;
     const req = el?.requestFullscreen || el?.webkitRequestFullscreen;
     if (req) {
       try {
         req.call(el, { navigationUI: 'hide' })?.catch?.(() => {});
       } catch {
-        /* iOS iPhone'da CSS tam ekran (is-tam) kullanılır */
+        /* iOS/iPadOS'ta CSS tam ekran (is-tam) kullanılır */
       }
     }
   };
@@ -812,6 +816,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
         const t = e.target as HTMLElement;
         if (dersMenu && !t.closest('.pa-ders')) setDersMenu(false);
         if (adimPanelAcik && !t.closest('.pa-ilerleme-kapsam')) setAdimPanelAcik(false);
+        if (ayarAcik && !t.closest('.pa-ayar, .pa-ayar-ac')) setAyarAcik(false);
       }}
     >
       <header className="pa-ust">
@@ -860,7 +865,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
 
       {ders && (
         <div className="pa-ilerleme-kapsam">
-          {/* 1. Satır: Konum, Aşama, Son Kalınan Yere Git ve Adım Yöneticisi Butonu */}
+          {/* 1. Satır: Kompakt Konum + Satır İçi Aşama Hapları + Son Kalınan & İstatistik */}
           <div className="pa-ilerleme-ust">
             <button
               type="button"
@@ -871,36 +876,61 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
             >
               <span className="pa-konum-rozet">
                 {nokta
-                  ? `Adım ${noktaSirasi} / ${gorunenNoktalar.length}`
+                  ? `Adım ${noktaSirasi}/${gorunenNoktalar.length}`
                   : s?.tip === 'giris'
-                    ? `Giriş · 0 / ${gorunenNoktalar.length}`
+                    ? `Giriş`
                     : s?.tip === 'bolum'
-                      ? `Bölüm ${s.b + 1} / ${ders.bolumler.length}`
-                      : `Özet · ${gorunenNoktalar.length} / ${gorunenNoktalar.length}`}
+                      ? `Bölüm ${s.b + 1}/${ders.bolumler.length}`
+                      : `Özet`}
               </span>
-              <span className="pa-konum-detay">
-                {nokta ? (
-                  <>
-                    <b>Aşama {aktifAsamaNo}/{aktifToplamAsama}:</b>{' '}
-                    {s?.tip === 'anlatim'
-                      ? `Konu anlatımı (${aktifCumle >= 0 ? `${aktifCumle + 1}/` : ''}${nokta.cumleler.length} cümle)`
-                      : s?.tip === 'soru'
-                        ? `Soru ${s.qi + 1}/${aktifNoktaSorular.length} (${TUR_KISA[s.q.tur]})`
-                        : ''}
-                    {aktifNoktaSorular.length > 0 && s?.tip === 'anlatim' ? ` · ${aktifNoktaSorular.length} soru var` : ''}
-                  </>
-                ) : (
-                  <>
-                    {ders.bolumler.length} bölüm · <b>{gorunenNoktalar.length} adım</b> · <b>{sorulanlar.length} soru</b>
-                  </>
-                )}
-              </span>
+              {!nokta && (
+                <span className="pa-konum-detay">
+                  {ders.bolumler.length} bölüm · <b>{gorunenNoktalar.length} adım</b> · <b>{sorulanlar.length} soru</b>
+                </span>
+              )}
               <span className="pa-konum-ac-etiket">
                 <ListChecks aria-hidden />
                 <span>Adımlar</span>
                 {adimPanelAcik ? <ChevronUp aria-hidden /> : <ChevronDown aria-hidden />}
               </span>
             </button>
+
+            {nokta && !devamSor && (
+              <div className="pa-alt-adim-haplar" role="navigation" aria-label="Mevcut adımın aşamaları">
+                <button
+                  type="button"
+                  className={`pa-asama-hap${s?.tip === 'anlatim' ? ' is-aktif' : ' is-gecti'}`}
+                  onClick={() => noktayaGit(ders.noktalar.indexOf(nokta))}
+                  title="Bu adımın konu anlatımına git"
+                >
+                  <BookOpenText aria-hidden />
+                  <span>
+                    Anlatım ({s?.tip === 'anlatim' && aktifCumle >= 0 ? `${aktifCumle + 1}/` : ''}{nokta.cumleler.length})
+                  </span>
+                </button>
+                {aktifNoktaSorular.map((q, qi) => {
+                  const r = sonuc[q.k];
+                  const aktifSoruMu = s?.tip === 'soru' && s.qi === qi;
+                  return (
+                    <button
+                      key={q.k}
+                      type="button"
+                      className={`pa-asama-hap${aktifSoruMu ? ' is-aktif' : ''}${r === 'd' ? ' is-d' : r === 'd2' ? ' is-d2' : r === 'y' ? ' is-y' : ''}`}
+                      onClick={() => noktayaGit(ders.noktalar.indexOf(nokta), qi)}
+                      title={`${qi + 1}. soruya git (${TUR_AD[q.tur]})`}
+                    >
+                      <HelpCircle aria-hidden />
+                      <span>
+                        S{qi + 1} <small>({TUR_KISA[q.tur]})</small>
+                      </span>
+                      {r === 'd' && <Check className="pa-asama-i" aria-hidden />}
+                      {r === 'd2' && <span className="pa-asama-rozet">~</span>}
+                      {r === 'y' && <X className="pa-asama-i" aria-hidden />}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
 
             <div className="pa-ilerleme-sag">
               {sonKalinanNokta && nokta?.id !== sonKalinanNokta.id && (
@@ -911,7 +941,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
                   title={`En son kalınan ilerleme noktasına git: ${sonKalinanSira}. Adım — ${sonKalinanNokta.baslik}`}
                 >
                   <Target aria-hidden />
-                  <span>Son kalınan: <b>{sonKalinanSira}. adım</b></span>
+                  <span>Kalınan: <b>{sonKalinanSira}. adım</b></span>
                 </button>
               )}
               {sonKalinanNokta && nokta && nokta.id !== sonKalinanNokta.id && (
@@ -920,15 +950,16 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
                   className="pa-burayi-kaydet-btn"
                   onClick={() => kalinanYeriBurayaTasi(nokta.id)}
                   title={`Kalınan ilerleme noktasını şu anki adıma (${noktaSirasi}. adım) taşı`}
+                  aria-label="Burayı kaldığım yer yap"
                 >
                   <MapPin aria-hidden />
-                  <span>Burayı kaldığım yer yap</span>
+                  <span>Burayı sabitle</span>
                 </button>
               )}
               {sonKalinanNokta && nokta?.id === sonKalinanNokta.id && (
                 <span className="pa-son-kalinan-etiket" title="Şu an en son kaldığın ilerleme adımındasın">
                   <MapPin aria-hidden />
-                  <span>Son kalınan adım</span>
+                  <span>Kalınan adım</span>
                 </span>
               )}
 
@@ -936,14 +967,14 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
                 <span className="pa-ist-soru" title={`Toplam ${sorulanlar.length} sorudan ${cozulenSoruSayisi} tanesi yanıtlandı`}>
                   {cozulenSoruSayisi}/{sorulanlar.length} soru
                 </span>
-                {ilkDogru > 0 && <span className="pa-ist-d" title="İlk denemede doğru">{ilkDogru} doğru</span>}
-                {yardimliDogru > 0 && <span className="pa-ist-d2" title="Yardımla veya 2. denemede doğru">{yardimliDogru} yardımlı</span>}
-                {yanlisSayisi > 0 && <span className="pa-ist-y" title="Yanlış veya cevabı gösterildi">{yanlisSayisi} tekrar</span>}
+                {ilkDogru > 0 && <span className="pa-ist-d" title="İlk denemede doğru">{ilkDogru}✓</span>}
+                {yardimliDogru > 0 && <span className="pa-ist-d2" title="Yardımla veya 2. denemede doğru">{yardimliDogru}~</span>}
+                {yanlisSayisi > 0 && <span className="pa-ist-y" title="Yanlış veya cevabı gösterildi">{yanlisSayisi}✗</span>}
               </div>
             </div>
           </div>
 
-          {/* 2. Satır: Görsel Segment Şeridi ve Anlık Önizleme */}
+          {/* 2. Satır: İnce Görsel Segment Şeridi ve Yüzen Önizleme */}
           <div className="pa-ilerleme-serit-sar" onMouseLeave={() => setHoverNoktaIdx(null)}>
             <div className="pa-ilerleme" role="navigation" aria-label={`Adım ilerleme çubuğu: ${noktaSirasi} / ${gorunenNoktalar.length}`}>
               {gorunenNoktalar.map((ni, j) => {
@@ -1000,49 +1031,6 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
               );
             })()}
           </div>
-
-          {/* 3. Satır: Şu Anki Adımın Alt Aşamaları (Anlatım + Sorular) */}
-          {nokta && !devamSor && (
-            <div className="pa-alt-adim-serit" role="navigation" aria-label="Mevcut adımın aşamaları">
-              <span className="pa-alt-adim-etiket">
-                <b>{noktaSirasi}. Adım</b> ({aktifToplamAsama} aşama · {aktifNoktaSorular.length} soru):
-              </span>
-              <div className="pa-alt-adim-haplar">
-                <button
-                  type="button"
-                  className={`pa-asama-hap${s?.tip === 'anlatim' ? ' is-aktif' : ' is-gecti'}`}
-                  onClick={() => noktayaGit(ders.noktalar.indexOf(nokta))}
-                  title="Bu adımın konu anlatımına git"
-                >
-                  <BookOpenText aria-hidden />
-                  <span>
-                    1. Konu Anlatımı ({s?.tip === 'anlatim' && aktifCumle >= 0 ? `${aktifCumle + 1}/` : ''}{nokta.cumleler.length} cümle)
-                  </span>
-                </button>
-                {aktifNoktaSorular.map((q, qi) => {
-                  const r = sonuc[q.k];
-                  const aktifSoruMu = s?.tip === 'soru' && s.qi === qi;
-                  return (
-                    <button
-                      key={q.k}
-                      type="button"
-                      className={`pa-asama-hap${aktifSoruMu ? ' is-aktif' : ''}${r === 'd' ? ' is-d' : r === 'd2' ? ' is-d2' : r === 'y' ? ' is-y' : ''}`}
-                      onClick={() => noktayaGit(ders.noktalar.indexOf(nokta), qi)}
-                      title={`${qi + 1}. soruya git (${TUR_AD[q.tur]})`}
-                    >
-                      <HelpCircle aria-hidden />
-                      <span>
-                        {qi + 2}. Soru {aktifNoktaSorular.length > 1 ? `${qi + 1}/${aktifNoktaSorular.length}` : ''} ({TUR_KISA[q.tur]})
-                      </span>
-                      {r === 'd' && <Check className="pa-asama-i" aria-hidden />}
-                      {r === 'd2' && <span className="pa-asama-rozet">~</span>}
-                      {r === 'y' && <X className="pa-asama-i" aria-hidden />}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
 
           {/* Açılır Adım ve İlerleme Yöneticisi Paneli */}
           {adimPanelAcik && (

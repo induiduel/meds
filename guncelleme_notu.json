@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 27,
-  "baslik": "iOS (Safari & Chrome) Uyumluluğu, Gerçek Tam Ekran ve PWA Kurulum Rehberi",
+  "onem": 28,
+  "baslik": "Sesli Derste Dinamik Metin + PDF Boyut/Düzen Kontrolü & iOS Tam Ekran Kaydırma Düzeltmesi",
   "maddeler": [
-    "iOS Safari ve iOS Chrome için adım adım görsel 'Ana Ekrana Ekle (PWA)' kurulum rehberi ve her menüden doğrudan erişim eklendi.",
-    "iPhone, iPad, Android ve masaüstünde Öğren, Okuyucu, Canlı Ders, Sınav Asistanı ve Soru Çözücü dahil tüm ekranlarda gerçek tam ekran modu aktif edildi.",
-    "iOS Safari ve Chrome'da tam ekran katmanların üst/alt çubukların altında kalmasına yol açan görünüm ve ölçekleme sorunları giderildi."
+    "Sesli derste Metin ve PDF bölmeleri arasına sürüklenebilir boyut ayırıcı (%20–%80), tek tıkla Yan Yana / Üst-Alt yön değiştirme, PDF ⇄ Metin yer değiştirme ve hızlı oran seçiciler eklendi.",
+    "iOS ve iPadOS cihazlarda bölünmüş ekranda metin veya PDF kaydırırken tam ekrandan otomatik çıkma sorunu tamamen giderildi.",
+    "Öğren bölünmüş ekranında PDF kaydırılırken komşu adımın sayfasına geçildiğinde PDF'in ilk sayfaya sıçrama sorunu düzeltildi."
   ]
 }

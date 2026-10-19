@@ -484,10 +484,17 @@
 }
 
 /* Uygulama geneli tam ekran modu (html.is-app-fullscreen — iOS Safari/Chrome dahil tüm tarayıcılarda çalışır) */
+:root.is-app-fullscreen {
+  --sh-top-h: 0px !important;
+  --sh-top-vis: 0px !important;
+  --sh-tabs-h: 0px !important;
+  --pt-top: env(safe-area-inset-top, 0px) !important;
+}
 :root.is-app-fullscreen :is(.s12-top, .sh-top, .s12-rail, .sh-side, .s12-tabs, .sh-tabs) {
   display: none !important;
 }
 :root.is-app-fullscreen .sh-app {
+  --sh-side-w: 0px !important;
   padding-left: 0 !important;
 }
 :root.is-app-fullscreen .sh-main {

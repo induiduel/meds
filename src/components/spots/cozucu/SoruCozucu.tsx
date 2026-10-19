@@ -525,7 +525,7 @@ export const SoruCozucu: React.FC<Props> = ({
         return;
       }
       if (e.altKey || (e.target as HTMLElement | null)?.closest?.('input,textarea,select,.oy')) return;
-      if (e.key === 'Escape') { if (ogrenAcik) setOgrenAcik(false); else if (dersMenu) setDersMenu(false); else if (ayarAcik) setAyarAcik(false); else onClose(); return; }
+      if (e.key === 'Escape') { if (ogrenAcik) setOgrenAcik(false); else if (dersMenu) setDersMenu(false); else if (ayarAcik) setAyarAcik(false); else if (tamEkran) setTamEkran(false); else onClose(); return; }
       if (!ders || devamSor !== null) return;
       if (e.key === ' ') { e.preventDefault(); oynatDuraklat(); return; }
       if (e.key === 'ArrowRight') { e.preventDefault(); ileri(); return; }
@@ -564,7 +564,7 @@ export const SoruCozucu: React.FC<Props> = ({
   useEffect(() => {
     const f = () => {
       const nativeFs = !!(document.fullscreenElement || (document as any).webkitFullscreenElement);
-      if (nativeFs) setTamEkran(true);
+      setTamEkran(nativeFs);
     };
     document.addEventListener('fullscreenchange', f);
     document.addEventListener('webkitfullscreenchange', f);
@@ -587,13 +587,15 @@ export const SoruCozucu: React.FC<Props> = ({
       return;
     }
     setTamEkran(true);
+    const isIos = typeof CSS !== 'undefined' && typeof CSS.supports === 'function' && CSS.supports('-webkit-touch-callout', 'none');
+    if (isIos) return;
     const el: any = kokRef.current?.closest('.sc') || document.documentElement;
     const req = el?.requestFullscreen || el?.webkitRequestFullscreen;
     if (req) {
       try {
         req.call(el, { navigationUI: 'hide' })?.catch?.(() => {});
       } catch {
-        /* iOS iPhone'da CSS tam ekran (is-tam) kullanılır */
+        /* iOS/iPadOS'ta CSS tam ekran (is-tam) kullanılır */
       }
     }
   };
