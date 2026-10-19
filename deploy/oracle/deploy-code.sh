@@ -9,7 +9,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 MEDS_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
 KEY="${SSH_KEY:-$HOME/.ssh/medsor-oracle.key}"
 ORACLE_USER="${ORACLE_USER:-ubuntu}"
-ORACLE_HOST="${ORACLE_HOST:?ORACLE_HOST tanımlı değil (export ORACLE_HOST=92.5.55.109)}"
+ORACLE_HOST="${ORACLE_HOST:-92.5.55.109}"
 ORACLE_DIR="/home/ubuntu/medsor/meds"
 DO_BUILD=0
 [[ "${1:-}" == "--build" ]] && DO_BUILD=1
