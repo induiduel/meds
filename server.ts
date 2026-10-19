@@ -25,6 +25,7 @@ import { registerPatolojiCozucuRoutes } from './src/services/patolojiCozucu';
 import { registerPatolojiCozucuAltRoutes } from './src/services/patolojiCozucuAlt';
 import { registerCozucuSesRoutes } from './src/services/cozucuSes';
 import { registerOgrenSesRoutes } from './src/services/ogrenSes';
+import { registerWhatsAppRoutes, runScheduledWhatsAppDigests } from './src/services/whatsappService';
 import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
@@ -6908,6 +6909,23 @@ const userDataRoutes = registerUserDataBackupRoutes(app, {
 });
 /** Sunucu olayını öğrencinin profil bildirimlerine yazar (tüm cihazlarında canlı görünür). */
 const notifyStudent = (target: { uid?: string | null; email?: string | null }, n: ServerUserNotification) => userDataRoutes.pushUserNotification(target, n);
+
+// WhatsApp Meta Cloud API bildirim rotaları ve günlük tekrar servisi
+registerWhatsAppRoutes(app, {
+  dataDir: DATA_DIR,
+  getPastQuestions: getPastQuestionsDb,
+  mirrorUserToDb,
+});
+
+// WhatsApp zamanlanmış kontrolcü (her 2 dakikada bir kontrol eder, saati gelen ve henüz almamış kullanıcılara iletir)
+setInterval(() => {
+  runScheduledWhatsAppDigests({
+    dataDir: DATA_DIR,
+    getPastQuestions: getPastQuestionsDb,
+  }).catch((err) => {
+    console.error('[WhatsApp Scheduler] Hata:', err);
+  });
+}, 2 * 60 * 1000).unref?.();
 
 // Yönetim · veri kataloğu: tüm veri türleri tek arayüzde (liste/ara/süz, düzenle, değerlendir-sınıfla, ilişkiler)
 registerDataCatalogRoutes(app, requireAdmin, {

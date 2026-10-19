@@ -1,7 +1,8 @@
 {
  "kod": "19",
+ "no": 19,
  "baslik": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
- "surum": "alt-1",
+ "surum": "alt-2",
  "sorular": [
   {
    "no": 1,
@@ -15,18 +16,24 @@
     "E": "Leiomyom"
    },
    "dogru": "A",
+   "ipucu": "Neoantijenlerin mutasyonlardan doğduğunu ve hangi tümörün dış etkenlerle çok yüksek mutasyon yükü taşıdığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Güneş ilişkili melanom doğru: güneşe bağlı yüksek mutasyon yükü, bağışıklık sistemine yabancı gelen çok sayıda neoantijen yaratır.",
-    "B": "Lipom ile karıştırılabilir: Neoantijen yükü, sigara ilişkili akciğer kanseri gibi yüksek mutasyon yüküne sahip tümörlerde fazladır.",
-    "C": "DNA onarım kusuru olan kanserler de mutasyon biriktirdiği için neoantijenden zengindir. Kondrom bu sorudaki ayrımı sağlamaz.",
-    "D": "Fibroadenom ile karıştırılabilir: Neoantijen, sürücü ya da yolcu mutasyonların protein dizisinde yeni peptit oluşturmasıyla ortaya çıkar.",
-    "E": "Yüksek mutasyon yükü ve neoantijen sayısı, kontrol noktası blokajına yanıtla da ilişkilidir. Leiomyom bu sorudaki ayrımı sağlamaz."
+    "B": "Lipom olgun adipositlerden oluşan, mutasyon yükü son derece düşük benign bir mezenkimal tümördür; ultraviyole ışınlarının yoğun DNA hasarı yaptığı güneş ilişkili melanom ise somatik mutasyon ve neoantijen yükü en yüksek malignitelerdendir.",
+    "C": "Kondrom hiyalin kıkırdak üreten iyi diferansiye benign bir tümördür ve genomik mutasyon yükü düşüktür; karsinojen maruziyetiyle binlerce nokta mutasyonu biriktiren güneş ilişkili melanomda ise neoantijen yükü çok yüksektir.",
+    "D": "Fibroadenom genç kadınlarda görülen, düşük mutasyon yüklü benign fibroepitelyal meme tümörüdür; ultraviyole mutajenezine bağlı yüksek somatik mutasyon hızı nedeniyle neoantijen yükü en yüksek olan tümör ise güneş ilişkili melanomdur.",
+    "E": "Leiomyom uterus düz kasının MED12 gibi sınırlı genetik değişikliklerle gelişen benign tümörüdür; yoğun UV kaynaklı DNA hasarı taşıyan güneş ilişkili melanom ise en yüksek neoantijen yüküne sahip tümörler arasındadır."
    },
    "ozet": "Neoantijenler mutasyonla oluşan yeni peptitlerdir ve bunlara öz tolerans gelişmemiştir; güneş ilişkili melanom, sigara ilişkili akciğer kanseri ve DNA onarım kusurlu kanserlerde fazladır.",
-   "metin": "**Soru.** Neoantijen yükünün en yüksek olması beklenen tümör hangisidir?\n\n**A)** Güneş ilişkili melanom · **B)** Lipom · **C)** Kondrom · **D)** Fibroadenom · **E)** Leiomyom\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Güneş ilişkili melanom** — Güneş ilişkili melanom doğru: güneşe bağlı yüksek mutasyon yükü, bağışıklık sistemine yabancı gelen çok sayıda neoantijen yaratır.\n- **Lipom** — Lipom ile karıştırılabilir: Neoantijen yükü, sigara ilişkili akciğer kanseri gibi yüksek mutasyon yüküne sahip tümörlerde fazladır.\n- **Kondrom** — DNA onarım kusuru olan kanserler de mutasyon biriktirdiği için neoantijenden zengindir. Kondrom bu sorudaki ayrımı sağlamaz.\n- **Fibroadenom** — Fibroadenom ile karıştırılabilir: Neoantijen, sürücü ya da yolcu mutasyonların protein dizisinde yeni peptit oluşturmasıyla ortaya çıkar.\n- **Leiomyom** — Yüksek mutasyon yükü ve neoantijen sayısı, kontrol noktası blokajına yanıtla da ilişkilidir. Leiomyom bu sorudaki ayrımı sağlamaz.\n\n**Cevap: A** — Güneş ilişkili melanom\n\n**Özet.** Neoantijenler mutasyonla oluşan yeni peptitlerdir ve bunlara öz tolerans gelişmemiştir; güneş ilişkili melanom, sigara ilişkili akciğer kanseri ve DNA onarım kusurlu kanserlerde fazladır.",
-   "ses": "Neoantijen yükünün en yüksek olması beklenen tümör hangisidir?\nA, Güneş ilişkili melanom\nBe, Lipom\nCe, Kondrom\nDe, Fibroadenom\nE, Leiomyom\nSeçenekleri sırayla değerlendirelim.\nGüneş ilişkili melanom doğru. Güneşe bağlı yüksek mutasyon yükü, bağışıklık sistemine yabancı gelen çok sayıda neoantijen yaratır.\nLipom ile karıştırılabilir. Neoantijen yükü, sigara ilişkili akciğer kanseri gibi yüksek mutasyon yüküne sahip tümörlerde fazladır.\nDe ne a onarım kusuru olan kanserler de mutasyon biriktirdiği için neoantijenden zengindir. Kondrom bu sorudaki ayrımı sağlamaz.\nFibroadenom ile karıştırılabilir. Neoantijen, sürücü ya da yolcu mutasyonların protein dizisinde yeni peptit oluşturmasıyla ortaya çıkar.\nYüksek mutasyon yükü ve neoantijen sayısı, kontrol noktası blokajına yanıtla da ilişkilidir. Leiomyom bu sorudaki ayrımı sağlamaz.\nDoğru cevap A, Güneş ilişkili melanom\nNeoantijenler mutasyonla oluşan yeni peptitlerdir ve bunlara öz tolerans gelişmemiştir. Güneş ilişkili melanom, sigara ilişkili akciğer kanseri ve de ne a onarım kusurlu kanserlerde fazladır.",
-   "kelime": 158
+   "sayfa": [
+    5,
+    6,
+    19
+   ],
+   "metin": "**Soru.** Neoantijen yükünün en yüksek olması beklenen tümör hangisidir?\n\n**A)** Güneş ilişkili melanom · **B)** Lipom · **C)** Kondrom · **D)** Fibroadenom · **E)** Leiomyom\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Güneş ilişkili melanom** — Güneş ilişkili melanom doğru: güneşe bağlı yüksek mutasyon yükü, bağışıklık sistemine yabancı gelen çok sayıda neoantijen yaratır.\n- **Lipom** — Lipom olgun adipositlerden oluşan, mutasyon yükü son derece düşük benign bir mezenkimal tümördür; ultraviyole ışınlarının yoğun DNA hasarı yaptığı güneş ilişkili melanom ise somatik mutasyon ve neoantijen yükü en yüksek malignitelerdendir.\n- **Kondrom** — Kondrom hiyalin kıkırdak üreten iyi diferansiye benign bir tümördür ve genomik mutasyon yükü düşüktür; karsinojen maruziyetiyle binlerce nokta mutasyonu biriktiren güneş ilişkili melanomda ise neoantijen yükü çok yüksektir.\n- **Fibroadenom** — Fibroadenom genç kadınlarda görülen, düşük mutasyon yüklü benign fibroepitelyal meme tümörüdür; ultraviyole mutajenezine bağlı yüksek somatik mutasyon hızı nedeniyle neoantijen yükü en yüksek olan tümör ise güneş ilişkili melanomdur.\n- **Leiomyom** — Leiomyom uterus düz kasının MED12 gibi sınırlı genetik değişikliklerle gelişen benign tümörüdür; yoğun UV kaynaklı DNA hasarı taşıyan güneş ilişkili melanom ise en yüksek neoantijen yüküne sahip tümörler arasındadır.\n\n**Cevap: A** — Güneş ilişkili melanom\n\n**Özet.** Neoantijenler mutasyonla oluşan yeni peptitlerdir ve bunlara öz tolerans gelişmemiştir; güneş ilişkili melanom, sigara ilişkili akciğer kanseri ve DNA onarım kusurlu kanserlerde fazladır.",
+   "ses": "Neoantijen yükünün en yüksek olması beklenen tümör hangisidir?\nA, Güneş ilişkili melanom\nBe, Lipom\nCe, Kondrom\nDe, Fibroadenom\nE, Leiomyom\nSeçenekleri sırayla değerlendirelim.\nGüneş ilişkili melanom doğru. Güneşe bağlı yüksek mutasyon yükü, bağışıklık sistemine yabancı gelen çok sayıda neoantijen yaratır.\nLipom olgun adipositlerden oluşan, mutasyon yükü son derece düşük benign bir mezenkimal tümördür. Ultraviyole ışınlarının yoğun de ne a hasarı yaptığı güneş ilişkili melanom ise somatik mutasyon ve neoantijen yükü en yüksek malignitelerdendir.\nKondrom hiyalin kıkırdak üreten iyi diferansiye benign bir tümördür ve genomik mutasyon yükü düşüktür. Karsinojen maruziyetiyle binlerce nokta mutasyonu biriktiren güneş ilişkili melanomda ise neoantijen yükü çok yüksektir.\nFibroadenom genç kadınlarda görülen, düşük mutasyon yüklü benign fibroepitelyal meme tümörüdür. Ultraviyole mutajenezine bağlı yüksek somatik mutasyon hızı nedeniyle neoantijen yükü en yüksek olan tümör ise güneş ilişkili melanomdur.\nLeiomyom uterus düz kasının med on iki gibi sınırlı genetik değişikliklerle gelişen benign tümörüdür. Yoğun ultraviyole kaynaklı de ne a hasarı taşıyan güneş ilişkili melanom ise en yüksek neoantijen yüküne sahip tümörler arasındadır.\nDoğru cevap A, Güneş ilişkili melanom\nNeoantijenler mutasyonla oluşan yeni peptitlerdir ve bunlara öz tolerans gelişmemiştir. Güneş ilişkili melanom, sigara ilişkili akciğer kanseri ve de ne a onarım kusurlu kanserlerde fazladır.",
+   "kelime": 210
   },
   {
    "no": 2,
@@ -40,6 +47,7 @@
     "E": "Yalnız melanositlerde ifade edilmeleri"
    },
    "dogru": "B",
+   "ipucu": "Normalde bu antijenleri taşıyan germ dokusunun, antijenleri T lenfositlerine ne ölçüde sunabildiğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Viral kökenli antijenler HPV E6 ve E7 gibi viral proteinlerdir; kanser-testis antijenleri ise normalde testiste ifade edilen proteinlerdir.",
@@ -49,6 +57,12 @@
     "E": "Melanosite özgü ifade, tirozinaz gibi diferansiyasyon antijenlerinin özelliğidir; kanser-testis antijenleri ise normalde testis germ hücrelerinde ifade edilir."
    },
    "ozet": "Kanser-testis antijenleri normalde testis germ hücrelerinde ifade edilir, diğer dokularda sessizdir; bu hücrelerde MHC sınıf I düşük olduğundan tolerans gelişmeyebilir.",
+   "sayfa": [
+    5,
+    7,
+    8,
+    9
+   ],
    "metin": "**Soru.** Kanser-testis antijenlerine tolerans gelişmemesinin nedeni hangisidir?\n\n**A)** Viral kökenli olmaları · **B)** Testis hücrelerinde MHC sınıf I ekspresyonunun düşük olması · **C)** Mutasyonlu olmaları · **D)** Glikozilasyon değişikliği · **E)** Yalnız melanositlerde ifade edilmeleri\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Viral kökenli olmaları** — Viral kökenli antijenler HPV E6 ve E7 gibi viral proteinlerdir; kanser-testis antijenleri ise normalde testiste ifade edilen proteinlerdir.\n- **Testis hücrelerinde MHC sınıf I ekspresyonunun düşük olması** — Testis hücrelerinde MHC sınıf I ekspresyonunun düşük olması doğru: bu nedenle tolerans gelişmeyebilir, tümörde yeniden ifade edildiklerinde bağışıklık yanıtı oluşabilir.\n- **Mutasyonlu olmaları** — Mutasyonlu proteinler neoantijen grubudur; kanser-testis antijenleri ise mutasyonla değil, diğer dokularda sessiz bir genin tümörde yeniden ifadesiyle ortaya çıkar.\n- **Glikozilasyon değişikliği** — Glikozilasyon değişikliği, normal doku antijenlerinin anormal formunu oluşturan ayrı bir tümör antijeni kaynağıdır.\n- **Yalnız melanositlerde ifade edilmeleri** — Melanosite özgü ifade, tirozinaz gibi diferansiyasyon antijenlerinin özelliğidir; kanser-testis antijenleri ise normalde testis germ hücrelerinde ifade edilir.\n\n**Cevap: B** — Testis hücrelerinde MHC sınıf I ekspresyonunun düşük olması\n\n**Özet.** Kanser-testis antijenleri normalde testis germ hücrelerinde ifade edilir, diğer dokularda sessizdir; bu hücrelerde MHC sınıf I düşük olduğundan tolerans gelişmeyebilir.",
    "ses": "Kanser testis antijenlerine tolerans gelişmemesinin nedeni hangisidir?\nA, Viral kökenli olmaları\nBe, Testis hücrelerinde me ha ce sınıf bir ekspresyonunun düşük olması\nCe, Mutasyonlu olmaları\nDe, Glikozilasyon değişikliği\nE, Yalnız melanositlerde ifade edilmeleri\nHer seçeneği tek tek ele alalım.\nViral kökenli antijenler ha pe ve e altı ve e yedi gibi viral proteinlerdir. Kanser testis antijenleri ise normalde testiste ifade edilen proteinlerdir.\nTestis hücrelerinde me ha ce sınıf bir ekspresyonunun düşük olması doğru. Bu nedenle tolerans gelişmeyebilir, tümörde yeniden ifade edildiklerinde bağışıklık yanıtı oluşabilir.\nMutasyonlu proteinler neoantijen grubudur. Kanser testis antijenleri ise mutasyonla değil, diğer dokularda sessiz bir genin tümörde yeniden ifadesiyle ortaya çıkar.\nGlikozilasyon değişikliği, normal doku antijenlerinin anormal formunu oluşturan ayrı bir tümör antijeni kaynağıdır.\nMelanosite özgü ifade, tirozinaz gibi diferansiyasyon antijenlerinin özelliğidir. Kanser testis antijenleri ise normalde testis germ hücrelerinde ifade edilir.\nDoğru cevap Be, Testis hücrelerinde me ha ce sınıf bir ekspresyonunun düşük olması\nKanser testis antijenleri normalde testis germ hücrelerinde ifade edilir, diğer dokularda sessizdir. Bu hücrelerde me ha ce sınıf bir düşük olduğundan tolerans gelişmeyebilir.",
    "kelime": 190
@@ -65,18 +79,25 @@
     "E": "Treg hücresi"
    },
    "dogru": "C",
+   "ipucu": "Tümör hücresi yüzeyindeki MHC sınıf I ile sunulan antijeni tanıyıp perforin ve granzimle apoptoz yaptıran hücreyi düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
-    "A": "Antitümör bağışıklığın temel efektörleri CD8 pozitif sitotoksik T lenfositler ve Th1 tipi CD4 pozitif T hücreleridir. Nötrofil bu sorudaki ayrımı sağlamaz.",
-    "B": "Eozinofil ile karıştırılabilir: Antitümör yanıta ek katkıyı doğal öldürücü hücreler ve makrofajlar sağlar.",
+    "A": "Nötrofiller akut bakteriyel enfeksiyonlara karşı fagositoz yapan doğuştan bağışıklık hücreleridir; tümör hücrelerinin MHC sınıf I ile sunduğu neoantijenleri tanıyıp perforin ve granzimle doğrudan öldüren temel efektör hücre ise CD8+ sitotoksik T lenfosittir.",
+    "B": "Eozinofiller helmint parazitlere ve tip I aşırı duyarlılık reaksiyonlarına aracılık eden granülositlerdir; tümöre özgü antijenleri tanıyarak antitümör bağışıklığın ana yıkıcı gücünü oluşturan hücre ise CD8+ sitotoksik T lenfosittir.",
     "C": "CD8 pozitif sitotoksik T lenfosit doğru: MHC sınıf I ile sunulan tümör antijenini tanır, perforin–granzim ve Fas–FasL yoluyla apoptoz yaptırır.",
-    "D": "Mast hücresi ile karıştırılabilir: Th1 hücreleri interferon gama üretip makrofajları tümör hücresini öldürecek şekilde aktive eder.",
+    "D": "Mast hücreleri IgE aracılı degranülasyonla vasküler geçirgenliği artıran yerleşik doku hücreleridir; MHC sınıf I üzerindeki tümör peptitlerini tanıyıp apoptozu tetikleyen temel antitümör efektör hücre ise CD8+ sitotoksik T lenfosittir.",
     "E": "Treg hücresi immün baskılayıcı bir hücredir; antitümör yanıtı artırmaz, tümörün bağışıklıktan kaçışına katkı verir."
    },
    "ozet": "Antitümör bağışıklığın temel efektörü CD8 pozitif sitotoksik T lenfosittir; dendritik hücrelerin çapraz sunumuyla aktive olur ve tümör hücresinde apoptoz başlatır.",
-   "metin": "**Soru.** Antitümör bağışıklığın temel efektör hücresi hangisidir?\n\n**A)** Nötrofil · **B)** Eozinofil · **C)** CD8+ sitotoksik T lenfosit · **D)** Mast hücresi · **E)** Treg hücresi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Nötrofil** — Antitümör bağışıklığın temel efektörleri CD8 pozitif sitotoksik T lenfositler ve Th1 tipi CD4 pozitif T hücreleridir. Nötrofil bu sorudaki ayrımı sağlamaz.\n- **Eozinofil** — Eozinofil ile karıştırılabilir: Antitümör yanıta ek katkıyı doğal öldürücü hücreler ve makrofajlar sağlar.\n- **CD8+ sitotoksik T lenfosit** — CD8 pozitif sitotoksik T lenfosit doğru: MHC sınıf I ile sunulan tümör antijenini tanır, perforin–granzim ve Fas–FasL yoluyla apoptoz yaptırır.\n- **Mast hücresi** — Mast hücresi ile karıştırılabilir: Th1 hücreleri interferon gama üretip makrofajları tümör hücresini öldürecek şekilde aktive eder.\n- **Treg hücresi** — Treg hücresi immün baskılayıcı bir hücredir; antitümör yanıtı artırmaz, tümörün bağışıklıktan kaçışına katkı verir.\n\n**Cevap: C** — CD8+ sitotoksik T lenfosit\n\n**Özet.** Antitümör bağışıklığın temel efektörü CD8 pozitif sitotoksik T lenfosittir; dendritik hücrelerin çapraz sunumuyla aktive olur ve tümör hücresinde apoptoz başlatır.",
-   "ses": "Antitümör bağışıklığın temel efektör hücresi hangisidir?\nA, Nötrofil\nBe, Eozinofil\nCe, Ce de sekiz pozitif sitotoksik te lenfosit\nDe, Mast hücresi\nE, Düzenleyici te hücresi\nŞıkları sırasıyla gözden geçirelim.\nAntitümör bağışıklığın temel efektörleri ce de sekiz pozitif sitotoksik te lenfositler ve te ha bir tipi ce de dört pozitif te hücreleridir. Nötrofil bu sorudaki ayrımı sağlamaz.\nEozinofil ile karıştırılabilir. Antitümör yanıta ek katkıyı doğal öldürücü hücreler ve makrofajlar sağlar.\nCe de sekiz pozitif sitotoksik te lenfosit doğru. Me ha ce sınıf bir ile sunulan tümör antijenini tanır, perforin granzim ve fas, fas ligandı yoluyla apoptoz yaptırır.\nMast hücresi ile karıştırılabilir. Te ha bir hücreleri interferon gama üretip makrofajları tümör hücresini öldürecek şekilde aktive eder.\nDüzenleyici te hücresi immün baskılayıcı bir hücredir. Antitümör yanıtı artırmaz, tümörün bağışıklıktan kaçışına katkı verir.\nDoğru cevap Ce, Ce de sekiz pozitif sitotoksik te lenfosit\nAntitümör bağışıklığın temel efektörü ce de sekiz pozitif sitotoksik te lenfosittir. Dendritik hücrelerin çapraz sunumuyla aktive olur ve tümör hücresinde apoptoz başlatır.",
-   "kelime": 163
+   "sayfa": [
+    10,
+    11,
+    12,
+    17
+   ],
+   "metin": "**Soru.** Antitümör bağışıklığın temel efektör hücresi hangisidir?\n\n**A)** Nötrofil · **B)** Eozinofil · **C)** CD8+ sitotoksik T lenfosit · **D)** Mast hücresi · **E)** Treg hücresi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Nötrofil** — Nötrofiller akut bakteriyel enfeksiyonlara karşı fagositoz yapan doğuştan bağışıklık hücreleridir; tümör hücrelerinin MHC sınıf I ile sunduğu neoantijenleri tanıyıp perforin ve granzimle doğrudan öldüren temel efektör hücre ise CD8+ sitotoksik T lenfosittir.\n- **Eozinofil** — Eozinofiller helmint parazitlere ve tip I aşırı duyarlılık reaksiyonlarına aracılık eden granülositlerdir; tümöre özgü antijenleri tanıyarak antitümör bağışıklığın ana yıkıcı gücünü oluşturan hücre ise CD8+ sitotoksik T lenfosittir.\n- **CD8+ sitotoksik T lenfosit** — CD8 pozitif sitotoksik T lenfosit doğru: MHC sınıf I ile sunulan tümör antijenini tanır, perforin–granzim ve Fas–FasL yoluyla apoptoz yaptırır.\n- **Mast hücresi** — Mast hücreleri IgE aracılı degranülasyonla vasküler geçirgenliği artıran yerleşik doku hücreleridir; MHC sınıf I üzerindeki tümör peptitlerini tanıyıp apoptozu tetikleyen temel antitümör efektör hücre ise CD8+ sitotoksik T lenfosittir.\n- **Treg hücresi** — Treg hücresi immün baskılayıcı bir hücredir; antitümör yanıtı artırmaz, tümörün bağışıklıktan kaçışına katkı verir.\n\n**Cevap: C** — CD8+ sitotoksik T lenfosit\n\n**Özet.** Antitümör bağışıklığın temel efektörü CD8 pozitif sitotoksik T lenfosittir; dendritik hücrelerin çapraz sunumuyla aktive olur ve tümör hücresinde apoptoz başlatır.",
+   "ses": "Antitümör bağışıklığın temel efektör hücresi hangisidir?\nA, Nötrofil\nBe, Eozinofil\nCe, Ce de sekiz pozitif sitotoksik te lenfosit\nDe, Mast hücresi\nE, Düzenleyici te hücresi\nŞıkları sırasıyla gözden geçirelim.\nNötrofiller akut bakteriyel enfeksiyonlara karşı fagositoz yapan doğuştan bağışıklık hücreleridir. Tümör hücrelerinin em ha ce sınıf bir ile sunduğu neoantijenleri tanıyıp perforin ve granzimle doğrudan öldüren temel efektör hücre ise ce de sekiz pozitif sitotoksik T lenfosittir.\nEozinofiller helmint parazitlere ve tip bir aşırı duyarlılık reaksiyonlarına aracılık eden granülositlerdir. Tümöre özgü antijenleri tanıyarak antitümör bağışıklığın ana yıkıcı gücünü oluşturan hücre ise ce de sekiz pozitif sitotoksik T lenfosittir.\nCe de sekiz pozitif sitotoksik te lenfosit doğru. Me ha ce sınıf bir ile sunulan tümör antijenini tanır, perforin granzim ve fas, fas ligandı yoluyla apoptoz yaptırır.\nMast hücreleri immünoglobulin e aracılı degranülasyonla vasküler geçirgenliği artıran yerleşik doku hücreleridir. Em ha ce sınıf bir üzerindeki tümör peptitlerini tanıyıp apoptozu tetikleyen temel antitümör efektör hücre ise ce de sekiz pozitif sitotoksik T lenfosittir.\nDüzenleyici te hücresi immün baskılayıcı bir hücredir. Antitümör yanıtı artırmaz, tümörün bağışıklıktan kaçışına katkı verir.\nDoğru cevap Ce, Ce de sekiz pozitif sitotoksik te lenfosit\nAntitümör bağışıklığın temel efektörü ce de sekiz pozitif sitotoksik te lenfosittir. Dendritik hücrelerin çapraz sunumuyla aktive olur ve tümör hücresinde apoptoz başlatır.",
+   "kelime": 202
   },
   {
    "no": 4,
@@ -90,6 +111,7 @@
     "E": "NK hücre baskılanması"
    },
    "dogru": "D",
+   "ipucu": "Sitotoksik T lenfositin tümör antijenini tanıyabilmesi için tümör hücresinde hangi sunum molekülünün gerektiğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "PD-L1 artışı ayrı bir kaçış yoludur; PD-1'e bağlanarak T hücre aktivitesini baskılar.",
@@ -99,6 +121,11 @@
     "E": "NK hücre baskılanması bu mutasyonun sonucu değildir; MHC kaybı aksine NK hücre aracılı öldürülmeyi artırabilir."
    },
    "ozet": "β2-mikroglobulin mutasyonu MHC sınıf I ekspresyonunu azaltır ve sitotoksik T lenfositler tümörü tanıyamaz; proteazom ve TAP kusurları gibi antijen işleme bozuklukları da sunumu bozar.",
+   "sayfa": [
+    15,
+    16,
+    17
+   ],
    "metin": "**Soru.** Tümör hücrelerinde β2-mikroglobulin mutasyonunun bağışıklık kaçışına katkısı nasıldır?\n\n**A)** PD-L1 artışı · **B)** TGF-β salınımı · **C)** Treg birikimi · **D)** MHC sınıf I ekspresyonunun azalması · **E)** NK hücre baskılanması\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **PD-L1 artışı** — PD-L1 artışı ayrı bir kaçış yoludur; PD-1'e bağlanarak T hücre aktivitesini baskılar.\n- **TGF-β salınımı** — TGF-β, IL-10 ile birlikte immün baskılayıcı bir sitokindir; salınımı, MHC sunumundan bağımsız ayrı bir kaçış yoludur.\n- **Treg birikimi** — Treg birikimi, miyeloid kökenli baskılayıcı hücrelerle birlikte immün baskılayıcı bir mikroçevre oluşturur.\n- **MHC sınıf I ekspresyonunun azalması** — MHC sınıf I ekspresyonunun azalması doğru: β2-mikroglobulin mutasyonuyla MHC sınıf I azalır, sitotoksik T lenfositler tümör hücresini tanıyamaz.\n- **NK hücre baskılanması** — NK hücre baskılanması bu mutasyonun sonucu değildir; MHC kaybı aksine NK hücre aracılı öldürülmeyi artırabilir.\n\n**Cevap: D** — MHC sınıf I ekspresyonunun azalması\n\n**Özet.** β2-mikroglobulin mutasyonu MHC sınıf I ekspresyonunu azaltır ve sitotoksik T lenfositler tümörü tanıyamaz; proteazom ve TAP kusurları gibi antijen işleme bozuklukları da sunumu bozar.",
    "ses": "Tümör hücrelerinde beta iki mikroglobulin mutasyonunun bağışıklık kaçışına katkısı nasıldır?\nA, Pe de le bir artışı\nBe, Te ge fe beta salınımı\nCe, Düzenleyici te hücresi birikimi\nDe, Me ha ce sınıf bir ekspresyonunun azalması\nE, Ne ka hücre baskılanması\nŞimdi seçeneklere tek tek bakalım.\nPe de le bir artışı ayrı bir kaçış yoludur. Pe de bire bağlanarak te hücre aktivitesini baskılar.\nTe ge fe beta, interlökin on ile birlikte immün baskılayıcı bir sitokindir. Salınımı, me ha ce sunumundan bağımsız ayrı bir kaçış yoludur.\nDüzenleyici te hücresi birikimi, miyeloid kökenli baskılayıcı hücrelerle birlikte immün baskılayıcı bir mikroçevre oluşturur.\nMe ha ce sınıf bir ekspresyonunun azalması doğru. Beta iki mikroglobulin mutasyonuyla me ha ce sınıf bir azalır, sitotoksik te lenfositler tümör hücresini tanıyamaz.\nNe ka hücre baskılanması bu mutasyonun sonucu değildir. Me ha ce kaybı aksine ne ka hücre aracılı öldürülmeyi artırabilir.\nDoğru cevap De, Me ha ce sınıf bir ekspresyonunun azalması\nBeta iki mikroglobulin mutasyonu me ha ce sınıf bir ekspresyonunu azaltır ve sitotoksik te lenfositler tümörü tanıyamaz. Proteazom ve te a pe kusurları gibi antijen işleme bozuklukları da sunumu bozar.",
    "kelime": 168
@@ -115,18 +142,27 @@
     "E": "Makrofaj aktivasyonu"
    },
    "dogru": "A",
+   "ipucu": "Tümörün bu ligandı neden ifade ettiğini, yani bağışıklıktan kaçmayı mı yoksa bağışıklığı uyarmayı mı amaçladığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
-    "A": "T hücre aktivitesinin baskılanması doğru: PD-L1 ile PD-1 bağlanması T hücresini frenler, CTL'leri tükenmiş fenotipe iter.",
+    "A": "T hücre aktivitesinin baskılanması doğrudur: tümör yüzeyindeki PD-L1'in T hücresindeki PD-1 reseptörüne bağlanması T hücresini baskılar ve sitotoksik T lenfositleri işlevsiz (tükenmiş) duruma sokar.",
     "B": "CTL proliferasyonu, tümör antijeniyle aktivasyonda klon genişlemesi olarak görülür; PD-1 bağlanması ise tersine T hücresini baskılar.",
     "C": "NK aktivasyonu bu yolun sonucu değildir; NK hücreleri özellikle MHC sınıf I kaybı olan tümör hücrelerini öldürebilir.",
     "D": "Kompleman aktivasyonu, antikorların tümör antijenlerine bağlanmasıyla ortaya çıkan bir etkidir.",
     "E": "Makrofaj aktivasyonu, Th1 hücrelerinin ürettiği interferon gama ile olur; aktive makrofaj tümör hücresini öldürebilir."
    },
-   "ozet": "PD-L1 tümör ve çevresindeki miyeloid hücrelerde, PD-1 ise aktive T hücrelerinde bulunur; bağlanınca T hücresi baskılanır, kontrol noktası inhibitörleri bu freni kaldırır.",
-   "metin": "**Soru.** Tümör hücresindeki PD-L1'in T hücresindeki PD-1'e bağlanmasının sonucu hangisidir?\n\n**A)** T hücre aktivitesinin baskılanması · **B)** CTL proliferasyonu · **C)** NK aktivasyonu · **D)** Kompleman aktivasyonu · **E)** Makrofaj aktivasyonu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **T hücre aktivitesinin baskılanması** — T hücre aktivitesinin baskılanması doğru: PD-L1 ile PD-1 bağlanması T hücresini frenler, CTL'leri tükenmiş fenotipe iter.\n- **CTL proliferasyonu** — CTL proliferasyonu, tümör antijeniyle aktivasyonda klon genişlemesi olarak görülür; PD-1 bağlanması ise tersine T hücresini baskılar.\n- **NK aktivasyonu** — NK aktivasyonu bu yolun sonucu değildir; NK hücreleri özellikle MHC sınıf I kaybı olan tümör hücrelerini öldürebilir.\n- **Kompleman aktivasyonu** — Kompleman aktivasyonu, antikorların tümör antijenlerine bağlanmasıyla ortaya çıkan bir etkidir.\n- **Makrofaj aktivasyonu** — Makrofaj aktivasyonu, Th1 hücrelerinin ürettiği interferon gama ile olur; aktive makrofaj tümör hücresini öldürebilir.\n\n**Cevap: A** — T hücre aktivitesinin baskılanması\n\n**Özet.** PD-L1 tümör ve çevresindeki miyeloid hücrelerde, PD-1 ise aktive T hücrelerinde bulunur; bağlanınca T hücresi baskılanır, kontrol noktası inhibitörleri bu freni kaldırır.",
-   "ses": "Tümör hücresindeki pe de le birin te hücresindeki pe de bire bağlanmasının sonucu hangisidir?\nA, Te hücre aktivitesinin baskılanması\nBe, Sitotoksik te lenfosit proliferasyonu\nCe, Ne ka aktivasyonu\nDe, Kompleman aktivasyonu\nE, Makrofaj aktivasyonu\nSeçenekleri sırayla değerlendirelim.\nTe hücre aktivitesinin baskılanması doğru. Pe de le bir ile pe de bir bağlanması te hücresini frenler, sitotoksik te lenfositleri tükenmiş fenotipe iter.\nSitotoksik te lenfosit proliferasyonu, tümör antijeniyle aktivasyonda klon genişlemesi olarak görülür. Pe de bir bağlanması ise tersine te hücresini baskılar.\nNe ka aktivasyonu bu yolun sonucu değildir. Ne ka hücreleri özellikle me ha ce sınıf bir kaybı olan tümör hücrelerini öldürebilir.\nKompleman aktivasyonu, antikorların tümör antijenlerine bağlanmasıyla ortaya çıkan bir etkidir.\nMakrofaj aktivasyonu, te ha bir hücrelerinin ürettiği interferon gama ile olur. Aktive makrofaj tümör hücresini öldürebilir.\nDoğru cevap A, Te hücre aktivitesinin baskılanması\nPe de le bir tümör ve çevresindeki miyeloid hücrelerde, pe de bir ise aktive te hücrelerinde bulunur. Bağlanınca te hücresi baskılanır, kontrol noktası inhibitörleri bu freni kaldırır.",
-   "kelime": 160
+   "ozet": "PD-L1 tümör ve çevresindeki miyeloid hücrelerde, PD-1 ise aktive T hücrelerinde bulunur; bağlanınca T hücresi baskılanır, kontrol noktası inhibitörleri ise bu baskılanmayı ortadan kaldırır.",
+   "sayfa": [
+    11,
+    12,
+    13,
+    15,
+    16,
+    18
+   ],
+   "metin": "**Soru.** Tümör hücresindeki PD-L1'in T hücresindeki PD-1'e bağlanmasının sonucu hangisidir?\n\n**A)** T hücre aktivitesinin baskılanması · **B)** CTL proliferasyonu · **C)** NK aktivasyonu · **D)** Kompleman aktivasyonu · **E)** Makrofaj aktivasyonu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **T hücre aktivitesinin baskılanması** — T hücre aktivitesinin baskılanması doğrudur: tümör yüzeyindeki PD-L1'in T hücresindeki PD-1 reseptörüne bağlanması T hücresini baskılar ve sitotoksik T lenfositleri işlevsiz (tükenmiş) duruma sokar.\n- **CTL proliferasyonu** — CTL proliferasyonu, tümör antijeniyle aktivasyonda klon genişlemesi olarak görülür; PD-1 bağlanması ise tersine T hücresini baskılar.\n- **NK aktivasyonu** — NK aktivasyonu bu yolun sonucu değildir; NK hücreleri özellikle MHC sınıf I kaybı olan tümör hücrelerini öldürebilir.\n- **Kompleman aktivasyonu** — Kompleman aktivasyonu, antikorların tümör antijenlerine bağlanmasıyla ortaya çıkan bir etkidir.\n- **Makrofaj aktivasyonu** — Makrofaj aktivasyonu, Th1 hücrelerinin ürettiği interferon gama ile olur; aktive makrofaj tümör hücresini öldürebilir.\n\n**Cevap: A** — T hücre aktivitesinin baskılanması\n\n**Özet.** PD-L1 tümör ve çevresindeki miyeloid hücrelerde, PD-1 ise aktive T hücrelerinde bulunur; bağlanınca T hücresi baskılanır, kontrol noktası inhibitörleri ise bu baskılanmayı ortadan kaldırır.",
+   "ses": "Tümör hücresindeki pe de le birin te hücresindeki pe de bire bağlanmasının sonucu hangisidir?\nA, Te hücre aktivitesinin baskılanması\nBe, Sitotoksik te lenfosit proliferasyonu\nCe, Ne ka aktivasyonu\nDe, Kompleman aktivasyonu\nE, Makrofaj aktivasyonu\nSeçenekleri sırayla değerlendirelim.\nT hücre aktivitesinin baskılanması doğrudur: tümör yüzeyindeki pe de le bir'in T hücresindeki pe de bir reseptörüne bağlanması T hücresini baskılar ve sitotoksik T lenfositleri işlevsiz, tükenmiş, duruma sokar.\nSitotoksik te lenfosit proliferasyonu, tümör antijeniyle aktivasyonda klon genişlemesi olarak görülür. Pe de bir bağlanması ise tersine te hücresini baskılar.\nNe ka aktivasyonu bu yolun sonucu değildir. Ne ka hücreleri özellikle me ha ce sınıf bir kaybı olan tümör hücrelerini öldürebilir.\nKompleman aktivasyonu, antikorların tümör antijenlerine bağlanmasıyla ortaya çıkan bir etkidir.\nMakrofaj aktivasyonu, te ha bir hücrelerinin ürettiği interferon gama ile olur. Aktive makrofaj tümör hücresini öldürebilir.\nDoğru cevap A, Te hücre aktivitesinin baskılanması\npe de le bir tümör ve çevresindeki miyeloid hücrelerde, pe de bir ise aktive T hücrelerinde bulunur. Bağlanınca T hücresi baskılanır, kontrol noktası inhibitörleri ise bu baskılanmayı ortadan kaldırır.",
+   "kelime": 170
   },
   {
    "no": 6,
@@ -140,18 +176,24 @@
     "E": "Otoimmün kolit"
    },
    "dogru": "E",
+   "ipucu": "T hücreler üzerindeki frenleri kaldıran bir tedavinin, tümör dışında hangi hedeflere de yönelebileceğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
-    "A": "Kemik iliği aplazisi ile karıştırılabilir: Kontrol noktası inhibitörleri T hücreler üzerindeki frenleri kaldırarak etki eder.",
-    "B": "Bu ilaçların tipik toksisiteleri kolit, dermatit, pnömonit ve endokrinopatilerdir. Kardiyotoksisite bu sorudaki ayrımı sağlamaz.",
-    "C": "Nefrotoksisite ile karıştırılabilir: Bu ilaçların yan etkileri otoimmünite benzeridir ve genellikle kortikosteroidle yönetilir.",
-    "D": "Bu ilaçlar PD-1, PD-L1 ve CTLA-4'ü hedefleyen monoklonal antikorlardır. Periferik nöropati bu sorudaki ayrımı sağlamaz.",
+    "A": "Kemik iliği aplazisi ve sitopeniler sitotoksik kemoterapilerin bölünen hematopoetik hücreleri vurmasıyla gelişir; immün kontrol noktası inhibitörleri ise T hücrelerinin öz toleransını bozarak otoimmün kolit, pnömonit ve endokrinopatilere yol açar.",
+    "B": "Doğrudan miyokardiyal kardiyotoksisite doksorubisin (antrasiklin) veya trastuzumab tedavisinin bilinen yan etkisidir; PD-1 ve CTLA-4 blokajı yapan kontrol noktası inhibitörlerinin karakteristik yan etkisi ise otoimmün kolit ve benzeri immün aracılı organ iltihaplarıdır.",
+    "C": "Akut tübüler nekroz şeklinde doğrudan nefrotoksisite sisplatin ve aminoglikozidlerin tipik yan etkisidir; immün kontrol noktası inhibitörlerinde ise T hücre aktivasyonunun aşırı artmasına bağlı otoimmün kolit, dermatit ve tiroidit ön plandadır.",
+    "D": "Periferik nöropati vinkristin ve paklitaksel gibi mikrotübül hedefli kemoterapötiklerin tipik yan etkisidir; immün kontrol noktası inhibitörleri ise T hücre toleransını kaldırarak en sık otoimmün kolit, döküntü ve endokrin bozukluklar oluşturur.",
     "E": "Otoimmün kolit doğru: frenleri kalkan T hücreleri otoimmünite benzeri toksisite yapar, kolit bunların tipik örneğidir."
    },
    "ozet": "Kontrol noktası inhibitörleri kolit, dermatit, pnömonit ve endokrinopati gibi otoimmünite benzeri toksisiteler yapar; bunlar genellikle kortikosteroid ve immünsüpresanlarla yönetilir.",
-   "metin": "**Soru.** İmmün kontrol noktası inhibitörlerinin tipik yan etkisi hangisidir?\n\n**A)** Kemik iliği aplazisi · **B)** Kardiyotoksisite · **C)** Nefrotoksisite · **D)** Periferik nöropati · **E)** Otoimmün kolit\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Kemik iliği aplazisi** — Kemik iliği aplazisi ile karıştırılabilir: Kontrol noktası inhibitörleri T hücreler üzerindeki frenleri kaldırarak etki eder.\n- **Kardiyotoksisite** — Bu ilaçların tipik toksisiteleri kolit, dermatit, pnömonit ve endokrinopatilerdir. Kardiyotoksisite bu sorudaki ayrımı sağlamaz.\n- **Nefrotoksisite** — Nefrotoksisite ile karıştırılabilir: Bu ilaçların yan etkileri otoimmünite benzeridir ve genellikle kortikosteroidle yönetilir.\n- **Periferik nöropati** — Bu ilaçlar PD-1, PD-L1 ve CTLA-4'ü hedefleyen monoklonal antikorlardır. Periferik nöropati bu sorudaki ayrımı sağlamaz.\n- **Otoimmün kolit** — Otoimmün kolit doğru: frenleri kalkan T hücreleri otoimmünite benzeri toksisite yapar, kolit bunların tipik örneğidir.\n\n**Cevap: E** — Otoimmün kolit\n\n**Özet.** Kontrol noktası inhibitörleri kolit, dermatit, pnömonit ve endokrinopati gibi otoimmünite benzeri toksisiteler yapar; bunlar genellikle kortikosteroid ve immünsüpresanlarla yönetilir.",
-   "ses": "İmmün kontrol noktası inhibitörlerinin tipik yan etkisi hangisidir?\nA, Kemik iliği aplazisi\nBe, Kardiyotoksisite\nCe, Nefrotoksisite\nDe, Periferik nöropati\nE, Otoimmün kolit\nHer seçeneği tek tek ele alalım.\nKemik iliği aplazisi ile karıştırılabilir. Kontrol noktası inhibitörleri te hücreler üzerindeki frenleri kaldırarak etki eder.\nBu ilaçların tipik toksisiteleri kolit, dermatit, pnömonit ve endokrinopatilerdir. Kardiyotoksisite bu sorudaki ayrımı sağlamaz.\nNefrotoksisite ile karıştırılabilir. Bu ilaçların yan etkileri otoimmünite benzeridir ve genellikle kortikosteroidle yönetilir.\nBu ilaçlar pe de bir, pe de le bir ve ce te le a dördü hedefleyen monoklonal antikorlardır. Periferik nöropati bu sorudaki ayrımı sağlamaz.\nOtoimmün kolit doğru. Frenleri kalkan te hücreleri otoimmünite benzeri toksisite yapar, kolit bunların tipik örneğidir.\nDoğru cevap E, Otoimmün kolit\nKontrol noktası inhibitörleri kolit, dermatit, pnömonit ve endokrinopati gibi otoimmünite benzeri toksisiteler yapar. Bunlar genellikle kortikosteroid ve immünsüpresanlarla yönetilir.",
-   "kelime": 150
+   "sayfa": [
+    16,
+    18,
+    19
+   ],
+   "metin": "**Soru.** İmmün kontrol noktası inhibitörlerinin tipik yan etkisi hangisidir?\n\n**A)** Kemik iliği aplazisi · **B)** Kardiyotoksisite · **C)** Nefrotoksisite · **D)** Periferik nöropati · **E)** Otoimmün kolit\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Kemik iliği aplazisi** — Kemik iliği aplazisi ve sitopeniler sitotoksik kemoterapilerin bölünen hematopoetik hücreleri vurmasıyla gelişir; immün kontrol noktası inhibitörleri ise T hücrelerinin öz toleransını bozarak otoimmün kolit, pnömonit ve endokrinopatilere yol açar.\n- **Kardiyotoksisite** — Doğrudan miyokardiyal kardiyotoksisite doksorubisin (antrasiklin) veya trastuzumab tedavisinin bilinen yan etkisidir; PD-1 ve CTLA-4 blokajı yapan kontrol noktası inhibitörlerinin karakteristik yan etkisi ise otoimmün kolit ve benzeri immün aracılı organ iltihaplarıdır.\n- **Nefrotoksisite** — Akut tübüler nekroz şeklinde doğrudan nefrotoksisite sisplatin ve aminoglikozidlerin tipik yan etkisidir; immün kontrol noktası inhibitörlerinde ise T hücre aktivasyonunun aşırı artmasına bağlı otoimmün kolit, dermatit ve tiroidit ön plandadır.\n- **Periferik nöropati** — Periferik nöropati vinkristin ve paklitaksel gibi mikrotübül hedefli kemoterapötiklerin tipik yan etkisidir; immün kontrol noktası inhibitörleri ise T hücre toleransını kaldırarak en sık otoimmün kolit, döküntü ve endokrin bozukluklar oluşturur.\n- **Otoimmün kolit** — Otoimmün kolit doğru: frenleri kalkan T hücreleri otoimmünite benzeri toksisite yapar, kolit bunların tipik örneğidir.\n\n**Cevap: E** — Otoimmün kolit\n\n**Özet.** Kontrol noktası inhibitörleri kolit, dermatit, pnömonit ve endokrinopati gibi otoimmünite benzeri toksisiteler yapar; bunlar genellikle kortikosteroid ve immünsüpresanlarla yönetilir.",
+   "ses": "İmmün kontrol noktası inhibitörlerinin tipik yan etkisi hangisidir?\nA, Kemik iliği aplazisi\nBe, Kardiyotoksisite\nCe, Nefrotoksisite\nDe, Periferik nöropati\nE, Otoimmün kolit\nHer seçeneği tek tek ele alalım.\nKemik iliği aplazisi ve sitopeniler sitotoksik kemoterapilerin bölünen hematopoetik hücreleri vurmasıyla gelişir. İmmün kontrol noktası inhibitörleri ise T hücrelerinin öz toleransını bozarak otoimmün kolit, pnömonit ve endokrinopatilere yol açar.\nDoğrudan miyokardiyal kardiyotoksisite doksorubisin, antrasiklin, veya trastuzumab tedavisinin bilinen yan etkisidir. Pe de bir ve ce te le a dört blokajı yapan kontrol noktası inhibitörlerinin karakteristik yan etkisi ise otoimmün kolit ve benzeri immün aracılı organ iltihaplarıdır.\nAkut tübüler nekroz şeklinde doğrudan nefrotoksisite sisplatin ve aminoglikozidlerin tipik yan etkisidir. İmmün kontrol noktası inhibitörlerinde ise T hücre aktivasyonunun aşırı artmasına bağlı otoimmün kolit, dermatit ve tiroidit ön plandadır.\nPeriferik nöropati vinkristin ve paklitaksel gibi mikrotübül hedefli kemoterapötiklerin tipik yan etkisidir. İmmün kontrol noktası inhibitörleri ise T hücre toleransını kaldırarak en sık otoimmün kolit, döküntü ve endokrin bozukluklar oluşturur.\nOtoimmün kolit doğru. Frenleri kalkan te hücreleri otoimmünite benzeri toksisite yapar, kolit bunların tipik örneğidir.\nDoğru cevap E, Otoimmün kolit\nKontrol noktası inhibitörleri kolit, dermatit, pnömonit ve endokrinopati gibi otoimmünite benzeri toksisiteler yapar. Bunlar genellikle kortikosteroid ve immünsüpresanlarla yönetilir.",
+   "kelime": 213
   },
   {
    "no": 7,
@@ -165,18 +207,25 @@
     "E": "Kolorektal karsinom"
    },
    "dogru": "B",
+   "ipucu": "Bu tedavinin şu anda çoğunlukla hematolojik malignitelerde kullanıldığını hatırla.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Melanom, kontrol noktası inhibitörlerine yüksek yanıt veren tümörlerdendir; güneş ilişkili yüksek mutasyon yükü bu yanıtla ilişkilidir.",
     "B": "B hücreli akut lenfoblastik lösemi doğru: yapay reseptör eklenmiş T hücreleri bu lösemide ve bazı lenfomalarda başarılıdır.",
     "C": "Akciğer karsinomu, kontrol noktası inhibitörleriyle yüksek yanıt alınabilen bir tümördür; CAR-T ise çoğunlukla hematolojik malignitelerde kullanılır.",
     "D": "Mesane karsinomu, PD-1 ve PD-L1'e karşı monoklonal antikorlarla yüksek yanıt alınan solid tümörlerdendir.",
-    "E": "CAR-T ciddi sitokin salınım sendromu riski taşır ve çoğunlukla ikinci basamak tedavidir. Kolorektal karsinom bu sorudaki ayrımı sağlamaz."
+    "E": "Kolorektal karsinom gibi solid tümörlerde immunosupresif stroma ve hedef antijen heterojenliği nedeniyle CAR-T tedavisinin etkinliği sınırlıdır; CD19 hedefli CAR-T hücre tedavisi en yüksek tam yanıt başarısını B hücreli akut lenfoblastik lösemide ve B hücreli lenfomalarda gösterir."
    },
    "ozet": "CAR-T, T hücrelerine yapay reseptör eklenmesidir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
-   "metin": "**Soru.** CAR-T tedavisinin en başarılı olduğu tümör hangisidir?\n\n**A)** Melanom · **B)** B hücreli akut lenfoblastik lösemi · **C)** Akciğer karsinomu · **D)** Mesane karsinomu · **E)** Kolorektal karsinom\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Melanom** — Melanom, kontrol noktası inhibitörlerine yüksek yanıt veren tümörlerdendir; güneş ilişkili yüksek mutasyon yükü bu yanıtla ilişkilidir.\n- **B hücreli akut lenfoblastik lösemi** — B hücreli akut lenfoblastik lösemi doğru: yapay reseptör eklenmiş T hücreleri bu lösemide ve bazı lenfomalarda başarılıdır.\n- **Akciğer karsinomu** — Akciğer karsinomu, kontrol noktası inhibitörleriyle yüksek yanıt alınabilen bir tümördür; CAR-T ise çoğunlukla hematolojik malignitelerde kullanılır.\n- **Mesane karsinomu** — Mesane karsinomu, PD-1 ve PD-L1'e karşı monoklonal antikorlarla yüksek yanıt alınan solid tümörlerdendir.\n- **Kolorektal karsinom** — CAR-T ciddi sitokin salınım sendromu riski taşır ve çoğunlukla ikinci basamak tedavidir. Kolorektal karsinom bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — B hücreli akut lenfoblastik lösemi\n\n**Özet.** CAR-T, T hücrelerine yapay reseptör eklenmesidir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
-   "ses": "Ce a re te tedavisinin en başarılı olduğu tümör hangisidir?\nA, Melanom\nBe, Be hücreli akut lenfoblastik lösemi\nCe, Akciğer karsinomu\nDe, Mesane karsinomu\nE, Kolorektal karsinom\nŞıkları sırasıyla gözden geçirelim.\nMelanom, kontrol noktası inhibitörlerine yüksek yanıt veren tümörlerdendir. Güneş ilişkili yüksek mutasyon yükü bu yanıtla ilişkilidir.\nBe hücreli akut lenfoblastik lösemi doğru. Yapay reseptör eklenmiş te hücreleri bu lösemide ve bazı lenfomalarda başarılıdır.\nAkciğer karsinomu, kontrol noktası inhibitörleriyle yüksek yanıt alınabilen bir tümördür. Ce a re te ise çoğunlukla hematolojik malignitelerde kullanılır.\nMesane karsinomu, pe de bir ve pe de le bire karşı monoklonal antikorlarla yüksek yanıt alınan solid tümörlerdendir.\nCe a re te ciddi sitokin salınım sendromu riski taşır ve çoğunlukla ikinci basamak tedavidir. Kolorektal karsinom bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Be hücreli akut lenfoblastik lösemi\nCe a re te, te hücrelerine yapay reseptör eklenmesidir. Özellikle be hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
-   "kelime": 161
+   "sayfa": [
+    6,
+    18,
+    19,
+    20
+   ],
+   "metin": "**Soru.** CAR-T tedavisinin en başarılı olduğu tümör hangisidir?\n\n**A)** Melanom · **B)** B hücreli akut lenfoblastik lösemi · **C)** Akciğer karsinomu · **D)** Mesane karsinomu · **E)** Kolorektal karsinom\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Melanom** — Melanom, kontrol noktası inhibitörlerine yüksek yanıt veren tümörlerdendir; güneş ilişkili yüksek mutasyon yükü bu yanıtla ilişkilidir.\n- **B hücreli akut lenfoblastik lösemi** — B hücreli akut lenfoblastik lösemi doğru: yapay reseptör eklenmiş T hücreleri bu lösemide ve bazı lenfomalarda başarılıdır.\n- **Akciğer karsinomu** — Akciğer karsinomu, kontrol noktası inhibitörleriyle yüksek yanıt alınabilen bir tümördür; CAR-T ise çoğunlukla hematolojik malignitelerde kullanılır.\n- **Mesane karsinomu** — Mesane karsinomu, PD-1 ve PD-L1'e karşı monoklonal antikorlarla yüksek yanıt alınan solid tümörlerdendir.\n- **Kolorektal karsinom** — Kolorektal karsinom gibi solid tümörlerde immunosupresif stroma ve hedef antijen heterojenliği nedeniyle CAR-T tedavisinin etkinliği sınırlıdır; CD19 hedefli CAR-T hücre tedavisi en yüksek tam yanıt başarısını B hücreli akut lenfoblastik lösemide ve B hücreli lenfomalarda gösterir.\n\n**Cevap: B** — B hücreli akut lenfoblastik lösemi\n\n**Özet.** CAR-T, T hücrelerine yapay reseptör eklenmesidir; özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+   "ses": "Ce a re te tedavisinin en başarılı olduğu tümör hangisidir?\nA, Melanom\nBe, Be hücreli akut lenfoblastik lösemi\nCe, Akciğer karsinomu\nDe, Mesane karsinomu\nE, Kolorektal karsinom\nŞıkları sırasıyla gözden geçirelim.\nMelanom, kontrol noktası inhibitörlerine yüksek yanıt veren tümörlerdendir. Güneş ilişkili yüksek mutasyon yükü bu yanıtla ilişkilidir.\nBe hücreli akut lenfoblastik lösemi doğru. Yapay reseptör eklenmiş te hücreleri bu lösemide ve bazı lenfomalarda başarılıdır.\nAkciğer karsinomu, kontrol noktası inhibitörleriyle yüksek yanıt alınabilen bir tümördür. Ce a re te ise çoğunlukla hematolojik malignitelerde kullanılır.\nMesane karsinomu, pe de bir ve pe de le bire karşı monoklonal antikorlarla yüksek yanıt alınan solid tümörlerdendir.\nKolorektal karsinom gibi solid tümörlerde immunosupresif stroma ve hedef antijen heterojenliği nedeniyle kar te tedavisinin etkinliği sınırlıdır. Ce de on dokuz hedefli kar te hücre tedavisi en yüksek tam yanıt başarısını B hücreli akut lenfoblastik lösemide ve B hücreli lenfomalarda gösterir.\nDoğru cevap Be, Be hücreli akut lenfoblastik lösemi\nCe a re te, te hücrelerine yapay reseptör eklenmesidir. Özellikle be hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+   "kelime": 179
   },
   {
    "no": 8,
@@ -190,18 +239,24 @@
     "E": "Lizozim"
    },
    "dogru": "C",
+   "ipucu": "Kollajen ve laminin gibi yapı proteinlerini yıkan, katepsin D ile birlikte anılan enzim ailesini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
-    "A": "Kaspazlar ile karıştırılabilir: İnvazyonda bazal membranı yıkan proteazlar arasında katepsin D ve ürokinaz tipi plazminojen aktivatörü de vardır.",
+    "A": "Kaspazlar hücre içinde apoptozu yürüten sistein proteazlardır; tümör hücrelerinin bazal membrandaki tip IV kollajeni ve interstisyel matriksi yıkarak dokuya invaze olmak için salgıladığı başlıca enzim grubu ise matriks metalloproteinazlardır (MMP-2, MMP-9).",
     "B": "Granzimler, sitotoksik T lenfositlerin perforinle birlikte tümör hücresine apoptoz yaptırmak için kullandığı moleküllerdir.",
     "C": "Matriks metalloproteinazlar doğru: tümör ya da stromal hücrelerce salgılanır, kollajen ve laminin gibi bazal membran proteinlerini yıkar.",
-    "D": "İnvazyon için proteaz inhibisyonu değil, proteaz salgısı ve matriks yıkımı gerekir. Elastaz inhibitörleri bu sorudaki ayrımı sağlamaz.",
-    "E": "Lizozim ile karıştırılabilir: Matriks yıkım ürünleri tümör hücresi için kemotaktik ve büyüme uyarıcı etki de gösterir."
+    "D": "Elastaz inhibitörleri (örneğin alfa-1 antitripsin) proteolizi durdurarak hücre dışı matriksi korur; tümör invazyonunda ise tam tersine bazal membranı ve kollajeni parçalayan matriks metalloproteinazlar (MMP'ler) aşırı salgılanır.",
+    "E": "Lizozim gözyaşı, tükürük ve lökosit granüllerinde bulunan, bakteri hücre duvarını yıkan antibakteriyel bir enzimdir; tümör hücrelerinin bazal membranı ve bağ dokusu matriksini eriterek invazyon yapmasını sağlayan temel enzimler ise matriks metalloproteinazlardır."
    },
    "ozet": "İnvazyonda matriks metalloproteinazlar, katepsin D ve ürokinaz tipi plazminojen aktivatörü bazal membranı ve hücre dışı matriksi yıkar; bu, göçü ve invazyonu kolaylaştırır.",
-   "metin": "**Soru.** Bazal membran ve ECM invazyonunda tümör hücrelerinin salgıladığı temel proteaz grubu hangisidir?\n\n**A)** Kaspazlar · **B)** Granzimler · **C)** Matriks metalloproteinazlar · **D)** Elastaz inhibitörleri · **E)** Lizozim\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Kaspazlar** — Kaspazlar ile karıştırılabilir: İnvazyonda bazal membranı yıkan proteazlar arasında katepsin D ve ürokinaz tipi plazminojen aktivatörü de vardır.\n- **Granzimler** — Granzimler, sitotoksik T lenfositlerin perforinle birlikte tümör hücresine apoptoz yaptırmak için kullandığı moleküllerdir.\n- **Matriks metalloproteinazlar** — Matriks metalloproteinazlar doğru: tümör ya da stromal hücrelerce salgılanır, kollajen ve laminin gibi bazal membran proteinlerini yıkar.\n- **Elastaz inhibitörleri** — İnvazyon için proteaz inhibisyonu değil, proteaz salgısı ve matriks yıkımı gerekir. Elastaz inhibitörleri bu sorudaki ayrımı sağlamaz.\n- **Lizozim** — Lizozim ile karıştırılabilir: Matriks yıkım ürünleri tümör hücresi için kemotaktik ve büyüme uyarıcı etki de gösterir.\n\n**Cevap: C** — Matriks metalloproteinazlar\n\n**Özet.** İnvazyonda matriks metalloproteinazlar, katepsin D ve ürokinaz tipi plazminojen aktivatörü bazal membranı ve hücre dışı matriksi yıkar; bu, göçü ve invazyonu kolaylaştırır.",
-   "ses": "Bazal membran ve hücre dışı matriks invazyonunda tümör hücrelerinin salgıladığı temel proteaz grubu hangisidir?\nA, Kaspazlar\nBe, Granzimler\nCe, Matriks metalloproteinazlar\nDe, Elastaz inhibitörleri\nE, Lizozim\nŞimdi seçeneklere tek tek bakalım.\nKaspazlar ile karıştırılabilir. İnvazyonda bazal membranı yıkan proteazlar arasında katepsin de ve ürokinaz tipi plazminojen aktivatörü de vardır.\nGranzimler, sitotoksik te lenfositlerin perforinle birlikte tümör hücresine apoptoz yaptırmak için kullandığı moleküllerdir.\nMatriks metalloproteinazlar doğru. Tümör ya da stromal hücrelerce salgılanır, kollajen ve laminin gibi bazal membran proteinlerini yıkar.\nİnvazyon için proteaz inhibisyonu değil, proteaz salgısı ve matriks yıkımı gerekir. Elastaz inhibitörleri bu sorudaki ayrımı sağlamaz.\nLizozim ile karıştırılabilir. Matriks yıkım ürünleri tümör hücresi için kemotaktik ve büyüme uyarıcı etki de gösterir.\nDoğru cevap Ce, Matriks metalloproteinazlar\nİnvazyonda matriks metalloproteinazlar, katepsin de ve ürokinaz tipi plazminojen aktivatörü bazal membranı ve hücre dışı matriksi yıkar. Bu, göçü ve invazyonu kolaylaştırır.",
-   "kelime": 161
+   "sayfa": [
+    11,
+    25,
+    26
+   ],
+   "metin": "**Soru.** Bazal membran ve ECM invazyonunda tümör hücrelerinin salgıladığı temel proteaz grubu hangisidir?\n\n**A)** Kaspazlar · **B)** Granzimler · **C)** Matriks metalloproteinazlar · **D)** Elastaz inhibitörleri · **E)** Lizozim\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Kaspazlar** — Kaspazlar hücre içinde apoptozu yürüten sistein proteazlardır; tümör hücrelerinin bazal membrandaki tip IV kollajeni ve interstisyel matriksi yıkarak dokuya invaze olmak için salgıladığı başlıca enzim grubu ise matriks metalloproteinazlardır (MMP-2, MMP-9).\n- **Granzimler** — Granzimler, sitotoksik T lenfositlerin perforinle birlikte tümör hücresine apoptoz yaptırmak için kullandığı moleküllerdir.\n- **Matriks metalloproteinazlar** — Matriks metalloproteinazlar doğru: tümör ya da stromal hücrelerce salgılanır, kollajen ve laminin gibi bazal membran proteinlerini yıkar.\n- **Elastaz inhibitörleri** — Elastaz inhibitörleri (örneğin alfa-1 antitripsin) proteolizi durdurarak hücre dışı matriksi korur; tümör invazyonunda ise tam tersine bazal membranı ve kollajeni parçalayan matriks metalloproteinazlar (MMP'ler) aşırı salgılanır.\n- **Lizozim** — Lizozim gözyaşı, tükürük ve lökosit granüllerinde bulunan, bakteri hücre duvarını yıkan antibakteriyel bir enzimdir; tümör hücrelerinin bazal membranı ve bağ dokusu matriksini eriterek invazyon yapmasını sağlayan temel enzimler ise matriks metalloproteinazlardır.\n\n**Cevap: C** — Matriks metalloproteinazlar\n\n**Özet.** İnvazyonda matriks metalloproteinazlar, katepsin D ve ürokinaz tipi plazminojen aktivatörü bazal membranı ve hücre dışı matriksi yıkar; bu, göçü ve invazyonu kolaylaştırır.",
+   "ses": "Bazal membran ve hücre dışı matriks invazyonunda tümör hücrelerinin salgıladığı temel proteaz grubu hangisidir?\nA, Kaspazlar\nBe, Granzimler\nCe, Matriks metalloproteinazlar\nDe, Elastaz inhibitörleri\nE, Lizozim\nŞimdi seçeneklere tek tek bakalım.\nKaspazlar hücre içinde apoptozu yürüten sistein proteazlardır. Tümör hücrelerinin bazal membrandaki tip dört kollajeni ve interstisyel matriksi yıkarak dokuya invaze olmak için salgıladığı başlıca enzim grubu ise matriks metalloproteinazlardır, em em pe iki, em em pe dokuz,.\nGranzimler, sitotoksik te lenfositlerin perforinle birlikte tümör hücresine apoptoz yaptırmak için kullandığı moleküllerdir.\nMatriks metalloproteinazlar doğru. Tümör ya da stromal hücrelerce salgılanır, kollajen ve laminin gibi bazal membran proteinlerini yıkar.\nElastaz inhibitörleri, örneğin alfa-bir antitripsin, proteolizi durdurarak hücre dışı matriksi korur. Tümör invazyonunda ise tam tersine bazal membranı ve kollajeni parçalayan matriks metalloproteinazlar, em em pe'ler, aşırı salgılanır.\nLizozim gözyaşı, tükürük ve lökosit granüllerinde bulunan, bakteri hücre duvarını yıkan antibakteriyel bir enzimdir. Tümör hücrelerinin bazal membranı ve bağ dokusu matriksini eriterek invazyon yapmasını sağlayan temel enzimler ise matriks metalloproteinazlardır.\nDoğru cevap Ce, Matriks metalloproteinazlar\nİnvazyonda matriks metalloproteinazlar, katepsin de ve ürokinaz tipi plazminojen aktivatörü bazal membranı ve hücre dışı matriksi yıkar. Bu, göçü ve invazyonu kolaylaştırır.",
+   "kelime": 198
   },
   {
    "no": 9,
@@ -215,18 +270,25 @@
     "E": "NK hücresi"
    },
    "dogru": "D",
+   "ipucu": "Dolaşımda tümör hücreleriyle agregat oluşturup onları bir kalkan gibi saran kan elemanını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
-    "A": "Dolaşımdaki tümör hücreleri bağışıklık hücrelerince tanınıp yok edilme riskiyle karşı karşıyadır. Nötrofil bu sorudaki ayrımı sağlamaz.",
-    "B": "Eritrosit ile karıştırılabilir: Tümör hücreleri dolaşımda tek tek ya da trombosit ve lökositlerle agregat halinde bulunur.",
+    "A": "Nötrofiller bakteriyel fagositoz yapan lökositlerdir; dolaşıma geçen tümör hücrelerinin çevresini sararak onları kan akımının mekanik kayma stresinden ve NK hücrelerinin sitotoksik saldırısından koruyan kalkanı ise trombositler oluşturur.",
+    "B": "Eritrositler dokulara oksijen taşıyan hücrelerdir ve tümör hücrelerine koruyucu agregat oluşturmazlar; dolaşımdaki tümör hücrelerine P-selektin ve fibrin ağıyla bağlanıp onları NK hücre yıkımından koruyan ve ekstravazasyonu kolaylaştıran ise trombositlerdir.",
     "C": "Endotel hücresi intravazasyonda tümör hücresi ve makrofajlarla etkileşir; ekstravazasyonda endotel adezyon molekülleri rol oynar.",
     "D": "Trombosit doğru: tümör hücreleriyle agregat oluşturarak onları dolaşımda mekanik ve immün saldırıdan koruyabilir.",
     "E": "NK hücresi koruyucu değil, tehdittir; özellikle MHC sınıf I kaybı olan tümör hücrelerini öldürebilir."
    },
    "ozet": "Dolaşımdaki tümör hücreleri trombositlerle agregat oluşturur; trombositler onları mekanik ve immün saldırıdan koruyarak tümör embolisinin sağkalımını destekler.",
-   "metin": "**Soru.** Dolaşımdaki tümör hücrelerini mekanik ve immün saldırıdan koruyan hücre hangisidir?\n\n**A)** Nötrofil · **B)** Eritrosit · **C)** Endotel hücresi · **D)** Trombosit · **E)** NK hücresi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Nötrofil** — Dolaşımdaki tümör hücreleri bağışıklık hücrelerince tanınıp yok edilme riskiyle karşı karşıyadır. Nötrofil bu sorudaki ayrımı sağlamaz.\n- **Eritrosit** — Eritrosit ile karıştırılabilir: Tümör hücreleri dolaşımda tek tek ya da trombosit ve lökositlerle agregat halinde bulunur.\n- **Endotel hücresi** — Endotel hücresi intravazasyonda tümör hücresi ve makrofajlarla etkileşir; ekstravazasyonda endotel adezyon molekülleri rol oynar.\n- **Trombosit** — Trombosit doğru: tümör hücreleriyle agregat oluşturarak onları dolaşımda mekanik ve immün saldırıdan koruyabilir.\n- **NK hücresi** — NK hücresi koruyucu değil, tehdittir; özellikle MHC sınıf I kaybı olan tümör hücrelerini öldürebilir.\n\n**Cevap: D** — Trombosit\n\n**Özet.** Dolaşımdaki tümör hücreleri trombositlerle agregat oluşturur; trombositler onları mekanik ve immün saldırıdan koruyarak tümör embolisinin sağkalımını destekler.",
-   "ses": "Dolaşımdaki tümör hücrelerini mekanik ve immün saldırıdan koruyan hücre hangisidir?\nA, Nötrofil\nBe, Eritrosit\nCe, Endotel hücresi\nDe, Trombosit\nE, Ne ka hücresi\nSeçenekleri sırayla değerlendirelim.\nDolaşımdaki tümör hücreleri bağışıklık hücrelerince tanınıp yok edilme riskiyle karşı karşıyadır. Nötrofil bu sorudaki ayrımı sağlamaz.\nEritrosit ile karıştırılabilir. Tümör hücreleri dolaşımda tek tek ya da trombosit ve lökositlerle agregat halinde bulunur.\nEndotel hücresi intravazasyonda tümör hücresi ve makrofajlarla etkileşir. Ekstravazasyonda endotel adezyon molekülleri rol oynar.\nTrombosit doğru. Tümör hücreleriyle agregat oluşturarak onları dolaşımda mekanik ve immün saldırıdan koruyabilir.\nNe ka hücresi koruyucu değil, tehdittir. Özellikle me ha ce sınıf bir kaybı olan tümör hücrelerini öldürebilir.\nDoğru cevap De, Trombosit\nDolaşımdaki tümör hücreleri trombositlerle agregat oluşturur. Trombositler onları mekanik ve immün saldırıdan koruyarak tümör embolisinin sağkalımını destekler.",
-   "kelime": 143
+   "sayfa": [
+    15,
+    23,
+    29,
+    30
+   ],
+   "metin": "**Soru.** Dolaşımdaki tümör hücrelerini mekanik ve immün saldırıdan koruyan hücre hangisidir?\n\n**A)** Nötrofil · **B)** Eritrosit · **C)** Endotel hücresi · **D)** Trombosit · **E)** NK hücresi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Nötrofil** — Nötrofiller bakteriyel fagositoz yapan lökositlerdir; dolaşıma geçen tümör hücrelerinin çevresini sararak onları kan akımının mekanik kayma stresinden ve NK hücrelerinin sitotoksik saldırısından koruyan kalkanı ise trombositler oluşturur.\n- **Eritrosit** — Eritrositler dokulara oksijen taşıyan hücrelerdir ve tümör hücrelerine koruyucu agregat oluşturmazlar; dolaşımdaki tümör hücrelerine P-selektin ve fibrin ağıyla bağlanıp onları NK hücre yıkımından koruyan ve ekstravazasyonu kolaylaştıran ise trombositlerdir.\n- **Endotel hücresi** — Endotel hücresi intravazasyonda tümör hücresi ve makrofajlarla etkileşir; ekstravazasyonda endotel adezyon molekülleri rol oynar.\n- **Trombosit** — Trombosit doğru: tümör hücreleriyle agregat oluşturarak onları dolaşımda mekanik ve immün saldırıdan koruyabilir.\n- **NK hücresi** — NK hücresi koruyucu değil, tehdittir; özellikle MHC sınıf I kaybı olan tümör hücrelerini öldürebilir.\n\n**Cevap: D** — Trombosit\n\n**Özet.** Dolaşımdaki tümör hücreleri trombositlerle agregat oluşturur; trombositler onları mekanik ve immün saldırıdan koruyarak tümör embolisinin sağkalımını destekler.",
+   "ses": "Dolaşımdaki tümör hücrelerini mekanik ve immün saldırıdan koruyan hücre hangisidir?\nA, Nötrofil\nBe, Eritrosit\nCe, Endotel hücresi\nDe, Trombosit\nE, Ne ka hücresi\nSeçenekleri sırayla değerlendirelim.\nNötrofiller bakteriyel fagositoz yapan lökositlerdir. Dolaşıma geçen tümör hücrelerinin çevresini sararak onları kan akımının mekanik kayma stresinden ve doğal katil hücrelerinin sitotoksik saldırısından koruyan kalkanı ise trombositler oluşturur.\nEritrositler dokulara oksijen taşıyan hücrelerdir ve tümör hücrelerine koruyucu agregat oluşturmazlar. Dolaşımdaki tümör hücrelerine P-selektin ve fibrin ağıyla bağlanıp onları doğal katil hücre yıkımından koruyan ve ekstravazasyonu kolaylaştıran ise trombositlerdir.\nEndotel hücresi intravazasyonda tümör hücresi ve makrofajlarla etkileşir. Ekstravazasyonda endotel adezyon molekülleri rol oynar.\nTrombosit doğru. Tümör hücreleriyle agregat oluşturarak onları dolaşımda mekanik ve immün saldırıdan koruyabilir.\nNe ka hücresi koruyucu değil, tehdittir. Özellikle me ha ce sınıf bir kaybı olan tümör hücrelerini öldürebilir.\nDoğru cevap De, Trombosit\nDolaşımdaki tümör hücreleri trombositlerle agregat oluşturur. Trombositler onları mekanik ve immün saldırıdan koruyarak tümör embolisinin sağkalımını destekler.",
+   "kelime": 167
   },
   {
    "no": 10,
@@ -240,18 +302,24 @@
     "E": "Bağışıklık gözetimi"
    },
    "dogru": "A",
+   "ipucu": "Metastazın hangi organa yerleşeceğini yalnız tümör hücresinin değil, hedef organ ortamının da belirlediğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Tohum ve toprak doğru: tümör hücresindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir, tümör ile stroma uyumlu olmalıdır.",
-    "B": "Organ tropizmini tümör hücresindeki kemokin reseptörleri yönlendirir, ekstravazasyonda endotel adezyon molekülleri de rol oynar. İki vuruş bu sorudaki ayrımı sağlamaz.",
-    "C": "Warburg ile karıştırılabilir: Hedef organa ulaşan mikrometastazın büyüyebilmesi için uygun stromal destek ve anjiyogenez gerekir.",
+    "B": "Knudson'un iki vuruş hipotezi tümör baskılayıcı genlerin her iki alelinin de inaktive olması gerektiğini açıklar; dolaşımdaki tümör hücresinin (tohum) kemokin reseptörleri ve büyüme sinyalleri açısından uyumlu bir hedef organ stromasında (toprak) metastaz oluşturmasını açıklayan ise Paget'in tohum ve toprak hipotezidir.",
+    "C": "Warburg etkisi kanser hücrelerinin oksijen varlığında bile enerji ve biyosentez ara ürünleri için aerobik glikolizi tercih etmesidir; tümör hücresinin yüzey reseptörleri ile hedef organ mikroçevresi arasındaki seçici metastaz uyumunu açıklayan ise tohum ve toprak hipotezidir.",
     "D": "Klonal seçilim, bağışıklık kaçışı en yüksek alt klonların öne çıkması gibi süreçleri anlatır; organ tropizmini açıklamaz.",
     "E": "Bağışıklık gözetimi, sürekli ortaya çıkan kötü huylu hücrelerin bağışıklık sistemince tespit edilip yok edilmesidir."
    },
    "ozet": "Organ tropizmi tohum ve toprak hipoteziyle açıklanır: tümör hücresindeki kemokin reseptörleri, hedef organ stromasından salgılanan kemokinlere yanıt verir.",
-   "metin": "**Soru.** Metastazda tümör hücresi kemokin reseptörleri ile hedef organ stroması arasındaki uyumu açıklayan hipotez hangisidir?\n\n**A)** Tohum ve toprak · **B)** İki vuruş · **C)** Warburg · **D)** Klonal seçilim · **E)** Bağışıklık gözetimi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Tohum ve toprak** — Tohum ve toprak doğru: tümör hücresindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir, tümör ile stroma uyumlu olmalıdır.\n- **İki vuruş** — Organ tropizmini tümör hücresindeki kemokin reseptörleri yönlendirir, ekstravazasyonda endotel adezyon molekülleri de rol oynar. İki vuruş bu sorudaki ayrımı sağlamaz.\n- **Warburg** — Warburg ile karıştırılabilir: Hedef organa ulaşan mikrometastazın büyüyebilmesi için uygun stromal destek ve anjiyogenez gerekir.\n- **Klonal seçilim** — Klonal seçilim, bağışıklık kaçışı en yüksek alt klonların öne çıkması gibi süreçleri anlatır; organ tropizmini açıklamaz.\n- **Bağışıklık gözetimi** — Bağışıklık gözetimi, sürekli ortaya çıkan kötü huylu hücrelerin bağışıklık sistemince tespit edilip yok edilmesidir.\n\n**Cevap: A** — Tohum ve toprak\n\n**Özet.** Organ tropizmi tohum ve toprak hipoteziyle açıklanır: tümör hücresindeki kemokin reseptörleri, hedef organ stromasından salgılanan kemokinlere yanıt verir.",
-   "ses": "Metastazda tümör hücresi kemokin reseptörleri ile hedef organ stroması arasındaki uyumu açıklayan hipotez hangisidir?\nA, Tohum ve toprak\nBe, İki vuruş\nCe, Varburg\nDe, Klonal seçilim\nE, Bağışıklık gözetimi\nHer seçeneği tek tek ele alalım.\nTohum ve toprak doğru. Tümör hücresindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir, tümör ile stroma uyumlu olmalıdır.\nOrgan tropizmini tümör hücresindeki kemokin reseptörleri yönlendirir, ekstravazasyonda endotel adezyon molekülleri de rol oynar. İki vuruş bu sorudaki ayrımı sağlamaz.\nWarburg ile karıştırılabilir. Hedef organa ulaşan mikrometastazın büyüyebilmesi için uygun stromal destek ve anjiyogenez gerekir.\nKlonal seçilim, bağışıklık kaçışı en yüksek alt klonların öne çıkması gibi süreçleri anlatır. Organ tropizmini açıklamaz.\nBağışıklık gözetimi, sürekli ortaya çıkan kötü huylu hücrelerin bağışıklık sistemince tespit edilip yok edilmesidir.\nDoğru cevap A, Tohum ve toprak\nOrgan tropizmi tohum ve toprak hipoteziyle açıklanır. Tümör hücresindeki kemokin reseptörleri, hedef organ stromasından salgılanan kemokinlere yanıt verir.",
-   "kelime": 170
+   "sayfa": [
+    4,
+    14,
+    30
+   ],
+   "metin": "**Soru.** Metastazda tümör hücresi kemokin reseptörleri ile hedef organ stroması arasındaki uyumu açıklayan hipotez hangisidir?\n\n**A)** Tohum ve toprak · **B)** İki vuruş · **C)** Warburg · **D)** Klonal seçilim · **E)** Bağışıklık gözetimi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Tohum ve toprak** — Tohum ve toprak doğru: tümör hücresindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir, tümör ile stroma uyumlu olmalıdır.\n- **İki vuruş** — Knudson'un iki vuruş hipotezi tümör baskılayıcı genlerin her iki alelinin de inaktive olması gerektiğini açıklar; dolaşımdaki tümör hücresinin (tohum) kemokin reseptörleri ve büyüme sinyalleri açısından uyumlu bir hedef organ stromasında (toprak) metastaz oluşturmasını açıklayan ise Paget'in tohum ve toprak hipotezidir.\n- **Warburg** — Warburg etkisi kanser hücrelerinin oksijen varlığında bile enerji ve biyosentez ara ürünleri için aerobik glikolizi tercih etmesidir; tümör hücresinin yüzey reseptörleri ile hedef organ mikroçevresi arasındaki seçici metastaz uyumunu açıklayan ise tohum ve toprak hipotezidir.\n- **Klonal seçilim** — Klonal seçilim, bağışıklık kaçışı en yüksek alt klonların öne çıkması gibi süreçleri anlatır; organ tropizmini açıklamaz.\n- **Bağışıklık gözetimi** — Bağışıklık gözetimi, sürekli ortaya çıkan kötü huylu hücrelerin bağışıklık sistemince tespit edilip yok edilmesidir.\n\n**Cevap: A** — Tohum ve toprak\n\n**Özet.** Organ tropizmi tohum ve toprak hipoteziyle açıklanır: tümör hücresindeki kemokin reseptörleri, hedef organ stromasından salgılanan kemokinlere yanıt verir.",
+   "ses": "Metastazda tümör hücresi kemokin reseptörleri ile hedef organ stroması arasındaki uyumu açıklayan hipotez hangisidir?\nA, Tohum ve toprak\nBe, İki vuruş\nCe, Varburg\nDe, Klonal seçilim\nE, Bağışıklık gözetimi\nHer seçeneği tek tek ele alalım.\nTohum ve toprak doğru. Tümör hücresindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir, tümör ile stroma uyumlu olmalıdır.\nKnudson'un iki vuruş hipotezi tümör baskılayıcı genlerin her iki alelinin de inaktive olması gerektiğini açıklar. Dolaşımdaki tümör hücresinin, tohum, kemokin reseptörleri ve büyüme sinyalleri açısından uyumlu bir hedef organ stromasında, toprak, metastaz oluşturmasını açıklayan ise Paget'in tohum ve toprak hipotezidir.\nWarburg etkisi kanser hücrelerinin oksijen varlığında bile enerji ve biyosentez ara ürünleri için aerobik glikolizi tercih etmesidir. Tümör hücresinin yüzey reseptörleri ile hedef organ mikroçevresi arasındaki seçici metastaz uyumunu açıklayan ise tohum ve toprak hipotezidir.\nKlonal seçilim, bağışıklık kaçışı en yüksek alt klonların öne çıkması gibi süreçleri anlatır. Organ tropizmini açıklamaz.\nBağışıklık gözetimi, sürekli ortaya çıkan kötü huylu hücrelerin bağışıklık sistemince tespit edilip yok edilmesidir.\nDoğru cevap A, Tohum ve toprak\nOrgan tropizmi tohum ve toprak hipoteziyle açıklanır. Tümör hücresindeki kemokin reseptörleri, hedef organ stromasından salgılanan kemokinlere yanıt verir.",
+   "kelime": 210
   },
   {
    "no": 11,
@@ -265,22 +333,29 @@
     "E": "Dormansi"
    },
    "dogru": "E",
+   "ipucu": "Bu hücrelerin ölmediğini, yıllar sonra yeniden büyüyüp geç metastaz ya da nüks yapabildiğini, yani durumun geri dönebildiğini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
-    "A": "Mikrometastaz, histolojik ya da moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaktır. Senesens bu sorudaki ayrımı sağlamaz.",
+    "A": "Senesens, telomer kısalması veya onkogen stresiyle hücrenin bölünme yeteneğini bir daha geri dönmemek üzere kalıcı olarak yitirmesidir; uzak organa yerleşen mikrometastatik tümör hücrelerinin bölünmeden yıllarca canlı kalıp sonradan yeniden çoğalabilmesine ise tümör dormansisi denir.",
     "B": "Apoptoz hücrenin ölümüdür; sitotoksik T lenfositler tümör hücresinde perforin–granzim ve Fas–FasL yoluyla apoptoz başlatır.",
-    "C": "Hücrelerin bölünmeden beklemesinin nedenleri arasında konak bağışıklık baskısı da vardır. Anaplazi bu sorudaki ayrımı sağlamaz.",
+    "C": "Anaplazi malign tümör hücrelerinde diferansiyasyon kaybı ve ileri derecede pleomorfizm bulunmasıdır; hedef dokuya ulaşmış mikrometastatik hücrelerin anjiyogenez veya uygun stromal sinyaller oluşana dek uzun süre bölünmeden beklemesine ise dormansi denir.",
     "D": "Kolonizasyon, hedef organda mikrometastazın büyümesidir; bunun için uygun stromal destek ve anjiyogenez gerekir.",
     "E": "Dormansi doğru: tümör hücreleri uzun süre bölünmeden canlı kalır; yetersiz anjiyogenez, niş eksikliği ya da bağışıklık baskısı buna yol açar."
    },
    "ozet": "Dormansi, mikrometastatik hücrelerin çoğalmayı durdurup uyku benzeri sessiz bir durumda beklemesidir; bu nedenle yıllar sonra geç metastaz ya da nüks görülebilir.",
-   "metin": "**Soru.** Mikrometastatik tümör hücrelerinin uzun süre bölünmeden canlı kalmasına ne ad verilir?\n\n**A)** Senesens · **B)** Apoptoz · **C)** Anaplazi · **D)** Kolonizasyon · **E)** Dormansi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Senesens** — Mikrometastaz, histolojik ya da moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaktır. Senesens bu sorudaki ayrımı sağlamaz.\n- **Apoptoz** — Apoptoz hücrenin ölümüdür; sitotoksik T lenfositler tümör hücresinde perforin–granzim ve Fas–FasL yoluyla apoptoz başlatır.\n- **Anaplazi** — Hücrelerin bölünmeden beklemesinin nedenleri arasında konak bağışıklık baskısı da vardır. Anaplazi bu sorudaki ayrımı sağlamaz.\n- **Kolonizasyon** — Kolonizasyon, hedef organda mikrometastazın büyümesidir; bunun için uygun stromal destek ve anjiyogenez gerekir.\n- **Dormansi** — Dormansi doğru: tümör hücreleri uzun süre bölünmeden canlı kalır; yetersiz anjiyogenez, niş eksikliği ya da bağışıklık baskısı buna yol açar.\n\n**Cevap: E** — Dormansi\n\n**Özet.** Dormansi, mikrometastatik hücrelerin çoğalmayı durdurup uyku benzeri sessiz bir durumda beklemesidir; bu nedenle yıllar sonra geç metastaz ya da nüks görülebilir.",
-   "ses": "Mikrometastatik tümör hücrelerinin uzun süre bölünmeden canlı kalmasına ne ad verilir?\nA, Senesens\nBe, Apoptoz\nCe, Anaplazi\nDe, Kolonizasyon\nE, Dormansi\nŞıkları sırasıyla gözden geçirelim.\nMikrometastaz, histolojik ya da moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaktır. Senesens bu sorudaki ayrımı sağlamaz.\nApoptoz hücrenin ölümüdür. Sitotoksik te lenfositler tümör hücresinde perforin granzim ve fas, fas ligandı yoluyla apoptoz başlatır.\nHücrelerin bölünmeden beklemesinin nedenleri arasında konak bağışıklık baskısı da vardır. Anaplazi bu sorudaki ayrımı sağlamaz.\nKolonizasyon, hedef organda mikrometastazın büyümesidir. Bunun için uygun stromal destek ve anjiyogenez gerekir.\nDormansi doğru. Tümör hücreleri uzun süre bölünmeden canlı kalır, yetersiz anjiyogenez, niş eksikliği ya da bağışıklık baskısı buna yol açar.\nDoğru cevap E, Dormansi\nDormansi, mikrometastatik hücrelerin çoğalmayı durdurup uyku benzeri sessiz bir durumda beklemesidir. Bu nedenle yıllar sonra geç metastaz ya da nüks görülebilir.",
-   "kelime": 151
+   "sayfa": [
+    11,
+    30,
+    31
+   ],
+   "metin": "**Soru.** Mikrometastatik tümör hücrelerinin uzun süre bölünmeden canlı kalmasına ne ad verilir?\n\n**A)** Senesens · **B)** Apoptoz · **C)** Anaplazi · **D)** Kolonizasyon · **E)** Dormansi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Senesens** — Senesens, telomer kısalması veya onkogen stresiyle hücrenin bölünme yeteneğini bir daha geri dönmemek üzere kalıcı olarak yitirmesidir; uzak organa yerleşen mikrometastatik tümör hücrelerinin bölünmeden yıllarca canlı kalıp sonradan yeniden çoğalabilmesine ise tümör dormansisi denir.\n- **Apoptoz** — Apoptoz hücrenin ölümüdür; sitotoksik T lenfositler tümör hücresinde perforin–granzim ve Fas–FasL yoluyla apoptoz başlatır.\n- **Anaplazi** — Anaplazi malign tümör hücrelerinde diferansiyasyon kaybı ve ileri derecede pleomorfizm bulunmasıdır; hedef dokuya ulaşmış mikrometastatik hücrelerin anjiyogenez veya uygun stromal sinyaller oluşana dek uzun süre bölünmeden beklemesine ise dormansi denir.\n- **Kolonizasyon** — Kolonizasyon, hedef organda mikrometastazın büyümesidir; bunun için uygun stromal destek ve anjiyogenez gerekir.\n- **Dormansi** — Dormansi doğru: tümör hücreleri uzun süre bölünmeden canlı kalır; yetersiz anjiyogenez, niş eksikliği ya da bağışıklık baskısı buna yol açar.\n\n**Cevap: E** — Dormansi\n\n**Özet.** Dormansi, mikrometastatik hücrelerin çoğalmayı durdurup uyku benzeri sessiz bir durumda beklemesidir; bu nedenle yıllar sonra geç metastaz ya da nüks görülebilir.",
+   "ses": "Mikrometastatik tümör hücrelerinin uzun süre bölünmeden canlı kalmasına ne ad verilir?\nA, Senesens\nBe, Apoptoz\nCe, Anaplazi\nDe, Kolonizasyon\nE, Dormansi\nŞıkları sırasıyla gözden geçirelim.\nSenesens, telomer kısalması veya onkogen stresiyle hücrenin bölünme yeteneğini bir daha geri dönmemek üzere kalıcı olarak yitirmesidir. Uzak organa yerleşen mikrometastatik tümör hücrelerinin bölünmeden yıllarca canlı kalıp sonradan yeniden çoğalabilmesine ise tümör dormansisi denir.\nApoptoz hücrenin ölümüdür. Sitotoksik te lenfositler tümör hücresinde perforin granzim ve fas, fas ligandı yoluyla apoptoz başlatır.\nAnaplazi malign tümör hücrelerinde diferansiyasyon kaybı ve ileri derecede pleomorfizm bulunmasıdır. Hedef dokuya ulaşmış mikrometastatik hücrelerin anjiyogenez veya uygun stromal sinyaller oluşana dek uzun süre bölünmeden beklemesine ise dormansi denir.\nKolonizasyon, hedef organda mikrometastazın büyümesidir. Bunun için uygun stromal destek ve anjiyogenez gerekir.\nDormansi doğru. Tümör hücreleri uzun süre bölünmeden canlı kalır, yetersiz anjiyogenez, niş eksikliği ya da bağışıklık baskısı buna yol açar.\nDoğru cevap E, Dormansi\nDormansi, mikrometastatik hücrelerin çoğalmayı durdurup uyku benzeri sessiz bir durumda beklemesidir. Bu nedenle yıllar sonra geç metastaz ya da nüks görülebilir.",
+   "kelime": 183
   },
   {
    "no": 23,
    "tur": "cikmis",
+   "sinav": "2020-2021 · Dönem 3 donem3-kurul1 Sınavı",
    "soru": "Metastaz oluşum kaskadının basamakları aşağıda verilmiştir:\nI. İntravazasyon\nII. Lokal invazyon\nIII. Metastatik kolonizasyon\nIV. Ekstravazasyon\nBu basamakların doğru sıralaması hangi seçenekte verilmiştir?",
    "secenekler": {
     "A": "I, II, III, IV",
@@ -290,6 +365,7 @@
     "E": "II, I, IV, III"
    },
    "dogru": "E",
+   "ipucu": "Tümör hücresinin önce dokuyu aşması, sonra damara girip çıkması ve en son yeni organda yerleşmesi gerektiğini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Bu sıralama intravazasyonla başlıyor; oysa tümör hücresi önce lokal invazyonla bazal membranı ve hücre dışı matriksi aşmalıdır.",
@@ -299,6 +375,10 @@
     "E": "II, I, IV, III doğru: lokal invazyon, intravazasyon, ekstravazasyon ve en son metastatik kolonizasyon gelir."
    },
    "ozet": "Metastatik kaskad ayrılma ve lokal invazyonla başlar, intravazasyon ve dolaşımda sağkalımla sürer, ekstravazasyonla damardan çıkılır ve kolonizasyonla biter.",
+   "sayfa": [
+    22,
+    30
+   ],
    "metin": "**Soru.** Metastaz oluşum kaskadının basamakları aşağıda verilmiştir:\nI. İntravazasyon\nII. Lokal invazyon\nIII. Metastatik kolonizasyon\nIV. Ekstravazasyon\nBu basamakların doğru sıralaması hangi seçenekte verilmiştir?\n\n**A)** I, II, III, IV · **B)** II, III, IV, I · **C)** I, IV, III, II · **D)** III, I, II, IV · **E)** II, I, IV, III\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **I, II, III, IV** — Bu sıralama intravazasyonla başlıyor; oysa tümör hücresi önce lokal invazyonla bazal membranı ve hücre dışı matriksi aşmalıdır.\n- **II, III, IV, I** — Kolonizasyonu ekstravazasyondan önce koyan bu dizi hatalıdır; kolonizasyon ancak damar dışına çıkıştan sonra hedef dokuda gerçekleşir.\n- **I, IV, III, II** — Ekstravazasyonu lokal invazyondan önce koyan dizi hatalıdır; damar dışına çıkabilmek için önce damara girilmiş olmalıdır.\n- **III, I, II, IV** — Kolonizasyonla başlayan sıralama yanlıştır; metastatik kolonizasyon kaskadın son aşamasıdır ve mikrometastazın büyümesini anlatır.\n- **II, I, IV, III** — II, I, IV, III doğru: lokal invazyon, intravazasyon, ekstravazasyon ve en son metastatik kolonizasyon gelir.\n\n**Cevap: E** — II, I, IV, III\n\n**Özet.** Metastatik kaskad ayrılma ve lokal invazyonla başlar, intravazasyon ve dolaşımda sağkalımla sürer, ekstravazasyonla damardan çıkılır ve kolonizasyonla biter.",
    "ses": "Metastaz oluşum kaskadının basamakları şunlardır. Bir, intravazasyon. İki, lokal invazyon. Üç, metastatik kolonizasyon. Dört, ekstravazasyon. Bu basamakların doğru sıralaması hangisidir?\nA, bir, iki, üç, dört\nBe, iki, üç, dört, bir\nCe, bir, dört, üç, iki\nDe, üç, bir, iki, dört\nE, iki, bir, dört, üç\nŞıkları sırasıyla gözden geçirelim.\nBu sıralama intravazasyonla başlıyor. Oysa tümör hücresi önce lokal invazyonla bazal membranı ve hücre dışı matriksi aşmalıdır.\nKolonizasyonu ekstravazasyondan önce koyan bu dizi hatalıdır. Kolonizasyon ancak damar dışına çıkıştan sonra hedef dokuda gerçekleşir.\nEkstravazasyonu lokal invazyondan önce koyan dizi hatalıdır. Damar dışına çıkabilmek için önce damara girilmiş olmalıdır.\nKolonizasyonla başlayan sıralama yanlıştır. Metastatik kolonizasyon kaskadın son aşamasıdır ve mikrometastazın büyümesini anlatır.\nİki, bir, dört, üç sıralaması doğru. Lokal invazyon, intravazasyon, ekstravazasyon ve en son metastatik kolonizasyon gelir.\nDoğru cevap E, iki, bir, dört, üç\nMetastatik kaskad ayrılma ve lokal invazyonla başlar, intravazasyon ve dolaşımda sağkalımla sürer, ekstravazasyonla damardan çıkılır ve kolonizasyonla biter.",
    "kelime": 190
@@ -306,6 +386,7 @@
   {
    "no": 24,
    "tur": "cikmis",
+   "sinav": "2026 · donem3-kurul1",
    "soru": "Aşağıdakilerden hangisi tümöre bağlı immün baskıya (supresyona) aracılık eder?",
    "secenekler": {
     "A": "CTLA-4 (immün kontrol noktası)",
@@ -315,22 +396,29 @@
     "E": "Tümör testis antijenleri"
    },
    "dogru": "A",
+   "ipucu": "T hücreleri üzerindeki frenleri kaldıran tedavilerin hangi molekülleri hedeflediğini hatırla.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "CTLA-4 doğru: T hücre aktivasyonunu negatif düzenleyen bir kontrol molekülüdür ve tümöre bağlı immün baskıya aracılık eder.",
-    "B": "Tümöre bağlı immün baskıyı CTLA-4, PD-1 ve PD-L1 gibi kontrol noktaları sağlar. CEA bu sorudaki ayrımı sağlamaz.",
-    "C": "CA-125 ile karıştırılabilir: İmmün baskıda TGF-β ve IL-10 gibi sitokinler ile T düzenleyici hücreler rol oynar.",
-    "D": "Kontrol noktası blokajında monoklonal antikorlarla hedeflenen moleküller PD-1, PD-L1 ve CTLA-4'tür. CD30 bu sorudaki ayrımı sağlamaz.",
+    "B": "Karsinoembriyonik antijen (CEA), kolorektal ve pankreas adenokarsinomlarında tedavi yanıtını ve nüksü izlemekte kullanılan bir serum tümör belirtecidir; T lenfosit aktivasyonunu doğrudan baskılayarak tümörün immün yanıttan kaçmasına aracılık eden ise CTLA-4'tür.",
+    "C": "CA-125, seröz over karsinomlarının tanı ve izleminde kullanılan glikoprotein yapısında bir tümör belirtecidir; antijen sunan hücrelerdeki B7 moleküllerine bağlanarak T hücre aktivasyonunu baskılayan immün kontrol noktası ise CTLA-4'tür.",
+    "D": "CD30, klasik Hodgkin lenfoma ve anaplastik büyük hücreli lenfoma hücrelerinde eksprese edilen TNF reseptör ailesi üyesi bir tanısal belirteçtir; T lenfosit yanıtını negatif düzenleyerek tümöre bağlı immün supresyona aracılık eden molekül ise CTLA-4'tür.",
     "E": "Tümör testis antijenleri solid tümörlerde yeniden ifade edilir ve bağışıklık yanıtı oluşturabilir; baskıya aracılık etmez, yanıtın hedefidir."
    },
-   "ozet": "CTLA-4 T hücre aktivasyonunu negatif düzenler, PD-L1 ise PD-1'e bağlanıp T hücresini baskılar; bu frenler tümörün bağışıklıktan kaçmasını sağlar.",
-   "metin": "**Soru.** Aşağıdakilerden hangisi tümöre bağlı immün baskıya (supresyona) aracılık eder?\n\n**A)** CTLA-4 (immün kontrol noktası) · **B)** CEA (karsinoembriyonik antijen) · **C)** CA-125 (over kanseri antijeni) · **D)** CD30 (TNF reseptör ailesi üyesi) · **E)** Tümör testis antijenleri\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **CTLA-4 (immün kontrol noktası)** — CTLA-4 doğru: T hücre aktivasyonunu negatif düzenleyen bir kontrol molekülüdür ve tümöre bağlı immün baskıya aracılık eder.\n- **CEA (karsinoembriyonik antijen)** — Tümöre bağlı immün baskıyı CTLA-4, PD-1 ve PD-L1 gibi kontrol noktaları sağlar. CEA bu sorudaki ayrımı sağlamaz.\n- **CA-125 (over kanseri antijeni)** — CA-125 ile karıştırılabilir: İmmün baskıda TGF-β ve IL-10 gibi sitokinler ile T düzenleyici hücreler rol oynar.\n- **CD30 (TNF reseptör ailesi üyesi)** — Kontrol noktası blokajında monoklonal antikorlarla hedeflenen moleküller PD-1, PD-L1 ve CTLA-4'tür. CD30 bu sorudaki ayrımı sağlamaz.\n- **Tümör testis antijenleri** — Tümör testis antijenleri solid tümörlerde yeniden ifade edilir ve bağışıklık yanıtı oluşturabilir; baskıya aracılık etmez, yanıtın hedefidir.\n\n**Cevap: A** — CTLA-4 (immün kontrol noktası)\n\n**Özet.** CTLA-4 T hücre aktivasyonunu negatif düzenler, PD-L1 ise PD-1'e bağlanıp T hücresini baskılar; bu frenler tümörün bağışıklıktan kaçmasını sağlar.",
-   "ses": "Aşağıdakilerden hangisi tümöre bağlı immün baskıya, yani supresyona aracılık eder?\nA, ce te le a dört, immün kontrol noktası\nBe, ce e a, karsinoembriyonik antijen\nCe, ce a yüz yirmi beş, over kanseri antijeni\nDe, ce de otuz, te ne fe reseptör ailesi üyesi\nE, Tümör testis antijenleri\nŞimdi seçeneklere tek tek bakalım.\nCe te le a dört doğru. Te hücre aktivasyonunu negatif düzenleyen bir kontrol molekülüdür ve tümöre bağlı immün baskıya aracılık eder.\nTümöre bağlı immün baskıyı ce te le a dört, pe de bir ve pe de le bir gibi kontrol noktaları sağlar. CEA bu sorudaki ayrımı sağlamaz.\nCA-bir yüz yirmi beş ile karıştırılabilir. İmmün baskıda te ge fe beta ve i le on gibi sitokinler ile te düzenleyici hücreler rol oynar.\nKontrol noktası blokajında monoklonal antikorlarla hedeflenen moleküller pe de bir, pe de le bir ve ce te le a dörttür. CDotuz bu sorudaki ayrımı sağlamaz.\nTümör testis antijenleri solid tümörlerde yeniden ifade edilir ve bağışıklık yanıtı oluşturabilir. Baskıya aracılık etmez, yanıtın hedefidir.\nDoğru cevap A, ce te le a dört, immün kontrol noktası\nCe te le a dört te hücre aktivasyonunu negatif düzenler. Pe de le bir ise pe de bire bağlanıp te hücresini baskılar. Bu frenler tümörün bağışıklıktan kaçmasını sağlar.",
-   "kelime": 183
+   "ozet": "CTLA-4 T hücre aktivasyonunu negatif düzenler, PD-L1 ise PD-1'e bağlanıp T hücresini baskılar; bu kontrol noktası mekanizmaları tümörün bağışıklıktan kaçmasını sağlar.",
+   "sayfa": [
+    16,
+    17,
+    18
+   ],
+   "metin": "**Soru.** Aşağıdakilerden hangisi tümöre bağlı immün baskıya (supresyona) aracılık eder?\n\n**A)** CTLA-4 (immün kontrol noktası) · **B)** CEA (karsinoembriyonik antijen) · **C)** CA-125 (over kanseri antijeni) · **D)** CD30 (TNF reseptör ailesi üyesi) · **E)** Tümör testis antijenleri\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **CTLA-4 (immün kontrol noktası)** — CTLA-4 doğru: T hücre aktivasyonunu negatif düzenleyen bir kontrol molekülüdür ve tümöre bağlı immün baskıya aracılık eder.\n- **CEA (karsinoembriyonik antijen)** — Karsinoembriyonik antijen (CEA), kolorektal ve pankreas adenokarsinomlarında tedavi yanıtını ve nüksü izlemekte kullanılan bir serum tümör belirtecidir; T lenfosit aktivasyonunu doğrudan baskılayarak tümörün immün yanıttan kaçmasına aracılık eden ise CTLA-4'tür.\n- **CA-125 (over kanseri antijeni)** — CA-125, seröz over karsinomlarının tanı ve izleminde kullanılan glikoprotein yapısında bir tümör belirtecidir; antijen sunan hücrelerdeki B7 moleküllerine bağlanarak T hücre aktivasyonunu baskılayan immün kontrol noktası ise CTLA-4'tür.\n- **CD30 (TNF reseptör ailesi üyesi)** — CD30, klasik Hodgkin lenfoma ve anaplastik büyük hücreli lenfoma hücrelerinde eksprese edilen TNF reseptör ailesi üyesi bir tanısal belirteçtir; T lenfosit yanıtını negatif düzenleyerek tümöre bağlı immün supresyona aracılık eden molekül ise CTLA-4'tür.\n- **Tümör testis antijenleri** — Tümör testis antijenleri solid tümörlerde yeniden ifade edilir ve bağışıklık yanıtı oluşturabilir; baskıya aracılık etmez, yanıtın hedefidir.\n\n**Cevap: A** — CTLA-4 (immün kontrol noktası)\n\n**Özet.** CTLA-4 T hücre aktivasyonunu negatif düzenler, PD-L1 ise PD-1'e bağlanıp T hücresini baskılar; bu kontrol noktası mekanizmaları tümörün bağışıklıktan kaçmasını sağlar.",
+   "ses": "Aşağıdakilerden hangisi tümöre bağlı immün baskıya, yani supresyona aracılık eder?\nA, ce te le a dört, immün kontrol noktası\nBe, ce e a, karsinoembriyonik antijen\nCe, ce a yüz yirmi beş, over kanseri antijeni\nDe, ce de otuz, te ne fe reseptör ailesi üyesi\nE, Tümör testis antijenleri\nŞimdi seçeneklere tek tek bakalım.\nCe te le a dört doğru. Te hücre aktivasyonunu negatif düzenleyen bir kontrol molekülüdür ve tümöre bağlı immün baskıya aracılık eder.\nKarsinoembriyonik antijen, ce e a,, kolorektal ve pankreas adenokarsinomlarında tedavi yanıtını ve nüksü izlemekte kullanılan bir serum tümör belirtecidir. T lenfosit aktivasyonunu doğrudan baskılayarak tümörün immün yanıttan kaçmasına aracılık eden ise ce te le a dört'tür.\nce a yüz yirmi beş, seröz over karsinomlarının tanı ve izleminde kullanılan glikoprotein yapısında bir tümör belirtecidir. Antijen sunan hücrelerdeki Byedi moleküllerine bağlanarak T hücre aktivasyonunu baskılayan immün kontrol noktası ise ce te le a dört'tür.\nce de otuz, klasik Hodgkin lenfoma ve anaplastik büyük hücreli lenfoma hücrelerinde eksprese edilen te ne fe reseptör ailesi üyesi bir tanısal belirteçtir. T lenfosit yanıtını negatif düzenleyerek tümöre bağlı immün supresyona aracılık eden molekül ise ce te le a dört'tür.\nTümör testis antijenleri solid tümörlerde yeniden ifade edilir ve bağışıklık yanıtı oluşturabilir. Baskıya aracılık etmez, yanıtın hedefidir.\nDoğru cevap A, ce te le a dört, immün kontrol noktası\nce te le a dört T hücre aktivasyonunu negatif düzenler, pe de le bir ise pe de bir'e bağlanıp T hücresini baskılar. Bu kontrol noktası mekanizmaları tümörün bağışıklıktan kaçmasını sağlar.",
+   "kelime": 227
   },
   {
    "no": 25,
    "tur": "cikmis",
+   "sinav": "2020-2021 · 2020-2021 Dönem 3 Final Sınavı (sinav.karabuk.edu.tr öğrenci çıktısı)",
    "soru": "Aşağıdakilerden hangisi tümöre bağlı immün supresyona aracılık etmez?",
    "secenekler": {
     "A": "PD-1",
@@ -340,22 +428,29 @@
     "E": "CAR-T hücreleri"
    },
    "dogru": "E",
+   "ipucu": "Tümörün kendini koruma araçlarını, dışarıdan verilen bir tedavi yaklaşımından ayır.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
-    "A": "PD-1 aktive T lenfositlerindeki reseptördür; ligandına bağlanınca T hücre aktivitesi baskılanır, bu yüzden aracılık eder ve cevap değildir.",
+    "A": "PD-1, aktive T lenfositlerinin yüzeyinde bulunan ve tümördeki PD-L1 ligandına bağlandığında T hücre sitotoksisitesini baskılayan bir kontrol noktası reseptörüdür; dolayısıyla tümöre bağlı immün supresyona doğrudan aracılık eder.",
     "B": "PD-L1 tümör ve miyeloid hücrelerde ifade edilir; T hücresini baskılayıp tükenmiş fenotipe iter, yani immün baskıya aracılık eder.",
-    "C": "CTLA-4 T hücre aktivasyonunu negatif düzenleyen kontrol noktasıdır; immün baskıya aracılık ettiği için cevap değildir.",
+    "C": "CTLA-4, T hücre yüzeyinde CD28 ile yarışarak kostimülasyonu engelleyen negatif düzenleyici bir reseptördür ve tümöre bağlı immün baskılanmaya aracılık eder; CAR-T hücreleri ise tümörü yok etmek üzere genetik olarak tasarlanmış tedavi edici T lenfositlerdir.",
     "D": "T düzenleyici hücreler, tümörlerin kullandığı immün baskılayıcı hücrelerdir; bu yüzden immün baskıya aracılık eder.",
     "E": "CAR-T hücreleri doğru cevaptır çünkü baskı aracı değil tedavidir; T hücrelerine yapay reseptör eklenir, B hücreli akut lenfoblastik lösemide başarılıdır."
    },
    "ozet": "PD-1, PD-L1, CTLA-4 ve T düzenleyici hücreler tümörün immün kaçış araçlarıdır; CAR-T ise T hücrelerine yapay reseptör eklenen bir immünoterapidir.",
-   "metin": "**Soru.** Aşağıdakilerden hangisi tümöre bağlı immün supresyona aracılık etmez?\n\n**A)** PD-1 · **B)** PD-L1 · **C)** CTLA-4 · **D)** Treg indüksiyonu · **E)** CAR-T hücreleri\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **PD-1** — PD-1 aktive T lenfositlerindeki reseptördür; ligandına bağlanınca T hücre aktivitesi baskılanır, bu yüzden aracılık eder ve cevap değildir.\n- **PD-L1** — PD-L1 tümör ve miyeloid hücrelerde ifade edilir; T hücresini baskılayıp tükenmiş fenotipe iter, yani immün baskıya aracılık eder.\n- **CTLA-4** — CTLA-4 T hücre aktivasyonunu negatif düzenleyen kontrol noktasıdır; immün baskıya aracılık ettiği için cevap değildir.\n- **Treg indüksiyonu** — T düzenleyici hücreler, tümörlerin kullandığı immün baskılayıcı hücrelerdir; bu yüzden immün baskıya aracılık eder.\n- **CAR-T hücreleri** — CAR-T hücreleri doğru cevaptır çünkü baskı aracı değil tedavidir; T hücrelerine yapay reseptör eklenir, B hücreli akut lenfoblastik lösemide başarılıdır.\n\n**Cevap: E** — CAR-T hücreleri\n\n**Özet.** PD-1, PD-L1, CTLA-4 ve T düzenleyici hücreler tümörün immün kaçış araçlarıdır; CAR-T ise T hücrelerine yapay reseptör eklenen bir immünoterapidir.",
-   "ses": "Aşağıdakilerden hangisi tümöre bağlı immün supresyona aracılık etmez?\nA, pe de bir\nBe, pe de le bir\nCe, ce te le a dört\nDe, Düzenleyici te hücresi indüksiyonu\nE, ce a re te hücreleri\nSeçenekleri sırayla değerlendirelim.\nPe de bir aktive te lenfositlerindeki reseptördür. Ligandına bağlanınca te hücre aktivitesi baskılanır, bu yüzden aracılık eder ve cevap değildir.\nPe de le bir tümör ve miyeloid hücrelerde ifade edilir. Te hücresini baskılayıp tükenmiş fenotipe iter, yani immün baskıya aracılık eder.\nCe te le a dört te hücre aktivasyonunu negatif düzenleyen kontrol noktasıdır. İmmün baskıya aracılık ettiği için cevap değildir.\nTe düzenleyici hücreler, tümörlerin kullandığı immün baskılayıcı hücrelerdir. Bu yüzden immün baskıya aracılık eder.\nCe a re te hücreleri doğru cevaptır çünkü baskı aracı değil tedavidir. Te hücrelerine yapay reseptör eklenir, be hücreli akut lenfoblastik lösemide başarılıdır.\nDoğru cevap E, ce a re te hücreleri\nPe de bir, pe de le bir, ce te le a dört ve te düzenleyici hücreler tümörün immün kaçış araçlarıdır. Ce a re te ise te hücrelerine yapay reseptör eklenen bir immünoterapidir.",
-   "kelime": 157
+   "sayfa": [
+    16,
+    17,
+    20
+   ],
+   "metin": "**Soru.** Aşağıdakilerden hangisi tümöre bağlı immün supresyona aracılık etmez?\n\n**A)** PD-1 · **B)** PD-L1 · **C)** CTLA-4 · **D)** Treg indüksiyonu · **E)** CAR-T hücreleri\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **PD-1** — PD-1, aktive T lenfositlerinin yüzeyinde bulunan ve tümördeki PD-L1 ligandına bağlandığında T hücre sitotoksisitesini baskılayan bir kontrol noktası reseptörüdür; dolayısıyla tümöre bağlı immün supresyona doğrudan aracılık eder.\n- **PD-L1** — PD-L1 tümör ve miyeloid hücrelerde ifade edilir; T hücresini baskılayıp tükenmiş fenotipe iter, yani immün baskıya aracılık eder.\n- **CTLA-4** — CTLA-4, T hücre yüzeyinde CD28 ile yarışarak kostimülasyonu engelleyen negatif düzenleyici bir reseptördür ve tümöre bağlı immün baskılanmaya aracılık eder; CAR-T hücreleri ise tümörü yok etmek üzere genetik olarak tasarlanmış tedavi edici T lenfositlerdir.\n- **Treg indüksiyonu** — T düzenleyici hücreler, tümörlerin kullandığı immün baskılayıcı hücrelerdir; bu yüzden immün baskıya aracılık eder.\n- **CAR-T hücreleri** — CAR-T hücreleri doğru cevaptır çünkü baskı aracı değil tedavidir; T hücrelerine yapay reseptör eklenir, B hücreli akut lenfoblastik lösemide başarılıdır.\n\n**Cevap: E** — CAR-T hücreleri\n\n**Özet.** PD-1, PD-L1, CTLA-4 ve T düzenleyici hücreler tümörün immün kaçış araçlarıdır; CAR-T ise T hücrelerine yapay reseptör eklenen bir immünoterapidir.",
+   "ses": "Aşağıdakilerden hangisi tümöre bağlı immün supresyona aracılık etmez?\nA, pe de bir\nBe, pe de le bir\nCe, ce te le a dört\nDe, Düzenleyici te hücresi indüksiyonu\nE, ce a re te hücreleri\nSeçenekleri sırayla değerlendirelim.\npe de bir, aktive T lenfositlerinin yüzeyinde bulunan ve tümördeki pe de le bir ligandına bağlandığında T hücre sitotoksisitesini baskılayan bir kontrol noktası reseptörüdür. Dolayısıyla tümöre bağlı immün supresyona doğrudan aracılık eder.\nPe de le bir tümör ve miyeloid hücrelerde ifade edilir. Te hücresini baskılayıp tükenmiş fenotipe iter, yani immün baskıya aracılık eder.\nce te le a dört, T hücre yüzeyinde ce de yirmi sekiz ile yarışarak kostimülasyonu engelleyen negatif düzenleyici bir reseptördür ve tümöre bağlı immün baskılanmaya aracılık eder. Kar te hücreleri ise tümörü yok etmek üzere genetik olarak tasarlanmış tedavi edici T lenfositlerdir.\nTe düzenleyici hücreler, tümörlerin kullandığı immün baskılayıcı hücrelerdir. Bu yüzden immün baskıya aracılık eder.\nCe a re te hücreleri doğru cevaptır çünkü baskı aracı değil tedavidir. Te hücrelerine yapay reseptör eklenir, be hücreli akut lenfoblastik lösemide başarılıdır.\nDoğru cevap E, ce a re te hücreleri\nPe de bir, pe de le bir, ce te le a dört ve te düzenleyici hücreler tümörün immün kaçış araçlarıdır. Ce a re te ise te hücrelerine yapay reseptör eklenen bir immünoterapidir.",
+   "kelime": 185
   },
   {
    "no": 26,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Bağışıklık gözetiminin işlediğini gösteren kanıtlardan biri hangisidir?",
    "secenekler": {
     "A": "Tümörde E-kadherin kaybı",
@@ -365,6 +460,7 @@
     "E": "Trombositlerle tümör embolisi"
    },
    "dogru": "C",
+   "ipucu": "Bağışıklık sistemi zayıfladığında normalde temizlenecek malign klonlara ne olacağını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "E-kadherin kaybı, metastazın başlangıcında hücreler arası kohezyonu azaltan değişikliktir; gözetimin kanıtı değil, invazyonun ilk adımıdır.",
@@ -374,6 +470,9 @@
     "E": "Trombositlerle sarılı tümör embolisi, dolaşımda sağkalımı destekler; bir metastaz basamağıdır, gözetimin kanıtı değildir."
    },
    "ozet": "Bağışıklık gözetiminin üç kanıtı tümör infiltrasyonunun prognozla ilişkisi, immün yetmezlikte artmış tümör riski ve immünoterapiyle görülen dramatik yanıtlardır.",
+   "sayfa": [
+    4
+   ],
    "metin": "**Soru.** Bağışıklık gözetiminin işlediğini gösteren kanıtlardan biri hangisidir?\n\n**A)** Tümörde E-kadherin kaybı · **B)** Kanser-testis antijeni ifadesi · **C)** İmmün yetmezlikte artmış tümör riski · **D)** Tümörde MHC sınıf I kaybı · **E)** Trombositlerle tümör embolisi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Tümörde E-kadherin kaybı** — E-kadherin kaybı, metastazın başlangıcında hücreler arası kohezyonu azaltan değişikliktir; gözetimin kanıtı değil, invazyonun ilk adımıdır.\n- **Kanser-testis antijeni ifadesi** — Kanser-testis antijeni, tümörde yeniden ifade edilen bir antijen kaynağıdır; gözetimin varlığını değil, bağışıklığın neyi tanıyabileceğini gösterir.\n- **İmmün yetmezlikte artmış tümör riski** — İmmün yetmezlikte artmış tümör riski doğru: bağışıklık zayıflayınca tümör sıklığının artması, gözetimin gerçekten işlediğini gösterir.\n- **Tümörde MHC sınıf I kaybı** — MHC sınıf I kaybı, tümörün CTL tanımasından kaçtığı bir mekanizmadır; gözetimin kanıtı değil, ondan kaçış yoludur.\n- **Trombositlerle tümör embolisi** — Trombositlerle sarılı tümör embolisi, dolaşımda sağkalımı destekler; bir metastaz basamağıdır, gözetimin kanıtı değildir.\n\n**Cevap: C** — İmmün yetmezlikte artmış tümör riski\n\n**Özet.** Bağışıklık gözetiminin üç kanıtı tümör infiltrasyonunun prognozla ilişkisi, immün yetmezlikte artmış tümör riski ve immünoterapiyle görülen dramatik yanıtlardır.",
    "ses": "Bağışıklık gözetiminin işlediğini gösteren kanıtlardan biri hangisidir?\nA, Tümörde e kadherin kaybı\nBe, Kanser testis antijeni ifadesi\nCe, İmmün yetmezlikte artmış tümör riski\nDe, Tümörde me ha ce sınıf bir kaybı\nE, Trombositlerle tümör embolisi\nHer seçeneği tek tek ele alalım.\nE kadherin kaybı, metastazın başlangıcında hücreler arası kohezyonu azaltan değişikliktir. Gözetimin kanıtı değil, invazyonun ilk adımıdır.\nKanser testis antijeni, tümörde yeniden ifade edilen bir antijen kaynağıdır. Gözetimin varlığını değil, bağışıklığın neyi tanıyabileceğini gösterir.\nİmmün yetmezlikte artmış tümör riski doğru, bağışıklık zayıflayınca tümör sıklığının artması, gözetimin gerçekten işlediğini gösterir.\nMe ha ce sınıf bir kaybı, tümörün sitotoksik te lenfositi tanımasından kaçtığı bir mekanizmadır. Gözetimin kanıtı değil, ondan kaçış yoludur.\nTrombositlerle sarılı tümör embolisi, dolaşımda sağkalımı destekler. Bir metastaz basamağıdır, gözetimin kanıtı değildir.\nDoğru cevap Ce, İmmün yetmezlikte artmış tümör riski\nBağışıklık gözetiminin üç kanıtı tümör infiltrasyonunun prognozla ilişkisi, immün yetmezlikte artmış tümör riski ve immünoterapiyle görülen dramatik yanıtlardır.",
    "kelime": 174
@@ -381,6 +480,7 @@
   {
    "no": 27,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Neoantijeni normal doku antijeninin anormal formundan ayıran özellik hangisidir?",
    "secenekler": {
     "A": "Protein dizisinin değişmesi",
@@ -390,6 +490,7 @@
     "E": "Hücre soyuna özgü ifade"
    },
    "dogru": "A",
+   "ipucu": "Yeni peptidin hangi düzeyde oluştuğunu, şeker ya da fosfat eklenmesinden ayırarak düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Protein dizisinin değişmesi doğru: neoantijen, sürücü veya yolcu mutasyonla protein dizisinde yeni peptit oluşmasıdır.",
@@ -399,6 +500,10 @@
     "E": "Hücre soyuna özgü ifade, tirozinaz gibi diferansiyasyon antijenlerinin özelliğidir; bu antijen normal melanositte de bulunur."
    },
    "ozet": "Neoantijende mutasyonla protein dizisinde yeni peptit oluşur; normal doku antijeninin anormal formunda ise glikozilasyon veya fosforilasyon değişiklikleri vardır.",
+   "sayfa": [
+    6,
+    8
+   ],
    "metin": "**Soru.** Neoantijeni normal doku antijeninin anormal formundan ayıran özellik hangisidir?\n\n**A)** Protein dizisinin değişmesi · **B)** Glikozilasyon değişikliği · **C)** Testiste sınırlı ifade · **D)** Aşırı ekspresyon · **E)** Hücre soyuna özgü ifade\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Protein dizisinin değişmesi** — Protein dizisinin değişmesi doğru: neoantijen, sürücü veya yolcu mutasyonla protein dizisinde yeni peptit oluşmasıdır.\n- **Glikozilasyon değişikliği** — Glikozilasyon değişikliği, fosforilasyonla birlikte normal doku antijeninin anormal formunu oluşturur; neoantijenin tanımlayıcı özelliği değildir.\n- **Testiste sınırlı ifade** — Testiste sınırlı ifade, kanser-testis antijenlerine aittir; bunlar normalde yalnız testis germ hücrelerinde ifade edilen proteinlerdir.\n- **Aşırı ekspresyon** — Aşırı ekspresyon, HER2/neu örneğindeki gibi öz proteinin aşırı miktarda bulunmasıdır; ayrı bir tümör antijeni kaynağıdır.\n- **Hücre soyuna özgü ifade** — Hücre soyuna özgü ifade, tirozinaz gibi diferansiyasyon antijenlerinin özelliğidir; bu antijen normal melanositte de bulunur.\n\n**Cevap: A** — Protein dizisinin değişmesi\n\n**Özet.** Neoantijende mutasyonla protein dizisinde yeni peptit oluşur; normal doku antijeninin anormal formunda ise glikozilasyon veya fosforilasyon değişiklikleri vardır.",
    "ses": "Neoantijeni normal doku antijeninin anormal formundan ayıran özellik hangisidir?\nA, Protein dizisinin değişmesi\nBe, Glikozilasyon değişikliği\nCe, Testiste sınırlı ifade\nDe, Aşırı ekspresyon\nE, Hücre soyuna özgü ifade\nŞıkları sırasıyla gözden geçirelim.\nProtein dizisinin değişmesi doğru, neoantijen, sürücü veya yolcu mutasyonla protein dizisinde yeni peptit oluşmasıdır.\nGlikozilasyon değişikliği, fosforilasyonla birlikte normal doku antijeninin anormal formunu oluşturur. Neoantijenin tanımlayıcı özelliği değildir.\nTestiste sınırlı ifade, kanser testis antijenlerine aittir. Bunlar normalde yalnız testis germ hücrelerinde ifade edilen proteinlerdir.\nAşırı ekspresyon, her tu nö örneğindeki gibi öz proteinin aşırı miktarda bulunmasıdır. Ayrı bir tümör antijeni kaynağıdır.\nHücre soyuna özgü ifade, tirozinaz gibi diferansiyasyon antijenlerinin özelliğidir. Bu antijen normal melanositte de bulunur.\nDoğru cevap A, Protein dizisinin değişmesi\nNeoantijende mutasyonla protein dizisinde yeni peptit oluşur. Normal doku antijeninin anormal formunda ise glikozilasyon veya fosforilasyon değişiklikleri vardır.",
    "kelime": 160
@@ -406,6 +511,7 @@
   {
    "no": 28,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Neoantijen oluşturabilen mutasyonlar için hangisi doğrudur?",
    "secenekler": {
     "A": "Yalnız sürücü mutasyonlar",
@@ -415,6 +521,7 @@
     "E": "Yalnız DNA onarım geni mutasyonları"
    },
    "dogru": "D",
+   "ipucu": "Tümör büyümesine katkı yapmayan, eşlik eden değişikliklerin de yeni peptit üretip üretemeyeceğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Yalnız sürücü mutasyonlar ifadesi eksiktir; neoantijenler sürücü mutasyonların yanında yolcu mutasyonlarla da oluşabilir.",
@@ -424,6 +531,9 @@
     "E": "DNA onarım kusuru olan kanserler neoantijenden zengindir; ama neoantijen her tür sürücü veya yolcu mutasyonla oluşabilir."
    },
    "ozet": "Neoantijenler sürücü veya yolcu mutasyonlarla oluşan yeni peptitlerdir; öz tolerans gelişmediği için yüksek mutasyon yüklü tümörlerde daha fazladır.",
+   "sayfa": [
+    6
+   ],
    "metin": "**Soru.** Neoantijen oluşturabilen mutasyonlar için hangisi doğrudur?\n\n**A)** Yalnız sürücü mutasyonlar · **B)** Yalnız yolcu mutasyonlar · **C)** Yalnız viral gen ürünleri · **D)** Sürücü veya yolcu mutasyonlar · **E)** Yalnız DNA onarım geni mutasyonları\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Yalnız sürücü mutasyonlar** — Yalnız sürücü mutasyonlar ifadesi eksiktir; neoantijenler sürücü mutasyonların yanında yolcu mutasyonlarla da oluşabilir.\n- **Yalnız yolcu mutasyonlar** — Yalnız yolcu mutasyonlar da eksik bir ifadedir; sürücü mutasyonlar da protein dizisinde yeni peptit oluşturarak neoantijen üretir.\n- **Yalnız viral gen ürünleri** — Viral gen ürünleri ayrı bir tümör antijeni kaynağıdır; HPV E6/E7 gibi virüs proteinleri neoantijen değil, viral antijendir.\n- **Sürücü veya yolcu mutasyonlar** — Sürücü veya yolcu mutasyonlar doğru: hangisi olursa olsun protein dizisinde yeni peptit oluşursa neoantijen ortaya çıkar.\n- **Yalnız DNA onarım geni mutasyonları** — DNA onarım kusuru olan kanserler neoantijenden zengindir; ama neoantijen her tür sürücü veya yolcu mutasyonla oluşabilir.\n\n**Cevap: D** — Sürücü veya yolcu mutasyonlar\n\n**Özet.** Neoantijenler sürücü veya yolcu mutasyonlarla oluşan yeni peptitlerdir; öz tolerans gelişmediği için yüksek mutasyon yüklü tümörlerde daha fazladır.",
    "ses": "Neoantijen oluşturabilen mutasyonlar için hangisi doğrudur?\nA, Yalnız sürücü mutasyonlar\nBe, Yalnız yolcu mutasyonlar\nCe, Yalnız viral gen ürünleri\nDe, Sürücü veya yolcu mutasyonlar\nE, Yalnız de ne a onarım geni mutasyonları\nŞimdi seçeneklere tek tek bakalım.\nYalnız sürücü mutasyonlar ifadesi eksiktir. Neoantijenler sürücü mutasyonların yanında yolcu mutasyonlarla da oluşabilir.\nYalnız yolcu mutasyonlar da eksik bir ifadedir. Sürücü mutasyonlar da protein dizisinde yeni peptit oluşturarak neoantijen üretir.\nViral gen ürünleri ayrı bir tümör antijeni kaynağıdır. Ha pe ve e altı ve e yedi gibi virüs proteinleri neoantijen değil, viral antijendir.\nSürücü veya yolcu mutasyonlar doğru, hangisi olursa olsun protein dizisinde yeni peptit oluşursa neoantijen ortaya çıkar.\nDe ne a onarım kusuru olan kanserler neoantijenden zengindir. Ama neoantijen her tür sürücü veya yolcu mutasyonla oluşabilir.\nDoğru cevap De, Sürücü veya yolcu mutasyonlar\nNeoantijenler sürücü veya yolcu mutasyonlarla oluşan yeni peptitlerdir. Öz tolerans gelişmediği için yüksek mutasyon yüklü tümörlerde daha fazladır.",
    "kelime": 175
@@ -431,6 +541,7 @@
   {
    "no": 29,
    "tur": "ornek",
+   "zorluk": "kolay",
    "soru": "HPV E6/E7 proteinlerinin tümör antijeni olarak ifade edildiği tümör hangisidir?",
    "secenekler": {
     "A": "Burkitt lenfoma",
@@ -440,6 +551,7 @@
     "E": "Kaposi sarkomu"
    },
    "dogru": "B",
+   "ipucu": "Bu iki viral proteinin ait olduğu virüsün hangi organ epitelinde kansere yol açtığını hatırla.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Burkitt lenfoma, EBV ilişkili bir tümördür; burada EBV'nin LMP1 ve EBNA proteinleri tümör antijeni olarak bulunur.",
@@ -449,6 +561,9 @@
     "E": "Kaposi sarkomu, insan herpes virüsü 8 olarak da bilinen KSHV ile ilişkilidir; HPV proteinleriyle eşleşmez."
    },
    "ozet": "HPV E6/E7 proteinleri servikal karsinomlarda; EBV LMP1 ve EBNA proteinleri ise Burkitt lenfoma ve nazofaringeal karsinomda tümör antijenidir.",
+   "sayfa": [
+    9
+   ],
    "metin": "**Soru.** HPV E6/E7 proteinlerinin tümör antijeni olarak ifade edildiği tümör hangisidir?\n\n**A)** Burkitt lenfoma · **B)** Servikal karsinom · **C)** Nazofaringeal karsinom · **D)** Güneş ilişkili melanom · **E)** Kaposi sarkomu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Burkitt lenfoma** — Burkitt lenfoma, EBV ilişkili bir tümördür; burada EBV'nin LMP1 ve EBNA proteinleri tümör antijeni olarak bulunur.\n- **Servikal karsinom** — Servikal karsinom doğru: HPV'nin E6 ve E7 proteinleri servikal karsinomlarda ifade edilir ve MHC sınıf I ile sunulur.\n- **Nazofaringeal karsinom** — Nazofaringeal karsinom da EBV ile ilişkilidir; tümör antijenleri HPV proteinleri değil, LMP1 ve EBNA proteinleridir.\n- **Güneş ilişkili melanom** — Güneş ilişkili melanom, yüksek mutasyon yükü nedeniyle neoantijenden zengin bir tümördür; viral antijen örneği değildir.\n- **Kaposi sarkomu** — Kaposi sarkomu, insan herpes virüsü 8 olarak da bilinen KSHV ile ilişkilidir; HPV proteinleriyle eşleşmez.\n\n**Cevap: B** — Servikal karsinom\n\n**Özet.** HPV E6/E7 proteinleri servikal karsinomlarda; EBV LMP1 ve EBNA proteinleri ise Burkitt lenfoma ve nazofaringeal karsinomda tümör antijenidir.",
    "ses": "Ha pe ve e altı ve e yedi proteinlerinin tümör antijeni olarak ifade edildiği tümör hangisidir?\nA, Burkit lenfoma\nBe, Servikal karsinom\nCe, Nazofaringeal karsinom\nDe, Güneş ilişkili melanom\nE, Kaposi sarkomu\nSeçenekleri sırayla değerlendirelim.\nBurkit lenfoma, e be ve ilişkili bir tümördür. Burada e be venin le me pe bir ve e be ne a proteinleri tümör antijeni olarak bulunur.\nServikal karsinom doğru, ha pe venin e altı ve e yedi proteinleri servikal karsinomlarda ifade edilir ve me ha ce sınıf bir ile sunulur.\nNazofaringeal karsinom da e be ve ile ilişkilidir. Tümör antijenleri ha pe ve proteinleri değil, le me pe bir ve e be ne a proteinleridir.\nGüneş ilişkili melanom, yüksek mutasyon yükü nedeniyle neoantijenden zengin bir tümördür. Viral antijen örneği değildir.\nKaposi sarkomu, insan herpes virüsü sekiz olarak da bilinen ka se ha ve ile ilişkilidir. Ha pe ve proteinleriyle eşleşmez.\nDoğru cevap Be, Servikal karsinom\nHa pe ve e altı ve e yedi proteinleri servikal karsinomlarda. E be ve le me pe bir ve e be ne a proteinleri ise Burkit lenfoma ve nazofaringeal karsinomda tümör antijenidir.",
    "kelime": 159
@@ -456,6 +571,7 @@
   {
    "no": 30,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Antitümör bağışıklıkta CTL ile birlikte temel efektör sayılan hücre hangisidir?",
    "secenekler": {
     "A": "NK hücresi",
@@ -465,6 +581,7 @@
     "E": "CD4+ Th1 hücresi"
    },
    "dogru": "E",
+   "ipucu": "Diğer katkı sağlayanları ayır; sitokin üreterek yanıtı yönlendiren yardımcı lenfosit grubunu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "NK hücresi antitümör bağışıklığa katkı verir; ama temel efektörler arasında değil, diğer katkılar arasında sayılır.",
@@ -474,6 +591,9 @@
     "E": "CD4+ Th1 hücresi doğru: CD8+ CTL ile birlikte antitümör bağışıklığın temel efektörleri arasında sayılır."
    },
    "ozet": "Antitümör bağışıklığın temel efektörleri CD8+ CTL ve CD4+ Th1 hücreleridir; NK hücreleri, makrofajlar ve ADCC diğer katkılardır.",
+   "sayfa": [
+    10
+   ],
    "metin": "**Soru.** Antitümör bağışıklıkta CTL ile birlikte temel efektör sayılan hücre hangisidir?\n\n**A)** NK hücresi · **B)** Makrofaj · **C)** T düzenleyici hücre · **D)** Miyeloid kökenli baskılayıcı hücre · **E)** CD4+ Th1 hücresi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **NK hücresi** — NK hücresi antitümör bağışıklığa katkı verir; ama temel efektörler arasında değil, diğer katkılar arasında sayılır.\n- **Makrofaj** — Makrofaj, Th1 hücresinin ürettiği IFN-γ ile aktive olunca tümör öldürebilir; yine de temel efektör değil destekleyici bir katkıdır.\n- **T düzenleyici hücre** — T düzenleyici hücre, MDSC ile birlikte immün baskılayıcı hücredir; antitümör efektör değil, kaçışa yardım eden hücredir.\n- **Miyeloid kökenli baskılayıcı hücre** — Miyeloid kökenli baskılayıcı hücre, Treg gibi immün baskılayıcı bir hücredir; tümörün bağışıklıktan kaçışına katkı verir.\n- **CD4+ Th1 hücresi** — CD4+ Th1 hücresi doğru: CD8+ CTL ile birlikte antitümör bağışıklığın temel efektörleri arasında sayılır.\n\n**Cevap: E** — CD4+ Th1 hücresi\n\n**Özet.** Antitümör bağışıklığın temel efektörleri CD8+ CTL ve CD4+ Th1 hücreleridir; NK hücreleri, makrofajlar ve ADCC diğer katkılardır.",
    "ses": "Antitümör bağışıklıkta sitotoksik te lenfositi ile birlikte temel efektör sayılan hücre hangisidir?\nA, Ne ka hücresi\nBe, Makrofaj\nCe, Te düzenleyici hücre\nDe, Miyeloid kökenli baskılayıcı hücre\nE, Ce de dört pozitif te ha bir hücresi\nHer seçeneği tek tek ele alalım.\nNe ka hücresi antitümör bağışıklığa katkı verir. Ama temel efektörler arasında değil, diğer katkılar arasında sayılır.\nMakrofaj, te ha bir hücresinin ürettiği interferon gama ile aktive olunca tümör öldürebilir. Yine de temel efektör değil destekleyici bir katkıdır.\nTe düzenleyici hücre, me de se ce ile birlikte immün baskılayıcı hücredir. Antitümör efektör değil, kaçışa yardım eden hücredir.\nMiyeloid kökenli baskılayıcı hücre, te düzenleyici hücre gibi immün baskılayıcı bir hücredir. Tümörün bağışıklıktan kaçışına katkı verir.\nCe de dört pozitif te ha bir hücresi doğru, ce de sekiz pozitif sitotoksik te lenfositi ile birlikte antitümör bağışıklığın temel efektörleri arasında sayılır.\nDoğru cevap E, Ce de dört pozitif te ha bir hücresi\nAntitümör bağışıklığın temel efektörleri ce de sekiz pozitif sitotoksik te lenfositi ve ce de dört pozitif te ha bir hücreleridir. Ne ka hücreleri, makrofajlar ve antikora bağlı hücre aracılı sitotoksisite diğer katkılardır.",
    "kelime": 165
@@ -481,6 +601,7 @@
   {
    "no": 31,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Dendritik hücrenin tümör antijenini MHC sınıf I bağlamında CD8+ T hücrelerine sunmasına ne ad verilir?",
    "secenekler": {
     "A": "Klon genişlemesi",
@@ -490,6 +611,7 @@
     "E": "Tükenmiş fenotip"
    },
    "dogru": "C",
+   "ipucu": "Klon genişlemesinden önceki ilk adımda dendritik hücrenin yaptığı işin adını hatırla.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Klon genişlemesi, antijeni tanıyan tümöre özgü CD8+ CTL'lerin çoğalmasıdır; sunumdan sonra gelen aktivasyon basamağıdır.",
@@ -499,6 +621,9 @@
     "E": "Tükenmiş fenotip, PD-L1'in PD-1'e bağlanmasıyla CTL'nin baskılanmasıdır; sunumla değil kaçışla ilgilidir."
    },
    "ozet": "CTL yanıtında dendritik hücreler MHC sınıf I bağlamında çapraz sunum yapar; ardından tümöre özgü CD8+ CTL klon genişlemesi ve efektör faz gelir.",
+   "sayfa": [
+    11
+   ],
    "metin": "**Soru.** Dendritik hücrenin tümör antijenini MHC sınıf I bağlamında CD8+ T hücrelerine sunmasına ne ad verilir?\n\n**A)** Klon genişlemesi · **B)** Antijen kaybı · **C)** Çapraz sunum · **D)** Kanser immün düzenlemesi · **E)** Tükenmiş fenotip\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Klon genişlemesi** — Klon genişlemesi, antijeni tanıyan tümöre özgü CD8+ CTL'lerin çoğalmasıdır; sunumdan sonra gelen aktivasyon basamağıdır.\n- **Antijen kaybı** — Antijen kaybı, hedef antijeni kaybeden alt klonların seçilmesiyle oluşan bir kaçış yoludur; bir sunum biçimi değildir.\n- **Çapraz sunum** — Çapraz sunum doğru: dendritik hücreler tümör antijenini MHC sınıf I bağlamında sunarak CD8+ yanıtı başlatır.\n- **Kanser immün düzenlemesi** — Kanser immün düzenlemesi, bağışıklığın kaçış yeteneği en yüksek alt klonları seçmesidir; antijen sunumu değildir.\n- **Tükenmiş fenotip** — Tükenmiş fenotip, PD-L1'in PD-1'e bağlanmasıyla CTL'nin baskılanmasıdır; sunumla değil kaçışla ilgilidir.\n\n**Cevap: C** — Çapraz sunum\n\n**Özet.** CTL yanıtında dendritik hücreler MHC sınıf I bağlamında çapraz sunum yapar; ardından tümöre özgü CD8+ CTL klon genişlemesi ve efektör faz gelir.",
    "ses": "Dendritik hücrenin tümör antijenini me ha ce sınıf bir bağlamında ce de sekiz pozitif te hücrelerine sunmasına ne ad verilir?\nA, Klon genişlemesi\nBe, Antijen kaybı\nCe, Çapraz sunum\nDe, Kanser immün düzenlemesi\nE, Tükenmiş fenotip\nŞıkları sırasıyla gözden geçirelim.\nKlon genişlemesi, antijeni tanıyan tümöre özgü ce de sekiz pozitif sitotoksik te lenfositlerinin çoğalmasıdır. Sunumdan sonra gelen aktivasyon basamağıdır.\nAntijen kaybı, hedef antijeni kaybeden alt klonların seçilmesiyle oluşan bir kaçış yoludur. Bir sunum biçimi değildir.\nÇapraz sunum doğru, dendritik hücreler tümör antijenini me ha ce sınıf bir bağlamında sunarak ce de sekiz pozitif yanıtı başlatır.\nKanser immün düzenlemesi, bağışıklığın kaçış yeteneği en yüksek alt klonları seçmesidir. Antijen sunumu değildir.\nTükenmiş fenotip, pe de le birin pe de bire bağlanmasıyla sitotoksik te lenfositinin baskılanmasıdır. Sunumla değil kaçışla ilgilidir.\nDoğru cevap Ce, Çapraz sunum\nSitotoksik te lenfositi yanıtında dendritik hücreler me ha ce sınıf bir bağlamında çapraz sunum yapar. Ardından tümöre özgü ce de sekiz pozitif sitotoksik te lenfositi klon genişlemesi ve efektör faz gelir.",
    "kelime": 160
@@ -506,6 +631,7 @@
   {
    "no": 32,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Th1 hücrelerinin makrofajları aktive eden ürünü hangisidir?",
    "secenekler": {
     "A": "İnterferon gama",
@@ -515,6 +641,7 @@
     "E": "Granzim"
    },
    "dogru": "A",
+   "ipucu": "Baskılayıcı sitokinleri ayır; makrofajı öldürücü efektöre dönüştüren uyarıcı sitokini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "İnterferon gama doğru: Th1 hücreleri IFN-γ üretir ve makrofajları tümör hücrelerini öldürebilen efektörlere dönüştürür.",
@@ -524,6 +651,9 @@
     "E": "Granzim, perforinle birlikte CTL'nin öldürme yolunda görev alır; Th1 hücresinin makrofaj aktive eden ürünü değildir."
    },
    "ozet": "Th1 hücreleri IFN-γ ile makrofajları aktive eder; aktive makrofaj serbest radikaller, azot oksit ve lizozomal enzimlerle tümör hücresini öldürebilir.",
+   "sayfa": [
+    12
+   ],
    "metin": "**Soru.** Th1 hücrelerinin makrofajları aktive eden ürünü hangisidir?\n\n**A)** İnterferon gama · **B)** TGF-β · **C)** İnterlökin 10 · **D)** Perforin · **E)** Granzim\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **İnterferon gama** — İnterferon gama doğru: Th1 hücreleri IFN-γ üretir ve makrofajları tümör hücrelerini öldürebilen efektörlere dönüştürür.\n- **TGF-β** — TGF-β, tümörün salgıladığı immün baskılayıcı sitokindir; makrofajı aktive etmez, bağışıklıktan kaçışa katkı verir.\n- **İnterlökin 10** — İnterlökin 10, TGF-β gibi immün baskılayıcı bir sitokindir; tümörün bağışıklıktan kaçış yollarından biridir.\n- **Perforin** — Perforin, CTL'nin hedef hücrede apoptoz başlatmak için kullandığı moleküldür; makrofaj aktivasyonu sağlamaz.\n- **Granzim** — Granzim, perforinle birlikte CTL'nin öldürme yolunda görev alır; Th1 hücresinin makrofaj aktive eden ürünü değildir.\n\n**Cevap: A** — İnterferon gama\n\n**Özet.** Th1 hücreleri IFN-γ ile makrofajları aktive eder; aktive makrofaj serbest radikaller, azot oksit ve lizozomal enzimlerle tümör hücresini öldürebilir.",
    "ses": "Te ha bir hücrelerinin makrofajları aktive eden ürünü hangisidir?\nA, İnterferon gama\nBe, Te ge fe beta\nCe, İnterlökin on\nDe, Perforin\nE, Granzim\nŞimdi seçeneklere tek tek bakalım.\nİnterferon gama doğru, te ha bir hücreleri interferon gama üretir ve makrofajları tümör hücrelerini öldürebilen efektörlere dönüştürür.\nTe ge fe beta, tümörün salgıladığı immün baskılayıcı sitokindir. Makrofajı aktive etmez, bağışıklıktan kaçışa katkı verir.\nİnterlökin on, te ge fe beta gibi immün baskılayıcı bir sitokindir. Tümörün bağışıklıktan kaçış yollarından biridir.\nPerforin, sitotoksik te lenfositinin hedef hücrede apoptoz başlatmak için kullandığı moleküldür. Makrofaj aktivasyonu sağlamaz.\nGranzim, perforinle birlikte sitotoksik te lenfositinin öldürme yolunda görev alır. Te ha bir hücresinin makrofaj aktive eden ürünü değildir.\nDoğru cevap A, İnterferon gama\nTe ha bir hücreleri interferon gama ile makrofajları aktive eder. Aktive makrofaj serbest radikaller, azot oksit ve lizozomal enzimlerle tümör hücresini öldürebilir.",
    "kelime": 139
@@ -531,6 +661,7 @@
   {
    "no": 33,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Tümörlere karşı antikor yanıtı için hangisi doğrudur?",
    "secenekler": {
     "A": "Solid tümörlerde en etkili öldürücüdür",
@@ -540,6 +671,7 @@
     "E": "MHC sınıf I ile tanır"
    },
    "dogru": "D",
+   "ipucu": "Antikorun kitleye ulaşmasının güç olduğu tümörlerle kanda dağınık bulunan tümörleri karşılaştır.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Solid tümörlerde en etkili öldürücü olduğu ifadesi yanlıştır; solid tümörlerde antikor yanıtının öldürücü etkisi genellikle sınırlıdır.",
@@ -549,6 +681,9 @@
     "E": "MHC sınıf I ile tanıma, CD8+ CTL'nin özelliğidir; antikorlar ise doğrudan tümör antijenlerine bağlanır."
    },
    "ozet": "Antikorlar tümör antijenine bağlanıp ADCC ve kompleman aktivasyonu yapar; solid tümörlerde öldürücü etkileri sınırlı, bazı hematolojik malignitelerde daha önemlidir.",
+   "sayfa": [
+    13
+   ],
    "metin": "**Soru.** Tümörlere karşı antikor yanıtı için hangisi doğrudur?\n\n**A)** Solid tümörlerde en etkili öldürücüdür · **B)** Kompleman aktive etmez · **C)** NK hücrelerini kullanmaz · **D)** Hematolojik malignitelerde daha önemlidir · **E)** MHC sınıf I ile tanır\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Solid tümörlerde en etkili öldürücüdür** — Solid tümörlerde en etkili öldürücü olduğu ifadesi yanlıştır; solid tümörlerde antikor yanıtının öldürücü etkisi genellikle sınırlıdır.\n- **Kompleman aktive etmez** — Kompleman aktive etmez ifadesi yanlıştır; tümör antijenine bağlanan antikorun olası etkilerinden biri kompleman aktivasyonudur.\n- **NK hücrelerini kullanmaz** — NK hücrelerini kullanmaz ifadesi yanlıştır; ADCC'de antikorla kaplı tümör hücresi NK hücreleri ve makrofajlarca öldürülür.\n- **Hematolojik malignitelerde daha önemlidir** — Hematolojik malignitelerde daha önemli olması doğru: antikor yanıtı bazı hematolojik malignitelerde solid tümörlere göre daha belirgin rol oynar.\n- **MHC sınıf I ile tanır** — MHC sınıf I ile tanıma, CD8+ CTL'nin özelliğidir; antikorlar ise doğrudan tümör antijenlerine bağlanır.\n\n**Cevap: D** — Hematolojik malignitelerde daha önemlidir\n\n**Özet.** Antikorlar tümör antijenine bağlanıp ADCC ve kompleman aktivasyonu yapar; solid tümörlerde öldürücü etkileri sınırlı, bazı hematolojik malignitelerde daha önemlidir.",
    "ses": "Tümörlere karşı antikor yanıtı için hangisi doğrudur?\nA, Solid tümörlerde en etkili öldürücüdür\nBe, Kompleman aktive etmez\nCe, Ne ka hücrelerini kullanmaz\nDe, Hematolojik malignitelerde daha önemlidir\nE, Me ha ce sınıf bir ile tanır\nSeçenekleri sırayla değerlendirelim.\nSolid tümörlerde en etkili öldürücü olduğu ifadesi yanlıştır. Solid tümörlerde antikor yanıtının öldürücü etkisi genellikle sınırlıdır.\nKompleman aktive etmez ifadesi yanlıştır. Tümör antijenine bağlanan antikorun olası etkilerinden biri kompleman aktivasyonudur.\nNe ka hücrelerini kullanmaz ifadesi yanlıştır. Antikora bağlı hücre aracılı sitotoksisitede antikorla kaplı tümör hücresi ne ka hücreleri ve makrofajlarca öldürülür.\nHematolojik malignitelerde daha önemli olması doğru, antikor yanıtı bazı hematolojik malignitelerde solid tümörlere göre daha belirgin rol oynar.\nMe ha ce sınıf bir ile tanıma, ce de sekiz pozitif sitotoksik te lenfositinin özelliğidir. Antikorlar ise doğrudan tümör antijenlerine bağlanır.\nDoğru cevap De, Hematolojik malignitelerde daha önemlidir\nAntikorlar tümör antijenine bağlanıp antikora bağlı hücre aracılı sitotoksisite ve kompleman aktivasyonu yapar. Solid tümörlerde öldürücü etkileri sınırlı, bazı hematolojik malignitelerde daha önemlidir.",
    "kelime": 175
@@ -556,6 +691,7 @@
   {
    "no": 34,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Antijen işlenmesindeki bozuklukla bağışıklıktan kaçışta kusurlu olabilen transport proteini hangisidir?",
    "secenekler": {
     "A": "β2-mikroglobulin",
@@ -565,6 +701,7 @@
     "E": "CTLA-4"
    },
    "dogru": "B",
+   "ipucu": "Proteazomda parçalanan peptitlerin sunum molekülüne taşınmasını sağlayan yapıyı düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "β2-mikroglobulin mutasyonları MHC sınıf I ekspresyonunu azaltır; bu bir transport proteini değil, MHC kaybıyla kaçışın örneğidir.",
@@ -574,6 +711,9 @@
     "E": "CTLA-4, T hücre aktivasyonunu negatif düzenleyen kontrol noktasıdır; antijen işlenmesindeki transport kusuru değildir."
    },
    "ozet": "Diğer kaçış yolları baskılayıcı sitokinler, Treg ve MDSC, antijen kaybı ve proteazom ile TAP kusurlarına bağlı antijen işlenme bozukluğudur.",
+   "sayfa": [
+    17
+   ],
    "metin": "**Soru.** Antijen işlenmesindeki bozuklukla bağışıklıktan kaçışta kusurlu olabilen transport proteini hangisidir?\n\n**A)** β2-mikroglobulin · **B)** TAP · **C)** E-kadherin · **D)** PD-L1 · **E)** CTLA-4\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **β2-mikroglobulin** — β2-mikroglobulin mutasyonları MHC sınıf I ekspresyonunu azaltır; bu bir transport proteini değil, MHC kaybıyla kaçışın örneğidir.\n- **TAP** — TAP doğru: antijen işlenmesindeki bozuklukta proteazom ve transport proteini TAP kusurları tümörün kaçışına katkı verir.\n- **E-kadherin** — E-kadherin, epitel hücreleri arasındaki bağları sağlar; kaybı bağışıklıktan kaçışı değil, metastazın başlangıcını açıklar.\n- **PD-L1** — PD-L1, tümör hücreleri ve miyeloid hücrelerde ifade edilen kontrol noktası ligandıdır; antijen işlenmesiyle ilgili değildir.\n- **CTLA-4** — CTLA-4, T hücre aktivasyonunu negatif düzenleyen kontrol noktasıdır; antijen işlenmesindeki transport kusuru değildir.\n\n**Cevap: B** — TAP\n\n**Özet.** Diğer kaçış yolları baskılayıcı sitokinler, Treg ve MDSC, antijen kaybı ve proteazom ile TAP kusurlarına bağlı antijen işlenme bozukluğudur.",
    "ses": "Antijen işlenmesindeki bozuklukla bağışıklıktan kaçışta kusurlu olabilen transport proteini hangisidir?\nA, Beta iki mikroglobulin\nBe, Te a pe\nCe, E kadherin\nDe, Pe de le bir\nE, Ce te le a dört\nHer seçeneği tek tek ele alalım.\nBeta iki mikroglobulin mutasyonları me ha ce sınıf bir ekspresyonunu azaltır. Bu bir transport proteini değil, me ha ce kaybıyla kaçışın örneğidir.\nTe a pe doğru, antijen işlenmesindeki bozuklukta proteazom ve transport proteini te a pe kusurları tümörün kaçışına katkı verir.\nE kadherin, epitel hücreleri arasındaki bağları sağlar. Kaybı bağışıklıktan kaçışı değil, metastazın başlangıcını açıklar.\nPe de le bir, tümör hücreleri ve miyeloid hücrelerde ifade edilen kontrol noktası ligandıdır. Antijen işlenmesiyle ilgili değildir.\nCe te le a dört, te hücre aktivasyonunu negatif düzenleyen kontrol noktasıdır. Antijen işlenmesindeki transport kusuru değildir.\nDoğru cevap Be, Te a pe\nDiğer kaçış yolları baskılayıcı sitokinler, te düzenleyici hücreler ve me de se ce, antijen kaybı ve proteazom ile te a pe kusurlarına bağlı antijen işlenme bozukluğudur.",
    "kelime": 143
@@ -581,6 +721,7 @@
   {
    "no": 35,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "İmmün kontrol noktası inhibitörlerinin tedavi stratejisi hangisidir?",
    "secenekler": {
     "A": "Tümörü doğrudan öldürmek",
@@ -590,22 +731,27 @@
     "E": "T hücre frenlerini kaldırmak"
    },
    "dogru": "E",
+   "ipucu": "PD-1, PD-L1 ve CTLA-4'ün normalde lenfosit yanıtı üzerinde nasıl bir etki yaptığını düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Tümörü doğrudan öldürmek bu stratejinin adı değildir; kontrol noktası inhibitörleri PD-1, PD-L1 ve CTLA-4'e karşı monoklonal antikorlardır.",
     "B": "T hücresine yapay reseptör eklemek CAR-T tedavisidir; özellikle B hücreli akut lenfoblastik lösemide başarılıdır.",
     "C": "T hücrelerini in vitro çoğaltıp geri vermek adaptif T hücre transferidir; kontrol noktası blokajından farklı bir yaklaşımdır.",
     "D": "Neoantijen aşısı, tümöre spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşısıdır; kontrol noktası blokajı değildir.",
-    "E": "T hücre frenlerini kaldırmak doğru: PD-1, PD-L1 ve CTLA-4 monoklonal antikorlarla hedeflenerek T hücreler üzerindeki frenler kaldırılır."
+    "E": "T hücre frenlerini kaldırmak doğru cevaptır: PD-1, PD-L1 ve CTLA-4 monoklonal antikorlarla bloke edilerek T lenfositler üzerindeki baskılayıcı sinyaller ortadan kaldırılır ve antitümör yanıt yeniden etkinleştirilir."
    },
    "ozet": "Kontrol noktası inhibitörleri T hücreler üzerindeki frenleri kaldırır; melanom, akciğer ve mesane karsinomu ile Hodgkin lenfomada yüksek yanıt oranları sağlar.",
-   "metin": "**Soru.** İmmün kontrol noktası inhibitörlerinin tedavi stratejisi hangisidir?\n\n**A)** Tümörü doğrudan öldürmek · **B)** T hücresine yapay reseptör eklemek · **C)** T hücrelerini in vitro çoğaltmak · **D)** Neoantijen aşısıyla uyarmak · **E)** T hücre frenlerini kaldırmak\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Tümörü doğrudan öldürmek** — Tümörü doğrudan öldürmek bu stratejinin adı değildir; kontrol noktası inhibitörleri PD-1, PD-L1 ve CTLA-4'e karşı monoklonal antikorlardır.\n- **T hücresine yapay reseptör eklemek** — T hücresine yapay reseptör eklemek CAR-T tedavisidir; özellikle B hücreli akut lenfoblastik lösemide başarılıdır.\n- **T hücrelerini in vitro çoğaltmak** — T hücrelerini in vitro çoğaltıp geri vermek adaptif T hücre transferidir; kontrol noktası blokajından farklı bir yaklaşımdır.\n- **Neoantijen aşısıyla uyarmak** — Neoantijen aşısı, tümöre spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşısıdır; kontrol noktası blokajı değildir.\n- **T hücre frenlerini kaldırmak** — T hücre frenlerini kaldırmak doğru: PD-1, PD-L1 ve CTLA-4 monoklonal antikorlarla hedeflenerek T hücreler üzerindeki frenler kaldırılır.\n\n**Cevap: E** — T hücre frenlerini kaldırmak\n\n**Özet.** Kontrol noktası inhibitörleri T hücreler üzerindeki frenleri kaldırır; melanom, akciğer ve mesane karsinomu ile Hodgkin lenfomada yüksek yanıt oranları sağlar.",
-   "ses": "İmmün kontrol noktası inhibitörlerinin tedavi stratejisi hangisidir?\nA, Tümörü doğrudan öldürmek\nBe, Te hücresine yapay reseptör eklemek\nCe, Te hücrelerini in vitro çoğaltmak\nDe, Neoantijen aşısıyla uyarmak\nE, Te hücre frenlerini kaldırmak\nŞıkları sırasıyla gözden geçirelim.\nTümörü doğrudan öldürmek bu stratejinin adı değildir. Kontrol noktası inhibitörleri pe de bir, pe de le bir ve ce te le a dörde karşı monoklonal antikorlardır.\nTe hücresine yapay reseptör eklemek ce a re te tedavisidir. Özellikle be hücreli akut lenfoblastik lösemide başarılıdır.\nTe hücrelerini in vitro çoğaltıp geri vermek adaptif te hücre transferidir. Kontrol noktası blokajından farklı bir yaklaşımdır.\nNeoantijen aşısı, tümöre spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşısıdır. Kontrol noktası blokajı değildir.\nTe hücre frenlerini kaldırmak doğru, pe de bir, pe de le bir ve ce te le a dört monoklonal antikorlarla hedeflenerek te hücreler üzerindeki frenler kaldırılır.\nDoğru cevap E, Te hücre frenlerini kaldırmak\nKontrol noktası inhibitörleri te hücreler üzerindeki frenleri kaldırır. Melanom, akciğer ve mesane karsinomu ile Hoçkin lenfomada yüksek yanıt oranları sağlar.",
-   "kelime": 178
+   "sayfa": [
+    18
+   ],
+   "metin": "**Soru.** İmmün kontrol noktası inhibitörlerinin tedavi stratejisi hangisidir?\n\n**A)** Tümörü doğrudan öldürmek · **B)** T hücresine yapay reseptör eklemek · **C)** T hücrelerini in vitro çoğaltmak · **D)** Neoantijen aşısıyla uyarmak · **E)** T hücre frenlerini kaldırmak\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Tümörü doğrudan öldürmek** — Tümörü doğrudan öldürmek bu stratejinin adı değildir; kontrol noktası inhibitörleri PD-1, PD-L1 ve CTLA-4'e karşı monoklonal antikorlardır.\n- **T hücresine yapay reseptör eklemek** — T hücresine yapay reseptör eklemek CAR-T tedavisidir; özellikle B hücreli akut lenfoblastik lösemide başarılıdır.\n- **T hücrelerini in vitro çoğaltmak** — T hücrelerini in vitro çoğaltıp geri vermek adaptif T hücre transferidir; kontrol noktası blokajından farklı bir yaklaşımdır.\n- **Neoantijen aşısıyla uyarmak** — Neoantijen aşısı, tümöre spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşısıdır; kontrol noktası blokajı değildir.\n- **T hücre frenlerini kaldırmak** — T hücre frenlerini kaldırmak doğru cevaptır: PD-1, PD-L1 ve CTLA-4 monoklonal antikorlarla bloke edilerek T lenfositler üzerindeki baskılayıcı sinyaller ortadan kaldırılır ve antitümör yanıt yeniden etkinleştirilir.\n\n**Cevap: E** — T hücre frenlerini kaldırmak\n\n**Özet.** Kontrol noktası inhibitörleri T hücreler üzerindeki frenleri kaldırır; melanom, akciğer ve mesane karsinomu ile Hodgkin lenfomada yüksek yanıt oranları sağlar.",
+   "ses": "İmmün kontrol noktası inhibitörlerinin tedavi stratejisi hangisidir?\nA, Tümörü doğrudan öldürmek\nBe, Te hücresine yapay reseptör eklemek\nCe, Te hücrelerini in vitro çoğaltmak\nDe, Neoantijen aşısıyla uyarmak\nE, Te hücre frenlerini kaldırmak\nŞıkları sırasıyla gözden geçirelim.\nTümörü doğrudan öldürmek bu stratejinin adı değildir. Kontrol noktası inhibitörleri pe de bir, pe de le bir ve ce te le a dörde karşı monoklonal antikorlardır.\nTe hücresine yapay reseptör eklemek ce a re te tedavisidir. Özellikle be hücreli akut lenfoblastik lösemide başarılıdır.\nTe hücrelerini in vitro çoğaltıp geri vermek adaptif te hücre transferidir. Kontrol noktası blokajından farklı bir yaklaşımdır.\nNeoantijen aşısı, tümöre spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşısıdır. Kontrol noktası blokajı değildir.\nT hücre frenlerini kaldırmak doğru cevaptır: pe de bir, pe de le bir ve ce te le a dört monoklonal antikorlarla bloke edilerek T lenfositler üzerindeki baskılayıcı sinyaller ortadan kaldırılır ve antitümör yanıt yeniden etkinleştirilir.\nDoğru cevap E, Te hücre frenlerini kaldırmak\nKontrol noktası inhibitörleri te hücreler üzerindeki frenleri kaldırır. Melanom, akciğer ve mesane karsinomu ile Hoçkin lenfomada yüksek yanıt oranları sağlar.",
+   "kelime": 187
   },
   {
    "no": 36,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "CAR-T tedavisinin, kontrol noktası inhibitörlerinden farklı olarak ciddi sınırlaması hangisidir?",
    "secenekler": {
     "A": "Otoimmün kolit",
@@ -615,6 +761,7 @@
     "E": "Endokrinopati"
    },
    "dogru": "C",
+   "ipucu": "Çok sayıda aktive lenfositin aşırı salgı yapmasının yol açtığı ağır sistemik tabloyu düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Otoimmün kolit, kontrol noktası inhibitörlerinin otoimmünite benzeri toksisitelerindendir; CAR-T'nin tipik sınırlaması değildir.",
@@ -624,6 +771,10 @@
     "E": "Endokrinopati, kontrol noktası blokajında endokrin bezlerin etkilendiği yan etkidir; CAR-T'nin ayırt edici sınırlaması değildir."
    },
    "ozet": "Kontrol noktası inhibitörleri kolit, dermatit, pnömonit ve endokrinopati gibi otoimmünite benzeri toksisite yapar; CAR-T'nin sınırlaması ise sitokin salınım sendromudur.",
+   "sayfa": [
+    19,
+    20
+   ],
    "metin": "**Soru.** CAR-T tedavisinin, kontrol noktası inhibitörlerinden farklı olarak ciddi sınırlaması hangisidir?\n\n**A)** Otoimmün kolit · **B)** Dermatit · **C)** Sitokin salınım sendromu · **D)** Pnömonit · **E)** Endokrinopati\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Otoimmün kolit** — Otoimmün kolit, kontrol noktası inhibitörlerinin otoimmünite benzeri toksisitelerindendir; CAR-T'nin tipik sınırlaması değildir.\n- **Dermatit** — Dermatit de kontrol noktası blokajının otoimmünite benzeri yan etkisidir; genellikle kortikosteroid ve immünsüpresanlarla yönetilir.\n- **Sitokin salınım sendromu** — Sitokin salınım sendromu doğru: CAR-T tedavisinin başlıca sınırlaması ciddi sitokin salınım sendromudur.\n- **Pnömonit** — Pnömonit, kontrol noktası inhibitörlerinin akciğeri tutan otoimmünite benzeri toksisitesidir; CAR-T ile eşleşmez.\n- **Endokrinopati** — Endokrinopati, kontrol noktası blokajında endokrin bezlerin etkilendiği yan etkidir; CAR-T'nin ayırt edici sınırlaması değildir.\n\n**Cevap: C** — Sitokin salınım sendromu\n\n**Özet.** Kontrol noktası inhibitörleri kolit, dermatit, pnömonit ve endokrinopati gibi otoimmünite benzeri toksisite yapar; CAR-T'nin sınırlaması ise sitokin salınım sendromudur.",
    "ses": "Ce a re te tedavisinin, kontrol noktası inhibitörlerinden farklı olarak ciddi sınırlaması hangisidir?\nA, Otoimmün kolit\nBe, Dermatit\nCe, Sitokin salınım sendromu\nDe, Pnömonit\nE, Endokrinopati\nŞimdi seçeneklere tek tek bakalım.\nOtoimmün kolit, kontrol noktası inhibitörlerinin otoimmünite benzeri toksisitelerindendir. Ce a re tenin tipik sınırlaması değildir.\nDermatit de kontrol noktası blokajının otoimmünite benzeri yan etkisidir. Genellikle kortikosteroid ve immünsüpresanlarla yönetilir.\nSitokin salınım sendromu doğru, ce a re te tedavisinin başlıca sınırlaması ciddi sitokin salınım sendromudur.\nPnömonit, kontrol noktası inhibitörlerinin akciğeri tutan otoimmünite benzeri toksisitesidir. Ce a re te ile eşleşmez.\nEndokrinopati, kontrol noktası blokajında endokrin bezlerin etkilendiği yan etkidir. Ce a re tenin ayırt edici sınırlaması değildir.\nDoğru cevap Ce, Sitokin salınım sendromu\nKontrol noktası inhibitörleri kolit, dermatit, pnömonit ve endokrinopati gibi otoimmünite benzeri toksisite yapar. Ce a re tenin sınırlaması ise sitokin salınım sendromudur.",
    "kelime": 142
@@ -631,6 +782,7 @@
   {
    "no": 37,
    "tur": "ornek",
+   "zorluk": "kolay",
    "soru": "Kanser ilişkili ölümün başlıca nedeni hangisidir?",
    "secenekler": {
     "A": "Metastaz",
@@ -640,22 +792,27 @@
     "E": "Primer tümör büyümesi"
    },
    "dogru": "A",
+   "ipucu": "Lokal tedavilerle tam eradikasyonu zorlaştırıp sistemik tedavi ihtiyacı doğuran süreci düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Metastaz doğru: kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde M durumu olarak belirleyicidir.",
     "B": "Lokal invazyon, metastaz kaskadının ilk basamaklarındandır; ölümün başlıca nedeni olarak tanımlanan süreç değildir.",
     "C": "Bağışıklıktan kaçış gelişmiş kanserlerde güçlüdür; ama kanser ilişkili ölümün başlıca nedeni olarak metastaz gösterilir.",
     "D": "Tümör dormansisi, hücrelerin uzun süre bölünmeden canlı kalmasıdır; yıllar sonra geç metastaz veya nükse yol açabilir.",
-    "E": "Kanser ilişkili ölümün başlıca nedeni tümörün uzak dokulara yayılmasıdır. Primer tümör büyümesi bu sorudaki ayrımı sağlamaz."
+    "E": "Primer tümörün lokal büyümesi beyin gibi hayati boşluklar dışında çoğu kez cerrahi veya radyoterapiyle kontrol altına alınabilir; kanser hastalarında organ yetmezliği, kaşeksi ve ölümün en büyük kısmından (%90'a yakınından) uzak organ metastazları sorumludur."
    },
    "ozet": "Metastaz kanser ilişkili ölümün başlıca nedenidir; cerrahi ve radyoterapi gibi lokal tedavilerle tam eradikasyonu zorlaştırır ve sistemik tedavi ihtiyacı doğurur.",
-   "metin": "**Soru.** Kanser ilişkili ölümün başlıca nedeni hangisidir?\n\n**A)** Metastaz · **B)** Lokal invazyon · **C)** Bağışıklıktan kaçış · **D)** Tümör dormansisi · **E)** Primer tümör büyümesi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Metastaz** — Metastaz doğru: kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde M durumu olarak belirleyicidir.\n- **Lokal invazyon** — Lokal invazyon, metastaz kaskadının ilk basamaklarındandır; ölümün başlıca nedeni olarak tanımlanan süreç değildir.\n- **Bağışıklıktan kaçış** — Bağışıklıktan kaçış gelişmiş kanserlerde güçlüdür; ama kanser ilişkili ölümün başlıca nedeni olarak metastaz gösterilir.\n- **Tümör dormansisi** — Tümör dormansisi, hücrelerin uzun süre bölünmeden canlı kalmasıdır; yıllar sonra geç metastaz veya nükse yol açabilir.\n- **Primer tümör büyümesi** — Kanser ilişkili ölümün başlıca nedeni tümörün uzak dokulara yayılmasıdır. Primer tümör büyümesi bu sorudaki ayrımı sağlamaz.\n\n**Cevap: A** — Metastaz\n\n**Özet.** Metastaz kanser ilişkili ölümün başlıca nedenidir; cerrahi ve radyoterapi gibi lokal tedavilerle tam eradikasyonu zorlaştırır ve sistemik tedavi ihtiyacı doğurur.",
-   "ses": "Kanser ilişkili ölümün başlıca nedeni hangisidir?\nA, Metastaz\nBe, Lokal invazyon\nCe, Bağışıklıktan kaçış\nDe, Tümör dormansisi\nE, Primer tümör büyümesi\nSeçenekleri sırayla değerlendirelim.\nMetastaz doğru, kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde me durumu olarak belirleyicidir.\nLokal invazyon, metastaz kaskadının ilk basamaklarındandır. Ölümün başlıca nedeni olarak tanımlanan süreç değildir.\nBağışıklıktan kaçış gelişmiş kanserlerde güçlüdür. Ama kanser ilişkili ölümün başlıca nedeni olarak metastaz gösterilir.\nTümör dormansisi, hücrelerin uzun süre bölünmeden canlı kalmasıdır. Yıllar sonra geç metastaz veya nükse yol açabilir.\nKanser ilişkili ölümün başlıca nedeni tümörün uzak dokulara yayılmasıdır. Primer tümör büyümesi bu sorudaki ayrımı sağlamaz.\nDoğru cevap A, Metastaz\nMetastaz kanser ilişkili ölümün başlıca nedenidir. Cerrahi ve radyoterapi gibi lokal tedavilerle tam eradikasyonu zorlaştırır ve sistemik tedavi ihtiyacı doğurur.",
-   "kelime": 148
+   "sayfa": [
+    21
+   ],
+   "metin": "**Soru.** Kanser ilişkili ölümün başlıca nedeni hangisidir?\n\n**A)** Metastaz · **B)** Lokal invazyon · **C)** Bağışıklıktan kaçış · **D)** Tümör dormansisi · **E)** Primer tümör büyümesi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Metastaz** — Metastaz doğru: kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde M durumu olarak belirleyicidir.\n- **Lokal invazyon** — Lokal invazyon, metastaz kaskadının ilk basamaklarındandır; ölümün başlıca nedeni olarak tanımlanan süreç değildir.\n- **Bağışıklıktan kaçış** — Bağışıklıktan kaçış gelişmiş kanserlerde güçlüdür; ama kanser ilişkili ölümün başlıca nedeni olarak metastaz gösterilir.\n- **Tümör dormansisi** — Tümör dormansisi, hücrelerin uzun süre bölünmeden canlı kalmasıdır; yıllar sonra geç metastaz veya nükse yol açabilir.\n- **Primer tümör büyümesi** — Primer tümörün lokal büyümesi beyin gibi hayati boşluklar dışında çoğu kez cerrahi veya radyoterapiyle kontrol altına alınabilir; kanser hastalarında organ yetmezliği, kaşeksi ve ölümün en büyük kısmından (%90'a yakınından) uzak organ metastazları sorumludur.\n\n**Cevap: A** — Metastaz\n\n**Özet.** Metastaz kanser ilişkili ölümün başlıca nedenidir; cerrahi ve radyoterapi gibi lokal tedavilerle tam eradikasyonu zorlaştırır ve sistemik tedavi ihtiyacı doğurur.",
+   "ses": "Kanser ilişkili ölümün başlıca nedeni hangisidir?\nA, Metastaz\nBe, Lokal invazyon\nCe, Bağışıklıktan kaçış\nDe, Tümör dormansisi\nE, Primer tümör büyümesi\nSeçenekleri sırayla değerlendirelim.\nMetastaz doğru, kanser ilişkili ölümün başlıca nedenidir ve tümör evrelemesinde me durumu olarak belirleyicidir.\nLokal invazyon, metastaz kaskadının ilk basamaklarındandır. Ölümün başlıca nedeni olarak tanımlanan süreç değildir.\nBağışıklıktan kaçış gelişmiş kanserlerde güçlüdür. Ama kanser ilişkili ölümün başlıca nedeni olarak metastaz gösterilir.\nTümör dormansisi, hücrelerin uzun süre bölünmeden canlı kalmasıdır. Yıllar sonra geç metastaz veya nükse yol açabilir.\nPrimer tümörün lokal büyümesi beyin gibi hayati boşluklar dışında çoğu kez cerrahi veya radyoterapiyle kontrol altına alınabilir. Kanser hastalarında organ yetmezliği, kaşeksi ve ölümün en büyük kısmından, yüzde doksan'a yakınından, uzak organ metastazları sorumludur.\nDoğru cevap A, Metastaz\nMetastaz kanser ilişkili ölümün başlıca nedenidir. Cerrahi ve radyoterapi gibi lokal tedavilerle tam eradikasyonu zorlaştırır ve sistemik tedavi ihtiyacı doğurur.",
+   "kelime": 165
   },
   {
    "no": 38,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Tümör proteazlarının yıktığı bazal membran ve ECM proteinleri hangileridir?",
    "secenekler": {
     "A": "E-kadherin ve β-katenin",
@@ -665,6 +822,7 @@
     "E": "İntegrin ve kemokin"
    },
    "dogru": "D",
+   "ipucu": "Matriks metalloproteinazlar ve katepsin D'nin hedef aldığı yapısal matriks bileşenlerini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "E-kadherin ve β-katenin, epitel hücreleri arası bağlantıyla ilgilidir; E-kadherin fonksiyon kaybı ayrılmayı başlatır.",
@@ -674,6 +832,9 @@
     "E": "İntegrin tümör hücresinin ECM'ye bağlanmasında rol alır, kemokin ise organ tropizmini yönlendirir; ikisi de yıkılan matriks proteini değildir."
    },
    "ozet": "Tümör veya stromal hücreler MMP, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılayarak kollajen ve laminin gibi ECM proteinlerini yıkar.",
+   "sayfa": [
+    25
+   ],
    "metin": "**Soru.** Tümör proteazlarının yıktığı bazal membran ve ECM proteinleri hangileridir?\n\n**A)** E-kadherin ve β-katenin · **B)** Vimentin ve düz kas aktini · **C)** Perforin ve granzim · **D)** Kollajen ve laminin · **E)** İntegrin ve kemokin\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **E-kadherin ve β-katenin** — E-kadherin ve β-katenin, epitel hücreleri arası bağlantıyla ilgilidir; E-kadherin fonksiyon kaybı ayrılmayı başlatır.\n- **Vimentin ve düz kas aktini** — Vimentin ve düz kas aktini, epitel-mezenkimal geçişte artan mezenkimal belirteçlerdir; yıkılan matriks proteinleri değildir.\n- **Perforin ve granzim** — Perforin ve granzim, CTL'nin tümör hücresinde apoptoz başlatmak için kullandığı moleküllerdir; ECM bileşeni değildir.\n- **Kollajen ve laminin** — Kollajen ve laminin doğru: proteazlar bazal membran ve ECM proteinleri olan kollajen ve laminini yıkar.\n- **İntegrin ve kemokin** — İntegrin tümör hücresinin ECM'ye bağlanmasında rol alır, kemokin ise organ tropizmini yönlendirir; ikisi de yıkılan matriks proteini değildir.\n\n**Cevap: D** — Kollajen ve laminin\n\n**Özet.** Tümör veya stromal hücreler MMP, katepsin D ve ürokinaz tipi plazminojen aktivatörü salgılayarak kollajen ve laminin gibi ECM proteinlerini yıkar.",
    "ses": "Tümör proteazlarının yıktığı bazal membran ve e ce me proteinleri hangileridir?\nA, E kadherin ve beta katenin\nBe, Vimentin ve düz kas aktini\nCe, Perforin ve granzim\nDe, Kollajen ve laminin\nE, İntegrin ve kemokin\nHer seçeneği tek tek ele alalım.\nE kadherin ve beta katenin, epitel hücreleri arası bağlantıyla ilgilidir. E kadherin fonksiyon kaybı ayrılmayı başlatır.\nVimentin ve düz kas aktini, epitel mezenkimal geçişte artan mezenkimal belirteçlerdir. Yıkılan matriks proteinleri değildir.\nPerforin ve granzim, sitotoksik te lenfositinin tümör hücresinde apoptoz başlatmak için kullandığı moleküllerdir. E ce me bileşeni değildir.\nKollajen ve laminin doğru, proteazlar bazal membran ve e ce me proteinleri olan kollajen ve laminini yıkar.\nİntegrin tümör hücresinin e ce meye bağlanmasında rol alır, kemokin ise organ tropizmini yönlendirir. İkisi de yıkılan matriks proteini değildir.\nDoğru cevap De, Kollajen ve laminin\nTümör veya stromal hücreler me me pe, katepsin de ve ürokinaz tipi plazminojen aktivatörü salgılayarak kollajen ve laminin gibi e ce me proteinlerini yıkar.",
    "kelime": 171
@@ -681,6 +842,7 @@
   {
    "no": 39,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Tümör mikroçevresinde hücre göçünü uyaran faktör hangisidir?",
    "secenekler": {
     "A": "İnterlökin 10",
@@ -690,6 +852,7 @@
     "E": "β2-mikroglobulin"
    },
    "dogru": "B",
+   "ipucu": "Baskılayıcı sitokinleri ve makrofaj aktive eden ürünü ayır; motijenik sinyal veren mikroçevre molekülünü düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "İnterlökin 10, tümörün kullandığı immün baskılayıcı sitokindir; göçü uyaran mikroçevre faktörü olarak sayılmaz.",
@@ -699,6 +862,9 @@
     "E": "β2-mikroglobulin mutasyonları MHC sınıf I ekspresyonunu azaltır; bu molekül göç faktörü değildir."
    },
    "ozet": "Göç invazyonun son basamağıdır; aktin yeniden düzenlenir ve HGF ile tümörle ilişkili makrofaj ve fibroblastlardan salgılanan kemokinler göçü uyarır.",
+   "sayfa": [
+    27
+   ],
    "metin": "**Soru.** Tümör mikroçevresinde hücre göçünü uyaran faktör hangisidir?\n\n**A)** İnterlökin 10 · **B)** Hepatosit büyüme faktörü · **C)** TGF-β · **D)** İnterferon gama · **E)** β2-mikroglobulin\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **İnterlökin 10** — İnterlökin 10, tümörün kullandığı immün baskılayıcı sitokindir; göçü uyaran mikroçevre faktörü olarak sayılmaz.\n- **Hepatosit büyüme faktörü** — Hepatosit büyüme faktörü doğru: yayılma faktörü olarak da bilinir ve tümör hücre göçünü uyaran mikroçevre faktörüdür.\n- **TGF-β** — TGF-β bu konuda immün baskılayıcı sitokin olarak geçer; göçü uyaranlar HGF ile makrofaj ve fibroblastlardan salgılanan kemokinlerdir.\n- **İnterferon gama** — İnterferon gama, Th1 hücrelerinin makrofaj aktive eden ürünüdür; tümör hücre göçünü uyaran faktör değildir.\n- **β2-mikroglobulin** — β2-mikroglobulin mutasyonları MHC sınıf I ekspresyonunu azaltır; bu molekül göç faktörü değildir.\n\n**Cevap: B** — Hepatosit büyüme faktörü\n\n**Özet.** Göç invazyonun son basamağıdır; aktin yeniden düzenlenir ve HGF ile tümörle ilişkili makrofaj ve fibroblastlardan salgılanan kemokinler göçü uyarır.",
    "ses": "Tümör mikroçevresinde hücre göçünü uyaran faktör hangisidir?\nA, İnterlökin on\nBe, Hepatosit büyüme faktörü\nCe, Te ge fe beta\nDe, İnterferon gama\nE, Beta iki mikroglobulin\nŞıkları sırasıyla gözden geçirelim.\nİnterlökin on, tümörün kullandığı immün baskılayıcı sitokindir. Göçü uyaran mikroçevre faktörü olarak sayılmaz.\nHepatosit büyüme faktörü doğru, yayılma faktörü olarak da bilinir ve tümör hücre göçünü uyaran mikroçevre faktörüdür.\nTe ge fe beta bu konuda immün baskılayıcı sitokin olarak geçer. Göçü uyaranlar ha ge fe ile makrofaj ve fibroblastlardan salgılanan kemokinlerdir.\nİnterferon gama, te ha bir hücrelerinin makrofaj aktive eden ürünüdür. Tümör hücre göçünü uyaran faktör değildir.\nBeta iki mikroglobulin mutasyonları me ha ce sınıf bir ekspresyonunu azaltır. Bu molekül göç faktörü değildir.\nDoğru cevap Be, Hepatosit büyüme faktörü\nGöç invazyonun son basamağıdır. Aktin yeniden düzenlenir ve ha ge fe ile tümörle ilişkili makrofaj ve fibroblastlardan salgılanan kemokinler göçü uyarır.",
    "kelime": 148
@@ -706,6 +872,7 @@
   {
    "no": 40,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "İntravazasyonda tümör hücreleriyle etkileşen hücreler hangileridir?",
    "secenekler": {
     "A": "Trombositler ve lökositler",
@@ -715,6 +882,7 @@
     "E": "Makrofajlar ve endotel"
    },
    "dogru": "E",
+   "ipucu": "Damar duvarını aşarken geçilmesi gereken son engeli ve bu girişi kolaylaştıran bağışıklık hücresini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Trombositler ve lökositler, dolaşımdaki tümör hücreleriyle agregat oluşturur; trombositler hücreleri mekanik ve immün saldırıdan korur.",
@@ -724,6 +892,9 @@
     "E": "Makrofajlar ve endotel doğru: intravazasyon, tümör hücreleri, makrofajlar ve endotel arasındaki etkileşimle gerçekleşir."
    },
    "ozet": "İntravazasyon tümör hücresi, makrofaj ve endotel etkileşimidir; dolaşımda ise tümör hücreleri trombosit ve lökositlerle agregat oluşturur.",
+   "sayfa": [
+    29
+   ],
    "metin": "**Soru.** İntravazasyonda tümör hücreleriyle etkileşen hücreler hangileridir?\n\n**A)** Trombositler ve lökositler · **B)** Treg ve MDSC · **C)** NK hücreleri ve CTL · **D)** Perisitler ve fibroblastlar · **E)** Makrofajlar ve endotel\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Trombositler ve lökositler** — Trombositler ve lökositler, dolaşımdaki tümör hücreleriyle agregat oluşturur; trombositler hücreleri mekanik ve immün saldırıdan korur.\n- **Treg ve MDSC** — Treg ve MDSC, tümörün bağışıklıktan kaçışına aracılık eden immün baskılayıcı hücrelerdir; intravazasyon etkileşiminin bileşeni değildir.\n- **NK hücreleri ve CTL** — NK hücreleri ve CTL, tümör hücrelerini öldüren bağışıklık hücreleridir; dolaşımda tanınma ve yok edilme riskini oluştururlar.\n- **Perisitler ve fibroblastlar** — Perisitler ve fibroblastlar, tümör mikroçevresinde metastatik nişin hazırlanmasına katkı verir; intravazasyon üçlüsünde sayılmaz.\n- **Makrofajlar ve endotel** — Makrofajlar ve endotel doğru: intravazasyon, tümör hücreleri, makrofajlar ve endotel arasındaki etkileşimle gerçekleşir.\n\n**Cevap: E** — Makrofajlar ve endotel\n\n**Özet.** İntravazasyon tümör hücresi, makrofaj ve endotel etkileşimidir; dolaşımda ise tümör hücreleri trombosit ve lökositlerle agregat oluşturur.",
    "ses": "İntravazasyonda tümör hücreleriyle etkileşen hücreler hangileridir?\nA, Trombositler ve lökositler\nBe, Te düzenleyici hücreler ve me de se ce\nCe, Ne ka hücreleri ve sitotoksik te lenfositi\nDe, Perisitler ve fibroblastlar\nE, Makrofajlar ve endotel\nŞimdi seçeneklere tek tek bakalım.\nTrombositler ve lökositler, dolaşımdaki tümör hücreleriyle agregat oluşturur. Trombositler hücreleri mekanik ve immün saldırıdan korur.\nTe düzenleyici hücreler ve me de se ce, tümörün bağışıklıktan kaçışına aracılık eden immün baskılayıcı hücrelerdir. İntravazasyon etkileşiminin bileşeni değildir.\nNe ka hücreleri ve sitotoksik te lenfositi, tümör hücrelerini öldüren bağışıklık hücreleridir. Dolaşımda tanınma ve yok edilme riskini oluştururlar.\nPerisitler ve fibroblastlar, tümör mikroçevresinde metastatik nişin hazırlanmasına katkı verir. İntravazasyon üçlüsünde sayılmaz.\nMakrofajlar ve endotel doğru, intravazasyon, tümör hücreleri, makrofajlar ve endotel arasındaki etkileşimle gerçekleşir.\nDoğru cevap E, Makrofajlar ve endotel\nİntravazasyon tümör hücresi, makrofaj ve endotel etkileşimidir. Dolaşımda ise tümör hücreleri trombosit ve lökositlerle agregat oluşturur.",
    "kelime": 159
@@ -731,6 +902,7 @@
   {
    "no": 41,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Mikrometastazların büyüyebilmesi için gereken koşul hangisidir?",
    "secenekler": {
     "A": "E-kadherin ekspresyonunun artması",
@@ -740,22 +912,27 @@
     "E": "Kemokin reseptörlerinin kaybı"
    },
    "dogru": "C",
+   "ipucu": "Yerleşen hücrelerin yeni dokuda çoğalabilmesi için çevreden aldığı yardımı ve yeni damar ihtiyacını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
-    "A": "E-kadherin artışı kolonizasyonun koşulu olarak geçmez; E-kadherin fonksiyon kaybı ise metastazın başlangıcında ayrılmayı sağlar.",
+    "A": "E-kadherin hücreleri birbirine bağlayan adezyon molekülüdür ve kaybı primer tümörden ayrılmayı kolaylaştırır; hedef organa yerleşen mikrometastazların klinik tümöre büyüyebilmesi (kolonizasyon) için ise uygun stromal destek ve anjiyogenez zorunludur.",
     "B": "MHC sınıf I artışı tümörü CTL tanımasına açık hâle getirir; mikrometastaz büyümesinin koşulu değildir.",
     "C": "Stromal destek ve anjiyogenez doğru: mikrometastazlar uygun stromal destek ve anjiyogenez olmadan büyüyemez.",
     "D": "Trombosit agregatı, dolaşımdaki tümör hücresini mekanik ve immün saldırıdan korur; hedef dokuda büyümeyi sağlamaz.",
     "E": "Kemokin reseptörlerinin kaybı kolonizasyonu kolaylaştırmaz; bu reseptörler hedef organ kemokinlerine yanıt verip organ tropizmini belirler."
    },
    "ozet": "Mikrometastazlar ancak uygun stromal destek ve anjiyogenezle büyür; hedef organ seçimi ise kemokin reseptörleriyle, yani tohum ve toprak uyumuyla belirlenir.",
-   "metin": "**Soru.** Mikrometastazların büyüyebilmesi için gereken koşul hangisidir?\n\n**A)** E-kadherin ekspresyonunun artması · **B)** MHC sınıf I artışı · **C)** Stromal destek ve anjiyogenez · **D)** Trombosit agregatı oluşumu · **E)** Kemokin reseptörlerinin kaybı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **E-kadherin ekspresyonunun artması** — E-kadherin artışı kolonizasyonun koşulu olarak geçmez; E-kadherin fonksiyon kaybı ise metastazın başlangıcında ayrılmayı sağlar.\n- **MHC sınıf I artışı** — MHC sınıf I artışı tümörü CTL tanımasına açık hâle getirir; mikrometastaz büyümesinin koşulu değildir.\n- **Stromal destek ve anjiyogenez** — Stromal destek ve anjiyogenez doğru: mikrometastazlar uygun stromal destek ve anjiyogenez olmadan büyüyemez.\n- **Trombosit agregatı oluşumu** — Trombosit agregatı, dolaşımdaki tümör hücresini mekanik ve immün saldırıdan korur; hedef dokuda büyümeyi sağlamaz.\n- **Kemokin reseptörlerinin kaybı** — Kemokin reseptörlerinin kaybı kolonizasyonu kolaylaştırmaz; bu reseptörler hedef organ kemokinlerine yanıt verip organ tropizmini belirler.\n\n**Cevap: C** — Stromal destek ve anjiyogenez\n\n**Özet.** Mikrometastazlar ancak uygun stromal destek ve anjiyogenezle büyür; hedef organ seçimi ise kemokin reseptörleriyle, yani tohum ve toprak uyumuyla belirlenir.",
-   "ses": "Mikrometastazların büyüyebilmesi için gereken koşul hangisidir?\nA, E kadherin ekspresyonunun artması\nBe, Me ha ce sınıf bir artışı\nCe, Stromal destek ve anjiyogenez\nDe, Trombosit agregatı oluşumu\nE, Kemokin reseptörlerinin kaybı\nSeçenekleri sırayla değerlendirelim.\nE kadherin artışı kolonizasyonun koşulu olarak geçmez. E kadherin fonksiyon kaybı ise metastazın başlangıcında ayrılmayı sağlar.\nMe ha ce sınıf bir artışı tümörü sitotoksik te lenfositi tanımasına açık hâle getirir. Mikrometastaz büyümesinin koşulu değildir.\nStromal destek ve anjiyogenez doğru, mikrometastazlar uygun stromal destek ve anjiyogenez olmadan büyüyemez.\nTrombosit agregatı, dolaşımdaki tümör hücresini mekanik ve immün saldırıdan korur. Hedef dokuda büyümeyi sağlamaz.\nKemokin reseptörlerinin kaybı kolonizasyonu kolaylaştırmaz. Bu reseptörler hedef organ kemokinlerine yanıt verip organ tropizmini belirler.\nDoğru cevap Ce, Stromal destek ve anjiyogenez\nMikrometastazlar ancak uygun stromal destek ve anjiyogenezle büyür. Hedef organ seçimi ise kemokin reseptörleriyle, yani tohum ve toprak uyumuyla belirlenir.",
-   "kelime": 162
+   "sayfa": [
+    30
+   ],
+   "metin": "**Soru.** Mikrometastazların büyüyebilmesi için gereken koşul hangisidir?\n\n**A)** E-kadherin ekspresyonunun artması · **B)** MHC sınıf I artışı · **C)** Stromal destek ve anjiyogenez · **D)** Trombosit agregatı oluşumu · **E)** Kemokin reseptörlerinin kaybı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **E-kadherin ekspresyonunun artması** — E-kadherin hücreleri birbirine bağlayan adezyon molekülüdür ve kaybı primer tümörden ayrılmayı kolaylaştırır; hedef organa yerleşen mikrometastazların klinik tümöre büyüyebilmesi (kolonizasyon) için ise uygun stromal destek ve anjiyogenez zorunludur.\n- **MHC sınıf I artışı** — MHC sınıf I artışı tümörü CTL tanımasına açık hâle getirir; mikrometastaz büyümesinin koşulu değildir.\n- **Stromal destek ve anjiyogenez** — Stromal destek ve anjiyogenez doğru: mikrometastazlar uygun stromal destek ve anjiyogenez olmadan büyüyemez.\n- **Trombosit agregatı oluşumu** — Trombosit agregatı, dolaşımdaki tümör hücresini mekanik ve immün saldırıdan korur; hedef dokuda büyümeyi sağlamaz.\n- **Kemokin reseptörlerinin kaybı** — Kemokin reseptörlerinin kaybı kolonizasyonu kolaylaştırmaz; bu reseptörler hedef organ kemokinlerine yanıt verip organ tropizmini belirler.\n\n**Cevap: C** — Stromal destek ve anjiyogenez\n\n**Özet.** Mikrometastazlar ancak uygun stromal destek ve anjiyogenezle büyür; hedef organ seçimi ise kemokin reseptörleriyle, yani tohum ve toprak uyumuyla belirlenir.",
+   "ses": "Mikrometastazların büyüyebilmesi için gereken koşul hangisidir?\nA, E kadherin ekspresyonunun artması\nBe, Me ha ce sınıf bir artışı\nCe, Stromal destek ve anjiyogenez\nDe, Trombosit agregatı oluşumu\nE, Kemokin reseptörlerinin kaybı\nSeçenekleri sırayla değerlendirelim.\nE-kadherin hücreleri birbirine bağlayan adezyon molekülüdür ve kaybı primer tümörden ayrılmayı kolaylaştırır. Hedef organa yerleşen mikrometastazların klinik tümöre büyüyebilmesi, kolonizasyon, için ise uygun stromal destek ve anjiyogenez zorunludur.\nMe ha ce sınıf bir artışı tümörü sitotoksik te lenfositi tanımasına açık hâle getirir. Mikrometastaz büyümesinin koşulu değildir.\nStromal destek ve anjiyogenez doğru, mikrometastazlar uygun stromal destek ve anjiyogenez olmadan büyüyemez.\nTrombosit agregatı, dolaşımdaki tümör hücresini mekanik ve immün saldırıdan korur. Hedef dokuda büyümeyi sağlamaz.\nKemokin reseptörlerinin kaybı kolonizasyonu kolaylaştırmaz. Bu reseptörler hedef organ kemokinlerine yanıt verip organ tropizmini belirler.\nDoğru cevap Ce, Stromal destek ve anjiyogenez\nMikrometastazlar ancak uygun stromal destek ve anjiyogenezle büyür. Hedef organ seçimi ise kemokin reseptörleriyle, yani tohum ve toprak uyumuyla belirlenir.",
+   "kelime": 176
   },
   {
    "no": 42,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Tümör dormansisinin nedenlerinden biri hangisidir?",
    "secenekler": {
     "A": "Uygun stromal niş eksikliği",
@@ -765,22 +942,27 @@
     "E": "PD-L1 ifadesi"
    },
    "dogru": "A",
+   "ipucu": "Hücrenin hayatta kalması ve büyümesi için gereken mikroçevrenin yetersiz kalmasını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Uygun stromal niş eksikliği doğru: yetersiz anjiyogenez ve konak bağışıklık baskısıyla birlikte dormansinin üç nedeninden biridir.",
     "B": "Aşırı anjiyogenez dormansiye yol açmaz; tersine yetersiz anjiyogenez, dormansinin nedenlerinden biridir.",
-    "C": "MHC sınıf I kaybı, tümörün CTL tanımasından kaçmasını sağlar; dormansinin nedenleri arasında sayılmaz.",
+    "C": "MHC sınıf I kaybı tümör hücresinin CD8+ sitotoksik T lenfositlerden saklanarak çoğalmasını kolaylaştıran bir kaçış mekanizmasıdır; mikrometastatik hücrelerin yıllarca bölünmeden sessiz kalmasına (dormansi) ise uygun stromal niş ve anjiyogenez eksikliği ile antitümör immün denetim yol açar.",
     "D": "E-kadherin kaybı, hücreler arası kohezyonu azaltıp ayrılmayı başlatır; tümör hücrelerinin sessiz kalmasını açıklamaz.",
     "E": "PD-L1 ifadesi, T hücre aktivitesini baskılayan bir kaçış mekanizmasıdır; dormansinin nedeni değildir."
    },
    "ozet": "Dormansinin nedenleri yetersiz anjiyogenez, uygun stromal niş eksikliği ve konak bağışıklık baskısıdır; klinikte yıllar sonra geç metastaz veya nüks görülebilir.",
-   "metin": "**Soru.** Tümör dormansisinin nedenlerinden biri hangisidir?\n\n**A)** Uygun stromal niş eksikliği · **B)** Aşırı anjiyogenez · **C)** MHC sınıf I kaybı · **D)** E-kadherin kaybı · **E)** PD-L1 ifadesi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Uygun stromal niş eksikliği** — Uygun stromal niş eksikliği doğru: yetersiz anjiyogenez ve konak bağışıklık baskısıyla birlikte dormansinin üç nedeninden biridir.\n- **Aşırı anjiyogenez** — Aşırı anjiyogenez dormansiye yol açmaz; tersine yetersiz anjiyogenez, dormansinin nedenlerinden biridir.\n- **MHC sınıf I kaybı** — MHC sınıf I kaybı, tümörün CTL tanımasından kaçmasını sağlar; dormansinin nedenleri arasında sayılmaz.\n- **E-kadherin kaybı** — E-kadherin kaybı, hücreler arası kohezyonu azaltıp ayrılmayı başlatır; tümör hücrelerinin sessiz kalmasını açıklamaz.\n- **PD-L1 ifadesi** — PD-L1 ifadesi, T hücre aktivitesini baskılayan bir kaçış mekanizmasıdır; dormansinin nedeni değildir.\n\n**Cevap: A** — Uygun stromal niş eksikliği\n\n**Özet.** Dormansinin nedenleri yetersiz anjiyogenez, uygun stromal niş eksikliği ve konak bağışıklık baskısıdır; klinikte yıllar sonra geç metastaz veya nüks görülebilir.",
-   "ses": "Tümör dormansisinin nedenlerinden biri hangisidir?\nA, Uygun stromal niş eksikliği\nBe, Aşırı anjiyogenez\nCe, Me ha ce sınıf bir kaybı\nDe, E kadherin kaybı\nE, Pe de le bir ifadesi\nHer seçeneği tek tek ele alalım.\nUygun stromal niş eksikliği doğru, yetersiz anjiyogenez ve konak bağışıklık baskısıyla birlikte dormansinin üç nedeninden biridir.\nAşırı anjiyogenez dormansiye yol açmaz. Tersine yetersiz anjiyogenez, dormansinin nedenlerinden biridir.\nMe ha ce sınıf bir kaybı, tümörün sitotoksik te lenfositi tanımasından kaçmasını sağlar. Dormansinin nedenleri arasında sayılmaz.\nE kadherin kaybı, hücreler arası kohezyonu azaltıp ayrılmayı başlatır. Tümör hücrelerinin sessiz kalmasını açıklamaz.\nPe de le bir ifadesi, te hücre aktivitesini baskılayan bir kaçış mekanizmasıdır. Dormansinin nedeni değildir.\nDoğru cevap A, Uygun stromal niş eksikliği\nDormansinin nedenleri yetersiz anjiyogenez, uygun stromal niş eksikliği ve konak bağışıklık baskısıdır. Klinikte yıllar sonra geç metastaz veya nüks görülebilir.",
-   "kelime": 153
+   "sayfa": [
+    31
+   ],
+   "metin": "**Soru.** Tümör dormansisinin nedenlerinden biri hangisidir?\n\n**A)** Uygun stromal niş eksikliği · **B)** Aşırı anjiyogenez · **C)** MHC sınıf I kaybı · **D)** E-kadherin kaybı · **E)** PD-L1 ifadesi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Uygun stromal niş eksikliği** — Uygun stromal niş eksikliği doğru: yetersiz anjiyogenez ve konak bağışıklık baskısıyla birlikte dormansinin üç nedeninden biridir.\n- **Aşırı anjiyogenez** — Aşırı anjiyogenez dormansiye yol açmaz; tersine yetersiz anjiyogenez, dormansinin nedenlerinden biridir.\n- **MHC sınıf I kaybı** — MHC sınıf I kaybı tümör hücresinin CD8+ sitotoksik T lenfositlerden saklanarak çoğalmasını kolaylaştıran bir kaçış mekanizmasıdır; mikrometastatik hücrelerin yıllarca bölünmeden sessiz kalmasına (dormansi) ise uygun stromal niş ve anjiyogenez eksikliği ile antitümör immün denetim yol açar.\n- **E-kadherin kaybı** — E-kadherin kaybı, hücreler arası kohezyonu azaltıp ayrılmayı başlatır; tümör hücrelerinin sessiz kalmasını açıklamaz.\n- **PD-L1 ifadesi** — PD-L1 ifadesi, T hücre aktivitesini baskılayan bir kaçış mekanizmasıdır; dormansinin nedeni değildir.\n\n**Cevap: A** — Uygun stromal niş eksikliği\n\n**Özet.** Dormansinin nedenleri yetersiz anjiyogenez, uygun stromal niş eksikliği ve konak bağışıklık baskısıdır; klinikte yıllar sonra geç metastaz veya nüks görülebilir.",
+   "ses": "Tümör dormansisinin nedenlerinden biri hangisidir?\nA, Uygun stromal niş eksikliği\nBe, Aşırı anjiyogenez\nCe, Me ha ce sınıf bir kaybı\nDe, E kadherin kaybı\nE, Pe de le bir ifadesi\nHer seçeneği tek tek ele alalım.\nUygun stromal niş eksikliği doğru, yetersiz anjiyogenez ve konak bağışıklık baskısıyla birlikte dormansinin üç nedeninden biridir.\nAşırı anjiyogenez dormansiye yol açmaz. Tersine yetersiz anjiyogenez, dormansinin nedenlerinden biridir.\nem ha ce sınıf bir kaybı tümör hücresinin ce de sekiz pozitif sitotoksik T lenfositlerden saklanarak çoğalmasını kolaylaştıran bir kaçış mekanizmasıdır. Mikrometastatik hücrelerin yıllarca bölünmeden sessiz kalmasına, dormansi, ise uygun stromal niş ve anjiyogenez eksikliği ile antitümör immün denetim yol açar.\nE kadherin kaybı, hücreler arası kohezyonu azaltıp ayrılmayı başlatır. Tümör hücrelerinin sessiz kalmasını açıklamaz.\nPe de le bir ifadesi, te hücre aktivitesini baskılayan bir kaçış mekanizmasıdır. Dormansinin nedeni değildir.\nDoğru cevap A, Uygun stromal niş eksikliği\nDormansinin nedenleri yetersiz anjiyogenez, uygun stromal niş eksikliği ve konak bağışıklık baskısıdır. Klinikte yıllar sonra geç metastaz veya nüks görülebilir.",
+   "kelime": 176
   },
   {
    "no": 43,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Malign olduğu hâlde çok nadiren metastaz yapan tümör hangisidir?",
    "secenekler": {
     "A": "Küçük hücreli akciğer karsinomu",
@@ -790,18 +972,22 @@
     "E": "Servikal karsinom"
    },
    "dogru": "B",
+   "ipucu": "Erken ve sık yayılan tümörün tersine, primer santral sinir sistemi tümörleriyle aynı grupta anılan epitel kökenli tümörü düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Küçük hücreli akciğer karsinomu, erken ve sık metastaz yapan tümörlerin örneğidir; nadiren metastaz yapanların tam tersidir.",
     "B": "Bazal hücreli karsinom doğru: malign olmasına karşın birçok primer santral sinir sistemi tümörü gibi çok nadiren metastaz yapar.",
     "C": "Güneş ilişkili melanom, yüksek mutasyon yükü ve neoantijenden zenginliğiyle anılır; nadiren metastaz yapan tümör örneği değildir.",
-    "D": "Sigara ilişkili akciğer kanseri, yüksek mutasyon yüklü tümör örneğidir; nadir metastaz yapan tümörler arasında sayılmaz.",
+    "D": "Sigara ilişkili akciğer karsinomları erken dönemde lenf düğümü, beyin, kemik ve karaciğere agresif metastaz yapan tümörlerdir; lokal olarak dokuyu yıkmasına karşın neredeyse hiç metastaz yapmayan malign tümör örneği ise derinin bazal hücreli karsinomudur.",
     "E": "Servikal karsinom, HPV E6/E7 proteinlerinin ifade edildiği tümördür; nadir metastaz örneği olarak verilen tümör değildir."
    },
    "ozet": "Küçük hücreli akciğer karsinomu erken ve sık metastaz yapar; bazal hücreli karsinom ve birçok primer santral sinir sistemi tümörü ise çok nadiren metastaz yapar.",
-   "metin": "**Soru.** Malign olduğu hâlde çok nadiren metastaz yapan tümör hangisidir?\n\n**A)** Küçük hücreli akciğer karsinomu · **B)** Bazal hücreli karsinom · **C)** Güneş ilişkili melanom · **D)** Sigara ilişkili akciğer kanseri · **E)** Servikal karsinom\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Küçük hücreli akciğer karsinomu** — Küçük hücreli akciğer karsinomu, erken ve sık metastaz yapan tümörlerin örneğidir; nadiren metastaz yapanların tam tersidir.\n- **Bazal hücreli karsinom** — Bazal hücreli karsinom doğru: malign olmasına karşın birçok primer santral sinir sistemi tümörü gibi çok nadiren metastaz yapar.\n- **Güneş ilişkili melanom** — Güneş ilişkili melanom, yüksek mutasyon yükü ve neoantijenden zenginliğiyle anılır; nadiren metastaz yapan tümör örneği değildir.\n- **Sigara ilişkili akciğer kanseri** — Sigara ilişkili akciğer kanseri, yüksek mutasyon yüklü tümör örneğidir; nadir metastaz yapan tümörler arasında sayılmaz.\n- **Servikal karsinom** — Servikal karsinom, HPV E6/E7 proteinlerinin ifade edildiği tümördür; nadir metastaz örneği olarak verilen tümör değildir.\n\n**Cevap: B** — Bazal hücreli karsinom\n\n**Özet.** Küçük hücreli akciğer karsinomu erken ve sık metastaz yapar; bazal hücreli karsinom ve birçok primer santral sinir sistemi tümörü ise çok nadiren metastaz yapar.",
-   "ses": "Malign olduğu hâlde çok nadiren metastaz yapan tümör hangisidir?\nA, Küçük hücreli akciğer karsinomu\nBe, Bazal hücreli karsinom\nCe, Güneş ilişkili melanom\nDe, Sigara ilişkili akciğer kanseri\nE, Servikal karsinom\nŞıkları sırasıyla gözden geçirelim.\nKüçük hücreli akciğer karsinomu, erken ve sık metastaz yapan tümörlerin örneğidir. Nadiren metastaz yapanların tam tersidir.\nBazal hücreli karsinom doğru, malign olmasına karşın birçok primer santral sinir sistemi tümörü gibi çok nadiren metastaz yapar.\nGüneş ilişkili melanom, yüksek mutasyon yükü ve neoantijenden zenginliğiyle anılır. Nadiren metastaz yapan tümör örneği değildir.\nSigara ilişkili akciğer kanseri, yüksek mutasyon yüklü tümör örneğidir. Nadir metastaz yapan tümörler arasında sayılmaz.\nServikal karsinom, ha pe ve e altı ve e yedi proteinlerinin ifade edildiği tümördür. Nadir metastaz örneği olarak verilen tümör değildir.\nDoğru cevap Be, Bazal hücreli karsinom\nKüçük hücreli akciğer karsinomu erken ve sık metastaz yapar. Bazal hücreli karsinom ve birçok primer santral sinir sistemi tümörü ise çok nadiren metastaz yapar.",
-   "kelime": 177
+   "sayfa": [
+    32
+   ],
+   "metin": "**Soru.** Malign olduğu hâlde çok nadiren metastaz yapan tümör hangisidir?\n\n**A)** Küçük hücreli akciğer karsinomu · **B)** Bazal hücreli karsinom · **C)** Güneş ilişkili melanom · **D)** Sigara ilişkili akciğer kanseri · **E)** Servikal karsinom\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Küçük hücreli akciğer karsinomu** — Küçük hücreli akciğer karsinomu, erken ve sık metastaz yapan tümörlerin örneğidir; nadiren metastaz yapanların tam tersidir.\n- **Bazal hücreli karsinom** — Bazal hücreli karsinom doğru: malign olmasına karşın birçok primer santral sinir sistemi tümörü gibi çok nadiren metastaz yapar.\n- **Güneş ilişkili melanom** — Güneş ilişkili melanom, yüksek mutasyon yükü ve neoantijenden zenginliğiyle anılır; nadiren metastaz yapan tümör örneği değildir.\n- **Sigara ilişkili akciğer kanseri** — Sigara ilişkili akciğer karsinomları erken dönemde lenf düğümü, beyin, kemik ve karaciğere agresif metastaz yapan tümörlerdir; lokal olarak dokuyu yıkmasına karşın neredeyse hiç metastaz yapmayan malign tümör örneği ise derinin bazal hücreli karsinomudur.\n- **Servikal karsinom** — Servikal karsinom, HPV E6/E7 proteinlerinin ifade edildiği tümördür; nadir metastaz örneği olarak verilen tümör değildir.\n\n**Cevap: B** — Bazal hücreli karsinom\n\n**Özet.** Küçük hücreli akciğer karsinomu erken ve sık metastaz yapar; bazal hücreli karsinom ve birçok primer santral sinir sistemi tümörü ise çok nadiren metastaz yapar.",
+   "ses": "Malign olduğu hâlde çok nadiren metastaz yapan tümör hangisidir?\nA, Küçük hücreli akciğer karsinomu\nBe, Bazal hücreli karsinom\nCe, Güneş ilişkili melanom\nDe, Sigara ilişkili akciğer kanseri\nE, Servikal karsinom\nŞıkları sırasıyla gözden geçirelim.\nKüçük hücreli akciğer karsinomu, erken ve sık metastaz yapan tümörlerin örneğidir. Nadiren metastaz yapanların tam tersidir.\nBazal hücreli karsinom doğru, malign olmasına karşın birçok primer santral sinir sistemi tümörü gibi çok nadiren metastaz yapar.\nGüneş ilişkili melanom, yüksek mutasyon yükü ve neoantijenden zenginliğiyle anılır. Nadiren metastaz yapan tümör örneği değildir.\nSigara ilişkili akciğer karsinomları erken dönemde lenf düğümü, beyin, kemik ve karaciğere agresif metastaz yapan tümörlerdir. Lokal olarak dokuyu yıkmasına karşın neredeyse hiç metastaz yapmayan malign tümör örneği ise derinin bazal hücreli karsinomudur.\nServikal karsinom, ha pe ve e altı ve e yedi proteinlerinin ifade edildiği tümördür. Nadir metastaz örneği olarak verilen tümör değildir.\nDoğru cevap Be, Bazal hücreli karsinom\nKüçük hücreli akciğer karsinomu erken ve sık metastaz yapar. Bazal hücreli karsinom ve birçok primer santral sinir sistemi tümörü ise çok nadiren metastaz yapar.",
+   "kelime": 195
   }
  ]
 }

@@ -1,7 +1,8 @@
 {
  "kod": "12",
+ "no": 12,
  "baslik": "Tromboz Patofizyolojisi",
- "surum": "alt-1",
+ "surum": "alt-2",
  "sorular": [
   {
    "no": 1,
@@ -15,6 +16,7 @@
     "E": "Trombomodulin"
    },
    "dogru": "B",
+   "ipucu": "Nörojenik reflekslerle birlikte damarı kısa süre daraltan, iç yüzü döşeyen hücre tabakasından salınan güçlü maddeyi düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Prostasiklin endotelden salınan antitrombotik bir maddedir; trombosit agregasyonunu azaltır ve vazodilatasyon yapar.",
@@ -24,6 +26,10 @@
     "E": "Trombomodulin endotel yüzeyindeki antikoagülan moleküldür; protein C sistemini aktive eder, damarı daraltmaz."
    },
    "ozet": "Yaralanmadan hemen sonra nörojenik refleksler ve endotelden salınan **endotelin** kısa süreli arteriyel vazokonstriksiyon yapar; prostasiklin ve nitrik oksit ise genişletir.",
+   "sayfa": [
+    7,
+    29
+   ],
    "metin": "**Soru.** Damar yaralanması sonrası erken vazokonstriksiyona katkıda bulunan endotel kaynaklı madde hangisidir?\n\n**A)** Prostasiklin · **B)** Endotelin · **C)** Nitrik oksit · **D)** t-PA · **E)** Trombomodulin\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Prostasiklin** — Prostasiklin endotelden salınan antitrombotik bir maddedir; trombosit agregasyonunu azaltır ve vazodilatasyon yapar.\n- **Endotelin** — Endotelin doğru: endotelden salınan güçlü bir vazokonstriktördür; nörojenik reflekslerle birlikte erken arteriyel daralmayı sağlar.\n- **Nitrik oksit** — Nitrik oksit endotelden salınır ama vazodilatasyon yapar ve trombosit agregasyonunu baskılar.\n- **t-PA** — t-PA endotel kökenli doku plazminojen aktivatörüdür; plazminojeni aktive ederek fibrinolizi başlatır.\n- **Trombomodulin** — Trombomodulin endotel yüzeyindeki antikoagülan moleküldür; protein C sistemini aktive eder, damarı daraltmaz.\n\n**Cevap: B** — Endotelin\n\n**Özet.** Yaralanmadan hemen sonra nörojenik refleksler ve endotelden salınan **endotelin** kısa süreli arteriyel vazokonstriksiyon yapar; prostasiklin ve nitrik oksit ise genişletir.",
    "ses": "Damar yaralanması sonrası erken vazokonstriksiyona katkıda bulunan, endotelden salınan madde hangisidir?\nA, Prostasiklin\nBe, Endotelin\nCe, Nitrik oksit\nDe, te pe a\nE, Trombomodulin\nSeçenekleri sırayla değerlendirelim.\nProstasiklin endotelden salınan antitrombotik bir maddedir, trombosit agregasyonunu azaltır ve vazodilatasyon yapar.\nEndotelin doğru, endotelden salınan güçlü bir vazokonstriktördür, nörojenik reflekslerle birlikte erken arteriyel daralmayı sağlar.\nNitrik oksit endotelden salınır ama vazodilatasyon yapar ve trombosit agregasyonunu baskılar.\nTe pe a endotel kökenli doku plazminojen aktivatörüdür, plazminojeni aktive ederek fibrinolizi başlatır.\nTrombomodulin endotel yüzeyindeki antikoagülan moleküldür, protein ce sistemini aktive eder, damarı daraltmaz.\nDoğru cevap Be, Endotelin\nYaralanmadan hemen sonra nörojenik refleksler ve endotelden salınan endotelin kısa süreli arteriyel vazokonstriksiyon yapar, prostasiklin ve nitrik oksit ise genişletir.",
    "kelime": 132
@@ -40,6 +46,7 @@
     "E": "GpIb"
    },
    "dogru": "E",
+   "ipucu": "Yapışma ile agregasyonu ayır, kollajene tutunmada köprü olan faktörün trombosit tarafındaki eşini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "GpIIb/IIIa agregasyon reseptörüdür; aktivasyonla şekil değiştirip fibrinojen bağlar ve trombositleri birbirine bağlar.",
@@ -49,6 +56,12 @@
     "E": "GpIb doğru: vWF, trombosit yüzeyindeki GpIb ile subendotelyal kollajen arasında köprü kurarak yapışmayı sağlar."
    },
    "ozet": "Yapışmada vWF, kollajen ile trombositin **GpIb** reseptörü arasında köprü kurar; agregasyonda ise GpIIb/IIIa fibrinojen bağlayarak trombositleri birleştirir.",
+   "sayfa": [
+    12,
+    13,
+    15,
+    16
+   ],
    "metin": "**Soru.** Trombositlerin vWF aracılığıyla subendotelyal kollajene yapışmasını sağlayan reseptör hangisidir?\n\n**A)** GpIIb/IIIa · **B)** Trombomodulin · **C)** PAR · **D)** P-selektin · **E)** GpIb\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **GpIIb/IIIa** — GpIIb/IIIa agregasyon reseptörüdür; aktivasyonla şekil değiştirip fibrinojen bağlar ve trombositleri birbirine bağlar.\n- **Trombomodulin** — Trombomodulin endotel yüzeyindeki antikoagülan moleküldür; protein C sistemini aktive eder, trombosit reseptörü değildir.\n- **PAR** — PAR, trombinin trombositi aktive ettiği proteazla aktive olan reseptördür; yapışmayı değil aktivasyonu sağlar.\n- **P-selektin** — P-selektin trombosit alfa granüllerinin zarında bulunan bir moleküldür; kollajen yapışmasının reseptörü değildir.\n- **GpIb** — GpIb doğru: vWF, trombosit yüzeyindeki GpIb ile subendotelyal kollajen arasında köprü kurarak yapışmayı sağlar.\n\n**Cevap: E** — GpIb\n\n**Özet.** Yapışmada vWF, kollajen ile trombositin **GpIb** reseptörü arasında köprü kurar; agregasyonda ise GpIIb/IIIa fibrinojen bağlayarak trombositleri birleştirir.",
    "ses": "Trombositlerin von Villebrand faktörü aracılığıyla subendotelyal kollajene yapışmasını sağlayan reseptör hangisidir?\nA, ge pe iki be üç a\nBe, Trombomodulin\nCe, pe a re\nDe, pe selektin\nE, ge pe bir be\nHer seçeneği tek tek ele alalım.\nGe pe iki be üç a agregasyon reseptörüdür, aktivasyonla şekil değiştirip fibrinojen bağlar ve trombositleri birbirine bağlar.\nTrombomodulin endotel yüzeyindeki antikoagülan moleküldür, protein ce sistemini aktive eder, trombosit reseptörü değildir.\nPe a re, trombinin trombositi aktive ettiği proteazla aktive olan reseptördür, yapışmayı değil aktivasyonu sağlar.\nPe selektin trombosit alfa granüllerinin zarında bulunan bir moleküldür, kollajen yapışmasının reseptörü değildir.\nGe pe bir be doğru, von Villebrand faktörü, trombosit yüzeyindeki bu reseptör ile subendotelyal kollajen arasında köprü kurarak yapışmayı sağlar.\nDoğru cevap E, ge pe bir be\nYapışmada von Villebrand faktörü, kollajen ile trombositin ge pe bir be reseptörü arasında köprü kurar. Agregasyonda ise ge pe iki be üç a fibrinojen bağlayarak trombositleri birleştirir.",
    "kelime": 132
@@ -65,18 +78,23 @@
     "E": "HIT"
    },
    "dogru": "C",
+   "ipucu": "Yapışma köprüsünün iki ucunu ayır, faktörün kendisinin değil, trombosit üzerindeki yapışma reseptörünün eksikliğine verilen adı düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "von Willebrand hastalığı köprü kuran faktörün, yani vWF'nin eksikliğidir; reseptör sağlamdır.",
     "B": "Glanzmann trombastenisi agregasyon reseptörü GpIIb-IIIa'nın eksikliğidir; trombositler birbirine bağlanamaz.",
     "C": "Bernard–Soulier sendromu doğru: trombosit yüzey reseptörü GpIb eksiktir, trombositler kollajene yapışamaz ve kanama diyatezi gelişir.",
-    "D": "Hemofili ile karıştırılabilir: Yapışma reseptörü eksikliği trombosit düzeyinde, yani primer hemostazda bir bozukluktur.",
+    "D": "Hemofili A ve B, sırasıyla faktör VIII ve faktör IX eksikliğiyle seyreden sekonder hemostaz (koagülasyon) bozukluklarıdır; trombosit yüzeyindeki von Willebrand reseptörü olan GpIb kompleksinin eksikliği ise Bernard–Soulier sendromudur.",
     "E": "HIT, heparin ile PF4 kompleksine karşı otoantikorlarla gelişir; trombositopeniye rağmen protrombotik bir durumdur."
    },
    "ozet": "**Bernard–Soulier** sendromunda GpIb eksiktir ve yapışma bozulur; vWF eksikliği von Willebrand hastalığı, GpIIb-IIIa eksikliği Glanzmann trombastenisidir.",
-   "metin": "**Soru.** GpIb eksikliği ile seyreden kanama bozukluğu hangisidir?\n\n**A)** von Willebrand hastalığı · **B)** Glanzmann trombastenisi · **C)** Bernard–Soulier sendromu · **D)** Hemofili · **E)** HIT\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **von Willebrand hastalığı** — von Willebrand hastalığı köprü kuran faktörün, yani vWF'nin eksikliğidir; reseptör sağlamdır.\n- **Glanzmann trombastenisi** — Glanzmann trombastenisi agregasyon reseptörü GpIIb-IIIa'nın eksikliğidir; trombositler birbirine bağlanamaz.\n- **Bernard–Soulier sendromu** — Bernard–Soulier sendromu doğru: trombosit yüzey reseptörü GpIb eksiktir, trombositler kollajene yapışamaz ve kanama diyatezi gelişir.\n- **Hemofili** — Hemofili ile karıştırılabilir: Yapışma reseptörü eksikliği trombosit düzeyinde, yani primer hemostazda bir bozukluktur.\n- **HIT** — HIT, heparin ile PF4 kompleksine karşı otoantikorlarla gelişir; trombositopeniye rağmen protrombotik bir durumdur.\n\n**Cevap: C** — Bernard–Soulier sendromu\n\n**Özet.** **Bernard–Soulier** sendromunda GpIb eksiktir ve yapışma bozulur; vWF eksikliği von Willebrand hastalığı, GpIIb-IIIa eksikliği Glanzmann trombastenisidir.",
-   "ses": "Ge pe bir be eksikliği ile seyreden kanama bozukluğu hangisidir?\nA, von Villebrand hastalığı\nBe, Glanzman trombastenisi\nCe, Bernar Sulye sendromu\nDe, Hemofili\nE, heparine bağlı trombositopeni\nŞıkları sırasıyla gözden geçirelim.\nVon Villebrand hastalığı köprü kuran faktörün kendisinin eksikliğidir, trombosit reseptörü sağlamdır.\nGlanzman trombastenisi agregasyon reseptörü ge pe iki be üç a'nın eksikliğidir, trombositler birbirine bağlanamaz.\nBernar Sulye sendromu doğru, trombosit yüzey reseptörü ge pe bir be eksiktir, trombositler kollajene yapışamaz ve kanama diyatezi gelişir.\nHemofili ile karıştırılabilir. Yapışma reseptörü eksikliği trombosit düzeyinde, yani primer hemostazda bir bozukluktur.\nHeparine bağlı trombositopeni, heparin ile pe fe dört kompleksine karşı otoantikorlarla gelişir, trombositopeniye rağmen protrombotik bir durumdur.\nDoğru cevap Ce, Bernar Sulye sendromu\nBernar Sulye sendromunda ge pe bir be eksiktir ve yapışma bozulur. Von Villebrand faktörü eksikliği von Villebrand hastalığı, ge pe iki be üç a eksikliği ise Glanzman trombastenisidir.",
-   "kelime": 133
+   "sayfa": [
+    13,
+    17
+   ],
+   "metin": "**Soru.** GpIb eksikliği ile seyreden kanama bozukluğu hangisidir?\n\n**A)** von Willebrand hastalığı · **B)** Glanzmann trombastenisi · **C)** Bernard–Soulier sendromu · **D)** Hemofili · **E)** HIT\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **von Willebrand hastalığı** — von Willebrand hastalığı köprü kuran faktörün, yani vWF'nin eksikliğidir; reseptör sağlamdır.\n- **Glanzmann trombastenisi** — Glanzmann trombastenisi agregasyon reseptörü GpIIb-IIIa'nın eksikliğidir; trombositler birbirine bağlanamaz.\n- **Bernard–Soulier sendromu** — Bernard–Soulier sendromu doğru: trombosit yüzey reseptörü GpIb eksiktir, trombositler kollajene yapışamaz ve kanama diyatezi gelişir.\n- **Hemofili** — Hemofili A ve B, sırasıyla faktör VIII ve faktör IX eksikliğiyle seyreden sekonder hemostaz (koagülasyon) bozukluklarıdır; trombosit yüzeyindeki von Willebrand reseptörü olan GpIb kompleksinin eksikliği ise Bernard–Soulier sendromudur.\n- **HIT** — HIT, heparin ile PF4 kompleksine karşı otoantikorlarla gelişir; trombositopeniye rağmen protrombotik bir durumdur.\n\n**Cevap: C** — Bernard–Soulier sendromu\n\n**Özet.** **Bernard–Soulier** sendromunda GpIb eksiktir ve yapışma bozulur; vWF eksikliği von Willebrand hastalığı, GpIIb-IIIa eksikliği Glanzmann trombastenisidir.",
+   "ses": "Ge pe bir be eksikliği ile seyreden kanama bozukluğu hangisidir?\nA, von Villebrand hastalığı\nBe, Glanzman trombastenisi\nCe, Bernar Sulye sendromu\nDe, Hemofili\nE, heparine bağlı trombositopeni\nŞıkları sırasıyla gözden geçirelim.\nVon Villebrand hastalığı köprü kuran faktörün kendisinin eksikliğidir, trombosit reseptörü sağlamdır.\nGlanzman trombastenisi agregasyon reseptörü ge pe iki be üç a'nın eksikliğidir, trombositler birbirine bağlanamaz.\nBernar Sulye sendromu doğru, trombosit yüzey reseptörü ge pe bir be eksiktir, trombositler kollajene yapışamaz ve kanama diyatezi gelişir.\nHemofili A ve B, sırasıyla faktör sekiz ve faktör dokuz eksikliğiyle seyreden sekonder hemostaz, koagülasyon, bozukluklarıdır. Trombosit yüzeyindeki von Willebrand reseptörü olan ge pe bir be kompleksinin eksikliği ise Bernard–Soulier sendromudur.\nHeparine bağlı trombositopeni, heparin ile pe fe dört kompleksine karşı otoantikorlarla gelişir, trombositopeniye rağmen protrombotik bir durumdur.\nDoğru cevap Ce, Bernar Sulye sendromu\nBernar Sulye sendromunda ge pe bir be eksiktir ve yapışma bozulur. Von Villebrand faktörü eksikliği von Villebrand hastalığı, ge pe iki be üç a eksikliği ise Glanzman trombastenisidir.",
+   "kelime": 148
   },
   {
    "no": 4,
@@ -90,6 +108,7 @@
     "E": "Trombomodulin"
    },
    "dogru": "A",
+   "ipucu": "Aktive GpIIb/IIIa reseptörünün bağladığı ve iki komşu trombosit arasında gerilen plazma proteinini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Fibrinojen doğru: aktivasyonla şekil değiştiren GpIIb/IIIa reseptörüne bağlanır ve trombositler arasında köprü oluşturur.",
@@ -99,6 +118,10 @@
     "E": "Trombomodulin endotelde trombini antikoagülan yola yönlendirir; trombosit agregasyonunda rolü yoktur."
    },
    "ozet": "Agregasyonda aktive GpIIb/IIIa reseptörü **fibrinojeni** bağlar ve fibrinojen trombositler arasında köprü kurar; trombin varlığında fibrin ağıyla bağlantı kalıcı olur.",
+   "sayfa": [
+    13,
+    16
+   ],
    "metin": "**Soru.** Trombosit agregasyonunda trombositler arasında köprü oluşturan molekül hangisidir?\n\n**A)** Fibrinojen · **B)** Kollajen · **C)** vWF · **D)** Faktör XIII · **E)** Trombomodulin\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Fibrinojen** — Fibrinojen doğru: aktivasyonla şekil değiştiren GpIIb/IIIa reseptörüne bağlanır ve trombositler arasında köprü oluşturur.\n- **Kollajen** — Kollajen subendotelyal matriks bileşenidir; trombositlerin yapıştığı yüzeydir, trombositler arası köprü değildir.\n- **vWF** — vWF, trombosit ile kollajen arasında köprü kurar; yapışmayı sağlar, agregasyonu değil.\n- **Faktör XIII** — Faktör XIII fibrini çapraz bağlayarak pıhtıyı stabilize eder; agregasyon köprüsü değildir.\n- **Trombomodulin** — Trombomodulin endotelde trombini antikoagülan yola yönlendirir; trombosit agregasyonunda rolü yoktur.\n\n**Cevap: A** — Fibrinojen\n\n**Özet.** Agregasyonda aktive GpIIb/IIIa reseptörü **fibrinojeni** bağlar ve fibrinojen trombositler arasında köprü kurar; trombin varlığında fibrin ağıyla bağlantı kalıcı olur.",
    "ses": "Trombosit agregasyonunda trombositler arasında köprü oluşturan molekül hangisidir?\nA, Fibrinojen\nBe, Kollajen\nCe, von Villebrand faktörü\nDe, faktör on üç\nE, Trombomodulin\nŞimdi seçeneklere tek tek bakalım.\nFibrinojen doğru, aktivasyonla şekil değiştiren ge pe iki be üç a reseptörüne bağlanır ve trombositler arasında köprü oluşturur.\nKollajen subendotelyal matriks bileşenidir, trombositlerin yapıştığı yüzeydir, trombositler arası köprü değildir.\nVon Villebrand faktörü, trombosit ile kollajen arasında köprü kurar, yapışmayı sağlar, agregasyonu değil.\nFaktör on üç fibrini çapraz bağlayarak pıhtıyı stabilize eder, agregasyon köprüsü değildir.\nTrombomodulin endotelde trombini antikoagülan yola yönlendirir, trombosit agregasyonunda rolü yoktur.\nDoğru cevap A, Fibrinojen\nAgregasyonda aktive ge pe iki be üç a reseptörü fibrinojeni bağlar ve fibrinojen trombositler arasında köprü kurar. Trombin varlığında fibrin ağıyla bağlantı kalıcı olur.",
    "kelime": 126
@@ -115,6 +138,7 @@
     "E": "Faktör IX"
    },
    "dogru": "D",
+   "ipucu": "Trombinin fibrinojeni fibrine çevirdikten sonra aktive ettiği ve pıhtıya kovalent çapraz bağ kazandıran son basamak elemanını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Faktör VII doku faktörüyle kompleks yapar ve canlıda koagülasyon kaskadını başlatır.",
@@ -124,6 +148,11 @@
     "E": "Faktör IX, doku faktörü ile VIIa kompleksince aktive edilir ve faktör X'u aktive eden proteazdır."
    },
    "ozet": "Trombin **faktör XIII**'ü aktive eder; o da fibrini çapraz bağlayarak pıhtıyı stabilize eder, trombosit kasılmasıyla pıhtı ayrıca büzülür.",
+   "sayfa": [
+    10,
+    11,
+    25
+   ],
    "metin": "**Soru.** Fibrini çapraz bağlayarak pıhtıyı stabilize eden faktör hangisidir?\n\n**A)** Faktör VII · **B)** Faktör V · **C)** Faktör XII · **D)** Faktör XIII · **E)** Faktör IX\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Faktör VII** — Faktör VII doku faktörüyle kompleks yapar ve canlıda koagülasyon kaskadını başlatır.\n- **Faktör V** — Faktör V protrombinin trombine dönüşümünde kofaktördür; Va olarak faktör Xa'ya eşlik eder.\n- **Faktör XII** — Faktör XII intrinsik yolun başındaki faktördür; laboratuvarda negatif yüklü yüzeyle aktive olur.\n- **Faktör XIII** — Faktör XIII doğru: trombinle aktive olur, fibrini kovalent olarak çapraz bağlar ve pıhtıyı stabil hâle getirir.\n- **Faktör IX** — Faktör IX, doku faktörü ile VIIa kompleksince aktive edilir ve faktör X'u aktive eden proteazdır.\n\n**Cevap: D** — Faktör XIII\n\n**Özet.** Trombin **faktör XIII**'ü aktive eder; o da fibrini çapraz bağlayarak pıhtıyı stabilize eder, trombosit kasılmasıyla pıhtı ayrıca büzülür.",
    "ses": "Fibrini çapraz bağlayarak pıhtıyı stabilize eden faktör hangisidir?\nA, Faktör yedi\nBe, Faktör beş\nCe, Faktör on iki\nDe, Faktör on üç\nE, Faktör dokuz\nSeçenekleri sırayla değerlendirelim.\nFaktör yedi doku faktörüyle kompleks yapar ve canlıda koagülasyon kaskadını başlatır.\nFaktör beş protrombinin trombine dönüşümünde kofaktördür, aktif hâliyle faktör on a'ya eşlik eder.\nFaktör on iki intrinsik yolun başındaki faktördür, laboratuvarda negatif yüklü yüzeyle aktive olur.\nFaktör on üç doğru, trombinle aktive olur, fibrini kovalent olarak çapraz bağlar ve pıhtıyı stabil hâle getirir.\nFaktör dokuz, doku faktörü ile faktör yedi a kompleksince aktive edilir. Ardından faktör on, bu proteazla aktive olur.\nDoğru cevap De, Faktör on üç\nTrombin faktör on üçü aktive eder. O da fibrini çapraz bağlayarak pıhtıyı stabilize eder, trombosit kasılmasıyla pıhtı ayrıca büzülür.",
    "kelime": 142
@@ -140,6 +169,7 @@
     "E": "Protein C"
    },
    "dogru": "B",
+   "ipucu": "Laboratuvardaki iki yol ayrımını bırak, damar hasarıyla açığa çıkan tromboplastinin hangi pıhtılaşma elemanıyla kompleks yaptığını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Faktör XII aktivasyonu laboratuvarda negatif yüklü yüzeyle başlatılan intrinsik yolun başlangıcıdır; canlıdaki asıl başlatıcı değildir.",
@@ -149,6 +179,11 @@
     "E": "Protein C bir antikoagülandır; aktive olunca protein S ile birlikte faktör Va ve VIIIa'yı inhibe eder."
    },
    "ozet": "Canlıda pıhtılaşmanın asıl başlatıcısı **doku faktörü ile faktör VIIa** kompleksidir; trombin de faktör XI'i aktive ederek kaskadı güçlendirir.",
+   "sayfa": [
+    9,
+    23,
+    24
+   ],
    "metin": "**Soru.** İn vivo koagülasyonun asıl başlangıç noktası hangisidir?\n\n**A)** Faktör XII aktivasyonu · **B)** Doku faktörü + Faktör VIIa · **C)** Plazmin · **D)** Trombomodulin · **E)** Protein C\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Faktör XII aktivasyonu** — Faktör XII aktivasyonu laboratuvarda negatif yüklü yüzeyle başlatılan intrinsik yolun başlangıcıdır; canlıdaki asıl başlatıcı değildir.\n- **Doku faktörü + Faktör VIIa** — Doku faktörü + Faktör VIIa doğru: canlıda pıhtılaşmayı bu kompleks başlatır; faktör IX ve X'u aktive eder.\n- **Plazmin** — Plazmin pıhtılaşmayı başlatmaz; fibrini ve fibrinojeni yıkan fibrinolitik enzimdir.\n- **Trombomodulin** — Trombomodulin endotel yüzeyindeki antikoagülan moleküldür; protein C ve S sistemini aktive ederek pıhtılaşmayı sınırlar.\n- **Protein C** — Protein C bir antikoagülandır; aktive olunca protein S ile birlikte faktör Va ve VIIIa'yı inhibe eder.\n\n**Cevap: B** — Doku faktörü + Faktör VIIa\n\n**Özet.** Canlıda pıhtılaşmanın asıl başlatıcısı **doku faktörü ile faktör VIIa** kompleksidir; trombin de faktör XI'i aktive ederek kaskadı güçlendirir.",
    "ses": "İn vivo koagülasyonun asıl başlangıç noktası hangisidir?\nA, Faktör on iki aktivasyonu\nBe, Doku faktörü ve faktör yedi a\nCe, Plazmin\nDe, Trombomodulin\nE, Protein ce\nHer seçeneği tek tek ele alalım.\nFaktör on iki aktivasyonu laboratuvarda negatif yüklü yüzeyle başlatılan intrinsik yolun başlangıcıdır, canlıdaki asıl başlatıcı değildir.\nDoku faktörü ve faktör yedi a doğru, canlıda pıhtılaşmayı bu kompleks başlatır. Faktör dokuz ve faktör on bu kompleksle aktive olur.\nPlazmin pıhtılaşmayı başlatmaz, fibrini ve fibrinojeni yıkan fibrinolitik enzimdir.\nTrombomodulin endotel yüzeyindeki antikoagülan moleküldür, protein ce ve se sistemini aktive ederek pıhtılaşmayı sınırlar.\nProtein ce bir antikoagülandır, aktive olunca protein se ile birlikte faktör beş a ve sekiz a'yı inhibe eder.\nDoğru cevap Be, Doku faktörü ve faktör yedi a\nCanlıda pıhtılaşmanın asıl başlatıcısı doku faktörü ile faktör yedi a kompleksidir. Trombin de faktör on biri aktive ederek kaskadı güçlendirir.",
    "kelime": 156
@@ -165,6 +200,7 @@
     "E": "Ekstrinsik + ortak yol"
    },
    "dogru": "E",
+   "ipucu": "Faktör VII'yi içeren ve doku faktörüyle başlatılan yolu, faktör XII ile başlayan yoldan ayır.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "İntrinsik + ortak yol aPTT ile değerlendirilir; faktör XII, XI, IX, VIII, X, V, II ve fibrinojeni kapsar.",
@@ -174,6 +210,9 @@
     "E": "Ekstrinsik + ortak yol doğru: protrombin zamanı faktör VII, X, V, II ve fibrinojeni değerlendirir."
    },
    "ozet": "**Protrombin zamanı** ekstrinsik ve ortak yolu, aPTT ise intrinsik ve ortak yolu ölçer; ikisi kanama bozukluğunda hangi faktörlerin etkilendiğini ayırır.",
+   "sayfa": [
+    22
+   ],
    "metin": "**Soru.** Protrombin zamanı (PT) hangi yolu değerlendirir?\n\n**A)** İntrinsik + ortak yol · **B)** Fibrinolitik sistem · **C)** Protein C yolu · **D)** Trombosit agregasyonu · **E)** Ekstrinsik + ortak yol\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **İntrinsik + ortak yol** — İntrinsik + ortak yol aPTT ile değerlendirilir; faktör XII, XI, IX, VIII, X, V, II ve fibrinojeni kapsar.\n- **Fibrinolitik sistem** — Fibrinolitik sistem plazminin fibrini yıkmasıdır; protrombin zamanı bu sistemi ölçmez.\n- **Protein C yolu** — Protein C yolu endotele bağlı bir antikoagülan sistemdir; trombomodulinle aktive olur, protrombin zamanıyla değerlendirilmez.\n- **Trombosit agregasyonu** — Trombosit agregasyonu primer hemostazın parçasıdır; koagülasyon faktörlerini ölçen bir zaman testiyle değerlendirilmez.\n- **Ekstrinsik + ortak yol** — Ekstrinsik + ortak yol doğru: protrombin zamanı faktör VII, X, V, II ve fibrinojeni değerlendirir.\n\n**Cevap: E** — Ekstrinsik + ortak yol\n\n**Özet.** **Protrombin zamanı** ekstrinsik ve ortak yolu, aPTT ise intrinsik ve ortak yolu ölçer; ikisi kanama bozukluğunda hangi faktörlerin etkilendiğini ayırır.",
    "ses": "Protrombin zamanı hangi yolu değerlendirir?\nA, İntrinsik ve ortak yol\nBe, Fibrinolitik sistem\nCe, Protein ce yolu\nDe, Trombosit agregasyonu\nE, Ekstrinsik ve ortak yol\nŞıkları sırasıyla gözden geçirelim.\nİntrinsik ve ortak yol a pe te te ile değerlendirilir, faktör on iki, on bir, dokuz, sekiz, on, beş, iki ve fibrinojeni kapsar.\nFibrinolitik sistem plazminin fibrini yıkmasıdır, protrombin zamanı bu sistemi ölçmez.\nProtein ce yolu endotele bağlı bir antikoagülan sistemdir, trombomodulinle aktive olur, protrombin zamanıyla değerlendirilmez.\nTrombosit agregasyonu primer hemostazın parçasıdır, koagülasyon faktörlerini ölçen bir zaman testiyle değerlendirilmez.\nEkstrinsik ve ortak yol doğru, protrombin zamanı faktör yedi, on, beş, iki ve fibrinojeni değerlendirir.\nDoğru cevap E, Ekstrinsik ve ortak yol\nProtrombin zamanı ekstrinsik ve ortak yolu, a pe te te ise intrinsik ve ortak yolu ölçer. İkisi kanama bozukluğunda hangi faktörlerin etkilendiğini ayırır.",
    "kelime": 158
@@ -190,18 +229,24 @@
     "E": "Antitrombin III"
    },
    "dogru": "C",
+   "ipucu": "Endotelin ürettiği, fibrine bağlıyken en aktif olan ve inme ya da enfarktüste ilk saatlerde ilaç olarak verilen molekülü düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "PAI-1 bir plazminojen aktivatör inhibitörüdür; fibrinolizi azaltır, endotel aktivasyonunda artar.",
-    "B": "Alfa iki antiplazmin dolaşımda serbest plazmini inaktive eder; fibrinolizin frenidir, aktivatörü değildir.",
+    "B": "Alfa-2 antiplazmin dolaşımdaki serbest plazmini bağlayıp etkisizleştiren başlıca fibrinoliz inhibitörüdür; endotelden salınarak plazminojeni plazmine dönüştüren fizyolojik aktivatör ise doku tipi plazminojen aktivatörüdür (t-PA).",
     "C": "t-PA doğru: endotel kökenli doku plazminojen aktivatörüdür, fibrine bağlıyken en aktiftir ve plazminojeni plazmine çevirir.",
     "D": "TFPI doku faktörü yolu inhibitörüdür; doku faktörü ile faktör VIIa kompleksini inhibe eder.",
     "E": "Antitrombin III heparin benzeri moleküllerle aktive olur; trombini ve diğer pıhtılaşma faktörlerini inaktive eder."
    },
    "ozet": "Plazminojen, endotel kökenli **t-PA** ile plazmine çevrilir; plazmin fibrini yıkar ve fibrin parçalanma ürünleri ile D-dimer açığa çıkar.",
-   "metin": "**Soru.** Plazminojeni plazmine çeviren endotel kökenli aktivatör hangisidir?\n\n**A)** PAI-1 · **B)** α2-antiplazmin · **C)** t-PA · **D)** TFPI · **E)** Antitrombin III\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **PAI-1** — PAI-1 bir plazminojen aktivatör inhibitörüdür; fibrinolizi azaltır, endotel aktivasyonunda artar.\n- **α2-antiplazmin** — Alfa iki antiplazmin dolaşımda serbest plazmini inaktive eder; fibrinolizin frenidir, aktivatörü değildir.\n- **t-PA** — t-PA doğru: endotel kökenli doku plazminojen aktivatörüdür, fibrine bağlıyken en aktiftir ve plazminojeni plazmine çevirir.\n- **TFPI** — TFPI doku faktörü yolu inhibitörüdür; doku faktörü ile faktör VIIa kompleksini inhibe eder.\n- **Antitrombin III** — Antitrombin III heparin benzeri moleküllerle aktive olur; trombini ve diğer pıhtılaşma faktörlerini inaktive eder.\n\n**Cevap: C** — t-PA\n\n**Özet.** Plazminojen, endotel kökenli **t-PA** ile plazmine çevrilir; plazmin fibrini yıkar ve fibrin parçalanma ürünleri ile D-dimer açığa çıkar.",
-   "ses": "Plazminojeni plazmine çeviren endotel kökenli aktivatör hangisidir?\nA, pe a i bir\nBe, alfa iki antiplazmin\nCe, te pe a\nDe, te fe pe i\nE, Antitrombin üç\nŞimdi seçeneklere tek tek bakalım.\nPe a i bir, bir plazminojen aktivatör inhibitörüdür, fibrinolizi azaltır, endotel aktivasyonunda artar.\nAlfa iki antiplazmin dolaşımda serbest plazmini inaktive eder, fibrinolizin frenidir, aktivatörü değildir.\nTe pe a doğru, endotel kökenli doku plazminojen aktivatörüdür, fibrine bağlıyken en aktiftir ve plazminojeni plazmine çevirir.\nTe fe pe i doku faktörü yolu inhibitörüdür, doku faktörü ile faktör yedi a kompleksini inhibe eder.\nAntitrombin üç heparin benzeri moleküllerle aktive olur, trombini ve diğer pıhtılaşma faktörlerini inaktive eder.\nDoğru cevap Ce, te pe a\nPlazminojen, endotel kökenli te pe a ile plazmine çevrilir. Plazmin fibrini yıkar ve fibrin parçalanma ürünleri ile de dimer açığa çıkar.",
-   "kelime": 132
+   "sayfa": [
+    27,
+    28,
+    35
+   ],
+   "metin": "**Soru.** Plazminojeni plazmine çeviren endotel kökenli aktivatör hangisidir?\n\n**A)** PAI-1 · **B)** α2-antiplazmin · **C)** t-PA · **D)** TFPI · **E)** Antitrombin III\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **PAI-1** — PAI-1 bir plazminojen aktivatör inhibitörüdür; fibrinolizi azaltır, endotel aktivasyonunda artar.\n- **α2-antiplazmin** — Alfa-2 antiplazmin dolaşımdaki serbest plazmini bağlayıp etkisizleştiren başlıca fibrinoliz inhibitörüdür; endotelden salınarak plazminojeni plazmine dönüştüren fizyolojik aktivatör ise doku tipi plazminojen aktivatörüdür (t-PA).\n- **t-PA** — t-PA doğru: endotel kökenli doku plazminojen aktivatörüdür, fibrine bağlıyken en aktiftir ve plazminojeni plazmine çevirir.\n- **TFPI** — TFPI doku faktörü yolu inhibitörüdür; doku faktörü ile faktör VIIa kompleksini inhibe eder.\n- **Antitrombin III** — Antitrombin III heparin benzeri moleküllerle aktive olur; trombini ve diğer pıhtılaşma faktörlerini inaktive eder.\n\n**Cevap: C** — t-PA\n\n**Özet.** Plazminojen, endotel kökenli **t-PA** ile plazmine çevrilir; plazmin fibrini yıkar ve fibrin parçalanma ürünleri ile D-dimer açığa çıkar.",
+   "ses": "Plazminojeni plazmine çeviren endotel kökenli aktivatör hangisidir?\nA, pe a i bir\nBe, alfa iki antiplazmin\nCe, te pe a\nDe, te fe pe i\nE, Antitrombin üç\nŞimdi seçeneklere tek tek bakalım.\nPe a i bir, bir plazminojen aktivatör inhibitörüdür, fibrinolizi azaltır, endotel aktivasyonunda artar.\nAlfa-iki antiplazmin dolaşımdaki serbest plazmini bağlayıp etkisizleştiren başlıca fibrinoliz inhibitörüdür. Endotelden salınarak plazminojeni plazmine dönüştüren fizyolojik aktivatör ise doku tipi plazminojen aktivatörüdür, te pe a,.\nTe pe a doğru, endotel kökenli doku plazminojen aktivatörüdür, fibrine bağlıyken en aktiftir ve plazminojeni plazmine çevirir.\nTe fe pe i doku faktörü yolu inhibitörüdür, doku faktörü ile faktör yedi a kompleksini inhibe eder.\nAntitrombin üç heparin benzeri moleküllerle aktive olur, trombini ve diğer pıhtılaşma faktörlerini inaktive eder.\nDoğru cevap Ce, te pe a\nPlazminojen, endotel kökenli te pe a ile plazmine çevrilir. Plazmin fibrini yıkar ve fibrin parçalanma ürünleri ile de dimer açığa çıkar.",
+   "kelime": 143
   },
   {
    "no": 9,
@@ -215,18 +260,24 @@
     "E": "PAI-1"
    },
    "dogru": "A",
+   "ipucu": "Trombinin normal endotelde antikoagülan yola katıldığını ve trombomodulinin hangi iki antikoagülanı devreye soktuğunu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Protein C/S doğru: trombomodulin ve endotel protein C reseptörüyle aktive olur, faktör Va ve VIIIa'yı inhibe eder.",
-    "B": "TFPI doku faktörü ile faktör VIIa kompleksini inhibe ederek kaskadın başlangıcını frenler.",
+    "B": "Doku faktörü yolak inhibitörü (TFPI), endotel yüzeyinde doku faktörü–faktör VIIa–faktör Xa kompleksini doğrudan baskılar; trombomodulin–trombin bağlanmasıyla aktive olup faktör Va ve VIIIa'yı parçalayan antikoagülan ise protein C/S sistemidir.",
     "C": "Plazmin fibrinolitik sistemin enzimidir; pıhtılaşma faktörlerini değil, fibrini ve fibrinojeni yıkar.",
     "D": "Antitrombin III trombomodulinle değil, heparin benzeri moleküllerle aktive olur ve trombini inaktive eder.",
     "E": "PAI-1 plazminojen aktivatörlerini baskılayarak fibrinolizi azaltır; protrombotik etkilidir."
    },
    "ozet": "Endotelde trombomodulin ve protein C reseptörü **protein C/S** sistemini aktive eder; bu sistem faktör Va ve VIIIa'yı inhibe ederek pıhtılaşmayı sınırlar.",
-   "metin": "**Soru.** Trombomodulin aracılığıyla aktive olup Faktör Va ve VIIIa'yı inhibe eden sistem hangisidir?\n\n**A)** Protein C/S · **B)** TFPI · **C)** Plazmin · **D)** Antitrombin III · **E)** PAI-1\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Protein C/S** — Protein C/S doğru: trombomodulin ve endotel protein C reseptörüyle aktive olur, faktör Va ve VIIIa'yı inhibe eder.\n- **TFPI** — TFPI doku faktörü ile faktör VIIa kompleksini inhibe ederek kaskadın başlangıcını frenler.\n- **Plazmin** — Plazmin fibrinolitik sistemin enzimidir; pıhtılaşma faktörlerini değil, fibrini ve fibrinojeni yıkar.\n- **Antitrombin III** — Antitrombin III trombomodulinle değil, heparin benzeri moleküllerle aktive olur ve trombini inaktive eder.\n- **PAI-1** — PAI-1 plazminojen aktivatörlerini baskılayarak fibrinolizi azaltır; protrombotik etkilidir.\n\n**Cevap: A** — Protein C/S\n\n**Özet.** Endotelde trombomodulin ve protein C reseptörü **protein C/S** sistemini aktive eder; bu sistem faktör Va ve VIIIa'yı inhibe ederek pıhtılaşmayı sınırlar.",
-   "ses": "Trombomodulin aracılığıyla aktive olup faktör beş a ve sekiz a'yı inhibe eden sistem hangisidir?\nA, Protein ce ve se\nBe, te fe pe i\nCe, Plazmin\nDe, Antitrombin üç\nE, pe a i bir\nSeçenekleri sırayla değerlendirelim.\nProtein ce ve se doğru, trombomodulin ve endotel protein ce reseptörüyle aktive olur, faktör beş a ve sekiz a'yı inhibe eder.\nTe fe pe i doku faktörü ile faktör yedi a kompleksini inhibe ederek kaskadın başlangıcını frenler.\nPlazmin fibrinolitik sistemin enzimidir, pıhtılaşma faktörlerini değil, fibrini ve fibrinojeni yıkar.\nAntitrombin üç trombomodulinle değil, heparin benzeri moleküllerle aktive olur ve trombini inaktive eder.\nPe a i bir plazminojen aktivatörlerini baskılayarak fibrinolizi azaltır, protrombotik etkilidir.\nDoğru cevap A, Protein ce ve se\nEndotelde trombomodulin ve protein ce reseptörü protein ce ve se sistemini aktive eder. Bu sistem faktör beş a ve sekiz a'yı inhibe ederek pıhtılaşmayı sınırlar.",
-   "kelime": 138
+   "sayfa": [
+    25,
+    26,
+    29
+   ],
+   "metin": "**Soru.** Trombomodulin aracılığıyla aktive olup Faktör Va ve VIIIa'yı inhibe eden sistem hangisidir?\n\n**A)** Protein C/S · **B)** TFPI · **C)** Plazmin · **D)** Antitrombin III · **E)** PAI-1\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Protein C/S** — Protein C/S doğru: trombomodulin ve endotel protein C reseptörüyle aktive olur, faktör Va ve VIIIa'yı inhibe eder.\n- **TFPI** — Doku faktörü yolak inhibitörü (TFPI), endotel yüzeyinde doku faktörü–faktör VIIa–faktör Xa kompleksini doğrudan baskılar; trombomodulin–trombin bağlanmasıyla aktive olup faktör Va ve VIIIa'yı parçalayan antikoagülan ise protein C/S sistemidir.\n- **Plazmin** — Plazmin fibrinolitik sistemin enzimidir; pıhtılaşma faktörlerini değil, fibrini ve fibrinojeni yıkar.\n- **Antitrombin III** — Antitrombin III trombomodulinle değil, heparin benzeri moleküllerle aktive olur ve trombini inaktive eder.\n- **PAI-1** — PAI-1 plazminojen aktivatörlerini baskılayarak fibrinolizi azaltır; protrombotik etkilidir.\n\n**Cevap: A** — Protein C/S\n\n**Özet.** Endotelde trombomodulin ve protein C reseptörü **protein C/S** sistemini aktive eder; bu sistem faktör Va ve VIIIa'yı inhibe ederek pıhtılaşmayı sınırlar.",
+   "ses": "Trombomodulin aracılığıyla aktive olup faktör beş a ve sekiz a'yı inhibe eden sistem hangisidir?\nA, Protein ce ve se\nBe, te fe pe i\nCe, Plazmin\nDe, Antitrombin üç\nE, pe a i bir\nSeçenekleri sırayla değerlendirelim.\nProtein ce ve se doğru, trombomodulin ve endotel protein ce reseptörüyle aktive olur, faktör beş a ve sekiz a'yı inhibe eder.\nDoku faktörü yolak inhibitörü, te fe pe i,, endotel yüzeyinde doku faktörü–faktör yedi a–faktör on a kompleksini doğrudan baskılar. Trombomodulin–trombin bağlanmasıyla aktive olup faktör beş a ve sekiz a'yı parçalayan antikoagülan ise protein C/S sistemidir.\nPlazmin fibrinolitik sistemin enzimidir, pıhtılaşma faktörlerini değil, fibrini ve fibrinojeni yıkar.\nAntitrombin üç trombomodulinle değil, heparin benzeri moleküllerle aktive olur ve trombini inaktive eder.\nPe a i bir plazminojen aktivatörlerini baskılayarak fibrinolizi azaltır, protrombotik etkilidir.\nDoğru cevap A, Protein ce ve se\nEndotelde trombomodulin ve protein ce reseptörü protein ce ve se sistemini aktive eder. Bu sistem faktör beş a ve sekiz a'yı inhibe ederek pıhtılaşmayı sınırlar.",
+   "kelime": 154
   },
   {
    "no": 10,
@@ -240,6 +291,7 @@
     "E": "Hiperkoagülabilite"
    },
    "dogru": "D",
+   "ipucu": "Üçlünün damar duvarı, kan akımı ve kanın pıhtılaşma eğilimi üzerine kurulduğunu düşün ve kanamaya yatkınlık yapanı ayır.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Endotel hasarı üçlünün bileşenidir; subendotelyal matriks ve doku faktörü açığa çıkar, kalp ve arterlerde pıhtı için ön koşuldur.",
@@ -249,6 +301,12 @@
     "E": "Hiperkoagülabilite kanın pıhtılaşmaya artmış eğilimidir; üçlünün bileşenidir ve venöz tromboz için güçlü risk faktörüdür."
    },
    "ozet": "**Virchow üçlüsü** endotel hasarı, staz ya da türbülans biçiminde anormal kan akımı ve hiperkoagülabiliteden oluşur; trombositopeni bu üçlüde yer almaz.",
+   "sayfa": [
+    32,
+    36,
+    37,
+    38
+   ],
    "metin": "**Soru.** Aşağıdakilerden hangisi Virchow üçlüsünün bileşeni değildir?\n\n**A)** Endotel hasarı · **B)** Staz · **C)** Türbülans · **D)** Trombositopeni · **E)** Hiperkoagülabilite\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Endotel hasarı** — Endotel hasarı üçlünün bileşenidir; subendotelyal matriks ve doku faktörü açığa çıkar, kalp ve arterlerde pıhtı için ön koşuldur.\n- **Staz** — Staz anormal kan akımının bir biçimi olarak üçlüde yer alır; venöz trombozun neredeyse her zaman zeminidir.\n- **Türbülans** — Türbülans da anormal kan akımı olarak üçlüdedir; ülserli plak, anevrizma ve mitral stenozda görülür.\n- **Trombositopeni** — Trombositopeni doğru: üçlünün bileşeni değildir; üçlü damar duvarı, akım ve pıhtılaşma eğilimiyle ilgilidir, trombosit sayısıyla değil.\n- **Hiperkoagülabilite** — Hiperkoagülabilite kanın pıhtılaşmaya artmış eğilimidir; üçlünün bileşenidir ve venöz tromboz için güçlü risk faktörüdür.\n\n**Cevap: D** — Trombositopeni\n\n**Özet.** **Virchow üçlüsü** endotel hasarı, staz ya da türbülans biçiminde anormal kan akımı ve hiperkoagülabiliteden oluşur; trombositopeni bu üçlüde yer almaz.",
    "ses": "Aşağıdakilerden hangisi Virkov üçlüsünün bileşeni değildir?\nA, Endotel hasarı\nBe, Staz\nCe, Türbülans\nDe, Trombositopeni\nE, Hiperkoagülabilite\nHer seçeneği tek tek ele alalım.\nEndotel hasarı üçlünün bileşenidir, subendotelyal matriks ve doku faktörü açığa çıkar, kalp ve arterlerde pıhtı için ön koşuldur.\nStaz anormal kan akımının bir biçimi olarak üçlüde yer alır, venöz trombozun neredeyse her zaman zeminidir.\nTürbülans da anormal kan akımı olarak üçlüdedir, ülserli plak, anevrizma ve mitral stenozda görülür.\nTrombositopeni doğru, üçlünün bileşeni değildir, üçlü damar duvarı, akım ve pıhtılaşma eğilimiyle ilgilidir, trombosit sayısıyla değil.\nHiperkoagülabilite kanın pıhtılaşmaya artmış eğilimidir, üçlünün bileşenidir ve venöz tromboz için güçlü risk faktörüdür.\nDoğru cevap De, Trombositopeni\nVirkov üçlüsü endotel hasarı, staz ya da türbülans biçiminde anormal kan akımı ve hiperkoagülabiliteden oluşur. Trombositopeni bu üçlüde yer almaz.",
    "kelime": 148
@@ -265,6 +323,7 @@
     "E": "GpIb eksikliği"
    },
    "dogru": "B",
+   "ipucu": "Mutant faktörün, normalde onu inaktive eden, endotel yüzeyinde devreye giren antikoagülan sisteme nasıl yanıt verdiğini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Protrombin artışı protrombin gen mutasyonunun mekanizmasıdır; tek nükleotid değişimiyle protrombin düzeyi yükselir.",
@@ -274,6 +333,10 @@
     "E": "GpIb eksikliği Bernard–Soulier sendromudur; trombosit yapışması bozulur ve kanama diyatezi gelişir."
    },
    "ozet": "**Faktör V Leiden**'de faktör V protein C'ye dirençli hâle gelir; heterozigotlarda venöz tromboz riski 3–4 kat, homozigotlarda 25–50 kat artar.",
+   "sayfa": [
+    41,
+    42
+   ],
    "metin": "**Soru.** Faktör V Leiden mutasyonunda trombozun mekanizması hangisidir?\n\n**A)** Protrombin artışı · **B)** Protein C'ye direnç · **C)** Antitrombin eksikliği · **D)** Homosistein artışı · **E)** GpIb eksikliği\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Protrombin artışı** — Protrombin artışı protrombin gen mutasyonunun mekanizmasıdır; tek nükleotid değişimiyle protrombin düzeyi yükselir.\n- **Protein C'ye direnç** — Protein C'ye direnç doğru: mutant faktör V, protein C tarafından inaktive edilemez ve venöz tromboz riski artar.\n- **Antitrombin eksikliği** — Antitrombin eksikliği ayrı ve nadir bir kalıtsal hiperkoagülabilite nedenidir; faktör V mutasyonuyla ilgisi yoktur.\n- **Homosistein artışı** — Homosistein artışı sistatyonin beta sentaz eksikliğine bağlı ayrı bir kalıtsal nedendir.\n- **GpIb eksikliği** — GpIb eksikliği Bernard–Soulier sendromudur; trombosit yapışması bozulur ve kanama diyatezi gelişir.\n\n**Cevap: B** — Protein C'ye direnç\n\n**Özet.** **Faktör V Leiden**'de faktör V protein C'ye dirençli hâle gelir; heterozigotlarda venöz tromboz riski 3–4 kat, homozigotlarda 25–50 kat artar.",
    "ses": "Faktör beş Leyden mutasyonunda trombozun mekanizması hangisidir?\nA, Protrombin artışı\nBe, Protein ce'ye direnç\nCe, Antitrombin eksikliği\nDe, Homosistein artışı\nE, Ge pe bir be eksikliği\nŞıkları sırasıyla gözden geçirelim.\nProtrombin artışı protrombin gen mutasyonunun mekanizmasıdır, tek nükleotid değişimiyle protrombin düzeyi yükselir.\nProtein ce'ye direnç doğru, mutant faktör beş, protein ce tarafından inaktive edilemez ve venöz tromboz riski artar.\nAntitrombin eksikliği ayrı ve nadir bir kalıtsal hiperkoagülabilite nedenidir, faktör beş mutasyonuyla ilgisi yoktur.\nHomosistein artışı sistatyonin beta sentaz eksikliğine bağlı ayrı bir kalıtsal nedendir.\nGe pe bir be eksikliği Bernar Sulye sendromudur, trombosit yapışması bozulur ve kanama diyatezi gelişir.\nDoğru cevap Be, Protein ce'ye direnç\nFaktör beş Leyden'de faktör beş protein ce'ye dirençli hâle gelir. Heterozigotlarda venöz tromboz riski üç ile dört kat, homozigotlarda yirmi beş ile elli kat artar.",
    "kelime": 146
@@ -290,6 +353,7 @@
     "E": "Heparin–PF4 kompleksi"
    },
    "dogru": "E",
+   "ipucu": "İlacın, trombosite ait bir proteinle birleşerek bağışıklık sistemine yeni bir hedef oluşturduğunu düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "β₂-glikoprotein I antifosfolipid antikorlarının asıl hedefi olduğu düşünülen proteindir.",
@@ -299,6 +363,10 @@
     "E": "Heparin–PF4 kompleksi doğru: otoantikorlar bu komplekse bağlanır, trombositler aktive olup tüketilir ve aynı anda protrombotik durum gelişir."
    },
    "ozet": "Heparine bağlı trombositopenide **heparin ile PF4 kompleksine** karşı otoantikorlar oluşur; trombositler aktive olup tüketilir, trombositopeniye rağmen tromboz eğilimi artar.",
+   "sayfa": [
+    45,
+    46
+   ],
    "metin": "**Soru.** Heparine bağlı trombositopenide otoantikorların hedefi hangisidir?\n\n**A)** β₂-glikoprotein I · **B)** GpIIb/IIIa · **C)** Faktör VIII · **D)** vWF · **E)** Heparin–PF4 kompleksi\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **β₂-glikoprotein I** — β₂-glikoprotein I antifosfolipid antikorlarının asıl hedefi olduğu düşünülen proteindir.\n- **GpIIb/IIIa** — GpIIb/IIIa trombosit agregasyon reseptörüdür; fibrinojen bağlayarak trombositleri birleştirir.\n- **Faktör VIII** — Faktör VIII intrinsik yolun kofaktörüdür; düzeyinin artışı kalıtsal hiperkoagülabilite nedenleri arasında sayılır.\n- **vWF** — vWF trombositin GpIb reseptörü ile kollajen arasında köprü kurar; eksikliği von Willebrand hastalığıdır.\n- **Heparin–PF4 kompleksi** — Heparin–PF4 kompleksi doğru: otoantikorlar bu komplekse bağlanır, trombositler aktive olup tüketilir ve aynı anda protrombotik durum gelişir.\n\n**Cevap: E** — Heparin–PF4 kompleksi\n\n**Özet.** Heparine bağlı trombositopenide **heparin ile PF4 kompleksine** karşı otoantikorlar oluşur; trombositler aktive olup tüketilir, trombositopeniye rağmen tromboz eğilimi artar.",
    "ses": "Heparine bağlı trombositopenide otoantikorların hedefi hangisidir?\nA, Beta iki glikoprotein bir\nBe, ge pe iki be üç a\nCe, Faktör sekiz\nDe, von Villebrand faktörü\nE, Heparin ve pe fe dört kompleksi\nŞimdi seçeneklere tek tek bakalım.\nBeta iki glikoprotein bir, antifosfolipid antikorlarının asıl hedefi olduğu düşünülen proteindir.\nGe pe iki be üç a trombosit agregasyon reseptörüdür, fibrinojen bağlayarak trombositleri birleştirir.\nFaktör sekiz intrinsik yolun kofaktörüdür, düzeyinin artışı kalıtsal hiperkoagülabilite nedenleri arasında sayılır.\nVon Villebrand faktörü trombositin ge pe bir be reseptörü ile kollajen arasında köprü kurar, eksikliği von Villebrand hastalığıdır.\nHeparin ve pe fe dört kompleksi doğru, otoantikorlar bu komplekse bağlanır, trombositler aktive olup tüketilir ve aynı anda protrombotik durum gelişir.\nDoğru cevap E, Heparin ve pe fe dört kompleksi\nHeparine bağlı trombositopenide heparin ile pe fe dört kompleksine karşı otoantikorlar oluşur. Trombositler aktive olup tüketilir, trombositopeniye rağmen tromboz eğilimi artar.",
    "kelime": 132
@@ -315,6 +383,7 @@
     "E": "DIC"
    },
    "dogru": "C",
+   "ipucu": "Gebelik kayıplarıyla seyreden, pıhtılaşma testlerini uzatan ve sifiliz serolojisini yalancı pozitif yapabilen otoimmün tabloyu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Faktör V Leiden kalıtsal bir hiperkoagülabilitedir; protein C direnciyle venöz tromboz riskini artırır, düşük ve trombositopeni triadı yoktur.",
@@ -324,6 +393,14 @@
     "E": "DIC tromboz için yüksek riskli edinsel bir durumdur; ancak bu üçlüyle tanımlanan tablo değildir."
    },
    "ozet": "**Antifosfolipid antikor sendromu** tekrarlayan tromboz, tekrarlayan düşük ve trombositopeni triadıyla tanınır; antikorlar fosfolipid tabanlı pıhtılaşma testlerini uzatır.",
+   "sayfa": [
+    39,
+    40,
+    42,
+    45,
+    46,
+    47
+   ],
    "metin": "**Soru.** Tekrarlayan tromboz, tekrarlayan düşük ve trombositopeni triadı hangi tabloyu düşündürür?\n\n**A)** Faktör V Leiden · **B)** HIT · **C)** Antifosfolipid antikor sendromu · **D)** Protein C eksikliği · **E)** DIC\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Faktör V Leiden** — Faktör V Leiden kalıtsal bir hiperkoagülabilitedir; protein C direnciyle venöz tromboz riskini artırır, düşük ve trombositopeni triadı yoktur.\n- **HIT** — HIT, heparin kullanımında heparin ile PF4 kompleksine karşı antikorla gelişir; tekrarlayan düşük beklenmez.\n- **Antifosfolipid antikor sendromu** — Antifosfolipid antikor sendromu doğru: tekrarlayan venöz ve arteriyel trombozlar, tekrarlayan düşükler ve trombositopeni klinik triadını oluşturur.\n- **Protein C eksikliği** — Protein C eksikliği nadir bir kalıtsal nedendir; genelde ergenlik ya da erken erişkinlikte tekrarlayan venöz tromboz yapar.\n- **DIC** — DIC tromboz için yüksek riskli edinsel bir durumdur; ancak bu üçlüyle tanımlanan tablo değildir.\n\n**Cevap: C** — Antifosfolipid antikor sendromu\n\n**Özet.** **Antifosfolipid antikor sendromu** tekrarlayan tromboz, tekrarlayan düşük ve trombositopeni triadıyla tanınır; antikorlar fosfolipid tabanlı pıhtılaşma testlerini uzatır.",
    "ses": "Tekrarlayan tromboz, tekrarlayan düşük ve trombositopeni triadı hangi tabloyu düşündürür?\nA, Faktör beş Leyden\nBe, Heparine bağlı trombositopeni\nCe, Antifosfolipid antikor sendromu\nDe, Protein ce eksikliği\nE, Yaygın intravasküler koagülasyon\nSeçenekleri sırayla değerlendirelim.\nFaktör beş Leyden kalıtsal bir hiperkoagülabilitedir, protein ce direnciyle venöz tromboz riskini artırır, düşük ve trombositopeni triadı yoktur.\nHeparine bağlı trombositopeni, heparin kullanımında heparin ile pe fe dört kompleksine karşı antikorla gelişir, tekrarlayan düşük beklenmez.\nAntifosfolipid antikor sendromu doğru, tekrarlayan venöz ve arteriyel trombozlar, tekrarlayan düşükler ve trombositopeni klinik triadını oluşturur.\nProtein ce eksikliği nadir bir kalıtsal nedendir, genelde ergenlik ya da erken erişkinlikte tekrarlayan venöz tromboz yapar.\nYaygın intravasküler koagülasyon tromboz için yüksek riskli edinsel bir durumdur, ancak bu üçlüyle tanımlanan tablo değildir.\nDoğru cevap Ce, Antifosfolipid antikor sendromu\nAntifosfolipid antikor sendromu tekrarlayan tromboz, tekrarlayan düşük ve trombositopeni triadıyla tanınır, antikorlar fosfolipid tabanlı pıhtılaşma testlerini uzatır.",
    "kelime": 158
@@ -340,6 +417,7 @@
     "E": "Koyu kırmızı alt kısım"
    },
    "dogru": "A",
+   "ipucu": "Yalnız akan kanda oluşan, koyu eritrositten zengin ve soluk trombosit fibrin katmanlarının sırayla dizildiği yapıyı düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Zahn çizgileri doğru: koyu eritrosit zengin ve soluk trombosit fibrin zengin katmanlardır; yalnız dolaşan kanda oluşan trombüste bulunur.",
@@ -349,6 +427,10 @@
     "E": "Koyu kırmızı alt kısım ölüm sonrası pıhtıda görülür; üstte sarı tavuk yağı katmanıyla birliktedir."
    },
    "ozet": "Gerçek trombüs sert, damar duvarına yapışıktır ve **Zahn çizgileri** içerebilir; ölüm sonrası pıhtı jelatinimsi, duvara bağlı değildir ve tavuk yağı görünümündedir.",
+   "sayfa": [
+    48,
+    54
+   ],
    "metin": "**Soru.** Trombüsü ölüm sonrası pıhtıdan ayıran özellik hangisidir?\n\n**A)** Zahn çizgileri · **B)** Jelatinimsi kıvam · **C)** Duvara bağlı olmaması · **D)** Tavuk yağı görünümü · **E)** Koyu kırmızı alt kısım\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Zahn çizgileri** — Zahn çizgileri doğru: koyu eritrosit zengin ve soluk trombosit fibrin zengin katmanlardır; yalnız dolaşan kanda oluşan trombüste bulunur.\n- **Jelatinimsi kıvam** — Jelatinimsi kıvam ölüm sonrası pıhtının özelliğidir; gerçek trombüs serttir.\n- **Duvara bağlı olmaması** — Duvara bağlı olmaması ölüm sonrası pıhtıya aittir; gerçek trombüs damar duvarına sıkıca yapışıktır.\n- **Tavuk yağı görünümü** — Tavuk yağı görünümü ölüm sonrası pıhtının üst kısmındaki sarı bölümdür.\n- **Koyu kırmızı alt kısım** — Koyu kırmızı alt kısım ölüm sonrası pıhtıda görülür; üstte sarı tavuk yağı katmanıyla birliktedir.\n\n**Cevap: A** — Zahn çizgileri\n\n**Özet.** Gerçek trombüs sert, damar duvarına yapışıktır ve **Zahn çizgileri** içerebilir; ölüm sonrası pıhtı jelatinimsi, duvara bağlı değildir ve tavuk yağı görünümündedir.",
    "ses": "Trombüsü ölüm sonrası pıhtıdan ayıran özellik hangisidir?\nA, Zan çizgileri\nBe, Jelatinimsi kıvam\nCe, Duvara bağlı olmaması\nDe, Tavuk yağı görünümü\nE, Koyu kırmızı alt kısım\nHer seçeneği tek tek ele alalım.\nZan çizgileri doğru, koyu eritrosit zengin ve soluk trombosit fibrin zengin katmanlardır, yalnız dolaşan kanda oluşan trombüste bulunur.\nJelatinimsi kıvam ölüm sonrası pıhtının özelliğidir, gerçek trombüs serttir.\nDuvara bağlı olmaması ölüm sonrası pıhtıya aittir, gerçek trombüs damar duvarına sıkıca yapışıktır.\nTavuk yağı görünümü ölüm sonrası pıhtının üst kısmındaki sarı bölümdür.\nKoyu kırmızı alt kısım ölüm sonrası pıhtıda görülür, üstte sarı tavuk yağı katmanıyla birliktedir.\nDoğru cevap A, Zan çizgileri\nGerçek trombüs sert, damar duvarına yapışıktır ve Zan çizgileri içerebilir. Ölüm sonrası pıhtı jelatinimsi, duvara bağlı değildir ve tavuk yağı görünümündedir.",
    "kelime": 153
@@ -365,22 +447,29 @@
     "E": "Vaskülit"
    },
    "dogru": "D",
+   "ipucu": "Uzun immobilizasyon, kalp yetmezliği ve varisli venlerin ortak akım bozukluğunu düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Anevrizma türbülansa yol açan bir durumdur; aort ve büyük arterlerde arteriyel ya da mural trombüse zemin hazırlar.",
     "B": "Türbülans daha çok arteriyel ve kardiyak trombüslerin zeminidir; bu trombüsler trombositten zengindir.",
     "C": "Ülserli plak arterlerde türbülans ve endotel hasarı yaratır; arteriyel trombozun zeminidir.",
     "D": "Staz doğru: venöz trombüsler neredeyse her zaman staz zemininde gelişir, en sık alt ekstremite derin venlerindedir ve eritrositten zengindir.",
-    "E": "Venöz trombüs için belirleyici olan kanın yavaşlayıp durgunlaşmasıdır. Vaskülit bu sorudaki ayrımı sağlamaz."
+    "E": "Vaskülit damar duvarının inflamatuvar hasarı olup daha çok küçük damarlarda tromboz veya kanamaya yol açar; alt ekstremite derin venlerinde gelişen flebotrombozun hemen her zaman en belirleyici zemini ise kan akımının yavaşlaması, yani stazdır."
    },
    "ozet": "Venöz trombüsler, yani flebotromboz, neredeyse her zaman **staz** zemininde gelişir; en sık alt ekstremite derin venlerinde görülür, eritrositten zengin ve tıkayıcıdır.",
-   "metin": "**Soru.** Venöz trombüslerin (flebotromboz) hemen her zaman zemininde bulunan faktör hangisidir?\n\n**A)** Anevrizma · **B)** Türbülans · **C)** Ülserli plak · **D)** Staz · **E)** Vaskülit\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Anevrizma** — Anevrizma türbülansa yol açan bir durumdur; aort ve büyük arterlerde arteriyel ya da mural trombüse zemin hazırlar.\n- **Türbülans** — Türbülans daha çok arteriyel ve kardiyak trombüslerin zeminidir; bu trombüsler trombositten zengindir.\n- **Ülserli plak** — Ülserli plak arterlerde türbülans ve endotel hasarı yaratır; arteriyel trombozun zeminidir.\n- **Staz** — Staz doğru: venöz trombüsler neredeyse her zaman staz zemininde gelişir, en sık alt ekstremite derin venlerindedir ve eritrositten zengindir.\n- **Vaskülit** — Venöz trombüs için belirleyici olan kanın yavaşlayıp durgunlaşmasıdır. Vaskülit bu sorudaki ayrımı sağlamaz.\n\n**Cevap: D** — Staz\n\n**Özet.** Venöz trombüsler, yani flebotromboz, neredeyse her zaman **staz** zemininde gelişir; en sık alt ekstremite derin venlerinde görülür, eritrositten zengin ve tıkayıcıdır.",
-   "ses": "Venöz trombüslerin, yani flebotrombozun hemen her zaman zemininde bulunan faktör hangisidir?\nA, Anevrizma\nBe, Türbülans\nCe, Ülserli plak\nDe, Staz\nE, Vaskülit\nŞıkları sırasıyla gözden geçirelim.\nAnevrizma türbülansa yol açan bir durumdur, aort ve büyük arterlerde arteriyel ya da mural trombüse zemin hazırlar.\nTürbülans daha çok arteriyel ve kardiyak trombüslerin zeminidir, bu trombüsler trombositten zengindir.\nÜlserli plak arterlerde türbülans ve endotel hasarı yaratır, arteriyel trombozun zeminidir.\nStaz doğru, venöz trombüsler neredeyse her zaman staz zemininde gelişir, en sık alt ekstremite derin venlerindedir ve eritrositten zengindir.\nVenöz trombüs için belirleyici olan kanın yavaşlayıp durgunlaşmasıdır. Vaskülit bu sorudaki ayrımı sağlamaz.\nDoğru cevap De, Staz\nVenöz trombüsler, yani flebotromboz, neredeyse her zaman staz zemininde gelişir, en sık alt ekstremite derin venlerinde görülür, eritrositten zengin ve tıkayıcıdır.",
-   "kelime": 145
+   "sayfa": [
+    37,
+    52,
+    53
+   ],
+   "metin": "**Soru.** Venöz trombüslerin (flebotromboz) hemen her zaman zemininde bulunan faktör hangisidir?\n\n**A)** Anevrizma · **B)** Türbülans · **C)** Ülserli plak · **D)** Staz · **E)** Vaskülit\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Anevrizma** — Anevrizma türbülansa yol açan bir durumdur; aort ve büyük arterlerde arteriyel ya da mural trombüse zemin hazırlar.\n- **Türbülans** — Türbülans daha çok arteriyel ve kardiyak trombüslerin zeminidir; bu trombüsler trombositten zengindir.\n- **Ülserli plak** — Ülserli plak arterlerde türbülans ve endotel hasarı yaratır; arteriyel trombozun zeminidir.\n- **Staz** — Staz doğru: venöz trombüsler neredeyse her zaman staz zemininde gelişir, en sık alt ekstremite derin venlerindedir ve eritrositten zengindir.\n- **Vaskülit** — Vaskülit damar duvarının inflamatuvar hasarı olup daha çok küçük damarlarda tromboz veya kanamaya yol açar; alt ekstremite derin venlerinde gelişen flebotrombozun hemen her zaman en belirleyici zemini ise kan akımının yavaşlaması, yani stazdır.\n\n**Cevap: D** — Staz\n\n**Özet.** Venöz trombüsler, yani flebotromboz, neredeyse her zaman **staz** zemininde gelişir; en sık alt ekstremite derin venlerinde görülür, eritrositten zengin ve tıkayıcıdır.",
+   "ses": "Venöz trombüslerin, yani flebotrombozun hemen her zaman zemininde bulunan faktör hangisidir?\nA, Anevrizma\nBe, Türbülans\nCe, Ülserli plak\nDe, Staz\nE, Vaskülit\nŞıkları sırasıyla gözden geçirelim.\nAnevrizma türbülansa yol açan bir durumdur, aort ve büyük arterlerde arteriyel ya da mural trombüse zemin hazırlar.\nTürbülans daha çok arteriyel ve kardiyak trombüslerin zeminidir, bu trombüsler trombositten zengindir.\nÜlserli plak arterlerde türbülans ve endotel hasarı yaratır, arteriyel trombozun zeminidir.\nStaz doğru, venöz trombüsler neredeyse her zaman staz zemininde gelişir, en sık alt ekstremite derin venlerindedir ve eritrositten zengindir.\nVaskülit damar duvarının inflamatuvar hasarı olup daha çok küçük damarlarda tromboz veya kanamaya yol açar. Alt ekstremite derin venlerinde gelişen flebotrombozun hemen her zaman en belirleyici zemini ise kan akımının yavaşlaması, yani stazdır.\nDoğru cevap De, Staz\nVenöz trombüsler, yani flebotromboz, neredeyse her zaman staz zemininde gelişir, en sık alt ekstremite derin venlerinde görülür, eritrositten zengin ve tıkayıcıdır.",
+   "kelime": 165
   },
   {
    "no": 31,
    "tur": "cikmis",
+   "sinav": "2018-2019 · 2018-2019 Dönem 3 Kurul 1 Sınavı",
    "soru": "Aşağıdakilerden hangisi tromboz gelişiminde rol oynamaz?",
    "secenekler": {
     "A": "Hiperviskozite",
@@ -390,22 +479,31 @@
     "E": "Endotel zedelenmesi"
    },
    "dogru": "B",
+   "ipucu": "Virchow üçlüsünün bileşenlerini hatırla; tromboza değil tersine kanama eğilimine yol açan durumu bul.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
-    "A": "Tromboza katkı yapmayan, tersine kanama eğilimi yaratan durum von Willebrand faktör eksikliğidir. Hiperviskozite bu sorudaki ayrımı sağlamaz.",
+    "A": "Polisitemia vera veya orak hücreli anemide görülen hiperviskozite küçük damarlarda akım direncini ve stazı artırarak tromboza zemin hazırlar; von Willebrand faktör eksikliği ise trombosit adezyonunu bozarak tromboz değil kanama eğilimi yaratır.",
     "B": "Von Willebrand faktör eksikliği doğru: vWF kollajen ile GpIb arasında köprü kuramaz, trombosit yapışması bozulur ve kanama diyatezi gelişir.",
     "C": "Hiperkoagülasyon, yani kanın pıhtılaşmaya artmış eğilimi, Virchow üçlüsünün bileşenidir ve tromboza yol açar.",
     "D": "Staz anormal kan akımının bir biçimidir; venöz trombüslerin hemen her zaman zemininde bulunur.",
     "E": "Endotel zedelenmesi subendotelyal matriks ve doku faktörünü açığa çıkarır; Virchow üçlüsünün en önemli bileşenidir."
    },
    "ozet": "Tromboz Virchow üçlüsüyle, yani endotel hasarı, anormal akım ve hiperkoagülabiliteyle gelişir; **vWF eksikliği** ise trombosit yapışmasını bozarak kanama diyatezi yapar.",
-   "metin": "**Soru.** Aşağıdakilerden hangisi tromboz gelişiminde rol oynamaz?\n\n**A)** Hiperviskozite · **B)** Von Willebrand faktör eksikliği · **C)** Hiperkoagülasyon · **D)** Staz · **E)** Endotel zedelenmesi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Hiperviskozite** — Tromboza katkı yapmayan, tersine kanama eğilimi yaratan durum von Willebrand faktör eksikliğidir. Hiperviskozite bu sorudaki ayrımı sağlamaz.\n- **Von Willebrand faktör eksikliği** — Von Willebrand faktör eksikliği doğru: vWF kollajen ile GpIb arasında köprü kuramaz, trombosit yapışması bozulur ve kanama diyatezi gelişir.\n- **Hiperkoagülasyon** — Hiperkoagülasyon, yani kanın pıhtılaşmaya artmış eğilimi, Virchow üçlüsünün bileşenidir ve tromboza yol açar.\n- **Staz** — Staz anormal kan akımının bir biçimidir; venöz trombüslerin hemen her zaman zemininde bulunur.\n- **Endotel zedelenmesi** — Endotel zedelenmesi subendotelyal matriks ve doku faktörünü açığa çıkarır; Virchow üçlüsünün en önemli bileşenidir.\n\n**Cevap: B** — Von Willebrand faktör eksikliği\n\n**Özet.** Tromboz Virchow üçlüsüyle, yani endotel hasarı, anormal akım ve hiperkoagülabiliteyle gelişir; **vWF eksikliği** ise trombosit yapışmasını bozarak kanama diyatezi yapar.",
-   "ses": "Aşağıdakilerden hangisi tromboz gelişiminde rol oynamaz?\nA, Hiperviskozite\nBe, Fon Villebrand faktör eksikliği\nCe, Hiperkoagülasyon\nDe, Staz\nE, Endotel zedelenmesi\nŞıkları sırasıyla gözden geçirelim.\nTromboza katkı yapmayan, tersine kanama eğilimi yaratan durum fon Villebrand faktör eksikliğidir. Hiperviskozite bu sorudaki ayrımı sağlamaz.\nFon Villebrand faktör eksikliği doğru, ve çift ve fe kollajen ile ge pe bir be arasında köprü kuramaz, trombosit yapışması bozulur ve kanama diyatezi gelişir.\nHiperkoagülasyon, yani kanın pıhtılaşmaya artmış eğilimi, Virkov üçlüsünün bileşenidir ve tromboza yol açar.\nStaz anormal kan akımının bir biçimidir, venöz trombüslerin hemen her zaman zemininde bulunur.\nEndotel zedelenmesi subendotelyal matriks ve doku faktörünü açığa çıkarır, Virkov üçlüsünün en önemli bileşenidir.\nDoğru cevap Be, Fon Villebrand faktör eksikliği\nTromboz Virkov üçlüsüyle, yani endotel hasarı, anormal akım ve hiperkoagülabiliteyle gelişir. Ve çift ve fe eksikliği ise trombosit yapışmasını bozarak kanama diyatezi yapar.",
-   "kelime": 153
+   "sayfa": [
+    13,
+    32,
+    33,
+    34,
+    52
+   ],
+   "metin": "**Soru.** Aşağıdakilerden hangisi tromboz gelişiminde rol oynamaz?\n\n**A)** Hiperviskozite · **B)** Von Willebrand faktör eksikliği · **C)** Hiperkoagülasyon · **D)** Staz · **E)** Endotel zedelenmesi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Hiperviskozite** — Polisitemia vera veya orak hücreli anemide görülen hiperviskozite küçük damarlarda akım direncini ve stazı artırarak tromboza zemin hazırlar; von Willebrand faktör eksikliği ise trombosit adezyonunu bozarak tromboz değil kanama eğilimi yaratır.\n- **Von Willebrand faktör eksikliği** — Von Willebrand faktör eksikliği doğru: vWF kollajen ile GpIb arasında köprü kuramaz, trombosit yapışması bozulur ve kanama diyatezi gelişir.\n- **Hiperkoagülasyon** — Hiperkoagülasyon, yani kanın pıhtılaşmaya artmış eğilimi, Virchow üçlüsünün bileşenidir ve tromboza yol açar.\n- **Staz** — Staz anormal kan akımının bir biçimidir; venöz trombüslerin hemen her zaman zemininde bulunur.\n- **Endotel zedelenmesi** — Endotel zedelenmesi subendotelyal matriks ve doku faktörünü açığa çıkarır; Virchow üçlüsünün en önemli bileşenidir.\n\n**Cevap: B** — Von Willebrand faktör eksikliği\n\n**Özet.** Tromboz Virchow üçlüsüyle, yani endotel hasarı, anormal akım ve hiperkoagülabiliteyle gelişir; **vWF eksikliği** ise trombosit yapışmasını bozarak kanama diyatezi yapar.",
+   "ses": "Aşağıdakilerden hangisi tromboz gelişiminde rol oynamaz?\nA, Hiperviskozite\nBe, Fon Villebrand faktör eksikliği\nCe, Hiperkoagülasyon\nDe, Staz\nE, Endotel zedelenmesi\nŞıkları sırasıyla gözden geçirelim.\nPolisitemia vera veya orak hücreli anemide görülen hiperviskozite küçük damarlarda akım direncini ve stazı artırarak tromboza zemin hazırlar. Von Willebrand faktör eksikliği ise trombosit adezyonunu bozarak tromboz değil kanama eğilimi yaratır.\nFon Villebrand faktör eksikliği doğru, ve çift ve fe kollajen ile ge pe bir be arasında köprü kuramaz, trombosit yapışması bozulur ve kanama diyatezi gelişir.\nHiperkoagülasyon, yani kanın pıhtılaşmaya artmış eğilimi, Virkov üçlüsünün bileşenidir ve tromboza yol açar.\nStaz anormal kan akımının bir biçimidir, venöz trombüslerin hemen her zaman zemininde bulunur.\nEndotel zedelenmesi subendotelyal matriks ve doku faktörünü açığa çıkarır, Virkov üçlüsünün en önemli bileşenidir.\nDoğru cevap Be, Fon Villebrand faktör eksikliği\nTromboz Virkov üçlüsüyle, yani endotel hasarı, anormal akım ve hiperkoagülabiliteyle gelişir. Ve çift ve fe eksikliği ise trombosit yapışmasını bozarak kanama diyatezi yapar.",
+   "kelime": 167
   },
   {
    "no": 32,
    "tur": "cikmis",
+   "sinav": "2023-2024 · 2023-2024 Kurul 1 Sınavı",
    "soru": "Hangisi hemostazda trombosit fonksiyonlarından değildir?",
    "secenekler": {
     "A": "Endotel hasarı sonucu trombositler özellikle vWF'ye bağlanırlar.",
@@ -415,6 +513,7 @@
     "E": "Trombosit aktivasyonu sonucu adenozin difosfat (ADP) ve tromboksan A₂ salınımı olur."
    },
    "dogru": "C",
+   "ipucu": "Her ifadeyi yapışma, aktivasyon, granül salınımı ve kümelenme basamaklarındaki gerçek davranışla karşılaştır.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Trombositlerin vWF'ye bağlanması gerçek bir işlevdir; endotel bütünlüğü bozulunca açığa çıkan vWF aracılığıyla hasarlı yüzeye yapışırlar.",
@@ -424,6 +523,13 @@
     "E": "ADP ve tromboksan A₂ salınımı gerçek bir işlevdir; ADP yoğun granüllerden salınır, TxA₂ ise trombositte sentezlenir."
    },
    "ozet": "Yapışan trombosit **küresel ve dikenli** şekil alır, yüzey alanı artar, granüllerinden ADP, TxA₂ ve kalsiyum salar, fibrinojenle köprülenerek kümelenir.",
+   "sayfa": [
+    8,
+    12,
+    14,
+    15,
+    16
+   ],
    "metin": "**Soru.** Hangisi hemostazda trombosit fonksiyonlarından değildir?\n\n**A)** Endotel hasarı sonucu trombositler özellikle vWF'ye bağlanırlar. · **B)** Trombosit aktivasyonu sonucu kalsiyum salınımı olur. · **C)** Trombositler çok sayıda uzun dikensi membran uzantılarına sahip kürelerden düzgün yüzeyli disklere doğru şekil değiştirirler. · **D)** Trombositler fibrinojenle çapraz bağ oluştururlar ve kümelenirler. · **E)** Trombosit aktivasyonu sonucu adenozin difosfat (ADP) ve tromboksan A₂ salınımı olur.\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Endotel hasarı sonucu trombositler özellikle vWF'ye bağlanırlar.** — Trombositlerin vWF'ye bağlanması gerçek bir işlevdir; endotel bütünlüğü bozulunca açığa çıkan vWF aracılığıyla hasarlı yüzeye yapışırlar.\n- **Trombosit aktivasyonu sonucu kalsiyum salınımı olur.** — Kalsiyum salınımı gerçek bir işlevdir; kalsiyum yoğun granüllerde bulunur ve aktivasyonla salınır.\n- **Trombositler çok sayıda uzun dikensi membran uzantılarına sahip kürelerden düzgün yüzeyli disklere doğru şekil değiştirirler.** — Dikenli kürelerden düzgün disklere dönüşüm ifadesi yanlıştır, bu yüzden doğru cevaptır: yapışan trombosit tersine küresel ve dikenli şekil alır, yüzey alanı artar.\n- **Trombositler fibrinojenle çapraz bağ oluştururlar ve kümelenirler.** — Fibrinojenle bağlanıp kümelenmek agregasyonun özüdür; fibrinojen GpIIb/IIIa reseptörlerine bağlanarak trombositler arasında köprü kurar.\n- **Trombosit aktivasyonu sonucu adenozin difosfat (ADP) ve tromboksan A₂ salınımı olur.** — ADP ve tromboksan A₂ salınımı gerçek bir işlevdir; ADP yoğun granüllerden salınır, TxA₂ ise trombositte sentezlenir.\n\n**Cevap: C** — Trombositler çok sayıda uzun dikensi membran uzantılarına sahip kürelerden düzgün yüzeyli disklere doğru şekil değiştirirler.\n\n**Özet.** Yapışan trombosit **küresel ve dikenli** şekil alır, yüzey alanı artar, granüllerinden ADP, TxA₂ ve kalsiyum salar, fibrinojenle köprülenerek kümelenir.",
    "ses": "Hangisi hemostazda trombosit fonksiyonlarından değildir?\nA, Endotel hasarı sonucu trombositler özellikle ve çift ve fe ye bağlanırlar.\nBe, Trombosit aktivasyonu sonucu kalsiyum salınımı olur.\nCe, Trombositler çok sayıda uzun dikensi membran uzantılarına sahip kürelerden düzgün yüzeyli disklere doğru şekil değiştirirler.\nDe, Trombositler fibrinojenle çapraz bağ oluştururlar ve kümelenirler.\nE, Trombosit aktivasyonu sonucu adenozin difosfat ve tromboksan a iki salınımı olur.\nŞimdi seçeneklere tek tek bakalım.\nTrombositlerin ve çift ve fe ye bağlanması gerçek bir işlevdir, endotel bütünlüğü bozulunca açığa çıkan ve çift ve fe aracılığıyla hasarlı yüzeye yapışırlar.\nKalsiyum salınımı gerçek bir işlevdir, kalsiyum yoğun granüllerde bulunur ve aktivasyonla salınır.\nDikenli kürelerden düzgün disklere dönüşüm ifadesi yanlıştır, bu yüzden doğru cevaptır, yapışan trombosit tersine küresel ve dikenli şekil alır, yüzey alanı artar.\nFibrinojenle bağlanıp kümelenmek agregasyonun özüdür, fibrinojen ge pe iki be üç a reseptörlerine bağlanarak trombositler arasında köprü kurar.\nA de pe ve tromboksan a iki salınımı gerçek bir işlevdir, a de pe yoğun granüllerden salınır, tromboksan a iki ise trombositte sentezlenir.\nDoğru cevap Ce, Trombositler çok sayıda uzun dikensi membran uzantılarına sahip kürelerden düzgün yüzeyli disklere doğru şekil değiştirirler.\nYapışan trombosit küresel ve dikenli şekil alır, yüzey alanı artar, granüllerinden a de pe, tromboksan a iki ve kalsiyum salar, fibrinojenle köprülenerek kümelenir.",
    "kelime": 240
@@ -431,6 +537,7 @@
   {
    "no": 33,
    "tur": "cikmis",
+   "sinav": "2021-2022 · Dönem 3 donem3-kurul1 Sınavı",
    "soru": "Aşağıdakilerden hangisi fibrinolitik etkili değildir?",
    "secenekler": {
     "A": "Doku faktörü yolak inhibitörü (TFPI)",
@@ -440,22 +547,30 @@
     "E": "Ürokinaz"
    },
    "dogru": "A",
+   "ipucu": "Plazminojen ve plazmin ekseninde çalışan bileşenleri, pıhtılaşma kaskadını baskılayan antikoagülanlardan ayır.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Doku faktörü yolak inhibitörü doğru: doku faktörü ile faktör VIIa kompleksini inhibe eden bir antikoagülandır, fibrini yıkmaz.",
     "B": "Plazmin fibrinolizin asıl enzimidir; fibrini ve fibrinojeni yıkarak FDP ve D-dimer açığa çıkarır.",
     "C": "Doku plazminojen aktivatörü endotel kökenlidir; plazminojeni plazmine çevirir ve fibrine bağlıyken en aktiftir.",
-    "D": "Streptokinaz ile karıştırılabilir: Fibrinolitik olmayan molekül, doku faktörü ile faktör VIIa kompleksini inhibe eden yolak inhibitörüdür.",
+    "D": "Streptokinaz, beta-hemolitik streptokoklardan elde edilen ve plazminojeni plazmine çevirerek pıhtıyı eriten fibrinolitik bir ajandır; doku faktörü yolak inhibitörü (TFPI) ise fibrinolizde değil, ekstrensek koagülasyon kaskadının baskılanmasında görev alır.",
     "E": "Ürokinaz, t-PA gibi plazminojeni aktive ederek fibrinolizi başlatır."
    },
    "ozet": "Fibrinolitik sistemde t-PA ve ürokinaz plazminojeni plazmine çevirir, plazmin fibrini yıkar; **TFPI** ise doku faktörü–VIIa kompleksini inhibe eden bir antikoagülandır.",
-   "metin": "**Soru.** Aşağıdakilerden hangisi fibrinolitik etkili değildir?\n\n**A)** Doku faktörü yolak inhibitörü (TFPI) · **B)** Plazmin · **C)** Doku plazminojen aktivatörü (t-PA) · **D)** Streptokinaz · **E)** Ürokinaz\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Doku faktörü yolak inhibitörü (TFPI)** — Doku faktörü yolak inhibitörü doğru: doku faktörü ile faktör VIIa kompleksini inhibe eden bir antikoagülandır, fibrini yıkmaz.\n- **Plazmin** — Plazmin fibrinolizin asıl enzimidir; fibrini ve fibrinojeni yıkarak FDP ve D-dimer açığa çıkarır.\n- **Doku plazminojen aktivatörü (t-PA)** — Doku plazminojen aktivatörü endotel kökenlidir; plazminojeni plazmine çevirir ve fibrine bağlıyken en aktiftir.\n- **Streptokinaz** — Streptokinaz ile karıştırılabilir: Fibrinolitik olmayan molekül, doku faktörü ile faktör VIIa kompleksini inhibe eden yolak inhibitörüdür.\n- **Ürokinaz** — Ürokinaz, t-PA gibi plazminojeni aktive ederek fibrinolizi başlatır.\n\n**Cevap: A** — Doku faktörü yolak inhibitörü (TFPI)\n\n**Özet.** Fibrinolitik sistemde t-PA ve ürokinaz plazminojeni plazmine çevirir, plazmin fibrini yıkar; **TFPI** ise doku faktörü–VIIa kompleksini inhibe eden bir antikoagülandır.",
-   "ses": "Aşağıdakilerden hangisi fibrinolitik etkili değildir?\nA, Doku faktörü yolak inhibitörü, yani te fe pe i\nBe, Plazmin\nCe, Doku plazminojen aktivatörü, yani te pe a\nDe, Streptokinaz\nE, Ürokinaz\nSeçenekleri sırayla değerlendirelim.\nDoku faktörü yolak inhibitörü doğru, doku faktörü ile faktör yedi a kompleksini inhibe eden bir antikoagülandır, fibrini yıkmaz.\nPlazmin fibrinolizin asıl enzimidir, fibrini ve fibrinojeni yıkarak fe de pe ve de dimer açığa çıkarır.\nDoku plazminojen aktivatörü endotel kökenlidir, plazminojeni plazmine çevirir ve fibrine bağlıyken en aktiftir.\nStreptokinaz ile karıştırılabilir. Fibrinolitik olmayan molekül, doku faktörü ile faktör yedi a kompleksini inhibe eden yolak inhibitörüdür.\nÜrokinaz, te pe a gibi plazminojeni aktive ederek fibrinolizi başlatır.\nDoğru cevap A, Doku faktörü yolak inhibitörü, yani te fe pe i\nFibrinolitik sistemde te pe a ve ürokinaz plazminojeni plazmine çevirir, plazmin fibrini yıkar. Te fe pe i ise doku faktörü ile yedi a kompleksini inhibe eden bir antikoagülandır.",
-   "kelime": 149
+   "sayfa": [
+    26,
+    27,
+    28,
+    29
+   ],
+   "metin": "**Soru.** Aşağıdakilerden hangisi fibrinolitik etkili değildir?\n\n**A)** Doku faktörü yolak inhibitörü (TFPI) · **B)** Plazmin · **C)** Doku plazminojen aktivatörü (t-PA) · **D)** Streptokinaz · **E)** Ürokinaz\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Doku faktörü yolak inhibitörü (TFPI)** — Doku faktörü yolak inhibitörü doğru: doku faktörü ile faktör VIIa kompleksini inhibe eden bir antikoagülandır, fibrini yıkmaz.\n- **Plazmin** — Plazmin fibrinolizin asıl enzimidir; fibrini ve fibrinojeni yıkarak FDP ve D-dimer açığa çıkarır.\n- **Doku plazminojen aktivatörü (t-PA)** — Doku plazminojen aktivatörü endotel kökenlidir; plazminojeni plazmine çevirir ve fibrine bağlıyken en aktiftir.\n- **Streptokinaz** — Streptokinaz, beta-hemolitik streptokoklardan elde edilen ve plazminojeni plazmine çevirerek pıhtıyı eriten fibrinolitik bir ajandır; doku faktörü yolak inhibitörü (TFPI) ise fibrinolizde değil, ekstrensek koagülasyon kaskadının baskılanmasında görev alır.\n- **Ürokinaz** — Ürokinaz, t-PA gibi plazminojeni aktive ederek fibrinolizi başlatır.\n\n**Cevap: A** — Doku faktörü yolak inhibitörü (TFPI)\n\n**Özet.** Fibrinolitik sistemde t-PA ve ürokinaz plazminojeni plazmine çevirir, plazmin fibrini yıkar; **TFPI** ise doku faktörü–VIIa kompleksini inhibe eden bir antikoagülandır.",
+   "ses": "Aşağıdakilerden hangisi fibrinolitik etkili değildir?\nA, Doku faktörü yolak inhibitörü, yani te fe pe i\nBe, Plazmin\nCe, Doku plazminojen aktivatörü, yani te pe a\nDe, Streptokinaz\nE, Ürokinaz\nSeçenekleri sırayla değerlendirelim.\nDoku faktörü yolak inhibitörü doğru, doku faktörü ile faktör yedi a kompleksini inhibe eden bir antikoagülandır, fibrini yıkmaz.\nPlazmin fibrinolizin asıl enzimidir, fibrini ve fibrinojeni yıkarak fe de pe ve de dimer açığa çıkarır.\nDoku plazminojen aktivatörü endotel kökenlidir, plazminojeni plazmine çevirir ve fibrine bağlıyken en aktiftir.\nStreptokinaz, beta-hemolitik streptokoklardan elde edilen ve plazminojeni plazmine çevirerek pıhtıyı eriten fibrinolitik bir ajandır. Doku faktörü yolak inhibitörü, te fe pe i, ise fibrinolizde değil, ekstrensek koagülasyon kaskadının baskılanmasında görev alır.\nÜrokinaz, te pe a gibi plazminojeni aktive ederek fibrinolizi başlatır.\nDoğru cevap A, Doku faktörü yolak inhibitörü, yani te fe pe i\nFibrinolitik sistemde te pe a ve ürokinaz plazminojeni plazmine çevirir, plazmin fibrini yıkar. Te fe pe i ise doku faktörü ile yedi a kompleksini inhibe eden bir antikoagülandır.",
+   "kelime": 161
   },
   {
    "no": 34,
    "tur": "cikmis",
+   "sinav": "2020-2021 · Dönem 3 donem3-kurul1 Sınavı",
    "soru": "Aşağıdakilerden hangisi bacaklarda derin ven trombozu (DVT) oluşması için risk faktörü değildir?",
    "secenekler": {
     "A": "Postoperatif dönem",
@@ -465,22 +580,29 @@
     "E": "Gebelik"
    },
    "dogru": "B",
+   "ipucu": "Venöz staz, doku hasarı ya da hiperkoagülabilite yaratan edinsel durumları hatırla; bunların hiçbirine uymayanı bul.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Postoperatif dönem risk faktörüdür; cerrahi gibi doku hasarı tromboz için yüksek riskli edinsel durumdur.",
-    "B": "Zayıflık doğru: edinsel risk faktörleri arasında sayılan obezitedir, zayıflık tromboz riskini artıran durumlar arasında yer almaz.",
+    "B": "Zayıflık derin ven trombozu için bir risk faktörü değildir; aksine obezite, uzun süreli hareketsizlik, cerrahi, gebelik, kalp yetmezliği ve maligniteler venöz staz ve hiperkoagülabilite yaratarak DVT riskini artırır.",
     "C": "Malignite risk faktörüdür; kanser paraneoplastik hiperkoagülabilite ile tromboz için yüksek risk taşır.",
     "D": "Uzamış hareketsizlik staz yapar; immobilizasyon tromboz için yüksek riskli edinsel durumdur.",
     "E": "Gebelik hiperöstrojenik bir durumdur; doğum sonrası dönemle birlikte tromboz riskini artırır."
    },
    "ozet": "Derin ven trombozu için immobilizasyon, cerrahi, kanser, gebelik, oral kontraseptif, sigara, **obezite** ve ileri yaş risk faktörüdür; zayıflık bu listede yer almaz.",
-   "metin": "**Soru.** Aşağıdakilerden hangisi bacaklarda derin ven trombozu (DVT) oluşması için risk faktörü değildir?\n\n**A)** Postoperatif dönem · **B)** Zayıflık · **C)** Malignite · **D)** Uzamış hareketsizlik · **E)** Gebelik\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Postoperatif dönem** — Postoperatif dönem risk faktörüdür; cerrahi gibi doku hasarı tromboz için yüksek riskli edinsel durumdur.\n- **Zayıflık** — Zayıflık doğru: edinsel risk faktörleri arasında sayılan obezitedir, zayıflık tromboz riskini artıran durumlar arasında yer almaz.\n- **Malignite** — Malignite risk faktörüdür; kanser paraneoplastik hiperkoagülabilite ile tromboz için yüksek risk taşır.\n- **Uzamış hareketsizlik** — Uzamış hareketsizlik staz yapar; immobilizasyon tromboz için yüksek riskli edinsel durumdur.\n- **Gebelik** — Gebelik hiperöstrojenik bir durumdur; doğum sonrası dönemle birlikte tromboz riskini artırır.\n\n**Cevap: B** — Zayıflık\n\n**Özet.** Derin ven trombozu için immobilizasyon, cerrahi, kanser, gebelik, oral kontraseptif, sigara, **obezite** ve ileri yaş risk faktörüdür; zayıflık bu listede yer almaz.",
-   "ses": "Aşağıdakilerden hangisi bacaklarda derin ven trombozu oluşması için risk faktörü değildir?\nA, Postoperatif dönem\nBe, Zayıflık\nCe, Malignite\nDe, Uzamış hareketsizlik\nE, Gebelik\nHer seçeneği tek tek ele alalım.\nPostoperatif dönem risk faktörüdür, cerrahi gibi doku hasarı tromboz için yüksek riskli edinsel durumdur.\nZayıflık doğru, edinsel risk faktörleri arasında sayılan obezitedir, zayıflık tromboz riskini artıran durumlar arasında yer almaz.\nMalignite risk faktörüdür, kanser paraneoplastik hiperkoagülabilite ile tromboz için yüksek risk taşır.\nUzamış hareketsizlik staz yapar, immobilizasyon tromboz için yüksek riskli edinsel durumdur.\nGebelik hiperöstrojenik bir durumdur, doğum sonrası dönemle birlikte tromboz riskini artırır.\nDoğru cevap Be, Zayıflık\nDerin ven trombozu için immobilizasyon, cerrahi, kanser, gebelik, oral kontraseptif, sigara, obezite ve ileri yaş risk faktörüdür, zayıflık bu listede yer almaz.",
-   "kelime": 144
+   "sayfa": [
+    40,
+    43,
+    44
+   ],
+   "metin": "**Soru.** Aşağıdakilerden hangisi bacaklarda derin ven trombozu (DVT) oluşması için risk faktörü değildir?\n\n**A)** Postoperatif dönem · **B)** Zayıflık · **C)** Malignite · **D)** Uzamış hareketsizlik · **E)** Gebelik\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Postoperatif dönem** — Postoperatif dönem risk faktörüdür; cerrahi gibi doku hasarı tromboz için yüksek riskli edinsel durumdur.\n- **Zayıflık** — Zayıflık derin ven trombozu için bir risk faktörü değildir; aksine obezite, uzun süreli hareketsizlik, cerrahi, gebelik, kalp yetmezliği ve maligniteler venöz staz ve hiperkoagülabilite yaratarak DVT riskini artırır.\n- **Malignite** — Malignite risk faktörüdür; kanser paraneoplastik hiperkoagülabilite ile tromboz için yüksek risk taşır.\n- **Uzamış hareketsizlik** — Uzamış hareketsizlik staz yapar; immobilizasyon tromboz için yüksek riskli edinsel durumdur.\n- **Gebelik** — Gebelik hiperöstrojenik bir durumdur; doğum sonrası dönemle birlikte tromboz riskini artırır.\n\n**Cevap: B** — Zayıflık\n\n**Özet.** Derin ven trombozu için immobilizasyon, cerrahi, kanser, gebelik, oral kontraseptif, sigara, **obezite** ve ileri yaş risk faktörüdür; zayıflık bu listede yer almaz.",
+   "ses": "Aşağıdakilerden hangisi bacaklarda derin ven trombozu oluşması için risk faktörü değildir?\nA, Postoperatif dönem\nBe, Zayıflık\nCe, Malignite\nDe, Uzamış hareketsizlik\nE, Gebelik\nHer seçeneği tek tek ele alalım.\nPostoperatif dönem risk faktörüdür, cerrahi gibi doku hasarı tromboz için yüksek riskli edinsel durumdur.\nZayıflık derin ven trombozu için bir risk faktörü değildir. Aksine obezite, uzun süreli hareketsizlik, cerrahi, gebelik, kalp yetmezliği ve maligniteler venöz staz ve hiperkoagülabilite yaratarak de ve te riskini artırır.\nMalignite risk faktörüdür, kanser paraneoplastik hiperkoagülabilite ile tromboz için yüksek risk taşır.\nUzamış hareketsizlik staz yapar, immobilizasyon tromboz için yüksek riskli edinsel durumdur.\nGebelik hiperöstrojenik bir durumdur, doğum sonrası dönemle birlikte tromboz riskini artırır.\nDoğru cevap Be, Zayıflık\nDerin ven trombozu için immobilizasyon, cerrahi, kanser, gebelik, oral kontraseptif, sigara, obezite ve ileri yaş risk faktörüdür, zayıflık bu listede yer almaz.",
+   "kelime": 156
   },
   {
    "no": 35,
    "tur": "cikmis",
+   "sinav": "2020-2021 · Dönem 3 donem3-kurul1 Sınavı",
    "soru": "Derin ven trombozunun (DVT) en sık ve en ciddi komplikasyonu aşağıdakilerden hangisidir?",
    "secenekler": {
     "A": "Pulmoner emboli",
@@ -490,22 +612,29 @@
     "E": "Vena kava inferior trombozu"
    },
    "dogru": "A",
+   "ipucu": "Trombüsün olası akıbetlerini hatırla; hangisinin bu hastalığı hayati yapan sonuç olduğunu düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Pulmoner emboli doğru: alt ekstremite derin ven trombozundan kopan parçalar akciğer arter dallarına yerleşir; bu risk tabloyu hayati yapar.",
-    "B": "Vena kava superior sendromu ile karıştırılabilir: Alt ekstremite trombüsünden kopan emboli akciğer arter dalına yerleşir.",
-    "C": "Derin ven trombozunu hayati yapan komplikasyon trombüs parçalarının kopup akciğere gitmesidir. Siyanoz bu sorudaki ayrımı sağlamaz.",
-    "D": "Lenfödem ile karıştırılabilir: Trombüsün akıbetlerinden embolizasyon, yani parçaların kopup başka yere gitmesi en ciddi sonuçtur.",
-    "E": "Trombüsün yayılması tıkanıklığı artırır, ama hayati tehlike kopan parçaların akciğere ulaşmasıdır. Vena kava inferior trombozu bu sorudaki ayrımı sağlamaz."
+    "B": "Vena kava superior sendromu akciğer veya mediasten tümörlerinin üst ana toplardamarı sıkıştırmasıyla baş-boyun ödemi yapan tablodur; alt ekstremite derin ven trombozunun en sık ve yaşamı tehdit eden komplikasyonu ise pulmoner embolidir.",
+    "C": "Siyanoz dokularda indirgenmiş hemoglobin artışına bağlı morarma bulgusudur; bacak derin venlerindeki trombüsün koparak sağ kalp üzerinden akciğer arter yatağını tıkamasıyla gelişen en ciddi komplikasyon ise pulmoner embolidir.",
+    "D": "Lenfödem lenfatik damarların tümör, cerrahi veya filaryazis ile tıkanması sonucu gelişen proteinden zengin doku ödemidir; derin ven trombozunun en sık ve ölümcül komplikasyonu ise kopan pıhtının yol açtığı pulmoner embolidir.",
+    "E": "Vena kava inferior trombozu pıhtının yukarı doğru lokal yayılımıdır; derin ven trombozunda en sık görülen ve ani ölümle sonuçlanabilen en ciddi komplikasyon ise pıhtı parçalarının koparak akciğer dolaşımına gitmesi, yani pulmoner embolidir."
    },
    "ozet": "Venöz trombozun, özellikle **derin ven trombozunun** hayati önemi pulmoner emboli riskinden gelir; bacaktan kopan emboli akciğer arter dalına yerleşir.",
-   "metin": "**Soru.** Derin ven trombozunun (DVT) en sık ve en ciddi komplikasyonu aşağıdakilerden hangisidir?\n\n**A)** Pulmoner emboli · **B)** Vena kava superior sendromu · **C)** Siyanoz · **D)** Lenfödem · **E)** Vena kava inferior trombozu\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Pulmoner emboli** — Pulmoner emboli doğru: alt ekstremite derin ven trombozundan kopan parçalar akciğer arter dallarına yerleşir; bu risk tabloyu hayati yapar.\n- **Vena kava superior sendromu** — Vena kava superior sendromu ile karıştırılabilir: Alt ekstremite trombüsünden kopan emboli akciğer arter dalına yerleşir.\n- **Siyanoz** — Derin ven trombozunu hayati yapan komplikasyon trombüs parçalarının kopup akciğere gitmesidir. Siyanoz bu sorudaki ayrımı sağlamaz.\n- **Lenfödem** — Lenfödem ile karıştırılabilir: Trombüsün akıbetlerinden embolizasyon, yani parçaların kopup başka yere gitmesi en ciddi sonuçtur.\n- **Vena kava inferior trombozu** — Trombüsün yayılması tıkanıklığı artırır, ama hayati tehlike kopan parçaların akciğere ulaşmasıdır. Vena kava inferior trombozu bu sorudaki ayrımı sağlamaz.\n\n**Cevap: A** — Pulmoner emboli\n\n**Özet.** Venöz trombozun, özellikle **derin ven trombozunun** hayati önemi pulmoner emboli riskinden gelir; bacaktan kopan emboli akciğer arter dalına yerleşir.",
-   "ses": "Derin ven trombozunun en sık ve en ciddi komplikasyonu aşağıdakilerden hangisidir?\nA, Pulmoner emboli\nBe, Vena kava superior sendromu\nCe, Siyanoz\nDe, Lenfödem\nE, Vena kava inferior trombozu\nŞıkları sırasıyla gözden geçirelim.\nPulmoner emboli doğru, alt ekstremite derin ven trombozundan kopan parçalar akciğer arter dallarına yerleşir, bu risk tabloyu hayati yapar.\nVena kava superior sendromu ile karıştırılabilir. Alt ekstremite trombüsünden kopan emboli akciğer arter dalına yerleşir.\nDerin ven trombozunu hayati yapan komplikasyon trombüs parçalarının kopup akciğere gitmesidir. Siyanoz bu sorudaki ayrımı sağlamaz.\nLenfödem ile karıştırılabilir. Trombüsün akıbetlerinden embolizasyon, yani parçaların kopup başka yere gitmesi en ciddi sonuçtur.\nTrombüsün yayılması tıkanıklığı artırır, ama hayati tehlike kopan parçaların akciğere ulaşmasıdır. Vena kava inferior trombozu bu sorudaki ayrımı sağlamaz.\nDoğru cevap A, Pulmoner emboli\nVenöz trombozun, özellikle derin ven trombozunun hayati önemi pulmoner emboli riskinden gelir, bacaktan kopan emboli akciğer arter dalına yerleşir.",
-   "kelime": 170
+   "sayfa": [
+    51,
+    55,
+    56
+   ],
+   "metin": "**Soru.** Derin ven trombozunun (DVT) en sık ve en ciddi komplikasyonu aşağıdakilerden hangisidir?\n\n**A)** Pulmoner emboli · **B)** Vena kava superior sendromu · **C)** Siyanoz · **D)** Lenfödem · **E)** Vena kava inferior trombozu\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Pulmoner emboli** — Pulmoner emboli doğru: alt ekstremite derin ven trombozundan kopan parçalar akciğer arter dallarına yerleşir; bu risk tabloyu hayati yapar.\n- **Vena kava superior sendromu** — Vena kava superior sendromu akciğer veya mediasten tümörlerinin üst ana toplardamarı sıkıştırmasıyla baş-boyun ödemi yapan tablodur; alt ekstremite derin ven trombozunun en sık ve yaşamı tehdit eden komplikasyonu ise pulmoner embolidir.\n- **Siyanoz** — Siyanoz dokularda indirgenmiş hemoglobin artışına bağlı morarma bulgusudur; bacak derin venlerindeki trombüsün koparak sağ kalp üzerinden akciğer arter yatağını tıkamasıyla gelişen en ciddi komplikasyon ise pulmoner embolidir.\n- **Lenfödem** — Lenfödem lenfatik damarların tümör, cerrahi veya filaryazis ile tıkanması sonucu gelişen proteinden zengin doku ödemidir; derin ven trombozunun en sık ve ölümcül komplikasyonu ise kopan pıhtının yol açtığı pulmoner embolidir.\n- **Vena kava inferior trombozu** — Vena kava inferior trombozu pıhtının yukarı doğru lokal yayılımıdır; derin ven trombozunda en sık görülen ve ani ölümle sonuçlanabilen en ciddi komplikasyon ise pıhtı parçalarının koparak akciğer dolaşımına gitmesi, yani pulmoner embolidir.\n\n**Cevap: A** — Pulmoner emboli\n\n**Özet.** Venöz trombozun, özellikle **derin ven trombozunun** hayati önemi pulmoner emboli riskinden gelir; bacaktan kopan emboli akciğer arter dalına yerleşir.",
+   "ses": "Derin ven trombozunun en sık ve en ciddi komplikasyonu aşağıdakilerden hangisidir?\nA, Pulmoner emboli\nBe, Vena kava superior sendromu\nCe, Siyanoz\nDe, Lenfödem\nE, Vena kava inferior trombozu\nŞıkları sırasıyla gözden geçirelim.\nPulmoner emboli doğru, alt ekstremite derin ven trombozundan kopan parçalar akciğer arter dallarına yerleşir, bu risk tabloyu hayati yapar.\nVena kava superior sendromu akciğer veya mediasten tümörlerinin üst ana toplardamarı sıkıştırmasıyla baş-boyun ödemi yapan tablodur. Alt ekstremite derin ven trombozunun en sık ve yaşamı tehdit eden komplikasyonu ise pulmoner embolidir.\nSiyanoz dokularda indirgenmiş hemoglobin artışına bağlı morarma bulgusudur. Bacak derin venlerindeki trombüsün koparak sağ kalp üzerinden akciğer arter yatağını tıkamasıyla gelişen en ciddi komplikasyon ise pulmoner embolidir.\nLenfödem lenfatik damarların tümör, cerrahi veya filaryazis ile tıkanması sonucu gelişen proteinden zengin doku ödemidir. Derin ven trombozunun en sık ve ölümcül komplikasyonu ise kopan pıhtının yol açtığı pulmoner embolidir.\nVena kava inferior trombozu pıhtının yukarı doğru lokal yayılımıdır. Derin ven trombozunda en sık görülen ve ani ölümle sonuçlanabilen en ciddi komplikasyon ise pıhtı parçalarının koparak akciğer dolaşımına gitmesi, yani pulmoner embolidir.\nDoğru cevap A, Pulmoner emboli\nVenöz trombozun, özellikle derin ven trombozunun hayati önemi pulmoner emboli riskinden gelir, bacaktan kopan emboli akciğer arter dalına yerleşir.",
+   "kelime": 225
   },
   {
    "no": 36,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Aktivasyonla konformasyonu değişerek fibrinojeni bağlayan trombosit reseptörü hangisidir?",
    "secenekler": {
     "A": "GpIIb/IIIa",
@@ -515,6 +644,7 @@
     "E": "Fosfatidilserin"
    },
    "dogru": "A",
+   "ipucu": "Trombositi hasarlı yüzeye tutturan yapışma reseptörünü, trombositleri birbirine bağlayan agregasyon reseptöründen ayır.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "GpIIb/IIIa doğru: aktivasyonla konformasyonu değişir, fibrinojeni bağlar ve trombositler arasında köprü kurularak agregasyon olur.",
@@ -524,6 +654,10 @@
     "E": "Fosfatidilserin aktive trombositte dışa dönen negatif yüklü fosfolipiddir; pıhtılaşma faktör kompleksleri için platform oluşturur."
    },
    "ozet": "Yapışmada GpIb, vWF aracılığıyla kollajene bağlanır; agregasyonda ise aktive GpIIb/IIIa fibrinojeni bağlar ve fibrinojen trombositler arasında köprü kurar.",
+   "sayfa": [
+    16,
+    13
+   ],
    "metin": "**Soru.** Aktivasyonla konformasyonu değişerek fibrinojeni bağlayan trombosit reseptörü hangisidir?\n\n**A)** GpIIb/IIIa · **B)** GpIb · **C)** von Willebrand faktörü · **D)** PAR · **E)** Fosfatidilserin\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **GpIIb/IIIa** — GpIIb/IIIa doğru: aktivasyonla konformasyonu değişir, fibrinojeni bağlar ve trombositler arasında köprü kurularak agregasyon olur.\n- **GpIb** — GpIb yapışma reseptörüdür; vWF aracılığıyla trombositi subendotelyal kollajene bağlar, fibrinojeni bağlamaz.\n- **von Willebrand faktörü** — von Willebrand faktörü bir reseptör değil, GpIb ile kollajen arasında köprü kuran yapışma molekülüdür.\n- **PAR** — PAR, trombinin trombositleri aktive ettiği proteazla aktive olan reseptördür; fibrinojen bağlamaz.\n- **Fosfatidilserin** — Fosfatidilserin aktive trombositte dışa dönen negatif yüklü fosfolipiddir; pıhtılaşma faktör kompleksleri için platform oluşturur.\n\n**Cevap: A** — GpIIb/IIIa\n\n**Özet.** Yapışmada GpIb, vWF aracılığıyla kollajene bağlanır; agregasyonda ise aktive GpIIb/IIIa fibrinojeni bağlar ve fibrinojen trombositler arasında köprü kurar.",
    "ses": "Aktivasyonla konformasyonu değişerek fibrinojeni bağlayan trombosit reseptörü hangisidir?\nA, glikoprotein iki be üç a\nBe, glikoprotein bir be\nCe, von Villebrand faktörü\nDe, pe a re\nE, Fosfatidilserin\nŞimdi seçeneklere tek tek bakalım.\nGlikoprotein iki be üç a doğru, aktivasyonla konformasyonu değişir ve fibrinojeni bağlar. Böylece trombositler arasında köprü kurulur.\nGlikoprotein bir be yapışma reseptörüdür, von Villebrand faktörü aracılığıyla trombositi subendotelyal kollajene bağlar, fibrinojeni bağlamaz.\nvon Villebrand faktörü bir reseptör değil, glikoprotein bir be ile kollajen arasında köprü kuran yapışma molekülüdür.\nPe a re, trombinin trombositleri aktive ettiği proteazla aktive olan reseptördür, fibrinojen bağlamaz.\nFosfatidilserin aktive trombositte dışa dönen negatif yüklü fosfolipiddir, pıhtılaşma faktör kompleksleri için platform oluşturur.\nDoğru cevap A, glikoprotein iki be üç a\nYapışmada glikoprotein bir be, von Villebrand faktörü aracılığıyla kollajene bağlanır. Agregasyonda ise aktive glikoprotein iki be üç a fibrinojeni bağlar ve trombositler arasında köprü kurulur.",
    "kelime": 135
@@ -531,6 +665,7 @@
   {
    "no": 37,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Trombosit alfa granülünün içinde değil zarında yer alan molekül hangisidir?",
    "secenekler": {
     "A": "Fibrinojen",
@@ -540,6 +675,7 @@
     "E": "ADP"
    },
    "dogru": "B",
+   "ipucu": "Alfa granül içeriğini sayarken granülün kendi zar yapısına ait olan molekülü ayır.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Fibrinojen alfa granülün içinde depolanan bir pıhtılaşma proteinidir; zar molekülü değildir.",
@@ -549,6 +685,9 @@
     "E": "ADP yoğun granüllerde depolanır ve salındığında diğer trombositleri aktive eder."
    },
    "ozet": "Alfa granüller fibrinojen, faktör V, vWF, fibronektin, PDGF ve TGF-β içerir, zarında P-selektin bulunur; yoğun granüller ADP, ATP, kalsiyum, serotonin ve epinefrin taşır.",
+   "sayfa": [
+    12
+   ],
    "metin": "**Soru.** Trombosit alfa granülünün içinde değil zarında yer alan molekül hangisidir?\n\n**A)** Fibrinojen · **B)** P-selektin · **C)** von Willebrand faktörü · **D)** Serotonin · **E)** ADP\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Fibrinojen** — Fibrinojen alfa granülün içinde depolanan bir pıhtılaşma proteinidir; zar molekülü değildir.\n- **P-selektin** — P-selektin doğru: alfa granülün zarında bulunur, granülün içinde depolanan içeriklerden değildir.\n- **von Willebrand faktörü** — von Willebrand faktörü alfa granül içeriğidir; fibrinojen ve faktör V ile birlikte granülün içinde yer alır.\n- **Serotonin** — Serotonin yoğun, yani delta granüllerde bulunan bir mediyatördür; alfa granülle ilgili değildir.\n- **ADP** — ADP yoğun granüllerde depolanır ve salındığında diğer trombositleri aktive eder.\n\n**Cevap: B** — P-selektin\n\n**Özet.** Alfa granüller fibrinojen, faktör V, vWF, fibronektin, PDGF ve TGF-β içerir, zarında P-selektin bulunur; yoğun granüller ADP, ATP, kalsiyum, serotonin ve epinefrin taşır.",
    "ses": "Trombosit alfa granülünün içinde değil zarında yer alan molekül hangisidir?\nA, Fibrinojen\nBe, pe selektin\nCe, von Villebrand faktörü\nDe, Serotonin\nE, a de pe\nSeçenekleri sırayla değerlendirelim.\nFibrinojen alfa granülün içinde depolanan bir pıhtılaşma proteinidir, zar molekülü değildir.\nPe selektin doğru, alfa granülün zarında bulunur, granülün içinde depolanan içeriklerden değildir.\nvon Villebrand faktörü alfa granül içeriğidir, fibrinojen ve faktör beş ile birlikte granülün içinde yer alır.\nSerotonin yoğun, yani delta granüllerde bulunan bir mediyatördür, alfa granülle ilgili değildir.\nA de pe yoğun granüllerde depolanır ve salındığında diğer trombositleri aktive eder.\nDoğru cevap Be, pe selektin\nAlfa granüller fibrinojen, faktör beş, von Villebrand faktörü, fibronektin, pe de ge fe ve te ge fe beta içerir, zarında pe selektin bulunur. Yoğun granüller a de pe, a te pe, kalsiyum, serotonin ve epinefrin taşır.",
    "kelime": 136
@@ -556,6 +695,7 @@
   {
    "no": 38,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Granülde depolanmayıp trombositte sentezlenen güçlü agregasyon ve vazokonstriksiyon mediyatörü hangisidir?",
    "secenekler": {
     "A": "ADP",
@@ -565,6 +705,7 @@
     "E": "Endotelin"
    },
    "dogru": "C",
+   "ipucu": "Yoğun granülden salınan hazır içeriklerle aktivasyonda yeni üretilen mediyatörü birbirinden ayır.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "ADP yoğun granülde depolanır; salınınca diğer trombositleri aktive ederek toplanma döngüsünü büyütür.",
@@ -574,6 +715,10 @@
     "E": "Endotelin güçlü bir vazokonstriktördür ama trombositten değil endotelden salınır."
    },
    "ozet": "Trombosit aktivasyonunu trombin PAR üzerinden, ADP yoğun granülden salınarak, TxA₂ ise trombositte sentezlenerek büyütür.",
+   "sayfa": [
+    15,
+    12
+   ],
    "metin": "**Soru.** Granülde depolanmayıp trombositte sentezlenen güçlü agregasyon ve vazokonstriksiyon mediyatörü hangisidir?\n\n**A)** ADP · **B)** Serotonin · **C)** Tromboksan A₂ · **D)** Kalsiyum · **E)** Endotelin\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **ADP** — ADP yoğun granülde depolanır; salınınca diğer trombositleri aktive ederek toplanma döngüsünü büyütür.\n- **Serotonin** — Serotonin yoğun granülde depolanan bir mediyatördür; aktivasyon sırasında trombositte sentezlenmez.\n- **Tromboksan A₂** — Tromboksan A₂ doğru: trombositlerde sentezlenir ve güçlü agregasyon ile vazokonstriksiyon mediyatörüdür.\n- **Kalsiyum** — Kalsiyum yoğun granül içeriğidir; pıhtılaşma reaksiyonları için gerekli bir kofaktördür.\n- **Endotelin** — Endotelin güçlü bir vazokonstriktördür ama trombositten değil endotelden salınır.\n\n**Cevap: C** — Tromboksan A₂\n\n**Özet.** Trombosit aktivasyonunu trombin PAR üzerinden, ADP yoğun granülden salınarak, TxA₂ ise trombositte sentezlenerek büyütür.",
    "ses": "Granülde depolanmayıp trombositte sentezlenen güçlü agregasyon ve vazokonstriksiyon mediyatörü hangisidir?\nA, a de pe\nBe, Serotonin\nCe, tromboksan a iki\nDe, Kalsiyum\nE, Endotelin\nHer seçeneği tek tek ele alalım.\nA de pe yoğun granülde depolanır, salınınca diğer trombositleri aktive ederek toplanma döngüsünü büyütür.\nSerotonin yoğun granülde depolanan bir mediyatördür, aktivasyon sırasında trombositte sentezlenmez.\nTromboksan a iki doğru, trombositlerde sentezlenir ve güçlü agregasyon ile vazokonstriksiyon mediyatörüdür.\nKalsiyum yoğun granül içeriğidir, pıhtılaşma reaksiyonları için gerekli bir kofaktördür.\nEndotelin güçlü bir vazokonstriktördür ama trombositten değil endotelden salınır.\nDoğru cevap Ce, tromboksan a iki\nTrombosit aktivasyonunu trombin pe a re reseptörleri üzerinden, a de pe yoğun granülden salınarak, tromboksan a iki ise trombositte sentezlenerek büyütür.",
    "kelime": 121
@@ -581,6 +726,7 @@
   {
    "no": 39,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Trombinin trombositleri aktive ettiği reseptör hangisidir?",
    "secenekler": {
     "A": "GpIb",
@@ -590,6 +736,7 @@
     "E": "Trombomodulin"
    },
    "dogru": "D",
+   "ipucu": "Trombinin bir proteaz olduğunu ve trombosit yüzeyinde kendine özgü bir reseptör ailesini uyardığını düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "GpIb trombositin yapışma reseptörüdür; vWF aracılığıyla subendotelyal kollajene tutunmayı sağlar.",
@@ -599,6 +746,11 @@
     "E": "Trombomodulin normal endotelde trombinin antikoagülan yollara katılmasını sağlar; trombosit reseptörü değildir."
    },
    "ozet": "Trombin PAR'lar üzerinden trombositleri aktive eder ve TxA₂ salınımı ile degranülasyonu artırır; normal endotelde ise trombomodulinle antikoagülan yola katılır.",
+   "sayfa": [
+    15,
+    19,
+    25
+   ],
    "metin": "**Soru.** Trombinin trombositleri aktive ettiği reseptör hangisidir?\n\n**A)** GpIb · **B)** GpIIb/IIIa · **C)** P-selektin · **D)** PAR · **E)** Trombomodulin\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **GpIb** — GpIb trombositin yapışma reseptörüdür; vWF aracılığıyla subendotelyal kollajene tutunmayı sağlar.\n- **GpIIb/IIIa** — GpIIb/IIIa aktivasyonla konformasyon değiştirip fibrinojeni bağlayan agregasyon reseptörüdür; trombin reseptörü değildir.\n- **P-selektin** — P-selektin alfa granülün zarında bulunan bir moleküldür; trombinin trombositi uyardığı reseptör değildir.\n- **PAR** — PAR doğru: trombin, proteazla aktive olan bu reseptörler üzerinden trombositleri güçlü şekilde aktive eder.\n- **Trombomodulin** — Trombomodulin normal endotelde trombinin antikoagülan yollara katılmasını sağlar; trombosit reseptörü değildir.\n\n**Cevap: D** — PAR\n\n**Özet.** Trombin PAR'lar üzerinden trombositleri aktive eder ve TxA₂ salınımı ile degranülasyonu artırır; normal endotelde ise trombomodulinle antikoagülan yola katılır.",
    "ses": "Trombinin trombositleri aktive ettiği reseptör hangisidir?\nA, glikoprotein bir be\nBe, glikoprotein iki be üç a\nCe, pe selektin\nDe, pe a re\nE, Trombomodulin\nŞıkları sırasıyla gözden geçirelim.\nGlikoprotein bir be trombositin yapışma reseptörüdür, von Villebrand faktörü aracılığıyla subendotelyal kollajene tutunmayı sağlar.\nGlikoprotein iki be üç a aktivasyonla konformasyon değiştirip fibrinojeni bağlayan agregasyon reseptörüdür, trombin reseptörü değildir.\nPe selektin alfa granülün zarında bulunan bir moleküldür, trombinin trombositi uyardığı reseptör değildir.\nPe a re doğru, trombin, proteazla aktive olan bu reseptörler üzerinden trombositleri güçlü şekilde aktive eder.\nTrombomodulin normal endotelde trombinin antikoagülan yollara katılmasını sağlar, trombosit reseptörü değildir.\nDoğru cevap De, pe a re\nTrombin pe a re reseptörleri üzerinden trombositleri aktive eder ve tromboksan salınımı ile degranülasyonu artırır. Normal endotelde ise trombomodulinle antikoagülan yola katılır.",
    "kelime": 123
@@ -606,6 +758,7 @@
   {
    "no": 40,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Kalsiyumun γ-karboksiglutamat bölgelerine bağlandığı faktörler arasında hangisi yer almaz?",
    "secenekler": {
     "A": "Faktör II",
@@ -615,22 +768,28 @@
     "E": "Faktör VIII"
    },
    "dogru": "E",
+   "ipucu": "Kalsiyumun bağlandığı dörtlü grubu say ve bu grubun dışında kalan, reaksiyon hızlandırıcı olarak çalışan proteini bul.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Faktör II yani protrombin, kalsiyumun γ-karboksiglutamat bölgesine bağlandığı faktörlerdendir.",
     "B": "Faktör VII kalsiyum bağlayan dört faktörden biridir; doku faktörüyle kompleks yaparak kaskadı başlatır.",
     "C": "Faktör IX kalsiyum bağlayan faktörlerdendir; trombosit yüzeyindeki komplekste proteaz olarak faktör X'u aktive eder.",
     "D": "Faktör X kalsiyumun bağlandığı faktörlerdendir; aktive olunca faktör Va eşliğinde protrombini trombine çevirir.",
-    "E": "Faktör VIII doğru: kalsiyum bağlayan dört faktör arasında yer almaz; faktör X aktivasyonunda reaksiyon hızlandırıcı kofaktördür."
+    "E": "Faktör VIII doğru cevaptır: karaciğerde K vitamini bağımlı gama-karboksilasyona uğrayıp kalsiyum bağlayan pıhtılaşma faktörleri faktör II, VII, IX ve X'dur; faktör VIII ise gama-karboksiglutamat içermez ve faktör IXa'nın kofaktörü olarak çalışır."
    },
    "ozet": "Kalsiyum faktör II, VII, IX ve X'un γ-karboksiglutamat bölgelerine bağlanan gerekli bir kofaktördür; faktör VIIIa ise faktör X aktivasyonunu hızlandırır.",
-   "metin": "**Soru.** Kalsiyumun γ-karboksiglutamat bölgelerine bağlandığı faktörler arasında hangisi yer almaz?\n\n**A)** Faktör II · **B)** Faktör VII · **C)** Faktör IX · **D)** Faktör X · **E)** Faktör VIII\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Faktör II** — Faktör II yani protrombin, kalsiyumun γ-karboksiglutamat bölgesine bağlandığı faktörlerdendir.\n- **Faktör VII** — Faktör VII kalsiyum bağlayan dört faktörden biridir; doku faktörüyle kompleks yaparak kaskadı başlatır.\n- **Faktör IX** — Faktör IX kalsiyum bağlayan faktörlerdendir; trombosit yüzeyindeki komplekste proteaz olarak faktör X'u aktive eder.\n- **Faktör X** — Faktör X kalsiyumun bağlandığı faktörlerdendir; aktive olunca faktör Va eşliğinde protrombini trombine çevirir.\n- **Faktör VIII** — Faktör VIII doğru: kalsiyum bağlayan dört faktör arasında yer almaz; faktör X aktivasyonunda reaksiyon hızlandırıcı kofaktördür.\n\n**Cevap: E** — Faktör VIII\n\n**Özet.** Kalsiyum faktör II, VII, IX ve X'un γ-karboksiglutamat bölgelerine bağlanan gerekli bir kofaktördür; faktör VIIIa ise faktör X aktivasyonunu hızlandırır.",
-   "ses": "Kalsiyumun gama karboksiglutamat bölgelerine bağlandığı faktörler arasında hangisi yer almaz?\nA, faktör iki\nBe, faktör yedi\nCe, faktör dokuz\nDe, faktör on\nE, faktör sekiz\nŞimdi seçeneklere tek tek bakalım.\nFaktör iki yani protrombin, kalsiyumun gama karboksiglutamat bölgesine bağlandığı faktörlerdendir.\nFaktör yedi kalsiyum bağlayan dört faktörden biridir, doku faktörüyle kompleks yaparak kaskadı başlatır.\nFaktör dokuz kalsiyum bağlayan faktörlerdendir, trombosit yüzeyindeki komplekste proteaz olarak faktör onu aktive eder.\nFaktör on kalsiyumun bağlandığı faktörlerdendir, aktive olunca faktör beş a eşliğinde protrombini trombine çevirir.\nFaktör sekiz doğru, kalsiyum bağlayan dört faktör arasında yer almaz. Faktör on aktivasyonunda reaksiyon hızlandırıcı kofaktördür.\nDoğru cevap E, faktör sekiz\nKalsiyum faktör iki, yedi, dokuz ve onun gama karboksiglutamat bölgelerine bağlanan gerekli bir kofaktördür. Faktör sekiz a ise faktör on aktivasyonunu hızlandırır.",
-   "kelime": 146
+   "sayfa": [
+    21,
+    18
+   ],
+   "metin": "**Soru.** Kalsiyumun γ-karboksiglutamat bölgelerine bağlandığı faktörler arasında hangisi yer almaz?\n\n**A)** Faktör II · **B)** Faktör VII · **C)** Faktör IX · **D)** Faktör X · **E)** Faktör VIII\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Faktör II** — Faktör II yani protrombin, kalsiyumun γ-karboksiglutamat bölgesine bağlandığı faktörlerdendir.\n- **Faktör VII** — Faktör VII kalsiyum bağlayan dört faktörden biridir; doku faktörüyle kompleks yaparak kaskadı başlatır.\n- **Faktör IX** — Faktör IX kalsiyum bağlayan faktörlerdendir; trombosit yüzeyindeki komplekste proteaz olarak faktör X'u aktive eder.\n- **Faktör X** — Faktör X kalsiyumun bağlandığı faktörlerdendir; aktive olunca faktör Va eşliğinde protrombini trombine çevirir.\n- **Faktör VIII** — Faktör VIII doğru cevaptır: karaciğerde K vitamini bağımlı gama-karboksilasyona uğrayıp kalsiyum bağlayan pıhtılaşma faktörleri faktör II, VII, IX ve X'dur; faktör VIII ise gama-karboksiglutamat içermez ve faktör IXa'nın kofaktörü olarak çalışır.\n\n**Cevap: E** — Faktör VIII\n\n**Özet.** Kalsiyum faktör II, VII, IX ve X'un γ-karboksiglutamat bölgelerine bağlanan gerekli bir kofaktördür; faktör VIIIa ise faktör X aktivasyonunu hızlandırır.",
+   "ses": "Kalsiyumun gama karboksiglutamat bölgelerine bağlandığı faktörler arasında hangisi yer almaz?\nA, faktör iki\nBe, faktör yedi\nCe, faktör dokuz\nDe, faktör on\nE, faktör sekiz\nŞimdi seçeneklere tek tek bakalım.\nFaktör iki yani protrombin, kalsiyumun gama karboksiglutamat bölgesine bağlandığı faktörlerdendir.\nFaktör yedi kalsiyum bağlayan dört faktörden biridir, doku faktörüyle kompleks yaparak kaskadı başlatır.\nFaktör dokuz kalsiyum bağlayan faktörlerdendir, trombosit yüzeyindeki komplekste proteaz olarak faktör onu aktive eder.\nFaktör on kalsiyumun bağlandığı faktörlerdendir, aktive olunca faktör beş a eşliğinde protrombini trombine çevirir.\nFaktör sekiz doğru cevaptır: karaciğerde K vitamini bağımlı gama-karboksilasyona uğrayıp kalsiyum bağlayan pıhtılaşma faktörleri faktör iki, yedi, dokuz ve X'dur. Faktör sekiz ise gama-karboksiglutamat içermez ve faktör dokuz a'nın kofaktörü olarak çalışır.\nDoğru cevap E, faktör sekiz\nKalsiyum faktör iki, yedi, dokuz ve onun gama karboksiglutamat bölgelerine bağlanan gerekli bir kofaktördür. Faktör sekiz a ise faktör on aktivasyonunu hızlandırır.",
+   "kelime": 161
   },
   {
    "no": 41,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Protrombini trombine çeviren komplekste kofaktör olarak görev yapan faktör hangisidir?",
    "secenekler": {
     "A": "Faktör Va",
@@ -640,6 +799,7 @@
     "E": "Faktör VIIa"
    },
    "dogru": "A",
+   "ipucu": "Trombosit yüzeyindeki iki ardışık kompleksin farklı kofaktörler kullandığını, ikincisinin protrombine yöneldiğini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Faktör Va doğru: aktive faktör X'un protrombini trombine çevirdiği komplekste kofaktör olarak çalışır.",
@@ -649,6 +809,10 @@
     "E": "Faktör VIIa doku faktörüyle kompleks yaparak canlıda kaskadı başlatır; protrombin kompleksinin kofaktörü değildir."
    },
    "ozet": "İlk komplekste faktör IXa proteaz, faktör X substrat, faktör VIIIa kofaktördür; oluşan faktör Xa, faktör Va varlığında protrombini trombine çevirir.",
+   "sayfa": [
+    18,
+    21
+   ],
    "metin": "**Soru.** Protrombini trombine çeviren komplekste kofaktör olarak görev yapan faktör hangisidir?\n\n**A)** Faktör Va · **B)** Faktör VIIIa · **C)** Faktör IXa · **D)** Faktör XIIIa · **E)** Faktör VIIa\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Faktör Va** — Faktör Va doğru: aktive faktör X'un protrombini trombine çevirdiği komplekste kofaktör olarak çalışır.\n- **Faktör VIIIa** — Faktör VIIIa ilk komplekste faktör X aktivasyonunu hızlandıran kofaktördür; protrombin aktivasyonunda görev almaz.\n- **Faktör IXa** — Faktör IXa ilk komplekste proteazdır; faktör VIIIa eşliğinde faktör X'u aktive eder, kofaktör değildir.\n- **Faktör XIIIa** — Faktör XIIIa fibrini kovalent olarak çapraz bağlayıp pıhtıyı stabilize eder; protrombin aktivasyonuna katılmaz.\n- **Faktör VIIa** — Faktör VIIa doku faktörüyle kompleks yaparak canlıda kaskadı başlatır; protrombin kompleksinin kofaktörü değildir.\n\n**Cevap: A** — Faktör Va\n\n**Özet.** İlk komplekste faktör IXa proteaz, faktör X substrat, faktör VIIIa kofaktördür; oluşan faktör Xa, faktör Va varlığında protrombini trombine çevirir.",
    "ses": "Protrombini trombine çeviren komplekste kofaktör olarak görev yapan faktör hangisidir?\nA, faktör beş a\nBe, faktör sekiz a\nCe, faktör dokuz a\nDe, faktör on üç a\nE, faktör yedi a\nSeçenekleri sırayla değerlendirelim.\nFaktör beş a doğru, aktive faktör onun protrombini trombine çevirdiği komplekste kofaktör olarak çalışır.\nFaktör sekiz a ilk komplekste faktör on aktivasyonunu hızlandıran kofaktördür, protrombin aktivasyonunda görev almaz.\nFaktör dokuz a ilk komplekste proteazdır, faktör sekiz a eşliğinde faktör onu aktive eder, kofaktör değildir.\nFaktör on üç a fibrini kovalent olarak çapraz bağlayıp pıhtıyı stabilize eder, protrombin aktivasyonuna katılmaz.\nFaktör yedi a doku faktörüyle kompleks yaparak canlıda kaskadı başlatır, protrombin kompleksinin kofaktörü değildir.\nDoğru cevap A, faktör beş a\nİlk komplekste faktör dokuz a proteaz, faktör on substrat, faktör sekiz a kofaktördür. Oluşan faktör on a, faktör beş a varlığında protrombini trombine çevirir.",
    "kelime": 146
@@ -656,6 +820,7 @@
   {
    "no": 42,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Protrombin zamanı ve aktive parsiyel tromboplastin zamanının ikisinde birden değerlendirilen faktör hangisidir?",
    "secenekler": {
     "A": "Faktör VII",
@@ -665,6 +830,7 @@
     "E": "Faktör XII"
    },
    "dogru": "B",
+   "ipucu": "Ekstrinsik ve intrinsik yolun birleştiği ortak yolun bileşenlerini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Faktör VII yalnız protrombin zamanında yer alır; ekstrinsik yolun faktörüdür.",
@@ -674,6 +840,10 @@
     "E": "Faktör XII laboratuvarda intrinsik yolu negatif yüklü yüzeyle başlatır; yalnız aktive parsiyel tromboplastin zamanında yer alır."
    },
    "ozet": "Ortak yolun faktörleri X, V, II ve fibrinojen hem PT hem aPTT ile değerlendirilir; VII yalnız PT'de, XII, XI, IX ve VIII yalnız aPTT'de yer alır.",
+   "sayfa": [
+    22,
+    23
+   ],
    "metin": "**Soru.** Protrombin zamanı ve aktive parsiyel tromboplastin zamanının ikisinde birden değerlendirilen faktör hangisidir?\n\n**A)** Faktör VII · **B)** Faktör X · **C)** Faktör VIII · **D)** Faktör IX · **E)** Faktör XII\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Faktör VII** — Faktör VII yalnız protrombin zamanında yer alır; ekstrinsik yolun faktörüdür.\n- **Faktör X** — Faktör X doğru: ortak yolun faktörüdür, bu yüzden hem protrombin zamanı hem aktive parsiyel tromboplastin zamanıyla değerlendirilir.\n- **Faktör VIII** — Faktör VIII intrinsik yoldadır; yalnız aktive parsiyel tromboplastin zamanıyla değerlendirilir.\n- **Faktör IX** — Faktör IX intrinsik yolun faktörüdür; protrombin zamanında yer almaz.\n- **Faktör XII** — Faktör XII laboratuvarda intrinsik yolu negatif yüklü yüzeyle başlatır; yalnız aktive parsiyel tromboplastin zamanında yer alır.\n\n**Cevap: B** — Faktör X\n\n**Özet.** Ortak yolun faktörleri X, V, II ve fibrinojen hem PT hem aPTT ile değerlendirilir; VII yalnız PT'de, XII, XI, IX ve VIII yalnız aPTT'de yer alır.",
    "ses": "Protrombin zamanı ve aktive parsiyel tromboplastin zamanının ikisinde birden değerlendirilen faktör hangisidir?\nA, faktör yedi\nBe, faktör on\nCe, faktör sekiz\nDe, faktör dokuz\nE, faktör on iki\nHer seçeneği tek tek ele alalım.\nFaktör yedi yalnız protrombin zamanında yer alır, ekstrinsik yolun faktörüdür.\nFaktör on doğru, ortak yolun faktörüdür. Bu yüzden hem protrombin zamanı hem aktive parsiyel tromboplastin zamanıyla değerlendirilir.\nFaktör sekiz intrinsik yoldadır, yalnız aktive parsiyel tromboplastin zamanıyla değerlendirilir.\nFaktör dokuz intrinsik yolun faktörüdür, protrombin zamanında yer almaz.\nFaktör on iki laboratuvarda intrinsik yolu negatif yüklü yüzeyle başlatır, yalnız aktive parsiyel tromboplastin zamanında yer alır.\nDoğru cevap Be, faktör on\nOrtak yolun faktörleri on, beş, iki ve fibrinojen her iki testle değerlendirilir. Yedi yalnız protrombin zamanında, on iki, on bir, dokuz ve sekiz yalnız aktive parsiyel tromboplastin zamanında yer alır.",
    "kelime": 153
@@ -681,6 +851,7 @@
   {
    "no": 43,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Canlıda trombinin geri besleme yoluyla aktive ederek kaskadı güçlendirdiği faktör hangisidir?",
    "secenekler": {
     "A": "Faktör XII",
@@ -690,6 +861,7 @@
     "E": "Doku faktörü"
    },
    "dogru": "C",
+   "ipucu": "Laboratuvarda cam yüzeyle uyarılan başlangıç halkasını dışarıda bırak; trombinin geri döngüyle uyardığı halkayı düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Faktör XII laboratuvarda negatif yüklü yüzeyle aktive olarak intrinsik yolu başlatır; canlıdaki geri beslemenin hedefi değildir.",
@@ -699,6 +871,10 @@
     "E": "Doku faktörü canlıda pıhtılaşmanın ana başlatıcısıdır; vasküler hasarla açığa çıkar, trombin tarafından aktive edilmez."
    },
    "ozet": "Canlıda doku faktörü ile faktör VIIa kompleksi faktör IX ve X'u aktive eder; trombin faktör XI'i aktive ederek kaskadı güçlendirir.",
+   "sayfa": [
+    24,
+    23
+   ],
    "metin": "**Soru.** Canlıda trombinin geri besleme yoluyla aktive ederek kaskadı güçlendirdiği faktör hangisidir?\n\n**A)** Faktör XII · **B)** Faktör VII · **C)** Faktör XI · **D)** Faktör IX · **E)** Doku faktörü\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Faktör XII** — Faktör XII laboratuvarda negatif yüklü yüzeyle aktive olarak intrinsik yolu başlatır; canlıdaki geri beslemenin hedefi değildir.\n- **Faktör VII** — Faktör VII doku faktörüyle kompleks yaparak canlıda kaskadı başlatır; trombinin geri besleme hedefi değildir.\n- **Faktör XI** — Faktör XI doğru: canlıda trombin faktör XI'i aktive ederek kaskadı geri besleme yoluyla güçlendirir.\n- **Faktör IX** — Faktör IX canlıda doku faktörü ile faktör VIIa kompleksi tarafından aktive edilir; trombin geri beslemesinin hedefi değildir.\n- **Doku faktörü** — Doku faktörü canlıda pıhtılaşmanın ana başlatıcısıdır; vasküler hasarla açığa çıkar, trombin tarafından aktive edilmez.\n\n**Cevap: C** — Faktör XI\n\n**Özet.** Canlıda doku faktörü ile faktör VIIa kompleksi faktör IX ve X'u aktive eder; trombin faktör XI'i aktive ederek kaskadı güçlendirir.",
    "ses": "Canlıda trombinin geri besleme yoluyla aktive ederek kaskadı güçlendirdiği faktör hangisidir?\nA, faktör on iki\nBe, faktör yedi\nCe, faktör on bir\nDe, faktör dokuz\nE, Doku faktörü\nŞıkları sırasıyla gözden geçirelim.\nFaktör on iki laboratuvarda negatif yüklü yüzeyle aktive olarak intrinsik yolu başlatır, canlıdaki geri beslemenin hedefi değildir.\nFaktör yedi doku faktörüyle kompleks yaparak canlıda kaskadı başlatır, trombinin geri besleme hedefi değildir.\nFaktör on bir doğru, canlıda trombin faktör on biri aktive ederek kaskadı geri besleme yoluyla güçlendirir.\nFaktör dokuz canlıda doku faktörü ile faktör yedi a kompleksi tarafından aktive edilir, trombin geri beslemesinin hedefi değildir.\nDoku faktörü canlıda pıhtılaşmanın ana başlatıcısıdır, vasküler hasarla açığa çıkar, trombin tarafından aktive edilmez.\nDoğru cevap Ce, faktör on bir\nCanlıda doku faktörü ile faktör yedi a kompleksi faktör dokuz ve onu aktive eder. Trombin faktör on biri aktive ederek kaskadı güçlendirir.",
    "kelime": 157
@@ -706,6 +882,7 @@
   {
    "no": 44,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "t-PA'nın plazmini pıhtının bulunduğu yerde üretmesini sağlayan özelliği hangisidir?",
    "secenekler": {
     "A": "Karaciğerde sentezlenmesi",
@@ -715,6 +892,7 @@
     "E": "Doku faktörünü inhibe etmesi"
    },
    "dogru": "D",
+   "ipucu": "Enzimin etkinliğinin neye tutunduğunda yükseldiğini ve bunun yıkımı nereye yönlendireceğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Karaciğerde sentez pıhtılaşma faktörlerinin çoğunun özelliğidir; t-PA ise endotel kökenlidir.",
@@ -724,6 +902,10 @@
     "E": "Doku faktörü ile faktör VIIa kompleksini inhibe eden TFPI'dır; o bir antikoagülandır, fibrinolitik değildir."
    },
    "ozet": "Plazmin fibrini yıkarak FDP ve D-dimer oluşturur; plazminojeni aktive eden endotel kökenli t-PA fibrine bağlıyken en aktiftir.",
+   "sayfa": [
+    27,
+    15
+   ],
    "metin": "**Soru.** t-PA'nın plazmini pıhtının bulunduğu yerde üretmesini sağlayan özelliği hangisidir?\n\n**A)** Karaciğerde sentezlenmesi · **B)** Trombosit granülünde depolanması · **C)** Trombositlerde sentezlenmesi · **D)** Fibrine bağlıyken en aktif olması · **E)** Doku faktörünü inhibe etmesi\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Karaciğerde sentezlenmesi** — Karaciğerde sentez pıhtılaşma faktörlerinin çoğunun özelliğidir; t-PA ise endotel kökenlidir.\n- **Trombosit granülünde depolanması** — Trombosit granülünde depolanma fibrinojen ya da ADP gibi içeriklere aittir; t-PA endotelden üretilir.\n- **Trombositlerde sentezlenmesi** — Trombositlerde sentezlenme tromboksan A₂'nin özelliğidir; t-PA ise endotel kökenlidir.\n- **Fibrine bağlıyken en aktif olması** — Fibrine bağlıyken en aktif olması doğru: endotel kökenli t-PA böylece plazminojeni pıhtının bulunduğu yerde plazmine çevirir.\n- **Doku faktörünü inhibe etmesi** — Doku faktörü ile faktör VIIa kompleksini inhibe eden TFPI'dır; o bir antikoagülandır, fibrinolitik değildir.\n\n**Cevap: D** — Fibrine bağlıyken en aktif olması\n\n**Özet.** Plazmin fibrini yıkarak FDP ve D-dimer oluşturur; plazminojeni aktive eden endotel kökenli t-PA fibrine bağlıyken en aktiftir.",
    "ses": "Doku plazminojen aktivatörünün plazmini pıhtının bulunduğu yerde üretmesini sağlayan özelliği hangisidir?\nA, Karaciğerde sentezlenmesi\nBe, Trombosit granülünde depolanması\nCe, Trombositlerde sentezlenmesi\nDe, Fibrine bağlıyken en aktif olması\nE, Doku faktörünü inhibe etmesi\nŞimdi seçeneklere tek tek bakalım.\nKaraciğerde sentez pıhtılaşma faktörlerinin çoğunun özelliğidir, te pe a ise endotel kökenlidir.\nTrombosit granülünde depolanma fibrinojen ya da a de pe gibi içeriklere aittir, te pe a endotelden üretilir.\nTrombositlerde sentezlenme tromboksan a ikinin özelliğidir, te pe a ise endotel kökenlidir.\nFibrine bağlıyken en aktif olması doğru, endotel kökenli te pe a böylece plazminojeni pıhtının bulunduğu yerde plazmine çevirir.\nDoku faktörü ile faktör yedi a kompleksini inhibe eden te fe pe idir, o bir antikoagülandır, fibrinolitik değildir.\nDoğru cevap De, Fibrine bağlıyken en aktif olması\nPlazmin fibrini yıkarak fibrin yıkım ürünleri ve de dimer oluşturur. Plazminojeni aktive eden endotel kökenli te pe a fibrine bağlıyken en aktiftir.",
    "kelime": 155
@@ -731,6 +913,7 @@
   {
    "no": 45,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Normal endotelden salınıp trombosit agregasyonunu azaltan ve vazodilatasyon yapan molekül hangisidir?",
    "secenekler": {
     "A": "Endotelin",
@@ -740,6 +923,7 @@
     "E": "Prostasiklin"
    },
    "dogru": "E",
+   "ipucu": "Endotelin ürettiği damar daraltıcı madde ile trombositi frenleyen ürünlerini birbirinden ayır.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Endotelin endotelden salınan güçlü bir vazokonstriktördür; yaralanma sonrası damarı daraltır, agregasyonu azaltmaz.",
@@ -748,14 +932,19 @@
     "D": "PAI plazminojen aktivatör inhibitörüdür; fibrinolizi azaltır ve aktive endotelde artar.",
     "E": "Prostasiklin doğru: nitrik oksit ve ADPaz ile birlikte trombosit agregasyonunu azaltır ve vazodilatasyonu artırır."
    },
-   "ozet": "Normal endotel PGI₂, NO ve ADPaz ile trombositi frenler; trombomodulin, heparin benzeri moleküller ve TFPI ile antikoagülan, t-PA ile fibrinolitik etki gösterir.",
-   "metin": "**Soru.** Normal endotelden salınıp trombosit agregasyonunu azaltan ve vazodilatasyon yapan molekül hangisidir?\n\n**A)** Endotelin · **B)** Doku faktörü · **C)** von Willebrand faktörü · **D)** PAI · **E)** Prostasiklin\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Endotelin** — Endotelin endotelden salınan güçlü bir vazokonstriktördür; yaralanma sonrası damarı daraltır, agregasyonu azaltmaz.\n- **Doku faktörü** — Doku faktörü pıhtılaşmanın canlıdaki ana başlatıcısıdır; aktive endotelde artar ve protrombotik etki yapar.\n- **von Willebrand faktörü** — von Willebrand faktörü trombositlerin subendotelyal kollajene yapışmasını sağlayan köprüdür; trombosit tıkacını kolaylaştırır.\n- **PAI** — PAI plazminojen aktivatör inhibitörüdür; fibrinolizi azaltır ve aktive endotelde artar.\n- **Prostasiklin** — Prostasiklin doğru: nitrik oksit ve ADPaz ile birlikte trombosit agregasyonunu azaltır ve vazodilatasyonu artırır.\n\n**Cevap: E** — Prostasiklin\n\n**Özet.** Normal endotel PGI₂, NO ve ADPaz ile trombositi frenler; trombomodulin, heparin benzeri moleküller ve TFPI ile antikoagülan, t-PA ile fibrinolitik etki gösterir.",
-   "ses": "Normal endotelden salınıp trombosit agregasyonunu azaltan ve vazodilatasyon yapan molekül hangisidir?\nA, Endotelin\nBe, Doku faktörü\nCe, von Villebrand faktörü\nDe, pe a i\nE, Prostasiklin\nSeçenekleri sırayla değerlendirelim.\nEndotelin endotelden salınan güçlü bir vazokonstriktördür, yaralanma sonrası damarı daraltır, agregasyonu azaltmaz.\nDoku faktörü pıhtılaşmanın canlıdaki ana başlatıcısıdır, aktive endotelde artar ve protrombotik etki yapar.\nvon Villebrand faktörü trombositlerin subendotelyal kollajene yapışmasını sağlayan köprüdür, trombosit tıkacını kolaylaştırır.\nPe a i plazminojen aktivatör inhibitörüdür, fibrinolizi azaltır ve aktive endotelde artar.\nProstasiklin doğru, nitrik oksit ve a de pe az ile birlikte trombosit agregasyonunu azaltır ve vazodilatasyonu artırır.\nDoğru cevap E, Prostasiklin\nNormal endotel prostasiklin, nitrik oksit ve a de pe az ile trombositi frenler. Trombomodulin, heparin benzeri moleküller ve te fe pe i ile antikoagülan, te pe a ile fibrinolitik etki gösterir.",
-   "kelime": 139
+   "ozet": "Normal endotel PGI₂, NO ve ADPaz ile trombosit kümelenmesini baskılar; trombomodulin, heparin benzeri moleküller ve TFPI ile antikoagülan, t-PA ile fibrinolitik etki gösterir.",
+   "sayfa": [
+    29,
+    7
+   ],
+   "metin": "**Soru.** Normal endotelden salınıp trombosit agregasyonunu azaltan ve vazodilatasyon yapan molekül hangisidir?\n\n**A)** Endotelin · **B)** Doku faktörü · **C)** von Willebrand faktörü · **D)** PAI · **E)** Prostasiklin\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Endotelin** — Endotelin endotelden salınan güçlü bir vazokonstriktördür; yaralanma sonrası damarı daraltır, agregasyonu azaltmaz.\n- **Doku faktörü** — Doku faktörü pıhtılaşmanın canlıdaki ana başlatıcısıdır; aktive endotelde artar ve protrombotik etki yapar.\n- **von Willebrand faktörü** — von Willebrand faktörü trombositlerin subendotelyal kollajene yapışmasını sağlayan köprüdür; trombosit tıkacını kolaylaştırır.\n- **PAI** — PAI plazminojen aktivatör inhibitörüdür; fibrinolizi azaltır ve aktive endotelde artar.\n- **Prostasiklin** — Prostasiklin doğru: nitrik oksit ve ADPaz ile birlikte trombosit agregasyonunu azaltır ve vazodilatasyonu artırır.\n\n**Cevap: E** — Prostasiklin\n\n**Özet.** Normal endotel PGI₂, NO ve ADPaz ile trombosit kümelenmesini baskılar; trombomodulin, heparin benzeri moleküller ve TFPI ile antikoagülan, t-PA ile fibrinolitik etki gösterir.",
+   "ses": "Normal endotelden salınıp trombosit agregasyonunu azaltan ve vazodilatasyon yapan molekül hangisidir?\nA, Endotelin\nBe, Doku faktörü\nCe, von Villebrand faktörü\nDe, pe a i\nE, Prostasiklin\nSeçenekleri sırayla değerlendirelim.\nEndotelin endotelden salınan güçlü bir vazokonstriktördür, yaralanma sonrası damarı daraltır, agregasyonu azaltmaz.\nDoku faktörü pıhtılaşmanın canlıdaki ana başlatıcısıdır, aktive endotelde artar ve protrombotik etki yapar.\nvon Villebrand faktörü trombositlerin subendotelyal kollajene yapışmasını sağlayan köprüdür, trombosit tıkacını kolaylaştırır.\nPe a i plazminojen aktivatör inhibitörüdür, fibrinolizi azaltır ve aktive endotelde artar.\nProstasiklin doğru, nitrik oksit ve a de pe az ile birlikte trombosit agregasyonunu azaltır ve vazodilatasyonu artırır.\nDoğru cevap E, Prostasiklin\nNormal endotel prostasiklin, nitrik oksit ve a de pe az ile trombosit kümelenmesini baskılar. Trombomodulin, heparin benzeri moleküller ve te fe pe i ile antikoagülan, te pe a ile fibrinolitik etki gösterir.",
+   "kelime": 140
   },
   {
    "no": 46,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Endotel aktivasyonunun protrombotik etkileri için hangisi yanlıştır?",
    "secenekler": {
     "A": "Fibrinoliz artar",
@@ -765,6 +954,7 @@
     "E": "PAI artar"
    },
    "dogru": "A",
+   "ipucu": "Aktive endotelde plazminojen aktivatörlerini frenleyen moleküllerin çoğaldığını ve bunun pıhtı yıkımına etkisini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Fibrinoliz artar ifadesi yanlış olduğu için doğru cevaptır: aktive endotelde plazminojen aktivatör inhibitörleri arttığından fibrinoliz azalır.",
@@ -774,6 +964,9 @@
     "E": "PAI artar ifadesi geçerlidir; plazminojen aktivatör inhibitörlerinin artışı fibrinolizi azaltır."
    },
    "ozet": "Aktive endotelde trombomodulin, protein C reseptörü ve TFPI azalır, doku faktörü ve PAI artar; sonuçta fibrinoliz azalır ve yüzey protrombotik olur.",
+   "sayfa": [
+    35
+   ],
    "metin": "**Soru.** Endotel aktivasyonunun protrombotik etkileri için hangisi yanlıştır?\n\n**A)** Fibrinoliz artar · **B)** Trombomodulin azalır · **C)** TFPI azalır · **D)** Doku faktörü artar · **E)** PAI artar\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Fibrinoliz artar** — Fibrinoliz artar ifadesi yanlış olduğu için doğru cevaptır: aktive endotelde plazminojen aktivatör inhibitörleri arttığından fibrinoliz azalır.\n- **Trombomodulin azalır** — Trombomodulin azalır ifadesi geçerlidir; aktive endotelde protein C reseptörü ve TFPI ile birlikte bu inhibitör de azalır.\n- **TFPI azalır** — TFPI azalır ifadesi geçerlidir; doku faktörü ile faktör VIIa kompleksini frenleyen bu inhibitör aktive endotelde azalır.\n- **Doku faktörü artar** — Doku faktörü artar ifadesi geçerlidir; pıhtılaşmayı artıran bu molekül aktive endotelde yükselerek protrombotik yüzey oluşturur.\n- **PAI artar** — PAI artar ifadesi geçerlidir; plazminojen aktivatör inhibitörlerinin artışı fibrinolizi azaltır.\n\n**Cevap: A** — Fibrinoliz artar\n\n**Özet.** Aktive endotelde trombomodulin, protein C reseptörü ve TFPI azalır, doku faktörü ve PAI artar; sonuçta fibrinoliz azalır ve yüzey protrombotik olur.",
    "ses": "Endotel aktivasyonunun protrombotik etkileri için hangisi yanlıştır?\nA, Fibrinoliz artar\nBe, Trombomodulin azalır\nCe, te fe pe i azalır\nDe, Doku faktörü artar\nE, pe a i artar\nHer seçeneği tek tek ele alalım.\nFibrinoliz artar ifadesi yanlış olduğu için doğru cevaptır, aktive endotelde plazminojen aktivatör inhibitörleri arttığından fibrinoliz azalır.\nTrombomodulin azalır ifadesi geçerlidir, aktive endotelde protein ce reseptörü ve te fe pe i ile birlikte bu inhibitör de azalır.\nTe fe pe i azalır ifadesi geçerlidir, doku faktörü ile faktör yedi a kompleksini frenleyen bu inhibitör aktive endotelde azalır.\nDoku faktörü artar ifadesi geçerlidir, pıhtılaşmayı artıran bu molekül aktive endotelde yükselerek protrombotik yüzey oluşturur.\nPe a i artar ifadesi geçerlidir, plazminojen aktivatör inhibitörlerinin artışı fibrinolizi azaltır.\nDoğru cevap A, Fibrinoliz artar\nAktive endotelde trombomodulin, protein ce reseptörü ve te fe pe i azalır, doku faktörü ve pe a i artar. Sonuçta fibrinoliz azalır ve yüzey protrombotik olur.",
    "kelime": 157
@@ -781,6 +974,7 @@
   {
    "no": 47,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Atriyal fibrilasyon tromboza hangi mekanizmayla zemin hazırlar?",
    "secenekler": {
     "A": "Kapakta türbülans",
@@ -790,6 +984,7 @@
     "E": "Trombosit tüketimi"
    },
    "dogru": "B",
+   "ipucu": "Kulakçıkların hızlı ve düzensiz kasılmasının odacık içindeki kan akımını nasıl etkileyeceğini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Kapakta türbülans mitral stenoz gibi kapak hastalıklarının mekanizmasıdır; atriyal fibrilasyon ise başka gruptadır.",
@@ -799,6 +994,10 @@
     "E": "Trombosit tüketimi heparine bağlı trombositopenide görülür; atriyal fibrilasyondaki tromboz riskini açıklamaz."
    },
    "ozet": "Staz uzun süreli immobilizasyon, kalp yetmezliği, varisli venler ve özellikle sol atriyumu etkileyen atriyal fibrilasyonda; türbülans ise ülserli plak, anevrizma ve kapak hastalıklarında görülür.",
+   "sayfa": [
+    37,
+    36
+   ],
    "metin": "**Soru.** Atriyal fibrilasyon tromboza hangi mekanizmayla zemin hazırlar?\n\n**A)** Kapakta türbülans · **B)** Sol atriyumda staz · **C)** Endotel disfonksiyonu · **D)** Kalıtsal hiperkoagülabilite · **E)** Trombosit tüketimi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kapakta türbülans** — Kapakta türbülans mitral stenoz gibi kapak hastalıklarının mekanizmasıdır; atriyal fibrilasyon ise başka gruptadır.\n- **Sol atriyumda staz** — Sol atriyumda staz doğru: atriyal fibrilasyonda kulakçıklar hızlı ve düzensiz kasılır, özellikle sol atriyumda staz gelişir.\n- **Endotel disfonksiyonu** — Endotel disfonksiyonu ateroskleroz, hipertansiyon, hiperkolesterolemi ve sigarayla gelişir; atriyal fibrilasyonun temel mekanizması değildir.\n- **Kalıtsal hiperkoagülabilite** — Kalıtsal hiperkoagülabilite faktör V Leiden gibi genetik nedenlerdir; atriyal fibrilasyon edinsel bir durumdur.\n- **Trombosit tüketimi** — Trombosit tüketimi heparine bağlı trombositopenide görülür; atriyal fibrilasyondaki tromboz riskini açıklamaz.\n\n**Cevap: B** — Sol atriyumda staz\n\n**Özet.** Staz uzun süreli immobilizasyon, kalp yetmezliği, varisli venler ve özellikle sol atriyumu etkileyen atriyal fibrilasyonda; türbülans ise ülserli plak, anevrizma ve kapak hastalıklarında görülür.",
    "ses": "Atriyal fibrilasyon tromboza hangi mekanizmayla zemin hazırlar?\nA, Kapakta türbülans\nBe, Sol atriyumda staz\nCe, Endotel disfonksiyonu\nDe, Kalıtsal hiperkoagülabilite\nE, Trombosit tüketimi\nŞıkları sırasıyla gözden geçirelim.\nKapakta türbülans mitral stenoz gibi kapak hastalıklarının mekanizmasıdır, atriyal fibrilasyon ise başka gruptadır.\nSol atriyumda staz doğru, atriyal fibrilasyonda kulakçıklar hızlı ve düzensiz kasılır, özellikle sol atriyumda staz gelişir.\nEndotel disfonksiyonu ateroskleroz, hipertansiyon, hiperkolesterolemi ve sigarayla gelişir, atriyal fibrilasyonun temel mekanizması değildir.\nKalıtsal hiperkoagülabilite faktör beş Layden gibi genetik nedenlerdir, atriyal fibrilasyon edinsel bir durumdur.\nTrombosit tüketimi heparine bağlı trombositopenide görülür, atriyal fibrilasyondaki tromboz riskini açıklamaz.\nDoğru cevap Be, Sol atriyumda staz\nStaz uzun süreli immobilizasyon, kalp yetmezliği, varisli venler ve özellikle sol atriyumu etkileyen atriyal fibrilasyonda, türbülans ise ülserli plak, anevrizma ve kapak hastalıklarında görülür.",
    "kelime": 151
@@ -806,6 +1005,7 @@
   {
    "no": 48,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Protrombin gen mutasyonunun tromboz riskini artırma mekanizması hangisidir?",
    "secenekler": {
     "A": "Protein C'ye direnç",
@@ -815,6 +1015,7 @@
     "E": "Protrombinin yapısal bozukluğu"
    },
    "dogru": "C",
+   "ipucu": "Mutasyonun genin çevrilmeyen bölgesinde olduğunu, işlevden çok miktarı etkilediğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Protein C'ye direnç faktör V Leiden mutasyonunun mekanizmasıdır; faktör V protein C'ye dirençli hale gelir.",
@@ -824,6 +1025,9 @@
     "E": "Protrombinin yapısal bozukluğu beklenmez; değişiklik 3' UTR bölgesindedir ve protrombinin miktarını artırır."
    },
    "ozet": "Faktör V Leiden protein C'ye dirençle, protrombin gen mutasyonu ise protrombin düzeyini artırarak tromboz riskini yükseltir; ikisi de sık görülen kalıtsal nedenlerdir.",
+   "sayfa": [
+    41
+   ],
    "metin": "**Soru.** Protrombin gen mutasyonunun tromboz riskini artırma mekanizması hangisidir?\n\n**A)** Protein C'ye direnç · **B)** Antitrombin eksikliği · **C)** Protrombin düzeyinin artması · **D)** Fibrinoliz defekti · **E)** Protrombinin yapısal bozukluğu\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Protein C'ye direnç** — Protein C'ye direnç faktör V Leiden mutasyonunun mekanizmasıdır; faktör V protein C'ye dirençli hale gelir.\n- **Antitrombin eksikliği** — Antitrombin eksikliği nadir görülen ayrı bir kalıtsal hiperkoagülabilite nedenidir; protrombin mutasyonuyla ilişkili değildir.\n- **Protrombin düzeyinin artması** — Protrombin düzeyinin artması doğru: 3' UTR bölgesindeki tek nükleotid değişimi protrombin düzeyini yükseltir, venöz tromboz riski yaklaşık 3 kat artar.\n- **Fibrinoliz defekti** — Fibrinoliz defektleri çok nadir görülen kalıtsal nedenler arasındadır; protrombin mutasyonunun mekanizması değildir.\n- **Protrombinin yapısal bozukluğu** — Protrombinin yapısal bozukluğu beklenmez; değişiklik 3' UTR bölgesindedir ve protrombinin miktarını artırır.\n\n**Cevap: C** — Protrombin düzeyinin artması\n\n**Özet.** Faktör V Leiden protein C'ye dirençle, protrombin gen mutasyonu ise protrombin düzeyini artırarak tromboz riskini yükseltir; ikisi de sık görülen kalıtsal nedenlerdir.",
    "ses": "Protrombin gen mutasyonunun tromboz riskini artırma mekanizması hangisidir?\nA, protein ceye direnç\nBe, Antitrombin eksikliği\nCe, Protrombin düzeyinin artması\nDe, Fibrinoliz defekti\nE, Protrombinin yapısal bozukluğu\nŞimdi seçeneklere tek tek bakalım.\nProtein ceye direnç faktör beş Layden mutasyonunun mekanizmasıdır, faktör beş protein ceye dirençli hale gelir.\nAntitrombin eksikliği nadir görülen ayrı bir kalıtsal hiperkoagülabilite nedenidir, protrombin mutasyonuyla ilişkili değildir.\nProtrombin düzeyinin artması doğru, üç prim çevrilmeyen bölgedeki tek nükleotid değişimi protrombin düzeyini yükseltir. Venöz tromboz riski yaklaşık üç kat artar.\nFibrinoliz defektleri çok nadir görülen kalıtsal nedenler arasındadır, protrombin mutasyonunun mekanizması değildir.\nProtrombinin yapısal bozukluğu beklenmez, değişiklik üç prim çevrilmeyen bölgededir ve protrombinin miktarını artırır.\nDoğru cevap Ce, Protrombin düzeyinin artması\nFaktör beş Layden protein ceye dirençle, protrombin gen mutasyonu ise protrombin düzeyini artırarak tromboz riskini yükseltir. İkisi de sık görülen kalıtsal nedenlerdir.",
    "kelime": 161
@@ -831,6 +1035,7 @@
   {
    "no": 49,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Faktör V Leiden homozigotlarında venöz tromboz riski yaklaşık ne kadar artar?",
    "secenekler": {
     "A": "2 kat",
@@ -840,6 +1045,7 @@
     "E": "100 kat"
    },
    "dogru": "D",
+   "ipucu": "Tek alel taşıyıcılığındaki birkaç katlık artışın, iki alelin de etkilendiği durumda çok daha büyük olduğunu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "2 kat bu mutasyon için verilen bir değer değildir; heterozigotlarda bile risk artışı bundan fazladır.",
@@ -849,6 +1055,9 @@
     "E": "100 kat abartılı bir değerdir; homozigotlardaki artış bunun yarısını geçmez."
    },
    "ozet": "Faktör V Leiden sık görülen kalıtsal bir nedendir; venöz tromboz riski heterozigotlarda 3–4 kat, homozigotlarda 25–50 kat artar.",
+   "sayfa": [
+    41
+   ],
    "metin": "**Soru.** Faktör V Leiden homozigotlarında venöz tromboz riski yaklaşık ne kadar artar?\n\n**A)** 2 kat · **B)** 3–4 kat · **C)** 10 kat · **D)** 25–50 kat · **E)** 100 kat\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **2 kat** — 2 kat bu mutasyon için verilen bir değer değildir; heterozigotlarda bile risk artışı bundan fazladır.\n- **3–4 kat** — 3–4 kat heterozigot faktör V Leiden taşıyıcılarındaki risk artışıdır; homozigotlarda artış çok daha büyüktür.\n- **10 kat** — 10 kat homozigotlar için verilen değerin altında kalır; homozigotlardaki artış onlarca kattır.\n- **25–50 kat** — 25–50 kat doğru: faktör V Leiden homozigotlarında venöz tromboz riski bu ölçüde artar.\n- **100 kat** — 100 kat abartılı bir değerdir; homozigotlardaki artış bunun yarısını geçmez.\n\n**Cevap: D** — 25–50 kat\n\n**Özet.** Faktör V Leiden sık görülen kalıtsal bir nedendir; venöz tromboz riski heterozigotlarda 3–4 kat, homozigotlarda 25–50 kat artar.",
    "ses": "Faktör beş Layden homozigotlarında venöz tromboz riski yaklaşık ne kadar artar?\nA, iki kat\nBe, üç ile dört kat\nCe, on kat\nDe, yirmi beş ile elli kat\nE, yüz kat\nSeçenekleri sırayla değerlendirelim.\nİki kat bu mutasyon için verilen bir değer değildir, heterozigotlarda bile risk artışı bundan fazladır.\nÜç ile dört kat heterozigot faktör beş Layden taşıyıcılarındaki risk artışıdır, homozigotlarda artış çok daha büyüktür.\nOn kat homozigotlar için verilen değerin altında kalır, homozigotlardaki artış onlarca kattır.\nYirmi beş ile elli kat doğru, faktör beş Layden homozigotlarında venöz tromboz riski bu ölçüde artar.\nYüz kat abartılı bir değerdir, homozigotlardaki artış bunun yarısını geçmez.\nDoğru cevap De, yirmi beş ile elli kat\nFaktör beş Layden sık görülen kalıtsal bir nedendir. Venöz tromboz riski heterozigotlarda üç ile dört kat, homozigotlarda yirmi beş ile elli kat artar.",
    "kelime": 143
@@ -856,6 +1065,7 @@
   {
    "no": 50,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Aşağıdakilerden hangisi edinilmiş hiperkoagülabilite nedenlerinden biri değildir?",
    "secenekler": {
     "A": "Kanser",
@@ -865,6 +1075,7 @@
     "E": "Protein C eksikliği"
    },
    "dogru": "E",
+   "ipucu": "Sonradan kazanılan risk durumlarını, ergenlikte tekrarlayan venöz trombozla kendini gösteren doğuştan nedenlerden ayır.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Kanser edinilmiş hiperkoagülabilite nedenidir; bu tabloya paraneoplastik hiperkoagülabilite denir.",
@@ -874,6 +1085,11 @@
     "E": "Protein C eksikliği doğru: antitrombin üç ve protein S eksikliği gibi kalıtsal, yani primer hiperkoagülabilite nedenidir."
    },
    "ozet": "Hiperkoagülabilite primer ve sekonder diye ikiye ayrılır; protein C, protein S ve antitrombin III eksikliği kalıtsal, kanser, immobilizasyon ve gebelik edinilmiş nedenlerdir.",
+   "sayfa": [
+    44,
+    42,
+    38
+   ],
    "metin": "**Soru.** Aşağıdakilerden hangisi edinilmiş hiperkoagülabilite nedenlerinden biri değildir?\n\n**A)** Kanser · **B)** Atriyal fibrilasyon · **C)** Oral kontraseptif kullanımı · **D)** İleri yaş · **E)** Protein C eksikliği\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Kanser** — Kanser edinilmiş hiperkoagülabilite nedenidir; bu tabloya paraneoplastik hiperkoagülabilite denir.\n- **Atriyal fibrilasyon** — Atriyal fibrilasyon edinilmiş bir nedendir; özellikle sol atriyumda staz oluşturarak tromboza zemin hazırlar.\n- **Oral kontraseptif kullanımı** — Oral kontraseptif kullanımı gebelik gibi edinilmiş hiperkoagülabilite nedenleri arasında sayılır.\n- **İleri yaş** — İleri yaş sigara ve obezite ile birlikte edinilmiş hiperkoagülabilite nedenleri arasındadır.\n- **Protein C eksikliği** — Protein C eksikliği doğru: antitrombin üç ve protein S eksikliği gibi kalıtsal, yani primer hiperkoagülabilite nedenidir.\n\n**Cevap: E** — Protein C eksikliği\n\n**Özet.** Hiperkoagülabilite primer ve sekonder diye ikiye ayrılır; protein C, protein S ve antitrombin III eksikliği kalıtsal, kanser, immobilizasyon ve gebelik edinilmiş nedenlerdir.",
    "ses": "Aşağıdakilerden hangisi edinilmiş hiperkoagülabilite nedenlerinden biri değildir?\nA, Kanser\nBe, Atriyal fibrilasyon\nCe, Oral kontraseptif kullanımı\nDe, İleri yaş\nE, Protein ce eksikliği\nHer seçeneği tek tek ele alalım.\nKanser edinilmiş hiperkoagülabilite nedenidir, bu tabloya paraneoplastik hiperkoagülabilite denir.\nAtriyal fibrilasyon edinilmiş bir nedendir, özellikle sol atriyumda staz oluşturarak tromboza zemin hazırlar.\nOral kontraseptif kullanımı gebelik gibi edinilmiş hiperkoagülabilite nedenleri arasında sayılır.\nİleri yaş sigara ve obezite ile birlikte edinilmiş hiperkoagülabilite nedenleri arasındadır.\nProtein ce eksikliği doğru, antitrombin üç ve protein se eksikliği gibi kalıtsal, yani primer hiperkoagülabilite nedenidir.\nDoğru cevap E, Protein ce eksikliği\nHiperkoagülabilite primer ve sekonder diye ikiye ayrılır. Protein ce, protein se ve antitrombin üç eksikliği kalıtsal, kanser, immobilizasyon ve gebelik edinilmiş nedenlerdir.",
    "kelime": 144
@@ -881,6 +1097,7 @@
   {
    "no": 51,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Antifosfolipid antikorlarına lupus antikoagülanı denmesinin nedeni hangisidir?",
    "secenekler": {
     "A": "Fosfolipid tabanlı testleri uzatması",
@@ -890,6 +1107,7 @@
     "E": "Faktör V'i inaktive etmesi"
    },
    "dogru": "A",
+   "ipucu": "Hastanın canlıda tromboza eğilimli olmasına karşın laboratuvarda tam tersi bir sonuç görüldüğünü düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Fosfolipid tabanlı testleri uzatması doğru: bu antikorlar laboratuvarda pıhtılaşma testlerini uzatır, oysa hasta canlıda tromboza eğilimlidir.",
@@ -899,6 +1117,10 @@
     "E": "Faktör Va'yı inaktive eden aktif protein C ile protein S sistemidir; antifosfolipid antikorlarının etkisi değildir."
    },
    "ozet": "Antifosfolipid antikorlar fosfolipid tabanlı pıhtılaşma testlerini uzattığı için lupus antikoagülanı adını alır; asıl hedefleri β₂-glikoprotein I gibi proteinlerdir.",
+   "sayfa": [
+    47,
+    46
+   ],
    "metin": "**Soru.** Antifosfolipid antikorlarına lupus antikoagülanı denmesinin nedeni hangisidir?\n\n**A)** Fosfolipid tabanlı testleri uzatması · **B)** Kanama eğilimi yapması · **C)** Trombositleri tüketmesi · **D)** Sifiliz testini pozitifleştirmesi · **E)** Faktör V'i inaktive etmesi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Fosfolipid tabanlı testleri uzatması** — Fosfolipid tabanlı testleri uzatması doğru: bu antikorlar laboratuvarda pıhtılaşma testlerini uzatır, oysa hasta canlıda tromboza eğilimlidir.\n- **Kanama eğilimi yapması** — Kanama eğilimi beklenmez; antifosfolipid antikor sendromu tekrarlayan venöz ve arteriyel trombozlarla seyreden yüksek riskli bir durumdur.\n- **Trombositleri tüketmesi** — Trombosit tüketimi heparine bağlı trombositopenide heparin–PF4 antikorlarıyla olur; adlandırmanın nedeni değildir.\n- **Sifiliz testini pozitifleştirmesi** — Sifiliz serolojisinde yalancı pozitiflik bu antikorların ayrı bir laboratuvar etkisidir; lupus antikoagülanı adını açıklamaz.\n- **Faktör V'i inaktive etmesi** — Faktör Va'yı inaktive eden aktif protein C ile protein S sistemidir; antifosfolipid antikorlarının etkisi değildir.\n\n**Cevap: A** — Fosfolipid tabanlı testleri uzatması\n\n**Özet.** Antifosfolipid antikorlar fosfolipid tabanlı pıhtılaşma testlerini uzattığı için lupus antikoagülanı adını alır; asıl hedefleri β₂-glikoprotein I gibi proteinlerdir.",
    "ses": "Antifosfolipid antikorlarına lupus antikoagülanı denmesinin nedeni hangisidir?\nA, Fosfolipid tabanlı testleri uzatması\nBe, Kanama eğilimi yapması\nCe, Trombositleri tüketmesi\nDe, Sifiliz testini pozitifleştirmesi\nE, faktör beşi inaktive etmesi\nŞıkları sırasıyla gözden geçirelim.\nFosfolipid tabanlı testleri uzatması doğru, bu antikorlar laboratuvarda pıhtılaşma testlerini uzatır, oysa hasta canlıda tromboza eğilimlidir.\nKanama eğilimi beklenmez, antifosfolipid antikor sendromu tekrarlayan venöz ve arteriyel trombozlarla seyreden yüksek riskli bir durumdur.\nTrombosit tüketimi heparine bağlı trombositopenide heparin ve pe fe dört antikorlarıyla olur, adlandırmanın nedeni değildir.\nSifiliz serolojisinde yalancı pozitiflik bu antikorların ayrı bir laboratuvar etkisidir, lupus antikoagülanı adını açıklamaz.\nFaktör beş a'yı inaktive eden aktif protein ce ile protein es sistemidir, antifosfolipid antikorlarının etkisi değildir.\nDoğru cevap A, Fosfolipid tabanlı testleri uzatması\nAntifosfolipid antikorlar fosfolipid tabanlı pıhtılaşma testlerini uzattığı için lupus antikoagülanı adını alır. Asıl hedefleri beta iki glikoprotein bir gibi proteinlerdir.",
    "kelime": 162
@@ -906,6 +1128,7 @@
   {
    "no": 52,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Libman–Sacks endokarditi hangi hastalıkla ilişkilidir?",
    "secenekler": {
     "A": "Bakteriyel enfeksiyon",
@@ -915,6 +1138,7 @@
     "E": "Aort anevrizması"
    },
    "dogru": "B",
+   "ipucu": "Kapak vejetasyonlarını enfektif, enfeksiyonsuz trombotik ve otoimmün hastalığa bağlı olarak üç gruba ayır.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Bakteriyel enfeksiyon enfektif endokardite yol açar; Libman–Sacks endokarditi ise ayrı bir kapak vejetasyonu türüdür.",
@@ -924,6 +1148,9 @@
     "E": "Aort anevrizması büyük damar lümeninde duvara yapışık mural trombüse zemin hazırlar; kapak vejetasyonu yapmaz."
    },
    "ozet": "Kapak trombüslerine vejetasyon denir; enfektif endokardit bakteriyel ya da fungaldir, Libman–Sacks endokarditi ise sistemik lupus eritematozusla ilişkilidir.",
+   "sayfa": [
+    53
+   ],
    "metin": "**Soru.** Libman–Sacks endokarditi hangi hastalıkla ilişkilidir?\n\n**A)** Bakteriyel enfeksiyon · **B)** Sistemik lupus eritematozus · **C)** Fungal enfeksiyon · **D)** Miyokard enfarktüsü · **E)** Aort anevrizması\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Bakteriyel enfeksiyon** — Bakteriyel enfeksiyon enfektif endokardite yol açar; Libman–Sacks endokarditi ise ayrı bir kapak vejetasyonu türüdür.\n- **Sistemik lupus eritematozus** — Sistemik lupus eritematozus doğru: Libman–Sacks endokarditi bu hastalıkla ilişkili kapak vejetasyonudur.\n- **Fungal enfeksiyon** — Fungal enfeksiyon da bakteriyel enfeksiyon gibi enfektif endokardit nedenidir; Libman–Sacks bu grupta yer almaz.\n- **Miyokard enfarktüsü** — Miyokard enfarktüsü sonrası diskinetik duvar mural trombüsün nedenidir; kapak vejetasyonuyla ilişkilendirilmez.\n- **Aort anevrizması** — Aort anevrizması büyük damar lümeninde duvara yapışık mural trombüse zemin hazırlar; kapak vejetasyonu yapmaz.\n\n**Cevap: B** — Sistemik lupus eritematozus\n\n**Özet.** Kapak trombüslerine vejetasyon denir; enfektif endokardit bakteriyel ya da fungaldir, Libman–Sacks endokarditi ise sistemik lupus eritematozusla ilişkilidir.",
    "ses": "Libman Saks endokarditi hangi hastalıkla ilişkilidir?\nA, Bakteriyel enfeksiyon\nBe, Sistemik lupus eritematozus\nCe, Fungal enfeksiyon\nDe, Miyokard enfarktüsü\nE, Aort anevrizması\nŞimdi seçeneklere tek tek bakalım.\nBakteriyel enfeksiyon enfektif endokardite yol açar, Libman Saks endokarditi ise ayrı bir kapak vejetasyonu türüdür.\nSistemik lupus eritematozus doğru, Libman Saks endokarditi bu hastalıkla ilişkili kapak vejetasyonudur.\nFungal enfeksiyon da bakteriyel enfeksiyon gibi enfektif endokardit nedenidir, Libman Saks bu grupta yer almaz.\nMiyokard enfarktüsü sonrası diskinetik duvar mural trombüsün nedenidir, kapak vejetasyonuyla ilişkilendirilmez.\nAort anevrizması büyük damar lümeninde duvara yapışık mural trombüse zemin hazırlar, kapak vejetasyonu yapmaz.\nDoğru cevap Be, Sistemik lupus eritematozus\nKapak trombüslerine vejetasyon denir, enfektif endokardit bakteriyel ya da fungaldir, Libman Saks endokarditi ise sistemik lupus eritematozusla ilişkilidir.",
    "kelime": 141
@@ -931,6 +1158,7 @@
   {
    "no": 53,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Miyokard enfarktüsü sonrası mural trombüs oluşumuna zemin hazırlayan durum hangisidir?",
    "secenekler": {
     "A": "Mitral stenoz",
@@ -940,6 +1168,7 @@
     "E": "Libman–Sacks endokarditi"
    },
    "dogru": "C",
+   "ipucu": "Enfarktüs alanındaki kalp kasının normal kasılamamasının odacık içi akıma etkisini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Mitral stenoz kapak hastalığı olarak türbülansa yol açar; miyokard enfarktüsü sonrası mural trombüsün nedeni değildir.",
@@ -949,6 +1178,10 @@
     "E": "Libman–Sacks endokarditi sistemik lupus eritematozusla ilişkili kapak vejetasyonudur; mural trombüs nedeni değildir."
    },
    "ozet": "Mural trombüs kalp odacığı ya da büyük damar duvarına yapışık pıhtıdır; nedenleri enfarktüs sonrası diskinetik duvar, kardiyomiyopati, miyokardit, aort anevrizması ve ülserleşmiş plaktır.",
+   "sayfa": [
+    53,
+    49
+   ],
    "metin": "**Soru.** Miyokard enfarktüsü sonrası mural trombüs oluşumuna zemin hazırlayan durum hangisidir?\n\n**A)** Mitral stenoz · **B)** Varisli venler · **C)** Diskinetik duvar segmenti · **D)** Prostetik kalp kapağı · **E)** Libman–Sacks endokarditi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Mitral stenoz** — Mitral stenoz kapak hastalığı olarak türbülansa yol açar; miyokard enfarktüsü sonrası mural trombüsün nedeni değildir.\n- **Varisli venler** — Varisli venler staz zemininde venöz tromboza yatkınlık yapar; kalp odacığında mural trombüs oluşturmaz.\n- **Diskinetik duvar segmenti** — Diskinetik duvar segmenti doğru: enfarktüs sonrası normal kasılamayan duvar üzerinde odacığa yapışık mural trombüs gelişir.\n- **Prostetik kalp kapağı** — Prostetik kalp kapağı yüksek riskli bir edinsel durumdur ama enfarktüsün oluşturduğu duvar değişikliğiyle ilişkili değildir.\n- **Libman–Sacks endokarditi** — Libman–Sacks endokarditi sistemik lupus eritematozusla ilişkili kapak vejetasyonudur; mural trombüs nedeni değildir.\n\n**Cevap: C** — Diskinetik duvar segmenti\n\n**Özet.** Mural trombüs kalp odacığı ya da büyük damar duvarına yapışık pıhtıdır; nedenleri enfarktüs sonrası diskinetik duvar, kardiyomiyopati, miyokardit, aort anevrizması ve ülserleşmiş plaktır.",
    "ses": "Miyokard enfarktüsü sonrası mural trombüs oluşumuna zemin hazırlayan durum hangisidir?\nA, Mitral stenoz\nBe, Varisli venler\nCe, Diskinetik duvar segmenti\nDe, Prostetik kalp kapağı\nE, Libman Saks endokarditi\nSeçenekleri sırayla değerlendirelim.\nMitral stenoz kapak hastalığı olarak türbülansa yol açar, miyokard enfarktüsü sonrası mural trombüsün nedeni değildir.\nVarisli venler staz zemininde venöz tromboza yatkınlık yapar, kalp odacığında mural trombüs oluşturmaz.\nDiskinetik duvar segmenti doğru, enfarktüs sonrası normal kasılamayan duvar üzerinde odacığa yapışık mural trombüs gelişir.\nProstetik kalp kapağı yüksek riskli bir edinsel durumdur ama enfarktüsün oluşturduğu duvar değişikliğiyle ilişkili değildir.\nLibman Saks endokarditi sistemik lupus eritematozusla ilişkili kapak vejetasyonudur, mural trombüs nedeni değildir.\nDoğru cevap Ce, Diskinetik duvar segmenti\nMural trombüs kalp odacığı ya da büyük damar duvarına yapışık pıhtıdır, nedenleri enfarktüs sonrası diskinetik duvar, kardiyomiyopati, miyokardit, aort anevrizması ve ülserleşmiş plaktır.",
    "kelime": 158
@@ -956,6 +1189,7 @@
   {
    "no": 54,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Endotel, düz kas ve fibroblastların trombüs içine büyüyüp kılcal kanallar oluşturduğu akıbet hangisidir?",
    "secenekler": {
     "A": "Yayılma",
@@ -965,6 +1199,7 @@
     "E": "Zahn çizgisi oluşumu"
    },
    "dogru": "D",
+   "ipucu": "Trombüsün ortadan kalkmayıp dokuya dönüştüğü ve lümenin kısmen yeniden açıldığı sonucu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Yayılma trombüsün büyümesi ve damar tıkanıklığının artmasıdır; içine hücre büyümesi yoktur.",
@@ -974,6 +1209,11 @@
     "E": "Zahn çizgisi oluşumu akan kanda gelişen trombüsün katmanlı yapısıdır; trombüsün akıbetlerinden biri değildir."
    },
    "ozet": "Trombüsün dört akıbeti yayılma, embolizasyon, fibrinolizle çözünme ve organizasyon ile rekanalizasyondur; organizasyonda kılcal kanallar kısmi lümen açıklığı sağlar.",
+   "sayfa": [
+    55,
+    50,
+    51
+   ],
    "metin": "**Soru.** Endotel, düz kas ve fibroblastların trombüs içine büyüyüp kılcal kanallar oluşturduğu akıbet hangisidir?\n\n**A)** Yayılma · **B)** Embolizasyon · **C)** Çözünme · **D)** Organizasyon ve rekanalizasyon · **E)** Zahn çizgisi oluşumu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Yayılma** — Yayılma trombüsün büyümesi ve damar tıkanıklığının artmasıdır; içine hücre büyümesi yoktur.\n- **Embolizasyon** — Embolizasyon trombüs parçalarının kopup başka yerlere gitmesidir; derin ven trombozundan pulmoner emboli bunun örneğidir.\n- **Çözünme** — Çözünme yeni trombüslerin fibrinolizle tamamen ortadan kalkmasıdır; hücresel içe büyüme olmaz.\n- **Organizasyon ve rekanalizasyon** — Organizasyon ve rekanalizasyon doğru: trombüs içine endotel, düz kas ve fibroblastlar büyür, kılcal kanallar kısmi lümen açıklığı sağlar.\n- **Zahn çizgisi oluşumu** — Zahn çizgisi oluşumu akan kanda gelişen trombüsün katmanlı yapısıdır; trombüsün akıbetlerinden biri değildir.\n\n**Cevap: D** — Organizasyon ve rekanalizasyon\n\n**Özet.** Trombüsün dört akıbeti yayılma, embolizasyon, fibrinolizle çözünme ve organizasyon ile rekanalizasyondur; organizasyonda kılcal kanallar kısmi lümen açıklığı sağlar.",
    "ses": "Endotel, düz kas ve fibroblastların trombüs içine büyüyüp kılcal kanallar oluşturduğu akıbet hangisidir?\nA, Yayılma\nBe, Embolizasyon\nCe, Çözünme\nDe, Organizasyon ve rekanalizasyon\nE, Zan çizgisi oluşumu\nHer seçeneği tek tek ele alalım.\nYayılma trombüsün büyümesi ve damar tıkanıklığının artmasıdır, içine hücre büyümesi yoktur.\nEmbolizasyon trombüs parçalarının kopup başka yerlere gitmesidir, derin ven trombozundan pulmoner emboli bunun örneğidir.\nÇözünme yeni trombüslerin fibrinolizle tamamen ortadan kalkmasıdır, hücresel içe büyüme olmaz.\nOrganizasyon ve rekanalizasyon doğru, trombüs içine endotel, düz kas ve fibroblastlar büyür, kılcal kanallar kısmi lümen açıklığı sağlar.\nZan çizgisi oluşumu akan kanda gelişen trombüsün katmanlı yapısıdır, trombüsün akıbetlerinden biri değildir.\nDoğru cevap De, Organizasyon ve rekanalizasyon\nTrombüsün dört akıbeti yayılma, embolizasyon, fibrinolizle çözünme ve organizasyon ile rekanalizasyondur, organizasyonda kılcal kanallar kısmi lümen açıklığı sağlar.",
    "kelime": 150

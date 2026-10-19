@@ -3,7 +3,7 @@
 @@ Gebelik hastalıklarının önemi ve plasental enfeksiyonlar
 Plasenta ve gebelikle ilişkili hastalıklar hem annenin hem de fetüs ve yenidoğanın hastalanmasına ve ölümüne önemli katkı yapar. Bu yüzden bu hastalıkların morfolojik lezyonlarını bilmek, klinikte gördüğümüz tabloyu anlamayı çok kolaylaştırır. Bu derste sırasıyla plasental enfeksiyonları ve inflamasyonları, ektopik gebeliği, preeklampsi ve eklampsiyi, gebelik trofoblastik hastalıklarını ve son olarak meme lobül ve kanal yapısının patoloji açısından önemini konuşacağız.
 
-Plasentaya enfeksiyon iki yolla ulaşır. Birincisi doğum kanalından yukarı doğru, yani asendan yoldur. İkincisi anne kanı aracılığıyla gelen hematojen, diğer adıyla transplasental yoldur. Plasental enfeksiyonların klinik sonuçları erken membran rüptürü, preterm doğum ve fetüsün enfeksiyonudur. Preterm ya da erken doğum, gebeliğin yirminci ile otuz yedinci haftaları arasında gerçekleşen doğum demektir.
+Plasentaya enfeksiyon iki yolla ulaşır. 1.'si doğum kanalından yukarı doğru, yani asendan yoldur. 2.'si anne kanı aracılığıyla gelen hematojen, diğer adıyla transplasental yoldur. Plasental enfeksiyonların klinik sonuçları erken membran rüptürü, preterm doğum ve fetüsün enfeksiyonudur. Preterm ya da erken doğum, gebeliğin 20. ile otuz 7. haftaları arasında gerçekleşen doğum demektir.
 
 @@ Asendan enfeksiyonlar, akut koryoamniyonit ve funisitis
 Asendan enfeksiyonlar en sık görülen yoldur. Neredeyse her zaman bakteriyeldir ve genellikle polimikrobiyaldir; etkenler vajinal floradan gelen bakteriler ve enterik bakterilerdir. Bu enfeksiyonlar sıklıkla erken membran yırtılmasına ve erken doğuma neden olur. Yani bakteriler aşağıdan yukarı tırmanır, zarları zayıflatır ve gebeliği vaktinden önce sonlandırabilir.
@@ -20,7 +20,7 @@ Er harfi rubelladır; kızamıkçık virüsüdür ve öksürük ya da hapşırma
 Torç enfeksiyonlarında plasentadaki tablo asendan enfeksiyondan farklıdır. Koryon villuslarında kronik inflamatuvar infiltrasyon görülür ve buna kronik villit denir. Yani akut koryoamniyonit asendan enfeksiyonu, kronik villit ise hematojen enfeksiyonu düşündürür. Etken fetüse yayılırsa ensefalit, koryoretinit ve diğer organ hasarları oluşur. Uzun dönemde zihinsel gerilik, kalp anomalileri ve diğer konjenital malformasyonlar sekel olarak kalabilir.
 
 @@ Ektopik gebelik: tanım, yerleşim ve risk faktörleri
-Ektopik gebelik, embriyonun uterus kavitesi dışında implante olmasıdır. En sık yerleşim yeri yaklaşık yüzde doksan ile Fallop tüpünün uterus dışındaki kısmıdır. Burası önemli, bu bilgi çıkmış sorularda soruldu: ektopik gebelik en sık tubada görülür. Diğer yerleşimler ovaryum, karın boşluğu yani abdominal gebelik ve tüpün uterus içindeki kısmıdır; sonuncusuna korneal gebelik denir ve tüplerin uterusla birleştiği kornu ya da interstisyel bölgeye implantasyonu anlatır. Ektopik gebelik doğrulanmış gebeliklerin yaklaşık yüzde ikisinde görülür.
+Ektopik gebelik, embriyonun uterus kavitesi dışında implante olmasıdır. En sık yerleşim yeri yaklaşık %90 ile Fallop tüpünün uterus dışındaki kısmıdır. Burası önemli, bu bilgi çıkmış sorularda soruldu: ektopik gebelik en sık tubada görülür. Diğer yerleşimler ovaryum, karın boşluğu yani abdominal gebelik ve tüpün uterus içindeki kısmıdır; sonuncusuna korneal gebelik denir ve tüplerin uterusla birleştiği kornu ya da interstisyel bölgeye implantasyonu anlatır. Ektopik gebelik doğrulanmış gebeliklerin yaklaşık yüzde ikisinde görülür.
 
 Ektopik gebeliğe en önemli yatkınlık pelvik inflamatuvar hastalıktır. Asıl sorun kronik salpingittir: tüp lümeninde skarlaşma, daralma ve tıkanma olur, embriyo uterusa ulaşamadan tüpte yerleşir. Burası önemli, bu bilgi çıkmış sorularda soruldu: ektopik gebeliğin en önemli nedeni kronik salpenjite bağlı pelvik inflamatuvar hastalıktır ve tüp kanalındaki nedbe oluşumu tubal bir risk faktörüdür. Diğer nedenler uterus içi tümörler, endometriozis ve apandisit ya da önceki cerrahi sonrası gelişen peritübal skardır. Kordondaki akut vaskülit yani funisitis ise ektopik gebelik nedeni olamaz.
 
@@ -37,9 +37,9 @@ Rüptür öncesinde adet gecikmesi ve idrarda, serumda gebelik hormonu olan insa
 Rüptüre tubal gebelik acil cerrahi gerektirir; amaç kanamayı kontrol etmek ve tüpü onarmak ya da çıkarmaktır. Erken tanıda transvajinal ultrason ve serumda insan koryonik gonadotropinin seri ölçümleri kullanılır.
 
 @@ Preeklampsi ve eklampsi: tanım ve klinik tanı
-Preeklampsi, gebelik sırasında gelişen sistemik bir sendromdur ve temel mekanizması annedeki endotel disfonksiyonudur. Gebelerin yüzde üç ile beşinde görülür ve ilk gebelikte daha sıktır. Preeklampsiye konvülziyonlar eklendiğinde buna eklampsi denir; eklampsi şiddetli formdur.
+Preeklampsi, gebelik sırasında gelişen sistemik bir sendromdur ve temel mekanizması annedeki endotel disfonksiyonudur. Gebelerin %3 ile beşinde görülür ve ilk gebelikte daha sıktır. Preeklampsiye konvülziyonlar eklendiğinde buna eklampsi denir; eklampsi şiddetli formdur.
 
-Preeklampsi genellikle son trimesterde başlar. Tipik üçlüsü hipertansiyon, ödem ve proteinüridir. Burası önemli, bu bilgi çıkmış sorularda soruldu: gebeliğin üçüncü trimesterinde proteinüri ve ödemin eşlik ettiği hipertansiyona preeklampsi, buna konvülziyon eklenmesine eklampsi denir. Erken tanı ve tedavi sayesinde eklampsi ve anne ölümü riski belirgin şekilde azalmıştır.
+Preeklampsi genellikle son trimesterde başlar. Tipik üçlüsü hipertansiyon, ödem ve proteinüridir. Burası önemli, bu bilgi çıkmış sorularda soruldu: gebeliğin 3. trimesterinde proteinüri ve ödemin eşlik ettiği hipertansiyona preeklampsi, buna konvülziyon eklenmesine eklampsi denir. Erken tanı ve tedavi sayesinde eklampsi ve anne ölümü riski belirgin şekilde azalmıştır.
 
 @@ Preeklampsinin patogenezi: spiral arterler
 Tüm olguların ortak özelliği utero plasental vasküler havuzdaki yetmezliktir. Zincir şöyle işler: spiral arterler yeterince yeniden şekillenmez, plasentaya giden anne kanı azalır, sonuçta plasental hipoksi ve disfonksiyon gelişir.
@@ -47,7 +47,7 @@ Tüm olguların ortak özelliği utero plasental vasküler havuzdaki yetmezlikti
 Normal gebelikte ne olduğunu bilirsek patolojiyi daha iyi anlarız. Normalde spiral arterlerin kas elastik duvarları trofoblastlar tarafından istila edilir ve damarlar geniş vasküler sinüzoidlere dönüşür. Sonuç, plasentaya düşük dirençli ve yüksek akımlı bir perfüzyondur. Preeklampsi ve eklampside ise bu vasküler yeniden şekillenme bozulur; kas elastik duvarlar korunur ve lümenler dar kalır. Bunun sonucu azalmış utero plasental kan akımı ve plasental hipoksidir.
 
 @@ Anjiyojenik denge, vasküler sonuçlar ve hiperkoagülabilite
-Hipoksik plasenta, anjiyogenezi düzenleyen faktörlerin dengesini bozar. Anti anjiyojenik faktörler artar: bunlar çözünür eff em es benzeri tirozin kinaz bir ve endoglindir. Eff em es, Feline Makdonu sarkomu ifadesinden gelir; endoglin ise ce de yüz beş olarak da bilinen, dokuzuncu kromozomda kodlanan ve özellikle vasküler endotelde yoğun bulunan tip bir transmembran glikoproteindir. Bu faktörler vasküler endotelyal büyüme faktörü ile transforme edici büyüme faktörü betanın etkilerini antagonize eder ve endotel disfonksiyonunu tetikler.
+Hipoksik plasenta, anjiyogenezi düzenleyen faktörlerin dengesini bozar. Anti anjiyojenik faktörler artar: bunlar çözünür eff em es benzeri tirozin kinaz bir ve endoglindir. Eff em es, Feline Makdonu sarkomu ifadesinden gelir; endoglin ise ce de yüz beş olarak da bilinen, 9. kromozomda kodlanan ve özellikle vasküler endotelde yoğun bulunan Tip 1 transmembran glikoproteindir. Bu faktörler vasküler endotelyal büyüme faktörü ile transforme edici büyüme faktörü betanın etkilerini antagonize eder ve endotel disfonksiyonunu tetikler.
 
 Endotel disfonksiyonu vasküler hiperreaktiviteye ve uç organlarda mikroanjiyopatiye yol açar. Plasentada kronik hipoperfüzyon enfarktüse neden olur. Sistemik düzeyde ise hipertansiyon, hiperkoagülabilite ve organ hasarı gelişir.
 
@@ -62,7 +62,7 @@ Preeklampside plasentada enfarktlar artar. Enfarkt normal gebelikte de olabilir,
 Desidual damarlar da anormaldir. Fibrinoid nekroz ve lipid içeren makrofaj birikimi görülür; bu görünüme akut aterozis denir. Bu vaskülopati plasental perfüzyon bozukluğunu daha da artırır, yani kısır bir döngü oluşur.
 
 @@ Preeklampsi ve eklampside klinik seyir, tedavi ve prognoz
-Preeklampsi en sık otuz dördüncü gebelik haftasından sonra başlar. Ancak hidatiform molde ve önceden var olan böbrek hastalığı, hipertansiyon ya da koagülasyon bozukluklarında daha erken ortaya çıkabilir.
+Preeklampsi en sık otuz 4. gebelik haftasından sonra başlar. Ancak hidatiform molde ve önceden var olan böbrek hastalığı, hipertansiyon ya da koagülasyon bozukluklarında daha erken ortaya çıkabilir.
 
 Preeklampsi eklampsiye ilerlerse kan basıncı daha da yükselir ve böbrek fonksiyonu bozulur. Klinikte konvülziyonlar ve koma görülür. En sık yetmezliğe giren organlar böbrek ve karaciğerdir.
 
@@ -78,7 +78,7 @@ Mol her yaşta gelişebilir, ancak risk ergenlik döneminde ve kırk ile elli ya
 @@ Tam ve kısmi mol: temel farklar ve karşılaştırma tablosu
 Tam hidatiform mol embriyogenezle uyumlu değildir, fetal parçalar nadirdir ve tüm koryonik villuslar anormaldir. Epitel hücreleri diploittir; karyotip kırk altı iks iks, nadiren kırk altı iks ye şeklindedir. Kısmi molde ise erken embriyo oluşumu olabilir, fetal parçalar sıktır, bazı normal villuslar bulunur ve karyotip neredeyse her zaman triploittir, örneğin altmış dokuz iks iks ye.
 
-Tablo on yedi nokta beş iki molü karşılaştırır. Karyotip tam molde diploit, parsiyel molde triploittir. Villöz ödem tam molde tüm villuslarda, parsiyel molde bazı villuslardadır. Trofoblast proliferasyonu tam molde diffüz ve villusu çepeçevre saran, parsiyel molde fokal ve hafiftir. Serum gonadotropini tam molde gebelik haftasına göre yüksek, parsiyelde daha az yüksektir; dokuda da tam molde çok güçlü, parsiyelde zayıf boyanır. Sonraki koryokarsinom riski tam molde yüzde iki buçuk, parsiyel molde nadirdir.
+Tablo on yedi nokta beş iki molü karşılaştırır. Karyotip tam molde diploit, parsiyel molde triploittir. Villöz ödem tam molde tüm villuslarda, parsiyel molde bazı villuslardadır. Trofoblast proliferasyonu tam molde diffüz ve villusu çepeçevre saran, parsiyel molde fokal ve hafiftir. Serum gonadotropini tam molde gebelik haftasına göre yüksek, parsiyelde daha az yüksektir; dokuda da tam molde çok güçlü, parsiyelde zayıf boyanır. Sonraki koryokarsinom riski tam molde %2 buçuk, parsiyel molde nadirdir.
 
 Burası önemli, bu bilgi çıkmış sorularda soruldu: parsiyel mol diploit değil triploittir, örneğin altmış dokuz iks iks ye; komplet molde tüm villuslarda yaygın ödem ve çepeçevre trofoblast proliferasyonu vardır; komplet mollerin yaklaşık yüzde ikisinde koryokarsinom gelişirken parsiyelde bu risk nadirdir. Komplet molde karyotipin triploit olduğunu söyleyen ifade yanlıştır. Ayrıca tam molde trofoblastik proliferasyon ve atipi daha belirgindir; kısmi molde ise normal ve hidropik villuslar bir aradadır.
 
@@ -111,13 +111,13 @@ Tedavide derin miyometriyal invazyon nedeniyle cerrahi eksizyon zordur ve küret
 @@ Gebelik koryokarsinomu
 Gebelik koryokarsinomu çok agresif, malign bir trofoblastik tümördür. Gebeliğin koryonik epitelinden köken alır; nadiren ovaryum ya da testis içindeki totipotent hücrelerden gelişir. Sıklığı yaklaşık yirmi ile otuz bin gebelikte birdir.
 
-Kaynak gebeliklerin yaklaşık yüzde ellisi tam hidatiform mol, yaklaşık yüzde yirmi beşi önceki düşükler, yaklaşık yüzde yirmi ikisi normal gebeliktir; kalanı ektopik gebeliklerden sonra gelişir. Burası önemli, bu bilgi çıkmış sorularda soruldu: koryokarsinom en sık komplet mol gebelikten sonra gelişir; olguların yarısı komplet molden, dörtte biri düşüklerden sonra ortaya çıkar.
+Kaynak gebeliklerin yaklaşık yüzde ellisi tam hidatiform mol, yaklaşık %20 beşi önceki düşükler, yaklaşık %20 ikisi normal gebeliktir; kalanı ektopik gebeliklerden sonra gelişir. Burası önemli, bu bilgi çıkmış sorularda soruldu: koryokarsinom en sık komplet mol gebelikten sonra gelişir; olguların yarısı komplet molden, dörtte biri düşüklerden sonra ortaya çıkar.
 
 Çoğu olguda uterus belirgin büyümez. Tipik bulgu kanlı, kahverengi vajinal akıntı ile serum ve idrarda hızla yükselen gonadotropin titreleridir. Tümör erken yayılır ve tanı anında genellikle metastaz vardır.
 
 Makroskopide hemorajik, nekrotik bir uterus kitlesi görülür; canlı tümör çok az olabilir, bazen yalnız metastatik odaklarda bulunur. Histolojide en kritik nokta koryonik villus bulunmamasıdır. Tümör anaplastik sitotrofoblastlar ve sinsityotrofoblastlardan oluşan solid bir yapıdır ve bol, bazen anormal mitozlar içerir. Şekil on yedi nokta yirmi iki hem neoplastik sitotrofoblastı hem de oklarla gösterilen çok çekirdekli sinsityotrofoblastı içerir. Yani invaziv molde villus korunur, koryokarsinomda villus yoktur.
 
-Koryokarsinom hematojen yayılır, lenfatik yayılım nadirdir. En sık metastaz yerleri yaklaşık yüzde elli ile akciğer, yüzde otuz ile kırk arasında vajina, ayrıca beyin, karaciğer ve böbrektir. Plasental yani gestasyonel koryokarsinom kemoterapiye son derece duyarlıdır ve uzak metastaz olsa bile neredeyse yüzde yüz kür sağlanır. Ovaryan ya da testiküler gonadal koryokarsinom ise kemoterapiye daha dirençlidir ve prognozu daha kötüdür.
+Koryokarsinom hematojen yayılır, lenfatik yayılım nadirdir. En sık metastaz yerleri yaklaşık %50 ile akciğer, %30 ile kırk arasında vajina, ayrıca beyin, karaciğer ve böbrektir. Plasental yani gestasyonel koryokarsinom kemoterapiye son derece duyarlıdır ve uzak metastaz olsa bile neredeyse %100 kür sağlanır. Ovaryan ya da testiküler gonadal koryokarsinom ise kemoterapiye daha dirençlidir ve prognozu daha kötüdür.
 
 @@ Plasental bölge trofoblastik tümörü
 Plasental bölge trofoblastik tümörü, gestasyonel trofoblastik neoplazilerin yüzde ikisinden azını oluşturur. Ekstravillöz trofoblastlardan, yani ara trofoblastlardan köken alır. Burası önemli, bu bilgi çıkmış sorularda soruldu: plasental bölge trofoblastik tümörü intermediyer yani ara trofoblasttan kaynaklanır. Bu hücreler normalde sitotrofoblasttan çoğalır ve annenin desidua ve miyometriyumunu istila eder.

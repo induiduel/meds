@@ -422,9 +422,9 @@
 
 /* tam ekran: kabuk gizli, katman ölçeği 1 (v12 zoom'u geri alınır), oynatıcı varsayılan olarak açık */
 :root.cd-tam-ekran, :root.cd-tam-ekran body { overflow: hidden; overscroll-behavior: none; }
-:root.cd-tam-ekran .cd-ders.is-tam { position: fixed; inset: 0; z-index: 80; width: 100%; height: 100%; max-width: 100vw; max-height: 100dvh; min-height: 0; margin: 0; box-sizing: border-box; overflow: hidden;
+:root.cd-tam-ekran .cd-ders.is-tam { position: fixed; top: var(--vvt, 0px); right: 0; bottom: auto; left: 0; z-index: 80; width: 100%; height: var(--vvh, 100dvh); max-width: 100vw; max-height: var(--vvh, 100dvh); min-height: 0; margin: 0; box-sizing: border-box; overflow: hidden;
   padding: calc(8px + env(safe-area-inset-top, 0px)) 12px calc(8px + env(safe-area-inset-bottom, 0px)); background: var(--color-canvas); overscroll-behavior: contain; }
-:root.kb-open.cd-tam-ekran .cd-ders.is-tam { top: var(--vvt, 0px); bottom: auto; height: var(--vvh, 100dvh); }
+
 :root[data-design='v12'] .sh-main:has(.cd-ders.is-tam) > * { zoom: 1 !important; --in-zoom: 1 !important; animation: none !important; transform: none !important; }
 :root[data-design='v12'] .sh-main .cd-ders.is-tam { zoom: 1; --in-zoom: 1; --read-size: calc(16px * var(--txt-zoom, 1)); }
 :root.cd-tam-oynatici .cd-ders.is-tam { padding-bottom: calc(var(--cd-dock-h, 0px) + 6px); }

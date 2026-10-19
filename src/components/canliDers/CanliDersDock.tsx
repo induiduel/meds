@@ -27,16 +27,23 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;
+    const vv = window.visualViewport;
     let t = 0;
     const olc = () => {
       t = 0;
       const kok = document.documentElement;
       const tamFs = kok.classList.contains('cd-tam-ekran') || kok.classList.contains('is-app-fullscreen');
       const tabs = document.querySelector<HTMLElement>('.s12-tabs, .sh-tabs');
-      let b = 0;
+      // Görünür alanı visualViewport'tan ölç: iOS Safari/Chrome'da adres çubuğu ve klavye
+      // window.innerHeight'i değiştirmeden görünür alanı kaydırır; dock aksi hâlde tarayıcı
+      // altlığının altında/klavyenin arkasında kalıyordu.
+      const viewH = Math.round(vv?.height || window.innerHeight);
+      const viewTop = Math.round(vv?.offsetTop || 0);
+      const viewBottom = viewTop + viewH;
+      let b = Math.max(0, window.innerHeight - viewBottom);
       if (!tamFs && tabs && getComputedStyle(tabs).display !== 'none') {
         const r = tabs.getBoundingClientRect();
-        if (r.height > 0 && r.top < window.innerHeight) b = Math.max(0, window.innerHeight - r.top);
+        if (r.height > 0 && r.top < viewBottom) b = Math.max(b, viewBottom - r.top);
       }
       setAlt(b);
       const gizli = getComputedStyle(el).display === 'none';
@@ -54,6 +61,8 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
     const tabs = document.querySelector('.s12-tabs, .sh-tabs');
     if (tabs) ro.observe(tabs);
     window.addEventListener('resize', plan);
+    vv?.addEventListener('resize', plan);
+    vv?.addEventListener('scroll', plan);
     window.addEventListener('cd:tam-ekran', fsPlan);
     window.addEventListener('medsor:fullscreenchange', fsPlan);
     document.addEventListener('fullscreenchange', fsPlan);
@@ -63,6 +72,8 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
       window.clearTimeout(t);
       ro.disconnect();
       window.removeEventListener('resize', plan);
+      vv?.removeEventListener('resize', plan);
+      vv?.removeEventListener('scroll', plan);
       window.removeEventListener('cd:tam-ekran', fsPlan);
       window.removeEventListener('medsor:fullscreenchange', fsPlan);
       document.removeEventListener('fullscreenchange', fsPlan);

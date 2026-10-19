@@ -30,12 +30,15 @@ import { installSelectionShare } from './utils/selectionShare';
 import { installStudyTimer } from './services/activityLog';
 import { applyTheme, readTheme } from './utils/theme';
 import { applyUiVersion } from './utils/uiVersion';
+import { markDeviceClasses } from './utils/device';
 import { pwaService } from './services/pwaService';
 import { offlineDatabaseService } from './services/offlineDatabaseService';
 import { arkaPlanPushKur } from './services/arkaPlanPush';
 
 applyTheme(readTheme());
 applyUiVersion();
+// iOS/iPadOS sınıfları: zoom ve tam ekran CSS kuralları bu sınıflara bağlı (macOS Safari'yi etkilemez).
+markDeviceClasses();
 
 // PWA & Çevrimdışı Servis Başlatıcı
 if (typeof window !== 'undefined') {
@@ -61,7 +64,9 @@ if (typeof window !== 'undefined') {
     const h = Math.round(vv ? vv.height : window.innerHeight);
     const typing = !!(document.activeElement as HTMLElement | null)?.closest?.('input,textarea,select,[contenteditable="true"]');
     const kb = (typing && h < window.innerHeight * 0.8) || (typing && !!vv && vv.height < screen.height * 0.6);
-    const t = kb && vv ? Math.max(0, Math.round(vv.offsetTop)) : 0;
+    // offsetTop yalnız klavyede değil, iOS'ta adres çubuğu/kaydırma sırasında da görünür alanı
+    // kaydırabilir. Her zaman yaz: tam ekran katmanları `top: var(--vvt)` ile hizalanır.
+    const t = vv ? Math.max(0, Math.round(vv.offsetTop)) : 0;
     if (h !== lastH) { lastH = h; root.style.setProperty('--vvh', `${h}px`); }
     if (t !== lastT) { lastT = t; root.style.setProperty('--vvt', `${t}px`); }
     if (kb !== lastKb) { lastKb = kb; root.classList.toggle('kb-open', kb); }

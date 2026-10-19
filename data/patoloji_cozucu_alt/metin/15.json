@@ -1,7 +1,8 @@
 {
  "kod": "15",
+ "no": 15,
  "baslik": "Genetik, Pediatrik ve Çevresel Patoloji",
- "surum": "alt-1",
+ "surum": "alt-2",
  "sorular": [
   {
    "no": 1,
@@ -15,6 +16,7 @@
     "E": "HER2"
    },
    "dogru": "B",
+   "ipucu": "Aort duvarı, bağlar ve lensin askı liflerinde ortak olan, mikrofibrillerin ana bileşenini kodlayan geni düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "CFTR kistik fibroziste bozulan klorür ve bikarbonat kanalının genidir; otozomal resesif bir epitel iyon kanalı hastalığına yol açar.",
@@ -24,6 +26,12 @@
     "E": "HER2 amplifikasyonu trastuzumab tedavisinin hedefidir; bir büyüme faktörü reseptörüdür, fibrillin gibi yapısal protein değildir."
    },
    "ozet": "Marfan sendromu FBN1 mutasyonuyla oluşan otozomal dominant bağ dokusu hastalığıdır; araknodaktili, lens subluksasyonu ve aort kökü dilatasyonu tipiktir.",
+   "sayfa": [
+    15,
+    16,
+    19,
+    61
+   ],
    "metin": "**Soru.** Marfan sendromunda mutasyona uğrayan gen hangisidir?\n\n**A)** CFTR · **B)** FBN1 · **C)** EGFR · **D)** BRAF · **E)** HER2\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **CFTR** — CFTR kistik fibroziste bozulan klorür ve bikarbonat kanalının genidir; otozomal resesif bir epitel iyon kanalı hastalığına yol açar.\n- **FBN1** — FBN1 doğru: fibrillin-1'i kodlar; mutasyonunda aort duvarı, bağlar ve lensi tutan siliyer zonüller zayıflar.\n- **EGFR** — EGFR mutasyonları onkolojide tirozin kinaz inhibitörleriyle hedeflenen değişikliklerdir; kalıtsal bağ dokusu hastalığıyla ilişkili değildir.\n- **BRAF** — BRAF V600E mutasyonu tümörlerde seçilmiş BRAF inhibitörleriyle hedeflenir; Marfan sendromunun geni değildir.\n- **HER2** — HER2 amplifikasyonu trastuzumab tedavisinin hedefidir; bir büyüme faktörü reseptörüdür, fibrillin gibi yapısal protein değildir.\n\n**Cevap: B** — FBN1\n\n**Özet.** Marfan sendromu FBN1 mutasyonuyla oluşan otozomal dominant bağ dokusu hastalığıdır; araknodaktili, lens subluksasyonu ve aort kökü dilatasyonu tipiktir.",
    "ses": "Marfan sendromunda mutasyona uğrayan gen hangisidir?\nA, Ce fe te re\nBe, Fe be ne bir\nCe, E ge fe re\nDe, Be raf\nE, Her tu\nSeçenekleri sırayla değerlendirelim.\nCe fe te re kistik fibroziste bozulan klorür ve bikarbonat kanalının genidir. Otozomal resesif bir epitel iyon kanalı hastalığına yol açar.\nFe be ne bir doğru. Fibrillin bir proteinini kodlar, mutasyonunda aort duvarı, bağlar ve lensi tutan siliyer zonüller zayıflar.\nE ge fe re mutasyonları onkolojide tirozin kinaz inhibitörleriyle hedeflenen değişikliklerdir. Kalıtsal bağ dokusu hastalığıyla ilişkili değildir.\nBe raf ve altı yüz e mutasyonu tümörlerde seçilmiş be raf inhibitörleriyle hedeflenir. Marfan sendromunun geni değildir.\nHer tu amplifikasyonu trastuzumab tedavisinin hedefidir. Bir büyüme faktörü reseptörüdür, fibrillin gibi yapısal protein değildir.\nDoğru cevap Be, Fe be ne bir\nMarfan sendromu fe be ne bir mutasyonuyla oluşan otozomal dominant bağ dokusu hastalığıdır. Araknodaktili, lens subluksasyonu ve aort kökü dilatasyonu tipiktir.",
    "kelime": 135
@@ -40,18 +48,25 @@
     "E": "Leptin direnci"
    },
    "dogru": "C",
+   "ipucu": "Fibrillin normalde bir büyüme faktörünü bağlayıp tutar; bu bağlama bozulunca o faktörün etkisine ne olacağını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
-    "A": "Elastaz eksikliği ile karıştırılabilir: Elastaz ile antielastaz dengesizliği tütünün amfizem gibi akciğer hasarı yapma mekanizmasıdır.",
+    "A": "Elastaz eksikliği değil, alfa-1 antitripsin eksikliğinde artan elastaz aktivitesi akciğerde amfizem yapar; Marfan sendromunda ise fibrillin-1 kusuru nedeniyle mikrofibriller TGF-beta'yı bağlayamaz ve aşırı TGF-beta sinyali aort medya tabakasını zayıflatır.",
     "B": "Kollajen fazlalığı Marfan sendromunu açıklamaz; bu hastalıkta sorun fibrillin kusuruyla elastik lif bütünlüğünün bozulmasıdır.",
     "C": "TGF-β sinyal artışı doğru: kusurlu fibrillin TGF-β'yı düzenleyemez, artan sinyal hücre dışı matriksi ve damar duvarını zayıflatır.",
     "D": "Klorür kanal kusuru kistik fibrozisin temelidir; CFTR bozulunca mukus dehidrate ve visköz olur.",
     "E": "Leptin direnci obezitede görülür; leptin düzeyi yüksek olduğu hâlde etkisi yetersizdir, bağ dokusu zayıflığıyla ilgisi yoktur."
    },
    "ozet": "Fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler; kusurunda elastik lif bütünlüğü bozulur, artan TGF-β sinyali hücre dışı matriksi zayıflatır.",
-   "metin": "**Soru.** Marfan sendromunda damar duvarı zayıflamasına yol açan ana mekanizma hangisidir?\n\n**A)** Elastaz eksikliği · **B)** Kollajen fazlalığı · **C)** TGF-β sinyal artışı · **D)** Klorür kanal kusuru · **E)** Leptin direnci\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Elastaz eksikliği** — Elastaz eksikliği ile karıştırılabilir: Elastaz ile antielastaz dengesizliği tütünün amfizem gibi akciğer hasarı yapma mekanizmasıdır.\n- **Kollajen fazlalığı** — Kollajen fazlalığı Marfan sendromunu açıklamaz; bu hastalıkta sorun fibrillin kusuruyla elastik lif bütünlüğünün bozulmasıdır.\n- **TGF-β sinyal artışı** — TGF-β sinyal artışı doğru: kusurlu fibrillin TGF-β'yı düzenleyemez, artan sinyal hücre dışı matriksi ve damar duvarını zayıflatır.\n- **Klorür kanal kusuru** — Klorür kanal kusuru kistik fibrozisin temelidir; CFTR bozulunca mukus dehidrate ve visköz olur.\n- **Leptin direnci** — Leptin direnci obezitede görülür; leptin düzeyi yüksek olduğu hâlde etkisi yetersizdir, bağ dokusu zayıflığıyla ilgisi yoktur.\n\n**Cevap: C** — TGF-β sinyal artışı\n\n**Özet.** Fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler; kusurunda elastik lif bütünlüğü bozulur, artan TGF-β sinyali hücre dışı matriksi zayıflatır.",
-   "ses": "Marfan sendromunda damar duvarı zayıflamasına yol açan ana mekanizma hangisidir?\nA, Elastaz eksikliği\nBe, Kollajen fazlalığı\nCe, Te ge fe beta sinyal artışı\nDe, Klorür kanal kusuru\nE, Leptin direnci\nHer seçeneği tek tek ele alalım.\nElastaz eksikliği ile karıştırılabilir. Elastaz ile antielastaz dengesizliği tütünün amfizem gibi akciğer hasarı yapma mekanizmasıdır.\nKollajen fazlalığı Marfan sendromunu açıklamaz. Bu hastalıkta sorun fibrillin kusuruyla elastik lif bütünlüğünün bozulmasıdır.\nTe ge fe beta sinyal artışı doğru. Kusurlu fibrillin te ge fe beta'yı düzenleyemez, artan sinyal hücre dışı matriksi ve damar duvarını zayıflatır.\nKlorür kanal kusuru kistik fibrozisin temelidir. Ce fe te re bozulunca mukus dehidrate ve visköz olur.\nLeptin direnci obezitede görülür. Leptin düzeyi yüksek olduğu hâlde etkisi yetersizdir, bağ dokusu zayıflığıyla ilgisi yoktur.\nDoğru cevap Ce, Te ge fe beta sinyal artışı\nFibrillin bir, mikrofibrillerin ana bileşenidir ve te ge fe beta bağlanmasını düzenler. Kusurunda elastik lif bütünlüğü bozulur, artan te ge fe beta sinyali hücre dışı matriksi zayıflatır.",
-   "kelime": 163
+   "sayfa": [
+    17,
+    20,
+    41,
+    55
+   ],
+   "metin": "**Soru.** Marfan sendromunda damar duvarı zayıflamasına yol açan ana mekanizma hangisidir?\n\n**A)** Elastaz eksikliği · **B)** Kollajen fazlalığı · **C)** TGF-β sinyal artışı · **D)** Klorür kanal kusuru · **E)** Leptin direnci\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Elastaz eksikliği** — Elastaz eksikliği değil, alfa-1 antitripsin eksikliğinde artan elastaz aktivitesi akciğerde amfizem yapar; Marfan sendromunda ise fibrillin-1 kusuru nedeniyle mikrofibriller TGF-beta'yı bağlayamaz ve aşırı TGF-beta sinyali aort medya tabakasını zayıflatır.\n- **Kollajen fazlalığı** — Kollajen fazlalığı Marfan sendromunu açıklamaz; bu hastalıkta sorun fibrillin kusuruyla elastik lif bütünlüğünün bozulmasıdır.\n- **TGF-β sinyal artışı** — TGF-β sinyal artışı doğru: kusurlu fibrillin TGF-β'yı düzenleyemez, artan sinyal hücre dışı matriksi ve damar duvarını zayıflatır.\n- **Klorür kanal kusuru** — Klorür kanal kusuru kistik fibrozisin temelidir; CFTR bozulunca mukus dehidrate ve visköz olur.\n- **Leptin direnci** — Leptin direnci obezitede görülür; leptin düzeyi yüksek olduğu hâlde etkisi yetersizdir, bağ dokusu zayıflığıyla ilgisi yoktur.\n\n**Cevap: C** — TGF-β sinyal artışı\n\n**Özet.** Fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler; kusurunda elastik lif bütünlüğü bozulur, artan TGF-β sinyali hücre dışı matriksi zayıflatır.",
+   "ses": "Marfan sendromunda damar duvarı zayıflamasına yol açan ana mekanizma hangisidir?\nA, Elastaz eksikliği\nBe, Kollajen fazlalığı\nCe, Te ge fe beta sinyal artışı\nDe, Klorür kanal kusuru\nE, Leptin direnci\nHer seçeneği tek tek ele alalım.\nElastaz eksikliği değil, alfa-bir antitripsin eksikliğinde artan elastaz aktivitesi akciğerde amfizem yapar. Marfan sendromunda ise fibrillin-bir kusuru nedeniyle mikrofibriller te ge fe beta'yı bağlayamaz ve aşırı te ge fe beta sinyali aort medya tabakasını zayıflatır.\nKollajen fazlalığı Marfan sendromunu açıklamaz. Bu hastalıkta sorun fibrillin kusuruyla elastik lif bütünlüğünün bozulmasıdır.\nTe ge fe beta sinyal artışı doğru. Kusurlu fibrillin te ge fe beta'yı düzenleyemez, artan sinyal hücre dışı matriksi ve damar duvarını zayıflatır.\nKlorür kanal kusuru kistik fibrozisin temelidir. Ce fe te re bozulunca mukus dehidrate ve visköz olur.\nLeptin direnci obezitede görülür. Leptin düzeyi yüksek olduğu hâlde etkisi yetersizdir, bağ dokusu zayıflığıyla ilgisi yoktur.\nDoğru cevap Ce, Te ge fe beta sinyal artışı\nFibrillin bir, mikrofibrillerin ana bileşenidir ve te ge fe beta bağlanmasını düzenler. Kusurunda elastik lif bütünlüğü bozulur, artan te ge fe beta sinyali hücre dışı matriksi zayıflatır.",
+   "kelime": 177
   },
   {
    "no": 3,
@@ -65,6 +80,7 @@
     "E": "Bikarbonattan zengin ter"
    },
    "dogru": "D",
+   "ipucu": "Ter kanalında klorür geri alınamazsa sodyumun da terde kalacağını ve bunun terin yoğunluğuna etkisini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Hipotonik ter kistik fibrozise uymaz; CFTR bozukluğunda ter kanalında NaCl geri emilimi azalır, ter seyrelmez.",
@@ -74,6 +90,11 @@
     "E": "Bikarbonattan zengin ter klasik bulgu değildir; CFTR bikarbonat da taşısa da kistik fibrozisin klasik işareti tuzlu terdir."
    },
    "ozet": "CFTR klorür ve bikarbonat kanalıdır; kusurunda ter kanalında NaCl geri emilimi azalır, ter hipertonik ve tuzlu olur, bu kistik fibrozisin klasik işaretidir.",
+   "sayfa": [
+    19,
+    20,
+    21
+   ],
    "metin": "**Soru.** Kistik fibroziste ter bezlerinde beklenen bulgu hangisidir?\n\n**A)** Hipotonik ter · **B)** Ter sekresyonu yokluğu · **C)** Artmış NaCl geri emilimi · **D)** Hipertonik tuzlu ter · **E)** Bikarbonattan zengin ter\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Hipotonik ter** — Hipotonik ter kistik fibrozise uymaz; CFTR bozukluğunda ter kanalında NaCl geri emilimi azalır, ter seyrelmez.\n- **Ter sekresyonu yokluğu** — Ter sekresyonu yokluğu beklenmez; kistik fibroziste ter salgılanır, bozulan şey ter kanalında klorür ve sodyumun geri emilimidir.\n- **Artmış NaCl geri emilimi** — Artmış NaCl geri emilimi bunun tam tersidir; mutant CFTR ile ter kanalında klorür ve sodyum emilimi azalır.\n- **Hipertonik tuzlu ter** — Hipertonik tuzlu ter doğru: CFTR kusurunda ter kanalında NaCl geri emilemez, terdeki klorür ve sodyum yoğunluğu artar.\n- **Bikarbonattan zengin ter** — Bikarbonattan zengin ter klasik bulgu değildir; CFTR bikarbonat da taşısa da kistik fibrozisin klasik işareti tuzlu terdir.\n\n**Cevap: D** — Hipertonik tuzlu ter\n\n**Özet.** CFTR klorür ve bikarbonat kanalıdır; kusurunda ter kanalında NaCl geri emilimi azalır, ter hipertonik ve tuzlu olur, bu kistik fibrozisin klasik işaretidir.",
    "ses": "Kistik fibroziste ter bezlerinde beklenen bulgu hangisidir?\nA, Hipotonik ter\nBe, Ter sekresyonu yokluğu\nCe, Artmış sodyum klorür geri emilimi\nDe, Hipertonik tuzlu ter\nE, Bikarbonattan zengin ter\nŞıkları sırasıyla gözden geçirelim.\nHipotonik ter kistik fibrozise uymaz. Ce fe te re bozukluğunda ter kanalında sodyum klorür geri emilimi azalır, ter seyrelmez.\nTer sekresyonu yokluğu beklenmez. Kistik fibroziste ter salgılanır, bozulan şey ter kanalında klorür ve sodyumun geri emilimidir.\nArtmış sodyum klorür geri emilimi bunun tam tersidir. Mutant ce fe te re ile ter kanalında klorür ve sodyum emilimi azalır.\nHipertonik tuzlu ter doğru. Ce fe te re kusurunda ter kanalında sodyum klorür geri emilemez, terdeki klorür ve sodyum yoğunluğu artar.\nBikarbonattan zengin ter klasik bulgu değildir. Ce fe te re bikarbonat da taşısa da kistik fibrozisin klasik işareti tuzlu terdir.\nDoğru cevap De, Hipertonik tuzlu ter\nCe fe te re klorür ve bikarbonat kanalıdır. Kusurunda ter kanalında sodyum klorür geri emilimi azalır, ter hipertonik ve tuzlu olur, bu kistik fibrozisin klasik işaretidir.",
    "kelime": 174
@@ -90,6 +111,7 @@
     "E": "Sodyum emilimi azalır"
    },
    "dogru": "A",
+   "ipucu": "Klorür salgısı azalınca hava yolu yüzey sıvısının neden çekildiğini ve mukusun neden kuruduğunu düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "ENaC aktivitesi artar doğru: CFTR kusurunda epitel sodyum kanalı baskılanamaz, sodyum ve su emilimi artar, mukus dehidrate olur.",
@@ -99,6 +121,11 @@
     "E": "Sodyum emilimi azalmaz; ENaC aktivitesi arttığı için hava yolu epitelinde sodyum geri emilimi artar."
    },
    "ozet": "Kistik fibroziste hava yolunda klorür sekresyonu azalır, ENaC aktivitesi ve su emilimi artar; mukus dehidrate ve visköz olur, tekrarlayan enfeksiyon ve bronşiektazi gelişir.",
+   "sayfa": [
+    20,
+    21,
+    22
+   ],
    "metin": "**Soru.** Kistik fibroziste solunum yolu epitelinde aşağıdakilerden hangisi görülür?\n\n**A)** ENaC aktivitesi artar · **B)** Klorür sekresyonu artar · **C)** Su emilimi azalır · **D)** Mukus hidrasyonu artar · **E)** Sodyum emilimi azalır\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **ENaC aktivitesi artar** — ENaC aktivitesi artar doğru: CFTR kusurunda epitel sodyum kanalı baskılanamaz, sodyum ve su emilimi artar, mukus dehidrate olur.\n- **Klorür sekresyonu artar** — Klorür sekresyonu kistik fibroziste artmaz, azalır; mutant CFTR klorürü hava yolu lümenine salgılayamaz.\n- **Su emilimi azalır** — Su emilimi azalmaz, artar; sodyumla birlikte geri emilen su epitel yüzeyindeki sıvıyı azaltır.\n- **Mukus hidrasyonu artar** — Mukus hidrasyonu artmaz, azalır; dehidrate ve visköz mukus mukosiliyer işlevi bozar ve kalın tıkaçlar oluşturur.\n- **Sodyum emilimi azalır** — Sodyum emilimi azalmaz; ENaC aktivitesi arttığı için hava yolu epitelinde sodyum geri emilimi artar.\n\n**Cevap: A** — ENaC aktivitesi artar\n\n**Özet.** Kistik fibroziste hava yolunda klorür sekresyonu azalır, ENaC aktivitesi ve su emilimi artar; mukus dehidrate ve visköz olur, tekrarlayan enfeksiyon ve bronşiektazi gelişir.",
    "ses": "Kistik fibroziste solunum yolu epitelinde aşağıdakilerden hangisi görülür?\nA, Epitel sodyum kanalı aktivitesi artar\nBe, Klorür sekresyonu artar\nCe, Su emilimi azalır\nDe, Mukus hidrasyonu artar\nE, Sodyum emilimi azalır\nŞimdi seçeneklere tek tek bakalım.\nEpitel sodyum kanalı aktivitesi artar doğru. Ce fe te re kusurunda bu kanal baskılanamaz, sodyum ve su emilimi artar, mukus dehidrate olur.\nKlorür sekresyonu kistik fibroziste artmaz, azalır. Mutant ce fe te re klorürü hava yolu lümenine salgılayamaz.\nSu emilimi azalmaz, artar. Sodyumla birlikte geri emilen su epitel yüzeyindeki sıvıyı azaltır.\nMukus hidrasyonu artmaz, azalır. Dehidrate ve visköz mukus mukosiliyer işlevi bozar ve kalın tıkaçlar oluşturur.\nSodyum emilimi azalmaz. Epitel sodyum kanalı aktivitesi arttığı için hava yolu epitelinde sodyum geri emilimi artar.\nDoğru cevap A, Epitel sodyum kanalı aktivitesi artar\nKistik fibroziste hava yolunda klorür sekresyonu azalır, epitel sodyum kanalı aktivitesi ve su emilimi artar. Mukus dehidrate ve visköz olur, tekrarlayan enfeksiyon ve bronşiektazi gelişir.",
    "kelime": 167
@@ -115,18 +142,23 @@
     "E": "Vas deferens agenezisi"
    },
    "dogru": "E",
+   "ipucu": "Kistik fibrozis kanallı yapıları etkiler; erkekte spermin taşındığı kanalın doğuştan durumunu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
-    "A": "Kistik fibrozisli erkekte infertilite, sperm yolunun gelişmemesine bağlı azospermiyle açıklanır. Testis atrofisi bu sorudaki ayrımı sağlamaz.",
+    "A": "Kistik fibrozisli erkeklerde testis parankimi ve spermatogenez genellikle korunmuştur; hastaların %95'inden fazlasında görülen obstrüktif azospermi ve infertilitenin nedeni koyu salgılar sonucu gelişen konjenital bilateral vas deferens agenezisidir.",
     "B": "Varikosel kistik fibrozisle ilişkilendirilmez; bu hastalıkta erkek üreme sistemindeki sorun kanal düzeyindedir.",
     "C": "Orşit kistik fibrozisin bilinen bir bulgusu değildir; hastalıkta enfeksiyonlar akciğerde, Pseudomonas aeruginosa ve Staphylococcus aureus ile görülür.",
     "D": "Hipogonadizm bu tabloyu açıklamaz; kistik fibrozis bir epitel iyon kanalı hastalığıdır ve pankreasta ekzokrin yetmezlik, malabsorpsiyon yapar.",
     "E": "Vas deferens agenezisi doğru: kistik fibrozisli erkekte vas deferens gelişmez, bu da azospermi ve infertiliteye yol açar."
    },
    "ozet": "Kistik fibrozis akciğerde mukus tıkaçları ve bronşiektazi, pankreasta ekzokrin yetmezlik yapar; erkekte vas deferens agenezisi azospermi ve infertiliteye neden olur.",
-   "metin": "**Soru.** Kistik fibrozisli erkekte infertilitenin nedeni hangisidir?\n\n**A)** Testis atrofisi · **B)** Varikosel · **C)** Orşit · **D)** Hipogonadizm · **E)** Vas deferens agenezisi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Testis atrofisi** — Kistik fibrozisli erkekte infertilite, sperm yolunun gelişmemesine bağlı azospermiyle açıklanır. Testis atrofisi bu sorudaki ayrımı sağlamaz.\n- **Varikosel** — Varikosel kistik fibrozisle ilişkilendirilmez; bu hastalıkta erkek üreme sistemindeki sorun kanal düzeyindedir.\n- **Orşit** — Orşit kistik fibrozisin bilinen bir bulgusu değildir; hastalıkta enfeksiyonlar akciğerde, Pseudomonas aeruginosa ve Staphylococcus aureus ile görülür.\n- **Hipogonadizm** — Hipogonadizm bu tabloyu açıklamaz; kistik fibrozis bir epitel iyon kanalı hastalığıdır ve pankreasta ekzokrin yetmezlik, malabsorpsiyon yapar.\n- **Vas deferens agenezisi** — Vas deferens agenezisi doğru: kistik fibrozisli erkekte vas deferens gelişmez, bu da azospermi ve infertiliteye yol açar.\n\n**Cevap: E** — Vas deferens agenezisi\n\n**Özet.** Kistik fibrozis akciğerde mukus tıkaçları ve bronşiektazi, pankreasta ekzokrin yetmezlik yapar; erkekte vas deferens agenezisi azospermi ve infertiliteye neden olur.",
-   "ses": "Kistik fibrozisli erkekte infertilitenin nedeni hangisidir?\nA, Testis atrofisi\nBe, Varikosel\nCe, Orşit\nDe, Hipogonadizm\nE, Vas deferens agenezisi\nSeçenekleri sırayla değerlendirelim.\nKistik fibrozisli erkekte infertilite, sperm yolunun gelişmemesine bağlı azospermiyle açıklanır. Testis atrofisi bu sorudaki ayrımı sağlamaz.\nVarikosel kistik fibrozisle ilişkilendirilmez. Bu hastalıkta erkek üreme sistemindeki sorun kanal düzeyindedir.\nOrşit kistik fibrozisin bilinen bir bulgusu değildir. Hastalıkta enfeksiyonlar akciğerde, Psödomonas aeruginoza ve Stafilokokus aureus ile görülür.\nHipogonadizm bu tabloyu açıklamaz. Kistik fibrozis bir epitel iyon kanalı hastalığıdır ve pankreasta ekzokrin yetmezlik, malabsorpsiyon yapar.\nVas deferens agenezisi doğru. Kistik fibrozisli erkekte vas deferens gelişmez, bu da azospermi ve infertiliteye yol açar.\nDoğru cevap E, Vas deferens agenezisi\nKistik fibrozis akciğerde mukus tıkaçları ve bronşiektazi, pankreasta ekzokrin yetmezlik yapar. Erkekte vas deferens agenezisi azospermi ve infertiliteye neden olur.",
-   "kelime": 152
+   "sayfa": [
+    19,
+    22
+   ],
+   "metin": "**Soru.** Kistik fibrozisli erkekte infertilitenin nedeni hangisidir?\n\n**A)** Testis atrofisi · **B)** Varikosel · **C)** Orşit · **D)** Hipogonadizm · **E)** Vas deferens agenezisi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Testis atrofisi** — Kistik fibrozisli erkeklerde testis parankimi ve spermatogenez genellikle korunmuştur; hastaların %95'inden fazlasında görülen obstrüktif azospermi ve infertilitenin nedeni koyu salgılar sonucu gelişen konjenital bilateral vas deferens agenezisidir.\n- **Varikosel** — Varikosel kistik fibrozisle ilişkilendirilmez; bu hastalıkta erkek üreme sistemindeki sorun kanal düzeyindedir.\n- **Orşit** — Orşit kistik fibrozisin bilinen bir bulgusu değildir; hastalıkta enfeksiyonlar akciğerde, Pseudomonas aeruginosa ve Staphylococcus aureus ile görülür.\n- **Hipogonadizm** — Hipogonadizm bu tabloyu açıklamaz; kistik fibrozis bir epitel iyon kanalı hastalığıdır ve pankreasta ekzokrin yetmezlik, malabsorpsiyon yapar.\n- **Vas deferens agenezisi** — Vas deferens agenezisi doğru: kistik fibrozisli erkekte vas deferens gelişmez, bu da azospermi ve infertiliteye yol açar.\n\n**Cevap: E** — Vas deferens agenezisi\n\n**Özet.** Kistik fibrozis akciğerde mukus tıkaçları ve bronşiektazi, pankreasta ekzokrin yetmezlik yapar; erkekte vas deferens agenezisi azospermi ve infertiliteye neden olur.",
+   "ses": "Kistik fibrozisli erkekte infertilitenin nedeni hangisidir?\nA, Testis atrofisi\nBe, Varikosel\nCe, Orşit\nDe, Hipogonadizm\nE, Vas deferens agenezisi\nSeçenekleri sırayla değerlendirelim.\nKistik fibrozisli erkeklerde testis parankimi ve spermatogenez genellikle korunmuştur. Hastaların yüzde doksan beş'inden fazlasında görülen obstrüktif azospermi ve infertilitenin nedeni koyu salgılar sonucu gelişen konjenital bilateral vas deferens agenezisidir.\nVarikosel kistik fibrozisle ilişkilendirilmez. Bu hastalıkta erkek üreme sistemindeki sorun kanal düzeyindedir.\nOrşit kistik fibrozisin bilinen bir bulgusu değildir. Hastalıkta enfeksiyonlar akciğerde, Psödomonas aeruginoza ve Stafilokokus aureus ile görülür.\nHipogonadizm bu tabloyu açıklamaz. Kistik fibrozis bir epitel iyon kanalı hastalığıdır ve pankreasta ekzokrin yetmezlik, malabsorpsiyon yapar.\nVas deferens agenezisi doğru. Kistik fibrozisli erkekte vas deferens gelişmez, bu da azospermi ve infertiliteye yol açar.\nDoğru cevap E, Vas deferens agenezisi\nKistik fibrozis akciğerde mukus tıkaçları ve bronşiektazi, pankreasta ekzokrin yetmezlik yapar. Erkekte vas deferens agenezisi azospermi ve infertiliteye neden olur.",
+   "kelime": 163
   },
   {
    "no": 6,
@@ -140,18 +172,24 @@
     "E": "Nokta mutasyonu"
    },
    "dogru": "B",
+   "ipucu": "Riskin anne yaşıyla belirgin arttığını hatırla ve kromozomların hücre bölünmesinde nasıl hatalı dağıldığını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Paternal translokasyon trizomi 21'in olağan nedeni değildir; olguların çoğu anneden gelen fazla kromozomla oluşur.",
     "B": "Maternal mayoz nondisjunction doğru: kromozomlar mayozda ayrılamaz; risk 20 yaşta yaklaşık 1/1550 iken 45 yaşta yaklaşık 1/25'e çıkar.",
-    "C": "Mozaisizm ile karıştırılabilir: Down sendromunun tipik karyotipi 47,XX,+21 ya da 47,XY,+21'dir.",
+    "C": "Mozaisizm, zigot oluştuktan sonraki mitotik bölünmelerde ayrılmama sonucu gelişir ve Down sendromu olgularının yalnızca %1–2'sini oluşturur; trizomi 21'in yaklaşık %95 ile en sık nedeni ise maternal mayozda kromozom ayrılmamasıdır (nondisjunction).",
     "D": "Gen delesyonu bir kopya sayısı varyasyonu biçimidir ve otizm, gelişimsel gerilikle ilişkili olabilir; fazladan kromozom oluşturmaz.",
     "E": "Nokta mutasyonu tek bir gendeki değişikliktir ve Mendel tipi tek gen hastalıklarıyla ilgilidir; kromozom sayısını değiştirmez."
    },
    "ozet": "Trizomi 21 en sık kromozom sayısal anomalisidir ve genellikle maternal mayozdaki nondisjunction ile oluşur; bu yüzden risk anne yaşıyla belirgin artar.",
-   "metin": "**Soru.** Trizomi 21'in en sık nedeni hangisidir?\n\n**A)** Paternal translokasyon · **B)** Maternal mayoz nondisjunction · **C)** Mozaisizm · **D)** Gen delesyonu · **E)** Nokta mutasyonu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Paternal translokasyon** — Paternal translokasyon trizomi 21'in olağan nedeni değildir; olguların çoğu anneden gelen fazla kromozomla oluşur.\n- **Maternal mayoz nondisjunction** — Maternal mayoz nondisjunction doğru: kromozomlar mayozda ayrılamaz; risk 20 yaşta yaklaşık 1/1550 iken 45 yaşta yaklaşık 1/25'e çıkar.\n- **Mozaisizm** — Mozaisizm ile karıştırılabilir: Down sendromunun tipik karyotipi 47,XX,+21 ya da 47,XY,+21'dir.\n- **Gen delesyonu** — Gen delesyonu bir kopya sayısı varyasyonu biçimidir ve otizm, gelişimsel gerilikle ilişkili olabilir; fazladan kromozom oluşturmaz.\n- **Nokta mutasyonu** — Nokta mutasyonu tek bir gendeki değişikliktir ve Mendel tipi tek gen hastalıklarıyla ilgilidir; kromozom sayısını değiştirmez.\n\n**Cevap: B** — Maternal mayoz nondisjunction\n\n**Özet.** Trizomi 21 en sık kromozom sayısal anomalisidir ve genellikle maternal mayozdaki nondisjunction ile oluşur; bu yüzden risk anne yaşıyla belirgin artar.",
-   "ses": "Trizomi yirmi birin en sık nedeni hangisidir?\nA, Paternal translokasyon\nBe, Maternal mayoz nondisjankşın\nCe, Mozaisizm\nDe, Gen delesyonu\nE, Nokta mutasyonu\nHer seçeneği tek tek ele alalım.\nPaternal translokasyon trizomi yirmi birin olağan nedeni değildir. Olguların çoğu anneden gelen fazla kromozomla oluşur.\nMaternal mayoz nondisjankşın doğru. Kromozomlar mayozda ayrılamaz. Risk yirmi yaşta yaklaşık bin beş yüz ellide bir iken kırk beş yaşta yaklaşık yirmi beşte bire çıkar.\nMozaisizm ile karıştırılabilir. Daun sendromunun tipik karyotipi kırk yedi iks iks artı yirmi bir ya da kırk yedi iks ye artı yirmi birdir.\nGen delesyonu bir kopya sayısı varyasyonu biçimidir ve otizm, gelişimsel gerilikle ilişkili olabilir. Fazladan kromozom oluşturmaz.\nNokta mutasyonu tek bir gendeki değişikliktir ve Mendel tipi tek gen hastalıklarıyla ilgilidir. Kromozom sayısını değiştirmez.\nDoğru cevap Be, Maternal mayoz nondisjankşın\nTrizomi yirmi bir en sık kromozom sayısal anomalisidir ve genellikle maternal mayozdaki nondisjankşın ile oluşur. Bu yüzden risk anne yaşıyla belirgin artar.",
-   "kelime": 156
+   "sayfa": [
+    10,
+    13,
+    23
+   ],
+   "metin": "**Soru.** Trizomi 21'in en sık nedeni hangisidir?\n\n**A)** Paternal translokasyon · **B)** Maternal mayoz nondisjunction · **C)** Mozaisizm · **D)** Gen delesyonu · **E)** Nokta mutasyonu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Paternal translokasyon** — Paternal translokasyon trizomi 21'in olağan nedeni değildir; olguların çoğu anneden gelen fazla kromozomla oluşur.\n- **Maternal mayoz nondisjunction** — Maternal mayoz nondisjunction doğru: kromozomlar mayozda ayrılamaz; risk 20 yaşta yaklaşık 1/1550 iken 45 yaşta yaklaşık 1/25'e çıkar.\n- **Mozaisizm** — Mozaisizm, zigot oluştuktan sonraki mitotik bölünmelerde ayrılmama sonucu gelişir ve Down sendromu olgularının yalnızca %1–2'sini oluşturur; trizomi 21'in yaklaşık %95 ile en sık nedeni ise maternal mayozda kromozom ayrılmamasıdır (nondisjunction).\n- **Gen delesyonu** — Gen delesyonu bir kopya sayısı varyasyonu biçimidir ve otizm, gelişimsel gerilikle ilişkili olabilir; fazladan kromozom oluşturmaz.\n- **Nokta mutasyonu** — Nokta mutasyonu tek bir gendeki değişikliktir ve Mendel tipi tek gen hastalıklarıyla ilgilidir; kromozom sayısını değiştirmez.\n\n**Cevap: B** — Maternal mayoz nondisjunction\n\n**Özet.** Trizomi 21 en sık kromozom sayısal anomalisidir ve genellikle maternal mayozdaki nondisjunction ile oluşur; bu yüzden risk anne yaşıyla belirgin artar.",
+   "ses": "Trizomi yirmi birin en sık nedeni hangisidir?\nA, Paternal translokasyon\nBe, Maternal mayoz nondisjankşın\nCe, Mozaisizm\nDe, Gen delesyonu\nE, Nokta mutasyonu\nHer seçeneği tek tek ele alalım.\nPaternal translokasyon trizomi yirmi birin olağan nedeni değildir. Olguların çoğu anneden gelen fazla kromozomla oluşur.\nMaternal mayoz nondisjankşın doğru. Kromozomlar mayozda ayrılamaz. Risk yirmi yaşta yaklaşık bin beş yüz ellide bir iken kırk beş yaşta yaklaşık yirmi beşte bire çıkar.\nMozaisizm, zigot oluştuktan sonraki mitotik bölünmelerde ayrılmama sonucu gelişir ve Down sendromu olgularının yalnızca yüzde bir ila iki'sini oluşturur. Trizomi yirmi bir'in yaklaşık yüzde doksan beş ile en sık nedeni ise maternal mayozda kromozom ayrılmamasıdır, nondisjunction,.\nGen delesyonu bir kopya sayısı varyasyonu biçimidir ve otizm, gelişimsel gerilikle ilişkili olabilir. Fazladan kromozom oluşturmaz.\nNokta mutasyonu tek bir gendeki değişikliktir ve Mendel tipi tek gen hastalıklarıyla ilgilidir. Kromozom sayısını değiştirmez.\nDoğru cevap Be, Maternal mayoz nondisjankşın\nTrizomi yirmi bir en sık kromozom sayısal anomalisidir ve genellikle maternal mayozdaki nondisjankşın ile oluşur. Bu yüzden risk anne yaşıyla belirgin artar.",
+   "kelime": 175
   },
   {
    "no": 7,
@@ -165,18 +203,23 @@
     "E": "Howell-Jolly cisimciği"
    },
    "dogru": "C",
+   "ipucu": "Kurşun zehirlenmesinde mikrositer hipokromik anemiye eşlik eden, eritrosit içindeki noktacıklı görünümü düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Hedef hücre kurşun toksisitesinde tanımlanan eritrosit bulgusu değildir; kurşunda anemi mikrositer ve hipokromiktir.",
-    "B": "Orak hücre ile karıştırılabilir: Kurşun çocukta düşük IQ ve nöbetlere, erişkinde bilek ve ayak düşmesine yol açar.",
+    "B": "Orak hücre, hemoglobin S nokta mutasyonunda hipoksiyle polimerleşen hemoglobinin eritrosite verdiği hilal biçimidir; kurşun zehirlenmesinde ribonükleaz inhibisyonuna bağlı ribozomal RNA kümelerinin oluşturduğu karakteristik bulgu ise bazofilik beneklenmedir.",
     "C": "Bazofilik beneklenme doğru: kurşun toksisitesinde mikrositer hipokromik anemiyle birlikte eritrositlerde bazofilik beneklenme görülür.",
     "D": "Sferositoz kurşun zehirlenmesine ait değildir; kurşun kemikte büyüme plağında radyoopak kurşun çizgileri oluşturur.",
-    "E": "Vücuttaki kurşunun %80–85'i kemik ve dişlerde, %5–10'u kanda bulunur. Howell-Jolly cisimciği bu sorudaki ayrımı sağlamaz."
+    "E": "Howell-Jolly cisimciği, splenektomi veya fonksiyonel asplenide eritrosit içinde kalan bazofilik çekirdek kalıntısıdır; kurşun zehirlenmesinde ferroşelataz ve pirimidin 5'-nükleotidaz inhibisyonuyla eritrositlerde oluşan tipik bulgu ise ince bazofilik beneklenmedir."
    },
    "ozet": "Kurşun toksisitesinde mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme görülür; çocukta nörogelişim, erişkinde periferik nöropati öne çıkar.",
-   "metin": "**Soru.** Kurşun zehirlenmesinde eritrositlerde görülen tipik bulgu hangisidir?\n\n**A)** Hedef hücre · **B)** Orak hücre · **C)** Bazofilik beneklenme · **D)** Sferositoz · **E)** Howell-Jolly cisimciği\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Hedef hücre** — Hedef hücre kurşun toksisitesinde tanımlanan eritrosit bulgusu değildir; kurşunda anemi mikrositer ve hipokromiktir.\n- **Orak hücre** — Orak hücre ile karıştırılabilir: Kurşun çocukta düşük IQ ve nöbetlere, erişkinde bilek ve ayak düşmesine yol açar.\n- **Bazofilik beneklenme** — Bazofilik beneklenme doğru: kurşun toksisitesinde mikrositer hipokromik anemiyle birlikte eritrositlerde bazofilik beneklenme görülür.\n- **Sferositoz** — Sferositoz kurşun zehirlenmesine ait değildir; kurşun kemikte büyüme plağında radyoopak kurşun çizgileri oluşturur.\n- **Howell-Jolly cisimciği** — Vücuttaki kurşunun %80–85'i kemik ve dişlerde, %5–10'u kanda bulunur. Howell-Jolly cisimciği bu sorudaki ayrımı sağlamaz.\n\n**Cevap: C** — Bazofilik beneklenme\n\n**Özet.** Kurşun toksisitesinde mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme görülür; çocukta nörogelişim, erişkinde periferik nöropati öne çıkar.",
-   "ses": "Kurşun zehirlenmesinde eritrositlerde görülen tipik bulgu hangisidir?\nA, Hedef hücre\nBe, Orak hücre\nCe, Bazofilik beneklenme\nDe, Sferositoz\nE, Havıl Coli cisimciği\nŞıkları sırasıyla gözden geçirelim.\nHedef hücre kurşun toksisitesinde tanımlanan eritrosit bulgusu değildir. Kurşunda anemi mikrositer ve hipokromiktir.\nOrak hücre ile karıştırılabilir. Kurşun çocukta düşük zekâ katsayısı ve nöbetlere, erişkinde bilek ve ayak düşmesine yol açar.\nBazofilik beneklenme doğru. Kurşun toksisitesinde mikrositer hipokromik anemiyle birlikte eritrositlerde bazofilik beneklenme görülür.\nSferositoz kurşun zehirlenmesine ait değildir. Kurşun kemikte büyüme plağında radyoopak kurşun çizgileri oluşturur.\nVücuttaki kurşunun yüzde seksen ile seksen beşi kemik ve dişlerde, yüzde beş ile onu kanda bulunur. Howell-Jolly cisimciği bu sorudaki ayrımı sağlamaz.\nDoğru cevap Ce, Bazofilik beneklenme\nKurşun toksisitesinde mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme görülür. Çocukta nörogelişim, erişkinde periferik nöropati öne çıkar.",
-   "kelime": 144
+   "sayfa": [
+    37,
+    38
+   ],
+   "metin": "**Soru.** Kurşun zehirlenmesinde eritrositlerde görülen tipik bulgu hangisidir?\n\n**A)** Hedef hücre · **B)** Orak hücre · **C)** Bazofilik beneklenme · **D)** Sferositoz · **E)** Howell-Jolly cisimciği\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Hedef hücre** — Hedef hücre kurşun toksisitesinde tanımlanan eritrosit bulgusu değildir; kurşunda anemi mikrositer ve hipokromiktir.\n- **Orak hücre** — Orak hücre, hemoglobin S nokta mutasyonunda hipoksiyle polimerleşen hemoglobinin eritrosite verdiği hilal biçimidir; kurşun zehirlenmesinde ribonükleaz inhibisyonuna bağlı ribozomal RNA kümelerinin oluşturduğu karakteristik bulgu ise bazofilik beneklenmedir.\n- **Bazofilik beneklenme** — Bazofilik beneklenme doğru: kurşun toksisitesinde mikrositer hipokromik anemiyle birlikte eritrositlerde bazofilik beneklenme görülür.\n- **Sferositoz** — Sferositoz kurşun zehirlenmesine ait değildir; kurşun kemikte büyüme plağında radyoopak kurşun çizgileri oluşturur.\n- **Howell-Jolly cisimciği** — Howell-Jolly cisimciği, splenektomi veya fonksiyonel asplenide eritrosit içinde kalan bazofilik çekirdek kalıntısıdır; kurşun zehirlenmesinde ferroşelataz ve pirimidin 5'-nükleotidaz inhibisyonuyla eritrositlerde oluşan tipik bulgu ise ince bazofilik beneklenmedir.\n\n**Cevap: C** — Bazofilik beneklenme\n\n**Özet.** Kurşun toksisitesinde mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme görülür; çocukta nörogelişim, erişkinde periferik nöropati öne çıkar.",
+   "ses": "Kurşun zehirlenmesinde eritrositlerde görülen tipik bulgu hangisidir?\nA, Hedef hücre\nBe, Orak hücre\nCe, Bazofilik beneklenme\nDe, Sferositoz\nE, Havıl Coli cisimciği\nŞıkları sırasıyla gözden geçirelim.\nHedef hücre kurşun toksisitesinde tanımlanan eritrosit bulgusu değildir. Kurşunda anemi mikrositer ve hipokromiktir.\nOrak hücre, hemoglobin S nokta mutasyonunda hipoksiyle polimerleşen hemoglobinin eritrosite verdiği hilal biçimidir. Kurşun zehirlenmesinde ribonükleaz inhibisyonuna bağlı ribozomal re ne a kümelerinin oluşturduğu karakteristik bulgu ise bazofilik beneklenmedir.\nBazofilik beneklenme doğru. Kurşun toksisitesinde mikrositer hipokromik anemiyle birlikte eritrositlerde bazofilik beneklenme görülür.\nSferositoz kurşun zehirlenmesine ait değildir. Kurşun kemikte büyüme plağında radyoopak kurşun çizgileri oluşturur.\nHowell-Jolly cisimciği, splenektomi veya fonksiyonel asplenide eritrosit içinde kalan bazofilik çekirdek kalıntısıdır. Kurşun zehirlenmesinde ferroşelataz ve pirimidin beş üssü nükleotidaz inhibisyonuyla eritrositlerde oluşan tipik bulgu ise ince bazofilik beneklenmedir.\nDoğru cevap Ce, Bazofilik beneklenme\nKurşun toksisitesinde mikrositer hipokromik anemi ve eritrositlerde bazofilik beneklenme görülür. Çocukta nörogelişim, erişkinde periferik nöropati öne çıkar.",
+   "kelime": 166
   },
   {
    "no": 8,
@@ -190,6 +233,7 @@
     "E": "Beyin"
    },
    "dogru": "D",
+   "ipucu": "Kanda kurşunun yalnız küçük bir bölümünün dolaştığını hatırla; geri kalanın uzun süre depolandığı ve görüntülemede iz bıraktığı dokuyu düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Kan, vücuttaki kurşunun yalnızca %5–10'unu taşır; ana depo burası değildir.",
@@ -199,6 +243,10 @@
     "E": "Beyin ana depo değildir; ancak çocuklarda kan-beyin bariyeri daha geçirgen olduğundan kurşun düşük zekâ, davranış bozukluğu ve nöbet yapar."
    },
    "ozet": "Kurşunun %80–85'i kemik ve dişlerde, %5–10'u kanda bulunur; çocuklarda oral emilim fazladır ve kan-beyin bariyeri daha geçirgendir.",
+   "sayfa": [
+    37,
+    38
+   ],
    "metin": "**Soru.** Vücuttaki kurşunun büyük kısmı (%80–85) nerede birikir?\n\n**A)** Kan · **B)** Karaciğer · **C)** Böbrek · **D)** Kemik ve dişler · **E)** Beyin\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Kan** — Kan, vücuttaki kurşunun yalnızca %5–10'unu taşır; ana depo burası değildir.\n- **Karaciğer** — Karaciğer kurşunun ana deposu olarak tanımlanmaz; kurşunun büyük kısmı mineralize sert dokularda tutulur.\n- **Böbrek** — Böbrek kurşunun birikim yeri olarak öne çıkmaz; kurşun toksisitesinin klasik bulguları sinir sistemi, kan ve kemikte görülür.\n- **Kemik ve dişler** — Kemik ve dişler doğru: vücuttaki kurşunun %80–85'i burada birikir ve büyüme plağında radyoopak kurşun çizgileri oluşur.\n- **Beyin** — Beyin ana depo değildir; ancak çocuklarda kan-beyin bariyeri daha geçirgen olduğundan kurşun düşük zekâ, davranış bozukluğu ve nöbet yapar.\n\n**Cevap: D** — Kemik ve dişler\n\n**Özet.** Kurşunun %80–85'i kemik ve dişlerde, %5–10'u kanda bulunur; çocuklarda oral emilim fazladır ve kan-beyin bariyeri daha geçirgendir.",
    "ses": "Vücuttaki kurşunun büyük kısmı, yüzde seksen ile seksen beşi, nerede birikir?\nA, Kan\nBe, Karaciğer\nCe, Böbrek\nDe, Kemik ve dişler\nE, Beyin\nŞimdi seçeneklere tek tek bakalım.\nKan, vücuttaki kurşunun yalnızca yüzde beş ile onunu taşır. Ana depo burası değildir.\nKaraciğer kurşunun ana deposu olarak tanımlanmaz. Kurşunun büyük kısmı mineralize sert dokularda tutulur.\nBöbrek kurşunun birikim yeri olarak öne çıkmaz. Kurşun toksisitesinin klasik bulguları sinir sistemi, kan ve kemikte görülür.\nKemik ve dişler doğru. Vücuttaki kurşunun yüzde seksen ile seksen beşi burada birikir ve büyüme plağında radyoopak kurşun çizgileri oluşur.\nBeyin ana depo değildir. Ancak çocuklarda kan beyin bariyeri daha geçirgen olduğundan kurşun düşük zekâ, davranış bozukluğu ve nöbet yapar.\nDoğru cevap De, Kemik ve dişler\nKurşunun yüzde seksen ile seksen beşi kemik ve dişlerde, yüzde beş ile onu kanda bulunur. Çocuklarda oral emilim fazladır ve kan beyin bariyeri daha geçirgendir.",
    "kelime": 146
@@ -215,6 +263,7 @@
     "E": "Adiponektin artışı"
    },
    "dogru": "A",
+   "ipucu": "Alkol yıkımı sırasında tüketilen koenzimin dengesi bozulunca karaciğer hücresinin yağ yakma kapasitesine ne olacağını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Artmış NADH/NAD⁺ oranı doğru: alkol metabolizması NAD⁺ tüketir, artan oran yağ asidi oksidasyonunu azaltır ve hepatik steatoz gelişir.",
@@ -224,6 +273,11 @@
     "E": "Adiponektin artışı yağ oksidasyonunu ve insülin duyarlılığını artırır; karaciğerde yağ birikimini açıklamaz."
    },
    "ozet": "Alkol dehidrojenaz yolunda NAD⁺ tükenir ve NADH/NAD⁺ oranı yükselir; yağ asidi oksidasyonu azalır ve hepatik steatoz gelişir.",
+   "sayfa": [
+    44,
+    45,
+    55
+   ],
    "metin": "**Soru.** Alkole bağlı hepatik steatozun temel mekanizması hangisidir?\n\n**A)** Artmış NADH/NAD⁺ oranı · **B)** Tiamin eksikliği · **C)** Leptin direnci · **D)** Artmış yağ asidi oksidasyonu · **E)** Adiponektin artışı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Artmış NADH/NAD⁺ oranı** — Artmış NADH/NAD⁺ oranı doğru: alkol metabolizması NAD⁺ tüketir, artan oran yağ asidi oksidasyonunu azaltır ve hepatik steatoz gelişir.\n- **Tiamin eksikliği** — Tiamin eksikliği kronik alkol kullanımında Wernicke–Korsakoff sendromuna yol açar; karaciğer yağlanmasının mekanizması değildir.\n- **Leptin direnci** — Leptin direnci obezitede görülür; leptin yüksek olsa da etkisizdir, alkolik steatozu açıklamaz.\n- **Artmış yağ asidi oksidasyonu** — Artmış yağ asidi oksidasyonu bunun tam tersidir; alkolde oksidasyon azaldığı için karaciğerde yağ birikir.\n- **Adiponektin artışı** — Adiponektin artışı yağ oksidasyonunu ve insülin duyarlılığını artırır; karaciğerde yağ birikimini açıklamaz.\n\n**Cevap: A** — Artmış NADH/NAD⁺ oranı\n\n**Özet.** Alkol dehidrojenaz yolunda NAD⁺ tükenir ve NADH/NAD⁺ oranı yükselir; yağ asidi oksidasyonu azalır ve hepatik steatoz gelişir.",
    "ses": "Alkole bağlı hepatik steatozun temel mekanizması hangisidir?\nA, Artmış ne a de ha, ne a de oranı\nBe, Tiamin eksikliği\nCe, Leptin direnci\nDe, Artmış yağ asidi oksidasyonu\nE, Adiponektin artışı\nSeçenekleri sırayla değerlendirelim.\nArtmış ne a de ha, ne a de oranı doğru. Alkol metabolizması ne a de tüketir, artan oran yağ asidi oksidasyonunu azaltır ve hepatik steatoz gelişir.\nTiamin eksikliği kronik alkol kullanımında Vernike Korsakof sendromuna yol açar. Karaciğer yağlanmasının mekanizması değildir.\nLeptin direnci obezitede görülür. Leptin yüksek olsa da etkisizdir, alkolik steatozu açıklamaz.\nArtmış yağ asidi oksidasyonu bunun tam tersidir. Alkolde oksidasyon azaldığı için karaciğerde yağ birikir.\nAdiponektin artışı yağ oksidasyonunu ve insülin duyarlılığını artırır. Karaciğerde yağ birikimini açıklamaz.\nDoğru cevap A, Artmış ne a de ha, ne a de oranı\nAlkol dehidrojenaz yolunda ne a de tükenir ve ne a de ha, ne a de oranı yükselir. Yağ asidi oksidasyonu azalır ve hepatik steatoz gelişir.",
    "kelime": 150
@@ -240,18 +294,23 @@
     "E": "Tiamin"
    },
    "dogru": "E",
+   "ipucu": "Bu nörolojik sendromu alkolün karaciğer, pankreas ve kalp etkilerinden ayır; kronik alkolde nörolojik hasarın hangi vitamin eksikliğiyle anıldığını hatırla.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
-    "A": "Folat ile karıştırılabilir: Kronik alkolün bu nörolojik tablosu, yani Wernicke–Korsakoff sendromu, başka bir vitaminin eksikliğine bağlıdır.",
-    "B": "B12 vitamini Wernicke–Korsakoff ile ilişkilendirilmez; kronik alkol kullanımı ayrıca karaciğerde steatoz, steatohepatit ve siroza yol açar.",
+    "A": "Folat eksikliği DNA sentezini bozarak megaloblastik anemiye ve gebelikte nöral tüp defektlerine yol açar; kronik alkolizmde konfüzyon, ataksi, oftalmopleji ve hafıza kaybıyla giden Wernicke–Korsakoff sendromu ise tiamin (B1 vitamini) eksikliğine bağlıdır.",
+    "B": "B12 vitamini (kobalamin) eksikliği megaloblastik anemi ve omurilik arka-yan kordonlarında subakut kombine dejenerasyon yapar; kronik alkol kullanımında mamiller cisim ve talamus kanamalarıyla Wernicke–Korsakoff sendromuna yol açan ise tiamin eksikliğidir.",
     "C": "Niasin bu sendromla ilişkilendirilmez; kronik alkol kullanımı pankreasta akut ve kronik pankreatit, kalpte dilate kardiyomiyopati yapar.",
     "D": "A vitamini yağda çözünen bir vitamindir ve eksikliği ağır malnütrisyonda görülebilir; Wernicke–Korsakoff ise başka bir eksikliğe bağlıdır.",
     "E": "Tiamin doğru: kronik alkol kullanımında tiamin eksikliği Wernicke–Korsakoff sendromuna yol açar."
    },
    "ozet": "Kronik alkol kullanımı karaciğerde steatozdan siroza, pankreatite, dilate kardiyomiyopatiye ve tiamin eksikliğine bağlı Wernicke–Korsakoff sendromuna yol açar.",
-   "metin": "**Soru.** Kronik alkol kullanımında Wernicke–Korsakoff sendromu hangi eksikliğe bağlıdır?\n\n**A)** Folat · **B)** B12 vitamini · **C)** Niasin · **D)** A vitamini · **E)** Tiamin\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Folat** — Folat ile karıştırılabilir: Kronik alkolün bu nörolojik tablosu, yani Wernicke–Korsakoff sendromu, başka bir vitaminin eksikliğine bağlıdır.\n- **B12 vitamini** — B12 vitamini Wernicke–Korsakoff ile ilişkilendirilmez; kronik alkol kullanımı ayrıca karaciğerde steatoz, steatohepatit ve siroza yol açar.\n- **Niasin** — Niasin bu sendromla ilişkilendirilmez; kronik alkol kullanımı pankreasta akut ve kronik pankreatit, kalpte dilate kardiyomiyopati yapar.\n- **A vitamini** — A vitamini yağda çözünen bir vitamindir ve eksikliği ağır malnütrisyonda görülebilir; Wernicke–Korsakoff ise başka bir eksikliğe bağlıdır.\n- **Tiamin** — Tiamin doğru: kronik alkol kullanımında tiamin eksikliği Wernicke–Korsakoff sendromuna yol açar.\n\n**Cevap: E** — Tiamin\n\n**Özet.** Kronik alkol kullanımı karaciğerde steatozdan siroza, pankreatite, dilate kardiyomiyopatiye ve tiamin eksikliğine bağlı Wernicke–Korsakoff sendromuna yol açar.",
-   "ses": "Kronik alkol kullanımında Vernike Korsakof sendromu hangi eksikliğe bağlıdır?\nA, Folat\nBe, Be on iki vitamini\nCe, Niasin\nDe, A vitamini\nE, Tiamin\nHer seçeneği tek tek ele alalım.\nFolat ile karıştırılabilir. Kronik alkolün bu nörolojik tablosu, yani Vernike Korsakof sendromu, başka bir vitaminin eksikliğine bağlıdır.\nBe on iki vitamini Vernike Korsakof ile ilişkilendirilmez. Kronik alkol kullanımı ayrıca karaciğerde steatoz, steatohepatit ve siroza yol açar.\nNiasin bu sendromla ilişkilendirilmez. Kronik alkol kullanımı pankreasta akut ve kronik pankreatit, kalpte dilate kardiyomiyopati yapar.\nA vitamini yağda çözünen bir vitamindir ve eksikliği ağır malnütrisyonda görülebilir. Vernike Korsakof ise başka bir eksikliğe bağlıdır.\nTiamin doğru. Kronik alkol kullanımında tiamin eksikliği Vernike Korsakof sendromuna yol açar.\nDoğru cevap E, Tiamin\nKronik alkol kullanımı karaciğerde steatozdan siroza, pankreatite, dilate kardiyomiyopatiye ve tiamin eksikliğine bağlı Vernike Korsakof sendromuna yol açar.",
-   "kelime": 147
+   "sayfa": [
+    45,
+    50
+   ],
+   "metin": "**Soru.** Kronik alkol kullanımında Wernicke–Korsakoff sendromu hangi eksikliğe bağlıdır?\n\n**A)** Folat · **B)** B12 vitamini · **C)** Niasin · **D)** A vitamini · **E)** Tiamin\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Folat** — Folat eksikliği DNA sentezini bozarak megaloblastik anemiye ve gebelikte nöral tüp defektlerine yol açar; kronik alkolizmde konfüzyon, ataksi, oftalmopleji ve hafıza kaybıyla giden Wernicke–Korsakoff sendromu ise tiamin (B1 vitamini) eksikliğine bağlıdır.\n- **B12 vitamini** — B12 vitamini (kobalamin) eksikliği megaloblastik anemi ve omurilik arka-yan kordonlarında subakut kombine dejenerasyon yapar; kronik alkol kullanımında mamiller cisim ve talamus kanamalarıyla Wernicke–Korsakoff sendromuna yol açan ise tiamin eksikliğidir.\n- **Niasin** — Niasin bu sendromla ilişkilendirilmez; kronik alkol kullanımı pankreasta akut ve kronik pankreatit, kalpte dilate kardiyomiyopati yapar.\n- **A vitamini** — A vitamini yağda çözünen bir vitamindir ve eksikliği ağır malnütrisyonda görülebilir; Wernicke–Korsakoff ise başka bir eksikliğe bağlıdır.\n- **Tiamin** — Tiamin doğru: kronik alkol kullanımında tiamin eksikliği Wernicke–Korsakoff sendromuna yol açar.\n\n**Cevap: E** — Tiamin\n\n**Özet.** Kronik alkol kullanımı karaciğerde steatozdan siroza, pankreatite, dilate kardiyomiyopatiye ve tiamin eksikliğine bağlı Wernicke–Korsakoff sendromuna yol açar.",
+   "ses": "Kronik alkol kullanımında Vernike Korsakof sendromu hangi eksikliğe bağlıdır?\nA, Folat\nBe, Be on iki vitamini\nCe, Niasin\nDe, A vitamini\nE, Tiamin\nHer seçeneği tek tek ele alalım.\nFolat eksikliği de ne a sentezini bozarak megaloblastik anemiye ve gebelikte nöral tüp defektlerine yol açar. Kronik alkolizmde konfüzyon, ataksi, oftalmopleji ve hafıza kaybıyla giden Wernicke–Korsakoff sendromu ise tiamin, be bir vitamini, eksikliğine bağlıdır.\nbe on iki vitamini, kobalamin, eksikliği megaloblastik anemi ve omurilik arka-yan kordonlarında subakut kombine dejenerasyon yapar. Kronik alkol kullanımında mamiller cisim ve talamus kanamalarıyla Wernicke–Korsakoff sendromuna yol açan ise tiamin eksikliğidir.\nNiasin bu sendromla ilişkilendirilmez. Kronik alkol kullanımı pankreasta akut ve kronik pankreatit, kalpte dilate kardiyomiyopati yapar.\nA vitamini yağda çözünen bir vitamindir ve eksikliği ağır malnütrisyonda görülebilir. Vernike Korsakof ise başka bir eksikliğe bağlıdır.\nTiamin doğru. Kronik alkol kullanımında tiamin eksikliği Vernike Korsakof sendromuna yol açar.\nDoğru cevap E, Tiamin\nKronik alkol kullanımı karaciğerde steatozdan siroza, pankreatite, dilate kardiyomiyopatiye ve tiamin eksikliğine bağlı Vernike Korsakof sendromuna yol açar.",
+   "kelime": 175
   },
   {
    "no": 11,
@@ -265,6 +324,7 @@
     "E": "Kistik fibrozis"
    },
    "dogru": "B",
+   "ipucu": "Karbonhidratla doyurulan ama proteini yetersiz kalan çocukta, kalori eksikliği baskın tablodan farkı düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Marasmus kalori eksikliğinin baskın olduğu tablodur; belirgin kas ve yağ kaybıyla zayıf çomak görünümü vardır, somatik protein bölmesi ağır tükenir.",
@@ -274,6 +334,13 @@
     "E": "Kistik fibrozis pankreas kanallarını tıkayarak malabsorpsiyon yapabilir, ancak bayrak işareti ve mozaik deri bu hastalığın bulgusu değildir."
    },
    "ozet": "Kwashiorkorda protein eksikliği baskındır, ödem, steatoz, mozaik deri ve bayrak işareti görülür; marasmusta ise kalori eksikliği baskın, viseral protein bölmesi görece korunur.",
+   "sayfa": [
+    22,
+    48,
+    49,
+    51,
+    52
+   ],
    "metin": "**Soru.** Erken sütten kesilmiş, karbonhidrat ağırlıklı beslenen çocukta ödem, karaciğer yağlanması ve saçta bayrak işareti var. En olası tanı hangisidir?\n\n**A)** Marasmus · **B)** Kwashiorkor · **C)** Anoreksiya nervoza · **D)** Bulimia nervoza · **E)** Kistik fibrozis\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Marasmus** — Marasmus kalori eksikliğinin baskın olduğu tablodur; belirgin kas ve yağ kaybıyla zayıf çomak görünümü vardır, somatik protein bölmesi ağır tükenir.\n- **Kwashiorkor** — Kwashiorkor doğru: protein yoksunluğu kaloriye göre fazladır; ödem, karaciğer yağlanması, mozaik deri pigmentasyonu ve saçta bayrak işareti görülür.\n- **Anoreksiya nervoza** — Anoreksiya nervoza kişinin kendine uyguladığı açlıktır; amenore, bradikardi ve hipokalemi görülür, sütten kesilmiş çocuğun tablosu değildir.\n- **Bulimia nervoza** — Bulimia nervoza aşırı yeme ataklarını kusma ya da müshil kullanımının izlediği bir yeme bozukluğudur; hipokalemiye bağlı aritmi ve özofagus yırtılması yapabilir.\n- **Kistik fibrozis** — Kistik fibrozis pankreas kanallarını tıkayarak malabsorpsiyon yapabilir, ancak bayrak işareti ve mozaik deri bu hastalığın bulgusu değildir.\n\n**Cevap: B** — Kwashiorkor\n\n**Özet.** Kwashiorkorda protein eksikliği baskındır, ödem, steatoz, mozaik deri ve bayrak işareti görülür; marasmusta ise kalori eksikliği baskın, viseral protein bölmesi görece korunur.",
    "ses": "Erken sütten kesilmiş, karbonhidrat ağırlıklı beslenen çocukta ödem, karaciğer yağlanması ve saçta bayrak işareti var. En olası tanı hangisidir?\nA, Marasmus\nBe, Kvaşiorkor\nCe, Anoreksiya nervoza\nDe, Bulimia nervoza\nE, Kistik fibrozis\nŞıkları sırasıyla gözden geçirelim.\nMarasmus kalori eksikliğinin baskın olduğu tablodur. Belirgin kas ve yağ kaybıyla zayıf çomak görünümü vardır, somatik protein bölmesi ağır tükenir.\nKvaşiorkor doğru. Protein yoksunluğu kaloriye göre fazladır. Ödem, karaciğer yağlanması, mozaik deri pigmentasyonu ve saçta bayrak işareti görülür.\nAnoreksiya nervoza kişinin kendine uyguladığı açlıktır. Amenore, bradikardi ve hipokalemi görülür, sütten kesilmiş çocuğun tablosu değildir.\nBulimia nervoza aşırı yeme ataklarını kusma ya da müshil kullanımının izlediği bir yeme bozukluğudur. Hipokalemiye bağlı aritmi ve özofagus yırtılması yapabilir.\nKistik fibrozis pankreas kanallarını tıkayarak malabsorpsiyon yapabilir, ancak bayrak işareti ve mozaik deri bu hastalığın bulgusu değildir.\nDoğru cevap Be, Kvaşiorkor\nKvaşiorkorda protein eksikliği baskındır, ödem, steatoz, mozaik deri ve bayrak işareti görülür. Marasmusta ise kalori eksikliği baskın, viseral protein bölmesi görece korunur.",
    "kelime": 179
@@ -290,6 +357,7 @@
     "E": "İnsülin duyarlılığını azaltır"
    },
    "dogru": "D",
+   "ipucu": "Yağ depolarıyla birlikte düzeyi artan bu hormonun, şişman bireylerde iştahı neden frenleyemediğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Leptin mideden değil, yağ dokusundan salgılanır; yağ depoları arttıkça düzeyi yükselir.",
@@ -299,6 +367,10 @@
     "E": "İnsülin duyarlılığını azaltmak leptinin tanımlanan bir etkisi değildir; insülin duyarlılığını artıran adiponektindir, leptin ise hipotalamusta iştahı düzenler."
    },
    "ozet": "Leptin yağ dokusundan salgılanır, POMC/CART'ı aktive edip NPY/AgRP'yi inhibe eder; obezitede leptin yüksek ama direnç vardır, adiponektin ise düşüktür.",
+   "sayfa": [
+    54,
+    55
+   ],
    "metin": "**Soru.** Leptin için aşağıdakilerden hangisi doğrudur?\n\n**A)** Mideden salgılanır · **B)** NPY/AgRP'yi aktive eder · **C)** Obezitede düşüktür · **D)** Obezitede yüksektir ancak direnç vardır · **E)** İnsülin duyarlılığını azaltır\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Mideden salgılanır** — Leptin mideden değil, yağ dokusundan salgılanır; yağ depoları arttıkça düzeyi yükselir.\n- **NPY/AgRP'yi aktive eder** — Leptin NPY/AgRP nöronlarını aktive etmez, inhibe eder; iştahı azaltan POMC/CART nöronlarını ise aktive eder.\n- **Obezitede düşüktür** — Obezitede düşük olan leptin değil adiponektindir; leptin obezitede yüksektir.\n- **Obezitede yüksektir ancak direnç vardır** — Obezitede yüksektir ancak direnç vardır doğru: yağ dokusu arttıkça leptin yükselir, fakat leptin direnci nedeniyle etkisi yetersiz kalır.\n- **İnsülin duyarlılığını azaltır** — İnsülin duyarlılığını azaltmak leptinin tanımlanan bir etkisi değildir; insülin duyarlılığını artıran adiponektindir, leptin ise hipotalamusta iştahı düzenler.\n\n**Cevap: D** — Obezitede yüksektir ancak direnç vardır\n\n**Özet.** Leptin yağ dokusundan salgılanır, POMC/CART'ı aktive edip NPY/AgRP'yi inhibe eder; obezitede leptin yüksek ama direnç vardır, adiponektin ise düşüktür.",
    "ses": "Leptin için aşağıdakilerden hangisi doğrudur?\nA, Mideden salgılanır\nBe, Ne pe ye ve a ge re pe'yi aktive eder\nCe, Obezitede düşüktür\nDe, Obezitede yüksektir ancak direnç vardır\nE, İnsülin duyarlılığını azaltır\nŞimdi seçeneklere tek tek bakalım.\nLeptin mideden değil, yağ dokusundan salgılanır. Yağ depoları arttıkça düzeyi yükselir.\nLeptin ne pe ye ve a ge re pe nöronlarını aktive etmez, inhibe eder. İştahı azaltan pe o me ce ve ce a re te nöronlarını ise aktive eder.\nObezitede düşük olan leptin değil adiponektindir. Leptin obezitede yüksektir.\nObezitede yüksektir ancak direnç vardır doğru. Yağ dokusu arttıkça leptin yükselir, fakat leptin direnci nedeniyle etkisi yetersiz kalır.\nİnsülin duyarlılığını azaltmak leptinin tanımlanan bir etkisi değildir. İnsülin duyarlılığını artıran adiponektindir, leptin ise hipotalamusta iştahı düzenler.\nDoğru cevap De, Obezitede yüksektir ancak direnç vardır\nLeptin yağ dokusundan salgılanır, pe o me ce ve ce a re te nöronlarını aktive edip ne pe ye ve a ge re pe nöronlarını inhibe eder. Obezitede leptin yüksek ama direnç vardır, adiponektin ise düşüktür.",
    "kelime": 158
@@ -315,22 +387,29 @@
     "E": "Özofagus kanseri"
    },
    "dogru": "C",
+   "ipucu": "Diyetteki iki kanserojeni ayır; biri nitrozamindir ve mideyi hedefler, küf toksini ise başka bir organı.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Mide kanseri diyetteki nitrozamin ve nitrozamidlerle ilişkilidir; aflatoksinin hedefi değildir.",
     "B": "Kolorektal kanser için lifli gıdaların olası koruyucu etkisi tanımlanır, çünkü dışkı hacmini ve geçiş hızını artırırlar; aflatoksinle ilişkilendirilmez.",
     "C": "Hepatoselüler karsinom doğru: Aspergillus türlerinin ürettiği aflatoksin diyetle alınan bir kanserojendir ve karaciğer kanseriyle ilişkilidir.",
-    "D": "Akciğer kanserlerinin %80–90'ından sigara sorumludur; aflatoksin akciğer kanseri nedeni olarak geçmez.",
+    "D": "Akciğer kanserlerinin en önemli çevresel nedeni tütün dumanındaki polisiklik aromatik hidrokarbonlar ve radon gazıdır; tahıl ve yer fıstığında çoğalan Aspergillus flavus'un ürettiği aflatoksin B1 ise TP53 geninde R249S mutasyonu yaparak hepatoselüler karsinoma yol açar.",
     "E": "Özofagus kanseri riski obezitede her iki cinsiyette artar; aflatoksinin ilişkili olduğu tümör değildir."
    },
    "ozet": "Diyetle alınan kanserojenlerden aflatoksin hepatoselüler karsinom, nitrozamin ve nitrozamidler mide kanseriyle ilişkilidir; lifli gıdalar kolorektal kansere karşı olası koruyucudur.",
-   "metin": "**Soru.** Aspergillus türlerinin ürettiği aflatoksin hangi kanserle ilişkilidir?\n\n**A)** Mide kanseri · **B)** Kolorektal kanser · **C)** Hepatoselüler karsinom · **D)** Akciğer kanseri · **E)** Özofagus kanseri\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Mide kanseri** — Mide kanseri diyetteki nitrozamin ve nitrozamidlerle ilişkilidir; aflatoksinin hedefi değildir.\n- **Kolorektal kanser** — Kolorektal kanser için lifli gıdaların olası koruyucu etkisi tanımlanır, çünkü dışkı hacmini ve geçiş hızını artırırlar; aflatoksinle ilişkilendirilmez.\n- **Hepatoselüler karsinom** — Hepatoselüler karsinom doğru: Aspergillus türlerinin ürettiği aflatoksin diyetle alınan bir kanserojendir ve karaciğer kanseriyle ilişkilidir.\n- **Akciğer kanseri** — Akciğer kanserlerinin %80–90'ından sigara sorumludur; aflatoksin akciğer kanseri nedeni olarak geçmez.\n- **Özofagus kanseri** — Özofagus kanseri riski obezitede her iki cinsiyette artar; aflatoksinin ilişkili olduğu tümör değildir.\n\n**Cevap: C** — Hepatoselüler karsinom\n\n**Özet.** Diyetle alınan kanserojenlerden aflatoksin hepatoselüler karsinom, nitrozamin ve nitrozamidler mide kanseriyle ilişkilidir; lifli gıdalar kolorektal kansere karşı olası koruyucudur.",
-   "ses": "Aspergillus türlerinin ürettiği aflatoksin hangi kanserle ilişkilidir?\nA, Mide kanseri\nBe, Kolorektal kanser\nCe, Hepatoselüler karsinom\nDe, Akciğer kanseri\nE, Özofagus kanseri\nSeçenekleri sırayla değerlendirelim.\nMide kanseri diyetteki nitrozamin ve nitrozamidlerle ilişkilidir. Aflatoksinin hedefi değildir.\nKolorektal kanser için lifli gıdaların olası koruyucu etkisi tanımlanır, çünkü dışkı hacmini ve geçiş hızını artırırlar. Aflatoksinle ilişkilendirilmez.\nHepatoselüler karsinom doğru. Aspergillus türlerinin ürettiği aflatoksin diyetle alınan bir kanserojendir ve karaciğer kanseriyle ilişkilidir.\nAkciğer kanserlerinin yüzde seksen ile doksanından sigara sorumludur. Aflatoksin akciğer kanseri nedeni olarak geçmez.\nÖzofagus kanseri riski obezitede her iki cinsiyette artar. Aflatoksinin ilişkili olduğu tümör değildir.\nDoğru cevap Ce, Hepatoselüler karsinom\nDiyetle alınan kanserojenlerden aflatoksin hepatoselüler karsinom, nitrozamin ve nitrozamidler mide kanseriyle ilişkilidir. Lifli gıdalar kolorektal kansere karşı olası koruyucudur.",
-   "kelime": 143
+   "sayfa": [
+    39,
+    57,
+    58
+   ],
+   "metin": "**Soru.** Aspergillus türlerinin ürettiği aflatoksin hangi kanserle ilişkilidir?\n\n**A)** Mide kanseri · **B)** Kolorektal kanser · **C)** Hepatoselüler karsinom · **D)** Akciğer kanseri · **E)** Özofagus kanseri\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Mide kanseri** — Mide kanseri diyetteki nitrozamin ve nitrozamidlerle ilişkilidir; aflatoksinin hedefi değildir.\n- **Kolorektal kanser** — Kolorektal kanser için lifli gıdaların olası koruyucu etkisi tanımlanır, çünkü dışkı hacmini ve geçiş hızını artırırlar; aflatoksinle ilişkilendirilmez.\n- **Hepatoselüler karsinom** — Hepatoselüler karsinom doğru: Aspergillus türlerinin ürettiği aflatoksin diyetle alınan bir kanserojendir ve karaciğer kanseriyle ilişkilidir.\n- **Akciğer kanseri** — Akciğer kanserlerinin en önemli çevresel nedeni tütün dumanındaki polisiklik aromatik hidrokarbonlar ve radon gazıdır; tahıl ve yer fıstığında çoğalan Aspergillus flavus'un ürettiği aflatoksin B1 ise TP53 geninde R249S mutasyonu yaparak hepatoselüler karsinoma yol açar.\n- **Özofagus kanseri** — Özofagus kanseri riski obezitede her iki cinsiyette artar; aflatoksinin ilişkili olduğu tümör değildir.\n\n**Cevap: C** — Hepatoselüler karsinom\n\n**Özet.** Diyetle alınan kanserojenlerden aflatoksin hepatoselüler karsinom, nitrozamin ve nitrozamidler mide kanseriyle ilişkilidir; lifli gıdalar kolorektal kansere karşı olası koruyucudur.",
+   "ses": "Aspergillus türlerinin ürettiği aflatoksin hangi kanserle ilişkilidir?\nA, Mide kanseri\nBe, Kolorektal kanser\nCe, Hepatoselüler karsinom\nDe, Akciğer kanseri\nE, Özofagus kanseri\nSeçenekleri sırayla değerlendirelim.\nMide kanseri diyetteki nitrozamin ve nitrozamidlerle ilişkilidir. Aflatoksinin hedefi değildir.\nKolorektal kanser için lifli gıdaların olası koruyucu etkisi tanımlanır, çünkü dışkı hacmini ve geçiş hızını artırırlar. Aflatoksinle ilişkilendirilmez.\nHepatoselüler karsinom doğru. Aspergillus türlerinin ürettiği aflatoksin diyetle alınan bir kanserojendir ve karaciğer kanseriyle ilişkilidir.\nAkciğer kanserlerinin en önemli çevresel nedeni tütün dumanındaki polisiklik aromatik hidrokarbonlar ve radon gazıdır. Tahıl ve yer fıstığında çoğalan Aspergillus flavus'un ürettiği aflatoksin be bir ise te pe elli üç geninde re iki yüz kırk dokuz se mutasyonu yaparak hepatoselüler karsinoma yol açar.\nÖzofagus kanseri riski obezitede her iki cinsiyette artar. Aflatoksinin ilişkili olduğu tümör değildir.\nDoğru cevap Ce, Hepatoselüler karsinom\nDiyetle alınan kanserojenlerden aflatoksin hepatoselüler karsinom, nitrozamin ve nitrozamidler mide kanseriyle ilişkilidir. Lifli gıdalar kolorektal kansere karşı olası koruyucudur.",
+   "kelime": 166
   },
   {
    "no": 27,
    "tur": "cikmis",
+   "sinav": "2021-2022 · 2021-2022 Kurul 1 Sınavı",
    "soru": "Kistik fibrozis (KF) hastalığı ile ilgili aşağıdakilerden hangisi yanlıştır?",
    "secenekler": {
     "A": "KF, temel olarak ekzokrin bezler ile respiratuvar, gastrointestinal ve üreme kanallarının epitelinde sıvı salgılanmasını etkileyen epitelyal transport bozukluğudur.",
@@ -340,6 +419,7 @@
     "E": "KF'deki primer bozukluk, KF transmembran iletim regülatörü (CFTR) geni tarafından kodlanan epitelyal klor kanalı proteininin anormal fonksiyonudur."
    },
    "dogru": "D",
+   "ipucu": "Bu hastalığın temel kusurunun epitel iyon kanalını kodlayan gende olduğunu hatırla ve başka bir kalıtsal hastalığa ait ifadeyi ayıkla.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Epitelyal transport bozukluğu tanımı uygundur; kistik fibrozis solunum, sindirim ve üreme kanallarını tutan bir epitel iyon kanalı hastalığıdır.",
@@ -349,6 +429,11 @@
     "E": "CFTR'nin epitelyal klorür kanalı olması uygundur; bu kanal klorür ve bikarbonat taşır, epitel yüzey sıvısını ve mukus hidrasyonunu düzenler."
    },
    "ozet": "Kistik fibrozis CFTR geni kusuruna bağlı otozomal resesif bir epitel iyon kanalı hastalığıdır; mekanizması bir enzim eksikliği değil, klorür kanalı işlev bozukluğudur.",
+   "sayfa": [
+    19,
+    20,
+    22
+   ],
    "metin": "**Soru.** Kistik fibrozis (KF) hastalığı ile ilgili aşağıdakilerden hangisi yanlıştır?\n\n**A)** KF, temel olarak ekzokrin bezler ile respiratuvar, gastrointestinal ve üreme kanallarının epitelinde sıvı salgılanmasını etkileyen epitelyal transport bozukluğudur. · **B)** Hava yolları ve pankreas kanallarında tıkanmaya neden olan anormal koyulaşmış mukus sekresyonları, hastalığın en önemli klinik bulgusu olan tekrarlayan kronik akciğer enfeksiyonları ile pankreas yetmezliğinden sorumludur. · **C)** Terde yüksek NaCl düzeyi, KF için sabit ve karakteristik biyokimyasal anormalliktir. · **D)** Heksozaminidaz A enziminin beta alt biriminin eksikliğiyle karakterizedir. · **E)** KF'deki primer bozukluk, KF transmembran iletim regülatörü (CFTR) geni tarafından kodlanan epitelyal klor kanalı proteininin anormal fonksiyonudur.\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **KF, temel olarak ekzokrin bezler ile respiratuvar, gastrointestinal ve üreme kanallarının epitelinde sıvı salgılanmasını etkileyen epitelyal transport bozukluğudur.** — Epitelyal transport bozukluğu tanımı uygundur; kistik fibrozis solunum, sindirim ve üreme kanallarını tutan bir epitel iyon kanalı hastalığıdır.\n- **Hava yolları ve pankreas kanallarında tıkanmaya neden olan anormal koyulaşmış mukus sekresyonları, hastalığın en önemli klinik bulgusu olan tekrarlayan kronik akciğer enfeksiyonları ile pankreas yetmezliğinden sorumludur.** — Koyulaşmış mukusun akciğer enfeksiyonları ve pankreas yetmezliğinden sorumlu olması uygundur; mukus tıkaçları tekrarlayan enfeksiyon ve ekzokrin yetmezlik yapar.\n- **Terde yüksek NaCl düzeyi, KF için sabit ve karakteristik biyokimyasal anormalliktir.** — Terde yüksek NaCl ifadesi uygundur; ter bezlerinde NaCl geri emilimi azaldığı için ter hipertonik ve tuzlu olur.\n- **Heksozaminidaz A enziminin beta alt biriminin eksikliğiyle karakterizedir.** — Heksozaminidaz A eksikliği kistik fibrozise ait değildir, bu yüzden doğru cevaptır: kistik fibrozisin kusuru CFTR genindedir.\n- **KF'deki primer bozukluk, KF transmembran iletim regülatörü (CFTR) geni tarafından kodlanan epitelyal klor kanalı proteininin anormal fonksiyonudur.** — CFTR'nin epitelyal klorür kanalı olması uygundur; bu kanal klorür ve bikarbonat taşır, epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.\n\n**Cevap: D** — Heksozaminidaz A enziminin beta alt biriminin eksikliğiyle karakterizedir.\n\n**Özet.** Kistik fibrozis CFTR geni kusuruna bağlı otozomal resesif bir epitel iyon kanalı hastalığıdır; mekanizması bir enzim eksikliği değil, klorür kanalı işlev bozukluğudur.",
    "ses": "Kistik fibrozis, yani ka fe hastalığı ile ilgili aşağıdakilerden hangisi yanlıştır?\nA, Ka fe, temel olarak ekzokrin bezler ile respiratuvar, gastrointestinal ve üreme kanallarının epitelinde sıvı salgılanmasını etkileyen epitelyal transport bozukluğudur.\nBe, Hava yolları ve pankreas kanallarında tıkanmaya neden olan anormal koyulaşmış mukus sekresyonları vardır. Bunlar hastalığın en önemli klinik bulgusu olan tekrarlayan kronik akciğer enfeksiyonları ile pankreas yetmezliğinden sorumludur.\nCe, Terde yüksek sodyum klorür düzeyi, ka fe için sabit ve karakteristik biyokimyasal anormalliktir.\nDe, Heksozaminidaz a enziminin beta alt biriminin eksikliğiyle karakterizedir.\nE, Ka fedeki primer bozukluk, ka fe transmembran iletim regülatörü, yani ce fe te re geni tarafından kodlanan epitelyal klor kanalı proteininin anormal fonksiyonudur.\nŞıkları sırasıyla gözden geçirelim.\nEpitelyal transport bozukluğu tanımı uygundur. Kistik fibrozis solunum, sindirim ve üreme kanallarını tutan bir epitel iyon kanalı hastalığıdır.\nKoyulaşmış mukusun akciğer enfeksiyonları ve pankreas yetmezliğinden sorumlu olması uygundur. Mukus tıkaçları tekrarlayan enfeksiyon ve ekzokrin yetmezlik yapar.\nTerde yüksek sodyum klorür ifadesi uygundur. Ter bezlerinde sodyum klorür geri emilimi azaldığı için ter hipertonik ve tuzlu olur.\nHeksozaminidaz a eksikliği kistik fibrozise ait değildir, bu yüzden doğru cevaptır. Kistik fibrozisin kusuru ce fe te re genindedir.\nCe fe te renin epitelyal klorür kanalı olması uygundur. Bu kanal klorür ve bikarbonat taşır, epitel yüzey sıvısını ve mukus hidrasyonunu düzenler.\nDoğru cevap De, Heksozaminidaz a enziminin beta alt biriminin eksikliğiyle karakterizedir.\nKistik fibrozis ce fe te re geni kusuruna bağlı otozomal resesif bir epitel iyon kanalı hastalığıdır. Mekanizması bir enzim eksikliği değil, klorür kanalı işlev bozukluğudur.",
    "kelime": 316
@@ -356,6 +441,7 @@
   {
    "no": 28,
    "tur": "cikmis",
+   "sinav": "Geçmiş Yıllar Çıkmışı (Arşiv) · donem3-kurul1",
    "soru": "Aşağıdakilerden hangisi SNP (tek nükleotid polimorfizmi) terimi için doğrudur?",
    "secenekler": {
     "A": "Fenotipik etkisi her zaman gözlemlenir",
@@ -365,22 +451,28 @@
     "E": "Hastalıklara direnç konusunda majör etkilidirler"
    },
    "dogru": "B",
+   "ipucu": "Terimin adının kendisinin, varyasyonun kaç bazı kapsadığını söylediğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Fenotipik etkinin her zaman gözlenmesi yanlıştır; genetik varyasyonlar nötr belirteç de olabilir, yani her zaman fenotip oluşturmaz.",
     "B": "Tek nükleotid değişimi doğru: SNP tek baz pozisyonundaki kalıcı varyasyondur ve çoğu bialleliktir.",
     "C": "SNP'lerin doğrudan hastalık nedeni olması yanlıştır; bazı SNP'ler kompleks hastalık riskini yalnızca hafifçe değiştirir.",
-    "D": "SNP'nin tanımlayıcı özelliği tek baz pozisyonunda kalıcı varyasyon olmasıdır. Varyant allel sıklığını mutasyonlarla kıyaslayan bu ifade bu sorudaki ayrımı sağlamaz.",
+    "D": "Tek nükleotid polimorfizmleri (SNP) toplumda %1'den yüksek sıklıkta bulunan yaygın varyantlardır ve nadir hastalık mutasyonlarından çok daha sıktır; SNP için doğru olan temel özellik genomda tek bir nükleotid bazının değişimiyle oluşmasıdır.",
     "E": "Hastalıklara dirençte majör etki ifadesi yanlıştır; SNP'ler hastalık riskini hafifçe değiştirir, majör belirleyici değildir."
    },
    "ozet": "SNP tek baz pozisyonundaki kalıcı varyasyondur; çoğu bialleliktir, bazıları ilaç metabolizmasını etkiler ve kompleks hastalık riskini yalnızca hafifçe değiştirir.",
-   "metin": "**Soru.** Aşağıdakilerden hangisi SNP (tek nükleotid polimorfizmi) terimi için doğrudur?\n\n**A)** Fenotipik etkisi her zaman gözlemlenir · **B)** En sık görülen formu tek bir nükleotidin değişimi ile gerçekleşir · **C)** SNP'ler doğrudan hastalık nedenleridir · **D)** Varyant allel oluşturma sıklığı mutasyonlar kadar değildir · **E)** Hastalıklara direnç konusunda majör etkilidirler\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Fenotipik etkisi her zaman gözlemlenir** — Fenotipik etkinin her zaman gözlenmesi yanlıştır; genetik varyasyonlar nötr belirteç de olabilir, yani her zaman fenotip oluşturmaz.\n- **En sık görülen formu tek bir nükleotidin değişimi ile gerçekleşir** — Tek nükleotid değişimi doğru: SNP tek baz pozisyonundaki kalıcı varyasyondur ve çoğu bialleliktir.\n- **SNP'ler doğrudan hastalık nedenleridir** — SNP'lerin doğrudan hastalık nedeni olması yanlıştır; bazı SNP'ler kompleks hastalık riskini yalnızca hafifçe değiştirir.\n- **Varyant allel oluşturma sıklığı mutasyonlar kadar değildir** — SNP'nin tanımlayıcı özelliği tek baz pozisyonunda kalıcı varyasyon olmasıdır. Varyant allel sıklığını mutasyonlarla kıyaslayan bu ifade bu sorudaki ayrımı sağlamaz.\n- **Hastalıklara direnç konusunda majör etkilidirler** — Hastalıklara dirençte majör etki ifadesi yanlıştır; SNP'ler hastalık riskini hafifçe değiştirir, majör belirleyici değildir.\n\n**Cevap: B** — En sık görülen formu tek bir nükleotidin değişimi ile gerçekleşir\n\n**Özet.** SNP tek baz pozisyonundaki kalıcı varyasyondur; çoğu bialleliktir, bazıları ilaç metabolizmasını etkiler ve kompleks hastalık riskini yalnızca hafifçe değiştirir.",
-   "ses": "Aşağıdakilerden hangisi se ne pe, yani tek nükleotid polimorfizmi terimi için doğrudur?\nA, Fenotipik etkisi her zaman gözlemlenir\nBe, En sık görülen formu tek bir nükleotidin değişimi ile gerçekleşir\nCe, Se ne peler doğrudan hastalık nedenleridir\nDe, Varyant allel oluşturma sıklığı mutasyonlar kadar değildir\nE, Hastalıklara direnç konusunda majör etkilidirler\nŞimdi seçeneklere tek tek bakalım.\nFenotipik etkinin her zaman gözlenmesi yanlıştır. Genetik varyasyonlar nötr belirteç de olabilir, yani her zaman fenotip oluşturmaz.\nTek nükleotid değişimi doğru. Se ne pe tek baz pozisyonundaki kalıcı varyasyondur ve çoğu bialleliktir.\nSe ne pelerin doğrudan hastalık nedeni olması yanlıştır. Bazı se ne peler kompleks hastalık riskini yalnızca hafifçe değiştirir.\nSe ne penin tanımlayıcı özelliği tek baz pozisyonunda kalıcı varyasyon olmasıdır. Varyant allel sıklığını mutasyonlarla kıyaslayan bu ifade bu sorudaki ayrımı sağlamaz.\nHastalıklara dirençte majör etki ifadesi yanlıştır. Se ne peler hastalık riskini hafifçe değiştirir, majör belirleyici değildir.\nDoğru cevap Be, En sık görülen formu tek bir nükleotidin değişimi ile gerçekleşir\nSe ne pe tek baz pozisyonundaki kalıcı varyasyondur. Çoğu bialleliktir, bazıları ilaç metabolizmasını etkiler ve kompleks hastalık riskini yalnızca hafifçe değiştirir.",
-   "kelime": 208
+   "sayfa": [
+    9,
+    8
+   ],
+   "metin": "**Soru.** Aşağıdakilerden hangisi SNP (tek nükleotid polimorfizmi) terimi için doğrudur?\n\n**A)** Fenotipik etkisi her zaman gözlemlenir · **B)** En sık görülen formu tek bir nükleotidin değişimi ile gerçekleşir · **C)** SNP'ler doğrudan hastalık nedenleridir · **D)** Varyant allel oluşturma sıklığı mutasyonlar kadar değildir · **E)** Hastalıklara direnç konusunda majör etkilidirler\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Fenotipik etkisi her zaman gözlemlenir** — Fenotipik etkinin her zaman gözlenmesi yanlıştır; genetik varyasyonlar nötr belirteç de olabilir, yani her zaman fenotip oluşturmaz.\n- **En sık görülen formu tek bir nükleotidin değişimi ile gerçekleşir** — Tek nükleotid değişimi doğru: SNP tek baz pozisyonundaki kalıcı varyasyondur ve çoğu bialleliktir.\n- **SNP'ler doğrudan hastalık nedenleridir** — SNP'lerin doğrudan hastalık nedeni olması yanlıştır; bazı SNP'ler kompleks hastalık riskini yalnızca hafifçe değiştirir.\n- **Varyant allel oluşturma sıklığı mutasyonlar kadar değildir** — Tek nükleotid polimorfizmleri (SNP) toplumda %1'den yüksek sıklıkta bulunan yaygın varyantlardır ve nadir hastalık mutasyonlarından çok daha sıktır; SNP için doğru olan temel özellik genomda tek bir nükleotid bazının değişimiyle oluşmasıdır.\n- **Hastalıklara direnç konusunda majör etkilidirler** — Hastalıklara dirençte majör etki ifadesi yanlıştır; SNP'ler hastalık riskini hafifçe değiştirir, majör belirleyici değildir.\n\n**Cevap: B** — En sık görülen formu tek bir nükleotidin değişimi ile gerçekleşir\n\n**Özet.** SNP tek baz pozisyonundaki kalıcı varyasyondur; çoğu bialleliktir, bazıları ilaç metabolizmasını etkiler ve kompleks hastalık riskini yalnızca hafifçe değiştirir.",
+   "ses": "Aşağıdakilerden hangisi se ne pe, yani tek nükleotid polimorfizmi terimi için doğrudur?\nA, Fenotipik etkisi her zaman gözlemlenir\nBe, En sık görülen formu tek bir nükleotidin değişimi ile gerçekleşir\nCe, Se ne peler doğrudan hastalık nedenleridir\nDe, Varyant allel oluşturma sıklığı mutasyonlar kadar değildir\nE, Hastalıklara direnç konusunda majör etkilidirler\nŞimdi seçeneklere tek tek bakalım.\nFenotipik etkinin her zaman gözlenmesi yanlıştır. Genetik varyasyonlar nötr belirteç de olabilir, yani her zaman fenotip oluşturmaz.\nTek nükleotid değişimi doğru. Se ne pe tek baz pozisyonundaki kalıcı varyasyondur ve çoğu bialleliktir.\nSe ne pelerin doğrudan hastalık nedeni olması yanlıştır. Bazı se ne peler kompleks hastalık riskini yalnızca hafifçe değiştirir.\nTek nükleotid polimorfizmleri, se ne pe, toplumda yüzde bir'den yüksek sıklıkta bulunan yaygın varyantlardır ve nadir hastalık mutasyonlarından çok daha sıktır. Se ne pe için doğru olan temel özellik genomda tek bir nükleotid bazının değişimiyle oluşmasıdır.\nHastalıklara dirençte majör etki ifadesi yanlıştır. Se ne peler hastalık riskini hafifçe değiştirir, majör belirleyici değildir.\nDoğru cevap Be, En sık görülen formu tek bir nükleotidin değişimi ile gerçekleşir\nSe ne pe tek baz pozisyonundaki kalıcı varyasyondur. Çoğu bialleliktir, bazıları ilaç metabolizmasını etkiler ve kompleks hastalık riskini yalnızca hafifçe değiştirir.",
+   "kelime": 219
   },
   {
    "no": 29,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "İnsan genomunun yaklaşık ne kadarı protein kodlar?",
    "secenekler": {
     "A": "%1,5",
@@ -390,6 +482,7 @@
     "E": "%98,5"
    },
    "dogru": "A",
+   "ipucu": "Yaklaşık on dokuz bin protein kodlayan genin üç milyarı aşkın baz çifti içinde çok küçük bir yer kapladığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "%1,5 doğru: yaklaşık 19.000 protein kodlayan gen genomun yalnızca %1,5’ini oluşturur.",
@@ -399,6 +492,11 @@
     "E": "%98,5 kabaca kodlamayan DNA’nın payıdır; promotör, güçlendirici ve düzenleyici RNA dizilerini içerir."
    },
    "ozet": "İnsan genomu yaklaşık 3,3 milyar baz çiftidir; yaklaşık 19.000 protein kodlayan gen genomun yalnızca %1,5’ini oluşturur, geri kalanı büyük oranda kodlamayan DNA’dır.",
+   "sayfa": [
+    5,
+    8,
+    6
+   ],
    "metin": "**Soru.** İnsan genomunun yaklaşık ne kadarı protein kodlar?\n\n**A)** %1,5 · **B)** %15 · **C)** %50 · **D)** %0,5 · **E)** %98,5\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **%1,5** — %1,5 doğru: yaklaşık 19.000 protein kodlayan gen genomun yalnızca %1,5’ini oluşturur.\n- **%15** — %15 fazla bir tahmindir; protein kodlayan kısım bunun yaklaşık onda biri kadardır.\n- **%50** — %50 çok yüksektir; genomun büyük kısmı kodlamayan DNA’dır.\n- **%0,5** — %0,5 bireyler arası genetik farkın üst sınırıdır; dizinin %0,5’inden azı bireyden bireye değişir.\n- **%98,5** — %98,5 kabaca kodlamayan DNA’nın payıdır; promotör, güçlendirici ve düzenleyici RNA dizilerini içerir.\n\n**Cevap: A** — %1,5\n\n**Özet.** İnsan genomu yaklaşık 3,3 milyar baz çiftidir; yaklaşık 19.000 protein kodlayan gen genomun yalnızca %1,5’ini oluşturur, geri kalanı büyük oranda kodlamayan DNA’dır.",
    "ses": "İnsan genomunun yaklaşık ne kadarı protein kodlar?\nA, yüzde bir buçuk\nBe, yüzde on beş\nCe, yüzde elli\nDe, yüzde sıfır virgül beş\nE, yüzde doksan sekiz buçuk\nSeçenekleri sırayla değerlendirelim.\nYüzde bir buçuk doğru, yaklaşık on dokuz bin protein kodlayan gen genomun yalnızca yüzde bir buçuğunu oluşturur.\nYüzde on beş fazla bir tahmindir. Protein kodlayan kısım bunun yaklaşık onda biri kadardır.\nYüzde elli çok yüksektir. Genomun büyük kısmı kodlamayan de ne adır.\nYüzde sıfır virgül beş bireyler arası genetik farkın üst sınırıdır. Dizinin bu orandan azı bireyden bireye değişir.\nYüzde doksan sekiz buçuk kabaca kodlamayan de ne anın payıdır. Promotör, güçlendirici ve düzenleyici re ne a dizilerini içerir.\nDoğru cevap A, yüzde bir buçuk\nİnsan genomu yaklaşık üç virgül üç milyar baz çiftidir. Yaklaşık on dokuz bin protein kodlayan gen genomun yalnızca yüzde bir buçuğunu oluşturur, geri kalanı büyük oranda kodlamayan de ne adır.",
    "kelime": 124
@@ -406,6 +504,7 @@
   {
    "no": 30,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Mendel tipi tek gen hastalıklarının genel özelliği hangisidir?",
    "secenekler": {
     "A": "Çok sayıda genin katkısı",
@@ -415,6 +514,7 @@
     "E": "Kromozom sayısal anomalisi"
    },
    "dogru": "B",
+   "ipucu": "Tek bir gendeki mutasyonun belirleyici olmasının, taşıyan bireyde hastalığın ortaya çıkma olasılığına etkisini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Çok sayıda genin katkısı kompleks hastalıkların özelliğidir; Mendel tipi hastalıkta tek bir gendeki mutasyon belirleyicidir.",
@@ -424,6 +524,11 @@
     "E": "Kromozom sayısal anomalisi trizomi 21 gibi sitogenetik bozuklukların özelliğidir; tek gen hastalığı değildir."
    },
    "ozet": "Mendel tipi hastalıklarda tek bir gendeki mutasyon belirleyicidir; otozomal dominant, otozomal resesif ya da X’e bağlı kalıtılır, penetrans yüksek ve aile öyküsü belirgindir.",
+   "sayfa": [
+    13,
+    11,
+    23
+   ],
    "metin": "**Soru.** Mendel tipi tek gen hastalıklarının genel özelliği hangisidir?\n\n**A)** Çok sayıda genin katkısı · **B)** Yüksek penetrans · **C)** Aile öyküsüyle zayıf ilişki · **D)** DNA dizisi değişmeden kalıtım · **E)** Kromozom sayısal anomalisi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Çok sayıda genin katkısı** — Çok sayıda genin katkısı kompleks hastalıkların özelliğidir; Mendel tipi hastalıkta tek bir gendeki mutasyon belirleyicidir.\n- **Yüksek penetrans** — Yüksek penetrans doğru: Mendel tipi tek gen hastalıkları genellikle yüksek penetranslıdır ve aile öyküsüyle güçlü ilişkilidir.\n- **Aile öyküsüyle zayıf ilişki** — Aile öyküsüyle zayıf ilişki yanlıştır; Mendel tipi hastalıklar aile öyküsüyle güçlü ilişki gösterir.\n- **DNA dizisi değişmeden kalıtım** — DNA dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesi epigenetiğin tanımıdır; Mendel hastalığı mutasyona dayanır.\n- **Kromozom sayısal anomalisi** — Kromozom sayısal anomalisi trizomi 21 gibi sitogenetik bozuklukların özelliğidir; tek gen hastalığı değildir.\n\n**Cevap: B** — Yüksek penetrans\n\n**Özet.** Mendel tipi hastalıklarda tek bir gendeki mutasyon belirleyicidir; otozomal dominant, otozomal resesif ya da X’e bağlı kalıtılır, penetrans yüksek ve aile öyküsü belirgindir.",
    "ses": "Mendel tipi tek gen hastalıklarının genel özelliği hangisidir?\nA, Çok sayıda genin katkısı\nBe, Yüksek penetrans\nCe, Aile öyküsüyle zayıf ilişki\nDe, De ne a dizisi değişmeden kalıtım\nE, Kromozom sayısal anomalisi\nHer seçeneği tek tek ele alalım.\nÇok sayıda genin katkısı kompleks hastalıkların özelliğidir. Mendel tipi hastalıkta tek bir gendeki mutasyon belirleyicidir.\nYüksek penetrans doğru, Mendel tipi tek gen hastalıkları genellikle yüksek penetranslıdır ve aile öyküsüyle güçlü ilişkilidir.\nAile öyküsüyle zayıf ilişki yanlıştır. Mendel tipi hastalıklar aile öyküsüyle güçlü ilişki gösterir.\nDe ne a dizisi değişmeden gen ekspresyonunun kalıcı düzenlenmesi epigenetiğin tanımıdır. Mendel hastalığı mutasyona dayanır.\nKromozom sayısal anomalisi trizomi yirmi bir gibi sitogenetik bozuklukların özelliğidir. Tek gen hastalığı değildir.\nDoğru cevap Be, Yüksek penetrans\nMendel tipi hastalıklarda tek bir gendeki mutasyon belirleyicidir. Otozomal dominant, otozomal resesif ya da iks e bağlı kalıtılır, penetrans yüksek ve aile öyküsü belirgindir.",
    "kelime": 168
@@ -431,6 +536,7 @@
   {
    "no": 31,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Otizm ve gelişimsel gerilikle ilişkilendirilen genetik varyasyon tipi hangisidir?",
    "secenekler": {
     "A": "Tek nükleotid polimorfizmi",
@@ -440,22 +546,31 @@
     "E": "Trizomi"
    },
    "dogru": "C",
+   "ipucu": "Tek bir bazı değil, büyük bir DNA parçasının eksilmesini ya da çoğalmasını içeren farklılığı düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Tek nükleotid polimorfizmi tek baz pozisyonunda kalıcı varyasyondur; çoğu bialleliktir ve kompleks hastalık riskini hafifçe değiştirir.",
-    "B": "Nokta mutasyonu ile karıştırılabilir: Otizmle ilişkilendirilen değişiklik büyük DNA segmentlerinin delesyon ya da duplikasyonudur.",
+    "B": "Nokta mutasyonu tek bir bazın değişmesiyle orak hücreli anemi gibi tek gen hastalıklarına yol açar; binlerce ila milyonlarca baz çiftlik DNA bölgelerinin delesyon veya duplikasyonuyla otizm ve gelişimsel geriliğe katkıda bulunan yapısal değişiklik ise kopya sayısı varyasyonudur (CNV).",
     "C": "Kopya sayısı varyasyonu doğru: binlerce ile milyonlarca baz içeren delesyon ya da duplikasyonlardır; bazıları otizm ve gelişimsel gerilikle ilişkilidir.",
     "D": "DNA metilasyonu epigenetik bir mekanizmadır; DNA dizisini değiştirmeden gen ekspresyonunu düzenler.",
     "E": "Trizomi kromozom sayısal anomalisidir; en sık örneği Down sendromudur."
    },
    "ozet": "Bireyler arası genetik farkın başlıca tipleri tek nükleotid polimorfizmi ve kopya sayısı varyasyonudur; kopya sayısı varyasyonları otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
-   "metin": "**Soru.** Otizm ve gelişimsel gerilikle ilişkilendirilen genetik varyasyon tipi hangisidir?\n\n**A)** Tek nükleotid polimorfizmi · **B)** Nokta mutasyonu · **C)** Kopya sayısı varyasyonu · **D)** DNA metilasyonu · **E)** Trizomi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Tek nükleotid polimorfizmi** — Tek nükleotid polimorfizmi tek baz pozisyonunda kalıcı varyasyondur; çoğu bialleliktir ve kompleks hastalık riskini hafifçe değiştirir.\n- **Nokta mutasyonu** — Nokta mutasyonu ile karıştırılabilir: Otizmle ilişkilendirilen değişiklik büyük DNA segmentlerinin delesyon ya da duplikasyonudur.\n- **Kopya sayısı varyasyonu** — Kopya sayısı varyasyonu doğru: binlerce ile milyonlarca baz içeren delesyon ya da duplikasyonlardır; bazıları otizm ve gelişimsel gerilikle ilişkilidir.\n- **DNA metilasyonu** — DNA metilasyonu epigenetik bir mekanizmadır; DNA dizisini değiştirmeden gen ekspresyonunu düzenler.\n- **Trizomi** — Trizomi kromozom sayısal anomalisidir; en sık örneği Down sendromudur.\n\n**Cevap: C** — Kopya sayısı varyasyonu\n\n**Özet.** Bireyler arası genetik farkın başlıca tipleri tek nükleotid polimorfizmi ve kopya sayısı varyasyonudur; kopya sayısı varyasyonları otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
-   "ses": "Otizm ve gelişimsel gerilikle ilişkilendirilen genetik varyasyon tipi hangisidir?\nA, Tek nükleotid polimorfizmi\nBe, Nokta mutasyonu\nCe, Kopya sayısı varyasyonu\nDe, de ne a metilasyonu\nE, Trizomi\nŞıkları sırasıyla gözden geçirelim.\nTek nükleotid polimorfizmi tek baz pozisyonunda kalıcı varyasyondur, çoğu bialleliktir ve kompleks hastalık riskini hafifçe değiştirir.\nNokta mutasyonu ile karıştırılabilir. Otizmle ilişkilendirilen değişiklik büyük de ne a segmentlerinin delesyon ya da duplikasyonudur.\nKopya sayısı varyasyonu doğru, binlerce ile milyonlarca baz içeren delesyon ya da duplikasyonlardır, bazıları otizm ve gelişimsel gerilikle ilişkilidir.\nDe ne a metilasyonu epigenetik bir mekanizmadır. De ne a dizisini değiştirmeden gen ekspresyonunu düzenler.\nTrizomi kromozom sayısal anomalisidir. En sık örneği Davn sendromudur.\nDoğru cevap Ce, Kopya sayısı varyasyonu\nBireyler arası genetik farkın başlıca tipleri tek nükleotid polimorfizmi ve kopya sayısı varyasyonudur, kopya sayısı varyasyonları otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
-   "kelime": 156
+   "sayfa": [
+    10,
+    8,
+    9,
+    12,
+    23
+   ],
+   "metin": "**Soru.** Otizm ve gelişimsel gerilikle ilişkilendirilen genetik varyasyon tipi hangisidir?\n\n**A)** Tek nükleotid polimorfizmi · **B)** Nokta mutasyonu · **C)** Kopya sayısı varyasyonu · **D)** DNA metilasyonu · **E)** Trizomi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Tek nükleotid polimorfizmi** — Tek nükleotid polimorfizmi tek baz pozisyonunda kalıcı varyasyondur; çoğu bialleliktir ve kompleks hastalık riskini hafifçe değiştirir.\n- **Nokta mutasyonu** — Nokta mutasyonu tek bir bazın değişmesiyle orak hücreli anemi gibi tek gen hastalıklarına yol açar; binlerce ila milyonlarca baz çiftlik DNA bölgelerinin delesyon veya duplikasyonuyla otizm ve gelişimsel geriliğe katkıda bulunan yapısal değişiklik ise kopya sayısı varyasyonudur (CNV).\n- **Kopya sayısı varyasyonu** — Kopya sayısı varyasyonu doğru: binlerce ile milyonlarca baz içeren delesyon ya da duplikasyonlardır; bazıları otizm ve gelişimsel gerilikle ilişkilidir.\n- **DNA metilasyonu** — DNA metilasyonu epigenetik bir mekanizmadır; DNA dizisini değiştirmeden gen ekspresyonunu düzenler.\n- **Trizomi** — Trizomi kromozom sayısal anomalisidir; en sık örneği Down sendromudur.\n\n**Cevap: C** — Kopya sayısı varyasyonu\n\n**Özet.** Bireyler arası genetik farkın başlıca tipleri tek nükleotid polimorfizmi ve kopya sayısı varyasyonudur; kopya sayısı varyasyonları otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
+   "ses": "Otizm ve gelişimsel gerilikle ilişkilendirilen genetik varyasyon tipi hangisidir?\nA, Tek nükleotid polimorfizmi\nBe, Nokta mutasyonu\nCe, Kopya sayısı varyasyonu\nDe, de ne a metilasyonu\nE, Trizomi\nŞıkları sırasıyla gözden geçirelim.\nTek nükleotid polimorfizmi tek baz pozisyonunda kalıcı varyasyondur, çoğu bialleliktir ve kompleks hastalık riskini hafifçe değiştirir.\nNokta mutasyonu tek bir bazın değişmesiyle orak hücreli anemi gibi tek gen hastalıklarına yol açar. Binlerce ila milyonlarca baz çiftlik de ne a bölgelerinin delesyon veya duplikasyonuyla otizm ve gelişimsel geriliğe katkıda bulunan yapısal değişiklik ise kopya sayısı varyasyonudur, ce ne ve,.\nKopya sayısı varyasyonu doğru, binlerce ile milyonlarca baz içeren delesyon ya da duplikasyonlardır, bazıları otizm ve gelişimsel gerilikle ilişkilidir.\nDe ne a metilasyonu epigenetik bir mekanizmadır. De ne a dizisini değiştirmeden gen ekspresyonunu düzenler.\nTrizomi kromozom sayısal anomalisidir. En sık örneği Davn sendromudur.\nDoğru cevap Ce, Kopya sayısı varyasyonu\nBireyler arası genetik farkın başlıca tipleri tek nükleotid polimorfizmi ve kopya sayısı varyasyonudur, kopya sayısı varyasyonları otizm, gelişimsel gerilik ve bazı kanser riskleriyle ilişkilidir.",
+   "kelime": 180
   },
   {
    "no": 32,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Histon asetilasyonu ve metilasyonu gen ekspresyonunu temelde hangi yolla etkiler?",
    "secenekler": {
     "A": "DNA dizisini değiştirerek",
@@ -465,22 +580,29 @@
     "E": "Kodlayan diziyi kısaltarak"
    },
    "dogru": "D",
+   "ipucu": "Histonlara eklenen kimyasal grupların, DNA’nın sarıldığı yapının ne kadar açık ya da sıkı olacağını belirlediğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "DNA dizisini değiştirmek epigenetiğin tanımına aykırıdır; epigenetik düzenleme dizi değişmeden gerçekleşir.",
     "B": "Kopya sayısını artırmak duplikasyon tipi kopya sayısı varyasyonudur; histon modifikasyonu değildir.",
     "C": "Promotörde sitozin metilasyonu DNA metilasyonu mekanizmasıdır; ağır metilasyon gen susturulmasına yol açar.",
     "D": "Kromatin erişilebilirliğini değiştirmek doğru: asetilasyon, metilasyon ve fosforilasyon kromatin yapısını değiştirerek gen ekspresyonunu düzenler.",
-    "E": "Kodlayan diziyi kısaltmak ile karıştırılabilir: Histon modifikasyonları DNA dizisine dokunmaz."
+    "E": "Histon asetilasyonu ve metilasyonu DNA'nın nükleotid dizisini kısaltmaz veya değiştirmez; epigenetik bir mekanizma olarak kromatinin sıkılığını (ökromatin/heterokromatin durumunu) ve transkripsiyon faktörlerinin DNA'ya erişilebilirliğini düzenler."
    },
    "ozet": "Epigenetik mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA’lardır; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
-   "metin": "**Soru.** Histon asetilasyonu ve metilasyonu gen ekspresyonunu temelde hangi yolla etkiler?\n\n**A)** DNA dizisini değiştirerek · **B)** Kopya sayısını artırarak · **C)** Promotörde sitozin metilleyerek · **D)** Kromatin erişilebilirliğini değiştirerek · **E)** Kodlayan diziyi kısaltarak\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **DNA dizisini değiştirerek** — DNA dizisini değiştirmek epigenetiğin tanımına aykırıdır; epigenetik düzenleme dizi değişmeden gerçekleşir.\n- **Kopya sayısını artırarak** — Kopya sayısını artırmak duplikasyon tipi kopya sayısı varyasyonudur; histon modifikasyonu değildir.\n- **Promotörde sitozin metilleyerek** — Promotörde sitozin metilasyonu DNA metilasyonu mekanizmasıdır; ağır metilasyon gen susturulmasına yol açar.\n- **Kromatin erişilebilirliğini değiştirerek** — Kromatin erişilebilirliğini değiştirmek doğru: asetilasyon, metilasyon ve fosforilasyon kromatin yapısını değiştirerek gen ekspresyonunu düzenler.\n- **Kodlayan diziyi kısaltarak** — Kodlayan diziyi kısaltmak ile karıştırılabilir: Histon modifikasyonları DNA dizisine dokunmaz.\n\n**Cevap: D** — Kromatin erişilebilirliğini değiştirerek\n\n**Özet.** Epigenetik mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA’lardır; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
-   "ses": "Histon asetilasyonu ve metilasyonu gen ekspresyonunu temelde hangi yolla etkiler?\nA, de ne a dizisini değiştirerek\nBe, Kopya sayısını artırarak\nCe, Promotörde sitozin metilleyerek\nDe, Kromatin erişilebilirliğini değiştirerek\nE, Kodlayan diziyi kısaltarak\nŞimdi seçeneklere tek tek bakalım.\nDe ne a dizisini değiştirmek epigenetiğin tanımına aykırıdır. Epigenetik düzenleme dizi değişmeden gerçekleşir.\nKopya sayısını artırmak duplikasyon tipi kopya sayısı varyasyonudur, histon modifikasyonu değildir.\nPromotörde sitozin metilasyonu de ne a metilasyonu mekanizmasıdır. Ağır metilasyon gen susturulmasına yol açar.\nKromatin erişilebilirliğini değiştirmek doğru, asetilasyon, metilasyon ve fosforilasyon kromatin yapısını değiştirerek gen ekspresyonunu düzenler.\nKodlayan diziyi kısaltmak ile karıştırılabilir. Histon modifikasyonları de ne a dizisine dokunmaz.\nDoğru cevap De, Kromatin erişilebilirliğini değiştirerek\nEpigenetik mekanizmalar de ne a metilasyonu, histon modifikasyonları ve kodlamayan re ne alardır. Histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
-   "kelime": 150
+   "sayfa": [
+    11,
+    12,
+    10
+   ],
+   "metin": "**Soru.** Histon asetilasyonu ve metilasyonu gen ekspresyonunu temelde hangi yolla etkiler?\n\n**A)** DNA dizisini değiştirerek · **B)** Kopya sayısını artırarak · **C)** Promotörde sitozin metilleyerek · **D)** Kromatin erişilebilirliğini değiştirerek · **E)** Kodlayan diziyi kısaltarak\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **DNA dizisini değiştirerek** — DNA dizisini değiştirmek epigenetiğin tanımına aykırıdır; epigenetik düzenleme dizi değişmeden gerçekleşir.\n- **Kopya sayısını artırarak** — Kopya sayısını artırmak duplikasyon tipi kopya sayısı varyasyonudur; histon modifikasyonu değildir.\n- **Promotörde sitozin metilleyerek** — Promotörde sitozin metilasyonu DNA metilasyonu mekanizmasıdır; ağır metilasyon gen susturulmasına yol açar.\n- **Kromatin erişilebilirliğini değiştirerek** — Kromatin erişilebilirliğini değiştirmek doğru: asetilasyon, metilasyon ve fosforilasyon kromatin yapısını değiştirerek gen ekspresyonunu düzenler.\n- **Kodlayan diziyi kısaltarak** — Histon asetilasyonu ve metilasyonu DNA'nın nükleotid dizisini kısaltmaz veya değiştirmez; epigenetik bir mekanizma olarak kromatinin sıkılığını (ökromatin/heterokromatin durumunu) ve transkripsiyon faktörlerinin DNA'ya erişilebilirliğini düzenler.\n\n**Cevap: D** — Kromatin erişilebilirliğini değiştirerek\n\n**Özet.** Epigenetik mekanizmalar DNA metilasyonu, histon modifikasyonları ve kodlamayan RNA’lardır; histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
+   "ses": "Histon asetilasyonu ve metilasyonu gen ekspresyonunu temelde hangi yolla etkiler?\nA, de ne a dizisini değiştirerek\nBe, Kopya sayısını artırarak\nCe, Promotörde sitozin metilleyerek\nDe, Kromatin erişilebilirliğini değiştirerek\nE, Kodlayan diziyi kısaltarak\nŞimdi seçeneklere tek tek bakalım.\nDe ne a dizisini değiştirmek epigenetiğin tanımına aykırıdır. Epigenetik düzenleme dizi değişmeden gerçekleşir.\nKopya sayısını artırmak duplikasyon tipi kopya sayısı varyasyonudur, histon modifikasyonu değildir.\nPromotörde sitozin metilasyonu de ne a metilasyonu mekanizmasıdır. Ağır metilasyon gen susturulmasına yol açar.\nKromatin erişilebilirliğini değiştirmek doğru, asetilasyon, metilasyon ve fosforilasyon kromatin yapısını değiştirerek gen ekspresyonunu düzenler.\nHiston asetilasyonu ve metilasyonu de ne a'nın nükleotid dizisini kısaltmaz veya değiştirmez. Epigenetik bir mekanizma olarak kromatinin sıkılığını, ökromatin/heterokromatin durumunu, ve transkripsiyon faktörlerinin de ne a'ya erişilebilirliğini düzenler.\nDoğru cevap De, Kromatin erişilebilirliğini değiştirerek\nEpigenetik mekanizmalar de ne a metilasyonu, histon modifikasyonları ve kodlamayan re ne alardır. Histon asetilasyonu, metilasyonu ve fosforilasyonu kromatin yapısını ve erişilebilirliğini değiştirir.",
+   "kelime": 164
   },
   {
    "no": 33,
    "tur": "ornek",
+   "zorluk": "kolay",
    "soru": "Otozomal dominant bir hastalıkta etkilenen bireyin normal eşle her gebeliğinde çocuğun etkilenme olasılığı nedir?",
    "secenekler": {
     "A": "%0",
@@ -490,22 +612,27 @@
     "E": "%50"
    },
    "dogru": "E",
+   "ipucu": "Heterozigot ebeveynin iki alelinden yalnız birinin mutasyonlu olduğunu ve bunun yavruya geçme şansını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "%0 olamaz; heterozigot etkilenen ebeveyn mutasyonlu aleli çocuğa aktarabilir.",
-    "B": "%25 ile karıştırılabilir: Dominant kalıtımda tek mutasyonlu alel fenotip için yeterlidir.",
+    "B": "%25 olasılık, her iki ebeveynin taşıyıcı olduğu otozomal resesif kalıtımda hasta çocuk doğma riskidir; otozomal dominant hastalıkta heterozigot hasta bireyin sağlam eşle her gebeliğinde mutant aleli aktarma ve çocuğun etkilenme olasılığı %50'dir.",
     "C": "%75 olası değildir; etkilenen ebeveyn heterozigot olduğundan mutasyonlu aleli verme şansı her gebelikte yarı yarıyadır.",
     "D": "%100 olmaz; heterozigot ebeveyn normal alelini de çocuğa aktarabilir.",
     "E": "%50 doğru: etkilenen heterozigot ebeveyn ile normal eşin her gebeliğinde çocuğun etkilenme olasılığı %50’dir."
    },
    "ozet": "Otozomal dominant hastalıkta heterozigot bireyde fenotip görülür ve iki cinsiyet eşit etkilenir; etkilenen ile normal eşin her gebeliğinde risk %50’dir.",
-   "metin": "**Soru.** Otozomal dominant bir hastalıkta etkilenen bireyin normal eşle her gebeliğinde çocuğun etkilenme olasılığı nedir?\n\n**A)** %0 · **B)** %25 · **C)** %75 · **D)** %100 · **E)** %50\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **%0** — %0 olamaz; heterozigot etkilenen ebeveyn mutasyonlu aleli çocuğa aktarabilir.\n- **%25** — %25 ile karıştırılabilir: Dominant kalıtımda tek mutasyonlu alel fenotip için yeterlidir.\n- **%75** — %75 olası değildir; etkilenen ebeveyn heterozigot olduğundan mutasyonlu aleli verme şansı her gebelikte yarı yarıyadır.\n- **%100** — %100 olmaz; heterozigot ebeveyn normal alelini de çocuğa aktarabilir.\n- **%50** — %50 doğru: etkilenen heterozigot ebeveyn ile normal eşin her gebeliğinde çocuğun etkilenme olasılığı %50’dir.\n\n**Cevap: E** — %50\n\n**Özet.** Otozomal dominant hastalıkta heterozigot bireyde fenotip görülür ve iki cinsiyet eşit etkilenir; etkilenen ile normal eşin her gebeliğinde risk %50’dir.",
-   "ses": "Otozomal dominant bir hastalıkta etkilenen bireyin normal eşle her gebeliğinde çocuğun etkilenme olasılığı nedir?\nA, yüzde sıfır\nBe, yüzde yirmi beş\nCe, yüzde yetmiş beş\nDe, yüzde yüz\nE, yüzde elli\nSeçenekleri sırayla değerlendirelim.\nYüzde sıfır olamaz. Heterozigot etkilenen ebeveyn mutasyonlu aleli çocuğa aktarabilir.\n%yirmi beş ile karıştırılabilir. Dominant kalıtımda tek mutasyonlu alel fenotip için yeterlidir.\nYüzde yetmiş beş olası değildir. Etkilenen ebeveyn heterozigot olduğundan mutasyonlu aleli verme şansı her gebelikte yarı yarıyadır.\nYüzde yüz olmaz. Heterozigot ebeveyn normal alelini de çocuğa aktarabilir.\nYüzde elli doğru, etkilenen heterozigot ebeveyn ile normal eşin her gebeliğinde çocuğun etkilenme olasılığı yüzde ellidir.\nDoğru cevap E, yüzde elli\nOtozomal dominant hastalıkta heterozigot bireyde fenotip görülür ve iki cinsiyet eşit etkilenir. Etkilenen ile normal eşin her gebeliğinde risk yüzde ellidir.",
-   "kelime": 131
+   "sayfa": [
+    14
+   ],
+   "metin": "**Soru.** Otozomal dominant bir hastalıkta etkilenen bireyin normal eşle her gebeliğinde çocuğun etkilenme olasılığı nedir?\n\n**A)** %0 · **B)** %25 · **C)** %75 · **D)** %100 · **E)** %50\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **%0** — %0 olamaz; heterozigot etkilenen ebeveyn mutasyonlu aleli çocuğa aktarabilir.\n- **%25** — %25 olasılık, her iki ebeveynin taşıyıcı olduğu otozomal resesif kalıtımda hasta çocuk doğma riskidir; otozomal dominant hastalıkta heterozigot hasta bireyin sağlam eşle her gebeliğinde mutant aleli aktarma ve çocuğun etkilenme olasılığı %50'dir.\n- **%75** — %75 olası değildir; etkilenen ebeveyn heterozigot olduğundan mutasyonlu aleli verme şansı her gebelikte yarı yarıyadır.\n- **%100** — %100 olmaz; heterozigot ebeveyn normal alelini de çocuğa aktarabilir.\n- **%50** — %50 doğru: etkilenen heterozigot ebeveyn ile normal eşin her gebeliğinde çocuğun etkilenme olasılığı %50’dir.\n\n**Cevap: E** — %50\n\n**Özet.** Otozomal dominant hastalıkta heterozigot bireyde fenotip görülür ve iki cinsiyet eşit etkilenir; etkilenen ile normal eşin her gebeliğinde risk %50’dir.",
+   "ses": "Otozomal dominant bir hastalıkta etkilenen bireyin normal eşle her gebeliğinde çocuğun etkilenme olasılığı nedir?\nA, yüzde sıfır\nBe, yüzde yirmi beş\nCe, yüzde yetmiş beş\nDe, yüzde yüz\nE, yüzde elli\nSeçenekleri sırayla değerlendirelim.\nYüzde sıfır olamaz. Heterozigot etkilenen ebeveyn mutasyonlu aleli çocuğa aktarabilir.\nyüzde yirmi beş olasılık, her iki ebeveynin taşıyıcı olduğu otozomal resesif kalıtımda hasta çocuk doğma riskidir. Otozomal dominant hastalıkta heterozigot hasta bireyin sağlam eşle her gebeliğinde mutant aleli aktarma ve çocuğun etkilenme olasılığı yüzde elli'dir.\nYüzde yetmiş beş olası değildir. Etkilenen ebeveyn heterozigot olduğundan mutasyonlu aleli verme şansı her gebelikte yarı yarıyadır.\nYüzde yüz olmaz. Heterozigot ebeveyn normal alelini de çocuğa aktarabilir.\nYüzde elli doğru, etkilenen heterozigot ebeveyn ile normal eşin her gebeliğinde çocuğun etkilenme olasılığı yüzde ellidir.\nDoğru cevap E, yüzde elli\nOtozomal dominant hastalıkta heterozigot bireyde fenotip görülür ve iki cinsiyet eşit etkilenir. Etkilenen ile normal eşin her gebeliğinde risk yüzde ellidir.",
+   "kelime": 152
   },
   {
    "no": 34,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Otozomal resesif hastalıklarda mutasyonlu genin kodladığı ürün çoğunlukla hangisidir?",
    "secenekler": {
     "A": "Enzim",
@@ -515,6 +642,7 @@
     "E": "Mikrofibril proteini"
    },
    "dogru": "A",
+   "ipucu": "Dominant hastalıklarda sık görülen reseptör ve yapı ürünlerinden farklı olarak, metabolik tepkimeleri yürüten ürünleri düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Enzim doğru: otozomal resesif hastalıkların çoğu enzim eksikliğidir ve çocukluk çağında başlama eğilimindedir.",
@@ -524,6 +652,11 @@
     "E": "Mikrofibril proteini olan fibrillin-1, otozomal dominant Marfan sendromunda kusurludur."
    },
    "ozet": "Otozomal resesif hastalıklarda fenotip homozigotta çıkar, ebeveynler genellikle asemptomatik taşıyıcıdır; çoğu enzim eksikliğidir, çocuklukta başlar ve akraba evliliğinde sıklık artar.",
+   "sayfa": [
+    18,
+    14,
+    15
+   ],
    "metin": "**Soru.** Otozomal resesif hastalıklarda mutasyonlu genin kodladığı ürün çoğunlukla hangisidir?\n\n**A)** Enzim · **B)** Reseptör · **C)** Yapısal protein · **D)** Tümör baskılayıcı · **E)** Mikrofibril proteini\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Enzim** — Enzim doğru: otozomal resesif hastalıkların çoğu enzim eksikliğidir ve çocukluk çağında başlama eğilimindedir.\n- **Reseptör** — Reseptör, otozomal dominant hastalıklarda sık kodlanan ürünlerdendir.\n- **Yapısal protein** — Yapısal protein de otozomal dominant hastalıklarda sık etkilenen ürün grubudur; Marfan sendromu buna örnektir.\n- **Tümör baskılayıcı** — Tümör baskılayıcı genler otozomal dominant hastalıklarda sık kodlanan ürünler arasında sayılır.\n- **Mikrofibril proteini** — Mikrofibril proteini olan fibrillin-1, otozomal dominant Marfan sendromunda kusurludur.\n\n**Cevap: A** — Enzim\n\n**Özet.** Otozomal resesif hastalıklarda fenotip homozigotta çıkar, ebeveynler genellikle asemptomatik taşıyıcıdır; çoğu enzim eksikliğidir, çocuklukta başlar ve akraba evliliğinde sıklık artar.",
    "ses": "Otozomal resesif hastalıklarda mutasyonlu genin kodladığı ürün çoğunlukla hangisidir?\nA, Enzim\nBe, Reseptör\nCe, Yapısal protein\nDe, Tümör baskılayıcı\nE, Mikrofibril proteini\nHer seçeneği tek tek ele alalım.\nEnzim doğru, otozomal resesif hastalıkların çoğu enzim eksikliğidir ve çocukluk çağında başlama eğilimindedir.\nReseptör, otozomal dominant hastalıklarda sık kodlanan ürünlerdendir.\nYapısal protein de otozomal dominant hastalıklarda sık etkilenen ürün grubudur, Marfan sendromu buna örnektir.\nTümör baskılayıcı genler otozomal dominant hastalıklarda sık kodlanan ürünler arasında sayılır.\nMikrofibril proteini olan fibrillin bir, otozomal dominant Marfan sendromunda kusurludur.\nDoğru cevap A, Enzim\nOtozomal resesif hastalıklarda fenotip homozigotta çıkar, ebeveynler genellikle asemptomatik taşıyıcıdır, çoğu enzim eksikliğidir, çocuklukta başlar ve akraba evliliğinde sıklık artar.",
    "kelime": 131
@@ -531,6 +664,7 @@
   {
    "no": 35,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Fibrillin-1 hangi yapının ana bileşenidir?",
    "secenekler": {
     "A": "Kollajen lifleri",
@@ -540,22 +674,29 @@
     "E": "Histon çekirdeği"
    },
    "dogru": "B",
+   "ipucu": "Elastik liflerin çevresinde iskele oluşturan ve büyüme faktörü bağlanmasını düzenleyen ince lifleri düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
-    "A": "Fibrillin-1 kusurunda bozulan elastik lif bütünlüğüdür. Kollajen lifleri bu sorudaki ayrımı sağlamaz.",
+    "A": "Kollajen lifleri bağ dokusuna çekme kuvvetine karşı gerilim direnci sağlayan üçlü sarmal yapıdaki proteinlerdir; fibrillin-1 ise elastik liflerin çevresinde iskele oluşturan hücre dışı mikrofibrillerin ana glikoproteinidir.",
     "B": "Mikrofibriller doğru: fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler.",
-    "C": "Fibrillin-1 aort duvarı, bağlar ve siliyer zonüllerdeki mikrofibrillerde bulunur. Bazal membran bu sorudaki ayrımı sağlamaz.",
-    "D": "Hücre iskeleti ile karıştırılabilir: Fibrillin-1 hücre dışı matriksin bir proteinidir.",
+    "C": "Bazal membran epitel ve endotel altında tip IV kollajen ile lamininden oluşan özelleşmiş matriks tabakasıdır; fibrillin-1 ise aort, ligamanlar ve lens asıcı bağlarındaki elastik ilişkili mikrofibrillerin temel bileşenidir.",
+    "D": "Hücre iskeleti sitoplazma içinde aktin, mikrotübül ve ara filamanlardan oluşan hücre içi destek ağıdır; fibrillin-1 ise fibroblastlarca hücre dışına salgılanan ve elastik mikrofibrilleri oluşturan ekstrasellüler bir glikoproteindir.",
     "E": "Histon çekirdeği DNA’nın sarıldığı nükleozom yapısıdır; bağ dokusu proteini değildir."
    },
    "ozet": "Marfan sendromunda FBN1 mutasyonuyla fibrillin-1 bozulur; mikrofibrillerin ana bileşeni olan bu protein TGF-β bağlanmasını düzenler, kusurunda elastik lif bütünlüğü bozulur.",
-   "metin": "**Soru.** Fibrillin-1 hangi yapının ana bileşenidir?\n\n**A)** Kollajen lifleri · **B)** Mikrofibriller · **C)** Bazal membran · **D)** Hücre iskeleti · **E)** Histon çekirdeği\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kollajen lifleri** — Fibrillin-1 kusurunda bozulan elastik lif bütünlüğüdür. Kollajen lifleri bu sorudaki ayrımı sağlamaz.\n- **Mikrofibriller** — Mikrofibriller doğru: fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler.\n- **Bazal membran** — Fibrillin-1 aort duvarı, bağlar ve siliyer zonüllerdeki mikrofibrillerde bulunur. Bazal membran bu sorudaki ayrımı sağlamaz.\n- **Hücre iskeleti** — Hücre iskeleti ile karıştırılabilir: Fibrillin-1 hücre dışı matriksin bir proteinidir.\n- **Histon çekirdeği** — Histon çekirdeği DNA’nın sarıldığı nükleozom yapısıdır; bağ dokusu proteini değildir.\n\n**Cevap: B** — Mikrofibriller\n\n**Özet.** Marfan sendromunda FBN1 mutasyonuyla fibrillin-1 bozulur; mikrofibrillerin ana bileşeni olan bu protein TGF-β bağlanmasını düzenler, kusurunda elastik lif bütünlüğü bozulur.",
-   "ses": "Fibrillin bir hangi yapının ana bileşenidir?\nA, Kollajen lifleri\nBe, Mikrofibriller\nCe, Bazal membran\nDe, Hücre iskeleti\nE, Histon çekirdeği\nŞıkları sırasıyla gözden geçirelim.\nFibrillin bir kusurunda bozulan elastik lif bütünlüğüdür. Kollajen lifleri bu sorudaki ayrımı sağlamaz.\nMikrofibriller doğru, fibrillin bir mikrofibrillerin ana bileşenidir ve te ge fe beta bağlanmasını düzenler.\nFibrillin bir aort duvarı, bağlar ve siliyer zonüllerdeki mikrofibrillerde bulunur. Bazal membran bu sorudaki ayrımı sağlamaz.\nHücre iskeleti ile karıştırılabilir. Fibrillin bir hücre dışı matriksin bir proteinidir.\nHiston çekirdeği de ne anın sarıldığı nükleozom yapısıdır. Bağ dokusu proteini değildir.\nDoğru cevap Be, Mikrofibriller\nMarfan sendromunda fe be ne bir mutasyonuyla fibrillin bir bozulur. Mikrofibrillerin ana bileşeni olan bu protein te ge fe beta bağlanmasını düzenler, kusurunda elastik lif bütünlüğü bozulur.",
-   "kelime": 130
+   "sayfa": [
+    17,
+    15,
+    7
+   ],
+   "metin": "**Soru.** Fibrillin-1 hangi yapının ana bileşenidir?\n\n**A)** Kollajen lifleri · **B)** Mikrofibriller · **C)** Bazal membran · **D)** Hücre iskeleti · **E)** Histon çekirdeği\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kollajen lifleri** — Kollajen lifleri bağ dokusuna çekme kuvvetine karşı gerilim direnci sağlayan üçlü sarmal yapıdaki proteinlerdir; fibrillin-1 ise elastik liflerin çevresinde iskele oluşturan hücre dışı mikrofibrillerin ana glikoproteinidir.\n- **Mikrofibriller** — Mikrofibriller doğru: fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler.\n- **Bazal membran** — Bazal membran epitel ve endotel altında tip IV kollajen ile lamininden oluşan özelleşmiş matriks tabakasıdır; fibrillin-1 ise aort, ligamanlar ve lens asıcı bağlarındaki elastik ilişkili mikrofibrillerin temel bileşenidir.\n- **Hücre iskeleti** — Hücre iskeleti sitoplazma içinde aktin, mikrotübül ve ara filamanlardan oluşan hücre içi destek ağıdır; fibrillin-1 ise fibroblastlarca hücre dışına salgılanan ve elastik mikrofibrilleri oluşturan ekstrasellüler bir glikoproteindir.\n- **Histon çekirdeği** — Histon çekirdeği DNA’nın sarıldığı nükleozom yapısıdır; bağ dokusu proteini değildir.\n\n**Cevap: B** — Mikrofibriller\n\n**Özet.** Marfan sendromunda FBN1 mutasyonuyla fibrillin-1 bozulur; mikrofibrillerin ana bileşeni olan bu protein TGF-β bağlanmasını düzenler, kusurunda elastik lif bütünlüğü bozulur.",
+   "ses": "Fibrillin bir hangi yapının ana bileşenidir?\nA, Kollajen lifleri\nBe, Mikrofibriller\nCe, Bazal membran\nDe, Hücre iskeleti\nE, Histon çekirdeği\nŞıkları sırasıyla gözden geçirelim.\nKollajen lifleri bağ dokusuna çekme kuvvetine karşı gerilim direnci sağlayan üçlü sarmal yapıdaki proteinlerdir. Fibrillin-bir ise elastik liflerin çevresinde iskele oluşturan hücre dışı mikrofibrillerin ana glikoproteinidir.\nMikrofibriller doğru, fibrillin bir mikrofibrillerin ana bileşenidir ve te ge fe beta bağlanmasını düzenler.\nBazal membran epitel ve endotel altında tip dört kollajen ile lamininden oluşan özelleşmiş matriks tabakasıdır. Fibrillin-bir ise aort, ligamanlar ve lens asıcı bağlarındaki elastik ilişkili mikrofibrillerin temel bileşenidir.\nHücre iskeleti sitoplazma içinde aktin, mikrotübül ve ara filamanlardan oluşan hücre içi destek ağıdır. Fibrillin-bir ise fibroblastlarca hücre dışına salgılanan ve elastik mikrofibrilleri oluşturan ekstrasellüler bir glikoproteindir.\nHiston çekirdeği de ne anın sarıldığı nükleozom yapısıdır. Bağ dokusu proteini değildir.\nDoğru cevap Be, Mikrofibriller\nMarfan sendromunda fe be ne bir mutasyonuyla fibrillin bir bozulur. Mikrofibrillerin ana bileşeni olan bu protein te ge fe beta bağlanmasını düzenler, kusurunda elastik lif bütünlüğü bozulur.",
+   "kelime": 174
   },
   {
    "no": 36,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Kistik fibroziste pankreas tutulumunun temel mekanizması hangisidir?",
    "secenekler": {
     "A": "Otoimmün adacık yıkımı",
@@ -565,22 +706,30 @@
     "E": "Amiloid birikimi"
    },
    "dogru": "C",
+   "ipucu": "Koyu ve dehidrate salgıların salgı yollarını doldurmasının bezin dış salgı işlevine etkisini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Otoimmün adacık yıkımı tip 1 diyabetin mekanizmasıdır; kistik fibrozis bir epitel iyon kanalı hastalığıdır.",
     "B": "Alkole bağlı inflamasyon kronik alkol kullanımında akut ve kronik pankreatit yapar.",
     "C": "Kanal tıkanması doğru: koyu mukus pankreas kanallarını tıkar, ekzokrin yetmezlik ve malabsorpsiyon gelişir.",
     "D": "Aflatoksin Aspergillus türlerinin ürettiği bir kanserojendir; hepatoselüler karsinomla ilişkilidir.",
-    "E": "Amiloid birikimi ile karıştırılabilir: Kistik fibroziste pankreas hasarı dehidrate salgının tıkayıcı etkisinden doğar."
+    "E": "Amiloid birikimi tip 2 diyabette pankreas adacıklarında (adacık amiloid polipeptidi ile) görülür; kistik fibroziste ekzokrin pankreas yetmezliğinin temel mekanizması ise CFTR kusuruna bağlı koyu mukus tıkaçlarının kanalları tıkaması ve asiner atrofi yapmasıdır."
    },
    "ozet": "Kistik fibroziste dehidrate ve visköz mukus akciğerde tıkaç, tekrarlayan enfeksiyon ve bronşiektazi, pankreasta kanal tıkanmasıyla ekzokrin yetmezlik ve malabsorpsiyon yapar.",
-   "metin": "**Soru.** Kistik fibroziste pankreas tutulumunun temel mekanizması hangisidir?\n\n**A)** Otoimmün adacık yıkımı · **B)** Alkole bağlı inflamasyon · **C)** Kanal tıkanması · **D)** Aflatoksin hasarı · **E)** Amiloid birikimi\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Otoimmün adacık yıkımı** — Otoimmün adacık yıkımı tip 1 diyabetin mekanizmasıdır; kistik fibrozis bir epitel iyon kanalı hastalığıdır.\n- **Alkole bağlı inflamasyon** — Alkole bağlı inflamasyon kronik alkol kullanımında akut ve kronik pankreatit yapar.\n- **Kanal tıkanması** — Kanal tıkanması doğru: koyu mukus pankreas kanallarını tıkar, ekzokrin yetmezlik ve malabsorpsiyon gelişir.\n- **Aflatoksin hasarı** — Aflatoksin Aspergillus türlerinin ürettiği bir kanserojendir; hepatoselüler karsinomla ilişkilidir.\n- **Amiloid birikimi** — Amiloid birikimi ile karıştırılabilir: Kistik fibroziste pankreas hasarı dehidrate salgının tıkayıcı etkisinden doğar.\n\n**Cevap: C** — Kanal tıkanması\n\n**Özet.** Kistik fibroziste dehidrate ve visköz mukus akciğerde tıkaç, tekrarlayan enfeksiyon ve bronşiektazi, pankreasta kanal tıkanmasıyla ekzokrin yetmezlik ve malabsorpsiyon yapar.",
-   "ses": "Kistik fibroziste pankreas tutulumunun temel mekanizması hangisidir?\nA, Otoimmün adacık yıkımı\nBe, Alkole bağlı inflamasyon\nCe, Kanal tıkanması\nDe, Aflatoksin hasarı\nE, Amiloid birikimi\nŞimdi seçeneklere tek tek bakalım.\nOtoimmün adacık yıkımı tip bir diyabetin mekanizmasıdır. Kistik fibrozis bir epitel iyon kanalı hastalığıdır.\nAlkole bağlı inflamasyon kronik alkol kullanımında akut ve kronik pankreatit yapar.\nKanal tıkanması doğru, koyu mukus pankreas kanallarını tıkar, ekzokrin yetmezlik ve malabsorpsiyon gelişir.\nAflatoksin Aspergillus türlerinin ürettiği bir kanserojendir, hepatoselüler karsinomla ilişkilidir.\nAmiloid birikimi ile karıştırılabilir. Kistik fibroziste pankreas hasarı dehidrate salgının tıkayıcı etkisinden doğar.\nDoğru cevap Ce, Kanal tıkanması\nKistik fibroziste dehidrate ve visköz mukus akciğerde tıkaç, tekrarlayan enfeksiyon ve bronşiektazi, pankreasta kanal tıkanmasıyla ekzokrin yetmezlik ve malabsorpsiyon yapar.",
-   "kelime": 143
+   "sayfa": [
+    22,
+    20,
+    45,
+    58
+   ],
+   "metin": "**Soru.** Kistik fibroziste pankreas tutulumunun temel mekanizması hangisidir?\n\n**A)** Otoimmün adacık yıkımı · **B)** Alkole bağlı inflamasyon · **C)** Kanal tıkanması · **D)** Aflatoksin hasarı · **E)** Amiloid birikimi\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Otoimmün adacık yıkımı** — Otoimmün adacık yıkımı tip 1 diyabetin mekanizmasıdır; kistik fibrozis bir epitel iyon kanalı hastalığıdır.\n- **Alkole bağlı inflamasyon** — Alkole bağlı inflamasyon kronik alkol kullanımında akut ve kronik pankreatit yapar.\n- **Kanal tıkanması** — Kanal tıkanması doğru: koyu mukus pankreas kanallarını tıkar, ekzokrin yetmezlik ve malabsorpsiyon gelişir.\n- **Aflatoksin hasarı** — Aflatoksin Aspergillus türlerinin ürettiği bir kanserojendir; hepatoselüler karsinomla ilişkilidir.\n- **Amiloid birikimi** — Amiloid birikimi tip 2 diyabette pankreas adacıklarında (adacık amiloid polipeptidi ile) görülür; kistik fibroziste ekzokrin pankreas yetmezliğinin temel mekanizması ise CFTR kusuruna bağlı koyu mukus tıkaçlarının kanalları tıkaması ve asiner atrofi yapmasıdır.\n\n**Cevap: C** — Kanal tıkanması\n\n**Özet.** Kistik fibroziste dehidrate ve visköz mukus akciğerde tıkaç, tekrarlayan enfeksiyon ve bronşiektazi, pankreasta kanal tıkanmasıyla ekzokrin yetmezlik ve malabsorpsiyon yapar.",
+   "ses": "Kistik fibroziste pankreas tutulumunun temel mekanizması hangisidir?\nA, Otoimmün adacık yıkımı\nBe, Alkole bağlı inflamasyon\nCe, Kanal tıkanması\nDe, Aflatoksin hasarı\nE, Amiloid birikimi\nŞimdi seçeneklere tek tek bakalım.\nOtoimmün adacık yıkımı tip bir diyabetin mekanizmasıdır. Kistik fibrozis bir epitel iyon kanalı hastalığıdır.\nAlkole bağlı inflamasyon kronik alkol kullanımında akut ve kronik pankreatit yapar.\nKanal tıkanması doğru, koyu mukus pankreas kanallarını tıkar, ekzokrin yetmezlik ve malabsorpsiyon gelişir.\nAflatoksin Aspergillus türlerinin ürettiği bir kanserojendir, hepatoselüler karsinomla ilişkilidir.\nAmiloid birikimi tip iki diyabette pankreas adacıklarında, adacık amiloid polipeptidi ile, görülür. Kistik fibroziste ekzokrin pankreas yetmezliğinin temel mekanizması ise ce fe te re kusuruna bağlı koyu mukus tıkaçlarının kanalları tıkaması ve asiner atrofi yapmasıdır.\nDoğru cevap Ce, Kanal tıkanması\nKistik fibroziste dehidrate ve visköz mukus akciğerde tıkaç, tekrarlayan enfeksiyon ve bronşiektazi, pankreasta kanal tıkanmasıyla ekzokrin yetmezlik ve malabsorpsiyon yapar.",
+   "kelime": 162
   },
   {
    "no": 37,
    "tur": "ornek",
+   "zorluk": "kolay",
    "soru": "Down sendromunda riski artan hastalık hangisidir?",
    "secenekler": {
     "A": "Kistik fibrozis",
@@ -590,6 +739,7 @@
     "E": "Mide kanseri"
    },
    "dogru": "D",
+   "ipucu": "Kalp defektinin yanı sıra kan yapımını etkileyen bir malignite ve Alzheimer benzeri nöropatoloji riskinin arttığını hatırla.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Kistik fibrozis otozomal resesif CFTR gen kusurudur; kromozom sayısal anomalisiyle ilişkili değildir.",
@@ -599,6 +749,13 @@
     "E": "Mide kanseri diyetteki nitrozamin ve nitrozamidlerle ilişkilidir."
    },
    "ozet": "Trizomi 21 en sık kromozom sayısal anomalisidir; genellikle maternal mayoz nondisjunction ile oluşur, yaklaşık %40 konjenital kalp defekti ile artmış lösemi ve Alzheimer benzeri nöropatoloji riski taşır.",
+   "sayfa": [
+    24,
+    23,
+    19,
+    15,
+    58
+   ],
    "metin": "**Soru.** Down sendromunda riski artan hastalık hangisidir?\n\n**A)** Kistik fibrozis · **B)** Marfan sendromu · **C)** Hepatoselüler karsinom · **D)** Lösemi · **E)** Mide kanseri\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kistik fibrozis** — Kistik fibrozis otozomal resesif CFTR gen kusurudur; kromozom sayısal anomalisiyle ilişkili değildir.\n- **Marfan sendromu** — Marfan sendromu otozomal dominant FBN1 mutasyonudur; trizomi 21 ile ilişkili değildir.\n- **Hepatoselüler karsinom** — Hepatoselüler karsinom aflatoksinle ilişkili bir kanserdir; Down sendromunda artan risk olarak tanımlanmaz.\n- **Lösemi** — Lösemi doğru: Down sendromunda lösemi ve Alzheimer benzeri nöropatoloji riski artar.\n- **Mide kanseri** — Mide kanseri diyetteki nitrozamin ve nitrozamidlerle ilişkilidir.\n\n**Cevap: D** — Lösemi\n\n**Özet.** Trizomi 21 en sık kromozom sayısal anomalisidir; genellikle maternal mayoz nondisjunction ile oluşur, yaklaşık %40 konjenital kalp defekti ile artmış lösemi ve Alzheimer benzeri nöropatoloji riski taşır.",
    "ses": "Davn sendromunda riski artan hastalık hangisidir?\nA, Kistik fibrozis\nBe, Marfan sendromu\nCe, Hepatoselüler karsinom\nDe, Lösemi\nE, Mide kanseri\nSeçenekleri sırayla değerlendirelim.\nKistik fibrozis otozomal resesif ce fe te re gen kusurudur. Kromozom sayısal anomalisiyle ilişkili değildir.\nMarfan sendromu otozomal dominant fe be ne bir mutasyonudur. Trizomi yirmi bir ile ilişkili değildir.\nHepatoselüler karsinom aflatoksinle ilişkili bir kanserdir. Davn sendromunda artan risk olarak tanımlanmaz.\nLösemi doğru, Davn sendromunda lösemi ve Alzhaymır benzeri nöropatoloji riski artar.\nMide kanseri diyetteki nitrozamin ve nitrozamidlerle ilişkilidir.\nDoğru cevap De, Lösemi\nTrizomi yirmi bir en sık kromozom sayısal anomalisidir, genellikle maternal mayoz nondisjunction ile oluşur. Yaklaşık yüzde kırk konjenital kalp defekti ile artmış lösemi ve Alzhaymır benzeri nöropatoloji riski taşır.",
    "kelime": 133
@@ -606,6 +763,7 @@
   {
    "no": 38,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Modern genetik verilerine göre ırk klinikte nasıl ele alınmalıdır?",
    "secenekler": {
     "A": "Biyolojik kategori",
@@ -615,22 +773,29 @@
     "E": "Sosyal kategori"
    },
    "dogru": "E",
+   "ipucu": "Keskin biyolojik sınırlar bulunmadığını gösteren genetik verilerin bu kavramı hangi alana taşıdığını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Biyolojik kategori yanlış bir yaklaşımdır; modern genetik biyolojik olarak keskin ırkların olmadığını göstermiştir.",
-    "B": "İnsanlarda keskin genetik ırk ayrımı bulunmaz. Genetik alt tür bu sorudaki ayrımı sağlamaz.",
+    "B": "Modern insan genetiği araştırmaları genetik çeşitliliğin büyük kısmının kıtalar arası değil grup içi bireyler arasında olduğunu ve insanlarda biyolojik alt tür bulunmadığını göstermiştir; bu nedenle ırk kavramı biyolojik alt tür değil, sosyal bir kategori olarak ele alınır.",
     "C": "Kalıtım paterni otozomal dominant, otozomal resesif ya da X’e bağlı tek gen hastalıklarını tanımlar; ırkla ilgili değildir.",
     "D": "Mendel özelliği tek gendeki mutasyonun belirleyici olduğu hastalıkları anlatır; ırk kavramını tanımlamaz.",
     "E": "Sosyal kategori doğru: ırk biyolojik değil sosyal bir kategori olarak ele alınmalıdır."
    },
    "ozet": "Modern genetik biyolojik olarak keskin ırklar olmadığını göstermiştir; ırk sosyal kategoridir ve dezavantajlı gruplar daha fazla kirliliğe maruz kalıp daha yüksek hastalık yükü taşır.",
-   "metin": "**Soru.** Modern genetik verilerine göre ırk klinikte nasıl ele alınmalıdır?\n\n**A)** Biyolojik kategori · **B)** Genetik alt tür · **C)** Kalıtım paterni · **D)** Mendel özelliği · **E)** Sosyal kategori\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Biyolojik kategori** — Biyolojik kategori yanlış bir yaklaşımdır; modern genetik biyolojik olarak keskin ırkların olmadığını göstermiştir.\n- **Genetik alt tür** — İnsanlarda keskin genetik ırk ayrımı bulunmaz. Genetik alt tür bu sorudaki ayrımı sağlamaz.\n- **Kalıtım paterni** — Kalıtım paterni otozomal dominant, otozomal resesif ya da X’e bağlı tek gen hastalıklarını tanımlar; ırkla ilgili değildir.\n- **Mendel özelliği** — Mendel özelliği tek gendeki mutasyonun belirleyici olduğu hastalıkları anlatır; ırk kavramını tanımlamaz.\n- **Sosyal kategori** — Sosyal kategori doğru: ırk biyolojik değil sosyal bir kategori olarak ele alınmalıdır.\n\n**Cevap: E** — Sosyal kategori\n\n**Özet.** Modern genetik biyolojik olarak keskin ırklar olmadığını göstermiştir; ırk sosyal kategoridir ve dezavantajlı gruplar daha fazla kirliliğe maruz kalıp daha yüksek hastalık yükü taşır.",
-   "ses": "Modern genetik verilerine göre ırk klinikte nasıl ele alınmalıdır?\nA, Biyolojik kategori\nBe, Genetik alt tür\nCe, Kalıtım paterni\nDe, Mendel özelliği\nE, Sosyal kategori\nHer seçeneği tek tek ele alalım.\nBiyolojik kategori yanlış bir yaklaşımdır, modern genetik biyolojik olarak keskin ırkların olmadığını göstermiştir.\nİnsanlarda keskin genetik ırk ayrımı bulunmaz. Genetik alt tür bu sorudaki ayrımı sağlamaz.\nKalıtım paterni otozomal dominant, otozomal resesif ya da ikse bağlı tek gen hastalıklarını tanımlar. Irkla ilgili değildir.\nMendel özelliği tek gendeki mutasyonun belirleyici olduğu hastalıkları anlatır, ırk kavramını tanımlamaz.\nSosyal kategori doğru, ırk biyolojik değil sosyal bir kategori olarak ele alınmalıdır.\nDoğru cevap E, Sosyal kategori\nModern genetik biyolojik olarak keskin ırklar olmadığını göstermiştir, ırk sosyal kategoridir ve dezavantajlı gruplar daha fazla kirliliğe maruz kalıp daha yüksek hastalık yükü taşır.",
-   "kelime": 155
+   "sayfa": [
+    28,
+    29,
+    13
+   ],
+   "metin": "**Soru.** Modern genetik verilerine göre ırk klinikte nasıl ele alınmalıdır?\n\n**A)** Biyolojik kategori · **B)** Genetik alt tür · **C)** Kalıtım paterni · **D)** Mendel özelliği · **E)** Sosyal kategori\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Biyolojik kategori** — Biyolojik kategori yanlış bir yaklaşımdır; modern genetik biyolojik olarak keskin ırkların olmadığını göstermiştir.\n- **Genetik alt tür** — Modern insan genetiği araştırmaları genetik çeşitliliğin büyük kısmının kıtalar arası değil grup içi bireyler arasında olduğunu ve insanlarda biyolojik alt tür bulunmadığını göstermiştir; bu nedenle ırk kavramı biyolojik alt tür değil, sosyal bir kategori olarak ele alınır.\n- **Kalıtım paterni** — Kalıtım paterni otozomal dominant, otozomal resesif ya da X’e bağlı tek gen hastalıklarını tanımlar; ırkla ilgili değildir.\n- **Mendel özelliği** — Mendel özelliği tek gendeki mutasyonun belirleyici olduğu hastalıkları anlatır; ırk kavramını tanımlamaz.\n- **Sosyal kategori** — Sosyal kategori doğru: ırk biyolojik değil sosyal bir kategori olarak ele alınmalıdır.\n\n**Cevap: E** — Sosyal kategori\n\n**Özet.** Modern genetik biyolojik olarak keskin ırklar olmadığını göstermiştir; ırk sosyal kategoridir ve dezavantajlı gruplar daha fazla kirliliğe maruz kalıp daha yüksek hastalık yükü taşır.",
+   "ses": "Modern genetik verilerine göre ırk klinikte nasıl ele alınmalıdır?\nA, Biyolojik kategori\nBe, Genetik alt tür\nCe, Kalıtım paterni\nDe, Mendel özelliği\nE, Sosyal kategori\nHer seçeneği tek tek ele alalım.\nBiyolojik kategori yanlış bir yaklaşımdır, modern genetik biyolojik olarak keskin ırkların olmadığını göstermiştir.\nModern insan genetiği araştırmaları genetik çeşitliliğin büyük kısmının kıtalar arası değil grup içi bireyler arasında olduğunu ve insanlarda biyolojik alt tür bulunmadığını göstermiştir. Bu nedenle ırk kavramı biyolojik alt tür değil, sosyal bir kategori olarak ele alınır.\nKalıtım paterni otozomal dominant, otozomal resesif ya da ikse bağlı tek gen hastalıklarını tanımlar. Irkla ilgili değildir.\nMendel özelliği tek gendeki mutasyonun belirleyici olduğu hastalıkları anlatır, ırk kavramını tanımlamaz.\nSosyal kategori doğru, ırk biyolojik değil sosyal bir kategori olarak ele alınmalıdır.\nDoğru cevap E, Sosyal kategori\nModern genetik biyolojik olarak keskin ırklar olmadığını göstermiştir, ırk sosyal kategoridir ve dezavantajlı gruplar daha fazla kirliliğe maruz kalıp daha yüksek hastalık yükü taşır.",
+   "kelime": 179
   },
   {
    "no": 39,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "İklim değişikliğinde sel ve altyapı bozulmasıyla artan hastalık grubu hangisidir?",
    "secenekler": {
     "A": "Su ve gıdayla bulaşan enfeksiyonlar",
@@ -640,6 +805,7 @@
     "E": "Solunum mortalitesi"
    },
    "dogru": "A",
+   "ipucu": "Taşkınların içme suyu ve kanalizasyon sistemlerine verdiği zararın hangi hastalıkları artıracağını düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Su ve gıdayla bulaşan enfeksiyonlar doğru: sel ve altyapı bozulması bu enfeksiyonları artırır.",
@@ -649,6 +815,10 @@
     "E": "Solunum mortalitesi de sıcak hava dalgalarıyla artan sonuçlardandır."
    },
    "ozet": "İklim değişikliğinde sıcak hava dalgaları kardiyovasküler ve solunum mortalitesini, sel ve altyapı bozulması su ve gıdayla bulaşan enfeksiyonları, vektör yayılımı sıtma ve dangı, verim kaybı yetersiz beslenmeyi artırır.",
+   "sayfa": [
+    33,
+    30
+   ],
    "metin": "**Soru.** İklim değişikliğinde sel ve altyapı bozulmasıyla artan hastalık grubu hangisidir?\n\n**A)** Su ve gıdayla bulaşan enfeksiyonlar · **B)** Vektörle bulaşan enfeksiyonlar · **C)** Kardiyovasküler mortalite · **D)** Yetersiz beslenme · **E)** Solunum mortalitesi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Su ve gıdayla bulaşan enfeksiyonlar** — Su ve gıdayla bulaşan enfeksiyonlar doğru: sel ve altyapı bozulması bu enfeksiyonları artırır.\n- **Vektörle bulaşan enfeksiyonlar** — Vektörle bulaşan enfeksiyonlar, örneğin sıtma ve dang, iklim değişikliğiyle coğrafi olarak yayılır; sel ile değil vektör yayılımıyla ilişkilidir.\n- **Kardiyovasküler mortalite** — Kardiyovasküler mortalite sıcak hava dalgalarıyla artan bir sonuçtur.\n- **Yetersiz beslenme** — Yetersiz beslenme tarımda verim kaybına bağlı gelişir.\n- **Solunum mortalitesi** — Solunum mortalitesi de sıcak hava dalgalarıyla artan sonuçlardandır.\n\n**Cevap: A** — Su ve gıdayla bulaşan enfeksiyonlar\n\n**Özet.** İklim değişikliğinde sıcak hava dalgaları kardiyovasküler ve solunum mortalitesini, sel ve altyapı bozulması su ve gıdayla bulaşan enfeksiyonları, vektör yayılımı sıtma ve dangı, verim kaybı yetersiz beslenmeyi artırır.",
    "ses": "İklim değişikliğinde sel ve altyapı bozulmasıyla artan hastalık grubu hangisidir?\nA, Su ve gıdayla bulaşan enfeksiyonlar\nBe, Vektörle bulaşan enfeksiyonlar\nCe, Kardiyovasküler mortalite\nDe, Yetersiz beslenme\nE, Solunum mortalitesi\nŞıkları sırasıyla gözden geçirelim.\nSu ve gıdayla bulaşan enfeksiyonlar doğru, sel ve altyapı bozulması bu enfeksiyonları artırır.\nVektörle bulaşan enfeksiyonlar, örneğin sıtma ve dang, iklim değişikliğiyle coğrafi olarak yayılır, sel ile değil vektör yayılımıyla ilişkilidir.\nKardiyovasküler mortalite sıcak hava dalgalarıyla artan bir sonuçtur.\nYetersiz beslenme tarımda verim kaybına bağlı gelişir.\nSolunum mortalitesi de sıcak hava dalgalarıyla artan sonuçlardandır.\nDoğru cevap A, Su ve gıdayla bulaşan enfeksiyonlar\nİklim değişikliğinde sıcak hava dalgaları kardiyovasküler ve solunum mortalitesini, sel ve altyapı bozulması su ve gıdayla bulaşan enfeksiyonları artırır. Vektör yayılımı sıtma ve dangı, verim kaybı yetersiz beslenmeyi artırır.",
    "kelime": 154
@@ -656,6 +826,7 @@
   {
    "no": 40,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Otomobil egzozu ve güneş ışığıyla oluşup serbest radikal üreterek solunum epiteline zarar veren kirletici hangisidir?",
    "secenekler": {
     "A": "Karbon monoksit",
@@ -665,6 +836,7 @@
     "E": "Azot dioksit"
    },
    "dogru": "B",
+   "ipucu": "Smog ile ilişkili, güneş ışığının etkisiyle havada oluşan ve oksidan etki gösteren gazı düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Karbon monoksit tütün dumanında da bulunan bir kirleticidir; sigarada miyokard oksijen sunumunu azaltır.",
@@ -674,6 +846,11 @@
     "E": "Azot dioksit de ana hava kirleticileri arasında sayılır; sorudaki oluşum yolu ve epitel hasarı ozona özgüdür."
    },
    "ozet": "Ana hava kirleticileri kükürt dioksit, karbon monoksit, azot dioksit, ozon ve partikül maddedir; ozon egzoz ve güneş ışığıyla oluşup serbest radikal üretir, smog ozon ve ince partiküllerle ilişkilidir.",
+   "sayfa": [
+    35,
+    36,
+    42
+   ],
    "metin": "**Soru.** Otomobil egzozu ve güneş ışığıyla oluşup serbest radikal üreterek solunum epiteline zarar veren kirletici hangisidir?\n\n**A)** Karbon monoksit · **B)** Ozon · **C)** Kükürt dioksit · **D)** Partikül madde · **E)** Azot dioksit\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Karbon monoksit** — Karbon monoksit tütün dumanında da bulunan bir kirleticidir; sigarada miyokard oksijen sunumunu azaltır.\n- **Ozon** — Ozon doğru: otomobil egzozu ve güneş ışığıyla oluşur, serbest radikal üreterek solunum epiteline zarar verir.\n- **Kükürt dioksit** — Kükürt dioksit ana hava kirleticilerindendir; egzoz ve güneş ışığıyla oluşan oksidan gaz değildir.\n- **Partikül madde** — Partikül madde 10 µm’den küçükse alt solunum yollarına ulaşır, makrofaj ve nötrofilleri aktive eder.\n- **Azot dioksit** — Azot dioksit de ana hava kirleticileri arasında sayılır; sorudaki oluşum yolu ve epitel hasarı ozona özgüdür.\n\n**Cevap: B** — Ozon\n\n**Özet.** Ana hava kirleticileri kükürt dioksit, karbon monoksit, azot dioksit, ozon ve partikül maddedir; ozon egzoz ve güneş ışığıyla oluşup serbest radikal üretir, smog ozon ve ince partiküllerle ilişkilidir.",
    "ses": "Otomobil egzozu ve güneş ışığıyla oluşup serbest radikal üreterek solunum epiteline zarar veren kirletici hangisidir?\nA, Karbon monoksit\nBe, Ozon\nCe, Kükürt dioksit\nDe, Partikül madde\nE, Azot dioksit\nŞimdi seçeneklere tek tek bakalım.\nKarbon monoksit tütün dumanında da bulunan bir kirleticidir, sigarada miyokard oksijen sunumunu azaltır.\nOzon doğru, otomobil egzozu ve güneş ışığıyla oluşur, serbest radikal üreterek solunum epiteline zarar verir.\nKükürt dioksit ana hava kirleticilerindendir, egzoz ve güneş ışığıyla oluşan oksidan gaz değildir.\nPartikül madde on mikrometreden küçükse alt solunum yollarına ulaşır, makrofaj ve nötrofilleri aktive eder.\nAzot dioksit de ana hava kirleticileri arasında sayılır, sorudaki oluşum yolu ve epitel hasarı ozona özgüdür.\nDoğru cevap Be, Ozon\nAna hava kirleticileri kükürt dioksit, karbon monoksit, azot dioksit, ozon ve partikül maddedir. Ozon egzoz ve güneş ışığıyla oluşup serbest radikal üretir, smog ozon ve ince partiküllerle ilişkilidir.",
    "kelime": 163
@@ -681,6 +858,7 @@
   {
    "no": 41,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Kurşun toksisitesinde büyüme plağında görülen bulgu hangisidir?",
    "secenekler": {
     "A": "Osteopeni",
@@ -690,22 +868,29 @@
     "E": "Lenfositik infiltrasyon"
    },
    "dogru": "C",
+   "ipucu": "Kemikte biriken ağır metalin röntgende yoğun, beyaz bantlar halinde görüldüğünü düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Osteopeni anoreksiya nervozada görülen kemik bulgusudur; kurşun toksisitesinin tipik bulgusu değildir.",
-    "B": "Epifizde iskemik nekroz ile karıştırılabilir: Kurşun büyüme plağında nekroz değil, yoğun çizgiler oluşturur.",
+    "B": "Epifizde iskemik (avasküler) nekroz orak hücreli anemi, kronik kortikosteroid kullanımı veya dekompresyon hastalığında görülür; kurşun zehirlenmesinde ise kurşun osteoklast aktivitesini ve kıkırdak rezorpsiyonunu bozarak metafizde radyo-opak kurşun çizgileri oluşturur.",
     "C": "Radyo-opak kurşun çizgileri doğru: vücuttaki kurşunun büyük kısmı kemikte birikir ve büyüme plağında bu çizgiler görülür.",
     "D": "Mikrositer, hipokromik anemi kurşun toksisitesinin kan bulgusudur; büyüme plağı bulgusu değildir.",
-    "E": "Kurşunun kemikteki bulgusu radyolojik çizgilerdir. Lenfositik infiltrasyon bu sorudaki ayrımı sağlamaz."
+    "E": "Lenfositik infiltrasyon kronik osteomiyelit veya inflamatuvar artritlerde görülen hücresel yanıttır; çocukluk çağı kurşun zehirlenmesinde büyüme plağında kalsifiye kıkırdak trabeküllerinin yıkılamamasıyla oluşan karakteristik bulgu ise radyo-opak kurşun çizgileridir."
    },
    "ozet": "Kurşunun %80–85’i kemik ve dişlerde birikir; kanda mikrositer hipokromik anemi ve bazofilik beneklenme, büyüme plağında radyo-opak kurşun çizgileri görülür.",
-   "metin": "**Soru.** Kurşun toksisitesinde büyüme plağında görülen bulgu hangisidir?\n\n**A)** Osteopeni · **B)** Epifizde iskemik nekroz · **C)** Radyo-opak kurşun çizgileri · **D)** Mikrositer anemi · **E)** Lenfositik infiltrasyon\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Osteopeni** — Osteopeni anoreksiya nervozada görülen kemik bulgusudur; kurşun toksisitesinin tipik bulgusu değildir.\n- **Epifizde iskemik nekroz** — Epifizde iskemik nekroz ile karıştırılabilir: Kurşun büyüme plağında nekroz değil, yoğun çizgiler oluşturur.\n- **Radyo-opak kurşun çizgileri** — Radyo-opak kurşun çizgileri doğru: vücuttaki kurşunun büyük kısmı kemikte birikir ve büyüme plağında bu çizgiler görülür.\n- **Mikrositer anemi** — Mikrositer, hipokromik anemi kurşun toksisitesinin kan bulgusudur; büyüme plağı bulgusu değildir.\n- **Lenfositik infiltrasyon** — Kurşunun kemikteki bulgusu radyolojik çizgilerdir. Lenfositik infiltrasyon bu sorudaki ayrımı sağlamaz.\n\n**Cevap: C** — Radyo-opak kurşun çizgileri\n\n**Özet.** Kurşunun %80–85’i kemik ve dişlerde birikir; kanda mikrositer hipokromik anemi ve bazofilik beneklenme, büyüme plağında radyo-opak kurşun çizgileri görülür.",
-   "ses": "Kurşun toksisitesinde büyüme plağında görülen bulgu hangisidir?\nA, Osteopeni\nBe, Epifizde iskemik nekroz\nCe, Radyo opak kurşun çizgileri\nDe, Mikrositer anemi\nE, Lenfositik infiltrasyon\nSeçenekleri sırayla değerlendirelim.\nOsteopeni anoreksiya nervozada görülen kemik bulgusudur, kurşun toksisitesinin tipik bulgusu değildir.\nEpifizde iskemik nekroz ile karıştırılabilir. Kurşun büyüme plağında nekroz değil, yoğun çizgiler oluşturur.\nRadyo opak kurşun çizgileri doğru, vücuttaki kurşunun büyük kısmı kemikte birikir ve büyüme plağında bu çizgiler görülür.\nMikrositer, hipokromik anemi kurşun toksisitesinin kan bulgusudur, büyüme plağı bulgusu değildir.\nKurşunun kemikteki bulgusu radyolojik çizgilerdir. Lenfositik infiltrasyon bu sorudaki ayrımı sağlamaz.\nDoğru cevap Ce, Radyo opak kurşun çizgileri\nKurşunun yüzde seksen ile seksen beşi kemik ve dişlerde birikir. Kanda mikrositer hipokromik anemi ve bazofilik beneklenme, büyüme plağında radyo opak kurşun çizgileri görülür.",
-   "kelime": 141
+   "sayfa": [
+    38,
+    37,
+    51
+   ],
+   "metin": "**Soru.** Kurşun toksisitesinde büyüme plağında görülen bulgu hangisidir?\n\n**A)** Osteopeni · **B)** Epifizde iskemik nekroz · **C)** Radyo-opak kurşun çizgileri · **D)** Mikrositer anemi · **E)** Lenfositik infiltrasyon\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Osteopeni** — Osteopeni anoreksiya nervozada görülen kemik bulgusudur; kurşun toksisitesinin tipik bulgusu değildir.\n- **Epifizde iskemik nekroz** — Epifizde iskemik (avasküler) nekroz orak hücreli anemi, kronik kortikosteroid kullanımı veya dekompresyon hastalığında görülür; kurşun zehirlenmesinde ise kurşun osteoklast aktivitesini ve kıkırdak rezorpsiyonunu bozarak metafizde radyo-opak kurşun çizgileri oluşturur.\n- **Radyo-opak kurşun çizgileri** — Radyo-opak kurşun çizgileri doğru: vücuttaki kurşunun büyük kısmı kemikte birikir ve büyüme plağında bu çizgiler görülür.\n- **Mikrositer anemi** — Mikrositer, hipokromik anemi kurşun toksisitesinin kan bulgusudur; büyüme plağı bulgusu değildir.\n- **Lenfositik infiltrasyon** — Lenfositik infiltrasyon kronik osteomiyelit veya inflamatuvar artritlerde görülen hücresel yanıttır; çocukluk çağı kurşun zehirlenmesinde büyüme plağında kalsifiye kıkırdak trabeküllerinin yıkılamamasıyla oluşan karakteristik bulgu ise radyo-opak kurşun çizgileridir.\n\n**Cevap: C** — Radyo-opak kurşun çizgileri\n\n**Özet.** Kurşunun %80–85’i kemik ve dişlerde birikir; kanda mikrositer hipokromik anemi ve bazofilik beneklenme, büyüme plağında radyo-opak kurşun çizgileri görülür.",
+   "ses": "Kurşun toksisitesinde büyüme plağında görülen bulgu hangisidir?\nA, Osteopeni\nBe, Epifizde iskemik nekroz\nCe, Radyo opak kurşun çizgileri\nDe, Mikrositer anemi\nE, Lenfositik infiltrasyon\nSeçenekleri sırayla değerlendirelim.\nOsteopeni anoreksiya nervozada görülen kemik bulgusudur, kurşun toksisitesinin tipik bulgusu değildir.\nEpifizde iskemik, avasküler, nekroz orak hücreli anemi, kronik kortikosteroid kullanımı veya dekompresyon hastalığında görülür. Kurşun zehirlenmesinde ise kurşun osteoklast aktivitesini ve kıkırdak rezorpsiyonunu bozarak metafizde radyo-opak kurşun çizgileri oluşturur.\nRadyo opak kurşun çizgileri doğru, vücuttaki kurşunun büyük kısmı kemikte birikir ve büyüme plağında bu çizgiler görülür.\nMikrositer, hipokromik anemi kurşun toksisitesinin kan bulgusudur, büyüme plağı bulgusu değildir.\nLenfositik infiltrasyon kronik osteomiyelit veya inflamatuvar artritlerde görülen hücresel yanıttır. Çocukluk çağı kurşun zehirlenmesinde büyüme plağında kalsifiye kıkırdak trabeküllerinin yıkılamamasıyla oluşan karakteristik bulgu ise radyo-opak kurşun çizgileridir.\nDoğru cevap Ce, Radyo opak kurşun çizgileri\nKurşunun yüzde seksen ile seksen beşi kemik ve dişlerde birikir. Kanda mikrositer hipokromik anemi ve bazofilik beneklenme, büyüme plağında radyo opak kurşun çizgileri görülür.",
+   "kelime": 173
   },
   {
    "no": 42,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Sigaraya bağlı amfizem gelişiminde rol oynayan mekanizma hangisidir?",
    "secenekler": {
     "A": "Leptin direnci",
@@ -715,6 +900,7 @@
     "E": "CFTR kusuru"
    },
    "dogru": "D",
+   "ipucu": "Kronik inflamasyonda salınan yıkıcı enzimlerle bunları baskılayan koruyucu proteinler arasındaki oranın bozulmasını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Leptin direnci obezitede görülür; leptin yüksek olsa da etkisi azalmıştır.",
@@ -724,6 +910,13 @@
     "E": "CFTR kusuru kistik fibroziste klorür ve bikarbonat kanalını bozar; sigaraya bağlı hasarın mekanizması değildir."
    },
    "ozet": "Tütünün solunum sistemine etkisi kronik inflamasyon, elastaz–antielastaz dengesizliği ve DNA hasarıyla olur; sonuç amfizem, kronik bronşit ve akciğer karsinomudur.",
+   "sayfa": [
+    41,
+    55,
+    17,
+    44,
+    19
+   ],
    "metin": "**Soru.** Sigaraya bağlı amfizem gelişiminde rol oynayan mekanizma hangisidir?\n\n**A)** Leptin direnci · **B)** TGF-β sinyal artışı · **C)** NADH/NAD⁺ oranı artışı · **D)** Elastaz–antielastaz dengesizliği · **E)** CFTR kusuru\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Leptin direnci** — Leptin direnci obezitede görülür; leptin yüksek olsa da etkisi azalmıştır.\n- **TGF-β sinyal artışı** — TGF-β sinyal artışı Marfan sendromunda fibrillin kusurunun sonucudur ve damar duvarını zayıflatır.\n- **NADH/NAD⁺ oranı artışı** — NADH/NAD⁺ oranının artışı alkol metabolizmasında yağ asidi oksidasyonunu azaltır ve steatoz yapar.\n- **Elastaz–antielastaz dengesizliği** — Elastaz–antielastaz dengesizliği doğru: sigara kronik inflamasyon ve bu dengesizlikle amfizem ve kronik bronşite yol açar.\n- **CFTR kusuru** — CFTR kusuru kistik fibroziste klorür ve bikarbonat kanalını bozar; sigaraya bağlı hasarın mekanizması değildir.\n\n**Cevap: D** — Elastaz–antielastaz dengesizliği\n\n**Özet.** Tütünün solunum sistemine etkisi kronik inflamasyon, elastaz–antielastaz dengesizliği ve DNA hasarıyla olur; sonuç amfizem, kronik bronşit ve akciğer karsinomudur.",
    "ses": "Sigaraya bağlı amfizem gelişiminde rol oynayan mekanizma hangisidir?\nA, Leptin direnci\nBe, te ge fe beta sinyal artışı\nCe, ne a de ha ile ne a de oranı artışı\nDe, Elastaz antielastaz dengesizliği\nE, ce fe te re kusuru\nHer seçeneği tek tek ele alalım.\nLeptin direnci obezitede görülür, leptin yüksek olsa da etkisi azalmıştır.\nTe ge fe beta sinyal artışı Marfan sendromunda fibrillin kusurunun sonucudur ve damar duvarını zayıflatır.\nNe a de ha ile ne a de oranının artışı alkol metabolizmasında yağ asidi oksidasyonunu azaltır ve steatoz yapar.\nElastaz antielastaz dengesizliği doğru, sigara kronik inflamasyon ve bu dengesizlikle amfizem ve kronik bronşite yol açar.\nCe fe te re kusuru kistik fibroziste klorür ve bikarbonat kanalını bozar. Sigaraya bağlı hasarın mekanizması değildir.\nDoğru cevap De, Elastaz antielastaz dengesizliği\nTütünün solunum sistemine etkisi kronik inflamasyon, elastaz antielastaz dengesizliği ve de ne a hasarıyla olur. Sonuç amfizem, kronik bronşit ve akciğer karsinomudur.",
    "kelime": 147
@@ -731,6 +924,7 @@
   {
    "no": 43,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Tütünün kardiyovasküler hastalık oluşturma mekanizmaları arasında hangisi yer almaz?",
    "secenekler": {
     "A": "Trombosit agregasyonu artışı",
@@ -740,6 +934,7 @@
     "E": "Trombosit agregasyonu azalması"
    },
    "dogru": "E",
+   "ipucu": "Sigaranın pıhtılaşma eğilimini artırdığını ve kalbin oksijen dengesini iki yönden bozduğunu düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Trombosit agregasyonu artışı tütünün kardiyovasküler mekanizmalarındandır; tromboza eğilimi artırır.",
@@ -749,6 +944,10 @@
     "E": "Trombosit agregasyonu azalması doğru cevaptır; tütün trombosit agregasyonunu azaltmaz, tersine artırır."
    },
    "ozet": "Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonunu ve miyokard oksijen talebini artırır, oksijen sunumunu azaltır ve miyokard enfarktüsü, inme ve periferik arter hastalığı yapar.",
+   "sayfa": [
+    42,
+    40
+   ],
    "metin": "**Soru.** Tütünün kardiyovasküler hastalık oluşturma mekanizmaları arasında hangisi yer almaz?\n\n**A)** Trombosit agregasyonu artışı · **B)** Miyokard oksijen sunumu azalması · **C)** Miyokard oksijen talebi artışı · **D)** Aterojen ve trombojen etki · **E)** Trombosit agregasyonu azalması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Trombosit agregasyonu artışı** — Trombosit agregasyonu artışı tütünün kardiyovasküler mekanizmalarındandır; tromboza eğilimi artırır.\n- **Miyokard oksijen sunumu azalması** — Miyokard oksijen sunumu azalması karbon monoksit ve akciğer hastalığına bağlı gelişen bir mekanizmadır.\n- **Miyokard oksijen talebi artışı** — Miyokard oksijen talebi artışı da tütünün kalp üzerindeki etkileri arasında sayılır.\n- **Aterojen ve trombojen etki** — Aterojen ve trombojen etki tütün dumanı bileşenlerinin tanımlanmış etkilerindendir.\n- **Trombosit agregasyonu azalması** — Trombosit agregasyonu azalması doğru cevaptır; tütün trombosit agregasyonunu azaltmaz, tersine artırır.\n\n**Cevap: E** — Trombosit agregasyonu azalması\n\n**Özet.** Tütün ateroskleroz için majör bağımsız risk faktörüdür; trombosit agregasyonunu ve miyokard oksijen talebini artırır, oksijen sunumunu azaltır ve miyokard enfarktüsü, inme ve periferik arter hastalığı yapar.",
    "ses": "Tütünün kardiyovasküler hastalık oluşturma mekanizmaları arasında hangisi yer almaz?\nA, Trombosit agregasyonu artışı\nBe, Miyokard oksijen sunumu azalması\nCe, Miyokard oksijen talebi artışı\nDe, Aterojen ve trombojen etki\nE, Trombosit agregasyonu azalması\nŞıkları sırasıyla gözden geçirelim.\nTrombosit agregasyonu artışı tütünün kardiyovasküler mekanizmalarındandır, tromboza eğilimi artırır.\nMiyokard oksijen sunumu azalması karbon monoksit ve akciğer hastalığına bağlı gelişen bir mekanizmadır.\nMiyokard oksijen talebi artışı da tütünün kalp üzerindeki etkileri arasında sayılır.\nAterojen ve trombojen etki tütün dumanı bileşenlerinin tanımlanmış etkilerindendir.\nTrombosit agregasyonu azalması doğru cevaptır, tütün trombosit agregasyonunu azaltmaz, tersine artırır.\nDoğru cevap E, Trombosit agregasyonu azalması\nTütün ateroskleroz için majör bağımsız risk faktörüdür. Trombosit agregasyonunu ve miyokard oksijen talebini artırır, oksijen sunumunu azaltır ve miyokard enfarktüsü, inme ve periferik arter hastalığı yapar.",
    "kelime": 156
@@ -756,6 +955,7 @@
   {
    "no": 44,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Alkol metabolizmasının ana yolunda asetaldehit oluşumunu sağlayan enzim hangisidir?",
    "secenekler": {
     "A": "Alkol dehidrojenaz",
@@ -765,6 +965,7 @@
     "E": "Elastaz"
    },
    "dogru": "A",
+   "ipucu": "Yüksek dozda devreye giren mikrozomal sistemlerden önce, olağan tüketimde çalışan birinci basamağı düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Alkol dehidrojenaz doğru: ana yolda alkolü asetaldehite çevirir; bu sırada NAD⁺ tüketilir.",
@@ -774,6 +975,10 @@
     "E": "Elastaz akciğerde elastaz–antielastaz dengesizliğinde rol oynar; alkol metabolizmasında görev almaz."
    },
    "ozet": "Alkol ana yolda alkol dehidrojenazla asetaldehite çevrilir, yüksek dozda mikrozomal sistem ve sitokrom P-450 devreye girer; NAD⁺ tüketimi steatoza yol açar.",
+   "sayfa": [
+    44,
+    41
+   ],
    "metin": "**Soru.** Alkol metabolizmasının ana yolunda asetaldehit oluşumunu sağlayan enzim hangisidir?\n\n**A)** Alkol dehidrojenaz · **B)** Sitokrom P-450 · **C)** Mikrozomal etanol oksidasyonu · **D)** Tirozin kinaz · **E)** Elastaz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Alkol dehidrojenaz** — Alkol dehidrojenaz doğru: ana yolda alkolü asetaldehite çevirir; bu sırada NAD⁺ tüketilir.\n- **Sitokrom P-450** — Sitokrom P-450 yüksek dozda mikrozomal etanol okside edici sistemle birlikte devreye girer; ana yol değildir.\n- **Mikrozomal etanol oksidasyonu** — Mikrozomal etanol oksidasyonu yüksek alkol dozlarında devreye giren ek sistemdir.\n- **Tirozin kinaz** — Tirozin kinaz, EGFR mutasyonlu tümörlerde inhibitörlerle hedeflenen yoldur; alkol metabolizmasında görev almaz.\n- **Elastaz** — Elastaz akciğerde elastaz–antielastaz dengesizliğinde rol oynar; alkol metabolizmasında görev almaz.\n\n**Cevap: A** — Alkol dehidrojenaz\n\n**Özet.** Alkol ana yolda alkol dehidrojenazla asetaldehite çevrilir, yüksek dozda mikrozomal sistem ve sitokrom P-450 devreye girer; NAD⁺ tüketimi steatoza yol açar.",
    "ses": "Alkol metabolizmasının ana yolunda asetaldehit oluşumunu sağlayan enzim hangisidir?\nA, Alkol dehidrojenaz\nBe, Sitokrom pe dört yüz elli\nCe, Mikrozomal etanol oksidasyonu\nDe, Tirozin kinaz\nE, Elastaz\nŞimdi seçeneklere tek tek bakalım.\nAlkol dehidrojenaz doğru, ana yolda alkolü asetaldehite çevirir, bu sırada ne a de tüketilir.\nSitokrom pe dört yüz elli yüksek dozda mikrozomal etanol okside edici sistemle birlikte devreye girer. Ana yol değildir.\nMikrozomal etanol oksidasyonu yüksek alkol dozlarında devreye giren ek sistemdir.\nTirozin kinaz, e ge fe re mutasyonlu tümörlerde inhibitörlerle hedeflenen yoldur. Alkol metabolizmasında görev almaz.\nElastaz akciğerde elastaz antielastaz dengesizliğinde rol oynar. Alkol metabolizmasında görev almaz.\nDoğru cevap A, Alkol dehidrojenaz\nAlkol ana yolda alkol dehidrojenazla asetaldehite çevrilir, yüksek dozda mikrozomal sistem ve sitokrom pe dört yüz elli devreye girer. Ne a de tüketimi steatoza yol açar.",
    "kelime": 141
@@ -781,6 +986,7 @@
   {
    "no": 45,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Şiddetli akut yetersiz beslenmede belirgin olarak azalan bağışıklık kolu hangisidir?",
    "secenekler": {
     "A": "Kompleman sistemi",
@@ -790,22 +996,28 @@
     "E": "Fagosit sayısı"
    },
    "dogru": "B",
+   "ipucu": "Sık fırsatçı ve ağır enfeksiyonların, lenfositlerin yönettiği savunmanın zayıfladığını gösterdiğini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
-    "A": "Yetersiz beslenmede belirgin azalma lenfositlerin yönettiği savunmadadır. Kompleman sistemi bu sorudaki ayrımı sağlamaz.",
+    "A": "Kompleman proteinleri karaciğerde sentezlenir ve ağır malnütrisyonda azalabilse de en belirgin ve erken çöküş timus atrofisiyle birlikte gelişen T hücre aracılı (hücresel) immünite kaybıdır; bu nedenle hastalarda fırsatçı enfeksiyonlar sık görülür.",
     "B": "T hücre aracılı immünite doğru: şiddetli akut yetersiz beslenmede belirgin azalır ve sık fırsatçı, ağır enfeksiyonlar görülür.",
     "C": "IgE yanıtı alerjik reaksiyonların temelidir; yetersiz beslenmenin tipik bağışıklık kaybı değildir.",
     "D": "Mast hücre aktivitesi alerjik reaksiyonlarla ilgilidir; yetersiz beslenmede öne çıkan bozukluk değildir.",
-    "E": "Şiddetli akut yetersiz beslenmede tanımlanan kayıp hücresel bağışıklıktadır. Fagosit sayısı bu sorudaki ayrımı sağlamaz."
+    "E": "Şiddetli akut yetersiz beslenmede dolaşımdaki fagosit sayısı tek başına belirleyici kusur değildir; timus ve lenfoid dokuların belirgin atrofisi sonucunda T hücre aracılı hücresel bağışıklık ağır biçimde baskılanır."
    },
    "ozet": "Şiddetli akut yetersiz beslenmede yağda çözünen ve B vitaminleri eksilir, T hücre aracılı immünite belirgin azalır; erken dönemde ağır malnütrisyon serebral atrofi ve miyelinizasyon bozukluğu yapar.",
-   "metin": "**Soru.** Şiddetli akut yetersiz beslenmede belirgin olarak azalan bağışıklık kolu hangisidir?\n\n**A)** Kompleman sistemi · **B)** T hücre aracılı immünite · **C)** IgE yanıtı · **D)** Mast hücre aktivitesi · **E)** Fagosit sayısı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kompleman sistemi** — Yetersiz beslenmede belirgin azalma lenfositlerin yönettiği savunmadadır. Kompleman sistemi bu sorudaki ayrımı sağlamaz.\n- **T hücre aracılı immünite** — T hücre aracılı immünite doğru: şiddetli akut yetersiz beslenmede belirgin azalır ve sık fırsatçı, ağır enfeksiyonlar görülür.\n- **IgE yanıtı** — IgE yanıtı alerjik reaksiyonların temelidir; yetersiz beslenmenin tipik bağışıklık kaybı değildir.\n- **Mast hücre aktivitesi** — Mast hücre aktivitesi alerjik reaksiyonlarla ilgilidir; yetersiz beslenmede öne çıkan bozukluk değildir.\n- **Fagosit sayısı** — Şiddetli akut yetersiz beslenmede tanımlanan kayıp hücresel bağışıklıktadır. Fagosit sayısı bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — T hücre aracılı immünite\n\n**Özet.** Şiddetli akut yetersiz beslenmede yağda çözünen ve B vitaminleri eksilir, T hücre aracılı immünite belirgin azalır; erken dönemde ağır malnütrisyon serebral atrofi ve miyelinizasyon bozukluğu yapar.",
-   "ses": "Şiddetli akut yetersiz beslenmede belirgin olarak azalan bağışıklık kolu hangisidir?\nA, Kompleman sistemi\nBe, te hücre aracılı immünite\nCe, i ge e yanıtı\nDe, Mast hücre aktivitesi\nE, Fagosit sayısı\nSeçenekleri sırayla değerlendirelim.\nYetersiz beslenmede belirgin azalma lenfositlerin yönettiği savunmadadır. Kompleman sistemi bu sorudaki ayrımı sağlamaz.\nTe hücre aracılı immünite doğru, şiddetli akut yetersiz beslenmede belirgin azalır ve sık fırsatçı, ağır enfeksiyonlar görülür.\nİ ge e yanıtı alerjik reaksiyonların temelidir. Yetersiz beslenmenin tipik bağışıklık kaybı değildir.\nMast hücre aktivitesi alerjik reaksiyonlarla ilgilidir, yetersiz beslenmede öne çıkan bozukluk değildir.\nŞiddetli akut yetersiz beslenmede tanımlanan kayıp hücresel bağışıklıktadır. Fagosit sayısı bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, te hücre aracılı immünite\nŞiddetli akut yetersiz beslenmede yağda çözünen ve be vitaminleri eksilir, te hücre aracılı immünite belirgin azalır. Erken dönemde ağır malnütrisyon serebral atrofi ve miyelinizasyon bozukluğu yapar.",
-   "kelime": 161
+   "sayfa": [
+    50,
+    47
+   ],
+   "metin": "**Soru.** Şiddetli akut yetersiz beslenmede belirgin olarak azalan bağışıklık kolu hangisidir?\n\n**A)** Kompleman sistemi · **B)** T hücre aracılı immünite · **C)** IgE yanıtı · **D)** Mast hücre aktivitesi · **E)** Fagosit sayısı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kompleman sistemi** — Kompleman proteinleri karaciğerde sentezlenir ve ağır malnütrisyonda azalabilse de en belirgin ve erken çöküş timus atrofisiyle birlikte gelişen T hücre aracılı (hücresel) immünite kaybıdır; bu nedenle hastalarda fırsatçı enfeksiyonlar sık görülür.\n- **T hücre aracılı immünite** — T hücre aracılı immünite doğru: şiddetli akut yetersiz beslenmede belirgin azalır ve sık fırsatçı, ağır enfeksiyonlar görülür.\n- **IgE yanıtı** — IgE yanıtı alerjik reaksiyonların temelidir; yetersiz beslenmenin tipik bağışıklık kaybı değildir.\n- **Mast hücre aktivitesi** — Mast hücre aktivitesi alerjik reaksiyonlarla ilgilidir; yetersiz beslenmede öne çıkan bozukluk değildir.\n- **Fagosit sayısı** — Şiddetli akut yetersiz beslenmede dolaşımdaki fagosit sayısı tek başına belirleyici kusur değildir; timus ve lenfoid dokuların belirgin atrofisi sonucunda T hücre aracılı hücresel bağışıklık ağır biçimde baskılanır.\n\n**Cevap: B** — T hücre aracılı immünite\n\n**Özet.** Şiddetli akut yetersiz beslenmede yağda çözünen ve B vitaminleri eksilir, T hücre aracılı immünite belirgin azalır; erken dönemde ağır malnütrisyon serebral atrofi ve miyelinizasyon bozukluğu yapar.",
+   "ses": "Şiddetli akut yetersiz beslenmede belirgin olarak azalan bağışıklık kolu hangisidir?\nA, Kompleman sistemi\nBe, te hücre aracılı immünite\nCe, i ge e yanıtı\nDe, Mast hücre aktivitesi\nE, Fagosit sayısı\nSeçenekleri sırayla değerlendirelim.\nKompleman proteinleri karaciğerde sentezlenir ve ağır malnütrisyonda azalabilse de en belirgin ve erken çöküş timus atrofisiyle birlikte gelişen T hücre aracılı, hücresel, immünite kaybıdır. Bu nedenle hastalarda fırsatçı enfeksiyonlar sık görülür.\nTe hücre aracılı immünite doğru, şiddetli akut yetersiz beslenmede belirgin azalır ve sık fırsatçı, ağır enfeksiyonlar görülür.\nİ ge e yanıtı alerjik reaksiyonların temelidir. Yetersiz beslenmenin tipik bağışıklık kaybı değildir.\nMast hücre aktivitesi alerjik reaksiyonlarla ilgilidir, yetersiz beslenmede öne çıkan bozukluk değildir.\nŞiddetli akut yetersiz beslenmede dolaşımdaki fagosit sayısı tek başına belirleyici kusur değildir. Timus ve lenfoid dokuların belirgin atrofisi sonucunda T hücre aracılı hücresel bağışıklık ağır biçimde baskılanır.\nDoğru cevap Be, te hücre aracılı immünite\nŞiddetli akut yetersiz beslenmede yağda çözünen ve be vitaminleri eksilir, te hücre aracılı immünite belirgin azalır. Erken dönemde ağır malnütrisyon serebral atrofi ve miyelinizasyon bozukluğu yapar.",
+   "kelime": 192
   },
   {
    "no": 46,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Anoreksiya nervozada amenorenin temel nedeni hangisidir?",
    "secenekler": {
     "A": "Hipokalemi",
@@ -815,6 +1027,7 @@
     "E": "Tiamin eksikliği"
    },
    "dogru": "C",
+   "ipucu": "Açlığın hipotalamus ile hipofiz arasındaki üreme eksenini baskıladığını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Hipokalemi anoreksiyada özellikle görülen elektrolit bozukluğudur; bulimiada aritmiye yol açabilir.",
@@ -824,6 +1037,12 @@
     "E": "Tiamin eksikliği kronik alkol kullanımında Wernicke–Korsakoff sendromuna yol açar."
    },
    "ozet": "Anoreksiya nervozada gonadotropin salınımı azalır ve kadınlarda amenore sıktır; bulimiada ise adet düzensizliği sık, amenore daha az sıktır ve hipokalemi aritmiye yol açabilir.",
+   "sayfa": [
+    51,
+    52,
+    55,
+    45
+   ],
    "metin": "**Soru.** Anoreksiya nervozada amenorenin temel nedeni hangisidir?\n\n**A)** Hipokalemi · **B)** Bradikardi · **C)** Gonadotropin salınımının azalması · **D)** Leptin direnci · **E)** Tiamin eksikliği\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Hipokalemi** — Hipokalemi anoreksiyada özellikle görülen elektrolit bozukluğudur; bulimiada aritmiye yol açabilir.\n- **Bradikardi** — Bradikardi anoreksiyada hipotansiyonla birlikte görülen bir bulgudur; amenoreyi açıklamaz.\n- **Gonadotropin salınımının azalması** — Gonadotropin salınımının azalması doğru: anoreksiyada endokrin etkiyle gonadotropin azalır ve kadınlarda amenore sıktır.\n- **Leptin direnci** — Leptin direnci obezitede görülür; leptin yüksek olduğu halde etkisi azalmıştır.\n- **Tiamin eksikliği** — Tiamin eksikliği kronik alkol kullanımında Wernicke–Korsakoff sendromuna yol açar.\n\n**Cevap: C** — Gonadotropin salınımının azalması\n\n**Özet.** Anoreksiya nervozada gonadotropin salınımı azalır ve kadınlarda amenore sıktır; bulimiada ise adet düzensizliği sık, amenore daha az sıktır ve hipokalemi aritmiye yol açabilir.",
    "ses": "Anoreksiya nervozada amenorenin temel nedeni hangisidir?\nA, Hipokalemi\nBe, Bradikardi\nCe, Gonadotropin salınımının azalması\nDe, Leptin direnci\nE, Tiamin eksikliği\nHer seçeneği tek tek ele alalım.\nHipokalemi anoreksiyada özellikle görülen elektrolit bozukluğudur, bulimiada aritmiye yol açabilir.\nBradikardi anoreksiyada hipotansiyonla birlikte görülen bir bulgudur, amenoreyi açıklamaz.\nGonadotropin salınımının azalması doğru, anoreksiyada endokrin etkiyle gonadotropin azalır ve kadınlarda amenore sıktır.\nLeptin direnci obezitede görülür, leptin yüksek olduğu halde etkisi azalmıştır.\nTiamin eksikliği kronik alkol kullanımında Vernike Korsakof sendromuna yol açar.\nDoğru cevap Ce, Gonadotropin salınımının azalması\nAnoreksiya nervozada gonadotropin salınımı azalır ve kadınlarda amenore sıktır, bulimiada ise adet düzensizliği sık, amenore daha az sıktır ve hipokalemi aritmiye yol açabilir.",
    "kelime": 132
@@ -831,6 +1050,7 @@
   {
    "no": 47,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Leptin hipotalamusta hangi nöronları aktive eder?",
    "secenekler": {
     "A": "NPY/AgRP nöronları",
@@ -840,22 +1060,28 @@
     "E": "Adiponektin üreten hücreler"
    },
    "dogru": "D",
+   "ipucu": "Yağ deposu arttıkça yükselen bu hormonun iştahı azaltan ve enerji harcamasını artıran grubu uyardığını düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "NPY/AgRP nöronları leptin tarafından aktive edilmez, tersine inhibe edilir; bu nöronlar iştah ve besin alımını kontrol eder.",
-    "B": "Ghrelin salgılayan hücreler ile karıştırılabilir: Ghrelin de hipotalamusa giden afferent sinyallerden biridir.",
+    "B": "Ghrelin mide fundusundan açlıkta salgılanan ve hipotalamustaki NPY/AgRP nöronlarını uyararak iştahı artıran hormondur; yağ dokusundan salınan leptin ise arkuat çekirdekte anoreksijenik POMC/CART nöronlarını aktive ederek besin alımını azaltır.",
     "C": "Pankreas beta hücreleri insülin salgılar; insülin de lipostatın afferent sinyallerindendir ama leptinin hedefi değildir.",
     "D": "POMC/CART nöronları doğru: leptin arkuat çekirdekte iştahı azaltan ve enerji harcamasını artıran bu nöronları aktive eder.",
     "E": "Adiponektin üreten hücreler yağ dokusundadır; adiponektin insülin duyarlılığını artırır ve obezlerde düşüktür."
    },
    "ozet": "Lipostatta leptin, ghrelin, insülin, PYY ve GLP-1 afferent sinyallerdir; arkuat çekirdekte leptin POMC/CART nöronlarını aktive eder, NPY/AgRP nöronlarını inhibe eder.",
-   "metin": "**Soru.** Leptin hipotalamusta hangi nöronları aktive eder?\n\n**A)** NPY/AgRP nöronları · **B)** Ghrelin salgılayan hücreler · **C)** Pankreas beta hücreleri · **D)** POMC/CART nöronları · **E)** Adiponektin üreten hücreler\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **NPY/AgRP nöronları** — NPY/AgRP nöronları leptin tarafından aktive edilmez, tersine inhibe edilir; bu nöronlar iştah ve besin alımını kontrol eder.\n- **Ghrelin salgılayan hücreler** — Ghrelin salgılayan hücreler ile karıştırılabilir: Ghrelin de hipotalamusa giden afferent sinyallerden biridir.\n- **Pankreas beta hücreleri** — Pankreas beta hücreleri insülin salgılar; insülin de lipostatın afferent sinyallerindendir ama leptinin hedefi değildir.\n- **POMC/CART nöronları** — POMC/CART nöronları doğru: leptin arkuat çekirdekte iştahı azaltan ve enerji harcamasını artıran bu nöronları aktive eder.\n- **Adiponektin üreten hücreler** — Adiponektin üreten hücreler yağ dokusundadır; adiponektin insülin duyarlılığını artırır ve obezlerde düşüktür.\n\n**Cevap: D** — POMC/CART nöronları\n\n**Özet.** Lipostatta leptin, ghrelin, insülin, PYY ve GLP-1 afferent sinyallerdir; arkuat çekirdekte leptin POMC/CART nöronlarını aktive eder, NPY/AgRP nöronlarını inhibe eder.",
-   "ses": "Leptin hipotalamusta hangi nöronları aktive eder?\nA, ne pe ye ve a ge re pe nöronları\nBe, Ghrelin salgılayan hücreler\nCe, Pankreas beta hücreleri\nDe, pe o me ce ve ce a re te nöronları\nE, Adiponektin üreten hücreler\nŞıkları sırasıyla gözden geçirelim.\nNe pe ye ve a ge re pe nöronları leptin tarafından aktive edilmez, tersine inhibe edilir. Bu nöronlar iştah ve besin alımını kontrol eder.\nGhrelin salgılayan hücreler ile karıştırılabilir. Ghrelin de hipotalamusa giden afferent sinyallerden biridir.\nPankreas beta hücreleri insülin salgılar, insülin de lipostatın afferent sinyallerindendir ama leptinin hedefi değildir.\nPe o me ce ve ce a re te nöronları doğru, leptin arkuat çekirdekte iştahı azaltan ve enerji harcamasını artıran bu nöronları aktive eder.\nAdiponektin üreten hücreler yağ dokusundadır, adiponektin insülin duyarlılığını artırır ve obezlerde düşüktür.\nDoğru cevap De, pe o me ce ve ce a re te nöronları\nLipostatta leptin, ghrelin, insülin, pe ye ye ve ge le pe bir afferent sinyallerdir. Arkuat çekirdekte leptin pe o me ce ve ce a re te nöronlarını aktive eder, ne pe ye ve a ge re pe nöronlarını inhibe eder.",
-   "kelime": 154
+   "sayfa": [
+    55,
+    54
+   ],
+   "metin": "**Soru.** Leptin hipotalamusta hangi nöronları aktive eder?\n\n**A)** NPY/AgRP nöronları · **B)** Ghrelin salgılayan hücreler · **C)** Pankreas beta hücreleri · **D)** POMC/CART nöronları · **E)** Adiponektin üreten hücreler\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **NPY/AgRP nöronları** — NPY/AgRP nöronları leptin tarafından aktive edilmez, tersine inhibe edilir; bu nöronlar iştah ve besin alımını kontrol eder.\n- **Ghrelin salgılayan hücreler** — Ghrelin mide fundusundan açlıkta salgılanan ve hipotalamustaki NPY/AgRP nöronlarını uyararak iştahı artıran hormondur; yağ dokusundan salınan leptin ise arkuat çekirdekte anoreksijenik POMC/CART nöronlarını aktive ederek besin alımını azaltır.\n- **Pankreas beta hücreleri** — Pankreas beta hücreleri insülin salgılar; insülin de lipostatın afferent sinyallerindendir ama leptinin hedefi değildir.\n- **POMC/CART nöronları** — POMC/CART nöronları doğru: leptin arkuat çekirdekte iştahı azaltan ve enerji harcamasını artıran bu nöronları aktive eder.\n- **Adiponektin üreten hücreler** — Adiponektin üreten hücreler yağ dokusundadır; adiponektin insülin duyarlılığını artırır ve obezlerde düşüktür.\n\n**Cevap: D** — POMC/CART nöronları\n\n**Özet.** Lipostatta leptin, ghrelin, insülin, PYY ve GLP-1 afferent sinyallerdir; arkuat çekirdekte leptin POMC/CART nöronlarını aktive eder, NPY/AgRP nöronlarını inhibe eder.",
+   "ses": "Leptin hipotalamusta hangi nöronları aktive eder?\nA, ne pe ye ve a ge re pe nöronları\nBe, Ghrelin salgılayan hücreler\nCe, Pankreas beta hücreleri\nDe, pe o me ce ve ce a re te nöronları\nE, Adiponektin üreten hücreler\nŞıkları sırasıyla gözden geçirelim.\nNe pe ye ve a ge re pe nöronları leptin tarafından aktive edilmez, tersine inhibe edilir. Bu nöronlar iştah ve besin alımını kontrol eder.\nGhrelin mide fundusundan açlıkta salgılanan ve hipotalamustaki ne pe ye ve a ge re pe nöronlarını uyararak iştahı artıran hormondur. Yağ dokusundan salınan leptin ise arkuat çekirdekte anoreksijenik pe o em ce ve ce a re te nöronlarını aktive ederek besin alımını azaltır.\nPankreas beta hücreleri insülin salgılar, insülin de lipostatın afferent sinyallerindendir ama leptinin hedefi değildir.\nPe o me ce ve ce a re te nöronları doğru, leptin arkuat çekirdekte iştahı azaltan ve enerji harcamasını artıran bu nöronları aktive eder.\nAdiponektin üreten hücreler yağ dokusundadır, adiponektin insülin duyarlılığını artırır ve obezlerde düşüktür.\nDoğru cevap De, pe o me ce ve ce a re te nöronları\nLipostatta leptin, ghrelin, insülin, pe ye ye ve ge le pe bir afferent sinyallerdir. Arkuat çekirdekte leptin pe o me ce ve ce a re te nöronlarını aktive eder, ne pe ye ve a ge re pe nöronlarını inhibe eder.",
+   "kelime": 170
   },
   {
    "no": 48,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Diyetteki nitrozamin ve nitrozamidler hangi kanserle ilişkilidir?",
    "secenekler": {
     "A": "Hepatoselüler karsinom",
@@ -865,6 +1091,7 @@
     "E": "Mide kanseri"
    },
    "dogru": "E",
+   "ipucu": "Aflatoksinin karaciğerle ilişkisinden farklı olarak, bu bileşiklerin ilk temas ettiği sindirim organını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Hepatoselüler karsinom Aspergillus türlerinin ürettiği aflatoksinle ilişkilidir.",
@@ -874,6 +1101,11 @@
     "E": "Mide kanseri doğru: diyetteki nitrozamin ve nitrozamidler mide kanseriyle ilişkilidir."
    },
    "ozet": "Diyet kanserojenlerinden aflatoksin hepatoselüler karsinomla, nitrozamin ve nitrozamidler mide kanseriyle ilişkilidir; lifli gıdalar kolorektal kanserde olası koruyucudur.",
+   "sayfa": [
+    58,
+    57,
+    39
+   ],
    "metin": "**Soru.** Diyetteki nitrozamin ve nitrozamidler hangi kanserle ilişkilidir?\n\n**A)** Hepatoselüler karsinom · **B)** Akciğer karsinomu · **C)** Endometrium kanseri · **D)** Kolorektal kanser · **E)** Mide kanseri\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Hepatoselüler karsinom** — Hepatoselüler karsinom Aspergillus türlerinin ürettiği aflatoksinle ilişkilidir.\n- **Akciğer karsinomu** — Akciğer karsinomu en çok sigarayla ilişkilidir; akciğer kanserlerinin %80–90’ından sigara sorumludur.\n- **Endometrium kanseri** — Endometrium kanseri kadınlarda obeziteyle riski artan kanserlerdendir; artmış östrojen biyoyararlanımı rol oynar.\n- **Kolorektal kanser** — Kolorektal kanser için lifli gıdaların olası koruyucu etkisi tanımlanır.\n- **Mide kanseri** — Mide kanseri doğru: diyetteki nitrozamin ve nitrozamidler mide kanseriyle ilişkilidir.\n\n**Cevap: E** — Mide kanseri\n\n**Özet.** Diyet kanserojenlerinden aflatoksin hepatoselüler karsinomla, nitrozamin ve nitrozamidler mide kanseriyle ilişkilidir; lifli gıdalar kolorektal kanserde olası koruyucudur.",
    "ses": "Diyetteki nitrozamin ve nitrozamidler hangi kanserle ilişkilidir?\nA, Hepatoselüler karsinom\nBe, Akciğer karsinomu\nCe, Endometrium kanseri\nDe, Kolorektal kanser\nE, Mide kanseri\nŞimdi seçeneklere tek tek bakalım.\nHepatoselüler karsinom Aspergillus türlerinin ürettiği aflatoksinle ilişkilidir.\nAkciğer karsinomu en çok sigarayla ilişkilidir. Akciğer kanserlerinin yüzde seksen ile doksanından sigara sorumludur.\nEndometrium kanseri kadınlarda obeziteyle riski artan kanserlerdendir, artmış östrojen biyoyararlanımı rol oynar.\nKolorektal kanser için lifli gıdaların olası koruyucu etkisi tanımlanır.\nMide kanseri doğru, diyetteki nitrozamin ve nitrozamidler mide kanseriyle ilişkilidir.\nDoğru cevap E, Mide kanseri\nDiyet kanserojenlerinden aflatoksin hepatoselüler karsinomla, nitrozamin ve nitrozamidler mide kanseriyle ilişkilidir, lifli gıdalar kolorektal kanserde olası koruyucudur.",
    "kelime": 125
@@ -881,6 +1113,7 @@
   {
    "no": 49,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Trastuzumab tedavisinin seçilmesini yönlendiren moleküler değişiklik hangisidir?",
    "secenekler": {
     "A": "HER2 amplifikasyonu",
@@ -890,6 +1123,7 @@
     "E": "FBN1 mutasyonu"
    },
    "dogru": "A",
+   "ipucu": "Nokta mutasyonlarına eşleşen küçük molekül inhibitörlerinden farklı olarak, gen kopyasının çoğalmasına eşleşen tedaviyi düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "HER2 amplifikasyonu doğru: bu gen çoğalmasını gösteren tümörlerde hedefe yönelik tedavi olarak trastuzumab kullanılır.",
@@ -899,6 +1133,11 @@
     "E": "FBN1 mutasyonu fibrillin-1 kusuruyla Marfan sendromuna yol açar; onkolojik hedef değildir."
    },
    "ozet": "Hedefe yönelik tedavide EGFR mutasyonuna tirozin kinaz inhibitörü, BRAF V600E mutasyonuna BRAF inhibitörü, HER2 amplifikasyonuna trastuzumab eşleşir.",
+   "sayfa": [
+    61,
+    19,
+    15
+   ],
    "metin": "**Soru.** Trastuzumab tedavisinin seçilmesini yönlendiren moleküler değişiklik hangisidir?\n\n**A)** HER2 amplifikasyonu · **B)** EGFR mutasyonu · **C)** BRAF V600E mutasyonu · **D)** CFTR mutasyonu · **E)** FBN1 mutasyonu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **HER2 amplifikasyonu** — HER2 amplifikasyonu doğru: bu gen çoğalmasını gösteren tümörlerde hedefe yönelik tedavi olarak trastuzumab kullanılır.\n- **EGFR mutasyonu** — EGFR mutasyonları tirozin kinaz inhibitörleriyle eşleşen hedefe yönelik tedavi örneğidir.\n- **BRAF V600E mutasyonu** — BRAF V600E mutasyonu seçilmiş BRAF inhibitörleriyle tedavi edilen tümörlerde aranır.\n- **CFTR mutasyonu** — CFTR mutasyonu kistik fibrozisin gen kusurudur; klorür ve bikarbonat kanalını bozar.\n- **FBN1 mutasyonu** — FBN1 mutasyonu fibrillin-1 kusuruyla Marfan sendromuna yol açar; onkolojik hedef değildir.\n\n**Cevap: A** — HER2 amplifikasyonu\n\n**Özet.** Hedefe yönelik tedavide EGFR mutasyonuna tirozin kinaz inhibitörü, BRAF V600E mutasyonuna BRAF inhibitörü, HER2 amplifikasyonuna trastuzumab eşleşir.",
    "ses": "Trastuzumab tedavisinin seçilmesini yönlendiren moleküler değişiklik hangisidir?\nA, Her tu amplifikasyonu\nBe, E ge fe re mutasyonu\nCe, Be raf ve altı yüz e mutasyonu\nDe, Ce fe te re mutasyonu\nE, Fe be ne bir mutasyonu\nSeçenekleri sırayla değerlendirelim.\nHer tu amplifikasyonu doğru, bu gen çoğalmasını gösteren tümörlerde hedefe yönelik tedavi olarak trastuzumab kullanılır.\nE ge fe re mutasyonları tirozin kinaz inhibitörleriyle eşleşen hedefe yönelik tedavi örneğidir.\nBe raf ve altı yüz e mutasyonu seçilmiş be raf inhibitörleriyle tedavi edilen tümörlerde aranır.\nCe fe te re mutasyonu kistik fibrozisin gen kusurudur. Klorür ve bikarbonat kanalını bozar.\nFe be ne bir mutasyonu fibrillin bir kusuruyla Marfan sendromuna yol açar. Onkolojik hedef değildir.\nDoğru cevap A, Her tu amplifikasyonu\nHedefe yönelik tedavide e ge fe re mutasyonuna tirozin kinaz inhibitörü, be raf ve altı yüz e mutasyonuna be raf inhibitörü, her tu amplifikasyonuna trastuzumab eşleşir.",
    "kelime": 132
@@ -906,6 +1145,7 @@
   {
    "no": 50,
    "tur": "ornek",
+   "zorluk": "kolay",
    "soru": "Birçok genin, tüm ekzomun ya da tüm genomun tek platformda dizilenmesini sağlayan yöntem hangisidir?",
    "secenekler": {
     "A": "Karyotip",
@@ -915,6 +1155,7 @@
     "E": "Dizi tabanlı CGH"
    },
    "dogru": "B",
+   "ipucu": "Tek tek gen bölgelerini çoğaltan yöntemlerin aksine, çok sayıda diziyi aynı anda okuyabilen yaklaşımı düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Karyotip kromozom düzeyinde bir tanı aracıdır; gen dizisini okumaz.",
@@ -924,6 +1165,10 @@
     "E": "Dizi tabanlı CGH karşılaştırmalı genomik hibridizasyondur; o da kromozom düzeyindeki araçlardan biridir."
    },
    "ozet": "Moleküler tanıda karyotip, FISH ve dizi tabanlı CGH kromozom düzeyinde, PCR ve RT-PCR gen düzeyinde kullanılır; yeni nesil dizileme nadir Mendel bozuklukları, somatik mutasyon paneli ve farmakogenomik profillemede kullanılır.",
+   "sayfa": [
+    59,
+    60
+   ],
    "metin": "**Soru.** Birçok genin, tüm ekzomun ya da tüm genomun tek platformda dizilenmesini sağlayan yöntem hangisidir?\n\n**A)** Karyotip · **B)** Yeni nesil dizileme · **C)** FISH · **D)** PCR · **E)** Dizi tabanlı CGH\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Karyotip** — Karyotip kromozom düzeyinde bir tanı aracıdır; gen dizisini okumaz.\n- **Yeni nesil dizileme** — Yeni nesil dizileme doğru: tek platformda birçok gen, tüm ekzom ya da tüm genom dizilenebilir; sonuçlar biyoenformatik analiz ve klinik korelasyon gerektirir.\n- **FISH** — FISH floresan in situ hibridizasyondur; kromozom düzeyinde kullanılan araçlardandır.\n- **PCR** — PCR polimeraz zincir reaksiyonudur; gen düzeyinde kullanılır ama tüm genomu tek platformda dizilemez.\n- **Dizi tabanlı CGH** — Dizi tabanlı CGH karşılaştırmalı genomik hibridizasyondur; o da kromozom düzeyindeki araçlardan biridir.\n\n**Cevap: B** — Yeni nesil dizileme\n\n**Özet.** Moleküler tanıda karyotip, FISH ve dizi tabanlı CGH kromozom düzeyinde, PCR ve RT-PCR gen düzeyinde kullanılır; yeni nesil dizileme nadir Mendel bozuklukları, somatik mutasyon paneli ve farmakogenomik profillemede kullanılır.",
    "ses": "Birçok genin, tüm ekzomun ya da tüm genomun tek platformda dizilenmesini sağlayan yöntem hangisidir?\nA, Karyotip\nBe, Yeni nesil dizileme\nCe, fe ı se ha\nDe, pe ce re\nE, Dizi tabanlı ce ge ha\nHer seçeneği tek tek ele alalım.\nKaryotip kromozom düzeyinde bir tanı aracıdır, gen dizisini okumaz.\nYeni nesil dizileme doğru, tek platformda birçok gen, tüm ekzom ya da tüm genom dizilenebilir, sonuçlar biyoenformatik analiz ve klinik korelasyon gerektirir.\nFe ı se ha, floresan in situ hibridizasyondur. Kromozom düzeyinde kullanılan araçlardandır.\nPe ce re, polimeraz zincir reaksiyonudur. Gen düzeyinde kullanılır ama tüm genomu tek platformda dizilemez.\nDizi tabanlı ce ge ha karşılaştırmalı genomik hibridizasyondur. O da kromozom düzeyindeki araçlardan biridir.\nDoğru cevap Be, Yeni nesil dizileme\nMoleküler tanıda karyotip, fe ı se ha ve dizi tabanlı ce ge ha kromozom düzeyinde, pe ce re ve re te pe ce re gen düzeyinde kullanılır. Yeni nesil dizileme nadir Mendel bozuklukları, somatik mutasyon paneli ve farmakogenomik profillemede kullanılır.",
    "kelime": 160

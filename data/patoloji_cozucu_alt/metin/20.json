@@ -1,7 +1,8 @@
 {
  "kod": "20",
+ "no": 20,
  "baslik": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
- "surum": "alt-1",
+ "surum": "alt-2",
  "sorular": [
   {
    "no": 1,
@@ -15,18 +16,25 @@
     "E": "İnterferon gama"
    },
    "dogru": "C",
+   "ipucu": "Makrofaj ya da tümör hücresince üretilip iştahı baskılayan ve lipoprotein lipazı inhibe eden sitokini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
-    "A": "Kaşektin adıyla anılan mediyatöre ek olarak kaşeksiye IL-1 ve IL-6 katkıda bulunur. IL-10 bu sorudaki ayrımı sağlamaz.",
-    "B": "TGF-β ile karıştırılabilir: Tümör kökenli TGF-α ise paraneoplastik hiperkalseminin mekanizmalarından biridir.",
+    "A": "IL-10, makrofaj aktivasyonunu ve proinflamatuvar sitokin sentezini baskılayan düzenleyici bir sitokindir; kanser kaşeksisinde iştahı azaltıp yağ ve iskelet kası yıkımını başlatan ve 'kaşektin' olarak bilinen temel mediyatör ise TNF'dir.",
+    "B": "TGF-beta hücre dışı matriks sentezini uyaran fibrogenik ve immünsüpresif bir büyüme faktörüdür; kanser kaşeksisinde proteoliz ve lipolizi tetikleyen ve tarihsel olarak kaşektin adıyla tanımlanan ana sitokin ise TNF'dir.",
     "C": "TNF doğru: kaşektin olarak bilinir; iştahı baskılar, lipoprotein lipazı inhibe eder ve katabolizmayı artırır.",
     "D": "PTHrP, tümör kökenli paratiroid hormon ilgili proteindir; kaşeksiye değil, paraneoplastik hiperkalsemiye yol açar.",
-    "E": "Kaşeksi yalnız azalmış besin alımına bağlı değildir, bazal metabolizma artmış kalır. İnterferon gama bu sorudaki ayrımı sağlamaz."
+    "E": "İnterferon-gama Th1 ve NK hücrelerinden salınarak makrofajları aktive eden sitokindir; IL-1 ve IL-6 ile birlikte kanser kaşeksisinde bazal metabolizmayı artırıp kas ve yağ dokusu kaybına yol açan temel kaşektin ise TNF'dir."
    },
    "ozet": "Kaşeksinin temel mediyatörü TNF, yani kaşektindir; IL-1 ve IL-6 ile birlikte katabolizmayı artırır, nedensel tümör çıkarılmadan etkili tedavi yoktur.",
-   "metin": "**Soru.** Kanser kaşeksisinde \"kaşektin\" olarak da bilinen temel mediyatör hangisidir?\n\n**A)** IL-10 · **B)** TGF-β · **C)** TNF · **D)** PTHrP · **E)** İnterferon gama\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **IL-10** — Kaşektin adıyla anılan mediyatöre ek olarak kaşeksiye IL-1 ve IL-6 katkıda bulunur. IL-10 bu sorudaki ayrımı sağlamaz.\n- **TGF-β** — TGF-β ile karıştırılabilir: Tümör kökenli TGF-α ise paraneoplastik hiperkalseminin mekanizmalarından biridir.\n- **TNF** — TNF doğru: kaşektin olarak bilinir; iştahı baskılar, lipoprotein lipazı inhibe eder ve katabolizmayı artırır.\n- **PTHrP** — PTHrP, tümör kökenli paratiroid hormon ilgili proteindir; kaşeksiye değil, paraneoplastik hiperkalsemiye yol açar.\n- **İnterferon gama** — Kaşeksi yalnız azalmış besin alımına bağlı değildir, bazal metabolizma artmış kalır. İnterferon gama bu sorudaki ayrımı sağlamaz.\n\n**Cevap: C** — TNF\n\n**Özet.** Kaşeksinin temel mediyatörü TNF, yani kaşektindir; IL-1 ve IL-6 ile birlikte katabolizmayı artırır, nedensel tümör çıkarılmadan etkili tedavi yoktur.",
-   "ses": "Kanser kaşeksisinde kaşektin olarak da bilinen temel mediyatör hangisidir?\nA, İnterlökin on\nBe, Te ge fe beta\nCe, Te ne fe\nDe, Pe te ha re pe\nE, İnterferon gama\nSeçenekleri sırayla değerlendirelim.\nKaşektin adıyla anılan mediyatöre ek olarak kaşeksiye interlökin bir ve interlökin altı katkıda bulunur. IL-on bu sorudaki ayrımı sağlamaz.\nTGF-β ile karıştırılabilir. Tümör kökenli te ge fe alfa ise paraneoplastik hiperkalseminin mekanizmalarından biridir.\nTe ne fe doğru. Kaşektin olarak bilinir, iştahı baskılar, lipoprotein lipazı inhibe eder ve katabolizmayı artırır.\nPe te ha re pe, tümör kökenli paratiroid hormon ilgili proteindir. Kaşeksiye değil, paraneoplastik hiperkalsemiye yol açar.\nKaşeksi yalnız azalmış besin alımına bağlı değildir, bazal metabolizma artmış kalır. İnterferon gama bu sorudaki ayrımı sağlamaz.\nDoğru cevap Ce, Te ne fe\nKaşeksinin temel mediyatörü te ne fe, yani kaşektindir. İnterlökin bir ve interlökin altı ile birlikte katabolizmayı artırır, nedensel tümör çıkarılmadan etkili tedavi yoktur.",
-   "kelime": 141
+   "sayfa": [
+    10,
+    11,
+    13,
+    14
+   ],
+   "metin": "**Soru.** Kanser kaşeksisinde \"kaşektin\" olarak da bilinen temel mediyatör hangisidir?\n\n**A)** IL-10 · **B)** TGF-β · **C)** TNF · **D)** PTHrP · **E)** İnterferon gama\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **IL-10** — IL-10, makrofaj aktivasyonunu ve proinflamatuvar sitokin sentezini baskılayan düzenleyici bir sitokindir; kanser kaşeksisinde iştahı azaltıp yağ ve iskelet kası yıkımını başlatan ve 'kaşektin' olarak bilinen temel mediyatör ise TNF'dir.\n- **TGF-β** — TGF-beta hücre dışı matriks sentezini uyaran fibrogenik ve immünsüpresif bir büyüme faktörüdür; kanser kaşeksisinde proteoliz ve lipolizi tetikleyen ve tarihsel olarak kaşektin adıyla tanımlanan ana sitokin ise TNF'dir.\n- **TNF** — TNF doğru: kaşektin olarak bilinir; iştahı baskılar, lipoprotein lipazı inhibe eder ve katabolizmayı artırır.\n- **PTHrP** — PTHrP, tümör kökenli paratiroid hormon ilgili proteindir; kaşeksiye değil, paraneoplastik hiperkalsemiye yol açar.\n- **İnterferon gama** — İnterferon-gama Th1 ve NK hücrelerinden salınarak makrofajları aktive eden sitokindir; IL-1 ve IL-6 ile birlikte kanser kaşeksisinde bazal metabolizmayı artırıp kas ve yağ dokusu kaybına yol açan temel kaşektin ise TNF'dir.\n\n**Cevap: C** — TNF\n\n**Özet.** Kaşeksinin temel mediyatörü TNF, yani kaşektindir; IL-1 ve IL-6 ile birlikte katabolizmayı artırır, nedensel tümör çıkarılmadan etkili tedavi yoktur.",
+   "ses": "Kanser kaşeksisinde kaşektin olarak da bilinen temel mediyatör hangisidir?\nA, İnterlökin on\nBe, Te ge fe beta\nCe, Te ne fe\nDe, Pe te ha re pe\nE, İnterferon gama\nSeçenekleri sırayla değerlendirelim.\ninterlökin on, makrofaj aktivasyonunu ve proinflamatuvar sitokin sentezini baskılayan düzenleyici bir sitokindir. Kanser kaşeksisinde iştahı azaltıp yağ ve iskelet kası yıkımını başlatan ve 'kaşektin' olarak bilinen temel mediyatör ise te ne fe'dir.\nte ge fe beta hücre dışı matriks sentezini uyaran fibrogenik ve immünsüpresif bir büyüme faktörüdür. Kanser kaşeksisinde proteoliz ve lipolizi tetikleyen ve tarihsel olarak kaşektin adıyla tanımlanan ana sitokin ise te ne fe'dir.\nTe ne fe doğru. Kaşektin olarak bilinir, iştahı baskılar, lipoprotein lipazı inhibe eder ve katabolizmayı artırır.\nPe te ha re pe, tümör kökenli paratiroid hormon ilgili proteindir. Kaşeksiye değil, paraneoplastik hiperkalsemiye yol açar.\nİnterferon-gama te ha bir ve doğal katil hücrelerinden salınarak makrofajları aktive eden sitokindir. İnterlökin bir ve interlökin altı ile birlikte kanser kaşeksisinde bazal metabolizmayı artırıp kas ve yağ dokusu kaybına yol açan temel kaşektin ise te ne fe'dir.\nDoğru cevap Ce, Te ne fe\nKaşeksinin temel mediyatörü te ne fe, yani kaşektindir. İnterlökin bir ve interlökin altı ile birlikte katabolizmayı artırır, nedensel tümör çıkarılmadan etkili tedavi yoktur.",
+   "kelime": 184
   },
   {
    "no": 2,
@@ -40,6 +48,7 @@
     "E": "Hipoglisemi"
    },
    "dogru": "A",
+   "ipucu": "Tümör kökenli paratiroid hormon ilgili proteinin neden olduğu elektrolit bozukluğunu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Hiperkalsemi doğru: en sık paraneoplastik sendromdur ve tümör kökenli PTHrP ile ilişkilidir.",
@@ -49,6 +58,11 @@
     "E": "Hipoglisemi insülin ya da insülin benzeri madde salgısına bağlıdır; fibrosarkom, diğer sarkomlar ve over karsinomunda görülür."
    },
    "ozet": "Hiperkalsemi en sık paraneoplastik sendromdur; PTHrP, TGF-α ve aktif D vitamini metabolitleriyle oluşur, bulantı, kusma, mental değişiklik ve aritmi yapar.",
+   "sayfa": [
+    13,
+    14,
+    15
+   ],
    "metin": "**Soru.** En sık paraneoplastik sendrom hangisidir?\n\n**A)** Hiperkalsemi · **B)** Cushing sendromu · **C)** SIADH · **D)** Polisitemi · **E)** Hipoglisemi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Hiperkalsemi** — Hiperkalsemi doğru: en sık paraneoplastik sendromdur ve tümör kökenli PTHrP ile ilişkilidir.\n- **Cushing sendromu** — Cushing sendromu ektopik ACTH ya da ACTH benzeri peptit üretimiyle olur; özellikle küçük hücreli akciğer karsinomunda görülür.\n- **SIADH** — SIADH, antidiüretik hormon salgısına bağlıdır; akciğer küçük hücreli karsinomu ve intrakraniyal neoplazmlarda görülür.\n- **Polisitemi** — Polisitemi eritropoetin üretimine bağlıdır; renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda görülür.\n- **Hipoglisemi** — Hipoglisemi insülin ya da insülin benzeri madde salgısına bağlıdır; fibrosarkom, diğer sarkomlar ve over karsinomunda görülür.\n\n**Cevap: A** — Hiperkalsemi\n\n**Özet.** Hiperkalsemi en sık paraneoplastik sendromdur; PTHrP, TGF-α ve aktif D vitamini metabolitleriyle oluşur, bulantı, kusma, mental değişiklik ve aritmi yapar.",
    "ses": "En sık paraneoplastik sendrom hangisidir?\nA, Hiperkalsemi\nBe, Kuşing sendromu\nCe, Uygunsuz antidiüretik hormon salınımı sendromu\nDe, Polisitemi\nE, Hipoglisemi\nHer seçeneği tek tek ele alalım.\nHiperkalsemi doğru. En sık paraneoplastik sendromdur ve tümör kökenli pe te ha re pe ile ilişkilidir.\nKuşing sendromu ektopik a ce te ha ya da a ce te ha benzeri peptit üretimiyle olur. Özellikle küçük hücreli akciğer karsinomunda görülür.\nUygunsuz antidiüretik hormon salınımı sendromu, antidiüretik hormon salgısına bağlıdır. Akciğer küçük hücreli karsinomu ve intrakraniyal neoplazmlarda görülür.\nPolisitemi eritropoetin üretimine bağlıdır. Renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda görülür.\nHipoglisemi insülin ya da insülin benzeri madde salgısına bağlıdır. Fibrosarkom, diğer sarkomlar ve over karsinomunda görülür.\nDoğru cevap A, Hiperkalsemi\nHiperkalsemi en sık paraneoplastik sendromdur. Pe te ha re pe, te ge fe alfa ve aktif de vitamini metabolitleriyle oluşur, bulantı, kusma, mental değişiklik ve aritmi yapar.",
    "kelime": 140
@@ -65,6 +79,7 @@
     "E": "Eritropoetin üretimi"
    },
    "dogru": "B",
+   "ipucu": "Paraneoplastik tablonun tanım gereği yayılımla açıklanamadığını hatırla ve tümörün kana salgıladığı ürünü diğer endokrin sendromlardan ayırarak düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Kemik metastazı yayılıma bağlı bir nedendir; paraneoplastik sendrom ise tümörün lokal ya da uzak yayılımıyla açıklanamayan tablodur.",
@@ -74,6 +89,12 @@
     "E": "Eritropoetin üretimi paraneoplastik polisitemiye yol açar; renal hücreli karsinomda görülür."
    },
    "ozet": "Paraneoplastik hiperkalsemi esas olarak tümör kökenli PTHrP ile oluşur; akciğer skuamöz hücreli karsinomu, böbrek hücreli karsinom ve meme karsinomu sık ilişkili tümörlerdir.",
+   "sayfa": [
+    12,
+    13,
+    14,
+    15
+   ],
    "metin": "**Soru.** Akciğer skuamöz hücreli karsinomunda paraneoplastik hiperkalseminin başlıca nedeni hangisidir?\n\n**A)** Kemik metastazı · **B)** PTHrP üretimi · **C)** ACTH üretimi · **D)** ADH üretimi · **E)** Eritropoetin üretimi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kemik metastazı** — Kemik metastazı yayılıma bağlı bir nedendir; paraneoplastik sendrom ise tümörün lokal ya da uzak yayılımıyla açıklanamayan tablodur.\n- **PTHrP üretimi** — PTHrP üretimi doğru: tümör kökenli paratiroid hormon ilgili protein başlıca mekanizmadır; TGF-α ve aktif D vitamini metabolitleri de katkı verir.\n- **ACTH üretimi** — ACTH üretimi Cushing sendromuna yol açar; özellikle küçük hücreli akciğer karsinomunda görülür.\n- **ADH üretimi** — ADH üretimi uygunsuz antidiüretik hormon salınımı sendromuna yol açar; intrakraniyal neoplazmlarda da görülür.\n- **Eritropoetin üretimi** — Eritropoetin üretimi paraneoplastik polisitemiye yol açar; renal hücreli karsinomda görülür.\n\n**Cevap: B** — PTHrP üretimi\n\n**Özet.** Paraneoplastik hiperkalsemi esas olarak tümör kökenli PTHrP ile oluşur; akciğer skuamöz hücreli karsinomu, böbrek hücreli karsinom ve meme karsinomu sık ilişkili tümörlerdir.",
    "ses": "Akciğer skuamöz hücreli karsinomunda paraneoplastik hiperkalseminin başlıca nedeni hangisidir?\nA, Kemik metastazı\nBe, Pe te ha re pe üretimi\nCe, A ce te ha üretimi\nDe, A de ha üretimi\nE, Eritropoetin üretimi\nŞıkları sırasıyla gözden geçirelim.\nKemik metastazı yayılıma bağlı bir nedendir. Paraneoplastik sendrom ise tümörün lokal ya da uzak yayılımıyla açıklanamayan tablodur.\nPe te ha re pe üretimi doğru. Tümör kökenli paratiroid hormon ilgili protein başlıca mekanizmadır, te ge fe alfa ve aktif de vitamini metabolitleri de katkı verir.\nA ce te ha üretimi Kuşing sendromuna yol açar. Özellikle küçük hücreli akciğer karsinomunda görülür.\nA de ha üretimi uygunsuz antidiüretik hormon salınımı sendromuna yol açar. İntrakraniyal neoplazmlarda da görülür.\nEritropoetin üretimi paraneoplastik polisitemiye yol açar. Renal hücreli karsinomda görülür.\nDoğru cevap Be, Pe te ha re pe üretimi\nParaneoplastik hiperkalsemi esas olarak tümör kökenli pe te ha re pe ile oluşur. Akciğer skuamöz hücreli karsinomu, böbrek hücreli karsinom ve meme karsinomu sık ilişkili tümörlerdir.",
    "kelime": 154
@@ -90,6 +111,7 @@
     "E": "Küçük hücreli akciğer karsinomu"
    },
    "dogru": "E",
+   "ipucu": "İki farklı ektopik hormon sendromunu birlikte açıklayabilen ve hiperkalsemi yapan skuamöz tipten ayrılan tümörü düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Böbrek hücreli karsinom paraneoplastik hiperkalsemi ve eritropoetine bağlı polisitemi yapar.",
@@ -99,6 +121,12 @@
     "E": "Küçük hücreli akciğer karsinomu doğru: ektopik ACTH ile Cushing sendromuna, ADH ile uygunsuz antidiüretik hormon salınımı sendromuna yol açabilir."
    },
    "ozet": "Küçük hücreli akciğer karsinomu hem Cushing sendromunun hem SIADH'nin başlıca tümörüdür; Cushing sendromunda pankreas karsinomu ve nöral tümörler de rol oynar.",
+   "sayfa": [
+    13,
+    15,
+    16,
+    17
+   ],
    "metin": "**Soru.** Ektopik ACTH ile Cushing sendromuna, ADH ile SIADH'ye yol açabilen tümör hangisidir?\n\n**A)** Böbrek hücreli karsinom · **B)** Timoma · **C)** Meme karsinomu · **D)** Hepatoselüler karsinom · **E)** Küçük hücreli akciğer karsinomu\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Böbrek hücreli karsinom** — Böbrek hücreli karsinom paraneoplastik hiperkalsemi ve eritropoetine bağlı polisitemi yapar.\n- **Timoma** — Timoma, immünolojik mekanizmayla miyasteni ve kırmızı hücre aplazisine yol açan paraneoplastik tablolarla ilişkilidir.\n- **Meme karsinomu** — Meme karsinomu hiperkalsemi, dermatomyozit ve immünolojik sinir sistemi bozukluklarıyla ilişkilidir.\n- **Hepatoselüler karsinom** — Hepatoselüler karsinom, eritropoetin üretimine bağlı polisitemiyle ilişkili paraneoplastik tümörlerdendir.\n- **Küçük hücreli akciğer karsinomu** — Küçük hücreli akciğer karsinomu doğru: ektopik ACTH ile Cushing sendromuna, ADH ile uygunsuz antidiüretik hormon salınımı sendromuna yol açabilir.\n\n**Cevap: E** — Küçük hücreli akciğer karsinomu\n\n**Özet.** Küçük hücreli akciğer karsinomu hem Cushing sendromunun hem SIADH'nin başlıca tümörüdür; Cushing sendromunda pankreas karsinomu ve nöral tümörler de rol oynar.",
    "ses": "Ektopik a ce te ha ile Kuşing sendromuna, a de ha ile uygunsuz antidiüretik hormon salınımı sendromuna yol açabilen tümör hangisidir?\nA, Böbrek hücreli karsinom\nBe, Timoma\nCe, Meme karsinomu\nDe, Hepatoselüler karsinom\nE, Küçük hücreli akciğer karsinomu\nŞimdi seçeneklere tek tek bakalım.\nBöbrek hücreli karsinom paraneoplastik hiperkalsemi ve eritropoetine bağlı polisitemi yapar.\nTimoma, immünolojik mekanizmayla miyasteni ve kırmızı hücre aplazisine yol açan paraneoplastik tablolarla ilişkilidir.\nMeme karsinomu hiperkalsemi, dermatomyozit ve immünolojik sinir sistemi bozukluklarıyla ilişkilidir.\nHepatoselüler karsinom, eritropoetin üretimine bağlı polisitemiyle ilişkili paraneoplastik tümörlerdendir.\nKüçük hücreli akciğer karsinomu doğru. Ektopik a ce te ha ile Kuşing sendromuna, a de ha ile uygunsuz antidiüretik hormon salınımı sendromuna yol açabilir.\nDoğru cevap E, Küçük hücreli akciğer karsinomu\nKüçük hücreli akciğer karsinomu hem Kuşing sendromunun hem uygunsuz antidiüretik hormon salınımı sendromunun başlıca tümörüdür. Kuşing sendromunda pankreas karsinomu ve nöral tümörler de rol oynar.",
    "kelime": 152
@@ -115,6 +143,7 @@
     "E": "Gastrik karsinom"
    },
    "dogru": "C",
+   "ipucu": "Aynı tümörün paraneoplastik hiperkalsemi de yapabildiğini ve polisitemide serebellar hemanjiyomla birlikte anıldığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Fibrosarkom, insülin ya da insülin benzeri madde salgılayarak paraneoplastik hipoglisemiye yol açar.",
@@ -124,6 +153,12 @@
     "E": "Gastrik karsinom, epidermal büyüme faktörü salgısıyla acanthosis nigricans yapabilir."
    },
    "ozet": "Eritropoetin üretimine bağlı paraneoplastik polisitemi renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda görülür.",
+   "sayfa": [
+    14,
+    15,
+    16,
+    17
+   ],
    "metin": "**Soru.** Eritropoetin üretimine bağlı paraneoplastik polisitemi yapan tümör hangisidir?\n\n**A)** Fibrosarkom · **B)** Timoma · **C)** Renal hücreli karsinom · **D)** Pankreas karsinomu · **E)** Gastrik karsinom\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Fibrosarkom** — Fibrosarkom, insülin ya da insülin benzeri madde salgılayarak paraneoplastik hipoglisemiye yol açar.\n- **Timoma** — Timoma kırmızı hücre aplazisi ve miyasteniyle ilişkilidir; ikisi de immünolojik mekanizmayla gelişir.\n- **Renal hücreli karsinom** — Renal hücreli karsinom doğru: eritropoetin üreterek paraneoplastik polisitemiye yol açar, ayrıca hiperkalsemi de yapabilir.\n- **Pankreas karsinomu** — Pankreas karsinomu pıhtılaşmayı aktive eden müsinlerle venöz tromboz, yani Trousseau fenomeni yapar.\n- **Gastrik karsinom** — Gastrik karsinom, epidermal büyüme faktörü salgısıyla acanthosis nigricans yapabilir.\n\n**Cevap: C** — Renal hücreli karsinom\n\n**Özet.** Eritropoetin üretimine bağlı paraneoplastik polisitemi renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda görülür.",
    "ses": "Eritropoetin üretimine bağlı paraneoplastik polisitemi yapan tümör hangisidir?\nA, Fibrosarkom\nBe, Timoma\nCe, Renal hücreli karsinom\nDe, Pankreas karsinomu\nE, Gastrik karsinom\nSeçenekleri sırayla değerlendirelim.\nFibrosarkom, insülin ya da insülin benzeri madde salgılayarak paraneoplastik hipoglisemiye yol açar.\nTimoma kırmızı hücre aplazisi ve miyasteniyle ilişkilidir. İkisi de immünolojik mekanizmayla gelişir.\nRenal hücreli karsinom doğru. Eritropoetin üreterek paraneoplastik polisitemiye yol açar, ayrıca hiperkalsemi de yapabilir.\nPankreas karsinomu pıhtılaşmayı aktive eden müsinlerle venöz tromboz, yani Truso fenomeni yapar.\nGastrik karsinom, epidermal büyüme faktörü salgısıyla akantozis nigrikans yapabilir.\nDoğru cevap Ce, Renal hücreli karsinom\nEritropoetin üretimine bağlı paraneoplastik polisitemi renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda görülür.",
    "kelime": 130
@@ -140,18 +175,25 @@
     "E": "EGF salgısı"
    },
    "dogru": "B",
+   "ipucu": "Bu tablonun bağışıklık yanıtından değil, tümörün doğrudan salgıladığı bir üründen doğduğunu düşün ve hormon ile büyüme faktörünü de ayır.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
-    "A": "Trombositopeni ile karıştırılabilir: Bu tabloda sorun kanama değil, tümör ürünlerinin yarattığı hiperkoagülabilitedir.",
+    "A": "Trombositopeni trombosit sayısının azalması olup pıhtılaşmaya değil peteşiyal kanamalara yol açar; pankreas ve mide adenokarsinomlarında gezici venöz tromboza (Trousseau sendromuna) neden olan ise tümörün dolaşıma saldığı prokoagülan müsinler ve doku faktörüdür.",
     "B": "Pıhtılaşmayı aktive eden müsinler doğru: pankreas ve akciğer karsinomunun bu ürünleri venöz tromboza, yani Trousseau fenomenine yol açar.",
     "C": "İmmün kompleksler ve tümör antijenleri, çeşitli kanserlerde görülen paraneoplastik nefrotik sendromun mekanizmasıdır.",
     "D": "Eritropoetin, renal hücreli karsinomda paraneoplastik polisitemiye yol açan etkendir.",
     "E": "EGF salgısı acanthosis nigricans mekanizmasıdır; gastrik, akciğer ve uterin karsinomlarda görülür."
    },
    "ozet": "Trousseau fenomeninde pankreas ve akciğer karsinomlarının pıhtılaşmayı aktive eden müsinleri venöz tromboz yapar; ileri evre kanserlerde nonbakteriyel trombotik endokardit de görülür.",
-   "metin": "**Soru.** Pankreas karsinomunda gezici venöz tromboza (Trousseau) yol açan mekanizma hangisidir?\n\n**A)** Trombositopeni · **B)** Pıhtılaşmayı aktive eden müsinler · **C)** İmmün kompleksler · **D)** Eritropoetin · **E)** EGF salgısı\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Trombositopeni** — Trombositopeni ile karıştırılabilir: Bu tabloda sorun kanama değil, tümör ürünlerinin yarattığı hiperkoagülabilitedir.\n- **Pıhtılaşmayı aktive eden müsinler** — Pıhtılaşmayı aktive eden müsinler doğru: pankreas ve akciğer karsinomunun bu ürünleri venöz tromboza, yani Trousseau fenomenine yol açar.\n- **İmmün kompleksler** — İmmün kompleksler ve tümör antijenleri, çeşitli kanserlerde görülen paraneoplastik nefrotik sendromun mekanizmasıdır.\n- **Eritropoetin** — Eritropoetin, renal hücreli karsinomda paraneoplastik polisitemiye yol açan etkendir.\n- **EGF salgısı** — EGF salgısı acanthosis nigricans mekanizmasıdır; gastrik, akciğer ve uterin karsinomlarda görülür.\n\n**Cevap: B** — Pıhtılaşmayı aktive eden müsinler\n\n**Özet.** Trousseau fenomeninde pankreas ve akciğer karsinomlarının pıhtılaşmayı aktive eden müsinleri venöz tromboz yapar; ileri evre kanserlerde nonbakteriyel trombotik endokardit de görülür.",
-   "ses": "Pankreas karsinomunda gezici venöz tromboza, yani Truso fenomenine yol açan mekanizma hangisidir?\nA, Trombositopeni\nBe, Pıhtılaşmayı aktive eden müsinler\nCe, İmmün kompleksler\nDe, Eritropoetin\nE, Epidermal büyüme faktörü salgısı\nHer seçeneği tek tek ele alalım.\nTrombositopeni ile karıştırılabilir. Bu tabloda sorun kanama değil, tümör ürünlerinin yarattığı hiperkoagülabilitedir.\nPıhtılaşmayı aktive eden müsinler doğru. Pankreas ve akciğer karsinomunun bu ürünleri venöz tromboza, yani Truso fenomenine yol açar.\nİmmün kompleksler ve tümör antijenleri, çeşitli kanserlerde görülen paraneoplastik nefrotik sendromun mekanizmasıdır.\nEritropoetin, renal hücreli karsinomda paraneoplastik polisitemiye yol açan etkendir.\nEpidermal büyüme faktörü salgısı akantozis nigrikans mekanizmasıdır. Gastrik, akciğer ve uterin karsinomlarda görülür.\nDoğru cevap Be, Pıhtılaşmayı aktive eden müsinler\nTruso fenomeninde pankreas ve akciğer karsinomlarının pıhtılaşmayı aktive eden müsinleri venöz tromboz yapar. İleri evre kanserlerde nonbakteriyel trombotik endokardit de görülür.",
-   "kelime": 148
+   "sayfa": [
+    13,
+    15,
+    16,
+    17
+   ],
+   "metin": "**Soru.** Pankreas karsinomunda gezici venöz tromboza (Trousseau) yol açan mekanizma hangisidir?\n\n**A)** Trombositopeni · **B)** Pıhtılaşmayı aktive eden müsinler · **C)** İmmün kompleksler · **D)** Eritropoetin · **E)** EGF salgısı\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Trombositopeni** — Trombositopeni trombosit sayısının azalması olup pıhtılaşmaya değil peteşiyal kanamalara yol açar; pankreas ve mide adenokarsinomlarında gezici venöz tromboza (Trousseau sendromuna) neden olan ise tümörün dolaşıma saldığı prokoagülan müsinler ve doku faktörüdür.\n- **Pıhtılaşmayı aktive eden müsinler** — Pıhtılaşmayı aktive eden müsinler doğru: pankreas ve akciğer karsinomunun bu ürünleri venöz tromboza, yani Trousseau fenomenine yol açar.\n- **İmmün kompleksler** — İmmün kompleksler ve tümör antijenleri, çeşitli kanserlerde görülen paraneoplastik nefrotik sendromun mekanizmasıdır.\n- **Eritropoetin** — Eritropoetin, renal hücreli karsinomda paraneoplastik polisitemiye yol açan etkendir.\n- **EGF salgısı** — EGF salgısı acanthosis nigricans mekanizmasıdır; gastrik, akciğer ve uterin karsinomlarda görülür.\n\n**Cevap: B** — Pıhtılaşmayı aktive eden müsinler\n\n**Özet.** Trousseau fenomeninde pankreas ve akciğer karsinomlarının pıhtılaşmayı aktive eden müsinleri venöz tromboz yapar; ileri evre kanserlerde nonbakteriyel trombotik endokardit de görülür.",
+   "ses": "Pankreas karsinomunda gezici venöz tromboza, yani Truso fenomenine yol açan mekanizma hangisidir?\nA, Trombositopeni\nBe, Pıhtılaşmayı aktive eden müsinler\nCe, İmmün kompleksler\nDe, Eritropoetin\nE, Epidermal büyüme faktörü salgısı\nHer seçeneği tek tek ele alalım.\nTrombositopeni trombosit sayısının azalması olup pıhtılaşmaya değil peteşiyal kanamalara yol açar. Pankreas ve mide adenokarsinomlarında gezici venöz tromboza, Trousseau sendromuna, neden olan ise tümörün dolaşıma saldığı prokoagülan müsinler ve doku faktörüdür.\nPıhtılaşmayı aktive eden müsinler doğru. Pankreas ve akciğer karsinomunun bu ürünleri venöz tromboza, yani Truso fenomenine yol açar.\nİmmün kompleksler ve tümör antijenleri, çeşitli kanserlerde görülen paraneoplastik nefrotik sendromun mekanizmasıdır.\nEritropoetin, renal hücreli karsinomda paraneoplastik polisitemiye yol açan etkendir.\nEpidermal büyüme faktörü salgısı akantozis nigrikans mekanizmasıdır. Gastrik, akciğer ve uterin karsinomlarda görülür.\nDoğru cevap Be, Pıhtılaşmayı aktive eden müsinler\nTruso fenomeninde pankreas ve akciğer karsinomlarının pıhtılaşmayı aktive eden müsinleri venöz tromboz yapar. İleri evre kanserlerde nonbakteriyel trombotik endokardit de görülür.",
+   "kelime": 167
   },
   {
    "no": 7,
@@ -165,6 +207,7 @@
     "E": "Serum tümör belirteci"
    },
    "dogru": "D",
+   "ipucu": "Aynı histolojik tipe sahip iki tümörün neden çok farklı prognoza sahip olabildiğini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Mitoz sayısı derecelendirmede değerlendirilen morfolojik ölçütlerden biridir; tümörün vücuttaki yayılımını göstermez.",
@@ -174,6 +217,14 @@
     "E": "Serum tümör belirteci, tedavi yanıtını izleme ve nüksü saptamada değerlidir; prognoz için temel parametre değildir."
    },
    "ozet": "Evreleme tümörün yayılım derecesini gösterir ve prognozda derecelendirmeden üstündür; aynı histolojik tipteki iki tümör farklı evrelerde çok farklı prognoza sahip olabilir.",
+   "sayfa": [
+    18,
+    19,
+    20,
+    22,
+    23,
+    30
+   ],
    "metin": "**Soru.** Solid tümörlerde prognozu belirlemede derecelendirmeden daha üstün olan parametre hangisidir?\n\n**A)** Mitoz sayısı · **B)** Diferansiyasyon · **C)** Nekroz varlığı · **D)** Evreleme · **E)** Serum tümör belirteci\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Mitoz sayısı** — Mitoz sayısı derecelendirmede değerlendirilen morfolojik ölçütlerden biridir; tümörün vücuttaki yayılımını göstermez.\n- **Diferansiyasyon** — Diferansiyasyon derecelendirmenin temelidir; iyi diferansiye tümör düşük, az diferansiye ya da anaplastik tümör yüksek derecelidir.\n- **Nekroz varlığı** — Nekroz varlığı da derecelendirmede bakılan unsurlardandır; derecelendirme öznel ve gözlemciye bağımlı olabilir.\n- **Evreleme** — Evreleme doğru: primer tümör boyutunu, lenf düğümü tutulumunu ve uzak metastazı tanımlar; prognozda derecelendirmeden üstündür.\n- **Serum tümör belirteci** — Serum tümör belirteci, tedavi yanıtını izleme ve nüksü saptamada değerlidir; prognoz için temel parametre değildir.\n\n**Cevap: D** — Evreleme\n\n**Özet.** Evreleme tümörün yayılım derecesini gösterir ve prognozda derecelendirmeden üstündür; aynı histolojik tipteki iki tümör farklı evrelerde çok farklı prognoza sahip olabilir.",
    "ses": "Solid tümörlerde prognozu belirlemede derecelendirmeden daha üstün olan parametre hangisidir?\nA, Mitoz sayısı\nBe, Diferansiyasyon\nCe, Nekroz varlığı\nDe, Evreleme\nE, Serum tümör belirteci\nŞıkları sırasıyla gözden geçirelim.\nMitoz sayısı derecelendirmede değerlendirilen morfolojik ölçütlerden biridir. Tümörün vücuttaki yayılımını göstermez.\nDiferansiyasyon derecelendirmenin temelidir. İyi diferansiye tümör düşük, az diferansiye ya da anaplastik tümör yüksek derecelidir.\nNekroz varlığı da derecelendirmede bakılan unsurlardandır. Derecelendirme öznel ve gözlemciye bağımlı olabilir.\nEvreleme doğru. Primer tümör boyutunu, lenf düğümü tutulumunu ve uzak metastazı tanımlar, prognozda derecelendirmeden üstündür.\nSerum tümör belirteci, tedavi yanıtını izleme ve nüksü saptamada değerlidir. Prognoz için temel parametre değildir.\nDoğru cevap De, Evreleme\nEvreleme tümörün yayılım derecesini gösterir ve prognozda derecelendirmeden üstündür. Aynı histolojik tipteki iki tümör farklı evrelerde çok farklı prognoza sahip olabilir.",
    "kelime": 147
@@ -190,6 +241,7 @@
     "E": "Karsinoma in situ"
    },
    "dogru": "A",
+   "ipucu": "Evre II–III'te bölgesel lenf düğümü tutulumu olduğunu hatırla ve evre IV için bunun ötesinde hangi TNM harfinin değiştiğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Uzak metastaz doğru: TNM kombinasyonları klinik evrelere dönüştürülürken evre IV, uzak metastaz yani M1 varlığıyla tanımlanır.",
@@ -199,6 +251,11 @@
     "E": "Karsinoma in situ bazal membranı aşmamış tümördür; uzak metastazla tanımlanan evre IV'ün tam karşıtıdır."
    },
    "ozet": "TNM'de T primer tümörü, N bölgesel lenf düğümlerini, M uzak metastazı gösterir; evre I küçük lokalize tümör, evre IV ise uzak metastaz yani M1 demektir.",
+   "sayfa": [
+    19,
+    21,
+    22
+   ],
    "metin": "**Soru.** TNM sisteminde evre IV'ü belirleyen bulgu hangisidir?\n\n**A)** Uzak metastaz (M1) · **B)** Büyük tümör (T4) · **C)** Çok sayıda lenf düğümü (N3) · **D)** Yüksek derece · **E)** Karsinoma in situ\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Uzak metastaz (M1)** — Uzak metastaz doğru: TNM kombinasyonları klinik evrelere dönüştürülürken evre IV, uzak metastaz yani M1 varlığıyla tanımlanır.\n- **Büyük tümör (T4)** — T4, artan tümör boyutu ve lokal invazyonu gösterir; tek başına uzak yayılım anlamına gelmez.\n- **Çok sayıda lenf düğümü (N3)** — N3, artan lenf düğümü sayısı ve bölgesel yaygınlıktır; bölgesel lenf düğümü tutulumu genelde evre II–III'ü tanımlar.\n- **Yüksek derece** — Yüksek derece, az diferansiye ya da anaplastik tümörü anlatır; bu bir evreleme değil derecelendirme bulgusudur.\n- **Karsinoma in situ** — Karsinoma in situ bazal membranı aşmamış tümördür; uzak metastazla tanımlanan evre IV'ün tam karşıtıdır.\n\n**Cevap: A** — Uzak metastaz (M1)\n\n**Özet.** TNM'de T primer tümörü, N bölgesel lenf düğümlerini, M uzak metastazı gösterir; evre I küçük lokalize tümör, evre IV ise uzak metastaz yani M1 demektir.",
    "ses": "Te ne me sisteminde evre dördü belirleyen bulgu hangisidir?\nA, Uzak metastaz, me bir\nBe, Büyük tümör, te dört\nCe, Çok sayıda lenf düğümü, ne üç\nDe, Yüksek derece\nE, Karsinoma in situ\nŞimdi seçeneklere tek tek bakalım.\nUzak metastaz doğru. Te ne me kombinasyonları klinik evrelere dönüştürülürken evre dört, uzak metastaz yani me bir varlığıyla tanımlanır.\nTe dört, artan tümör boyutu ve lokal invazyonu gösterir. Tek başına uzak yayılım anlamına gelmez.\nNe üç, artan lenf düğümü sayısı ve bölgesel yaygınlıktır. Bölgesel lenf düğümü tutulumu genelde evre iki ile üçü tanımlar.\nYüksek derece, az diferansiye ya da anaplastik tümörü anlatır. Bu bir evreleme değil, derecelendirme bulgusudur.\nKarsinoma in situ bazal membranı aşmamış tümördür. Uzak metastazla tanımlanan evre dördün tam karşıtıdır.\nDoğru cevap A, Uzak metastaz, me bir\nTe ne me sisteminde te primer tümörü, ne bölgesel lenf düğümlerini, me uzak metastazı gösterir. Evre bir küçük lokalize tümör, evre dört ise uzak metastaz yani me bir demektir.",
    "kelime": 172
@@ -215,18 +272,25 @@
     "E": "Karsinom"
    },
    "dogru": "E",
+   "ipucu": "İmmünohistokimyada CD45 pozitifliğinin lenfoid tümörü gösterdiğini hatırla ve sitokeratinin hangi ana tümör grubunu ayırdığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Lenfoma bu boyamayla değil, CD45 pozitifliğiyle lenfoid tümör olarak tanınır.",
-    "B": "Sarkom ile karıştırılabilir: Örneğin Ewing sarkomu, 11;22 translokasyonunun moleküler yöntemlerle saptanmasıyla tanınır.",
-    "C": "Melanomun bir alt grubunda moleküler testle BRAF V600E mutasyonu saptanır. Melanom bu sorudaki ayrımı sağlamaz.",
+    "B": "Sarkomlar mezenkimal kökenli malign tümörlerdir ve ara filaman olarak karakteristik biçimde vimentin (kas kökenlilerde desmin) eksprese ederler; immünohistokimyada sitokeratin pozitifliği ise epitel kökenli tümörleri, yani karsinomları gösterir.",
+    "C": "Melanom nöral krista kökenli melanositlerin malign tümörüdür ve immünohistokimyada S-100, HMB-45 ve Melan-A pozitifliğiyle tanınır; epitel hücrelerinin ara filamanı olan sitokeratin pozitifliği ise karsinomları işaret eder.",
     "D": "Lösemi, akış sitometrisinin en sık kullanım alanlarındandır; CD19, CD3 ve CD34 gibi yüzey belirteçleriyle sınıflandırılır.",
     "E": "Karsinom doğru: parafin kesitte sitokeratine karşı monoklonal antikorla boyanma, tümörün karsinom olduğunu gösterir."
    },
    "ozet": "İmmünohistokimya tümör tipini belirler: sitokeratin pozitifliği karsinomu, CD45 pozitifliği lenfoid tümörü gösterir; PSA pozitifliği ise prostat kökenli metastazı düşündürür.",
-   "metin": "**Soru.** İmmünohistokimyada sitokeratin pozitifliği hangi tümör tipini düşündürür?\n\n**A)** Lenfoma · **B)** Sarkom · **C)** Melanom · **D)** Lösemi · **E)** Karsinom\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Lenfoma** — Lenfoma bu boyamayla değil, CD45 pozitifliğiyle lenfoid tümör olarak tanınır.\n- **Sarkom** — Sarkom ile karıştırılabilir: Örneğin Ewing sarkomu, 11;22 translokasyonunun moleküler yöntemlerle saptanmasıyla tanınır.\n- **Melanom** — Melanomun bir alt grubunda moleküler testle BRAF V600E mutasyonu saptanır. Melanom bu sorudaki ayrımı sağlamaz.\n- **Lösemi** — Lösemi, akış sitometrisinin en sık kullanım alanlarındandır; CD19, CD3 ve CD34 gibi yüzey belirteçleriyle sınıflandırılır.\n- **Karsinom** — Karsinom doğru: parafin kesitte sitokeratine karşı monoklonal antikorla boyanma, tümörün karsinom olduğunu gösterir.\n\n**Cevap: E** — Karsinom\n\n**Özet.** İmmünohistokimya tümör tipini belirler: sitokeratin pozitifliği karsinomu, CD45 pozitifliği lenfoid tümörü gösterir; PSA pozitifliği ise prostat kökenli metastazı düşündürür.",
-   "ses": "İmmünohistokimyada sitokeratin pozitifliği hangi tümör tipini düşündürür?\nA, Lenfoma\nBe, Sarkom\nCe, Melanom\nDe, Lösemi\nE, Karsinom\nSeçenekleri sırayla değerlendirelim.\nLenfoma bu boyamayla değil, ce de kırk beş pozitifliğiyle lenfoid tümör olarak tanınır.\nSarkom ile karıştırılabilir. Örneğin Yuing sarkomu, on bir yirmi iki translokasyonunun moleküler yöntemlerle saptanmasıyla tanınır.\nMelanomun bir alt grubunda moleküler testle be raf ve altı yüz e mutasyonu saptanır. Melanom bu sorudaki ayrımı sağlamaz.\nLösemi, akış sitometrisinin en sık kullanım alanlarındandır. Ce de on dokuz, ce de üç ve ce de otuz dört gibi yüzey belirteçleriyle sınıflandırılır.\nKarsinom doğru. Parafin kesitte sitokeratine karşı monoklonal antikorla boyanma, tümörün karsinom olduğunu gösterir.\nDoğru cevap E, Karsinom\nİmmünohistokimya tümör tipini belirler. Sitokeratin pozitifliği karsinomu, ce de kırk beş pozitifliği lenfoid tümörü gösterir, pe se a pozitifliği ise prostat kökenli metastazı düşündürür.",
-   "kelime": 130
+   "sayfa": [
+    28,
+    29,
+    34,
+    35
+   ],
+   "metin": "**Soru.** İmmünohistokimyada sitokeratin pozitifliği hangi tümör tipini düşündürür?\n\n**A)** Lenfoma · **B)** Sarkom · **C)** Melanom · **D)** Lösemi · **E)** Karsinom\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Lenfoma** — Lenfoma bu boyamayla değil, CD45 pozitifliğiyle lenfoid tümör olarak tanınır.\n- **Sarkom** — Sarkomlar mezenkimal kökenli malign tümörlerdir ve ara filaman olarak karakteristik biçimde vimentin (kas kökenlilerde desmin) eksprese ederler; immünohistokimyada sitokeratin pozitifliği ise epitel kökenli tümörleri, yani karsinomları gösterir.\n- **Melanom** — Melanom nöral krista kökenli melanositlerin malign tümörüdür ve immünohistokimyada S-100, HMB-45 ve Melan-A pozitifliğiyle tanınır; epitel hücrelerinin ara filamanı olan sitokeratin pozitifliği ise karsinomları işaret eder.\n- **Lösemi** — Lösemi, akış sitometrisinin en sık kullanım alanlarındandır; CD19, CD3 ve CD34 gibi yüzey belirteçleriyle sınıflandırılır.\n- **Karsinom** — Karsinom doğru: parafin kesitte sitokeratine karşı monoklonal antikorla boyanma, tümörün karsinom olduğunu gösterir.\n\n**Cevap: E** — Karsinom\n\n**Özet.** İmmünohistokimya tümör tipini belirler: sitokeratin pozitifliği karsinomu, CD45 pozitifliği lenfoid tümörü gösterir; PSA pozitifliği ise prostat kökenli metastazı düşündürür.",
+   "ses": "İmmünohistokimyada sitokeratin pozitifliği hangi tümör tipini düşündürür?\nA, Lenfoma\nBe, Sarkom\nCe, Melanom\nDe, Lösemi\nE, Karsinom\nSeçenekleri sırayla değerlendirelim.\nLenfoma bu boyamayla değil, ce de kırk beş pozitifliğiyle lenfoid tümör olarak tanınır.\nSarkomlar mezenkimal kökenli malign tümörlerdir ve ara filaman olarak karakteristik biçimde vimentin, kas kökenlilerde desmin, eksprese ederler. İmmünohistokimyada sitokeratin pozitifliği ise epitel kökenli tümörleri, yani karsinomları gösterir.\nMelanom nöral krista kökenli melanositlerin malign tümörüdür ve immünohistokimyada se yüz, ha em be kırk beş ve Melan-A pozitifliğiyle tanınır. Epitel hücrelerinin ara filamanı olan sitokeratin pozitifliği ise karsinomları işaret eder.\nLösemi, akış sitometrisinin en sık kullanım alanlarındandır. Ce de on dokuz, ce de üç ve ce de otuz dört gibi yüzey belirteçleriyle sınıflandırılır.\nKarsinom doğru. Parafin kesitte sitokeratine karşı monoklonal antikorla boyanma, tümörün karsinom olduğunu gösterir.\nDoğru cevap E, Karsinom\nİmmünohistokimya tümör tipini belirler. Sitokeratin pozitifliği karsinomu, ce de kırk beş pozitifliği lenfoid tümörü gösterir, pe se a pozitifliği ise prostat kökenli metastazı düşündürür.",
+   "kelime": 156
   },
   {
    "no": 10,
@@ -240,6 +304,7 @@
     "E": "CA-19-9"
    },
    "dogru": "C",
+   "ipucu": "Hepatosellüler karsinomda da yükselen onkofetal belirteci düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "CEA, kolorektal, pankreatik, mide ve meme karsinomlarında yükselen karsinoembriyonik antijendir.",
@@ -249,6 +314,11 @@
     "E": "CA-19-9 pankreas, safra yolları ve bazı gastrointestinal tümörlerde yükselir."
    },
    "ozet": "AFP hepatosellüler karsinom ve yolk kesesi tümörlerinin belirtecidir; CA-125 ovaryum, CA-19-9 pankreas ve safra yolları, CEA kolorektal karsinomla ilişkilidir.",
+   "sayfa": [
+    30,
+    31,
+    32
+   ],
    "metin": "**Soru.** Yolk kesesi tümörlerinde yükselen serum belirteci hangisidir?\n\n**A)** CEA · **B)** CA-125 · **C)** AFP · **D)** PSA · **E)** CA-19-9\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **CEA** — CEA, kolorektal, pankreatik, mide ve meme karsinomlarında yükselen karsinoembriyonik antijendir.\n- **CA-125** — CA-125 epitelyal ovaryum karsinomlarının belirtecidir.\n- **AFP** — AFP doğru: alfa fetoprotein hepatosellüler karsinom ve yolk kesesi tümörlerinde yükselir.\n- **PSA** — PSA prostat karsinomunda artar, ancak benign prostat hiperplazisinde de yükselebilir.\n- **CA-19-9** — CA-19-9 pankreas, safra yolları ve bazı gastrointestinal tümörlerde yükselir.\n\n**Cevap: C** — AFP\n\n**Özet.** AFP hepatosellüler karsinom ve yolk kesesi tümörlerinin belirtecidir; CA-125 ovaryum, CA-19-9 pankreas ve safra yolları, CEA kolorektal karsinomla ilişkilidir.",
    "ses": "Yolk kesesi tümörlerinde yükselen serum belirteci hangisidir?\nA, Karsinoembriyonik antijen\nBe, Ce a yüz yirmi beş\nCe, Alfa fetoprotein\nDe, Pe se a\nE, Ce a on dokuz dokuz\nHer seçeneği tek tek ele alalım.\nKarsinoembriyonik antijen, kolorektal, pankreatik, mide ve meme karsinomlarında yükselen bir belirteçtir.\nCe a yüz yirmi beş, epitelyal ovaryum karsinomlarının belirtecidir.\nAlfa fetoprotein doğru. Hepatosellüler karsinom ve yolk kesesi tümörlerinde yükselir.\nPe se a prostat karsinomunda artar, ancak benign prostat hiperplazisinde de yükselebilir.\nCe a on dokuz dokuz, pankreas, safra yolları ve bazı gastrointestinal tümörlerde yükselir.\nDoğru cevap Ce, Alfa fetoprotein\nAlfa fetoprotein hepatosellüler karsinom ve yolk kesesi tümörlerinin belirtecidir. Ce a yüz yirmi beş ovaryum, ce a on dokuz dokuz pankreas ve safra yolları, karsinoembriyonik antijen kolorektal karsinomla ilişkilidir.",
    "kelime": 113
@@ -265,6 +335,7 @@
     "E": "Histolojik tip belirleme"
    },
    "dogru": "D",
+   "ipucu": "Duyarlılığı ve özgüllüğü sınırlı bir testin, cerrahiyle normale inen değerinin yeniden yükselmesinin ne anlattığını düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Toplum taraması uygun değildir; düşük duyarlılık erken evre kanserleri kaçırabilir, düşük özgüllük benign durumlarda da yükselmeye yol açar.",
@@ -274,6 +345,13 @@
     "E": "Tümör tipinin belirlenmesinde immünohistokimya kullanılır; örneğin sitokeratin karsinomu, CD45 lenfoid tümörü gösterir."
    },
    "ozet": "Serum tümör belirteçleri sınırlı duyarlılık ve özgüllük nedeniyle taramaya uygun değildir; en değerli oldukları alan tedavi yanıtını ve nüksü izlemektir.",
+   "sayfa": [
+    18,
+    24,
+    28,
+    30,
+    32
+   ],
    "metin": "**Soru.** Serum tümör belirteçlerinin en uygun kullanım alanı hangisidir?\n\n**A)** Toplum taraması · **B)** Kesin tanı · **C)** Tümör derecelendirmesi · **D)** Tedavi sonrası nüks izlemi · **E)** Histolojik tip belirleme\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Toplum taraması** — Toplum taraması uygun değildir; düşük duyarlılık erken evre kanserleri kaçırabilir, düşük özgüllük benign durumlarda da yükselmeye yol açar.\n- **Kesin tanı** — Kesin tanı histopatolojiyle konur; klinik ve radyolojik bilgilerle birlikte histopatolojik tanı altın standarttır.\n- **Tümör derecelendirmesi** — Tümör derecelendirmesi diferansiyasyon, mitoz sayısı ve nekroz gibi morfolojik ölçütlerle yapılır.\n- **Tedavi sonrası nüks izlemi** — Tedavi sonrası nüks izlemi doğru: rezeksiyondan sonra belirtecin normalleşmesi beklenir, yeniden yükselmesi nüksü gösterir.\n- **Histolojik tip belirleme** — Tümör tipinin belirlenmesinde immünohistokimya kullanılır; örneğin sitokeratin karsinomu, CD45 lenfoid tümörü gösterir.\n\n**Cevap: D** — Tedavi sonrası nüks izlemi\n\n**Özet.** Serum tümör belirteçleri sınırlı duyarlılık ve özgüllük nedeniyle taramaya uygun değildir; en değerli oldukları alan tedavi yanıtını ve nüksü izlemektir.",
    "ses": "Serum tümör belirteçlerinin en uygun kullanım alanı hangisidir?\nA, Toplum taraması\nBe, Kesin tanı\nCe, Tümör derecelendirmesi\nDe, Tedavi sonrası nüks izlemi\nE, Histolojik tip belirleme\nŞıkları sırasıyla gözden geçirelim.\nToplum taraması uygun değildir. Düşük duyarlılık erken evre kanserleri kaçırabilir, düşük özgüllük benign durumlarda da yükselmeye yol açar.\nKesin tanı histopatolojiyle konur. Klinik ve radyolojik bilgilerle birlikte histopatolojik tanı altın standarttır.\nTümör derecelendirmesi diferansiyasyon, mitoz sayısı ve nekroz gibi morfolojik ölçütlerle yapılır.\nTedavi sonrası nüks izlemi doğru. Rezeksiyondan sonra belirtecin normalleşmesi beklenir, yeniden yükselmesi nüksü gösterir.\nTümör tipinin belirlenmesinde immünohistokimya kullanılır. Örneğin sitokeratin karsinomu, ce de kırk beş lenfoid tümörü gösterir.\nDoğru cevap De, Tedavi sonrası nüks izlemi\nSerum tümör belirteçleri sınırlı duyarlılık ve özgüllük nedeniyle taramaya uygun değildir. En değerli oldukları alan tedavi yanıtını ve nüksü izlemektir.",
    "kelime": 155
@@ -290,22 +368,29 @@
     "E": "t(15;17)"
    },
    "dogru": "B",
+   "ipucu": "Bu sarkomda moleküler testle saptanan füzyon geninin hangi iki kromozomun değişiminden geldiğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
-    "A": "9;22 translokasyonu ile karıştırılabilir: Kronik miyeloid lösemi BCR-ABL füzyon transkriptlerinin PCR ile saptanmasıyla tanınır ve izlenir.",
+    "A": "t(9;22) translokasyonu BCR-ABL füzyon genini oluşturarak kronik miyeloid lösemiye ve bazı akut lenfoblastik lösemilere neden olur; Ewing sarkomuna özgü olan ve EWSR1-FLI1 füzyon transkripsiyon faktörünü üreten kromozomal anomali ise t(11;22) translokasyonudur.",
     "B": "11;22 translokasyonu doğru: Ewing sarkomunda EWS–FLI1 füzyon genini oluşturur ve moleküler tanıda kullanılır.",
-    "C": "8;14 translokasyonu ile karıştırılabilir: Lenfoid proliferasyonun neoplastik olup olmadığı, immünoglobulin gen düzenlenmesinin PCR ile klonalite analiziyle anlaşılır.",
-    "D": "Moleküler testler nokta mutasyonları da saptar, örneğin polisitemia verada JAK2 mutasyonunu. 14;18 translokasyonu bu sorudaki ayrımı sağlamaz.",
-    "E": "15;17 translokasyonu ile karıştırılabilir: Akut lösemilerde spesifik füzyon genleri minimal kalıntı hastalığın takibinde izlenir."
+    "C": "t(8;14) translokasyonu MYC onkogenini immünoglobulin ağır zincir lokusuna taşıyarak Burkitt lenfomaya yol açar; çocuk ve gençlerde kemikte küçük yuvarlak mavi hücreli tümör yapan Ewing sarkomunun karakteristik translokasyonu ise t(11;22)'dir.",
+    "D": "t(14;18) translokasyonu BCL2 geninin aşırı ekspresyonuna yol açarak foliküler lenfomayı oluşturur; Ewing sarkomu ve primitif nöroektodermal tümör ailesini tanımlayan özgül kromozomal anomali ise t(11;22) translokasyonudur.",
+    "E": "t(15;17) translokasyonu PML-RARA füzyonu oluşturarak akut promiyelositik lösemiye yol açar; Ewing sarkomunda EWSR1 ile FLI1 genlerini birleştiren tanısal translokasyon ise t(11;22)'dir."
    },
    "ozet": "Ewing sarkomunda 11;22 translokasyonu EWS–FLI1 füzyon genini oluşturur; kronik miyeloid lösemide ise BCR-ABL füzyon transkriptleri PCR ile saptanır.",
-   "metin": "**Soru.** Ewing sarkomuna özgü translokasyon hangisidir?\n\n**A)** t(9;22) · **B)** t(11;22) · **C)** t(8;14) · **D)** t(14;18) · **E)** t(15;17)\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **t(9;22)** — 9;22 translokasyonu ile karıştırılabilir: Kronik miyeloid lösemi BCR-ABL füzyon transkriptlerinin PCR ile saptanmasıyla tanınır ve izlenir.\n- **t(11;22)** — 11;22 translokasyonu doğru: Ewing sarkomunda EWS–FLI1 füzyon genini oluşturur ve moleküler tanıda kullanılır.\n- **t(8;14)** — 8;14 translokasyonu ile karıştırılabilir: Lenfoid proliferasyonun neoplastik olup olmadığı, immünoglobulin gen düzenlenmesinin PCR ile klonalite analiziyle anlaşılır.\n- **t(14;18)** — Moleküler testler nokta mutasyonları da saptar, örneğin polisitemia verada JAK2 mutasyonunu. 14;18 translokasyonu bu sorudaki ayrımı sağlamaz.\n- **t(15;17)** — 15;17 translokasyonu ile karıştırılabilir: Akut lösemilerde spesifik füzyon genleri minimal kalıntı hastalığın takibinde izlenir.\n\n**Cevap: B** — t(11;22)\n\n**Özet.** Ewing sarkomunda 11;22 translokasyonu EWS–FLI1 füzyon genini oluşturur; kronik miyeloid lösemide ise BCR-ABL füzyon transkriptleri PCR ile saptanır.",
-   "ses": "Yuing sarkomuna özgü translokasyon hangisidir?\nA, Te dokuz yirmi iki\nBe, Te on bir yirmi iki\nCe, Te sekiz on dört\nDe, Te on dört on sekiz\nE, Te on beş on yedi\nŞimdi seçeneklere tek tek bakalım.\ndokuz;yirmi iki translokasyonu ile karıştırılabilir. Kronik miyeloid lösemi be ce re a be le füzyon transkriptlerinin pe ce re ile saptanmasıyla tanınır ve izlenir.\nOn bir yirmi iki translokasyonu doğru. Yuing sarkomunda e çift ve se fe le i bir füzyon genini oluşturur ve moleküler tanıda kullanılır.\nsekiz;on dört translokasyonu ile karıştırılabilir. Lenfoid proliferasyonun neoplastik olup olmadığı, immünoglobulin gen düzenlenmesinin pe ce re ile klonalite analiziyle anlaşılır.\nMoleküler testler nokta mutasyonları da saptar, örneğin polisitemia verada je a ka iki mutasyonunu. on dört;on sekiz translokasyonu bu sorudaki ayrımı sağlamaz.\non beş;on yedi translokasyonu ile karıştırılabilir. Akut lösemilerde spesifik füzyon genleri minimal kalıntı hastalığın takibinde izlenir.\nDoğru cevap Be, Te on bir yirmi iki\nYuing sarkomunda on bir yirmi iki translokasyonu, e çift ve se fe le i bir füzyon genini oluşturur. Kronik miyeloid lösemide ise be ce re a be le füzyon transkriptleri pe ce re ile saptanır.",
-   "kelime": 141
+   "sayfa": [
+    33,
+    34,
+    37
+   ],
+   "metin": "**Soru.** Ewing sarkomuna özgü translokasyon hangisidir?\n\n**A)** t(9;22) · **B)** t(11;22) · **C)** t(8;14) · **D)** t(14;18) · **E)** t(15;17)\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **t(9;22)** — t(9;22) translokasyonu BCR-ABL füzyon genini oluşturarak kronik miyeloid lösemiye ve bazı akut lenfoblastik lösemilere neden olur; Ewing sarkomuna özgü olan ve EWSR1-FLI1 füzyon transkripsiyon faktörünü üreten kromozomal anomali ise t(11;22) translokasyonudur.\n- **t(11;22)** — 11;22 translokasyonu doğru: Ewing sarkomunda EWS–FLI1 füzyon genini oluşturur ve moleküler tanıda kullanılır.\n- **t(8;14)** — t(8;14) translokasyonu MYC onkogenini immünoglobulin ağır zincir lokusuna taşıyarak Burkitt lenfomaya yol açar; çocuk ve gençlerde kemikte küçük yuvarlak mavi hücreli tümör yapan Ewing sarkomunun karakteristik translokasyonu ise t(11;22)'dir.\n- **t(14;18)** — t(14;18) translokasyonu BCL2 geninin aşırı ekspresyonuna yol açarak foliküler lenfomayı oluşturur; Ewing sarkomu ve primitif nöroektodermal tümör ailesini tanımlayan özgül kromozomal anomali ise t(11;22) translokasyonudur.\n- **t(15;17)** — t(15;17) translokasyonu PML-RARA füzyonu oluşturarak akut promiyelositik lösemiye yol açar; Ewing sarkomunda EWSR1 ile FLI1 genlerini birleştiren tanısal translokasyon ise t(11;22)'dir.\n\n**Cevap: B** — t(11;22)\n\n**Özet.** Ewing sarkomunda 11;22 translokasyonu EWS–FLI1 füzyon genini oluşturur; kronik miyeloid lösemide ise BCR-ABL füzyon transkriptleri PCR ile saptanır.",
+   "ses": "Yuing sarkomuna özgü translokasyon hangisidir?\nA, Te dokuz yirmi iki\nBe, Te on bir yirmi iki\nCe, Te sekiz on dört\nDe, Te on dört on sekiz\nE, Te on beş on yedi\nŞimdi seçeneklere tek tek bakalım.\nt, dokuz. Yirmi iki, translokasyonu be ce re a be le füzyon genini oluşturarak kronik miyeloid lösemiye ve bazı akut lenfoblastik lösemilere neden olur. Ewing sarkomuna özgü olan ve e ve se re bir fe le i bir füzyon transkripsiyon faktörünü üreten kromozomal anomali ise t, on bir. Yirmi iki, translokasyonudur.\nOn bir yirmi iki translokasyonu doğru. Yuing sarkomunda e çift ve se fe le i bir füzyon genini oluşturur ve moleküler tanıda kullanılır.\nt, sekiz. On dört, translokasyonu mik onkogenini immünoglobulin ağır zincir lokusuna taşıyarak Burkitt lenfomaya yol açar. Çocuk ve gençlerde kemikte küçük yuvarlak mavi hücreli tümör yapan Ewing sarkomunun karakteristik translokasyonu ise t, on bir. Yirmi iki,'dir.\nt, on dört. On sekiz, translokasyonu be ce le iki geninin aşırı ekspresyonuna yol açarak foliküler lenfomayı oluşturur. Ewing sarkomu ve primitif nöroektodermal tümör ailesini tanımlayan özgül kromozomal anomali ise t, on bir. Yirmi iki, translokasyonudur.\nt, on beş. On yedi, translokasyonu pe em le ra ra füzyonu oluşturarak akut promiyelositik lösemiye yol açar. Ewing sarkomunda e ve se re bir ile fe le i bir genlerini birleştiren tanısal translokasyon ise t, on bir. Yirmi iki,'dir.\nDoğru cevap Be, Te on bir yirmi iki\nYuing sarkomunda on bir yirmi iki translokasyonu, e çift ve se fe le i bir füzyon genini oluşturur. Kronik miyeloid lösemide ise be ce re a be le füzyon transkriptleri pe ce re ile saptanır.",
+   "kelime": 183
   },
   {
    "no": 25,
    "tur": "cikmis",
+   "sinav": "2021-2022 · 2016 Dönem 2 Kurul 5 Sınavı Patoloji · Dönem 3 – Kurul 1 · 23/71",
    "soru": "Bir malign tümörün evrelemesinde (staging) aşağıdakilerden hangisinin yeri yoktur?",
    "secenekler": {
     "A": "Histolojik diferansiasyon derecesi",
@@ -315,6 +400,7 @@
     "E": "Uzak organ metastazı"
    },
    "dogru": "A",
+   "ipucu": "Evrelemenin tümörün vücuttaki yayılımını, hücre görünümüne dayanan sınıflamanın ise agresifliği ölçtüğünü ayır.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Histolojik diferansiyasyon derecesi doğru cevaptır: derecelendirmenin ölçütüdür, evrelemede yeri yoktur.",
@@ -324,6 +410,11 @@
     "E": "Uzak organ metastazı evrelemede M kategorisidir; M1 varlığı tümörü Evre IV yapar."
    },
    "ozet": "Evreleme primer tümör boyutu ve lokal yayılım, bölgesel lenf düğümü ve uzak metastaza dayanır; diferansiyasyon ise derecelendirmenin ölçütüdür.",
+   "sayfa": [
+    18,
+    20,
+    21
+   ],
    "metin": "**Soru.** Bir malign tümörün evrelemesinde (staging) aşağıdakilerden hangisinin yeri yoktur?\n\n**A)** Histolojik diferansiasyon derecesi · **B)** Lokal invazyon derecesi · **C)** Tümör büyüklüğü · **D)** Bölgesel lenf nodu metastazı · **E)** Uzak organ metastazı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Histolojik diferansiasyon derecesi** — Histolojik diferansiyasyon derecesi doğru cevaptır: derecelendirmenin ölçütüdür, evrelemede yeri yoktur.\n- **Lokal invazyon derecesi** — Lokal invazyon derecesi evrelemede yer alır; T1'den T4'e artan kategoriler tümör boyutu ve lokal invazyonu gösterir.\n- **Tümör büyüklüğü** — Tümör büyüklüğü evrelemenin temel ölçütlerindendir; primer tümörün boyutu T kategorisiyle değerlendirilir.\n- **Bölgesel lenf nodu metastazı** — Bölgesel lenf nodu metastazı evrelemede N kategorisiyle gösterilir; N0 tutulum olmadığını, N1–N3 artan tutulumu ifade eder.\n- **Uzak organ metastazı** — Uzak organ metastazı evrelemede M kategorisidir; M1 varlığı tümörü Evre IV yapar.\n\n**Cevap: A** — Histolojik diferansiasyon derecesi\n\n**Özet.** Evreleme primer tümör boyutu ve lokal yayılım, bölgesel lenf düğümü ve uzak metastaza dayanır; diferansiyasyon ise derecelendirmenin ölçütüdür.",
    "ses": "Bir malign tümörün evrelemesinde, yani stagingde, aşağıdakilerden hangisinin yeri yoktur?\nA, Histolojik diferansiasyon derecesi\nBe, Lokal invazyon derecesi\nCe, Tümör büyüklüğü\nDe, Bölgesel lenf nodu metastazı\nE, Uzak organ metastazı\nSeçenekleri sırayla değerlendirelim.\nHistolojik diferansiyasyon derecesi doğru cevaptır. Derecelendirmenin ölçütüdür, evrelemede yeri yoktur.\nLokal invazyon derecesi evrelemede yer alır. Te birden te dörde artan kategoriler tümör boyutu ve lokal invazyonu gösterir.\nTümör büyüklüğü evrelemenin temel ölçütlerindendir. Primer tümörün boyutu te kategorisiyle değerlendirilir.\nBölgesel lenf nodu metastazı evrelemede ne kategorisiyle gösterilir. Bu kategoride sıfır tutulum olmadığını, bir ile üç arası artan tutulumu ifade eder.\nUzak organ metastazı evrelemede me kategorisidir. Me bir varlığı tümörü evre dört yapar.\nDoğru cevap A, Histolojik diferansiasyon derecesi\nEvreleme primer tümör boyutu ve lokal yayılım, bölgesel lenf düğümü ve uzak metastaza dayanır. Diferansiyasyon ise derecelendirmenin ölçütüdür.",
    "kelime": 153
@@ -331,6 +422,7 @@
   {
    "no": 26,
    "tur": "cikmis",
+   "sinav": "Geçmiş Yıllar Çıkmışı (Arşiv) · patoloji final.txt",
    "soru": "Aşağıdakilerden hangisi en sık görülen üç paraneoplastik sendromdan biridir?",
    "secenekler": {
     "A": "Myastenia gravis",
@@ -340,22 +432,30 @@
     "E": "Polisitemi"
    },
    "dogru": "D",
+   "ipucu": "En sık üç tablonun hiperkalsemi, Cushing sendromu ve pıhtılaşma eğilimindeki artış olduğunu hatırla.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Myastenia gravis bronkojenik karsinom ve timomada immünolojik mekanizmayla görülür; en sık üç paraneoplastik sendrom arasında değildir.",
-    "B": "Hipoglisemi fibrosarkom, diğer sarkomlar ve over karsinomunda insülin ya da insülin benzeri maddeyle olur; en sık üç arasında sayılmaz.",
+    "B": "Paraneoplastik hipoglisemi fibrosarkom ve diğer mezenkimal tümörlerin insülin benzeri büyüme faktörü-2 (IGF-2) üretmesiyle gelişen daha seyrek bir tablodur; en sık görülen başlıca paraneoplastik tablolar ise hiperkalsemi, Cushing sendromu ve non-bakteriyel trombotik endokardittir.",
     "C": "Nefrotik sendrom çeşitli kanserlerde tümör antijenleri ve immün komplekslerle gelişir; sık görülen üç sendromdan biri değildir.",
     "D": "Non-bakteriyel trombotik endokardit doğru: venöz trombozla birlikte hiperkoagülabilitenin bulgusudur; hiperkoagülabilite en sık üç sendromdandır.",
     "E": "Polisitemi renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda eritropoetinle gelişir; en sık üç arasında değildir."
    },
    "ozet": "En sık paraneoplastik sendromlar hiperkalsemi, Cushing sendromu ve hiperkoagülabilitedir; hiperkoagülabilite venöz tromboz ve bakteriyel olmayan trombotik endokarditle kendini gösterir.",
-   "metin": "**Soru.** Aşağıdakilerden hangisi en sık görülen üç paraneoplastik sendromdan biridir?\n\n**A)** Myastenia gravis · **B)** Hipoglisemi · **C)** Nefrotik sendrom · **D)** Non-bakteriyel trombotik endokardit · **E)** Polisitemi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Myastenia gravis** — Myastenia gravis bronkojenik karsinom ve timomada immünolojik mekanizmayla görülür; en sık üç paraneoplastik sendrom arasında değildir.\n- **Hipoglisemi** — Hipoglisemi fibrosarkom, diğer sarkomlar ve over karsinomunda insülin ya da insülin benzeri maddeyle olur; en sık üç arasında sayılmaz.\n- **Nefrotik sendrom** — Nefrotik sendrom çeşitli kanserlerde tümör antijenleri ve immün komplekslerle gelişir; sık görülen üç sendromdan biri değildir.\n- **Non-bakteriyel trombotik endokardit** — Non-bakteriyel trombotik endokardit doğru: venöz trombozla birlikte hiperkoagülabilitenin bulgusudur; hiperkoagülabilite en sık üç sendromdandır.\n- **Polisitemi** — Polisitemi renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda eritropoetinle gelişir; en sık üç arasında değildir.\n\n**Cevap: D** — Non-bakteriyel trombotik endokardit\n\n**Özet.** En sık paraneoplastik sendromlar hiperkalsemi, Cushing sendromu ve hiperkoagülabilitedir; hiperkoagülabilite venöz tromboz ve bakteriyel olmayan trombotik endokarditle kendini gösterir.",
-   "ses": "Aşağıdakilerden hangisi en sık görülen üç paraneoplastik sendromdan biridir?\nA, Myastenia gravis\nBe, Hipoglisemi\nCe, Nefrotik sendrom\nDe, Non bakteriyel trombotik endokardit\nE, Polisitemi\nHer seçeneği tek tek ele alalım.\nMyastenia gravis bronkojenik karsinom ve timomada immünolojik mekanizmayla görülür. En sık üç paraneoplastik sendrom arasında değildir.\nHipoglisemi fibrosarkom, diğer sarkomlar ve over karsinomunda insülin ya da insülin benzeri maddeyle olur. En sık üç arasında sayılmaz.\nNefrotik sendrom çeşitli kanserlerde tümör antijenleri ve immün komplekslerle gelişir. Sık görülen üç sendromdan biri değildir.\nNon bakteriyel trombotik endokardit doğru. Venöz trombozla birlikte hiperkoagülabilitenin bulgusudur. Hiperkoagülabilite en sık üç sendromdandır.\nPolisitemi renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda eritropoetinle gelişir. En sık üç arasında değildir.\nDoğru cevap De, Non bakteriyel trombotik endokardit\nEn sık paraneoplastik sendromlar hiperkalsemi, Kuşing sendromu ve hiperkoagülabilitedir. Hiperkoagülabilite venöz tromboz ve bakteriyel olmayan trombotik endokarditle kendini gösterir.",
-   "kelime": 161
+   "sayfa": [
+    13,
+    15,
+    16,
+    17
+   ],
+   "metin": "**Soru.** Aşağıdakilerden hangisi en sık görülen üç paraneoplastik sendromdan biridir?\n\n**A)** Myastenia gravis · **B)** Hipoglisemi · **C)** Nefrotik sendrom · **D)** Non-bakteriyel trombotik endokardit · **E)** Polisitemi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Myastenia gravis** — Myastenia gravis bronkojenik karsinom ve timomada immünolojik mekanizmayla görülür; en sık üç paraneoplastik sendrom arasında değildir.\n- **Hipoglisemi** — Paraneoplastik hipoglisemi fibrosarkom ve diğer mezenkimal tümörlerin insülin benzeri büyüme faktörü-2 (IGF-2) üretmesiyle gelişen daha seyrek bir tablodur; en sık görülen başlıca paraneoplastik tablolar ise hiperkalsemi, Cushing sendromu ve non-bakteriyel trombotik endokardittir.\n- **Nefrotik sendrom** — Nefrotik sendrom çeşitli kanserlerde tümör antijenleri ve immün komplekslerle gelişir; sık görülen üç sendromdan biri değildir.\n- **Non-bakteriyel trombotik endokardit** — Non-bakteriyel trombotik endokardit doğru: venöz trombozla birlikte hiperkoagülabilitenin bulgusudur; hiperkoagülabilite en sık üç sendromdandır.\n- **Polisitemi** — Polisitemi renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda eritropoetinle gelişir; en sık üç arasında değildir.\n\n**Cevap: D** — Non-bakteriyel trombotik endokardit\n\n**Özet.** En sık paraneoplastik sendromlar hiperkalsemi, Cushing sendromu ve hiperkoagülabilitedir; hiperkoagülabilite venöz tromboz ve bakteriyel olmayan trombotik endokarditle kendini gösterir.",
+   "ses": "Aşağıdakilerden hangisi en sık görülen üç paraneoplastik sendromdan biridir?\nA, Myastenia gravis\nBe, Hipoglisemi\nCe, Nefrotik sendrom\nDe, Non bakteriyel trombotik endokardit\nE, Polisitemi\nHer seçeneği tek tek ele alalım.\nMyastenia gravis bronkojenik karsinom ve timomada immünolojik mekanizmayla görülür. En sık üç paraneoplastik sendrom arasında değildir.\nParaneoplastik hipoglisemi fibrosarkom ve diğer mezenkimal tümörlerin insülin benzeri büyüme faktörü-iki, i ge fe iki, üretmesiyle gelişen daha seyrek bir tablodur. En sık görülen başlıca paraneoplastik tablolar ise hiperkalsemi, Cushing sendromu ve non-bakteriyel trombotik endokardittir.\nNefrotik sendrom çeşitli kanserlerde tümör antijenleri ve immün komplekslerle gelişir. Sık görülen üç sendromdan biri değildir.\nNon bakteriyel trombotik endokardit doğru. Venöz trombozla birlikte hiperkoagülabilitenin bulgusudur. Hiperkoagülabilite en sık üç sendromdandır.\nPolisitemi renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda eritropoetinle gelişir. En sık üç arasında değildir.\nDoğru cevap De, Non bakteriyel trombotik endokardit\nEn sık paraneoplastik sendromlar hiperkalsemi, Kuşing sendromu ve hiperkoagülabilitedir. Hiperkoagülabilite venöz tromboz ve bakteriyel olmayan trombotik endokarditle kendini gösterir.",
+   "kelime": 174
   },
   {
    "no": 27,
    "tur": "cikmis",
+   "sinav": "2018-2019 · 2018-2019 Kurul 1 Sınavı",
    "soru": "Hangisi paraneoplastik sendrom değildir?",
    "secenekler": {
     "A": "Akciğer neoplazmından kortikotropin salınımı sonucu Cushing sendromu gelişmesi",
@@ -365,22 +465,30 @@
     "E": "Over karsinomunda insülin veya insülin benzeri madde salınımı sonucu oluşan hipoglisemi"
    },
    "dogru": "B",
+   "ipucu": "Paraneoplastik sendromun tanımında tümörün lokal ya da uzak yayılımıyla açıklanamama koşulunu düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
-    "A": "Akciğer tümörünün ektopik kortikotropin salgılamasıyla gelişen Cushing sendromu tipik bir paraneoplastik sendromdur; bu yüzden cevap değildir.",
+    "A": "Küçük hücreli akciğer karsinomunun ektopik ACTH (kortikotropin) salgılayarak Cushing sendromu oluşturması klasik bir paraneoplastik endokrinopatidir; kemik metastazının lokal osteolizle kalsiyumu yükseltmesi ise tümörün doğrudan metastatik yıkımı olduğundan paraneoplastik sendrom sayılmaz.",
     "B": "Metastazın yaptığı kemik yıkımıyla gelişen hiperkalsemi doğru cevaptır: tümörün uzak yayılımıyla açıklandığı için paraneoplastik sayılmaz.",
     "C": "Kemik dışı bir tümörün PTHrP gibi hümoral madde üretmesiyle gelişen hiperkalsemi, en sık paraneoplastik sendromdur.",
     "D": "Tümör antijenlerine karşı oluşan antikorların sinir hücreleriyle çapraz reaksiyonu, immünolojik nörolojik paraneoplastik sendromlara örnektir.",
     "E": "Over karsinomunun insülin ya da insülin benzeri madde salgılamasıyla gelişen hipoglisemi, paraneoplastik endokrinopatiler arasındadır."
    },
    "ozet": "Paraneoplastik sendrom, tümörün lokal ya da uzak yayılımıyla ve dokuya özgü hormon salgısıyla açıklanamayan bulgulardır; kemik metastazının yaptığı hiperkalsemi bu yüzden paraneoplastik değildir.",
-   "metin": "**Soru.** Hangisi paraneoplastik sendrom değildir?\n\n**A)** Akciğer neoplazmından kortikotropin salınımı sonucu Cushing sendromu gelişmesi · **B)** Kemik dışı primer kaynaktan metastazın indüklediği kemik yıkımı sonucu gelişen hiperkalsemi · **C)** Ekstraosseöz neoplazm kaynaklı hümoral madde üretimi sonucu gelişen hiperkalsemi · **D)** Tümör antijenlerine karşı oluşmuş ve nöronal hücre antijenleriyle çapraz reaksiyon veren antikorlar sonucu gelişen nöromiyopati · **E)** Over karsinomunda insülin veya insülin benzeri madde salınımı sonucu oluşan hipoglisemi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Akciğer neoplazmından kortikotropin salınımı sonucu Cushing sendromu gelişmesi** — Akciğer tümörünün ektopik kortikotropin salgılamasıyla gelişen Cushing sendromu tipik bir paraneoplastik sendromdur; bu yüzden cevap değildir.\n- **Kemik dışı primer kaynaktan metastazın indüklediği kemik yıkımı sonucu gelişen hiperkalsemi** — Metastazın yaptığı kemik yıkımıyla gelişen hiperkalsemi doğru cevaptır: tümörün uzak yayılımıyla açıklandığı için paraneoplastik sayılmaz.\n- **Ekstraosseöz neoplazm kaynaklı hümoral madde üretimi sonucu gelişen hiperkalsemi** — Kemik dışı bir tümörün PTHrP gibi hümoral madde üretmesiyle gelişen hiperkalsemi, en sık paraneoplastik sendromdur.\n- **Tümör antijenlerine karşı oluşmuş ve nöronal hücre antijenleriyle çapraz reaksiyon veren antikorlar sonucu gelişen nöromiyopati** — Tümör antijenlerine karşı oluşan antikorların sinir hücreleriyle çapraz reaksiyonu, immünolojik nörolojik paraneoplastik sendromlara örnektir.\n- **Over karsinomunda insülin veya insülin benzeri madde salınımı sonucu oluşan hipoglisemi** — Over karsinomunun insülin ya da insülin benzeri madde salgılamasıyla gelişen hipoglisemi, paraneoplastik endokrinopatiler arasındadır.\n\n**Cevap: B** — Kemik dışı primer kaynaktan metastazın indüklediği kemik yıkımı sonucu gelişen hiperkalsemi\n\n**Özet.** Paraneoplastik sendrom, tümörün lokal ya da uzak yayılımıyla ve dokuya özgü hormon salgısıyla açıklanamayan bulgulardır; kemik metastazının yaptığı hiperkalsemi bu yüzden paraneoplastik değildir.",
-   "ses": "Hangisi paraneoplastik sendrom değildir?\nA, Akciğer neoplazmından kortikotropin salınımı sonucu Kuşing sendromu gelişmesi\nBe, Kemik dışı primer kaynaktan metastazın indüklediği kemik yıkımı sonucu gelişen hiperkalsemi\nCe, Ekstraosseöz neoplazm kaynaklı hümoral madde üretimi sonucu gelişen hiperkalsemi\nDe, Tümör antijenlerine karşı oluşmuş ve nöronal hücre antijenleriyle çapraz reaksiyon veren antikorlar sonucu gelişen nöromiyopati\nE, Over karsinomunda insülin veya insülin benzeri madde salınımı sonucu oluşan hipoglisemi\nŞıkları sırasıyla gözden geçirelim.\nAkciğer tümörünün ektopik kortikotropin salgılamasıyla gelişen Kuşing sendromu tipik bir paraneoplastik sendromdur. Bu yüzden cevap değildir.\nMetastazın yaptığı kemik yıkımıyla gelişen hiperkalsemi doğru cevaptır. Tümörün uzak yayılımıyla açıklandığı için paraneoplastik sayılmaz.\nKemik dışı bir tümörün pe te ha re pe gibi hümoral madde üretmesiyle gelişen hiperkalsemi, en sık paraneoplastik sendromdur.\nTümör antijenlerine karşı oluşan antikorların sinir hücreleriyle çapraz reaksiyonu, immünolojik nörolojik paraneoplastik sendromlara örnektir.\nOver karsinomunun insülin ya da insülin benzeri madde salgılamasıyla gelişen hipoglisemi, paraneoplastik endokrinopatiler arasındadır.\nDoğru cevap Be, Kemik dışı primer kaynaktan metastazın indüklediği kemik yıkımı sonucu gelişen hiperkalsemi\nParaneoplastik sendrom, tümörün lokal ya da uzak yayılımıyla ve dokuya özgü hormon salgısıyla açıklanamayan bulgulardır. Kemik metastazının yaptığı hiperkalsemi bu yüzden paraneoplastik değildir.",
-   "kelime": 249
+   "sayfa": [
+    12,
+    13,
+    15,
+    16
+   ],
+   "metin": "**Soru.** Hangisi paraneoplastik sendrom değildir?\n\n**A)** Akciğer neoplazmından kortikotropin salınımı sonucu Cushing sendromu gelişmesi · **B)** Kemik dışı primer kaynaktan metastazın indüklediği kemik yıkımı sonucu gelişen hiperkalsemi · **C)** Ekstraosseöz neoplazm kaynaklı hümoral madde üretimi sonucu gelişen hiperkalsemi · **D)** Tümör antijenlerine karşı oluşmuş ve nöronal hücre antijenleriyle çapraz reaksiyon veren antikorlar sonucu gelişen nöromiyopati · **E)** Over karsinomunda insülin veya insülin benzeri madde salınımı sonucu oluşan hipoglisemi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Akciğer neoplazmından kortikotropin salınımı sonucu Cushing sendromu gelişmesi** — Küçük hücreli akciğer karsinomunun ektopik ACTH (kortikotropin) salgılayarak Cushing sendromu oluşturması klasik bir paraneoplastik endokrinopatidir; kemik metastazının lokal osteolizle kalsiyumu yükseltmesi ise tümörün doğrudan metastatik yıkımı olduğundan paraneoplastik sendrom sayılmaz.\n- **Kemik dışı primer kaynaktan metastazın indüklediği kemik yıkımı sonucu gelişen hiperkalsemi** — Metastazın yaptığı kemik yıkımıyla gelişen hiperkalsemi doğru cevaptır: tümörün uzak yayılımıyla açıklandığı için paraneoplastik sayılmaz.\n- **Ekstraosseöz neoplazm kaynaklı hümoral madde üretimi sonucu gelişen hiperkalsemi** — Kemik dışı bir tümörün PTHrP gibi hümoral madde üretmesiyle gelişen hiperkalsemi, en sık paraneoplastik sendromdur.\n- **Tümör antijenlerine karşı oluşmuş ve nöronal hücre antijenleriyle çapraz reaksiyon veren antikorlar sonucu gelişen nöromiyopati** — Tümör antijenlerine karşı oluşan antikorların sinir hücreleriyle çapraz reaksiyonu, immünolojik nörolojik paraneoplastik sendromlara örnektir.\n- **Over karsinomunda insülin veya insülin benzeri madde salınımı sonucu oluşan hipoglisemi** — Over karsinomunun insülin ya da insülin benzeri madde salgılamasıyla gelişen hipoglisemi, paraneoplastik endokrinopatiler arasındadır.\n\n**Cevap: B** — Kemik dışı primer kaynaktan metastazın indüklediği kemik yıkımı sonucu gelişen hiperkalsemi\n\n**Özet.** Paraneoplastik sendrom, tümörün lokal ya da uzak yayılımıyla ve dokuya özgü hormon salgısıyla açıklanamayan bulgulardır; kemik metastazının yaptığı hiperkalsemi bu yüzden paraneoplastik değildir.",
+   "ses": "Hangisi paraneoplastik sendrom değildir?\nA, Akciğer neoplazmından kortikotropin salınımı sonucu Kuşing sendromu gelişmesi\nBe, Kemik dışı primer kaynaktan metastazın indüklediği kemik yıkımı sonucu gelişen hiperkalsemi\nCe, Ekstraosseöz neoplazm kaynaklı hümoral madde üretimi sonucu gelişen hiperkalsemi\nDe, Tümör antijenlerine karşı oluşmuş ve nöronal hücre antijenleriyle çapraz reaksiyon veren antikorlar sonucu gelişen nöromiyopati\nE, Over karsinomunda insülin veya insülin benzeri madde salınımı sonucu oluşan hipoglisemi\nŞıkları sırasıyla gözden geçirelim.\nKüçük hücreli akciğer karsinomunun ektopik a ce te ha, kortikotropin, salgılayarak Cushing sendromu oluşturması klasik bir paraneoplastik endokrinopatidir. Kemik metastazının lokal osteolizle kalsiyumu yükseltmesi ise tümörün doğrudan metastatik yıkımı olduğundan paraneoplastik sendrom sayılmaz.\nMetastazın yaptığı kemik yıkımıyla gelişen hiperkalsemi doğru cevaptır. Tümörün uzak yayılımıyla açıklandığı için paraneoplastik sayılmaz.\nKemik dışı bir tümörün pe te ha re pe gibi hümoral madde üretmesiyle gelişen hiperkalsemi, en sık paraneoplastik sendromdur.\nTümör antijenlerine karşı oluşan antikorların sinir hücreleriyle çapraz reaksiyonu, immünolojik nörolojik paraneoplastik sendromlara örnektir.\nOver karsinomunun insülin ya da insülin benzeri madde salgılamasıyla gelişen hipoglisemi, paraneoplastik endokrinopatiler arasındadır.\nDoğru cevap Be, Kemik dışı primer kaynaktan metastazın indüklediği kemik yıkımı sonucu gelişen hiperkalsemi\nParaneoplastik sendrom, tümörün lokal ya da uzak yayılımıyla ve dokuya özgü hormon salgısıyla açıklanamayan bulgulardır. Kemik metastazının yaptığı hiperkalsemi bu yüzden paraneoplastik değildir.",
+   "kelime": 263
   },
   {
    "no": 28,
    "tur": "cikmis",
+   "sinav": "2020-2021 · 2020-2021 Dönem 3 Kurul 3 Sınavı (sinav.karabuk.edu.tr öğrenci çıktısı)",
    "soru": "Timoma aşağıdaki paraneoplastik sendromlardan hangisi ile ilişkilidir?",
    "secenekler": {
     "A": "Hiperkalsemi",
@@ -390,6 +498,7 @@
     "E": "Kırmızı hücre aplazisi"
    },
    "dogru": "E",
+   "ipucu": "Sendromların nedensel mekanizmalarını ayır; hormon salgısıyla değil, immünolojik mekanizmayla gelişen tabloyu düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Hiperkalsemi en sık paraneoplastik sendromdur; akciğer skuamöz hücreli karsinomu, meme ve renal hücreli karsinomda PTHrP ile gelişir, timomayla ilişkili değildir.",
@@ -399,6 +508,12 @@
     "E": "Kırmızı hücre aplazisi doğru: timomada immünolojik mekanizmayla gelişen paraneoplastik bir sendromdur."
    },
    "ozet": "Timoma, kırmızı hücre aplazisi ve miyasteniyle immünolojik mekanizmayla ilişkilidir; hiperkalsemi PTHrP, Cushing sendromu ACTH, polisitemi ise eritropoetin üretimiyle gelişir.",
+   "sayfa": [
+    13,
+    15,
+    16,
+    17
+   ],
    "metin": "**Soru.** Timoma aşağıdaki paraneoplastik sendromlardan hangisi ile ilişkilidir?\n\n**A)** Hiperkalsemi · **B)** Cushing sendromu · **C)** Non-bakteriyel trombotik endokardit · **D)** Polisitemi · **E)** Kırmızı hücre aplazisi\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Hiperkalsemi** — Hiperkalsemi en sık paraneoplastik sendromdur; akciğer skuamöz hücreli karsinomu, meme ve renal hücreli karsinomda PTHrP ile gelişir, timomayla ilişkili değildir.\n- **Cushing sendromu** — Cushing sendromu ektopik ACTH ya da ACTH-benzeri madde üretimiyle olur; özellikle küçük hücreli akciğer karsinomunda görülür, timomada değil.\n- **Non-bakteriyel trombotik endokardit** — Non-bakteriyel trombotik endokardit ileri evre kanserlerde hiperkoagülabiliteye bağlı gelişir; timomaya özgü bir sendrom değildir.\n- **Polisitemi** — Polisitemi eritropoetin üretimine bağlıdır; renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda görülür.\n- **Kırmızı hücre aplazisi** — Kırmızı hücre aplazisi doğru: timomada immünolojik mekanizmayla gelişen paraneoplastik bir sendromdur.\n\n**Cevap: E** — Kırmızı hücre aplazisi\n\n**Özet.** Timoma, kırmızı hücre aplazisi ve miyasteniyle immünolojik mekanizmayla ilişkilidir; hiperkalsemi PTHrP, Cushing sendromu ACTH, polisitemi ise eritropoetin üretimiyle gelişir.",
    "ses": "Timoma aşağıdaki paraneoplastik sendromlardan hangisi ile ilişkilidir?\nA, Hiperkalsemi\nBe, Kuşing sendromu\nCe, Non bakteriyel trombotik endokardit\nDe, Polisitemi\nE, Kırmızı hücre aplazisi\nŞimdi seçeneklere tek tek bakalım.\nHiperkalsemi en sık paraneoplastik sendromdur. Akciğer skuamöz hücreli karsinomu, meme ve renal hücreli karsinomda pe te ha re pe ile gelişir, timomayla ilişkili değildir.\nKuşing sendromu ektopik a ce te ha ya da a ce te ha benzeri madde üretimiyle olur. Özellikle küçük hücreli akciğer karsinomunda görülür, timomada değil.\nNon bakteriyel trombotik endokardit ileri evre kanserlerde hiperkoagülabiliteye bağlı gelişir. Timomaya özgü bir sendrom değildir.\nPolisitemi eritropoetin üretimine bağlıdır. Renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda görülür.\nKırmızı hücre aplazisi doğru. Timomada immünolojik mekanizmayla gelişen paraneoplastik bir sendromdur.\nDoğru cevap E, Kırmızı hücre aplazisi\nTimoma, kırmızı hücre aplazisi ve miyasteniyle immünolojik mekanizmayla ilişkilidir. Hiperkalsemi pe te ha re pe, Kuşing sendromu a ce te ha, polisitemi ise eritropoetin üretimiyle gelişir.",
    "kelime": 155
@@ -406,6 +521,7 @@
   {
    "no": 29,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Endokrin bez tümörlerinde hormon üretimi hangi tümörlerde daha olasıdır?",
    "secenekler": {
     "A": "Anaplastik malign tümörler",
@@ -415,22 +531,27 @@
     "E": "Az diferansiye sarkomlar"
    },
    "dogru": "B",
+   "ipucu": "Köken aldığı hücreye en çok benzeyen neoplazmın hangi işlevi koruyabileceğini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Anaplastik tümörler yüksek dereceli, yani az diferansiye tümörlerdir; hormon üretimi iyi diferansiye benign tümörlerde daha olasıdır.",
     "B": "İyi diferansiye benign tümörler doğru: endokrin bez tümörlerinde hormon üretimi bu tümörlerde daha olasıdır.",
     "C": "Yüksek dereceli karsinomlar az diferansiye ya da anaplastiktir; hormon üretiminin daha olası olduğu grup bunlar değildir.",
     "D": "Ülsere yüzeyel tümörler kanama, anemi ve sekonder bakteriyel enfeksiyonla konağı etkiler; hormon üretimiyle ilişkili grup değildir.",
-    "E": "Hormon üretimi diferansiyasyonu iyi korunmuş benign tümörlerde daha olasıdır. Az diferansiye sarkomlar bu sorudaki ayrımı sağlamaz."
+    "E": "Az diferansiye sarkomlar hem mezenkimal kökenlidir hem de ileri anaplazi nedeniyle özgül işlevsel sentez yeteneğinden yoksundur; endokrin bezlerde fonksiyonel hormon üretimi, normal hücre mimarisini ve enzim donanımını koruyan iyi diferansiye benign adenomlarda çok daha olasıdır."
    },
    "ozet": "Endokrin bez tümörlerinde hiperfonksiyon sıktır; hormon üretimi iyi diferansiye benign tümörlerde daha olasıdır, örneğin beta hücre tümörü hiperinsülinizm yapar.",
-   "metin": "**Soru.** Endokrin bez tümörlerinde hormon üretimi hangi tümörlerde daha olasıdır?\n\n**A)** Anaplastik malign tümörler · **B)** İyi diferansiye benign tümörler · **C)** Yüksek dereceli karsinomlar · **D)** Ülsere yüzeyel tümörler · **E)** Az diferansiye sarkomlar\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Anaplastik malign tümörler** — Anaplastik tümörler yüksek dereceli, yani az diferansiye tümörlerdir; hormon üretimi iyi diferansiye benign tümörlerde daha olasıdır.\n- **İyi diferansiye benign tümörler** — İyi diferansiye benign tümörler doğru: endokrin bez tümörlerinde hormon üretimi bu tümörlerde daha olasıdır.\n- **Yüksek dereceli karsinomlar** — Yüksek dereceli karsinomlar az diferansiye ya da anaplastiktir; hormon üretiminin daha olası olduğu grup bunlar değildir.\n- **Ülsere yüzeyel tümörler** — Ülsere yüzeyel tümörler kanama, anemi ve sekonder bakteriyel enfeksiyonla konağı etkiler; hormon üretimiyle ilişkili grup değildir.\n- **Az diferansiye sarkomlar** — Hormon üretimi diferansiyasyonu iyi korunmuş benign tümörlerde daha olasıdır. Az diferansiye sarkomlar bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — İyi diferansiye benign tümörler\n\n**Özet.** Endokrin bez tümörlerinde hiperfonksiyon sıktır; hormon üretimi iyi diferansiye benign tümörlerde daha olasıdır, örneğin beta hücre tümörü hiperinsülinizm yapar.",
-   "ses": "Endokrin bez tümörlerinde hormon üretimi hangi tümörlerde daha olasıdır?\nA, Anaplastik malign tümörler\nBe, İyi diferansiye benign tümörler\nCe, Yüksek dereceli karsinomlar\nDe, Ülsere yüzeyel tümörler\nE, Az diferansiye sarkomlar\nSeçenekleri sırayla değerlendirelim.\nAnaplastik tümörler yüksek dereceli, yani az diferansiye tümörlerdir. Hormon üretimi iyi diferansiye benign tümörlerde daha olasıdır.\nİyi diferansiye benign tümörler doğru, endokrin bez tümörlerinde hormon üretimi bu tümörlerde daha olasıdır.\nYüksek dereceli karsinomlar az diferansiye ya da anaplastiktir. Hormon üretiminin daha olası olduğu grup bunlar değildir.\nÜlsere yüzeyel tümörler kanama, anemi ve sekonder bakteriyel enfeksiyonla konağı etkiler. Hormon üretimiyle ilişkili grup değildir.\nHormon üretimi diferansiyasyonu iyi korunmuş benign tümörlerde daha olasıdır. Az diferansiye sarkomlar bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, İyi diferansiye benign tümörler\nEndokrin bez tümörlerinde hiperfonksiyon sıktır. Hormon üretimi iyi diferansiye benign tümörlerde daha olasıdır, örneğin beta hücre tümörü hiperinsülinizm yapar.",
-   "kelime": 170
+   "sayfa": [
+    6
+   ],
+   "metin": "**Soru.** Endokrin bez tümörlerinde hormon üretimi hangi tümörlerde daha olasıdır?\n\n**A)** Anaplastik malign tümörler · **B)** İyi diferansiye benign tümörler · **C)** Yüksek dereceli karsinomlar · **D)** Ülsere yüzeyel tümörler · **E)** Az diferansiye sarkomlar\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Anaplastik malign tümörler** — Anaplastik tümörler yüksek dereceli, yani az diferansiye tümörlerdir; hormon üretimi iyi diferansiye benign tümörlerde daha olasıdır.\n- **İyi diferansiye benign tümörler** — İyi diferansiye benign tümörler doğru: endokrin bez tümörlerinde hormon üretimi bu tümörlerde daha olasıdır.\n- **Yüksek dereceli karsinomlar** — Yüksek dereceli karsinomlar az diferansiye ya da anaplastiktir; hormon üretiminin daha olası olduğu grup bunlar değildir.\n- **Ülsere yüzeyel tümörler** — Ülsere yüzeyel tümörler kanama, anemi ve sekonder bakteriyel enfeksiyonla konağı etkiler; hormon üretimiyle ilişkili grup değildir.\n- **Az diferansiye sarkomlar** — Az diferansiye sarkomlar hem mezenkimal kökenlidir hem de ileri anaplazi nedeniyle özgül işlevsel sentez yeteneğinden yoksundur; endokrin bezlerde fonksiyonel hormon üretimi, normal hücre mimarisini ve enzim donanımını koruyan iyi diferansiye benign adenomlarda çok daha olasıdır.\n\n**Cevap: B** — İyi diferansiye benign tümörler\n\n**Özet.** Endokrin bez tümörlerinde hiperfonksiyon sıktır; hormon üretimi iyi diferansiye benign tümörlerde daha olasıdır, örneğin beta hücre tümörü hiperinsülinizm yapar.",
+   "ses": "Endokrin bez tümörlerinde hormon üretimi hangi tümörlerde daha olasıdır?\nA, Anaplastik malign tümörler\nBe, İyi diferansiye benign tümörler\nCe, Yüksek dereceli karsinomlar\nDe, Ülsere yüzeyel tümörler\nE, Az diferansiye sarkomlar\nSeçenekleri sırayla değerlendirelim.\nAnaplastik tümörler yüksek dereceli, yani az diferansiye tümörlerdir. Hormon üretimi iyi diferansiye benign tümörlerde daha olasıdır.\nİyi diferansiye benign tümörler doğru, endokrin bez tümörlerinde hormon üretimi bu tümörlerde daha olasıdır.\nYüksek dereceli karsinomlar az diferansiye ya da anaplastiktir. Hormon üretiminin daha olası olduğu grup bunlar değildir.\nÜlsere yüzeyel tümörler kanama, anemi ve sekonder bakteriyel enfeksiyonla konağı etkiler. Hormon üretimiyle ilişkili grup değildir.\nAz diferansiye sarkomlar hem mezenkimal kökenlidir hem de ileri anaplazi nedeniyle özgül işlevsel sentez yeteneğinden yoksundur. Endokrin bezlerde fonksiyonel hormon üretimi, normal hücre mimarisini ve enzim donanımını koruyan iyi diferansiye benign adenomlarda çok daha olasıdır.\nDoğru cevap Be, İyi diferansiye benign tümörler\nEndokrin bez tümörlerinde hiperfonksiyon sıktır. Hormon üretimi iyi diferansiye benign tümörlerde daha olasıdır, örneğin beta hücre tümörü hiperinsülinizm yapar.",
+   "kelime": 189
   },
   {
    "no": 30,
    "tur": "ornek",
+   "zorluk": "kolay",
    "soru": "Tümörün lokal etkilerinde klinik ciddiyet için en kritik faktörlerden biri hangisidir?",
    "secenekler": {
     "A": "Mitoz sayısı",
@@ -440,22 +561,27 @@
     "E": "Tümör nekrozu"
    },
    "dogru": "D",
+   "ipucu": "Bir santimetrelik hipofiz adenomunun neden hipopituitarizm yapabildiğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
-    "A": "Mitoz sayısı derecelendirmede değerlendirilen bir unsurdur; lokal etkilerin klinik ciddiyetini belirleyen faktör olarak geçmez.",
+    "A": "Mitoz sayısı tümörün proliferasyon hızını ve histolojik derecesini (grade) belirleyen mikroskopik bir ölçüttür; benign ya da malign bir tümörün lokal bası, tıkanıklık veya herniasyon gibi hayatı tehdit eden klinik etkilerinde en kritik belirleyici ise tümörün anatomik yerleşim yeridir.",
     "B": "Diferansiyasyon derecesi tümörün biyolojik agresifliğini kaba tahmin etmede kullanılır; lokal bası etkisini belirlemez.",
     "C": "Serum belirteç düzeyi tedavi yanıtını izlemede değerlidir; lokal etkilerin ciddiyetiyle ilgili değildir.",
     "D": "Tümörün yerleşim yeri doğru: küçük bir hipofiz adenomu hipopituitarizm, böbrek arterindeki küçük leiomyom iskemi ve hipertansiyon yapabilir.",
     "E": "Tümör nekrozu derecelendirme ölçütlerinden biridir; lokal etkilerde klinik ciddiyetin kritik belirleyicisi değildir."
    },
    "ozet": "Lokal etkilerde yerleşim yeri en kritik faktörlerden biridir; bir santimetrelik hipofiz adenomu hipopituitarizm, safra kanalındaki küçük karsinom obstrüktif sarılık yapabilir.",
-   "metin": "**Soru.** Tümörün lokal etkilerinde klinik ciddiyet için en kritik faktörlerden biri hangisidir?\n\n**A)** Mitoz sayısı · **B)** Diferansiyasyon derecesi · **C)** Serum belirteç düzeyi · **D)** Tümörün yerleşim yeri · **E)** Tümör nekrozu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Mitoz sayısı** — Mitoz sayısı derecelendirmede değerlendirilen bir unsurdur; lokal etkilerin klinik ciddiyetini belirleyen faktör olarak geçmez.\n- **Diferansiyasyon derecesi** — Diferansiyasyon derecesi tümörün biyolojik agresifliğini kaba tahmin etmede kullanılır; lokal bası etkisini belirlemez.\n- **Serum belirteç düzeyi** — Serum belirteç düzeyi tedavi yanıtını izlemede değerlidir; lokal etkilerin ciddiyetiyle ilgili değildir.\n- **Tümörün yerleşim yeri** — Tümörün yerleşim yeri doğru: küçük bir hipofiz adenomu hipopituitarizm, böbrek arterindeki küçük leiomyom iskemi ve hipertansiyon yapabilir.\n- **Tümör nekrozu** — Tümör nekrozu derecelendirme ölçütlerinden biridir; lokal etkilerde klinik ciddiyetin kritik belirleyicisi değildir.\n\n**Cevap: D** — Tümörün yerleşim yeri\n\n**Özet.** Lokal etkilerde yerleşim yeri en kritik faktörlerden biridir; bir santimetrelik hipofiz adenomu hipopituitarizm, safra kanalındaki küçük karsinom obstrüktif sarılık yapabilir.",
-   "ses": "Tümörün lokal etkilerinde klinik ciddiyet için en kritik faktörlerden biri hangisidir?\nA, Mitoz sayısı\nBe, Diferansiyasyon derecesi\nCe, Serum belirteç düzeyi\nDe, Tümörün yerleşim yeri\nE, Tümör nekrozu\nHer seçeneği tek tek ele alalım.\nMitoz sayısı derecelendirmede değerlendirilen bir unsurdur. Lokal etkilerin klinik ciddiyetini belirleyen faktör olarak geçmez.\nDiferansiyasyon derecesi tümörün biyolojik agresifliğini kaba tahmin etmede kullanılır. Lokal bası etkisini belirlemez.\nSerum belirteç düzeyi tedavi yanıtını izlemede değerlidir. Lokal etkilerin ciddiyetiyle ilgili değildir.\nTümörün yerleşim yeri doğru, küçük bir hipofiz adenomu hipopituitarizm, böbrek arterindeki küçük leiomyom iskemi ve hipertansiyon yapabilir.\nTümör nekrozu derecelendirme ölçütlerinden biridir. Lokal etkilerde klinik ciddiyetin kritik belirleyicisi değildir.\nDoğru cevap De, Tümörün yerleşim yeri\nLokal etkilerde yerleşim yeri en kritik faktörlerden biridir. Bir santimetrelik hipofiz adenomu hipopituitarizm, safra kanalındaki küçük karsinom obstrüktif sarılık yapabilir.",
-   "kelime": 157
+   "sayfa": [
+    5
+   ],
+   "metin": "**Soru.** Tümörün lokal etkilerinde klinik ciddiyet için en kritik faktörlerden biri hangisidir?\n\n**A)** Mitoz sayısı · **B)** Diferansiyasyon derecesi · **C)** Serum belirteç düzeyi · **D)** Tümörün yerleşim yeri · **E)** Tümör nekrozu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Mitoz sayısı** — Mitoz sayısı tümörün proliferasyon hızını ve histolojik derecesini (grade) belirleyen mikroskopik bir ölçüttür; benign ya da malign bir tümörün lokal bası, tıkanıklık veya herniasyon gibi hayatı tehdit eden klinik etkilerinde en kritik belirleyici ise tümörün anatomik yerleşim yeridir.\n- **Diferansiyasyon derecesi** — Diferansiyasyon derecesi tümörün biyolojik agresifliğini kaba tahmin etmede kullanılır; lokal bası etkisini belirlemez.\n- **Serum belirteç düzeyi** — Serum belirteç düzeyi tedavi yanıtını izlemede değerlidir; lokal etkilerin ciddiyetiyle ilgili değildir.\n- **Tümörün yerleşim yeri** — Tümörün yerleşim yeri doğru: küçük bir hipofiz adenomu hipopituitarizm, böbrek arterindeki küçük leiomyom iskemi ve hipertansiyon yapabilir.\n- **Tümör nekrozu** — Tümör nekrozu derecelendirme ölçütlerinden biridir; lokal etkilerde klinik ciddiyetin kritik belirleyicisi değildir.\n\n**Cevap: D** — Tümörün yerleşim yeri\n\n**Özet.** Lokal etkilerde yerleşim yeri en kritik faktörlerden biridir; bir santimetrelik hipofiz adenomu hipopituitarizm, safra kanalındaki küçük karsinom obstrüktif sarılık yapabilir.",
+   "ses": "Tümörün lokal etkilerinde klinik ciddiyet için en kritik faktörlerden biri hangisidir?\nA, Mitoz sayısı\nBe, Diferansiyasyon derecesi\nCe, Serum belirteç düzeyi\nDe, Tümörün yerleşim yeri\nE, Tümör nekrozu\nHer seçeneği tek tek ele alalım.\nMitoz sayısı tümörün proliferasyon hızını ve histolojik derecesini, grade, belirleyen mikroskopik bir ölçüttür. Benign ya da malign bir tümörün lokal bası, tıkanıklık veya herniasyon gibi hayatı tehdit eden klinik etkilerinde en kritik belirleyici ise tümörün anatomik yerleşim yeridir.\nDiferansiyasyon derecesi tümörün biyolojik agresifliğini kaba tahmin etmede kullanılır. Lokal bası etkisini belirlemez.\nSerum belirteç düzeyi tedavi yanıtını izlemede değerlidir. Lokal etkilerin ciddiyetiyle ilgili değildir.\nTümörün yerleşim yeri doğru, küçük bir hipofiz adenomu hipopituitarizm, böbrek arterindeki küçük leiomyom iskemi ve hipertansiyon yapabilir.\nTümör nekrozu derecelendirme ölçütlerinden biridir. Lokal etkilerde klinik ciddiyetin kritik belirleyicisi değildir.\nDoğru cevap De, Tümörün yerleşim yeri\nLokal etkilerde yerleşim yeri en kritik faktörlerden biridir. Bir santimetrelik hipofiz adenomu hipopituitarizm, safra kanalındaki küçük karsinom obstrüktif sarılık yapabilir.",
+   "kelime": 181
   },
   {
    "no": 31,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Kanser kaşeksisinde TNF'ye eşlik eden diğer sitokinler hangileridir?",
    "secenekler": {
     "A": "IL-1 ve IL-6",
@@ -465,22 +591,28 @@
     "E": "ACTH ve insülin"
    },
    "dogru": "A",
+   "ipucu": "Tümör nekroz faktörüyle birlikte katabolizmayı artıran interlökin ailesinden mediyatörleri düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "IL-1 ve IL-6 doğru: TNF ile birlikte kaşeksiye katılan diğer sitokinlerdir; sonuç katabolizma artışı ile yağ ve kas kaybıdır.",
-    "B": "TGF-α ve PTHrP, paraneoplastik hiperkalseminin mekanizmalarıdır; kaşeksi sitokinleri olarak geçmez.",
+    "B": "TGF-alfa ve paratiroid hormonu ilişkili protein (PTHrP), osteoklastları aktive ederek humoral malignite hiperkalsemisine yol açan mediyatörlerdir; kanser kaşeksisinde TNF ile birlikte iştahsızlık ve katabolizmayı yürüten sitokinler ise IL-1 ve IL-6'dır.",
     "C": "Eritropoetin polisitemiye, ADH ise uygunsuz antidiüretik hormon salınımı sendromuna yol açan paraneoplastik etkenlerdir.",
     "D": "EGF, akantozis nigrikansın mekanizmasında yer alan büyüme faktörüdür; TGF-α ise hiperkalsemiye katkı verir.",
     "E": "ACTH Cushing sendromuna, insülin veya insülin benzeri madde hipoglisemiye yol açar; bunlar kaşeksi mediyatörü değildir."
    },
    "ozet": "Kaşeksi yalnız azalmış besin alımına bağlı değildir; TNF ile birlikte IL-1 ve IL-6 katabolizmayı artırır ve bazal metabolizma artmış kalır.",
-   "metin": "**Soru.** Kanser kaşeksisinde TNF'ye eşlik eden diğer sitokinler hangileridir?\n\n**A)** IL-1 ve IL-6 · **B)** TGF-α ve PTHrP · **C)** Eritropoetin ve ADH · **D)** EGF ve TGF-α · **E)** ACTH ve insülin\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **IL-1 ve IL-6** — IL-1 ve IL-6 doğru: TNF ile birlikte kaşeksiye katılan diğer sitokinlerdir; sonuç katabolizma artışı ile yağ ve kas kaybıdır.\n- **TGF-α ve PTHrP** — TGF-α ve PTHrP, paraneoplastik hiperkalseminin mekanizmalarıdır; kaşeksi sitokinleri olarak geçmez.\n- **Eritropoetin ve ADH** — Eritropoetin polisitemiye, ADH ise uygunsuz antidiüretik hormon salınımı sendromuna yol açan paraneoplastik etkenlerdir.\n- **EGF ve TGF-α** — EGF, akantozis nigrikansın mekanizmasında yer alan büyüme faktörüdür; TGF-α ise hiperkalsemiye katkı verir.\n- **ACTH ve insülin** — ACTH Cushing sendromuna, insülin veya insülin benzeri madde hipoglisemiye yol açar; bunlar kaşeksi mediyatörü değildir.\n\n**Cevap: A** — IL-1 ve IL-6\n\n**Özet.** Kaşeksi yalnız azalmış besin alımına bağlı değildir; TNF ile birlikte IL-1 ve IL-6 katabolizmayı artırır ve bazal metabolizma artmış kalır.",
-   "ses": "Kanser kaşeksisinde te ne feye eşlik eden diğer sitokinler hangileridir?\nA, İ le bir ve i le altı\nBe, Te ge fe alfa ve pe te ha re pe\nCe, Eritropoetin ve antidiüretik hormon\nDe, E ge fe ve te ge fe alfa\nE, A ce te ha ve insülin\nŞıkları sırasıyla gözden geçirelim.\nİ le bir ve i le altı doğru, te ne fe ile birlikte kaşeksiye katılan diğer sitokinlerdir. Sonuç katabolizma artışı ile yağ ve kas kaybıdır.\nTe ge fe alfa ve pe te ha re pe, paraneoplastik hiperkalseminin mekanizmalarıdır. Kaşeksi sitokinleri olarak geçmez.\nEritropoetin polisitemiye, antidiüretik hormon ise uygunsuz antidiüretik hormon salınımı sendromuna yol açan paraneoplastik etkenlerdir.\nE ge fe, akantozis nigrikansın mekanizmasında yer alan büyüme faktörüdür. Te ge fe alfa ise hiperkalsemiye katkı verir.\nA ce te ha Cushing sendromuna, insülin veya insülin benzeri madde hipoglisemiye yol açar. Bunlar kaşeksi mediyatörü değildir.\nDoğru cevap A, İ le bir ve i le altı\nKaşeksi yalnız azalmış besin alımına bağlı değildir. Te ne fe ile birlikte i le bir ve i le altı katabolizmayı artırır ve bazal metabolizma artmış kalır.",
-   "kelime": 160
+   "sayfa": [
+    10,
+    11
+   ],
+   "metin": "**Soru.** Kanser kaşeksisinde TNF'ye eşlik eden diğer sitokinler hangileridir?\n\n**A)** IL-1 ve IL-6 · **B)** TGF-α ve PTHrP · **C)** Eritropoetin ve ADH · **D)** EGF ve TGF-α · **E)** ACTH ve insülin\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **IL-1 ve IL-6** — IL-1 ve IL-6 doğru: TNF ile birlikte kaşeksiye katılan diğer sitokinlerdir; sonuç katabolizma artışı ile yağ ve kas kaybıdır.\n- **TGF-α ve PTHrP** — TGF-alfa ve paratiroid hormonu ilişkili protein (PTHrP), osteoklastları aktive ederek humoral malignite hiperkalsemisine yol açan mediyatörlerdir; kanser kaşeksisinde TNF ile birlikte iştahsızlık ve katabolizmayı yürüten sitokinler ise IL-1 ve IL-6'dır.\n- **Eritropoetin ve ADH** — Eritropoetin polisitemiye, ADH ise uygunsuz antidiüretik hormon salınımı sendromuna yol açan paraneoplastik etkenlerdir.\n- **EGF ve TGF-α** — EGF, akantozis nigrikansın mekanizmasında yer alan büyüme faktörüdür; TGF-α ise hiperkalsemiye katkı verir.\n- **ACTH ve insülin** — ACTH Cushing sendromuna, insülin veya insülin benzeri madde hipoglisemiye yol açar; bunlar kaşeksi mediyatörü değildir.\n\n**Cevap: A** — IL-1 ve IL-6\n\n**Özet.** Kaşeksi yalnız azalmış besin alımına bağlı değildir; TNF ile birlikte IL-1 ve IL-6 katabolizmayı artırır ve bazal metabolizma artmış kalır.",
+   "ses": "Kanser kaşeksisinde te ne feye eşlik eden diğer sitokinler hangileridir?\nA, İ le bir ve i le altı\nBe, Te ge fe alfa ve pe te ha re pe\nCe, Eritropoetin ve antidiüretik hormon\nDe, E ge fe ve te ge fe alfa\nE, A ce te ha ve insülin\nŞıkları sırasıyla gözden geçirelim.\nİ le bir ve i le altı doğru, te ne fe ile birlikte kaşeksiye katılan diğer sitokinlerdir. Sonuç katabolizma artışı ile yağ ve kas kaybıdır.\nte ge fe alfa ve paratiroid hormonu ilişkili protein, pe te ha re pe,, osteoklastları aktive ederek humoral malignite hiperkalsemisine yol açan mediyatörlerdir. Kanser kaşeksisinde te ne fe ile birlikte iştahsızlık ve katabolizmayı yürüten sitokinler ise interlökin bir ve interlökin altı'dır.\nEritropoetin polisitemiye, antidiüretik hormon ise uygunsuz antidiüretik hormon salınımı sendromuna yol açan paraneoplastik etkenlerdir.\nE ge fe, akantozis nigrikansın mekanizmasında yer alan büyüme faktörüdür. Te ge fe alfa ise hiperkalsemiye katkı verir.\nA ce te ha Cushing sendromuna, insülin veya insülin benzeri madde hipoglisemiye yol açar. Bunlar kaşeksi mediyatörü değildir.\nDoğru cevap A, İ le bir ve i le altı\nKaşeksi yalnız azalmış besin alımına bağlı değildir. Te ne fe ile birlikte i le bir ve i le altı katabolizmayı artırır ve bazal metabolizma artmış kalır.",
+   "kelime": 180
   },
   {
    "no": 32,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Hangisi tanımı gereği paraneoplastik sendrom sayılmaz?",
    "secenekler": {
     "A": "Timomada kırmızı hücre aplazisi",
@@ -490,6 +622,7 @@
     "E": "Beta hücre tümöründe insülin salgısı"
    },
    "dogru": "E",
+   "ipucu": "Tanımdaki iki dışlama ölçütünden biri, üretilen maddenin o dokuya özgü olup olmadığıdır.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Timomada kırmızı hücre aplazisi, immünolojik mekanizmalı bir paraneoplastik sendromdur; timoma ayrıca miyasteniyle de ilişkilidir.",
@@ -499,6 +632,10 @@
     "E": "Beta hücre tümöründe insülin salgısı doğru: insülin bu dokuya özgü hormon olduğundan tablo tanım gereği paraneoplastik sayılmaz."
    },
    "ozet": "Paraneoplastik sendrom, tümörün yayılımı ya da dokuya özgü hormon salgısıyla açıklanamayan tablodur; beta hücre tümörünün insülin salgısı bu yüzden tanıma girmez.",
+   "sayfa": [
+    6,
+    12
+   ],
    "metin": "**Soru.** Hangisi tanımı gereği paraneoplastik sendrom sayılmaz?\n\n**A)** Timomada kırmızı hücre aplazisi · **B)** Over karsinomunda hipoglisemi · **C)** Renal hücreli karsinomda polisitemi · **D)** Küçük hücreli akciğer karsinomunda SIADH · **E)** Beta hücre tümöründe insülin salgısı\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Timomada kırmızı hücre aplazisi** — Timomada kırmızı hücre aplazisi, immünolojik mekanizmalı bir paraneoplastik sendromdur; timoma ayrıca miyasteniyle de ilişkilidir.\n- **Over karsinomunda hipoglisemi** — Over karsinomunda hipoglisemi, insülin veya insülin benzeri madde salınımıyla oluşan paraneoplastik endokrinopatidir.\n- **Renal hücreli karsinomda polisitemi** — Renal hücreli karsinomda polisitemi, eritropoetin üretimine bağlı paraneoplastik bir tablodur.\n- **Küçük hücreli akciğer karsinomunda SIADH** — Küçük hücreli akciğer karsinomunda SIADH, ektopik antidiüretik hormon üretimiyle gelişen paraneoplastik sendromdur.\n- **Beta hücre tümöründe insülin salgısı** — Beta hücre tümöründe insülin salgısı doğru: insülin bu dokuya özgü hormon olduğundan tablo tanım gereği paraneoplastik sayılmaz.\n\n**Cevap: E** — Beta hücre tümöründe insülin salgısı\n\n**Özet.** Paraneoplastik sendrom, tümörün yayılımı ya da dokuya özgü hormon salgısıyla açıklanamayan tablodur; beta hücre tümörünün insülin salgısı bu yüzden tanıma girmez.",
    "ses": "Hangisi tanımı gereği paraneoplastik sendrom sayılmaz?\nA, Timomada kırmızı hücre aplazisi\nBe, Over karsinomunda hipoglisemi\nCe, Renal hücreli karsinomda polisitemi\nDe, Küçük hücreli akciğer karsinomunda uygunsuz antidiüretik hormon salınımı\nE, Beta hücre tümöründe insülin salgısı\nŞimdi seçeneklere tek tek bakalım.\nTimomada kırmızı hücre aplazisi, immünolojik mekanizmalı bir paraneoplastik sendromdur. Timoma ayrıca miyasteniyle de ilişkilidir.\nOver karsinomunda hipoglisemi, insülin veya insülin benzeri madde salınımıyla oluşan paraneoplastik endokrinopatidir.\nRenal hücreli karsinomda polisitemi, eritropoetin üretimine bağlı paraneoplastik bir tablodur.\nKüçük hücreli akciğer karsinomunda uygunsuz antidiüretik hormon salınımı, ektopik antidiüretik hormon üretimiyle gelişen paraneoplastik sendromdur.\nBeta hücre tümöründe insülin salgısı doğru, insülin bu dokuya özgü hormon olduğundan tablo tanım gereği paraneoplastik sayılmaz.\nDoğru cevap E, Beta hücre tümöründe insülin salgısı\nParaneoplastik sendrom, tümörün yayılımı ya da dokuya özgü hormon salgısıyla açıklanamayan tablodur. Beta hücre tümörünün insülin salgısı bu yüzden tanıma girmez.",
    "kelime": 169
@@ -506,6 +643,7 @@
   {
    "no": 33,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Geniş tümör yükünde bağışıklık baskısına yol açan nedenlerden biri hangisidir?",
    "secenekler": {
     "A": "Hiperinsülinizm",
@@ -515,22 +653,30 @@
     "E": "Normal hipofizin sıkışması"
    },
    "dogru": "D",
+   "ipucu": "Beslenme durumunun ve sitokin dengesinin savunma hücreleri üzerindeki etkisini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
-    "A": "Hiperinsülinizm, pankreas beta hücre tümörlerinde hipoglisemi ve koma riski yaratır; bağışıklığı baskılayan neden olarak geçmez.",
+    "A": "Hiperinsülinizm pankreasın fonksiyonel beta hücreli adenomlarında (insülinoma) epizodik hipoglisemi ataklarına neden olur; ilerlemiş geniş tümör yükünde konak bağışıklığını zayıflatan temel etkenler ise kemik iliği invazyonu, kemoterapi ve ağır protein–kalori yetersizliğidir.",
     "B": "Aldosteron fazlalığı, adrenal korteks adenom veya karsinomunda hipertansiyon ve hipokalemi yapar; bağışıklık baskısıyla ilgili değildir.",
     "C": "Yüzey ülserasyonu kanama, anemi ve sekonder bakteriyel enfeksiyona yol açar; bağışıklık baskısının nedeni değil, ayrı bir lokal etkidir.",
     "D": "Protein–kalori yetersizliği doğru: sitokin dengesindeki değişiklik ve tedaviye bağlı hücre kaybıyla birlikte bağışıklığı baskılar.",
     "E": "Normal hipofizin sıkışması, küçük bir hipofiz adenomunun hipopituitarizm yapmasını açıklayan lokal bası etkisidir."
    },
    "ozet": "Geniş tümör yükü sitokin dengesindeki değişiklik, protein–kalori yetersizliği ve kemoterapi ya da radyoterapiye bağlı hücre kaybıyla bağışıklığı baskılar; sonuç fırsatçı enfeksiyonlardır.",
-   "metin": "**Soru.** Geniş tümör yükünde bağışıklık baskısına yol açan nedenlerden biri hangisidir?\n\n**A)** Hiperinsülinizm · **B)** Aldosteron fazlalığı · **C)** Yüzey ülserasyonu · **D)** Protein–kalori yetersizliği · **E)** Normal hipofizin sıkışması\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Hiperinsülinizm** — Hiperinsülinizm, pankreas beta hücre tümörlerinde hipoglisemi ve koma riski yaratır; bağışıklığı baskılayan neden olarak geçmez.\n- **Aldosteron fazlalığı** — Aldosteron fazlalığı, adrenal korteks adenom veya karsinomunda hipertansiyon ve hipokalemi yapar; bağışıklık baskısıyla ilgili değildir.\n- **Yüzey ülserasyonu** — Yüzey ülserasyonu kanama, anemi ve sekonder bakteriyel enfeksiyona yol açar; bağışıklık baskısının nedeni değil, ayrı bir lokal etkidir.\n- **Protein–kalori yetersizliği** — Protein–kalori yetersizliği doğru: sitokin dengesindeki değişiklik ve tedaviye bağlı hücre kaybıyla birlikte bağışıklığı baskılar.\n- **Normal hipofizin sıkışması** — Normal hipofizin sıkışması, küçük bir hipofiz adenomunun hipopituitarizm yapmasını açıklayan lokal bası etkisidir.\n\n**Cevap: D** — Protein–kalori yetersizliği\n\n**Özet.** Geniş tümör yükü sitokin dengesindeki değişiklik, protein–kalori yetersizliği ve kemoterapi ya da radyoterapiye bağlı hücre kaybıyla bağışıklığı baskılar; sonuç fırsatçı enfeksiyonlardır.",
-   "ses": "Geniş tümör yükünde bağışıklık baskısına yol açan nedenlerden biri hangisidir?\nA, Hiperinsülinizm\nBe, Aldosteron fazlalığı\nCe, Yüzey ülserasyonu\nDe, Protein kalori yetersizliği\nE, Normal hipofizin sıkışması\nSeçenekleri sırayla değerlendirelim.\nHiperinsülinizm, pankreas beta hücre tümörlerinde hipoglisemi ve koma riski yaratır. Bağışıklığı baskılayan neden olarak geçmez.\nAldosteron fazlalığı, adrenal korteks adenom veya karsinomunda hipertansiyon ve hipokalemi yapar. Bağışıklık baskısıyla ilgili değildir.\nYüzey ülserasyonu kanama, anemi ve sekonder bakteriyel enfeksiyona yol açar. Bağışıklık baskısının nedeni değil, ayrı bir lokal etkidir.\nProtein kalori yetersizliği doğru. Sitokin dengesindeki değişiklik ve tedaviye bağlı hücre kaybıyla birlikte bağışıklığı baskılar.\nNormal hipofizin sıkışması, küçük bir hipofiz adenomunun hipopituitarizm yapmasını açıklayan lokal bası etkisidir.\nDoğru cevap De, Protein kalori yetersizliği\nGeniş tümör yükü sitokin dengesindeki değişiklik, protein kalori yetersizliği ve kemoterapi ya da radyoterapiye bağlı hücre kaybıyla bağışıklığı baskılar. Sonuç fırsatçı enfeksiyonlardır.",
-   "kelime": 156
+   "sayfa": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "metin": "**Soru.** Geniş tümör yükünde bağışıklık baskısına yol açan nedenlerden biri hangisidir?\n\n**A)** Hiperinsülinizm · **B)** Aldosteron fazlalığı · **C)** Yüzey ülserasyonu · **D)** Protein–kalori yetersizliği · **E)** Normal hipofizin sıkışması\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Hiperinsülinizm** — Hiperinsülinizm pankreasın fonksiyonel beta hücreli adenomlarında (insülinoma) epizodik hipoglisemi ataklarına neden olur; ilerlemiş geniş tümör yükünde konak bağışıklığını zayıflatan temel etkenler ise kemik iliği invazyonu, kemoterapi ve ağır protein–kalori yetersizliğidir.\n- **Aldosteron fazlalığı** — Aldosteron fazlalığı, adrenal korteks adenom veya karsinomunda hipertansiyon ve hipokalemi yapar; bağışıklık baskısıyla ilgili değildir.\n- **Yüzey ülserasyonu** — Yüzey ülserasyonu kanama, anemi ve sekonder bakteriyel enfeksiyona yol açar; bağışıklık baskısının nedeni değil, ayrı bir lokal etkidir.\n- **Protein–kalori yetersizliği** — Protein–kalori yetersizliği doğru: sitokin dengesindeki değişiklik ve tedaviye bağlı hücre kaybıyla birlikte bağışıklığı baskılar.\n- **Normal hipofizin sıkışması** — Normal hipofizin sıkışması, küçük bir hipofiz adenomunun hipopituitarizm yapmasını açıklayan lokal bası etkisidir.\n\n**Cevap: D** — Protein–kalori yetersizliği\n\n**Özet.** Geniş tümör yükü sitokin dengesindeki değişiklik, protein–kalori yetersizliği ve kemoterapi ya da radyoterapiye bağlı hücre kaybıyla bağışıklığı baskılar; sonuç fırsatçı enfeksiyonlardır.",
+   "ses": "Geniş tümör yükünde bağışıklık baskısına yol açan nedenlerden biri hangisidir?\nA, Hiperinsülinizm\nBe, Aldosteron fazlalığı\nCe, Yüzey ülserasyonu\nDe, Protein kalori yetersizliği\nE, Normal hipofizin sıkışması\nSeçenekleri sırayla değerlendirelim.\nHiperinsülinizm pankreasın fonksiyonel beta hücreli adenomlarında, insülinoma, epizodik hipoglisemi ataklarına neden olur. İlerlemiş geniş tümör yükünde konak bağışıklığını zayıflatan temel etkenler ise kemik iliği invazyonu, kemoterapi ve ağır protein–kalori yetersizliğidir.\nAldosteron fazlalığı, adrenal korteks adenom veya karsinomunda hipertansiyon ve hipokalemi yapar. Bağışıklık baskısıyla ilgili değildir.\nYüzey ülserasyonu kanama, anemi ve sekonder bakteriyel enfeksiyona yol açar. Bağışıklık baskısının nedeni değil, ayrı bir lokal etkidir.\nProtein kalori yetersizliği doğru. Sitokin dengesindeki değişiklik ve tedaviye bağlı hücre kaybıyla birlikte bağışıklığı baskılar.\nNormal hipofizin sıkışması, küçük bir hipofiz adenomunun hipopituitarizm yapmasını açıklayan lokal bası etkisidir.\nDoğru cevap De, Protein kalori yetersizliği\nGeniş tümör yükü sitokin dengesindeki değişiklik, protein kalori yetersizliği ve kemoterapi ya da radyoterapiye bağlı hücre kaybıyla bağışıklığı baskılar. Sonuç fırsatçı enfeksiyonlardır.",
+   "kelime": 171
   },
   {
    "no": 34,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Paraneoplastik sendromların klinik önemi için hangisi doğrudur?",
    "secenekler": {
     "A": "Gizli tümörün ilk belirtisi olabilir",
@@ -540,6 +686,7 @@
     "E": "Tarama testi olarak kullanılır"
    },
    "dogru": "A",
+   "ipucu": "Kanser henüz fark edilmeden ortaya çıkan bir tablonun tanıya nasıl katkı sağlayacağını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Gizli tümörün ilk belirtisi olabilmesi doğru: paraneoplastik sendrom tümör saptanmadan önce ortaya çıkabilir; ayrıca ağır morbidite yapabilir ve metastazı taklit edebilir.",
@@ -549,6 +696,10 @@
     "E": "Tarama testi olarak kullanılmaz; paraneoplastik sendrom ancak tablo ortaya çıktığında tümörü düşündürür."
    },
    "ozet": "Paraneoplastik sendromlar kanser hastalarının yaklaşık %10–15'inde görülür; gizli tümörün ilk belirtisi olabilir, ciddi morbidite yapabilir ve metastazı taklit ederek tanıyı güçleştirebilir.",
+   "sayfa": [
+    6,
+    12
+   ],
    "metin": "**Soru.** Paraneoplastik sendromların klinik önemi için hangisi doğrudur?\n\n**A)** Gizli tümörün ilk belirtisi olabilir · **B)** Kanserlerin çoğunda görülür · **C)** Tümörün uzak yayılımıyla açıklanır · **D)** Yalnız benign tümörlerde görülür · **E)** Tarama testi olarak kullanılır\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Gizli tümörün ilk belirtisi olabilir** — Gizli tümörün ilk belirtisi olabilmesi doğru: paraneoplastik sendrom tümör saptanmadan önce ortaya çıkabilir; ayrıca ağır morbidite yapabilir ve metastazı taklit edebilir.\n- **Kanserlerin çoğunda görülür** — Kanserlerin çoğunda görülmez; paraneoplastik sendromlar kanser hastalarının yaklaşık %10–15'inde ortaya çıkar.\n- **Tümörün uzak yayılımıyla açıklanır** — Tümörün lokal ya da uzak yayılımıyla açıklanan tablo tanım gereği paraneoplastik sendrom sayılmaz.\n- **Yalnız benign tümörlerde görülür** — Yalnız benign tümörlerde görüldüğü söylenemez; iyi diferansiye benign tümörlerle ilişkili olan, dokuya özgü hormon üretimidir.\n- **Tarama testi olarak kullanılır** — Tarama testi olarak kullanılmaz; paraneoplastik sendrom ancak tablo ortaya çıktığında tümörü düşündürür.\n\n**Cevap: A** — Gizli tümörün ilk belirtisi olabilir\n\n**Özet.** Paraneoplastik sendromlar kanser hastalarının yaklaşık %10–15'inde görülür; gizli tümörün ilk belirtisi olabilir, ciddi morbidite yapabilir ve metastazı taklit ederek tanıyı güçleştirebilir.",
    "ses": "Paraneoplastik sendromların klinik önemi için hangisi doğrudur?\nA, Gizli tümörün ilk belirtisi olabilir\nBe, Kanserlerin çoğunda görülür\nCe, Tümörün uzak yayılımıyla açıklanır\nDe, Yalnız benign tümörlerde görülür\nE, Tarama testi olarak kullanılır\nHer seçeneği tek tek ele alalım.\nGizli tümörün ilk belirtisi olabilmesi doğru, paraneoplastik sendrom tümör saptanmadan önce ortaya çıkabilir. Ayrıca ağır morbidite yapabilir ve metastazı taklit edebilir.\nKanserlerin çoğunda görülmez. Paraneoplastik sendromlar kanser hastalarının yaklaşık yüzde on ile on beşinde ortaya çıkar.\nTümörün lokal ya da uzak yayılımıyla açıklanan tablo tanım gereği paraneoplastik sendrom sayılmaz.\nYalnız benign tümörlerde görüldüğü söylenemez. Iyi diferansiye benign tümörlerle ilişkili olan, dokuya özgü hormon üretimidir.\nTarama testi olarak kullanılmaz. Paraneoplastik sendrom ancak tablo ortaya çıktığında tümörü düşündürür.\nDoğru cevap A, Gizli tümörün ilk belirtisi olabilir\nParaneoplastik sendromlar kanser hastalarının yaklaşık yüzde on ile on beşinde görülür. Gizli tümörün ilk belirtisi olabilir, ciddi morbidite yapabilir ve metastazı taklit ederek tanıyı güçleştirebilir.",
    "kelime": 176
@@ -556,6 +707,7 @@
   {
    "no": 35,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Cerrahi sırasında hızlı tanı ve cerrahi sınır değerlendirmesi sağlayan yöntem hangisidir?",
    "secenekler": {
     "A": "İnsizyonel biyopsi",
@@ -565,6 +717,7 @@
     "E": "Hızlı dondurulmuş kesit"
    },
    "dogru": "E",
+   "ipucu": "Ameliyat sürerken dokunun bekletilmeden incelenip sonra parafinle doğrulandığı yöntemi düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "İnsizyonel biyopsi, büyük veya kritik yerleşimli lezyonlarda tümörün yalnız bir kısmının alınmasıdır; cerrahi sınırı değerlendirmez.",
@@ -574,6 +727,9 @@
     "E": "Hızlı dondurulmuş kesit doğru: cerrahi sırasında hızlı tanı ve cerrahi sınır değerlendirmesi sağlar; sonra parafin kesitlerle doğrulama gerekebilir."
    },
    "ozet": "Hızlı dondurulmuş kesit ameliyat sırasında tanı ve sınır bilgisi verir; kesin sonuç gerektiğinde parafin kesitlerle doğrulanır.",
+   "sayfa": [
+    25
+   ],
    "metin": "**Soru.** Cerrahi sırasında hızlı tanı ve cerrahi sınır değerlendirmesi sağlayan yöntem hangisidir?\n\n**A)** İnsizyonel biyopsi · **B)** İnce iğne aspirasyonu · **C)** Akış sitometrisi · **D)** Sıvı biyopsi · **E)** Hızlı dondurulmuş kesit\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **İnsizyonel biyopsi** — İnsizyonel biyopsi, büyük veya kritik yerleşimli lezyonlarda tümörün yalnız bir kısmının alınmasıdır; cerrahi sınırı değerlendirmez.\n- **İnce iğne aspirasyonu** — İnce iğne aspirasyonu, kitleden hücre aspire edip yayma hazırlanan minimal invaziv ve ucuz bir sitolojik yöntemdir.\n- **Akış sitometrisi** — Akış sitometrisi, floresan işaretli antikorlarla tek tek hücreleri çok parametreli analiz eden yöntemdir; cerrahi sınır değerlendirmez.\n- **Sıvı biyopsi** — Sıvı biyopsi, dolaşan tümör DNA'sı ve tümör hücrelerinin incelenmesidir; nüksün erken saptanmasında kullanılabilir.\n- **Hızlı dondurulmuş kesit** — Hızlı dondurulmuş kesit doğru: cerrahi sırasında hızlı tanı ve cerrahi sınır değerlendirmesi sağlar; sonra parafin kesitlerle doğrulama gerekebilir.\n\n**Cevap: E** — Hızlı dondurulmuş kesit\n\n**Özet.** Hızlı dondurulmuş kesit ameliyat sırasında tanı ve sınır bilgisi verir; kesin sonuç gerektiğinde parafin kesitlerle doğrulanır.",
    "ses": "Cerrahi sırasında hızlı tanı ve cerrahi sınır değerlendirmesi sağlayan yöntem hangisidir?\nA, İnsizyonel biyopsi\nBe, İnce iğne aspirasyonu\nCe, Akış sitometrisi\nDe, Sıvı biyopsi\nE, Hızlı dondurulmuş kesit\nŞıkları sırasıyla gözden geçirelim.\nİnsizyonel biyopsi, büyük veya kritik yerleşimli lezyonlarda tümörün yalnız bir kısmının alınmasıdır. Cerrahi sınırı değerlendirmez.\nİnce iğne aspirasyonu, kitleden hücre aspire edip yayma hazırlanan minimal invaziv ve ucuz bir sitolojik yöntemdir.\nAkış sitometrisi, floresan işaretli antikorlarla tek tek hücreleri çok parametreli analiz eden yöntemdir. Cerrahi sınır değerlendirmez.\nSıvı biyopsi, dolaşan tümör de ne a'sı ve tümör hücrelerinin incelenmesidir. Nüksün erken saptanmasında kullanılabilir.\nHızlı dondurulmuş kesit doğru, cerrahi sırasında hızlı tanı ve cerrahi sınır değerlendirmesi sağlar. Sonra parafin kesitlerle doğrulama gerekebilir.\nDoğru cevap E, Hızlı dondurulmuş kesit\nHızlı dondurulmuş kesit ameliyat sırasında tanı ve sınır bilgisi verir. Kesin sonuç gerektiğinde parafin kesitlerle doğrulanır.",
    "kelime": 161
@@ -581,6 +737,7 @@
   {
    "no": 36,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Akış sitometrisinin en sık kullanım alanı hangisidir?",
    "secenekler": {
     "A": "Karsinomda primer odak saptama",
@@ -590,6 +747,7 @@
     "E": "Servikal kanser taraması"
    },
    "dogru": "C",
+   "ipucu": "Tek tek hücrelerin süspansiyonda yüzey belirteçlerine göre incelendiği hastalık grubunu düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Karsinomda primer odak saptama immünohistokimyayla yapılır; örneğin PSA pozitifliği metastazda prostat primerini gösterir.",
@@ -599,6 +757,9 @@
     "E": "Servikal kanser taraması Papanicolaou testiyle yapılır ve erken teşhisle mortaliteyi belirgin azaltmıştır."
    },
    "ozet": "Akış sitometrisi floresan işaretli antikorlarla tek tek hücreleri analiz eder; en sık lösemi ve lenfomaların sınıflandırılmasında, bazen DNA ploidisi ve hücre döngüsü için kullanılır.",
+   "sayfa": [
+    29
+   ],
    "metin": "**Soru.** Akış sitometrisinin en sık kullanım alanı hangisidir?\n\n**A)** Karsinomda primer odak saptama · **B)** Solid tümör evrelemesi · **C)** Lösemi ve lenfoma sınıflaması · **D)** Kalıtsal yatkınlık taraması · **E)** Servikal kanser taraması\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Karsinomda primer odak saptama** — Karsinomda primer odak saptama immünohistokimyayla yapılır; örneğin PSA pozitifliği metastazda prostat primerini gösterir.\n- **Solid tümör evrelemesi** — Solid tümör evrelemesi primer tümör boyutu, bölgesel lenf düğümü ve uzak metastaza dayanan TNM sistemiyle yapılır.\n- **Lösemi ve lenfoma sınıflaması** — Lösemi ve lenfoma sınıflaması doğru: akış sitometrisi CD19, CD3, CD34 gibi yüzey belirteçleriyle en sık bu amaçla kullanılır.\n- **Kalıtsal yatkınlık taraması** — Kalıtsal yatkınlık, BRCA1, BRCA2, APC ve TP53 gibi genlerde germ hattı mutasyon analiziyle belirlenir.\n- **Servikal kanser taraması** — Servikal kanser taraması Papanicolaou testiyle yapılır ve erken teşhisle mortaliteyi belirgin azaltmıştır.\n\n**Cevap: C** — Lösemi ve lenfoma sınıflaması\n\n**Özet.** Akış sitometrisi floresan işaretli antikorlarla tek tek hücreleri analiz eder; en sık lösemi ve lenfomaların sınıflandırılmasında, bazen DNA ploidisi ve hücre döngüsü için kullanılır.",
    "ses": "Akış sitometrisinin en sık kullanım alanı hangisidir?\nA, Karsinomda primer odak saptama\nBe, Solid tümör evrelemesi\nCe, Lösemi ve lenfoma sınıflaması\nDe, Kalıtsal yatkınlık taraması\nE, Servikal kanser taraması\nŞimdi seçeneklere tek tek bakalım.\nKarsinomda primer odak saptama immünohistokimyayla yapılır. Örneğin pe se a pozitifliği metastazda prostat primerini gösterir.\nSolid tümör evrelemesi primer tümör boyutu, bölgesel lenf düğümü ve uzak metastaza dayanan te ne me sistemiyle yapılır.\nLösemi ve lenfoma sınıflaması doğru. Akış sitometrisi ce de on dokuz, ce de üç, ce de otuz dört gibi yüzey belirteçleriyle en sık bu amaçla kullanılır.\nKalıtsal yatkınlık, be re ce a bir, be re ce a iki, a pe ce ve te pe elli üç gibi genlerde germ hattı mutasyon analiziyle belirlenir.\nServikal kanser taraması Papanikolau testiyle yapılır ve erken teşhisle mortaliteyi belirgin azaltmıştır.\nDoğru cevap Ce, Lösemi ve lenfoma sınıflaması\nAkış sitometrisi floresan işaretli antikorlarla tek tek hücreleri analiz eder. En sık lösemi ve lenfomaların sınıflandırılmasında, bazen de ne a ploidisi ve hücre döngüsü için kullanılır.",
    "kelime": 172
@@ -606,6 +767,7 @@
   {
    "no": 37,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Derecelendirmede değerlendirilen mimari bozulmaya örnek hangisidir?",
    "secenekler": {
     "A": "Bazal membranın aşılması",
@@ -615,6 +777,7 @@
     "E": "Tümör boyutunun artması"
    },
    "dogru": "B",
+   "ipucu": "Adenokarsinomda normal doku düzenini oluşturan yapının bozulmasını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Bazal membranın aşılması invazyonla ilgilidir; TNM'de T0 bazal membranı aşmamış karsinoma in situdur ve bu bir evreleme bilgisidir.",
@@ -624,6 +787,9 @@
     "E": "Tümör boyutu, lokal yayılımla birlikte evrelemenin T bileşenidir; derecelendirme ölçütü değildir."
    },
    "ozet": "Derecelendirme diferansiyasyon, mitoz sayısı, tümör nekrozu ve bez formasyonunun kaybı gibi mimari bozulmaya dayanır; amaç biyolojik agresifliği kaba tahmin etmektir.",
+   "sayfa": [
+    18
+   ],
    "metin": "**Soru.** Derecelendirmede değerlendirilen mimari bozulmaya örnek hangisidir?\n\n**A)** Bazal membranın aşılması · **B)** Bez formasyonunun kaybı · **C)** Lenf düğümü tutulumu · **D)** Uzak metastaz varlığı · **E)** Tümör boyutunun artması\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Bazal membranın aşılması** — Bazal membranın aşılması invazyonla ilgilidir; TNM'de T0 bazal membranı aşmamış karsinoma in situdur ve bu bir evreleme bilgisidir.\n- **Bez formasyonunun kaybı** — Bez formasyonunun kaybı doğru: diferansiyasyon, mitoz ve nekrozla birlikte derecelendirmede değerlendirilen mimari bozulma örneğidir.\n- **Lenf düğümü tutulumu** — Lenf düğümü tutulumu evrelemenin bileşenidir; TNM'de N kategorisiyle gösterilir, derecelendirmede yer almaz.\n- **Uzak metastaz varlığı** — Uzak metastaz varlığı evrelemenin ölçütüdür; M1 hastayı evre IV yapar.\n- **Tümör boyutunun artması** — Tümör boyutu, lokal yayılımla birlikte evrelemenin T bileşenidir; derecelendirme ölçütü değildir.\n\n**Cevap: B** — Bez formasyonunun kaybı\n\n**Özet.** Derecelendirme diferansiyasyon, mitoz sayısı, tümör nekrozu ve bez formasyonunun kaybı gibi mimari bozulmaya dayanır; amaç biyolojik agresifliği kaba tahmin etmektir.",
    "ses": "Derecelendirmede değerlendirilen mimari bozulmaya örnek hangisidir?\nA, Bazal membranın aşılması\nBe, Bez formasyonunun kaybı\nCe, Lenf düğümü tutulumu\nDe, Uzak metastaz varlığı\nE, Tümör boyutunun artması\nSeçenekleri sırayla değerlendirelim.\nBazal membranın aşılması invazyonla ilgilidir. Te ne mede te sıfır bazal membranı aşmamış karsinoma in situdur ve bu bir evreleme bilgisidir.\nBez formasyonunun kaybı doğru, diferansiyasyon, mitoz ve nekrozla birlikte derecelendirmede değerlendirilen mimari bozulma örneğidir.\nLenf düğümü tutulumu evrelemenin bileşenidir. Te ne mede ne kategorisiyle gösterilir, derecelendirmede yer almaz.\nUzak metastaz varlığı evrelemenin ölçütüdür. Me bir hastayı evre dört yapar.\nTümör boyutu, lokal yayılımla birlikte evrelemenin te bileşenidir. Derecelendirme ölçütü değildir.\nDoğru cevap Be, Bez formasyonunun kaybı\nDerecelendirme diferansiyasyon, mitoz sayısı, tümör nekrozu ve bez formasyonunun kaybı gibi mimari bozulmaya dayanır. Amaç biyolojik agresifliği kaba tahmin etmektir.",
    "kelime": 152
@@ -631,6 +797,7 @@
   {
    "no": 38,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "AJCC TNM sisteminde T0 neyi tanımlar?",
    "secenekler": {
     "A": "Lenf düğümü tutulumu yok",
@@ -640,6 +807,7 @@
     "E": "Artan tümör boyutu"
    },
    "dogru": "D",
+   "ipucu": "Tümörün henüz invazyon göstermediği durumu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Lenf düğümü tutulumunun olmaması N0 ile gösterilir; T kategorisi ise primer tümörü anlatır.",
@@ -649,6 +817,9 @@
     "E": "Artan tümör boyutu ve lokal invazyon T1–T4 kategorileriyle gösterilir."
    },
    "ozet": "TNM'de T primer tümörü, N bölgesel lenf düğümlerini, M uzak metastazı gösterir; T0 karsinoma in situ, T1–T4 artan boyut ve lokal invazyondur.",
+   "sayfa": [
+    21
+   ],
    "metin": "**Soru.** AJCC TNM sisteminde T0 neyi tanımlar?\n\n**A)** Lenf düğümü tutulumu yok · **B)** Uzak metastaz yok · **C)** Küçük, lokalize tümör · **D)** Karsinoma in situ · **E)** Artan tümör boyutu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Lenf düğümü tutulumu yok** — Lenf düğümü tutulumunun olmaması N0 ile gösterilir; T kategorisi ise primer tümörü anlatır.\n- **Uzak metastaz yok** — Uzak metastazın olmaması M0 ile gösterilir; M1 ise uzak metastazın varlığıdır.\n- **Küçük, lokalize tümör** — Küçük, lokalize tümör klinik evre I'in genel tanımıdır; TNM kategorisi değil, klinik evre karşılığıdır.\n- **Karsinoma in situ** — Karsinoma in situ doğru: T0 bazal membranı aşmamış karsinoma in situyu gösterir.\n- **Artan tümör boyutu** — Artan tümör boyutu ve lokal invazyon T1–T4 kategorileriyle gösterilir.\n\n**Cevap: D** — Karsinoma in situ\n\n**Özet.** TNM'de T primer tümörü, N bölgesel lenf düğümlerini, M uzak metastazı gösterir; T0 karsinoma in situ, T1–T4 artan boyut ve lokal invazyondur.",
    "ses": "A je ce ce te ne me sisteminde te sıfır neyi tanımlar?\nA, Lenf düğümü tutulumu yok\nBe, Uzak metastaz yok\nCe, Küçük, lokalize tümör\nDe, Karsinoma in situ\nE, Artan tümör boyutu\nHer seçeneği tek tek ele alalım.\nLenf düğümü tutulumunun olmaması ne sıfır ile gösterilir. Te kategorisi ise primer tümörü anlatır.\nUzak metastazın olmaması me sıfır ile gösterilir. Me bir ise uzak metastazın varlığıdır.\nKüçük, lokalize tümör klinik evre birin genel tanımıdır. Te ne me kategorisi değil, klinik evre karşılığıdır.\nKarsinoma in situ doğru, te sıfır bazal membranı aşmamış karsinoma in situyu gösterir.\nArtan tümör boyutu ve lokal invazyon te bir ile te dört kategorileriyle gösterilir.\nDoğru cevap De, Karsinoma in situ\nTe ne mede te primer tümörü, ne bölgesel lenf düğümlerini, me uzak metastazı gösterir. Te sıfır karsinoma in situ, te bir ile te dört artan boyut ve lokal invazyondur.",
    "kelime": 153
@@ -656,6 +827,7 @@
   {
    "no": 39,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Tümör ve çevre sınırlarının değerlendirilmesini sağlayan biyopsi yöntemi hangisidir?",
    "secenekler": {
     "A": "Eksizyonel biyopsi",
@@ -665,6 +837,7 @@
     "E": "Sıvı biyopsi"
    },
    "dogru": "A",
+   "ipucu": "Kitlenin bir kısmının değil tamamının çıkarıldığı yöntemi düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Eksizyonel biyopsi doğru: kitle tam çıkarıldığı için tümörle birlikte çevre sınırları da değerlendirilir.",
@@ -674,6 +847,9 @@
     "E": "Sıvı biyopsi, dolaşan tümör DNA'sı ve tümör hücrelerinin incelenmesidir; nüksün erken saptanmasında kullanılır."
    },
    "ozet": "Eksizyonel biyopsi kitlenin tamamını çıkarıp sınırları değerlendirir; insizyonel biyopsi tümörün bir kısmını alır, dondurulmuş kesit ise cerrahi sırasında hızlı tanı sağlar.",
+   "sayfa": [
+    25
+   ],
    "metin": "**Soru.** Tümör ve çevre sınırlarının değerlendirilmesini sağlayan biyopsi yöntemi hangisidir?\n\n**A)** Eksizyonel biyopsi · **B)** İnsizyonel biyopsi · **C)** İnce iğne aspirasyonu · **D)** Sitolojik smear · **E)** Sıvı biyopsi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Eksizyonel biyopsi** — Eksizyonel biyopsi doğru: kitle tam çıkarıldığı için tümörle birlikte çevre sınırları da değerlendirilir.\n- **İnsizyonel biyopsi** — İnsizyonel biyopsi tümörün yalnız bir kısmının alınmasıdır; özellikle büyük veya kritik lokalizasyonlu lezyonlarda tercih edilir.\n- **İnce iğne aspirasyonu** — İnce iğne aspirasyonunda hücreler aspire edilip yayma hazırlanır; yöntem minimal invaziv, hızlı ve ucuzdur.\n- **Sitolojik smear** — Sitolojik smear, neoplastik hücrelerin dökülmesine dayanır; servikal kanserde erken teşhisle mortaliteyi belirgin azaltmıştır.\n- **Sıvı biyopsi** — Sıvı biyopsi, dolaşan tümör DNA'sı ve tümör hücrelerinin incelenmesidir; nüksün erken saptanmasında kullanılır.\n\n**Cevap: A** — Eksizyonel biyopsi\n\n**Özet.** Eksizyonel biyopsi kitlenin tamamını çıkarıp sınırları değerlendirir; insizyonel biyopsi tümörün bir kısmını alır, dondurulmuş kesit ise cerrahi sırasında hızlı tanı sağlar.",
    "ses": "Tümör ve çevre sınırlarının değerlendirilmesini sağlayan biyopsi yöntemi hangisidir?\nA, Eksizyonel biyopsi\nBe, İnsizyonel biyopsi\nCe, İnce iğne aspirasyonu\nDe, Sitolojik smear\nE, Sıvı biyopsi\nŞıkları sırasıyla gözden geçirelim.\nEksizyonel biyopsi doğru, kitle tam çıkarıldığı için tümörle birlikte çevre sınırları da değerlendirilir.\nİnsizyonel biyopsi tümörün yalnız bir kısmının alınmasıdır. Özellikle büyük veya kritik lokalizasyonlu lezyonlarda tercih edilir.\nİnce iğne aspirasyonunda hücreler aspire edilip yayma hazırlanır. Yöntem minimal invaziv, hızlı ve ucuzdur.\nSitolojik smear, neoplastik hücrelerin dökülmesine dayanır. Servikal kanserde erken teşhisle mortaliteyi belirgin azaltmıştır.\nSıvı biyopsi, dolaşan tümör de ne a'sı ve tümör hücrelerinin incelenmesidir. Nüksün erken saptanmasında kullanılır.\nDoğru cevap A, Eksizyonel biyopsi\nEksizyonel biyopsi kitlenin tamamını çıkarıp sınırları değerlendirir. İnsizyonel biyopsi tümörün bir kısmını alır, dondurulmuş kesit ise cerrahi sırasında hızlı tanı sağlar.",
    "kelime": 151
@@ -681,6 +857,7 @@
   {
    "no": 40,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Sitolojik incelemenin temel prensibi hangisidir?",
    "secenekler": {
     "A": "Neoplastik hücrelerin daha yapışkan olması",
@@ -690,6 +867,7 @@
     "E": "Neoplastik hücrelerin kolay dökülmesi"
    },
    "dogru": "E",
+   "ipucu": "Tümörün birbirine tutunma gücü azalmış elemanlarının sıvılara nasıl geçtiğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Daha yapışkan olma ifadesi gerçeğin tersidir; neoplastik hücreler daha az yapışkandır ve bu yüzden kolayca dökülür.",
@@ -699,6 +877,9 @@
     "E": "Kolay dökülme doğru: neoplastik hücreler daha az yapışkandır ve sıvılara ya da yüzeylere kolayca dökülür."
    },
    "ozet": "Sitolojide neoplastik hücrelerin az yapışkan olup kolayca dökülmesinden yararlanılır; servikal smear, balgam, idrar ve vücut sıvılarında anaplazi ve atipiye bakılır.",
+   "sayfa": [
+    27
+   ],
    "metin": "**Soru.** Sitolojik incelemenin temel prensibi hangisidir?\n\n**A)** Neoplastik hücrelerin daha yapışkan olması · **B)** Mitoz sayısının artması · **C)** Antijenlerin monoklonal antikorla boyanması · **D)** Gen düzenlenmesinin PCR ile saptanması · **E)** Neoplastik hücrelerin kolay dökülmesi\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Neoplastik hücrelerin daha yapışkan olması** — Daha yapışkan olma ifadesi gerçeğin tersidir; neoplastik hücreler daha az yapışkandır ve bu yüzden kolayca dökülür.\n- **Mitoz sayısının artması** — Mitoz sayısı derecelendirmede değerlendirilen bir unsurdur; sitolojinin temel prensibi değildir.\n- **Antijenlerin monoklonal antikorla boyanması** — Spesifik antijenlerin parafin kesitlerde monoklonal antikorla boyanması immünohistokimyanın prensibidir.\n- **Gen düzenlenmesinin PCR ile saptanması** — Gen yeniden düzenlenmelerinin PCR ile saptanması moleküler tanıda klonalite belirlemedir.\n- **Neoplastik hücrelerin kolay dökülmesi** — Kolay dökülme doğru: neoplastik hücreler daha az yapışkandır ve sıvılara ya da yüzeylere kolayca dökülür.\n\n**Cevap: E** — Neoplastik hücrelerin kolay dökülmesi\n\n**Özet.** Sitolojide neoplastik hücrelerin az yapışkan olup kolayca dökülmesinden yararlanılır; servikal smear, balgam, idrar ve vücut sıvılarında anaplazi ve atipiye bakılır.",
    "ses": "Sitolojik incelemenin temel prensibi hangisidir?\nA, Neoplastik hücrelerin daha yapışkan olması\nBe, Mitoz sayısının artması\nCe, Antijenlerin monoklonal antikorla boyanması\nDe, Gen düzenlenmesinin pe ce re ile saptanması\nE, Neoplastik hücrelerin kolay dökülmesi\nŞimdi seçeneklere tek tek bakalım.\nDaha yapışkan olma ifadesi gerçeğin tersidir. Neoplastik hücreler daha az yapışkandır ve bu yüzden kolayca dökülür.\nMitoz sayısı derecelendirmede değerlendirilen bir unsurdur. Sitolojinin temel prensibi değildir.\nSpesifik antijenlerin parafin kesitlerde monoklonal antikorla boyanması immünohistokimyanın prensibidir.\nGen yeniden düzenlenmelerinin pe ce re ile saptanması moleküler tanıda klonalite belirlemedir.\nKolay dökülme doğru, neoplastik hücreler daha az yapışkandır ve sıvılara ya da yüzeylere kolayca dökülür.\nDoğru cevap E, Neoplastik hücrelerin kolay dökülmesi\nSitolojide neoplastik hücrelerin az yapışkan olup kolayca dökülmesinden yararlanılır. Servikal smear, balgam, idrar ve vücut sıvılarında anaplazi ve atipiye bakılır.",
    "kelime": 161
@@ -706,6 +887,7 @@
   {
    "no": 41,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "İmmünohistokimyada CD45 pozitifliği hangi tümörü düşündürür?",
    "secenekler": {
     "A": "Karsinom",
@@ -715,6 +897,7 @@
     "E": "Ewing sarkomu"
    },
    "dogru": "C",
+   "ipucu": "Sitokeratinin epitel kökenini gösterdiği gibi, bu belirtecin hangi hücre soyuna ait olduğunu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Karsinom, sitokeratin pozitifliğiyle gösterilir; CD45 karsinom belirteci değildir.",
@@ -724,6 +907,9 @@
     "E": "Ewing sarkomu 11;22 translokasyonu ve EWS–FLI1 füzyon geniyle tanınır."
    },
    "ozet": "İmmünohistokimyada sitokeratin karsinomu, CD45 lenfoid tümörü, PSA ise metastazda prostat primerini gösterir.",
+   "sayfa": [
+    28
+   ],
    "metin": "**Soru.** İmmünohistokimyada CD45 pozitifliği hangi tümörü düşündürür?\n\n**A)** Karsinom · **B)** Metastatik prostat karsinomu · **C)** Lenfoid tümör · **D)** Yolk kesesi tümörü · **E)** Ewing sarkomu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Karsinom** — Karsinom, sitokeratin pozitifliğiyle gösterilir; CD45 karsinom belirteci değildir.\n- **Metastatik prostat karsinomu** — Metastatik prostat karsinomu, primer odak saptamada PSA pozitifliğiyle gösterilir.\n- **Lenfoid tümör** — Lenfoid tümör doğru: immünohistokimyada CD45 pozitifliği lenfoid tümörü gösterir.\n- **Yolk kesesi tümörü** — Yolk kesesi tümörü serum AFP yüksekliğiyle ilişkilidir; CD45 ile gösterilmez.\n- **Ewing sarkomu** — Ewing sarkomu 11;22 translokasyonu ve EWS–FLI1 füzyon geniyle tanınır.\n\n**Cevap: C** — Lenfoid tümör\n\n**Özet.** İmmünohistokimyada sitokeratin karsinomu, CD45 lenfoid tümörü, PSA ise metastazda prostat primerini gösterir.",
    "ses": "İmmünohistokimyada ce de kırk beş pozitifliği hangi tümörü düşündürür?\nA, Karsinom\nBe, Metastatik prostat karsinomu\nCe, Lenfoid tümör\nDe, Yolk kesesi tümörü\nE, Yuving sarkomu\nSeçenekleri sırayla değerlendirelim.\nKarsinom, sitokeratin pozitifliğiyle gösterilir. Ce de kırk beş karsinom belirteci değildir.\nMetastatik prostat karsinomu, primer odak saptamada pe se a pozitifliğiyle gösterilir.\nLenfoid tümör doğru, immünohistokimyada ce de kırk beş pozitifliği lenfoid tümörü gösterir.\nYolk kesesi tümörü serum a fe pe yüksekliğiyle ilişkilidir. Ce de kırk beş ile gösterilmez.\nYuving sarkomu on bir yirmi iki translokasyonu ve e çift ve se fe le i bir füzyon geniyle tanınır.\nDoğru cevap Ce, Lenfoid tümör\nİmmünohistokimyada sitokeratin karsinomu, ce de kırk beş lenfoid tümörü, pe se a ise metastazda prostat primerini gösterir.",
    "kelime": 115
@@ -731,6 +917,7 @@
   {
    "no": 42,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "CA 19-9 ile ilişkili tümörler hangileridir?",
    "secenekler": {
     "A": "Epitelyal over karsinomları",
@@ -740,6 +927,7 @@
     "E": "Yolk kesesi tümörleri"
    },
    "dogru": "B",
+   "ipucu": "CA-125 ile karıştırma; bu belirteç sindirim sistemine ait organlarla ilişkilidir.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Epitelyal over karsinomları CA-125 ile ilişkilidir; CA 19-9 ile eşleşmez.",
@@ -749,6 +937,9 @@
     "E": "Yolk kesesi tümörleri AFP yüksekliğiyle seyreder; CA 19-9 bu tümörlerin belirteci değildir."
    },
    "ozet": "CA 19-9 pankreas ve safra yolları, CA-125 epitelyal over, AFP hepatoselüler karsinom ve yolk kesesi tümörleriyle ilişkilidir.",
+   "sayfa": [
+    31
+   ],
    "metin": "**Soru.** CA 19-9 ile ilişkili tümörler hangileridir?\n\n**A)** Epitelyal over karsinomları · **B)** Pankreas ve safra yolları · **C)** Prostat karsinomu · **D)** Hepatoselüler karsinom · **E)** Yolk kesesi tümörleri\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Epitelyal over karsinomları** — Epitelyal over karsinomları CA-125 ile ilişkilidir; CA 19-9 ile eşleşmez.\n- **Pankreas ve safra yolları** — Pankreas ve safra yolları doğru: CA 19-9 pankreas, safra yolları ve bazı gastrointestinal tümörlerle ilişkilidir.\n- **Prostat karsinomu** — Prostat karsinomu PSA ile izlenir; PSA benign prostat hiperplazisinde de artabilir.\n- **Hepatoselüler karsinom** — Hepatoselüler karsinom AFP ile ilişkilidir; AFP yolk kesesi tümörlerinde de yükselir.\n- **Yolk kesesi tümörleri** — Yolk kesesi tümörleri AFP yüksekliğiyle seyreder; CA 19-9 bu tümörlerin belirteci değildir.\n\n**Cevap: B** — Pankreas ve safra yolları\n\n**Özet.** CA 19-9 pankreas ve safra yolları, CA-125 epitelyal over, AFP hepatoselüler karsinom ve yolk kesesi tümörleriyle ilişkilidir.",
    "ses": "Ce a on dokuz dokuz ile ilişkili tümörler hangileridir?\nA, Epitelyal over karsinomları\nBe, Pankreas ve safra yolları\nCe, Prostat karsinomu\nDe, Hepatoselüler karsinom\nE, Yolk kesesi tümörleri\nHer seçeneği tek tek ele alalım.\nEpitelyal over karsinomları ce a yüz yirmi beş ile ilişkilidir. Ce a on dokuz dokuz ile eşleşmez.\nPankreas ve safra yolları doğru, ce a on dokuz dokuz pankreas, safra yolları ve bazı gastrointestinal tümörlerle ilişkilidir.\nProstat karsinomu pe se a ile izlenir. Pe se a benign prostat hiperplazisinde de artabilir.\nHepatoselüler karsinom a fe pe ile ilişkilidir. A fe pe yolk kesesi tümörlerinde de yükselir.\nYolk kesesi tümörleri a fe pe yüksekliğiyle seyreder. Ce a on dokuz dokuz bu tümörlerin belirteci değildir.\nDoğru cevap Be, Pankreas ve safra yolları\nCe a on dokuz dokuz pankreas ve safra yolları, ce a yüz yirmi beş epitelyal over, a fe pe hepatoselüler karsinom ve yolk kesesi tümörleriyle ilişkilidir.",
    "kelime": 145
@@ -756,6 +947,7 @@
   {
    "no": 43,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Neoplastik ve reaktif lenfoid proliferasyonu ayırmada kullanılan moleküler yaklaşım hangisidir?",
    "secenekler": {
     "A": "Klonalite belirleme",
@@ -765,6 +957,7 @@
     "E": "Sıvı biyopsi"
    },
    "dogru": "A",
+   "ipucu": "İmmünoglobulin ve T hücresi reseptörü gen yeniden düzenlenmelerinin tek tip mi çok tip mi olduğunu düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Klonalite belirleme doğru: gen yeniden düzenlenmeleri PCR ile saptanır; monoklonal proliferasyon neoplastik, poliklonal proliferasyon reaktiftir.",
@@ -774,6 +967,9 @@
     "E": "Sıvı biyopsi, dolaşan tümör DNA'sı ve tümör hücrelerinin incelenmesidir; nüksün erken saptanmasında kullanılabilir."
    },
    "ozet": "Klonalite belirlemede immünoglobulin veya TCR gen yeniden düzenlenmeleri PCR ile saptanır; monoklonal proliferasyon neoplastik, poliklonal proliferasyon reaktiftir.",
+   "sayfa": [
+    34
+   ],
    "metin": "**Soru.** Neoplastik ve reaktif lenfoid proliferasyonu ayırmada kullanılan moleküler yaklaşım hangisidir?\n\n**A)** Klonalite belirleme · **B)** Amplifikasyon saptama · **C)** Germ hattı mutasyon analizi · **D)** Serum belirteç ölçümü · **E)** Sıvı biyopsi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Klonalite belirleme** — Klonalite belirleme doğru: gen yeniden düzenlenmeleri PCR ile saptanır; monoklonal proliferasyon neoplastik, poliklonal proliferasyon reaktiftir.\n- **Amplifikasyon saptama** — Amplifikasyon saptama, HER2 veya MYCN gibi genlerin kopya artışını göstererek prognoz bilgisi verir.\n- **Germ hattı mutasyon analizi** — Germ hattı mutasyon analizi kalıtsal kanser yatkınlığını, örneğin BRCA1 ve BRCA2 mutasyonlarını belirler.\n- **Serum belirteç ölçümü** — Serum tümör belirteçleri tedavi yanıtını izleme ve nüks saptamada değerlidir; klonalite göstermez.\n- **Sıvı biyopsi** — Sıvı biyopsi, dolaşan tümör DNA'sı ve tümör hücrelerinin incelenmesidir; nüksün erken saptanmasında kullanılabilir.\n\n**Cevap: A** — Klonalite belirleme\n\n**Özet.** Klonalite belirlemede immünoglobulin veya TCR gen yeniden düzenlenmeleri PCR ile saptanır; monoklonal proliferasyon neoplastik, poliklonal proliferasyon reaktiftir.",
    "ses": "Neoplastik ve reaktif lenfoid proliferasyonu ayırmada kullanılan moleküler yaklaşım hangisidir?\nA, Klonalite belirleme\nBe, Amplifikasyon saptama\nCe, Germ hattı mutasyon analizi\nDe, Serum belirteç ölçümü\nE, Sıvı biyopsi\nŞıkları sırasıyla gözden geçirelim.\nKlonalite belirleme doğru, gen yeniden düzenlenmeleri pe ce re ile saptanır. Monoklonal proliferasyon neoplastik, poliklonal proliferasyon reaktiftir.\nAmplifikasyon saptama, her tu veya mik en gibi genlerin kopya artışını göstererek prognoz bilgisi verir.\nGerm hattı mutasyon analizi kalıtsal kanser yatkınlığını, örneğin be re ce a bir ve be re ce a iki mutasyonlarını belirler.\nSerum tümör belirteçleri tedavi yanıtını izleme ve nüks saptamada değerlidir. Klonalite göstermez.\nSıvı biyopsi, dolaşan tümör de ne a'sı ve tümör hücrelerinin incelenmesidir. Nüksün erken saptanmasında kullanılabilir.\nDoğru cevap A, Klonalite belirleme\nKlonalite belirlemede immünoglobulin veya te ce re gen yeniden düzenlenmeleri pe ce re ile saptanır. Monoklonal proliferasyon neoplastik, poliklonal proliferasyon reaktiftir.",
    "kelime": 150
@@ -781,6 +977,7 @@
   {
    "no": 44,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "BRAF V600E mutasyonu hangi kanserlerin bir alt grubunda görülür?",
    "secenekler": {
     "A": "Nöroblastom",
@@ -790,6 +987,7 @@
     "E": "Polisitemia vera"
    },
    "dogru": "D",
+   "ipucu": "Pigment hücresi kökenli bir deri tümörüyle birlikte bir endokrin ve bir sindirim sistemi kanserini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Nöroblastomda kötü prognoz göstergesi MYCN amplifikasyonudur; BRAF V600E mutasyonu değildir.",
@@ -799,6 +997,9 @@
     "E": "Polisitemia vera, tanısal moleküler değişiklik olarak JAK2 nokta mutasyonlarıyla ilişkilidir."
    },
    "ozet": "BRAF V600E melanom, tiroid ve kolon kanserlerinin bir alt grubunda görülür; HER2 amplifikasyonu memede, MYCN amplifikasyonu nöroblastomda kötü prognoz göstergesidir.",
+   "sayfa": [
+    35
+   ],
    "metin": "**Soru.** BRAF V600E mutasyonu hangi kanserlerin bir alt grubunda görülür?\n\n**A)** Nöroblastom · **B)** Ewing sarkomu · **C)** Kronik miyeloid lösemi · **D)** Melanom, tiroid ve kolon · **E)** Polisitemia vera\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Nöroblastom** — Nöroblastomda kötü prognoz göstergesi MYCN amplifikasyonudur; BRAF V600E mutasyonu değildir.\n- **Ewing sarkomu** — Ewing sarkomu 11;22 translokasyonu sonucu oluşan EWS–FLI1 füzyon geniyle tanınır.\n- **Kronik miyeloid lösemi** — Kronik miyeloid lösemi BCR-ABL füzyon transkriptleriyle tanınır; tedavisinde BCR-ABL tirozin kinaz inhibitörleri kullanılır.\n- **Melanom, tiroid ve kolon** — Melanom, tiroid ve kolon doğru: BRAF V600E bu kanserlerin bir alt grubunda görülür ve V600E inhibitörleriyle hedeflenebilir.\n- **Polisitemia vera** — Polisitemia vera, tanısal moleküler değişiklik olarak JAK2 nokta mutasyonlarıyla ilişkilidir.\n\n**Cevap: D** — Melanom, tiroid ve kolon\n\n**Özet.** BRAF V600E melanom, tiroid ve kolon kanserlerinin bir alt grubunda görülür; HER2 amplifikasyonu memede, MYCN amplifikasyonu nöroblastomda kötü prognoz göstergesidir.",
    "ses": "Be raf ve altı yüz e mutasyonu hangi kanserlerin bir alt grubunda görülür?\nA, Nöroblastom\nBe, Yuving sarkomu\nCe, Kronik miyeloid lösemi\nDe, Melanom, tiroid ve kolon\nE, Polisitemia vera\nŞimdi seçeneklere tek tek bakalım.\nNöroblastomda kötü prognoz göstergesi mik en amplifikasyonudur. Be raf ve altı yüz e mutasyonu değildir.\nYuving sarkomu on bir yirmi iki translokasyonu sonucu oluşan e çift ve se fe le i bir füzyon geniyle tanınır.\nKronik miyeloid lösemi be ce re a be le füzyon transkriptleriyle tanınır. Tedavisinde be ce re a be le tirozin kinaz inhibitörleri kullanılır.\nMelanom, tiroid ve kolon doğru, be raf ve altı yüz e bu kanserlerin bir alt grubunda görülür ve ve altı yüz e inhibitörleriyle hedeflenebilir.\nPolisitemia vera, tanısal moleküler değişiklik olarak je a ka iki nokta mutasyonlarıyla ilişkilidir.\nDoğru cevap De, Melanom, tiroid ve kolon\nBe raf ve altı yüz e melanom, tiroid ve kolon kanserlerinin bir alt grubunda görülür. Her tu amplifikasyonu memede, mik en amplifikasyonu nöroblastomda kötü prognoz göstergesidir.",
    "kelime": 147
@@ -806,6 +1007,7 @@
   {
    "no": 45,
    "tur": "ornek",
+   "zorluk": "kolay",
    "soru": "APC germ hattı mutasyonu hangi kalıtsal tabloyla ilişkilidir?",
    "secenekler": {
     "A": "Li–Fraumeni sendromu",
@@ -815,6 +1017,7 @@
     "E": "Polisitemia vera"
    },
    "dogru": "C",
+   "ipucu": "Kalın bağırsağı tutan kalıtsal tabloyu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Li–Fraumeni sendromu, germ hattı TP53 mutasyonuyla ilişkilidir.",
@@ -824,6 +1027,9 @@
     "E": "Polisitemia vera, JAK2 nokta mutasyonuyla tanınan bir hastalıktır; germ hattı APC mutasyonuyla ilişkili değildir."
    },
    "ozet": "Germ hattında BRCA1/BRCA2 meme ve over kanseri riskiyle ilişkilidir; APC ailesel adenomatöz polipozis koliyle, TP53 ise Li–Fraumeni sendromuyla eşleşir.",
+   "sayfa": [
+    38
+   ],
    "metin": "**Soru.** APC germ hattı mutasyonu hangi kalıtsal tabloyla ilişkilidir?\n\n**A)** Li–Fraumeni sendromu · **B)** Meme ve over kanseri riski · **C)** Ailesel adenomatöz polipozis koli · **D)** Nöroblastom · **E)** Polisitemia vera\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Li–Fraumeni sendromu** — Li–Fraumeni sendromu, germ hattı TP53 mutasyonuyla ilişkilidir.\n- **Meme ve over kanseri riski** — Meme ve over kanseri riski BRCA1 ve BRCA2 germ hattı mutasyonlarıyla artar.\n- **Ailesel adenomatöz polipozis koli** — Ailesel adenomatöz polipozis koli doğru: APC germ hattı mutasyonu bu kalıtsal tabloyla ilişkilidir.\n- **Nöroblastom** — Nöroblastom, MYCN amplifikasyonuyla kötü prognoz gösteren tümördür; kalıtsal APC mutasyonuyla eşleşmez.\n- **Polisitemia vera** — Polisitemia vera, JAK2 nokta mutasyonuyla tanınan bir hastalıktır; germ hattı APC mutasyonuyla ilişkili değildir.\n\n**Cevap: C** — Ailesel adenomatöz polipozis koli\n\n**Özet.** Germ hattında BRCA1/BRCA2 meme ve over kanseri riskiyle ilişkilidir; APC ailesel adenomatöz polipozis koliyle, TP53 ise Li–Fraumeni sendromuyla eşleşir.",
    "ses": "A pe ce germ hattı mutasyonu hangi kalıtsal tabloyla ilişkilidir?\nA, Li Fraumeni sendromu\nBe, Meme ve over kanseri riski\nCe, Ailesel adenomatöz polipozis koli\nDe, Nöroblastom\nE, Polisitemia vera\nSeçenekleri sırayla değerlendirelim.\nLi Fraumeni sendromu, germ hattı te pe elli üç mutasyonuyla ilişkilidir.\nMeme ve over kanseri riski be re ce a bir ve be re ce a iki germ hattı mutasyonlarıyla artar.\nAilesel adenomatöz polipozis koli doğru, a pe ce germ hattı mutasyonu bu kalıtsal tabloyla ilişkilidir.\nNöroblastom, mik en amplifikasyonuyla kötü prognoz gösteren tümördür. Kalıtsal a pe ce mutasyonuyla eşleşmez.\nPolisitemia vera, je a ka iki nokta mutasyonuyla tanınan bir hastalıktır. Germ hattı a pe ce mutasyonuyla ilişkili değildir.\nDoğru cevap Ce, Ailesel adenomatöz polipozis koli\nGerm hattında be re ce a bir ve be re ce a iki meme ve over kanseri riskiyle ilişkilidir. A pe ce ailesel adenomatöz polipozis koliyle, te pe elli üç ise Li Fraumeni sendromuyla eşleşir.",
    "kelime": 144
@@ -831,6 +1037,7 @@
   {
    "no": 46,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Hipermutasyonlu tümörlerde doku tipinden bağımsız onay alan ilk tedavi örnekleri hangisidir?",
    "secenekler": {
     "A": "BCR-ABL tirozin kinaz inhibitörleri",
@@ -840,6 +1047,7 @@
     "E": "EGFR hedefli ilaçlar"
    },
    "dogru": "B",
+   "ipucu": "Uyumsuzluk onarımı kusurlu tümörlerdeki çok sayıda neoantijenin neden tedavi fırsatı yarattığını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "BCR-ABL tirozin kinaz inhibitörleri kronik miyeloid lösemide kullanılan hedefe yönelik tedavilerdir.",
@@ -849,6 +1057,9 @@
     "E": "EGFR hedefli ilaçlar tek tek genlerdeki mutasyonlara yönelik hedefli tedavilerdendir; hipermutasyon yolunun tedavisi değildir."
    },
    "ozet": "Uyumsuzluk onarımı veya DNA polimeraz proofreading kusurlu tümörlerde çok neoantijen bulunur; bunlar PD-1, PD-L1 ve CTLA-4 inhibitörlerine daha iyi yanıt verir.",
+   "sayfa": [
+    42
+   ],
    "metin": "**Soru.** Hipermutasyonlu tümörlerde doku tipinden bağımsız onay alan ilk tedavi örnekleri hangisidir?\n\n**A)** BCR-ABL tirozin kinaz inhibitörleri · **B)** İmmün kontrol noktası inhibitörleri · **C)** HER2 hedefli antikorlar · **D)** BRAF V600E inhibitörleri · **E)** EGFR hedefli ilaçlar\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **BCR-ABL tirozin kinaz inhibitörleri** — BCR-ABL tirozin kinaz inhibitörleri kronik miyeloid lösemide kullanılan hedefe yönelik tedavilerdir.\n- **İmmün kontrol noktası inhibitörleri** — İmmün kontrol noktası inhibitörleri doğru: yüksek mutasyon yüklü tümörler bunlara daha iyi yanıt verir ve bunlar doku tipinden bağımsız onay alan ilk örneklerdir.\n- **HER2 hedefli antikorlar** — HER2 hedefli antikorlar HER2 pozitif meme kanserinde kullanılır; hipermutasyon fenotipine yönelik değildir.\n- **BRAF V600E inhibitörleri** — BRAF V600E inhibitörleri V600E mutant melanom ve diğer bazı tümörlerde kullanılır; tek bir gen mutasyonunu hedefler.\n- **EGFR hedefli ilaçlar** — EGFR hedefli ilaçlar tek tek genlerdeki mutasyonlara yönelik hedefli tedavilerdendir; hipermutasyon yolunun tedavisi değildir.\n\n**Cevap: B** — İmmün kontrol noktası inhibitörleri\n\n**Özet.** Uyumsuzluk onarımı veya DNA polimeraz proofreading kusurlu tümörlerde çok neoantijen bulunur; bunlar PD-1, PD-L1 ve CTLA-4 inhibitörlerine daha iyi yanıt verir.",
    "ses": "Hipermutasyonlu tümörlerde doku tipinden bağımsız onay alan ilk tedavi örnekleri hangisidir?\nA, Be ce re a be le tirozin kinaz inhibitörleri\nBe, İmmün kontrol noktası inhibitörleri\nCe, Her tu hedefli antikorlar\nDe, Be raf ve altı yüz e inhibitörleri\nE, E ge fe re hedefli ilaçlar\nHer seçeneği tek tek ele alalım.\nBe ce re a be le tirozin kinaz inhibitörleri kronik miyeloid lösemide kullanılan hedefe yönelik tedavilerdir.\nİmmün kontrol noktası inhibitörleri doğru, yüksek mutasyon yüklü tümörler bunlara daha iyi yanıt verir ve bunlar doku tipinden bağımsız onay alan ilk örneklerdir.\nHer tu hedefli antikorlar her tu pozitif meme kanserinde kullanılır. Hipermutasyon fenotipine yönelik değildir.\nBe raf ve altı yüz e inhibitörleri ve altı yüz e mutant melanom ve diğer bazı tümörlerde kullanılır. Tek bir gen mutasyonunu hedefler.\nE ge fe re hedefli ilaçlar tek tek genlerdeki mutasyonlara yönelik hedefli tedavilerdendir. Hipermutasyon yolunun tedavisi değildir.\nDoğru cevap Be, İmmün kontrol noktası inhibitörleri\nUyumsuzluk onarımı veya de ne a polimeraz pruf riding kusurlu tümörlerde çok neoantijen bulunur. Bunlar pe de bir, pe de le bir ve ce te le a dört inhibitörlerine daha iyi yanıt verir.",
    "kelime": 177

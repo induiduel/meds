@@ -1,6 +1,6 @@
 # Patoloji — Alternatif Sesli Soru Çözücü
 
-# 01 · Patolojiye Giriş
+# Ders 1 (01) · Patolojiye Giriş
 
 _41 soru (örnek + çıkmış)_
 
@@ -15,8 +15,8 @@ _41 soru (örnek + çıkmış)_
 - **Etiyoloji** — Etiyoloji, hastalığın nedenidir; genetik ya da edinsel olabilir, ama nedenin başlattığı olaylar zincirini anlatmaz.
 - **Patogenez** — Patogenez doğru: etiyolojik ajanın başlattığı moleküler, hücresel ve doku düzeyindeki olaylar zinciri, yani gelişim mekanizmasıdır.
 - **Morfoloji** — Morfolojik değişiklikler, hastalığın makroskobik ve mikroskobik yapısal bulgularıdır; mekanizmayı değil, ortaya çıkan görünümü tanımlar.
-- **Prognoz** — Prognoz ile karıştırılabilir: Patoloji raporu prognoza yön verir, ama gelişim mekanizması başka bir terimle anlatılır.
-- **Epidemiyoloji** — Hastalık sürecinin dört öğesi etiyoloji, patogenez, morfolojik değişiklikler ve klinik sonuçlardır. Epidemiyoloji bu sorudaki ayrımı sağlamaz.
+- **Prognoz** — Prognoz, hastalığın beklenen seyri ve iyileşme olasılığıdır; etiyolojik ajanın başlattığı gelişim mekanizmasını değil, klinik öngörüyü ifade eder.
+- **Epidemiyoloji** — Epidemiyoloji, hastalıkların toplumda görülme sıklığını ve dağılımını inceler; hücresel ve moleküler gelişim mekanizması ise patogenezdir.
 
 **Cevap: B** — Patogenez
 
@@ -195,7 +195,7 @@ _41 soru (örnek + çıkmış)_
 - **ASC-H** — ASC-H, yüksek dereceli skuamöz intraepitelyal lezyonun dışlanamadığı atipik skuamöz hücrelerdir; dikkat edilmesi gereken gruptur.
 - **LSIL** — LSIL, düşük dereceli skuamöz intraepitelyal lezyondur ve HPV ilişkili olabilir; atipik hücre değil, lezyon kategorisidir.
 - **HSIL** — HSIL, yüksek dereceli skuamöz intraepitelyal lezyondur; ileri tetkik gerektirir.
-- **AGC** — AGC ile karıştırılabilir: Bethesda'da atipik skuamöz hücre kısaltmaları ASC ile başlar.
+- **AGC** — AGC (atipik glandüler hücreler), endoservikal veya endometriyal bez epitelindeki atipiyi tanımlar; yassı epiteldeki önemi belirsiz atipi ise ASC-US olarak kısaltılır.
 - **ASC-US** — ASC-US doğru: önemi belirsiz atipik skuamöz hücreler demektir; sondaki US, belirsiz önem anlamındadır.
 
 **Cevap: E** — ASC-US
@@ -232,7 +232,7 @@ _41 soru (örnek + çıkmış)_
 - **May-Grünwald–Giemsa** — May-Grünwald–Giemsa doğru: havada kuruyan preparatlar MGG, Wright ve Diff-Quick ile boyanır.
 - **Hematoksilen–eozin** — Hematoksilen–eozin, sitolojide alkol fiksasyonlu preparatlara uygulanır; histolojide de rutin boyadır.
 - **İmmünohistokimya** — İmmünohistokimya, antijen–antikor temelli boyamadır; sitolojide alkol fiksasyonlu preparatlarda kullanılır.
-- **PAS** — PAS, glikojen ve nötral mukopolisakkaritleri gösteren histokimyasal boyadır; havada kuruyan sitoloji boyaları arasında yer almaz.
+- **PAS** — Periyodik asit-Schiff (PAS), dokuda glikojen, bazal membran ve mantar duvarını gösteren histokimyasal bir boyadır; havada kurutulan yaymalarda ise May-Grünwald–Giemsa kullanılır.
 
 **Cevap: B** — May-Grünwald–Giemsa
 
@@ -322,7 +322,7 @@ _41 soru (örnek + çıkmış)_
 - **Tümör baskılayıcı gen** — Tümör baskılayıcı gen doğru: BRCA1 ve BRCA2 DNA hasarını onarır, kontrolsüz çoğalmayı ve kanser gelişimini önler.
 - **Kromozomal anomali** — Kromozomal anomali, Trizomi 21 gibi kromozom sayısının değiştiği durumlardır; BRCA ise bir gen mutasyonu örneğidir.
 - **Edinsel etken** — Edinsel etken enfeksiyon, kimyasal ve fiziksel ajanlar gibi dış nedenlerdir; BRCA mutasyonu genetik, yani intrinsik nedendir.
-- **Büyüme faktörü geni** — BRCA genleri büyümeyi uyarmaz, onarım yaparak tümör gelişimini baskılar. Büyüme faktörü geni bu sorudaki ayrımı sağlamaz.
+- **Büyüme faktörü geni** — Büyüme faktörü genleri hücre çoğalmasını uyaran proto-onkogenlerdir; BRCA1 ve BRCA2 ise çift zincir DNA kırıklarını onararak genom bütünlüğünü koruyan tümör baskılayıcı genlerdir.
 
 **Cevap: B** — Tümör baskılayıcı gen
 
@@ -678,10 +678,10 @@ _41 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Periferik yerleşimli** — Solunum yolu sitolojisinin özellikle yararlı olduğu kitleler merkezde yer alır. Periferik yerleşimli kitleler bu sorudaki ayrımı sağlamaz.
+- **Periferik yerleşimli** — Periferik yerleşimli akciğer kitleleri ana bronş ağacına uzak olduğundan balgam ve bronş yıkama sitolojisine hücre dökülmesi azdır; bu kitlelerde transtorasik ince iğne aspirasyonu tercih edilir.
 - **Santral yerleşimli** — Santral yerleşimli doğru: balgam, bronş yıkama, BAL ve fırçalama özellikle santral yerleşimli kitlelerde yararlıdır.
 - **Yüzeyel yerleşimli** — Yüzeyel yerleşimli kitleler, yani tiroid, meme ve lenf nodu, ince iğne aspirasyon sitolojisinin endikasyonlarıdır.
-- **Plevraya komşu** — Plevraya komşu kitleler ile karıştırılabilir: Plevral effüzyonlar seröz sıvı sitolojisiyle malignite açısından incelenir.
+- **Plevraya komşu** — Plevraya komşu kitleler bronş lümenine açılmadığından solunum yolu sitolojisinde düşük duyarlılık gösterir; plevral boşluğa yayılım varsa torasentez sıvısı veya iğne biyopsisi ile değerlendirilir.
 - **Diyafragmaya komşu** — Diyafragmaya komşu kitleler vurgulanan alan değildir; derin kitlelerde ultrason ya da tomografi eşliğinde ince iğne aspirasyonu yapılır.
 
 **Cevap: B** — Santral yerleşimli
@@ -742,7 +742,7 @@ _41 soru (örnek + çıkmış)_
 
 **Özet.** Likit biyopsi dolaşımdaki tümör DNA'sı, RNA'sı ve hücrelerini inceler; patolojinin geleceğinde yapay zekâ destekli tanı ve multidisipliner çalışmayla birlikte yer alır.
 
-# 02 · Hücre Hasarı ve Nekroz – I
+# Ders 2 (02) · Hücre Hasarı ve Nekroz – I
 
 _33 soru (örnek + çıkmış)_
 
@@ -775,7 +775,7 @@ _33 soru (örnek + çıkmış)_
 - **Na⁺/K⁺ ATPaz pompasının bozulması** — Na⁺/K⁺ ATPaz pompasının bozulması doğru: ATP eksikliğinde pompa çalışamaz, sodyum ve su hücre içine girer, hücre şişer.
 - **Lizozom rüptürü** — Lizozom rüptürü, nekrozda elektron mikroskobunda görülen bir bulgudur; geri dönüşümlü şişmenin mekanizması değildir.
 - **DNA parçalanması** — DNA ve kromatin parçalanması nekrozda piknoz, karyoreksis ve karyolizise yol açar; hücresel şişmeyle ilgili değildir.
-- **Kaspaz aktivasyonu** — Hücresel şişme, enerji eksikliğinde suyun hücreye girmesiyle oluşan geri dönüşümlü bir değişikliktir. Kaspaz aktivasyonu bu sorudaki ayrımı sağlamaz.
+- **Kaspaz aktivasyonu** — Kaspaz aktivasyonu apoptozun geri dönüşümsüz uygulama basamağıdır; hücresel şişme ise ATP azalmasına bağlı sodyum-potasyum pompasının bozulmasıyla gelişen erken ve geri dönüşümlü bir değişikliktir.
 - **Trigliserid birikimi** — Trigliserid birikimi yağlanmanın, yani steatozun tanımıdır; ayrı bir geri dönüşümlü değişikliktir, şişmenin mekanizması değildir.
 
 **Cevap: A** — Na⁺/K⁺ ATPaz pompasının bozulması
@@ -864,9 +864,9 @@ _33 soru (örnek + çıkmış)_
 
 - **Koagülatif** — Koagülatif nekroz doğru: kalp, böbrek ve dalaktaki iskemik enfarktların tipik nekrozudur; doku sert, soluk ve kurudur.
 - **Sıvılaşma** — Sıvılaşma nekrozunda doku tamamen erir ve viskoz sıvıya döner; iskemik enfarktlarda ise istisna olarak beyinde görülür.
-- **Kazeöz** — Arter tıkanmasına bağlı böbrek enfarktüsü kama şeklinde, belirgin kenarlı bir koagülatif nekroz alanıdır. Kazeöz nekroz bu sorudaki ayrımı sağlamaz.
-- **Yağ** — Yağ nekrozu ile karıştırılabilir: Böbrekte iskemik enfarkt, proteinlerin denatüre olduğu ve proteolizin geciktiği nekroz tipiyle gelişir.
-- **Fibrinoid** — İskemik enfarktın mikroskobisinde çekirdek kaybına karşın hücre konturları korunur. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz.
+- **Kazeöz** — Kazeöz nekroz, özellikle tüberküloz granülomlarının merkezinde görülen ve doku çatısının tamamen silindiği peynirimsi nekrozdur; böbreğin iskemik enfarktında ise koagülatif nekroz gelişir.
+- **Yağ** — Yağ nekrozu, akut pankreatit veya meme travmasında aktif lipazların trigliseridleri parçalamasıyla oluşan sabunlaşma odaklarıdır; böbrek arter tıkanmasında ise koagülatif nekroz görülür.
+- **Fibrinoid** — Fibrinoid nekroz, immün kompleks vaskülitlerinde ve malign hipertansiyonda damar duvarında fibrin sızıntısıyla oluşan parlak pembe nekrozdur; böbrekteki kama şekilli soluk enfarkt ise koagülatif nekrozdur.
 
 **Cevap: A** — Koagülatif
 
@@ -884,7 +884,7 @@ _33 soru (örnek + çıkmış)_
 - **Böbrek** — Böbrek enfarktüsü koagülatif nekrozun klasik örneğidir; kama şeklinde, belirgin kenarlı bir alan oluşur.
 - **Dalak** — Dalak, kalp ve böbrekle birlikte, iskemik enfarktında koagülatif nekroz görülen organlardandır.
 - **Beyin** — Beyin doğru: beyin infarktları kuralın istisnasıdır; hipoksik ölümde doku erir ve sıvılaşma nekrozu gelişir.
-- **Karaciğer** — Karaciğer ile karıştırılabilir: Karaciğer, trigliseridlerin biriktiği yağlanmanın en sık görüldüğü organlardandır.
+- **Karaciğer** — Karaciğer gibi parankimal solid organlarda hipoksi ve iskemi protein denatürasyonu üzerinden koagülatif nekroz yapar; merkezi sinir sisteminde ise zengin hidrolitik enzimler nedeniyle sıvılaşma nekrozu gelişir.
 
 **Cevap: D** — Beyin
 
@@ -899,9 +899,9 @@ _33 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **Koagülatif** — Koagülatif nekroz, iskemik enfarktların tipik nekrozudur; proteoliz gecikir ve doku mimarisi birkaç gün korunur.
-- **Kazeöz** — Kazeöz nekroz ile karıştırılabilir: Püy oluşturan enfeksiyonlarda enzimler dokuyu eritir, mimari korunmaz.
-- **Fibrinoid** — Püy, sarı-krem renkli nekrotik materyaldir ve dokunun erimesiyle oluşur. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz.
-- **Yağ** — Yağ nekrozu ile karıştırılabilir: Enfeksiyonda biriken püy lokalize olduğunda apse adını alır.
+- **Kazeöz** — Kazeöz nekroz tüberküloz gibi granülomatöz enfeksiyonlarda görülen peynirimsi ve amorf nekroz tipidir; piyojenik bakterilerin nötrofil enzimleriyle dokuyu eritmesi ise sıvılaşma nekrozudur.
+- **Fibrinoid** — Fibrinoid nekroz antijen-antikor komplekslerinin ve fibrinin damar duvarında biriktiği vasküler bir nekroz tipidir; püy oluşturan bakteriyel enfeksiyonlarda ise doku eriyerek sıvılaşma nekrozuna uğrar.
+- **Yağ** — Yağ nekrozu lipaz etkisiyle yağ hücrelerinin yıkılması ve kalsiyum sabunlarının çökmesidir; püy oluşturan bakteriyel enfeksiyonlarda ise lökosit proteazları dokuyu eriterek sıvılaşma nekrozu yapar.
 - **Sıvılaşma** — Sıvılaşma nekrozu doğru: lökosit ve mikrobiyal enzimler dokuyu sıvılaştırır, viskoz sıvı yani püy oluşur.
 
 **Cevap: E** — Sıvılaşma
@@ -954,7 +954,7 @@ _33 soru (örnek + çıkmış)_
 
 - **Kazeifikasyon nekrozu** — Kazeifikasyon nekrozu doku nekrozu kalıplarından biridir, ancak en sık görülen tip değildir.
 - **Fibrinoid nekroz** — Fibrinoid nekroz da nekroz kalıpları arasında sayılır; en sık görülen nekroz tipi bu değildir.
-- **Yağ nekrozu** — En sık görülen tip iskemik enfarktların tipik nekrozudur. Yağ nekrozu bu sorudaki ayrımı sağlamaz.
+- **Yağ nekrozu** — Yağ nekrozu pankreas enzim sızıntısı veya yağ dokusu travması gibi özel durumlarla sınırlıdır; tüm organlarda hipoksi ve iskemi sonucu en sık karşılaşılan nekroz tipi koagülasyon nekrozudur.
 - **Koagülasyon nekrozu** — Koagülasyon nekrozu doğru: en sık görülen nekroz tipidir ve kalp, böbrek, dalak gibi organlarda iskemik enfarktların tipik nekrozudur.
 - **Likefaksiyon nekrozu** — Likefaksiyon nekrozu püy oluşturan enfeksiyonlarda ve beyin infarktlarında görülür; en sık tip değildir.
 
@@ -973,7 +973,7 @@ _33 soru (örnek + çıkmış)_
 - **Koagülasyon nekrozu** — Koagülasyon nekrozu doğru: yapısal proteinler ve enzimler birlikte denatüre olur, proteoliz gecikir ve doku mimarisi birkaç gün korunur.
 - **Likefaksiyon nekrozu** — Likefaksiyon nekrozunda tersine doku lökosit ve mikrobiyal enzimlerle tamamen erir ve viskoz sıvıya döner.
 - **Kazeöz nekroz** — Kazeöz nekroz kalıplar arasında sayılır ama burada tanımlanan değildir; enzimler de denatüre olunca proteolizin gecikmesi koagülatif nekrozun mekanizmasıdır.
-- **Yağ nekrozu** — Korunmuş hücre sınırları kalp, böbrek ve dalak enfarktlarında görülen kalıbın özelliğidir. Yağ nekrozu bu sorudaki ayrımı sağlamaz.
+- **Yağ nekrozu** — Yağ nekrozunda lipaz etkisiyle yağ hücre zarları parçalanır ve kalsiyum sabunları çöker; yapısal proteinlerle birlikte hidrolitik enzimlerin de denatüre olup hücre sınırlarının korunduğu tip ise koagülasyon nekrozudur.
 - **Fibrinoid nekroz** — Fibrinoid nekroz da tanımlanan tablo değildir; doku mimarisinin birkaç gün korunması en sık görülen nekroz tipine özgüdür.
 
 **Cevap: A** — Koagülasyon nekrozu
@@ -1008,7 +1008,7 @@ _33 soru (örnek + çıkmış)_
 
 - **Apoptoz** — Apoptoz programlı, düzenlenmiş hücre ölümüdür ve fizyolojik de olabilir; iskemideki kazara ölüm ve çevre inflamasyonu nekroza aittir.
 - **İnflamasyon** — İnflamasyon bir hücre ölümü tipi değildir; nekrozda hücre içeriği dışarı sızınca çevre dokuda gelişen yanıttır.
-- **Otoliz** — Otoliz ile karıştırılabilir: Geri dönüşümsüz hasarla ölen ve çevresinde inflamatuar yanıt oluşan hücrelerin ölümü nekroz olarak adlandırılır.
+- **Otoliz** — Otoliz, doku canlı organizmadan çıkarıldıktan veya ölüm gerçekleşeli saatler geçtikten sonra fiksasyon gecikmesiyle oluşan kendi kendine erimedir ve çevresinde canlı iltihabi yanıt bulunmaz.
 - **Nekroz** — Nekroz doğru: zarların parçalandığı, içeriğin sızıp çevrede inflamatuar yanıt oluşturduğu, her zaman patolojik hücre ölümüdür.
 - **Kazeifikasyon** — Kazeifikasyon bir doku nekrozu kalıbıdır; kalp kasında iskemik enfarktın tipik kalıbı koagülatif nekrozdur.
 
@@ -1295,7 +1295,7 @@ _33 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Makrofajlar** — Makrofajlar doğru: koagülatif nekrozda lökositler birikir, enzimler ölü hücreleri sindirir ve kalıntıları makrofajlar temizler.
-- **Fibroblastlar** — Koagülatif nekroz alanında kalıntıları temizleyen hücre makrofajdır. Fibroblastlar bu sorudaki ayrımı sağlamaz.
+- **Fibroblastlar** — Fibroblastlar onarım aşamasında kollajen ve hücre dışı matriks sentezleyerek skar dokusunu oluşturur; nekrotik hücre kalıntılarını fagositozla ortadan kaldıran hücreler ise makrofajlardır.
 - **Lenfositler** — Lenfositler kalıntı temizliğiyle tanımlanmaz; nekroz alanında önce lökositler birikir.
 - **Plazma hücreleri** — Plazma hücreleri bu temizlik sürecinde yer almaz; ölü hücreleri lökosit enzimleri sindirir.
 - **Eritrositler** — Eritrositler oksijen taşır; nekrotik kalıntıların temizlenmesinde rolleri yoktur.
@@ -1340,7 +1340,7 @@ _33 soru (örnek + çıkmış)_
 
 **Özet.** Gangrenöz nekroz genellikle alt ekstremitede kan akımı kesilince gelişen geniş koagülatif nekrozu tanımlayan klinik terimdir; enfeksiyon eklenirse ıslak gangren olur.
 
-# 03 · Hücre Hasarı ve Nekroz II
+# Ders 3 (03) · Hücre Hasarı ve Nekroz II
 
 _36 soru (örnek + çıkmış)_
 
@@ -1352,9 +1352,9 @@ _36 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Koagülatif** — Granülomla çevrili, peynir benzeri nekroz en sık tüberküloz odaklarında görülür. Koagülatif nekroz bu sorudaki ayrımı sağlamaz.
+- **Koagülatif** — Koagülatif nekrozda hücrelerin dış sınırları ve doku mimarisi hayalet hücreler şeklinde korunur; granülom ortasında doku çatısının tamamen silindiği peynir benzeri nekroz ise kazeöz nekrozdur.
 - **Kazeöz** — Kazeöz nekroz doğru: yumuşak, kırılgan, beyazımsı ve peynir benzeridir; çevresinde epitelioid histiyosit, dev hücre ve lenfositlerden oluşan granülom bulunur.
-- **Sıvılaşma** — Kazeöz alanda mikroskopide amorf, granüler, pembe nekroz görülür ve hücre hatları seçilemez. Sıvılaşma nekrozu bu sorudaki ayrımı sağlamaz.
+- **Sıvılaşma** — Sıvılaşma nekrozunda hidrolitik enzimler dokuyu tamamen eriterek püy dolu bir boşluk oluşturur; tüberküloz granülomunun merkezindeki peynirimsi ve granüler yıkım ise kazeöz nekrozdur.
 - **Yağ** — Yağ nekrozu, yağ dokusunun yıkımıyla gelişir; en sık akut pankreatitte ve travmaya uğramış meme ya da subkutan yağda görülür.
 - **Fibrinoid** — Fibrinoid nekroz, küçük damar duvarlarında parlak pembe, camsı materyalle görülür; akciğer granülomunun ortasında beklenmez.
 
@@ -1371,10 +1371,10 @@ _36 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Kazeöz** — Kazeöz nekroz en sık tüberküloz odaklarında görülür; peynir benzeridir ve granülomatöz inflamasyonla birliktedir.
-- **Koagülatif** — Akut pankreatitte enzim sızıntısı yağ dokusunu hedef alır ve sabunlaşma alanları oluşur. Koagülatif nekroz bu sorudaki ayrımı sağlamaz.
+- **Koagülatif** — Koagülatif nekroz solid organların damar tıkanıklığında protein denatürasyonuyla gelişir; akut pankreatitte serbest yağ asitlerinin kalsiyumla birleşip tebeşir beyazı odaklar oluşturması ise yağ nekrozudur.
 - **Fibrinoid** — Fibrinoid nekroz küçük damar duvarlarında görülür; immün kompleks birikimi, şiddetli hipertansiyon ve vaskülitlerle ilişkilidir.
 - **Yağ** — Yağ nekrozu doğru: lipazlar peripankreatik yağ hücrelerindeki trigliseritleri yıkar, serbest yağ asitleri kalsiyumla birleşip tebeşir-beyazı sabunlaşma alanları yapar.
-- **Gangrenöz** — Gangrenöz nekroz ile karıştırılabilir: Tebeşir-beyazı odakların mikroskopisinde çekirdeğini kaybetmiş gölgeli yağ hücreleri ve bazofilik kalsiyum tuzları görülür.
+- **Gangrenöz** — Gangrenöz nekroz genellikle alt ekstremitede kan akımının kesilmesiyle gelişen çok katmanlı koagülatif doku ölümüdür; pankreas çevresinde sabunlaşma ile tebeşir beyazı plaklar oluşturan tablo ise yağ nekrozudur.
 
 **Cevap: D** — Yağ
 
@@ -1391,8 +1391,8 @@ _36 soru (örnek + çıkmış)_
 - **Fibrinoid** — Fibrinoid nekroz doğru: küçük damar duvarında immün kompleksler ve fibrin birikerek parlak pembe, amorf, camsı bir materyal oluşturur.
 - **Kazeöz** — Kazeöz nekroz, tüberküloz odaklarında görülen peynir benzeri nekrozdur; damar duvarına özgü değildir.
 - **Yağ** — Yağ nekrozu, yağ dokusunun yıkımıyla gelişir ve tebeşir-beyazı odaklar yapar; damar duvarını değil yağ dokusunu tutar.
-- **Sıvılaşma** — Sıvılaşma nekrozu ile karıştırılabilir: Vaskülit, şiddetli hipertansiyon ve immün kompleks birikimi damar duvarında özel bir nekroz tipine yol açar.
-- **Koagülatif** — Damar duvarındaki bu görünüm H&E kesitlerde fibrin benzeri olarak tanımlanır. Koagülatif nekroz bu sorudaki ayrımı sağlamaz.
+- **Sıvılaşma** — Sıvılaşma nekrozunda lökosit enzimleri dokuyu viskoz bir sıvıya dönüştürür; vaskülitte damar duvarında immün kompleksler ve plazma proteinlerinin birikmesiyle oluşan parlak pembe görünüm ise fibrinoid nekrozdur.
+- **Koagülatif** — Koagülatif nekroz iskemik parankim hücrelerinde çekirdek kaybı ve eozinofilik sitoplazma ile seyreder; damar duvarında fibrin benzeri parlak pembe birikimle karakterize lezyon ise fibrinoid nekrozdur.
 
 **Cevap: A** — Fibrinoid
 
@@ -1480,7 +1480,7 @@ _36 soru (örnek + çıkmış)_
 
 - **Sitokrom c** — Sitokrom c, mitokondriden sitoplazmaya sızıp kaspaz-9'u aktive eden moleküldür; zar yüzeyinde sinyal oluşturmaz.
 - **Fosfatidilserin** — Fosfatidilserin doğru: plazma zarının dış tabakasına geçer, bu beni ye sinyaliyle makrofajlar hücreyi hızla fagosite eder.
-- **Ubikuitin** — Ubikuitin ile karıştırılabilir: Apoptotik hücrede zarın değişen lipid düzeni makrofajlara beni ye sinyali verir.
+- **Ubikuitin** — Ubikuitin, sitoplazmada hatalı veya atrofide yıkılacak proteinlere kovalent bağlanarak onları proteazoma yönlendiren küçük bir proteindir; apoptotik hücre yüzeyinde makrofajları uyaran fosfolipid ise fosfatidilserindir.
 - **Fas ligandı** — Fas ligandı aktive T hücrelerinde bulunur; Fas reseptörüne bağlanıp dışsal apoptoz yolunu başlatır, fagositoz sinyali değildir.
 - **Kaspaz-3** — Kaspaz-3 infazcı bir kaspazdır; hücre içi proteinleri parçalar, zar yüzeyinde sinyal oluşturmaz.
 
@@ -1572,7 +1572,7 @@ _36 soru (örnek + çıkmış)_
 - **Glutatyon peroksidaz** — Glutatyon peroksidaz hidrojen peroksiti su ve oksijene dönüştürür; serbest radikalleri artırmaz, temizler.
 - **Reperfüzyon** — Reperfüzyon doğru: iskemik dokulara kan akımı geri gelince sıklıkla reaktif oksijen türleri üretilir ve membran hasarı artar.
 - **Beta-karoten** — Beta-karoten non-enzimatik antioksidanlardandır; vitamin E, C, A ve glutatyon gibi radikalleri azaltır.
-- **Seruloplazmin** — Serbest radikalleri artıran seçenek iskemik dokunun yeniden kanlanmasıdır. Seruloplazmin bu sorudaki ayrımı sağlamaz.
+- **Seruloplazmin** — Seruloplazmin, plazmada bakır taşıyan ve serbest radikalleri etkisizleştirmeye yardımcı olan bir antioksidan proteindir; serbest oksijen radikallerini patolojik olarak artıran durum ise iskemi-reperfüzyon hasarıdır.
 
 **Cevap: C** — Reperfüzyon
 
@@ -1949,7 +1949,7 @@ _36 soru (örnek + çıkmış)_
 - **Fosfolipaz** — Fosfolipaz kalsiyumla aktive olur ama zar fosfolipidlerini yıkarak membran hasarı yapar.
 - **Proteaz** — Proteaz kalsiyumla aktive olan ve proteinleri parçalayan enzimdir; DNA'yı kesmez.
 - **Endonükleaz** — Endonükleaz doğru: artan sitoplazmik kalsiyum endonükleazları aktive eder ve bunlar DNA'yı parçalar.
-- **Lipaz** — Lipaz pankreatitte trigliseritleri yıkan enzimdir; kalsiyum dengesizliğinin aktive ettiği enzimler arasında sayılmaz.
+- **Lipaz** — Lipaz trigliseridleri yağ asitleri ve gliserole parçalayan sindirim enzimidir; hücre içi kalsiyum artışıyla aktive olup kromatin ve DNA kırıklarına yol açan enzim ise endonükleazdır.
 - **Katalaz** — Katalaz hidrojen peroksidi su ve oksijene dönüştüren antioksidan enzimdir.
 
 **Cevap: C** — Endonükleaz
@@ -1992,7 +1992,7 @@ _36 soru (örnek + çıkmış)_
 
 **Özet.** Reaktif oksijen türleri lipid peroksidasyonuyla zarı, oksidasyonla proteinleri, zincir kırığı ve baz modifikasyonuyla DNA'yı bozar; sonuç nekroz, apoptoz, yaşlanma ve kanserdir.
 
-# 04 · Hücresel Adaptasyonlar
+# Ders 4 (04) · Hücresel Adaptasyonlar
 
 _28 soru (örnek + çıkmış)_
 
@@ -2026,7 +2026,7 @@ _28 soru (örnek + çıkmış)_
 - **Hipertrofi** — Hipertrofi doğru: sürekli artmış basınca karşı miyositler büyür, yeni sarkomer sentezlenir; ventrikül duvarı kalınlaşır ve kalp ağırlaşır.
 - **Atrofi** — Atrofi organın küçülmesidir; azalmış iş yükünde görülür, burada ise iş yükü artmıştır.
 - **Metaplazi** — Metaplazi, bir olgun hücre tipinin başka bir olgun tiple değişmesidir; kalp kasının basınca yanıtı bu değildir.
-- **Displazi** — Displazi ile karıştırılabilir: Duvar kalınlaşması, miyositlerde hücre başına miyofilament artışı ve daha ekonomik izoformlara geçişle açıklanır.
+- **Displazi** — Displazi, çoğalan epitel hücrelerinde şekil-boyut düzensizliği ve olgunlaşma kaybıyla giden premalign bir değişikliktir; kalp kası hücrelerinin basınç yüküne karşı hacimce büyümesi ise hipertrofidir.
 
 **Cevap: B** — Hipertrofi
 
@@ -2095,9 +2095,9 @@ _28 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Endometrium kanseri** — Endometrium kanseri doğru: uzamış ve kontrolsüz hiperplazi neoplaziye zemin hazırlar, endometrial hiperplazide endometrium kanseri riski artar.
-- **Adenomiyozis** — Endometrial hiperplazinin nedeni östrojen ile progesteron arasındaki dengesizliktir. Adenomiyozis bu sorudaki ayrımı sağlamaz.
+- **Adenomiyozis** — Adenomiyozis, endometriyal bazal tabakanın miyometriyum kas demetleri arasına doğru invaginasyonudur; karşılanmamış östrojen etkisiyle uzayan endometriyal hiperplazi ise endometrioid tip endometrium kanseri riskini artırır.
 - **Uterus atrofisi** — Uterus atrofisi menopoz sonrası endokrin uyarı kaybıyla gelişir; hiperplazinin değil, hormon eksikliğinin sonucudur.
-- **Leiomiyom** — Patolojik hiperplazide büyüme kontrolü hâlâ kısmen korunur ve uyarı kesilince büyüme durur. Leiomiyom bu sorudaki ayrımı sağlamaz.
+- **Leiomiyom** — Leiomiyom miyometriyum düz kas hücrelerinden köken alan benign bir mezenkimal tümördür; uzamış endometriyal bez hiperplazisi ise displazi ve endometrium adenokarsinomu gelişimine zemin hazırlar.
 - **Skuamöz metaplazi** — Skuamöz, yani yassı epitel metaplazisi, sigara içenlerin bronşunda görülen değişikliktir; endometrial hiperplazinin sonucu değildir.
 
 **Cevap: A** — Endometrium kanseri
@@ -2130,11 +2130,11 @@ _28 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Kaspaz kaskadı** — Kaspaz kaskadı ile karıştırılabilir: Atrofi uzun ve şiddetli olursa hücreler apoptoza gidebilir, ama protein yıkımını başka bir sistem yürütür.
+- **Kaspaz kaskadı** — Kaspaz kaskadı apoptozda hücreyi kontrollü biçimde parçalayan sistein proteaz dizisidir; atrofide hücre boyutunu küçültmek için organel ve proteinleri seçici olarak yıkan ana mekanizma ise ubikuitin–proteazom sistemidir.
 - **Ubikuitin–proteazom sistemi** — Ubikuitin–proteazom sistemi doğru: atrofide proteinler ubikuitinle işaretlenir ve proteazomda parçalanır.
-- **Kompleman sistemi** — Kompleman sistemi ile karıştırılabilir: Atrofide protein sentezi de düşük metabolik aktiviteye bağlı olarak azalır.
-- **Sitokrom P450** — Atrofide protein yıkımının yanı sıra otofaji de artar ve otofajik vakuoller oluşur. Sitokrom P450 bu sorudaki ayrımı sağlamaz.
-- **Fosfolipaz** — Fosfolipaz ile karıştırılabilir: Atrofi, kısıtlı koşullarda hayatta kalmak için enerji tasarrufu sağlayan bir adaptasyondur.
+- **Kompleman sistemi** — Kompleman sistemi plazmada bulunan ve mikrobiyal opsonizasyon ile inflamasyonda görev alan ekstrasellüler protein kaskadıdır; atrofide hücre içi protein yıkımını yürüten yol ise ubikuitin–proteazom sistemidir.
+- **Sitokrom P450** — Sitokrom P450 sistemi düz endoplazmik retikulumda ilaçları ve ksenobiyotikleri metabolize eden enzim ailesidir; atrofide besin ve uyarı azlığına bağlı protein yıkımından ise ubikuitin–proteazom sistemi sorumludur.
+- **Fosfolipaz** — Fosfolipaz hücre zarı fosfolipidlerini parçalayan enzimdir ve kalsiyum artışında membran hasarı yapar; atrofide hücre içi yapısal proteinlerin kontrollü yıkımını sağlayan ise ubikuitin–proteazom sistemidir.
 
 **Cevap: B** — Ubikuitin–proteazom sistemi
 
@@ -2169,8 +2169,8 @@ _28 soru (örnek + çıkmış)_
 - **Kolumnar epitele dönüşüm** — Kolumnar epitele dönüşüm doğru: kronik reflüde alt özofagusun çok katlı yassı epiteli Barrett tipi kolumnar epitele döner.
 - **Yassı epitele dönüşüm** — Yassı epitele dönüşüm, sigara içenlerin bronşunda görülen metaplazidir; özofagusun normal epiteli zaten çok katlı yassıdır.
 - **Kemik oluşumu** — Kemik oluşumu mezenkimal metaplazidir; travma odakları ve skar dokusu gibi yumuşak dokularda görülür.
-- **Kıkırdak oluşumu** — Reflüde değişen yapı bağ dokusu değil, özofagusu örten epiteldir. Kıkırdak oluşumu bu sorudaki ayrımı sağlamaz.
-- **Ürotelyal dönüşüm** — Ürotelyal dönüşüm ile karıştırılabilir: Reflüdeki metaplazi klinik olarak adenokarsinom için zemin oluşturabilir.
+- **Kıkırdak oluşumu** — Kıkırdak oluşumu bağ dokusu içinde mezenkimal metaplaziyle gelişen bir değişikliktir; kronik mide asidi reflüsünde alt özofagusun çok katlı yassı epitelinin goblet hücreli kolumnar epitele dönüşmesi ise Barrett metaplazisidir.
+- **Ürotelyal dönüşüm** — Ürotelyal dönüşüm idrar yollarına özgü geçiş epitelini ilgilendirir; gastroözofageal reflüde asit direncini artırmak üzere yassı epitelin yerini bağırsak tipi kolumnar epitel alır.
 
 **Cevap: A** — Kolumnar epitele dönüşüm
 
@@ -2500,7 +2500,7 @@ _28 soru (örnek + çıkmış)_
 
 **Özet.** Aynı etken doz ve süreye göre spektrum oluşturur; hafif ya da orta streste adaptasyon, şiddetli ve kalıcı streste hasar ve sonunda nekroz veya apoptoz gelişir.
 
-# 05 · Hücre İçi Birikimler ve Kalsifikasyonlar
+# Ders 5 (05) · Hücre İçi Birikimler ve Kalsifikasyonlar
 
 _33 soru (örnek + çıkmış)_
 
@@ -2549,9 +2549,9 @@ _33 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Köpük hücreleri** — Köpük hücreleri doğru: aterosklerotik plakta, büyük arter intimasında kolesteril ester dolu makrofajlardır.
-- **Epitelioid hücreler** — Epitelioid hücreler ile karıştırılabilir: Ateromda intima içinde lipid biriktiren hücreler düz kas hücreleri ve makrofajlardır.
+- **Epitelioid hücreler** — Epitelioid hücreler, kronik granülomatöz inflamasyonda Th1 kaynaklı interferon-gama uyarısıyla pembe granüler sitoplazma kazanan aktive makrofajlardır; aterom plağında kolesterol esteri yüklü makrofajlara ise köpük hücresi denir.
 - **Russell cisimcikleri** — Russell cisimcikleri, plazma hücrelerinde granüllü endoplazmik retikulumda biriken immünoglobulinlerdir; kolesterol birikimi değildir.
-- **Dev hücreler** — Dev hücreler ile karıştırılabilir: İleri aterom lezyonunda kolesterol hücre dışında kristalleşir ve plak fibröz kapakla örtülür.
+- **Dev hücreler** — Dev hücreler, granülomlarda veya yabancı cisim reaksiyonlarında çok sayıda makrofajın kaynaşmasıyla oluşan çok çekirdekli hücrelerdir; intima içinde oksitlenmiş LDL yutarak vakuollü görünüm alan makrofajlar ise köpük hücreleridir.
 - **Plazma hücreleri** — Plazma hücreleri immünoglobulin üretir ve kronik inflamasyonda görülür; plakta kolesteril ester dolu hücreler ise makrofajlardır.
 
 **Cevap: A** — Köpük hücreleri
@@ -2585,7 +2585,7 @@ _33 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **Antrakosis** — Antrakosis, karbon partiküllerinin alveoler makrofajlarca fagosite edilmesiyle oluşan siyah pigment birikimidir; genellikle zararsızdır.
-- **Pulmoner ödem** — Pulmoner ödem ile karıştırılabilir: Α1-antitripsin eksikliğinde akciğerin sorunu sıvı değil, elastik dokunun yıkılmasıdır.
+- **Pulmoner ödem** — Pulmoner ödem alveol boşluklarında hidrostatik basınç artışı veya kapiller hasarla sıvı toplanmasıdır; alfa-1 antitripsin eksikliğinde ise nötrofil elastazı dizginlenemediğinden alveol duvarları yıkılır ve panasiner amfizem gelişir.
 - **Amfizem** — Amfizem doğru: akciğerde proteaz inhibitörü olmadığından nötrofil elastazı kontrolsüz çalışır ve elastik doku yıkılır.
 - **Metastatik kalsifikasyon** — Metastatik kalsifikasyon, hiperkalsemide alveol septaları gibi normal dokularda kalsiyum birikimidir; antitripsin eksikliğiyle ilgisi yoktur.
 - **Silikozis** — Silikozis, dışarıdan alınan silikanın makrofajlarda birikmesiyle ilgilidir; genetik bir protein eksikliğinin sonucu değildir.
@@ -2606,7 +2606,7 @@ _33 soru (örnek + çıkmış)_
 - **Hemosiderin** — Hemosiderin de altın sarısı–kahverengi granüllüdür ama demir içerir; Prusya mavisiyle maviye boyanır, eski kanamayla ilişkilidir.
 - **Melanin** — Melanin, melanositlerin ürettiği kahverengi–siyah pigmenttir; ultraviyole ışınlarına karşı korur, yaşlanma pigmenti değildir.
 - **Karbon** — Karbon, hava kirliliği ve kömür tozuyla alınan siyah eksojen pigmenttir; akciğer ve lenf düğümlerinde siyah noktalar yapar.
-- **Bilirubin** — Bilirubin ile karıştırılabilir: Yaşlı kalp kasındaki bu pigment serbest radikal hasarıyla oluşur ve genellikle işlev bozmaz.
+- **Bilirubin** — Bilirubin hem yıkımıyla oluşan, demir içermeyen ve sarılıkta dokuları boyayan safra pigmentidir; yaşlılık ve atrofiyle kalp ve karaciğerde biriken perinükleer kahverengi aşınma pigmenti ise lipofusindir.
 
 **Cevap: A** — Lipofusin
 
@@ -2621,10 +2621,10 @@ _33 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **PAS** — PAS boyası glikojeni gösterir; diyabette ve glikojen depo hastalıklarında pozitif, vakuole benzer boşluklar görülür.
-- **Kongo kırmızısı** — Kongo kırmızısı ile karıştırılabilir: Hemosiderin hemoglobinden türeyen, demir içeren bir pigmenttir ve boyama demiri hedefler.
-- **Oil Red O** — Hematoksilen eozinde hemosiderin altın sarısı–kahverengi, ince granüller olarak görülür. Oil Red O bu sorudaki ayrımı sağlamaz.
+- **Kongo kırmızısı** — Kongo kırmızısı hücre dışı amiloid birikimlerini boyayarak polarize ışıkta elma yeşili çift kırılım veren boyadır; dokudaki ferrik demiri ve hemosiderini maviye boyayan yöntem ise Prusya mavisidir.
+- **Oil Red O** — Oil Red O, dondurulmuş doku kesitlerinde nötral trigliseridleri ve yağ damlacıklarını boyamak için kullanılır; demir içeren hemosiderin granüllerini özgül olarak gösteren boya ise Prusya mavisidir.
 - **Prusya mavisi** — Prusya mavisi doğru: hemosiderindeki demiri mavi renkte boyar ve demir varlığının kanıtıdır.
-- **Masson trichrome** — Hemosiderin eski kanama alanlarında ve sistemik demir yükünde birikir. Masson trichrome bu sorudaki ayrımı sağlamaz.
+- **Masson trichrome** — Masson trikrom boyası fibrozis değerlendirmesinde kollajen liflerini mavi-yeşil renkte görünür kılan bağ dokusu boyasıdır; hemosiderin içindeki demiri mavi çökelti halinde gösteren boya ise Prusya mavisidir.
 
 **Cevap: D** — Prusya mavisi
 
@@ -2638,10 +2638,10 @@ _33 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Oil Red O pozitiftir** — Oil Red O ile karıştırılabilir: Diyabette glikojen böbrek tübül epitelinde, kalp kasında ve beta hücrelerinde birikir.
+- **Oil Red O pozitiftir** — Oil Red O nötral yağları boyayan bir lipid boyasıdır; suda çözünen glikojen birikimleri ise alkol fiksasyonu sonrası periyodik asit-Schiff (PAS) boyasıyla parlak pembe-mor renkte gösterilir.
 - **Prusya mavisi pozitiftir** — Prusya mavisi demiri maviye boyar; hemosiderin birikimini kanıtlar, glikojenle ilgisi yoktur.
 - **PAS pozitiftir** — PAS pozitiflik doğru: glikojen birikimi mikroskopta PAS pozitif, vakuole benzer boşluklar olarak görülür.
-- **Lizozomda ubikuitinlenir** — Glikojen normalde sitoplazmada granüler formda bulunur, glikoz metabolizması bozulunca birikir. Lizozomda ubikuitinlenme bu sorudaki ayrımı sağlamaz.
+- **Lizozomda ubikuitinlenir** — Ubikuitinlenme sitozolik proteinlerin proteazomda yıkım etiketidir; glikojen ise sitoplazmada granüller halinde depolanır ve diyabette böbrek tübülleri ile hepatositlerde PAS pozitif berrak vakuoller oluşturur.
 - **Siyah pigment oluşturur** — Siyah pigment, karbon birikiminde, yani antrakoziste görülür; glikojen bir pigment değildir.
 
 **Cevap: C** — PAS pozitiftir
@@ -2658,7 +2658,7 @@ _33 soru (örnek + çıkmış)_
 
 - **Metastatik kalsifikasyon** — Metastatik kalsifikasyon hiperkalsemiyle olur ve normal dokularda birikir; bu hastada serum kalsiyumu normaldir.
 - **Nefrokalsinoz** — Nefrokalsinoz, ileri metastatik kalsifikasyonda böbrekte gelişir ve böbrek yetmezliğine yol açabilir; kapak tutulumu değildir.
-- **Kemik metaplazisi** — Yaşlı ya da hasarlı kapakta kalsiyum ve fosfat kristalleri çöküp birleşerek birikinti oluşturur. Kemik metaplazisi bu sorudaki ayrımı sağlamaz.
+- **Kemik metaplazisi** — Kemik metaplazisi yumuşak dokuda osteoblast farklılaşmasıyla gerçek kemik trabeküllerinin oluşmasıdır; normokalsemik yaşlı bireyde hasarlı aort kapağına kalsiyum tuzlarının çökmesi ise distrofik kalsifikasyondur.
 - **Hemosideroz** — Hemosideroz, demirli hemosiderin pigmentinin lokal ya da sistemik birikimidir; kalsiyum birikimi değildir.
 - **Distrofik kalsifikasyon** — Distrofik kalsifikasyon doğru: serum kalsiyumu normaldir ve birikim yaşlı ya da hasarlı kapak gibi hasarlı dokuda olur.
 
@@ -3103,7 +3103,7 @@ Yukarıdakilerden hangileri metastatik kalsifikasyona neden olur?
 
 **Özet.** Hücresel yaşlanmada DNA hasarı birikir, protein homeostazı bozulur ve lipofusin toplanır; sonuçta çoğalma kapasitesi azalır ve fonksiyonel rezerv düşer.
 
-# 06 · Hücresel Yaşlanma
+# Ders 6 (06) · Hücresel Yaşlanma
 
 _30 soru (örnek + çıkmış)_
 
@@ -3115,11 +3115,11 @@ _30 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Down sendromu** — Burada sorulan tablo, DNA onarım proteinlerini kodlayan genlerin mutasyonuyla erken yaşlanmadır. Down sendromu bu sorudaki ayrımı sağlamaz.
+- **Down sendromu** — Down sendromu 21. kromozomun tam trizomisinden kaynaklanan ve zihinsel gelişim geriliği ile konjenital kalp anomalileriyle seyreden kromozomal bir hastalıktır; DNA helikaz mutasyonuyla giden progeroid tablo ise Werner sendromudur.
 - **Werner sendromu** — Werner sendromu doğru: DNA onarım genleri mutasyonludur; erken yaşlanma fenotipi ve çoğalma kapasitesinde belirgin azalma görülür.
-- **Tay–Sachs** — Progeroid sendromlarda temel kusur DNA hasarının onarılamaması ve mutasyonların birikmesidir. Tay–Sachs bu sorudaki ayrımı sağlamaz.
-- **Niemann–Pick** — Niemann–Pick ile karıştırılabilir: Onarılamayan DNA hasarı birikince hücreler senesense girer ya da apoptoza gider.
-- **Kistik fibrozis** — Erken yaşlanma sendromları kalıtsal DNA onarım kusurlarıyla, hızlanmış hücresel yaşlanma olarak ortaya çıkar. Kistik fibrozis bu sorudaki ayrımı sağlamaz.
+- **Tay–Sachs** — Tay–Sachs hastalığı heksozaminidaz A eksikliğine bağlı nöronlarda GM2 gangliozid birikimiyle giden lizozomal depo hastalığıdır; DNA helikaz kusuruyla erken yaşlanma oluşturan tablo ise Werner sendromudur.
+- **Niemann–Pick** — Niemann–Pick hastalığı sfingomiyelinaz eksikliği veya kolesterol transport kusuruyla seyreden lizozomal lipid depo hastalığıdır; DNA onarım bozukluğuyla erken yaşlanmaya yol açan sendrom ise Werner sendromudur.
+- **Kistik fibrozis** — Kistik fibrozis CFTR klor kanalı mutasyonuyla ekzokrin bez salgılarının koyulaştığı otozomal resesif bir hastalıktır; DNA helikaz gen mutasyonuyla hızlanmış hücresel yaşlanma yapan tablo ise Werner sendromudur.
 
 **Cevap: B** — Werner sendromu
 
@@ -3151,11 +3151,11 @@ _30 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Nöronlar** — Çoğu somatik hücrede telomeraz aktivitesi yok ya da çok düşüktür, bu yüzden telomerler yaşla kısalır. Nöronlar bu sorudaki ayrımı sağlamaz.
-- **Kalp kası hücreleri** — Kalp kası hücreleri ile karıştırılabilir: Telomeraz, telomer uçlarına nükleotid ekleyen bir RNA–protein kompleksidir ve en yüksek aktivitesi üreme hücrelerindedir.
+- **Nöronlar** — Nöronlar bölünme yeteneği olmayan kalıcı hücrelerdir ve telomeraz aktivitesi göstermezler; telomer uzunluğunu her bölünmede koruyan en yüksek telomeraz aktivitesi ise germ hücrelerinde bulunur.
+- **Kalp kası hücreleri** — Kalp kası hücreleri doğum sonrası bölünme yeteneğini büyük ölçüde yitiren kalıcı hücrelerdir ve telomeraz içermezler; telomeraz aktivitesi en yüksek olan normal hücreler ise üreme (germ) hücreleridir.
 - **Germ hücreleri** — Germ hücreleri doğru: telomeraz aktivitesi en yüksek bu hücrelerdedir; bazı kök hücrelerde ise düşük ile orta düzeydedir.
-- **Hepatositler** — Hepatositler ile karıştırılabilir: Telomerazın yeniden aktive olarak telomer uzunluğunu sabitlediği hücreler birçok kanser hücresidir.
-- **Eritrositler** — Telomerazın belirgin aktif olduğu gruplar germ hücreleri ve bazı kök hücrelerdir. Eritrositler bu sorudaki ayrımı sağlamaz.
+- **Hepatositler** — Hepatositler gerektiğinde bölünebilen sessiz (stabil) somatik hücrelerdir ve telomeraz aktiviteleri çok düşüktür; telomerlerin kısalmasını önleyen en yüksek telomeraz etkinliği germ hücrelerindedir.
+- **Eritrositler** — Olgun eritrositler çekirdeksiz hücreler olduğundan DNA replikasyonu veya telomeraz aktivitesi içermezler; telomeraz aktivitesinin fizyolojik olarak en yüksek olduğu hücre grubu germ hücreleridir.
 
 **Cevap: C** — Germ hücreleri
 
@@ -3170,9 +3170,9 @@ _30 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **Telomeraz aktivasyonu** — Telomeraz aktivasyonu kanser hücrelerinin telomerleri koruma yoludur; normal hücrenin kısa telomere yanıtı değildir.
-- **Hipertrofi** — Kısa telomere hücre büyüyerek değil, hücre döngüsünü durdurarak yanıt verir. Hipertrofi bu sorudaki ayrımı sağlamaz.
+- **Hipertrofi** — Hipertrofi artan iş yüküne karşı hücrenin yapısal protein sentezleyerek büyümesidir; telomerleri kritik eşiğin altına inen hücrenin açık DNA uçlarını hasar olarak algılayıp döngüden kalıcı çıkması ise replikatif senesenstir.
 - **Nekroz** — Nekroz, mitokondri hasarında ATP azalmasıyla ilişkili ölüm biçimidir; telomer kısalmasının beklenen sonucu değildir.
-- **Metaplazi** — Kısa telomerli hücre başka hücre tipine dönüşmez, çoğalmayı bırakır. Metaplazi bu sorudaki ayrımı sağlamaz.
+- **Metaplazi** — Metaplazi kronik irritasyona uyum sağlamak için bir olgun epitel veya mezenkimal hücrenin başka bir olgun hücre tipine dönüşmesidir; telomer kısalmasıyla hücrenin bölünmeyi kalıcı olarak durdurması ise replikatif senesenstir.
 - **Replikatif senesens** — Replikatif senesens doğru: kısa telomer kırık DNA gibi algılanır, hücre döngüsü durur ve hücre çoğalmayan yaşlı hücre olur.
 
 **Cevap: E** — Replikatif senesens
@@ -3206,10 +3206,10 @@ _30 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Aplastik anemi** — Aplastik anemi doğru: kalıtsal telomeraz eksikliğinde telomerler hızla kısalır ve hematopoetik kök hücre yetmezliği gelişir.
-- **Multipl miyelom** — Kalıtsal telomeraz eksikliği telomerlerin hızla kısalmasına yol açar ve bu tablolara telomeropati denir. Multipl miyelom bu sorudaki ayrımı sağlamaz.
-- **Hemokromatoz** — Hemokromatoz ile karıştırılabilir: Telomeropatilerde akciğer ve karaciğerde fibrozis görülebilir.
-- **Ksantom** — Telomeropatilerin deri bulguları saçların erken beyazlaması ve cilt ile tırnak anormallikleridir. Ksantom bu sorudaki ayrımı sağlamaz.
-- **Akut pankreatit** — Akut pankreatit ile karıştırılabilir: Telomer aşınması kök hücre havuzlarının kaybını tetikler ve doku işlevi bozulur.
+- **Multipl miyelom** — Multipl miyelom kemik iliğinde klonal plazma hücrelerinin kontrolsüz çoğaldığı malign bir neoplazmdır; kalıtsal telomeraz eksikliğinde ise hematopoetik kök hücre havuzu tükenerek aplastik anemi gelişir.
+- **Hemokromatoz** — Hemokromatoz bağırsaktan aşırı demir emilimi sonucu karaciğer, kalp ve pankreasta hemosiderin birikmesidir; telomeraz eksikliğinde ise hızlı çoğalan kemik iliği kök hücrelerinin tükenmesiyle aplastik anemi görülür.
+- **Ksantom** — Ksantom hiperlipidemide deri ve tendonlarda kolesterol yüklü köpük hücrelerinin oluşturduğu sarımsı nodüldür; kalıtsal telomeropatilerde kök hücre yenilenmesinin bozulmasıyla ortaya çıkan tablo ise aplastik anemidir.
+- **Akut pankreatit** — Akut pankreatit pankreas proenzimlerinin asiner hücre içinde erken aktivasyonuyla gelişen akut nekrotizan iltihaptır; kalıtsal telomeraz kusurunda ise kök hücre tükenmesine bağlı aplastik anemi ve pulmoner fibrozis görülür.
 
 **Cevap: A** — Aplastik anemi
 
@@ -3224,10 +3224,10 @@ _30 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Nekroz** — Nekroz, mitokondri hasarının diğer koludur; ATP azalması nekroz eğilimi yapar, zar geçirgenliği artışı değil.
-- **Hipertrofi** — Hipertrofi ile karıştırılabilir: Mitokondri zarı geçirgenleşince proapoptotik proteinler sitozole sızar.
+- **Hipertrofi** — Hipertrofi mekanik yük veya büyüme faktörleriyle hücre hacminin artmasıdır; mitokondri dış zar geçirgenliğinin artması ise sitokrom c sızıntısıyla kaspazları aktive ederek apoptozu başlatır.
 - **Telomer uzaması** — Telomer uzaması telomeraz enziminin işidir; mitokondri hasarıyla ilgisi yoktur.
 - **Apoptoz** — Apoptoz doğru: zar geçirgenliği artınca sitokrom c sitozole sızar, kaspaz-9 ve ardından kaspaz-3 aktive olur.
-- **Steatoz** — Mitokondriyal zar geçirgenliği artışı içsel ölüm yolunun başlangıcıdır. Steatoz bu sorudaki ayrımı sağlamaz.
+- **Steatoz** — Steatoz hepatosit sitoplazmasında trigliserid vakuollerinin birikmesiyle oluşan geri dönüşümlü yağlı değişimdir; mitokondriyal zar geçirgenliğinin artması ise sitokrom c salınımı üzerinden apoptozla sonuçlanır.
 
 **Cevap: D** — Apoptoz
 
@@ -3244,7 +3244,7 @@ _30 soru (örnek + çıkmış)_
 - **IGF-1 artışı** — IGF-1 artışı büyüme ve anabolizmayı destekler; kalori kısıtlamasında IGF-1 düzeyi tersine azalır.
 - **mTOR aktivasyonu** — mTOR aktivasyonu hızlı büyüme ve daha az onarıma odaklı bir program demektir; kalori kısıtlaması bu yolu baskılar.
 - **ROS artışı** — ROS artışı DNA, protein ve lipid hasarını artırır; kalori kısıtlaması ROS üretimini azaltır.
-- **Otofaji azalması** — Kalori kısıtlamasında otofaji tersine artar. Otofaji azalması bu sorudaki ayrımı sağlamaz.
+- **Otofaji azalması** — Kalori kısıtlamasında otofaji azalmaz, aksine mTOR baskılanması ve sirtüin aktivasyonu sayesinde artarak hasarlı organellerin temizlenmesini ve hücresel ömrün uzamasını sağlar.
 - **mTOR baskılanması** — mTOR baskılanması doğru: kalori kısıtlaması mTOR yolağını baskılar ve hücreyi büyümeden bakım ve onarıma kaydırır.
 
 **Cevap: E** — mTOR baskılanması
@@ -3262,8 +3262,8 @@ _30 soru (örnek + çıkmış)_
 - **β-amiloid** — β-amiloid, tau ile birlikte Alzheimer hastalığında biriken anormal proteindir.
 - **α-sinüklein** — α-sinüklein doğru: Parkinson hastalığında biriken yanlış katlanmış proteindir ve hücre içi agregat oluşturur.
 - **Tau** — Tau, Alzheimer hastalığında β-amiloidle birlikte biriken proteindir; Parkinson hastalığının agregatı değildir.
-- **Prion proteini** — Prion proteini ile karıştırılabilir: Yaşla şaperon ve proteazom etkinliği azalınca yanlış katlanmış proteinler birikir.
-- **α1-antitripsin** — Nörodejeneratif hastalıklarda biriken anormal proteinler ER stresi ve apoptoza yol açabilir. α1-antitripsin bu sorudaki ayrımı sağlamaz.
+- **Prion proteini** — Prion proteini (PrPSc) Creutzfeldt–Jakob hastalığında süngerimsi beyin dejenerasyonuna yol açan bulaşıcı yanlış katlanmış proteindir; Parkinson hastalığında Lewy cisimciklerini oluşturan protein ise alfa-sinükleindir.
+- **α1-antitripsin** — Alfa-1 antitripsin mutasyonunda yanlış katlanan protein hepatosit endoplazmik retikulumunda birikerek karaciğer hasarı yapar; Parkinson hastalığında dopaminerjik nöronlarda biriken protein ise alfa-sinükleindir.
 
 **Cevap: B** — α-sinüklein
 
@@ -3278,10 +3278,10 @@ _30 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **IL-6** — IL-6 doğru: TNF-α ve IL-1β ile birlikte yaşlanmadaki düşük dereceli inflamasyonun sitokinlerindendir.
-- **IL-10** — Yaşla hasarlı hücreler ve DNA artıkları birikir, doğuştan immün sistem hafif ama sürekli aktive olabilir. IL-10 bu sorudaki ayrımı sağlamaz.
-- **TGF-β** — TGF-β ile karıştırılabilir: Yaşlanmaya eşlik eden inflamatuar sitokinler insülin direnci ve katabolik durum oluşturur.
-- **IL-4** — Bu kronik inflamasyonda rol alan sitokinler arasında TNF-α ve IL-1β sayılır. IL-4 bu sorudaki ayrımı sağlamaz.
-- **İnterferon-α** — İnterferon-α ile karıştırılabilir: İnflamatuar sitokinler hücrelerde ek DNA ve protein hasarı yaparak yaşlanmayı hızlandırabilir.
+- **IL-10** — IL-10, M2 makrofajlar ve düzenleyici T hücreleri tarafından salgılanan antiinflamatuvar bir sitokindir; yaşlanmaya eşlik eden kronik düşük dereceli inflamasyonda (inflammaging) yükselen temel proinflamatuvar sitokin ise IL-6'dır.
+- **TGF-β** — TGF-beta bağ dokusu onarımı ve fibrozisi uyaran, aynı zamanda immün yanıtı baskılayan bir büyüme faktörüdür; yaşlanmayla artan kronik sistemik inflamasyonda öne çıkan sitokin ise IL-6'dır.
+- **IL-4** — IL-4, Th2 lenfositlerden salınarak IgE sentezini ve alternatif (M2) makrofaj aktivasyonunu uyarır; yaşlanmaya eşlik eden kronik düşük dereceli inflamasyon tablosunda artan sitokin ise IL-6'dır.
+- **İnterferon-α** — İnterferon-alfa viral enfeksiyonlara karşı doğuştan bağışıklıkta hücreleri antiviral duruma geçiren tip I interferondur; yaşlanmayla birlikte senesent hücrelerden salınıp kronik inflamasyonu sürdüren sitokin ise IL-6'dır.
 
 **Cevap: A** — IL-6
 
@@ -3493,7 +3493,7 @@ _30 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **BCL-2** — BCL-2 anti apoptotik bir proteindir; mitokondriyal yolu aktive etmez, frenler.
+- **BCL-2** — BCL-2 mitokondri dış zarını stabilize eden antiapoptotik bir proteindir; mitokondriyal ölüm yolunu aktive etmez, aksine sitokrom c sızıntısını engelleyerek apoptozu baskılar.
 - **Telomeraz** — Telomeraz telomer uçlarına nükleotid ekler; hasar algılayıp apoptoz başlatmaz.
 - **p53** — p53 doğru. Yaşlanan hücrede hasarı algılar, BAX ve BAK üzerinden mitokondriyal yolu aktive eder ve hasarlı hücreler apoptozla temizlenir.
 - **mTOR** — mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenleyen moleküldür; apoptoz sensörü değildir.
@@ -3647,7 +3647,7 @@ _30 soru (örnek + çıkmış)_
 
 **Özet.** Yaşlanma tamamen durdurulamasa da oksidatif stres, metabolik denge, inflamasyon ve otofaji hedeflenebilir; ancak insanda kanıtlanmış yaşlanma karşıtı tedavi henüz yoktur.
 
-# 07 · Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar
+# Ders 7 (07) · Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar
 
 _39 soru (örnek + çıkmış)_
 
@@ -3678,10 +3678,10 @@ _39 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Postkapiller venüller** — Postkapiller venüller doğru: vazodilatasyon, geçirgenlik artışı ve lökosit göçü özellikle bu küçük damarlarda gerçekleşir.
-- **Büyük arterler** — Akut inflamasyonun damar değişiklikleri küçük damarların genişlemesiyle başlar. Büyük arterler bu sorudaki ayrımı sağlamaz.
-- **Aorta** — Aorta ile karıştırılabilir: Vazodilatasyonda önce arterioller genişler, sonra kapiller yatakta kan akımı artar.
+- **Büyük arterler** — Büyük arterler yüksek basınçlı iletim damarlarıdır ve kalın medya tabakaları nedeniyle inflamatuvar eksüdasyon yeri değildir; akut inflamasyonda sıvı sızıntısı ve lökosit göçü postkapiller venüllerde gerçekleşir.
+- **Aorta** — Aorta elastik tipte ana iletim arteridir; akut inflamasyonda endotel kasılması, vasküler geçirgenlik artışı ve lökosit ekstravazasyonu özellikle postkapiller venüllerde meydana gelir.
 - **Lenfatik kanallar** — Lenfatik kanallar ödem sıvısını boşaltmaya çalışır; bunların inflamasyonu lenfanjittir ve deride kızarık çizgiler yapar.
-- **Büyük venler** — Büyük venler ile karıştırılabilir: Sıvı ve lökositin damar dışına çıktığı yer mikrovasküler düzeydir.
+- **Büyük venler** — Büyük venler kanı kalbe geri taşıyan kapasitans damarlarıdır; akut inflamasyonda histamin etkisine ve lökosit adezyonuna en duyarlı mikrovasküler segment ise postkapiller venüllerdir.
 
 **Cevap: A** — Postkapiller venüller
 
@@ -3699,7 +3699,7 @@ _39 soru (örnek + çıkmış)_
 - **Lökosit aracılı hasar** — Lökosit aracılı endotel hasarı ek bir mekanizmadır ve özellikle venüllerde görülür; en sık neden değildir.
 - **Anjiyogenez** — Anjiyogenez sırasında olgunlaşmamış damarlar sızdırabilir; ancak bu geçirgenlik artışının en sık nedeni değildir.
 - **Endotel hücre kasılması** — Endotel hücre kasılması doğru: histamin, bradikinin ve lökotrienlerle tetiklenir, hücreler arasında geçici aralıklar açar.
-- **Bazal membran yıkımı** — Bazal membranı lökositler göç sırasında kollajenazlarla aşar. Bazal membran yıkımı bu sorudaki ayrımı sağlamaz.
+- **Bazal membran yıkımı** — Bazal membran yıkımı lökositlerin damar duvarından dokuya geçerken kollajenazlarla gerçekleştirdiği geç bir adımdır; akut inflamasyonda vasküler geçirgenlik artışının en sık ve en hızlı mekanizması ise histamin aracılı endotel hücre kasılmasıdır.
 
 **Cevap: D** — Endotel hücre kasılması
 
@@ -3716,7 +3716,7 @@ _39 soru (örnek + çıkmış)_
 - **Düşük protein içeriği** — Düşük protein içeriği transüdanın özelliğidir; transüdada protein çoğunlukla albümindir.
 - **Hücre içermemesi** — Hücre içermemek transüdaya aittir; transüdada az ya da hiç hücre bulunmaz.
 - **Onkotik basınç azalmasıyla oluşması** — Onkotik basınç azalmasıyla oluşmak transüdanın mekanizmasıdır; inflamasyon olmadan da gelişebilir.
-- **Yalnız albümin içermesi** — Eksüda proteinden zengindir, geçirgenlik artınca plazma proteinleri damar dışına çıkar. Yalnız albümin içermesi bu sorudaki ayrımı sağlamaz.
+- **Yalnız albümin içermesi** — Yalnızca düşük miktarda albümin içerip hücre ve fibrinojenden fakir olması hidrostatik basınç artışıyla oluşan transüdanın özelliğidir; eksüda ise artmış damar geçirgenliği nedeniyle yüksek protein ve hücresel kalıntı içerir.
 - **Yüksek protein ve hücresel kalıntı** — Yüksek protein ve hücresel kalıntı doğru: eksüda, inflamasyona bağlı damar geçirgenliği artışıyla oluşur.
 
 **Cevap: E** — Yüksek protein ve hücresel kalıntı
@@ -3768,10 +3768,10 @@ _39 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Tekrarlayan bakteriyel enfeksiyonlar** — Tekrarlayan bakteriyel enfeksiyonlar doğru: integrin mutasyonları lökosit adezyon eksikliği sendromlarına yol açar ve bu enfeksiyonlar tablonun klinik bulgusudur.
-- **Hiperkalsemi** — Hiperkalsemi ile karıştırılabilir: İntegrin kusurunda sorun lökositlerin endotele sıkı yapışamamasıdır.
-- **Erken yaşlanma** — Lökosit adezyon eksikliği sendromları integrin ya da selektin ligand mutasyonlarıyla oluşur. Erken yaşlanma bu sorudaki ayrımı sağlamaz.
-- **Amfizem** — Amfizem ile karıştırılabilir: İntegrin bozukluğunun ikinci tipik bulgusu yara iyileşmesinde gecikmedir.
-- **Aplastik anemi** — İntegrinler sıkı adezyonda aktive endoteldeki ICAM-1 ile VCAM-1 gibi ligandlara bağlanır. Aplastik anemi bu sorudaki ayrımı sağlamaz.
+- **Hiperkalsemi** — Hiperkalsemi paratiroid adenomu veya malignitelere bağlı kalsiyum yüksekliğidir; lökosit yüzeyindeki beta-2 integrin mutasyonunda ise nötrofiller endotele tutunup dokuya geçemediğinden tekrarlayan bakteriyel enfeksiyonlar gelişir.
+- **Erken yaşlanma** — Erken yaşlanma DNA helikaz veya lamin A mutasyonlarıyla seyreden progeroid sendromların bulgusudur; integrin mutasyonuna bağlı lökosit adezyon eksikliğinde ise göbek kordonunun geç düşmesi ve tekrarlayan bakteriyel enfeksiyonlar görülür.
+- **Amfizem** — Amfizem akciğerde elastaz-antielastaz dengesizliğiyle alveol duvarlarının kalıcı yıkımıdır; integrin mutasyonunda ise lökositlerin enfeksiyon odağına göç edememesi nedeniyle tekrarlayan piyojenik bakteriyel enfeksiyonlar ortaya çıkar.
+- **Aplastik anemi** — Aplastik anemi kemik iliğinde hematopoetik kök hücre yetmezliğiyle pansitopeni gelişmesidir; integrin mutasyonunda ise kandaki lökosit sayısı yüksek olduğu halde hücreler dokuya çıkamaz ve tekrarlayan bakteriyel enfeksiyonlar görülür.
 
 **Cevap: A** — Tekrarlayan bakteriyel enfeksiyonlar
 
@@ -3822,8 +3822,8 @@ _39 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **iNOS–NO sistemi** — iNOS–NO sistemi esas olarak makrofajlarda çalışır; argininden nitrik oksit üretir, nötrofilde düşük düzeydedir.
-- **Lizozim** — Azurofil ve spesifik granüllerden gelen lizozomal enzimler fagolizozom içinde yıkım yapar. Lizozim bu sorudaki ayrımı sağlamaz.
-- **Kaspaz kaskadı** — Kaspaz kaskadı ile karıştırılabilir: Fagolizozomda mikroplar reaktif oksijen türleri, nitrik oksit ve lizozomal enzimlerle yıkılır.
+- **Lizozim** — Lizozim bakteri hücre duvarındaki peptidoglikanı parçalayan oksijenden bağımsız bir granül enzimidir; nötrofillerin fagolizozom içindeki en güçlü bakterisidal mekanizması ise hidrojen peroksit–miyeloperoksidaz–halojen sistemidir.
+- **Kaspaz kaskadı** — Kaspaz kaskadı konak hücresinin kendi apoptozunu yürüten hücre içi proteaz sistemidir; fagosite edilen bakterilerin nötrofil içinde en güçlü şekilde öldürülmesini sağlayan ise hidrojen peroksit–miyeloperoksidaz–halojen sistemidir.
 - **NET oluşumu** — NET oluşumu, kromatin ve granül proteinlerinden oluşan ağlarla mikropları hücre dışında yakalar; bu sırada nötrofil ölür.
 - **H₂O₂–MPO–halojen sistemi** — H₂O₂–MPO–halojen sistemi doğru: miyeloperoksidaz hidrojen peroksiti hipoklorite çevirir ve en güçlü bakterisidal yol budur.
 
@@ -3861,7 +3861,7 @@ _39 soru (örnek + çıkmış)_
 - **Pürülan** — Pürülan inflamasyon, nötrofil, nekrotik kalıntı ve bakteri içeren irin oluşumuyla karakterizedir.
 - **Ülseratif** — Ülseratif inflamasyon, nekrotik dokunun dökülmesiyle bir yüzeyde lokalize doku kaybıdır.
 - **Fibrinöz** — Fibrinöz inflamasyon doğru: fibrinojenden zengin eksüda zarlarda fibrin olarak birikir; çözünmezse organizasyonla fibrozis ve yapışıklık olur.
-- **Granülomatöz** — Granülomatöz inflamasyon ile karıştırılabilir: Akut inflamasyonun morfolojik kalıpları seröz, fibrinöz, pürülan ve ülseratiftir.
+- **Granülomatöz** — Granülomatöz inflamasyon tüberküloz veya sarkoidoz gibi kronik tablolarda epitelioid makrofaj kümeleriyle karakterizedir; perikard gibi seröz zarlarda fibrin sızıntısı ve organizasyonla yapışıklık bırakan akut kalıp ise fibrinöz inflamasyondur.
 
 **Cevap: D** — Fibrinöz
 
@@ -3878,7 +3878,7 @@ _39 soru (örnek + çıkmış)_
 - **Ülser** — Ülser, nekrotik dokunun dökülmesiyle mukoza ya da deri yüzeyinde oluşan lokalize doku kaybıdır; irin koleksiyonu değildir.
 - **Büll** — Büll, seröz inflamasyonda deride yanık ya da viral enfeksiyon sonrası oluşan sıvı dolu kabarcıktır.
 - **Apse** — Apse doğru: lokalize irin koleksiyonudur; ortasında nekroz, çevresinde canlı nötrofiller ve fibrozis bulunur.
-- **Granülom** — Granülom ile karıştırılabilir: Piyojenik bakteriler nötrofilden zengin irin oluşturan pürülan inflamasyon yapar.
+- **Granülom** — Granülom sindirilemeyen etkenlere karşı epitelioid makrofajlar ve dev hücrelerle oluşturulan kronik nodüler lezyondur; Staphylococcus aureus gibi piyojenik bakterilerin dokuda oluşturduğu lokalize irin birikimine ise apse denir.
 - **Efüzyon** — Efüzyon, plevra, perikard ya da periton boşluğunda biriken, genelde steril seröz sıvıdır.
 
 **Cevap: C** — Apse
@@ -3969,7 +3969,7 @@ _39 soru (örnek + çıkmış)_
 - **Kemotaksi** — Kemotaksi, lökositin C5a ve IL-8 gibi kimyasal madde gradyanına doğru hareketidir; mikrobu fagositoza hazırlamaz.
 - **Diapedez** — Diapedez, lökositin PECAM-1 aracılığıyla endotel hücreleri arasından sıkışarak damar dışına geçmesidir.
 - **Marjinasyon** — Marjinasyon, staz gelişince lökositlerin damar merkezinden duvara yaklaşmasıdır; göçün ilk basamağıdır.
-- **Ekzositoz** — Fagositoz tanıma ve bağlanma, yutma, öldürme ve parçalama aşamalarıyla gerçekleşir. Ekzositoz bu sorudaki ayrımı sağlamaz.
+- **Ekzositoz** — Ekzositoz hücre içi vezikül içeriğinin hücre dışına salınmasıdır; mikropların IgG antikorları ve C3b kompleman parçasıyla kaplanarak fagosit reseptörlerince kolayca tanınıp yutulabilir hale gelmesine ise opsonizasyon denir.
 
 **Cevap: A** — Opsonizasyon
 
@@ -4057,7 +4057,7 @@ _39 soru (örnek + çıkmış)_
 
 - **Mast hücresi** — Mast hücresi doğru: doku makrofajları ve dendritik hücrelerle birlikte dokuda yerleşik bekçi hücrelerdendir.
 - **Nötrofil** — Nötrofil normalde kanda dolaşır, bölgeye sonradan toplanır. Yerleşik bekçi hücre değil, akut yanıtın erken gelen fagositidir.
-- **Eozinofil** — Eozinofil alerjik reaksiyonlarda ve bazı parazit enfeksiyonlarında baskın olabilen hücredir. Bekçi hücreler arasında sayılmaz.
+- **Eozinofil** — Eozinofil kanda dolaşan ve IgE aracılı alerjik yanıtlar ile helmint enfeksiyonlarında dokuya göç eden lökosittir; bağ dokusunda ve mukozalarda yerleşik olarak bekleyip mikrobu ilk tanıyan bekçi hücreler ise mast hücreleri, makrofajlar ve dendritik hücrelerdir.
 - **Plazma hücresi** — Plazma hücresi bazı aşırı duyarlılık reaksiyonlarında baskın olabilir. Mikropları ilk tanıyan yerleşik bekçi hücre değildir.
 - **Kandaki monosit** — Kandaki monosit dolaşımdadır, dokuya geçince makrofaja dönüşür. Henüz dokuda yerleşik bir bekçi hücre değildir.
 
@@ -4112,7 +4112,7 @@ _39 soru (örnek + çıkmış)_
 - **Lenf akımının artması** — Lenf akımının artması, damar dışındaki ödem sıvısını boşaltmaya çalışır. Damar içindeki akımı yavaşlatmaz.
 - **Lökositlerin yuvarlanması** — Lökositlerin yuvarlanması stazın nedeni değil sonucudur. Akım yavaşlayınca marjinasyon, ardından yuvarlanma olur.
 - **Endotelde PECAM-1 ifadesi** — Endotelde PECAM-1 ifadesi, lökositin endotel hücreleri arasından geçtiği transmigrasyonun ana molekülüdür. Kan akımını yavaşlatmaz.
-- **Arteriollerin daralması** — Arteriollerin daralması ile karıştırılabilir: Akut inflamasyonda önce arterioller genişler ve kapiller yatakta kan akımı artar.
+- **Arteriollerin daralması** — Akut inflamasyonda arteriollerin daralması yalnızca ilk birkaç saniyelik geçici bir yanıttır; ardından gelişen vazodilatasyon ve proteinli sıvının damar dışına kaçmasıyla eritrositler yoğunlaşır, kan viskozitesi artar ve staz gelişir.
 - **Kan viskozitesinin artması** — Kan viskozitesinin artması doğru: sıvı ve protein kaybı kanı koyulaştırır, kan akımı yavaşlar ve staz gelişir.
 
 **Cevap: E** — Kan viskozitesinin artması
@@ -4149,7 +4149,7 @@ _39 soru (örnek + çıkmış)_
 - **Histamin ve bradikinin** — Histamin ve bradikinin endotel hücre kasılmasını tetikleyip geçici geçirgenlik artışı yapar. Integrin ligandı ifadesini uyarmaz.
 - **TNF ve IL-1** — TNF ve IL-1 doğru: endotel bu sitokinlerin etkisiyle ICAM-1 ve VCAM-1 gibi integrin ligandlarını eksprese eder.
 - **Lökotrien B4** — Lökotrien B4, araşidonik asitten türeyen bir kemoatraktandır. Lökositin hedefe göçünü yönlendirir.
-- **İnterferon gama** — Endotelde integrin ligandlarının ifadesini TNF ve IL-1 uyarır. İnterferon gama bu sorudaki ayrımı sağlamaz.
+- **İnterferon gama** — İnterferon-gama Th1 lenfositlerden salınarak makrofajları klasik yoldan aktive eden sitokindir; endotel yüzeyinde ICAM-1 ve VCAM-1 gibi adezyon moleküllerinin sentezini doğrudan uyaran başlıca sitokinler ise TNF ve IL-1'dir.
 
 **Cevap: C** — TNF ve IL-1
 
@@ -4255,7 +4255,7 @@ _39 soru (örnek + çıkmış)_
 
 - **Süperoksit** — Süperoksit, NADPH oksidazın oksijenden ürettiği ilk üründür. Hidrojen peroksitten önce gelen basamaktır.
 - **Peroksinitrit** — Peroksinitrit, nitrik oksidin süperoksitle birleşmesiyle oluşur. Özellikle makrofajlarda güçlü oksidan etki yapar.
-- **Hidroksil radikali** — Miyeloperoksidaz klor varlığında hidrojen peroksiti hipoklorite çevirir. Hidroksil radikali bu sorudaki ayrımı sağlamaz.
+- **Hidroksil radikali** — Hidroksil radikali hidrojen peroksidin demir iyonları varlığında Fenton reaksiyonuyla dönüşmesinden doğar; nötrofilin miyeloperoksidaz enzimi ise klor varlığında hidrojen peroksiti güçlü antimikrobiyal hipoklorite dönüştürür.
 - **Nitrik oksit** — Nitrik oksit, makrofajlarda iNOS tarafından argininden üretilir. Miyeloperoksidaz ürünü değildir.
 - **Hipoklorit** — Hipoklorit doğru: nötrofil granüllerindeki miyeloperoksidaz, klor varlığında hidrojen peroksiti hipoklorite çevirir.
 
@@ -4293,7 +4293,7 @@ _39 soru (örnek + çıkmış)_
 - **Kromatin ve granül proteinleri** — Kromatin ve granül proteinleri doğru: tuzaklar de ne a ve histondan oluşan kromatin ile granül proteinlerinden kurulu ağlardır.
 - **Kompleman ve antikor** — Kompleman ve antikor plazma proteinleridir ve opsonin olarak mikrobu kaplar. Hücre dışı tuzağı oluşturmaz.
 - **Albümin ve fibrinojen** — Albümin ve fibrinojen damar dışına sızan plazma proteinleridir. Albümin transüdada, fibrinojen fibrinöz eksüdada öne çıkar.
-- **Kollajen ve elastin** — Tuzak ağı nötrofilin kendi kromatini ve granül proteinlerinden oluşur. Kollajen ve elastin bu sorudaki ayrımı sağlamaz.
+- **Kollajen ve elastin** — Kollajen ve elastin fibroblastların sentezlediği hücre dışı matriks lifleridir; nötrofil hücre dışı tuzakları (NET'ler) ise mikropları dokuda hapseden nükleer kromatin ağları ile histon ve granül proteinlerinden oluşur.
 
 **Cevap: B** — Kromatin ve granül proteinleri
 
@@ -4353,7 +4353,7 @@ _39 soru (örnek + çıkmış)_
 
 **Özet.** Akut enflamasyon tam iyileşme, skarlı iyileşme ya da kronik inflamasyona ilerleme ile sonlanır. Yaygın tahribat ve yenilenemeyen doku fibrozisle, kalıcı etken kronikleşmeyle sonuçlanır.
 
-# 08 · Enflamasyonun Kimyasal Mediyatörleri
+# Ders 8 (08) · Enflamasyonun Kimyasal Mediyatörleri
 
 _38 soru (örnek + çıkmış)_
 
@@ -4367,7 +4367,7 @@ _38 soru (örnek + çıkmış)_
 
 - **Nötrofiller** — Nötrofiller lökotrienler ve trombosit aktive edici faktör gibi mediyatörler üretir; histamini ise mast hücreleri, bazofiller ve trombositler salar.
 - **Mast hücreleri** — Mast hücreleri doğru: histamin bu hücrelerin granüllerinde önceden depolanmıştır ve en zengin kaynağı budur.
-- **Makrofajlar** — Makrofajlar başlıca TNF ve IL-1 gibi sitokinleri üretir; histamin salan hücreler arasında sayılmaz.
+- **Makrofajlar** — Makrofajlar mikrobiyal uyarıyla TNF, IL-1 ve kemokin gibi sitokinleri salgılayan mononükleer fagositlerdir; önceden sentezlenmiş histamin granüllerini en yoğun barındıran ve travma ya da IgE ile degranüle olan hücreler ise mast hücreleridir.
 - **Endotel hücreleri** — Endotel hücreleri prostasiklin ve nitrik oksit üretir; histaminin kaynağı değil, yüzeylerindeki H1 reseptörleriyle hedefidir.
 - **Hepatositler** — Hepatositler kompleman ve kinin gibi plazmada dolaşan mediyatörlerin öncüllerini sentezler; histamin ise hücrelerden salınan bir mediyatördür.
 
@@ -4531,7 +4531,7 @@ _38 soru (örnek + çıkmış)_
 - **IL-12** — IL-12 dendritik hücre ve makrofajlardan salınır; interferon gama üretimini artırır ve Th1 yanıtını güçlendirir.
 - **IFN-γ** — IFN-γ, T lenfosit ve NK hücrelerinden salınır; makrofajları aktive eder ve kronik hücresel yanıtın temel sitokinidir.
 - **IL-6** — IL-6 doğru: makrofajlardan salınır ve özellikle karaciğerde akut faz protein üretimini uyararak sistemik etki yapar.
-- **IL-4** — IL-4 ile karıştırılabilir: Akut faz yanıtında TNF ve IL-1 de rol alır ama karaciğer için öne çıkan sitokin başkadır.
+- **IL-4** — IL-4, Th2 hücrelerinden salgılanarak B hücrelerinde IgE dönüşümünü ve alternatif makrofaj aktivasyonunu uyarır; karaciğerde CRP, fibrinojen ve serum amiloid A gibi akut faz proteinlerinin sentezini uyaran ana sitokin ise IL-6'dır.
 
 **Cevap: D** — IL-6
 
@@ -4584,7 +4584,7 @@ _38 soru (örnek + çıkmış)_
 - **Kalıtsal anjiyoödem** — Kalıtsal anjiyoödem, klasik yolu sınırlayan C1 inhibitörünün eksikliğinde gelişir.
 - **Paroksismal noktürnal hemoglobinüri** — Paroksismal noktürnal hemoglobinüri doğru: GPI bağlantılı DAF ve CD59, C3 konvertaz ve MAC oluşumunu sınırlar; eksiklikleri bu hastalığı yapar.
 - **Hemolitik üremik sendrom** — Hemolitik üremik sendrom, faktör H mutasyonlarıyla ilişkili bir kompleman düzenleme bozukluğudur.
-- **Sarkoidoz** — Sarkoidoz ile karıştırılabilir: Kompleman düzenleyici protein kusurları kalıtsal anjiyoödem, paroksismal noktürnal hemoglobinüri ve hemolitik üremik sendroma yol açar.
+- **Sarkoidoz** — Sarkoidoz çok sayıda organda nonkazeifiye granülomlarla seyreden kronik immün bir hastalıktır; komplemanı düzenleyen DAF ve CD59 proteinlerinin eksikliğinde ise eritrositler kompleman lizisine açık kalır ve paroksismal noktürnal hemoglobinüri gelişir.
 - **Alerjik astım** — Alerjik astımda sisteinil lökotrienler önemlidir; lökotrien yolu ilaçlarıyla tedavi edilir, kompleman düzenleyici eksikliği değildir.
 
 **Cevap: B** — Paroksismal noktürnal hemoglobinüri
@@ -4635,7 +4635,7 @@ _38 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **C6** — C5b ile C9 arasındaki bileşenler birlikte hücre lizisi yapan membran atak kompleksini oluşturur. C6 bu sorudaki ayrımı sağlamaz.
+- **C6** — C6, C5b'ye bağlanarak hücre zarında delik açan membran atak kompleksinin (C5b-9) yapısal bir bileşenidir; mast hücresi degranülasyonu yapan anafilatoksin ve güçlü lökosit kemoatraktanı olan kompleman parçası ise C5a'dır.
 - **C3** — C3 parçalanmamış ana bileşendir; üç aktivasyon yolunda da C3 konvertazla C3a ve C3b olarak ikiye ayrılır.
 - **C5a** — C5a doğru: C3a ve C4a ile birlikte anafilatoksindir, mast hücresinden histamin salınımını uyarır ve nötrofil ile monositler için güçlü kemotaktiktir.
 - **C3b** — C3b opsonindir; iC3b ile birlikte mikropları kaplar ve fagosit reseptörlerine bağlanarak fagositozu artırır.
@@ -4671,7 +4671,7 @@ _38 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **İnterferon** — Tip I interferonlar antiviral savunmada önemlidir, IFN-γ ise makrofajları aktive eder. İnterferon bu sorudaki ayrımı sağlamaz.
+- **İnterferon** — İnterferonlar viral replikasyonu engelleyen ve makrofajları uyaran sitokinlerdir; sepsiste yaygın endotel aktivasyonu, nitrik oksit aracılı hipotansiyon, miyokard depresyonu ve metabolik bozuklukları başlatan merkezi sitokin ise TNF'dir.
 - **IL-1** — IL-1 makrofaj, endotel ve bazı epitel hücrelerinden salınır; özellikle ateş gelişmesinde daha belirgin rol oynar.
 - **IL-6** — IL-6 özellikle karaciğerde akut faz protein üretimini uyararak sistemik etki gösterir.
 - **IL-12** — IL-12 dendritik hücre ve makrofajlardan salınır; IFN-γ üretimini artırıp Th1 yanıtını güçlendirir ve kronik inflamasyonda rol alır.
@@ -4689,11 +4689,11 @@ _38 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **IL-13** — IL-13 ile karıştırılabilir: Nötrofil ve monositlerin inflamasyon bölgesine toplanmasını Th17 hücrelerinin salgıladığı sitokin sağlar.
-- **IL-23** — Nötrofilleri endotele yapıştıran adezyon moleküllerinin ekspresyonunu TNF ve IL-1 artırır. IL-23 bu sorudaki ayrımı sağlamaz.
+- **IL-13** — IL-13, Th2 lenfositlerden salınarak mukus salgısını, IgE üretimini ve M2 makrofaj aracılı fibrozisi uyarır; nötrofillerin enfeksiyon bölgesine toplanmasını ve pürülan yanıtı yöneten temel T hücre sitokini ise IL-17'dir.
+- **IL-23** — IL-23, dendritik hücreler ve makrofajlardan salınarak Th17 hücrelerinin farklılaşmasını ve yaşamını destekleyen sitokindir; Th17 hücrelerinden salınıp dokuya doğrudan nötrofil göçünü sağlayan efektör sitokin ise IL-17'dir.
 - **IL-17** — IL-17 doğru: başlıca Th17 hücrelerinden salınır ve nötrofil ile monositlerin inflamasyon bölgesine toplanmasını sağlar.
-- **IL-10** — Lökositlerin kemotaksisi ve göçünü başlıca kemokinler, C5a ve LTB₄ sağlar. IL-10 bu sorudaki ayrımı sağlamaz.
-- **IL-2** — IL-2 ile karıştırılabilir: Kronik inflamasyonda makrofaj aktivasyonunu destekleyen sitokinler IL-12 ve IFN-γ olarak öne çıkar.
+- **IL-10** — IL-10, aktive makrofaj ve dendritik hücreleri baskılayarak inflamasyonu sonlandıran düzenleyici sitokindir; akut bakteriyel enfeksiyonlarda nötrofil infiltrasyonunu ve pürülan yanıtı uyaran sitokin ise IL-17'dir.
+- **IL-2** — IL-2, antijenle uyarılan T lenfositlerinin klonal çoğalmasını sağlayan otokrin büyüme faktörüdür; nötrofillerin dokuya çağrılmasında ve pürülan akut inflamasyonda doğrudan rol oynayan sitokin ise IL-17'dir.
 
 **Cevap: C** — IL-17
 
@@ -4764,7 +4764,7 @@ _38 soru (örnek + çıkmış)_
 - **Vazodilatasyon** — Vazodilatasyon histaminin arteriollerdeki etkisidir. Serotonin aynı ailede olsa da ağırlıklı olarak damarı daraltır.
 - **Venülde endotel kasılması** — Venülde endotel kasılması, histaminin H1 reseptörü üzerinden yaptığı geçici geçirgenlik artışıdır.
 - **Trombosit agregasyonu inhibisyonu** — Trombosit agregasyonu inhibisyonu, endotelde üretilen prostasiklinin etkisidir.
-- **Bronkodilatasyon** — Serotoninin baskın etkisi vazokonstriksiyondur ve enflamasyondaki rolü histamine göre daha az belirgindir. Bronkodilatasyon bu sorudaki ayrımı sağlamaz.
+- **Bronkodilatasyon** — Bronkodilatasyon beta-2 adrenerjik uyarı gibi düz kas gevşetici etkilerle oluşur; aktive trombositlerin yoğun granüllerinden salınan serotonin (5-hidroksitriptamin) ise damar düz kasında baskın olarak vazokonstriksiyon yapar.
 - **Vazokonstriksiyon** — Vazokonstriksiyon doğru: serotonin vazoaktif bir amin olsa da baskın etkisi damarı daraltmaktır.
 
 **Cevap: E** — Vazokonstriksiyon
@@ -4851,7 +4851,7 @@ _38 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Apoptoz indüksiyonu** — Bu sitokinler fibroblastı öldürmez, kolajen sentezini ve proliferasyonunu artırır. Apoptoz indüksiyonu bu sorudaki ayrımı sağlamaz.
+- **Apoptoz indüksiyonu** — TNF ve IL-1 doku onarımı sırasında fibroblastları apoptoza sürüklemez; aksine fibroblast çoğalmasını ve kollajen sentezini uyararak bağ dokusu onarımına katkıda bulunur.
 - **Histamin salınımı** — Histamin salınımı mast hücresinden olur ve C3a, C5a ya da IgE gibi uyaranlarla tetiklenir. Fibroblast etkisi değildir.
 - **Akut faz proteini üretimi** — Akut faz proteini üretimi karaciğerde olur. Bu sistemik bir etkidir, fibroblast üzerindeki etki değildir.
 - **Prokoagülan aktivite** — Prokoagülan aktivite artışı TNF ve IL-1’in endotel üzerindeki lokal etkisidir. Fibroblastla ilgili değildir.
@@ -4873,7 +4873,7 @@ _38 soru (örnek + çıkmış)_
 - **Ateş** — Ateş beyinde oluşur. TNF ve IL-1 hipotalamusta PGE2 aracılığıyla ateş yapar.
 - **Akut faz proteini üretimi** — Akut faz proteini üretimi karaciğerde olur. CRP, serum amiloid A ve fibrinojen bu proteinlerdir.
 - **Miyokard depresyonu** — Miyokard depresyonu sepsiste yüksek TNF düzeylerinin kalp üzerindeki zararlı etkisidir.
-- **İnsülin direnci** — İnsülin direnci ile karıştırılabilir: Yüksek TNF düzeyleri sepsiste vazodilatasyon, şok ve kaşeksi yapar; kemik iliği etkisi lökositozdur.
+- **İnsülin direnci** — İnsülin direnci TNF'nin karaciğer ve çizgili kasta insülin reseptör sinyalini bozmasıyla gelişen metabolik bir etkidir; TNF, IL-1 ve IL-6'nın kemik iliği üzerindeki doğrudan etkisi ise lökosit üretimini ve salınımını artırarak lökositoz yapmasıdır.
 
 **Cevap: A** — Lökositoz
 
@@ -4906,8 +4906,8 @@ _38 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Selektinlere bağlanma** — Selektinlere bağlanma lökositin endotel üzerinde yuvarlanmasını sağlar. Kemokinlerin tutunma mekanizması değildir.
-- **Fibrine bağlanma** — Kemokinler proteoglikanlara bağlanarak tutulur. Fibrine bağlanma bu sorudaki ayrımı sağlamaz.
-- **Albümine bağlanma** — Albümine bağlanma ile karıştırılabilir: Kemokinleri yerinde tutan, matriks ve endotel yüzeyindeki proteoglikanlardır.
+- **Fibrine bağlanma** — Fibrin pıhtılaşma kaskadının sonunda oluşan çözünmez protein ağıdır; kemokinlerin kan akımıyla yıkanmadan endotel yüzeyinde ve hücre dışı matrikste konsantrasyon gradyanı oluşturacak şekilde tutulmasını ise heparan sülfat proteoglikanları sağlar.
+- **Albümine bağlanma** — Albümin plazmada onkotik basıncı koruyan ve serbest yağ asitlerini taşıyan dolaşım proteinidir; kemokinlerin endotel yüzeyinde sabitlenerek lökositlere sunulmasını ise hücre yüzeyindeki ve matriksteki proteoglikanlar sağlar.
 - **Proteoglikanlara bağlanma** — Proteoglikanlara bağlanma doğru: kemokinler bu yolla matrikste ve endotel yüzeyinde tutulur ve lökosit için bir yoğunluk farkı oluşur.
 - **Kompleman C3b’ye bağlanma** — Kompleman C3b’ye bağlanma opsonizasyonla ilgilidir. C3b mikrobu kaplayıp fagositozu artırır.
 
@@ -4945,7 +4945,7 @@ _38 soru (örnek + çıkmış)_
 - **Antijen–antikor kompleksinin C1’i bağlaması** — Antijen ve antikor kompleksinin C1’i bağlaması klasik yolu başlatır. Kompleksteki antikor IgG ya da IgM olabilir.
 - **Mikrobiyal LPS ile doğrudan aktivasyon** — Mikrobiyal LPS ve polisakkaritlerle aktivasyon alternatif yolun tetikleyicisidir.
 - **C5b–C9 kompleksinin oluşması** — C5b–C9 kompleksi, yani membran atak kompleksi, aktivasyonun sonunda oluşan efektördür. Yolu başlatmaz.
-- **Faktör H aktivasyonu** — Faktör H bir düzenleyici proteindir. C3 konvertaz inaktivasyonunu destekleyerek kaskadı frenler.
+- **Faktör H aktivasyonu** — Faktör H alternatif kompleman yolunu baskılayan düzenleyici bir plazma proteinidir; C3 konvertaz yıkımını hızlandırarak kompleman aktivasyonunu sınırlar, lektin yolunu başlatmaz.
 
 **Cevap: A** — Mannoza bağlayıcı lektinin mikrobiyal karbonhidrata bağlanması
 
@@ -5041,7 +5041,7 @@ _38 soru (örnek + çıkmış)_
 
 **Özet.** Mediyatör fazlalığı enflamasyonu güçlü ve dayanıklı kılar ama tek yolu bloklamak çoğu zaman yeterli olmaz. Bu yüzden tedavi COX, lökotrien yolu, TNF ve kompleman gibi düğüm noktalarını hedefler.
 
-# 09 · Kronik ve Granülomatöz Enflamasyon
+# Ders 9 (09) · Kronik ve Granülomatöz Enflamasyon
 
 _38 soru (örnek + çıkmış)_
 
@@ -5056,8 +5056,8 @@ _38 soru (örnek + çıkmış)_
 - **Nötrofiller** — Nötrofiller akut inflamasyonun tipik elemanıdır; kronik tablolarda ancak osteomiyelit gibi istisnalarda süregen katılım gösterir.
 - **Mononükleer hücreler** — Mononükleer hücreler doğru: makrofaj, lenfosit ve plazma hücreleri uzamış seyirde dokuyu doldurur ve kronik inflamasyonu tanımlar.
 - **Eozinofiller** — Eozinofiller IgE aracılı alerjik reaksiyonlarda ve helmint enfeksiyonlarında öne çıkar; kronik inflamasyonun genel infiltratı değildir.
-- **Bazofiller** — Bazofiller ile karıştırılabilir: Kronik inflamasyonda antikor üreten plazma hücreleri ve lenfositler birlikte bulunur.
-- **Trombositler** — Kronik inflamasyonda baskın eleman sıklıkla makrofajdır ve lenfositlerle birlikte bulunur. Trombositler bu sorudaki ayrımı sağlamaz.
+- **Bazofiller** — Bazofiller kanda az sayıda bulunan ve IgE aracılı aşırı duyarlılıkta histamin salan granülositlerdir; kronik inflamasyonun karakteristik doku infiltrasyonu ise makrofaj, lenfosit ve plazma hücrelerinden oluşan mononükleer hücrelerdir.
+- **Trombositler** — Trombositler hemostaz ve pıhtı oluşumunda görev alan çekirdeksiz megakaryosit parçalarıdır; kronik inflamasyonda dokuya yerleşip süreci yöneten tipik infiltrasyon ise makrofaj ve lenfositlerden oluşan mononükleer hücrelerdir.
 
 **Cevap: B** — Mononükleer hücreler
 
@@ -5147,7 +5147,7 @@ _38 soru (örnek + çıkmış)_
 - **Th2** — Th2 hücreleri IL-4, IL-5 ve IL-13 salgılar; eozinofilleri aktive eder ve M2 aktivasyonunu destekler.
 - **Th17** — Th17 doğru: IL-17 ve diğer sitokinleri salgılayarak nötrofil alımını ve aktivasyonunu artırır.
 - **Plazma hücresi** — Plazma hücresi B hücreleriyle birlikte antikor üretimini üstlenir; sitokinle nötrofil çağırmak onun görevi değildir.
-- **NK hücresi** — NK hücresi ile karıştırılabilir: IL-17 salgılayıp nötrofil çağıran eleman bir CD4 pozitif T alt grubudur.
+- **NK hücresi** — Doğal katil (NK) hücreler virüsle enfekte veya tümör hücrelerini lizise uğratan ve interferon-gama salgılayan doğuştan lenfoid hücrelerdir; IL-17 salgılayarak dokuya nötrofil toplayan hücre ise CD4+ Th17 lenfosittir.
 
 **Cevap: C** — Th17
 
@@ -5164,8 +5164,8 @@ _38 soru (örnek + çıkmış)_
 - **Eotaksin** — Eotaksin eozinofilleri bölgeye çeken özgül kemokindir; granül içeriği değildir ve parazite toksik etki yapmaz.
 - **Major basic protein** — Major basic protein doğru: eozinofil granülündedir, parazitler için toksiktir ve konak epiteline de zarar verir.
 - **Histamin** — Histamin, alerjik reaksiyonların ana hücresi olan mast hücresinin salgıladığı mediyatördür.
-- **Lizozim** — Lizozim ile karıştırılabilir: Parazite toksik eozinofil granül proteini konak epitelini de hasarlayan özgül bir proteindir.
-- **Miyeloperoksidaz** — Eozinofil granülünde parazit öldürmeyle anılan protein bazik yapıdadır. Miyeloperoksidaz bu sorudaki ayrımı sağlamaz.
+- **Lizozim** — Lizozim nötrofil ve makrofajlarda bulunan, bakterilerin peptidoglikan duvarını yıkan genel bir antimikrobiyal enzimdir; eozinofil spesifik granüllerinde yer alıp helmint parazitlere doğrudan toksik etki gösteren protein ise major basic proteindir.
+- **Miyeloperoksidaz** — Miyeloperoksidaz nötrofillerin azurofil granüllerinde bulunan ve hidrojen peroksitten hipoklorit üreten enzimdir; eozinofil granüllerine özgü olan ve parazit zarını parçalayan katyonik protein ise major basic proteindir.
 
 **Cevap: B** — Major basic protein
 
@@ -5180,7 +5180,7 @@ _38 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **Plazma hücresi** — Plazma hücresi B hücreleriyle birlikte antikor üreten elemandır; aktive makrofaj değildir.
-- **Köpük hücresi** — Granülomda nodüler kümeyi oluşturan aktive makrofajların özel bir adı vardır ve çevrelerinde lenfosit halkası bulunur. Köpük hücresi bu sorudaki ayrımı sağlamaz.
+- **Köpük hücresi** — Köpük hücresi aterosklerozda veya ksantomlarda sitoplazması lipid damlacıklarıyla dolmuş makrofajdır; granülomda interferon-gama etkisiyle yassı epitel hücresine benzeyen pembe sitoplazmalı aktive makrofajlara ise epiteloid hücre denir.
 - **Epiteloid hücre** — Epiteloid hücre doğru: granülomdaki aktive makrofajdır; bol pembe granüler sitoplazmalı ve sınırları belirsizdir.
 - **Kupffer hücresi** — Kupffer hücresi karaciğerin yerleşik makrofajıdır; granülomdaki aktive makrofajın adı değildir.
 - **Mikroglia** — Mikroglia beynin yerleşik makrofajıdır; granülomun temel elemanının adı değildir.
@@ -5197,10 +5197,10 @@ _38 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Yabancı cisim dev hücresi** — Yabancı cisim granülomunda materyal dev hücrenin merkezinde ya da çevresinde görülür. Yabancı cisim dev hücresi bu sorudaki ayrımı sağlamaz.
+- **Yabancı cisim dev hücresi** — Yabancı cisim dev hücresinde çok sayıdaki çekirdek sitoplazma içinde gelişigüzel ve dağınık biçimde kümelenir; çekirdeklerin hücre periferinde at nalı veya taç şeklinde dizildiği dev hücre ise Langhans tipi dev hücredir.
 - **Langhans tipi dev hücre** — Langhans tipi dev hücre doğru: çekirdekleri periferde taç şeklinde dizilir; tüberküloz granülomunda yer yer görülür.
 - **Epiteloid hücre** — Epiteloid hücre tek çekirdekli aktive makrofajdır; çok çekirdekli dev hücre değildir.
-- **Reed-Sternberg hücresi** — Reed-Sternberg hücresi ile karıştırılabilir: Çekirdeği taç gibi dizilen dev hücre granülomun elemanıdır.
+- **Reed-Sternberg hücresi** — Reed-Sternberg hücresi Hodgkin lenfomada görülen, baykuş gözü görünümünde iki loblu çekirdeğe sahip malign B lenfosit kökenli hücredir; tüberküloz granülomunda çekirdekleri periferde taç gibi dizilen makrofaj kökenli hücre ise Langhans dev hücresidir.
 - **Plazma hücresi** — Plazma hücresi antikor üreten tek çekirdekli hücredir; sifilizdeki gummada belirgin infiltrasyon yapar.
 
 **Cevap: B** — Langhans tipi dev hücre
@@ -5324,7 +5324,7 @@ _38 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **IFN-γ** — IFN-γ Th1 hücrelerinin sitokinidir; makrofajların klasik M1 aktivasyonunu uyarır.
-- **IL-2** — IL-2 ile karıştırılabilir: Th2 hücreleri eozinofil aktivasyonu ve alternatif makrofaj aktivasyonuyla ilişkilidir.
+- **IL-2** — IL-2 ağırlıklı olarak Th1 ve naif T hücrelerinden salınan T hücre büyüme faktörüdür; Th2 hücre aktivasyonu sonucunda ise IgE sentezini uyaran IL-4 ve IL-13 ile eozinofilleri aktive eden IL-5 salgılanır.
 - **IL-5** — IL-5 doğru: Th2 hücreleri IL-4, IL-5 ve IL-13 salgılar; bu yanıt eozinofil aktivasyonu ve alternatif M2 makrofaj aktivasyonu sağlar.
 - **IL-12** — IL-12 T hücresinden değil makrofajdan salınır; antijen sunumuyla birlikte T hücre aktivasyonunu tetikler.
 - **IL-17** — IL-17 Th17 hücrelerinden salınır ve nötrofil alımı ile aktivasyonunu artırır.
@@ -5343,7 +5343,7 @@ _38 soru (örnek + çıkmış)_
 
 - **Sifiliz** — Sifiliz Treponema pallidum enfeksiyonudur; gumma adlı lezyonu oluşturur ve çevresinde belirgin plazma hücre infiltrasyonu bulunur.
 - **Sarkoidoz** — Sarkoidoz etiyolojisi bilinmeyen, bol epiteloid hücreli ve genellikle nonkazeifiye granülomlarla seyreden immün aracılı bir hastalıktır.
-- **Fibroadenom** — Fibroadenom doğru: granülomatöz inflamasyonun enfeksiyöz, immün aracılı ya da yabancı cisim nedenleri arasında yer almaz.
+- **Fibroadenom** — Fibroadenom meme stroması ve epitelinden gelişen, iyi sınırlı benign bir neoplazmdır; tüberküloz, sarkoidoz, Crohn hastalığı ve kedi tırmığı hastalığının aksine granülomatöz inflamasyon oluşturmaz.
 - **Tüberküloz** — Tüberküloz Mycobacterium tuberculosis enfeksiyonudur ve kazeifiye granülomlarla seyreden granülomatöz inflamasyonun tipik örneğidir.
 - **Crohn hastalığı** — Crohn hastalığı bağırsak bakterilerine karşı gelişen immün yanıtla ilişkilidir; bağırsak duvarında nonkazeifiye granülomlar görülebilir.
 
@@ -5363,7 +5363,7 @@ _38 soru (örnek + çıkmış)_
 - **Plazma hücresi** — Plazma hücresi doğru: B hücreleriyle birlikte antikor üretir ve bazı kronik lezyonlarda belirgindir.
 - **Makrofaj** — Makrofaj fagositoz, sitokin ve büyüme faktörü salgısı ile antijen sunumu yapar; antikor salgılayan hücre değildir.
 - **Nötrofil granülosit** — Nötrofil granülosit akut inflamasyonun tipik hücresidir ve antikor üretmez.
-- **Doğal katil (NK) hücre** — Antikor salgılayan hücreler adaptif bağışıklığın antijen özgüllüğü sağlayan kolundan gelir. Doğal katil hücreler bu sorudaki ayrımı sağlamaz.
+- **Doğal katil (NK) hücre** — Doğal katil (NK) hücreler antikor üretmeyen, MHC sınıf I kaybı olan hedef hücreleri doğrudan öldüren doğuştan bağışıklık hücreleridir; hümoral bağışıklıkta B lenfositlerden farklılaşıp antikor salgılayan hücre ise plazma hücresidir.
 
 **Cevap: B** — Plazma hücresi
 
@@ -5414,7 +5414,7 @@ _38 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **Hasar, onarım ve enflamasyonun eşzamanlılığı** — Hasar, onarım ve enflamasyonun eşzamanlılığı doğru: kronik inflamasyon haftalar ile aylar sürer ve onarım anjiyogenez ile fibrozisi içerir.
-- **Yalnız ödem ve nötrofil infiltrasyonu** — Yalnız ödem ve nötrofil infiltrasyonu akut inflamasyonun imzasıdır. Kronik inflamasyonda mononükleer hücreler baskındır.
+- **Yalnız ödem ve nötrofil infiltrasyonu** — Yalnızca ödem ve nötrofil infiltrasyonu akut inflamasyonun karakteristik bulgusudur; kronik inflamasyonda ise mononükleer hücre infiltrasyonu, doku yıkımı ve fibrozisle onarım eşzamanlı olarak bulunur.
 - **Daima akut evreden sonra başlaması** — Daima akut evreden sonra başlaması yanlıştır. Kronik inflamasyon akutu takip edebilir ama sinsi başlangıçlı, primer kronik de olabilir.
 - **Fibrozis gelişmemesi** — Fibrozis gelişmemesi akut inflamasyona uyar. Kronik inflamasyonda onarım girişimi olarak fibrozis gelişir.
 - **Saatler içinde tam iyileşme** — Saatler içinde tam iyileşme kronik inflamasyonun tanımına uymaz. Kronik inflamasyon haftalar ile aylar süren uzamış bir süreçtir.
@@ -5435,7 +5435,7 @@ _38 soru (örnek + çıkmış)_
 - **Fibrozis ve organ fonksiyon kaybı** — Fibrozis ve organ fonksiyon kaybı doğru: kronik inflamasyonda kalıcı doku yıkımı olur ve süreç fibrozis ile organ fonksiyon kaybına gider.
 - **Tam iyileşme** — Tam iyileşme akut inflamasyonun genel sonucudur. Kronik inflamasyonda kalıcı doku yıkımı vardır.
 - **Ödem ile kendini sınırlama** — Ödem ile kendini sınırlama akut inflamasyonu tanımlar. Akutta ödem ve nötrofil baskındır.
-- **Seröz efüzyon** — Kronik inflamasyonu akuttan ayıran sonuç kalıcı yıkım, fibrozis ve organ fonksiyon kaybıdır. Seröz efüzyon bu sorudaki ayrımı sağlamaz.
+- **Seröz efüzyon** — Seröz efüzyon yanık bülü veya viral plöritte görülen, proteinden fakir sulu sıvı birikimiyle karakterize akut inflamasyon kalıbıdır; kronik inflamasyonun tipik uzun dönem sonucu ise parankim yıkımı, fibrozis ve kalıcı organ fonksiyon kaybıdır.
 
 **Cevap: B** — Fibrozis ve organ fonksiyon kaybı
 
@@ -5453,7 +5453,7 @@ _38 soru (örnek + çıkmış)_
 - **Mezotelyoma** — Mezotelyoma asbest maruziyetiyle ilişkilidir. Asbest akciğer fibrozisi ve mezotelyomaya yol açar.
 - **Siroz** — Siroz doğru: kronik viral hepatit süregen hepatit olarak devam eder ve siroza gidebilir.
 - **Silikozis** — Silikozis, silikanın solunmasıyla gelişen kronik akciğer hastalığıdır. Karaciğerle ilgili değildir.
-- **Apse** — Apse ile karıştırılabilir: Kronik viral hepatit süregen hepatit olarak devam eder ve siroza gider.
+- **Apse** — Apse piyojenik bakterilerin akut sıvılaşma nekrozuyla oluşturduğu lokalize püy birikimidir; kronik viral hepatitte yıllar süren hepatosit nekrozu, rejenerasyon nodülleri ve yaygın fibrozisin uzun dönem sonucu ise sirozdur.
 
 **Cevap: C** — Siroz
 
@@ -5486,7 +5486,7 @@ _38 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **Tek atakla tam iyileşme** — Tek atakla tam iyileşme bu hastalıkları tanımlamaz. Otoantijenlere ya da zararsız antijenlere karşı yanıt süregen ve tekrarlayıcıdır.
-- **Yalnız nötrofil infiltrasyonu** — Yalnız nötrofil infiltrasyonu akut inflamasyonun imzasıdır. Bu hastalıklarda akut ve kronik inflamasyon bir aradadır.
+- **Yalnız nötrofil infiltrasyonu** — Yalnızca nötrofil infiltrasyonu akut bakteriyel inflamasyonun tipik bulgusudur; otoimmün ve alerjik hastalıklarda ise zemin kronik inflamasyon üzerine binen tekrarlayan akut alevlenmeler nedeniyle karışık hücresel infiltrasyon görülür.
 - **Granülom oluşumu zorunluluğu** — Granülom oluşumu bu hastalıkların ortak özelliği değildir. Granülom, zor elimine edilen ajanlara karşı gelişen özel bir kronik inflamasyon tipidir.
 - **Tekrarlayan ataklar ve karışık inflamasyon** — Tekrarlayan ataklar ve karışık inflamasyon doğru. Otoimmün ve alerjik hastalıklarda ataklar tekrarlar, akut ve kronik inflamasyon bir arada görülür.
 - **Fibrozis hiç gelişmemesi** — Fibrozisin hiç gelişmemesi yanlıştır. Bu hastalıkların geç evresinde fibrozis baskın olabilir.
@@ -5506,7 +5506,7 @@ _38 soru (örnek + çıkmış)_
 - **IL-4** — IL-4 alternatif M2 aktivasyonunun tetikleyicisidir ve özellikle Th2 hücrelerinden salınır.
 - **IL-13** — IL-13 de IL-4 ile birlikte alternatif M2 aktivasyonunu tetikler. Mikrobisidal değil onarıcı fenotip oluşturur.
 - **TGF-β** — TGF-β fibrogenik bir büyüme faktörüdür. Fibroblast aktivasyonu ve kolajen birikimini artırır, M1 tetikleyicisi değildir.
-- **IL-10** — IL-10 ile karıştırılabilir: Klasik aktivasyonu mikrobiyal ürünler ve T hücrelerinden gelen IFN-γ tetikler.
+- **IL-10** — IL-10 makrofajların proinflamatuvar sitokin üretimini ve antijen sunumunu baskılayan antiinflamatuvar sitokindir; makrofajın mikrosidal klasik (M1) aktivasyonunu ise T hücrelerinden gelen IFN-gama ile endotoksin (LPS) gibi mikrobiyal ürünler tetikler.
 - **LPS gibi mikrobiyal ürünler** — LPS gibi mikrobiyal ürünler doğru: klasik aktivasyon mikrobiyal ürünler ve T hücrelerinden gelen IFN-γ ile tetiklenir.
 
 **Cevap: E** — LPS gibi mikrobiyal ürünler
@@ -5524,7 +5524,7 @@ _38 soru (örnek + çıkmış)_
 - **Ara formlar sık görülür** — Ara formlar sık görülür doğru: teoride erken M1, sonra M2 ağırlığı beklenir ama pratikte iki fenotip arasında ara formlar sıktır.
 - **Asla aynı dokuda bulunmazlar** — Asla aynı dokuda bulunmazlar ifadesi yanlıştır. Ara formların sık görülmesi iki fenotipin keskin ayrılmadığını gösterir.
 - **M2 daima önce gelir** — M2 daima önce gelir ifadesi teorik sırayı tersine çevirir. Erken yanıt M1, sonra M2 ağırlıklıdır.
-- **Birbirine dönüşemezler** — Pratikteki ara formlar fenotiplerin bir yelpaze oluşturduğunu gösterir. Birbirine dönüşemezler ifadesi bu sorudaki ayrımı sağlamaz.
+- **Birbirine dönüşemezler** — M1 ve M2 makrofajlar kalıcı ve geri dönüşümsüz olarak kilitlenmiş hücre tipleri değildir; dokudaki mikroçevre sinyalleri değiştikçe birbirine dönüşebilir ve pratikte sıklıkla ara fenotipler görülür.
 - **Yalnız akut inflamasyonda görülür** — Yalnız akut inflamasyonda görülmeleri yanlıştır. Bu dengenin bozulması kronik inflamasyon ve fibroziste rol oynar.
 
 **Cevap: A** — Ara formlar sık görülür
@@ -5631,8 +5631,8 @@ _38 soru (örnek + çıkmış)_
 
 - **Periferde taç şeklinde çekirdekler** — Periferde taç şeklinde dizilen çekirdekler Langhans tipi dev hücrenin özelliğidir. Tek bir epiteloid hücreyi tanımlamaz.
 - **Bol pembe granüler sitoplazma** — Bol pembe granüler sitoplazma doğru: epiteloid hücreler bol, pembe, granüler sitoplazmalıdır ve hücre sınırları belirsizdir.
-- **Kırmızı iri granüller** — Kırmızı iri granüller ile karıştırılabilir: Epiteloid hücrede bol, pembe, granüler sitoplazma vardır.
-- **Bölünmüş çok loblu çekirdek** — Epiteloid hücre aktive bir makrofajdır, yani mononükleer bir hücredir. Bölünmüş çok loblu çekirdek bu sorudaki ayrımı sağlamaz.
+- **Kırmızı iri granüller** — Kırmızı iri sitoplazmik granüller major basic protein barındıran eozinofillerin özelliğidir; granülomdaki epiteloid makrofajlar ise sınırları belirsiz, bol ve soluk pembe granüler sitoplazmalarıyla tanınır.
+- **Bölünmüş çok loblu çekirdek** — Bölünmüş çok loblu (polimorfonükleer) çekirdek nötrofil, eozinofil ve bazofil gibi granülositlerin özelliğidir; aktive makrofaj olan epiteloid hücrelerde ise tek, oval veya uzamış veziküler çekirdek ve bol pembe sitoplazma bulunur.
 - **Belirgin keskin hücre sınırları** — Belirgin keskin hücre sınırları yanlıştır. Epiteloid hücrelerin sınırları belirsizdir.
 
 **Cevap: B** — Bol pembe granüler sitoplazma
@@ -5687,7 +5687,7 @@ _38 soru (örnek + çıkmış)_
 - **Apse oluşumu** — Apse lokalize irin koleksiyonudur, pürülan inflamasyonda görülür.
 - **Fibrozis ve kalıcı skar** — Fibrozis ve kalıcı skar doğru: granülomların iyileşmesi çoğunlukla bu şekilde sonlanır.
 - **Seröz efüzyon** — Seröz efüzyon hafif proteinli sıvı birikimidir ve granülom iyileşmesiyle ilgili değildir.
-- **Malign dönüşüm** — Granülomlar çoğunlukla fibrozis ve kalıcı skarla iyileşir. Malign dönüşüm bu sorudaki ayrımı sağlamaz.
+- **Malign dönüşüm** — Granülomlar neoplastik lezyonlar olmadığından malign dönüşüm göstermezler; M2 makrofajlardan salınan TGF-beta ve PDGF gibi büyüme faktörlerinin etkisiyle çoğunlukla kollajen birikimi, fibrozis ve kalıcı skarla iyileşirler.
 
 **Cevap: C** — Fibrozis ve kalıcı skar
 
@@ -5729,7 +5729,7 @@ _38 soru (örnek + çıkmış)_
 
 **Özet.** Klasik enfeksiyon ve otoimmün hastalıklara ek olarak ateroskleroz, tip 2 diyabet, metabolik sendrom ve Alzheimer hastalığında kronik düşük dereceli inflamasyon seyre katkı sunar.
 
-# 10 · Doku Onarımı ve Yara İyileşmesi
+# Ders 10 (10) · Doku Onarımı ve Yara İyileşmesi
 
 _35 soru (örnek + çıkmış)_
 
@@ -5799,7 +5799,7 @@ _35 soru (örnek + çıkmış)_
 - **IL-6** — IL-6 doğru: hazırlama basamağında hepatositleri büyüme faktörlerine duyarlı hâle getirir, ardından proliferasyon başlar.
 - **VEGF** — VEGF endotel hücrelerinin proliferasyonunu uyarır ve vasküler permeabiliteyi artırır; anjiyogenezin temel faktörüdür.
 - **PDGF** — PDGF fibroblast ve düz kas için kemotaktiktir, ECM protein sentezini uyarır; karaciğerde hazırlama yapmaz.
-- **IL-17** — IL-17 ile karıştırılabilir: Hepatositi hazırlayan sitokin başkadır, proliferasyonu ise HGF ve TGF-α gibi büyüme faktörleri sağlar.
+- **IL-17** — IL-17, Th17 hücrelerinden salınarak dokuya nötrofil göçünü uyaran proinflamatuvar sitokindir; karaciğer rejenerasyonunda Kupffer hücrelerinden salınıp hepatositleri G0'dan G1 fazına hazırlayan (priming) sitokin ise IL-6'dır.
 
 **Cevap: B** — IL-6
 
@@ -5814,10 +5814,10 @@ _35 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **Yoğun olgun kollajen** — Yoğun olgun kolajen, granülasyon dokusunun yerini alan olgun yara izinin özelliğidir; granülasyon dokusunda matriks gevşektir.
-- **Kazeöz nekroz** — Kazeöz nekroz ile karıştırılabilir: Granülasyon dokusu ölü doku değil, yeni damarlardan zengin canlı onarım dokusudur.
-- **Epiteloid granülom** — Granülasyon dokusu adına rağmen granülom içermez, gevşek matriksli onarım dokusudur. Epiteloid granülom bu sorudaki ayrımı sağlamaz.
+- **Kazeöz nekroz** — Kazeöz nekroz tüberküloz granülomlarında görülen asellüler, peynirimsi doku ölümüdür; yara iyileşmesinin proliferasyon evresinde oluşan granülasyon dokusu ise ödemli gevşek matriks içinde yeni tomurcuklanan kılcallar ve çoğalan fibroblastlardan oluşur.
+- **Epiteloid granülom** — Epiteloid granülom kronik inflamasyonda aktive makrofajların oluşturduğu nodüler kümedir; isim benzerliğine karşın granülasyon dokusu granülom içermez, anjiyogenez ve fibroblast proliferasyonuyla karakterize pembe-granüler onarım dokusudur.
 - **Yeni kılcallar ve fibroblastlar** — Yeni kılcallar ve fibroblastlar doğru: granülasyon dokusunda çok sayıda yeni kılcal, proliferan fibroblast ve hafif lökosit infiltrasyonu bulunur.
-- **Elastik lif artışı** — Elastin büyük arter, akciğer ve deride esneklik sağlar, granülasyon dokusunun tanımlayıcısı değildir. Elastik lif artışı bu sorudaki ayrımı sağlamaz.
+- **Elastik lif artışı** — Elastik lifler normal dermis, akciğer ve büyük arter duvarlarına esneklik verir ancak skar ve granülasyon dokusunda yeniden sentezlenmeleri çok sınırlıdır; granülasyon dokusunun mikroskopik temelini yeni kılcallar, gevşek matriks ve fibroblastlar oluşturur.
 
 **Cevap: D** — Yeni kılcallar ve fibroblastlar
 
@@ -5849,15 +5849,15 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **TNF** — Fibrozisin başlıca sitokini kolajen ve fibronektin sentezini artırıp matriks yıkımını azaltır. TNF bu sorudaki ayrımı sağlamaz.
-- **IL-1** — IL-1 ile karıştırılabilir: En güçlü fibrogenik sitokin aynı zamanda inflamasyonu sınırlayan bir büyüme faktörüdür.
+- **TNF** — TNF, lökosit toplanmasını ve akut faz yanıtını başlatan, aynı zamanda matriks metalloproteinaz salgısını artırabilen proinflamatuvar sitokindir; fibroblast göçünü ve kollajen sentezini en güçlü uyaran ana fibrogenik sitokin ise TGF-beta'dır.
+- **IL-1** — IL-1, endotel aktivasyonu ve hipotalamusta ateş yanıtını uyaran erken proinflamatuvar sitokindir; MMP'leri baskılayıp TIMP'leri artırarak hücre dışı matriks birikimini yönlendiren en önemli fibrogenik sitokin ise TGF-beta'dır.
 - **TGF-β** — TGF-β doğru: fibroblast göçü ve proliferasyonunu, kolajen ve fibronektin sentezini artırır; MMP'leri azaltıp TIMP'leri artırır.
 - **EGF** — EGF keratinosit ve fibroblastlar için mitojeniktir, keratinosit göçünü ve granülasyon dokusu oluşumunu uyarır.
 - **IL-6** — IL-6, karaciğer rejenerasyonunda hepatositleri büyüme faktörlerine duyarlı hâle getiren hazırlayıcı sitokindir.
 
 **Cevap: C** — TGF-β
 
-**Özet.** **TGF-β** en önemli fibrogenik sitokindir; ECM sentezini artırır, MMP'yi azaltıp TIMP'yi artırarak matriks yıkımını frenler ve inflamasyonu sınırlar.
+**Özet.** **TGF-β** en önemli fibrogenik sitokindir; ECM sentezini artırır, MMP'yi azaltıp TIMP'yi artırarak matriks yıkımını baskılar ve inflamasyonu sınırlar.
 
 ## Soru 8
 
@@ -5867,11 +5867,11 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Raşitizm** — Raşitizm ile karıştırılabilir: Kolajen çapraz bağlanması için gereken vitamin C vitaminidir.
-- **Pellegra** — Çapraz bağlanma bozulunca kolajen zayıf kalır ve yara iyileşmesi aksar. Pellegra bu sorudaki ayrımı sağlamaz.
+- **Raşitizm** — Raşitizm, çocukluk çağında D vitamini veya kalsiyum eksikliğine bağlı büyüme plağı kıkırdağının mineralize olamamasıdır; prokollajenin hidroksilasyonu ve çapraz bağlanması için gereken C vitamini eksikliğinde ise iskorbüt gelişir.
+- **Pellegra** — Pellegra, niasin (B3 vitamini) ve triptofan eksikliğinde dermatit, diyare ve demans üçlüsüyle seyreden tablodur; kollajen liflerinin hidroksilasyonu ve sağlam çapraz bağ kurması için gereken C vitamini eksikliğinde ise iskorbüt görülür.
 - **İskorbüt** — İskorbüt doğru: C vitamini eksikliğinde kolajen çapraz bağlanamaz, yara iyileşmesi zayıflar.
-- **Beriberi** — Protein ve C vitamini eksikliği kolajen sentezini azaltarak iyileşmeyi geciktirir. Beriberi bu sorudaki ayrımı sağlamaz.
-- **Gece körlüğü** — Gece körlüğü ile karıştırılabilir: Skar dokusunun ana proteini kolajenin sağlamlığı C vitaminine bağlıdır.
+- **Beriberi** — Beriberi, tiamin (B1 vitamini) eksikliğinde polinöropati ve yüksek debili kalp yetmezliğiyle seyreden klinik tablodur; kollajen sentezinde prolil ve lizil hidroksilazın kofaktörü olan C vitamini eksikliğinde ise iskorbüt gelişir.
+- **Gece körlüğü** — Gece körlüğü ve korneal kuruluk rodopsin sentezi ve epitel farklılaşması için gereken A vitamini eksikliğinin bulgusudur; kollajen çapraz bağlanmasını bozarak damar kırılganlığı ve yara açılmasına yol açan C vitamini eksikliği ise iskorbüttür.
 
 **Cevap: C** — İskorbüt
 
@@ -5922,10 +5922,10 @@ _35 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **VEGF artışı** — VEGF artışı anjiyogenezi destekler; iyileşmeyi bozan bir mekanizma değildir.
-- **MMP inhibisyonu** — MMP inhibisyonu ile karıştırılabilir: Matriks yıkımını frenleyen etki TGF-β ve TIMP'e aittir, glukokortikoidin mekanizması değildir.
-- **Nötrofil artışı** — Nötrofil fonksiyon bozukluğu diyabetin yara iyileşmesini bozma yoludur. Nötrofil artışı bu sorudaki ayrımı sağlamaz.
+- **MMP inhibisyonu** — MMP inhibisyonu kollajen yıkımını azaltarak matriks birikimini destekler; glukokortikoidler ise antiinflamatuvar etkilerinin yanı sıra TGF-beta ekspresyonunu ve fibroblastların kollajen sentezini baskılayarak yara iyileşmesini zayıflatır.
+- **Nötrofil artışı** — Glukokortikoidler dokuda nötrofil ve makrofaj toplanmasını artırmaz, aksine lökosit göçünü, TGF-beta üretimini ve kollajen sentezini baskılayarak granülasyon dokusunu ve yara gerilim gücünü azaltır.
 - **TGF-β ve kollajen sentezinin inhibisyonu** — TGF-β ve kolajen sentezinin inhibisyonu doğru: glukokortikoidler TGF-β üretimini ve kolajen sentezini baskılayarak iyileşmeyi bozar.
-- **Fibronektin artışı** — Fibronektin hücre adezyonu ve göçünde iskele görevi görür, onarımı destekler. Fibronektin artışı bu sorudaki ayrımı sağlamaz.
+- **Fibronektin artışı** — Fibronektin artışı hücre göçü ve matriks organizasyonunu kolaylaştırarak yara iyileşmesini destekler; glukokortikoidler ise TGF-beta ve kollajen sentezini inhibe ederek skar oluşumunu ve yara kapanmasını bozar.
 
 **Cevap: D** — TGF-β ve kollajen sentezinin inhibisyonu
 
@@ -5979,7 +5979,7 @@ _35 soru (örnek + çıkmış)_
 - **Kontraktür** — Kontraktür doğru: aşırı yara kontraksiyonudur, yanık sonrası sıktır ve eklem hareketini kısıtlayabilir.
 - **Hipertrofik skar** — Hipertrofik skar yara sınırları içinde kalan fazla skar dokusudur ve zamanla gerileyebilir.
 - **Dehisens** — Dehisens yaranın ayrılmasıdır; aşırı büzülme değil, mekanik zorlanmayla açılan yaradır.
-- **Peteşi** — Peteşi ile karıştırılabilir: Yanık sonrası eklemi kısıtlayan bozukluk yara kontraksiyonunun aşırılığıdır.
+- **Peteşi** — Peteşi, trombositopeni veya damar duvarı zayıflığında deri ve mukozalarda görülen 1–2 milimetrelik noktasal kanamadır; derin yanıklardan sonra miyofibroblastların aşırı büzülmesiyle eklem hareketini kısıtlayan deformite ise kontraktürdür.
 
 **Cevap: B** — Kontraktür
 
@@ -5993,10 +5993,10 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Ameliyat sonrası geç dönemde yara iyileşmesi üzerine etki etmez.** — Ameliyat sonrası geç dönemde etkisiz olduğu ifadesi cevap değildir; glukokortikoidler TGF-β ve kollajen sentezini inhibe ederek iyileşmeyi bozar.
-- **Lizozomal enzimlerin salınımını artırır.** — Lizozomal enzim salınımının artışı ile karıştırılabilir: Glukokortikoidlerin iyileşmeyi bozan bilinen etkisi TGF-β üretiminin baskılanmasıdır.
-- **Epitelizasyonu etkilemez, ancak kontraksiyonu daha çok etkiler.** — Epitelizasyonu etkilemeyip kontraksiyonu etkilediği ifadesi cevap değildir; glukokortikoidlerin tanımlanan hedefi matriks yapımını sağlayan kollajen sentezidir.
-- **İnflamatuar faza etki etmez.** — İnflamatuar faza etkisiz olduğu ifadesi cevap değildir; glukokortikoidler yara iyileşmesini etkileyen hormonal sistemik faktörlerdendir.
+- **Ameliyat sonrası geç dönemde yara iyileşmesi üzerine etki etmez.** — Kortikosteroidler yalnızca erken dönemde değil, geç dönemde de fibroblast çoğalmasını ve kollajen birikimini baskılayarak yara gerilim gücünü düşürür; bu nedenle geç dönemde etkisiz olduğu söylenemez.
+- **Lizozomal enzimlerin salınımını artırır.** — Kortikosteroidler lizozomal zarları stabilize ederek enzim salınımını azaltır; yara iyileşmesi üzerindeki temel olumsuz etkileri ise yüksek doz veya kronik kullanımda TGF-beta ve kollajen sentezini azaltmalarıdır.
+- **Epitelizasyonu etkilemez, ancak kontraksiyonu daha çok etkiler.** — Kortikosteroidler hem epitelizasyonu hem de granülasyon dokusu oluşumunu ve kontraksiyonu baskılar; doğru olan ifade yüksek doz veya uzun süreli kullanımlarının TGF-beta ve kollajen sentezini azaltmasıdır.
+- **İnflamatuar faza etki etmez.** — Kortikosteroidler güçlü antiinflamatuvar ilaçlardır ve inflamatuar fazı belirgin biçimde baskılarlar; ayrıca TGF-beta ve kollajen sentezini azaltarak proliferasyon ve matriks birikimini zayıflatırlar.
 - **Yüksek doz veya kronik kullanımları kollajen sentezini azaltır.** — Kollajen sentezinin azalması doğru: glukokortikoidler TGF-β üretimini ve kollajen sentezini inhibe ederek yara iyileşmesini bozar.
 
 **Cevap: E** — Yüksek doz veya kronik kullanımları kollajen sentezini azaltır.
@@ -6122,7 +6122,7 @@ _35 soru (örnek + çıkmış)_
 - **Makrofaj** — Makrofaj, monositlerin dokuya geçmesiyle oluşur ve öncü hücreden sonra gelir; hem temizlikçi hem onarımın düzenleyicisidir.
 - **Lenfosit** — Lenfosit ilk saatlerde alanı temizleyen hücre değildir; ilk 6–48 saatte önce nötrofil, ardından makrofaj gelir.
 - **Fibroblast** — Fibroblast inflamatuvar hücre değildir; hasar temizlendikten sonra bölgeye göç eder, çoğalır ve kollajen sentezler.
-- **Mast hücresi** — Alanı ilk temizleyen hücre nötrofil, onu izleyenler monosit ve makrofajlardır. Mast hücresi bu sorudaki ayrımı sağlamaz.
+- **Mast hücresi** — Mast hücresi yaralanma anında dokuda zaten yerleşik bulunan ve histamin salarak vasküler yanıtı başlatan bekçi hücredir; kandaki dolaşımdan çıkıp ilk 6–48 saatte yara alanına göç eden ilk baskın lökosit ise nötrofildir.
 - **Nötrofil** — Nötrofil doğru: yaralanmadan sonra alana ilk gelen hücredir, ardından monosit ve makrofajlar temizliği sürdürür.
 
 **Cevap: E** — Nötrofil
@@ -6173,7 +6173,7 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **IL-6 eksikliği** — IL-6 parsiyel hepatektomide hepatositleri büyüme faktörlerine duyarlı hale getiren priming sitokinidir; kronik hasarda sınırlayıcı etken olarak geçmez.
+- **IL-6 eksikliği** — IL-6 eksikliği kronik karaciğer hasarında rejenerasyonu durduran ana engel değildir; kronik hepatit ve sirozda oval hücreler çoğalsa bile yoğun kollajen birikimi ve skarlaşma sinüzoidal mimariyi bozarak fonksiyonel düzelmeyi sınırlar.
 - **Kök hücre yokluğu** — Kök hücre yokluğu doğru değildir; Hering kanallarındaki oval hücreler kök hücre benzeridir ve rejenerasyona katkı sağlayabilir.
 - **Bazal membranın sağlam kalması** — Bazal membranın ve stromanın korunması rejenerasyonu kolaylaştıran koşuldur; düzelmeyi sınırlamaz.
 - **Eşlik eden skar oluşumu** — Eşlik eden skar oluşumu doğru: kronik hasarda oval hücreler rejenerasyona katkı sağlasa da skar fonksiyonel düzelmeyi sınırlar.
@@ -6231,7 +6231,7 @@ _35 soru (örnek + çıkmış)_
 - **Hiyaluronan** — Hiyaluronan yüksek su bağlama kapasitesiyle granülasyon dokusunda bol bulunur; yapışkan glikoprotein değildir.
 - **Elastin** — Elastin esneklik sağlayan matriks bileşenidir; büyük arterler, akciğer, deri ve uterusta boldur.
 - **Laminin** — Laminin doğru: bazal membranda yer alan yapışkan glikoproteindir ve hücre adezyonu ile göçünde iskele görevi görür.
-- **Proteoglikan** — Proteoglikanlar hidratlı jel oluşturarak sıkıştırmaya direnç sağlar; yapışkan glikoproteinler arasında yer almaz.
+- **Proteoglikan** — Proteoglikanlar çekirdek bir proteine bağlı glikozaminoglikan zincirlerinden oluşur ve sulu jel yapısı sağlayarak basınca direnç verir; bazal membranda hücreleri tip IV kollajene bağlayan haç biçimli yapışkan glikoprotein ise laminindir.
 
 **Cevap: D** — Laminin
 
@@ -6263,8 +6263,8 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **IL-6** — IL-6 karaciğer rejenerasyonunda priming sitokinidir; hepatositleri büyüme faktörlerine duyarlı hale getirir, fibrogenik sitokinler arasında sayılmaz.
-- **TGF-α** — TGF-α hepatosit ve epitel hücrelerinin proliferasyonunu uyarır; fibrogenik sitokinler arasında sayılmaz.
+- **IL-6** — IL-6, karaciğerde akut faz proteinlerini uyaran ve parsiyel hepatektomi sonrası hepatositleri bölünmeye hazırlayan sitokindir; T yardımcı 2 (Th2) lenfositlerden salınıp fibroblastlarda kollajen sentezini doğrudan uyaran fibrogenik sitokin ise IL-13'tür.
+- **TGF-α** — TGF-alfa, EGF reseptörüne bağlanarak epitel hücrelerinin ve hepatositlerin mitotik çoğalmasını uyaran bir büyüme faktörüdür; Th2 lenfositlerden salınarak alternatif makrofaj aktivasyonu ve fibrozisi tetikleyen sitokin ise IL-13'tür.
 - **IL-13** — IL-13 doğru: T lenfositlerinden salınır ve PDGF ile birlikte TGF-β dışındaki fibrogenik sitokinlerdendir.
 - **VEGF** — VEGF endotel proliferasyonunu uyarır ve anjiyogenezde temel rol oynar; T lenfosit kökenli fibrogenik sitokin değildir.
 - **EGF** — EGF keratinosit ve fibroblastlar için mitojeniktir; makrofaj, tükürük bezi ve keratinositlerden salınır.
@@ -6284,7 +6284,7 @@ _35 soru (örnek + çıkmış)_
 - **MMP-1 ve MMP-3** — MMP-1 ve MMP-3 interstisyel kollajenazlar arasında yer alır; MMP-3 ayrıca stromelizindir, jelatinaz değildir.
 - **MMP-10 ve MMP-11** — MMP-10 ve MMP-11 stromelizin grubundadır; bu grubu MMP-3 ile birlikte oluştururlar.
 - **MMP-3 ve MMP-10** — MMP-3 ve MMP-10 stromelizinlerdir; çeşitli ECM bileşenlerini yıkarlar ama jelatinaz grubunda değildirler.
-- **MMP-1 ve MMP-11** — MMP-1 interstisyel kollajenaz, MMP-11 ise stromelizindir; ikisi de jelatinazlar arasında sayılmaz.
+- **MMP-1 ve MMP-11** — MMP-1 fibriler kollajeni kesen interstisyel kollajenaz, MMP-11 ise proteoglikan ve laminini parçalayan stromelizin grubundadır; bazal membrandaki tip IV kollajeni ve denatüre kollajeni (jelatini) yıkan jelatinazlar ise MMP-2 ve MMP-9'dur.
 - **MMP-2 ve MMP-9** — MMP-2 ve MMP-9 doğru: jelatinazlar bu ikisidir; MMP-2 interstisyel kollajenazlar arasında da sayılır.
 
 **Cevap: E** — MMP-2 ve MMP-9
@@ -6363,7 +6363,7 @@ _35 soru (örnek + çıkmış)_
 
 **Özet.** Hyaluronan yüksek su bağlama kapasitesiyle granülasyon dokusunda bol bulunur; proteoglikanlar hidratlı jel oluşturur, kollajen ise olgun skarın ana proteinidir.
 
-# 11 · Ödem, Hiperemi, Konjesyon ve Kanama
+# Ders 11 (11) · Ödem, Hiperemi, Konjesyon ve Kanama
 
 _36 soru (örnek + çıkmış)_
 
@@ -6411,11 +6411,11 @@ _36 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Kupffer hücreleri** — Akciğerde hemosiderin yüklü makrofajlar kronik konjesyonun ürünüdür ve hastalıkla anılan bir ad taşır. Kupffer hücreleri bu sorudaki ayrımı sağlamaz.
-- **Epiteloid hücreler** — Epiteloid hücreler ile karıştırılabilir: Kronik pulmoner konjesyonda alveol septaları kalınlaşır ve fibrotik hâle gelir.
-- **Langhans hücreleri** — Kronik konjesyonda makrofajlar hemosiderin taşır, çok çekirdekli dev hücre oluşturmaz. Langhans hücreleri bu sorudaki ayrımı sağlamaz.
+- **Kupffer hücreleri** — Kupffer hücreleri karaciğer sinüzoidlerinin duvarında yerleşik bulunan doku makrofajlarıdır; sol kalp yetmezliğine bağlı kronik akciğer konjesyonunda alveol içindeki eritrositleri fagosite eden hemosiderin yüklü makrofajlara ise kalp yetmezliği hücreleri denir.
+- **Epiteloid hücreler** — Epiteloid hücreler granülomatöz inflamasyonda interferon-gama ile aktive olmuş ve epitel benzeri görünüm kazanmış makrofajlardır; kronik pulmoner konjesyonda alveol lümeninde biriken hemosiderin yüklü makrofajlar ise kalp yetmezliği hücreleridir.
+- **Langhans hücreleri** — Langhans hücreleri tüberküloz gibi granülomlarda epiteloid makrofajların kaynaşmasıyla oluşan, çekirdekleri periferde dizili dev hücrelerdir; kronik akciğer konjesyonunda alveollerde hemosiderin taşıyan makrofajlara ise kalp yetmezliği hücreleri denir.
 - **Kalp yetmezliği hücreleri** — Kalp yetmezliği hücreleri doğru: kronik pulmoner konjesyonda alveol boşluklarındaki hemosiderin yüklü makrofajlara bu ad verilir.
-- **Köpük hücreleri** — Alveol makrofajının içindeki pigment kandan gelen hemosiderindir. Köpük hücreleri bu sorudaki ayrımı sağlamaz.
+- **Köpük hücreleri** — Köpük hücreleri aterosklerotik plaklarda veya ksantomlarda sitoplazması kolesterol esterleriyle dolmuş makrofajlardır; kronik pasif akciğer konjesyonunda mikrohemorajileri temizleyen hemosiderin yüklü alveol makrofajları ise kalp yetmezliği hücreleridir.
 
 **Cevap: D** — Kalp yetmezliği hücreleri
 
@@ -6431,8 +6431,8 @@ _36 soru (örnek + çıkmış)_
 
 - **Muskat karaciğer** — Muskat karaciğer doğru: kronik pasif konjesyonda kırmızı ve çökük sentrilobüler alanlar kahverengi periportal parankimle yan yana durur.
 - **Portakal kabuğu** — Portakal kabuğu görünümü meme kanserinde yüzeyel lenfatiklerin tıkanmasıyla meme derisinde oluşur.
-- **Kama şekilli infarkt** — Kama şekilli infarkt ile karıştırılabilir: Kronik pasif konjesyonda lobül merkezinde nekroz ve hücre kaybı olur.
-- **Peynirimsi nekroz** — Karaciğer konjesyonunda santral ven ve sinüzoidler kanla dolar. Peynirimsi nekroz bu sorudaki ayrımı sağlamaz.
+- **Kama şekilli infarkt** — Kama şekilli infarkt böbrek veya dalak gibi uç arterli organlarda arter tıkanıklığı sonucu gelişen koagülatif nekroz alanıdır; sağ kalp yetmezliğinde karaciğer lobül merkezlerinin kırmızı-koyu, periportal alanların açık renkli göründüğü tablo ise muskat karaciğerdir.
+- **Peynirimsi nekroz** — Peynirimsi (kazeöz) nekroz tüberküloz granülomlarında görülen sarı-beyaz yıkım alanıdır; kronik pasif karaciğer konjesyonunda sentrilobüler kan göllenmesi ve periportal soluklukla oluşan alacalı makroskopik görünüm ise muskat karaciğerdir.
 - **Fil hastalığı** — Fil hastalığı filaryaziste kasık lenfatiklerinin fibrozisiyle oluşan masif lenfödemdir.
 
 **Cevap: A** — Muskat karaciğer
@@ -6465,11 +6465,11 @@ _36 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Fibrinojen** — Fibrinojen ile karıştırılabilir: Kolloid ozmotik basıncın en büyük kısmını plazma proteinlerinin yarısını oluşturan protein sağlar.
-- **Globulin** — Onkotik basıncı en çok belirleyen protein karaciğerde sentezlenir ve sirozda azalır. Globulin bu sorudaki ayrımı sağlamaz.
+- **Fibrinojen** — Fibrinojen karaciğerde üretilen ve pıhtılaşma kaskadında fibrine dönüşen yüksek molekül ağırlıklı bir akut faz proteinidir; toplam plazma proteinlerinin yarısından fazlasını oluşturarak kolloid ozmotik basınca en büyük katkıyı yapan ise albümindir.
+- **Globulin** — Globulinler antikorları ve taşıyıcı proteinleri kapsayan, molekül ağırlığı büyük olduğu için molar konsantrasyonu albüminden düşük kalan protein grubudur; plazma kolloid ozmotik basıncının yaklaşık %80'ini sağlayan temel protein albümindir.
 - **Albümin** — Albümin doğru: plazma proteinlerinin yaklaşık yarısını oluşturur ve kolloid ozmotik basınca en büyük katkıyı sağlar.
-- **Transferrin** — Onkotik basıncın ana proteini nefrotik sendromda ağır proteinüriyle kaybedilir. Transferrin bu sorudaki ayrımı sağlamaz.
-- **CRP** — CRP ile karıştırılabilir: Kolloid ozmotik basınç düşünce venül ucunda sıvı geri emilimi azalır ve ödem gelişir.
+- **Transferrin** — Transferrin plazmada demir iyonlarını taşıyan beta-globulin yapısında bir proteindir; kapiller yatakta suyu damar içinde tutan kolloid ozmotik basınca en büyük katkıyı ise en bol plazma proteini olan albümin sağlar.
+- **CRP** — C-reaktif protein (CRP) inflamasyonda IL-6 uyarısıyla karaciğerden salınan ve opsonin görevi gören akut faz proteinidir; plazma kolloid ozmotik basıncını belirleyen ana protein ise albümindir.
 
 **Cevap: C** — Albümin
 
@@ -6575,8 +6575,8 @@ _36 soru (örnek + çıkmış)_
 
 - **Hemoglobin** — Hemoglobin ekimozun ilk kırmızı mavi rengini verir; yeşil evreden sorumlu değildir.
 - **Hemosiderin** — Hemosiderin ekimozun son evresindeki altın kahverengi rengi verir.
-- **Melanin** — Melanin ile karıştırılabilir: Ekimozdaki renkler yalnız hemoglobin ve onun yıkım ürünlerinden gelir.
-- **Lipofuksin** — Ekimozun renk dizisi hemoglobin, ardından iki yıkım pigmenti ile açıklanır. Lipofuksin bu sorudaki ayrımı sağlamaz.
+- **Melanin** — Melanin melanositlerde tirozinden sentezlenen ve deriye normal rengini veren endojen pigmenttir; deri altı hematomunda (ekimozda) hemoglobinin makrofajlarca yıkılmasıyla mavi-yeşil rengi veren ara ürün ise biliverdin ve bilirubindir.
+- **Lipofuksin** — Lipofuksin yaşlı hücrelerde serbest radikal hasarıyla lizozomlarda biriken sarı-kahverengi aşınma pigmentidir; ekimozun iyileşme sürecinde yeşilimsi-sarı renk değişiminden sorumlu hemoglobin yıkım ürünü ise bilirubindir.
 - **Bilirubin** — Bilirubin doğru: hemoglobin yıkımıyla oluşur ve ekimoza mavi yeşil renk verir.
 
 **Cevap: E** — Bilirubin
@@ -6591,11 +6591,11 @@ _36 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Hemokromatoz** — Kronik dış kanamada demir birikmez, aksine dışarı kaybedilir. Hemokromatoz bu sorudaki ayrımı sağlamaz.
+- **Hemokromatoz** — Hemokromatoz vücutta aşırı demir birikimiyle organ hasarı gelişmesidir; gastrointestinal ülser veya aşırı menstrüasyon gibi kronik dış kanamalarda ise eritrositlerle birlikte demir sürekli vücut dışına kaybedildiğinden demir eksikliği anemisi gelişir.
 - **Demir eksikliği anemisi** — Demir eksikliği anemisi doğru: peptik ülser ya da ağır menstrüasyon gibi kronik dış kanamada demir kaybedilir ve anemi gelişir.
-- **Polisitemi** — Süregen dış kan kaybı demir depolarını tüketir ve anemiye götürür. Polisitemi bu sorudaki ayrımı sağlamaz.
+- **Polisitemi** — Polisitemi kronik hipoksi veya eritropoietin artışıyla eritrosit kitlesinin yükselmesidir; kronik dış kanamada ise demir depoları tükendiği için hemoglobin sentezi bozulur ve mikrositer demir eksikliği anemisi ortaya çıkar.
 - **Sarılık** — Sarılık, iç kanamalarda ve hematomlarda hemoglobin yıkımına eşlik edebilir; dış kanamanın tipik sonucu değildir.
-- **Hipervolemi** — Hızlı ve büyük kan kaybı tersine hipovolemik şok riski taşır. Hipervolemi bu sorudaki ayrımı sağlamaz.
+- **Hipervolemi** — Hipervolemi sodyum ve su tutulumuyla damar içi sıvı hacminin artmasıdır; kronik dış kanamada ise sürekli demir kaybı kemik iliğinde eritropoezi kısıtlayarak demir eksikliği anemisine yol açar.
 
 **Cevap: B** — Demir eksikliği anemisi
 
@@ -6612,8 +6612,8 @@ _36 soru (örnek + çıkmış)_
 - **Periorbital bölge** — Periorbital bölge, düşük onkotik basınçta gevşek bağ dokusu nedeniyle ödemin erken görüldüğü yerdir; bağımlı ödem bölgesi değildir.
 - **Ayak bileği** — Ayak bileği ayakta duran hastada bağımlı ödemin görüldüğü yerdir; yatan hastada en alttaki bölge değildir.
 - **Sakrum** — Sakrum doğru: bağımlı ödem en alttaki bölgede belirgindir; yatan hastada bu bölge sakrumdur.
-- **El sırtı** — Bağımlı ödem yerçekimine göre en alttaki bölgede toplanır. El sırtı bu sorudaki ayrımı sağlamaz.
-- **Yüz** — Yüz ile karıştırılabilir: Yatan hastada vücudun en alçak noktası sırtın alt ucudur.
+- **El sırtı** — El sırtı yatağa bağımlı hastada yerçekimi açısından en alçak bölge değildir; hidrostatik basınca bağlı bağımlı (dependant) ödem ayakta duran kişide ayak bileklerinde, sırtüstü yatan hastada ise sakrum üzerinde en belirgindir.
+- **Yüz** — Yüz ve göz kapaklarında belirgin ödem, gevşek bağ dokusu nedeniyle özellikle nefrotik sendrom gibi ağır hipoalbüminemi tablolarında görülür; yatağa bağımlı kalp yetmezliği hastasında yerçekimine bağlı ödem ise sakrum bölgesinde toplanır.
 
 **Cevap: C** — Sakrum
 
@@ -6635,7 +6635,7 @@ _36 soru (örnek + çıkmış)_
 
 **Cevap: C** — Purpura
 
-**Özet.** Yüzeyel kanamalar çapa göre ayrılır: peteşi 1–2 mm, **purpura** 3–5 mm, ekimoz ise 1–2 cm'lik deri altı hematomudur.
+**Özet.** Yüzeyel kanamalar boyutuna göre ayrılır: peteşi 1–2 mm, **purpura** 3–5 mm, ekimoz ise 1–2 cm'lik deri altı hematomudur.
 
 ## Soru 30
 
@@ -6663,11 +6663,11 @@ _36 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Periportal fibrozis** — Muskat karaciğerde periportal alanlar kahverengimsi ve bazen yağlıdır, değişiklik lobül merkezindedir. Periportal fibrozis bu sorudaki ayrımı sağlamaz.
+- **Periportal fibrozis** — Periportal fibrozis kronik viral hepatit veya safra yolu hastalıklarında portal alan çevresinde bağ dokusu artışıdır; kalp yetmezliğinde oksijenden en fakir bölge olan santral ven çevresinde kan göllenmesi ve hipoksiyle sentrolobüler hemorajik nekroz gelişir ve muskat karaciğer görünümü oluşur.
 - **Sentrolobüler hemorajik nekroz** — Sentrolobüler hemorajik nekroz doğru: kronik pasif konjesyonda lobül merkezinde hemoraji ve nekroz, kahverengi periportal parankimle muskat görünümü verir.
 - **Sentrolobüler iskemik nekroz** — Sentrolobüler iskemik nekroz bu tablonun tanımı değildir; muskat karaciğerde lobül merkezindeki nekroza hemoraji eşlik eder, bu yüzden hemorajik nekroz denir.
-- **Zahn infarktı** — Zahn infarktı ile karıştırılabilir: Muskat görünüm infarkta değil, kronik pasif konjesyona bağlı lobül merkezi değişikliğine dayanır.
-- **Sentroportal nekroz** — Muskat görünümde nekroz portal alanda değil, lobül merkezinde yani sentrilobüler alandadır. Sentroportal nekroz bu sorudaki ayrımı sağlamaz.
+- **Zahn infarktı** — Zahn infarktı intrahepatik portal ven dalının tıkanmasıyla oluşan, gerçek nekroz içermeyen kama biçimli koyu kırmızı atrofi ve sinüzoidal konjesyon alanıdır; yaygın muskat karaciğer görünümü ise sağ kalp yetmezliğinde gelişen sentrolobüler hemorajik nekroza bağlıdır.
+- **Sentroportal nekroz** — Sentroportal nekroz karaciğerde tanımlanan bir konjesyon kalıbı değildir; sağ kalp yetmezliğinde venöz basınç artışı ve hipoksi öncelikle santral ven çevresindeki (zon 3) hepatositleri vurur ve sentrolobüler hemorajik nekrozla muskat karaciğer yapar.
 
 **Cevap: B** — Sentrolobüler hemorajik nekroz
 
@@ -6682,7 +6682,7 @@ _36 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **Sodyum** — Sodyum onkotik basıncı oluşturmaz; tutulumu intravasküler hacmi ve hidrostatik basıncı artırarak ödemi kolaylaştırır.
-- **Karbonhidratlar** — Kolloid ozmotik basınç plazma proteinlerine bağlıdır. Karbonhidratlar bu sorudaki ayrımı sağlamaz.
+- **Karbonhidratlar** — Glikoz gibi karbonhidratlar kapiller duvardan serbestçe geçebilen küçük moleküller oldukları için kalıcı kolloid ozmotik basınç oluşturamazlar; kapiller zarı aşamayıp suyu damar içinde tutan onkotik basıncı plazma proteinleri (başta albümin) oluşturur.
 - **Lipitler** — Lipitler bu basınçla ilişkilendirilmez; plazma proteinlerinin yaklaşık yarısını oluşturan albümin onkotik basınca en büyük katkıyı sağlar.
 - **Su** — Su bu basıncın kaynağı değil, hareket eden sıvının kendisidir; proteinler venül ucunda sıvıyı damar içine geri çeker.
 - **Proteinler** — Proteinler doğru: venül ucunda plazma proteinlerine bağlı ozmotik basınç sıvıyı geri emer; en büyük katkı albümindendir.
@@ -7015,7 +7015,7 @@ _36 soru (örnek + çıkmış)_
 
 **Özet.** Hızlı kan kaybında kan hacminin %20'sine kadarı tolere edilir, fazlası hipovolemik şok riski taşır; küçük intrakraniyal kanama ise az miktarda bile ölümcül olabilir.
 
-# 12 · Tromboz Patofizyolojisi
+# Ders 12 (12) · Tromboz Patofizyolojisi
 
 _39 soru (örnek + çıkmış)_
 
@@ -7066,7 +7066,7 @@ _39 soru (örnek + çıkmış)_
 - **von Willebrand hastalığı** — von Willebrand hastalığı köprü kuran faktörün, yani vWF'nin eksikliğidir; reseptör sağlamdır.
 - **Glanzmann trombastenisi** — Glanzmann trombastenisi agregasyon reseptörü GpIIb-IIIa'nın eksikliğidir; trombositler birbirine bağlanamaz.
 - **Bernard–Soulier sendromu** — Bernard–Soulier sendromu doğru: trombosit yüzey reseptörü GpIb eksiktir, trombositler kollajene yapışamaz ve kanama diyatezi gelişir.
-- **Hemofili** — Hemofili ile karıştırılabilir: Yapışma reseptörü eksikliği trombosit düzeyinde, yani primer hemostazda bir bozukluktur.
+- **Hemofili** — Hemofili A ve B, sırasıyla faktör VIII ve faktör IX eksikliğiyle seyreden sekonder hemostaz (koagülasyon) bozukluklarıdır; trombosit yüzeyindeki von Willebrand reseptörü olan GpIb kompleksinin eksikliği ise Bernard–Soulier sendromudur.
 - **HIT** — HIT, heparin ile PF4 kompleksine karşı otoantikorlarla gelişir; trombositopeniye rağmen protrombotik bir durumdur.
 
 **Cevap: C** — Bernard–Soulier sendromu
@@ -7154,7 +7154,7 @@ _39 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **PAI-1** — PAI-1 bir plazminojen aktivatör inhibitörüdür; fibrinolizi azaltır, endotel aktivasyonunda artar.
-- **α2-antiplazmin** — Alfa iki antiplazmin dolaşımda serbest plazmini inaktive eder; fibrinolizin frenidir, aktivatörü değildir.
+- **α2-antiplazmin** — Alfa-2 antiplazmin dolaşımdaki serbest plazmini bağlayıp etkisizleştiren başlıca fibrinoliz inhibitörüdür; endotelden salınarak plazminojeni plazmine dönüştüren fizyolojik aktivatör ise doku tipi plazminojen aktivatörüdür (t-PA).
 - **t-PA** — t-PA doğru: endotel kökenli doku plazminojen aktivatörüdür, fibrine bağlıyken en aktiftir ve plazminojeni plazmine çevirir.
 - **TFPI** — TFPI doku faktörü yolu inhibitörüdür; doku faktörü ile faktör VIIa kompleksini inhibe eder.
 - **Antitrombin III** — Antitrombin III heparin benzeri moleküllerle aktive olur; trombini ve diğer pıhtılaşma faktörlerini inaktive eder.
@@ -7172,7 +7172,7 @@ _39 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **Protein C/S** — Protein C/S doğru: trombomodulin ve endotel protein C reseptörüyle aktive olur, faktör Va ve VIIIa'yı inhibe eder.
-- **TFPI** — TFPI doku faktörü ile faktör VIIa kompleksini inhibe ederek kaskadın başlangıcını frenler.
+- **TFPI** — Doku faktörü yolak inhibitörü (TFPI), endotel yüzeyinde doku faktörü–faktör VIIa–faktör Xa kompleksini doğrudan baskılar; trombomodulin–trombin bağlanmasıyla aktive olup faktör Va ve VIIIa'yı parçalayan antikoagülan ise protein C/S sistemidir.
 - **Plazmin** — Plazmin fibrinolitik sistemin enzimidir; pıhtılaşma faktörlerini değil, fibrini ve fibrinojeni yıkar.
 - **Antitrombin III** — Antitrombin III trombomodulinle değil, heparin benzeri moleküllerle aktive olur ve trombini inaktive eder.
 - **PAI-1** — PAI-1 plazminojen aktivatörlerini baskılayarak fibrinolizi azaltır; protrombotik etkilidir.
@@ -7283,7 +7283,7 @@ _39 soru (örnek + çıkmış)_
 - **Türbülans** — Türbülans daha çok arteriyel ve kardiyak trombüslerin zeminidir; bu trombüsler trombositten zengindir.
 - **Ülserli plak** — Ülserli plak arterlerde türbülans ve endotel hasarı yaratır; arteriyel trombozun zeminidir.
 - **Staz** — Staz doğru: venöz trombüsler neredeyse her zaman staz zemininde gelişir, en sık alt ekstremite derin venlerindedir ve eritrositten zengindir.
-- **Vaskülit** — Venöz trombüs için belirleyici olan kanın yavaşlayıp durgunlaşmasıdır. Vaskülit bu sorudaki ayrımı sağlamaz.
+- **Vaskülit** — Vaskülit damar duvarının inflamatuvar hasarı olup daha çok küçük damarlarda tromboz veya kanamaya yol açar; alt ekstremite derin venlerinde gelişen flebotrombozun hemen her zaman en belirleyici zemini ise kan akımının yavaşlaması, yani stazdır.
 
 **Cevap: D** — Staz
 
@@ -7297,7 +7297,7 @@ _39 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Hiperviskozite** — Tromboza katkı yapmayan, tersine kanama eğilimi yaratan durum von Willebrand faktör eksikliğidir. Hiperviskozite bu sorudaki ayrımı sağlamaz.
+- **Hiperviskozite** — Polisitemia vera veya orak hücreli anemide görülen hiperviskozite küçük damarlarda akım direncini ve stazı artırarak tromboza zemin hazırlar; von Willebrand faktör eksikliği ise trombosit adezyonunu bozarak tromboz değil kanama eğilimi yaratır.
 - **Von Willebrand faktör eksikliği** — Von Willebrand faktör eksikliği doğru: vWF kollajen ile GpIb arasında köprü kuramaz, trombosit yapışması bozulur ve kanama diyatezi gelişir.
 - **Hiperkoagülasyon** — Hiperkoagülasyon, yani kanın pıhtılaşmaya artmış eğilimi, Virchow üçlüsünün bileşenidir ve tromboza yol açar.
 - **Staz** — Staz anormal kan akımının bir biçimidir; venöz trombüslerin hemen her zaman zemininde bulunur.
@@ -7336,7 +7336,7 @@ _39 soru (örnek + çıkmış)_
 - **Doku faktörü yolak inhibitörü (TFPI)** — Doku faktörü yolak inhibitörü doğru: doku faktörü ile faktör VIIa kompleksini inhibe eden bir antikoagülandır, fibrini yıkmaz.
 - **Plazmin** — Plazmin fibrinolizin asıl enzimidir; fibrini ve fibrinojeni yıkarak FDP ve D-dimer açığa çıkarır.
 - **Doku plazminojen aktivatörü (t-PA)** — Doku plazminojen aktivatörü endotel kökenlidir; plazminojeni plazmine çevirir ve fibrine bağlıyken en aktiftir.
-- **Streptokinaz** — Streptokinaz ile karıştırılabilir: Fibrinolitik olmayan molekül, doku faktörü ile faktör VIIa kompleksini inhibe eden yolak inhibitörüdür.
+- **Streptokinaz** — Streptokinaz, beta-hemolitik streptokoklardan elde edilen ve plazminojeni plazmine çevirerek pıhtıyı eriten fibrinolitik bir ajandır; doku faktörü yolak inhibitörü (TFPI) ise fibrinolizde değil, ekstrensek koagülasyon kaskadının baskılanmasında görev alır.
 - **Ürokinaz** — Ürokinaz, t-PA gibi plazminojeni aktive ederek fibrinolizi başlatır.
 
 **Cevap: A** — Doku faktörü yolak inhibitörü (TFPI)
@@ -7352,7 +7352,7 @@ _39 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Postoperatif dönem** — Postoperatif dönem risk faktörüdür; cerrahi gibi doku hasarı tromboz için yüksek riskli edinsel durumdur.
-- **Zayıflık** — Zayıflık doğru: edinsel risk faktörleri arasında sayılan obezitedir, zayıflık tromboz riskini artıran durumlar arasında yer almaz.
+- **Zayıflık** — Zayıflık derin ven trombozu için bir risk faktörü değildir; aksine obezite, uzun süreli hareketsizlik, cerrahi, gebelik, kalp yetmezliği ve maligniteler venöz staz ve hiperkoagülabilite yaratarak DVT riskini artırır.
 - **Malignite** — Malignite risk faktörüdür; kanser paraneoplastik hiperkoagülabilite ile tromboz için yüksek risk taşır.
 - **Uzamış hareketsizlik** — Uzamış hareketsizlik staz yapar; immobilizasyon tromboz için yüksek riskli edinsel durumdur.
 - **Gebelik** — Gebelik hiperöstrojenik bir durumdur; doğum sonrası dönemle birlikte tromboz riskini artırır.
@@ -7370,10 +7370,10 @@ _39 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Pulmoner emboli** — Pulmoner emboli doğru: alt ekstremite derin ven trombozundan kopan parçalar akciğer arter dallarına yerleşir; bu risk tabloyu hayati yapar.
-- **Vena kava superior sendromu** — Vena kava superior sendromu ile karıştırılabilir: Alt ekstremite trombüsünden kopan emboli akciğer arter dalına yerleşir.
-- **Siyanoz** — Derin ven trombozunu hayati yapan komplikasyon trombüs parçalarının kopup akciğere gitmesidir. Siyanoz bu sorudaki ayrımı sağlamaz.
-- **Lenfödem** — Lenfödem ile karıştırılabilir: Trombüsün akıbetlerinden embolizasyon, yani parçaların kopup başka yere gitmesi en ciddi sonuçtur.
-- **Vena kava inferior trombozu** — Trombüsün yayılması tıkanıklığı artırır, ama hayati tehlike kopan parçaların akciğere ulaşmasıdır. Vena kava inferior trombozu bu sorudaki ayrımı sağlamaz.
+- **Vena kava superior sendromu** — Vena kava superior sendromu akciğer veya mediasten tümörlerinin üst ana toplardamarı sıkıştırmasıyla baş-boyun ödemi yapan tablodur; alt ekstremite derin ven trombozunun en sık ve yaşamı tehdit eden komplikasyonu ise pulmoner embolidir.
+- **Siyanoz** — Siyanoz dokularda indirgenmiş hemoglobin artışına bağlı morarma bulgusudur; bacak derin venlerindeki trombüsün koparak sağ kalp üzerinden akciğer arter yatağını tıkamasıyla gelişen en ciddi komplikasyon ise pulmoner embolidir.
+- **Lenfödem** — Lenfödem lenfatik damarların tümör, cerrahi veya filaryazis ile tıkanması sonucu gelişen proteinden zengin doku ödemidir; derin ven trombozunun en sık ve ölümcül komplikasyonu ise kopan pıhtının yol açtığı pulmoner embolidir.
+- **Vena kava inferior trombozu** — Vena kava inferior trombozu pıhtının yukarı doğru lokal yayılımıdır; derin ven trombozunda en sık görülen ve ani ölümle sonuçlanabilen en ciddi komplikasyon ise pıhtı parçalarının koparak akciğer dolaşımına gitmesi, yani pulmoner embolidir.
 
 **Cevap: A** — Pulmoner emboli
 
@@ -7463,7 +7463,7 @@ _39 soru (örnek + çıkmış)_
 - **Faktör VII** — Faktör VII kalsiyum bağlayan dört faktörden biridir; doku faktörüyle kompleks yaparak kaskadı başlatır.
 - **Faktör IX** — Faktör IX kalsiyum bağlayan faktörlerdendir; trombosit yüzeyindeki komplekste proteaz olarak faktör X'u aktive eder.
 - **Faktör X** — Faktör X kalsiyumun bağlandığı faktörlerdendir; aktive olunca faktör Va eşliğinde protrombini trombine çevirir.
-- **Faktör VIII** — Faktör VIII doğru: kalsiyum bağlayan dört faktör arasında yer almaz; faktör X aktivasyonunda reaksiyon hızlandırıcı kofaktördür.
+- **Faktör VIII** — Faktör VIII doğru cevaptır: karaciğerde K vitamini bağımlı gama-karboksilasyona uğrayıp kalsiyum bağlayan pıhtılaşma faktörleri faktör II, VII, IX ve X'dur; faktör VIII ise gama-karboksiglutamat içermez ve faktör IXa'nın kofaktörü olarak çalışır.
 
 **Cevap: E** — Faktör VIII
 
@@ -7557,7 +7557,7 @@ _39 soru (örnek + çıkmış)_
 
 **Cevap: E** — Prostasiklin
 
-**Özet.** Normal endotel PGI₂, NO ve ADPaz ile trombositi frenler; trombomodulin, heparin benzeri moleküller ve TFPI ile antikoagülan, t-PA ile fibrinolitik etki gösterir.
+**Özet.** Normal endotel PGI₂, NO ve ADPaz ile trombosit kümelenmesini baskılar; trombomodulin, heparin benzeri moleküller ve TFPI ile antikoagülan, t-PA ile fibrinolitik etki gösterir.
 
 ## Soru 46
 
@@ -7721,7 +7721,7 @@ _39 soru (örnek + çıkmış)_
 
 **Özet.** Trombüsün dört akıbeti yayılma, embolizasyon, fibrinolizle çözünme ve organizasyon ile rekanalizasyondur; organizasyonda kılcal kanallar kısmi lümen açıklığı sağlar.
 
-# 13 · Emboli, Enfarktüs ve Şok
+# Ders 13 (13) · Emboli, Enfarktüs ve Şok
 
 _43 soru (örnek + çıkmış)_
 
@@ -7823,7 +7823,7 @@ _43 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Oksijen** — Oksijen ile karıştırılabilir: Derin dalıştan hızlı yükselişte çözeltiden çıkıp kabarcık yapan gaz azottur.
+- **Oksijen** — Oksijen dokular tarafından metabolize edildiği için basınç düşüşünde kalıcı gaz embolisi oluşturmaz; derin dalışta yüksek basınç altında kanda ve yağ dokusunda çözünen, hızlı çıkışta ise kabarcıklaşarak damarları tıkayan inert gaz azottur.
 - **Azot** — Azot doğru: basınç altında solunan azot kanda ve dokularda çözünür, basınç hızla düşünce çözeltiden çıkarak kabarcık oluşturur.
 - **Karbondioksit** — Karbondioksit kabarcıkların sorumlusu değildir; azot kabarcıkları eklem ve kaslarda şiddetli ağrıya, yani bends tablosuna yol açar.
 - **Karbonmonoksit** — Karbonmonoksit dekompresyonla ilişkili değildir; azot kabarcıkları akciğerde ödem, kanama ve şiddetli dispneye, beyinde nörolojik defisite yol açar.
@@ -7896,10 +7896,10 @@ _43 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Koagülatif nekroz** — Koagülatif nekroz çoğu organdaki enfarktın tipik nekroz biçimidir; beyin bu kuralın istisnasıdır.
-- **Fibrinoid nekroz** — Enfarktüste beklenen iki biçim koagülatif ve sıvılaşma nekrozudur. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz.
+- **Fibrinoid nekroz** — Fibrinoid nekroz malign hipertansiyon ve vaskülitlerde arteriyol duvarlarında görülen mikroskopik bir nekroz tipidir; beyin dokusunun iskemik enfarktüsünde ise hidrolitik enzimlerin etkisiyle her zaman sıvılaşma (likefaksiyon) nekrozu gelişir.
 - **Kazeöz nekroz** — Kazeöz nekroz enfarktüsle tanımlanan bir nekroz tipi değildir; beyindeki iskemik nekroz her zaman sıvılaşma biçimindedir.
 - **Sıvılaşma nekrozu** — Sıvılaşma nekrozu doğru: beyin enfarktüsünde mikroskopide her zaman sıvılaşma nekrozu görülür.
-- **Yağ nekrozu** — Yağ nekrozu enfarktüs tipleri arasında yer almaz; beyinde iskemik alan katılaşmaz, sıvılaşır.
+- **Yağ nekrozu** — Yağ nekrozu pankreatit veya meme travmasında trigliseridlerin yıkımı ve kalsiyum sabunlaşmasıyla oluşur; merkezi sinir sisteminin iskemik enfarktüsünde ise glia ve nöronlar eriyerek sıvılaşma nekrozuna uğrar.
 
 **Cevap: D** — Sıvılaşma nekrozu
 
@@ -7917,7 +7917,7 @@ _43 soru (örnek + çıkmış)_
 - **Nöron** — Nöron doğru: hipoksiye en duyarlı hücredir ve yalnızca 3–4 dakikada geri dönüşümsüz hasar görür.
 - **Hepatosit** — Hepatositin hipoksiye dayanma süresi bu konuda tanımlanmaz; duyarlılık sıralaması nöron, miyokard ve en dayanıklı olan fibroblast şeklindedir.
 - **Miyokard hücresi** — Miyokard hücresi 20–30 dakikalık iskemide geri dönüşümsüz hasar görür; duyarlıdır ama nörondan daha dayanıklıdır.
-- **Düz kas** — Dokunun hipoksiye duyarlılığı enfarkt riskini belirler ve en kısa süre nöronlara aittir. Düz kas hücresi bu sorudaki ayrımı sağlamaz.
+- **Düz kas** — Düz kas hücreleri ve fibroblastlar hipoksiye saatlerce dayanabilen dirençli hücrelerdir; oksijen ve glikoz kesintisine en duyarlı olup yalnızca 3–4 dakikalık tam iskemide geri dönüşümsüz hasara uğrayan hücreler ise nöronlardır.
 
 **Cevap: B** — Nöron
 
@@ -7932,9 +7932,9 @@ _43 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **Gram-negatif bakteriler** — Gram-negatif bakteriler septik şokun önemli etkenidir, ancak sıklıkta ikinci sıradadır.
-- **Parazitler** — Parazitler septik şokun sık etkenleri arasında sayılmaz; sıralama gram-pozitif bakteriler, gram-negatif bakteriler ve mantarlar şeklindedir.
+- **Parazitler** — Parazitler septik şokun nadir etkenlerindendir; günümüzde septik şok olgularında en sık saptanan mikrobiyal grup gram-pozitif bakteriler olup onları gram-negatif bakteriler ve mantarlar izler.
 - **Mantarlar** — Mantarlar fungal sepsisle septik şok yapabilir, fakat sıklıkta bakterilerin gerisinde, üçüncü sıradadır.
-- **Virüsler** — Septik şok çoğunlukla bakteriyel enfeksiyonlarla gelişir ve mortalitesi hâlâ %20–30 civarındadır. Virüsler bu sorudaki ayrımı sağlamaz.
+- **Virüsler** — Virüsler ağır sistemik inflamasyon yapabilse de klasik septik şokun başlıca nedeni değildir; septik şoka en sık yol açan etkenler gram-pozitif bakteriler, ardından endotoksin içeren gram-negatif bakteriler ve mantarlardır.
 - **Gram-pozitif bakteriler** — Gram-pozitif bakteriler doğru: septik şokun en sık etkenidir; onları gram-negatif bakteriler ve mantarlar izler.
 
 **Cevap: E** — Gram-pozitif bakteriler
@@ -7949,7 +7949,7 @@ _43 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **t-PA** — Septik şokta fibrinolizi baskılayan, düzeyi artan molekül plazminojen aktivatör inhibitörü-1'dir. t-PA bu sorudaki ayrımı sağlamaz.
+- **t-PA** — Doku plazminojen aktivatörü (t-PA) plazminojeni plazmine çevirerek pıhtı yıkımını sağlayan fibrinolitik enzimdir; septik şokta sitokin etkisiyle endotelden artarak fibrinolizi baskılayan ve mikrotrombüsleri kalıcı kılan molekül ise PAI-1'dir.
 - **Trombomodulin** — Trombomodulin antikoagülan bir faktördür ve septik şokta azalır; artan değil, düşen moleküldür.
 - **PAI-1** — PAI-1 doğru: plazminojen aktivatör inhibitörü-1 septik şokta artar, fibrinolizi baskılar ve mikrodamarlarda fibrinden zengin trombüslerin kalmasına yol açar.
 - **TFPI** — TFPI, yani doku faktörü yolu inhibitörü, antikoagülandır ve septik şokta azalır; bu da pıhtılaşmayı kolaylaştırır.
@@ -7986,10 +7986,10 @@ _43 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Kompansasyonlu evre** — Kompansasyonlu evrede baroreseptör refleksleri, katekolaminler ve renin–anjiyotensin–aldosteron sistemi devrededir; taşikardi ve vazokonstriksiyonla şok ilerlemez.
-- **Kronik evre** — Kronik evre şok evreleri arasında yer almaz; uzayan şok geri dönüşümsüz doku hasarı ve ölümle sonuçlanır.
+- **Kronik evre** — Şok patogenezinde kronik evre diye bir aşama bulunmaz; şok başlangıçtaki kompansasyonlu (non-progresif) evre, doku hipoperfüzyonu ve laktik asidozun geliştiği ilerleyici evre ve çoklu organ yetmezliğiyle giden geri dönüşümsüz evre olarak üç aşamada seyreder.
 - **Geri dönüşümsüz evre** — Geri dönüşümsüz evrede yaygın hücre ve doku hasarı vardır, organlar toparlanamaz; laktik asidozun ilk geliştiği evre bu değildir.
 - **İlerleyici evre** — İlerleyici evre doğru: doku hipoperfüzyonu artar, laktik asidoz gelişir, vazomotor yanıtlar bozulur ve mikrosirkülasyonda kan göllenir.
-- **İyileşme evresi** — İyileşme evresi şok evreleri arasında yer almaz; şok kompansasyonlu, ilerleyici ve geri dönüşümsüz olmak üzere üç evrede incelenir.
+- **İyileşme evresi** — İyileşme evresi şokun patogenetik evrelerinden biri değildir; doku hipoksisinin yaygınlaşmasıyla aerobik solunumun durup anaerobik glikoliz sonucu laktik asidozun geliştiği aşama şokun ilerleyici (progresif) evresidir.
 
 **Cevap: D** — İlerleyici evre
 
@@ -8046,8 +8046,8 @@ Yukarıdaki organlardan hangilerinde tipik olarak beyaz (anemik, iskemik) infark
 - **Akciğerin yalnızca pulmoner arterden kan alması** — Yalnızca tek arterden beslenme uç arter dolaşımlı organların özelliğidir ve beyaz enfarkt yapar; akciğer böyle değildir.
 - **Akciğerin hem pulmoner arterden hem de bronşiyal arterlerden çift kan akımı alması** — Çift kan akımı doğru: akciğer çift dolaşımlı bir dokudur, bu yüzden enfarktı hemorajik olur; sol kalp yetmezliği orta emboliyi bile enfarkta çevirebilir.
 - **Akciğerde venöz göllenmenin hiç bulunmaması** — Venöz göllenmenin olmaması hemorajiyi açıklamaz; önceden konjesyonu olan dokular tersine kırmızı enfarktüse yatkındır.
-- **Alveollerde sürfaktan miktarının artmış olması** — Sürfaktan miktarı ile karıştırılabilir: Enfarktın rengini ve gelişimini dokunun vasküler beslenme anatomisi belirler.
-- **Akciğerde lenfatik dolaşımın bulunmaması** — Kırmızı enfarktüs çift dolaşımlı, gevşek yapılı dokularda yaygın hemoraji ile karakterizedir. Lenfatik dolaşım bu sorudaki ayrımı sağlamaz.
+- **Alveollerde sürfaktan miktarının artmış olması** — Alveollerdeki sürfaktan yüzey gerilimini düşürerek alveol kollapsını önler ve enfarkt rengini belirlemez; akciğer enfarktüsünün kırmızı (hemorajik) olmasının temel anatomik nedeni akciğerin hem pulmoner hem de bronşiyal arterlerden çift kan akımı almasıdır.
+- **Akciğerde lenfatik dolaşımın bulunmaması** — Akciğerde zengin bir lenfatik ağ mevcuttur; pulmoner emboli sonrası gelişen enfarktüsün soluk değil hemorajik (kırmızı) olmasının nedeni, gevşek süngerimsi akciğer dokusuna bronşiyal arterlerden oluşan çift dolaşımla kan sızmaya devam etmesidir.
 
 **Cevap: B** — Akciğerin hem pulmoner arterden hem de bronşiyal arterlerden çift kan akımı alması
 
@@ -8080,10 +8080,10 @@ Yukarıdaki organlardan hangilerinde tipik olarak beyaz (anemik, iskemik) infark
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Konak yanıtının düzensizleşmesiyle sitokin fırtınası gelişir** — Düzensiz konak yanıtı ve sitokin fırtınası doğru: septik şokun temel olayı immün yanıtın kontrolsüz sistemik aktivasyonu ve sitokin kaskadlarının aşırı aktivasyonudur.
-- **Lipopolisakkarit (endotoksin) gram pozitif bakterilerin hücre duvarında bulunur** — Lipopolisakkaritin yeri ile karıştırılabilir: Mikrobiyal ürünler TLR'ler aracılığıyla tanınır ve makrofaj, nötrofil ve endoteli uyarır.
-- **Sepsiste yalnız proinflamatuvar yanıt gelişir, antiinflamatuvar yanıt görülmez** — Septik şokun özü, doğuştan ve adaptif immün yanıtın kontrolsüz sistemik aktivasyonudur. Yalnız proinflamatuvar yanıt ifadesi bu sorudaki ayrımı sağlamaz.
+- **Lipopolisakkarit (endotoksin) gram pozitif bakterilerin hücre duvarında bulunur** — Lipopolisakkarit (endotoksin) gram-pozitif değil, gram-negatif bakterilerin dış zarında bulunan yapısal bileşendir; sepsisin temel patogenezi ise mikrobiyal ürünlere karşı konak yanıtının düzensizleşerek sitokin fırtınası ve endotel disfonksiyonu oluşturmasıdır.
+- **Sepsiste yalnız proinflamatuvar yanıt gelişir, antiinflamatuvar yanıt görülmez** — Sepsiste yalnızca proinflamatuvar yanıt gelişmez; sitokin fırtınasına paralel veya ardışık olarak IL-10, çözünür TNF reseptörleri ve lenfosit apoptozuyla giden güçlü bir antiinflamatuvar immün baskılanma da ortaya çıkar.
 - **Sepsiste gelişen DİK tablosunda trombosit sayısı artar** — Trombosit sayısının artması yanlıştır; yaygın damar içi pıhtılaşmada trombositler ve pıhtılaşma faktörleri tüketilir, kanama eğilimi gelişir.
-- **Sepsis tanısı için kan kültüründe üreme olması zorunludur** — Septik şokun etkenleri gram pozitif, gram negatif bakteriler ve mantarlardır, tablo ise kontrolsüz konak yanıtıyla oluşur. Kan kültürü zorunluluğu bu sorudaki ayrımı sağlamaz.
+- **Sepsis tanısı için kan kültüründe üreme olması zorunludur** — Sepsis tanısı için kan kültüründe bakteri veya mantar üremesi şart değildir; ağır sepsis ve septik şok olgularının önemli bir kısmında odak bulunsa bile kan kültürleri negatif kalabilir.
 
 **Cevap: A** — Konak yanıtının düzensizleşmesiyle sitokin fırtınası gelişir
 
@@ -8387,9 +8387,9 @@ Yukarıdaki organlardan hangilerinde tipik olarak beyaz (anemik, iskemik) infark
 
 - **Nöron** — Nöron hipoksiye en duyarlı hücredir; 3–4 dakikada geri dönüşümsüz hasar görür.
 - **Miyokard hücresi** — Miyokard hücresi yaklaşık 20–30 dakikada geri dönüşümsüz hasar görür; saatlerce dayanamaz.
-- **Böbrek tübül hücresi** — Böbrek tübül hücresi ile karıştırılabilir: Hipoksiye saatlerce dayanıklılık bağ dokusu hücresine özgü olarak tanımlanır.
+- **Böbrek tübül hücresi** — Böbrek proksimal tübül epitel hücreleri yüksek metabolik hızları nedeniyle hipoksiye oldukça duyarlıdır ve 20–30 dakikada hasarlanır; iskemiyi saatlerce tolere edebilen en dirençli hücreler ise fibroblastlar ve iskelet kası hücreleridir.
 - **Fibroblast** — Fibroblast doğru: hipoksiyi saatlerce tolere edebilir; doku duyarlılığı sıralamasında en dayanıklı uçtadır.
-- **Hepatosit** — Hepatosit ile karıştırılabilir: Karaciğerin enfarkttan korunması hücre dayanıklılığına değil çift dolaşımına bağlanır.
+- **Hepatosit** — Hepatositler metabolik olarak aktif parankim hücreleridir ve 30–60 dakikalık tam iskemide nekroza giderler; bağ dokusunun yapısal hücresi olan fibroblastlar ise düşük oksijen tüketimleri sayesinde hipoksiye saatlerce dayanabilir.
 
 **Cevap: D** — Fibroblast
 
@@ -8503,7 +8503,7 @@ Yukarıdaki organlardan hangilerinde tipik olarak beyaz (anemik, iskemik) infark
 
 **Özet.** Hipovolemik şokta genç ve sağlıklı bireylerde uygun tedaviyle sağkalım %90'ı aşar; kardiyojenik ve septik şokta mortalite yüksektir. Prognoz neden, süre, şiddet, eşlik eden hastalık ve tedaviye yanıta bağlıdır.
 
-# 14 · Aşırı Duyarlılık ve Otoimmünite
+# Ders 14 (14) · Aşırı Duyarlılık ve Otoimmünite
 
 _45 soru (örnek + çıkmış)_
 
@@ -8515,11 +8515,11 @@ _45 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **IL-10 ve TGF-β** — IL-10 ve TGF-β düzenleyici T hücrelerinin baskılayıcı sitokinleridir; IgE sınıf değişimini uyarmaz, yanıtı frenler.
+- **IL-10 ve TGF-β** — IL-10 ve TGF-beta, düzenleyici T (Treg) hücrelerinden salınarak bağışıklık yanıtını baskılayan sitokinlerdir; B lenfositlerde IgE sınıf değişimini uyaran Th2 sitokinleri ise IL-4 ve IL-13'tür.
 - **IL-5 ve IL-17** — IL-5 bir Th2 sitokinidir ama eozinofilleri aktive eder; IL-17 ise Th17 hücrelerine aittir ve nötrofil toplar.
 - **IFN-γ ve TNF** — IFN-γ Th1 hücrelerinin makrofaj aktive eden sitokinidir; TNF mast hücresinden salınıp geç fazı sürdürür, ancak sınıf değişimi yaptırmaz.
 - **IL-4 ve IL-13** — IL-4 ve IL-13 doğru: alerjenle aktive olan Th2 hücreleri bu sitokinlerle B hücresinde IgE sınıf değişimini başlatır.
-- **IL-1 ve IL-6** — IL-1 ve IL-6 tip I yanıtın Th2 sitokinleri arasında sayılmaz; Th2 hücreleri sınıf değişimi ve eozinofil aktivasyonu için başka interlökinler salgılar.
+- **IL-1 ve IL-6** — IL-1 ve IL-6, makrofajlardan salınıp ateş ve akut faz yanıtını başlatan doğuştan bağışıklık sitokinleridir; tip I aşırı duyarlılıkta B hücrelerini IgE üretmeye yönlendiren Th2 sitokinleri ise IL-4 ve IL-13'tür.
 
 **Cevap: D** — IL-4 ve IL-13
 
@@ -8749,11 +8749,11 @@ _45 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Mavi floresan** — Mavi floresan ile karıştırılabilir: Amiloid ışık mikroskobunda hücre dışı amorf eozinofilik birikinti olarak görülür.
+- **Mavi floresan** — Mavi floresans ultraviyole mikroskopisinde kullanılan florokromlarla görülür; Kongo kırmızısı ile boyanan amiloid fibrilleri çapraz beta-pileli tabaka yapıları nedeniyle polarize ışık mikroskobunda karakteristik elma yeşili çift kırılım verir.
 - **Siyah granüller** — Siyah granüller amiloidin görünümü değildir; amiloid tanısı böbrek, rektum, diş eti ya da karın yağı biyopsisiyle konur.
 - **Altın-kahverengi** — Altın-kahverengi renk amiloidi tanımlamaz; amiloidin tipi immünhistokimya ve kütle spektroskopisiyle belirlenir.
 - **Elma yeşili çift kırılım** — Elma yeşili çift kırılım doğru: Kongo kırmızısıyla pembe-kırmızı boyanan amiloid polarize ışıkta elma yeşili çift kırılım verir.
-- **Pembe-mor metakromazi** — Pembe-mor metakromazi ile karıştırılabilir: Kongo kırmızısıyla amiloid normal ışıkta pembe-kırmızı görülür.
+- **Pembe-mor metakromazi** — Pembe-mor metakromazi kristal viyole veya metil viyole gibi boyalarla normal ışık mikroskobunda görülür; Kongo kırmızısı boyalı kesitin polarize ışıktaki tanısal özelliği ise elma yeşili çift kırılımdır (birefrenjans).
 
 **Cevap: D** — Elma yeşili çift kırılım
 
@@ -8896,7 +8896,7 @@ hastalıklarından hangisinde veya hangilerinde temel patoloji antikorlar aracı
 - **IL-4** — IL-4, IL-13 ile birlikte B hücrelerinde IgE sınıf değişimini uyarır; eozinofil aktivasyonunun sitokini değildir.
 - **IL-13** — IL-13 de IgE sınıf değişimini uyaran bir Th2 sitokinidir; eozinofilleri aktive eden sitokin değildir.
 - **IFN-γ** — IFN-γ Th1 hücrelerinin sitokinidir; gecikmiş tip aşırı duyarlılıkta makrofajları aktive eder.
-- **IL-2** — IL-2 ile karıştırılabilir: Düzenleyici T hücreler yüksek afiniteli reseptörleriyle IL-2 tüketerek baskılama yapar.
+- **IL-2** — IL-2, T lenfositlerinin çoğalmasını uyaran büyüme faktörüdür; tip I aşırı duyarlılıkta ve helmint enfeksiyonlarında kemik iliğinden eozinofil üretimini ve aktivasyonunu sağlayan özgül Th2 sitokini ise IL-5'tir.
 
 **Cevap: A** — IL-5
 
@@ -9040,7 +9040,7 @@ hastalıklarından hangisinde veya hangilerinde temel patoloji antikorlar aracı
 - **Merkezi sinir sistemi miyelini** — Merkezi sinir sistemi miyelini multipl sklerozda Th1 ve Th17 aracılı hasarın hedefidir.
 - **Pankreas adacıkları** — Pankreas adacıkları tip 1 diyabette T hücre aracılı hasarın hedefidir; insülit gelişir.
 - **Glomerüller ve eklemler** — Glomerüller ve eklemler doğru: kompleksler damar duvarlarına, özellikle filtrasyon alanlarına yerleşir, ardından nötrofil ve monosit toplanır.
-- **Tükürük bezleri** — Tükürük bezleri ile karıştırılabilir: Sjögren sendromunda bu bezlerde yoğun lenfositik infiltrasyon görülür.
+- **Tükürük bezleri** — Tükürük ve gözyaşı bezleri Sjögren sendromunda T ve B lenfosit infiltrasyonuyla doğrudan tutulur; tip III aşırı duyarlılıkta dolaşımdaki antijen-antikor kompleksleri ise kanın yüksek basınçla süzüldüğü böbrek glomerülleri ve eklem sinovyasında birikir.
 
 **Cevap: D** — Glomerüller ve eklemler
 
@@ -9109,7 +9109,7 @@ hastalıklarından hangisinde veya hangilerinde temel patoloji antikorlar aracı
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **Reseptör düzenlemesi** — Reseptör düzenlemesi, öz antijene bağlanan olgunlaşmamış B hücrelerinde kemik iliğinde görülen merkezi tolerans mekanizmasıdır.
-- **Anerji** — Enfeksiyonun otoimmüniteyi tetiklemesi moleküler benzerlik ve ko-stimülasyon artışıyla açıklanır. Anerji bu sorudaki ayrımı sağlamaz.
+- **Anerji** — Anerji, T veya B lenfositlerinin kostimülasyon olmadan antijenle karşılaştığında işlevsel olarak yanıtsız kalması ve periferik tolerans gelişmesidir; mikrobiyal antijenin konak dokusuyla çapraz reaksiyon verecek kadar benzemesine ise moleküler taklit denir.
 - **Moleküler taklit** — Moleküler taklit doğru: enfeksiyonlar moleküler taklit ve ko-stimülasyon artışıyla öz toleransı bozabilir.
 - **Negatif seçilim** — Negatif seçilim timusta güçlü öz reaktif T hücrelerinin apoptozla elenmesidir; toleransı sağlar, bozmaz.
 - **Sınıf değişimi** — Sınıf değişimi B hücrelerinin farklı antikor sınıfına geçmesidir; tip I duyarlanmada IgE üretimini sağlar.
@@ -9165,8 +9165,8 @@ hastalıklarından hangisinde veya hangilerinde temel patoloji antikorlar aracı
 - **C1q, C2, C4 eksikliği** — C1q, C2, C4 eksikliği doğru: klasik yol kompleman eksiklikleri lupusa genetik yatkınlık yapar.
 - **C3 eksikliği** — C3 eksikliği komplemanın tüm fonksiyonlarında defekt yapan kalıtsal immün yetmezliktir; lupus yatkınlığı olarak sayılan eksiklik değildir.
 - **Düzenleyici protein eksikliği** — Düzenleyici protein eksikliği aşırı kompleman aktivasyonuna yol açar; anjiyoödem gibi tablolar yapar.
-- **C5a fazlalığı** — C5a fazlalığı ile karıştırılabilir: C5a kemotaktik bir kompleman ürünüdür.
-- **C3b reseptör eksikliği** — C3b reseptörü fagositlerin opsonize hücreyi tanımasını sağlar. C3b reseptör eksikliği bu sorudaki ayrımı sağlamaz.
+- **C5a fazlalığı** — C5a fazlalığı akut nötrofil göçünü artırır ancak SLE'nin genetik nedeni değildir; klasik kompleman yolunun erken bileşenleri olan C1q, C2 ve C4 eksikliğinde ise apoptotik hücre kalıntıları temizlenemediğinden nükleer otoantijenlere karşı SLE gelişir.
+- **C3b reseptör eksikliği** — C3b reseptör (CR1/CR3) eksikliği opsonize bakterilerin fagositozunu ve lökosit adezyonunu bozar; SLE gelişimine en güçlü genetik yatkınlığı oluşturan kompleman kusuru ise apoptotik cisimciklerin temizlenmesini bozan C1q, C2 ve C4 eksiklikleridir.
 
 **Cevap: A** — C1q, C2, C4 eksikliği
 
@@ -9236,7 +9236,7 @@ hastalıklarından hangisinde veya hangilerinde temel patoloji antikorlar aracı
 
 - **IL-2'ye proliferatif yanıtın engellenmesi** — IL-2'ye proliferatif yanıtın engellenmesi rapamisinin, yani sirolimusun mekanizmasıdır.
 - **B hücre hedeflenmesi** — B hücre hedefli ajanlar, örneğin rituksimab, IgG4 ilişkili hastalıkta etkili olabilir; siklosporinin etkisi değildir.
-- **Kompleman inhibisyonu** — Siklosporin ve takrolimus T hücre sitokin genini hedefler. Kompleman inhibisyonu bu sorudaki ayrımı sağlamaz.
+- **Kompleman inhibisyonu** — Siklosporin ve takrolimus kompleman kaskadını inhibe etmez; hücre içinde kalsinörini baskılayarak NFAT transkripsiyon faktörünün aktivasyonunu önler ve T lenfositlerinde IL-2 gen transkripsiyonunu durdurarak nakil reddini engeller.
 - **HLA uyumunun artırılması** — HLA uyumu ilaçla değil doku eşleştirmesiyle sağlanır; özellikle böbrek naklinde uyumlu lokus arttıkça greft sağkalımı artar.
 - **IL-2 gen transkripsiyonu inhibisyonu** — IL-2 gen transkripsiyonu inhibisyonu doğru: siklosporin ve takrolimus IL-2 gen transkripsiyonunu inhibe eder.
 
@@ -9256,7 +9256,7 @@ hastalıklarından hangisinde veya hangilerinde temel patoloji antikorlar aracı
 - **Böbrek, kalp ve dalak** — Böbrek, kalp ve dalak amiloid birikiminin sık görüldüğü organlardandır; akut greft versus host hastalığının tipik hedefi değildir.
 - **Pankreas ve tükürük bezi** — Pankreas ve tükürük bezi IgG4 ilişkili hastalığın tuttuğu organlardır; otoimmün pankreatit ve Mikulicz sendromu gelişir.
 - **Beyin ve omurilik** — Beyin ve omurilik multipl sklerozda T hücre aracılı demiyelinizasyonun yeridir.
-- **Tiroid ve adrenal** — Tiroid ve adrenal ile karıştırılabilir: Akut formun epitel hasarı deri ve sindirim yolunda yoğunlaşır.
+- **Tiroid ve adrenal** — Tiroid ve adrenal bezler otoimmün endokrinopatilerin hedefidir; allojenik hematopoetik kök hücre nakli sonrası gelişen akut greft versus host hastalığında ise verici T hücreleri başlıca deri, karaciğer (safra kanalları) ve gastrointestinal mukoza epitelini hasarlar.
 
 **Cevap: A** — Deri, karaciğer ve GİS
 
@@ -9334,7 +9334,7 @@ hastalıklarından hangisinde veya hangilerinde temel patoloji antikorlar aracı
 
 **Özet.** Atopide yatkınlık genleri HLA sınıf II alelleri, Th2 sitokin genleri ve FcεRI bileşenleridir. Hava yolu yeniden yapılanmasından ADAM33 sorumludur.
 
-# 15 · Genetik, Pediatrik ve Çevresel Patoloji
+# Ders 15 (15) · Genetik, Pediatrik ve Çevresel Patoloji
 
 _37 soru (örnek + çıkmış)_
 
@@ -9364,7 +9364,7 @@ _37 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Elastaz eksikliği** — Elastaz eksikliği ile karıştırılabilir: Elastaz ile antielastaz dengesizliği tütünün amfizem gibi akciğer hasarı yapma mekanizmasıdır.
+- **Elastaz eksikliği** — Elastaz eksikliği değil, alfa-1 antitripsin eksikliğinde artan elastaz aktivitesi akciğerde amfizem yapar; Marfan sendromunda ise fibrillin-1 kusuru nedeniyle mikrofibriller TGF-beta'yı bağlayamaz ve aşırı TGF-beta sinyali aort medya tabakasını zayıflatır.
 - **Kollajen fazlalığı** — Kollajen fazlalığı Marfan sendromunu açıklamaz; bu hastalıkta sorun fibrillin kusuruyla elastik lif bütünlüğünün bozulmasıdır.
 - **TGF-β sinyal artışı** — TGF-β sinyal artışı doğru: kusurlu fibrillin TGF-β'yı düzenleyemez, artan sinyal hücre dışı matriksi ve damar duvarını zayıflatır.
 - **Klorür kanal kusuru** — Klorür kanal kusuru kistik fibrozisin temelidir; CFTR bozulunca mukus dehidrate ve visköz olur.
@@ -9418,7 +9418,7 @@ _37 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Testis atrofisi** — Kistik fibrozisli erkekte infertilite, sperm yolunun gelişmemesine bağlı azospermiyle açıklanır. Testis atrofisi bu sorudaki ayrımı sağlamaz.
+- **Testis atrofisi** — Kistik fibrozisli erkeklerde testis parankimi ve spermatogenez genellikle korunmuştur; hastaların %95'inden fazlasında görülen obstrüktif azospermi ve infertilitenin nedeni koyu salgılar sonucu gelişen konjenital bilateral vas deferens agenezisidir.
 - **Varikosel** — Varikosel kistik fibrozisle ilişkilendirilmez; bu hastalıkta erkek üreme sistemindeki sorun kanal düzeyindedir.
 - **Orşit** — Orşit kistik fibrozisin bilinen bir bulgusu değildir; hastalıkta enfeksiyonlar akciğerde, Pseudomonas aeruginosa ve Staphylococcus aureus ile görülür.
 - **Hipogonadizm** — Hipogonadizm bu tabloyu açıklamaz; kistik fibrozis bir epitel iyon kanalı hastalığıdır ve pankreasta ekzokrin yetmezlik, malabsorpsiyon yapar.
@@ -9438,7 +9438,7 @@ _37 soru (örnek + çıkmış)_
 
 - **Paternal translokasyon** — Paternal translokasyon trizomi 21'in olağan nedeni değildir; olguların çoğu anneden gelen fazla kromozomla oluşur.
 - **Maternal mayoz nondisjunction** — Maternal mayoz nondisjunction doğru: kromozomlar mayozda ayrılamaz; risk 20 yaşta yaklaşık 1/1550 iken 45 yaşta yaklaşık 1/25'e çıkar.
-- **Mozaisizm** — Mozaisizm ile karıştırılabilir: Down sendromunun tipik karyotipi 47,XX,+21 ya da 47,XY,+21'dir.
+- **Mozaisizm** — Mozaisizm, zigot oluştuktan sonraki mitotik bölünmelerde ayrılmama sonucu gelişir ve Down sendromu olgularının yalnızca %1–2'sini oluşturur; trizomi 21'in yaklaşık %95 ile en sık nedeni ise maternal mayozda kromozom ayrılmamasıdır (nondisjunction).
 - **Gen delesyonu** — Gen delesyonu bir kopya sayısı varyasyonu biçimidir ve otizm, gelişimsel gerilikle ilişkili olabilir; fazladan kromozom oluşturmaz.
 - **Nokta mutasyonu** — Nokta mutasyonu tek bir gendeki değişikliktir ve Mendel tipi tek gen hastalıklarıyla ilgilidir; kromozom sayısını değiştirmez.
 
@@ -9455,10 +9455,10 @@ _37 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Hedef hücre** — Hedef hücre kurşun toksisitesinde tanımlanan eritrosit bulgusu değildir; kurşunda anemi mikrositer ve hipokromiktir.
-- **Orak hücre** — Orak hücre ile karıştırılabilir: Kurşun çocukta düşük IQ ve nöbetlere, erişkinde bilek ve ayak düşmesine yol açar.
+- **Orak hücre** — Orak hücre, hemoglobin S nokta mutasyonunda hipoksiyle polimerleşen hemoglobinin eritrosite verdiği hilal biçimidir; kurşun zehirlenmesinde ribonükleaz inhibisyonuna bağlı ribozomal RNA kümelerinin oluşturduğu karakteristik bulgu ise bazofilik beneklenmedir.
 - **Bazofilik beneklenme** — Bazofilik beneklenme doğru: kurşun toksisitesinde mikrositer hipokromik anemiyle birlikte eritrositlerde bazofilik beneklenme görülür.
 - **Sferositoz** — Sferositoz kurşun zehirlenmesine ait değildir; kurşun kemikte büyüme plağında radyoopak kurşun çizgileri oluşturur.
-- **Howell-Jolly cisimciği** — Vücuttaki kurşunun %80–85'i kemik ve dişlerde, %5–10'u kanda bulunur. Howell-Jolly cisimciği bu sorudaki ayrımı sağlamaz.
+- **Howell-Jolly cisimciği** — Howell-Jolly cisimciği, splenektomi veya fonksiyonel asplenide eritrosit içinde kalan bazofilik çekirdek kalıntısıdır; kurşun zehirlenmesinde ferroşelataz ve pirimidin 5'-nükleotidaz inhibisyonuyla eritrositlerde oluşan tipik bulgu ise ince bazofilik beneklenmedir.
 
 **Cevap: C** — Bazofilik beneklenme
 
@@ -9508,8 +9508,8 @@ _37 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Folat** — Folat ile karıştırılabilir: Kronik alkolün bu nörolojik tablosu, yani Wernicke–Korsakoff sendromu, başka bir vitaminin eksikliğine bağlıdır.
-- **B12 vitamini** — B12 vitamini Wernicke–Korsakoff ile ilişkilendirilmez; kronik alkol kullanımı ayrıca karaciğerde steatoz, steatohepatit ve siroza yol açar.
+- **Folat** — Folat eksikliği DNA sentezini bozarak megaloblastik anemiye ve gebelikte nöral tüp defektlerine yol açar; kronik alkolizmde konfüzyon, ataksi, oftalmopleji ve hafıza kaybıyla giden Wernicke–Korsakoff sendromu ise tiamin (B1 vitamini) eksikliğine bağlıdır.
+- **B12 vitamini** — B12 vitamini (kobalamin) eksikliği megaloblastik anemi ve omurilik arka-yan kordonlarında subakut kombine dejenerasyon yapar; kronik alkol kullanımında mamiller cisim ve talamus kanamalarıyla Wernicke–Korsakoff sendromuna yol açan ise tiamin eksikliğidir.
 - **Niasin** — Niasin bu sendromla ilişkilendirilmez; kronik alkol kullanımı pankreasta akut ve kronik pankreatit, kalpte dilate kardiyomiyopati yapar.
 - **A vitamini** — A vitamini yağda çözünen bir vitamindir ve eksikliği ağır malnütrisyonda görülebilir; Wernicke–Korsakoff ise başka bir eksikliğe bağlıdır.
 - **Tiamin** — Tiamin doğru: kronik alkol kullanımında tiamin eksikliği Wernicke–Korsakoff sendromuna yol açar.
@@ -9565,7 +9565,7 @@ _37 soru (örnek + çıkmış)_
 - **Mide kanseri** — Mide kanseri diyetteki nitrozamin ve nitrozamidlerle ilişkilidir; aflatoksinin hedefi değildir.
 - **Kolorektal kanser** — Kolorektal kanser için lifli gıdaların olası koruyucu etkisi tanımlanır, çünkü dışkı hacmini ve geçiş hızını artırırlar; aflatoksinle ilişkilendirilmez.
 - **Hepatoselüler karsinom** — Hepatoselüler karsinom doğru: Aspergillus türlerinin ürettiği aflatoksin diyetle alınan bir kanserojendir ve karaciğer kanseriyle ilişkilidir.
-- **Akciğer kanseri** — Akciğer kanserlerinin %80–90'ından sigara sorumludur; aflatoksin akciğer kanseri nedeni olarak geçmez.
+- **Akciğer kanseri** — Akciğer kanserlerinin en önemli çevresel nedeni tütün dumanındaki polisiklik aromatik hidrokarbonlar ve radon gazıdır; tahıl ve yer fıstığında çoğalan Aspergillus flavus'un ürettiği aflatoksin B1 ise TP53 geninde R249S mutasyonu yaparak hepatoselüler karsinoma yol açar.
 - **Özofagus kanseri** — Özofagus kanseri riski obezitede her iki cinsiyette artar; aflatoksinin ilişkili olduğu tümör değildir.
 
 **Cevap: C** — Hepatoselüler karsinom
@@ -9601,7 +9601,7 @@ _37 soru (örnek + çıkmış)_
 - **Fenotipik etkisi her zaman gözlemlenir** — Fenotipik etkinin her zaman gözlenmesi yanlıştır; genetik varyasyonlar nötr belirteç de olabilir, yani her zaman fenotip oluşturmaz.
 - **En sık görülen formu tek bir nükleotidin değişimi ile gerçekleşir** — Tek nükleotid değişimi doğru: SNP tek baz pozisyonundaki kalıcı varyasyondur ve çoğu bialleliktir.
 - **SNP'ler doğrudan hastalık nedenleridir** — SNP'lerin doğrudan hastalık nedeni olması yanlıştır; bazı SNP'ler kompleks hastalık riskini yalnızca hafifçe değiştirir.
-- **Varyant allel oluşturma sıklığı mutasyonlar kadar değildir** — SNP'nin tanımlayıcı özelliği tek baz pozisyonunda kalıcı varyasyon olmasıdır. Varyant allel sıklığını mutasyonlarla kıyaslayan bu ifade bu sorudaki ayrımı sağlamaz.
+- **Varyant allel oluşturma sıklığı mutasyonlar kadar değildir** — Tek nükleotid polimorfizmleri (SNP) toplumda %1'den yüksek sıklıkta bulunan yaygın varyantlardır ve nadir hastalık mutasyonlarından çok daha sıktır; SNP için doğru olan temel özellik genomda tek bir nükleotid bazının değişimiyle oluşmasıdır.
 - **Hastalıklara direnç konusunda majör etkilidirler** — Hastalıklara dirençte majör etki ifadesi yanlıştır; SNP'ler hastalık riskini hafifçe değiştirir, majör belirleyici değildir.
 
 **Cevap: B** — En sık görülen formu tek bir nükleotidin değişimi ile gerçekleşir
@@ -9653,7 +9653,7 @@ _37 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Tek nükleotid polimorfizmi** — Tek nükleotid polimorfizmi tek baz pozisyonunda kalıcı varyasyondur; çoğu bialleliktir ve kompleks hastalık riskini hafifçe değiştirir.
-- **Nokta mutasyonu** — Nokta mutasyonu ile karıştırılabilir: Otizmle ilişkilendirilen değişiklik büyük DNA segmentlerinin delesyon ya da duplikasyonudur.
+- **Nokta mutasyonu** — Nokta mutasyonu tek bir bazın değişmesiyle orak hücreli anemi gibi tek gen hastalıklarına yol açar; binlerce ila milyonlarca baz çiftlik DNA bölgelerinin delesyon veya duplikasyonuyla otizm ve gelişimsel geriliğe katkıda bulunan yapısal değişiklik ise kopya sayısı varyasyonudur (CNV).
 - **Kopya sayısı varyasyonu** — Kopya sayısı varyasyonu doğru: binlerce ile milyonlarca baz içeren delesyon ya da duplikasyonlardır; bazıları otizm ve gelişimsel gerilikle ilişkilidir.
 - **DNA metilasyonu** — DNA metilasyonu epigenetik bir mekanizmadır; DNA dizisini değiştirmeden gen ekspresyonunu düzenler.
 - **Trizomi** — Trizomi kromozom sayısal anomalisidir; en sık örneği Down sendromudur.
@@ -9674,7 +9674,7 @@ _37 soru (örnek + çıkmış)_
 - **Kopya sayısını artırarak** — Kopya sayısını artırmak duplikasyon tipi kopya sayısı varyasyonudur; histon modifikasyonu değildir.
 - **Promotörde sitozin metilleyerek** — Promotörde sitozin metilasyonu DNA metilasyonu mekanizmasıdır; ağır metilasyon gen susturulmasına yol açar.
 - **Kromatin erişilebilirliğini değiştirerek** — Kromatin erişilebilirliğini değiştirmek doğru: asetilasyon, metilasyon ve fosforilasyon kromatin yapısını değiştirerek gen ekspresyonunu düzenler.
-- **Kodlayan diziyi kısaltarak** — Kodlayan diziyi kısaltmak ile karıştırılabilir: Histon modifikasyonları DNA dizisine dokunmaz.
+- **Kodlayan diziyi kısaltarak** — Histon asetilasyonu ve metilasyonu DNA'nın nükleotid dizisini kısaltmaz veya değiştirmez; epigenetik bir mekanizma olarak kromatinin sıkılığını (ökromatin/heterokromatin durumunu) ve transkripsiyon faktörlerinin DNA'ya erişilebilirliğini düzenler.
 
 **Cevap: D** — Kromatin erişilebilirliğini değiştirerek
 
@@ -9689,7 +9689,7 @@ _37 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **%0** — %0 olamaz; heterozigot etkilenen ebeveyn mutasyonlu aleli çocuğa aktarabilir.
-- **%25** — %25 ile karıştırılabilir: Dominant kalıtımda tek mutasyonlu alel fenotip için yeterlidir.
+- **%25** — %25 olasılık, her iki ebeveynin taşıyıcı olduğu otozomal resesif kalıtımda hasta çocuk doğma riskidir; otozomal dominant hastalıkta heterozigot hasta bireyin sağlam eşle her gebeliğinde mutant aleli aktarma ve çocuğun etkilenme olasılığı %50'dir.
 - **%75** — %75 olası değildir; etkilenen ebeveyn heterozigot olduğundan mutasyonlu aleli verme şansı her gebelikte yarı yarıyadır.
 - **%100** — %100 olmaz; heterozigot ebeveyn normal alelini de çocuğa aktarabilir.
 - **%50** — %50 doğru: etkilenen heterozigot ebeveyn ile normal eşin her gebeliğinde çocuğun etkilenme olasılığı %50’dir.
@@ -9724,10 +9724,10 @@ _37 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Kollajen lifleri** — Fibrillin-1 kusurunda bozulan elastik lif bütünlüğüdür. Kollajen lifleri bu sorudaki ayrımı sağlamaz.
+- **Kollajen lifleri** — Kollajen lifleri bağ dokusuna çekme kuvvetine karşı gerilim direnci sağlayan üçlü sarmal yapıdaki proteinlerdir; fibrillin-1 ise elastik liflerin çevresinde iskele oluşturan hücre dışı mikrofibrillerin ana glikoproteinidir.
 - **Mikrofibriller** — Mikrofibriller doğru: fibrillin-1 mikrofibrillerin ana bileşenidir ve TGF-β bağlanmasını düzenler.
-- **Bazal membran** — Fibrillin-1 aort duvarı, bağlar ve siliyer zonüllerdeki mikrofibrillerde bulunur. Bazal membran bu sorudaki ayrımı sağlamaz.
-- **Hücre iskeleti** — Hücre iskeleti ile karıştırılabilir: Fibrillin-1 hücre dışı matriksin bir proteinidir.
+- **Bazal membran** — Bazal membran epitel ve endotel altında tip IV kollajen ile lamininden oluşan özelleşmiş matriks tabakasıdır; fibrillin-1 ise aort, ligamanlar ve lens asıcı bağlarındaki elastik ilişkili mikrofibrillerin temel bileşenidir.
+- **Hücre iskeleti** — Hücre iskeleti sitoplazma içinde aktin, mikrotübül ve ara filamanlardan oluşan hücre içi destek ağıdır; fibrillin-1 ise fibroblastlarca hücre dışına salgılanan ve elastik mikrofibrilleri oluşturan ekstrasellüler bir glikoproteindir.
 - **Histon çekirdeği** — Histon çekirdeği DNA’nın sarıldığı nükleozom yapısıdır; bağ dokusu proteini değildir.
 
 **Cevap: B** — Mikrofibriller
@@ -9746,7 +9746,7 @@ _37 soru (örnek + çıkmış)_
 - **Alkole bağlı inflamasyon** — Alkole bağlı inflamasyon kronik alkol kullanımında akut ve kronik pankreatit yapar.
 - **Kanal tıkanması** — Kanal tıkanması doğru: koyu mukus pankreas kanallarını tıkar, ekzokrin yetmezlik ve malabsorpsiyon gelişir.
 - **Aflatoksin hasarı** — Aflatoksin Aspergillus türlerinin ürettiği bir kanserojendir; hepatoselüler karsinomla ilişkilidir.
-- **Amiloid birikimi** — Amiloid birikimi ile karıştırılabilir: Kistik fibroziste pankreas hasarı dehidrate salgının tıkayıcı etkisinden doğar.
+- **Amiloid birikimi** — Amiloid birikimi tip 2 diyabette pankreas adacıklarında (adacık amiloid polipeptidi ile) görülür; kistik fibroziste ekzokrin pankreas yetmezliğinin temel mekanizması ise CFTR kusuruna bağlı koyu mukus tıkaçlarının kanalları tıkaması ve asiner atrofi yapmasıdır.
 
 **Cevap: C** — Kanal tıkanması
 
@@ -9779,7 +9779,7 @@ _37 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Biyolojik kategori** — Biyolojik kategori yanlış bir yaklaşımdır; modern genetik biyolojik olarak keskin ırkların olmadığını göstermiştir.
-- **Genetik alt tür** — İnsanlarda keskin genetik ırk ayrımı bulunmaz. Genetik alt tür bu sorudaki ayrımı sağlamaz.
+- **Genetik alt tür** — Modern insan genetiği araştırmaları genetik çeşitliliğin büyük kısmının kıtalar arası değil grup içi bireyler arasında olduğunu ve insanlarda biyolojik alt tür bulunmadığını göstermiştir; bu nedenle ırk kavramı biyolojik alt tür değil, sosyal bir kategori olarak ele alınır.
 - **Kalıtım paterni** — Kalıtım paterni otozomal dominant, otozomal resesif ya da X’e bağlı tek gen hastalıklarını tanımlar; ırkla ilgili değildir.
 - **Mendel özelliği** — Mendel özelliği tek gendeki mutasyonun belirleyici olduğu hastalıkları anlatır; ırk kavramını tanımlamaz.
 - **Sosyal kategori** — Sosyal kategori doğru: ırk biyolojik değil sosyal bir kategori olarak ele alınmalıdır.
@@ -9833,10 +9833,10 @@ _37 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **Osteopeni** — Osteopeni anoreksiya nervozada görülen kemik bulgusudur; kurşun toksisitesinin tipik bulgusu değildir.
-- **Epifizde iskemik nekroz** — Epifizde iskemik nekroz ile karıştırılabilir: Kurşun büyüme plağında nekroz değil, yoğun çizgiler oluşturur.
+- **Epifizde iskemik nekroz** — Epifizde iskemik (avasküler) nekroz orak hücreli anemi, kronik kortikosteroid kullanımı veya dekompresyon hastalığında görülür; kurşun zehirlenmesinde ise kurşun osteoklast aktivitesini ve kıkırdak rezorpsiyonunu bozarak metafizde radyo-opak kurşun çizgileri oluşturur.
 - **Radyo-opak kurşun çizgileri** — Radyo-opak kurşun çizgileri doğru: vücuttaki kurşunun büyük kısmı kemikte birikir ve büyüme plağında bu çizgiler görülür.
 - **Mikrositer anemi** — Mikrositer, hipokromik anemi kurşun toksisitesinin kan bulgusudur; büyüme plağı bulgusu değildir.
-- **Lenfositik infiltrasyon** — Kurşunun kemikteki bulgusu radyolojik çizgilerdir. Lenfositik infiltrasyon bu sorudaki ayrımı sağlamaz.
+- **Lenfositik infiltrasyon** — Lenfositik infiltrasyon kronik osteomiyelit veya inflamatuvar artritlerde görülen hücresel yanıttır; çocukluk çağı kurşun zehirlenmesinde büyüme plağında kalsifiye kıkırdak trabeküllerinin yıkılamamasıyla oluşan karakteristik bulgu ise radyo-opak kurşun çizgileridir.
 
 **Cevap: C** — Radyo-opak kurşun çizgileri
 
@@ -9904,11 +9904,11 @@ _37 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Kompleman sistemi** — Yetersiz beslenmede belirgin azalma lenfositlerin yönettiği savunmadadır. Kompleman sistemi bu sorudaki ayrımı sağlamaz.
+- **Kompleman sistemi** — Kompleman proteinleri karaciğerde sentezlenir ve ağır malnütrisyonda azalabilse de en belirgin ve erken çöküş timus atrofisiyle birlikte gelişen T hücre aracılı (hücresel) immünite kaybıdır; bu nedenle hastalarda fırsatçı enfeksiyonlar sık görülür.
 - **T hücre aracılı immünite** — T hücre aracılı immünite doğru: şiddetli akut yetersiz beslenmede belirgin azalır ve sık fırsatçı, ağır enfeksiyonlar görülür.
 - **IgE yanıtı** — IgE yanıtı alerjik reaksiyonların temelidir; yetersiz beslenmenin tipik bağışıklık kaybı değildir.
 - **Mast hücre aktivitesi** — Mast hücre aktivitesi alerjik reaksiyonlarla ilgilidir; yetersiz beslenmede öne çıkan bozukluk değildir.
-- **Fagosit sayısı** — Şiddetli akut yetersiz beslenmede tanımlanan kayıp hücresel bağışıklıktadır. Fagosit sayısı bu sorudaki ayrımı sağlamaz.
+- **Fagosit sayısı** — Şiddetli akut yetersiz beslenmede dolaşımdaki fagosit sayısı tek başına belirleyici kusur değildir; timus ve lenfoid dokuların belirgin atrofisi sonucunda T hücre aracılı hücresel bağışıklık ağır biçimde baskılanır.
 
 **Cevap: B** — T hücre aracılı immünite
 
@@ -9941,7 +9941,7 @@ _37 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **NPY/AgRP nöronları** — NPY/AgRP nöronları leptin tarafından aktive edilmez, tersine inhibe edilir; bu nöronlar iştah ve besin alımını kontrol eder.
-- **Ghrelin salgılayan hücreler** — Ghrelin salgılayan hücreler ile karıştırılabilir: Ghrelin de hipotalamusa giden afferent sinyallerden biridir.
+- **Ghrelin salgılayan hücreler** — Ghrelin mide fundusundan açlıkta salgılanan ve hipotalamustaki NPY/AgRP nöronlarını uyararak iştahı artıran hormondur; yağ dokusundan salınan leptin ise arkuat çekirdekte anoreksijenik POMC/CART nöronlarını aktive ederek besin alımını azaltır.
 - **Pankreas beta hücreleri** — Pankreas beta hücreleri insülin salgılar; insülin de lipostatın afferent sinyallerindendir ama leptinin hedefi değildir.
 - **POMC/CART nöronları** — POMC/CART nöronları doğru: leptin arkuat çekirdekte iştahı azaltan ve enerji harcamasını artıran bu nöronları aktive eder.
 - **Adiponektin üreten hücreler** — Adiponektin üreten hücreler yağ dokusundadır; adiponektin insülin duyarlılığını artırır ve obezlerde düşüktür.
@@ -10004,7 +10004,7 @@ _37 soru (örnek + çıkmış)_
 
 **Özet.** Moleküler tanıda karyotip, FISH ve dizi tabanlı CGH kromozom düzeyinde, PCR ve RT-PCR gen düzeyinde kullanılır; yeni nesil dizileme nadir Mendel bozuklukları, somatik mutasyon paneli ve farmakogenomik profillemede kullanılır.
 
-# 16 · Tümör Biyolojisi ve Terminolojisi
+# Ders 16 (16) · Tümör Biyolojisi ve Terminolojisi
 
 _43 soru (örnek + çıkmış)_
 
@@ -10054,7 +10054,7 @@ _43 soru (örnek + çıkmış)_
 
 - **Hamartom** — Hamartom, bulunduğu organın kendi olgun dokularından oluşan düzensiz kitledir; mide duvarındaki pankreas ise yabancı yerdedir.
 - **Teratom** — Teratom totipotent germ hücreli bir neoplazmdır ve epitel, kas, kemik, nöral doku gibi birden çok germ tabakası türevi içerir.
-- **Metaplazi** — Sigara içenlerin bronşundaki skuamöz metaplazi öncü lezyon olarak geçer, yanlış yerdeki organ dokusu değildir. Metaplazi bu sorudaki ayrımı sağlamaz.
+- **Metaplazi** — Metaplazi bir olgun hücre tipinin kronik irritasyonla başka bir olgun hücre tipine dönüşmesidir; histolojik olarak tamamen normal bir dokunun (örneğin pankreas dokusunun) mide duvarı gibi ektopik bir yerde doğuştan bulunmasına ise khoristom (heterotopi) denir.
 - **Khoristom** — Khoristom doğru: heterotopik, yani ektopik olgun doku adacığıdır; mide duvarında pankreas dokusu klasik örnektir ve genellikle klinik önemi yoktur.
 - **Displazi** — Displazi epitelde hücresel atipi ve mimari bozuklukla giden düzensiz proliferasyondur; ektopik normal doku değildir.
 
@@ -10070,11 +10070,11 @@ _43 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Metaplazi** — Metaplazi ile karıştırılabilir: Bronş mukozasındaki skuamöz metaplazi ve displazi sigara içenlerde akciğer karsinomu riskini artıran öncü lezyonlardır.
+- **Metaplazi** — Metaplazi olgun bir hücre tipinin bir diğer olgun hücre tipine geri dönüşümlü olarak değişmesidir ve hücreler diferansiyasyonunu korur; malign tümör hücrelerinin normal doku benzerliğini kaybetmesi, yani diferansiyasyon kaybı ise anaplazidir.
 - **Anaplazi** — Anaplazi doğru: tümör hücrelerinin normal morfoloji ve fonksiyonunu yitirmesi, yani diferansiyasyon kaybıdır ve malignite için güvenilir belirteçtir.
-- **Hiperplazi** — Hiperplazi ile karıştırılabilir: Karşılanmamış östrojen uyarımıyla gelişen endometrial hiperplazi, endometrium karsinomu riskini artıran öncü lezyondur.
+- **Hiperplazi** — Hiperplazi büyüme faktörü veya hormon uyarısıyla olgun hücre sayısının artmasıdır ve uyarı kalkınca geriler; malignite için güvenilir bir kriter olan hücresel diferansiyasyon kaybı, pleomorfizm ve atipik mitoz tablosuna ise anaplazi denir.
 - **Hipertrofi** — Hipertrofi diferansiyasyon kaybını anlatmaz; malign hücredeki kayıp pleomorfizm, hiperkromazi ve atipik mitozla kendini gösterir.
-- **Atrofi** — Atrofi ile karıştırılabilir: Malignite belirteci olan değişiklikte tümör hücreleri köken aldıkları normal hücreye benzerliklerini yitirir.
+- **Atrofi** — Atrofi hücre boyutu ve organel içeriğinin azalmasıyla doku hacminin küçülmesidir; tümör hücrelerinin köken aldıkları normal hücreye yapısal ve işlevsel benzerliğini yitirmesi (diferansiyasyon kaybı) ise anaplazi olarak adlandırılır.
 
 **Cevap: B** — Anaplazi
 
@@ -10126,7 +10126,7 @@ _43 soru (örnek + çıkmış)_
 
 - **Melanom** — Melanom adındaki -om ekine rağmen her zaman malign kabul edilir; üveal melanom özellikle karaciğere metastaz yapma eğilimindedir.
 - **Bazal hücreli karsinom** — Bazal hücreli karsinom doğru: lokal invaziv bir malign tümördür, ancak birçok primer santral sinir sistemi tümörü gibi nadiren metastaz yapar.
-- **Osteosarkom** — Osteosarkom kemik kökenli bir sarkom, yani mezenkimal malign tümördür; nadiren metastaz yapan istisnalar arasında sayılmaz.
+- **Osteosarkom** — Osteosarkom gençlerde metafizden gelişen, yüksek dereceli ve erken dönemde akciğerlere hematojen metastaz yapan agresif bir malign mezenkimal tümördür; lokal invaziv olduğu halde neredeyse hiç metastaz yapmayan malign tümör örneği ise derinin bazal hücreli karsinomudur.
 - **Meme karsinomu** — Meme karsinomu lenfatik yolla aksiller veya internal meme lenf düğümlerine yayılır; metastaz yapması beklenen bir karsinomdur.
 - **Akciğer karsinomu** — Akciğer karsinomu hiler lenf düğümlerine yayılır, ayrıca adrenal bez ve beyne yerleşme eğilimi gösterir.
 
@@ -10145,8 +10145,8 @@ _43 soru (örnek + çıkmış)_
 - **Hematogen** — Hematogen yayılım en çok ince duvarlı venler yoluyla olur ve ilk kapiller yatakta durur; karsinomların en tipik yolu değildir.
 - **Vücut boşluğuna tohumlanma** — Vücut boşluğuna tohumlanma over karsinomunun periton yüzeylerine yayılımında görülür; karsinomların genel olarak en tipik yolu değildir.
 - **Lenfatik** — Lenfatik doğru: lenfatik yayılım en çok karsinomlar için tipiktir ve ilk metastaz bölgesi bölgesel lenf düğümleridir.
-- **Perinöral** — Üç ana metastaz yolu vücut boşluğuna tohumlanma, lenfatik ve hematogen yayılımdır. Perinöral yayılım bu sorudaki ayrımı sağlamaz.
-- **Transplasental** — Transplasental geçiş metastaz yolları arasında sayılmaz; birçok tümör aynı anda birden fazla ana yolu kullanabilir.
+- **Perinöral** — Perinöral yayılım pankreas, prostat ve tükrük bezi adenoid kistik karsinomu gibi bazı tümörlerin sinir kılıfları boyunca ilerlemesidir; karsinomların genel olarak ilk ve en tipik uzaklaşma yolu ise bölgesel lenf düğümlerine lenfatik yayılımdır.
+- **Transplasental** — Transplasental geçiş annedeki melanom veya lösemi gibi çok nadir durumlarda fetüse ulaşabilen istisnai bir durumdur; epitelyal malign tümörler olan karsinomların en karakteristik ve ilk metastaz yolu lenfatik damarlarla bölgesel lenf düğümlerine yayılımdır.
 
 **Cevap: C** — Lenfatik
 
@@ -10308,7 +10308,7 @@ _43 soru (örnek + çıkmış)_
 - **Lenfoma** — Lenfoma lenfoid doku kökenli bir kan hücresi neoplazmıdır; malign olsa da epitel kökenli değildir.
 - **Ürotelyal papillom** — Ürotelyal papillom mesane epitelinden gelişir ama benign tümördür; malign karşılığı ürotelyal karsinomdur.
 - **Prostatik adenokarsinom** — Prostatik adenokarsinom doğru: glandüler farklılaşma gösteren, epitel kökenli malign tümör, yani bir karsinomdur.
-- **Nöroblastom** — Karaciğer ve kemiğe seçici metastaz eğilimiyle bilinir, epitel kökenli malign tümörler ise karsinom adını alır. Nöroblastom bu sorudaki ayrımı sağlamaz.
+- **Nöroblastom** — Nöroblastom sempatik sinir sistemi ve adrenal medullanın nöral krista kökenli embriyonel tümörüdür; prostatik adenokarsinom ise prostat bez epitelinden gelişen malign epitelyal bir neoplazidir.
 
 **Cevap: D** — Prostatik adenokarsinom
 
@@ -10340,15 +10340,15 @@ _43 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **PTEN** — PTEN bir PI3 kinaz inhibitörüdür; RAS'ın kendisini değil, aşağı akıştaki PI3K/AKT sinyalini frenler.
+- **PTEN** — PTEN, PIP3'ü defosforile ederek PI3K/AKT sinyal yolunu baskılayan bir tümör baskılayıcı fosfatazdır; RAS proteininin kendi GTP'sini GDP'ye hidroliz ederek sinyali sonlandırmasını hızlandıran yapılar ise GTPaz aktive edici proteinlerdir (GAP).
 - **GTPaz aktive edici proteinler** — GTPaz aktive edici proteinler doğru: RAS'a bağlı GTP'nin parçalanmasını hızlandırır, böylece aktivasyon geçici kalır.
 - **RAF kinaz** — RAF kinaz, aktive RAS'ın sinyalini ileten RAF/MAP kinaz yolunun parçasıdır; sinyali sonlandırmaz, büyüme yanlısı sinyali taşır.
-- **PI3K** — PI3K, aktive RAS'ın uyardığı ikinci yolun, PI3K/AKT yolunun bileşenidir; fren değil, iletici bir kinazdır.
+- **PI3K** — PI3K (fosfatidilinozitol 3-kinaz), aktive RAS ve büyüme faktörü reseptörlerinin aşağı akışta hücre sağkalımını uyarmak için çalıştırdığı iletici bir kinazdır; RAS aktivasyonunu sonlandıran ise GTPaz aktive edici proteinlerdir (GAP).
 - **mTOR** — mTOR, RAS'ın aşağı akışında protein sentezini artıran hedeftir; sinyali kapatmaz, büyümeyi destekler.
 
 **Cevap: B** — GTPaz aktive edici proteinler
 
-**Özet.** RAS, GTP bağlıyken aktiftir; içsel GTPaz aktivitesi ve bunu hızlandıran GAP'ler sayesinde aktivasyon normalde geçicidir. PTEN ise aşağı akışta PI3K'yı frenler.
+**Özet.** RAS, GTP bağlıyken aktiftir; içsel GTPaz aktivitesi ve bunu hızlandıran GAP'ler sayesinde aktivasyon normalde geçicidir. PTEN ise aşağı akışta PI3K/AKT sinyalini baskılar.
 
 ## Soru 34
 
@@ -10782,7 +10782,7 @@ _43 soru (örnek + çıkmış)_
 
 **Özet.** Karsinogenez çok aşamalıdır; zamanla biriken genetik ve epigenetik olaylar ileri tümörleri genetik olarak heterojen yapar, dirençli alt klonların seçilimiyle tek basamaklı tedaviye direnç sık gelişir.
 
-# 17 · Karsinojenezin Moleküler Temeli
+# Ders 17 (17) · Karsinojenezin Moleküler Temeli
 
 _41 soru (örnek + çıkmış)_
 
@@ -10851,8 +10851,8 @@ _41 soru (örnek + çıkmış)_
 - **t(9;22)** — 9;22 translokasyonu doğru: Philadelphia kromozomunu oluşturur, BCR-ABL füzyon geni konstitütif aktif tirozin kinaz kodlar.
 - **t(8;14)** — 8;14 translokasyonu Burkitt lenfomaya aittir ve MYC onkogenini immünoglobulin ağır zincir lokusuna taşır.
 - **t(14;18)** — 14;18 translokasyonu foliküler lenfomaya aittir; BCL2 aşırı ekspresyonuyla apoptozu baskılar.
-- **t(11;14)** — Kronik miyeloid lösemideki translokasyon BCR-ABL füzyon genini oluşturur. 11;14 translokasyonu bu sorudaki ayrımı sağlamaz.
-- **t(15;17)** — 15;17 translokasyonu ile karıştırılabilir: Philadelphia kromozomu, BCR ile ABL'nin birleştiği türev 22. kromozomdur.
+- **t(11;14)** — t(11;14) translokasyonu siklin D1 genini immünoglobulin ağır zincir lokusuna taşıyarak manto hücreli lenfomaya yol açar; kronik miyeloid lösemide BCR-ABL füzyon genini ve Philadelphia kromozomunu oluşturan ise t(9;22) translokasyonudur.
+- **t(15;17)** — t(15;17) translokasyonu PML-RARA füzyon genini oluşturarak akut promiyelositik lösemiye neden olur; kronik miyeloid lösemide konstitütif tirozin kinaz aktiviteli BCR-ABL füzyonunu yaratan Philadelphia kromozomu ise t(9;22) ile oluşur.
 
 **Cevap: A** — t(9;22)
 
@@ -10976,7 +10976,7 @@ _41 soru (örnek + çıkmış)_
 
 - **Burkitt lenfoma** — Burkitt lenfoma, Epstein-Barr virüsüyle ilişkili B hücreli tümördür; MYC içeren 8;14 translokasyonu taşır.
 - **Erişkin T hücreli lösemi/lenfoma** — Erişkin T hücreli lösemi ya da lenfoma doğru: HTLV-1 CD4 pozitif T hücrelerine yönelir, Tax proteini T hücre proliferasyonunu uyarır.
-- **Nazofaringeal karsinom** — Nazofaringeal karsinom, Epstein-Barr virüsüyle ilişkili tümörlerdendir; HTLV-1 ile ilişkilendirilmez.
+- **Nazofaringeal karsinom** — Nazofaringeal karsinom, Burkitt lenfoma ve Hodgkin lenfoma ile birlikte Epstein-Barr virüsü (EBV) ile ilişkili bir tümördür; insan T hücreli lösemi virüsü tip 1 (HTLV-1) ise Tax proteini üzerinden erişkin T hücreli lösemi/lenfomaya neden olur.
 - **Kaposi sarkomu** — Kaposi sarkomu, adını taşıyan Kaposi sarkomu herpes virüsü, yani HHV-8 ile ilişkilidir.
 - **MALT lenfoma** — MALT lenfoma, Helicobacter pylori ile antijen uyarılı B hücre proliferasyonundan gelişir.
 
@@ -11010,7 +11010,7 @@ _41 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Staphylococcus aureus enfeksiyonu** — Karsinogenezde rol alan bakteri örneği, mide adenokarsinomu ve MALT lenfomasıyla ilişkili Helicobacter pylori'dir. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.
+- **Staphylococcus aureus enfeksiyonu** — Staphylococcus aureus akut süpüratif inflamasyon ve apse oluşturan piyojenik bir bakteridir, onkojenik değildir; telomeraz enziminin yeniden aktive olarak Hayflick replikatif sınırını aşması ise kanser hücrelerine sınırsız çoğalma (ölümsüzlük) kazandıran temel karsinogenez mekanizmasıdır.
 - **Hücrelerin temas inhibisyonuna duyarlılığının artması** — Temas inhibisyonuna duyarlılığın artması büyümenin frenlenmesi demektir; kanser hücreleri ise büyüme engelleyici sinyallere duyarsızdır.
 - **Hayflick limitinin telomeraz aktivasyonuyla aşılması** — Telomeraz aktivasyonu doğru: telomeraz artışı hücreyi ölümsüzleştirir, HPV E6 da telomerazı uyararak etki eder; sınırsız çoğalma kanserin ayırt edici özelliğidir.
 - **Tümör belirteci (kanser marker) yüksekliği** — Tümör belirteci yüksekliği bir karsinogenez mekanizması değildir; kanser, sürücü mutasyonların kademeli birikimiyle gelişir.
@@ -11036,7 +11036,7 @@ _41 soru (örnek + çıkmış)_
 
 **Cevap: C** — TP53
 
-**Özet.** Tümör baskılayıcı genler büyümeyi frenler ve genomu korur, işlev kaybıyla kansere izin verir; TP53 bunun örneğidir, KRAS, MYC ve ERBB2 ise onkogendir.
+**Özet.** Tümör baskılayıcı genler hücre çoğalmasını dizginler ve genom bütünlüğünü korur, işlev kaybıyla kansere izin verir; TP53 bunun örneğidir, KRAS, MYC ve ERBB2 ise onkogendir.
 
 ## Soru 27
 
@@ -11054,7 +11054,7 @@ _41 soru (örnek + çıkmış)_
 
 **Cevap: A** — Varisella zoster virüsü (VZV)
 
-**Özet.** HPV, EBV, HBV ve HCV gibi virüsler küresel kanserlerin yaklaşık %15–20'sinden sorumludur; varisella zoster virüsü onkojenik virüsler arasında yer almaz.
+**Özet.** HPV, EBV, HBV ve HCV gibi virüsler küresel kanserlerin yaklaşık %15–20'sinden sorumludur; suçiçeği ve zona etkeni olan varisella zoster virüsü ise insanlarda kansere yol açan onkojenik bir virüs değildir.
 
 ## Soru 28
 
@@ -11065,8 +11065,8 @@ _41 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **İnsan papilloma virüsü (HPV)** — İnsan papilloma virüsünün yüksek riskli tipleri servikal skuamöz hücreli karsinoma yol açar; Kaposi sarkomunun etkeni değildir.
-- **Staphylococcus aureus** — Onkojenik mikrobiyal etkenler RNA ve DNA virüsleri ile Helicobacter pylori gibi bakterilerdir. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.
-- **Sitomegalovirüs (CMV)** — Sitomegalovirüs ile karıştırılabilir: Onkojenik DNA virüsleri listesinde yer almaz.
+- **Staphylococcus aureus** — Staphylococcus aureus deri, kemik ve endokardda pürülan enfeksiyon yapan gram-pozitif koktur; Kaposi sarkomu, primer efüzyon lenfoması ve Castleman hastalığı ile ilişkili gamaherpesvirüs ise insan herpes virüsü 8'dir (HHV-8).
+- **Sitomegalovirüs (CMV)** — Sitomegalovirüs (CMV) betaherpesvirüs alt ailesindendir ve immünsüprese hastalarda pnömonit, kolit veya retinit yapar; vasküler endotel proliferasyonuyla giden Kaposi sarkomlarının %95'inde saptanan gamaherpesvirüs ise HHV-8'dir.
 - **Epstein-Barr virüsü (EBV)** — Epstein–Barr virüsü bir herpes virüsüdür ancak Burkitt lenfoma, Hodgkin lenfoma alt tipleri ve nazofaringeal karsinomla ilişkilidir.
 - **İnsan herpes virüsü 8 (HHV-8)** — İnsan herpes virüsü 8 doğru: Kaposi sarkomu herpes virüsü, yani KSHV olarak da adlandırılan onkojenik bir DNA virüsüdür.
 
@@ -11524,7 +11524,7 @@ _41 soru (örnek + çıkmış)_
 
 **Özet.** Hedefe yönelik tedaviler BCR-ABL, ERBB2 ve BRAF V600E'yi hedefler. İmmün kontrol noktası inhibitörleri ise PD-1, PD-L1 ve CTLA-4'ü bloke eder.
 
-# 18 · İleri Tümör Genetiği ve Metabolizması
+# Ders 18 (18) · İleri Tümör Genetiği ve Metabolizması
 
 _37 soru (örnek + çıkmış)_
 
@@ -11537,7 +11537,7 @@ _37 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **İki somatik RB mutasyonu** — İki somatik RB mutasyonu sporadik retinoblastomda gerekir; ailesel formda alellerden biri zaten germ hattından mutant gelir.
-- **RB amplifikasyonu** — RB amplifikasyonu ile karıştırılabilir: RB tümör baskılayıcı gendir, tümör için iki alelinin de işlev kaybı gerekir.
+- **RB amplifikasyonu** — RB bir onkogen değil tümör baskılayıcı gendir, bu nedenle amplifikasyonu tümör yapmaz; Knudson'un iki vuruş hipotezine göre ailesel retinoblastomda germ hattından gelen kusurlu alelin yanına sağlam alelde tek bir somatik RB mutasyonu eklenmesi tümör gelişimi için yeterlidir.
 - **Tek ek somatik RB mutasyonu** — Tek ek somatik RB mutasyonu doğru: ailesel formda bir mutant alel kalıtılır, retina hücresinde yalnızca ikinci darbe gerekir.
 - **MYC translokasyonu** — MYC büyümeyi teşvik eden bir onkogendir ve normalde TGF-β tarafından baskılanır; retinoblastom gelişiminde gereken olay değildir.
 - **TP53 germ hattı mutasyonu** — TP53 germ hattı mutasyonu Li-Fraumeni sendromunu oluşturur; erken yaşta sarkom, meme kanseri gibi çoklu primer tümörlere yol açar.
@@ -11556,9 +11556,9 @@ _37 soru (örnek + çıkmış)_
 
 - **Hipofosforile RB** — Hipofosforile RB doğru: aktif formdur, E2F'yi bağlayıp baskılar ve S fazı genlerinin transkripsiyonunu engeller.
 - **Hiperfosforile RB** — Hiperfosforile RB inaktif formdur; siklin–CDK kompleksleri RB'yi fosforile edince E2F serbest kalır ve G1/S geçişi başlar.
-- **Asetile RB** — Asetile RB ile karıştırılabilir: Aktif RB, kromatini kapalı tutmak için histon deasetilaz enzimini çeker.
-- **Ubikitinli RB** — RB'nin aktif ya da inaktif olmasını belirleyen değişiklik fosforilasyondur. Ubikitinli RB bu sorudaki ayrımı sağlamaz.
-- **Metile RB** — Metile RB ile karıştırılabilir: Aktif RB, histon metiltransferaz gibi enzimleri çekerek S fazı genlerini susturur.
+- **Asetile RB** — Histon asetilasyonu kromatini gevşeten bir modifikasyondur; RB proteininin E2F transkripsiyon faktörünü bağlayıp G1/S geçişini durduran aktif şekli ise fosforilasyona uğramamış (hipofosforile) RB formudur.
+- **Ubikitinli RB** — Ubikuitinlenme proteinlerin proteazomal yıkıma gönderilmesini sağlar ve HPV E7 onkoproteininin RB'yi yıktığı patolojik yoldur; fizyolojik olarak G1 fazında E2F'yi bağlayıp baskılayan aktif form ise hipofosforile RB'dir.
+- **Metile RB** — RB'nin hücre döngüsündeki anahtar düzenlenmesi metilasyonla değil siklin-CDK komplekslerinin yaptığı fosforilasyonla gerçekleşir; E2F'yi bağlayıp histon deasetilazları çekerek transkripsiyonu susturan aktif form hipofosforile RB'dir.
 
 **Cevap: A** — Hipofosforile RB
 
@@ -11612,7 +11612,7 @@ _37 soru (örnek + çıkmış)_
 - **CDKN1A (p21)** — CDKN1A doğru: kodladığı p21 siklin–CDK komplekslerini inhibe eder, RB fosforilasyonunu önler ve hücreyi G1/S'de durdurur.
 - **Siklin D** — Siklin D, büyüme faktörleriyle artıp CDK4/6 ile birlikte RB'yi fosforile eder; döngüyü durdurmaz, G1/S geçişini başlatır.
 - **VEGF** — VEGF, hipokside HIF-1α ile artan anjiyojenik faktördür; p53 ise aksine VEGF'yi baskılar.
-- **BCL2** — P53 onarılamayan hasarda apoptoz için PUMA ve BAX gibi proapoptotik genleri artırır. BCL2 bu sorudaki ayrımı sağlamaz.
+- **BCL2** — BCL2 apoptozu engelleyen bir sağkalım proteinidir ve p53 tarafından uyarılmaz, aksine baskılanır; p53'ün DNA hasarında G1/S geçişini durdurmak için transkripsiyonunu doğrudan artırdığı siklin bağımlı kinaz inhibitörü ise CDKN1A (p21) genidir.
 
 **Cevap: B** — CDKN1A (p21)
 
@@ -11665,7 +11665,7 @@ _37 soru (örnek + çıkmış)_
 - **E2F serbestleşmesi** — E2F serbestleşmesi RB'nin fosforilasyonla inaktive olmasının sonucudur; RB yoluna aittir, APC kaybına değil.
 - **β-katenin birikimi** — β-katenin birikimi doğru: APC yoksa β-katenin yıkılamaz, WNT olmasa bile birikir ve çekirdekte TCF ile proliferasyon genlerini aktive eder.
 - **p53 yıkımı** — p53 yıkımı MDM2 aracılığıyla olur ve stres yokken p53 düzeyini düşük tutar; APC yolunun olayı değildir.
-- **SMAD aktivasyonu** — SMAD aktivasyonu TGF-β reseptörünün uyarılmasıyla olur; proliferasyonu başlatmaz, aksine CDK inhibitörlerini artırarak frenler.
+- **SMAD aktivasyonu** — SMAD aktivasyonu TGF-beta reseptörünün uyarılmasıyla gerçekleşir ve proliferasyonu başlatmaz, aksine CDK inhibitörlerini artırarak hücre bölünmesini baskılar.
 - **HIF-1α yıkımı** — HIF-1α hipokside yıkılmaz, stabilize olur; VEGF transkripsiyonunu artırarak anjiyogenezi tetikler.
 
 **Cevap: B** — β-katenin birikimi
@@ -11720,7 +11720,7 @@ _37 soru (örnek + çıkmış)_
 - **E2F** — E2F, RB'den serbestleşince S fazı genlerini aktive eden transkripsiyon faktörüdür; hücre döngüsünü yönetir.
 - **TCF** — TCF, çekirdeğe geçen β-kateninin bağlandığı ve proliferasyon genlerini aktive eden transkripsiyon faktörüdür.
 - **SMAD** — SMAD proteinleri TGF-β sinyalini iletir; CDK inhibitörlerini artırıp proliferasyonu baskılar.
-- **NF-κB** — Hipoksiye yanıtta VEGF'yi artıran faktör HIF-1α'dır. NF-κB bu sorudaki ayrımı sağlamaz.
+- **NF-κB** — NF-kapaB inflamatuvar yanıtı ve hücre sağkalımını yöneten transkripsiyon faktörüdür; tümör dokusu hipoksik kaldığında VHL tarafından yıkımı duran ve çekirdeğe geçerek VEGF gen transkripsiyonunu doğrudan artıran faktör ise HIF-1 alfa'dır.
 
 **Cevap: A** — HIF-1α
 
@@ -11734,11 +11734,11 @@ _37 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **BCR-ABL inhibisyonu** — BCR-ABL inhibisyonu ile karıştırılabilir: Bevacizumab bir kinaz inhibitörü değil, anti-anjiyojen bir monoklonal antikordur.
-- **HER2 blokajı** — Bevacizumab tümör hücresini değil, tümörü besleyen yeni damar oluşumunu hedefler. HER2 blokajı bu sorudaki ayrımı sağlamaz.
+- **BCR-ABL inhibisyonu** — BCR-ABL tirozin kinaz inhibisyonu kronik miyeloid lösemide kullanılan imatinibin etki mekanizmasıdır; bevacizumab ise dolaşımdaki vasküler endotelyal büyüme faktörünü (VEGF) bağlayıp nötralize ederek tümör anjiyogenezini engelleyen monoklonal antikordur.
+- **HER2 blokajı** — HER2 reseptör blokajı meme ve mide kanserlerinde kullanılan trastuzumabın etki mekanizmasıdır; bevacizumab ise VEGF-A'yı nötralize ederek yeni damar oluşumunu baskılayan anti-anjiyojenik antikordur.
 - **Mutant IDH inhibisyonu** — Mutant IDH inhibisyonu ayrı bir hedefe yönelik tedavidir; özellikle akut miyeloid lösemide onaylanmış ajanlar vardır.
 - **VEGF nötralizasyonu** — VEGF nötralizasyonu doğru: bevacizumab VEGF'yi nötralize eden monoklonal antikordur ve tümör büyümesini yavaşlatabilir.
-- **PD-1 blokajı** — PD-1 blokajı ile karıştırılabilir: Bevacizumabın etkisi kısmi ve geçicidir, çünkü tümörler başka anjiyojen faktörlere geçebilir.
+- **PD-1 blokajı** — PD-1 blokajı nivolumab ve pembrolizumab gibi immün kontrol noktası inhibitörlerinin T hücre yanıtını açma mekanizmasıdır; bevacizumab ise tümör stromasında anjiyogenezi uyaran VEGF'yi nötralize eder.
 
 **Cevap: D** — VEGF nötralizasyonu
 
@@ -11774,7 +11774,7 @@ _37 soru (örnek + çıkmış)_
 - **Ras** — RAS büyümeyi destekleyen bir onkogendir; RAS–PI3K/AKT yolu glikoz taşıyıcı ve glikolitik enzimleri artırır.
 - **MYC** — MYC büyümeyi teşvik eden bir gendir; büyüme inhibitörü sinyaller MYC'yi baskılar.
 - **TGF-β** — TGF-β doğru: reseptör aktivasyonu SMAD proteinlerini harekete geçirir, p15 ve p21 transkripsiyonu artar ve hücre G1/S'de durur.
-- **C-erbB2** — C-erbB2 ile karıştırılabilir: Amplifikasyonla aşırı eksprese olan, büyümeyi destekleyen bir onkogendir.
+- **C-erbB2** — C-erbB2 (HER2) epidermal büyüme faktörü reseptör ailesinden bir proto-onkogendir ve hücre çoğalmasını hızlandırır; reseptörüne bağlanınca SMAD proteinleri üzerinden p21 ve p15 gibi CDK inhibitörlerini artırarak büyümeyi baskılayan ise TGF-beta'dır.
 
 **Cevap: D** — TGF-β
 
@@ -11994,7 +11994,7 @@ _37 soru (örnek + çıkmış)_
 
 **Cevap: D** — Reseptör ya da SMAD genlerinde
 
-**Özet.** Birçok kanserde TGF-β yolu reseptör ya da SMAD mutasyonlarıyla kaybolur ve büyüme freni kalkar; ileri evrede ise TGF-β epitel–mezenkimal geçişi destekleyebilir.
+**Özet.** Birçok kanserde TGF-β yolu reseptör ya da SMAD mutasyonlarıyla işlevini yitirir ve büyüme üzerindeki baskılayıcı etki ortadan kalkar; ileri evrede ise TGF-β epitel–mezenkimal geçişi destekleyebilir.
 
 ## Soru 39
 
@@ -12194,7 +12194,7 @@ _37 soru (örnek + çıkmış)_
 
 **Özet.** Bevacizumab VEGF'yi nötralize eder ve yaşamı genellikle aylar düzeyinde uzatır; tümörler başka anjiyojen faktörlere geçebilir ya da daha invaziv fenotipe kayabilir.
 
-# 19 · Tümör İmmünolojisi ve Metastaz Mekanizmaları
+# Ders 19 (19) · Tümör İmmünolojisi ve Metastaz Mekanizmaları
 
 _32 soru (örnek + çıkmış)_
 
@@ -12207,10 +12207,10 @@ _32 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **Güneş ilişkili melanom** — Güneş ilişkili melanom doğru: güneşe bağlı yüksek mutasyon yükü, bağışıklık sistemine yabancı gelen çok sayıda neoantijen yaratır.
-- **Lipom** — Lipom ile karıştırılabilir: Neoantijen yükü, sigara ilişkili akciğer kanseri gibi yüksek mutasyon yüküne sahip tümörlerde fazladır.
-- **Kondrom** — DNA onarım kusuru olan kanserler de mutasyon biriktirdiği için neoantijenden zengindir. Kondrom bu sorudaki ayrımı sağlamaz.
-- **Fibroadenom** — Fibroadenom ile karıştırılabilir: Neoantijen, sürücü ya da yolcu mutasyonların protein dizisinde yeni peptit oluşturmasıyla ortaya çıkar.
-- **Leiomyom** — Yüksek mutasyon yükü ve neoantijen sayısı, kontrol noktası blokajına yanıtla da ilişkilidir. Leiomyom bu sorudaki ayrımı sağlamaz.
+- **Lipom** — Lipom olgun adipositlerden oluşan, mutasyon yükü son derece düşük benign bir mezenkimal tümördür; ultraviyole ışınlarının yoğun DNA hasarı yaptığı güneş ilişkili melanom ise somatik mutasyon ve neoantijen yükü en yüksek malignitelerdendir.
+- **Kondrom** — Kondrom hiyalin kıkırdak üreten iyi diferansiye benign bir tümördür ve genomik mutasyon yükü düşüktür; karsinojen maruziyetiyle binlerce nokta mutasyonu biriktiren güneş ilişkili melanomda ise neoantijen yükü çok yüksektir.
+- **Fibroadenom** — Fibroadenom genç kadınlarda görülen, düşük mutasyon yüklü benign fibroepitelyal meme tümörüdür; ultraviyole mutajenezine bağlı yüksek somatik mutasyon hızı nedeniyle neoantijen yükü en yüksek olan tümör ise güneş ilişkili melanomdur.
+- **Leiomyom** — Leiomyom uterus düz kasının MED12 gibi sınırlı genetik değişikliklerle gelişen benign tümörüdür; yoğun UV kaynaklı DNA hasarı taşıyan güneş ilişkili melanom ise en yüksek neoantijen yüküne sahip tümörler arasındadır.
 
 **Cevap: A** — Güneş ilişkili melanom
 
@@ -12242,10 +12242,10 @@ _32 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Nötrofil** — Antitümör bağışıklığın temel efektörleri CD8 pozitif sitotoksik T lenfositler ve Th1 tipi CD4 pozitif T hücreleridir. Nötrofil bu sorudaki ayrımı sağlamaz.
-- **Eozinofil** — Eozinofil ile karıştırılabilir: Antitümör yanıta ek katkıyı doğal öldürücü hücreler ve makrofajlar sağlar.
+- **Nötrofil** — Nötrofiller akut bakteriyel enfeksiyonlara karşı fagositoz yapan doğuştan bağışıklık hücreleridir; tümör hücrelerinin MHC sınıf I ile sunduğu neoantijenleri tanıyıp perforin ve granzimle doğrudan öldüren temel efektör hücre ise CD8+ sitotoksik T lenfosittir.
+- **Eozinofil** — Eozinofiller helmint parazitlere ve tip I aşırı duyarlılık reaksiyonlarına aracılık eden granülositlerdir; tümöre özgü antijenleri tanıyarak antitümör bağışıklığın ana yıkıcı gücünü oluşturan hücre ise CD8+ sitotoksik T lenfosittir.
 - **CD8+ sitotoksik T lenfosit** — CD8 pozitif sitotoksik T lenfosit doğru: MHC sınıf I ile sunulan tümör antijenini tanır, perforin–granzim ve Fas–FasL yoluyla apoptoz yaptırır.
-- **Mast hücresi** — Mast hücresi ile karıştırılabilir: Th1 hücreleri interferon gama üretip makrofajları tümör hücresini öldürecek şekilde aktive eder.
+- **Mast hücresi** — Mast hücreleri IgE aracılı degranülasyonla vasküler geçirgenliği artıran yerleşik doku hücreleridir; MHC sınıf I üzerindeki tümör peptitlerini tanıyıp apoptozu tetikleyen temel antitümör efektör hücre ise CD8+ sitotoksik T lenfosittir.
 - **Treg hücresi** — Treg hücresi immün baskılayıcı bir hücredir; antitümör yanıtı artırmaz, tümörün bağışıklıktan kaçışına katkı verir.
 
 **Cevap: C** — CD8+ sitotoksik T lenfosit
@@ -12278,7 +12278,7 @@ _32 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **T hücre aktivitesinin baskılanması** — T hücre aktivitesinin baskılanması doğru: PD-L1 ile PD-1 bağlanması T hücresini frenler, CTL'leri tükenmiş fenotipe iter.
+- **T hücre aktivitesinin baskılanması** — T hücre aktivitesinin baskılanması doğrudur: tümör yüzeyindeki PD-L1'in T hücresindeki PD-1 reseptörüne bağlanması T hücresini baskılar ve sitotoksik T lenfositleri işlevsiz (tükenmiş) duruma sokar.
 - **CTL proliferasyonu** — CTL proliferasyonu, tümör antijeniyle aktivasyonda klon genişlemesi olarak görülür; PD-1 bağlanması ise tersine T hücresini baskılar.
 - **NK aktivasyonu** — NK aktivasyonu bu yolun sonucu değildir; NK hücreleri özellikle MHC sınıf I kaybı olan tümör hücrelerini öldürebilir.
 - **Kompleman aktivasyonu** — Kompleman aktivasyonu, antikorların tümör antijenlerine bağlanmasıyla ortaya çıkan bir etkidir.
@@ -12286,7 +12286,7 @@ _32 soru (örnek + çıkmış)_
 
 **Cevap: A** — T hücre aktivitesinin baskılanması
 
-**Özet.** PD-L1 tümör ve çevresindeki miyeloid hücrelerde, PD-1 ise aktive T hücrelerinde bulunur; bağlanınca T hücresi baskılanır, kontrol noktası inhibitörleri bu freni kaldırır.
+**Özet.** PD-L1 tümör ve çevresindeki miyeloid hücrelerde, PD-1 ise aktive T hücrelerinde bulunur; bağlanınca T hücresi baskılanır, kontrol noktası inhibitörleri ise bu baskılanmayı ortadan kaldırır.
 
 ## Soru 6
 
@@ -12296,10 +12296,10 @@ _32 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Kemik iliği aplazisi** — Kemik iliği aplazisi ile karıştırılabilir: Kontrol noktası inhibitörleri T hücreler üzerindeki frenleri kaldırarak etki eder.
-- **Kardiyotoksisite** — Bu ilaçların tipik toksisiteleri kolit, dermatit, pnömonit ve endokrinopatilerdir. Kardiyotoksisite bu sorudaki ayrımı sağlamaz.
-- **Nefrotoksisite** — Nefrotoksisite ile karıştırılabilir: Bu ilaçların yan etkileri otoimmünite benzeridir ve genellikle kortikosteroidle yönetilir.
-- **Periferik nöropati** — Bu ilaçlar PD-1, PD-L1 ve CTLA-4'ü hedefleyen monoklonal antikorlardır. Periferik nöropati bu sorudaki ayrımı sağlamaz.
+- **Kemik iliği aplazisi** — Kemik iliği aplazisi ve sitopeniler sitotoksik kemoterapilerin bölünen hematopoetik hücreleri vurmasıyla gelişir; immün kontrol noktası inhibitörleri ise T hücrelerinin öz toleransını bozarak otoimmün kolit, pnömonit ve endokrinopatilere yol açar.
+- **Kardiyotoksisite** — Doğrudan miyokardiyal kardiyotoksisite doksorubisin (antrasiklin) veya trastuzumab tedavisinin bilinen yan etkisidir; PD-1 ve CTLA-4 blokajı yapan kontrol noktası inhibitörlerinin karakteristik yan etkisi ise otoimmün kolit ve benzeri immün aracılı organ iltihaplarıdır.
+- **Nefrotoksisite** — Akut tübüler nekroz şeklinde doğrudan nefrotoksisite sisplatin ve aminoglikozidlerin tipik yan etkisidir; immün kontrol noktası inhibitörlerinde ise T hücre aktivasyonunun aşırı artmasına bağlı otoimmün kolit, dermatit ve tiroidit ön plandadır.
+- **Periferik nöropati** — Periferik nöropati vinkristin ve paklitaksel gibi mikrotübül hedefli kemoterapötiklerin tipik yan etkisidir; immün kontrol noktası inhibitörleri ise T hücre toleransını kaldırarak en sık otoimmün kolit, döküntü ve endokrin bozukluklar oluşturur.
 - **Otoimmün kolit** — Otoimmün kolit doğru: frenleri kalkan T hücreleri otoimmünite benzeri toksisite yapar, kolit bunların tipik örneğidir.
 
 **Cevap: E** — Otoimmün kolit
@@ -12318,7 +12318,7 @@ _32 soru (örnek + çıkmış)_
 - **B hücreli akut lenfoblastik lösemi** — B hücreli akut lenfoblastik lösemi doğru: yapay reseptör eklenmiş T hücreleri bu lösemide ve bazı lenfomalarda başarılıdır.
 - **Akciğer karsinomu** — Akciğer karsinomu, kontrol noktası inhibitörleriyle yüksek yanıt alınabilen bir tümördür; CAR-T ise çoğunlukla hematolojik malignitelerde kullanılır.
 - **Mesane karsinomu** — Mesane karsinomu, PD-1 ve PD-L1'e karşı monoklonal antikorlarla yüksek yanıt alınan solid tümörlerdendir.
-- **Kolorektal karsinom** — CAR-T ciddi sitokin salınım sendromu riski taşır ve çoğunlukla ikinci basamak tedavidir. Kolorektal karsinom bu sorudaki ayrımı sağlamaz.
+- **Kolorektal karsinom** — Kolorektal karsinom gibi solid tümörlerde immunosupresif stroma ve hedef antijen heterojenliği nedeniyle CAR-T tedavisinin etkinliği sınırlıdır; CD19 hedefli CAR-T hücre tedavisi en yüksek tam yanıt başarısını B hücreli akut lenfoblastik lösemide ve B hücreli lenfomalarda gösterir.
 
 **Cevap: B** — B hücreli akut lenfoblastik lösemi
 
@@ -12332,11 +12332,11 @@ _32 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Kaspazlar** — Kaspazlar ile karıştırılabilir: İnvazyonda bazal membranı yıkan proteazlar arasında katepsin D ve ürokinaz tipi plazminojen aktivatörü de vardır.
+- **Kaspazlar** — Kaspazlar hücre içinde apoptozu yürüten sistein proteazlardır; tümör hücrelerinin bazal membrandaki tip IV kollajeni ve interstisyel matriksi yıkarak dokuya invaze olmak için salgıladığı başlıca enzim grubu ise matriks metalloproteinazlardır (MMP-2, MMP-9).
 - **Granzimler** — Granzimler, sitotoksik T lenfositlerin perforinle birlikte tümör hücresine apoptoz yaptırmak için kullandığı moleküllerdir.
 - **Matriks metalloproteinazlar** — Matriks metalloproteinazlar doğru: tümör ya da stromal hücrelerce salgılanır, kollajen ve laminin gibi bazal membran proteinlerini yıkar.
-- **Elastaz inhibitörleri** — İnvazyon için proteaz inhibisyonu değil, proteaz salgısı ve matriks yıkımı gerekir. Elastaz inhibitörleri bu sorudaki ayrımı sağlamaz.
-- **Lizozim** — Lizozim ile karıştırılabilir: Matriks yıkım ürünleri tümör hücresi için kemotaktik ve büyüme uyarıcı etki de gösterir.
+- **Elastaz inhibitörleri** — Elastaz inhibitörleri (örneğin alfa-1 antitripsin) proteolizi durdurarak hücre dışı matriksi korur; tümör invazyonunda ise tam tersine bazal membranı ve kollajeni parçalayan matriks metalloproteinazlar (MMP'ler) aşırı salgılanır.
+- **Lizozim** — Lizozim gözyaşı, tükürük ve lökosit granüllerinde bulunan, bakteri hücre duvarını yıkan antibakteriyel bir enzimdir; tümör hücrelerinin bazal membranı ve bağ dokusu matriksini eriterek invazyon yapmasını sağlayan temel enzimler ise matriks metalloproteinazlardır.
 
 **Cevap: C** — Matriks metalloproteinazlar
 
@@ -12350,8 +12350,8 @@ _32 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Nötrofil** — Dolaşımdaki tümör hücreleri bağışıklık hücrelerince tanınıp yok edilme riskiyle karşı karşıyadır. Nötrofil bu sorudaki ayrımı sağlamaz.
-- **Eritrosit** — Eritrosit ile karıştırılabilir: Tümör hücreleri dolaşımda tek tek ya da trombosit ve lökositlerle agregat halinde bulunur.
+- **Nötrofil** — Nötrofiller bakteriyel fagositoz yapan lökositlerdir; dolaşıma geçen tümör hücrelerinin çevresini sararak onları kan akımının mekanik kayma stresinden ve NK hücrelerinin sitotoksik saldırısından koruyan kalkanı ise trombositler oluşturur.
+- **Eritrosit** — Eritrositler dokulara oksijen taşıyan hücrelerdir ve tümör hücrelerine koruyucu agregat oluşturmazlar; dolaşımdaki tümör hücrelerine P-selektin ve fibrin ağıyla bağlanıp onları NK hücre yıkımından koruyan ve ekstravazasyonu kolaylaştıran ise trombositlerdir.
 - **Endotel hücresi** — Endotel hücresi intravazasyonda tümör hücresi ve makrofajlarla etkileşir; ekstravazasyonda endotel adezyon molekülleri rol oynar.
 - **Trombosit** — Trombosit doğru: tümör hücreleriyle agregat oluşturarak onları dolaşımda mekanik ve immün saldırıdan koruyabilir.
 - **NK hücresi** — NK hücresi koruyucu değil, tehdittir; özellikle MHC sınıf I kaybı olan tümör hücrelerini öldürebilir.
@@ -12369,8 +12369,8 @@ _32 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Tohum ve toprak** — Tohum ve toprak doğru: tümör hücresindeki kemokin reseptörleri hedef organ stromasının kemokinlerine yanıt verir, tümör ile stroma uyumlu olmalıdır.
-- **İki vuruş** — Organ tropizmini tümör hücresindeki kemokin reseptörleri yönlendirir, ekstravazasyonda endotel adezyon molekülleri de rol oynar. İki vuruş bu sorudaki ayrımı sağlamaz.
-- **Warburg** — Warburg ile karıştırılabilir: Hedef organa ulaşan mikrometastazın büyüyebilmesi için uygun stromal destek ve anjiyogenez gerekir.
+- **İki vuruş** — Knudson'un iki vuruş hipotezi tümör baskılayıcı genlerin her iki alelinin de inaktive olması gerektiğini açıklar; dolaşımdaki tümör hücresinin (tohum) kemokin reseptörleri ve büyüme sinyalleri açısından uyumlu bir hedef organ stromasında (toprak) metastaz oluşturmasını açıklayan ise Paget'in tohum ve toprak hipotezidir.
+- **Warburg** — Warburg etkisi kanser hücrelerinin oksijen varlığında bile enerji ve biyosentez ara ürünleri için aerobik glikolizi tercih etmesidir; tümör hücresinin yüzey reseptörleri ile hedef organ mikroçevresi arasındaki seçici metastaz uyumunu açıklayan ise tohum ve toprak hipotezidir.
 - **Klonal seçilim** — Klonal seçilim, bağışıklık kaçışı en yüksek alt klonların öne çıkması gibi süreçleri anlatır; organ tropizmini açıklamaz.
 - **Bağışıklık gözetimi** — Bağışıklık gözetimi, sürekli ortaya çıkan kötü huylu hücrelerin bağışıklık sistemince tespit edilip yok edilmesidir.
 
@@ -12386,9 +12386,9 @@ _32 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Senesens** — Mikrometastaz, histolojik ya da moleküler düzeyde saptanabilen, klinik olarak sessiz küçük odaktır. Senesens bu sorudaki ayrımı sağlamaz.
+- **Senesens** — Senesens, telomer kısalması veya onkogen stresiyle hücrenin bölünme yeteneğini bir daha geri dönmemek üzere kalıcı olarak yitirmesidir; uzak organa yerleşen mikrometastatik tümör hücrelerinin bölünmeden yıllarca canlı kalıp sonradan yeniden çoğalabilmesine ise tümör dormansisi denir.
 - **Apoptoz** — Apoptoz hücrenin ölümüdür; sitotoksik T lenfositler tümör hücresinde perforin–granzim ve Fas–FasL yoluyla apoptoz başlatır.
-- **Anaplazi** — Hücrelerin bölünmeden beklemesinin nedenleri arasında konak bağışıklık baskısı da vardır. Anaplazi bu sorudaki ayrımı sağlamaz.
+- **Anaplazi** — Anaplazi malign tümör hücrelerinde diferansiyasyon kaybı ve ileri derecede pleomorfizm bulunmasıdır; hedef dokuya ulaşmış mikrometastatik hücrelerin anjiyogenez veya uygun stromal sinyaller oluşana dek uzun süre bölünmeden beklemesine ise dormansi denir.
 - **Kolonizasyon** — Kolonizasyon, hedef organda mikrometastazın büyümesidir; bunun için uygun stromal destek ve anjiyogenez gerekir.
 - **Dormansi** — Dormansi doğru: tümör hücreleri uzun süre bölünmeden canlı kalır; yetersiz anjiyogenez, niş eksikliği ya da bağışıklık baskısı buna yol açar.
 
@@ -12428,14 +12428,14 @@ Bu basamakların doğru sıralaması hangi seçenekte verilmiştir?
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **CTLA-4 (immün kontrol noktası)** — CTLA-4 doğru: T hücre aktivasyonunu negatif düzenleyen bir kontrol molekülüdür ve tümöre bağlı immün baskıya aracılık eder.
-- **CEA (karsinoembriyonik antijen)** — Tümöre bağlı immün baskıyı CTLA-4, PD-1 ve PD-L1 gibi kontrol noktaları sağlar. CEA bu sorudaki ayrımı sağlamaz.
-- **CA-125 (over kanseri antijeni)** — CA-125 ile karıştırılabilir: İmmün baskıda TGF-β ve IL-10 gibi sitokinler ile T düzenleyici hücreler rol oynar.
-- **CD30 (TNF reseptör ailesi üyesi)** — Kontrol noktası blokajında monoklonal antikorlarla hedeflenen moleküller PD-1, PD-L1 ve CTLA-4'tür. CD30 bu sorudaki ayrımı sağlamaz.
+- **CEA (karsinoembriyonik antijen)** — Karsinoembriyonik antijen (CEA), kolorektal ve pankreas adenokarsinomlarında tedavi yanıtını ve nüksü izlemekte kullanılan bir serum tümör belirtecidir; T lenfosit aktivasyonunu doğrudan baskılayarak tümörün immün yanıttan kaçmasına aracılık eden ise CTLA-4'tür.
+- **CA-125 (over kanseri antijeni)** — CA-125, seröz over karsinomlarının tanı ve izleminde kullanılan glikoprotein yapısında bir tümör belirtecidir; antijen sunan hücrelerdeki B7 moleküllerine bağlanarak T hücre aktivasyonunu baskılayan immün kontrol noktası ise CTLA-4'tür.
+- **CD30 (TNF reseptör ailesi üyesi)** — CD30, klasik Hodgkin lenfoma ve anaplastik büyük hücreli lenfoma hücrelerinde eksprese edilen TNF reseptör ailesi üyesi bir tanısal belirteçtir; T lenfosit yanıtını negatif düzenleyerek tümöre bağlı immün supresyona aracılık eden molekül ise CTLA-4'tür.
 - **Tümör testis antijenleri** — Tümör testis antijenleri solid tümörlerde yeniden ifade edilir ve bağışıklık yanıtı oluşturabilir; baskıya aracılık etmez, yanıtın hedefidir.
 
 **Cevap: A** — CTLA-4 (immün kontrol noktası)
 
-**Özet.** CTLA-4 T hücre aktivasyonunu negatif düzenler, PD-L1 ise PD-1'e bağlanıp T hücresini baskılar; bu frenler tümörün bağışıklıktan kaçmasını sağlar.
+**Özet.** CTLA-4 T hücre aktivasyonunu negatif düzenler, PD-L1 ise PD-1'e bağlanıp T hücresini baskılar; bu kontrol noktası mekanizmaları tümörün bağışıklıktan kaçmasını sağlar.
 
 ## Soru 25
 
@@ -12445,9 +12445,9 @@ Bu basamakların doğru sıralaması hangi seçenekte verilmiştir?
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **PD-1** — PD-1 aktive T lenfositlerindeki reseptördür; ligandına bağlanınca T hücre aktivitesi baskılanır, bu yüzden aracılık eder ve cevap değildir.
+- **PD-1** — PD-1, aktive T lenfositlerinin yüzeyinde bulunan ve tümördeki PD-L1 ligandına bağlandığında T hücre sitotoksisitesini baskılayan bir kontrol noktası reseptörüdür; dolayısıyla tümöre bağlı immün supresyona doğrudan aracılık eder.
 - **PD-L1** — PD-L1 tümör ve miyeloid hücrelerde ifade edilir; T hücresini baskılayıp tükenmiş fenotipe iter, yani immün baskıya aracılık eder.
-- **CTLA-4** — CTLA-4 T hücre aktivasyonunu negatif düzenleyen kontrol noktasıdır; immün baskıya aracılık ettiği için cevap değildir.
+- **CTLA-4** — CTLA-4, T hücre yüzeyinde CD28 ile yarışarak kostimülasyonu engelleyen negatif düzenleyici bir reseptördür ve tümöre bağlı immün baskılanmaya aracılık eder; CAR-T hücreleri ise tümörü yok etmek üzere genetik olarak tasarlanmış tedavi edici T lenfositlerdir.
 - **Treg indüksiyonu** — T düzenleyici hücreler, tümörlerin kullandığı immün baskılayıcı hücrelerdir; bu yüzden immün baskıya aracılık eder.
 - **CAR-T hücreleri** — CAR-T hücreleri doğru cevaptır çünkü baskı aracı değil tedavidir; T hücrelerine yapay reseptör eklenir, B hücreli akut lenfoblastik lösemide başarılıdır.
 
@@ -12629,7 +12629,7 @@ Bu basamakların doğru sıralaması hangi seçenekte verilmiştir?
 - **T hücresine yapay reseptör eklemek** — T hücresine yapay reseptör eklemek CAR-T tedavisidir; özellikle B hücreli akut lenfoblastik lösemide başarılıdır.
 - **T hücrelerini in vitro çoğaltmak** — T hücrelerini in vitro çoğaltıp geri vermek adaptif T hücre transferidir; kontrol noktası blokajından farklı bir yaklaşımdır.
 - **Neoantijen aşısıyla uyarmak** — Neoantijen aşısı, tümöre spesifik neoantijenleri hedefleyen kişiselleştirilmiş tümör aşısıdır; kontrol noktası blokajı değildir.
-- **T hücre frenlerini kaldırmak** — T hücre frenlerini kaldırmak doğru: PD-1, PD-L1 ve CTLA-4 monoklonal antikorlarla hedeflenerek T hücreler üzerindeki frenler kaldırılır.
+- **T hücre frenlerini kaldırmak** — T hücre frenlerini kaldırmak doğru cevaptır: PD-1, PD-L1 ve CTLA-4 monoklonal antikorlarla bloke edilerek T lenfositler üzerindeki baskılayıcı sinyaller ortadan kaldırılır ve antitümör yanıt yeniden etkinleştirilir.
 
 **Cevap: E** — T hücre frenlerini kaldırmak
 
@@ -12665,7 +12665,7 @@ Bu basamakların doğru sıralaması hangi seçenekte verilmiştir?
 - **Lokal invazyon** — Lokal invazyon, metastaz kaskadının ilk basamaklarındandır; ölümün başlıca nedeni olarak tanımlanan süreç değildir.
 - **Bağışıklıktan kaçış** — Bağışıklıktan kaçış gelişmiş kanserlerde güçlüdür; ama kanser ilişkili ölümün başlıca nedeni olarak metastaz gösterilir.
 - **Tümör dormansisi** — Tümör dormansisi, hücrelerin uzun süre bölünmeden canlı kalmasıdır; yıllar sonra geç metastaz veya nükse yol açabilir.
-- **Primer tümör büyümesi** — Kanser ilişkili ölümün başlıca nedeni tümörün uzak dokulara yayılmasıdır. Primer tümör büyümesi bu sorudaki ayrımı sağlamaz.
+- **Primer tümör büyümesi** — Primer tümörün lokal büyümesi beyin gibi hayati boşluklar dışında çoğu kez cerrahi veya radyoterapiyle kontrol altına alınabilir; kanser hastalarında organ yetmezliği, kaşeksi ve ölümün en büyük kısmından (%90'a yakınından) uzak organ metastazları sorumludur.
 
 **Cevap: A** — Metastaz
 
@@ -12733,7 +12733,7 @@ Bu basamakların doğru sıralaması hangi seçenekte verilmiştir?
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **E-kadherin ekspresyonunun artması** — E-kadherin artışı kolonizasyonun koşulu olarak geçmez; E-kadherin fonksiyon kaybı ise metastazın başlangıcında ayrılmayı sağlar.
+- **E-kadherin ekspresyonunun artması** — E-kadherin hücreleri birbirine bağlayan adezyon molekülüdür ve kaybı primer tümörden ayrılmayı kolaylaştırır; hedef organa yerleşen mikrometastazların klinik tümöre büyüyebilmesi (kolonizasyon) için ise uygun stromal destek ve anjiyogenez zorunludur.
 - **MHC sınıf I artışı** — MHC sınıf I artışı tümörü CTL tanımasına açık hâle getirir; mikrometastaz büyümesinin koşulu değildir.
 - **Stromal destek ve anjiyogenez** — Stromal destek ve anjiyogenez doğru: mikrometastazlar uygun stromal destek ve anjiyogenez olmadan büyüyemez.
 - **Trombosit agregatı oluşumu** — Trombosit agregatı, dolaşımdaki tümör hücresini mekanik ve immün saldırıdan korur; hedef dokuda büyümeyi sağlamaz.
@@ -12753,7 +12753,7 @@ Bu basamakların doğru sıralaması hangi seçenekte verilmiştir?
 
 - **Uygun stromal niş eksikliği** — Uygun stromal niş eksikliği doğru: yetersiz anjiyogenez ve konak bağışıklık baskısıyla birlikte dormansinin üç nedeninden biridir.
 - **Aşırı anjiyogenez** — Aşırı anjiyogenez dormansiye yol açmaz; tersine yetersiz anjiyogenez, dormansinin nedenlerinden biridir.
-- **MHC sınıf I kaybı** — MHC sınıf I kaybı, tümörün CTL tanımasından kaçmasını sağlar; dormansinin nedenleri arasında sayılmaz.
+- **MHC sınıf I kaybı** — MHC sınıf I kaybı tümör hücresinin CD8+ sitotoksik T lenfositlerden saklanarak çoğalmasını kolaylaştıran bir kaçış mekanizmasıdır; mikrometastatik hücrelerin yıllarca bölünmeden sessiz kalmasına (dormansi) ise uygun stromal niş ve anjiyogenez eksikliği ile antitümör immün denetim yol açar.
 - **E-kadherin kaybı** — E-kadherin kaybı, hücreler arası kohezyonu azaltıp ayrılmayı başlatır; tümör hücrelerinin sessiz kalmasını açıklamaz.
 - **PD-L1 ifadesi** — PD-L1 ifadesi, T hücre aktivitesini baskılayan bir kaçış mekanizmasıdır; dormansinin nedeni değildir.
 
@@ -12772,14 +12772,14 @@ Bu basamakların doğru sıralaması hangi seçenekte verilmiştir?
 - **Küçük hücreli akciğer karsinomu** — Küçük hücreli akciğer karsinomu, erken ve sık metastaz yapan tümörlerin örneğidir; nadiren metastaz yapanların tam tersidir.
 - **Bazal hücreli karsinom** — Bazal hücreli karsinom doğru: malign olmasına karşın birçok primer santral sinir sistemi tümörü gibi çok nadiren metastaz yapar.
 - **Güneş ilişkili melanom** — Güneş ilişkili melanom, yüksek mutasyon yükü ve neoantijenden zenginliğiyle anılır; nadiren metastaz yapan tümör örneği değildir.
-- **Sigara ilişkili akciğer kanseri** — Sigara ilişkili akciğer kanseri, yüksek mutasyon yüklü tümör örneğidir; nadir metastaz yapan tümörler arasında sayılmaz.
+- **Sigara ilişkili akciğer kanseri** — Sigara ilişkili akciğer karsinomları erken dönemde lenf düğümü, beyin, kemik ve karaciğere agresif metastaz yapan tümörlerdir; lokal olarak dokuyu yıkmasına karşın neredeyse hiç metastaz yapmayan malign tümör örneği ise derinin bazal hücreli karsinomudur.
 - **Servikal karsinom** — Servikal karsinom, HPV E6/E7 proteinlerinin ifade edildiği tümördür; nadir metastaz örneği olarak verilen tümör değildir.
 
 **Cevap: B** — Bazal hücreli karsinom
 
 **Özet.** Küçük hücreli akciğer karsinomu erken ve sık metastaz yapar; bazal hücreli karsinom ve birçok primer santral sinir sistemi tümörü ise çok nadiren metastaz yapar.
 
-# 20 · Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı
+# Ders 20 (20) · Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı
 
 _34 soru (örnek + çıkmış)_
 
@@ -12791,11 +12791,11 @@ _34 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **IL-10** — Kaşektin adıyla anılan mediyatöre ek olarak kaşeksiye IL-1 ve IL-6 katkıda bulunur. IL-10 bu sorudaki ayrımı sağlamaz.
-- **TGF-β** — TGF-β ile karıştırılabilir: Tümör kökenli TGF-α ise paraneoplastik hiperkalseminin mekanizmalarından biridir.
+- **IL-10** — IL-10, makrofaj aktivasyonunu ve proinflamatuvar sitokin sentezini baskılayan düzenleyici bir sitokindir; kanser kaşeksisinde iştahı azaltıp yağ ve iskelet kası yıkımını başlatan ve 'kaşektin' olarak bilinen temel mediyatör ise TNF'dir.
+- **TGF-β** — TGF-beta hücre dışı matriks sentezini uyaran fibrogenik ve immünsüpresif bir büyüme faktörüdür; kanser kaşeksisinde proteoliz ve lipolizi tetikleyen ve tarihsel olarak kaşektin adıyla tanımlanan ana sitokin ise TNF'dir.
 - **TNF** — TNF doğru: kaşektin olarak bilinir; iştahı baskılar, lipoprotein lipazı inhibe eder ve katabolizmayı artırır.
 - **PTHrP** — PTHrP, tümör kökenli paratiroid hormon ilgili proteindir; kaşeksiye değil, paraneoplastik hiperkalsemiye yol açar.
-- **İnterferon gama** — Kaşeksi yalnız azalmış besin alımına bağlı değildir, bazal metabolizma artmış kalır. İnterferon gama bu sorudaki ayrımı sağlamaz.
+- **İnterferon gama** — İnterferon-gama Th1 ve NK hücrelerinden salınarak makrofajları aktive eden sitokindir; IL-1 ve IL-6 ile birlikte kanser kaşeksisinde bazal metabolizmayı artırıp kas ve yağ dokusu kaybına yol açan temel kaşektin ise TNF'dir.
 
 **Cevap: C** — TNF
 
@@ -12881,7 +12881,7 @@ _34 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Trombositopeni** — Trombositopeni ile karıştırılabilir: Bu tabloda sorun kanama değil, tümör ürünlerinin yarattığı hiperkoagülabilitedir.
+- **Trombositopeni** — Trombositopeni trombosit sayısının azalması olup pıhtılaşmaya değil peteşiyal kanamalara yol açar; pankreas ve mide adenokarsinomlarında gezici venöz tromboza (Trousseau sendromuna) neden olan ise tümörün dolaşıma saldığı prokoagülan müsinler ve doku faktörüdür.
 - **Pıhtılaşmayı aktive eden müsinler** — Pıhtılaşmayı aktive eden müsinler doğru: pankreas ve akciğer karsinomunun bu ürünleri venöz tromboza, yani Trousseau fenomenine yol açar.
 - **İmmün kompleksler** — İmmün kompleksler ve tümör antijenleri, çeşitli kanserlerde görülen paraneoplastik nefrotik sendromun mekanizmasıdır.
 - **Eritropoetin** — Eritropoetin, renal hücreli karsinomda paraneoplastik polisitemiye yol açan etkendir.
@@ -12936,8 +12936,8 @@ _34 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **Lenfoma** — Lenfoma bu boyamayla değil, CD45 pozitifliğiyle lenfoid tümör olarak tanınır.
-- **Sarkom** — Sarkom ile karıştırılabilir: Örneğin Ewing sarkomu, 11;22 translokasyonunun moleküler yöntemlerle saptanmasıyla tanınır.
-- **Melanom** — Melanomun bir alt grubunda moleküler testle BRAF V600E mutasyonu saptanır. Melanom bu sorudaki ayrımı sağlamaz.
+- **Sarkom** — Sarkomlar mezenkimal kökenli malign tümörlerdir ve ara filaman olarak karakteristik biçimde vimentin (kas kökenlilerde desmin) eksprese ederler; immünohistokimyada sitokeratin pozitifliği ise epitel kökenli tümörleri, yani karsinomları gösterir.
+- **Melanom** — Melanom nöral krista kökenli melanositlerin malign tümörüdür ve immünohistokimyada S-100, HMB-45 ve Melan-A pozitifliğiyle tanınır; epitel hücrelerinin ara filamanı olan sitokeratin pozitifliği ise karsinomları işaret eder.
 - **Lösemi** — Lösemi, akış sitometrisinin en sık kullanım alanlarındandır; CD19, CD3 ve CD34 gibi yüzey belirteçleriyle sınıflandırılır.
 - **Karsinom** — Karsinom doğru: parafin kesitte sitokeratine karşı monoklonal antikorla boyanma, tümörün karsinom olduğunu gösterir.
 
@@ -12989,11 +12989,11 @@ _34 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **t(9;22)** — 9;22 translokasyonu ile karıştırılabilir: Kronik miyeloid lösemi BCR-ABL füzyon transkriptlerinin PCR ile saptanmasıyla tanınır ve izlenir.
+- **t(9;22)** — t(9;22) translokasyonu BCR-ABL füzyon genini oluşturarak kronik miyeloid lösemiye ve bazı akut lenfoblastik lösemilere neden olur; Ewing sarkomuna özgü olan ve EWSR1-FLI1 füzyon transkripsiyon faktörünü üreten kromozomal anomali ise t(11;22) translokasyonudur.
 - **t(11;22)** — 11;22 translokasyonu doğru: Ewing sarkomunda EWS–FLI1 füzyon genini oluşturur ve moleküler tanıda kullanılır.
-- **t(8;14)** — 8;14 translokasyonu ile karıştırılabilir: Lenfoid proliferasyonun neoplastik olup olmadığı, immünoglobulin gen düzenlenmesinin PCR ile klonalite analiziyle anlaşılır.
-- **t(14;18)** — Moleküler testler nokta mutasyonları da saptar, örneğin polisitemia verada JAK2 mutasyonunu. 14;18 translokasyonu bu sorudaki ayrımı sağlamaz.
-- **t(15;17)** — 15;17 translokasyonu ile karıştırılabilir: Akut lösemilerde spesifik füzyon genleri minimal kalıntı hastalığın takibinde izlenir.
+- **t(8;14)** — t(8;14) translokasyonu MYC onkogenini immünoglobulin ağır zincir lokusuna taşıyarak Burkitt lenfomaya yol açar; çocuk ve gençlerde kemikte küçük yuvarlak mavi hücreli tümör yapan Ewing sarkomunun karakteristik translokasyonu ise t(11;22)'dir.
+- **t(14;18)** — t(14;18) translokasyonu BCL2 geninin aşırı ekspresyonuna yol açarak foliküler lenfomayı oluşturur; Ewing sarkomu ve primitif nöroektodermal tümör ailesini tanımlayan özgül kromozomal anomali ise t(11;22) translokasyonudur.
+- **t(15;17)** — t(15;17) translokasyonu PML-RARA füzyonu oluşturarak akut promiyelositik lösemiye yol açar; Ewing sarkomunda EWSR1 ile FLI1 genlerini birleştiren tanısal translokasyon ise t(11;22)'dir.
 
 **Cevap: B** — t(11;22)
 
@@ -13026,7 +13026,7 @@ _34 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Myastenia gravis** — Myastenia gravis bronkojenik karsinom ve timomada immünolojik mekanizmayla görülür; en sık üç paraneoplastik sendrom arasında değildir.
-- **Hipoglisemi** — Hipoglisemi fibrosarkom, diğer sarkomlar ve over karsinomunda insülin ya da insülin benzeri maddeyle olur; en sık üç arasında sayılmaz.
+- **Hipoglisemi** — Paraneoplastik hipoglisemi fibrosarkom ve diğer mezenkimal tümörlerin insülin benzeri büyüme faktörü-2 (IGF-2) üretmesiyle gelişen daha seyrek bir tablodur; en sık görülen başlıca paraneoplastik tablolar ise hiperkalsemi, Cushing sendromu ve non-bakteriyel trombotik endokardittir.
 - **Nefrotik sendrom** — Nefrotik sendrom çeşitli kanserlerde tümör antijenleri ve immün komplekslerle gelişir; sık görülen üç sendromdan biri değildir.
 - **Non-bakteriyel trombotik endokardit** — Non-bakteriyel trombotik endokardit doğru: venöz trombozla birlikte hiperkoagülabilitenin bulgusudur; hiperkoagülabilite en sık üç sendromdandır.
 - **Polisitemi** — Polisitemi renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda eritropoetinle gelişir; en sık üç arasında değildir.
@@ -13043,7 +13043,7 @@ _34 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Akciğer neoplazmından kortikotropin salınımı sonucu Cushing sendromu gelişmesi** — Akciğer tümörünün ektopik kortikotropin salgılamasıyla gelişen Cushing sendromu tipik bir paraneoplastik sendromdur; bu yüzden cevap değildir.
+- **Akciğer neoplazmından kortikotropin salınımı sonucu Cushing sendromu gelişmesi** — Küçük hücreli akciğer karsinomunun ektopik ACTH (kortikotropin) salgılayarak Cushing sendromu oluşturması klasik bir paraneoplastik endokrinopatidir; kemik metastazının lokal osteolizle kalsiyumu yükseltmesi ise tümörün doğrudan metastatik yıkımı olduğundan paraneoplastik sendrom sayılmaz.
 - **Kemik dışı primer kaynaktan metastazın indüklediği kemik yıkımı sonucu gelişen hiperkalsemi** — Metastazın yaptığı kemik yıkımıyla gelişen hiperkalsemi doğru cevaptır: tümörün uzak yayılımıyla açıklandığı için paraneoplastik sayılmaz.
 - **Ekstraosseöz neoplazm kaynaklı hümoral madde üretimi sonucu gelişen hiperkalsemi** — Kemik dışı bir tümörün PTHrP gibi hümoral madde üretmesiyle gelişen hiperkalsemi, en sık paraneoplastik sendromdur.
 - **Tümör antijenlerine karşı oluşmuş ve nöronal hücre antijenleriyle çapraz reaksiyon veren antikorlar sonucu gelişen nöromiyopati** — Tümör antijenlerine karşı oluşan antikorların sinir hücreleriyle çapraz reaksiyonu, immünolojik nörolojik paraneoplastik sendromlara örnektir.
@@ -13083,7 +13083,7 @@ _34 soru (örnek + çıkmış)_
 - **İyi diferansiye benign tümörler** — İyi diferansiye benign tümörler doğru: endokrin bez tümörlerinde hormon üretimi bu tümörlerde daha olasıdır.
 - **Yüksek dereceli karsinomlar** — Yüksek dereceli karsinomlar az diferansiye ya da anaplastiktir; hormon üretiminin daha olası olduğu grup bunlar değildir.
 - **Ülsere yüzeyel tümörler** — Ülsere yüzeyel tümörler kanama, anemi ve sekonder bakteriyel enfeksiyonla konağı etkiler; hormon üretimiyle ilişkili grup değildir.
-- **Az diferansiye sarkomlar** — Hormon üretimi diferansiyasyonu iyi korunmuş benign tümörlerde daha olasıdır. Az diferansiye sarkomlar bu sorudaki ayrımı sağlamaz.
+- **Az diferansiye sarkomlar** — Az diferansiye sarkomlar hem mezenkimal kökenlidir hem de ileri anaplazi nedeniyle özgül işlevsel sentez yeteneğinden yoksundur; endokrin bezlerde fonksiyonel hormon üretimi, normal hücre mimarisini ve enzim donanımını koruyan iyi diferansiye benign adenomlarda çok daha olasıdır.
 
 **Cevap: B** — İyi diferansiye benign tümörler
 
@@ -13097,7 +13097,7 @@ _34 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Mitoz sayısı** — Mitoz sayısı derecelendirmede değerlendirilen bir unsurdur; lokal etkilerin klinik ciddiyetini belirleyen faktör olarak geçmez.
+- **Mitoz sayısı** — Mitoz sayısı tümörün proliferasyon hızını ve histolojik derecesini (grade) belirleyen mikroskopik bir ölçüttür; benign ya da malign bir tümörün lokal bası, tıkanıklık veya herniasyon gibi hayatı tehdit eden klinik etkilerinde en kritik belirleyici ise tümörün anatomik yerleşim yeridir.
 - **Diferansiyasyon derecesi** — Diferansiyasyon derecesi tümörün biyolojik agresifliğini kaba tahmin etmede kullanılır; lokal bası etkisini belirlemez.
 - **Serum belirteç düzeyi** — Serum belirteç düzeyi tedavi yanıtını izlemede değerlidir; lokal etkilerin ciddiyetiyle ilgili değildir.
 - **Tümörün yerleşim yeri** — Tümörün yerleşim yeri doğru: küçük bir hipofiz adenomu hipopituitarizm, böbrek arterindeki küçük leiomyom iskemi ve hipertansiyon yapabilir.
@@ -13116,7 +13116,7 @@ _34 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **IL-1 ve IL-6** — IL-1 ve IL-6 doğru: TNF ile birlikte kaşeksiye katılan diğer sitokinlerdir; sonuç katabolizma artışı ile yağ ve kas kaybıdır.
-- **TGF-α ve PTHrP** — TGF-α ve PTHrP, paraneoplastik hiperkalseminin mekanizmalarıdır; kaşeksi sitokinleri olarak geçmez.
+- **TGF-α ve PTHrP** — TGF-alfa ve paratiroid hormonu ilişkili protein (PTHrP), osteoklastları aktive ederek humoral malignite hiperkalsemisine yol açan mediyatörlerdir; kanser kaşeksisinde TNF ile birlikte iştahsızlık ve katabolizmayı yürüten sitokinler ise IL-1 ve IL-6'dır.
 - **Eritropoetin ve ADH** — Eritropoetin polisitemiye, ADH ise uygunsuz antidiüretik hormon salınımı sendromuna yol açan paraneoplastik etkenlerdir.
 - **EGF ve TGF-α** — EGF, akantozis nigrikansın mekanizmasında yer alan büyüme faktörüdür; TGF-α ise hiperkalsemiye katkı verir.
 - **ACTH ve insülin** — ACTH Cushing sendromuna, insülin veya insülin benzeri madde hipoglisemiye yol açar; bunlar kaşeksi mediyatörü değildir.
@@ -13151,7 +13151,7 @@ _34 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Hiperinsülinizm** — Hiperinsülinizm, pankreas beta hücre tümörlerinde hipoglisemi ve koma riski yaratır; bağışıklığı baskılayan neden olarak geçmez.
+- **Hiperinsülinizm** — Hiperinsülinizm pankreasın fonksiyonel beta hücreli adenomlarında (insülinoma) epizodik hipoglisemi ataklarına neden olur; ilerlemiş geniş tümör yükünde konak bağışıklığını zayıflatan temel etkenler ise kemik iliği invazyonu, kemoterapi ve ağır protein–kalori yetersizliğidir.
 - **Aldosteron fazlalığı** — Aldosteron fazlalığı, adrenal korteks adenom veya karsinomunda hipertansiyon ve hipokalemi yapar; bağışıklık baskısıyla ilgili değildir.
 - **Yüzey ülserasyonu** — Yüzey ülserasyonu kanama, anemi ve sekonder bakteriyel enfeksiyona yol açar; bağışıklık baskısının nedeni değil, ayrı bir lokal etkidir.
 - **Protein–kalori yetersizliği** — Protein–kalori yetersizliği doğru: sitokin dengesindeki değişiklik ve tedaviye bağlı hücre kaybıyla birlikte bağışıklığı baskılar.
@@ -13395,7 +13395,7 @@ _34 soru (örnek + çıkmış)_
 
 **Özet.** Uyumsuzluk onarımı veya DNA polimeraz proofreading kusurlu tümörlerde çok neoantijen bulunur; bunlar PD-1, PD-L1 ve CTLA-4 inhibitörlerine daha iyi yanıt verir.
 
-# 21 · Glomerüler Hastalıklar: Nefrotik Sendrom
+# Ders 21 (21) · Glomerüler Hastalıklar: Nefrotik Sendrom
 
 _38 soru (örnek + çıkmış)_
 
@@ -13426,8 +13426,8 @@ _38 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Plazma kolloid ozmotik basıncının azalması** — Plazma kolloid ozmotik basıncının azalması doğru: hipoalbuminemi bu basıncı düşürür ve sıvı ekstravasküler alana geçer.
-- **Lenfatik obstrüksiyon** — Nefrotik ödemin kökü idrarla kaybedilen albümindir. Lenfatik obstrüksiyon bu sorudaki ayrımı sağlamaz.
-- **Kapiller hidrostatik basınç artışı** — Kapiller hidrostatik basınç artışı ile karıştırılabilir: Nefrotik ödemde belirleyici olan, albümin kaybıyla plazmanın sıvıyı tutma gücünün düşmesidir.
+- **Lenfatik obstrüksiyon** — Lenfatik obstrüksiyon tümör infiltrasyonu veya cerrahi sonrası bölgesel lenfödem yapar; nefrotik sendromda yaygın ödemin temel mekanizması ise günde 3,5 gramı aşan ağır albüminüri sonucu plazma kolloid ozmotik basıncının düşmesi ve ikincil sodyum-su tutulumudur.
+- **Kapiller hidrostatik basınç artışı** — Birincil kapiller hidrostatik basınç artışı konjestif kalp yetmezliğinde görülen ödemin ana mekanizmasıdır; nefrotik sendromda ise glomerüler filtrasyon bariyerinin bozulmasıyla kaybedilen albümin plazma kolloid ozmotik basıncını düşürerek sıvının interstisyuma kaçmasına yol açar.
 - **Hipertansiyon** — Hipertansiyon daha çok nefritik sendromun bulgusudur; nefrotik sendromda ödemin temel nedeni değildir.
 - **Venöz tromboz** — Venöz tromboz nefrotik sendromun komplikasyonudur, çünkü tromboemboli eğilimi artar; yaygın ödemin temel mekanizması değildir.
 
@@ -13591,7 +13591,7 @@ _38 soru (örnek + çıkmış)_
 - **C3 nefritik faktör** — C3 nefritik faktör doğru: C3 konvertazını stabilize ederek alternatif kompleman yolunun kontrolsüz aktivasyonuna yol açar.
 - **Anti-GBM** — Anti-GBM antikorları bazal membran antijenlerine bağlanır ve immünfloresanda doğrusal boyanma yapar; C3 glomerulopatisinde yer almaz.
 - **Anti-nefrin** — Anti-nefrin, minimal değişiklik hastalığında yarık diyafram proteinine karşı olası bir antikor olarak tartışılır; konvertazla ilgisi yoktur.
-- **Anti-C1q** — C1q klasik yol bileşenidir ve C3 glomerulopatisinde C1q ile C4 genellikle bulunmaz. Anti-C1q bu sorudaki ayrımı sağlamaz.
+- **Anti-C1q** — Anti-C1q antikorları sistemik lupus eritematozus ve hipokomplementemik ürtikeryal vaskülitte klasik kompleman yolunu etkiler; C3 glomerulopatisinde alternatif yolun C3 konvertazına (C3bBb) bağlanıp onu faktör H yıkımından koruyarak sürekli kompleman tüketimi yapan otoantikor ise C3 nefritik faktördür.
 
 **Cevap: B** — C3 nefritik faktör
 
@@ -13623,11 +13623,11 @@ _38 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Çocuklarda nefrotik sendromun en sık nedenidir.** — Çocuklarda nefrotik sendromun en sık nedeni olması geçerli bir ifadedir; çocukta olguların yaklaşık %65'ini oluşturur, bu yüzden cevap değildir.
+- **Çocuklarda nefrotik sendromun en sık nedenidir.** — Minimal değişiklik hastalığı 1–7 yaş arası çocuklarda görülen nefrotik sendrom olgularının yaklaşık %65'ini oluşturarak çocukluk çağının en sık nedeni olma özelliğini taşır; immünfloresanda IgG ve C3 birikimi görülmesi ise bu hastalığa değil membranöz nefropati gibi immün kompleks hastalıklarına aittir.
 - **Işık mikroskobunda glomerüller normal görünür.** — Işık mikroskobunda glomerüllerin normal görünmesi geçerli bir ifadedir; hastalık adını bu minimal değişiklikten alır.
 - **İmmünfloresan incelemede kapiller duvar boyunca granüler IgG ve C3 birikimi izlenir.** — Granüler IgG ve C3 birikimi ifadesi yanlıştır, bu yüzden doğru cevaptır; minimal değişiklik hastalığında immünfloresanda immünglobulin veya kompleman birikimi yoktur.
 - **Elektron mikroskopide podosit ayaksı çıkıntılarında yaygın silinme görülür.** — Elektron mikroskopide podosit ayak uzantılarının yaygın silinmesi bu hastalığın temel bulgusudur; ifade geçerlidir.
-- **Çocuklarda olguların büyük çoğunluğu kortikosteroid tedavisine yanıt verir.** — Çocuklarda olguların %90'dan fazlası kortikosteroide yanıt verir; ifade geçerli olduğundan cevap değildir.
+- **Çocuklarda olguların büyük çoğunluğu kortikosteroid tedavisine yanıt verir.** — Çocukluk çağı minimal değişiklik hastalığında olguların %90'ından fazlasının kortikosteroid tedavisiyle tam remisyona girmesi hastalığın en karakteristik klinik özelliğidir; yanlış olan ifade immünfloresanda granüler IgG ve C3 birikimi izlendiğidir, çünkü bu hastalıkta immünfloresan inceleme negatiftir.
 
 **Cevap: C** — İmmünfloresan incelemede kapiller duvar boyunca granüler IgG ve C3 birikimi izlenir.
 
@@ -13644,7 +13644,7 @@ _38 soru (örnek + çıkmış)_
 - **Podositlerde silinmiş ayaksı uzantılar** — Podositlerde ayak uzantılarının silinmesi minimal değişiklik hastalığı ve FSGS'de belirgindir; MPGN'ye özgü patern değildir.
 - **Segmental tutulumlu sklerotik alanlar** — Segmental tutulumlu sklerotik alanlar fokal segmental glomerulosklerozun paternidir.
 - **Subepitelyal alanda hörgüç benzeri immünglobulin ve kompleman birikimi** — Subepitelyal alanda immünglobulin ve kompleman birikimi membranöz nefropatide görülür; MPGN tip I'de birikintiler subendotelyal ve mezangiyaldir.
-- **Glomerül periferinde yerleşmiş küresel matriks nodülleri** — Nodüler glomeruloskleroz diyabetik nefropatinin Kimmelstiel–Wilson lezyonudur. Küresel matriks nodülleri bu sorudaki ayrımı sağlamaz.
+- **Glomerül periferinde yerleşmiş küresel matriks nodülleri** — Glomerül periferinde yerleşmiş PAS pozitif küresel matriks nodülleri diyabetik nefropatinin karakteristik Kimmelstiel–Wilson lezyonudur; membranoproliferatif glomerülonefritte mezangiyal hücre uzantılarının bazal membran arasına girmesiyle oluşan spesifik görünüm ise çift kontür (tren rayı) paternidir.
 - **Çift kontür ya da tren rayı görünümü** — Çift kontür, yani tren rayı görünümü doğru: mezangiyal hücrelerin GBM içine interpozisyonu ve matriks birikimi kılcal duvarda çift kontur oluşturur.
 
 **Cevap: E** — Çift kontür ya da tren rayı görünümü
@@ -13659,7 +13659,7 @@ _38 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Fokal segmental glomerüloskleroz** — Fokal segmental glomeruloskleroz, özellikle erişkinlerde nefrotik sendromun sık primer nedenidir; bu yüzden cevap değildir.
+- **Fokal segmental glomerüloskleroz** — Fokal segmental glomerüloskleroz (FSGS), podosit hasarı ve seçici olmayan ağır proteinüriyle seyreden, erişkinlerde nefrotik sendromun en sık birincil nedenlerinden biridir; akut postenfeksiyöz glomerülonefrit ise nefrotik değil, hematüri ve hipertansiyonla giden akut nefritik sendromun prototipidir.
 - **Minimal değişiklik hastalığı** — Minimal değişiklik hastalığı, çocuklarda nefrotik sendromun en sık primer glomerüler nedenidir.
 - **Membranöz nefropati** — Membranöz nefropati, GBM boyunca subepitelyal immün kompleks birikimiyle nefrotik sendrom yapan primer lezyondur.
 - **Membranoproliferatif glomerülonefrit** — Membranoproliferatif glomerulonefrit, nefrotik bulguların nefritik bulgularla karıştığı primer glomerüler hastalıklar arasındadır.
@@ -13700,9 +13700,9 @@ Bunlardan hangisi/hangileri nefrotik sendromdaki proteinüriye sebep olan duruml
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Diyabetik nefropati** — Diyabetik nefropati nefrotik sendromun sekonder nedenidir; primer glomerüler hastalık sayılmaz, bu yüzden cevap değildir.
+- **Diyabetik nefropati** — Diyabetik nefropati erişkinlerde nefrotik düzeyde proteinürinin en sık sistemik (sekonder) nedenidir; böbreğin kendisinden kaynaklanan primer glomerülopatiler arasında erişkinde en sık nefrotik sendrom nedeni ise fokal segmental glomerülosklerozdur (veya popülasyona göre membranöz nefropatidir).
 - **Minimal değişiklik hastalığı** — Minimal değişiklik hastalığı çocuklarda en sık nedendir; erişkinde nefrotik sendromların yaklaşık %10'unu oluşturur.
-- **Goodpasture sendromu** — Erişkinde en sık primer neden FSGS'dir, onu membranöz nefropati izler. Goodpasture sendromu bu sorudaki ayrımı sağlamaz.
+- **Goodpasture sendromu** — Goodpasture sendromu tip IV kollajenin alfa-3 zincirine karşı gelişen anti-GBM antikorlarıyla hızlı ilerleyen nefritik sendrom ve akciğer kanaması yapar; erişkinlerde primer nefrotik sendromun en sık nedeni ise fokal segmental glomerülosklerozdur.
 - **Fokal segmental glomerüloskleroz** — Fokal segmental glomeruloskleroz doğru: erişkin nefrotik sendromlarının yaklaşık %35'iyle en sık primer nedendir; membranöz nefropati yaklaşık %30 ile onu izler.
 - **Poststreptokoksik glomerülonefrit** — Poststreptokoksik glomerulonefrit, nefrotik değil nefritik sendrom yapan postenfeksiyöz glomerulonefrittir.
 
@@ -13774,7 +13774,7 @@ Bunlardan hangisi/hangileri nefrotik sendromdaki proteinüriye sebep olan duruml
 
 - **3,5 g/dL altı** — 3,5 değeri erişkinde ağır proteinüri eşiğidir, yani günde 3,5 gram ya da daha fazla protein kaybı; albümin sınırı değildir.
 - **3 g/dL altı** — 3 g/dL altı doğru: nefrotik sendromda hipoalbüminemi serum albümininin 3 g/dL altına düşmesidir.
-- **2 g/dL altı** — Hipoalbümineminin tanımlayıcı sınırı daha yüksektir. 2 g/dL altı bu sorudaki ayrımı sağlamaz.
+- **2 g/dL altı** — Serum albümininin 2 g/dL altına inmesi ağır nefrotik tablolarda görülebilse de tanı için şart olan eşik değer değildir; nefrotik sendromda hipoalbüminemiyi tanımlayan standart tanısal sınır serum albümin düzeyinin 3 g/dL'nin altına düşmesidir.
 - **4 g/dL altı** — 4 g/dL altı tanımda kullanılan değer değildir; albümin sınırı 3, proteinüri sınırı ise günde 3,5 gramdır.
 - **1 g/dL altı** — 1 g/dL altı tanımda geçmeyen, çok düşük bir değerdir; nefrotik hipoalbüminemi daha yüksek bir sınırla tanımlanır.
 
@@ -13902,7 +13902,7 @@ Bunlardan hangisi/hangileri nefrotik sendromdaki proteinüriye sebep olan duruml
 - **HIV ilişkili nefropati** — HIV ilişkili nefropati sekonder FSGS'nin enfeksiyon grubundadır; adaptasyon grubunda sayılmaz.
 - **Eroin kullanımı** — Eroin, bazı terapötik ajanlarla birlikte sekonder FSGS'nin ilaç grubunda yer alır.
 - **Nefrin gen mutasyonu** — Nefrin gen mutasyonu, podosit proteinlerini kodlayan genlerle ilgili genetik FSGS nedenlerindendir.
-- **Kronik hepatit B** — Kronik hepatit B, sekonder membranöz nefropati ve MPGN nedenidir; sekonder FSGS grupları arasında sayılmaz.
+- **Kronik hepatit B** — Kronik hepatit B enfeksiyonu dolaşan antijen-antikor kompleksleri aracılığıyla sekonder membranöz nefropati ve membranoproliferatif glomerülonefrite yol açar; aşırı vücut kitlesine bağlı glomerüler hiperfiltrasyon ve nefron adaptasyonuyla sekonder FSGS oluşturan durum ise morbid obezitedir.
 
 **Cevap: A** — Obezite
 
@@ -14088,7 +14088,7 @@ Bunlardan hangisi/hangileri nefrotik sendromdaki proteinüriye sebep olan duruml
 
 **Özet.** Nefrotik sendrom tanısında proteinüri düzeyi ve seçiciliği, böbrek fonksiyon testleri, serolojik incelemeler ve sınıflama ile prognoz için böbrek biyopsisi kullanılır.
 
-# 22 · Glomerüler Hastalıklar: Nefritik Sendrom
+# Ders 22 (22) · Glomerüler Hastalıklar: Nefritik Sendrom
 
 _39 soru (örnek + çıkmış)_
 
@@ -14101,10 +14101,10 @@ _39 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **Renin-anjiyotensin aktivasyonu** — Renin-anjiyotensin aktivasyonu doğru: GFR azalınca renin salınımı artar, vazokonstriksiyon ve sodyum-su retansiyonu hipertansiyon yapar.
-- **Hipoalbuminemi** — Hipoalbuminemi ile karıştırılabilir: Nefritik sendromda proteinüri genellikle subnefrotik düzeyde kalır ve hipertansiyonu açıklamaz.
-- **Katekolamin fazlalığı** — Nefritik sendromda hipertansiyona sodyum ve su retansiyonu eşlik eder, kökeni böbrektir. Katekolamin fazlalığı bu sorudaki ayrımı sağlamaz.
-- **Tiroid hormon artışı** — Tiroid hormon artışı ile karıştırılabilir: Nefritik sendromda hipertansiyon, oligüri ve azotemiyle birlikte glomerüler hasarın sonucudur.
-- **Hiperlipidemi** — Nefritik sendromun temel bileşenleri hematüri, subnefrotik proteinüri, azotemi, oligüri ve hipertansiyondur. Hiperlipidemi bu sorudaki ayrımı sağlamaz.
+- **Hipoalbuminemi** — Hipoalbuminemi nefrotik sendromda ağır proteinüriye bağlı gelişen ve plazma onkotik basıncını düşürerek ödeme yol açan bulgudur; nefritik sendromda hipertansiyonun temel mekanizması ise azalan GFR nedeniyle devreye giren renin-anjiyotensin-aldosteron aktivasyonu ve sodyum-su tutulumudur.
+- **Katekolamin fazlalığı** — Katekolamin fazlalığı adrenal medulla tümörü olan feokromositomada paroksismal hipertansiyon ataklarına yol açar; akut nefritik sendromda hipertansiyon ise glomerüler inflamasyon ve filtrasyon azalmasına bağlı renin-anjiyotensin aktivasyonu ve sıvı tutulumuyla gelişir.
+- **Tiroid hormon artışı** — Tiroid hormon artışı (hipertiroidi) kalp debisini artırarak sistolik kan basıncını yükseltebilen endokrin bir tablodur; nefritik sendromdaki hipertansiyon ise böbrek perfüzyonunun ve filtrasyonun düşmesiyle tetiklenen renin-anjiyotensin sistemi ve intravasküler hacim artışından kaynaklanır.
+- **Hiperlipidemi** — Hiperlipidemi nefrotik sendromda hipoalbüminemiye ikincil karaciğer lipoprotein sentez artışıyla gelişir; nefritik sendromda görülen hipertansiyonun nedeni ise glomerüler hasar sonucu su-tuz tutulumu ve renin-anjiyotensin aktivasyonudur.
 
 **Cevap: A** — Renin-anjiyotensin aktivasyonu
 
@@ -14158,7 +14158,7 @@ _39 soru (örnek + çıkmış)_
 - **ANCA pozitifliği** — ANCA pozitifliği pauci-immün hızlı ilerleyen glomerulonefritin serolojik bulgusudur, PR3 ya da MPO tipinde olabilir.
 - **Anti-GBM pozitifliği** — Anti-GBM pozitifliği Goodpasture hastalığında görülür; immünfloresanda GBM boyunca lineer IgG birikimi yapar.
 - **Serum C3 düşüklüğü** — Serum C3 düşüklüğü doğru: streptokok antijenleriyle oluşan immün kompleksler klasik yolu aktive eder ve C3 tüketilir.
-- **ADAMTS13 eksikliği** — ADAMTS13 eksikliği ile karıştırılabilir: Poststreptokokal olgularda yükselen serolojik bulgu anti-streptolizin O titresidir.
+- **ADAMTS13 eksikliği** — ADAMTS13 eksikliği von Willebrand faktör multimerlerinin parçalanamamasına bağlı gelişen trombotik trombositopenik purpuranın (TTP) mekanizmasıdır; akut poststreptokokal glomerülonefritte ise immün komplekslerin komplemanı tüketmesiyle serum C3 düzeyi düşer ve ASO titresi yükselir.
 
 **Cevap: D** — Serum C3 düşüklüğü
 
@@ -14174,7 +14174,7 @@ _39 soru (örnek + çıkmış)_
 
 - **Tel halka lezyonu** — Tel halka lezyonu sınıf IV lupus nefritinde subendotelyal immün kompleks birikiminin ışık mikroskobu görünümüdür.
 - **Spike oluşumu** — Spike oluşumu membranöz nefropatide subepitelyal depozitler arasında bazal membranın diken benzeri uzantılarıdır.
-- **Nodüler skleroz** — Hızlı ilerleyen glomerulonefritin tanımlayıcı lezyonu Bowman boşluğundaki ekstrakapiller proliferasyondur. Nodüler skleroz bu sorudaki ayrımı sağlamaz.
+- **Nodüler skleroz** — Nodüler mezangiyal skleroz (Kimmelstiel–Wilson lezyonu) diyabetik nefropatinin karakteristik ışık mikroskobu bulgusudur; hızlı ilerleyen glomerülonefritin (RPGN) tanımlayıcı morfolojik özelliği ise Bowman boşluğunu dolduran paryetal epitel ve makrofaj kaynaklı hilal (kresent) oluşumudur.
 - **Mezangiyal IgA** — Mezangiyal IgA birikimi IgA nefropatisinin immünfloresan bulgusudur; bu hastalık tekrarlayan hematürinin en sık nedenidir.
 - **Bowman boşluğunda hilal** — Bowman boşluğunda hilal doğru: parietal epitel proliferasyonu ve monosit göçüyle oluşan hilal, hızlı ilerleyen glomerulonefritin ayırıcı özelliğidir.
 
@@ -14226,10 +14226,10 @@ _39 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Hasta cinsiyeti** — Hasta cinsiyeti ile karıştırılabilir: Prognozu morfolojik yaygınlık ve tanı anındaki böbrek fonksiyonu belirler.
+- **Hasta cinsiyeti** — Hasta cinsiyeti hızlı ilerleyen glomerülonefritte böbrek sağkalımını belirleyen ana faktör değildir; RPGN'de prognozu ve diyaliz ihtiyacını en doğrudan belirleyen ölçüt tanı anında hilal (kresent) içeren glomerüllerin yüzdesi ve başlangıç serum kreatinin düzeyidir.
 - **Hilal içeren glomerül yüzdesi** — Hilal içeren glomerül yüzdesi doğru: hilalli glomerüller %80'in altındaysa prognoz daha iyidir.
 - **ASO titresi** — ASO titresi poststreptokokal GN'yi gösteren serolojik bulgudur; hızlı ilerleyen GN'de prognozu belirlemez.
-- **Serum lipid düzeyi** — Tedavi edilmeyen hastalık haftalar ile aylar içinde son dönem böbrek yetmezliğine ilerler. Serum lipid düzeyi bu sorudaki ayrımı sağlamaz.
+- **Serum lipid düzeyi** — Serum lipid düzeyi nefrotik sendromda kardiyovasküler riskle ilişkilidir ancak RPGN seyrini belirlemez; hızlı ilerleyen glomerülonefritte böbrek fonksiyonunun kurtarılıp kurtarılamayacağını belirleyen temel morfolojik faktör hilal içeren glomerül yüzdesidir.
 - **Hematüri tipi** — Hematüri tipi prognoz belirleyicisi değildir; hızlı ilerleyen GN şiddetli oligüri ve hızla artan azotemiyle seyreder.
 
 **Cevap: B** — Hilal içeren glomerül yüzdesi
@@ -14264,8 +14264,8 @@ _39 soru (örnek + çıkmış)_
 
 - **Subepitelyal** — Subepitelyal birikim sınıf V membranöz lupus nefritinde kılcal duvar kalınlaşması yapar; tel halka görünümü vermez.
 - **Mezangiyal** — Mezangiyal birikim sınıf I ve sınıf II lupus nefritinin bulgusudur; ışık mikroskobunda tel halka oluşturmaz.
-- **İntramembranöz** — İntramembranöz birikim ile karıştırılabilir: GBM içinde bant tarzı birikinti yoğun depo hastalığında görülür.
-- **Tübüler** — Tel halka glomerüler kılcal halkada oluşan bir lezyondur. Tübüler birikim bu sorudaki ayrımı sağlamaz.
+- **İntramembranöz** — İntramembranöz yoğun birikim glomerüler bazal membranın lamina densası içinde elektron yoğun şerit oluşmasıyla karakterize yoğun depo hastalığında (tip II MPGN) görülür; sınıf IV lupus nefritinde kapiller duvarı kalınlaştırıp 'tel halka' görünümü veren birikim ise subendotelyaldir.
+- **Tübüler** — Tübüler bazal membran birikimleri interstisyel nefrit veya Sjögren sendromu gibi tablolarda izlenir; difüz proliferatif lupus nefritinde glomerül kapiller halkalarının ışık mikroskobunda sert ve kalın 'tel halka' şeklinde görünmesine yol açan ise geniş subendotelyal immün kompleks birikimleridir.
 - **Subendotelyal** — Subendotelyal birikim doğru: sınıf IV lupus nefritinde yaygın subendotelyal immün kompleksler kılcal duvarda tel halka kalınlaşması yapar.
 
 **Cevap: E** — Subendotelyal
@@ -14301,7 +14301,7 @@ _39 soru (örnek + çıkmış)_
 - **PLA2R antikorları** — PLA2R antikorları primer membranöz nefropatinin çoğunda görülür; in situ immün kompleks oluşumuna yol açar.
 - **Tip IV kollajen mutasyonu** — Tip IV kollajen mutasyonu Alport sendromunun temelidir; hastalık çoğunlukla X'e bağlı kalıtılır.
 - **Galaktoz eksik IgA üretimi** — Galaktoz eksik IgA üretimi doğru: yetersiz glikozile IgA, IgG ve IgA otoantikorlarının hedefi olur; oluşan kompleksler mezangiumda birikir.
-- **ADAMTS13 eksikliği** — IgA nefropatisinde kompleman aktivasyonunun alternatif ve lektin yollarıyla olduğu düşünülür, C1q ve C4 genelde yoktur. ADAMTS13 eksikliği bu sorudaki ayrımı sağlamaz.
+- **ADAMTS13 eksikliği** — ADAMTS13 metaloproteaz eksikliği trombotik trombositopenik purpurada mikrovasküler trombosit trombüslerine yol açar; IgA nefropatisinin temel patogenezi ise menteşe bölgesinde galaktoz eksikliği olan anormal IgA1 moleküllerinin üretilmesi ve bunlara karşı gelişen otoantikorlarla mezangiumda birikmesidir.
 - **Streptokok antijeni** — Streptokok antijeni poststreptokokal GN'nin tetikleyicisidir; spesifik antikorlarla kompleks oluşturup klasik yolu aktive eder.
 
 **Cevap: C** — Galaktoz eksik IgA üretimi
@@ -14370,8 +14370,8 @@ _39 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **İmmün kompleksler glomerülde birikir.** — İmmün komplekslerin glomerülde birikmesi doğru bir ifadedir; postenfeksiyöz GN glomerüllerde immün kompleks birikimiyle gelişir, bu yüzden cevap değildir.
-- **En sık beta-hemolitik streptokokların nefritojenik suşları ile ilişkilidir.** — Nefritojenik A grubu β-hemolitik streptokok suşlarıyla ilişki bu hastalığın klasik nedenidir; ifade doğru olduğu için cevap değildir.
+- **İmmün kompleksler glomerülde birikir.** — Akut poststreptokokal glomerülonefrit bir tip III aşırı duyarlılık hastalığıdır ve streptokok antijenleriyle oluşan immün komplekslerin glomerülde subepitelyal hörgüçler halinde birikmesi hastalığın gerçek patogenetik mekanizmasıdır.
+- **En sık beta-hemolitik streptokokların nefritojenik suşları ile ilişkilidir.** — Farenjit veya impetigo sonrası nefritojenik A grubu beta-hemolitik streptokok suşlarıyla (tip 12, 4, 1) gelişmesi akut poststreptokokal glomerülonefritin klasik özelliğidir; bu hastalıkta kompleman hem klasik hem alternatif yolla aktive olur.
 - **Primer olarak alternatif kompleman yolağını aktive eder.** — Alternatif yolu aktive ettiği ifadesi yanlıştır; poststreptokokal GN'de kompleman klasik yolla aktive olur ve C3 tüketilir, bu yüzden doğru cevaptır.
 - **Granüler tarzda kompleman birikimi mevcuttur.** — Granüler kompleman birikimi bu hastalıkta beklenir; immünfloresanda kılcal duvar ve mezangiumda granüler IgG ve C3 görülür.
 - **İn situ ya da dolaşan immün kompleks birikimi olabilir.** — İn situ ya da dolaşan kompleks birikimi bu hastalık için geçerlidir; antijenler dolaşımda olabilir ya da glomerüle yerleşmiş, yani planted olabilir.
@@ -14389,7 +14389,7 @@ _39 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **Alport sendromu** — Alport sendromu doğru: tip IV kollajen genlerindeki mutasyonla gelişen kalıtsal nefrittir, en sık X'e bağlı COL4A5 mutasyonudur.
-- **Minimal değişiklik hastalığı** — Minimal değişiklik hastalığının nedeni bilinmez ve podosit hasarıyla nefrotik sendrom yapar; kalıtsal nefritler arasında sayılmaz.
+- **Minimal değişiklik hastalığı** — Minimal değişiklik hastalığı T hücre sitokinlerine bağlı edinsel podosit ayaksı çıkıntı silinmesiyle giden, kalıtsal olmayan bir nefrotik sendrom nedenidir; tip IV kollajen gen (COL4A5, COL4A3, COL4A4) mutasyonlarıyla seyreden klasik herediter nefrit ise Alport sendromudur.
 - **Fokal segmental glomerüloskleroz** — Fokal segmental glomeruloskleroz, nedeni bilinmeyen ve azalmış fonksiyonel böbrek kitlesine adaptif yanıtla ilişkili olabilen bir nefrotik sendrom nedenidir.
 - **Membranoproliferatif glomerülonefrit** — Membranoproliferatif glomerülonefrit immün kompleks aracılı bir hastalıktır; GBM'de bölünmeyle tram-track görünümü verir.
 - **Membranöz nefropati** — Membranöz nefropati in situ immün kompleks oluşumuyla gelişir; primer olguların çoğunda PLA2R antijenine karşı antikor vardır.
@@ -14406,7 +14406,7 @@ _39 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Kimmelstiel-Wilson lezyonu (nodüler mezangiyal skleroz)** — Hızlı ilerleyen GN'nin morfolojik ayırıcı özelliği Bowman boşluğundaki hilal oluşumudur. Kimmelstiel-Wilson lezyonu bu sorudaki ayrımı sağlamaz.
+- **Kimmelstiel-Wilson lezyonu (nodüler mezangiyal skleroz)** — Kimmelstiel–Wilson lezyonu uzun süreli diyabetik nefropatide gelişen kronik nodüler mezangiyal sklerozdur; hızlı ilerleyen glomerülonefritte (RPGN) kılcal yumak yırtılması ve fibrin sızıntısıyla gelişip hızlı böbrek yetmezliğini gösteren bulgu ise Bowman kapsülü içinde yarım ay (kresent) şeklinde paryetal epitel proliferasyonudur.
 - **Bowman kapsülü içinde yarım ay (kresent) şeklinde parietal epitel proliferasyonu** — Kresent şeklinde parietal epitel proliferasyonu doğru: hilal, parietal epitel çoğalması ve monosit göçüyle oluşur ve hızlı ilerleyen GN'yi tanımlar.
 - **Diffüz glomerüloskleroz** — Diffüz glomerüloskleroz ilerlemiş, sklerozan dönemi gösterir; lupusta glomerüllerin %90 veya fazlasının sklerotik olması son dönem böbrek hastalığını temsil eder.
 - **Glomerüler bazal membran kalınlaşması** — Glomerüler bazal membran kalınlaşması membranöz nefropatide diffüz kapiller duvar kalınlaşması olarak görülür; nefrotik sendromla ilişkilidir.
@@ -14750,9 +14750,9 @@ _39 soru (örnek + çıkmış)_
 
 - **Tip IV kollajen α5** — Tip IV kollajen α5 zinciri, yani COL4A5, Alport sendromunun en sık olan X'e bağlı formunda mutasyonludur.
 - **Tip IV kollajen α3 veya α4** — Tip IV kollajen α3 veya α4 doğru: otozomal resesif ve dominant formlarda bu zincirlerin genleri mutasyonludur.
-- **Tip I kollajen** — Tip I kollajen ile karıştırılabilir: Kalıtsal nefritler glomerüler bazal membranın tip IV kollajen bozukluklarıdır.
+- **Tip I kollajen** — Tip I kollajen kemik, tendon ve dermiste bulunan fibriler kollajendir ve mutasyonu osteogenezis imperfektaya yol açar; Alport sendromunda ise glomerüler bazal membran, lens ve kokleada yer alan ağsı tip IV kollajenin X'e bağlı formda alfa-5, otozomal formlarda alfa-3 veya alfa-4 zincirleri kusurludur.
 - **PLA2R** — PLA2R, membranöz nefropatide antikorların hedef aldığı antijendir; kalıtsal değildir.
-- **Tip IV kollajen α1** — Tip IV kollajen α1 ile karıştırılabilir: Alport formlarında bozulan zincirler α5, α3 ve α4'tür.
+- **Tip IV kollajen α1** — Tip IV kollajenin alfa-1 ve alfa-2 zincirleri tüm bazal membranlarda yaygın bulunur ve embriyonik yaşam için zorunludur; olgun glomerüler bazal membran, lens kapsülü ve iç kulakta özelleşmiş ağı kuran ve otozomal Alport sendromunda mutasyona uğrayan zincirler ise tip IV kollajen alfa-3 veya alfa-4'tür.
 
 **Cevap: B** — Tip IV kollajen α3 veya α4
 
@@ -14794,7 +14794,7 @@ _39 soru (örnek + çıkmış)_
 
 **Özet.** İnce bazal membran hastalığında GBM düzgün biçimde incelir; Alport sendromunda ise düzensiz incelme, kalınlaşma ve sepet örgüsü görülür.
 
-# 23 · Sistemik Hastalıklarda Böbrek Hasarı
+# Ders 23 (23) · Sistemik Hastalıklarda Böbrek Hasarı
 
 _35 soru (örnek + çıkmış)_
 
@@ -14808,7 +14808,7 @@ _35 soru (örnek + çıkmış)_
 
 - **Kimmelstiel-Wilson glomerulosklerozu** — Kimmelstiel-Wilson glomerulosklerozu doğru: diyabetik nefropatide GBM kalınlaşması ve difüz mezangial sklerozla birlikte nodüler lezyon oluşur.
 - **Soğan zarı lezyonu** — Soğan zarı lezyonu malign hipertansiyonda interlobüler arterlerde konsantrik intimal hücre proliferasyonudur.
-- **Tel halka lezyonu** — Diyabete özgü lezyon nodüler glomerulosklerozdur ve klinik tablo mikroalbüminüriyle başlar. Tel halka lezyonu bu sorudaki ayrımı sağlamaz.
+- **Tel halka lezyonu** — Tel halka lezyonu sistemik lupus eritematozusun sınıf IV nefritinde yoğun subendotelyal immün kompleks birikimiyle oluşan kapiller duvar kalınlaşmasıdır; diyabetik nefropatiye özgü PAS pozitif laminer mezangiyal matriks nodülü ise Kimmelstiel–Wilson glomerülosklerozudur.
 - **Hilal oluşumu** — Hilal oluşumu küçük damar vaskülitlerinde pauci-immün hızlı ilerleyen glomerulonefritin bulgusudur.
 - **Pire ısırığı görünümü** — Pire ısırığı görünümü malign nefrosklerozda kortikal yüzeydeki küçük peteşiyal kanamalardır.
 
@@ -14842,11 +14842,11 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Membranöz nefropati** — Küçük damar vaskülitlerinde böbrekte hilal oluşumu ve minimal immün birikim görülür. Membranöz nefropati bu sorudaki ayrımı sağlamaz.
-- **Mezangiyal IgA birikimi** — Mezangiyal IgA birikimi ile karıştırılabilir: Vaskülitlerde seroloji antinötrofil sitoplazmik antikorlarla, PR3 ya da MPO-ANCA ile yapılır.
+- **Membranöz nefropati** — Membranöz nefropati subepitelyal immün birikimlerle ağır proteinüri ve nefrotik sendrom yapan bir glomerülopatidir; PR3-ANCA pozitif granülomatozisli polianjiitte ise immünfloresanda birikim göstermeyen (pauci-immün) nekrotizan ve kresentik glomerülonefrit (RPGN) gelişir.
+- **Mezangiyal IgA birikimi** — Mezangiyal IgA birikimi Berger hastalığı ve IgA vaskülitinde (Henoch–Schönlein purpurası) görülür; ANCA ilişkili küçük damar vasküliti olan granülomatozisli polianjiitte ise immün kompleks birikimi olmaksızın pauci-immün hızlı ilerleyen glomerülonefrit (RPGN) beklenir.
 - **Pauci-immün RPGN** — Pauci-immün RPGN doğru: granülomatozisli poliangiitte hilal oluşumu ve minimal immün birikimle hızlı ilerleyen glomerulonefrit gelişir.
 - **Nodüler glomeruloskleroz** — Nodüler glomeruloskleroz diyabetik nefropatinin Kimmelstiel-Wilson lezyonudur; vaskülitte beklenmez.
-- **Sepet örgüsü GBM** — Vaskülitte nefritik sendroma ateş, kilo kaybı, artrit ve sinüs-akciğer bulguları eşlik eder. Sepet örgüsü GBM bu sorudaki ayrımı sağlamaz.
+- **Sepet örgüsü GBM** — Elektron mikroskobunda glomerüler bazal membranın katmanlara ayrılarak sepet örgüsü görünümü alması Alport sendromunun tanısal bulgusudur; granülomatozisli polianjiitte böbrek tutulumu ise fibrinoid nekroz ve hilallerle seyreden pauci-immün RPGN şeklindedir.
 
 **Cevap: C** — Pauci-immün RPGN
 
@@ -14860,8 +14860,8 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Streptococcus pyogenes** — Streptococcus pyogenes ile karıştırılabilir: Kanlı ishal sonrası HUS'un etkeni Şiga toksini üreten bakterilerdir.
-- **Staphylococcus aureus** — Şiga toksini, reseptörü bol olduğu için glomerüler endotele özellikle zarar verir. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.
+- **Streptococcus pyogenes** — Streptococcus pyogenes farenjit veya deri enfeksiyonundan 1–4 hafta sonra immün kompleks aracılı akut nefritik sendrom yapar; kontamine gıdayla bulaşıp kanlı ishal sonrası endotel hasarı, şistositli hemolitik anemi, trombositopeni ve akut böbrek yetmezliği (tipik HÜS) yapan etken ise Şiga toksini üreten E. coli O157:H7'dir.
+- **Staphylococcus aureus** — Staphylococcus aureus besin zehirlenmesinde enterotoksinleriyle kısa süreli kusma yapar veya bakteriyemiyle böbrekte mikroapseler oluşturur; kanlı ishal sonrası Şiga toksiniyle glomerül endotelini hasarlayarak hemolitik üremik sendroma yol açan klasik etken ise E. coli O157:H7'dir.
 - **Hepatit B virüsü** — Hepatit B virüsü böbreği glomerüler hastalık yoluyla etkileyen bir enfeksiyondur; kanlı ishal ve HUS tablosu yapmaz.
 - **E. coli O157:H7** — E. coli O157:H7 doğru: Şiga toksini üreten bu suş kanlı ishal sonrası hemolitik üremik sendrom yapar; çocuklarda akut böbrek yetmezliğinin sık nedenidir.
 - **Treponema pallidum** — Treponema pallidum, yani sifiliz, glomerüler tutulum yapan enfeksiyonlardandır; Şiga toksini aracılı HUS etkeni değildir.
@@ -14899,7 +14899,7 @@ _35 soru (örnek + çıkmış)_
 - **ADAMTS13** — ADAMTS13 doğru: ultra büyük vWF multimerlerini parçalayan bu proteaz, edinilmiş otoantikor ya da gen mutasyonuyla eksilir.
 - **Faktör H** — Faktör H alternatif kompleman yolunu negatif düzenler; kusuru kompleman aracılı TMA yapar.
 - **Faktör I** — Faktör I de alternatif yolun negatif düzenleyicisidir; eksikliği TTP'ye değil, kompleman aracılı TMA'ya yol açar.
-- **C1 inhibitörü** — TTP'de eksik olan, ultra büyük multimerleri parçalayan proteazdır. C1 inhibitörü bu sorudaki ayrımı sağlamaz.
+- **C1 inhibitörü** — C1 inhibitörü klasik kompleman ve kallikrein yolunu baskılayan serin proteaz inhibitörüdür ve eksikliği herediter anjiyoödem yapar; trombotik trombositopenik purpurada (TTP) eksik veya otoantikorla baskılanmış olan enzim ise dev von Willebrand multimerlerini kesen ADAMTS13 metaloproteazıdır.
 - **Membran kofaktör proteini** — Membran kofaktör proteini bir kompleman düzenleyicisidir; kusuru TTP ile değil, kompleman aracılı TMA ile ilişkilidir.
 
 **Cevap: A** — ADAMTS13
@@ -14914,11 +14914,11 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Sferositler** — Trombotik mikroanjiyopatide eritrositler daralmış damarlarda mekanik olarak parçalanır. Sferositler bu sorudaki ayrımı sağlamaz.
+- **Sferositler** — Sferositler spektrin veya ankirin gibi hücre iskeleti protein kusurlarında (herediter sferositoz) ya da otoimmün hemolitik anemide zar kaybıyla oluşan küresel eritrositlerdir; trombotik mikroanjiyopatide fibrin ağlarına çarpıp mekanik olarak yırtılan miğfer/üçgen biçimli eritrosit parçaları ise şistositlerdir.
 - **Şistositler** — Şistositler doğru: trombüslü küçük damarlardan geçerken parçalanan eritrositlerdir ve mikroanjiyopatik hemolitik anemiyi gösterir.
-- **Hedef hücreler** — Mikroanjiyopatik hemolitik aneminin morfolojik izi parçalanmış eritrositlerdir. Hedef hücreler bu sorudaki ayrımı sağlamaz.
-- **Orak hücreler** — Orak hücreler ile karıştırılabilir: Trombotik mikroanjiyopatide eritrositler trombosit açısından zengin trombüslerin bulunduğu kılcallarda hasarlanır.
-- **Akantositler** — Trombotik mikroanjiyopatide mikrovasküler tromboz, mikroanjiyopatik hemolitik anemi ve trombositopeni birlikte görülür. Akantositler bu sorudaki ayrımı sağlamaz.
+- **Hedef hücreler** — Hedef hücreler (kodositler) talasemi, hemoglobinopatiler, karaciğer hastalığı ve splenektomi sonrasında yüzey/hacim oranı artmış eritrositlerdir; HÜS, TTP ve DİK gibi mikroanjiyopatik hemolitik anemilerde daralmış damarlarda parçalanan eritrositler ise şistositlerdir.
+- **Orak hücreler** — Orak hücreler (drepanositler) hemoglobin S'nin deoksijenasyonda polimerleşmesiyle oluşan hilal şekilli eritrositlerdir; trombotik mikroanjiyopatilerde mikrovasküler trombüslerin içinden geçerken mekanik olarak parçalanan eritrositlere ise şistosit (fragmente eritrosit) denir.
+- **Akantositler** — Akantositler abetalipoproteinemi veya ağır karaciğer hastalığında zar lipid bileşiminin bozulmasıyla oluşan düzensiz dikensi çıkıntılı eritrositlerdir; trombotik mikroanjiyopatide fibrin iplikleriyle kesilerek oluşan parçalanmış eritrositler ise şistositlerdir.
 
 **Cevap: B** — Şistositler
 
@@ -14935,8 +14935,8 @@ _35 soru (örnek + çıkmış)_
 - **Fibrinoid nekroz** — Fibrinoid nekroz malign hipertansiyonda şiddetli endotel hasarının sonucudur; arteriyol duvarı homojen, granüler eozinofilik görünür.
 - **Soğan zarı lezyonu** — Soğan zarı lezyonu malign hipertansiyonda konsantrik intimal hücre proliferasyonuyla oluşan hiperplastik arteriyolosklerozdur.
 - **Hiyalin arteriyoloskleroz** — Hiyalin arteriyoloskleroz doğru: uzun süreli hipertansiyonda plazma proteinleri ve matris birikimi arteriyol duvarını homojen pembe kalınlaştırır.
-- **Granülomatöz vaskülit** — Benign nefroskleroz uzun süreli hipertansiyonda endotel hasarı ve plazma proteinlerinin damar duvarına sızmasıyla başlar. Granülomatöz vaskülit bu sorudaki ayrımı sağlamaz.
-- **Kolesterol embolisi** — Kolesterol embolisi ile karıştırılabilir: Benign nefrosklerozda lümen daralması kronik iskemiyle tübül atrofisi ve interstisyel fibrozis yapar.
+- **Granülomatöz vaskülit** — Granülomatöz vaskülit dev hücreli arterit, Takayasu arteriti veya granülomatozisli polianjiitte damar duvarında granülom oluşumuyla seyreder; kronik benign hipertansiyona bağlı benign nefrosklerozun karakteristik damar lezyonu ise arteriyol duvarında pembe homojen kalınlaşma yapan hiyalin arteriyolosklerozdur.
+- **Kolesterol embolisi** — Kolesterol embolisi ülsere aterosklerotik plaktan kopan kristallerin küçük renal arterleri tıkayarak kesitte yarık şeklinde boşluklar bırakmasıdır; benign nefrosklerozda plazma proteinlerinin sızması ve bazal membran artışıyla gelişen karakteristik lezyon ise hiyalin arteriyolosklerozdur.
 
 **Cevap: C** — Hiyalin arteriyoloskleroz
 
@@ -14952,9 +14952,9 @@ _35 soru (örnek + çıkmış)_
 
 - **Pire ısırığı görünümü** — Pire ısırığı görünümü malign hipertansiyonda görülür; kortikal yüzeyde küçük peteşiyal kanamalar vardır.
 - **Asimetrik kaba skar** — Asimetrik kaba skar piyelonefrit kökenli kronik böbrek hastalığının yüzey görünümüdür.
-- **Büyümüş soluk böbrek** — Benign nefrosklerozda böbrekler büyümez, aksine küçülür. Büyümüş soluk böbrek bu sorudaki ayrımı sağlamaz.
+- **Büyümüş soluk böbrek** — Büyümüş ve soluk böbrek amiloidoz, akut tübüler hasar veya lipoid nefroz gibi infiltratif/akut ödemli tablolarda görülür; benign nefrosklerozda ise kronik iskemiye bağlı yaygın kortikal mikroinfarktlar ve nefron atrofisi nedeniyle böbrekler simetrik olarak küçülmüş ve ince granüler (deri benzeri) yüzey kazanmıştır.
 - **Simetrik küçük, ince granüler** — Simetrik küçük, ince granüler doğru: benign nefrosklerozda böbrekler simetrik küçülür, skarlaşma yüzeye ince granüler görünüm verir.
-- **Kistik genişlemiş böbrek** — Polikistik hastalıklar kronik böbrek hastalığının ayrı, kistik bir neden grubudur. Kistik böbrek bu sorudaki ayrımı sağlamaz.
+- **Kistik genişlemiş böbrek** — Kistik genişlemiş böbrek otozomal dominant polikistik böbrek hastalığında parankimin yüzlerce sıvı dolu kistle yer değiştirmesiyle oluşur; benign nefrosklerozda ise diffüz hiyalin arteriyoloskleroz nedeniyle böbrekler simetrik küçük ve ince granüler görünümdedir.
 
 **Cevap: D** — Simetrik küçük, ince granüler
 
@@ -14970,7 +14970,7 @@ _35 soru (örnek + çıkmış)_
 
 - **Hiyalin arteriyoloskleroz** — Hiyalin arteriyoloskleroz benign nefrosklerozun arteriyol lezyonudur; uzun süreli hipertansiyonda plazma proteinleri birikir.
 - **Amiloid birikimi** — Amiloid birikimi amiloid nefropatisinde mezangium ve kılcal duvarlarda olur; hipertansif damar lezyonu değildir.
-- **Tel halka** — Tel halka ile karıştırılabilir: Malign hipertansiyonda arteriyollerde homojen eozinofilik fibrinoid nekroz da görülür.
+- **Tel halka** — Tel halka lezyonu sınıf IV lupus nefritinde glomerül kapiller duvarında subendotelyal immün kompleks birikimini tanımlar; malign hipertansiyonda interlobüler arter ve arteriyollerde düz kas hücrelerinin ve bazal membranın konsantrik katmanlar halinde çoğalmasıyla oluşan lezyon ise soğan zarı (hiperplastik arteriyoloskleroz) görünümüdür.
 - **Nodüler skleroz** — Nodüler skleroz diyabetik nefropatide Kimmelstiel-Wilson lezyonudur; arter duvarında değil, glomerülde gelişir.
 - **Soğan zarı görünümü** — Soğan zarı görünümü doğru: malign hipertansiyonda interlobüler arterlerde konsantrik intimal hücre proliferasyonu hiperplastik arteriyoloskleroz yapar.
 
@@ -14987,10 +14987,10 @@ _35 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Peteşiyal kanamalar** — Peteşiyal kanamalar doğru: malign nefrosklerozda kortikal yüzeydeki küçük peteşiler pire ısırığı görünümü verir.
-- **Kortikal kistler** — Kortikal kistler ile karıştırılabilir: Malign nefrosklerozda böbrekler normal boyutta ya da küçülmüş olabilir.
+- **Kortikal kistler** — Kortikal kistler basit böbrek kistlerinde veya diyalize bağlı kistik hastalıkta berrak sıvı dolu boşluklar olarak görülür; malign nefrosklerozda böbrek yüzeyinde 'pire ısırığı' görünümünü oluşturan ise fibrinoid nekroza uğramış arteriyol ve glomerül kapillerlerinin yırtılmasıyla gelişen noktasal peteşiyal kanamalardır.
 - **Kaba skarlar** — Kaba skarlar piyelonefrit kökenli kronik böbrek hastalığında asimetrik, düzensiz skarlaşma olarak görülür.
 - **Amiloid birikimi** — Amiloid birikimi Kongo kırmızısıyla elma yeşili çift kırınım veren fibriller protein birikimidir; yüzeyde peteşi yapmaz.
-- **Abse odakları** — Malign hipertansiyon bir enfeksiyon değil, akut vasküler hasar tablosudur. Abse odakları bu sorudaki ayrımı sağlamaz.
+- **Abse odakları** — Abse odakları akut bakteriyel piyelonefritte korteks yüzeyinde sarımsı-beyaz kabarık püy odakları olarak izlenir; malign hipertansiyonda (malign nefrosklerozda) böbrek yüzeyindeki pire ısırığı görünümü ise akut nekrotizan arteriyolite bağlı çok sayıdaki peteşiyal kanamadan kaynaklanır.
 
 **Cevap: A** — Peteşiyal kanamalar
 
@@ -15007,8 +15007,8 @@ _35 soru (örnek + çıkmış)_
 - **Serebral kanama** — Serebral kanama en sık ölüm nedeni değildir; kalp yetmezliğiyle birlikte toplam payı yalnız %10'dur.
 - **Üremi** — Üremi doğru: malign hipertansiyonda ölümlerin %90'ı üremiye bağlıdır.
 - **Kalp yetmezliği** — Kalp yetmezliği de azınlıktaki ölüm nedenlerindendir; malign hipertansiyonda sistolik basınç genellikle 200 mmHg'nin üzerindedir.
-- **Sepsis** — Zamanında tedaviyle hastaların yaklaşık %50'si 5 yıl veya daha uzun yaşar. Sepsis bu sorudaki ayrımı sağlamaz.
-- **Pulmoner emboli** — Pulmoner emboli ile karıştırılabilir: Malign hipertansiyon papilödem, ensefalopati ve kısa sürede akut böbrek yetmezliğiyle seyreder.
+- **Sepsis** — Sepsis enfeksiyona karşı kontrolsüz sistemik inflamatuvar yanıttır ve malign hipertansiyonun doğrudan ölüm mekanizması değildir; malign hipertansiyonda tedavisiz olgularda en sık ölüm nedeni hızla ilerleyen böbrek yetmezliği (üremi) ile beyin kanaması ve kalp yetmezliğidir.
+- **Pulmoner emboli** — Pulmoner emboli derin ven trombozunun akciğer arterini tıkamasıyla gelişir; malign hipertansiyonda ise arteriyoler fibrinoid nekroz ve hiperplastik arteriyoloskleroz böbrek perfüzyonunu hızla keserek akut böbrek yetmezliği ve üremi nedeniyle ölüme yol açar.
 
 **Cevap: B** — Üremi
 
@@ -15025,8 +15025,8 @@ _35 soru (örnek + çıkmış)_
 - **Yaygın ince granüler** — Yaygın ince granüler yüzey vasküler ya da glomerüler kökenli kronik böbrek hastalığında görülür.
 - **Pire ısırığı** — Pire ısırığı görünümü malign nefrosklerozun kortikal peteşiyal kanamalarıdır; piyelonefritle ilişkili değildir.
 - **Asimetrik düzensiz skarlaşma** — Asimetrik düzensiz skarlaşma doğru: piyelonefrit kökenli kronik böbrek hastalığında skarlar iki böbreği eşit tutmaz.
-- **Düzgün ve büyümüş** — Düzgün ve büyümüş böbrek ile karıştırılabilir: Kronik böbrek hastalığında böbrekler büzüşmüş ve küçüktür.
-- **Nodüler** — Nodüler lezyon, diyabetik nefropatide glomerül düzeyindeki Kimmelstiel-Wilson glomerulosklerozudur. Nodüler görünüm bu sorudaki ayrımı sağlamaz.
+- **Düzgün ve büyümüş** — Düzgün yüzeyli ve büyümüş böbrek akut piyelonefrit ödeminde, amiloidozda veya diyabetin erken hiperfiltrasyon evresinde görülür; kronik piyelonefritte ise tekrarlayan enfeksiyon ve reflü atakları kaliksler üzerinde kaba, derin ve asimetrik düzensiz kortikomedüller skarlaşma bırakır.
+- **Nodüler** — Nodüler lezyon diyabetik nefropatide mikroskopik düzeyde glomerül mezangiumunda görülen Kimmelstiel–Wilson nodülüdür; kronik piyelonefritin makroskopik böbrek yüzeyi bulgusu ise genişlemiş ve küntleşmiş kalikslerin üzerinde yer alan asimetrik, kaba ve düzensiz skarlaşmadır.
 
 **Cevap: C** — Asimetrik düzensiz skarlaşma
 
@@ -15040,8 +15040,8 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Tübüler hiperplazi** — Tübüler hiperplazi ile karıştırılabilir: Kronik böbrek hastalığında tübüllerde atrofi gelişir.
-- **Mezangiyal IgA birikimi** — İlerleyen dönemde kalan nefronlarda mezangiumda biriken matriks skleroz yapar. Mezangiyal IgA birikimi bu sorudaki ayrımı sağlamaz.
+- **Tübüler hiperplazi** — Kronik böbrek hastalığında kalan nefronlarda tübüler hiperplazi değil, zamanla tübüler atrofi ve interstisyel fibrozis gelişir; nefron kaybından sonra sağlam kalan glomerüllerde adaptif olarak gelişip kapiller hipertansiyon, podosit hasarı ve fokal segmental glomerülosklerozu başlatan temel olay ise kompansatuvar hiperfiltrasyondur.
+- **Mezangiyal IgA birikimi** — Mezangiyal IgA birikimi birincil bir glomerülonefrit olan IgA nefropatisinin (Berger hastalığı) spesifik nedenidir; nedeni ne olursa olsun nefron sayısı azaldığında kalan nefronlarda ilerleyici sklerozu başlatan ortak adaptif mekanizma ise glomerüler hipertrofi ve hiperfiltrasyondur.
 - **Hilal oluşumu** — Hilal oluşumu küçük damar vaskülitlerinde pauci-immün hızlı ilerleyen glomerulonefritin bulgusudur; nefron kaybına adaptasyon değildir.
 - **Hiperfiltrasyon** — Hiperfiltrasyon doğru: kalan nefronlarda GFR artar, glomerüler hipertrofi ve kapiller hipertansiyon zamanla skleroz ve yeni nefron kaybı yapar.
 - **Amiloid birikimi** — Amiloid birikimi amiloidozda fibriller proteinlerin ekstrasellüler birikimidir; adaptif bir değişiklik değildir.
@@ -15058,9 +15058,9 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Shiga benzeri toksin salınımı** — Şiga benzeri toksin salınımı, E. coli ve Shigella ile gelişen Şiga toksini aracılı HUS'un temel mekanizmasıdır; bu yüzden cevap değildir.
+- **Shiga benzeri toksin salınımı** — Şiga benzeri toksin (verotoksin) salınımı, enterohemorajik E. coli O157:H7 ve Shigella dysenteriae enfeksiyonlarından sonra gelişen tipik (diyare ilişkili) hemolitik üremik sendromun doğrudan ana patogenetik mekanizmasıdır.
 - **Faktör I eksikliği** — Faktör I eksikliği alternatif kompleman yolunun düzenlenmesini bozar ve eskiden atipik HUS denen kompleman aracılı TMA'ya yol açar.
-- **CD46 eksikliği** — Kompleman aracılı TMA'da kontrolsüz kompleman aktivasyonu endotel hasarı ve mikrovasküler tromboz yapar. CD46 eksikliği bu sorudaki ayrımı sağlamaz.
+- **CD46 eksikliği** — Membran kofaktör proteini (CD46), faktör H ve faktör I ile birlikte alternatif kompleman yolunu düzenler ve eksikliği atipik (kompleman aracılı) HÜS'e doğrudan yol açar; ADAMTS13 eksikliği ise HÜS'ün değil, trombotik trombositopenik purpuranın (TTP) patogenetik nedenidir.
 - **ADAMTS13 eksikliği** — ADAMTS13 eksikliği HUS ile değil, TTP ile ilişkilidir; ultra büyük vWF multimerleri parçalanamaz, bu yüzden doğru cevaptır.
 - **Faktör H eksikliği** — Faktör H eksikliği alternatif kompleman yolunu kontrolsüz bırakır ve kompleman aracılı TMA, yani eski adıyla atipik HUS yapar.
 
@@ -15076,11 +15076,11 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Glukozüri** — Glukozüri ile karıştırılabilir: Diyabetik nefropatide böbrek hasarının ilk göstergesi idrardaki albümin artışıdır.
-- **Ketonüri** — Diyabetik nefropatinin klinik seyri albüminüri düzeyindeki artışla izlenir. Ketonüri bu sorudaki ayrımı sağlamaz.
+- **Glukozüri** — Glukozüri kan şekeri renal tübüler geri emilim eşiğini (yaklaşık 180 mg/dL) aştığında ortaya çıkan osmotik bir bulgudur ve glomerül hasarını göstermez; diyabetik nefropatide kapiller duvar hasarının klinik olarak saptanabilen ilk ve en erken bulgusu mikroalbüminüridir (30–300 mg/gün).
+- **Ketonüri** — Ketonüri insülin eksikliğinde yağ asidi oksidasyonunun artmasıyla diyabetik ketoasidozda görülen akut metabolik bir bulgudur; diyabetik nefropatinin gelişimini gösteren en erken klinik böbrek bulgusu ise idrarda günde 30–300 mg düzeyinde albümin atılımı, yani mikroalbüminüridir.
 - **Nefrotik düzeyde proteinüri** — Nefrotik düzeyde proteinüri diyabetik nefropatide sık görülür ama ilerlemiş dönemin bulgusudur; başlangıç bulgusu değildir.
 - **Mikroalbüminüri** — Mikroalbüminüri doğru: diyabetik nefropati başlangıçta mikroalbüminüriyle ortaya çıkar, sonra makroalbüminüriye ilerler.
-- **Poliüri** — Poliüri ile karıştırılabilir: Diyabetik nefropatide ilk böbrek bulgusu idrarda az miktarda albümin saptanmasıdır.
+- **Poliüri** — Poliüri kontrolsüz hiperglisemide idrara geçen glikozun su çekmesiyle oluşan osmotik diürez bulgusudur; diyabete bağlı glomerüler bazal membran kalınlaşması ve mezangiyal genişlemenin ilk klinik göstergesi ise mikroalbüminüridir.
 
 **Cevap: D** — Mikroalbüminüri
 
@@ -15094,11 +15094,11 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Renal ateroskleroz** — Soğan zarı görünümü malign hipertansiyonda konsantrik intimal hücre proliferasyonuyla oluşur. Renal ateroskleroz bu sorudaki ayrımı sağlamaz.
+- **Renal ateroskleroz** — Renal ateroskleroz ana renal arter ve büyük dallarında intimal lipid-fibröz plak oluşumuyla lümeni daraltan büyük damar lezyonudur; küçük arter ve arteriyol duvarında soğan zarı şeklinde konsantrik düz kas/laminasyon artışı ve fibrinoid nekroz ise malign hipertansiyondaki hiperplastik arteriyolosklerozda görülür.
 - **Hiperplastik arterioloskleroz** — Hiperplastik arterioloskleroz doğru: malign hipertansiyonda damar duvarı proliferasyonu soğan zarı görünümü verir, arteriyollerde fibrinoid nekroz eşlik eder.
 - **Hiyalin arterioloskleroz** — Hiyalin arterioloskleroz benign nefrosklerozun lezyonudur; arteriyol duvarında homojen, pembe hiyalin kalınlaşma vardır.
-- **Anevrizma** — Anevrizma ile karıştırılabilir: Malign nefrosklerozda arteriyol duvarında fibrinoid nekroz ve konsantrik proliferasyon görülür.
-- **Granülomatöz vaskülit** — Soğan zarı ve fibrinoid nekroz, sistolik basıncın genellikle 200 mmHg'yi aştığı malign hipertansiyonun damar lezyonlarıdır. Granülomatöz vaskülit bu sorudaki ayrımı sağlamaz.
+- **Anevrizma** — Anevrizma damar duvarının zayıflayarak kese veya iğ şeklinde balonlaşmasıdır; şiddetli (malign) hipertansiyonda böbrek arteriyollerinde endotel hasarı ve düz kas proliferasyonuyla oluşan soğan zarı görünümü ise hiperplastik arteriyoloskleroza aittir.
+- **Granülomatöz vaskülit** — Granülomatöz vaskülit damar duvarında aktive makrofajlar, dev hücreler ve elastik lamina yıkımıyla seyreden inflamatuvar bir tablodur; malign hipertansiyonda böbrek arteriyollerinde soğan zarı tarzında konsantrik laminer kalınlaşma ve fibrinoid nekroz yapan lezyon ise hiperplastik arteriyolosklerozdur.
 
 **Cevap: B** — Hiperplastik arterioloskleroz
 
@@ -15130,10 +15130,10 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Tip I** — Lupusta hasarı immün kompleksler yapar. Tip I aşırı duyarlılık bu sorudaki ayrımı sağlamaz.
-- **Tip II** — Tip II aşırı duyarlılık ile karıştırılabilir: Lupus böbreğinde birikim kompleks hâlindedir.
+- **Tip I** — Tip I aşırı duyarlılık IgE antikorları ve mast hücresi degranülasyonu ile dakikalar içinde gelişen alerji ve anafilaksi mekanizmasıdır; SLE ise nükleer otoantijenlerle oluşan dolaşan immün komplekslerin glomerül, eklem ve damarlarda biriktiği tip III aşırı duyarlılık hastalığının prototipidir.
+- **Tip II** — Tip II aşırı duyarlılıkta antikorlar doğrudan hücre yüzeyindeki veya bazal membrandaki sabit antijenlere bağlanır (örneğin Goodpasture sendromu); SLE'de ise dolaşan DNA–anti-DNA immün komplekslerinin dokulara çökmesiyle gelişen tip III aşırı duyarlılık reaksiyonu esas mekanizmadır.
 - **Tip III** — Tip III doğru: lupus immün kompleks aracılı aşırı duyarlılığın prototipidir ve kompleksler glomerülde birikir.
-- **Tip IV** — Tip IV aşırı duyarlılık ile karıştırılabilir: Lupusta mezangial, subendotelyal ve subepitelyal kompleks birikimi vardır.
+- **Tip IV** — Tip IV aşırı duyarlılık antikorlardan bağımsız olarak CD4+ Th1/Th17 ve CD8+ T lenfositlerin yürüttüğü gecikmiş hücresel yanıttır; SLE ise çoklu otoantikorların oluşturduğu immün komplekslerin dokularda birikip komplemanı aktive ettiği tip III aşırı duyarlılık prototipidir.
 - **Kompleman regülasyon defekti** — Kompleman regülasyon defekti kompleman aracılı trombotik mikroanjiyopatinin mekanizmasıdır.
 
 **Cevap: C** — Tip III
@@ -15150,7 +15150,7 @@ _35 soru (örnek + çıkmış)_
 
 - **Saf nefrotik sendrom** — Saf nefrotik tablo lupusun genel tablosu değildir; nefrotik sendrom daha çok amiloid nefropatisinin tablosudur.
 - **Saf nefritik sendrom** — Saf nefritik tablo lupusun genel tablosu değildir; ağır proteinüri de sıklıkla bulunur.
-- **İzole tübüler disfonksiyon** — İzole tübüler disfonksiyon ile karıştırılabilir: Lupusta asıl hasar glomerüllerdeki immün komplekslerle olur.
+- **İzole tübüler disfonksiyon** — İzole tübüler disfonksiyon Fanconi sendromu veya renal tübüler asidoz gibi tübülointerstisyel hastalıklarda görülür; lupus nefritinde ise immün kompleksler mezangium, subendotelyal ve subepitelyal alanları birlikte tuttuğundan hematüri, hipertansiyon ve ağır proteinürinin birleştiği nefritik ve nefrotik karışık tablo sık görülür.
 - **Kanlı diyare sonrası oligüri** — Kanlı diyare sonrası oligüri Şiga toksini aracılı hemolitik üremik sendromun tablosudur.
 - **Nefritik ve nefrotik karışım** — Nefritik ve nefrotik karışım doğru: lupusta glomerüllerde yaygın immün kompleks birikimi vardır ve klinik iki tablonun karışımıdır.
 
@@ -15184,7 +15184,7 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Tübül epitel sitoplazmasında** — Tübül epitel sitoplazması ile karıştırılabilir: Amiloid hücre içinde değil, ekstrasellüler alanda birikir.
+- **Tübül epitel sitoplazmasında** — Tübül epitel sitoplazmasında aşırı filtrelenen albümin ve lipidlerin geri emilimiyle hiyalin damlacıklar birikir; hücre dışı bir fibriler protein olan amiloid ise böbrekte öncelikle glomerüler mezangium ve kapiller bazal membran boyunca, ardından interstisyum ve damar duvarlarında birikir.
 - **Bowman boşluğunda hilal olarak** — Bowman boşluğunda hilal oluşumu küçük damar vaskülitlerine bağlı pauci-immün RPGN'nin bulgusudur.
 - **Glomerüler mezangium ve kılcal duvar** — Glomerüler mezangium ve kılcal duvar doğru: amiloid başlıca burada birikir ve nefrotik sendroma yol açar.
 - **Yalnız interlobüler arterlerde** — İnterlobüler arterlerde soğan zarı lezyonu malign hipertansiyonda görülür; amiloid yalnız damarlarla sınırlı değildir.
@@ -15202,11 +15202,11 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Kemik iliğinde yapım azlığı** — Buradaki düşüklük yapımdan değil kullanılmaktan olur. Kemik iliğinde yapım azlığı bu sorudaki ayrımı sağlamaz.
+- **Kemik iliğinde yapım azlığı** — Kemik iliğinde megakaryosit ve trombosit yapım azlığı aplastik anemi, lösemi infiltrasyonu veya kemoterapiye bağlı trombositopeni yapar; HÜS ve TTP gibi trombotik mikroanjiyopatilerde ise kemik iliğinde yapım artmıştır, trombositopeninin nedeni yaygın mikrovasküler trombüslerde aşırı trombosit tüketimidir.
 - **Mekanik eritrosit hasarı** — Mekanik eritrosit hasarı şistositlerle mikroanjiyopatik hemolitik anemiyi açıklar; trombosit düşüklüğünü açıklamaz.
-- **Dalakta sekestrasyon** — Trombotik mikroanjiyopatide trombositler küçük damar trombüslerinde harcanır. Dalakta sekestrasyon bu sorudaki ayrımı sağlamaz.
+- **Dalakta sekestrasyon** — Dalakta sekestrasyon portal hipertansiyon ve splenomegalide (hipersplenizm) trombositlerin dalak sinüzoidlerinde göllenmesiyle gelişir; trombotik mikroanjiyopatide ise endotel hasarı ve vWF multimerleri nedeniyle küçük damarlarda oluşan yaygın trombüslerde trombositlerin hızla tüketilmesi trombositopeniye yol açar.
 - **Trombüslerde tüketim** — Trombüslerde tüketim doğru: endotel hasarında trombositler aktive olup kümeleşir ve trombosit zengin trombüslerde harcanır.
-- **Kompleman aracılı lizis** — Kompleman kusuru endotel hasarı yapar, trombositopeni yine tüketimle olur. Kompleman aracılı lizis bu sorudaki ayrımı sağlamaz.
+- **Kompleman aracılı lizis** — Kompleman aracılı lizis atipik HÜS'te endotel hücresini hasarlayan başlangıç mekanizmasıdır; kandaki trombosit sayısının hızla düşmesinin doğrudan nedeni ise hasarlı mikrovasküler yatakta oluşan trombüslerin içinde trombositlerin harcanmasıdır (tüketimdir).
 
 **Cevap: D** — Trombüslerde tüketim
 
@@ -15220,7 +15220,7 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Papiller nekroz** — Papiller nekroz ile karıştırılabilir: Trombotik mikroanjiyopatide ağır iskemi böbreğin dış tabakasını etkiler.
+- **Papiller nekroz** — Papiller nekroz diyabet, analjezik nefropatisi veya orak hücreli anemide medüller piramit uçlarının iskemik nekrozudur; ağır trombotik mikroanjiyopatide afferent arteriyollerin ve glomerül kapillerlerinin yaygın trombozla tıkanması ise böbrek korteksinin tamamını yıkan bilateral renal kortikal nekroza yol açar.
 - **Kortikal nekroz** — Kortikal nekroz doğru: glomerüler kılcal ve arteriyollerdeki trombüsler iskemiye, şiddetli olgularda korteks nekrozuna yol açar.
 - **Nodüler glomeruloskleroz** — Nodüler glomeruloskleroz diyabetik nefropatinin patognomonik lezyonudur.
 - **Hiyalin arteriyoloskleroz** — Hiyalin arteriyoloskleroz benign nefrosklerozda plazma proteinleri ve matrisin duvarda birikimidir.
@@ -15241,7 +15241,7 @@ _35 soru (örnek + çıkmış)_
 - **Toksin reseptörü ifade etmesi** — Toksin reseptörü ifadesi doğru: glomerüler endotel Şiga toksini reseptörü taşıdığı için toksine özellikle hassastır.
 - **ADAMTS13 üretmemesi** — ADAMTS13 eksikliği trombotik trombositopenik purpuranın temel kusurudur; Şiga toksininin hedef seçimini açıklamaz.
 - **Faktör H eksikliği** — Faktör H kusuru alternatif kompleman yolunun frenini bozar ve kompleman aracılı trombotik mikroanjiyopati yapar.
-- **Bazal membranın incelmesi** — Bazal membranın incelmesi ile karıştırılabilir: Toksin doğrudan endotel hücresini hedefler.
+- **Bazal membranın incelmesi** — Glomerüler bazal membranın incelmesi ince bazal membran nefropatisinin bulgusudur ve toksin duyarlılığıyla ilişkili değildir; glomerüler endotel hücrelerinin Şiga toksinine aşırı hassas olmasının nedeni yüzeylerinde toksinin bağlandığı globotriaosilseramid (Gb3) reseptörünü yüksek yoğunlukta ifade etmeleridir.
 - **İmmün kompleks birikimi** — İmmün kompleks birikimi lupus nefritinin mekanizmasıdır; Şiga toksini endotele doğrudan etki eder.
 
 **Cevap: A** — Toksin reseptörü ifade etmesi
@@ -15256,10 +15256,10 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Streptococcus pneumoniae** — Streptococcus pneumoniae ile karıştırılabilir: Şiga toksini üreten etkenler E. coli ve dizanteri basilidir.
+- **Streptococcus pneumoniae** — Streptococcus pneumoniae nöraminidaz üretimiyle endotel ve eritrosit yüzeyindeki Thomsen–Friedenreich antijenini açığa çıkararak ishal dışı (nöraminidaz ilişkili) HÜS yapabilir; E. coli O157:H7 dışında doğrudan Şiga toksini üreterek kanlı ishal sonrası tipik HÜS yapan bakteri ise Shigella dysenteriae tip 1'dir.
 - **Treponema pallidum** — Treponema pallidum sifiliz etkenidir; glomerüler tutulum yapan sistemik enfeksiyonlar arasında sayılır.
 - **Plasmodium falciparum** — Plasmodium falciparum sıtma etkenidir; glomerüler tutulum yapan sistemik enfeksiyonlardandır.
-- **Staphylococcus aureus** — Şiga toksini üretmez. Staphylococcus aureus bu sorudaki ayrımı sağlamaz.
+- **Staphylococcus aureus** — Staphylococcus aureus süperantijenleri ve enterotoksinleriyle toksik şok veya besin zehirlenmesi yapar ancak Şiga toksini üretmez; E. coli dışında doğrudan Şiga toksini salgılayarak tipik HÜS'e neden olan enterik patojen Shigella dysenteriae'dir.
 - **Shigella dysenteriae** — Shigella dysenteriae doğru: aynı toksini üreterek E. coli gibi endotel hasarı ve hemolitik üremik sendrom yapar.
 
 **Cevap: E** — Shigella dysenteriae
@@ -15274,7 +15274,7 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Klasik yolu başlatmak** — Bu faktörler bir yolu başlatmaz, frenler. Klasik yolu başlatmak bu sorudaki ayrımı sağlamaz.
+- **Klasik yolu başlatmak** — Faktör H, faktör I ve membran kofaktör proteini (MCP/CD46) klasik kompleman yolunu başlatmaz; aksine C3b'yi parçalayıp C3 konvertaz oluşumunu sınırlayarak alternatif kompleman yolunu baskılar ve konak endotelini kompleman hasarından korur.
 - **vWF multimerlerini parçalamak** — Ultra büyük vWF multimerlerini parçalamak ADAMTS13 proteazının görevidir; eksikliği trombotik trombositopenik purpura yapar.
 - **Alternatif yolu frenlemek** — Alternatif yolu frenlemek doğru: bu faktörler alternatif kompleman yolunu negatif düzenler, kusurlarında kompleman kontrolsüz aktive olur.
 - **Trombosit agregasyonunu artırmak** — Trombosit agregasyonunu artırmak bu faktörlerin işlevi değildir; agregasyon endotel hasarının sonucudur.
@@ -15350,7 +15350,7 @@ _35 soru (örnek + çıkmış)_
 - **Plazma değişimi** — Plazma değişimi doğru: trombotik trombositopenik purpurada prognozu belirgin biçimde iyileştirir.
 - **Böbrek nakli** — Böbrek nakli, diyalizle birlikte son dönem böbrek hastalığında seçeneklerden biridir; bu hastalıkta prognozu düzelten tedavi değildir.
 - **Kan basıncı kontrolü** — Kan basıncının hızlı ve kontrollü düşürülmesi malign hipertansiyonun acil tedavisidir.
-- **Sıkı glisemik kontrol** — Bu hastalığın mortalitesini düşüren yöntem dolaşımdaki plazmayı değiştirmeye dayanır. Sıkı glisemik kontrol bu sorudaki ayrımı sağlamaz.
+- **Sıkı glisemik kontrol** — Sıkı glisemik kontrol diyabetik nefropatinin gelişimini ve ilerlemesini yavaşlatan temel yaklaşımdır; ADAMTS13 eksikliği veya inhibitör otoantikorlarıyla gelişen TTP'de ise eksik enzimi yerine koyup otoantikorları uzaklaştırarak mortaliteyi %90'dan %15'in altına indiren hayat kurtarıcı tedavi acil plazma değişimidir (plazmaferez).
 
 **Cevap: B** — Plazma değişimi
 
@@ -15400,11 +15400,11 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Hipopotasemi ve metabolik alkaloz** — Hipopotasemi ve metabolik alkaloz ile karıştırılabilir: İlerleyen dönemde potasyum yükselir ve asidoz gelişir.
+- **Hipopotasemi ve metabolik alkaloz** — Hipopotasemi ve metabolik alkaloz kusma veya kıvrım/tiyazid diüretik kullanımında hidrojen ve potasyum kaybıyla gelişir; ilerlemiş kronik böbrek hastalığında ise nefronların potasyum ve sabit asit (hidrojen/amonyum) atılım kapasitesi çöktüğünden hiperpotasemi ve yüksek anyon açıklı metabolik asidoz beklenir.
 - **Hiperpotasemi ve metabolik asidoz** — Hiperpotasemi ve metabolik asidoz doğru: kronik böbrek hastalığının ilerleyen döneminde bu iki bozukluk birlikte görülür.
-- **Hipopotasemi ve metabolik asidoz** — Hipopotasemi ve metabolik asidoz ile karıştırılabilir: Asidoz gelişse de potasyum düşmez, yükselir.
-- **Hiperpotasemi ve metabolik alkaloz** — Potasyum yükselse de tabloya alkaloz değil asidoz eşlik eder. Hiperpotasemi ve metabolik alkaloz bu sorudaki ayrımı sağlamaz.
-- **Hipernatremi ve respiratuvar asidoz** — Hipernatremi ve respiratuvar asidoz ile karıştırılabilir: Buradaki bozukluk metabolik kökenlidir.
+- **Hipopotasemi ve metabolik asidoz** — İlerlemiş kronik böbrek hastalığında tübüler asit atılımının bozulmasıyla metabolik asidoz gelişir, ancak potasyum atılımı da azaldığı ve asidoz potasyumu hücre dışına çıkardığı için hipopotasemi değil hiperpotasemi görülür.
+- **Hiperpotasemi ve metabolik alkaloz** — İlerlemiş kronik böbrek yetmezliğinde potasyum atılımının azalmasıyla hiperpotasemi gelişir, ancak bikarbonat rejenerasyonu ve amonyum atılımı bozulduğu için buna alkaloz değil metabolik asidoz eşlik eder.
+- **Hipernatremi ve respiratuvar asidoz** — Respiratuvar asidoz akciğer ventilasyon yetmezliğinde karbondioksit birikimiyle oluşur; ilerlemiş kronik böbrek hastalığında ise sodyum-su tutulumu (dilüsyonel hiponatremi eğilimi) ile birlikte potasyum ve asit atılım kusuruna bağlı hiperpotasemi ve metabolik asidoz gelişir.
 
 **Cevap: B** — Hiperpotasemi ve metabolik asidoz
 
@@ -15418,17 +15418,17 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Sıtmaya direnç** — Bu varyantın koruduğu enfeksiyon başka bir parazittir. Sıtmaya direnç bu sorudaki ayrımı sağlamaz.
+- **Sıtmaya direnç** — Plasmodium falciparum sıtmasına karşı koruyucu seçilim sağlayan klasik genetik varyantlar orak hücre trait'i (HbAS), G6PD eksikliği ve talasemilerdir; Afrika kökenli bireylerde FSGS ve HIV nefropatisi riskini artıran APOL1 gen varyantları ise uyku hastalığı etkeni olan Trypanosoma brucei parazitlerini lizise uğratarak tripanosom enfeksiyonuna direnç sağlar.
 - **Tripanosom enfeksiyonuna direnç** — Tripanosom enfeksiyonuna direnç doğru: bu polimorfizmler tripanosoma karşı korurken böbrek hastalığı riskini artırır.
-- **HIV enfeksiyonuna direnç** — Bu genin bilinen koruyucu etkisi tripanosomlara karşıdır. HIV direnci bu sorudaki ayrımı sağlamaz.
-- **Diyabete karşı koruma** — Diyabete karşı koruma ile karıştırılabilir: Bu varyant bir enfeksiyona karşı direnç sağlar.
-- **Hipertansiyona karşı koruma** — Varyant böbrek hastalığı riskini artırır, korumaz. Hipertansiyona karşı koruma bu sorudaki ayrımı sağlamaz.
+- **HIV enfeksiyonuna direnç** — HIV enfeksiyonuna direnç sağlayan genetik varyant T hücre yüzeyindeki CCR5-delta32 koreseptör delesyonudur; APOL1 genindeki G1 ve G2 risk alelleri ise HIV'e karşı korumaz, aksine HIV ilişkili kollapsing glomerülopati riskini artırırken Afrika tripanosomlarına karşı koruma sağlar.
+- **Diyabete karşı koruma** — APOL1 gen polimorfizmleri diyabete karşı koruma sağlamaz; evrimsel olarak Afrika'da uyku hastalığına yol açan Trypanosoma parazitlerine karşı litik direnç sağladığı için seçilmiş, ancak homozigot bireylerde podosit hasarı ve kronik böbrek hastalığı riskini belirgin artırmıştır.
+- **Hipertansiyona karşı koruma** — APOL1 risk varyantları hipertansiyona karşı koruyucu değildir; aksine hipertansiyonla ilişkilendirilen nefroskleroz ve fokal segmental glomerüloskleroz gelişimini hızlandırırken evrimsel olarak yalnızca tripanosom enfeksiyonuna karşı direnç sağlar.
 
 **Cevap: B** — Tripanosom enfeksiyonuna direnç
 
 **Özet.** Afrika kökenli Amerikalılarda kronik böbrek hastalığı yaklaşık 5 kat sıktır; APOL1 polimorfizmleri tripanosoma direnç sağlarken böbrek riskini artırır.
 
-# 24 · Tübülointerstisyel Hastalıklar
+# Ders 24 (24) · Tübülointerstisyel Hastalıklar
 
 _31 soru (örnek + çıkmış)_
 
@@ -15460,9 +15460,9 @@ _31 soru (örnek + çıkmış)_
 
 - **Hematogen** — Hematogen yayılım daha az yaygındır; sepsis ya da endokardit gibi bakteriyemik durumlarda görülür.
 - **Asenden (yükselen)** — Asenden yol doğru: enterik bakteriler distal üretrayı kolonize eder, mesanede çoğalır ve reflüyle böbreğe ulaşır.
-- **Lenfatik** — Lenfatik yayılım ile karıştırılabilir: Böbreğe ulaşmanın iki başlıca yolu yükselen ve hematogen yoldur.
-- **Doğrudan komşuluk** — Kadınlarda kısa üretra ve rektuma yakınlık yükselen enfeksiyon riskini artırır. Doğrudan komşuluk bu sorudaki ayrımı sağlamaz.
-- **Perinöral** — Perinöral yayılım ile karıştırılabilir: Yükselen enfeksiyonu idrar stazı ve vezikoüreteral reflü kolaylaştırır.
+- **Lenfatik** — Lenfatik yayılım epitelyal malignitelerin (karsinomların) bölgesel lenf düğümlerine metastaz yapmasında ana yoldur; akut bakteriyel piyelonefritte ise fekal floradaki enterik bakteriler %85'ten fazla olguda üretra, mesane ve üreter üzerinden asenden (yükselen) yolla böbreğe ulaşır.
+- **Doğrudan komşuluk** — Doğrudan komşulukla yayılım perinefrik apse veya kolon tümörü gibi nadir lokal patolojilerde görülür; akut piyelonefritte en sık mekanizma ise alt üriner sistemdeki bakterilerin vezikoüreteral reflü ve staz yardımıyla yukarı doğru asenden yayılmasıdır.
+- **Perinöral** — Perinöral yayılım prostat ve pankreas karsinomu gibi malign tümörlerin sinir kılıfları boyunca ilerlemesidir; akut piyelonefritte bakterilerin böbrek pelvisine ve parankimine ulaştığı en sık yol ise üretradan yukarı çıkan asenden yoldur.
 
 **Cevap: B** — Asenden (yükselen)
 
@@ -15476,11 +15476,11 @@ _31 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Eritrosit silendiri** — Piyelonefritte enflamatuvar hücre nötrofildir ve kortekste sarımsı apseler oluşur. Eritrosit silendiri bu sorudaki ayrımı sağlamaz.
+- **Eritrosit silendiri** — Eritrosit silendiri glomerüler kapiller duvar yırtılmasından geçen eritrositlerin tübül lümeninde Tamm–Horsfall proteiniyle kalıplaşmasıdır ve akut nefritik sendromu gösterir; akut piyelonefritte enfeksiyonun alt idrar yolundan böbrek tübüllerine ulaştığını kanıtlayan bulgu ise lökosit (nötrofil) silendiridir.
 - **Bakteriüri** — Bakteriüri akut piyelonefritte görülür, ancak enfeksiyonun mesanede mi böbrekte mi olduğunu göstermez.
 - **Lökosit silendiri** — Lökosit silendiri doğru: nötrofiller toplayıcı kanallara uzanır, bu da enflamasyonun böbrek parankiminde olduğunu gösterir.
-- **Glukozüri** — Glukozüri ile karıştırılabilir: Akut piyelonefritin idrar bulguları piüri, bakteriüri ve hematüridir.
-- **Hyalin silendir** — Akut piyelonefritte glomerüller genellikle korunur, enflamasyon tübül ve interstisyumdadır. Hyalin silendir bu sorudaki ayrımı sağlamaz.
+- **Glukozüri** — Glukozüri diyabette veya proksimal tübül geri emilim kusurlarında (Fanconi sendromu) idrara şeker geçmesidir; sistitten farklı olarak akut piyelonefritte enfeksiyonun böbrek parankimine ve tübüllerine çıktığını gösteren özgül idrar bulgusu ise lökosit silendiridir.
+- **Hyalin silendir** — Hiyalin silendir yalnız Tamm–Horsfall proteininden oluşan, egzersiz veya konsantre idrarda sağlıklı bireylerde de görülebilen hücresiz silendirdir; akut piyelonefritte tübül lümenini dolduran nötrofillerin oluşturduğu tanısal bulgu ise lökosit silendiridir.
 
 **Cevap: C** — Lökosit silendiri
 
@@ -15494,11 +15494,11 @@ _31 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Hipertiroidi** — Hipertiroidi ile karıştırılabilir: Papiller nekroz böbrek papillalarının uçlarında iskemik ve süpüratif nekrozdur.
-- **IgA nefropatisi** — Papiller nekroz akut piyelonefritin özel bir formudur. IgA nefropatisi bu sorudaki ayrımı sağlamaz.
-- **Alport sendromu** — Alport sendromu ile karıştırılabilir: Papiller nekrozda atılan papilla parçaları kolik, hematüri ve tıkanma yapar.
+- **Hipertiroidi** — Hipertiroidi metabolizma hızını ve kalp debisini artıran endokrin bir hastalıktır ve renal medüller iskemi yapmaz; böbrek piramit uçlarında (papillalarda) vaza rektaların bozulması ve enfeksiyonla nekroz gelişmesine (papiller nekroz) zemin hazırlayan klasik durumlar ise diyabetes mellitus, üriner obstrüksiyon, analjezik nefropatisi ve orak hücreli anemidir.
+- **IgA nefropatisi** — IgA nefropatisi üst solunum yolu enfeksiyonu sonrası tekrarlayan hematüriyle seyreden mezangiyal bir glomerülonefrittir; renal papillaların iskemik ve süpüratif koagülatif nekrozuna (papiller nekroza) en sık zemin hazırlayan hastalık ise diyabetes mellitustur.
+- **Alport sendromu** — Alport sendromu tip IV kollajen mutasyonuyla glomerüler bazal membran incelmesi ve yarılması yapan kalıtsal nefrittir; akut piyelonefrit seyrinde renal papillaların nekroza uğramasına (papiller nekroz) zemin hazırlayan başlıca sistemik hastalık ise diyabetes mellitustur.
 - **Diyabetes mellitus** — Diyabetes mellitus doğru: papiller nekroz sıklıkla diyabet, idrar yolu tıkanıklığı ve orak hücreli anemi zemininde gelişir.
-- **Lupus** — Lupus ile karıştırılabilir: Papiller nekrozun prognozu kötüdür, yaygın parankim hasarıyla ilişkilidir.
+- **Lupus** — Sistemik lupus eritematozus böbrekte immün kompleks aracılı glomerülonefrit yapar; renal medullanın kanlanmasını bozup piyelonefrit zemininde bilateral veya tek taraflı renal papiller nekroza yol açan en önemli hastalık ise diyabetes mellitustur.
 
 **Cevap: D** — Diyabetes mellitus
 
@@ -15512,9 +15512,9 @@ _31 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Simetrik ince granüler yüzey** — Kronik piyelonefritte skarlaşma genellikle asimetriktir. Simetrik ince granüler yüzey bu sorudaki ayrımı sağlamaz.
-- **Pire ısırığı görünümü** — Pire ısırığı görünümü ile karıştırılabilir: Kronik piyelonefrit enfeksiyon ataklarıyla fokal ya da yaygın skarlaşma yapar.
-- **Çok sayıda büyük kist** — Kronik piyelonefritte tübüller atrofik ya da dilate olur, lümende kolloid döküntü bulunur. Çok sayıda büyük kist bu sorudaki ayrımı sağlamaz.
+- **Simetrik ince granüler yüzey** — Simetrik, ince granüler böbrek yüzeyi kronik glomerülonefrit ve benign nefroskleroz gibi her iki böbreği homojen tutan hastalıkların makroskopik özelliğidir; kronik piyelonefritte ise reflü ve enfeksiyon odakları yamalı olduğundan genişlemiş-küntleşmiş kalikslerin üzerinde kaba, derin ve asimetrik kortikomedüller skarlar görülür.
+- **Pire ısırığı görünümü** — Pire ısırığı görünümü malign nefrosklerozda korteks yüzeyindeki çok sayıda noktasal peteşiyal kanamayı tanımlar; kronik piyelonefritin tanısal makroskopik bulgusu ise deforme ve dilate kalikslerin hemen üzerinde yer alan kaba, düzensiz kortikomedüller skarlaşmadır.
+- **Çok sayıda büyük kist** — Çok sayıda büyük kist otozomal dominant polikistik böbrek hastalığında böbrekleri devasa boyutlara ulaştıran bulgudur; kronik piyelonefritte ise parankim kaybı nedeniyle böbrek asimetrik küçülür ve kaliks tepelerinde kaba kortikomedüller skarlar oluşur.
 - **Sarımsı kortikal apseler** — Sarımsı kortikal apseler akut piyelonefritin makroskopik bulgusudur; kronik formda değil, aktif süpüratif enflamasyonda görülür.
 - **Kaliks üzerinde kaba kortikomedüller skar** — Kaliks üzerinde kaba kortikomedüller skar doğru: kronik piyelonefritte skarlar papillalara komşu yerleşir, kalikslerde küntleşme ve deformite eşlik eder.
 
@@ -15533,8 +15533,8 @@ _31 soru (örnek + çıkmış)_
 - **Kolloid döküntüler** — Kolloid döküntüler doğru: kronik piyelonefritte atrofik ve dilate tübül lümenlerinde tiroid foliküllerini andıran materyal bulunur.
 - **Lökosit silendiri** — Lökosit silendiri akut piyelonefritte nötrofillerin toplayıcı kanallara uzanmasıyla idrarda görülen bulgudur.
 - **Tamm-Horsfall silendiri** — Tamm-Horsfall silendiri akut tübüler hasarda distal tübül ve toplayıcı kanallarda üromodülin ve plazma proteinlerinden oluşur.
-- **Amiloid** — Kronik piyelonefritte interstisyumda lenfosit, plazma hücresi ve nötrofil infiltrasyonu ile yamalı fibrozis vardır. Amiloid bu sorudaki ayrımı sağlamaz.
-- **Kalsiyum kristali** — Kalsiyum kristali ile karıştırılabilir: Tiroid benzeri görünüm, kronik piyelonefritte tübül atrofisi ve dilatasyonuna eşlik eder.
+- **Amiloid** — Amiloid glomerül mezangiumunda ve damar duvarlarında biriken, Kongo kırmızısı pozitif hücre dışı fibriler proteindir; kronik piyelonefritte atrofik epitel ile döşeli genişlemiş tübül lümenlerini doldurarak tiroid foliküllerini taklit eden pembe camsı materyal ise Tamm–Horsfall proteininden zengin kolloid (hiyalin) döküntülerdir.
+- **Kalsiyum kristali** — Kalsiyum oksalat veya fosfat kristalleri nefrolitiazis ve nefrokalsinoziste bazofilik/çift kırılımlı çökeltiler oluşturur; kronik piyelonefritte dilate tübüllerin içinde tiroidizasyon görünümünü veren homojen pembe yapılar ise proteinöz kolloid döküntülerdir.
 
 **Cevap: A** — Kolloid döküntüler
 
@@ -15550,7 +15550,7 @@ _31 soru (örnek + çıkmış)_
 
 - **Akut piyelonefrit** — Akut piyelonefrit ani ateş, yan ağrısı, piüri ve lökosit silendirleriyle seyreder; eozinofili ve döküntü beklenmez.
 - **İlaç kaynaklı akut TIN** — İlaca bağlı akut TIN doğru: ilaçtan 1–2 hafta sonra ateş, eozinofili, döküntü ve böbrek fonksiyon bozukluğu başlar.
-- **Poststreptokokal GN** — Antibiyotikten sonra eozinofili ve döküntü, tübül ve interstisyumdaki aşırı duyarlılığı düşündürür. Poststreptokokal GN bu sorudaki ayrımı sağlamaz.
+- **Poststreptokokal GN** — Akut poststreptokokal glomerülonefrit boğaz veya cilt enfeksiyonundan 1–4 hafta sonra hematüri, ödem ve hipertansiyonla başlar, ateş-döküntü-eozinofili üçlüsü yapmaz; penisilin, sefalosporin veya NSAİİ başlandıktan yaklaşık 10 gün sonra ateş, makülopapüler döküntü, eozinofili ve akut böbrek hasarı gelişmesi ise ilaç kaynaklı akut tübülointerstisyel nefritin (TIN) klasik tablosudur.
 - **Papiller nekroz** — Papiller nekroz diyabet, tıkanıklık ve orak hücreli anemi zemininde gelişir; kolik ve hematüriyle seyreder.
 - **Kronik piyelonefrit** — Kronik piyelonefrit tekrarlayan enfeksiyon atakları sonucu kaba skarlaşma yapar; antibiyotikten günler sonra başlayan alerjik tablo değildir.
 
@@ -15566,11 +15566,11 @@ _31 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **İmmün kompleks** — İmmün kompleks ile karıştırılabilir: İlaca bağlı TIN tip I ve tip IV aşırı duyarlılık reaksiyonlarıyla gelişir.
-- **Amiloid** — İlaca bağlı TIN'de interstisyel ödem ve lenfosit, makrofaj, eozinofil infiltrasyonu görülür. Amiloid bu sorudaki ayrımı sağlamaz.
+- **İmmün kompleks** — Dolaşan immün kompleks birikimi postenfeksiyöz glomerülonefrit ve lupus nefritinin mekanizmasıdır; ilaç kaynaklı akut TIN'de ise tübüllerden salgılanan ilaç (hapten) tübül hücre proteinlerine kovalent bağlanarak konak bağışıklığının yabancı olarak tanıdığı bir neoantijen oluşturur ve tip I/IV aşırı duyarlılığı tetikler.
+- **Amiloid** — Amiloid yanlış katlanmış proteinlerin beta-pileli tabaka halinde hücre dışında çökmesidir; ilaç kaynaklı akut TIN patogenezinde ise penisilin veya sülfonamid gibi ilaçlar tübül epitel bileşenlerine bağlanıp onları immünojenik hale getirerek neoantijen oluşturur.
 - **Neoantijen** — Neoantijen doğru: tübüllerce salgılanan ilaç hücre bileşenlerine kovalent bağlanır, oluşan neoantijene karşı bağışıklık yanıtı hasar yapar.
-- **Süperantijen** — Bazı ilaçlarda, örneğin tiyazid ve rifampinde, dev hücreli nekrotik olmayan granülomlar görülür. Süperantijen bu sorudaki ayrımı sağlamaz.
-- **Otoantikor** — Otoantikor ile karıştırılabilir: Tip IV aşırı duyarlılıkta deri testleri pozitif olabilir, tip I aşırı duyarlılıkta serum IgE artabilir.
+- **Süperantijen** — Süperantijenler (örneğin toksik şok sendromu toksini) antijen işlenmesine gerek duymadan MHC sınıf II ve T hücre reseptörüne dıştan bağlanarak poliklonal T hücre fırtınası başlatır; ilaç kaynaklı TIN'de ise ilaç tübüler proteinlere hapten olarak bağlanıp özgül bir neoantijen oluşturur.
+- **Otoantikor** — Otoantikorlar konakçının kendi doğal antijenlerine karşı oluşan antikorlardır; ilaç kaynaklı akut tübülointerstisyel nefritte ise ilacın kendisi hapten gibi davranıp tübül sitoplazma veya bazal membran proteinlerini değiştirerek yeni bir antijenik yapı (neoantijen) meydana getirir.
 
 **Cevap: C** — Neoantijen
 
@@ -15588,7 +15588,7 @@ _31 soru (örnek + çıkmış)_
 - **İlaç kaynaklı TIN** — İlaca bağlı TIN olguların yaklaşık %50'sinde akut böbrek yetmezliği yapar, ancak en sık neden değildir.
 - **Papiller nekroz** — Papiller nekroz akut piyelonefritin özel bir formudur; kötü prognozludur, ama akut böbrek yetmezliğinin en sık nedeni değildir.
 - **Akut tübüler hasar** — Akut tübüler hasar doğru: iskemik ya da nefrotoksik tübül epitel hasarı akut böbrek yetmezliğinin en sık nedenidir.
-- **Hidronefroz** — Akut böbrek yetmezliği tabloları arasında en sık olanı tübül epitel hücrelerinin hasarıdır. Hidronefroz bu sorudaki ayrımı sağlamaz.
+- **Hidronefroz** — Hidronefroz idrar akımının tıkanması sonucu renal pelvis ve kalikslerin genişlemesi olup postrenal böbrek yetmezliği nedenidir; klinikte akut böbrek hasarının (akut böbrek yetmezliğinin) tüm olgular içinde en sık nedeni ise iskemi veya nefrotoksinlerle gelişen akut tübüler hasardır (ATN).
 
 **Cevap: D** — Akut tübüler hasar
 
@@ -15621,10 +15621,10 @@ _31 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Tamm-Horsfall proteini** — Tamm-Horsfall proteini doğru: distal tübül ve toplayıcı kanallardaki silendirler bu proteinden, yani üromodülinden ve plazma proteinlerinden oluşur.
-- **Bence Jones proteini** — Bence Jones proteini ile karıştırılabilir: Akut tübüler hasarda silendirler granüler döküntü ve dökülen hücrelerle birlikte oluşur.
+- **Bence Jones proteini** — Bence Jones proteini multipl miyelomda plazma hücrelerinin ürettiği serbest immünoglobulin hafif zincirleridir ve miyelom silendiri nefropatisi yapar; fizyolojik koşullarda ve akut tübüler hasarda distal tübül ve toplayıcı kanallardaki silendirlerin ana matriksini oluşturan glikoprotein ise Henle çıkan kalın kolundan salgılanan Tamm–Horsfall proteinidir (üromodülin).
 - **Miyoglobin** — Miyoglobin bir pigmenttir ve nefrotoksik akut tübüler hasar nedenidir; silendirlerin ana bileşeni değildir.
-- **Fibrin** — Fibrin ile karıştırılabilir: Akut tübüler hasarda epitel hücreleri bazal membrandan ayrılıp lümene dökülür.
-- **IgA** — Akut tübüler hasar bir immün kompleks hastalığı değil, tübül epitel hasarıdır. IgA bu sorudaki ayrımı sağlamaz.
+- **Fibrin** — Fibrin koagülasyon kaskadının son ürünü olup ağır kresentik glomerülonefritte Bowman boşluğuna sızar; akut tübüler hasarda lümene dökülen nekrotik epitel hücrelerini birbirine bağlayarak granüler silendirlerin çatısını kuran protein ise Tamm–Horsfall proteinidir.
+- **IgA** — IgA mukozal yüzeyleri koruyan ve IgA nefropatisinde mezangiumda biriken immünoglobulindir; distal tübülde lümene salgılanıp hücre kalıntılarını hapsederek silendirlerin temel protein matriksini oluşturan ise Tamm–Horsfall proteinidir.
 
 **Cevap: A** — Tamm-Horsfall proteini
 
@@ -15641,7 +15641,7 @@ _31 soru (örnek + çıkmış)_
 - **Anüri** — Anüri iyileşme evresinde beklenmez; idrar çıkışının en düşük olduğu dönem oligürik evredir.
 - **Poliüri** — Poliüri doğru: iyileşme, yani diüretik evrede tübül fonksiyonu düzelmeye başlar, idrar miktarı artar ve elektrolit kaybı olur.
 - **Hiperkalemi artışı** — Hiperkalemi artışı oligürik evrede azotemi, asidoz ve üremiyle birlikte belirgindir; iyileşme evresinde elektrolit kaybı öne çıkar.
-- **Hematüri** — Akut tübüler hasarın evreleri idrar miktarındaki değişimle tanımlanır. Hematüri bu sorudaki ayrımı sağlamaz.
+- **Hematüri** — Hematüri glomerülonefritlerin, taşların veya ürotelyal tümörlerin bulgusudur; akut tübüler hasarın iyileşme (rejenerasyon) evresinde ise glomerüler filtrasyon normale dönerken rejenere olan immatür tübül epiteli suyu ve sodyumu henüz konsantre edemediği için günde 3 litreyi aşan poliüri ve elektrolit kaybı görülür.
 - **Oligüri** — Oligüri oligürik evrenin bulgusudur; belirgin oligüri ve GFR düşüklüğü bu evreyi tanımlar.
 
 **Cevap: B** — Poliüri
@@ -15656,11 +15656,11 @@ _31 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Tip I ve Tip IV hipersensitivite ilişkili reaksiyonlar** — Tip I ve Tip IV aşırı duyarlılık reaksiyonları ilaca bağlı TIN'in temel mekanizmasıdır; ifade doğru olduğu için cevap değildir.
+- **Tip I ve Tip IV hipersensitivite ilişkili reaksiyonlar** — Tip I (IgE ve eozinofil aracılı) ve özellikle tip IV (T lenfosit aracılı gecikmiş) hipersensitivite reaksiyonları, ilaç kaynaklı akut tübülointerstisyel nefritin temel immünolojik mekanizmasını oluşturur.
 - **Doza bağlı olarak değişen immün yanıt gelişimi** — Doza bağlı immün yanıt ifadesi yanlıştır; ilaca bağlı TIN idiosenkratik, yani kişiye özgü seyreder, bu yüzden doğru cevaptır.
-- **İlaçların tübül sekresyonu sırasında hapten gibi davranması** — İlacın tübüllerden salgılanırken hücre bileşenlerine kovalent bağlanıp neoantijen oluşturması patogenezin parçasıdır; cevap değildir.
+- **İlaçların tübül sekresyonu sırasında hapten gibi davranması** — Küçük moleküllü ilaçların tübüler sekresyon sırasında hücre proteinlerine kovalent bağlanarak hapten gibi davranması ve neoantijen oluşturması ilaç kaynaklı akut TIN patogenezinin başlangıç adımıdır.
 - **IgE ve hücre aracılı immün reaksiyonlar** — IgE ve hücre aracılı reaksiyonlar rol oynar; Tip I'de serum IgE artabilir, Tip IV'te deri testleri pozitif olur.
-- **Lenfosit, makrofaj infiltrasyonu ve eozinofil varlığı ile hasar oluşumu** — Lenfosit, makrofaj ve eozinofil infiltrasyonu ilaca bağlı TIN'in tipik morfolojisidir; ifade doğru olduğu için cevap değildir.
+- **Lenfosit, makrofaj infiltrasyonu ve eozinofil varlığı ile hasar oluşumu** — İnterstisyumda ödemle birlikte T lenfosit, makrofaj ve belirgin eozinofil infiltrasyonunun tübül epitelini hasarlaması (tübülit) ilaç kaynaklı akut TIN'in karakteristik histopatolojik bulgusudur; yanlış olan ifade reaksiyonun doza bağlı olduğudur, çünkü bu tablo idiyosenkratik olup doza bağımlı değildir.
 
 **Cevap: B** — Doza bağlı olarak değişen immün yanıt gelişimi
 
@@ -15676,9 +15676,9 @@ _31 soru (örnek + çıkmış)_
 
 - **Akut piyelonefrit** — Akut piyelonefritte tübül ve interstisyumda nötrofilden zengin enflamasyon ve kortikal apseler görülür; tiroidizasyon kronik dönemin bulgusudur.
 - **Renal papiller nekroz** — Renal papiller nekroz papilla uçlarında iskemik ve süpüratif nekrozdur; akut piyelonefritin özel bir formudur.
-- **Kronik sistit** — Kronik sistit ile karıştırılabilir: Sistit alt idrar yolu enfeksiyonudur, tiroidizasyon ise böbrek tübüllerinde görülür.
+- **Kronik sistit** — Kronik sistit mesane mukozasıyla sınırlı bir alt üriner sistem iltihabıdır ve böbrek tübüllerini etkilemez; atrofik tübüllerin lümeninin pembe kolloid silendirlerle dolarak tiroid dokusuna benzemesi (tiroidizasyon) kronik piyelonefritin karakteristik mikroskopik bulgusudur.
 - **Kronik piyelonefrit** — Kronik piyelonefrit doğru: atrofik ve dilate tübül lümenlerinde tiroid foliküllerini andıran kolloid döküntüler, yani tiroidizasyon görülür.
-- **Kronik glomerülonefrit** — Kronik glomerülonefrit ile karıştırılabilir: Tiroidizasyon tübül lümenindeki kolloid döküntülerle tanımlanır ve kronik piyelonefrite aittir.
+- **Kronik glomerülonefrit** — Kronik glomerülonefritte birincil hasar glomerüllerin skleroz ve hiyalinizasyonudur; kaliks deformitesi, kaba kortikomedüller skar ve dilate tübüllerde kolloid silendirlerle oluşan tiroidizasyon görünümü ise kronik piyelonefrite özgüdür.
 
 **Cevap: D** — Kronik piyelonefrit
 
@@ -15713,7 +15713,7 @@ _31 soru (örnek + çıkmış)_
 - **İdrar stazı** — İdrar stazı doğru: asenden enfeksiyonun üçüncü basamağı olan mesanede çoğalma, idrar stazı varsa kolaylaşır.
 - **Hematogen yayılım** — Hematogen yayılım bakterinin kan yoluyla böbreğe ulaşmasıdır; mesanede çoğalma basamağıyla ilgisi yoktur.
 - **Kateterizasyon** — Kateterizasyon bakterinin mesaneye ulaşmasını kolaylaştıran ikinci basamağın olayıdır; çoğalmayı değil girişi kolaylaştırır.
-- **Glomerüler hasar** — Akut piyelonefritte glomerüller genellikle korunur. Glomerüler hasar bu sorudaki ayrımı sağlamaz.
+- **Glomerüler hasar** — Glomerüler hasar proteinüri veya hematüri yapar ancak mesanedeki bakterilerin çoğalmasını doğrudan etkilemez; normalde idrarın yıkayıcı akımı bakterileri uzaklaştırırken, benign prostat hiperplazisi, taş veya nörojenik mesaneye bağlı idrar stazı bakterilerin mesanede hızla çoğalmasını kolaylaştırır.
 - **Tübüler sekresyon** — Tübüler sekresyon ilaca bağlı tübülointerstisyel nefritte ilacın tübül hücreleriyle temasını sağlar.
 
 **Cevap: A** — İdrar stazı
@@ -15786,7 +15786,7 @@ _31 soru (örnek + çıkmış)_
 - **Eozinofil** — Eozinofil ilaca bağlı tübülointerstisyel nefritte infiltrata sık katılan hücredir.
 - **Plazma hücresi** — Plazma hücresi lenfositlerle birlikte kronik piyelonefritin infiltratında görülür.
 - **Dev hücre** — Dev hücreler tiyazid ve rifampine bağlı nefritte nekrotik olmayan granülomlarda bulunur.
-- **Mast hücresi** — Mast hücresi ile karıştırılabilir: Akut piyelonefrit infiltratı nötrofil baskındır.
+- **Mast hücresi** — Mast hücresi alerjik tip I reaksiyonlarda histamin salan bağ dokusu hücresidir; akut bakteriyel piyelonefritte interstisyumu istila eden, tübülleri yıkarak lümene dolan ve lökosit silendirlerini oluşturan baskın iltihap hücresi ise nötrofildir.
 
 **Cevap: A** — Nötrofil
 
@@ -15836,7 +15836,7 @@ _31 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Hematüri görülmemesi** — Akut piyelonefritte idrarda bakteriüri ile birlikte hematüri de görülebilir. Hematüri görülmemesi bu sorudaki ayrımı sağlamaz.
+- **Hematüri görülmemesi** — Akut piyelonefritte mukozal hiperemi ve inflamasyon nedeniyle mikroskopik veya makroskopik hematüri sıkça görülür; hastalığın akut böbrek yetmezliğine nadiren yol açmasının gerçek nedeni enfeksiyonun genellikle tek taraflı kalması ve sağlam karşı böbreğin filtrasyonu sürdürmesidir.
 - **Bakteriüri olmaması** — Bakteriüri olmaması yanlıştır; akut piyelonefritte idrarda bakteriüri görülür.
 - **Genellikle tek taraflı olması** — Tek taraflı tutulum doğru: karşı böbrek çalıştığı için hastalık iki taraflı olmadıkça böbrek yetmezliği nadirdir.
 - **Nötrofillerin azlığı** — Nötrofillerin azlığı yanlıştır; inflamasyon nötrofilden zengindir.
@@ -15856,8 +15856,8 @@ _31 soru (örnek + çıkmış)_
 
 - **Sekonder glomeruloskleroz** — Sekonder glomeruloskleroz doğru: kronik piyelonefritte proteinüri bu ikincil glomerül sklerozuyla ilişkilidir.
 - **Podosit silinmesi** — Podosit ayak uzantılarında silinme steroid olmayan antiinflamatuvar ilaçlara bağlı nefritte nefrotik tablo yapar.
-- **Hilal oluşumu** — Hilal oluşumu ile karıştırılabilir: Kronik piyelonefritte glomerüllerdeki değişiklik sklerozdur.
-- **İmmün kompleks birikimi** — Kronik piyelonefrit tekrarlayan bakteriyel enfeksiyonla gelişir. İmmün kompleks birikimi bu sorudaki ayrımı sağlamaz.
+- **Hilal oluşumu** — Hilal (kresent) oluşumu hızlı ilerleyen glomerülonefritte (RPGN) akut kapiller yırtılma sonucu gelişir; kronik piyelonefritte ise geniş parankim ve nefron kaybına bağlı olarak kalan sağlam nefronlarda adaptif hiperfiltrasyon ve hipertansiyon gelişir, bu da sekonder fokal segmental glomerüloskleroza ve proteinüriye yol açar.
+- **İmmün kompleks birikimi** — İmmün kompleks birikimi postenfeksiyöz veya lupus nefriti gibi birincil glomerül hastalıklarının mekanizmasıdır; kronik piyelonefritte ileri dönemde ortaya çıkan proteinürinin nedeni ise nefron kaybına uyum sağlamaya çalışan kalan glomerüllerde gelişen sekonder fokal segmental glomerülosklerozdur.
 - **Proksimal tübül nekrozu** — Proksimal tübüllerde yaygın nekroz nefrotoksik akut tübüler hasarın bulgusudur.
 
 **Cevap: A** — Sekonder glomeruloskleroz
@@ -15947,8 +15947,8 @@ _31 soru (örnek + çıkmış)_
 - **Tübüloglomerüler geri besleme** — Tübüloglomerüler geri besleme hücre membran hasarı mekanizmasıdır; artan distal sodyum vazokonstriksiyon başlatır.
 - **İntratübüler basınç artışı** — İntratübüler basınç artışı doğru: dökülen hücre ve granüler döküntü lümende tıkaç yapar, basınç artar ve filtrasyon düşer.
 - **Geri filtrasyon** — Geri filtrasyon üçüncü mekanizmadır; sıvı hasarlı duvardan interstisyuma sızar ve ödem yapar.
-- **Efferent arteriyol dilatasyonu** — Efferent arteriyol dilatasyonu ile karıştırılabilir: Akut tübüler hasarda afferent arteriyolde vazokonstriksiyon vardır.
-- **Glomerüler bazal membran yırtığı** — Akut tübüler hasarda temel olay tübül epitel hücrelerinin hasarıdır. Glomerüler bazal membran yırtığı bu sorudaki ayrımı sağlamaz.
+- **Efferent arteriyol dilatasyonu** — Efferent arteriyol dilatasyonu ACE inhibitörlerinin glomerül içi basıncı düşürme mekanizmasıdır; akut tübüler hasarda ise dökülen nekrotik hücrelerin oluşturduğu silendirler tübülü tıkayarak intratübüler basıncı artırır, ayrıca tübüloglomerüler geri bildirimle afferent arteriyol kasılır ve GFR düşer.
+- **Glomerüler bazal membran yırtığı** — Glomerüler bazal membran yırtığı anti-GBM hastalığı veya ANCA vaskülitleri gibi kresentik glomerülonefritlerde görülür; akut tübüler hasarda glomerül yumağı yapısal olarak sağlamdır, GFR düşüşü lümene dökülen hücrelerin tübülü tıkayıp intratübüler basıncı artırması ve intertisyuma sıvı sızmasıyla gelişir.
 
 **Cevap: B** — İntratübüler basınç artışı
 
@@ -15962,11 +15962,11 @@ _31 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Glomerüler yumak** — Glomerüler yumak ile karıştırılabilir: Akut tübüler hasar tübül epitelinin hasarıdır.
+- **Glomerüler yumak** — Glomerüler yumak iskemik akut tübüler hasarda ışık mikroskobunda normal görünümünü korur; metabolik aktivitesi yüksek ve medüller kanlanması sınırlı olduğu için iskemik ATN'de fokal nekrozların en duyarlı iki yerleşimi proksimal tübülün düz (S3) segmenti ve Henle kulpunun çıkan kalın koludur.
 - **Toplayıcı kanallar** — Toplayıcı kanallarda her iki tipte ortak olarak granüler döküntü ve silendirler görülür; lezyonun odağı burası değildir.
 - **Papilla uçları** — Papilla uçlarında iskemik ve süpüratif nekroz papiller nekrozun özelliğidir.
 - **Henle çıkan kalın kolu** — Henle çıkan kalın kolu doğru: iskemik tipte odaksal lezyonlar proksimal tübül düz segmentleri ve Henle çıkan kalın kolunda yerleşir.
-- **Bowman kapsülü** — Bowman kapsülü ile karıştırılabilir: İskemik lezyonlar tübül epitelindedir.
+- **Bowman kapsülü** — Bowman kapsülü glomerül yumağını çevreleyen dış kılıftır ve akut tübüler hasarın hedefi değildir; iskemik akut tübüler hasarda yüksek aktif taşıma yükü nedeniyle en çok zarar gören tübül bölgeleri proksimal tübülün düz kısmı ile medulladaki Henle çıkan kalın koludur.
 
 **Cevap: D** — Henle çıkan kalın kolu
 
@@ -15982,15 +15982,15 @@ _31 soru (örnek + çıkmış)_
 
 - **Hipokalemi** — Hipokalemi bu evrede beklenmez; elektrolit kaybı iyileşme evresindeki poliüride olur.
 - **Hiperkalemi** — Hiperkalemi doğru: oligürik evrede azotemi, asidoz ve üremiyle birlikte potasyum yükselir.
-- **Hipernatremi** — Oligürik evrede belirginleşen bozukluk potasyum yüksekliğidir. Hipernatremi bu sorudaki ayrımı sağlamaz.
-- **Hiperkalsemi** — Hiperkalsemi ile karıştırılabilir: Oligürik evrenin tipik bulguları arasında sayılmaz.
-- **Metabolik alkaloz** — Oligürik evrede alkaloz değil asidoz belirginleşir. Metabolik alkaloz bu sorudaki ayrımı sağlamaz.
+- **Hipernatremi** — Akut tübüler hasarın oligürik evresinde su ve tuz atılımı azaldığından sıvı yüklenmesi ve dilüsyonel hiponatremi eğilimi olur; idrarla potasyum atılamaması ve metabolik asidoz nedeniyle yaşamı en çok tehdit eden karakteristik elektrolit bozukluğu ise hiperkalemidir (hiperpotasemidir).
+- **Hiperkalsemi** — Akut tübüler hasarın oligürik evresinde fosfat tutulumu ve D vitamini aktivasyon azlığı nedeniyle hiperkalsemi değil hipokalsemi eğilimi görülür; böbrekten potasyum atılımının durmasıyla belirginleşen ve ölümcül aritmilere yol açabilen temel elektrolit bozukluğu ise hiperkalemidir.
+- **Metabolik alkaloz** — Metabolik alkaloz hidrojen kaybı veya bikarbonat fazlalığında görülür; akut tübüler hasarın oligürik evresinde ise böbrekten günlük metabolik asit yükü atılamadığı için anyon açıklı metabolik asidoz ve potasyum birikimine bağlı hiperkalemi gelişir.
 
 **Cevap: B** — Hiperkalemi
 
 **Özet.** Akut tübüler hasarın oligürik evresinde azotemi, asidoz, hiperkalemi ve üremi belirginleşir; iyileşme evresinde ise poliüri ve elektrolit kaybı olur.
 
-# 25 · Vasküler ve Kistik Böbrek Hastalıkları
+# Ders 25 (25) · Vasküler ve Kistik Böbrek Hastalıkları
 
 _38 soru (örnek + çıkmış)_
 
@@ -16003,7 +16003,7 @@ _38 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **Wilms tümörü** — Wilms tümörü edinilmiş kistik hastalığın getirdiği bir risk değil; bu tabloda artan risk, diyaliz hastasının kistik böbreğinde gelişen renal hücreli karsinomdur.
-- **Transizyonel hücreli karsinom** — Transizyonel hücreli karsinom bu tabloda artan risk olarak geçmez; uzun süre diyaliz alan bu hastalarda özellikle kistik tümörler gelişebilir.
+- **Transizyonel hücreli karsinom** — Transizyonel hücreli (ürotelyal) karsinom renal pelvis, üreter ve mesanenin döşeyici ürotelyumundan gelişir ve analjezik nefropatisi veya sigara ile ilişkilidir; uzun süreli hemodiyaliz hastalarında gelişen edinilmiş kistik böbrek hastalığında ise atipik kist epitelinden renal hücreli karsinom gelişme riski 12–18 kat artar.
 - **Renal hücreli karsinom** — Renal hücreli karsinom doğru: uzun süre diyaliz alan hastaların kistik böbreğinde bu risk yaklaşık 100 kat artar.
 - **Anjiyomiyolipom** — Anjiyomiyolipom bu hastalıkla ilişkilendirilen tümör değil; edinilmiş kistik hastalıkta renal hücreli karsinom riski yaklaşık 100 kat artar ve düzenli görüntüleme gerekir.
 - **Lenfoma** — Lenfoma bu hastalıkta artan risk değil; retroperitoneal lenfoma ise hidronefroza yol açan edinilmiş tıkanıklık nedenleri arasında yer alır.
@@ -16024,7 +16024,7 @@ _38 soru (örnek + çıkmış)_
 - **PKHD1** — PKHD1 fibrosistini kodlar ve otozomal resesif, yani çocukluk çağı polikistik böbrek hastalığının genidir.
 - **NPHP1** — NPHP1, nefronofthisis–medüller kistik hastalık kompleksiyle ilişkili gen ailesinin üyesidir; polikistin kodlamaz.
 - **PKD1** — PKD1 doğru: kromozom 16'da yer alır, polikistin-1'i kodlar ve olguların %85–90'ında etkilenmiştir.
-- **COL4A5** — COL4A5 ile karıştırılabilir: Otozomal dominant formda bozulan genler, primer siliyumdaki polikistin proteinlerini kodlar.
+- **COL4A5** — COL4A5 geni X kromozomunda yer alan tip IV kollajen alfa-5 zincirini kodlar ve mutasyonu X'e bağlı Alport sendromuna yol açar; erişkin tip otozomal dominant polikistik böbrek hastalığı (ADPKD) olgularının yaklaşık %85'inden sorumlu gen ise 16. kromozomdaki PKD1 genidir.
 
 **Cevap: D** — PKD1
 
@@ -16038,9 +16038,9 @@ _38 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Çekirdek zarı** — Polikistinler tübüler epitelde sıvı akımını algılayan mekanik bir sensör kompleksi oluşturur. Çekirdek zarı bu sorudaki ayrımı sağlamaz.
+- **Çekirdek zarı** — Çekirdek zarı lamin proteinleriyle desteklenen nükleer kılıftır; PKD1 ve PKD2 genlerinin kodladığı polikistin-1 ve polikistin-2 proteinleri ise tübül epitel hücrelerinin lümene bakan yüzeyindeki hareketsiz primer siliyumda yerleşerek idrar akımını algılayan mekanosensör kalsiyum kanalı olarak görev yapar.
 - **Mitokondri** — Mitokondri polikistinlerin bulunduğu yer değil; polikistin işlevi kaybolunca hücre içine kalsiyum girişi ve hücre polaritesi bozulur.
-- **Lizozom** — Polikistin kaybında hücre proliferasyonu ve sıvı sekresyonu artar, tübül segmentleri genişleyerek kiste dönüşür. Lizozom bu sorudaki ayrımı sağlamaz.
+- **Lizozom** — Lizozom hücre içi makromolekülleri asidik hidrolazlarla parçalayan sindirim organelidir; polikistin-1 ve polikistin-2 kompleksinin tübül epitelinde sıvı akışını ve lümen çapını algılamak üzere bulunduğu hücresel yapı ise apikal yüzeydeki primer siliyumdur.
 - **Golgi** — Golgi bu proteinlerin yerleşim yeri değil; polikistin-1'i PKD1, polikistin-2'yi PKD2 geni kodlar ve ikisi birlikte bir sensör kompleksi kurar.
 - **Primer siliyum** — Primer siliyum doğru: polikistin-1 ve -2, tübüler epitel hücrelerinin primer siliyumunda sıvı akımını algılayan mekanosensör kompleks oluşturur.
 
@@ -16058,7 +16058,7 @@ _38 soru (örnek + çıkmış)_
 
 - **İkinci alelin somatik kaybı** — İkinci alelin somatik kaybı doğru: germ hattı mutasyonuna ek olarak diğer alelin somatik kaybı, yani heterozigotluk kaybı kist gelişimi için gerekir.
 - **Kromozom translokasyonu** — Kromozom translokasyonu bu hastalıkta tanımlanan ikinci olay değil; kist için aynı genin iki alelinin de işlevini yitirmesi gerekir.
-- **Viral enfeksiyon** — Viral enfeksiyon ile karıştırılabilir: Hastalık polikistin genlerindeki germ hattı mutasyonuyla başlar ve otozomal dominant kalıtılır.
+- **Viral enfeksiyon** — Viral enfeksiyonlar kist oluşumunun genetik tetikleyicisi değildir; ADPKD otozomal dominant kalıtılsa da hücresel düzeyde kist gelişimi için germ hattından gelen mutant PKD aleline ek olarak tübül hücresindeki sağlam ikinci alelin de somatik mutasyonla kaybedilmesi (iki vuruş mekanizması) gerekir.
 - **İmmün kompleks birikimi** — İmmün kompleks birikimi bu hastalığın mekanizması değil; polikistin kaybında siliyal mekanosensör bozulur, proliferasyon ve sıvı sekresyonu artar.
 - **Hipermetilasyon** — Hipermetilasyon bu hastalık için tanımlanan ikinci darbe değil; kistin oluşması için sağlam kalan diğer alelin hücrede somatik olarak yitirilmesi gerekir.
 
@@ -16076,9 +16076,9 @@ _38 soru (örnek + çıkmış)_
 
 - **Aort diseksiyonu** — Aort diseksiyonu bu hastalığın tanımlanan damar lezyonu değil; buradaki ölümcül kanama beyin içinde, beyin tabanındaki arterlerden gelişir.
 - **Willis çemberinde sakküler anevrizma** — Willis çemberinde sakküler anevrizma doğru: olguların yaklaşık %10–30'unda görülür; rüptür ve intraserebral kanama ölümlerin yaklaşık %15'ini oluşturur.
-- **Renal arter stenozu** — Renal arter stenozu bu hastalığa eşlik eden lezyon olarak geçmez; hastalarda sık görülen komplikasyon, olguların yaklaşık %75'inde gelişen hipertansiyondur.
+- **Renal arter stenozu** — Renal arter stenozu ateroskleroz veya fibromusküler displaziyle ana böbrek arterinin daralmasıdır; ADPKD'de polikistin kusuru damar düz kasını da etkilediği için hastaların %4–10'unda beyin tabanındaki Willis çemberinde sakküler (berry) anevrizmalar gelişir ve yırtılarak ölümcül subaraknoid kanamaya yol açabilir.
 - **Varis** — Varis bu hastalıkla ilişkili değil; böbrek dışı bulgular arasında yaklaşık %30 polikistik karaciğer ve %20–25 mitral kapak prolapsusu vardır.
-- **AV malformasyon** — Hastalıkta beyin tabanındaki arter halkasında kese biçimli anevrizmalar gelişir ve yırtılabilir. AV malformasyon bu sorudaki ayrımı sağlamaz.
+- **AV malformasyon** — Arteriovenöz (AV) malformasyon arter ile ven arasında kapiller yatak olmadan gelişen doğuştan damar yumağıdır; ADPKD hastalarında polikistin ekspresyon bozukluğuna bağlı olarak intrakraniyal Willis çemberinin dallanma noktalarında gelişen karakteristik vasküler lezyon ise sakküler (berry) anevrizmadır.
 
 **Cevap: B** — Willis çemberinde sakküler anevrizma
 
@@ -16095,7 +16095,7 @@ _38 soru (örnek + çıkmış)_
 - **Enfeksiyon** — Enfeksiyon ikinci sıradaki ölüm nedenidir ve ölümlerin yaklaşık %25'ini oluşturur; idrar yolu enfeksiyonu hastalığın komplikasyonlarındandır.
 - **Anevrizma rüptürü** — Anevrizma rüptürü ve intraserebral kanama ölümlerin yaklaşık %15'inden sorumludur; ani ve çarpıcı olsa da en sık neden değildir.
 - **Koroner/hipertansif kalp hastalığı** — Koroner/hipertansif kalp hastalığı doğru: ölümlerin yaklaşık %40'ını oluşturur; hastaların yaklaşık %75'inde hipertansiyon gelişir.
-- **Karaciğer yetmezliği** — Karaciğer yetmezliği bu hastalığın başlıca ölüm nedenleri arasında yer almaz; karaciğer fibrozisi ve siroz daha çok çocukluk çağı polikistik böbrek hastalığında öne çıkar.
+- **Karaciğer yetmezliği** — Karaciğer yetmezliği ve portal hipertansiyon konjenital hepatik fibrozisle giden otozomal resesif polikistik böbrek hastalığında (ARPKD) ön plandadır; erişkin tip ADPKD'de ise diyaliz ve transplantasyon sayesinde üremik ölümler azaldığından en sık ölüm nedeni yaklaşık %40 ile koroner ve hipertansif kalp hastalığıdır.
 - **Böbrek tümörü** — Böbrek tümörü bu hastalıkta tanımlanan bir ölüm nedeni değil; renal hücreli karsinom riskinin yaklaşık 100 kat arttığı tablo, uzun süre diyaliz alanlardaki edinilmiş kistik hastalıktır.
 
 **Cevap: C** — Koroner/hipertansif kalp hastalığı
@@ -16130,7 +16130,7 @@ _38 soru (örnek + çıkmış)_
 
 - **PKD1** — PKD1 kromozom 16'da yer alır ve polikistin-1'i kodlar; erişkin, yani otozomal dominant formun olgularının %85–90'ında bozuktur.
 - **PKD2** — PKD2 polikistin-2'yi kodlar ve otozomal dominant polikistik böbrek hastalığı olgularının yalnız %10–15'inden sorumludur.
-- **COL4A3** — COL4A3 ile karıştırılabilir: Çocukluk çağı formunda bozulan gen, tübül epitel silyalarında bulunan fibrosistini kodlar.
+- **COL4A3** — COL4A3 geni glomerüler bazal membranın tip IV kollajen alfa-3 zincirini kodlar ve mutasyonu otozomal Alport sendromu yapar; çocukluk çağı otozomal resesif polikistik böbrek hastalığında (ARPKD) mutasyona uğrayan gen ise primer siliyumdaki fibrosistin proteinini kodlayan 6. kromozomdaki PKHD1 genidir.
 - **NPHP1** — NPHP1, nefronofthisis–medüller kistik hastalık kompleksinin en az 13 lokusundan biridir; ürünü epitel siliyası ile ilişkili bir proteindir.
 - **PKHD1** — PKHD1 doğru: fibrosistin, diğer adıyla poliduktin proteinini kodlar; bu protein tübüler epitel hücrelerinin silyalarında bulunur.
 
@@ -16186,7 +16186,7 @@ _38 soru (örnek + çıkmış)_
 - **Ürik asit** — Ürik asit taşları tüm taşların yaklaşık %6–7'sidir; sürekli asidik idrarda, pH 5,5'in altında oluşur.
 - **Sistin** — Sistin taşları tüm taşların yalnız %1–2'sidir; genetik amino asit taşıma defekti olan sistinüriyle ilişkilidir.
 - **Kalsiyum oksalat/fosfat** — Kalsiyum oksalat ve/veya fosfat doğru: tüm taşların yaklaşık %80'ini oluşturur; hastaların yarısında hiperkalsemi olmadan hiperkalsiüri vardır.
-- **Ksantin** — Nadir taş tipleri ve nedeni bilinmeyenler birlikte tüm taşların yalnız %1–2'sini oluşturur. Ksantin bu sorudaki ayrımı sağlamaz.
+- **Ksantin** — Ksantin taşları ksantin oksidaz eksikliği veya allopurinol tedavisi gibi çok nadir durumlarda görülen radyolüsen taşlardır; böbrek taşlarının (ürolitiazisin) yaklaşık %70'ini oluşturarak klinikte açık ara en sık görülen taş tipi ise radyo-opak kalsiyum oksalat ve kalsiyum fosfat taşlarıdır.
 
 **Cevap: D** — Kalsiyum oksalat/fosfat
 
@@ -16222,7 +16222,7 @@ _38 soru (örnek + çıkmış)_
 - **Poliüri** — Poliüri doğru: kısmi tıkanmada konsantrasyon kusuru gelişir, bu yüzden beklenenin aksine oligüri yerine poliüri görülür.
 - **Oligüri** — Oligüri sezgisel beklentidir; ancak kısmi tıkanmada tübüller idrarı yoğunlaştıramadığı için idrar miktarı azalmaz, artar.
 - **Masif proteinüri** — Masif proteinüri tıkanıklığın bulgusu değil; hidronefrozda artan basınç önce papilla ve piramitleri sıkıştırıp tübül işlevini bozar.
-- **Lökosit silendiri** — Tıkanıklık enfeksiyona yatkınlık yaratsa da kısmi tıkanmanın beklenen bulgusu konsantrasyon kusurudur. Lökosit silendiri bu sorudaki ayrımı sağlamaz.
+- **Lökosit silendiri** — Lökosit silendiri akut bakteriyel piyelonefritte tübül içi nötrofil birikimini gösterir; iki taraflı kısmi idrar yolu tıkanıklığında ise artan intratübüler basınç medüller toplayıcı kanalların antidiüretik hormona (ADH) yanıtını bozarak idrarı konsantre etme yeteneğini düşürür ve paradoksal poliüriye yol açar.
 
 **Cevap: B** — Poliüri
 
@@ -16238,7 +16238,7 @@ _38 soru (örnek + çıkmış)_
 
 - **Otozomal dominant (erişkin) polikistik böbrek hastalığı** — Otozomal dominant polikistik böbrek hastalığı genellikle 30–50 yaşta belirti verir; çocuk ve genç erişkinin değil, erişkinin hastalığıdır.
 - **Otozomal resesif (çocukluk çağı) polikistik böbrek hastalığı** — Otozomal resesif polikistik böbrek hastalığı yaklaşık 1/20.000 canlı doğumda görülür; ağır formları fetal ya da neonatal dönemde böbrek yetmezliği yapar.
-- **Medüller sünger böbrek** — Bu yaş grubunda son dönem böbrek yetmezliğinin en sık genetik nedenlerinden biri nefronofthisis kompleksidir. Medüller sünger böbrek bu sorudaki ayrımı sağlamaz.
+- **Medüller sünger böbrek** — Medüller sünger böbrek erişkinlerde papiller toplayıcı kanalların genişlemesiyle giden, böbrek fonksiyonunun normal kaldığı benign ve sporadik bir lezyondur; kortikomedüller sınırda kistler ve ilerleyici tübülointerstisyel fibrozisle çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedeni ise nefronofitizis–medüller kistik hastalık kompleksidir.
 - **Nefronofitizis-medüller kistik hastalık kompleksi** — Nefronofitizis–medüller kistik hastalık kompleksi doğru: çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedenlerindendir ve 2–10 yılda bu evreye ilerler.
 - **Multikistik renal displazi** — Multikistik renal displazi çocukluk çağının en sık kistik böbrek hastalığıdır, ancak gelişimseldir ve çoğunlukla tek böbreği tutar; diğer böbrek normalse prognoz iyidir.
 
@@ -16258,7 +16258,7 @@ _38 soru (örnek + çıkmış)_
 - **Benign nefroskleroz** — Benign nefroskleroz doğru: uzun süreli hipertansiyonda arteriyol duvarında pembe, homojen hiyalin kalınlaşma gelişir ve lümen daralır.
 - **Trombotik trombositopenik purpura** — Trombotik trombositopenik purpura bir trombotik mikroanjiyopatidir; böbrekte glomerüler kılcallarda ve arteriyollerde trombüsler görülür.
 - **Renal hücreli karsinom** — Renal hücreli karsinom bir tümördür; uzun süre diyaliz alan hastalardaki edinilmiş kistik böbrek hastalığında riski artar.
-- **Papiller ürotelyal karsinom** — Papiller ürotelyal karsinom ile karıştırılabilir: Hiyalin arteriyoloskleroz hipertansif böbrek hastalığının benign formundaki arteriyol lezyonudur.
+- **Papiller ürotelyal karsinom** — Papiller ürotelyal karsinom idrar yolları döşeyici epitelinden gelişen neoplastik bir tümördür; küçük arter ve arteriyol duvarlarında plazma proteinlerinin sızmasıyla homojen pembe kalınlaşma (hiyalin arteriyoloskleroz) izlenmesi ise kronik hipertansiyona bağlı benign nefrosklerozun karakteristik bulgusudur.
 
 **Cevap: B** — Benign nefroskleroz
 
@@ -16272,11 +16272,11 @@ _38 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Kronik piyelonefrit** — Nekrotizan ve hiperplastik arteriyol lezyonları hızla gelişen ağır hipertansiyonun böbrek bulgusudur. Kronik piyelonefrit bu sorudaki ayrımı sağlamaz.
+- **Kronik piyelonefrit** — Kronik piyelonefrit tekrarlayan bakteriyel enfeksiyon ve reflü sonucu kaliks deformitesi ve interstisyel skarlaşma yapan tablodur; arteriyol duvarında fibrinoid nekroz (nekrotizan arteriyolit) ve soğan zarı şeklinde konsantrik düz kas çoğalması (hiperplastik arteriyolit) ise malign hipertansiyonun (malign nefrosklerozun) tanısal lezyonlarıdır.
 - **Malign hipertansiyon (malign nefroskleroz)** — Malign nefroskleroz doğru: arteriyollerde fibrinoid nekroz, interlobüler arterlerde soğan zarı görünümlü hiperplastik arteriyoloskleroz gelişir.
 - **Nefroskleroz (arterionefroskleroz)** — Nefroskleroz, yani benign nefroskleroz, uzun süreli primer hipertansiyonda hiyalin arteriyolosklerozla seyreder; nekroz ve soğan zarı görünümü beklenmez.
 - **Hiyalin arterioloskleroz** — Hiyalin arteriyoloskleroz pembe, homojen duvar kalınlaşmasıdır ve benign nefrosklerozun lezyonudur; nekrotizan bir değişiklik değildir.
-- **Kronik glomerülonefrit** — Fibrinoid nekroz ve soğan zarı görünümü malign nefrosklerozun damar bulgularıdır. Kronik glomerülonefrit bu sorudaki ayrımı sağlamaz.
+- **Kronik glomerülonefrit** — Kronik glomerülonefritte birincil patoloji glomerül yumaklarının hiyalin sklerozudur; böbrek arteriyollerinde akut fibrinoid nekroz (nekrotizan arteriyolit) ve konsantrik intimal kalınlaşmanın (hiperplastik arteriyolit) birlikte görüldüğü vasküler tablo ise malign nefrosklerozdur.
 
 **Cevap: B** — Malign hipertansiyon (malign nefroskleroz)
 
@@ -16290,7 +16290,7 @@ _38 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Medüller sünger böbrek** — Medüller sünger böbrek ile karıştırılabilir: Kalıtsal olmayan, gelişimsel kistik hastalık örneği çoğunlukla tek böbreği tutan multikistik displazidir.
+- **Medüller sünger böbrek** — Medüller sünger böbrek erişkinlerde yalnız medüller toplayıcı kanalların ektazisiyle sınırlı, nefron farklılaşmasının korunduğu benign bir durumdur; üreter tomurcuğu ile metanefrik mezenkim indüksiyonunun bozulması sonucu kıkırdak adacıkları, immatür kanallar ve büyük kistlerle seyreden kalıtsal olmayan gelişimsel anomali ise multikistik renal displazidir.
 - **Mültikistik renal displazi** — Multikistik renal displazi doğru: buradaki displazi prekanseröz değil gelişimsel bir bozukluktur ve çoğunlukla alt idrar yolu tıkanıklığıyla ilişkilidir.
 - **Nefronoftizis-medüller kistik hastalık kompleksi** — Nefronofthisis kompleksi kalıtsaldır; otozomal resesif formları için en az 13 lokus tanımlanmıştır ve gen ürünleri epitel siliyasıyla ilişkilidir.
 - **Erişkin polikistik böbrek hastalığı** — Erişkin polikistik böbrek hastalığı otozomal dominant kalıtılır ve PKD1 ya da PKD2 genindeki mutasyona bağlıdır.
@@ -16326,7 +16326,7 @@ _38 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Hiyalin birikimi olduğunda** — Hiyalin birikimi benign nefrosklerozun her olguda görülen imza lezyonudur; tek başına yetmezlik riskini artıran ek etken sayılmaz.
+- **Hiyalin birikimi olduğunda** — Hiyalin arteriyoloskleroz benign nefrosklerozun her olguda görülen temel histolojik lezyonudur ve tek başına çoğu hastada ağır böbrek yetmezliği yapmaz; buna karşılık diyabet varlığı, Afrika kökenli olma (APOL1) veya ağır kan basıncı yüksekliği üremi riskini belirgin artırır.
 - **Diyabet eşlik ettiğinde** — Diyabet eşlik ettiğinde doğru: benign nefroskleroz genellikle yetmezlik yapmaz, ama diyabet ve diğer böbrek hastalıklarının varlığında risk artar.
 - **Böbrekler simetrik küçüldüğünde** — Simetrik küçülme benign nefrosklerozun olağan makroskopik bulgusudur; hastalığın kendisini tanımlar, ek bir risk etkeni değildir.
 - **Yüzey ince granüler olduğunda** — İnce granüler yüzey, benign nefrosklerozda skarlaşmaya bağlı olağan görünümdür; yetmezlik riskini artıran bir durum olarak tanımlanmaz.
@@ -16402,7 +16402,7 @@ _38 soru (örnek + çıkmış)_
 - **Tübül bazal membranı** — Tübül bazal membranı kalınlaşması nefronofthisisin mikroskobik bulgusudur; kalıtsal kistik hastalıkları bağlayan ortak kusur değildir.
 - **Arteriyol duvarı** — Arteriyol duvarı kalınlaşması hipertansif nefrosklerozun bulgusudur; kistik böbrek hastalıklarının ortak hücresel kusuru değildir.
 - **Mezenkimal hücre kılıfı** — Mezenkimal hücre kılıflı kanallar multikistik böbrek displazisinin histolojik bulgusudur; bu hastalık kalıtsal değil gelişimseldir.
-- **Bowman kapsülü** — Bowman kapsülü ile karıştırılabilir: Kalıtsal kistik hastalıklardaki ortak kusur glomerülde değil tübül epitel hücrelerindedir.
+- **Bowman kapsülü** — Bowman kapsülü glomerül yumağını saran paryetal epitel ve bazal membrandan oluşur; ADPKD (polikistin), ARPKD (fibrosistin) ve nefronofitizis (nefronosistin) dahil kalıtsal kistik böbrek hastalıklarının tamamında kusurlu olan ortak hücresel yapı tübül epitelindeki siliya–sentrozom kompleksidir.
 
 **Cevap: A** — Siliya–sentrozom kompleksi
 
@@ -16453,10 +16453,10 @@ _38 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Kalsiyum** — Kalsiyum doğru: polikistin işlev kaybında siliyal mekanosensör işlev bozulur ve hücre içine kalsiyum girişi bozulur.
-- **Sodyum** — Sodyum ile karıştırılabilir: Polikistin kaybında bozulan sinyal hücre içi kalsiyum girişidir ve bu kayıp hücre polaritesini bozar.
+- **Sodyum** — Sodyum hücre dışı sıvının ana katyonudur ve polikistin kompleksinin birincil mekanosensör sinyali değildir; normalde idrar akımı primer siliyumu eğdiğinde polikistin-2 kanalı üzerinden hücre içine kalsiyum girer, ADPKD'de ise kalsiyum girişi bozulup cAMP artarak epitel proliferasyonu ve sıvı sekresyonu tetiklenir.
 - **Potasyum** — Potasyum polikistin kompleksinin ilettiği sinyal olarak tanımlanmaz; akım uyarısının kaybı kalsiyum girişini bozar, proliferasyon ve sekresyon artar.
 - **Magnezyum** — Magnezyum bu hastalıkta değil, strüvit yani magnezyum amonyum fosfat taşlarının bileşiminde öne çıkar.
-- **Fosfat** — Kalsiyum fosfat ve strüvit taşlarının bileşenidir, polikistin sinyaliyle ilgisi yoktur. Fosfat bu sorudaki ayrımı sağlamaz.
+- **Fosfat** — Fosfat kemik mineralizasyonu ve hücre içi enerji (ATP) dengesinde yer alan anyondur; ADPKD'de primer siliyumdaki polikistin-1 ve polikistin-2 mekanosensör kompleksinin işlev kaybıyla hücre içine girişi azalan ve cAMP aracılı kist büyümesini başlatan iyon kalsiyumdur.
 
 **Cevap: A** — Kalsiyum
 
@@ -16678,7 +16678,7 @@ _38 soru (örnek + çıkmış)_
 
 **Özet.** Hidronefrozda prognoz zamana bağlıdır; tıkanıklık kısa sürede giderilirse işlev geri dönebilir, uzun süreli tıkanıklıkta hasar geri dönüşümsüzdür.
 
-# 26 · Böbrek Tümörleri
+# Ders 26 (26) · Böbrek Tümörleri
 
 _32 soru (örnek + çıkmış)_
 
@@ -16694,7 +16694,7 @@ _32 soru (örnek + çıkmış)_
 - **Kromofob** — Kromofob karsinom renal hücreli karsinomların en nadir formudur; yaklaşık %5'ini oluşturur ve prognozu daha olumludur.
 - **Berrak hücreli** — Berrak hücreli doğru: renal hücreli karsinomların yaklaşık %65'ini oluşturur; hücreleri bol lipit ve glikojen içerir.
 - **Onkositoma** — Onkositoma renal hücreli karsinom alt tipi değil; toplayıcı kanal ara hücrelerinden köken alan benign bir böbrek tümörüdür.
-- **Toplayıcı kanal** — Toplayıcı kanalların ara hücrelerinden köken alan kromofob karsinom en nadir alt tiptir. Toplayıcı kanal bu sorudaki ayrımı sağlamaz.
+- **Toplayıcı kanal** — Toplayıcı kanal (Bellini kanalı) karsinomu medulladaki toplayıcı kanallardan gelişen ve tüm renal tümörlerin %1'inden azını oluşturan çok nadir ve agresif bir tiptir; proksimal tübül epitelinden köken alarak renal hücreli karsinomların %70–80'ini oluşturan en sık alt tip ise berrak hücreli karsinomdur.
 
 **Cevap: C** — Berrak hücreli
 
@@ -16730,7 +16730,7 @@ _32 soru (örnek + çıkmış)_
 - **MET sinyali** — MET sinyali papiller karsinomda artar ve proksimal tübül epitelinde anormal proliferasyona yol açar; berrak hücreli tipin anjiyogenez yolu değildir.
 - **HGF artışı** — HGF normalde MET reseptörü üzerinden hücre büyümesi ve motilitesiyle ilişkilidir; VHL kaybının anjiyogenez yolunda yer almaz.
 - **Siklin D1** — Siklin D1 lokusunu içeren yeniden düzenlenmeler onkositomada görülebilir; berrak hücreli karsinomun anjiyogenez mekanizmasıyla ilgili değildir.
-- **Eritropoietin azalması** — Renal hücreli karsinomda tümör hücreleri eritropoietin üretebilir ve polisitemiye yol açar. Eritropoietin azalması bu sorudaki ayrımı sağlamaz.
+- **Eritropoietin azalması** — Berrak hücreli karsinomda eritropoietin azalmaz, aksine HIF artışıyla aşırı üretilerek paraneoplastik polisitemiye yol açabilir; VHL tümör baskılayıcı proteini kaybedildiğinde HIF-1 alfa ubikuitinlenip yıkılamadığı için çekirdekte birikir ve VEGF ile PDGF transkripsiyonunu artırarak yoğun anjiyogenez başlatır.
 
 **Cevap: A** — HIF artışı ile VEGF
 
@@ -16746,9 +16746,9 @@ _32 soru (örnek + çıkmış)_
 
 - **Retinoblastom** — Retinoblastom bu sendromun tümörü değil; Von Hippel–Lindau hastalığında retinada gelişen tümör hemanjiyoblastomdur.
 - **Serebellar hemanjiyoblastom** — Serebellar hemanjiyoblastom doğru: otozomal dominant Von Hippel–Lindau hastalığında özellikle serebellar ve retinal hemanjiyoblastomlar gelişir.
-- **Meningiom** — Meningiom ile karıştırılabilir: Hastalığın böbrekteki karşılığı, bireylerin %40–60'ında görülen bilateral ve multipl berrak hücreli karsinomlardır.
-- **Nöroblastom** — Von Hippel–Lindau hastalığı, kromozom 3p'deki VHL geninde kalıtsal germ hattı mutasyonuyla oluşan çoklu neoplazm yatkınlığıdır. Nöroblastom bu sorudaki ayrımı sağlamaz.
-- **Medulloblastom** — Medulloblastom ile karıştırılabilir: Von Hippel–Lindau hastalığında beyincikte gelişen tümör hemanjiyoblastomdur.
+- **Meningiom** — Meningiom araknoid cap hücrelerinden gelişen ve NF2 mutasyonlarıyla ilişkili dural tümördür; 3p25'teki VHL gen mutasyonuyla kalıtılan Von Hippel–Lindau sendromunda bilateral berrak hücreli böbrek karsinomlarına eşlik eden karakteristik merkezi sinir sistemi tümörü ise serebellar ve retinal hemanjiyoblastomdur.
+- **Nöroblastom** — Nöroblastom bebek ve küçük çocuklarda adrenal medulla veya sempatik gangliyonlardan gelişen embriyonel tümördür; Von Hippel–Lindau hastalığında böbrek kistleri ve berrak hücreli karsinom dışında görülen klasik tümörler ise serebellum ve retinadaki hemanjiyoblastomlar ile feokromositomadır.
+- **Medulloblastom** — Medulloblastom çocukluk çağında serebellum vermisinden gelişen malign embriyonel tümördür; Von Hippel–Lindau sendromunda serebellumda görülen karakteristik lezyon ise zengin kapiller ağ ve stromal hücrelerden oluşan benign vasküler tümör, yani serebellar hemanjiyoblastomdur.
 
 **Cevap: B** — Serebellar hemanjiyoblastom
 
@@ -16782,7 +16782,7 @@ _32 soru (örnek + çıkmış)_
 
 - **Berrak hücreli** — Berrak hücreli tipte de hücre zarları belirgindir; ama sitoplazma lipit ve glikojenle vakuollü ve berraktır, hücreler ince fibrovasküler stromayla ayrılan yuvalar yapar.
 - **Papiller** — Papiller tipte kübik ya da alçak sütunlu hücreler fibrovasküler çekirdekli papillaları çevreler; ayırt edici bulgusu papiller büyüme paternidir.
-- **Sarkomatoid** — Sarkomatoid ile karıştırılabilir: Perinükleer halo ve keskin hücre zarları, toplayıcı kanal ara hücrelerinden köken alan alt tipin bulgusudur.
+- **Sarkomatoid** — Sarkomatoid değişiklik herhangi bir RHK alt tipinin yüksek dereceli iğsi hücreli anaplastik dönüşümü olup en kötü prognozu gösterir; geniş soluk sitoplazma, belirgin perinükleer halo ve bitki hücresini andıran keskin hücre zarlarıyla tanınan ve prognozu en iyi olan RHK alt tipi ise kromofob renal hücreli karsinomdur.
 - **Kromofob** — Kromofob doğru: keskin hücre zarları ve sıklıkla perinükleer halo görülür; prognozu diğer renal hücreli karsinom alt tiplerinden daha olumludur.
 - **Anaplastik varyant** — Anaplastik varyant, berrak hücreli karsinomun çok sayıda mitoz ve büyük, hiperkromatik, pleomorfik çekirdekler gösteren biçimidir; halo değil belirgin anaplazi gösterir.
 
@@ -16798,9 +16798,9 @@ _32 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Hemosiderin** — Tümör kesitinde kanama odakları bulunsa da sarı–turuncu zemin rengi hücrelerin sitoplazma içeriğinden gelir. Hemosiderin bu sorudaki ayrımı sağlamaz.
+- **Hemosiderin** — Hemosiderin kanama odaklarında makrofajlarda biriken kahverengi demir pigmentidir; berrak hücreli renal karsinomun makroskopik kesit yüzünün karakteristik parlak sarı–turuncu renkte olmasının nedeni tümör hücrelerinin sitoplazmasında bol miktarda kolesterol ve nötral lipit birikmesidir.
 - **Melanin** — Melanin bu tümörün rengini açıklamaz; berrak hücreli karsinomun kesitinde sarı–turuncu zemin üzerinde sıklıkla nekroz, kistik yumuşama ve kanama görülür.
-- **Bilirubin** — Berrak hücrelerin sitoplazması vakuollüdür ve bol miktarda glikojen ile yağ içerir. Bilirubin bu sorudaki ayrımı sağlamaz.
+- **Bilirubin** — Bilirubin safra tıkanıklığında dokuları boyayan safra pigmentidir; berrak hücreli karsinomda doku takibinde eriyerek mikroskopta hücreleri berrak gösteren, makroskopide ise tümöre parlak sarı-turuncu rengini veren madde sitoplazmadaki bol lipit ve glikojen içeriğidir.
 - **Mitokondri** — Mitokondriden zengin hücreler onkositomada bulunur ve tümör kesitine kahverengi renk verir; sarı–turuncu renk vermez.
 - **Bol lipit içeriği** — Bol lipit içeriği doğru: berrak hücreli karsinomun kesit yüzü bol lipit nedeniyle sarı–turuncudur; lipiti az olan papiller tip daha mat görünür.
 
@@ -16819,7 +16819,7 @@ _32 soru (örnek + çıkmış)_
 - **Renal ven invazyonu** — Renal ven invazyonu doğru: tümör sıklıkla renal veni invaze eder ve ven içinde katı tümör kolonu oluşturur.
 - **Portal ven trombozu** — Portal ven trombozu bu tümörün tipik yayılımı değil; böbrek tümörünün ven içindeki kolonu inferior vena kavaya, nadiren kalbin sağına uzanır.
 - **Renal arter tıkanması** — Renal arter tıkanması bu tümörün yayılım biçimi değil; büyüyen tümör toplayıcı sisteme doğru mantar tarzında genişleyip kaliks, pelvis ve üretere uzanabilir.
-- **Lenfatik emboli** — Renal hücreli karsinomun sık uzak metastaz bölgeleri akciğerler ve kemiklerdir. Lenfatik emboli bu sorudaki ayrımı sağlamaz.
+- **Lenfatik emboli** — Berrak hücreli renal karsinomun karakteristik ve çarpıcı yayılım özelliği lenfatiklerden önce renal ven lümeni içine doğru solid tümör trombüsü halinde büyümesi ve buradan vena kava inferior boyunca sağ kalbe kadar kesintisiz uzanabilmesidir.
 - **Aort invazyonu** — Aort invazyonu bu tümör için tanımlanmaz; doğrudan çevre invazyonu nadirdir ve perirenal yağ dokusu ile adrenal bezi tutar.
 
 **Cevap: A** — Renal ven invazyonu
@@ -16852,10 +16852,10 @@ _32 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Hipoksi** — Hipoksi ile karıştırılabilir: Renal hücreli karsinomdaki polisitemi, tümör hücrelerinin kendi hormon üretimine bağlı paraneoplastik bir bulgudur.
+- **Hipoksi** — Sistemik hipoksi kronik akciğer hastalığı veya yüksek irtifada sekonder polisitemi yapar; renal hücreli karsinomda hastaların %5–10'unda görülen polisitemi ise sistemik hipoksiye değil, VHL kaybı ve HIF aktivasyonu sonucu tümör hücrelerinin paraneoplastik olarak otonom eritropoietin üretmesine bağlıdır.
 - **Kemik iliği metastazı** — Kemik iliği metastazı polisitemiyi açıklamaz; renal hücreli karsinomun sık metastaz bölgeleri akciğerler ve kemiklerdir.
 - **Eritropoietin üretimi** — Eritropoietin üretimi doğru: hastaların %5–10'unda görülen polisitemi, neoplastik hücrelerin eritropoietin üretmesine bağlıdır.
-- **Dehidratasyon** — Dehidratasyon bu tümörde polisitemi nedeni olarak geçmez; buradaki polisitemi gerçek bir paraneoplastik bulgudur.
+- **Dehidratasyon** — Dehidratasyon plazma hacmini azaltarak yalnız göreceli (rölatif) hematokrit artışı yapar; renal hücreli karsinomda ise neoplastik tübül hücrelerinin ektopik/otonom eritropoietin salgılaması kemik iliğinde gerçek eritrosit kitlesini artıran paraneoplastik polisitemiye neden olur.
 - **Kortizol fazlalığı** — Kortizol fazlalığı, yani Cushing sendromu renal hücreli karsinomun daha nadir paraneoplastik sendromlarındandır; polisiteminin nedeni değildir.
 
 **Cevap: C** — Eritropoietin üretimi
@@ -16908,9 +16908,9 @@ _32 soru (örnek + çıkmış)_
 
 - **Von Hippel-Lindau (VHL)** — Von Hippel–Lindau doğru: serebellar ve retinal hemanjiyoblastomlarla birlikte etkilenen bireylerin %40–60'ında bilateral, sıklıkla multipl berrak hücreli karsinom gelişir.
 - **MET ailesel geni** — Ailesel MET mutasyonu germ hattı aktive edici mutasyonla ailesel papiller karsinoma yol açar; hemanjiyoblastomla ilişkili değildir.
-- **Denys-Drash sendromu** — Retina ve serebellum hemanjiyoblastomuna eşlik eden böbrek kitlesi VHL hastalığını düşündürür. Denys-Drash sendromu bu sorudaki ayrımı sağlamaz.
-- **WAGR sendromu** — WAGR sendromu ile karıştırılabilir: VHL hastalığında böbrek tümörünün genetik temeli kromozom 3p25'teki VHL geninde germ hattı fonksiyon kaybıdır.
-- **Beckwith-Wiedemann sendromu** — VHL hastalığı otozomal dominant kalıtılır ve çoklu neoplazm yatkınlığı yaratır. Beckwith-Wiedemann sendromu bu sorudaki ayrımı sağlamaz.
+- **Denys-Drash sendromu** — Denys–Drash sendromu WT1 genindeki nokta mutasyonuyla oluşan ve çocukta Wilms tümörü, diffüz mezangiyal skleroz ve gonadal disgenezi üçlüsüyle seyreden tablodur; retina ve serebellum hemanjiyoblastomlarına bilateral renal hücreli karsinomun eşlik ettiği sendrom ise Von Hippel–Lindau (VHL) hastalığıdır.
+- **WAGR sendromu** — WAGR sendromu 11p13 bölgesindeki WT1 ve PAX6 genlerini kapsayan delesyonla gelişir ve Wilms tümörü, aniridi, genitoüriner anomaliler ve zeka geriliği yapar; serebellar/retinal hemanjiyoblastom ve berrak hücreli böbrek karsinomu birlikteliği ise Von Hippel–Lindau sendromuna özgüdür.
+- **Beckwith-Wiedemann sendromu** — Beckwith–Wiedemann sendromu 11p15.5 bölgesindeki imprinting bozukluğuyla organomegali, makroglossi, hemihipertrofi ve Wilms tümörü yatkınlığı yapar; serebellum ve retinada hemanjiyoblastom ile böbrekte berrak hücreli karsinom oluşturan sendrom ise 3p25'teki VHL gen mutasyonuna bağlı Von Hippel–Lindau sendromudur.
 
 **Cevap: A** — Von Hippel-Lindau (VHL)
 
@@ -16924,10 +16924,10 @@ _32 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Mezoblastik nefroma** — Mezoblastik nefroma ile karıştırılabilir: Renal tübüler epitelden köken alan ve primer malign böbrek tümörlerinin %80–85'ini oluşturan tümör renal hücreli karsinomdur.
+- **Mezoblastik nefroma** — Konjenital mezoblastik nefroma yaşamın ilk üç ayında en sık görülen, ETV6-NTRK3 füzyonu taşıyan iğsi hücreli benign/düşük dereceli bebeklik tümörüdür; erişkinde renal tübül epitelinden gelişip primer malign böbrek tümörlerinin %80–85'ini oluşturan tümör ise renal hücreli karsinomdur.
 - **Transizyonel hücreli karsinom** — Transizyonel hücreli karsinom bu tanıma uymaz; tanımlanan tümör ağırlıkla böbrek korteksine yerleşir ve en sık altıncı ile yedinci dekatta görülür.
 - **Renal hücreli karsinom** — Renal hücreli karsinom doğru: renal tübüler epitelden köken alır, böbreğin primer malign tümörlerinin %80–85'ini ve erişkin kanserlerinin %2–3'ünü oluşturur.
-- **Rabdoid tümör** — Tanımlanan tümörde hastaların yaklaşık %40'ı bu hastalık nedeniyle kaybedilir ve erkekler yaklaşık iki kat sık etkilenir. Rabdoid tümör bu sorudaki ayrımı sağlamaz.
+- **Rabdoid tümör** — Böbreğin malign rabdoid tümörü bebek ve küçük çocuklarda SMARCB1 (INI1) kaybıyla gelişen, çok nadir ve son derece ölümcül bir pediatrik tümördür; erişkinlerde tübül epitelinden köken alarak böbrek kanserlerinin %80–85'ini oluşturan neoplazm ise renal hücreli karsinomdur.
 - **Wilms tümörü** — Wilms tümörü erişkinlerde nadirdir; 10 yaş altındaki çocuklarda en sık görülen üçüncü katı kanserdir.
 
 **Cevap: C** — Renal hücreli karsinom
@@ -16946,7 +16946,7 @@ _32 soru (örnek + çıkmış)_
 - **Onkositom** — Onkositom toplayıcı kanalların ara hücrelerinden köken alan, böbrek neoplazmlarının %3–7'sini oluşturan benign tümördür.
 - **Wilms tümörü (nefroblastom)** — Wilms tümörü doğru: erişkinde nadirdir, 10 yaş altındaki çocuklarda ise en sık görülen üçüncü katı kanserdir.
 - **Anjiyomiyolipom** — Anjiyomiyolipom perisit kökenli benign tümördür, en sık tüberöz skleroz kompleksiyle birlikte görülür ve çoğu insidental saptanır.
-- **Ürotelyal karsinom** — Böbrek tümörleri içinde çocukluk çağında görülen tümör nefroblastomdur. Ürotelyal karsinom bu sorudaki ayrımı sağlamaz.
+- **Ürotelyal karsinom** — Ürotelyal karsinom ileri yaş erişkinlerde renal pelvis ve mesaneden gelişen epitelyal tümördür; 2–5 yaş arası çocuklarda metanefrik blastemden köken alarak çocukluk çağının en sık primer böbrek tümörünü oluşturan neoplazm ise Wilms tümörüdür (nefroblastom).
 
 **Cevap: C** — Wilms tümörü (nefroblastom)
 
@@ -17090,7 +17090,7 @@ _32 soru (örnek + çıkmış)_
 - **Siklin D1 lokusu** — Siklin D1 lokusunu içeren yeniden düzenlemeler onkositomada görülebilen kromozomal değişikliklerdir.
 - **Histon metilasyonunu düzenleyen genler** — Histon metilasyonunu düzenleyen genler doğru: derin dizilemede bu genlerde sık fonksiyon kaybı saptanır ve epigenom değişiklikleri tümör gelişiminde rol oynar.
 - **Kompleks I genleri** — Kompleks I'de yıkıcı mutasyonlar onkositomanın özelliğidir ve mitokondriyal proliferasyona yol açar.
-- **HIF genleri** — Berrak hücreli karsinomda HIF, VHL yokluğunda yıkılamadığı için normoksik koşullarda bile stabil kalır. HIF genleri bu sorudaki ayrımı sağlamaz.
+- **HIF genleri** — Berrak hücreli karsinomda HIF genleri fonksiyon kaybına uğramaz, aksine VHL kaybı nedeniyle HIF proteinleri aşırı birikerek tümör büyümesini ve anjiyogenezi sürdürür; derin genom dizilemede VHL'nin yanında 3p kromozomunda sık fonksiyon kaybı gösteren gen grubu ise PBRM1, SETD2 ve BAP1 gibi kromatin yeniden şekillendirme ve histon metilasyonunu düzenleyen genlerdir.
 
 **Cevap: C** — Histon metilasyonunu düzenleyen genler
 
@@ -17125,8 +17125,8 @@ _32 soru (örnek + çıkmış)_
 - **Toplayıcı kanal ara hücreleri** — Toplayıcı kanalların ara hücreleri kromofob karsinomun ve onkositomanın kökenidir; MET artışının hedefi değildir.
 - **Perivasküler hücreler** — Perivasküler hücreler yani perisitler anjiyomiyolipomun kökenidir; papiller karsinomla ilgili değildir.
 - **Proksimal tubuler epitel** — Proksimal tubuler epitel doğru: artan MET sinyali bu hücrelerde anormal proliferasyon ve tümör gelişimine yol açar.
-- **Ürotelyum** — Ürotelyum ile karıştırılabilir: Papiller karsinomda MET sinyali proksimal tubuler epitel hücrelerini etkiler.
-- **Hepatositler** — MET'in ligandı hepatosit büyüme faktörüdür ama proliferasyon böbrek tübül epitelinde olur. Hepatositler bu sorudaki ayrımı sağlamaz.
+- **Ürotelyum** — Ürotelyum renal pelvis, üreter ve mesaneyi döşeyen geçiş epitelidir ve ürotelyal karsinomların kökenidir; papiller renal hücreli karsinomda (özellikle tip 1 ve herediter formda) aktive edici MET proto-onkogen mutasyonları ise proksimal tübüler epitel hücrelerinde anormal proliferasyona yol açar.
+- **Hepatositler** — MET tirozin kinaz reseptörünün doğal ligandı hepatosit büyüme faktörü (HGF) olarak adlandırılsa da papiller renal hücreli karsinomdaki MET aktivasyonu karaciğerde değil, tümörün köken aldığı böbrek proksimal tübüler epitel hücrelerinde kontrolsüz çoğalma yapar.
 
 **Cevap: C** — Proksimal tubuler epitel
 
@@ -17194,10 +17194,10 @@ _32 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Karaciğer ve dalak** — Renal hücreli karsinomun sık metastaz bölgeleri olarak sayılan ikili başka organlardır. Karaciğer ve dalak bu sorudaki ayrımı sağlamaz.
+- **Karaciğer ve dalak** — Karaciğer ve dalak renal hücreli karsinomun ilk sıradaki metastaz hedefleri değildir (dalak metastazı genel olarak çok nadirdir); berrak hücreli RHK renal ven ve vena kava inferior üzerinden hematojen yolla en sık akciğerlere (%50'den fazla) ve ikinci sırada kemiklere metastaz yapar.
 - **Lenf nodu ve beyin** — Lenf nodu ve beyin bu tümörün sık metastaz bölgeleri olarak sayılmaz; uzak metastaz her durumda ileri evre hastalık göstergesidir.
 - **Adrenal ve perirenal yağ** — Adrenal beze ve perirenal yağa direkt invazyon metastaz değil, nadir görülen lokal ileri yayılımdır.
-- **Mesane ve üreter** — Mesane ve üreter ile karıştırılabilir: Tümör toplayıcı sistem boyunca üretere uzanabilir, ama bu bir uzak metastaz değildir.
+- **Mesane ve üreter** — Mesane ve üreter ürotelyal karsinomların çok odaklı gelişim ve implantasyon bölgeleridir; hematojen yayılım eğilimi çok güçlü olan renal hücreli karsinomun en sık uzak metastaz yaptığı iki organ ise akciğerler ve kemiklerdir.
 - **Akciğer ve kemik** — Akciğer ve kemik doğru: renal hücreli karsinomun sık metastaz bölgeleri akciğerler ve kemiklerdir.
 
 **Cevap: E** — Akciğer ve kemik
@@ -17258,7 +17258,7 @@ _32 soru (örnek + çıkmış)_
 
 **Özet.** Wilms tümörü erişkinlerde nadir, 10 yaş altında en sık üçüncü katı kanserdir; sporadik ya da ailesel olabilir ve ailesel yatkınlık otozomal dominant kalıtılır.
 
-# 26b · Mesane Hastalıkları ve Tümörleri; Cinsel Yolla Bulaşan Hastalıklar
+# Ders 27 (26b) · Mesane Hastalıkları ve Tümörleri; Cinsel Yolla Bulaşan Hastalıklar
 
 _35 soru (örnek + çıkmış)_
 
@@ -17272,9 +17272,9 @@ _35 soru (örnek + çıkmış)_
 
 - **Üreteropelvik bileşke tıkanıklığı** — Üreteropelvik bileşke tıkanıklığı doğru: konjenital bir bozukluktur ve bebek ile çocukta hidronefrozun en sık nedenidir; erkek çocuklarda daha sıktır.
 - **Retroperitoneal fibrozis** — Retroperitoneal fibrozis orta–ileri yaşta ve erkeklerde daha sık görülür; üreteri saran fibroinflamatuar doku daralmaya yol açar.
-- **Böbrek taşı** — Bebek ve çocuklardaki hidronefrozun en sık nedeni doğuştan bir darlıktır. Böbrek taşı bu sorudaki ayrımı sağlamaz.
+- **Böbrek taşı** — Böbrek ve üreter taşları erişkinlerde akut üst üriner sistem tıkanıklığının ve hidronefrozun sık nedenidir; bebek ve çocuklarda saptanan hidronefrozun en sık nedeni ise doğuştan pelviüreterik (üreteropelvik) bileşke darlığıdır.
 - **Mesane divertikülü** — Mesane divertikülü mukozanın kese benzeri invajinasyonudur; içindeki idrar stazı enfeksiyon ve taşa yol açar, ama çoğu küçük ve asemptomatiktir.
-- **Ürotelyal karsinom** — Ürotelyal karsinom üreterin başlıca neoplazmıdır; çocukluk çağında hidronefroz nedeni olarak geçmez.
+- **Ürotelyal karsinom** — Ürotelyal karsinom ileri yaşlarda görülen ve hematüri veya üreter tıkanıklığı yapabilen malign bir tümördür; bebek ve çocukluk çağında hidronefrozun en sık nedeni ise konjenital üreteropelvik bileşke tıkanıklığıdır.
 
 **Cevap: A** — Üreteropelvik bileşke tıkanıklığı
 
@@ -17291,8 +17291,8 @@ _35 soru (örnek + çıkmış)_
 - **Eozinofilik sistit** — Eozinofilik sistitte eozinofilden zengin bir infiltrat vardır; alerjik ya da ilaçla ilişkili olabilir, ama siklofosfamidin tipik tablosu değildir.
 - **Hemorajik sistit** — Hemorajik sistit doğru: siklofosfamid, akrolein metaboliti aracılığıyla bu tabloya yol açar; adenovirüs enfeksiyonları da hemorajik sistit yapar.
 - **İnterstisyel sistit** — İnterstisyel sistit kültür negatif, kronik pelvik ağrı ve Hunner ülseriyle seyreder; daha çok kadınlarda görülür.
-- **Foliküler sistit** — Foliküler sistit, lamina propriada lenfoid foliküllerin oluşmasıyla tanımlanan bir sistit tipidir; ilaçla ilişkili tablo olarak geçmez.
-- **Tüberküloz sistit** — Tüberküloz sistit ile karıştırılabilir: İlaçla ilişkili kanamalı sistitin bilinen nedeni siklofosfamidin akrolein metabolitidir.
+- **Foliküler sistit** — Foliküler sistit kronik bakteriyel enfeksiyon veya irritasyonda mesane lamina propriasında germinal merkezli lenfoid foliküllerin oluşmasıdır; antitümör ilaç olan siklofosfamidin karaciğerde oluşan toksik akrolein metaboliti ise idrarla atılırken ürotelyumu doğrudan yıkıp ağır hemorajik sistite yol açar.
+- **Tüberküloz sistit** — Tüberküloz sistiti böbrek tüberkülozundan aşağı yayılan mikobakterilerin mesane duvarında kazeifiye granülomlar ve ülserasyon yapmasıdır; siklofosfamid veya radyoterapi alan hastalarda gelişen yaygın mukozal kanamalı tablo ise hemorajik sistittir.
 
 **Cevap: B** — Hemorajik sistit
 
@@ -17307,10 +17307,10 @@ _35 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Ürotelyal karsinom** — Ürotelyal karsinom mesane kanserlerinin yaklaşık %90'ıdır; ancak majör risk faktörleri sigara ve aromatik aminlerdir, şistozomiyazis değildir.
-- **Adenokarsinom** — Adenokarsinom ile karıştırılabilir: Şistozomiyaziste kronik sistit ürotelyumda yassı epitel metaplazisine yol açar.
+- **Adenokarsinom** — Mesanenin primer adenokarsinomu urakus kalıntılarından veya yaygın intestinal metaplazi zemininden gelişen nadir bir tümördür; Schistosoma haematobium yumurtalarının mesane duvarında yaptığı kronik granülomatöz irritasyon ise ürotelyumda keratinize skuamöz metaplazi ve displazi üzerinden skuamöz hücreli karsinom riskini belirgin artırır.
 - **Skuamöz hücreli karsinom** — Skuamöz hücreli karsinom doğru: şistozomiyaziste kronik sistit ürotelyumda skuamöz metaplazi yapar; süreç metaplazi, displazi ve karsinom sırasıyla ilerler.
-- **Küçük hücreli karsinom** — Küçük hücreli karsinom ile karıştırılabilir: Taş, kateter ve uzun süreli enfeksiyon gibi kronik irritasyonlar da aynı metaplazi zeminini hazırlar.
-- **Sarkom** — Şistozomiyazisin yol açtığı kronik inflamasyon, epitelde metaplazi ve displazi üzerinden karsinoma ilerler. Sarkom bu sorudaki ayrımı sağlamaz.
+- **Küçük hücreli karsinom** — Küçük hücreli nöroendokrin karsinom mesanenin çok nadir ve agresif bir tümörü olup paraziter enfeksiyonla ilişkili değildir; şistozomiyazisin endemik olduğu bölgelerde kronik sistit ve skuamöz metaplazi zemininde sıklığı en çok artan mesane kanseri skuamöz hücreli karsinomdur.
+- **Sarkom** — Sarkomlar (örneğin çocukta embriyonel rabdomiyosarkom, erişkinde leiomiyosarkom) mesane düz kas ve stromasından gelişen nadir mezenkimal tümörlerdir; şistozomiyazis endemik bölgelerde mesane epitelindeki kronik irritasyon ve metaplazi zemininde gelişen karakteristik tümör ise skuamöz hücreli karsinomdur.
 
 **Cevap: C** — Skuamöz hücreli karsinom
 
@@ -17326,7 +17326,7 @@ _35 soru (örnek + çıkmış)_
 
 - **Şistozomiyazis** — Şistozomiyazis kronik sistit ve skuamöz metaplazi yoluyla skuamöz hücreli karsinom riskini artırır; ürotelyal karsinomun majör risk faktörü değildir.
 - **Divertikül** — Divertikülde idrar stazı tekrarlayan enfeksiyon ve taş oluşumuna yol açar; tümör gelişimi ise nadirdir.
-- **Mesane taşı** — Mesane taşı ürotelyumda reaktif değişikliklere yol açan bir kronik irritasyon nedenidir; ürotelyal karsinomun majör risk faktörleri arasında sayılmaz.
+- **Mesane taşı** — Mesane taşı mukozada kronik mekanik irritasyon ve skuamöz metaplazi yaparak daha çok skuamöz hücreli karsinom için ikincil bir zemin oluşturur; ürotelyal (transizyonel hücreli) karsinom gelişiminde olguların %50–80'iyle ilişkili olan en önemli ve en yaygın risk faktörü ise sigara kullanımıdır.
 - **Sigara** — Sigara doğru: ürotelyal karsinomun majör risk faktörlerinin başında gelir; aromatik aminler, siklofosfamid ve pelvik radyoterapi de riski artırır.
 - **Kateter** — Kateter uzun süre kalırsa kronik irritasyonla skuamöz metaplaziye ve skuamöz hücreli karsinoma zemin oluşturabilir; ürotelyal karsinomun başlıca riski değildir.
 
@@ -17344,7 +17344,7 @@ _35 soru (örnek + çıkmış)_
 
 - **Suprapubik ağrı** — Suprapubik ağrı akut bakteriyel sistitin bulgularındandır; ürotelyal karsinomun tipik başvurusu ağrılı bir tablo değildir.
 - **Dizüri** — Dizüri, sık idrara çıkma ve suprapubik ağrıyla birlikte akut bakteriyel sistiti düşündürür; tümörün en sık bulgusu değildir.
-- **İdrar retansiyonu** — Ürotelyal karsinomun tanısı sistoskopi, biyopsi ve idrar sitolojisiyle konur. İdrar retansiyonu bu sorudaki ayrımı sağlamaz.
+- **İdrar retansiyonu** — İdrar retansiyonu daha çok benign prostat hiperplazisi veya mesane boynu tıkanıklığının obstrüktif bulgusudur; ürotelyal mesane karsinomlarında kırılgan papiller tümör uzantılarının kanamasıyla hastaların %85–90'ında görülen en sık ve klasik başvuru bulgusu ağrısız hematüridir.
 - **Pollaküri** — Pollaküri, yani sık idrara çıkma, bakteriyel sistitin bulgusudur; ürotelyal karsinomun öne çıkan bulgusu değildir.
 - **Ağrısız hematüri** — Ağrısız hematüri doğru: ürotelyal karsinomun en sık bulgusu ağrısız makroskopik ya da mikroskopik hematüridir.
 
@@ -17361,7 +17361,7 @@ _35 soru (örnek + çıkmış)_
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Proliferatif endarterit ve plazma hücreleri** — Proliferatif endarterit ve plazma hücreleri doğru: tüm evrelerde görülür; lümen daralması ve iskemiyle damar zengini organlarda doku hasarı yapar.
-- **Kazeöz granülom** — Kazeöz granülom sifilisin bulgusu olarak geçmez; sifilisin tersiyer evresinde deri, kemik ve organlarda gelişen kauçuksu kitleler gummadır.
+- **Kazeöz granülom** — Kazeöz granülom tüberküloza özgü peynirimsi nekrozlu granülomdur; sifilisin tersiyer evresinde koagülatif/gomöz nekrozlu gummalar görülse de primer şankrdan tersiyer evreye kadar sifilisin tüm evrelerinde ortak ve patognomonik olan histolojik bulgu plazma hücrelerinden zengin infiltrat ile birlikte obliteratif (proliferatif) endarterittir.
 - **Yıldızsı apse** — Yıldızsı apseler lenfogranüloma venereumda lenf düğümünde görülen nekrotizan granülomlardır.
 - **Koilositoz** — Koilositoz perinükleer halo ve hafif nükleer atipiyle HPV'ye bağlı kondiloma akuminatumun bulgusudur.
 - **Cowdry A inklüzyonu** — Cowdry tip A intranükleer inklüzyon, çok çekirdekli dev hücrelerle birlikte genital herpesin bulgusudur.
@@ -17397,7 +17397,7 @@ _35 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **Treponemal antikor testi** — Treponemal antikor testleri genellikle ömür boyu pozitif kaldığı için tedavi yanıtını izlemeye uygun değildir.
-- **Kültür** — Sifilis tanısı serolojik testlerle konur ve bu testlerin duyarlılığı primer evrede sınırlı, sekonderde çok yüksektir. Kültür bu sorudaki ayrımı sağlamaz.
+- **Kültür** — Treponema pallidum standart laboratuvar besiyerlerinde üretilemeyen (kültürü yapılamayan) bir spirokettir; sifiliste başarılı tedavi sonrasında titresi hızla düşüp negatifleştiği için tedavi yanıtını ve hastalık aktivitesini izlemekte kullanılan testler non-treponemal VDRL ve RPR testleridir.
 - **VDRL/RPR** — VDRL/RPR doğru: bu nontreponemal antikardiyolipin testlerinin titresi tedaviyle düşer, bu yüzden tedavi izleminde kullanılır.
 - **NAAT** — NAAT gonore, klamidya ve lenfogranüloma venereum tanısında tercih edilen testtir; sifiliste izlem serolojik titreyle yapılır.
 - **Gram boyama** — Gram boyama gonorede nötrofiller içinde Gram negatif diplokokları gösterir; sifilisin spiroketi ise spesifik boyalarla saptanır.
@@ -17487,10 +17487,10 @@ _35 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **16 ve 18** — 16 ve 18 yüksek riskli HPV tipleridir; aşıda bulunmaları HPV ilişkili karsinomlara, özellikle serviks kanserine karşı korur.
-- **31 ve 33** — 31 ve 33 ile karıştırılabilir: Kondiloma akuminatumu yapan tipler düşük riskli gruptadır ve dört ya da dokuz değerlikli aşıda yer alır.
+- **31 ve 33** — HPV tip 31 ve 33 servikal yüksek dereceli intraepitelyal neoplazi (HSIL) ve invaziv karsinomla ilişkili yüksek riskli onkojenik tiplerdir; dış genital bölgede benign siğil olan kondiloma akuminatum olgularının %90'ından sorumlu düşük riskli tipler ise HPV 6 ve 11'dir.
 - **6 ve 11** — 6 ve 11 doğru: kondiloma akuminatum düşük riskli HPV tip 6 ve 11 ile oluşur; anogenital bölgede papiller, siğil benzeri proliferasyon yapar.
-- **45 ve 52** — 45 ve 52 ile karıştırılabilir: Aşıdaki ek genotipler yüksek riskli gruba eklenir, siğil yapan tipler ise düşük risklidir.
-- **16 ve 31** — Tip 16 yüksek riskli gruptadır ve serviks, penis ve vulva gibi karsinomlarla ilişkilidir. 16 ve 31 bu sorudaki ayrımı sağlamaz.
+- **45 ve 52** — HPV tip 45 ve 52 viral DNA'sı konak genomuna entegre olarak servikal ve anogenital karsinomlara yol açan yüksek riskli HPV tipleridir; episomal kalarak benign papiller skuamöz proliferasyon ve koilositozla kondiloma akuminatum yapan düşük riskli tipler ise HPV 6 ve 11'dir.
+- **16 ve 31** — HPV tip 16 ve 31 E6 ve E7 onkoproteinleriyle p53 ve RB'yi etkisizleştirerek skuamöz hücreli karsinom yapan yüksek riskli tiplerdir; malign dönüşüm potansiyeli taşımayan benign genital siğilin (kondiloma akuminatum) etkeni ise düşük riskli HPV 6 ve 11'dir.
 
 **Cevap: C** — 6 ve 11
 
@@ -17504,11 +17504,11 @@ _35 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Adenoid yapılar** — Mesane kanserlerinin yaklaşık %90'ı ürotelyal karsinomdur ve sistoskopide mercana benzeyen papiller tümör olarak görülebilir. Adenoid yapılar bu sorudaki ayrımı sağlamaz.
+- **Adenoid yapılar** — Adenoid (bez benzeri) yapılar mesanenin nadir primer adenokarsinomlarında veya prostat/kolon adenokarsinomu invazyonunda görülür; mesane tümörlerinin %90'ını oluşturan ürotelyal karsinomların çoğu lümene doğru ince fibrovasküler korlar çevresinde dallanan papiller yapılar oluşturur.
 - **Papiller yapılar** — Papiller yapılar doğru: mesane kanserlerinin yaklaşık %90'ı ürotelyal karsinomdur ve bu tümörün düşük dereceli yolu papiller büyüme gösterir.
-- **Musin** — Ürotelyal neoplazi papiller, yassı invaziv olmayan ve invaziv paternler gösterir. Musin bu sorudaki ayrımı sağlamaz.
-- **Taşlı yüzük** — Taşlı yüzük ile karıştırılabilir: Mesane tümörü çoğunlukla ürotelyumdan, yani geçiş epitelinden köken alan ürotelyal karsinomdur.
-- **Keratin** — Mesanede skuamöz hücreli karsinom daha çok şistozomiyazis gibi kronik irritasyon ve skuamöz metaplazi zemininde gelişir. Keratin bu sorudaki ayrımı sağlamaz.
+- **Musin** — Belirgin hücre dışı veya hücre içi müsin üretimi urakal veya non-urakal mesane adenokarsinomlarının özelliğidir; mesanede saptanan ekzofitik kitlelerin büyük çoğunluğu ürotelyal kökenlidir ve biyopside karakteristik olarak çok katlı geçiş epiteliyle döşeli papiller yapılar izlenir.
+- **Taşlı yüzük** — Taşlı yüzük hücreleri hücre içi müsinin çekirdeği perifere itmesiyle oluşan ve mide/mesane taşlı yüzük hücreli adenokarsinomlarında görülen morfolojidir; mesane kitlelerinde en sık karşılaşılan histolojik patern ise ürotelyal tümörlerin oluşturduğu papiller yapılardır.
+- **Keratin** — Keratin incileri ve hücreler arası köprüler kronik irritasyon veya şistozomiyazis zemininde gelişen skuamöz hücreli karsinomun bulgusudur; mesane biyopsilerinde en yüksek olasılıkla saptanan morfolojik özellik ise ürotelyal neoplazmların tipik papiller büyüme paternidir.
 
 **Cevap: B** — Papiller yapılar
 
@@ -17525,7 +17525,7 @@ _35 soru (örnek + çıkmış)_
 - **Haemophilus ducreyi** — Haemophilus ducreyi cinsel yolla bulaşan şankroidin etkenidir; ağrılı, indürasyonsuz genital ülser yapar.
 - **Herpes simpleks virüs-2** — Herpes simpleks virüs-2 genital herpesin en sık etkenidir ve enfekte mukoza ya da deriyle doğrudan temasla bulaşır.
 - **Human papilloma virüs** — Human papilloma virüs kondiloma akuminatum ile serviks, penis ve vulva karsinomlarıyla ilişkili, cinsel yolla bulaşan bir virüstür.
-- **Kandida vajiniti** — Kandida vajiniti cinsel yolla bulaşan enfeksiyon etkenleri arasında sayılmaz; bu yüzden doğru cevaptır.
+- **Kandida vajiniti** — Candida albicans normal vajinal ve gastrointestinal floranın kommensal bir mayasıdır; antibiyotik kullanımı, diyabet veya gebelikte flora dengesi bozulduğunda endojen aşırı çoğalmayla kandida vajiniti yapar ve cinsel yolla bulaşan enfeksiyon etkeni olarak sınıflandırılmaz.
 - **Treponema pallidum** — Treponema pallidum sifilisin etkeni olan spirokettir; erken evre deri ve mukoza lezyonlarıyla temasla bulaşır.
 
 **Cevap: D** — Kandida vajiniti
@@ -17543,7 +17543,7 @@ _35 soru (örnek + çıkmış)_
 - **Sifiliz** — Sifiliste süpüratif inflamasyon değil, proliferatif endarterit ve plazma hücreden zengin infiltrat görülür.
 - **Herpes genitalis** — Herpes genitaliste intraepitelyal veziküller, Cowdry tip A inklüzyonları ve çok çekirdekli dev hücreler görülür.
 - **Gonore** — Gonore doğru: Neisseria gonorrhoeae pürülan, yani süpüratif inflamasyon yapar; Gram boyamada nötrofiller içinde diplokoklar görülür.
-- **Granüloma inguinale** — Granüloma inguinale Calymmatobacterium granulomatis'in yaptığı cinsel yolla bulaşan bir hastalıktır;, bu soruda aranan özelliği taşımaz.
+- **Granüloma inguinale** — Granüloma inguinale (donovanoz), Klebsiella granulomatis'in yol açtığı ve makrofajlar içinde Donovan cisimcikleri ile granülasyon dokusu oluşturan kronik ülseratif bir hastalıktır; Neisseria gonorrhoeae'nin yaptığı gonorede ise üretra ve endoservikste yoğun nötrofil infiltrasyonuyla giden akut süpüratif (pürülan) iltihap gelişir.
 - **HPV enfeksiyonu** — HPV enfeksiyonunda papiller skuamöz proliferasyon ve perinükleer halolu koilositoz görülür.
 
 **Cevap: C** — Gonore
@@ -17795,7 +17795,7 @@ _35 soru (örnek + çıkmış)_
 - **Çok katlı yassı epitel** — Çok katlı yassı epitel klamidyanın tropizm gösterdiği hücre tipi değildir; HPV'nin papiller skuamöz proliferasyonu bu epitelde gelişir.
 - **Kolumnar epitel** — Kolumnar epitel doğru: zorunlu hücre içi Gram negatif bir bakteri olan klamidya kolumnar yani sütunlu epitel hücrelerine tropizm gösterir.
 - **Ürotelyum** — Ürotelyum alt idrar yolunu döşeyen geçiş epitelidir; klamidyanın tropizm gösterdiği epitel değildir.
-- **Kübik epitel** — Kübik epitel ile karıştırılabilir: Klamidyanın hedeflediği hücreler sütunlu yapıdadır.
+- **Kübik epitel** — Kübik epitel böbrek tübülleri ve tiroid folikülleri gibi salgı-emilim yüzeylerini döşer; zorunlu hücre içi bakterisi olan Chlamydia trachomatis ise endoserviks, üretra, rektum ve konjonktivayı döşeyen kolumnar (prizmatik) epitel hücrelerine seçici tropizm gösterir.
 - **Endotel** — Endotel bu bakterinin hedefi değildir; damar iç katmanındaki proliferatif endarterit sifilisin lezyonudur.
 
 **Cevap: B** — Kolumnar epitel
@@ -17811,7 +17811,7 @@ _35 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **HPV** — HPV kondiloma akuminatum ve karsinomlarla ilişkili virüstür; lenfogranüloma venereumun güçlü ilişkili koinfeksiyonu olarak tanımlanmaz.
-- **HSV-2** — HSV-2 genital herpesin çoğundan sorumludur ve ağrılı vezikül ve ülserler yapar;, bu soruda aranan özelliği taşımaz.
+- **HSV-2** — HSV-2 genital bölgede ağrılı veziküller ve yüzeyel ülserler yapan herpes virüsüdür; Chlamydia trachomatis L1–L3 serotiplerinin yaptığı lenfogranüloma venereum (LGV) ise mukoza bütünlüğünü bozup CD4+ lenfositleri topladığı için epidemiyolojik ve klinik olarak HIV koinfeksiyonu ile çok güçlü birliktelik gösterir.
 - **HIV** — HIV doğru: lenfogranüloma venereum özellikle erkeklerle cinsel ilişkiye giren erkeklerde görülür ve HIV koinfeksiyonuyla güçlü ilişkilidir.
 - **Trichomonas vaginalis** — Trichomonas vaginalis kamçılı bir protozoondur ve kadında vajinit, erkekte hafif üretrit yapar.
 - **Hepatit B virüsü** — Hepatit B virüsü cinsel yolla bulaşarak hepatit yapar; lenfogranüloma venereumla güçlü ilişkisi tanımlanmaz.
@@ -17892,7 +17892,7 @@ _35 soru (örnek + çıkmış)_
 
 **Özet.** HPV aşısı dört ya da dokuz değerliklidir; tip 6 ve 11 ile siğillere, tip 16 ve 18 ile özellikle serviks kanserine karşı korur ve kız ve erkek çocuklara uygulanır.
 
-# 28 · Vulva, Vajen ve Serviks Hastalıkları
+# Ders 28 (28) · Vulva, Vajen ve Serviks Hastalıkları
 
 _34 soru (örnek + çıkmış)_
 
@@ -17924,7 +17924,7 @@ _34 soru (örnek + çıkmış)_
 
 - **Genç erişkin erkekler** — Genç erişkin dönem daha çok kondiloma akuminatumun görüldüğü yaş grubudur; liken skleroz ise her yaşta görülse de iki ayrı dönemde yoğunlaşır.
 - **Gebe kadınlar** — Gebelik vulvada Candida enfeksiyonuna yatkınlık yaratan durumlardandır; liken sklerozun en sık görüldüğü grup değildir.
-- **Doğurganlık çağı kadınlar** — Doğurganlık çağı kadınlar ile karıştırılabilir: Liken sklerozun patogenezi belirsizdir, subepitelyal aktif T hücre infiltrasyonu ve otoimmün birliktelik gösterir.
+- **Doğurganlık çağı kadınlar** — Doğurganlık çağındaki kadınlarda östrojen düzeyi yeterli olduğundan vulvar epitel kalındır ve liken skleroz daha seyrek görülür; epidermal incelme, dermal homojen skleroz ve T hücre infiltrasyonuyla giden liken skleroz en sık menopoz sonrası kadınlarda ortaya çıkar.
 - **Menopoz sonrası kadınlar** — Menopoz sonrası kadınlar doğru: liken skleroz her yaşta görülebilir, ama en sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür.
 - **Yenidoğanlar** — Yenidoğanlar liken sklerozun tipik grubu değil; çocukluk çağında bu hastalık ergenlik öncesi kızlarda yoğunlaşır.
 
@@ -17959,9 +17959,9 @@ _34 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **Biyopsi** — Biyopsi doğru: lökoplaki benign hastalıklarda da, karsinoma in situ ve invaziv karsinomda da görülür; her lökoplakide mikroskobik inceleme zorunludur.
-- **Antibiyotik** — Vulvada antibiyotik ve cerrahi drenaj daha çok Bartholin kisti ve apsesinde gerekebilir. Antibiyotik bu sorudaki ayrımı sağlamaz.
+- **Antibiyotik** — Antibiyotik tedavisi bakteriyel bartolinit veya folikülit gibi akut enfeksiyöz tablolarda kullanılır; vulvada beyaz plak (lökoplaki) görünümü liken skleroz, skuamöz hiperplazi gibi benign lezyonlardan VIN ve invaziv karsinoma kadar pek çok tabloda görülebildiğinden ilk yapılması gereken işlem kesin histolojik tanı için biyopsidir.
 - **Gözlem** — Gözlem yeterli değildir; lökoplakinin altında skuamöz hücreli karsinoma in situ ya da invaziv skuamöz hücreli karsinom bulunabilir.
-- **Kriyoterapi** — Beyaz lezyonun doğası bilinmeden ayırıcı tanı yapılamaz, liken skleroz ile skuamöz hücre hiperplazisi bile mikroskopla ayrılır. Kriyoterapi bu sorudaki ayrımı sağlamaz.
+- **Kriyoterapi** — Kriyoterapi doku tahribi yaptığı için patolojik inceleme olanağını ortadan kaldırır ve tanı konmadan uygulanamaz; vulvada lökoplaki ile başvuran hastada maligniteyi veya öncü lezyonu dışlamak için ilk adım mutlaka biyopsi ve mikroskopik incelemedir.
 - **Steroid krem** — Steroid krem ilk adım değildir; liken planus gibi benign bir lezyon da neoplastik bir lezyon da aynı lökoplaki görünümünü verebilir.
 
 **Cevap: A** — Biyopsi
@@ -18051,7 +18051,7 @@ _34 soru (örnek + çıkmış)_
 - **Çoğunlukla altta tümör olmaması** — Çoğunlukla altta tümör olmaması doğru: vulva Paget hastalığı çoğunlukla primer intraepidermal bir süreçtir; altta tümör ancak vakaların az bir kısmında bulunur.
 - **Her zaman duktal karsinom** — Her zaman altta duktal karsinom bulunması meme ucu Paget hastalığının özelliğidir; vulvadaki formu ayırt eden bu değildir.
 - **Hızla metastaz** — Hızla metastaz bu hastalığın seyri değil; vulva Paget hastalığı invazyon ya da metastaz olmadan yıllarca sürebilir.
-- **HPV ilişkisi** — HPV ilişkisi ile karıştırılabilir: Vulva Paget hücrelerinin olası kökeni, vulva derisi kanallarındaki multipotent hücrelerdir.
+- **HPV ilişkisi** — Ne meme ne de vulva Paget hastalığı HPV enfeksiyonu ile ilişkilidir; meme başı Paget hastalığında olguların neredeyse tamamında altta duktal karsinoma in situ veya invaziv meme karsinomu bulunurken, vulva Paget hastalığında olguların büyük çoğunluğunda altta bir iç organ/deri eki karsinomu saptanmaz ve lezyon epidermis içinde sınırlı kalır.
 - **Erkeklerde görülmesi** — Erkeklerde görülmesi bu iki formu ayıran özellik değil; ayrım, altta yatan bir karsinomun bulunup bulunmamasına dayanır.
 
 **Cevap: A** — Çoğunlukla altta tümör olmaması
@@ -18068,9 +18068,9 @@ _34 soru (örnek + çıkmış)_
 
 - **Bartholin kisti** — Bartholin kisti vulvada, bez salgı kanalının tıkanmasıyla oluşan ağrılı bez genişlemesidir; sıkça apseleşir.
 - **Gartner kanal kisti** — Gartner kanal kisti doğru: lateral vajinal duvarda, kalıcı Wolffian kanal kalıntısından gelişir; çoğu benign ve asemptomatiktir.
-- **Basit kist** — Basit kist ile karıştırılabilir: Wolffian kanal kalıntısından gelişen kist özel bir adla bilinir ve büyükse semptom verebilir.
-- **Epidermal kist** — Yetişkinde vajina nadiren primer hastalık yeridir, daha sık komşu organ kanserleri ve enfeksiyonlarıyla tutulur. Epidermal kist bu sorudaki ayrımı sağlamaz.
-- **Nabothi kisti** — Nabothi kisti ile karıştırılabilir: Lateral vajinal duvardaki embriyonik kanal artığı kisti çoğunlukla belirti vermez, büyükse semptom yapar.
+- **Basit kist** — Basit kist organ parankiminde (örneğin böbrek korteksi veya overde) gelişen genel kistik lezyondur; embriyonik mezonefrik (Wolffian) kanal kalıntılarından vajina yan duvarları boyunca gelişen, kübik-kolumnar epitelle döşeli spesifik kist ise Gartner kanal kistidir.
+- **Epidermal kist** — Epidermal inklüzyon kisti travma veya epizyotomi sonrası çok katlı yassı epitelin dermis altına gömülmesiyle oluşan ve keratin içeren kisttir; vajinanın anterolateral duvarında Wolffian (mezonefrik) kanal kalıntılarından gelişen embriyonik kist ise Gartner kanal kistidir.
+- **Nabothi kisti** — Nabothi kisti serviks transformasyon bölgesinde skuamöz metaplazinin endoservikal bez ağzını tıkamasıyla oluşan mukus dolu servikal retansiyon kistidir; vajina lateral duvarında Wolffian kanal kalıntısından gelişen kist ise Gartner kanal kistidir.
 
 **Cevap: B** — Gartner kanal kisti
 
@@ -18104,9 +18104,9 @@ _34 soru (örnek + çıkmış)_
 
 - **Vajinal SCC** — Vajinal skuamöz hücreli karsinom yüksek riskli HPV ile ilişkilidir; en büyük risk faktörü daha önce serviks ya da vulva karsinomu öyküsüdür.
 - **Adenokarsinom** — Adenokarsinom bu yaş grubunun vajinal tümörü değil; vajinanın neredeyse tüm primer karsinomları skuamöz hücreli karsinomdur.
-- **Leiomiyosarkom** — Leiomiyosarkom ile karıştırılabilir: Küçük çocuklardaki bu vajinal tümör aynı histogenezle idrar kesesi ve safra kanallarında da görülebilir.
+- **Leiomiyosarkom** — Leiomiyosarkom erişkin kadınlarda miyometriyum veya vajina düz kasından gelişen malign tümördür; 5 yaş altı kız çocuklarında vajina duvarından üzüm salkımı (polipoid) kitleler halinde lümene uzanan karakteristik malign mezenkimal tümör ise embriyonel rabdomiyosarkomdur (sarkoma botryoides).
 - **Embriyonel rabdomiyosarkom** — Embriyonel rabdomiyosarkom doğru: sarkoma botryoides de denen bu nadir vajinal tümör malign embriyonel rabdomiyoblastlardan gelişir ve en sık 5 yaş altında görülür.
-- **Melanom** — Melanom ile karıştırılabilir: Vajina nadiren primer hastalık yeridir ve daha sık serviks, mesane ya da rektum kanserleri tarafından tutulur.
+- **Melanom** — Malign melanom ileri yaş kadınlarda melanositlerden gelişen agresif bir tümördür; bebek ve 5 yaş altı kız çocuklarında vajinada kambiyum tabakası ve çizgili kas farklılaşması (rabdomiyoblast) gösteren karakteristik malign tümör ise embriyonel rabdomiyosarkomdur.
 
 **Cevap: D** — Embriyonel rabdomiyosarkom
 
@@ -18120,10 +18120,10 @@ _34 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Meme kanseri** — Meme ile vulva arasındaki bağlantı, her zaman altta duktal karsinom bulunan meme ucu Paget hastalığıdır. Meme kanseri bu sorudaki ayrımı sağlamaz.
-- **Kolon kanseri** — Kolon kanseri ile karıştırılabilir: HPV ilişkili skuamöz tümörler vulva, vajina ve serviks gibi alt genital sistemde gelişir.
-- **Uterus kanseri** — HPV ile belirgin ilişkisi olan kanser serviksteki skuamöz hücreli karsinomdur. Uterus kanseri bu sorudaki ayrımı sağlamaz.
-- **Melanom** — Melanom ile karıştırılabilir: Vulvar karsinomların yaklaşık dörtte birinde görülen pigmentasyon melanine bağlıdır, tümör yine skuamöz kökenlidir.
+- **Meme kanseri** — Meme kanseri östrojen maruziyeti ve BRCA1/2 gibi genetik faktörlerle ilişkilidir, HPV enfeksiyonu meme karsinomunda rol oynamaz; vulvada yüksek riskli HPV saptanan hastada aynı viral etken alt genital traktusu ortak tuttuğu için serviks ve vajina kanseri riski belirgin artar.
+- **Kolon kanseri** — Kolon adenokarsinomu APC, KRAS, TP53 ve DNA uyumsuzluk onarım gen mutasyonlarıyla gelişir ve HPV ile ilişkili değildir; vulvada saptanan yüksek riskli HPV enfeksiyonu ise serviks transformasyon zonunu da enfekte ederek serviks kanseri için doğrudan risk oluşturur.
+- **Uterus kanseri** — Uterus korpusunun (endometriyumun) kanserleri östrojen fazlalığı, PTEN ve TP53 mutasyonlarıyla gelişir ve HPV'den bağımsızdır; vulvadaki yüksek riskli HPV enfeksiyonu ise alt genital sistemin skuamöz mukozasını tutarak serviks kanseri riskini artırır.
+- **Melanom** — Melanom melanositlerden ultraviyole veya BRAF/NRAS mutasyonlarıyla gelişen bir tümördür ve HPV ile ilişkisi yoktur; yüksek riskli HPV tespit edilen hastada viral E6 ve E7 onkoproteinleri doğrudan serviks kanseri gelişimi için majör risk faktörüdür.
 - **Serviks kanseri** — Serviks kanseri doğru: vulvar kondilomlar kansere dönüşmese de vajina ve servikste HPV ilişkili prekanseröz lezyon riski artar.
 
 **Cevap: E** — Serviks kanseri
@@ -18142,7 +18142,7 @@ _34 soru (örnek + çıkmış)_
 - **Neisseria gonorrhoeae** — Neisseria gonorrhoeae vulvovajinal bezlerin süpüratif enfeksiyonunu yapar; tanıda kültür ve NAAT testleri kullanılır.
 - **Herpes simpleks virüs** — Herpes simpleks virüsü persistan latent enfeksiyonla tekrarlayan genital herpes yapar; Pap testinde organizması doğrudan görülen etken ise bir parazittir.
 - **Trichomonas vaginalis** — Trichomonas vaginalis doğru: Pap testinde karakteristik oval çekirdekli ve soluk kırmızı granüllü organizma olarak doğrudan görülür.
-- **Chlamydia trachomatis** — Chlamydia trachomatis ile karıştırılabilir: Pap testinde etkenin kendisi Trichomonas'ta organizma, Candida'da hif formları olarak görülür.
+- **Chlamydia trachomatis** — Chlamydia trachomatis çok küçük zorunlu hücre içi bakterisi olduğundan rutin Pap smear ışık mikroskobunda doğrudan seçilemez ve tanısı nükleik asit amplifikasyon (PCR) testleriyle konur; Pap yaymasında armut biçimli, kamçılı trofozoit olarak doğrudan görülebilen etken ise Trichomonas vaginalis'tir (ayrıca Candida hifleri ve HSV sitopatik etkileri de görülür).
 
 **Cevap: D** — Trichomonas vaginalis
 
@@ -18157,7 +18157,7 @@ _34 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Skuamöz hücreli karsinom** — Skuamöz hücreli karsinom doğru: liken skleroz prekanseröz değildir ama vulvar skuamöz hücreli karsinom riski biraz artmıştır; HPV negatif keratinize tip bu zeminde gelişir.
-- **Melanom** — Melanom ile karıştırılabilir: Liken skleroz zemininde gelişen tümör HPV ile ilişkisiz keratinize skuamöz hücreli karsinomdur.
+- **Melanom** — Vulvar melanom melanositlerden köken alan nadir bir tümördür ve liken skleroz zemininden gelişmez; kronik atrofik inflamasyonla seyreden liken skleroz ve skuamöz hücre hiperplazisi ise diferansiye (HPV-negatif) VIN üzerinden keratinize skuamöz hücreli karsinom gelişme riskini artırır.
 - **Bazal hücreli karsinom** — Bazal hücreli karsinom vulvada nadir görülen diğer malign tiplerdendir; vulva karsinomlarının yaklaşık %90'ı skuamöz hücrelidir.
 - **Kondiloma akuminata** — Kondiloma akuminata düşük riskli HPV tip 6 ve 11 ile cinsel temasla bulaşan benign bir siğildir.
 - **Paget hastalığı** — Paget hastalığı, vulva derisi kanallarındaki multipotent hücrelerden türeyen atipik hücrelerin intraepidermal proliferasyonudur.
@@ -18174,10 +18174,10 @@ _34 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Psammom cismi** — Psammom cismi ile karıştırılabilir: Kondiloma akuminatumdaki HPV etkisi, büyümüş hiperkromatik çekirdeğin çevresindeki halo şeklindedir.
+- **Psammom cismi** — Psammom cismi papiller tiroid karsinomu, seröz over tümörü ve meningiomda görülen konsantrik laminer distrofik kalsifikasyon küresidir; HPV enfeksiyonunun yassı epitel hücrelerinde oluşturduğu kuru üzüm benzeri buruşuk hiperkromatik çekirdek ve keskin sınırlı perinükleer halo görünümüne ise koilositoz denir.
 - **Koilositoz** — Koilositoz doğru: büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo, HPV'nin koilositik atipi denen sitopatik etkisidir.
 - **Displazi** — Displazi derecesi vajinal intraepitelyal neoplazinin sınıflanmasında kullanılır; perinükleer halonun adı değildir.
-- **Metaplazi** — HPV'ye bağlı viral sitopatik değişikliklerin toplu adı koilositik atipidir. Metaplazi bu sorudaki ayrımı sağlamaz.
+- **Metaplazi** — Metaplazi endoserviksteki kolumnar epitelin yassı epitele dönüşmesi gibi adaptif doku değişimidir; HPV'nin E5 ve E6/E7 proteinlerinin üst epitel tabakalarında oluşturduğu perinükleer sitoplazmik boşluk (halo) ve nükleer atipi ise tanısal viral sitopatik etki olan koilositozdur.
 - **Hiperkeratoz** — Hiperkeratoz kondiloma akuminatumda ve skuamöz hücre hiperplazisinde görülen bir epidermis değişikliğidir; perinükleer haloyu tanımlamaz.
 
 **Cevap: B** — Koilositoz
@@ -18321,7 +18321,7 @@ _34 soru (örnek + çıkmış)_
 - **Karsinoma in situ** — Skuamöz hücreli karsinoma in situ lökoplaki yapabilir, ama neoplastik bir lezyondur; benign grupta yer almaz.
 - **İnvaziv skuamöz karsinom** — İnvaziv skuamöz hücreli karsinom da lökoplaki şeklinde görülebilir; malign olduğu için her lökoplakide biyopsi zorunludur.
 - **Psoriasis** — Psoriasis doğru: liken planus ile birlikte lökoplaki yapabilen benign hastalıklardandır.
-- **Bartholin kisti** — Bartholin kisti bez kanalının tıkanmasıyla oluşan ağrılı gland genişlemesidir; lökoplaki yapan hastalıklar arasında sayılmaz.
+- **Bartholin kisti** — Bartholin kisti vestibüldeki büyük mukus bezinin kanal tıkanıklığıyla oluşan, epitel altında yerleşimli düzgün yüzeyli kistik şişliktir ve yüzeyde beyaz plak yapmaz; vulva derisinde epidermal kalınlaşma ve hiperkeratozla beyaz plak (lökoplaki) oluşturabilen benign inflamatuvar dermatozlar ise psoriasis, liken skleroz ve skuamöz hücre hiperplazisidir.
 - **Ekstramammary Paget hastalığı** — Ekstramammary Paget hastalığı kırmızı, pullu, kabuklu plak yapar ve kronik dermatiti taklit eder; benign bir lezyon değildir.
 
 **Cevap: C** — Psoriasis
@@ -18375,7 +18375,7 @@ _34 soru (örnek + çıkmış)_
 - **Liken skleroz** — Liken skleroz HPV negatif keratinize karsinomun zeminidir; VIN üzerinden gelişen HPV pozitif yolun risk faktörü değildir.
 - **Düşük riskli HPV** — Düşük riskli HPV tip 6 ve 11 benign kondilom yapar; vulvar karsinom yolunda yüksek riskli HPV yer alır.
 - **İmmün sistemin baskılanması** — İmmün sistemin baskılanması doğru: immün sistemi baskılanmış hastalarda VIN zemininde invaziv karsinom riski artar.
-- **Skuamöz hücre hiperplazisi** — Skuamöz hücre hiperplazisi, liken skleroz gibi HPV negatif yolun zemin lezyonudur; VIN ilerlemesinin risk faktörü olarak geçmez.
+- **Skuamöz hücre hiperplazisi** — Skuamöz hücre hiperplazisi ve liken skleroz, HPV-negatif (diferansiye VIN) yolağının zemin lezyonlarıdır; yüksek riskli HPV ile ilişkili klasik VIN (HSIL) lezyonlarının regresyona uğramayıp invaziv vulvar karsinoma ilerleme riskini artıran etkenler ise ileri yaş, sigara kullanımı ve immün sistemin baskılanmasıdır.
 - **45 yaşından küçük olmak** — 45 yaşından küçük olmak riski artırmaz; invaziv karsinom riski 45 yaşından büyük kadınlarda artar.
 
 **Cevap: C** — İmmün sistemin baskılanması
@@ -18410,9 +18410,9 @@ _34 soru (örnek + çıkmış)_
 
 - **Bölgesel lenf düğümleri** — Bölgesel lenf düğümleri doğru: uzun süre lokal kalan vulvar karsinomun ilk yayılımı bölgesel lenf düğümlerinedir.
 - **Akciğer** — Akciğer metastazı hematojen yolla ve ileri evrede görülür; ilk yayılım yeri değildir.
-- **Karaciğer** — Vulvar karsinomda organ metastazı ancak ileri evrede hematojen yolla gelişir. Karaciğer bu sorudaki ayrımı sağlamaz.
+- **Karaciğer** — Karaciğer, akciğer ve diğer iç organlara hematojen metastaz vulvar karsinomda ancak çok ileri evrelerde ortaya çıkar; karsinomların genel kuralına uygun olarak vulvar skuamöz hücreli karsinomun ilk ve en önemli yayılım yeri inguinal, pelvik ve femoral bölgesel lenf düğümleridir.
 - **Kemik** — Kemik de ilk yayılım yeri değildir; vulvar karsinom önce bölgesel invazyon yapar, ilk uzak yayılımı lenf düğümlerinedir.
-- **Beyin** — Vulvar karsinomun prognozu evre, invazyon derinliği ve tümör boyutuyla ilişkilidir. Beyin bu sorudaki ayrımı sağlamaz.
+- **Beyin** — Beyin metastazı vulvar karsinomda son derece nadir ve geç dönem bir hematojen yayılımdır; invazyon derinliği 1 milimetreyi aşan vulvar karsinomda tümör hücrelerinin ilk yayıldığı anatomik istasyon bölgesel (inguinal ve femoral) lenf düğümleridir.
 
 **Cevap: A** — Bölgesel lenf düğümleri
 
@@ -18447,7 +18447,7 @@ _34 soru (örnek + çıkmış)_
 - **Primer skuamöz hücreli karsinom** — Primer vajinal skuamöz hücreli karsinom son derece nadirdir; yetişkin vajinasında daha sık olan sekonder tutulumdur.
 - **Embriyonel rabdomiyosarkom** — Embriyonel rabdomiyosarkom nadir bir vajinal tümördür ve en sık 5 yaş altı çocuklarda görülür; yetişkinlerde sık değildir.
 - **Komşu organ kanserlerinin tutulumu** — Komşu organ kanserlerinin tutulumu doğru: yetişkin vajinası nadiren primer hastalık yeridir, serviks, mesane ve rektum kanserleri onu sekonder olarak tutar.
-- **Primer adenokarsinom** — Primer adenokarsinom ile karıştırılabilir: Yetişkin vajinasında daha sık görülen, komşu organ kanserlerinin sekonder tutulumudur.
+- **Primer adenokarsinom** — Primer vajinal adenokarsinom (DES maruziyetiyle ilişkili berrak hücreli adenokarsinom dahil) oldukça nadir bir tümördür; yetişkin kadınlarda vajinada görülen malign neoplastik tutulumların büyük çoğunluğu primer değil, serviks, endometriyum, vulva, mesane veya rektum gibi komşu organ kanserlerinin doğrudan veya lenfatik yayılımıdır.
 - **Ekstramammary Paget hastalığı** — Ekstramammary Paget hastalığı vulva derisinde görülen intraepidermal proliferasyondur; vajinanın sık tutulum biçimi değildir.
 
 **Cevap: C** — Komşu organ kanserlerinin tutulumu
@@ -18481,8 +18481,8 @@ _34 soru (örnek + çıkmış)_
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **Lateral vajinal duvar** — Lateral vajinal duvar Gartner kanal kistinin yerleşim yeridir; vajinal karsinom çoğunlukla üst vajinada görülür.
-- **Alt vajina ön duvarı** — Alt vajina ön duvarı ile karıştırılabilir: Vajinal skuamöz hücreli karsinom üst vajinanın arka duvarında yoğunlaşır.
-- **Vestibül** — Tümör servikse yakın üst vajinada, ektoserviksle birleşme noktasında yerleşir. Vestibül bu sorudaki ayrımı sağlamaz.
+- **Alt vajina ön duvarı** — Alt vajina ön duvarı üretraya komşu bölgedir ve primer vajinal karsinomun tipik başlangıç yeri değildir; yüksek riskli HPV ile ilişkili vajinal skuamöz hücreli karsinom en sık serviks ektoserviksiyle birleşen üst üçte birlik arka vajina duvarında yerleşir.
+- **Vestibül** — Vestibül vulvanın iç kısmında üretra ve vajina girişini çevreleyen bölgedir ve vulvar lezyonların yerleşim alanıdır; primer vajinal skuamöz hücreli karsinom ise en sık üst vajina arka duvarında (posterior forniks komşuluğunda) gelişir.
 - **Vajinal introitus** — Vajinal introitus tipik yer değildir; tümörün en büyük risk faktörü daha önce serviks ya da vulva karsinomu öyküsüdür.
 - **Üst vajina arka duvarı** — Üst vajina arka duvarı doğru: tümör çoğunlukla üst vajinada, özellikle ektoserviksle birleşme noktasındaki arka duvarda yerleşir.
 
@@ -18502,13 +18502,634 @@ _34 soru (örnek + çıkmış)_
 - **Wolffian kanal kalıntısı** — Wolffian kanal kalıntısı lateral vajinal duvardaki Gartner kanal kistinin kaynağıdır; bu kistlerin çoğu benign ve asemptomatiktir.
 - **Deri kanallarındaki multipotent hücreler** — Deri kanallarındaki multipotent hücreler ekstramammary Paget hücrelerinin olası kökenidir; vulva derisinde görülür.
 - **Yüksek riskli HPV'li epitel** — Yüksek riskli HPV ile enfekte epitel vajinal skuamöz hücreli karsinom ve öncüsü VAIN ile ilişkilidir; sarkom kaynağı değildir.
-- **Düz kas hücreleri** — Düz kas hücreleri ile karıştırılabilir: Sarkoma botryoides rabdomiyoblastlardan köken alır, idrar kesesi ve safra kanallarında da görülebilir.
+- **Düz kas hücreleri** — Düz kas hücrelerinden benign leiomiyom veya erişkinde malign leiomiyosarkom gelişir; bebek ve küçük çocuklarda vajinada üzüm salkımı görünümü veren sarkoma botryoides (embriyonel rabdomiyosarkom) ise çizgili kas yönünde farklılaşan malign embriyonel rabdomiyoblastlardan köken alır.
 
 **Cevap: A** — Malign embriyonel rabdomiyoblastlar
 
 **Özet.** Embriyonel rabdomiyosarkom, yani sarkoma botryoides, malign embriyonel rabdomiyoblastlardan gelişir; en sık 5 yaş altı çocuklarda vajinada görülür.
 
-# 30 · Endometrial Hiperplazi ve Kanserleri
+# Ders 29 (39) · İnvaziv Serviks Kanseri ve Endometriyozis
+
+_34 soru (örnek + çıkmış)_
+
+## Soru 1
+
+**Soru.** En yaygın servisit etkeni hangisidir?
+
+**A)** Neisseria gonorrhoeae · **B)** Chlamydia trachomatis · **C)** Trichomonas vaginalis · **D)** HSV-2 · **E)** Candida albicans
+
+**Çözüm.** Seçenekleri sırayla değerlendirelim.
+
+- **Neisseria gonorrhoeae** — Neisseria gonorrhoeae cinsel yolla bulaşan önemli bir servisit etkenidir ve ampirik tedavide hedeflenir; ancak en yaygın etken değildir.
+- **Chlamydia trachomatis** — Chlamydia trachomatis doğru: en yaygın servisit etkenidir, sıklıkla asemptomatik seyreder ve pelvik inflamatuvar hastalık riski taşır.
+- **Trichomonas vaginalis** — Trichomonas vaginalis servisit ve üst genital enfeksiyonlarda rol oynar, vajinal sıvıda nükleik asit amplifikasyon testiyle aranır; en yaygın etken değildir.
+- **HSV-2** — HSV-2 genital herpes etkenidir; doğumda anneden bebeğe geçip yenidoğanda ağır, bazen ölümcül sistemik herpes yapabilir.
+- **Candida albicans** — Candida türleri tesadüfi vajinal flora elemanlarıdır; bu flora nedeniyle enfeksiyonlu ve enfeksiyonsuz servisit ayrımı zordur.
+
+**Cevap: B** — Chlamydia trachomatis
+
+**Özet.** Chlamydia trachomatis en yaygın servisit etkenidir ve cinsel yolla bulaşan hastalık kliniklerinde olguların %40'ına kadarından sorumludur; sıklıkla asemptomatiktir ve pelvik inflamatuvar hastalık riski taşır.
+
+## Soru 2
+
+**Soru.** Endoservikal polip için doğru olan hangisidir?
+
+**A)** Malign potansiyeli yoktur · **B)** HPV 16 ile ilişkilidir · **C)** Skuamöz epitelden gelişir · **D)** Histerektomi gerektirir · **E)** Prekanseröz lezyondur
+
+**Çözüm.** Her seçeneği tek tek ele alalım.
+
+- **Malign potansiyeli yoktur** — Malign potansiyelinin olmaması doğru: endoservikal polip endoservikal kanalda gelişen benign ekzofitik lezyondur; histolojik incelemeyle malignite dışlanır.
+- **HPV 16 ile ilişkilidir** — HPV 16 ilişkisi polipte değil, servikal intraepitelyal neoplazi ve karsinomda önemlidir; tip 16 ve 18 bu lezyonların yaklaşık %70'inden sorumludur.
+- **Skuamöz epitelden gelişir** — Skuamöz epitelden gelişme polipte söz konusu değildir; polip endoservikal kanalda, fibröz stroma ve mukus salgılayan endoservikal bezlerden oluşur.
+- **Histerektomi gerektirir** — Histerektomi invaziv serviks kanserinin primer tedavisidir; endoservikal polipte basit küretaj ya da cerrahi eksizyon genellikle küratiftir.
+- **Prekanseröz lezyondur** — Prekanseröz lezyon tanımı polipe uymaz; ülserleşen polip düzensiz kanama yapıp malignite şüphesi uyandırabilir ama kendisi benigndir.
+
+**Cevap: A** — Malign potansiyeli yoktur
+
+**Özet.** Endoservikal polip benign ekzofitik bir lezyondur ve malign potansiyeli yoktur; ülserleşince düzensiz kanama yapabilir, küretaj ya da eksizyon genellikle küratiftir.
+
+## Soru 3
+
+**Soru.** Servikal tümörlerin en sık geliştiği, HPV'ye en duyarlı alan hangisidir?
+
+**A)** Ektoserviks · **B)** Endoservikal kanal · **C)** Transformasyon bölgesi · **D)** Vajinal forniks · **E)** Endometriyum
+
+**Çözüm.** Şıkları sırasıyla gözden geçirelim.
+
+- **Ektoserviks** — Ektoserviks olgun skuamöz epitelle örtülüdür; virüse en duyarlı olan ise olgunlaşmamış metaplastik hücrelerden oluşan alandır.
+- **Endoservikal kanal** — Endoservikal kanal kolumnar, mukus salgılayan epitelle döşelidir; burada gelişen polip benigndir ve malign potansiyel taşımaz.
+- **Transformasyon bölgesi** — Transformasyon bölgesi doğru: metaplastik, olgunlaşmamış skuamöz hücrelerden oluşur, HPV'ye en duyarlı alandır ve servikal tümörler en sık burada gelişir.
+- **Vajinal forniks** — Vajinal forniks serviksin vajina içine uzanan kısmını çevreleyen oluk olup olgun çok katlı yassı epitelle döşelidir; ektoserviksin yassı epiteli ile endoserviksin mukuslu kolumnar epitelinin karşılaştığı ve sürekli immatür skuamöz metaplazinin yaşandığı transformasyon bölgesi (skuamokolumnar bileşke) ise HPV enfeksiyonuna ve servikal neoplazi gelişimine en duyarlı alandır.
+- **Endometriyum** — Endometriyum serviksin bir bölgesi değildir; serviks epiteli endoserviksteki kolumnar ve ektoserviksteki skuamöz epitelden oluşur.
+
+**Cevap: C** — Transformasyon bölgesi
+
+**Özet.** Transformasyon bölgesi, skuamo-kolumnar bileşkede kolumnar hücrelerin skuamöz metaplaziye uğradığı alandır; olgunlaşmamış metaplastik hücreler HPV'ye en duyarlıdır ve tümörler en sık burada gelişir.
+
+## Soru 4
+
+**Soru.** Yüksek riskli HPV'nin E6 proteininin bağlanıp yıkımına aracılık ettiği protein hangisidir?
+
+**A)** RB · **B)** E2F · **C)** Notch · **D)** p53 · **E)** Siklin D
+
+**Çözüm.** Şimdi seçeneklere tek tek bakalım.
+
+- **RB** — RB, E7 proteininin bağlandığı hücre döngüsü düzenleyicisidir; E7 bağlanınca E2F serbestleşir ve G1/S geçişi hızlanır.
+- **E2F** — E2F, RB'nin tuttuğu transkripsiyon faktörüdür; E6 tarafından yıkılmaz, E7'nin RB'ye bağlanmasıyla serbest kalır.
+- **Notch** — Notch sinyal yoluna, düşük riskli HPV 6 ve 11'in p53'e bağlanamayan E6 proteini müdahale eder; yıkılan bir protein değildir.
+- **p53** — p53 doğru: E6 tümör baskılayıcı p53'e bağlanıp yıkımına aracılık eder ve telomeraz ekspresyonunu artırır; sonuç apoptoz inhibisyonu ve hücre ömründe uzamadır.
+- **Siklin D** — Siklin D1, CDK4/6 ile kompleks kurarak RB proteinini fosforilleyen hücre döngüsü düzenleyicisidir ve HPV E6'nın doğrudan yıkım hedefi değildir; yüksek riskli HPV'nin E6 viral onkoproteini E6AP ubikuitin ligazı aracılığıyla p53 tümör baskılayıcı proteinine bağlanıp onun proteazomal yıkımını hızlandırır ve ayrıca telomerazı (TERT) aktive eder.
+
+**Cevap: D** — p53
+
+**Özet.** Yüksek riskli HPV'de E6, p53'e bağlanıp yıkımını sağlar ve telomerazı artırır; E7 ise RB'ye bağlanıp E2F'yi serbest bırakarak G1/S geçişini hızlandırır.
+
+## Soru 5
+
+**Soru.** HPV E7 proteininin RB'ye bağlanmasının sonucu hangisidir?
+
+**A)** Apoptoz artışı · **B)** E2F serbestleşmesi ile G1/S geçişi hızlanır · **C)** p53 yıkımı · **D)** Telomeraz baskılanması · **E)** Viral DNA episomal kalır
+
+**Çözüm.** Seçenekleri sırayla değerlendirelim.
+
+- **Apoptoz artışı** — Apoptoz artışı beklenmez; yüksek riskli HPV'de E6, p53'ü yıkarak tam tersine apoptozu inhibe eder.
+- **E2F serbestleşmesi ile G1/S geçişi hızlanır** — E2F serbestleşmesiyle G1/S geçişinin hızlanması doğru: E7, RB'ye bağlanıp onun tuttuğu E2F'yi serbest bırakır ve hücre döngüsü kontrolü bozulur.
+- **p53 yıkımı** — p53 yıkımı E7'nin değil, E6 proteininin etkisidir; E6 p53'e bağlanıp yıkımına aracılık eder.
+- **Telomeraz baskılanması** — Telomeraz baskılanmaz; tersine E6 telomeraz ekspresyonunu artırarak hücre ömrünü uzatır.
+- **Viral DNA episomal kalır** — Viral DNA'nın episomal kalması düşük riskli HPV 6 ve 11'in özelliğidir; bu tiplerin E7'si RB'ye düşük afiniteyle bağlanır.
+
+**Cevap: B** — E2F serbestleşmesi ile G1/S geçişi hızlanır
+
+**Özet.** E7, RB'ye bağlanınca RB'nin tuttuğu E2F transkripsiyon faktörleri serbestleşir; G1/S geçişi hızlanır ve hücre döngüsü kontrolü bozulur. E6 ise p53'ü hedefler.
+
+## Soru 6
+
+**Soru.** Servikal intraepitelyal neoplazi ve karsinomların ~%70'inden sorumlu HPV tipleri hangileridir?
+
+**A)** 6 ve 11 · **B)** 6 ve 16 · **C)** 11 ve 18 · **D)** 31 ve 33 · **E)** 16 ve 18
+
+**Çözüm.** Her seçeneği tek tek ele alalım.
+
+- **6 ve 11** — HPV 6 ve 11 düşük riskli tiplerdir; kondilomlarla ilişkilidir ve DNA'ları konak genomuna entegre olmadan episomal kalır.
+- **6 ve 16** — 6 ve 16 karışık bir eşleşmedir; 16 yüksek riskli olsa da 6, kondilomla ilişkili düşük riskli bir tiptir.
+- **11 ve 18** — 11 ve 18 de karışık bir eşleşmedir; 18 yüksek riskli olsa da 11, E6 proteini p53'e bağlanamayan düşük riskli bir tiptir.
+- **31 ve 33** — HPV tip 31 ve 33 yüksek riskli onkojenik grupta yer alır ancak serviks kanserlerinin daha küçük bir bölümünden sorumludur; dünya genelinde yüksek dereceli servikal intraepitelyal neoplazilerin (HSIL) ve invaziv serviks karsinomlarının yaklaşık %70'inden sorumlu olan iki baskın yüksek riskli tip HPV 16 (%55–60) ve HPV 18'dir (%10–15).
+- **16 ve 18** — 16 ve 18 doğru: bu yüksek riskli tipler CIN ve servikal karsinomların yaklaşık %70'inden sorumludur; konak genomuna entegrasyon progresyonla ilişkilidir.
+
+**Cevap: E** — 16 ve 18
+
+**Özet.** HPV 16 ve 18, CIN ve servikal karsinomların yaklaşık %70'inden sorumlu yüksek riskli tiplerdir ve konak genomuna entegre olur. HPV 6 ve 11 ise kondilom yapan düşük riskli tiplerdir.
+
+## Soru 7
+
+**Soru.** Düşük riskli HPV 6 ve 11 için doğru olan hangisidir?
+
+**A)** Konak genomuna entegre olur · **B)** E6 p53'ü yıkar · **C)** DNA episomal kalır · **D)** Karsinomların çoğundan sorumludur · **E)** E7 RB'ye yüksek afiniteyle bağlanır
+
+**Çözüm.** Şıkları sırasıyla gözden geçirelim.
+
+- **Konak genomuna entegre olur** — Konak genomuna entegrasyon yüksek riskli tiplerin özelliğidir; entegrasyon E6 ve E7'yi negatif düzenleyen geni bozar ve progresyonla ilişkilidir.
+- **E6 p53'ü yıkar** — E6'nın p53'ü yıkması yüksek riskli tiplere aittir; düşük riskli tiplerde E6 p53'e bağlanamaz, Notch sinyal yoluna müdahale eder.
+- **DNA episomal kalır** — DNA'nın episomal kalması doğru: HPV 6 ve 11'in DNA'sı konak genomuna entegre olmaz; bu tipler kondilomlarla ilişkilidir.
+- **Karsinomların çoğundan sorumludur** — Karsinomların çoğundan sorumlu olan düşük riskli tipler değil, yüksek riskli 16 ve 18'dir; bu ikisi lezyonların yaklaşık %70'inden sorumludur.
+- **E7 RB'ye yüksek afiniteyle bağlanır** — E7'nin RB'ye yüksek afiniteyle bağlanması yüksek riskli tiplere aittir; HPV 6 ve 11'in E7'si RB'ye düşük afiniteyle bağlanır.
+
+**Cevap: C** — DNA episomal kalır
+
+**Özet.** Düşük riskli HPV 6 ve 11'de DNA episomal kalır, E6 p53'e bağlanamaz ve E7 RB'ye düşük afiniteyle bağlanır; bu tipler kondilomlarla ilişkilidir.
+
+## Soru 8
+
+**Soru.** Displazinin epitelin alt üçte birinde olduğu ve yüzeyde koilositik değişikliğin görüldüğü lezyon hangisidir?
+
+**A)** CIN I (LSIL) · **B)** CIN II · **C)** CIN III · **D)** Mikroinvaziv karsinom · **E)** Skuamöz metaplazi
+
+**Çözüm.** Şimdi seçeneklere tek tek bakalım.
+
+- **CIN I (LSIL)** — CIN I, yani LSIL doğru: displazi skuamöz epitelin alt üçte birindedir ve yüzeysel katmanlarda HPV enfeksiyonunu gösteren koilositik değişiklik vardır.
+- **CIN II** — CIN II'de olgunlaşmamış hücreler daha derine uzanır ve epitelin alt üçte ikisi tutulur; bu yüksek dereceli bir lezyondur.
+- **CIN III** — CIN III'te epitelin tam kalınlığı tutulur, hücre yönlenmesi bozulur ve koilositik değişiklik genellikle yoktur.
+- **Mikroinvaziv karsinom** — Mikroinvaziv karsinomda mikroskobik stromal invazyon odakları vardır; değişiklik epitelle sınırlı kalmaz ve konik biyopsiyle tedavi edilebilir.
+- **Skuamöz metaplazi** — Skuamöz metaplazi, açığa çıkan kolumnar hücrelerin skuamöz hücrelere dönüşmesidir; transformasyon bölgesini oluşturur, kendisi bir intraepitelyal lezyon derecesi değildir.
+
+**Cevap: A** — CIN I (LSIL)
+
+**Özet.** LSIL, yani CIN I'de displazi epitelin alt üçte biriyle sınırlıdır ve yüzeyde koilositler görülür; CIN II'de alt üçte iki, CIN III'te tüm kat tutulur.
+
+## Soru 9
+
+**Soru.** Epitelin tam kalınlığının tutulduğu, koilositozun genellikle olmadığı lezyon hangisidir?
+
+**A)** CIN I · **B)** CIN II · **C)** Kondilom · **D)** CIN III · **E)** Servisit
+
+**Çözüm.** Seçenekleri sırayla değerlendirelim.
+
+- **CIN I** — CIN I'de displazi alt üçte birle sınırlıdır ve yüzeyel katmanlarda koilositik değişiklik belirgindir; tam kat tutulum yoktur.
+- **CIN II** — CIN II'de olgunlaşmamış hücreler daha derine uzanır ve epitelin alt üçte ikisi tutulur; tam kat tutulum bir üst dereceye aittir.
+- **Kondilom** — Kondilom düşük riskli HPV 6 ve 11 ile ilişkili lezyondur; bu tiplerin DNA'sı konak genomuna entegre olmaz.
+- **CIN III** — CIN III doğru: epitelin tam kalınlığı tutulur, hücre yönlenmesi bozulur, anormal mitozlar sıktır ve koilositik değişiklik genellikle yoktur.
+- **Servisit** — Servisit serviksin inflamatuvar durumudur; irinli ya da mukopürülan akıntı yapar, epitel tutulum derecesiyle tanımlanmaz.
+
+**Cevap: D** — CIN III
+
+**Özet.** CIN III'te olgunlaşmamış hücreler epitelin tam kalınlığını kaplar, yönlenme bozulur ve anormal mitozlar sıktır; koilositik değişiklik genellikle görülmez.
+
+## Soru 10
+
+**Soru.** HPV DNA testi özellikle hangi yaş grubunda değerlidir?
+
+**A)** 11-12 yaş · **B)** 20 yaş altı · **C)** 30 yaş altı · **D)** Menarş dönemi · **E)** 30 yaş ve üzeri
+
+**Çözüm.** Her seçeneği tek tek ele alalım.
+
+- **11-12 yaş** — 11–12 yaş HPV aşılaması için önerilen yaştır; kız ve erkek çocuklar bu dönemde aşılanır, test için değil.
+- **20 yaş altı** — 20 yaş altında HPV enfeksiyonları sık ve çoğunlukla geçicidir; pozitif sonuç kalıcı riski yansıtmadığından test bu grupta değerli değildir.
+- **30 yaş altı** — 30 yaş altında HPV enfeksiyon insidansı yüksektir ve çoğu enfeksiyon geçicidir; bu yüzden testin prediktif değeri düşüktür.
+- **Menarş dönemi** — Menarş sonrası ve 20'li yaşlardaki genç kadınlarda HPV enfeksiyonları çok sık görülmesine karşın bağışıklık sistemi tarafından %90 oranında 1–2 yıl içinde kendiliğinden temizlenir; bu nedenle yüksek duyarlılıklı HPV DNA testi geçici enfeksiyonların azaldığı ve kalıcı (persistan) onkojenik enfeksiyonu yakalamanın klinik değer taşıdığı 30 yaş ve üzeri kadınlarda tarama için özellikle değerlidir.
+- **30 yaş ve üzeri** — 30 yaş ve üzeri doğru: bu grupta yüksek riskli HPV testi negatifse sonraki 5 yılda servikal neoplazi riski çok düşüktür.
+
+**Cevap: E** — 30 yaş ve üzeri
+
+**Özet.** HPV DNA testi Pap testine tamamlayıcıdır ve 30 yaş ve üzerinde değerlidir; negatif sonuç 5 yıllık riskin çok düşük olduğunu gösterir. 30 yaş altında enfeksiyonlar çoğunlukla geçicidir.
+
+## Soru 11
+
+**Soru.** İnvaziv serviks karsinomunun en sık histolojik tipi hangisidir?
+
+**A)** Adenokarsinom · **B)** Skuamöz hücreli karsinom · **C)** Adenoskuamöz karsinom · **D)** Küçük hücreli nöroendokrin · **E)** Berrak hücreli karsinom
+
+**Çözüm.** Şıkları sırasıyla gözden geçirelim.
+
+- **Adenokarsinom** — Adenokarsinom, adenoskuamöz karsinomla birlikte olguların yaklaşık %15'idir; Pap testi bez lezyonlarını daha zor saptadığından oranı göreceli artmıştır.
+- **Skuamöz hücreli karsinom** — Skuamöz hücreli karsinom doğru: invaziv serviks karsinomlarının yaklaşık %80'idir; skuamöz hücre uzantı ve yuvaları ile desmoplastik stromal yanıt gösterir.
+- **Adenoskuamöz karsinom** — Adenoskuamöz karsinom hem bez hem skuamöz bileşen içeren, daha az sık bir tiptir; diğer tipler gibi yüksek riskli HPV ile ilişkilidir.
+- **Küçük hücreli nöroendokrin** — Küçük hücreli nöroendokrin karsinom olguların %5'inden azını oluşturur; akciğer küçük hücreli karsinomuna benzer ve prognozu çok kötüdür.
+- **Berrak hücreli karsinom** — Berrak hücreli (clear cell) adenokarsinom serviks ve vajinada daha çok anne karnında dietilstilbestrol (DES) maruziyetiyle ilişkili çok nadir bir histolojik tiptir; invaziv serviks kanserlerinin yaklaşık %75–80'ini oluşturarak açık ara en sık görülen histolojik tip ise skuamöz hücreli karsinomdur (ikinci sırada yaklaşık %15–20 ile endoservikal adenokarsinom gelir).
+
+**Cevap: B** — Skuamöz hücreli karsinom
+
+**Özet.** İnvaziv serviks karsinomunun yaklaşık %80'i skuamöz hücreli, %15'i adenokarsinom ya da adenoskuamöz, %5'ten azı küçük hücreli nöroendokrin karsinomdur; tümü yüksek riskli HPV ile ilişkilidir.
+
+## Soru 12
+
+**Soru.** Serviks karsinomunda prognozu en kötü olan histolojik alt tip hangisidir?
+
+**A)** İyi diferansiye SHK · **B)** Adenokarsinom · **C)** Küçük hücreli nöroendokrin karsinom · **D)** Adenoskuamöz karsinom · **E)** Mikroinvaziv karsinom
+
+**Çözüm.** Şimdi seçeneklere tek tek bakalım.
+
+- **İyi diferansiye SHK** — İyi diferansiye skuamöz hücreli karsinom keratin incileri oluşturan, farklılaşmasını korumuş bir tümördür; en kötü prognozla anılan alt tip değildir.
+- **Adenokarsinom** — Adenokarsinom bez yapıları oluşturan malign hücrelerden oluşur; Pap testiyle zor saptandığı için oranı göreceli artmıştır.
+- **Küçük hücreli nöroendokrin karsinom** — Küçük hücreli nöroendokrin karsinom doğru: nadirdir, akciğer küçük hücreli karsinomuna benzer ve serviks karsinomları içinde prognozu çok kötüdür.
+- **Adenoskuamöz karsinom** — Adenoskuamöz karsinom hem bez hem skuamöz bileşen içerir; adenokarsinomla birlikte olguların yaklaşık %15'ini oluşturur.
+- **Mikroinvaziv karsinom** — Mikroinvaziv karsinom konik biyopsiyle tedavi edilebilir; prognozu tanı anındaki evre belirlediğinden erken yakalanan tümör en kötü grupta yer almaz.
+
+**Cevap: C** — Küçük hücreli nöroendokrin karsinom
+
+**Özet.** Serviks karsinomunda prognozu tanı anındaki evre ve histolojik alt tip belirler; küçük hücreli nöroendokrin karsinomun prognozu çok kötüdür.
+
+## Soru 25
+
+**Soru.** İnsan papilloma virüsü (HPV) ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?
+
+**A)** HPV enfeksiyonunda koilositoz (çekirdek çevresinde açık alan ve çekirdekte atipi bulunması) görülebilir. · **B)** HPV tip 6 ve 11, anogenital siğillere neden olabilir. · **C)** HPV tip 6 ve 11, yüksek onkojenik risk taşıdıkları için neden oldukları lezyonlar karsinoma dönüşebilir. · **D)** HPV tip 16 ve 18, serviks (rahim ağzı) karsinomu gelişimiyle ilişkili yüksek riskli tiplerdir. · **E)** Yüksek riskli HPV tiplerinin E6 ve E7 proteinleri, sırasıyla p53 ve RB tümör baskılayıcı proteinlerinin işlevlerini bozar.
+
+**Çözüm.** Seçenekleri sırayla değerlendirelim.
+
+- **HPV enfeksiyonunda koilositoz (çekirdek çevresinde açık alan ve çekirdekte atipi bulunması) görülebilir.** — Koilositoz, çekirdek etrafında geniş halo ile karakterize HPV enfeksiyonu bulgusudur; bu ifade geçerlidir.
+- **HPV tip 6 ve 11, anogenital siğillere neden olabilir.** — HPV tip 6 ve 11 kondilomlarla, yani anogenital siğillerle ilişkili düşük riskli tiplerdir.
+- **HPV tip 6 ve 11, yüksek onkojenik risk taşıdıkları için neden oldukları lezyonlar karsinoma dönüşebilir.** — HPV 6 ve 11'in yüksek riskli olduğu ifadesi yanlış, bu yüzden doğru cevaptır: bu tipler düşük risklidir, DNA'ları episomal kalır ve E6 p53'e bağlanamaz.
+- **HPV tip 16 ve 18, serviks (rahim ağzı) karsinomu gelişimiyle ilişkili yüksek riskli tiplerdir.** — HPV 16 ve 18 yüksek riskli tiplerdir ve CIN ile servikal karsinomların yaklaşık %70'inden sorumludur.
+- **Yüksek riskli HPV tiplerinin E6 ve E7 proteinleri, sırasıyla p53 ve RB tümör baskılayıcı proteinlerinin işlevlerini bozar.** — Yüksek riskli HPV'de E6 p53'ün yıkımına aracılık eder; E7 ise RB'ye bağlanıp E2F'yi serbest bırakır.
+
+**Cevap: C** — HPV tip 6 ve 11, yüksek onkojenik risk taşıdıkları için neden oldukları lezyonlar karsinoma dönüşebilir.
+
+**Özet.** HPV 6 ve 11 düşük risklidir ve kondilomlarla ilişkilidir; E6 p53'e bağlanamaz, DNA episomal kalır. Karsinomla ilişkili olanlar 16 ve 18 gibi yüksek riskli tiplerdir.
+
+## Soru 26
+
+**Soru.** Servikal intraepitelyal neoplazi (CIN) ile ilgili aşağıdaki ifadeler veriliyor:
+I. CIN 1, düşük dereceli skuamöz intraepitelyal lezyon (LSIL) olarak sınıflandırılır.
+II. CIN 2, düşük dereceli skuamöz intraepitelyal lezyon (LSIL) olarak sınıflandırılır.
+III. CIN 3, yüksek dereceli skuamöz intraepitelyal lezyon (HSIL) olarak sınıflandırılır.
+IV. CIN lezyonlarında bazal membran aşılmadığından stromal invazyon bulunmaz.
+Bu ifadelerden hangileri yanlıştır?
+
+**A)** Yalnız I · **B)** Yalnız II · **C)** I ve II · **D)** II ve III · **E)** III ve IV
+
+**Çözüm.** Her seçeneği tek tek ele alalım.
+
+- **Yalnız I** — CIN I gerçekten LSIL olarak sınıflanır; bu ifade geçerli olduğundan yanlışlar arasında sayılamaz.
+- **Yalnız II** — Yalnız ikinci ifade doğru cevaptır: CIN II düşük değil yüksek dereceli lezyondur; HSIL CIN II ve CIN III'ü kapsar, diğer ifadeler geçerlidir.
+- **I ve II** — CIN I ifadesi geçerli olduğu için bu birleşim hatalıdır; yalnız CIN II'nin LSIL sayılması yanlıştır.
+- **II ve III** — Üçüncü ifadede yer alan CIN 3'ün iki basamaklı Bethesda/LAST sisteminde yüksek dereceli skuamöz intraepitelyal lezyon (HSIL) olarak sınıflandırılması tamamen doğrudur; yanlış olan tek ifade CIN 2'yi LSIL sayan ikinci öncüldür, çünkü CIN 2 ve CIN 3 birlikte HSIL kapsamındadır.
+- **III ve IV** — Üçüncü ve dördüncü ifadeler geçerlidir; CIN intraepitelyal bir lezyondur, stromal invazyon invaziv karsinomda görülür.
+
+**Cevap: B** — Yalnız II
+
+**Özet.** Klinik iki basamaklı sistemde LSIL CIN I'e karşılık gelir; HSIL ise CIN II ve CIN III'ü kapsar. Bu nedenle CIN II'nin LSIL sayılması yanlıştır.
+
+## Soru 27
+
+**Soru.** Aşağıdakilerden hangisi, invaziv serviks karsinomu gelişimi için bir risk faktörü değildir?
+
+**A)** Yüksek risk grubuna ait inatçı papillomavirüs enfeksiyonu · **B)** İlk cinsel ilişkinin erken yaşta olması · **C)** UV maruziyeti · **D)** Birden çok cinsel partner bulunması · **E)** Birden çok cinsel partneri olan erkeğin eşi olmak
+
+**Çözüm.** Şıkları sırasıyla gözden geçirelim.
+
+- **Yüksek risk grubuna ait inatçı papillomavirüs enfeksiyonu** — Yüksek riskli HPV ile kalıcı enfeksiyon servikal öncü lezyon ve karsinom gelişiminde ana risk faktörüdür.
+- **İlk cinsel ilişkinin erken yaşta olması** — Erken yaşta ilk cinsel ilişki HPV maruziyetini artıran bir risk faktörüdür.
+- **UV maruziyeti** — UV maruziyeti doğru cevap: serviks karsinomunda risk, HPV maruziyetiyle ilişkili cinsel faktörler, kalıcı enfeksiyon, sigara ve immün yetmezliktir; UV bunlardan değildir.
+- **Birden çok cinsel partner bulunması** — Çok sayıda cinsel partner HPV maruziyetini artırarak serviks kanseri riskini yükseltir.
+- **Birden çok cinsel partneri olan erkeğin eşi olmak** — Çok partnerli bir eşe sahip olmak da HPV maruziyetiyle ilişkili risk faktörlerindendir.
+
+**Cevap: C** — UV maruziyeti
+
+**Özet.** Serviks karsinomunda risk HPV maruziyetine bağlıdır; erken ilk cinsel ilişki, çok sayıda partner, çok partnerli eş ve kalıcı yüksek riskli enfeksiyon başlıca etkenlerdir.
+
+## Soru 28
+
+**Soru.** Serviks kanseri gelişimi ile ilişkili viral patojen aşağıdakilerden hangisidir?
+
+**A)** Coxsackie virüs · **B)** Sitomegalovirüs · **C)** Human papilloma virüs · **D)** Simian virüs 40 · **E)** BK virüs
+
+**Çözüm.** Şimdi seçeneklere tek tek bakalım.
+
+- **Coxsackie virüs** — Coxsackie virüsler enterovirüs grubundan RNA virüsleri olup el-ayak-ağız hastalığı, herpanjina ve miyokardit yapar; servikal intraepitelyal neoplazi ve invaziv serviks karsinomlarının neredeyse tamamında etiyolojik ajan olan viral patojen ise yüksek riskli insan papilloma virüsüdür (HPV).
+- **Sitomegalovirüs** — Sitomegalovirüs (CMV) herpesvirüs ailesindendir ve konjenital enfeksiyon veya immünsüprese konakta fırsatçı hastalık yapar, serviks kanserine yol açmaz; serviks kanseri gelişimiyle doğrudan nedensel ilişkisi kanıtlanmış viral patojen ise yüksek riskli HPV'dir.
+- **Human papilloma virüs** — Human papilloma virüs doğru: yüksek riskli HPV serviks kanserinin ana etkenidir; tip 16 ve 18 olguların yaklaşık %70'inden sorumludur.
+- **Simian virüs 40** — Simian virüs 40 (SV40) maymun kökenli bir poliomavirüstür ve insan serviks kanserinin etkeni değildir; servikal skuamöz hücreli karsinom ve adenokarsinomların gelişiminden sorumlu temel viral patojen yüksek riskli human papilloma virüstür (HPV 16, 18 ve diğer onkojenik tipler).
+- **BK virüs** — BK virüs böbrek nakli hastalarında tübülointerstisyel nefropati ve üreter darlığı yapan insan poliomavirüsüdür; serviks epitelinde E6 ve E7 onkoproteinleriyle karsinogenezi başlatan viral patojen ise human papilloma virüstür (HPV).
+
+**Cevap: C** — Human papilloma virüs
+
+**Özet.** Serviks kanserinde ana etken yüksek riskli HPV'dir; bu DNA virüsü E6 ile p53'ü, E7 ile RB'yi etkisizleştirerek karsinogenezi başlatır.
+
+## Soru 29
+
+**Soru.** HPV E7 viral onkoproteini etkisini aşağıdakilerden hangisi üzerinden oluşturur?
+
+**A)** Retinoblastom (RB) tümör baskılayıcı geni · **B)** p53 · **C)** p16 · **D)** p27 · **E)** Siklin D1
+
+**Çözüm.** Seçenekleri sırayla değerlendirelim.
+
+- **Retinoblastom (RB) tümör baskılayıcı geni** — Retinoblastom geni doğru: E7 RB proteinine bağlanır, RB'nin tuttuğu E2F'yi serbest bırakır ve G1/S geçişini hızlandırır.
+- **p53** — p53 tümör baskılayıcı proteini HPV'nin E7 değil, E6 viral onkoproteini tarafından bağlanarak ubikuitin–proteazom yoluyla yıkıma gönderilir; HPV E7 onkoproteini ise aktif (hipofosforile) RB proteinine bağlanıp E2F transkripsiyon faktörünü serbest bırakarak hücreyi kontrolsüz biçimde S fazına sokar.
+- **p16** — p16 (CDKN2A) siklin D–CDK4/6 kompleksini baskılayan bir tümör baskılayıcı proteindir; HPV E7 proteini RB'yi inaktive ettiğinde hücrede negatif geri bildirim kalktığı için p16 kompansatuvar olarak aşırı birikir ve immünohistokimyada yüksek riskli HPV enfeksiyonunun vekil belirteci olarak kullanılır, ancak E7'nin doğrudan bağlanıp yıktığı hedef RB proteinidir.
+- **p27** — p27 ve p21 siklin bağımlı kinaz inhibitörleridir ve yüksek riskli HPV E7 bunları da kısmen bağlayıp etkisizleştirebilse de E7 onkoproteininin G1/S kontrol noktasını ortadan kaldıran birincil ve tanımlayıcı ana hedefi retinoblastom (RB) tümör baskılayıcı proteinidir.
+- **Siklin D1** — Siklin D1 normal hücre döngüsünde CDK4/6'yı aktive ederek RB'yi fosforilleyen proteindir; HPV E7 onkoproteini ise siklin D1'e ihtiyaç duymadan doğrudan RB proteinine bağlanıp onu proteazomal yıkıma gönderir ve E2F'yi serbestleştirir.
+
+**Cevap: A** — Retinoblastom (RB) tümör baskılayıcı geni
+
+**Özet.** E7 RB'ye bağlanır ve RB'nin tuttuğu E2F transkripsiyon faktörlerini serbest bırakır; G1/S geçişi hızlanır. E6'nın hedefi ise p53'tür.
+
+## Soru 30
+
+**Soru.** Servisitte enfeksiyonlu ve enfeksiyonlu olmayan ayrımının kesin yapılamamasının nedeni hangisidir?
+
+**A)** Normal vajinal flora · **B)** Asemptomatik seyir · **C)** Endoservikal polip varlığı · **D)** Transformasyon bölgesi · **E)** Ampirik antibiyotik kullanımı
+
+**Çözüm.** Her seçeneği tek tek ele alalım.
+
+- **Normal vajinal flora** — Normal vajinal flora doğru: streptokok, stafilokok, Escherichia coli ve Candida gibi flora elemanları nedeniyle iki grubun kesin ayrımı zordur.
+- **Asemptomatik seyir** — Asemptomatik seyir Chlamydia trachomatis servisitinin sık özelliğidir; ayrımı zorlaştıran temel neden değildir.
+- **Endoservikal polip varlığı** — Endoservikal polip endoservikal kanalın benign ekzofitik lezyonudur; servisit sınıflamasıyla ilgisi yoktur.
+- **Transformasyon bölgesi** — Transformasyon bölgesi HPV'ye en duyarlı ve tümörlerin en sık geliştiği alandır; servisit ayrımını belirlemez.
+- **Ampirik antibiyotik kullanımı** — Ampirik antibiyotik servisit tedavisinin yaklaşımıdır; enfeksiyonlu ve enfeksiyonsuz servisit ayrımının zorluğunu açıklamaz.
+
+**Cevap: A** — Normal vajinal flora
+
+**Özet.** Servisit enfeksiyonlu ve enfeksiyonlu olmayan diye ikiye ayrılır; ancak normal vajinal floradaki aerob, anaerob bakteriler ve Candida türleri nedeniyle kesin ayrım zordur.
+
+## Soru 31
+
+**Soru.** Doğumda bebeğe geçerek yenidoğanda ağır sistemik enfeksiyon yapabilen servisit etkeni hangisidir?
+
+**A)** Chlamydia trachomatis · **B)** Herpes simpleks virüs tip 2 · **C)** Ureaplasma urealyticum · **D)** Trichomonas vaginalis · **E)** Escherichia coli
+
+**Çözüm.** Şıkları sırasıyla gözden geçirelim.
+
+- **Chlamydia trachomatis** — Chlamydia trachomatis en yaygın servisit etkenidir, sıklıkla asemptomatiktir ve pelvik inflamatuvar hastalık riski taşır.
+- **Herpes simpleks virüs tip 2** — Herpes simpleks virüs tip 2 doğru: anne bebek bulaşıyla yenidoğanda ağır, bazen ölümcül sistemik herpes yapabilir.
+- **Ureaplasma urealyticum** — Ureaplasma urealyticum cinsel yolla bulaşan servisit etkenlerinden biridir; doğumdaki önemi vurgulanan etken değildir.
+- **Trichomonas vaginalis** — Trichomonas vaginalis servisitte ve üst genital enfeksiyonlarda rol oynar; yenidoğanda sistemik enfeksiyonla anılan etken değildir.
+- **Escherichia coli** — Escherichia coli normal vajinal floranın tesadüfi elemanlarındandır; cinsel yolla bulaşan servisit etkeni olarak sayılmaz.
+
+**Cevap: B** — Herpes simpleks virüs tip 2
+
+**Özet.** HSV-2 genital herpes etkenidir ve doğumda önem taşır; anne bebek bulaşı yenidoğanda ağır, bazen ölümcül sistemik herpese yol açabilir.
+
+## Soru 32
+
+**Soru.** Servisitte ampirik antibiyotik rejimleri hangi iki etkene etkili olacak şekilde seçilir?
+
+**A)** Candida ve Escherichia coli · **B)** Trichomonas ve HSV-2 · **C)** Chlamydia ve Neisseria gonorrhoeae · **D)** HPV ve HSV-2 · **E)** Streptokok ve stafilokok
+
+**Çözüm.** Şimdi seçeneklere tek tek bakalım.
+
+- **Candida ve Escherichia coli** — Candida ve Escherichia coli normal vajinal florada tesadüfi olarak bulunabilen elemanlardır; ampirik rejimin hedefi değildir.
+- **Trichomonas ve HSV-2** — Trichomonas vaginalis ve HSV-2 servisit etkenleridir, ama ampirik antibiyotik rejimi bu ikisine göre seçilmez.
+- **Chlamydia ve Neisseria gonorrhoeae** — Chlamydia ve Neisseria gonorrhoeae doğru: servisitte çoğunlukla bu iki etkene etkili ampirik antibiyotik rejimleri kullanılır.
+- **HPV ve HSV-2** — HPV ve HSV-2 viral etkenlerdir; antibiyotik rejimlerinin hedefi değildir.
+- **Streptokok ve stafilokok** — Streptokok ve stafilokok türleri normal vajinal floranın tesadüfi elemanlarıdır; ampirik tedavi bunlara göre seçilmez.
+
+**Cevap: C** — Chlamydia ve Neisseria gonorrhoeae
+
+**Özet.** Servisitte tanı spekulum muayenesi ve akıntının değerlendirilmesiyle başlar; tedavi çoğunlukla Chlamydia trachomatis ve Neisseria gonorrhoeae'ye etkili ampirik antibiyotiktir.
+
+## Soru 33
+
+**Soru.** Endoservikal polipin histolojik yapısında bulunan bileşen hangisidir?
+
+**A)** Keratin incileri · **B)** Koilositik hücreler · **C)** Desmoplastik stromal yanıt · **D)** Mukus salgılayan endoservikal bezler · **E)** Skuamöz hücre yuvaları
+
+**Çözüm.** Seçenekleri sırayla değerlendirelim.
+
+- **Keratin incileri** — Keratin incileri iyi diferansiye invaziv skuamöz karsinomun bulgusudur; benign polipte görülmez.
+- **Koilositik hücreler** — Koilositik hücreler HPV enfeksiyonunu gösteren mikroskobik bulgudur; LSIL'de yüzeysel katmanlarda görülür.
+- **Desmoplastik stromal yanıt** — Desmoplastik stromal yanıt invaziv skuamöz karsinomun çevresinde gelişir; polipin gövdesi fibröz stromadır.
+- **Mukus salgılayan endoservikal bezler** — Mukus salgılayan endoservikal bezler doğru: polip fibröz stroma, bu bezler ve sıkça eşlik eden inflamasyondan oluşur.
+- **Skuamöz hücre yuvaları** — Skuamöz hücre uzantı ve yuvaları invaziv skuamöz karsinomun yapısıdır; malign potansiyeli olmayan polipte görülmez.
+
+**Cevap: D** — Mukus salgılayan endoservikal bezler
+
+**Özet.** Endoservikal polip endoservikal kanalın benign ekzofitik lezyonudur; fibröz stroma, mukus salgılayan bezler ve inflamasyondan oluşur, malign potansiyeli yoktur.
+
+## Soru 34
+
+**Soru.** Ergenlikte endoservikal kolumnar epitelin ektoservikse kaymasına ne ad verilir?
+
+**A)** Skuamöz metaplazi · **B)** Displazi · **C)** Koilositoz · **D)** Transformasyon bölgesi · **E)** Eversiyon
+
+**Çözüm.** Her seçeneği tek tek ele alalım.
+
+- **Skuamöz metaplazi** — Skuamöz metaplazi açığa çıkan kolumnar hücrelerin sonradan skuamöz epitele dönüşmesidir; kaymanın kendisi değildir.
+- **Displazi** — Displazi CIN derecelerinde epitel içinde ilerleyen prekanseröz değişikliktir; epitelin yer değiştirmesi değildir.
+- **Koilositoz** — Koilositoz çekirdek çevresinde halo ile karakterize HPV bulgusudur; epitel sınırının kaymasıyla ilgisi yoktur.
+- **Transformasyon bölgesi** — Transformasyon bölgesi metaplastik, olgunlaşmamış skuamöz hücrelerden oluşan alandır; kaymanın değil, sonrasında oluşan bölgenin adıdır.
+- **Eversiyon** — Eversiyon doğru: ergenlikte kolumnar epitel ektoservikse kayar ve skuamo kolumnar bileşkenin yeri değişir.
+
+**Cevap: E** — Eversiyon
+
+**Özet.** Skuamo kolumnar bileşkenin yeri yaş ve hormonal duruma göre değişir; eversiyonla açığa çıkan kolumnar hücreler skuamöz metaplaziye uğrar ve transformasyon bölgesi oluşur.
+
+## Soru 35
+
+**Soru.** HPV enfeksiyonlarının çoğu için hangisi doğrudur?
+
+**A)** Geçicidir · **B)** Kalıcı olur · **C)** Kansere ilerler · **D)** Konak genomuna entegre olur · **E)** Yalnız serviksi tutar
+
+**Çözüm.** Şıkları sırasıyla gözden geçirelim.
+
+- **Geçicidir** — Geçici olması doğru: HPV enfeksiyonlarının çoğu aylar içinde immün sistem tarafından temizlenir.
+- **Kalıcı olur** — Kalıcı enfeksiyon çoğunluğun seyri değildir; yüksek riskli HPV ile persistan enfeksiyon servikal öncü lezyon riskini artırır.
+- **Kansere ilerler** — Kansere ilerleme az sayıda bireyde olur; sigara gibi kanserojenler ve bağışıklık durumu belirleyicidir.
+- **Konak genomuna entegre olur** — Konak genomuna entegrasyon yüksek riskli HPV 16 ve 18'in eğilimidir ve progresyonla ilişkilidir; enfeksiyonların çoğunun özelliği değildir.
+- **Yalnız serviksi tutar** — Yalnız serviksi tutması yanlıştır; yüksek riskli HPV vajina, vulva, penis, anüs ve tonsilde de skuamöz karsinom gelişiminde rol oynar.
+
+**Cevap: A** — Geçicidir
+
+**Özet.** HPV enfeksiyonlarının çoğu geçicidir ve aylar içinde temizlenir; süre HPV tipine bağlıdır ve yüksek riskli tiplerde daha uzundur.
+
+## Soru 36
+
+**Soru.** HPV maruziyetinden bağımsız ek risk artırıcı olarak sayılan hangisidir?
+
+**A)** Erken yaşta ilk cinsel ilişki · **B)** Sigara içme · **C)** Çok sayıda cinsel partner · **D)** Çok partnerli eş · **E)** UV maruziyeti
+
+**Çözüm.** Şimdi seçeneklere tek tek bakalım.
+
+- **Erken yaşta ilk cinsel ilişki** — Erken yaşta ilk cinsel ilişki HPV maruziyetiyle ilişkili risk faktörüdür; virüsle karşılaşmayı kolaylaştırır.
+- **Sigara içme** — Sigara içme doğru: immün yetmezlik ile birlikte HPV maruziyetine ek olarak riski artıran faktördür.
+- **Çok sayıda cinsel partner** — Çok sayıda cinsel partner HPV maruziyetini artıran risk faktörüdür; ek risk artırıcı grupta değil, maruziyet grubundadır.
+- **Çok partnerli eş** — Çok partnerli eşe sahip olmak HPV maruziyetiyle ilişkili risk faktörlerindendir; ek risk artırıcı değildir.
+- **UV maruziyeti** — Ultraviyole (UV) güneş ışığı maruziyeti güneş gören deride bazal hücreli karsinom, skuamöz hücreli karsinom ve melanom riskini artırır, iç genital organ olan serviksi etkilemez; yüksek riskli HPV ile enfekte kadınlarda viral temizlenmeyi bozup ek DNA hasarı ve lokal immün baskılanma yaratarak serviks kanseri riskini bağımsız olarak artıran en önemli kofaktör ise sigara içmedir.
+
+**Cevap: B** — Sigara içme
+
+**Özet.** HPV maruziyetiyle ilişkili riskler erken ilk cinsel ilişki, çok partner ve çok partnerli eştir; sigara içme ve immün yetmezlik ise ek risk artırıcılardır.
+
+## Soru 37
+
+**Soru.** Yüksek riskli HPV E6 proteininin hücre ömrünü uzatan etkisi hangisidir?
+
+**A)** RB'ye bağlanma · **B)** E2F serbestleştirme · **C)** Telomeraz ekspresyonunu artırma · **D)** Notch yoluna müdahale · **E)** Viral DNA'nın episomal kalması
+
+**Çözüm.** Seçenekleri sırayla değerlendirelim.
+
+- **RB'ye bağlanma** — RB'ye bağlanma E7 proteininin etkisidir; E2F faktörleri serbestleşir ve G1/S geçişi hızlanır.
+- **E2F serbestleştirme** — E2F serbestleştirme E7'nin RB'ye bağlanmasının sonucudur; hücre döngüsü kontrolünü bozar, E6'ya ait değildir.
+- **Telomeraz ekspresyonunu artırma** — Telomeraz ekspresyonunu artırma doğru: E6 p53'ün yıkımına aracılık ederken telomerazı da artırır ve hücre ömrü uzar.
+- **Notch yoluna müdahale** — Notch sinyal yoluna müdahale düşük riskli HPV 6 ve 11'in E6 proteinine aittir; bu E6 p53'e bağlanamaz.
+- **Viral DNA'nın episomal kalması** — Viral DNA'nın episomal kalması düşük riskli tiplerin özelliğidir; yüksek riskli tipler genoma entegre olma eğilimindedir.
+
+**Cevap: C** — Telomeraz ekspresyonunu artırma
+
+**Özet.** E6 p53'e bağlanıp yıkımına aracılık eder ve telomeraz ekspresyonunu artırır; sonuç apoptoz inhibisyonu ve hücre ömründe uzamadır.
+
+## Soru 38
+
+**Soru.** Düşük riskli HPV 6 ve 11'in E7 proteini için hangisi doğrudur?
+
+**A)** p53'e bağlanıp yıkar · **B)** Telomerazı artırır · **C)** Konak genomuna entegre olur · **D)** RB'ye düşük afiniteyle bağlanır · **E)** Notch yoluna müdahale eder
+
+**Çözüm.** Her seçeneği tek tek ele alalım.
+
+- **p53'e bağlanıp yıkar** — p53'e bağlanıp yıkımına aracılık etmek yüksek riskli HPV E6 proteininin işidir; düşük riskli tiplerin E6'sı p53'e bağlanamaz.
+- **Telomerazı artırır** — Telomeraz ekspresyonunu artırmak yüksek riskli E6 proteininin etkisidir; düşük riskli E7'ye ait değildir.
+- **Konak genomuna entegre olur** — Konak genomuna entegrasyon yüksek riskli tiplerin eğilimidir; düşük riskli tiplerde DNA episomal kalır.
+- **RB'ye düşük afiniteyle bağlanır** — RB'ye düşük afiniteyle bağlanması doğru: düşük riskli HPV 6 ve 11'in E7 proteini RB'ye zayıf bağlanır.
+- **Notch yoluna müdahale eder** — Notch sinyal yoluna müdahale düşük riskli tiplerin E6 proteinine aittir; E7'nin özelliği değildir.
+
+**Cevap: D** — RB'ye düşük afiniteyle bağlanır
+
+**Özet.** Düşük riskli HPV 6 ve 11'de E7 RB'ye düşük afiniteyle bağlanır; E6 p53'e bağlanamaz, Notch yoluna müdahale eder ve DNA episomal kalır.
+
+## Soru 39
+
+**Soru.** HSIL'lerin yaklaşık %20'si için hangisi doğrudur?
+
+**A)** Karsinoma ilerler · **B)** LSIL'den gelişir · **C)** Koilositoz içerir · **D)** CIN I'e karşılık gelir · **E)** Önce LSIL olmadan gelişir
+
+**Çözüm.** Şıkları sırasıyla gözden geçirelim.
+
+- **Karsinoma ilerler** — Karsinoma ilerleme HSIL'de yüksek risk olsa da zorunlu değildir; bu oran ilerlemeyi değil, de novo gelişimi anlatır.
+- **LSIL'den gelişir** — LSIL'den gelişme HSIL'lerin çoğunun yoludur; yaklaşık %20'si ise bu basamak olmadan ortaya çıkar.
+- **Koilositoz içerir** — Koilositoz LSIL'de yüzeysel katmanlarda görülür; CIN III'te ise koilositik değişiklik genellikle yoktur.
+- **CIN I'e karşılık gelir** — CIN I, LSIL'e karşılık gelir; HSIL ise CIN II ve CIN III'ü kapsar.
+- **Önce LSIL olmadan gelişir** — Önce LSIL olmadan gelişmesi doğru: HSIL'lerin yaklaşık %20'si de novo ortaya çıkar.
+
+**Cevap: E** — Önce LSIL olmadan gelişir
+
+**Özet.** HSIL'lerin çoğu LSIL'den gelişir, ama yaklaşık %20'si de novo ortaya çıkar; ilerleme riskini sigara içimi ve immün yetmezlik artırır.
+
+## Soru 40
+
+**Soru.** Pap taramasıyla serviks kanserinden ölüm oranında yaklaşık ne kadar azalma sağlanmıştır?
+
+**A)** %75 · **B)** %10 · **C)** %30 · **D)** %50 · **E)** %90
+
+**Çözüm.** Şimdi seçeneklere tek tek bakalım.
+
+- **%75** — Yaklaşık %75 doğru: Pap taramasıyla ölüm oranı bu ölçüde azalmış, serviks kanseri artık önde gelen ölüm nedeni değildir.
+- **%10** — Yüzde onluk bir azalma gerçek etkiyi çok küçük gösterir; Pap testiyle sağlanan azalma yaklaşık dörtte üçtür.
+- **%30** — Yüzde otuzluk azalma da gerçek değerin altındadır; Pap testi en başarılı kanser tarama testlerinden biridir.
+- **%50** — Yarı yarıya azalma da az bir tahmindir; serviks kanseri taramayla önde gelen ölüm nedeni olmaktan çıkmıştır.
+- **%90** — Yüzde doksanlık azalma abartılıdır; yetersiz tarama yapılan ülkelerde serviks kanseri mortalitesi hâlâ yüksektir.
+
+**Cevap: A** — %75
+
+**Özet.** Pap testi en başarılı kanser tarama testlerindendir; ölüm oranını yaklaşık %75 azaltmış, yetersiz tarama yapılan ülkelerde ise mortalite yüksek kalmıştır.
+
+## Soru 41
+
+**Soru.** HPV aşılaması için hangisi doğrudur?
+
+**A)** Taramanın yerine geçer · **B)** Erkek çocuklara da önerilir · **C)** Tüm onkojenik tipleri kapsar · **D)** Koruması bir yıl sürer · **E)** Yalnız düşük riskli tipleri içerir
+
+**Çözüm.** Seçenekleri sırayla değerlendirelim.
+
+- **Taramanın yerine geçer** — Taramanın yerine geçmesi yanlıştır; birçok kadın aşı öncesinde enfektedir ve strateji Pap, HPV testi ve aşılamanın birlikteliğidir.
+- **Erkek çocuklara da önerilir** — Erkek çocuklara önerilmesi doğru: aşı 11–12 yaş kız ve erkek çocuklara önerilir, erkek aşılaması toplumdaki enfeksiyon yükünü azaltır.
+- **Tüm onkojenik tipleri kapsar** — Tüm onkojenik tipleri kapsadığı yanlıştır; aşılar tüm onkojenik HPV genotiplerini kapsamaz.
+- **Koruması bir yıl sürer** — Bir yıllık koruma yanlıştır; koruma süresi en az 10 yıldır ve uzun dönem takip sürmektedir.
+- **Yalnız düşük riskli tipleri içerir** — Yalnız düşük riskli tipleri içerdiği yanlıştır; dört değerlikli aşı HPV 6, 11, 16 ve 18'i içerir.
+
+**Cevap: B** — Erkek çocuklara da önerilir
+
+**Özet.** HPV aşısı 11–12 yaş kız ve erkek çocuklara ve 26 yaşına kadar gençlere önerilir; dört değerlikli aşı 6, 11, 16 ve 18'i içerir, tarama yine sürer.
+
+## Soru 42
+
+**Soru.** CIN III'te CIN II'den farklı olarak belirginleşen bulgu hangisidir?
+
+**A)** Yüzeyde koilositik değişiklik · **B)** Alt üçte ikilik tutulum · **C)** Hücre yönlenmesinin bozulması · **D)** Bazal tabaka üzerinde mitoz · **E)** Nükleer kromatin heterojenliği
+
+**Çözüm.** Her seçeneği tek tek ele alalım.
+
+- **Yüzeyde koilositik değişiklik** — Yüzeyde koilositik değişiklik LSIL'in bulgusudur; CIN III'te koilositik değişiklik genellikle yoktur.
+- **Alt üçte ikilik tutulum** — Alt üçte ikilik tutulum CIN II'yi tanımlar; CIN III'te epitelin tam kalınlığı tutulur.
+- **Hücre yönlenmesinin bozulması** — Hücre yönlenmesinin bozulması doğru: CIN III'te hücrelerin yönlenmesi bozulur ve anormal mitozlar sıktır.
+- **Bazal tabaka üzerinde mitoz** — Bazal tabaka üzerinde, atipik olabilen mitozlar CIN II ve III'ün ortak bulgusudur; ikisini ayırt ettirmez.
+- **Nükleer kromatin heterojenliği** — Nükleer kromatin heterojenliği, hücre ve çekirdek boyut varyasyonu gibi CIN II ve III'te ortak görülür.
+
+**Cevap: C** — Hücre yönlenmesinin bozulması
+
+**Özet.** CIN II ve III'te boyut varyasyonu, kromatin heterojenliği ve bazal üstü mitozlar ortaktır; CIN III'te ek olarak yönlenme bozulur ve anormal mitozlar sıklaşır.
+
+## Soru 43
+
+**Soru.** HSIL öyküsü olan hastada riski artan kanser hangisidir?
+
+**A)** Endometrium kanseri · **B)** Over kanseri · **C)** Meme kanseri · **D)** Vulvar kanser · **E)** Kolon kanseri
+
+**Çözüm.** Şıkları sırasıyla gözden geçirelim.
+
+- **Endometrium kanseri** — Endometrium kanseri östrojen fazlalığı, obezite, PTEN ve TP53 mutasyonlarıyla gelişir ve HPV enfeksiyonu ile ilişkili değildir; servikste yüksek riskli HPV'ye bağlı HSIL öyküsü olan hastada aynı viral alan etkisi nedeniyle riski artan diğer alt genital kanserler ise HPV ilişkili vulvar ve vajinal skuamöz hücreli karsinomlardır.
+- **Over kanseri** — Over kanseri HSIL öyküsüyle ilişkilendirilmez; yüksek riskli HPV vajina ve vulva gibi bölgelerde skuamöz karsinom gelişiminde rol oynar.
+- **Meme kanseri** — Meme kanseri hormonal ve genetik faktörlerle gelişir ve servikal HPV enfeksiyonuyla ortak etiyoloji paylaşmaz; servikal HSIL öyküsü bulunan kadında yüksek riskli HPV tüm alt anogenital traktusu etkilediğinden vulvar, vajinal ve anal skuamöz karsinom riski artmıştır.
+- **Vulvar kanser** — Vulvar kanser doğru: HSIL öyküsü olanlarda servikal ve vajinal kanserin yanında vulvar kanser riski de artar.
+- **Kolon kanseri** — Kolon adenokarsinomu APC-KRAS-TP53 veya mikrosatellit instabilitesi yollarıyla gelişen, HPV'den bağımsız bir tümördür; servikal HSIL öyküsü olan hastada onkojenik HPV'nin ortak mukozal tropizmi nedeniyle riski belirgin artan kanserler vulvar, vajinal, anal ve orofaringeal skuamöz hücreli karsinomlardır.
+
+**Cevap: D** — Vulvar kanser
+
+**Özet.** HSIL öyküsü olan hastalarda servikal, vulvar ve vajinal kanser riski artar; bu yüzden HSIL tedavisinden sonra da uzun dönem izlem gereklidir.
+
+## Soru 44
+
+**Soru.** Servikal skuamöz hücreli karsinom insidansı, SIL insidansı pikinden yaklaşık ne kadar sonra zirve yapar?
+
+**A)** 1–2 yıl · **B)** 3–5 yıl · **C)** 5–7 yıl · **D)** 20–30 yıl · **E)** 10–15 yıl
+
+**Çözüm.** Şimdi seçeneklere tek tek bakalım.
+
+- **1–2 yıl** — Bir ile iki yıl çok kısa bir aralıktır; SIL'den invaziv karsinoma geçiş değişken ve öngörülemezdir.
+- **3–5 yıl** — Üç ile beş yıl da kısadır; SIL insidansı yaklaşık 30 yaşta, invaziv karsinom yaklaşık 45 yaşta zirve yapar.
+- **5–7 yıl** — Beş ile yedi yıl da gerçek aralığın altındadır; skuamöz karsinomda ortalama yaş yaklaşık 45'tir.
+- **20–30 yıl** — Yirmi ile otuz yıl gerçek aralıktan uzundur; ortalama yaş yaklaşık 45 olduğundan zirveler arası fark daha kısadır.
+- **10–15 yıl** — 10–15 yıl doğru: skuamöz hücreli karsinom insidansı SIL insidansının pikinden 10–15 yıl sonra zirve yapar.
+
+**Cevap: E** — 10–15 yıl
+
+**Özet.** Skuamöz hücreli karsinomun insidansı SIL pikinden 10–15 yıl sonra, ortalama 45 yaşta zirve yapar; HPV gereklidir ama tek başına yeterli değildir.
+
+## Soru 45
+
+**Soru.** İyi diferansiye invaziv skuamöz serviks karsinomunu tanımlayan bulgu hangisidir?
+
+**A)** Keratin incileri · **B)** Az keratinizasyon · **C)** Koilositik değişiklik · **D)** Bez yapıları · **E)** Küçük hücreli morfoloji
+
+**Çözüm.** Seçenekleri sırayla değerlendirelim.
+
+- **Keratin incileri** — Keratin incileri doğru: iyi diferansiye invaziv skuamöz karsinomda keratin incileri görülür.
+- **Az keratinizasyon** — Az keratinizasyon zayıf diferansiye skuamöz karsinomun özelliğidir; iyi diferansiye tümörün değil.
+- **Koilositik değişiklik** — Koilositik değişiklik HPV enfeksiyonunu gösteren, LSIL'in yüzeysel katmanlarında görülen bulgudur.
+- **Bez yapıları** — Bez yapıları oluşturan malign hücreler adenokarsinomu tanımlar; skuamöz karsinomun derecelendirme ölçütü değildir.
+- **Küçük hücreli morfoloji** — Küçük hücreli morfoloji akciğer küçük hücreli karsinomuna benzeyen nöroendokrin karsinomun bulgusudur.
+
+**Cevap: A** — Keratin incileri
+
+**Özet.** İnvaziv skuamöz karsinom desmoplastik stroma içinde skuamöz hücre uzantı ve yuvaları yapar; iyi diferansiye tümörde keratin incileri, zayıf diferansiyede az keratinizasyon vardır.
+
+## Soru 46
+
+**Soru.** Mikroinvaziv serviks karsinomunun tedavi edilebildiği sınırlı cerrahi işlem hangisidir?
+
+**A)** Basit küretaj · **B)** Konik biyopsi · **C)** Pelvik lenf diseksiyonu · **D)** Yakın takip · **E)** Radyoterapi
+
+**Çözüm.** Her seçeneği tek tek ele alalım.
+
+- **Basit küretaj** — Basit küretaj endoservikal polipin tedavisidir ve genellikle küratiftir; karsinom tedavisi değildir.
+- **Konik biyopsi** — Konik biyopsi doğru: mikroinvaziv karsinom konik biyopsi ile tedavi edilebilir; aynı işlem HSIL'de de uygulanır.
+- **Pelvik lenf diseksiyonu** — Pelvik lenf düğümü diseksiyonu histerektomi ile birlikte invaziv serviks kanserinin primer tedavisidir; sınırlı bir işlem değildir.
+- **Yakın takip** — Yakın takip biyopsiyle doğrulanmış LSIL'de uygulanan konservatif yaklaşımdır; invaziv karsinomda yeterli değildir.
+- **Radyoterapi** — Radyoterapi ileri evrede cerrahiye eklenir ve kemoterapiyle kombine edilir; mikroinvaziv karsinomun sınırlı tedavisi değildir.
+
+**Cevap: B** — Konik biyopsi
+
+**Özet.** İnvaziv serviks kanserinde primer tedavi histerektomi ve pelvik lenf düğümü diseksiyonudur; mikroinvaziv karsinom konik biyopsiyle tedavi edilebilir.
+
+# Ders 30 (30) · Endometrial Hiperplazi ve Kanserleri
 
 _31 soru (örnek + çıkmış)_
 
@@ -18523,7 +19144,7 @@ _31 soru (örnek + çıkmış)_
 - **Nötrofil** — Nötrofil baskın infiltrasyon akut endometriti tanımlar; doğum ya da düşük sonrası enfeksiyonda görülür, kronik formun ölçütü değildir.
 - **Plazma hücresi** — Plazma hücresi doğru: kronik endometrit tanısı için endometriyumda plazma hücresinin gösterilmesi gerekir.
 - **Lenfosit** — Lenfositler normal endometriyumda da bulunabilir; bu yüzden tek başına kronik endometrit tanısı koydurmaz.
-- **Eozinofil** — Eozinofil ile karıştırılabilir: Kronik endometritte lenfoplazmasitik infiltrasyon görülür ve tanıyı bu infiltrasyonun özel bir hücresi koydurur.
+- **Eozinofil** — Eozinofiller normal menstrüel yıkım aşamasında veya alerjik/paraziter durumlarda endometriyumda görülebilir ancak kronik endometrit için tanısal değildir; normal proliferatif ve sekretuvar endometriyumda bulunmayan plazma hücrelerinin stromada gösterilmesi kronik endometrit tanısı için zorunlu ve yeterli kriterdir.
 - **Mast hücresi** — Mast hücresi tanı ölçütü değildir; endometrit, iltihap hücresine göre nötrofilli akut ve lenfoplazmasitik kronik form diye ayrılır.
 
 **Cevap: B** — Plazma hücresi
@@ -18578,7 +19199,7 @@ _31 soru (örnek + çıkmış)_
 - **Benign metastaz teorisi** — Benign metastaz teorisi, endometrial dokunun kan damarları ve lenfatiklerle yayıldığını söyler; kemik, akciğer ve beyin odaklarını açıklar.
 - **Metaplastik teori** — Metaplastik teori, endometriyumun sölomik epitelden köken aldığı varsayımına dayanır; mezonefrik kalıntılar da ektopik endometriyal doku oluşturabilir.
 - **Kök hücre teorisi** — Kök hücre teorisinde kemik iliği kök ya da öncü hücreleri endometriyuma farklılaşır; bu implantlar ötopik endometriyumdan biyolojik olarak farklıdır.
-- **İndüksiyon teorisi** — İndüksiyon teorisi ile karıştırılabilir: Menstrüel kanın tüpten peritona geri akışı başka bir teorinin temelidir.
+- **İndüksiyon teorisi** — İndüksiyon (metaplazi) teorisi peritonu döşeyen çölyom epitelinin endometriyal dokuya farklılaştığını öne sürer; menstrüasyon sırasında dökülen endometriyal dokunun fallop tüplerinden geriye doğru geçerek periton boşluğuna ekildiğini savunan ve en çok kabul gören açıklama ise Sampson'un regürjitasyon (retrograd menstrüasyon) teorisidir.
 
 **Cevap: A** — Regürjitasyon teorisi
 
@@ -18592,10 +19213,10 @@ _31 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Dermoid kist** — Overde koyu kahverengi eski kan, endometriozis odağındaki tekrarlayan kanamadan gelir. Dermoid kist bu sorudaki ayrımı sağlamaz.
+- **Dermoid kist** — Dermoid kist (olgun kistik teratom) overde deri, kıl, sebase materyal ve diş gibi ektodermal yapılar içeren benign germ hücreli tümördür; ovaryumdaki endometriozis odağının her menstrüel döngüde kanamasıyla oluşan ve koyu kahverengi eski kan (çikolata sıvısı) içeren kist ise endometriomadır (çikolata kisti).
 - **Folikül kisti** — Folikül kisti bu tabloyu açıklamaz; over endometriozisi dejenere kan içeren 3–5 cm boyutlu kistik kitleler oluşturur.
-- **Seröz kistadenom** — Koyu kahverengi içerik döngüsel kanayan ektopik endometriyumun işaretidir. Seröz kistadenom bu sorudaki ayrımı sağlamaz.
-- **Müsinöz kistadenom** — Müsinöz kistadenom da cevap değil; çikolata görünümlü içeriği fonksiyonel endometriyumun tekrarlayan kanaması oluşturur.
+- **Seröz kistadenom** — Seröz kistadenom silyalı kübik-kolumnar epitelle döşeli ve berrak, sulu seröz sıvı içeren benign yüzey epitel tümörüdür; overde tekrarlayan kanamalar ve hemosiderin yüklü makrofajlarla koyu kahverengi kıvamlı içerik barındıran kist ise endometriomadır.
+- **Müsinöz kistadenom** — Müsinöz kistadenom endoservikal veya intestinal tip müsin salgılayan epitelle döşeli ve jelatinöz mukoid sıvı içeren çok odacıklı tümördür; overde ektopik endometriyumun döngüsel kanamasıyla oluşan koyu kahverengi eski kan dolu kistik kitle ise endometriomadır.
 - **Endometrioma** — Endometrioma doğru: over endometriozisinde eski kan, koyu kahverengi içerikli 3–5 cm boyutlu kistler yapar; buna çikolata kisti denir.
 
 **Cevap: E** — Endometrioma
@@ -18629,8 +19250,8 @@ _31 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Progesteron fazlalığı** — Progesteron fazlalığı tersine bir durumdur; hiperplazide progestinle dengelenmeyen östrojen etkisi vardır ve tedavide progestin kullanılır.
-- **Androjen eksikliği** — Androjen eksikliği ile karıştırılabilir: Obezitede yağ dokusundaki steroid öncülleri östrojene dönüşerek hiperplazi zemini hazırlar.
-- **HPV enfeksiyonu** — Endometrial hiperplazi enfeksiyonla değil, uzamış östrojen uyarısıyla gelişir. HPV enfeksiyonu bu sorudaki ayrımı sağlamaz.
+- **Androjen eksikliği** — Androjen eksikliği endometriyal bez çoğalmasını uyarmaz; aksine polikistik over sendromunda olduğu gibi kronik anovülasyon, obezitede yağ dokusunda androjenlerin östrojene aromatizasyonu veya östrojen salgılayan tümörler sonucunda oluşan progestine göre karşılanmamış östrojen fazlalığı endometriyal hiperplazinin temel mekanizmasıdır.
+- **HPV enfeksiyonu** — HPV enfeksiyonu serviks, vajina ve vulvanın skuamöz ve endoservikal neoplazilerinde rol oynar, endometriyal bez epitelini enfekte etmez; endometriyal hiperplazi ve tip I endometrioid karsinomun temel patogenetik nedeni karşılanmamış uzamış östrojen uyarısıdır.
 - **Progestine göre östrojen fazlalığı** — Progestine göre östrojen fazlalığı doğru: uzamış östrojen uyarısı aşırı endometrial proliferasyon yapar ve karsinoma zemin hazırlar.
 - **Endometrial atrofi** — Endometrial atrofi proliferasyonun tersidir; östrojen fazlalığıyla ilişkisiz olan seröz karsinomun zeminidir.
 
@@ -18648,9 +19269,9 @@ _31 soru (örnek + çıkmış)_
 
 - **PTEN** — PTEN doğru: atipili hiperplazi bu tümör baskılayıcı genin edinilmiş klonal mutasyonlarıyla ilişkilidir; aynı zemin endometrioid karsinomda da vardır.
 - **TP53** — TP53 mutasyonu seröz endometrial karsinomun neredeyse tüm olgularında görülür; endometrioid karsinomda ise nadir ve geç dönem olaydır.
-- **KRAS** — KRAS ile karıştırılabilir: Atipili endometrial hiperplazinin bilinen genetik özelliği bir tümör baskılayıcı genin mutasyonudur.
+- **KRAS** — KRAS onkogen mutasyonları müsinöz tümörlerde ve endometrioid karsinomların bir kısmında ek olay olarak görülebilir ancak tümör baskılayıcı gen değildir; atipili endometriyal hiperplazide (EIN) ve tip I endometrioid karsinomda PI3K/AKT yolunu sürekli açık tutan en erken ve en sık tümör baskılayıcı gen mutasyonu PTEN kaybıdır.
 - **MED12** — MED12 mutasyonu leiomyomların yaklaşık %70’inde görülür; düz kas tümörlerine aittir, endometrial hiperplaziye değil.
-- **BRCA1** — BRCA1 bu soruda cevap değil; endometrial karsinom riskini belirgin artıran germ hattı tablolar Cowden ve Lynch sendromlarıdır.
+- **BRCA1** — BRCA1 germ hattı mutasyonları meme ve yüksek dereceli seröz over/tuba karsinomlarına yatkınlık oluşturur; karşılanmamış östrojen zemininde gelişen atipili endometriyal hiperplazi ve endometrioid adenokarsinomda en sık inaktive olan tümör baskılayıcı gen ise PTEN'dir.
 
 **Cevap: A** — PTEN
 
@@ -18684,7 +19305,7 @@ _31 soru (örnek + çıkmış)_
 
 - **PTEN** — PTEN mutasyonları endometrioid karsinom ve atipili hiperplazinin erken olayıdır; seröz karsinomda nadirdir.
 - **MED12** — MED12 mutasyonu leiomyomların yaklaşık %70’inde, leiomyosarkomların yaklaşık %30’unda görülür; seröz karsinomla ilişkili değildir.
-- **KRAS** — KRAS ile karıştırılabilir: Seröz endometrial karsinomun belirleyici genetik olayı bir tümör baskılayıcı genin mutasyonudur.
+- **KRAS** — KRAS, PTEN ve ARID1A mutasyonları hiperplazi zemininde gelişen tip I (endometrioid) endometriyal karsinomların genetik özellikleridir; ileri yaşta atrofik endometriyumdan gelişen agresif tip II seröz endometriyal karsinomların ise %90'ından fazlasında erken evreden itibaren TP53 mutasyonu bulunur.
 - **DNA uyumsuzluk onarım** — DNA uyumsuzluk onarım geni mutasyonları endometrioid karsinomun erken olayıdır, Lynch sendromunda germ hattındadır; seröz karsinomda nadirdir.
 - **TP53** — TP53 doğru: seröz karsinomun neredeyse tüm olgularında vardır; mutant p53 proteini birikir ve yaygın, güçlü nükleer boyanma görülür.
 
@@ -18700,11 +19321,11 @@ _31 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **TP53** — TP53 mutasyonu seröz endometrial karsinomun imzasıdır; leiomyomun karakteristik genetik değişikliği değildir.
+- **TP53** — TP53 mutasyonu seröz endometriyal karsinomun ve leiomiyosarkomların karakteristik genetik bozukluğudur; benign uterus düz kas tümörü olan leiomyomların yaklaşık %70'inde saptanan özgül sürücü mutasyon ise transkripsiyon koaktivatör kompleksi alt birimini kodlayan MED12 genindedir.
 - **MED12** — MED12 doğru: leiomyomların yaklaşık %70’inde bulunur; RNA polimeraz II aracılı transkripsiyonu düzenleyen bir gendir.
 - **PTEN** — PTEN mutasyonu atipili endometrial hiperplazi ve endometrioid karsinomla ilişkilidir; düz kas tümörlerinin geni değildir.
-- **BRCA2** — BRCA2 ile karıştırılabilir: Leiomyomun genetik imzası transkripsiyon düzenleyici bir gendeki mutasyondur ve leiomyosarkomda daha seyrektir.
-- **ARID1A** — ARID1A da cevap değil; leiomyomlarda ayrıca kromozom 6 ve 12 yeniden düzenlenmeleri tekrarlayan anormallik olarak görülür.
+- **BRCA2** — BRCA2 çift zincir DNA onarımında görev alan ve meme, over ile pankreas kanseri yatkınlığı yapan tümör baskılayıcı gendir; uterus leiomyomlarının yaklaşık %70'inde görülen karakteristik genetik değişiklik ise MED12 genindeki somatik mutasyonlardır.
+- **ARID1A** — ARID1A kromatin yeniden şekillendirme kompleksinin bileşenidir ve endometriozis ilişkili berrak hücreli/endometrioid over ve endometriyum karsinomlarında mutasyona uğrar; benign uterus leiomyomlarının yaklaşık %70'inde saptanan ana mutasyon ise MED12 genindedir.
 
 **Cevap: B** — MED12
 
@@ -18736,7 +19357,7 @@ _31 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Adenomyozis endometriozis eksterna olarak da adlandırılır.** — Uterus dışında endometrial bez ve stroma bulunması endometriozistir, adenomyoz ise miyometriyumdadır. Endometriozis eksterna adlandırması bu sorudaki ayrımı sağlamaz.
+- **Adenomyozis endometriozis eksterna olarak da adlandırılır.** — Endometriozis eksterna terimi uterus dışındaki (over, periton, pelvik bağlar) ektopik endometriyal odakları ifade eder; adenomiyozis ise endometriyal bazal tabakaya ait bez ve stromanın miyometriyumun derin kas demetleri arasına yerleşmesidir (eskiden endometriozis interna denirdi).
 - **Adenomyozis tanısı için endometrial stroma, bezler ve hemosiderin yüklü makrofajlar görülmelidir.** — Adenomyoz tanısı hemosiderinli makrofaja dayanmaz; miyometriyumda endometrial stroma, bezler ya da her ikisinin bulunması gerekir.
 - **Adenomyozis, endometriumun fonksiyonel tabakasının myometrium içerisine ve batın boşluğuna doğru büyümesine verilen isimdir.** — Batın boşluğuna doğru büyüme adenomyozun değil endometriozisin özelliğidir; adenomyoz miyometriyum içindeki endometrial dokudur.
 - **Adenomyoziste myometriumun derin kısımlarına dek uzanan kas demetleri arasında endometrial stroma veya bezler ya da her ikisini içeren odaklar bulunur.** — Kas demetleri arasında derine uzanan stroma ya da bez yuvaları doğru: adenomyozun tanımı budur, miyometriyum reaktif hipertrofiyle yanıt verir.
@@ -18812,7 +19433,7 @@ _31 soru (örnek + çıkmış)_
 - **Leiomyosarkom** — Leiomyosarkom benign değil malign düz kas tümörüdür; neredeyse her zaman tektir ve menopoz sonrası görülür.
 - **Adenomyozis** — Adenomyoz bir tümör değil, miyometriyumda endometrial stroma ya da bezlerin bulunmasıdır.
 - **Endometrial polip** — Endometrial polip, klonal stromal hücreler içeren ve sıklığı yaşla artan bir lezyondur; uterusun en sık benign tümörü değildir.
-- **Fibrom** — Uterusta fibroid adıyla da bilinen tümör leiomyomdur. Fibrom bu sorudaki ayrımı sağlamaz.
+- **Fibrom** — Fibrom kollajen üreten fibroblastlardan köken alan ve kadın genital sisteminde daha çok over stromasında görülen benign tümördür; klinikte halk arasında 'fibroid' veya 'miyom' dense de uterusun en sık görülen benign tümörü düz kas hücrelerinden köken alan leiomyomdur.
 
 **Cevap: A** — Leiomyom
 
@@ -18829,8 +19450,8 @@ _31 soru (örnek + çıkmış)_
 - **Nötrofil** — Nötrofil doğru: akut endometrit nötrofil baskın inflamasyondur ve tipik olarak doğum ya da düşük sonrası bakteriyel enfeksiyonla gelişir.
 - **Plazma hücresi** — Plazma hücresi kronik endometritin tanısı için gerekli hücredir; akut formun baskın hücresi değildir.
 - **Lenfosit** — Lenfositler normal endometriyumda da bulunabilir; kronik endometritte lenfoplazmasitik infiltrasyonun parçasıdır.
-- **Makrofaj** — Akut endometrit nötrofil baskın, kronik endometrit lenfoplazmasitik infiltrasyonla tanımlanır. Makrofaj bu sorudaki ayrımı sağlamaz.
-- **Eozinofil** — Eozinofil de ile karıştırılabilir: Endometrit sınıflaması nötrofil ya da lenfoplazmasitik infiltrasyona göre yapılır.
+- **Makrofaj** — Makrofajlar ve lenfositler normal endometriyum stromasında ve kronik süreçlerde bulunabilir; düşük veya doğum sonrası plasenta/desidua kalıntılarına bağlı gelişen akut endometritte ise bez lümenlerini ve stromayı dolduran baskın iltihap hücresi nötrofildir.
+- **Eozinofil** — Eozinofiller endometriyumda küretaj sonrası veya menstrüel yıkımda az sayıda görülebilir ancak akut endometritin tanısal hücresi değildir; akut bakteriyel endometritte endometriyal bezleri ve yüzey epitelini infiltre eden baskın hücre nötrofildir.
 
 **Cevap: A** — Nötrofil
 
@@ -18955,8 +19576,8 @@ _31 soru (örnek + çıkmış)_
 - **Cowden sendromu** — Cowden sendromu germ hattı PTEN mutasyonuyla ilişkilidir; endometrial karsinom riskini artırır, ama uyumsuzluk onarım genleriyle ilgili değildir.
 - **Polikistik over sendromu** — Polikistik over sendromu östrojen fazlalığı yoluyla hiperplaziye zemin hazırlayan ovaryum lezyonudur; germ hattı mutasyon sendromu değildir.
 - **Lynch sendromu** — Lynch sendromu doğru: DNA uyumsuzluk onarım genlerinin germ hattı mutasyonları endometrial karsinom riskini belirgin artırır.
-- **Li-Fraumeni sendromu** — Li-Fraumeni sendromu ile karıştırılabilir: Endometrioid karsinomla ilişkili germ hattı sendromları Cowden ve Lynch olarak tanımlanır.
-- **Turner sendromu** — Uyumsuzluk onarım genlerinin germ hattı mutasyonu Lynch sendromunu oluşturur. Turner sendromu da bu sorudaki ayrımı sağlamaz.
+- **Li-Fraumeni sendromu** — Li–Fraumeni sendromu germ hattı TP53 mutasyonuyla sarkomlar, meme kanseri, lösemi ve beyin tümörlerine yol açan otozomal dominant sendromdur; MLH1, MSH2, MSH6 veya PMS2 gibi DNA uyumsuzluk onarım (mismatch repair) gen mutasyonlarıyla kolon ve endometriyum karsinomu riskini büyük ölçüde artıran sendrom ise Lynch sendromudur (HNPCC).
+- **Turner sendromu** — Turner sendromu 45,X karyotipiyle seyreden, çizgi gonad ve primer amenoreye yol açan kromozomal bir anomalidir; germ hattı DNA uyumsuzluk onarım gen mutasyonlarıyla mikrosatellit instabilitesi ve yüksek endometriyal karsinom riski oluşturan kalıtsal tablo ise Lynch sendromudur.
 
 **Cevap: C** — Lynch sendromu
 
@@ -19008,7 +19629,7 @@ _31 soru (örnek + çıkmış)_
 
 - **Miyometrial invazyon derinliği** — Miyometrial invazyon derinliği doğru: evre ve tümör derecesiyle birlikte endometrioid karsinomun prognoz belirleyicisidir.
 - **MED12 mutasyonu** — MED12 mutasyonu leiomyomların yaklaşık %70'inde görülür; endometrioid karsinomun prognoz belirleyicisi değildir.
-- **Obezite varlığı** — Obezite östrojen fazlalığı yoluyla endometrioid karsinoma zemin hazırlar; prognoz belirleyicileri arasında sayılmaz.
+- **Obezite varlığı** — Obezite yağ dokusunda artan östrojen senteziyle tip I endometrioid karsinomun gelişimine zemin hazırlayan bir etiyolojik risk faktörüdür (ve bu hastalar genellikle erken evrede, iyi diferansiye tümörlerle başvurur); tanı konduktan sonra endometrioid karsinomun prognozunu belirleyen en önemli patolojik faktörler ise histolojik derece, miyometriyal invazyon derinliği ve tümör evresidir.
 - **Endometrial polip öyküsü** — Endometrial polip anormal uterin kanama yapan, malign dönüşümü nadir benign kitledir; karsinom prognozunu belirlemez.
 - **Adenomyoz varlığı** — Adenomyoz miyometriyumda endometrial doku bulunmasıdır; endometrioid karsinomun prognoz ölçütlerinden değildir.
 
@@ -19070,7 +19691,7 @@ _31 soru (örnek + çıkmış)_
 
 **Özet.** Leiomyom keskin sınırlı, sert, gri-beyaz ve girdaplı kesitlidir; leiomyosarkom ise yumuşak, hemorajik, nekrotik kitlelerdir ve neredeyse her zaman tektir.
 
-# 31 · Ovidukt ve Ovaryum Patolojisi
+# Ders 31 (31) · Ovidukt ve Ovaryum Patolojisi
 
 _34 soru (örnek + çıkmış)_
 
@@ -19085,7 +19706,7 @@ _34 soru (örnek + çıkmış)_
 - **Chlamydia trachomatis** — Chlamydia trachomatis süpüratif salpingitin ikinci sıradaki etkenidir; en sık etkenden geri kalan olguların çoğunu oluşturur.
 - **Mycobacterium tuberculosis** — Mycobacterium tuberculosis tüberküloz salpingit yapar; endemik bölgelerde infertilitenin önemli nedenidir, süpüratif formun en sık etkeni değildir.
 - **Neisseria gonorrhoeae** — Neisseria gonorrhoeae doğru: süpüratif salpingit olgularının %60’tan fazlasının etkenidir.
-- **Escherichia coli** — Escherichia coli ile karıştırılabilir: Süpüratif salpingit sıklıkla polimikrobiyal olsa da en sık iki etken Neisseria ve Chlamydia türleridir.
+- **Escherichia coli** — Escherichia coli üriner sistem enfeksiyonlarının en sık etkenidir ve salpingitte ancak ileri dönem polimikrobiyal pelvik apselerde ikincil olarak yer alabilir; akut süpüratif salpingit ve pelvik inflamatuvar hastalığın en sık birincil etkeni ise Neisseria gonorrhoeae (ve Chlamydia trachomatis) enfeksiyonudur.
 - **Candida albicans** — Candida albicans bu tablonun etkeni değil; süpüratif salpingit pürülan organizmalarla gelişen, pelvik inflamatuvar hastalığın parçası olan bir enfeksiyondur.
 
 **Cevap: C** — Neisseria gonorrhoeae
@@ -19103,7 +19724,7 @@ _34 soru (örnek + çıkmış)_
 - **Fallop tüpü fimbriyası** — Fallop tüpü fimbriyası doğru: seröz tüp içi epitelyal karsinom, yani STIC burada bulunur ve %90’ında TP53 mutasyonu taşır.
 - **Ovaryum korteksi** — Ovaryum korteksi bu öncü lezyonun yeri değildir; geleneksel görüş tümörü ovaryan sayarken yeni kanıtlar tüp kökenini gösterir.
 - **Endometriyum** — Endometriyum bu lezyonun yeri değil; STIC uterin seröz karsinomun öncüsüne benzese de uterusta bulunmaz.
-- **Serviks** — BRCA taşıyıcılarının profilaktik salpingo ooforektomi örneklerinde STIC sık bulunur. Serviks bu sorudaki ayrımı sağlamaz.
+- **Serviks** — Serviks mukozası HPV ile ilişkili skuamöz hücreli karsinom ve endoservikal adenokarsinomun köken aldığı bölgedir; TP53 mutasyonu taşıyan yüksek dereceli seröz over/periton karsinomlarının büyük kısmının gerçek öncü lezyonu ise seröz tubal intraepitelyal karsinom (STIC) adıyla fallop tüpünün fimbriyal ucunda yer alır.
 - **Omentum** — Omentum öncü lezyonun yeri değil, yayılım alanıdır; bu tümörler tanı anında sıklıkla omentum ve periton tutulumuyla ileri evrededir.
 
 **Cevap: A** — Fallop tüpü fimbriyası
@@ -19140,7 +19761,7 @@ _34 soru (örnek + çıkmış)_
 - **Yüzey epiteli** — Yüzey epiteli doğru: yüzey ve fallop tüpü epitelinden gelişen tümörler malign over tümörlerinin yaklaşık %90’ını oluşturur.
 - **Seks kord-stroma** — Seks kord stromal grup granüloza hücreli tümör ve tekoma fibroma gibi tümörleri içerir; malign over tümörleri içindeki payı küçüktür.
 - **Metastatik** — Metastatik tümörler malign over tümörlerinin yalnızca yaklaşık %5’ini oluşturur ve çoğunlukla iki taraflıdır.
-- **Mezenkimal** — Mezenkimal köken ile karıştırılabilir: Primer over neoplazmlarının çoğu Müllerian epitel farklılaşması gösterir.
+- **Mezenkimal** — Overin fibroblast veya düz kas gibi spesifik olmayan mezenkimal tümörleri oldukça nadirdir; primer over tümörlerinin yaklaşık %70'i ve malign over kanserlerinin yaklaşık %90'ı çölyom/Müllerian epitel farklılaşması gösteren yüzey epitelinden (veya tuba-endometriyum epitelinden) köken alır.
 
 **Cevap: B** — Yüzey epiteli
 
@@ -19193,7 +19814,7 @@ _34 soru (örnek + çıkmış)_
 - **Struma ovarii** — Struma ovarii tamamen olgun tiroid dokusundan oluşan monodermal teratomdur; hipertiroidizm yapabilen, tek taraflı küçük bir kitledir.
 - **Granüloza hücreli tümör** — Granüloza hücreli tümör tek taraflı bir seks kord stromal tümördür; sıklıkla fazla östrojen salgılar, metastaz değildir.
 - **Krukenberg tümörü** — Krukenberg tümörü doğru: gastrointestinal kökenli metastatik müsinöz adenokarsinomdur ve sıklıkla iki overi birlikte tutar.
-- **Brenner tümörü** — Brenner tümörü ile karıştırılabilir: İki taraflı müsinöz over kitlesinde önce metastaz düşünülür, çünkü primer müsinöz tümörler nadiren iki taraflıdır.
+- **Brenner tümörü** — Brenner tümörü fibromatöz stroma içinde ürotelyuma (geçiş epiteline) benzeyen epitel yuvaları içeren, çoğunlukla tek taraflı ve benign bir yüzey epitel tümörüdür; mide veya kolon gibi gastrointestinal sistemden köken alıp her iki overi birden büyüten taşlı yüzük hücreli metastatik müsinöz adenokarsinom ise Krukenberg tümörüdür.
 - **Disgerminom** — Disgerminom genç yaşta, %80–90 oranında tek taraflı görülen, radyosensitif malign germ hücreli tümördür.
 
 **Cevap: C** — Krukenberg tümörü
@@ -19212,7 +19833,7 @@ _34 soru (örnek + çıkmış)_
 - **Mide** — Mide gastrointestinal sistemin parçasıdır, ama psödomiksoma peritonide en sık köken olarak öne çıkan organ değildir.
 - **Kolon** — Kolon da gastrointestinal bir köken olabilir; ancak psödomiksoma peritoninin en sık çıkış yeri olarak bu organ sayılmaz.
 - **Apendiks** — Apendiks doğru: psödomiksoma peritoni çoğu olguda gastrointestinal kökenlidir ve en sık apendiksten gelişir.
-- **Pankreas** — Pankreas ile karıştırılabilir: Psödomiksoma peritoni mukus üreten tümör hücrelerinin peritona implantasyonuyla oluşur ve en sık başka bir organdan çıkar.
+- **Pankreas** — Pankreasın müsinöz kistik neoplazmları çok nadir olarak peritona yayılabilir; karın boşluğunun jelatinöz müsin kitleleriyle dolduğu klinik tablo olan psödomiksoma peritoninin hemen her zaman en sık birincil kaynağı ise apendiksin düşük dereceli müsinöz neoplazmlarıdır (eskiden primer over tümörü sanılan olguların da apendiks metastazı olduğu gösterilmiştir).
 
 **Cevap: D** — Apendiks
 
@@ -19316,11 +19937,11 @@ _34 soru (örnek + çıkmış)_
 
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
-- **Serviks kanseri** — Ovulasyon baskılanmasıyla riskin azalması yumurtlamanın gerçekleştiği organın karsinomu için tanımlanır. Serviks kanseri bu sorudaki ayrımı sağlamaz.
+- **Serviks kanseri** — Uzun süreli oral kontraseptif kullanımı serviks kanseri riskini azaltmaz, aksine bariyer yöntem kullanımının azalması ve hormonal etkilerle servikal kanser riskini hafif artırabilir; ovülasyon sayısını ve fimbriya/over yüzeyindeki tekrarlayan epitel hasarını azaltarak riskini %50'ye varan oranda düşürdüğü kanser ise over kanseridir (ve endometriyum kanseridir).
 - **Over kanseri** — Over kanseri doğru: uzun süreli oral kontraseptif kullanımı ovulasyonu baskılayarak over karsinomu riskini azaltır.
-- **Endometrium kanseri** — Endometrial karsinom riski polikistik over sendromunda artar, östrojen fazlalığı da endometrial hiperplaziye yol açar. Endometrium kanseri bu sorudaki ayrımı sağlamaz.
-- **Kolon kanseri** — Kolon kanseri ile karıştırılabilir: Gastrointestinal sistem daha çok overe metastaz yapan Krukenberg tümörlerinin primer odağı olarak önemlidir.
-- **Akciğer kanseri** — Akciğerin küçük hücreli karsinomu daha çok limbik ensefalitle en sık ilişkili tümör olarak anılır. Akciğer kanseri bu sorudaki ayrımı sağlamaz.
+- **Endometrium kanseri** — Oral kontraseptifler içerdikleri progestin sayesinde endometriyumu koruyarak endometrium kanseri riskini de azaltır, ancak soruda özellikle belirtilen 'ovülasyon sayısını azaltarak yüzey epitelinin tekrarlayan folikül rüptürü ve onarım döngüsünü önleme' mekanizması doğrudan over yüzey epitel kanserlerinin risk azalmasını açıklar.
+- **Kolon kanseri** — Kolon kanseri gelişiminde ovülasyon döngüsünün veya folikül rüptürünün bir rolü yoktur; uzun süreli kombine oral kontraseptif kullanımının kesintisiz ovülasyonu baskılayarak riskini belirgin biçimde düşürdüğü malignite over kanseridir.
+- **Akciğer kanseri** — Akciğer kanseri tütün dumanı ve çevresel karsinojenlerle gelişir, ovülasyon sayısıyla ilişkili değildir; kombine oral kontraseptiflerin ovülasyonu baskılayarak tekrarlayan epitel hasarını önleme yoluyla riskini azalttığı tümör over kanseridir.
 
 **Cevap: B** — Over kanseri
 
@@ -19335,7 +19956,7 @@ _34 soru (örnek + çıkmış)_
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
 - **Fibrom** — Fibrom germ hücreli değil, seks kord-stromal kökenlidir; teka hücreleri ve fibroblastlardan oluşan tekoma-fibroma grubunda yer alır.
-- **Brenner tümörü** — Over tümörleri yüzey epiteli, germ hücreleri ve seks kord-stromal hücreler olmak üzere üç kökenden gelişir. Brenner tümörü bu sorudaki ayrımı sağlamaz.
+- **Brenner tümörü** — Brenner tümörü over yüzey epitelinden gelişen ve ürotelyal (transizyonel) epitel adacıkları içeren epitelyal-stromal grup tümörüdür; primordial germ hücrelerinden köken alan ve erkekteki seminomun tam karşılığı olan malign over tümörü ise disgerminomdur.
 - **Seröz tümör** — Seröz tümör yüzey epitel kökenlidir; Müllerian epitel farklılaşması gösteren en sık yüzey epitel tümörüdür.
 - **Disgerminom** — Disgerminom doğru: germ hücre kökenlidir ve testis seminomunun overdeki karşılığıdır; 20'li yaşlarda sıktır ve radyosensitiftir.
 - **Sertoli-Leydig hücreli tümör** — Sertoli–Leydig hücreli tümör seks kord-stromal kökenlidir; testis gelişimini taklit eder ve çoğu olguda maskülinizan etki yapar.
@@ -19352,11 +19973,11 @@ _34 soru (örnek + çıkmış)_
 
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
-- **Seröz tümör** — Seröz tümörler periton yüzeyine ve omentuma yayılma eğilimi ve asitle tanınır. Seröz tümör bu sorudaki ayrımı sağlamaz.
+- **Seröz tümör** — Seröz over tümörleri psammom cisimcikleri, bilateral tutulum ve peritoneal yayılımla karakterize yüzey epitel tümörleridir; içinde gelişen nöral dokuya karşı anti-NMDA reseptör otoantikorları tetikleyerek paraneoplastik otoimmün limbik ensefalite yol açabilen over tümörü ise teratomdur.
 - **Teratom** — Teratom doğru: olgun sinir dokusu içeren teratomlu kadınlarda nadir paraneoplastik tablo olarak limbik ensefalit gelişebilir.
-- **Müsinöz tümör** — Bu tümörün önemli özelliği rüptürde peritona yayılarak müsin birikimine yol açabilmesidir. Müsinöz tümör bu sorudaki ayrımı sağlamaz.
-- **Fibrotekom** — Fibrotekom ile karıştırılabilir: Bu tümörde olguların yaklaşık %40'ında asit ve hidrotoraks, yani Meigs sendromu görülür.
-- **Endometrioid tümör** — Sıklıkla endometriozisle gelişir ve %15–20 olguda eş zamanlı endometrial karsinom bulunur. Endometrioid tümör bu sorudaki ayrımı sağlamaz.
+- **Müsinöz tümör** — Müsinöz over tümörleri çok odacıklı büyük kistik kitleler oluşturur ve rüptürde peritona müsin yayabilir; nöroektodermal doku barındırdığı için NMDA glutamat reseptörüne karşı otoantikor gelişimiyle paraneoplastik limbik ensefalit, davranış değişikliği ve nöbetlere yol açan over tümörü ise teratomdur.
+- **Fibrotekom** — Fibrotekom over stromasından gelişen, Meigs sendromuna (over tümörü, asit ve sağ hidrotoraks) veya östrojen üretimine yol açabilen seks kord-stromal tümördür; ektodermal sinir dokusu içerdiği için anti-NMDAR antikorlarıyla paraneoplastik limbik ensefalit yapan tümör ise over teratomudur.
+- **Endometrioid tümör** — Endometrioid over tümörü endometriozis zemininde gelişebilen ve PTEN/ARID1A mutasyonları taşıyan yüzey epitel tümörüdür; olgun veya immatür sinir dokusu ekspresyonu nedeniyle otoimmün limbik ensefalit ile ilişkili over tümörü ise teratomdur.
 
 **Cevap: B** — Teratom
 
@@ -19390,7 +20011,7 @@ _34 soru (örnek + çıkmış)_
 
 - **Borderline seröz tümör** — Borderline seröz tümörlerin yaklaşık %30'u bilateraldir; bu oran en düşük bilateraliteye sahip gruptan belirgin olarak yüksektir.
 - **Endometrioid karsinom** — Endometrioid karsinomun yaklaşık %20'si bilateraldir; bu nedenle bilateral olma ihtimali en düşük tümör değildir.
-- **Clear cell karsinom** — Bu nadir malignite endometrioid adenokarsinom varyantı kabul edilir. Clear cell, yani berrak hücreli karsinom bu sorudaki ayrımı sağlamaz.
+- **Clear cell karsinom** — Berrak hücreli (clear cell) karsinom endometriozis zemininde gelişen agresif bir yüzey epitel karsinomudur; primer over yüzey epitel tümörleri arasında %90'dan fazla olguda tek taraflı (unilateral) kalarak bilateral olma olasılığı en düşük olan tümör müsinöz tümördür (bu nedenle bilateral müsinöz over tümörü görüldüğünde öncelikle Krukenberg gibi GİS/apendiks metastazı düşünülür).
 - **Malign seröz tümör** — Malign seröz tümörlerin yaklaşık %65'i bilateraldir; bilateral olma olasılığı en yüksek primer over tümörlerindendir.
 - **Müsinöz tümör** — Müsinöz tümör doğru: bilateral olma olasılığı düşüktür; benignlerde %5, borderline olanlarda %10, malignlerde %5'in altındadır.
 
@@ -19554,7 +20175,7 @@ _34 soru (örnek + çıkmış)_
 - **Psammoma ve silya varlığı** — Psammoma cisimcikleri ve silyalı hücreler seröz tümörlerin tanısal histolojik özellikleridir; prognozu belirlemez.
 - **Histoloji ve periton tutulumu** — Histoloji ve periton tutulumu doğru: periton tutulumu olan malign seröz tümörde beş yıllık sağkalım yaklaşık %25'e düşer.
 - **CA-125 düzeyi ve yaş** — CA-125 tanı sonrası tedavi yanıtının izlenmesinde ve nüksün saptanmasında kullanılır; prognozu belirleyen etken olarak tanımlanmaz.
-- **KRAS ve BRAF mutasyonu** — KRAS ve BRAF mutasyonları düşük dereceli seröz karsinomda sıktır; prognozla en yakından ilişkili etken olarak geçmez.
+- **KRAS ve BRAF mutasyonu** — KRAS ve BRAF mutasyonları borderline seröz tümörden yavaş gelişen düşük dereceli seröz karsinomların moleküler özelliğidir; seröz over tümörlerinin tümünde hasta sağkalımını ve prognozu en doğrudan belirleyen iki temel klinikopatolojik faktör ise tümörün histolojik derecesi (benign/borderline/malign) ve tanı anındaki periton/extraovaryan yayılım yaygınlığıdır.
 
 **Cevap: C** — Histoloji ve periton tutulumu
 
@@ -19686,7 +20307,7 @@ _34 soru (örnek + çıkmış)_
 
 **Özet.** CA-125 epitelyal over kanserlerinin %75–90'ında yükselir; ancak erken evrede %50'ye kadar normal olabilir ve benign durumlarda da artar, bu yüzden en çok izlemde değerlidir.
 
-# 32 · Gebelik Hastalıkları
+# Ders 32 (32) · Gebelik Hastalıkları
 
 _29 soru (örnek + çıkmış)_
 
@@ -19754,7 +20375,7 @@ _29 soru (örnek + çıkmış)_
 
 - **Koryonik villus** — Koryonik villus doğru: tüp gebeliğinin histolojik tanısı koryonik villusların gösterilmesiyle konur.
 - **Desidual reaksiyon** — Desidual değişiklikler ektopik gebeliğin tüm yerleşimlerinde erken dönemde görülür; tek başına tüp gebeliğini kanıtlamaz.
-- **Hemosiderin** — Hemosiderin ile karıştırılabilir: Tüp lümeni yeni pıhtılaşmış kanla dolu olsa da tanı için gebelik dokusu gösterilmelidir.
+- **Hemosiderin** — Hemosiderin ve taze kan pıhtısı fallop tüpü duvarında travma, endometriozis veya salpingit sonrası da bulunabilir ve gebeliği kanıtlamaz; ektopik tüp gebeliğinin kesin histopatolojik tanısı tüp lümeni veya duvarında fetal plasental yapı olan koryonik villusların (veya ekstravillöz trofoblastların) görülmesiyle konur.
 - **Nötrofil infiltrasyonu** — Nötrofil infiltrasyonu akut koryoamniyonit gibi enfeksiyon tablolarının bulgusudur; gebeliğin yerini göstermez.
 - **Fibrinoid nekroz** — Fibrinoid nekroz preeklampside desidual damarlarda görülen bir lezyondur; tüp gebeliğinin tanı ölçütü değildir.
 
@@ -19774,7 +20395,7 @@ _29 soru (örnek + çıkmış)_
 - **Trofoblast proliferasyonu** — Trofoblast proliferasyonu hidatiform mol gibi gebelik trofoblastik hastalıklarının ortak özelliğidir; preeklampsinin temel olayı değildir.
 - **Spiral arterlerde yetersiz yeniden şekillenme** — Spiral arterlerde yetersiz yeniden şekillenme doğru: kas elastik duvar korunur, lümen dar kalır ve plasental hipoksi gelişir.
 - **Paternal genom fazlalığı** — Paternal genetik materyal fazlalığı tam ve kısmi molün genetik temelidir; preeklampsinin mekanizması değildir.
-- **Amniyon sıvısı embolisi** — Preeklampsinin özü utero plasental vasküler havuzdaki yetmezlik ve maternal endotel disfonksiyonudur. Amniyon sıvısı embolisi bu sorudaki ayrımı sağlamaz.
+- **Amniyon sıvısı embolisi** — Amniyon sıvısı embolisi doğum sırasında amniyon sıvısının maternal venöz sinüslere geçerek akut solunum yetmezliği ve DİK yapmasıdır; preeklampsinin temel patogenetik olayı ise ekstravillöz trofoblastların desidual spiral arterleri yeterince invaze edememesi sonucu damarların dar ve yüksek dirençli kalması (yetersiz yeniden şekillenme) ve plasental iskemi gelişmesidir.
 
 **Cevap: C** — Spiral arterlerde yetersiz yeniden şekillenme
 
@@ -19827,7 +20448,7 @@ _29 soru (örnek + çıkmış)_
 - **Kemoterapi** — Kemoterapi invaziv mol ve koryokarsinom gibi trofoblastik neoplazilerin tedavisidir; preeklampside yeri yoktur.
 - **Küretaj** — Küretaj hidatiform molün çıkarılmasında kullanılır; preeklampsinin tedavisi değildir.
 - **Antibiyotik** — Antibiyotik enfeksiyonlarda kullanılır; preeklampsi enfeksiyon değil, maternal endotel disfonksiyonuyla giden sistemik bir sendromdur.
-- **Histerektomi** — Doğumdan sonra hipertansiyon ve proteinüri genellikle kendiliğinden kaybolur. Histerektomi bu sorudaki ayrımı sağlamaz.
+- **Histerektomi** — Histerektomi uterusun cerrahi olarak çıkarılmasıdır ve atoni kanaması veya plasenta akreta dışında preeklampsi tedavisi değildir; preeklampside tüm klinik bulgular iskemik plasentadan maternal dolaşıma salınan sFlt-1 ve endoglin gibi anti-anjiyojenik faktörlerden kaynaklandığı için kesin ve en etkili tedavi fetüs ve plasentanın doğurtulmasıdır (acil doğumdur).
 - **Acil doğum** — Acil doğum doğru: preeklampsinin en etkili tedavisidir; karar, erken doğum riskleriyle hastalığın sürmesinin riskleri tartılarak verilir.
 
 **Cevap: E** — Acil doğum
@@ -19844,7 +20465,7 @@ _29 soru (örnek + çıkmış)_
 
 - **46,XX (yalnız paternal)** — Yalnız paternal 46,XX doğru: tam molde boş ovum döllenir, bütün kromozomlar babadan gelir ve hücreler diploiddir.
 - **69,XXY** — 69,XXY triploid bir karyotiptir ve kısmi molün tipik örneğidir; normal ovumun iki spermle ya da diploid spermle döllenmesinden oluşur.
-- **45,X** — 45,X mol karyotipleri arasında yer almaz; her iki mol tipinin ortak noktası paternal genetik materyal fazlalığıdır.
+- **45,X** — 45,X karyotipi (monozomi X) Turner sendromunun ve spontan ilk trimester düşüklerinin sık kromozomal nedenidir; tam (komplet) hidatiform mol ise çekirdeğini kaybetmiş boş bir ovumun tek bir spermle döllenip ikilenmesiyle (veya iki spermle döllenmesiyle) oluşur ve olguların %90'ında tamamı babadan gelen 46,XX (yalnız paternal/androgenetik) karyotip gösterir.
 - **47,XXY** — 47,XXY de mol karyotipi değildir; kısmi molde kromozom sayısı 69 olur ve paternal genler baskındır.
 - **46,XX (maternal+paternal)** — Anne ve babadan gelen 46,XX tam mol değildir; tam molde ovum boştur ve genetik içeriğin tamamı babadandır.
 
@@ -19936,7 +20557,7 @@ _29 soru (örnek + çıkmış)_
 - **Karın boşluğu** — Karın boşluğu, döllenmiş ovumun fimbriyal uçtan peritona düşmesiyle gelişen abdominal gebeliğin yeridir; en sık yerleşim değildir.
 - **Tuba** — Tuba doğru: ektopik gebeliklerin yaklaşık %90'ı fallop tüpünün uterus dışı kısmında yerleşir.
 - **Uterin korpus** — Uterin korpus normal implantasyon yeridir; ektopik gebelik ise embriyonun uterus dışında implantasyonudur.
-- **Endoservikal kanal** — Tüp dışındaki ektopik yerleşimler ovaryum, karın boşluğu ve tüpün uterus içi kısmıdır. Endoservikal kanal bu sorudaki ayrımı sağlamaz.
+- **Endoservikal kanal** — Endoservikal kanal servikal ektopik gebeliğin yerleşebildiği çok nadir (%1'in altında) bir bölgedir; kronik salpingit veya peritubal yapışıklıkların zigotun uterusa geçişini geciktirmesi nedeniyle ektopik gebeliklerin yaklaşık %90'ı fallop tüpünde (tuba uterina, özellikle ampulla bölgesinde) yerleşir.
 
 **Cevap: C** — Tuba
 
@@ -19950,10 +20571,10 @@ _29 soru (örnek + çıkmış)_
 
 **Çözüm.** Şimdi seçeneklere tek tek bakalım.
 
-- **Endometriozis** — Endometriozis ektopik gebeliğin diğer nedenleri arasında sayılır; bu yüzden cevap değildir.
+- **Endometriozis** — Pelvik endometriozis fallop tüpü çevresinde kronik inflamasyon, fibrozis ve peritubal yapışıklıklar oluşturarak tüp hareketliliğini bozar ve ektopik gebeliğin iyi bilinen zemin hazırlayıcı nedenleri arasında yer alır.
 - **Kronik iltihabi değişiklikler** — Kronik salpingite bağlı iltihabi değişiklikler, yani pelvik inflamatuvar hastalık ektopik gebeliğin en önemli yatkınlık nedenidir.
 - **Kanalda (tubada) nedbe oluşumu** — Tüp lümenindeki skarlaşma ve daralma ektopik gebeliğe zemin hazırlar; apandisit veya cerrahi sonrası peritübal skar da nedenler arasındadır.
-- **Tümörler** — Uterus içi tümörler ektopik gebeliğin diğer nedenleri arasında yer alır; bu yüzden cevap değildir.
+- **Tümörler** — Uterus veya tuba komşuluğundaki leiomyom gibi tümörler tubal lümeni dıştan sıkıştırıp ovumun uterusa ilerlemesini mekanik olarak engelleyerek ektopik gebeliğe neden olabilir; göbek kordonundaki akut vaskülit (funisit) ise ilerlemiş intrauterin gebelikte asenden amniyon kesesi enfeksiyonunun (koryoamniyonitin) fetal yanıtıdır ve ektopik gebelik nedeni olamaz.
 - **Kordonda akut vaskülit (funisit)** — Kordonda akut vaskülit doğru: funisitis koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıdır; ektopik gebeliğin nedeni değil, fetal inflamasyon belirtecidir.
 
 **Cevap: E** — Kordonda akut vaskülit (funisit)
@@ -20212,7 +20833,7 @@ _29 soru (örnek + çıkmış)_
 
 **Özet.** Gebelik koryokarsinomu erken ve hematojen yayılır, lenfatik yayılım nadirdir; en sık metastaz yeri yaklaşık %50 ile akciğer, ardından %30–40 ile vajinadır.
 
-# 33 · Memenin Benign Hastalıkları
+# Ders 33 (33) · Memenin Benign Hastalıkları
 
 _33 soru (örnek + çıkmış)_
 
@@ -20245,7 +20866,7 @@ _33 soru (örnek + çıkmış)_
 - **Anaerob bakteriler** — Anaerob bakteriler laktasyon dışı apselerde karışık enfeksiyon biçiminde görülür; laktasyonel apsenin etkeni değildir.
 - **Escherichia coli** — Escherichia coli laktasyonel apsenin tanımlanmış etkenlerinden değildir; bu apse antibiyotik ve sütün sağılmasına devamla tedavi edilir.
 - **Staphylococcus aureus** — Staphylococcus aureus doğru: laktasyonel apse en sık bu bakteri ya da streptokokla gelişir.
-- **Mycobacterium tuberculosis** — Laktasyonel apse emzirmenin ilk ayında sık görülür ve nadiren insizyon ile drenaj gerektirir. Mycobacterium tuberculosis bu sorudaki ayrımı sağlamaz.
+- **Mycobacterium tuberculosis** — Mycobacterium tuberculosis memede çok nadir olarak kronik kazeifiye granülomatöz mastit ve fistüller yapar; emzirmenin ilk haftalarında meme başı çatlaklarından giren bakterilerle gelişen akut laktasyonel meme apsesinin en sık etkeni ise Staphylococcus aureus'tur (daha seyrek olarak streptokoklardır).
 - **Candida albicans** — Candida albicans laktasyonel apse etkeni olarak tanımlanmaz; meme inflamasyonunda enfeksiyonu taklit eden inflamatuar karsinom da akılda tutulmalıdır.
 
 **Cevap: C** — Staphylococcus aureus
@@ -20282,7 +20903,7 @@ _33 soru (örnek + çıkmış)_
 - **Kaba yuvarlak** — Kaba, yuvarlak kalsifikasyonlar kist ve fibroadenom gibi benign lezyonlarda görülür.
 - **Kist duvarında halka** — Kist içeriği kalsifiye olabilir ve mamografide kalsifikasyon verir; kistle ilişkili kalsifikasyon benign özellik taşır.
 - **Fibroadenomda iri** — Fibroadenomdaki iri, kaba kalsifikasyonlar benign özelliktedir; maligniteyi düşündürmez.
-- **Damar boyunca kaba** — Damar boyunca kaba kalsifikasyon ile karıştırılabilir: Malign kalsifikasyonlar duktal sistem içinde lineer ve dallanan dizilim gösterir.
+- **Damar boyunca kaba** — Damar duvarları boyunca uzanan kaba, paralel ('tren rayı' şeklinde) veya patlamış mısır biçimli büyük kalsifikasyonlar vasküler kalsifikasyon ve dejenere fibroadenom gibi benign süreçleri gösterir; mamografide duktus lümenindeki komedonekroz kalıbını yansıtarak DCIS ve maligniteyi en güçlü düşündüren bulgu ise ince, doğrusal, pleomorfik ve dallanan mikrokalsifikasyonlardır.
 
 **Cevap: A** — İnce pleomorfik dallanan
 
@@ -20372,7 +20993,7 @@ _33 soru (örnek + çıkmış)_
 - **1,5-2 kat** — 1,5–2 kat risk artışı atipisiz proliferatif lezyonlara aittir; sklerozan adenozis ve orta ya da belirgin hiperplazi bunlardandır.
 - **4-5 kat** — 4–5 kat doğru: atipik duktal ve atipik lobüler hiperplazi gibi atipili proliferatif hastalıkta invaziv kanser riski bu kadar artar.
 - **8-10 kat** — 8–10 kat risk karsinoma in situ, yani duktal ve lobüler karsinoma in situ için geçerlidir.
-- **20 kat** — Epitelyal lezyonlar arasında en yüksek rölatif risk karsinoma in situ için 8–10 kattır. 20 kat bu sorudaki ayrımı sağlamaz.
+- **20 kat** — 20 kat gibi çok yüksek bir rölatif risk genel sporadik epitelyal meme lezyonları için geçerli değildir (in situ karsinomlarda bile risk 8–10 kattır); atipik duktal hiperplazi veya atipik lobüler hiperplazi saptanan kadınlarda her iki memede invaziv karsinom gelişme rölatif riski normal popülasyona göre 4–5 kat artmıştır.
 
 **Cevap: C** — 4-5 kat
 
@@ -20390,7 +21011,7 @@ _33 soru (örnek + çıkmış)_
 - **HER2 pozitif** — HER2 pozitif tümörler olguların yaklaşık %10–20’sini oluşturur; daha genç kadınlarda ve germ hattı TP53 mutasyonunda görülür.
 - **Üçlü negatif** — Üçlü negatif tümörler yaklaşık %10–20 oranındadır; genç kadınlarda ve BRCA1 taşıyıcılarında öne çıkar.
 - **Lobüler** — Lobüler bir moleküler alt tip değil, duktal ile birlikte in situ ve invaziv karsinomu tanımlayan histolojik bir terimdir.
-- **Metaplastik** — Metaplastik ile karıştırılabilir: Moleküler sınıflama östrojen reseptörü, progesteron reseptörü ve HER2 durumuna dayanır.
+- **Metaplastik** — Metaplastik karsinom tüm meme kanserlerinin %1'inden azını oluşturan, üçlü negatif fenotipte iğsi hücreli veya kıkırdak/kemik farklılaşması gösteren nadir bir alt tiptir; tüm invaziv meme karsinomlarının %50–65'ini oluşturarak açık ara en sık görülen moleküler alt tip ise östrojen reseptörü pozitif, HER2 negatif olan Lümenal A/B (ER+/HER2-) grubudur.
 
 **Cevap: A** — Lümenal (ER+/HER2-)
 
@@ -20407,7 +21028,7 @@ _33 soru (örnek + çıkmış)_
 - **Lümenal** — Lümenal, yani ER pozitif tümörler en çok germ hattı BRCA2 mutasyonuyla ilişkilidir.
 - **HER2 pozitif** — HER2 pozitif tümörler germ hattı TP53 mutasyonu olan bireylerde en sık görülen kanser türüdür.
 - **Lobüler** — Lobüler tip germ hattı CDH1 mutasyonunda öne çıkar; BRCA1 taşıyıcılarının tipik kanseri değildir.
-- **Müsinöz** — Müsinöz ile karıştırılabilir: BRCA1 ilişkili kanserler genomik olarak kararsızdır ve p53 fonksiyon kaybı da gösterir.
+- **Müsinöz** — Müsinöz (kolloid) karsinom ileri yaş kadınlarda görülen, yavaş büyüyen ve neredeyse her zaman ER pozitif (lümenal) olan özel tip meme kanseridir; germ hattı BRCA1 mutasyonu taşıyıcılarında gelişen meme karsinomları ise çoğunlukla bazal benzeri gen ekspresyonu gösteren, yüksek dereceli ve TP53 mutasyonlu üçlü negatif (ER-, PR-, HER2-) karsinomlardır.
 - **Üçlü negatif** — Üçlü negatif doğru: germ hattı BRCA1 mutasyonları ER, PR ve HER2 negatif kanserlerle güçlü biçimde ilişkilidir.
 
 **Cevap: E** — Üçlü negatif
@@ -20424,8 +21045,8 @@ _33 soru (örnek + çıkmış)_
 
 - **Duktal** — Duktal tip meme karsinomlarının temel histolojik sınıflarından biridir; ancak CDH1 taşıyıcılarındaki kanserlerin çoğu bu tipte değildir.
 - **Lobüler** — Lobüler tip doğru: germ hattı CDH1 mutasyonunda gelişen meme kanserlerinin çoğu lobüler tiptedir.
-- **Medüller** — Medüller tip ile karıştırılabilir: CDH1 taşıyıcılarında meme dışında mide mühür yüzük hücreli karsinomu ve kolon kanseri riski de artar.
-- **Tübüler** — Tübüler tip de cevap değil; CDH1 taşıyıcılarında 70 yaşına kadar meme kanseri riski yaklaşık %50’dir.
+- **Medüller** — Medüller paternli karsinom sinsityal büyüme ve yoğun lenfoplazmasitik infiltratla giden, BRCA1 ilişkili veya üçlü negatif grupta yer alan tümördür; hücreler arası adezyon proteini E-kadherini kodlayan CDH1 geninin germ hattı mutasyonunda ise hücre kohezyonu kaybolduğu için gelişen meme kanserleri karakteristik olarak invaziv lobüler karsinom tipindedir (ayrıca diffüz taşlı yüzük hücreli mide kanseri gelişir).
+- **Tübüler** — Tübüler karsinom E-kadherin ekspresyonunu koruyan, iyi şekillenmiş tek katlı açılı tübüllerden oluşan ve çok iyi prognozlu ER+/HER2- (lümenal A) bir tümördür; E-kadherin (CDH1) germ hattı mutasyonu taşıyıcılarında kohezyon kaybı nedeniyle gelişen meme kanseri ise tek sıra (single-file) dizilimli invaziv lobüler karsinomdur.
 - **Papiller** — Papiller yapı intraduktal papillomun özelliğidir; CDH1 ilişkili meme kanserinin tipi değildir.
 
 **Cevap: B** — Lobüler
@@ -20442,9 +21063,9 @@ _33 soru (örnek + çıkmış)_
 
 - **Tamoksifen** — Tamoksifen bir östrojen antagonistidir; ER pozitif lümenal kanserlerde etkilidir, HER2 hedefli değildir.
 - **Aromataz inhibitörü** — Aromataz inhibitörleri östrojen ve ER hedefli tedavidir; ER pozitif kanserler bu tedaviye duyarlıdır.
-- **Radyoaktif iyot** — HER2 pozitif tümörde amplifiye gen RAS ve PI3K-AKT yollarını aktive ederek proliferasyonu artırır. Radyoaktif iyot bu sorudaki ayrımı sağlamaz.
+- **Radyoaktif iyot** — Radyoaktif iyot (I-131) yalnızca iyot tutma yeteneği olan foliküler ve papiller tiroid karsinomlarının tedavisinde kullanılır; 17q üzerindeki ERBB2 (HER2) gen amplifikasyonu ve reseptör aşırı ekspresyonu gösteren meme kanserleri ise HER2 reseptörünü doğrudan hedefleyen monoklonal antikor trastuzumaba (ve tirozin kinaz inhibitörlerine) duyarlıdır.
 - **Trastuzumab** — Trastuzumab doğru: HER2 aşırı ekspresyonlu tümörler agresif seyretse de bu anti HER2 tedaviye duyarlıdır.
-- **Progestin** — Menopoz sonrası özellikle östrojen ve progesteron birlikte hormon tedavisi lümenal kanser insidansını artırır. Progestin bu sorudaki ayrımı sağlamaz.
+- **Progestin** — Progestin tedavisi endometriyal hiperplazi ve erken evre endometrioid endometriyum karsinomunda östrojen etkisini dengelemek için kullanılır, meme epitelinde ise proliferasyonu artırabilir; HER2 pozitif meme kanserlerinde hedefe yönelik standart biyolojik ajan anti-HER2 monoklonal antikoru olan trastuzumabdır.
 
 **Cevap: D** — Trastuzumab
 
@@ -20498,7 +21119,7 @@ _33 soru (örnek + çıkmış)_
 - **Hormon replasman tedavisi** — Hormon replasman tedavisi, özellikle östrojen ve progesteron birlikte kullanıldığında lümenal meme kanseri insidansını artırır.
 - **Lobüler karsinoma in situ varlığı** — Lobüler karsinoma in situ, epitel lezyonları içinde invaziv karsinom riskini en çok artıran gruptadır.
 - **Erken menopoza girmek** — Erken menopoza girmek doğru: risk faktörü olan geç menopozun tersine, yaşam boyu östrojen maruziyetini ve adet döngüsü sayısını azaltır.
-- **Sklerozan adenozis** — Sklerozan adenozis riski hafif düzeyde artıran epitel lezyonlarındandır; bu nedenle cevap değildir.
+- **Sklerozan adenozis** — Sklerozan adenozis lobüllerde asinus sayısının artması ve stromal sklerozla karakterize proliferatif bir meme lezyonudur ve invaziv meme kanseri riskini 1,5–2 kat hafifçe artırır; erken menopoza girmek ise yaşam boyu karşılanmamış östrojen ve ovülasyon döngüsü maruziyetini kısalttığı için meme kanseri riskini artırmaz, aksine azaltır.
 
 **Cevap: D** — Erken menopoza girmek
 
@@ -20516,7 +21137,7 @@ _33 soru (örnek + çıkmış)_
 - **İntraduktal papillom** — İntraduktal papillom meme başı akıntısının en sık benign nedenidir; karsinom değildir.
 - **İnflamatuvar meme karsinomu** — İnflamatuvar meme karsinomu doğru: eritem, ödem ve ağrıyla enfeksiyonu taklit eder; bu nedenle meme inflamasyonunda her zaman akılda tutulmalıdır.
 - **Filloides tümör** — Filloides tümör intralobüler stromadan köken alan, eksizyon sonrası nüks edebilen bir stromal tümördür; enfeksiyonu taklit eden karsinom bu değildir.
-- **Meme Paget hastalığı** — Meme Paget hastalığı ile karıştırılabilir: Eritem ve ödemle seyreden memede öncelikle enfeksiyonu taklit eden karsinom tipi düşünülmelidir.
+- **Meme Paget hastalığı** — Meme başı Paget hastalığı areola ve meme başında tek taraflı ekzematoid kabuklanma, sızıntı ve kaşıntı ile başvurur; ele gelen belirgin bir kitle olmaksızın tüm memede yaygın kızarıklık (eritem), ödem ve portakal kabuğu (peau d'orange) görünümüyle mastiti taklit eden agresif tablo ise dermal lenfatiklerin tümör embolileriyle tıkandığı inflamatuvar meme karsinomudur.
 
 **Cevap: C** — İnflamatuvar meme karsinomu
 
@@ -20551,7 +21172,7 @@ _33 soru (örnek + çıkmış)_
 - **Karışık anaerobik bakteriler** — Karışık anaerobik enfeksiyonlar doğru: laktasyon dışı apse nadirdir ve genellikle bu tür karışık enfeksiyonlarla oluşur.
 - **Staphylococcus aureus** — Staphylococcus aureus laktasyonel apsenin tipik etkenidir; bu apse emzirmenin ilk ayında sık görülür.
 - **Streptokoklar** — Streptokoklar da laktasyonel apsenin etkenleri arasındadır; laktasyon dışı apsenin olağan etkeni değildir.
-- **Mantarlar** — Mantarlar meme apselerinin tanımlanmış etkenleri arasında yer almaz; meme inflamasyonu enfeksiyon, otoimmün hastalık ya da yabancı cisimle ilişkilidir.
+- **Mantarlar** — Mantarlar memede yalnızca bağışıklığı ağır baskılanmış hastalarda veya meme başı yüzeyel kandidiyazisinde görülür; sigara içen kadınlarda subareolar duktuslarda gelişen skuamöz metaplazi ve keratin tıkaçlarının yırtılmasıyla oluşan laktasyon dışı (periduktal) meme apselerinin etkeni ise genellikle stafilokok, streptokok ve karışık anaerobik bakterilerdir.
 - **Virüsler** — Virüsler meme apsesinin etkeni olarak tanımlanmaz; laktasyonel apse antibiyotik ve sütün sağılmasına devamla tedavi edilir.
 
 **Cevap: A** — Karışık anaerobik bakteriler
@@ -20810,7 +21431,7 @@ _33 soru (örnek + çıkmış)_
 
 **Özet.** Östrojenin proonkogenik etkisinin kanıtları şunlardır: tamoksifen yüksek riskli kadınlarda lümenal kanseri azaltır, östrojen ile progesteron içeren hormon tedavisi ise artırır.
 
-# 34 · Erkek Genital Sistem ve Prostat Hastalıkları
+# Ders 34 (34) · Erkek Genital Sistem ve Prostat Hastalıkları
 
 _41 soru (örnek + çıkmış)_
 
@@ -20842,7 +21463,7 @@ _41 soru (örnek + çıkmış)_
 
 - **Keratinize SHK** — Keratinize skuamöz hücreli karsinom penis karsinomunun en sık histolojisidir; kasık ve pelvik lenf nodlarına metastaz yapabilir, bu da kötü prognoz göstergesidir.
 - **PeIN** — PeIN, penis skuamöz hücreli karsinomunun öncüsüdür; epidermis boyunca displazi vardır ama stroma invazyonu yoktur.
-- **Bazaloid karsinom** — Bazaloid karsinom ile karıştırılabilir: Virüsle ilişkisiz, atipisi neredeyse olmayan ve metastaz yapmayan varyant verruköz karsinomdur.
+- **Bazaloid karsinom** — Bazaloid skuamöz hücreli karsinom peniste yüksek riskli HPV (özellikle tip 16) ile ilişkili, küçük bazaloid hücre yuvalarından oluşan ve erken metastaz yapabilen yüksek dereceli bir varyanttır; HPV ile ilişkisiz olan, sitolojik atipisi minimal, tabanı itici tarzda genişleyen ve metastaz yapmayan iyi diferansiye varyant ise verruköz karsinomdur (Buschke–Löwenstein tümörü).
 - **Verruköz karsinom** — Verruköz karsinom doğru: penis skuamöz karsinomunun HPV'siz varyantıdır; papiller, neredeyse atipisiz ve iten kenarlıdır, lokal invaziv olup metastaz yapmaz.
 - **Adenokarsinom** — Adenokarsinom penis tümörleri arasında öne çıkmaz; penis malign tümörlerinin %95'i skuamöz hücreli karsinomdur.
 
@@ -20862,7 +21483,7 @@ _41 soru (örnek + çıkmış)_
 - **Leydig hiperplazisi** — Kriptorşid testiste Leydig hücreleri görece belirgin görünür; bu bir öncü lezyon değil, spermatogonya kaybı ve stroma artışına eşlik eden bulgudur.
 - **Granülomatöz orşit** — Granülomatöz orşit, testiste en sık tüberküloza bağlı gelişen bir inflamasyondur; neoplazi öncüsü değildir.
 - **Hidrosel** — Hidrosel, tunica vaginalis boşluğunda seröz sıvı birikimidir; transillüminasyon pozitiftir ve tümör öncüsü değildir.
-- **Spermatosel** — Kriptorşid testiste 2 yaştan sonra bazal membran kalınlaşması, spermatogonya kaybı ve stroma artışı görülür. Spermatosel bu sorudaki ayrımı sağlamaz.
+- **Spermatosel** — Spermatosel epididim baş kısmındaki efferent kanalların genişlemesiyle oluşan ve içinde sperm bulunan benign, kistik bir lezyondur; kriptorşidizm (inmemiş testis) olgularında seminifer tübül bazal membranı üzerinde saptanan ve puberte sonrası invaziv germ hücreli tümörlerin çoğunun öncüsü olan premalign lezyon ise germ hücreli neoplazi in situ'dur (GCNIS).
 
 **Cevap: A** — Germ hücreli neoplazi in situ
 
@@ -20896,8 +21517,8 @@ _41 soru (örnek + çıkmış)_
 
 - **Kabakulak** — Kabakulak ergenlik sonrası erkeklerin %20–30'unda testisi tutar; parotitten yaklaşık 1 hafta sonra granülomatöz değil, akut interstisyel orşit yapar.
 - **Otoimmun orşit** — Otoimmün orşit de granülomatöz inflamasyon yapar; ancak bazen, travma sonrası testis antijenlerinin salınımıyla gelişir ve en sık neden değildir.
-- **Gonore** — Alt üriner enfeksiyondan yayılan spesifik olmayan epididimit ve orşitte granülom değil, nötrofil ağırlıklı akut inflamasyon görülür. Gonore bu sorudaki ayrımı sağlamaz.
-- **Sifiliz** — Sifiliz ile karıştırılabilir: Testis inflamasyonlarının çoğu epididimden başlayıp testise yayılır ve granülomatöz tablonun en sık etkeni de bu yolu izler.
+- **Gonore** — Neisseria gonorrhoeae arka üretradan prostat, seminal vezikül ve epididime yayılarak bol nötrofilli akut süpüratif epididimo-orşit ve apse oluşturur; testiste kazeifiye granülomatöz inflamasyonun en sık enfeksiyöz nedeni ise hemen her zaman epididimden başlayıp testise geçen Mycobacterium tuberculosis'tir (tüberküloz).
+- **Sifiliz** — Treponema pallidum'un yaptığı tersiyer sifiliz nadir olarak epididime dokunmadan doğrudan testiste gom (gumma) veya plazma hücreli interstisyel orşit yapabilir; ancak epididim ve testiste granülomatöz inflamasyonun klinikte en sık nedeni epididim kuyruğundan başlayıp testise yayılan tüberkülozdur.
 - **Tüberküloz** — Tüberküloz doğru: testiste granülomatöz inflamasyonun en sık nedenidir; genellikle epididimden testise yayılır ve klasik tüberküloz granülomları oluşturur.
 
 **Cevap: E** — Tüberküloz
@@ -20915,7 +21536,7 @@ _41 soru (örnek + çıkmış)_
 - **İzokromozom 12p** — İzokromozom 12p doğru: ergenlik sonrası germ hücreli tümörlerde kromozom 12 kısa kolunda ek kopyalar bulunur, çoğunlukla izokromozom 12p biçiminde.
 - **Kromozom 9q kazanımı** — Kromozom 9q kazanımı, yavaş büyüyen ve metastaz yapmayan spermatositik tümörün karakteristik değişikliğidir; bu tümör germ hücreli neoplazi in situ ile ilişkili değildir.
 - **TMPRSS2-ERG füzyonu** — TMPRSS2-ETS füzyonları prostat kanserinin sık genetik değişikliğidir; ERG gibi ETS onkogenleri androjenle düzenlenen promotör altına girer.
-- **MED12 mutasyonu** — Testis germ hücreli tümörlerinde KIT onkogen mutasyonları tümörlerin yaklaşık %25'inde bulunur. MED12 mutasyonu bu sorudaki ayrımı sağlamaz.
+- **MED12 mutasyonu** — MED12 gen mutasyonu kadınlarda uterus leiomyomlarının %70'inde görülen düz kas tümörü mutasyonudur; ergenlik sonrası gelişen seminomatöz ve non-seminomatöz tüm invaziv testis germ hücreli tümörlerinde (ve öncüsü GCNIS'te) neredeyse değişmez olarak saptanan karakteristik yapısal kromozom anomalisi ise 12. kromozomun kısa kolunun izokromozomudur [i(12p)].
 - **BRCA1 mutasyonu** — BRCA1 mutasyonu bu tümörlerin tanımlayıcı değişikliği değildir; germ hücreli tümör riski aile öyküsü, kriptorşizm ve interseks sendromlarıyla artar.
 
 **Cevap: A** — İzokromozom 12p
@@ -21004,7 +21625,7 @@ _41 soru (örnek + çıkmış)_
 
 - **İnguinal radikal orşiektomi** — İnguinal radikal orşiektomi doğru: katı testis kitlesi malign varsayılır ve tümör yayılımı riski nedeniyle biyopsi yapılmadan inguinal yoldan çıkarılır.
 - **Skrotal biyopsi** — Skrotal biyopsi katı testis kitlesinde önerilmez; tümör yayılımı riski taşır ve skrotal derinin de çıkarılmasını gerektirir.
-- **İnce iğne aspirasyonu** — Testis kitlesinden örnek almak tümörü yayabileceği için kitle doğrudan malign kabul edilir. İnce iğne aspirasyonu bu sorudaki ayrımı sağlamaz.
+- **İnce iğne aspirasyonu** — Skrotal deriden yapılan ince iğne aspirasyonu veya transskrotal biyopsi lenfatik drenaj yollarını bozup tümör hücrelerinin skrotum derisine ve yüzeyel inguinal lenf düğümlerine ekilmesine yol açacağından kontrendikedir; ağrısız katı testis kitlesi aksi kanıtlanana dek malign kabul edilir ve standart yaklaşım spermatik kordun iç halkadan klemplenerek çıkarıldığı inguinal radikal orşiektomidir.
 - **Antibiyotik** — Antibiyotik bu kitlenin tedavisi değildir; ağrısız, transillüminasyon negatif katı testis kitlesi enfeksiyon değil, tümör olarak ele alınır.
 - **Orşiopeksi** — Orşiopeksi, inmemiş testisin cerrahiyle skrotuma indirilip sabitlenmesidir; kriptorşizmde 6–12 ay arasında önerilir, katı kitlenin tedavisi değildir.
 
@@ -21023,7 +21644,7 @@ _41 soru (örnek + çıkmış)_
 - **Periferik zon** — Periferik zon karsinomların %70–80'inin geliştiği yerdir; bu tümörler rektal muayenede ele gelebilir ve erken dönemde üretral tıkanma yapma olasılıkları düşüktür.
 - **Geçiş zonu** — Geçiş zonu doğru: benign prostat hiperplazisi çoğunlukla burada gelişir; nodüller üretrayı sıkıştırarak idrar tıkanma semptomlarına yol açar.
 - **Santral zon** — Santral zon prostatın diğer zonlarından biridir; ne benign hiperplazinin ne de karsinomun başlıca gelişim yeridir.
-- **Anterior stroma** — Anterior fibromusküler stroma prostatın biyolojik zonları arasında sayılmaz; lezyonlar periferik, geçiş, santral ve periüretral zonlarda değerlendirilir.
+- **Anterior stroma** — Anterior fibromusküler stroma prostatın ön yüzünü oluşturan bezsiz kas ve bağ dokusu bölümüdür ve burada hiperplazi ya da karsinom gelişmez; prostat adenokarsinomları çoğunlukla arka-dış periferik zondan gelişirken, benign prostat hiperplazisi (BPH) hemen her zaman prostatik üretrayı çevreleyen iç geçiş (transizyonel) zonundan kaynaklanır.
 - **Seminal vezikül** — Seminal vezikül prostatın bir zonu değildir; lokal ileri prostat karsinomunun invaze edebildiği komşu bir yapıdır.
 
 **Cevap: B** — Geçiş zonu
@@ -21058,7 +21679,7 @@ _41 soru (örnek + çıkmış)_
 
 - **Litik** — Litik lezyon diğer kanserlerin çoğunun kemik metastazında görülür; prostat kanserini bu tablodan ayırmak ayırıcı tanıda önemlidir.
 - **Kistik** — Kistik görünüm bu metastazın özelliği değildir; prostat kanseri geç evrede özellikle aksiyal iskelete, örneğin omur gövdelerine yayılır.
-- **Ekspansil** — Ekspansil lezyon ile karıştırılabilir: Prostat kemik metastazları radyonüklid kemik sintigrafisinde artmış alım gösterir.
+- **Ekspansil** — Ekspansil ve sabun köpüğü görünümünde osteolitik kemik yıkımı böbrek, tiroid ve akciğer karsinomu metastazlarında görülür; prostat adenokarsinomunun aksiyel iskelete (lomber omurga ve pelvis) yaptığı metastazlar ise tümör hücrelerinin salgıladığı BMP, WNT ve endotelin-1 faktörleriyle osteoblastları uyardığı için karakteristik olarak yoğun yeni kemik yapımıyla giden osteoblastik (sklerotik) metastazlardır.
 - **Osteoblastik** — Osteoblastik doğru: prostat kanseri geç evrede aksiyal iskelete kemik üretici metastazlar yapar, diğer kanserlerin çoğunda ise lezyonlar litiktir.
 - **Patolojik kırık yok** — Patolojik kırık yokluğu bir metastaz tipi değildir; prostat metastazını tanımlayan özellik, lezyonun kemik yıkıcı mı yapıcı mı olduğudur.
 
@@ -21092,7 +21713,7 @@ _41 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Seröz over kanseri** — Seröz over kanseri ile karıştırılabilir: Bu füzyon, ETS onkogenlerinin androjenle düzenlenen bir promotör altına girdiği erkek tümöründe görülür.
+- **Seröz over kanseri** — Yüksek dereceli seröz over kanseri TP53 ve BRCA1/2 mutasyonlarıyla karakterizedir; androjenle uyarılan TMPRSS2 gen promotörünün ERG veya ETV1 gibi ETS ailesi transkripsiyon faktörü genleriyle birleşerek oluşturduğu TMPRSS2-ETS füzyon geni ise prostat adenokarsinomlarının yaklaşık %40–50'sinde görülen özgül sürücü değişikliktir.
 - **Prostat kanseri** — Prostat kanseri doğru: TMPRSS2-ETS füzyonunda ERG gibi ETS onkogenleri androjenle düzenlenen promotör altına girer; prostat kanserinin sık genetik değişikliğidir.
 - **Seminom** — Seminomda ve diğer ergenlik sonrası germ hücreli tümörlerde karakteristik değişiklik izokromozom 12p'dir; tümörlerin ~%25'inde KIT mutasyonu bulunur.
 - **Kriptorşidizm** — Kriptorşidizm testisin skrotuma inmemesidir; bir gen füzyonu değil, testis kanseri riskini artıran bir durumdur.
@@ -21441,7 +22062,7 @@ Kriptorşidizmde testis morfolojisinde bunlardan hangisi/hangileri görülür?
 **Çözüm.** Seçenekleri sırayla değerlendirelim.
 
 - **Testosteron** — Testosteron yaşla düşer; prostatta 5α-redüktaz tip 2 ile daha potent olan DHT'ye dönüştürülür.
-- **hCG** — hCG ile karıştırılabilir: Koryokarsinomda daima yüksek olan bir tümör belirtecidir, DHT ile sinerjistik etki gösteren hormon östrojendir.
+- **hCG** — İnsan koryonik gonadotropini (hCG) plasental sinsityotrofoblastlardan ve testis koryokarsinomlarından salgılanan hormondur, BPH patogenezinde rol almaz; yaşlanan erkekte stromada 5-alfa redüktazla oluşan dihidrotestosteron (DHT) birincil mediyatör iken, yaşla göreceli olarak artan östrojen prostatta androjen reseptör ekspresyonunu artırarak DHT ile sinerjistik etki gösterir.
 - **Luteinleştirici hormon** — Luteinleştirici hormon testisin androjen üretimini uyarır; prostat büyümesine doğrudan sinerjistik katkısı tanımlanmamıştır.
 - **LHRH** — LHRH hipofiz üzerinden LH salınımını uyaran hormondur; yaşlı erkekte DHT ile birlikte prostatı büyüten hormon östrojendir.
 - **Östrojen** — Östrojen doğru: yaşla nispeten sabit kalır ya da artar; epitel ve stromadaki reseptörleri aracılığıyla DHT ile sinerjistik büyüme etkisi gösterir.
@@ -21552,13 +22173,13 @@ Kriptorşidizmde testis morfolojisinde bunlardan hangisi/hangileri görülür?
 - **5α-redüktaz inhibisyonu** — 5α-redüktaz inhibisyonu testosteronun DHT'ye dönüşümünü engeller; BPH tedavisinde kullanılır.
 - **Hipofiz desensitizasyonu** — Hipofiz desensitizasyonu doğru: agonist önce luteinleştirici hormonu artırır, sürekli uyarıda hipofiz duyarsızlaşır ve testis androjen üretimi azalır.
 - **Adrenal androjen baskılanması** — Adrenal bez yalnız düşük miktarda androjen üretir; bu ilaçların etkisi adrenal üzerinden değildir.
-- **Aromataz inhibisyonu** — Bu ilaçlar hipofizden luteinleştirici hormon üretimini durdurarak etki eder. Aromataz inhibisyonu bu sorudaki ayrımı sağlamaz.
+- **Aromataz inhibisyonu** — Aromataz inhibisyonu periferik yağ dokusunda androjenlerin östrojene dönüşümünü engelleyerek postmenopozal ER pozitif meme kanseri tedavisinde kullanılır; prostat kanserinde kullanılan sentetik LHRH (GnRH) agonistleri ise sürekli ve pulsatil olmayan uyarı vererek hipofizdeki GnRH reseptörlerini duyarsızlaştırır (hipofiz desensitizasyonu), LH salgısını keser ve testislerden testosteron üretimini durdurur.
 
 **Cevap: C** — Hipofiz desensitizasyonu
 
 **Özet.** LHRH agonistleri başta LH'yi artırır, sonra hipofizi duyarsızlaştırır; LH üretimi durunca testis androjen üretimi azalır. Tümörlerin çoğu zamanla androjenden bağımsız klonlar geliştirir.
 
-# 35 · Meme Kanseri ve Moleküler Tipleri
+# Ders 35 (35) · Meme Kanseri ve Moleküler Tipleri
 
 _32 soru (örnek + çıkmış)_
 
@@ -21573,7 +22194,7 @@ _32 soru (örnek + çıkmış)_
 - **Desmoplazi** — Desmoplazi, invaziv duktal karsinomda belirgin stromal yanıttır; yoğun ve sert kitle oluşturur, in situ lezyonda beklenmez.
 - **Kalsifikasyon** — Kalsifikasyon doğru: DCIS genellikle kitle yapmaz; salgı materyali ve merkezi nekroz odaklarındaki kalsifikasyonlarla mamografide yakalanır.
 - **Lenfosit infiltrasyonu** — Lenfosit infiltrasyonu medüller paternli karsinomun belirgin özelliğidir; mamografide görünürlük sağlayan bir bulgu değildir.
-- **Kist oluşumu** — Kist oluşumu ile karıştırılabilir: DCIS mamografide kitle olarak değil, kanal sisteminde doğrusal ve dallanan kalsifikasyonlar olarak görülür.
+- **Kist oluşumu** — Kist oluşumu meme parankiminde fibrokistik değişikliklerin ultrasonografik bulgusudur ve DCIS'in mamografik tanı nedeni değildir; duktal karsinoma in situ (DCIS) henüz ele gelen kitle oluşturmadığı halde kanal ortasındaki komedonekroz veya sekresyonların distrofik kalsifikasyona uğraması sayesinde mamografide doğrusal ve dallanan mikrokalsifikasyonlar olarak yakalanır.
 - **Deri çekintisi** — Deri çekintisi, invaziv duktal karsinomda meme konturunu bozan sert kitleye eşlik eder; kitle yapmayan in situ lezyonda beklenmez.
 
 **Cevap: B** — Kalsifikasyon
@@ -21588,11 +22209,11 @@ _32 soru (örnek + çıkmış)_
 
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
-- **Kazeöz nekroz** — Kazeöz nekroz ile karıştırılabilir: Yüksek dereceli DCIS'te nekroz, birkaç kanalı dolduran pleomorfik tümör hücrelerinin merkezinde yer alır.
-- **Yağ nekrozu** — Burada nekroz stromada değil, bazal membranı aşmamış tümör hücrelerinin doldurduğu kanalın merkezindedir. Yağ nekrozu bu sorudaki ayrımı sağlamaz.
+- **Kazeöz nekroz** — Kazeöz nekroz tüberküloz granülomlarının merkezinde görülen peynirimsi nekrozdur; yüksek dereceli duktal karsinoma in situ'da (DCIS) genişlemiş meme kanallarının merkezinde biriken ve kesitte sıkıldığında diş macunu gibi çıkan eozinofilik nekrotik kalıntı ve kalsifikasyon tablosuna ise komedonekroz denir.
+- **Yağ nekrozu** — Yağ nekrozu meme travması veya cerrahi sonrası stromadaki yağ hücrelerinin yıkılması, lipid yüklü makrofajlar ve dev hücrelerle oluşan benign lezyondur; yüksek dereceli DCIS'te bazal membranla sınırlı duktus lümeninin ortasında yer alan santral nekroz ise komedonekroz olarak adlandırılır.
 - **Komedonekroz** — Komedonekroz doğru: süt kanalları içindeki tümör hücrelerinin ortasında görülen nekrozdur ve genellikle yüksek dereceli DCIS ile ilişkilidir.
-- **Fibrinoid nekroz** — Kanal merkezindeki nekroz odakları kalsifiye olur ve mamografide doğrusal, dallanan görüntü verir. Fibrinoid nekroz bu sorudaki ayrımı sağlamaz.
-- **Likefaksiyon** — Likefaksiyon ile karıştırılabilir: Düşük dereceli DCIS'te düzgün, monoton nükleuslar vardır, kanal ortası nekroz ise özellikle yüksek dereceli tipte görülür.
+- **Fibrinoid nekroz** — Fibrinoid nekroz immün kompleks vaskülitlerinde ve malign hipertansiyonda arteriyol duvarlarında görülen vasküler nekrozdur; yüksek dereceli DCIS'te pleomorfik tümör hücreleriyle döşeli duktusun merkezinde gelişen ve hızla kalsifiye olan nekroz tipi ise komedonekrozdur.
+- **Likefaksiyon** — Likefaksiyon (sıvılaşma) nekrozu bakteriyel apselerde ve beyin enfarktlarında dokunun enzimatik erimesiyle oluşur; yüksek dereceli DCIS'te duktus lümeni ortasında koagüle hücre kalıntıları ve kaba kalsifikasyonlarla karakterize özel nekroz kalıbı ise komedonekrozdur.
 
 **Cevap: C** — Komedonekroz
 
@@ -21607,8 +22228,8 @@ _32 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **İnflamatuvar karsinom** — İnflamatuvar karsinomda meme şişmiş, eritemli ve portakal kabuğu görünümündedir; tablo dermal lenfatik invazyondan doğar, meme başına sınırlı değildir.
-- **Laktasyonel apse** — Laktasyonel apse ile karıştırılabilir: Burada bir enfeksiyon değil, vulvadakine benzer görünümde epitel içi tümör hücreleri vardır.
-- **İntraduktal papillom** — Meme başı skuamöz epiteline yerleşen tümör hücreleri, süt kanalları boyunca yayılan in situ duktal karsinomun bulgusudur. İntraduktal papillom bu sorudaki ayrımı sağlamaz.
+- **Laktasyonel apse** — Laktasyonel apse emziren kadınlarda Staphylococcus aureus enfeksiyonuyla memede ağrılı, kızarık ve dalgalanan püy koleksiyonu oluşmasıdır; meme başı ve areola derisinde tek taraflı ekzematoid kabuklanma yapan ve biyopside epidermis içinde bol soluk sitoplazmalı malign hücrelerin (Paget hücreleri) görüldüğü tablo ise meme başı Paget hastalığıdır.
+- **İntraduktal papillom** — İntraduktal papillom büyük laktifer kanallar içinde dallanan fibrovasküler kor üzerinde epitel ve miyoepitel tabakası içeren, kanlı meme başı akıntısıyla başvuran benign bir tümördür; alttaki DCIS hücrelerinin laktifer sinüslerden meme başı epidermisine yayılmasıyla oluşan ekzematoid lezyon ise meme başı Paget hastalığıdır.
 - **Lobüler karsinom** — Lobüler karsinom stromaya tek sıra dizilen kohezyonsuz hücrelerle infiltre olur; meme başı epiteline yayılım onun tanımlayıcı özelliği değildir.
 - **Meme başı Paget hastalığı** — Meme başı Paget hastalığı doğru: DCIS'in süt kanalları boyunca meme başı ve areola derisine yayılmasıdır; skuamöz epitel içinde Paget hücreleri görülür.
 
@@ -21645,7 +22266,7 @@ _32 soru (örnek + çıkmış)_
 - **Alt iç kadran** — Alt iç kadran sık yerleşim yerleri arasında değildir; olguların yarısı tek bir kadranda, beşte biri subareolar bölgede toplanır.
 - **Santral bölge** — Santral, yani subareolar bölge yaklaşık %20 ile ikinci sıradadır; en sık yerleşim yeri değildir.
 - **Üst dış kadran** — Üst dış kadran doğru: invaziv meme karsinomlarının yaklaşık %50'si burada yerleşir.
-- **Alt dış kadran** — Alt dış kadran ile karıştırılabilir: Ayrıca kadınların yaklaşık %4'ünde bilateral ya da aynı memede ardışık primer tümör görülür.
+- **Alt dış kadran** — Alt dış kadran meme dokusu yoğunluğu daha az olduğu için karsinomların yalnızca yaklaşık %10'unun yerleştiği bölgedir; meme bez dokusunun (terminal duktal-lobüler ünitelerin) en yoğun bulunduğu yer olması nedeniyle invaziv meme karsinomlarının yaklaşık %50'si üst dış kadranda gelişir.
 - **Üst iç kadran** — Üst iç kadran en sık yerleşim yeri değildir; sıklıkta öne çıkan iki bölge dış üst kadran ve meme başı altındaki santral bölgedir.
 
 **Cevap: C** — Üst dış kadran
@@ -21716,8 +22337,8 @@ _32 soru (örnek + çıkmış)_
 
 - **Bakteriyel enfeksiyon** — Bakteriyel enfeksiyon bu tablonun nedeni değildir; inflamatuvar karsinom adını görünümünden alır, altta çoğunlukla kötü diferansiye invaziv karsinom vardır.
 - **Yoğun nötrofil infiltrasyonu** — Yoğun nötrofil infiltrasyonu inflamatuvar karsinomda beklenmez; gerçek inflamasyon, yani lökosit infiltrasyonu genellikle belirgin değildir.
-- **Yağ nekrozu** — Portakal kabuğu görünümü cilt kalınlaşması ve ödemle oluşur, deri tutulumu kötü prognoz göstergesidir. Yağ nekrozu bu sorudaki ayrımı sağlamaz.
-- **Kist rüptürü** — Kist rüptürü ile karıştırılabilir: İnflamatuvar karsinom spesifik bir histoloji değil klinik bir prezentasyondur ve genelde belirgin kitle ele gelmez.
+- **Yağ nekrozu** — Meme yağ nekrozu travma sonrası fokal kitle ve deri çekintisi yapabilen benign bir inflamatuvar süreçtir; inflamatuvar meme karsinomunda memenin tamamında ödem, eritem ve portakal kabuğu (peau d'orange) görünümü oluşmasının nedeni ise tümör hücrelerinin dermis içindeki lenfatik damarları yaygın biçimde doldurup lenf drenajını tıkamasıdır (dermal lenfatik invazyon).
+- **Kist rüptürü** — Fibrokistik değişikliklerde basit kist rüptürü stromada fokal kronik inflamasyon ve fibrozis yapar; inflamatuvar meme karsinomunda derinin Cooper bağları arasında şişip kıl folikülü ağızlarında çökük kalmasıyla oluşan portakal kabuğu görünümü ise yaygın dermal lenfatik tümör embolilerine bağlı lenfödem sonucudur.
 - **Dermal lenfatik invazyon** — Dermal lenfatik invazyon doğru: lenfatik boşluklardaki tümör hücreleri lenf akımını tıkar, ödem ve cilt kalınlaşmasıyla portakal kabuğu görünümü oluşur.
 
 **Cevap: E** — Dermal lenfatik invazyon
@@ -21751,7 +22372,7 @@ _32 soru (örnek + çıkmış)_
 **Çözüm.** Şıkları sırasıyla gözden geçirelim.
 
 - **Aksiller lenf düğümü tutulumu** — Aksiller lenf düğümü tutulumu doğru: tümörlerin çoğu önce bölgesel aksiller düğümlere yayılır ve bu tutulum çok güçlü bir prognostik faktördür.
-- **Menarş yaşı** — Menarş yaşı ile karıştırılabilir: Prognozu anatomik evre ile ER, PR, HER2 durumu, histolojik tip, derece ve proliferasyon gibi tümör biyolojisi belirler.
+- **Menarş yaşı** — Erken menarş yaşı yaşam boyu östrojen maruziyetini artırarak meme kanserine yakalanma olasılığını yükselten bir etiyolojik risk faktörüdür; tanı almış invaziv meme kanseri hastasında uzak metastaz yokken sağkalımı ve prognozu belirleyen en güçlü anatomik faktör ise aksiller lenf düğümü tutulumunun varlığı ve tutulan düğüm sayısıdır.
 - **Tümör tarafı** — Tümör tarafı prognostik faktör olarak sayılmaz; tümörün boyutu ise bağımsız prognostik faktördür ve aksiller metastaz riskiyle güçlü ilişkilidir.
 - **Mikrokalsifikasyon** — Mikrokalsifikasyon özellikle DCIS'in mamografide saptanmasını sağlar; tanıya yardımcıdır ama prognozu belirleyen başlıca faktörlerden değildir.
 - **Meme boyutu** — Meme boyutu prognozu belirlemez; deri ülserasyonu, dermal lenfatik invazyon ve iskelet kasına yayılım ise kötü prognoz göstergeleridir.
@@ -21881,7 +22502,7 @@ IV. E-kadherin ekspresyonu
 **Çözüm.** Her seçeneği tek tek ele alalım.
 
 - **Terminal duktal-lobüler ünite** — Terminal duktal-lobüler ünite doğru: iki in situ karsinom da buradan köken alır; adları yalnız morfolojik görünümü anlatır.
-- **Büyük laktifer kanallar** — DCIS de terminal duktal-lobüler üniteden köken alır. Büyük laktifer kanallar bu sorudaki ayrımı sağlamaz.
+- **Büyük laktifer kanallar** — Meme başı altındaki büyük toplayıcı laktifer kanallar intraduktal papillomların ve periduktal mastitin yerleşim yeridir; morfolojik ve moleküler adlandırmaları farklı olsa da hem duktal karsinoma in situ (DCIS) hem de lobüler karsinoma in situ (LCIS) memenin fonksiyonel birimi olan terminal duktal-lobüler ünitedeki (TDLÜ) kök/öncül hücrelerden köken alır.
 - **Meme başı skuamöz epiteli** — Meme başı skuamöz epiteli, DCIS'in süt kanalları boyunca yayılmasıyla Paget hücrelerinin görüldüğü yerdir; köken yeri değildir.
 - **Meme stroması** — Meme stroması in situ karsinomun aşmadığı bölgedir; stromaya invazyon varsa lezyon invaziv karsinomdur.
 - **Lenfovasküler yapılar** — Lenfovasküler yapılara invazyon invaziv karsinomun özelliğidir; in situ karsinomlar bazal membrana saygı gösterir.
@@ -21938,7 +22559,7 @@ IV. E-kadherin ekspresyonu
 - **Plazma hücresi** — Plazma hücresi baskın hücre değildir; bu tümörde anaplastik hücre tabakalarına çoğunlukla T hücrelerinden oluşan infiltrat eşlik eder.
 - **T hücresi** — T hücresi doğru: medüller paternli karsinomda büyük anaplastik hücre tabakalarına çoğunlukla T hücrelerinden oluşan belirgin lenfositik infiltrat eşlik eder.
 - **Nötrofil** — Nötrofil bu tümörün infiltratını oluşturmaz; tanımlanan infiltrat lenfositik karakterdedir.
-- **Eozinofil** — Medüller paternli karsinomun belirgin infiltratı lenfositlerden oluşur. Eozinofil bu sorudaki ayrımı sağlamaz.
+- **Eozinofil** — Eozinofiller alerjik ve paraziter reaksiyonların granülositleridir; BRCA1 ilişkili ve bazal benzeri (üçlü negatif) meme kanserlerinde görülen medüller paternli karsinomda sinsityal tümör tabakalarının çevresini saran yoğun lenfoplazmasitik infiltratın baskın hücresi ise antitümör yanıt yürüten T lenfosittir (özellikle CD8+ sitotoksik T hücreleri).
 
 **Cevap: C** — T hücresi
 
@@ -22141,624 +22762,3 @@ IV. E-kadherin ekspresyonu
 **Cevap: E** — Neoantijen ekspresyonu
 
 **Özet.** Üçlü negatif kanserde genomik instabilite dirençli alt klonlara yol açarken tümör neoantijen ekspresyonunu da artırır; bu, PD-1 ve PD-L1 hedefli ajanların rasyonelidir.
-
-# 39 · İnvaziv Serviks Kanseri ve Endometriyozis
-
-_34 soru (örnek + çıkmış)_
-
-## Soru 1
-
-**Soru.** En yaygın servisit etkeni hangisidir?
-
-**A)** Neisseria gonorrhoeae · **B)** Chlamydia trachomatis · **C)** Trichomonas vaginalis · **D)** HSV-2 · **E)** Candida albicans
-
-**Çözüm.** Seçenekleri sırayla değerlendirelim.
-
-- **Neisseria gonorrhoeae** — Neisseria gonorrhoeae cinsel yolla bulaşan önemli bir servisit etkenidir ve ampirik tedavide hedeflenir; ancak en yaygın etken değildir.
-- **Chlamydia trachomatis** — Chlamydia trachomatis doğru: en yaygın servisit etkenidir, sıklıkla asemptomatik seyreder ve pelvik inflamatuvar hastalık riski taşır.
-- **Trichomonas vaginalis** — Trichomonas vaginalis servisit ve üst genital enfeksiyonlarda rol oynar, vajinal sıvıda nükleik asit amplifikasyon testiyle aranır; en yaygın etken değildir.
-- **HSV-2** — HSV-2 genital herpes etkenidir; doğumda anneden bebeğe geçip yenidoğanda ağır, bazen ölümcül sistemik herpes yapabilir.
-- **Candida albicans** — Candida türleri tesadüfi vajinal flora elemanlarıdır; bu flora nedeniyle enfeksiyonlu ve enfeksiyonsuz servisit ayrımı zordur.
-
-**Cevap: B** — Chlamydia trachomatis
-
-**Özet.** Chlamydia trachomatis en yaygın servisit etkenidir ve cinsel yolla bulaşan hastalık kliniklerinde olguların %40'ına kadarından sorumludur; sıklıkla asemptomatiktir ve pelvik inflamatuvar hastalık riski taşır.
-
-## Soru 2
-
-**Soru.** Endoservikal polip için doğru olan hangisidir?
-
-**A)** Malign potansiyeli yoktur · **B)** HPV 16 ile ilişkilidir · **C)** Skuamöz epitelden gelişir · **D)** Histerektomi gerektirir · **E)** Prekanseröz lezyondur
-
-**Çözüm.** Her seçeneği tek tek ele alalım.
-
-- **Malign potansiyeli yoktur** — Malign potansiyelinin olmaması doğru: endoservikal polip endoservikal kanalda gelişen benign ekzofitik lezyondur; histolojik incelemeyle malignite dışlanır.
-- **HPV 16 ile ilişkilidir** — HPV 16 ilişkisi polipte değil, servikal intraepitelyal neoplazi ve karsinomda önemlidir; tip 16 ve 18 bu lezyonların yaklaşık %70'inden sorumludur.
-- **Skuamöz epitelden gelişir** — Skuamöz epitelden gelişme polipte söz konusu değildir; polip endoservikal kanalda, fibröz stroma ve mukus salgılayan endoservikal bezlerden oluşur.
-- **Histerektomi gerektirir** — Histerektomi invaziv serviks kanserinin primer tedavisidir; endoservikal polipte basit küretaj ya da cerrahi eksizyon genellikle küratiftir.
-- **Prekanseröz lezyondur** — Prekanseröz lezyon tanımı polipe uymaz; ülserleşen polip düzensiz kanama yapıp malignite şüphesi uyandırabilir ama kendisi benigndir.
-
-**Cevap: A** — Malign potansiyeli yoktur
-
-**Özet.** Endoservikal polip benign ekzofitik bir lezyondur ve malign potansiyeli yoktur; ülserleşince düzensiz kanama yapabilir, küretaj ya da eksizyon genellikle küratiftir.
-
-## Soru 3
-
-**Soru.** Servikal tümörlerin en sık geliştiği, HPV'ye en duyarlı alan hangisidir?
-
-**A)** Ektoserviks · **B)** Endoservikal kanal · **C)** Transformasyon bölgesi · **D)** Vajinal forniks · **E)** Endometriyum
-
-**Çözüm.** Şıkları sırasıyla gözden geçirelim.
-
-- **Ektoserviks** — Ektoserviks olgun skuamöz epitelle örtülüdür; virüse en duyarlı olan ise olgunlaşmamış metaplastik hücrelerden oluşan alandır.
-- **Endoservikal kanal** — Endoservikal kanal kolumnar, mukus salgılayan epitelle döşelidir; burada gelişen polip benigndir ve malign potansiyel taşımaz.
-- **Transformasyon bölgesi** — Transformasyon bölgesi doğru: metaplastik, olgunlaşmamış skuamöz hücrelerden oluşur, HPV'ye en duyarlı alandır ve servikal tümörler en sık burada gelişir.
-- **Vajinal forniks** — Vajinal forniks ile karıştırılabilir: Yüksek riskli HPV vajinada da skuamöz karsinomda rol oynar, ama servikal tümörlerin odağı bileşkedeki metaplastik alandır.
-- **Endometriyum** — Endometriyum serviksin bir bölgesi değildir; serviks epiteli endoserviksteki kolumnar ve ektoserviksteki skuamöz epitelden oluşur.
-
-**Cevap: C** — Transformasyon bölgesi
-
-**Özet.** Transformasyon bölgesi, skuamo-kolumnar bileşkede kolumnar hücrelerin skuamöz metaplaziye uğradığı alandır; olgunlaşmamış metaplastik hücreler HPV'ye en duyarlıdır ve tümörler en sık burada gelişir.
-
-## Soru 4
-
-**Soru.** Yüksek riskli HPV'nin E6 proteininin bağlanıp yıkımına aracılık ettiği protein hangisidir?
-
-**A)** RB · **B)** E2F · **C)** Notch · **D)** p53 · **E)** Siklin D
-
-**Çözüm.** Şimdi seçeneklere tek tek bakalım.
-
-- **RB** — RB, E7 proteininin bağlandığı hücre döngüsü düzenleyicisidir; E7 bağlanınca E2F serbestleşir ve G1/S geçişi hızlanır.
-- **E2F** — E2F, RB'nin tuttuğu transkripsiyon faktörüdür; E6 tarafından yıkılmaz, E7'nin RB'ye bağlanmasıyla serbest kalır.
-- **Notch** — Notch sinyal yoluna, düşük riskli HPV 6 ve 11'in p53'e bağlanamayan E6 proteini müdahale eder; yıkılan bir protein değildir.
-- **p53** — p53 doğru: E6 tümör baskılayıcı p53'e bağlanıp yıkımına aracılık eder ve telomeraz ekspresyonunu artırır; sonuç apoptoz inhibisyonu ve hücre ömründe uzamadır.
-- **Siklin D** — Siklin D ile karıştırılabilir: E6'nın hedefi hücre döngüsü proteinleri değil, apoptozu denetleyen tümör baskılayıcıdır.
-
-**Cevap: D** — p53
-
-**Özet.** Yüksek riskli HPV'de E6, p53'e bağlanıp yıkımını sağlar ve telomerazı artırır; E7 ise RB'ye bağlanıp E2F'yi serbest bırakarak G1/S geçişini hızlandırır.
-
-## Soru 5
-
-**Soru.** HPV E7 proteininin RB'ye bağlanmasının sonucu hangisidir?
-
-**A)** Apoptoz artışı · **B)** E2F serbestleşmesi ile G1/S geçişi hızlanır · **C)** p53 yıkımı · **D)** Telomeraz baskılanması · **E)** Viral DNA episomal kalır
-
-**Çözüm.** Seçenekleri sırayla değerlendirelim.
-
-- **Apoptoz artışı** — Apoptoz artışı beklenmez; yüksek riskli HPV'de E6, p53'ü yıkarak tam tersine apoptozu inhibe eder.
-- **E2F serbestleşmesi ile G1/S geçişi hızlanır** — E2F serbestleşmesiyle G1/S geçişinin hızlanması doğru: E7, RB'ye bağlanıp onun tuttuğu E2F'yi serbest bırakır ve hücre döngüsü kontrolü bozulur.
-- **p53 yıkımı** — p53 yıkımı E7'nin değil, E6 proteininin etkisidir; E6 p53'e bağlanıp yıkımına aracılık eder.
-- **Telomeraz baskılanması** — Telomeraz baskılanmaz; tersine E6 telomeraz ekspresyonunu artırarak hücre ömrünü uzatır.
-- **Viral DNA episomal kalır** — Viral DNA'nın episomal kalması düşük riskli HPV 6 ve 11'in özelliğidir; bu tiplerin E7'si RB'ye düşük afiniteyle bağlanır.
-
-**Cevap: B** — E2F serbestleşmesi ile G1/S geçişi hızlanır
-
-**Özet.** E7, RB'ye bağlanınca RB'nin tuttuğu E2F transkripsiyon faktörleri serbestleşir; G1/S geçişi hızlanır ve hücre döngüsü kontrolü bozulur. E6 ise p53'ü hedefler.
-
-## Soru 6
-
-**Soru.** Servikal intraepitelyal neoplazi ve karsinomların ~%70'inden sorumlu HPV tipleri hangileridir?
-
-**A)** 6 ve 11 · **B)** 6 ve 16 · **C)** 11 ve 18 · **D)** 31 ve 33 · **E)** 16 ve 18
-
-**Çözüm.** Her seçeneği tek tek ele alalım.
-
-- **6 ve 11** — HPV 6 ve 11 düşük riskli tiplerdir; kondilomlarla ilişkilidir ve DNA'ları konak genomuna entegre olmadan episomal kalır.
-- **6 ve 16** — 6 ve 16 karışık bir eşleşmedir; 16 yüksek riskli olsa da 6, kondilomla ilişkili düşük riskli bir tiptir.
-- **11 ve 18** — 11 ve 18 de karışık bir eşleşmedir; 18 yüksek riskli olsa da 11, E6 proteini p53'e bağlanamayan düşük riskli bir tiptir.
-- **31 ve 33** — Servikal öncü lezyon ve karsinomların yaklaşık %70'i, konak genomuna entegre olma eğilimindeki iki yüksek riskli tipe bağlıdır. 31 ve 33 bu sorudaki ayrımı sağlamaz.
-- **16 ve 18** — 16 ve 18 doğru: bu yüksek riskli tipler CIN ve servikal karsinomların yaklaşık %70'inden sorumludur; konak genomuna entegrasyon progresyonla ilişkilidir.
-
-**Cevap: E** — 16 ve 18
-
-**Özet.** HPV 16 ve 18, CIN ve servikal karsinomların yaklaşık %70'inden sorumlu yüksek riskli tiplerdir ve konak genomuna entegre olur. HPV 6 ve 11 ise kondilom yapan düşük riskli tiplerdir.
-
-## Soru 7
-
-**Soru.** Düşük riskli HPV 6 ve 11 için doğru olan hangisidir?
-
-**A)** Konak genomuna entegre olur · **B)** E6 p53'ü yıkar · **C)** DNA episomal kalır · **D)** Karsinomların çoğundan sorumludur · **E)** E7 RB'ye yüksek afiniteyle bağlanır
-
-**Çözüm.** Şıkları sırasıyla gözden geçirelim.
-
-- **Konak genomuna entegre olur** — Konak genomuna entegrasyon yüksek riskli tiplerin özelliğidir; entegrasyon E6 ve E7'yi negatif düzenleyen geni bozar ve progresyonla ilişkilidir.
-- **E6 p53'ü yıkar** — E6'nın p53'ü yıkması yüksek riskli tiplere aittir; düşük riskli tiplerde E6 p53'e bağlanamaz, Notch sinyal yoluna müdahale eder.
-- **DNA episomal kalır** — DNA'nın episomal kalması doğru: HPV 6 ve 11'in DNA'sı konak genomuna entegre olmaz; bu tipler kondilomlarla ilişkilidir.
-- **Karsinomların çoğundan sorumludur** — Karsinomların çoğundan sorumlu olan düşük riskli tipler değil, yüksek riskli 16 ve 18'dir; bu ikisi lezyonların yaklaşık %70'inden sorumludur.
-- **E7 RB'ye yüksek afiniteyle bağlanır** — E7'nin RB'ye yüksek afiniteyle bağlanması yüksek riskli tiplere aittir; HPV 6 ve 11'in E7'si RB'ye düşük afiniteyle bağlanır.
-
-**Cevap: C** — DNA episomal kalır
-
-**Özet.** Düşük riskli HPV 6 ve 11'de DNA episomal kalır, E6 p53'e bağlanamaz ve E7 RB'ye düşük afiniteyle bağlanır; bu tipler kondilomlarla ilişkilidir.
-
-## Soru 8
-
-**Soru.** Displazinin epitelin alt üçte birinde olduğu ve yüzeyde koilositik değişikliğin görüldüğü lezyon hangisidir?
-
-**A)** CIN I (LSIL) · **B)** CIN II · **C)** CIN III · **D)** Mikroinvaziv karsinom · **E)** Skuamöz metaplazi
-
-**Çözüm.** Şimdi seçeneklere tek tek bakalım.
-
-- **CIN I (LSIL)** — CIN I, yani LSIL doğru: displazi skuamöz epitelin alt üçte birindedir ve yüzeysel katmanlarda HPV enfeksiyonunu gösteren koilositik değişiklik vardır.
-- **CIN II** — CIN II'de olgunlaşmamış hücreler daha derine uzanır ve epitelin alt üçte ikisi tutulur; bu yüksek dereceli bir lezyondur.
-- **CIN III** — CIN III'te epitelin tam kalınlığı tutulur, hücre yönlenmesi bozulur ve koilositik değişiklik genellikle yoktur.
-- **Mikroinvaziv karsinom** — Mikroinvaziv karsinomda mikroskobik stromal invazyon odakları vardır; değişiklik epitelle sınırlı kalmaz ve konik biyopsiyle tedavi edilebilir.
-- **Skuamöz metaplazi** — Skuamöz metaplazi, açığa çıkan kolumnar hücrelerin skuamöz hücrelere dönüşmesidir; transformasyon bölgesini oluşturur, kendisi bir intraepitelyal lezyon derecesi değildir.
-
-**Cevap: A** — CIN I (LSIL)
-
-**Özet.** LSIL, yani CIN I'de displazi epitelin alt üçte biriyle sınırlıdır ve yüzeyde koilositler görülür; CIN II'de alt üçte iki, CIN III'te tüm kat tutulur.
-
-## Soru 9
-
-**Soru.** Epitelin tam kalınlığının tutulduğu, koilositozun genellikle olmadığı lezyon hangisidir?
-
-**A)** CIN I · **B)** CIN II · **C)** Kondilom · **D)** CIN III · **E)** Servisit
-
-**Çözüm.** Seçenekleri sırayla değerlendirelim.
-
-- **CIN I** — CIN I'de displazi alt üçte birle sınırlıdır ve yüzeyel katmanlarda koilositik değişiklik belirgindir; tam kat tutulum yoktur.
-- **CIN II** — CIN II'de olgunlaşmamış hücreler daha derine uzanır ve epitelin alt üçte ikisi tutulur; tam kat tutulum bir üst dereceye aittir.
-- **Kondilom** — Kondilom düşük riskli HPV 6 ve 11 ile ilişkili lezyondur; bu tiplerin DNA'sı konak genomuna entegre olmaz.
-- **CIN III** — CIN III doğru: epitelin tam kalınlığı tutulur, hücre yönlenmesi bozulur, anormal mitozlar sıktır ve koilositik değişiklik genellikle yoktur.
-- **Servisit** — Servisit serviksin inflamatuvar durumudur; irinli ya da mukopürülan akıntı yapar, epitel tutulum derecesiyle tanımlanmaz.
-
-**Cevap: D** — CIN III
-
-**Özet.** CIN III'te olgunlaşmamış hücreler epitelin tam kalınlığını kaplar, yönlenme bozulur ve anormal mitozlar sıktır; koilositik değişiklik genellikle görülmez.
-
-## Soru 10
-
-**Soru.** HPV DNA testi özellikle hangi yaş grubunda değerlidir?
-
-**A)** 11-12 yaş · **B)** 20 yaş altı · **C)** 30 yaş altı · **D)** Menarş dönemi · **E)** 30 yaş ve üzeri
-
-**Çözüm.** Her seçeneği tek tek ele alalım.
-
-- **11-12 yaş** — 11–12 yaş HPV aşılaması için önerilen yaştır; kız ve erkek çocuklar bu dönemde aşılanır, test için değil.
-- **20 yaş altı** — 20 yaş altında HPV enfeksiyonları sık ve çoğunlukla geçicidir; pozitif sonuç kalıcı riski yansıtmadığından test bu grupta değerli değildir.
-- **30 yaş altı** — 30 yaş altında HPV enfeksiyon insidansı yüksektir ve çoğu enfeksiyon geçicidir; bu yüzden testin prediktif değeri düşüktür.
-- **Menarş dönemi** — HPV DNA testi Pap testine tamamlayıcıdır ve yüksek riskli tipleri saptamada çok hassastır. Menarş dönemi bu sorudaki ayrımı sağlamaz.
-- **30 yaş ve üzeri** — 30 yaş ve üzeri doğru: bu grupta yüksek riskli HPV testi negatifse sonraki 5 yılda servikal neoplazi riski çok düşüktür.
-
-**Cevap: E** — 30 yaş ve üzeri
-
-**Özet.** HPV DNA testi Pap testine tamamlayıcıdır ve 30 yaş ve üzerinde değerlidir; negatif sonuç 5 yıllık riskin çok düşük olduğunu gösterir. 30 yaş altında enfeksiyonlar çoğunlukla geçicidir.
-
-## Soru 11
-
-**Soru.** İnvaziv serviks karsinomunun en sık histolojik tipi hangisidir?
-
-**A)** Adenokarsinom · **B)** Skuamöz hücreli karsinom · **C)** Adenoskuamöz karsinom · **D)** Küçük hücreli nöroendokrin · **E)** Berrak hücreli karsinom
-
-**Çözüm.** Şıkları sırasıyla gözden geçirelim.
-
-- **Adenokarsinom** — Adenokarsinom, adenoskuamöz karsinomla birlikte olguların yaklaşık %15'idir; Pap testi bez lezyonlarını daha zor saptadığından oranı göreceli artmıştır.
-- **Skuamöz hücreli karsinom** — Skuamöz hücreli karsinom doğru: invaziv serviks karsinomlarının yaklaşık %80'idir; skuamöz hücre uzantı ve yuvaları ile desmoplastik stromal yanıt gösterir.
-- **Adenoskuamöz karsinom** — Adenoskuamöz karsinom hem bez hem skuamöz bileşen içeren, daha az sık bir tiptir; diğer tipler gibi yüksek riskli HPV ile ilişkilidir.
-- **Küçük hücreli nöroendokrin** — Küçük hücreli nöroendokrin karsinom olguların %5'inden azını oluşturur; akciğer küçük hücreli karsinomuna benzer ve prognozu çok kötüdür.
-- **Berrak hücreli karsinom** — Başlıca tipler skuamöz hücreli karsinom, adenokarsinom, adenoskuamöz ve küçük hücreli nöroendokrin karsinomdur. Berrak hücreli karsinom bu sorudaki ayrımı sağlamaz.
-
-**Cevap: B** — Skuamöz hücreli karsinom
-
-**Özet.** İnvaziv serviks karsinomunun yaklaşık %80'i skuamöz hücreli, %15'i adenokarsinom ya da adenoskuamöz, %5'ten azı küçük hücreli nöroendokrin karsinomdur; tümü yüksek riskli HPV ile ilişkilidir.
-
-## Soru 12
-
-**Soru.** Serviks karsinomunda prognozu en kötü olan histolojik alt tip hangisidir?
-
-**A)** İyi diferansiye SHK · **B)** Adenokarsinom · **C)** Küçük hücreli nöroendokrin karsinom · **D)** Adenoskuamöz karsinom · **E)** Mikroinvaziv karsinom
-
-**Çözüm.** Şimdi seçeneklere tek tek bakalım.
-
-- **İyi diferansiye SHK** — İyi diferansiye skuamöz hücreli karsinom keratin incileri oluşturan, farklılaşmasını korumuş bir tümördür; en kötü prognozla anılan alt tip değildir.
-- **Adenokarsinom** — Adenokarsinom bez yapıları oluşturan malign hücrelerden oluşur; Pap testiyle zor saptandığı için oranı göreceli artmıştır.
-- **Küçük hücreli nöroendokrin karsinom** — Küçük hücreli nöroendokrin karsinom doğru: nadirdir, akciğer küçük hücreli karsinomuna benzer ve serviks karsinomları içinde prognozu çok kötüdür.
-- **Adenoskuamöz karsinom** — Adenoskuamöz karsinom hem bez hem skuamöz bileşen içerir; adenokarsinomla birlikte olguların yaklaşık %15'ini oluşturur.
-- **Mikroinvaziv karsinom** — Mikroinvaziv karsinom konik biyopsiyle tedavi edilebilir; prognozu tanı anındaki evre belirlediğinden erken yakalanan tümör en kötü grupta yer almaz.
-
-**Cevap: C** — Küçük hücreli nöroendokrin karsinom
-
-**Özet.** Serviks karsinomunda prognozu tanı anındaki evre ve histolojik alt tip belirler; küçük hücreli nöroendokrin karsinomun prognozu çok kötüdür.
-
-## Soru 25
-
-**Soru.** İnsan papilloma virüsü (HPV) ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?
-
-**A)** HPV enfeksiyonunda koilositoz (çekirdek çevresinde açık alan ve çekirdekte atipi bulunması) görülebilir. · **B)** HPV tip 6 ve 11, anogenital siğillere neden olabilir. · **C)** HPV tip 6 ve 11, yüksek onkojenik risk taşıdıkları için neden oldukları lezyonlar karsinoma dönüşebilir. · **D)** HPV tip 16 ve 18, serviks (rahim ağzı) karsinomu gelişimiyle ilişkili yüksek riskli tiplerdir. · **E)** Yüksek riskli HPV tiplerinin E6 ve E7 proteinleri, sırasıyla p53 ve RB tümör baskılayıcı proteinlerinin işlevlerini bozar.
-
-**Çözüm.** Seçenekleri sırayla değerlendirelim.
-
-- **HPV enfeksiyonunda koilositoz (çekirdek çevresinde açık alan ve çekirdekte atipi bulunması) görülebilir.** — Koilositoz, çekirdek etrafında geniş halo ile karakterize HPV enfeksiyonu bulgusudur; bu ifade geçerlidir.
-- **HPV tip 6 ve 11, anogenital siğillere neden olabilir.** — HPV tip 6 ve 11 kondilomlarla, yani anogenital siğillerle ilişkili düşük riskli tiplerdir.
-- **HPV tip 6 ve 11, yüksek onkojenik risk taşıdıkları için neden oldukları lezyonlar karsinoma dönüşebilir.** — HPV 6 ve 11'in yüksek riskli olduğu ifadesi yanlış, bu yüzden doğru cevaptır: bu tipler düşük risklidir, DNA'ları episomal kalır ve E6 p53'e bağlanamaz.
-- **HPV tip 16 ve 18, serviks (rahim ağzı) karsinomu gelişimiyle ilişkili yüksek riskli tiplerdir.** — HPV 16 ve 18 yüksek riskli tiplerdir ve CIN ile servikal karsinomların yaklaşık %70'inden sorumludur.
-- **Yüksek riskli HPV tiplerinin E6 ve E7 proteinleri, sırasıyla p53 ve RB tümör baskılayıcı proteinlerinin işlevlerini bozar.** — Yüksek riskli HPV'de E6 p53'ün yıkımına aracılık eder; E7 ise RB'ye bağlanıp E2F'yi serbest bırakır.
-
-**Cevap: C** — HPV tip 6 ve 11, yüksek onkojenik risk taşıdıkları için neden oldukları lezyonlar karsinoma dönüşebilir.
-
-**Özet.** HPV 6 ve 11 düşük risklidir ve kondilomlarla ilişkilidir; E6 p53'e bağlanamaz, DNA episomal kalır. Karsinomla ilişkili olanlar 16 ve 18 gibi yüksek riskli tiplerdir.
-
-## Soru 26
-
-**Soru.** Servikal intraepitelyal neoplazi (CIN) ile ilgili aşağıdaki ifadeler veriliyor:
-I. CIN 1, düşük dereceli skuamöz intraepitelyal lezyon (LSIL) olarak sınıflandırılır.
-II. CIN 2, düşük dereceli skuamöz intraepitelyal lezyon (LSIL) olarak sınıflandırılır.
-III. CIN 3, yüksek dereceli skuamöz intraepitelyal lezyon (HSIL) olarak sınıflandırılır.
-IV. CIN lezyonlarında bazal membran aşılmadığından stromal invazyon bulunmaz.
-Bu ifadelerden hangileri yanlıştır?
-
-**A)** Yalnız I · **B)** Yalnız II · **C)** I ve II · **D)** II ve III · **E)** III ve IV
-
-**Çözüm.** Her seçeneği tek tek ele alalım.
-
-- **Yalnız I** — CIN I gerçekten LSIL olarak sınıflanır; bu ifade geçerli olduğundan yanlışlar arasında sayılamaz.
-- **Yalnız II** — Yalnız ikinci ifade doğru cevaptır: CIN II düşük değil yüksek dereceli lezyondur; HSIL CIN II ve CIN III'ü kapsar, diğer ifadeler geçerlidir.
-- **I ve II** — CIN I ifadesi geçerli olduğu için bu birleşim hatalıdır; yalnız CIN II'nin LSIL sayılması yanlıştır.
-- **II ve III** — CIN III'ün HSIL olarak sınıflanması geçerlidir; bu yüzden üçüncü ifade yanlışlar arasında yer almaz.
-- **III ve IV** — Üçüncü ve dördüncü ifadeler geçerlidir; CIN intraepitelyal bir lezyondur, stromal invazyon invaziv karsinomda görülür.
-
-**Cevap: B** — Yalnız II
-
-**Özet.** Klinik iki basamaklı sistemde LSIL CIN I'e karşılık gelir; HSIL ise CIN II ve CIN III'ü kapsar. Bu nedenle CIN II'nin LSIL sayılması yanlıştır.
-
-## Soru 27
-
-**Soru.** Aşağıdakilerden hangisi, invaziv serviks karsinomu gelişimi için bir risk faktörü değildir?
-
-**A)** Yüksek risk grubuna ait inatçı papillomavirüs enfeksiyonu · **B)** İlk cinsel ilişkinin erken yaşta olması · **C)** UV maruziyeti · **D)** Birden çok cinsel partner bulunması · **E)** Birden çok cinsel partneri olan erkeğin eşi olmak
-
-**Çözüm.** Şıkları sırasıyla gözden geçirelim.
-
-- **Yüksek risk grubuna ait inatçı papillomavirüs enfeksiyonu** — Yüksek riskli HPV ile kalıcı enfeksiyon servikal öncü lezyon ve karsinom gelişiminde ana risk faktörüdür.
-- **İlk cinsel ilişkinin erken yaşta olması** — Erken yaşta ilk cinsel ilişki HPV maruziyetini artıran bir risk faktörüdür.
-- **UV maruziyeti** — UV maruziyeti doğru cevap: serviks karsinomunda risk, HPV maruziyetiyle ilişkili cinsel faktörler, kalıcı enfeksiyon, sigara ve immün yetmezliktir; UV bunlardan değildir.
-- **Birden çok cinsel partner bulunması** — Çok sayıda cinsel partner HPV maruziyetini artırarak serviks kanseri riskini yükseltir.
-- **Birden çok cinsel partneri olan erkeğin eşi olmak** — Çok partnerli bir eşe sahip olmak da HPV maruziyetiyle ilişkili risk faktörlerindendir.
-
-**Cevap: C** — UV maruziyeti
-
-**Özet.** Serviks karsinomunda risk HPV maruziyetine bağlıdır; erken ilk cinsel ilişki, çok sayıda partner, çok partnerli eş ve kalıcı yüksek riskli enfeksiyon başlıca etkenlerdir.
-
-## Soru 28
-
-**Soru.** Serviks kanseri gelişimi ile ilişkili viral patojen aşağıdakilerden hangisidir?
-
-**A)** Coxsackie virüs · **B)** Sitomegalovirüs · **C)** Human papilloma virüs · **D)** Simian virüs 40 · **E)** BK virüs
-
-**Çözüm.** Şimdi seçeneklere tek tek bakalım.
-
-- **Coxsackie virüs** — Coxsackie virüs ile karıştırılabilir: Serviks kanserinin ana etkeni yüksek riskli tipleri olan bir DNA virüsüdür.
-- **Sitomegalovirüs** — Servikal tümörlerin çoğu onkojenik HPV ile ilişkili karsinomdur. Sitomegalovirüs bu sorudaki ayrımı sağlamaz.
-- **Human papilloma virüs** — Human papilloma virüs doğru: yüksek riskli HPV serviks kanserinin ana etkenidir; tip 16 ve 18 olguların yaklaşık %70'inden sorumludur.
-- **Simian virüs 40** — Servikal karsinogenezde rol oynayan E6 ve E7 onkoproteinleri HPV'ye aittir. Simian virüs 40 bu sorudaki ayrımı sağlamaz.
-- **BK virüs** — BK virüs ile karıştırılabilir: Vulva, vajina, penis, anüs ve orofarinkste de skuamöz karsinomla ilişkili virüs yüksek riskli HPV'dir.
-
-**Cevap: C** — Human papilloma virüs
-
-**Özet.** Serviks kanserinde ana etken yüksek riskli HPV'dir; bu DNA virüsü E6 ile p53'ü, E7 ile RB'yi etkisizleştirerek karsinogenezi başlatır.
-
-## Soru 29
-
-**Soru.** HPV E7 viral onkoproteini etkisini aşağıdakilerden hangisi üzerinden oluşturur?
-
-**A)** Retinoblastom (RB) tümör baskılayıcı geni · **B)** p53 · **C)** p16 · **D)** p27 · **E)** Siklin D1
-
-**Çözüm.** Seçenekleri sırayla değerlendirelim.
-
-- **Retinoblastom (RB) tümör baskılayıcı geni** — Retinoblastom geni doğru: E7 RB proteinine bağlanır, RB'nin tuttuğu E2F'yi serbest bırakır ve G1/S geçişini hızlandırır.
-- **p53** — p53 ile karıştırılabilir: P53'e bağlanıp yıkımına aracılık eden onkoprotein E6'dır.
-- **p16** — E7'nin hedefi E2F'yi bağlayarak hücre döngüsünü denetleyen RB proteinidir. p16 bu sorudaki ayrımı sağlamaz.
-- **p27** — p27 ile karıştırılabilir: Düşük riskli HPV'de bile E7'nin bağlandığı protein, düşük afiniteyle de olsa RB'dir.
-- **Siklin D1** — E7 etkisinin sonucu E2F serbestleşmesi ve hızlanan G1/S geçişidir. Siklin D1 bu sorudaki ayrımı sağlamaz.
-
-**Cevap: A** — Retinoblastom (RB) tümör baskılayıcı geni
-
-**Özet.** E7 RB'ye bağlanır ve RB'nin tuttuğu E2F transkripsiyon faktörlerini serbest bırakır; G1/S geçişi hızlanır. E6'nın hedefi ise p53'tür.
-
-## Soru 30
-
-**Soru.** Servisitte enfeksiyonlu ve enfeksiyonlu olmayan ayrımının kesin yapılamamasının nedeni hangisidir?
-
-**A)** Normal vajinal flora · **B)** Asemptomatik seyir · **C)** Endoservikal polip varlığı · **D)** Transformasyon bölgesi · **E)** Ampirik antibiyotik kullanımı
-
-**Çözüm.** Her seçeneği tek tek ele alalım.
-
-- **Normal vajinal flora** — Normal vajinal flora doğru: streptokok, stafilokok, Escherichia coli ve Candida gibi flora elemanları nedeniyle iki grubun kesin ayrımı zordur.
-- **Asemptomatik seyir** — Asemptomatik seyir Chlamydia trachomatis servisitinin sık özelliğidir; ayrımı zorlaştıran temel neden değildir.
-- **Endoservikal polip varlığı** — Endoservikal polip endoservikal kanalın benign ekzofitik lezyonudur; servisit sınıflamasıyla ilgisi yoktur.
-- **Transformasyon bölgesi** — Transformasyon bölgesi HPV'ye en duyarlı ve tümörlerin en sık geliştiği alandır; servisit ayrımını belirlemez.
-- **Ampirik antibiyotik kullanımı** — Ampirik antibiyotik servisit tedavisinin yaklaşımıdır; enfeksiyonlu ve enfeksiyonsuz servisit ayrımının zorluğunu açıklamaz.
-
-**Cevap: A** — Normal vajinal flora
-
-**Özet.** Servisit enfeksiyonlu ve enfeksiyonlu olmayan diye ikiye ayrılır; ancak normal vajinal floradaki aerob, anaerob bakteriler ve Candida türleri nedeniyle kesin ayrım zordur.
-
-## Soru 31
-
-**Soru.** Doğumda bebeğe geçerek yenidoğanda ağır sistemik enfeksiyon yapabilen servisit etkeni hangisidir?
-
-**A)** Chlamydia trachomatis · **B)** Herpes simpleks virüs tip 2 · **C)** Ureaplasma urealyticum · **D)** Trichomonas vaginalis · **E)** Escherichia coli
-
-**Çözüm.** Şıkları sırasıyla gözden geçirelim.
-
-- **Chlamydia trachomatis** — Chlamydia trachomatis en yaygın servisit etkenidir, sıklıkla asemptomatiktir ve pelvik inflamatuvar hastalık riski taşır.
-- **Herpes simpleks virüs tip 2** — Herpes simpleks virüs tip 2 doğru: anne bebek bulaşıyla yenidoğanda ağır, bazen ölümcül sistemik herpes yapabilir.
-- **Ureaplasma urealyticum** — Ureaplasma urealyticum cinsel yolla bulaşan servisit etkenlerinden biridir; doğumdaki önemi vurgulanan etken değildir.
-- **Trichomonas vaginalis** — Trichomonas vaginalis servisitte ve üst genital enfeksiyonlarda rol oynar; yenidoğanda sistemik enfeksiyonla anılan etken değildir.
-- **Escherichia coli** — Escherichia coli normal vajinal floranın tesadüfi elemanlarındandır; cinsel yolla bulaşan servisit etkeni olarak sayılmaz.
-
-**Cevap: B** — Herpes simpleks virüs tip 2
-
-**Özet.** HSV-2 genital herpes etkenidir ve doğumda önem taşır; anne bebek bulaşı yenidoğanda ağır, bazen ölümcül sistemik herpese yol açabilir.
-
-## Soru 32
-
-**Soru.** Servisitte ampirik antibiyotik rejimleri hangi iki etkene etkili olacak şekilde seçilir?
-
-**A)** Candida ve Escherichia coli · **B)** Trichomonas ve HSV-2 · **C)** Chlamydia ve Neisseria gonorrhoeae · **D)** HPV ve HSV-2 · **E)** Streptokok ve stafilokok
-
-**Çözüm.** Şimdi seçeneklere tek tek bakalım.
-
-- **Candida ve Escherichia coli** — Candida ve Escherichia coli normal vajinal florada tesadüfi olarak bulunabilen elemanlardır; ampirik rejimin hedefi değildir.
-- **Trichomonas ve HSV-2** — Trichomonas vaginalis ve HSV-2 servisit etkenleridir, ama ampirik antibiyotik rejimi bu ikisine göre seçilmez.
-- **Chlamydia ve Neisseria gonorrhoeae** — Chlamydia ve Neisseria gonorrhoeae doğru: servisitte çoğunlukla bu iki etkene etkili ampirik antibiyotik rejimleri kullanılır.
-- **HPV ve HSV-2** — HPV ve HSV-2 viral etkenlerdir; antibiyotik rejimlerinin hedefi değildir.
-- **Streptokok ve stafilokok** — Streptokok ve stafilokok türleri normal vajinal floranın tesadüfi elemanlarıdır; ampirik tedavi bunlara göre seçilmez.
-
-**Cevap: C** — Chlamydia ve Neisseria gonorrhoeae
-
-**Özet.** Servisitte tanı spekulum muayenesi ve akıntının değerlendirilmesiyle başlar; tedavi çoğunlukla Chlamydia trachomatis ve Neisseria gonorrhoeae'ye etkili ampirik antibiyotiktir.
-
-## Soru 33
-
-**Soru.** Endoservikal polipin histolojik yapısında bulunan bileşen hangisidir?
-
-**A)** Keratin incileri · **B)** Koilositik hücreler · **C)** Desmoplastik stromal yanıt · **D)** Mukus salgılayan endoservikal bezler · **E)** Skuamöz hücre yuvaları
-
-**Çözüm.** Seçenekleri sırayla değerlendirelim.
-
-- **Keratin incileri** — Keratin incileri iyi diferansiye invaziv skuamöz karsinomun bulgusudur; benign polipte görülmez.
-- **Koilositik hücreler** — Koilositik hücreler HPV enfeksiyonunu gösteren mikroskobik bulgudur; LSIL'de yüzeysel katmanlarda görülür.
-- **Desmoplastik stromal yanıt** — Desmoplastik stromal yanıt invaziv skuamöz karsinomun çevresinde gelişir; polipin gövdesi fibröz stromadır.
-- **Mukus salgılayan endoservikal bezler** — Mukus salgılayan endoservikal bezler doğru: polip fibröz stroma, bu bezler ve sıkça eşlik eden inflamasyondan oluşur.
-- **Skuamöz hücre yuvaları** — Skuamöz hücre uzantı ve yuvaları invaziv skuamöz karsinomun yapısıdır; malign potansiyeli olmayan polipte görülmez.
-
-**Cevap: D** — Mukus salgılayan endoservikal bezler
-
-**Özet.** Endoservikal polip endoservikal kanalın benign ekzofitik lezyonudur; fibröz stroma, mukus salgılayan bezler ve inflamasyondan oluşur, malign potansiyeli yoktur.
-
-## Soru 34
-
-**Soru.** Ergenlikte endoservikal kolumnar epitelin ektoservikse kaymasına ne ad verilir?
-
-**A)** Skuamöz metaplazi · **B)** Displazi · **C)** Koilositoz · **D)** Transformasyon bölgesi · **E)** Eversiyon
-
-**Çözüm.** Her seçeneği tek tek ele alalım.
-
-- **Skuamöz metaplazi** — Skuamöz metaplazi açığa çıkan kolumnar hücrelerin sonradan skuamöz epitele dönüşmesidir; kaymanın kendisi değildir.
-- **Displazi** — Displazi CIN derecelerinde epitel içinde ilerleyen prekanseröz değişikliktir; epitelin yer değiştirmesi değildir.
-- **Koilositoz** — Koilositoz çekirdek çevresinde halo ile karakterize HPV bulgusudur; epitel sınırının kaymasıyla ilgisi yoktur.
-- **Transformasyon bölgesi** — Transformasyon bölgesi metaplastik, olgunlaşmamış skuamöz hücrelerden oluşan alandır; kaymanın değil, sonrasında oluşan bölgenin adıdır.
-- **Eversiyon** — Eversiyon doğru: ergenlikte kolumnar epitel ektoservikse kayar ve skuamo kolumnar bileşkenin yeri değişir.
-
-**Cevap: E** — Eversiyon
-
-**Özet.** Skuamo kolumnar bileşkenin yeri yaş ve hormonal duruma göre değişir; eversiyonla açığa çıkan kolumnar hücreler skuamöz metaplaziye uğrar ve transformasyon bölgesi oluşur.
-
-## Soru 35
-
-**Soru.** HPV enfeksiyonlarının çoğu için hangisi doğrudur?
-
-**A)** Geçicidir · **B)** Kalıcı olur · **C)** Kansere ilerler · **D)** Konak genomuna entegre olur · **E)** Yalnız serviksi tutar
-
-**Çözüm.** Şıkları sırasıyla gözden geçirelim.
-
-- **Geçicidir** — Geçici olması doğru: HPV enfeksiyonlarının çoğu aylar içinde immün sistem tarafından temizlenir.
-- **Kalıcı olur** — Kalıcı enfeksiyon çoğunluğun seyri değildir; yüksek riskli HPV ile persistan enfeksiyon servikal öncü lezyon riskini artırır.
-- **Kansere ilerler** — Kansere ilerleme az sayıda bireyde olur; sigara gibi kanserojenler ve bağışıklık durumu belirleyicidir.
-- **Konak genomuna entegre olur** — Konak genomuna entegrasyon yüksek riskli HPV 16 ve 18'in eğilimidir ve progresyonla ilişkilidir; enfeksiyonların çoğunun özelliği değildir.
-- **Yalnız serviksi tutar** — Yalnız serviksi tutması yanlıştır; yüksek riskli HPV vajina, vulva, penis, anüs ve tonsilde de skuamöz karsinom gelişiminde rol oynar.
-
-**Cevap: A** — Geçicidir
-
-**Özet.** HPV enfeksiyonlarının çoğu geçicidir ve aylar içinde temizlenir; süre HPV tipine bağlıdır ve yüksek riskli tiplerde daha uzundur.
-
-## Soru 36
-
-**Soru.** HPV maruziyetinden bağımsız ek risk artırıcı olarak sayılan hangisidir?
-
-**A)** Erken yaşta ilk cinsel ilişki · **B)** Sigara içme · **C)** Çok sayıda cinsel partner · **D)** Çok partnerli eş · **E)** UV maruziyeti
-
-**Çözüm.** Şimdi seçeneklere tek tek bakalım.
-
-- **Erken yaşta ilk cinsel ilişki** — Erken yaşta ilk cinsel ilişki HPV maruziyetiyle ilişkili risk faktörüdür; virüsle karşılaşmayı kolaylaştırır.
-- **Sigara içme** — Sigara içme doğru: immün yetmezlik ile birlikte HPV maruziyetine ek olarak riski artıran faktördür.
-- **Çok sayıda cinsel partner** — Çok sayıda cinsel partner HPV maruziyetini artıran risk faktörüdür; ek risk artırıcı grupta değil, maruziyet grubundadır.
-- **Çok partnerli eş** — Çok partnerli eşe sahip olmak HPV maruziyetiyle ilişkili risk faktörlerindendir; ek risk artırıcı değildir.
-- **UV maruziyeti** — UV maruziyeti ile karıştırılabilir: Serviks kanserinde ek risk artırıcılar sigara içme ve immün yetmezliktir.
-
-**Cevap: B** — Sigara içme
-
-**Özet.** HPV maruziyetiyle ilişkili riskler erken ilk cinsel ilişki, çok partner ve çok partnerli eştir; sigara içme ve immün yetmezlik ise ek risk artırıcılardır.
-
-## Soru 37
-
-**Soru.** Yüksek riskli HPV E6 proteininin hücre ömrünü uzatan etkisi hangisidir?
-
-**A)** RB'ye bağlanma · **B)** E2F serbestleştirme · **C)** Telomeraz ekspresyonunu artırma · **D)** Notch yoluna müdahale · **E)** Viral DNA'nın episomal kalması
-
-**Çözüm.** Seçenekleri sırayla değerlendirelim.
-
-- **RB'ye bağlanma** — RB'ye bağlanma E7 proteininin etkisidir; E2F faktörleri serbestleşir ve G1/S geçişi hızlanır.
-- **E2F serbestleştirme** — E2F serbestleştirme E7'nin RB'ye bağlanmasının sonucudur; hücre döngüsü kontrolünü bozar, E6'ya ait değildir.
-- **Telomeraz ekspresyonunu artırma** — Telomeraz ekspresyonunu artırma doğru: E6 p53'ün yıkımına aracılık ederken telomerazı da artırır ve hücre ömrü uzar.
-- **Notch yoluna müdahale** — Notch sinyal yoluna müdahale düşük riskli HPV 6 ve 11'in E6 proteinine aittir; bu E6 p53'e bağlanamaz.
-- **Viral DNA'nın episomal kalması** — Viral DNA'nın episomal kalması düşük riskli tiplerin özelliğidir; yüksek riskli tipler genoma entegre olma eğilimindedir.
-
-**Cevap: C** — Telomeraz ekspresyonunu artırma
-
-**Özet.** E6 p53'e bağlanıp yıkımına aracılık eder ve telomeraz ekspresyonunu artırır; sonuç apoptoz inhibisyonu ve hücre ömründe uzamadır.
-
-## Soru 38
-
-**Soru.** Düşük riskli HPV 6 ve 11'in E7 proteini için hangisi doğrudur?
-
-**A)** p53'e bağlanıp yıkar · **B)** Telomerazı artırır · **C)** Konak genomuna entegre olur · **D)** RB'ye düşük afiniteyle bağlanır · **E)** Notch yoluna müdahale eder
-
-**Çözüm.** Her seçeneği tek tek ele alalım.
-
-- **p53'e bağlanıp yıkar** — p53'e bağlanıp yıkımına aracılık etmek yüksek riskli HPV E6 proteininin işidir; düşük riskli tiplerin E6'sı p53'e bağlanamaz.
-- **Telomerazı artırır** — Telomeraz ekspresyonunu artırmak yüksek riskli E6 proteininin etkisidir; düşük riskli E7'ye ait değildir.
-- **Konak genomuna entegre olur** — Konak genomuna entegrasyon yüksek riskli tiplerin eğilimidir; düşük riskli tiplerde DNA episomal kalır.
-- **RB'ye düşük afiniteyle bağlanır** — RB'ye düşük afiniteyle bağlanması doğru: düşük riskli HPV 6 ve 11'in E7 proteini RB'ye zayıf bağlanır.
-- **Notch yoluna müdahale eder** — Notch sinyal yoluna müdahale düşük riskli tiplerin E6 proteinine aittir; E7'nin özelliği değildir.
-
-**Cevap: D** — RB'ye düşük afiniteyle bağlanır
-
-**Özet.** Düşük riskli HPV 6 ve 11'de E7 RB'ye düşük afiniteyle bağlanır; E6 p53'e bağlanamaz, Notch yoluna müdahale eder ve DNA episomal kalır.
-
-## Soru 39
-
-**Soru.** HSIL'lerin yaklaşık %20'si için hangisi doğrudur?
-
-**A)** Karsinoma ilerler · **B)** LSIL'den gelişir · **C)** Koilositoz içerir · **D)** CIN I'e karşılık gelir · **E)** Önce LSIL olmadan gelişir
-
-**Çözüm.** Şıkları sırasıyla gözden geçirelim.
-
-- **Karsinoma ilerler** — Karsinoma ilerleme HSIL'de yüksek risk olsa da zorunlu değildir; bu oran ilerlemeyi değil, de novo gelişimi anlatır.
-- **LSIL'den gelişir** — LSIL'den gelişme HSIL'lerin çoğunun yoludur; yaklaşık %20'si ise bu basamak olmadan ortaya çıkar.
-- **Koilositoz içerir** — Koilositoz LSIL'de yüzeysel katmanlarda görülür; CIN III'te ise koilositik değişiklik genellikle yoktur.
-- **CIN I'e karşılık gelir** — CIN I, LSIL'e karşılık gelir; HSIL ise CIN II ve CIN III'ü kapsar.
-- **Önce LSIL olmadan gelişir** — Önce LSIL olmadan gelişmesi doğru: HSIL'lerin yaklaşık %20'si de novo ortaya çıkar.
-
-**Cevap: E** — Önce LSIL olmadan gelişir
-
-**Özet.** HSIL'lerin çoğu LSIL'den gelişir, ama yaklaşık %20'si de novo ortaya çıkar; ilerleme riskini sigara içimi ve immün yetmezlik artırır.
-
-## Soru 40
-
-**Soru.** Pap taramasıyla serviks kanserinden ölüm oranında yaklaşık ne kadar azalma sağlanmıştır?
-
-**A)** %75 · **B)** %10 · **C)** %30 · **D)** %50 · **E)** %90
-
-**Çözüm.** Şimdi seçeneklere tek tek bakalım.
-
-- **%75** — Yaklaşık %75 doğru: Pap taramasıyla ölüm oranı bu ölçüde azalmış, serviks kanseri artık önde gelen ölüm nedeni değildir.
-- **%10** — Yüzde onluk bir azalma gerçek etkiyi çok küçük gösterir; Pap testiyle sağlanan azalma yaklaşık dörtte üçtür.
-- **%30** — Yüzde otuzluk azalma da gerçek değerin altındadır; Pap testi en başarılı kanser tarama testlerinden biridir.
-- **%50** — Yarı yarıya azalma da az bir tahmindir; serviks kanseri taramayla önde gelen ölüm nedeni olmaktan çıkmıştır.
-- **%90** — Yüzde doksanlık azalma abartılıdır; yetersiz tarama yapılan ülkelerde serviks kanseri mortalitesi hâlâ yüksektir.
-
-**Cevap: A** — %75
-
-**Özet.** Pap testi en başarılı kanser tarama testlerindendir; ölüm oranını yaklaşık %75 azaltmış, yetersiz tarama yapılan ülkelerde ise mortalite yüksek kalmıştır.
-
-## Soru 41
-
-**Soru.** HPV aşılaması için hangisi doğrudur?
-
-**A)** Taramanın yerine geçer · **B)** Erkek çocuklara da önerilir · **C)** Tüm onkojenik tipleri kapsar · **D)** Koruması bir yıl sürer · **E)** Yalnız düşük riskli tipleri içerir
-
-**Çözüm.** Seçenekleri sırayla değerlendirelim.
-
-- **Taramanın yerine geçer** — Taramanın yerine geçmesi yanlıştır; birçok kadın aşı öncesinde enfektedir ve strateji Pap, HPV testi ve aşılamanın birlikteliğidir.
-- **Erkek çocuklara da önerilir** — Erkek çocuklara önerilmesi doğru: aşı 11–12 yaş kız ve erkek çocuklara önerilir, erkek aşılaması toplumdaki enfeksiyon yükünü azaltır.
-- **Tüm onkojenik tipleri kapsar** — Tüm onkojenik tipleri kapsadığı yanlıştır; aşılar tüm onkojenik HPV genotiplerini kapsamaz.
-- **Koruması bir yıl sürer** — Bir yıllık koruma yanlıştır; koruma süresi en az 10 yıldır ve uzun dönem takip sürmektedir.
-- **Yalnız düşük riskli tipleri içerir** — Yalnız düşük riskli tipleri içerdiği yanlıştır; dört değerlikli aşı HPV 6, 11, 16 ve 18'i içerir.
-
-**Cevap: B** — Erkek çocuklara da önerilir
-
-**Özet.** HPV aşısı 11–12 yaş kız ve erkek çocuklara ve 26 yaşına kadar gençlere önerilir; dört değerlikli aşı 6, 11, 16 ve 18'i içerir, tarama yine sürer.
-
-## Soru 42
-
-**Soru.** CIN III'te CIN II'den farklı olarak belirginleşen bulgu hangisidir?
-
-**A)** Yüzeyde koilositik değişiklik · **B)** Alt üçte ikilik tutulum · **C)** Hücre yönlenmesinin bozulması · **D)** Bazal tabaka üzerinde mitoz · **E)** Nükleer kromatin heterojenliği
-
-**Çözüm.** Her seçeneği tek tek ele alalım.
-
-- **Yüzeyde koilositik değişiklik** — Yüzeyde koilositik değişiklik LSIL'in bulgusudur; CIN III'te koilositik değişiklik genellikle yoktur.
-- **Alt üçte ikilik tutulum** — Alt üçte ikilik tutulum CIN II'yi tanımlar; CIN III'te epitelin tam kalınlığı tutulur.
-- **Hücre yönlenmesinin bozulması** — Hücre yönlenmesinin bozulması doğru: CIN III'te hücrelerin yönlenmesi bozulur ve anormal mitozlar sıktır.
-- **Bazal tabaka üzerinde mitoz** — Bazal tabaka üzerinde, atipik olabilen mitozlar CIN II ve III'ün ortak bulgusudur; ikisini ayırt ettirmez.
-- **Nükleer kromatin heterojenliği** — Nükleer kromatin heterojenliği, hücre ve çekirdek boyut varyasyonu gibi CIN II ve III'te ortak görülür.
-
-**Cevap: C** — Hücre yönlenmesinin bozulması
-
-**Özet.** CIN II ve III'te boyut varyasyonu, kromatin heterojenliği ve bazal üstü mitozlar ortaktır; CIN III'te ek olarak yönlenme bozulur ve anormal mitozlar sıklaşır.
-
-## Soru 43
-
-**Soru.** HSIL öyküsü olan hastada riski artan kanser hangisidir?
-
-**A)** Endometrium kanseri · **B)** Over kanseri · **C)** Meme kanseri · **D)** Vulvar kanser · **E)** Kolon kanseri
-
-**Çözüm.** Şıkları sırasıyla gözden geçirelim.
-
-- **Endometrium kanseri** — HSIL öyküsünde riski artan kanserler servikal, vulvar ve vajinal kanserlerdir. Endometrium kanseri bu sorudaki ayrımı sağlamaz.
-- **Over kanseri** — Over kanseri HSIL öyküsüyle ilişkilendirilmez; yüksek riskli HPV vajina ve vulva gibi bölgelerde skuamöz karsinom gelişiminde rol oynar.
-- **Meme kanseri** — HSIL sonrası düzenli takip servikal, vulvar ve vajinal kanser riski nedeniyle yapılır. Meme kanseri bu sorudaki ayrımı sağlamaz.
-- **Vulvar kanser** — Vulvar kanser doğru: HSIL öyküsü olanlarda servikal ve vajinal kanserin yanında vulvar kanser riski de artar.
-- **Kolon kanseri** — Kolon kanseri HPV ilişkili bir tümör olarak geçmez; HPV ilişkili kanserler vajina, vulva, penis, anüs ve orofarinkste görülür.
-
-**Cevap: D** — Vulvar kanser
-
-**Özet.** HSIL öyküsü olan hastalarda servikal, vulvar ve vajinal kanser riski artar; bu yüzden HSIL tedavisinden sonra da uzun dönem izlem gereklidir.
-
-## Soru 44
-
-**Soru.** Servikal skuamöz hücreli karsinom insidansı, SIL insidansı pikinden yaklaşık ne kadar sonra zirve yapar?
-
-**A)** 1–2 yıl · **B)** 3–5 yıl · **C)** 5–7 yıl · **D)** 20–30 yıl · **E)** 10–15 yıl
-
-**Çözüm.** Şimdi seçeneklere tek tek bakalım.
-
-- **1–2 yıl** — Bir ile iki yıl çok kısa bir aralıktır; SIL'den invaziv karsinoma geçiş değişken ve öngörülemezdir.
-- **3–5 yıl** — Üç ile beş yıl da kısadır; SIL insidansı yaklaşık 30 yaşta, invaziv karsinom yaklaşık 45 yaşta zirve yapar.
-- **5–7 yıl** — Beş ile yedi yıl da gerçek aralığın altındadır; skuamöz karsinomda ortalama yaş yaklaşık 45'tir.
-- **20–30 yıl** — Yirmi ile otuz yıl gerçek aralıktan uzundur; ortalama yaş yaklaşık 45 olduğundan zirveler arası fark daha kısadır.
-- **10–15 yıl** — 10–15 yıl doğru: skuamöz hücreli karsinom insidansı SIL insidansının pikinden 10–15 yıl sonra zirve yapar.
-
-**Cevap: E** — 10–15 yıl
-
-**Özet.** Skuamöz hücreli karsinomun insidansı SIL pikinden 10–15 yıl sonra, ortalama 45 yaşta zirve yapar; HPV gereklidir ama tek başına yeterli değildir.
-
-## Soru 45
-
-**Soru.** İyi diferansiye invaziv skuamöz serviks karsinomunu tanımlayan bulgu hangisidir?
-
-**A)** Keratin incileri · **B)** Az keratinizasyon · **C)** Koilositik değişiklik · **D)** Bez yapıları · **E)** Küçük hücreli morfoloji
-
-**Çözüm.** Seçenekleri sırayla değerlendirelim.
-
-- **Keratin incileri** — Keratin incileri doğru: iyi diferansiye invaziv skuamöz karsinomda keratin incileri görülür.
-- **Az keratinizasyon** — Az keratinizasyon zayıf diferansiye skuamöz karsinomun özelliğidir; iyi diferansiye tümörün değil.
-- **Koilositik değişiklik** — Koilositik değişiklik HPV enfeksiyonunu gösteren, LSIL'in yüzeysel katmanlarında görülen bulgudur.
-- **Bez yapıları** — Bez yapıları oluşturan malign hücreler adenokarsinomu tanımlar; skuamöz karsinomun derecelendirme ölçütü değildir.
-- **Küçük hücreli morfoloji** — Küçük hücreli morfoloji akciğer küçük hücreli karsinomuna benzeyen nöroendokrin karsinomun bulgusudur.
-
-**Cevap: A** — Keratin incileri
-
-**Özet.** İnvaziv skuamöz karsinom desmoplastik stroma içinde skuamöz hücre uzantı ve yuvaları yapar; iyi diferansiye tümörde keratin incileri, zayıf diferansiyede az keratinizasyon vardır.
-
-## Soru 46
-
-**Soru.** Mikroinvaziv serviks karsinomunun tedavi edilebildiği sınırlı cerrahi işlem hangisidir?
-
-**A)** Basit küretaj · **B)** Konik biyopsi · **C)** Pelvik lenf diseksiyonu · **D)** Yakın takip · **E)** Radyoterapi
-
-**Çözüm.** Her seçeneği tek tek ele alalım.
-
-- **Basit küretaj** — Basit küretaj endoservikal polipin tedavisidir ve genellikle küratiftir; karsinom tedavisi değildir.
-- **Konik biyopsi** — Konik biyopsi doğru: mikroinvaziv karsinom konik biyopsi ile tedavi edilebilir; aynı işlem HSIL'de de uygulanır.
-- **Pelvik lenf diseksiyonu** — Pelvik lenf düğümü diseksiyonu histerektomi ile birlikte invaziv serviks kanserinin primer tedavisidir; sınırlı bir işlem değildir.
-- **Yakın takip** — Yakın takip biyopsiyle doğrulanmış LSIL'de uygulanan konservatif yaklaşımdır; invaziv karsinomda yeterli değildir.
-- **Radyoterapi** — Radyoterapi ileri evrede cerrahiye eklenir ve kemoterapiyle kombine edilir; mikroinvaziv karsinomun sınırlı tedavisi değildir.
-
-**Cevap: B** — Konik biyopsi
-
-**Özet.** İnvaziv serviks kanserinde primer tedavi histerektomi ve pelvik lenf düğümü diseksiyonudur; mikroinvaziv karsinom konik biyopsiyle tedavi edilebilir.

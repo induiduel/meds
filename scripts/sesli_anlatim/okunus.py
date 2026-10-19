@@ -118,8 +118,66 @@ def _en_iyi(metin: str, eslesme: list, i: int, K: set):
     return None
 
 
+FONETIK_TTS: list[tuple[re.Pattern, str]] = [
+    (re.compile(r"\bBCG(['’][a-zçğıöşü]+)?\b", re.IGNORECASE), "becege"),
+    (re.compile(r"\bDNA(['’][a-zçğıöşü]+)?\b"), "denea"),
+    (re.compile(r"\bmRNA(['’][a-zçğıöşü]+)?\b"), "me renea"),
+    (re.compile(r"\btRNA(['’][a-zçğıöşü]+)?\b"), "te renea"),
+    (re.compile(r"\bRNA(['’][a-zçğıöşü]+)?\b"), "renea"),
+    (re.compile(r"\bHPV(['’][a-zçğıöşü]+)?\b"), "hapeve"),
+    (re.compile(r"\bHIV(['’][a-zçğıöşü]+)?\b"), "haive"),
+    (re.compile(r"\bHSV(['’][a-zçğıöşü]+)?\b"), "haseve"),
+    (re.compile(r"\bEBV(['’][a-zçğıöşü]+)?\b"), "ebeve"),
+    (re.compile(r"\bATP(['’][a-zçğıöşü]+)?\b"), "atepe"),
+    (re.compile(r"\bAFP(['’][a-zçğıöşü]+)?\b"), "afepe"),
+    (re.compile(r"\b(?:hCG|HCG)(['’][a-zçğıöşü]+)?\b"), "hacege"),
+    (re.compile(r"\bCDK([0-9/]+)?\b"), "cedeka"),
+    (re.compile(r"\bCIN\b"), "ceine"),
+    (re.compile(r"\bTP53\b"), "tepe elli üç"),
+    (re.compile(r"\bBRCA1\b"), "bercea bir"),
+    (re.compile(r"\bBRCA2\b"), "bercea iki"),
+    (re.compile(r"\bCD4\b"), "cede dört"),
+    (re.compile(r"\bCD8\b"), "cede sekiz"),
+    (re.compile(r"\bCD10\b"), "cede on"),
+    (re.compile(r"\bCD20\b"), "cede yirmi"),
+    (re.compile(r"\bCD30\b"), "cede otuz"),
+    (re.compile(r"\bCD80\b"), "cede seksen"),
+    (re.compile(r"\bCharles\b"), "Çarls"),
+    (re.compile(r"\bWinslow\b"), "Vinslo"),
+    (re.compile(r"\bJenner\b"), "Cenır"),
+    (re.compile(r"\bVon Behring\b", re.IGNORECASE), "Fon Bering"),
+    (re.compile(r"\bCalmette\b"), "Kalmet"),
+    (re.compile(r"\bGuérin\b"), "Geren"),
+    (re.compile(r"\bVirchow\b"), "Virşov"),
+    (re.compile(r"\bLouis Pasteur\b"), "Lui Pastör"),
+    (re.compile(r"\bJames Lind\b"), "Ceyms Lind"),
+    (re.compile(r"\bNeisseria gonorrhoeae\b", re.IGNORECASE), "Nayseria gonorea"),
+    (re.compile(r"\bChlamydia trachomatis\b", re.IGNORECASE), "Klamidya trakomatis"),
+    (re.compile(r"\bHelicobacter pylori\b", re.IGNORECASE), "Helikobakter pilori"),
+    # Sıra sayıları ve yüzdeler (TTS telaffuzu)
+    (re.compile(r"\b1\.(?=\s|[,\)]|$)"), "birinci"),
+    (re.compile(r"\b2\.(?=\s|[,\)]|$)"), "ikinci"),
+    (re.compile(r"\b3\.(?=\s|[,\)]|$)"), "üçüncü"),
+    (re.compile(r"\b4\.(?=\s|[,\)]|$)"), "dördüncü"),
+    (re.compile(r"\b5\.(?=\s|[,\)]|$)"), "beşinci"),
+    (re.compile(r"\b6\.(?=\s|[,\)]|$)"), "altıncı"),
+    (re.compile(r"\b7\.(?=\s|[,\)]|$)"), "yedinci"),
+    (re.compile(r"\b8\.(?=\s|[,\)]|$)"), "sekizinci"),
+    (re.compile(r"\b9\.(?=\s|[,\)]|$)"), "dokuzuncu"),
+    (re.compile(r"\b10\.(?=\s|[,\)]|$)"), "onuncu"),
+    (re.compile(r"\b1\.'si\b"), "birincisi"),
+    (re.compile(r"\b2\.'si\b"), "ikincisi"),
+    (re.compile(r"\b3\.'sü\b"), "üçüncüsü"),
+    (re.compile(r"\b4\.'sü\b"), "dördüncüsü"),
+    (re.compile(r"\b5\.'si\b"), "beşincisi"),
+    (re.compile(r"%([0-9]+)"), r"yüzde \1"),
+]
+
+
 def duzelt(metin: str, kayit: list | None = None) -> str:
-    """Paragraf içindeki kısaltma hece dizilerini bitişik yazar. kayit verilirse (önce, sonra) çiftleri eklenir."""
+    """Paragraf içindeki kısaltma hece dizilerini ve tıbbi terimleri seslendirme için fonetik hâle getirir."""
+    for pat, fon in FONETIK_TTS:
+        metin = pat.sub(fon, metin)
     K = kume()
     if not K:
         return metin

@@ -1,7 +1,8 @@
 {
  "kod": "28",
+ "no": 28,
  "baslik": "Vulva, Vajen ve Serviks Hastalıkları",
- "surum": "alt-1",
+ "surum": "alt-2",
  "sorular": [
   {
    "no": 1,
@@ -15,6 +16,7 @@
     "E": "Psoriasis"
    },
    "dogru": "C",
+   "ipucu": "Epidermisin kalınlaşmadığı, tersine atrofiye uğradığı ve dermiste bant tarzı infiltrat bulunan kronik dermatozu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Skuamöz hücre hiperplazisinde epidermis incelmez, tersine akantozla kalınlaşır ve hiperkeratoz görülür; sitolojik atipi yoktur.",
@@ -24,6 +26,14 @@
     "E": "Psoriasis lökoplaki yapabilen benign hastalıklardandır; bu yüzden beyaz vulva lezyonlarının ayırıcı tanısında biyopsi gerekir."
    },
    "ozet": "Liken sklerozda epidermis incelir, rete çıkıntıları kaybolur, hücresiz homojen dermal fibrozis ve bant tarzı infiltrat gelişir; skuamöz hücre hiperplazisinde ise epidermis akantozla kalınlaşır.",
+   "sayfa": [
+    18,
+    19,
+    24,
+    27,
+    35,
+    55
+   ],
    "metin": "**Soru.** Epidermis incelmesi, rete kaybı ve homojen dermal fibrozis gösteren vulva lezyonu hangisidir?\n\n**A)** Skuamöz hücre hiperplazisi · **B)** Kondiloma akuminatum · **C)** Liken skleroz · **D)** Paget hastalığı · **E)** Psoriasis\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Skuamöz hücre hiperplazisi** — Skuamöz hücre hiperplazisinde epidermis incelmez, tersine akantozla kalınlaşır ve hiperkeratoz görülür; sitolojik atipi yoktur.\n- **Kondiloma akuminatum** — Kondiloma akuminatumda papiller, ekzofitik stromal çekirdekler üzerinde kalınlaşmış skuamöz epitel ve koilositik atipi görülür.\n- **Liken skleroz** — Liken skleroz doğru: epidermis incelir, rete çıkıntıları kaybolur, hücresiz homojen dermal fibrozis ve bant tarzında mononükleer infiltrat görülür.\n- **Paget hastalığı** — Paget hastalığında büyük, soluk sitoplazmalı atipik hücreler tek tek ve gruplar halinde epidermise yayılır; bir fibrozis tablosu değildir.\n- **Psoriasis** — Psoriasis lökoplaki yapabilen benign hastalıklardandır; bu yüzden beyaz vulva lezyonlarının ayırıcı tanısında biyopsi gerekir.\n\n**Cevap: C** — Liken skleroz\n\n**Özet.** Liken sklerozda epidermis incelir, rete çıkıntıları kaybolur, hücresiz homojen dermal fibrozis ve bant tarzı infiltrat gelişir; skuamöz hücre hiperplazisinde ise epidermis akantozla kalınlaşır.",
    "ses": "Epidermis incelmesi, rete kaybı ve homojen dermal fibrozis gösteren vulva lezyonu hangisidir?\nA, Skuamöz hücre hiperplazisi\nBe, Kondiloma akuminatum\nCe, Liken skleroz\nDe, Peycet hastalığı\nE, Psoriazis\nSeçenekleri sırayla değerlendirelim.\nSkuamöz hücre hiperplazisinde epidermis incelmez, tersine akantozla kalınlaşır ve hiperkeratoz görülür. Sitolojik atipi yoktur.\nKondiloma akuminatumda papiller, ekzofitik stromal çekirdekler üzerinde kalınlaşmış skuamöz epitel ve koilositik atipi görülür.\nLiken skleroz doğru. Epidermis incelir, rete çıkıntıları kaybolur, hücresiz homojen dermal fibrozis ve bant tarzında mononükleer infiltrat görülür.\nPeycet hastalığında büyük, soluk sitoplazmalı atipik hücreler tek tek ve gruplar halinde epidermise yayılır. Bir fibrozis tablosu değildir.\nPsoriazis lökoplaki yapabilen benign hastalıklardandır. Bu yüzden beyaz vulva lezyonlarının ayırıcı tanısında biyopsi gerekir.\nDoğru cevap Ce, Liken skleroz\nLiken sklerozda epidermis incelir, rete çıkıntıları kaybolur, hücresiz homojen dermal fibrozis ve bant tarzı infiltrat gelişir. Skuamöz hücre hiperplazisinde ise epidermis akantozla kalınlaşır.",
    "kelime": 163
@@ -40,18 +50,25 @@
     "E": "Yenidoğanlar"
    },
    "dogru": "D",
+   "ipucu": "Bu hastalığın iki tepe yaptığını, birinin ergenlik öncesi kızlar olduğunu ve diğer ucun hangi dönem olduğunu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Genç erişkin dönem daha çok kondiloma akuminatumun görüldüğü yaş grubudur; liken skleroz ise her yaşta görülse de iki ayrı dönemde yoğunlaşır.",
     "B": "Gebelik vulvada Candida enfeksiyonuna yatkınlık yaratan durumlardandır; liken sklerozun en sık görüldüğü grup değildir.",
-    "C": "Doğurganlık çağı kadınlar ile karıştırılabilir: Liken sklerozun patogenezi belirsizdir, subepitelyal aktif T hücre infiltrasyonu ve otoimmün birliktelik gösterir.",
+    "C": "Doğurganlık çağındaki kadınlarda östrojen düzeyi yeterli olduğundan vulvar epitel kalındır ve liken skleroz daha seyrek görülür; epidermal incelme, dermal homojen skleroz ve T hücre infiltrasyonuyla giden liken skleroz en sık menopoz sonrası kadınlarda ortaya çıkar.",
     "D": "Menopoz sonrası kadınlar doğru: liken skleroz her yaşta görülebilir, ama en sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür.",
     "E": "Yenidoğanlar liken sklerozun tipik grubu değil; çocukluk çağında bu hastalık ergenlik öncesi kızlarda yoğunlaşır."
    },
    "ozet": "Liken skleroz her yaşta görülebilir ama en sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür; prekanseröz değildir, ancak vulvar karsinom riski biraz artmıştır.",
-   "metin": "**Soru.** Liken skleroz en sık hangi grupta görülür?\n\n**A)** Genç erişkin erkekler · **B)** Gebe kadınlar · **C)** Doğurganlık çağı kadınlar · **D)** Menopoz sonrası kadınlar · **E)** Yenidoğanlar\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Genç erişkin erkekler** — Genç erişkin dönem daha çok kondiloma akuminatumun görüldüğü yaş grubudur; liken skleroz ise her yaşta görülse de iki ayrı dönemde yoğunlaşır.\n- **Gebe kadınlar** — Gebelik vulvada Candida enfeksiyonuna yatkınlık yaratan durumlardandır; liken sklerozun en sık görüldüğü grup değildir.\n- **Doğurganlık çağı kadınlar** — Doğurganlık çağı kadınlar ile karıştırılabilir: Liken sklerozun patogenezi belirsizdir, subepitelyal aktif T hücre infiltrasyonu ve otoimmün birliktelik gösterir.\n- **Menopoz sonrası kadınlar** — Menopoz sonrası kadınlar doğru: liken skleroz her yaşta görülebilir, ama en sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür.\n- **Yenidoğanlar** — Yenidoğanlar liken sklerozun tipik grubu değil; çocukluk çağında bu hastalık ergenlik öncesi kızlarda yoğunlaşır.\n\n**Cevap: D** — Menopoz sonrası kadınlar\n\n**Özet.** Liken skleroz her yaşta görülebilir ama en sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür; prekanseröz değildir, ancak vulvar karsinom riski biraz artmıştır.",
-   "ses": "Liken skleroz en sık hangi grupta görülür?\nA, Genç erişkin erkekler\nBe, Gebe kadınlar\nCe, Doğurganlık çağı kadınlar\nDe, Menopoz sonrası kadınlar\nE, Yenidoğanlar\nHer seçeneği tek tek ele alalım.\nGenç erişkin dönem daha çok kondiloma akuminatumun görüldüğü yaş grubudur. Liken skleroz ise her yaşta görülse de iki ayrı dönemde yoğunlaşır.\nGebelik vulvada Kandida enfeksiyonuna yatkınlık yaratan durumlardandır. Liken sklerozun en sık görüldüğü grup değildir.\nDoğurganlık çağı kadınlar ile karıştırılabilir. Liken sklerozun patogenezi belirsizdir, subepitelyal aktif te hücre infiltrasyonu ve otoimmün birliktelik gösterir.\nMenopoz sonrası kadınlar doğru. Liken skleroz her yaşta görülebilir, ama en sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür.\nYenidoğanlar liken sklerozun tipik grubu değil. Çocukluk çağında bu hastalık ergenlik öncesi kızlarda yoğunlaşır.\nDoğru cevap De, Menopoz sonrası kadınlar\nLiken skleroz her yaşta görülebilir ama en sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür. Prekanseröz değildir, ancak vulvar karsinom riski biraz artmıştır.",
-   "kelime": 176
+   "sayfa": [
+    20,
+    21,
+    13,
+    32
+   ],
+   "metin": "**Soru.** Liken skleroz en sık hangi grupta görülür?\n\n**A)** Genç erişkin erkekler · **B)** Gebe kadınlar · **C)** Doğurganlık çağı kadınlar · **D)** Menopoz sonrası kadınlar · **E)** Yenidoğanlar\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Genç erişkin erkekler** — Genç erişkin dönem daha çok kondiloma akuminatumun görüldüğü yaş grubudur; liken skleroz ise her yaşta görülse de iki ayrı dönemde yoğunlaşır.\n- **Gebe kadınlar** — Gebelik vulvada Candida enfeksiyonuna yatkınlık yaratan durumlardandır; liken sklerozun en sık görüldüğü grup değildir.\n- **Doğurganlık çağı kadınlar** — Doğurganlık çağındaki kadınlarda östrojen düzeyi yeterli olduğundan vulvar epitel kalındır ve liken skleroz daha seyrek görülür; epidermal incelme, dermal homojen skleroz ve T hücre infiltrasyonuyla giden liken skleroz en sık menopoz sonrası kadınlarda ortaya çıkar.\n- **Menopoz sonrası kadınlar** — Menopoz sonrası kadınlar doğru: liken skleroz her yaşta görülebilir, ama en sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür.\n- **Yenidoğanlar** — Yenidoğanlar liken sklerozun tipik grubu değil; çocukluk çağında bu hastalık ergenlik öncesi kızlarda yoğunlaşır.\n\n**Cevap: D** — Menopoz sonrası kadınlar\n\n**Özet.** Liken skleroz her yaşta görülebilir ama en sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür; prekanseröz değildir, ancak vulvar karsinom riski biraz artmıştır.",
+   "ses": "Liken skleroz en sık hangi grupta görülür?\nA, Genç erişkin erkekler\nBe, Gebe kadınlar\nCe, Doğurganlık çağı kadınlar\nDe, Menopoz sonrası kadınlar\nE, Yenidoğanlar\nHer seçeneği tek tek ele alalım.\nGenç erişkin dönem daha çok kondiloma akuminatumun görüldüğü yaş grubudur. Liken skleroz ise her yaşta görülse de iki ayrı dönemde yoğunlaşır.\nGebelik vulvada Kandida enfeksiyonuna yatkınlık yaratan durumlardandır. Liken sklerozun en sık görüldüğü grup değildir.\nDoğurganlık çağındaki kadınlarda östrojen düzeyi yeterli olduğundan vulvar epitel kalındır ve liken skleroz daha seyrek görülür. Epidermal incelme, dermal homojen skleroz ve T hücre infiltrasyonuyla giden liken skleroz en sık menopoz sonrası kadınlarda ortaya çıkar.\nMenopoz sonrası kadınlar doğru. Liken skleroz her yaşta görülebilir, ama en sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür.\nYenidoğanlar liken sklerozun tipik grubu değil. Çocukluk çağında bu hastalık ergenlik öncesi kızlarda yoğunlaşır.\nDoğru cevap De, Menopoz sonrası kadınlar\nLiken skleroz her yaşta görülebilir ama en sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür. Prekanseröz değildir, ancak vulvar karsinom riski biraz artmıştır.",
+   "kelime": 193
   },
   {
    "no": 3,
@@ -65,6 +82,7 @@
     "E": "Skuamöz hücre hiperplazisi"
    },
    "dogru": "E",
+   "ipucu": "Kaşıntı ve kaşıma döngüsüne epitelin verdiği tepkiyi, liken sklerozdaki incelmeden ayırt ederek düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Liken sklerozda epidermis kalınlaşmaz, incelir; rete çıkıntıları kaybolur ve homojen dermal fibrozis gelişir.",
@@ -74,6 +92,15 @@
     "E": "Skuamöz hücre hiperplazisi doğru: şiddetli kaşıntıyı gidermek için ovma ve kaşımayla gelişir; akantoz ve hiperkeratoz vardır, mitoz artsa da atipi yoktur."
    },
    "ozet": "Skuamöz hücre hiperplazisi, eski adıyla liken simpleks kronikus, kaşıma ve ovmaya bağlı gelişir; akantoz ve hiperkeratoz gösterir ve sitolojik atipi içermez.",
+   "sayfa": [
+    23,
+    24,
+    18,
+    45,
+    31,
+    51,
+    54
+   ],
    "metin": "**Soru.** Kaşıma/ovma sonucu gelişen, akantoz ve hiperkeratoz gösteren atipisiz vulva lezyonu hangisidir?\n\n**A)** Liken skleroz · **B)** dVIN · **C)** Paget hastalığı · **D)** Kondiloma lata · **E)** Skuamöz hücre hiperplazisi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Liken skleroz** — Liken sklerozda epidermis kalınlaşmaz, incelir; rete çıkıntıları kaybolur ve homojen dermal fibrozis gelişir.\n- **dVIN** — dVIN'de bazal tabakaya sınırlı anormal keratinizasyon ve sitolojik atipi vardır; tedavi edilmezse keratinize skuamöz hücreli karsinoma ilerler.\n- **Paget hastalığı** — Paget hastalığı atipik epitel hücrelerinin intraepidermal proliferasyonudur; klinikte kırmızı, pullu, kabuklu bir plak yapar.\n- **Kondiloma lata** — Kondiloma lata sekonder sifilizde Treponema pallidum ile oluşan düz, hafif kabarık lezyondur; kaşıma ile ilişkili değildir.\n- **Skuamöz hücre hiperplazisi** — Skuamöz hücre hiperplazisi doğru: şiddetli kaşıntıyı gidermek için ovma ve kaşımayla gelişir; akantoz ve hiperkeratoz vardır, mitoz artsa da atipi yoktur.\n\n**Cevap: E** — Skuamöz hücre hiperplazisi\n\n**Özet.** Skuamöz hücre hiperplazisi, eski adıyla liken simpleks kronikus, kaşıma ve ovmaya bağlı gelişir; akantoz ve hiperkeratoz gösterir ve sitolojik atipi içermez.",
    "ses": "Kaşıma ya da ovma sonucu gelişen, akantoz ve hiperkeratoz gösteren atipisiz vulva lezyonu hangisidir?\nA, Liken skleroz\nBe, Diferansiye vulvar intraepitelyal neoplazi\nCe, Peycet hastalığı\nDe, Kondiloma lata\nE, Skuamöz hücre hiperplazisi\nŞıkları sırasıyla gözden geçirelim.\nLiken sklerozda epidermis kalınlaşmaz, incelir. Rete çıkıntıları kaybolur ve homojen dermal fibrozis gelişir.\nDiferansiye vulvar intraepitelyal neoplazide bazal tabakaya sınırlı anormal keratinizasyon ve sitolojik atipi vardır. Tedavi edilmezse keratinize skuamöz hücreli karsinoma ilerler.\nPeycet hastalığı atipik epitel hücrelerinin intraepidermal proliferasyonudur. Klinikte kırmızı, pullu, kabuklu bir plak yapar.\nKondiloma lata sekonder sifilizde Treponema pallidum ile oluşan düz, hafif kabarık lezyondur. Kaşıma ile ilişkili değildir.\nSkuamöz hücre hiperplazisi doğru. Şiddetli kaşıntıyı gidermek için ovma ve kaşımayla gelişir. Akantoz ve hiperkeratoz vardır, mitoz artsa da atipi yoktur.\nDoğru cevap E, Skuamöz hücre hiperplazisi\nSkuamöz hücre hiperplazisi, eski adıyla liken simpleks kronikus, kaşıma ve ovmaya bağlı gelişir. Akantoz ve hiperkeratoz gösterir ve sitolojik atipi içermez.",
    "kelime": 165
@@ -90,18 +117,24 @@
     "E": "Steroid krem"
    },
    "dogru": "A",
+   "ipucu": "Aynı beyaz görünümün psoriasisten invaziv karsinoma kadar çok farklı lezyonlarda çıkabildiğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Biyopsi doğru: lökoplaki benign hastalıklarda da, karsinoma in situ ve invaziv karsinomda da görülür; her lökoplakide mikroskobik inceleme zorunludur.",
-    "B": "Vulvada antibiyotik ve cerrahi drenaj daha çok Bartholin kisti ve apsesinde gerekebilir. Antibiyotik bu sorudaki ayrımı sağlamaz.",
+    "B": "Antibiyotik tedavisi bakteriyel bartolinit veya folikülit gibi akut enfeksiyöz tablolarda kullanılır; vulvada beyaz plak (lökoplaki) görünümü liken skleroz, skuamöz hiperplazi gibi benign lezyonlardan VIN ve invaziv karsinoma kadar pek çok tabloda görülebildiğinden ilk yapılması gereken işlem kesin histolojik tanı için biyopsidir.",
     "C": "Gözlem yeterli değildir; lökoplakinin altında skuamöz hücreli karsinoma in situ ya da invaziv skuamöz hücreli karsinom bulunabilir.",
-    "D": "Beyaz lezyonun doğası bilinmeden ayırıcı tanı yapılamaz, liken skleroz ile skuamöz hücre hiperplazisi bile mikroskopla ayrılır. Kriyoterapi bu sorudaki ayrımı sağlamaz.",
+    "D": "Kriyoterapi doku tahribi yaptığı için patolojik inceleme olanağını ortadan kaldırır ve tanı konmadan uygulanamaz; vulvada lökoplaki ile başvuran hastada maligniteyi veya öncü lezyonu dışlamak için ilk adım mutlaka biyopsi ve mikroskopik incelemedir.",
     "E": "Steroid krem ilk adım değildir; liken planus gibi benign bir lezyon da neoplastik bir lezyon da aynı lökoplaki görünümünü verebilir."
    },
    "ozet": "Lökoplaki psoriasis ve liken planus gibi benign hastalıklarda da, karsinoma in situ ve invaziv karsinomda da görülür; bu yüzden her lökoplakide biyopsi ve mikroskobik inceleme zorunludur.",
-   "metin": "**Soru.** Vulvada lökoplaki saptanan hastada ilk yapılması gereken hangisidir?\n\n**A)** Biyopsi · **B)** Antibiyotik · **C)** Gözlem · **D)** Kriyoterapi · **E)** Steroid krem\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Biyopsi** — Biyopsi doğru: lökoplaki benign hastalıklarda da, karsinoma in situ ve invaziv karsinomda da görülür; her lökoplakide mikroskobik inceleme zorunludur.\n- **Antibiyotik** — Vulvada antibiyotik ve cerrahi drenaj daha çok Bartholin kisti ve apsesinde gerekebilir. Antibiyotik bu sorudaki ayrımı sağlamaz.\n- **Gözlem** — Gözlem yeterli değildir; lökoplakinin altında skuamöz hücreli karsinoma in situ ya da invaziv skuamöz hücreli karsinom bulunabilir.\n- **Kriyoterapi** — Beyaz lezyonun doğası bilinmeden ayırıcı tanı yapılamaz, liken skleroz ile skuamöz hücre hiperplazisi bile mikroskopla ayrılır. Kriyoterapi bu sorudaki ayrımı sağlamaz.\n- **Steroid krem** — Steroid krem ilk adım değildir; liken planus gibi benign bir lezyon da neoplastik bir lezyon da aynı lökoplaki görünümünü verebilir.\n\n**Cevap: A** — Biyopsi\n\n**Özet.** Lökoplaki psoriasis ve liken planus gibi benign hastalıklarda da, karsinoma in situ ve invaziv karsinomda da görülür; bu yüzden her lökoplakide biyopsi ve mikroskobik inceleme zorunludur.",
-   "ses": "Vulvada lökoplaki saptanan hastada ilk yapılması gereken hangisidir?\nA, Biyopsi\nBe, Antibiyotik\nCe, Gözlem\nDe, Kriyoterapi\nE, Steroid krem\nŞimdi seçeneklere tek tek bakalım.\nBiyopsi doğru. Lökoplaki benign hastalıklarda da, karsinoma in situ ve invaziv karsinomda da görülür. Her lökoplakide mikroskobik inceleme zorunludur.\nVulvada antibiyotik ve cerrahi drenaj daha çok Bartolin kisti ve apsesinde gerekebilir. Antibiyotik bu sorudaki ayrımı sağlamaz.\nGözlem yeterli değildir. Lökoplakinin altında skuamöz hücreli karsinoma in situ ya da invaziv skuamöz hücreli karsinom bulunabilir.\nBeyaz lezyonun doğası bilinmeden ayırıcı tanı yapılamaz, liken skleroz ile skuamöz hücre hiperplazisi bile mikroskopla ayrılır. Kriyoterapi bu sorudaki ayrımı sağlamaz.\nSteroid krem ilk adım değildir. Liken planus gibi benign bir lezyon da neoplastik bir lezyon da aynı lökoplaki görünümünü verebilir.\nDoğru cevap A, Biyopsi\nLökoplaki psoriazis ve liken planus gibi benign hastalıklarda da, karsinoma in situ ve invaziv karsinomda da görülür. Bu yüzden her lökoplakide biyopsi ve mikroskobik inceleme zorunludur.",
-   "kelime": 171
+   "sayfa": [
+    27,
+    16,
+    15
+   ],
+   "metin": "**Soru.** Vulvada lökoplaki saptanan hastada ilk yapılması gereken hangisidir?\n\n**A)** Biyopsi · **B)** Antibiyotik · **C)** Gözlem · **D)** Kriyoterapi · **E)** Steroid krem\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Biyopsi** — Biyopsi doğru: lökoplaki benign hastalıklarda da, karsinoma in situ ve invaziv karsinomda da görülür; her lökoplakide mikroskobik inceleme zorunludur.\n- **Antibiyotik** — Antibiyotik tedavisi bakteriyel bartolinit veya folikülit gibi akut enfeksiyöz tablolarda kullanılır; vulvada beyaz plak (lökoplaki) görünümü liken skleroz, skuamöz hiperplazi gibi benign lezyonlardan VIN ve invaziv karsinoma kadar pek çok tabloda görülebildiğinden ilk yapılması gereken işlem kesin histolojik tanı için biyopsidir.\n- **Gözlem** — Gözlem yeterli değildir; lökoplakinin altında skuamöz hücreli karsinoma in situ ya da invaziv skuamöz hücreli karsinom bulunabilir.\n- **Kriyoterapi** — Kriyoterapi doku tahribi yaptığı için patolojik inceleme olanağını ortadan kaldırır ve tanı konmadan uygulanamaz; vulvada lökoplaki ile başvuran hastada maligniteyi veya öncü lezyonu dışlamak için ilk adım mutlaka biyopsi ve mikroskopik incelemedir.\n- **Steroid krem** — Steroid krem ilk adım değildir; liken planus gibi benign bir lezyon da neoplastik bir lezyon da aynı lökoplaki görünümünü verebilir.\n\n**Cevap: A** — Biyopsi\n\n**Özet.** Lökoplaki psoriasis ve liken planus gibi benign hastalıklarda da, karsinoma in situ ve invaziv karsinomda da görülür; bu yüzden her lökoplakide biyopsi ve mikroskobik inceleme zorunludur.",
+   "ses": "Vulvada lökoplaki saptanan hastada ilk yapılması gereken hangisidir?\nA, Biyopsi\nBe, Antibiyotik\nCe, Gözlem\nDe, Kriyoterapi\nE, Steroid krem\nŞimdi seçeneklere tek tek bakalım.\nBiyopsi doğru. Lökoplaki benign hastalıklarda da, karsinoma in situ ve invaziv karsinomda da görülür. Her lökoplakide mikroskobik inceleme zorunludur.\nAntibiyotik tedavisi bakteriyel bartolinit veya folikülit gibi akut enfeksiyöz tablolarda kullanılır. Vulvada beyaz plak, lökoplaki, görünümü liken skleroz, skuamöz hiperplazi gibi benign lezyonlardan ve i ne ve invaziv karsinoma kadar pek çok tabloda görülebildiğinden ilk yapılması gereken işlem kesin histolojik tanı için biyopsidir.\nGözlem yeterli değildir. Lökoplakinin altında skuamöz hücreli karsinoma in situ ya da invaziv skuamöz hücreli karsinom bulunabilir.\nKriyoterapi doku tahribi yaptığı için patolojik inceleme olanağını ortadan kaldırır ve tanı konmadan uygulanamaz. Vulvada lökoplaki ile başvuran hastada maligniteyi veya öncü lezyonu dışlamak için ilk adım mutlaka biyopsi ve mikroskopik incelemedir.\nSteroid krem ilk adım değildir. Liken planus gibi benign bir lezyon da neoplastik bir lezyon da aynı lökoplaki görünümünü verebilir.\nDoğru cevap A, Biyopsi\nLökoplaki psoriazis ve liken planus gibi benign hastalıklarda da, karsinoma in situ ve invaziv karsinomda da görülür. Bu yüzden her lökoplakide biyopsi ve mikroskobik inceleme zorunludur.",
+   "kelime": 206
   },
   {
    "no": 5,
@@ -115,6 +148,7 @@
     "E": "Gartner kisti"
    },
    "dogru": "B",
+   "ipucu": "Treponema pallidum'un ikinci evresinde görülen, sifiliz tedavisiyle gerileyen ve günümüzde nadir olan lezyonu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Kondiloma akuminatum en yaygın kondilom tipidir; düşük riskli HPV tip 6 ve 11 ile oluşur, sifilizle ilişkili değildir.",
@@ -124,6 +158,14 @@
     "E": "Gartner kisti lateral vajinal duvarda, kalıcı Wolffian kanal kalıntısından gelişen benign bir kisttir."
    },
    "ozet": "Cinsel yolla bulaşan iki kondilomdan kondiloma lata sekonder sifilizde Treponema pallidum ile oluşur ve düz, hafif kabarıktır; kondiloma akuminatum ise HPV tip 6 ve 11 ile oluşur.",
+   "sayfa": [
+    30,
+    31,
+    32,
+    15,
+    27,
+    61
+   ],
    "metin": "**Soru.** Sekonder sifilizde görülen düz, hafif kabarık kondilom hangisidir?\n\n**A)** Kondiloma akuminatum · **B)** Kondiloma lata · **C)** Bartholin kisti · **D)** Liken planus · **E)** Gartner kisti\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kondiloma akuminatum** — Kondiloma akuminatum en yaygın kondilom tipidir; düşük riskli HPV tip 6 ve 11 ile oluşur, sifilizle ilişkili değildir.\n- **Kondiloma lata** — Kondiloma lata doğru: sekonder sifilizde Treponema pallidum ile oluşan düz, hafif kabarık lezyondur; sifiliz tedavisiyle geriler.\n- **Bartholin kisti** — Bartholin kisti salgı kanalının tıkanmasıyla bezin ağrılı genişlemesidir; sıkça apse gelişir ve vulvitin önemli bir komplikasyonudur.\n- **Liken planus** — Liken planus lökoplaki yapabilen benign bir hastalıktır; cinsel yolla bulaşan bir kondilom değildir.\n- **Gartner kisti** — Gartner kisti lateral vajinal duvarda, kalıcı Wolffian kanal kalıntısından gelişen benign bir kisttir.\n\n**Cevap: B** — Kondiloma lata\n\n**Özet.** Cinsel yolla bulaşan iki kondilomdan kondiloma lata sekonder sifilizde Treponema pallidum ile oluşur ve düz, hafif kabarıktır; kondiloma akuminatum ise HPV tip 6 ve 11 ile oluşur.",
    "ses": "Sekonder sifilizde görülen düz, hafif kabarık kondilom hangisidir?\nA, Kondiloma akuminatum\nBe, Kondiloma lata\nCe, Bartolin kisti\nDe, Liken planus\nE, Gartner kisti\nSeçenekleri sırayla değerlendirelim.\nKondiloma akuminatum en yaygın kondilom tipidir. Düşük riskli ha pe ve tip altı ve on bir ile oluşur, sifilizle ilişkili değildir.\nKondiloma lata doğru. Sekonder sifilizde Treponema pallidum ile oluşan düz, hafif kabarık lezyondur. Sifiliz tedavisiyle geriler.\nBartolin kisti salgı kanalının tıkanmasıyla bezin ağrılı genişlemesidir. Sıkça apse gelişir ve vulvitin önemli bir komplikasyonudur.\nLiken planus lökoplaki yapabilen benign bir hastalıktır. Cinsel yolla bulaşan bir kondilom değildir.\nGartner kisti lateral vajinal duvarda, kalıcı Volfiyen kanal kalıntısından gelişen benign bir kisttir.\nDoğru cevap Be, Kondiloma lata\nCinsel yolla bulaşan iki kondilomdan kondiloma lata, sekonder sifilizde Treponema pallidum ile oluşur ve düz, hafif kabarıktır. Kondiloma akuminatum ise ha pe ve tip altı ve on bir ile oluşur.",
    "kelime": 161
@@ -140,6 +182,7 @@
     "E": "Dermal fibrozis"
    },
    "dogru": "C",
+   "ipucu": "Mantar, bakteri, tümör hücresi ve fibrozis bulgularından ayrı olarak, virüsün skuamöz hücre çekirdeğinde yaptığı değişikliği düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "İpucu hücreleri, yüzeyi kokobasillerle kaplı yassı epitel hücreleridir; Gardnerella vaginalisin yaptığı bakteriyel vajinozda görülür.",
@@ -149,6 +192,14 @@
     "E": "Hücresiz, homojen dermal fibrozis liken sklerozun bulgusudur; epidermis incelmesi ve rete kaybıyla birliktedir."
    },
    "ozet": "Kondiloma akuminatumda papiller ekzofitik yapı üzerinde kalınlaşmış skuamöz epitel ve koilositik atipi, yani büyümüş buruşuk hiperkromatik çekirdek ile perinükleer halo görülür.",
+   "sayfa": [
+    35,
+    36,
+    72,
+    66,
+    55,
+    18
+   ],
    "metin": "**Soru.** Kondiloma akuminatumda HPV sitopatik etkisini gösteren bulgu hangisidir?\n\n**A)** İpucu hücreleri · **B)** Hif formları · **C)** Koilositik atipi · **D)** Paget hücreleri · **E)** Dermal fibrozis\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **İpucu hücreleri** — İpucu hücreleri, yüzeyi kokobasillerle kaplı yassı epitel hücreleridir; Gardnerella vaginalisin yaptığı bakteriyel vajinozda görülür.\n- **Hif formları** — Hif formları Candida albicans vajinitinde Papanicolaou testiyle gösterilir; viral bir sitopatik etki değildir.\n- **Koilositik atipi** — Koilositik atipi doğru: büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo HPV'nin sitopatik etkisidir.\n- **Paget hücreleri** — Paget hücreleri bol, soluk, ince granüllü sitoplazmalı büyük atipik hücrelerdir; ekstramammary Paget hastalığında epidermise yayılır.\n- **Dermal fibrozis** — Hücresiz, homojen dermal fibrozis liken sklerozun bulgusudur; epidermis incelmesi ve rete kaybıyla birliktedir.\n\n**Cevap: C** — Koilositik atipi\n\n**Özet.** Kondiloma akuminatumda papiller ekzofitik yapı üzerinde kalınlaşmış skuamöz epitel ve koilositik atipi, yani büyümüş buruşuk hiperkromatik çekirdek ile perinükleer halo görülür.",
    "ses": "Kondiloma akuminatumda ha pe ve sitopatik etkisini gösteren bulgu hangisidir?\nA, İpucu hücreleri\nBe, Hif formları\nCe, Koilositik atipi\nDe, Peycet hücreleri\nE, Dermal fibrozis\nHer seçeneği tek tek ele alalım.\nİpucu hücreleri, yüzeyi kokobasillerle kaplı yassı epitel hücreleridir. Gardnerella vajinalisin yaptığı bakteriyel vajinozda görülür.\nHif formları Kandida albikans vajinitinde Papanikolau testiyle gösterilir. Viral bir sitopatik etki değildir.\nKoilositik atipi doğru. Büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo ha pe venin sitopatik etkisidir.\nPeycet hücreleri bol, soluk, ince granüllü sitoplazmalı büyük atipik hücrelerdir. Ekstramamari Peycet hastalığında epidermise yayılır.\nHücresiz, homojen dermal fibrozis liken sklerozun bulgusudur. Epidermis incelmesi ve rete kaybıyla birliktedir.\nDoğru cevap Ce, Koilositik atipi\nKondiloma akuminatumda papiller ekzofitik yapı üzerinde kalınlaşmış skuamöz epitel ve koilositik atipi, yani büyümüş buruşuk hiperkromatik çekirdek ile perinükleer halo görülür.",
    "kelime": 151
@@ -165,6 +216,7 @@
     "E": "Bartholin kisti"
    },
    "dogru": "D",
+   "ipucu": "HPV ile ilişkili yolun öncülünü, liken skleroz zemininde gelişen keratinize yolun öncülünden ayırt et.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Vulvar kondilomlar kansere dönüşmez; ancak vajina ve servikste HPV ilişkili prekanseröz lezyon riskini artırır.",
@@ -174,6 +226,16 @@
     "E": "Bartholin kisti bez kanalının tıkanmasıyla oluşan ve sıkça apseleşen bir lezyondur; neoplastik bir öncül değildir."
    },
    "ozet": "HPV negatif yolda uzun süreli liken skleroz ya da skuamöz hücre hiperplazisi zemininde dVIN gelişir; tedavi edilmezse iyi diferansiye keratinize skuamöz hücreli karsinoma ilerler.",
+   "sayfa": [
+    44,
+    45,
+    46,
+    40,
+    42,
+    52,
+    38,
+    15
+   ],
    "metin": "**Soru.** HPV negatif keratinize vulvar skuamöz hücreli karsinomun öncül lezyonu hangisidir?\n\n**A)** Kondiloma akuminatum · **B)** Bazaloid VIN · **C)** Paget hastalığı · **D)** Diferansiye VIN (dVIN) · **E)** Bartholin kisti\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kondiloma akuminatum** — Vulvar kondilomlar kansere dönüşmez; ancak vajina ve servikste HPV ilişkili prekanseröz lezyon riskini artırır.\n- **Bazaloid VIN** — Bazaloid lezyonlar yüksek riskli HPV ile ilişkili yolun parçasıdır; bu yolda VIN, bazaloid ya da siğil benzeri karsinomdan önce gelir.\n- **Paget hastalığı** — Paget hastalığı vulvada çoğunlukla primer intraepidermal bir süreçtir; keratinize skuamöz hücreli karsinomun öncülü değildir.\n- **Diferansiye VIN (dVIN)** — Diferansiye VIN doğru: liken skleroz zemininde bazal tabakaya sınırlı anormal keratinizasyon ve atipiyle başlar, iyi diferansiye keratinize karsinoma ilerler.\n- **Bartholin kisti** — Bartholin kisti bez kanalının tıkanmasıyla oluşan ve sıkça apseleşen bir lezyondur; neoplastik bir öncül değildir.\n\n**Cevap: D** — Diferansiye VIN (dVIN)\n\n**Özet.** HPV negatif yolda uzun süreli liken skleroz ya da skuamöz hücre hiperplazisi zemininde dVIN gelişir; tedavi edilmezse iyi diferansiye keratinize skuamöz hücreli karsinoma ilerler.",
    "ses": "Ha pe ve negatif keratinize vulvar skuamöz hücreli karsinomun öncül lezyonu hangisidir?\nA, Kondiloma akuminatum\nBe, Bazaloid vulvar intraepitelyal neoplazi\nCe, Peycet hastalığı\nDe, Diferansiye vulvar intraepitelyal neoplazi\nE, Bartolin kisti\nŞıkları sırasıyla gözden geçirelim.\nVulvar kondilomlar kansere dönüşmez. Ancak vajina ve servikste ha pe ve ilişkili prekanseröz lezyon riskini artırır.\nBazaloid lezyonlar yüksek riskli ha pe ve ile ilişkili yolun parçasıdır. Bu yolda vulvar intraepitelyal neoplazi, bazaloid ya da siğil benzeri karsinomdan önce gelir.\nPeycet hastalığı vulvada çoğunlukla primer intraepidermal bir süreçtir. Keratinize skuamöz hücreli karsinomun öncülü değildir.\nDiferansiye vulvar intraepitelyal neoplazi doğru. Liken skleroz zemininde bazal tabakaya sınırlı anormal keratinizasyon ve atipiyle başlar, iyi diferansiye keratinize karsinoma ilerler.\nBartolin kisti bez kanalının tıkanmasıyla oluşan ve sıkça apseleşen bir lezyondur. Neoplastik bir öncül değildir.\nDoğru cevap De, Diferansiye vulvar intraepitelyal neoplazi\nHa pe ve negatif yolda, uzun süreli liken skleroz ya da skuamöz hücre hiperplazisi zemininde diferansiye vulvar intraepitelyal neoplazi gelişir. Tedavi edilmezse iyi diferansiye keratinize skuamöz hücreli karsinoma ilerler.",
    "kelime": 170
@@ -190,6 +252,7 @@
     "E": "Sıklıkla multifokal, siğil benzeri"
    },
    "dogru": "E",
+   "ipucu": "HPV pozitif ve negatif tümörleri odak sayısı, diferansiyasyon derecesi ve görünüm açısından karşılaştır.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Genellikle unifokal olmak HPV negatif tümörlerin özelliğidir; HPV pozitif lezyonlar çoğunlukla çok odaklıdır.",
@@ -199,6 +262,13 @@
     "E": "Sıklıkla multifokal, siğil benzeri doğru: HPV tip 16 ile ilişkili bu tümörler sıklıkla çok odaklı, siğil benzeri ve genellikle kötü diferansiyedir."
    },
    "ozet": "HPV pozitif vulvar karsinom HPV tip 16 ile ilişkilidir ve ortalama yaşı yaklaşık 60'tır; sıklıkla multifokal, siğil benzeri ve kötü diferansiyedir, HPV negatif form ise unifokal ve keratinizedir.",
+   "sayfa": [
+    48,
+    41,
+    44,
+    40,
+    42
+   ],
    "metin": "**Soru.** HPV pozitif vulvar karsinom için doğru olan hangisidir?\n\n**A)** Genellikle unifokal · **B)** Ortalama yaş ~75 · **C)** İyi diferansiye keratinize · **D)** Liken skleroz zemininde · **E)** Sıklıkla multifokal, siğil benzeri\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Genellikle unifokal** — Genellikle unifokal olmak HPV negatif tümörlerin özelliğidir; HPV pozitif lezyonlar çoğunlukla çok odaklıdır.\n- **Ortalama yaş ~75** — Ortalama yaşın yaklaşık 75 olması HPV negatif keratinize karsinoma aittir; HPV pozitif formda ortalama yaş yaklaşık 60'tır.\n- **İyi diferansiye keratinize** — İyi diferansiye, keratinize tümör HPV negatif yolun ürünüdür; HPV pozitif tümörler genellikle kötü diferansiyedir.\n- **Liken skleroz zemininde** — Liken skleroz ya da skuamöz hücre hiperplazisi zemini HPV negatif keratinize karsinomun özelliğidir; HPV pozitif formun öncülü VIN'dir.\n- **Sıklıkla multifokal, siğil benzeri** — Sıklıkla multifokal, siğil benzeri doğru: HPV tip 16 ile ilişkili bu tümörler sıklıkla çok odaklı, siğil benzeri ve genellikle kötü diferansiyedir.\n\n**Cevap: E** — Sıklıkla multifokal, siğil benzeri\n\n**Özet.** HPV pozitif vulvar karsinom HPV tip 16 ile ilişkilidir ve ortalama yaşı yaklaşık 60'tır; sıklıkla multifokal, siğil benzeri ve kötü diferansiyedir, HPV negatif form ise unifokal ve keratinizedir.",
    "ses": "Ha pe ve pozitif vulvar karsinom için doğru olan hangisidir?\nA, Genellikle unifokal\nBe, Ortalama yaş yaklaşık yetmiş beş\nCe, İyi diferansiye keratinize\nDe, Liken skleroz zemininde\nE, Sıklıkla multifokal, siğil benzeri\nŞimdi seçeneklere tek tek bakalım.\nGenellikle unifokal olmak ha pe ve negatif tümörlerin özelliğidir. Ha pe ve pozitif lezyonlar çoğunlukla çok odaklıdır.\nOrtalama yaşın yaklaşık yetmiş beş olması ha pe ve negatif keratinize karsinoma aittir. Ha pe ve pozitif formda ortalama yaş yaklaşık altmıştır.\nİyi diferansiye, keratinize tümör ha pe ve negatif yolun ürünüdür. Ha pe ve pozitif tümörler genellikle kötü diferansiyedir.\nLiken skleroz ya da skuamöz hücre hiperplazisi zemini ha pe ve negatif keratinize karsinomun özelliğidir. Ha pe ve pozitif formun öncülü vulvar intraepitelyal neoplazidir.\nSıklıkla multifokal, siğil benzeri doğru. Ha pe ve tip on altı ile ilişkili bu tümörler sıklıkla çok odaklı, siğil benzeri ve genellikle kötü diferansiyedir.\nDoğru cevap E, Sıklıkla multifokal, siğil benzeri\nHa pe ve pozitif vulvar karsinom ha pe ve tip on altı ile ilişkilidir ve ortalama yaşı yaklaşık altmıştır. Sıklıkla multifokal, siğil benzeri ve kötü diferansiyedir, negatif form ise unifokal ve keratinizedir.",
    "kelime": 183
@@ -215,18 +285,25 @@
     "E": "Erkeklerde görülmesi"
    },
    "dogru": "A",
+   "ipucu": "Meme ucundaki formun daima bir duktal meme karsinomuna bağlı olduğunu, vulvadakinin ise nereden köken aldığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Çoğunlukla altta tümör olmaması doğru: vulva Paget hastalığı çoğunlukla primer intraepidermal bir süreçtir; altta tümör ancak vakaların az bir kısmında bulunur.",
     "B": "Her zaman altta duktal karsinom bulunması meme ucu Paget hastalığının özelliğidir; vulvadaki formu ayırt eden bu değildir.",
     "C": "Hızla metastaz bu hastalığın seyri değil; vulva Paget hastalığı invazyon ya da metastaz olmadan yıllarca sürebilir.",
-    "D": "HPV ilişkisi ile karıştırılabilir: Vulva Paget hücrelerinin olası kökeni, vulva derisi kanallarındaki multipotent hücrelerdir.",
+    "D": "Ne meme ne de vulva Paget hastalığı HPV enfeksiyonu ile ilişkilidir; meme başı Paget hastalığında olguların neredeyse tamamında altta duktal karsinoma in situ veya invaziv meme karsinomu bulunurken, vulva Paget hastalığında olguların büyük çoğunluğunda altta bir iç organ/deri eki karsinomu saptanmaz ve lezyon epidermis içinde sınırlı kalır.",
     "E": "Erkeklerde görülmesi bu iki formu ayıran özellik değil; ayrım, altta yatan bir karsinomun bulunup bulunmamasına dayanır."
    },
    "ozet": "Meme ucu Paget hastalığı her zaman altta duktal meme karsinomuyla ilişkilidir; vulva Paget hastalığında ise altta tümör az sayıda olguda bulunur, çoğu primer intraepidermal süreçtir.",
-   "metin": "**Soru.** Vulva Paget hastalığını meme ucu Paget hastalığından ayıran özellik hangisidir?\n\n**A)** Çoğunlukla altta tümör olmaması · **B)** Her zaman duktal karsinom · **C)** Hızla metastaz · **D)** HPV ilişkisi · **E)** Erkeklerde görülmesi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Çoğunlukla altta tümör olmaması** — Çoğunlukla altta tümör olmaması doğru: vulva Paget hastalığı çoğunlukla primer intraepidermal bir süreçtir; altta tümör ancak vakaların az bir kısmında bulunur.\n- **Her zaman duktal karsinom** — Her zaman altta duktal karsinom bulunması meme ucu Paget hastalığının özelliğidir; vulvadaki formu ayırt eden bu değildir.\n- **Hızla metastaz** — Hızla metastaz bu hastalığın seyri değil; vulva Paget hastalığı invazyon ya da metastaz olmadan yıllarca sürebilir.\n- **HPV ilişkisi** — HPV ilişkisi ile karıştırılabilir: Vulva Paget hücrelerinin olası kökeni, vulva derisi kanallarındaki multipotent hücrelerdir.\n- **Erkeklerde görülmesi** — Erkeklerde görülmesi bu iki formu ayıran özellik değil; ayrım, altta yatan bir karsinomun bulunup bulunmamasına dayanır.\n\n**Cevap: A** — Çoğunlukla altta tümör olmaması\n\n**Özet.** Meme ucu Paget hastalığı her zaman altta duktal meme karsinomuyla ilişkilidir; vulva Paget hastalığında ise altta tümör az sayıda olguda bulunur, çoğu primer intraepidermal süreçtir.",
-   "ses": "Vulva Peycet hastalığını meme ucu Peycet hastalığından ayıran özellik hangisidir?\nA, Çoğunlukla altta tümör olmaması\nBe, Her zaman duktal karsinom\nCe, Hızla metastaz\nDe, Ha pe ve ilişkisi\nE, Erkeklerde görülmesi\nSeçenekleri sırayla değerlendirelim.\nÇoğunlukla altta tümör olmaması doğru. Vulva Peycet hastalığı çoğunlukla primer intraepidermal bir süreçtir. Altta tümör ancak vakaların az bir kısmında bulunur.\nHer zaman altta duktal karsinom bulunması meme ucu Peycet hastalığının özelliğidir. Vulvadaki formu ayırt eden bu değildir.\nHızla metastaz bu hastalığın seyri değil. Vulva Peycet hastalığı invazyon ya da metastaz olmadan yıllarca sürebilir.\nHPV ilişkisi ile karıştırılabilir. Vulva Peycet hücrelerinin olası kökeni, vulva derisi kanallarındaki multipotent hücrelerdir.\nErkeklerde görülmesi bu iki formu ayıran özellik değil. Ayrım, altta yatan bir karsinomun bulunup bulunmamasına dayanır.\nDoğru cevap A, Çoğunlukla altta tümör olmaması\nMeme ucu Peycet hastalığı her zaman altta duktal meme karsinomuyla ilişkilidir. Vulva Peycet hastalığında ise altta tümör az sayıda olguda bulunur, çoğu primer intraepidermal süreçtir.",
-   "kelime": 179
+   "sayfa": [
+    51,
+    52,
+    53,
+    57
+   ],
+   "metin": "**Soru.** Vulva Paget hastalığını meme ucu Paget hastalığından ayıran özellik hangisidir?\n\n**A)** Çoğunlukla altta tümör olmaması · **B)** Her zaman duktal karsinom · **C)** Hızla metastaz · **D)** HPV ilişkisi · **E)** Erkeklerde görülmesi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Çoğunlukla altta tümör olmaması** — Çoğunlukla altta tümör olmaması doğru: vulva Paget hastalığı çoğunlukla primer intraepidermal bir süreçtir; altta tümör ancak vakaların az bir kısmında bulunur.\n- **Her zaman duktal karsinom** — Her zaman altta duktal karsinom bulunması meme ucu Paget hastalığının özelliğidir; vulvadaki formu ayırt eden bu değildir.\n- **Hızla metastaz** — Hızla metastaz bu hastalığın seyri değil; vulva Paget hastalığı invazyon ya da metastaz olmadan yıllarca sürebilir.\n- **HPV ilişkisi** — Ne meme ne de vulva Paget hastalığı HPV enfeksiyonu ile ilişkilidir; meme başı Paget hastalığında olguların neredeyse tamamında altta duktal karsinoma in situ veya invaziv meme karsinomu bulunurken, vulva Paget hastalığında olguların büyük çoğunluğunda altta bir iç organ/deri eki karsinomu saptanmaz ve lezyon epidermis içinde sınırlı kalır.\n- **Erkeklerde görülmesi** — Erkeklerde görülmesi bu iki formu ayıran özellik değil; ayrım, altta yatan bir karsinomun bulunup bulunmamasına dayanır.\n\n**Cevap: A** — Çoğunlukla altta tümör olmaması\n\n**Özet.** Meme ucu Paget hastalığı her zaman altta duktal meme karsinomuyla ilişkilidir; vulva Paget hastalığında ise altta tümör az sayıda olguda bulunur, çoğu primer intraepidermal süreçtir.",
+   "ses": "Vulva Peycet hastalığını meme ucu Peycet hastalığından ayıran özellik hangisidir?\nA, Çoğunlukla altta tümör olmaması\nBe, Her zaman duktal karsinom\nCe, Hızla metastaz\nDe, Ha pe ve ilişkisi\nE, Erkeklerde görülmesi\nSeçenekleri sırayla değerlendirelim.\nÇoğunlukla altta tümör olmaması doğru. Vulva Peycet hastalığı çoğunlukla primer intraepidermal bir süreçtir. Altta tümör ancak vakaların az bir kısmında bulunur.\nHer zaman altta duktal karsinom bulunması meme ucu Peycet hastalığının özelliğidir. Vulvadaki formu ayırt eden bu değildir.\nHızla metastaz bu hastalığın seyri değil. Vulva Peycet hastalığı invazyon ya da metastaz olmadan yıllarca sürebilir.\nNe meme ne de vulva Paget hastalığı ha pe ve enfeksiyonu ile ilişkilidir. Meme başı Paget hastalığında olguların neredeyse tamamında altta duktal karsinoma in situ veya invaziv meme karsinomu bulunurken, vulva Paget hastalığında olguların büyük çoğunluğunda altta bir iç organ/deri eki karsinomu saptanmaz ve lezyon epidermis içinde sınırlı kalır.\nErkeklerde görülmesi bu iki formu ayıran özellik değil. Ayrım, altta yatan bir karsinomun bulunup bulunmamasına dayanır.\nDoğru cevap A, Çoğunlukla altta tümör olmaması\nMeme ucu Peycet hastalığı her zaman altta duktal meme karsinomuyla ilişkilidir. Vulva Peycet hastalığında ise altta tümör az sayıda olguda bulunur, çoğu primer intraepidermal süreçtir.",
+   "kelime": 212
   },
   {
    "no": 10,
@@ -240,18 +317,24 @@
     "E": "Nabothi kisti"
    },
    "dogru": "B",
+   "ipucu": "Lezyonun vulvada değil vajen yan duvarında yer aldığını ve embriyonik bir yapının artığından geliştiğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Bartholin kisti vulvada, bez salgı kanalının tıkanmasıyla oluşan ağrılı bez genişlemesidir; sıkça apseleşir.",
     "B": "Gartner kanal kisti doğru: lateral vajinal duvarda, kalıcı Wolffian kanal kalıntısından gelişir; çoğu benign ve asemptomatiktir.",
-    "C": "Basit kist ile karıştırılabilir: Wolffian kanal kalıntısından gelişen kist özel bir adla bilinir ve büyükse semptom verebilir.",
-    "D": "Yetişkinde vajina nadiren primer hastalık yeridir, daha sık komşu organ kanserleri ve enfeksiyonlarıyla tutulur. Epidermal kist bu sorudaki ayrımı sağlamaz.",
-    "E": "Nabothi kisti ile karıştırılabilir: Lateral vajinal duvardaki embriyonik kanal artığı kisti çoğunlukla belirti vermez, büyükse semptom yapar."
+    "C": "Basit kist organ parankiminde (örneğin böbrek korteksi veya overde) gelişen genel kistik lezyondur; embriyonik mezonefrik (Wolffian) kanal kalıntılarından vajina yan duvarları boyunca gelişen, kübik-kolumnar epitelle döşeli spesifik kist ise Gartner kanal kistidir.",
+    "D": "Epidermal inklüzyon kisti travma veya epizyotomi sonrası çok katlı yassı epitelin dermis altına gömülmesiyle oluşan ve keratin içeren kisttir; vajinanın anterolateral duvarında Wolffian (mezonefrik) kanal kalıntılarından gelişen embriyonik kist ise Gartner kanal kistidir.",
+    "E": "Nabothi kisti serviks transformasyon bölgesinde skuamöz metaplazinin endoservikal bez ağzını tıkamasıyla oluşan mukus dolu servikal retansiyon kistidir; vajina lateral duvarında Wolffian kanal kalıntısından gelişen kist ise Gartner kanal kistidir."
    },
    "ozet": "Gartner kanal kisti lateral vajinal duvarda kalıcı Wolffian kanal kalıntısından gelişir ve çoğu benign, asemptomatiktir; Bartholin kisti ise vulvada bez kanalının tıkanmasıyla oluşur.",
-   "metin": "**Soru.** Lateral vajinal duvarda Wolffian kanal kalıntısından gelişen kist hangisidir?\n\n**A)** Bartholin kisti · **B)** Gartner kanal kisti · **C)** Basit kist · **D)** Epidermal kist · **E)** Nabothi kisti\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Bartholin kisti** — Bartholin kisti vulvada, bez salgı kanalının tıkanmasıyla oluşan ağrılı bez genişlemesidir; sıkça apseleşir.\n- **Gartner kanal kisti** — Gartner kanal kisti doğru: lateral vajinal duvarda, kalıcı Wolffian kanal kalıntısından gelişir; çoğu benign ve asemptomatiktir.\n- **Basit kist** — Basit kist ile karıştırılabilir: Wolffian kanal kalıntısından gelişen kist özel bir adla bilinir ve büyükse semptom verebilir.\n- **Epidermal kist** — Yetişkinde vajina nadiren primer hastalık yeridir, daha sık komşu organ kanserleri ve enfeksiyonlarıyla tutulur. Epidermal kist bu sorudaki ayrımı sağlamaz.\n- **Nabothi kisti** — Nabothi kisti ile karıştırılabilir: Lateral vajinal duvardaki embriyonik kanal artığı kisti çoğunlukla belirti vermez, büyükse semptom yapar.\n\n**Cevap: B** — Gartner kanal kisti\n\n**Özet.** Gartner kanal kisti lateral vajinal duvarda kalıcı Wolffian kanal kalıntısından gelişir ve çoğu benign, asemptomatiktir; Bartholin kisti ise vulvada bez kanalının tıkanmasıyla oluşur.",
-   "ses": "Lateral vajinal duvarda Volfiyen kanal kalıntısından gelişen kist hangisidir?\nA, Bartolin kisti\nBe, Gartner kanal kisti\nCe, Basit kist\nDe, Epidermal kist\nE, Nabot kisti\nHer seçeneği tek tek ele alalım.\nBartolin kisti vulvada, bez salgı kanalının tıkanmasıyla oluşan ağrılı bez genişlemesidir. Sıkça apseleşir.\nGartner kanal kisti doğru. Lateral vajinal duvarda, kalıcı Volfiyen kanal kalıntısından gelişir. Çoğu benign ve asemptomatiktir.\nBasit kist ile karıştırılabilir. Volfiyen kanal kalıntısından gelişen kist özel bir adla bilinir ve büyükse semptom verebilir.\nYetişkinde vajina nadiren primer hastalık yeridir, daha sık komşu organ kanserleri ve enfeksiyonlarıyla tutulur. Epidermal kist bu sorudaki ayrımı sağlamaz.\nNabothi kisti ile karıştırılabilir. Lateral vajinal duvardaki embriyonik kanal artığı kisti çoğunlukla belirti vermez, büyükse semptom yapar.\nDoğru cevap Be, Gartner kanal kisti\nGartner kanal kisti lateral vajinal duvarda kalıcı Volfiyen kanal kalıntısından gelişir ve çoğu benign, asemptomatiktir. Bartolin kisti ise vulvada bez kanalının tıkanmasıyla oluşur.",
-   "kelime": 171
+   "sayfa": [
+    61,
+    15,
+    59
+   ],
+   "metin": "**Soru.** Lateral vajinal duvarda Wolffian kanal kalıntısından gelişen kist hangisidir?\n\n**A)** Bartholin kisti · **B)** Gartner kanal kisti · **C)** Basit kist · **D)** Epidermal kist · **E)** Nabothi kisti\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Bartholin kisti** — Bartholin kisti vulvada, bez salgı kanalının tıkanmasıyla oluşan ağrılı bez genişlemesidir; sıkça apseleşir.\n- **Gartner kanal kisti** — Gartner kanal kisti doğru: lateral vajinal duvarda, kalıcı Wolffian kanal kalıntısından gelişir; çoğu benign ve asemptomatiktir.\n- **Basit kist** — Basit kist organ parankiminde (örneğin böbrek korteksi veya overde) gelişen genel kistik lezyondur; embriyonik mezonefrik (Wolffian) kanal kalıntılarından vajina yan duvarları boyunca gelişen, kübik-kolumnar epitelle döşeli spesifik kist ise Gartner kanal kistidir.\n- **Epidermal kist** — Epidermal inklüzyon kisti travma veya epizyotomi sonrası çok katlı yassı epitelin dermis altına gömülmesiyle oluşan ve keratin içeren kisttir; vajinanın anterolateral duvarında Wolffian (mezonefrik) kanal kalıntılarından gelişen embriyonik kist ise Gartner kanal kistidir.\n- **Nabothi kisti** — Nabothi kisti serviks transformasyon bölgesinde skuamöz metaplazinin endoservikal bez ağzını tıkamasıyla oluşan mukus dolu servikal retansiyon kistidir; vajina lateral duvarında Wolffian kanal kalıntısından gelişen kist ise Gartner kanal kistidir.\n\n**Cevap: B** — Gartner kanal kisti\n\n**Özet.** Gartner kanal kisti lateral vajinal duvarda kalıcı Wolffian kanal kalıntısından gelişir ve çoğu benign, asemptomatiktir; Bartholin kisti ise vulvada bez kanalının tıkanmasıyla oluşur.",
+   "ses": "Lateral vajinal duvarda Volfiyen kanal kalıntısından gelişen kist hangisidir?\nA, Bartolin kisti\nBe, Gartner kanal kisti\nCe, Basit kist\nDe, Epidermal kist\nE, Nabot kisti\nHer seçeneği tek tek ele alalım.\nBartolin kisti vulvada, bez salgı kanalının tıkanmasıyla oluşan ağrılı bez genişlemesidir. Sıkça apseleşir.\nGartner kanal kisti doğru. Lateral vajinal duvarda, kalıcı Volfiyen kanal kalıntısından gelişir. Çoğu benign ve asemptomatiktir.\nBasit kist organ parankiminde, örneğin böbrek korteksi veya overde, gelişen genel kistik lezyondur. Embriyonik mezonefrik, Wolffian, kanal kalıntılarından vajina yan duvarları boyunca gelişen, kübik-kolumnar epitelle döşeli spesifik kist ise Gartner kanal kistidir.\nEpidermal inklüzyon kisti travma veya epizyotomi sonrası çok katlı yassı epitelin dermis altına gömülmesiyle oluşan ve keratin içeren kisttir. Vajinanın anterolateral duvarında Wolffian, mezonefrik, kanal kalıntılarından gelişen embriyonik kist ise Gartner kanal kistidir.\nNabothi kisti serviks transformasyon bölgesinde skuamöz metaplazinin endoservikal bez ağzını tıkamasıyla oluşan mukus dolu servikal retansiyon kistidir. Vajina lateral duvarında Wolffian kanal kalıntısından gelişen kist ise Gartner kanal kistidir.\nDoğru cevap Be, Gartner kanal kisti\nGartner kanal kisti lateral vajinal duvarda kalıcı Volfiyen kanal kalıntısından gelişir ve çoğu benign, asemptomatiktir. Bartolin kisti ise vulvada bez kanalının tıkanmasıyla oluşur.",
+   "kelime": 211
   },
   {
    "no": 11,
@@ -265,6 +348,7 @@
     "E": "HSV-2"
    },
    "dogru": "C",
+   "ipucu": "Yüzeyi kokobasillerle kaplanmış yassı epitel hücrelerini ve bu kokulu akıntıyı yapan gram negatif kokobasili düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Candida albicans vajinitinde kalın, beyaz, peynirimsi akıntı ve kaşıntı olur; tanı Pap testinde hif formlarıyla konur.",
@@ -274,6 +358,15 @@
     "E": "HSV-2 genital herpesin etkenidir; tekrarlayıcı seyirli ağrılı vezikül ve ülserler yapar ve persistan latent enfeksiyon olarak kalır."
    },
    "ozet": "Gardnerella vaginalis gram negatif bir kokobasildir ve bakteriyel vajinozun ana nedenidir; balık kokulu gri–beyaz akıntı yapar, yüzeyi kokobasillerle kaplı ipucu hücreleri tanıda ayırt edicidir.",
+   "sayfa": [
+    71,
+    72,
+    64,
+    66,
+    69,
+    11,
+    12
+   ],
    "metin": "**Soru.** Balık kokulu gri-beyaz akıntı ve ipucu hücreleri saptanan kadında en olası etken hangisidir?\n\n**A)** Candida albicans · **B)** Trichomonas vaginalis · **C)** Gardnerella vaginalis · **D)** Neisseria gonorrhoeae · **E)** HSV-2\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Candida albicans** — Candida albicans vajinitinde kalın, beyaz, peynirimsi akıntı ve kaşıntı olur; tanı Pap testinde hif formlarıyla konur.\n- **Trichomonas vaginalis** — Trichomonas vaginalis bol, sulu, gri–yeşil akıntı ve vulvar irritasyon yapar; tanı mikroskopide hareketli parazitin görülmesiyle konur.\n- **Gardnerella vaginalis** — Gardnerella vaginalis doğru: bakteriyel vajinozun ana nedenidir; ince, gri–beyaz, balık kokulu akıntı yapar ve ipucu hücrelerinin görülmesi tanıda ayırt edicidir.\n- **Neisseria gonorrhoeae** — Neisseria gonorrhoeae vulvada vulvovajinal bezlerin süpüratif enfeksiyonunu yapar; tanısında kültür ya da NAAT kullanılır.\n- **HSV-2** — HSV-2 genital herpesin etkenidir; tekrarlayıcı seyirli ağrılı vezikül ve ülserler yapar ve persistan latent enfeksiyon olarak kalır.\n\n**Cevap: C** — Gardnerella vaginalis\n\n**Özet.** Gardnerella vaginalis gram negatif bir kokobasildir ve bakteriyel vajinozun ana nedenidir; balık kokulu gri–beyaz akıntı yapar, yüzeyi kokobasillerle kaplı ipucu hücreleri tanıda ayırt edicidir.",
    "ses": "Balık kokulu gri beyaz akıntı ve ipucu hücreleri saptanan kadında en olası etken hangisidir?\nA, Kandida albikans\nBe, Trikomonas vajinalis\nCe, Gardnerella vajinalis\nDe, Neisserya gonorea\nE, Ha se ve iki\nŞıkları sırasıyla gözden geçirelim.\nKandida albikans vajinitinde kalın, beyaz, peynirimsi akıntı ve kaşıntı olur. Tanı pap testinde hif formlarıyla konur.\nTrikomonas vajinalis bol, sulu, gri yeşil akıntı ve vulvar irritasyon yapar. Tanı mikroskopide hareketli parazitin görülmesiyle konur.\nGardnerella vajinalis doğru. Bakteriyel vajinozun ana nedenidir. İnce, gri beyaz, balık kokulu akıntı yapar ve ipucu hücrelerinin görülmesi tanıda ayırt edicidir.\nNeisserya gonorea vulvada vulvovajinal bezlerin süpüratif enfeksiyonunu yapar. Tanısında kültür ya da nükleik asit amplifikasyon testi kullanılır.\nHa se ve iki genital herpesin etkenidir. Tekrarlayıcı seyirli ağrılı vezikül ve ülserler yapar ve persistan latent enfeksiyon olarak kalır.\nDoğru cevap Ce, Gardnerella vajinalis\nGardnerella vajinalis gram negatif bir kokobasildir ve bakteriyel vajinozun ana nedenidir. Balık kokulu gri beyaz akıntı yapar, yüzeyi kokobasillerle kaplı ipucu hücreleri tanıda ayırt edicidir.",
    "kelime": 169
@@ -290,22 +383,31 @@
     "E": "Melanom"
    },
    "dogru": "D",
+   "ipucu": "Erişkindeki skuamöz karsinomların aksine, küçük çocukta vajinada görülen ve idrar kesesi ile safra kanallarında da çıkabilen nadir sarkomu düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Vajinal skuamöz hücreli karsinom yüksek riskli HPV ile ilişkilidir; en büyük risk faktörü daha önce serviks ya da vulva karsinomu öyküsüdür.",
     "B": "Adenokarsinom bu yaş grubunun vajinal tümörü değil; vajinanın neredeyse tüm primer karsinomları skuamöz hücreli karsinomdur.",
-    "C": "Leiomiyosarkom ile karıştırılabilir: Küçük çocuklardaki bu vajinal tümör aynı histogenezle idrar kesesi ve safra kanallarında da görülebilir.",
+    "C": "Leiomiyosarkom erişkin kadınlarda miyometriyum veya vajina düz kasından gelişen malign tümördür; 5 yaş altı kız çocuklarında vajina duvarından üzüm salkımı (polipoid) kitleler halinde lümene uzanan karakteristik malign mezenkimal tümör ise embriyonel rabdomiyosarkomdur (sarkoma botryoides).",
     "D": "Embriyonel rabdomiyosarkom doğru: sarkoma botryoides de denen bu nadir vajinal tümör malign embriyonel rabdomiyoblastlardan gelişir ve en sık 5 yaş altında görülür.",
-    "E": "Melanom ile karıştırılabilir: Vajina nadiren primer hastalık yeridir ve daha sık serviks, mesane ya da rektum kanserleri tarafından tutulur."
+    "E": "Malign melanom ileri yaş kadınlarda melanositlerden gelişen agresif bir tümördür; bebek ve 5 yaş altı kız çocuklarında vajinada kambiyum tabakası ve çizgili kas farklılaşması (rabdomiyoblast) gösteren karakteristik malign tümör ise embriyonel rabdomiyosarkomdur."
    },
    "ozet": "Embriyonel rabdomiyosarkom, yani sarkoma botryoides, malign embriyonel rabdomiyoblastlardan gelişir ve en sık 5 yaş altındaki çocuklarda görülür; idrar kesesi ve safra kanallarında da yerleşebilir.",
-   "metin": "**Soru.** 5 yaş altı kız çocukta vajinada görülen malign tümör hangisidir?\n\n**A)** Vajinal SCC · **B)** Adenokarsinom · **C)** Leiomiyosarkom · **D)** Embriyonel rabdomiyosarkom · **E)** Melanom\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Vajinal SCC** — Vajinal skuamöz hücreli karsinom yüksek riskli HPV ile ilişkilidir; en büyük risk faktörü daha önce serviks ya da vulva karsinomu öyküsüdür.\n- **Adenokarsinom** — Adenokarsinom bu yaş grubunun vajinal tümörü değil; vajinanın neredeyse tüm primer karsinomları skuamöz hücreli karsinomdur.\n- **Leiomiyosarkom** — Leiomiyosarkom ile karıştırılabilir: Küçük çocuklardaki bu vajinal tümör aynı histogenezle idrar kesesi ve safra kanallarında da görülebilir.\n- **Embriyonel rabdomiyosarkom** — Embriyonel rabdomiyosarkom doğru: sarkoma botryoides de denen bu nadir vajinal tümör malign embriyonel rabdomiyoblastlardan gelişir ve en sık 5 yaş altında görülür.\n- **Melanom** — Melanom ile karıştırılabilir: Vajina nadiren primer hastalık yeridir ve daha sık serviks, mesane ya da rektum kanserleri tarafından tutulur.\n\n**Cevap: D** — Embriyonel rabdomiyosarkom\n\n**Özet.** Embriyonel rabdomiyosarkom, yani sarkoma botryoides, malign embriyonel rabdomiyoblastlardan gelişir ve en sık 5 yaş altındaki çocuklarda görülür; idrar kesesi ve safra kanallarında da yerleşebilir.",
-   "ses": "Beş yaş altı kız çocukta vajinada görülen malign tümör hangisidir?\nA, Vajinal skuamöz hücreli karsinom\nBe, Adenokarsinom\nCe, Leiomiyosarkom\nDe, Embriyonel rabdomiyosarkom\nE, Melanom\nŞimdi seçeneklere tek tek bakalım.\nVajinal skuamöz hücreli karsinom yüksek riskli ha pe ve ile ilişkilidir. En büyük risk faktörü daha önce serviks ya da vulva karsinomu öyküsüdür.\nAdenokarsinom bu yaş grubunun vajinal tümörü değil. Vajinanın neredeyse tüm primer karsinomları skuamöz hücreli karsinomdur.\nLeiomiyosarkom ile karıştırılabilir. Küçük çocuklardaki bu vajinal tümör aynı histogenezle idrar kesesi ve safra kanallarında da görülebilir.\nEmbriyonel rabdomiyosarkom doğru. Sarkoma botriyoides de denen bu nadir vajinal tümör malign embriyonel rabdomiyoblastlardan gelişir ve en sık beş yaş altında görülür.\nMelanom ile karıştırılabilir. Vajina nadiren primer hastalık yeridir ve daha sık serviks, mesane ya da rektum kanserleri tarafından tutulur.\nDoğru cevap De, Embriyonel rabdomiyosarkom\nEmbriyonel rabdomiyosarkom, yani sarkoma botriyoides, malign embriyonel rabdomiyoblastlardan gelişir ve en sık beş yaş altındaki çocuklarda görülür. İdrar kesesi ve safra kanallarında da yerleşebilir.",
-   "kelime": 174
+   "sayfa": [
+    77,
+    78,
+    73,
+    75,
+    59
+   ],
+   "metin": "**Soru.** 5 yaş altı kız çocukta vajinada görülen malign tümör hangisidir?\n\n**A)** Vajinal SCC · **B)** Adenokarsinom · **C)** Leiomiyosarkom · **D)** Embriyonel rabdomiyosarkom · **E)** Melanom\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Vajinal SCC** — Vajinal skuamöz hücreli karsinom yüksek riskli HPV ile ilişkilidir; en büyük risk faktörü daha önce serviks ya da vulva karsinomu öyküsüdür.\n- **Adenokarsinom** — Adenokarsinom bu yaş grubunun vajinal tümörü değil; vajinanın neredeyse tüm primer karsinomları skuamöz hücreli karsinomdur.\n- **Leiomiyosarkom** — Leiomiyosarkom erişkin kadınlarda miyometriyum veya vajina düz kasından gelişen malign tümördür; 5 yaş altı kız çocuklarında vajina duvarından üzüm salkımı (polipoid) kitleler halinde lümene uzanan karakteristik malign mezenkimal tümör ise embriyonel rabdomiyosarkomdur (sarkoma botryoides).\n- **Embriyonel rabdomiyosarkom** — Embriyonel rabdomiyosarkom doğru: sarkoma botryoides de denen bu nadir vajinal tümör malign embriyonel rabdomiyoblastlardan gelişir ve en sık 5 yaş altında görülür.\n- **Melanom** — Malign melanom ileri yaş kadınlarda melanositlerden gelişen agresif bir tümördür; bebek ve 5 yaş altı kız çocuklarında vajinada kambiyum tabakası ve çizgili kas farklılaşması (rabdomiyoblast) gösteren karakteristik malign tümör ise embriyonel rabdomiyosarkomdur.\n\n**Cevap: D** — Embriyonel rabdomiyosarkom\n\n**Özet.** Embriyonel rabdomiyosarkom, yani sarkoma botryoides, malign embriyonel rabdomiyoblastlardan gelişir ve en sık 5 yaş altındaki çocuklarda görülür; idrar kesesi ve safra kanallarında da yerleşebilir.",
+   "ses": "Beş yaş altı kız çocukta vajinada görülen malign tümör hangisidir?\nA, Vajinal skuamöz hücreli karsinom\nBe, Adenokarsinom\nCe, Leiomiyosarkom\nDe, Embriyonel rabdomiyosarkom\nE, Melanom\nŞimdi seçeneklere tek tek bakalım.\nVajinal skuamöz hücreli karsinom yüksek riskli ha pe ve ile ilişkilidir. En büyük risk faktörü daha önce serviks ya da vulva karsinomu öyküsüdür.\nAdenokarsinom bu yaş grubunun vajinal tümörü değil. Vajinanın neredeyse tüm primer karsinomları skuamöz hücreli karsinomdur.\nLeiomiyosarkom erişkin kadınlarda miyometriyum veya vajina düz kasından gelişen malign tümördür. Beş yaş altı kız çocuklarında vajina duvarından üzüm salkımı, polipoid, kitleler halinde lümene uzanan karakteristik malign mezenkimal tümör ise embriyonel rabdomiyosarkomdur, sarkoma botryoides,.\nEmbriyonel rabdomiyosarkom doğru. Sarkoma botriyoides de denen bu nadir vajinal tümör malign embriyonel rabdomiyoblastlardan gelişir ve en sık beş yaş altında görülür.\nMalign melanom ileri yaş kadınlarda melanositlerden gelişen agresif bir tümördür. Bebek ve beş yaş altı kız çocuklarında vajinada kambiyum tabakası ve çizgili kas farklılaşması, rabdomiyoblast, gösteren karakteristik malign tümör ise embriyonel rabdomiyosarkomdur.\nDoğru cevap De, Embriyonel rabdomiyosarkom\nEmbriyonel rabdomiyosarkom, yani sarkoma botriyoides, malign embriyonel rabdomiyoblastlardan gelişir ve en sık beş yaş altındaki çocuklarda görülür. İdrar kesesi ve safra kanallarında da yerleşebilir.",
+   "kelime": 204
   },
   {
    "no": 25,
    "tur": "cikmis",
+   "sinav": "2020-2021 · 2020-2021 Dönem 3 Kurul 4 Sınavı (sinav.karabuk.edu.tr öğrenci çıktısı)",
    "soru": "Vulvada HPV tespit edilen bir hastada bu durum aşağıdaki kanser türlerinden hangisi için risk faktörü oluşturur?",
    "secenekler": {
     "A": "Meme kanseri",
@@ -315,22 +417,31 @@
     "E": "Serviks kanseri"
    },
    "dogru": "E",
+   "ipucu": "Vulvar HPV lezyonlarının komşu genital organlarda hangi prekanseröz lezyonların riskini artırdığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
-    "A": "Meme ile vulva arasındaki bağlantı, her zaman altta duktal karsinom bulunan meme ucu Paget hastalığıdır. Meme kanseri bu sorudaki ayrımı sağlamaz.",
-    "B": "Kolon kanseri ile karıştırılabilir: HPV ilişkili skuamöz tümörler vulva, vajina ve serviks gibi alt genital sistemde gelişir.",
-    "C": "HPV ile belirgin ilişkisi olan kanser serviksteki skuamöz hücreli karsinomdur. Uterus kanseri bu sorudaki ayrımı sağlamaz.",
-    "D": "Melanom ile karıştırılabilir: Vulvar karsinomların yaklaşık dörtte birinde görülen pigmentasyon melanine bağlıdır, tümör yine skuamöz kökenlidir.",
+    "A": "Meme kanseri östrojen maruziyeti ve BRCA1/2 gibi genetik faktörlerle ilişkilidir, HPV enfeksiyonu meme karsinomunda rol oynamaz; vulvada yüksek riskli HPV saptanan hastada aynı viral etken alt genital traktusu ortak tuttuğu için serviks ve vajina kanseri riski belirgin artar.",
+    "B": "Kolon adenokarsinomu APC, KRAS, TP53 ve DNA uyumsuzluk onarım gen mutasyonlarıyla gelişir ve HPV ile ilişkili değildir; vulvada saptanan yüksek riskli HPV enfeksiyonu ise serviks transformasyon zonunu da enfekte ederek serviks kanseri için doğrudan risk oluşturur.",
+    "C": "Uterus korpusunun (endometriyumun) kanserleri östrojen fazlalığı, PTEN ve TP53 mutasyonlarıyla gelişir ve HPV'den bağımsızdır; vulvadaki yüksek riskli HPV enfeksiyonu ise alt genital sistemin skuamöz mukozasını tutarak serviks kanseri riskini artırır.",
+    "D": "Melanom melanositlerden ultraviyole veya BRAF/NRAS mutasyonlarıyla gelişen bir tümördür ve HPV ile ilişkisi yoktur; yüksek riskli HPV tespit edilen hastada viral E6 ve E7 onkoproteinleri doğrudan serviks kanseri gelişimi için majör risk faktörüdür.",
     "E": "Serviks kanseri doğru: vulvar kondilomlar kansere dönüşmese de vajina ve servikste HPV ilişkili prekanseröz lezyon riski artar."
    },
    "ozet": "Vulvada HPV saptanması vajina ve servikste HPV ilişkili prekanseröz lezyon riskinin arttığını gösterir; servikal skuamöz hücreli karsinomun HPV ilişkisi belirgindir.",
-   "metin": "**Soru.** Vulvada HPV tespit edilen bir hastada bu durum aşağıdaki kanser türlerinden hangisi için risk faktörü oluşturur?\n\n**A)** Meme kanseri · **B)** Kolon kanseri · **C)** Uterus kanseri · **D)** Melanom · **E)** Serviks kanseri\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Meme kanseri** — Meme ile vulva arasındaki bağlantı, her zaman altta duktal karsinom bulunan meme ucu Paget hastalığıdır. Meme kanseri bu sorudaki ayrımı sağlamaz.\n- **Kolon kanseri** — Kolon kanseri ile karıştırılabilir: HPV ilişkili skuamöz tümörler vulva, vajina ve serviks gibi alt genital sistemde gelişir.\n- **Uterus kanseri** — HPV ile belirgin ilişkisi olan kanser serviksteki skuamöz hücreli karsinomdur. Uterus kanseri bu sorudaki ayrımı sağlamaz.\n- **Melanom** — Melanom ile karıştırılabilir: Vulvar karsinomların yaklaşık dörtte birinde görülen pigmentasyon melanine bağlıdır, tümör yine skuamöz kökenlidir.\n- **Serviks kanseri** — Serviks kanseri doğru: vulvar kondilomlar kansere dönüşmese de vajina ve servikste HPV ilişkili prekanseröz lezyon riski artar.\n\n**Cevap: E** — Serviks kanseri\n\n**Özet.** Vulvada HPV saptanması vajina ve servikste HPV ilişkili prekanseröz lezyon riskinin arttığını gösterir; servikal skuamöz hücreli karsinomun HPV ilişkisi belirgindir.",
-   "ses": "Vulvada ha pe ve tespit edilen bir hastada bu durum aşağıdaki kanser türlerinden hangisi için risk faktörü oluşturur?\nA, Meme kanseri\nBe, Kolon kanseri\nCe, Uterus kanseri\nDe, Melanom\nE, Serviks kanseri\nSeçenekleri sırayla değerlendirelim.\nMeme ile vulva arasındaki bağlantı, her zaman altta duktal karsinom bulunan meme ucu Peycet hastalığıdır. Meme kanseri bu sorudaki ayrımı sağlamaz.\nKolon kanseri ile karıştırılabilir. Ha pe ve ilişkili skuamöz tümörler vulva, vajina ve serviks gibi alt genital sistemde gelişir.\nHa pe ve ile belirgin ilişkisi olan kanser serviksteki skuamöz hücreli karsinomdur. Uterus kanseri bu sorudaki ayrımı sağlamaz.\nMelanom ile karıştırılabilir. Vulvar karsinomların yaklaşık dörtte birinde görülen pigmentasyon melanine bağlıdır, tümör yine skuamöz kökenlidir.\nServiks kanseri doğru. Vulvar kondilomlar kansere dönüşmese de vajina ve servikste ha pe ve ilişkili prekanseröz lezyon riski artar.\nDoğru cevap E, Serviks kanseri\nVulvada ha pe ve saptanması vajina ve servikste ha pe ve ilişkili prekanseröz lezyon riskinin arttığını gösterir. Servikal skuamöz hücreli karsinomun ha pe ve ilişkisi belirgindir.",
-   "kelime": 171
+   "sayfa": [
+    38,
+    39,
+    47,
+    52,
+    80
+   ],
+   "metin": "**Soru.** Vulvada HPV tespit edilen bir hastada bu durum aşağıdaki kanser türlerinden hangisi için risk faktörü oluşturur?\n\n**A)** Meme kanseri · **B)** Kolon kanseri · **C)** Uterus kanseri · **D)** Melanom · **E)** Serviks kanseri\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Meme kanseri** — Meme kanseri östrojen maruziyeti ve BRCA1/2 gibi genetik faktörlerle ilişkilidir, HPV enfeksiyonu meme karsinomunda rol oynamaz; vulvada yüksek riskli HPV saptanan hastada aynı viral etken alt genital traktusu ortak tuttuğu için serviks ve vajina kanseri riski belirgin artar.\n- **Kolon kanseri** — Kolon adenokarsinomu APC, KRAS, TP53 ve DNA uyumsuzluk onarım gen mutasyonlarıyla gelişir ve HPV ile ilişkili değildir; vulvada saptanan yüksek riskli HPV enfeksiyonu ise serviks transformasyon zonunu da enfekte ederek serviks kanseri için doğrudan risk oluşturur.\n- **Uterus kanseri** — Uterus korpusunun (endometriyumun) kanserleri östrojen fazlalığı, PTEN ve TP53 mutasyonlarıyla gelişir ve HPV'den bağımsızdır; vulvadaki yüksek riskli HPV enfeksiyonu ise alt genital sistemin skuamöz mukozasını tutarak serviks kanseri riskini artırır.\n- **Melanom** — Melanom melanositlerden ultraviyole veya BRAF/NRAS mutasyonlarıyla gelişen bir tümördür ve HPV ile ilişkisi yoktur; yüksek riskli HPV tespit edilen hastada viral E6 ve E7 onkoproteinleri doğrudan serviks kanseri gelişimi için majör risk faktörüdür.\n- **Serviks kanseri** — Serviks kanseri doğru: vulvar kondilomlar kansere dönüşmese de vajina ve servikste HPV ilişkili prekanseröz lezyon riski artar.\n\n**Cevap: E** — Serviks kanseri\n\n**Özet.** Vulvada HPV saptanması vajina ve servikste HPV ilişkili prekanseröz lezyon riskinin arttığını gösterir; servikal skuamöz hücreli karsinomun HPV ilişkisi belirgindir.",
+   "ses": "Vulvada ha pe ve tespit edilen bir hastada bu durum aşağıdaki kanser türlerinden hangisi için risk faktörü oluşturur?\nA, Meme kanseri\nBe, Kolon kanseri\nCe, Uterus kanseri\nDe, Melanom\nE, Serviks kanseri\nSeçenekleri sırayla değerlendirelim.\nMeme kanseri östrojen maruziyeti ve be re ce a bir/iki gibi genetik faktörlerle ilişkilidir, ha pe ve enfeksiyonu meme karsinomunda rol oynamaz. Vulvada yüksek riskli ha pe ve saptanan hastada aynı viral etken alt genital traktusu ortak tuttuğu için serviks ve vajina kanseri riski belirgin artar.\nKolon adenokarsinomu a pe ce, ka ras, te pe elli üç ve de ne a uyumsuzluk onarım gen mutasyonlarıyla gelişir ve ha pe ve ile ilişkili değildir. Vulvada saptanan yüksek riskli ha pe ve enfeksiyonu ise serviks transformasyon zonunu da enfekte ederek serviks kanseri için doğrudan risk oluşturur.\nUterus korpusunun, endometriyumun, kanserleri östrojen fazlalığı, pe te e ne ve te pe elli üç mutasyonlarıyla gelişir ve ha pe ve'den bağımsızdır. Vulvadaki yüksek riskli ha pe ve enfeksiyonu ise alt genital sistemin skuamöz mukozasını tutarak serviks kanseri riskini artırır.\nMelanom melanositlerden ultraviyole veya be raf/ne ras mutasyonlarıyla gelişen bir tümördür ve ha pe ve ile ilişkisi yoktur. Yüksek riskli ha pe ve tespit edilen hastada viral e altı ve e yedi onkoproteinleri doğrudan serviks kanseri gelişimi için majör risk faktörüdür.\nServiks kanseri doğru. Vulvar kondilomlar kansere dönüşmese de vajina ve servikste ha pe ve ilişkili prekanseröz lezyon riski artar.\nDoğru cevap E, Serviks kanseri\nVulvada ha pe ve saptanması vajina ve servikste ha pe ve ilişkili prekanseröz lezyon riskinin arttığını gösterir. Servikal skuamöz hücreli karsinomun ha pe ve ilişkisi belirgindir.",
+   "kelime": 238
   },
   {
    "no": 26,
    "tur": "cikmis",
+   "sinav": "2020-2021 · Dönem 3 Kurul 1 Doğrulanmış Sınavı",
    "soru": "Servikovajinal yayma sitolojisinde (Pap smear) aşağıdaki etkenlerden hangisi direkt olarak tespit edilebilir?",
    "secenekler": {
     "A": "Treponema pallidum",
@@ -340,22 +451,31 @@
     "E": "Chlamydia trachomatis"
    },
    "dogru": "D",
+   "ipucu": "Pap testinde yalnız hücre değişikliğinin değil, organizmanın kendisinin görülebildiği genital enfeksiyon etkenini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Treponema pallidum vulvada primer şankr yapar; tanısı seroloji ve kültür ya da NAAT testleriyle konur.",
     "B": "Neisseria gonorrhoeae vulvovajinal bezlerin süpüratif enfeksiyonunu yapar; tanıda kültür ve NAAT testleri kullanılır.",
     "C": "Herpes simpleks virüsü persistan latent enfeksiyonla tekrarlayan genital herpes yapar; Pap testinde organizması doğrudan görülen etken ise bir parazittir.",
     "D": "Trichomonas vaginalis doğru: Pap testinde karakteristik oval çekirdekli ve soluk kırmızı granüllü organizma olarak doğrudan görülür.",
-    "E": "Chlamydia trachomatis ile karıştırılabilir: Pap testinde etkenin kendisi Trichomonas'ta organizma, Candida'da hif formları olarak görülür."
+    "E": "Chlamydia trachomatis çok küçük zorunlu hücre içi bakterisi olduğundan rutin Pap smear ışık mikroskobunda doğrudan seçilemez ve tanısı nükleik asit amplifikasyon (PCR) testleriyle konur; Pap yaymasında armut biçimli, kamçılı trofozoit olarak doğrudan görülebilen etken ise Trichomonas vaginalis'tir (ayrıca Candida hifleri ve HSV sitopatik etkileri de görülür)."
    },
    "ozet": "Trichomonas vaginalis Pap testinde oval çekirdekli, soluk kırmızı granüllü organizma olarak doğrudan görülür; tanı hareketli parazitin gösterilmesiyle konur.",
-   "metin": "**Soru.** Servikovajinal yayma sitolojisinde (Pap smear) aşağıdaki etkenlerden hangisi direkt olarak tespit edilebilir?\n\n**A)** Treponema pallidum · **B)** Neisseria gonorrhoeae · **C)** Herpes simpleks virüs · **D)** Trichomonas vaginalis · **E)** Chlamydia trachomatis\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Treponema pallidum** — Treponema pallidum vulvada primer şankr yapar; tanısı seroloji ve kültür ya da NAAT testleriyle konur.\n- **Neisseria gonorrhoeae** — Neisseria gonorrhoeae vulvovajinal bezlerin süpüratif enfeksiyonunu yapar; tanıda kültür ve NAAT testleri kullanılır.\n- **Herpes simpleks virüs** — Herpes simpleks virüsü persistan latent enfeksiyonla tekrarlayan genital herpes yapar; Pap testinde organizması doğrudan görülen etken ise bir parazittir.\n- **Trichomonas vaginalis** — Trichomonas vaginalis doğru: Pap testinde karakteristik oval çekirdekli ve soluk kırmızı granüllü organizma olarak doğrudan görülür.\n- **Chlamydia trachomatis** — Chlamydia trachomatis ile karıştırılabilir: Pap testinde etkenin kendisi Trichomonas'ta organizma, Candida'da hif formları olarak görülür.\n\n**Cevap: D** — Trichomonas vaginalis\n\n**Özet.** Trichomonas vaginalis Pap testinde oval çekirdekli, soluk kırmızı granüllü organizma olarak doğrudan görülür; tanı hareketli parazitin gösterilmesiyle konur.",
-   "ses": "Servikovajinal yayma sitolojisinde, pap smir, aşağıdaki etkenlerden hangisi direkt olarak tespit edilebilir?\nA, Treponema pallidum\nBe, Nayserya gonore\nCe, Herpes simpleks virüs\nDe, Trikomonas vajinalis\nE, Klamidya trakomatis\nHer seçeneği tek tek ele alalım.\nTreponema pallidum vulvada primer şankr yapar. Tanısı seroloji ve kültür ya da nükleik asit amplifikasyon testleriyle konur.\nNayserya gonore vulvovajinal bezlerin süpüratif enfeksiyonunu yapar. Tanıda kültür ve nükleik asit amplifikasyon testleri kullanılır.\nHerpes simpleks virüsü persistan latent enfeksiyonla tekrarlayan genital herpes yapar. Pap testinde organizması doğrudan görülen etken ise bir parazittir.\nTrikomonas vajinalis doğru. Pap testinde karakteristik oval çekirdekli ve soluk kırmızı granüllü organizma olarak doğrudan görülür.\nChlamydia trachomatis ile karıştırılabilir. Pap testinde etkenin kendisi Trikomonasta organizma, Kandidada hif formları olarak görülür.\nDoğru cevap De, Trikomonas vajinalis\nTrikomonas vajinalis pap testinde oval çekirdekli, soluk kırmızı granüllü organizma olarak doğrudan görülür. Tanı hareketli parazitin gösterilmesiyle konur.",
-   "kelime": 163
+   "sayfa": [
+    12,
+    11,
+    66,
+    69,
+    70
+   ],
+   "metin": "**Soru.** Servikovajinal yayma sitolojisinde (Pap smear) aşağıdaki etkenlerden hangisi direkt olarak tespit edilebilir?\n\n**A)** Treponema pallidum · **B)** Neisseria gonorrhoeae · **C)** Herpes simpleks virüs · **D)** Trichomonas vaginalis · **E)** Chlamydia trachomatis\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Treponema pallidum** — Treponema pallidum vulvada primer şankr yapar; tanısı seroloji ve kültür ya da NAAT testleriyle konur.\n- **Neisseria gonorrhoeae** — Neisseria gonorrhoeae vulvovajinal bezlerin süpüratif enfeksiyonunu yapar; tanıda kültür ve NAAT testleri kullanılır.\n- **Herpes simpleks virüs** — Herpes simpleks virüsü persistan latent enfeksiyonla tekrarlayan genital herpes yapar; Pap testinde organizması doğrudan görülen etken ise bir parazittir.\n- **Trichomonas vaginalis** — Trichomonas vaginalis doğru: Pap testinde karakteristik oval çekirdekli ve soluk kırmızı granüllü organizma olarak doğrudan görülür.\n- **Chlamydia trachomatis** — Chlamydia trachomatis çok küçük zorunlu hücre içi bakterisi olduğundan rutin Pap smear ışık mikroskobunda doğrudan seçilemez ve tanısı nükleik asit amplifikasyon (PCR) testleriyle konur; Pap yaymasında armut biçimli, kamçılı trofozoit olarak doğrudan görülebilen etken ise Trichomonas vaginalis'tir (ayrıca Candida hifleri ve HSV sitopatik etkileri de görülür).\n\n**Cevap: D** — Trichomonas vaginalis\n\n**Özet.** Trichomonas vaginalis Pap testinde oval çekirdekli, soluk kırmızı granüllü organizma olarak doğrudan görülür; tanı hareketli parazitin gösterilmesiyle konur.",
+   "ses": "Servikovajinal yayma sitolojisinde, pap smir, aşağıdaki etkenlerden hangisi direkt olarak tespit edilebilir?\nA, Treponema pallidum\nBe, Nayserya gonore\nCe, Herpes simpleks virüs\nDe, Trikomonas vajinalis\nE, Klamidya trakomatis\nHer seçeneği tek tek ele alalım.\nTreponema pallidum vulvada primer şankr yapar. Tanısı seroloji ve kültür ya da nükleik asit amplifikasyon testleriyle konur.\nNayserya gonore vulvovajinal bezlerin süpüratif enfeksiyonunu yapar. Tanıda kültür ve nükleik asit amplifikasyon testleri kullanılır.\nHerpes simpleks virüsü persistan latent enfeksiyonla tekrarlayan genital herpes yapar. Pap testinde organizması doğrudan görülen etken ise bir parazittir.\nTrikomonas vajinalis doğru. Pap testinde karakteristik oval çekirdekli ve soluk kırmızı granüllü organizma olarak doğrudan görülür.\nChlamydia trachomatis çok küçük zorunlu hücre içi bakterisi olduğundan rutin Pap smear ışık mikroskobunda doğrudan seçilemez ve tanısı nükleik asit amplifikasyon, pe ce re, testleriyle konur. Pap yaymasında armut biçimli, kamçılı trofozoit olarak doğrudan görülebilen etken ise Trichomonas vaginalis'tir, ayrıca Candida hifleri ve ha se ve sitopatik etkileri de görülür,.\nDoğru cevap De, Trikomonas vajinalis\nTrikomonas vajinalis pap testinde oval çekirdekli, soluk kırmızı granüllü organizma olarak doğrudan görülür. Tanı hareketli parazitin gösterilmesiyle konur.",
+   "kelime": 194
   },
   {
    "no": 27,
    "tur": "cikmis",
+   "sinav": "2021-2022 · 2021-2022 Kurul 1 Sınavı",
    "soru": "Vulvada liken skleroz izlenen bir hastada aşağıdaki tümörlerden hangisinin gelişme olasılığı daha fazladır?",
    "secenekler": {
     "A": "Skuamöz hücreli karsinom",
@@ -365,22 +485,33 @@
     "E": "Paget hastalığı"
    },
    "dogru": "A",
+   "ipucu": "Liken sklerozun prekanseröz sayılmasa da hafifçe artırdığı riski ve bu riskin hangi epitel tipinden doğduğunu düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Skuamöz hücreli karsinom doğru: liken skleroz prekanseröz değildir ama vulvar skuamöz hücreli karsinom riski biraz artmıştır; HPV negatif keratinize tip bu zeminde gelişir.",
-    "B": "Melanom ile karıştırılabilir: Liken skleroz zemininde gelişen tümör HPV ile ilişkisiz keratinize skuamöz hücreli karsinomdur.",
+    "B": "Vulvar melanom melanositlerden köken alan nadir bir tümördür ve liken skleroz zemininden gelişmez; kronik atrofik inflamasyonla seyreden liken skleroz ve skuamöz hücre hiperplazisi ise diferansiye (HPV-negatif) VIN üzerinden keratinize skuamöz hücreli karsinom gelişme riskini artırır.",
     "C": "Bazal hücreli karsinom vulvada nadir görülen diğer malign tiplerdendir; vulva karsinomlarının yaklaşık %90'ı skuamöz hücrelidir.",
     "D": "Kondiloma akuminata düşük riskli HPV tip 6 ve 11 ile cinsel temasla bulaşan benign bir siğildir.",
     "E": "Paget hastalığı, vulva derisi kanallarındaki multipotent hücrelerden türeyen atipik hücrelerin intraepidermal proliferasyonudur."
    },
    "ozet": "Liken skleroz prekanseröz lezyon değildir, ancak vulvar skuamöz hücreli karsinom riski biraz artmıştır; bu nedenle uzun dönem takip önerilir.",
-   "metin": "**Soru.** Vulvada liken skleroz izlenen bir hastada aşağıdaki tümörlerden hangisinin gelişme olasılığı daha fazladır?\n\n**A)** Skuamöz hücreli karsinom · **B)** Melanom · **C)** Bazal hücreli karsinom · **D)** Kondiloma akuminata · **E)** Paget hastalığı\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Skuamöz hücreli karsinom** — Skuamöz hücreli karsinom doğru: liken skleroz prekanseröz değildir ama vulvar skuamöz hücreli karsinom riski biraz artmıştır; HPV negatif keratinize tip bu zeminde gelişir.\n- **Melanom** — Melanom ile karıştırılabilir: Liken skleroz zemininde gelişen tümör HPV ile ilişkisiz keratinize skuamöz hücreli karsinomdur.\n- **Bazal hücreli karsinom** — Bazal hücreli karsinom vulvada nadir görülen diğer malign tiplerdendir; vulva karsinomlarının yaklaşık %90'ı skuamöz hücrelidir.\n- **Kondiloma akuminata** — Kondiloma akuminata düşük riskli HPV tip 6 ve 11 ile cinsel temasla bulaşan benign bir siğildir.\n- **Paget hastalığı** — Paget hastalığı, vulva derisi kanallarındaki multipotent hücrelerden türeyen atipik hücrelerin intraepidermal proliferasyonudur.\n\n**Cevap: A** — Skuamöz hücreli karsinom\n\n**Özet.** Liken skleroz prekanseröz lezyon değildir, ancak vulvar skuamöz hücreli karsinom riski biraz artmıştır; bu nedenle uzun dönem takip önerilir.",
-   "ses": "Vulvada liken skleroz izlenen bir hastada aşağıdaki tümörlerden hangisinin gelişme olasılığı daha fazladır?\nA, Skuamöz hücreli karsinom\nBe, Melanom\nCe, Bazal hücreli karsinom\nDe, Kondiloma akuminata\nE, Peycet hastalığı\nŞıkları sırasıyla gözden geçirelim.\nSkuamöz hücreli karsinom doğru. Liken skleroz prekanseröz değildir ama vulvar skuamöz hücreli karsinom riski biraz artmıştır. Ha pe ve negatif keratinize tip bu zeminde gelişir.\nMelanom ile karıştırılabilir. Liken skleroz zemininde gelişen tümör ha pe ve ile ilişkisiz keratinize skuamöz hücreli karsinomdur.\nBazal hücreli karsinom vulvada nadir görülen diğer malign tiplerdendir. Vulva karsinomlarının yaklaşık yüzde doksanı skuamöz hücrelidir.\nKondiloma akuminata düşük riskli ha pe ve tip altı ve on bir ile cinsel temasla bulaşan benign bir siğildir.\nPeycet hastalığı, vulva derisi kanallarındaki multipotent hücrelerden türeyen atipik hücrelerin intraepidermal proliferasyonudur.\nDoğru cevap A, Skuamöz hücreli karsinom\nLiken skleroz prekanseröz lezyon değildir, ancak vulvar skuamöz hücreli karsinom riski biraz artmıştır. Bu nedenle uzun dönem takip önerilir.",
-   "kelime": 167
+   "sayfa": [
+    21,
+    32,
+    39,
+    40,
+    44,
+    51,
+    53
+   ],
+   "metin": "**Soru.** Vulvada liken skleroz izlenen bir hastada aşağıdaki tümörlerden hangisinin gelişme olasılığı daha fazladır?\n\n**A)** Skuamöz hücreli karsinom · **B)** Melanom · **C)** Bazal hücreli karsinom · **D)** Kondiloma akuminata · **E)** Paget hastalığı\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Skuamöz hücreli karsinom** — Skuamöz hücreli karsinom doğru: liken skleroz prekanseröz değildir ama vulvar skuamöz hücreli karsinom riski biraz artmıştır; HPV negatif keratinize tip bu zeminde gelişir.\n- **Melanom** — Vulvar melanom melanositlerden köken alan nadir bir tümördür ve liken skleroz zemininden gelişmez; kronik atrofik inflamasyonla seyreden liken skleroz ve skuamöz hücre hiperplazisi ise diferansiye (HPV-negatif) VIN üzerinden keratinize skuamöz hücreli karsinom gelişme riskini artırır.\n- **Bazal hücreli karsinom** — Bazal hücreli karsinom vulvada nadir görülen diğer malign tiplerdendir; vulva karsinomlarının yaklaşık %90'ı skuamöz hücrelidir.\n- **Kondiloma akuminata** — Kondiloma akuminata düşük riskli HPV tip 6 ve 11 ile cinsel temasla bulaşan benign bir siğildir.\n- **Paget hastalığı** — Paget hastalığı, vulva derisi kanallarındaki multipotent hücrelerden türeyen atipik hücrelerin intraepidermal proliferasyonudur.\n\n**Cevap: A** — Skuamöz hücreli karsinom\n\n**Özet.** Liken skleroz prekanseröz lezyon değildir, ancak vulvar skuamöz hücreli karsinom riski biraz artmıştır; bu nedenle uzun dönem takip önerilir.",
+   "ses": "Vulvada liken skleroz izlenen bir hastada aşağıdaki tümörlerden hangisinin gelişme olasılığı daha fazladır?\nA, Skuamöz hücreli karsinom\nBe, Melanom\nCe, Bazal hücreli karsinom\nDe, Kondiloma akuminata\nE, Peycet hastalığı\nŞıkları sırasıyla gözden geçirelim.\nSkuamöz hücreli karsinom doğru. Liken skleroz prekanseröz değildir ama vulvar skuamöz hücreli karsinom riski biraz artmıştır. Ha pe ve negatif keratinize tip bu zeminde gelişir.\nVulvar melanom melanositlerden köken alan nadir bir tümördür ve liken skleroz zemininden gelişmez. Kronik atrofik inflamasyonla seyreden liken skleroz ve skuamöz hücre hiperplazisi ise diferansiye, ha pe ve-negatif, ve i ne üzerinden keratinize skuamöz hücreli karsinom gelişme riskini artırır.\nBazal hücreli karsinom vulvada nadir görülen diğer malign tiplerdendir. Vulva karsinomlarının yaklaşık yüzde doksanı skuamöz hücrelidir.\nKondiloma akuminata düşük riskli ha pe ve tip altı ve on bir ile cinsel temasla bulaşan benign bir siğildir.\nPeycet hastalığı, vulva derisi kanallarındaki multipotent hücrelerden türeyen atipik hücrelerin intraepidermal proliferasyonudur.\nDoğru cevap A, Skuamöz hücreli karsinom\nLiken skleroz prekanseröz lezyon değildir, ancak vulvar skuamöz hücreli karsinom riski biraz artmıştır. Bu nedenle uzun dönem takip önerilir.",
+   "kelime": 187
   },
   {
    "no": 28,
    "tur": "cikmis",
+   "sinav": "2024-2025 · 2024-2025 Dönem 3 Kurul 1 Sınavı (öğrenci derlemesi — D3K1 Tüm Çıkmışlar.pdf)",
    "soru": "HPV enfeksiyonu sonucu oluşan perinükleer halo görünümüne ne ad verilir?",
    "secenekler": {
     "A": "Psammom cismi",
@@ -390,22 +521,30 @@
     "E": "Hiperkeratoz"
    },
    "dogru": "B",
+   "ipucu": "Kondiloma akuminatumda büyümüş, buruşuk, hiperkromatik çekirdekle birlikte görülen viral sitopatik değişikliğin adını hatırla.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
-    "A": "Psammom cismi ile karıştırılabilir: Kondiloma akuminatumdaki HPV etkisi, büyümüş hiperkromatik çekirdeğin çevresindeki halo şeklindedir.",
+    "A": "Psammom cismi papiller tiroid karsinomu, seröz over tümörü ve meningiomda görülen konsantrik laminer distrofik kalsifikasyon küresidir; HPV enfeksiyonunun yassı epitel hücrelerinde oluşturduğu kuru üzüm benzeri buruşuk hiperkromatik çekirdek ve keskin sınırlı perinükleer halo görünümüne ise koilositoz denir.",
     "B": "Koilositoz doğru: büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo, HPV'nin koilositik atipi denen sitopatik etkisidir.",
     "C": "Displazi derecesi vajinal intraepitelyal neoplazinin sınıflanmasında kullanılır; perinükleer halonun adı değildir.",
-    "D": "HPV'ye bağlı viral sitopatik değişikliklerin toplu adı koilositik atipidir. Metaplazi bu sorudaki ayrımı sağlamaz.",
+    "D": "Metaplazi endoserviksteki kolumnar epitelin yassı epitele dönüşmesi gibi adaptif doku değişimidir; HPV'nin E5 ve E6/E7 proteinlerinin üst epitel tabakalarında oluşturduğu perinükleer sitoplazmik boşluk (halo) ve nükleer atipi ise tanısal viral sitopatik etki olan koilositozdur.",
     "E": "Hiperkeratoz kondiloma akuminatumda ve skuamöz hücre hiperplazisinde görülen bir epidermis değişikliğidir; perinükleer haloyu tanımlamaz."
    },
    "ozet": "HPV sitopatik etkisi koilositik atipidir; büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo kondiloma akuminatumun tipik bulgusudur.",
-   "metin": "**Soru.** HPV enfeksiyonu sonucu oluşan perinükleer halo görünümüne ne ad verilir?\n\n**A)** Psammom cismi · **B)** Koilositoz · **C)** Displazi · **D)** Metaplazi · **E)** Hiperkeratoz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Psammom cismi** — Psammom cismi ile karıştırılabilir: Kondiloma akuminatumdaki HPV etkisi, büyümüş hiperkromatik çekirdeğin çevresindeki halo şeklindedir.\n- **Koilositoz** — Koilositoz doğru: büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo, HPV'nin koilositik atipi denen sitopatik etkisidir.\n- **Displazi** — Displazi derecesi vajinal intraepitelyal neoplazinin sınıflanmasında kullanılır; perinükleer halonun adı değildir.\n- **Metaplazi** — HPV'ye bağlı viral sitopatik değişikliklerin toplu adı koilositik atipidir. Metaplazi bu sorudaki ayrımı sağlamaz.\n- **Hiperkeratoz** — Hiperkeratoz kondiloma akuminatumda ve skuamöz hücre hiperplazisinde görülen bir epidermis değişikliğidir; perinükleer haloyu tanımlamaz.\n\n**Cevap: B** — Koilositoz\n\n**Özet.** HPV sitopatik etkisi koilositik atipidir; büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo kondiloma akuminatumun tipik bulgusudur.",
-   "ses": "Ha pe ve enfeksiyonu sonucu oluşan perinükleer halo görünümüne ne ad verilir?\nA, Psammom cismi\nBe, Koilositoz\nCe, Displazi\nDe, Metaplazi\nE, Hiperkeratoz\nŞimdi seçeneklere tek tek bakalım.\nPsammom cismi ile karıştırılabilir. Kondiloma akuminatumdaki ha pe ve etkisi, büyümüş hiperkromatik çekirdeğin çevresindeki halo şeklindedir.\nKoilositoz doğru. Büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo, koilositik atipi denen ha pe ve sitopatik etkisidir.\nDisplazi derecesi vajinal intraepitelyal neoplazinin sınıflanmasında kullanılır. Perinükleer halonun adı değildir.\nHa pe ve enfeksiyonuna bağlı viral sitopatik değişikliklerin toplu adı koilositik atipidir. Metaplazi bu sorudaki ayrımı sağlamaz.\nHiperkeratoz kondiloma akuminatumda ve skuamöz hücre hiperplazisinde görülen bir epidermis değişikliğidir. Perinükleer haloyu tanımlamaz.\nDoğru cevap Be, Koilositoz\nHa pe ve sitopatik etkisi koilositik atipidir. Büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo kondiloma akuminatumun tipik bulgusudur.",
-   "kelime": 139
+   "sayfa": [
+    24,
+    35,
+    36,
+    74
+   ],
+   "metin": "**Soru.** HPV enfeksiyonu sonucu oluşan perinükleer halo görünümüne ne ad verilir?\n\n**A)** Psammom cismi · **B)** Koilositoz · **C)** Displazi · **D)** Metaplazi · **E)** Hiperkeratoz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Psammom cismi** — Psammom cismi papiller tiroid karsinomu, seröz over tümörü ve meningiomda görülen konsantrik laminer distrofik kalsifikasyon küresidir; HPV enfeksiyonunun yassı epitel hücrelerinde oluşturduğu kuru üzüm benzeri buruşuk hiperkromatik çekirdek ve keskin sınırlı perinükleer halo görünümüne ise koilositoz denir.\n- **Koilositoz** — Koilositoz doğru: büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo, HPV'nin koilositik atipi denen sitopatik etkisidir.\n- **Displazi** — Displazi derecesi vajinal intraepitelyal neoplazinin sınıflanmasında kullanılır; perinükleer halonun adı değildir.\n- **Metaplazi** — Metaplazi endoserviksteki kolumnar epitelin yassı epitele dönüşmesi gibi adaptif doku değişimidir; HPV'nin E5 ve E6/E7 proteinlerinin üst epitel tabakalarında oluşturduğu perinükleer sitoplazmik boşluk (halo) ve nükleer atipi ise tanısal viral sitopatik etki olan koilositozdur.\n- **Hiperkeratoz** — Hiperkeratoz kondiloma akuminatumda ve skuamöz hücre hiperplazisinde görülen bir epidermis değişikliğidir; perinükleer haloyu tanımlamaz.\n\n**Cevap: B** — Koilositoz\n\n**Özet.** HPV sitopatik etkisi koilositik atipidir; büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo kondiloma akuminatumun tipik bulgusudur.",
+   "ses": "Ha pe ve enfeksiyonu sonucu oluşan perinükleer halo görünümüne ne ad verilir?\nA, Psammom cismi\nBe, Koilositoz\nCe, Displazi\nDe, Metaplazi\nE, Hiperkeratoz\nŞimdi seçeneklere tek tek bakalım.\nPsammom cismi papiller tiroid karsinomu, seröz over tümörü ve meningiomda görülen konsantrik laminer distrofik kalsifikasyon küresidir. Ha pe ve enfeksiyonunun yassı epitel hücrelerinde oluşturduğu kuru üzüm benzeri buruşuk hiperkromatik çekirdek ve keskin sınırlı perinükleer halo görünümüne ise koilositoz denir.\nKoilositoz doğru. Büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo, koilositik atipi denen ha pe ve sitopatik etkisidir.\nDisplazi derecesi vajinal intraepitelyal neoplazinin sınıflanmasında kullanılır. Perinükleer halonun adı değildir.\nMetaplazi endoserviksteki kolumnar epitelin yassı epitele dönüşmesi gibi adaptif doku değişimidir. Ha pe ve'nin e beş ve e altı ve e yedi proteinlerinin üst epitel tabakalarında oluşturduğu perinükleer sitoplazmik boşluk, halo, ve nükleer atipi ise tanısal viral sitopatik etki olan koilositozdur.\nHiperkeratoz kondiloma akuminatumda ve skuamöz hücre hiperplazisinde görülen bir epidermis değişikliğidir. Perinükleer haloyu tanımlamaz.\nDoğru cevap Be, Koilositoz\nHa pe ve sitopatik etkisi koilositik atipidir. Büyümüş, buruşuk, hiperkromatik çekirdek ve sitoplazmik perinükleer halo kondiloma akuminatumun tipik bulgusudur.",
+   "kelime": 182
   },
   {
    "no": 29,
    "tur": "cikmis",
+   "sinav": "2020-2021 · Dönem 3 Kurul 1 Doğrulanmış Sınavı",
    "soru": "Vulvanın skuamöz hücre hiperplazisinde (liken simpleks kronikus) aşağıdakilerden hangisi beklenmez?",
    "secenekler": {
     "A": "Epidermiste incelme",
@@ -415,6 +554,7 @@
     "E": "Bazal ve suprabazal tabakada artmış mitotik aktivite"
    },
    "dogru": "A",
+   "ipucu": "Kaşıma ve ovmaya yanıt veren epitelin kalınlık değişimini liken sklerozla karşılaştır.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Epidermiste incelme doğru cevaptır, çünkü beklenmez: skuamöz hücre hiperplazisinde epidermis akantozla kalınlaşır, incelme liken sklerozun bulgusudur.",
@@ -424,6 +564,11 @@
     "E": "Hiperplastik epitelde mitotik aktivite artmıştır, ancak bu artışa atipi eşlik etmez."
    },
    "ozet": "Skuamöz hücre hiperplazisinde akantozla epidermis kalınlaşır, hiperkeratoz ve artmış mitoz vardır ama atipi yoktur; epidermis incelmesi liken sklerozu düşündürür.",
+   "sayfa": [
+    18,
+    23,
+    24
+   ],
    "metin": "**Soru.** Vulvanın skuamöz hücre hiperplazisinde (liken simpleks kronikus) aşağıdakilerden hangisi beklenmez?\n\n**A)** Epidermiste incelme · **B)** Bazal dermiste lökositik infiltrasyon · **C)** Hiperkeratoz · **D)** Epitelyal atipi izlenmemesi · **E)** Bazal ve suprabazal tabakada artmış mitotik aktivite\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Epidermiste incelme** — Epidermiste incelme doğru cevaptır, çünkü beklenmez: skuamöz hücre hiperplazisinde epidermis akantozla kalınlaşır, incelme liken sklerozun bulgusudur.\n- **Bazal dermiste lökositik infiltrasyon** — Skuamöz hücre hiperplazisinde dermiste bazen lenfositik infiltrasyon görülür; bu beklenen bir bulgudur.\n- **Hiperkeratoz** — Hiperkeratoz, akantozla birlikte skuamöz hücre hiperplazisinin temel bulgularındandır.\n- **Epitelyal atipi izlenmemesi** — Skuamöz hücre hiperplazisinde sitolojik atipi yoktur; atipi izlenmemesi beklenen bir özelliktir.\n- **Bazal ve suprabazal tabakada artmış mitotik aktivite** — Hiperplastik epitelde mitotik aktivite artmıştır, ancak bu artışa atipi eşlik etmez.\n\n**Cevap: A** — Epidermiste incelme\n\n**Özet.** Skuamöz hücre hiperplazisinde akantozla epidermis kalınlaşır, hiperkeratoz ve artmış mitoz vardır ama atipi yoktur; epidermis incelmesi liken sklerozu düşündürür.",
    "ses": "Vulvanın skuamöz hücre hiperplazisinde, liken simpleks kronikus, aşağıdakilerden hangisi beklenmez?\nA, Epidermiste incelme\nBe, Bazal dermiste lökositik infiltrasyon\nCe, Hiperkeratoz\nDe, Epitelyal atipi izlenmemesi\nE, Bazal ve suprabazal tabakada artmış mitotik aktivite\nSeçenekleri sırayla değerlendirelim.\nEpidermiste incelme doğru cevaptır, çünkü beklenmez. Skuamöz hücre hiperplazisinde epidermis akantozla kalınlaşır, incelme liken sklerozun bulgusudur.\nSkuamöz hücre hiperplazisinde dermiste bazen lenfositik infiltrasyon görülür. Bu beklenen bir bulgudur.\nHiperkeratoz, akantozla birlikte skuamöz hücre hiperplazisinin temel bulgularındandır.\nSkuamöz hücre hiperplazisinde sitolojik atipi yoktur. Atipi izlenmemesi beklenen bir özelliktir.\nHiperplastik epitelde mitotik aktivite artmıştır, ancak bu artışa atipi eşlik etmez.\nDoğru cevap A, Epidermiste incelme\nSkuamöz hücre hiperplazisinde akantozla epidermis kalınlaşır, hiperkeratoz ve artmış mitoz vardır ama atipi yoktur. Epidermis incelmesi liken sklerozu düşündürür.",
    "kelime": 151
@@ -431,6 +576,7 @@
   {
    "no": 30,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Yaşlı kadınlarda vulvada kontakt dermatit nedeni olarak özellikle vurgulanan hangisidir?",
    "secenekler": {
     "A": "İdrar teması",
@@ -440,6 +586,7 @@
     "E": "Bartholin kanal tıkanması"
    },
    "dogru": "A",
+   "ipucu": "Reaktif inflamasyonu tetikleyen irritanın, yaşlılıkta deriyle sık buluşan bir vücut sıvısı olabileceğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "İdrar teması doğru: yaşlılarda vulva derisine temas eden idrar irritan etki yapar ve kontakt dermatite yol açar.",
@@ -449,6 +596,10 @@
     "E": "Bartholin kanalının tıkanması Bartholin kisti ve sıkça apse yapar; kontakt dermatitle ilgisi yoktur."
    },
    "ozet": "Kontakt dermatit losyon, sabun, antiseptik ve giysi kimyasalları gibi irritanlara yanıttır; yaşlılarda idrar teması da önemli bir nedendir.",
+   "sayfa": [
+    7,
+    8
+   ],
    "metin": "**Soru.** Yaşlı kadınlarda vulvada kontakt dermatit nedeni olarak özellikle vurgulanan hangisidir?\n\n**A)** İdrar teması · **B)** Candida türleri · **C)** Liken skleroz · **D)** Düşük riskli HPV · **E)** Bartholin kanal tıkanması\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **İdrar teması** — İdrar teması doğru: yaşlılarda vulva derisine temas eden idrar irritan etki yapar ve kontakt dermatite yol açar.\n- **Candida türleri** — Candida türleri enfeksiyöz vulvit yapar ve beyaz, plak benzeri lezyonlarla seyreder; reaktif kontakt dermatitin nedeni değildir.\n- **Liken skleroz** — Liken skleroz kronik, sklerozan bir dermatozdur; epidermis incelir ve dermiste fibrozis gelişir, irritan temasla oluşan bir tablo değildir.\n- **Düşük riskli HPV** — Düşük riskli HPV tip 6 ve 11 kondiloma akuminatum etkenidir; alerjen ya da irritan temasına verilen bir yanıt değildir.\n- **Bartholin kanal tıkanması** — Bartholin kanalının tıkanması Bartholin kisti ve sıkça apse yapar; kontakt dermatitle ilgisi yoktur.\n\n**Cevap: A** — İdrar teması\n\n**Özet.** Kontakt dermatit losyon, sabun, antiseptik ve giysi kimyasalları gibi irritanlara yanıttır; yaşlılarda idrar teması da önemli bir nedendir.",
    "ses": "Yaşlı kadınlarda vulvada kontakt dermatit nedeni olarak özellikle vurgulanan hangisidir?\nA, İdrar teması\nBe, Kandida türleri\nCe, Liken skleroz\nDe, Düşük riskli ha pe ve\nE, Bartolin kanal tıkanması\nHer seçeneği tek tek ele alalım.\nİdrar teması doğru, yaşlılarda vulva derisine temas eden idrar irritan etki yapar ve kontakt dermatite yol açar.\nKandida türleri enfeksiyöz vulvit yapar ve beyaz, plak benzeri lezyonlarla seyreder. Reaktif kontakt dermatitin nedeni değildir.\nLiken skleroz kronik, sklerozan bir dermatozdur. Epidermis incelir ve dermiste fibrozis gelişir, irritan temasla oluşan bir tablo değildir.\nDüşük riskli ha pe ve tip altı ve on bir kondiloma akuminatum etkenidir. Alerjen ya da irritan temasına verilen bir yanıt değildir.\nBartolin kanalının tıkanması Bartolin kisti ve sıkça apse yapar. Kontakt dermatitle ilgisi yoktur.\nDoğru cevap A, İdrar teması\nKontakt dermatit losyon, sabun, antiseptik ve giysi kimyasalları gibi irritanlara yanıttır. Yaşlılarda idrar teması da önemli bir nedendir.",
    "kelime": 168
@@ -456,6 +607,7 @@
   {
    "no": 31,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Genital herpesin tekrarlayıcı seyir göstermesinin nedeni hangisidir?",
    "secenekler": {
     "A": "Koilositik atipi",
@@ -465,6 +617,7 @@
     "E": "Kronik epitel tahrişi"
    },
    "dogru": "B",
+   "ipucu": "Virüsün ilk karşılaşmadan sonra vücuttan temizlenmeyip sessizce kalabildiğini ve yeniden aktifleştiğini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Koilositik atipi HPV'nin viral sitopatik etkisidir; kondiloma akuminatumda görülür, herpesin tekrarlamasını açıklamaz.",
@@ -474,6 +627,9 @@
     "E": "Kronik epitel tahrişi HPV negatif vulvar karsinom yolunda liken skleroz zemininde görülür; viral tekrarlamayı açıklamaz."
    },
    "ozet": "Herpes simpleks virüsü tip 1 ve 2 ağrılı vezikül ve ülserler yapar; persistan latent enfeksiyon nedeniyle seyir tekrarlayıcıdır.",
+   "sayfa": [
+    11
+   ],
    "metin": "**Soru.** Genital herpesin tekrarlayıcı seyir göstermesinin nedeni hangisidir?\n\n**A)** Koilositik atipi · **B)** Persistan latent enfeksiyon · **C)** Virülan suşla süperenfeksiyon · **D)** Bezlerin süpüratif enfeksiyonu · **E)** Kronik epitel tahrişi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Koilositik atipi** — Koilositik atipi HPV'nin viral sitopatik etkisidir; kondiloma akuminatumda görülür, herpesin tekrarlamasını açıklamaz.\n- **Persistan latent enfeksiyon** — Persistan latent enfeksiyon doğru: herpes simpleks virüsü vücutta kalır ve yeniden aktifleşerek tekrarlayan vezikül ve ülserler yapar.\n- **Virülan suşla süperenfeksiyon** — Virülan bir suşla süperenfeksiyon, Candida albicans vajinitinde semptomatik enfeksiyonun nedenlerinden biridir; herpese ait değildir.\n- **Bezlerin süpüratif enfeksiyonu** — Vulvovajinal bezlerin süpüratif enfeksiyonu Neisseria gonorrhoeae'nin yaptığı tablodur; herpes ağrılı vezikül ve ülserler oluşturur.\n- **Kronik epitel tahrişi** — Kronik epitel tahrişi HPV negatif vulvar karsinom yolunda liken skleroz zemininde görülür; viral tekrarlamayı açıklamaz.\n\n**Cevap: B** — Persistan latent enfeksiyon\n\n**Özet.** Herpes simpleks virüsü tip 1 ve 2 ağrılı vezikül ve ülserler yapar; persistan latent enfeksiyon nedeniyle seyir tekrarlayıcıdır.",
    "ses": "Genital herpesin tekrarlayıcı seyir göstermesinin nedeni hangisidir?\nA, Koilositik atipi\nBe, Persistan latent enfeksiyon\nCe, Virülan suşla süperenfeksiyon\nDe, Bezlerin süpüratif enfeksiyonu\nE, Kronik epitel tahrişi\nŞıkları sırasıyla gözden geçirelim.\nKoilositik atipi ha pe ve'nin viral sitopatik etkisidir. Kondiloma akuminatumda görülür, herpesin tekrarlamasını açıklamaz.\nPersistan latent enfeksiyon doğru, herpes simpleks virüsü vücutta kalır ve yeniden aktifleşerek tekrarlayan vezikül ve ülserler yapar.\nVirülan bir suşla süperenfeksiyon, Kandida albikans vajinitinde semptomatik enfeksiyonun nedenlerinden biridir. Herpese ait değildir.\nVulvovajinal bezlerin süpüratif enfeksiyonu Neisserya gonorenin yaptığı tablodur. Herpes ağrılı vezikül ve ülserler oluşturur.\nKronik epitel tahrişi ha pe ve negatif vulvar karsinom yolunda liken skleroz zemininde görülür. Viral tekrarlamayı açıklamaz.\nDoğru cevap Be, Persistan latent enfeksiyon\nHerpes simpleks virüsü tip bir ve iki ağrılı vezikül ve ülserler yapar. Persistan latent enfeksiyon nedeniyle seyir tekrarlayıcıdır.",
    "kelime": 157
@@ -481,6 +637,7 @@
   {
    "no": 32,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Neisseria gonorrhoeae vulvada en çok hangi tabloya yol açar?",
    "secenekler": {
     "A": "Primer şankr",
@@ -490,6 +647,7 @@
     "E": "Beyaz, plak benzeri lezyon"
    },
    "dogru": "C",
+   "ipucu": "Bu bakterinin irinli bir yanıt oluşturduğunu ve vulvadaki salgı yapan yapıları hedef aldığını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Primer şankr Treponema pallidumun vulvar aşılama bölgesinde oluşturduğu lezyondur; gonore etkeninin lezyonu değildir.",
@@ -499,6 +657,9 @@
     "E": "Beyaz, plak benzeri lezyonlar Candida vulvitinde görülür; Candida cinsel yolla bulaşmaz."
    },
    "ozet": "Gonore vulvovajinal bezlerin süpüratif enfeksiyonunu yapar; tanısında seroloji, kültür ve NAAT kullanılır.",
+   "sayfa": [
+    12
+   ],
    "metin": "**Soru.** Neisseria gonorrhoeae vulvada en çok hangi tabloya yol açar?\n\n**A)** Primer şankr · **B)** Kondiloma lata · **C)** Vulvovajinal bezlerde süpüratif enfeksiyon · **D)** Ağrılı vezikül ve ülser · **E)** Beyaz, plak benzeri lezyon\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Primer şankr** — Primer şankr Treponema pallidumun vulvar aşılama bölgesinde oluşturduğu lezyondur; gonore etkeninin lezyonu değildir.\n- **Kondiloma lata** — Kondiloma lata sekonder sifilizde görülen düz, hafif kabarık lezyondur; etkeni Treponema pallidumdur.\n- **Vulvovajinal bezlerde süpüratif enfeksiyon** — Vulvovajinal bezlerde süpüratif enfeksiyon doğru: Neisseria gonorrhoeae bu bezlerde irinli enfeksiyon yapar.\n- **Ağrılı vezikül ve ülser** — Ağrılı vezikül ve ülserler herpes simpleks virüsünün yaptığı genital herpesin bulgusudur ve tekrarlayıcı seyir gösterir.\n- **Beyaz, plak benzeri lezyon** — Beyaz, plak benzeri lezyonlar Candida vulvitinde görülür; Candida cinsel yolla bulaşmaz.\n\n**Cevap: C** — Vulvovajinal bezlerde süpüratif enfeksiyon\n\n**Özet.** Gonore vulvovajinal bezlerin süpüratif enfeksiyonunu yapar; tanısında seroloji, kültür ve NAAT kullanılır.",
    "ses": "Neisserya gonore vulvada en çok hangi tabloya yol açar?\nA, Primer şankr\nBe, Kondiloma lata\nCe, Vulvovajinal bezlerde süpüratif enfeksiyon\nDe, Ağrılı vezikül ve ülser\nE, Beyaz, plak benzeri lezyon\nŞimdi seçeneklere tek tek bakalım.\nPrimer şankr Treponema pallidumun vulvar aşılama bölgesinde oluşturduğu lezyondur. Gonore etkeninin lezyonu değildir.\nKondiloma lata sekonder sifilizde görülen düz, hafif kabarık lezyondur. Etkeni Treponema pallidumdur.\nVulvovajinal bezlerde süpüratif enfeksiyon doğru, Neisserya gonore bu bezlerde irinli enfeksiyon yapar.\nAğrılı vezikül ve ülserler herpes simpleks virüsünün yaptığı genital herpesin bulgusudur ve tekrarlayıcı seyir gösterir.\nBeyaz, plak benzeri lezyonlar Kandida vulvitinde görülür. Kandida cinsel yolla bulaşmaz.\nDoğru cevap Ce, Vulvovajinal bezlerde süpüratif enfeksiyon\nGonore vulvovajinal bezlerin süpüratif enfeksiyonunu yapar. Tanısında seroloji, kültür ve nükleik asit amplifikasyon testi kullanılır.",
    "kelime": 150
@@ -506,6 +667,7 @@
   {
    "no": 33,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Treponema pallidumun vulvar aşılama bölgesinde oluşturduğu lezyon hangisidir?",
    "secenekler": {
     "A": "Kondiloma lata",
@@ -515,6 +677,7 @@
     "E": "Lökoplaki"
    },
    "dogru": "D",
+   "ipucu": "Aynı etkenin sifilizin farklı dönemlerinde iki ayrı lezyon yaptığını ve giriş noktasında hangisinin olduğunu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Kondiloma lata da Treponema pallidumla oluşur, ama sekonder sifilizde görülen düz, hafif kabarık lezyondur; aşılama bölgesinin lezyonu değildir.",
@@ -524,6 +687,10 @@
     "E": "Lökoplaki kazımakla çıkmayan beyaz renk değişikliğidir; liken skleroz, skuamöz hücre hiperplazisi ya da karsinomda görülür."
    },
    "ozet": "Treponema pallidum vulvada iki lezyon yapar: aşılama bölgesinde primer şankr, sekonder sifilizde ise kondiloma lata.",
+   "sayfa": [
+    12,
+    31
+   ],
    "metin": "**Soru.** Treponema pallidumun vulvar aşılama bölgesinde oluşturduğu lezyon hangisidir?\n\n**A)** Kondiloma lata · **B)** Kondiloma akuminatum · **C)** Bartholin kisti · **D)** Primer şankr · **E)** Lökoplaki\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kondiloma lata** — Kondiloma lata da Treponema pallidumla oluşur, ama sekonder sifilizde görülen düz, hafif kabarık lezyondur; aşılama bölgesinin lezyonu değildir.\n- **Kondiloma akuminatum** — Kondiloma akuminatum düşük riskli HPV tip 6 ve 11 ile oluşan siğil benzeri lezyondur; etkeni viraldir.\n- **Bartholin kisti** — Bartholin kisti bez salgı kanalının tıkanmasıyla oluşan ağrılı gland genişlemesidir; bir aşılama lezyonu değildir.\n- **Primer şankr** — Primer şankr doğru: Treponema pallidum vulvada etkenin girdiği aşılama bölgesinde primer şankr oluşturur.\n- **Lökoplaki** — Lökoplaki kazımakla çıkmayan beyaz renk değişikliğidir; liken skleroz, skuamöz hücre hiperplazisi ya da karsinomda görülür.\n\n**Cevap: D** — Primer şankr\n\n**Özet.** Treponema pallidum vulvada iki lezyon yapar: aşılama bölgesinde primer şankr, sekonder sifilizde ise kondiloma lata.",
    "ses": "Treponema pallidumun vulvar aşılama bölgesinde oluşturduğu lezyon hangisidir?\nA, Kondiloma lata\nBe, Kondiloma akuminatum\nCe, Bartolin kisti\nDe, Primer şankr\nE, Lökoplaki\nSeçenekleri sırayla değerlendirelim.\nKondiloma lata da Treponema pallidumla oluşur, ama sekonder sifilizde görülen düz, hafif kabarık lezyondur. Aşılama bölgesinin lezyonu değildir.\nKondiloma akuminatum düşük riskli ha pe ve tip altı ve on bir ile oluşan siğil benzeri lezyondur. Etkeni viraldir.\nBartolin kisti bez salgı kanalının tıkanmasıyla oluşan ağrılı gland genişlemesidir. Bir aşılama lezyonu değildir.\nPrimer şankr doğru, Treponema pallidum vulvada etkenin girdiği aşılama bölgesinde primer şankr oluşturur.\nLökoplaki kazımakla çıkmayan beyaz renk değişikliğidir. Liken skleroz, skuamöz hücre hiperplazisi ya da karsinomda görülür.\nDoğru cevap De, Primer şankr\nTreponema pallidum vulvada iki lezyon yapar, aşılama bölgesinde primer şankr, sekonder sifilizde ise kondiloma lata.",
    "kelime": 147
@@ -531,6 +698,7 @@
   {
    "no": 34,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Liken skleroz için hangisi doğrudur?",
    "secenekler": {
     "A": "Epidermis kalınlaşır",
@@ -540,6 +708,7 @@
     "E": "Prekanseröz lezyon değildir"
    },
    "dogru": "E",
+   "ipucu": "Kanser riskinin biraz artmasının, tablonun kendisinin doğrudan öncü basamak olduğu anlamına gelip gelmediğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Epidermis kalınlaşması skuamöz hücre hiperplazisine aittir; liken sklerozda epidermis incelir.",
@@ -549,6 +718,11 @@
     "E": "Prekanseröz lezyon olmaması doğru: liken sklerozda karsinom riski biraz artmıştır, ama lezyon prekanseröz sayılmaz ve uzun dönem takip önerilir."
    },
    "ozet": "Risk artışı ile prekanseröz lezyon aynı şey değildir; liken sklerozda vulvar skuamöz hücreli karsinom riski biraz artar, ama liken skleroz prekanseröz değildir.",
+   "sayfa": [
+    18,
+    20,
+    21
+   ],
    "metin": "**Soru.** Liken skleroz için hangisi doğrudur?\n\n**A)** Epidermis kalınlaşır · **B)** Rete çıkıntıları belirginleşir · **C)** Yalnız üreme çağında görülür · **D)** HPV tip 16 ile ilişkilidir · **E)** Prekanseröz lezyon değildir\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Epidermis kalınlaşır** — Epidermis kalınlaşması skuamöz hücre hiperplazisine aittir; liken sklerozda epidermis incelir.\n- **Rete çıkıntıları belirginleşir** — Rete çıkıntıları liken sklerozda belirginleşmez, kaybolur; buna hücresiz, homojen dermal fibrozis eşlik eder.\n- **Yalnız üreme çağında görülür** — Liken skleroz her yaşta görülebilir; en sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür.\n- **HPV tip 16 ile ilişkilidir** — HPV tip 16 HPV pozitif vulvar karsinomla ilişkilidir; liken skleroz zemininde gelişen keratinize karsinom HPV ile ilişkili değildir.\n- **Prekanseröz lezyon değildir** — Prekanseröz lezyon olmaması doğru: liken sklerozda karsinom riski biraz artmıştır, ama lezyon prekanseröz sayılmaz ve uzun dönem takip önerilir.\n\n**Cevap: E** — Prekanseröz lezyon değildir\n\n**Özet.** Risk artışı ile prekanseröz lezyon aynı şey değildir; liken sklerozda vulvar skuamöz hücreli karsinom riski biraz artar, ama liken skleroz prekanseröz değildir.",
    "ses": "Liken skleroz için hangisi doğrudur?\nA, Epidermis kalınlaşır\nBe, Rete çıkıntıları belirginleşir\nCe, Yalnız üreme çağında görülür\nDe, Ha pe ve tip on altı ile ilişkilidir\nE, Prekanseröz lezyon değildir\nHer seçeneği tek tek ele alalım.\nEpidermis kalınlaşması skuamöz hücre hiperplazisine aittir. Liken sklerozda epidermis incelir.\nRete çıkıntıları liken sklerozda belirginleşmez, kaybolur. Buna hücresiz, homojen dermal fibrozis eşlik eder.\nLiken skleroz her yaşta görülebilir. En sık menopoz sonrası kadınlarda ve ergenlik öncesi kızlarda görülür.\nHa pe ve tip on altı ha pe ve pozitif vulvar karsinomla ilişkilidir. Liken skleroz zemininde gelişen keratinize karsinom ha pe ve ile ilişkili değildir.\nPrekanseröz lezyon olmaması doğru, liken sklerozda karsinom riski biraz artmıştır, ama lezyon prekanseröz sayılmaz ve uzun dönem takip önerilir.\nDoğru cevap E, Prekanseröz lezyon değildir\nRisk artışı ile prekanseröz lezyon aynı şey değildir. Liken sklerozda vulvar skuamöz hücreli karsinom riski biraz artar, ama liken skleroz prekanseröz değildir.",
    "kelime": 170
@@ -556,6 +730,7 @@
   {
    "no": 35,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Skuamöz hücre hiperplazisinin hiperplastik epitelinde hangisi görülür?",
    "secenekler": {
     "A": "Artmış mitotik aktivite",
@@ -565,6 +740,7 @@
     "E": "Hücresiz homojen dermal fibrozis"
    },
    "dogru": "A",
+   "ipucu": "Epitelin kalınlaşmasını sağlayan hücre çoğalmasının, hücrelerde bozukluk olmadan da hızlanabileceğini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Artmış mitotik aktivite doğru: skuamöz hücre hiperplazisinde hiperplastik epitelde mitoz artar, ama sitolojik atipi yoktur.",
@@ -574,6 +750,11 @@
     "E": "Hücresiz, homojen dermal fibrozis liken sklerozda görülür; skuamöz hücre hiperplazisinde epidermis kalınlaşır."
    },
    "ozet": "Skuamöz hücre hiperplazisinde akantoz, hiperkeratoz ve artmış mitotik aktivite vardır; sitolojik atipi yoktur, dermiste bazen lenfositik infiltrasyon görülür.",
+   "sayfa": [
+    18,
+    24,
+    45
+   ],
    "metin": "**Soru.** Skuamöz hücre hiperplazisinin hiperplastik epitelinde hangisi görülür?\n\n**A)** Artmış mitotik aktivite · **B)** Sitolojik atipi · **C)** Rete çıkıntılarının kaybı · **D)** Bazal tabakada anormal keratinizasyon · **E)** Hücresiz homojen dermal fibrozis\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Artmış mitotik aktivite** — Artmış mitotik aktivite doğru: skuamöz hücre hiperplazisinde hiperplastik epitelde mitoz artar, ama sitolojik atipi yoktur.\n- **Sitolojik atipi** — Sitolojik atipi skuamöz hücre hiperplazisinde yoktur; atipi diferansiye VIN'in bulgusudur.\n- **Rete çıkıntılarının kaybı** — Rete çıkıntılarının kaybı epidermis incelmesiyle birlikte liken sklerozun histolojik bulgusudur.\n- **Bazal tabakada anormal keratinizasyon** — Bazal tabakaya sınırlı anormal keratinizasyon diferansiye VIN'i tanımlar; hiperplaziye ait değildir.\n- **Hücresiz homojen dermal fibrozis** — Hücresiz, homojen dermal fibrozis liken sklerozda görülür; skuamöz hücre hiperplazisinde epidermis kalınlaşır.\n\n**Cevap: A** — Artmış mitotik aktivite\n\n**Özet.** Skuamöz hücre hiperplazisinde akantoz, hiperkeratoz ve artmış mitotik aktivite vardır; sitolojik atipi yoktur, dermiste bazen lenfositik infiltrasyon görülür.",
    "ses": "Skuamöz hücre hiperplazisinin hiperplastik epitelinde hangisi görülür?\nA, Artmış mitotik aktivite\nBe, Sitolojik atipi\nCe, Rete çıkıntılarının kaybı\nDe, Bazal tabakada anormal keratinizasyon\nE, Hücresiz homojen dermal fibrozis\nŞıkları sırasıyla gözden geçirelim.\nArtmış mitotik aktivite doğru, skuamöz hücre hiperplazisinde hiperplastik epitelde mitoz artar, ama sitolojik atipi yoktur.\nSitolojik atipi skuamöz hücre hiperplazisinde yoktur. Atipi diferansiye vulvar intraepitelyal neoplazinin bulgusudur.\nRete çıkıntılarının kaybı epidermis incelmesiyle birlikte liken sklerozun histolojik bulgusudur.\nBazal tabakaya sınırlı anormal keratinizasyon diferansiye vulvar intraepitelyal neoplaziyi tanımlar. Hiperplaziye ait değildir.\nHücresiz, homojen dermal fibrozis liken sklerozda görülür. Skuamöz hücre hiperplazisinde epidermis kalınlaşır.\nDoğru cevap A, Artmış mitotik aktivite\nSkuamöz hücre hiperplazisinde akantoz, hiperkeratoz ve artmış mitotik aktivite vardır. Sitolojik atipi yoktur, dermiste bazen lenfositik infiltrasyon görülür.",
    "kelime": 147
@@ -581,6 +762,7 @@
   {
    "no": 36,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Vulvada lökoplaki yapabilen benign hastalık hangisidir?",
    "secenekler": {
     "A": "Karsinoma in situ",
@@ -590,22 +772,27 @@
     "E": "Ekstramammary Paget hastalığı"
    },
    "dogru": "C",
+   "ipucu": "Beyaz plak görünümü veren tablolar arasında neoplastik olmayan bir deri hastalığını, yani bir dermatoz örneğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Skuamöz hücreli karsinoma in situ lökoplaki yapabilir, ama neoplastik bir lezyondur; benign grupta yer almaz.",
     "B": "İnvaziv skuamöz hücreli karsinom da lökoplaki şeklinde görülebilir; malign olduğu için her lökoplakide biyopsi zorunludur.",
     "C": "Psoriasis doğru: liken planus ile birlikte lökoplaki yapabilen benign hastalıklardandır.",
-    "D": "Bartholin kisti bez kanalının tıkanmasıyla oluşan ağrılı gland genişlemesidir; lökoplaki yapan hastalıklar arasında sayılmaz.",
+    "D": "Bartholin kisti vestibüldeki büyük mukus bezinin kanal tıkanıklığıyla oluşan, epitel altında yerleşimli düzgün yüzeyli kistik şişliktir ve yüzeyde beyaz plak yapmaz; vulva derisinde epidermal kalınlaşma ve hiperkeratozla beyaz plak (lökoplaki) oluşturabilen benign inflamatuvar dermatozlar ise psoriasis, liken skleroz ve skuamöz hücre hiperplazisidir.",
     "E": "Ekstramammary Paget hastalığı kırmızı, pullu, kabuklu plak yapar ve kronik dermatiti taklit eder; benign bir lezyon değildir."
    },
    "ozet": "Lökoplaki kazımakla çıkmayan beyaz renk değişikliğidir; psoriasis ve liken planus gibi benign hastalıklar da karsinom da yapabildiği için her lökoplakide biyopsi zorunludur.",
-   "metin": "**Soru.** Vulvada lökoplaki yapabilen benign hastalık hangisidir?\n\n**A)** Karsinoma in situ · **B)** İnvaziv skuamöz karsinom · **C)** Psoriasis · **D)** Bartholin kisti · **E)** Ekstramammary Paget hastalığı\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Karsinoma in situ** — Skuamöz hücreli karsinoma in situ lökoplaki yapabilir, ama neoplastik bir lezyondur; benign grupta yer almaz.\n- **İnvaziv skuamöz karsinom** — İnvaziv skuamöz hücreli karsinom da lökoplaki şeklinde görülebilir; malign olduğu için her lökoplakide biyopsi zorunludur.\n- **Psoriasis** — Psoriasis doğru: liken planus ile birlikte lökoplaki yapabilen benign hastalıklardandır.\n- **Bartholin kisti** — Bartholin kisti bez kanalının tıkanmasıyla oluşan ağrılı gland genişlemesidir; lökoplaki yapan hastalıklar arasında sayılmaz.\n- **Ekstramammary Paget hastalığı** — Ekstramammary Paget hastalığı kırmızı, pullu, kabuklu plak yapar ve kronik dermatiti taklit eder; benign bir lezyon değildir.\n\n**Cevap: C** — Psoriasis\n\n**Özet.** Lökoplaki kazımakla çıkmayan beyaz renk değişikliğidir; psoriasis ve liken planus gibi benign hastalıklar da karsinom da yapabildiği için her lökoplakide biyopsi zorunludur.",
-   "ses": "Vulvada lökoplaki yapabilen benign hastalık hangisidir?\nA, Karsinoma in situ\nBe, İnvaziv skuamöz karsinom\nCe, Psoriazis\nDe, Bartolin kisti\nE, Ekstramamari Peycet hastalığı\nŞimdi seçeneklere tek tek bakalım.\nSkuamöz hücreli karsinoma in situ lökoplaki yapabilir, ama neoplastik bir lezyondur. Benign grupta yer almaz.\nİnvaziv skuamöz hücreli karsinom da lökoplaki şeklinde görülebilir. Malign olduğu için her lökoplakide biyopsi zorunludur.\nPsoriazis doğru, liken planus ile birlikte lökoplaki yapabilen benign hastalıklardandır.\nBartolin kisti bez kanalının tıkanmasıyla oluşan ağrılı gland genişlemesidir. Lökoplaki yapan hastalıklar arasında sayılmaz.\nEkstramamari Peycet hastalığı kırmızı, pullu, kabuklu plak yapar ve kronik dermatiti taklit eder. Benign bir lezyon değildir.\nDoğru cevap Ce, Psoriazis\nLökoplaki kazımakla çıkmayan beyaz renk değişikliğidir. Psoriazis ve liken planus gibi benign hastalıklar da karsinom da yapabildiği için her lökoplakide biyopsi zorunludur.",
-   "kelime": 154
+   "sayfa": [
+    27
+   ],
+   "metin": "**Soru.** Vulvada lökoplaki yapabilen benign hastalık hangisidir?\n\n**A)** Karsinoma in situ · **B)** İnvaziv skuamöz karsinom · **C)** Psoriasis · **D)** Bartholin kisti · **E)** Ekstramammary Paget hastalığı\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Karsinoma in situ** — Skuamöz hücreli karsinoma in situ lökoplaki yapabilir, ama neoplastik bir lezyondur; benign grupta yer almaz.\n- **İnvaziv skuamöz karsinom** — İnvaziv skuamöz hücreli karsinom da lökoplaki şeklinde görülebilir; malign olduğu için her lökoplakide biyopsi zorunludur.\n- **Psoriasis** — Psoriasis doğru: liken planus ile birlikte lökoplaki yapabilen benign hastalıklardandır.\n- **Bartholin kisti** — Bartholin kisti vestibüldeki büyük mukus bezinin kanal tıkanıklığıyla oluşan, epitel altında yerleşimli düzgün yüzeyli kistik şişliktir ve yüzeyde beyaz plak yapmaz; vulva derisinde epidermal kalınlaşma ve hiperkeratozla beyaz plak (lökoplaki) oluşturabilen benign inflamatuvar dermatozlar ise psoriasis, liken skleroz ve skuamöz hücre hiperplazisidir.\n- **Ekstramammary Paget hastalığı** — Ekstramammary Paget hastalığı kırmızı, pullu, kabuklu plak yapar ve kronik dermatiti taklit eder; benign bir lezyon değildir.\n\n**Cevap: C** — Psoriasis\n\n**Özet.** Lökoplaki kazımakla çıkmayan beyaz renk değişikliğidir; psoriasis ve liken planus gibi benign hastalıklar da karsinom da yapabildiği için her lökoplakide biyopsi zorunludur.",
+   "ses": "Vulvada lökoplaki yapabilen benign hastalık hangisidir?\nA, Karsinoma in situ\nBe, İnvaziv skuamöz karsinom\nCe, Psoriazis\nDe, Bartolin kisti\nE, Ekstramamari Peycet hastalığı\nŞimdi seçeneklere tek tek bakalım.\nSkuamöz hücreli karsinoma in situ lökoplaki yapabilir, ama neoplastik bir lezyondur. Benign grupta yer almaz.\nİnvaziv skuamöz hücreli karsinom da lökoplaki şeklinde görülebilir. Malign olduğu için her lökoplakide biyopsi zorunludur.\nPsoriazis doğru, liken planus ile birlikte lökoplaki yapabilen benign hastalıklardandır.\nBartholin kisti vestibüldeki büyük mukus bezinin kanal tıkanıklığıyla oluşan, epitel altında yerleşimli düzgün yüzeyli kistik şişliktir ve yüzeyde beyaz plak yapmaz. Vulva derisinde epidermal kalınlaşma ve hiperkeratozla beyaz plak, lökoplaki, oluşturabilen benign inflamatuvar dermatozlar ise psoriasis, liken skleroz ve skuamöz hücre hiperplazisidir.\nEkstramamari Peycet hastalığı kırmızı, pullu, kabuklu plak yapar ve kronik dermatiti taklit eder. Benign bir lezyon değildir.\nDoğru cevap Ce, Psoriazis\nLökoplaki kazımakla çıkmayan beyaz renk değişikliğidir. Psoriazis ve liken planus gibi benign hastalıklar da karsinom da yapabildiği için her lökoplakide biyopsi zorunludur.",
+   "kelime": 182
   },
   {
    "no": 37,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Kondiloma akuminatumun etkeni hangisidir?",
    "secenekler": {
     "A": "Treponema pallidum",
@@ -615,6 +802,7 @@
     "E": "Gardnerella vaginalis"
    },
    "dogru": "D",
+   "ipucu": "Siğil yapan benign tiplerle karsinomla ilişkili tiplerin risk gruplarını birbirinden ayırmayı düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Treponema pallidum kondiloma lata etkenidir; sekonder sifilizde düz, hafif kabarık lezyonlar yapar.",
@@ -624,6 +812,10 @@
     "E": "Gardnerella vaginalis gram negatif kokobasildir ve bakteriyel vajinozun ana nedenidir."
    },
    "ozet": "Kondiloma akuminatum en yaygın kondilom tipidir; etkeni düşük riskli HPV tip 6 ve 11'dir, vulvar karsinomla ilişkili olan ise tip 16'dır.",
+   "sayfa": [
+    32,
+    41
+   ],
    "metin": "**Soru.** Kondiloma akuminatumun etkeni hangisidir?\n\n**A)** Treponema pallidum · **B)** HPV tip 16 · **C)** Herpes simpleks virüsü · **D)** HPV tip 6 ve 11 · **E)** Gardnerella vaginalis\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Treponema pallidum** — Treponema pallidum kondiloma lata etkenidir; sekonder sifilizde düz, hafif kabarık lezyonlar yapar.\n- **HPV tip 16** — HPV tip 16 yüksek riskli tiptir ve HPV pozitif vulvar karsinomla ilişkilidir; benign siğil etkeni değildir.\n- **Herpes simpleks virüsü** — Herpes simpleks virüsü genital herpes etkenidir; ağrılı vezikül ve ülserler yapar.\n- **HPV tip 6 ve 11** — HPV tip 6 ve 11 doğru: kondiloma akuminatum bu düşük riskli tiplerle oluşur ve cinsel temasla bulaşır.\n- **Gardnerella vaginalis** — Gardnerella vaginalis gram negatif kokobasildir ve bakteriyel vajinozun ana nedenidir.\n\n**Cevap: D** — HPV tip 6 ve 11\n\n**Özet.** Kondiloma akuminatum en yaygın kondilom tipidir; etkeni düşük riskli HPV tip 6 ve 11'dir, vulvar karsinomla ilişkili olan ise tip 16'dır.",
    "ses": "Kondiloma akuminatumun etkeni hangisidir?\nA, Treponema pallidum\nBe, Ha pe ve tip on altı\nCe, Herpes simpleks virüsü\nDe, Ha pe ve tip altı ve on bir\nE, Gardnerella vajinalis\nSeçenekleri sırayla değerlendirelim.\nTreponema pallidum kondiloma lata etkenidir. Sekonder sifilizde düz, hafif kabarık lezyonlar yapar.\nHa pe ve tip on altı yüksek riskli tiptir ve ha pe ve pozitif vulvar karsinomla ilişkilidir. Benign siğil etkeni değildir.\nHerpes simpleks virüsü genital herpes etkenidir. Ağrılı vezikül ve ülserler yapar.\nHa pe ve tip altı ve on bir doğru, kondiloma akuminatum bu düşük riskli tiplerle oluşur ve cinsel temasla bulaşır.\nGardnerella vajinalis gram negatif kokobasildir ve bakteriyel vajinozun ana nedenidir.\nDoğru cevap De, Ha pe ve tip altı ve on bir\nKondiloma akuminatum en yaygın kondilom tipidir. Etkeni düşük riskli ha pe ve tip altı ve on birdir, vulvar karsinomla ilişkili olan ise tip on altıdır.",
    "kelime": 154
@@ -631,6 +823,7 @@
   {
    "no": 38,
    "tur": "ornek",
+   "zorluk": "kolay",
    "soru": "Vulva karsinomunun en sık histolojik tipi hangisidir?",
    "secenekler": {
     "A": "Adenokarsinom",
@@ -640,6 +833,7 @@
     "E": "Ekstramammary Paget hastalığı"
    },
    "dogru": "B",
+   "ipucu": "Bu kanserlerin büyük çoğunluğunu oluşturan ve HPV ilişkisine göre iki gruba ayrılan tipi düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Adenokarsinom vulvada görülen diğer tiplerden biridir; sıklıkta en öndeki tip değildir.",
@@ -649,6 +843,9 @@
     "E": "Ekstramammary Paget hastalığı vulva derisinde atipik hücrelerin epidermis içi çoğalmasıdır; vulva karsinomlarının çoğunluğunu oluşturmaz."
    },
    "ozet": "Vulva karsinomu genital sistem kanserlerinin yaklaşık %3'üdür, en sık 60 yaş üstünde görülür ve yaklaşık %90'ı skuamöz hücreli karsinomdur.",
+   "sayfa": [
+    39
+   ],
    "metin": "**Soru.** Vulva karsinomunun en sık histolojik tipi hangisidir?\n\n**A)** Adenokarsinom · **B)** Skuamöz hücreli karsinom · **C)** Bazal hücreli karsinom · **D)** Embriyonel rabdomiyosarkom · **E)** Ekstramammary Paget hastalığı\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Adenokarsinom** — Adenokarsinom vulvada görülen diğer tiplerden biridir; sıklıkta en öndeki tip değildir.\n- **Skuamöz hücreli karsinom** — Skuamöz hücreli karsinom doğru: vulva karsinomlarının yaklaşık %90'ını oluşturur.\n- **Bazal hücreli karsinom** — Bazal hücreli karsinom vulvanın nadir malign tümörleri arasında sayılır; en sık tip değildir.\n- **Embriyonel rabdomiyosarkom** — Embriyonel rabdomiyosarkom 5 yaş altı çocuklarda vajinada görülen nadir bir tümördür; vulva karsinomu değildir.\n- **Ekstramammary Paget hastalığı** — Ekstramammary Paget hastalığı vulva derisinde atipik hücrelerin epidermis içi çoğalmasıdır; vulva karsinomlarının çoğunluğunu oluşturmaz.\n\n**Cevap: B** — Skuamöz hücreli karsinom\n\n**Özet.** Vulva karsinomu genital sistem kanserlerinin yaklaşık %3'üdür, en sık 60 yaş üstünde görülür ve yaklaşık %90'ı skuamöz hücreli karsinomdur.",
    "ses": "Vulva karsinomunun en sık histolojik tipi hangisidir?\nA, Adenokarsinom\nBe, Skuamöz hücreli karsinom\nCe, Bazal hücreli karsinom\nDe, Embriyonel rabdomiyosarkom\nE, Ekstramamari Peycet hastalığı\nHer seçeneği tek tek ele alalım.\nAdenokarsinom vulvada görülen diğer tiplerden biridir. Sıklıkta en öndeki tip değildir.\nSkuamöz hücreli karsinom doğru, vulva karsinomlarının yaklaşık yüzde doksanını oluşturur.\nBazal hücreli karsinom vulvanın nadir malign tümörleri arasında sayılır. En sık tip değildir.\nEmbriyonel rabdomiyosarkom beş yaş altı çocuklarda vajinada görülen nadir bir tümördür. Vulva karsinomu değildir.\nEkstramamari Peycet hastalığı vulva derisinde atipik hücrelerin epidermis içi çoğalmasıdır. Vulva karsinomlarının çoğunluğunu oluşturmaz.\nDoğru cevap Be, Skuamöz hücreli karsinom\nVulva karsinomu genital sistem kanserlerinin yaklaşık yüzde üçüdür, en sık altmış yaş üstünde görülür ve yaklaşık yüzde doksanı skuamöz hücreli karsinomdur.",
    "kelime": 145
@@ -656,6 +853,7 @@
   {
    "no": 39,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "VIN zemininde invaziv vulvar karsinom gelişme riskini artıran durum hangisidir?",
    "secenekler": {
     "A": "Liken skleroz",
@@ -665,22 +863,28 @@
     "E": "45 yaşından küçük olmak"
    },
    "dogru": "C",
+   "ipucu": "İlerlemenin kaçınılmaz olmadığını ve onu kolaylaştıran, yaş dışındaki hasta özelliğini hatırla.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Liken skleroz HPV negatif keratinize karsinomun zeminidir; VIN üzerinden gelişen HPV pozitif yolun risk faktörü değildir.",
     "B": "Düşük riskli HPV tip 6 ve 11 benign kondilom yapar; vulvar karsinom yolunda yüksek riskli HPV yer alır.",
     "C": "İmmün sistemin baskılanması doğru: immün sistemi baskılanmış hastalarda VIN zemininde invaziv karsinom riski artar.",
-    "D": "Skuamöz hücre hiperplazisi, liken skleroz gibi HPV negatif yolun zemin lezyonudur; VIN ilerlemesinin risk faktörü olarak geçmez.",
+    "D": "Skuamöz hücre hiperplazisi ve liken skleroz, HPV-negatif (diferansiye VIN) yolağının zemin lezyonlarıdır; yüksek riskli HPV ile ilişkili klasik VIN (HSIL) lezyonlarının regresyona uğramayıp invaziv vulvar karsinoma ilerleme riskini artıran etkenler ise ileri yaş, sigara kullanımı ve immün sistemin baskılanmasıdır.",
     "E": "45 yaşından küçük olmak riski artırmaz; invaziv karsinom riski 45 yaşından büyük kadınlarda artar."
    },
    "ozet": "VIN'den invaziv karsinoma ilerleme kaçınılmaz değildir ve yıllar sürebilir; risk 45 yaş üstü kadınlarda ve immün sistemi baskılanmış hastalarda artar.",
-   "metin": "**Soru.** VIN zemininde invaziv vulvar karsinom gelişme riskini artıran durum hangisidir?\n\n**A)** Liken skleroz · **B)** Düşük riskli HPV · **C)** İmmün sistemin baskılanması · **D)** Skuamöz hücre hiperplazisi · **E)** 45 yaşından küçük olmak\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Liken skleroz** — Liken skleroz HPV negatif keratinize karsinomun zeminidir; VIN üzerinden gelişen HPV pozitif yolun risk faktörü değildir.\n- **Düşük riskli HPV** — Düşük riskli HPV tip 6 ve 11 benign kondilom yapar; vulvar karsinom yolunda yüksek riskli HPV yer alır.\n- **İmmün sistemin baskılanması** — İmmün sistemin baskılanması doğru: immün sistemi baskılanmış hastalarda VIN zemininde invaziv karsinom riski artar.\n- **Skuamöz hücre hiperplazisi** — Skuamöz hücre hiperplazisi, liken skleroz gibi HPV negatif yolun zemin lezyonudur; VIN ilerlemesinin risk faktörü olarak geçmez.\n- **45 yaşından küçük olmak** — 45 yaşından küçük olmak riski artırmaz; invaziv karsinom riski 45 yaşından büyük kadınlarda artar.\n\n**Cevap: C** — İmmün sistemin baskılanması\n\n**Özet.** VIN'den invaziv karsinoma ilerleme kaçınılmaz değildir ve yıllar sürebilir; risk 45 yaş üstü kadınlarda ve immün sistemi baskılanmış hastalarda artar.",
-   "ses": "Vulvar intraepitelyal neoplazi zemininde invaziv vulvar karsinom gelişme riskini artıran durum hangisidir?\nA, Liken skleroz\nBe, Düşük riskli ha pe ve\nCe, İmmün sistemin baskılanması\nDe, Skuamöz hücre hiperplazisi\nE, Kırk beş yaşından küçük olmak\nŞıkları sırasıyla gözden geçirelim.\nLiken skleroz ha pe ve negatif keratinize karsinomun zeminidir. Vulvar intraepitelyal neoplazi üzerinden gelişen ha pe ve pozitif yolun risk faktörü değildir.\nDüşük riskli ha pe ve tip altı ve on bir benign kondilom yapar. Vulvar karsinom yolunda yüksek riskli ha pe ve yer alır.\nİmmün sistemin baskılanması doğru, immün sistemi baskılanmış hastalarda vulvar intraepitelyal neoplazi zemininde invaziv karsinom riski artar.\nSkuamöz hücre hiperplazisi, liken skleroz gibi ha pe ve negatif yolun zemin lezyonudur. Vulvar intraepitelyal neoplazi ilerlemesinin risk faktörü olarak geçmez.\nKırk beş yaşından küçük olmak riski artırmaz. İnvaziv karsinom riski kırk beş yaşından büyük kadınlarda artar.\nDoğru cevap Ce, İmmün sistemin baskılanması\nVulvar intraepitelyal neoplaziden invaziv karsinoma ilerleme kaçınılmaz değildir ve yıllar sürebilir. Risk kırk beş yaş üstü kadınlarda ve immün sistemi baskılanmış hastalarda artar.",
-   "kelime": 171
+   "sayfa": [
+    42,
+    43
+   ],
+   "metin": "**Soru.** VIN zemininde invaziv vulvar karsinom gelişme riskini artıran durum hangisidir?\n\n**A)** Liken skleroz · **B)** Düşük riskli HPV · **C)** İmmün sistemin baskılanması · **D)** Skuamöz hücre hiperplazisi · **E)** 45 yaşından küçük olmak\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Liken skleroz** — Liken skleroz HPV negatif keratinize karsinomun zeminidir; VIN üzerinden gelişen HPV pozitif yolun risk faktörü değildir.\n- **Düşük riskli HPV** — Düşük riskli HPV tip 6 ve 11 benign kondilom yapar; vulvar karsinom yolunda yüksek riskli HPV yer alır.\n- **İmmün sistemin baskılanması** — İmmün sistemin baskılanması doğru: immün sistemi baskılanmış hastalarda VIN zemininde invaziv karsinom riski artar.\n- **Skuamöz hücre hiperplazisi** — Skuamöz hücre hiperplazisi ve liken skleroz, HPV-negatif (diferansiye VIN) yolağının zemin lezyonlarıdır; yüksek riskli HPV ile ilişkili klasik VIN (HSIL) lezyonlarının regresyona uğramayıp invaziv vulvar karsinoma ilerleme riskini artıran etkenler ise ileri yaş, sigara kullanımı ve immün sistemin baskılanmasıdır.\n- **45 yaşından küçük olmak** — 45 yaşından küçük olmak riski artırmaz; invaziv karsinom riski 45 yaşından büyük kadınlarda artar.\n\n**Cevap: C** — İmmün sistemin baskılanması\n\n**Özet.** VIN'den invaziv karsinoma ilerleme kaçınılmaz değildir ve yıllar sürebilir; risk 45 yaş üstü kadınlarda ve immün sistemi baskılanmış hastalarda artar.",
+   "ses": "Vulvar intraepitelyal neoplazi zemininde invaziv vulvar karsinom gelişme riskini artıran durum hangisidir?\nA, Liken skleroz\nBe, Düşük riskli ha pe ve\nCe, İmmün sistemin baskılanması\nDe, Skuamöz hücre hiperplazisi\nE, Kırk beş yaşından küçük olmak\nŞıkları sırasıyla gözden geçirelim.\nLiken skleroz ha pe ve negatif keratinize karsinomun zeminidir. Vulvar intraepitelyal neoplazi üzerinden gelişen ha pe ve pozitif yolun risk faktörü değildir.\nDüşük riskli ha pe ve tip altı ve on bir benign kondilom yapar. Vulvar karsinom yolunda yüksek riskli ha pe ve yer alır.\nİmmün sistemin baskılanması doğru, immün sistemi baskılanmış hastalarda vulvar intraepitelyal neoplazi zemininde invaziv karsinom riski artar.\nSkuamöz hücre hiperplazisi ve liken skleroz, ha pe ve-negatif, diferansiye ve i ne, yolağının zemin lezyonlarıdır. Yüksek riskli ha pe ve ile ilişkili klasik ve i ne, ha se i le, lezyonlarının regresyona uğramayıp invaziv vulvar karsinoma ilerleme riskini artıran etkenler ise ileri yaş, sigara kullanımı ve immün sistemin baskılanmasıdır.\nKırk beş yaşından küçük olmak riski artırmaz. İnvaziv karsinom riski kırk beş yaşından büyük kadınlarda artar.\nDoğru cevap Ce, İmmün sistemin baskılanması\nVulvar intraepitelyal neoplaziden invaziv karsinoma ilerleme kaçınılmaz değildir ve yıllar sürebilir. Risk kırk beş yaş üstü kadınlarda ve immün sistemi baskılanmış hastalarda artar.",
+   "kelime": 193
   },
   {
    "no": 40,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Diferansiye VIN'in tanımlayıcı histolojik özelliği hangisidir?",
    "secenekler": {
     "A": "Perinükleer halolu koilositler",
@@ -690,6 +894,7 @@
     "E": "Bazal tabakada anormal keratinizasyon"
    },
    "dogru": "E",
+   "ipucu": "Normalde yüzeyde olması beklenen olayın epitelin en alt katında ortaya çıkmasını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Perinükleer halolu koilositler HPV'nin viral sitopatik etkisidir; kondiloma akuminatumun bulgusudur, HPV negatif öncü lezyonun değil.",
@@ -699,6 +904,9 @@
     "E": "Bazal tabakaya sınırlı anormal keratinizasyon doğru: sitolojik atipiyle birlikte diferansiye VIN'i tanımlar."
    },
    "ozet": "Diferansiye VIN'de anormal keratinizasyon bazal tabakaya sınırlıdır ve sitolojik atipi eşlik eder; tedavi edilmezse iyi diferansiye, keratinize skuamöz hücreli karsinom gelişir.",
+   "sayfa": [
+    45
+   ],
    "metin": "**Soru.** Diferansiye VIN'in tanımlayıcı histolojik özelliği hangisidir?\n\n**A)** Perinükleer halolu koilositler · **B)** Hücresiz homojen dermal fibrozis · **C)** Atipisiz akantoz ve hiperkeratoz · **D)** Epidermiste tek tek büyük hücreler · **E)** Bazal tabakada anormal keratinizasyon\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Perinükleer halolu koilositler** — Perinükleer halolu koilositler HPV'nin viral sitopatik etkisidir; kondiloma akuminatumun bulgusudur, HPV negatif öncü lezyonun değil.\n- **Hücresiz homojen dermal fibrozis** — Hücresiz, homojen dermal fibrozis liken sklerozun histolojik bulgusudur; diferansiye VIN'in tanımlayıcı özelliği değildir.\n- **Atipisiz akantoz ve hiperkeratoz** — Atipisiz akantoz ve hiperkeratoz skuamöz hücre hiperplazisini tanımlar; diferansiye VIN'de ise sitolojik atipi vardır.\n- **Epidermiste tek tek büyük hücreler** — Epidermiste tek tek ve gruplar halinde büyük, soluk sitoplazmalı hücreler ekstramammary Paget hastalığını gösterir.\n- **Bazal tabakada anormal keratinizasyon** — Bazal tabakaya sınırlı anormal keratinizasyon doğru: sitolojik atipiyle birlikte diferansiye VIN'i tanımlar.\n\n**Cevap: E** — Bazal tabakada anormal keratinizasyon\n\n**Özet.** Diferansiye VIN'de anormal keratinizasyon bazal tabakaya sınırlıdır ve sitolojik atipi eşlik eder; tedavi edilmezse iyi diferansiye, keratinize skuamöz hücreli karsinom gelişir.",
    "ses": "Diferansiye vulvar intraepitelyal neoplazinin tanımlayıcı histolojik özelliği hangisidir?\nA, Perinükleer halolu koilositler\nBe, Hücresiz homojen dermal fibrozis\nCe, Atipisiz akantoz ve hiperkeratoz\nDe, Epidermiste tek tek büyük hücreler\nE, Bazal tabakada anormal keratinizasyon\nŞimdi seçeneklere tek tek bakalım.\nPerinükleer halolu koilositler ha pe ve'nin viral sitopatik etkisidir. Kondiloma akuminatumun bulgusudur, ha pe ve negatif öncü lezyonun değil.\nHücresiz, homojen dermal fibrozis liken sklerozun histolojik bulgusudur. Diferansiye vulvar intraepitelyal neoplazinin tanımlayıcı özelliği değildir.\nAtipisiz akantoz ve hiperkeratoz skuamöz hücre hiperplazisini tanımlar. Diferansiye vulvar intraepitelyal neoplazide ise sitolojik atipi vardır.\nEpidermiste tek tek ve gruplar halinde büyük, soluk sitoplazmalı hücreler ekstramamari Peycet hastalığını gösterir.\nBazal tabakaya sınırlı anormal keratinizasyon doğru, sitolojik atipiyle birlikte diferansiye vulvar intraepitelyal neoplaziyi tanımlar.\nDoğru cevap E, Bazal tabakada anormal keratinizasyon\nDiferansiye vulvar intraepitelyal neoplazide anormal keratinizasyon bazal tabakaya sınırlıdır ve sitolojik atipi eşlik eder. Tedavi edilmezse iyi diferansiye, keratinize skuamöz hücreli karsinom gelişir.",
    "kelime": 169
@@ -706,6 +914,7 @@
   {
    "no": 41,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Vulvar karsinomun ilk yayılım yeri hangisidir?",
    "secenekler": {
     "A": "Bölgesel lenf düğümleri",
@@ -715,22 +924,27 @@
     "E": "Beyin"
    },
    "dogru": "A",
+   "ipucu": "Tümörün uzun süre lokal kaldıktan sonra önce kan yoluyla mı, yoksa başka bir yolla mı yayıldığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Bölgesel lenf düğümleri doğru: uzun süre lokal kalan vulvar karsinomun ilk yayılımı bölgesel lenf düğümlerinedir.",
     "B": "Akciğer metastazı hematojen yolla ve ileri evrede görülür; ilk yayılım yeri değildir.",
-    "C": "Vulvar karsinomda organ metastazı ancak ileri evrede hematojen yolla gelişir. Karaciğer bu sorudaki ayrımı sağlamaz.",
+    "C": "Karaciğer, akciğer ve diğer iç organlara hematojen metastaz vulvar karsinomda ancak çok ileri evrelerde ortaya çıkar; karsinomların genel kuralına uygun olarak vulvar skuamöz hücreli karsinomun ilk ve en önemli yayılım yeri inguinal, pelvik ve femoral bölgesel lenf düğümleridir.",
     "D": "Kemik de ilk yayılım yeri değildir; vulvar karsinom önce bölgesel invazyon yapar, ilk uzak yayılımı lenf düğümlerinedir.",
-    "E": "Vulvar karsinomun prognozu evre, invazyon derinliği ve tümör boyutuyla ilişkilidir. Beyin bu sorudaki ayrımı sağlamaz."
+    "E": "Beyin metastazı vulvar karsinomda son derece nadir ve geç dönem bir hematojen yayılımdır; invazyon derinliği 1 milimetreyi aşan vulvar karsinomda tümör hücrelerinin ilk yayıldığı anatomik istasyon bölgesel (inguinal ve femoral) lenf düğümleridir."
    },
    "ozet": "Vulvar karsinom uzun süre lokal kalır ve ilk yayılımı bölgesel lenf düğümlerinedir; akciğer ve diğer organlara hematojen metastaz ileri evrede olur.",
-   "metin": "**Soru.** Vulvar karsinomun ilk yayılım yeri hangisidir?\n\n**A)** Bölgesel lenf düğümleri · **B)** Akciğer · **C)** Karaciğer · **D)** Kemik · **E)** Beyin\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Bölgesel lenf düğümleri** — Bölgesel lenf düğümleri doğru: uzun süre lokal kalan vulvar karsinomun ilk yayılımı bölgesel lenf düğümlerinedir.\n- **Akciğer** — Akciğer metastazı hematojen yolla ve ileri evrede görülür; ilk yayılım yeri değildir.\n- **Karaciğer** — Vulvar karsinomda organ metastazı ancak ileri evrede hematojen yolla gelişir. Karaciğer bu sorudaki ayrımı sağlamaz.\n- **Kemik** — Kemik de ilk yayılım yeri değildir; vulvar karsinom önce bölgesel invazyon yapar, ilk uzak yayılımı lenf düğümlerinedir.\n- **Beyin** — Vulvar karsinomun prognozu evre, invazyon derinliği ve tümör boyutuyla ilişkilidir. Beyin bu sorudaki ayrımı sağlamaz.\n\n**Cevap: A** — Bölgesel lenf düğümleri\n\n**Özet.** Vulvar karsinom uzun süre lokal kalır ve ilk yayılımı bölgesel lenf düğümlerinedir; akciğer ve diğer organlara hematojen metastaz ileri evrede olur.",
-   "ses": "Vulvar karsinomun ilk yayılım yeri hangisidir?\nA, Bölgesel lenf düğümleri\nBe, Akciğer\nCe, Karaciğer\nDe, Kemik\nE, Beyin\nSeçenekleri sırayla değerlendirelim.\nBölgesel lenf düğümleri doğru, uzun süre lokal kalan vulvar karsinomun ilk yayılımı bölgesel lenf düğümlerinedir.\nAkciğer metastazı hematojen yolla ve ileri evrede görülür. İlk yayılım yeri değildir.\nVulvar karsinomda organ metastazı ancak ileri evrede hematojen yolla gelişir. Karaciğer bu sorudaki ayrımı sağlamaz.\nKemik de ilk yayılım yeri değildir. Vulvar karsinom önce bölgesel invazyon yapar, ilk uzak yayılımı lenf düğümlerinedir.\nVulvar karsinomun prognozu evre, invazyon derinliği ve tümör boyutuyla ilişkilidir. Beyin bu sorudaki ayrımı sağlamaz.\nDoğru cevap A, Bölgesel lenf düğümleri\nVulvar karsinom uzun süre lokal kalır ve ilk yayılımı bölgesel lenf düğümlerinedir. Akciğer ve diğer organlara hematojen metastaz ileri evrede olur.",
-   "kelime": 146
+   "sayfa": [
+    49
+   ],
+   "metin": "**Soru.** Vulvar karsinomun ilk yayılım yeri hangisidir?\n\n**A)** Bölgesel lenf düğümleri · **B)** Akciğer · **C)** Karaciğer · **D)** Kemik · **E)** Beyin\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Bölgesel lenf düğümleri** — Bölgesel lenf düğümleri doğru: uzun süre lokal kalan vulvar karsinomun ilk yayılımı bölgesel lenf düğümlerinedir.\n- **Akciğer** — Akciğer metastazı hematojen yolla ve ileri evrede görülür; ilk yayılım yeri değildir.\n- **Karaciğer** — Karaciğer, akciğer ve diğer iç organlara hematojen metastaz vulvar karsinomda ancak çok ileri evrelerde ortaya çıkar; karsinomların genel kuralına uygun olarak vulvar skuamöz hücreli karsinomun ilk ve en önemli yayılım yeri inguinal, pelvik ve femoral bölgesel lenf düğümleridir.\n- **Kemik** — Kemik de ilk yayılım yeri değildir; vulvar karsinom önce bölgesel invazyon yapar, ilk uzak yayılımı lenf düğümlerinedir.\n- **Beyin** — Beyin metastazı vulvar karsinomda son derece nadir ve geç dönem bir hematojen yayılımdır; invazyon derinliği 1 milimetreyi aşan vulvar karsinomda tümör hücrelerinin ilk yayıldığı anatomik istasyon bölgesel (inguinal ve femoral) lenf düğümleridir.\n\n**Cevap: A** — Bölgesel lenf düğümleri\n\n**Özet.** Vulvar karsinom uzun süre lokal kalır ve ilk yayılımı bölgesel lenf düğümlerinedir; akciğer ve diğer organlara hematojen metastaz ileri evrede olur.",
+   "ses": "Vulvar karsinomun ilk yayılım yeri hangisidir?\nA, Bölgesel lenf düğümleri\nBe, Akciğer\nCe, Karaciğer\nDe, Kemik\nE, Beyin\nSeçenekleri sırayla değerlendirelim.\nBölgesel lenf düğümleri doğru, uzun süre lokal kalan vulvar karsinomun ilk yayılımı bölgesel lenf düğümlerinedir.\nAkciğer metastazı hematojen yolla ve ileri evrede görülür. İlk yayılım yeri değildir.\nKaraciğer, akciğer ve diğer iç organlara hematojen metastaz vulvar karsinomda ancak çok ileri evrelerde ortaya çıkar. Karsinomların genel kuralına uygun olarak vulvar skuamöz hücreli karsinomun ilk ve en önemli yayılım yeri inguinal, pelvik ve femoral bölgesel lenf düğümleridir.\nKemik de ilk yayılım yeri değildir. Vulvar karsinom önce bölgesel invazyon yapar, ilk uzak yayılımı lenf düğümlerinedir.\nBeyin metastazı vulvar karsinomda son derece nadir ve geç dönem bir hematojen yayılımdır. İnvazyon derinliği bir milimetreyi aşan vulvar karsinomda tümör hücrelerinin ilk yayıldığı anatomik istasyon bölgesel, inguinal ve femoral, lenf düğümleridir.\nDoğru cevap A, Bölgesel lenf düğümleri\nVulvar karsinom uzun süre lokal kalır ve ilk yayılımı bölgesel lenf düğümlerinedir. Akciğer ve diğer organlara hematojen metastaz ileri evrede olur.",
+   "kelime": 186
   },
   {
    "no": 42,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Vulvar Paget hücrelerinin olası kökeni hangisidir?",
    "secenekler": {
     "A": "Altta yatan duktal meme karsinomu",
@@ -740,6 +954,7 @@
     "E": "Liken skleroz zemini"
    },
    "dogru": "B",
+   "ipucu": "Birden çok tipe farklanabilen ve vulva derisinin eklerinde yer alan öncü bir gruptan türediğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Altta yatan duktal meme karsinomu meme ucu Paget hastalığında her zaman vardır; vulva Paget hastalığı çoğunlukla primer intraepidermal süreçtir.",
@@ -749,6 +964,11 @@
     "E": "Liken skleroz HPV negatif keratinize skuamöz hücreli karsinomun zeminidir; Paget hücrelerinin kökeni değildir."
    },
    "ozet": "Ekstramammary Paget hastalığında atipik hücreler vulva derisi kanallarındaki multipotent hücrelerden türer ve epidermiste tek tek ve gruplar halinde yayılır.",
+   "sayfa": [
+    52,
+    53,
+    55
+   ],
    "metin": "**Soru.** Vulvar Paget hücrelerinin olası kökeni hangisidir?\n\n**A)** Altta yatan duktal meme karsinomu · **B)** Deri kanallarındaki multipotent hücreler · **C)** Wolffian kanal kalıntısı · **D)** Embriyonel rabdomiyoblastlar · **E)** Liken skleroz zemini\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Altta yatan duktal meme karsinomu** — Altta yatan duktal meme karsinomu meme ucu Paget hastalığında her zaman vardır; vulva Paget hastalığı çoğunlukla primer intraepidermal süreçtir.\n- **Deri kanallarındaki multipotent hücreler** — Deri kanallarındaki multipotent hücreler doğru: atipik Paget hücreleri vulva derisi kanallarındaki bu hücrelerden türer ve yüzeyel epidermise yayılır.\n- **Wolffian kanal kalıntısı** — Wolffian kanal kalıntısı lateral vajinal duvardaki Gartner kanal kistinin kaynağıdır; Paget hücrelerinin kaynağı değildir.\n- **Embriyonel rabdomiyoblastlar** — Embriyonel rabdomiyoblastlar sarkoma botryoidesin kaynağıdır; bu tümör küçük çocuklarda vajinada görülür.\n- **Liken skleroz zemini** — Liken skleroz HPV negatif keratinize skuamöz hücreli karsinomun zeminidir; Paget hücrelerinin kökeni değildir.\n\n**Cevap: B** — Deri kanallarındaki multipotent hücreler\n\n**Özet.** Ekstramammary Paget hastalığında atipik hücreler vulva derisi kanallarındaki multipotent hücrelerden türer ve epidermiste tek tek ve gruplar halinde yayılır.",
    "ses": "Vulvar Peycet hücrelerinin olası kökeni hangisidir?\nA, Altta yatan duktal meme karsinomu\nBe, Deri kanallarındaki multipotent hücreler\nCe, Volf kanal kalıntısı\nDe, Embriyonel rabdomiyoblastlar\nE, Liken skleroz zemini\nHer seçeneği tek tek ele alalım.\nAltta yatan duktal meme karsinomu meme ucu Peycet hastalığında her zaman vardır. Vulva Peycet hastalığı çoğunlukla primer intraepidermal süreçtir.\nDeri kanallarındaki multipotent hücreler doğru, atipik Peycet hücreleri vulva derisi kanallarındaki bu hücrelerden türer ve yüzeyel epidermise yayılır.\nVolf kanal kalıntısı lateral vajinal duvardaki Gartner kanal kistinin kaynağıdır. Peycet hücrelerinin kaynağı değildir.\nEmbriyonel rabdomiyoblastlar sarkoma botriyoidesin kaynağıdır. Bu tümör küçük çocuklarda vajinada görülür.\nLiken skleroz ha pe ve negatif keratinize skuamöz hücreli karsinomun zeminidir. Peycet hücrelerinin kökeni değildir.\nDoğru cevap Be, Deri kanallarındaki multipotent hücreler\nEkstramamari Peycet hastalığında atipik hücreler vulva derisi kanallarındaki multipotent hücrelerden türer ve epidermiste tek tek ve gruplar halinde yayılır.",
    "kelime": 169
@@ -756,6 +976,7 @@
   {
    "no": 43,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Yetişkinlerde vajinada daha sık görülen neoplastik tutulum hangisidir?",
    "secenekler": {
     "A": "Primer skuamöz hücreli karsinom",
@@ -765,22 +986,28 @@
     "E": "Ekstramammary Paget hastalığı"
    },
    "dogru": "C",
+   "ipucu": "Vajinanın kendisinin nadiren hastalık kaynağı olduğunu, çevresindeki serviks, mesane ve rektumu düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Primer vajinal skuamöz hücreli karsinom son derece nadirdir; yetişkin vajinasında daha sık olan sekonder tutulumdur.",
     "B": "Embriyonel rabdomiyosarkom nadir bir vajinal tümördür ve en sık 5 yaş altı çocuklarda görülür; yetişkinlerde sık değildir.",
     "C": "Komşu organ kanserlerinin tutulumu doğru: yetişkin vajinası nadiren primer hastalık yeridir, serviks, mesane ve rektum kanserleri onu sekonder olarak tutar.",
-    "D": "Primer adenokarsinom ile karıştırılabilir: Yetişkin vajinasında daha sık görülen, komşu organ kanserlerinin sekonder tutulumudur.",
+    "D": "Primer vajinal adenokarsinom (DES maruziyetiyle ilişkili berrak hücreli adenokarsinom dahil) oldukça nadir bir tümördür; yetişkin kadınlarda vajinada görülen malign neoplastik tutulumların büyük çoğunluğu primer değil, serviks, endometriyum, vulva, mesane veya rektum gibi komşu organ kanserlerinin doğrudan veya lenfatik yayılımıdır.",
     "E": "Ekstramammary Paget hastalığı vulva derisinde görülen intraepidermal proliferasyondur; vajinanın sık tutulum biçimi değildir."
    },
    "ozet": "Vajina yetişkinlerde nadiren primer hastalık yeridir; daha sık serviks, mesane ve rektum kanserlerinin sekonder tutulumu ve komşu enfeksiyonların yayılması görülür.",
-   "metin": "**Soru.** Yetişkinlerde vajinada daha sık görülen neoplastik tutulum hangisidir?\n\n**A)** Primer skuamöz hücreli karsinom · **B)** Embriyonel rabdomiyosarkom · **C)** Komşu organ kanserlerinin tutulumu · **D)** Primer adenokarsinom · **E)** Ekstramammary Paget hastalığı\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Primer skuamöz hücreli karsinom** — Primer vajinal skuamöz hücreli karsinom son derece nadirdir; yetişkin vajinasında daha sık olan sekonder tutulumdur.\n- **Embriyonel rabdomiyosarkom** — Embriyonel rabdomiyosarkom nadir bir vajinal tümördür ve en sık 5 yaş altı çocuklarda görülür; yetişkinlerde sık değildir.\n- **Komşu organ kanserlerinin tutulumu** — Komşu organ kanserlerinin tutulumu doğru: yetişkin vajinası nadiren primer hastalık yeridir, serviks, mesane ve rektum kanserleri onu sekonder olarak tutar.\n- **Primer adenokarsinom** — Primer adenokarsinom ile karıştırılabilir: Yetişkin vajinasında daha sık görülen, komşu organ kanserlerinin sekonder tutulumudur.\n- **Ekstramammary Paget hastalığı** — Ekstramammary Paget hastalığı vulva derisinde görülen intraepidermal proliferasyondur; vajinanın sık tutulum biçimi değildir.\n\n**Cevap: C** — Komşu organ kanserlerinin tutulumu\n\n**Özet.** Vajina yetişkinlerde nadiren primer hastalık yeridir; daha sık serviks, mesane ve rektum kanserlerinin sekonder tutulumu ve komşu enfeksiyonların yayılması görülür.",
-   "ses": "Yetişkinlerde vajinada daha sık görülen neoplastik tutulum hangisidir?\nA, Primer skuamöz hücreli karsinom\nBe, Embriyonel rabdomiyosarkom\nCe, Komşu organ kanserlerinin tutulumu\nDe, Primer adenokarsinom\nE, Ekstramamari Peycet hastalığı\nŞıkları sırasıyla gözden geçirelim.\nPrimer vajinal skuamöz hücreli karsinom son derece nadirdir. Yetişkin vajinasında daha sık olan sekonder tutulumdur.\nEmbriyonel rabdomiyosarkom nadir bir vajinal tümördür ve en sık beş yaş altı çocuklarda görülür. Yetişkinlerde sık değildir.\nKomşu organ kanserlerinin tutulumu doğru, yetişkin vajinası nadiren primer hastalık yeridir, serviks, mesane ve rektum kanserleri onu sekonder olarak tutar.\nPrimer adenokarsinom ile karıştırılabilir. Yetişkin vajinasında daha sık görülen, komşu organ kanserlerinin sekonder tutulumudur.\nEkstramamari Peycet hastalığı vulva derisinde görülen intraepidermal proliferasyondur. Vajinanın sık tutulum biçimi değildir.\nDoğru cevap Ce, Komşu organ kanserlerinin tutulumu\nVajina yetişkinlerde nadiren primer hastalık yeridir. Daha sık serviks, mesane ve rektum kanserlerinin sekonder tutulumu ve komşu enfeksiyonların yayılması görülür.",
-   "kelime": 170
+   "sayfa": [
+    59,
+    73
+   ],
+   "metin": "**Soru.** Yetişkinlerde vajinada daha sık görülen neoplastik tutulum hangisidir?\n\n**A)** Primer skuamöz hücreli karsinom · **B)** Embriyonel rabdomiyosarkom · **C)** Komşu organ kanserlerinin tutulumu · **D)** Primer adenokarsinom · **E)** Ekstramammary Paget hastalığı\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Primer skuamöz hücreli karsinom** — Primer vajinal skuamöz hücreli karsinom son derece nadirdir; yetişkin vajinasında daha sık olan sekonder tutulumdur.\n- **Embriyonel rabdomiyosarkom** — Embriyonel rabdomiyosarkom nadir bir vajinal tümördür ve en sık 5 yaş altı çocuklarda görülür; yetişkinlerde sık değildir.\n- **Komşu organ kanserlerinin tutulumu** — Komşu organ kanserlerinin tutulumu doğru: yetişkin vajinası nadiren primer hastalık yeridir, serviks, mesane ve rektum kanserleri onu sekonder olarak tutar.\n- **Primer adenokarsinom** — Primer vajinal adenokarsinom (DES maruziyetiyle ilişkili berrak hücreli adenokarsinom dahil) oldukça nadir bir tümördür; yetişkin kadınlarda vajinada görülen malign neoplastik tutulumların büyük çoğunluğu primer değil, serviks, endometriyum, vulva, mesane veya rektum gibi komşu organ kanserlerinin doğrudan veya lenfatik yayılımıdır.\n- **Ekstramammary Paget hastalığı** — Ekstramammary Paget hastalığı vulva derisinde görülen intraepidermal proliferasyondur; vajinanın sık tutulum biçimi değildir.\n\n**Cevap: C** — Komşu organ kanserlerinin tutulumu\n\n**Özet.** Vajina yetişkinlerde nadiren primer hastalık yeridir; daha sık serviks, mesane ve rektum kanserlerinin sekonder tutulumu ve komşu enfeksiyonların yayılması görülür.",
+   "ses": "Yetişkinlerde vajinada daha sık görülen neoplastik tutulum hangisidir?\nA, Primer skuamöz hücreli karsinom\nBe, Embriyonel rabdomiyosarkom\nCe, Komşu organ kanserlerinin tutulumu\nDe, Primer adenokarsinom\nE, Ekstramamari Peycet hastalığı\nŞıkları sırasıyla gözden geçirelim.\nPrimer vajinal skuamöz hücreli karsinom son derece nadirdir. Yetişkin vajinasında daha sık olan sekonder tutulumdur.\nEmbriyonel rabdomiyosarkom nadir bir vajinal tümördür ve en sık beş yaş altı çocuklarda görülür. Yetişkinlerde sık değildir.\nKomşu organ kanserlerinin tutulumu doğru, yetişkin vajinası nadiren primer hastalık yeridir, serviks, mesane ve rektum kanserleri onu sekonder olarak tutar.\nPrimer vajinal adenokarsinom, des maruziyetiyle ilişkili berrak hücreli adenokarsinom dahil, oldukça nadir bir tümördür. Yetişkin kadınlarda vajinada görülen malign neoplastik tutulumların büyük çoğunluğu primer değil, serviks, endometriyum, vulva, mesane veya rektum gibi komşu organ kanserlerinin doğrudan veya lenfatik yayılımıdır.\nEkstramamari Peycet hastalığı vulva derisinde görülen intraepidermal proliferasyondur. Vajinanın sık tutulum biçimi değildir.\nDoğru cevap Ce, Komşu organ kanserlerinin tutulumu\nVajina yetişkinlerde nadiren primer hastalık yeridir. Daha sık serviks, mesane ve rektum kanserlerinin sekonder tutulumu ve komşu enfeksiyonların yayılması görülür.",
+   "kelime": 195
   },
   {
    "no": 44,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Candida albicans vajinitinin tanısı nasıl konur?",
    "secenekler": {
     "A": "Hareketli parazitin gösterilmesi",
@@ -790,6 +1017,7 @@
     "E": "Seroloji ve NAAT"
    },
    "dogru": "D",
+   "ipucu": "Mantarın yaymada hangi yapısal biçimiyle göründüğünü, parazit ve bakteri bulgularından ayırarak düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Hareketli parazitin mikroskopide gösterilmesi Trichomonas vaginalis tanısını koydurur; Candida'nın bulgusu değildir.",
@@ -799,6 +1027,10 @@
     "E": "Seroloji, kültür ve NAAT gonore ve Treponema pallidum tanısında kullanılır; Candida tanısının yolu değildir."
    },
    "ozet": "Candida albicans kadınların yaklaşık %20'sinde normal floradadır; semptomatik enfeksiyonda tanı Pap testinde hif formlarının gösterilmesiyle konur.",
+   "sayfa": [
+    65,
+    66
+   ],
    "metin": "**Soru.** Candida albicans vajinitinin tanısı nasıl konur?\n\n**A)** Hareketli parazitin gösterilmesi · **B)** İpucu hücrelerinin görülmesi · **C)** Koilositlerin saptanması · **D)** Pap testinde hif formları · **E)** Seroloji ve NAAT\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Hareketli parazitin gösterilmesi** — Hareketli parazitin mikroskopide gösterilmesi Trichomonas vaginalis tanısını koydurur; Candida'nın bulgusu değildir.\n- **İpucu hücrelerinin görülmesi** — İpucu hücreleri yüzeyi kokobasillerle kaplı yassı epitel hücreleridir; Gardnerella vaginalis ve bakteriyel vajinozda görülür.\n- **Koilositlerin saptanması** — Koilositler HPV sitopatik etkisini gösterir; perinükleer halo ve hiperkromatik çekirdek kondiloma akuminatumun bulgusudur.\n- **Pap testinde hif formları** — Pap testinde hif formları doğru: Candida albicans vajinitinde tanı Papanicolaou testiyle hiflerin gösterilmesiyle konur.\n- **Seroloji ve NAAT** — Seroloji, kültür ve NAAT gonore ve Treponema pallidum tanısında kullanılır; Candida tanısının yolu değildir.\n\n**Cevap: D** — Pap testinde hif formları\n\n**Özet.** Candida albicans kadınların yaklaşık %20'sinde normal floradadır; semptomatik enfeksiyonda tanı Pap testinde hif formlarının gösterilmesiyle konur.",
    "ses": "Kandida albikans vajinitinin tanısı nasıl konur?\nA, Hareketli parazitin gösterilmesi\nBe, İpucu hücrelerinin görülmesi\nCe, Koilositlerin saptanması\nDe, Pap testinde hif formları\nE, Seroloji ve nükleik asit amplifikasyon testi\nŞimdi seçeneklere tek tek bakalım.\nHareketli parazitin mikroskopide gösterilmesi Trikomonas vajinalis tanısını koydurur. Kandida'nın bulgusu değildir.\nİpucu hücreleri yüzeyi kokobasillerle kaplı yassı epitel hücreleridir. Gardnerella vajinalis ve bakteriyel vajinozda görülür.\nKoilositler ha pe ve sitopatik etkisini gösterir. Perinükleer halo ve hiperkromatik çekirdek kondiloma akuminatumun bulgusudur.\nPap testinde hif formları doğru, Kandida albikans vajinitinde tanı Papanikolau testiyle hiflerin gösterilmesiyle konur.\nSeroloji, kültür ve nükleik asit amplifikasyon testi gonore ve Treponema pallidum tanısında kullanılır. Kandida tanısının yolu değildir.\nDoğru cevap De, Pap testinde hif formları\nKandida albikans kadınların yaklaşık yüzde yirmisinde normal floradadır. Semptomatik enfeksiyonda tanı Pap testinde hif formlarının gösterilmesiyle konur.",
    "kelime": 152
@@ -806,6 +1038,7 @@
   {
    "no": 45,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Vajinal skuamöz hücreli karsinom en çok nerede yerleşir?",
    "secenekler": {
     "A": "Lateral vajinal duvar",
@@ -815,22 +1048,28 @@
     "E": "Üst vajina arka duvarı"
    },
    "dogru": "E",
+   "ipucu": "Tümörün servikse en yakın bölgede, ektoserviksle birleşme noktasında geliştiğini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Lateral vajinal duvar Gartner kanal kistinin yerleşim yeridir; vajinal karsinom çoğunlukla üst vajinada görülür.",
-    "B": "Alt vajina ön duvarı ile karıştırılabilir: Vajinal skuamöz hücreli karsinom üst vajinanın arka duvarında yoğunlaşır.",
-    "C": "Tümör servikse yakın üst vajinada, ektoserviksle birleşme noktasında yerleşir. Vestibül bu sorudaki ayrımı sağlamaz.",
+    "B": "Alt vajina ön duvarı üretraya komşu bölgedir ve primer vajinal karsinomun tipik başlangıç yeri değildir; yüksek riskli HPV ile ilişkili vajinal skuamöz hücreli karsinom en sık serviks ektoserviksiyle birleşen üst üçte birlik arka vajina duvarında yerleşir.",
+    "C": "Vestibül vulvanın iç kısmında üretra ve vajina girişini çevreleyen bölgedir ve vulvar lezyonların yerleşim alanıdır; primer vajinal skuamöz hücreli karsinom ise en sık üst vajina arka duvarında (posterior forniks komşuluğunda) gelişir.",
     "D": "Vajinal introitus tipik yer değildir; tümörün en büyük risk faktörü daha önce serviks ya da vulva karsinomu öyküsüdür.",
     "E": "Üst vajina arka duvarı doğru: tümör çoğunlukla üst vajinada, özellikle ektoserviksle birleşme noktasındaki arka duvarda yerleşir."
    },
    "ozet": "Vajinal skuamöz hücreli karsinom çoğunlukla üst vajinanın ektoserviksle birleştiği arka duvarda yerleşir ve bölgesel iliak lenf düğümlerine metastaz eğilimi gösterir.",
-   "metin": "**Soru.** Vajinal skuamöz hücreli karsinom en çok nerede yerleşir?\n\n**A)** Lateral vajinal duvar · **B)** Alt vajina ön duvarı · **C)** Vestibül · **D)** Vajinal introitus · **E)** Üst vajina arka duvarı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Lateral vajinal duvar** — Lateral vajinal duvar Gartner kanal kistinin yerleşim yeridir; vajinal karsinom çoğunlukla üst vajinada görülür.\n- **Alt vajina ön duvarı** — Alt vajina ön duvarı ile karıştırılabilir: Vajinal skuamöz hücreli karsinom üst vajinanın arka duvarında yoğunlaşır.\n- **Vestibül** — Tümör servikse yakın üst vajinada, ektoserviksle birleşme noktasında yerleşir. Vestibül bu sorudaki ayrımı sağlamaz.\n- **Vajinal introitus** — Vajinal introitus tipik yer değildir; tümörün en büyük risk faktörü daha önce serviks ya da vulva karsinomu öyküsüdür.\n- **Üst vajina arka duvarı** — Üst vajina arka duvarı doğru: tümör çoğunlukla üst vajinada, özellikle ektoserviksle birleşme noktasındaki arka duvarda yerleşir.\n\n**Cevap: E** — Üst vajina arka duvarı\n\n**Özet.** Vajinal skuamöz hücreli karsinom çoğunlukla üst vajinanın ektoserviksle birleştiği arka duvarda yerleşir ve bölgesel iliak lenf düğümlerine metastaz eğilimi gösterir.",
-   "ses": "Vajinal skuamöz hücreli karsinom en çok nerede yerleşir?\nA, Lateral vajinal duvar\nBe, Alt vajina ön duvarı\nCe, Vestibül\nDe, Vajinal introitus\nE, Üst vajina arka duvarı\nSeçenekleri sırayla değerlendirelim.\nLateral vajinal duvar Gartner kanal kistinin yerleşim yeridir. Vajinal karsinom çoğunlukla üst vajinada görülür.\nAlt vajina ön duvarı ile karıştırılabilir. Vajinal skuamöz hücreli karsinom üst vajinanın arka duvarında yoğunlaşır.\nTümör servikse yakın üst vajinada, ektoserviksle birleşme noktasında yerleşir. Vestibül bu sorudaki ayrımı sağlamaz.\nVajinal introitus tipik yer değildir. Tümörün en büyük risk faktörü daha önce serviks ya da vulva karsinomu öyküsüdür.\nÜst vajina arka duvarı doğru, tümör çoğunlukla üst vajinada, özellikle ektoserviksle birleşme noktasındaki arka duvarda yerleşir.\nDoğru cevap E, Üst vajina arka duvarı\nVajinal skuamöz hücreli karsinom çoğunlukla üst vajinanın ektoserviksle birleştiği arka duvarda yerleşir ve bölgesel iliak lenf düğümlerine metastaz eğilimi gösterir.",
-   "kelime": 165
+   "sayfa": [
+    75,
+    76
+   ],
+   "metin": "**Soru.** Vajinal skuamöz hücreli karsinom en çok nerede yerleşir?\n\n**A)** Lateral vajinal duvar · **B)** Alt vajina ön duvarı · **C)** Vestibül · **D)** Vajinal introitus · **E)** Üst vajina arka duvarı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Lateral vajinal duvar** — Lateral vajinal duvar Gartner kanal kistinin yerleşim yeridir; vajinal karsinom çoğunlukla üst vajinada görülür.\n- **Alt vajina ön duvarı** — Alt vajina ön duvarı üretraya komşu bölgedir ve primer vajinal karsinomun tipik başlangıç yeri değildir; yüksek riskli HPV ile ilişkili vajinal skuamöz hücreli karsinom en sık serviks ektoserviksiyle birleşen üst üçte birlik arka vajina duvarında yerleşir.\n- **Vestibül** — Vestibül vulvanın iç kısmında üretra ve vajina girişini çevreleyen bölgedir ve vulvar lezyonların yerleşim alanıdır; primer vajinal skuamöz hücreli karsinom ise en sık üst vajina arka duvarında (posterior forniks komşuluğunda) gelişir.\n- **Vajinal introitus** — Vajinal introitus tipik yer değildir; tümörün en büyük risk faktörü daha önce serviks ya da vulva karsinomu öyküsüdür.\n- **Üst vajina arka duvarı** — Üst vajina arka duvarı doğru: tümör çoğunlukla üst vajinada, özellikle ektoserviksle birleşme noktasındaki arka duvarda yerleşir.\n\n**Cevap: E** — Üst vajina arka duvarı\n\n**Özet.** Vajinal skuamöz hücreli karsinom çoğunlukla üst vajinanın ektoserviksle birleştiği arka duvarda yerleşir ve bölgesel iliak lenf düğümlerine metastaz eğilimi gösterir.",
+   "ses": "Vajinal skuamöz hücreli karsinom en çok nerede yerleşir?\nA, Lateral vajinal duvar\nBe, Alt vajina ön duvarı\nCe, Vestibül\nDe, Vajinal introitus\nE, Üst vajina arka duvarı\nSeçenekleri sırayla değerlendirelim.\nLateral vajinal duvar Gartner kanal kistinin yerleşim yeridir. Vajinal karsinom çoğunlukla üst vajinada görülür.\nAlt vajina ön duvarı üretraya komşu bölgedir ve primer vajinal karsinomun tipik başlangıç yeri değildir. Yüksek riskli ha pe ve ile ilişkili vajinal skuamöz hücreli karsinom en sık serviks ektoserviksiyle birleşen üst üçte birlik arka vajina duvarında yerleşir.\nVestibül vulvanın iç kısmında üretra ve vajina girişini çevreleyen bölgedir ve vulvar lezyonların yerleşim alanıdır. Primer vajinal skuamöz hücreli karsinom ise en sık üst vajina arka duvarında, posterior forniks komşuluğunda, gelişir.\nVajinal introitus tipik yer değildir. Tümörün en büyük risk faktörü daha önce serviks ya da vulva karsinomu öyküsüdür.\nÜst vajina arka duvarı doğru, tümör çoğunlukla üst vajinada, özellikle ektoserviksle birleşme noktasındaki arka duvarda yerleşir.\nDoğru cevap E, Üst vajina arka duvarı\nVajinal skuamöz hücreli karsinom çoğunlukla üst vajinanın ektoserviksle birleştiği arka duvarda yerleşir ve bölgesel iliak lenf düğümlerine metastaz eğilimi gösterir.",
+   "kelime": 203
   },
   {
    "no": 46,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Sarkoma botryoidesin köken aldığı hücreler hangisidir?",
    "secenekler": {
     "A": "Malign embriyonel rabdomiyoblastlar",
@@ -840,18 +1079,23 @@
     "E": "Düz kas hücreleri"
    },
    "dogru": "A",
+   "ipucu": "Tümörün adındaki çizgili kas kökenini ve hücrelerin olgunlaşmamış, gelişimin erken evresine ait doğasını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Malign embriyonel rabdomiyoblastlar doğru: sarkoma botryoides bu hücrelerden gelişen embriyonel rabdomiyosarkomdur.",
     "B": "Wolffian kanal kalıntısı lateral vajinal duvardaki Gartner kanal kistinin kaynağıdır; bu kistlerin çoğu benign ve asemptomatiktir.",
     "C": "Deri kanallarındaki multipotent hücreler ekstramammary Paget hücrelerinin olası kökenidir; vulva derisinde görülür.",
     "D": "Yüksek riskli HPV ile enfekte epitel vajinal skuamöz hücreli karsinom ve öncüsü VAIN ile ilişkilidir; sarkom kaynağı değildir.",
-    "E": "Düz kas hücreleri ile karıştırılabilir: Sarkoma botryoides rabdomiyoblastlardan köken alır, idrar kesesi ve safra kanallarında da görülebilir."
+    "E": "Düz kas hücrelerinden benign leiomiyom veya erişkinde malign leiomiyosarkom gelişir; bebek ve küçük çocuklarda vajinada üzüm salkımı görünümü veren sarkoma botryoides (embriyonel rabdomiyosarkom) ise çizgili kas yönünde farklılaşan malign embriyonel rabdomiyoblastlardan köken alır."
    },
    "ozet": "Embriyonel rabdomiyosarkom, yani sarkoma botryoides, malign embriyonel rabdomiyoblastlardan gelişir; en sık 5 yaş altı çocuklarda vajinada görülür.",
-   "metin": "**Soru.** Sarkoma botryoidesin köken aldığı hücreler hangisidir?\n\n**A)** Malign embriyonel rabdomiyoblastlar · **B)** Wolffian kanal kalıntısı · **C)** Deri kanallarındaki multipotent hücreler · **D)** Yüksek riskli HPV'li epitel · **E)** Düz kas hücreleri\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Malign embriyonel rabdomiyoblastlar** — Malign embriyonel rabdomiyoblastlar doğru: sarkoma botryoides bu hücrelerden gelişen embriyonel rabdomiyosarkomdur.\n- **Wolffian kanal kalıntısı** — Wolffian kanal kalıntısı lateral vajinal duvardaki Gartner kanal kistinin kaynağıdır; bu kistlerin çoğu benign ve asemptomatiktir.\n- **Deri kanallarındaki multipotent hücreler** — Deri kanallarındaki multipotent hücreler ekstramammary Paget hücrelerinin olası kökenidir; vulva derisinde görülür.\n- **Yüksek riskli HPV'li epitel** — Yüksek riskli HPV ile enfekte epitel vajinal skuamöz hücreli karsinom ve öncüsü VAIN ile ilişkilidir; sarkom kaynağı değildir.\n- **Düz kas hücreleri** — Düz kas hücreleri ile karıştırılabilir: Sarkoma botryoides rabdomiyoblastlardan köken alır, idrar kesesi ve safra kanallarında da görülebilir.\n\n**Cevap: A** — Malign embriyonel rabdomiyoblastlar\n\n**Özet.** Embriyonel rabdomiyosarkom, yani sarkoma botryoides, malign embriyonel rabdomiyoblastlardan gelişir; en sık 5 yaş altı çocuklarda vajinada görülür.",
-   "ses": "Sarkoma botriyoidesin köken aldığı hücreler hangisidir?\nA, Malign embriyonel rabdomiyoblastlar\nBe, Volf kanal kalıntısı\nCe, Deri kanallarındaki multipotent hücreler\nDe, Yüksek riskli ha pe ve'li epitel\nE, Düz kas hücreleri\nHer seçeneği tek tek ele alalım.\nMalign embriyonel rabdomiyoblastlar doğru, sarkoma botriyoides bu hücrelerden gelişen embriyonel rabdomiyosarkomdur.\nVolf kanal kalıntısı lateral vajinal duvardaki Gartner kanal kistinin kaynağıdır. Bu kistlerin çoğu benign ve asemptomatiktir.\nDeri kanallarındaki multipotent hücreler ekstramamari Peycet hücrelerinin olası kökenidir. Vulva derisinde görülür.\nYüksek riskli ha pe ve ile enfekte epitel vajinal skuamöz hücreli karsinom ve öncüsü vajinal intraepitelyal neoplazi ile ilişkilidir. Sarkom kaynağı değildir.\nDüz kas hücreleri ile karıştırılabilir. Sarkoma botriyoides rabdomiyoblastlardan köken alır, idrar kesesi ve safra kanallarında da görülebilir.\nDoğru cevap A, Malign embriyonel rabdomiyoblastlar\nEmbriyonel rabdomiyosarkom, yani sarkoma botriyoides, malign embriyonel rabdomiyoblastlardan gelişir. En sık beş yaş altı çocuklarda vajinada görülür.",
-   "kelime": 165
+   "sayfa": [
+    77,
+    78
+   ],
+   "metin": "**Soru.** Sarkoma botryoidesin köken aldığı hücreler hangisidir?\n\n**A)** Malign embriyonel rabdomiyoblastlar · **B)** Wolffian kanal kalıntısı · **C)** Deri kanallarındaki multipotent hücreler · **D)** Yüksek riskli HPV'li epitel · **E)** Düz kas hücreleri\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Malign embriyonel rabdomiyoblastlar** — Malign embriyonel rabdomiyoblastlar doğru: sarkoma botryoides bu hücrelerden gelişen embriyonel rabdomiyosarkomdur.\n- **Wolffian kanal kalıntısı** — Wolffian kanal kalıntısı lateral vajinal duvardaki Gartner kanal kistinin kaynağıdır; bu kistlerin çoğu benign ve asemptomatiktir.\n- **Deri kanallarındaki multipotent hücreler** — Deri kanallarındaki multipotent hücreler ekstramammary Paget hücrelerinin olası kökenidir; vulva derisinde görülür.\n- **Yüksek riskli HPV'li epitel** — Yüksek riskli HPV ile enfekte epitel vajinal skuamöz hücreli karsinom ve öncüsü VAIN ile ilişkilidir; sarkom kaynağı değildir.\n- **Düz kas hücreleri** — Düz kas hücrelerinden benign leiomiyom veya erişkinde malign leiomiyosarkom gelişir; bebek ve küçük çocuklarda vajinada üzüm salkımı görünümü veren sarkoma botryoides (embriyonel rabdomiyosarkom) ise çizgili kas yönünde farklılaşan malign embriyonel rabdomiyoblastlardan köken alır.\n\n**Cevap: A** — Malign embriyonel rabdomiyoblastlar\n\n**Özet.** Embriyonel rabdomiyosarkom, yani sarkoma botryoides, malign embriyonel rabdomiyoblastlardan gelişir; en sık 5 yaş altı çocuklarda vajinada görülür.",
+   "ses": "Sarkoma botriyoidesin köken aldığı hücreler hangisidir?\nA, Malign embriyonel rabdomiyoblastlar\nBe, Volf kanal kalıntısı\nCe, Deri kanallarındaki multipotent hücreler\nDe, Yüksek riskli ha pe ve'li epitel\nE, Düz kas hücreleri\nHer seçeneği tek tek ele alalım.\nMalign embriyonel rabdomiyoblastlar doğru, sarkoma botriyoides bu hücrelerden gelişen embriyonel rabdomiyosarkomdur.\nVolf kanal kalıntısı lateral vajinal duvardaki Gartner kanal kistinin kaynağıdır. Bu kistlerin çoğu benign ve asemptomatiktir.\nDeri kanallarındaki multipotent hücreler ekstramamari Peycet hücrelerinin olası kökenidir. Vulva derisinde görülür.\nYüksek riskli ha pe ve ile enfekte epitel vajinal skuamöz hücreli karsinom ve öncüsü vajinal intraepitelyal neoplazi ile ilişkilidir. Sarkom kaynağı değildir.\nDüz kas hücrelerinden benign leiomiyom veya erişkinde malign leiomiyosarkom gelişir. Bebek ve küçük çocuklarda vajinada üzüm salkımı görünümü veren sarkoma botryoides, embriyonel rabdomiyosarkom, ise çizgili kas yönünde farklılaşan malign embriyonel rabdomiyoblastlardan köken alır.\nDoğru cevap A, Malign embriyonel rabdomiyoblastlar\nEmbriyonel rabdomiyosarkom, yani sarkoma botriyoides, malign embriyonel rabdomiyoblastlardan gelişir. En sık beş yaş altı çocuklarda vajinada görülür.",
+   "kelime": 181
   }
  ]
 }

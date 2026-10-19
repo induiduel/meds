@@ -488,7 +488,8 @@
   --sh-top-h: 0px !important;
   --sh-top-vis: 0px !important;
   --sh-tabs-h: 0px !important;
-  --pt-top: env(safe-area-inset-top, 0px) !important;
+  /* Çıkış hapı (`.s12-fs-exit`) üstte 44 px yer kaplar; içerik onun altından başlasın. */
+  --pt-top: calc(48px + env(safe-area-inset-top, 0px)) !important;
 }
 :root.is-app-fullscreen :is(.s12-top, .sh-top, .s12-rail, .sh-side, .s12-tabs, .sh-tabs) {
   display: none !important;
@@ -498,7 +499,8 @@
   padding-left: 0 !important;
 }
 :root.is-app-fullscreen .sh-main {
-  padding-top: max(12px, env(safe-area-inset-top, 0px)) !important;
+  /* Tam ekranda üst çubuk gizlenir ama çıkış hapı görünür: 48 px güvenli şerit bırak. */
+  padding-top: calc(48px + env(safe-area-inset-top, 0px)) !important;
   padding-bottom: calc(max(20px, env(safe-area-inset-bottom, 0px)) + var(--cd-dock-h, 0px)) !important;
 }
 :root.is-app-fullscreen.cd-ders-acik .sh-main {
@@ -542,28 +544,28 @@
  * CSS `zoom` özelliği iOS WebKit'te position:fixed katmanların görünüm koordinatlarını, safe-area-inset değerlerini
  * ve dokunma (hit-test) noktalarını bozar. iOS'ta kapsayıcı zoom'u 1'de tutulur; yazı boyutu tercihi (--read-size)
  * doğrudan font-size üzerinden uygulanmaya devam eder. */
-@supports (-webkit-touch-callout: none) {
-  :root {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-  :root[data-design='v12'] {
-    --ui-zoom-cap: 1 !important;
-    --ch-zoom-cap: 1 !important;
-    --ui-zoom: 1 !important;
-    --ch-zoom: 1 !important;
-  }
-  :root[data-design='v12'] .sh-main > * {
-    zoom: 1 !important;
-    --in-zoom: 1 !important;
-    --read-size: calc(16px * var(--ui-zoom-raw, 1));
-  }
-  :root[data-design='v12'] :is(.s12-rail > *, .s12-top, .s12-tabs) {
-    zoom: 1 !important;
-  }
-  :root[data-design='v12'] .sh-main :is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0):not(:is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0) *) {
-    zoom: 1 !important;
-  }
+/* `@supports (-webkit-touch-callout: none)` macOS Safari'de de doğru döndüğü için kullanılmaz;
+ * sınıf yalnız gerçek iPhone/iPad'de `utils/device.ts` tarafından eklenir. */
+:root.is-ios {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+:root.is-ios[data-design='v12'] {
+  --ui-zoom-cap: 1 !important;
+  --ch-zoom-cap: 1 !important;
+  --ui-zoom: 1 !important;
+  --ch-zoom: 1 !important;
+}
+:root.is-ios[data-design='v12'] .sh-main > * {
+  zoom: 1 !important;
+  --in-zoom: 1 !important;
+  --read-size: calc(16px * var(--ui-zoom-raw, 1));
+}
+:root.is-ios[data-design='v12'] :is(.s12-rail > *, .s12-top, .s12-tabs) {
+  zoom: 1 !important;
+}
+:root.is-ios[data-design='v12'] .sh-main :is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0):not(:is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0) *) {
+  zoom: 1 !important;
 }
 
 /* ── Görüntüleme modu ── */

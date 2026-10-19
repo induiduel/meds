@@ -1133,6 +1133,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   const pdf = detay.pdf!;
   const info = useDeckPdf(pdf.deckId);
   const aktif = useCd((s) => (canli ? s.aktif : -1));
+  const cumle = useCd((s) => (canli ? s.cumle : -1));
   const { durdu, durdur, surdur } = useTakip();
   const [zoom, setZoom] = useState(1);
   const [elle, setElle] = useState<{ dosya: number; sayfa: number } | null>(null);
@@ -1142,7 +1143,19 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   // Etkin paragrafın eşlemesi; eşlemesi olmayan paragrafta son bilinen sayfada kalınır
   const sonHedef = useRef<{ dosya: number; sayfa: number }>({ dosya: 0, sayfa: 1 });
   const es = aktif >= 0 ? pdf.paragraflar[aktif] : null;
-  if (es && Number.isFinite(es.sayfa)) sonHedef.current = { dosya: es.dosya || 0, sayfa: Math.max(1, es.sayfa) };
+  if (es && Number.isFinite(es.sayfa)) {
+    let s = es.sayfa;
+    let d = es.dosya || 0;
+    if (Array.isArray(es.sayfalar) && cumle >= 0 && cumle < es.sayfalar.length) {
+      const cs = es.sayfalar[cumle];
+      if (typeof cs === 'number' && Number.isFinite(cs) && cs > 0) s = cs;
+    }
+    if (Array.isArray(es.dosyalar) && cumle >= 0 && cumle < es.dosyalar.length) {
+      const cd = es.dosyalar[cumle];
+      if (typeof cd === 'number' && Number.isFinite(cd) && cd >= 0) d = cd;
+    }
+    sonHedef.current = { dosya: d, sayfa: Math.max(1, s) };
+  }
   if (aktif < 0 && !canli) {
     const ilk = pdf.paragraflar.find((x) => x && Number.isFinite(x.sayfa));
     if (ilk && sonHedef.current.sayfa === 1 && sonHedef.current.dosya === 0) sonHedef.current = { dosya: ilk.dosya || 0, sayfa: Math.max(1, ilk.sayfa) };

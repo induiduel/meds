@@ -1,7 +1,8 @@
 {
  "kod": "25",
+ "no": 25,
  "baslik": "Vasküler ve Kistik Böbrek Hastalıkları",
- "surum": "alt-1",
+ "surum": "alt-2",
  "sorular": [
   {
    "no": 1,
@@ -15,18 +16,23 @@
     "E": "Lenfoma"
    },
    "dogru": "C",
+   "ipucu": "Bu hastalarda düzenli görüntüleme takibinin neden gerektiğini ve özellikle kistik tümörlerin gelişebildiğini hatırla.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Wilms tümörü edinilmiş kistik hastalığın getirdiği bir risk değil; bu tabloda artan risk, diyaliz hastasının kistik böbreğinde gelişen renal hücreli karsinomdur.",
-    "B": "Transizyonel hücreli karsinom bu tabloda artan risk olarak geçmez; uzun süre diyaliz alan bu hastalarda özellikle kistik tümörler gelişebilir.",
+    "B": "Transizyonel hücreli (ürotelyal) karsinom renal pelvis, üreter ve mesanenin döşeyici ürotelyumundan gelişir ve analjezik nefropatisi veya sigara ile ilişkilidir; uzun süreli hemodiyaliz hastalarında gelişen edinilmiş kistik böbrek hastalığında ise atipik kist epitelinden renal hücreli karsinom gelişme riski 12–18 kat artar.",
     "C": "Renal hücreli karsinom doğru: uzun süre diyaliz alan hastaların kistik böbreğinde bu risk yaklaşık 100 kat artar.",
     "D": "Anjiyomiyolipom bu hastalıkla ilişkilendirilen tümör değil; edinilmiş kistik hastalıkta renal hücreli karsinom riski yaklaşık 100 kat artar ve düzenli görüntüleme gerekir.",
     "E": "Lenfoma bu hastalıkta artan risk değil; retroperitoneal lenfoma ise hidronefroza yol açan edinilmiş tıkanıklık nedenleri arasında yer alır."
    },
    "ozet": "Edinilmiş kistik böbrek hastalığında korteks ve medullada çok sayıda kist oluşur ve renal hücreli karsinom riski yaklaşık 100 kat artar; bu yüzden düzenli görüntüleme gerekir.",
-   "metin": "**Soru.** Uzun süre diyaliz alan hastada gelişen edinilmiş kistik böbrek hastalığında hangi risk artar?\n\n**A)** Wilms tümörü · **B)** Transizyonel hücreli karsinom · **C)** Renal hücreli karsinom · **D)** Anjiyomiyolipom · **E)** Lenfoma\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Wilms tümörü** — Wilms tümörü edinilmiş kistik hastalığın getirdiği bir risk değil; bu tabloda artan risk, diyaliz hastasının kistik böbreğinde gelişen renal hücreli karsinomdur.\n- **Transizyonel hücreli karsinom** — Transizyonel hücreli karsinom bu tabloda artan risk olarak geçmez; uzun süre diyaliz alan bu hastalarda özellikle kistik tümörler gelişebilir.\n- **Renal hücreli karsinom** — Renal hücreli karsinom doğru: uzun süre diyaliz alan hastaların kistik böbreğinde bu risk yaklaşık 100 kat artar.\n- **Anjiyomiyolipom** — Anjiyomiyolipom bu hastalıkla ilişkilendirilen tümör değil; edinilmiş kistik hastalıkta renal hücreli karsinom riski yaklaşık 100 kat artar ve düzenli görüntüleme gerekir.\n- **Lenfoma** — Lenfoma bu hastalıkta artan risk değil; retroperitoneal lenfoma ise hidronefroza yol açan edinilmiş tıkanıklık nedenleri arasında yer alır.\n\n**Cevap: C** — Renal hücreli karsinom\n\n**Özet.** Edinilmiş kistik böbrek hastalığında korteks ve medullada çok sayıda kist oluşur ve renal hücreli karsinom riski yaklaşık 100 kat artar; bu yüzden düzenli görüntüleme gerekir.",
-   "ses": "Uzun süre diyaliz alan hastada gelişen edinilmiş kistik böbrek hastalığında hangi risk artar?\nA, Vilms tümörü\nBe, Transizyonel hücreli karsinom\nCe, Renal hücreli karsinom\nDe, Anjiyomiyolipom\nE, Lenfoma\nSeçenekleri sırayla değerlendirelim.\nVilms tümörü edinilmiş kistik hastalığın getirdiği bir risk değil. Bu tabloda artan risk, diyaliz hastasının kistik böbreğinde gelişen renal hücreli karsinomdur.\nTransizyonel hücreli karsinom bu tabloda artan risk olarak geçmez. Uzun süre diyaliz alan bu hastalarda özellikle kistik tümörler gelişebilir.\nRenal hücreli karsinom doğru. Uzun süre diyaliz alan hastaların kistik böbreğinde bu risk yaklaşık yüz kat artar.\nAnjiyomiyolipom bu hastalıkla ilişkilendirilen tümör değil. Edinilmiş kistik hastalıkta renal hücreli karsinom riski yaklaşık yüz kat artar ve düzenli görüntüleme gerekir.\nLenfoma bu hastalıkta artan risk değil. Retroperitoneal lenfoma ise hidronefroza yol açan edinilmiş tıkanıklık nedenleri arasında yer alır.\nDoğru cevap Ce, Renal hücreli karsinom\nEdinilmiş kistik böbrek hastalığında korteks ve medullada çok sayıda kist oluşur ve renal hücreli karsinom riski yaklaşık yüz kat artar. Bu yüzden düzenli görüntüleme gerekir.",
-   "kelime": 185
+   "sayfa": [
+    15,
+    40
+   ],
+   "metin": "**Soru.** Uzun süre diyaliz alan hastada gelişen edinilmiş kistik böbrek hastalığında hangi risk artar?\n\n**A)** Wilms tümörü · **B)** Transizyonel hücreli karsinom · **C)** Renal hücreli karsinom · **D)** Anjiyomiyolipom · **E)** Lenfoma\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Wilms tümörü** — Wilms tümörü edinilmiş kistik hastalığın getirdiği bir risk değil; bu tabloda artan risk, diyaliz hastasının kistik böbreğinde gelişen renal hücreli karsinomdur.\n- **Transizyonel hücreli karsinom** — Transizyonel hücreli (ürotelyal) karsinom renal pelvis, üreter ve mesanenin döşeyici ürotelyumundan gelişir ve analjezik nefropatisi veya sigara ile ilişkilidir; uzun süreli hemodiyaliz hastalarında gelişen edinilmiş kistik böbrek hastalığında ise atipik kist epitelinden renal hücreli karsinom gelişme riski 12–18 kat artar.\n- **Renal hücreli karsinom** — Renal hücreli karsinom doğru: uzun süre diyaliz alan hastaların kistik böbreğinde bu risk yaklaşık 100 kat artar.\n- **Anjiyomiyolipom** — Anjiyomiyolipom bu hastalıkla ilişkilendirilen tümör değil; edinilmiş kistik hastalıkta renal hücreli karsinom riski yaklaşık 100 kat artar ve düzenli görüntüleme gerekir.\n- **Lenfoma** — Lenfoma bu hastalıkta artan risk değil; retroperitoneal lenfoma ise hidronefroza yol açan edinilmiş tıkanıklık nedenleri arasında yer alır.\n\n**Cevap: C** — Renal hücreli karsinom\n\n**Özet.** Edinilmiş kistik böbrek hastalığında korteks ve medullada çok sayıda kist oluşur ve renal hücreli karsinom riski yaklaşık 100 kat artar; bu yüzden düzenli görüntüleme gerekir.",
+   "ses": "Uzun süre diyaliz alan hastada gelişen edinilmiş kistik böbrek hastalığında hangi risk artar?\nA, Vilms tümörü\nBe, Transizyonel hücreli karsinom\nCe, Renal hücreli karsinom\nDe, Anjiyomiyolipom\nE, Lenfoma\nSeçenekleri sırayla değerlendirelim.\nVilms tümörü edinilmiş kistik hastalığın getirdiği bir risk değil. Bu tabloda artan risk, diyaliz hastasının kistik böbreğinde gelişen renal hücreli karsinomdur.\nTransizyonel hücreli, ürotelyal, karsinom renal pelvis, üreter ve mesanenin döşeyici ürotelyumundan gelişir ve analjezik nefropatisi veya sigara ile ilişkilidir. Uzun süreli hemodiyaliz hastalarında gelişen edinilmiş kistik böbrek hastalığında ise atipik kist epitelinden renal hücreli karsinom gelişme riski on iki ila on sekiz kat artar.\nRenal hücreli karsinom doğru. Uzun süre diyaliz alan hastaların kistik böbreğinde bu risk yaklaşık yüz kat artar.\nAnjiyomiyolipom bu hastalıkla ilişkilendirilen tümör değil. Edinilmiş kistik hastalıkta renal hücreli karsinom riski yaklaşık yüz kat artar ve düzenli görüntüleme gerekir.\nLenfoma bu hastalıkta artan risk değil. Retroperitoneal lenfoma ise hidronefroza yol açan edinilmiş tıkanıklık nedenleri arasında yer alır.\nDoğru cevap Ce, Renal hücreli karsinom\nEdinilmiş kistik böbrek hastalığında korteks ve medullada çok sayıda kist oluşur ve renal hücreli karsinom riski yaklaşık yüz kat artar. Bu yüzden düzenli görüntüleme gerekir.",
+   "kelime": 206
   },
   {
    "no": 2,
@@ -40,18 +46,24 @@
     "E": "COL4A5"
    },
    "dogru": "D",
+   "ipucu": "Polikistin genlerinden hangisinin olguların büyük çoğunluğunda bozulduğunu, hangisinin ise azınlıkta kaldığını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "PKD2 polikistin-2'yi kodlar; ancak otozomal dominant formun olgularının yalnız %10–15'inden sorumludur.",
     "B": "PKHD1 fibrosistini kodlar ve otozomal resesif, yani çocukluk çağı polikistik böbrek hastalığının genidir.",
     "C": "NPHP1, nefronofthisis–medüller kistik hastalık kompleksiyle ilişkili gen ailesinin üyesidir; polikistin kodlamaz.",
     "D": "PKD1 doğru: kromozom 16'da yer alır, polikistin-1'i kodlar ve olguların %85–90'ında etkilenmiştir.",
-    "E": "COL4A5 ile karıştırılabilir: Otozomal dominant formda bozulan genler, primer siliyumdaki polikistin proteinlerini kodlar."
+    "E": "COL4A5 geni X kromozomunda yer alan tip IV kollajen alfa-5 zincirini kodlar ve mutasyonu X'e bağlı Alport sendromuna yol açar; erişkin tip otozomal dominant polikistik böbrek hastalığı (ADPKD) olgularının yaklaşık %85'inden sorumlu gen ise 16. kromozomdaki PKD1 genidir."
    },
    "ozet": "ADPKD olgularının %85–90'ında PKD1, %10–15'inde PKD2 bozuktur; çocukluk çağı formunun geni ise PKHD1'dir.",
-   "metin": "**Soru.** ADPKD olgularının çoğundan sorumlu gen hangisidir?\n\n**A)** PKD2 · **B)** PKHD1 · **C)** NPHP1 · **D)** PKD1 · **E)** COL4A5\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **PKD2** — PKD2 polikistin-2'yi kodlar; ancak otozomal dominant formun olgularının yalnız %10–15'inden sorumludur.\n- **PKHD1** — PKHD1 fibrosistini kodlar ve otozomal resesif, yani çocukluk çağı polikistik böbrek hastalığının genidir.\n- **NPHP1** — NPHP1, nefronofthisis–medüller kistik hastalık kompleksiyle ilişkili gen ailesinin üyesidir; polikistin kodlamaz.\n- **PKD1** — PKD1 doğru: kromozom 16'da yer alır, polikistin-1'i kodlar ve olguların %85–90'ında etkilenmiştir.\n- **COL4A5** — COL4A5 ile karıştırılabilir: Otozomal dominant formda bozulan genler, primer siliyumdaki polikistin proteinlerini kodlar.\n\n**Cevap: D** — PKD1\n\n**Özet.** ADPKD olgularının %85–90'ında PKD1, %10–15'inde PKD2 bozuktur; çocukluk çağı formunun geni ise PKHD1'dir.",
-   "ses": "Otozomal dominant polikistik böbrek hastalığı olgularının çoğundan sorumlu gen hangisidir?\nA, pe ka de iki\nBe, pe ka ha de bir\nCe, ne pe ha pe bir\nDe, pe ka de bir\nE, ce o le dört a beş\nHer seçeneği tek tek ele alalım.\nPe ka de iki, polikistin iki proteinini kodlar. Ancak otozomal dominant formun olgularının yalnız yüzde on ile on beşinden sorumludur.\nPe ka ha de bir, fibrosistini kodlar ve otozomal resesif, yani çocukluk çağı polikistik böbrek hastalığının genidir.\nNe pe ha pe bir, nefronoftizis ve medüller kistik hastalık kompleksiyle ilişkili gen ailesinin üyesidir. Polikistin kodlamaz.\nPe ka de bir doğru. On altıncı kromozomda yer alır, polikistin bir proteinini kodlar ve olguların yüzde seksen beş ile doksanında etkilenmiştir.\nCOLdörtAbeş ile karıştırılabilir. Otozomal dominant formda bozulan genler, primer siliyumdaki polikistin proteinlerini kodlar.\nDoğru cevap De, pe ka de bir\nOtozomal dominant polikistik böbrek hastalığı olgularının yüzde seksen beş ile doksanında pe ka de bir, yüzde on ile on beşinde pe ka de iki bozuktur. Çocukluk çağı formunun geni ise pe ka ha de birdir.",
-   "kelime": 121
+   "sayfa": [
+    17,
+    23,
+    27
+   ],
+   "metin": "**Soru.** ADPKD olgularının çoğundan sorumlu gen hangisidir?\n\n**A)** PKD2 · **B)** PKHD1 · **C)** NPHP1 · **D)** PKD1 · **E)** COL4A5\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **PKD2** — PKD2 polikistin-2'yi kodlar; ancak otozomal dominant formun olgularının yalnız %10–15'inden sorumludur.\n- **PKHD1** — PKHD1 fibrosistini kodlar ve otozomal resesif, yani çocukluk çağı polikistik böbrek hastalığının genidir.\n- **NPHP1** — NPHP1, nefronofthisis–medüller kistik hastalık kompleksiyle ilişkili gen ailesinin üyesidir; polikistin kodlamaz.\n- **PKD1** — PKD1 doğru: kromozom 16'da yer alır, polikistin-1'i kodlar ve olguların %85–90'ında etkilenmiştir.\n- **COL4A5** — COL4A5 geni X kromozomunda yer alan tip IV kollajen alfa-5 zincirini kodlar ve mutasyonu X'e bağlı Alport sendromuna yol açar; erişkin tip otozomal dominant polikistik böbrek hastalığı (ADPKD) olgularının yaklaşık %85'inden sorumlu gen ise 16. kromozomdaki PKD1 genidir.\n\n**Cevap: D** — PKD1\n\n**Özet.** ADPKD olgularının %85–90'ında PKD1, %10–15'inde PKD2 bozuktur; çocukluk çağı formunun geni ise PKHD1'dir.",
+   "ses": "Otozomal dominant polikistik böbrek hastalığı olgularının çoğundan sorumlu gen hangisidir?\nA, pe ka de iki\nBe, pe ka ha de bir\nCe, ne pe ha pe bir\nDe, pe ka de bir\nE, ce o le dört a beş\nHer seçeneği tek tek ele alalım.\nPe ka de iki, polikistin iki proteinini kodlar. Ancak otozomal dominant formun olgularının yalnız yüzde on ile on beşinden sorumludur.\nPe ka ha de bir, fibrosistini kodlar ve otozomal resesif, yani çocukluk çağı polikistik böbrek hastalığının genidir.\nNe pe ha pe bir, nefronoftizis ve medüller kistik hastalık kompleksiyle ilişkili gen ailesinin üyesidir. Polikistin kodlamaz.\nPe ka de bir doğru. On altıncı kromozomda yer alır, polikistin bir proteinini kodlar ve olguların yüzde seksen beş ile doksanında etkilenmiştir.\nkol dört a beş geni X kromozomunda yer alan tip dört kollajen alfa-beş zincirini kodlar ve mutasyonu X'e bağlı Alport sendromuna yol açar. Erişkin tip otozomal dominant polikistik böbrek hastalığı, o de pe ka de, olgularının yaklaşık yüzde seksen beş'inden sorumlu gen ise on altı. kromozomdaki pe ka de bir genidir.\nDoğru cevap De, pe ka de bir\nOtozomal dominant polikistik böbrek hastalığı olgularının yüzde seksen beş ile doksanında pe ka de bir, yüzde on ile on beşinde pe ka de iki bozuktur. Çocukluk çağı formunun geni ise pe ka ha de birdir.",
+   "kelime": 146
   },
   {
    "no": 3,
@@ -65,18 +77,24 @@
     "E": "Primer siliyum"
    },
    "dogru": "E",
+   "ipucu": "Bu proteinlerin sıvı akımını algılayan mekanik sensör kompleksi olarak çalıştığını hatırla.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
-    "A": "Polikistinler tübüler epitelde sıvı akımını algılayan mekanik bir sensör kompleksi oluşturur. Çekirdek zarı bu sorudaki ayrımı sağlamaz.",
+    "A": "Çekirdek zarı lamin proteinleriyle desteklenen nükleer kılıftır; PKD1 ve PKD2 genlerinin kodladığı polikistin-1 ve polikistin-2 proteinleri ise tübül epitel hücrelerinin lümene bakan yüzeyindeki hareketsiz primer siliyumda yerleşerek idrar akımını algılayan mekanosensör kalsiyum kanalı olarak görev yapar.",
     "B": "Mitokondri polikistinlerin bulunduğu yer değil; polikistin işlevi kaybolunca hücre içine kalsiyum girişi ve hücre polaritesi bozulur.",
-    "C": "Polikistin kaybında hücre proliferasyonu ve sıvı sekresyonu artar, tübül segmentleri genişleyerek kiste dönüşür. Lizozom bu sorudaki ayrımı sağlamaz.",
+    "C": "Lizozom hücre içi makromolekülleri asidik hidrolazlarla parçalayan sindirim organelidir; polikistin-1 ve polikistin-2 kompleksinin tübül epitelinde sıvı akışını ve lümen çapını algılamak üzere bulunduğu hücresel yapı ise apikal yüzeydeki primer siliyumdur.",
     "D": "Golgi bu proteinlerin yerleşim yeri değil; polikistin-1'i PKD1, polikistin-2'yi PKD2 geni kodlar ve ikisi birlikte bir sensör kompleksi kurar.",
     "E": "Primer siliyum doğru: polikistin-1 ve -2, tübüler epitel hücrelerinin primer siliyumunda sıvı akımını algılayan mekanosensör kompleks oluşturur."
    },
    "ozet": "Polikistinler tübüler epitelin primer siliyumunda sıvı akımını algılar; işlev kaybında kalsiyum girişi ve polarite bozulur, proliferasyon ve sıvı sekresyonu artar, kistler oluşur.",
-   "metin": "**Soru.** Polikistin-1 ve -2'nin hücredeki yerleşimi hangisidir?\n\n**A)** Çekirdek zarı · **B)** Mitokondri · **C)** Lizozom · **D)** Golgi · **E)** Primer siliyum\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Çekirdek zarı** — Polikistinler tübüler epitelde sıvı akımını algılayan mekanik bir sensör kompleksi oluşturur. Çekirdek zarı bu sorudaki ayrımı sağlamaz.\n- **Mitokondri** — Mitokondri polikistinlerin bulunduğu yer değil; polikistin işlevi kaybolunca hücre içine kalsiyum girişi ve hücre polaritesi bozulur.\n- **Lizozom** — Polikistin kaybında hücre proliferasyonu ve sıvı sekresyonu artar, tübül segmentleri genişleyerek kiste dönüşür. Lizozom bu sorudaki ayrımı sağlamaz.\n- **Golgi** — Golgi bu proteinlerin yerleşim yeri değil; polikistin-1'i PKD1, polikistin-2'yi PKD2 geni kodlar ve ikisi birlikte bir sensör kompleksi kurar.\n- **Primer siliyum** — Primer siliyum doğru: polikistin-1 ve -2, tübüler epitel hücrelerinin primer siliyumunda sıvı akımını algılayan mekanosensör kompleks oluşturur.\n\n**Cevap: E** — Primer siliyum\n\n**Özet.** Polikistinler tübüler epitelin primer siliyumunda sıvı akımını algılar; işlev kaybında kalsiyum girişi ve polarite bozulur, proliferasyon ve sıvı sekresyonu artar, kistler oluşur.",
-   "ses": "Polikistin bir ve polikistin ikinin hücredeki yerleşimi hangisidir?\nA, Çekirdek zarı\nBe, Mitokondri\nCe, Lizozom\nDe, Golgi\nE, Primer siliyum\nŞıkları sırasıyla gözden geçirelim.\nPolikistinler tübüler epitelde sıvı akımını algılayan mekanik bir sensör kompleksi oluşturur. Çekirdek zarı bu sorudaki ayrımı sağlamaz.\nMitokondri polikistinlerin bulunduğu yer değil. Polikistin işlevi kaybolunca hücre içine kalsiyum girişi ve hücre polaritesi bozulur.\nPolikistin kaybında hücre proliferasyonu ve sıvı sekresyonu artar, tübül segmentleri genişleyerek kiste dönüşür. Lizozom bu sorudaki ayrımı sağlamaz.\nGolgi bu proteinlerin yerleşim yeri değil. Polikistin biri pe ka de bir, polikistin ikiyi pe ka de iki geni kodlar ve ikisi birlikte bir sensör kompleksi kurar.\nPrimer siliyum doğru. Polikistin bir ve iki, tübüler epitel hücrelerinin primer siliyumunda sıvı akımını algılayan mekanosensör kompleks oluşturur.\nDoğru cevap E, Primer siliyum\nPolikistinler tübüler epitelin primer siliyumunda sıvı akımını algılar. İşlev kaybında kalsiyum girişi ve polarite bozulur, proliferasyon ve sıvı sekresyonu artar, kistler oluşur.",
-   "kelime": 160
+   "sayfa": [
+    13,
+    17,
+    18
+   ],
+   "metin": "**Soru.** Polikistin-1 ve -2'nin hücredeki yerleşimi hangisidir?\n\n**A)** Çekirdek zarı · **B)** Mitokondri · **C)** Lizozom · **D)** Golgi · **E)** Primer siliyum\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Çekirdek zarı** — Çekirdek zarı lamin proteinleriyle desteklenen nükleer kılıftır; PKD1 ve PKD2 genlerinin kodladığı polikistin-1 ve polikistin-2 proteinleri ise tübül epitel hücrelerinin lümene bakan yüzeyindeki hareketsiz primer siliyumda yerleşerek idrar akımını algılayan mekanosensör kalsiyum kanalı olarak görev yapar.\n- **Mitokondri** — Mitokondri polikistinlerin bulunduğu yer değil; polikistin işlevi kaybolunca hücre içine kalsiyum girişi ve hücre polaritesi bozulur.\n- **Lizozom** — Lizozom hücre içi makromolekülleri asidik hidrolazlarla parçalayan sindirim organelidir; polikistin-1 ve polikistin-2 kompleksinin tübül epitelinde sıvı akışını ve lümen çapını algılamak üzere bulunduğu hücresel yapı ise apikal yüzeydeki primer siliyumdur.\n- **Golgi** — Golgi bu proteinlerin yerleşim yeri değil; polikistin-1'i PKD1, polikistin-2'yi PKD2 geni kodlar ve ikisi birlikte bir sensör kompleksi kurar.\n- **Primer siliyum** — Primer siliyum doğru: polikistin-1 ve -2, tübüler epitel hücrelerinin primer siliyumunda sıvı akımını algılayan mekanosensör kompleks oluşturur.\n\n**Cevap: E** — Primer siliyum\n\n**Özet.** Polikistinler tübüler epitelin primer siliyumunda sıvı akımını algılar; işlev kaybında kalsiyum girişi ve polarite bozulur, proliferasyon ve sıvı sekresyonu artar, kistler oluşur.",
+   "ses": "Polikistin bir ve polikistin ikinin hücredeki yerleşimi hangisidir?\nA, Çekirdek zarı\nBe, Mitokondri\nCe, Lizozom\nDe, Golgi\nE, Primer siliyum\nŞıkları sırasıyla gözden geçirelim.\nÇekirdek zarı lamin proteinleriyle desteklenen nükleer kılıftır. Pe ka de bir ve pe ka de iki genlerinin kodladığı polikistin-bir ve polikistin-iki proteinleri ise tübül epitel hücrelerinin lümene bakan yüzeyindeki hareketsiz primer siliyumda yerleşerek idrar akımını algılayan mekanosensör kalsiyum kanalı olarak görev yapar.\nMitokondri polikistinlerin bulunduğu yer değil. Polikistin işlevi kaybolunca hücre içine kalsiyum girişi ve hücre polaritesi bozulur.\nLizozom hücre içi makromolekülleri asidik hidrolazlarla parçalayan sindirim organelidir. Polikistin-bir ve polikistin-iki kompleksinin tübül epitelinde sıvı akışını ve lümen çapını algılamak üzere bulunduğu hücresel yapı ise apikal yüzeydeki primer siliyumdur.\nGolgi bu proteinlerin yerleşim yeri değil. Polikistin biri pe ka de bir, polikistin ikiyi pe ka de iki geni kodlar ve ikisi birlikte bir sensör kompleksi kurar.\nPrimer siliyum doğru. Polikistin bir ve iki, tübüler epitel hücrelerinin primer siliyumunda sıvı akımını algılayan mekanosensör kompleks oluşturur.\nDoğru cevap E, Primer siliyum\nPolikistinler tübüler epitelin primer siliyumunda sıvı akımını algılar. İşlev kaybında kalsiyum girişi ve polarite bozulur, proliferasyon ve sıvı sekresyonu artar, kistler oluşur.",
+   "kelime": 191
   },
   {
    "no": 4,
@@ -90,18 +108,22 @@
     "E": "Hipermetilasyon"
    },
    "dogru": "A",
+   "ipucu": "Germ hattından gelen tek bozuk kopyanın kist oluşturmaya yetmediğini ve diğer kopyaya ne olması gerektiğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "İkinci alelin somatik kaybı doğru: germ hattı mutasyonuna ek olarak diğer alelin somatik kaybı, yani heterozigotluk kaybı kist gelişimi için gerekir.",
     "B": "Kromozom translokasyonu bu hastalıkta tanımlanan ikinci olay değil; kist için aynı genin iki alelinin de işlevini yitirmesi gerekir.",
-    "C": "Viral enfeksiyon ile karıştırılabilir: Hastalık polikistin genlerindeki germ hattı mutasyonuyla başlar ve otozomal dominant kalıtılır.",
+    "C": "Viral enfeksiyonlar kist oluşumunun genetik tetikleyicisi değildir; ADPKD otozomal dominant kalıtılsa da hücresel düzeyde kist gelişimi için germ hattından gelen mutant PKD aleline ek olarak tübül hücresindeki sağlam ikinci alelin de somatik mutasyonla kaybedilmesi (iki vuruş mekanizması) gerekir.",
     "D": "İmmün kompleks birikimi bu hastalığın mekanizması değil; polikistin kaybında siliyal mekanosensör bozulur, proliferasyon ve sıvı sekresyonu artar.",
     "E": "Hipermetilasyon bu hastalık için tanımlanan ikinci darbe değil; kistin oluşması için sağlam kalan diğer alelin hücrede somatik olarak yitirilmesi gerekir."
    },
    "ozet": "ADPKD'de germ hattı mutasyonu tek başına yetmez; kist gelişimi için ikinci darbe olarak diğer alelin somatik kaybı, yani heterozigotluk kaybı gerekir.",
-   "metin": "**Soru.** ADPKD'de kist gelişimi için germ hattı mutasyonuna ek olarak gereken olay hangisidir?\n\n**A)** İkinci alelin somatik kaybı · **B)** Kromozom translokasyonu · **C)** Viral enfeksiyon · **D)** İmmün kompleks birikimi · **E)** Hipermetilasyon\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **İkinci alelin somatik kaybı** — İkinci alelin somatik kaybı doğru: germ hattı mutasyonuna ek olarak diğer alelin somatik kaybı, yani heterozigotluk kaybı kist gelişimi için gerekir.\n- **Kromozom translokasyonu** — Kromozom translokasyonu bu hastalıkta tanımlanan ikinci olay değil; kist için aynı genin iki alelinin de işlevini yitirmesi gerekir.\n- **Viral enfeksiyon** — Viral enfeksiyon ile karıştırılabilir: Hastalık polikistin genlerindeki germ hattı mutasyonuyla başlar ve otozomal dominant kalıtılır.\n- **İmmün kompleks birikimi** — İmmün kompleks birikimi bu hastalığın mekanizması değil; polikistin kaybında siliyal mekanosensör bozulur, proliferasyon ve sıvı sekresyonu artar.\n- **Hipermetilasyon** — Hipermetilasyon bu hastalık için tanımlanan ikinci darbe değil; kistin oluşması için sağlam kalan diğer alelin hücrede somatik olarak yitirilmesi gerekir.\n\n**Cevap: A** — İkinci alelin somatik kaybı\n\n**Özet.** ADPKD'de germ hattı mutasyonu tek başına yetmez; kist gelişimi için ikinci darbe olarak diğer alelin somatik kaybı, yani heterozigotluk kaybı gerekir.",
-   "ses": "Otozomal dominant polikistik böbrek hastalığında kist gelişimi için germ hattı mutasyonuna ek olarak gereken olay hangisidir?\nA, İkinci alelin somatik kaybı\nBe, Kromozom translokasyonu\nCe, Viral enfeksiyon\nDe, İmmün kompleks birikimi\nE, Hipermetilasyon\nŞimdi seçeneklere tek tek bakalım.\nİkinci alelin somatik kaybı doğru. Germ hattı mutasyonuna ek olarak diğer alelin somatik kaybı, yani heterozigotluk kaybı, kist gelişimi için gerekir.\nKromozom translokasyonu bu hastalıkta tanımlanan ikinci olay değil. Kist için aynı genin iki alelinin de işlevini yitirmesi gerekir.\nViral enfeksiyon ile karıştırılabilir. Hastalık polikistin genlerindeki germ hattı mutasyonuyla başlar ve otozomal dominant kalıtılır.\nİmmün kompleks birikimi bu hastalığın mekanizması değil. Polikistin kaybında siliyal mekanosensör bozulur, proliferasyon ve sıvı sekresyonu artar.\nHipermetilasyon bu hastalık için tanımlanan ikinci darbe değil. Kistin oluşması için sağlam kalan diğer alelin hücrede somatik olarak yitirilmesi gerekir.\nDoğru cevap A, İkinci alelin somatik kaybı\nOtozomal dominant polikistik böbrek hastalığında germ hattı mutasyonu tek başına yetmez. Kist gelişimi için ikinci darbe olarak diğer alelin somatik kaybı, yani heterozigotluk kaybı gerekir.",
-   "kelime": 182
+   "sayfa": [
+    17
+   ],
+   "metin": "**Soru.** ADPKD'de kist gelişimi için germ hattı mutasyonuna ek olarak gereken olay hangisidir?\n\n**A)** İkinci alelin somatik kaybı · **B)** Kromozom translokasyonu · **C)** Viral enfeksiyon · **D)** İmmün kompleks birikimi · **E)** Hipermetilasyon\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **İkinci alelin somatik kaybı** — İkinci alelin somatik kaybı doğru: germ hattı mutasyonuna ek olarak diğer alelin somatik kaybı, yani heterozigotluk kaybı kist gelişimi için gerekir.\n- **Kromozom translokasyonu** — Kromozom translokasyonu bu hastalıkta tanımlanan ikinci olay değil; kist için aynı genin iki alelinin de işlevini yitirmesi gerekir.\n- **Viral enfeksiyon** — Viral enfeksiyonlar kist oluşumunun genetik tetikleyicisi değildir; ADPKD otozomal dominant kalıtılsa da hücresel düzeyde kist gelişimi için germ hattından gelen mutant PKD aleline ek olarak tübül hücresindeki sağlam ikinci alelin de somatik mutasyonla kaybedilmesi (iki vuruş mekanizması) gerekir.\n- **İmmün kompleks birikimi** — İmmün kompleks birikimi bu hastalığın mekanizması değil; polikistin kaybında siliyal mekanosensör bozulur, proliferasyon ve sıvı sekresyonu artar.\n- **Hipermetilasyon** — Hipermetilasyon bu hastalık için tanımlanan ikinci darbe değil; kistin oluşması için sağlam kalan diğer alelin hücrede somatik olarak yitirilmesi gerekir.\n\n**Cevap: A** — İkinci alelin somatik kaybı\n\n**Özet.** ADPKD'de germ hattı mutasyonu tek başına yetmez; kist gelişimi için ikinci darbe olarak diğer alelin somatik kaybı, yani heterozigotluk kaybı gerekir.",
+   "ses": "Otozomal dominant polikistik böbrek hastalığında kist gelişimi için germ hattı mutasyonuna ek olarak gereken olay hangisidir?\nA, İkinci alelin somatik kaybı\nBe, Kromozom translokasyonu\nCe, Viral enfeksiyon\nDe, İmmün kompleks birikimi\nE, Hipermetilasyon\nŞimdi seçeneklere tek tek bakalım.\nİkinci alelin somatik kaybı doğru. Germ hattı mutasyonuna ek olarak diğer alelin somatik kaybı, yani heterozigotluk kaybı, kist gelişimi için gerekir.\nKromozom translokasyonu bu hastalıkta tanımlanan ikinci olay değil. Kist için aynı genin iki alelinin de işlevini yitirmesi gerekir.\nViral enfeksiyonlar kist oluşumunun genetik tetikleyicisi değildir. O de pe ka de otozomal dominant kalıtılsa da hücresel düzeyde kist gelişimi için germ hattından gelen mutant pe ka de aleline ek olarak tübül hücresindeki sağlam ikinci alelin de somatik mutasyonla kaybedilmesi, iki vuruş mekanizması, gerekir.\nİmmün kompleks birikimi bu hastalığın mekanizması değil. Polikistin kaybında siliyal mekanosensör bozulur, proliferasyon ve sıvı sekresyonu artar.\nHipermetilasyon bu hastalık için tanımlanan ikinci darbe değil. Kistin oluşması için sağlam kalan diğer alelin hücrede somatik olarak yitirilmesi gerekir.\nDoğru cevap A, İkinci alelin somatik kaybı\nOtozomal dominant polikistik böbrek hastalığında germ hattı mutasyonu tek başına yetmez. Kist gelişimi için ikinci darbe olarak diğer alelin somatik kaybı, yani heterozigotluk kaybı gerekir.",
+   "kelime": 205
   },
   {
    "no": 5,
@@ -115,18 +137,23 @@
     "E": "AV malformasyon"
    },
    "dogru": "B",
+   "ipucu": "Ölümlerin bir kısmının intraserebral kanamadan olduğunu ve beyin tabanındaki arter halkasını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Aort diseksiyonu bu hastalığın tanımlanan damar lezyonu değil; buradaki ölümcül kanama beyin içinde, beyin tabanındaki arterlerden gelişir.",
     "B": "Willis çemberinde sakküler anevrizma doğru: olguların yaklaşık %10–30'unda görülür; rüptür ve intraserebral kanama ölümlerin yaklaşık %15'ini oluşturur.",
-    "C": "Renal arter stenozu bu hastalığa eşlik eden lezyon olarak geçmez; hastalarda sık görülen komplikasyon, olguların yaklaşık %75'inde gelişen hipertansiyondur.",
+    "C": "Renal arter stenozu ateroskleroz veya fibromusküler displaziyle ana böbrek arterinin daralmasıdır; ADPKD'de polikistin kusuru damar düz kasını da etkilediği için hastaların %4–10'unda beyin tabanındaki Willis çemberinde sakküler (berry) anevrizmalar gelişir ve yırtılarak ölümcül subaraknoid kanamaya yol açabilir.",
     "D": "Varis bu hastalıkla ilişkili değil; böbrek dışı bulgular arasında yaklaşık %30 polikistik karaciğer ve %20–25 mitral kapak prolapsusu vardır.",
-    "E": "Hastalıkta beyin tabanındaki arter halkasında kese biçimli anevrizmalar gelişir ve yırtılabilir. AV malformasyon bu sorudaki ayrımı sağlamaz."
+    "E": "Arteriovenöz (AV) malformasyon arter ile ven arasında kapiller yatak olmadan gelişen doğuştan damar yumağıdır; ADPKD hastalarında polikistin ekspresyon bozukluğuna bağlı olarak intrakraniyal Willis çemberinin dallanma noktalarında gelişen karakteristik vasküler lezyon ise sakküler (berry) anevrizmadır."
    },
    "ozet": "ADPKD'de Willis çemberinde sakküler anevrizma yaklaşık %10–30 oranında görülür; rüptürü ve intraserebral kanama ölümlerin yaklaşık %15'inden sorumludur.",
-   "metin": "**Soru.** ADPKD'ye eşlik eden ve kanama ile ölüme yol açabilen damar lezyonu hangisidir?\n\n**A)** Aort diseksiyonu · **B)** Willis çemberinde sakküler anevrizma · **C)** Renal arter stenozu · **D)** Varis · **E)** AV malformasyon\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Aort diseksiyonu** — Aort diseksiyonu bu hastalığın tanımlanan damar lezyonu değil; buradaki ölümcül kanama beyin içinde, beyin tabanındaki arterlerden gelişir.\n- **Willis çemberinde sakküler anevrizma** — Willis çemberinde sakküler anevrizma doğru: olguların yaklaşık %10–30'unda görülür; rüptür ve intraserebral kanama ölümlerin yaklaşık %15'ini oluşturur.\n- **Renal arter stenozu** — Renal arter stenozu bu hastalığa eşlik eden lezyon olarak geçmez; hastalarda sık görülen komplikasyon, olguların yaklaşık %75'inde gelişen hipertansiyondur.\n- **Varis** — Varis bu hastalıkla ilişkili değil; böbrek dışı bulgular arasında yaklaşık %30 polikistik karaciğer ve %20–25 mitral kapak prolapsusu vardır.\n- **AV malformasyon** — Hastalıkta beyin tabanındaki arter halkasında kese biçimli anevrizmalar gelişir ve yırtılabilir. AV malformasyon bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Willis çemberinde sakküler anevrizma\n\n**Özet.** ADPKD'de Willis çemberinde sakküler anevrizma yaklaşık %10–30 oranında görülür; rüptürü ve intraserebral kanama ölümlerin yaklaşık %15'inden sorumludur.",
-   "ses": "Otozomal dominant polikistik böbrek hastalığına eşlik eden ve kanama ile ölüme yol açabilen damar lezyonu hangisidir?\nA, Aort diseksiyonu\nBe, Vilis çemberinde sakküler anevrizma\nCe, Renal arter stenozu\nDe, Varis\nE, Arteriyovenöz malformasyon\nSeçenekleri sırayla değerlendirelim.\nAort diseksiyonu bu hastalığın tanımlanan damar lezyonu değil. Buradaki ölümcül kanama beyin içinde, beyin tabanındaki arterlerden gelişir.\nVilis çemberinde sakküler anevrizma doğru. Olguların yaklaşık yüzde on ile otuzunda görülür. Rüptür ve intraserebral kanama ölümlerin yaklaşık yüzde on beşini oluşturur.\nRenal arter stenozu bu hastalığa eşlik eden lezyon olarak geçmez. Hastalarda sık görülen komplikasyon, olguların yaklaşık yüzde yetmiş beşinde gelişen hipertansiyondur.\nVaris bu hastalıkla ilişkili değil. Böbrek dışı bulgular arasında yaklaşık yüzde otuz polikistik karaciğer ve yüzde yirmi ile yirmi beş mitral kapak prolapsusu vardır.\nHastalıkta beyin tabanındaki arter halkasında kese biçimli anevrizmalar gelişir ve yırtılabilir. AV malformasyon bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Vilis çemberinde sakküler anevrizma\nOtozomal dominant polikistik böbrek hastalığında Vilis çemberinde sakküler anevrizma yaklaşık yüzde on ile otuz oranında görülür. Rüptürü ve intraserebral kanama ölümlerin yaklaşık yüzde on beşinden sorumludur.",
-   "kelime": 174
+   "sayfa": [
+    19,
+    21
+   ],
+   "metin": "**Soru.** ADPKD'ye eşlik eden ve kanama ile ölüme yol açabilen damar lezyonu hangisidir?\n\n**A)** Aort diseksiyonu · **B)** Willis çemberinde sakküler anevrizma · **C)** Renal arter stenozu · **D)** Varis · **E)** AV malformasyon\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Aort diseksiyonu** — Aort diseksiyonu bu hastalığın tanımlanan damar lezyonu değil; buradaki ölümcül kanama beyin içinde, beyin tabanındaki arterlerden gelişir.\n- **Willis çemberinde sakküler anevrizma** — Willis çemberinde sakküler anevrizma doğru: olguların yaklaşık %10–30'unda görülür; rüptür ve intraserebral kanama ölümlerin yaklaşık %15'ini oluşturur.\n- **Renal arter stenozu** — Renal arter stenozu ateroskleroz veya fibromusküler displaziyle ana böbrek arterinin daralmasıdır; ADPKD'de polikistin kusuru damar düz kasını da etkilediği için hastaların %4–10'unda beyin tabanındaki Willis çemberinde sakküler (berry) anevrizmalar gelişir ve yırtılarak ölümcül subaraknoid kanamaya yol açabilir.\n- **Varis** — Varis bu hastalıkla ilişkili değil; böbrek dışı bulgular arasında yaklaşık %30 polikistik karaciğer ve %20–25 mitral kapak prolapsusu vardır.\n- **AV malformasyon** — Arteriovenöz (AV) malformasyon arter ile ven arasında kapiller yatak olmadan gelişen doğuştan damar yumağıdır; ADPKD hastalarında polikistin ekspresyon bozukluğuna bağlı olarak intrakraniyal Willis çemberinin dallanma noktalarında gelişen karakteristik vasküler lezyon ise sakküler (berry) anevrizmadır.\n\n**Cevap: B** — Willis çemberinde sakküler anevrizma\n\n**Özet.** ADPKD'de Willis çemberinde sakküler anevrizma yaklaşık %10–30 oranında görülür; rüptürü ve intraserebral kanama ölümlerin yaklaşık %15'inden sorumludur.",
+   "ses": "Otozomal dominant polikistik böbrek hastalığına eşlik eden ve kanama ile ölüme yol açabilen damar lezyonu hangisidir?\nA, Aort diseksiyonu\nBe, Vilis çemberinde sakküler anevrizma\nCe, Renal arter stenozu\nDe, Varis\nE, Arteriyovenöz malformasyon\nSeçenekleri sırayla değerlendirelim.\nAort diseksiyonu bu hastalığın tanımlanan damar lezyonu değil. Buradaki ölümcül kanama beyin içinde, beyin tabanındaki arterlerden gelişir.\nVilis çemberinde sakküler anevrizma doğru. Olguların yaklaşık yüzde on ile otuzunda görülür. Rüptür ve intraserebral kanama ölümlerin yaklaşık yüzde on beşini oluşturur.\nRenal arter stenozu ateroskleroz veya fibromusküler displaziyle ana böbrek arterinin daralmasıdır. O de pe ka de'de polikistin kusuru damar düz kasını da etkilediği için hastaların yüzde dört ila on'unda beyin tabanındaki Willis çemberinde sakküler, berry, anevrizmalar gelişir ve yırtılarak ölümcül subaraknoid kanamaya yol açabilir.\nVaris bu hastalıkla ilişkili değil. Böbrek dışı bulgular arasında yaklaşık yüzde otuz polikistik karaciğer ve yüzde yirmi ile yirmi beş mitral kapak prolapsusu vardır.\nArteriovenöz, arteriovenöz, malformasyon arter ile ven arasında kapiller yatak olmadan gelişen doğuştan damar yumağıdır. O de pe ka de hastalarında polikistin ekspresyon bozukluğuna bağlı olarak intrakraniyal Willis çemberinin dallanma noktalarında gelişen karakteristik vasküler lezyon ise sakküler, berry, anevrizmadır.\nDoğru cevap Be, Vilis çemberinde sakküler anevrizma\nOtozomal dominant polikistik böbrek hastalığında Vilis çemberinde sakküler anevrizma yaklaşık yüzde on ile otuz oranında görülür. Rüptürü ve intraserebral kanama ölümlerin yaklaşık yüzde on beşinden sorumludur.",
+   "kelime": 209
   },
   {
    "no": 6,
@@ -140,18 +167,24 @@
     "E": "Böbrek tümörü"
    },
    "dogru": "C",
+   "ipucu": "Olguların dörtte üçünde yüksek tansiyon geliştiğini ve bunun uzun vadede hangi organı yorduğunu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Enfeksiyon ikinci sıradaki ölüm nedenidir ve ölümlerin yaklaşık %25'ini oluşturur; idrar yolu enfeksiyonu hastalığın komplikasyonlarındandır.",
     "B": "Anevrizma rüptürü ve intraserebral kanama ölümlerin yaklaşık %15'inden sorumludur; ani ve çarpıcı olsa da en sık neden değildir.",
     "C": "Koroner/hipertansif kalp hastalığı doğru: ölümlerin yaklaşık %40'ını oluşturur; hastaların yaklaşık %75'inde hipertansiyon gelişir.",
-    "D": "Karaciğer yetmezliği bu hastalığın başlıca ölüm nedenleri arasında yer almaz; karaciğer fibrozisi ve siroz daha çok çocukluk çağı polikistik böbrek hastalığında öne çıkar.",
+    "D": "Karaciğer yetmezliği ve portal hipertansiyon konjenital hepatik fibrozisle giden otozomal resesif polikistik böbrek hastalığında (ARPKD) ön plandadır; erişkin tip ADPKD'de ise diyaliz ve transplantasyon sayesinde üremik ölümler azaldığından en sık ölüm nedeni yaklaşık %40 ile koroner ve hipertansif kalp hastalığıdır.",
     "E": "Böbrek tümörü bu hastalıkta tanımlanan bir ölüm nedeni değil; renal hücreli karsinom riskinin yaklaşık 100 kat arttığı tablo, uzun süre diyaliz alanlardaki edinilmiş kistik hastalıktır."
    },
    "ozet": "ADPKD'de ölümlerin yaklaşık %40'ı koroner ya da hipertansif kalp hastalığından, %25'i enfeksiyondan, %15'i anevrizma rüptürü ve intraserebral kanamadan olur.",
-   "metin": "**Soru.** ADPKD'de en sık ölüm nedeni hangisidir?\n\n**A)** Enfeksiyon · **B)** Anevrizma rüptürü · **C)** Koroner/hipertansif kalp hastalığı · **D)** Karaciğer yetmezliği · **E)** Böbrek tümörü\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Enfeksiyon** — Enfeksiyon ikinci sıradaki ölüm nedenidir ve ölümlerin yaklaşık %25'ini oluşturur; idrar yolu enfeksiyonu hastalığın komplikasyonlarındandır.\n- **Anevrizma rüptürü** — Anevrizma rüptürü ve intraserebral kanama ölümlerin yaklaşık %15'inden sorumludur; ani ve çarpıcı olsa da en sık neden değildir.\n- **Koroner/hipertansif kalp hastalığı** — Koroner/hipertansif kalp hastalığı doğru: ölümlerin yaklaşık %40'ını oluşturur; hastaların yaklaşık %75'inde hipertansiyon gelişir.\n- **Karaciğer yetmezliği** — Karaciğer yetmezliği bu hastalığın başlıca ölüm nedenleri arasında yer almaz; karaciğer fibrozisi ve siroz daha çok çocukluk çağı polikistik böbrek hastalığında öne çıkar.\n- **Böbrek tümörü** — Böbrek tümörü bu hastalıkta tanımlanan bir ölüm nedeni değil; renal hücreli karsinom riskinin yaklaşık 100 kat arttığı tablo, uzun süre diyaliz alanlardaki edinilmiş kistik hastalıktır.\n\n**Cevap: C** — Koroner/hipertansif kalp hastalığı\n\n**Özet.** ADPKD'de ölümlerin yaklaşık %40'ı koroner ya da hipertansif kalp hastalığından, %25'i enfeksiyondan, %15'i anevrizma rüptürü ve intraserebral kanamadan olur.",
-   "ses": "Otozomal dominant polikistik böbrek hastalığında en sık ölüm nedeni hangisidir?\nA, Enfeksiyon\nBe, Anevrizma rüptürü\nCe, Koroner ya da hipertansif kalp hastalığı\nDe, Karaciğer yetmezliği\nE, Böbrek tümörü\nHer seçeneği tek tek ele alalım.\nEnfeksiyon ikinci sıradaki ölüm nedenidir ve ölümlerin yaklaşık yüzde yirmi beşini oluşturur. İdrar yolu enfeksiyonu hastalığın komplikasyonlarındandır.\nAnevrizma rüptürü ve intraserebral kanama ölümlerin yaklaşık yüzde on beşinden sorumludur. Ani ve çarpıcı olsa da en sık neden değildir.\nKoroner ya da hipertansif kalp hastalığı doğru. Ölümlerin yaklaşık yüzde kırkını oluşturur. Hastaların yaklaşık yüzde yetmiş beşinde hipertansiyon gelişir.\nKaraciğer yetmezliği bu hastalığın başlıca ölüm nedenleri arasında yer almaz. Karaciğer fibrozisi ve siroz daha çok çocukluk çağı polikistik böbrek hastalığında öne çıkar.\nBöbrek tümörü bu hastalıkta tanımlanan bir ölüm nedeni değil. Renal hücreli karsinom riskinin yaklaşık yüz kat arttığı tablo, uzun süre diyaliz alanlardaki edinilmiş kistik hastalıktır.\nDoğru cevap Ce, Koroner ya da hipertansif kalp hastalığı\nOtozomal dominant polikistik böbrek hastalığında ölümlerin yaklaşık yüzde kırkı koroner ya da hipertansif kalp hastalığından olur. Yüzde yirmi beşi enfeksiyondan, yüzde on beşi anevrizma rüptürü ve intraserebral kanamadan olur.",
-   "kelime": 173
+   "sayfa": [
+    21,
+    26,
+    15
+   ],
+   "metin": "**Soru.** ADPKD'de en sık ölüm nedeni hangisidir?\n\n**A)** Enfeksiyon · **B)** Anevrizma rüptürü · **C)** Koroner/hipertansif kalp hastalığı · **D)** Karaciğer yetmezliği · **E)** Böbrek tümörü\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Enfeksiyon** — Enfeksiyon ikinci sıradaki ölüm nedenidir ve ölümlerin yaklaşık %25'ini oluşturur; idrar yolu enfeksiyonu hastalığın komplikasyonlarındandır.\n- **Anevrizma rüptürü** — Anevrizma rüptürü ve intraserebral kanama ölümlerin yaklaşık %15'inden sorumludur; ani ve çarpıcı olsa da en sık neden değildir.\n- **Koroner/hipertansif kalp hastalığı** — Koroner/hipertansif kalp hastalığı doğru: ölümlerin yaklaşık %40'ını oluşturur; hastaların yaklaşık %75'inde hipertansiyon gelişir.\n- **Karaciğer yetmezliği** — Karaciğer yetmezliği ve portal hipertansiyon konjenital hepatik fibrozisle giden otozomal resesif polikistik böbrek hastalığında (ARPKD) ön plandadır; erişkin tip ADPKD'de ise diyaliz ve transplantasyon sayesinde üremik ölümler azaldığından en sık ölüm nedeni yaklaşık %40 ile koroner ve hipertansif kalp hastalığıdır.\n- **Böbrek tümörü** — Böbrek tümörü bu hastalıkta tanımlanan bir ölüm nedeni değil; renal hücreli karsinom riskinin yaklaşık 100 kat arttığı tablo, uzun süre diyaliz alanlardaki edinilmiş kistik hastalıktır.\n\n**Cevap: C** — Koroner/hipertansif kalp hastalığı\n\n**Özet.** ADPKD'de ölümlerin yaklaşık %40'ı koroner ya da hipertansif kalp hastalığından, %25'i enfeksiyondan, %15'i anevrizma rüptürü ve intraserebral kanamadan olur.",
+   "ses": "Otozomal dominant polikistik böbrek hastalığında en sık ölüm nedeni hangisidir?\nA, Enfeksiyon\nBe, Anevrizma rüptürü\nCe, Koroner ya da hipertansif kalp hastalığı\nDe, Karaciğer yetmezliği\nE, Böbrek tümörü\nHer seçeneği tek tek ele alalım.\nEnfeksiyon ikinci sıradaki ölüm nedenidir ve ölümlerin yaklaşık yüzde yirmi beşini oluşturur. İdrar yolu enfeksiyonu hastalığın komplikasyonlarındandır.\nAnevrizma rüptürü ve intraserebral kanama ölümlerin yaklaşık yüzde on beşinden sorumludur. Ani ve çarpıcı olsa da en sık neden değildir.\nKoroner ya da hipertansif kalp hastalığı doğru. Ölümlerin yaklaşık yüzde kırkını oluşturur. Hastaların yaklaşık yüzde yetmiş beşinde hipertansiyon gelişir.\nKaraciğer yetmezliği ve portal hipertansiyon konjenital hepatik fibrozisle giden otozomal resesif polikistik böbrek hastalığında, o re pe ka de, ön plandadır. Erişkin tip o de pe ka de'de ise diyaliz ve transplantasyon sayesinde üremik ölümler azaldığından en sık ölüm nedeni yaklaşık yüzde kırk ile koroner ve hipertansif kalp hastalığıdır.\nBöbrek tümörü bu hastalıkta tanımlanan bir ölüm nedeni değil. Renal hücreli karsinom riskinin yaklaşık yüz kat arttığı tablo, uzun süre diyaliz alanlardaki edinilmiş kistik hastalıktır.\nDoğru cevap Ce, Koroner ya da hipertansif kalp hastalığı\nOtozomal dominant polikistik böbrek hastalığında ölümlerin yaklaşık yüzde kırkı koroner ya da hipertansif kalp hastalığından olur. Yüzde yirmi beşi enfeksiyondan, yüzde on beşi anevrizma rüptürü ve intraserebral kanamadan olur.",
+   "kelime": 190
   },
   {
    "no": 7,
@@ -165,6 +198,7 @@
     "E": "Basit kist"
    },
    "dogru": "D",
+   "ipucu": "Erişkin başlangıçlı büyük kistli formla, kistleri terminal toplayıcı kanallardan gelişen çocukluk çağı formunu ayırt et.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "ADPKD erişkin dönemde, genellikle 30–50 yaşlarda belirti verir; kistleri büyüktür ve süngerimsi yenidoğan böbreği yapmaz.",
@@ -174,6 +208,13 @@
     "E": "Basit kist kortekse sınırlı, genellikle 1–5 cm, ince duvarlı ve berrak sıvılı bir lezyondur; çoğunlukla asemptomatik ve önemsizdir."
    },
    "ozet": "ARPKD'de büyümüş böbrekte terminal toplayıcı kanallardan köken alan küçük kistler süngerimsi görünüm yapar; karaciğerde portal safra kanalı proliferasyonu, yani konjenital hepatik fibroz eşlik eder.",
+   "sayfa": [
+    24,
+    16,
+    28,
+    31,
+    14
+   ],
    "metin": "**Soru.** Konjenital hepatik fibroz eşlik eden, süngerimsi görünümlü büyük böbrekli yenidoğanda en olası tanı hangisidir?\n\n**A)** ADPKD · **B)** Multikistik displazi · **C)** Nefronofthisis · **D)** ARPKD · **E)** Basit kist\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **ADPKD** — ADPKD erişkin dönemde, genellikle 30–50 yaşlarda belirti verir; kistleri büyüktür ve süngerimsi yenidoğan böbreği yapmaz.\n- **Multikistik displazi** — Multikistik displazi alt idrar yolu tıkanıklığıyla ilişkili gelişimsel bir bozukluktur ve çoğu durumda yalnız tek böbreği tutar.\n- **Nefronofthisis** — Nefronofthisiste böbrekler küçülmüş ve büzüşmüştür; kistler kortikomedüller bileşkededir ve tablo çocukluk ya da ergenlikte poliüriyle başlar.\n- **ARPKD** — ARPKD doğru: korteks ve medulladaki çok sayıda küçük kist böbreğe süngerimsi görünüm verir; konjenital hepatik fibroz sıklıkla eşlik eder.\n- **Basit kist** — Basit kist kortekse sınırlı, genellikle 1–5 cm, ince duvarlı ve berrak sıvılı bir lezyondur; çoğunlukla asemptomatik ve önemsizdir.\n\n**Cevap: D** — ARPKD\n\n**Özet.** ARPKD'de büyümüş böbrekte terminal toplayıcı kanallardan köken alan küçük kistler süngerimsi görünüm yapar; karaciğerde portal safra kanalı proliferasyonu, yani konjenital hepatik fibroz eşlik eder.",
    "ses": "Konjenital hepatik fibroz eşlik eden, süngerimsi görünümlü büyük böbrekli yenidoğanda en olası tanı hangisidir?\nA, Otozomal dominant polikistik böbrek hastalığı\nBe, Multikistik displazi\nCe, Nefronoftizis\nDe, Otozomal resesif polikistik böbrek hastalığı\nE, Basit kist\nŞıkları sırasıyla gözden geçirelim.\nOtozomal dominant polikistik böbrek hastalığı erişkin dönemde, genellikle otuz ile elli yaşlarında belirti verir. Kistleri büyüktür ve süngerimsi yenidoğan böbreği yapmaz.\nMultikistik displazi alt idrar yolu tıkanıklığıyla ilişkili gelişimsel bir bozukluktur ve çoğu durumda yalnız tek böbreği tutar.\nNefronoftiziste böbrekler küçülmüş ve büzüşmüştür. Kistler kortikomedüller bileşkededir ve tablo çocukluk ya da ergenlikte poliüriyle başlar.\nOtozomal resesif polikistik böbrek hastalığı doğru. Korteks ve medulladaki çok sayıda küçük kist böbreğe süngerimsi görünüm verir. Konjenital hepatik fibroz sıklıkla eşlik eder.\nBasit kist kortekse sınırlı, genellikle bir ile beş santimetre, ince duvarlı ve berrak sıvılı bir lezyondur. Çoğunlukla asemptomatik ve önemsizdir.\nDoğru cevap De, Otozomal resesif polikistik böbrek hastalığı\nOtozomal resesif polikistik böbrek hastalığında, terminal toplayıcı kanallardan köken alan küçük kistler büyümüş böbreğe süngerimsi görünüm verir. Karaciğerde portal safra kanalı proliferasyonu, yani konjenital hepatik fibroz eşlik eder.",
    "kelime": 167
@@ -190,18 +231,24 @@
     "E": "PKHD1"
    },
    "dogru": "E",
+   "ipucu": "Erişkin formda polikistinleri kodlayan genlerle, çocukluk çağında karaciğeri de etkileyen formun genini ayırt et.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "PKD1 kromozom 16'da yer alır ve polikistin-1'i kodlar; erişkin, yani otozomal dominant formun olgularının %85–90'ında bozuktur.",
     "B": "PKD2 polikistin-2'yi kodlar ve otozomal dominant polikistik böbrek hastalığı olgularının yalnız %10–15'inden sorumludur.",
-    "C": "COL4A3 ile karıştırılabilir: Çocukluk çağı formunda bozulan gen, tübül epitel silyalarında bulunan fibrosistini kodlar.",
+    "C": "COL4A3 geni glomerüler bazal membranın tip IV kollajen alfa-3 zincirini kodlar ve mutasyonu otozomal Alport sendromu yapar; çocukluk çağı otozomal resesif polikistik böbrek hastalığında (ARPKD) mutasyona uğrayan gen ise primer siliyumdaki fibrosistin proteinini kodlayan 6. kromozomdaki PKHD1 genidir.",
     "D": "NPHP1, nefronofthisis–medüller kistik hastalık kompleksinin en az 13 lokusundan biridir; ürünü epitel siliyası ile ilişkili bir proteindir.",
     "E": "PKHD1 doğru: fibrosistin, diğer adıyla poliduktin proteinini kodlar; bu protein tübüler epitel hücrelerinin silyalarında bulunur."
    },
    "ozet": "ARPKD'de kromozom 6p'deki, fibrosistini kodlayan PKHD1 geni bozuktur; erişkin formda ise polikistinleri kodlayan PKD1 ve PKD2 bozulur.",
-   "metin": "**Soru.** ARPKD'de mutasyona uğrayan gen hangisidir?\n\n**A)** PKD1 · **B)** PKD2 · **C)** COL4A3 · **D)** NPHP1 · **E)** PKHD1\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **PKD1** — PKD1 kromozom 16'da yer alır ve polikistin-1'i kodlar; erişkin, yani otozomal dominant formun olgularının %85–90'ında bozuktur.\n- **PKD2** — PKD2 polikistin-2'yi kodlar ve otozomal dominant polikistik böbrek hastalığı olgularının yalnız %10–15'inden sorumludur.\n- **COL4A3** — COL4A3 ile karıştırılabilir: Çocukluk çağı formunda bozulan gen, tübül epitel silyalarında bulunan fibrosistini kodlar.\n- **NPHP1** — NPHP1, nefronofthisis–medüller kistik hastalık kompleksinin en az 13 lokusundan biridir; ürünü epitel siliyası ile ilişkili bir proteindir.\n- **PKHD1** — PKHD1 doğru: fibrosistin, diğer adıyla poliduktin proteinini kodlar; bu protein tübüler epitel hücrelerinin silyalarında bulunur.\n\n**Cevap: E** — PKHD1\n\n**Özet.** ARPKD'de kromozom 6p'deki, fibrosistini kodlayan PKHD1 geni bozuktur; erişkin formda ise polikistinleri kodlayan PKD1 ve PKD2 bozulur.",
-   "ses": "Otozomal resesif polikistik böbrek hastalığında mutasyona uğrayan gen hangisidir?\nA, pe ka de bir\nBe, pe ka de iki\nCe, ce o le dört a üç\nDe, ne pe ha pe bir\nE, pe ka ha de bir\nŞimdi seçeneklere tek tek bakalım.\nPe ka de bir, on altıncı kromozomda yer alır ve polikistin bir proteinini kodlar. Erişkin, yani otozomal dominant formun olgularının yüzde seksen beş ile doksanında bozuktur.\nPe ka de iki, polikistin iki proteinini kodlar ve otozomal dominant polikistik böbrek hastalığı olgularının yalnız yüzde on ile on beşinden sorumludur.\nCOLdörtAüç ile karıştırılabilir. Çocukluk çağı formunda bozulan gen, tübül epitel silyalarında bulunan fibrosistini kodlar.\nNe pe ha pe bir, nefronoftizis ve medüller kistik hastalık kompleksinin en az on üç lokusundan biridir. Ürünü epitel siliyası ile ilişkili bir proteindir.\nPe ka ha de bir doğru. Fibrosistin, diğer adıyla poliduktin proteinini kodlar. Bu protein tübüler epitel hücrelerinin silyalarında bulunur.\nDoğru cevap E, pe ka ha de bir\nOtozomal resesif polikistik böbrek hastalığında altıncı kromozomdaki, fibrosistini kodlayan pe ka ha de bir geni bozuktur. Erişkin formda ise polikistinleri kodlayan pe ka de bir ve pe ka de iki bozulur.",
-   "kelime": 138
+   "sayfa": [
+    23,
+    17,
+    27
+   ],
+   "metin": "**Soru.** ARPKD'de mutasyona uğrayan gen hangisidir?\n\n**A)** PKD1 · **B)** PKD2 · **C)** COL4A3 · **D)** NPHP1 · **E)** PKHD1\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **PKD1** — PKD1 kromozom 16'da yer alır ve polikistin-1'i kodlar; erişkin, yani otozomal dominant formun olgularının %85–90'ında bozuktur.\n- **PKD2** — PKD2 polikistin-2'yi kodlar ve otozomal dominant polikistik böbrek hastalığı olgularının yalnız %10–15'inden sorumludur.\n- **COL4A3** — COL4A3 geni glomerüler bazal membranın tip IV kollajen alfa-3 zincirini kodlar ve mutasyonu otozomal Alport sendromu yapar; çocukluk çağı otozomal resesif polikistik böbrek hastalığında (ARPKD) mutasyona uğrayan gen ise primer siliyumdaki fibrosistin proteinini kodlayan 6. kromozomdaki PKHD1 genidir.\n- **NPHP1** — NPHP1, nefronofthisis–medüller kistik hastalık kompleksinin en az 13 lokusundan biridir; ürünü epitel siliyası ile ilişkili bir proteindir.\n- **PKHD1** — PKHD1 doğru: fibrosistin, diğer adıyla poliduktin proteinini kodlar; bu protein tübüler epitel hücrelerinin silyalarında bulunur.\n\n**Cevap: E** — PKHD1\n\n**Özet.** ARPKD'de kromozom 6p'deki, fibrosistini kodlayan PKHD1 geni bozuktur; erişkin formda ise polikistinleri kodlayan PKD1 ve PKD2 bozulur.",
+   "ses": "Otozomal resesif polikistik böbrek hastalığında mutasyona uğrayan gen hangisidir?\nA, pe ka de bir\nBe, pe ka de iki\nCe, ce o le dört a üç\nDe, ne pe ha pe bir\nE, pe ka ha de bir\nŞimdi seçeneklere tek tek bakalım.\nPe ka de bir, on altıncı kromozomda yer alır ve polikistin bir proteinini kodlar. Erişkin, yani otozomal dominant formun olgularının yüzde seksen beş ile doksanında bozuktur.\nPe ka de iki, polikistin iki proteinini kodlar ve otozomal dominant polikistik böbrek hastalığı olgularının yalnız yüzde on ile on beşinden sorumludur.\nkol dört a üç geni glomerüler bazal membranın tip dört kollajen alfa-üç zincirini kodlar ve mutasyonu otozomal Alport sendromu yapar. Çocukluk çağı otozomal resesif polikistik böbrek hastalığında, o re pe ka de, mutasyona uğrayan gen ise primer siliyumdaki fibrosistin proteinini kodlayan altı. kromozomdaki pe ka ha de bir genidir.\nNe pe ha pe bir, nefronoftizis ve medüller kistik hastalık kompleksinin en az on üç lokusundan biridir. Ürünü epitel siliyası ile ilişkili bir proteindir.\nPe ka ha de bir doğru. Fibrosistin, diğer adıyla poliduktin proteinini kodlar. Bu protein tübüler epitel hücrelerinin silyalarında bulunur.\nDoğru cevap E, pe ka ha de bir\nOtozomal resesif polikistik böbrek hastalığında altıncı kromozomdaki, fibrosistini kodlayan pe ka ha de bir geni bozuktur. Erişkin formda ise polikistinleri kodlayan pe ka de bir ve pe ka de iki bozulur.",
+   "kelime": 162
   },
   {
    "no": 9,
@@ -215,6 +262,7 @@
     "E": "Edinilmiş kistik hastalık"
    },
    "dogru": "A",
+   "ipucu": "Tübül işlev bozukluğu ve tuz kaybıyla seyreden, küçülmüş böbrekli çocuk ya da genç erişkini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Nefronofthisis doğru: kortikomedüller bileşkede çok sayıda küçük kist bulunur; tübül işlev bozukluğu poliüri ve polidipsiyle kendini gösterir.",
@@ -224,6 +272,15 @@
     "E": "Edinilmiş kistik hastalık uzun süre diyaliz alan son dönem böbrek hastalarında gelişir; bazı kistler kanayarak hematüri yapabilir."
    },
    "ozet": "Nefronofthisiste küçülmüş böbreğin kortikomedüller bileşkesinde küçük kistler vardır; poliüri, polidipsi ve tuz kaybıyla başlar, 2–10 yılda son dönem böbrek yetmezliğine ilerler.",
+   "sayfa": [
+    27,
+    28,
+    30,
+    19,
+    24,
+    14,
+    15
+   ],
    "metin": "**Soru.** Kistleri kortikomedüller bileşkede yerleşen, poliüri ve polidipsi ile başlayan hastalık hangisidir?\n\n**A)** Nefronofthisis · **B)** ADPKD · **C)** ARPKD · **D)** Basit kist · **E)** Edinilmiş kistik hastalık\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Nefronofthisis** — Nefronofthisis doğru: kortikomedüller bileşkede çok sayıda küçük kist bulunur; tübül işlev bozukluğu poliüri ve polidipsiyle kendini gösterir.\n- **ADPKD** — ADPKD'de her iki böbrek çok büyür ve kistler genellikle 3–4 cm çaplıdır; tablo erişkinde yan ağrısı ve aralıklı hematüriyle başlar.\n- **ARPKD** — ARPKD'de korteks ve medullada çok sayıda küçük kist bulunur ve kistler terminal toplayıcı kanallardan köken alır; ağır formlar doğum öncesi ya da yenidoğanda görülür.\n- **Basit kist** — Basit kist kortekse sınırlıdır ve genellikle belirti vermez; görüntülemede tümörden ayırt edilmesi gereken düzgün konturlu bir lezyondur.\n- **Edinilmiş kistik hastalık** — Edinilmiş kistik hastalık uzun süre diyaliz alan son dönem böbrek hastalarında gelişir; bazı kistler kanayarak hematüri yapabilir.\n\n**Cevap: A** — Nefronofthisis\n\n**Özet.** Nefronofthisiste küçülmüş böbreğin kortikomedüller bileşkesinde küçük kistler vardır; poliüri, polidipsi ve tuz kaybıyla başlar, 2–10 yılda son dönem böbrek yetmezliğine ilerler.",
    "ses": "Kistleri kortikomedüller bileşkede yerleşen, poliüri ve polidipsi ile başlayan hastalık hangisidir?\nA, Nefronoftizis\nBe, Otozomal dominant polikistik böbrek hastalığı\nCe, Otozomal resesif polikistik böbrek hastalığı\nDe, Basit kist\nE, Edinilmiş kistik hastalık\nSeçenekleri sırayla değerlendirelim.\nNefronoftizis doğru. Kortikomedüller bileşkede çok sayıda küçük kist bulunur. Tübül işlev bozukluğu poliüri ve polidipsiyle kendini gösterir.\nOtozomal dominant polikistik böbrek hastalığında her iki böbrek çok büyür ve kistler genellikle üç ile dört santimetre çaplıdır. Tablo erişkinde yan ağrısı ve aralıklı hematüriyle başlar.\nOtozomal resesif polikistik böbrek hastalığında korteks ve medullada çok sayıda küçük kist bulunur ve kistler terminal toplayıcı kanallardan köken alır. Ağır formlar doğum öncesi ya da yenidoğanda görülür.\nBasit kist kortekse sınırlıdır ve genellikle belirti vermez. Görüntülemede tümörden ayırt edilmesi gereken düzgün konturlu bir lezyondur.\nEdinilmiş kistik hastalık uzun süre diyaliz alan son dönem böbrek hastalarında gelişir. Bazı kistler kanayarak hematüri yapabilir.\nDoğru cevap A, Nefronoftizis\nNefronoftiziste küçülmüş böbreğin kortikomedüller bileşkesinde küçük kistler vardır. Poliüri, polidipsi ve tuz kaybıyla başlar, iki ile on yılda son dönem böbrek yetmezliğine ilerler.",
    "kelime": 172
@@ -240,6 +297,7 @@
     "E": "Basit kist"
    },
    "dogru": "B",
+   "ipucu": "Alt idrar yolu tıkanıklığında artan hidrostatik basıncın organ gelişimini nasıl bozduğunu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "ARPKD çocukluk çağının polikistik böbrek hastalığıdır ama nadirdir; yaklaşık 20.000 canlı doğumda bir görülür.",
@@ -249,6 +307,13 @@
     "E": "Basit kist erişkin otopsilerinde sık rastlanan, kortekse sınırlı ve genellikle önemsiz bir lezyondur; çocukluk çağının kistik hastalığı olarak öne çıkmaz."
    },
    "ozet": "Multikistik böbrek displazisi çocukluktaki en sık kistik böbrek hastalığıdır; çoğunlukla alt idrar yolu tıkanıklığına bağlıdır, genellikle tek böbreği tutar ve diğer böbrek normalse prognoz iyidir.",
+   "sayfa": [
+    31,
+    23,
+    27,
+    21,
+    14
+   ],
    "metin": "**Soru.** Çocukluk çağında en sık kistik böbrek hastalığı hangisidir?\n\n**A)** ARPKD · **B)** Multikistik böbrek displazisi · **C)** Nefronofthisis · **D)** ADPKD · **E)** Basit kist\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **ARPKD** — ARPKD çocukluk çağının polikistik böbrek hastalığıdır ama nadirdir; yaklaşık 20.000 canlı doğumda bir görülür.\n- **Multikistik böbrek displazisi** — Multikistik böbrek displazisi doğru: çocuklukta en sık kistik böbrek hastalığıdır; buradaki displazi prekanseröz değil, gelişimsel bozukluk anlamındadır.\n- **Nefronofthisis** — Nefronofthisis, çocuk ve genç erişkinde son dönem böbrek yetmezliğinin en sık genetik nedenlerinden biridir; en sık kistik böbrek hastalığı değildir.\n- **ADPKD** — ADPKD bir erişkin hastalığıdır; genellikle 3.–5. dekatta belirti verir ve kronik böbrek hastalığı olgularının yaklaşık %10'unu oluşturur.\n- **Basit kist** — Basit kist erişkin otopsilerinde sık rastlanan, kortekse sınırlı ve genellikle önemsiz bir lezyondur; çocukluk çağının kistik hastalığı olarak öne çıkmaz.\n\n**Cevap: B** — Multikistik böbrek displazisi\n\n**Özet.** Multikistik böbrek displazisi çocukluktaki en sık kistik böbrek hastalığıdır; çoğunlukla alt idrar yolu tıkanıklığına bağlıdır, genellikle tek böbreği tutar ve diğer böbrek normalse prognoz iyidir.",
    "ses": "Çocukluk çağında en sık kistik böbrek hastalığı hangisidir?\nA, Otozomal resesif polikistik böbrek hastalığı\nBe, Multikistik böbrek displazisi\nCe, Nefronoftizis\nDe, Otozomal dominant polikistik böbrek hastalığı\nE, Basit kist\nHer seçeneği tek tek ele alalım.\nOtozomal resesif polikistik böbrek hastalığı çocukluk çağının polikistik böbrek hastalığıdır ama nadirdir. Yaklaşık yirmi bin canlı doğumda bir görülür.\nMultikistik böbrek displazisi doğru. Çocuklukta en sık kistik böbrek hastalığıdır. Buradaki displazi prekanseröz değil, gelişimsel bozukluk anlamındadır.\nNefronoftizis, çocuk ve genç erişkinde son dönem böbrek yetmezliğinin en sık genetik nedenlerinden biridir. En sık kistik böbrek hastalığı değildir.\nOtozomal dominant polikistik böbrek hastalığı bir erişkin hastalığıdır. Genellikle üçüncü ile beşinci dekatta belirti verir ve kronik böbrek hastalığı olgularının yaklaşık yüzde onunu oluşturur.\nBasit kist erişkin otopsilerinde sık rastlanan, kortekse sınırlı ve genellikle önemsiz bir lezyondur. Çocukluk çağının kistik hastalığı olarak öne çıkmaz.\nDoğru cevap Be, Multikistik böbrek displazisi\nMultikistik böbrek displazisi çocukluktaki en sık kistik böbrek hastalığıdır. Çoğunlukla alt idrar yolu tıkanıklığına bağlıdır, genellikle tek böbreği tutar ve diğer böbrek normalse prognoz iyidir.",
    "kelime": 171
@@ -265,18 +330,23 @@
     "E": "Ksantin"
    },
    "dogru": "D",
+   "ipucu": "Bu tip taşı olan hastaların yarısında kanda değil yalnız idrarda artan mineral düzeyini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Strüvit, yani magnezyum amonyum fosfat taşları tüm taşların yaklaşık %10'udur; üreaz pozitif bakterilerle olan enfeksiyonda gelişir.",
     "B": "Ürik asit taşları tüm taşların yaklaşık %6–7'sidir; sürekli asidik idrarda, pH 5,5'in altında oluşur.",
     "C": "Sistin taşları tüm taşların yalnız %1–2'sidir; genetik amino asit taşıma defekti olan sistinüriyle ilişkilidir.",
     "D": "Kalsiyum oksalat ve/veya fosfat doğru: tüm taşların yaklaşık %80'ini oluşturur; hastaların yarısında hiperkalsemi olmadan hiperkalsiüri vardır.",
-    "E": "Nadir taş tipleri ve nedeni bilinmeyenler birlikte tüm taşların yalnız %1–2'sini oluşturur. Ksantin bu sorudaki ayrımı sağlamaz."
+    "E": "Ksantin taşları ksantin oksidaz eksikliği veya allopurinol tedavisi gibi çok nadir durumlarda görülen radyolüsen taşlardır; böbrek taşlarının (ürolitiazisin) yaklaşık %70'ini oluşturarak klinikte açık ara en sık görülen taş tipi ise radyo-opak kalsiyum oksalat ve kalsiyum fosfat taşlarıdır."
    },
    "ozet": "Böbrek taşlarının yaklaşık %80'i kalsiyum oksalat ve/veya fosfattır; bunu %10 ile strüvit, %6–7 ile ürik asit ve %1–2 ile sistin izler.",
-   "metin": "**Soru.** En sık görülen böbrek taşı tipi hangisidir?\n\n**A)** Strüvit · **B)** Ürik asit · **C)** Sistin · **D)** Kalsiyum oksalat/fosfat · **E)** Ksantin\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Strüvit** — Strüvit, yani magnezyum amonyum fosfat taşları tüm taşların yaklaşık %10'udur; üreaz pozitif bakterilerle olan enfeksiyonda gelişir.\n- **Ürik asit** — Ürik asit taşları tüm taşların yaklaşık %6–7'sidir; sürekli asidik idrarda, pH 5,5'in altında oluşur.\n- **Sistin** — Sistin taşları tüm taşların yalnız %1–2'sidir; genetik amino asit taşıma defekti olan sistinüriyle ilişkilidir.\n- **Kalsiyum oksalat/fosfat** — Kalsiyum oksalat ve/veya fosfat doğru: tüm taşların yaklaşık %80'ini oluşturur; hastaların yarısında hiperkalsemi olmadan hiperkalsiüri vardır.\n- **Ksantin** — Nadir taş tipleri ve nedeni bilinmeyenler birlikte tüm taşların yalnız %1–2'sini oluşturur. Ksantin bu sorudaki ayrımı sağlamaz.\n\n**Cevap: D** — Kalsiyum oksalat/fosfat\n\n**Özet.** Böbrek taşlarının yaklaşık %80'i kalsiyum oksalat ve/veya fosfattır; bunu %10 ile strüvit, %6–7 ile ürik asit ve %1–2 ile sistin izler.",
-   "ses": "En sık görülen böbrek taşı tipi hangisidir?\nA, Strüvit\nBe, Ürik asit\nCe, Sistin\nDe, Kalsiyum oksalat ya da fosfat\nE, Ksantin\nŞıkları sırasıyla gözden geçirelim.\nStrüvit, yani magnezyum amonyum fosfat taşları tüm taşların yaklaşık yüzde onudur. Üreaz pozitif bakterilerle olan enfeksiyonda gelişir.\nÜrik asit taşları tüm taşların yaklaşık yüzde altı ile yedisidir. Sürekli asidik idrarda, pe ha beş virgül beşin altında oluşur.\nSistin taşları tüm taşların yalnız yüzde bir ile ikisidir. Genetik amino asit taşıma defekti olan sistinüriyle ilişkilidir.\nKalsiyum oksalat ya da fosfat doğru. Tüm taşların yaklaşık yüzde sekseni oluşturur. Hastaların yarısında hiperkalsemi olmadan hiperkalsiüri vardır.\nNadir taş tipleri ve nedeni bilinmeyenler birlikte tüm taşların yalnız yüzde bir ile ikisini oluşturur. Ksantin bu sorudaki ayrımı sağlamaz.\nDoğru cevap De, Kalsiyum oksalat ya da fosfat\nBöbrek taşlarının yaklaşık yüzde sekseni kalsiyum oksalat ya da fosfattır. Bunu yüzde on ile strüvit, yüzde altı ile yedi arasında ürik asit ve yüzde bir ile iki arasında sistin izler.",
-   "kelime": 150
+   "sayfa": [
+    36,
+    37
+   ],
+   "metin": "**Soru.** En sık görülen böbrek taşı tipi hangisidir?\n\n**A)** Strüvit · **B)** Ürik asit · **C)** Sistin · **D)** Kalsiyum oksalat/fosfat · **E)** Ksantin\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Strüvit** — Strüvit, yani magnezyum amonyum fosfat taşları tüm taşların yaklaşık %10'udur; üreaz pozitif bakterilerle olan enfeksiyonda gelişir.\n- **Ürik asit** — Ürik asit taşları tüm taşların yaklaşık %6–7'sidir; sürekli asidik idrarda, pH 5,5'in altında oluşur.\n- **Sistin** — Sistin taşları tüm taşların yalnız %1–2'sidir; genetik amino asit taşıma defekti olan sistinüriyle ilişkilidir.\n- **Kalsiyum oksalat/fosfat** — Kalsiyum oksalat ve/veya fosfat doğru: tüm taşların yaklaşık %80'ini oluşturur; hastaların yarısında hiperkalsemi olmadan hiperkalsiüri vardır.\n- **Ksantin** — Ksantin taşları ksantin oksidaz eksikliği veya allopurinol tedavisi gibi çok nadir durumlarda görülen radyolüsen taşlardır; böbrek taşlarının (ürolitiazisin) yaklaşık %70'ini oluşturarak klinikte açık ara en sık görülen taş tipi ise radyo-opak kalsiyum oksalat ve kalsiyum fosfat taşlarıdır.\n\n**Cevap: D** — Kalsiyum oksalat/fosfat\n\n**Özet.** Böbrek taşlarının yaklaşık %80'i kalsiyum oksalat ve/veya fosfattır; bunu %10 ile strüvit, %6–7 ile ürik asit ve %1–2 ile sistin izler.",
+   "ses": "En sık görülen böbrek taşı tipi hangisidir?\nA, Strüvit\nBe, Ürik asit\nCe, Sistin\nDe, Kalsiyum oksalat ya da fosfat\nE, Ksantin\nŞıkları sırasıyla gözden geçirelim.\nStrüvit, yani magnezyum amonyum fosfat taşları tüm taşların yaklaşık yüzde onudur. Üreaz pozitif bakterilerle olan enfeksiyonda gelişir.\nÜrik asit taşları tüm taşların yaklaşık yüzde altı ile yedisidir. Sürekli asidik idrarda, pe ha beş virgül beşin altında oluşur.\nSistin taşları tüm taşların yalnız yüzde bir ile ikisidir. Genetik amino asit taşıma defekti olan sistinüriyle ilişkilidir.\nKalsiyum oksalat ya da fosfat doğru. Tüm taşların yaklaşık yüzde sekseni oluşturur. Hastaların yarısında hiperkalsemi olmadan hiperkalsiüri vardır.\nKsantin taşları ksantin oksidaz eksikliği veya allopurinol tedavisi gibi çok nadir durumlarda görülen radyolüsen taşlardır. Böbrek taşlarının, ürolitiazisin, yaklaşık yüzde yetmiş'ini oluşturarak klinikte açık ara en sık görülen taş tipi ise radyo-opak kalsiyum oksalat ve kalsiyum fosfat taşlarıdır.\nDoğru cevap De, Kalsiyum oksalat ya da fosfat\nBöbrek taşlarının yaklaşık yüzde sekseni kalsiyum oksalat ya da fosfattır. Bunu yüzde on ile strüvit, yüzde altı ile yedi arasında ürik asit ve yüzde bir ile iki arasında sistin izler.",
+   "kelime": 170
   },
   {
    "no": 12,
@@ -290,6 +360,7 @@
     "E": "Magnezyum amonyum fosfat"
    },
    "dogru": "E",
+   "ipucu": "Üreyi parçalayan bakterilerin oluşturduğu alkali idrarda hangi taşın büyüyerek pelvis ve kaliksleri doldurduğunu düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Kalsiyum oksalat kalsiyum taşlarının bileşenidir; bu hastaların yarısında hiperkalsemi olmadan hiperkalsiüri vardır, enfeksiyonla ilişkili geyik boynuzu taşı ise bu tip değildir.",
@@ -299,6 +370,11 @@
     "E": "Magnezyum amonyum fosfat doğru: Proteus gibi üreyi parçalayan bakterilerle olan enfeksiyonda, alkali idrarda oluşan strüvittir; geyik boynuzu taşlar sıklıkla bu tiptir."
    },
    "ozet": "Strüvit, yani magnezyum amonyum fosfat taşları üreaz pozitif bakterilerle olan idrar yolu enfeksiyonunda ve alkali idrarda oluşur; pelvis ve kaliksleri dolduran geyik boynuzu taşlar çoğunlukla strüvittir.",
+   "sayfa": [
+    37,
+    38,
+    36
+   ],
    "metin": "**Soru.** Proteus enfeksiyonu ile ilişkili 'geyik boynuzu' taş tipi hangisidir?\n\n**A)** Kalsiyum oksalat · **B)** Ürik asit · **C)** Sistin · **D)** Kalsiyum fosfat · **E)** Magnezyum amonyum fosfat\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Kalsiyum oksalat** — Kalsiyum oksalat kalsiyum taşlarının bileşenidir; bu hastaların yarısında hiperkalsemi olmadan hiperkalsiüri vardır, enfeksiyonla ilişkili geyik boynuzu taşı ise bu tip değildir.\n- **Ürik asit** — Ürik asit taşları gut ve lösemi tedavisindeki hücre yıkımıyla ilişkilidir; alkali değil, sürekli asidik idrarda oluşur.\n- **Sistin** — Sistin taşı kalıtsal sistinüride görülür ve asidik idrarda oluşma eğilimindedir; nedeni bakteri değil, genetik amino asit taşıma defektidir.\n- **Kalsiyum fosfat** — Kalsiyum fosfat taşı riski alkali idrarda artar; ancak üreyi parçalayan bakterilerle ilişkilendirilen geyik boynuzu taşı bu tip değildir.\n- **Magnezyum amonyum fosfat** — Magnezyum amonyum fosfat doğru: Proteus gibi üreyi parçalayan bakterilerle olan enfeksiyonda, alkali idrarda oluşan strüvittir; geyik boynuzu taşlar sıklıkla bu tiptir.\n\n**Cevap: E** — Magnezyum amonyum fosfat\n\n**Özet.** Strüvit, yani magnezyum amonyum fosfat taşları üreaz pozitif bakterilerle olan idrar yolu enfeksiyonunda ve alkali idrarda oluşur; pelvis ve kaliksleri dolduran geyik boynuzu taşlar çoğunlukla strüvittir.",
    "ses": "Proteus enfeksiyonu ile ilişkili geyik boynuzu taş tipi hangisidir?\nA, Kalsiyum oksalat\nBe, Ürik asit\nCe, Sistin\nDe, Kalsiyum fosfat\nE, Magnezyum amonyum fosfat\nŞimdi seçeneklere tek tek bakalım.\nKalsiyum oksalat kalsiyum taşlarının bileşenidir. Bu hastaların yarısında hiperkalsemi olmadan hiperkalsiüri vardır, enfeksiyonla ilişkili geyik boynuzu taşı ise bu tip değildir.\nÜrik asit taşları gut ve lösemi tedavisindeki hücre yıkımıyla ilişkilidir. Alkali değil, sürekli asidik idrarda oluşur.\nSistin taşı kalıtsal sistinüride görülür ve asidik idrarda oluşma eğilimindedir. Nedeni bakteri değil, genetik amino asit taşıma defektidir.\nKalsiyum fosfat taşı riski alkali idrarda artar. Ancak üreyi parçalayan bakterilerle ilişkilendirilen geyik boynuzu taşı bu tip değildir.\nMagnezyum amonyum fosfat doğru. Proteus gibi üreyi parçalayan bakterilerle olan enfeksiyonda, alkali idrarda oluşan strüvittir. Geyik boynuzu taşlar sıklıkla bu tiptir.\nDoğru cevap E, Magnezyum amonyum fosfat\nStrüvit, yani magnezyum amonyum fosfat taşları, üreaz pozitif bakterilerle olan idrar yolu enfeksiyonunda ve alkali idrarda oluşur. Pelvis ve kaliksleri dolduran geyik boynuzu taşlar çoğunlukla strüvittir.",
    "kelime": 182
@@ -315,22 +391,29 @@
     "E": "Lökosit silendiri"
    },
    "dogru": "B",
+   "ipucu": "Basınç artışının önce tübülün konsantrasyon yeteneğini bozduğunu, glomerüler filtrasyonun ise bir süre sürdüğünü düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Anüri iki taraflı tam tıkanmanın bulgusudur ve hızla gelişen böbrek yetmezliğiyle birlikte görülür.",
     "B": "Poliüri doğru: kısmi tıkanmada konsantrasyon kusuru gelişir, bu yüzden beklenenin aksine oligüri yerine poliüri görülür.",
     "C": "Oligüri sezgisel beklentidir; ancak kısmi tıkanmada tübüller idrarı yoğunlaştıramadığı için idrar miktarı azalmaz, artar.",
     "D": "Masif proteinüri tıkanıklığın bulgusu değil; hidronefrozda artan basınç önce papilla ve piramitleri sıkıştırıp tübül işlevini bozar.",
-    "E": "Tıkanıklık enfeksiyona yatkınlık yaratsa da kısmi tıkanmanın beklenen bulgusu konsantrasyon kusurudur. Lökosit silendiri bu sorudaki ayrımı sağlamaz."
+    "E": "Lökosit silendiri akut bakteriyel piyelonefritte tübül içi nötrofil birikimini gösterir; iki taraflı kısmi idrar yolu tıkanıklığında ise artan intratübüler basınç medüller toplayıcı kanalların antidiüretik hormona (ADH) yanıtını bozarak idrarı konsantre etme yeteneğini düşürür ve paradoksal poliüriye yol açar."
    },
    "ozet": "İki taraflı kısmi tıkanmada konsantrasyon kusuru nedeniyle oligüri yerine poliüri görülür ve bu, lezyonun gerçek doğasını maskeleyebilir; tam tıkanmada ise anüri gelişir.",
-   "metin": "**Soru.** İki taraflı kısmi idrar yolu tıkanıklığında beklenen idrar bulgusu hangisidir?\n\n**A)** Anüri · **B)** Poliüri · **C)** Oligüri · **D)** Masif proteinüri · **E)** Lökosit silendiri\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Anüri** — Anüri iki taraflı tam tıkanmanın bulgusudur ve hızla gelişen böbrek yetmezliğiyle birlikte görülür.\n- **Poliüri** — Poliüri doğru: kısmi tıkanmada konsantrasyon kusuru gelişir, bu yüzden beklenenin aksine oligüri yerine poliüri görülür.\n- **Oligüri** — Oligüri sezgisel beklentidir; ancak kısmi tıkanmada tübüller idrarı yoğunlaştıramadığı için idrar miktarı azalmaz, artar.\n- **Masif proteinüri** — Masif proteinüri tıkanıklığın bulgusu değil; hidronefrozda artan basınç önce papilla ve piramitleri sıkıştırıp tübül işlevini bozar.\n- **Lökosit silendiri** — Tıkanıklık enfeksiyona yatkınlık yaratsa da kısmi tıkanmanın beklenen bulgusu konsantrasyon kusurudur. Lökosit silendiri bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Poliüri\n\n**Özet.** İki taraflı kısmi tıkanmada konsantrasyon kusuru nedeniyle oligüri yerine poliüri görülür ve bu, lezyonun gerçek doğasını maskeleyebilir; tam tıkanmada ise anüri gelişir.",
-   "ses": "İki taraflı kısmi idrar yolu tıkanıklığında beklenen idrar bulgusu hangisidir?\nA, Anüri\nBe, Poliüri\nCe, Oligüri\nDe, Masif proteinüri\nE, Lökosit silendiri\nSeçenekleri sırayla değerlendirelim.\nAnüri iki taraflı tam tıkanmanın bulgusudur ve hızla gelişen böbrek yetmezliğiyle birlikte görülür.\nPoliüri doğru. Kısmi tıkanmada konsantrasyon kusuru gelişir, bu yüzden beklenenin aksine oligüri yerine poliüri görülür.\nOligüri sezgisel beklentidir. Ancak kısmi tıkanmada tübüller idrarı yoğunlaştıramadığı için idrar miktarı azalmaz, artar.\nMasif proteinüri tıkanıklığın bulgusu değil. Hidronefrozda artan basınç önce papilla ve piramitleri sıkıştırıp tübül işlevini bozar.\nTıkanıklık enfeksiyona yatkınlık yaratsa da kısmi tıkanmanın beklenen bulgusu konsantrasyon kusurudur. Lökosit silendiri bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Poliüri\nİki taraflı kısmi tıkanmada konsantrasyon kusuru nedeniyle oligüri yerine poliüri görülür ve bu, lezyonun gerçek doğasını maskeleyebilir. Tam tıkanmada ise anüri gelişir.",
-   "kelime": 150
+   "sayfa": [
+    44,
+    42,
+    33
+   ],
+   "metin": "**Soru.** İki taraflı kısmi idrar yolu tıkanıklığında beklenen idrar bulgusu hangisidir?\n\n**A)** Anüri · **B)** Poliüri · **C)** Oligüri · **D)** Masif proteinüri · **E)** Lökosit silendiri\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Anüri** — Anüri iki taraflı tam tıkanmanın bulgusudur ve hızla gelişen böbrek yetmezliğiyle birlikte görülür.\n- **Poliüri** — Poliüri doğru: kısmi tıkanmada konsantrasyon kusuru gelişir, bu yüzden beklenenin aksine oligüri yerine poliüri görülür.\n- **Oligüri** — Oligüri sezgisel beklentidir; ancak kısmi tıkanmada tübüller idrarı yoğunlaştıramadığı için idrar miktarı azalmaz, artar.\n- **Masif proteinüri** — Masif proteinüri tıkanıklığın bulgusu değil; hidronefrozda artan basınç önce papilla ve piramitleri sıkıştırıp tübül işlevini bozar.\n- **Lökosit silendiri** — Lökosit silendiri akut bakteriyel piyelonefritte tübül içi nötrofil birikimini gösterir; iki taraflı kısmi idrar yolu tıkanıklığında ise artan intratübüler basınç medüller toplayıcı kanalların antidiüretik hormona (ADH) yanıtını bozarak idrarı konsantre etme yeteneğini düşürür ve paradoksal poliüriye yol açar.\n\n**Cevap: B** — Poliüri\n\n**Özet.** İki taraflı kısmi tıkanmada konsantrasyon kusuru nedeniyle oligüri yerine poliüri görülür ve bu, lezyonun gerçek doğasını maskeleyebilir; tam tıkanmada ise anüri gelişir.",
+   "ses": "İki taraflı kısmi idrar yolu tıkanıklığında beklenen idrar bulgusu hangisidir?\nA, Anüri\nBe, Poliüri\nCe, Oligüri\nDe, Masif proteinüri\nE, Lökosit silendiri\nSeçenekleri sırayla değerlendirelim.\nAnüri iki taraflı tam tıkanmanın bulgusudur ve hızla gelişen böbrek yetmezliğiyle birlikte görülür.\nPoliüri doğru. Kısmi tıkanmada konsantrasyon kusuru gelişir, bu yüzden beklenenin aksine oligüri yerine poliüri görülür.\nOligüri sezgisel beklentidir. Ancak kısmi tıkanmada tübüller idrarı yoğunlaştıramadığı için idrar miktarı azalmaz, artar.\nMasif proteinüri tıkanıklığın bulgusu değil. Hidronefrozda artan basınç önce papilla ve piramitleri sıkıştırıp tübül işlevini bozar.\nLökosit silendiri akut bakteriyel piyelonefritte tübül içi nötrofil birikimini gösterir. İki taraflı kısmi idrar yolu tıkanıklığında ise artan intratübüler basınç medüller toplayıcı kanalların antidiüretik hormona, a de ha, yanıtını bozarak idrarı konsantre etme yeteneğini düşürür ve paradoksal poliüriye yol açar.\nDoğru cevap Be, Poliüri\nİki taraflı kısmi tıkanmada konsantrasyon kusuru nedeniyle oligüri yerine poliüri görülür ve bu, lezyonun gerçek doğasını maskeleyebilir. Tam tıkanmada ise anüri gelişir.",
+   "kelime": 171
   },
   {
    "no": 27,
    "tur": "cikmis",
+   "sinav": "2019-2020 · 2019-2020 Kurul 1 Sınavı",
    "soru": "Çocuklarda ve genç erişkinlerde son evre böbrek hastalığının en sık genetik sebebi hangisidir?",
    "secenekler": {
     "A": "Otozomal dominant (erişkin) polikistik böbrek hastalığı",
@@ -340,22 +423,31 @@
     "E": "Multikistik renal displazi"
    },
    "dogru": "D",
+   "ipucu": "Medulla ve kortikomedüller bileşkede küçük kistler yapan, otozomal resesif formları için en az on üç lokus tanımlanmış siliopatiyi düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Otozomal dominant polikistik böbrek hastalığı genellikle 30–50 yaşta belirti verir; çocuk ve genç erişkinin değil, erişkinin hastalığıdır.",
     "B": "Otozomal resesif polikistik böbrek hastalığı yaklaşık 1/20.000 canlı doğumda görülür; ağır formları fetal ya da neonatal dönemde böbrek yetmezliği yapar.",
-    "C": "Bu yaş grubunda son dönem böbrek yetmezliğinin en sık genetik nedenlerinden biri nefronofthisis kompleksidir. Medüller sünger böbrek bu sorudaki ayrımı sağlamaz.",
+    "C": "Medüller sünger böbrek erişkinlerde papiller toplayıcı kanalların genişlemesiyle giden, böbrek fonksiyonunun normal kaldığı benign ve sporadik bir lezyondur; kortikomedüller sınırda kistler ve ilerleyici tübülointerstisyel fibrozisle çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedeni ise nefronofitizis–medüller kistik hastalık kompleksidir.",
     "D": "Nefronofitizis–medüller kistik hastalık kompleksi doğru: çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedenlerindendir ve 2–10 yılda bu evreye ilerler.",
     "E": "Multikistik renal displazi çocukluk çağının en sık kistik böbrek hastalığıdır, ancak gelişimseldir ve çoğunlukla tek böbreği tutar; diğer böbrek normalse prognoz iyidir."
    },
    "ozet": "Nefronofthisis–medüller kistik hastalık kompleksi çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedenlerindendir; medulla ve kortikomedüller bileşkede küçük kistler yapan bir siliopatidir.",
-   "metin": "**Soru.** Çocuklarda ve genç erişkinlerde son evre böbrek hastalığının en sık genetik sebebi hangisidir?\n\n**A)** Otozomal dominant (erişkin) polikistik böbrek hastalığı · **B)** Otozomal resesif (çocukluk çağı) polikistik böbrek hastalığı · **C)** Medüller sünger böbrek · **D)** Nefronofitizis-medüller kistik hastalık kompleksi · **E)** Multikistik renal displazi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Otozomal dominant (erişkin) polikistik böbrek hastalığı** — Otozomal dominant polikistik böbrek hastalığı genellikle 30–50 yaşta belirti verir; çocuk ve genç erişkinin değil, erişkinin hastalığıdır.\n- **Otozomal resesif (çocukluk çağı) polikistik böbrek hastalığı** — Otozomal resesif polikistik böbrek hastalığı yaklaşık 1/20.000 canlı doğumda görülür; ağır formları fetal ya da neonatal dönemde böbrek yetmezliği yapar.\n- **Medüller sünger böbrek** — Bu yaş grubunda son dönem böbrek yetmezliğinin en sık genetik nedenlerinden biri nefronofthisis kompleksidir. Medüller sünger böbrek bu sorudaki ayrımı sağlamaz.\n- **Nefronofitizis-medüller kistik hastalık kompleksi** — Nefronofitizis–medüller kistik hastalık kompleksi doğru: çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedenlerindendir ve 2–10 yılda bu evreye ilerler.\n- **Multikistik renal displazi** — Multikistik renal displazi çocukluk çağının en sık kistik böbrek hastalığıdır, ancak gelişimseldir ve çoğunlukla tek böbreği tutar; diğer böbrek normalse prognoz iyidir.\n\n**Cevap: D** — Nefronofitizis-medüller kistik hastalık kompleksi\n\n**Özet.** Nefronofthisis–medüller kistik hastalık kompleksi çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedenlerindendir; medulla ve kortikomedüller bileşkede küçük kistler yapan bir siliopatidir.",
-   "ses": "Çocuklarda ve genç erişkinlerde son evre böbrek hastalığının en sık genetik sebebi hangisidir?\nA, Otozomal dominant, yani erişkin polikistik böbrek hastalığı\nBe, Otozomal resesif, yani çocukluk çağı polikistik böbrek hastalığı\nCe, Medüller sünger böbrek\nDe, Nefronofitizis medüller kistik hastalık kompleksi\nE, Multikistik renal displazi\nŞıkları sırasıyla gözden geçirelim.\nOtozomal dominant polikistik böbrek hastalığı genellikle otuz ile elli yaşta belirti verir. Çocuk ve genç erişkinin değil, erişkinin hastalığıdır.\nOtozomal resesif polikistik böbrek hastalığı yaklaşık yirmi bin canlı doğumda bir görülür. Ağır formları fetal ya da neonatal dönemde böbrek yetmezliği yapar.\nBu yaş grubunda son dönem böbrek yetmezliğinin en sık genetik nedenlerinden biri nefronoftizis kompleksidir. Medüller sünger böbrek bu sorudaki ayrımı sağlamaz.\nNefronofitizis medüller kistik hastalık kompleksi doğru. Çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedenlerindendir ve iki ile on yılda bu evreye ilerler.\nMultikistik renal displazi çocukluk çağının en sık kistik böbrek hastalığıdır, ancak gelişimseldir ve çoğunlukla tek böbreği tutar. Diğer böbrek normalse prognoz iyidir.\nDoğru cevap De, Nefronofitizis medüller kistik hastalık kompleksi\nNefronoftizis medüller kistik hastalık kompleksi çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedenlerindendir. Medulla ve kortikomedüller bileşkede küçük kistler yapan bir siliopatidir.",
-   "kelime": 220
+   "sayfa": [
+    16,
+    23,
+    27,
+    28,
+    31
+   ],
+   "metin": "**Soru.** Çocuklarda ve genç erişkinlerde son evre böbrek hastalığının en sık genetik sebebi hangisidir?\n\n**A)** Otozomal dominant (erişkin) polikistik böbrek hastalığı · **B)** Otozomal resesif (çocukluk çağı) polikistik böbrek hastalığı · **C)** Medüller sünger böbrek · **D)** Nefronofitizis-medüller kistik hastalık kompleksi · **E)** Multikistik renal displazi\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Otozomal dominant (erişkin) polikistik böbrek hastalığı** — Otozomal dominant polikistik böbrek hastalığı genellikle 30–50 yaşta belirti verir; çocuk ve genç erişkinin değil, erişkinin hastalığıdır.\n- **Otozomal resesif (çocukluk çağı) polikistik böbrek hastalığı** — Otozomal resesif polikistik böbrek hastalığı yaklaşık 1/20.000 canlı doğumda görülür; ağır formları fetal ya da neonatal dönemde böbrek yetmezliği yapar.\n- **Medüller sünger böbrek** — Medüller sünger böbrek erişkinlerde papiller toplayıcı kanalların genişlemesiyle giden, böbrek fonksiyonunun normal kaldığı benign ve sporadik bir lezyondur; kortikomedüller sınırda kistler ve ilerleyici tübülointerstisyel fibrozisle çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedeni ise nefronofitizis–medüller kistik hastalık kompleksidir.\n- **Nefronofitizis-medüller kistik hastalık kompleksi** — Nefronofitizis–medüller kistik hastalık kompleksi doğru: çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedenlerindendir ve 2–10 yılda bu evreye ilerler.\n- **Multikistik renal displazi** — Multikistik renal displazi çocukluk çağının en sık kistik böbrek hastalığıdır, ancak gelişimseldir ve çoğunlukla tek böbreği tutar; diğer böbrek normalse prognoz iyidir.\n\n**Cevap: D** — Nefronofitizis-medüller kistik hastalık kompleksi\n\n**Özet.** Nefronofthisis–medüller kistik hastalık kompleksi çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedenlerindendir; medulla ve kortikomedüller bileşkede küçük kistler yapan bir siliopatidir.",
+   "ses": "Çocuklarda ve genç erişkinlerde son evre böbrek hastalığının en sık genetik sebebi hangisidir?\nA, Otozomal dominant, yani erişkin polikistik böbrek hastalığı\nBe, Otozomal resesif, yani çocukluk çağı polikistik böbrek hastalığı\nCe, Medüller sünger böbrek\nDe, Nefronofitizis medüller kistik hastalık kompleksi\nE, Multikistik renal displazi\nŞıkları sırasıyla gözden geçirelim.\nOtozomal dominant polikistik böbrek hastalığı genellikle otuz ile elli yaşta belirti verir. Çocuk ve genç erişkinin değil, erişkinin hastalığıdır.\nOtozomal resesif polikistik böbrek hastalığı yaklaşık yirmi bin canlı doğumda bir görülür. Ağır formları fetal ya da neonatal dönemde böbrek yetmezliği yapar.\nMedüller sünger böbrek erişkinlerde papiller toplayıcı kanalların genişlemesiyle giden, böbrek fonksiyonunun normal kaldığı benign ve sporadik bir lezyondur. Kortikomedüller sınırda kistler ve ilerleyici tübülointerstisyel fibrozisle çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedeni ise nefronofitizis–medüller kistik hastalık kompleksidir.\nNefronofitizis medüller kistik hastalık kompleksi doğru. Çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedenlerindendir ve iki ile on yılda bu evreye ilerler.\nMultikistik renal displazi çocukluk çağının en sık kistik böbrek hastalığıdır, ancak gelişimseldir ve çoğunlukla tek böbreği tutar. Diğer böbrek normalse prognoz iyidir.\nDoğru cevap De, Nefronofitizis medüller kistik hastalık kompleksi\nNefronoftizis medüller kistik hastalık kompleksi çocuk ve genç erişkinlerde son dönem böbrek yetmezliğinin en sık genetik nedenlerindendir. Medulla ve kortikomedüller bileşkede küçük kistler yapan bir siliopatidir.",
+   "kelime": 241
   },
   {
    "no": 28,
    "tur": "cikmis",
+   "sinav": "2021-2022 · Dönem 3 donem3-kurul1 Sınavı",
    "soru": "Hiyalin arteriolosklerozun görüldüğü böbrek patolojisi aşağıdakilerden hangisidir?",
    "secenekler": {
     "A": "Malign nefroskleroz",
@@ -365,22 +457,29 @@
     "E": "Papiller ürotelyal karsinom"
    },
    "dogru": "B",
+   "ipucu": "Uzun süreli primer hipertansiyonda böbreklerin simetrik küçüldüğü ve yüzeyin ince granüler olduğu tabloyu düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Malign nefrosklerozda arteriyollerde fibrinoid nekroz, interlobüler arterlerde ise soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür.",
     "B": "Benign nefroskleroz doğru: uzun süreli hipertansiyonda arteriyol duvarında pembe, homojen hiyalin kalınlaşma gelişir ve lümen daralır.",
     "C": "Trombotik trombositopenik purpura bir trombotik mikroanjiyopatidir; böbrekte glomerüler kılcallarda ve arteriyollerde trombüsler görülür.",
     "D": "Renal hücreli karsinom bir tümördür; uzun süre diyaliz alan hastalardaki edinilmiş kistik böbrek hastalığında riski artar.",
-    "E": "Papiller ürotelyal karsinom ile karıştırılabilir: Hiyalin arteriyoloskleroz hipertansif böbrek hastalığının benign formundaki arteriyol lezyonudur."
+    "E": "Papiller ürotelyal karsinom idrar yolları döşeyici epitelinden gelişen neoplastik bir tümördür; küçük arter ve arteriyol duvarlarında plazma proteinlerinin sızmasıyla homojen pembe kalınlaşma (hiyalin arteriyoloskleroz) izlenmesi ise kronik hipertansiyona bağlı benign nefrosklerozun karakteristik bulgusudur."
    },
    "ozet": "Hiyalin arteriyoloskleroz benign nefrosklerozun temel lezyonudur ve arteriyol duvarını pembe, homojen kalınlaştırır; malign nefrosklerozda ise fibrinoid nekroz ve hiperplastik arteriyoloskleroz görülür.",
-   "metin": "**Soru.** Hiyalin arteriolosklerozun görüldüğü böbrek patolojisi aşağıdakilerden hangisidir?\n\n**A)** Malign nefroskleroz · **B)** Benign nefroskleroz · **C)** Trombotik trombositopenik purpura · **D)** Renal hücreli karsinom · **E)** Papiller ürotelyal karsinom\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Malign nefroskleroz** — Malign nefrosklerozda arteriyollerde fibrinoid nekroz, interlobüler arterlerde ise soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür.\n- **Benign nefroskleroz** — Benign nefroskleroz doğru: uzun süreli hipertansiyonda arteriyol duvarında pembe, homojen hiyalin kalınlaşma gelişir ve lümen daralır.\n- **Trombotik trombositopenik purpura** — Trombotik trombositopenik purpura bir trombotik mikroanjiyopatidir; böbrekte glomerüler kılcallarda ve arteriyollerde trombüsler görülür.\n- **Renal hücreli karsinom** — Renal hücreli karsinom bir tümördür; uzun süre diyaliz alan hastalardaki edinilmiş kistik böbrek hastalığında riski artar.\n- **Papiller ürotelyal karsinom** — Papiller ürotelyal karsinom ile karıştırılabilir: Hiyalin arteriyoloskleroz hipertansif böbrek hastalığının benign formundaki arteriyol lezyonudur.\n\n**Cevap: B** — Benign nefroskleroz\n\n**Özet.** Hiyalin arteriyoloskleroz benign nefrosklerozun temel lezyonudur ve arteriyol duvarını pembe, homojen kalınlaştırır; malign nefrosklerozda ise fibrinoid nekroz ve hiperplastik arteriyoloskleroz görülür.",
-   "ses": "Hiyalin arteriolosklerozun görüldüğü böbrek patolojisi aşağıdakilerden hangisidir?\nA, Malign nefroskleroz\nBe, Benign nefroskleroz\nCe, Trombotik trombositopenik purpura\nDe, Renal hücreli karsinom\nE, Papiller ürotelyal karsinom\nŞimdi seçeneklere tek tek bakalım.\nMalign nefrosklerozda arteriyollerde fibrinoid nekroz, interlobüler arterlerde ise soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür.\nBenign nefroskleroz doğru. Uzun süreli hipertansiyonda arteriyol duvarında pembe, homojen hiyalin kalınlaşma gelişir ve lümen daralır.\nTrombotik trombositopenik purpura bir trombotik mikroanjiyopatidir. Böbrekte glomerüler kılcallarda ve arteriyollerde trombüsler görülür.\nRenal hücreli karsinom bir tümördür. Uzun süre diyaliz alan hastalardaki edinilmiş kistik böbrek hastalığında riski artar.\nPapiller ürotelyal karsinom ile karıştırılabilir. Hiyalin arteriyoloskleroz hipertansif böbrek hastalığının benign formundaki arteriyol lezyonudur.\nDoğru cevap Be, Benign nefroskleroz\nHiyalin arteriyoloskleroz benign nefrosklerozun temel lezyonudur ve arteriyol duvarını pembe, homojen kalınlaştırır. Malign nefrosklerozda ise fibrinoid nekroz ve hiperplastik arteriyoloskleroz görülür.",
-   "kelime": 159
+   "sayfa": [
+    5,
+    7,
+    9
+   ],
+   "metin": "**Soru.** Hiyalin arteriolosklerozun görüldüğü böbrek patolojisi aşağıdakilerden hangisidir?\n\n**A)** Malign nefroskleroz · **B)** Benign nefroskleroz · **C)** Trombotik trombositopenik purpura · **D)** Renal hücreli karsinom · **E)** Papiller ürotelyal karsinom\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Malign nefroskleroz** — Malign nefrosklerozda arteriyollerde fibrinoid nekroz, interlobüler arterlerde ise soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür.\n- **Benign nefroskleroz** — Benign nefroskleroz doğru: uzun süreli hipertansiyonda arteriyol duvarında pembe, homojen hiyalin kalınlaşma gelişir ve lümen daralır.\n- **Trombotik trombositopenik purpura** — Trombotik trombositopenik purpura bir trombotik mikroanjiyopatidir; böbrekte glomerüler kılcallarda ve arteriyollerde trombüsler görülür.\n- **Renal hücreli karsinom** — Renal hücreli karsinom bir tümördür; uzun süre diyaliz alan hastalardaki edinilmiş kistik böbrek hastalığında riski artar.\n- **Papiller ürotelyal karsinom** — Papiller ürotelyal karsinom idrar yolları döşeyici epitelinden gelişen neoplastik bir tümördür; küçük arter ve arteriyol duvarlarında plazma proteinlerinin sızmasıyla homojen pembe kalınlaşma (hiyalin arteriyoloskleroz) izlenmesi ise kronik hipertansiyona bağlı benign nefrosklerozun karakteristik bulgusudur.\n\n**Cevap: B** — Benign nefroskleroz\n\n**Özet.** Hiyalin arteriyoloskleroz benign nefrosklerozun temel lezyonudur ve arteriyol duvarını pembe, homojen kalınlaştırır; malign nefrosklerozda ise fibrinoid nekroz ve hiperplastik arteriyoloskleroz görülür.",
+   "ses": "Hiyalin arteriolosklerozun görüldüğü böbrek patolojisi aşağıdakilerden hangisidir?\nA, Malign nefroskleroz\nBe, Benign nefroskleroz\nCe, Trombotik trombositopenik purpura\nDe, Renal hücreli karsinom\nE, Papiller ürotelyal karsinom\nŞimdi seçeneklere tek tek bakalım.\nMalign nefrosklerozda arteriyollerde fibrinoid nekroz, interlobüler arterlerde ise soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür.\nBenign nefroskleroz doğru. Uzun süreli hipertansiyonda arteriyol duvarında pembe, homojen hiyalin kalınlaşma gelişir ve lümen daralır.\nTrombotik trombositopenik purpura bir trombotik mikroanjiyopatidir. Böbrekte glomerüler kılcallarda ve arteriyollerde trombüsler görülür.\nRenal hücreli karsinom bir tümördür. Uzun süre diyaliz alan hastalardaki edinilmiş kistik böbrek hastalığında riski artar.\nPapiller ürotelyal karsinom idrar yolları döşeyici epitelinden gelişen neoplastik bir tümördür. Küçük arter ve arteriyol duvarlarında plazma proteinlerinin sızmasıyla homojen pembe kalınlaşma, hiyalin arteriyoloskleroz, izlenmesi ise kronik hipertansiyona bağlı benign nefrosklerozun karakteristik bulgusudur.\nDoğru cevap Be, Benign nefroskleroz\nHiyalin arteriyoloskleroz benign nefrosklerozun temel lezyonudur ve arteriyol duvarını pembe, homojen kalınlaştırır. Malign nefrosklerozda ise fibrinoid nekroz ve hiperplastik arteriyoloskleroz görülür.",
+   "kelime": 178
   },
   {
    "no": 29,
    "tur": "cikmis",
+   "sinav": "2020-2021 · Dönem 3 Kurul 1 Doğrulanmış Sınavı",
    "soru": "Nekrotizan arteriolit ve hiperplastik arteriolitin görüldüğü böbrek patolojisi hangisidir?",
    "secenekler": {
     "A": "Kronik piyelonefrit",
@@ -390,22 +489,30 @@
     "E": "Kronik glomerülonefrit"
    },
    "dogru": "B",
+   "ipucu": "Hızla gelişen ağır tansiyon yüksekliğinde arteriyol duvarının nekroza uğradığı ve interlobüler arterlerde soğan zarı görünümünün oluştuğu tabloyu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
-    "A": "Nekrotizan ve hiperplastik arteriyol lezyonları hızla gelişen ağır hipertansiyonun böbrek bulgusudur. Kronik piyelonefrit bu sorudaki ayrımı sağlamaz.",
+    "A": "Kronik piyelonefrit tekrarlayan bakteriyel enfeksiyon ve reflü sonucu kaliks deformitesi ve interstisyel skarlaşma yapan tablodur; arteriyol duvarında fibrinoid nekroz (nekrotizan arteriyolit) ve soğan zarı şeklinde konsantrik düz kas çoğalması (hiperplastik arteriyolit) ise malign hipertansiyonun (malign nefrosklerozun) tanısal lezyonlarıdır.",
     "B": "Malign nefroskleroz doğru: arteriyollerde fibrinoid nekroz, interlobüler arterlerde soğan zarı görünümlü hiperplastik arteriyoloskleroz gelişir.",
     "C": "Nefroskleroz, yani benign nefroskleroz, uzun süreli primer hipertansiyonda hiyalin arteriyolosklerozla seyreder; nekroz ve soğan zarı görünümü beklenmez.",
     "D": "Hiyalin arteriyoloskleroz pembe, homojen duvar kalınlaşmasıdır ve benign nefrosklerozun lezyonudur; nekrotizan bir değişiklik değildir.",
-    "E": "Fibrinoid nekroz ve soğan zarı görünümü malign nefrosklerozun damar bulgularıdır. Kronik glomerülonefrit bu sorudaki ayrımı sağlamaz."
+    "E": "Kronik glomerülonefritte birincil patoloji glomerül yumaklarının hiyalin sklerozudur; böbrek arteriyollerinde akut fibrinoid nekroz (nekrotizan arteriyolit) ve konsantrik intimal kalınlaşmanın (hiperplastik arteriyolit) birlikte görüldüğü vasküler tablo ise malign nefrosklerozdur."
    },
    "ozet": "Malign nefrosklerozda arteriyollerde fibrinoid, yani nekrotizan değişiklik ve soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür; hiyalin arteriyoloskleroz ise benign nefrosklerozun lezyonudur.",
-   "metin": "**Soru.** Nekrotizan arteriolit ve hiperplastik arteriolitin görüldüğü böbrek patolojisi hangisidir?\n\n**A)** Kronik piyelonefrit · **B)** Malign hipertansiyon (malign nefroskleroz) · **C)** Nefroskleroz (arterionefroskleroz) · **D)** Hiyalin arterioloskleroz · **E)** Kronik glomerülonefrit\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kronik piyelonefrit** — Nekrotizan ve hiperplastik arteriyol lezyonları hızla gelişen ağır hipertansiyonun böbrek bulgusudur. Kronik piyelonefrit bu sorudaki ayrımı sağlamaz.\n- **Malign hipertansiyon (malign nefroskleroz)** — Malign nefroskleroz doğru: arteriyollerde fibrinoid nekroz, interlobüler arterlerde soğan zarı görünümlü hiperplastik arteriyoloskleroz gelişir.\n- **Nefroskleroz (arterionefroskleroz)** — Nefroskleroz, yani benign nefroskleroz, uzun süreli primer hipertansiyonda hiyalin arteriyolosklerozla seyreder; nekroz ve soğan zarı görünümü beklenmez.\n- **Hiyalin arterioloskleroz** — Hiyalin arteriyoloskleroz pembe, homojen duvar kalınlaşmasıdır ve benign nefrosklerozun lezyonudur; nekrotizan bir değişiklik değildir.\n- **Kronik glomerülonefrit** — Fibrinoid nekroz ve soğan zarı görünümü malign nefrosklerozun damar bulgularıdır. Kronik glomerülonefrit bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Malign hipertansiyon (malign nefroskleroz)\n\n**Özet.** Malign nefrosklerozda arteriyollerde fibrinoid, yani nekrotizan değişiklik ve soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür; hiyalin arteriyoloskleroz ise benign nefrosklerozun lezyonudur.",
-   "ses": "Nekrotizan arteriolit ve hiperplastik arteriolitin görüldüğü böbrek patolojisi hangisidir?\nA, Kronik piyelonefrit\nBe, Malign hipertansiyon, yani malign nefroskleroz\nCe, Nefroskleroz, yani arterionefroskleroz\nDe, Hiyalin arterioloskleroz\nE, Kronik glomerülonefrit\nSeçenekleri sırayla değerlendirelim.\nNekrotizan ve hiperplastik arteriyol lezyonları hızla gelişen ağır hipertansiyonun böbrek bulgusudur. Kronik piyelonefrit bu sorudaki ayrımı sağlamaz.\nMalign nefroskleroz doğru. Arteriyollerde fibrinoid nekroz, interlobüler arterlerde soğan zarı görünümlü hiperplastik arteriyoloskleroz gelişir.\nNefroskleroz, yani benign nefroskleroz, uzun süreli primer hipertansiyonda hiyalin arteriyolosklerozla seyreder. Nekroz ve soğan zarı görünümü beklenmez.\nHiyalin arteriyoloskleroz pembe, homojen duvar kalınlaşmasıdır ve benign nefrosklerozun lezyonudur. Nekrotizan bir değişiklik değildir.\nFibrinoid nekroz ve soğan zarı görünümü malign nefrosklerozun damar bulgularıdır. Kronik glomerülonefrit bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Malign hipertansiyon, yani malign nefroskleroz\nMalign nefrosklerozda arteriyollerde fibrinoid, yani nekrotizan değişiklik ve soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür. Hiyalin arteriyoloskleroz ise benign nefrosklerozun lezyonudur.",
-   "kelime": 163
+   "sayfa": [
+    4,
+    5,
+    7,
+    11
+   ],
+   "metin": "**Soru.** Nekrotizan arteriolit ve hiperplastik arteriolitin görüldüğü böbrek patolojisi hangisidir?\n\n**A)** Kronik piyelonefrit · **B)** Malign hipertansiyon (malign nefroskleroz) · **C)** Nefroskleroz (arterionefroskleroz) · **D)** Hiyalin arterioloskleroz · **E)** Kronik glomerülonefrit\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kronik piyelonefrit** — Kronik piyelonefrit tekrarlayan bakteriyel enfeksiyon ve reflü sonucu kaliks deformitesi ve interstisyel skarlaşma yapan tablodur; arteriyol duvarında fibrinoid nekroz (nekrotizan arteriyolit) ve soğan zarı şeklinde konsantrik düz kas çoğalması (hiperplastik arteriyolit) ise malign hipertansiyonun (malign nefrosklerozun) tanısal lezyonlarıdır.\n- **Malign hipertansiyon (malign nefroskleroz)** — Malign nefroskleroz doğru: arteriyollerde fibrinoid nekroz, interlobüler arterlerde soğan zarı görünümlü hiperplastik arteriyoloskleroz gelişir.\n- **Nefroskleroz (arterionefroskleroz)** — Nefroskleroz, yani benign nefroskleroz, uzun süreli primer hipertansiyonda hiyalin arteriyolosklerozla seyreder; nekroz ve soğan zarı görünümü beklenmez.\n- **Hiyalin arterioloskleroz** — Hiyalin arteriyoloskleroz pembe, homojen duvar kalınlaşmasıdır ve benign nefrosklerozun lezyonudur; nekrotizan bir değişiklik değildir.\n- **Kronik glomerülonefrit** — Kronik glomerülonefritte birincil patoloji glomerül yumaklarının hiyalin sklerozudur; böbrek arteriyollerinde akut fibrinoid nekroz (nekrotizan arteriyolit) ve konsantrik intimal kalınlaşmanın (hiperplastik arteriyolit) birlikte görüldüğü vasküler tablo ise malign nefrosklerozdur.\n\n**Cevap: B** — Malign hipertansiyon (malign nefroskleroz)\n\n**Özet.** Malign nefrosklerozda arteriyollerde fibrinoid, yani nekrotizan değişiklik ve soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür; hiyalin arteriyoloskleroz ise benign nefrosklerozun lezyonudur.",
+   "ses": "Nekrotizan arteriolit ve hiperplastik arteriolitin görüldüğü böbrek patolojisi hangisidir?\nA, Kronik piyelonefrit\nBe, Malign hipertansiyon, yani malign nefroskleroz\nCe, Nefroskleroz, yani arterionefroskleroz\nDe, Hiyalin arterioloskleroz\nE, Kronik glomerülonefrit\nSeçenekleri sırayla değerlendirelim.\nKronik piyelonefrit tekrarlayan bakteriyel enfeksiyon ve reflü sonucu kaliks deformitesi ve interstisyel skarlaşma yapan tablodur. Arteriyol duvarında fibrinoid nekroz, nekrotizan arteriyolit, ve soğan zarı şeklinde konsantrik düz kas çoğalması, hiperplastik arteriyolit, ise malign hipertansiyonun, malign nefrosklerozun, tanısal lezyonlarıdır.\nMalign nefroskleroz doğru. Arteriyollerde fibrinoid nekroz, interlobüler arterlerde soğan zarı görünümlü hiperplastik arteriyoloskleroz gelişir.\nNefroskleroz, yani benign nefroskleroz, uzun süreli primer hipertansiyonda hiyalin arteriyolosklerozla seyreder. Nekroz ve soğan zarı görünümü beklenmez.\nHiyalin arteriyoloskleroz pembe, homojen duvar kalınlaşmasıdır ve benign nefrosklerozun lezyonudur. Nekrotizan bir değişiklik değildir.\nKronik glomerülonefritte birincil patoloji glomerül yumaklarının hiyalin sklerozudur. Böbrek arteriyollerinde akut fibrinoid nekroz, nekrotizan arteriyolit, ve konsantrik intimal kalınlaşmanın, hiperplastik arteriyolit, birlikte görüldüğü vasküler tablo ise malign nefrosklerozdur.\nDoğru cevap Be, Malign hipertansiyon, yani malign nefroskleroz\nMalign nefrosklerozda arteriyollerde fibrinoid, yani nekrotizan değişiklik ve soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür. Hiyalin arteriyoloskleroz ise benign nefrosklerozun lezyonudur.",
+   "kelime": 196
   },
   {
    "no": 30,
    "tur": "cikmis",
+   "sinav": "2023-2024 · Dönem 3 Kurul 1 Doğrulanmış Sınavı",
    "soru": "Aşağıdaki kistik böbrek hastalıklarından hangisi, metanefrik farklılaşmanın bozulmasına bağlı gelişen, kalıtsal olmayan (gelişimsel) bir hastalıktır?",
    "secenekler": {
     "A": "Medüller sünger böbrek",
@@ -415,22 +522,31 @@
     "E": "Çocukluk çağı polikistik böbrek hastalığı"
    },
    "dogru": "B",
+   "ipucu": "Kalıtsal siliopatileri eleyip alt idrar yolu tıkanıklığıyla artan basıncın böbrek gelişimini bozduğu tabloyu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
-    "A": "Medüller sünger böbrek ile karıştırılabilir: Kalıtsal olmayan, gelişimsel kistik hastalık örneği çoğunlukla tek böbreği tutan multikistik displazidir.",
+    "A": "Medüller sünger böbrek erişkinlerde yalnız medüller toplayıcı kanalların ektazisiyle sınırlı, nefron farklılaşmasının korunduğu benign bir durumdur; üreter tomurcuğu ile metanefrik mezenkim indüksiyonunun bozulması sonucu kıkırdak adacıkları, immatür kanallar ve büyük kistlerle seyreden kalıtsal olmayan gelişimsel anomali ise multikistik renal displazidir.",
     "B": "Multikistik renal displazi doğru: buradaki displazi prekanseröz değil gelişimsel bir bozukluktur ve çoğunlukla alt idrar yolu tıkanıklığıyla ilişkilidir.",
     "C": "Nefronofthisis kompleksi kalıtsaldır; otozomal resesif formları için en az 13 lokus tanımlanmıştır ve gen ürünleri epitel siliyasıyla ilişkilidir.",
     "D": "Erişkin polikistik böbrek hastalığı otozomal dominant kalıtılır ve PKD1 ya da PKD2 genindeki mutasyona bağlıdır.",
     "E": "Çocukluk çağı polikistik böbrek hastalığı otozomal resesif kalıtılır ve PKHD1 genindeki mutasyondan ileri gelir."
    },
    "ozet": "Multikistik böbrek displazisi kalıtsal değil gelişimsel bir hastalıktır; çoğunlukla alt idrar yolu tıkanıklığına bağlı basınç artışı böbrek gelişimini bozar ve tutulan böbrek genellikle işlevsizdir.",
-   "metin": "**Soru.** Aşağıdaki kistik böbrek hastalıklarından hangisi, metanefrik farklılaşmanın bozulmasına bağlı gelişen, kalıtsal olmayan (gelişimsel) bir hastalıktır?\n\n**A)** Medüller sünger böbrek · **B)** Mültikistik renal displazi · **C)** Nefronoftizis-medüller kistik hastalık kompleksi · **D)** Erişkin polikistik böbrek hastalığı · **E)** Çocukluk çağı polikistik böbrek hastalığı\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Medüller sünger böbrek** — Medüller sünger böbrek ile karıştırılabilir: Kalıtsal olmayan, gelişimsel kistik hastalık örneği çoğunlukla tek böbreği tutan multikistik displazidir.\n- **Mültikistik renal displazi** — Multikistik renal displazi doğru: buradaki displazi prekanseröz değil gelişimsel bir bozukluktur ve çoğunlukla alt idrar yolu tıkanıklığıyla ilişkilidir.\n- **Nefronoftizis-medüller kistik hastalık kompleksi** — Nefronofthisis kompleksi kalıtsaldır; otozomal resesif formları için en az 13 lokus tanımlanmıştır ve gen ürünleri epitel siliyasıyla ilişkilidir.\n- **Erişkin polikistik böbrek hastalığı** — Erişkin polikistik böbrek hastalığı otozomal dominant kalıtılır ve PKD1 ya da PKD2 genindeki mutasyona bağlıdır.\n- **Çocukluk çağı polikistik böbrek hastalığı** — Çocukluk çağı polikistik böbrek hastalığı otozomal resesif kalıtılır ve PKHD1 genindeki mutasyondan ileri gelir.\n\n**Cevap: B** — Mültikistik renal displazi\n\n**Özet.** Multikistik böbrek displazisi kalıtsal değil gelişimsel bir hastalıktır; çoğunlukla alt idrar yolu tıkanıklığına bağlı basınç artışı böbrek gelişimini bozar ve tutulan böbrek genellikle işlevsizdir.",
-   "ses": "Aşağıdaki kistik böbrek hastalıklarından hangisi, metanefrik farklılaşmanın bozulmasına bağlı gelişen, kalıtsal olmayan, yani gelişimsel bir hastalıktır?\nA, Medüller sünger böbrek\nBe, Mültikistik renal displazi\nCe, Nefronoftizis medüller kistik hastalık kompleksi\nDe, Erişkin polikistik böbrek hastalığı\nE, Çocukluk çağı polikistik böbrek hastalığı\nHer seçeneği tek tek ele alalım.\nMedüller sünger böbrek ile karıştırılabilir. Kalıtsal olmayan, gelişimsel kistik hastalık örneği çoğunlukla tek böbreği tutan multikistik displazidir.\nMultikistik renal displazi doğru. Buradaki displazi prekanseröz değil gelişimsel bir bozukluktur ve çoğunlukla alt idrar yolu tıkanıklığıyla ilişkilidir.\nNefronoftizis kompleksi kalıtsaldır. Otozomal resesif formları için en az on üç lokus tanımlanmıştır ve gen ürünleri epitel siliyasıyla ilişkilidir.\nErişkin polikistik böbrek hastalığı otozomal dominant kalıtılır ve pe ka de bir ya da pe ka de iki genindeki mutasyona bağlıdır.\nÇocukluk çağı polikistik böbrek hastalığı otozomal resesif kalıtılır ve pe ka ha de bir genindeki mutasyondan ileri gelir.\nDoğru cevap Be, Mültikistik renal displazi\nMultikistik böbrek displazisi kalıtsal değil gelişimsel bir hastalıktır. Çoğunlukla alt idrar yolu tıkanıklığına bağlı basınç artışı böbrek gelişimini bozar ve tutulan böbrek genellikle işlevsizdir.",
-   "kelime": 193
+   "sayfa": [
+    16,
+    17,
+    23,
+    27,
+    31
+   ],
+   "metin": "**Soru.** Aşağıdaki kistik böbrek hastalıklarından hangisi, metanefrik farklılaşmanın bozulmasına bağlı gelişen, kalıtsal olmayan (gelişimsel) bir hastalıktır?\n\n**A)** Medüller sünger böbrek · **B)** Mültikistik renal displazi · **C)** Nefronoftizis-medüller kistik hastalık kompleksi · **D)** Erişkin polikistik böbrek hastalığı · **E)** Çocukluk çağı polikistik böbrek hastalığı\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Medüller sünger böbrek** — Medüller sünger böbrek erişkinlerde yalnız medüller toplayıcı kanalların ektazisiyle sınırlı, nefron farklılaşmasının korunduğu benign bir durumdur; üreter tomurcuğu ile metanefrik mezenkim indüksiyonunun bozulması sonucu kıkırdak adacıkları, immatür kanallar ve büyük kistlerle seyreden kalıtsal olmayan gelişimsel anomali ise multikistik renal displazidir.\n- **Mültikistik renal displazi** — Multikistik renal displazi doğru: buradaki displazi prekanseröz değil gelişimsel bir bozukluktur ve çoğunlukla alt idrar yolu tıkanıklığıyla ilişkilidir.\n- **Nefronoftizis-medüller kistik hastalık kompleksi** — Nefronofthisis kompleksi kalıtsaldır; otozomal resesif formları için en az 13 lokus tanımlanmıştır ve gen ürünleri epitel siliyasıyla ilişkilidir.\n- **Erişkin polikistik böbrek hastalığı** — Erişkin polikistik böbrek hastalığı otozomal dominant kalıtılır ve PKD1 ya da PKD2 genindeki mutasyona bağlıdır.\n- **Çocukluk çağı polikistik böbrek hastalığı** — Çocukluk çağı polikistik böbrek hastalığı otozomal resesif kalıtılır ve PKHD1 genindeki mutasyondan ileri gelir.\n\n**Cevap: B** — Mültikistik renal displazi\n\n**Özet.** Multikistik böbrek displazisi kalıtsal değil gelişimsel bir hastalıktır; çoğunlukla alt idrar yolu tıkanıklığına bağlı basınç artışı böbrek gelişimini bozar ve tutulan böbrek genellikle işlevsizdir.",
+   "ses": "Aşağıdaki kistik böbrek hastalıklarından hangisi, metanefrik farklılaşmanın bozulmasına bağlı gelişen, kalıtsal olmayan, yani gelişimsel bir hastalıktır?\nA, Medüller sünger böbrek\nBe, Mültikistik renal displazi\nCe, Nefronoftizis medüller kistik hastalık kompleksi\nDe, Erişkin polikistik böbrek hastalığı\nE, Çocukluk çağı polikistik böbrek hastalığı\nHer seçeneği tek tek ele alalım.\nMedüller sünger böbrek erişkinlerde yalnız medüller toplayıcı kanalların ektazisiyle sınırlı, nefron farklılaşmasının korunduğu benign bir durumdur. Üreter tomurcuğu ile metanefrik mezenkim indüksiyonunun bozulması sonucu kıkırdak adacıkları, immatür kanallar ve büyük kistlerle seyreden kalıtsal olmayan gelişimsel anomali ise multikistik renal displazidir.\nMultikistik renal displazi doğru. Buradaki displazi prekanseröz değil gelişimsel bir bozukluktur ve çoğunlukla alt idrar yolu tıkanıklığıyla ilişkilidir.\nNefronoftizis kompleksi kalıtsaldır. Otozomal resesif formları için en az on üç lokus tanımlanmıştır ve gen ürünleri epitel siliyasıyla ilişkilidir.\nErişkin polikistik böbrek hastalığı otozomal dominant kalıtılır ve pe ka de bir ya da pe ka de iki genindeki mutasyona bağlıdır.\nÇocukluk çağı polikistik böbrek hastalığı otozomal resesif kalıtılır ve pe ka ha de bir genindeki mutasyondan ileri gelir.\nDoğru cevap Be, Mültikistik renal displazi\nMultikistik böbrek displazisi kalıtsal değil gelişimsel bir hastalıktır. Çoğunlukla alt idrar yolu tıkanıklığına bağlı basınç artışı böbrek gelişimini bozar ve tutulan böbrek genellikle işlevsizdir.",
+   "kelime": 216
   },
   {
    "no": 31,
    "tur": "cikmis",
+   "sinav": "2020-2021 · 2020-2021 Dönem 3 Kurul 3 Sınavı (sinav.karabuk.edu.tr öğrenci çıktısı)",
    "soru": "Böbreğin basit kistleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
    "secenekler": {
     "A": "İnce fibröz bir kapsülle çevrilir",
@@ -440,6 +556,7 @@
     "E": "Polikistik hastalıkta böbrek ve karaciğerde kistler görülebilir"
    },
    "dogru": "B",
+   "ipucu": "Basit kistin ince, parlak duvarlı yapısını ve içindeki sıvının görünümünü hatırla.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "İnce fibröz kapsül ifadesi gerçeğe uygundur; basit kistin duvarı çoğu kez ince fibroz dokudan oluşur.",
@@ -449,6 +566,10 @@
     "E": "Polikistik hastalıkta böbrek ve karaciğerde kist görülmesi gerçeğe uygundur; ADPKD'de polikistik karaciğer yaklaşık %30 oranında eşlik eder."
    },
    "ozet": "Basit kistler kortekse sınırlı, genellikle 1–5 cm çaplı, ince parlak duvarlı ve berrak sıvı dolu lezyonlardır; tek katlı düz ya da kübik epitelle döşelidir.",
+   "sayfa": [
+    14,
+    19
+   ],
    "metin": "**Soru.** Böbreğin basit kistleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?\n\n**A)** İnce fibröz bir kapsülle çevrilir · **B)** Müsinöz içeriğe sahiptir · **C)** Kübik ya da yassılaşmış epitel ile döşelidir · **D)** 5 cm boyutuna ulaşabilir · **E)** Polikistik hastalıkta böbrek ve karaciğerde kistler görülebilir\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **İnce fibröz bir kapsülle çevrilir** — İnce fibröz kapsül ifadesi gerçeğe uygundur; basit kistin duvarı çoğu kez ince fibroz dokudan oluşur.\n- **Müsinöz içeriğe sahiptir** — Müsinöz içerik basit kiste uymaz; basit kist berrak sıvı doludur, bu yüzden doğru cevaptır.\n- **Kübik ya da yassılaşmış epitel ile döşelidir** — Kübik ya da yassılaşmış epitel ifadesi gerçeğe uygundur; basit kistler tek katlı düz veya kübik epitelle döşelidir.\n- **5 cm boyutuna ulaşabilir** — Beş santimetreye ulaşma ifadesi gerçeğe uygundur; basit kistler genellikle 1–5 cm çaplıdır ve kortekse sınırlıdır.\n- **Polikistik hastalıkta böbrek ve karaciğerde kistler görülebilir** — Polikistik hastalıkta böbrek ve karaciğerde kist görülmesi gerçeğe uygundur; ADPKD'de polikistik karaciğer yaklaşık %30 oranında eşlik eder.\n\n**Cevap: B** — Müsinöz içeriğe sahiptir\n\n**Özet.** Basit kistler kortekse sınırlı, genellikle 1–5 cm çaplı, ince parlak duvarlı ve berrak sıvı dolu lezyonlardır; tek katlı düz ya da kübik epitelle döşelidir.",
    "ses": "Böbreğin basit kistleri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?\nA, İnce fibröz bir kapsülle çevrilir\nBe, Müsinöz içeriğe sahiptir\nCe, Kübik ya da yassılaşmış epitel ile döşelidir\nDe, Beş santimetre boyutuna ulaşabilir\nE, Polikistik hastalıkta böbrek ve karaciğerde kistler görülebilir\nŞıkları sırasıyla gözden geçirelim.\nİnce fibröz kapsül ifadesi gerçeğe uygundur. Basit kistin duvarı çoğu kez ince fibroz dokudan oluşur.\nMüsinöz içerik basit kiste uymaz. Basit kist berrak sıvı doludur, bu yüzden doğru cevaptır.\nKübik ya da yassılaşmış epitel ifadesi gerçeğe uygundur. Basit kistler tek katlı düz veya kübik epitelle döşelidir.\nBeş santimetreye ulaşma ifadesi gerçeğe uygundur. Basit kistler genellikle bir ile beş santimetre çaplıdır ve kortekse sınırlıdır.\nPolikistik hastalıkta böbrek ve karaciğerde kist görülmesi gerçeğe uygundur. A de pe ka de'de polikistik karaciğer yaklaşık yüzde otuz oranında eşlik eder.\nDoğru cevap Be, Müsinöz içeriğe sahiptir\nBasit kistler kortekse sınırlı, genellikle bir ile beş santimetre çaplı, ince parlak duvarlı ve berrak sıvı dolu lezyonlardır. Tek katlı düz ya da kübik epitelle döşelidir.",
    "kelime": 195
@@ -456,6 +577,7 @@
   {
    "no": 32,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Benign nefroskleroz hangi durumda böbrek yetmezliği riskini artırır?",
    "secenekler": {
     "A": "Hiyalin birikimi olduğunda",
@@ -465,22 +587,27 @@
     "E": "Hafif proteinüri olduğunda"
    },
    "dogru": "B",
+   "ipucu": "Bu tablonun kendi bulgularını değil, üzerine eklenen başka bir hastalığın nefron kaybını hızlandırmasını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
-    "A": "Hiyalin birikimi benign nefrosklerozun her olguda görülen imza lezyonudur; tek başına yetmezlik riskini artıran ek etken sayılmaz.",
+    "A": "Hiyalin arteriyoloskleroz benign nefrosklerozun her olguda görülen temel histolojik lezyonudur ve tek başına çoğu hastada ağır böbrek yetmezliği yapmaz; buna karşılık diyabet varlığı, Afrika kökenli olma (APOL1) veya ağır kan basıncı yüksekliği üremi riskini belirgin artırır.",
     "B": "Diyabet eşlik ettiğinde doğru: benign nefroskleroz genellikle yetmezlik yapmaz, ama diyabet ve diğer böbrek hastalıklarının varlığında risk artar.",
     "C": "Simetrik küçülme benign nefrosklerozun olağan makroskopik bulgusudur; hastalığın kendisini tanımlar, ek bir risk etkeni değildir.",
     "D": "İnce granüler yüzey, benign nefrosklerozda skarlaşmaya bağlı olağan görünümdür; yetmezlik riskini artıran bir durum olarak tanımlanmaz.",
     "E": "Hafif proteinüri, hafif azotemiyle birlikte benign nefrosklerozun beklenen klinik bulgusudur; bu tablo genellikle yetmezliğe gitmez."
    },
    "ozet": "Benign nefroskleroz genellikle böbrek yetmezliği yapmaz; ancak diyabet ya da başka bir böbrek hastalığı eşlik ederse yetmezlik riski artar.",
-   "metin": "**Soru.** Benign nefroskleroz hangi durumda böbrek yetmezliği riskini artırır?\n\n**A)** Hiyalin birikimi olduğunda · **B)** Diyabet eşlik ettiğinde · **C)** Böbrekler simetrik küçüldüğünde · **D)** Yüzey ince granüler olduğunda · **E)** Hafif proteinüri olduğunda\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Hiyalin birikimi olduğunda** — Hiyalin birikimi benign nefrosklerozun her olguda görülen imza lezyonudur; tek başına yetmezlik riskini artıran ek etken sayılmaz.\n- **Diyabet eşlik ettiğinde** — Diyabet eşlik ettiğinde doğru: benign nefroskleroz genellikle yetmezlik yapmaz, ama diyabet ve diğer böbrek hastalıklarının varlığında risk artar.\n- **Böbrekler simetrik küçüldüğünde** — Simetrik küçülme benign nefrosklerozun olağan makroskopik bulgusudur; hastalığın kendisini tanımlar, ek bir risk etkeni değildir.\n- **Yüzey ince granüler olduğunda** — İnce granüler yüzey, benign nefrosklerozda skarlaşmaya bağlı olağan görünümdür; yetmezlik riskini artıran bir durum olarak tanımlanmaz.\n- **Hafif proteinüri olduğunda** — Hafif proteinüri, hafif azotemiyle birlikte benign nefrosklerozun beklenen klinik bulgusudur; bu tablo genellikle yetmezliğe gitmez.\n\n**Cevap: B** — Diyabet eşlik ettiğinde\n\n**Özet.** Benign nefroskleroz genellikle böbrek yetmezliği yapmaz; ancak diyabet ya da başka bir böbrek hastalığı eşlik ederse yetmezlik riski artar.",
-   "ses": "Benign nefroskleroz hangi durumda böbrek yetmezliği riskini artırır?\nA, Hiyalin birikimi olduğunda\nBe, Diyabet eşlik ettiğinde\nCe, Böbrekler simetrik küçüldüğünde\nDe, Yüzey ince granüler olduğunda\nE, Hafif proteinüri olduğunda\nŞimdi seçeneklere tek tek bakalım.\nHiyalin birikimi benign nefrosklerozun her olguda görülen imza lezyonudur. Tek başına yetmezlik riskini artıran ek etken sayılmaz.\nDiyabet eşlik ettiğinde doğru. Benign nefroskleroz genellikle yetmezlik yapmaz, ama diyabet ve diğer böbrek hastalıklarının varlığında risk artar.\nSimetrik küçülme benign nefrosklerozun olağan makroskopik bulgusudur. Hastalığın kendisini tanımlar, ek bir risk etkeni değildir.\nİnce granüler yüzey, benign nefrosklerozda skarlaşmaya bağlı olağan görünümdür. Yetmezlik riskini artıran bir durum olarak tanımlanmaz.\nHafif proteinüri, hafif azotemiyle birlikte benign nefrosklerozun beklenen klinik bulgusudur. Bu tablo genellikle yetmezliğe gitmez.\nDoğru cevap Be, Diyabet eşlik ettiğinde\nBenign nefroskleroz genellikle böbrek yetmezliği yapmaz. Ancak diyabet ya da başka bir böbrek hastalığı eşlik ederse yetmezlik riski artar.",
-   "kelime": 173
+   "sayfa": [
+    5
+   ],
+   "metin": "**Soru.** Benign nefroskleroz hangi durumda böbrek yetmezliği riskini artırır?\n\n**A)** Hiyalin birikimi olduğunda · **B)** Diyabet eşlik ettiğinde · **C)** Böbrekler simetrik küçüldüğünde · **D)** Yüzey ince granüler olduğunda · **E)** Hafif proteinüri olduğunda\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Hiyalin birikimi olduğunda** — Hiyalin arteriyoloskleroz benign nefrosklerozun her olguda görülen temel histolojik lezyonudur ve tek başına çoğu hastada ağır böbrek yetmezliği yapmaz; buna karşılık diyabet varlığı, Afrika kökenli olma (APOL1) veya ağır kan basıncı yüksekliği üremi riskini belirgin artırır.\n- **Diyabet eşlik ettiğinde** — Diyabet eşlik ettiğinde doğru: benign nefroskleroz genellikle yetmezlik yapmaz, ama diyabet ve diğer böbrek hastalıklarının varlığında risk artar.\n- **Böbrekler simetrik küçüldüğünde** — Simetrik küçülme benign nefrosklerozun olağan makroskopik bulgusudur; hastalığın kendisini tanımlar, ek bir risk etkeni değildir.\n- **Yüzey ince granüler olduğunda** — İnce granüler yüzey, benign nefrosklerozda skarlaşmaya bağlı olağan görünümdür; yetmezlik riskini artıran bir durum olarak tanımlanmaz.\n- **Hafif proteinüri olduğunda** — Hafif proteinüri, hafif azotemiyle birlikte benign nefrosklerozun beklenen klinik bulgusudur; bu tablo genellikle yetmezliğe gitmez.\n\n**Cevap: B** — Diyabet eşlik ettiğinde\n\n**Özet.** Benign nefroskleroz genellikle böbrek yetmezliği yapmaz; ancak diyabet ya da başka bir böbrek hastalığı eşlik ederse yetmezlik riski artar.",
+   "ses": "Benign nefroskleroz hangi durumda böbrek yetmezliği riskini artırır?\nA, Hiyalin birikimi olduğunda\nBe, Diyabet eşlik ettiğinde\nCe, Böbrekler simetrik küçüldüğünde\nDe, Yüzey ince granüler olduğunda\nE, Hafif proteinüri olduğunda\nŞimdi seçeneklere tek tek bakalım.\nHiyalin arteriyoloskleroz benign nefrosklerozun her olguda görülen temel histolojik lezyonudur ve tek başına çoğu hastada ağır böbrek yetmezliği yapmaz. Buna karşılık diyabet varlığı, Afrika kökenli olma, a pol bir, veya ağır kan basıncı yüksekliği üremi riskini belirgin artırır.\nDiyabet eşlik ettiğinde doğru. Benign nefroskleroz genellikle yetmezlik yapmaz, ama diyabet ve diğer böbrek hastalıklarının varlığında risk artar.\nSimetrik küçülme benign nefrosklerozun olağan makroskopik bulgusudur. Hastalığın kendisini tanımlar, ek bir risk etkeni değildir.\nİnce granüler yüzey, benign nefrosklerozda skarlaşmaya bağlı olağan görünümdür. Yetmezlik riskini artıran bir durum olarak tanımlanmaz.\nHafif proteinüri, hafif azotemiyle birlikte benign nefrosklerozun beklenen klinik bulgusudur. Bu tablo genellikle yetmezliğe gitmez.\nDoğru cevap Be, Diyabet eşlik ettiğinde\nBenign nefroskleroz genellikle böbrek yetmezliği yapmaz. Ancak diyabet ya da başka bir böbrek hastalığı eşlik ederse yetmezlik riski artar.",
+   "kelime": 192
   },
   {
    "no": 33,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Malign nefrosklerozda interlobüler arterlerdeki soğan zarı görünümü hangi lezyona aittir?",
    "secenekler": {
     "A": "Hiyalin arteriyoloskleroz",
@@ -490,6 +617,7 @@
     "E": "Bazal membran duplikasyonu"
    },
    "dogru": "C",
+   "ipucu": "Duvarın katman katman, konsantrik biçimde kalınlaşıp lümeni iğne ucu kadar daralttığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Hiyalin arteriyoloskleroz, duvarda pembe ve homojen kalınlaşmadır; yavaş seyirli benign nefrosklerozun lezyonudur, soğan zarı görünümü vermez.",
@@ -499,6 +627,10 @@
     "E": "Bazal membran duplikasyonu trombotik mikroanjiyopatinin böbrek bulgularındandır; interlobüler arterlerde soğan zarı oluşturan lezyon değildir."
    },
    "ozet": "Malign nefrosklerozda arteriyollerde fibrinoid nekroz, interlobüler arterlerde ise soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür.",
+   "sayfa": [
+    7,
+    8
+   ],
    "metin": "**Soru.** Malign nefrosklerozda interlobüler arterlerdeki soğan zarı görünümü hangi lezyona aittir?\n\n**A)** Hiyalin arteriyoloskleroz · **B)** Fibrinoid nekroz · **C)** Hiperplastik arteriyoloskleroz · **D)** Subendotel şişme · **E)** Bazal membran duplikasyonu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Hiyalin arteriyoloskleroz** — Hiyalin arteriyoloskleroz, duvarda pembe ve homojen kalınlaşmadır; yavaş seyirli benign nefrosklerozun lezyonudur, soğan zarı görünümü vermez.\n- **Fibrinoid nekroz** — Fibrinoid nekroz da malign nefrosklerozda görülür, ama arteriyol duvarının akut nekrozudur; katmanlı soğan zarı görünümü oluşturmaz.\n- **Hiperplastik arteriyoloskleroz** — Hiperplastik arteriyoloskleroz doğru: interlobüler arterlerde duvarın konsantrik katmanlar halinde kalınlaşması soğan zarı görünümü verir.\n- **Subendotel şişme** — Subendotel şişme, trombotik mikroanjiyopatide endotel altında biriken materyaldir; hipertansif soğan zarı lezyonu değildir.\n- **Bazal membran duplikasyonu** — Bazal membran duplikasyonu trombotik mikroanjiyopatinin böbrek bulgularındandır; interlobüler arterlerde soğan zarı oluşturan lezyon değildir.\n\n**Cevap: C** — Hiperplastik arteriyoloskleroz\n\n**Özet.** Malign nefrosklerozda arteriyollerde fibrinoid nekroz, interlobüler arterlerde ise soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür.",
    "ses": "Malign nefrosklerozda interlobüler arterlerdeki soğan zarı görünümü hangi lezyona aittir?\nA, Hiyalin arteriyoloskleroz\nBe, Fibrinoid nekroz\nCe, Hiperplastik arteriyoloskleroz\nDe, Subendotel şişme\nE, Bazal membran duplikasyonu\nSeçenekleri sırayla değerlendirelim.\nHiyalin arteriyoloskleroz, duvarda pembe ve homojen kalınlaşmadır. Yavaş seyirli benign nefrosklerozun lezyonudur, soğan zarı görünümü vermez.\nFibrinoid nekroz da malign nefrosklerozda görülür, ama arteriyol duvarının akut nekrozudur. Katmanlı soğan zarı görünümü oluşturmaz.\nHiperplastik arteriyoloskleroz doğru. İnterlobüler arterlerde duvarın konsantrik katmanlar halinde kalınlaşması soğan zarı görünümü verir.\nSubendotel şişme, trombotik mikroanjiyopatide endotel altında biriken materyaldir. Hipertansif soğan zarı lezyonu değildir.\nBazal membran duplikasyonu trombotik mikroanjiyopatinin böbrek bulgularındandır. İnterlobüler arterlerde soğan zarı oluşturan lezyon değildir.\nDoğru cevap Ce, Hiperplastik arteriyoloskleroz\nMalign nefrosklerozda arteriyollerde fibrinoid nekroz, interlobüler arterlerde ise soğan zarı görünümlü hiperplastik arteriyoloskleroz görülür.",
    "kelime": 149
@@ -506,6 +638,7 @@
   {
    "no": 34,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Trombotik mikroanjiyopati kronikleştiğinde böbrekte gelişen değişiklik hangisidir?",
    "secenekler": {
     "A": "Glomeruloskleroz",
@@ -515,6 +648,7 @@
     "E": "Kortikomedüller kistler"
    },
    "dogru": "A",
+   "ipucu": "Akut evrede trombüs ve şişmenin, süreç uzadığında ise hasarlı yapıların skarlaşmasının baskın olduğunu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Glomeruloskleroz doğru: trombotik mikroanjiyopati kronikleşirse hasarlı glomerüller skarlaşır ve sklerozlaşır.",
@@ -524,6 +658,9 @@
     "E": "Kortikomedüller bileşkedeki küçük kistler nefronofthisis kompleksinin bulgusudur; bir damar hastalığının sonucu değildir."
    },
    "ozet": "Trombotik mikroanjiyopatide akut evrede trombüs, subendotel şişme ve bazal membran duplikasyonu görülür; süreç kronikleşirse glomeruloskleroz gelişir.",
+   "sayfa": [
+    9
+   ],
    "metin": "**Soru.** Trombotik mikroanjiyopati kronikleştiğinde böbrekte gelişen değişiklik hangisidir?\n\n**A)** Glomeruloskleroz · **B)** Subendotel şişme · **C)** Glomerüler kılcallarda trombüs · **D)** Fibrinoid nekroz · **E)** Kortikomedüller kistler\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Glomeruloskleroz** — Glomeruloskleroz doğru: trombotik mikroanjiyopati kronikleşirse hasarlı glomerüller skarlaşır ve sklerozlaşır.\n- **Subendotel şişme** — Subendotel şişme trombotik mikroanjiyopatinin böbrek bulgusudur, ancak endotel hasarının akut dönem karşılığıdır; kronik evreyi tanımlamaz.\n- **Glomerüler kılcallarda trombüs** — Glomerüler kılcallardaki trombüsler trombotik mikroanjiyopatinin temel bulgusudur; akut evrede lümeni tıkar, kronik evrenin skar bulgusu değildir.\n- **Fibrinoid nekroz** — Fibrinoid nekroz, ağır ve hızlı hipertansiyonda arteriyol duvarının akut nekrozudur; malign nefrosklerozun lezyonudur.\n- **Kortikomedüller kistler** — Kortikomedüller bileşkedeki küçük kistler nefronofthisis kompleksinin bulgusudur; bir damar hastalığının sonucu değildir.\n\n**Cevap: A** — Glomeruloskleroz\n\n**Özet.** Trombotik mikroanjiyopatide akut evrede trombüs, subendotel şişme ve bazal membran duplikasyonu görülür; süreç kronikleşirse glomeruloskleroz gelişir.",
    "ses": "Trombotik mikroanjiyopati kronikleştiğinde böbrekte gelişen değişiklik hangisidir?\nA, Glomeruloskleroz\nBe, Subendotel şişme\nCe, Glomerüler kılcallarda trombüs\nDe, Fibrinoid nekroz\nE, Kortikomedüller kistler\nHer seçeneği tek tek ele alalım.\nGlomeruloskleroz doğru. Trombotik mikroanjiyopati kronikleşirse hasarlı glomerüller skarlaşır ve sklerozlaşır.\nSubendotel şişme trombotik mikroanjiyopatinin böbrek bulgusudur, ancak endotel hasarının akut dönem karşılığıdır. Kronik evreyi tanımlamaz.\nGlomerüler kılcallardaki trombüsler trombotik mikroanjiyopatinin temel bulgusudur. Akut evrede lümeni tıkar, kronik evrenin skar bulgusu değildir.\nFibrinoid nekroz, ağır ve hızlı hipertansiyonda arteriyol duvarının akut nekrozudur. Malign nefrosklerozun lezyonudur.\nKortikomedüller bileşkedeki küçük kistler nefronoftizis kompleksinin bulgusudur. Bir damar hastalığının sonucu değildir.\nDoğru cevap A, Glomeruloskleroz\nTrombotik mikroanjiyopatide akut evrede trombüs, subendotel şişme ve bazal membran duplikasyonu görülür. Süreç kronikleşirse glomeruloskleroz gelişir.",
    "kelime": 141
@@ -531,6 +668,7 @@
   {
    "no": 35,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Son dönem böbrekte glomerüllerde beklenen değişiklik hangisidir?",
    "secenekler": {
     "A": "Bazal membran duplikasyonu",
@@ -540,6 +678,7 @@
     "E": "Global skleroz"
    },
    "dogru": "E",
+   "ipucu": "Ortak son yolda her yapıda yaygın skar bulunduğunu ve glomerülün tamamının etkilendiğini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Bazal membran duplikasyonu trombotik mikroanjiyopatinin böbrek bulgusudur; son dönem böbreğin glomerül değişikliği olarak tanımlanmaz.",
@@ -549,6 +688,9 @@
     "E": "Global skleroz doğru: son dönem böbrekte her yapıda skar vardır ve glomerüllerin tamamı sklerozlaşır."
    },
    "ozet": "Son dönem böbrekte glomerüllerde global skleroz, tübüllerde atrofi ve kayıp, interstisyel fibrozis ve damarlarda duvar kalınlaşması bulunur.",
+   "sayfa": [
+    11
+   ],
    "metin": "**Soru.** Son dönem böbrekte glomerüllerde beklenen değişiklik hangisidir?\n\n**A)** Bazal membran duplikasyonu · **B)** Subendotel şişme · **C)** Fibrinoid nekroz · **D)** Kortikomedüller kist · **E)** Global skleroz\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Bazal membran duplikasyonu** — Bazal membran duplikasyonu trombotik mikroanjiyopatinin böbrek bulgusudur; son dönem böbreğin glomerül değişikliği olarak tanımlanmaz.\n- **Subendotel şişme** — Subendotel şişme, hasarlı endotel altında biriken materyaldir; trombotik mikroanjiyopatiye aittir, son dönem böbreğin skar tablosuna değil.\n- **Fibrinoid nekroz** — Fibrinoid nekroz malign nefrosklerozda arteriyol duvarının akut nekrozudur; son dönem böbrekteki yaygın skardan farklıdır.\n- **Kortikomedüller kist** — Kortikomedüller bileşkedeki kistler nefronofthisisi düşündürür; tüm hastalıkların ulaştığı son dönem böbreğin ortak bulgusu değildir.\n- **Global skleroz** — Global skleroz doğru: son dönem böbrekte her yapıda skar vardır ve glomerüllerin tamamı sklerozlaşır.\n\n**Cevap: E** — Global skleroz\n\n**Özet.** Son dönem böbrekte glomerüllerde global skleroz, tübüllerde atrofi ve kayıp, interstisyel fibrozis ve damarlarda duvar kalınlaşması bulunur.",
    "ses": "Son dönem böbrekte glomerüllerde beklenen değişiklik hangisidir?\nA, Bazal membran duplikasyonu\nBe, Subendotel şişme\nCe, Fibrinoid nekroz\nDe, Kortikomedüller kist\nE, Global skleroz\nŞıkları sırasıyla gözden geçirelim.\nBazal membran duplikasyonu trombotik mikroanjiyopatinin böbrek bulgusudur. Son dönem böbreğin glomerül değişikliği olarak tanımlanmaz.\nSubendotel şişme, hasarlı endotel altında biriken materyaldir. Trombotik mikroanjiyopatiye aittir, son dönem böbreğin skar tablosuna değil.\nFibrinoid nekroz malign nefrosklerozda arteriyol duvarının akut nekrozudur. Son dönem böbrekteki yaygın skardan farklıdır.\nKortikomedüller bileşkedeki kistler nefronoftizisi düşündürür. Tüm hastalıkların ulaştığı son dönem böbreğin ortak bulgusu değildir.\nGlobal skleroz doğru. Son dönem böbrekte her yapıda skar vardır ve glomerüllerin tamamı sklerozlaşır.\nDoğru cevap E, Global skleroz\nSon dönem böbrekte glomerüllerde global skleroz, tübüllerde atrofi ve kayıp, interstisyel fibrozis ve damarlarda duvar kalınlaşması bulunur.",
    "kelime": 149
@@ -556,6 +698,7 @@
   {
    "no": 36,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Birçok kalıtsal kistik böbrek hastalığında bozuk olan ortak hücresel yapı hangisidir?",
    "secenekler": {
     "A": "Siliya–sentrozom kompleksi",
@@ -565,22 +708,27 @@
     "E": "Bowman kapsülü"
    },
    "dogru": "A",
+   "ipucu": "Tübül epitelinde sıvı akımını algılayan hareketsiz anteni ve hücre bölünmesini düzenleyen tabanını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Siliya sentrozom kompleksi doğru: birçok kalıtsal kistik böbrek hastalığında bu kompleks bozuktur ve bu hastalıklara siliopati denir.",
     "B": "Tübül bazal membranı kalınlaşması nefronofthisisin mikroskobik bulgusudur; kalıtsal kistik hastalıkları bağlayan ortak kusur değildir.",
     "C": "Arteriyol duvarı kalınlaşması hipertansif nefrosklerozun bulgusudur; kistik böbrek hastalıklarının ortak hücresel kusuru değildir.",
     "D": "Mezenkimal hücre kılıflı kanallar multikistik böbrek displazisinin histolojik bulgusudur; bu hastalık kalıtsal değil gelişimseldir.",
-    "E": "Bowman kapsülü ile karıştırılabilir: Kalıtsal kistik hastalıklardaki ortak kusur glomerülde değil tübül epitel hücrelerindedir."
+    "E": "Bowman kapsülü glomerül yumağını saran paryetal epitel ve bazal membrandan oluşur; ADPKD (polikistin), ARPKD (fibrosistin) ve nefronofitizis (nefronosistin) dahil kalıtsal kistik böbrek hastalıklarının tamamında kusurlu olan ortak hücresel yapı tübül epitelindeki siliya–sentrozom kompleksidir."
    },
    "ozet": "Birçok kalıtsal kistik böbrek hastalığında tübül epitel hücrelerinin siliya sentrozom kompleksi bozuktur; bu nedenle bu hastalıklar siliopati olarak adlandırılır.",
-   "metin": "**Soru.** Birçok kalıtsal kistik böbrek hastalığında bozuk olan ortak hücresel yapı hangisidir?\n\n**A)** Siliya–sentrozom kompleksi · **B)** Tübül bazal membranı · **C)** Arteriyol duvarı · **D)** Mezenkimal hücre kılıfı · **E)** Bowman kapsülü\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Siliya–sentrozom kompleksi** — Siliya sentrozom kompleksi doğru: birçok kalıtsal kistik böbrek hastalığında bu kompleks bozuktur ve bu hastalıklara siliopati denir.\n- **Tübül bazal membranı** — Tübül bazal membranı kalınlaşması nefronofthisisin mikroskobik bulgusudur; kalıtsal kistik hastalıkları bağlayan ortak kusur değildir.\n- **Arteriyol duvarı** — Arteriyol duvarı kalınlaşması hipertansif nefrosklerozun bulgusudur; kistik böbrek hastalıklarının ortak hücresel kusuru değildir.\n- **Mezenkimal hücre kılıfı** — Mezenkimal hücre kılıflı kanallar multikistik böbrek displazisinin histolojik bulgusudur; bu hastalık kalıtsal değil gelişimseldir.\n- **Bowman kapsülü** — Bowman kapsülü ile karıştırılabilir: Kalıtsal kistik hastalıklardaki ortak kusur glomerülde değil tübül epitel hücrelerindedir.\n\n**Cevap: A** — Siliya–sentrozom kompleksi\n\n**Özet.** Birçok kalıtsal kistik böbrek hastalığında tübül epitel hücrelerinin siliya sentrozom kompleksi bozuktur; bu nedenle bu hastalıklar siliopati olarak adlandırılır.",
-   "ses": "Birçok kalıtsal kistik böbrek hastalığında bozuk olan ortak hücresel yapı hangisidir?\nA, Siliya sentrozom kompleksi\nBe, Tübül bazal membranı\nCe, Arteriyol duvarı\nDe, Mezenkimal hücre kılıfı\nE, Bowman kapsülü\nŞimdi seçeneklere tek tek bakalım.\nSiliya sentrozom kompleksi doğru. Birçok kalıtsal kistik böbrek hastalığında bu kompleks bozuktur ve bu hastalıklara siliopati denir.\nTübül bazal membranı kalınlaşması nefronoftizisin mikroskobik bulgusudur. Kalıtsal kistik hastalıkları bağlayan ortak kusur değildir.\nArteriyol duvarı kalınlaşması hipertansif nefrosklerozun bulgusudur. Kistik böbrek hastalıklarının ortak hücresel kusuru değildir.\nMezenkimal hücre kılıflı kanallar multikistik böbrek displazisinin histolojik bulgusudur. Bu hastalık kalıtsal değil gelişimseldir.\nBowman kapsülü ile karıştırılabilir. Kalıtsal kistik hastalıklardaki ortak kusur glomerülde değil tübül epitel hücrelerindedir.\nDoğru cevap A, Siliya sentrozom kompleksi\nBirçok kalıtsal kistik böbrek hastalığında tübül epitel hücrelerinin siliya sentrozom kompleksi bozuktur. Bu nedenle bu hastalıklar siliopati olarak adlandırılır.",
-   "kelime": 158
+   "sayfa": [
+    13
+   ],
+   "metin": "**Soru.** Birçok kalıtsal kistik böbrek hastalığında bozuk olan ortak hücresel yapı hangisidir?\n\n**A)** Siliya–sentrozom kompleksi · **B)** Tübül bazal membranı · **C)** Arteriyol duvarı · **D)** Mezenkimal hücre kılıfı · **E)** Bowman kapsülü\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Siliya–sentrozom kompleksi** — Siliya sentrozom kompleksi doğru: birçok kalıtsal kistik böbrek hastalığında bu kompleks bozuktur ve bu hastalıklara siliopati denir.\n- **Tübül bazal membranı** — Tübül bazal membranı kalınlaşması nefronofthisisin mikroskobik bulgusudur; kalıtsal kistik hastalıkları bağlayan ortak kusur değildir.\n- **Arteriyol duvarı** — Arteriyol duvarı kalınlaşması hipertansif nefrosklerozun bulgusudur; kistik böbrek hastalıklarının ortak hücresel kusuru değildir.\n- **Mezenkimal hücre kılıfı** — Mezenkimal hücre kılıflı kanallar multikistik böbrek displazisinin histolojik bulgusudur; bu hastalık kalıtsal değil gelişimseldir.\n- **Bowman kapsülü** — Bowman kapsülü glomerül yumağını saran paryetal epitel ve bazal membrandan oluşur; ADPKD (polikistin), ARPKD (fibrosistin) ve nefronofitizis (nefronosistin) dahil kalıtsal kistik böbrek hastalıklarının tamamında kusurlu olan ortak hücresel yapı tübül epitelindeki siliya–sentrozom kompleksidir.\n\n**Cevap: A** — Siliya–sentrozom kompleksi\n\n**Özet.** Birçok kalıtsal kistik böbrek hastalığında tübül epitel hücrelerinin siliya sentrozom kompleksi bozuktur; bu nedenle bu hastalıklar siliopati olarak adlandırılır.",
+   "ses": "Birçok kalıtsal kistik böbrek hastalığında bozuk olan ortak hücresel yapı hangisidir?\nA, Siliya sentrozom kompleksi\nBe, Tübül bazal membranı\nCe, Arteriyol duvarı\nDe, Mezenkimal hücre kılıfı\nE, Bowman kapsülü\nŞimdi seçeneklere tek tek bakalım.\nSiliya sentrozom kompleksi doğru. Birçok kalıtsal kistik böbrek hastalığında bu kompleks bozuktur ve bu hastalıklara siliopati denir.\nTübül bazal membranı kalınlaşması nefronoftizisin mikroskobik bulgusudur. Kalıtsal kistik hastalıkları bağlayan ortak kusur değildir.\nArteriyol duvarı kalınlaşması hipertansif nefrosklerozun bulgusudur. Kistik böbrek hastalıklarının ortak hücresel kusuru değildir.\nMezenkimal hücre kılıflı kanallar multikistik böbrek displazisinin histolojik bulgusudur. Bu hastalık kalıtsal değil gelişimseldir.\nBowman kapsülü glomerül yumağını saran paryetal epitel ve bazal membrandan oluşur. O de pe ka de, polikistin,, o re pe ka de, fibrosistin, ve nefronofitizis, nefronosistin, dahil kalıtsal kistik böbrek hastalıklarının tamamında kusurlu olan ortak hücresel yapı tübül epitelindeki siliya–sentrozom kompleksidir.\nDoğru cevap A, Siliya sentrozom kompleksi\nBirçok kalıtsal kistik böbrek hastalığında tübül epitel hücrelerinin siliya sentrozom kompleksi bozuktur. Bu nedenle bu hastalıklar siliopati olarak adlandırılır.",
+   "kelime": 177
   },
   {
    "no": 37,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Basit böbrek kistini görüntülemede tümörden ayırmaya yarayan görünüm hangisidir?",
    "secenekler": {
     "A": "Kalın duvar",
@@ -590,6 +738,7 @@
     "E": "Medullaya uzanım"
    },
    "dogru": "C",
+   "ipucu": "Kistin tamamen sıvıyla dolu olmasının ultrasonda ve tomografide nasıl bir sınır ve yankı yaratacağını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Kalın duvar basit kiste uymaz; basit kist ince, parlak duvarlı ve berrak sıvı doludur.",
@@ -599,6 +748,9 @@
     "E": "Medullaya uzanım basit kiste uymaz; basit kistler kortekse sınırlıdır."
    },
    "ozet": "Basit kistlerin asıl klinik önemi tümörden ayırt edilmeleridir; ultrasonografi ve tomografide düzgün kontur ve anekoik sıvı görünümü basit kisti gösterir.",
+   "sayfa": [
+    14
+   ],
    "metin": "**Soru.** Basit böbrek kistini görüntülemede tümörden ayırmaya yarayan görünüm hangisidir?\n\n**A)** Kalın duvar · **B)** Solid alan içermesi · **C)** Düzgün kontur ve anekoik içerik · **D)** Kanlı içerik · **E)** Medullaya uzanım\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kalın duvar** — Kalın duvar basit kiste uymaz; basit kist ince, parlak duvarlı ve berrak sıvı doludur.\n- **Solid alan içermesi** — Solid alan basit kistte beklenmez; basit kistin içi berrak sıvıdır ve tümörden ayırmada bu sıvı görünümü aranır.\n- **Düzgün kontur ve anekoik içerik** — Düzgün kontur ve anekoik içerik doğru: basit kist ultrasonografi ve tomografide düzgün sınırlı, sıvı görünümlüdür ve böylece tümörden ayrılır.\n- **Kanlı içerik** — Kanlı içerik basit kistin değil, edinilmiş kistik böbrek hastalığındaki bazı kistlerin özelliğidir; bu kistler hematüriye yol açabilir.\n- **Medullaya uzanım** — Medullaya uzanım basit kiste uymaz; basit kistler kortekse sınırlıdır.\n\n**Cevap: C** — Düzgün kontur ve anekoik içerik\n\n**Özet.** Basit kistlerin asıl klinik önemi tümörden ayırt edilmeleridir; ultrasonografi ve tomografide düzgün kontur ve anekoik sıvı görünümü basit kisti gösterir.",
    "ses": "Basit böbrek kistini görüntülemede tümörden ayırmaya yarayan görünüm hangisidir?\nA, Kalın duvar\nBe, Solid alan içermesi\nCe, Düzgün kontur ve anekoik içerik\nDe, Kanlı içerik\nE, Medullaya uzanım\nSeçenekleri sırayla değerlendirelim.\nKalın duvar basit kiste uymaz. Basit kist ince, parlak duvarlı ve berrak sıvı doludur.\nSolid alan basit kistte beklenmez. Basit kistin içi berrak sıvıdır ve tümörden ayırmada bu sıvı görünümü aranır.\nDüzgün kontur ve anekoik içerik doğru. Basit kist ultrasonografi ve tomografide düzgün sınırlı, sıvı görünümlüdür ve böylece tümörden ayrılır.\nKanlı içerik basit kistin değil, edinilmiş kistik böbrek hastalığındaki bazı kistlerin özelliğidir. Bu kistler hematüriye yol açabilir.\nMedullaya uzanım basit kiste uymaz. Basit kistler kortekse sınırlıdır.\nDoğru cevap Ce, Düzgün kontur ve anekoik içerik\nBasit kistlerin asıl klinik önemi tümörden ayırt edilmeleridir. Ultrasonografi ve tomografide düzgün kontur ve anekoik sıvı görünümü basit kisti gösterir.",
    "kelime": 166
@@ -606,6 +758,7 @@
   {
    "no": 38,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Edinilmiş kistik böbrek hastalığında kistlerin dağılımı hangisidir?",
    "secenekler": {
     "A": "Kortekse sınırlı kistler",
@@ -615,6 +768,7 @@
     "E": "Tek böbrekte işlevsiz kistler"
    },
    "dogru": "D",
+   "ipucu": "Uzun diyaliz döneminde işlevini yitirmiş böbrekte kistlerin, basit kistlerden farklı olarak, tek bir bölgeyle sınırlı kalmadığını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Kortekse sınırlı kistler basit kistlerin özelliğidir; edinilmiş kistik hastalıkta kistler yalnız kortekste kalmaz.",
@@ -624,6 +778,10 @@
     "E": "Tek böbreği tutan, işlevsiz kistik böbrek multikistik böbrek displazisinin özelliğidir; edinilmiş kistik hastalığı tanımlamaz."
    },
    "ozet": "Edinilmiş kistik böbrek hastalığında korteks ve medullada çok sayıda kist oluşur; bazıları kan içerir ve renal hücreli karsinom riski yaklaşık 100 kat artar.",
+   "sayfa": [
+    14,
+    15
+   ],
    "metin": "**Soru.** Edinilmiş kistik böbrek hastalığında kistlerin dağılımı hangisidir?\n\n**A)** Kortekse sınırlı kistler · **B)** Kortikomedüller bileşkede kistler · **C)** Terminal toplayıcı kanal kistleri · **D)** Korteks ve medullada çok sayıda kist · **E)** Tek böbrekte işlevsiz kistler\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Kortekse sınırlı kistler** — Kortekse sınırlı kistler basit kistlerin özelliğidir; edinilmiş kistik hastalıkta kistler yalnız kortekste kalmaz.\n- **Kortikomedüller bileşkede kistler** — Kortikomedüller bileşkede küçük kistler nefronofthisisin bulgusudur; bu hastalıkta böbrekler küçülmüş ve büzüşmüştür.\n- **Terminal toplayıcı kanal kistleri** — Terminal toplayıcı kanallardan köken alan kistler ARPKD'nin özelliğidir ve böbreğe süngerimsi görünüm verir.\n- **Korteks ve medullada çok sayıda kist** — Korteks ve medullada çok sayıda kist doğru: uzun süre diyaliz alan hastalarda gelişen bu kistlerin bir kısmı kan içerebilir.\n- **Tek böbrekte işlevsiz kistler** — Tek böbreği tutan, işlevsiz kistik böbrek multikistik böbrek displazisinin özelliğidir; edinilmiş kistik hastalığı tanımlamaz.\n\n**Cevap: D** — Korteks ve medullada çok sayıda kist\n\n**Özet.** Edinilmiş kistik böbrek hastalığında korteks ve medullada çok sayıda kist oluşur; bazıları kan içerir ve renal hücreli karsinom riski yaklaşık 100 kat artar.",
    "ses": "Edinilmiş kistik böbrek hastalığında kistlerin dağılımı hangisidir?\nA, Kortekse sınırlı kistler\nBe, Kortikomedüller bileşkede kistler\nCe, Terminal toplayıcı kanal kistleri\nDe, Korteks ve medullada çok sayıda kist\nE, Tek böbrekte işlevsiz kistler\nHer seçeneği tek tek ele alalım.\nKortekse sınırlı kistler basit kistlerin özelliğidir. Edinilmiş kistik hastalıkta kistler yalnız kortekste kalmaz.\nKortikomedüller bileşkede küçük kistler nefronoftizisin bulgusudur. Bu hastalıkta böbrekler küçülmüş ve büzüşmüştür.\nTerminal toplayıcı kanallardan köken alan kistler a re pe ka de'nin özelliğidir ve böbreğe süngerimsi görünüm verir.\nKorteks ve medullada çok sayıda kist doğru. Uzun süre diyaliz alan hastalarda gelişen bu kistlerin bir kısmı kan içerebilir.\nTek böbreği tutan, işlevsiz kistik böbrek multikistik böbrek displazisinin özelliğidir. Edinilmiş kistik hastalığı tanımlamaz.\nDoğru cevap De, Korteks ve medullada çok sayıda kist\nEdinilmiş kistik böbrek hastalığında korteks ve medullada çok sayıda kist oluşur. Bazıları kan içerir ve renal hücreli karsinom riski yaklaşık yüz kat artar.",
    "kelime": 178
@@ -631,6 +789,7 @@
   {
    "no": 39,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "ADPKD'de polikistin işlev kaybıyla hücre içine girişi bozulan iyon hangisidir?",
    "secenekler": {
     "A": "Kalsiyum",
@@ -640,22 +799,27 @@
     "E": "Fosfat"
    },
    "dogru": "A",
+   "ipucu": "Siliyal mekanosensör bozulunca hangi hücre içi sinyalin kaybolduğunu ve bunun proliferasyonu artırdığını düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Kalsiyum doğru: polikistin işlev kaybında siliyal mekanosensör işlev bozulur ve hücre içine kalsiyum girişi bozulur.",
-    "B": "Sodyum ile karıştırılabilir: Polikistin kaybında bozulan sinyal hücre içi kalsiyum girişidir ve bu kayıp hücre polaritesini bozar.",
+    "B": "Sodyum hücre dışı sıvının ana katyonudur ve polikistin kompleksinin birincil mekanosensör sinyali değildir; normalde idrar akımı primer siliyumu eğdiğinde polikistin-2 kanalı üzerinden hücre içine kalsiyum girer, ADPKD'de ise kalsiyum girişi bozulup cAMP artarak epitel proliferasyonu ve sıvı sekresyonu tetiklenir.",
     "C": "Potasyum polikistin kompleksinin ilettiği sinyal olarak tanımlanmaz; akım uyarısının kaybı kalsiyum girişini bozar, proliferasyon ve sekresyon artar.",
     "D": "Magnezyum bu hastalıkta değil, strüvit yani magnezyum amonyum fosfat taşlarının bileşiminde öne çıkar.",
-    "E": "Kalsiyum fosfat ve strüvit taşlarının bileşenidir, polikistin sinyaliyle ilgisi yoktur. Fosfat bu sorudaki ayrımı sağlamaz."
+    "E": "Fosfat kemik mineralizasyonu ve hücre içi enerji (ATP) dengesinde yer alan anyondur; ADPKD'de primer siliyumdaki polikistin-1 ve polikistin-2 mekanosensör kompleksinin işlev kaybıyla hücre içine girişi azalan ve cAMP aracılı kist büyümesini başlatan iyon kalsiyumdur."
    },
    "ozet": "Polikistin işlev kaybında siliyal mekanosensör işlev ve hücre içi kalsiyum girişi bozulur; sonuçta polarite bozulur, proliferasyon ve sıvı sekresyonu artar.",
-   "metin": "**Soru.** ADPKD'de polikistin işlev kaybıyla hücre içine girişi bozulan iyon hangisidir?\n\n**A)** Kalsiyum · **B)** Sodyum · **C)** Potasyum · **D)** Magnezyum · **E)** Fosfat\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kalsiyum** — Kalsiyum doğru: polikistin işlev kaybında siliyal mekanosensör işlev bozulur ve hücre içine kalsiyum girişi bozulur.\n- **Sodyum** — Sodyum ile karıştırılabilir: Polikistin kaybında bozulan sinyal hücre içi kalsiyum girişidir ve bu kayıp hücre polaritesini bozar.\n- **Potasyum** — Potasyum polikistin kompleksinin ilettiği sinyal olarak tanımlanmaz; akım uyarısının kaybı kalsiyum girişini bozar, proliferasyon ve sekresyon artar.\n- **Magnezyum** — Magnezyum bu hastalıkta değil, strüvit yani magnezyum amonyum fosfat taşlarının bileşiminde öne çıkar.\n- **Fosfat** — Kalsiyum fosfat ve strüvit taşlarının bileşenidir, polikistin sinyaliyle ilgisi yoktur. Fosfat bu sorudaki ayrımı sağlamaz.\n\n**Cevap: A** — Kalsiyum\n\n**Özet.** Polikistin işlev kaybında siliyal mekanosensör işlev ve hücre içi kalsiyum girişi bozulur; sonuçta polarite bozulur, proliferasyon ve sıvı sekresyonu artar.",
-   "ses": "A de pe ka de'de polikistin işlev kaybıyla hücre içine girişi bozulan iyon hangisidir?\nA, Kalsiyum\nBe, Sodyum\nCe, Potasyum\nDe, Magnezyum\nE, Fosfat\nŞıkları sırasıyla gözden geçirelim.\nKalsiyum doğru. Polikistin işlev kaybında siliyal mekanosensör işlev bozulur ve hücre içine kalsiyum girişi bozulur.\nSodyum ile karıştırılabilir. Polikistin kaybında bozulan sinyal hücre içi kalsiyum girişidir ve bu kayıp hücre polaritesini bozar.\nPotasyum polikistin kompleksinin ilettiği sinyal olarak tanımlanmaz. Akım uyarısının kaybı kalsiyum girişini bozar, proliferasyon ve sekresyon artar.\nMagnezyum bu hastalıkta değil, strüvit yani magnezyum amonyum fosfat taşlarının bileşiminde öne çıkar.\nKalsiyum fosfat ve strüvit taşlarının bileşenidir, polikistin sinyaliyle ilgisi yoktur. Fosfat bu sorudaki ayrımı sağlamaz.\nDoğru cevap A, Kalsiyum\nPolikistin işlev kaybında siliyal mekanosensör işlev ve hücre içi kalsiyum girişi bozulur. Sonuçta polarite bozulur, proliferasyon ve sıvı sekresyonu artar.",
-   "kelime": 147
+   "sayfa": [
+    18
+   ],
+   "metin": "**Soru.** ADPKD'de polikistin işlev kaybıyla hücre içine girişi bozulan iyon hangisidir?\n\n**A)** Kalsiyum · **B)** Sodyum · **C)** Potasyum · **D)** Magnezyum · **E)** Fosfat\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kalsiyum** — Kalsiyum doğru: polikistin işlev kaybında siliyal mekanosensör işlev bozulur ve hücre içine kalsiyum girişi bozulur.\n- **Sodyum** — Sodyum hücre dışı sıvının ana katyonudur ve polikistin kompleksinin birincil mekanosensör sinyali değildir; normalde idrar akımı primer siliyumu eğdiğinde polikistin-2 kanalı üzerinden hücre içine kalsiyum girer, ADPKD'de ise kalsiyum girişi bozulup cAMP artarak epitel proliferasyonu ve sıvı sekresyonu tetiklenir.\n- **Potasyum** — Potasyum polikistin kompleksinin ilettiği sinyal olarak tanımlanmaz; akım uyarısının kaybı kalsiyum girişini bozar, proliferasyon ve sekresyon artar.\n- **Magnezyum** — Magnezyum bu hastalıkta değil, strüvit yani magnezyum amonyum fosfat taşlarının bileşiminde öne çıkar.\n- **Fosfat** — Fosfat kemik mineralizasyonu ve hücre içi enerji (ATP) dengesinde yer alan anyondur; ADPKD'de primer siliyumdaki polikistin-1 ve polikistin-2 mekanosensör kompleksinin işlev kaybıyla hücre içine girişi azalan ve cAMP aracılı kist büyümesini başlatan iyon kalsiyumdur.\n\n**Cevap: A** — Kalsiyum\n\n**Özet.** Polikistin işlev kaybında siliyal mekanosensör işlev ve hücre içi kalsiyum girişi bozulur; sonuçta polarite bozulur, proliferasyon ve sıvı sekresyonu artar.",
+   "ses": "A de pe ka de'de polikistin işlev kaybıyla hücre içine girişi bozulan iyon hangisidir?\nA, Kalsiyum\nBe, Sodyum\nCe, Potasyum\nDe, Magnezyum\nE, Fosfat\nŞıkları sırasıyla gözden geçirelim.\nKalsiyum doğru. Polikistin işlev kaybında siliyal mekanosensör işlev bozulur ve hücre içine kalsiyum girişi bozulur.\nSodyum hücre dışı sıvının ana katyonudur ve polikistin kompleksinin birincil mekanosensör sinyali değildir. Normalde idrar akımı primer siliyumu eğdiğinde polikistin-iki kanalı üzerinden hücre içine kalsiyum girer, o de pe ka de'de ise kalsiyum girişi bozulup siklik a em pe artarak epitel proliferasyonu ve sıvı sekresyonu tetiklenir.\nPotasyum polikistin kompleksinin ilettiği sinyal olarak tanımlanmaz. Akım uyarısının kaybı kalsiyum girişini bozar, proliferasyon ve sekresyon artar.\nMagnezyum bu hastalıkta değil, strüvit yani magnezyum amonyum fosfat taşlarının bileşiminde öne çıkar.\nFosfat kemik mineralizasyonu ve hücre içi enerji, a te pe, dengesinde yer alan anyondur. O de pe ka de'de primer siliyumdaki polikistin-bir ve polikistin-iki mekanosensör kompleksinin işlev kaybıyla hücre içine girişi azalan ve siklik a em pe aracılı kist büyümesini başlatan iyon kalsiyumdur.\nDoğru cevap A, Kalsiyum\nPolikistin işlev kaybında siliyal mekanosensör işlev ve hücre içi kalsiyum girişi bozulur. Sonuçta polarite bozulur, proliferasyon ve sıvı sekresyonu artar.",
+   "kelime": 188
   },
   {
    "no": 40,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "ADPKD'de kistler arasında kalan böbrek parankiminde hangisi görülür?",
    "secenekler": {
     "A": "Fibrinoid nekroz",
@@ -665,6 +829,7 @@
     "E": "Glomerüler trombüsler"
    },
    "dogru": "C",
+   "ipucu": "Büyüyen kistlerin çevredeki damarlara ve dokuya bası yapmasının nefronlara etkisini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Fibrinoid nekroz malign nefrosklerozda arteriyollerin akut duvar nekrozudur; polikistik böbrekte kistler arası parankimin bulgusu değildir.",
@@ -674,6 +839,9 @@
     "E": "Glomerüler kılcallarda trombüsler trombotik mikroanjiyopatinin böbrek bulgusudur; ADPKD'deki parankim değişikliği değildir."
    },
    "ozet": "ADPKD'de kistler nefronun farklı segmentlerinden köken alır ve farklı epitelle döşelidir; aradaki parankimde iskemik atrofi ve fibrozis vardır.",
+   "sayfa": [
+    19
+   ],
    "metin": "**Soru.** ADPKD'de kistler arasında kalan böbrek parankiminde hangisi görülür?\n\n**A)** Fibrinoid nekroz · **B)** Mezenkim kılıflı kanallar · **C)** İskemik atrofi ve fibrozis · **D)** Kortikomedüller küçük kistler · **E)** Glomerüler trombüsler\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Fibrinoid nekroz** — Fibrinoid nekroz malign nefrosklerozda arteriyollerin akut duvar nekrozudur; polikistik böbrekte kistler arası parankimin bulgusu değildir.\n- **Mezenkim kılıflı kanallar** — Mezenkimal hücre kılıflı kanallar multikistik böbrek displazisinde görülür; ADPKD'yi değil, bu gelişimsel bozukluğu tanımlar.\n- **İskemik atrofi ve fibrozis** — İskemik atrofi ve fibrozis doğru: ADPKD kistleri arasında kalan parankimde iskemik atrofi ve fibrozis bulunur.\n- **Kortikomedüller küçük kistler** — Kortikomedüller bileşkede küçük kistler nefronofthisis kompleksini tanımlar; orada böbrekler küçülmüş ve büzüşmüştür.\n- **Glomerüler trombüsler** — Glomerüler kılcallarda trombüsler trombotik mikroanjiyopatinin böbrek bulgusudur; ADPKD'deki parankim değişikliği değildir.\n\n**Cevap: C** — İskemik atrofi ve fibrozis\n\n**Özet.** ADPKD'de kistler nefronun farklı segmentlerinden köken alır ve farklı epitelle döşelidir; aradaki parankimde iskemik atrofi ve fibrozis vardır.",
    "ses": "A de pe ka de'de kistler arasında kalan böbrek parankiminde hangisi görülür?\nA, Fibrinoid nekroz\nBe, Mezenkim kılıflı kanallar\nCe, İskemik atrofi ve fibrozis\nDe, Kortikomedüller küçük kistler\nE, Glomerüler trombüsler\nŞimdi seçeneklere tek tek bakalım.\nFibrinoid nekroz malign nefrosklerozda arteriyollerin akut duvar nekrozudur. Polikistik böbrekte kistler arası parankimin bulgusu değildir.\nMezenkimal hücre kılıflı kanallar multikistik böbrek displazisinde görülür. A de pe ka de'yi değil, bu gelişimsel bozukluğu tanımlar.\nİskemik atrofi ve fibrozis doğru. A de pe ka de kistleri arasında kalan parankimde iskemik atrofi ve fibrozis bulunur.\nKortikomedüller bileşkede küçük kistler nefronoftizis kompleksini tanımlar. Orada böbrekler küçülmüş ve büzüşmüştür.\nGlomerüler kılcallarda trombüsler trombotik mikroanjiyopatinin böbrek bulgusudur. A de pe ka de'deki parankim değişikliği değildir.\nDoğru cevap Ce, İskemik atrofi ve fibrozis\nA de pe ka de'de kistler nefronun farklı segmentlerinden köken alır ve farklı epitelle döşelidir. Aradaki parankimde iskemik atrofi ve fibrozis vardır.",
    "kelime": 155
@@ -681,6 +849,7 @@
   {
    "no": 41,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "ADPKD'de en sık görülen komplikasyon hangisidir?",
    "secenekler": {
     "A": "İdrar yolu enfeksiyonu",
@@ -690,6 +859,7 @@
     "E": "Pulmoner hipoplazi"
    },
    "dogru": "B",
+   "ipucu": "Yaklaşık dörtte üç hastada görülen ve kalp hastalığına bağlı ölümlerle de ilişkili sistemik tabloyu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "İdrar yolu enfeksiyonları ADPKD'de görülen komplikasyonlardandır, ancak hastaların yaklaşık %75'inde görülen en sık komplikasyon bunlar değildir.",
@@ -699,6 +869,9 @@
     "E": "Pulmoner hipoplazi ARPKD'nin doğum öncesi ve neonatal formlarında ölüm nedenidir; erişkin ADPKD'nin komplikasyonu değildir."
    },
    "ozet": "ADPKD'de en sık komplikasyon yaklaşık %75 ile hipertansiyondur; en sık ölüm nedeni ise yaklaşık %40 ile koroner ya da hipertansif kalp hastalığıdır.",
+   "sayfa": [
+    21
+   ],
    "metin": "**Soru.** ADPKD'de en sık görülen komplikasyon hangisidir?\n\n**A)** İdrar yolu enfeksiyonu · **B)** Hipertansiyon · **C)** Anevrizma rüptürü · **D)** Renal hücreli karsinom · **E)** Pulmoner hipoplazi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **İdrar yolu enfeksiyonu** — İdrar yolu enfeksiyonları ADPKD'de görülen komplikasyonlardandır, ancak hastaların yaklaşık %75'inde görülen en sık komplikasyon bunlar değildir.\n- **Hipertansiyon** — Hipertansiyon doğru: ADPKD hastalarının yaklaşık %75'inde gelişir ve en sık komplikasyondur.\n- **Anevrizma rüptürü** — Anevrizma rüptürü ve intraserebral kanama ADPKD'de ölüm nedenlerinin yaklaşık %15'ini oluşturur; en sık komplikasyon değildir.\n- **Renal hücreli karsinom** — Renal hücreli karsinom riskinin yaklaşık 100 kat artışı ADPKD'nin değil, uzun süre diyaliz alanlarda edinilmiş kistik hastalığın özelliğidir.\n- **Pulmoner hipoplazi** — Pulmoner hipoplazi ARPKD'nin doğum öncesi ve neonatal formlarında ölüm nedenidir; erişkin ADPKD'nin komplikasyonu değildir.\n\n**Cevap: B** — Hipertansiyon\n\n**Özet.** ADPKD'de en sık komplikasyon yaklaşık %75 ile hipertansiyondur; en sık ölüm nedeni ise yaklaşık %40 ile koroner ya da hipertansif kalp hastalığıdır.",
    "ses": "A de pe ka de'de en sık görülen komplikasyon hangisidir?\nA, İdrar yolu enfeksiyonu\nBe, Hipertansiyon\nCe, Anevrizma rüptürü\nDe, Renal hücreli karsinom\nE, Pulmoner hipoplazi\nSeçenekleri sırayla değerlendirelim.\nİdrar yolu enfeksiyonları a de pe ka de'de görülen komplikasyonlardandır, ancak hastaların yaklaşık yüzde yetmiş beşinde görülen en sık komplikasyon bunlar değildir.\nHipertansiyon doğru. A de pe ka de hastalarının yaklaşık yüzde yetmiş beşinde gelişir ve en sık komplikasyondur.\nAnevrizma rüptürü ve intraserebral kanama a de pe ka de'de ölüm nedenlerinin yaklaşık yüzde on beşini oluşturur. En sık komplikasyon değildir.\nRenal hücreli karsinom riskinin yaklaşık yüz kat artışı a de pe ka de'nin değil, uzun süre diyaliz alanlarda edinilmiş kistik hastalığın özelliğidir.\nPulmoner hipoplazi a re pe ka de'nin doğum öncesi ve neonatal formlarında ölüm nedenidir. Erişkin a de pe ka de'nin komplikasyonu değildir.\nDoğru cevap Be, Hipertansiyon\nA de pe ka de'de en sık komplikasyon yaklaşık yüzde yetmiş beş ile hipertansiyondur. En sık ölüm nedeni ise yaklaşık yüzde kırk ile koroner ya da hipertansif kalp hastalığıdır.",
    "kelime": 153
@@ -706,6 +879,7 @@
   {
    "no": 42,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "ARPKD'de bebeklik dönemini atlatan hastalarda uzun dönemde gelişen tablo hangisidir?",
    "secenekler": {
     "A": "Pulmoner hipoplazi",
@@ -715,6 +889,7 @@
     "E": "Karaciğer fibrozisi ve siroz"
    },
    "dogru": "E",
+   "ipucu": "Bu hastalığa sık eşlik eden portal safra kanalı proliferasyonunun yıllar içinde nereye ilerleyeceğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Pulmoner hipoplazi doğum öncesi ve neonatal formlarda solunum yetmezliğiyle ölüm nedenidir; bebekliği atlatanların uzun dönem sorunu değildir.",
@@ -724,6 +899,10 @@
     "E": "Karaciğer fibrozisi ve siroz doğru: ARPKD'de bebeklik dönemini atlatanlarda uzun dönemde karaciğer fibrozisi ve siroz gelişir."
    },
    "ozet": "ARPKD'ye sıklıkla konjenital hepatik fibroz eşlik eder; bebeklik dönemini atlatan hastalarda uzun dönemde karaciğer fibrozisi ve siroz gelişir.",
+   "sayfa": [
+    24,
+    26
+   ],
    "metin": "**Soru.** ARPKD'de bebeklik dönemini atlatan hastalarda uzun dönemde gelişen tablo hangisidir?\n\n**A)** Pulmoner hipoplazi · **B)** Renal hücreli karsinom · **C)** Sakküler anevrizma rüptürü · **D)** Polikistik karaciğer · **E)** Karaciğer fibrozisi ve siroz\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Pulmoner hipoplazi** — Pulmoner hipoplazi doğum öncesi ve neonatal formlarda solunum yetmezliğiyle ölüm nedenidir; bebekliği atlatanların uzun dönem sorunu değildir.\n- **Renal hücreli karsinom** — Renal hücreli karsinom riskinin belirgin artışı uzun süre diyaliz alanlarda edinilmiş kistik hastalığın özelliğidir; ARPKD'nin uzun dönem tablosu değildir.\n- **Sakküler anevrizma rüptürü** — Willis çemberinde sakküler anevrizma ADPKD'ye eşlik eden böbrek dışı bulgudur; ARPKD'de uzun dönemde beklenen tablo değildir.\n- **Polikistik karaciğer** — Polikistik karaciğer ADPKD hastalarının yaklaşık %30'unda görülür; ARPKD'deki karaciğer tutulumu safra kanalı proliferasyonu şeklindedir.\n- **Karaciğer fibrozisi ve siroz** — Karaciğer fibrozisi ve siroz doğru: ARPKD'de bebeklik dönemini atlatanlarda uzun dönemde karaciğer fibrozisi ve siroz gelişir.\n\n**Cevap: E** — Karaciğer fibrozisi ve siroz\n\n**Özet.** ARPKD'ye sıklıkla konjenital hepatik fibroz eşlik eder; bebeklik dönemini atlatan hastalarda uzun dönemde karaciğer fibrozisi ve siroz gelişir.",
    "ses": "A re pe ka de'de bebeklik dönemini atlatan hastalarda uzun dönemde gelişen tablo hangisidir?\nA, Pulmoner hipoplazi\nBe, Renal hücreli karsinom\nCe, Sakküler anevrizma rüptürü\nDe, Polikistik karaciğer\nE, Karaciğer fibrozisi ve siroz\nHer seçeneği tek tek ele alalım.\nPulmoner hipoplazi doğum öncesi ve neonatal formlarda solunum yetmezliğiyle ölüm nedenidir. Bebekliği atlatanların uzun dönem sorunu değildir.\nRenal hücreli karsinom riskinin belirgin artışı uzun süre diyaliz alanlarda edinilmiş kistik hastalığın özelliğidir. A re pe ka de'nin uzun dönem tablosu değildir.\nVilis çemberinde sakküler anevrizma a de pe ka de'ye eşlik eden böbrek dışı bulgudur. A re pe ka de'de uzun dönemde beklenen tablo değildir.\nPolikistik karaciğer a de pe ka de hastalarının yaklaşık yüzde otuzunda görülür. A re pe ka de'deki karaciğer tutulumu safra kanalı proliferasyonu şeklindedir.\nKaraciğer fibrozisi ve siroz doğru. A re pe ka de'de bebeklik dönemini atlatanlarda uzun dönemde karaciğer fibrozisi ve siroz gelişir.\nDoğru cevap E, Karaciğer fibrozisi ve siroz\nA re pe ka de'ye sıklıkla konjenital hepatik fibroz eşlik eder. Bebeklik dönemini atlatan hastalarda uzun dönemde karaciğer fibrozisi ve siroz gelişir.",
    "kelime": 173
@@ -731,6 +910,7 @@
   {
    "no": 43,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Nefronofthisiste görüntülemede kist görülmemesini açıklayan özellik hangisidir?",
    "secenekler": {
     "A": "Kistlerin kortekse sınırlı olması",
@@ -740,6 +920,7 @@
     "E": "Tek böbreğin tutulması"
    },
    "dogru": "C",
+   "ipucu": "Bu kompleksteki kist boyutunun radyolojik görünürlükle ilişkisini ve biyopside örneklenen bölgeyi düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Kortekse sınırlı kistler basit kistlerin özelliğidir; nefronofthisiste kistler kortikomedüller bileşke ve medullada yerleşir.",
@@ -749,6 +930,10 @@
     "E": "Tek böbreğin tutulması multikistik böbrek displazisinin özelliğidir; nefronofthisisteki tanı güçlüğünün nedeni değildir."
    },
    "ozet": "Nefronofthisiste kistler radyolojik olarak görünmeyecek kadar küçük olabilir; kortikomedüller bileşke iyi örneklenmezse biyopside de gözden kaçabilir.",
+   "sayfa": [
+    28,
+    30
+   ],
    "metin": "**Soru.** Nefronofthisiste görüntülemede kist görülmemesini açıklayan özellik hangisidir?\n\n**A)** Kistlerin kortekse sınırlı olması · **B)** Böbreklerin büyümüş olması · **C)** Kistlerin çok küçük olabilmesi · **D)** Kistlerin kanlı içeriği · **E)** Tek böbreğin tutulması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Kistlerin kortekse sınırlı olması** — Kortekse sınırlı kistler basit kistlerin özelliğidir; nefronofthisiste kistler kortikomedüller bileşke ve medullada yerleşir.\n- **Böbreklerin büyümüş olması** — Böbreklerin büyümesi polikistik hastalıklara uyar; nefronofthisiste böbrekler genellikle küçülmüş ve büzüşmüştür.\n- **Kistlerin çok küçük olabilmesi** — Kistlerin çok küçük olabilmesi doğru: kistler radyolojik olarak görünmeyecek kadar küçük olabilir; kortikomedüller bileşke örneklenmezse biyopside de kaçabilir.\n- **Kistlerin kanlı içeriği** — Kanlı içerikli kistler edinilmiş kistik hastalıkta hematüriye yol açar; nefronofthisiste kistlerin görülememesini açıklamaz.\n- **Tek böbreğin tutulması** — Tek böbreğin tutulması multikistik böbrek displazisinin özelliğidir; nefronofthisisteki tanı güçlüğünün nedeni değildir.\n\n**Cevap: C** — Kistlerin çok küçük olabilmesi\n\n**Özet.** Nefronofthisiste kistler radyolojik olarak görünmeyecek kadar küçük olabilir; kortikomedüller bileşke iyi örneklenmezse biyopside de gözden kaçabilir.",
    "ses": "Nefronoftiziste görüntülemede kist görülmemesini açıklayan özellik hangisidir?\nA, Kistlerin kortekse sınırlı olması\nBe, Böbreklerin büyümüş olması\nCe, Kistlerin çok küçük olabilmesi\nDe, Kistlerin kanlı içeriği\nE, Tek böbreğin tutulması\nŞıkları sırasıyla gözden geçirelim.\nKortekse sınırlı kistler basit kistlerin özelliğidir. Nefronoftiziste kistler kortikomedüller bileşke ve medullada yerleşir.\nBöbreklerin büyümesi polikistik hastalıklara uyar. Nefronoftiziste böbrekler genellikle küçülmüş ve büzüşmüştür.\nKistlerin çok küçük olabilmesi doğru. Kistler radyolojik olarak görünmeyecek kadar küçük olabilir. Kortikomedüller bileşke örneklenmezse biyopside de kaçabilir.\nKanlı içerikli kistler edinilmiş kistik hastalıkta hematüriye yol açar. Nefronoftiziste kistlerin görülememesini açıklamaz.\nTek böbreğin tutulması multikistik böbrek displazisinin özelliğidir. Nefronoftizisteki tanı güçlüğünün nedeni değildir.\nDoğru cevap Ce, Kistlerin çok küçük olabilmesi\nNefronoftiziste kistler radyolojik olarak görünmeyecek kadar küçük olabilir. Kortikomedüller bileşke iyi örneklenmezse biyopside de gözden kaçabilir.",
    "kelime": 157
@@ -756,6 +941,7 @@
   {
    "no": 44,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Multikistik böbrek displazisinin patogenezinde çoğunlukla hangisi vardır?",
    "secenekler": {
     "A": "PKD1 mutasyonu",
@@ -765,6 +951,7 @@
     "E": "NPHP gen mutasyonu"
    },
    "dogru": "D",
+   "ipucu": "Gelişmekte olan böbreğin arkasında artan hidrostatik basıncın normal farklılaşmayı nasıl bozacağını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "PKD1 mutasyonu ADPKD olgularının %85–90'ından sorumludur; multikistik displazi ise kalıtsal değil gelişimsel bir bozukluktur.",
@@ -774,6 +961,10 @@
     "E": "NPHP genleri nefronofthisisin otozomal resesif formlarına yol açar ve epitel siliyasıyla ilişkili proteinleri kodlar; displazinin nedeni değildir."
    },
    "ozet": "Multikistik böbrek displazisi çocukluk çağının en sık kistik böbrek hastalığıdır; çoğunlukla alt idrar yolu tıkanıklığına bağlı artmış basınç böbrek gelişimini bozar.",
+   "sayfa": [
+    27,
+    31
+   ],
    "metin": "**Soru.** Multikistik böbrek displazisinin patogenezinde çoğunlukla hangisi vardır?\n\n**A)** PKD1 mutasyonu · **B)** PKHD1 mutasyonu · **C)** Uzun süreli diyaliz · **D)** Alt idrar yolu tıkanıklığı · **E)** NPHP gen mutasyonu\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **PKD1 mutasyonu** — PKD1 mutasyonu ADPKD olgularının %85–90'ından sorumludur; multikistik displazi ise kalıtsal değil gelişimsel bir bozukluktur.\n- **PKHD1 mutasyonu** — PKHD1 mutasyonu ARPKD'ye yol açar ve fibrosistini kodlar; multikistik böbrek displazisinin nedeni değildir.\n- **Uzun süreli diyaliz** — Uzun süreli diyaliz edinilmiş kistik böbrek hastalığının zeminidir; çocukluk çağındaki multikistik displaziyle ilgisi yoktur.\n- **Alt idrar yolu tıkanıklığı** — Alt idrar yolu tıkanıklığı doğru: artmış hidrostatik basınç böbrek gelişimini bozar ve multikistik displazi oluşur.\n- **NPHP gen mutasyonu** — NPHP genleri nefronofthisisin otozomal resesif formlarına yol açar ve epitel siliyasıyla ilişkili proteinleri kodlar; displazinin nedeni değildir.\n\n**Cevap: D** — Alt idrar yolu tıkanıklığı\n\n**Özet.** Multikistik böbrek displazisi çocukluk çağının en sık kistik böbrek hastalığıdır; çoğunlukla alt idrar yolu tıkanıklığına bağlı artmış basınç böbrek gelişimini bozar.",
    "ses": "Multikistik böbrek displazisinin patogenezinde çoğunlukla hangisi vardır?\nA, Pe ka de bir mutasyonu\nBe, Pe ka ha de bir mutasyonu\nCe, Uzun süreli diyaliz\nDe, Alt idrar yolu tıkanıklığı\nE, Ne pe ha pe gen mutasyonu\nŞimdi seçeneklere tek tek bakalım.\nPe ka de bir mutasyonu a de pe ka de olgularının yüzde seksen beş ile doksanından sorumludur. Multikistik displazi ise kalıtsal değil gelişimsel bir bozukluktur.\nPe ka ha de bir mutasyonu a re pe ka de'ye yol açar ve fibrosistini kodlar. Multikistik böbrek displazisinin nedeni değildir.\nUzun süreli diyaliz edinilmiş kistik böbrek hastalığının zeminidir. Çocukluk çağındaki multikistik displaziyle ilgisi yoktur.\nAlt idrar yolu tıkanıklığı doğru. Artmış hidrostatik basınç böbrek gelişimini bozar ve multikistik displazi oluşur.\nNe pe ha pe genleri nefronoftizisin otozomal resesif formlarına yol açar ve epitel siliyasıyla ilişkili proteinleri kodlar. Displazinin nedeni değildir.\nDoğru cevap De, Alt idrar yolu tıkanıklığı\nMultikistik böbrek displazisi çocukluk çağının en sık kistik böbrek hastalığıdır. Çoğunlukla alt idrar yolu tıkanıklığına bağlı artmış basınç böbrek gelişimini bozar.",
    "kelime": 163
@@ -781,6 +972,7 @@
   {
    "no": 45,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Hangisinin tek taraflı hidronefroz yapması en olasıdır?",
    "secenekler": {
     "A": "Prostat hiperplazisi",
@@ -790,6 +982,7 @@
     "E": "Üreter taşı"
    },
    "dogru": "E",
+   "ipucu": "Tıkanıklığın mesane boynunun üstünde mi altında mı olduğunun tutulumun tarafını belirlediğini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Prostat hiperplazisi mesane boynunun altında tıkanıklık yapar; bu düzeydeki tıkanıklık genellikle iki böbreği birden etkiler.",
@@ -799,6 +992,10 @@
     "E": "Üreter taşı doğru: mesane boynunun üzerindeki, yani üreter ya da daha yukarıdaki tıkanıklık tek taraflı etki yapar."
    },
    "ozet": "Tıkanıklık mesane boynunun üzerindeyse tek taraflı, altındaysa genellikle iki taraflı etki yapar; prostat ve üretra lezyonları iki böbreği birden etkileyebilir.",
+   "sayfa": [
+    33,
+    40
+   ],
    "metin": "**Soru.** Hangisinin tek taraflı hidronefroz yapması en olasıdır?\n\n**A)** Prostat hiperplazisi · **B)** Üretra atrezisi · **C)** Prostat karsinomu · **D)** Üretrada darlık · **E)** Üreter taşı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Prostat hiperplazisi** — Prostat hiperplazisi mesane boynunun altında tıkanıklık yapar; bu düzeydeki tıkanıklık genellikle iki böbreği birden etkiler.\n- **Üretra atrezisi** — Üretra atrezisi hidronefrozun doğumsal nedenlerindendir; mesane boynu altında olduğu için etkisi genellikle iki taraflıdır.\n- **Prostat karsinomu** — Prostat karsinomu edinilmiş bir hidronefroz nedenidir; mesane boynu altındaki bir tıkanıklık olarak genellikle iki taraflı etki yapar.\n- **Üretrada darlık** — Üretradaki darlık mesane boynunun altında yer alır; bu seviyedeki tıkanıklık iki böbreği birlikte tehdit eder.\n- **Üreter taşı** — Üreter taşı doğru: mesane boynunun üzerindeki, yani üreter ya da daha yukarıdaki tıkanıklık tek taraflı etki yapar.\n\n**Cevap: E** — Üreter taşı\n\n**Özet.** Tıkanıklık mesane boynunun üzerindeyse tek taraflı, altındaysa genellikle iki taraflı etki yapar; prostat ve üretra lezyonları iki böbreği birden etkileyebilir.",
    "ses": "Hangisinin tek taraflı hidronefroz yapması en olasıdır?\nA, Prostat hiperplazisi\nBe, Üretra atrezisi\nCe, Prostat karsinomu\nDe, Üretrada darlık\nE, Üreter taşı\nSeçenekleri sırayla değerlendirelim.\nProstat hiperplazisi mesane boynunun altında tıkanıklık yapar. Bu düzeydeki tıkanıklık genellikle iki böbreği birden etkiler.\nÜretra atrezisi hidronefrozun doğumsal nedenlerindendir. Mesane boynu altında olduğu için etkisi genellikle iki taraflıdır.\nProstat karsinomu edinilmiş bir hidronefroz nedenidir. Mesane boynu altındaki bir tıkanıklık olarak genellikle iki taraflı etki yapar.\nÜretradaki darlık mesane boynunun altında yer alır. Bu seviyedeki tıkanıklık iki böbreği birlikte tehdit eder.\nÜreter taşı doğru. Mesane boynunun üzerindeki, yani üreter ya da daha yukarıdaki tıkanıklık tek taraflı etki yapar.\nDoğru cevap E, Üreter taşı\nTıkanıklık mesane boynunun üzerindeyse tek taraflı, altındaysa genellikle iki taraflı etki yapar. Prostat ve üretra lezyonları iki böbreği birden etkileyebilir.",
    "kelime": 155
@@ -806,6 +1003,7 @@
   {
    "no": 46,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Kalsiyum taşları içinde alkali idrarın riskini artırdığı tip hangisidir?",
    "secenekler": {
     "A": "Kalsiyum oksalat",
@@ -815,6 +1013,7 @@
     "E": "Sistin"
    },
    "dogru": "B",
+   "ipucu": "Alkali ortamın kolaylaştırdığı taşlarla asidik ortamın kolaylaştırdığı taşları ayır, sonra enfeksiyonla ilgili olmayanı seç.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Kalsiyum oksalat en sık taş bileşenidir, ancak alkali idrarın riskini artırdığı kalsiyum taşı olarak tanımlanan tip bu değildir.",
@@ -824,6 +1023,9 @@
     "E": "Sistin taşları kalıtsal sistinüriyle ilişkilidir ve asidik idrarda oluşma eğilimindedir."
    },
    "ozet": "Kalsiyum taşlarında alkali idrar kalsiyum fosfat riskini artırır; strüvit de alkali idrarda oluşur, ürik asit ve sistin ise asidik idrarda oluşur.",
+   "sayfa": [
+    37
+   ],
    "metin": "**Soru.** Kalsiyum taşları içinde alkali idrarın riskini artırdığı tip hangisidir?\n\n**A)** Kalsiyum oksalat · **B)** Kalsiyum fosfat · **C)** Magnezyum amonyum fosfat · **D)** Ürik asit · **E)** Sistin\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Kalsiyum oksalat** — Kalsiyum oksalat en sık taş bileşenidir, ancak alkali idrarın riskini artırdığı kalsiyum taşı olarak tanımlanan tip bu değildir.\n- **Kalsiyum fosfat** — Kalsiyum fosfat doğru: kalsiyum taşları içinde alkali idrar özellikle kalsiyum fosfat taşı riskini artırır.\n- **Magnezyum amonyum fosfat** — Magnezyum amonyum fosfat yani strüvit de alkali idrarda oluşur, ama kalsiyum taşı değildir; üreaz pozitif bakterilerle gelişen enfeksiyon taşıdır.\n- **Ürik asit** — Ürik asit taşları alkali değil, sürekli asidik idrarda, pH 5,5'in altında oluşur.\n- **Sistin** — Sistin taşları kalıtsal sistinüriyle ilişkilidir ve asidik idrarda oluşma eğilimindedir.\n\n**Cevap: B** — Kalsiyum fosfat\n\n**Özet.** Kalsiyum taşlarında alkali idrar kalsiyum fosfat riskini artırır; strüvit de alkali idrarda oluşur, ürik asit ve sistin ise asidik idrarda oluşur.",
    "ses": "Kalsiyum taşları içinde alkali idrarın riskini artırdığı tip hangisidir?\nA, Kalsiyum oksalat\nBe, Kalsiyum fosfat\nCe, Magnezyum amonyum fosfat\nDe, Ürik asit\nE, Sistin\nHer seçeneği tek tek ele alalım.\nKalsiyum oksalat en sık taş bileşenidir, ancak alkali idrarın riskini artırdığı kalsiyum taşı olarak tanımlanan tip bu değildir.\nKalsiyum fosfat doğru. Kalsiyum taşları içinde alkali idrar özellikle kalsiyum fosfat taşı riskini artırır.\nMagnezyum amonyum fosfat yani strüvit de alkali idrarda oluşur, ama kalsiyum taşı değildir. Üreaz pozitif bakterilerle gelişen enfeksiyon taşıdır.\nÜrik asit taşları alkali değil, sürekli asidik idrarda, pe ha beş virgül beşin altında oluşur.\nSistin taşları kalıtsal sistinüriyle ilişkilidir ve asidik idrarda oluşma eğilimindedir.\nDoğru cevap Be, Kalsiyum fosfat\nKalsiyum taşlarında alkali idrar kalsiyum fosfat riskini artırır. Strüvit de alkali idrarda oluşur, ürik asit ve sistin ise asidik idrarda oluşur.",
    "kelime": 156
@@ -831,6 +1033,7 @@
   {
    "no": 47,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Sistin taşlarının oluşumunda temel neden hangisidir?",
    "secenekler": {
     "A": "Hiperürikozüri",
@@ -840,6 +1043,7 @@
     "E": "Absorptif hiperkalsiüri"
    },
    "dogru": "D",
+   "ipucu": "Bu taşın adını taşıyan kalıtsal idrar bozukluğunun hangi tür molekülün böbrekte taşınmasını etkilediğini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Hiperürikozüri, gut ve lösemi tedavisindeki hücre yıkımıyla ürik asit taşlarına yol açar; sistin taşının nedeni değildir.",
@@ -849,6 +1053,10 @@
     "E": "Absorptif hiperkalsiüri bağırsaktan kalsiyum emiliminin artmasıdır; kalsiyum taşlarının mekanizmasıdır, sistin taşıyla ilgisi yoktur."
    },
    "ozet": "Sistin taşları tüm taşların yaklaşık %1–2'sini oluşturur; genetik amino asit taşıma defekti olan kalıtsal sistinüriyle ilişkilidir ve asidik idrarda oluşur.",
+   "sayfa": [
+    36,
+    37
+   ],
    "metin": "**Soru.** Sistin taşlarının oluşumunda temel neden hangisidir?\n\n**A)** Hiperürikozüri · **B)** Üreaz pozitif bakteriler · **C)** Hiperoksalüri · **D)** Genetik amino asit taşıma defekti · **E)** Absorptif hiperkalsiüri\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Hiperürikozüri** — Hiperürikozüri, gut ve lösemi tedavisindeki hücre yıkımıyla ürik asit taşlarına yol açar; sistin taşının nedeni değildir.\n- **Üreaz pozitif bakteriler** — Üreaz pozitif bakteriler idrarı alkalileştirerek strüvit taşlarını oluşturur; sistin taşları ise asidik idrarda oluşur.\n- **Hiperoksalüri** — Hiperoksalüri, enterik ya da primer kalıtsal tipiyle kalsiyum taşlarına zemin hazırlar; sistin taşının nedeni değildir.\n- **Genetik amino asit taşıma defekti** — Genetik amino asit taşıma defekti doğru: sistin taşları genellikle kalıtsal sistinüriyle ilişkilidir ve asidik idrarda oluşur.\n- **Absorptif hiperkalsiüri** — Absorptif hiperkalsiüri bağırsaktan kalsiyum emiliminin artmasıdır; kalsiyum taşlarının mekanizmasıdır, sistin taşıyla ilgisi yoktur.\n\n**Cevap: D** — Genetik amino asit taşıma defekti\n\n**Özet.** Sistin taşları tüm taşların yaklaşık %1–2'sini oluşturur; genetik amino asit taşıma defekti olan kalıtsal sistinüriyle ilişkilidir ve asidik idrarda oluşur.",
    "ses": "Sistin taşlarının oluşumunda temel neden hangisidir?\nA, Hiperürikozüri\nBe, Üreaz pozitif bakteriler\nCe, Hiperoksalüri\nDe, Genetik amino asit taşıma defekti\nE, Absorptif hiperkalsiüri\nŞıkları sırasıyla gözden geçirelim.\nHiperürikozüri, gut ve lösemi tedavisindeki hücre yıkımıyla ürik asit taşlarına yol açar. Sistin taşının nedeni değildir.\nÜreaz pozitif bakteriler idrarı alkalileştirerek strüvit taşlarını oluşturur. Sistin taşları ise asidik idrarda oluşur.\nHiperoksalüri, enterik ya da primer kalıtsal tipiyle kalsiyum taşlarına zemin hazırlar. Sistin taşının nedeni değildir.\nGenetik amino asit taşıma defekti doğru. Sistin taşları genellikle kalıtsal sistinüriyle ilişkilidir ve asidik idrarda oluşur.\nAbsorptif hiperkalsiüri bağırsaktan kalsiyum emiliminin artmasıdır. Kalsiyum taşlarının mekanizmasıdır, sistin taşıyla ilgisi yoktur.\nDoğru cevap De, Genetik amino asit taşıma defekti\nSistin taşları tüm taşların yaklaşık yüzde bir ile ikisini oluşturur. Genetik amino asit taşıma defekti olan kalıtsal sistinüriyle ilişkilidir ve asidik idrarda oluşur.",
    "kelime": 158
@@ -856,6 +1064,7 @@
   {
    "no": 48,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Renal hiperkalsiürinin mekanizması hangisidir?",
    "secenekler": {
     "A": "Bağırsak kalsiyum emiliminde artış",
@@ -865,6 +1074,7 @@
     "E": "Üreaz pozitif enfeksiyon"
    },
    "dogru": "C",
+   "ipucu": "Kandaki düzey normalken idrara fazla geçişin bağırsakta mı yoksa tübül düzeyinde mi başladığını ayır.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Bağırsak kalsiyum emiliminde artış absorptif hiperkalsiürinin mekanizmasıdır; renal tipte sorun bağırsakta değildir.",
@@ -874,6 +1084,9 @@
     "E": "Üreaz pozitif bakterilerle enfeksiyon idrarı alkalileştirip strüvit taşı oluşturur; kalsiyum geri emilimiyle ilgisi yoktur."
    },
    "ozet": "Kalsiyum taşlı hastaların yarısında hiperkalsemisiz hiperkalsiüri vardır; absorptif tipte bağırsak emilimi artar, renal tipte ise böbreğin kalsiyum geri emilimi kusurludur.",
+   "sayfa": [
+    37
+   ],
    "metin": "**Soru.** Renal hiperkalsiürinin mekanizması hangisidir?\n\n**A)** Bağırsak kalsiyum emiliminde artış · **B)** Hiperkalsemi · **C)** Böbrekte kalsiyum geri emilim kusuru · **D)** Hiperoksalüri · **E)** Üreaz pozitif enfeksiyon\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Bağırsak kalsiyum emiliminde artış** — Bağırsak kalsiyum emiliminde artış absorptif hiperkalsiürinin mekanizmasıdır; renal tipte sorun bağırsakta değildir.\n- **Hiperkalsemi** — Hiperkalsemi bu tabloda yoktur; kalsiyum taşlı hastaların yarısında hiperkalsiüri vardır, ama kan kalsiyumu yükselmemiştir.\n- **Böbrekte kalsiyum geri emilim kusuru** — Böbrekte kalsiyum geri emilim kusuru doğru: renal hiperkalsiüride böbreğin kalsiyumu geri emmesindeki kusur idrara fazla kalsiyum geçirir.\n- **Hiperoksalüri** — Hiperoksalüri kalsiyum taşlarının ayrı bir alt grubudur, enterik ya da primer kalıtsal tipleri vardır; hiperkalsiüri mekanizması değildir.\n- **Üreaz pozitif enfeksiyon** — Üreaz pozitif bakterilerle enfeksiyon idrarı alkalileştirip strüvit taşı oluşturur; kalsiyum geri emilimiyle ilgisi yoktur.\n\n**Cevap: C** — Böbrekte kalsiyum geri emilim kusuru\n\n**Özet.** Kalsiyum taşlı hastaların yarısında hiperkalsemisiz hiperkalsiüri vardır; absorptif tipte bağırsak emilimi artar, renal tipte ise böbreğin kalsiyum geri emilimi kusurludur.",
    "ses": "Renal hiperkalsiürinin mekanizması hangisidir?\nA, Bağırsak kalsiyum emiliminde artış\nBe, Hiperkalsemi\nCe, Böbrekte kalsiyum geri emilim kusuru\nDe, Hiperoksalüri\nE, Üreaz pozitif enfeksiyon\nŞimdi seçeneklere tek tek bakalım.\nBağırsak kalsiyum emiliminde artış absorptif hiperkalsiürinin mekanizmasıdır. Renal tipte sorun bağırsakta değildir.\nHiperkalsemi bu tabloda yoktur. Kalsiyum taşlı hastaların yarısında hiperkalsiüri vardır, ama kan kalsiyumu yükselmemiştir.\nBöbrekte kalsiyum geri emilim kusuru doğru. Renal hiperkalsiüride böbreğin kalsiyumu geri emmesindeki kusur idrara fazla kalsiyum geçirir.\nHiperoksalüri kalsiyum taşlarının ayrı bir alt grubudur, enterik ya da primer kalıtsal tipleri vardır. Hiperkalsiüri mekanizması değildir.\nÜreaz pozitif bakterilerle enfeksiyon idrarı alkalileştirip strüvit taşı oluşturur. Kalsiyum geri emilimiyle ilgisi yoktur.\nDoğru cevap Ce, Böbrekte kalsiyum geri emilim kusuru\nKalsiyum taşlı hastaların yarısında hiperkalsemisiz hiperkalsiüri vardır. Absorptif tipte bağırsak emilimi artar, renal tipte ise böbreğin kalsiyum geri emilimi kusurludur.",
    "kelime": 161
@@ -881,6 +1094,7 @@
   {
    "no": 49,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Hidronefrozda ilk ortaya çıkan işlevsel bozukluk hangisidir?",
    "secenekler": {
     "A": "Glomerüler filtrasyon azalması",
@@ -890,6 +1104,7 @@
     "E": "Kortikal atrofi"
    },
    "dogru": "C",
+   "ipucu": "Artan basıncın önce papilla ve piramitleri sıkıştırdığını ve bu bölgelerin hangi işlevden sorumlu olduğunu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Glomerüler filtrasyon hızında azalma hidronefrozda daha sonra gelişir; tıkanıklığa rağmen filtrasyon bir süre devam eder.",
@@ -899,6 +1114,9 @@
     "E": "Kortikal parankim atrofisi kronik engelin sonucudur ve hidronefrozun tanımında yer alır; ilk ortaya çıkan bozukluk değildir."
    },
    "ozet": "Hidronefrozda başlangıçta idrar konsantrasyon bozukluğu, daha sonra glomerüler filtrasyon hızında azalma ve sonunda interstisyel fibrozis gelişir.",
+   "sayfa": [
+    42
+   ],
    "metin": "**Soru.** Hidronefrozda ilk ortaya çıkan işlevsel bozukluk hangisidir?\n\n**A)** Glomerüler filtrasyon azalması · **B)** İnterstisyel fibrozis · **C)** İdrar konsantrasyon bozukluğu · **D)** Glomerüler kayıp · **E)** Kortikal atrofi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Glomerüler filtrasyon azalması** — Glomerüler filtrasyon hızında azalma hidronefrozda daha sonra gelişir; tıkanıklığa rağmen filtrasyon bir süre devam eder.\n- **İnterstisyel fibrozis** — İnterstisyel fibrozis hidronefrozda sürecin son aşamasıdır; ilk ortaya çıkan değişiklik değildir.\n- **İdrar konsantrasyon bozukluğu** — İdrar konsantrasyon bozukluğu doğru: artan basınç papilla ve piramitleri sıkıştırır, bu yüzden başlangıçta idrar konsantrasyonu bozulur.\n- **Glomerüler kayıp** — Glomerüler kayıp ileri hidronefrozun mikroskobik bulgusudur; başlangıç değişikliği değildir.\n- **Kortikal atrofi** — Kortikal parankim atrofisi kronik engelin sonucudur ve hidronefrozun tanımında yer alır; ilk ortaya çıkan bozukluk değildir.\n\n**Cevap: C** — İdrar konsantrasyon bozukluğu\n\n**Özet.** Hidronefrozda başlangıçta idrar konsantrasyon bozukluğu, daha sonra glomerüler filtrasyon hızında azalma ve sonunda interstisyel fibrozis gelişir.",
    "ses": "Hidronefrozda ilk ortaya çıkan işlevsel bozukluk hangisidir?\nA, Glomerüler filtrasyon azalması\nBe, İnterstisyel fibrozis\nCe, İdrar konsantrasyon bozukluğu\nDe, Glomerüler kayıp\nE, Kortikal atrofi\nSeçenekleri sırayla değerlendirelim.\nGlomerüler filtrasyon hızında azalma hidronefrozda daha sonra gelişir. Tıkanıklığa rağmen filtrasyon bir süre devam eder.\nİnterstisyel fibrozis hidronefrozda sürecin son aşamasıdır. İlk ortaya çıkan değişiklik değildir.\nİdrar konsantrasyon bozukluğu doğru. Artan basınç papilla ve piramitleri sıkıştırır, bu yüzden başlangıçta idrar konsantrasyonu bozulur.\nGlomerüler kayıp ileri hidronefrozun mikroskobik bulgusudur. Başlangıç değişikliği değildir.\nKortikal parankim atrofisi kronik engelin sonucudur ve hidronefrozun tanımında yer alır. İlk ortaya çıkan bozukluk değildir.\nDoğru cevap Ce, İdrar konsantrasyon bozukluğu\nHidronefrozda başlangıçta idrar konsantrasyon bozukluğu, daha sonra glomerüler filtrasyon hızında azalma ve sonunda interstisyel fibrozis gelişir.",
    "kelime": 145
@@ -906,6 +1124,7 @@
   {
    "no": 50,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Hangisi hidronefrozun doğumsal nedenlerindendir?",
    "secenekler": {
     "A": "Üreteri sıkıştıran anormal renal arter",
@@ -915,6 +1134,7 @@
     "E": "Gebelik"
    },
    "dogru": "A",
+   "ipucu": "Doğuştan var olan bir damar seyir bozukluğunun idrar yolunu dıştan nasıl kapatabileceğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Üreteri sıkıştıran anormal renal arter doğru: üretra atrezisi ve üreter ya da üretrada valv veya darlıkla birlikte doğumsal nedenlerdendir.",
@@ -924,6 +1144,9 @@
     "E": "Gebelik edinilmiş bir nedendir ve genellikle hafif hidronefroz yapar."
    },
    "ozet": "Hidronefrozun doğumsal nedenleri üretra atrezisi, üreter ya da üretrada valv veya darlık ve üreteri sıkıştıran anormal renal arterdir; taşlar ve tümörler edinilmiştir.",
+   "sayfa": [
+    40
+   ],
    "metin": "**Soru.** Hangisi hidronefrozun doğumsal nedenlerindendir?\n\n**A)** Üreteri sıkıştıran anormal renal arter · **B)** Prostat hiperplazisi · **C)** Nörojenik mesane · **D)** Retroperitoneal lenfoma · **E)** Gebelik\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Üreteri sıkıştıran anormal renal arter** — Üreteri sıkıştıran anormal renal arter doğru: üretra atrezisi ve üreter ya da üretrada valv veya darlıkla birlikte doğumsal nedenlerdendir.\n- **Prostat hiperplazisi** — Prostat hiperplazisi hidronefrozun edinilmiş nedenlerindendir ve mesane boynu altında tıkanıklık yapar.\n- **Nörojenik mesane** — Nörojenik mesane omurilik hasarına bağlı gelişen edinilmiş bir hidronefroz nedenidir.\n- **Retroperitoneal lenfoma** — Retroperitoneal lenfoma, serviks ve uterus karsinomuyla birlikte edinilmiş nedenler arasında yer alır.\n- **Gebelik** — Gebelik edinilmiş bir nedendir ve genellikle hafif hidronefroz yapar.\n\n**Cevap: A** — Üreteri sıkıştıran anormal renal arter\n\n**Özet.** Hidronefrozun doğumsal nedenleri üretra atrezisi, üreter ya da üretrada valv veya darlık ve üreteri sıkıştıran anormal renal arterdir; taşlar ve tümörler edinilmiştir.",
    "ses": "Hangisi hidronefrozun doğumsal nedenlerindendir?\nA, Üreteri sıkıştıran anormal renal arter\nBe, Prostat hiperplazisi\nCe, Nörojenik mesane\nDe, Retroperitoneal lenfoma\nE, Gebelik\nHer seçeneği tek tek ele alalım.\nÜreteri sıkıştıran anormal renal arter doğru. Üretra atrezisi ve üreter ya da üretrada valv veya darlıkla birlikte doğumsal nedenlerdendir.\nProstat hiperplazisi hidronefrozun edinilmiş nedenlerindendir ve mesane boynu altında tıkanıklık yapar.\nNörojenik mesane omurilik hasarına bağlı gelişen edinilmiş bir hidronefroz nedenidir.\nRetroperitoneal lenfoma, serviks ve uterus karsinomuyla birlikte edinilmiş nedenler arasında yer alır.\nGebelik edinilmiş bir nedendir ve genellikle hafif hidronefroz yapar.\nDoğru cevap A, Üreteri sıkıştıran anormal renal arter\nHidronefrozun doğumsal nedenleri üretra atrezisi, üreter ya da üretrada valv veya darlık ve üreteri sıkıştıran anormal renal arterdir. Taşlar ve tümörler edinilmiştir.",
    "kelime": 147
@@ -931,6 +1154,7 @@
   {
    "no": 51,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Hidronefrozda böbrek işlevinin geri dönebilmesini belirleyen temel etken hangisidir?",
    "secenekler": {
     "A": "Taşın kimyasal tipi",
@@ -940,6 +1164,7 @@
     "E": "Karında kitle olması"
    },
    "dogru": "D",
+   "ipucu": "Engelin ne kadar uzun sürdüğüyle parankim hasarının geri dönüşümlülüğü arasındaki ilişkiyi düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Taşın kimyasal tipi idrarın kimyasal ve pH özellikleriyle belirlenir; hidronefrozda işlevin geri dönüşünü belirleyen etken değildir.",
@@ -949,6 +1174,9 @@
     "E": "Karında ele gelen kitle, tek taraflı hidronefrozun ortaya çıkış biçimlerinden biridir; işlevin geri dönüşünü belirlemez."
    },
    "ozet": "Hidronefrozda prognoz zamana bağlıdır; tıkanıklık kısa sürede giderilirse işlev geri dönebilir, uzun süreli tıkanıklıkta hasar geri dönüşümsüzdür.",
+   "sayfa": [
+    44
+   ],
    "metin": "**Soru.** Hidronefrozda böbrek işlevinin geri dönebilmesini belirleyen temel etken hangisidir?\n\n**A)** Taşın kimyasal tipi · **B)** Tıkanıklığın tek taraflı olması · **C)** İdrarın pH değeri · **D)** Tıkanıklığın giderilme süresi · **E)** Karında kitle olması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Taşın kimyasal tipi** — Taşın kimyasal tipi idrarın kimyasal ve pH özellikleriyle belirlenir; hidronefrozda işlevin geri dönüşünü belirleyen etken değildir.\n- **Tıkanıklığın tek taraflı olması** — Tek taraflı olma, diğer böbrek sağlıklıysa hidronefrozun uzun süre sessiz kalmasını açıklar; işlevin geri dönüşünü belirlemez.\n- **İdrarın pH değeri** — İdrarın pH değeri oluşacak taşın tipini belirler; hidronefrozda prognozu belirleyen etken değildir.\n- **Tıkanıklığın giderilme süresi** — Tıkanıklığın giderilme süresi doğru: tıkanıklık kısa sürede giderilirse işlev geri dönebilir, uzun süreli tıkanıklıkta hasar geri dönüşümsüzdür.\n- **Karında kitle olması** — Karında ele gelen kitle, tek taraflı hidronefrozun ortaya çıkış biçimlerinden biridir; işlevin geri dönüşünü belirlemez.\n\n**Cevap: D** — Tıkanıklığın giderilme süresi\n\n**Özet.** Hidronefrozda prognoz zamana bağlıdır; tıkanıklık kısa sürede giderilirse işlev geri dönebilir, uzun süreli tıkanıklıkta hasar geri dönüşümsüzdür.",
    "ses": "Hidronefrozda böbrek işlevinin geri dönebilmesini belirleyen temel etken hangisidir?\nA, Taşın kimyasal tipi\nBe, Tıkanıklığın tek taraflı olması\nCe, İdrarın pe ha değeri\nDe, Tıkanıklığın giderilme süresi\nE, Karında kitle olması\nŞıkları sırasıyla gözden geçirelim.\nTaşın kimyasal tipi idrarın kimyasal ve pe ha özellikleriyle belirlenir. Hidronefrozda işlevin geri dönüşünü belirleyen etken değildir.\nTek taraflı olma, diğer böbrek sağlıklıysa hidronefrozun uzun süre sessiz kalmasını açıklar. İşlevin geri dönüşünü belirlemez.\nİdrarın pe ha değeri oluşacak taşın tipini belirler. Hidronefrozda prognozu belirleyen etken değildir.\nTıkanıklığın giderilme süresi doğru. Tıkanıklık kısa sürede giderilirse işlev geri dönebilir, uzun süreli tıkanıklıkta hasar geri dönüşümsüzdür.\nKarında ele gelen kitle, tek taraflı hidronefrozun ortaya çıkış biçimlerinden biridir. İşlevin geri dönüşünü belirlemez.\nDoğru cevap De, Tıkanıklığın giderilme süresi\nHidronefrozda prognoz zamana bağlıdır. Tıkanıklık kısa sürede giderilirse işlev geri dönebilir, uzun süreli tıkanıklıkta hasar geri dönüşümsüzdür.",
    "kelime": 166

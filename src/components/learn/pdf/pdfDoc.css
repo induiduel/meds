@@ -80,7 +80,9 @@
 
 /* ---------- tam ekran ---------- */
 .dpv:fullscreen { width: calc(100vw / var(--in-zoom, 1)); height: calc(100vh / var(--in-zoom, 1)); }
-.dpv.is-max { position: fixed; inset: 0; z-index: 1000; height: calc(100dvh / var(--in-zoom, 1)); padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px); }
+/* iOS Safari/Chrome: 100dvh tarayıcı altlığını hesaba katmaz; görünür alan (--vvh/--vvt) kullanılır.
+   Böylece PDF altındaki araç çubuğu Chrome'un alt çubuğunun altında kalmaz. */
+.dpv.is-max { position: fixed; top: calc(var(--vvt, 0px) / var(--in-zoom, 1)); right: 0; bottom: auto; left: 0; z-index: 1000; height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1)); max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1)); padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px); }
 
 /* ---------- diğer ayarlar menüsü ---------- */
 .dpv-more { position: relative; }

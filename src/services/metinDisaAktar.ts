@@ -249,68 +249,206 @@ async function pdf(b: AktarBelge): Promise<Blob> {
       cx += k.w + sonraki;
     });
   };
-  /** metni akıtır: satır satır sayfa sonu denetimiyle */
-  const akit = (runs: Run[], x: number, gen: number, pt: number, renk: RGB = INK, once?: () => void) => {
-    const sat = satirla(runs, gen, pt);
-    yer(lh(pt) * Math.min(2, sat.length));
-    once?.();
-    for (const s of sat) { yer(lh(pt)); satirCiz(s, x, y + pt * 0.3528, pt, renk); y += lh(pt); }
+  const hesaplaBlokH = (x: Blok): number => {
+    if (x.tur === 'h') {
+      return satirla(x.r.map((r) => ({ ...r, b: true })), CW, 11.2).length * lh(11.2) + 2.3;
+    }
+    if (x.tur === 'p') {
+      return satirla(x.r, CW, 10.5).length * lh(10.5) + 1.8;
+    }
+    if (x.tur === 'li') {
+      const ic = x.isaret === '•' ? 5 : 6.5;
+      const gen = CW - ic - x.dz * 5;
+      return satirla(x.r, gen, 10.5).length * lh(10.5) + 1.4;
+    }
+    if (x.tur === 'not') {
+      const pt = 10, gen = CW - 9;
+      const satirlar = x.satirlar.map((r, i) =>
+        satirla(i === 0 && x.etiket ? [{ t: `${x.etiket}: `, b: true }, ...r] : r, gen, pt)
+      );
+      return satirlar.flat().length * lh(pt) + 6.5;
+    }
+    if (x.tur === 'tablo') {
+      const sut = Math.max(...x.satirlar.map((r) => r.length), 1);
+      const cw = CW / sut, pt = 9, pad = 1.6;
+      let th = 4;
+      for (let ri = 0; ri < x.satirlar.length; ri++) {
+        const r = x.satirlar[ri];
+        let maxSatir = 1;
+        for (let ci = 0; ci < sut; ci++) {
+          const l = satirla((r[ci] || []).map((z) => (ri === 0 ? { ...z, b: true } : z)), cw - 2 * pad, pt).length;
+          if (l > maxSatir) maxSatir = l;
+        }
+        th += maxSatir * lh(pt) + 2 * pad;
+      }
+      return th;
+    }
+    return 10;
   };
 
-  akit([{ t: b.baslik, b: true }], M, CW, 19);
+  /** metni akıtır: paragraf / madde bütünlüğünü korur, sayfa sonuna sığmıyorsa yeni sayfaya taşır */
+  const akit = (
+    runs: Run[],
+    x: number,
+    gen: number,
+    pt: number,
+    renk: RGB = INK,
+    once?: () => void,
+    ekstraAltBosluk = 0
+  ) => {
+    const sat = satirla(runs, gen, pt);
+    if (!sat.length) return;
+    const blokH = sat.length * lh(pt) + ekstraAltBosluk;
+
+    // Paragraf veya madde tek bir sayfaya sığıyorsa ve mevcut sayfada kalan yere sığmıyorsa:
+    // Cümleyi/paragrafı yarıda kesme, doğrudan yeni sayfada başlat!
+    if (blokH <= ALT - M && y + blokH > ALT) {
+      doc.addPage();
+      y = M;
+    }
+
+    once?.();
+    for (const s of sat) {
+      if (y + lh(pt) > ALT) {
+        doc.addPage();
+        y = M;
+      }
+      satirCiz(s, x, y + pt * 0.3528, pt, renk);
+      y += lh(pt);
+    }
+    y += ekstraAltBosluk;
+  };
+
+  akit([{ t: b.baslik, b: true }], M, CW, 19, INK, undefined, 0);
   doc.setFont(F, 'normal'); doc.setFontSize(9.5); doc.setTextColor(...SOL);
   doc.text(T(b.alt), M, y + 3); y += 5.5;
   doc.setDrawColor(...CIZGI); doc.setLineWidth(0.3); doc.line(M, y, W - M, y); y += 5;
 
   for (const bo of b.bolumler) {
+    const blokDizisi = bloklar(bo.md);
     if (bo.baslik) {
       doc.setFont(F, 'bold'); doc.setFontSize(13);
       const s = doc.splitTextToSize(T(bo.baslik), CW - 4) as string[];
-      yer(s.length * lh(13) + 4 + lh(10.5) * 3); // başlık sayfa sonunda yalnız kalmasın
+      const hBaslik = s.length * lh(13) + 4.5;
+      const hAlt = bo.alt ? satirla([{ t: bo.alt, i: true }], CW - 3.5, 9.5).length * lh(9.5) + 1 : 0;
+      const hIlk = blokDizisi.length > 0 ? hesaplaBlokH(blokDizisi[0]) : 20;
+
+      // Konu başlığı + alt başlığı + ilk bloğu bu sayfaya sığmıyorsa
+      // veya sayfada 45 mm'den az alan kalmışsa konuyu ve başlığı yeni sayfada başlat
+      if (y > M && (y + hBaslik + hAlt + hIlk > ALT || ALT - y < 45)) {
+        doc.addPage();
+        y = M;
+      }
+
       y += 3;
       doc.setFillColor(...VURGU); doc.rect(M, y - 0.2, 1.2, s.length * lh(13) - 0.6, 'F');
       doc.setTextColor(...VURGU);
       s.forEach((t, i) => doc.text(t, M + 3.5, y + 4.2 + i * lh(13)));
       y += s.length * lh(13) + 1.5;
     }
-    if (bo.alt) { akit([{ t: bo.alt, i: true }], M + 3.5, CW - 3.5, 9.5, SOL); y += 1; }
+    if (bo.alt) {
+      akit([{ t: bo.alt, i: true }], M + 3.5, CW - 3.5, 9.5, SOL, undefined, 1);
+    }
     y += 1;
-    for (const x of bloklar(bo.md)) {
-      if (x.tur === 'h') { y += 1.5; akit(x.r.map((r) => ({ ...r, b: true })), M, CW, 11.2); y += 0.8; }
-      else if (x.tur === 'p') { akit(x.r, M, CW, 10.5); y += 1.8; }
-      else if (x.tur === 'li') {
+
+    for (let bIdx = 0; bIdx < blokDizisi.length; bIdx++) {
+      const x = blokDizisi[bIdx];
+      if (x.tur === 'h') {
+        const sonrakiBlok = blokDizisi[bIdx + 1];
+        const sonrakiH = sonrakiBlok ? hesaplaBlokH(sonrakiBlok) : 15;
+        const baslikSatirlar = satirla(x.r.map((r) => ({ ...r, b: true })), CW, 11.2);
+        const baslikH = baslikSatirlar.length * lh(11.2) + 2.3;
+
+        // Alt başlık + sonraki blok mevcut sayfaya sığmıyorsa yeni sayfada başlat
+        if (y > M && y + baslikH + Math.min(sonrakiH, 35) > ALT) {
+          doc.addPage();
+          y = M;
+        }
+        y += 1.5;
+        akit(x.r.map((r) => ({ ...r, b: true })), M, CW, 11.2, INK, undefined, 0.8);
+      } else if (x.tur === 'p') {
+        akit(x.r, M, CW, 10.5, INK, undefined, 1.8);
+      } else if (x.tur === 'li') {
         const gx = M + x.dz * 5, ic = x.isaret === '•' ? 5 : 6.5;
-        akit(x.r, gx + ic, CW - ic - x.dz * 5, 10.5, INK, () => {
-          if (x.isaret === '•') { doc.setFillColor(...VURGU); doc.circle(gx + 1.3, y + 2.6, x.dz ? 0.55 : 0.75, 'F'); }
-          else { doc.setFont(F, 'bold'); doc.setFontSize(10.5); doc.setTextColor(...VURGU); doc.text(x.isaret, gx, y + 3.7); }
-        });
-        y += 1.4;
+        akit(
+          x.r,
+          gx + ic,
+          CW - ic - x.dz * 5,
+          10.5,
+          INK,
+          () => {
+            if (x.isaret === '•') {
+              doc.setFillColor(...VURGU);
+              doc.circle(gx + 1.3, y + 2.6, x.dz ? 0.55 : 0.75, 'F');
+            } else {
+              doc.setFont(F, 'bold');
+              doc.setFontSize(10.5);
+              doc.setTextColor(...VURGU);
+              doc.text(x.isaret, gx, y + 3.7);
+            }
+          },
+          1.4
+        );
       } else if (x.tur === 'not') {
         const pt = 10, gen = CW - 9;
-        const satirlar = x.satirlar.map((r, i) => satirla(i === 0 && x.etiket ? [{ t: `${x.etiket}: `, b: true }, ...r] : r, gen, pt));
+        const satirlar = x.satirlar.map((r, i) =>
+          satirla(i === 0 && x.etiket ? [{ t: `${x.etiket}: `, b: true }, ...r] : r, gen, pt)
+        );
         const tumu = satirlar.flat();
-        let k = 0;
+        const kutuH = tumu.length * lh(pt) + 3;
+
+        // Not kutusu tek sayfaya sığıyor ama şu anki sayfaya sığmıyorsa yeni sayfada başlat
+        if (kutuH <= ALT - M && y + kutuH + 2.5 > ALT) {
+          doc.addPage();
+          y = M;
+        }
         y += 1;
+        let k = 0;
         while (k < tumu.length) {
-          yer(lh(pt) + 3);
+          if (y + lh(pt) + 3 > ALT) {
+            doc.addPage();
+            y = M;
+          }
           const sigan = Math.max(1, Math.min(tumu.length - k, Math.floor((ALT - y - 3) / lh(pt))));
           const h = sigan * lh(pt) + 3;
-          doc.setFillColor(238, 245, 249); doc.rect(M, y, CW, h, 'F');
-          doc.setFillColor(...VURGU); doc.rect(M, y, 1.1, h, 'F');
+          doc.setFillColor(238, 245, 249);
+          doc.rect(M, y, CW, h, 'F');
+          doc.setFillColor(...VURGU);
+          doc.rect(M, y, 1.1, h, 'F');
           for (let j = 0; j < sigan; j++) satirCiz(tumu[k + j], M + 5, y + 1.5 + j * lh(pt) + pt * 0.3528, pt, INK);
-          y += h; k += sigan;
+          y += h;
+          k += sigan;
         }
         y += 2.5;
       } else if (x.tur === 'tablo') {
-        const sut = Math.max(...x.satirlar.map((r) => r.length));
+        const sut = Math.max(...x.satirlar.map((r) => r.length), 1);
         const cw = CW / sut, pt = 9, pad = 1.6;
-        y += 1;
-        x.satirlar.forEach((r, ri) => {
-          const hucre = Array.from({ length: sut }, (_, ci) => satirla((r[ci] || []).map((z) => (ri === 0 ? { ...z, b: true } : z)), cw - 2 * pad, pt));
+        const satirVerileri = x.satirlar.map((r, ri) => {
+          const hucre = Array.from({ length: sut }, (_, ci) =>
+            satirla((r[ci] || []).map((z) => (ri === 0 ? { ...z, b: true } : z)), cw - 2 * pad, pt)
+          );
           const h = Math.max(...hucre.map((c) => c.length), 1) * lh(pt) + 2 * pad;
-          yer(h);
-          if (ri === 0) { doc.setFillColor(238, 243, 247); doc.rect(M, y, CW, h, 'F'); }
-          doc.setDrawColor(...CIZGI); doc.setLineWidth(0.25);
+          return { hucre, h, ri };
+        });
+        const toplamTabloH = satirVerileri.reduce((acc, row) => acc + row.h, 0);
+
+        // Tablo tek sayfaya sığıyor ama mevcut alana sığmıyorsa yeni sayfada başlat
+        if (toplamTabloH <= ALT - M && y + toplamTabloH + 3 > ALT) {
+          doc.addPage();
+          y = M;
+        }
+        y += 1;
+        satirVerileri.forEach(({ hucre, h, ri }) => {
+          if (y + h > ALT) {
+            doc.addPage();
+            y = M;
+          }
+          if (ri === 0) {
+            doc.setFillColor(238, 243, 247);
+            doc.rect(M, y, CW, h, 'F');
+          }
+          doc.setDrawColor(...CIZGI);
+          doc.setLineWidth(0.25);
           hucre.forEach((c, ci) => {
             doc.rect(M + ci * cw, y, cw, h, 'S');
             c.forEach((s, si) => satirCiz(s, M + ci * cw + pad, y + pad + si * lh(pt) + pt * 0.3528, pt, INK));

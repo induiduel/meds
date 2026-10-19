@@ -1,7 +1,8 @@
 {
  "kod": "32",
+ "no": 32,
  "baslik": "Gebelik Hastalıkları",
- "surum": "alt-1",
+ "surum": "alt-2",
  "sorular": [
   {
    "no": 1,
@@ -15,6 +16,7 @@
     "E": "Asendan - kronik villit"
    },
    "dogru": "B",
+   "ipucu": "Bakteriyel ve polimikrobiyal olan en sık yolun membranlarda nötrofil, ödem ve konjesyonla yaptığı tabloyu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Hematogen yolun karşılığı kronik villittir; TORCH etkenleri anne kanından plasentaya geçer, ancak bu en sık yol değildir.",
@@ -24,6 +26,14 @@
     "E": "Asendan yol en sık yoldur, ancak kronik villit bu yolun değil hematogen TORCH enfeksiyonlarının villus bulgusudur."
    },
    "ozet": "Plasenta enfeksiyonlarında en sık yol asendandır ve akut koryoamniyonit yapar; hematogen TORCH enfeksiyonları ise villuslarda kronik villit oluşturur.",
+   "sayfa": [
+    5,
+    6,
+    7,
+    8,
+    10,
+    30
+   ],
    "metin": "**Soru.** Plasentaya en sık enfeksiyon yayılım yolu ve tipik morfolojik karşılığı hangisidir?\n\n**A)** Hematogen - kronik villit · **B)** Asendan - akut koryoamniyonit · **C)** Lenfatik - funisitis · **D)** Hematogen - akut aterozis · **E)** Asendan - kronik villit\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Hematogen - kronik villit** — Hematogen yolun karşılığı kronik villittir; TORCH etkenleri anne kanından plasentaya geçer, ancak bu en sık yol değildir.\n- **Asendan - akut koryoamniyonit** — Asendan yol ve akut koryoamniyonit doğru: en sık yol doğum kanalından yukarı yayılımdır ve koryoamniyonda nötrofilik infiltrasyon yapar.\n- **Lenfatik - funisitis** — Lenfatik yol plasentaya enfeksiyon yayılımının iki yolundan biri değildir; funisitis ise koryoamniyon enfeksiyonunun göbek kordonu damarlarına yayılmasıdır.\n- **Hematogen - akut aterozis** — Akut aterozis bir enfeksiyon bulgusu değil, preeklampside desidual damarlarda fibrinoid nekroz ve lipidli makrofajla görülen vaskülopatidir.\n- **Asendan - kronik villit** — Asendan yol en sık yoldur, ancak kronik villit bu yolun değil hematogen TORCH enfeksiyonlarının villus bulgusudur.\n\n**Cevap: B** — Asendan - akut koryoamniyonit\n\n**Özet.** Plasenta enfeksiyonlarında en sık yol asendandır ve akut koryoamniyonit yapar; hematogen TORCH enfeksiyonları ise villuslarda kronik villit oluşturur.",
    "ses": "Plasentaya en sık enfeksiyon yayılım yolu ve tipik morfolojik karşılığı hangisidir?\nA, Hematogen, kronik villit\nBe, Asendan, akut koryoamniyonit\nCe, Lenfatik, funisitis\nDe, Hematogen, akut aterozis\nE, Asendan, kronik villit\nSeçenekleri sırayla değerlendirelim.\nHematogen yolun karşılığı kronik villittir. Torç etkenleri anne kanından plasentaya geçer, ancak bu en sık yol değildir.\nAsendan yol ve akut koryoamniyonit doğru. En sık yol doğum kanalından yukarı yayılımdır ve koryoamniyonda nötrofilik infiltrasyon yapar.\nLenfatik yol plasentaya enfeksiyon yayılımının iki yolundan biri değildir. Funisitis ise koryoamniyon enfeksiyonunun göbek kordonu damarlarına yayılmasıdır.\nAkut aterozis bir enfeksiyon bulgusu değil, preeklampside desidual damarlarda fibrinoid nekroz ve lipidli makrofajla görülen vaskülopatidir.\nAsendan yol en sık yoldur, ancak kronik villit bu yolun değil hematogen torç enfeksiyonlarının villus bulgusudur.\nDoğru cevap Be, Asendan, akut koryoamniyonit\nPlasenta enfeksiyonlarında en sık yol asendandır ve akut koryoamniyonit yapar. Hematogen torç enfeksiyonları ise villuslarda kronik villit oluşturur.",
    "kelime": 183
@@ -40,6 +50,7 @@
     "E": "Akut aterozis"
    },
    "dogru": "C",
+   "ipucu": "Anne kanından transplasental geçen etkenlerin ani değil süregen bir iltihap tablosu yaptığını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Funisitis göbek kordonunun akut vaskülitidir; asendan koryoamniyon enfeksiyonunun kordon damarlarına yayılmasıyla olur.",
@@ -49,6 +60,13 @@
     "E": "Akut aterozis preeklampsideki desidual damar lezyonudur; fibrinoid nekroz ve lipid içeren makrofaj birikimiyle tanınır."
    },
    "ozet": "TORCH enfeksiyonları hematogen yolla villuslarda kronik villit yapar; fetüse geçince ensefalit, koryoretinit ve konjenital malformasyonlara yol açabilir.",
+   "sayfa": [
+    8,
+    9,
+    10,
+    30,
+    36
+   ],
    "metin": "**Soru.** TORCH enfeksiyonlarında koryon villuslarındaki tipik plasental bulgu hangisidir?\n\n**A)** Funisitis · **B)** Akut koryoamniyonit · **C)** Kronik villit · **D)** Hidropik şişme · **E)** Akut aterozis\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Funisitis** — Funisitis göbek kordonunun akut vaskülitidir; asendan koryoamniyon enfeksiyonunun kordon damarlarına yayılmasıyla olur.\n- **Akut koryoamniyonit** — Akut koryoamniyonit asendan bakteriyel enfeksiyonun membranlardaki nötrofilik tablosudur; TORCH etkenlerinin bulgusu değildir.\n- **Kronik villit** — Kronik villit doğru: hematogen TORCH enfeksiyonları koryon villuslarında kronik inflamatuvar infiltrasyon yapar.\n- **Hidropik şişme** — Hidropik şişme hidatiform molde koryonik villusların kistik ödemidir; enfeksiyon bulgusu değildir.\n- **Akut aterozis** — Akut aterozis preeklampsideki desidual damar lezyonudur; fibrinoid nekroz ve lipid içeren makrofaj birikimiyle tanınır.\n\n**Cevap: C** — Kronik villit\n\n**Özet.** TORCH enfeksiyonları hematogen yolla villuslarda kronik villit yapar; fetüse geçince ensefalit, koryoretinit ve konjenital malformasyonlara yol açabilir.",
    "ses": "Torç enfeksiyonlarında koryon villuslarındaki tipik plasental bulgu hangisidir?\nA, Funisitis\nBe, Akut koryoamniyonit\nCe, Kronik villit\nDe, Hidropik şişme\nE, Akut aterozis\nHer seçeneği tek tek ele alalım.\nFunisitis göbek kordonunun akut vaskülitidir. Asendan koryoamniyon enfeksiyonunun kordon damarlarına yayılmasıyla olur.\nAkut koryoamniyonit asendan bakteriyel enfeksiyonun membranlardaki nötrofilik tablosudur. Torç etkenlerinin bulgusu değildir.\nKronik villit doğru. Hematogen torç enfeksiyonları koryon villuslarında kronik inflamatuvar infiltrasyon yapar.\nHidropik şişme hidatiform molde koryonik villusların kistik ödemidir. Enfeksiyon bulgusu değildir.\nAkut aterozis preeklampsideki desidual damar lezyonudur. Fibrinoid nekroz ve lipid içeren makrofaj birikimiyle tanınır.\nDoğru cevap Ce, Kronik villit\nTorç enfeksiyonları hematogen yolla villuslarda kronik villit yapar. Fetüse geçince ensefalit, koryoretinit ve konjenital malformasyonlara yol açabilir.",
    "kelime": 137
@@ -65,6 +83,7 @@
     "E": "Pelvik inflamatuvar hastalık"
    },
    "dogru": "E",
+   "ipucu": "Kronik salpingite bağlı olarak tüp lümeninde skarlaşma, daralma ve tıkanma yapan altta yatan tabloyu düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Endometriozis ektopik gebeliğin diğer nedenleri arasında sayılır; en önemli yatkınlık faktörü değildir.",
@@ -74,6 +93,11 @@
     "E": "Pelvik inflamatuvar hastalık doğru: kronik salpingite bağlı tüp lümeni skarlaşması ve daralması ektopik gebeliğin en önemli yatkınlığıdır."
    },
    "ozet": "Ektopik gebelikte en önemli yatkınlık pelvik inflamatuvar hastalıktır; kronik salpingit tüp lümeninde skar ve daralma yapar, en sık yerleşim tüpün uterus dışı kısmıdır.",
+   "sayfa": [
+    11,
+    12,
+    13
+   ],
    "metin": "**Soru.** Ektopik gebelik için en önemli yatkınlık faktörü hangisidir?\n\n**A)** Endometriozis · **B)** Apandisit · **C)** Rahim içi araç · **D)** Uterus tümörü · **E)** Pelvik inflamatuvar hastalık\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Endometriozis** — Endometriozis ektopik gebeliğin diğer nedenleri arasında sayılır; en önemli yatkınlık faktörü değildir.\n- **Apandisit** — Apandisit sonrası gelişen peritübal skar ektopik gebeliğe zemin hazırlayabilir; ama bu, diğer nedenler grubundadır.\n- **Rahim içi araç** — Rahim içi araç ektopik gebelik riskini yaklaşık 2 kat artırır; yine de en güçlü yatkınlık tüp skarlaşmasıdır.\n- **Uterus tümörü** — Uterus içi tümörler ektopik gebeliğin diğer nedenlerindendir; çoğu olguda ise belirgin anatomik neden bulunmayabilir.\n- **Pelvik inflamatuvar hastalık** — Pelvik inflamatuvar hastalık doğru: kronik salpingite bağlı tüp lümeni skarlaşması ve daralması ektopik gebeliğin en önemli yatkınlığıdır.\n\n**Cevap: E** — Pelvik inflamatuvar hastalık\n\n**Özet.** Ektopik gebelikte en önemli yatkınlık pelvik inflamatuvar hastalıktır; kronik salpingit tüp lümeninde skar ve daralma yapar, en sık yerleşim tüpün uterus dışı kısmıdır.",
    "ses": "Ektopik gebelik için en önemli yatkınlık faktörü hangisidir?\nA, Endometriozis\nBe, Apandisit\nCe, Rahim içi araç\nDe, Uterus tümörü\nE, Pelvik inflamatuvar hastalık\nŞıkları sırasıyla gözden geçirelim.\nEndometriozis ektopik gebeliğin diğer nedenleri arasında sayılır. En önemli yatkınlık faktörü değildir.\nApandisit sonrası gelişen peritübal skar ektopik gebeliğe zemin hazırlayabilir. Ama bu, diğer nedenler grubundadır.\nRahim içi araç ektopik gebelik riskini yaklaşık iki kat artırır. Yine de en güçlü yatkınlık tüp skarlaşmasıdır.\nUterus içi tümörler ektopik gebeliğin diğer nedenlerindendir. Çoğu olguda ise belirgin anatomik neden bulunmayabilir.\nPelvik inflamatuvar hastalık doğru. Kronik salpingite bağlı tüp lümeni skarlaşması ve daralması ektopik gebeliğin en önemli yatkınlığıdır.\nDoğru cevap E, Pelvik inflamatuvar hastalık\nEktopik gebelikte en önemli yatkınlık pelvik inflamatuvar hastalıktır. Kronik salpingit tüp lümeninde skar ve daralma yapar, en sık yerleşim tüpün uterus dışı kısmıdır.",
    "kelime": 157
@@ -90,18 +114,25 @@
     "E": "Fibrinoid nekroz"
    },
    "dogru": "A",
+   "ipucu": "Desidual değişikliklerin her ektopik yerleşimde görülebildiğini, tanının plasentaya ait yapının görülmesine dayandığını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Koryonik villus doğru: tüp gebeliğinin histolojik tanısı koryonik villusların gösterilmesiyle konur.",
     "B": "Desidual değişiklikler ektopik gebeliğin tüm yerleşimlerinde erken dönemde görülür; tek başına tüp gebeliğini kanıtlamaz.",
-    "C": "Hemosiderin ile karıştırılabilir: Tüp lümeni yeni pıhtılaşmış kanla dolu olsa da tanı için gebelik dokusu gösterilmelidir.",
+    "C": "Hemosiderin ve taze kan pıhtısı fallop tüpü duvarında travma, endometriozis veya salpingit sonrası da bulunabilir ve gebeliği kanıtlamaz; ektopik tüp gebeliğinin kesin histopatolojik tanısı tüp lümeni veya duvarında fetal plasental yapı olan koryonik villusların (veya ekstravillöz trofoblastların) görülmesiyle konur.",
     "D": "Nötrofil infiltrasyonu akut koryoamniyonit gibi enfeksiyon tablolarının bulgusudur; gebeliğin yerini göstermez.",
     "E": "Fibrinoid nekroz preeklampside desidual damarlarda görülen bir lezyondur; tüp gebeliğinin tanı ölçütü değildir."
    },
    "ozet": "Tüp gebeliğinde lümen pıhtı, plasenta ve fetal doku parçalarıyla doludur; histolojik tanı koryonik villusların gösterilmesiyle konur, nadiren embriyo da görülür.",
-   "metin": "**Soru.** Tüp gebeliğinin histolojik tanısı hangisinin gösterilmesiyle konur?\n\n**A)** Koryonik villus · **B)** Desidual reaksiyon · **C)** Hemosiderin · **D)** Nötrofil infiltrasyonu · **E)** Fibrinoid nekroz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Koryonik villus** — Koryonik villus doğru: tüp gebeliğinin histolojik tanısı koryonik villusların gösterilmesiyle konur.\n- **Desidual reaksiyon** — Desidual değişiklikler ektopik gebeliğin tüm yerleşimlerinde erken dönemde görülür; tek başına tüp gebeliğini kanıtlamaz.\n- **Hemosiderin** — Hemosiderin ile karıştırılabilir: Tüp lümeni yeni pıhtılaşmış kanla dolu olsa da tanı için gebelik dokusu gösterilmelidir.\n- **Nötrofil infiltrasyonu** — Nötrofil infiltrasyonu akut koryoamniyonit gibi enfeksiyon tablolarının bulgusudur; gebeliğin yerini göstermez.\n- **Fibrinoid nekroz** — Fibrinoid nekroz preeklampside desidual damarlarda görülen bir lezyondur; tüp gebeliğinin tanı ölçütü değildir.\n\n**Cevap: A** — Koryonik villus\n\n**Özet.** Tüp gebeliğinde lümen pıhtı, plasenta ve fetal doku parçalarıyla doludur; histolojik tanı koryonik villusların gösterilmesiyle konur, nadiren embriyo da görülür.",
-   "ses": "Tüp gebeliğinin histolojik tanısı hangisinin gösterilmesiyle konur?\nA, Koryonik villus\nBe, Desidual reaksiyon\nCe, Hemosiderin\nDe, Nötrofil infiltrasyonu\nE, Fibrinoid nekroz\nŞimdi seçeneklere tek tek bakalım.\nKoryonik villus doğru. Tüp gebeliğinin histolojik tanısı koryonik villusların gösterilmesiyle konur.\nDesidual değişiklikler ektopik gebeliğin tüm yerleşimlerinde erken dönemde görülür. Tek başına tüp gebeliğini kanıtlamaz.\nHemosiderin ile karıştırılabilir. Tüp lümeni yeni pıhtılaşmış kanla dolu olsa da tanı için gebelik dokusu gösterilmelidir.\nNötrofil infiltrasyonu akut koryoamniyonit gibi enfeksiyon tablolarının bulgusudur. Gebeliğin yerini göstermez.\nFibrinoid nekroz preeklampside desidual damarlarda görülen bir lezyondur. Tüp gebeliğinin tanı ölçütü değildir.\nDoğru cevap A, Koryonik villus\nTüp gebeliğinde lümen pıhtı, plasenta ve fetal doku parçalarıyla doludur. Histolojik tanı koryonik villusların gösterilmesiyle konur, nadiren embriyo da görülür.",
-   "kelime": 142
+   "sayfa": [
+    7,
+    15,
+    16,
+    30
+   ],
+   "metin": "**Soru.** Tüp gebeliğinin histolojik tanısı hangisinin gösterilmesiyle konur?\n\n**A)** Koryonik villus · **B)** Desidual reaksiyon · **C)** Hemosiderin · **D)** Nötrofil infiltrasyonu · **E)** Fibrinoid nekroz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Koryonik villus** — Koryonik villus doğru: tüp gebeliğinin histolojik tanısı koryonik villusların gösterilmesiyle konur.\n- **Desidual reaksiyon** — Desidual değişiklikler ektopik gebeliğin tüm yerleşimlerinde erken dönemde görülür; tek başına tüp gebeliğini kanıtlamaz.\n- **Hemosiderin** — Hemosiderin ve taze kan pıhtısı fallop tüpü duvarında travma, endometriozis veya salpingit sonrası da bulunabilir ve gebeliği kanıtlamaz; ektopik tüp gebeliğinin kesin histopatolojik tanısı tüp lümeni veya duvarında fetal plasental yapı olan koryonik villusların (veya ekstravillöz trofoblastların) görülmesiyle konur.\n- **Nötrofil infiltrasyonu** — Nötrofil infiltrasyonu akut koryoamniyonit gibi enfeksiyon tablolarının bulgusudur; gebeliğin yerini göstermez.\n- **Fibrinoid nekroz** — Fibrinoid nekroz preeklampside desidual damarlarda görülen bir lezyondur; tüp gebeliğinin tanı ölçütü değildir.\n\n**Cevap: A** — Koryonik villus\n\n**Özet.** Tüp gebeliğinde lümen pıhtı, plasenta ve fetal doku parçalarıyla doludur; histolojik tanı koryonik villusların gösterilmesiyle konur, nadiren embriyo da görülür.",
+   "ses": "Tüp gebeliğinin histolojik tanısı hangisinin gösterilmesiyle konur?\nA, Koryonik villus\nBe, Desidual reaksiyon\nCe, Hemosiderin\nDe, Nötrofil infiltrasyonu\nE, Fibrinoid nekroz\nŞimdi seçeneklere tek tek bakalım.\nKoryonik villus doğru. Tüp gebeliğinin histolojik tanısı koryonik villusların gösterilmesiyle konur.\nDesidual değişiklikler ektopik gebeliğin tüm yerleşimlerinde erken dönemde görülür. Tek başına tüp gebeliğini kanıtlamaz.\nHemosiderin ve taze kan pıhtısı fallop tüpü duvarında travma, endometriozis veya salpingit sonrası da bulunabilir ve gebeliği kanıtlamaz. Ektopik tüp gebeliğinin kesin histopatolojik tanısı tüp lümeni veya duvarında fetal plasental yapı olan koryonik villusların, veya ekstravillöz trofoblastların, görülmesiyle konur.\nNötrofil infiltrasyonu akut koryoamniyonit gibi enfeksiyon tablolarının bulgusudur. Gebeliğin yerini göstermez.\nFibrinoid nekroz preeklampside desidual damarlarda görülen bir lezyondur. Tüp gebeliğinin tanı ölçütü değildir.\nDoğru cevap A, Koryonik villus\nTüp gebeliğinde lümen pıhtı, plasenta ve fetal doku parçalarıyla doludur. Histolojik tanı koryonik villusların gösterilmesiyle konur, nadiren embriyo da görülür.",
+   "kelime": 165
   },
   {
    "no": 5,
@@ -115,18 +146,25 @@
     "E": "Amniyon sıvısı embolisi"
    },
    "dogru": "C",
+   "ipucu": "Normal gebelikte trofoblast istilasıyla düşük dirençli sinüzoidlere dönüşen damarların preeklampside neden dar kaldığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Asendan enfeksiyon akut koryoamniyonit ve erken membran rüptürü yapar; preeklampsinin patogenezinde yer almaz.",
     "B": "Trofoblast proliferasyonu hidatiform mol gibi gebelik trofoblastik hastalıklarının ortak özelliğidir; preeklampsinin temel olayı değildir.",
     "C": "Spiral arterlerde yetersiz yeniden şekillenme doğru: kas elastik duvar korunur, lümen dar kalır ve plasental hipoksi gelişir.",
     "D": "Paternal genetik materyal fazlalığı tam ve kısmi molün genetik temelidir; preeklampsinin mekanizması değildir.",
-    "E": "Preeklampsinin özü utero plasental vasküler havuzdaki yetmezlik ve maternal endotel disfonksiyonudur. Amniyon sıvısı embolisi bu sorudaki ayrımı sağlamaz."
+    "E": "Amniyon sıvısı embolisi doğum sırasında amniyon sıvısının maternal venöz sinüslere geçerek akut solunum yetmezliği ve DİK yapmasıdır; preeklampsinin temel patogenetik olayı ise ekstravillöz trofoblastların desidual spiral arterleri yeterince invaze edememesi sonucu damarların dar ve yüksek dirençli kalması (yetersiz yeniden şekillenme) ve plasental iskemi gelişmesidir."
    },
    "ozet": "Preeklampside spiral arterler trofoblastlarca yeterince yeniden şekillendirilemez; dar kalan lümen plasental kan akımını azaltır, hipoksi ve endotel disfonksiyonu gelişir.",
-   "metin": "**Soru.** Preeklampsinin temel patogenetik olayı hangisidir?\n\n**A)** Asendan enfeksiyon · **B)** Trofoblast proliferasyonu · **C)** Spiral arterlerde yetersiz yeniden şekillenme · **D)** Paternal genom fazlalığı · **E)** Amniyon sıvısı embolisi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Asendan enfeksiyon** — Asendan enfeksiyon akut koryoamniyonit ve erken membran rüptürü yapar; preeklampsinin patogenezinde yer almaz.\n- **Trofoblast proliferasyonu** — Trofoblast proliferasyonu hidatiform mol gibi gebelik trofoblastik hastalıklarının ortak özelliğidir; preeklampsinin temel olayı değildir.\n- **Spiral arterlerde yetersiz yeniden şekillenme** — Spiral arterlerde yetersiz yeniden şekillenme doğru: kas elastik duvar korunur, lümen dar kalır ve plasental hipoksi gelişir.\n- **Paternal genom fazlalığı** — Paternal genetik materyal fazlalığı tam ve kısmi molün genetik temelidir; preeklampsinin mekanizması değildir.\n- **Amniyon sıvısı embolisi** — Preeklampsinin özü utero plasental vasküler havuzdaki yetmezlik ve maternal endotel disfonksiyonudur. Amniyon sıvısı embolisi bu sorudaki ayrımı sağlamaz.\n\n**Cevap: C** — Spiral arterlerde yetersiz yeniden şekillenme\n\n**Özet.** Preeklampside spiral arterler trofoblastlarca yeterince yeniden şekillendirilemez; dar kalan lümen plasental kan akımını azaltır, hipoksi ve endotel disfonksiyonu gelişir.",
-   "ses": "Preeklampsinin temel patogenetik olayı hangisidir?\nA, Asendan enfeksiyon\nBe, Trofoblast proliferasyonu\nCe, Spiral arterlerde yetersiz yeniden şekillenme\nDe, Paternal genom fazlalığı\nE, Amniyon sıvısı embolisi\nSeçenekleri sırayla değerlendirelim.\nAsendan enfeksiyon akut koryoamniyonit ve erken membran rüptürü yapar. Preeklampsinin patogenezinde yer almaz.\nTrofoblast proliferasyonu hidatiform mol gibi gebelik trofoblastik hastalıklarının ortak özelliğidir. Preeklampsinin temel olayı değildir.\nSpiral arterlerde yetersiz yeniden şekillenme doğru. Kas elastik duvar korunur, lümen dar kalır ve plasental hipoksi gelişir.\nPaternal genetik materyal fazlalığı tam ve kısmi molün genetik temelidir. Preeklampsinin mekanizması değildir.\nPreeklampsinin özü utero plasental vasküler havuzdaki yetmezlik ve maternal endotel disfonksiyonudur. Amniyon sıvısı embolisi bu sorudaki ayrımı sağlamaz.\nDoğru cevap Ce, Spiral arterlerde yetersiz yeniden şekillenme\nPreeklampside spiral arterler trofoblastlarca yeterince yeniden şekillendirilemez. Dar kalan lümen plasental kan akımını azaltır, hipoksi ve endotel disfonksiyonu gelişir.",
-   "kelime": 162
+   "sayfa": [
+    20,
+    22,
+    23,
+    24
+   ],
+   "metin": "**Soru.** Preeklampsinin temel patogenetik olayı hangisidir?\n\n**A)** Asendan enfeksiyon · **B)** Trofoblast proliferasyonu · **C)** Spiral arterlerde yetersiz yeniden şekillenme · **D)** Paternal genom fazlalığı · **E)** Amniyon sıvısı embolisi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Asendan enfeksiyon** — Asendan enfeksiyon akut koryoamniyonit ve erken membran rüptürü yapar; preeklampsinin patogenezinde yer almaz.\n- **Trofoblast proliferasyonu** — Trofoblast proliferasyonu hidatiform mol gibi gebelik trofoblastik hastalıklarının ortak özelliğidir; preeklampsinin temel olayı değildir.\n- **Spiral arterlerde yetersiz yeniden şekillenme** — Spiral arterlerde yetersiz yeniden şekillenme doğru: kas elastik duvar korunur, lümen dar kalır ve plasental hipoksi gelişir.\n- **Paternal genom fazlalığı** — Paternal genetik materyal fazlalığı tam ve kısmi molün genetik temelidir; preeklampsinin mekanizması değildir.\n- **Amniyon sıvısı embolisi** — Amniyon sıvısı embolisi doğum sırasında amniyon sıvısının maternal venöz sinüslere geçerek akut solunum yetmezliği ve DİK yapmasıdır; preeklampsinin temel patogenetik olayı ise ekstravillöz trofoblastların desidual spiral arterleri yeterince invaze edememesi sonucu damarların dar ve yüksek dirençli kalması (yetersiz yeniden şekillenme) ve plasental iskemi gelişmesidir.\n\n**Cevap: C** — Spiral arterlerde yetersiz yeniden şekillenme\n\n**Özet.** Preeklampside spiral arterler trofoblastlarca yeterince yeniden şekillendirilemez; dar kalan lümen plasental kan akımını azaltır, hipoksi ve endotel disfonksiyonu gelişir.",
+   "ses": "Preeklampsinin temel patogenetik olayı hangisidir?\nA, Asendan enfeksiyon\nBe, Trofoblast proliferasyonu\nCe, Spiral arterlerde yetersiz yeniden şekillenme\nDe, Paternal genom fazlalığı\nE, Amniyon sıvısı embolisi\nSeçenekleri sırayla değerlendirelim.\nAsendan enfeksiyon akut koryoamniyonit ve erken membran rüptürü yapar. Preeklampsinin patogenezinde yer almaz.\nTrofoblast proliferasyonu hidatiform mol gibi gebelik trofoblastik hastalıklarının ortak özelliğidir. Preeklampsinin temel olayı değildir.\nSpiral arterlerde yetersiz yeniden şekillenme doğru. Kas elastik duvar korunur, lümen dar kalır ve plasental hipoksi gelişir.\nPaternal genetik materyal fazlalığı tam ve kısmi molün genetik temelidir. Preeklampsinin mekanizması değildir.\nAmniyon sıvısı embolisi doğum sırasında amniyon sıvısının maternal venöz sinüslere geçerek akut solunum yetmezliği ve dik yapmasıdır. Preeklampsinin temel patogenetik olayı ise ekstravillöz trofoblastların desidual spiral arterleri yeterince invaze edememesi sonucu damarların dar ve yüksek dirençli kalması, yetersiz yeniden şekillenme, ve plasental iskemi gelişmesidir.\nDoğru cevap Ce, Spiral arterlerde yetersiz yeniden şekillenme\nPreeklampside spiral arterler trofoblastlarca yeterince yeniden şekillendirilemez. Dar kalan lümen plasental kan akımını azaltır, hipoksi ve endotel disfonksiyonu gelişir.",
+   "kelime": 188
   },
   {
    "no": 6,
@@ -140,6 +178,7 @@
     "E": "hCG"
    },
    "dogru": "B",
+   "ipucu": "Plasental hipoksiyle endoglinle birlikte artan anti anjiyojenik faktörü, vazodilatör prostaglandinlerden ayırarak düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Prostasiklin bir vazodilatördür; preeklampside artmaz, üretimi azalır ve bu azalma hipertansiyona katkı yapar.",
@@ -149,6 +188,12 @@
     "E": "hCG gebelik ve trofoblastik hastalıkların hormonudur; tam molde çok yükselir, endotel büyüme faktörlerinin antagonisti değildir."
    },
    "ozet": "Plasental hipoksi sFlt-1 ve endoglin gibi anti anjiyojenik faktörleri artırır; bunlar VEGF ve TGF-β etkisini bozar ve maternal endotel disfonksiyonunu başlatır.",
+   "sayfa": [
+    25,
+    27,
+    44,
+    63
+   ],
    "metin": "**Soru.** Preeklampside artan ve VEGF etkisini antagonize eden faktör hangisidir?\n\n**A)** Prostasiklin · **B)** sFlt-1 · **C)** Prostaglandin E2 · **D)** hPL · **E)** hCG\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Prostasiklin** — Prostasiklin bir vazodilatördür; preeklampside artmaz, üretimi azalır ve bu azalma hipertansiyona katkı yapar.\n- **sFlt-1** — sFlt-1 doğru: plasental hipoksiyle artan bu anti anjiyojenik faktör VEGF ve TGF-β etkisini antagonize ederek endotel disfonksiyonu yapar.\n- **Prostaglandin E2** — Prostaglandin E2 de vazodilatördür; preeklampside üretimi azalır, artan faktörler arasında değildir.\n- **hPL** — hPL, plasental bölge trofoblastik tümörünün önemli miktarda ürettiği insan plasental laktojenidir; preeklampside artan anti anjiyojenik faktörlerden değildir.\n- **hCG** — hCG gebelik ve trofoblastik hastalıkların hormonudur; tam molde çok yükselir, endotel büyüme faktörlerinin antagonisti değildir.\n\n**Cevap: B** — sFlt-1\n\n**Özet.** Plasental hipoksi sFlt-1 ve endoglin gibi anti anjiyojenik faktörleri artırır; bunlar VEGF ve TGF-β etkisini bozar ve maternal endotel disfonksiyonunu başlatır.",
    "ses": "Preeklampside artan ve vasküler endotelyal büyüme faktörü etkisini antagonize eden faktör hangisidir?\nA, Prostasiklin\nBe, Se fe le te bir\nCe, Prostaglandin e iki\nDe, Ha pe le\nE, Ha ce ge\nHer seçeneği tek tek ele alalım.\nProstasiklin bir vazodilatördür. Preeklampside artmaz, üretimi azalır ve bu azalma hipertansiyona katkı yapar.\nSe fe le te bir doğru. Plasental hipoksiyle artan bu anti anjiyojenik faktör, vasküler endotelyal büyüme faktörü ile te ge fe beta etkisini antagonize ederek endotel disfonksiyonu yapar.\nProstaglandin e iki de vazodilatördür. Preeklampside üretimi azalır, artan faktörler arasında değildir.\nHa pe le, plasental bölge trofoblastik tümörünün önemli miktarda ürettiği insan plasental laktojenidir. Preeklampside artan anti anjiyojenik faktörlerden değildir.\nHa ce ge gebelik ve trofoblastik hastalıkların hormonudur. Tam molde çok yükselir, endotel büyüme faktörlerinin antagonisti değildir.\nDoğru cevap Be, Se fe le te bir\nPlasental hipoksi se fe le te bir ve endoglin gibi anti anjiyojenik faktörleri artırır. Bunlar vasküler endotelyal büyüme faktörü ile te ge fe beta etkisini bozar ve maternal endotel disfonksiyonunu başlatır.",
    "kelime": 148
@@ -165,6 +210,7 @@
     "E": "Mikroanjiyopati"
    },
    "dogru": "D",
+   "ipucu": "Sendrom adındaki her harfin hangi laboratuvar bulgusunu karşıladığını açarak listede olmayanı ayıkla.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Hemoliz HELLP sendromunun bileşenidir; mikroanjiyopatik hemolitik anemi biçiminde görülür.",
@@ -174,6 +220,12 @@
     "E": "Mikroanjiyopati HELLP sendromunda mikroanjiyopatik hemolitik anemi olarak yer alır; endotel disfonksiyonunun uç organdaki sonucudur."
    },
    "ozet": "HELLP sendromu şiddetli preeklampsinin yaklaşık %10’unda görülür ve hemoliz, karaciğer enzim artışı ile trombositopeniden oluşur; konvülsiyon eklampsinin bulgusudur.",
+   "sayfa": [
+    20,
+    26,
+    28,
+    32
+   ],
    "metin": "**Soru.** HELLP sendromunun bileşeni olmayan hangisidir?\n\n**A)** Hemoliz · **B)** Karaciğer enzim artışı · **C)** Trombositopeni · **D)** Konvülsiyon · **E)** Mikroanjiyopati\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Hemoliz** — Hemoliz HELLP sendromunun bileşenidir; mikroanjiyopatik hemolitik anemi biçiminde görülür.\n- **Karaciğer enzim artışı** — Karaciğer enzimlerinde yükselme HELLP sendromunun ikinci bileşenidir.\n- **Trombositopeni** — Trombositopeni HELLP sendromunda trombosit tüketimiyle gelişir ve sendromun bileşenidir.\n- **Konvülsiyon** — Konvülsiyon doğru, yani bileşen değildir: preeklampsiye konvülsiyon eklenince tabloya eklampsi denir.\n- **Mikroanjiyopati** — Mikroanjiyopati HELLP sendromunda mikroanjiyopatik hemolitik anemi olarak yer alır; endotel disfonksiyonunun uç organdaki sonucudur.\n\n**Cevap: D** — Konvülsiyon\n\n**Özet.** HELLP sendromu şiddetli preeklampsinin yaklaşık %10’unda görülür ve hemoliz, karaciğer enzim artışı ile trombositopeniden oluşur; konvülsiyon eklampsinin bulgusudur.",
    "ses": "Help sendromunun bileşeni olmayan hangisidir?\nA, Hemoliz\nBe, Karaciğer enzim artışı\nCe, Trombositopeni\nDe, Konvülsiyon\nE, Mikroanjiyopati\nŞıkları sırasıyla gözden geçirelim.\nHemoliz help sendromunun bileşenidir. Mikroanjiyopatik hemolitik anemi biçiminde görülür.\nKaraciğer enzimlerinde yükselme help sendromunun ikinci bileşenidir.\nTrombositopeni help sendromunda trombosit tüketimiyle gelişir ve sendromun bileşenidir.\nKonvülsiyon doğru, yani bileşen değildir. Preeklampsiye konvülsiyon eklenince tabloya eklampsi denir.\nMikroanjiyopati help sendromunda mikroanjiyopatik hemolitik anemi olarak yer alır. Endotel disfonksiyonunun uç organdaki sonucudur.\nDoğru cevap De, Konvülsiyon\nHelp sendromu şiddetli preeklampsinin yaklaşık yüzde onunda görülür ve hemoliz, karaciğer enzim artışı ile trombositopeniden oluşur. Konvülsiyon eklampsinin bulgusudur.",
    "kelime": 117
@@ -190,18 +242,25 @@
     "E": "Acil doğum"
    },
    "dogru": "E",
+   "ipucu": "Hastalığı başlatan organın plasenta olduğunu, bu organ uzaklaştırılmadan tablonun sürdüğünü düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Kemoterapi invaziv mol ve koryokarsinom gibi trofoblastik neoplazilerin tedavisidir; preeklampside yeri yoktur.",
     "B": "Küretaj hidatiform molün çıkarılmasında kullanılır; preeklampsinin tedavisi değildir.",
     "C": "Antibiyotik enfeksiyonlarda kullanılır; preeklampsi enfeksiyon değil, maternal endotel disfonksiyonuyla giden sistemik bir sendromdur.",
-    "D": "Doğumdan sonra hipertansiyon ve proteinüri genellikle kendiliğinden kaybolur. Histerektomi bu sorudaki ayrımı sağlamaz.",
+    "D": "Histerektomi uterusun cerrahi olarak çıkarılmasıdır ve atoni kanaması veya plasenta akreta dışında preeklampsi tedavisi değildir; preeklampside tüm klinik bulgular iskemik plasentadan maternal dolaşıma salınan sFlt-1 ve endoglin gibi anti-anjiyojenik faktörlerden kaynaklandığı için kesin ve en etkili tedavi fetüs ve plasentanın doğurtulmasıdır (acil doğumdur).",
     "E": "Acil doğum doğru: preeklampsinin en etkili tedavisidir; karar, erken doğum riskleriyle hastalığın sürmesinin riskleri tartılarak verilir."
    },
    "ozet": "Preeklampsinin en etkili tedavisi acil doğumdur; doğum sonrası proteinüri ve hipertansiyon genellikle 1–2 hafta içinde kaybolur, çoğu olguda kalıcı sekel kalmaz.",
-   "metin": "**Soru.** Preeklampsinin en etkili tedavisi hangisidir?\n\n**A)** Kemoterapi · **B)** Küretaj · **C)** Antibiyotik · **D)** Histerektomi · **E)** Acil doğum\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Kemoterapi** — Kemoterapi invaziv mol ve koryokarsinom gibi trofoblastik neoplazilerin tedavisidir; preeklampside yeri yoktur.\n- **Küretaj** — Küretaj hidatiform molün çıkarılmasında kullanılır; preeklampsinin tedavisi değildir.\n- **Antibiyotik** — Antibiyotik enfeksiyonlarda kullanılır; preeklampsi enfeksiyon değil, maternal endotel disfonksiyonuyla giden sistemik bir sendromdur.\n- **Histerektomi** — Doğumdan sonra hipertansiyon ve proteinüri genellikle kendiliğinden kaybolur. Histerektomi bu sorudaki ayrımı sağlamaz.\n- **Acil doğum** — Acil doğum doğru: preeklampsinin en etkili tedavisidir; karar, erken doğum riskleriyle hastalığın sürmesinin riskleri tartılarak verilir.\n\n**Cevap: E** — Acil doğum\n\n**Özet.** Preeklampsinin en etkili tedavisi acil doğumdur; doğum sonrası proteinüri ve hipertansiyon genellikle 1–2 hafta içinde kaybolur, çoğu olguda kalıcı sekel kalmaz.",
-   "ses": "Preeklampsinin en etkili tedavisi hangisidir?\nA, Kemoterapi\nBe, Küretaj\nCe, Antibiyotik\nDe, Histerektomi\nE, Acil doğum\nŞimdi seçeneklere tek tek bakalım.\nKemoterapi invaziv mol ve koryokarsinom gibi trofoblastik neoplazilerin tedavisidir. Preeklampside yeri yoktur.\nKüretaj hidatiform molün çıkarılmasında kullanılır. Preeklampsinin tedavisi değildir.\nAntibiyotik enfeksiyonlarda kullanılır. Preeklampsi enfeksiyon değil, maternal endotel disfonksiyonuyla giden sistemik bir sendromdur.\nDoğumdan sonra hipertansiyon ve proteinüri genellikle kendiliğinden kaybolur. Histerektomi bu sorudaki ayrımı sağlamaz.\nAcil doğum doğru. Preeklampsinin en etkili tedavisidir, karar erken doğum riskleriyle hastalığın sürmesinin riskleri tartılarak verilir.\nDoğru cevap E, Acil doğum\nPreeklampsinin en etkili tedavisi acil doğumdur. Doğum sonrası proteinüri ve hipertansiyon genellikle bir ile iki hafta içinde kaybolur, çoğu olguda kalıcı sekel kalmaz.",
-   "kelime": 132
+   "sayfa": [
+    20,
+    33,
+    45,
+    53
+   ],
+   "metin": "**Soru.** Preeklampsinin en etkili tedavisi hangisidir?\n\n**A)** Kemoterapi · **B)** Küretaj · **C)** Antibiyotik · **D)** Histerektomi · **E)** Acil doğum\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Kemoterapi** — Kemoterapi invaziv mol ve koryokarsinom gibi trofoblastik neoplazilerin tedavisidir; preeklampside yeri yoktur.\n- **Küretaj** — Küretaj hidatiform molün çıkarılmasında kullanılır; preeklampsinin tedavisi değildir.\n- **Antibiyotik** — Antibiyotik enfeksiyonlarda kullanılır; preeklampsi enfeksiyon değil, maternal endotel disfonksiyonuyla giden sistemik bir sendromdur.\n- **Histerektomi** — Histerektomi uterusun cerrahi olarak çıkarılmasıdır ve atoni kanaması veya plasenta akreta dışında preeklampsi tedavisi değildir; preeklampside tüm klinik bulgular iskemik plasentadan maternal dolaşıma salınan sFlt-1 ve endoglin gibi anti-anjiyojenik faktörlerden kaynaklandığı için kesin ve en etkili tedavi fetüs ve plasentanın doğurtulmasıdır (acil doğumdur).\n- **Acil doğum** — Acil doğum doğru: preeklampsinin en etkili tedavisidir; karar, erken doğum riskleriyle hastalığın sürmesinin riskleri tartılarak verilir.\n\n**Cevap: E** — Acil doğum\n\n**Özet.** Preeklampsinin en etkili tedavisi acil doğumdur; doğum sonrası proteinüri ve hipertansiyon genellikle 1–2 hafta içinde kaybolur, çoğu olguda kalıcı sekel kalmaz.",
+   "ses": "Preeklampsinin en etkili tedavisi hangisidir?\nA, Kemoterapi\nBe, Küretaj\nCe, Antibiyotik\nDe, Histerektomi\nE, Acil doğum\nŞimdi seçeneklere tek tek bakalım.\nKemoterapi invaziv mol ve koryokarsinom gibi trofoblastik neoplazilerin tedavisidir. Preeklampside yeri yoktur.\nKüretaj hidatiform molün çıkarılmasında kullanılır. Preeklampsinin tedavisi değildir.\nAntibiyotik enfeksiyonlarda kullanılır. Preeklampsi enfeksiyon değil, maternal endotel disfonksiyonuyla giden sistemik bir sendromdur.\nHisterektomi uterusun cerrahi olarak çıkarılmasıdır ve atoni kanaması veya plasenta akreta dışında preeklampsi tedavisi değildir. Preeklampside tüm klinik bulgular iskemik plasentadan maternal dolaşıma salınan çözünür fe le te bir ve endoglin gibi anti-anjiyojenik faktörlerden kaynaklandığı için kesin ve en etkili tedavi fetüs ve plasentanın doğurtulmasıdır, acil doğumdur,.\nAcil doğum doğru. Preeklampsinin en etkili tedavisidir, karar erken doğum riskleriyle hastalığın sürmesinin riskleri tartılarak verilir.\nDoğru cevap E, Acil doğum\nPreeklampsinin en etkili tedavisi acil doğumdur. Doğum sonrası proteinüri ve hipertansiyon genellikle bir ile iki hafta içinde kaybolur, çoğu olguda kalıcı sekel kalmaz.",
+   "kelime": 162
   },
   {
    "no": 9,
@@ -215,18 +274,24 @@
     "E": "46,XX (maternal+paternal)"
    },
    "dogru": "A",
+   "ipucu": "Boş bir ovumun döllenmesiyle oluşan diploid molde genetik içeriğin hangi ebeveynden geldiğini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Yalnız paternal 46,XX doğru: tam molde boş ovum döllenir, bütün kromozomlar babadan gelir ve hücreler diploiddir.",
     "B": "69,XXY triploid bir karyotiptir ve kısmi molün tipik örneğidir; normal ovumun iki spermle ya da diploid spermle döllenmesinden oluşur.",
-    "C": "45,X mol karyotipleri arasında yer almaz; her iki mol tipinin ortak noktası paternal genetik materyal fazlalığıdır.",
+    "C": "45,X karyotipi (monozomi X) Turner sendromunun ve spontan ilk trimester düşüklerinin sık kromozomal nedenidir; tam (komplet) hidatiform mol ise çekirdeğini kaybetmiş boş bir ovumun tek bir spermle döllenip ikilenmesiyle (veya iki spermle döllenmesiyle) oluşur ve olguların %90'ında tamamı babadan gelen 46,XX (yalnız paternal/androgenetik) karyotip gösterir.",
     "D": "47,XXY de mol karyotipi değildir; kısmi molde kromozom sayısı 69 olur ve paternal genler baskındır.",
     "E": "Anne ve babadan gelen 46,XX tam mol değildir; tam molde ovum boştur ve genetik içeriğin tamamı babadandır."
    },
    "ozet": "Tam mol boş ovumun tek sperm duplikasyonu ya da iki spermle döllenmesinden oluşur; karyotip genellikle 46,XX diploiddir ve tüm genetik içerik babadandır.",
-   "metin": "**Soru.** Tam hidatiform molün tipik karyotipi hangisidir?\n\n**A)** 46,XX (yalnız paternal) · **B)** 69,XXY · **C)** 45,X · **D)** 47,XXY · **E)** 46,XX (maternal+paternal)\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **46,XX (yalnız paternal)** — Yalnız paternal 46,XX doğru: tam molde boş ovum döllenir, bütün kromozomlar babadan gelir ve hücreler diploiddir.\n- **69,XXY** — 69,XXY triploid bir karyotiptir ve kısmi molün tipik örneğidir; normal ovumun iki spermle ya da diploid spermle döllenmesinden oluşur.\n- **45,X** — 45,X mol karyotipleri arasında yer almaz; her iki mol tipinin ortak noktası paternal genetik materyal fazlalığıdır.\n- **47,XXY** — 47,XXY de mol karyotipi değildir; kısmi molde kromozom sayısı 69 olur ve paternal genler baskındır.\n- **46,XX (maternal+paternal)** — Anne ve babadan gelen 46,XX tam mol değildir; tam molde ovum boştur ve genetik içeriğin tamamı babadandır.\n\n**Cevap: A** — 46,XX (yalnız paternal)\n\n**Özet.** Tam mol boş ovumun tek sperm duplikasyonu ya da iki spermle döllenmesinden oluşur; karyotip genellikle 46,XX diploiddir ve tüm genetik içerik babadandır.",
-   "ses": "Tam hidatiform molün tipik karyotipi hangisidir?\nA, Kırk altı iks iks, yalnız babadan\nBe, Altmış dokuz iks iks ye\nCe, Kırk beş iks\nDe, Kırk yedi iks iks ye\nE, Kırk altı iks iks, anne ve babadan\nSeçenekleri sırayla değerlendirelim.\nYalnız babadan gelen kırk altı iks iks doğru. Tam molde boş ovum döllenir, bütün kromozomlar babadan gelir ve hücreler diploiddir.\nAltmış dokuz iks iks ye triploid bir karyotiptir ve kısmi molün tipik örneğidir. Normal ovumun iki spermle ya da diploid spermle döllenmesinden oluşur.\nKırk beş iks mol karyotipleri arasında yer almaz. Her iki mol tipinin ortak noktası paternal genetik materyal fazlalığıdır.\nKırk yedi iks iks ye de mol karyotipi değildir. Kısmi molde kromozom sayısı altmış dokuz olur ve paternal genler baskındır.\nAnne ve babadan gelen kırk altı iks iks tam mol değildir. Tam molde ovum boştur ve genetik içeriğin tamamı babadandır.\nDoğru cevap A, Kırk altı iks iks, yalnız babadan\nTam mol boş ovumun tek sperm duplikasyonu ya da iki spermle döllenmesinden oluşur. Karyotip genellikle kırk altı iks iks diploiddir ve tüm genetik içerik babadandır.",
-   "kelime": 158
+   "sayfa": [
+    38,
+    40,
+    41
+   ],
+   "metin": "**Soru.** Tam hidatiform molün tipik karyotipi hangisidir?\n\n**A)** 46,XX (yalnız paternal) · **B)** 69,XXY · **C)** 45,X · **D)** 47,XXY · **E)** 46,XX (maternal+paternal)\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **46,XX (yalnız paternal)** — Yalnız paternal 46,XX doğru: tam molde boş ovum döllenir, bütün kromozomlar babadan gelir ve hücreler diploiddir.\n- **69,XXY** — 69,XXY triploid bir karyotiptir ve kısmi molün tipik örneğidir; normal ovumun iki spermle ya da diploid spermle döllenmesinden oluşur.\n- **45,X** — 45,X karyotipi (monozomi X) Turner sendromunun ve spontan ilk trimester düşüklerinin sık kromozomal nedenidir; tam (komplet) hidatiform mol ise çekirdeğini kaybetmiş boş bir ovumun tek bir spermle döllenip ikilenmesiyle (veya iki spermle döllenmesiyle) oluşur ve olguların %90'ında tamamı babadan gelen 46,XX (yalnız paternal/androgenetik) karyotip gösterir.\n- **47,XXY** — 47,XXY de mol karyotipi değildir; kısmi molde kromozom sayısı 69 olur ve paternal genler baskındır.\n- **46,XX (maternal+paternal)** — Anne ve babadan gelen 46,XX tam mol değildir; tam molde ovum boştur ve genetik içeriğin tamamı babadandır.\n\n**Cevap: A** — 46,XX (yalnız paternal)\n\n**Özet.** Tam mol boş ovumun tek sperm duplikasyonu ya da iki spermle döllenmesinden oluşur; karyotip genellikle 46,XX diploiddir ve tüm genetik içerik babadandır.",
+   "ses": "Tam hidatiform molün tipik karyotipi hangisidir?\nA, Kırk altı iks iks, yalnız babadan\nBe, Altmış dokuz iks iks ye\nCe, Kırk beş iks\nDe, Kırk yedi iks iks ye\nE, Kırk altı iks iks, anne ve babadan\nSeçenekleri sırayla değerlendirelim.\nYalnız babadan gelen kırk altı iks iks doğru. Tam molde boş ovum döllenir, bütün kromozomlar babadan gelir ve hücreler diploiddir.\nAltmış dokuz iks iks ye triploid bir karyotiptir ve kısmi molün tipik örneğidir. Normal ovumun iki spermle ya da diploid spermle döllenmesinden oluşur.\nkırk beş iks karyotipi, monozomi X, Turner sendromunun ve spontan ilk trimester düşüklerinin sık kromozomal nedenidir. Tam, komplet, hidatiform mol ise çekirdeğini kaybetmiş boş bir ovumun tek bir spermle döllenip ikilenmesiyle, veya iki spermle döllenmesiyle, oluşur ve olguların yüzde doksan'ında tamamı babadan gelen kırk altı iks iks, yalnız paternal/androgenetik, karyotip gösterir.\nKırk yedi iks iks ye de mol karyotipi değildir. Kısmi molde kromozom sayısı altmış dokuz olur ve paternal genler baskındır.\nAnne ve babadan gelen kırk altı iks iks tam mol değildir. Tam molde ovum boştur ve genetik içeriğin tamamı babadandır.\nDoğru cevap A, Kırk altı iks iks, yalnız babadan\nTam mol boş ovumun tek sperm duplikasyonu ya da iki spermle döllenmesinden oluşur. Karyotip genellikle kırk altı iks iks diploiddir ve tüm genetik içerik babadandır.",
+   "kelime": 187
   },
   {
    "no": 10,
@@ -240,6 +305,7 @@
     "E": "PSTT"
    },
    "dogru": "C",
+   "ipucu": "Normal ovumun iki spermle döllendiği, bazı villusların normal kaldığı ve fetal kırmızı kan hücrelerinin görülebildiği tabloyu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Tam mol diploiddir, fetal parçalar nadirdir ve tüm koryonik villuslar anormaldir.",
@@ -249,6 +315,14 @@
     "E": "Plasental bölge trofoblastik tümörü ara trofoblastlardan gelişir ve genellikle XX karyotipli diploid bir tümördür."
    },
    "ozet": "Kısmi mol triploiddir, örneğin 69,XXY; bazı villuslar normaldir, trofoblast proliferasyonu fokaldir ve fetal parçalar sıktır, tam molde ise fetal parça nadirdir.",
+   "sayfa": [
+    38,
+    39,
+    50,
+    51,
+    58,
+    64
+   ],
    "metin": "**Soru.** Fetal parçaların sık görüldüğü, triploid karyotipli trofoblastik hastalık hangisidir?\n\n**A)** Tam mol · **B)** İnvaziv mol · **C)** Kısmi mol · **D)** Koryokarsinom · **E)** PSTT\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Tam mol** — Tam mol diploiddir, fetal parçalar nadirdir ve tüm koryonik villuslar anormaldir.\n- **İnvaziv mol** — İnvaziv mol lokal agresif bir tam moldür; hidropik villuslar miyometriyuma derin invazyon yapar.\n- **Kısmi mol** — Kısmi mol doğru: neredeyse her zaman triploiddir, erken embriyo oluşabilir ve fetal parçalar sık görülür.\n- **Koryokarsinom** — Koryokarsinomda koryonik villus yoktur; anaplastik sitotrofoblast ve sinsityotrofoblastlardan oluşan solid bir tümördür.\n- **PSTT** — Plasental bölge trofoblastik tümörü ara trofoblastlardan gelişir ve genellikle XX karyotipli diploid bir tümördür.\n\n**Cevap: C** — Kısmi mol\n\n**Özet.** Kısmi mol triploiddir, örneğin 69,XXY; bazı villuslar normaldir, trofoblast proliferasyonu fokaldir ve fetal parçalar sıktır, tam molde ise fetal parça nadirdir.",
    "ses": "Fetal parçaların sık görüldüğü, triploid karyotipli trofoblastik hastalık hangisidir?\nA, Tam mol\nBe, İnvaziv mol\nCe, Kısmi mol\nDe, Koryokarsinom\nE, Plasental bölge trofoblastik tümörü\nHer seçeneği tek tek ele alalım.\nTam mol diploiddir, fetal parçalar nadirdir ve tüm koryonik villuslar anormaldir.\nİnvaziv mol lokal agresif bir tam moldür. Hidropik villuslar miyometriyuma derin invazyon yapar.\nKısmi mol doğru. Neredeyse her zaman triploiddir, erken embriyo oluşabilir ve fetal parçalar sık görülür.\nKoryokarsinomda koryonik villus yoktur. Anaplastik sitotrofoblast ve sinsityotrofoblastlardan oluşan solid bir tümördür.\nPlasental bölge trofoblastik tümörü ara trofoblastlardan gelişir ve genellikle iks iks karyotipli diploid bir tümördür.\nDoğru cevap Ce, Kısmi mol\nKısmi mol triploiddir, örneğin altmış dokuz iks iks ye. Bazı villuslar normaldir, trofoblast proliferasyonu fokaldir ve fetal parçalar sıktır, tam molde ise fetal parça nadirdir.",
    "kelime": 144
@@ -265,6 +339,7 @@
     "E": "PSTT"
    },
    "dogru": "D",
+   "ipucu": "Villus yapısını tamamen yitirmiş, çok agresif ve tanı anında çoğunlukla metastaz yapmış malign trofoblastik neoplazmı düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Tam molde villuslar korunur; hidropik şişme ve diffüz trofoblast proliferasyonu görülür.",
@@ -274,6 +349,14 @@
     "E": "Plasental bölge trofoblastik tümörü ara trofoblastlardan oluşur; az hCG ama önemli miktarda hPL üretir."
    },
    "ozet": "Koryokarsinom villus içermeyen, hemorajik nekrotik bir trofoblastik tümördür; en sık akciğere metastaz yapar ve gestasyonel tipi kemoterapiye son derece duyarlıdır.",
+   "sayfa": [
+    48,
+    51,
+    57,
+    58,
+    60,
+    63
+   ],
    "metin": "**Soru.** Koryonik villus içermeyen, sitotrofoblast ve sinsityotrofoblastlardan oluşan hemorajik tümör hangisidir?\n\n**A)** Tam mol · **B)** İnvaziv mol · **C)** Kısmi mol · **D)** Gebelik koryokarsinomu · **E)** PSTT\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Tam mol** — Tam molde villuslar korunur; hidropik şişme ve diffüz trofoblast proliferasyonu görülür.\n- **İnvaziv mol** — İnvaziv mol hidropik villusları korur ve koryokarsinom gibi uzak metastaz yapma kapasitesi yoktur.\n- **Kısmi mol** — Kısmi molde bazı villuslar ödemli, bazıları normaldir; trofoblast proliferasyonu fokal ve hafiftir.\n- **Gebelik koryokarsinomu** — Gebelik koryokarsinomu doğru: koryonik villus içermez, anaplastik sitotrofoblast ve sinsityotrofoblastlardan oluşan hemorajik, nekrotik bir tümördür.\n- **PSTT** — Plasental bölge trofoblastik tümörü ara trofoblastlardan oluşur; az hCG ama önemli miktarda hPL üretir.\n\n**Cevap: D** — Gebelik koryokarsinomu\n\n**Özet.** Koryokarsinom villus içermeyen, hemorajik nekrotik bir trofoblastik tümördür; en sık akciğere metastaz yapar ve gestasyonel tipi kemoterapiye son derece duyarlıdır.",
    "ses": "Koryonik villus içermeyen, sitotrofoblast ve sinsityotrofoblastlardan oluşan hemorajik tümör hangisidir?\nA, Tam mol\nBe, İnvaziv mol\nCe, Kısmi mol\nDe, Gebelik koryokarsinomu\nE, Plasental bölge trofoblastik tümörü\nŞıkları sırasıyla gözden geçirelim.\nTam molde villuslar korunur. Hidropik şişme ve diffüz trofoblast proliferasyonu görülür.\nİnvaziv mol hidropik villusları korur ve koryokarsinom gibi uzak metastaz yapma kapasitesi yoktur.\nKısmi molde bazı villuslar ödemli, bazıları normaldir. Trofoblast proliferasyonu fokal ve hafiftir.\nGebelik koryokarsinomu doğru. Koryonik villus içermez, anaplastik sitotrofoblast ve sinsityotrofoblastlardan oluşan hemorajik, nekrotik bir tümördür.\nPlasental bölge trofoblastik tümörü ara trofoblastlardan oluşur. Az ha ce ge ama önemli miktarda ha pe le üretir.\nDoğru cevap De, Gebelik koryokarsinomu\nKoryokarsinom villus içermeyen, hemorajik nekrotik bir trofoblastik tümördür. En sık akciğere metastaz yapar ve gestasyonel tipi kemoterapiye son derece duyarlıdır.",
    "kelime": 144
@@ -290,6 +373,7 @@
     "E": "Plasental bölge trofoblastik tümörü"
    },
    "dogru": "E",
+   "ipucu": "Ekstravillöz ara hücrelerden gelişen, gebelikten aylar sonra ortaya çıkan ve kemoterapiye daha az duyarlı neoplazmı düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Koryokarsinomda serum ve idrarda hızla yükselen hCG titreleri görülür; düşük hCG beklenmez.",
@@ -299,6 +383,15 @@
     "E": "Plasental bölge trofoblastik tümörü doğru: ara trofoblastlardan gelişir, az hCG ama önemli miktarda hPL üretir."
    },
    "ozet": "Plasental bölge trofoblastik tümörü ekstravillöz ara trofoblastlardan gelişir; serum hCG genelde düşüktür, hPL ise önemli miktarda üretilir ve tümör kemoterapiye daha az duyarlıdır.",
+   "sayfa": [
+    39,
+    44,
+    53,
+    57,
+    62,
+    63,
+    64
+   ],
    "metin": "**Soru.** Serum hCG'si düşük, önemli miktarda hPL üreten trofoblastik tümör hangisidir?\n\n**A)** Koryokarsinom · **B)** Tam mol · **C)** Kısmi mol · **D)** İnvaziv mol · **E)** Plasental bölge trofoblastik tümörü\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Koryokarsinom** — Koryokarsinomda serum ve idrarda hızla yükselen hCG titreleri görülür; düşük hCG beklenmez.\n- **Tam mol** — Tam molde hCG gebelik yaşına göre beklenenden çok daha yüksektir; dokuda da yoğun hCG bulunur.\n- **Kısmi mol** — Kısmi molde hCG yüksek ya da normal sınırlarda olabilir; hPL üretimiyle tanınan bir lezyon değildir.\n- **İnvaziv mol** — İnvaziv mol miyometriyuma derin invazyon yapan tam moldür; serum hCG yüksek kalırsa ek tedavi, çoğunlukla kemoterapi gerekir.\n- **Plasental bölge trofoblastik tümörü** — Plasental bölge trofoblastik tümörü doğru: ara trofoblastlardan gelişir, az hCG ama önemli miktarda hPL üretir.\n\n**Cevap: E** — Plasental bölge trofoblastik tümörü\n\n**Özet.** Plasental bölge trofoblastik tümörü ekstravillöz ara trofoblastlardan gelişir; serum hCG genelde düşüktür, hPL ise önemli miktarda üretilir ve tümör kemoterapiye daha az duyarlıdır.",
    "ses": "Serum ha ce gesi düşük, önemli miktarda ha pe le üreten trofoblastik tümör hangisidir?\nA, Koryokarsinom\nBe, Tam mol\nCe, Kısmi mol\nDe, İnvaziv mol\nE, Plasental bölge trofoblastik tümörü\nŞimdi seçeneklere tek tek bakalım.\nKoryokarsinomda serum ve idrarda hızla yükselen ha ce ge titreleri görülür. Düşük ha ce ge beklenmez.\nTam molde ha ce ge gebelik yaşına göre beklenenden çok daha yüksektir. Dokuda da yoğun ha ce ge bulunur.\nKısmi molde ha ce ge yüksek ya da normal sınırlarda olabilir. Ha pe le üretimiyle tanınan bir lezyon değildir.\nİnvaziv mol miyometriyuma derin invazyon yapan tam moldür. Serum ha ce ge yüksek kalırsa ek tedavi, çoğunlukla kemoterapi gerekir.\nPlasental bölge trofoblastik tümörü doğru. Ara trofoblastlardan gelişir, az ha ce ge ama önemli miktarda ha pe le üretir.\nDoğru cevap E, Plasental bölge trofoblastik tümörü\nPlasental bölge trofoblastik tümörü ekstravillöz ara trofoblastlardan gelişir. Serum ha ce ge genelde düşüktür, ha pe le ise önemli miktarda üretilir ve tümör kemoterapiye daha az duyarlıdır.",
    "kelime": 163
@@ -315,6 +408,7 @@
     "E": "Duktal epitel"
    },
    "dogru": "A",
+   "ipucu": "Bazal membranı destekleyen ve kasılarak süt atılımına yardım eden tabakanın in situ ve invaziv lezyonda korunup korunmadığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Miyoepitel doğru: in situ karsinomda korunur, invaziv karsinomda kaybolur; bu yüzden önemli bir immünohistokimyasal belirteçtir.",
@@ -324,6 +418,13 @@
     "E": "Duktal epitel lobüllerden meme ucuna süt taşıyan kanalları döşer; invazyonu gösteren tabaka değildir."
    },
    "ozet": "Meme lobülünde lümen epiteli ve bazal miyoepitel tabaka bulunur; miyoepitel in situ karsinomda korunur, invaziv karsinomda kaybolur.",
+   "sayfa": [
+    66,
+    67,
+    68,
+    69,
+    70
+   ],
    "metin": "**Soru.** Memede in situ ve invaziv karsinom ayrımında önemli olan hücre tabakası hangisidir?\n\n**A)** Miyoepitel · **B)** Lümen epiteli · **C)** İnterlobüler stroma · **D)** İntralobüler stroma · **E)** Duktal epitel\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Miyoepitel** — Miyoepitel doğru: in situ karsinomda korunur, invaziv karsinomda kaybolur; bu yüzden önemli bir immünohistokimyasal belirteçtir.\n- **Lümen epiteli** — Lümen epitel hücreleri emzirme döneminde süt üretir; in situ ile invaziv ayrımında kullanılan tabaka bu değildir.\n- **İnterlobüler stroma** — İnterlobüler stroma memenin boyutunu belirleyen ana bileşendir; ergenlikte artar, yaşla atrofiye uğrar.\n- **İntralobüler stroma** — İntralobüler stroma lobülü destekleyen özel stromadır; fibroadenom ve filloid tümörün çıkış yeridir.\n- **Duktal epitel** — Duktal epitel lobüllerden meme ucuna süt taşıyan kanalları döşer; invazyonu gösteren tabaka değildir.\n\n**Cevap: A** — Miyoepitel\n\n**Özet.** Meme lobülünde lümen epiteli ve bazal miyoepitel tabaka bulunur; miyoepitel in situ karsinomda korunur, invaziv karsinomda kaybolur.",
    "ses": "Memede in situ ve invaziv karsinom ayrımında önemli olan hücre tabakası hangisidir?\nA, Miyoepitel\nBe, Lümen epiteli\nCe, İnterlobüler stroma\nDe, İntralobüler stroma\nE, Duktal epitel\nSeçenekleri sırayla değerlendirelim.\nMiyoepitel doğru. İn situ karsinomda korunur, invaziv karsinomda kaybolur, bu yüzden önemli bir immünohistokimyasal belirteçtir.\nLümen epitel hücreleri emzirme döneminde süt üretir. İn situ ile invaziv ayrımında kullanılan tabaka bu değildir.\nİnterlobüler stroma memenin boyutunu belirleyen ana bileşendir. Ergenlikte artar, yaşla atrofiye uğrar.\nİntralobüler stroma lobülü destekleyen özel stromadır. Fibroadenom ve filloid tümörün çıkış yeridir.\nDuktal epitel lobüllerden meme ucuna süt taşıyan kanalları döşer. İnvazyonu gösteren tabaka değildir.\nDoğru cevap A, Miyoepitel\nMeme lobülünde lümen epiteli ve bazal miyoepitel tabaka bulunur. Miyoepitel in situ karsinomda korunur, invaziv karsinomda kaybolur.",
    "kelime": 144
@@ -331,6 +432,7 @@
   {
    "no": 27,
    "tur": "cikmis",
+   "sinav": "2020-2021 · Dönem 3 Kurul 1 Doğrulanmış Sınavı",
    "soru": "Ektopik gebelik en sık hangi anatomik bölgede görülür?",
    "secenekler": {
     "A": "Over",
@@ -340,22 +442,27 @@
     "E": "Endoservikal kanal"
    },
    "dogru": "C",
+   "ipucu": "Pelvik inflamatuvar hastalığın skar ve daralma yaptığı, ovumun uterusa ulaşmak için geçtiği yapıyı düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Over ektopik gebeliğin daha nadir yerleşimlerindendir; ovaryum gebeliği ovumun folikül rüptürüyle eş zamanlı döllenmesiyle gelişir.",
     "B": "Karın boşluğu, döllenmiş ovumun fimbriyal uçtan peritona düşmesiyle gelişen abdominal gebeliğin yeridir; en sık yerleşim değildir.",
     "C": "Tuba doğru: ektopik gebeliklerin yaklaşık %90'ı fallop tüpünün uterus dışı kısmında yerleşir.",
     "D": "Uterin korpus normal implantasyon yeridir; ektopik gebelik ise embriyonun uterus dışında implantasyonudur.",
-    "E": "Tüp dışındaki ektopik yerleşimler ovaryum, karın boşluğu ve tüpün uterus içi kısmıdır. Endoservikal kanal bu sorudaki ayrımı sağlamaz."
+    "E": "Endoservikal kanal servikal ektopik gebeliğin yerleşebildiği çok nadir (%1'in altında) bir bölgedir; kronik salpingit veya peritubal yapışıklıkların zigotun uterusa geçişini geciktirmesi nedeniyle ektopik gebeliklerin yaklaşık %90'ı fallop tüpünde (tuba uterina, özellikle ampulla bölgesinde) yerleşir."
    },
    "ozet": "Ektopik gebelik doğrulanmış gebeliklerin yaklaşık %2'sinde görülür; olguların yaklaşık %90'ında yerleşim fallop tüpünün uterus dışı kısmıdır.",
-   "metin": "**Soru.** Ektopik gebelik en sık hangi anatomik bölgede görülür?\n\n**A)** Over · **B)** Karın boşluğu · **C)** Tuba · **D)** Uterin korpus · **E)** Endoservikal kanal\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Over** — Over ektopik gebeliğin daha nadir yerleşimlerindendir; ovaryum gebeliği ovumun folikül rüptürüyle eş zamanlı döllenmesiyle gelişir.\n- **Karın boşluğu** — Karın boşluğu, döllenmiş ovumun fimbriyal uçtan peritona düşmesiyle gelişen abdominal gebeliğin yeridir; en sık yerleşim değildir.\n- **Tuba** — Tuba doğru: ektopik gebeliklerin yaklaşık %90'ı fallop tüpünün uterus dışı kısmında yerleşir.\n- **Uterin korpus** — Uterin korpus normal implantasyon yeridir; ektopik gebelik ise embriyonun uterus dışında implantasyonudur.\n- **Endoservikal kanal** — Tüp dışındaki ektopik yerleşimler ovaryum, karın boşluğu ve tüpün uterus içi kısmıdır. Endoservikal kanal bu sorudaki ayrımı sağlamaz.\n\n**Cevap: C** — Tuba\n\n**Özet.** Ektopik gebelik doğrulanmış gebeliklerin yaklaşık %2'sinde görülür; olguların yaklaşık %90'ında yerleşim fallop tüpünün uterus dışı kısmıdır.",
-   "ses": "Ektopik gebelik en sık hangi anatomik bölgede görülür?\nA, Over\nBe, Karın boşluğu\nCe, Tuba\nDe, Uterin korpus\nE, Endoservikal kanal\nŞıkları sırasıyla gözden geçirelim.\nOver ektopik gebeliğin daha nadir yerleşimlerindendir. Ovaryum gebeliği ovumun folikül rüptürüyle eş zamanlı döllenmesiyle gelişir.\nKarın boşluğu, döllenmiş ovumun fimbriyal uçtan peritona düşmesiyle gelişen abdominal gebeliğin yeridir. En sık yerleşim değildir.\nTuba doğru. Ektopik gebeliklerin yaklaşık yüzde doksanı fallop tüpünün uterus dışı kısmında yerleşir.\nUterin korpus normal implantasyon yeridir. Ektopik gebelik ise embriyonun uterus dışında implantasyonudur.\nTüp dışındaki ektopik yerleşimler ovaryum, karın boşluğu ve tüpün uterus içi kısmıdır. Endoservikal kanal bu sorudaki ayrımı sağlamaz.\nDoğru cevap Ce, Tuba\nEktopik gebelik doğrulanmış gebeliklerin yaklaşık yüzde ikisinde görülür. Olguların yaklaşık yüzde doksanında yerleşim fallop tüpünün uterus dışı kısmıdır.",
-   "kelime": 143
+   "sayfa": [
+    11
+   ],
+   "metin": "**Soru.** Ektopik gebelik en sık hangi anatomik bölgede görülür?\n\n**A)** Over · **B)** Karın boşluğu · **C)** Tuba · **D)** Uterin korpus · **E)** Endoservikal kanal\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Over** — Over ektopik gebeliğin daha nadir yerleşimlerindendir; ovaryum gebeliği ovumun folikül rüptürüyle eş zamanlı döllenmesiyle gelişir.\n- **Karın boşluğu** — Karın boşluğu, döllenmiş ovumun fimbriyal uçtan peritona düşmesiyle gelişen abdominal gebeliğin yeridir; en sık yerleşim değildir.\n- **Tuba** — Tuba doğru: ektopik gebeliklerin yaklaşık %90'ı fallop tüpünün uterus dışı kısmında yerleşir.\n- **Uterin korpus** — Uterin korpus normal implantasyon yeridir; ektopik gebelik ise embriyonun uterus dışında implantasyonudur.\n- **Endoservikal kanal** — Endoservikal kanal servikal ektopik gebeliğin yerleşebildiği çok nadir (%1'in altında) bir bölgedir; kronik salpingit veya peritubal yapışıklıkların zigotun uterusa geçişini geciktirmesi nedeniyle ektopik gebeliklerin yaklaşık %90'ı fallop tüpünde (tuba uterina, özellikle ampulla bölgesinde) yerleşir.\n\n**Cevap: C** — Tuba\n\n**Özet.** Ektopik gebelik doğrulanmış gebeliklerin yaklaşık %2'sinde görülür; olguların yaklaşık %90'ında yerleşim fallop tüpünün uterus dışı kısmıdır.",
+   "ses": "Ektopik gebelik en sık hangi anatomik bölgede görülür?\nA, Over\nBe, Karın boşluğu\nCe, Tuba\nDe, Uterin korpus\nE, Endoservikal kanal\nŞıkları sırasıyla gözden geçirelim.\nOver ektopik gebeliğin daha nadir yerleşimlerindendir. Ovaryum gebeliği ovumun folikül rüptürüyle eş zamanlı döllenmesiyle gelişir.\nKarın boşluğu, döllenmiş ovumun fimbriyal uçtan peritona düşmesiyle gelişen abdominal gebeliğin yeridir. En sık yerleşim değildir.\nTuba doğru. Ektopik gebeliklerin yaklaşık yüzde doksanı fallop tüpünün uterus dışı kısmında yerleşir.\nUterin korpus normal implantasyon yeridir. Ektopik gebelik ise embriyonun uterus dışında implantasyonudur.\nEndoservikal kanal servikal ektopik gebeliğin yerleşebildiği çok nadir, yüzde bir'in altında, bir bölgedir. Kronik salpingit veya peritubal yapışıklıkların zigotun uterusa geçişini geciktirmesi nedeniyle ektopik gebeliklerin yaklaşık yüzde doksan'ı fallop tüpünde, tuba uterina, özellikle ampulla bölgesinde, yerleşir.\nDoğru cevap Ce, Tuba\nEktopik gebelik doğrulanmış gebeliklerin yaklaşık yüzde ikisinde görülür. Olguların yaklaşık yüzde doksanında yerleşim fallop tüpünün uterus dışı kısmıdır.",
+   "kelime": 159
   },
   {
    "no": 28,
    "tur": "cikmis",
+   "sinav": "2020-2021 · Dönem 3 Kurul 1 Doğrulanmış Sınavı",
    "soru": "Aşağıdakilerden hangisi ektopik gebelik sebeplerinden olamaz?",
    "secenekler": {
     "A": "Endometriozis",
@@ -365,22 +472,28 @@
     "E": "Kordonda akut vaskülit (funisit)"
    },
    "dogru": "E",
+   "ipucu": "Tüpte implantasyonu kolaylaştıran yapısal hasarları, gebelik sırasında fetüse ait bir yapıda gelişen inflamasyondan ayır.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
-    "A": "Endometriozis ektopik gebeliğin diğer nedenleri arasında sayılır; bu yüzden cevap değildir.",
+    "A": "Pelvik endometriozis fallop tüpü çevresinde kronik inflamasyon, fibrozis ve peritubal yapışıklıklar oluşturarak tüp hareketliliğini bozar ve ektopik gebeliğin iyi bilinen zemin hazırlayıcı nedenleri arasında yer alır.",
     "B": "Kronik salpingite bağlı iltihabi değişiklikler, yani pelvik inflamatuvar hastalık ektopik gebeliğin en önemli yatkınlık nedenidir.",
     "C": "Tüp lümenindeki skarlaşma ve daralma ektopik gebeliğe zemin hazırlar; apandisit veya cerrahi sonrası peritübal skar da nedenler arasındadır.",
-    "D": "Uterus içi tümörler ektopik gebeliğin diğer nedenleri arasında yer alır; bu yüzden cevap değildir.",
+    "D": "Uterus veya tuba komşuluğundaki leiomyom gibi tümörler tubal lümeni dıştan sıkıştırıp ovumun uterusa ilerlemesini mekanik olarak engelleyerek ektopik gebeliğe neden olabilir; göbek kordonundaki akut vaskülit (funisit) ise ilerlemiş intrauterin gebelikte asenden amniyon kesesi enfeksiyonunun (koryoamniyonitin) fetal yanıtıdır ve ektopik gebelik nedeni olamaz.",
     "E": "Kordonda akut vaskülit doğru: funisitis koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıdır; ektopik gebeliğin nedeni değil, fetal inflamasyon belirtecidir."
    },
    "ozet": "Ektopik gebeliğe en önemli yatkınlık kronik salpingite bağlı tüp skarı ve daralmasıdır; endometriozis, uterus içi tümörler ve peritübal skar da nedenlerdendir, funisitis değildir.",
-   "metin": "**Soru.** Aşağıdakilerden hangisi ektopik gebelik sebeplerinden olamaz?\n\n**A)** Endometriozis · **B)** Kronik iltihabi değişiklikler · **C)** Kanalda (tubada) nedbe oluşumu · **D)** Tümörler · **E)** Kordonda akut vaskülit (funisit)\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Endometriozis** — Endometriozis ektopik gebeliğin diğer nedenleri arasında sayılır; bu yüzden cevap değildir.\n- **Kronik iltihabi değişiklikler** — Kronik salpingite bağlı iltihabi değişiklikler, yani pelvik inflamatuvar hastalık ektopik gebeliğin en önemli yatkınlık nedenidir.\n- **Kanalda (tubada) nedbe oluşumu** — Tüp lümenindeki skarlaşma ve daralma ektopik gebeliğe zemin hazırlar; apandisit veya cerrahi sonrası peritübal skar da nedenler arasındadır.\n- **Tümörler** — Uterus içi tümörler ektopik gebeliğin diğer nedenleri arasında yer alır; bu yüzden cevap değildir.\n- **Kordonda akut vaskülit (funisit)** — Kordonda akut vaskülit doğru: funisitis koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıdır; ektopik gebeliğin nedeni değil, fetal inflamasyon belirtecidir.\n\n**Cevap: E** — Kordonda akut vaskülit (funisit)\n\n**Özet.** Ektopik gebeliğe en önemli yatkınlık kronik salpingite bağlı tüp skarı ve daralmasıdır; endometriozis, uterus içi tümörler ve peritübal skar da nedenlerdendir, funisitis değildir.",
-   "ses": "Aşağıdakilerden hangisi ektopik gebelik sebeplerinden olamaz?\nA, Endometriozis\nBe, Kronik iltihabi değişiklikler\nCe, Kanalda, yani tubada nedbe oluşumu\nDe, Tümörler\nE, Kordonda akut vaskülit, yani funisit\nŞimdi seçeneklere tek tek bakalım.\nEndometriozis ektopik gebeliğin diğer nedenleri arasında sayılır. Bu yüzden cevap değildir.\nKronik salpingite bağlı iltihabi değişiklikler, yani pelvik inflamatuvar hastalık ektopik gebeliğin en önemli yatkınlık nedenidir.\nTüp lümenindeki skarlaşma ve daralma ektopik gebeliğe zemin hazırlar. Apandisit veya cerrahi sonrası peritübal skar da nedenler arasındadır.\nUterus içi tümörler ektopik gebeliğin diğer nedenleri arasında yer alır. Bu yüzden cevap değildir.\nKordonda akut vaskülit doğru. Funisitis koryo amniyon enfeksiyonunun kordon damarlarına yayılmasıdır, ektopik gebeliğin nedeni değil, fetal inflamasyon belirtecidir.\nDoğru cevap E, Kordonda akut vaskülit, yani funisit\nEktopik gebeliğe en önemli yatkınlık kronik salpingite bağlı tüp skarı ve daralmasıdır. Endometriozis, uterus içi tümörler ve peritübal skar da nedenlerdendir, funisitis değildir.",
-   "kelime": 164
+   "sayfa": [
+    8,
+    12
+   ],
+   "metin": "**Soru.** Aşağıdakilerden hangisi ektopik gebelik sebeplerinden olamaz?\n\n**A)** Endometriozis · **B)** Kronik iltihabi değişiklikler · **C)** Kanalda (tubada) nedbe oluşumu · **D)** Tümörler · **E)** Kordonda akut vaskülit (funisit)\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Endometriozis** — Pelvik endometriozis fallop tüpü çevresinde kronik inflamasyon, fibrozis ve peritubal yapışıklıklar oluşturarak tüp hareketliliğini bozar ve ektopik gebeliğin iyi bilinen zemin hazırlayıcı nedenleri arasında yer alır.\n- **Kronik iltihabi değişiklikler** — Kronik salpingite bağlı iltihabi değişiklikler, yani pelvik inflamatuvar hastalık ektopik gebeliğin en önemli yatkınlık nedenidir.\n- **Kanalda (tubada) nedbe oluşumu** — Tüp lümenindeki skarlaşma ve daralma ektopik gebeliğe zemin hazırlar; apandisit veya cerrahi sonrası peritübal skar da nedenler arasındadır.\n- **Tümörler** — Uterus veya tuba komşuluğundaki leiomyom gibi tümörler tubal lümeni dıştan sıkıştırıp ovumun uterusa ilerlemesini mekanik olarak engelleyerek ektopik gebeliğe neden olabilir; göbek kordonundaki akut vaskülit (funisit) ise ilerlemiş intrauterin gebelikte asenden amniyon kesesi enfeksiyonunun (koryoamniyonitin) fetal yanıtıdır ve ektopik gebelik nedeni olamaz.\n- **Kordonda akut vaskülit (funisit)** — Kordonda akut vaskülit doğru: funisitis koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıdır; ektopik gebeliğin nedeni değil, fetal inflamasyon belirtecidir.\n\n**Cevap: E** — Kordonda akut vaskülit (funisit)\n\n**Özet.** Ektopik gebeliğe en önemli yatkınlık kronik salpingite bağlı tüp skarı ve daralmasıdır; endometriozis, uterus içi tümörler ve peritübal skar da nedenlerdendir, funisitis değildir.",
+   "ses": "Aşağıdakilerden hangisi ektopik gebelik sebeplerinden olamaz?\nA, Endometriozis\nBe, Kronik iltihabi değişiklikler\nCe, Kanalda, yani tubada nedbe oluşumu\nDe, Tümörler\nE, Kordonda akut vaskülit, yani funisit\nŞimdi seçeneklere tek tek bakalım.\nPelvik endometriozis fallop tüpü çevresinde kronik inflamasyon, fibrozis ve peritubal yapışıklıklar oluşturarak tüp hareketliliğini bozar ve ektopik gebeliğin iyi bilinen zemin hazırlayıcı nedenleri arasında yer alır.\nKronik salpingite bağlı iltihabi değişiklikler, yani pelvik inflamatuvar hastalık ektopik gebeliğin en önemli yatkınlık nedenidir.\nTüp lümenindeki skarlaşma ve daralma ektopik gebeliğe zemin hazırlar. Apandisit veya cerrahi sonrası peritübal skar da nedenler arasındadır.\nUterus veya tuba komşuluğundaki leiomyom gibi tümörler tubal lümeni dıştan sıkıştırıp ovumun uterusa ilerlemesini mekanik olarak engelleyerek ektopik gebeliğe neden olabilir. Göbek kordonundaki akut vaskülit, funisit, ise ilerlemiş intrauterin gebelikte asenden amniyon kesesi enfeksiyonunun, koryoamniyonitin, fetal yanıtıdır ve ektopik gebelik nedeni olamaz.\nKordonda akut vaskülit doğru. Funisitis koryo amniyon enfeksiyonunun kordon damarlarına yayılmasıdır, ektopik gebeliğin nedeni değil, fetal inflamasyon belirtecidir.\nDoğru cevap E, Kordonda akut vaskülit, yani funisit\nEktopik gebeliğe en önemli yatkınlık kronik salpingite bağlı tüp skarı ve daralmasıdır. Endometriozis, uterus içi tümörler ve peritübal skar da nedenlerdendir, funisitis değildir.",
+   "kelime": 207
   },
   {
    "no": 29,
    "tur": "cikmis",
+   "sinav": "2020-2021 · Dönem 3 Kurul 1 Doğrulanmış Sınavı",
    "soru": "Plasental site trofoblastik tümör hangi hücrelerden kaynaklanır?",
    "secenekler": {
     "A": "Sitotrofoblast",
@@ -390,6 +503,7 @@
     "E": "Desidual hücreler"
    },
    "dogru": "C",
+   "ipucu": "Normalde villus dışında yer alıp maternal desidua ve miyometriyumu istila eden hücre grubunu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Sitotrofoblast, ara trofoblastların normalde çoğaldığı hücredir; ancak bu tümörün doğrudan köken aldığı hücre değildir.",
@@ -399,6 +513,12 @@
     "E": "Desidual hücreler bu tümörün kökeni değil, istila ettiği dokudur; tümör hücreleri maternal desidua ve miyometriyuma yayılır."
    },
    "ozet": "Plasental bölge trofoblastik tümörü ekstravillöz, yani ara trofoblastlardan köken alır; az hCG ama önemli miktarda hPL üretir.",
+   "sayfa": [
+    50,
+    58,
+    62,
+    63
+   ],
    "metin": "**Soru.** Plasental site trofoblastik tümör hangi hücrelerden kaynaklanır?\n\n**A)** Sitotrofoblast · **B)** Sinsityotrofoblast · **C)** İntermediyer trofoblast · **D)** Fetal eritrosit · **E)** Desidual hücreler\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Sitotrofoblast** — Sitotrofoblast, ara trofoblastların normalde çoğaldığı hücredir; ancak bu tümörün doğrudan köken aldığı hücre değildir.\n- **Sinsityotrofoblast** — Sinsityotrofoblast koryokarsinomda sitotrofoblastla birlikte bulunan çok çekirdekli hücredir; plasental bölge trofoblastik tümörünün kökeni değildir.\n- **İntermediyer trofoblast** — İntermediyer trofoblast doğru: bu tümör ekstravillöz, yani ara trofoblastlardan köken alır; bu hücreler maternal desidua ve miyometriyumu istila eder.\n- **Fetal eritrosit** — Fetal eritrositler kısmi molde plasenta villuslarında görülür ve tam molden ayrımda yardımcıdır; tümör kökeni değildir.\n- **Desidual hücreler** — Desidual hücreler bu tümörün kökeni değil, istila ettiği dokudur; tümör hücreleri maternal desidua ve miyometriyuma yayılır.\n\n**Cevap: C** — İntermediyer trofoblast\n\n**Özet.** Plasental bölge trofoblastik tümörü ekstravillöz, yani ara trofoblastlardan köken alır; az hCG ama önemli miktarda hPL üretir.",
    "ses": "Plasental site trofoblastik tümör hangi hücrelerden kaynaklanır?\nA, Sitotrofoblast\nBe, Sinsityotrofoblast\nCe, İntermediyer trofoblast\nDe, Fetal eritrosit\nE, Desidual hücreler\nSeçenekleri sırayla değerlendirelim.\nSitotrofoblast, ara trofoblastların normalde çoğaldığı hücredir. Ancak bu tümörün doğrudan köken aldığı hücre değildir.\nSinsityotrofoblast koryokarsinomda sitotrofoblastla birlikte bulunan çok çekirdekli hücredir. Plasental bölge trofoblastik tümörünün kökeni değildir.\nİntermediyer trofoblast doğru. Bu tümör ekstravillöz, yani ara trofoblastlardan köken alır, bu hücreler maternal desidua ve miyometriyumu istila eder.\nFetal eritrositler kısmi molde plasenta villuslarında görülür ve tam molden ayrımda yardımcıdır. Tümör kökeni değildir.\nDesidual hücreler bu tümörün kökeni değil, istila ettiği dokudur. Tümör hücreleri maternal desidua ve miyometriyuma yayılır.\nDoğru cevap Ce, İntermediyer trofoblast\nPlasental bölge trofoblastik tümörü ekstravillöz, yani ara trofoblastlardan köken alır. Az miktarda ha ce ge ama önemli miktarda ha pe le üretir.",
    "kelime": 148
@@ -406,6 +526,7 @@
   {
    "no": 30,
    "tur": "cikmis",
+   "sinav": "2023-2024 · 2023-2024 Kurul 1 Sınavı",
    "soru": "Koryokarsinom (gestasyonel koryokarsinom) en sık aşağıdakilerden hangisinden sonra gelişir?",
    "secenekler": {
     "A": "Normal gebelik",
@@ -415,6 +536,7 @@
     "E": "Parsiyel mol gebelik"
    },
    "dogru": "D",
+   "ipucu": "Koryokarsinom olgularının yaklaşık yarısının öncesinde bulunan, diploid ve tamamen paternal kökenli lezyonu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Normal gebelik sonrası gelişim gebelik koryokarsinomlarının yaklaşık %22'sini oluşturur; en sık öncül gebelik değildir.",
@@ -424,6 +546,10 @@
     "E": "Parsiyel mol kalıcı mol hastalığı riskini artırır ancak koryokarsinomla ilişkili değildir."
    },
    "ozet": "Gebelik koryokarsinomlarının yaklaşık %50'si tam mol, %25'i düşük, %22'si normal gebelik sonrasında, kalanı ise ektopik gebelikten sonra gelişir.",
+   "sayfa": [
+    42,
+    56
+   ],
    "metin": "**Soru.** Koryokarsinom (gestasyonel koryokarsinom) en sık aşağıdakilerden hangisinden sonra gelişir?\n\n**A)** Normal gebelik · **B)** Ektopik gebelik · **C)** Abortus · **D)** Komplet mol gebelik · **E)** Parsiyel mol gebelik\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Normal gebelik** — Normal gebelik sonrası gelişim gebelik koryokarsinomlarının yaklaşık %22'sini oluşturur; en sık öncül gebelik değildir.\n- **Ektopik gebelik** — Ektopik gebelik sonrası gelişen koryokarsinomlar en küçük grubu oluşturur; diğer gruplardan arta kalan olgulardır.\n- **Abortus** — Abortus, yani önceki düşükler gebelik koryokarsinomlarının yaklaşık %25'inin öncülüdür; ikinci sıradadır.\n- **Komplet mol gebelik** — Komplet mol gebelik doğru: gebelik koryokarsinomlarının yaklaşık %50'si tam hidatiform mol sonrasında gelişir.\n- **Parsiyel mol gebelik** — Parsiyel mol kalıcı mol hastalığı riskini artırır ancak koryokarsinomla ilişkili değildir.\n\n**Cevap: D** — Komplet mol gebelik\n\n**Özet.** Gebelik koryokarsinomlarının yaklaşık %50'si tam mol, %25'i düşük, %22'si normal gebelik sonrasında, kalanı ise ektopik gebelikten sonra gelişir.",
    "ses": "Koryokarsinom, yani gestasyonel koryokarsinom en sık aşağıdakilerden hangisinden sonra gelişir?\nA, Normal gebelik\nBe, Ektopik gebelik\nCe, Abortus\nDe, Komplet mol gebelik\nE, Parsiyel mol gebelik\nHer seçeneği tek tek ele alalım.\nNormal gebelik sonrası gelişim gebelik koryokarsinomlarının yaklaşık yüzde yirmi ikisini oluşturur. En sık öncül gebelik değildir.\nEktopik gebelik sonrası gelişen koryokarsinomlar en küçük grubu oluşturur. Diğer gruplardan arta kalan olgulardır.\nAbortus, yani önceki düşükler gebelik koryokarsinomlarının yaklaşık yüzde yirmi beşinin öncülüdür. İkinci sıradadır.\nKomplet mol gebelik doğru. Gebelik koryokarsinomlarının yaklaşık yüzde ellisi tam hidatiform mol sonrasında gelişir.\nParsiyel mol kalıcı mol hastalığı riskini artırır ancak koryokarsinomla ilişkili değildir.\nDoğru cevap De, Komplet mol gebelik\nGebelik koryokarsinomlarının yaklaşık yüzde ellisi tam mol, yüzde yirmi beşi düşük, yüzde yirmi ikisi normal gebelik sonrasında, kalanı ise ektopik gebelikten sonra gelişir.",
    "kelime": 146
@@ -431,6 +557,7 @@
   {
    "no": 31,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Funisitisin klinik önemi hangisidir?",
    "secenekler": {
     "A": "Fetal inflamasyon belirteci olması",
@@ -440,6 +567,7 @@
     "E": "Doğum sonrası göbek enfeksiyonu olması"
    },
    "dogru": "A",
+   "ipucu": "Kordon damarlarına ulaşan iltihabın kime ait dokuda olduğunu ve yenidoğana yansımasını düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Fetal inflamasyon belirteci olması doğru: funisitis fetüsün de inflamasyona katıldığını gösterir ve neonatal sepsis riskine işaret eder.",
@@ -449,6 +577,11 @@
     "E": "Doğumdan sonra bebeğin göbek kalıntısındaki enfeksiyonlar omfalit ve omfaloflebittir; funisitis ise göbek kordonunun akut vaskülitidir."
    },
    "ozet": "Funisitis, koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıyla oluşan akut vaskülittir; fetal inflamasyonun belirteci olup neonatal sepsis riskine işaret eder.",
+   "sayfa": [
+    8,
+    10,
+    12
+   ],
    "metin": "**Soru.** Funisitisin klinik önemi hangisidir?\n\n**A)** Fetal inflamasyon belirteci olması · **B)** Ektopik gebelik nedeni olması · **C)** Hematojen enfeksiyonu göstermesi · **D)** Preeklampsiyi başlatması · **E)** Doğum sonrası göbek enfeksiyonu olması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Fetal inflamasyon belirteci olması** — Fetal inflamasyon belirteci olması doğru: funisitis fetüsün de inflamasyona katıldığını gösterir ve neonatal sepsis riskine işaret eder.\n- **Ektopik gebelik nedeni olması** — Funisitis bir ektopik gebelik nedeni değildir; ektopik gebeliğin en önemli yatkınlığı kronik salpingite bağlı pelvik inflamatuvar hastalıktır.\n- **Hematojen enfeksiyonu göstermesi** — Hematojen enfeksiyon koryon villuslarında kronik villit yapar; funisitis ise koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıdır.\n- **Preeklampsiyi başlatması** — Preeklampsinin temeli spiral arterlerde yetersiz yeniden şekillenme ve endotel disfonksiyonudur; funisitisle ilişkili değildir.\n- **Doğum sonrası göbek enfeksiyonu olması** — Doğumdan sonra bebeğin göbek kalıntısındaki enfeksiyonlar omfalit ve omfaloflebittir; funisitis ise göbek kordonunun akut vaskülitidir.\n\n**Cevap: A** — Fetal inflamasyon belirteci olması\n\n**Özet.** Funisitis, koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıyla oluşan akut vaskülittir; fetal inflamasyonun belirteci olup neonatal sepsis riskine işaret eder.",
    "ses": "Funisitisin klinik önemi hangisidir?\nA, Fetal inflamasyon belirteci olması\nBe, Ektopik gebelik nedeni olması\nCe, Hematojen enfeksiyonu göstermesi\nDe, Preeklampsiyi başlatması\nE, Doğum sonrası göbek enfeksiyonu olması\nŞıkları sırasıyla gözden geçirelim.\nFetal inflamasyon belirteci olması doğru. Funisitis fetüsün de inflamasyona katıldığını gösterir ve neonatal sepsis riskine işaret eder.\nFunisitis bir ektopik gebelik nedeni değildir. Ektopik gebeliğin en önemli yatkınlığı kronik salpingite bağlı pelvik inflamatuvar hastalıktır.\nHematojen enfeksiyon koryon villuslarında kronik villit yapar. Funisitis ise koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıdır.\nPreeklampsinin temeli spiral arterlerde yetersiz yeniden şekillenme ve endotel disfonksiyonudur. Funisitisle ilişkili değildir.\nDoğumdan sonra bebeğin göbek kalıntısındaki enfeksiyonlar omfalit ve omfaloflebittir. Funisitis ise göbek kordonunun akut vaskülitidir.\nDoğru cevap A, Fetal inflamasyon belirteci olması\nFunisitis, koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıyla oluşan akut vaskülittir. Fetal inflamasyonun belirteci olup neonatal sepsis riskine işaret eder.",
    "kelime": 167
@@ -456,6 +589,7 @@
   {
    "no": 32,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "TORCH grubunda genellikle vajinal doğum sırasında bebeğe bulaşan etken hangisidir?",
    "secenekler": {
     "A": "Toxoplasma gondii",
@@ -465,6 +599,7 @@
     "E": "Listeria monocytogenes"
    },
    "dogru": "B",
+   "ipucu": "Torç kısaltmasının son harfini ve bulaşın gebeliğin hangi anında gerçekleştiğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Toxoplasma gondii bir protozoondur; az pişmiş et ya da kedi dışkısıyla bulaşabilir.",
@@ -474,6 +609,10 @@
     "E": "Listeria monocytogenes TORCH grubunda diğerleri başlığında yer alır; anne kanından plasentaya hematojen yolla yayılır."
    },
    "ozet": "TORCH etkenleri anne kanından plasentaya yayılıp kronik villit yapar; herpes simpleks virüs ise genellikle vajinal doğum sırasında bebeğe bulaşır.",
+   "sayfa": [
+    9,
+    10
+   ],
    "metin": "**Soru.** TORCH grubunda genellikle vajinal doğum sırasında bebeğe bulaşan etken hangisidir?\n\n**A)** Toxoplasma gondii · **B)** Herpes simpleks virüs · **C)** Rubella virüs · **D)** Sitomegalovirüs · **E)** Listeria monocytogenes\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Toxoplasma gondii** — Toxoplasma gondii bir protozoondur; az pişmiş et ya da kedi dışkısıyla bulaşabilir.\n- **Herpes simpleks virüs** — Herpes simpleks virüs doğru: TORCH kısaltmasında H harfidir ve genellikle vajinal doğum sırasında bebeğe bulaşır.\n- **Rubella virüs** — Rubella kızamıkçık virüsüdür; öksürük ya da hapşırmayla yayılır.\n- **Sitomegalovirüs** — Sitomegalovirüs tükürük ve vücut sıvılarıyla yayılan bir herpes virüsüdür; doğum anındaki bulaşla tanımlanmaz.\n- **Listeria monocytogenes** — Listeria monocytogenes TORCH grubunda diğerleri başlığında yer alır; anne kanından plasentaya hematojen yolla yayılır.\n\n**Cevap: B** — Herpes simpleks virüs\n\n**Özet.** TORCH etkenleri anne kanından plasentaya yayılıp kronik villit yapar; herpes simpleks virüs ise genellikle vajinal doğum sırasında bebeğe bulaşır.",
    "ses": "Torç grubunda genellikle vajinal doğum sırasında bebeğe bulaşan etken hangisidir?\nA, Toksoplazma gondi\nBe, Herpes simpleks virüs\nCe, Rubella virüs\nDe, Sitomegalovirüs\nE, Listerya monositogenes\nŞimdi seçeneklere tek tek bakalım.\nToksoplazma gondi bir protozoondur. Az pişmiş et ya da kedi dışkısıyla bulaşabilir.\nHerpes simpleks virüs doğru. Torç kısaltmasında ha harfidir ve genellikle vajinal doğum sırasında bebeğe bulaşır.\nRubella kızamıkçık virüsüdür. Öksürük ya da hapşırmayla yayılır.\nSitomegalovirüs tükürük ve vücut sıvılarıyla yayılan bir herpes virüsüdür. Doğum anındaki bulaşla tanımlanmaz.\nListerya monositogenes torç grubunda diğerleri başlığında yer alır. Anne kanından plasentaya hematojen yolla yayılır.\nDoğru cevap Be, Herpes simpleks virüs\nTorç etkenleri anne kanından plasentaya yayılıp kronik villit yapar. Herpes simpleks virüs ise genellikle vajinal doğum sırasında bebeğe bulaşır.",
    "kelime": 144
@@ -481,6 +620,7 @@
   {
    "no": 33,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Ektopik gebelik riskini yaklaşık iki kat artıran durum hangisidir?",
    "secenekler": {
     "A": "Önceki mol öyküsü",
@@ -490,6 +630,7 @@
     "E": "Preeklampsi"
    },
    "dogru": "C",
+   "ipucu": "Gebeliği önlemek için kullanılan yöntemlerden uterus boşluğuna yerleştirileni düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Önceki mol öyküsü sonraki gebeliklerde mol riskini artırır; ektopik gebelik risk faktörü olarak tanımlanmaz.",
@@ -499,6 +640,10 @@
     "E": "Preeklampsi spiral arterlerin yetersiz yeniden şekillenmesiyle gelişen sistemik bir sendromdur; ektopik gebelik risk faktörü değildir."
    },
    "ozet": "Ektopik gebeliğin en önemli yatkınlığı kronik salpingite bağlı pelvik inflamatuvar hastalıktır; rahim içi araç riski yaklaşık iki kat artırır, çoğu olguda anatomik neden bulunmaz.",
+   "sayfa": [
+    12,
+    13
+   ],
    "metin": "**Soru.** Ektopik gebelik riskini yaklaşık iki kat artıran durum hangisidir?\n\n**A)** Önceki mol öyküsü · **B)** Funisitis · **C)** Rahim içi araç · **D)** Kronik villit · **E)** Preeklampsi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Önceki mol öyküsü** — Önceki mol öyküsü sonraki gebeliklerde mol riskini artırır; ektopik gebelik risk faktörü olarak tanımlanmaz.\n- **Funisitis** — Funisitis göbek kordonunun akut vaskülitidir; ektopik gebeliğe neden olamaz.\n- **Rahim içi araç** — Rahim içi araç doğru: intrauterin cihaz ektopik gebelik riskini yaklaşık 2 kat artırır.\n- **Kronik villit** — Kronik villit, hematojen enfeksiyonlarda koryon villuslarındaki kronik inflamasyondur; ektopik gebelik riskini artırmaz.\n- **Preeklampsi** — Preeklampsi spiral arterlerin yetersiz yeniden şekillenmesiyle gelişen sistemik bir sendromdur; ektopik gebelik risk faktörü değildir.\n\n**Cevap: C** — Rahim içi araç\n\n**Özet.** Ektopik gebeliğin en önemli yatkınlığı kronik salpingite bağlı pelvik inflamatuvar hastalıktır; rahim içi araç riski yaklaşık iki kat artırır, çoğu olguda anatomik neden bulunmaz.",
    "ses": "Ektopik gebelik riskini yaklaşık iki kat artıran durum hangisidir?\nA, Önceki mol öyküsü\nBe, Funisitis\nCe, Rahim içi araç\nDe, Kronik villit\nE, Preeklampsi\nSeçenekleri sırayla değerlendirelim.\nÖnceki mol öyküsü sonraki gebeliklerde mol riskini artırır. Ektopik gebelik risk faktörü olarak tanımlanmaz.\nFunisitis göbek kordonunun akut vaskülitidir. Ektopik gebeliğe neden olamaz.\nRahim içi araç doğru. İntrauterin cihaz ektopik gebelik riskini yaklaşık iki kat artırır.\nKronik villit, hematojen enfeksiyonlarda koryon villuslarındaki kronik inflamasyondur. Ektopik gebelik riskini artırmaz.\nPreeklampsi spiral arterlerin yetersiz yeniden şekillenmesiyle gelişen sistemik bir sendromdur. Ektopik gebelik risk faktörü değildir.\nDoğru cevap Ce, Rahim içi araç\nEktopik gebeliğin en önemli yatkınlığı kronik salpingite bağlı pelvik inflamatuvar hastalıktır. Rahim içi araç riski yaklaşık iki kat artırır, çoğu olguda anatomik neden bulunmaz.",
    "kelime": 147
@@ -506,6 +651,7 @@
   {
    "no": 34,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Döllenmiş ovumun fimbriyal uçtan peritona düşüp periton yüzeyine implante olmasıyla gelişen gebelik hangisidir?",
    "secenekler": {
     "A": "Ovaryum gebeliği",
@@ -515,6 +661,7 @@
     "E": "Hidatiform mol"
    },
    "dogru": "D",
+   "ipucu": "Ovum tüpü terk edip uterusa değil, serozal bir yüzeye yerleşirse oluşan tabloyu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Ovaryum gebeliği ovumun folikül rüptürüyle eş zamanlı döllenmesiyle oluşur; implantasyon periton yüzeyinde değildir.",
@@ -524,6 +671,11 @@
     "E": "Hidatiform mol koryonik villusların kistik şişmesi ve trofoblast proliferasyonuyla giden bir trofoblastik hastalıktır; implantasyon yeri tanımlamaz."
    },
    "ozet": "Ektopik gebelik en sık tüpte gelişir; ovaryum gebeliği folikül rüptürüyle eş zamanlı döllenmeyle, karın içi gebelik ise ovumun fimbriyadan peritona düşmesiyle oluşur.",
+   "sayfa": [
+    11,
+    14,
+    36
+   ],
    "metin": "**Soru.** Döllenmiş ovumun fimbriyal uçtan peritona düşüp periton yüzeyine implante olmasıyla gelişen gebelik hangisidir?\n\n**A)** Ovaryum gebeliği · **B)** Korneal gebelik · **C)** Tubal gebelik · **D)** Karın içi gebelik · **E)** Hidatiform mol\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Ovaryum gebeliği** — Ovaryum gebeliği ovumun folikül rüptürüyle eş zamanlı döllenmesiyle oluşur; implantasyon periton yüzeyinde değildir.\n- **Korneal gebelik** — Korneal gebelik tüpün uterus içindeki kısmına, yani kornu ya da interstisyel bölgeye implantasyondur.\n- **Tubal gebelik** — Tubal gebelik ektopik gebeliğin en sık tipidir; yaklaşık %90 Fallop tüpünün uterus dışındaki kısmında yerleşir.\n- **Karın içi gebelik** — Karın içi, yani abdominal gebelik doğru: döllenmiş ovum fimbriyal uçtan peritona düşer ve periton yüzeyine implante olur.\n- **Hidatiform mol** — Hidatiform mol koryonik villusların kistik şişmesi ve trofoblast proliferasyonuyla giden bir trofoblastik hastalıktır; implantasyon yeri tanımlamaz.\n\n**Cevap: D** — Karın içi gebelik\n\n**Özet.** Ektopik gebelik en sık tüpte gelişir; ovaryum gebeliği folikül rüptürüyle eş zamanlı döllenmeyle, karın içi gebelik ise ovumun fimbriyadan peritona düşmesiyle oluşur.",
    "ses": "Döllenmiş ovumun fimbriyal uçtan peritona düşüp periton yüzeyine implante olmasıyla gelişen gebelik hangisidir?\nA, Ovaryum gebeliği\nBe, Korneal gebelik\nCe, Tubal gebelik\nDe, Karın içi gebelik\nE, Hidatiform mol\nHer seçeneği tek tek ele alalım.\nOvaryum gebeliği ovumun folikül rüptürüyle eş zamanlı döllenmesiyle oluşur. İmplantasyon periton yüzeyinde değildir.\nKorneal gebelik tüpün uterus içindeki kısmına, yani kornu ya da interstisyel bölgeye implantasyondur.\nTubal gebelik ektopik gebeliğin en sık tipidir. Yaklaşık yüzde doksan Fallop tüpünün uterus dışındaki kısmında yerleşir.\nKarın içi, yani abdominal gebelik doğru. Döllenmiş ovum fimbriyal uçtan peritona düşer ve periton yüzeyine implante olur.\nHidatiform mol koryonik villusların kistik şişmesi ve trofoblast proliferasyonuyla giden bir trofoblastik hastalıktır. İmplantasyon yeri tanımlamaz.\nDoğru cevap De, Karın içi gebelik\nEktopik gebelik en sık tüpte gelişir. Ovaryum gebeliği folikül rüptürüyle eş zamanlı döllenmeyle, karın içi gebelik ise ovumun fimbriyadan peritona düşmesiyle oluşur.",
    "kelime": 165
@@ -531,6 +683,7 @@
   {
    "no": 35,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Normal gebelikte spiral arterlerin trofoblast istilasıyla yeniden şekillenmesi plasentaya nasıl bir perfüzyon sağlar?",
    "secenekler": {
     "A": "Düşük dirençli, yüksek akımlı",
@@ -540,6 +693,7 @@
     "E": "Aralıklı, iskemik"
    },
    "dogru": "A",
+   "ipucu": "Kas-elastik duvarı ortadan kalkıp geniş sinüzoide dönüşen bir damarın kan akışına karşı koyma gücünü düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Düşük dirençli, yüksek akımlı perfüzyon doğru: trofoblastlar kas-elastik duvarı istila eder ve spiral arterler geniş vasküler sinüzoidlere dönüşür.",
@@ -549,6 +703,10 @@
     "E": "Plasental hipoksi ve disfonksiyon, spiral arterlerin yeniden şekillenmesi yetersiz kaldığında gelişir; normal gebelikte beklenmez."
    },
    "ozet": "Normalde trofoblastlar spiral arter duvarını istila eder ve plasentaya düşük dirençli, yüksek akımlı perfüzyon sağlanır; preeklampside bu yeniden şekillenme bozulur.",
+   "sayfa": [
+    23,
+    24
+   ],
    "metin": "**Soru.** Normal gebelikte spiral arterlerin trofoblast istilasıyla yeniden şekillenmesi plasentaya nasıl bir perfüzyon sağlar?\n\n**A)** Düşük dirençli, yüksek akımlı · **B)** Yüksek dirençli, düşük akımlı · **C)** Yüksek dirençli, yüksek akımlı · **D)** Düşük dirençli, düşük akımlı · **E)** Aralıklı, iskemik\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Düşük dirençli, yüksek akımlı** — Düşük dirençli, yüksek akımlı perfüzyon doğru: trofoblastlar kas-elastik duvarı istila eder ve spiral arterler geniş vasküler sinüzoidlere dönüşür.\n- **Yüksek dirençli, düşük akımlı** — Bu tablo preeklampsiye uyar; kas-elastik duvarlar korunur, lümen dar kalır ve utero-plasental kan akımı azalır.\n- **Yüksek dirençli, yüksek akımlı** — Dar ve dirençli bir damar yüksek akım sağlayamaz; normal yeniden şekillenme duvarı ortadan kaldırarak direnci düşürür.\n- **Düşük dirençli, düşük akımlı** — Geniş sinüzoidlere dönüşen spiral arterler düşük değil, yüksek akım sağlar; akımın azalması preeklampsinin özelliğidir.\n- **Aralıklı, iskemik** — Plasental hipoksi ve disfonksiyon, spiral arterlerin yeniden şekillenmesi yetersiz kaldığında gelişir; normal gebelikte beklenmez.\n\n**Cevap: A** — Düşük dirençli, yüksek akımlı\n\n**Özet.** Normalde trofoblastlar spiral arter duvarını istila eder ve plasentaya düşük dirençli, yüksek akımlı perfüzyon sağlanır; preeklampside bu yeniden şekillenme bozulur.",
    "ses": "Normal gebelikte spiral arterlerin trofoblast istilasıyla yeniden şekillenmesi plasentaya nasıl bir perfüzyon sağlar?\nA, Düşük dirençli, yüksek akımlı\nBe, Yüksek dirençli, düşük akımlı\nCe, Yüksek dirençli, yüksek akımlı\nDe, Düşük dirençli, düşük akımlı\nE, Aralıklı, iskemik\nŞıkları sırasıyla gözden geçirelim.\nDüşük dirençli, yüksek akımlı perfüzyon doğru. Trofoblastlar kas-elastik duvarı istila eder ve spiral arterler geniş vasküler sinüzoidlere dönüşür.\nBu tablo preeklampsiye uyar. Kas-elastik duvarlar korunur, lümen dar kalır ve utero-plasental kan akımı azalır.\nDar ve dirençli bir damar yüksek akım sağlayamaz. Normal yeniden şekillenme duvarı ortadan kaldırarak direnci düşürür.\nGeniş sinüzoidlere dönüşen spiral arterler düşük değil, yüksek akım sağlar. Akımın azalması preeklampsinin özelliğidir.\nPlasental hipoksi ve disfonksiyon, spiral arterlerin yeniden şekillenmesi yetersiz kaldığında gelişir. Normal gebelikte beklenmez.\nDoğru cevap A, Düşük dirençli, yüksek akımlı\nNormalde trofoblastlar spiral arter duvarını istila eder ve plasentaya düşük dirençli, yüksek akımlı perfüzyon sağlanır. Preeklampside bu yeniden şekillenme bozulur.",
    "kelime": 179
@@ -556,6 +714,7 @@
   {
    "no": 36,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Preeklampside endoglinin baskıladığı, VEGF dışındaki büyüme faktörü hangisidir?",
    "secenekler": {
     "A": "Tromboksan A2",
@@ -565,6 +724,7 @@
     "E": "hCG"
    },
    "dogru": "B",
+   "ipucu": "Anti anjiyojenik etkinin hangi damar sinyallerini baskılayarak endotel disfonksiyonu yaptığını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Tromboksan A2 preeklampside üretimi artan bir vazokonstriktördür; endoglinin baskıladığı büyüme faktörü değildir.",
@@ -574,6 +734,12 @@
     "E": "hCG tüm gebelik trofoblastik hastalıklarında değişen düzeylerde üretilen gebelik hormonudur; büyüme faktörü değildir."
    },
    "ozet": "Hipoksik plasentada sFlt-1 ve endoglin artar; bu anti-anjiyojenik faktörler VEGF ve TGF-β etkisini antagonize ederek endotel disfonksiyonunu başlatır.",
+   "sayfa": [
+    25,
+    27,
+    35,
+    63
+   ],
    "metin": "**Soru.** Preeklampside endoglinin baskıladığı, VEGF dışındaki büyüme faktörü hangisidir?\n\n**A)** Tromboksan A2 · **B)** TGF-β · **C)** Prostasiklin · **D)** hPL · **E)** hCG\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Tromboksan A2** — Tromboksan A2 preeklampside üretimi artan bir vazokonstriktördür; endoglinin baskıladığı büyüme faktörü değildir.\n- **TGF-β** — TGF-β doğru: endoglin ve sFlt-1, VEGF ile TGF-β'nın etkilerini antagonize ederek endotel disfonksiyonunu tetikler.\n- **Prostasiklin** — Prostasiklin preeklampside üretimi azalan vazodilatör ve antitrombotik bir faktördür; büyüme faktörü değildir.\n- **hPL** — hPL, yani insan plasental laktojeni, plasental bölge trofoblastik tümöründe önemli miktarda üretilen hormondur.\n- **hCG** — hCG tüm gebelik trofoblastik hastalıklarında değişen düzeylerde üretilen gebelik hormonudur; büyüme faktörü değildir.\n\n**Cevap: B** — TGF-β\n\n**Özet.** Hipoksik plasentada sFlt-1 ve endoglin artar; bu anti-anjiyojenik faktörler VEGF ve TGF-β etkisini antagonize ederek endotel disfonksiyonunu başlatır.",
    "ses": "Preeklampside endoglinin baskıladığı, vasküler endotelyal büyüme faktörü dışındaki büyüme faktörü hangisidir?\nA, tromboksan a iki\nBe, transforme edici büyüme faktörü beta\nCe, Prostasiklin\nDe, insan plasental laktojeni\nE, insan koryonik gonadotropini\nŞimdi seçeneklere tek tek bakalım.\nTromboksan a iki preeklampside üretimi artan bir vazokonstriktördür. Endoglinin baskıladığı büyüme faktörü değildir.\nTransforme edici büyüme faktörü beta doğru. Endoglin, vasküler endotelyal büyüme faktörü ile bu faktörün etkilerini antagonize eder.\nProstasiklin preeklampside üretimi azalan vazodilatör ve antitrombotik bir faktördür. Büyüme faktörü değildir.\nİnsan plasental laktojeni, plasental bölge trofoblastik tümöründe önemli miktarda üretilen hormondur.\nİnsan koryonik gonadotropini tüm gebelik trofoblastik hastalıklarında değişen düzeylerde üretilen gebelik hormonudur.\nDoğru cevap Be, transforme edici büyüme faktörü beta\nHipoksik plasentada anti anjiyojenik faktörler artar. Bunlar vasküler endotelyal büyüme faktörü ile transforme edici büyüme faktörü beta etkisini antagonize eder.",
    "kelime": 133
@@ -581,6 +747,7 @@
   {
    "no": 37,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Preeklampside desidual damarlarda fibrinoid nekroz ve lipid içeren makrofaj birikimiyle tanımlanan görünüm hangisidir?",
    "secenekler": {
     "A": "Kronik villit",
@@ -590,6 +757,7 @@
     "E": "Sinsityal epitel düğümü"
    },
    "dogru": "C",
+   "ipucu": "Damar duvarındaki yağ yüklü makrofaj birikiminin adının hangi damar lezyonunu çağrıştırdığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Kronik villit, hematojen enfeksiyonlarda koryon villuslarındaki kronik inflamatuvar infiltrasyondur; preeklampside beklenmez.",
@@ -599,6 +767,13 @@
     "E": "Sinsityal epitel düğümleri preeklampside terminal villuslarda artan iskemik değişikliktir; desidual damar lezyonu değildir."
    },
    "ozet": "Preeklampside plasentada enfarktlar, retroplasental kanama ve sinsityal düğümler artar; desidual damarlardaki akut aterozis perfüzyon bozukluğunu daha da artırır.",
+   "sayfa": [
+    7,
+    8,
+    10,
+    29,
+    30
+   ],
    "metin": "**Soru.** Preeklampside desidual damarlarda fibrinoid nekroz ve lipid içeren makrofaj birikimiyle tanımlanan görünüm hangisidir?\n\n**A)** Kronik villit · **B)** Funisitis · **C)** Akut aterozis · **D)** Akut koryoamniyonit · **E)** Sinsityal epitel düğümü\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Kronik villit** — Kronik villit, hematojen enfeksiyonlarda koryon villuslarındaki kronik inflamatuvar infiltrasyondur; preeklampside beklenmez.\n- **Funisitis** — Funisitis koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıyla oluşan akut vaskülittir.\n- **Akut aterozis** — Akut aterozis doğru: preeklampside desidual damarlarda fibrinoid nekroz ve lipid içeren makrofaj birikimi görülür ve plasental perfüzyonu daha da bozar.\n- **Akut koryoamniyonit** — Akut koryoamniyonit asendan enfeksiyonda zarlardaki nötrofilik infiltrasyon, ödem ve konjesyonla tanımlanır.\n- **Sinsityal epitel düğümü** — Sinsityal epitel düğümleri preeklampside terminal villuslarda artan iskemik değişikliktir; desidual damar lezyonu değildir.\n\n**Cevap: C** — Akut aterozis\n\n**Özet.** Preeklampside plasentada enfarktlar, retroplasental kanama ve sinsityal düğümler artar; desidual damarlardaki akut aterozis perfüzyon bozukluğunu daha da artırır.",
    "ses": "Preeklampside desidual damarlarda fibrinoid nekroz ve lipid içeren makrofaj birikimiyle tanımlanan görünüm hangisidir?\nA, Kronik villit\nBe, Funisitis\nCe, Akut aterozis\nDe, Akut koryoamniyonit\nE, Sinsityal epitel düğümü\nSeçenekleri sırayla değerlendirelim.\nKronik villit, hematojen enfeksiyonlarda koryon villuslarındaki kronik inflamatuvar infiltrasyondur. Preeklampside beklenmez.\nFunisitis koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıyla oluşan akut vaskülittir.\nAkut aterozis doğru. Preeklampside desidual damarlarda fibrinoid nekroz ve lipid içeren makrofaj birikimi görülür ve plasental perfüzyonu daha da bozar.\nAkut koryoamniyonit asendan enfeksiyonda zarlardaki nötrofilik infiltrasyon, ödem ve konjesyonla tanımlanır.\nSinsityal epitel düğümleri preeklampside terminal villuslarda artan iskemik değişikliktir. Desidual damar lezyonu değildir.\nDoğru cevap Ce, Akut aterozis\nPreeklampside plasentada enfarktlar, retroplasental kanama ve sinsityal düğümler artar. Desidual damarlardaki akut aterozis perfüzyon bozukluğunu daha da artırır.",
    "kelime": 145
@@ -606,6 +781,7 @@
   {
    "no": 38,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Preeklampsinin 34. gebelik haftasından daha erken başlayabildiği trofoblastik durum hangisidir?",
    "secenekler": {
     "A": "Plasental bölge trofoblastik tümörü",
@@ -615,6 +791,7 @@
     "E": "Akut koryoamniyonit"
    },
    "dogru": "D",
+   "ipucu": "Villusların kistik şişmesi ve çok yüksek gebelik hormonu düzeyleriyle tanınan lezyonu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Plasental bölge trofoblastik tümörü ara trofoblasttan köken alır ve çoğu gebelikten birkaç ay sonra ortaya çıkar.",
@@ -624,6 +801,13 @@
     "E": "Akut koryoamniyonit asendan enfeksiyonun zarlardaki karşılığıdır; erken membran rüptürü ve preterm doğuma yol açar."
    },
    "ozet": "Preeklampsi en sık 34. gebelik haftasından sonra başlar; hidatiform molde ve önceden var olan böbrek hastalığı, hipertansiyon ya da koagülasyon bozukluğunda daha erken görülebilir.",
+   "sayfa": [
+    7,
+    11,
+    31,
+    57,
+    64
+   ],
    "metin": "**Soru.** Preeklampsinin 34. gebelik haftasından daha erken başlayabildiği trofoblastik durum hangisidir?\n\n**A)** Plasental bölge trofoblastik tümörü · **B)** Gebelik koryokarsinomu · **C)** Ektopik gebelik · **D)** Hidatiform mol · **E)** Akut koryoamniyonit\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Plasental bölge trofoblastik tümörü** — Plasental bölge trofoblastik tümörü ara trofoblasttan köken alır ve çoğu gebelikten birkaç ay sonra ortaya çıkar.\n- **Gebelik koryokarsinomu** — Gebelik koryokarsinomu çok agresif malign bir trofoblastik tümördür; erken preeklampsi nedeni olarak tanımlanmaz.\n- **Ektopik gebelik** — Ektopik gebelik embriyonun uterus dışında implantasyonudur; preeklampsinin erken başlamasıyla ilişkilendirilmez.\n- **Hidatiform mol** — Hidatiform mol doğru: preeklampsi en sık 34. haftadan sonra başlar, ancak hidatiform molde daha erken ortaya çıkabilir.\n- **Akut koryoamniyonit** — Akut koryoamniyonit asendan enfeksiyonun zarlardaki karşılığıdır; erken membran rüptürü ve preterm doğuma yol açar.\n\n**Cevap: D** — Hidatiform mol\n\n**Özet.** Preeklampsi en sık 34. gebelik haftasından sonra başlar; hidatiform molde ve önceden var olan böbrek hastalığı, hipertansiyon ya da koagülasyon bozukluğunda daha erken görülebilir.",
    "ses": "Preeklampsinin otuz dördüncü gebelik haftasından daha erken başlayabildiği trofoblastik durum hangisidir?\nA, Plasental bölge trofoblastik tümörü\nBe, Gebelik koryokarsinomu\nCe, Ektopik gebelik\nDe, Hidatiform mol\nE, Akut koryoamniyonit\nHer seçeneği tek tek ele alalım.\nPlasental bölge trofoblastik tümörü ara trofoblasttan köken alır ve çoğu gebelikten birkaç ay sonra ortaya çıkar.\nGebelik koryokarsinomu çok agresif malign bir trofoblastik tümördür. Erken preeklampsi nedeni olarak tanımlanmaz.\nEktopik gebelik embriyonun uterus dışında implantasyonudur. Preeklampsinin erken başlamasıyla ilişkilendirilmez.\nHidatiform mol doğru. Preeklampsi en sık otuz dördüncü haftadan sonra başlar, ancak hidatiform molde daha erken ortaya çıkabilir.\nAkut koryoamniyonit asendan enfeksiyonun zarlardaki karşılığıdır. Erken membran rüptürü ve preterm doğuma yol açar.\nDoğru cevap De, Hidatiform mol\nPreeklampsi en sık otuz dördüncü gebelik haftasından sonra başlar. Hidatiform molde ve önceden var olan böbrek hastalığında daha erken görülebilir.",
    "kelime": 161
@@ -631,6 +815,7 @@
   {
    "no": 39,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Hidatiform mol küretajla boşaltıldıktan sonra seri hCG ölçümü ne kadar süre yapılır?",
    "secenekler": {
     "A": "6–12 ay",
@@ -640,6 +825,7 @@
     "E": "Ömür boyu"
    },
    "dogru": "A",
+   "ipucu": "Takibin amacının hormonun gebelik dışı düzeye indiğini doğrulamak ve kalıcı hastalığı yakalamak olduğunu düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "6–12 ay doğru: mol boşaltıldıktan sonra bu süre boyunca seri hCG ölçülür; amaç düşüşü doğrulamak ve kalıcı trofoblastik hastalığı saptamaktır.",
@@ -649,6 +835,10 @@
     "E": "Ömür boyu izlem gerekmez; seri ölçüm, hormon gebelik dışı düşük düzeye inip kalıcı hastalık dışlanana kadar sürdürülür."
    },
    "ozet": "Çoğu mol uterus küretajıyla boşaltılır; ardından 6–12 ay seri hCG ölçülerek hormonun gebelik dışı düzeye indiği doğrulanır ve kalıcı trofoblastik hastalık aranır.",
+   "sayfa": [
+    33,
+    45
+   ],
    "metin": "**Soru.** Hidatiform mol küretajla boşaltıldıktan sonra seri hCG ölçümü ne kadar süre yapılır?\n\n**A)** 6–12 ay · **B)** 1–2 hafta · **C)** Yalnız ilk ay · **D)** 2 yıl · **E)** Ömür boyu\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **6–12 ay** — 6–12 ay doğru: mol boşaltıldıktan sonra bu süre boyunca seri hCG ölçülür; amaç düşüşü doğrulamak ve kalıcı trofoblastik hastalığı saptamaktır.\n- **1–2 hafta** — 1–2 hafta, preeklampside doğumdan sonra proteinüri ve hipertansiyonun genellikle kaybolduğu süredir.\n- **Yalnız ilk ay** — Yalnız ilk ay izlemek kalıcı trofoblastik hastalığı saptama amacını karşılamaz; izlem çok daha uzun sürdürülür.\n- **2 yıl** — 2 yıl, mol sonrası seri hormon ölçümü için tanımlanan süre değildir; tanımlı izlem bundan kısadır.\n- **Ömür boyu** — Ömür boyu izlem gerekmez; seri ölçüm, hormon gebelik dışı düşük düzeye inip kalıcı hastalık dışlanana kadar sürdürülür.\n\n**Cevap: A** — 6–12 ay\n\n**Özet.** Çoğu mol uterus küretajıyla boşaltılır; ardından 6–12 ay seri hCG ölçülerek hormonun gebelik dışı düzeye indiği doğrulanır ve kalıcı trofoblastik hastalık aranır.",
    "ses": "Hidatiform mol küretajla boşaltıldıktan sonra seri insan koryonik gonadotropini ölçümü ne kadar süre yapılır?\nA, altı ile on iki ay\nBe, bir ile iki hafta\nCe, Yalnız ilk ay\nDe, iki yıl\nE, Ömür boyu\nŞıkları sırasıyla gözden geçirelim.\nAltı ile on iki ay doğru. Mol boşaltıldıktan sonra bu süre boyunca seri hormon ölçülür ve kalıcı trofoblastik hastalık aranır.\nBir ile iki hafta, preeklampside doğumdan sonra proteinüri ve hipertansiyonun genellikle kaybolduğu süredir.\nYalnız ilk ay izlemek kalıcı trofoblastik hastalığı saptama amacını karşılamaz. İzlem çok daha uzun sürdürülür.\nİki yıl, mol sonrası seri hormon ölçümü için tanımlanan süre değildir. Tanımlı izlem bundan kısadır.\nÖmür boyu izlem gerekmez. Seri ölçüm, hormon gebelik dışı düşük düzeye inip kalıcı hastalık dışlanana kadar sürdürülür.\nDoğru cevap A, altı ile on iki ay\nÇoğu mol uterus küretajıyla boşaltılır. Ardından altı ile on iki ay seri hormon ölçülerek kalıcı trofoblastik hastalık aranır.",
    "kelime": 165
@@ -656,6 +846,7 @@
   {
    "no": 40,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Kısmi molü tam molden ayırmada yardımcı olan villus bulgusu hangisidir?",
    "secenekler": {
     "A": "Tüm villuslarda hidropik şişme",
@@ -665,6 +856,7 @@
     "E": "Yetersiz vaskülarizasyon"
    },
    "dogru": "B",
+   "ipucu": "Kısmi molde erken embriyo oluşumu olabildiğini ve bunun villus damarlarına yansımasını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Tüm villuslarda ödem tam molün özelliğidir; kısmi molde villöz ödem yalnız bazı villuslardadır.",
@@ -674,6 +866,11 @@
     "E": "Yetersiz vaskülarizasyon tam molde hidropik villusların bulgusudur; kısmi molü ayıran özellik değildir."
    },
    "ozet": "Kısmi molde erken embriyo oluşabilir, villuslarda fetal kırmızı kan hücreleri ve bazı normal villuslar bulunur; tam molde ise tüm villuslar hidropik ve yetersiz damarlıdır.",
+   "sayfa": [
+    38,
+    48,
+    50
+   ],
    "metin": "**Soru.** Kısmi molü tam molden ayırmada yardımcı olan villus bulgusu hangisidir?\n\n**A)** Tüm villuslarda hidropik şişme · **B)** Fetal kırmızı kan hücreleri · **C)** Çepeçevre trofoblast proliferasyonu · **D)** Gevşek miksomatöz stroma · **E)** Yetersiz vaskülarizasyon\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Tüm villuslarda hidropik şişme** — Tüm villuslarda ödem tam molün özelliğidir; kısmi molde villöz ödem yalnız bazı villuslardadır.\n- **Fetal kırmızı kan hücreleri** — Fetal kırmızı kan hücreleri doğru: kısmi mol olgularının çoğunda villuslarda bulunur, bazen tamamen oluşmuş fetüs görülür ve bu tam molden ayırır.\n- **Çepeçevre trofoblast proliferasyonu** — Villusu çepeçevre saran diffüz trofoblast proliferasyonu tam mole aittir; kısmi molde proliferasyon fokal ve hafiftir.\n- **Gevşek miksomatöz stroma** — Gevşek, miksomatöz ve ödemli villus stroması tam molde koryonik villusların tipik görünümüdür.\n- **Yetersiz vaskülarizasyon** — Yetersiz vaskülarizasyon tam molde hidropik villusların bulgusudur; kısmi molü ayıran özellik değildir.\n\n**Cevap: B** — Fetal kırmızı kan hücreleri\n\n**Özet.** Kısmi molde erken embriyo oluşabilir, villuslarda fetal kırmızı kan hücreleri ve bazı normal villuslar bulunur; tam molde ise tüm villuslar hidropik ve yetersiz damarlıdır.",
    "ses": "Kısmi molü tam molden ayırmada yardımcı olan villus bulgusu hangisidir?\nA, Tüm villuslarda hidropik şişme\nBe, Fetal kırmızı kan hücreleri\nCe, Çepeçevre trofoblast proliferasyonu\nDe, Gevşek miksomatöz stroma\nE, Yetersiz vaskülarizasyon\nŞimdi seçeneklere tek tek bakalım.\nTüm villuslarda ödem tam molün özelliğidir. Kısmi molde villöz ödem yalnız bazı villuslardadır.\nFetal kırmızı kan hücreleri doğru. Kısmi mol olgularının çoğunda villuslarda bulunur, bazen tamamen oluşmuş fetüs görülür ve bu tam molden ayırır.\nVillusu çepeçevre saran diffüz trofoblast proliferasyonu tam mole aittir. Kısmi molde proliferasyon fokal ve hafiftir.\nGevşek, miksomatöz ve ödemli villus stroması tam molde koryonik villusların tipik görünümüdür.\nYetersiz vaskülarizasyon tam molde hidropik villusların bulgusudur. Kısmi molü ayıran özellik değildir.\nDoğru cevap Be, Fetal kırmızı kan hücreleri\nKısmi molde erken embriyo oluşabilir, villuslarda fetal kırmızı kan hücreleri ve bazı normal villuslar bulunur. Tam molde ise tüm villuslar hidropik ve yetersiz damarlıdır.",
    "kelime": 173
@@ -681,6 +878,7 @@
   {
    "no": 41,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "İnvaziv molde akciğer ya da beyne embolize olan hidropik villusların tipik seyri hangisidir?",
    "secenekler": {
     "A": "Hızla büyüyüp metastaz yapar",
@@ -690,6 +888,7 @@
     "E": "Mutlaka cerrahi gerektirir"
    },
    "dogru": "C",
+   "ipucu": "İnvaziv molün koryokarsinomdan farklı olarak uzak metastaz kapasitesi taşımadığını hatırla.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Hızlı büyüme ve erken yaygın metastaz gebelik koryokarsinomunun özelliğidir; invaziv molün uzak metastaz kapasitesi yoktur.",
@@ -699,6 +898,13 @@
     "E": "İnvaziv molde derin miyometriyal invazyon nedeniyle cerrahi eksizyon zordur; hormon yüksek kalırsa çoğu olguda kemoterapiyle tam iyileşme sağlanır."
    },
    "ozet": "İnvaziv mol hidropik villuslarını koruyan, miyometriyuma derin invazyon yapan lokal agresif tam moldür; embolize villuslar genellikle büyümez ve kendiliğinden geriler.",
+   "sayfa": [
+    51,
+    52,
+    53,
+    56,
+    60
+   ],
    "metin": "**Soru.** İnvaziv molde akciğer ya da beyne embolize olan hidropik villusların tipik seyri hangisidir?\n\n**A)** Hızla büyüyüp metastaz yapar · **B)** Koryokarsinoma dönüşür · **C)** Genellikle büyümez, spontan geriler · **D)** Lenfatik yayılım başlatır · **E)** Mutlaka cerrahi gerektirir\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Hızla büyüyüp metastaz yapar** — Hızlı büyüme ve erken yaygın metastaz gebelik koryokarsinomunun özelliğidir; invaziv molün uzak metastaz kapasitesi yoktur.\n- **Koryokarsinoma dönüşür** — Koryokarsinom olgularının yaklaşık yarısı tam hidatiform molden sonra gelişir; ancak embolize villusların tipik seyri dönüşüm değildir.\n- **Genellikle büyümez, spontan geriler** — Genellikle büyümeyip spontan gerilemesi doğru: invaziv molde akciğer ya da beyne giden hidropik villuslar gerçek metastaz gibi davranmaz.\n- **Lenfatik yayılım başlatır** — Lenfatik yayılım koryokarsinomda bile nadirdir; embolize villuslar lenfatik yayılım başlatmaz.\n- **Mutlaka cerrahi gerektirir** — İnvaziv molde derin miyometriyal invazyon nedeniyle cerrahi eksizyon zordur; hormon yüksek kalırsa çoğu olguda kemoterapiyle tam iyileşme sağlanır.\n\n**Cevap: C** — Genellikle büyümez, spontan geriler\n\n**Özet.** İnvaziv mol hidropik villuslarını koruyan, miyometriyuma derin invazyon yapan lokal agresif tam moldür; embolize villuslar genellikle büyümez ve kendiliğinden geriler.",
    "ses": "İnvaziv molde akciğer ya da beyne embolize olan hidropik villusların tipik seyri hangisidir?\nA, Hızla büyüyüp metastaz yapar\nBe, Koryokarsinoma dönüşür\nCe, Genellikle büyümez, spontan geriler\nDe, Lenfatik yayılım başlatır\nE, Mutlaka cerrahi gerektirir\nSeçenekleri sırayla değerlendirelim.\nHızlı büyüme ve erken yaygın metastaz gebelik koryokarsinomunun özelliğidir. İnvaziv molün uzak metastaz kapasitesi yoktur.\nKoryokarsinom olgularının yaklaşık yarısı tam hidatiform molden sonra gelişir. Ancak embolize villusların tipik seyri dönüşüm değildir.\nGenellikle büyümeyip spontan gerilemesi doğru. İnvaziv molde akciğer ya da beyne giden hidropik villuslar gerçek metastaz gibi davranmaz.\nLenfatik yayılım koryokarsinomda bile nadirdir. Embolize villuslar lenfatik yayılım başlatmaz.\nİnvaziv molde derin miyometriyal invazyon nedeniyle cerrahi eksizyon zordur. Hormon yüksek kalırsa çoğu olguda kemoterapiyle tam iyileşme sağlanır.\nDoğru cevap Ce, Genellikle büyümez, spontan geriler\nİnvaziv mol hidropik villuslarını koruyan, miyometriyuma derin invazyon yapan lokal agresif tam moldür. Embolize villuslar genellikle büyümez ve kendiliğinden geriler.",
    "kelime": 174
@@ -706,6 +912,7 @@
   {
    "no": 42,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Gebelik koryokarsinomunun başlıca yayılım yolu hangisidir?",
    "secenekler": {
     "A": "Lenfatik yol",
@@ -715,6 +922,7 @@
     "E": "Periton boşluğuna dökülme"
    },
    "dogru": "D",
+   "ipucu": "Koryokarsinomun en sık metastaz yerlerinin akciğer, vajina, beyin, karaciğer ve böbrek olduğunu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Lenfatik yayılım koryokarsinomda nadirdir; tümör erken yayılır ama bunu kan yoluyla yapar.",
@@ -724,6 +932,13 @@
     "E": "Peritona düşüp periton yüzeyine yerleşme karın içi gebeliğin oluşum biçimidir; koryokarsinomun yayılım yolu değildir."
    },
    "ozet": "Gebelik koryokarsinomu erken ve hematojen yayılır, lenfatik yayılım nadirdir; en sık metastaz yeri yaklaşık %50 ile akciğer, ardından %30–40 ile vajinadır.",
+   "sayfa": [
+    14,
+    51,
+    57,
+    58,
+    60
+   ],
    "metin": "**Soru.** Gebelik koryokarsinomunun başlıca yayılım yolu hangisidir?\n\n**A)** Lenfatik yol · **B)** Hidropik villus embolisi · **C)** Yalnız lokal miyometriyal invazyon · **D)** Hematojen yol · **E)** Periton boşluğuna dökülme\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Lenfatik yol** — Lenfatik yayılım koryokarsinomda nadirdir; tümör erken yayılır ama bunu kan yoluyla yapar.\n- **Hidropik villus embolisi** — Hidropik villusların akciğer ya da beyne embolisi invaziv mole aittir; koryokarsinomda koryonik villus bulunmaz.\n- **Yalnız lokal miyometriyal invazyon** — Yalnız derin miyometriyal invazyon yapıp uzak metastaz kapasitesi taşımayan lezyon invaziv moldür; koryokarsinomda tanıda genellikle metastaz vardır.\n- **Hematojen yol** — Hematojen yol doğru: gebelik koryokarsinomu kan yoluyla yayılır; bu yüzden akciğer, vajina, beyin, karaciğer ve böbrek metastazları görülür.\n- **Periton boşluğuna dökülme** — Peritona düşüp periton yüzeyine yerleşme karın içi gebeliğin oluşum biçimidir; koryokarsinomun yayılım yolu değildir.\n\n**Cevap: D** — Hematojen yol\n\n**Özet.** Gebelik koryokarsinomu erken ve hematojen yayılır, lenfatik yayılım nadirdir; en sık metastaz yeri yaklaşık %50 ile akciğer, ardından %30–40 ile vajinadır.",
    "ses": "Gebelik koryokarsinomunun başlıca yayılım yolu hangisidir?\nA, Lenfatik yol\nBe, Hidropik villus embolisi\nCe, Yalnız lokal miyometriyal invazyon\nDe, Hematojen yol\nE, Periton boşluğuna dökülme\nHer seçeneği tek tek ele alalım.\nLenfatik yayılım koryokarsinomda nadirdir. Tümör erken yayılır ama bunu kan yoluyla yapar.\nHidropik villusların akciğer ya da beyne embolisi invaziv mole aittir. Koryokarsinomda koryonik villus bulunmaz.\nYalnız derin miyometriyal invazyon yapıp uzak metastaz kapasitesi taşımayan lezyon invaziv moldür. Koryokarsinomda tanıda genellikle metastaz vardır.\nHematojen yol doğru. Gebelik koryokarsinomu kan yoluyla yayılır. Bu yüzden akciğer, vajina, beyin, karaciğer ve böbrek metastazları görülür.\nPeritona düşüp periton yüzeyine yerleşme karın içi gebeliğin oluşum biçimidir. Koryokarsinomun yayılım yolu değildir.\nDoğru cevap De, Hematojen yol\nGebelik koryokarsinomu erken ve hematojen yayılır, lenfatik yayılım nadirdir. En sık metastaz yeri yaklaşık yüzde elli ile akciğerdir.",
    "kelime": 163

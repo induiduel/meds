@@ -119,7 +119,7 @@
   }
   & .r12-root:is(.is-focus, .is-immersive) { left: 0; }
   & .r12-root.is-immersive > .r12-top { display: none; }
-  & .r12-root.is-immersive .r12-center { padding-top: calc(28px + env(safe-area-inset-top, 0px)); }
+  & .r12-root.is-immersive .r12-center { padding-top: calc(56px + env(safe-area-inset-top, 0px)); }
   & .r12-exit-fs {
     position: fixed; z-index: 80; right: calc(12px + env(safe-area-inset-right, 0px)); top: calc(10px + env(safe-area-inset-top, 0px));
     height: 34px; padding: 0 11px; gap: 5px; opacity: .85; transition: opacity 160ms;
@@ -413,6 +413,12 @@
   :root[data-design='v12'] :is(.r12-root, .r12-menu, .r12-toc, .r12-float, .r12-totop, .r12-progress > i, .r12-bar > i) { animation: none !important; transition: none !important; }
 }
 :root[data-design='v12'][data-motion='reduced'] :is(.r12-root, .r12-menu, .r12-toc, .r12-float, .r12-totop, .r12-progress > i, .r12-bar > i) { animation: none !important; transition: none !important; }
+
+/* Tam ekran okuyucuda çıkış hapı üstte ~44 px yer kaplar. Konteyner sorguları `.r12-center`
+ * dolgusunu sonradan ezdiği için bu kural en sonda ve daha yüksek özgüllükte durur. */
+:root[data-design='v12'] .r12-root.is-immersive .r12-center {
+  padding-top: calc(56px + env(safe-area-inset-top, 0px));
+}
 
 /* ── Yazdır: yalnız okuma sütunu ── */
 @media print {

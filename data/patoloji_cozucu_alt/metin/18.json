@@ -1,7 +1,8 @@
 {
  "kod": "18",
+ "no": 18,
  "baslik": "İleri Tümör Genetiği ve Metabolizması",
- "surum": "alt-1",
+ "surum": "alt-2",
  "sorular": [
   {
    "no": 1,
@@ -15,18 +16,26 @@
     "E": "TP53 germ hattı mutasyonu"
    },
    "dogru": "C",
+   "ipucu": "Ailesel formda vücuttaki tüm hücrelerin doğuştan kaç işlevsel kopya taşıdığını ve iki alelin de kaybedilmesi gerektiğini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "İki somatik RB mutasyonu sporadik retinoblastomda gerekir; ailesel formda alellerden biri zaten germ hattından mutant gelir.",
-    "B": "RB amplifikasyonu ile karıştırılabilir: RB tümör baskılayıcı gendir, tümör için iki alelinin de işlev kaybı gerekir.",
+    "B": "RB bir onkogen değil tümör baskılayıcı gendir, bu nedenle amplifikasyonu tümör yapmaz; Knudson'un iki vuruş hipotezine göre ailesel retinoblastomda germ hattından gelen kusurlu alelin yanına sağlam alelde tek bir somatik RB mutasyonu eklenmesi tümör gelişimi için yeterlidir.",
     "C": "Tek ek somatik RB mutasyonu doğru: ailesel formda bir mutant alel kalıtılır, retina hücresinde yalnızca ikinci darbe gerekir.",
     "D": "MYC büyümeyi teşvik eden bir onkogendir ve normalde TGF-β tarafından baskılanır; retinoblastom gelişiminde gereken olay değildir.",
     "E": "TP53 germ hattı mutasyonu Li-Fraumeni sendromunu oluşturur; erken yaşta sarkom, meme kanseri gibi çoklu primer tümörlere yol açar."
    },
    "ozet": "Ailesel retinoblastomda her hücre tek işlevsel RB kopyası taşır, retina hücresinde bir ek mutasyon yeterlidir; sporadik formda ise iki RB mutasyonu da sonradan edinilir.",
-   "metin": "**Soru.** Ailesel retinoblastomda tümör gelişimi için retina hücresinde gereken olay hangisidir?\n\n**A)** İki somatik RB mutasyonu · **B)** RB amplifikasyonu · **C)** Tek ek somatik RB mutasyonu · **D)** MYC translokasyonu · **E)** TP53 germ hattı mutasyonu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **İki somatik RB mutasyonu** — İki somatik RB mutasyonu sporadik retinoblastomda gerekir; ailesel formda alellerden biri zaten germ hattından mutant gelir.\n- **RB amplifikasyonu** — RB amplifikasyonu ile karıştırılabilir: RB tümör baskılayıcı gendir, tümör için iki alelinin de işlev kaybı gerekir.\n- **Tek ek somatik RB mutasyonu** — Tek ek somatik RB mutasyonu doğru: ailesel formda bir mutant alel kalıtılır, retina hücresinde yalnızca ikinci darbe gerekir.\n- **MYC translokasyonu** — MYC büyümeyi teşvik eden bir onkogendir ve normalde TGF-β tarafından baskılanır; retinoblastom gelişiminde gereken olay değildir.\n- **TP53 germ hattı mutasyonu** — TP53 germ hattı mutasyonu Li-Fraumeni sendromunu oluşturur; erken yaşta sarkom, meme kanseri gibi çoklu primer tümörlere yol açar.\n\n**Cevap: C** — Tek ek somatik RB mutasyonu\n\n**Özet.** Ailesel retinoblastomda her hücre tek işlevsel RB kopyası taşır, retina hücresinde bir ek mutasyon yeterlidir; sporadik formda ise iki RB mutasyonu da sonradan edinilir.",
-   "ses": "Ailesel retinoblastomda tümör gelişimi için retina hücresinde gereken olay hangisidir?\nA, İki somatik re be mutasyonu\nBe, Re be amplifikasyonu\nCe, Tek ek somatik re be mutasyonu\nDe, Mik translokasyonu\nE, Te pe elli üç germ hattı mutasyonu\nSeçenekleri sırayla değerlendirelim.\nİki somatik re be mutasyonu sporadik retinoblastomda gerekir. Ailesel formda alellerden biri zaten germ hattından mutant gelir.\nRB amplifikasyonu ile karıştırılabilir. Re be tümör baskılayıcı gendir, tümör için iki alelinin de işlev kaybı gerekir.\nTek ek somatik re be mutasyonu doğru. Ailesel formda bir mutant alel kalıtılır, retina hücresinde yalnızca ikinci darbe gerekir.\nMik büyümeyi teşvik eden bir onkogendir ve normalde te ge fe beta tarafından baskılanır. Retinoblastom gelişiminde gereken olay değildir.\nTe pe elli üç germ hattı mutasyonu Li Fraumeni sendromunu oluşturur. Erken yaşta sarkom, meme kanseri gibi çoklu primer tümörlere yol açar.\nDoğru cevap Ce, Tek ek somatik re be mutasyonu\nAilesel retinoblastomda her hücre tek işlevsel re be kopyası taşır, retina hücresinde bir ek mutasyon yeterlidir. Sporadik formda ise iki re be mutasyonu da sonradan edinilir.",
-   "kelime": 185
+   "sayfa": [
+    4,
+    5,
+    6,
+    17,
+    18
+   ],
+   "metin": "**Soru.** Ailesel retinoblastomda tümör gelişimi için retina hücresinde gereken olay hangisidir?\n\n**A)** İki somatik RB mutasyonu · **B)** RB amplifikasyonu · **C)** Tek ek somatik RB mutasyonu · **D)** MYC translokasyonu · **E)** TP53 germ hattı mutasyonu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **İki somatik RB mutasyonu** — İki somatik RB mutasyonu sporadik retinoblastomda gerekir; ailesel formda alellerden biri zaten germ hattından mutant gelir.\n- **RB amplifikasyonu** — RB bir onkogen değil tümör baskılayıcı gendir, bu nedenle amplifikasyonu tümör yapmaz; Knudson'un iki vuruş hipotezine göre ailesel retinoblastomda germ hattından gelen kusurlu alelin yanına sağlam alelde tek bir somatik RB mutasyonu eklenmesi tümör gelişimi için yeterlidir.\n- **Tek ek somatik RB mutasyonu** — Tek ek somatik RB mutasyonu doğru: ailesel formda bir mutant alel kalıtılır, retina hücresinde yalnızca ikinci darbe gerekir.\n- **MYC translokasyonu** — MYC büyümeyi teşvik eden bir onkogendir ve normalde TGF-β tarafından baskılanır; retinoblastom gelişiminde gereken olay değildir.\n- **TP53 germ hattı mutasyonu** — TP53 germ hattı mutasyonu Li-Fraumeni sendromunu oluşturur; erken yaşta sarkom, meme kanseri gibi çoklu primer tümörlere yol açar.\n\n**Cevap: C** — Tek ek somatik RB mutasyonu\n\n**Özet.** Ailesel retinoblastomda her hücre tek işlevsel RB kopyası taşır, retina hücresinde bir ek mutasyon yeterlidir; sporadik formda ise iki RB mutasyonu da sonradan edinilir.",
+   "ses": "Ailesel retinoblastomda tümör gelişimi için retina hücresinde gereken olay hangisidir?\nA, İki somatik re be mutasyonu\nBe, Re be amplifikasyonu\nCe, Tek ek somatik re be mutasyonu\nDe, Mik translokasyonu\nE, Te pe elli üç germ hattı mutasyonu\nSeçenekleri sırayla değerlendirelim.\nİki somatik re be mutasyonu sporadik retinoblastomda gerekir. Ailesel formda alellerden biri zaten germ hattından mutant gelir.\nre be bir onkogen değil tümör baskılayıcı gendir, bu nedenle amplifikasyonu tümör yapmaz. Knudson'un iki vuruş hipotezine göre ailesel retinoblastomda germ hattından gelen kusurlu alelin yanına sağlam alelde tek bir somatik re be mutasyonu eklenmesi tümör gelişimi için yeterlidir.\nTek ek somatik re be mutasyonu doğru. Ailesel formda bir mutant alel kalıtılır, retina hücresinde yalnızca ikinci darbe gerekir.\nMik büyümeyi teşvik eden bir onkogendir ve normalde te ge fe beta tarafından baskılanır. Retinoblastom gelişiminde gereken olay değildir.\nTe pe elli üç germ hattı mutasyonu Li Fraumeni sendromunu oluşturur. Erken yaşta sarkom, meme kanseri gibi çoklu primer tümörlere yol açar.\nDoğru cevap Ce, Tek ek somatik re be mutasyonu\nAilesel retinoblastomda her hücre tek işlevsel re be kopyası taşır, retina hücresinde bir ek mutasyon yeterlidir. Sporadik formda ise iki re be mutasyonu da sonradan edinilir.",
+   "kelime": 206
   },
   {
    "no": 2,
@@ -40,18 +49,24 @@
     "E": "Metile RB"
    },
    "dogru": "A",
+   "ipucu": "Siklin D ve CDK4 kompleksinin RB'yi fosforile etmesinin onu aktive mi yoksa inaktive mi ettiğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Hipofosforile RB doğru: aktif formdur, E2F'yi bağlayıp baskılar ve S fazı genlerinin transkripsiyonunu engeller.",
     "B": "Hiperfosforile RB inaktif formdur; siklin–CDK kompleksleri RB'yi fosforile edince E2F serbest kalır ve G1/S geçişi başlar.",
-    "C": "Asetile RB ile karıştırılabilir: Aktif RB, kromatini kapalı tutmak için histon deasetilaz enzimini çeker.",
-    "D": "RB'nin aktif ya da inaktif olmasını belirleyen değişiklik fosforilasyondur. Ubikitinli RB bu sorudaki ayrımı sağlamaz.",
-    "E": "Metile RB ile karıştırılabilir: Aktif RB, histon metiltransferaz gibi enzimleri çekerek S fazı genlerini susturur."
+    "C": "Histon asetilasyonu kromatini gevşeten bir modifikasyondur; RB proteininin E2F transkripsiyon faktörünü bağlayıp G1/S geçişini durduran aktif şekli ise fosforilasyona uğramamış (hipofosforile) RB formudur.",
+    "D": "Ubikuitinlenme proteinlerin proteazomal yıkıma gönderilmesini sağlar ve HPV E7 onkoproteininin RB'yi yıktığı patolojik yoldur; fizyolojik olarak G1 fazında E2F'yi bağlayıp baskılayan aktif form ise hipofosforile RB'dir.",
+    "E": "RB'nin hücre döngüsündeki anahtar düzenlenmesi metilasyonla değil siklin-CDK komplekslerinin yaptığı fosforilasyonla gerçekleşir; E2F'yi bağlayıp histon deasetilazları çekerek transkripsiyonu susturan aktif form hipofosforile RB'dir."
    },
    "ozet": "Hipofosforile RB aktif formdur ve E2F'yi baskılar; siklin D–CDK4/6 RB'yi fosforile edince RB inaktifleşir, E2F serbestleşir ve G1/S geçişi başlar.",
-   "metin": "**Soru.** E2F'yi bağlayıp baskılayan aktif RB formu hangisidir?\n\n**A)** Hipofosforile RB · **B)** Hiperfosforile RB · **C)** Asetile RB · **D)** Ubikitinli RB · **E)** Metile RB\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Hipofosforile RB** — Hipofosforile RB doğru: aktif formdur, E2F'yi bağlayıp baskılar ve S fazı genlerinin transkripsiyonunu engeller.\n- **Hiperfosforile RB** — Hiperfosforile RB inaktif formdur; siklin–CDK kompleksleri RB'yi fosforile edince E2F serbest kalır ve G1/S geçişi başlar.\n- **Asetile RB** — Asetile RB ile karıştırılabilir: Aktif RB, kromatini kapalı tutmak için histon deasetilaz enzimini çeker.\n- **Ubikitinli RB** — RB'nin aktif ya da inaktif olmasını belirleyen değişiklik fosforilasyondur. Ubikitinli RB bu sorudaki ayrımı sağlamaz.\n- **Metile RB** — Metile RB ile karıştırılabilir: Aktif RB, histon metiltransferaz gibi enzimleri çekerek S fazı genlerini susturur.\n\n**Cevap: A** — Hipofosforile RB\n\n**Özet.** Hipofosforile RB aktif formdur ve E2F'yi baskılar; siklin D–CDK4/6 RB'yi fosforile edince RB inaktifleşir, E2F serbestleşir ve G1/S geçişi başlar.",
-   "ses": "E iki feyi bağlayıp baskılayan aktif re be formu hangisidir?\nA, Hipofosforile re be\nBe, Hiperfosforile re be\nCe, Asetile re be\nDe, Ubikitinli re be\nE, Metile re be\nHer seçeneği tek tek ele alalım.\nHipofosforile re be doğru. Aktif formdur, e iki feyi bağlayıp baskılar ve se fazı genlerinin transkripsiyonunu engeller.\nHiperfosforile re be inaktif formdur. Siklin ce de ka kompleksleri re beyi fosforile edince e iki fe serbest kalır ve ge bir se geçişi başlar.\nAsetile RB ile karıştırılabilir. Aktif re be, kromatini kapalı tutmak için histon deasetilaz enzimini çeker.\nRe benin aktif ya da inaktif olmasını belirleyen değişiklik fosforilasyondur. Ubikitinli RB bu sorudaki ayrımı sağlamaz.\nMetile RB ile karıştırılabilir. Aktif re be, histon metiltransferaz gibi enzimleri çekerek se fazı genlerini susturur.\nDoğru cevap A, Hipofosforile re be\nHipofosforile re be aktif formdur ve e iki feyi baskılar. Siklin de ile ce de ka dört ve altı kompleksleri re beyi fosforile edince re be inaktifleşir, e iki fe serbestleşir ve ge bir se geçişi başlar.",
-   "kelime": 154
+   "sayfa": [
+    7,
+    8,
+    9
+   ],
+   "metin": "**Soru.** E2F'yi bağlayıp baskılayan aktif RB formu hangisidir?\n\n**A)** Hipofosforile RB · **B)** Hiperfosforile RB · **C)** Asetile RB · **D)** Ubikitinli RB · **E)** Metile RB\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Hipofosforile RB** — Hipofosforile RB doğru: aktif formdur, E2F'yi bağlayıp baskılar ve S fazı genlerinin transkripsiyonunu engeller.\n- **Hiperfosforile RB** — Hiperfosforile RB inaktif formdur; siklin–CDK kompleksleri RB'yi fosforile edince E2F serbest kalır ve G1/S geçişi başlar.\n- **Asetile RB** — Histon asetilasyonu kromatini gevşeten bir modifikasyondur; RB proteininin E2F transkripsiyon faktörünü bağlayıp G1/S geçişini durduran aktif şekli ise fosforilasyona uğramamış (hipofosforile) RB formudur.\n- **Ubikitinli RB** — Ubikuitinlenme proteinlerin proteazomal yıkıma gönderilmesini sağlar ve HPV E7 onkoproteininin RB'yi yıktığı patolojik yoldur; fizyolojik olarak G1 fazında E2F'yi bağlayıp baskılayan aktif form ise hipofosforile RB'dir.\n- **Metile RB** — RB'nin hücre döngüsündeki anahtar düzenlenmesi metilasyonla değil siklin-CDK komplekslerinin yaptığı fosforilasyonla gerçekleşir; E2F'yi bağlayıp histon deasetilazları çekerek transkripsiyonu susturan aktif form hipofosforile RB'dir.\n\n**Cevap: A** — Hipofosforile RB\n\n**Özet.** Hipofosforile RB aktif formdur ve E2F'yi baskılar; siklin D–CDK4/6 RB'yi fosforile edince RB inaktifleşir, E2F serbestleşir ve G1/S geçişi başlar.",
+   "ses": "E iki feyi bağlayıp baskılayan aktif re be formu hangisidir?\nA, Hipofosforile re be\nBe, Hiperfosforile re be\nCe, Asetile re be\nDe, Ubikitinli re be\nE, Metile re be\nHer seçeneği tek tek ele alalım.\nHipofosforile re be doğru. Aktif formdur, e iki feyi bağlayıp baskılar ve se fazı genlerinin transkripsiyonunu engeller.\nHiperfosforile re be inaktif formdur. Siklin ce de ka kompleksleri re beyi fosforile edince e iki fe serbest kalır ve ge bir se geçişi başlar.\nHiston asetilasyonu kromatini gevşeten bir modifikasyondur. Re be proteininin e iki fe transkripsiyon faktörünü bağlayıp ge bir se geçişini durduran aktif şekli ise fosforilasyona uğramamış, hipofosforile, re be formudur.\nUbikuitinlenme proteinlerin proteazomal yıkıma gönderilmesini sağlar ve ha pe ve e yedi onkoproteininin re be'yi yıktığı patolojik yoldur. Fizyolojik olarak ge bir fazında e iki fe'yi bağlayıp baskılayan aktif form ise hipofosforile re be'dir.\nre be'nin hücre döngüsündeki anahtar düzenlenmesi metilasyonla değil siklin-ce de ka komplekslerinin yaptığı fosforilasyonla gerçekleşir. E iki fe'yi bağlayıp histon deasetilazları çekerek transkripsiyonu susturan aktif form hipofosforile re be'dir.\nDoğru cevap A, Hipofosforile re be\nHipofosforile re be aktif formdur ve e iki feyi baskılar. Siklin de ile ce de ka dört ve altı kompleksleri re beyi fosforile edince re be inaktifleşir, e iki fe serbestleşir ve ge bir se geçişi başlar.",
+   "kelime": 182
   },
   {
    "no": 3,
@@ -65,6 +80,7 @@
     "E": "APC"
    },
    "dogru": "D",
+   "ipucu": "Siklin–CDK kompleksini frenleyen bir inhibitörün kaybının RB'yi sürekli fosforile bırakacağını düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "CDK4, RB'yi fosforile eden kinazdır; kanserde delesyona değil, aktivasyon mutasyonuna ya da amplifikasyona uğrar.",
@@ -74,6 +90,13 @@
     "E": "APC, β-katenini yıkıma hedefleyen tümör baskılayıcıdır; kaybı kolon kanserinde görülür, RB yolunun parçası değildir."
    },
    "ozet": "CDKN2A'nın kodladığı p16, siklin D–CDK4'ü inhibe eder; delesyonu G1/S kontrol noktasını devre dışı bırakır ve pankreas, melanom, baş-boyun karsinomlarında çok sıktır.",
+   "sayfa": [
+    8,
+    10,
+    13,
+    17,
+    23
+   ],
    "metin": "**Soru.** Pankreas karsinomu ve melanomda sık delesyona uğrayan, siklin D–CDK4'ü inhibe eden gen hangisidir?\n\n**A)** CDK4 · **B)** Siklin D · **C)** MDM2 · **D)** CDKN2A (p16) · **E)** APC\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **CDK4** — CDK4, RB'yi fosforile eden kinazdır; kanserde delesyona değil, aktivasyon mutasyonuna ya da amplifikasyona uğrar.\n- **Siklin D** — Siklin D büyüme faktörleriyle artan ve CDK4'ü aktive eden proteindir; kanserde amplifikasyon ya da aşırı ekspresyon gösterir.\n- **MDM2** — MDM2, p53'ü yıkıma hedefleyen proteindir; bazı sarkomlarda amplifiye olarak p53'ü işlevsiz bırakır.\n- **CDKN2A (p16)** — CDKN2A doğru: kodladığı p16 bir CDK inhibitörüdür; delesyonu ya da epigenetik susturulması RB'yi sürekli hiperfosforile ve inaktif bırakır.\n- **APC** — APC, β-katenini yıkıma hedefleyen tümör baskılayıcıdır; kaybı kolon kanserinde görülür, RB yolunun parçası değildir.\n\n**Cevap: D** — CDKN2A (p16)\n\n**Özet.** CDKN2A'nın kodladığı p16, siklin D–CDK4'ü inhibe eder; delesyonu G1/S kontrol noktasını devre dışı bırakır ve pankreas, melanom, baş-boyun karsinomlarında çok sıktır.",
    "ses": "Pankreas karsinomu ve melanomda sık delesyona uğrayan, siklin de ce de ka dördü inhibe eden gen hangisidir?\nA, Ce de ka dört\nBe, Siklin de\nCe, Me de me iki\nDe, Ce de ka ne iki a, pe on altı\nE, A pe ce\nŞıkları sırasıyla gözden geçirelim.\nCe de ka dört, re beyi fosforile eden kinazdır. Kanserde delesyona değil, aktivasyon mutasyonuna ya da amplifikasyona uğrar.\nSiklin de büyüme faktörleriyle artan ve ce de ka dördü aktive eden proteindir. Kanserde amplifikasyon ya da aşırı ekspresyon gösterir.\nMe de me iki, pe elli üçü yıkıma hedefleyen proteindir. Bazı sarkomlarda amplifiye olarak pe elli üçü işlevsiz bırakır.\nCe de ka ne iki a doğru. Kodladığı pe on altı bir ce de ka inhibitörüdür, delesyonu ya da epigenetik susturulması re beyi sürekli hiperfosforile ve inaktif bırakır.\nA pe ce, beta katenini yıkıma hedefleyen tümör baskılayıcıdır. Kaybı kolon kanserinde görülür, re be yolunun parçası değildir.\nDoğru cevap De, Ce de ka ne iki a, pe on altı\nCe de ka ne iki anın kodladığı pe on altı, siklin de ce de ka dördü inhibe eder. Delesyonu ge bir se kontrol noktasını devre dışı bırakır, pankreas, melanom ve baş boyun karsinomlarında çok sıktır.",
    "kelime": 154
@@ -90,6 +113,7 @@
     "E": "MDM2"
    },
    "dogru": "E",
+   "ipucu": "Normal hücrede p53'ün yarı ömrünün neden yaklaşık 20 dakika kadar kısa olduğunu düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "ATM, DNA hasarında p53'ü fosforile eden kinazdır; böylece p53'ü yıkımdan kurtarıp birikmesini sağlar.",
@@ -99,6 +123,12 @@
     "E": "MDM2 doğru: stres yokken p53'e bağlanıp onu proteazom yıkımına hedefler, bu yüzden p53 düzeyi düşük kalır."
    },
    "ozet": "Normalde MDM2 p53'ü yıkıma hedefler; stres altında ATM/ATR kinazları p53'ü fosforile edip MDM2'den ayırır, p53 birikir ve hedef genleri aktive eder.",
+   "sayfa": [
+    13,
+    14,
+    15,
+    16
+   ],
    "metin": "**Soru.** Stres yokken p53'ü proteazom yıkımına hedefleyen protein hangisidir?\n\n**A)** ATM · **B)** p21 · **C)** PUMA · **D)** GADD45 · **E)** MDM2\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **ATM** — ATM, DNA hasarında p53'ü fosforile eden kinazdır; böylece p53'ü yıkımdan kurtarıp birikmesini sağlar.\n- **p21** — p21, p53'ün transkripsiyonunu artırdığı CDK inhibitörüdür; RB fosforilasyonunu önleyip hücreyi G1/S'de durdurur.\n- **PUMA** — PUMA, p53'ün onarılamayan hasarda ekspresyonunu artırdığı proapoptotik gendir; mitokondriyal iç yolu aktive eder.\n- **GADD45** — GADD45, stres altında birikmiş p53'ün transkripsiyonunu başlattığı hedef genlerden biridir; p53'ü yıkmaz.\n- **MDM2** — MDM2 doğru: stres yokken p53'e bağlanıp onu proteazom yıkımına hedefler, bu yüzden p53 düzeyi düşük kalır.\n\n**Cevap: E** — MDM2\n\n**Özet.** Normalde MDM2 p53'ü yıkıma hedefler; stres altında ATM/ATR kinazları p53'ü fosforile edip MDM2'den ayırır, p53 birikir ve hedef genleri aktive eder.",
    "ses": "Stres yokken pe elli üçü proteazom yıkımına hedefleyen protein hangisidir?\nA, A te me\nBe, Pe yirmi bir\nCe, Pe u me a\nDe, Ge a de de kırk beş\nE, Me de me iki\nŞimdi seçeneklere tek tek bakalım.\nA te me, de ne a hasarında pe elli üçü fosforile eden kinazdır. Böylece pe elli üçü yıkımdan kurtarıp birikmesini sağlar.\nPe yirmi bir, pe elli üçün transkripsiyonunu artırdığı ce de ka inhibitörüdür. Re be fosforilasyonunu önleyip hücreyi ge bir se noktasında durdurur.\nPe u me a, pe elli üçün onarılamayan hasarda ekspresyonunu artırdığı proapoptotik gendir. Mitokondriyal iç yolu aktive eder.\nGe a de de kırk beş, stres altında birikmiş pe elli üçün transkripsiyonunu başlattığı hedef genlerden biridir. Pe elli üçü yıkmaz.\nMe de me iki doğru. Stres yokken pe elli üçe bağlanıp onu proteazom yıkımına hedefler, bu yüzden pe elli üç düzeyi düşük kalır.\nDoğru cevap E, Me de me iki\nNormalde me de me iki pe elli üçü yıkıma hedefler. Stres altında a te me ve a te re kinazları pe elli üçü fosforile edip me de me ikiden ayırır. Böylece pe elli üç birikir ve hedef genleri aktive eder.",
    "kelime": 136
@@ -115,18 +145,26 @@
     "E": "BCL2"
    },
    "dogru": "B",
+   "ipucu": "RB'nin fosforilasyonunu önleyerek siklin–CDK komplekslerini frenleyen bir inhibitör düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "MYC büyümeyi teşvik eden bir onkogendir; glikolitik ve glutaminolitik enzimlerin ekspresyonunu artırır, döngüyü durdurmaz.",
     "B": "CDKN1A doğru: kodladığı p21 siklin–CDK komplekslerini inhibe eder, RB fosforilasyonunu önler ve hücreyi G1/S'de durdurur.",
     "C": "Siklin D, büyüme faktörleriyle artıp CDK4/6 ile birlikte RB'yi fosforile eder; döngüyü durdurmaz, G1/S geçişini başlatır.",
     "D": "VEGF, hipokside HIF-1α ile artan anjiyojenik faktördür; p53 ise aksine VEGF'yi baskılar.",
-    "E": "P53 onarılamayan hasarda apoptoz için PUMA ve BAX gibi proapoptotik genleri artırır. BCL2 bu sorudaki ayrımı sağlamaz."
+    "E": "BCL2 apoptozu engelleyen bir sağkalım proteinidir ve p53 tarafından uyarılmaz, aksine baskılanır; p53'ün DNA hasarında G1/S geçişini durdurmak için transkripsiyonunu doğrudan artırdığı siklin bağımlı kinaz inhibitörü ise CDKN1A (p21) genidir."
    },
    "ozet": "p53, CDKN1A yani p21 transkripsiyonunu artırır; p21 siklin–CDK'yı inhibe edip RB'yi hipofosforile tutar ve hücreyi G1/S'de durdurarak onarıma zaman kazandırır.",
-   "metin": "**Soru.** p53'ün G1/S'de hücre döngüsünü durdurmak için transkripsiyonunu artırdığı gen hangisidir?\n\n**A)** MYC · **B)** CDKN1A (p21) · **C)** Siklin D · **D)** VEGF · **E)** BCL2\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **MYC** — MYC büyümeyi teşvik eden bir onkogendir; glikolitik ve glutaminolitik enzimlerin ekspresyonunu artırır, döngüyü durdurmaz.\n- **CDKN1A (p21)** — CDKN1A doğru: kodladığı p21 siklin–CDK komplekslerini inhibe eder, RB fosforilasyonunu önler ve hücreyi G1/S'de durdurur.\n- **Siklin D** — Siklin D, büyüme faktörleriyle artıp CDK4/6 ile birlikte RB'yi fosforile eder; döngüyü durdurmaz, G1/S geçişini başlatır.\n- **VEGF** — VEGF, hipokside HIF-1α ile artan anjiyojenik faktördür; p53 ise aksine VEGF'yi baskılar.\n- **BCL2** — P53 onarılamayan hasarda apoptoz için PUMA ve BAX gibi proapoptotik genleri artırır. BCL2 bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — CDKN1A (p21)\n\n**Özet.** p53, CDKN1A yani p21 transkripsiyonunu artırır; p21 siklin–CDK'yı inhibe edip RB'yi hipofosforile tutar ve hücreyi G1/S'de durdurarak onarıma zaman kazandırır.",
-   "ses": "Pe elli üçün ge bir se noktasında hücre döngüsünü durdurmak için transkripsiyonunu artırdığı gen hangisidir?\nA, Mik\nBe, Ce de ka ne bir a, pe yirmi bir\nCe, Siklin de\nDe, Ve e ge fe\nE, Be ce le iki\nSeçenekleri sırayla değerlendirelim.\nMik büyümeyi teşvik eden bir onkogendir. Glikolitik ve glutaminolitik enzimlerin ekspresyonunu artırır, döngüyü durdurmaz.\nCe de ka ne bir a doğru. Kodladığı pe yirmi bir siklin ce de ka komplekslerini inhibe eder, re be fosforilasyonunu önler ve hücreyi ge bir se noktasında durdurur.\nSiklin de, büyüme faktörleriyle artıp ce de ka dört ve altı ile birlikte re beyi fosforile eder. Döngüyü durdurmaz, ge bir se geçişini başlatır.\nVe e ge fe, hipokside ha i fe bir alfa ile artan anjiyojenik faktördür. Pe elli üç ise aksine ve e ge feyi baskılar.\nPe elli üç onarılamayan hasarda apoptoz için pe u me a ve be a iks gibi proapoptotik genleri artırır. BCLiki bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Ce de ka ne bir a, pe yirmi bir\nPe elli üç, ce de ka ne bir a yani pe yirmi bir transkripsiyonunu artırır. Pe yirmi bir siklin ce de kayı inhibe edip re beyi hipofosforile tutar, hücreyi ge bir se noktasında durdurarak onarıma zaman kazandırır.",
-   "kelime": 148
+   "sayfa": [
+    8,
+    13,
+    14,
+    15,
+    16
+   ],
+   "metin": "**Soru.** p53'ün G1/S'de hücre döngüsünü durdurmak için transkripsiyonunu artırdığı gen hangisidir?\n\n**A)** MYC · **B)** CDKN1A (p21) · **C)** Siklin D · **D)** VEGF · **E)** BCL2\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **MYC** — MYC büyümeyi teşvik eden bir onkogendir; glikolitik ve glutaminolitik enzimlerin ekspresyonunu artırır, döngüyü durdurmaz.\n- **CDKN1A (p21)** — CDKN1A doğru: kodladığı p21 siklin–CDK komplekslerini inhibe eder, RB fosforilasyonunu önler ve hücreyi G1/S'de durdurur.\n- **Siklin D** — Siklin D, büyüme faktörleriyle artıp CDK4/6 ile birlikte RB'yi fosforile eder; döngüyü durdurmaz, G1/S geçişini başlatır.\n- **VEGF** — VEGF, hipokside HIF-1α ile artan anjiyojenik faktördür; p53 ise aksine VEGF'yi baskılar.\n- **BCL2** — BCL2 apoptozu engelleyen bir sağkalım proteinidir ve p53 tarafından uyarılmaz, aksine baskılanır; p53'ün DNA hasarında G1/S geçişini durdurmak için transkripsiyonunu doğrudan artırdığı siklin bağımlı kinaz inhibitörü ise CDKN1A (p21) genidir.\n\n**Cevap: B** — CDKN1A (p21)\n\n**Özet.** p53, CDKN1A yani p21 transkripsiyonunu artırır; p21 siklin–CDK'yı inhibe edip RB'yi hipofosforile tutar ve hücreyi G1/S'de durdurarak onarıma zaman kazandırır.",
+   "ses": "Pe elli üçün ge bir se noktasında hücre döngüsünü durdurmak için transkripsiyonunu artırdığı gen hangisidir?\nA, Mik\nBe, Ce de ka ne bir a, pe yirmi bir\nCe, Siklin de\nDe, Ve e ge fe\nE, Be ce le iki\nSeçenekleri sırayla değerlendirelim.\nMik büyümeyi teşvik eden bir onkogendir. Glikolitik ve glutaminolitik enzimlerin ekspresyonunu artırır, döngüyü durdurmaz.\nCe de ka ne bir a doğru. Kodladığı pe yirmi bir siklin ce de ka komplekslerini inhibe eder, re be fosforilasyonunu önler ve hücreyi ge bir se noktasında durdurur.\nSiklin de, büyüme faktörleriyle artıp ce de ka dört ve altı ile birlikte re beyi fosforile eder. Döngüyü durdurmaz, ge bir se geçişini başlatır.\nVe e ge fe, hipokside ha i fe bir alfa ile artan anjiyojenik faktördür. Pe elli üç ise aksine ve e ge feyi baskılar.\nbe ce le iki apoptozu engelleyen bir sağkalım proteinidir ve pe elli üç tarafından uyarılmaz, aksine baskılanır. Pe elli üç'ün de ne a hasarında ge bir se geçişini durdurmak için transkripsiyonunu doğrudan artırdığı siklin bağımlı kinaz inhibitörü ise ce de ka ne bir a, pe yirmi bir, genidir.\nDoğru cevap Be, Ce de ka ne bir a, pe yirmi bir\nPe elli üç, ce de ka ne bir a yani pe yirmi bir transkripsiyonunu artırır. Pe yirmi bir siklin ce de kayı inhibe edip re beyi hipofosforile tutar, hücreyi ge bir se noktasında durdurarak onarıma zaman kazandırır.",
+   "kelime": 161
   },
   {
    "no": 6,
@@ -140,6 +178,7 @@
     "E": "IDH"
    },
    "dogru": "A",
+   "ipucu": "Sarkomu, meme kanserini ve adrenal korteks karsinomunu erken yaşta aynı hastada toplayan ailesel sendromun adını hatırla.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "TP53 doğru: Li-Fraumeni sendromunda germ hattında bir mutant TP53 aleli vardır, ikinci darbeyle erken yaşta çoklu primer tümör gelişir.",
@@ -149,6 +188,13 @@
     "E": "IDH mutasyonları düşük ve orta dereceli gliomlar, bazı akut miyeloid lösemiler ve kolanjiyokarsinomlarda görülür; onkometabolit üretir."
    },
    "ozet": "Li-Fraumeni sendromunda germ hattı TP53 mutasyonu vardır; erken yaşta sarkom, meme kanseri, lösemi, beyin tümörü ve adrenal korteks karsinomu gibi çoklu primer tümörler gelişir.",
+   "sayfa": [
+    5,
+    17,
+    20,
+    23,
+    32
+   ],
    "metin": "**Soru.** Erken yaşta sarkom, meme kanseri ve adrenal korteks karsinomu gelişen hastada en olası germ hattı mutasyonu hangisidir?\n\n**A)** TP53 · **B)** RB · **C)** APC · **D)** NF2 · **E)** IDH\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **TP53** — TP53 doğru: Li-Fraumeni sendromunda germ hattında bir mutant TP53 aleli vardır, ikinci darbeyle erken yaşta çoklu primer tümör gelişir.\n- **RB** — RB germ hattı mutasyonu, retina hücresindeki ikinci somatik darbeyle ailesel retinoblastomaya yol açar.\n- **APC** — APC germ hattı mutasyonu ailesel adenomatöz polipozis koliye yol açar; çok sayıda kolon adenomu ve yüksek karsinom riski oluşur.\n- **NF2** — NF2 kaybı nörofibromatozis tip 2'ye yol açar; sinir kılıfı tümörleri ve meningiomlarla seyreder.\n- **IDH** — IDH mutasyonları düşük ve orta dereceli gliomlar, bazı akut miyeloid lösemiler ve kolanjiyokarsinomlarda görülür; onkometabolit üretir.\n\n**Cevap: A** — TP53\n\n**Özet.** Li-Fraumeni sendromunda germ hattı TP53 mutasyonu vardır; erken yaşta sarkom, meme kanseri, lösemi, beyin tümörü ve adrenal korteks karsinomu gibi çoklu primer tümörler gelişir.",
    "ses": "Erken yaşta sarkom, meme kanseri ve adrenal korteks karsinomu gelişen hastada en olası germ hattı mutasyonu hangisidir?\nA, Te pe elli üç\nBe, Re be\nCe, A pe ce\nDe, Ne fe iki\nE, İ de ha\nHer seçeneği tek tek ele alalım.\nTe pe elli üç doğru. Li Fraumeni sendromunda germ hattında bir mutant te pe elli üç aleli vardır, ikinci darbeyle erken yaşta çoklu primer tümör gelişir.\nRe be germ hattı mutasyonu, retina hücresindeki ikinci somatik darbeyle ailesel retinoblastomaya yol açar.\nA pe ce germ hattı mutasyonu ailesel adenomatöz polipozis koliye yol açar. Çok sayıda kolon adenomu ve yüksek karsinom riski oluşur.\nNe fe iki kaybı nörofibromatozis tip ikiye yol açar. Sinir kılıfı tümörleri ve meningiomlarla seyreder.\nİ de ha mutasyonları düşük ve orta dereceli gliomlar, bazı akut miyeloid lösemiler ve kolanjiyokarsinomlarda görülür. Onkometabolit üretir.\nDoğru cevap A, Te pe elli üç\nLi Fraumeni sendromunda germ hattı te pe elli üç mutasyonu vardır. Erken yaşta sarkom, meme kanseri, lösemi, beyin tümörü ve adrenal korteks karsinomu gibi çoklu primer tümörler gelişir.",
    "kelime": 163
@@ -165,6 +211,7 @@
     "E": "MDM2 amplifikasyonu"
    },
    "dogru": "C",
+   "ipucu": "Hücreler arası bağlantı kopmadan epitel hücrelerinin birbirinden ayrılıp invazyon yapamayacağını düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "APC kaybı β-katenin yıkımını engeller ve WNT yolunu sürekli aktif bırakır; kolon kanserinde proliferasyonu artırır.",
@@ -174,6 +221,13 @@
     "E": "MDM2 amplifikasyonu bazı sarkomlarda görülür; p53'ü yıkıma göndererek işlevsiz bırakır."
    },
    "ozet": "E-kadherin epitelin temel hücre–hücre adezyon molekülüdür; SNAIL ve TWIST ile baskılanıp kaybolması epitel–mezenkimal geçişin kilit olayıdır ve invazyonu artırır.",
+   "sayfa": [
+    7,
+    17,
+    20,
+    23,
+    33
+   ],
    "metin": "**Soru.** Epitel–mezenkimal geçişin (EMT) kilit olayı hangisidir?\n\n**A)** APC kaybı · **B)** VEGF artışı · **C)** E-kadherin kaybı · **D)** RB kaybı · **E)** MDM2 amplifikasyonu\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **APC kaybı** — APC kaybı β-katenin yıkımını engeller ve WNT yolunu sürekli aktif bırakır; kolon kanserinde proliferasyonu artırır.\n- **VEGF artışı** — VEGF artışı anjiyogenezi uyarır; hipokside HIF-1α ile artar ve tümöre yeni damar sağlar.\n- **E-kadherin kaybı** — E-kadherin kaybı doğru: SNAIL ve TWIST gibi faktörlerle baskılanır, hücreler arası kohezyon azalır ve invazyon artar.\n- **RB kaybı** — RB kaybı G1/S kontrol noktasını devre dışı bırakır; E2F serbestleşir ve hücre S fazına geçer.\n- **MDM2 amplifikasyonu** — MDM2 amplifikasyonu bazı sarkomlarda görülür; p53'ü yıkıma göndererek işlevsiz bırakır.\n\n**Cevap: C** — E-kadherin kaybı\n\n**Özet.** E-kadherin epitelin temel hücre–hücre adezyon molekülüdür; SNAIL ve TWIST ile baskılanıp kaybolması epitel–mezenkimal geçişin kilit olayıdır ve invazyonu artırır.",
    "ses": "Epitel mezenkimal geçişin kilit olayı hangisidir?\nA, A pe ce kaybı\nBe, Ve e ge fe artışı\nCe, E kadherin kaybı\nDe, Re be kaybı\nE, Me de me iki amplifikasyonu\nŞıkları sırasıyla gözden geçirelim.\nA pe ce kaybı beta katenin yıkımını engeller ve vint yolunu sürekli aktif bırakır. Kolon kanserinde proliferasyonu artırır.\nVe e ge fe artışı anjiyogenezi uyarır. Hipokside ha i fe bir alfa ile artar ve tümöre yeni damar sağlar.\nE kadherin kaybı doğru. Sneyl ve tvist gibi faktörlerle baskılanır, hücreler arası kohezyon azalır ve invazyon artar.\nRe be kaybı ge bir se kontrol noktasını devre dışı bırakır. E iki fe serbestleşir ve hücre se fazına geçer.\nMe de me iki amplifikasyonu bazı sarkomlarda görülür. Pe elli üçü yıkıma göndererek işlevsiz bırakır.\nDoğru cevap Ce, E kadherin kaybı\nE kadherin epitelin temel hücre hücre adezyon molekülüdür. Sneyl ve tvist ile baskılanıp kaybolması epitel mezenkimal geçişin kilit olayıdır ve invazyonu artırır.",
    "kelime": 145
@@ -190,18 +244,28 @@
     "E": "HIF-1α yıkımı"
    },
    "dogru": "B",
+   "ipucu": "Normalde bu tümör baskılayıcının içinde yer aldığı yıkım kompleksinin hangi proteini parçaladığını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "E2F serbestleşmesi RB'nin fosforilasyonla inaktive olmasının sonucudur; RB yoluna aittir, APC kaybına değil.",
     "B": "β-katenin birikimi doğru: APC yoksa β-katenin yıkılamaz, WNT olmasa bile birikir ve çekirdekte TCF ile proliferasyon genlerini aktive eder.",
     "C": "p53 yıkımı MDM2 aracılığıyla olur ve stres yokken p53 düzeyini düşük tutar; APC yolunun olayı değildir.",
-    "D": "SMAD aktivasyonu TGF-β reseptörünün uyarılmasıyla olur; proliferasyonu başlatmaz, aksine CDK inhibitörlerini artırarak frenler.",
+    "D": "SMAD aktivasyonu TGF-beta reseptörünün uyarılmasıyla gerçekleşir ve proliferasyonu başlatmaz, aksine CDK inhibitörlerini artırarak hücre bölünmesini baskılar.",
     "E": "HIF-1α hipokside yıkılmaz, stabilize olur; VEGF transkripsiyonunu artırarak anjiyogenezi tetikler."
    },
    "ozet": "APC, β-katenin yıkım kompleksinin parçasıdır; APC kaybında β-katenin birikip çekirdekte proliferasyon genlerini aktive eder, sporadik kolon karsinomlarının %70–80'inde bu mutasyon vardır.",
-   "metin": "**Soru.** APC kaybında kolon epitelinde proliferasyonu başlatan olay hangisidir?\n\n**A)** E2F serbestleşmesi · **B)** β-katenin birikimi · **C)** p53 yıkımı · **D)** SMAD aktivasyonu · **E)** HIF-1α yıkımı\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **E2F serbestleşmesi** — E2F serbestleşmesi RB'nin fosforilasyonla inaktive olmasının sonucudur; RB yoluna aittir, APC kaybına değil.\n- **β-katenin birikimi** — β-katenin birikimi doğru: APC yoksa β-katenin yıkılamaz, WNT olmasa bile birikir ve çekirdekte TCF ile proliferasyon genlerini aktive eder.\n- **p53 yıkımı** — p53 yıkımı MDM2 aracılığıyla olur ve stres yokken p53 düzeyini düşük tutar; APC yolunun olayı değildir.\n- **SMAD aktivasyonu** — SMAD aktivasyonu TGF-β reseptörünün uyarılmasıyla olur; proliferasyonu başlatmaz, aksine CDK inhibitörlerini artırarak frenler.\n- **HIF-1α yıkımı** — HIF-1α hipokside yıkılmaz, stabilize olur; VEGF transkripsiyonunu artırarak anjiyogenezi tetikler.\n\n**Cevap: B** — β-katenin birikimi\n\n**Özet.** APC, β-katenin yıkım kompleksinin parçasıdır; APC kaybında β-katenin birikip çekirdekte proliferasyon genlerini aktive eder, sporadik kolon karsinomlarının %70–80'inde bu mutasyon vardır.",
-   "ses": "A pe ce kaybında kolon epitelinde proliferasyonu başlatan olay hangisidir?\nA, E iki fe serbestleşmesi\nBe, Beta katenin birikimi\nCe, Pe elli üç yıkımı\nDe, Smad aktivasyonu\nE, Ha i fe bir alfa yıkımı\nŞimdi seçeneklere tek tek bakalım.\nE iki fe serbestleşmesi re benin fosforilasyonla inaktive olmasının sonucudur. Re be yoluna aittir, a pe ce kaybına değil.\nBeta katenin birikimi doğru. A pe ce yoksa beta katenin yıkılamaz, vint olmasa bile birikir ve çekirdekte te ce fe ile proliferasyon genlerini aktive eder.\nPe elli üç yıkımı me de me iki aracılığıyla olur ve stres yokken pe elli üç düzeyini düşük tutar. A pe ce yolunun olayı değildir.\nSmad aktivasyonu te ge fe beta reseptörünün uyarılmasıyla olur. Proliferasyonu başlatmaz, aksine ce de ka inhibitörlerini artırarak frenler.\nHa i fe bir alfa hipokside yıkılmaz, stabilize olur. Ve e ge fe transkripsiyonunu artırarak anjiyogenezi tetikler.\nDoğru cevap Be, Beta katenin birikimi\nA pe ce, beta katenin yıkım kompleksinin parçasıdır. A pe ce kaybında beta katenin birikip çekirdekte proliferasyon genlerini aktive eder, sporadik kolon karsinomlarının yüzde yetmiş ile sekseninde bu mutasyon vardır.",
-   "kelime": 152
+   "sayfa": [
+    7,
+    13,
+    18,
+    21,
+    22,
+    23,
+    33
+   ],
+   "metin": "**Soru.** APC kaybında kolon epitelinde proliferasyonu başlatan olay hangisidir?\n\n**A)** E2F serbestleşmesi · **B)** β-katenin birikimi · **C)** p53 yıkımı · **D)** SMAD aktivasyonu · **E)** HIF-1α yıkımı\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **E2F serbestleşmesi** — E2F serbestleşmesi RB'nin fosforilasyonla inaktive olmasının sonucudur; RB yoluna aittir, APC kaybına değil.\n- **β-katenin birikimi** — β-katenin birikimi doğru: APC yoksa β-katenin yıkılamaz, WNT olmasa bile birikir ve çekirdekte TCF ile proliferasyon genlerini aktive eder.\n- **p53 yıkımı** — p53 yıkımı MDM2 aracılığıyla olur ve stres yokken p53 düzeyini düşük tutar; APC yolunun olayı değildir.\n- **SMAD aktivasyonu** — SMAD aktivasyonu TGF-beta reseptörünün uyarılmasıyla gerçekleşir ve proliferasyonu başlatmaz, aksine CDK inhibitörlerini artırarak hücre bölünmesini baskılar.\n- **HIF-1α yıkımı** — HIF-1α hipokside yıkılmaz, stabilize olur; VEGF transkripsiyonunu artırarak anjiyogenezi tetikler.\n\n**Cevap: B** — β-katenin birikimi\n\n**Özet.** APC, β-katenin yıkım kompleksinin parçasıdır; APC kaybında β-katenin birikip çekirdekte proliferasyon genlerini aktive eder, sporadik kolon karsinomlarının %70–80'inde bu mutasyon vardır.",
+   "ses": "A pe ce kaybında kolon epitelinde proliferasyonu başlatan olay hangisidir?\nA, E iki fe serbestleşmesi\nBe, Beta katenin birikimi\nCe, Pe elli üç yıkımı\nDe, Smad aktivasyonu\nE, Ha i fe bir alfa yıkımı\nŞimdi seçeneklere tek tek bakalım.\nE iki fe serbestleşmesi re benin fosforilasyonla inaktive olmasının sonucudur. Re be yoluna aittir, a pe ce kaybına değil.\nBeta katenin birikimi doğru. A pe ce yoksa beta katenin yıkılamaz, vint olmasa bile birikir ve çekirdekte te ce fe ile proliferasyon genlerini aktive eder.\nPe elli üç yıkımı me de me iki aracılığıyla olur ve stres yokken pe elli üç düzeyini düşük tutar. A pe ce yolunun olayı değildir.\nsmad aktivasyonu te ge fe beta reseptörünün uyarılmasıyla gerçekleşir ve proliferasyonu başlatmaz, aksine ce de ka inhibitörlerini artırarak hücre bölünmesini baskılar.\nHa i fe bir alfa hipokside yıkılmaz, stabilize olur. Ve e ge fe transkripsiyonunu artırarak anjiyogenezi tetikler.\nDoğru cevap Be, Beta katenin birikimi\nA pe ce, beta katenin yıkım kompleksinin parçasıdır. A pe ce kaybında beta katenin birikip çekirdekte proliferasyon genlerini aktive eder, sporadik kolon karsinomlarının yüzde yetmiş ile sekseninde bu mutasyon vardır.",
+   "kelime": 155
   },
   {
    "no": 9,
@@ -215,6 +279,7 @@
     "E": "Warburg etkisi"
    },
    "dogru": "E",
+   "ipucu": "Normal hücrenin oksijen varken kullandığı mitokondriyal yolu ve tümör hücresinin bunun yerine aerobik glikolize yönelmesini adlandıran kavramı düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Otofaji, şiddetli besin eksikliğinde hücrenin kendi organellerini yıkıp enerji sağlamasıdır; glikozun laktata çevrilmesi değildir.",
@@ -224,6 +289,12 @@
     "E": "Warburg etkisi doğru: tümör hücresi oksijen varken bile aerobik glikoliz yapar ve glikozu laktata çevirir."
    },
    "ozet": "Warburg etkisinde ATP üretimi nispeten düşüktür, ancak glikoliz ara ürünleri nükleotid, amino asit ve lipit sentezi için karbon iskeleti sağlar; bu, hızla bölünen hücreye avantajdır.",
+   "sayfa": [
+    24,
+    25,
+    26,
+    28
+   ],
    "metin": "**Soru.** Tümör hücrelerinin oksijen varlığında bile glikozu laktata çevirmesine ne ad verilir?\n\n**A)** Otofaji · **B)** Oksidatif fosforilasyon · **C)** Glutaminoliz · **D)** Lipogenez · **E)** Warburg etkisi\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Otofaji** — Otofaji, şiddetli besin eksikliğinde hücrenin kendi organellerini yıkıp enerji sağlamasıdır; glikozun laktata çevrilmesi değildir.\n- **Oksidatif fosforilasyon** — Oksidatif fosforilasyon, normal hücrenin oksijen varlığında mitokondride kullandığı yoldur; tümör hücresi ise oksijen olsa bile glikolize yönelir.\n- **Glutaminoliz** — Glutaminoliz, MYC onkogeninin enzimlerini artırdığı glutamin kullanım yoludur; tümör hücresinde glutamin bağımlılığını artırır.\n- **Lipogenez** — Lipogenez, RAS–PI3K/AKT yolunun mitokondriyal ara ürünleri yönlendirerek teşvik ettiği lipit sentezidir.\n- **Warburg etkisi** — Warburg etkisi doğru: tümör hücresi oksijen varken bile aerobik glikoliz yapar ve glikozu laktata çevirir.\n\n**Cevap: E** — Warburg etkisi\n\n**Özet.** Warburg etkisinde ATP üretimi nispeten düşüktür, ancak glikoliz ara ürünleri nükleotid, amino asit ve lipit sentezi için karbon iskeleti sağlar; bu, hızla bölünen hücreye avantajdır.",
    "ses": "Tümör hücrelerinin oksijen varlığında bile glikozu laktata çevirmesine ne ad verilir?\nA, Otofaji\nBe, Oksidatif fosforilasyon\nCe, Glutaminoliz\nDe, Lipogenez\nE, Varburg etkisi\nSeçenekleri sırayla değerlendirelim.\nOtofaji, şiddetli besin eksikliğinde hücrenin kendi organellerini yıkıp enerji sağlamasıdır. Glikozun laktata çevrilmesi değildir.\nOksidatif fosforilasyon, normal hücrenin oksijen varlığında mitokondride kullandığı yoldur. Tümör hücresi ise oksijen olsa bile glikolize yönelir.\nGlutaminoliz, mik onkogeninin enzimlerini artırdığı glutamin kullanım yoludur. Tümör hücresinde glutamin bağımlılığını artırır.\nLipogenez, ras, pe i üç ka ve a ka te yolunun mitokondriyal ara ürünleri yönlendirerek teşvik ettiği lipit sentezidir.\nVarburg etkisi doğru. Tümör hücresi oksijen varken bile aerobik glikoliz yapar ve glikozu laktata çevirir.\nDoğru cevap E, Varburg etkisi\nVarburg etkisinde a te pe üretimi nispeten düşüktür. Ancak glikoliz ara ürünleri nükleotid, amino asit ve lipit sentezi için karbon iskeleti sağlar, bu da hızla bölünen hücreye avantajdır.",
    "kelime": 150
@@ -240,6 +311,7 @@
     "E": "Glutamat"
    },
    "dogru": "C",
+   "ipucu": "Normal enzim izositratı alfa-ketoglutarata çevirir; mutasyonla bu dönüşüm kaybolunca yerine hangi molekülün üretildiğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Laktat, Warburg etkisinde glikozun aerobik glikolizle dönüştürüldüğü üründür; IDH mutasyonuyla ilgili değildir.",
@@ -249,6 +321,13 @@
     "E": "Glutamat, MYC'nin artırdığı glutamin kullanımında glutaminden oluşan ara üründür; onkometabolit değildir."
    },
    "ozet": "Mutant IDH, α-ketoglutarat yerine 2-hidroksiglutarat üretir; bu onkometabolit TET2'yi inhibe ederek DNA ve histon metilasyonunu değiştirir, gliom ve akut miyeloid lösemide görülür.",
+   "sayfa": [
+    24,
+    26,
+    30,
+    31,
+    32
+   ],
    "metin": "**Soru.** Mutant IDH'nin ürettiği onkometabolit hangisidir?\n\n**A)** Laktat · **B)** α-ketoglutarat · **C)** 2-hidroksiglutarat · **D)** Sitrat · **E)** Glutamat\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Laktat** — Laktat, Warburg etkisinde glikozun aerobik glikolizle dönüştürüldüğü üründür; IDH mutasyonuyla ilgili değildir.\n- **α-ketoglutarat** — α-ketoglutarat, normal IDH'nin izositrattan ürettiği Krebs döngüsü ara ürünüdür; mutant enzimde bu dönüşüm kaybolur.\n- **2-hidroksiglutarat** — 2-hidroksiglutarat doğru: mutant IDH bu onkometaboliti üretir, o da TET2'yi inhibe ederek DNA metilasyonunu ve gen ekspresyonunu değiştirir.\n- **Sitrat** — Sitrat, Krebs döngüsünde yer alan ve lipogenez için mitokondriden aktarılan ara üründür; onkometabolit değildir.\n- **Glutamat** — Glutamat, MYC'nin artırdığı glutamin kullanımında glutaminden oluşan ara üründür; onkometabolit değildir.\n\n**Cevap: C** — 2-hidroksiglutarat\n\n**Özet.** Mutant IDH, α-ketoglutarat yerine 2-hidroksiglutarat üretir; bu onkometabolit TET2'yi inhibe ederek DNA ve histon metilasyonunu değiştirir, gliom ve akut miyeloid lösemide görülür.",
    "ses": "Mutant i de hanın ürettiği onkometabolit hangisidir?\nA, Laktat\nBe, Alfa ketoglutarat\nCe, İki hidroksiglutarat\nDe, Sitrat\nE, Glutamat\nHer seçeneği tek tek ele alalım.\nLaktat, Varburg etkisinde glikozun aerobik glikolizle dönüştürüldüğü üründür. İ de ha mutasyonuyla ilgili değildir.\nAlfa ketoglutarat, normal i de hanın izositrattan ürettiği Krebs döngüsü ara ürünüdür. Mutant enzimde bu dönüşüm kaybolur.\nİki hidroksiglutarat doğru. Mutant i de ha bu onkometaboliti üretir, o da te e te ikiyi inhibe ederek de ne a metilasyonunu ve gen ekspresyonunu değiştirir.\nSitrat, Krebs döngüsünde yer alan ve lipogenez için mitokondriden aktarılan ara üründür. Onkometabolit değildir.\nGlutamat, mik onkogeninin artırdığı glutamin kullanımında glutaminden oluşan ara üründür. Onkometabolit değildir.\nDoğru cevap Ce, İki hidroksiglutarat\nMutant i de ha, alfa ketoglutarat yerine iki hidroksiglutarat üretir. Bu onkometabolit te e te ikiyi inhibe ederek de ne a ve histon metilasyonunu değiştirir, gliom ve akut miyeloid lösemide görülür.",
    "kelime": 138
@@ -265,18 +344,26 @@
     "E": "NF-κB"
    },
    "dogru": "A",
+   "ipucu": "Oksijen azalınca stabilize olup VEGF transkripsiyonunu artıran faktörü düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "HIF-1α doğru: hipokside stabilize olur ve VEGF transkripsiyonunu artırarak yeni damar oluşumunu tetikler.",
     "B": "E2F, RB'den serbestleşince S fazı genlerini aktive eden transkripsiyon faktörüdür; hücre döngüsünü yönetir.",
     "C": "TCF, çekirdeğe geçen β-kateninin bağlandığı ve proliferasyon genlerini aktive eden transkripsiyon faktörüdür.",
     "D": "SMAD proteinleri TGF-β sinyalini iletir; CDK inhibitörlerini artırıp proliferasyonu baskılar.",
-    "E": "Hipoksiye yanıtta VEGF'yi artıran faktör HIF-1α'dır. NF-κB bu sorudaki ayrımı sağlamaz."
+    "E": "NF-kapaB inflamatuvar yanıtı ve hücre sağkalımını yöneten transkripsiyon faktörüdür; tümör dokusu hipoksik kaldığında VHL tarafından yıkımı duran ve çekirdeğe geçerek VEGF gen transkripsiyonunu doğrudan artıran faktör ise HIF-1 alfa'dır."
    },
    "ozet": "Hipoksi HIF-1α'yı stabilize eder, o da VEGF transkripsiyonunu artırır; RAS ve MYC VEGF'yi artırırken p53 trombospondin-1'i artırıp VEGF'yi baskılar.",
-   "metin": "**Soru.** Tümörde hipoksinin anjiyogenezi tetiklemesinde aracı olan transkripsiyon faktörü hangisidir?\n\n**A)** HIF-1α · **B)** E2F · **C)** TCF · **D)** SMAD · **E)** NF-κB\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **HIF-1α** — HIF-1α doğru: hipokside stabilize olur ve VEGF transkripsiyonunu artırarak yeni damar oluşumunu tetikler.\n- **E2F** — E2F, RB'den serbestleşince S fazı genlerini aktive eden transkripsiyon faktörüdür; hücre döngüsünü yönetir.\n- **TCF** — TCF, çekirdeğe geçen β-kateninin bağlandığı ve proliferasyon genlerini aktive eden transkripsiyon faktörüdür.\n- **SMAD** — SMAD proteinleri TGF-β sinyalini iletir; CDK inhibitörlerini artırıp proliferasyonu baskılar.\n- **NF-κB** — Hipoksiye yanıtta VEGF'yi artıran faktör HIF-1α'dır. NF-κB bu sorudaki ayrımı sağlamaz.\n\n**Cevap: A** — HIF-1α\n\n**Özet.** Hipoksi HIF-1α'yı stabilize eder, o da VEGF transkripsiyonunu artırır; RAS ve MYC VEGF'yi artırırken p53 trombospondin-1'i artırıp VEGF'yi baskılar.",
-   "ses": "Tümörde hipoksinin anjiyogenezi tetiklemesinde aracı olan transkripsiyon faktörü hangisidir?\nA, Ha i fe bir alfa\nBe, E iki fe\nCe, Te ce fe\nDe, Smad\nE, Ne fe kappa be\nŞıkları sırasıyla gözden geçirelim.\nHa i fe bir alfa doğru. Hipokside stabilize olur ve ve e ge fe transkripsiyonunu artırarak yeni damar oluşumunu tetikler.\nE iki fe, re beden serbestleşince se fazı genlerini aktive eden transkripsiyon faktörüdür. Hücre döngüsünü yönetir.\nTe ce fe, çekirdeğe geçen beta kateninin bağlandığı ve proliferasyon genlerini aktive eden transkripsiyon faktörüdür.\nSmad proteinleri te ge fe beta sinyalini iletir. Ce de ka inhibitörlerini artırıp proliferasyonu baskılar.\nHipoksiye yanıtta ve e ge feyi artıran faktör ha i fe bir alfadır. NF-κB bu sorudaki ayrımı sağlamaz.\nDoğru cevap A, Ha i fe bir alfa\nHipoksi ha i fe bir alfayı stabilize eder, o da ve e ge fe transkripsiyonunu artırır. Ras ve mik ve e ge feyi artırırken, pe elli üç trombospondin biri artırıp ve e ge feyi baskılar.",
-   "kelime": 127
+   "sayfa": [
+    7,
+    18,
+    21,
+    22,
+    33
+   ],
+   "metin": "**Soru.** Tümörde hipoksinin anjiyogenezi tetiklemesinde aracı olan transkripsiyon faktörü hangisidir?\n\n**A)** HIF-1α · **B)** E2F · **C)** TCF · **D)** SMAD · **E)** NF-κB\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **HIF-1α** — HIF-1α doğru: hipokside stabilize olur ve VEGF transkripsiyonunu artırarak yeni damar oluşumunu tetikler.\n- **E2F** — E2F, RB'den serbestleşince S fazı genlerini aktive eden transkripsiyon faktörüdür; hücre döngüsünü yönetir.\n- **TCF** — TCF, çekirdeğe geçen β-kateninin bağlandığı ve proliferasyon genlerini aktive eden transkripsiyon faktörüdür.\n- **SMAD** — SMAD proteinleri TGF-β sinyalini iletir; CDK inhibitörlerini artırıp proliferasyonu baskılar.\n- **NF-κB** — NF-kapaB inflamatuvar yanıtı ve hücre sağkalımını yöneten transkripsiyon faktörüdür; tümör dokusu hipoksik kaldığında VHL tarafından yıkımı duran ve çekirdeğe geçerek VEGF gen transkripsiyonunu doğrudan artıran faktör ise HIF-1 alfa'dır.\n\n**Cevap: A** — HIF-1α\n\n**Özet.** Hipoksi HIF-1α'yı stabilize eder, o da VEGF transkripsiyonunu artırır; RAS ve MYC VEGF'yi artırırken p53 trombospondin-1'i artırıp VEGF'yi baskılar.",
+   "ses": "Tümörde hipoksinin anjiyogenezi tetiklemesinde aracı olan transkripsiyon faktörü hangisidir?\nA, Ha i fe bir alfa\nBe, E iki fe\nCe, Te ce fe\nDe, Smad\nE, Ne fe kappa be\nŞıkları sırasıyla gözden geçirelim.\nHa i fe bir alfa doğru. Hipokside stabilize olur ve ve e ge fe transkripsiyonunu artırarak yeni damar oluşumunu tetikler.\nE iki fe, re beden serbestleşince se fazı genlerini aktive eden transkripsiyon faktörüdür. Hücre döngüsünü yönetir.\nTe ce fe, çekirdeğe geçen beta kateninin bağlandığı ve proliferasyon genlerini aktive eden transkripsiyon faktörüdür.\nSmad proteinleri te ge fe beta sinyalini iletir. Ce de ka inhibitörlerini artırıp proliferasyonu baskılar.\nne fe kapa be inflamatuvar yanıtı ve hücre sağkalımını yöneten transkripsiyon faktörüdür. Tümör dokusu hipoksik kaldığında ve ha le tarafından yıkımı duran ve çekirdeğe geçerek ve e ge fe gen transkripsiyonunu doğrudan artıran faktör ise hif bir alfa'dır.\nDoğru cevap A, Ha i fe bir alfa\nHipoksi ha i fe bir alfayı stabilize eder, o da ve e ge fe transkripsiyonunu artırır. Ras ve mik ve e ge feyi artırırken, pe elli üç trombospondin biri artırıp ve e ge feyi baskılar.",
+   "kelime": 145
   },
   {
    "no": 12,
@@ -290,22 +377,30 @@
     "E": "PD-1 blokajı"
    },
    "dogru": "D",
+   "ipucu": "Bu monoklonal antikorun anti-anjiyojen bir ilaç olduğunu ve yeni damar oluşumunu nasıl kestiğini düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
-    "A": "BCR-ABL inhibisyonu ile karıştırılabilir: Bevacizumab bir kinaz inhibitörü değil, anti-anjiyojen bir monoklonal antikordur.",
-    "B": "Bevacizumab tümör hücresini değil, tümörü besleyen yeni damar oluşumunu hedefler. HER2 blokajı bu sorudaki ayrımı sağlamaz.",
+    "A": "BCR-ABL tirozin kinaz inhibisyonu kronik miyeloid lösemide kullanılan imatinibin etki mekanizmasıdır; bevacizumab ise dolaşımdaki vasküler endotelyal büyüme faktörünü (VEGF) bağlayıp nötralize ederek tümör anjiyogenezini engelleyen monoklonal antikordur.",
+    "B": "HER2 reseptör blokajı meme ve mide kanserlerinde kullanılan trastuzumabın etki mekanizmasıdır; bevacizumab ise VEGF-A'yı nötralize ederek yeni damar oluşumunu baskılayan anti-anjiyojenik antikordur.",
     "C": "Mutant IDH inhibisyonu ayrı bir hedefe yönelik tedavidir; özellikle akut miyeloid lösemide onaylanmış ajanlar vardır.",
     "D": "VEGF nötralizasyonu doğru: bevacizumab VEGF'yi nötralize eden monoklonal antikordur ve tümör büyümesini yavaşlatabilir.",
-    "E": "PD-1 blokajı ile karıştırılabilir: Bevacizumabın etkisi kısmi ve geçicidir, çünkü tümörler başka anjiyojen faktörlere geçebilir."
+    "E": "PD-1 blokajı nivolumab ve pembrolizumab gibi immün kontrol noktası inhibitörlerinin T hücre yanıtını açma mekanizmasıdır; bevacizumab ise tümör stromasında anjiyogenezi uyaran VEGF'yi nötralize eder."
    },
    "ozet": "Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyonla kullanılır, yaşam süresini genellikle aylar düzeyinde uzatır.",
-   "metin": "**Soru.** Bevacizumabın etki mekanizması hangisidir?\n\n**A)** BCR-ABL inhibisyonu · **B)** HER2 blokajı · **C)** Mutant IDH inhibisyonu · **D)** VEGF nötralizasyonu · **E)** PD-1 blokajı\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **BCR-ABL inhibisyonu** — BCR-ABL inhibisyonu ile karıştırılabilir: Bevacizumab bir kinaz inhibitörü değil, anti-anjiyojen bir monoklonal antikordur.\n- **HER2 blokajı** — Bevacizumab tümör hücresini değil, tümörü besleyen yeni damar oluşumunu hedefler. HER2 blokajı bu sorudaki ayrımı sağlamaz.\n- **Mutant IDH inhibisyonu** — Mutant IDH inhibisyonu ayrı bir hedefe yönelik tedavidir; özellikle akut miyeloid lösemide onaylanmış ajanlar vardır.\n- **VEGF nötralizasyonu** — VEGF nötralizasyonu doğru: bevacizumab VEGF'yi nötralize eden monoklonal antikordur ve tümör büyümesini yavaşlatabilir.\n- **PD-1 blokajı** — PD-1 blokajı ile karıştırılabilir: Bevacizumabın etkisi kısmi ve geçicidir, çünkü tümörler başka anjiyojen faktörlere geçebilir.\n\n**Cevap: D** — VEGF nötralizasyonu\n\n**Özet.** Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyonla kullanılır, yaşam süresini genellikle aylar düzeyinde uzatır.",
-   "ses": "Bevasizumabın etki mekanizması hangisidir?\nA, Be ce re a be le inhibisyonu\nBe, Her tu blokajı\nCe, Mutant i de ha inhibisyonu\nDe, Ve e ge fe nötralizasyonu\nE, Pe de bir blokajı\nŞimdi seçeneklere tek tek bakalım.\nBCR-ABL inhibisyonu ile karıştırılabilir. Bevasizumab bir kinaz inhibitörü değil, anti anjiyojen bir monoklonal antikordur.\nBevasizumab tümör hücresini değil, tümörü besleyen yeni damar oluşumunu hedefler. HERiki blokajı bu sorudaki ayrımı sağlamaz.\nMutant i de ha inhibisyonu ayrı bir hedefe yönelik tedavidir. Özellikle akut miyeloid lösemide onaylanmış ajanlar vardır.\nVe e ge fe nötralizasyonu doğru. Bevasizumab ve e ge feyi nötralize eden monoklonal antikordur ve tümör büyümesini yavaşlatabilir.\nPD-bir blokajı ile karıştırılabilir. Bevasizumabın etkisi kısmi ve geçicidir, çünkü tümörler başka anjiyojen faktörlere geçebilir.\nDoğru cevap De, Ve e ge fe nötralizasyonu\nBevasizumab ve e ge feyi nötralize eden monoklonal antikordur. Kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyonla kullanılır, yaşam süresini genellikle aylar düzeyinde uzatır.",
-   "kelime": 150
+   "sayfa": [
+    32,
+    35,
+    36,
+    38
+   ],
+   "metin": "**Soru.** Bevacizumabın etki mekanizması hangisidir?\n\n**A)** BCR-ABL inhibisyonu · **B)** HER2 blokajı · **C)** Mutant IDH inhibisyonu · **D)** VEGF nötralizasyonu · **E)** PD-1 blokajı\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **BCR-ABL inhibisyonu** — BCR-ABL tirozin kinaz inhibisyonu kronik miyeloid lösemide kullanılan imatinibin etki mekanizmasıdır; bevacizumab ise dolaşımdaki vasküler endotelyal büyüme faktörünü (VEGF) bağlayıp nötralize ederek tümör anjiyogenezini engelleyen monoklonal antikordur.\n- **HER2 blokajı** — HER2 reseptör blokajı meme ve mide kanserlerinde kullanılan trastuzumabın etki mekanizmasıdır; bevacizumab ise VEGF-A'yı nötralize ederek yeni damar oluşumunu baskılayan anti-anjiyojenik antikordur.\n- **Mutant IDH inhibisyonu** — Mutant IDH inhibisyonu ayrı bir hedefe yönelik tedavidir; özellikle akut miyeloid lösemide onaylanmış ajanlar vardır.\n- **VEGF nötralizasyonu** — VEGF nötralizasyonu doğru: bevacizumab VEGF'yi nötralize eden monoklonal antikordur ve tümör büyümesini yavaşlatabilir.\n- **PD-1 blokajı** — PD-1 blokajı nivolumab ve pembrolizumab gibi immün kontrol noktası inhibitörlerinin T hücre yanıtını açma mekanizmasıdır; bevacizumab ise tümör stromasında anjiyogenezi uyaran VEGF'yi nötralize eder.\n\n**Cevap: D** — VEGF nötralizasyonu\n\n**Özet.** Bevacizumab VEGF'yi nötralize eden monoklonal antikordur; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyonla kullanılır, yaşam süresini genellikle aylar düzeyinde uzatır.",
+   "ses": "Bevasizumabın etki mekanizması hangisidir?\nA, Be ce re a be le inhibisyonu\nBe, Her tu blokajı\nCe, Mutant i de ha inhibisyonu\nDe, Ve e ge fe nötralizasyonu\nE, Pe de bir blokajı\nŞimdi seçeneklere tek tek bakalım.\nbe ce re a be le tirozin kinaz inhibisyonu kronik miyeloid lösemide kullanılan imatinibin etki mekanizmasıdır. Bevacizumab ise dolaşımdaki vasküler endotelyal büyüme faktörünü, ve e ge fe, bağlayıp nötralize ederek tümör anjiyogenezini engelleyen monoklonal antikordur.\nher iki reseptör blokajı meme ve mide kanserlerinde kullanılan trastuzumabın etki mekanizmasıdır. Bevacizumab ise ve e ge fe a'yı nötralize ederek yeni damar oluşumunu baskılayan anti-anjiyojenik antikordur.\nMutant i de ha inhibisyonu ayrı bir hedefe yönelik tedavidir. Özellikle akut miyeloid lösemide onaylanmış ajanlar vardır.\nVe e ge fe nötralizasyonu doğru. Bevasizumab ve e ge feyi nötralize eden monoklonal antikordur ve tümör büyümesini yavaşlatabilir.\npe de bir blokajı nivolumab ve pembrolizumab gibi immün kontrol noktası inhibitörlerinin T hücre yanıtını açma mekanizmasıdır. Bevacizumab ise tümör stromasında anjiyogenezi uyaran ve e ge fe'yi nötralize eder.\nDoğru cevap De, Ve e ge fe nötralizasyonu\nBevasizumab ve e ge feyi nötralize eden monoklonal antikordur. Kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyonla kullanılır, yaşam süresini genellikle aylar düzeyinde uzatır.",
+   "kelime": 179
   },
   {
    "no": 25,
    "tur": "cikmis",
+   "sinav": "2020-2021 · 2020-2021 Dönem 3 Kurul 4 Sınavı (sinav.karabuk.edu.tr öğrenci çıktısı)",
    "soru": "Aşağıdaki durumlardan hangisi kanser gelişimi açısından yanlıştır?",
    "secenekler": {
     "A": "Aşırı bölünme, aşırı enerji ve oksijen ihtiyacını beraberinde getirir",
@@ -315,6 +410,7 @@
     "E": "Kromozomal yeniden düzenlenmeler"
    },
    "dogru": "D",
+   "ipucu": "Her ifadeyi tümörün büyüme, damarlanma, hücre ölümü ve metabolizma özellikleriyle tek tek karşılaştır.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Hızla bölünen tümörün oksijen ve besin ihtiyacı artar; katı tümörler bu yüzden yeni damar oluşumuna gereksinir, ifade doğrudur.",
@@ -324,6 +420,12 @@
     "E": "Kromozomal değişiklikler kanser gelişimine katkı yapar; örneğin CDKN2A delesyonu ve siklin D amplifikasyonu RB yolunu bozar."
    },
    "ozet": "Tümör hücresi oksijen varken bile aerobik glikoliz kullanıp glikozu laktata çevirir; bu yol enerji açısından verimli değildir, ATP üretimi nispeten düşüktür.",
+   "sayfa": [
+    24,
+    33,
+    16,
+    10
+   ],
    "metin": "**Soru.** Aşağıdaki durumlardan hangisi kanser gelişimi açısından yanlıştır?\n\n**A)** Aşırı bölünme, aşırı enerji ve oksijen ihtiyacını beraberinde getirir · **B)** Apoptotik mekanizmaların işlevsel bozukluğu · **C)** Oksijen ihtiyacına bağlı neovaskülarizasyon · **D)** Glukozun glikoliz yolunda yüksek verimle enerjiye dönüştürülmesinde artma · **E)** Kromozomal yeniden düzenlenmeler\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Aşırı bölünme, aşırı enerji ve oksijen ihtiyacını beraberinde getirir** — Hızla bölünen tümörün oksijen ve besin ihtiyacı artar; katı tümörler bu yüzden yeni damar oluşumuna gereksinir, ifade doğrudur.\n- **Apoptotik mekanizmaların işlevsel bozukluğu** — Apoptotik mekanizmaların bozulması kanser gelişimine katkı yapar; p53 işlevi kaybolunca hasarlı hücreler apoptozla temizlenemez.\n- **Oksijen ihtiyacına bağlı neovaskülarizasyon** — Oksijen ihtiyacına bağlı neovaskülarizasyon kanserde beklenir; hipoksi HIF-1α üzerinden VEGF transkripsiyonunu artırarak anjiyogenezi tetikler.\n- **Glukozun glikoliz yolunda yüksek verimle enerjiye dönüştürülmesinde artma** — Glikozun yüksek verimle enerjiye dönüştürülmesi yanlıştır, bu yüzden doğru cevaptır: tümör hücresi aerobik glikoliz kullanır, glikozu laktata çevirir ve ATP üretimi nispeten düşüktür.\n- **Kromozomal yeniden düzenlenmeler** — Kromozomal değişiklikler kanser gelişimine katkı yapar; örneğin CDKN2A delesyonu ve siklin D amplifikasyonu RB yolunu bozar.\n\n**Cevap: D** — Glukozun glikoliz yolunda yüksek verimle enerjiye dönüştürülmesinde artma\n\n**Özet.** Tümör hücresi oksijen varken bile aerobik glikoliz kullanıp glikozu laktata çevirir; bu yol enerji açısından verimli değildir, ATP üretimi nispeten düşüktür.",
    "ses": "Aşağıdaki durumlardan hangisi kanser gelişimi açısından yanlıştır?\nA, Aşırı bölünme, aşırı enerji ve oksijen ihtiyacını beraberinde getirir\nBe, Apoptotik mekanizmaların işlevsel bozukluğu\nCe, Oksijen ihtiyacına bağlı neovaskülarizasyon\nDe, Glukozun glikoliz yolunda yüksek verimle enerjiye dönüştürülmesinde artma\nE, Kromozomal yeniden düzenlenmeler\nSeçenekleri sırayla değerlendirelim.\nHızla bölünen tümörün oksijen ve besin ihtiyacı artar. Katı tümörler bu yüzden yeni damar oluşumuna gereksinir, ifade doğrudur.\nApoptotik mekanizmaların bozulması kanser gelişimine katkı yapar. Pe elli üç işlevi kaybolunca hasarlı hücreler apoptozla temizlenemez.\nOksijen ihtiyacına bağlı neovaskülarizasyon kanserde beklenir. Hipoksi ha i fe bir alfa üzerinden ve e ge fe transkripsiyonunu artırarak anjiyogenezi tetikler.\nGlikozun yüksek verimle enerjiye dönüştürülmesi yanlıştır, bu yüzden doğru cevaptır. Tümör hücresi aerobik glikoliz kullanır, glikozu laktata çevirir ve a te pe üretimi nispeten düşüktür.\nKromozomal değişiklikler kanser gelişimine katkı yapar. Örneğin ce de ka ne iki a delesyonu ve siklin de amplifikasyonu re be yolunu bozar.\nDoğru cevap De, Glukozun glikoliz yolunda yüksek verimle enerjiye dönüştürülmesinde artma\nTümör hücresi oksijen varken bile aerobik glikoliz kullanıp glikozu laktata çevirir. Bu yol enerji açısından verimli değildir, a te pe üretimi nispeten düşüktür.",
    "kelime": 205
@@ -331,6 +433,7 @@
   {
    "no": 26,
    "tur": "cikmis",
+   "sinav": "Geçmiş Yıllar Çıkmışı (Arşiv) · donem3-kurul1",
    "soru": "Reseptörüne bağlanarak CDK inhibitörlerinin transkripsiyonel aktivasyonuyla sonuçlanan olaylar dizisini başlatan hangisidir?",
    "secenekler": {
     "A": "P53",
@@ -340,22 +443,30 @@
     "E": "C-erbB2"
    },
    "dogru": "D",
+   "ipucu": "CDK inhibitörlerinin artışını hem hücre dışı bir sinyalin hem de hücre içi bir stres sensörünün sağlayabildiğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "p53 de p21 transkripsiyonunu artırır ama bir reseptöre bağlanmaz; DNA hasarı gibi streslerle hücre içinde aktive olur.",
     "B": "RAS büyümeyi destekleyen bir onkogendir; RAS–PI3K/AKT yolu glikoz taşıyıcı ve glikolitik enzimleri artırır.",
     "C": "MYC büyümeyi teşvik eden bir gendir; büyüme inhibitörü sinyaller MYC'yi baskılar.",
     "D": "TGF-β doğru: reseptör aktivasyonu SMAD proteinlerini harekete geçirir, p15 ve p21 transkripsiyonu artar ve hücre G1/S'de durur.",
-    "E": "C-erbB2 ile karıştırılabilir: Amplifikasyonla aşırı eksprese olan, büyümeyi destekleyen bir onkogendir."
+    "E": "C-erbB2 (HER2) epidermal büyüme faktörü reseptör ailesinden bir proto-onkogendir ve hücre çoğalmasını hızlandırır; reseptörüne bağlanınca SMAD proteinleri üzerinden p21 ve p15 gibi CDK inhibitörlerini artırarak büyümeyi baskılayan ise TGF-beta'dır."
    },
    "ozet": "TGF-β reseptörüne bağlanınca SMAD proteinleri aktive olur, p15 ve p21 gibi CDK inhibitörlerinin transkripsiyonu artar, MYC ve CDK4 baskılanır ve hücre G1/S'de durur.",
-   "metin": "**Soru.** Reseptörüne bağlanarak CDK inhibitörlerinin transkripsiyonel aktivasyonuyla sonuçlanan olaylar dizisini başlatan hangisidir?\n\n**A)** P53 · **B)** Ras · **C)** MYC · **D)** TGF-β · **E)** C-erbB2\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **P53** — p53 de p21 transkripsiyonunu artırır ama bir reseptöre bağlanmaz; DNA hasarı gibi streslerle hücre içinde aktive olur.\n- **Ras** — RAS büyümeyi destekleyen bir onkogendir; RAS–PI3K/AKT yolu glikoz taşıyıcı ve glikolitik enzimleri artırır.\n- **MYC** — MYC büyümeyi teşvik eden bir gendir; büyüme inhibitörü sinyaller MYC'yi baskılar.\n- **TGF-β** — TGF-β doğru: reseptör aktivasyonu SMAD proteinlerini harekete geçirir, p15 ve p21 transkripsiyonu artar ve hücre G1/S'de durur.\n- **C-erbB2** — C-erbB2 ile karıştırılabilir: Amplifikasyonla aşırı eksprese olan, büyümeyi destekleyen bir onkogendir.\n\n**Cevap: D** — TGF-β\n\n**Özet.** TGF-β reseptörüne bağlanınca SMAD proteinleri aktive olur, p15 ve p21 gibi CDK inhibitörlerinin transkripsiyonu artar, MYC ve CDK4 baskılanır ve hücre G1/S'de durur.",
-   "ses": "Reseptörüne bağlanarak ce de ka inhibitörlerinin transkripsiyonel aktivasyonuyla sonuçlanan olaylar dizisini başlatan hangisidir?\nA, Pe elli üç\nBe, Ras\nCe, Mik\nDe, Te ge fe beta\nE, Ce e re be be iki\nHer seçeneği tek tek ele alalım.\nPe elli üç de pe yirmi bir transkripsiyonunu artırır ama bir reseptöre bağlanmaz. De ne a hasarı gibi streslerle hücre içinde aktive olur.\nRas büyümeyi destekleyen bir onkogendir. Ras, pe i üç ka ve a ka te yolu glikoz taşıyıcı ve glikolitik enzimleri artırır.\nMik büyümeyi teşvik eden bir gendir. Büyüme inhibitörü sinyaller mik genini baskılar.\nTe ge fe beta doğru. Reseptör aktivasyonu smad proteinlerini harekete geçirir, pe on beş ve pe yirmi bir transkripsiyonu artar ve hücre ge bir se noktasında durur.\nC-erbBiki ile karıştırılabilir. Amplifikasyonla aşırı eksprese olan, büyümeyi destekleyen bir onkogendir.\nDoğru cevap De, Te ge fe beta\nTe ge fe beta reseptörüne bağlanınca smad proteinleri aktive olur, pe on beş ve pe yirmi bir gibi ce de ka inhibitörlerinin transkripsiyonu artar. Mik ve ce de ka dört baskılanır ve hücre ge bir se noktasında durur.",
-   "kelime": 145
+   "sayfa": [
+    18,
+    8,
+    13,
+    15
+   ],
+   "metin": "**Soru.** Reseptörüne bağlanarak CDK inhibitörlerinin transkripsiyonel aktivasyonuyla sonuçlanan olaylar dizisini başlatan hangisidir?\n\n**A)** P53 · **B)** Ras · **C)** MYC · **D)** TGF-β · **E)** C-erbB2\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **P53** — p53 de p21 transkripsiyonunu artırır ama bir reseptöre bağlanmaz; DNA hasarı gibi streslerle hücre içinde aktive olur.\n- **Ras** — RAS büyümeyi destekleyen bir onkogendir; RAS–PI3K/AKT yolu glikoz taşıyıcı ve glikolitik enzimleri artırır.\n- **MYC** — MYC büyümeyi teşvik eden bir gendir; büyüme inhibitörü sinyaller MYC'yi baskılar.\n- **TGF-β** — TGF-β doğru: reseptör aktivasyonu SMAD proteinlerini harekete geçirir, p15 ve p21 transkripsiyonu artar ve hücre G1/S'de durur.\n- **C-erbB2** — C-erbB2 (HER2) epidermal büyüme faktörü reseptör ailesinden bir proto-onkogendir ve hücre çoğalmasını hızlandırır; reseptörüne bağlanınca SMAD proteinleri üzerinden p21 ve p15 gibi CDK inhibitörlerini artırarak büyümeyi baskılayan ise TGF-beta'dır.\n\n**Cevap: D** — TGF-β\n\n**Özet.** TGF-β reseptörüne bağlanınca SMAD proteinleri aktive olur, p15 ve p21 gibi CDK inhibitörlerinin transkripsiyonu artar, MYC ve CDK4 baskılanır ve hücre G1/S'de durur.",
+   "ses": "Reseptörüne bağlanarak ce de ka inhibitörlerinin transkripsiyonel aktivasyonuyla sonuçlanan olaylar dizisini başlatan hangisidir?\nA, Pe elli üç\nBe, Ras\nCe, Mik\nDe, Te ge fe beta\nE, Ce e re be be iki\nHer seçeneği tek tek ele alalım.\nPe elli üç de pe yirmi bir transkripsiyonunu artırır ama bir reseptöre bağlanmaz. De ne a hasarı gibi streslerle hücre içinde aktive olur.\nRas büyümeyi destekleyen bir onkogendir. Ras, pe i üç ka ve a ka te yolu glikoz taşıyıcı ve glikolitik enzimleri artırır.\nMik büyümeyi teşvik eden bir gendir. Büyüme inhibitörü sinyaller mik genini baskılar.\nTe ge fe beta doğru. Reseptör aktivasyonu smad proteinlerini harekete geçirir, pe on beş ve pe yirmi bir transkripsiyonu artar ve hücre ge bir se noktasında durur.\nce erb be iki, her iki, epidermal büyüme faktörü reseptör ailesinden bir proto-onkogendir ve hücre çoğalmasını hızlandırır. Reseptörüne bağlanınca smad proteinleri üzerinden pe yirmi bir ve pe on beş gibi ce de ka inhibitörlerini artırarak büyümeyi baskılayan ise te ge fe beta'dır.\nDoğru cevap De, Te ge fe beta\nTe ge fe beta reseptörüne bağlanınca smad proteinleri aktive olur, pe on beş ve pe yirmi bir gibi ce de ka inhibitörlerinin transkripsiyonu artar. Mik ve ce de ka dört baskılanır ve hücre ge bir se noktasında durur.",
+   "kelime": 163
   },
   {
    "no": 27,
    "tur": "cikmis",
+   "sinav": "2024-2025 · 2024-2025 Dönem 3 Kurul 1 Sınavı (öğrenci derlemesi — D3K1 Tüm Çıkmışlar.pdf)",
    "soru": "Aşağıdaki mekanizma veya değişikliklerden hangisi hücre çoğalmasını sınırlandırarak tümör baskılayıcı etki gösterir?",
    "secenekler": {
     "A": "p53'ün işlevini kaybetmesi",
@@ -365,6 +476,7 @@
     "E": "BCL-2'nin antiapoptotik (programlı hücre ölümünü engelleyen) aktivitesinin artması"
    },
    "dogru": "B",
+   "ipucu": "Değişikliklerin çoğunun bir büyüme frenini kaldırdığını düşün ve freni yerinde tutan mekanizmayı bul.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "p53'ün işlev kaybı tümörü kolaylaştırır; DNA hasarlı hücreler durdurulamaz ve çoğalarak malign neoplazma yol açar.",
@@ -374,6 +486,12 @@
     "E": "BCL-2'nin antiapoptotik aktivitesinin artması hücre ölümünü engeller; p53'ün hasarlı hücreyi apoptozla devre dışı bırakmasına ters etki yapar."
    },
    "ozet": "Normal epitelde TGF-β proliferasyonun güçlü inhibitörüdür ve bu etkinin korunması tümör baskılayıcıdır; p53 kaybı, p16 azalması ve antiapoptotik artış ise büyümeyi kolaylaştırır.",
+   "sayfa": [
+    18,
+    10,
+    14,
+    16
+   ],
    "metin": "**Soru.** Aşağıdaki mekanizma veya değişikliklerden hangisi hücre çoğalmasını sınırlandırarak tümör baskılayıcı etki gösterir?\n\n**A)** p53'ün işlevini kaybetmesi · **B)** TGF-β sinyal yolunun hücre döngüsünü durdurucu etkisinin korunması · **C)** Tümör baskılayıcı genlerin ifadesini azaltan miRNA'ların aşırı aktivasyonu · **D)** CDKN2A geninin kodladığı hücre döngüsü inhibitörlerinin (bölünmeyi engelleyen proteinlerin) aktivitesinin azalması · **E)** BCL-2'nin antiapoptotik (programlı hücre ölümünü engelleyen) aktivitesinin artması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **p53'ün işlevini kaybetmesi** — p53'ün işlev kaybı tümörü kolaylaştırır; DNA hasarlı hücreler durdurulamaz ve çoğalarak malign neoplazma yol açar.\n- **TGF-β sinyal yolunun hücre döngüsünü durdurucu etkisinin korunması** — TGF-β yolunun durdurucu etkisinin korunması doğru: SMAD üzerinden p15 ve p21 artar, MYC ve CDK4 baskılanır, proliferasyon G1/S'de durur.\n- **Tümör baskılayıcı genlerin ifadesini azaltan miRNA'ların aşırı aktivasyonu** — Tümör baskılayıcı gen ifadesini azaltan miRNA artışı büyüme frenini zayıflatır; bu yüzden tümör baskılayıcı değil, tümörü kolaylaştırıcı bir değişikliktir.\n- **CDKN2A geninin kodladığı hücre döngüsü inhibitörlerinin (bölünmeyi engelleyen proteinlerin) aktivitesinin azalması** — CDKN2A ürünü p16'nın aktivitesinin azalması siklin D–CDK4'ü serbest bırakır; RB sürekli hiperfosforile ve inaktif kalır.\n- **BCL-2'nin antiapoptotik (programlı hücre ölümünü engelleyen) aktivitesinin artması** — BCL-2'nin antiapoptotik aktivitesinin artması hücre ölümünü engeller; p53'ün hasarlı hücreyi apoptozla devre dışı bırakmasına ters etki yapar.\n\n**Cevap: B** — TGF-β sinyal yolunun hücre döngüsünü durdurucu etkisinin korunması\n\n**Özet.** Normal epitelde TGF-β proliferasyonun güçlü inhibitörüdür ve bu etkinin korunması tümör baskılayıcıdır; p53 kaybı, p16 azalması ve antiapoptotik artış ise büyümeyi kolaylaştırır.",
    "ses": "Aşağıdaki mekanizma veya değişikliklerden hangisi hücre çoğalmasını sınırlandırarak tümör baskılayıcı etki gösterir?\nA, Pe elli üç proteininin işlevini kaybetmesi\nBe, Te ge fe beta sinyal yolunun hücre döngüsünü durdurucu etkisinin korunması\nCe, Tümör baskılayıcı genlerin ifadesini azaltan mikro re ne a moleküllerinin aşırı aktivasyonu\nDe, Ce de ka ne iki a geninin kodladığı hücre döngüsü inhibitörlerinin, yani bölünmeyi engelleyen proteinlerin aktivitesinin azalması\nE, Be ce le iki proteininin antiapoptotik, yani programlı hücre ölümünü engelleyen aktivitesinin artması\nŞıkları sırasıyla gözden geçirelim.\nPe elli üç işlev kaybı tümörü kolaylaştırır. De ne a hasarlı hücreler durdurulamaz ve çoğalarak malign neoplazma yol açar.\nTe ge fe beta yolunun durdurucu etkisinin korunması doğru. Smad üzerinden pe on beş ve pe yirmi bir artar, mik ve ce de ka dört baskılanır, proliferasyon ge bir se noktasında durur.\nTümör baskılayıcı gen ifadesini azaltan mikro re ne a artışı büyüme frenini zayıflatır. Bu yüzden tümör baskılayıcı değil, tümörü kolaylaştırıcı bir değişikliktir.\nCe de ka ne iki a ürünü pe on altı aktivitesinin azalması siklin de ve ce de ka dört kompleksini serbest bırakır. Re be sürekli hiperfosforile ve inaktif kalır.\nBe ce le iki proteininin antiapoptotik aktivitesinin artması hücre ölümünü engeller. Pe elli üç proteininin hasarlı hücreyi apoptozla devre dışı bırakmasına ters etki yapar.\nDoğru cevap Be, Te ge fe beta sinyal yolunun hücre döngüsünü durdurucu etkisinin korunması\nNormal epitelde te ge fe beta proliferasyonun güçlü inhibitörüdür ve bu etkinin korunması tümör baskılayıcıdır. Pe elli üç kaybı, pe on altı azalması ve antiapoptotik artış ise büyümeyi kolaylaştırır.",
    "kelime": 232
@@ -381,6 +499,7 @@
   {
    "no": 28,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Ailesel retinoblastomda RB mutasyonunun hücre düzeyindeki etkisi hangisidir?",
    "secenekler": {
     "A": "Resesif",
@@ -390,6 +509,7 @@
     "E": "Epigenetik"
    },
    "dogru": "A",
+   "ipucu": "Ailede kuşaktan kuşağa aktarılma biçimi ile tümör için tek hücrede gereken alel kaybını ayrı ayrı düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Resesif doğru: kalıtım otozomal dominant eğilimli olsa da hücrede tümör için ikinci alelin de bozulması gerekir.",
@@ -399,6 +519,9 @@
     "E": "Epigenetik değişiklik DNA dizisi değişmeden ekspresyonu değiştirir; ailesel formdaki germ hattı RB mutasyonu dizi değişikliğidir."
    },
    "ozet": "Ailesel retinoblastomda bir mutant RB aleli germ hattından gelir; kalıtım otozomal dominant eğilimlidir, ama hücrede iki alel de bozulmalı olduğundan etki resesiftir.",
+   "sayfa": [
+    5
+   ],
    "metin": "**Soru.** Ailesel retinoblastomda RB mutasyonunun hücre düzeyindeki etkisi hangisidir?\n\n**A)** Resesif · **B)** Dominant · **C)** Haploinsuffisiyan · **D)** İşlev kazanımı · **E)** Epigenetik\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Resesif** — Resesif doğru: kalıtım otozomal dominant eğilimli olsa da hücrede tümör için ikinci alelin de bozulması gerekir.\n- **Dominant** — Dominant, ailesel retinoblastomun kalıtım eğilimini tanımlar; hücre düzeyinde ise tek mutant alel tümör için yeterli değildir.\n- **Haploinsuffisiyan** — Haploinsuffisiyan, tek sağlam alelin işlev için yetmemesi demektir; retinoblastomda tümör ancak iki alelin de kaybıyla gelişir.\n- **İşlev kazanımı** — İşlev kazanımı onkogenlerin özelliğidir; RB bir tümör baskılayıcıdır ve işlev kaybıyla etki eder.\n- **Epigenetik** — Epigenetik değişiklik DNA dizisi değişmeden ekspresyonu değiştirir; ailesel formdaki germ hattı RB mutasyonu dizi değişikliğidir.\n\n**Cevap: A** — Resesif\n\n**Özet.** Ailesel retinoblastomda bir mutant RB aleli germ hattından gelir; kalıtım otozomal dominant eğilimlidir, ama hücrede iki alel de bozulmalı olduğundan etki resesiftir.",
    "ses": "Ailesel retinoblastomda re be mutasyonunun hücre düzeyindeki etkisi hangisidir?\nA, Resesif\nBe, Dominant\nCe, Haploinsuffisiyan\nDe, İşlev kazanımı\nE, Epigenetik\nŞimdi seçeneklere tek tek bakalım.\nResesif doğru, kalıtım otozomal dominant eğilimli olsa da hücrede tümör için ikinci alelin de bozulması gerekir.\nDominant, ailesel retinoblastomun kalıtım eğilimini tanımlar. Hücre düzeyinde ise tek mutant alel tümör için yeterli değildir.\nHaploinsuffisiyan, tek sağlam alelin işlev için yetmemesi demektir. Retinoblastomda tümör ancak iki alelin de kaybıyla gelişir.\nİşlev kazanımı onkogenlerin özelliğidir. Re be bir tümör baskılayıcıdır ve işlev kaybıyla etki eder.\nEpigenetik değişiklik de ne a dizisi değişmeden ekspresyonu değiştirir. Ailesel formdaki germ hattı re be mutasyonu dizi değişikliğidir.\nDoğru cevap A, Resesif\nAilesel retinoblastomda bir mutant re be aleli germ hattından gelir. Kalıtım otozomal dominant eğilimlidir, ama hücrede iki alel de bozulmalı olduğundan etki resesiftir.",
    "kelime": 149
@@ -406,6 +529,7 @@
   {
    "no": 29,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Hipofosforile RB'nin kromatini kapalı tutmak için çektiği enzim hangisidir?",
    "secenekler": {
     "A": "TET2",
@@ -415,6 +539,7 @@
     "E": "İzositrat dehidrogenaz"
    },
    "dogru": "B",
+   "ipucu": "Kromatin proteinlerinden asetil gruplarını uzaklaştırarak transkripsiyonu baskılayan kromatin düzenleyicisini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "TET2, DNA demetilasyon enzimidir; mutant IDH'nin ürettiği 2-hidroksiglutarat tarafından inhibe edilir.",
@@ -424,6 +549,10 @@
     "E": "İzositrat dehidrogenaz bir Krebs döngüsü enzimidir; RB'nin kromatin baskılamasıyla ilgisi yoktur."
    },
    "ozet": "Hipofosforile RB, E2F'yi bağlar ve histon deasetilaz ile histon metiltransferazı çekerek kromatini kapalı tutar; böylece S fazı genlerinin transkripsiyonu engellenir.",
+   "sayfa": [
+    8,
+    9
+   ],
    "metin": "**Soru.** Hipofosforile RB'nin kromatini kapalı tutmak için çektiği enzim hangisidir?\n\n**A)** TET2 · **B)** Histon deasetilaz · **C)** Telomeraz · **D)** Tirozin kinaz · **E)** İzositrat dehidrogenaz\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **TET2** — TET2, DNA demetilasyon enzimidir; mutant IDH'nin ürettiği 2-hidroksiglutarat tarafından inhibe edilir.\n- **Histon deasetilaz** — Histon deasetilaz doğru: aktif RB, histon deasetilaz ve histon metiltransferaz gibi enzimleri çekerek kromatini kapalı tutar.\n- **Telomeraz** — Telomeraz, telomer uzunluğunu koruyarak ölümsüzlük sağlar; RB'nin kromatini kapatmak için çektiği enzim değildir.\n- **Tirozin kinaz** — Tirozin kinazlar büyüme sinyallerini iletir; RB'nin E2F hedef genlerini susturma mekanizmasında yer almaz.\n- **İzositrat dehidrogenaz** — İzositrat dehidrogenaz bir Krebs döngüsü enzimidir; RB'nin kromatin baskılamasıyla ilgisi yoktur.\n\n**Cevap: B** — Histon deasetilaz\n\n**Özet.** Hipofosforile RB, E2F'yi bağlar ve histon deasetilaz ile histon metiltransferazı çekerek kromatini kapalı tutar; böylece S fazı genlerinin transkripsiyonu engellenir.",
    "ses": "Hipofosforile re benin kromatini kapalı tutmak için çektiği enzim hangisidir?\nA, te e te iki\nBe, Histon deasetilaz\nCe, Telomeraz\nDe, Tirozin kinaz\nE, İzositrat dehidrogenaz\nSeçenekleri sırayla değerlendirelim.\nte e te iki, de ne a demetilasyon enzimidir. Mutant i de hanin ürettiği iki hidroksiglutarat tarafından inhibe edilir.\nHiston deasetilaz doğru, aktif re be, histon deasetilaz ve histon metiltransferaz gibi enzimleri çekerek kromatini kapalı tutar.\nTelomeraz, telomer uzunluğunu koruyarak ölümsüzlük sağlar. Re benin kromatini kapatmak için çektiği enzim değildir.\nTirozin kinazlar büyüme sinyallerini iletir. Re benin e iki fe hedef genlerini susturma mekanizmasında yer almaz.\nİzositrat dehidrogenaz bir Krebs döngüsü enzimidir. Re benin kromatin baskılamasıyla ilgisi yoktur.\nDoğru cevap Be, Histon deasetilaz\nHipofosforile re be, e iki feyi bağlar ve histon deasetilaz ile histon metiltransferazı çekerek kromatini kapalı tutar. Böylece se fazı genlerinin transkripsiyonu engellenir.",
    "kelime": 139
@@ -431,6 +560,7 @@
   {
    "no": 30,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "E2F'nin aktive ettiği S fazı genlerine örnek hangisidir?",
    "secenekler": {
     "A": "p16",
@@ -440,6 +570,7 @@
     "E": "p21"
    },
    "dogru": "C",
+   "ipucu": "RB fosforilasyonunu ilerleten ikinci düzenleyicinin, serbest kalan transkripsiyon faktörünün hedefi olduğunu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "p16 bir CDK inhibitörüdür; siklin D–CDK4 komplekslerini inhibe ederek E2F serbestleşmesini engeller.",
@@ -449,6 +580,9 @@
     "E": "p21, p53'ün hedefi olan CDK inhibitörüdür; RB fosforilasyonunu önler, E2F tarafından aktive edilen S fazı geni değildir."
    },
    "ozet": "Büyüme faktörleri siklin D'yi artırır ve siklin D–CDK4/6 RB'yi fosforile eder. Serbest kalan E2F, siklin E gibi S fazı genlerini aktive eder.",
+   "sayfa": [
+    9
+   ],
    "metin": "**Soru.** E2F'nin aktive ettiği S fazı genlerine örnek hangisidir?\n\n**A)** p16 · **B)** Siklin D · **C)** Siklin E · **D)** MDM2 · **E)** p21\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **p16** — p16 bir CDK inhibitörüdür; siklin D–CDK4 komplekslerini inhibe ederek E2F serbestleşmesini engeller.\n- **Siklin D** — Siklin D, büyüme faktörlerinin ekspresyonunu artırdığı siklindir; E2F'nin S fazı hedef geni olarak verilmez.\n- **Siklin E** — Siklin E doğru: serbest E2F, S fazı için gerekli genleri aktive eder ve siklin E bunun örneğidir.\n- **MDM2** — MDM2, p53'ü proteazom yıkımına hedefleyen proteindir; E2F'nin S fazı hedefi değildir.\n- **p21** — p21, p53'ün hedefi olan CDK inhibitörüdür; RB fosforilasyonunu önler, E2F tarafından aktive edilen S fazı geni değildir.\n\n**Cevap: C** — Siklin E\n\n**Özet.** Büyüme faktörleri siklin D'yi artırır ve siklin D–CDK4/6 RB'yi fosforile eder. Serbest kalan E2F, siklin E gibi S fazı genlerini aktive eder.",
    "ses": "e iki fenin aktive ettiği se fazı genlerine örnek hangisidir?\nA, pe on altı\nBe, Siklin de\nCe, Siklin e\nDe, me de me iki\nE, pe yirmi bir\nHer seçeneği tek tek ele alalım.\npe on altı bir ce de ka inhibitörüdür. Siklin de ile ce de ka dört komplekslerini inhibe ederek e iki fe serbestleşmesini engeller.\nSiklin de, büyüme faktörlerinin ekspresyonunu artırdığı siklindir. E iki fenin se fazı hedef geni olarak verilmez.\nSiklin e doğru, serbest e iki fe, se fazı için gerekli genleri aktive eder ve siklin e bunun örneğidir.\nme de me iki, pe elli üçü proteazom yıkımına hedefleyen proteindir. E iki fenin se fazı hedefi değildir.\npe yirmi bir, pe elli üçün hedefi olan ce de ka inhibitörüdür. Re be fosforilasyonunu önler, e iki fe tarafından aktive edilen se fazı geni değildir.\nDoğru cevap Ce, Siklin e\nBüyüme faktörleri siklin deyi artırır ve siklin de ile ce de ka dört ve altı re beyi fosforile eder. Serbest kalan e iki fe, siklin e gibi se fazı genlerini aktive eder.",
    "kelime": 148
@@ -456,6 +590,7 @@
   {
    "no": 31,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "HPV E7 etkisindeki hücre G1/S geçişini neye gerek duymadan yapabilir?",
    "secenekler": {
     "A": "DNA sentezine",
@@ -465,6 +600,7 @@
     "E": "E2F'ye"
    },
    "dogru": "D",
+   "ipucu": "Normalde dışarıdan gelen proliferasyon uyarısının RB'yi fosforile ederek yaptığı işi viral proteinin doğrudan yaptığını düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "DNA sentezi G1/S geçişinin sonucudur; E7 etkisinde hücre bu geçişi yapar ve DNA sentezi başlar.",
@@ -474,6 +610,9 @@
     "E": "E2F tam tersine bu geçişin aracısıdır; E7 onu RB'den serbest bırakarak S fazı genlerini aktive ettirir."
    },
    "ozet": "HPV E7, hipofosforile RB'ye bağlanıp E2F'yi serbest bırakır ve p21'i inhibe eder; hücre büyüme faktörüne gerek duymadan G1/S'yi geçer ve döngü kontrolü kaybolur.",
+   "sayfa": [
+    11
+   ],
    "metin": "**Soru.** HPV E7 etkisindeki hücre G1/S geçişini neye gerek duymadan yapabilir?\n\n**A)** DNA sentezine · **B)** Siklin E'ye · **C)** Telomeraza · **D)** Büyüme faktörüne · **E)** E2F'ye\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **DNA sentezine** — DNA sentezi G1/S geçişinin sonucudur; E7 etkisinde hücre bu geçişi yapar ve DNA sentezi başlar.\n- **Siklin E'ye** — Siklin E, serbest E2F'nin aktive ettiği S fazı genidir; E7 etkisinde de bu yol işler, ihtiyaç ortadan kalkmaz.\n- **Telomeraza** — Telomeraz ölümsüzlükle ilişkili enzimdir; E7'nin G1/S geçişini sağlama mekanizmasında yer almaz.\n- **Büyüme faktörüne** — Büyüme faktörü doğru: E7 RB'ye bağlanıp E2F'yi serbest bırakır ve p21'i inhibe eder. Hücre büyüme faktörü olmadan G1/S'yi geçer.\n- **E2F'ye** — E2F tam tersine bu geçişin aracısıdır; E7 onu RB'den serbest bırakarak S fazı genlerini aktive ettirir.\n\n**Cevap: D** — Büyüme faktörüne\n\n**Özet.** HPV E7, hipofosforile RB'ye bağlanıp E2F'yi serbest bırakır ve p21'i inhibe eder; hücre büyüme faktörüne gerek duymadan G1/S'yi geçer ve döngü kontrolü kaybolur.",
    "ses": "ha pe ve e yedi etkisindeki hücre ge bir se geçişini neye gerek duymadan yapabilir?\nA, de ne a sentezine\nBe, Siklin eye\nCe, Telomeraza\nDe, Büyüme faktörüne\nE, e iki feye\nŞıkları sırasıyla gözden geçirelim.\nde ne a sentezi ge bir se geçişinin sonucudur. E yedi etkisinde hücre bu geçişi yapar ve de ne a sentezi başlar.\nSiklin e, serbest e iki fenin aktive ettiği se fazı genidir. E yedi etkisinde de bu yol işler, ihtiyaç ortadan kalkmaz.\nTelomeraz ölümsüzlükle ilişkili enzimdir. E yedinin ge bir se geçişini sağlama mekanizmasında yer almaz.\nBüyüme faktörü doğru, e yedi re beye bağlanıp e iki feyi serbest bırakır ve pe yirmi biri inhibe eder. Hücre büyüme faktörü olmadan ge bir seyi geçer.\ne iki fe tam tersine bu geçişin aracısıdır. E yedi onu re beden serbest bırakarak se fazı genlerini aktive ettirir.\nDoğru cevap De, Büyüme faktörüne\nha pe ve e yedi, hipofosforile re beye bağlanıp e iki feyi serbest bırakır ve pe yirmi biri inhibe eder. Hücre büyüme faktörüne gerek duymadan ge bir seyi geçer ve döngü kontrolü kaybolur.",
    "kelime": 159
@@ -481,6 +620,7 @@
   {
    "no": 32,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Stres yokken p53 proteininin yarı ömrü yaklaşık ne kadardır?",
    "secenekler": {
     "A": "1 hafta",
@@ -490,6 +630,7 @@
     "E": "20 dakika"
    },
    "dogru": "E",
+   "ipucu": "Proteinin sürekli yıkılıp düzeyinin düşük tutulduğu, oldukça kısa bir süreyi düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Bir hafta, kısa ömürlü bir düzenleyici protein olan p53 için gerçek dışı uzun bir süredir.",
@@ -499,6 +640,9 @@
     "E": "Yirmi dakika doğru: stres yokken MDM2 p53'ü proteazom yıkımına hedeflediği için yarı ömrü yaklaşık yirmi dakikadır."
    },
    "ozet": "Normalde p53 düzeyleri düşüktür ve yarı ömrü yaklaşık 20 dakikadır; stres altında ATM/ATR p53'ü fosforile eder, p53 MDM2'den ayrılıp birikir.",
+   "sayfa": [
+    13
+   ],
    "metin": "**Soru.** Stres yokken p53 proteininin yarı ömrü yaklaşık ne kadardır?\n\n**A)** 1 hafta · **B)** 2 saat · **C)** 12 saat · **D)** 1 gün · **E)** 20 dakika\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **1 hafta** — Bir hafta, kısa ömürlü bir düzenleyici protein olan p53 için gerçek dışı uzun bir süredir.\n- **2 saat** — İki saat, normal p53 için çok uzundur; stres yokken p53 hızla yıkılır ve düzeyi düşük kalır.\n- **12 saat** — On iki saat, p53'ün düşük tutulan düzeyiyle bağdaşmaz; MDM2 aracılı yıkım onu dakikalar içinde ortadan kaldırır.\n- **1 gün** — Bir gün, stres altında fosforile olup biriken p53 için bile tanımlanmaz; normal yarı ömür çok daha kısadır.\n- **20 dakika** — Yirmi dakika doğru: stres yokken MDM2 p53'ü proteazom yıkımına hedeflediği için yarı ömrü yaklaşık yirmi dakikadır.\n\n**Cevap: E** — 20 dakika\n\n**Özet.** Normalde p53 düzeyleri düşüktür ve yarı ömrü yaklaşık 20 dakikadır; stres altında ATM/ATR p53'ü fosforile eder, p53 MDM2'den ayrılıp birikir.",
    "ses": "Stres yokken pe elli üç proteininin yarı ömrü yaklaşık ne kadardır?\nA, bir hafta\nBe, iki saat\nCe, on iki saat\nDe, bir gün\nE, yirmi dakika\nŞimdi seçeneklere tek tek bakalım.\nBir hafta, kısa ömürlü bir düzenleyici protein olan pe elli üç için gerçek dışı uzun bir süredir.\nİki saat, normal pe elli üç için çok uzundur. Stres yokken pe elli üç hızla yıkılır ve düzeyi düşük kalır.\nOn iki saat, pe elli üçün düşük tutulan düzeyiyle bağdaşmaz. Me de me iki aracılı yıkım onu dakikalar içinde ortadan kaldırır.\nBir gün, stres altında fosforile olup biriken pe elli üç için bile tanımlanmaz. Normal yarı ömür çok daha kısadır.\nYirmi dakika doğru. Stres yokken me de me iki pe elli üçü proteazom yıkımına hedeflediği için yarı ömrü yaklaşık yirmi dakikadır.\nDoğru cevap E, yirmi dakika\nNormalde pe elli üç düzeyleri düşüktür ve yarı ömrü yaklaşık yirmi dakikadır. Stres altında a te me ve a te re pe elli üçü fosforile eder, pe elli üç birikir.",
    "kelime": 161
@@ -506,6 +650,7 @@
   {
    "no": 33,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "DNA onarımı başarılı olduğunda p53 kendi etkisini nasıl sonlandırır?",
    "secenekler": {
     "A": "p21 ekspresyonunu artırarak",
@@ -515,6 +660,7 @@
     "E": "ATM'yi aktive ederek"
    },
    "dogru": "B",
+   "ipucu": "Normalde onu yıkıma hedefleyen proteinin genini, işi bitince kendisinin uyardığı bir geri bildirim döngüsünü düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "p21 ekspresyonunu artırmak hücreyi G1/S'de durdurur; bu p53'ün etkisini sonlandırmaz, sürdürür.",
@@ -524,6 +670,9 @@
     "E": "ATM, stres altında p53'ü fosforile edip MDM2'den ayıran kinazdır; p53'ü kapatmaz, aktive eder."
    },
    "ozet": "p53 p21 ile döngüyü G1/S'de durdurur ve onarım genlerini uyarır; onarım başarılı olursa MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar ve döngü yeniden başlar.",
+   "sayfa": [
+    15
+   ],
    "metin": "**Soru.** DNA onarımı başarılı olduğunda p53 kendi etkisini nasıl sonlandırır?\n\n**A)** p21 ekspresyonunu artırarak · **B)** MDM2 transkripsiyonunu artırarak · **C)** PUMA'yı uyararak · **D)** RB'yi fosforile ederek · **E)** ATM'yi aktive ederek\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **p21 ekspresyonunu artırarak** — p21 ekspresyonunu artırmak hücreyi G1/S'de durdurur; bu p53'ün etkisini sonlandırmaz, sürdürür.\n- **MDM2 transkripsiyonunu artırarak** — MDM2 transkripsiyonunu artırarak doğru: onarım başarılı olursa p53 MDM2'yi artırıp kendi yıkımını sağlar ve döngü yeniden başlar.\n- **PUMA'yı uyararak** — PUMA proapoptotik bir hedef gendir; onarım başarısız olduğunda apoptozu tetiklemek için uyarılır.\n- **RB'yi fosforile ederek** — RB'yi fosforile etmek siklin–CDK komplekslerinin işidir; p53 tam tersine p21 ile RB fosforilasyonunu önler.\n- **ATM'yi aktive ederek** — ATM, stres altında p53'ü fosforile edip MDM2'den ayıran kinazdır; p53'ü kapatmaz, aktive eder.\n\n**Cevap: B** — MDM2 transkripsiyonunu artırarak\n\n**Özet.** p53 p21 ile döngüyü G1/S'de durdurur ve onarım genlerini uyarır; onarım başarılı olursa MDM2 transkripsiyonunu artırarak kendi yıkımını sağlar ve döngü yeniden başlar.",
    "ses": "de ne a onarımı başarılı olduğunda pe elli üç kendi etkisini nasıl sonlandırır?\nA, pe yirmi bir ekspresyonunu artırarak\nBe, me de me iki transkripsiyonunu artırarak\nCe, pumayı uyararak\nDe, re beyi fosforile ederek\nE, a te meyi aktive ederek\nSeçenekleri sırayla değerlendirelim.\npe yirmi bir ekspresyonunu artırmak hücreyi ge bir sede durdurur. Bu pe elli üçün etkisini sonlandırmaz, sürdürür.\nme de me iki transkripsiyonunu artırarak doğru, onarım başarılı olursa pe elli üç me de me ikiyi artırıp kendi yıkımını sağlar ve döngü yeniden başlar.\npuma proapoptotik bir hedef gendir. Onarım başarısız olduğunda apoptozu tetiklemek için uyarılır.\nre beyi fosforile etmek siklin ile ce de ka komplekslerinin işidir. Pe elli üç tam tersine pe yirmi bir ile re be fosforilasyonunu önler.\na te me, stres altında pe elli üçü fosforile edip me de me ikiden ayıran kinazdır. Pe elli üçü kapatmaz, aktive eder.\nDoğru cevap Be, me de me iki transkripsiyonunu artırarak\npe elli üç pe yirmi bir ile döngüyü ge bir sede durdurur ve onarım genlerini uyarır. Onarım başarılı olursa me de me iki transkripsiyonunu artırarak kendi yıkımını sağlar ve döngü yeniden başlar.",
    "kelime": 158
@@ -531,6 +680,7 @@
   {
    "no": 34,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Onarılamayan DNA hasarında p53'ün apoptozu tetiklemek için ekspresyonunu artırdığı gen hangisidir?",
    "secenekler": {
     "A": "MDM2",
@@ -540,6 +690,7 @@
     "E": "MYC"
    },
    "dogru": "D",
+   "ipucu": "Hücreyi mitokondriyal iç yol üzerinden ölüme götüren, BAX ile birlikte anılan hedef geni düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "MDM2, p53'ü yıkıma hedefleyen proteindir; onarım başarılı olunca p53'ün kendini kapatmak için artırdığı gendir.",
@@ -549,6 +700,10 @@
     "E": "MYC bir onkogendir; p53'ün apoptoz için artırdığı hedef gen değildir."
    },
    "ozet": "Onarılamayan hasarda p53 hücreyi ya senesense ya da apoptoza yönlendirir; apoptoz PUMA ve BAX gibi proapoptotik genlerle mitokondriyal iç yoldan gerçekleşir.",
+   "sayfa": [
+    13,
+    16
+   ],
    "metin": "**Soru.** Onarılamayan DNA hasarında p53'ün apoptozu tetiklemek için ekspresyonunu artırdığı gen hangisidir?\n\n**A)** MDM2 · **B)** GADD45 · **C)** p21 · **D)** PUMA · **E)** MYC\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **MDM2** — MDM2, p53'ü yıkıma hedefleyen proteindir; onarım başarılı olunca p53'ün kendini kapatmak için artırdığı gendir.\n- **GADD45** — GADD45, p53'ün hedef genlerinden biridir, ancak proapoptotik gen olarak verilen örnekler PUMA ve BAX'tır.\n- **p21** — p21 bir CDK inhibitörüdür; hücreyi G1/S kontrol noktasında geçici olarak durdurur, apoptozu tetiklemez.\n- **PUMA** — PUMA doğru: onarılamayan hasarda p53, PUMA ve BAX gibi proapoptotik genleri artırıp mitokondriyal iç yolu aktive eder.\n- **MYC** — MYC bir onkogendir; p53'ün apoptoz için artırdığı hedef gen değildir.\n\n**Cevap: D** — PUMA\n\n**Özet.** Onarılamayan hasarda p53 hücreyi ya senesense ya da apoptoza yönlendirir; apoptoz PUMA ve BAX gibi proapoptotik genlerle mitokondriyal iç yoldan gerçekleşir.",
    "ses": "Onarılamayan de ne a hasarında pe elli üçün apoptozu tetiklemek için ekspresyonunu artırdığı gen hangisidir?\nA, me de me iki\nBe, ge a de de kırk beş\nCe, pe yirmi bir\nDe, puma\nE, mik\nHer seçeneği tek tek ele alalım.\nme de me iki, pe elli üçü yıkıma hedefleyen proteindir. Onarım başarılı olunca pe elli üçün kendini kapatmak için artırdığı gendir.\nge a de de kırk beş, pe elli üçün hedef genlerinden biridir, ancak proapoptotik gen olarak verilen örnekler puma ve be a ikstır.\npe yirmi bir bir ce de ka inhibitörüdür. Hücreyi ge bir se kontrol noktasında geçici olarak durdurur, apoptozu tetiklemez.\npuma doğru, onarılamayan hasarda pe elli üç, puma ve be a iks gibi proapoptotik genleri artırıp mitokondriyal iç yolu aktive eder.\nmik bir onkogendir. Pe elli üçün apoptoz için artırdığı hedef gen değildir.\nDoğru cevap De, puma\nOnarılamayan hasarda pe elli üç hücreyi ya senesense ya da apoptoza yönlendirir. Apoptoz puma ve be a iks gibi proapoptotik genlerle mitokondriyal iç yoldan gerçekleşir.",
    "kelime": 142
@@ -556,6 +711,7 @@
   {
    "no": 35,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Kalıcı hücre döngüsü durması ve kromatin yapısında kalıcı değişikliklerle tanımlanan süreç hangisidir?",
    "secenekler": {
     "A": "Senesens",
@@ -565,6 +721,7 @@
     "E": "Epitel–mezenkimal geçiş"
    },
    "dogru": "A",
+   "ipucu": "Hücrenin ölmeden ama bir daha bölünmeden kaldığı, yaşlanma olarak da adlandırılan durumu düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Senesens doğru: onarılamayan hasarda p53'ün yönlendirdiği, kalıcı hücre döngüsü durması ve kalıcı kromatin değişiklikleriyle giden yaşlanmadır.",
@@ -574,6 +731,10 @@
     "E": "Epitel–mezenkimal geçiş, E-kadherin kaybıyla hücrelerin invaziv özellik kazanmasıdır; döngü durması değildir."
    },
    "ozet": "p53 geçici durdurma, kalıcı durdurma yani senesens ve apoptoz olmak üzere üç yol kullanır; senesenste döngü kalıcı durur ve kromatin yapısı kalıcı değişir.",
+   "sayfa": [
+    12,
+    16
+   ],
    "metin": "**Soru.** Kalıcı hücre döngüsü durması ve kromatin yapısında kalıcı değişikliklerle tanımlanan süreç hangisidir?\n\n**A)** Senesens · **B)** Otofaji · **C)** Durgunluk · **D)** Apoptoz · **E)** Epitel–mezenkimal geçiş\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Senesens** — Senesens doğru: onarılamayan hasarda p53'ün yönlendirdiği, kalıcı hücre döngüsü durması ve kalıcı kromatin değişiklikleriyle giden yaşlanmadır.\n- **Otofaji** — Otofaji, besin eksikliğinde hücrenin kendi organellerini yıkarak enerji sağlamasıdır; kalıcı döngü durması değildir.\n- **Durgunluk** — Durgunluk, p53'ün sağladığı geçici hücre döngüsü durmasıdır; onarım başarılı olursa döngü yeniden başlar.\n- **Apoptoz** — Apoptoz, PUMA ve BAX ile mitokondriyal iç yoldan gerçekleşen programlanmış hücre ölümüdür; hücre canlı kalmaz.\n- **Epitel–mezenkimal geçiş** — Epitel–mezenkimal geçiş, E-kadherin kaybıyla hücrelerin invaziv özellik kazanmasıdır; döngü durması değildir.\n\n**Cevap: A** — Senesens\n\n**Özet.** p53 geçici durdurma, kalıcı durdurma yani senesens ve apoptoz olmak üzere üç yol kullanır; senesenste döngü kalıcı durur ve kromatin yapısı kalıcı değişir.",
    "ses": "Kalıcı hücre döngüsü durması ve kromatin yapısında kalıcı değişikliklerle tanımlanan süreç hangisidir?\nA, Senesens\nBe, Otofaji\nCe, Durgunluk\nDe, Apoptoz\nE, Epitel ile mezenkimal geçiş\nŞıkları sırasıyla gözden geçirelim.\nSenesens doğru, onarılamayan hasarda pe elli üçün yönlendirdiği, kalıcı hücre döngüsü durması ve kalıcı kromatin değişiklikleriyle giden yaşlanmadır.\nOtofaji, besin eksikliğinde hücrenin kendi organellerini yıkarak enerji sağlamasıdır. Kalıcı döngü durması değildir.\nDurgunluk, pe elli üçün sağladığı geçici hücre döngüsü durmasıdır. Onarım başarılı olursa döngü yeniden başlar.\nApoptoz, puma ve be a iks ile mitokondriyal iç yoldan gerçekleşen programlanmış hücre ölümüdür. Hücre canlı kalmaz.\nEpitel ile mezenkimal geçiş, e kadherin kaybıyla hücrelerin invaziv özellik kazanmasıdır. Döngü durması değildir.\nDoğru cevap A, Senesens\npe elli üç geçici durdurma, kalıcı durdurma yani senesens ve apoptoz olmak üzere üç yol kullanır. Senesenste döngü kalıcı durur ve kromatin yapısı kalıcı değişir.",
    "kelime": 145
@@ -581,6 +742,7 @@
   {
    "no": 36,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Bazı sarkomlarda p53'ü mutasyon olmadan işlevsiz bırakan değişiklik hangisidir?",
    "secenekler": {
     "A": "CDKN2A delesyonu",
@@ -590,6 +752,7 @@
     "E": "MDM2 amplifikasyonu"
    },
    "dogru": "E",
+   "ipucu": "p53'ü sürekli yıkıma gönderen proteinin gen kopya sayısı artarsa ne olacağını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "CDKN2A delesyonu p16'yı kaybettirir ve RB'yi sürekli hiperfosforile bırakır; p53'ü değil RB yolunu bozar.",
@@ -599,6 +762,9 @@
     "E": "MDM2 amplifikasyonu doğru: aşırı MDM2, p53'ü sürekli yıkıma hedefleyerek bazı sarkomlarda p53'ü işlevsiz bırakır."
    },
    "ozet": "Sporadik kanserlerde TP53'te bialelik somatik mutasyon sıktır; bazı sarkomlarda ise MDM2 amplifikasyonu p53'ü mutasyon olmadan işlevsiz bırakır.",
+   "sayfa": [
+    17
+   ],
    "metin": "**Soru.** Bazı sarkomlarda p53'ü mutasyon olmadan işlevsiz bırakan değişiklik hangisidir?\n\n**A)** CDKN2A delesyonu · **B)** IDH mutasyonu · **C)** APC mutasyonu · **D)** MYCN amplifikasyonu · **E)** MDM2 amplifikasyonu\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **CDKN2A delesyonu** — CDKN2A delesyonu p16'yı kaybettirir ve RB'yi sürekli hiperfosforile bırakır; p53'ü değil RB yolunu bozar.\n- **IDH mutasyonu** — IDH mutasyonu 2-hidroksiglutarat üretip TET2'yi inhibe eder; p53 yıkımıyla ilişkili değildir.\n- **APC mutasyonu** — APC mutasyonu β-katenin yıkımını bozarak kolon epitelinde proliferasyonu başlatır; p53 ile ilgili değildir.\n- **MYCN amplifikasyonu** — MYCN amplifikasyonu nöroblastomda kötü prognozla ilişkili onkogen artışıdır; p53'ü işlevsiz bırakmaz.\n- **MDM2 amplifikasyonu** — MDM2 amplifikasyonu doğru: aşırı MDM2, p53'ü sürekli yıkıma hedefleyerek bazı sarkomlarda p53'ü işlevsiz bırakır.\n\n**Cevap: E** — MDM2 amplifikasyonu\n\n**Özet.** Sporadik kanserlerde TP53'te bialelik somatik mutasyon sıktır; bazı sarkomlarda ise MDM2 amplifikasyonu p53'ü mutasyon olmadan işlevsiz bırakır.",
    "ses": "Bazı sarkomlarda pe elli üçü mutasyon olmadan işlevsiz bırakan değişiklik hangisidir?\nA, ce de ka ne iki a delesyonu\nBe, i de ha mutasyonu\nCe, a pe ce mutasyonu\nDe, mik en amplifikasyonu\nE, me de me iki amplifikasyonu\nŞimdi seçeneklere tek tek bakalım.\nce de ka ne iki a delesyonu pe on altıyı kaybettirir ve re beyi sürekli hiperfosforile bırakır. Pe elli üçü değil re be yolunu bozar.\ni de ha mutasyonu iki hidroksiglutarat üretip te e te ikiyi inhibe eder. Pe elli üç yıkımıyla ilişkili değildir.\na pe ce mutasyonu β-katenin yıkımını bozarak kolon epitelinde proliferasyonu başlatır. Pe elli üç ile ilgili değildir.\nmik en amplifikasyonu nöroblastomda kötü prognozla ilişkili onkogen artışıdır. Pe elli üçü işlevsiz bırakmaz.\nme de me iki amplifikasyonu doğru, aşırı me de me iki, pe elli üçü sürekli yıkıma hedefleyerek bazı sarkomlarda pe elli üçü işlevsiz bırakır.\nDoğru cevap E, me de me iki amplifikasyonu\nSporadik kanserlerde te pe elli üçte bialelik somatik mutasyon sıktır. Bazı sarkomlarda ise me de me iki amplifikasyonu pe elli üçü mutasyon olmadan işlevsiz bırakır.",
    "kelime": 141
@@ -606,6 +772,7 @@
   {
    "no": 37,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "TGF-β–SMAD sinyalinin baskıladığı genlerden biri hangisidir?",
    "secenekler": {
     "A": "p15",
@@ -615,6 +782,7 @@
     "E": "PUMA"
    },
    "dogru": "C",
+   "ipucu": "Bu yolun CDK inhibitörlerini artırırken büyümeyi teşvik eden hangi transkripsiyon faktörünü susturduğunu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "p15, TGF-β–SMAD sinyaliyle transkripsiyonu artan CDK inhibitörüdür; baskılanmaz.",
@@ -624,6 +792,9 @@
     "E": "PUMA, p53'ün apoptoz için artırdığı proapoptotik gendir; TGF-β'nın baskıladığı gen değildir."
    },
    "ozet": "TGF-β reseptör aktivasyonu SMAD proteinleri üzerinden p15 ve p21 transkripsiyonunu artırır, MYC ve CDK4'ü baskılar; sonuç G1/S'de durdurmadır.",
+   "sayfa": [
+    18
+   ],
    "metin": "**Soru.** TGF-β–SMAD sinyalinin baskıladığı genlerden biri hangisidir?\n\n**A)** p15 · **B)** p21 · **C)** MYC · **D)** p16 · **E)** PUMA\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **p15** — p15, TGF-β–SMAD sinyaliyle transkripsiyonu artan CDK inhibitörüdür; baskılanmaz.\n- **p21** — p21 de TGF-β sinyaliyle transkripsiyonu artırılan CDK inhibitörlerindendir.\n- **MYC** — MYC doğru: TGF-β, CDK4 ile birlikte MYC gibi büyümeyi teşvik eden genleri baskılar ve G1/S'de durdurma sağlar.\n- **p16** — p16 bir CDK inhibitörüdür; TGF-β'nın baskıladığı büyüme genlerinden değildir, delesyonu RB yolunu bozar.\n- **PUMA** — PUMA, p53'ün apoptoz için artırdığı proapoptotik gendir; TGF-β'nın baskıladığı gen değildir.\n\n**Cevap: C** — MYC\n\n**Özet.** TGF-β reseptör aktivasyonu SMAD proteinleri üzerinden p15 ve p21 transkripsiyonunu artırır, MYC ve CDK4'ü baskılar; sonuç G1/S'de durdurmadır.",
    "ses": "te ge fe beta ile smad sinyalinin baskıladığı genlerden biri hangisidir?\nA, pe on beş\nBe, pe yirmi bir\nCe, mik\nDe, pe on altı\nE, puma\nSeçenekleri sırayla değerlendirelim.\npe on beş, te ge fe beta ile smad sinyaliyle transkripsiyonu artan ce de ka inhibitörüdür. Baskılanmaz.\npe yirmi bir de te ge fe beta sinyaliyle transkripsiyonu artırılan ce de ka inhibitörlerindendir.\nmik doğru, te ge fe beta, ce de ka dört ile birlikte mik gibi büyümeyi teşvik eden genleri baskılar ve ge bir sede durdurma sağlar.\npe on altı bir ce de ka inhibitörüdür. Te ge fe betanın baskıladığı büyüme genlerinden değildir, delesyonu re be yolunu bozar.\npuma, pe elli üçün apoptoz için artırdığı proapoptotik gendir. Te ge fe betanın baskıladığı gen değildir.\nDoğru cevap Ce, mik\nte ge fe beta reseptör aktivasyonu smad proteinleri üzerinden pe on beş ve pe yirmi bir transkripsiyonunu artırır, mik ve ce de ka dörtü baskılar. Sonuç ge bir sede durdurmadır.",
    "kelime": 120
@@ -631,6 +802,7 @@
   {
    "no": 38,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Kanserde TGF-β yolu mutasyonları en çok hangi bileşenlerde görülür?",
    "secenekler": {
     "A": "IDH geninde",
@@ -640,6 +812,7 @@
     "E": "E-kadherin geninde"
    },
    "dogru": "D",
+   "ipucu": "Sinyali hücre yüzeyinde karşılayan yapı ile onu çekirdeğe taşıyan aracı proteinleri düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "IDH geni Krebs döngüsü enzimini kodlar; mutasyonu 2-hidroksiglutarat üretimine yol açar.",
@@ -648,14 +821,18 @@
     "D": "Reseptör ya da SMAD genlerinde doğru: birçok kanserde TGF-β yolu bu bileşenlerdeki mutasyonlarla devre dışı kalır.",
     "E": "E-kadherin geni epitel adezyon molekülünü kodlar; kaybı epitel–mezenkimal geçişin kilit olayıdır, TGF-β yolunun bileşeni değildir."
    },
-   "ozet": "Birçok kanserde TGF-β yolu reseptör ya da SMAD mutasyonlarıyla kaybolur ve büyüme freni kalkar; ileri evrede ise TGF-β epitel–mezenkimal geçişi destekleyebilir.",
-   "metin": "**Soru.** Kanserde TGF-β yolu mutasyonları en çok hangi bileşenlerde görülür?\n\n**A)** IDH geninde · **B)** RB geninde · **C)** APC geninde · **D)** Reseptör ya da SMAD genlerinde · **E)** E-kadherin geninde\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **IDH geninde** — IDH geni Krebs döngüsü enzimini kodlar; mutasyonu 2-hidroksiglutarat üretimine yol açar.\n- **RB geninde** — RB geni G1/S'nin ana negatif düzenleyicisidir; TGF-β sinyal yolunun bileşeni değildir.\n- **APC geninde** — APC geni β-katenin yıkım kompleksinin parçasıdır ve WNT yolunda yer alır.\n- **Reseptör ya da SMAD genlerinde** — Reseptör ya da SMAD genlerinde doğru: birçok kanserde TGF-β yolu bu bileşenlerdeki mutasyonlarla devre dışı kalır.\n- **E-kadherin geninde** — E-kadherin geni epitel adezyon molekülünü kodlar; kaybı epitel–mezenkimal geçişin kilit olayıdır, TGF-β yolunun bileşeni değildir.\n\n**Cevap: D** — Reseptör ya da SMAD genlerinde\n\n**Özet.** Birçok kanserde TGF-β yolu reseptör ya da SMAD mutasyonlarıyla kaybolur ve büyüme freni kalkar; ileri evrede ise TGF-β epitel–mezenkimal geçişi destekleyebilir.",
-   "ses": "Kanserde te ge fe beta yolu mutasyonları en çok hangi bileşenlerde görülür?\nA, i de ha geninde\nBe, re be geninde\nCe, a pe ce geninde\nDe, Reseptör ya da smad genlerinde\nE, e kadherin geninde\nHer seçeneği tek tek ele alalım.\ni de ha geni Krebs döngüsü enzimini kodlar. Mutasyonu iki hidroksiglutarat üretimine yol açar.\nre be geni ge bir senin ana negatif düzenleyicisidir. Te ge fe beta sinyal yolunun bileşeni değildir.\na pe ce geni β-katenin yıkım kompleksinin parçasıdır ve vint yolunda yer alır.\nReseptör ya da smad genlerinde doğru, birçok kanserde te ge fe beta yolu bu bileşenlerdeki mutasyonlarla devre dışı kalır.\ne kadherin geni epitel adezyon molekülünü kodlar. Kaybı epitel ile mezenkimal geçişin kilit olayıdır, te ge fe beta yolunun bileşeni değildir.\nDoğru cevap De, Reseptör ya da smad genlerinde\nBirçok kanserde te ge fe beta yolu reseptör ya da smad mutasyonlarıyla kaybolur ve büyüme freni kalkar. Ileri evrede ise te ge fe beta epitel ile mezenkimal geçişi destekleyebilir.",
-   "kelime": 156
+   "ozet": "Birçok kanserde TGF-β yolu reseptör ya da SMAD mutasyonlarıyla işlevini yitirir ve büyüme üzerindeki baskılayıcı etki ortadan kalkar; ileri evrede ise TGF-β epitel–mezenkimal geçişi destekleyebilir.",
+   "sayfa": [
+    19
+   ],
+   "metin": "**Soru.** Kanserde TGF-β yolu mutasyonları en çok hangi bileşenlerde görülür?\n\n**A)** IDH geninde · **B)** RB geninde · **C)** APC geninde · **D)** Reseptör ya da SMAD genlerinde · **E)** E-kadherin geninde\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **IDH geninde** — IDH geni Krebs döngüsü enzimini kodlar; mutasyonu 2-hidroksiglutarat üretimine yol açar.\n- **RB geninde** — RB geni G1/S'nin ana negatif düzenleyicisidir; TGF-β sinyal yolunun bileşeni değildir.\n- **APC geninde** — APC geni β-katenin yıkım kompleksinin parçasıdır ve WNT yolunda yer alır.\n- **Reseptör ya da SMAD genlerinde** — Reseptör ya da SMAD genlerinde doğru: birçok kanserde TGF-β yolu bu bileşenlerdeki mutasyonlarla devre dışı kalır.\n- **E-kadherin geninde** — E-kadherin geni epitel adezyon molekülünü kodlar; kaybı epitel–mezenkimal geçişin kilit olayıdır, TGF-β yolunun bileşeni değildir.\n\n**Cevap: D** — Reseptör ya da SMAD genlerinde\n\n**Özet.** Birçok kanserde TGF-β yolu reseptör ya da SMAD mutasyonlarıyla işlevini yitirir ve büyüme üzerindeki baskılayıcı etki ortadan kalkar; ileri evrede ise TGF-β epitel–mezenkimal geçişi destekleyebilir.",
+   "ses": "Kanserde te ge fe beta yolu mutasyonları en çok hangi bileşenlerde görülür?\nA, i de ha geninde\nBe, re be geninde\nCe, a pe ce geninde\nDe, Reseptör ya da smad genlerinde\nE, e kadherin geninde\nHer seçeneği tek tek ele alalım.\ni de ha geni Krebs döngüsü enzimini kodlar. Mutasyonu iki hidroksiglutarat üretimine yol açar.\nre be geni ge bir senin ana negatif düzenleyicisidir. Te ge fe beta sinyal yolunun bileşeni değildir.\na pe ce geni β-katenin yıkım kompleksinin parçasıdır ve vint yolunda yer alır.\nReseptör ya da smad genlerinde doğru, birçok kanserde te ge fe beta yolu bu bileşenlerdeki mutasyonlarla devre dışı kalır.\ne kadherin geni epitel adezyon molekülünü kodlar. Kaybı epitel ile mezenkimal geçişin kilit olayıdır, te ge fe beta yolunun bileşeni değildir.\nDoğru cevap De, Reseptör ya da smad genlerinde\nBirçok kanserde te ge fe beta yolu reseptör ya da smad mutasyonlarıyla işlevini yitirir ve büyüme üzerindeki baskılayıcı etki ortadan kalkar. İleri evrede ise te ge fe beta epitel–mezenkimal geçişi destekleyebilir.",
+   "kelime": 160
   },
   {
    "no": 39,
    "tur": "ornek",
+   "zorluk": "kolay",
    "soru": "E-kadherinin epitel hücrelerindeki temel işlevi hangisidir?",
    "secenekler": {
     "A": "Hücre–hücre adezyonu",
@@ -665,6 +842,7 @@
     "E": "Apoptoz"
    },
    "dogru": "A",
+   "ipucu": "Epitel tabakasını bir arada tutup temas inhibisyonu ve polariteyi sağlayan zar molekülünü düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Hücre–hücre adezyonu doğru: E-kadherin epitelde temel adezyon molekülüdür, polarite ve temas inhibisyonu için önemlidir.",
@@ -674,6 +852,9 @@
     "E": "Apoptoz PUMA ve BAX gibi proapoptotik genlerle gerçekleşir; E-kadherinin temel işlevi değildir."
    },
    "ozet": "E-kadherin epitelin temel hücre–hücre adezyon molekülüdür ve temas inhibisyonu ile polariteyi sağlar; kaybında hücreler arası kohezyon azalır, invazyon artar.",
+   "sayfa": [
+    20
+   ],
    "metin": "**Soru.** E-kadherinin epitel hücrelerindeki temel işlevi hangisidir?\n\n**A)** Hücre–hücre adezyonu · **B)** Glikoz taşınması · **C)** DNA onarımı · **D)** Anjiyogenez · **E)** Apoptoz\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Hücre–hücre adezyonu** — Hücre–hücre adezyonu doğru: E-kadherin epitelde temel adezyon molekülüdür, polarite ve temas inhibisyonu için önemlidir.\n- **Glikoz taşınması** — Glikoz taşınması glikoz taşıyıcılarının işidir; RAS–PI3K/AKT yolu bunların ekspresyonunu artırır.\n- **DNA onarımı** — DNA onarımı p53'ün uyardığı onarım genlerinin işidir; E-kadherinin görevi değildir.\n- **Anjiyogenez** — Anjiyogenez VEGF gibi faktörlerle sağlanır; E-kadherin damar oluşumunu düzenlemez.\n- **Apoptoz** — Apoptoz PUMA ve BAX gibi proapoptotik genlerle gerçekleşir; E-kadherinin temel işlevi değildir.\n\n**Cevap: A** — Hücre–hücre adezyonu\n\n**Özet.** E-kadherin epitelin temel hücre–hücre adezyon molekülüdür ve temas inhibisyonu ile polariteyi sağlar; kaybında hücreler arası kohezyon azalır, invazyon artar.",
    "ses": "e kadherinin epitel hücrelerindeki temel işlevi hangisidir?\nA, Hücre ile hücre adezyonu\nBe, Glikoz taşınması\nCe, de ne a onarımı\nDe, Anjiyogenez\nE, Apoptoz\nŞıkları sırasıyla gözden geçirelim.\nHücre ile hücre adezyonu doğru, e kadherin epitelde temel adezyon molekülüdür, polarite ve temas inhibisyonu için önemlidir.\nGlikoz taşınması glikoz taşıyıcılarının işidir. Ras ile pe i üç ka ve a ka te yolu bunların ekspresyonunu artırır.\nde ne a onarımı pe elli üçün uyardığı onarım genlerinin işidir. E kadherinin görevi değildir.\nAnjiyogenez ve e ge fe gibi faktörlerle sağlanır. E kadherin damar oluşumunu düzenlemez.\nApoptoz puma ve be a iks gibi proapoptotik genlerle gerçekleşir. E kadherinin temel işlevi değildir.\nDoğru cevap A, Hücre ile hücre adezyonu\ne kadherin epitelin temel hücre ile hücre adezyon molekülüdür ve temas inhibisyonu ile polariteyi sağlar. Kaybında hücreler arası kohezyon azalır, invazyon artar.",
    "kelime": 127
@@ -681,6 +862,7 @@
   {
    "no": 40,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Çekirdeğe geçen β-kateninin bağlanarak proliferasyon genlerini aktive ettiği transkripsiyon faktörü hangisidir?",
    "secenekler": {
     "A": "E2F",
@@ -690,6 +872,7 @@
     "E": "p53"
    },
    "dogru": "C",
+   "ipucu": "WNT yolunun çekirdekteki ortağını, diğer yolların transkripsiyon faktörlerinden ayır.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "E2F, RB'den serbest kalınca S fazı genlerini aktive eden transkripsiyon faktörüdür; β-kateninin ortağı değildir.",
@@ -699,6 +882,10 @@
     "E": "p53, stres altında birikip p21, GADD45 ve PUMA gibi genleri aktive eden tümör baskılayıcıdır; β-kateninin ortağı değildir."
    },
    "ozet": "β-katenin hem E-kadherinle adezyonda hem WNT yolunda görevlidir; yıkımdan kurtulup çekirdeğe geçince TCF'ye bağlanır ve proliferasyon genlerini aktive eder.",
+   "sayfa": [
+    21,
+    22
+   ],
    "metin": "**Soru.** Çekirdeğe geçen β-kateninin bağlanarak proliferasyon genlerini aktive ettiği transkripsiyon faktörü hangisidir?\n\n**A)** E2F · **B)** SMAD · **C)** TCF · **D)** HIF-1α · **E)** p53\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **E2F** — E2F, RB'den serbest kalınca S fazı genlerini aktive eden transkripsiyon faktörüdür; β-kateninin ortağı değildir.\n- **SMAD** — SMAD proteinleri TGF-β reseptör sinyalini çekirdeğe taşır; β-katenin ile çalışmaz.\n- **TCF** — TCF doğru: çekirdeğe geçen β-katenin TCF'ye bağlanır ve hücre çoğalmasında rol oynayan genleri aktive eder.\n- **HIF-1α** — HIF-1α, hipoksiyle stabilize olup VEGF transkripsiyonunu artıran faktördür; WNT yolunun parçası değildir.\n- **p53** — p53, stres altında birikip p21, GADD45 ve PUMA gibi genleri aktive eden tümör baskılayıcıdır; β-kateninin ortağı değildir.\n\n**Cevap: C** — TCF\n\n**Özet.** β-katenin hem E-kadherinle adezyonda hem WNT yolunda görevlidir; yıkımdan kurtulup çekirdeğe geçince TCF'ye bağlanır ve proliferasyon genlerini aktive eder.",
    "ses": "Çekirdeğe geçen β-kateninin bağlanarak proliferasyon genlerini aktive ettiği transkripsiyon faktörü hangisidir?\nA, e iki fe\nBe, smad\nCe, te ce fe\nDe, ha i fe bir alfa\nE, pe elli üç\nŞimdi seçeneklere tek tek bakalım.\ne iki fe, re beden serbest kalınca se fazı genlerini aktive eden transkripsiyon faktörüdür. Β-kateninin ortağı değildir.\nsmad proteinleri te ge fe beta reseptör sinyalini çekirdeğe taşır. Β-katenin ile çalışmaz.\nte ce fe doğru, çekirdeğe geçen β-katenin te ce feye bağlanır ve hücre çoğalmasında rol oynayan genleri aktive eder.\nha i fe bir alfa, hipoksiyle stabilize olup ve e ge fe transkripsiyonunu artıran faktördür. Vint yolunun parçası değildir.\npe elli üç, stres altında birikip pe yirmi bir, ge a de de kırk beş ve puma gibi genleri aktive eden tümör baskılayıcıdır. Β-kateninin ortağı değildir.\nDoğru cevap Ce, te ce fe\nβ-katenin hem e kadherinle adezyonda hem vint yolunda görevlidir. Yıkımdan kurtulup çekirdeğe geçince te ce feye bağlanır ve proliferasyon genlerini aktive eder.",
    "kelime": 139
@@ -706,6 +893,7 @@
   {
    "no": 41,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "WNT ligandının reseptörüne bağlanmasının β-katenine etkisi hangisidir?",
    "secenekler": {
     "A": "Fosforilasyonla yıkıma işaretler",
@@ -715,6 +903,7 @@
     "E": "Yıkımını engeller"
    },
    "dogru": "E",
+   "ipucu": "Ligand gelince parçalayıcı kompleksin devre dışı kalmasının sitoplazmik düzeyi nasıl değiştireceğini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Fosforilasyonla yıkıma işaretleme, WNT yokken APC içeren kompleksin yaptığı iştir.",
@@ -724,6 +913,10 @@
     "E": "Yıkımını engeller doğru: WNT bağlanınca yıkım kompleksi devre dışı kalır, β-katenin birikip çekirdeğe gider."
    },
    "ozet": "Dinlenen hücrede APC içeren kompleks β-katenini yıkar; WNT bağlanınca yıkım engellenir, APC kaybında ise WNT olmasa bile β-katenin birikir.",
+   "sayfa": [
+    21,
+    23
+   ],
    "metin": "**Soru.** WNT ligandının reseptörüne bağlanmasının β-katenine etkisi hangisidir?\n\n**A)** Fosforilasyonla yıkıma işaretler · **B)** E-kadherine bağlar · **C)** SMAD ile birleştirir · **D)** Hücre dışına salgılatır · **E)** Yıkımını engeller\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Fosforilasyonla yıkıma işaretler** — Fosforilasyonla yıkıma işaretleme, WNT yokken APC içeren kompleksin yaptığı iştir.\n- **E-kadherine bağlar** — E-kadherine bağlanma β-kateninin adezyondaki rolüdür; WNT uyarısının etkisi değildir.\n- **SMAD ile birleştirir** — SMAD, TGF-β sinyalinin aracısıdır; β-katenin ile birleşmez.\n- **Hücre dışına salgılatır** — Hücre dışına salgılanan WNT ligandının kendisidir; β-katenin hücre içi bir proteindir.\n- **Yıkımını engeller** — Yıkımını engeller doğru: WNT bağlanınca yıkım kompleksi devre dışı kalır, β-katenin birikip çekirdeğe gider.\n\n**Cevap: E** — Yıkımını engeller\n\n**Özet.** Dinlenen hücrede APC içeren kompleks β-katenini yıkar; WNT bağlanınca yıkım engellenir, APC kaybında ise WNT olmasa bile β-katenin birikir.",
    "ses": "vint ligandının reseptörüne bağlanmasının β-katenine etkisi hangisidir?\nA, Fosforilasyonla yıkıma işaretler\nBe, e kadherine bağlar\nCe, smad ile birleştirir\nDe, Hücre dışına salgılatır\nE, Yıkımını engeller\nSeçenekleri sırayla değerlendirelim.\nFosforilasyonla yıkıma işaretleme, vint yokken a pe ce içeren kompleksin yaptığı iştir.\ne kadherine bağlanma β-kateninin adezyondaki rolüdür. Vint uyarısının etkisi değildir.\nsmad, te ge fe beta sinyalinin aracısıdır. Β-katenin ile birleşmez.\nHücre dışına salgılanan vint ligandının kendisidir. Β-katenin hücre içi bir proteindir.\nYıkımını engeller doğru, vint bağlanınca yıkım kompleksi devre dışı kalır, β-katenin birikip çekirdeğe gider.\nDoğru cevap E, Yıkımını engeller\nDinlenen hücrede a pe ce içeren kompleks β-katenini yıkar. Vint bağlanınca yıkım engellenir, a pe ce kaybında ise vint olmasa bile β-katenin birikir.",
    "kelime": 133
@@ -731,6 +924,7 @@
   {
    "no": 42,
    "tur": "ornek",
+   "zorluk": "kolay",
    "soru": "Normal hücre oksijen varlığında enerjiyi başlıca hangi yolla üretir?",
    "secenekler": {
     "A": "Aerobik glikoliz",
@@ -740,6 +934,7 @@
     "E": "Otofaji"
    },
    "dogru": "B",
+   "ipucu": "Tümör hücresinin oksijen olsa bile tercih etmediği, en verimli yolu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Aerobik glikoliz, oksijen olsa bile tümör hücresinin kullandığı yoldur; Warburg etkisini tanımlar.",
@@ -749,6 +944,9 @@
     "E": "Otofaji, şiddetli besin eksikliğinde hücrenin kendi bileşenlerini yıkarak enerji sağladığı adaptif yanıttır."
    },
    "ozet": "Normal hücre oksijen varlığında mitokondriyal oksidatif fosforilasyon kullanır; tümör hücresi ise oksijen olsa bile aerobik glikolizle glikozu laktata çevirir.",
+   "sayfa": [
+    24
+   ],
    "metin": "**Soru.** Normal hücre oksijen varlığında enerjiyi başlıca hangi yolla üretir?\n\n**A)** Aerobik glikoliz · **B)** Mitokondriyal oksidatif fosforilasyon · **C)** Glutaminoliz · **D)** Laktik asit fermantasyonu · **E)** Otofaji\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Aerobik glikoliz** — Aerobik glikoliz, oksijen olsa bile tümör hücresinin kullandığı yoldur; Warburg etkisini tanımlar.\n- **Mitokondriyal oksidatif fosforilasyon** — Mitokondriyal oksidatif fosforilasyon doğru: normal hücre oksijen varlığında enerjiyi bu yolla üretir.\n- **Glutaminoliz** — Glutaminoliz, MYC'nin artırdığı ve tümör hücresinin glutamin bağımlılığını yansıtan yoldur.\n- **Laktik asit fermantasyonu** — Laktik asit fermantasyonu, glikozun laktata çevrilmesidir; Warburg etkisindeki tümör hücresinin özelliğidir.\n- **Otofaji** — Otofaji, şiddetli besin eksikliğinde hücrenin kendi bileşenlerini yıkarak enerji sağladığı adaptif yanıttır.\n\n**Cevap: B** — Mitokondriyal oksidatif fosforilasyon\n\n**Özet.** Normal hücre oksijen varlığında mitokondriyal oksidatif fosforilasyon kullanır; tümör hücresi ise oksijen olsa bile aerobik glikolizle glikozu laktata çevirir.",
    "ses": "Normal hücre oksijen varlığında enerjiyi başlıca hangi yolla üretir?\nA, Aerobik glikoliz\nBe, Mitokondriyal oksidatif fosforilasyon\nCe, Glutaminoliz\nDe, Laktik asit fermantasyonu\nE, Otofaji\nHer seçeneği tek tek ele alalım.\nAerobik glikoliz, oksijen olsa bile tümör hücresinin kullandığı yoldur. Warburg etkisini tanımlar.\nMitokondriyal oksidatif fosforilasyon doğru, normal hücre oksijen varlığında enerjiyi bu yolla üretir.\nGlutaminoliz, miknin artırdığı ve tümör hücresinin glutamin bağımlılığını yansıtan yoldur.\nLaktik asit fermantasyonu, glikozun laktata çevrilmesidir. Warburg etkisindeki tümör hücresinin özelliğidir.\nOtofaji, şiddetli besin eksikliğinde hücrenin kendi bileşenlerini yıkarak enerji sağladığı adaptif yanıttır.\nDoğru cevap Be, Mitokondriyal oksidatif fosforilasyon\nNormal hücre oksijen varlığında mitokondriyal oksidatif fosforilasyon kullanır. Tümör hücresi ise oksijen olsa bile aerobik glikolizle glikozu laktata çevirir.",
    "kelime": 139
@@ -756,6 +954,7 @@
   {
    "no": 43,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Tümör hücresinde glutamin bağımlılığını artıran onkogen hangisidir?",
    "secenekler": {
     "A": "MYC",
@@ -765,6 +964,7 @@
     "E": "IDH"
    },
    "dogru": "A",
+   "ipucu": "Glikolitik ve glutaminolitik enzimlerin ekspresyonunu birlikte artıran transkripsiyon faktörünü düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "MYC doğru: glikolitik ve glutaminolitik enzimlerin ekspresyonunu artırır ve glutamin bağımlılığını yükseltir.",
@@ -774,6 +974,9 @@
     "E": "IDH bir Krebs döngüsü enzimidir; mutasyonunda 2-hidroksiglutarat üretilir, glutamin bağımlılığını artıran onkogen değildir."
    },
    "ozet": "RAS–PI3K/AKT glikoz taşıyıcıları ve glikolitik enzimleri artırır. MYC ise glikolitik ve glutaminolitik enzimler ile glutamin bağımlılığını artırır.",
+   "sayfa": [
+    25
+   ],
    "metin": "**Soru.** Tümör hücresinde glutamin bağımlılığını artıran onkogen hangisidir?\n\n**A)** MYC · **B)** RAS · **C)** TP53 · **D)** APC · **E)** IDH\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **MYC** — MYC doğru: glikolitik ve glutaminolitik enzimlerin ekspresyonunu artırır ve glutamin bağımlılığını yükseltir.\n- **RAS** — RAS, PI3K/AKT yolu üzerinden glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır; glutamin bağımlılığıyla anılmaz.\n- **TP53** — TP53 bir tümör baskılayıcıdır; büyüme destekleyici metabolik genleri baskılar.\n- **APC** — APC, β-katenin yıkım kompleksinin parçası olan tümör baskılayıcıdır; metabolik onkogen değildir.\n- **IDH** — IDH bir Krebs döngüsü enzimidir; mutasyonunda 2-hidroksiglutarat üretilir, glutamin bağımlılığını artıran onkogen değildir.\n\n**Cevap: A** — MYC\n\n**Özet.** RAS–PI3K/AKT glikoz taşıyıcıları ve glikolitik enzimleri artırır. MYC ise glikolitik ve glutaminolitik enzimler ile glutamin bağımlılığını artırır.",
    "ses": "Tümör hücresinde glutamin bağımlılığını artıran onkogen hangisidir?\nA, mik\nBe, ras\nCe, te pe elli üç\nDe, a pe ce\nE, i de ha\nŞıkları sırasıyla gözden geçirelim.\nmik doğru, glikolitik ve glutaminolitik enzimlerin ekspresyonunu artırır ve glutamin bağımlılığını yükseltir.\nras, pe i üç ka ve a ka te yolu üzerinden glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır. Glutamin bağımlılığıyla anılmaz.\nte pe elli üç bir tümör baskılayıcıdır. Büyüme destekleyici metabolik genleri baskılar.\na pe ce, β-katenin yıkım kompleksinin parçası olan tümör baskılayıcıdır. Metabolik onkogen değildir.\ni de ha bir Krebs döngüsü enzimidir. Mutasyonunda iki hidroksiglutarat üretilir, glutamin bağımlılığını artıran onkogen değildir.\nDoğru cevap A, mik\nras ile pe i üç ka ve a ka te glikoz taşıyıcıları ve glikolitik enzimleri artırır. mik ise glikolitik ve glutaminolitik enzimler ile glutamin bağımlılığını artırır.",
    "kelime": 123
@@ -781,6 +984,7 @@
   {
    "no": 44,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Lipogenez için mitokondriyal ara ürünlerin yönlendirilmesini teşvik eden yol hangisidir?",
    "secenekler": {
     "A": "TGF-β–SMAD",
@@ -790,6 +994,7 @@
     "E": "HIF-1α–VEGF"
    },
    "dogru": "D",
+   "ipucu": "Büyüme faktörü reseptöründen başlayan ve glikoz taşıyıcı ekspresyonunu da artıran kinaz yolunu düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "TGF-β–SMAD yolu CDK inhibitörlerini artırıp proliferasyonu baskılar; lipogenezi yönlendirmez.",
@@ -799,6 +1004,9 @@
     "E": "HIF-1α–VEGF ekseni hipoksiye yanıt olarak anjiyogenezi tetikler; lipogenez yolu değildir."
    },
    "ozet": "RAS–PI3K/AKT yolu glikoz taşıyıcı ve glikolitik enzimleri artırır ve lipogenez için mitokondriyal ara ürünleri yönlendirir; böylece Warburg metabolizması sürdürülebilir hale gelir.",
+   "sayfa": [
+    25
+   ],
    "metin": "**Soru.** Lipogenez için mitokondriyal ara ürünlerin yönlendirilmesini teşvik eden yol hangisidir?\n\n**A)** TGF-β–SMAD · **B)** WNT–β-katenin · **C)** p53–p21 · **D)** RAS–PI3K/AKT · **E)** HIF-1α–VEGF\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **TGF-β–SMAD** — TGF-β–SMAD yolu CDK inhibitörlerini artırıp proliferasyonu baskılar; lipogenezi yönlendirmez.\n- **WNT–β-katenin** — WNT–β-katenin yolu TCF aracılığıyla proliferasyon genlerini aktive eder; metabolik ara ürün yönlendirmesiyle tanımlanmaz.\n- **p53–p21** — p53–p21 ekseni hücreyi G1/S'de durdurur; TP53 büyüme destekleyici metabolik genleri baskılar.\n- **RAS–PI3K/AKT** — RAS–PI3K/AKT doğru: glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır, lipogenez için mitokondriyal ara ürünleri yönlendirir.\n- **HIF-1α–VEGF** — HIF-1α–VEGF ekseni hipoksiye yanıt olarak anjiyogenezi tetikler; lipogenez yolu değildir.\n\n**Cevap: D** — RAS–PI3K/AKT\n\n**Özet.** RAS–PI3K/AKT yolu glikoz taşıyıcı ve glikolitik enzimleri artırır ve lipogenez için mitokondriyal ara ürünleri yönlendirir; böylece Warburg metabolizması sürdürülebilir hale gelir.",
    "ses": "Lipogenez için mitokondriyal ara ürünlerin yönlendirilmesini teşvik eden yol hangisidir?\nA, te ge fe beta ile smad\nBe, vint ile β-katenin\nCe, pe elli üç ile pe yirmi bir\nDe, ras ile pe i üç ka ve a ka te\nE, ha i fe bir alfa ile ve e ge fe\nŞimdi seçeneklere tek tek bakalım.\nte ge fe beta ile smad yolu ce de ka inhibitörlerini artırıp proliferasyonu baskılar. Lipogenezi yönlendirmez.\nvint ile β-katenin yolu te ce fe aracılığıyla proliferasyon genlerini aktive eder. Metabolik ara ürün yönlendirmesiyle tanımlanmaz.\npe elli üç ile pe yirmi bir ekseni hücreyi ge bir sede durdurur. Te pe elli üç büyüme destekleyici metabolik genleri baskılar.\nras ile pe i üç ka ve a ka te doğru, glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır, lipogenez için mitokondriyal ara ürünleri yönlendirir.\nha i fe bir alfa ile ve e ge fe ekseni hipoksiye yanıt olarak anjiyogenezi tetikler. Lipogenez yolu değildir.\nDoğru cevap De, ras ile pe i üç ka ve a ka te\nras ile pe i üç ka ve a ka te yolu glikoz taşıyıcı ve glikolitik enzimleri artırır ve lipogenez için mitokondriyal ara ürünleri yönlendirir. Böylece Warburg metabolizması sürdürülebilir hale gelir.",
    "kelime": 130
@@ -806,6 +1014,7 @@
   {
    "no": 45,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Kemoterapi sonrası nükslerde rol oynayabilen, tümör hücresinin strese dayanıp uykuda kalmasını sağlayan süreç hangisidir?",
    "secenekler": {
     "A": "Apoptoz",
@@ -815,6 +1024,7 @@
     "E": "Epitel–mezenkimal geçiş"
    },
    "dogru": "B",
+   "ipucu": "Hücrenin kendi bileşenlerini yıkarak enerji sağladığı ve geç evrede sağkalımı destekleyen mekanizmayı düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Apoptoz hücreyi ortadan kaldırır; tümör hücresinin strese dayanıp uykuda kalmasını sağlamaz.",
@@ -824,6 +1034,10 @@
     "E": "Epitel–mezenkimal geçiş invazyon ve metastazı kolaylaştırır; tedavi sonrası uykuda kalma mekanizması olarak tanımlanmaz."
    },
    "ozet": "Kemoterapi ve radyoterapi metabolik stres ve hipoksi yaratır; bazı tümör hücreleri otofajiyi aktive edip uykuda kalarak strese dayanır ve nükslerde rol oynayabilir.",
+   "sayfa": [
+    28,
+    29
+   ],
    "metin": "**Soru.** Kemoterapi sonrası nükslerde rol oynayabilen, tümör hücresinin strese dayanıp uykuda kalmasını sağlayan süreç hangisidir?\n\n**A)** Apoptoz · **B)** Otofaji · **C)** Senesens · **D)** Anjiyogenez · **E)** Epitel–mezenkimal geçiş\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Apoptoz** — Apoptoz hücreyi ortadan kaldırır; tümör hücresinin strese dayanıp uykuda kalmasını sağlamaz.\n- **Otofaji** — Otofaji doğru: bazı tümör hücreleri otofajiyi aktive ederek kemoterapi ve radyoterapi stresine dayanır, uykuda kalır ve nükse katkı verebilir.\n- **Senesens** — Senesens, p53'ün onarılamayan hasarda yönlendirdiği kalıcı döngü durmasıdır; tedavi direncinin aracı olarak tanımlanan süreç değildir.\n- **Anjiyogenez** — Anjiyogenez yeni damar oluşumudur; tümöre oksijen ve besin sağlar, uykuda hücre popülasyonu oluşturmaz.\n- **Epitel–mezenkimal geçiş** — Epitel–mezenkimal geçiş invazyon ve metastazı kolaylaştırır; tedavi sonrası uykuda kalma mekanizması olarak tanımlanmaz.\n\n**Cevap: B** — Otofaji\n\n**Özet.** Kemoterapi ve radyoterapi metabolik stres ve hipoksi yaratır; bazı tümör hücreleri otofajiyi aktive edip uykuda kalarak strese dayanır ve nükslerde rol oynayabilir.",
    "ses": "Kemoterapi sonrası nükslerde rol oynayabilen, tümör hücresinin strese dayanıp uykuda kalmasını sağlayan süreç hangisidir?\nA, Apoptoz\nBe, Otofaji\nCe, Senesens\nDe, Anjiyogenez\nE, Epitel ile mezenkimal geçiş\nSeçenekleri sırayla değerlendirelim.\nApoptoz hücreyi ortadan kaldırır. Tümör hücresinin strese dayanıp uykuda kalmasını sağlamaz.\nOtofaji doğru, bazı tümör hücreleri otofajiyi aktive ederek kemoterapi ve radyoterapi stresine dayanır, uykuda kalır ve nükse katkı verebilir.\nSenesens, pe elli üçün onarılamayan hasarda yönlendirdiği kalıcı döngü durmasıdır. Tedavi direncinin aracı olarak tanımlanan süreç değildir.\nAnjiyogenez yeni damar oluşumudur. Tümöre oksijen ve besin sağlar, uykuda hücre popülasyonu oluşturmaz.\nEpitel ile mezenkimal geçiş invazyon ve metastazı kolaylaştırır. Tedavi sonrası uykuda kalma mekanizması olarak tanımlanmaz.\nDoğru cevap Be, Otofaji\nKemoterapi ve radyoterapi metabolik stres ve hipoksi yaratır. Bazı tümör hücreleri otofajiyi aktive edip uykuda kalarak strese dayanır ve nükslerde rol oynayabilir.",
    "kelime": 148
@@ -831,6 +1045,7 @@
   {
    "no": 46,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Erken evre kanserde otofajinin tümör baskılayıcı olabilmesinin nedeni hangisidir?",
    "secenekler": {
     "A": "Telomerazı aktive etmesi",
@@ -840,6 +1055,7 @@
     "E": "Hasarlı organelleri temizlemesi"
    },
    "dogru": "E",
+   "ipucu": "Hücre içi çöplerin ve bozuk yapıların ortadan kaldırılmasının genom ve hücre sağlığına katkısını düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Telomeraz aktivasyonu ölümsüzlük sağlar ve tümörü destekler; otofajinin tümör baskılayıcı mekanizması değildir.",
@@ -849,6 +1065,9 @@
     "E": "Hasarlı organelleri temizlemesi doğru: erken evrede otofaji zarar görmüş organelleri temizleyerek tümör baskılayıcı rol oynayabilir."
    },
    "ozet": "Otofajinin iki yüzü vardır: erken evrede hasarlı organelleri temizleyerek tümör baskılayıcı olabilir, geç evrede besin ve hipoksi stresinde tümör hücresinin sağkalımını sağlar.",
+   "sayfa": [
+    28
+   ],
    "metin": "**Soru.** Erken evre kanserde otofajinin tümör baskılayıcı olabilmesinin nedeni hangisidir?\n\n**A)** Telomerazı aktive etmesi · **B)** Glutamin bağımlılığı yaratması · **C)** VEGF salgılatması · **D)** E-kadherini baskılaması · **E)** Hasarlı organelleri temizlemesi\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Telomerazı aktive etmesi** — Telomeraz aktivasyonu ölümsüzlük sağlar ve tümörü destekler; otofajinin tümör baskılayıcı mekanizması değildir.\n- **Glutamin bağımlılığı yaratması** — Glutamin bağımlılığı MYC'nin artırdığı metabolik özelliktir; otofajinin tümör baskılayıcı etkisini açıklamaz.\n- **VEGF salgılatması** — VEGF anjiyogenezi tetikleyen faktördür; otofajinin erken evredeki etkisiyle ilgili değildir.\n- **E-kadherini baskılaması** — E-kadherin baskılanması SNAIL ve TWIST ile olur ve epitel–mezenkimal geçişin kilit olayıdır; otofajinin işi değildir.\n- **Hasarlı organelleri temizlemesi** — Hasarlı organelleri temizlemesi doğru: erken evrede otofaji zarar görmüş organelleri temizleyerek tümör baskılayıcı rol oynayabilir.\n\n**Cevap: E** — Hasarlı organelleri temizlemesi\n\n**Özet.** Otofajinin iki yüzü vardır: erken evrede hasarlı organelleri temizleyerek tümör baskılayıcı olabilir, geç evrede besin ve hipoksi stresinde tümör hücresinin sağkalımını sağlar.",
    "ses": "Erken evre kanserde otofajinin tümör baskılayıcı olabilmesinin nedeni hangisidir?\nA, Telomerazı aktive etmesi\nBe, Glutamin bağımlılığı yaratması\nCe, ve e ge fe salgılatması\nDe, e kadherini baskılaması\nE, Hasarlı organelleri temizlemesi\nHer seçeneği tek tek ele alalım.\nTelomeraz aktivasyonu ölümsüzlük sağlar ve tümörü destekler. Otofajinin tümör baskılayıcı mekanizması değildir.\nGlutamin bağımlılığı miknin artırdığı metabolik özelliktir. Otofajinin tümör baskılayıcı etkisini açıklamaz.\nve e ge fe anjiyogenezi tetikleyen faktördür. Otofajinin erken evredeki etkisiyle ilgili değildir.\ne kadherin baskılanması sneyl ve tvist ile olur ve epitel ile mezenkimal geçişin kilit olayıdır. Otofajinin işi değildir.\nHasarlı organelleri temizlemesi doğru, erken evrede otofaji zarar görmüş organelleri temizleyerek tümör baskılayıcı rol oynayabilir.\nDoğru cevap E, Hasarlı organelleri temizlemesi\nOtofajinin iki yüzü vardır, erken evrede hasarlı organelleri temizleyerek tümör baskılayıcı olabilir, geç evrede besin ve hipoksi stresinde tümör hücresinin sağkalımını sağlar.",
    "kelime": 154
@@ -856,6 +1075,7 @@
   {
    "no": 47,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "IDH mutasyonlarının tipik olarak görüldüğü tümör grubu hangisidir?",
    "secenekler": {
     "A": "Retinoblastom",
@@ -865,6 +1085,7 @@
     "E": "Osteosarkom"
    },
    "dogru": "C",
+   "ipucu": "Beynin destek hücrelerinden gelişen ve hızla büyümeyen tümörlerle bazı miyeloid lösemi alt tiplerini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Retinoblastom RB geninin iki alelinin kaybıyla ilişkilidir; IDH mutasyonunun tipik tümörü değildir.",
@@ -874,6 +1095,9 @@
     "E": "Osteosarkom RB kaybının sık görüldüğü tümörlerdendir; IDH mutasyonuyla tanımlanmaz."
    },
    "ozet": "IDH mutasyonları düşük ve orta dereceli gliomlarda, bazı akut miyeloid lösemi alt tiplerinde, kolanjiyokarsinom ve sarkomlarda görülür; mutant IDH inhibitörleri özellikle AML'de onaylıdır.",
+   "sayfa": [
+    32
+   ],
    "metin": "**Soru.** IDH mutasyonlarının tipik olarak görüldüğü tümör grubu hangisidir?\n\n**A)** Retinoblastom · **B)** Nöroblastom · **C)** Düşük ve orta dereceli gliomlar · **D)** Meningiom · **E)** Osteosarkom\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Retinoblastom** — Retinoblastom RB geninin iki alelinin kaybıyla ilişkilidir; IDH mutasyonunun tipik tümörü değildir.\n- **Nöroblastom** — Nöroblastom MYCN amplifikasyonuyla ilişkili tümördür; IDH mutasyonu tipik değildir.\n- **Düşük ve orta dereceli gliomlar** — Düşük ve orta dereceli gliomlar doğru: IDH mutasyonları bunlarda, ayrıca bazı akut miyeloid lösemi, kolanjiyokarsinom ve sarkomlarda görülür.\n- **Meningiom** — Meningiom NF2 kaybıyla ilişkili tümörlerdendir; IDH mutasyonunun tipik grubu değildir.\n- **Osteosarkom** — Osteosarkom RB kaybının sık görüldüğü tümörlerdendir; IDH mutasyonuyla tanımlanmaz.\n\n**Cevap: C** — Düşük ve orta dereceli gliomlar\n\n**Özet.** IDH mutasyonları düşük ve orta dereceli gliomlarda, bazı akut miyeloid lösemi alt tiplerinde, kolanjiyokarsinom ve sarkomlarda görülür; mutant IDH inhibitörleri özellikle AML'de onaylıdır.",
    "ses": "i de ha mutasyonlarının tipik olarak görüldüğü tümör grubu hangisidir?\nA, Retinoblastom\nBe, Nöroblastom\nCe, Düşük ve orta dereceli gliomlar\nDe, Meningiom\nE, Osteosarkom\nŞıkları sırasıyla gözden geçirelim.\nRetinoblastom re be geninin iki alelinin kaybıyla ilişkilidir. I de ha mutasyonunun tipik tümörü değildir.\nNöroblastom mik en amplifikasyonuyla ilişkili tümördür. I de ha mutasyonu tipik değildir.\nDüşük ve orta dereceli gliomlar doğru, i de ha mutasyonları bunlarda, ayrıca bazı akut miyeloid lösemi, kolanjiyokarsinom ve sarkomlarda görülür.\nMeningiom ne fe iki kaybıyla ilişkili tümörlerdendir. I de ha mutasyonunun tipik grubu değildir.\nOsteosarkom re be kaybının sık görüldüğü tümörlerdendir. I de ha mutasyonuyla tanımlanmaz.\nDoğru cevap Ce, Düşük ve orta dereceli gliomlar\ni de ha mutasyonları düşük ve orta dereceli gliomlarda, bazı akut miyeloid lösemi alt tiplerinde, kolanjiyokarsinom ve sarkomlarda görülür. Mutant i de ha inhibitörleri özellikle akut miyeloid lösemide onaylıdır.",
    "kelime": 141
@@ -881,6 +1105,7 @@
   {
    "no": 48,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "TP53'ün anjiyogenezi baskılamak için artırdığı faktör hangisidir?",
    "secenekler": {
     "A": "Trombospondin-1",
@@ -890,6 +1115,7 @@
     "E": "MYC"
    },
    "dogru": "A",
+   "ipucu": "Tümör baskılayıcının damar oluşumunu frenleyen, anti-anjiyojenik etkili bir proteini artırdığını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Trombospondin-1 doğru: TP53 anti-anjiyojenik trombospondin-1'i artırır ve VEGF'yi baskılar.",
@@ -899,6 +1125,9 @@
     "E": "MYC, RAS ile birlikte VEGF ve diğer anjiyojenik faktörleri artıran bir onkogendir."
    },
    "ozet": "Hipoksi HIF-1α'yı stabilize eder ve VEGF artar; RAS ve MYC de VEGF'yi artırır, tümör baskılayıcı TP53 ise trombospondin-1'i artırıp VEGF'yi baskılar.",
+   "sayfa": [
+    33
+   ],
    "metin": "**Soru.** TP53'ün anjiyogenezi baskılamak için artırdığı faktör hangisidir?\n\n**A)** Trombospondin-1 · **B)** HIF-1α · **C)** VEGF · **D)** FGF · **E)** MYC\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Trombospondin-1** — Trombospondin-1 doğru: TP53 anti-anjiyojenik trombospondin-1'i artırır ve VEGF'yi baskılar.\n- **HIF-1α** — HIF-1α hipoksiyle stabilize olup VEGF transkripsiyonunu artırır; anjiyogenezi teşvik eder.\n- **VEGF** — VEGF anjiyogenezi uyaran temel faktördür; TP53 onu artırmaz, baskılar.\n- **FGF** — FGF, tümörle ilişkili makrofajların ürettiği ve anjiyogenezi destekleyen büyüme faktörüdür.\n- **MYC** — MYC, RAS ile birlikte VEGF ve diğer anjiyojenik faktörleri artıran bir onkogendir.\n\n**Cevap: A** — Trombospondin-1\n\n**Özet.** Hipoksi HIF-1α'yı stabilize eder ve VEGF artar; RAS ve MYC de VEGF'yi artırır, tümör baskılayıcı TP53 ise trombospondin-1'i artırıp VEGF'yi baskılar.",
    "ses": "te pe elli üçün anjiyogenezi baskılamak için artırdığı faktör hangisidir?\nA, Trombospondin bir\nBe, ha i fe bir alfa\nCe, ve e ge fe\nDe, fe ge fe\nE, mik\nŞimdi seçeneklere tek tek bakalım.\nTrombospondin bir doğru, te pe elli üç anti-anjiyojenik trombospondin biri artırır ve ve e ge feyi baskılar.\nha i fe bir alfa hipoksiyle stabilize olup ve e ge fe transkripsiyonunu artırır. Anjiyogenezi teşvik eder.\nve e ge fe anjiyogenezi uyaran temel faktördür. Te pe elli üç onu artırmaz, baskılar.\nfe ge fe, tümörle ilişkili makrofajların ürettiği ve anjiyogenezi destekleyen büyüme faktörüdür.\nmik, ras ile birlikte ve e ge fe ve diğer anjiyojenik faktörleri artıran bir onkogendir.\nDoğru cevap A, Trombospondin bir\nHipoksi ha i fe bir alfayı stabilize eder ve ve e ge fe artar. Ras ve mik de ve e ge feyi artırır, tümör baskılayıcı te pe elli üç ise trombospondin biri artırıp ve e ge feyi baskılar.",
    "kelime": 119
@@ -906,6 +1135,7 @@
   {
    "no": 49,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Bevacizumab tedavisine karşı tümörlerin gösterebildiği uyum hangisidir?",
    "secenekler": {
     "A": "E-kadherin artışı",
@@ -915,6 +1145,7 @@
     "E": "Başka anjiyojen faktörlere geçiş"
    },
    "dogru": "E",
+   "ipucu": "Tek bir damar oluşturucu molekül nötralize edildiğinde tümörün alternatif yollar arayabileceğini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "E-kadherin artışı hücre kohezyonunu artırır; tümörün daha invaziv fenotipe kaymasıyla bağdaşmaz.",
@@ -924,6 +1155,10 @@
     "E": "Başka anjiyojen faktörlere geçiş doğru: VEGF nötralize edilince tümör başka faktörlere geçebilir ya da daha invaziv fenotipe kayabilir."
    },
    "ozet": "Bevacizumab VEGF'yi nötralize eder ve yaşamı genellikle aylar düzeyinde uzatır; tümörler başka anjiyojen faktörlere geçebilir ya da daha invaziv fenotipe kayabilir.",
+   "sayfa": [
+    35,
+    36
+   ],
    "metin": "**Soru.** Bevacizumab tedavisine karşı tümörlerin gösterebildiği uyum hangisidir?\n\n**A)** E-kadherin artışı · **B)** VEGF reseptörünün çoğalması · **C)** Tamamen damarsız büyüme · **D)** RB'nin yeniden aktivasyonu · **E)** Başka anjiyojen faktörlere geçiş\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **E-kadherin artışı** — E-kadherin artışı hücre kohezyonunu artırır; tümörün daha invaziv fenotipe kaymasıyla bağdaşmaz.\n- **VEGF reseptörünün çoğalması** — VEGF reseptörünün çoğalması bevacizumab direnci için tanımlanan bir mekanizma değildir; tanımlanan uyum faktör değişimidir.\n- **Tamamen damarsız büyüme** — Tamamen damarsız büyüme mümkün değildir; katı tümörler oksijen ve besin için yeni damar oluşumuna ihtiyaç duyar.\n- **RB'nin yeniden aktivasyonu** — RB'nin yeniden aktivasyonu anti-anjiyojen tedaviyle ilgili değildir; RB G1/S kontrol noktasını düzenler.\n- **Başka anjiyojen faktörlere geçiş** — Başka anjiyojen faktörlere geçiş doğru: VEGF nötralize edilince tümör başka faktörlere geçebilir ya da daha invaziv fenotipe kayabilir.\n\n**Cevap: E** — Başka anjiyojen faktörlere geçiş\n\n**Özet.** Bevacizumab VEGF'yi nötralize eder ve yaşamı genellikle aylar düzeyinde uzatır; tümörler başka anjiyojen faktörlere geçebilir ya da daha invaziv fenotipe kayabilir.",
    "ses": "Bevacizumab tedavisine karşı tümörlerin gösterebildiği uyum hangisidir?\nA, e kadherin artışı\nBe, ve e ge fe reseptörünün çoğalması\nCe, Tamamen damarsız büyüme\nDe, re benin yeniden aktivasyonu\nE, Başka anjiyojen faktörlere geçiş\nSeçenekleri sırayla değerlendirelim.\ne kadherin artışı hücre kohezyonunu artırır. Tümörün daha invaziv fenotipe kaymasıyla bağdaşmaz.\nve e ge fe reseptörünün çoğalması bevacizumab direnci için tanımlanan bir mekanizma değildir. Tanımlanan uyum faktör değişimidir.\nTamamen damarsız büyüme mümkün değildir. Katı tümörler oksijen ve besin için yeni damar oluşumuna ihtiyaç duyar.\nre benin yeniden aktivasyonu anti-anjiyojen tedaviyle ilgili değildir. Re be ge bir se kontrol noktasını düzenler.\nBaşka anjiyojen faktörlere geçiş doğru, ve e ge fe nötralize edilince tümör başka faktörlere geçebilir ya da daha invaziv fenotipe kayabilir.\nDoğru cevap E, Başka anjiyojen faktörlere geçiş\nBevacizumab ve e ge feyi nötralize eder ve yaşamı genellikle aylar düzeyinde uzatır. Tümörler başka anjiyojen faktörlere geçebilir ya da daha invaziv fenotipe kayabilir.",
    "kelime": 161

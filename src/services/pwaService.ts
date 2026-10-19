@@ -9,7 +9,15 @@
  * - Push Bildirim yetkilendirmesi ve entegrasyonu
  */
 
-export type IosBrowserType = 'safari' | 'crios' | 'fxios' | 'edgios' | 'other';
+import {
+  getIosBrowser,
+  isIosDevice,
+  isIpadDevice,
+  isStandaloneApp,
+  type IosBrowserType,
+} from '../utils/device';
+
+export type { IosBrowserType } from '../utils/device';
 
 export interface PwaState {
   isSupported: boolean;
@@ -39,36 +47,13 @@ export const SW_URL = '/sw.js?v=12';
 export const PWA_WELCOME_STORAGE_KEY = 'medsoru_pwa_welcome_dismissed_v1';
 export const PWA_GUIDE_OPEN_EVENT = 'medsor:open-pwa-install-guide';
 
-export function detectIosDevice(): boolean {
-  if (typeof navigator === 'undefined') return false;
-  const ua = navigator.userAgent || '';
-  if (/iPad|iPhone|iPod/.test(ua)) return true;
-  if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) return true;
-  if (typeof CSS !== 'undefined' && typeof CSS.supports === 'function' && CSS.supports('-webkit-touch-callout', 'none')) {
-    return true;
-  }
-  return false;
-}
-
-export function detectIpadDevice(): boolean {
-  if (typeof navigator === 'undefined') return false;
-  const ua = navigator.userAgent || '';
-  if (/iPad/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) return true;
-  if (detectIosDevice() && typeof window !== 'undefined' && Math.min(window.screen.width, window.screen.height) >= 700) {
-    return true;
-  }
-  return false;
-}
-
-export function detectIosBrowser(): IosBrowserType {
-  if (typeof navigator === 'undefined') return 'other';
-  const ua = navigator.userAgent || '';
-  if (/CriOS/i.test(ua)) return 'crios';
-  if (/FxiOS/i.test(ua)) return 'fxios';
-  if (/EdgiOS/i.test(ua)) return 'edgios';
-  if (/Safari/i.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS/i.test(ua)) return 'safari';
-  return 'other';
-}
+/**
+ * Geriye dönük uyumluluk: algılama artık `utils/device.ts` içinde tek yerde.
+ * Burada yalnız yeniden dışa aktarılır (mevcut çağrılar değişmeden çalışır).
+ */
+export const detectIosDevice = isIosDevice;
+export const detectIpadDevice = isIpadDevice;
+export const detectIosBrowser = getIosBrowser;
 
 class PwaService {
   private deferredPrompt: any = null;
@@ -125,13 +110,7 @@ class PwaService {
   }
 
   public isStandalone(): boolean {
-    if (typeof window === 'undefined') return false;
-    return (
-      window.matchMedia('(display-mode: standalone)').matches ||
-      window.matchMedia('(display-mode: fullscreen)').matches ||
-      (window.navigator as any).standalone === true ||
-      document.referrer.includes('android-app://')
-    );
+    return isStandaloneApp();
   }
 
   private checkInstalled() {

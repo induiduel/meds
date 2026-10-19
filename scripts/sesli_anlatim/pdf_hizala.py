@@ -240,10 +240,77 @@ def hizala(key: str, pdfsrc: dict, goster: int = 0) -> dict | None:
             j = onceki
         onceki = j
         sonuc.append(j)
-    paragraflar_out = [
-        {"dosya": int(dosya_of[j]), "sayfa": int(sayfa_list[j][1]), "guven": round(float(min(1.0, S[i, j] / GUVEN_TAVAN)), 2)}
-        for i, j in enumerate(sonuc)
-    ]
+
+    re_cumle = re.compile(r'[^.!?…]+(?:[.!?…]+["\'”’)\]]*\s*|$)')
+    cand_koks = [set(kokler(t)) for _, _, t in sayfa_list]
+
+    paragraflar_out = []
+    for i, j in enumerate(sonuc):
+        j_next = sonuc[i + 1] if i + 1 < len(sonuc) else j
+        c_list = [m.group(0).strip() for m in re_cumle.finditer(paragraflar[i]) if m.group(0).strip()]
+        K = len(c_list)
+
+        if K <= 1 or j_next <= j:
+            c_sayfalar = [int(sayfa_list[j][1])] * max(1, K)
+            c_dosyalar = [int(dosya_of[j])] * max(1, K)
+        else:
+            cand_indices = list(range(j, min(len(sayfa_list), max(j + 1, min(j + 6, j_next + 1)))))
+            skorlar = []
+            for c in c_list:
+                ck = set(kokler(c))
+                s_dict = {cand: len(ck & cand_koks[cand]) for cand in cand_indices}
+                skorlar.append(s_dict)
+
+            dp = [{cand: skorlar[0][cand] for cand in cand_indices}]
+            parent = [{cand: None for cand in cand_indices}]
+
+            for ci in range(1, K):
+                cur_dp = {}
+                cur_par = {}
+                for cand in cand_indices:
+                    best_val = -1e9
+                    best_prev = j
+                    for prev in cand_indices:
+                        if prev > cand:
+                            continue
+                        val = dp[ci - 1][prev]
+                        if prev == cand:
+                            val += 0.5
+                        if val > best_val:
+                            best_val = val
+                            best_prev = prev
+                    cur_dp[cand] = best_val + skorlar[ci][cand]
+                    cur_par[cand] = best_prev
+                dp.append(cur_dp)
+                parent.append(cur_par)
+
+            best_last = max(cand_indices, key=lambda cand: dp[-1][cand])
+            c_yol = [best_last]
+            for ci in range(K - 1, 0, -1):
+                c_yol.append(parent[ci][c_yol[-1]])
+            c_yol = c_yol[::-1]
+
+            if c_yol[0] != j:
+                c_yol[0] = j
+                for ci in range(1, K):
+                    if c_yol[ci] < c_yol[ci - 1]:
+                        c_yol[ci] = c_yol[ci - 1]
+
+            if j_next == j + 2 and K >= 3 and (j + 1) not in c_yol:
+                c_yol[-1] = j + 1
+
+            c_sayfalar = [int(sayfa_list[idx][1]) for idx in c_yol]
+            c_dosyalar = [int(dosya_of[idx]) for idx in c_yol]
+
+        p_obj = {
+            "dosya": int(dosya_of[j]),
+            "sayfa": int(sayfa_list[j][1]),
+            "guven": round(float(min(1.0, S[i, j] / GUVEN_TAVAN)), 2),
+            "sayfalar": c_sayfalar,
+        }
+        if any(d != dosya_of[j] for d in c_dosyalar):
+            p_obj["dosyalar"] = c_dosyalar
+        paragraflar_out.append(p_obj)
     if goster:
         adim = max(1, len(paragraflar) // goster)
         for i in range(0, len(paragraflar), adim):

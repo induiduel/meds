@@ -22,8 +22,9 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_learn_tour_(library|lesson)_v1$/,
   // Canlı ders oynatma listesi ve tekrar tercihi
   /^medsoru_canli_ders_(liste|tekrar|varsayilan_ses)_v1$/,
-  // Yıldızlı paragraflar (tekrar listesi)
+  // Yıldızlı paragraflar (tekrar listesi) ve WhatsApp günlük tekrar tercihleri
   /^medsoru_yildizli_paragraflar(_v1)?$/,
+  /^medsoru_whatsapp_prefs_v1$/,
   /^medsoru_slide_drawings_v2(:.*)?$/,
   /^medsoru_annotations:.+$/,
   /^medsoru_highlights_v1$/,
@@ -38,6 +39,7 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_onem_(ogrendim|tercih|pdf|asistan|asistan_tercih|son)_v1$/,
   /^medsoru_onem_ders(_[a-z0-9_]+)?$/,
   /^medsoru_cozucu_(ilerleme|tercih|istatistik)_v1$/,
+  /^medsoru_alt_cozucu_(v1|tercih_v1)$/,
   // Sınav Çalışması: kazanım başına çözülen sorular
   /^medsoru_sinav_calisma_(v2|son_v1)$/,
   /^medsoru_checkup_v1$/,
@@ -208,7 +210,7 @@ export function hasDirtyKv(): boolean {
 
 /** Asla `v: null` mezar taşıyla silinmemesi gereken birikimli öğrenci ilerleme/içerik anahtarları. */
 const PROTECTED_PROGRESS_RE =
-  /^(medsoru_(calisma_takip_v1|cozucu_(ilerleme|istatistik|tercih)_v1|onem_(asistan|asistan_tercih|ogrendim|tercih|pdf|son)_v1|onem_ders(_[a-z0-9_]+)?|spot_(ilerleme_v1|ogrendim)|learn_(progress|done|recent|review|sessions)(_v1)?|sinav_calisma_v2|checkup_v1|yildizli_paragraflar(_v1)?|canli_ders_liste_v1|ornek_(k1_cevap|k1_ders)|summary_progress|stats_archive_v1|highlights_v1|card_notes_v1|custom_encyclopedia_v1|saved_(contributor_name|student_number)|pdf_(page|q|l|s)_v2)|cikmis_quiz|medsor_(custom|favorite)_diseases_v1)$/;
+  /^(medsoru_(calisma_takip_v1|cozucu_(ilerleme|istatistik|tercih)_v1|alt_cozucu_(v1|tercih_v1)|onem_(asistan|asistan_tercih|ogrendim|tercih|pdf|son)_v1|onem_ders(_[a-z0-9_]+)?|spot_(ilerleme_v1|ogrendim)|learn_(progress|done|recent|review|sessions)(_v1)?|sinav_calisma_v2|checkup_v1|yildizli_paragraflar(_v1)?|whatsapp_prefs_v1|canli_ders_liste_v1|ornek_(k1_cevap|k1_ders)|summary_progress|stats_archive_v1|highlights_v1|card_notes_v1|custom_encyclopedia_v1|saved_(contributor_name|student_number)|pdf_(page|q|l|s)_v2)|cikmis_quiz|medsor_(custom|favorite)_diseases_v1)$/;
 
 export const isProtectedProgressKey = (key: string): boolean => PROTECTED_PROGRESS_RE.test(key);
 
@@ -282,6 +284,33 @@ export function mergeKvJsonValue(key: string, olderRaw: string, newerRaw: string
           ...lo,
           ...hi,
           s: { ...(lo.s && typeof lo.s === 'object' ? lo.s : {}), ...(hi.s && typeof hi.s === 'object' ? hi.s : {}) },
+        };
+      }
+      return JSON.stringify(out);
+    }
+
+    if (key === 'medsoru_alt_cozucu_v1') {
+      const a = JSON.parse(olderRaw);
+      const b = JSON.parse(newerRaw);
+      if (!a || typeof a !== 'object' || !b || typeof b !== 'object') return newerRaw;
+      const out: Record<string, any> = { ...a };
+      for (const [kod, rec] of Object.entries(b) as [string, any][]) {
+        const cur = out[kod];
+        if (!cur || typeof cur !== 'object' || !rec || typeof rec !== 'object') {
+          out[kod] = rec;
+          continue;
+        }
+        const [lo, hi] = (Number(rec.son) || 0) >= (Number(cur.son) || 0) ? [cur, rec] : [rec, cur];
+        const bitti = Array.from(new Set([...(Array.isArray(lo.bitti) ? lo.bitti : []), ...(Array.isArray(hi.bitti) ? hi.bitti : [])]));
+        const ilkDogru = Array.from(new Set([...(Array.isArray(lo.ilkDogru) ? lo.ilkDogru : []), ...(Array.isArray(hi.ilkDogru) ? hi.ilkDogru : [])]));
+        const incelenen = Array.from(new Set([...(Array.isArray(lo.incelenen) ? lo.incelenen : []), ...(Array.isArray(hi.incelenen) ? hi.incelenen : [])]));
+        out[kod] = {
+          ...lo,
+          ...hi,
+          bitti,
+          ilkDogru,
+          incelenen,
+          secim: { ...(lo.secim && typeof lo.secim === 'object' ? lo.secim : {}), ...(hi.secim && typeof hi.secim === 'object' ? hi.secim : {}) },
         };
       }
       return JSON.stringify(out);

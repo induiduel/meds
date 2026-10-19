@@ -1,7 +1,8 @@
 {
  "kod": "06",
+ "no": 6,
  "baslik": "Hücresel Yaşlanma",
- "surum": "alt-1",
+ "surum": "alt-2",
  "sorular": [
   {
    "no": 1,
@@ -15,18 +16,22 @@
     "E": "Kistik fibrozis"
    },
    "dogru": "B",
+   "ipucu": "Erken yaşlanma fenotipi ve belirgin azalmış çoğalma kapasitesiyle seyreden kalıtsal progeroid tabloyu düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
-    "A": "Burada sorulan tablo, DNA onarım proteinlerini kodlayan genlerin mutasyonuyla erken yaşlanmadır. Down sendromu bu sorudaki ayrımı sağlamaz.",
+    "A": "Down sendromu 21. kromozomun tam trizomisinden kaynaklanan ve zihinsel gelişim geriliği ile konjenital kalp anomalileriyle seyreden kromozomal bir hastalıktır; DNA helikaz mutasyonuyla giden progeroid tablo ise Werner sendromudur.",
     "B": "Werner sendromu doğru: DNA onarım genleri mutasyonludur; erken yaşlanma fenotipi ve çoğalma kapasitesinde belirgin azalma görülür.",
-    "C": "Progeroid sendromlarda temel kusur DNA hasarının onarılamaması ve mutasyonların birikmesidir. Tay–Sachs bu sorudaki ayrımı sağlamaz.",
-    "D": "Niemann–Pick ile karıştırılabilir: Onarılamayan DNA hasarı birikince hücreler senesense girer ya da apoptoza gider.",
-    "E": "Erken yaşlanma sendromları kalıtsal DNA onarım kusurlarıyla, hızlanmış hücresel yaşlanma olarak ortaya çıkar. Kistik fibrozis bu sorudaki ayrımı sağlamaz."
+    "C": "Tay–Sachs hastalığı heksozaminidaz A eksikliğine bağlı nöronlarda GM2 gangliozid birikimiyle giden lizozomal depo hastalığıdır; DNA helikaz kusuruyla erken yaşlanma oluşturan tablo ise Werner sendromudur.",
+    "D": "Niemann–Pick hastalığı sfingomiyelinaz eksikliği veya kolesterol transport kusuruyla seyreden lizozomal lipid depo hastalığıdır; DNA onarım bozukluğuyla erken yaşlanmaya yol açan sendrom ise Werner sendromudur.",
+    "E": "Kistik fibrozis CFTR klor kanalı mutasyonuyla ekzokrin bez salgılarının koyulaştığı otozomal resesif bir hastalıktır; DNA helikaz gen mutasyonuyla hızlanmış hücresel yaşlanma yapan tablo ise Werner sendromudur."
    },
    "ozet": "**Werner sendromu** progeroid bir sendromdur: DNA onarım proteinlerinin genleri mutasyonludur, bu yüzden erken yaşlanma ve azalmış çoğalma kapasitesi görülür.",
-   "metin": "**Soru.** DNA onarım proteinlerini kodlayan gen mutasyonuyla seyreden progeroid sendrom hangisidir?\n\n**A)** Down sendromu · **B)** Werner sendromu · **C)** Tay–Sachs · **D)** Niemann–Pick · **E)** Kistik fibrozis\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Down sendromu** — Burada sorulan tablo, DNA onarım proteinlerini kodlayan genlerin mutasyonuyla erken yaşlanmadır. Down sendromu bu sorudaki ayrımı sağlamaz.\n- **Werner sendromu** — Werner sendromu doğru: DNA onarım genleri mutasyonludur; erken yaşlanma fenotipi ve çoğalma kapasitesinde belirgin azalma görülür.\n- **Tay–Sachs** — Progeroid sendromlarda temel kusur DNA hasarının onarılamaması ve mutasyonların birikmesidir. Tay–Sachs bu sorudaki ayrımı sağlamaz.\n- **Niemann–Pick** — Niemann–Pick ile karıştırılabilir: Onarılamayan DNA hasarı birikince hücreler senesense girer ya da apoptoza gider.\n- **Kistik fibrozis** — Erken yaşlanma sendromları kalıtsal DNA onarım kusurlarıyla, hızlanmış hücresel yaşlanma olarak ortaya çıkar. Kistik fibrozis bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — Werner sendromu\n\n**Özet.** **Werner sendromu** progeroid bir sendromdur: DNA onarım proteinlerinin genleri mutasyonludur, bu yüzden erken yaşlanma ve azalmış çoğalma kapasitesi görülür.",
-   "ses": "De ne a onarım proteinlerini kodlayan gen mutasyonuyla seyreden progeroid sendrom hangisidir?\nA, Daun sendromu\nBe, Verner sendromu\nCe, Tay Saks\nDe, Niman Pik\nE, Kistik fibrozis\nSeçenekleri sırayla değerlendirelim.\nBurada sorulan tablo, de ne a onarım proteinlerini kodlayan genlerin mutasyonuyla erken yaşlanmadır. Down sendromu bu sorudaki ayrımı sağlamaz.\nVerner sendromu doğru. De ne a onarım genleri mutasyonludur. Erken yaşlanma fenotipi ve çoğalma kapasitesinde belirgin azalma görülür.\nProgeroid sendromlarda temel kusur de ne a hasarının onarılamaması ve mutasyonların birikmesidir. Tay–Sachs bu sorudaki ayrımı sağlamaz.\nNiemann–Pick ile karıştırılabilir. Onarılamayan de ne a hasarı birikince hücreler senesense girer ya da apoptoza gider.\nErken yaşlanma sendromları kalıtsal de ne a onarım kusurlarıyla, hızlanmış hücresel yaşlanma olarak ortaya çıkar. Kistik fibrozis bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Verner sendromu\nVerner sendromu progeroid bir sendromdur. De ne a onarım proteinlerinin genleri mutasyonludur, bu yüzden erken yaşlanma ve azalmış çoğalma kapasitesi görülür.",
-   "kelime": 156
+   "sayfa": [
+    10
+   ],
+   "metin": "**Soru.** DNA onarım proteinlerini kodlayan gen mutasyonuyla seyreden progeroid sendrom hangisidir?\n\n**A)** Down sendromu · **B)** Werner sendromu · **C)** Tay–Sachs · **D)** Niemann–Pick · **E)** Kistik fibrozis\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Down sendromu** — Down sendromu 21. kromozomun tam trizomisinden kaynaklanan ve zihinsel gelişim geriliği ile konjenital kalp anomalileriyle seyreden kromozomal bir hastalıktır; DNA helikaz mutasyonuyla giden progeroid tablo ise Werner sendromudur.\n- **Werner sendromu** — Werner sendromu doğru: DNA onarım genleri mutasyonludur; erken yaşlanma fenotipi ve çoğalma kapasitesinde belirgin azalma görülür.\n- **Tay–Sachs** — Tay–Sachs hastalığı heksozaminidaz A eksikliğine bağlı nöronlarda GM2 gangliozid birikimiyle giden lizozomal depo hastalığıdır; DNA helikaz kusuruyla erken yaşlanma oluşturan tablo ise Werner sendromudur.\n- **Niemann–Pick** — Niemann–Pick hastalığı sfingomiyelinaz eksikliği veya kolesterol transport kusuruyla seyreden lizozomal lipid depo hastalığıdır; DNA onarım bozukluğuyla erken yaşlanmaya yol açan sendrom ise Werner sendromudur.\n- **Kistik fibrozis** — Kistik fibrozis CFTR klor kanalı mutasyonuyla ekzokrin bez salgılarının koyulaştığı otozomal resesif bir hastalıktır; DNA helikaz gen mutasyonuyla hızlanmış hücresel yaşlanma yapan tablo ise Werner sendromudur.\n\n**Cevap: B** — Werner sendromu\n\n**Özet.** **Werner sendromu** progeroid bir sendromdur: DNA onarım proteinlerinin genleri mutasyonludur, bu yüzden erken yaşlanma ve azalmış çoğalma kapasitesi görülür.",
+   "ses": "De ne a onarım proteinlerini kodlayan gen mutasyonuyla seyreden progeroid sendrom hangisidir?\nA, Daun sendromu\nBe, Verner sendromu\nCe, Tay Saks\nDe, Niman Pik\nE, Kistik fibrozis\nSeçenekleri sırayla değerlendirelim.\nDown sendromu yirmi bir. kromozomun tam trizomisinden kaynaklanan ve zihinsel gelişim geriliği ile konjenital kalp anomalileriyle seyreden kromozomal bir hastalıktır. De ne a helikaz mutasyonuyla giden progeroid tablo ise Werner sendromudur.\nVerner sendromu doğru. De ne a onarım genleri mutasyonludur. Erken yaşlanma fenotipi ve çoğalma kapasitesinde belirgin azalma görülür.\nTay–Sachs hastalığı heksozaminidaz A eksikliğine bağlı nöronlarda ge me iki gangliozid birikimiyle giden lizozomal depo hastalığıdır. De ne a helikaz kusuruyla erken yaşlanma oluşturan tablo ise Werner sendromudur.\nNiemann–Pick hastalığı sfingomiyelinaz eksikliği veya kolesterol transport kusuruyla seyreden lizozomal lipid depo hastalığıdır. De ne a onarım bozukluğuyla erken yaşlanmaya yol açan sendrom ise Werner sendromudur.\nKistik fibrozis ce fe te re klor kanalı mutasyonuyla ekzokrin bez salgılarının koyulaştığı otozomal resesif bir hastalıktır. De ne a helikaz gen mutasyonuyla hızlanmış hücresel yaşlanma yapan tablo ise Werner sendromudur.\nDoğru cevap Be, Verner sendromu\nVerner sendromu progeroid bir sendromdur. De ne a onarım proteinlerinin genleri mutasyonludur, bu yüzden erken yaşlanma ve azalmış çoğalma kapasitesi görülür.",
+   "kelime": 193
   },
   {
    "no": 2,
@@ -40,6 +45,7 @@
     "E": "Otofaji artışı"
    },
    "dogru": "A",
+   "ipucu": "Her bölünmede kromozom uçlarındaki tekrarlayan dizilere nükleotid ekleyen enzimin somatik hücrelerdeki düzeyini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Telomeraz eksikliği doğru: çoğu somatik hücrede telomeraz yok ya da çok düşüktür, her bölünmede uçların bir kısmı kopyalanamaz ve telomer kısalır.",
@@ -49,6 +55,10 @@
     "E": "Otofaji artışı kalori kısıtlamasının olumlu mekanizmalarından biridir; telomerlerin kısalmasına yol açmaz."
    },
    "ozet": "Telomerler her bölünmede kısmen kopyalanamaz; çoğu somatik hücrede **telomeraz** yok ya da çok düşük olduğundan bu kayıp yerine konmaz ve telomerler yaşla kısalır.",
+   "sayfa": [
+    21,
+    23
+   ],
    "metin": "**Soru.** Somatik hücrelerde telomerlerin yaşla kısalmasının nedeni hangisidir?\n\n**A)** Telomeraz aktivitesinin yok/çok düşük olması · **B)** Telomeraz aşırı aktivitesi · **C)** mTOR baskılanması · **D)** Kaspaz aktivasyonu · **E)** Otofaji artışı\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Telomeraz aktivitesinin yok/çok düşük olması** — Telomeraz eksikliği doğru: çoğu somatik hücrede telomeraz yok ya da çok düşüktür, her bölünmede uçların bir kısmı kopyalanamaz ve telomer kısalır.\n- **Telomeraz aşırı aktivitesi** — Telomeraz aşırı aktivitesi birçok kanser hücresinde görülür; telomer uzunluğunu sabitleyip hücreyi ölümsüz kılar, kısaltmaz.\n- **mTOR baskılanması** — mTOR baskılanması, kalori kısıtlamasında görülen ve ömrü uzatabilen bir değişikliktir; telomer kısalmasının nedeni değildir.\n- **Kaspaz aktivasyonu** — Kaspaz aktivasyonu apoptozun yürütücü basamağıdır; DNA parçalanması ve apoptotik cisimcik oluşumu yapar, telomerle ilgili değildir.\n- **Otofaji artışı** — Otofaji artışı kalori kısıtlamasının olumlu mekanizmalarından biridir; telomerlerin kısalmasına yol açmaz.\n\n**Cevap: A** — Telomeraz aktivitesinin yok/çok düşük olması\n\n**Özet.** Telomerler her bölünmede kısmen kopyalanamaz; çoğu somatik hücrede **telomeraz** yok ya da çok düşük olduğundan bu kayıp yerine konmaz ve telomerler yaşla kısalır.",
    "ses": "Somatik hücrelerde telomerlerin yaşla kısalmasının nedeni hangisidir?\nA, Telomeraz aktivitesinin yok ya da çok düşük olması\nBe, Telomeraz aşırı aktivitesi\nCe, Me te o re baskılanması\nDe, Kaspaz aktivasyonu\nE, Otofaji artışı\nHer seçeneği tek tek ele alalım.\nTelomeraz eksikliği doğru. Çoğu somatik hücrede telomeraz yok ya da çok düşüktür, her bölünmede uçların bir kısmı kopyalanamaz ve telomer kısalır.\nTelomeraz aşırı aktivitesi birçok kanser hücresinde görülür. Telomer uzunluğunu sabitleyip hücreyi ölümsüz kılar, kısaltmaz.\nMe te o re baskılanması, kalori kısıtlamasında görülen ve ömrü uzatabilen bir değişikliktir. Telomer kısalmasının nedeni değildir.\nKaspaz aktivasyonu apoptozun yürütücü basamağıdır. De ne a parçalanması ve apoptotik cisimcik oluşumu yapar, telomerle ilgili değildir.\nOtofaji artışı kalori kısıtlamasının olumlu mekanizmalarından biridir. Telomerlerin kısalmasına yol açmaz.\nDoğru cevap A, Telomeraz aktivitesinin yok ya da çok düşük olması\nTelomerler her bölünmede kısmen kopyalanamaz. Çoğu somatik hücrede telomeraz yok ya da çok düşük olduğundan bu kayıp yerine konmaz ve telomerler yaşla kısalır.",
    "kelime": 169
@@ -65,18 +75,23 @@
     "E": "Eritrositler"
    },
    "dogru": "C",
+   "ipucu": "Bu enzimin yüksek, düşük ile orta ve neredeyse sıfır düzeyde olduğu üç grubu hatırla; somatik olanlar en altta kalır.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
-    "A": "Çoğu somatik hücrede telomeraz aktivitesi yok ya da çok düşüktür, bu yüzden telomerler yaşla kısalır. Nöronlar bu sorudaki ayrımı sağlamaz.",
-    "B": "Kalp kası hücreleri ile karıştırılabilir: Telomeraz, telomer uçlarına nükleotid ekleyen bir RNA–protein kompleksidir ve en yüksek aktivitesi üreme hücrelerindedir.",
+    "A": "Nöronlar bölünme yeteneği olmayan kalıcı hücrelerdir ve telomeraz aktivitesi göstermezler; telomer uzunluğunu her bölünmede koruyan en yüksek telomeraz aktivitesi ise germ hücrelerinde bulunur.",
+    "B": "Kalp kası hücreleri doğum sonrası bölünme yeteneğini büyük ölçüde yitiren kalıcı hücrelerdir ve telomeraz içermezler; telomeraz aktivitesi en yüksek olan normal hücreler ise üreme (germ) hücreleridir.",
     "C": "Germ hücreleri doğru: telomeraz aktivitesi en yüksek bu hücrelerdedir; bazı kök hücrelerde ise düşük ile orta düzeydedir.",
-    "D": "Hepatositler ile karıştırılabilir: Telomerazın yeniden aktive olarak telomer uzunluğunu sabitlediği hücreler birçok kanser hücresidir.",
-    "E": "Telomerazın belirgin aktif olduğu gruplar germ hücreleri ve bazı kök hücrelerdir. Eritrositler bu sorudaki ayrımı sağlamaz."
+    "D": "Hepatositler gerektiğinde bölünebilen sessiz (stabil) somatik hücrelerdir ve telomeraz aktiviteleri çok düşüktür; telomerlerin kısalmasını önleyen en yüksek telomeraz etkinliği germ hücrelerindedir.",
+    "E": "Olgun eritrositler çekirdeksiz hücreler olduğundan DNA replikasyonu veya telomeraz aktivitesi içermezler; telomeraz aktivitesinin fizyolojik olarak en yüksek olduğu hücre grubu germ hücreleridir."
    },
    "ozet": "Telomeraz, telomer uçlarına nükleotid ekleyen RNA–protein kompleksidir; **germ hücrelerinde** yüksek, bazı kök hücrelerde düşük ile orta, çoğu somatik hücrede ise yok denecek kadar azdır.",
-   "metin": "**Soru.** Telomeraz aktivitesinin en yüksek olduğu hücreler hangisidir?\n\n**A)** Nöronlar · **B)** Kalp kası hücreleri · **C)** Germ hücreleri · **D)** Hepatositler · **E)** Eritrositler\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Nöronlar** — Çoğu somatik hücrede telomeraz aktivitesi yok ya da çok düşüktür, bu yüzden telomerler yaşla kısalır. Nöronlar bu sorudaki ayrımı sağlamaz.\n- **Kalp kası hücreleri** — Kalp kası hücreleri ile karıştırılabilir: Telomeraz, telomer uçlarına nükleotid ekleyen bir RNA–protein kompleksidir ve en yüksek aktivitesi üreme hücrelerindedir.\n- **Germ hücreleri** — Germ hücreleri doğru: telomeraz aktivitesi en yüksek bu hücrelerdedir; bazı kök hücrelerde ise düşük ile orta düzeydedir.\n- **Hepatositler** — Hepatositler ile karıştırılabilir: Telomerazın yeniden aktive olarak telomer uzunluğunu sabitlediği hücreler birçok kanser hücresidir.\n- **Eritrositler** — Telomerazın belirgin aktif olduğu gruplar germ hücreleri ve bazı kök hücrelerdir. Eritrositler bu sorudaki ayrımı sağlamaz.\n\n**Cevap: C** — Germ hücreleri\n\n**Özet.** Telomeraz, telomer uçlarına nükleotid ekleyen RNA–protein kompleksidir; **germ hücrelerinde** yüksek, bazı kök hücrelerde düşük ile orta, çoğu somatik hücrede ise yok denecek kadar azdır.",
-   "ses": "Telomeraz aktivitesinin en yüksek olduğu hücreler hangisidir?\nA, Nöronlar\nBe, Kalp kası hücreleri\nCe, Germ hücreleri\nDe, Hepatositler\nE, Eritrositler\nŞıkları sırasıyla gözden geçirelim.\nÇoğu somatik hücrede telomeraz aktivitesi yok ya da çok düşüktür, bu yüzden telomerler yaşla kısalır. Nöronlar bu sorudaki ayrımı sağlamaz.\nKalp kası hücreleri ile karıştırılabilir. Telomeraz, telomer uçlarına nükleotid ekleyen bir re ne a protein kompleksidir ve en yüksek aktivitesi üreme hücrelerindedir.\nGerm hücreleri doğru. Telomeraz aktivitesi en yüksek bu hücrelerdedir. Bazı kök hücrelerde ise düşük ile orta düzeydedir.\nHepatositler ile karıştırılabilir. Telomerazın yeniden aktive olarak telomer uzunluğunu sabitlediği hücreler birçok kanser hücresidir.\nTelomerazın belirgin aktif olduğu gruplar germ hücreleri ve bazı kök hücrelerdir. Eritrositler bu sorudaki ayrımı sağlamaz.\nDoğru cevap Ce, Germ hücreleri\nTelomeraz, telomer uçlarına nükleotid ekleyen re ne a protein kompleksidir. Germ hücrelerinde yüksek, bazı kök hücrelerde düşük ile orta, çoğu somatik hücrede ise yok denecek kadar azdır.",
-   "kelime": 164
+   "sayfa": [
+    23,
+    25
+   ],
+   "metin": "**Soru.** Telomeraz aktivitesinin en yüksek olduğu hücreler hangisidir?\n\n**A)** Nöronlar · **B)** Kalp kası hücreleri · **C)** Germ hücreleri · **D)** Hepatositler · **E)** Eritrositler\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Nöronlar** — Nöronlar bölünme yeteneği olmayan kalıcı hücrelerdir ve telomeraz aktivitesi göstermezler; telomer uzunluğunu her bölünmede koruyan en yüksek telomeraz aktivitesi ise germ hücrelerinde bulunur.\n- **Kalp kası hücreleri** — Kalp kası hücreleri doğum sonrası bölünme yeteneğini büyük ölçüde yitiren kalıcı hücrelerdir ve telomeraz içermezler; telomeraz aktivitesi en yüksek olan normal hücreler ise üreme (germ) hücreleridir.\n- **Germ hücreleri** — Germ hücreleri doğru: telomeraz aktivitesi en yüksek bu hücrelerdedir; bazı kök hücrelerde ise düşük ile orta düzeydedir.\n- **Hepatositler** — Hepatositler gerektiğinde bölünebilen sessiz (stabil) somatik hücrelerdir ve telomeraz aktiviteleri çok düşüktür; telomerlerin kısalmasını önleyen en yüksek telomeraz etkinliği germ hücrelerindedir.\n- **Eritrositler** — Olgun eritrositler çekirdeksiz hücreler olduğundan DNA replikasyonu veya telomeraz aktivitesi içermezler; telomeraz aktivitesinin fizyolojik olarak en yüksek olduğu hücre grubu germ hücreleridir.\n\n**Cevap: C** — Germ hücreleri\n\n**Özet.** Telomeraz, telomer uçlarına nükleotid ekleyen RNA–protein kompleksidir; **germ hücrelerinde** yüksek, bazı kök hücrelerde düşük ile orta, çoğu somatik hücrede ise yok denecek kadar azdır.",
+   "ses": "Telomeraz aktivitesinin en yüksek olduğu hücreler hangisidir?\nA, Nöronlar\nBe, Kalp kası hücreleri\nCe, Germ hücreleri\nDe, Hepatositler\nE, Eritrositler\nŞıkları sırasıyla gözden geçirelim.\nNöronlar bölünme yeteneği olmayan kalıcı hücrelerdir ve telomeraz aktivitesi göstermezler. Telomer uzunluğunu her bölünmede koruyan en yüksek telomeraz aktivitesi ise germ hücrelerinde bulunur.\nKalp kası hücreleri doğum sonrası bölünme yeteneğini büyük ölçüde yitiren kalıcı hücrelerdir ve telomeraz içermezler. Telomeraz aktivitesi en yüksek olan normal hücreler ise üreme, germ, hücreleridir.\nGerm hücreleri doğru. Telomeraz aktivitesi en yüksek bu hücrelerdedir. Bazı kök hücrelerde ise düşük ile orta düzeydedir.\nHepatositler gerektiğinde bölünebilen sessiz, stabil, somatik hücrelerdir ve telomeraz aktiviteleri çok düşüktür. Telomerlerin kısalmasını önleyen en yüksek telomeraz etkinliği germ hücrelerindedir.\nOlgun eritrositler çekirdeksiz hücreler olduğundan de ne a replikasyonu veya telomeraz aktivitesi içermezler. Telomeraz aktivitesinin fizyolojik olarak en yüksek olduğu hücre grubu germ hücreleridir.\nDoğru cevap Ce, Germ hücreleri\nTelomeraz, telomer uçlarına nükleotid ekleyen re ne a protein kompleksidir. Germ hücrelerinde yüksek, bazı kök hücrelerde düşük ile orta, çoğu somatik hücrede ise yok denecek kadar azdır.",
+   "kelime": 187
   },
   {
    "no": 4,
@@ -90,18 +105,23 @@
     "E": "Replikatif senesens"
    },
    "dogru": "E",
+   "ipucu": "Kısa telomer kırık DNA gibi algılanınca hücre döngüsünün durmasının hangi kalıcı duruma yol açtığını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Telomeraz aktivasyonu kanser hücrelerinin telomerleri koruma yoludur; normal hücrenin kısa telomere yanıtı değildir.",
-    "B": "Kısa telomere hücre büyüyerek değil, hücre döngüsünü durdurarak yanıt verir. Hipertrofi bu sorudaki ayrımı sağlamaz.",
+    "B": "Hipertrofi artan iş yüküne karşı hücrenin yapısal protein sentezleyerek büyümesidir; telomerleri kritik eşiğin altına inen hücrenin açık DNA uçlarını hasar olarak algılayıp döngüden kalıcı çıkması ise replikatif senesenstir.",
     "C": "Nekroz, mitokondri hasarında ATP azalmasıyla ilişkili ölüm biçimidir; telomer kısalmasının beklenen sonucu değildir.",
-    "D": "Kısa telomerli hücre başka hücre tipine dönüşmez, çoğalmayı bırakır. Metaplazi bu sorudaki ayrımı sağlamaz.",
+    "D": "Metaplazi kronik irritasyona uyum sağlamak için bir olgun epitel veya mezenkimal hücrenin başka bir olgun hücre tipine dönüşmesidir; telomer kısalmasıyla hücrenin bölünmeyi kalıcı olarak durdurması ise replikatif senesenstir.",
     "E": "Replikatif senesens doğru: kısa telomer kırık DNA gibi algılanır, hücre döngüsü durur ve hücre çoğalmayan yaşlı hücre olur."
    },
    "ozet": "Kritik kısalmış telomer kırık DNA gibi algılanır; hücre **replikatif senesense** girer ve böylece hasarlı genomlu hücrelerin kontrolsüz çoğalması, yani kanserleşme sınırlanır.",
-   "metin": "**Soru.** Kritik kısalmış telomerlere hücrenin yanıtı hangisidir?\n\n**A)** Telomeraz aktivasyonu · **B)** Hipertrofi · **C)** Nekroz · **D)** Metaplazi · **E)** Replikatif senesens\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Telomeraz aktivasyonu** — Telomeraz aktivasyonu kanser hücrelerinin telomerleri koruma yoludur; normal hücrenin kısa telomere yanıtı değildir.\n- **Hipertrofi** — Kısa telomere hücre büyüyerek değil, hücre döngüsünü durdurarak yanıt verir. Hipertrofi bu sorudaki ayrımı sağlamaz.\n- **Nekroz** — Nekroz, mitokondri hasarında ATP azalmasıyla ilişkili ölüm biçimidir; telomer kısalmasının beklenen sonucu değildir.\n- **Metaplazi** — Kısa telomerli hücre başka hücre tipine dönüşmez, çoğalmayı bırakır. Metaplazi bu sorudaki ayrımı sağlamaz.\n- **Replikatif senesens** — Replikatif senesens doğru: kısa telomer kırık DNA gibi algılanır, hücre döngüsü durur ve hücre çoğalmayan yaşlı hücre olur.\n\n**Cevap: E** — Replikatif senesens\n\n**Özet.** Kritik kısalmış telomer kırık DNA gibi algılanır; hücre **replikatif senesense** girer ve böylece hasarlı genomlu hücrelerin kontrolsüz çoğalması, yani kanserleşme sınırlanır.",
-   "ses": "Kritik kısalmış telomerlere hücrenin yanıtı hangisidir?\nA, Telomeraz aktivasyonu\nBe, Hipertrofi\nCe, Nekroz\nDe, Metaplazi\nE, Replikatif senesens\nŞimdi seçeneklere tek tek bakalım.\nTelomeraz aktivasyonu kanser hücrelerinin telomerleri koruma yoludur. Normal hücrenin kısa telomere yanıtı değildir.\nKısa telomere hücre büyüyerek değil, hücre döngüsünü durdurarak yanıt verir. Hipertrofi bu sorudaki ayrımı sağlamaz.\nNekroz, mitokondri hasarında a te pe azalmasıyla ilişkili ölüm biçimidir. Telomer kısalmasının beklenen sonucu değildir.\nKısa telomerli hücre başka hücre tipine dönüşmez, çoğalmayı bırakır. Metaplazi bu sorudaki ayrımı sağlamaz.\nReplikatif senesens doğru. Kısa telomer kırık de ne a gibi algılanır, hücre döngüsü durur ve hücre çoğalmayan yaşlı hücre olur.\nDoğru cevap E, Replikatif senesens\nKritik kısalmış telomer kırık de ne a gibi algılanır. Hücre replikatif senesense girer ve böylece hasarlı genomlu hücrelerin kontrolsüz çoğalması, yani kanserleşme sınırlanır.",
-   "kelime": 146
+   "sayfa": [
+    20,
+    22
+   ],
+   "metin": "**Soru.** Kritik kısalmış telomerlere hücrenin yanıtı hangisidir?\n\n**A)** Telomeraz aktivasyonu · **B)** Hipertrofi · **C)** Nekroz · **D)** Metaplazi · **E)** Replikatif senesens\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Telomeraz aktivasyonu** — Telomeraz aktivasyonu kanser hücrelerinin telomerleri koruma yoludur; normal hücrenin kısa telomere yanıtı değildir.\n- **Hipertrofi** — Hipertrofi artan iş yüküne karşı hücrenin yapısal protein sentezleyerek büyümesidir; telomerleri kritik eşiğin altına inen hücrenin açık DNA uçlarını hasar olarak algılayıp döngüden kalıcı çıkması ise replikatif senesenstir.\n- **Nekroz** — Nekroz, mitokondri hasarında ATP azalmasıyla ilişkili ölüm biçimidir; telomer kısalmasının beklenen sonucu değildir.\n- **Metaplazi** — Metaplazi kronik irritasyona uyum sağlamak için bir olgun epitel veya mezenkimal hücrenin başka bir olgun hücre tipine dönüşmesidir; telomer kısalmasıyla hücrenin bölünmeyi kalıcı olarak durdurması ise replikatif senesenstir.\n- **Replikatif senesens** — Replikatif senesens doğru: kısa telomer kırık DNA gibi algılanır, hücre döngüsü durur ve hücre çoğalmayan yaşlı hücre olur.\n\n**Cevap: E** — Replikatif senesens\n\n**Özet.** Kritik kısalmış telomer kırık DNA gibi algılanır; hücre **replikatif senesense** girer ve böylece hasarlı genomlu hücrelerin kontrolsüz çoğalması, yani kanserleşme sınırlanır.",
+   "ses": "Kritik kısalmış telomerlere hücrenin yanıtı hangisidir?\nA, Telomeraz aktivasyonu\nBe, Hipertrofi\nCe, Nekroz\nDe, Metaplazi\nE, Replikatif senesens\nŞimdi seçeneklere tek tek bakalım.\nTelomeraz aktivasyonu kanser hücrelerinin telomerleri koruma yoludur. Normal hücrenin kısa telomere yanıtı değildir.\nHipertrofi artan iş yüküne karşı hücrenin yapısal protein sentezleyerek büyümesidir. Telomerleri kritik eşiğin altına inen hücrenin açık de ne a uçlarını hasar olarak algılayıp döngüden kalıcı çıkması ise replikatif senesenstir.\nNekroz, mitokondri hasarında a te pe azalmasıyla ilişkili ölüm biçimidir. Telomer kısalmasının beklenen sonucu değildir.\nMetaplazi kronik irritasyona uyum sağlamak için bir olgun epitel veya mezenkimal hücrenin başka bir olgun hücre tipine dönüşmesidir. Telomer kısalmasıyla hücrenin bölünmeyi kalıcı olarak durdurması ise replikatif senesenstir.\nReplikatif senesens doğru. Kısa telomer kırık de ne a gibi algılanır, hücre döngüsü durur ve hücre çoğalmayan yaşlı hücre olur.\nDoğru cevap E, Replikatif senesens\nKritik kısalmış telomer kırık de ne a gibi algılanır. Hücre replikatif senesense girer ve böylece hasarlı genomlu hücrelerin kontrolsüz çoğalması, yani kanserleşme sınırlanır.",
+   "kelime": 173
   },
   {
    "no": 5,
@@ -115,6 +135,7 @@
     "E": "Kaspaz-9 aktivasyonu"
    },
    "dogru": "C",
+   "ipucu": "Somatik hücrelerde bölünmeyi sınırlayan kromozom ucu kısalmasını kanser hücrelerinin nasıl aştığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Telomer kısalması bölünme sayısını sınırlar ve hücreyi senesense sokar; ölümsüzlüğün değil yaşlanmanın mekanizmasıdır.",
@@ -124,6 +145,10 @@
     "E": "Kaspaz-9, sitokrom c ile aktive olan başlatıcı kaspazdır; apoptozu başlatır, hücreyi ölümsüz kılmaz."
    },
    "ozet": "Birçok kanser hücresinde **telomeraz yeniden aktive olur**; telomer uzunluğu sabitlenir ve hücre, somatik hücrelerin bölünme sınırını aşarak ölümsüzleşebilir.",
+   "sayfa": [
+    24,
+    25
+   ],
    "metin": "**Soru.** Kanser hücrelerinin \"ölümsüz\" hale gelmesinde rol oynayan mekanizma hangisidir?\n\n**A)** Telomer kısalması · **B)** p53 aktivasyonu · **C)** Telomerazın yeniden aktivasyonu · **D)** Kalori kısıtlaması · **E)** Kaspaz-9 aktivasyonu\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Telomer kısalması** — Telomer kısalması bölünme sayısını sınırlar ve hücreyi senesense sokar; ölümsüzlüğün değil yaşlanmanın mekanizmasıdır.\n- **p53 aktivasyonu** — p53 aktivasyonu hasarı algılayıp BAX ve BAK üzerinden mitokondriyal apoptozu başlatabilir; hasarlı hücreyi ortadan kaldırır.\n- **Telomerazın yeniden aktivasyonu** — Telomerazın yeniden aktivasyonu doğru: birçok kanser hücresinde telomeraz yeniden açılır, telomer uzunluğu sabitlenir ve hücre ölümsüzleşebilir.\n- **Kalori kısıtlaması** — Kalori kısıtlaması hayvan modellerinde ömrü uzatan bir müdahaledir; kanser hücresinin ölümsüzlüğüyle ilgisi yoktur.\n- **Kaspaz-9 aktivasyonu** — Kaspaz-9, sitokrom c ile aktive olan başlatıcı kaspazdır; apoptozu başlatır, hücreyi ölümsüz kılmaz.\n\n**Cevap: C** — Telomerazın yeniden aktivasyonu\n\n**Özet.** Birçok kanser hücresinde **telomeraz yeniden aktive olur**; telomer uzunluğu sabitlenir ve hücre, somatik hücrelerin bölünme sınırını aşarak ölümsüzleşebilir.",
    "ses": "Kanser hücrelerinin ölümsüz hale gelmesinde rol oynayan mekanizma hangisidir?\nA, Telomer kısalması\nBe, Pe elli üç aktivasyonu\nCe, Telomerazın yeniden aktivasyonu\nDe, Kalori kısıtlaması\nE, Kaspaz dokuz aktivasyonu\nSeçenekleri sırayla değerlendirelim.\nTelomer kısalması bölünme sayısını sınırlar ve hücreyi senesense sokar. Ölümsüzlüğün değil yaşlanmanın mekanizmasıdır.\nPe elli üç aktivasyonu hasarı algılayıp be a iks ve be a ka üzerinden mitokondriyal apoptozu başlatabilir. Hasarlı hücreyi ortadan kaldırır.\nTelomerazın yeniden aktivasyonu doğru. Birçok kanser hücresinde telomeraz yeniden açılır, telomer uzunluğu sabitlenir ve hücre ölümsüzleşebilir.\nKalori kısıtlaması hayvan modellerinde ömrü uzatan bir müdahaledir. Kanser hücresinin ölümsüzlüğüyle ilgisi yoktur.\nKaspaz dokuz, sitokrom ce ile aktive olan başlatıcı kaspazdır. Apoptozu başlatır, hücreyi ölümsüz kılmaz.\nDoğru cevap Ce, Telomerazın yeniden aktivasyonu\nBirçok kanser hücresinde telomeraz yeniden aktive olur. Telomer uzunluğu sabitlenir ve hücre, somatik hücrelerin bölünme sınırını aşarak ölümsüzleşebilir.",
    "kelime": 150
@@ -140,18 +165,22 @@
     "E": "Akut pankreatit"
    },
    "dogru": "A",
+   "ipucu": "Telomerler hızla kısalınca hangi dokunun kök hücre havuzunun tükenip yetmezliğe gireceğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Aplastik anemi doğru: kalıtsal telomeraz eksikliğinde telomerler hızla kısalır ve hematopoetik kök hücre yetmezliği gelişir.",
-    "B": "Kalıtsal telomeraz eksikliği telomerlerin hızla kısalmasına yol açar ve bu tablolara telomeropati denir. Multipl miyelom bu sorudaki ayrımı sağlamaz.",
-    "C": "Hemokromatoz ile karıştırılabilir: Telomeropatilerde akciğer ve karaciğerde fibrozis görülebilir.",
-    "D": "Telomeropatilerin deri bulguları saçların erken beyazlaması ve cilt ile tırnak anormallikleridir. Ksantom bu sorudaki ayrımı sağlamaz.",
-    "E": "Akut pankreatit ile karıştırılabilir: Telomer aşınması kök hücre havuzlarının kaybını tetikler ve doku işlevi bozulur."
+    "B": "Multipl miyelom kemik iliğinde klonal plazma hücrelerinin kontrolsüz çoğaldığı malign bir neoplazmdır; kalıtsal telomeraz eksikliğinde ise hematopoetik kök hücre havuzu tükenerek aplastik anemi gelişir.",
+    "C": "Hemokromatoz bağırsaktan aşırı demir emilimi sonucu karaciğer, kalp ve pankreasta hemosiderin birikmesidir; telomeraz eksikliğinde ise hızlı çoğalan kemik iliği kök hücrelerinin tükenmesiyle aplastik anemi görülür.",
+    "D": "Ksantom hiperlipidemide deri ve tendonlarda kolesterol yüklü köpük hücrelerinin oluşturduğu sarımsı nodüldür; kalıtsal telomeropatilerde kök hücre yenilenmesinin bozulmasıyla ortaya çıkan tablo ise aplastik anemidir.",
+    "E": "Akut pankreatit pankreas proenzimlerinin asiner hücre içinde erken aktivasyonuyla gelişen akut nekrotizan iltihaptır; kalıtsal telomeraz kusurunda ise kök hücre tükenmesine bağlı aplastik anemi ve pulmoner fibrozis görülür."
    },
    "ozet": "**Telomeropatilerde** telomerler hızla kısalır; aplastik anemi, pulmoner ve hepatik fibrozis, saçların erken beyazlaması ile cilt ve tırnak anormallikleri görülür.",
-   "metin": "**Soru.** Kalıtsal telomeraz eksikliğinde (telomeropati) görülebilen tablo hangisidir?\n\n**A)** Aplastik anemi · **B)** Multipl miyelom · **C)** Hemokromatoz · **D)** Ksantom · **E)** Akut pankreatit\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Aplastik anemi** — Aplastik anemi doğru: kalıtsal telomeraz eksikliğinde telomerler hızla kısalır ve hematopoetik kök hücre yetmezliği gelişir.\n- **Multipl miyelom** — Kalıtsal telomeraz eksikliği telomerlerin hızla kısalmasına yol açar ve bu tablolara telomeropati denir. Multipl miyelom bu sorudaki ayrımı sağlamaz.\n- **Hemokromatoz** — Hemokromatoz ile karıştırılabilir: Telomeropatilerde akciğer ve karaciğerde fibrozis görülebilir.\n- **Ksantom** — Telomeropatilerin deri bulguları saçların erken beyazlaması ve cilt ile tırnak anormallikleridir. Ksantom bu sorudaki ayrımı sağlamaz.\n- **Akut pankreatit** — Akut pankreatit ile karıştırılabilir: Telomer aşınması kök hücre havuzlarının kaybını tetikler ve doku işlevi bozulur.\n\n**Cevap: A** — Aplastik anemi\n\n**Özet.** **Telomeropatilerde** telomerler hızla kısalır; aplastik anemi, pulmoner ve hepatik fibrozis, saçların erken beyazlaması ile cilt ve tırnak anormallikleri görülür.",
-   "ses": "Kalıtsal telomeraz eksikliğinde, yani telomeropatide, görülebilen tablo hangisidir?\nA, Aplastik anemi\nBe, Multipl miyelom\nCe, Hemokromatoz\nDe, Ksantom\nE, Akut pankreatit\nHer seçeneği tek tek ele alalım.\nAplastik anemi doğru. Kalıtsal telomeraz eksikliğinde telomerler hızla kısalır ve hematopoetik kök hücre yetmezliği gelişir.\nKalıtsal telomeraz eksikliği telomerlerin hızla kısalmasına yol açar ve bu tablolara telomeropati denir. Multipl miyelom bu sorudaki ayrımı sağlamaz.\nHemokromatoz ile karıştırılabilir. Telomeropatilerde akciğer ve karaciğerde fibrozis görülebilir.\nTelomeropatilerin deri bulguları saçların erken beyazlaması ve cilt ile tırnak anormallikleridir. Ksantom bu sorudaki ayrımı sağlamaz.\nAkut pankreatit ile karıştırılabilir. Telomer aşınması kök hücre havuzlarının kaybını tetikler ve doku işlevi bozulur.\nDoğru cevap A, Aplastik anemi\nTelomeropatilerde telomerler hızla kısalır. Aplastik anemi, pulmoner ve hepatik fibrozis, saçların erken beyazlaması ile cilt ve tırnak anormallikleri görülür.",
-   "kelime": 149
+   "sayfa": [
+    26
+   ],
+   "metin": "**Soru.** Kalıtsal telomeraz eksikliğinde (telomeropati) görülebilen tablo hangisidir?\n\n**A)** Aplastik anemi · **B)** Multipl miyelom · **C)** Hemokromatoz · **D)** Ksantom · **E)** Akut pankreatit\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Aplastik anemi** — Aplastik anemi doğru: kalıtsal telomeraz eksikliğinde telomerler hızla kısalır ve hematopoetik kök hücre yetmezliği gelişir.\n- **Multipl miyelom** — Multipl miyelom kemik iliğinde klonal plazma hücrelerinin kontrolsüz çoğaldığı malign bir neoplazmdır; kalıtsal telomeraz eksikliğinde ise hematopoetik kök hücre havuzu tükenerek aplastik anemi gelişir.\n- **Hemokromatoz** — Hemokromatoz bağırsaktan aşırı demir emilimi sonucu karaciğer, kalp ve pankreasta hemosiderin birikmesidir; telomeraz eksikliğinde ise hızlı çoğalan kemik iliği kök hücrelerinin tükenmesiyle aplastik anemi görülür.\n- **Ksantom** — Ksantom hiperlipidemide deri ve tendonlarda kolesterol yüklü köpük hücrelerinin oluşturduğu sarımsı nodüldür; kalıtsal telomeropatilerde kök hücre yenilenmesinin bozulmasıyla ortaya çıkan tablo ise aplastik anemidir.\n- **Akut pankreatit** — Akut pankreatit pankreas proenzimlerinin asiner hücre içinde erken aktivasyonuyla gelişen akut nekrotizan iltihaptır; kalıtsal telomeraz kusurunda ise kök hücre tükenmesine bağlı aplastik anemi ve pulmoner fibrozis görülür.\n\n**Cevap: A** — Aplastik anemi\n\n**Özet.** **Telomeropatilerde** telomerler hızla kısalır; aplastik anemi, pulmoner ve hepatik fibrozis, saçların erken beyazlaması ile cilt ve tırnak anormallikleri görülür.",
+   "ses": "Kalıtsal telomeraz eksikliğinde, yani telomeropatide, görülebilen tablo hangisidir?\nA, Aplastik anemi\nBe, Multipl miyelom\nCe, Hemokromatoz\nDe, Ksantom\nE, Akut pankreatit\nHer seçeneği tek tek ele alalım.\nAplastik anemi doğru. Kalıtsal telomeraz eksikliğinde telomerler hızla kısalır ve hematopoetik kök hücre yetmezliği gelişir.\nMultipl miyelom kemik iliğinde klonal plazma hücrelerinin kontrolsüz çoğaldığı malign bir neoplazmdır. Kalıtsal telomeraz eksikliğinde ise hematopoetik kök hücre havuzu tükenerek aplastik anemi gelişir.\nHemokromatoz bağırsaktan aşırı demir emilimi sonucu karaciğer, kalp ve pankreasta hemosiderin birikmesidir. Telomeraz eksikliğinde ise hızlı çoğalan kemik iliği kök hücrelerinin tükenmesiyle aplastik anemi görülür.\nKsantom hiperlipidemide deri ve tendonlarda kolesterol yüklü köpük hücrelerinin oluşturduğu sarımsı nodüldür. Kalıtsal telomeropatilerde kök hücre yenilenmesinin bozulmasıyla ortaya çıkan tablo ise aplastik anemidir.\nAkut pankreatit pankreas proenzimlerinin asiner hücre içinde erken aktivasyonuyla gelişen akut nekrotizan iltihaptır. Kalıtsal telomeraz kusurunda ise kök hücre tükenmesine bağlı aplastik anemi ve pulmoner fibrozis görülür.\nDoğru cevap A, Aplastik anemi\nTelomeropatilerde telomerler hızla kısalır. Aplastik anemi, pulmoner ve hepatik fibrozis, saçların erken beyazlaması ile cilt ve tırnak anormallikleri görülür.",
+   "kelime": 190
   },
   {
    "no": 7,
@@ -165,18 +194,23 @@
     "E": "Steatoz"
    },
    "dogru": "D",
+   "ipucu": "Sitokrom c sitozole sızınca hangi kaspaz kaskadının başladığını ve sonunda ne oluştuğunu düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Nekroz, mitokondri hasarının diğer koludur; ATP azalması nekroz eğilimi yapar, zar geçirgenliği artışı değil.",
-    "B": "Hipertrofi ile karıştırılabilir: Mitokondri zarı geçirgenleşince proapoptotik proteinler sitozole sızar.",
+    "B": "Hipertrofi mekanik yük veya büyüme faktörleriyle hücre hacminin artmasıdır; mitokondri dış zar geçirgenliğinin artması ise sitokrom c sızıntısıyla kaspazları aktive ederek apoptozu başlatır.",
     "C": "Telomer uzaması telomeraz enziminin işidir; mitokondri hasarıyla ilgisi yoktur.",
     "D": "Apoptoz doğru: zar geçirgenliği artınca sitokrom c sitozole sızar, kaspaz-9 ve ardından kaspaz-3 aktive olur.",
-    "E": "Mitokondriyal zar geçirgenliği artışı içsel ölüm yolunun başlangıcıdır. Steatoz bu sorudaki ayrımı sağlamaz."
+    "E": "Steatoz hepatosit sitoplazmasında trigliserid vakuollerinin birikmesiyle oluşan geri dönüşümlü yağlı değişimdir; mitokondriyal zar geçirgenliğinin artması ise sitokrom c salınımı üzerinden apoptozla sonuçlanır."
    },
    "ozet": "Mitokondri hasarında ATP azalması nekroza, **zar geçirgenliği artışı** ise sitokrom c sızmasıyla mitokondriyal, yani içsel apoptoz yoluna yol açar.",
-   "metin": "**Soru.** Mitokondriyal zar geçirgenliğinin artması hangi sonuca yol açar?\n\n**A)** Nekroz · **B)** Hipertrofi · **C)** Telomer uzaması · **D)** Apoptoz · **E)** Steatoz\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Nekroz** — Nekroz, mitokondri hasarının diğer koludur; ATP azalması nekroz eğilimi yapar, zar geçirgenliği artışı değil.\n- **Hipertrofi** — Hipertrofi ile karıştırılabilir: Mitokondri zarı geçirgenleşince proapoptotik proteinler sitozole sızar.\n- **Telomer uzaması** — Telomer uzaması telomeraz enziminin işidir; mitokondri hasarıyla ilgisi yoktur.\n- **Apoptoz** — Apoptoz doğru: zar geçirgenliği artınca sitokrom c sitozole sızar, kaspaz-9 ve ardından kaspaz-3 aktive olur.\n- **Steatoz** — Mitokondriyal zar geçirgenliği artışı içsel ölüm yolunun başlangıcıdır. Steatoz bu sorudaki ayrımı sağlamaz.\n\n**Cevap: D** — Apoptoz\n\n**Özet.** Mitokondri hasarında ATP azalması nekroza, **zar geçirgenliği artışı** ise sitokrom c sızmasıyla mitokondriyal, yani içsel apoptoz yoluna yol açar.",
-   "ses": "Mitokondriyal zar geçirgenliğinin artması hangi sonuca yol açar?\nA, Nekroz\nBe, Hipertrofi\nCe, Telomer uzaması\nDe, Apoptoz\nE, Steatoz\nŞıkları sırasıyla gözden geçirelim.\nNekroz, mitokondri hasarının diğer koludur. A te pe azalması nekroz eğilimi yapar, zar geçirgenliği artışı değil.\nHipertrofi ile karıştırılabilir. Mitokondri zarı geçirgenleşince proapoptotik proteinler sitozole sızar.\nTelomer uzaması telomeraz enziminin işidir. Mitokondri hasarıyla ilgisi yoktur.\nApoptoz doğru. Zar geçirgenliği artınca sitokrom ce sitozole sızar, kaspaz dokuz ve ardından kaspaz üç aktive olur.\nMitokondriyal zar geçirgenliği artışı içsel ölüm yolunun başlangıcıdır. Steatoz bu sorudaki ayrımı sağlamaz.\nDoğru cevap De, Apoptoz\nMitokondri hasarında a te pe azalması nekroza yol açar. Zar geçirgenliği artışı ise sitokrom ce sızmasıyla mitokondriyal, yani içsel apoptoz yoluna yol açar.",
-   "kelime": 130
+   "sayfa": [
+    16,
+    18
+   ],
+   "metin": "**Soru.** Mitokondriyal zar geçirgenliğinin artması hangi sonuca yol açar?\n\n**A)** Nekroz · **B)** Hipertrofi · **C)** Telomer uzaması · **D)** Apoptoz · **E)** Steatoz\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Nekroz** — Nekroz, mitokondri hasarının diğer koludur; ATP azalması nekroz eğilimi yapar, zar geçirgenliği artışı değil.\n- **Hipertrofi** — Hipertrofi mekanik yük veya büyüme faktörleriyle hücre hacminin artmasıdır; mitokondri dış zar geçirgenliğinin artması ise sitokrom c sızıntısıyla kaspazları aktive ederek apoptozu başlatır.\n- **Telomer uzaması** — Telomer uzaması telomeraz enziminin işidir; mitokondri hasarıyla ilgisi yoktur.\n- **Apoptoz** — Apoptoz doğru: zar geçirgenliği artınca sitokrom c sitozole sızar, kaspaz-9 ve ardından kaspaz-3 aktive olur.\n- **Steatoz** — Steatoz hepatosit sitoplazmasında trigliserid vakuollerinin birikmesiyle oluşan geri dönüşümlü yağlı değişimdir; mitokondriyal zar geçirgenliğinin artması ise sitokrom c salınımı üzerinden apoptozla sonuçlanır.\n\n**Cevap: D** — Apoptoz\n\n**Özet.** Mitokondri hasarında ATP azalması nekroza, **zar geçirgenliği artışı** ise sitokrom c sızmasıyla mitokondriyal, yani içsel apoptoz yoluna yol açar.",
+   "ses": "Mitokondriyal zar geçirgenliğinin artması hangi sonuca yol açar?\nA, Nekroz\nBe, Hipertrofi\nCe, Telomer uzaması\nDe, Apoptoz\nE, Steatoz\nŞıkları sırasıyla gözden geçirelim.\nNekroz, mitokondri hasarının diğer koludur. A te pe azalması nekroz eğilimi yapar, zar geçirgenliği artışı değil.\nHipertrofi mekanik yük veya büyüme faktörleriyle hücre hacminin artmasıdır. Mitokondri dış zar geçirgenliğinin artması ise sitokrom c sızıntısıyla kaspazları aktive ederek apoptozu başlatır.\nTelomer uzaması telomeraz enziminin işidir. Mitokondri hasarıyla ilgisi yoktur.\nApoptoz doğru. Zar geçirgenliği artınca sitokrom ce sitozole sızar, kaspaz dokuz ve ardından kaspaz üç aktive olur.\nSteatoz hepatosit sitoplazmasında trigliserid vakuollerinin birikmesiyle oluşan geri dönüşümlü yağlı değişimdir. Mitokondriyal zar geçirgenliğinin artması ise sitokrom c salınımı üzerinden apoptozla sonuçlanır.\nDoğru cevap De, Apoptoz\nMitokondri hasarında a te pe azalması nekroza yol açar. Zar geçirgenliği artışı ise sitokrom ce sızmasıyla mitokondriyal, yani içsel apoptoz yoluna yol açar.",
+   "kelime": 152
   },
   {
    "no": 8,
@@ -190,18 +224,24 @@
     "E": "mTOR baskılanması"
    },
    "dogru": "E",
+   "ipucu": "Kalori kısıtlamasının hücreyi büyüme ve çoğalmadan bakım ve onarıma nasıl yönlendirdiğini sinyal yolları üzerinden düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "IGF-1 artışı büyüme ve anabolizmayı destekler; kalori kısıtlamasında IGF-1 düzeyi tersine azalır.",
     "B": "mTOR aktivasyonu hızlı büyüme ve daha az onarıma odaklı bir program demektir; kalori kısıtlaması bu yolu baskılar.",
     "C": "ROS artışı DNA, protein ve lipid hasarını artırır; kalori kısıtlaması ROS üretimini azaltır.",
-    "D": "Kalori kısıtlamasında otofaji tersine artar. Otofaji azalması bu sorudaki ayrımı sağlamaz.",
+    "D": "Kalori kısıtlamasında otofaji azalmaz, aksine mTOR baskılanması ve sirtüin aktivasyonu sayesinde artarak hasarlı organellerin temizlenmesini ve hücresel ömrün uzamasını sağlar.",
     "E": "mTOR baskılanması doğru: kalori kısıtlaması mTOR yolağını baskılar ve hücreyi büyümeden bakım ve onarıma kaydırır."
    },
    "ozet": "Kalori kısıtlaması IGF-1'i azaltır, **mTOR'u baskılar**, ROS üretimini azaltır ve otofajiyi artırır; hayvan modellerinde ömrü uzatır.",
-   "metin": "**Soru.** Kalori kısıtlamasının ömrü uzatan mekanizmalarından biri hangisidir?\n\n**A)** IGF-1 artışı · **B)** mTOR aktivasyonu · **C)** ROS artışı · **D)** Otofaji azalması · **E)** mTOR baskılanması\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **IGF-1 artışı** — IGF-1 artışı büyüme ve anabolizmayı destekler; kalori kısıtlamasında IGF-1 düzeyi tersine azalır.\n- **mTOR aktivasyonu** — mTOR aktivasyonu hızlı büyüme ve daha az onarıma odaklı bir program demektir; kalori kısıtlaması bu yolu baskılar.\n- **ROS artışı** — ROS artışı DNA, protein ve lipid hasarını artırır; kalori kısıtlaması ROS üretimini azaltır.\n- **Otofaji azalması** — Kalori kısıtlamasında otofaji tersine artar. Otofaji azalması bu sorudaki ayrımı sağlamaz.\n- **mTOR baskılanması** — mTOR baskılanması doğru: kalori kısıtlaması mTOR yolağını baskılar ve hücreyi büyümeden bakım ve onarıma kaydırır.\n\n**Cevap: E** — mTOR baskılanması\n\n**Özet.** Kalori kısıtlaması IGF-1'i azaltır, **mTOR'u baskılar**, ROS üretimini azaltır ve otofajiyi artırır; hayvan modellerinde ömrü uzatır.",
-   "ses": "Kalori kısıtlamasının ömrü uzatan mekanizmalarından biri hangisidir?\nA, İ ge fe bir artışı\nBe, Me te o re aktivasyonu\nCe, Reaktif oksijen türleri artışı\nDe, Otofaji azalması\nE, Me te o re baskılanması\nŞimdi seçeneklere tek tek bakalım.\nİ ge fe bir artışı büyüme ve anabolizmayı destekler. Kalori kısıtlamasında i ge fe bir düzeyi tersine azalır.\nMe te o re aktivasyonu hızlı büyüme ve daha az onarıma odaklı bir program demektir. Kalori kısıtlaması bu yolu baskılar.\nReaktif oksijen türleri artışı de ne a, protein ve lipid hasarını artırır. Kalori kısıtlaması bu üretimi azaltır.\nKalori kısıtlamasında otofaji tersine artar. Otofaji azalması bu sorudaki ayrımı sağlamaz.\nMe te o re baskılanması doğru. Kalori kısıtlaması me te o re yolağını baskılar ve hücreyi büyümeden bakım ve onarıma kaydırır.\nDoğru cevap E, Me te o re baskılanması\nKalori kısıtlaması i ge fe bir düzeyini azaltır, me te o re yolağını baskılar, reaktif oksijen türlerini azaltır ve otofajiyi artırır. Hayvan modellerinde ömrü uzatır.",
-   "kelime": 143
+   "sayfa": [
+    29,
+    30,
+    31
+   ],
+   "metin": "**Soru.** Kalori kısıtlamasının ömrü uzatan mekanizmalarından biri hangisidir?\n\n**A)** IGF-1 artışı · **B)** mTOR aktivasyonu · **C)** ROS artışı · **D)** Otofaji azalması · **E)** mTOR baskılanması\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **IGF-1 artışı** — IGF-1 artışı büyüme ve anabolizmayı destekler; kalori kısıtlamasında IGF-1 düzeyi tersine azalır.\n- **mTOR aktivasyonu** — mTOR aktivasyonu hızlı büyüme ve daha az onarıma odaklı bir program demektir; kalori kısıtlaması bu yolu baskılar.\n- **ROS artışı** — ROS artışı DNA, protein ve lipid hasarını artırır; kalori kısıtlaması ROS üretimini azaltır.\n- **Otofaji azalması** — Kalori kısıtlamasında otofaji azalmaz, aksine mTOR baskılanması ve sirtüin aktivasyonu sayesinde artarak hasarlı organellerin temizlenmesini ve hücresel ömrün uzamasını sağlar.\n- **mTOR baskılanması** — mTOR baskılanması doğru: kalori kısıtlaması mTOR yolağını baskılar ve hücreyi büyümeden bakım ve onarıma kaydırır.\n\n**Cevap: E** — mTOR baskılanması\n\n**Özet.** Kalori kısıtlaması IGF-1'i azaltır, **mTOR'u baskılar**, ROS üretimini azaltır ve otofajiyi artırır; hayvan modellerinde ömrü uzatır.",
+   "ses": "Kalori kısıtlamasının ömrü uzatan mekanizmalarından biri hangisidir?\nA, İ ge fe bir artışı\nBe, Me te o re aktivasyonu\nCe, Reaktif oksijen türleri artışı\nDe, Otofaji azalması\nE, Me te o re baskılanması\nŞimdi seçeneklere tek tek bakalım.\nİ ge fe bir artışı büyüme ve anabolizmayı destekler. Kalori kısıtlamasında i ge fe bir düzeyi tersine azalır.\nMe te o re aktivasyonu hızlı büyüme ve daha az onarıma odaklı bir program demektir. Kalori kısıtlaması bu yolu baskılar.\nReaktif oksijen türleri artışı de ne a, protein ve lipid hasarını artırır. Kalori kısıtlaması bu üretimi azaltır.\nKalori kısıtlamasında otofaji azalmaz, aksine em tor baskılanması ve sirtüin aktivasyonu sayesinde artarak hasarlı organellerin temizlenmesini ve hücresel ömrün uzamasını sağlar.\nMe te o re baskılanması doğru. Kalori kısıtlaması me te o re yolağını baskılar ve hücreyi büyümeden bakım ve onarıma kaydırır.\nDoğru cevap E, Me te o re baskılanması\nKalori kısıtlaması i ge fe bir düzeyini azaltır, me te o re yolağını baskılar, reaktif oksijen türlerini azaltır ve otofajiyi artırır. Hayvan modellerinde ömrü uzatır.",
+   "kelime": 152
   },
   {
    "no": 9,
@@ -215,18 +255,23 @@
     "E": "α1-antitripsin"
    },
    "dogru": "B",
+   "ipucu": "Alzheimer hastalığına ait iki proteini ayır ve Parkinson hastalığına özgü agregatı hatırla.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "β-amiloid, tau ile birlikte Alzheimer hastalığında biriken anormal proteindir.",
     "B": "α-sinüklein doğru: Parkinson hastalığında biriken yanlış katlanmış proteindir ve hücre içi agregat oluşturur.",
     "C": "Tau, Alzheimer hastalığında β-amiloidle birlikte biriken proteindir; Parkinson hastalığının agregatı değildir.",
-    "D": "Prion proteini ile karıştırılabilir: Yaşla şaperon ve proteazom etkinliği azalınca yanlış katlanmış proteinler birikir.",
-    "E": "Nörodejeneratif hastalıklarda biriken anormal proteinler ER stresi ve apoptoza yol açabilir. α1-antitripsin bu sorudaki ayrımı sağlamaz."
+    "D": "Prion proteini (PrPSc) Creutzfeldt–Jakob hastalığında süngerimsi beyin dejenerasyonuna yol açan bulaşıcı yanlış katlanmış proteindir; Parkinson hastalığında Lewy cisimciklerini oluşturan protein ise alfa-sinükleindir.",
+    "E": "Alfa-1 antitripsin mutasyonunda yanlış katlanan protein hepatosit endoplazmik retikulumunda birikerek karaciğer hasarı yapar; Parkinson hastalığında dopaminerjik nöronlarda biriken protein ise alfa-sinükleindir."
    },
    "ozet": "Nörodejeneratif hastalıklarda yanlış katlanmış proteinler agregat yapar: Alzheimer hastalığında β-amiloid ve tau, Parkinson hastalığında **α-sinüklein** birikir.",
-   "metin": "**Soru.** Parkinson hastalığında biriken yanlış katlanmış protein hangisidir?\n\n**A)** β-amiloid · **B)** α-sinüklein · **C)** Tau · **D)** Prion proteini · **E)** α1-antitripsin\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **β-amiloid** — β-amiloid, tau ile birlikte Alzheimer hastalığında biriken anormal proteindir.\n- **α-sinüklein** — α-sinüklein doğru: Parkinson hastalığında biriken yanlış katlanmış proteindir ve hücre içi agregat oluşturur.\n- **Tau** — Tau, Alzheimer hastalığında β-amiloidle birlikte biriken proteindir; Parkinson hastalığının agregatı değildir.\n- **Prion proteini** — Prion proteini ile karıştırılabilir: Yaşla şaperon ve proteazom etkinliği azalınca yanlış katlanmış proteinler birikir.\n- **α1-antitripsin** — Nörodejeneratif hastalıklarda biriken anormal proteinler ER stresi ve apoptoza yol açabilir. α1-antitripsin bu sorudaki ayrımı sağlamaz.\n\n**Cevap: B** — α-sinüklein\n\n**Özet.** Nörodejeneratif hastalıklarda yanlış katlanmış proteinler agregat yapar: Alzheimer hastalığında β-amiloid ve tau, Parkinson hastalığında **α-sinüklein** birikir.",
-   "ses": "Parkinson hastalığında biriken yanlış katlanmış protein hangisidir?\nA, Beta amiloid\nBe, Alfa sinüklein\nCe, Tau\nDe, Priyon proteini\nE, Alfa bir antitripsin\nSeçenekleri sırayla değerlendirelim.\nBeta amiloid, tau ile birlikte Alzhaymır hastalığında biriken anormal proteindir.\nAlfa sinüklein doğru. Parkinson hastalığında biriken yanlış katlanmış proteindir ve hücre içi agregat oluşturur.\nTau, Alzhaymır hastalığında beta amiloidle birlikte biriken proteindir. Parkinson hastalığının agregatı değildir.\nPrion proteini ile karıştırılabilir. Yaşla şaperon ve proteazom etkinliği azalınca yanlış katlanmış proteinler birikir.\nNörodejeneratif hastalıklarda biriken anormal proteinler endoplazmik retikulum stresi ve apoptoza yol açabilir. αbir-antitripsin bu sorudaki ayrımı sağlamaz.\nDoğru cevap Be, Alfa sinüklein\nNörodejeneratif hastalıklarda yanlış katlanmış proteinler agregat yapar. Alzhaymır hastalığında beta amiloid ve tau, Parkinson hastalığında alfa sinüklein birikir.",
-   "kelime": 127
+   "sayfa": [
+    27,
+    28
+   ],
+   "metin": "**Soru.** Parkinson hastalığında biriken yanlış katlanmış protein hangisidir?\n\n**A)** β-amiloid · **B)** α-sinüklein · **C)** Tau · **D)** Prion proteini · **E)** α1-antitripsin\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **β-amiloid** — β-amiloid, tau ile birlikte Alzheimer hastalığında biriken anormal proteindir.\n- **α-sinüklein** — α-sinüklein doğru: Parkinson hastalığında biriken yanlış katlanmış proteindir ve hücre içi agregat oluşturur.\n- **Tau** — Tau, Alzheimer hastalığında β-amiloidle birlikte biriken proteindir; Parkinson hastalığının agregatı değildir.\n- **Prion proteini** — Prion proteini (PrPSc) Creutzfeldt–Jakob hastalığında süngerimsi beyin dejenerasyonuna yol açan bulaşıcı yanlış katlanmış proteindir; Parkinson hastalığında Lewy cisimciklerini oluşturan protein ise alfa-sinükleindir.\n- **α1-antitripsin** — Alfa-1 antitripsin mutasyonunda yanlış katlanan protein hepatosit endoplazmik retikulumunda birikerek karaciğer hasarı yapar; Parkinson hastalığında dopaminerjik nöronlarda biriken protein ise alfa-sinükleindir.\n\n**Cevap: B** — α-sinüklein\n\n**Özet.** Nörodejeneratif hastalıklarda yanlış katlanmış proteinler agregat yapar: Alzheimer hastalığında β-amiloid ve tau, Parkinson hastalığında **α-sinüklein** birikir.",
+   "ses": "Parkinson hastalığında biriken yanlış katlanmış protein hangisidir?\nA, Beta amiloid\nBe, Alfa sinüklein\nCe, Tau\nDe, Priyon proteini\nE, Alfa bir antitripsin\nSeçenekleri sırayla değerlendirelim.\nBeta amiloid, tau ile birlikte Alzhaymır hastalığında biriken anormal proteindir.\nAlfa sinüklein doğru. Parkinson hastalığında biriken yanlış katlanmış proteindir ve hücre içi agregat oluşturur.\nTau, Alzhaymır hastalığında beta amiloidle birlikte biriken proteindir. Parkinson hastalığının agregatı değildir.\nPrion proteini, pe re pe se ce, Creutzfeldt–Jakob hastalığında süngerimsi beyin dejenerasyonuna yol açan bulaşıcı yanlış katlanmış proteindir. Parkinson hastalığında Lewy cisimciklerini oluşturan protein ise alfa-sinükleindir.\nAlfa-bir antitripsin mutasyonunda yanlış katlanan protein hepatosit endoplazmik retikulumunda birikerek karaciğer hasarı yapar. Parkinson hastalığında dopaminerjik nöronlarda biriken protein ise alfa-sinükleindir.\nDoğru cevap Be, Alfa sinüklein\nNörodejeneratif hastalıklarda yanlış katlanmış proteinler agregat yapar. Alzhaymır hastalığında beta amiloid ve tau, Parkinson hastalığında alfa sinüklein birikir.",
+   "kelime": 140
   },
   {
    "no": 10,
@@ -240,22 +285,28 @@
     "E": "İnterferon-α"
    },
    "dogru": "A",
+   "ipucu": "Yaşlanmada insülin direnci ve katabolik durum yaratan proinflamatuar sitokinler listesini hatırla.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "IL-6 doğru: TNF-α ve IL-1β ile birlikte yaşlanmadaki düşük dereceli inflamasyonun sitokinlerindendir.",
-    "B": "Yaşla hasarlı hücreler ve DNA artıkları birikir, doğuştan immün sistem hafif ama sürekli aktive olabilir. IL-10 bu sorudaki ayrımı sağlamaz.",
-    "C": "TGF-β ile karıştırılabilir: Yaşlanmaya eşlik eden inflamatuar sitokinler insülin direnci ve katabolik durum oluşturur.",
-    "D": "Bu kronik inflamasyonda rol alan sitokinler arasında TNF-α ve IL-1β sayılır. IL-4 bu sorudaki ayrımı sağlamaz.",
-    "E": "İnterferon-α ile karıştırılabilir: İnflamatuar sitokinler hücrelerde ek DNA ve protein hasarı yaparak yaşlanmayı hızlandırabilir."
+    "B": "IL-10, M2 makrofajlar ve düzenleyici T hücreleri tarafından salgılanan antiinflamatuvar bir sitokindir; yaşlanmaya eşlik eden kronik düşük dereceli inflamasyonda (inflammaging) yükselen temel proinflamatuvar sitokin ise IL-6'dır.",
+    "C": "TGF-beta bağ dokusu onarımı ve fibrozisi uyaran, aynı zamanda immün yanıtı baskılayan bir büyüme faktörüdür; yaşlanmayla artan kronik sistemik inflamasyonda öne çıkan sitokin ise IL-6'dır.",
+    "D": "IL-4, Th2 lenfositlerden salınarak IgE sentezini ve alternatif (M2) makrofaj aktivasyonunu uyarır; yaşlanmaya eşlik eden kronik düşük dereceli inflamasyon tablosunda artan sitokin ise IL-6'dır.",
+    "E": "İnterferon-alfa viral enfeksiyonlara karşı doğuştan bağışıklıkta hücreleri antiviral duruma geçiren tip I interferondur; yaşlanmayla birlikte senesent hücrelerden salınıp kronik inflamasyonu sürdüren sitokin ise IL-6'dır."
    },
    "ozet": "Yaşla doğuştan immün sistem hafif ama sürekli aktive olur; **IL-6**, TNF-α ve IL-1β insülin direnci, katabolizma ve ek hücre hasarıyla yaşlanmayı hızlandırabilir.",
-   "metin": "**Soru.** Yaşlanmaya eşlik eden kalıcı düşük dereceli inflamasyon (inflammaging) ile ilişkili sitokin hangisidir?\n\n**A)** IL-6 · **B)** IL-10 · **C)** TGF-β · **D)** IL-4 · **E)** İnterferon-α\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **IL-6** — IL-6 doğru: TNF-α ve IL-1β ile birlikte yaşlanmadaki düşük dereceli inflamasyonun sitokinlerindendir.\n- **IL-10** — Yaşla hasarlı hücreler ve DNA artıkları birikir, doğuştan immün sistem hafif ama sürekli aktive olabilir. IL-10 bu sorudaki ayrımı sağlamaz.\n- **TGF-β** — TGF-β ile karıştırılabilir: Yaşlanmaya eşlik eden inflamatuar sitokinler insülin direnci ve katabolik durum oluşturur.\n- **IL-4** — Bu kronik inflamasyonda rol alan sitokinler arasında TNF-α ve IL-1β sayılır. IL-4 bu sorudaki ayrımı sağlamaz.\n- **İnterferon-α** — İnterferon-α ile karıştırılabilir: İnflamatuar sitokinler hücrelerde ek DNA ve protein hasarı yaparak yaşlanmayı hızlandırabilir.\n\n**Cevap: A** — IL-6\n\n**Özet.** Yaşla doğuştan immün sistem hafif ama sürekli aktive olur; **IL-6**, TNF-α ve IL-1β insülin direnci, katabolizma ve ek hücre hasarıyla yaşlanmayı hızlandırabilir.",
-   "ses": "Yaşlanmaya eşlik eden kalıcı düşük dereceli inflamasyon, yani inflameycing, ile ilişkili sitokin hangisidir?\nA, İnterlökin altı\nBe, İnterlökin on\nCe, Te ge fe beta\nDe, İnterlökin dört\nE, İnterferon alfa\nHer seçeneği tek tek ele alalım.\nİnterlökin altı doğru. Te ne fe alfa ve interlökin bir beta ile birlikte yaşlanmadaki düşük dereceli inflamasyonun sitokinlerindendir.\nYaşla hasarlı hücreler ve de ne a artıkları birikir, doğuştan immün sistem hafif ama sürekli aktive olabilir. IL-on bu sorudaki ayrımı sağlamaz.\nTGF-β ile karıştırılabilir. Yaşlanmaya eşlik eden inflamatuar sitokinler insülin direnci ve katabolik durum oluşturur.\nBu kronik inflamasyonda rol alan sitokinler arasında te ne fe alfa ve interlökin bir beta sayılır. IL-dört bu sorudaki ayrımı sağlamaz.\nİnterferon-α ile karıştırılabilir. İnflamatuar sitokinler hücrelerde ek de ne a ve protein hasarı yaparak yaşlanmayı hızlandırabilir.\nDoğru cevap A, İnterlökin altı\nYaşla doğuştan immün sistem hafif ama sürekli aktive olur. İnterlökin altı, te ne fe alfa ve interlökin bir beta, insülin direnci, katabolizma ve ek hücre hasarıyla yaşlanmayı hızlandırabilir.",
-   "kelime": 152
+   "sayfa": [
+    32,
+    33
+   ],
+   "metin": "**Soru.** Yaşlanmaya eşlik eden kalıcı düşük dereceli inflamasyon (inflammaging) ile ilişkili sitokin hangisidir?\n\n**A)** IL-6 · **B)** IL-10 · **C)** TGF-β · **D)** IL-4 · **E)** İnterferon-α\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **IL-6** — IL-6 doğru: TNF-α ve IL-1β ile birlikte yaşlanmadaki düşük dereceli inflamasyonun sitokinlerindendir.\n- **IL-10** — IL-10, M2 makrofajlar ve düzenleyici T hücreleri tarafından salgılanan antiinflamatuvar bir sitokindir; yaşlanmaya eşlik eden kronik düşük dereceli inflamasyonda (inflammaging) yükselen temel proinflamatuvar sitokin ise IL-6'dır.\n- **TGF-β** — TGF-beta bağ dokusu onarımı ve fibrozisi uyaran, aynı zamanda immün yanıtı baskılayan bir büyüme faktörüdür; yaşlanmayla artan kronik sistemik inflamasyonda öne çıkan sitokin ise IL-6'dır.\n- **IL-4** — IL-4, Th2 lenfositlerden salınarak IgE sentezini ve alternatif (M2) makrofaj aktivasyonunu uyarır; yaşlanmaya eşlik eden kronik düşük dereceli inflamasyon tablosunda artan sitokin ise IL-6'dır.\n- **İnterferon-α** — İnterferon-alfa viral enfeksiyonlara karşı doğuştan bağışıklıkta hücreleri antiviral duruma geçiren tip I interferondur; yaşlanmayla birlikte senesent hücrelerden salınıp kronik inflamasyonu sürdüren sitokin ise IL-6'dır.\n\n**Cevap: A** — IL-6\n\n**Özet.** Yaşla doğuştan immün sistem hafif ama sürekli aktive olur; **IL-6**, TNF-α ve IL-1β insülin direnci, katabolizma ve ek hücre hasarıyla yaşlanmayı hızlandırabilir.",
+   "ses": "Yaşlanmaya eşlik eden kalıcı düşük dereceli inflamasyon, yani inflameycing, ile ilişkili sitokin hangisidir?\nA, İnterlökin altı\nBe, İnterlökin on\nCe, Te ge fe beta\nDe, İnterlökin dört\nE, İnterferon alfa\nHer seçeneği tek tek ele alalım.\nİnterlökin altı doğru. Te ne fe alfa ve interlökin bir beta ile birlikte yaşlanmadaki düşük dereceli inflamasyonun sitokinlerindendir.\ninterlökin on, em iki makrofajlar ve düzenleyici T hücreleri tarafından salgılanan antiinflamatuvar bir sitokindir. Yaşlanmaya eşlik eden kronik düşük dereceli inflamasyonda, inflammaging, yükselen temel proinflamatuvar sitokin ise interlökin altı'dır.\nte ge fe beta bağ dokusu onarımı ve fibrozisi uyaran, aynı zamanda immün yanıtı baskılayan bir büyüme faktörüdür. Yaşlanmayla artan kronik sistemik inflamasyonda öne çıkan sitokin ise interlökin altı'dır.\ninterlökin dört, te ha iki lenfositlerden salınarak immünoglobulin e sentezini ve alternatif, em iki, makrofaj aktivasyonunu uyarır. Yaşlanmaya eşlik eden kronik düşük dereceli inflamasyon tablosunda artan sitokin ise interlökin altı'dır.\nİnterferon-alfa viral enfeksiyonlara karşı doğuştan bağışıklıkta hücreleri antiviral duruma geçiren tip bir interferondur. Yaşlanmayla birlikte senesent hücrelerden salınıp kronik inflamasyonu sürdüren sitokin ise interlökin altı'dır.\nDoğru cevap A, İnterlökin altı\nYaşla doğuştan immün sistem hafif ama sürekli aktive olur. İnterlökin altı, te ne fe alfa ve interlökin bir beta, insülin direnci, katabolizma ve ek hücre hasarıyla yaşlanmayı hızlandırabilir.",
+   "kelime": 187
   },
   {
    "no": 21,
    "tur": "cikmis",
+   "sinav": "2020-2021 · 2020-2021 Dönem 3 Kurul 6 Sınavı (sinav.karabuk.edu.tr öğrenci çıktısı)",
    "soru": "Replikatif yaşlanma ile ilgili aşağıdakilerden hangisi söylenemez?",
    "secenekler": {
     "A": "Ökaryotik hücre bölünmesi, replikatif yaşlanmadan dolayı sınırlıdır",
@@ -265,6 +316,7 @@
     "E": "Hücre döngüsünü tamamlamak için ihtiyaç duydukları süreye bağlıdır"
    },
    "dogru": "E",
+   "ipucu": "Telomerin hangi olay sırasında kısaldığını hatırlayarak replikatif sınırı belirleyen etkeni düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Ökaryotik somatik hücrelerin bölünmesi replikatif yaşlanma nedeniyle sınırlıdır; bir süre sonra hücre döngüsünden çıkarlar.",
@@ -274,6 +326,12 @@
     "E": "Hücre döngüsünü tamamlama süresine bağlı olduğu söylenemez, bu yüzden doğru cevaptır: replikatif yaşlanma geçen süreye değil, bölünme sayısına bağlıdır."
    },
    "ozet": "Replikatif yaşlanma bölünme sayısına bağlıdır; her bölünmede telomer kısalır, kritik kısalmada hücre döngüsü durur ve kanserleşmeyi sınırlayan senesens gelişir.",
+   "sayfa": [
+    20,
+    21,
+    22,
+    23
+   ],
    "metin": "**Soru.** Replikatif yaşlanma ile ilgili aşağıdakilerden hangisi söylenemez?\n\n**A)** Ökaryotik hücre bölünmesi, replikatif yaşlanmadan dolayı sınırlıdır · **B)** Hücre bölünme sayısına bağlıdır · **C)** Hücre tipine göre değişebilir · **D)** Kötü huylu transformasyonları önlemek adına güvenilir bir mekanizmadır · **E)** Hücre döngüsünü tamamlamak için ihtiyaç duydukları süreye bağlıdır\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Ökaryotik hücre bölünmesi, replikatif yaşlanmadan dolayı sınırlıdır** — Ökaryotik somatik hücrelerin bölünmesi replikatif yaşlanma nedeniyle sınırlıdır; bir süre sonra hücre döngüsünden çıkarlar.\n- **Hücre bölünme sayısına bağlıdır** — Bölünme sayısına bağlılık doğrudur; her bölünmede telomerin küçük bir kısmı kopyalanamaz ve telomer kademeli olarak kısalır.\n- **Hücre tipine göre değişebilir** — Hücre tipine göre değişmesi doğrudur; telomeraz aktivitesi germ hücrelerinde yüksek, kök hücrelerde düşük ya da orta, somatik hücrelerde çok düşüktür.\n- **Kötü huylu transformasyonları önlemek adına güvenilir bir mekanizmadır** — Kötü huylu dönüşümü önleme amacı doğrudur; replikatif senesens hasarlı genomlu hücrelerin kontrolsüz çoğalmasını engelleyerek kanserleşmeyi sınırlar.\n- **Hücre döngüsünü tamamlamak için ihtiyaç duydukları süreye bağlıdır** — Hücre döngüsünü tamamlama süresine bağlı olduğu söylenemez, bu yüzden doğru cevaptır: replikatif yaşlanma geçen süreye değil, bölünme sayısına bağlıdır.\n\n**Cevap: E** — Hücre döngüsünü tamamlamak için ihtiyaç duydukları süreye bağlıdır\n\n**Özet.** Replikatif yaşlanma bölünme sayısına bağlıdır; her bölünmede telomer kısalır, kritik kısalmada hücre döngüsü durur ve kanserleşmeyi sınırlayan senesens gelişir.",
    "ses": "Replikatif yaşlanma ile ilgili aşağıdakilerden hangisi söylenemez?\nA, Ökaryotik hücre bölünmesi, replikatif yaşlanmadan dolayı sınırlıdır\nBe, Hücre bölünme sayısına bağlıdır\nCe, Hücre tipine göre değişebilir\nDe, Kötü huylu transformasyonları önlemek adına güvenilir bir mekanizmadır\nE, Hücre döngüsünü tamamlamak için ihtiyaç duydukları süreye bağlıdır\nSeçenekleri sırayla değerlendirelim.\nÖkaryotik somatik hücrelerin bölünmesi replikatif yaşlanma nedeniyle sınırlıdır. Bir süre sonra hücre döngüsünden çıkarlar.\nBölünme sayısına bağlılık doğrudur. Her bölünmede telomerin küçük bir kısmı kopyalanamaz ve telomer kademeli olarak kısalır.\nHücre tipine göre değişmesi doğrudur. Telomeraz aktivitesi germ hücrelerinde yüksek, kök hücrelerde düşük ya da orta, somatik hücrelerde çok düşüktür.\nKötü huylu dönüşümü önleme amacı doğrudur. Replikatif senesens hasarlı genomlu hücrelerin kontrolsüz çoğalmasını engelleyerek kanserleşmeyi sınırlar.\nHücre döngüsünü tamamlama süresine bağlı olduğu söylenemez, bu yüzden doğru cevaptır. Replikatif yaşlanma geçen süreye değil, bölünme sayısına bağlıdır.\nDoğru cevap E, Hücre döngüsünü tamamlamak için ihtiyaç duydukları süreye bağlıdır\nReplikatif yaşlanma bölünme sayısına bağlıdır. Her bölünmede telomer kısalır, kritik kısalmada hücre döngüsü durur ve kanserleşmeyi sınırlayan senesens gelişir.",
    "kelime": 209
@@ -281,6 +339,7 @@
   {
    "no": 22,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Güncel bilgiye göre yaşlanma için hangisi doğrudur?",
    "secenekler": {
     "A": "Genler ve sinyal yollarıyla düzenlenir",
@@ -290,6 +349,7 @@
     "E": "Kronik hastalık riskini azaltır"
    },
    "dogru": "A",
+   "ipucu": "Eski pasif yıpranma görüşü ile mayadan memeliye uzanan deneysel bulguları karşılaştır.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Genler ve sinyal yollarıyla düzenlenmesi doğru. Mayadan memeliye kadar yaşlanma belirli genler ve sinyal yolları tarafından düzenlenir.",
@@ -299,6 +359,10 @@
     "E": "Yaşlanma kronik hastalık riskini azaltmaz; homeostaz bozulur ve kronik hastalık riski artar."
    },
    "ozet": "Yaşlanma eskiden enerjinin tükenmesi sanılırdı; bugün mayadan memeliye genler ve sinyal yollarıyla düzenlendiği ve deneysel modellerde yavaşlatılabildiği bilinir.",
+   "sayfa": [
+    4,
+    6
+   ],
    "metin": "**Soru.** Güncel bilgiye göre yaşlanma için hangisi doğrudur?\n\n**A)** Genler ve sinyal yollarıyla düzenlenir · **B)** Yalnız enerjinin tükenmesidir · **C)** Hiçbir müdahaleyle yavaşlatılamaz · **D)** Yalnız hücre düzeyinde kalır · **E)** Kronik hastalık riskini azaltır\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Genler ve sinyal yollarıyla düzenlenir** — Genler ve sinyal yollarıyla düzenlenmesi doğru. Mayadan memeliye kadar yaşlanma belirli genler ve sinyal yolları tarafından düzenlenir.\n- **Yalnız enerjinin tükenmesidir** — Yalnız enerjinin tükenmesi eski görüştür; güncel bilgiye göre yaşlanma basit bir zaman geçişi değil, düzenlenen bir süreçtir.\n- **Hiçbir müdahaleyle yavaşlatılamaz** — Hiçbir müdahaleyle yavaşlatılamayacağı yanlıştır; bazı deneysel modeller yaşlanmanın belirli müdahalelerle yavaşlatılabileceğini gösterir.\n- **Yalnız hücre düzeyinde kalır** — Yaşlanma yalnız hücre düzeyinde kalmaz; hücre, doku, organ ve organizma düzeyinde etkilerini gösterir.\n- **Kronik hastalık riskini azaltır** — Yaşlanma kronik hastalık riskini azaltmaz; homeostaz bozulur ve kronik hastalık riski artar.\n\n**Cevap: A** — Genler ve sinyal yollarıyla düzenlenir\n\n**Özet.** Yaşlanma eskiden enerjinin tükenmesi sanılırdı; bugün mayadan memeliye genler ve sinyal yollarıyla düzenlendiği ve deneysel modellerde yavaşlatılabildiği bilinir.",
    "ses": "Güncel bilgiye göre yaşlanma için hangisi doğrudur?\nA, Genler ve sinyal yollarıyla düzenlenir\nBe, Yalnız enerjinin tükenmesidir\nCe, Hiçbir müdahaleyle yavaşlatılamaz\nDe, Yalnız hücre düzeyinde kalır\nE, Kronik hastalık riskini azaltır\nHer seçeneği tek tek ele alalım.\nGenler ve sinyal yollarıyla düzenlenmesi doğru. Mayadan memeliye kadar yaşlanma belirli genler ve sinyal yolları tarafından düzenlenir.\nYalnız enerjinin tükenmesi eski görüştür. Güncel bilgiye göre yaşlanma basit bir zaman geçişi değil, düzenlenen bir süreçtir.\nHiçbir müdahaleyle yavaşlatılamayacağı yanlıştır. Bazı deneysel modeller yaşlanmanın belirli müdahalelerle yavaşlatılabileceğini gösterir.\nYaşlanma yalnız hücre düzeyinde kalmaz. Hücre, doku, organ ve organizma düzeyinde etkilerini gösterir.\nYaşlanma kronik hastalık riskini azaltmaz. Homeostaz bozulur ve kronik hastalık riski artar.\nDoğru cevap A, Genler ve sinyal yollarıyla düzenlenir\nYaşlanma eskiden enerjinin tükenmesi sanılırdı. Bugün mayadan memeliye genler ve sinyal yollarıyla düzenlendiği ve deneysel modellerde yavaşlatılabildiği bilinir.",
    "kelime": 170
@@ -306,6 +370,7 @@
   {
    "no": 23,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "DNA'da zamanla biriken mutasyonların sonucu olarak hangisi beklenmez?",
    "secenekler": {
     "A": "Gen ekspresyonunun değişmesi",
@@ -315,6 +380,7 @@
     "E": "Hücre kaybı"
    },
    "dogru": "D",
+   "ipucu": "Onarım sistemlerinin kaçırdığı hataların dokuyu hangi yöne, kazanca mı kayba mı, götürdüğünü düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Gen ekspresyonunun değişmesi biriken DNA mutasyonlarının beklenen sonuçlarındandır.",
@@ -324,6 +390,11 @@
     "E": "Hücre kaybı, mutasyon birikimi ve kusurlu onarımın sonucu olarak hücre işlevinde azalmayla birlikte beklenir."
    },
    "ozet": "DNA onarım sistemleri hasarın çoğunu düzeltir, ama zamanla mutasyonlar birikir; gen ekspresyonu değişir, hücreler senesense girer ya da apoptoza gider.",
+   "sayfa": [
+    8,
+    9,
+    14
+   ],
    "metin": "**Soru.** DNA'da zamanla biriken mutasyonların sonucu olarak hangisi beklenmez?\n\n**A)** Gen ekspresyonunun değişmesi · **B)** Senesense girme · **C)** Apoptoz · **D)** Hücre fonksiyon rezervinin artması · **E)** Hücre kaybı\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Gen ekspresyonunun değişmesi** — Gen ekspresyonunun değişmesi biriken DNA mutasyonlarının beklenen sonuçlarındandır.\n- **Senesense girme** — Senesense girme DNA hasarının sonuçlarındandır; hasarlı hücre bölünmeyi bırakır.\n- **Apoptoz** — Apoptoz, mutasyon biriktiren hücrenin ortadan kaldırılmasıdır ve beklenen bir sonuçtur.\n- **Hücre fonksiyon rezervinin artması** — Hücre fonksiyon rezervinin artması beklenmez, bu yüzden doğru. Hasar birikimi yaşlanan hücrede fonksiyon rezervini azaltır.\n- **Hücre kaybı** — Hücre kaybı, mutasyon birikimi ve kusurlu onarımın sonucu olarak hücre işlevinde azalmayla birlikte beklenir.\n\n**Cevap: D** — Hücre fonksiyon rezervinin artması\n\n**Özet.** DNA onarım sistemleri hasarın çoğunu düzeltir, ama zamanla mutasyonlar birikir; gen ekspresyonu değişir, hücreler senesense girer ya da apoptoza gider.",
    "ses": "De ne a'da zamanla biriken mutasyonların sonucu olarak hangisi beklenmez?\nA, Gen ekspresyonunun değişmesi\nBe, Senesense girme\nCe, Apoptoz\nDe, Hücre fonksiyon rezervinin artması\nE, Hücre kaybı\nŞıkları sırasıyla gözden geçirelim.\nGen ekspresyonunun değişmesi biriken de ne a mutasyonlarının beklenen sonuçlarındandır.\nSenesense girme de ne a hasarının sonuçlarındandır. Hasarlı hücre bölünmeyi bırakır.\nApoptoz, mutasyon biriktiren hücrenin ortadan kaldırılmasıdır ve beklenen bir sonuçtur.\nHücre fonksiyon rezervinin artması beklenmez, bu yüzden doğru. Hasar birikimi yaşlanan hücrede fonksiyon rezervini azaltır.\nHücre kaybı, mutasyon birikimi ve kusurlu onarımın sonucu olarak hücre işlevinde azalmayla birlikte beklenir.\nDoğru cevap De, Hücre fonksiyon rezervinin artması\nDe ne a onarım sistemleri hasarın çoğunu düzeltir, ama zamanla mutasyonlar birikir. Gen ekspresyonu değişir, hücreler senesense girer ya da apoptoza gider.",
    "kelime": 141
@@ -331,6 +402,7 @@
   {
    "no": 24,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Hücrede ROS üretiminin ana kaynağı hangisidir?",
    "secenekler": {
     "A": "Peroksizomal katalaz",
@@ -340,6 +412,7 @@
     "E": "Proteazom"
    },
    "dogru": "B",
+   "ipucu": "Elektron taşınması sırasında oksijenin kısmen indirgendiği, enerji üreten organeli düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "Peroksizomal katalaz hidrojen peroksiti yıkan bir temizleme enzimidir; ROS üretmez, azaltır.",
@@ -349,6 +422,12 @@
     "E": "Proteazom uygunsuz proteinleri parçalayan yapıdır; ROS üretimiyle ilgili değildir."
    },
    "ozet": "Başlıca ROS süperoksit, hidrojen peroksit ve hidroksil radikalidir; ana üretim yeri mitokondriyal oksidatif fosforilasyondur, lökositlerin solunum patlaması ve radyasyon da katkıda bulunur.",
+   "sayfa": [
+    11,
+    12,
+    15,
+    27
+   ],
    "metin": "**Soru.** Hücrede ROS üretiminin ana kaynağı hangisidir?\n\n**A)** Peroksizomal katalaz · **B)** Mitokondriyal oksidatif fosforilasyon · **C)** Glutatyon peroksidaz · **D)** Süperoksit dismutaz · **E)** Proteazom\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **Peroksizomal katalaz** — Peroksizomal katalaz hidrojen peroksiti yıkan bir temizleme enzimidir; ROS üretmez, azaltır.\n- **Mitokondriyal oksidatif fosforilasyon** — Mitokondriyal oksidatif fosforilasyon doğru. Mitokondri ATP üretimi için gereklidir ve ROS üretiminin ana kaynağıdır.\n- **Glutatyon peroksidaz** — Glutatyon peroksidaz ROS temizleyen enzimlerdendir; ROS kaynağı değildir.\n- **Süperoksit dismutaz** — Süperoksit dismutaz süperoksiti temizleyen enzimdir; ROS'u artıran değil azaltan sistemdir.\n- **Proteazom** — Proteazom uygunsuz proteinleri parçalayan yapıdır; ROS üretimiyle ilgili değildir.\n\n**Cevap: B** — Mitokondriyal oksidatif fosforilasyon\n\n**Özet.** Başlıca ROS süperoksit, hidrojen peroksit ve hidroksil radikalidir; ana üretim yeri mitokondriyal oksidatif fosforilasyondur, lökositlerin solunum patlaması ve radyasyon da katkıda bulunur.",
    "ses": "Hücrede re o se üretiminin ana kaynağı hangisidir?\nA, Peroksizomal katalaz\nBe, Mitokondriyal oksidatif fosforilasyon\nCe, Glutatyon peroksidaz\nDe, Süperoksit dismutaz\nE, Proteazom\nŞimdi seçeneklere tek tek bakalım.\nPeroksizomal katalaz hidrojen peroksiti yıkan bir temizleme enzimidir. Re o se üretmez, azaltır.\nMitokondriyal oksidatif fosforilasyon doğru. Mitokondri a te pe üretimi için gereklidir ve re o se üretiminin ana kaynağıdır.\nGlutatyon peroksidaz re o se temizleyen enzimlerdendir. Re o se kaynağı değildir.\nSüperoksit dismutaz süperoksiti temizleyen enzimdir. Re o se düzeyini artıran değil azaltan sistemdir.\nProteazom uygunsuz proteinleri parçalayan yapıdır. Re o se üretimiyle ilgili değildir.\nDoğru cevap Be, Mitokondriyal oksidatif fosforilasyon\nBaşlıca re o se süperoksit, hidrojen peroksit ve hidroksil radikalidir. Ana üretim yeri mitokondriyal oksidatif fosforilasyondur, lökositlerin solunum patlaması ve radyasyon da katkıda bulunur.",
    "kelime": 133
@@ -356,6 +435,7 @@
   {
    "no": 25,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Peroksizomlarda yerleşen antioksidan enzim hangisidir?",
    "secenekler": {
     "A": "Süperoksit dismutaz",
@@ -365,6 +445,7 @@
     "E": "Kaspaz-9"
    },
    "dogru": "D",
+   "ipucu": "Hidrojen peroksiti su ve oksijene yıkan enzimin hücre içindeki adresini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Süperoksit dismutaz da ROS temizleyen bir enzimdir; ancak yeri peroksizom olarak tanımlanan enzim o değildir.",
@@ -374,6 +455,11 @@
     "E": "Kaspaz-9 mitokondriyal apoptoz yolunun başlatıcı kaspazıdır; ROS temizlemez."
    },
    "ozet": "ROS süperoksit dismutaz, peroksizomlardaki katalaz ve glutatyon peroksidazla; ayrıca vitamin E, C, A, β-karoten ve glutatyon gibi antioksidanlarla temizlenir.",
+   "sayfa": [
+    12,
+    23,
+    18
+   ],
    "metin": "**Soru.** Peroksizomlarda yerleşen antioksidan enzim hangisidir?\n\n**A)** Süperoksit dismutaz · **B)** Glutatyon peroksidaz · **C)** Telomeraz · **D)** Katalaz · **E)** Kaspaz-9\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Süperoksit dismutaz** — Süperoksit dismutaz da ROS temizleyen bir enzimdir; ancak yeri peroksizom olarak tanımlanan enzim o değildir.\n- **Glutatyon peroksidaz** — Glutatyon peroksidaz glutatyonu kullanarak ROS'u temizler; peroksizomla eşleştirilen enzim değildir.\n- **Telomeraz** — Telomeraz telomer uçlarına nükleotid ekleyen bir RNA protein kompleksidir; antioksidan değildir.\n- **Katalaz** — Katalaz doğru. Süperoksit dismutaz ve glutatyon peroksidazla birlikte ROS temizleyen enzimlerdendir ve peroksizomlarda bulunur.\n- **Kaspaz-9** — Kaspaz-9 mitokondriyal apoptoz yolunun başlatıcı kaspazıdır; ROS temizlemez.\n\n**Cevap: D** — Katalaz\n\n**Özet.** ROS süperoksit dismutaz, peroksizomlardaki katalaz ve glutatyon peroksidazla; ayrıca vitamin E, C, A, β-karoten ve glutatyon gibi antioksidanlarla temizlenir.",
    "ses": "Peroksizomlarda yerleşen antioksidan enzim hangisidir?\nA, Süperoksit dismutaz\nBe, Glutatyon peroksidaz\nCe, Telomeraz\nDe, Katalaz\nE, Kaspaz dokuz\nSeçenekleri sırayla değerlendirelim.\nSüperoksit dismutaz da re o se temizleyen bir enzimdir. Ancak yeri peroksizom olarak tanımlanan enzim o değildir.\nGlutatyon peroksidaz glutatyonu kullanarak re o se temizler. Peroksizomla eşleştirilen enzim değildir.\nTelomeraz telomer uçlarına nükleotid ekleyen bir re ne a protein kompleksidir. Antioksidan değildir.\nKatalaz doğru. Süperoksit dismutaz ve glutatyon peroksidazla birlikte re o se temizleyen enzimlerdendir ve peroksizomlarda bulunur.\nKaspaz dokuz mitokondriyal apoptoz yolunun başlatıcı kaspazıdır. Re o se temizlemez.\nDoğru cevap De, Katalaz\nRe o se, süperoksit dismutaz, peroksizomlardaki katalaz ve glutatyon peroksidazla temizlenir. Ayrıca vitamin e, ce, a, beta karoten ve glutatyon gibi antioksidanlar da görev alır.",
    "kelime": 125
@@ -381,6 +467,7 @@
   {
    "no": 26,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "ROS'un zar fosfolipidlerinde yaptığı zincirleme hasar hangisidir?",
    "secenekler": {
     "A": "Protein oksidasyonu",
@@ -390,6 +477,7 @@
     "E": "Lipid peroksidasyonu"
    },
    "dogru": "E",
+   "ipucu": "Hücre zarının yapı taşı olan yağ moleküllerinde, bir radikalin komşusuna saldırarak yayılan hasarı düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Protein oksidasyonu ROS'un proteinlerdeki etkisidir; çapraz bağlanma ve aktivite kaybı yapar.",
@@ -399,6 +487,9 @@
     "E": "Lipid peroksidasyonu doğru. ROS zar fosfolipidlerinde zincirleme hasar başlatır ve zar bütünlüğünü bozar."
    },
    "ozet": "ROS zarda lipid peroksidasyonuyla zincirleme hasar, proteinlerde oksidasyonla çapraz bağlanma, DNA'da baz modifikasyonu ve zincir kırıkları yapar.",
+   "sayfa": [
+    13
+   ],
    "metin": "**Soru.** ROS'un zar fosfolipidlerinde yaptığı zincirleme hasar hangisidir?\n\n**A)** Protein oksidasyonu · **B)** Baz modifikasyonu · **C)** Çift zincir kırığı · **D)** Çapraz bağlanma · **E)** Lipid peroksidasyonu\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Protein oksidasyonu** — Protein oksidasyonu ROS'un proteinlerdeki etkisidir; çapraz bağlanma ve aktivite kaybı yapar.\n- **Baz modifikasyonu** — Baz modifikasyonu ROS'un DNA üzerindeki etkisidir; zar fosfolipidleriyle ilgili değildir.\n- **Çift zincir kırığı** — Çift zincir kırığı DNA hasarı biçimidir; tek ya da çift zincir kırıkları DNA'da görülür.\n- **Çapraz bağlanma** — Çapraz bağlanma protein oksidasyonunun sonucudur ve proteinlerde aktivite kaybına yol açar.\n- **Lipid peroksidasyonu** — Lipid peroksidasyonu doğru. ROS zar fosfolipidlerinde zincirleme hasar başlatır ve zar bütünlüğünü bozar.\n\n**Cevap: E** — Lipid peroksidasyonu\n\n**Özet.** ROS zarda lipid peroksidasyonuyla zincirleme hasar, proteinlerde oksidasyonla çapraz bağlanma, DNA'da baz modifikasyonu ve zincir kırıkları yapar.",
    "ses": "Re o se'nin zar fosfolipidlerinde yaptığı zincirleme hasar hangisidir?\nA, Protein oksidasyonu\nBe, Baz modifikasyonu\nCe, Çift zincir kırığı\nDe, Çapraz bağlanma\nE, Lipid peroksidasyonu\nHer seçeneği tek tek ele alalım.\nProtein oksidasyonu re o se'nin proteinlerdeki etkisidir. Çapraz bağlanma ve aktivite kaybı yapar.\nBaz modifikasyonu re o se'nin de ne a üzerindeki etkisidir. Zar fosfolipidleriyle ilgili değildir.\nÇift zincir kırığı de ne a hasarı biçimidir. Tek ya da çift zincir kırıkları de ne a'da görülür.\nÇapraz bağlanma protein oksidasyonunun sonucudur ve proteinlerde aktivite kaybına yol açar.\nLipid peroksidasyonu doğru. Re o se zar fosfolipidlerinde zincirleme hasar başlatır ve zar bütünlüğünü bozar.\nDoğru cevap E, Lipid peroksidasyonu\nRe o se zarda lipid peroksidasyonuyla zincirleme hasar, proteinlerde oksidasyonla çapraz bağlanma, de ne a'da baz modifikasyonu ve zincir kırıkları yapar.",
    "kelime": 138
@@ -406,6 +497,7 @@
   {
    "no": 27,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Yaşlanmış hücrede ROS dengesinin bozulmasına katkıda bulunan hangisidir?",
    "secenekler": {
     "A": "Antioksidan savunmanın zayıflaması",
@@ -415,6 +507,7 @@
     "E": "Katalaz etkinliğinin artması"
    },
    "dogru": "A",
+   "ipucu": "Dengenin iki kefesini düşün; üretimin artmasının yanında temizleme tarafında yaşla ne değişebilir?",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Antioksidan savunmanın zayıflaması doğru. Yaşla antioksidan savunma zayıflayabilir; kaçak elektronlardan üretim de artınca ROS birikir.",
@@ -424,6 +517,11 @@
     "E": "Katalaz etkinliğinin artması ROS temizlenmesini kolaylaştırır; dengeyi bozan bir değişiklik değildir."
    },
    "ozet": "Yaşlanmış hücrede mitokondriyal verim düşer, kaçak elektronlardan ROS artar ve antioksidan savunma zayıflayabilir; DNA ve protein hasarı birikir, lipofusin oluşur.",
+   "sayfa": [
+    14,
+    12,
+    31
+   ],
    "metin": "**Soru.** Yaşlanmış hücrede ROS dengesinin bozulmasına katkıda bulunan hangisidir?\n\n**A)** Antioksidan savunmanın zayıflaması · **B)** Mitokondriyal verimin artması · **C)** Otofaji artışı · **D)** Kalori kısıtlaması · **E)** Katalaz etkinliğinin artması\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Antioksidan savunmanın zayıflaması** — Antioksidan savunmanın zayıflaması doğru. Yaşla antioksidan savunma zayıflayabilir; kaçak elektronlardan üretim de artınca ROS birikir.\n- **Mitokondriyal verimin artması** — Mitokondriyal verim yaşlanmış hücrede artmaz, düşer; verimsiz zincirden kaçan elektronlar ROS üretimini artırır.\n- **Otofaji artışı** — Otofaji artışı kalori kısıtlamasının yaşlanmayı yavaşlatan etkilerindendir; ROS dengesini bozmaz.\n- **Kalori kısıtlaması** — Kalori kısıtlaması ROS üretimini azaltan bir müdahaledir; dengeyi bozmaz, korur.\n- **Katalaz etkinliğinin artması** — Katalaz etkinliğinin artması ROS temizlenmesini kolaylaştırır; dengeyi bozan bir değişiklik değildir.\n\n**Cevap: A** — Antioksidan savunmanın zayıflaması\n\n**Özet.** Yaşlanmış hücrede mitokondriyal verim düşer, kaçak elektronlardan ROS artar ve antioksidan savunma zayıflayabilir; DNA ve protein hasarı birikir, lipofusin oluşur.",
    "ses": "Yaşlanmış hücrede re o se dengesinin bozulmasına katkıda bulunan hangisidir?\nA, Antioksidan savunmanın zayıflaması\nBe, Mitokondriyal verimin artması\nCe, Otofaji artışı\nDe, Kalori kısıtlaması\nE, Katalaz etkinliğinin artması\nŞıkları sırasıyla gözden geçirelim.\nAntioksidan savunmanın zayıflaması doğru. Yaşla antioksidan savunma zayıflayabilir. Kaçak elektronlardan üretim de artınca re o se birikir.\nMitokondriyal verim yaşlanmış hücrede artmaz, düşer. Verimsiz zincirden kaçan elektronlar re o se üretimini artırır.\nOtofaji artışı kalori kısıtlamasının yaşlanmayı yavaşlatan etkilerindendir. Re o se dengesini bozmaz.\nKalori kısıtlaması re o se üretimini azaltan bir müdahaledir. Dengeyi bozmaz, korur.\nKatalaz etkinliğinin artması re o se temizlenmesini kolaylaştırır. Dengeyi bozan bir değişiklik değildir.\nDoğru cevap A, Antioksidan savunmanın zayıflaması\nYaşlanmış hücrede mitokondriyal verim düşer, kaçak elektronlardan re o se artar ve antioksidan savunma zayıflayabilir. De ne a ve protein hasarı birikir, lipofusin oluşur.",
    "kelime": 145
@@ -431,6 +529,7 @@
   {
    "no": 28,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Yaşlanmayla mitokondride hangisi görülür?",
    "secenekler": {
     "A": "ATP üretiminde artış",
@@ -440,6 +539,7 @@
     "E": "Telomeraz aktivasyonu"
    },
    "dogru": "D",
+   "ipucu": "Oksidatif hasarın üretildiği yere en yakın duran genetik materyalin yıllar içinde ne yaşayacağını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "ATP üretimi yaşlanmayla artmaz; oksidatif fosforilasyon etkinliği azaldığı için enerji üretimi düşer.",
@@ -449,6 +549,10 @@
     "E": "Telomeraz aktivasyonu mitokondriyal bir değişiklik değildir; birçok kanser hücresinde telomerin korunmasını sağlar."
    },
    "ozet": "Mitokondri hem ATP üretimi için gereklidir hem ROS'un ana kaynağıdır; yaşla mtDNA mutasyonları artar, oksidatif fosforilasyon azalır ve ROS artışıyla hasar döngüsü oluşur.",
+   "sayfa": [
+    15,
+    24
+   ],
    "metin": "**Soru.** Yaşlanmayla mitokondride hangisi görülür?\n\n**A)** ATP üretiminde artış · **B)** Oksidatif fosforilasyon etkinliğinde artış · **C)** ROS üretiminde azalma · **D)** mtDNA mutasyonlarında artış · **E)** Telomeraz aktivasyonu\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **ATP üretiminde artış** — ATP üretimi yaşlanmayla artmaz; oksidatif fosforilasyon etkinliği azaldığı için enerji üretimi düşer.\n- **Oksidatif fosforilasyon etkinliğinde artış** — Oksidatif fosforilasyon etkinliği yaşlanmayla artmaz, azalır.\n- **ROS üretiminde azalma** — ROS üretimi azalmaz; verimsizleşen mitokondride ROS artışıyla daha fazla hücre hasarı döngüsü oluşur.\n- **mtDNA mutasyonlarında artış** — Mitokondriyal DNA mutasyonlarında artış doğru. Yaşlanmayla mitokondriyal DNA mutasyonları artar ve oksidatif fosforilasyon etkinliği azalır.\n- **Telomeraz aktivasyonu** — Telomeraz aktivasyonu mitokondriyal bir değişiklik değildir; birçok kanser hücresinde telomerin korunmasını sağlar.\n\n**Cevap: D** — mtDNA mutasyonlarında artış\n\n**Özet.** Mitokondri hem ATP üretimi için gereklidir hem ROS'un ana kaynağıdır; yaşla mtDNA mutasyonları artar, oksidatif fosforilasyon azalır ve ROS artışıyla hasar döngüsü oluşur.",
    "ses": "Yaşlanmayla mitokondride hangisi görülür?\nA, A te pe üretiminde artış\nBe, Oksidatif fosforilasyon etkinliğinde artış\nCe, Re o se üretiminde azalma\nDe, Mitokondriyal de ne a mutasyonlarında artış\nE, Telomeraz aktivasyonu\nŞimdi seçeneklere tek tek bakalım.\nA te pe üretimi yaşlanmayla artmaz. Oksidatif fosforilasyon etkinliği azaldığı için enerji üretimi düşer.\nOksidatif fosforilasyon etkinliği yaşlanmayla artmaz, azalır.\nRe o se üretimi azalmaz. Verimsizleşen mitokondride re o se artışıyla daha fazla hücre hasarı döngüsü oluşur.\nMitokondriyal de ne a mutasyonlarında artış doğru. Yaşlanmayla mitokondriyal de ne a mutasyonları artar ve oksidatif fosforilasyon etkinliği azalır.\nTelomeraz aktivasyonu mitokondriyal bir değişiklik değildir. Birçok kanser hücresinde telomerin korunmasını sağlar.\nDoğru cevap De, Mitokondriyal de ne a mutasyonlarında artış\nMitokondri hem a te pe üretimi için gereklidir hem re o se'nin ana kaynağıdır. Yaşla mitokondriyal de ne a mutasyonları artar, oksidatif fosforilasyon azalır ve re o se artışıyla hasar döngüsü oluşur.",
    "kelime": 148
@@ -456,6 +560,7 @@
   {
    "no": 29,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Mitokondriyal apoptoz yolunun tetikleyicilerinden biri hangisidir?",
    "secenekler": {
     "A": "Telomeraz aktivasyonu",
@@ -465,6 +570,7 @@
     "E": "Katalaz artışı"
    },
    "dogru": "C",
+   "ipucu": "Hayatta kalma sinyalleri kesilen hücrenin hangi durumda kendi içinden ölüm programını başlattığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Telomeraz aktivasyonu kanser hücrelerinde telomer uzunluğunu stabilize eder ve hücreyi ölümsüz kılar; apoptozu tetiklemez.",
@@ -474,6 +580,12 @@
     "E": "Katalaz ROS'u temizleyen bir enzimdir; artışı apoptoz tetikleyicisi olarak sayılmaz."
    },
    "ozet": "Mitokondriyal apoptoz yolunu DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS tetikler; yönü BCL-2 ailesinin dengesi belirler.",
+   "sayfa": [
+    17,
+    24,
+    31,
+    12
+   ],
    "metin": "**Soru.** Mitokondriyal apoptoz yolunun tetikleyicilerinden biri hangisidir?\n\n**A)** Telomeraz aktivasyonu · **B)** Kalori kısıtlaması · **C)** Büyüme faktörü eksikliği · **D)** BCL-2 artışı · **E)** Katalaz artışı\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Telomeraz aktivasyonu** — Telomeraz aktivasyonu kanser hücrelerinde telomer uzunluğunu stabilize eder ve hücreyi ölümsüz kılar; apoptozu tetiklemez.\n- **Kalori kısıtlaması** — Kalori kısıtlaması IGF-1 azalması, mTOR baskılanması ve otofaji artışıyla yaşlanmayı yavaşlatır; apoptoz tetikleyicisi değildir.\n- **Büyüme faktörü eksikliği** — Büyüme faktörü eksikliği doğru. DNA hasarı, ER stresi ve ROS ile birlikte mitokondriyal apoptoz yolunun tetikleyicilerindendir.\n- **BCL-2 artışı** — BCL-2 anti apoptotik bir üyedir; artışı apoptozu tetiklemez, tersine engeller.\n- **Katalaz artışı** — Katalaz ROS'u temizleyen bir enzimdir; artışı apoptoz tetikleyicisi olarak sayılmaz.\n\n**Cevap: C** — Büyüme faktörü eksikliği\n\n**Özet.** Mitokondriyal apoptoz yolunu DNA hasarı, büyüme faktörü eksikliği, ER stresi ve ROS tetikler; yönü BCL-2 ailesinin dengesi belirler.",
    "ses": "Mitokondriyal apoptoz yolunun tetikleyicilerinden biri hangisidir?\nA, Telomeraz aktivasyonu\nBe, Kalori kısıtlaması\nCe, Büyüme faktörü eksikliği\nDe, Be ce le iki artışı\nE, Katalaz artışı\nSeçenekleri sırayla değerlendirelim.\nTelomeraz aktivasyonu kanser hücrelerinde telomer uzunluğunu stabilize eder ve hücreyi ölümsüz kılar. Apoptozu tetiklemez.\nKalori kısıtlaması i ge fe bir azalması, me te o re baskılanması ve otofaji artışıyla yaşlanmayı yavaşlatır. Apoptoz tetikleyicisi değildir.\nBüyüme faktörü eksikliği doğru. De ne a hasarı, endoplazmik retikulum stresi ve re o se ile birlikte mitokondriyal apoptoz yolunun tetikleyicilerindendir.\nBe ce le iki anti apoptotik bir üyedir. Artışı apoptozu tetiklemez, tersine engeller.\nKatalaz re o se temizleyen bir enzimdir. Artışı apoptoz tetikleyicisi olarak sayılmaz.\nDoğru cevap Ce, Büyüme faktörü eksikliği\nMitokondriyal apoptoz yolunu de ne a hasarı, büyüme faktörü eksikliği, endoplazmik retikulum stresi ve re o se tetikler. Yönü be ce le iki ailesinin dengesi belirler.",
    "kelime": 141
@@ -481,6 +593,7 @@
   {
    "no": 30,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "BCL-2 ailesinde anti-apoptotik üye hangisidir?",
    "secenekler": {
     "A": "BAX",
@@ -490,6 +603,7 @@
     "E": "Kaspaz-3"
    },
    "dogru": "D",
+   "ipucu": "Mitokondri zarını koruyup gözenek açılmasına karşı koyan üyeleri, zarı delen ve stresi algılayan üyelerden ayır.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "BAX pro apoptotik bir üyedir; etkinleşince mitokondri zarında gözenek açar.",
@@ -499,6 +613,10 @@
     "E": "Kaspaz-3 BCL-2 ailesinden değildir; mitokondriyal yolun sonunda aktive olan infazcı kaspazdır."
    },
    "ozet": "BCL-2 ailesinde BCL-2 ve BCL-XL anti apoptotik, BAX ve BAK pro apoptotik üyelerdir; BH3-only proteinler stresi algılayan sensörlerdir.",
+   "sayfa": [
+    17,
+    18
+   ],
    "metin": "**Soru.** BCL-2 ailesinde anti-apoptotik üye hangisidir?\n\n**A)** BAX · **B)** BAK · **C)** BH3-only protein · **D)** BCL-XL · **E)** Kaspaz-3\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **BAX** — BAX pro apoptotik bir üyedir; etkinleşince mitokondri zarında gözenek açar.\n- **BAK** — BAK, BAX gibi pro apoptotik üyedir ve mitokondri zarını geçirgen hale getirir.\n- **BH3-only protein** — BH3-only proteinler sensörlerdir; hücre içi stresi algılayıp dengeyi pro apoptotik tarafa kaydırırlar.\n- **BCL-XL** — BCL-XL doğru. BCL-2 ile birlikte ailenin anti apoptotik üyesidir ve mitokondri zarını korur.\n- **Kaspaz-3** — Kaspaz-3 BCL-2 ailesinden değildir; mitokondriyal yolun sonunda aktive olan infazcı kaspazdır.\n\n**Cevap: D** — BCL-XL\n\n**Özet.** BCL-2 ailesinde BCL-2 ve BCL-XL anti apoptotik, BAX ve BAK pro apoptotik üyelerdir; BH3-only proteinler stresi algılayan sensörlerdir.",
    "ses": "Be ce le iki ailesinde anti apoptotik üye hangisidir?\nA, Be a iks\nBe, Be a ka\nCe, Be ha üç onli protein\nDe, Be ce le iks le\nE, Kaspaz üç\nHer seçeneği tek tek ele alalım.\nBe a iks pro apoptotik bir üyedir. Etkinleşince mitokondri zarında gözenek açar.\nBe a ka, be a iks gibi pro apoptotik üyedir ve mitokondri zarını geçirgen hale getirir.\nBe ha üç onli proteinler sensörlerdir. Hücre içi stresi algılayıp dengeyi pro apoptotik tarafa kaydırırlar.\nBe ce le iks le doğru. Be ce le iki ile birlikte ailenin anti apoptotik üyesidir ve mitokondri zarını korur.\nKaspaz üç be ce le iki ailesinden değildir. Mitokondriyal yolun sonunda aktive olan infazcı kaspazdır.\nDoğru cevap De, Be ce le iks le\nBe ce le iki ailesinde be ce le iki ve be ce le iks le anti apoptotik, be a iks ve be a ka pro apoptotik üyelerdir. Be ha üç onli proteinler stresi algılayan sensörlerdir.",
    "kelime": 125
@@ -506,6 +624,7 @@
   {
    "no": 31,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "İnfazcı kaspazların aktivasyonunun sonuçlarından biri hangisidir?",
    "secenekler": {
     "A": "Apoptotik cisimcik oluşumu",
@@ -515,6 +634,7 @@
     "E": "Mitokondriyal verim artışı"
    },
    "dogru": "A",
+   "ipucu": "Programlı ölümün son evresinde hücrenin zarla çevrili parçalara nasıl ayrıldığını düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Apoptotik cisimcik oluşumu doğru. İnfazcı kaspazlar DNA parçalanması, hücre iskeleti yıkımı ve apoptotik cisimcik oluşumuna yol açar.",
@@ -524,6 +644,12 @@
     "E": "Mitokondriyal verim artışı kaspaz etkisi değildir; yaşlanmada mitokondriyal verim tersine düşer."
    },
    "ozet": "Sitokrom c kofaktörlerle başlatıcı kaspaz-9'u, o da kaspaz-3 gibi infazcı kaspazları aktive eder; sonuç DNA parçalanması, hücre iskeleti yıkımı ve apoptotik cisimciklerdir.",
+   "sayfa": [
+    18,
+    23,
+    27,
+    14
+   ],
    "metin": "**Soru.** İnfazcı kaspazların aktivasyonunun sonuçlarından biri hangisidir?\n\n**A)** Apoptotik cisimcik oluşumu · **B)** Telomer uzaması · **C)** DNA onarımında artış · **D)** Şaperon aktivasyonu · **E)** Mitokondriyal verim artışı\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Apoptotik cisimcik oluşumu** — Apoptotik cisimcik oluşumu doğru. İnfazcı kaspazlar DNA parçalanması, hücre iskeleti yıkımı ve apoptotik cisimcik oluşumuna yol açar.\n- **Telomer uzaması** — Telomer uzaması telomerazın işlevidir; kaspaz kaskadının sonucu değildir.\n- **DNA onarımında artış** — DNA onarımı artmaz; infazcı kaspazlar tersine DNA parçalanmasına yol açar.\n- **Şaperon aktivasyonu** — Şaperonlar doğru protein katlanmasını destekler; kaspaz aktivasyonuyla etkinleşen yapılar değildir.\n- **Mitokondriyal verim artışı** — Mitokondriyal verim artışı kaspaz etkisi değildir; yaşlanmada mitokondriyal verim tersine düşer.\n\n**Cevap: A** — Apoptotik cisimcik oluşumu\n\n**Özet.** Sitokrom c kofaktörlerle başlatıcı kaspaz-9'u, o da kaspaz-3 gibi infazcı kaspazları aktive eder; sonuç DNA parçalanması, hücre iskeleti yıkımı ve apoptotik cisimciklerdir.",
    "ses": "İnfazcı kaspazların aktivasyonunun sonuçlarından biri hangisidir?\nA, Apoptotik cisimcik oluşumu\nBe, Telomer uzaması\nCe, De ne a onarımında artış\nDe, Şaperon aktivasyonu\nE, Mitokondriyal verim artışı\nŞıkları sırasıyla gözden geçirelim.\nApoptotik cisimcik oluşumu doğru. İnfazcı kaspazlar de ne a parçalanması, hücre iskeleti yıkımı ve apoptotik cisimcik oluşumuna yol açar.\nTelomer uzaması telomerazın işlevidir. Kaspaz kaskadının sonucu değildir.\nDe ne a onarımı artmaz. İnfazcı kaspazlar tersine de ne a parçalanmasına yol açar.\nŞaperonlar doğru protein katlanmasını destekler. Kaspaz aktivasyonuyla etkinleşen yapılar değildir.\nMitokondriyal verim artışı kaspaz etkisi değildir. Yaşlanmada mitokondriyal verim tersine düşer.\nDoğru cevap A, Apoptotik cisimcik oluşumu\nSitokrom se kofaktörlerle başlatıcı kaspaz dokuzu, o da kaspaz üç gibi infazcı kaspazları aktive eder. Sonuç de ne a parçalanması, hücre iskeleti yıkımı ve apoptotik cisimciklerdir.",
    "kelime": 142
@@ -531,6 +657,7 @@
   {
    "no": 32,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "DNA hasarını algılayıp BAX ve BAK üzerinden mitokondriyal yolu aktive edebilen protein hangisidir?",
    "secenekler": {
     "A": "BCL-2",
@@ -540,22 +667,29 @@
     "E": "IGF-1"
    },
    "dogru": "C",
+   "ipucu": "Hasarlı genomu fark edip hücreyi ortadan kaldırma kararını veren tümör baskılayıcıyı düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
-    "A": "BCL-2 anti apoptotik bir proteindir; mitokondriyal yolu aktive etmez, frenler.",
+    "A": "BCL-2 mitokondri dış zarını stabilize eden antiapoptotik bir proteindir; mitokondriyal ölüm yolunu aktive etmez, aksine sitokrom c sızıntısını engelleyerek apoptozu baskılar.",
     "B": "Telomeraz telomer uçlarına nükleotid ekler; hasar algılayıp apoptoz başlatmaz.",
     "C": "p53 doğru. Yaşlanan hücrede hasarı algılar, BAX ve BAK üzerinden mitokondriyal yolu aktive eder ve hasarlı hücreler apoptozla temizlenir.",
     "D": "mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenleyen moleküldür; apoptoz sensörü değildir.",
     "E": "IGF-1 büyüme ve anabolizmayı destekleyen bir faktördür; hasar algılayıp ölüm yolunu başlatmaz."
    },
    "ozet": "Yaşlanan hücrede DNA hasarı ve yanlış katlanmış proteinler artar; p53 hasarı algılar, BAX ve BAK üzerinden mitokondriyal yolu açar ve hasarlı hücre apoptozla ortadan kalkar.",
-   "metin": "**Soru.** DNA hasarını algılayıp BAX ve BAK üzerinden mitokondriyal yolu aktive edebilen protein hangisidir?\n\n**A)** BCL-2 · **B)** Telomeraz · **C)** p53 · **D)** mTOR · **E)** IGF-1\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **BCL-2** — BCL-2 anti apoptotik bir proteindir; mitokondriyal yolu aktive etmez, frenler.\n- **Telomeraz** — Telomeraz telomer uçlarına nükleotid ekler; hasar algılayıp apoptoz başlatmaz.\n- **p53** — p53 doğru. Yaşlanan hücrede hasarı algılar, BAX ve BAK üzerinden mitokondriyal yolu aktive eder ve hasarlı hücreler apoptozla temizlenir.\n- **mTOR** — mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenleyen moleküldür; apoptoz sensörü değildir.\n- **IGF-1** — IGF-1 büyüme ve anabolizmayı destekleyen bir faktördür; hasar algılayıp ölüm yolunu başlatmaz.\n\n**Cevap: C** — p53\n\n**Özet.** Yaşlanan hücrede DNA hasarı ve yanlış katlanmış proteinler artar; p53 hasarı algılar, BAX ve BAK üzerinden mitokondriyal yolu açar ve hasarlı hücre apoptozla ortadan kalkar.",
-   "ses": "De ne a hasarını algılayıp be a iks ve be a ka üzerinden mitokondriyal yolu aktive edebilen protein hangisidir?\nA, Be ce le iki\nBe, Telomeraz\nCe, Pe elli üç\nDe, Me te o re\nE, İ ge fe bir\nŞimdi seçeneklere tek tek bakalım.\nBe ce le iki anti apoptotik bir proteindir. Mitokondriyal yolu aktive etmez, frenler.\nTelomeraz telomer uçlarına nükleotid ekler. Hasar algılayıp apoptoz başlatmaz.\nPe elli üç doğru. Yaşlanan hücrede hasarı algılar, be a iks ve be a ka üzerinden mitokondriyal yolu aktive eder ve hasarlı hücreler apoptozla temizlenir.\nMe te o re hücresel büyüme, protein sentezi ve metabolizmayı düzenleyen moleküldür. Apoptoz sensörü değildir.\nİ ge fe bir büyüme ve anabolizmayı destekleyen bir faktördür. Hasar algılayıp ölüm yolunu başlatmaz.\nDoğru cevap Ce, Pe elli üç\nYaşlanan hücrede de ne a hasarı ve yanlış katlanmış proteinler artar. Pe elli üç hasarı algılar, be a iks ve be a ka üzerinden mitokondriyal yolu açar ve hasarlı hücre apoptozla ortadan kalkar.",
-   "kelime": 141
+   "sayfa": [
+    19,
+    23,
+    29
+   ],
+   "metin": "**Soru.** DNA hasarını algılayıp BAX ve BAK üzerinden mitokondriyal yolu aktive edebilen protein hangisidir?\n\n**A)** BCL-2 · **B)** Telomeraz · **C)** p53 · **D)** mTOR · **E)** IGF-1\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **BCL-2** — BCL-2 mitokondri dış zarını stabilize eden antiapoptotik bir proteindir; mitokondriyal ölüm yolunu aktive etmez, aksine sitokrom c sızıntısını engelleyerek apoptozu baskılar.\n- **Telomeraz** — Telomeraz telomer uçlarına nükleotid ekler; hasar algılayıp apoptoz başlatmaz.\n- **p53** — p53 doğru. Yaşlanan hücrede hasarı algılar, BAX ve BAK üzerinden mitokondriyal yolu aktive eder ve hasarlı hücreler apoptozla temizlenir.\n- **mTOR** — mTOR hücresel büyüme, protein sentezi ve metabolizmayı düzenleyen moleküldür; apoptoz sensörü değildir.\n- **IGF-1** — IGF-1 büyüme ve anabolizmayı destekleyen bir faktördür; hasar algılayıp ölüm yolunu başlatmaz.\n\n**Cevap: C** — p53\n\n**Özet.** Yaşlanan hücrede DNA hasarı ve yanlış katlanmış proteinler artar; p53 hasarı algılar, BAX ve BAK üzerinden mitokondriyal yolu açar ve hasarlı hücre apoptozla ortadan kalkar.",
+   "ses": "De ne a hasarını algılayıp be a iks ve be a ka üzerinden mitokondriyal yolu aktive edebilen protein hangisidir?\nA, Be ce le iki\nBe, Telomeraz\nCe, Pe elli üç\nDe, Me te o re\nE, İ ge fe bir\nŞimdi seçeneklere tek tek bakalım.\nbe ce le iki mitokondri dış zarını stabilize eden antiapoptotik bir proteindir. Mitokondriyal ölüm yolunu aktive etmez, aksine sitokrom c sızıntısını engelleyerek apoptozu baskılar.\nTelomeraz telomer uçlarına nükleotid ekler. Hasar algılayıp apoptoz başlatmaz.\nPe elli üç doğru. Yaşlanan hücrede hasarı algılar, be a iks ve be a ka üzerinden mitokondriyal yolu aktive eder ve hasarlı hücreler apoptozla temizlenir.\nMe te o re hücresel büyüme, protein sentezi ve metabolizmayı düzenleyen moleküldür. Apoptoz sensörü değildir.\nİ ge fe bir büyüme ve anabolizmayı destekleyen bir faktördür. Hasar algılayıp ölüm yolunu başlatmaz.\nDoğru cevap Ce, Pe elli üç\nYaşlanan hücrede de ne a hasarı ve yanlış katlanmış proteinler artar. Pe elli üç hasarı algılar, be a iks ve be a ka üzerinden mitokondriyal yolu açar ve hasarlı hücre apoptozla ortadan kalkar.",
+   "kelime": 152
   },
   {
    "no": 33,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Kısa telomere bağlı replikatif senesensin amacı hangisidir?",
    "secenekler": {
     "A": "Telomeri yeniden uzatmak",
@@ -565,6 +699,7 @@
     "E": "İnflamasyonu başlatmak"
    },
    "dogru": "C",
+   "ipucu": "Çok sayıda bölünmüş ve genomunda hasar biriktirmiş bir hücrenin çoğalmayı sürdürmesinin tehlikesini düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Telomeri yeniden uzatmak telomerazın işidir; senesens telomeri uzatmaz, hücre döngüsünü durdurur.",
@@ -574,6 +709,11 @@
     "E": "İnflamasyonu başlatmak senesensin amacı değildir; kalıcı düşük dereceli inflamasyon hasarlı hücre ve DNA artıklarıyla gelişir."
    },
    "ozet": "Kısa telomer kırık DNA gibi algılanır, döngü durur ve hücre replikatif senesense girer; amaç çok hasarlı hücrelerin kontrolsüz çoğalmasını engelleyerek kanserleşmeyi sınırlamaktır.",
+   "sayfa": [
+    22,
+    25,
+    32
+   ],
    "metin": "**Soru.** Kısa telomere bağlı replikatif senesensin amacı hangisidir?\n\n**A)** Telomeri yeniden uzatmak · **B)** ATP üretimini artırmak · **C)** Kanserleşmeyi sınırlamak · **D)** Kök hücre havuzunu büyütmek · **E)** İnflamasyonu başlatmak\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Telomeri yeniden uzatmak** — Telomeri yeniden uzatmak telomerazın işidir; senesens telomeri uzatmaz, hücre döngüsünü durdurur.\n- **ATP üretimini artırmak** — ATP üretimini artırmak senesensin amacı değildir; ATP mitokondriyal oksidatif fosforilasyonla üretilir.\n- **Kanserleşmeyi sınırlamak** — Kanserleşmeyi sınırlamak doğru. Senesens, çok hasarlı genoma sahip hücrelerin kontrolsüz çoğalmasını engeller.\n- **Kök hücre havuzunu büyütmek** — Kök hücre havuzu senesensle büyümez; telomer aşınması kök ve progenitör hücre havuzunun kaybına katkıda bulunur.\n- **İnflamasyonu başlatmak** — İnflamasyonu başlatmak senesensin amacı değildir; kalıcı düşük dereceli inflamasyon hasarlı hücre ve DNA artıklarıyla gelişir.\n\n**Cevap: C** — Kanserleşmeyi sınırlamak\n\n**Özet.** Kısa telomer kırık DNA gibi algılanır, döngü durur ve hücre replikatif senesense girer; amaç çok hasarlı hücrelerin kontrolsüz çoğalmasını engelleyerek kanserleşmeyi sınırlamaktır.",
    "ses": "Kısa telomere bağlı replikatif senesensin amacı hangisidir?\nA, Telomeri yeniden uzatmak\nBe, A te pe üretimini artırmak\nCe, Kanserleşmeyi sınırlamak\nDe, Kök hücre havuzunu büyütmek\nE, İnflamasyonu başlatmak\nSeçenekleri sırayla değerlendirelim.\nTelomeri yeniden uzatmak telomerazın işidir. Senesens telomeri uzatmaz, hücre döngüsünü durdurur.\nA te pe üretimini artırmak senesensin amacı değildir. A te pe mitokondriyal oksidatif fosforilasyonla üretilir.\nKanserleşmeyi sınırlamak doğru. Senesens, çok hasarlı genoma sahip hücrelerin kontrolsüz çoğalmasını engeller.\nKök hücre havuzu senesensle büyümez. Telomer aşınması kök ve progenitör hücre havuzunun kaybına katkıda bulunur.\nİnflamasyonu başlatmak senesensin amacı değildir. Kalıcı düşük dereceli inflamasyon hasarlı hücre ve de ne a artıklarıyla gelişir.\nDoğru cevap Ce, Kanserleşmeyi sınırlamak\nKısa telomer kırık de ne a gibi algılanır, döngü durur ve hücre replikatif senesense girer. Amaç çok hasarlı hücrelerin kontrolsüz çoğalmasını engelleyerek kanserleşmeyi sınırlamaktır.",
    "kelime": 151
@@ -581,6 +721,7 @@
   {
    "no": 34,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Bazı kök hücrelerde telomeraz aktivitesi hangi düzeydedir?",
    "secenekler": {
     "A": "Germ hücreleri kadar yüksek",
@@ -590,6 +731,7 @@
     "E": "Düşük–orta"
    },
    "dogru": "E",
+   "ipucu": "Telomerazı en yüksek germ hücreleri ile hiç ya da çok az olan somatik hücreler arasındaki ara grubu düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Germ hücreleri kadar yüksek değildir; telomeraz aktivitesinin yüksek olduğu hücreler germ hücreleridir.",
@@ -599,6 +741,10 @@
     "E": "Düşük orta düzey doğru. Bazı kök hücrelerde telomeraz aktivitesi düşük ile orta düzeydedir ve telomerlerini korurlar."
    },
    "ozet": "Telomeraz aktivitesi germ hücrelerinde yüksek, bazı kök hücrelerde düşük–orta düzeydedir; çoğu somatik hücrede yoktur ya da çok düşüktür ve telomerler yaşla kısalır.",
+   "sayfa": [
+    23,
+    25
+   ],
    "metin": "**Soru.** Bazı kök hücrelerde telomeraz aktivitesi hangi düzeydedir?\n\n**A)** Germ hücreleri kadar yüksek · **B)** Somatik hücrelerden düşük · **C)** Hiç yoktur · **D)** Yalnız yaşlılıkta yüksek · **E)** Düşük–orta\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Germ hücreleri kadar yüksek** — Germ hücreleri kadar yüksek değildir; telomeraz aktivitesinin yüksek olduğu hücreler germ hücreleridir.\n- **Somatik hücrelerden düşük** — Somatik hücrelerden düşük değildir; çoğu somatik hücrede telomeraz yok ya da çok düşüktür, kök hücrelerde ise düşük orta düzeydedir.\n- **Hiç yoktur** — Hiç olmaması kök hücreler için değil, çoğu somatik hücre için geçerlidir; bu hücrelerde aktivite yok ya da çok düşüktür.\n- **Yalnız yaşlılıkta yüksek** — Yaşlılıkta yükselme tanımlanmaz; yaşla telomerin kısalması somatik hücrelerde telomeraz yokluğuna bağlıdır.\n- **Düşük–orta** — Düşük orta düzey doğru. Bazı kök hücrelerde telomeraz aktivitesi düşük ile orta düzeydedir ve telomerlerini korurlar.\n\n**Cevap: E** — Düşük–orta\n\n**Özet.** Telomeraz aktivitesi germ hücrelerinde yüksek, bazı kök hücrelerde düşük–orta düzeydedir; çoğu somatik hücrede yoktur ya da çok düşüktür ve telomerler yaşla kısalır.",
    "ses": "Bazı kök hücrelerde telomeraz aktivitesi hangi düzeydedir?\nA, Germ hücreleri kadar yüksek\nBe, Somatik hücrelerden düşük\nCe, Hiç yoktur\nDe, Yalnız yaşlılıkta yüksek\nE, Düşük ile orta\nHer seçeneği tek tek ele alalım.\nGerm hücreleri kadar yüksek değildir. Telomeraz aktivitesinin yüksek olduğu hücreler germ hücreleridir.\nSomatik hücrelerden düşük değildir. Çoğu somatik hücrede telomeraz yok ya da çok düşüktür, kök hücrelerde ise düşük orta düzeydedir.\nHiç olmaması kök hücreler için değil, çoğu somatik hücre için geçerlidir. Bu hücrelerde aktivite yok ya da çok düşüktür.\nYaşlılıkta yükselme tanımlanmaz. Yaşla telomerin kısalması somatik hücrelerde telomeraz yokluğuna bağlıdır.\nDüşük orta düzey doğru. Bazı kök hücrelerde telomeraz aktivitesi düşük ile orta düzeydedir ve telomerlerini korurlar.\nDoğru cevap E, Düşük ile orta\nTelomeraz aktivitesi germ hücrelerinde yüksek, bazı kök hücrelerde düşük ile orta düzeydedir. Çoğu somatik hücrede yoktur ya da çok düşüktür ve telomerler yaşla kısalır.",
    "kelime": 164
@@ -606,6 +752,7 @@
   {
    "no": 35,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Normalde uygunsuz proteinlerin parçalandığı yapı hangisidir?",
    "secenekler": {
     "A": "Şaperon",
@@ -615,6 +762,7 @@
     "E": "Mitokondri"
    },
    "dogru": "C",
+   "ipucu": "Hücre içi denge düzeninde katlanmaya yardım eden yapı ile hatalı molekülü ortadan kaldıran yapıyı ayır.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Şaperonlar doğru protein katlanmasını destekler; uygunsuz proteinleri parçalamazlar.",
@@ -624,6 +772,12 @@
     "E": "Mitokondri ATP üretimi ve ROS kaynağıdır; uygunsuz proteinlerin parçalandığı yer değildir."
    },
    "ozet": "Protein homeostazında şaperonlar katlanmayı destekler, proteazomlar uygunsuz proteinleri parçalar; yaşla ikisi de azalabilir, yanlış katlanmış protein birikir ve ER stresi gelişir.",
+   "sayfa": [
+    27,
+    12,
+    21,
+    15
+   ],
    "metin": "**Soru.** Normalde uygunsuz proteinlerin parçalandığı yapı hangisidir?\n\n**A)** Şaperon · **B)** Peroksizom · **C)** Proteazom · **D)** Telomer · **E)** Mitokondri\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Şaperon** — Şaperonlar doğru protein katlanmasını destekler; uygunsuz proteinleri parçalamazlar.\n- **Peroksizom** — Peroksizomlar katalazın yerleştiği organeldir; protein homeostazında yıkım yapısı olarak tanımlanmaz.\n- **Proteazom** — Proteazom doğru. Uygunsuz proteinler proteazomlarda parçalanır; yaşla proteazom etkinliği azalabilir.\n- **Telomer** — Telomer kromozom uçlarındaki tekrarlayan DNA dizisidir; protein yıkımıyla ilgisi yoktur.\n- **Mitokondri** — Mitokondri ATP üretimi ve ROS kaynağıdır; uygunsuz proteinlerin parçalandığı yer değildir.\n\n**Cevap: C** — Proteazom\n\n**Özet.** Protein homeostazında şaperonlar katlanmayı destekler, proteazomlar uygunsuz proteinleri parçalar; yaşla ikisi de azalabilir, yanlış katlanmış protein birikir ve ER stresi gelişir.",
    "ses": "Normalde uygunsuz proteinlerin parçalandığı yapı hangisidir?\nA, Şaperon\nBe, Peroksizom\nCe, Proteazom\nDe, Telomer\nE, Mitokondri\nŞıkları sırasıyla gözden geçirelim.\nŞaperonlar doğru protein katlanmasını destekler. Uygunsuz proteinleri parçalamazlar.\nPeroksizomlar katalazın yerleştiği organeldir. Protein homeostazında yıkım yapısı olarak tanımlanmaz.\nProteazom doğru. Uygunsuz proteinler proteazomlarda parçalanır. Yaşla proteazom etkinliği azalabilir.\nTelomer kromozom uçlarındaki tekrarlayan de ne a dizisidir. Protein yıkımıyla ilgisi yoktur.\nMitokondri a te pe üretimi ve re o se kaynağıdır. Uygunsuz proteinlerin parçalandığı yer değildir.\nDoğru cevap Ce, Proteazom\nProtein homeostazında şaperonlar katlanmayı destekler, proteazomlar uygunsuz proteinleri parçalar. Yaşla ikisi de azalabilir, yanlış katlanmış protein birikir ve endoplazmik retikulum stresi gelişir.",
    "kelime": 116
@@ -631,6 +785,7 @@
   {
    "no": 36,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Alzheimer hastalığında biriken proteinler hangisidir?",
    "secenekler": {
     "A": "α-sinüklein",
@@ -640,6 +795,7 @@
     "E": "Telomeraz"
    },
    "dogru": "B",
+   "ipucu": "Bölünmeyen nöronlarda agregat oluşturan proteinleri, Parkinson hastalığındaki proteinden ayır.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "α-sinüklein Parkinson hastalığında biriken proteindir; Alzheimer hastalığının birikimi değildir.",
@@ -649,6 +805,12 @@
     "E": "Telomeraz telomer uçlarına nükleotid ekleyen enzimdir; nörodejeneratif agregat oluşturmaz."
    },
    "ozet": "Anormal proteinler hücre içi agregatlar oluşturur; Alzheimer hastalığında β-amiloid ve tau, Parkinson hastalığında α-sinüklein birikir ve aşırı yanlış katlanma ER stresi ile apoptoza yol açabilir.",
+   "sayfa": [
+    28,
+    16,
+    17,
+    23
+   ],
    "metin": "**Soru.** Alzheimer hastalığında biriken proteinler hangisidir?\n\n**A)** α-sinüklein · **B)** β-amiloid ve tau · **C)** Sitokrom c · **D)** BCL-2 · **E)** Telomeraz\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **α-sinüklein** — α-sinüklein Parkinson hastalığında biriken proteindir; Alzheimer hastalığının birikimi değildir.\n- **β-amiloid ve tau** — β-amiloid ve tau doğru. Alzheimer hastalığında bu anormal proteinler hücre içi agregatlar oluşturur ve hücre işlevini bozar.\n- **Sitokrom c** — Sitokrom c mitokondriden sitozole salınarak apoptozu başlatan moleküldür; nöronal agregat proteini değildir.\n- **BCL-2** — BCL-2 mitokondri zarını koruyan anti apoptotik proteindir; Alzheimer birikimi değildir.\n- **Telomeraz** — Telomeraz telomer uçlarına nükleotid ekleyen enzimdir; nörodejeneratif agregat oluşturmaz.\n\n**Cevap: B** — β-amiloid ve tau\n\n**Özet.** Anormal proteinler hücre içi agregatlar oluşturur; Alzheimer hastalığında β-amiloid ve tau, Parkinson hastalığında α-sinüklein birikir ve aşırı yanlış katlanma ER stresi ile apoptoza yol açabilir.",
    "ses": "Alzaymır hastalığında biriken proteinler hangisidir?\nA, Alfa sinüklein\nBe, Beta amiloid ve tau\nCe, Sitokrom se\nDe, Be ce le iki\nE, Telomeraz\nŞimdi seçeneklere tek tek bakalım.\nAlfa sinüklein Parkinson hastalığında biriken proteindir. Alzaymır hastalığının birikimi değildir.\nBeta amiloid ve tau doğru. Alzaymır hastalığında bu anormal proteinler hücre içi agregatlar oluşturur ve hücre işlevini bozar.\nSitokrom se mitokondriden sitozole salınarak apoptozu başlatan moleküldür. Nöronal agregat proteini değildir.\nBe ce le iki mitokondri zarını koruyan anti apoptotik proteindir. Alzaymır birikimi değildir.\nTelomeraz telomer uçlarına nükleotid ekleyen enzimdir. Nörodejeneratif agregat oluşturmaz.\nDoğru cevap Be, Beta amiloid ve tau\nAnormal proteinler hücre içi agregatlar oluşturur. Alzaymır hastalığında beta amiloid ve tau, Parkinson hastalığında alfa sinüklein birikir ve aşırı yanlış katlanma endoplazmik retikulum stresi ile apoptoza yol açabilir.",
    "kelime": 136
@@ -656,6 +818,7 @@
   {
    "no": 37,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Yüksek IGF-1 ve mTOR aktivitesinin sonucu hangisidir?",
    "secenekler": {
     "A": "Yaşam süresinin uzaması",
@@ -665,6 +828,7 @@
     "E": "Daha az onarıma odaklı program"
    },
    "dogru": "E",
+   "ipucu": "Büyüme sinyali güçlüyken hücrenin sınırlı kaynağını hızlı çoğalma ile bakım arasında nasıl paylaştırdığını düşün.",
    "giris": "Seçenekleri sırayla değerlendirelim.",
    "aciklamalar": {
     "A": "Yaşam süresinin uzaması yüksek aktiviteyle değil, IGF-1 ve mTOR'un kısmi baskılanmasıyla bazı organizmalarda gösterilmiştir.",
@@ -674,6 +838,11 @@
     "E": "Daha az onarıma odaklı program doğru. Yüksek IGF-1 ve mTOR aktivitesi hızlı büyüme ve çoğalma sağlar, ama hücre programı onarımdan uzaklaşır."
    },
    "ozet": "Yüksek IGF-1 ve mTOR aktivitesi hızlı büyüme ve çoğalma ile daha az onarıma odaklı bir program yaratır; kısmi baskılanmaları bazı organizmalarda ömrü uzatmıştır.",
+   "sayfa": [
+    29,
+    30,
+    31
+   ],
    "metin": "**Soru.** Yüksek IGF-1 ve mTOR aktivitesinin sonucu hangisidir?\n\n**A)** Yaşam süresinin uzaması · **B)** Otofaji artışı · **C)** Bakım programına geçiş · **D)** ROS üretiminin azalması · **E)** Daha az onarıma odaklı program\n\n**Çözüm.** Seçenekleri sırayla değerlendirelim.\n\n- **Yaşam süresinin uzaması** — Yaşam süresinin uzaması yüksek aktiviteyle değil, IGF-1 ve mTOR'un kısmi baskılanmasıyla bazı organizmalarda gösterilmiştir.\n- **Otofaji artışı** — Otofaji artışı kalori kısıtlamasının, yani mTOR baskılanmasıyla giden durumun etkisidir.\n- **Bakım programına geçiş** — Bakım ve onarıma geçiş, IGF-1 ve mTOR'un kısmi baskılanmasının olası mekanizmasıdır; yüksek aktivitenin tersidir.\n- **ROS üretiminin azalması** — ROS üretiminin azalması kalori kısıtlamasının mekanizmalarındandır; yüksek büyüme sinyalinin sonucu değildir.\n- **Daha az onarıma odaklı program** — Daha az onarıma odaklı program doğru. Yüksek IGF-1 ve mTOR aktivitesi hızlı büyüme ve çoğalma sağlar, ama hücre programı onarımdan uzaklaşır.\n\n**Cevap: E** — Daha az onarıma odaklı program\n\n**Özet.** Yüksek IGF-1 ve mTOR aktivitesi hızlı büyüme ve çoğalma ile daha az onarıma odaklı bir program yaratır; kısmi baskılanmaları bazı organizmalarda ömrü uzatmıştır.",
    "ses": "Yüksek i ge fe bir ve me te o re aktivitesinin sonucu hangisidir?\nA, Yaşam süresinin uzaması\nBe, Otofaji artışı\nCe, Bakım programına geçiş\nDe, Re o se üretiminin azalması\nE, Daha az onarıma odaklı program\nSeçenekleri sırayla değerlendirelim.\nYaşam süresinin uzaması yüksek aktiviteyle değil, i ge fe bir ve me te o re'nin kısmi baskılanmasıyla bazı organizmalarda gösterilmiştir.\nOtofaji artışı kalori kısıtlamasının, yani me te o re baskılanmasıyla giden durumun etkisidir.\nBakım ve onarıma geçiş, i ge fe bir ve me te o re'nin kısmi baskılanmasının olası mekanizmasıdır. Yüksek aktivitenin tersidir.\nRe o se üretiminin azalması kalori kısıtlamasının mekanizmalarındandır. Yüksek büyüme sinyalinin sonucu değildir.\nDaha az onarıma odaklı program doğru. Yüksek i ge fe bir ve me te o re aktivitesi hızlı büyüme ve çoğalma sağlar, ama hücre programı onarımdan uzaklaşır.\nDoğru cevap E, Daha az onarıma odaklı program\nYüksek i ge fe bir ve me te o re aktivitesi hızlı büyüme ve çoğalma ile daha az onarıma odaklı bir program yaratır. Kısmi baskılanmaları bazı organizmalarda ömrü uzatmıştır.",
    "kelime": 165
@@ -681,6 +850,7 @@
   {
    "no": 38,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Yaşlanmaya eşlik eden inflamatuvar sitokinlerin etkilerinden biri hangisidir?",
    "secenekler": {
     "A": "Anabolik durum",
@@ -690,6 +860,7 @@
     "E": "Otofaji artışı"
    },
    "dogru": "B",
+   "ipucu": "Bu sitokinlerin tip iki diyabete nasıl zemin hazırlayabileceğini ve dokuları yapım mı yıkım yönüne mi ittiğini düşün.",
    "giris": "Her seçeneği tek tek ele alalım.",
    "aciklamalar": {
     "A": "Anabolik durum değil, katabolik durum gelişir; sitokinler yıkımı yapıma baskın hale getirir.",
@@ -699,6 +870,12 @@
     "E": "Otofaji artışı kalori kısıtlamasının mekanizmalarındandır; sitokinlerin etkisi olarak sayılmaz."
    },
    "ozet": "Yaşla hasarlı hücre, lipit ve DNA artıkları doğuştan immün sistemi sürekli uyarır; IL-6, TNF-α ve IL-1β insülin direnci, katabolik durum ve ek hasar yaparak yaşlanmayı hızlandırır.",
+   "sayfa": [
+    32,
+    33,
+    31,
+    24
+   ],
    "metin": "**Soru.** Yaşlanmaya eşlik eden inflamatuvar sitokinlerin etkilerinden biri hangisidir?\n\n**A)** Anabolik durum · **B)** İnsülin direnci · **C)** DNA onarımında artış · **D)** Telomer uzaması · **E)** Otofaji artışı\n\n**Çözüm.** Her seçeneği tek tek ele alalım.\n\n- **Anabolik durum** — Anabolik durum değil, katabolik durum gelişir; sitokinler yıkımı yapıma baskın hale getirir.\n- **İnsülin direnci** — İnsülin direnci doğru. IL-6, TNF-α ve IL-1β gibi sitokinler insülin direnci, katabolik durum ve ek DNA ile protein hasarı yapar.\n- **DNA onarımında artış** — DNA onarımı artmaz; sitokinler hücrelerde ek DNA ve protein hasarına yol açar.\n- **Telomer uzaması** — Telomer uzaması telomeraz aktivitesine bağlıdır; inflamatuvar sitokinlerin etkisi değildir.\n- **Otofaji artışı** — Otofaji artışı kalori kısıtlamasının mekanizmalarındandır; sitokinlerin etkisi olarak sayılmaz.\n\n**Cevap: B** — İnsülin direnci\n\n**Özet.** Yaşla hasarlı hücre, lipit ve DNA artıkları doğuştan immün sistemi sürekli uyarır; IL-6, TNF-α ve IL-1β insülin direnci, katabolik durum ve ek hasar yaparak yaşlanmayı hızlandırır.",
    "ses": "Yaşlanmaya eşlik eden inflamatuvar sitokinlerin etkilerinden biri hangisidir?\nA, Anabolik durum\nBe, İnsülin direnci\nCe, De ne a onarımında artış\nDe, Telomer uzaması\nE, Otofaji artışı\nHer seçeneği tek tek ele alalım.\nAnabolik durum değil, katabolik durum gelişir. Sitokinler yıkımı yapıma baskın hale getirir.\nİnsülin direnci doğru. İ le altı, te ne fe alfa ve i le bir beta gibi sitokinler insülin direnci, katabolik durum ve ek de ne a ile protein hasarı yapar.\nDe ne a onarımı artmaz. Sitokinler hücrelerde ek de ne a ve protein hasarına yol açar.\nTelomer uzaması telomeraz aktivitesine bağlıdır. İnflamatuvar sitokinlerin etkisi değildir.\nOtofaji artışı kalori kısıtlamasının mekanizmalarındandır. Sitokinlerin etkisi olarak sayılmaz.\nDoğru cevap Be, İnsülin direnci\nYaşla hasarlı hücre, lipit ve de ne a artıkları doğuştan immün sistemi sürekli uyarır. İ le altı, te ne fe alfa ve i le bir beta insülin direnci, katabolik durum ve ek hasar yaparak yaşlanmayı hızlandırır.",
    "kelime": 151
@@ -706,6 +883,7 @@
   {
    "no": 39,
    "tur": "ornek",
+   "zorluk": "zor",
    "soru": "Osteoartrit ve sarkopenide öne çıkan yaşlanma mekanizması hangisidir?",
    "secenekler": {
     "A": "Telomeraz aktivasyonu",
@@ -715,6 +893,7 @@
     "E": "Mitokondriyal DNA artışı"
    },
    "dogru": "D",
+   "ipucu": "Kıkırdak ve kas dokusunun kaybettiği birimin yerine yenisini koyabilme yeteneğini düşün.",
    "giris": "Şıkları sırasıyla gözden geçirelim.",
    "aciklamalar": {
     "A": "Telomeraz aktivasyonu, DNA hasarı ve telomer kısalmasıyla birlikte kanserde öne çıkan mekanizmadır.",
@@ -724,6 +903,10 @@
     "E": "Mitokondriyal DNA artışı tanımlanmaz; yaşlanmada mitokondriyal DNA mutasyonları artar ve oksidatif fosforilasyon azalır."
    },
    "ozet": "Kanserde DNA hasarı, telomer kısalması ve telomeraz aktivasyonu; kalp damar hastalığında endotel disfonksiyonu ve ROS; nörodejenerasyonda protein agregatları; osteoartrit ve sarkopenide hücre yenilenmesinde azalma öne çıkar.",
+   "sayfa": [
+    34,
+    15
+   ],
    "metin": "**Soru.** Osteoartrit ve sarkopenide öne çıkan yaşlanma mekanizması hangisidir?\n\n**A)** Telomeraz aktivasyonu · **B)** Protein agregatları · **C)** Endotel disfonksiyonu · **D)** Hücre yenilenmesinde azalma · **E)** Mitokondriyal DNA artışı\n\n**Çözüm.** Şıkları sırasıyla gözden geçirelim.\n\n- **Telomeraz aktivasyonu** — Telomeraz aktivasyonu, DNA hasarı ve telomer kısalmasıyla birlikte kanserde öne çıkan mekanizmadır.\n- **Protein agregatları** — Protein agregatları mitokondriyal disfonksiyonla birlikte nörodejeneratif hastalıklarda öne çıkar.\n- **Endotel disfonksiyonu** — Endotel disfonksiyonu, ateroskleroz ve ROS ile birlikte kardiyovasküler hastalıkta öne çıkan mekanizmadır.\n- **Hücre yenilenmesinde azalma** — Hücre yenilenmesinde azalma doğru. Osteoartrit ve sarkopenide öne çıkan yaşlanma mekanizması budur.\n- **Mitokondriyal DNA artışı** — Mitokondriyal DNA artışı tanımlanmaz; yaşlanmada mitokondriyal DNA mutasyonları artar ve oksidatif fosforilasyon azalır.\n\n**Cevap: D** — Hücre yenilenmesinde azalma\n\n**Özet.** Kanserde DNA hasarı, telomer kısalması ve telomeraz aktivasyonu; kalp damar hastalığında endotel disfonksiyonu ve ROS; nörodejenerasyonda protein agregatları; osteoartrit ve sarkopenide hücre yenilenmesinde azalma öne çıkar.",
    "ses": "Osteoartrit ve sarkopenide öne çıkan yaşlanma mekanizması hangisidir?\nA, Telomeraz aktivasyonu\nBe, Protein agregatları\nCe, Endotel disfonksiyonu\nDe, Hücre yenilenmesinde azalma\nE, Mitokondriyal de ne a artışı\nŞıkları sırasıyla gözden geçirelim.\nTelomeraz aktivasyonu, de ne a hasarı ve telomer kısalmasıyla birlikte kanserde öne çıkan mekanizmadır.\nProtein agregatları mitokondriyal disfonksiyonla birlikte nörodejeneratif hastalıklarda öne çıkar.\nEndotel disfonksiyonu, ateroskleroz ve re o se ile birlikte kardiyovasküler hastalıkta öne çıkan mekanizmadır.\nHücre yenilenmesinde azalma doğru. Osteoartrit ve sarkopenide öne çıkan yaşlanma mekanizması budur.\nMitokondriyal de ne a artışı tanımlanmaz. Yaşlanmada mitokondriyal de ne a mutasyonları artar ve oksidatif fosforilasyon azalır.\nDoğru cevap De, Hücre yenilenmesinde azalma\nKanserde de ne a hasarı, telomer kısalması ve telomeraz aktivasyonu, kalp damar hastalığında endotel disfonksiyonu ve re o se öne çıkar. Nörodejenerasyonda protein agregatları, osteoartrit ve sarkopenide hücre yenilenmesinde azalma öne çıkar.",
    "kelime": 148
@@ -731,6 +914,7 @@
   {
    "no": 40,
    "tur": "ornek",
+   "zorluk": "orta",
    "soru": "Yaşlanmaya yönelik tedavi yaklaşımları için hangisi doğrudur?",
    "secenekler": {
     "A": "İnsanda kanıtlanmış tedavi yoktur",
@@ -740,6 +924,7 @@
     "E": "Kalori kısıtlaması insanda kanıtlanmıştır"
    },
    "dogru": "A",
+   "ipucu": "Hayvan deneylerindeki sonuçların klinikte ne ölçüde doğrulandığını düşün.",
    "giris": "Şimdi seçeneklere tek tek bakalım.",
    "aciklamalar": {
     "A": "İnsanda kanıtlanmış tedavinin olmaması doğru. İnsanlarda kanıtlanmış bir yaşlanma karşıtı tedavi henüz yoktur ve çalışmalar sürmektedir.",
@@ -749,6 +934,11 @@
     "E": "Kalori kısıtlaması hayvan modellerinde ömrü uzatır; insanda uzun dönem fayda risk dengesi hâlâ araştırılmaktadır."
    },
    "ozet": "Yaşlanma tamamen durdurulamasa da oksidatif stres, metabolik denge, inflamasyon ve otofaji hedeflenebilir; ancak insanda kanıtlanmış yaşlanma karşıtı tedavi henüz yoktur.",
+   "sayfa": [
+    35,
+    30,
+    31
+   ],
    "metin": "**Soru.** Yaşlanmaya yönelik tedavi yaklaşımları için hangisi doğrudur?\n\n**A)** İnsanda kanıtlanmış tedavi yoktur · **B)** Yaşlanma tamamen durdurulabilir · **C)** Hiçbir bileşeni hedeflenemez · **D)** Rapamisin insanda kanıtlanmıştır · **E)** Kalori kısıtlaması insanda kanıtlanmıştır\n\n**Çözüm.** Şimdi seçeneklere tek tek bakalım.\n\n- **İnsanda kanıtlanmış tedavi yoktur** — İnsanda kanıtlanmış tedavinin olmaması doğru. İnsanlarda kanıtlanmış bir yaşlanma karşıtı tedavi henüz yoktur ve çalışmalar sürmektedir.\n- **Yaşlanma tamamen durdurulabilir** — Yaşlanma tamamen durdurulamaz; yalnız bazı bileşenleri hedeflenebilir.\n- **Hiçbir bileşeni hedeflenemez** — Bileşenlerin hedeflenememesi yanlıştır; oksidatif stresin azaltılması, inflamasyonun kontrolü ve otofajinin desteklenmesi olası stratejilerdir.\n- **Rapamisin insanda kanıtlanmıştır** — Rapamisin gibi mTOR inhibitörleri yalnız deneysel düzeydedir; insanda kanıtlanmış bir tedavi değildir.\n- **Kalori kısıtlaması insanda kanıtlanmıştır** — Kalori kısıtlaması hayvan modellerinde ömrü uzatır; insanda uzun dönem fayda risk dengesi hâlâ araştırılmaktadır.\n\n**Cevap: A** — İnsanda kanıtlanmış tedavi yoktur\n\n**Özet.** Yaşlanma tamamen durdurulamasa da oksidatif stres, metabolik denge, inflamasyon ve otofaji hedeflenebilir; ancak insanda kanıtlanmış yaşlanma karşıtı tedavi henüz yoktur.",
    "ses": "Yaşlanmaya yönelik tedavi yaklaşımları için hangisi doğrudur?\nA, İnsanda kanıtlanmış tedavi yoktur\nBe, Yaşlanma tamamen durdurulabilir\nCe, Hiçbir bileşeni hedeflenemez\nDe, Rapamisin insanda kanıtlanmıştır\nE, Kalori kısıtlaması insanda kanıtlanmıştır\nŞimdi seçeneklere tek tek bakalım.\nİnsanda kanıtlanmış tedavinin olmaması doğru. İnsanlarda kanıtlanmış bir yaşlanma karşıtı tedavi henüz yoktur ve çalışmalar sürmektedir.\nYaşlanma tamamen durdurulamaz. Yalnız bazı bileşenleri hedeflenebilir.\nBileşenlerin hedeflenememesi yanlıştır. Oksidatif stresin azaltılması, inflamasyonun kontrolü ve otofajinin desteklenmesi olası stratejilerdir.\nRapamisin gibi me te o re inhibitörleri yalnız deneysel düzeydedir. İnsanda kanıtlanmış bir tedavi değildir.\nKalori kısıtlaması hayvan modellerinde ömrü uzatır. İnsanda uzun dönem fayda risk dengesi hâlâ araştırılmaktadır.\nDoğru cevap A, İnsanda kanıtlanmış tedavi yoktur\nYaşlanma tamamen durdurulamasa da oksidatif stres, metabolik denge, inflamasyon ve otofaji hedeflenebilir. Ancak insanda kanıtlanmış yaşlanma karşıtı tedavi henüz yoktur.",
    "kelime": 157
