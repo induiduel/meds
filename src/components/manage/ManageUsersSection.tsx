@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Mail, Trash2, ShieldCheck, Send, Users, Eraser, ArrowLeft } from 'lucide-react';
+import { Mail, Trash2, ShieldCheck, Send, Users, Eraser, ArrowLeft, Bell } from 'lucide-react';
 import type { Committee, QuestionItem } from '../../types';
 import {
   InboxReport,
@@ -8,6 +8,7 @@ import {
   ManageUser,
   normKey,
   sendUserEmail,
+  sendAdminNotification,
   deleteManageUser,
   purgeAuthorContributions,
 } from '../../services/manageConsoleService';
@@ -53,7 +54,12 @@ export const ManageUsersSection: React.FC<Props> = ({
   const [tab, setTab] = useState<'registered' | 'activity'>('registered');
   const [query, setQuery] = useState('');
   const [openKey, setOpenKey] = useState<string | null>(null);
-  const [mode, setMode] = useState<'detail' | 'mail'>('detail');
+  const [mode, setMode] = useState<'detail' | 'mail' | 'notify'>('detail');
+  const [notifTarget, setNotifTarget] = useState<'single' | 'all'>('single');
+  const [notifTitle, setNotifTitle] = useState('');
+  const [notifMessage, setNotifMessage] = useState('');
+  const [notifType, setNotifType] = useState<'app_info' | 'app_success' | 'app_error'>('app_info');
+  const [notifUrl, setNotifUrl] = useState('/');
   const [subject, setSubject] = useState('');
   const [body, setBody] = useState('');
   const [sending, setSending] = useState(false);
@@ -82,18 +88,40 @@ export const ManageUsersSection: React.FC<Props> = ({
   );
   const admins = registeredUsers.filter((u) => u.role === 'admin' || isOwner(u.email)).length;
 
-  const open = (key: string, m: 'detail' | 'mail' = 'detail') => {
-    setOpenKey(normKey(key));
+  const open = (key: string, m: 'detail' | 'mail' | 'notify' = 'detail', target: 'single' | 'all' = 'single') => {
+    setOpenKey(key === '__ALL__' ? '__ALL__' : normKey(key));
     setMode(m);
+    setNotifTarget(target);
     if (m === 'mail') {
       setSubject('');
       setBody('');
+    }
+    if (m === 'notify') {
+      setNotifTitle('');
+      setNotifMessage('');
+      setNotifType('app_info');
+      setNotifUrl('/');
     }
   };
 
   // --- Çekmecedeki kişi ---
   const sel = useMemo(() => {
     if (!openKey) return null;
+    if (openKey === '__ALL__') {
+      return {
+        key: '__ALL__',
+        reg: null,
+        act: null,
+        name: 'Tüm Kullanıcılar',
+        email: 'Tüm Kayıtlı & Aktif Profiller (Broadcast)',
+        studentNumber: '',
+        userQuestions: [],
+        userRevisions: [],
+        fragments: [],
+        userReports: [],
+        userComments: [],
+      };
+    }
     const reg = regOf(openKey);
     const regKeys = reg ? [reg.email, reg.uid, reg.displayName].filter(Boolean).map((x) => normKey(x)) : [];
     const act = activity.find((x) => x.key === openKey || regKeys.includes(x.key) || (reg?.email && x.email && normKey(x.email) === normKey(reg.email)));
@@ -195,8 +223,45 @@ export const ManageUsersSection: React.FC<Props> = ({
     }
   };
 
+  const sendNotification = async () => {
+    if (!notifTitle.trim() || !notifMessage.trim()) {
+      notify('Bildirim başlığı ve mesajı zorunludur.');
+      return;
+    }
+    setSending(true);
+    try {
+      const res = await sendAdminNotification(adminEmail, {
+        target: notifTarget,
+        targetUser: notifTarget === 'single' ? { uid: sel?.reg?.uid, email: sel?.email } : undefined,
+        title: notifTitle.trim(),
+        message: notifMessage.trim(),
+        type: notifType,
+        deepLinkUrl: notifUrl.trim() || '/',
+      });
+      notify(res.message);
+      if (res.ok) {
+        setNotifTitle('');
+        setNotifMessage('');
+        setMode('detail');
+        if (notifTarget === 'all') {
+          setOpenKey(null);
+        }
+      }
+    } finally {
+      setSending(false);
+    }
+  };
+
   const RowActions: React.FC<{ uid?: string; email?: string; rowKey: string; hasAccount: boolean; total: number }> = ({ uid, email, rowKey, hasAccount, total }) => (
     <div className="flex items-center justify-end gap-1" onClick={(e) => e.stopPropagation()}>
+      <button
+        type="button"
+        onClick={() => open(email || uid || rowKey, 'notify', 'single')}
+        className="ms-btn is-sm is-ghost text-accent"
+        title={`${email || rowKey} kullanıcısına bildirim mesajı gönder`}
+      >
+        <Bell /> Bildirim
+      </button>
       {email && (
         <button type="button" onClick={() => open(email, 'mail')} className="ms-btn is-sm is-ghost" title={`${email} adresine e-posta yaz`}>
           <Mail /> Mail
@@ -237,6 +302,22 @@ export const ManageUsersSection: React.FC<Props> = ({
           count={tab === 'registered' ? `${regRows.length} hesap` : `${actRows.length} kişi`}
           className="flex-1"
         />
+        <button
+          type="button"
+          onClick={() => {
+            setOpenKey('__ALL__');
+            setNotifTarget('all');
+            setMode('notify');
+            setNotifTitle('');
+            setNotifMessage('');
+            setNotifType('app_info');
+            setNotifUrl('/');
+          }}
+          className="ms-btn is-sm is-accent shrink-0 flex items-center gap-1.5"
+          title="Tüm kullanıcılara toplu bildirim / duyuru gönder"
+        >
+          <Bell className="w-3.5 h-3.5" /> Toplu Bildirim
+        </button>
       </div>
       {tab === 'registered' && registeredUsers.length > 0 && (
         <p className="m-0 text-sm text-ink-3">
@@ -336,7 +417,7 @@ export const ManageUsersSection: React.FC<Props> = ({
         open={!!sel}
         onClose={() => setOpenKey(null)}
         label="Kullanıcı ayrıntısı"
-        title={mode === 'mail' ? 'E-posta yaz' : sel?.name || 'Kullanıcı'}
+        title={mode === 'mail' ? 'E-posta yaz' : mode === 'notify' ? (notifTarget === 'all' ? 'Toplu Bildirim & Duyuru' : 'Bildirim Gönder') : sel?.name || 'Kullanıcı'}
         foot={
           sel &&
           (mode === 'mail' ? (
@@ -348,8 +429,27 @@ export const ManageUsersSection: React.FC<Props> = ({
                 <Send /> {sending ? 'Gönderiliyor…' : 'Gönder'}
               </button>
             </>
+          ) : mode === 'notify' ? (
+            <>
+              {openKey !== '__ALL__' && (
+                <button type="button" onClick={() => setMode('detail')} className="ms-btn is-auto">
+                  <ArrowLeft /> Geri
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={() => void sendNotification()}
+                disabled={sending || !notifTitle.trim() || !notifMessage.trim()}
+                className="ms-btn is-primary"
+              >
+                <Send /> {sending ? 'Gönderiliyor…' : notifTarget === 'all' ? 'Tüm Kullanıcılara İlet' : 'Bildirimi Gönder'}
+              </button>
+            </>
           ) : (
             <>
+              <button type="button" onClick={() => { setNotifTarget('single'); setMode('notify'); }} className="ms-btn is-accent">
+                <Bell /> Bildirim gönder
+              </button>
               {sel.email && (
                 <button type="button" onClick={() => setMode('mail')} className="ms-btn is-primary">
                   <Mail /> E-posta yaz
@@ -382,6 +482,70 @@ export const ManageUsersSection: React.FC<Props> = ({
                 <textarea value={body} onChange={(e) => setBody(e.target.value)} rows={8} placeholder="Mesajını yaz" className="ms-input" />
               </Field>
             </>
+          ) : mode === 'notify' ? (
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-3 p-3 bg-accent/10 border border-accent/20 rounded-xl text-accent text-sm">
+                <Bell className="w-5 h-5 shrink-0" />
+                <div>
+                  <b className="block">{notifTarget === 'all' ? 'Toplu Bildirim & Duyuru' : 'Kullanıcıya Özel Bildirim'}</b>
+                  <p className="m-0 text-xs text-ink-2">
+                    {notifTarget === 'all'
+                      ? 'Bu bildirim tüm kayıtlı öğrencilerin profil bildirimlerine, açık cihazlarına ve izin verenlerin telefonuna iletilir.'
+                      : `${sel.name} kullanıcısının profil bildirim geçmişine ve aktif cihazlarına iletilir.`}
+                  </p>
+                </div>
+              </div>
+
+              <Field label="Bildirim Başlığı">
+                <input
+                  value={notifTitle}
+                  onChange={(e) => setNotifTitle(e.target.value)}
+                  placeholder="Örn: Yeni Sınav Soruları Yüklendi"
+                  className="ms-input"
+                  autoFocus
+                />
+              </Field>
+
+              <Field label="Bildirim Türü">
+                <div className="flex gap-2">
+                  {(
+                    [
+                      ['app_info', 'ℹ️ Bilgi'],
+                      ['app_success', '✓ Başarı'],
+                      ['app_error', '⚠️ Uyarı / Önemli'],
+                    ] as const
+                  ).map(([k, lbl]) => (
+                    <button
+                      key={k}
+                      type="button"
+                      onClick={() => setNotifType(k)}
+                      className={`ms-btn is-sm flex-1 ${notifType === k ? 'is-primary' : 'is-ghost'}`}
+                    >
+                      {lbl}
+                    </button>
+                  ))}
+                </div>
+              </Field>
+
+              <Field label="Hedef Bağlantı (İsteğe bağlı deep link)">
+                <input
+                  value={notifUrl}
+                  onChange={(e) => setNotifUrl(e.target.value)}
+                  placeholder="Örn: / veya /ogren veya /cikmis"
+                  className="ms-input font-mono text-xs"
+                />
+              </Field>
+
+              <Field label="Mesaj Metni">
+                <textarea
+                  value={notifMessage}
+                  onChange={(e) => setNotifMessage(e.target.value)}
+                  rows={6}
+                  placeholder="Öğrenciye iletilecek bildirim mesajını buraya yazın..."
+                  className="ms-input"
+                />
+              </Field>
+            </div>
           ) : (
             <>
               <div className="flex items-center gap-3">

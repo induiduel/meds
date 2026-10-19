@@ -61,7 +61,9 @@ export interface CdDetay {
 /** Çalmaya başlamak için en az bu kadarı yeter (liste satırından hızlı oynatma) */
 export interface CdOzet { key: string; no: string | number; brans?: string; parca?: number; baslik: string; varyantlar: CdVaryant[] }
 
-export const CD_HIZLAR = [1, 1.25, 1.5, 1.75, 2, 3, 4] as const;
+export const CD_HIZLAR = [
+  0.75, 0.875, 1, 1.125, 1.25, 1.375, 1.5, 1.625, 1.75, 1.875, 2, 2.125, 2.25, 2.375, 2.5, 2.625, 2.75, 2.875, 3,
+] as const;
 const HIZ_KEY = 'medsoru_canli_ders_hiz';
 const KONUM_KEY = 'medsoru_canli_ders_konum_v1';
 

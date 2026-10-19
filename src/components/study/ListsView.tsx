@@ -12,8 +12,10 @@ import {
 } from '../../services/studyStore';
 import { Collapsible } from '../ui/Collapsible';
 import { ExplanationBlock, EmptyState } from './StudyUI';
+import { useYildizliSayisi } from '../../services/yildizliParagrafStore';
+import { YildizliParagraflarPanel } from './YildizliParagraflarModal';
 
-type ListId = 'review' | 'favorites' | 'cards';
+type ListId = 'review' | 'favorites' | 'cards' | 'paragraphs';
 
 interface ListsViewProps {
   bank: StudyQuestion[];
@@ -26,6 +28,7 @@ export const ListsView: React.FC<ListsViewProps> = ({ bank, onChange }) => {
   const [review, setReview] = useState(getReview);
   const [favorites, setFavorites] = useState(getFavorites);
   const [cards, setCards] = useState(getFavoriteCards);
+  const yildizSayisi = useYildizliSayisi();
   const byId = useMemo(() => new Map(bank.map((q) => [q.id, q])), [bank]);
   const progress = useMemo(getProgress, [review]);
 
@@ -36,6 +39,7 @@ export const ListsView: React.FC<ListsViewProps> = ({ bank, onChange }) => {
     { id: 'review', label: 'Tekrar', icon: RotateCcw, count: reviewQs.length },
     { id: 'favorites', label: 'Favori sorular', icon: Star, count: favoriteQs.length },
     { id: 'cards', label: 'Favori kartlar', icon: Layers, count: cards.length },
+    { id: 'paragraphs', label: 'Yıldızlı paragraflar', icon: Star, count: yildizSayisi },
   ];
 
   const removeReview = (id: string) => { setReview(new Set(setInReview(id, false))); onChange?.(); };
@@ -130,6 +134,10 @@ export const ListsView: React.FC<ListsViewProps> = ({ bank, onChange }) => {
             ))}
           </ul>
         )
+      )}
+
+      {list === 'paragraphs' && (
+        <YildizliParagraflarPanel inline />
       )}
     </div>
   );

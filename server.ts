@@ -8252,6 +8252,115 @@ app.post('/api/admin/notifications/test-email', requireAdmin, async (_req, res) 
   }
 });
 
+// Admin panelinden kullanıcıya / tüm kullanıcılara bildirim mesajı gönderme endpointi
+app.post('/api/admin/send-notification', requireAdmin, async (req, res) => {
+  try {
+    const { target, targetUser, title, message, type = 'app_info', deepLinkUrl = '/', targetType = 'app' } = req.body;
+    if (!title || !String(title).trim() || !message || !String(message).trim()) {
+      return res.status(400).json({ error: 'Başlık (title) ve mesaj (message) alanları zorunludur.' });
+    }
+
+    const cleanTitle = String(title).trim();
+    const cleanMessage = String(message).trim();
+    const cleanUrl = String(deepLinkUrl || '/').trim();
+    const cleanType = String(type || 'app_info');
+    const cleanTargetType = String(targetType || 'app');
+
+    const notifItem: ServerUserNotification = {
+      type: cleanType,
+      title: cleanTitle,
+      message: cleanMessage,
+      deepLinkUrl: cleanUrl,
+      targetType: cleanTargetType,
+      targetId: 'admin_notification',
+      dedupeKey: `admin_msg_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+    };
+
+    if (target === 'all') {
+      const uids = new Map<string, { uid?: string; email?: string }>();
+
+      // 1. Kayıtlı kullanıcılar
+      try {
+        const users = loadUsers();
+        for (const u of users) {
+          if (u?.uid) {
+            uids.set(String(u.uid).trim(), { uid: String(u.uid).trim(), email: u.email });
+          } else if (u?.email) {
+            uids.set(String(u.email).toLowerCase().trim(), { email: String(u.email).trim() });
+          }
+        }
+      } catch (err: any) {
+        console.warn('[AdminSendNotif] loadUsers hatası:', err?.message);
+      }
+
+      // 2. data/user_backups/ dosyaları
+      const backupsDir = path.join(DATA_DIR, 'user_backups');
+      if (fs.existsSync(backupsDir)) {
+        try {
+          const files = fs.readdirSync(backupsDir);
+          for (const f of files) {
+            if (!f.endsWith('.json')) continue;
+            try {
+              const content = JSON.parse(fs.readFileSync(path.join(backupsDir, f), 'utf-8'));
+              if (content?.uid) {
+                const uid = String(content.uid).trim();
+                if (!uids.has(uid)) {
+                  uids.set(uid, { uid, email: content.email });
+                }
+              }
+            } catch {}
+          }
+        } catch (err: any) {
+          console.warn('[AdminSendNotif] user_backups taranırken hata:', err?.message);
+        }
+      }
+
+      let sentCount = 0;
+      for (const targetItem of uids.values()) {
+        const ok = notifyStudent(targetItem, notifItem);
+        if (ok) sentCount++;
+      }
+
+      // Genel duyuru olarak realtime broadcast
+      broadcastRealtimeEvent('announcement', {
+        title: cleanTitle,
+        message: cleanMessage,
+        url: cleanUrl,
+        type: cleanType,
+        at: Date.now(),
+      });
+
+      return res.json({
+        success: true,
+        count: sentCount,
+        message: `${sentCount} kullanıcı profiline bildirim başarıyla iletildi.`,
+      });
+    } else {
+      // Tekil kullanıcıya gönder
+      const uid = targetUser?.uid ? String(targetUser.uid).trim() : '';
+      const email = targetUser?.email ? String(targetUser.email).trim().toLowerCase() : '';
+
+      if (!uid && !email) {
+        return res.status(400).json({ error: 'Kullanıcı kimliği (UID) veya e-posta adresi belirtilmelidir.' });
+      }
+
+      const ok = notifyStudent({ uid: uid || null, email: email || null }, notifItem);
+      if (!ok) {
+        return res.status(404).json({ error: 'Kullanıcı profili bulunamadı veya bildirim yazılamadı.' });
+      }
+
+      return res.json({
+        success: true,
+        count: 1,
+        message: 'Kullanıcıya bildirim başarıyla iletildi.',
+      });
+    }
+  } catch (err: any) {
+    console.error('[AdminSendNotif] Hata:', err);
+    res.status(500).json({ error: err.message || 'Bildirim gönderilirken bir hata oluştu.' });
+  }
+});
+
 // Email notification endpoint (congratulations, thank you, and admin alert)
 app.post('/api/send-email', async (req, res) => {
   const { to, subject, html, text, type, committeeId, studentNumber } = req.body;

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  BookOpenText, Check, ChevronDown, ChevronLeft, ChevronRight, Clock, Eraser, Headphones, Lightbulb, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipForward, Volume2, WandSparkles, X,
+  BookOpenText, Check, ChevronDown, ChevronLeft, ChevronRight, Clock, Eraser, Headphones, Lightbulb, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipForward, Star, Volume2, WandSparkles, X,
   Strikethrough,
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../../services/api';
@@ -16,6 +16,8 @@ import { ekleCozucuSure, kaydetCozucuZiyaret } from '../../../services/spotCozuc
 import { tekrarTamamlandi, useKonuSayaci, useSoruSayaci } from '../../../services/calismaTakip';
 import { OgrenYeri } from '../ogren/OgrenYeri';
 import { ogrenEslemeVar } from '../ogren/ogrenEsle';
+import { useYildizliMi, useYildizliSayisi, yildizToggle, yildizliMi } from '../../../services/yildizliParagrafStore';
+import { YildizliParagraflarModal } from '../../study/YildizliParagraflarModal';
 import '../../../styles/soru-cozucu.css';
 
 /**
@@ -56,7 +58,9 @@ const OC: Record<string, string> = {
   'oc-kalan': 'Geriye tek bir seçenek kaldı. Şimdi bunun neden doğru olduğuna bakalım.',
   'oc-son': 'Benzer bir soruyla karşılaşınca da aynı yolu izleyebilirsin.',
 };
-const HIZLAR = [0.85, 1, 1.15, 1.3, 1.5, 1.75, 2];
+const HIZLAR = [
+  0.75, 0.875, 1, 1.125, 1.25, 1.375, 1.5, 1.625, 1.75, 1.875, 2, 2.125, 2.25, 2.375, 2.5, 2.625, 2.75, 2.875, 3,
+];
 const OLCEK_MIN = 0.7;
 const OLCEK_MAX = 1.6;
 const olcekSinirla = (v: number) => Math.round(Math.min(OLCEK_MAX, Math.max(OLCEK_MIN, Number(v) || 1)) * 100) / 100;
@@ -126,6 +130,8 @@ export const SoruCozucu: React.FC<Props> = ({
   const [ayarAcik, setAyarAcik] = useState(false);
   const [tamEkran, setTamEkran] = useState(false);
   const [ogrenAcik, setOgrenAcik] = useState(false);
+  const [yildizModalAcik, setYildizModalAcik] = useState(false);
+  const yildizSayisi = useYildizliSayisi();
   // soru durumu
   const [durum, setDurum] = useState<Durum>('acik');
   const [elenen, setElenen] = useState<Harf[]>([]);
@@ -151,6 +157,43 @@ export const SoruCozucu: React.FC<Props> = ({
     return liste ? ders.sorular.filter((q) => liste.includes(q.no)) : ders.sorular;
   }, [ders, liste, ozelSorular]);
   const q: CSoru | undefined = sorular[i];
+
+  // Deeplink desteği: ?q=N ile belirli soruya atla
+  useEffect(() => {
+    if (!ders || !sorular.length) return;
+    const sp = new URLSearchParams(window.location.search);
+    const qStr = sp.get('q');
+    if (qStr) {
+      const qNo = parseInt(qStr, 10);
+      const targetI = sorular.findIndex((x) => x.no === qNo);
+      if (targetI >= 0) {
+        setI(targetI);
+        setDevamSor(null);
+      }
+    }
+  }, [ders, sorular]);
+
+  useEffect(() => {
+    const onPop = () => {
+      const sp = new URLSearchParams(window.location.search);
+      const d = sp.get('ders');
+      if (d && d !== kod) {
+        setKod(d);
+        return;
+      }
+      const qStr = sp.get('q');
+      if (qStr && sorular.length) {
+        const qNo = parseInt(qStr, 10);
+        const targetI = sorular.findIndex((x) => x.no === qNo);
+        if (targetI >= 0) {
+          setI(targetI);
+          setDevamSor(null);
+        }
+      }
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [kod, sorular]);
 
   useEffect(() => { lockScroll(); return () => unlockScroll(); }, []);
   useEffect(() => { cozucuDizinYukle(brans).then(setDizin).catch(() => {}); }, [brans]);
@@ -590,6 +633,16 @@ export const SoruCozucu: React.FC<Props> = ({
           )}
         </div>
         <div className="sc-ust-sag">
+          <button
+            type="button"
+            className={`sc-ikon sc-btn-yildiz${yildizSayisi > 0 ? ' is-on' : ''}`}
+            onClick={() => setYildizModalAcik(true)}
+            title="Yıldızlı paragraflar (Tekrar listem)"
+            aria-label="Yıldızlı paragraflar"
+          >
+            <Star className="sc-yildiz-ust-i" fill={yildizSayisi > 0 ? '#f59e0b' : 'none'} color={yildizSayisi > 0 ? '#f59e0b' : 'currentColor'} aria-hidden />
+            {yildizSayisi > 0 && <span className="sc-yildiz-rozet">{yildizSayisi}</span>}
+          </button>
           {ogrenVar && (
             <button type="button" className="oy-ac is-ust" onClick={() => setOgrenAcik((v) => !v)} aria-pressed={ogrenAcik} title="Bu sorunun Öğren'deki yeri (Ö)">
               <BookOpenText aria-hidden /><span>Öğren</span>
@@ -657,7 +710,35 @@ export const SoruCozucu: React.FC<Props> = ({
                 {ozetAnlatim && <p className="sc-kisa-ozet" style={{ whiteSpace: 'pre-line', marginBottom: '0.75rem', lineHeight: 1.55 }}>{ozetAnlatim}</p>}
                 {kisaAnlatim && kisaAnlatim.length > 0 && (
                   <ul>
-                    {kisaAnlatim.map((m, idx) => <li key={idx}>{m}</li>)}
+                    {kisaAnlatim.map((m, idx) => {
+                      const yId = `sc_${kod}_kisa_${idx}`;
+                      const yildizli = yildizliMi(yId);
+                      return (
+                        <li key={idx} className="sc-li-sar">
+                          <span>{m}</span>
+                          <button
+                            type="button"
+                            className={`sc-p-yildiz${yildizli ? ' is-on' : ''}`}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              yildizToggle({
+                                id: yId,
+                                kaynak: 'soru_cozucu',
+                                kaynakAd: 'Soru çözücü',
+                                baslik: `${ders?.baslik || 'Soru Çözücü'} · Özet`,
+                                metin: m,
+                                deeplink: `/soru-cozucu?brans=${brans}&ders=${kod}&coz=1`,
+                                meta: { dersKod: kod, brans, paragrafIndex: idx },
+                              });
+                            }}
+                            title={yildizli ? 'Listemden çıkar' : 'Listeme ekle'}
+                            aria-label={yildizli ? 'Listemden çıkar' : 'Listeme ekle'}
+                          >
+                            <Star fill={yildizli ? '#f59e0b' : 'none'} color={yildizli ? '#f59e0b' : 'currentColor'} aria-hidden />
+                          </button>
+                        </li>
+                      );
+                    })}
                   </ul>
                 )}
               </details>
@@ -732,7 +813,30 @@ export const SoruCozucu: React.FC<Props> = ({
 
             {cozuldu && (
               <div className={`sc-not sc-cozum${durum === 'dogru' ? ' is-dogru' : ''}${okunan?.yer === 'cozum' && caliyor ? ' is-aktif' : ''}`}>
-                <b>{durum === 'dogru' ? (yanlisSecti ? 'Doğru, bu sefer oldu!' : yardim ? 'Doğru! · yardımla' : 'Doğru!') : `Doğru cevap ${q.dogru}`} <span>· {q.secenekler[q.dogru]}</span></b>
+                <div className="sc-cozum-ust">
+                  <b>{durum === 'dogru' ? (yanlisSecti ? 'Doğru, bu sefer oldu!' : yardim ? 'Doğru! · yardımla' : 'Doğru!') : `Doğru cevap ${q.dogru}`} <span>· {q.secenekler[q.dogru]}</span></b>
+                  <button
+                    type="button"
+                    className={`sc-p-yildiz${yildizliMi(`sc_${kod}_${q.no}_cozum`) ? ' is-on' : ''}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      yildizToggle({
+                        id: `sc_${kod}_${q.no}_cozum`,
+                        kaynak: 'soru_cozucu',
+                        kaynakAd: 'Soru çözücü',
+                        baslik: `${ders?.baslik || 'Soru Çözücü'} · Soru ${q.no}`,
+                        altBaslik: `Doğru Cevap: ${q.dogru}`,
+                        metin: q.cozum,
+                        deeplink: `/soru-cozucu?brans=${brans}&ders=${kod}&coz=1&q=${q.no}`,
+                        meta: { dersKod: kod, brans, soruNo: q.no },
+                      });
+                    }}
+                    title="Çözümü yıldızla"
+                    aria-label="Çözümü yıldızla"
+                  >
+                    <Star fill={yildizliMi(`sc_${kod}_${q.no}_cozum`) ? '#f59e0b' : 'none'} color={yildizliMi(`sc_${kod}_${q.no}_cozum`) ? '#f59e0b' : 'currentColor'} aria-hidden />
+                  </button>
+                </div>
                 <p><Metin metin={q.cozum} /></p>
                 <small>{q.sayfa.length > 0 ? `Ders sunumu · s. ${q.sayfa.join(', ')}` : ''}{q.sayfa.length > 0 && aciklanan.length < 5 ? ' · ' : ''}{aciklanan.length < 5 ? 'Diğer seçeneklerin açıklamasını dinlemek için üzerine dokun.' : ''}</small>
                 {ogrenVar && !ogrenAcik && (
@@ -834,6 +938,22 @@ export const SoruCozucu: React.FC<Props> = ({
             </div>
           </div>
         </footer>
+      )}
+      {yildizModalAcik && (
+        <YildizliParagraflarModal
+          onClose={() => setYildizModalAcik(false)}
+          onGecis={(item) => {
+            if (item.kaynak === 'soru_cozucu' && item.meta?.dersKod === kod && item.meta?.soruNo !== undefined) {
+              const targetI = sorular.findIndex((x) => x.no === item.meta!.soruNo);
+              if (targetI >= 0) {
+                setI(targetI);
+                setDevamSor(null);
+                return true;
+              }
+            }
+            return false;
+          }}
+        />
       )}
     </div>
   );

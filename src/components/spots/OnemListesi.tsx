@@ -209,10 +209,20 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
   }, [asistanSureGruplari]);
 
   useEffect(() => {
-    const f = () => { if (location.hash === '#sureler') setSureAcik(true); };
+    const f = () => {
+      if (location.hash === '#sureler') setSureAcik(true);
+      const asParam = urlOku('asistan');
+      const dParam = urlOku('ders');
+      if (asParam && dParam) {
+        setKod(dParam);
+        setAsistan(dParam);
+      } else if (!asParam && asistan) {
+        setAsistan(null);
+      }
+    };
     window.addEventListener('popstate', f);
     return () => window.removeEventListener('popstate', f);
-  }, []);
+  }, [asistan]);
 
   useEffect(() => {
     let canli = true;

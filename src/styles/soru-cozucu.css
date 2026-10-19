@@ -372,3 +372,20 @@
 .sik-ciz.is-on { opacity: 1; color: var(--color-bad); background: color-mix(in srgb, var(--color-bad) 8%, transparent); }
 .sc-sik.is-cizili, .pa-sik.is-cizili { opacity: .5; }
 .sc-sik.is-cizili span, .pa-sik.is-cizili span { text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: color-mix(in srgb, var(--color-bad) 70%, transparent); }
+
+/* Yıldızlı paragraflar ve özetler */
+.sc-btn-yildiz { position: relative; }
+.sc-btn-yildiz.is-on { color: #f59e0b !important; }
+.sc-yildiz-rozet {
+  position: absolute; top: -3px; right: -3px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 99px;
+  background: #f59e0b; color: #ffffff; font-size: 10.5px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+}
+.sc-li-sar { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.sc-p-yildiz {
+  display: grid; place-items: center; width: 28px; height: 28px; border: 0; border-radius: 6px;
+  background: transparent; color: var(--color-ink-3); cursor: pointer; opacity: 0.35; transition: all 0.15s; flex: none;
+}
+.sc-li-sar:hover .sc-p-yildiz, .sc-p-yildiz:focus-visible, .sc-p-yildiz.is-on { opacity: 1; }
+.sc-p-yildiz:hover { background: rgba(245, 158, 11, 0.12); color: #f59e0b; transform: scale(1.1); }
+.sc-p-yildiz.is-on { color: #f59e0b; opacity: 1; }
+.sc-cozum-ust { display: flex; align-items: center; justify-content: space-between; gap: 8px; }

@@ -50,6 +50,7 @@ import { ApiService, safeJsonFetch } from '../services/api';
 import { FirestoreDbService } from '../services/firestoreDb';
 import { SupabaseDbService } from '../services/supabaseDb';
 import { multiDbManager, DatabaseMode, DatabaseStatus } from '../services/multiDbManager';
+import { sendAdminNotification } from '../services/manageConsoleService';
 export interface SystemServiceItem {
   id: string;
   name: string;
@@ -122,6 +123,15 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const [isSyncingAuthDb, setIsSyncingAuthDb] = useState(false);
   const [userSyncMessage, setUserSyncMessage] = useState<string | null>(null);
   const [sendingWelcomeForEmail, setSendingWelcomeForEmail] = useState<string | null>(null);
+
+  // User Notification State
+  const [notifyModalUser, setNotifyModalUser] = useState<{ uid?: string; email?: string; name?: string } | null | 'all'>(null);
+  const [notifyTitle, setNotifyTitle] = useState('');
+  const [notifyMessage, setNotifyMessage] = useState('');
+  const [notifyType, setNotifyType] = useState<'app_info' | 'app_success' | 'app_error'>('app_info');
+  const [notifyUrl, setNotifyUrl] = useState('/');
+  const [isSendingNotification, setIsSendingNotification] = useState(false);
+  const [notificationStatusMsg, setNotificationStatusMsg] = useState<{ type: 'ok' | 'err'; text: string } | null>(null);
 
   // SMTP Configuration State
   const [smtpConfig, setSmtpConfig] = useState<{
@@ -769,6 +779,55 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       alert('Hata: ' + e.message);
     } finally {
       setSendingWelcomeForEmail(null);
+    }
+  };
+
+  const handleOpenNotificationModal = (target: any | 'all') => {
+    if (target === 'all') {
+      setNotifyModalUser('all');
+    } else {
+      setNotifyModalUser({ uid: target?.uid, email: target?.email, name: target?.displayName || target?.email });
+    }
+    setNotifyTitle('');
+    setNotifyMessage('');
+    setNotifyType('app_info');
+    setNotifyUrl('/');
+    setNotificationStatusMsg(null);
+  };
+
+  const handleSendNotification = async () => {
+    if (!notifyTitle.trim() || !notifyMessage.trim()) {
+      setNotificationStatusMsg({ type: 'err', text: 'Başlık ve mesaj alanları zorunludur.' });
+      return;
+    }
+    setIsSendingNotification(true);
+    setNotificationStatusMsg(null);
+    try {
+      const isAll = notifyModalUser === 'all';
+      const targetUser = !isAll && notifyModalUser ? { uid: notifyModalUser.uid, email: notifyModalUser.email } : undefined;
+      const res = await sendAdminNotification(adminEmail, {
+        target: isAll ? 'all' : 'single',
+        targetUser,
+        title: notifyTitle.trim(),
+        message: notifyMessage.trim(),
+        type: notifyType,
+        deepLinkUrl: notifyUrl.trim() || '/',
+      });
+      if (res.ok) {
+        setNotificationStatusMsg({ type: 'ok', text: res.message });
+        setTimeout(() => {
+          setNotifyModalUser(null);
+          setNotifyTitle('');
+          setNotifyMessage('');
+          setNotificationStatusMsg(null);
+        }, 1500);
+      } else {
+        setNotificationStatusMsg({ type: 'err', text: res.message });
+      }
+    } catch (err: any) {
+      setNotificationStatusMsg({ type: 'err', text: err.message || 'Hata oluştu.' });
+    } finally {
+      setIsSendingNotification(false);
     }
   };
 
@@ -2558,7 +2617,16 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 />
               </div>
 
-              <div className="flex items-center gap-2 text-xs text-ink-3">
+              <div className="flex items-center gap-3 text-xs text-ink-3">
+                <button
+                  type="button"
+                  onClick={() => handleOpenNotificationModal('all')}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-accent bg-accent/10 hover:bg-accent/20 border border-accent/20 rounded-lg cursor-pointer transition-colors"
+                  title="Tüm kayıtlı kullanıcılara toplu bildirim / duyuru gönder"
+                >
+                  <Bell className="w-3.5 h-3.5" />
+                  <span>Toplu Bildirim Gönder</span>
+                </button>
                 <span>Tabloda gösterilen: <strong>{
                   usersList.filter((u) =>
                     Boolean(u) && (
@@ -2705,6 +2773,14 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                               <td className="py-3 px-3.5 text-right">
                                 <div className="flex items-center justify-end gap-1.5">
                                   <button
+                                    onClick={() => handleOpenNotificationModal(u)}
+                                    title="Kullanıcıya Bildirim Mesajı Gönder"
+                                    className="p-1.5 rounded-lg text-ink-3 hover:text-accent hover:bg-accent/10 cursor-pointer transition-colors"
+                                  >
+                                    <Bell className="w-3.5 h-3.5" />
+                                  </button>
+
+                                  <button
                                     onClick={() => handleSendWelcomeEmail(u)}
                                     disabled={isWelcomeSending}
                                     title="Hoş Geldin E-postası Gönder"
@@ -2737,6 +2813,136 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
         </div>
       </div>
+
+      {/* User Notification Modal */}
+      {notifyModalUser !== null && (
+        <div className="ms-overlay fixed inset-0 z-60 bg-[var(--color-scrim)] flex items-center justify-center p-4">
+          <div className="ms-modal-panel bg-white rounded-2xl max-w-lg w-full p-5 sm:p-6 shadow-2xl space-y-4 border border-line">
+            <div className="flex items-center justify-between border-b border-line pb-3">
+              <div className="flex items-center gap-2 text-accent">
+                <Bell className="w-5 h-5" />
+                <h3 className="font-bold text-ink text-sm sm:text-base">
+                  {notifyModalUser === 'all' ? 'Toplu Bildirim & Duyuru Gönder' : 'Kullanıcıya Bildirim Gönder'}
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setNotifyModalUser(null)}
+                className="p-1.5 rounded-lg text-ink-3 hover:text-ink hover:bg-field transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div className="bg-field border border-line rounded-xl p-3 text-xs text-ink-2">
+              <span className="font-semibold text-ink block mb-0.5">Alıcı:</span>
+              {notifyModalUser === 'all' ? (
+                <span className="text-accent font-bold">📢 Tüm Kayıtlı Kullanıcılar & Aktif Cihazlar (Broadcast)</span>
+              ) : (
+                <div className="flex flex-col gap-0.5 font-mono text-2xs">
+                  <span>İsim: <b className="text-ink">{notifyModalUser.name}</b></span>
+                  {notifyModalUser.email && <span>E-posta: {notifyModalUser.email}</span>}
+                  {notifyModalUser.uid && <span>UID: {notifyModalUser.uid}</span>}
+                </div>
+              )}
+            </div>
+
+            <div className="space-y-3 text-xs">
+              <div>
+                <label className="font-semibold text-ink block mb-1">Bildirim Başlığı *</label>
+                <input
+                  type="text"
+                  value={notifyTitle}
+                  onChange={(e) => setNotifyTitle(e.target.value)}
+                  placeholder="Örn: Yeni Soru Yüklendi veya Sınav Hatırlatması"
+                  className="w-full text-xs px-3 py-2 bg-field border border-line rounded-lg text-ink focus:bg-white focus:outline-none focus:ring-1 focus:ring-accent"
+                  autoFocus
+                />
+              </div>
+
+              <div>
+                <label className="font-semibold text-ink block mb-1">Bildirim Türü</label>
+                <div className="grid grid-cols-3 gap-2">
+                  {(
+                    [
+                      ['app_info', 'ℹ️ Bilgi'],
+                      ['app_success', '✓ Başarı'],
+                      ['app_error', '⚠️ Uyarı'],
+                    ] as const
+                  ).map(([k, lbl]) => (
+                    <button
+                      key={k}
+                      type="button"
+                      onClick={() => setNotifyType(k)}
+                      className={`py-1.5 px-2 rounded-lg font-semibold border text-center transition-colors ${
+                        notifyType === k
+                          ? 'bg-accent text-white border-accent'
+                          : 'bg-field text-ink-2 border-line hover:bg-white'
+                      }`}
+                    >
+                      {lbl}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="font-semibold text-ink block mb-1">Yönlendirme Bağlantısı (URL)</label>
+                <input
+                  type="text"
+                  value={notifyUrl}
+                  onChange={(e) => setNotifyUrl(e.target.value)}
+                  placeholder="Örn: / veya /ogren veya /cikmis"
+                  className="w-full text-xs px-3 py-2 bg-field border border-line rounded-lg text-ink font-mono text-2xs focus:bg-white focus:outline-none focus:ring-1 focus:ring-accent"
+                />
+              </div>
+
+              <div>
+                <label className="font-semibold text-ink block mb-1">Mesaj Metni *</label>
+                <textarea
+                  value={notifyMessage}
+                  onChange={(e) => setNotifyMessage(e.target.value)}
+                  rows={4}
+                  placeholder="Öğrencinin bildirim geçmişinde ve ekranında göreceği mesaj..."
+                  className="w-full text-xs px-3 py-2 bg-field border border-line rounded-lg text-ink focus:bg-white focus:outline-none focus:ring-1 focus:ring-accent"
+                />
+              </div>
+            </div>
+
+            {notificationStatusMsg && (
+              <div
+                className={`p-2.5 rounded-lg text-xs font-semibold ${
+                  notificationStatusMsg.type === 'ok'
+                    ? 'bg-ok-soft text-ok border border-ok/30'
+                    : 'bg-bad-soft text-bad-text border border-bad/30'
+                }`}
+              >
+                {notificationStatusMsg.text}
+              </div>
+            )}
+
+            <div className="flex items-center justify-end gap-2 pt-2 border-t border-line">
+              <button
+                type="button"
+                onClick={() => setNotifyModalUser(null)}
+                disabled={isSendingNotification}
+                className="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-ink-2 hover:bg-field border border-line transition-colors cursor-pointer"
+              >
+                İptal
+              </button>
+              <button
+                type="button"
+                onClick={handleSendNotification}
+                disabled={isSendingNotification || !notifyTitle.trim() || !notifyMessage.trim()}
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-xs font-bold text-white bg-accent hover:opacity-90 disabled:opacity-50 transition-opacity cursor-pointer shadow-xs"
+              >
+                <Send className="w-3.5 h-3.5" />
+                <span>{isSendingNotification ? 'Gönderiliyor…' : notifyModalUser === 'all' ? 'Tüm Kullanıcılara İlet' : 'Bildirimi Gönder'}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Edit Modal */}
       {editingQuestion && (

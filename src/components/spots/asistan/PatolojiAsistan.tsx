@@ -15,6 +15,8 @@ import { cozucuDizinYukle } from '../cozucu/cozucuVeri';
 import { bransTanim } from '../brans';
 import { OgrenYeri } from '../ogren/OgrenYeri';
 import { ogrenEslemeVar } from '../ogren/ogrenEsle';
+import { useYildizliMi, useYildizliSayisi, yildizToggle, yildizliMi } from '../../../services/yildizliParagrafStore';
+import { YildizliParagraflarModal } from '../../study/YildizliParagraflarModal';
 import '../../../styles/patoloji-asistan.css';
 
 /**
@@ -49,7 +51,9 @@ type Sonuc = 'd' | 'd2' | 'y'; // ilk denemede doğru · yardım/ikinci denemede
 interface Kayit { nid: string; sonuc: Record<string, Sonuc>; at: string }
 const ILERLEME_KEY = 'medsoru_onem_asistan_v1';
 const TERCIH_KEY = 'medsoru_onem_asistan_tercih_v1';
-const HIZLAR = [0.85, 1, 1.15, 1.3, 1.5, 1.75, 2];
+const HIZLAR = [
+  0.75, 0.875, 1, 1.125, 1.25, 1.375, 1.5, 1.625, 1.75, 1.875, 2, 2.125, 2.25, 2.375, 2.5, 2.625, 2.75, 2.875, 3,
+];
 const OLCEK_MIN = 0.7;
 const OLCEK_MAX = 1.6;
 const olcekSinirla = (v: number) => Math.round(Math.min(OLCEK_MAX, Math.max(OLCEK_MIN, Number(v) || 1)) * 100) / 100;
@@ -107,6 +111,8 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   const [tamEkran, setTamEkran] = useState(false);
   const [ayarAcik, setAyarAcik] = useState(false); // dar ekranda oynatma ayarları açılır panelde
   const [engel, setEngel] = useState(false);
+  const [yildizModalAcik, setYildizModalAcik] = useState(false);
+  const yildizSayisi = useYildizliSayisi();
   // soru durumu
   const [elenen, setElenen] = useState<string[]>([]);
   const [cizili, setCizili] = useState<string[]>([]); // kullanıcının yalnız görsel olarak üstünü çizdiği şıklar
@@ -130,6 +136,69 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   const soruSay = useSoruSayaci('onem', takipKonu);
   useEffect(() => { if (s?.tip === 'son' && !tekrar && takipKonu) tekrarTamamlandi('onem', takipKonu); }, [s?.tip]); // eslint-disable-line react-hooks/exhaustive-deps
   const nokta = s && (s.tip === 'anlatim' || s.tip === 'soru') ? ders!.noktalar[s.n] : null;
+
+  // Deeplink desteği: URL'de ?nid=... ve ?p=... varsa o noktaya ve cümleye git
+  const deeplinkUygula = useCallback((targetNid: string | null, targetP: string | null) => {
+    if (!targetNid || !ders || !sahneler.length) return false;
+    const targetI = sahneler.findIndex(
+      (x) => (x.tip === 'anlatim' || x.tip === 'soru') && ders.noktalar[x.n]?.id === targetNid
+    );
+    if (targetI >= 0) {
+      setI(targetI);
+      setDevamSor(null);
+      if (targetP !== null && targetP !== '') {
+        if (targetP === 'hap') {
+          setTimeout(() => {
+            const el = document.querySelector('.pa-hap');
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              el.classList.remove('is-hedef');
+              void (el as HTMLElement).offsetWidth;
+              el.classList.add('is-hedef');
+              setTimeout(() => el.classList.remove('is-hedef'), 3000);
+            }
+          }, 350);
+        } else {
+          const cIdx = parseInt(targetP, 10);
+          if (!isNaN(cIdx)) {
+            setAktifCumle(cIdx);
+            setTimeout(() => {
+              const el = document.querySelector(`.pa-cumleler [data-c="${cIdx}"]`);
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                el.classList.remove('is-hedef');
+                void (el as HTMLElement).offsetWidth;
+                el.classList.add('is-hedef');
+                setTimeout(() => el.classList.remove('is-hedef'), 3000);
+              }
+            }, 350);
+          }
+        }
+      }
+      return true;
+    }
+    return false;
+  }, [ders, sahneler]);
+
+  useEffect(() => {
+    if (!ders || !sahneler.length) return;
+    const sp = new URLSearchParams(window.location.search);
+    deeplinkUygula(sp.get('nid'), sp.get('p'));
+  }, [ders, sahneler, deeplinkUygula]);
+
+  useEffect(() => {
+    const onPop = () => {
+      const sp = new URLSearchParams(window.location.search);
+      const d = sp.get('ders');
+      if (d && d !== kod) {
+        setKod(d);
+        return;
+      }
+      deeplinkUygula(sp.get('nid'), sp.get('p'));
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [kod, deeplinkUygula]);
 
   useEffect(() => { lockScroll(); return () => unlockScroll(); }, []);
   useEffect(() => { dizinYukle(kod0).then(setDizin).catch(() => {}); }, [kod0]);
@@ -530,6 +599,16 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
           )}
         </div>
         <div className="pa-ust-sag">
+          <button
+            type="button"
+            className={`pa-ikon pa-btn-yildiz${yildizSayisi > 0 ? ' is-on' : ''}`}
+            onClick={() => setYildizModalAcik(true)}
+            title="Yıldızlı paragraflar (Tekrar listem)"
+            aria-label="Yıldızlı paragraflar"
+          >
+            <Star className="pa-yildiz-ust-i" fill={yildizSayisi > 0 ? '#f59e0b' : 'none'} color={yildizSayisi > 0 ? '#f59e0b' : 'currentColor'} aria-hidden />
+            {yildizSayisi > 0 && <span className="pa-yildiz-rozet">{yildizSayisi}</span>}
+          </button>
           {ogrenEslemeVar(kodBrans(kod)) && (
             <button type="button" className="oy-ac" onClick={() => setOgrenAcik((v) => !v)} aria-pressed={ogrenAcik} title="Bu bilginin Öğren'deki yeri (Ö)">
               <BookOpenText aria-hidden /><span>Öğren</span>
@@ -597,19 +676,45 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
                 <small className="pa-etiket">{ders.no}. ders · {ders.bolumler.length} bölüm · {ders.noktalar.length} nokta · {tumSorular.length} soru</small>
                 <h1>{ders.baslik}</h1>
                 <div className="pa-cumleler" role="region" aria-label="Giriş cümleleri">
-                  {ders.giris.map((c, j) => (
-                    <p
-                      key={j}
-                      className={`${j === aktifCumle ? 'is-aktif' : j < aktifCumle ? 'is-gecti' : ''} is-tiklanabilir`}
-                      onClick={() => cumleyeGit(j)}
-                      title="Bu cümleyi dinle"
-                      role="button"
-                      tabIndex={0}
-                      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); cumleyeGit(j); } }}
-                    >
-                      <Metin metin={c} />
-                    </p>
-                  ))}
+                  {ders.giris.map((c, j) => {
+                    const yId = `as_${kod}_giris_${j}`;
+                    const yildizli = yildizliMi(yId);
+                    return (
+                      <div key={j} className="pa-cumle-sar">
+                        <p
+                          data-c={j}
+                          className={`${j === aktifCumle ? 'is-aktif' : j < aktifCumle ? 'is-gecti' : ''} is-tiklanabilir`}
+                          onClick={() => cumleyeGit(j)}
+                          title="Bu cümleyi dinle"
+                          role="button"
+                          tabIndex={0}
+                          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); cumleyeGit(j); } }}
+                        >
+                          <Metin metin={c} />
+                        </p>
+                        <button
+                          type="button"
+                          className={`pa-p-yildiz${yildizli ? ' is-on' : ''}`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            yildizToggle({
+                              id: yId,
+                              kaynak: 'asistan',
+                              kaynakAd: 'Sınav asistanı',
+                              baslik: `${ders.baslik} · Giriş`,
+                              metin: c,
+                              deeplink: `/en-onemliler?brans=${kodBrans(kod)}&ders=${kod}&asistan=1&p=${j}`,
+                              meta: { dersKod: kod, brans: kodBrans(kod), paragrafIndex: j },
+                            });
+                          }}
+                          aria-label={yildizli ? 'Listemden çıkar' : 'Listeme ekle'}
+                          title={yildizli ? 'Yıldızlı (tekrar listesinde)' : 'Yıldızla (tekrar listesine ekle)'}
+                        >
+                          <Star fill={yildizli ? '#f59e0b' : 'none'} color={yildizli ? '#f59e0b' : 'currentColor'} aria-hidden />
+                        </button>
+                      </div>
+                    );
+                  })}
                 </div>
                 <ol className="pa-plan">
                   {ders.bolumler.map((b, j) => <li key={j}><span>{j + 1}</span>{b.baslik}</li>)}
@@ -650,21 +755,87 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
                 </div>
                 <h2>{nokta.baslik}</h2>
                 <div className="pa-cumleler" role="region" aria-label="Anlatım cümleleri">
-                  {nokta.cumleler.map((c, j) => (
-                    <p
-                      key={j}
-                      className={`${j === aktifCumle ? 'is-aktif' : j < aktifCumle ? 'is-gecti' : ''} is-tiklanabilir`}
-                      onClick={() => cumleyeGit(j)}
-                      title="Bu cümleyi dinlemek için dokun"
-                      role="button"
-                      tabIndex={0}
-                      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); cumleyeGit(j); } }}
-                    >
-                      <Metin metin={c} />
-                    </p>
-                  ))}
+                  {nokta.cumleler.map((c, j) => {
+                    const yId = `as_${kod}_${nokta.id}_${j}`;
+                    const yildizli = yildizliMi(yId);
+                    return (
+                      <div key={j} className="pa-cumle-sar">
+                        <p
+                          data-c={j}
+                          className={`${j === aktifCumle ? 'is-aktif' : j < aktifCumle ? 'is-gecti' : ''} is-tiklanabilir`}
+                          onClick={() => cumleyeGit(j)}
+                          title="Bu cümleyi dinlemek için dokun"
+                          role="button"
+                          tabIndex={0}
+                          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); cumleyeGit(j); } }}
+                        >
+                          <Metin metin={c} />
+                        </p>
+                        <button
+                          type="button"
+                          className={`pa-p-yildiz${yildizli ? ' is-on' : ''}`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            yildizToggle({
+                              id: yId,
+                              kaynak: 'asistan',
+                              kaynakAd: 'Sınav asistanı',
+                              baslik: `${ders.baslik}: ${nokta.baslik}`,
+                              altBaslik: ders.bolumler[nokta.bolum]?.baslik || `Nokta ${noktaSirasi}`,
+                              metin: c,
+                              deeplink: `/en-onemliler?brans=${kodBrans(kod)}&ders=${kod}&asistan=1&nid=${nokta.id}&p=${j}`,
+                              meta: {
+                                dersKod: kod,
+                                brans: kodBrans(kod),
+                                noktaId: nokta.id,
+                                paragrafIndex: j,
+                              },
+                            });
+                          }}
+                          aria-label={yildizli ? 'Listemden çıkar' : 'Listeme ekle'}
+                          title={yildizli ? 'Yıldızlı (tekrar listesinde)' : 'Yıldızla (tekrar listesine ekle)'}
+                        >
+                          <Star fill={yildizli ? '#f59e0b' : 'none'} color={yildizli ? '#f59e0b' : 'currentColor'} aria-hidden />
+                        </button>
+                      </div>
+                    );
+                  })}
                 </div>
-                <div className="pa-hap"><span>Akılda kalsın</span><p><Metin metin={nokta.bilgi} /></p></div>
+                {(() => {
+                  const hapId = `as_${kod}_${nokta.id}_hap`;
+                  const yildizliHap = yildizliMi(hapId);
+                  return (
+                    <div className="pa-hap pa-hap-sar">
+                      <span>Akılda kalsın</span>
+                      <p><Metin metin={nokta.bilgi} /></p>
+                      <button
+                        type="button"
+                        className={`pa-p-yildiz${yildizliHap ? ' is-on' : ''}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          yildizToggle({
+                            id: hapId,
+                            kaynak: 'asistan',
+                            kaynakAd: 'Sınav asistanı',
+                            baslik: `${ders.baslik}: ${nokta.baslik}`,
+                            altBaslik: 'Akılda kalsın',
+                            metin: nokta.bilgi,
+                            deeplink: `/en-onemliler?brans=${kodBrans(kod)}&ders=${kod}&asistan=1&nid=${nokta.id}&p=hap`,
+                            meta: {
+                              dersKod: kod,
+                              brans: kodBrans(kod),
+                              noktaId: nokta.id,
+                            },
+                          });
+                        }}
+                        aria-label={yildizliHap ? 'Listemden çıkar' : 'Listeme ekle'}
+                        title={yildizliHap ? 'Yıldızlı (tekrar listesinde)' : 'Yıldızla (tekrar listesine ekle)'}
+                      >
+                        <Star fill={yildizliHap ? '#f59e0b' : 'none'} color={yildizliHap ? '#f59e0b' : 'currentColor'} aria-hidden />
+                      </button>
+                    </div>
+                  );
+                })()}
 
                 <div className="pa-kart-aksiyonlar">
                   <button type="button" className="pa-btn-parca is-sade" onClick={tekrarDinle} title="Baştan dinle ( T )"><RotateCcw aria-hidden /><span>Baştan dinle</span></button>
@@ -875,6 +1046,38 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
             </label>
           </div>
         </footer>
+      )}
+      {yildizModalAcik && (
+        <YildizliParagraflarModal
+          onClose={() => setYildizModalAcik(false)}
+          onGecis={(item) => {
+            if (item.kaynak === 'asistan' && item.meta?.dersKod === kod && item.meta?.noktaId) {
+              const targetI = sahneler.findIndex(
+                (x) => (x.tip === 'anlatim' || x.tip === 'soru') && ders?.noktalar[x.n]?.id === item.meta!.noktaId
+              );
+              if (targetI >= 0) {
+                setI(targetI);
+                setDevamSor(null);
+                if (item.meta.paragrafIndex !== undefined) {
+                  const pIdx = item.meta.paragrafIndex;
+                  setAktifCumle(pIdx);
+                  setTimeout(() => {
+                    const el = document.querySelector(`.pa-cumleler [data-c="${pIdx}"]`);
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                      el.classList.remove('is-hedef');
+                      void (el as HTMLElement).offsetWidth;
+                      el.classList.add('is-hedef');
+                      setTimeout(() => el.classList.remove('is-hedef'), 3000);
+                    }
+                  }, 300);
+                }
+                return true;
+              }
+            }
+            return false;
+          }}
+        />
       )}
     </div>
   );

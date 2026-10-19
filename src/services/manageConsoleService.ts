@@ -573,6 +573,42 @@ export const sendUserEmail = async (
   }
 };
 
+export interface SendNotificationPayload {
+  target: 'single' | 'all';
+  targetUser?: { uid?: string; email?: string };
+  title: string;
+  message: string;
+  type?: 'app_info' | 'app_success' | 'app_error';
+  deepLinkUrl?: string;
+  targetType?: string;
+}
+
+/** Yönetici olarak kullanıcıya ya da tüm kullanıcılara bildirim mesajı gönderir. */
+export const sendAdminNotification = async (
+  adminEmail: string,
+  payload: SendNotificationPayload
+): Promise<{ ok: boolean; message: string; count?: number }> => {
+  try {
+    const res = await safeJsonFetch<{ success: boolean; message: string; count?: number; error?: string }>(
+      '/api/admin/send-notification',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-admin-email': adminEmail,
+        },
+        body: JSON.stringify(payload),
+      }
+    );
+    if (res.ok && res.data?.success) {
+      return { ok: true, message: res.data.message || 'Bildirim iletildi.', count: res.data.count };
+    }
+    return { ok: false, message: res.error || res.data?.error || 'Bildirim iletilemedi.' };
+  } catch (e: unknown) {
+    return { ok: false, message: e instanceof Error ? e.message : 'Bağlantı hatası.' };
+  }
+};
+
 /** Kullanıcıyı sil (sunucu + Supabase aynası). */
 export const deleteManageUser = async (
   adminEmail: string,

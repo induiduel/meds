@@ -9,15 +9,45 @@ Spotlardaki **kalın** terimler ve sorulardaki kısa doğru cevaplar önemli cü
 Paragraf metni sunucuyla birebir aynı olsun diye /api/canli-ders/<key> üzerinden okunur (3000 açık olmalı).
 Çıktı: {"surum":1,"p":{"<i>":[[bas,son,"c"|"t",onem], ...]}} — aralıklar paragraf içi karakter konumu.
 
-Kullanım: python3 scripts/sesli_anlatim/vurgu_uret.py [--ders KEY] [--esik 0.66]
+Kullanım: python3 scripts/sesli_anlatim/vurgu_uret.py [--ders KEY] [--esik 0.66] [--eksik]
+GPU (kullanıcı izni 2026-10-19; yalnız meds-gpuguard etkin + saat kilidi varken, VRAM payı 0,6):
+  ~/.local/share/meds-xtts/venv/bin/python scripts/sesli_anlatim/vurgu_uret.py --gpu --eksik
 """
-import argparse, json, os, re, sys, urllib.request
+import argparse, json, os, re, subprocess, sys, time, urllib.request
 from pathlib import Path
 
-os.environ.setdefault("CUDA_VISIBLE_DEVICES", "")
+GPU = "--gpu" in sys.argv
+if not GPU:
+    os.environ.setdefault("CUDA_VISIBLE_DEVICES", "")
 KOK = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(KOK / "scripts" / "agents"))
 from lib import embed, fold  # noqa: E402
+
+
+_gpu_model = None
+
+
+def embed_gpu(texts: list[str]):
+    """bge-m3 GPU'da (CLS havuzlama + L2, servisle aynı); fp16, VRAM payı 0,6, küçük partiler."""
+    global _gpu_model
+    import numpy as np
+    import torch
+    from transformers import AutoModel, AutoTokenizer
+    if _gpu_model is None:
+        if subprocess.run(["systemctl", "--user", "is-active", "--quiet", "meds-gpuguard"]).returncode != 0:
+            sys.exit("meds-gpuguard etkin değil: GPU kullanılmaz (AGENTS.md §10)")
+        torch.cuda.set_per_process_memory_fraction(0.6)
+        tok = AutoTokenizer.from_pretrained("BAAI/bge-m3")
+        _gpu_model = (tok, AutoModel.from_pretrained("BAAI/bge-m3", dtype=torch.float16).cuda().eval())
+    tok, m = _gpu_model
+    out = []
+    with torch.inference_mode():
+        for i in range(0, len(texts), 16):
+            b = tok(texts[i:i + 16], padding=True, truncation=True, max_length=512, return_tensors="pt").to("cuda")
+            v = m(**b).last_hidden_state[:, 0].float()
+            out.append(torch.nn.functional.normalize(v, dim=-1).cpu().numpy())
+            time.sleep(0.05)  # görev döngüsünü koruyucu sınırının altında tut
+    return np.concatenate(out)
 
 
 CIKTI = KOK / "data" / "sesli_anlatim" / "vurgu"
@@ -106,6 +136,7 @@ def bul(metin: str, terim: str):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ders"); ap.add_argument("--esik", type=float, default=0.66)
+    ap.add_argument("--gpu", action="store_true"); ap.add_argument("--eksik", action="store_true", help="vurgu dosyası olanları atla")
     ap.add_argument("--tavan", type=float, default=0.22, help="önemli cümle oranı üst sınırı")
     a = ap.parse_args()
     spotlar = json.load(open(KOK / "src/data/exam_spots_k1.json"))["spotlar"]
@@ -116,14 +147,16 @@ def main():
     for d in dersler:
         key = d["key"]
         if a.ders and key != a.ders: continue
+        if a.eksik and (CIKTI / f"{key}.json").exists(): continue
         sp = ogeler(key, d["no"], d["baslik"], spotlar, cikmislar)
         det = json.load(urllib.request.urlopen(f"http://127.0.0.1:3000/api/canli-ders/{key}", timeout=60))
         pars = [p for b in det["bolumler"] for p in b["paragraflar"]]
         cs = [(p["i"], s, e, p["metin"][s:e]) for p in pars for s, e in cumleler(p["metin"])]
         if not sp or not cs:
             print(f"{key}: öğe {len(sp)}, cümle {len(cs)} — atlandı"); continue
-        sv = embed([o[0] for o in sp])
-        cv = embed([c[3] for c in cs])
+        emb = embed_gpu if a.gpu else embed
+        sv = emb([o[0] for o in sp])
+        cv = emb([c[3] for c in cs])
         sim = sv @ cv.T  # spot × cümle
         puan: dict[int, tuple[float, int]] = {}
         sec_terim: dict[int, set[str]] = {}

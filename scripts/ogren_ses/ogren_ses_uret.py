@@ -197,15 +197,29 @@ def deste_uret(tts, deck: dict, force: bool = False, adim_filtre: int | None = N
     print(f"\n--- Sonuç: {deck_id} ---")
     print(f"Üretilen: {uretilen}, Atlanılan (Değişmeyen): {atlanilan}")
     print(f"Toplam Ses Süresi: {toplam_sure/60:.1f} dk, Üretim Süresi: {toplam_gecen:.1f} sn")
-    return {"uretilen": uretilen, "atlanilan": atlanilan, "toplam_sure": toplam_sure}
+    return {"uretilen": uretilen, "atlanilan": atlanilan, "toplam_sure": toplam_sure, "cikis": cikis_dizin}
+
+
+def deste_onceligi(deck_id: str) -> tuple[int, str]:
+    # 0: Güncel müfredat v2 desteleri
+    if "-v2" in deck_id:
+        return (0, deck_id)
+    # 1: k1p desteleri
+    if deck_id.startswith("k1p-"):
+        return (1, deck_id)
+    # 2: learn- ve diğer desteler
+    return (2, deck_id)
 
 
 def main():
+    import subprocess
     parser = argparse.ArgumentParser(description="İnteraktif Öğrenme Desteleri için EMA Seslendirici")
     parser.add_argument("deck_ids", nargs="*", help="İşlenecek deste kimlikleri (boşsa varsayılan üriner obstrüksiyon)")
     parser.add_argument("--hepsi", action="store_true", help="Tüm interaktif desteleri işle")
+    parser.add_argument("--v2", action="store_true", help="Yalnızca güncel -v2 destelerini işle")
     parser.add_argument("--force", action="store_true", help="Var olan sesleri yeniden üret")
     parser.add_argument("--adim", type=int, default=None, help="Yalnızca belirtilen adım numarasını üret")
+    parser.add_argument("--oracle", action="store_true", help="Her deste bittiğinde Oracle sunucusuna rsync ile aktar")
     args = parser.parse_args()
 
     if not DECKS_FILE.exists():
@@ -219,7 +233,9 @@ def main():
 
     hedefler = []
     if args.hepsi:
-        hedefler = [d["id"] for d in all_decks]
+        hedefler = sorted(list(deck_map.keys()), key=deste_onceligi)
+    elif args.v2:
+        hedefler = sorted([k for k in deck_map if "-v2" in k], key=deste_onceligi)
     elif args.deck_ids:
         for did in args.deck_ids:
             if did in deck_map:
@@ -239,13 +255,25 @@ def main():
         print("İşlenecek deste bulunamadı.")
         sys.exit(1)
 
+    print(f"İşlenecek deste sayısı: {len(hedefler)}")
     print(f"EMA Lightning yükleniyor...")
     tts = E.model_yukle()
 
-    for did in hedefler:
+    toplam_deste = len(hedefler)
+    for idx, did in enumerate(hedefler, 1):
         deck = deck_map.get(did)
         if deck:
-            deste_uret(tts, deck, force=args.force, adim_filtre=args.adim)
+            print(f"\n>>> [{idx}/{toplam_deste}] Deste Başlıyor: {did}")
+            res = deste_uret(tts, deck, force=args.force, adim_filtre=args.adim)
+            if args.oracle and res.get("uretilen", 0) > 0:
+                print(f"  [Oracle] {did} aktarılıyor...")
+                r = subprocess.run(["rsync", "-az", "--quiet", str(res["cikis"]), "medsor-oracle:/home/ubuntu/medsor/meds/data/ogren_ses/"])
+                if r.returncode == 0:
+                    print(f"  [Oracle] {did} başarıyla senkronize edildi.")
+                else:
+                    print(f"  [Oracle] UYARI: {did} aktarılamadı (kod {r.returncode})")
+            # GPU sıcaklığını korumak için desteler arası kısa nefes
+            time.sleep(0.5)
 
 
 if __name__ == "__main__":

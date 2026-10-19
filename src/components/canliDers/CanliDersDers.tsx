@@ -18,10 +18,12 @@ import { CevrimdisiDugme } from './CanliDersCevrimdisi';
 import { CdDaha } from './CanliDersDaha';
 import { CdTvKumanda } from './CanliDersTv';
 import { MetniAktarDugme } from './CanliDersAktarDugme';
-import { Highlighter } from 'lucide-react';
+import { Highlighter, Star } from 'lucide-react';
 import { useKonuSayaci } from '../../services/calismaTakip';
 import { KonuDugmeleri } from '../takip/KonuTakip';
 import { toast } from '../ui/Toast';
+import { useYildizliMi, useYildizliSayisi, yildizToggle } from '../../services/yildizliParagrafStore';
+import { YildizliParagraflarModal } from '../study/YildizliParagraflarModal';
 import '../learn/pdf/pdfDoc.css';
 
 /** Öğenin görünür ölçeği (v12 yazı boyutu CSS zoom'u); utils/uiZoom.elementZoom ile aynı mantık. */
@@ -110,11 +112,47 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     return v;
   });
   const [oynaticiAcik, setOynaticiAcik] = useState(false);
+  const [yildizModalAcik, setYildizModalAcik] = useState(false);
+  const yildizSayisi = useYildizliSayisi();
   const rootRef = useRef<HTMLDivElement>(null);
   const [yuk, setYuk] = useState<number | null>(null);
   const caliyorKey = useCd((s) => s.key);
   const caliyorBaslik = useCd((s) => s.baslik);
   const tanitim = useCdTur('ders', !!detay, () => !!document.querySelector('.cd-dock') && !!document.querySelector('.cd-metin p'));
+
+  // Deeplink ile gelen paragraf (?p=N ya da #p-N): o paragrafa kaydır ve hedef vurgusu ver
+  const kaydirParagrafa = useCallback((pIdx: number) => {
+    if (isNaN(pIdx) || pIdx < 0) return;
+    const el = rootRef.current?.querySelector<HTMLElement>(`.cd-p[data-i="${pIdx}"]`);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.classList.remove('is-hedef');
+      void el.offsetWidth;
+      el.classList.add('is-hedef');
+      setTimeout(() => el.classList.remove('is-hedef'), 3000);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!detay) return;
+    const sp = new URLSearchParams(window.location.search);
+    const pStr = sp.get('p') || (window.location.hash.startsWith('#p-') ? window.location.hash.replace('#p-', '') : null);
+    if (!pStr) return;
+    const pIdx = parseInt(pStr, 10);
+    const t = setTimeout(() => kaydirParagrafa(pIdx), 400);
+    return () => clearTimeout(t);
+  }, [detay, kaydirParagrafa]);
+
+  useEffect(() => {
+    const onPop = () => {
+      const sp = new URLSearchParams(window.location.search);
+      const pStr = sp.get('p') || (window.location.hash.startsWith('#p-') ? window.location.hash.replace('#p-', '') : null);
+      if (!pStr) return;
+      kaydirParagrafa(parseInt(pStr, 10));
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [kaydirParagrafa]);
 
   useEffect(() => {
     let canli = true;
@@ -280,9 +318,27 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
             <KonuDugmeleri kucuk className="cd-ders-takip" modul="sesli" konu={detay.key} ad={detay.baslik}
               onTekrar={() => { const v = cdTercihVaryant(detay.varyantlar); if (v) cdOynat(detay, v.id, { t: 0 }); }} />
           )}
-          <CdTvKumanda />
+          {!tamEkran && (
+            <button
+              type="button"
+              className={`cd-btn cd-btn-yildizli${yildizSayisi > 0 ? ' is-on' : ''}`}
+              onClick={() => setYildizModalAcik(true)}
+              title="Yıldızlı paragraflar (Tekrar listem)"
+              aria-label="Yıldızlı paragraflar"
+            >
+              <Star className="w-4 h-4" fill={yildizSayisi > 0 ? '#f59e0b' : 'none'} color={yildizSayisi > 0 ? '#f59e0b' : 'currentColor'} aria-hidden />
+              <span>Yıldızlılar{yildizSayisi > 0 ? ` (${yildizSayisi})` : ''}</span>
+            </button>
+          )}
           {!tamEkran && (
             <CdDaha etiket="Ders seçenekleri (çevrimdışı, listem, metni dışa aktar, tanıtım)" className="cd-ders-daha">
+              <button
+                type="button"
+                className="cd-btn"
+                onClick={() => setYildizModalAcik(true)}
+              >
+                <Star aria-hidden /> <span>Yıldızlı paragraflar ({yildizSayisi})</span>
+              </button>
               <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
               <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} etiketli />
               <MetniAktarDugme detay={detay} vurguAcik={vurguAcik} />
@@ -343,6 +399,18 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
         {metinGoster && <CdMetinBolme detay={detay} canli={buDers} />}
       </div>
       {tanitim.tur}
+      {yildizModalAcik && (
+        <YildizliParagraflarModal
+          onClose={() => setYildizModalAcik(false)}
+          onGecis={(item) => {
+            if (item.kaynak === 'canli_ders' && item.meta?.dersKey === dersKey && item.meta?.paragrafIndex !== undefined) {
+              kaydirParagrafa(item.meta.paragrafIndex);
+              return true;
+            }
+            return false;
+          }}
+        />
+      )}
     </div>
   );
 }
@@ -446,6 +514,52 @@ function metinAraligi(el: HTMLElement, s: number, e: number): Range | null {
   return null;
 }
 
+function CdParagrafYildizDugme({
+  dersKey,
+  dersBaslik,
+  bolumBaslik,
+  paragrafIndex,
+  metin,
+}: {
+  dersKey: string;
+  dersBaslik: string;
+  bolumBaslik?: string;
+  paragrafIndex: number;
+  metin: string;
+}) {
+  const yId = `cd_${dersKey}_p${paragrafIndex}`;
+  const yildizli = useYildizliMi(yId);
+
+  const toggle = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    yildizToggle({
+      id: yId,
+      kaynak: 'canli_ders',
+      kaynakAd: 'Sesli ders',
+      baslik: dersBaslik,
+      altBaslik: bolumBaslik,
+      metin,
+      deeplink: `${pathFor('canli_ders', dersKey)}?p=${paragrafIndex}`,
+      meta: {
+        dersKey,
+        paragrafIndex,
+      },
+    });
+  };
+
+  return (
+    <button
+      type="button"
+      className={`cd-p-yildiz${yildizli ? ' is-on' : ''}`}
+      onClick={toggle}
+      aria-label={yildizli ? 'Listemden çıkar' : 'Listeme ekle'}
+      title={yildizli ? 'Yıldızlı (tekrar listesinde)' : 'Yıldızla (tekrar listesine ekle)'}
+    >
+      <Star fill={yildizli ? '#f59e0b' : 'none'} color={yildizli ? '#f59e0b' : 'currentColor'} aria-hidden />
+    </button>
+  );
+}
+
 /** Paragraf listesi bir kez çizilir; vurgu DOM üzerinden değişir (uzun metinde yeniden çizim yok). */
 const MetinListe = memo(function MetinListe({ detay, onTik }: { detay: CdDetay; onTik: (i: number) => void }) {
   return (
@@ -456,7 +570,16 @@ const MetinListe = memo(function MetinListe({ detay, onTik }: { detay: CdDetay; 
           {b.paragraflar.map((p) => (
             <div key={p.i} className="cd-p-sar">
               <p data-i={p.i} className="cd-p" onClick={() => onTik(p.i)}><VurguluMetin metin={p.metin} v={detay.vurgu?.[p.i]} /></p>
-              <KopyalaDugme metin={p.metin} />
+              <div className="cd-p-araclar">
+                <CdParagrafYildizDugme
+                  dersKey={detay.key}
+                  dersBaslik={detay.baslik}
+                  bolumBaslik={b.baslik}
+                  paragrafIndex={p.i}
+                  metin={p.metin}
+                />
+                <KopyalaDugme metin={p.metin} />
+              </div>
             </div>
           ))}
         </section>

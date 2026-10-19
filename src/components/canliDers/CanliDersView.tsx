@@ -5,7 +5,7 @@
  *    çubuktadır (CanliDersDock, App düzeyinde) — ses öğesi canliDersStore'da tek ve kalıcıdır.
  */
 import React, { useEffect, useMemo, useState } from 'react';
-import { BarChart3, ChevronDown, Clock, Download, Headphones, History, ListMusic, MoreHorizontal, Pause, Play, Search, X } from 'lucide-react';
+import { BarChart3, ChevronDown, Clock, Download, Headphones, History, ListMusic, MoreHorizontal, Pause, Play, Search, Star, X } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import {
   cdDosyaAdi, cdKonumListesi, cdSesKimlik, cdTercihVaryant, cdVarsayilanSesAyarla, useCdVarsayilanSes, cdListeGetir, cdOynat, cdSesKisa, cdSesUrl, cdToggle, fmtMb, fmtSure, useCd,
@@ -18,6 +18,8 @@ import { useCdTur } from './useCdTur';
 import { CevrimdisiDugme, useCevrimdisiSuzgec } from './CanliDersCevrimdisi';
 import { cdBransKisa, cdDersEtiketi, cdKategoriGrupla, cdKonuSayisi, cdParca, type CdKategori } from './canliDersKategori';
 import { useCdTvGezinme } from './CanliDersTv';
+import { useYildizliSayisi } from '../../services/yildizliParagrafStore';
+import { YildizliParagraflarPanel } from '../study/YildizliParagraflarModal';
 import { bittiMi, sureYaz, useKonuKaydi, useTakip } from '../../services/calismaTakip';
 import { KonuDugmeleri, KonuIsaret, KonuSureEtiketi } from '../takip/KonuTakip';
 import '../../styles/canli-ders.css';
@@ -40,12 +42,16 @@ function CanliDersListe() {
   const [dersler, setDersler] = useState<CdListeDers[] | null>(null);
   const [hata, setHata] = useState<string | null>(null);
   const [q, setQ] = useState('');
-  const [gorunum, setGorunum] = useState<'tum' | 'liste'>(() => (location.hash === '#listem' ? 'liste' : 'tum'))
+  const [gorunum, setGorunum] = useState<'tum' | 'liste' | 'yildiz'>(() => (location.hash === '#listem' ? 'liste' : location.hash === '#yildiz' ? 'yildiz' : 'tum'));
   const [sureAcik, setSureAcik] = useState(() => location.hash === '#sureler');
   const listeN = useCdListe((s) => s.keys.length);
+  const yildizN = useYildizliSayisi();
   // Oynatıcıdaki "Listem" göstergesi /canliders#listem açar (sayfa zaten açıksa da sekmeye geçilsin)
   useEffect(() => {
-    const f = () => { if (location.hash === '#listem') setGorunum('liste'); };
+    const f = () => {
+      if (location.hash === '#listem') setGorunum('liste');
+      else if (location.hash === '#yildiz') setGorunum('yildiz');
+    };
     window.addEventListener('popstate', f);
     return () => window.removeEventListener('popstate', f);
   }, []);
@@ -111,6 +117,9 @@ function CanliDersListe() {
             <button type="button" role="tab" aria-selected={gorunum === 'liste'} className={gorunum === 'liste' ? 'is-on' : ''} onClick={() => setGorunum('liste')}>
               <ListMusic aria-hidden /> Listem{listeN > 0 && <span className="cd-sekme-sayi">{listeN}</span>}
             </button>
+            <button type="button" role="tab" aria-selected={gorunum === 'yildiz'} className={gorunum === 'yildiz' ? 'is-on' : ''} onClick={() => setGorunum('yildiz')}>
+              <Star aria-hidden className={yildizN > 0 ? "text-amber-500 fill-amber-500" : ""} /> Yıldızlılar{yildizN > 0 && <span className="cd-sekme-sayi">{yildizN}</span>}
+            </button>
           </div>
           <div className="cd-liste-arac">
             <button type="button" className="cd-btn" onClick={() => setSureAcik(true)} aria-haspopup="dialog">
@@ -145,6 +154,8 @@ function CanliDersListe() {
         <div className="cd-bos" role="status"><span className="cd-spin" aria-hidden /> Dersler yükleniyor…</div>
       ) : gorunum === 'liste' ? (
         <Listem dersler={dersler} onTumu={() => setGorunum('tum')} />
+      ) : gorunum === 'yildiz' ? (
+        <YildizliParagraflarPanel inline onClose={() => setGorunum('tum')} />
       ) : !liste.length ? (
         <div className="cd-bos"><p>{q ? `"${q}" için ders bulunamadı.` : 'Henüz sesi hazır ders yok.'}</p></div>
       ) : (
