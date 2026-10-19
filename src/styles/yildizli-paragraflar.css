@@ -489,7 +489,14 @@
 }
 
 .cd-p-sar .cd-p {
-  padding-right: 68px !important;
+  padding-right: 72px !important;
+}
+
+/* Kopyala düğmesi araç çubuğunda yıldızın yanında durur (canli-ders.css'teki mutlak konum burada geçersiz) */
+.cd-p-araclar .cd-p-kopya {
+  position: static;
+  top: auto;
+  right: auto;
 }
 
 .cd-p-yildiz {
