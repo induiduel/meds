@@ -9,14 +9,19 @@ import '../../styles/tam-ekran-gezinme.css';
  * Tam ekranda kabuk (üst çubuk, kenar menüsü, alt sekmeler) gizlidir; bu yüzen ada sayfalar arası
  * gezinmeyi tam ekrandan çıkmadan sağlar: Geri/İleri (tarayıcı geçmişi), Ana sayfa, Sayfalar listesi
  * ve tam ekrandan çıkış. Gezinme pushState/popstate ile yapılır; `releasePageFullscreen` sayesinde
- * kapanan sayfa tam ekranı kapatmaz. Ada kenara katlanabilir (tercih oturum boyunca hatırlanır).
+ * kapanan sayfa tam ekranı kapatmaz. Ada birkaç saniye sonra kendiliğinden kenar tutamacına katlanır.
  */
+const KATLAN_MS = 3500;
+
 export const TamEkranGezinme: React.FC<{ active: AppRoute; onGo: (r: AppRoute) => void }> = ({ active, onGo }) => {
   const [fs, , exit] = useAppFullscreen();
   const [acik, setAcik] = useState(false);
-  const [katli, setKatli] = useState<boolean>(() => {
-    try { return sessionStorage.getItem('medsor_fs_nav_katli') === '1'; } catch { return false; }
-  });
+  // Otomatik katlanma: ada açıldıktan KATLAN_MS sonra kenar tutamacına iner (içeriği kapatmasın).
+  // Dokunma/odak/üzerinde durma süreyi yeniler; Sayfalar menüsü açıkken katlanmaz. Tutamağa dokununca açılır.
+  const [katli, setKatli] = useState(false);
+  const [canli, setCanli] = useState(0);
+  const [ustunde, setUstunde] = useState(false);
+  const durt = () => setCanli((n) => n + 1);
 
   // Açık bir pencere (tanıtım, onay, ayar diyaloğu) varken ada gizlenir; üstüne binmesin, odak tuzağını bozmasın.
   // Tam ekran oynatıcılar da aria-modal taşır (ders, çözücü, asistan): onlar pencere sayılmaz.
@@ -34,7 +39,12 @@ export const TamEkranGezinme: React.FC<{ active: AppRoute; onGo: (r: AppRoute) =
     return () => { mo.disconnect(); if (raf) clearTimeout(raf); };
   }, [fs]);
 
-  useEffect(() => { if (!fs) setAcik(false); }, [fs]);
+  useEffect(() => { if (!fs) setAcik(false); else setKatli(false); }, [fs]);
+  useEffect(() => {
+    if (!fs || katli || acik || ustunde) return;
+    const t = window.setTimeout(() => setKatli(true), KATLAN_MS);
+    return () => clearTimeout(t);
+  }, [fs, katli, acik, ustunde, canli, active]);
   useEffect(() => { setAcik(false); }, [active]);
   useEffect(() => {
     if (!acik) return;
@@ -45,10 +55,7 @@ export const TamEkranGezinme: React.FC<{ active: AppRoute; onGo: (r: AppRoute) =
 
   if (!fs || pencere) return null;
 
-  const katla = (v: boolean) => {
-    setKatli(v);
-    try { sessionStorage.setItem('medsor_fs_nav_katli', v ? '1' : '0'); } catch { /* gizli pencere */ }
-  };
+  const katla = (v: boolean) => { setKatli(v); setUstunde(false); durt(); };
   const geri = () => {
     if (window.history.length > 1) window.history.back();
     else navigateTo(pathFor('today'));
@@ -65,7 +72,14 @@ export const TamEkranGezinme: React.FC<{ active: AppRoute; onGo: (r: AppRoute) =
 
   return (
     <>
-      <nav className="teg" aria-label="Tam ekran gezinme">
+      <nav
+        className="teg"
+        aria-label="Tam ekran gezinme"
+        onPointerDown={durt}
+        onFocus={durt}
+        onPointerEnter={(e) => { if (e.pointerType === 'mouse') setUstunde(true); }}
+        onPointerLeave={(e) => { if (e.pointerType === 'mouse') setUstunde(false); }}
+      >
         <button type="button" onClick={geri} aria-label="Geri" title="Geri (Alt+←)"><ArrowLeft size={18} /></button>
         <button type="button" onClick={() => window.history.forward()} aria-label="İleri" title="İleri (Alt+→)"><ArrowRight size={18} /></button>
         <button type="button" onClick={() => git('today')} aria-label="Ana sayfa" title="Ana sayfa"><Home size={18} /></button>
