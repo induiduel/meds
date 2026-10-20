@@ -32,6 +32,31 @@ def birim(ad):
     return subprocess.run(["systemctl", "--user", "is-active", ad], capture_output=True, text=True).stdout.strip()
 
 
+def turev_eksikleri(api="https://api.nofrostlife.com.tr"):
+    """H12: canlıda sesi olan derslerde türev veri (cümle zamanı, PDF işareti) var mı. Sunucu metin karması tutmayan
+    dosyayı göndermez → özellik sessizce kaybolur; burada görünür olur. Döner {k2: [...], k1: [...]} (eksik ders anahtarları)."""
+    out = {"k2": [], "k1": []}
+    try:
+        req = urllib.request.Request(f"{api}/api/canli-ders", headers={"User-Agent": "MeDSor-saglik/1 (+hat)"})
+        dersler = json.load(urllib.request.urlopen(req, timeout=30)).get("dersler") or []
+    except Exception as e:  # noqa: BLE001
+        return {"hata": str(e)[:120]}
+    for d in dersler:
+        try:
+            req = urllib.request.Request(f"{api}/api/canli-ders/{d['key']}", headers={"User-Agent": "MeDSor-saglik/1 (+hat)"})
+            x = json.load(urllib.request.urlopen(req, timeout=30))
+        except Exception:  # noqa: BLE001
+            continue
+        sesli = [v for v in x.get("varyantlar") or [] if v.get("ses")]
+        if not sesli:
+            continue
+        eksik = [a for a, ok in (("cumleZaman", any(v.get("cumleZaman") for v in sesli)), ("isaret", bool(x.get("isaret"))))
+                 if not ok]
+        if eksik:
+            out["k2" if str(d["key"])[:2] in ("k2", "k3", "k4", "k5", "k6") else "k1"].append(f"{d['key']}: {','.join(eksik)}")
+    return out
+
+
 def kapi_oz_sinama():
     """H5: kapılar bilinen iyi/kötü örnekle doğru karar veriyor mu (çöken kapı her şeyi 'içerik hatası' diye reddeder)."""
     import sys as _s
@@ -76,10 +101,12 @@ def main():
     }
     s["oracle_ok"] = s["canli_api"] == 200 and s["oracle_ssh"]
     s["kapi_ariza"] = kapi_oz_sinama()
+    s["turev_eksik"] = turev_eksikleri() if s["canli_api"] == 200 else {"hata": "canlı API yok"}
     sorun = [k for k, ok in [("canli_api", s["canli_api"] == 200), ("oracle_ssh", s["oracle_ssh"]),
                              ("yerel_3000", s["yerel_3000"] == 200), ("embed_bge", s["embed_bge"] == "active"),
                              ("ema_isci", s["ema_isci"] == "active"), ("disk", s["disk_bos_gb"] >= 10),
-                             ("kapi_ariza", not s["kapi_ariza"])] if not ok]
+                             ("kapi_ariza", not s["kapi_ariza"]),
+                             ("turev_eksik_k2", not (s["turev_eksik"].get("k2") or []))] if not ok]  # K1 eksikleri yalnız rapor
     s["sorun"] = sorun
     CIKTI.parent.mkdir(parents=True, exist_ok=True); CIKTI.write_text(json.dumps(s, ensure_ascii=False, indent=1))
     if "--sessiz" not in sys.argv:
