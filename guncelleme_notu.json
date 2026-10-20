@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 149,
-  "baslik": "Düzeltme: Sesli ders listesi ve Bugün ekranı",
+  "onem": 150,
+  "baslik": "Düzeltme: En önemliler ve Soru çözücü başlangıç ekranı",
   "maddeler": [
-    "Sesli ders listesinde branş başlıkları artık açıkça tıklanabilir kartlar: 'Dersleri göster / Gizle' düğmesiyle.",
-    "Bugün ekranındaki 'Ne yapmak istiyorsun?' kartları sayfayla aynı hizada, kategori rengiyle."
+    "En önemliler ve Soru çözücü başlangıç ekranında sayılar artık tek satırda, açıklamalar kısa; 'Kaldığın yerden devam' kartı sade ve okunaklı."
   ],
   "eklenen": [],
-  "degisen": [
-    "Sesli ders listesinde branş başlıkları artık açıkça tıklanabilir kartlar: 'Dersleri göster / Gizle' düğmesiyle.",
-    "Bugün ekranındaki 'Ne yapmak istiyorsun?' kartları sayfayla aynı hizada, kategori rengiyle."
+  "degisen": [],
+  "duzeltilen": [
+    "En önemliler ve Soru çözücü başlangıç ekranında sayılar artık tek satırda, açıklamalar kısa; 'Kaldığın yerden devam' kartı sade ve okunaklı."
   ],
-  "duzeltilen": [],
   "silinen": []
 }

@@ -85,7 +85,7 @@ export const CozucuBaslangic: React.FC = () => {
       <Baslangic
         ikon={Headphones}
         baslik="Soru çözücü"
-        aciklama="Asistan soruyu ve seçenekleri sesli okur, sen seçersin; sonra her seçeneğin nedenini ders sunumuna dayanarak açıklar."
+        aciklama="Soruyu sesli dinle, cevapla; her seçeneğin nedenini ders sunumundan öğren."
         ozet={toplam !== null ? <><b>{satirlar?.length ?? 0}</b> ders · <b>{sayi(toplam)}</b> soru{stats.cozulenSoru > 0 && <> · <b>%{stats.dogrulukOrani}</b> doğru</>}</> : undefined}
         devam={devam}
         listeAd="Bir ders seç"
@@ -178,7 +178,7 @@ export const OnemBaslangic: React.FC = () => {
       <Baslangic
         ikon={Star}
         baslik="En önemliler"
-        aciklama="Her konunun sınav için en önemli bilgileri 100 puanlık önem sırasıyla; her madde ders PDF'inden alıntılı. Sesli asistanla da dinleyebilirsin."
+        aciklama="Her konunun sınavda en çok sorulan bilgileri, önem sırasıyla."
         ozet={toplam !== null ? <><b>{sayi(toplam)}</b> madde · <b>{sayi(ogr.size)}</b> öğrenildi</> : undefined}
         devam={devam}
         listeAd="Bir ders seç"

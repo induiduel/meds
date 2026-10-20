@@ -45,12 +45,12 @@ export const Baslangic: React.FC<{
 }> = ({ ikon: Ikon, baslik, aciklama, ozet, devam, listeAd, satirlar, alt, ust, bos }) => {
   const capId = useId();
   return (
-    <div className="bs">
+    <div className="bsl">
       <header className="bs-head">
         <span className="bs-ic" aria-hidden><Ikon /></span>
         <h1 className="bs-h1">{baslik}</h1>
         <p className="bs-desc">{aciklama}</p>
-        {ozet && <p className="bs-ozet">{ozet}</p>}
+        {ozet && <p className="bsl-ozet">{ozet}</p>}
       </header>
 
       {ust}
