@@ -1,23 +1,27 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 101,
-  "baslik": "Yönetim paneli yenilendi (v14)",
+  "onem": 102,
+  "baslik": "Yeni tasarım: Ada (v13) ve bölümlü ses çubuğu",
   "maddeler": [
-    "Yönetim paneli baştan tasarlandı: her bölüm kendi sayfası, ayrıntılar sayfanın tamamında açılır.",
-    "Listelerde toplu seçim ve toplu işlemler (onayla, dışa aktar, sil…).",
-    "Veritabanı gezgininde JSON verileri kart, etiket ve tablo olarak gösterilir.",
-    "Telefonda ve masaüstünde taşma/kayma sorunları giderildi."
+    "İsteğe bağlı yeni tasarım Ada (v13): yüzen menü adaları, şeritsiz, kompakt; açılışta bir kez sorulur, Ayarlar › Tasarım'dan değiştirilir.",
+    "Sesli ders ve alternatif çözücüde YouTube tarzı bölüm çubuğu: üstüne gelince bölüm adı ve zaman, tıklayınca o bölüme atlar (Shift + ok ile bölüm atla).",
+    "Telefonda sayfalar daha kompakt: başlıklar, istatistik panelleri, ders notu satırları ve test kaynakları daha az yer kaplar.",
+    "Soru çözücü ve alternatif çözücüde geniş ve çok dar ekranlarda alt çubuğun taşması.",
+    "PDF stüdyosu ve çevrimdışı penceresinin dar telefonda ekrandan taşması."
   ],
   "eklenen": [
-    "Yönetim paneli baştan tasarlandı: her bölüm kendi sayfası, ayrıntılar sayfanın tamamında açılır.",
-    "Listelerde toplu seçim ve toplu işlemler (onayla, dışa aktar, sil…).",
-    "Veritabanı gezgininde JSON verileri kart, etiket ve tablo olarak gösterilir."
+    "İsteğe bağlı yeni tasarım Ada (v13): yüzen menü adaları, şeritsiz, kompakt; açılışta bir kez sorulur, Ayarlar › Tasarım'dan değiştirilir.",
+    "Sesli ders ve alternatif çözücüde YouTube tarzı bölüm çubuğu: üstüne gelince bölüm adı ve zaman, tıklayınca o bölüme atlar (Shift + ok ile bölüm atla)."
   ],
   "degisen": [
-    "Yönetim paneli baştan tasarlandı: her bölüm kendi sayfası, ayrıntılar sayfanın tamamında açılır."
+    "Telefonda sayfalar daha kompakt: başlıklar, istatistik panelleri, ders notu satırları ve test kaynakları daha az yer kaplar.",
+    "TBG Sınav Kampı sadeleşti: tek satır mod seçici ve tek başlat düğmesi."
   ],
   "duzeltilen": [
-    "Telefonda ve masaüstünde taşma/kayma sorunları giderildi."
+    "Soru çözücü ve alternatif çözücüde geniş ve çok dar ekranlarda alt çubuğun taşması.",
+    "PDF stüdyosu ve çevrimdışı penceresinin dar telefonda ekrandan taşması.",
+    "Koyu temada sınav spotu istatistik kartlarının okunmaması; TBG düğmelerinde yazının görünmemesi.",
+    "Genetik sayfasında yapışkan listenin alttaki kartların üstüne binmesi."
   ],
   "silinen": []
 }

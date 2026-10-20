@@ -25,9 +25,12 @@
   }
 
   /* ── Liste + ayrıntı: Sözlük / Hastalıklar ── */
-  & .g12-split { grid-template-columns: minmax(300px, 34%) minmax(0, 1fr); gap: 12px; }
   & .g12-split > .g12-panel { border-radius: 16px; }
-  & .g12-split > .g12-list { max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - var(--sh-top-h) - 24px); }
+  /* İki sütun yalnız geniş ekranda; telefonda/dar tablette v12'nin tek sütun (liste ya da ayrıntı) düzeni kalır */
+  @media (min-width: 900px) {
+    & .g12-split { grid-template-columns: minmax(300px, 34%) minmax(0, 1fr); gap: 12px; }
+    & .g12-split > .g12-list { max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - var(--sh-top-h) - 24px); }
+  }
   & .g12-detail { max-width: none; }
   & .g12-detail :is(p, li, dd) { max-width: 76ch; }
 
