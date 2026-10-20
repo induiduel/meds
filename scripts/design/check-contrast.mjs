@@ -5,7 +5,7 @@ import { PALETTES, TOKEN_KEYS } from '../../src/utils/palettes.ts';
 const lum = (h) => { const n = parseInt(h.slice(1), 16); return [n >> 16, (n >> 8) & 255, n & 255].map((c) => { c /= 255; return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; }).reduce((a, c, i) => a + c * [0.2126, 0.7152, 0.0722][i], 0); };
 const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
 // [ön plan, zemin, eşik] — eşik verilmezse 4.5 (normal metin). line-2 bir kenarlık: 1.5 yeter.
-const PAIRS = [['ink', 'white'], ['ink', 'canvas'], ['ink-2', 'white'], ['ink-2', 'field'], ['ink-3', 'white'], ['ink-3', 'canvas'], ['ink-3', 'field'],
+const PAIRS = [['ink', 'white'], ['ink', 'canvas'], ['ink-2', 'white'], ['ink-2', 'field'], ['ink-3', 'white', 5], ['ink-3', 'canvas', 5], ['ink-3', 'field', 5],
   ['accent', 'white'], ['accent', 'canvas'], ['accent', 'field'], ['on-accent', 'accent'], ['on-accent', 'accent-hover'], ['accent', 'accent-soft'],
   ['clinic', 'white'], ['clinic', 'clinic-soft'], ['ok', 'white'], ['ok', 'ok-soft'], ['warn', 'white'], ['warn', 'warn-soft'],
   ['bad-text', 'white'], ['bad-text', 'bad-soft'], ['ai', 'white'], ['ai', 'ai-soft'], ['brand', 'brand-soft', 3],

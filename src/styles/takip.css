@@ -80,7 +80,7 @@
 .bd-modul-ad { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .bd-modul-kisa { display: none; }
 .bd-modul-n { white-space: nowrap; flex: none; font: 500 12px var(--font-mono); color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
-.bd-modul-s { font-style: normal; opacity: .88; }
+.bd-modul-s { font-style: normal; }
 .bd-modul button.is-on .bd-modul-n { color: var(--color-accent); }
 
 /* özet kartları */

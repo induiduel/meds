@@ -1,11 +1,13 @@
 /**
  * Palet kaydı — renk modlarının TEK doğruluk kaynağı (v9).
  *
- * Her tema (açık / sarı / koyu) için 4 palet (a, b, c, d) vardır. Her palet tam token setini taşır;
+ * Paletler: açık 9 (a–i), sarı 6 (a–f), koyu 8 (a–h); her biri ayrı renk ailesi, her temada bir "Yüksek kontrast". Her palet tam token setini taşır;
  * CSS çalışma anında üretilir ve <style id="palette-registry"> olarak eklenir. styles/appearance.css'teki
  * eski elle yazılmış bloklar yalnız yedektir; buradaki seçici daha özgül olduğu için her zaman kazanır.
  *  - Yeni palet = bu listeye bir nesne (tüm anahtarlar zorunlu, bkz. TOKEN_KEYS).
- *  - Kontrast kapısı: `node scripts/design/check-contrast.mjs` (bu dosyayı okur; her çift ≥4.5:1).
+ *  - Kontrast kapısı: `npx tsx scripts/design/check-contrast.mjs` (her çift ≥4.5:1, ink-3 ≥5; vurgu seçenekleri;
+ *    aynı temada zemin+vurgusu neredeyse aynı iki palet = kopya → HATA).
+ *  - Yazıyı `opacity` ile soluklaştırma: bazı paletlerde eşiğin altına düşer; `--color-ink-3` kullan.
  *  - Ayarlar ekranı listeyi otomatik gösterir; silinmiş palet seçimi temanın ilk paletine döner.
  */
 export type ThemeMode = 'light' | 'sepia' | 'dark';
