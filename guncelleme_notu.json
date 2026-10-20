@@ -1,17 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 91,
-  "baslik": "Daha hızlı açılış ve eşitleme düzeltmesi",
+  "onem": 92,
+  "baslik": "Tanıtım turu yeni Ada tasarımına uyarlandı",
   "maddeler": [
-    "Site ilk açılışta yaklaşık %15 daha az veri indiriyor, daha hızlı açılıyor.",
-    "Arka planda aşırı yedekleme isteği gönderilmesine yol açan hata düzeltildi."
+    "Hoş geldin turu Ada (v13) tasarımında doğru menü öğelerini gösteriyor.",
+    "Telefonda tur, alt adadaki bölümleri ve Menü sayfasındaki sayfaları vurguluyor."
   ],
   "eklenen": [],
   "degisen": [
-    "Site ilk açılışta yaklaşık %15 daha az veri indiriyor, daha hızlı açılıyor."
+    "Hoş geldin turu Ada (v13) tasarımında doğru menü öğelerini gösteriyor.",
+    "Telefonda tur, alt adadaki bölümleri ve Menü sayfasındaki sayfaları vurguluyor."
   ],
-  "duzeltilen": [
-    "Arka planda aşırı yedekleme isteği gönderilmesine yol açan hata düzeltildi."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
