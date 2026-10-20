@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Kurul kampı zinciri (gece): ONAYLI hoca tüyoları + ders bilgi deposu → Claude (scripts/kamp/TALIMAT_KAMP.md) → kapı
+"""Kurul kampı zinciri (gece; Kurul 1 dahil — K1 dersleri branş klasörlerinden bilgi deposunda): ONAYLI hoca tüyoları + ders bilgi deposu → Claude (scripts/kamp/TALIMAT_KAMP.md) → kapı
 (scripts/kamp/dogrula.py) → EMA (scripts/kamp/ses.py) → src/data/kamp/k<N>/<brans>.json + Oracle data/kamp/ses/.
 PDF açılmaz: dersler meds_database_v2/ders_bilgi/<ders>/ozet.md'den (scripts/dersler/bilgi_deposu.py).
 Bir branşta kamp: en az 1 onaylı tüyo + en az 1 deposu hazır ders. Tüyolar ya da ders özetleri değişmediyse yeniden
@@ -31,7 +31,7 @@ def main():
         kurullar = [a.kurul]
     else:
         sys.path.insert(0, str(MEDS / "scripts/takvim")); from aktif_kurul import durum
-        kurullar = list(range(2, durum(dt.date.today().isoformat())["aktif"] + 1))
+        kurullar = list(range(1, durum(dt.date.today().isoformat())["aktif"] + 1))  # Kurul 1 dahil (2026-10-20)
     slug_ad = {b["slug"]: b["ad"] for b in json.loads((MEDS / "src/data/dersler/branslar.json").read_text())["branslar"]}
     ad_slug = {v: k for k, v in slug_ad.items()}
     hata = 0
