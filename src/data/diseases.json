@@ -178886,6 +178886,25 @@
      "refs": [
       0
      ]
+    },
+    {
+     "text": "HCV ile kontamine iğne batmasından sonra enfeksiyon riski ==%1,8== (%0–7) olarak verilir.",
+     "label": "Mesleki HCV riski",
+     "key": true,
+     "entities": [
+      {
+       "name": "hepatit C virüsü",
+       "type": "patojen"
+      },
+      {
+       "name": "iğne batması",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 15",
+     "refs": [
+      3
+     ]
     }
    ],
    "physiology": [
@@ -179289,6 +179308,29 @@
      "refs": [
       1
      ]
+    },
+    {
+     "text": "Temas sonrası ==HCV RNA 1–3 haftada==, anti-HCV 2–6 ayda pozitifleşir; ALT ortalama 45. günde yükselir.",
+     "label": "Temas sonrası HCV izlemi",
+     "key": true,
+     "entities": [
+      {
+       "name": "HCV RNA",
+       "type": "test"
+      },
+      {
+       "name": "anti-HCV",
+       "type": "test"
+      },
+      {
+       "name": "ALT yüksekliği",
+       "type": "laboratuvar"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 16",
+     "refs": [
+      3
+     ]
     }
    ],
    "imaging": [
@@ -179395,6 +179437,51 @@
       2,
       3
      ]
+    },
+    {
+     "text": "Hepatit B aşısı 3 doz olarak 0, 1 ve 6. aylarda uygulanır.",
+     "label": "HBV aşı şeması",
+     "key": true,
+     "entities": [
+      {
+       "name": "hepatit B aşısı",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 12",
+     "refs": [
+      2
+     ]
+    },
+    {
+     "text": "HBIG dozu 0,06 mL/kg, kas içidir.",
+     "label": "HBIG",
+     "key": true,
+     "entities": [
+      {
+       "name": "hepatit B immünglobulini",
+       "type": "ilac"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 14",
+     "refs": [
+      2
+     ]
+    },
+    {
+     "text": "HCV için temas öncesi ve sonrası ==profilaksi yoktur==; temas eden kişi izlenir.",
+     "label": "HCV teması",
+     "key": true,
+     "entities": [
+      {
+       "name": "hepatit C virüsü",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 16",
+     "refs": [
+      3
+     ]
     }
    ],
    "complications": [
@@ -179459,6 +179546,26 @@
       3
      ]
     }
+   ],
+   "lecture": [
+    {
+     "text": "Ders hepatitleri profilaksi açısından işler: HBV’de aşı ve HBIG ile korunma vardır, HCV’de profilaksi yoktur, yalnız izlem yapılır.",
+     "entities": [
+      {
+       "name": "hepatit B virüsü",
+       "type": "patojen"
+      },
+      {
+       "name": "hepatit C virüsü",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 12–16",
+     "refs": [
+      2,
+      3
+     ]
+    }
    ]
   },
   "references": [
@@ -179504,16 +179611,24 @@
    "removed": 13
   },
   "relatedLectures": [
-   "Kurul 3"
+   "Kurul 3",
+   "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k"
   ],
   "schemaVersion": 2,
   "curation": {
-   "method": "ders notu + ders kitabı (Robbins/Harrison/Katzung) + resmi kılavuz doğrulaması; madde/varlık modeli",
-   "at": "2026-10-12T05:17:37Z"
+   "yontem": "ders işçisi önerisi → şema 2 (otomatik)",
+   "zaman": "2026-10-20T01:32:44Z",
+   "method": "ders işçisi önerisi → şema 2 (otomatik)",
+   "at": "2026-10-20T01:32:44Z",
+   "onceki": {
+    "method": "ders notu + ders kitabı (Robbins/Harrison/Katzung) + resmi kılavuz doğrulaması; madde/varlık modeli",
+    "at": "2026-10-12T05:17:37Z"
+   },
+   "kaynak": "ders işçisi is_id 20261011-9985ac7ab9 · ders k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k"
   },
   "isCustom": false,
   "createdAt": "2026-10-11T02:40:43Z",
-  "updatedAt": "2026-10-12T05:17:37Z"
+  "updatedAt": "2026-10-20T01:33:43Z"
  },
  {
   "id": "s13-hepatit-b-nin-vertikal-bulasi",
@@ -193581,6 +193696,21 @@
      "refs": [
       0
      ]
+    },
+    {
+     "text": "Temastan sonra virionlar ==1 saatte epitel bariyerini== geçer, 48–72 saatte lenf nodlarına, 3–5 günde kan dolaşımına ulaşır.",
+     "label": "Temas sonrası yayılım",
+     "key": true,
+     "entities": [
+      {
+       "name": "lenf nodu",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 24",
+     "refs": [
+      0
+     ]
     }
    ],
    "pathology": [
@@ -193853,6 +193983,25 @@
      "refs": [
       0
      ]
+    },
+    {
+     "text": "Temas sonrası HIV antikoru 4–6. haftada, 3. ayda ve 6. ayda bakılır; dördüncü kuşak ELISA kullanılıyorsa izlem 4. ayda sonlandırılabilir.",
+     "label": "Temas sonrası izlem",
+     "key": true,
+     "entities": [
+      {
+       "name": "HIV testi",
+       "type": "test"
+      },
+      {
+       "name": "dördüncü kuşak ELISA",
+       "type": "test"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 26",
+     "refs": [
+      0
+     ]
     }
    ],
    "treatment": [
@@ -193938,6 +194087,45 @@
       0,
       1
      ]
+    },
+    {
+     "text": "Temas bölgesi su ve sabunla yıkanır.",
+     "label": "İlk müdahale",
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 22",
+     "refs": [
+      0
+     ]
+    },
+    {
+     "text": "Derste verilen temas sonrası profilaksi rejimi ==tenofovir + emtrisitabin + raltegravir ya da dolutegravir==, 28 gün.",
+     "label": "PEP rejimi",
+     "key": true,
+     "entities": [
+      {
+       "name": "tenofovir",
+       "type": "ilac"
+      },
+      {
+       "name": "emtrisitabin",
+       "type": "ilac"
+      },
+      {
+       "name": "raltegravir",
+       "type": "ilac"
+      },
+      {
+       "name": "dolutegravir",
+       "type": "ilac"
+      },
+      {
+       "name": "temas sonrası profilaksi",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 23",
+     "refs": [
+      0
+     ]
     }
    ],
    "complications": [
@@ -193990,6 +194178,22 @@
       1
      ]
     }
+   ],
+   "lecture": [
+    {
+     "text": "Ders, temas sonrası profilaksinin en kısa sürede ve en geç 72 saatte başlanmasını, ideal olarak ilk ==4 saat içinde== verilmesini vurgular (EACS 2018).",
+     "key": true,
+     "entities": [
+      {
+       "name": "temas sonrası profilaksi",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 24",
+     "refs": [
+      0
+     ]
+    }
    ]
   },
   "references": [
@@ -194015,16 +194219,24 @@
    "removed": 15
   },
   "relatedLectures": [
-   "Kurul 1"
+   "Kurul 1",
+   "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k"
   ],
   "schemaVersion": 2,
   "curation": {
-   "method": "ders notu + ders kitabı (Robbins/Harrison/Katzung) + resmi kılavuz doğrulaması; madde/varlık modeli",
-   "at": "2026-10-12T05:17:37Z"
+   "yontem": "ders işçisi önerisi → şema 2 (otomatik)",
+   "zaman": "2026-10-20T01:32:44Z",
+   "method": "ders işçisi önerisi → şema 2 (otomatik)",
+   "at": "2026-10-20T01:32:44Z",
+   "onceki": {
+    "method": "ders notu + ders kitabı (Robbins/Harrison/Katzung) + resmi kılavuz doğrulaması; madde/varlık modeli",
+    "at": "2026-10-12T05:17:37Z"
+   },
+   "kaynak": "ders işçisi is_id 20261011-9985ac7ab9 · ders k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k"
   },
   "isCustom": false,
   "createdAt": "2026-10-11T02:40:43Z",
-  "updatedAt": "2026-10-12T05:17:37Z"
+  "updatedAt": "2026-10-20T01:33:43Z"
  },
  {
   "id": "s13-idiyopatik-neonatal-hepatit",
@@ -293536,5 +293748,362 @@
   "isCustom": false,
   "createdAt": "2026-10-11T02:40:43Z",
   "updatedAt": "2026-10-12T05:17:37Z"
+ },
+ {
+  "id": "cinsel-yolla-bulasan-infeksiyonlar",
+  "name": "Cinsel Yolla Bulaşan İnfeksiyonlar (CYBİ)",
+  "latinName": "Infectiones sexualiter transmissae",
+  "kind": "kavram",
+  "category": "Enfeksiyon Hastalıkları ve Mikrobiyoloji",
+  "hallmarks": [
+   {
+    "text": "Genital, genital-oral, oral-anal ve genital-anal temasla bulaşan enfeksiyonların tümü",
+    "entities": [
+     {
+      "name": "cinsel temas",
+      "type": "risk_faktoru"
+     }
+    ]
+   },
+   {
+    "text": "Çoğu ==sessiz seyreder==, asemptomatik olabilir",
+    "entities": [
+     {
+      "name": "cinsel yolla bulaşan enfeksiyon",
+      "type": "hastalik"
+     }
+    ]
+   },
+   {
+    "text": "Uzun vadede infertilite ve PID gibi önemli komplikasyonlar",
+    "entities": [
+     {
+      "name": "infertilite",
+      "type": "hastalik"
+     },
+     {
+      "name": "pelvik inflamatuvar hastalık",
+      "type": "hastalik"
+     }
+    ]
+   }
+  ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Heteroseksüel ya da homoseksüel temasla ==genital, genital-oral, oral-anal ve genital-anal== yolla bulaşan tüm enfeksiyonları kapsar.",
+     "key": true,
+     "entities": [
+      {
+       "name": "cinsel temas",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 2"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "Neisseria gonorrhoeae, Chlamydia trachomatis, Treponema pallidum, Haemophilus ducreyi ve Klebsiella granulomatis.",
+     "label": "Bakteriler",
+     "key": true,
+     "entities": [
+      {
+       "name": "Neisseria gonorrhoeae",
+       "type": "patojen"
+      },
+      {
+       "name": "Chlamydia trachomatis",
+       "type": "patojen"
+      },
+      {
+       "name": "Treponema pallidum",
+       "type": "patojen"
+      },
+      {
+       "name": "Haemophilus ducreyi",
+       "type": "patojen"
+      },
+      {
+       "name": "Klebsiella granulomatis",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 3"
+    },
+    {
+     "text": "HSV tip 1 ve 2, sitomegalovirüs, Epstein-Barr virüsü, hepatit B ve C virüsleri ile HIV.",
+     "label": "Virüsler",
+     "key": true,
+     "entities": [
+      {
+       "name": "herpes simpleks virüs",
+       "type": "patojen"
+      },
+      {
+       "name": "sitomegalovirüs",
+       "type": "patojen"
+      },
+      {
+       "name": "Epstein-Barr virüsü",
+       "type": "patojen"
+      },
+      {
+       "name": "hepatit B virüsü",
+       "type": "patojen"
+      },
+      {
+       "name": "hepatit C virüsü",
+       "type": "patojen"
+      },
+      {
+       "name": "HIV",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 3"
+    },
+    {
+     "text": "HPV, Molluscum contagiosum etkeni ve enterik virüsler de cinsel yolla bulaşır.",
+     "label": "Diğer virüsler",
+     "entities": [
+      {
+       "name": "HPV",
+       "type": "patojen"
+      },
+      {
+       "name": "Molluscum contagiosum virüsü",
+       "type": "patojen"
+      },
+      {
+       "name": "enterik virüsler",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 3"
+    },
+    {
+     "text": "Parazit etken olarak ==Trichomonas vaginalis== sayılır.",
+     "label": "Parazit",
+     "entities": [
+      {
+       "name": "Trichomonas vaginalis",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 3"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Bulaş heteroseksüel ya da homoseksüel temasta genital, genital-oral, oral-anal ve genital-anal yolla olur.",
+     "label": "Bulaş yolları",
+     "entities": [
+      {
+       "name": "cinsel temas",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 2"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "Sessiz seyreder ve asemptomatik olabilir.",
+     "label": "Seyir",
+     "key": true,
+     "entities": [
+      {
+       "name": "cinsel yolla bulaşan enfeksiyon",
+       "type": "hastalik",
+       "qualifier": "asemptomatik"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 2"
+    }
+   ],
+   "pathognomonic": [
+    {
+     "text": "Genelde aşıları yoktur ve geçirilen enfeksiyon bağışıklık bırakmaz.",
+     "label": "Bağışıklık",
+     "key": true,
+     "entities": [
+      {
+       "name": "aşılama",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 2"
+    }
+   ],
+   "treatment": [
+    {
+     "text": "Bulaş yolları, belirtiler ve sonuçlar hakkında danışmanlık verilir; kişisel korunma yolları ve kapsamlı, güvenli seks eğitimi öğretilir.",
+     "label": "Danışmanlık ve eğitim",
+     "entities": [
+      {
+       "name": "danışmanlık",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 7"
+    },
+    {
+     "text": "==Sürekli ve doğru kondom kullanımı== önerilir ve kondom sağlanır; tek eşlilik önerilir, cinsel eş sayısı azaltılır.",
+     "label": "Kişisel korunma",
+     "key": true,
+     "entities": [
+      {
+       "name": "kondom",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 7"
+    },
+    {
+     "text": "Cinsel eşin taranması hem reenfeksiyonu hem de başka partnerlere bulaşı önler.",
+     "label": "Eş taraması",
+     "key": true,
+     "entities": [
+      {
+       "name": "eş taraması",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 9"
+    },
+    {
+     "text": "Bir kişide bir CYBİ saptandığında diğer CYBİ’ler de taranır.",
+     "label": "Birlikte tarama",
+     "key": true,
+     "entities": [
+      {
+       "name": "CYBİ taraması",
+       "type": "test"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 9"
+    },
+    {
+     "text": "Kayıtlı seks işçileri periyodik olarak taranır; erken tanı, etkili tedavi ve hepatit B aşılaması uygulanır.",
+     "label": "Toplum düzeyi",
+     "entities": [
+      {
+       "name": "hepatit B aşısı",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 9"
+    }
+   ],
+   "complications": [
+    {
+     "text": "Uzun vadede infertilite ve PID gibi önemli komplikasyonlara yol açabilir.",
+     "label": "Üreme sağlığı",
+     "key": true,
+     "entities": [
+      {
+       "name": "infertilite",
+       "type": "hastalik"
+      },
+      {
+       "name": "pelvik inflamatuvar hastalık",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 2"
+    },
+    {
+     "text": "HPV serviks kanserine, HBV siroz ve hepatoselüler karsinoma, HIV ise AIDS’e yol açabilir.",
+     "label": "Kronik sonuçlar",
+     "key": true,
+     "entities": [
+      {
+       "name": "serviks kanseri",
+       "type": "hastalik"
+      },
+      {
+       "name": "siroz",
+       "type": "hastalik"
+      },
+      {
+       "name": "hepatoselüler karsinom",
+       "type": "hastalik"
+      },
+      {
+       "name": "HIV enfeksiyonu",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 4"
+    }
+   ],
+   "epidemiology": [
+    {
+     "text": "Her iki cinsiyette de 15–45 yaş aralığında sık görülür.",
+     "label": "Yaş",
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 2"
+    },
+    {
+     "text": "Erkeklerle cinsel ilişkiye giren erkekler, çok eşliler, madde bağımlıları ve para karşılığı cinsel ilişkiye girenler risk grubudur.",
+     "label": "Risk grupları",
+     "entities": [
+      {
+       "name": "korunmasız cinsel ilişki",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "çok eşlilik",
+       "type": "risk_faktoru"
+      }
+     ]
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders CYBİ’yi etken grupları (bakteri, virüs, parazit), sessiz seyir ve uzun dönem komplikasyonlarla tanıtır; korunmayı danışmanlık, kondom, eş taraması ve birlikte tarama başlıklarıyla işler.",
+     "entities": [
+      {
+       "name": "cinsel yolla bulaşan enfeksiyon",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 2–9"
+    },
+    {
+     "text": "Derste vurgulanan nokta: bir CYBİ saptanan kişide ==diğer CYBİ’ler de taranır==, cinsel eş de taranır.",
+     "key": true,
+     "entities": [
+      {
+       "name": "eş taraması",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k · s. 9"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k (Kurul 1) — ders işçisi 20261011-9985ac7ab9"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 1",
+   "k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "yontem": "ders işçisi önerisi → şema 2 (otomatik)",
+   "zaman": "2026-10-20T01:32:44Z",
+   "method": "ders işçisi önerisi → şema 2 (otomatik)",
+   "at": "2026-10-20T01:32:44Z",
+   "kaynak": "ders işçisi is_id 20261011-9985ac7ab9 · ders k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k"
+  },
+  "isCustom": false,
+  "aliases": [],
+  "altNames": [],
+  "createdAt": "2026-10-20T01:33:43Z",
+  "updatedAt": "2026-10-20T01:33:43Z"
  }
 ]
