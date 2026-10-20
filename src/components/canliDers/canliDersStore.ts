@@ -306,6 +306,12 @@ function cumleSinirlari(p: ParaBilgi): number[] {
   p.cumleler = out;
   return out;
 }
+/** Etkin cümlenin metni (PDF'te karşılığını hafifçe işaretlemek için) */
+export function cdCumleMetni(i: number, cumle: number): string {
+  const r = cdCumleAraligi(i, cumle);
+  const k = posByI.get(i);
+  return r && k != null ? paras[k].metin.slice(r[0], r[1]) : '';
+}
 /** Etkin cümlenin [başlangıç, bitiş) karakter aralığı */
 export function cdCumleAraligi(i: number, cumle: number): [number, number] | null {
   const k = posByI.get(i);

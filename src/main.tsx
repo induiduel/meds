@@ -19,6 +19,8 @@ import './styles/v11.css';
 import './styles/v12.css';
 import './styles/v13/base.css';
 import './styles/v13/shell.css';
+import './styles/v13/components.css';
+import './styles/v13/fullscreen.css';
 import { installToastBridge } from './components/ui/Toast';
 import { installNetworkBanner } from './components/system/NetworkBanner';
 import { installUpdatePrompt } from './components/system/UpdatePrompt';

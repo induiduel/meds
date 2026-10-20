@@ -143,3 +143,4 @@
 .dpv-bar-show { position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 5; display: grid; place-items: center; width: 30px; height: 16px; border-top: 0 !important; border-radius: 0 0 8px 8px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-3); cursor: pointer; opacity: .75; }
 .dpv-bar-show:hover, .dpv-bar-show:focus-visible { opacity: 1; color: var(--color-ink); }
 .dpv-bar-show svg { width: 16px; height: 16px; }
+.pdv .textLayer span.is-follow { background: rgb(37 99 235 / .16); border-radius: 3px; transition: background-color .25s; }

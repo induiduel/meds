@@ -13,7 +13,7 @@ import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { isIosBrowserTab, shouldAvoidNativeFullscreen } from '../../utils/device';
 import { openPwaInstallGuide } from '../../services/pwaService';
 import {
-  cdCumleAraligi, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
+  cdCumleAraligi, cdCumleMetni, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
 import { useCdTur } from './useCdTur';
 import { cdDersEtiketi } from './canliDersKategori';
@@ -1225,6 +1225,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
               page={gor.sayfa}
               highlight={canli && !durdu && es ? [hedef.sayfa, hedef.sayfa] : undefined}
               highlightLabel="Şu an anlatılan"
+              follow={canli && !durdu && es ? cdCumleMetni(aktif, cumle) : ''}
               zoom={zoom}
               onZoom={setZoom}
               onVisiblePage={onVisible}

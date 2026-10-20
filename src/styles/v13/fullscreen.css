@@ -1,0 +1,20 @@
+/*
+ * v13 "Ada" · tam ekran katmanları (plan aşama 4): Öğren ders oynatıcı (ls-root), okuyucular (r12-root),
+ * soru çözücü / alternatif çözücü (sc). Kenardan kenara üst/alt çubuklar yüzen adaya dönüşür: kenarlardan 8 px ayrık,
+ * yuvarlak, saç çizgili. Yükseklik değişmez (yalnız dış boşluk), içerik alanı küçülmez; güvenli alanlar korunur.
+ */
+:root[data-design='v12'][data-v13='on'] {
+  & :is(.ls-top.lv-top, .r12-top, .sc-ust) {
+    margin: calc(env(safe-area-inset-top, 0px) + 6px) 8px 0; border: 1px solid var(--color-line); border-radius: 16px;
+    background: var(--color-white); box-shadow: var(--a13-float, 0 8px 24px -12px rgb(16 24 40 / .18)); padding-top: 0;
+  }
+  & :is(.lv-bottombar, .sc-alt) {
+    width: auto; margin: 0 8px calc(env(safe-area-inset-bottom, 0px) + 6px); border: 1px solid var(--color-line); border-radius: 16px;
+    background: var(--color-white); box-shadow: var(--a13-float, 0 8px 24px -12px rgb(16 24 40 / .18)); padding-bottom: 8px;
+  }
+  /* Çözücülerin geniş ekran iç boşluk hesabı tam genişliğe göreydi; adada makul iç boşluk */
+  @media (min-width: 900px) {
+    & .sc:not(.is-ogren) :is(.sc-ust, .sc-alt) { padding-inline: 16px; max-width: 1200px; margin-inline: auto; width: calc(100% - 16px); }
+  }
+  & .sc-ilerleme { margin-inline: 12px; }
+}

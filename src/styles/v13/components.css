@@ -1,0 +1,89 @@
+/*
+ * v13 "Ada" · ortak katmanlar ve bileşenler (plan aşama 3, docs/V13_ADA_PLAN.md).
+ * Toast, onay, alt sayfa, eylem menüsü, hesap menüsü, açılır menüler, ipucu, arama paleti, eski Tailwind modalları,
+ * düğme/alan/simge dili. Her kural :root[data-design='v12'][data-v13='on'] altında; yalnız palet token'ları.
+ * Katman kuralı: her katman görünür alana (--vvh, güvenli alan) sığar, içerik kendi içinde kayar, kenara yapışmaz.
+ */
+
+:root[data-design='v12'][data-v13='on'] {
+  --a13-layer: 0 18px 44px -14px rgb(16 24 40 / .28), 0 2px 6px rgb(16 24 40 / .06);
+  --a13-scrim: rgb(12 16 24 / .38);
+  &[data-mode='dark'] { --a13-layer: 0 0 0 1px var(--color-line), 0 18px 44px -12px rgb(0 0 0 / .75); --a13-scrim: rgb(0 0 0 / .6); }
+  /* Katmanın görünür alan sınırı (zoom'suz katmanlar için) */
+  --a13-vh: calc(var(--vvh, 100dvh) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 20px);
+
+  /* ── Toast: koyu hap yerine yüzey adası; durum rengi yalnız sol çizgi ve simgede ── */
+  & .tst { background: var(--color-white); color: var(--color-ink); border: 1px solid var(--color-line); border-radius: 14px; box-shadow: var(--a13-layer);
+    padding: 10px 6px 10px 14px; gap: 10px; }
+  & .tst::before { content: ''; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px; border-radius: 0 3px 3px 0; background: var(--tc); }
+  & .tst.is-success { --tc: var(--color-ok); }
+  & .tst.is-error { --tc: var(--color-bad); }
+  & .tst.is-info { --tc: var(--color-accent); }
+  & .tst-ic { width: 24px; height: 24px; background: color-mix(in srgb, var(--tc) 14%, transparent); color: var(--tc); }
+  & .tst-t { font-weight: 600; }
+  & .tst-m { color: var(--color-ink-2); opacity: 1; }
+  & .tst-act { color: var(--color-accent); background: var(--color-accent-soft); }
+  & .tst-x { opacity: 1; color: var(--color-ink-3); }
+  & .tst-x:hover { background: var(--color-field); color: var(--color-ink); }
+  & .tst-timer { height: 2px; opacity: .45; }
+  @media (min-width: 768px) { & .tst-host { right: 20px; bottom: 20px; } }
+
+  /* ── Onay penceresi: sola hizalı, başlık simgeyle aynı satırda, eylemler sağda ── */
+  & .cf-root { background: var(--a13-scrim); padding: 16px; }
+  & .cf { width: min(100%, 420px); display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; column-gap: 12px; row-gap: 6px;
+    padding: 18px; text-align: left; border-radius: 18px; border: 1px solid var(--color-line); box-shadow: var(--a13-layer);
+    max-height: var(--a13-vh); overflow-y: auto; }
+  & .cf-ic { width: 36px; height: 36px; margin: 0; }
+  & .cf-ic svg { width: 18px; height: 18px; }
+  & .cf-t { font: 600 16.5px/1.3 var(--font-sans); text-wrap: pretty; }
+  & .cf-m { grid-column: 1 / -1; font-size: 14px; }
+  & .cf-acts { grid-column: 1 / -1; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  & .cf-acts .ui-btn { height: 42px; min-width: 104px; padding: 0 16px; }
+  @media (max-width: 479px) { & .cf-acts .ui-btn { flex: 1 1 0; min-width: 0; } }
+
+  /* ── Alt sayfa (Sheet): başlık sabit, gövde kayar, alt çubuk sabit; hiçbir zaman görünür alandan uzun değil ── */
+  & .sh-sheet-backdrop { background: var(--a13-scrim); }
+  & .sh-sheet { border: 1px solid var(--color-line); box-shadow: var(--a13-layer); }
+  & .sh-sheet-title { font: 600 16.5px/1.3 var(--font-sans); }
+  & .sh-sheet-foot { border-top: 1px solid var(--color-line-soft, var(--color-line)); }
+
+  /* ── Eylem menüsü (ActionMenu, telefon alt sayfası): kenardan ayrık ada ── */
+  & .ms-am-scrim { background: var(--a13-scrim) !important; }
+  & .ms-am-sheet { left: 8px !important; right: 8px !important; bottom: calc(env(safe-area-inset-bottom, 0px) + 8px) !important; border-radius: 20px !important;
+    padding-bottom: 12px !important; max-height: var(--a13-vh) !important; border: 1px solid var(--color-line); box-shadow: var(--a13-layer) !important; }
+
+  /* ── Açılır menüler ve kutular: tek dil ── */
+  & :is(.ms-menu, .ms-popover, .ms-menu-pop, .sh-pop, [role='menu']):not(.a13-pop) { border-radius: 14px; border: 1px solid var(--color-line);
+    background: var(--color-white); box-shadow: var(--a13-layer); max-height: var(--a13-vh); overflow-y: auto; overscroll-behavior: contain; }
+
+  /* ── Hesap menüsü ve ayar listeleri: renkli simge karoları sakinleşir (tek vurgu) ── */
+  & .ui-ico:not(.is-soft) { background: color-mix(in srgb, var(--ico-bg, var(--color-accent)) 13%, var(--color-white)); color: var(--ico-bg, var(--color-accent)); }
+  &[data-mode='dark'] .ui-ico:not(.is-soft) { background: color-mix(in srgb, var(--ico-bg, var(--color-accent)) 22%, var(--color-white)); }
+
+  /* ── İpucu balonu: yüzey rengi, okunur boyut ── */
+  & .ms-tooltip { background: var(--color-ink); color: var(--color-white); border-radius: 8px; font: 500 12.5px/1.35 var(--font-sans); max-width: min(280px, calc(100vw - 24px)); }
+
+  /* ── Arama paleti: üstte ada, görünür alana sığar ── */
+  & .ms-search-overlay { background: var(--a13-scrim); backdrop-filter: none; }
+  & .ms-search-panel { border-radius: 18px; box-shadow: var(--a13-layer); }
+
+  /* ── Eski modal sistemi (ms-overlay) ve Tailwind "fixed inset-0" pencereleri ──
+     İç panel görünür alandan uzun olamaz, kendi içinde kayar; telefonda kenardan ayrık, dört köşe yuvarlak. */
+  & .ms-overlay { background-color: var(--a13-scrim) !important; }
+  & .ms-overlay > .ms-modal-panel { border-radius: 20px !important; max-height: var(--a13-vh) !important; overflow-y: auto; border: 1px solid var(--color-line); box-shadow: var(--a13-layer) !important; }
+  @media (max-width: 639px) {
+    & .ms-overlay { padding: 0 8px calc(env(safe-area-inset-bottom, 0px) + 8px) !important; }
+    & .ms-overlay > .ms-modal-panel { width: 100% !important; }
+  }
+  & .fixed.inset-0 > [class*='max-w-'][class*='rounded'] { max-height: var(--a13-vh); overflow-y: auto; overscroll-behavior: contain; }
+
+  /* ── Düğme ve alan dili ── */
+  & .ui-btn { border-radius: 10px; font-weight: 600; }
+  & .ui-btn.is-primary { box-shadow: none; }
+  & :is(input:not([type='checkbox'], [type='radio'], [type='range'], [type='color']), select, textarea).ui-input { border-radius: 10px; }
+  & select { max-width: 100%; }
+  & input, & textarea { min-width: 0; }
+
+  /* ── Hareket azaltma: katman animasyonları kapanır ── */
+  &[data-motion='reduced'] :is(.tst, .cf, .cf-root, .sh-sheet, .ms-am-sheet, .ms-search-panel) { animation: none !important; }
+}

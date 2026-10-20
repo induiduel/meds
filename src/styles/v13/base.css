@@ -39,7 +39,8 @@
   }
 
   /* Sayfa içi büyük başlıklar kapsülle aynı adı tekrarlıyor: görünmez olur ama ekran okuyucu için başlık kalır */
-  & :is(.c12-title, .q12-title, .l12-h1, .g12-h1, .td12-h, .cx-title, .bs-h1) { position: absolute !important; width: 1px; height: 1px; margin: -1px;
+  & :is(.c12-title, .q12-title, .l12-h1, .g12-h1, .td12-h, .cx-title, .bs-h1),
+  & .sh-main h1:not(.r12-h1, .u12-name, .e12-ob-t, .e12-wt-h):not(:is(.ls-root, .r12-root, .sr-root, .sc, .pa, .cd-ders, [role='dialog'], .p12-run) h1) { position: absolute !important; width: 1px; height: 1px; margin: -1px;
     padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 
   /* ── Çevrimdışı uyarısı: bant değil, sütun içinde ada ── */

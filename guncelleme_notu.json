@@ -1,9 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 51,
-  "baslik": "Sesli ders metni ve PDF daha okunaklı",
+  "onem": 52,
+  "baslik": "Canlı ders ve PDF görünümünde iyileştirmeler",
   "maddeler": [
-    "Sesli ders PDF/Word dosyalarında paragraflar artık ana madde ve iç içe alt maddeler hâlinde düzenleniyor.",
-    "\"iki virgül bir\", \"yüzde kırk\" gibi yazımlar ekranda ve dosyada 2,1 ve %40 olarak gösteriliyor."
+    "Canlı ders ekranı ve ders PDF görüntüleyicisi iyileştirildi.",
+    "Yeni tasarımda tam ekran görünümü ve bileşen düzenlemeleri."
   ]
 }
