@@ -22,7 +22,8 @@ CIKTI = DATA / 'cozucu_ogren'
 
 PDF_LISTE = {'patoloji': TEMP / 'patoloji_onem' / 'pdf_liste.json'}
 for p in sorted((TEMP / 'spot_cozucu').glob('*/pdf_liste.json')):
-    PDF_LISTE[p.parent.name] = p
+    if not p.parent.name.startswith('prova'):  # otomasyon/prova.py klasörü yayına girmez
+        PDF_LISTE[p.parent.name] = p
 
 # Eşikler: benzerlik (kosinüs) + sayfa katkısı
 SAYFA_TAM, SAYFA_YAKIN = 0.25, 0.12

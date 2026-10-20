@@ -13,7 +13,7 @@ Kodlar defterden (2n03): kurullar ve branşlar arası tekil.
   ders_zinciri.py --durum [--kurul 2]                 hangi ders hangi adımda
   ders_zinciri.py --kurul 2 [--ders k2-07] [--adim hazirla] [--kuru]
 """
-import argparse, datetime as dt, hashlib, json, os, re, subprocess, sys
+import argparse, datetime as dt, hashlib, json, os, re, shutil, subprocess, sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -193,24 +193,71 @@ def a_denetim(d, pk, W, kuru):
     return r
 
 
+def _sayim(klasor):
+    """Birleştirme çıktısı özeti: ders sayısı + toplam madde/soru (index.json ve ders dosyaları)."""
+    if not klasor.exists():
+        return (0, 0)
+    dersler, ogeler = 0, 0
+    for f in klasor.glob("*.json"):
+        if f.name == "index.json":
+            continue
+        dersler += 1
+        try:
+            j = json.loads(f.read_text())
+            ogeler += len(j.get("maddeler") or j.get("sorular") or j.get("bolumler") or [])
+        except ValueError:
+            pass
+    return (dersler, ogeler)
+
+
+def korumali(klasorler, is_):
+    """H6: birleştirici dosya silmesin / içerik küçültmesin. Önce yedek; sonra ders sayısı ya da öğe sayısı %10'dan fazla
+    düşerse yedeği geri koy ve hata ver (reddedilen ders eski hâliyle kalır)."""
+    import tempfile
+    yedek = Path(tempfile.mkdtemp(prefix="medsor-birlestir-"))
+    once = {k: _sayim(k) for k in klasorler}
+    for k in klasorler:
+        if k.exists():
+            shutil.copytree(k, yedek / k.name)
+    r = is_()
+    sorun = [f"{k.name}: {once[k]} → {_sayim(k)}" for k in klasorler
+             if _sayim(k)[0] < once[k][0] or _sayim(k)[1] < 0.9 * once[k][1]]
+    if sorun:
+        for k in klasorler:
+            if (yedek / k.name).exists():
+                shutil.rmtree(k, ignore_errors=True); shutil.copytree(yedek / k.name, k)
+        print("   HATA: birleştirme içerik sildi/küçülttü — geri alındı:", "; ".join(sorun)); r = 11
+    shutil.rmtree(yedek, ignore_errors=True)
+    return r
+
+
 def a_birlestir(d, pk, W, kuru):
-    r = calistir(f"python3 {SC}/birlestir.py {W.name} --taslak", kuru=kuru)
-    if kuru or r:
+    if kuru:
+        return calistir(f"python3 {SC}/birlestir.py {W.name} --taslak", kuru=True)
+    hedef = [MEDS / "src/data" / f"{W.name}_onem", MEDS / "src/data" / f"{W.name}_cozucu"]
+    r = korumali(hedef, lambda: calistir(f"python3 {SC}/birlestir.py {W.name} --taslak"))
+    if r:
         return r
     # --taslak hatalı dersi atlayıp 0 döner: bu dersin çıktısı gerçekten yazıldı mı?
     if not (MEDS / "src/data" / f"{W.name}_onem" / f"{d['kod']}.json").exists():
         print(f"   birleştirme {d['kod']} önem çıktısını yazmadı"); return 9
-    return 0
+    # "Öğren'de bu bilgi": çözücü/asistan ↔ Öğren adımı eşlemesi (tüm branşlar, ~3 sn)
+    return calistir(f"python3 {SC}/ogren_esle.py", cwd=MEDS)
 
 
 def a_asistan(d, pk, W, kuru):
     k = d["kod"]
     if calistir(f"python3 {SC}/asistan_plan.py {W.name} {k}", kuru=kuru):
         return 1
+    if not kuru:
+        hedef = [MEDS / "src/data" / f"{W.name}_asistan"]
+        birlestir_asistan = lambda: calistir(f"python3 {SC}/asistan_birlestir.py {W.name}")  # noqa: E731
+    else:
+        hedef, birlestir_asistan = [], lambda: calistir(f"python3 {SC}/asistan_birlestir.py {W.name}", kuru=True)  # noqa: E731
     r = kapili_claude(f"{SC}/TALIMAT_ASISTAN.md talimatını uygula. Çalışma klasörü: {W}/asistan. Yalnız ders kodu {k}. "
                       f"Anlatım bir tıp doktorunun öğrenciye Türkçe anlatımı üslubunda; ekranda madde madde.",
                       f"python3 {SC}/asistan_dogrula.py {W}/asistan/cikti/{k}.json", W, kuru)
-    return r or calistir(f"python3 {SC}/asistan_birlestir.py {W.name}", kuru=kuru)
+    return r or (korumali(hedef, birlestir_asistan) if hedef else birlestir_asistan())
 
 
 def a_ses(d, pk, W, kuru):
@@ -233,7 +280,21 @@ def a_oracle(d, pk, W, kuru):
     for alt in (f"{W.name}_cozucu", f"{W.name}_asistan"):
         if (MEDS / "data" / alt).exists() or kuru:
             r = r or calistir(f"rsync -az --rsync-path='sudo rsync' {MEDS}/data/{alt}/ medsor-oracle:{hedef}/{alt}/", kuru=kuru)
-    return r
+    if r or kuru:
+        return r
+    # H11: ses gerçekten canlıda mı (404 olursa tarayıcı sesine düşüyordu) — bu dersin rastgele 5 klibi
+    import random
+    url = {f"{W.name}_cozucu": "https://api.nofrostlife.com.tr/api/cozucu-ses/{b}/ema/{k}/{c}",
+           f"{W.name}_asistan": "https://api.nofrostlife.com.tr/api/patoloji-asistan/ses/{k}/{c}"}
+    for alt, kalip in url.items():
+        klipler = sorted((MEDS / "data" / alt / "ses" / d["kod"]).glob("*.mp3"))
+        for f in random.sample(klipler, min(5, len(klipler))):
+            u = kalip.format(b=W.name, k=d["kod"], c=f.name)
+            kod = subprocess.run(["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-m", "20", "-r", "0-99", u],
+                                 capture_output=True, text=True).stdout
+            if kod not in ("200", "206"):
+                print(f"   HATA: canlıda ses yok ({kod}): {u}"); return 12
+    return 0
 
 
 IS = {"hazirla": a_hazirla, "onem": a_onem, "cozucu": a_cozucu, "denetim": a_denetim, "birlestir": a_birlestir,

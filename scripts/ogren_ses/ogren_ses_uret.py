@@ -29,6 +29,7 @@ import ema_isci as E  # noqa: E402
 
 E.KBPS = 48
 SURUM = "ema-1"
+SURUM_K2 = "ema-2"  # Kurul 2+: kisaltma_ses.uzat okunuşu (H3)
 CUMLE_SN, KISA_SN, UZUN_SN, ON_SN = 0.45, 0.3, 0.7, 0.12
 
 DECKS_FILE = MEDS / "src/data/interactive_learning_decks.json"
@@ -122,6 +123,7 @@ def seslendir(tts, cumleler: list[str]):
 
 def deste_uret(tts, deck: dict, force: bool = False, adim_filtre: int | None = None) -> dict:
     deck_id = deck["id"]
+    E.uzun_kisaltma_ayarla(deck_id)
     deck_title = deck.get("title", deck_id)
     slides = deck.get("slides") or []
     cikis_dizin = CIKTI_KOK / deck_id
@@ -156,7 +158,8 @@ def deste_uret(tts, deck: dict, force: bool = False, adim_filtre: int | None = N
             print(f"  [Adım {adim_no:2d}] METİN BOŞ — Atlandı")
             continue
 
-        h = hashlib.sha1((SURUM + f"|{E.HIZ}|" + "\n".join(cumleler)).encode()).hexdigest()[:12]
+        # Kurul 2+ desteleri uzun harf okunuşuyla (ema-2); Kurul 1 ema-1'de kalır (toplu yeniden üretim yok)
+        h = hashlib.sha1(((SURUM_K2 if E.UZUN_KISALTMA else SURUM) + f"|{E.HIZ}|" + "\n".join(cumleler)).encode()).hexdigest()[:12]
         mp3_yolu = cikis_dizin / f"{adim_no}.mp3"
 
         mevcut = kayit.get(str(adim_no))

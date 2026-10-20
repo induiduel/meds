@@ -21,6 +21,12 @@ YASAK = [
     (r"\b(mekanizma|mantığı|mantık) şudur\s*:", "doğrudan anlat: \"… çünkü …\""),
     (r"\bayırt et\s*:", "\"… ile … şöyle ayrılır: …\""),
     (r"\bayrım\s*:", "\"… ile … şöyle ayrılır: …\""),
+    # H4 (2026-10-20): iç süreç dili öğrenci metnine sızmasın. Not: "Doğrusu: …" şık açıklaması standardının parçasıdır
+    # (SIK_ACIKLAMA_STANDARDI.md), yasak DEĞİL. "ajan" tıbbi terimdir, yasak DEĞİL.
+    (r"\b(PDF|slayt|kaynak|ders notu)'?(t|d)[ae] (yok|geçmiyor|bulunmuyor|yer almıyor)\b",
+     "süreç dili — kaynağın durumunu değil bilgiyi anlat"),
+    (r"\baday (soru|madde|çıkmış)\w*", "iç süreç dili (aday) — öğrenci metninde yer almaz"),
+    (r"\b(bağlanan|eşlenen|eşleşen) çıkmış\w*", "iç süreç dili — \"bu konudan sorulan çıkmış soru\""),
 ]
 YASAK_RE = [(re.compile(k, re.I), o) for k, o in YASAK]
 

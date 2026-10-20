@@ -30,6 +30,7 @@ if not GPU:
 import base64
 import fcntl
 import json
+import re
 import signal
 import socket
 import subprocess
@@ -127,12 +128,33 @@ def sessiz_kirp(x, esik=0.012, pay=0.08):
     return x[max(0, idx[0] - p): min(len(x), idx[-1] + p)]
 
 
+UZUN_KISALTMA = False  # iş başına ayarlanır: Kurul 2+ anahtarları (k2-…, k2p-…) True
+
+
+def uzun_kisaltma_ayarla(anahtar: str) -> None:
+    global UZUN_KISALTMA
+    UZUN_KISALTMA = bool(re.match(r"k[2-6](p-k[2-6])?-", str(anahtar or "")))
+
+
+def _ks():
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "patoloji_cozucu"))
+    import kisaltma_ses
+    return kisaltma_ses
+
+
 def paragraf_seslendir(tts, metin: str):
     """Bir paragraf → float32 dizi (24 kHz). Süre metne göre tutarsızsa farklı tohumla 3 kez dener."""
     import numpy as np
 
-    # Kısaltma okunuşu (okunus.py): "de ne a" → "denea" — yalnız modele giden metin; paragraf/zamanlama değişmez
-    metin = okunus.duzelt(metin)
+    # Kısaltma okunuşu — yalnız modele giden metin; paragraf/zamanlama değişmez.
+    # Kurul 2+ (UZUN_KISALTMA): fonetik terimler + ünlüsü uzatılmış harf adları ("dee nee aa"); birleşik "denea" EMA'da
+    # kelime gibi okunuyordu ("deneye", 2026-10-17 ölçümü, KURUL2_YAPILMAYACAK_HATALAR H3). Kurul 1 eski yolda.
+    if UZUN_KISALTMA:
+        for pat, fon in okunus.FONETIK_TTS:
+            metin = pat.sub(fon, metin)
+        metin = _ks().uzat(metin)
+    else:
+        metin = okunus.duzelt(metin)
     beklenen = max(1.0, len(metin) / (KARAKTER_SN * HIZ))
     en_iyi = None
     for deneme in range(3):
@@ -300,6 +322,7 @@ def bekle() -> None:
             time.sleep(600)
             continue
         calisan_is = is_["id"]
+        uzun_kisaltma_ayarla(is_['key'])
         log(f"iş alındı: {is_['key']} · {len(cevap['mevcut'])}/{len(cevap['parcalar'])} parça hazır")
         f = VERI / "is" / f"{is_['id']}.json"
         f.parent.mkdir(parents=True, exist_ok=True)

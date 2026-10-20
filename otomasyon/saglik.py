@@ -32,6 +32,39 @@ def birim(ad):
     return subprocess.run(["systemctl", "--user", "is-active", ad], capture_output=True, text=True).stdout.strip()
 
 
+def kapi_oz_sinama():
+    """H5: kapılar bilinen iyi/kötü örnekle doğru karar veriyor mu (çöken kapı her şeyi 'içerik hatası' diye reddeder)."""
+    import sys as _s
+    _s.path.insert(0, str(KOK / "meds/scripts")); _s.path.insert(0, str(KOK / "meds/scripts/sesli_anlatim"))
+    sorun = []
+    try:
+        from turkce_uslup import denetle as us
+        if us("Hücre sayısı artar ve organ büyür.", "x") or not us("Bu bulgunun imzası nedir?", "x"):
+            sorun.append("turkce_uslup")
+    except Exception as e:  # noqa: BLE001
+        sorun.append(f"turkce_uslup çöktü: {e}")
+    try:
+        from sik_aciklama import denetle as sk
+        iyi = ("Penisilin G, Treponema pallidumun hücre duvarı sentezini bozan bir beta-laktam antibiyotiktir. "
+               "Sifilizin tüm evrelerinde ilk seçenektir, bu yüzden soruda doğru cevap budur.")
+        if sk(iyi, "x") or not sk("Bu sorunun cevabı değil.", "x"):
+            sorun.append("sik_aciklama")
+    except Exception as e:  # noqa: BLE001
+        sorun.append(f"sik_aciklama çöktü: {e}")
+    try:
+        import konusma_v2 as kv
+        c = {"id": "k2-01-c0001", "ses": "Hücre sayısı artar ve organ büyür.", "ekran": "**Hiperplazi**: hücre sayısı artar",
+             "duzey": 0, "vurgu": [{"metin": "Hiperplazi", "tur": "terim"}]}
+        d = {"surum": 2, "ders_id": "k2-01", "bolumler": [{"id": "k2-01-b01", "baslik": "x", "paragraflar": [
+            {"id": "k2-01-p001", "sayfa": 1, "cumleler": [c]}]}]}
+        kotu = json.loads(json.dumps(d)); kotu["bolumler"][0]["paragraflar"][0]["cumleler"][0]["id"] = "yanlis"
+        if kv.dogrula(d, {1}) or not kv.dogrula(kotu, {1}):
+            sorun.append("konusma_v2")
+    except Exception as e:  # noqa: BLE001
+        sorun.append(f"konusma_v2 çöktü: {e}")
+    return sorun
+
+
 def main():
     s = {
         "zaman": time.strftime("%Y-%m-%dT%H:%M:%S"),
@@ -42,9 +75,11 @@ def main():
         "disk_bos_gb": round(shutil.disk_usage(str(KOK)).free / 1e9, 1),
     }
     s["oracle_ok"] = s["canli_api"] == 200 and s["oracle_ssh"]
+    s["kapi_ariza"] = kapi_oz_sinama()
     sorun = [k for k, ok in [("canli_api", s["canli_api"] == 200), ("oracle_ssh", s["oracle_ssh"]),
                              ("yerel_3000", s["yerel_3000"] == 200), ("embed_bge", s["embed_bge"] == "active"),
-                             ("ema_isci", s["ema_isci"] == "active"), ("disk", s["disk_bos_gb"] >= 10)] if not ok]
+                             ("ema_isci", s["ema_isci"] == "active"), ("disk", s["disk_bos_gb"] >= 10),
+                             ("kapi_ariza", not s["kapi_ariza"])] if not ok]
     s["sorun"] = sorun
     CIKTI.parent.mkdir(parents=True, exist_ok=True); CIKTI.write_text(json.dumps(s, ensure_ascii=False, indent=1))
     if "--sessiz" not in sys.argv:

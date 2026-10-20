@@ -55,3 +55,65 @@
   her kelime hem metinde hem PDF'te anlık işaretlenir (PDF'te yalnız karşılığı olan kelime); lazer imleci yalnız metni
   olmayan yerde (resim/şema, `sekil`). Kelime anı sesten ölçülen konuşma parçaları (`cumle_zaman.py` surum 2, `k`) ve hece
   sayısıyla bulunur; sessizlik kelimelere paylaştırılmaz, işaret animasyonsuz.
+
+---
+
+## Diğer oturumlarda düzeltilen hatalardan çıkarılan dersler (tarama 2026-10-20)
+
+Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar commit/kayıt olarak `GELECEK_PLANLAMASI.md` §13–14'te.
+
+### H3 — Kısaltma kelime gibi okunuyor ("DNA" → "deneye")
+- **Kök:** `okunus.duzelt` harf adlarını bitişik yazıyordu ("denea"); EMA bunu kelime gibi okur.
+- **Kural:** EMA'ya giden her Kurul 2+ metni uzun harf okunuşuyla ("dee nee aa", `patoloji_cozucu/kisaltma_ses.uzat`).
+- **Kapı — EKLENDİ:** `ema_isci.uzun_kisaltma_ayarla` (anahtar `k[2-6]…` → uzun okunuş), Öğren sesi `ema-2`. Kurul 1 eski yolda (toplu yeniden üretim yok).
+
+### H4 — Öğrenci metninde iç süreç dili ("PDF'te yok", "aday soru", "bağlanan çıkmış")
+- **Kök:** yazar ajan kendi notunu öğrenci metnine bırakıyor.
+- **Kapı — EKLENDİ:** `turkce_uslup.py` kalıpları (Kurul 2+ HATA). **"Doğrusu: …" yasak DEĞİL**: şık açıklaması standardının parçası. "ajan" tıbbi terimdir.
+
+### H5 — Kapının kendisi bozuk (her metin "999 HATA")
+- **Kök:** doğrulayıcı Python sürümünde çöktü, çöküş "içerik reddi" sayıldı.
+- **Kapı — EKLENDİ:** `otomasyon/saglik.py kapi_oz_sinama`: üslup, şık ve v2 kapıları iyi/kötü örnekle her gece; arıza panoda `kapi_ariza`.
+
+### H6 — Birleştirici ders/dosya siliyor
+- **Kök:** toptan yeniden yazım; reddedilen ders siliniyordu (patoloji asistanı, s13/s15/s16).
+- **Kural:** birleştirici yalnız ekler/günceller; reddedilen ders eski hâliyle kalır.
+- **Kapı — EKLENDİ:** `ders_zinciri.korumali`: ders sayısı düşerse ya da öğe sayısı %10'dan fazla azalırsa yedek geri konur (kod 11). Silen, küçülten ve ekleyen durumlar sınandı.
+
+### H7 — Düzeltme tek kopyada kalıyor (çözücüde düzeltilen soru spot/asistan/örnekte eski)
+- **Kural:** soru kimliği tek; denetçi düzeltmesi tüm kopyalara yayılır.
+- **Kapı — AÇIK:** birleştirme sonrası kimlik başına kök + doğru şık karşılaştırması (plan P2).
+
+### H8 — Aynı PDF iki ders / yanlış PDF eşleşmesi
+- **Kural:** PDF içerikle tanınır; mevcut dersle yüksek sayfa örtüşmesinde yeni ders açılmaz ("tekrar/kısım").
+- **Kapı — KISMEN:** işçi güncelleme kararını PDF adı + program eşleşmesiyle veriyor; içerik örtüşme kapısı AÇIK (plan P2).
+
+### H9 — Görsel ya da bozuk OCR'lı sayfa içerikte yok
+- **Kural:** metni zayıf sayfa görüntüden okunur; sayfa kapsaması ölçülür.
+- **Kapı — KISMEN:** `cikar.sayfa_varliklari` görüntüleri çıkarıyor, talimat görsel sayfaları okutuyor, görsel kanıt türü var. Kapsama kapısı (metinli sayfaların ≥%90'ı bir üründe atıf almalı) AÇIK.
+
+### H10 — Başka dersin sayısı / genel bilgi; çıkmış anahtarı PDF ile çelişiyor
+- **Kural:** her ürün yalnız kendi PDF'inin sayısını kullanır; anahtarı PDF ile çelişen çıkmış soru otomatik düzeltilmez, karantinaya alınır ve bildirilir.
+- **Kapı — KISMEN:** alıntı + sadakat kapıları var; karantina çıktısı AÇIK.
+
+### H11 — Ses Oracle'a gitmiyor, tarayıcı sesine düşüyor (404)
+- **Kapı — EKLENDİ:** zincirin `oracle` adımı canlıda dersin rastgele 5 çözücü/asistan klibini yokluyor (200/206 değilse kod 12).
+
+### H12 — Türev veri (cümle/kelime zamanı, işaret, vurgu) metnin başka sürümünden üretilmiş
+- **Kural:** türev veri yayındaki metinden ve aynı makinede üretilir; hash uyuşmazlığı sessizce boş gelmez.
+- **Kapı — AÇIK:** `saglik.py`'ye metin hash ↔ türev dosya karşılaştırması (plan).
+
+### H13 — Sesli ders bütünlüğü (yönerge okunması, kapanış patlaması, paragraf/süre uyuşmazlığı)
+- **Kural:** EMA için de aynı: modele yalnız okunacak metin gider; eşleşme kapısı korunur.
+- **Kapı — VAR:** `metin_denetle` + eşleşme kapısı + v2 kapısı.
+
+### Kurul 2 içeriğinin karşılaması gereken sonradan eklenen özellikler
+| Özellik | Durum |
+|---|---|
+| Konuşma v2, cümle zamanı, PDF işareti | hatta |
+| Kelime zamanlaması | **yalnız cihazda** (`meds-kelime-zaman-hat`); cihaz kapalıyken gecikir — panoda izlenmeli |
+| Önemli cümle vurgusu (`vurgu_uret.py`) | **açık**: hatta bağlı değil. K2'de `konusma_v2.vurgu` alanı birincil; `vurgu_uret` ek olarak hatta alınmalı (karar bekliyor) |
+| "Öğren'de bu bilgi" (`ogren_esle.py`) | **EKLENDİ**: zincirin birleştirme adımında |
+| Deste `versionGroup` / Bitirdiklerim konu kimliği | kimlikler defterden; deste doğrulayıcıya kontrol **açık** |
+| Patoloji/Genetik Check Up, Genetik sınav kampı | **elle**; K2 eşdeğeri için karar bekliyor |
+| Örnek sorular K1–6, hastalıklar, sözlük, olası soru | hatta |
