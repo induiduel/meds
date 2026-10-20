@@ -1,8 +1,8 @@
 /**
  * Geçmiş kurullar (/gecmis-kurullar): sınavı geçmiş (arşiv) kurulların içeriğine tek yerden erişim.
  * Takvim: services/kurulTakvimi (aktif = sınavı geçmemiş ilk kurul). Yerelde ?gun=YYYY-AA-GG ile tarih denenir.
- * Kurul süzgecini destekleyen sayfalara ?kurul=N ile bağlanır (Öğren, Kazanımlar, Olası sorular); diğerleri sayfanın
- * kendi kurul/ders seçimiyle açılır. Stil: styles/olasi-sorular.css (.gk-*).
+ * Bütün bağlantılar ?kurul=N ile o kurula süzülmüş açılır (Öğren, Kazanımlar, Olası sorular, Sesli ders, En önemliler,
+ * Spotlar, Soru çözücü, Çıkmış). Stil: styles/olasi-sorular.css (.gk-*).
  */
 import React, { useEffect, useMemo } from 'react';
 import {
@@ -13,17 +13,17 @@ import { linkClick, navigateTo } from '../../router';
 import SCHEDULE from '../../data/deckSchedule.json';
 import '../../styles/olasi-sorular.css';
 
-type Bag = { ad: string; url: (k: number) => string; ikon: React.ElementType; suzgecli: boolean };
-/** suzgecli: sayfa ?kurul= ile o kurula süzülerek açılır */
+/** Her sayfa ?kurul=N ile yalnız o kurulun içeriğine süzülerek açılır (üstte "tümünü göster" hapı). */
+type Bag = { ad: string; url: (k: number) => string; ikon: React.ElementType };
 const BAGLAR: Bag[] = [
-  { ad: 'Olası sorular', url: (k) => `/olasi-sorular?kurul=${k}`, ikon: Sparkles, suzgecli: true },
-  { ad: 'Etkileşimli dersler', url: (k) => `/ogren?kurul=${k}`, ikon: BookOpen, suzgecli: true },
-  { ad: 'Kazanımlar', url: (k) => `/kazanimlar?kurul=${k}`, ikon: Compass, suzgecli: true },
-  { ad: 'Sesli ders', url: () => '/canliders', ikon: AudioLines, suzgecli: false },
-  { ad: 'En önemliler', url: () => '/en-onemliler', ikon: Star, suzgecli: false },
-  { ad: 'Sınav spotları', url: () => '/spotlar', ikon: Crosshair, suzgecli: false },
-  { ad: 'Soru çözücü', url: () => '/soru-cozucu', ikon: MessageCircleQuestion, suzgecli: false },
-  { ad: 'Çıkmış sorular', url: () => '/cikmis', ikon: Library, suzgecli: false },
+  { ad: 'Olası sorular', url: (k) => `/olasi-sorular?kurul=${k}`, ikon: Sparkles },
+  { ad: 'Etkileşimli dersler', url: (k) => `/ogren?kurul=${k}`, ikon: BookOpen },
+  { ad: 'Kazanımlar', url: (k) => `/kazanimlar?kurul=${k}`, ikon: Compass },
+  { ad: 'Sesli ders', url: (k) => `/canliders?kurul=${k}`, ikon: AudioLines },
+  { ad: 'En önemliler', url: (k) => `/en-onemliler?kurul=${k}`, ikon: Star },
+  { ad: 'Sınav spotları', url: (k) => `/spotlar?kurul=${k}`, ikon: Crosshair },
+  { ad: 'Soru çözücü', url: (k) => `/soru-cozucu?kurul=${k}`, ikon: MessageCircleQuestion },
+  { ad: 'Çıkmış sorular', url: (k) => `/cikmis?kurul=${k}`, ikon: Library },
 ];
 
 const desteSayisi = (k: number) => Object.values(SCHEDULE as Record<string, { k?: number }>).filter((x) => x.k === k).length;
@@ -74,7 +74,7 @@ export default function GecmisKurullarView() {
                   <li key={b.ad}>
                     <Git url={b.url(k.kurul)} className="gk-bag">
                       <b.ikon aria-hidden />
-                      <span>{b.ad}{!b.suzgecli && <small>tüm kurullar</small>}</span>
+                      <span>{b.ad}</span>
                     </Git>
                   </li>
                 ))}

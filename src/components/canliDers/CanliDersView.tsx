@@ -24,6 +24,7 @@ import { bittiMi, sureYaz, useKonuKaydi, useTakip } from '../../services/calisma
 import { KonuDugmeleri, KonuIsaret, KonuSureEtiketi } from '../takip/KonuTakip';
 import '../../styles/canli-ders.css';
 import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
+import { KurulBos, KurulHapi, kurulKimlikten, useKurulParam } from '../kurul/KurulSuzgec';
 
 const fold = (s: string) =>
   s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i').replace(/\s+/g, ' ').trim();
@@ -40,7 +41,13 @@ const konumHaritasi = () => new Map(cdKonumListesi().map((k) => [k.key, k as Kon
 
 function CanliDersListe() {
   useCdTvGezinme('liste');
-  const [dersler, setDersler] = useState<CdListeDers[] | null>(null);
+  const [hamDersler, setDersler] = useState<CdListeDers[] | null>(null);
+  const kurul = useKurulParam();
+  // ?kurul=N: yalnız o kurulun dersleri (parametre yoksa hepsi)
+  const dersler = useMemo(
+    () => (hamDersler && kurul ? hamDersler.filter((d) => (d.kurul ?? kurulKimlikten(d.key)) === kurul) : hamDersler),
+    [hamDersler, kurul],
+  );
   const [hata, setHata] = useState<string | null>(null);
   const [q, setQ] = useState('');
   const [gorunum, setGorunum] = useState<'tum' | 'liste' | 'yildiz'>(() => (location.hash === '#listem' ? 'liste' : location.hash === '#yildiz' ? 'yildiz' : 'tum'));
@@ -115,6 +122,7 @@ function CanliDersListe() {
             {dersler && <VarsayilanSesSecici dersler={dersler} />}
           </div>
         </div>
+        {kurul && <KurulHapi kurul={kurul} sayi={dersler ? cdKonuSayisi(dersler) : undefined} />}
         {son && gorunum === 'tum' && !q && suzgec === 'tum' && <DevamKarti d={son.d} k={son.k} />}
         <div className="cd-serit">
           <div className="cd-liste-sira">
@@ -177,6 +185,8 @@ function CanliDersListe() {
         <Listem dersler={dersler} onTumu={() => setGorunum('tum')} />
       ) : gorunum === 'yildiz' ? (
         <YildizliParagraflarPanel inline onClose={() => setGorunum('tum')} />
+      ) : kurul && !dersler.length ? (
+        <KurulBos kurul={kurul} ne="sesli ders" />
       ) : !liste.length ? (
         <div className="cd-bos"><p>{q ? `"${q}" için ders bulunamadı.` : 'Henüz sesi hazır ders yok.'}</p></div>
       ) : (

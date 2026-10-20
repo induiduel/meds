@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useMemo, useEffect, useDeferredValue, useRef } from 'react';
+import { KurulHapi, kurulParam, kurulSuzgeciniKaldir, useKurulParam } from './kurul/KurulSuzgec';
 import { useAnswerDoubtfulQuery, useAiReviewQueueQuery } from '../hooks/useMedicalQueries';
 import { CikmisCard } from '../screens/cikmis/CikmisCard';
 import { PastQuestionRichCard, PastQuestionRichCardProps, RichCardSkeleton, LoadMoreSentinel } from './cikmis/PastQuestionRichCard';
@@ -297,7 +298,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [searchQuery, setSearchQuery] = useState(initialSearchQuery);
   
   // Filter States
-  const [selectedCommittee, setSelectedCommittee] = useState<string>('all');
+  // ?kurul=N (Geçmiş kurullar bağlantısı): açılışta o kurula süzülür; parametre yoksa tüm kurullar
+  const [selectedCommittee, setSelectedCommittee] = useState<string>(() => { const k = kurulParam(); return k ? `donem3-kurul${k}` : 'all'; });
+  const kurulP = useKurulParam();
   const [selectedYear, setSelectedYear] = useState<string>('all');
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
   const browseRef = useRef<HTMLUListElement>(null);
@@ -1540,6 +1543,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   return (
     <div className="cx">
+      {kurulP && selectedCommittee === `donem3-kurul${kurulP}` && (
+        <KurulHapi kurul={kurulP} sayi={filteredQuestions.length} onTumu={() => { pickCommittee('all'); kurulSuzgeciniKaldir(); }} />
+      )}
       {/* Ortak kompakt araç çubuğu: başlık · sayı · arama · durum segmenti · Süzgeç (sayfa) · görünüm seçici */}
       {!v12 && (
       <div

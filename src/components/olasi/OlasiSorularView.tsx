@@ -12,6 +12,7 @@ import { aktifKurul, sonSinavKurul } from '../../services/kurulTakvimi';
 import { linkClick, navigateTo } from '../../router';
 import SCHEDULE from '../../data/deckSchedule.json';
 import '../../styles/olasi-sorular.css';
+import '../../styles/kurul-suzgec.css';
 
 type Sik = { harf: string; metin: string; kaynak?: 'ogrenci' | 'ders'; destek?: number; aciklama?: string };
 export type OlasiSoru = {
@@ -97,6 +98,21 @@ export default function OlasiSorularView({ uid }: { uid?: string }) {
       .filter((s) => !q || katla(`${s.yuva} ${s.kok} ${s.siklar.map((x) => x.metin).join(' ')}`).includes(q))
       .sort((a, b) => yuvaNo(a.yuva) - yuvaNo(b.yuva) || a.id.localeCompare(b.id));
   }, [sorular, brans, ara]);
+
+  // Kimlik bağlantısı (/k/k1-os-001 → #k1-os-001): set gelince o karta kaydır ve kısa vurgula
+  const setHazir = 'set' in durum;
+  useEffect(() => {
+    const id = /^#(k\d-os-[\w-]+)$/i.exec(location.hash)?.[1]?.toLowerCase();
+    if (!setHazir || !id) return;
+    const t = window.setTimeout(() => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.classList.add('kimlik-vurgu');
+      window.setTimeout(() => el.classList.remove('kimlik-vurgu'), 2800);
+    }, 150);
+    return () => clearTimeout(t);
+  }, [setHazir]);
 
   const kb = KURULLAR.find((k) => k.kurul === kurul) || KURULLAR[0];
   const sinavaKalan = gunFarki(gun, kb.sinav);
@@ -200,7 +216,7 @@ const OlasiKart: React.FC<{
   };
 
   return (
-    <article className="os-kart" aria-labelledby={`${s.id}-k`}>
+    <article id={s.id} className="os-kart" aria-labelledby={`${s.id}-k`}>
       <div className="os-kart-ust">
         <span className="os-yuva">{/^\d+$/.test(s.yuva) ? `${s.yuva}. soru` : 'Numarasız'}</span>
         <span className={`os-guven ${g.cls}`} title={`Güven ${s.guven ?? 0}/100`}>{g.ad}</span>

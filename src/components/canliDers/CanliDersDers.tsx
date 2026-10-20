@@ -4,6 +4,7 @@
  * Metin sesle akar (etkin paragraf + tahmini cümle vurgusu), görünüm etkin paragrafı ortada tutar; kullanıcı elle
  * kaydırınca/PDF'i gezince takip 8 sn durur ve "Canlı konuma dön" çıkar. Oynatıcı alt çubuktadır (CanliDersDock).
  */
+import CanliDersKimlikHedef from './CanliDersKimlikHedef';
 import React, { Suspense, lazy, memo, useCallback, useMemo, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { ArrowLeftRight, ArrowUpDown, ChevronDown, ChevronLeft, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
@@ -641,6 +642,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
         )}
       </div>
       {tanitim.tur}
+      <CanliDersKimlikHedef detay={detay} kok={rootRef} />
       {yildizModalAcik && (
         <YildizliParagraflarModal
           onClose={() => setYildizModalAcik(false)}

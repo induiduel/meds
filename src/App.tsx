@@ -285,6 +285,21 @@ export default function App() {
     return offlineDatabaseService.subscribe((s) => setIsOnline(s.isOnline));
   }, []);
 
+  // /k/<kimlik> çözülemezse sunucu /?kimlik_yok=<id> ile gönderir: kısa bilgi + parametreyi adresten temizle
+  useEffect(() => {
+    const id = new URLSearchParams(window.location.search).get('kimlik_yok');
+    if (id === null) return;
+    const t = window.setTimeout(() => {
+      toast.info('Kayıt bulunamadı', `Bu bağlantının gösterdiği kayıt bulunamadı${id ? ` (${id.slice(0, 40)})` : ''}.`);
+      try {
+        const u = new URL(window.location.href);
+        u.searchParams.delete('kimlik_yok');
+        window.history.replaceState(window.history.state, '', u.pathname + u.search + u.hash);
+      } catch { /* yok */ }
+    }, 500);
+    return () => clearTimeout(t);
+  }, []);
+
   // User Auth & Profile Modals - İlk girişte kayıt/tanıtım ekranını zorunlu tut
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(() => {
     try {

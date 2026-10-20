@@ -8,6 +8,10 @@ import { ANAHTAR, KATEGORILER, Kategori, Spot, Veri, azHareket, kucuk, okuOgreni
 import { useAppearance } from '../../utils/appearance';
 import { SpotsV12 } from '../v12/SpotsV12';
 import { bransOku, bransTanim, type Brans } from './brans';
+import { KurulBos, KurulHapi, useKurulParam } from '../kurul/KurulSuzgec';
+
+/** Sınav spotlarının içerdiği kurul (veri: data/exam_spots_k1.json) */
+const SPOT_KURUL = 1;
 import { BaslangicGeri } from '../ui/Baslangic';
 import { CozucuBaslangic, OnemBaslangic } from './BransBaslangic';
 import { cozucuYolu, cozucuyaGit, onemYolu, onemeGit } from './spotsYol';
@@ -96,6 +100,7 @@ const okuBrans = (): Brans | null => {
 export const ExamSpotsView: React.FC<{ gorunum?: Gorunum }> = ({ gorunum: g = 'spot' }) => {
   const v12 = useAppearance().design === 'v12';
   const [brans, setBrans] = useState<Brans | null>(okuBrans);
+  const kurulP = useKurulParam();
   // eski adres: /spotlar?gorunum=… → /soru-cozucu | /en-onemliler (diğer parametreler korunur)
   const eski = g === 'spot' ? okuGorunum() : 'spot';
   useEffect(() => {
@@ -160,6 +165,17 @@ export const ExamSpotsView: React.FC<{ gorunum?: Gorunum }> = ({ gorunum: g = 's
       window.dispatchEvent(new PopStateEvent('popstate'));
     } catch { /* yok */ }
   };
+
+  // ?kurul=N: spot verisi şimdilik yalnız Kurul 1 (exam_spots_k1.json); başka kurulda boş durum
+  if (kurulP) {
+    return (
+      <>
+        <h1 className="sr-only">Sınav spotları · Kurul {kurulP}</h1>
+        <div className="kh-ust"><KurulHapi kurul={kurulP} /></div>
+        {kurulP === SPOT_KURUL ? (v12 ? <SpotsV12 /> : <ExamSpotsClassic />) : <KurulBos kurul={kurulP} ne="sınav spotu" />}
+      </>
+    );
+  }
 
   return (
     <>

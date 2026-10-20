@@ -1,0 +1,45 @@
+/* Kurul süzgeci hapı + boş durum (components/kurul/KurulSuzgec.tsx). Renk yalnız palet tokenı. */
+.kh {
+  display: inline-flex; align-items: center; gap: 4px; max-width: 100%; min-width: 0; flex-wrap: wrap;
+  padding: 3px 4px 3px 12px; border: 1px solid var(--color-accent); border-radius: 999px;
+  background: var(--color-accent-soft); color: var(--color-ink); font: 600 13.5px/1.2 var(--font-sans);
+  align-self: flex-start;
+}
+.kh-ad small { font-weight: 500; color: var(--color-ink-2); font-size: inherit; }
+.kh-tumu {
+  display: inline-flex; align-items: center; gap: 4px; min-height: 32px; padding: 0 10px; border: 0; border-radius: 999px;
+  background: transparent; color: var(--color-accent); font: inherit; font-weight: 500; cursor: pointer;
+}
+.kh-tumu:hover { background: var(--color-white); }
+.kh-tumu svg { width: 14px; height: 14px; flex: none; }
+.kh-tumu:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.kh-bos {
+  display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 32px 16px; text-align: center;
+  border: 1px dashed var(--color-line); border-radius: 14px; color: var(--color-ink-2); font-family: var(--font-sans);
+}
+.kh-bos b { color: var(--color-ink); font-size: 15px; }
+.kh-bos p { margin: 0; font-size: 14px; }
+.kh-bos .kh-tumu { border: 1px solid var(--color-line); margin-top: 6px; }
+
+/* Kimlik bağlantısıyla açılan öğe: kısa vurgu */
+.kimlik-vurgu { animation: kimlik-vurgu 2.6s ease-out 1; border-radius: 10px; }
+@keyframes kimlik-vurgu {
+  0%, 35% { box-shadow: 0 0 0 3px var(--color-accent); background-color: var(--color-accent-soft); }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+mark.kimlik-cumle { background: var(--color-accent-soft); color: inherit; border-radius: 4px; box-shadow: 0 0 0 2px var(--color-accent-soft); }
+@media (prefers-reduced-motion: reduce) { .kimlik-vurgu { animation: none; box-shadow: 0 0 0 2px var(--color-accent); } }
+
+/* Sesli ders: kimlik bağlantısıyla açılınca "Buradan dinle" (oynatıcı çubuğunun üstünde) */
+.kh-dinle {
+  position: fixed; left: 50%; transform: translateX(-50%); z-index: 40;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 104px); max-width: calc(100vw - 32px);
+  display: inline-flex; align-items: center; gap: 2px; padding: 4px;
+  border: 1px solid var(--color-line); border-radius: 999px; background: var(--color-white); font-family: var(--font-sans);
+}
+.kh-dinle button { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; border: 0; border-radius: 999px; cursor: pointer; font: 600 14px/1 var(--font-sans); }
+.kh-dinle-ana { padding: 0 16px; background: var(--color-accent); color: var(--color-on-accent); }
+.kh-dinle-kapat { width: 40px; justify-content: center; background: transparent; color: var(--color-ink-3); }
+.kh-dinle svg { width: 16px; height: 16px; flex: none; }
+.kh-dinle button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.kh-ust { width: 100%; max-width: 1100px; margin: 12px auto 0; padding: 0 16px; box-sizing: border-box; display: flex; }

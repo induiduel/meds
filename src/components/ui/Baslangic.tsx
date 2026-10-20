@@ -38,7 +38,11 @@ export const Baslangic: React.FC<{
   satirlar: BaslangicSatir[] | null;
   /** listenin altında ikincil bağlantılar / açıklama */
   alt?: React.ReactNode;
-}> = ({ ikon: Ikon, baslik, aciklama, ozet, devam, listeAd, satirlar, alt }) => {
+  /** listenin üstünde (ör. "Kurul 2 · tümünü göster" hapı) */
+  ust?: React.ReactNode;
+  /** liste boşsa gösterilen içerik */
+  bos?: React.ReactNode;
+}> = ({ ikon: Ikon, baslik, aciklama, ozet, devam, listeAd, satirlar, alt, ust, bos }) => {
   const capId = useId();
   return (
     <div className="bs">
@@ -49,6 +53,7 @@ export const Baslangic: React.FC<{
         {ozet && <p className="bs-ozet">{ozet}</p>}
       </header>
 
+      {ust}
       {devam && (
         <button type="button" className="bs-devam" onClick={devam.onClick}>
           <span className="bs-devam-ic" aria-hidden><Play /></span>
@@ -65,6 +70,8 @@ export const Baslangic: React.FC<{
         <h2 className="bs-cap" id={capId}>{listeAd}</h2>
         {satirlar === null ? (
           <div className="bs-skel" aria-busy="true" aria-label="Yükleniyor"><i /><i /><i /><i /></div>
+        ) : !satirlar.length && bos ? (
+          bos
         ) : (
           <ul className="bs-list">
             {satirlar.map((s) => {

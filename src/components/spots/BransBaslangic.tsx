@@ -13,6 +13,10 @@ import { getAsistanSureGruplari, getCozucuSureGruplari } from './sure/spotsSureV
 import { SpotsSureDiyalog } from './sure/SpotsSureDiyalog';
 import { SpotCozucuIstatistikModal } from './stats/SpotCozucuIstatistikModal';
 import { cozucuyaGit, onemeGit } from './spotsYol';
+import { KurulBos, KurulHapi, kurulKimlikten, useKurulParam } from '../kurul/KurulSuzgec';
+
+/** ?kurul=N varsa yalnız o kurulun branşları (Kurul 1: önek yok; Kurul 2+: k2noroloji) */
+const kurulBranslari = (k: number | null) => (k ? BRANSLAR.filter((b) => kurulKimlikten(b.id) === k) : BRANSLAR);
 
 const sayi = (n: number) => n.toLocaleString('tr-TR');
 const yuzde = (a: number, b: number) => (b ? Math.round((a / b) * 100) : 0);
@@ -36,10 +40,12 @@ export const CozucuBaslangic: React.FC = () => {
   const stats = useSpotCozucuStats();
   const [sure, setSure] = useState(false);
   const [istatistik, setIstatistik] = useState(false);
+  const kurul = useKurulParam();
+  const branslar = useMemo(() => kurulBranslari(kurul), [kurul]);
 
   const satirlar = useMemo<BaslangicSatir[] | null>(() => {
     if (!dizinler) return null;
-    return BRANSLAR.flatMap((b) => {
+    return branslar.flatMap((b) => {
       const dz = dizinler[b.id];
       if (!dz?.dersler.length) return [];
       let toplam = 0, cozulen = 0;
@@ -54,18 +60,18 @@ export const CozucuBaslangic: React.FC = () => {
         onSec: () => cozucuyaGit({ brans: b.id }),
       }];
     });
-  }, [dizinler, ilerleme]);
+  }, [dizinler, ilerleme, branslar]);
 
   const toplam = useMemo(() => {
     if (!dizinler) return null;
     let soru = 0;
-    for (const dz of Object.values(dizinler)) for (const d of dz?.dersler || []) soru += d.soru;
+    for (const b of branslar) for (const d of dizinler[b.id]?.dersler || []) soru += d.soru;
     return soru;
-  }, [dizinler]);
+  }, [dizinler, branslar]);
 
   const son = stats.lastCozucu;
   const sonDers = son ? dizinler?.[son.brans]?.dersler.find((d) => d.kod === son.kod) : undefined;
-  const devam = son && (!dizinler || sonDers) && !(sonDers && ozet(ilerleme[sonDers.kod], sonDers.soru).tamam)
+  const devam = son && (!kurul || kurulKimlikten(son.brans) === kurul) && (!dizinler || sonDers) && !(sonDers && ozet(ilerleme[sonDers.kod], sonDers.soru).tamam)
     ? {
         etiket: `Kaldığın yerden devam · ${bransTanim(son.brans).ad}`,
         ad: `${son.dersNo}. ${son.baslik}${sonDers && setAdi(sonDers) ? ` · ${setAdi(sonDers)}` : ''}`,
@@ -84,6 +90,8 @@ export const CozucuBaslangic: React.FC = () => {
         devam={devam}
         listeAd="Bir ders seç"
         satirlar={satirlar}
+        ust={kurul ? <KurulHapi kurul={kurul} /> : undefined}
+        bos={kurul ? <KurulBos kurul={kurul} ne="soru çözücü dersi" /> : undefined}
         alt={
           <>
             <details className="bs-nasil">
@@ -127,7 +135,10 @@ export const OnemBaslangic: React.FC = () => {
   const dizinler = useDizinler<Dizin>(onemDizinYukle);
   const ogr = useOgrenilen();
   const [sure, setSure] = useState(false);
-  const son = useMemo(onemSonOku, []);
+  const son0 = useMemo(onemSonOku, []);
+  const kurul = useKurulParam();
+  const branslar = useMemo(() => kurulBranslari(kurul), [kurul]);
+  const son = son0 && (!kurul || kurulKimlikten(son0.brans) === kurul) ? son0 : null;
 
   const ogrKod = useMemo(() => {
     const r: Record<string, number> = {};
@@ -137,7 +148,7 @@ export const OnemBaslangic: React.FC = () => {
 
   const satirlar = useMemo<BaslangicSatir[] | null>(() => {
     if (!dizinler) return null;
-    return BRANSLAR.flatMap((b) => {
+    return branslar.flatMap((b) => {
       const dz = dizinler[b.id];
       if (!dz?.dersler.length) return [];
       const madde = dz.dersler.reduce((t, d) => t + d.madde, 0);
@@ -151,9 +162,9 @@ export const OnemBaslangic: React.FC = () => {
         onSec: () => onemeGit({ brans: b.id }),
       }];
     });
-  }, [dizinler, ogrKod]);
+  }, [dizinler, ogrKod, branslar]);
 
-  const toplam = useMemo(() => (dizinler ? Object.values(dizinler).reduce((t, dz) => t + (dz?.dersler.reduce((s, d) => s + d.madde, 0) || 0), 0) : null), [dizinler]);
+  const toplam = useMemo(() => (dizinler ? branslar.reduce((t, b) => t + (dizinler[b.id]?.dersler.reduce((s, d) => s + d.madde, 0) || 0), 0) : null), [dizinler, branslar]);
   const devam = son
     ? {
         etiket: `Kaldığın yerden devam · ${bransTanim(son.brans).ad}`,
@@ -172,6 +183,8 @@ export const OnemBaslangic: React.FC = () => {
         devam={devam}
         listeAd="Bir ders seç"
         satirlar={satirlar}
+        ust={kurul ? <KurulHapi kurul={kurul} /> : undefined}
+        bos={kurul ? <KurulBos kurul={kurul} ne="önem listesi" /> : undefined}
         alt={<button type="button" className="bs-link" onClick={() => setSure(true)}><Clock aria-hidden />Sesli asistan süreleri</button>}
       />
       {sure && (
