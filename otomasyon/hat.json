@@ -100,9 +100,11 @@
    ],
    "komut": "Oracle: ders_isci/cikar.py (PyMuPDF + tesseract)",
    "cikti": [
-    "kaynak.md"
+    "kaynak.md",
+    "sayfalar.json (tablolar, görsel oranı, hoca vurgusu)",
+    "sayfa_goruntu/<n>.png"
    ],
-   "eksik": "Görsel/tablo içeriği: sayfa görüntüsü + tablo çıkarımı (pymupdf find_tables) ayrı alanlara yazılmıyor — plan P2.1"
+   "not": "2026-10-20: cikar.sayfa_varliklari — gerçek tablolar satır/sütun, görsel ağırlıklı sayfalar PNG (Claude Read ile görür), renkli/kalın ifadeler; görsel kanıt türü denetleyicide."
   },
   {
    "id": "onem_haritasi",
@@ -136,7 +138,7 @@
     "cikmis_baglantilari.json",
     "bilgi_havuzu.jsonl"
    ],
-   "eksik": "denetle.py --kurul2 bağlandı (2026-10-20, kurul≥2); Oracle dağıtımı bekliyor. yayinla.py --ozet hâlâ bayraksız — plan P1.3"
+   "not": "Kurul 2+: denetle --kurul2, otomatik onay (kapılar 0 HATA + yüksek eşleşme + uyarısız), yayinla deste kapısı --kurul2 (Oracle'da, 2026-10-20)."
   },
   {
    "id": "sesli_ders_metni",
@@ -147,7 +149,7 @@
    ],
    "komut": "Oracle: ders_isci TALIMAT_SESLI.md",
    "kapi": "scripts/sesli_anlatim/metin_denetle.py",
-   "eksik": "Cümle kimliği + slayt bağı + vurgu kodu şeması (cumle_id) — plan P1.4"
+   "not": "Kurul 2+: konusma_v2.json (cümle kimliği, ses/ekran, vurgu, sayfa/slayt/çıkmış bağı) zorunlu; eski biçim türetilir."
   },
   {
    "id": "yayin",
@@ -157,7 +159,7 @@
     "ders_paketi"
    ],
    "komut": "Oracle: yayinla.py --sunucu (meds-ders-yayin.timer)",
-   "eksik": "Yönetici onayı elle; Kurul 2 için kapılar geçerse otomatik onay — plan P1.2"
+   "not": "Kurul 2+ otomatik onay (ayar otomatik_onay, panelden kapatılabilir); Kurul 1 yönetici onayı."
   },
   {
    "id": "ders_zinciri",

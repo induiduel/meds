@@ -225,3 +225,13 @@ biçiminde referans verir; ekran bunu "Derste: …" bağlantısına çevirir.
 Açık: `/k/<id>` ön yüz yönlendirmesi ve `#kimlik` kaydırması (sesli ders, olası sorular); otomatik onay (P1.2); K2 branşlarının
 ön yüz kaydı (`components/spots/brans.ts`: `k2noroloji` …, kod düzenli ifadeleri `2n03` biçimini kabul etmeli); önem haritası (P2.2);
 görsel/tablo çıkarımı (P2.1); göç koşucusu (P3).
+
+## 11. 3. tur (2026-10-20, Oracle yeniden başlatıldıktan sonra; dağıtıldı)
+
+- **Kesinti nedeni:** iki oturumun eşzamanlı dağıtımı Oracle'da belleği tüketti (deploy-code.sh'a kilit eklendi). Sağlık aşaması bunu artık gece yakalar.
+- **Canlıda:** ders işçisi K2 defter numarası, `--kurul2` kapıları (denetle + yayinla), sesli metin v2 kapısı, **otomatik onay** (Kurul 2+, panel ayarı `otomatik_onay`), PDF tablo/görsel/hoca vurgusu çıkarımı + görsel kanıt türü; `/k/<kimlik>` 302 kısa bağlantı (servis çalışanı dışında); ses uçları `2n03` kodlarını ve `k2<brans>` klasörlerini kabul eder; K1 cümle kimlikleri Oracle'da.
+- **Göç koşucusu:** `scripts/db/goc.py` + `schema_migrations`; `0001_icerik_setleri` iki makinede uygulandı; gece `db_goc` aşaması. Üreticiler `scripts/db/icerik_kaydi.py` ile sürüm yazar.
+- **Önem haritası:** `scripts/onem/onem_haritasi.py` (sayfa başı 0–100), zincirin hazirla adımında; sınamada 3 K1 dersinde bağlanamayan çıkmış 0.
+- **Branş tek kaynak:** `src/data/dersler/branslar.json`; `brans.ts` Kurul 2+ klasörlerini kendiliğinden sekmeye çevirir (derleme ile sınandı).
+- **Tuzak:** `dist` `emptyOutDir:false` → eski parçalar kalır; derleme sınamasında yalnız güncel parçaya bak. rsync saat damgasını koruduğu için "değişen dosya → yeniden başlat" kararı yanılabilir; sunucu kodu gönderilince sağlık + uç denemesiyle doğrula.
+- **Açık:** sesli ders/olası soru ekranında `#kimlik` kaydırması; Sesli ders · En önemliler · Spotlar · Soru çözücü · Çıkmış ekranlarına `?kurul=` süzgeci; ders zincirinin ilk gerçek Kurul 2 dersiyle uçtan uca koşusu (ilk K2 PDF'i gelince).
