@@ -90,7 +90,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 
 ### H9 — Görsel ya da bozuk OCR'lı sayfa içerikte yok
 - **Kural:** metni zayıf sayfa görüntüden okunur; sayfa kapsaması ölçülür.
-- **Kapı — KISMEN:** `cikar.sayfa_varliklari` görüntüleri çıkarıyor, talimat görsel sayfaları okutuyor, görsel kanıt türü var. Kapsama kapısı (metinli sayfaların ≥%90'ı bir üründe atıf almalı) AÇIK.
+- **Kapı — EKLENDİ:** işçi denetleyicisi zaten her sayfayı haritada, her içerik sayfasını bir adım + bilgi maddesinde ve
+  şekil/tablo sayfasını açıklamalı istiyor (%100 kapsama). Eklenen: görsel ağırlıklı ya da hoca vurgulu (≥3 renkli/kalın)
+  sayfa "boş/kapak" diye atlanamaz (s.1–2 kapak muaf) — `denetle.py`, 2026-10-20.
 
 ### H10 — Başka dersin sayısı / genel bilgi; çıkmış anahtarı PDF ile çelişiyor
 - **Kural:** her ürün yalnız kendi PDF'inin sayısını kullanır; anahtarı PDF ile çelişen çıkmış soru otomatik düzeltilmez, karantinaya alınır ve bildirilir.

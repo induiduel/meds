@@ -59,6 +59,7 @@ class Denetim:
         self.sp = sayfalar((d / "kaynak.md").read_text(encoding="utf-8")) if (d / "kaynak.md").exists() else {}
         _sv = json.loads((d / "sayfalar.json").read_text(encoding="utf-8")) if (d / "sayfalar.json").exists() else []
         self.gorsel_sayfalar = {x["sayfa"] for x in _sv if x.get("goruntu")}
+        self.vurgu_sayisi = {x["sayfa"]: sum(1 for v in x.get("vurgulu", []) if v.get("tur") in ("renk", "kalin")) for x in _sv}
         # hafif revize (yalnız "ikisini tut" V2 destesi): ders notu, örnek soru, hastalık, bilgi havuzu üretilmez
         self.hafif = bool(json.loads((d / "baglam.json").read_text(encoding="utf-8")).get("hafif")) \
             if (d / "baglam.json").exists() else False
@@ -159,6 +160,11 @@ class Denetim:
             if not str(s.get("ne_anlatiliyor") or "").strip():
                 self.hata(f"{yer}: ne_anlatiliyor boş")
             if tur in self.BOS:
+                # H9 (2026-10-20): görsel ağırlıklı ya da hoca vurgulu sayfa boş/kapak diye atlanamaz
+                if (tur == "bos" or (tur == "kapak" and int(p or 0) > 2)) and \
+                        (p in self.gorsel_sayfalar or self.vurgu_sayisi.get(p, 0) >= 3):  # gerçek kapak (s.1–2) logolu olur
+                    self.hata(f"{yer}: '{tur}' dendi ama sayfa görsel ağırlıklı/hoca vurgulu (sayfalar.json) — "
+                              "görüntüyü aç, içerik sayfası olarak anlat")
                 if tur in ("bos", "kapak") and len(self.sp.get(p, "").split()) > 60:
                     self.uyarilar.append(f"{yer}: '{tur}' dendi ama sayfada {len(self.sp.get(p, '').split())} kelime var")
                 continue
