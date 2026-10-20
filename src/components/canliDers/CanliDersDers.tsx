@@ -21,9 +21,10 @@ import { cdDersEtiketi } from './canliDersKategori';
 import { ListeEkleDugme } from './CanliDersListem';
 import { CevrimdisiDugme } from './CanliDersCevrimdisi';
 import { CdDaha } from './CanliDersDaha';
+import { cdMotivasyonAyarla, useCdMotivasyonAcik } from './canliDersMotivasyon';
 import { CdTvKumanda } from './CanliDersTv';
 import { MetniAktarDugme } from './CanliDersAktarDugme';
-import { Highlighter, Star } from 'lucide-react';
+import { Highlighter, Sparkles, Star } from 'lucide-react';
 import { useKonuSayaci } from '../../services/calismaTakip';
 import { KonuDugmeleri } from '../takip/KonuTakip';
 import { toast } from '../ui/Toast';
@@ -504,6 +505,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
               <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
               <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} etiketli />
               <MetniAktarDugme detay={detay} vurguAcik={vurguAcik} />
+              <MotivasyonDugme />
               {detay.vurgu && (
                 <button type="button" className={`cd-btn${vurguAcik ? ' is-on' : ''}`} aria-pressed={vurguAcik} onClick={() => setVurguAcik(!vurguAcik)}
                   title="Çıkmışta, örnek sorularda ve spotlarda geçen cümleleri kırmızı ve işaretli göster">
@@ -1327,5 +1329,16 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
         </button>
       )}
     </div>
+  );
+}
+
+/** ⋯ menüsü: motivasyon konuşmaları ve mola hatırlatması (varsayılan açık) */
+function MotivasyonDugme() {
+  const acik = useCdMotivasyonAcik();
+  return (
+    <button type="button" className={`cd-btn${acik ? ' is-on' : ''}`} aria-pressed={acik} onClick={() => cdMotivasyonAyarla(!acik)}
+      title="Dersin başında, ortasında ve sonunda kısa teşvik cümleleri; 15–20 dakikada bir mola hatırlatması">
+      <Sparkles aria-hidden /> <span>Motivasyon konuşmaları {acik ? 'açık' : 'kapalı'}</span>
+    </button>
   );
 }

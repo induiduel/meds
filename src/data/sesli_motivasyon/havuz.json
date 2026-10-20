@@ -1,0 +1,467 @@
+{
+ "surum": 1,
+ "satirlar": [
+  {
+   "id": "basla-genel-01",
+   "yer": "basla",
+   "bag": "genel",
+   "metin": "Hoş geldin. Bu dersi bitirdiğinde sınava bir adım daha hazır olacaksın. Hadi başlayalım."
+  },
+  {
+   "id": "basla-genel-02",
+   "yer": "basla",
+   "bag": "genel",
+   "metin": "Kulaklığını taktıysan başlıyoruz. Bu konuyu birlikte halledeceğiz, sen yeter ki dinlemeye devam et."
+  },
+  {
+   "id": "basla-genel-03",
+   "yer": "basla",
+   "bag": "genel",
+   "metin": "Bugün buradasın ve bu çok değerli. Bu dersi de başaracaksın, emin ol."
+  },
+  {
+   "id": "basla-genel-04",
+   "yer": "basla",
+   "bag": "genel",
+   "metin": "Yeni bir konu, yeni bir kazanç. Sen bunu yaparsın, hadi başlayalım."
+  },
+  {
+   "id": "basla-genel-05",
+   "yer": "basla",
+   "bag": "genel",
+   "metin": "Sınavda karşına çıkacak bilgileri şimdi topluyoruz. Dikkatini bana ver, gerisini birlikte halledeceğiz."
+  },
+  {
+   "id": "basla-genel-06",
+   "yer": "basla",
+   "bag": "genel",
+   "metin": "Her ders seni sınava biraz daha yaklaştırıyor. Bu da onlardan biri, başlıyoruz."
+  },
+  {
+   "id": "basla-genel-07",
+   "yer": "basla",
+   "bag": "genel",
+   "metin": "Hazırsan başlayalım. Bu konunun üstesinden kolayca geleceksin."
+  },
+  {
+   "id": "basla-genel-08",
+   "yer": "basla",
+   "bag": "genel",
+   "metin": "Şu an çalışmayı seçtin ve bu, sınav günü sana teşekkür edecek bir karar. Başlıyoruz."
+  },
+  {
+   "id": "basla-genel-09",
+   "yer": "basla",
+   "bag": "genel",
+   "metin": "Bu dersin sonunda konuyu çok daha net göreceksin. Sen yaparsın, başlayalım."
+  },
+  {
+   "id": "basla-genel-10",
+   "yer": "basla",
+   "bag": "genel",
+   "metin": "Odaklan, nefes al ve dinle. Bu konuyu da hallettiğinde kendinle gurur duyacaksın."
+  },
+  {
+   "id": "basla-genel-11",
+   "yer": "basla",
+   "bag": "genel",
+   "metin": "Bugünkü emeğin sınavda puan olarak geri dönecek. Hadi bu dersi birlikte bitirelim."
+  },
+  {
+   "id": "basla-genel-12",
+   "yer": "basla",
+   "bag": "genel",
+   "metin": "Başlamak işin en zor kısmıydı ve sen onu zaten yaptın. Devamını birlikte getireceğiz."
+  },
+  {
+   "id": "basla-ilk-01",
+   "yer": "basla",
+   "bag": "ilk",
+   "metin": "İlk sesli dersine hoş geldin. Burada konuları adım adım dinleyerek öğreneceksin. Bunu çok iyi yapacaksın."
+  },
+  {
+   "id": "basla-ilk-02",
+   "yer": "basla",
+   "bag": "ilk",
+   "metin": "Yolculuğun ilk adımı bu. Acele etme, dinle ve anla. Sınava hazırlanmayı birlikte başaracağız."
+  },
+  {
+   "id": "basla-ilk-03",
+   "yer": "basla",
+   "bag": "ilk",
+   "metin": "Hoş geldin. İlk ders her zaman en değerlisidir, çünkü gerisi bunun üstüne kurulur. Başlıyoruz."
+  },
+  {
+   "id": "basla-ilerleme-01",
+   "yer": "basla",
+   "bag": "ilerleme",
+   "metin": "Epey ders bitirdin, bu tempo çok iyi. Bu dersi de aynı kararlılıkla halledeceksin."
+  },
+  {
+   "id": "basla-ilerleme-02",
+   "yer": "basla",
+   "bag": "ilerleme",
+   "metin": "Bitirdiğin derslerin listesi uzuyor. Bir tane daha ekleyelim, hadi başlayalım."
+  },
+  {
+   "id": "basla-ilerleme-03",
+   "yer": "basla",
+   "bag": "ilerleme",
+   "metin": "Düzenli çalışıyorsun ve bu fark yaratıyor. Bu konuyu da başaracaksın."
+  },
+  {
+   "id": "basla-ilerleme-04",
+   "yer": "basla",
+   "bag": "ilerleme",
+   "metin": "Geldiğin noktaya bak, artık sınava hazırlanan biri değil, hazır olmaya yaklaşan birisin. Devam ediyoruz."
+  },
+  {
+   "id": "basla-cok-01",
+   "yer": "basla",
+   "bag": "cok",
+   "metin": "Bu kadar dersi bitiren biri bu konuyu da rahatça halleder. Seninle gurur duyuyorum, başlıyoruz."
+  },
+  {
+   "id": "basla-cok-02",
+   "yer": "basla",
+   "bag": "cok",
+   "metin": "Sen artık bu işin ustası oldun. Bu dersi de bitirip listene ekleyeceksin."
+  },
+  {
+   "id": "basla-cok-03",
+   "yer": "basla",
+   "bag": "cok",
+   "metin": "Bunca emek boşa gitmeyecek. Sınavda bunun karşılığını alacaksın. Hadi bir ders daha."
+  },
+  {
+   "id": "basla-tekrar-01",
+   "yer": "basla",
+   "bag": "tekrar",
+   "metin": "Bu dersi daha önce bitirmiştin. Tekrar etmek bilgiyi kalıcı yapar, sınavda hemen hatırlayacaksın."
+  },
+  {
+   "id": "basla-tekrar-02",
+   "yer": "basla",
+   "bag": "tekrar",
+   "metin": "Tekrar zamanı. Bu sefer daha hızlı anlayacaksın, çünkü temeli zaten attın."
+  },
+  {
+   "id": "basla-tekrar-03",
+   "yer": "basla",
+   "bag": "tekrar",
+   "metin": "Bu konuyu ikinci kez dinlemek akıllıca bir seçim. Sınav günü bunu kolayca hatırlayacaksın."
+  },
+  {
+   "id": "basla-sinav_yakin-01",
+   "yer": "basla",
+   "bag": "sinav_yakin",
+   "metin": "Sınava az kaldı ve sen hâlâ çalışıyorsun. Bu kararlılıkla başaracaksın."
+  },
+  {
+   "id": "basla-sinav_yakin-02",
+   "yer": "basla",
+   "bag": "sinav_yakin",
+   "metin": "Sınav yaklaşıyor ama telaşa gerek yok. Her dersi böyle dinlersen hazır olacaksın."
+  },
+  {
+   "id": "basla-sinav_yakin-03",
+   "yer": "basla",
+   "bag": "sinav_yakin",
+   "metin": "Son günlerde yapılan çalışma çok değerlidir. Bu dersi de bitir, sınavda farkını göreceksin."
+  },
+  {
+   "id": "basla-sinav_kapida-01",
+   "yer": "basla",
+   "bag": "sinav_kapida",
+   "metin": "Sınav kapıda. Şimdi bildiklerini pekiştirme zamanı. Sen hazırsın, sadece biraz daha parlatıyoruz."
+  },
+  {
+   "id": "basla-sinav_kapida-02",
+   "yer": "basla",
+   "bag": "sinav_kapida",
+   "metin": "Son düzlüğe girdik. Sakin ol, dinle ve güven. Sınavı başaracaksın."
+  },
+  {
+   "id": "basla-gece-01",
+   "yer": "basla",
+   "bag": "gece",
+   "metin": "Gecenin bu saatinde bile çalışıyorsun, bu azmi takdir ediyorum. Bu dersten sonra güzelce dinlenmeyi unutma."
+  },
+  {
+   "id": "basla-gece-02",
+   "yer": "basla",
+   "bag": "gece",
+   "metin": "Geç saatte çalışmak kolay değil. Kısa ve verimli tutalım, bu konuyu birlikte halledeceğiz."
+  },
+  {
+   "id": "basla-sabah-01",
+   "yer": "basla",
+   "bag": "sabah",
+   "metin": "Günaydın. Güne çalışarak başlamak harika bir fikir. Zihnin şu an çok taze, bu dersi kolayca öğreneceksin."
+  },
+  {
+   "id": "basla-sabah-02",
+   "yer": "basla",
+   "bag": "sabah",
+   "metin": "Sabahın ilk saatleri öğrenmek için en verimli zamandır. Hadi bu dersi birlikte bitirelim."
+  },
+  {
+   "id": "orta-genel-01",
+   "yer": "orta",
+   "bag": "genel",
+   "metin": "Dersin yarısına geldik. Çok iyi gidiyorsun, aynı dikkatle devam edelim."
+  },
+  {
+   "id": "orta-genel-02",
+   "yer": "orta",
+   "bag": "genel",
+   "metin": "Yarıyı geçtik bile. Bu konuyu gerçekten öğreniyorsun, devam ediyoruz."
+  },
+  {
+   "id": "orta-genel-03",
+   "yer": "orta",
+   "bag": "genel",
+   "metin": "Buraya kadar geldiysen gerisini de getirirsin. Az kaldı, devam."
+  },
+  {
+   "id": "orta-genel-04",
+   "yer": "orta",
+   "bag": "genel",
+   "metin": "Harika gidiyorsun. Dersin ikinci yarısında da yanındayım."
+  },
+  {
+   "id": "orta-genel-05",
+   "yer": "orta",
+   "bag": "genel",
+   "metin": "Dikkatin dağılmaya başladıysa derin bir nefes al. Yarıyı geçtin, sonunu da getireceksin."
+  },
+  {
+   "id": "orta-genel-06",
+   "yer": "orta",
+   "bag": "genel",
+   "metin": "Şu ana kadar öğrendiklerin sınavda işine yarayacak. Devam edelim, sen yaparsın."
+  },
+  {
+   "id": "orta-genel-07",
+   "yer": "orta",
+   "bag": "genel",
+   "metin": "Biraz yorulduysan normal. Yarıyı geçtin ve çok az kaldı, birlikte bitireceğiz."
+  },
+  {
+   "id": "orta-genel-08",
+   "yer": "orta",
+   "bag": "genel",
+   "metin": "Güzel ilerliyoruz. Bu konuyu sınavda gördüğünde gülümseyeceksin."
+  },
+  {
+   "id": "orta-genel-09",
+   "yer": "orta",
+   "bag": "genel",
+   "metin": "Ortaya geldik. Sabrın ve dikkatin için teşekkürler, devam ediyoruz."
+  },
+  {
+   "id": "orta-genel-10",
+   "yer": "orta",
+   "bag": "genel",
+   "metin": "Yarı yol tamam. Kalan kısmı da en az bu kadar iyi halledeceksin."
+  },
+  {
+   "id": "orta-ilerleme-01",
+   "yer": "orta",
+   "bag": "ilerleme",
+   "metin": "Yine yarıyı geçtin. Bunu her derste yapıyorsun ve sonuçları sınavda göreceksin."
+  },
+  {
+   "id": "orta-ilerleme-02",
+   "yer": "orta",
+   "bag": "ilerleme",
+   "metin": "Bu düzenle devam edersen sınav senin için çok rahat geçecek. Haydi ikinci yarıya."
+  },
+  {
+   "id": "orta-sinav_yakin-01",
+   "yer": "orta",
+   "bag": "sinav_yakin",
+   "metin": "Sınav yaklaşırken her dakika değerli ve sen onu çok iyi kullanıyorsun. Devam edelim."
+  },
+  {
+   "id": "orta-sinav_yakin-02",
+   "yer": "orta",
+   "bag": "sinav_yakin",
+   "metin": "Yarıyı geçtik. Sınavda bu bilgiler aklına kolayca gelecek, devam ediyoruz."
+  },
+  {
+   "id": "orta-gece-01",
+   "yer": "orta",
+   "bag": "gece",
+   "metin": "Yarıyı geçtik. Gece geç oldu, bu dersi bitirince kendine dinlenme izni ver."
+  },
+  {
+   "id": "son-genel-01",
+   "yer": "son",
+   "bag": "genel",
+   "metin": "Tebrikler, bu dersi bitirdin. Sınava bir adım daha yaklaştın."
+  },
+  {
+   "id": "son-genel-02",
+   "yer": "son",
+   "bag": "genel",
+   "metin": "İşte bu kadar. Bir konuyu daha hallettin, kendinle gurur duyabilirsin."
+  },
+  {
+   "id": "son-genel-03",
+   "yer": "son",
+   "bag": "genel",
+   "metin": "Ders bitti ve sen sonuna kadar dinledin. Bu kararlılıkla sınavı başaracaksın."
+  },
+  {
+   "id": "son-genel-04",
+   "yer": "son",
+   "bag": "genel",
+   "metin": "Harika iş çıkardın. Bu konu artık senin."
+  },
+  {
+   "id": "son-genel-05",
+   "yer": "son",
+   "bag": "genel",
+   "metin": "Bir dersi daha tamamladın. Böyle devam edersen sınavdan istediğin sonucu alacaksın."
+  },
+  {
+   "id": "son-genel-06",
+   "yer": "son",
+   "bag": "genel",
+   "metin": "Bitirdin. Kısa bir mola hak ettin, sonra kaldığın yerden devam edersin."
+  },
+  {
+   "id": "son-genel-07",
+   "yer": "son",
+   "bag": "genel",
+   "metin": "Bugünkü emeğin için teşekkürler. Sen bu sınavı başaracaksın."
+  },
+  {
+   "id": "son-genel-08",
+   "yer": "son",
+   "bag": "genel",
+   "metin": "Bu konuyu bitirdin. Sınavda karşına çıktığında ne yapacağını bileceksin."
+  },
+  {
+   "id": "son-genel-09",
+   "yer": "son",
+   "bag": "genel",
+   "metin": "Sonuna kadar geldin, bu her zaman kolay değildir. Seninle gurur duyuyorum."
+  },
+  {
+   "id": "son-genel-10",
+   "yer": "son",
+   "bag": "genel",
+   "metin": "Ders tamam. Öğrendiklerin sınav gününe kadar seninle olacak."
+  },
+  {
+   "id": "son-ilerleme-01",
+   "yer": "son",
+   "bag": "ilerleme",
+   "metin": "Bir ders daha bitti. Bitirdiğin derslerin sayısı her gün artıyor, bu çok güzel."
+  },
+  {
+   "id": "son-ilerleme-02",
+   "yer": "son",
+   "bag": "ilerleme",
+   "metin": "Yine bir dersi tamamladın. Bu istikrarla sınavda zorlanmayacaksın."
+  },
+  {
+   "id": "son-cok-01",
+   "yer": "son",
+   "bag": "cok",
+   "metin": "Bu da bitti. Bu kadar çok dersi tamamlamak gerçek bir başarı. Sınav da aynı şekilde geçecek."
+  },
+  {
+   "id": "son-cok-02",
+   "yer": "son",
+   "bag": "cok",
+   "metin": "Bir ders daha tamam. Sen sınava gerçekten hazır olan öğrencilerdensin."
+  },
+  {
+   "id": "son-tekrar-01",
+   "yer": "son",
+   "bag": "tekrar",
+   "metin": "Tekrarı da bitirdin. Bu bilgiler artık çok daha kalıcı, sınavda hemen hatırlayacaksın."
+  },
+  {
+   "id": "son-tekrar-02",
+   "yer": "son",
+   "bag": "tekrar",
+   "metin": "Tekrar tamam. İki kez çalışılan konu kolay kolay unutulmaz."
+  },
+  {
+   "id": "son-sinav_yakin-01",
+   "yer": "son",
+   "bag": "sinav_yakin",
+   "metin": "Bu dersi de bitirdin. Sınava kalan günlerde böyle devam edersen başaracaksın."
+  },
+  {
+   "id": "son-sinav_yakin-02",
+   "yer": "son",
+   "bag": "sinav_yakin",
+   "metin": "Bir konu daha tamam. Sınav yaklaşıyor ve sen her gün daha hazırsın."
+  },
+  {
+   "id": "son-sinav_kapida-01",
+   "yer": "son",
+   "bag": "sinav_kapida",
+   "metin": "Bitirdin. Artık kendine güven, sınavda bildiklerini rahatça yapacaksın."
+  },
+  {
+   "id": "son-gece-01",
+   "yer": "son",
+   "bag": "gece",
+   "metin": "Ders bitti. Şimdi uyku zamanı, çünkü öğrendiklerin uykuda yerine oturur. İyi geceler."
+  },
+  {
+   "id": "mola-genel-01",
+   "yer": "mola",
+   "bag": "genel",
+   "metin": "Uzun süredir dinliyorsun, harikasın. Kısa bir mola ver, biraz su iç, sonra kaldığın yerden devam edersin."
+  },
+  {
+   "id": "mola-genel-02",
+   "yer": "mola",
+   "bag": "genel",
+   "metin": "Bir süredir çalışıyorsun ve bu çok değerli. Gözlerini dinlendir, birazdan yine buradayım."
+  },
+  {
+   "id": "mola-genel-03",
+   "yer": "mola",
+   "bag": "genel",
+   "metin": "Çok iyi gidiyorsun. Ayağa kalk, biraz esne. Beynin de molayı hak etti."
+  },
+  {
+   "id": "mola-genel-04",
+   "yer": "mola",
+   "bag": "genel",
+   "metin": "Bu kadar dikkatle dinlemek kolay değil. Birkaç dakika dinlen, sonra birlikte devam ederiz."
+  },
+  {
+   "id": "mola-genel-05",
+   "yer": "mola",
+   "bag": "genel",
+   "metin": "Emeğin için teşekkürler. Kısa bir mola öğrendiklerini yerine oturtur. Hazır olduğunda devam et."
+  },
+  {
+   "id": "mola-genel-06",
+   "yer": "mola",
+   "bag": "genel",
+   "metin": "Şu ana kadar çok şey öğrendin. Biraz nefes al, sen bunu başarıyorsun."
+  },
+  {
+   "id": "mola-gece-01",
+   "yer": "mola",
+   "bag": "gece",
+   "metin": "Gece epey ilerledi ve sen hâlâ çalışıyorsun. Biraz dinlen, istersen yarın devam ederiz."
+  },
+  {
+   "id": "mola-sinav_yakin-01",
+   "yer": "mola",
+   "bag": "sinav_yakin",
+   "metin": "Sınava az kaldı ama dinlenmek de çalışmanın bir parçası. Kısa bir mola ver, sonra devam edersin."
+  }
+ ]
+}

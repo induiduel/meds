@@ -144,15 +144,18 @@ const DersGezgini: React.FC<{ dizin: Dizin; kod: string; ogrSay: Record<string, 
 const AdayKutusu: React.FC<{ d: Ders; baslikli?: boolean; ogr: Set<string>; onGit: (kod: string, id: string) => void; gizle: boolean }> = ({ d, baslikli, ogr, onGit, gizle }) => {
   const ns = d.soruSayisi || 1;
   const ad = (d.sinavAdaylari || []).map((a) => ({ a, m: d.maddeler.find((x) => x.id === a.id) })).filter((x): x is { a: Aday; m: Madde } => !!x.m).sort((x, y) => x.a.sira - y.a.sira);
+  const [acik, setAcik] = useState(!!baslikli);
   if (!ad.length) return null;
   return (
-    <section className="on-adaylar" aria-label={`${dersAdi(d)} sınav adayları`}>
+    <section className={`on-adaylar${acik ? '' : ' is-kapali'}`} aria-label={`${dersAdi(d)} sınav adayları`}>
       <h3>
         <Star aria-hidden />
-        {baslikli ? <button type="button" className="on-adaylar-ders" onClick={() => onGit(d.kod, '')}>{dersAdi(d)}</button> : <span>Sınavda çıkabilecek</span>}
+        {baslikli ? <button type="button" className="on-adaylar-ders" onClick={() => onGit(d.kod, '')}>{dersAdi(d)}</button>
+          : <button type="button" className="on-adaylar-ac" onClick={() => setAcik((v) => !v)} aria-expanded={acik}>Sınavda çıkabilecek · {ad.length} aday</button>}
         <em>bu slayttan {ns} soru</em>
+        {!baslikli && <ChevronDown className="on-adaylar-c" aria-hidden onClick={() => setAcik((v) => !v)} />}
       </h3>
-      <ol>
+      {acik && <ol>
         {ad.map(({ a, m }) => (
           <li key={a.id} className={`${a.sira <= ns ? 'is-en' : ''}${ogr.has(m.id) ? ' is-ogr' : ''}`}>
             <button type="button" onClick={() => onGit(d.kod, m.id)}>
@@ -165,7 +168,7 @@ const AdayKutusu: React.FC<{ d: Ders; baslikli?: boolean; ogr: Set<string>; onGi
             </button>
           </li>
         ))}
-      </ol>
+      </ol>}
     </section>
   );
 };
@@ -496,14 +499,14 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
             </div>
             {!cokDers && dizinDers && (
               <>
-                <div className={`on-hero-stat${bt.sinavKurali ? '' : ' is-3'}`}>
-                  <div><b>{dizinDers.madde}</b><span>madde</span></div>
-                  {bt.sinavKurali && <div><b>{dersAday || '–'}</b><span>sınav adayı</span></div>}
-                  <div><b>{ders ? dersCikmis : '–'}</b><span>çıkmış soru</span></div>
-                  <div className="on-hero-ogr">
-                    <b>{dersOgr}<small>/{dizinDers.madde}</small></b><span>öğrenildi</span>
+                <div className="on-hero-satir">
+                  <span className="on-hero-sayi"><b>{dizinDers.madde}</b> madde</span>
+                  {bt.sinavKurali && dersAday > 0 && <span className="on-hero-sayi is-aday"><Star aria-hidden /><b>{dersAday}</b> aday</span>}
+                  {ders && dersCikmis > 0 && <span className="on-hero-sayi is-cik"><b>{dersCikmis}</b> çıkmış</span>}
+                  <span className="on-hero-ilerle" title={`${dersOgr}/${dizinDers.madde} öğrenildi`}>
                     <div className="on-bar"><i style={{ width: `${(dersOgr / Math.max(1, dizinDers.madde)) * 100}%` }} /></div>
-                  </div>
+                    <small>{dersOgr}/{dizinDers.madde}</small>
+                  </span>
                 </div>
                 <div className="on-hero-takip">
                   <CihazdaIsaret paket={`onem:${brans}:${dizinDers.kod}`} />
@@ -521,11 +524,13 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
                 </div>
                 {ders && (
                   <div className={`on-hero-ozet${ozetAcik ? ' is-acik' : ''}`}>
-                    <p className="on-hero-ozet-p"><Metin metin={ders.ozet} /></p>
-                    <p className="on-hero-neden"><HelpCircle aria-hidden /><span><b>Neden önemli:</b> <Metin metin={ders.neden_onemli} /></span></p>
                     <button type="button" className="on-link on-hero-devam" onClick={() => setOzetAcik((v) => !v)} aria-expanded={ozetAcik}>
-                      {ozetAcik ? 'Daha az göster' : 'Devamını oku · neden önemli'}<ChevronDown aria-hidden />
+                      <HelpCircle aria-hidden />{ozetAcik ? 'Ders özetini gizle' : 'Ders özeti · neden önemli'}<ChevronDown aria-hidden />
                     </button>
+                    {ozetAcik && <>
+                      <p className="on-hero-ozet-p"><Metin metin={ders.ozet} /></p>
+                      <p className="on-hero-neden"><HelpCircle aria-hidden /><span><b>Neden önemli:</b> <Metin metin={ders.neden_onemli} /></span></p>
+                    </>}
                   </div>
                 )}
               </>

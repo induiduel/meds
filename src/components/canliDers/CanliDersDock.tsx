@@ -12,6 +12,7 @@ import {
 } from './canliDersStore';
 import { ListeDockDenetim, TekrarSecici } from './CanliDersListem';
 import { CdDaha } from './CanliDersDaha';
+import { cdMotivasyonKur } from './canliDersMotivasyon';
 import { cdTvMi, cdTvTus, type TvEylem } from './CanliDersTv';
 import '../../styles/canli-ders.css';
 
@@ -22,6 +23,7 @@ const GIZLI_KEY = 'medsoru_cd_dock_kucuk_v1';
 const gizliOku = () => { try { return localStorage.getItem(GIZLI_KEY) === '1'; } catch { return false; } };
 
 export default function CanliDersDock({ activeTab, dersKey }: { activeTab: string; dersKey?: string }) {
+  useEffect(() => { cdMotivasyonKur(); }, []);
   const key = useCd((s) => s.key);
   const tam = activeTab === 'canli_ders' && !!dersKey && dersKey === key;
   const ref = useRef<HTMLDivElement>(null);

@@ -1,14 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 96,
-  "baslik": "Soru çözücüde hızlı otomatik çöz",
+  "onem": 97,
+  "baslik": "Sesli derste motivasyon ve mola, daha sade En önemliler",
   "maddeler": [
-    "Soru çözücü ayarlarına 'Otomatik çöz biçimi' eklendi: doğru şıkkı seçip yalnız onun açıklamasını okuyor ve sonraki soruya geçiyor."
+    "Sesli derslerin başında, ortasında ve sonunda ilerleyişine göre değişen kısa teşvik cümleleri (ders ⋯ menüsünden kapatılabilir).",
+    "15–20 dakika kesintisiz dinleyince ders durur; hikâyeli animasyonlu mola penceresi açılır (Zirve, Çalışma, Sevgi ve güç, Zor günler geçer).",
+    "En önemliler sayfası daha sıkı ve okunaklı: tek satır sayaçlar, katlanır ders özeti ve sınav adayları, sık madde listesi."
   ],
   "eklenen": [
-    "Soru çözücü ayarlarına 'Otomatik çöz biçimi' eklendi: doğru şıkkı seçip yalnız onun açıklamasını okuyor ve sonraki soruya geçiyor."
+    "Sesli derslerin başında, ortasında ve sonunda ilerleyişine göre değişen kısa teşvik cümleleri (ders ⋯ menüsünden kapatılabilir).",
+    "15–20 dakika kesintisiz dinleyince ders durur; hikâyeli animasyonlu mola penceresi açılır (Zirve, Çalışma, Sevgi ve güç, Zor günler geçer)."
   ],
-  "degisen": [],
+  "degisen": [
+    "En önemliler sayfası daha sıkı ve okunaklı: tek satır sayaçlar, katlanır ders özeti ve sınav adayları, sık madde listesi."
+  ],
   "duzeltilen": [],
   "silinen": []
 }
