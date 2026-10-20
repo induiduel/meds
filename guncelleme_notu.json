@@ -1,20 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 84,
-  "baslik": "Soru havuzu sıfırlandı",
+  "onem": 85,
+  "baslik": "Sesli derste slaytlar daha hızlı açılıyor",
   "maddeler": [
-    "2026-2027 soru havuzu temizlendi; eski sorular artık cihazlardan geri gelmiyor.",
-    "Sunucu boş havuz döndürünce cihazdaki eski önbellek de silinir."
+    "Sesli derste slaytlar daha hızlı açılıyor: sıradaki anlatılacak slaytlar önceden hazırlanıyor, sayfa değişince beklemeden görünüyor.",
+    "Başka sekmede dinleyip geri döndüğünüzde slaytlar boş kalmadan hemen çiziliyor."
   ],
   "eklenen": [],
   "degisen": [
-    "2026-2027 soru havuzu temizlendi; eski sorular artık cihazlardan geri gelmiyor.",
-    "Sunucu boş havuz döndürünce cihazdaki eski önbellek de silinir."
+    "Sesli derste slaytlar daha hızlı açılıyor: sıradaki anlatılacak slaytlar önceden hazırlanıyor, sayfa değişince beklemeden görünüyor."
   ],
   "duzeltilen": [
-    "Sunucu boş havuz döndürünce cihazdaki eski önbellek de silinir."
+    "Başka sekmede dinleyip geri döndüğünüzde slaytlar boş kalmadan hemen çiziliyor."
   ],
-  "silinen": [
-    "2026-2027 soru havuzu temizlendi; eski sorular artık cihazlardan geri gelmiyor."
-  ]
+  "silinen": []
 }
