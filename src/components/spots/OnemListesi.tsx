@@ -1,4 +1,3 @@
-import { icKonum, icUrl } from '../../siteHaritasi';
 import React, { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Check, ChevronDown, ChevronLeft, ChevronRight, ChevronsDownUp, ChevronsUpDown, Clock, Download, Eye, EyeOff, HelpCircle,
@@ -44,10 +43,10 @@ type OgrSuz = 'hepsi' | 'gizle' | 'yalniz';
 interface Tercih { gizle: boolean; kuralAcik: boolean; siralama: 'puan' | 'slayt'; ogr: OgrSuz }
 const TERCIH0: Tercih = { gizle: false, kuralAcik: true, siralama: 'puan', ogr: 'hepsi' };
 
-const urlOku = (k: string) => { try { return new URLSearchParams(icKonum().search).get(k); } catch { return null; } };
+const urlOku = (k: string) => { try { return new URLSearchParams(location.search).get(k); } catch { return null; } };
 const urlYaz = (p: Record<string, string | null>) => {
   try {
-    const u = icUrl();
+    const u = new URL(location.href);
     for (const [k, v] of Object.entries(p)) { if (v) u.searchParams.set(k, v); else u.searchParams.delete(k); }
     history.replaceState(history.state, '', u.pathname + u.search + u.hash);
   } catch { /* yok */ }
@@ -842,7 +841,7 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
           }}
           onDersAc={(b, k) => {
             if (b !== brans) {
-              const u = icUrl();
+              const u = new URL(location.href);
               u.searchParams.set('brans', b);
               u.searchParams.set('asistan', '1');
               u.searchParams.set('ders', k);
