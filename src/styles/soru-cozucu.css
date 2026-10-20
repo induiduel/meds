@@ -225,8 +225,7 @@
 }
 @media (min-width: 1360px) {
   .sc:not(.is-ogren) :is(.sc-ilerleme, .sc-ust, .sc-alt) { padding-inline: max(20px, calc((100% - 1200px) / 2)); }
-  .sc:not(.is-ogren) .sc-ayar-b { display: none; }
-  .sc:not(.is-ogren) .sc-ayar-p { display: contents; position: static; box-shadow: none; border: 0; padding: 0; background: none; }
+  /* Ayarlar her genişlikte ⚙ açılır kutusunda: satır içine açılınca alt çubuk sağdan taşıyordu */
 }
 @media (max-width: 640px) {
   .sc-ust { grid-template-columns: auto minmax(0, 1fr) auto; padding: 6px 10px; gap: 6px; }
@@ -401,3 +400,18 @@
 .sc-p-yildiz:hover { background: rgba(245, 158, 11, 0.12); color: #f59e0b; transform: scale(1.1); }
 .sc-p-yildiz.is-on { color: #f59e0b; opacity: 1; }
 .sc-cozum-ust { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+
+/* Çok dar telefon (≤380 px): alt çubuk sığsın — hız seçicide hoparlör simgesi gizli, düğmeler 32 px, aralar 4 px */
+@media (max-width: 380px) {
+  .sc-alt { gap: 3px; padding-inline: 4px; }
+  .sc-oynat, .sc-ayar { gap: 4px; }
+  .sc-alt .sc-ikon { width: 32px; height: 32px; }
+  .sc-alt .sc-buyuk { width: 40px; height: 40px; }
+  .sc-alt .sc-sec { padding: 0 2px 0 6px; }
+  .sc-alt .sc-sec > svg { display: none; }
+  .sc-alt .sc-sec select { font-size: 13px; }
+}
+/* Çok dar telefonda üst çubuk: yakınlaştırma gizli (tarayıcı/ayar yazı boyutu yeterli), ders adı görünsün */
+@media (max-width: 380px) {
+  .sc-ust .sc-olcek { display: none; }
+}

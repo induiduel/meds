@@ -920,3 +920,19 @@
   .cd-ders-bas > .cd-ders-arac .cd-sekmeler { flex: 1; display: flex; }
   .cd-ders-bas > .cd-ders-arac .cd-sekmeler button { flex: 1; justify-content: center; }
 }
+
+/* ---------- YouTube tarzı bölüm çubuğu ----------
+ * Her bölüm ayrı parça (genişlik = süresi), aralarında 2 px boşluk; dolu kısım parça parça. Üstüne gelinen parça
+ * kalınlaşır; ipucu imleci izler, çubuğun kenarında taşmaz (sol/sağ sıkıştırılır). */
+.cd-parcalar { display: flex; gap: 2px; width: 100%; height: 5px; align-items: center; }
+.cd-cubuk:not(.is-bolumlu) .cd-parcalar { gap: 0; }
+.cd-parca { position: relative; flex-basis: 0; min-width: 2px; height: 5px; border-radius: 2px; background: color-mix(in srgb, var(--color-ink) 14%, transparent); overflow: hidden;
+  transition: height .12s ease; }
+.cd-parca > i { position: absolute; inset: 0; transform-origin: 0 50%; background: var(--color-accent); will-change: transform; }
+.cd-cubuk.is-bolumlu .cd-parca.is-ustunde { height: 9px; }
+.cd-cubuk.is-bolumlu:hover .cd-parca:not(.is-ustunde) { height: 5px; }
+.cd-cubuk .cd-ipucu { --x: 0; left: clamp(70px, calc(var(--x) * 100%), calc(100% - 70px)); bottom: 24px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 1px;
+  max-width: min(260px, 90%); padding: 5px 9px; text-align: center; box-shadow: 0 6px 16px rgb(0 0 0 / .22); z-index: 3; }
+.cd-cubuk .cd-ipucu b { font-weight: 600; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cd-cubuk .cd-ipucu span { font: 500 11px var(--font-mono, monospace); opacity: .8; }
+@media (prefers-reduced-motion: reduce) { .cd-parca { transition: none; } }

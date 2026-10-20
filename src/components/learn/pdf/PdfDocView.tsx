@@ -44,6 +44,8 @@ export interface PdfDocViewProps {
   query?: string;
   /** Okunan cümlenin slayttaki karşılığı (önceden hizalanmış kutular, sayfa oranı 0–1): satırlar hafif, okunan kelime/resim lazerle */
   marks?: PdfMarks | null;
+  /** Yakında gösterilecek sayfalar (canlı derste sıradaki cümlelerin slaytları): önceden çizilir, atlamada hazırdır */
+  preload?: number[];
   onSearch?: (r: { hits: PdfSearchHit[]; done: boolean } | null) => void;
 }
 
@@ -95,7 +97,7 @@ interface Slot {
   textFor?: number; // metin katmanı kuruldu (döndürme)
 }
 
-export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null }: PdfDocViewProps) {
+export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null, preload }: PdfDocViewProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null);
   const [sizes, setSizes] = useState<{ w: number; h: number }[]>([]);
@@ -133,10 +135,14 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     lastTarget.current = null;
     anchor.current = null;
     const base = `${getCustomApiUrl() || ''}/vendor/pdfjs/`;
+    // Küçük dosya (≤15 MB, boyut akış adresindeki ?v= değerinde): ilk sayfa aralık isteğiyle hemen açılır, kalanı arka
+    // planda iner — sonraki sayfalar ağ gidiş-dönüşü beklemeden çizilir. Büyük dosyada yalnız çizilen sayfaların baytları.
+    let boyut = 0;
+    try { boyut = Number(new URL(src, location.href).searchParams.get('v')) || 0; } catch { /* blob: */ }
     const task = pdfjs.getDocument({
       url: src,
       rangeChunkSize: 512 * 1024,
-      disableAutoFetch: true,
+      disableAutoFetch: !(boyut > 0 && boyut <= 15 * 1024 * 1024),
       disableStream: true,
       isEvalSupported: false,
       standardFontDataUrl: `${base}standard_fonts/`,
@@ -346,13 +352,31 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     for (let i = first; i <= last; i++) renderSlot(i + 1, true);
     if (last + 1 < sz.length) renderSlot(last + 2, false);
     if (first > 0) renderSlot(first, false);
-    for (const n of [...slots.current.keys()]) if (n < first + 1 - KEEP || n > last + 1 + KEEP) evict(n);
+    // Ön çizim: görünenler bittikten sonra sıradaki slaytlar (metin katmanı görünür olunca kurulur)
+    const on = new Set((preloadRef.current || []).filter((n) => n >= 1 && n <= sz.length));
+    for (const n of on) renderSlot(n, false);
+    for (const n of [...slots.current.keys()]) if ((n < first + 1 - KEEP || n > last + 1 + KEEP) && !on.has(n)) evict(n);
   }, [doc, renderSlot]);
 
+  // Kare döngüsü kısılırsa (gömülü pencere, güç tasarrufu) çizim planı 120 ms sonra zamanlayıcıyla yine çalışır
+  const tmo = useRef(0);
   const schedule = useCallback(() => {
     cancelAnimationFrame(raf.current);
-    raf.current = requestAnimationFrame(update);
+    clearTimeout(tmo.current);
+    raf.current = requestAnimationFrame(() => { clearTimeout(tmo.current); update(); });
+    tmo.current = window.setTimeout(() => { cancelAnimationFrame(raf.current); update(); }, 120);
   }, [update]);
+  useEffect(() => () => clearTimeout(tmo.current), []);
+  // Sekmeye dönülünce (arka planda dinlenirken sayfa değişmiş olabilir) hemen yeniden planla
+  useEffect(() => {
+    const f = () => { if (document.visibilityState === 'visible') schedule(); };
+    document.addEventListener('visibilitychange', f);
+    return () => document.removeEventListener('visibilitychange', f);
+  }, [schedule]);
+  const preloadRef = useRef(preload);
+  preloadRef.current = preload;
+  const preloadKey = (preload || []).join(',');
+  useEffect(() => { if (preloadKey) schedule(); }, [preloadKey, schedule]);
 
   // Ölçek/genişlik değişince yeniden çiz (eski tuval yeni çizim bitene dek CSS ile ölçeklenir).
   useEffect(() => {

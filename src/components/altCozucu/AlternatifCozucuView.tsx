@@ -1,3 +1,4 @@
+import { BolumCubugu } from '../ui/BolumCubugu';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
@@ -1367,14 +1368,13 @@ const AlternatifCozucuOynatici: React.FC<OynaticiProps> = ({
           {q && !bitti && (
             <div className="ac-zaman-cubuk">
               <div className="ac-zaman-ust">
-                <input
-                  type="range"
-                  min={0}
-                  max={Math.max(1, sure || q.sure || 1)}
-                  step={0.1}
-                  value={Math.min(anlik, sure || q.sure || 1)}
-                  onChange={(e) => saniyeyeGit(Number(e.target.value), caliyor)}
-                  aria-label="Ses konumu"
+                <BolumCubugu
+                  t={Math.min(anlik, sure || q.sure || 1)}
+                  dur={Math.max(1, sure || q.sure || 1)}
+                  onSeek={(sn) => saniyeyeGit(sn, caliyor)}
+                  bolumler={q.zaman && q.zaman.length >= 12
+                    ? [{ s: 0, ad: 'Soru ve seçenekler' }, ...HARFLER.map((h, k) => ({ s: q.zaman![6 + k], ad: `${h} şıkkı analizi` })), { s: q.zaman[11], ad: 'Doğru cevap ve özet' }]
+                    : []}
                 />
                 <span className="ac-zaman-sure">
                   {sureYazi(anlik)} / {sureYazi(sure || q.sure)}

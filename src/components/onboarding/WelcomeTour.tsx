@@ -5,6 +5,7 @@ import { NAV_ITEMS } from '../shell/navModel';
 import { markTourSeen as markSeen } from './tourState';
 import { useAppearance } from '../../utils/appearance';
 import { TourCardV12, WelcomeFullV12 } from '../v12/OnboardingV12';
+import { groupOf } from '../v13/navGroups';
 import './welcome-tour.css';
 
 /* ------------------------------------------------------------------
@@ -33,9 +34,9 @@ type Stop = {
 
 const href = (r: AppRoute) => `a[href="${ROUTE_PATHS[r]}"]`;
 
-const MORE_BTN = '.sh-tabs button[aria-haspopup="dialog"], .s12-tabs button[aria-haspopup="dialog"]';
+const MORE_BTN = '.sh-tabs button[aria-haspopup="dialog"], .s12-tabs button[aria-haspopup="dialog"], .a13-island button[aria-haspopup="dialog"]';
 /** "Daha" sayfasındaki satır (telefon): tur sayfayı açar, satırı vurgular */
-const moreRow = (r: AppRoute) => `.sh-more a[href="${ROUTE_PATHS[r]}"], .s12-more a[href="${ROUTE_PATHS[r]}"]`;
+const moreRow = (r: AppRoute) => `.sh-more a[href="${ROUTE_PATHS[r]}"], .s12-more a[href="${ROUTE_PATHS[r]}"], .a13-menu a[href="${ROUTE_PATHS[r]}"]`;
 const setMoreSheet = (open: boolean) => window.dispatchEvent(new CustomEvent('medsoru:more', { detail: { open } }));
 
 const STOPS: Stop[] = [
@@ -172,6 +173,28 @@ const STARTS: { route: AppRoute; text: string }[] = [
   { route: 'quick_add', text: 'Hatırladığın soruyu yaz' },
 ];
 
+/** v13 "Ada" kabuğu: sayfalar öbeklerde. Seçiciler sırayla denenir (önce açık paneldeki satır, sonra öbek düğmesi). */
+const isV13 = () => document.documentElement.dataset.v13 === 'on';
+const V13_SIDE: Partial<Record<AppRoute, string[]>> = {
+  search: ['.a13-side .a13-sbtn[aria-label^="Ara"]'],
+  quick_add: ['.a13-side .a13-add'],
+  settings: ['.a13-side .a13-me'],
+};
+const V13_TAB: Partial<Record<AppRoute, string[]>> = {
+  search: ['.a13-top .a13-find'],
+  quick_add: ['.a13-island .a13-tab-add'],
+  settings: [],
+};
+const v13Side = (r: AppRoute) => {
+  const g = groupOf(r);
+  return V13_SIDE[r] || [`.a13-side .a13-panel ${href(r)}`, ...(g ? [`.a13-side .a13-groups [data-g="${g.id}"]`] : [])];
+};
+/** Telefonda yalnız alt adadaki öbekler doğrudan hedeflenir; diğerleri Menü sayfasından (moreRow) */
+const v13Tab = (r: AppRoute) => {
+  const g = groupOf(r);
+  return V13_TAB[r] || (g ? [`.a13-island [data-g="${g.id}"]`] : []);
+};
+
 const visible = (el: Element | null): el is HTMLElement => {
   if (!(el instanceof HTMLElement)) return false;
   const r = el.getBoundingClientRect();
@@ -179,11 +202,19 @@ const visible = (el: Element | null): el is HTMLElement => {
   const cs = getComputedStyle(el);
   return cs.visibility !== 'hidden' && cs.display !== 'none' && Number(cs.opacity) > 0.05;
 };
-const firstVisible = (sel?: string) => {
+const firstVisible = (sel?: string | string[]) => {
   if (!sel) return null;
-  for (const el of Array.from(document.querySelectorAll(sel))) if (visible(el)) return el;
+  for (const one of Array.isArray(sel) ? sel : [sel])
+    for (const el of Array.from(document.querySelectorAll(one))) if (visible(el)) return el;
   return null;
 };
+const moreNoteOf = (s: Stop) => {
+  if (!isV13()) return s.moreNote;
+  const g = groupOf(s.route);
+  return g ? `Telefonda “Menü” sayfasında, ${g.label} bölümünde.` : 'Telefonda “Menü” sayfasında.';
+};
+const sideSel = (s: Stop) => (isV13() ? v13Side(s.route) : s.side);
+const tabSel = (s: Stop) => (isV13() ? v13Tab(s.route) : s.tab);
 
 type Rect = { top: number; left: number; width: number; height: number };
 /** Karartma katmanındaki deliğin yolu (kenar yarıçaplı dikdörtgen); büyük box-shadow yayılımı bazı GPU'larda kırpılıyordu */
@@ -227,7 +258,7 @@ export const WelcomeTour: React.FC<{ name?: string | null; onGo: (r: AppRoute) =
   const measure = useCallback(() => {
     if (phase !== 'tour') return;
     const phone = window.innerWidth < 768;
-    let el = phone ? firstVisible(stop.tab) : firstVisible(stop.side);
+    let el = phone ? firstVisible(tabSel(stop)) : firstVisible(sideSel(stop));
     let more = false;
     if (!el && phone) {
       // Sayfa "Daha" menüsünde: menü açık ve satır çizildiyse satırı, değilse (açılış animasyonu) şimdilik düğmeyi vurgula
@@ -239,7 +270,7 @@ export const WelcomeTour: React.FC<{ name?: string | null; onGo: (r: AppRoute) =
       } else el = firstVisible(MORE_BTN);
       more = !!el;
     }
-    if (!el && !phone) el = firstVisible(stop.tab); // akış/odak modunda kenar menüsü şeritte olabilir
+    if (!el && !phone) el = firstVisible(tabSel(stop)); // akış/odak modunda kenar menüsü şeritte olabilir
     setViaMore(more);
     if (!el) {
       setHole(null);
@@ -267,7 +298,7 @@ export const WelcomeTour: React.FC<{ name?: string | null; onGo: (r: AppRoute) =
   }, [phase, stop]);
 
   // Telefonda hedefi alt sekmelerde olmayan duraklar için "Daha" sayfasını aç; diğerlerinde ve tur bitince kapat
-  const needMore = phase === 'tour' && !firstVisible(stop.tab) && typeof window !== 'undefined' && window.innerWidth < 768;
+  const needMore = phase === 'tour' && !firstVisible(tabSel(stop)) && typeof window !== 'undefined' && window.innerWidth < 768;
   useEffect(() => {
     setMoreSheet(needMore);
     if (!needMore) return;
@@ -451,7 +482,7 @@ export const WelcomeTour: React.FC<{ name?: string | null; onGo: (r: AppRoute) =
           title={stop.title}
           text={stop.text}
           points={stop.points}
-          note={viaMore ? stop.moreNote : undefined}
+          note={viaMore ? moreNoteOf(stop) : undefined}
           onPrev={prev}
           onNext={next}
           onClose={() => finish('skipped')}
@@ -479,7 +510,7 @@ export const WelcomeTour: React.FC<{ name?: string | null; onGo: (r: AppRoute) =
               <li key={p}>{p}</li>
             ))}
           </ul>
-          {viaMore && stop.moreNote && <p className="wt-more-note">{stop.moreNote}</p>}
+          {viaMore && moreNoteOf(stop) && <p className="wt-more-note">{moreNoteOf(stop)}</p>}
         </div>
         <div className="wt-card-f">
           <div className="wt-prog" aria-hidden="true">

@@ -512,6 +512,7 @@ export const TabBarV13: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
           })}
           aria-current={here ? 'page' : undefined}
           className="a13-tab"
+          data-g={id}
         >
           <Icon strokeWidth={here ? 2.1 : 1.8} aria-hidden="true" />
           <span className="a13-tab-l">{label}</span>
@@ -523,6 +524,7 @@ export const TabBarV13: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
         key={id}
         type="button"
         className={`a13-tab ${here ? 'is-here' : ''}`}
+        data-g={id}
         aria-current={here ? 'page' : undefined}
         aria-expanded={pop === id}
         aria-haspopup="menu"

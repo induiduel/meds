@@ -1,18 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 82,
-  "baslik": "Deneme sınavı ve Check Up Kurul 2'ye hazır",
+  "onem": 83,
+  "baslik": "İyileştirmeler ve düzeltmeler",
   "maddeler": [
-    "Deneme sınavı: örnek soru ve Öğren kaynakları her kurul için kullanılabilir (Kurul 2 dersleri yayınlandıkça).",
-    "Patoloji Hızlı Check Up Kurul 2 tabloları dersler denetimden geçtikçe kendiliğinden oluşacak.",
-    "TBG Sınav Kampı artık üç modlu: Hızlı (16 adım), Yavaş (34 adım) ve yeni Tam mod (80 adım, 123 soru).",
-    "Tam mod, Yavaş modun iki katından fazla ayrıntıyla sınavda çıkabilecek her bilgiyi sesli anlatır; her yeni adımda kalıba uygun soru vardır."
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "eklenen": [
-    "TBG Sınav Kampı artık üç modlu: Hızlı (16 adım), Yavaş (34 adım) ve yeni Tam mod (80 adım, 123 soru).",
-    "Tam mod, Yavaş modun iki katından fazla ayrıntıyla sınavda çıkabilecek her bilgiyi sesli anlatır; her yeni adımda kalıba uygun soru vardır."
+  "eklenen": [],
+  "degisen": [
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

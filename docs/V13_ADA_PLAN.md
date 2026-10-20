@@ -24,13 +24,13 @@ v12 korunur, v13 isteğe bağlıdır (açılışta sorulur).
 | 3 | **Ortak katmanlar:** Sheet, Confirm, Toast, Tooltip, ActionMenu, AccountMenu, SearchPalette, Bildirim geçmişi, Tailwind `fixed inset-0` modalları (39 dosya), açılır listeler | ✅ ilk tur (styles/v13/components.css) |
 | 4 | **Tam ekranlar:** Öğren ders oynatıcı (`ls-root`), okuyucular (`r12-root`), sesli ders (`cd-ders`), soru çözücü / alternatif çözücü (`sc`), asistan (`pa`), test (`p12`), kart oturumu | ✅ ilk tur: üst/alt çubuklar yüzen ada (styles/v13/fullscreen.css), alternatif çözücü taşması düzeltildi |
 | 4b | **Yüzen alt kartlar:** alt oynatıcı/çubuklar içerikten alan kesmez; içerik altlarından kayar, kayan alana kart yüksekliği kadar iç boşluk (sesli ders `--cd-ortu`, çözücüler `.sc-alt`, ders oynatıcı `.lv-bottombar`); sesli ders oynatıcısı v13 alt adasının üstüne oturur | ✅ |
-| 5 | Ana sayfalar: Soru ekle, Bugün, Öğren kitaplığı, Çıkmış, Havuz, Test, Kartlar | ⏳ Bugün ✅ (gün planı), Öğren ✅ (dal şeridi, yüzde halkası, ad kırpılmaz), Çıkmış ✅ (iki satır araç, tek satır künye, kaydırılabilir diğer yıllar), Soru ekle hizası ✅ |
+| 5 | Ana sayfalar: Soru ekle, Bugün, Öğren kitaplığı, Çıkmış, Havuz, Test, Kartlar | ✅ Bugün ✅ (gün planı), Öğren ✅ (dal şeridi, yüzde halkası, ad kırpılmaz), Çıkmış ✅ (iki satır araç, tek satır künye, kaydırılabilir diğer yıllar), Soru ekle hizası ✅, Havuz/Test/Kartlar sütun hizası + sakin kaynak kartları + tek satır sekmeler ✅ |
 | 6 | Okuma sayfaları: Notlar, Özetler, Sesli ders listesi, Sözlük, Hastalıklar, Sağlık Bakanlığı, Kazanımlar | ✅ hizalama + sesli ders başı tek satır; Notlar/Özetler/Ses kayıtları geniş ekranda kart ızgarası; Sözlük/Hastalıklar/Kazanımlar iki ada (liste yapışkan, ayrıntı okunur genişlik); Sağlık blokları ada (`styles/v13/wide.css`) |
 | 7 | Sınav sayfaları: Sınav çalışması, En önemliler, Spotlar, Check Up (patoloji/genetik), Olası sorular, Örnek sorular, Geçmiş kurullar | ✅ sütun hizası (dar ortalı kutular kalktı), cx-dock şeridi ada |
 | 8 | Kişisel/topluluk: Profil ve ayarlar, İstatistik, Bitirdiklerim, Çevrimdışı, Çalışma masam, Sıralama, Harita, Müzik, Güncellemeler | ✅ sütun hizası, harita sakin |
-| 9 | Giriş/kayıt, tanıtım turu, giriş uyarısı, hata/boş/yükleniyor durumları | ⏳ |
+| 9 | Giriş/kayıt, tanıtım turu, giriş uyarısı, hata/boş/yükleniyor durumları | ✅ temiz ziyaretçiyle 390/1440 denetlendi (giriş uyarısı, 5 adımlı tanıtım, boş durumlar); taşma yok |
 | 10 | Yönetim konsolu (`/manage` tüm bölümler) | ✅ `styles/v13/manage.css`: menü yüzen ada, üst çubuk tek satır kapsül, telefonda 2 satır araç; 22 bölüm × 390/1440 taşma 0 |
-| 11 | Son tarama: tüm rotalar × 9 boyut × 3 tema; dokunma/adsız düğme/kontrast raporu sıfır | ⏳ |
+| 11 | Son tarama: tüm rotalar × 9 boyut × 3 tema; dokunma/adsız düğme/kontrast raporu sıfır | ✅ 450 görünüm taşma 0, adsız düğme 0; kontrast 36 sayfa×tema: tek bulgu (koyu temada spot istatistik kartı, tanımsız --color-surface → beyaz zemin) düzeltildi; küçük hedef bulguları ::after genişletmeli (aracın bilinen yanlış alarmı) |
 
 Her aşama sonunda: `npx tsc --noEmit`, `npx vite build`, başsız Chrome taraması (`scripts/perf/sayfa_tarama.mjs`, SEED v13),
 gerekiyorsa `scripts/perf/yazma_olcum.mjs` (CSS başarımı). v12 dosyaları değişmez; v13 kuralları `:root[data-v13='on']`
@@ -54,3 +54,5 @@ Yeni sayfada bu kenar dışına taşan ya da içeride kalan kutu hata sayılır.
 
 - Hizalama ölçümü: 30 rota × 1440/390, içerik kutusu kenarı − kapsül kenarı = 0 (Havuz sağ sütunu kutusuz, 10 px). Öğren yüzde halkası geniş ekranda elipsti → daire.
 - Açık: Yönetim konsolu (yönetici oturumu gerekir), Test/deneme kurucu kendi tam ekranında.
+
+- Sesli ders oynatıcısı: YouTube tarzı bölüm çubuğu (parçalı, üstüne gelince bölüm adı + zaman, Shift+ok bölüm atlar).

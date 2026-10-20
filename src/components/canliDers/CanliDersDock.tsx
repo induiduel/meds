@@ -213,12 +213,19 @@ function ZamanCubugu() {
   const zs = useCd((s) => s.zs);
   const detay = useCd((s) => s.detay);
   const [surukle, setSurukle] = useState<number | null>(null);
+  /** İmlecin (fare/kalem) üstünde durduğu zaman; dokunmatikte yalnız sürüklerken dolar */
+  const [uzerinde, setUzerinde] = useState<number | null>(null);
   const ref = useRef<HTMLDivElement>(null);
-  const isaretler = useMemo(() => {
+  /*
+   * YouTube tarzı bölüm çubuğu: her bölüm ayrı bir parça (aralarında boşluk), dolu kısım parça parça ilerler.
+   * Üstüne gelince parça kalınlaşır ve ipucunda "Bölüm k · ad" + zaman görünür; tıklama/sürükleme o ana atlar.
+   */
+  const parcalar = useMemo(() => {
     const b = cdBolumBaslari();
-    return b.map((s, k) => ({ s, ad: detay?.bolumler[k]?.baslik || `Bölüm ${k + 1}` }));
+    if (!dur || b.length < 2) return [{ s: 0, e: dur || 1, ad: '', k: -1 }];
+    return b.map((s, k) => ({ s, e: k + 1 < b.length ? b[k + 1] : dur, ad: detay?.bolumler[k]?.baslik || `Bölüm ${k + 1}`, k }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [zs, detay]);
+  }, [zs, detay, dur]);
   const goster = surukle ?? t;
   const oran = dur > 0 ? Math.min(1, goster / dur) : 0;
 
@@ -233,47 +240,79 @@ function ZamanCubugu() {
     (e.currentTarget as HTMLElement).focus();
     setSurukle(xden(e.clientX));
   };
-  const onMove = (e: React.PointerEvent) => { if (surukle != null) setSurukle(xden(e.clientX)); };
+  const onMove = (e: React.PointerEvent) => {
+    if (!dur) return;
+    const x = xden(e.clientX);
+    if (surukle != null) setSurukle(x);
+    if (e.pointerType !== 'touch') setUzerinde(x);
+  };
   const onUp = (e: React.PointerEvent) => {
     if (surukle == null) return;
     cdAtla(xden(e.clientX));
     setSurukle(null);
   };
+  const bolumIndex = (x: number) => {
+    for (let k = parcalar.length - 1; k >= 0; k--) if (x >= parcalar[k].s) return k;
+    return 0;
+  };
   const onKey = (e: React.KeyboardEvent) => {
+    // Shift + ok: önceki / sonraki bölümün başı (YouTube'daki bölüm atlama)
+    if (e.shiftKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight') && parcalar.length > 1) {
+      e.preventDefault(); e.stopPropagation();
+      const k = bolumIndex(t);
+      const hedef = e.key === 'ArrowRight' ? Math.min(parcalar.length - 1, k + 1) : (t - parcalar[k].s > 3 ? k : Math.max(0, k - 1));
+      cdAtla(parcalar[hedef].s);
+      return;
+    }
     const m: Record<string, number> = { ArrowLeft: -5, ArrowDown: -5, ArrowRight: 5, ArrowUp: 5, PageDown: -60, PageUp: 60 };
     if (e.key in m) { e.preventDefault(); e.stopPropagation(); cdSar(m[e.key]); }
     else if (e.key === 'Home') { e.preventDefault(); cdAtla(0); }
     else if (e.key === 'End') { e.preventDefault(); cdAtla(Math.max(0, dur - 1)); }
   };
-  const bolumAdi = surukle != null ? [...isaretler].reverse().find((x) => x.s <= surukle)?.ad : undefined;
+  const ipucuZaman = surukle ?? uzerinde;
+  const ipucuParca = ipucuZaman != null ? parcalar[bolumIndex(ipucuZaman)] : undefined;
+  const ipucuOran = ipucuZaman != null && dur > 0 ? ipucuZaman / dur : 0;
+  const etkinParca = bolumIndex(goster);
 
   return (
     <div className="cd-zaman">
       <span className="cd-sure">{fmtSure(goster)}</span>
       <div
         ref={ref}
-        className={`cd-cubuk${surukle != null ? ' is-surukle' : ''}`}
+        className={`cd-cubuk${surukle != null ? ' is-surukle' : ''}${parcalar.length > 1 ? ' is-bolumlu' : ''}`}
         role="slider"
         tabIndex={0}
-        aria-label="Konum"
+        aria-label={parcalar.length > 1 ? 'Konum (Shift + ok: bölüm atla)' : 'Konum'}
         aria-valuemin={0}
         aria-valuemax={Math.round(dur)}
         aria-valuenow={Math.round(goster)}
-        aria-valuetext={`${fmtSure(goster)} / ${fmtSure(dur)}`}
+        aria-valuetext={`${fmtSure(goster)} / ${fmtSure(dur)}${parcalar[etkinParca]?.ad ? `, ${parcalar[etkinParca].ad}` : ''}`}
         onPointerDown={onDown}
         onPointerMove={onMove}
+        onPointerLeave={() => setUzerinde(null)}
         onPointerUp={onUp}
-        onPointerCancel={() => setSurukle(null)}
+        onPointerCancel={() => { setSurukle(null); setUzerinde(null); }}
         onKeyDown={onKey}
       >
-        <div className="cd-cubuk-iz">
-          <div className="cd-cubuk-dolu" style={{ transform: `scaleX(${oran})` }} />
-          {dur > 0 && isaretler.map((x, k) => k > 0 && (
-            <span key={k} className="cd-isaret" style={{ left: `${(x.s / dur) * 100}%` }} title={x.ad} />
-          ))}
+        <div className="cd-parcalar">
+          {parcalar.map((p) => {
+            const gen = Math.max(0, p.e - p.s);
+            const dolu = gen > 0 ? Math.min(1, Math.max(0, (goster - p.s) / gen)) : 0;
+            const ustunde = ipucuParca === p && parcalar.length > 1;
+            return (
+              <span key={p.k} className={`cd-parca${ustunde ? ' is-ustunde' : ''}${p.k === parcalar[etkinParca]?.k ? ' is-etkin' : ''}`} style={{ flexGrow: gen || 1 }}>
+                <i style={{ transform: `scaleX(${dolu})` }} />
+              </span>
+            );
+          })}
         </div>
         <span className="cd-tutamac" style={{ left: `${oran * 100}%` }} />
-        {bolumAdi && <span className="cd-ipucu" style={{ left: `${oran * 100}%` }}>{bolumAdi}</span>}
+        {ipucuZaman != null && (
+          <span className="cd-ipucu" style={{ ['--x' as string]: ipucuOran }}>
+            {ipucuParca?.ad && <b>{ipucuParca.k + 1}. {ipucuParca.ad}</b>}
+            <span>{fmtSure(ipucuZaman)}</span>
+          </span>
+        )}
       </div>
       <span className="cd-sure">{fmtSure(dur)}</span>
     </div>

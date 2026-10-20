@@ -87,3 +87,6 @@
   /* ── Hareket azaltma: katman animasyonları kapanır ── */
   &[data-motion='reduced'] :is(.tst, .cf, .cf-root, .sh-sheet, .ms-am-sheet, .ms-search-panel) { animation: none !important; }
 }
+
+/* Tanıtım/kayıt katmanı görünür alan ölçümü eskiyse ekranın altında şerit bırakıyordu (ada uçları görünüyordu) */
+:root[data-design='v12'][data-v13='on'] .e12-ob { min-height: 100dvh; }

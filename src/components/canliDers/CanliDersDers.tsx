@@ -1221,6 +1221,24 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   const hedef = sonHedef.current;
   // Takip sürerken hedef; durunca kullanıcının baktığı yer (sürdürünce yeniden hedefe kayar)
   const gor = durdu && elle ? elle : hedef;
+  // Ön çizim: sıradaki 8 cümlenin slaytları (aynı dosyada) — canlı takip o sayfaya atladığında çizim hazır olur
+  const preload = useMemo(() => {
+    if (!canli || aktif < 0) return undefined;
+    const out: number[] = [];
+    let kalan = 8;
+    for (let i = aktif; i < pdf.paragraflar.length && kalan > 0; i++) {
+      const e = pdf.paragraflar[i];
+      const ix = detay.isaret?.[String(i)];
+      const n = Math.max(1, e?.sayfalar?.length || ix?.length || 1);
+      for (let c = i === aktif ? Math.max(0, cumle) : 0; c < n && kalan > 0; c++, kalan--) {
+        const x = ix?.[c];
+        const d = x ? x.d : (e?.dosyalar?.[c] ?? e?.dosya ?? 0);
+        const sy = x && x.t !== 'sayfa' ? x.s : (e?.sayfalar?.[c] ?? e?.sayfa);
+        if (d === gor.dosya && sy && !out.includes(sy)) out.push(sy);
+      }
+    }
+    return out;
+  }, [canli, aktif, cumle, pdf, detay.isaret, gor.dosya]);
   // Kelime takibi yalnız işaret katmanında (useFocus): görüntüleyici cümle başına bir kez çizilir, kelimede yeniden çizilmez
   const marks = useMemo<PdfMarks | null>(() => {
     if (!canli || durdu || !isr || isr.t === 'sayfa' || isr.d !== gor.dosya) return null;
@@ -1286,6 +1304,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
               highlight={canli && !durdu && es ? [hedef.sayfa, hedef.sayfa] : undefined}
               highlightLabel="Şu an anlatılan"
               marks={marks}
+              preload={preload}
               zoom={zoom}
               onZoom={setZoom}
               onVisiblePage={onVisible}

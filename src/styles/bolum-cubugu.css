@@ -1,0 +1,19 @@
+/* Ortak bölümlü ilerleme çubuğu (components/ui/BolumCubugu.tsx) — yalnız palet token'ları, tüm tasarımlarda */
+.bc { position: relative; flex: 1; min-width: 0; height: 20px; display: flex; align-items: center; cursor: pointer; touch-action: none; border-radius: 6px; }
+.bc:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.bc-parcalar { display: flex; gap: 2px; width: 100%; height: 5px; align-items: center; }
+.bc:not(.is-bolumlu) .bc-parcalar { gap: 0; }
+.bc-parca { position: relative; flex-basis: 0; min-width: 2px; height: 5px; border-radius: 2px; overflow: hidden;
+  background: color-mix(in srgb, var(--color-ink) 14%, transparent); transition: height .12s ease; }
+.bc-parca > i { position: absolute; inset: 0; transform-origin: 0 50%; background: var(--color-accent); will-change: transform; }
+.bc.is-bolumlu .bc-parca.is-ustunde { height: 9px; }
+.bc-tutamac { position: absolute; top: 50%; width: 13px; height: 13px; margin: -6.5px 0 0 -6.5px; border-radius: 50%; background: var(--color-accent);
+  border: 2px solid var(--color-white); box-shadow: 0 1px 3px rgb(0 0 0 / .25); transform: scale(.85); transition: transform .12s; pointer-events: none; }
+.bc:hover .bc-tutamac, .bc.is-surukle .bc-tutamac, .bc:focus-visible .bc-tutamac { transform: scale(1.1); }
+.bc-ipucu { --x: 0; position: absolute; z-index: 3; bottom: 24px; left: clamp(60px, calc(var(--x) * 100%), calc(100% - 60px)); transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 1px; max-width: min(240px, 90%); padding: 5px 9px; border-radius: 8px;
+  background: var(--color-ink); color: var(--color-white); font: 600 11.5px/1.3 var(--font-sans); text-align: center; pointer-events: none;
+  box-shadow: 0 6px 16px rgb(0 0 0 / .22); white-space: nowrap; }
+.bc-ipucu b { font-weight: 600; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+.bc-ipucu span { font: 500 11px var(--font-mono, monospace); opacity: .8; }
+@media (prefers-reduced-motion: reduce) { .bc-parca, .bc-tutamac { transition: none; } }
