@@ -322,7 +322,7 @@ def part_denetle(key: str) -> int:
         print("  HATA", h)
     for u in U:
         print("  uyarı", u)
-    print(f"  PART: {len(H)} HATA, {len(U)} uyarı")
+    print(f"  PART: {hata + len(H)} HATA, {len(U)} uyarı (dosyalar {hata} + part {len(H)})")
     return hata + len(H)
 
 

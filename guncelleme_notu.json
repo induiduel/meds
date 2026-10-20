@@ -1,14 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 150,
-  "baslik": "Düzeltme: En önemliler ve Soru çözücü başlangıç ekranı",
+  "onem": 151,
+  "baslik": "Son Prova: her aşamaya yeni örnek sorular",
   "maddeler": [
-    "En önemliler ve Soru çözücü başlangıç ekranında sayılar artık tek satırda, açıklamalar kısa; 'Kaldığın yerden devam' kartı sade ve okunaklı."
+    "Son Prova'nın 89 aşamasının her birine, o aşamada anlatılanlardan çıkmış üslubunda 2 yeni örnek soru eklendi (toplam 178); aşama biter bitmez sesli asistanla çözülür.",
+    "Yeni sorular bağımsız denetimden geçti; her şık için ne olduğu, ne işe yaradığı ve neden doğru/yanlış olduğu sesli anlatılır."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Son Prova'nın 89 aşamasının her birine, o aşamada anlatılanlardan çıkmış üslubunda 2 yeni örnek soru eklendi (toplam 178); aşama biter bitmez sesli asistanla çözülür.",
+    "Yeni sorular bağımsız denetimden geçti; her şık için ne olduğu, ne işe yaradığı ve neden doğru/yanlış olduğu sesli anlatılır."
+  ],
   "degisen": [],
-  "duzeltilen": [
-    "En önemliler ve Soru çözücü başlangıç ekranında sayılar artık tek satırda, açıklamalar kısa; 'Kaldığın yerden devam' kartı sade ve okunaklı."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
