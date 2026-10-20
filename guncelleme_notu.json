@@ -1,16 +1,22 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 128,
-  "baslik": "Ders süreleri telefonda ve tablette sığıyor",
+  "onem": 129,
+  "baslik": "PDF indirme: sayfa düzeni ve Toplu PDF",
   "maddeler": [
-    "Ders süreleri penceresi telefon ve tablette ekrana tam sığıyor; telefonda alttan açılan sayfa olarak geliyor.",
-    "Liste daha kompakt: her konu tek satır, toplam ve branş başlıkları kaydırırken üstte kalıyor."
+    "PDF indirirken bir yaprağa 2, 4 ya da 8 sayfa yerleştirilebiliyor; yön, sıra, boşluk ve çerçeve seçilebiliyor.",
+    "Etkileşimli derslerde de Toplu PDF ile birden çok dersin metni tek seferde indirilebiliyor.",
+    "Konuşma metninde pH, p53 gibi küçük harfle başlayan terimler artık bozulmuyor."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "PDF indirirken bir yaprağa 2, 4 ya da 8 sayfa yerleştirilebiliyor; yön, sıra, boşluk ve çerçeve seçilebiliyor.",
+    "Etkileşimli derslerde de Toplu PDF ile birden çok dersin metni tek seferde indirilebiliyor.",
+    "Sesli ders videosu dışa aktarılırken ilerleme rozeti görünüyor."
+  ],
   "degisen": [
-    "Ders süreleri penceresi telefon ve tablette ekrana tam sığıyor; telefonda alttan açılan sayfa olarak geliyor.",
-    "Liste daha kompakt: her konu tek satır, toplam ve branş başlıkları kaydırırken üstte kalıyor."
+    "Sayfa düzeni hem tek ders \"Metni dışa aktar\" menüsünde hem Toplu PDF penceresinde var; son seçim hatırlanıyor."
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Konuşma metninde pH, p53 gibi küçük harfle başlayan terimler artık bozulmuyor."
+  ],
   "silinen": []
 }
