@@ -1,0 +1,10 @@
+[Unit]
+Description=MeDSor sesli ders cümle zamanlaması (30 dk)
+
+[Timer]
+OnBootSec=10min
+OnUnitInactiveSec=30min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

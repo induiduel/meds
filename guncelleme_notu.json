@@ -1,10 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 56,
-  "baslik": "Sınav spotları PDF'i daha okunaklı",
+  "onem": 57,
+  "baslik": "Yeni sesli derslerde de cümle takibi",
   "maddeler": [
-    "Sınav spotları PDF'inde ayrıntılar artık iç içe maddelerle (alt kriterler girintili) basılıyor.",
-    "Uzun maddeler alt maddelere bölünüyor; yazıyla sayılar rakamla gösteriliyor."
+    "Yeni eklenen sesli derslerde de okunan cümle sesle birebir eşleşiyor; vurgu kendiliğinden hazırlanıyor."
   ],
   "eklenen": [],
   "degisen": [
