@@ -405,7 +405,8 @@ export async function backupUserDataToDatabase(): Promise<{
       summary: data.summary,
     };
   } catch (err: any) {
-    console.error('[UserDataSync] Backup failed:', err);
+    // Sunucunun hız sınırı (429) bir hata değil; otomatik yedekleme sonra yeniden dener
+    (/Çok sık/.test(String(err?.message)) ? console.warn : console.error)('[UserDataSync] Backup failed:', err?.message || err);
     return { success: false, error: err.message || 'Veritabanı yedekleme hatası' };
   }
 }

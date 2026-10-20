@@ -1,11 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 43,
+  "onem": 44,
   "baslik": "Çevrimdışı mod: dersleri cihaza indir",
   "maddeler": [
     "Yeni Çevrimdışı sayfası: sesli dersler, soru çözücü, en önemliler, alternatif çözücü, etkileşimli dersler ve soruları ders ders indir, güncelle, sil.",
     "İndirilen dersler internet yokken ya da bağlantı yavaşken aynı hızla açılır; sesler cihazdan çalar.",
     "Ders listelerinde indirilen derslerin yanında \"Cihazda\" işareti görünür.",
-    "Çözdüğün sorular ve çalışma süren bağlantı gelince kendiliğinden eşitlenir."
+    "Çözdüğün sorular ve çalışma süren bağlantı gelince kendiliğinden eşitlenir.",
+    "Öğren listesinde PDF düğmesine telefonda dokunmak kolaylaştı."
   ]
 }
