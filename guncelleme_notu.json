@@ -1,17 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 131,
-  "baslik": "Video oluşturma arka planda sürer",
+  "onem": 132,
+  "baslik": "PDF sayfa düzeni telefonda düzgün",
   "maddeler": [
-    "Ders videosu oluşturulurken pencereyi kapatıp başka sayfaya ya da sekmeye geçebilirsin; ilerleme her sayfada üstteki küçük rozette görünür, oradan iptal edebilirsin.",
-    "Telefon ve tablette ders menüsünden açılan pencereler (video oluştur, çevrimdışı, metni dışa aktar) artık alttaki oynatıcının altında kalmıyor."
+    "Toplu PDF penceresindeki sayfa düzeni düğmeleri (Normal / 2 / 4 / 8 sayfa) telefonda artık bölünmeden, simgesi üstte görünüyor."
   ],
-  "eklenen": [
-    "Ders videosu oluşturulurken pencereyi kapatıp başka sayfaya ya da sekmeye geçebilirsin; ilerleme her sayfada üstteki küçük rozette görünür, oradan iptal edebilirsin."
-  ],
+  "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Telefon ve tablette ders menüsünden açılan pencereler (video oluştur, çevrimdışı, metni dışa aktar) artık alttaki oynatıcının altında kalmıyor."
+    "Toplu PDF penceresindeki sayfa düzeni düğmeleri (Normal / 2 / 4 / 8 sayfa) telefonda artık bölünmeden, simgesi üstte görünüyor."
   ],
   "silinen": []
 }
