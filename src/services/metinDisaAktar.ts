@@ -9,7 +9,11 @@
 import { setupPdfFonts } from './drive';
 
 export type AktarBicim = 'txt' | 'md' | 'docx' | 'pdf';
-export interface AktarBolum { baslik: string; alt?: string; md: string }
+export interface AktarBolum {
+  baslik: string; alt?: string; md: string;
+  /** Birleşik belgede (toplu sesli ders PDF'i) yeni dersin ilk bölümü: yeni sayfa + ders başlığı + PDF yer imi */
+  ders?: { baslik: string; alt: string };
+}
 export interface AktarBelge {
   baslik: string; alt: string; bolumler: AktarBolum[];
   /** Sesli ders: PDF'de alt başlık + maddeleri ve ana madde + alt maddeleri tek sayfada tutulur (sayfaya sığdıkça); "1)" maddesi "1 -" yazılır */
@@ -180,10 +184,16 @@ const crc32 = (d: Uint8Array) => { let c = 0xffffffff; for (let i = 0; i < d.len
 /** Sıkıştırmasız (stored) ZIP */
 function zip(dosyalar: Record<string, string>): Blob {
   const enc = new TextEncoder();
+  return zipIkili(Object.entries(dosyalar).map(([ad, icerik]) => [ad, enc.encode(icerik)]), 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+}
+
+/** Sıkıştırmasız (stored) ZIP, ikili içerik (toplu PDF indirme) */
+export function zipIkili(dosyalar: [string, Uint8Array][], tip = 'application/zip'): Blob {
+  const enc = new TextEncoder();
   const parca: Uint8Array[] = [], merkez: Uint8Array[] = [];
   let ofs = 0;
-  for (const [ad, icerik] of Object.entries(dosyalar)) {
-    const a = enc.encode(ad), d = enc.encode(icerik), crc = crc32(d);
+  for (const [ad, d] of dosyalar) {
+    const a = enc.encode(ad), crc = crc32(d);
     const yerel = new DataView(new ArrayBuffer(30));
     yerel.setUint32(0, 0x04034b50, true); yerel.setUint16(4, 20, true); yerel.setUint16(6, 0x0800, true);
     yerel.setUint32(14, crc, true); yerel.setUint32(18, d.length, true); yerel.setUint32(22, d.length, true); yerel.setUint16(26, a.length, true);
@@ -196,9 +206,9 @@ function zip(dosyalar: Record<string, string>): Blob {
   }
   const mBoy = merkez.reduce((s, x) => s + x.length, 0);
   const son = new DataView(new ArrayBuffer(22));
-  const n = Object.keys(dosyalar).length;
+  const n = dosyalar.length;
   son.setUint32(0, 0x06054b50, true); son.setUint16(8, n, true); son.setUint16(10, n, true); son.setUint32(12, mBoy, true); son.setUint32(16, ofs, true);
-  return new Blob([...parca, ...merkez, new Uint8Array(son.buffer)] as BlobPart[], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
+  return new Blob([...parca, ...merkez, new Uint8Array(son.buffer)] as BlobPart[], { type: tip });
 }
 
 /* ---------------- PDF ---------------- */
@@ -366,6 +376,15 @@ async function pdf(b: AktarBelge): Promise<Blob> {
 
   for (const bo of b.bolumler) {
     const blokDizisi = bloklar(bo.md);
+    if (bo.ders) {
+      // Birleşik belge: her ders yeni sayfada, belge başlığı biçiminde; PDF yer imi (içindekiler) eklenir
+      if (y > M + 1) { doc.addPage(); y = M; }
+      akit([{ t: bo.ders.baslik, b: true }], M, CW, 17, INK, undefined, 0);
+      doc.setFont(F, 'normal'); doc.setFontSize(9.5); doc.setTextColor(...SOL);
+      doc.text(T(bo.ders.alt), M, y + 3); y += 5.5;
+      doc.setDrawColor(...CIZGI); doc.setLineWidth(0.3); doc.line(M, y, W - M, y); y += 5;
+      try { (doc as unknown as { outline?: { add: (p: unknown, t: string, o: { pageNumber: number }) => void } }).outline?.add(null, T(bo.ders.baslik), { pageNumber: doc.getNumberOfPages() }); } catch { /* yer imi desteklenmiyor */ }
+    }
     if (bo.baslik) {
       // dersDuzeni: bölüm başlığı slayt alt başlıklarından belirgin büyük
       const BP = b.dersDuzeni ? 15.5 : 13;

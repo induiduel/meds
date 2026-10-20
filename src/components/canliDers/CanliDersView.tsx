@@ -12,6 +12,7 @@ import {
   type CdListeDers, type CdVaryant,
 } from './canliDersStore';
 import CanliDersDers from './CanliDersDers';
+import { TopluPdfDugme } from './CanliDersTopluPdf';
 import { cdListeOzetleri, useCdListe } from './canliDersListe';
 import { ListeEkleDugme, Listem } from './CanliDersListem';
 import { useCdTur } from './useCdTur';
@@ -120,6 +121,7 @@ function CanliDersListe() {
               <Clock aria-hidden /> <span>Süreler</span>
             </button>
             {dersler && <VarsayilanSesSecici dersler={dersler} />}
+            {dersler && !!dersler.length && <TopluPdfDugme dersler={cevrimdisi.liste.length ? cevrimdisi.liste : dersler} />}
           </div>
         </div>
         {kurul && <KurulHapi kurul={kurul} sayi={dersler ? cdKonuSayisi(dersler) : undefined} />}
