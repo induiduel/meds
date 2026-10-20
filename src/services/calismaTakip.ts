@@ -1,3 +1,4 @@
+import { soruSay } from './basarimSayac';
 import { useCallback, useEffect, useRef, useSyncExternalStore } from 'react';
 
 /**
@@ -101,8 +102,10 @@ export function sureEkle(m: TakipModul, konu: string, sn: number) {
   yaz({ k: { ...v.k, [a]: { ...eski, sn: eski.sn + sn, ilkAt: eski.ilkAt || simdi, sonAt: simdi } }, g: { ...v.g, [m]: mg } });
 }
 
-export const soruEkle = (m: TakipModul, konu: string, n = 1) =>
+export const soruEkle = (m: TakipModul, konu: string, n = 1) => {
+  soruSay(undefined, n);
   guncelle(m, konu, (k) => ({ ...k, soru: k.soru + n, sonAt: new Date().toISOString() }));
+};
 
 export const bitir = (m: TakipModul, konu: string) =>
   guncelle(m, konu, (k) => ({ ...k, durum: 'bitti', bittiAt: new Date().toISOString() }));

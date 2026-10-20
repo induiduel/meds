@@ -4,6 +4,7 @@
  * Everything personal lives in localStorage and every access is guarded, so the
  * pages still render when storage is blocked (private mode, cleared site data).
  */
+import { soruSay } from './basarimSayac';
 import { QuestionItem } from '../types';
 import { logActivity } from './activityLog';
 import { ApiService } from './api';
@@ -195,6 +196,7 @@ export const getProgress = () => read<Record<string, AttemptRecord>>(KEYS.progre
 export const recordAttempt = (id: string, picked: OptionKey, correct: boolean) => {
   const all = getProgress();
   all[id] = { picked, correct, at: new Date().toISOString() };
+  soruSay(`st:${id}`);
   write(KEYS.progress, all);
   // Wrong answers go straight to the review list
   if (!correct) setInReview(id, true);

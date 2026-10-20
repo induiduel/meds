@@ -125,6 +125,8 @@ const SaglikView = React.lazy(() => wrapLazy(import('./components/saglik/SaglikV
 const CanliDersView = React.lazy(() => wrapLazy(import('./components/canliDers/CanliDersView')));
 const PatolojiCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/PatolojiCheckUp')));
 const GenetikCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/GenetikCheckUp')));
+const BasarimView = React.lazy(() => wrapLazy(import('./components/basarim/BasarimView')));
+const BasarimKatmani = React.lazy(() => wrapLazy(import('./components/basarim/BasarimKatmani')));
 const BitirdiklerimView = React.lazy(() => wrapLazy(import('./components/takip/BitirdiklerimView')));
 const CevrimdisiView = React.lazy(() => wrapLazy(import('./components/cevrimdisi/CevrimdisiView')));
 const OlasiSorularView = React.lazy(() => wrapLazy(import('./components/olasi/OlasiSorularView')));
@@ -1470,6 +1472,12 @@ export default function App() {
         try { sessionStorage.setItem('medsoru_tanitim_kapatildi', '1'); } catch { /* özel pencere */ }
         setShowOnboarding(false); setIsAuthModalOpen(false);
       }} />}
+      {/* Başarım: dönem/kurul seçimi (girişte zorunlu) + ödül kutlamaları */}
+      {currentUser?.uid && (
+        <Suspense fallback={null}>
+          <BasarimKatmani uid={currentUser.uid} ad={currentUser.displayName} kapali={girisUyarisi} />
+        </Suspense>
+      )}
       {showTour && (
         <Suspense fallback={null}>
           <WelcomeTour name={currentUser?.displayName} onGo={setActiveTab} onClose={() => setShowTour(false)} />
@@ -1901,6 +1909,13 @@ export default function App() {
         {activeTab === 'genetik_checkup' && (
           <Suspense fallback={<ViewFallback />}>
             <GenetikCheckUp />
+          </Suspense>
+        )}
+
+        {/* TAB: /basarimlar — hedefler, başarımlar, ATP ve kilitler */}
+        {activeTab === 'basarimlar' && (
+          <Suspense fallback={<ViewFallback />}>
+            <BasarimView />
           </Suspense>
         )}
 

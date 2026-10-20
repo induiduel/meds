@@ -39,6 +39,17 @@ function isOurApi(input: RequestInfo | URL): boolean {
   return apiOrigins().has(u.origin);
 }
 
+/**
+ * Öğrenci jetonu (2026-10-20, başarım): giriş yapmış her öğrencinin yazma istekleri (POST/PUT/PATCH/DELETE) ve
+ * /api/basarim/* istekleri de jeton taşır; sunucu topluluk eylemlerini (soru, yorum, beğeni …) doğrulanmış kişiye yazar.
+ */
+function ogrenciJetonu(input: RequestInfo | URL, init?: RequestInit): boolean {
+  const m = String(init?.method || (typeof Request !== 'undefined' && input instanceof Request ? input.method : 'GET')).toUpperCase();
+  if (m !== 'GET' && m !== 'HEAD') return true;
+  const raw = typeof input === 'string' ? input : input instanceof URL ? input.href : (input as Request).url;
+  try { return new URL(raw, window.location.href).pathname.startsWith('/api/basarim/'); } catch { return false; }
+}
+
 let installed = false;
 
 export function installAdminFetchAuth() {
@@ -50,7 +61,7 @@ export function installAdminFetchAuth() {
       if (isOurApi(input)) {
         const { auth } = await import('./auth');
         const user = auth?.currentUser;
-        if (user && String(user.email || '').toLowerCase() === ADMIN) {
+        if (user && (String(user.email || '').toLowerCase() === ADMIN || ogrenciJetonu(input, init))) {
           const base = init?.headers ?? (typeof Request !== 'undefined' && input instanceof Request ? input.headers : undefined);
           const headers = new Headers(base);
           if (!headers.has('Authorization')) {

@@ -1,4 +1,5 @@
 import {
+  Medal,
   Activity,
   Archive,
   History,
@@ -89,10 +90,11 @@ const I: Record<string, NavItem> = {
   kazanimlar: { id: 'kazanimlar', label: 'Kazanımlar', hint: 'Müfredat ve kazanım haritası', icon: Compass, tint: '#00A79D' },
   // Topluluk
   matrix: { id: 'matrix', label: 'Soru haritası', short: 'Harita', hint: 'Havuzda 1–100 soru doluluğu', icon: LayoutGrid, tint: '#64748B' },
-  leaderboard: { id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy, tint: '#FFB340' },
+  leaderboard: { id: 'leaderboard', label: 'Sıralama', hint: 'Dönemindeki haftalık ve kurul sıralaması', icon: Trophy, tint: '#FFB340' },
   // Kişisel
   study: { id: 'study', label: 'Çalışma masam', short: 'Masam', tile: 'Çalışma masam', hint: 'Kendi listelerin, notların, hızlı test', icon: ListChecks, tint: '#34C759' },
   cevrimdisi: { id: 'cevrimdisi', label: 'Çevrimdışı', short: 'Çevrimdışı', tile: 'Çevrimdışı', hint: 'Dersleri cihaza indir, internetsiz çalış; indirilenleri yönet', icon: CloudDownload, tint: '#0A84FF' },
+  basarimlar: { id: 'basarimlar', label: 'Başarımlar', short: 'Başarım', tile: 'Başarımlar', hint: 'Günlük, haftalık, kurul hedefleri; başarımlar, puan ve ATP', icon: Medal, tint: '#FF9F0A' },
   bitirdiklerim: { id: 'bitirdiklerim', label: 'Bitirdiklerim', short: 'Bitenler', tile: 'Bitirdiklerim', hint: 'Konu konu bitenler, harcanan süre, kalanların tahmini', icon: CircleCheckBig, tint: '#30D158' },
   stats: { id: 'stats', label: 'İstatistiklerim', short: 'İstatistik', tile: 'İstatistik', hint: 'İlerleme, puan ve etkinlik', icon: BarChart3, tint: '#5E5CE6' },
   music: { id: 'music', label: 'Müzik', hint: 'Çalışırken dinle', icon: Music, tint: '#FF375F' },
@@ -114,7 +116,7 @@ export const NAV_TREE: NavGroup[] = [
   { label: 'Sınava hazırlan', items: [I.sinav_calisma, I.soru_cozucu, I.alternatif_cozucu, I.en_onemliler, I.kamp, I.patoloji_checkup, I.genetik_checkup, I.spots] },
   { label: 'Soru çöz', items: [I.past_exams, I.questions, I.practice, I.ornek_sorular, I.olasi_sorular] },
   { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar, I.gecmis_kurullar, I.guncellemeler] },
-  { label: 'Topluluk', items: [I.matrix, I.leaderboard] },
+  { label: 'Topluluk', items: [I.basarimlar, I.leaderboard, I.matrix] },
   { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music] },
 ];
 
@@ -135,7 +137,7 @@ const V12_RAIL_IDS = new Set<AppRoute>([
   'sinav_calisma', 'soru_cozucu', 'alternatif_cozucu', 'en_onemliler', 'kamp', 'patoloji_checkup', 'genetik_checkup', 'spots',
   'past_exams', 'questions', 'practice', 'olasi_sorular',
   'glossary', 'diseases',
-  'bitirdiklerim', 'cevrimdisi',
+  'bitirdiklerim', 'cevrimdisi', 'basarimlar',
 ]);
 const grupSuz = (keep: (it: NavItem) => boolean): NavGroup[] =>
   NAV_TREE.map((g) => ({ ...g, items: g.items.filter(keep) })).filter((g) => g.items.length > 0);

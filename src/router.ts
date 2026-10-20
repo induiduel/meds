@@ -7,7 +7,8 @@
  *   /sorular     → soru havuzu
  *   /cikmis      → çıkmış sorular
  *   /calis       → study hub, /test → focused test mode
- *   /siralama    → leaderboard
+ *   /siralama    → leaderboard (başarım puanı, dönem içinde)
+ *   /basarimlar  → hedefler (günlük/haftalık/kurul), başarımlar, ATP ve kilitler (?s=)
  *   /yonetim     → admin panel (admins only)
  *   /ara/<sorgu> → tüm veri setlerinde arama sonuçları
  *   /manage      → yönetim konsolu (manage.nofrostlife.com.tr ile aynı ekran)
@@ -65,6 +66,7 @@ export type AppRoute =
   | 'patoloji_checkup'
   | 'genetik_checkup'
   | 'bitirdiklerim'
+  | 'basarimlar'
   | 'cevrimdisi'
   | 'olasi_sorular'
   | 'gecmis_kurullar'
@@ -110,6 +112,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   patoloji_checkup: '/patoloji-check-up',
   genetik_checkup: '/genetik-check-up',
   bitirdiklerim: '/bitirdiklerim',
+  basarimlar: '/basarimlar',
   cevrimdisi: '/cevrimdisi',
   olasi_sorular: '/olasi-sorular',
   gecmis_kurullar: '/gecmis-kurullar',
@@ -156,6 +159,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   patoloji_checkup: 'Patoloji Hızlı Check Up',
   genetik_checkup: 'TBG Sınav Kampı',
   bitirdiklerim: 'Bitirdiklerim',
+  basarimlar: 'Başarımlar',
   cevrimdisi: 'Çevrimdışı',
   olasi_sorular: 'Olası sorular',
   gecmis_kurullar: 'Geçmiş kurullar',
@@ -263,6 +267,10 @@ const ALIASES: Record<string, AppRoute> = {
   tbg: 'genetik_checkup',
   'genetik-kampi': 'genetik_checkup',
   bitirdiklerim: 'bitirdiklerim',
+  basarimlar: 'basarimlar',
+  basarim: 'basarimlar',
+  hedefler: 'basarimlar',
+  atp: 'basarimlar',
   bitirdiklerimiz: 'bitirdiklerim',
   ilerlemem: 'bitirdiklerim',
   'kontrol-listesi': 'bitirdiklerim',

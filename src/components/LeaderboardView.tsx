@@ -1,16 +1,15 @@
-import React, { useState, useMemo, useLayoutEffect, useRef } from 'react';
+import React, { useEffect, useState, useMemo, useLayoutEffect, useRef } from 'react';
 import { Segmented } from './ui/kit';
 import { PageHeader } from './ui/PageHeader';
 import '../styles/v12/secondary.css';
 import { EmptySearch } from './ui/Animations';
-import {
-  ChevronDown,
-  Sparkles,
-  Search,
-} from 'lucide-react';
+import { Award, ChevronDown, Search } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
 import { AppUser } from '../services/auth';
-import { computeContributorStats } from '../utils/contributionScore';
+import { siralamaGetir, useBasarim, type SiraSatir } from '../services/basarimIstemci';
+import { AtpIkon } from './basarim/ortak';
+import { navigateTo, pathFor } from '../router';
+import '../styles/basarim.css';
 
 interface LeaderboardViewProps {
   questions: QuestionItem[];
@@ -22,44 +21,39 @@ interface LeaderboardViewProps {
 }
 
 
-export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
-  questions,
-  committees,
-  selectedCommitteeId,
-  onSelectCommittee,
-  currentUser,
-  onOpenContributeModal,
-}) => {
-  const [filterScope, setFilterScope] = useState<'current' | 'all'>('current');
+/**
+ * Sıralama (/siralama): sunucudaki başarım puanı (services/basarim) — dönem içinde Bu hafta / Bu kurul / Tüm zamanlar.
+ * Puan çalışma süresi, çözülen soru, bitirilen ders, hedef/başarım ödülleri ve topluluk katkılarından gelir.
+ * Haftalık ve kurul sonu ilk 5'e ATP verilir (rozetlerle gösterilir). Unvan ve çerçeve kilit mağazasından gelir.
+ */
+type Kapsam = 'hafta' | 'kurul' | 'tum';
+export const LeaderboardView: React.FC<LeaderboardViewProps> = ({ currentUser }) => {
+  const { durum, tanim } = useBasarim();
+  const [kapsam, setKapsam] = useState<Kapsam>('hafta');
+  const [donem, setDonem] = useState<number | null>(null);
+  const [veri, setVeri] = useState<{ donem: number; pencere: { ad: string; bas: string; son: string }; satir: SiraSatir[]; atpOdul: number[] } | null>(null);
+  const [hata, setHata] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
   const listRef = useRef<HTMLOListElement>(null);
   const lastPos = useRef<Map<string, number>>(new Map());
+  const etkinDonem = donem || durum?.profil.donem || 3;
 
-  const currentCommittee = committees.find((c) => c.id === selectedCommitteeId);
+  useEffect(() => {
+    let canli = true;
+    const al = () => siralamaGetir(kapsam, etkinDonem).then((v) => { if (canli) { setVeri(v); setHata(''); } }, (e) => canli && setHata(e.message));
+    void al();
+    const t = window.setInterval(() => { if (document.visibilityState === 'visible') void al(); }, 60_000);
+    return () => { canli = false; window.clearInterval(t); };
+  }, [kapsam, etkinDonem, durum?.puan.toplam]);
 
-  // Compute leaderboard from questions based on filterScope
-  const leaderboard = useMemo(() => {
-    const relevantQuestions = filterScope === 'current'
-      ? questions.filter((q) => q.committeeId === selectedCommitteeId)
-      : questions;
-
-    return computeContributorStats(relevantQuestions, currentUser, { includeSamplePassive: true });
-  }, [questions, selectedCommitteeId, filterScope, currentUser]);
-
+  const leaderboard = veri?.satir || [];
   const filteredLeaderboard = useMemo(() => {
     if (!searchTerm.trim()) return leaderboard;
-    const term = searchTerm.toLowerCase();
-    return leaderboard.filter(
-      (item) =>
-        item.name.toLowerCase().includes(term) ||
-        (item.studentNumber && item.studentNumber.includes(term))
-    );
+    const term = searchTerm.toLocaleLowerCase('tr-TR');
+    return leaderboard.filter((item) => item.ad.toLocaleLowerCase('tr-TR').includes(term));
   }, [leaderboard, searchTerm]);
-
   const top3 = leaderboard.slice(0, 3);
-
-  const me = leaderboard.find((x) => x.isCurrentUser);
-  const myRank = me ? leaderboard.indexOf(me) + 1 : 0;
+  const me = leaderboard.find((x) => x.ben);
 
   // Canlı sıralama: sıra değişince satırlar eski yerinden yenisine kayar (FLIP)
   useLayoutEffect(() => {
@@ -78,74 +72,69 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
     });
     lastPos.current = next;
   });
-  const maxPoints = Math.max(1, leaderboard[0]?.totalPoints || 1);
+  const maxPoints = Math.max(1, leaderboard[0]?.puan || 1);
   const initials = (name: string) =>
-    name
-      .split(/[^\p{L}\p{N}]+/u)
-      .filter(Boolean)
-      .slice(0, 2)
-      .map((w) => w[0])
-      .join('')
-      .toLocaleUpperCase('tr-TR') || '?';
+    name.split(/[^\p{L}\p{N}]+/u).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toLocaleUpperCase('tr-TR') || '?';
+  const esik = kapsam === 'hafta' ? tanim.atp.siralamaEsikPuan.hafta : kapsam === 'kurul' ? tanim.atp.siralamaEsikPuan.kurul : 0;
+  const atpRozet = (sira: number, puan: number) => {
+    const a = veri?.atpOdul?.[sira - 1];
+    return a && puan >= esik ? <span className="lbx-atp" title={`Dönem sonunda ${a} mol ATP`}><AtpIkon boyut={10} />{a}</span> : null;
+  };
+  const cerceve = (c?: string) => (c ? ` bs-cerceve ${c}` : '');
 
   return (
     <div className="ds-page o12-page o12-lb">
       <PageHeader
         title="Sıralama"
         stats={[
-          { label: 'katkıcı', value: leaderboard.length },
-          ...(me ? [{ label: 'senin sıran', value: `${myRank}.`, tone: 'accent' as const }] : []),
+          { label: 'kişi', value: leaderboard.length },
+          ...(me ? [{ label: 'senin sıran', value: `${me.sira}.`, tone: 'accent' as const }] : []),
         ]}
-        description="Soru kökü +10 · şık +5 · aldığın her beğeni +2 puan."
+        description={`${etkinDonem}. Dönem · ${veri?.pencere.ad || ''}. Puan çalışma, soru, bitirilen ders, hedef ve katkılardan gelir; ${kapsam === 'tum' ? 'haftalık ve kurul sonu ilk 5 ATP kazanır' : `ilk 5 ATP kazanır (en az ${esik.toLocaleString('tr-TR')} puan)`}.`}
         actions={
-          <button type="button" onClick={onOpenContributeModal} className="ms-btn is-primary">
-            <Sparkles aria-hidden />
-            Katkı yap
+          <button type="button" onClick={() => navigateTo(pathFor('basarimlar'))} className="ms-btn is-primary">
+            <Award aria-hidden />
+            Başarımlarım
           </button>
         }
       />
 
-      {/* Kapsam + kurul */}
       <div className="ds-toolbar">
-        {(
-          <Segmented<'current' | 'all'>
-            className="lb-scope"
-            label="Kapsam"
-            value={filterScope}
-            onChange={setFilterScope}
-            options={[{ value: 'current', label: 'Bu kurul' }, { value: 'all', label: 'Tüm kurullar' }]}
-          />
-        )}
-        {filterScope === 'current' && (
-          <label className="ds-select is-wide">
-            <span>Kurul</span>
-            <select value={selectedCommitteeId} onChange={(e) => onSelectCommittee(e.target.value)} aria-label="Kurul">
-              {committees.map((c) => (
-                <option key={c.id} value={c.id} title={c.name}>{committeeLabel(c)}</option>
-              ))}
-            </select>
-            <ChevronDown aria-hidden />
-          </label>
-        )}
+        <Segmented<Kapsam>
+          className="lb-scope"
+          label="Kapsam"
+          value={kapsam}
+          onChange={setKapsam}
+          options={[{ value: 'hafta', label: 'Bu hafta' }, { value: 'kurul', label: 'Bu kurul' }, { value: 'tum', label: 'Tüm zamanlar' }]}
+        />
+        <label className="ds-select">
+          <span>Dönem</span>
+          <select value={etkinDonem} onChange={(e) => setDonem(Number(e.target.value))} aria-label="Dönem">
+            {[1, 2, 3, 4, 5, 6].map((d) => <option key={d} value={d}>{d}. Dönem</option>)}
+          </select>
+          <ChevronDown aria-hidden />
+        </label>
       </div>
+      {hata && <p className="lbx-hata" role="status">{hata}</p>}
 
-      {/* İlk üç: basamaklı podyum (canvas "Leaderboard"; renkler tasarım sistemi tokenlarından) */}
-      {top3.some((t) => t.totalPoints > 0) && (
+      {top3.some((t) => t.puan > 0) && (
         <ol className="lbx-podium" aria-label="İlk üç">
           {[1, 0, 2].map((i) => {
             const item = top3[i];
             if (!item) return <li key={i} className="lbx-col is-empty" aria-hidden />;
-            const photo = item.isCurrentUser ? currentUser?.photoURL : null;
+            const photo = item.ben ? currentUser?.photoURL : null;
             return (
-              <li key={item.id} className={`lbx-col t${i + 1} ${item.isCurrentUser ? 'is-me' : ''}`}>
+              <li key={`${item.sira}-${item.ad}`} className={`lbx-col t${i + 1} ${item.ben ? 'is-me' : ''}`}>
                 <span className="lbx-who">
                   {i === 0 && <CrownIcon className="lbx-crown" />}
-                  <span className="lbx-av">{photo ? <img src={photo} alt="" /> : initials(item.name)}</span>
-                  <b>{item.name}</b>
+                  <span className={`lbx-av${cerceve(item.cerceve)}`}>{photo ? <img src={photo} alt="" /> : initials(item.ad)}</span>
+                  <b>{item.ad}</b>
+                  {item.unvan && <span className="lbx-unvan">{item.unvan}</span>}
                 </span>
                 <span className="lbx-step">
                   <span className="lbx-rk">{i + 1}</span>
-                  <span className="lbx-pt">{item.totalPoints} puan</span>
+                  <span className="lbx-pt">{item.puan.toLocaleString('tr-TR')} puan</span>
+                  {kapsam !== 'tum' && atpRozet(i + 1, item.puan)}
                 </span>
               </li>
             );
@@ -153,33 +142,31 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
         </ol>
       )}
 
-      {/* Tam liste */}
       <section className="lbx-list" aria-label="Sıralama listesi">
         <label className="lbx-search">
           <Search aria-hidden />
-          <input type="search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Rumuz ya da öğrenci no ara" aria-label="Katkıcı ara" />
+          <input type="search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Rumuz ara" aria-label="Kişi ara" />
           <span className="lbx-count">{filteredLeaderboard.length} kişi</span>
         </label>
-        <div className="lbx-row is-head" aria-hidden><span>SIRA</span><span /><span>KİŞİ</span><span>KATKI</span><span>PUAN</span></div>
-        {filteredLeaderboard.length === 0 ? (
-          <div className="ds-empty"><EmptySearch size={56} /><b>Aramaya uyan katkıcı yok</b></div>
+        <div className="lbx-row is-head" aria-hidden><span>SIRA</span><span /><span>KİŞİ</span><span>PUAN</span><span /></div>
+        {!veri && !hata ? (
+          <div className="ds-empty"><b>Yükleniyor…</b></div>
+        ) : filteredLeaderboard.length === 0 ? (
+          <div className="ds-empty"><EmptySearch size={56} /><b>{searchTerm ? 'Aramaya uyan kişi yok' : 'Bu dönemde henüz puan alan yok'}</b></div>
         ) : (
           <ol className="lbx-rows" ref={listRef}>
-            {filteredLeaderboard.map((item) => {
-              const rank = leaderboard.indexOf(item) + 1;
-              return (
-                <li key={item.id} data-id={item.id} className={`lbx-row ${item.isCurrentUser ? 'is-me' : ''}`}>
-                  <span className={`lbx-rank ${rank <= 3 ? `t${rank}` : ''}`}>{rank}</span>
-                  <span className="lbx-av is-sm">{item.isCurrentUser && currentUser?.photoURL ? <img src={currentUser.photoURL} alt="" /> : initials(item.name)}</span>
-                  <span className="lbx-name">
-                    <b>{item.name}{item.isCurrentUser && <span className="lbx-me">Sen</span>}</b>
-                    <span>{item.questionsCount} soru · {item.optionsCount} şık · {item.upvotesCount} beğeni</span>
-                  </span>
-                  <span className="lbx-bar" aria-hidden><i style={{ width: `${Math.max(item.totalPoints > 0 ? 3 : 0, (item.totalPoints / maxPoints) * 100)}%` }} /></span>
-                  <span className="lbx-pts">{item.totalPoints}</span>
-                </li>
-              );
-            })}
+            {filteredLeaderboard.map((item) => (
+              <li key={`${item.sira}-${item.ad}`} data-id={`${item.ad}`} className={`lbx-row ${item.ben ? 'is-me' : ''}`}>
+                <span className={`lbx-rank ${item.sira <= 3 ? `t${item.sira}` : ''}`}>{item.sira}</span>
+                <span className={`lbx-av is-sm${cerceve(item.cerceve)}`}>{item.ben && currentUser?.photoURL ? <img src={currentUser.photoURL} alt="" /> : initials(item.ad)}</span>
+                <span className="lbx-name">
+                  <b>{item.ad}{item.ben && <span className="lbx-me">Sen</span>}</b>
+                  <span>{item.unvan ? `${item.unvan} · ` : ''}{item.basarim} başarım seviyesi{kapsam !== 'tum' && item.sira <= 5 ? ' · ' : ''}{kapsam !== 'tum' && item.sira <= 5 && atpRozet(item.sira, item.puan)}</span>
+                </span>
+                <span className="lbx-bar" aria-hidden><i style={{ width: `${Math.max(item.puan > 0 ? 3 : 0, (item.puan / maxPoints) * 100)}%` }} /></span>
+                <span className="lbx-pts">{item.puan.toLocaleString('tr-TR')}</span>
+              </li>
+            ))}
           </ol>
         )}
       </section>

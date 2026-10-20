@@ -168,6 +168,8 @@ import { registerServiceControlRoutes } from './src/services/serviceControlRoute
 import { registerModerationActionRoutes } from './src/services/moderationActionsRoutes.ts';
 import { createModeratorAccess, moderatorOf } from './src/services/moderatorAccess.ts';
 import { registerHatActionRoutes } from './src/services/hatActionsRoutes.ts';
+import { createBasarimMotor } from './src/services/basarim/basarimMotor.ts';
+import { registerBasarimRoutes } from './src/services/basarim/basarimRoutes.ts';
 import { registerUserDataBackupRoutes, userEventHash, type ServerUserNotification } from './src/services/userDataBackupService.ts';
 import { registerPeopleInsights } from './src/services/peopleInsights.ts';
 import { initContentOverlay, resolveContent, writableContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
@@ -362,6 +364,29 @@ app.use(express.json({ limit: '100mb' }));
 configureAdminAuthLog(path.resolve(__dirname, 'data'));
 app.use(adminAuthMiddleware('nofrostlife@gmail.com'));
 app.use(express.urlencoded({ extended: true, limit: '100mb' }));
+
+// Başarım: puan + ATP, hedefler, başarımlar, sıralama (src/services/basarim; kurallar src/data/basarim/tanim.json).
+// Topluluk eylemi ara katmanı rotalardan önce kurulur; profil yedeği kaydedilince kişi yeniden değerlendirilir.
+const basarimMotor = createBasarimMotor({
+  dataDir: path.resolve(__dirname, 'data'),
+  srcDir: path.resolve(__dirname, 'src'),
+  okuYedek: (uid) => {
+    try {
+      const f = path.join(__dirname, 'data', 'user_backups', `${crypto.createHash('sha256').update(uid.trim().toLowerCase()).digest('hex').slice(0, 40)}.json`);
+      return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null;
+    } catch { return null; }
+  },
+});
+const basarimHaber = (uid: string) => { try { broadcastRealtimeEvent('basarim_changed', { who: userEventHash(uid), at: Date.now() }); } catch { /* açılış */ } };
+registerBasarimRoutes(app, basarimMotor, { requireAdmin, onDegisti: basarimHaber });
+const basarimBekleyen = new Map<string, NodeJS.Timeout>();
+const basarimYedekSonrasi = (uid: string) => {
+  clearTimeout(basarimBekleyen.get(uid));
+  basarimBekleyen.set(uid, setTimeout(() => {
+    basarimBekleyen.delete(uid);
+    try { basarimMotor.yenidenDegerlendir(uid); basarimHaber(uid); } catch (e: any) { console.warn('[basarim] değerlendirme:', e?.message); }
+  }, 20_000));
+};
 
 // Enable CORS for all origins (canlı alan adı ve tünel erişimi)
 app.use((req, res, next) => {
@@ -6956,6 +6981,7 @@ const userDataRoutes = registerUserDataBackupRoutes(app, {
   onSaved: ({ uid, email, verified, bundle, origin }) => {
     broadcastRealtimeEvent('user_data_changed', { who: userEventHash(uid), origin, at: Date.now() });
     peopleInsights.onProfileSaved(uid);
+    if (verified) basarimYedekSonrasi(uid);
     if (!pgOnline) return;
     void (async () => {
       try {

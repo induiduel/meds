@@ -1,20 +1,23 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 136,
-  "baslik": "TBG Sınav Kampı yenilendi: aşama aşama sesli ders",
+  "onem": 137,
+  "baslik": "Başarımlar geldi: hedefler, puan ve ATP",
   "maddeler": [
-    "TBG Sınav Kampı artık sesli ders ekranıyla açılıyor: 6 genetik dersinin tamamı, hocanın kalıbına göre 10 aşamada (~70 dk, EMA sesi).",
-    "Okunan cümle ve kelime metinde vurgulanır; ilgili dersin slaytı yanda kendiliğinden açılır ve okunan satır işaretlenir.",
-    "Aşama çubuğuyla istediğin aşamaya geç; ses de oraya atlar. Yazı boyutu, metin/slayt düzeni, hız, bölümler, PDF çıktısı ve çevrimdışı indirme sesli dersteki gibi.",
-    "Soru çözerek, Kalıp kartları ve Deneme artık ayrı sayfalar; içerik çıkmışlarla ve hocanın tüyosuyla genişletildi."
+    "Yeni Başarımlar sayfası: günlük, haftalık ve kurul hedefleri seviye seviye; her seviye puan, üst seviyeler ATP kazandırır.",
+    "Kalıcı başarımlar: Kitap Kurdu, Soru Canavarı, Ders Avcısı, Kopmayan Zincir ve daha fazlası; tüm kurullar boyunca birikir.",
+    "Herkese başlangıçta 100 mol ATP. ATP ile unvan, çerçeve ve kutlama efekti kilitleri açılır; günde en çok 100 mol kazanılır.",
+    "Sıralama artık dönemine göre: bu hafta, bu kurul ve tüm zamanlar. Haftalık ve kurul sonu ilk 5'e ATP hediye edilir.",
+    "İlk girişte dönemini ve kurulunu seçersin; ödül kazanınca kutlama ekranı çıkar."
   ],
   "eklenen": [
-    "TBG Sınav Kampı artık sesli ders ekranıyla açılıyor: 6 genetik dersinin tamamı, hocanın kalıbına göre 10 aşamada (~70 dk, EMA sesi).",
-    "Okunan cümle ve kelime metinde vurgulanır; ilgili dersin slaytı yanda kendiliğinden açılır ve okunan satır işaretlenir.",
-    "Aşama çubuğuyla istediğin aşamaya geç; ses de oraya atlar. Yazı boyutu, metin/slayt düzeni, hız, bölümler, PDF çıktısı ve çevrimdışı indirme sesli dersteki gibi."
+    "Yeni Başarımlar sayfası: günlük, haftalık ve kurul hedefleri seviye seviye; her seviye puan, üst seviyeler ATP kazandırır.",
+    "Kalıcı başarımlar: Kitap Kurdu, Soru Canavarı, Ders Avcısı, Kopmayan Zincir ve daha fazlası; tüm kurullar boyunca birikir.",
+    "Herkese başlangıçta 100 mol ATP. ATP ile unvan, çerçeve ve kutlama efekti kilitleri açılır; günde en çok 100 mol kazanılır.",
+    "Sıralama artık dönemine göre: bu hafta, bu kurul ve tüm zamanlar. Haftalık ve kurul sonu ilk 5'e ATP hediye edilir.",
+    "İlk girişte dönemini ve kurulunu seçersin; ödül kazanınca kutlama ekranı çıkar."
   ],
   "degisen": [
-    "Soru çözerek, Kalıp kartları ve Deneme artık ayrı sayfalar; içerik çıkmışlarla ve hocanın tüyosuyla genişletildi."
+    "Sıralama puanı artık çalışma süresi, çözülen soru, bitirilen ders ve katkılardan hesaplanır."
   ],
   "duzeltilen": [],
   "silinen": []
