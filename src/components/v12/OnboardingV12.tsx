@@ -154,9 +154,11 @@ export interface OnboardingV12Props {
   onTouchEnd: (e: React.TouchEvent) => void;
   /** Son adımdaki gömülü giriş / kayıt kartı */
   auth: React.ReactNode;
+  /** Tanıtımı (kayıt ekranı dahil) kapatır */
+  onClose?: () => void;
 }
 
-export const OnboardingV12: React.FC<OnboardingV12Props> = ({ steps, step, dir, go, onTouchStart, onTouchEnd, auth }) => {
+export const OnboardingV12: React.FC<OnboardingV12Props> = ({ steps, step, dir, go, onTouchStart, onTouchEnd, auth, onClose }) => {
   const last = steps.length - 1;
   const isAuth = step === last;
   const s = steps[step];
@@ -190,6 +192,11 @@ export const OnboardingV12: React.FC<OnboardingV12Props> = ({ steps, step, dir, 
                 </button>
                 <span className="e12-grow" />
                 {dots}
+                {onClose && (
+                  <button type="button" className="e12-btn is-ghost is-icon is-sm" onClick={onClose} aria-label="Kapat" title="Kapat, kayıt olmadan devam et">
+                    <X aria-hidden="true" />
+                  </button>
+                )}
               </div>
               <div key={step} className={`e12-ob-step ${dir > 0 ? 'from-right' : 'from-left'} is-auth`}>{auth}</div>
             </div>

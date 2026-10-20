@@ -78,9 +78,10 @@ const Scene: React.FC<{ step: number }> = ({ step }) => {
 
 interface OnboardingProps {
   onAuthSuccess: (user: AppUser, token?: string | null) => void;
+  onClose?: () => void;
 }
 
-export const Onboarding: React.FC<OnboardingProps> = ({ onAuthSuccess }) => {
+export const Onboarding: React.FC<OnboardingProps> = ({ onAuthSuccess, onClose }) => {
   const [step, setStep] = useState(0);
   const [dir, setDir] = useState<1 | -1>(1);
   const touchX = useRef<number | null>(null);
@@ -123,6 +124,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onAuthSuccess }) => {
         go={go}
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
+        onClose={onClose}
         auth={
           <Suspense fallback={<div className="e12-auth-skel" aria-hidden="true" />}>
             <UserAuthModal isOpen embedded mandatory onClose={() => {}} onAuthSuccess={onAuthSuccess} initialMode="register" />

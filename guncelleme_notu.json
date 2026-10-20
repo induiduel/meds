@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 86,
-  "baslik": "Okuyucuda Geri ile açık not geri geliyor",
+  "onem": 87,
+  "baslik": "Tanıtımdaki kayıt ekranı kapatılabilir",
   "maddeler": [
-    "Ders notu ve ders özeti okuyucusunda açık not adreste tutuluyor: başka sayfaya gidip Geri ile dönünce aynı not (tam ekrandaysan tam ekranda) yeniden açılıyor.",
-    "Telefonda geri hareketi önce okuyucuyu kapatıp listeye döndürüyor; İleri ile not yeniden açılıyor."
+    "İlk açılış tanıtımının kayıt ekranına kapatma düğmesi eklendi; kayıt olmadan siteye devam edilebilir, tanıtım o oturumda yeniden çıkmaz."
   ],
-  "eklenen": [],
-  "degisen": [
-    "Ders notu ve ders özeti okuyucusunda açık not adreste tutuluyor: başka sayfaya gidip Geri ile dönünce aynı not (tam ekrandaysan tam ekranda) yeniden açılıyor.",
-    "Telefonda geri hareketi önce okuyucuyu kapatıp listeye döndürüyor; İleri ile not yeniden açılıyor."
+  "eklenen": [
+    "İlk açılış tanıtımının kayıt ekranına kapatma düğmesi eklendi; kayıt olmadan siteye devam edilebilir, tanıtım o oturumda yeniden çıkmaz."
   ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

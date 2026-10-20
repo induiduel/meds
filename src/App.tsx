@@ -309,13 +309,17 @@ export default function App() {
         return false;
       }
       const savedUser = safeStorage.getItem('medsoru_user_registered');
+      try { if (sessionStorage.getItem('medsoru_tanitim_kapatildi')) return false; } catch { /* özel pencere */ }
       return !savedUser;
     } catch {
       return false;
     }
   });
   // İlk açılış: HTML splash ekranı (metinsiz atan kalp + EKG "A") ilk andan itibaren görünür; React hazır olunca tek hamlede solar
-  const [showOnboarding, setShowOnboarding] = useState(() => isAuthModalOpen);
+  const [showOnboarding, setShowOnboarding] = useState(() => {
+    try { if (sessionStorage.getItem('medsoru_tanitim_kapatildi')) return false; } catch { /* özel pencere */ }
+    return isAuthModalOpen;
+  });
   const [isPwaWelcomeOpen, setIsPwaWelcomeOpen] = useState(false);
   const [showClusterModal, setShowClusterModal] = useState(false);
   const [clusterFocusId, setClusterFocusId] = useState<string | null>(null);
@@ -1448,7 +1452,10 @@ export default function App() {
           <GirisUyarisi onKabul={() => setGirisUyarisi(false)} />
         </Suspense>
       )}
-      {showOnboarding && !currentUser && <Onboarding onAuthSuccess={handleAuthSuccess} />}
+      {showOnboarding && !currentUser && <Onboarding onAuthSuccess={handleAuthSuccess} onClose={() => {
+        try { sessionStorage.setItem('medsoru_tanitim_kapatildi', '1'); } catch { /* özel pencere */ }
+        setShowOnboarding(false); setIsAuthModalOpen(false);
+      }} />}
       {showTour && (
         <Suspense fallback={null}>
           <WelcomeTour name={currentUser?.displayName} onGo={setActiveTab} onClose={() => setShowTour(false)} />
