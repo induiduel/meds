@@ -25,15 +25,37 @@ ORACLE_HOST="${ORACLE_HOST:-92.5.55.109}"
 # Alt betikler (content-overlay-sync.sh, sync-*.sh) aynı hedefi görsün
 export ORACLE_HOST ORACLE_USER
 ORACLE_DIR="/home/ubuntu/medsor/meds"
+SSH_BASIT="ssh -i $KEY -o StrictHostKeyChecking=no -o ConnectTimeout=15"
 # Mod: değişen dosyalara göre kendiliğinden seçilir (2026-10-20, kod imaja gömülmez, ../..:/app bağlı):
 #   yalnız dist/ / statik / içerik  → yalnız rsync (saniyeler; sayfa diskten sunulur)
 #   sunucu kodu ya da src/data       → docker restart meds-app (~30 sn)
 #   package*.json / Dockerfile / compose → imaj yeniden kurulur (nadir)
 # --build: en az yeniden başlatma zorlar (eski kullanım) · --imaj: imajı zorla kurar · --derleme-yok: yerel vite build atlanır
-FORCE=0; DO_IMAGE=0; SKIP_LOCAL_BUILD=0
+FORCE=0; DO_IMAGE=0; SKIP_LOCAL_BUILD=0; KIRLI_IZIN=0
 for a in "$@"; do case "$a" in
-  --build) FORCE=1;; --imaj) DO_IMAGE=1;; --derleme-yok) SKIP_LOCAL_BUILD=1;;
+  --build) FORCE=1;; --imaj) DO_IMAGE=1;; --derleme-yok) SKIP_LOCAL_BUILD=1;; --kirli-izin) KIRLI_IZIN=1;;
   *) echo "bilinmeyen seçenek: $a"; exit 2;; esac; done
+
+# Dağıtım düzeni (2026-10-20, kullanıcı kararı): kod yalnız commit'lenmiş + gönderilmiş hâlden, temiz worktree'den çıkar.
+# Resmî yol: deploy/oracle/dagit.sh (origin/main → meds-dagitim → bu betik). Çalışma ağacından kirli dağıtım başka
+# oturumların yarım işini canlıya taşıyor, canlıdaki daha yeni bir commit'i geri alıyordu.
+if [[ "$KIRLI_IZIN" == "0" && -z "${MEDS_DAGIT_ONAYLI:-}" ]]; then
+  KIRLI="$(cd "$MEDS_DIR" && git status --porcelain -- src ':!src/data' server.ts index.html vite.config.ts public package.json scripts/vite 2>/dev/null | head -5)"
+  if [[ -n "$KIRLI" ]]; then
+    echo "DURDU: çalışma ağacında commit'lenmemiş kod var — kirli dağıtım yapılmaz:" >&2
+    echo "$KIRLI" | sed 's/^/    /' >&2
+    echo "  Doğru yol: commit + push, sonra  bash deploy/oracle/dagit.sh   (acil durumda: --kirli-izin)" >&2
+    exit 76
+  fi
+fi
+if [[ "$KIRLI_IZIN" == "0" ]]; then
+  CANLI="$($SSH_BASIT "$ORACLE_USER@$ORACLE_HOST" "python3 -c 'import json;print(json.load(open(\"$ORACLE_DIR/dist/dagitim.json\"))[\"commit\"])'" 2>/dev/null || true)"
+  if [[ -n "$CANLI" ]] && ! (cd "$MEDS_DIR" && git merge-base --is-ancestor "$CANLI" HEAD 2>/dev/null); then
+    echo "DURDU: canlıdaki commit ($CANLI) bu ağacın geçmişinde yok — dağıtım onu geri alırdı. Önce güncel origin/main'i alın" >&2
+    echo "  (bash deploy/oracle/dagit.sh bunu kendisi yapar)." >&2
+    exit 77
+  fi
+fi
 SSH="ssh -i $KEY -o StrictHostKeyChecking=no -o ControlMaster=auto -o ControlPath=$HOME/.ssh/cm-deploy-%r@%h:%p -o ControlPersist=120"
 T0=$(date +%s)
 
