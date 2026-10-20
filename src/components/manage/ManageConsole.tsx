@@ -47,6 +47,7 @@ import type { QuestionItem, Committee, AdminNotification } from '../../types';
 import { ApiService } from '../../services/api';
 import { AdminScriptsTab } from '../AdminScriptsTab';
 import { AdminPanelModal } from '../AdminPanelModal';
+import { ManagePoolV14 } from '../v14/sections/ManagePoolV14';
 import { writeLocation } from '../../router';
 import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
 import { DraftStudio } from './DraftStudio';
@@ -72,6 +73,7 @@ import { ManagePendingOperationsSection } from './ManagePendingOperationsSection
 import { ManageHatSection } from './ManageHatSection';
 import { ManageKampSection } from './ManageKampSection';
 import { ManageDatabaseExplorer } from './ManageDatabaseExplorer';
+import { ManageDatabaseV14 } from '../v14/sections/ManageDatabaseV14';
 import { ManageShortcuts } from './ManageShortcuts';
 const ManageSesliAnlatimSection = lazy(() => import('./ManageSesliAnlatimSection'));
 import { consoleLogBuffer } from './ConsoleLogBuffer';
@@ -710,11 +712,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       )}
 
       {section === 'pool' && (
-        <AdminPanelModal
-          variant="embedded"
-          tab="questions"
-          isOpen
-          onClose={onExit}
+        <ManagePoolV14
+          onExit={onExit}
           adminEmail={adminEmail}
           committees={committees}
           questions={questions}
@@ -723,7 +722,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
         />
       )}
       {section === 'database' && (
-        <AdminPanelModal
+        <ManageDatabaseV14
           variant="embedded"
           tab="database"
           isOpen

@@ -1,14 +1,23 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 100,
-  "baslik": "İyileştirmeler ve düzeltmeler",
+  "onem": 101,
+  "baslik": "Yönetim paneli yenilendi (v14)",
   "maddeler": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+    "Yönetim paneli baştan tasarlandı: her bölüm kendi sayfası, ayrıntılar sayfanın tamamında açılır.",
+    "Listelerde toplu seçim ve toplu işlemler (onayla, dışa aktar, sil…).",
+    "Veritabanı gezgininde JSON verileri kart, etiket ve tablo olarak gösterilir.",
+    "Telefonda ve masaüstünde taşma/kayma sorunları giderildi."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Yönetim paneli baştan tasarlandı: her bölüm kendi sayfası, ayrıntılar sayfanın tamamında açılır.",
+    "Listelerde toplu seçim ve toplu işlemler (onayla, dışa aktar, sil…).",
+    "Veritabanı gezgininde JSON verileri kart, etiket ve tablo olarak gösterilir."
+  ],
   "degisen": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+    "Yönetim paneli baştan tasarlandı: her bölüm kendi sayfası, ayrıntılar sayfanın tamamında açılır."
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Telefonda ve masaüstünde taşma/kayma sorunları giderildi."
+  ],
   "silinen": []
 }

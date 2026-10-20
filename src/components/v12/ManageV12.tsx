@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
-  ArrowLeft, Search, RefreshCw, Moon, Sun, ChevronDown, ChevronRight, AlignJustify, Inbox, Layers, BookOpenCheck,
-  Terminal, HardDrive, UserSearch, Flag, Boxes,
+  ArrowLeft, Search, RefreshCw, Moon, Sun, ChevronDown, ChevronRight, AlignJustify,
 } from 'lucide-react';
 import type { Committee, QuestionItem, AdminNotification } from '../../types';
 import type { ManageSection } from '../manage/ManageConsole';
@@ -9,7 +8,9 @@ import type { InboxReport, InboxComment } from '../../services/manageConsoleServ
 import { fetchSystemServices, fetchWorkerHeartbeat } from '../../services/manageConsoleService';
 import { systemHealthMonitor, type SystemOverallHealth } from '../../services/systemHealthMonitor';
 import type { RealtimeConnectionStatus } from '../../services/realtimeEvents';
+import { StatRow, Card14, Tabs14, Pill, type Stat } from '../v14/pageKit';
 import '../../styles/v12/manage.css';
+import '../../styles/v14/manage.css';
 import '../../styles/v13/manage.css';
 
 /**
@@ -373,144 +374,104 @@ export const ManageOverviewV12: React.FC<{
   }, [pendingReports, comments, notifications]);
   const shownActs = (af === 'all' ? acts : acts.filter((a) => a.kind === af)).slice(0, 8);
 
-  const quick: { id: ManageSection; label: string; icon: React.ElementType; pri?: boolean }[] = [
-    { id: 'moderation', label: pendingReports.length ? `Bildirimleri incele (${pendingReports.length})` : 'Moderasyon', icon: Flag, pri: pendingReports.length > 0 },
-    { id: 'inbox', label: 'Gelen kutusu', icon: Inbox },
-    { id: 'drafts', label: 'Taslakları kümele', icon: Layers },
-    { id: 'ders_isci', label: 'Yeni dersleri onayla', icon: BookOpenCheck },
-    { id: 'scripts', label: 'Betik çalıştır', icon: Terminal },
-    { id: 'catalog', label: 'Veri kataloğu', icon: Boxes },
-    { id: 'people', label: 'Kişiler', icon: UserSearch },
-    { id: 'database', label: 'Veritabanı ve yedek', icon: HardDrive },
+  const dotTone = (d: HealthCell['dot']) => (d === 'ok' ? 'ok' : d === 'bad' ? 'bad' : d === 'warn' ? 'warn' : '');
+  const stats: Stat[] = [
+    { label: 'Moderasyon bekleyen', value: pendingReports.length.toLocaleString('tr-TR'), tone: pendingReports.length ? 'bad' : undefined, onClick: () => onGo('moderation'), hint: 'Moderasyonu aç' },
+    { label: 'Havuz sorusu', value: questionsCount.toLocaleString('tr-TR'), onClick: () => onGo('pool'), hint: 'Soru havuzunu aç' },
+    { label: 'Kayıtlı kullanıcı', value: usersCount.toLocaleString('tr-TR'), onClick: () => onGo('users'), hint: 'Kullanıcıları aç' },
+    { label: 'Bekleyen taslak', value: drafts.length.toLocaleString('tr-TR'), tone: drafts.length ? 'acc' : undefined, onClick: () => onGo('drafts'), hint: 'Taslakları aç' },
+    { label: 'Yorum', value: comments.length.toLocaleString('tr-TR'), onClick: () => onGo('inbox'), hint: 'Gelen kutusunu aç' },
   ];
 
   return (
-    <div className="m12-ov">
-      <section className="m12-panel" aria-label="Servis durumu">
-        <div className="m12-health">
-          {cells.map((c) => (
-            <span key={c.name} className="m12-hc">
-              <span className={`m12-dot ${c.dot}`} aria-hidden="true" />
-              <b>{c.name}</b>
-              <span className="t">{c.text}</span>
-            </span>
-          ))}
-          <button type="button" className="m12-link m12-hc-more" onClick={() => onGo('system')}>
-            Sistem durumu <ChevronRight aria-hidden="true" />
-          </button>
-        </div>
-      </section>
+    <div className="ov14">
+      <StatRow stats={stats} />
 
-      <div className="m12-cols">
-        <section className="m12-panel m12-col-main" aria-labelledby="m12-q-h">
-          <div className="m12-panel-h">
-            <h2 id="m12-q-h" className="m12-h2">
-              Şimdi ilgilen <span className="m12-num m12-meta">{queue.length}</span>
-            </h2>
-            <div className="m12-seg" role="group" aria-label="Kuyruk süzgeci">
-              {([['all', 'Tümü'], ['content', 'İçerik'], ['people', 'Kişiler'], ['system', 'Sistem']] as const).map(([k, l]) => (
-                <button key={k} type="button" className={qf === k ? 'on' : ''} aria-pressed={qf === k} onClick={() => setQf(k)}>
-                  {l}
-                  {qCount(k) > 0 && <span className="m12-num n">{qCount(k)}</span>}
-                </button>
-              ))}
-            </div>
+      <div className="ov14-grid">
+        <Card14
+          title={<>Sıradaki işler <span className="ov14-n">{queue.length.toLocaleString('tr-TR')}</span></>}
+          tools={<button type="button" className="m14-btn ghost" onClick={() => onGo('inbox')}>Tümünü aç <ChevronRight aria-hidden="true" /></button>}
+          flush
+        >
+          <div className="ov14-tabs">
+            <Tabs14
+              label="Kuyruk süzgeci"
+              value={qf}
+              onChange={setQf}
+              options={([['all', 'Tümü'], ['content', 'İçerik'], ['people', 'Kişiler'], ['system', 'Sistem']] as const).map(([id, l]) => ({ id, label: l, n: qCount(id) }))}
+            />
           </div>
           {shownQ.length === 0 ? (
-            <p className="m12-empty">Şu an bekleyen iş yok. Yeni bildirim, taslak ya da yorum geldiğinde burada sıralanır.</p>
+            <p className="ov14-empty">Şu an bekleyen iş yok. Yeni bildirim, taslak ya da yorum geldiğinde burada sıralanır.</p>
           ) : (
-            <ul className="m12-queue">
+            <ul className="ov14-list">
               {shownQ.map((it) => (
-                <li key={it.key} className="m12-q">
-                  <span className="tp"><span className={`m12-badge ${it.tone}`}>{it.type}</span></span>
-                  <span className="mid">
-                    <span className="tt m12-clamp1">{it.title}</span>
-                    <span className="mt m12-clamp1">{it.meta}</span>
+                <li key={it.key} className="ov14-row">
+                  <Pill tone={it.tone}>{it.type}</Pill>
+                  <span className="ov14-mid">
+                    <span className="tt">{it.title}</span>
+                    <span className="mt">{[it.meta, it.at ? ageOf(it.at) : ''].filter(Boolean).join(' · ')}</span>
                   </span>
-                  <span className="ag m12-num">{it.at ? ageOf(it.at) : ''}</span>
-                  <button type="button" className="m12-btn sm act" onClick={it.run} aria-label={`${it.action}: ${it.title}`}>
-                    {it.action}
-                  </button>
+                  <button type="button" className="m14-btn" onClick={it.run} aria-label={`${it.action}: ${it.title}`}>{it.action}</button>
                 </li>
               ))}
             </ul>
           )}
-          <div className="m12-panel-f">
-            <span className="m12-meta">Önceliğe göre sıralı: bildirimler ve sistem sorunları önce, sonra taslaklar, sonra yorumlar.</span>
-            <button type="button" className="m12-link" onClick={() => onGo('inbox')}>
-              Tüm bekleyenler <ChevronRight aria-hidden="true" />
-            </button>
-          </div>
-        </section>
+        </Card14>
 
-        <aside className="m12-col-side">
-          <section className="m12-panel" aria-labelledby="m12-hq-h">
-            <div className="m12-panel-h"><h2 id="m12-hq-h" className="m12-h2">Hızlı işlemler</h2></div>
-            <div className="m12-quick">
-              {quick.map((a) => {
-                const Icon = a.icon;
-                return (
-                  <button key={a.id} type="button" className={`m12-btn sm ${a.pri ? 'pri' : ''}`} onClick={() => onGo(a.id)}>
-                    <Icon aria-hidden="true" />
-                    {a.label}
-                  </button>
-                );
-              })}
-            </div>
-          </section>
-          <section className="m12-panel" aria-labelledby="m12-rc-h">
-            <div className="m12-panel-h"><h2 id="m12-rc-h" className="m12-h2">Kayıtlar</h2></div>
-            <dl className="m12-dl">
-              <dt>Bekleyen bildirim</dt><dd className="m12-num">{pendingReports.length.toLocaleString('tr-TR')}</dd>
-              <dt>Taslak</dt><dd className="m12-num">{drafts.length.toLocaleString('tr-TR')}</dd>
-              <dt>Yorum</dt><dd className="m12-num">{comments.length.toLocaleString('tr-TR')}</dd>
-              <dt>Kayıtlı kullanıcı</dt><dd className="m12-num">{usersCount.toLocaleString('tr-TR')}</dd>
-              <dt>Havuz sorusu</dt><dd className="m12-num">{questionsCount.toLocaleString('tr-TR')}</dd>
-            </dl>
-          </section>
-        </aside>
+        <Card14
+          title="Servis durumu"
+          tools={<button type="button" className="m14-btn ghost" onClick={() => onGo('system')}>Sistem <ChevronRight aria-hidden="true" /></button>}
+          flush
+        >
+          <ul className="ov14-list">
+            {cells.map((c) => (
+              <li key={c.name} className="ov14-row svc">
+                <span className={`ov14-dot ${c.dot}`} aria-hidden="true" />
+                <span className="ov14-name">{c.name}</span>
+                <Pill tone={dotTone(c.dot)}>{c.text}</Pill>
+              </li>
+            ))}
+          </ul>
+        </Card14>
       </div>
 
-      <section className="m12-panel" aria-labelledby="m12-act-h">
-        <div className="m12-panel-h">
-          <h2 id="m12-act-h" className="m12-h2">Son hareketler</h2>
-          <div className="m12-seg" role="group" aria-label="Hareket türü">
-            {([['all', 'Tümü'], ['report', 'Bildirim'], ['comment', 'Yorum'], ['notice', 'Sistem']] as const).map(([k, l]) => (
-              <button key={k} type="button" className={af === k ? 'on' : ''} aria-pressed={af === k} onClick={() => setAf(k)}>{l}</button>
-            ))}
-          </div>
-          <button type="button" className="m12-btn sm ghost" onClick={() => onGo('inbox')}>
-            Gelen kutusu <ChevronRight aria-hidden="true" />
-          </button>
+      <Card14
+        title="Son hareketler"
+        tools={<button type="button" className="m14-btn ghost" onClick={() => onGo('inbox')}>Gelen kutusu <ChevronRight aria-hidden="true" /></button>}
+        flush
+      >
+        <div className="ov14-tabs">
+          <Tabs14
+            label="Hareket türü"
+            value={af}
+            onChange={setAf}
+            options={([['all', 'Tümü'], ['report', 'Bildirim'], ['comment', 'Yorum'], ['notice', 'Sistem']] as const).map(([id, l]) => ({ id, label: l }))}
+          />
         </div>
         {shownActs.length === 0 ? (
-          <p className="m12-empty">Kayıtlı hareket yok.</p>
+          <p className="ov14-empty">Kayıtlı hareket yok.</p>
         ) : (
-          <div className="m12-tbl-box">
-            <table className="m12-tbl">
-              <thead>
-                <tr><th className="w-t">Zaman</th><th className="w-k">Kim</th><th>İşlem</th><th>Hedef</th></tr>
-              </thead>
-              <tbody>
-                {shownActs.map((a) => (
-                  <tr key={a.key}>
-                    <td><span className="m12-num">{clockOf(a.at)}</span></td>
-                    <td className="k"><span className="m12-clamp1">{a.who}</span></td>
-                    <td><span className="m12-clamp1">{a.what}</span></td>
-                    <td>
-                      {a.qid ? (
-                        <button type="button" className="m12-link m12-clamp1" onClick={() => onOpenQuestion(a.qid!)} title="Veri tablosunda aç">{a.target}</button>
-                      ) : (
-                        <span className="m12-clamp1">{a.target}</span>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <ul className="ov14-list">
+            {shownActs.map((a) => (
+              <li key={a.key} className="ov14-row act">
+                <span className="ov14-time">{clockOf(a.at)}</span>
+                <span className="ov14-mid">
+                  <span className="tt">{a.what}</span>
+                  <span className="mt">
+                    {a.who} ·{' '}
+                    {a.qid ? (
+                      <button type="button" className="ov14-link" onClick={() => onOpenQuestion(a.qid!)} title="Veri tablosunda aç">{a.target}</button>
+                    ) : (
+                      a.target
+                    )}
+                  </span>
+                </span>
+              </li>
+            ))}
+          </ul>
         )}
-      </section>
+      </Card14>
     </div>
   );
 };
