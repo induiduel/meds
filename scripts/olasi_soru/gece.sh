@@ -6,6 +6,36 @@ KOK="$(cd "$(dirname "$0")/../../.." && pwd)"; cd "$KOK/meds"
 # Akşam (meds-olasi-soru.timer) ve gece (meds-hat-gece) çalıştırmaları üst üste binmesin
 exec 8>"${XDG_RUNTIME_DIR:-/tmp}/medsor-olasi-soru.lock"; flock -n 8 || { echo "olası soru işi zaten çalışıyor"; exit 0; }
 K="${1:-$(python3 scripts/takvim/aktif_kurul.py --son-sinav)}"
+# Sınav günü kontrol listesi (bir kez): sınav günü ilk çalıştırma (20:00) ve ertesi gün — yöneticiye bildirim
+python3 - <<'PYEOF' || true
+import json, sys, datetime as dt
+from pathlib import Path
+sys.path.insert(0, "scripts/takvim"); sys.path.insert(0, "otomasyon")
+from aktif_kurul import durum
+from bildir import bildir
+bugun = dt.date.today(); d = durum(bugun.isoformat())
+isaret = Path("../meds_temp/olasi_soru/sinav_gunu_bildirimleri.json")
+gonderilen = json.loads(isaret.read_text()) if isaret.exists() else []
+kurul, sinav = d["aktif"], d["aktif_sinav"]
+if d["sinava_gun"] == 0 and f"k{kurul}-gun" not in gonderilen:
+    bildir(f"Bugün Kurul {kurul} sınavı — olası soru kontrol listesi",
+           "1) Öğrenciler sınavdan çıkınca Soru ekle'de 'Kaçıncı soruydu?' alanıyla soruları girsin (numara yuvalamayı çok iyileştirir).\n"
+           "2) 20:00 ve 23:30'da olası sorular kurulur; 02:30 gece hattı yeniden dener.\n"
+           f"3) Yarın sabah /olasi-sorular?kurul={kurul} — güven rozetleri ve kanıt sayısına bakın; öğrenciler 'Buydu / Bu değildi' ile düzeltir.\n"
+           "4) Ham soru defteri ve havuz Oracle'da birikir; motor her çalıştırmada güncel kopyayı çeker.", hedef="sinav-gunu")
+    gonderilen.append(f"k{kurul}-gun")
+son = d.get("son_sinav")
+if son and (bugun - dt.date.fromisoformat(next(k["sinav"] for k in json.load(open("src/data/kurul_takvimi_ozet.json"))["kurullar"] if k["kurul"] == son))).days == 1 \
+        and f"k{son}-ertesi" not in gonderilen:
+    p = Path(f"data/olasi_sorular/k{son}.json")
+    n = len(json.loads(p.read_text()).get("sorular", [])) if p.exists() else 0
+    bildir(f"Kurul {son} olası soruları: {n} soru" if n else f"Kurul {son}: henüz olası soru seti yok",
+           (f"/olasi-sorular?kurul={son} yayında. Yeni kayıt geldikçe her akşam 20:00/23:30 ve gece güncellenir." if n else
+            "Sınav sonrası kayıt gelmedi ya da sentez kapıdan geçmedi — Yönetim › Hat ve meds_temp/olasi_soru/ günlüğüne bakın."),
+           hedef="sinav-gunu")
+    gonderilen.append(f"k{son}-ertesi")
+isaret.parent.mkdir(parents=True, exist_ok=True); isaret.write_text(json.dumps(gonderilen))
+PYEOF
 [ "$K" = 0 ] && { echo "Henüz sınavı yapılmış kurul yok; olası soru işi bekliyor"; exit 0; }
 # Öğrenci kayıtları canlıda (Oracle) birikir: güncel kopyayı salt-okunur çek (çekilemezse DUR, eski veriyle sentez yok)
 V="$KOK/meds_temp/olasi_soru/oracle_veri"; mkdir -p "$V/question_ledger" "$V/olasi_sorular"

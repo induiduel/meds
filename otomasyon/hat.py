@@ -76,6 +76,49 @@ def calistir(a, v):
     return r.returncode
 
 
+def sabah_ozeti(df, dusen):
+    """Gece hattı özeti: aşama sonuçları + son 24 saatte üretilenler + sağlık. (başlık, gövde)"""
+    dr = json.loads(DURUM.read_text()) if DURUM.exists() else {}
+    simdi = dt.datetime.now(); once = (simdi - dt.timedelta(hours=24)).isoformat(timespec="seconds")
+    gece = [a for a in df["asamalar"] if a["durum"] == "hazir" and "gece" in a.get("tetik", []) and not a["komut"].startswith("Oracle:")]
+    tamam = [a["id"] for a in gece if (dr.get(a["id"], {}).get("son_basari") or "") >= once]
+    atla = [a["id"] for a in gece if dr.get(a["id"], {}).get("kod") == 3]
+    satir = [f"Aşamalar: {len(tamam)}/{len(gece)} başarılı" + (f" · başarısız: {', '.join(sorted(dusen))}" if dusen else "")
+             + (f" · atlandı: {', '.join(atla)}" if atla else "")]
+    # zincirde son 24 saatte tamamlanan dersler (oracle adımı başarılı)
+    zd = []
+    for f in sorted((KOK / "meds_temp/hat/dersler").glob("*.json")):
+        try:
+            a = json.loads(f.read_text()).get("adimlar", {}).get("oracle") or {}
+        except ValueError:
+            continue
+        if a.get("kod") == 0 and (a.get("zaman") or "") >= once:
+            zd.append(f.stem)
+    if zd:
+        satir.append(f"Ders zinciri tamamlanan (spot, çözücü, asistan, EMA): {', '.join(zd)}")
+    for ad, kalip in (("Kurul kampı", "meds/src/data/kamp/k*/*.json"), ("Check Up", "meds/src/data/patoloji_checkup/k*/*.json"),
+                      ("Olası sorular", "meds/data/olasi_sorular/k*.json")):
+        yeni = [p.relative_to(KOK).as_posix() for p in KOK.glob(kalip)
+                if dt.datetime.fromtimestamp(p.stat().st_mtime).isoformat() >= once]
+        if yeni:
+            satir.append(f"{ad} güncellendi: {', '.join(Path(x).stem if 'kamp' not in x else x.split('/')[-2] + '/' + Path(x).stem for x in yeni[:8])}")
+    try:
+        sg = json.loads((KOK / "meds_temp/hat/saglik.json").read_text())
+        satir.append("Sağlık: " + ("sorun yok" if not sg.get("sorun") else "SORUN — " + ", ".join(sg["sorun"])))
+    except (OSError, ValueError):
+        pass
+    try:
+        sys.path.insert(0, str(MEDS / "scripts/takvim")); from aktif_kurul import durum
+        k = durum(dt.date.today().isoformat())
+        satir.append(f"Takvim: Kurul {k['aktif']} · sınava {k['sinava_gun']} gün")
+    except Exception:  # noqa: BLE001
+        pass
+    satir.append("Ayrıntı: Yönetim › Hat (/manage/hat)")
+    baslik = ("Gece hattı: " + (f"{len(dusen)} aşama başarısız" if dusen else "her şey yolunda")
+              + (f" · {len(zd)} ders tamamlandı" if zd else ""))
+    return baslik, "\n".join(satir)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--liste", action="store_true"); ap.add_argument("--dogrula", action="store_true")
@@ -117,15 +160,12 @@ def main():
                 continue
             if kod != 0:
                 dusen.add(s["id"]); kotu += 1
-        if dusen:  # sabah görülsün: başarısız aşamalar tek bildirimde (panel › bildirimler)
-            try:
-                from bildir import bildir
-                dr = json.loads(DURUM.read_text()) if DURUM.exists() else {}
-                bildir(f"Gece hattı: {len(dusen)} aşama başarısız",
-                       "\n".join(f"{i}: kod {dr.get(i, {}).get('kod')} {dr.get(i, {}).get('not', '')}".strip() for i in sorted(dusen))
-                       + "\nAyrıntı: Yönetim › Hat (/manage/hat), meds_temp/hat/hat.log")
-            except Exception as e:  # noqa: BLE001
-                print("bildirim gönderilemedi:", e)
+        try:  # sabah özeti: her gece tek bildirim (başarılı geçse de) — panel › bildirimler
+            from bildir import bildir
+            baslik, govde = sabah_ozeti(df, dusen)
+            bildir(baslik, govde, hedef="sabah-ozeti")
+        except Exception as e:  # noqa: BLE001
+            print("sabah özeti gönderilemedi:", e)
         sys.exit(1 if kotu else 0)
     ap.print_help()
 

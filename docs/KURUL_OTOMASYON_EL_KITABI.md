@@ -118,7 +118,7 @@ tablolar, hoca vurgusu, görsel sayfalar, çıkmışlar — her satır `kod:sayf
 Python: `from bilgi_deposu import ozet_yolu, manifest`. Yeni üretici yazarken PDF'i açma, depoyu kullan.
 
 ### Aşama D4 — Cihaz: kurul kampı (`otomasyon/kamp_zinciri.py`, gece)
-Hoca tüyoları: öğrenci önerir (`POST /api/kamp/tuyo-oner`), yönetici onaylar ya da doğrudan ekler (Yönetim › Kamp tüyoları;
+Kurul 1 dahil (K1 dersleri bilgi deposunda: 64 ders, branş klasörlerinden kesin eşlemeyle; 2026-10-20). Hoca tüyoları: öğrenci önerir (`POST /api/kamp/tuyo-oner`), yönetici onaylar ya da doğrudan ekler (Yönetim › Kamp tüyoları;
 `/api/admin/kamp/*`); defter `data/kamp/tuyolar.jsonl` (yalnız eklenir). Branşta ≥1 onaylı tüyo + deposu hazır ders olunca:
 Claude `scripts/kamp/TALIMAT_KAMP.md` (yalnız depo özetleri + onaylı tüyolar) → `scripts/kamp/dogrula.py` (her kaynak
 `kod:sayfa` ders metninde, her onaylı tüyo işlenmiş, şık açıklaması, üslup; ≤3 tur) → EMA `scripts/kamp/ses.py` →
@@ -218,6 +218,12 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
 - Oracle'a tek dosya gönderiminde rsync saat damgasını korur: sunucu kodu gönderdiysen `meds-app`'i yeniden başlat ve uçla doğrula.
 - `dist` `emptyOutDir:false`: eski parçalar kalır; derleme sınamasında yalnız güncel parçaya bak.
 
+## 10b. Sınav günü kontrol listesi (her kurul)
+1. Sınav sabahı: `/` ana ekranda kurul şeridi "Soru ekle"ye çağırır; sınav günü + 7 gün "Kaçıncı soruydu?" alanı öne çıkar.
+2. 20:00 ve 23:30: olası sorular kurulur (`meds-olasi-soru.timer`); 02:30 gece hattı tekrar dener. Yöneticiye kontrol listesi bildirimi.
+3. Ertesi sabah: `/olasi-sorular?kurul=N` — güven, kanıt sayısı; öğrenci geri bildirimi ertesi sentezde kanıt.
+4. Bildirim "henüz set yok" derse: Yönetim › Hat (olasi_soru kodu), `meds_temp/olasi_soru/kN/claude.log`, `dogrula.txt`.
+
 ## 11. Yeni kurul başlarken kontrol listesi (K3…K6)
 1. `kurul_takvimi.py` (program değiştiyse) → `ders_kaydi.py --kurul N --yaz` → tanımsız branş varsa `branslar.json`'a ekle.
 2. `ders_zinciri.py --kurul N --durum` — defter ve paketler görünüyor mu.
@@ -235,6 +241,9 @@ denetimi Kurul 2+ eksikliğini sabah bildirir.
 Kod dağıtımı (`esitle_dagit`). Kurul 1 içerik düzeltmeleri. Çıkmış anahtar karantinasının sitede uygulanması (öneri +
 bildirim otomatik; gizleme/düzeltme kararı yöneticinin). Genetik sınav kampı (K1'e özgü).
 
-## 14. Bildirimler
-Gece hattında başarısız aşama → sabah tek bildirim (panel › bildirimler, `otomasyon/bildir.py`); çıkmış anahtar çelişkisi →
-karantina önerisi bildirimi. Sağlık: kapı arızası, Kurul 2+ türev veri eksikliği (cümle/kelime zamanı, PDF işareti).
+## 14. Bildirimler (panel › bildirimler, `otomasyon/bildir.py`)
+- **Sabah özeti** (her gece, başarılı geçse de): aşama sonuçları, son 24 saatte zinciri tamamlanan dersler, güncellenen
+  kamp / Check Up / olası soru setleri, sağlık, takvim (`hat.py sabah_ozeti`).
+- **Sınav günü kontrol listesi** (bir kez, sınav günü 20:00): soru girişi, olası soru saatleri, ertesi sabah bakılacaklar;
+  **ertesi gün**: olası soru setinin durumu (`scripts/olasi_soru/gece.sh`; işaret `meds_temp/olasi_soru/sinav_gunu_bildirimleri.json`).
+- Çıkmış anahtar çelişkisi → karantina önerisi; kamp kapıdan geçmezse; gece aşaması başarısızsa (sabah özetinde). Sağlık: kapı arızası, Kurul 2+ türev veri eksikliği (cümle/kelime zamanı, PDF işareti).
