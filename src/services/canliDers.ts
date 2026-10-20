@@ -55,6 +55,8 @@ const BRANS_DUZELT: Record<string, [string, number, number?]> = {
   // Drive: Böbrek ve Mesane ikisi de "26)", İnvaziv Serviks "39)" — patoloji önem listesiyle aynı numara
   'k1-46-mesane-hastaliklari-ve-tumorleri': ['Tıbbi Patoloji', 27],
   'k1-49-invaziv-serviks-kanseri-ve-endometriyozis': ['Tıbbi Patoloji', 29],
+  // Drive: Meme Kanseri de "33)" (Memenin Benign ile çakışır) — önem listesinde 35
+  'k1-65-meme-kanseri-ve-molekuler-tipleri': ['Tıbbi Patoloji', 35],
 };
 /** Listede gösterilmeyen dersler (adresle açılmaya devam eder). Uterus Düz Kas ve Trofoblastik: ayrı slaytı yok,
  *  30. PDF s.76–91 (Endometrial dersinin sonu) + 32. PDF s.35–64 (Gebelik Hastalıkları) tekrarı — kullanıcı kararı. */
