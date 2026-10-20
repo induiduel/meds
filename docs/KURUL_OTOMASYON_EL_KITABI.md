@@ -200,9 +200,9 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
 6. Sınavdan sonra kurul arşive geçer (`/gecmis-kurullar`), aktif içerik bir sonraki kurula.
 
 ## 12. Açık kapılar
-çıkmış anahtar çelişkisi
-karantinası (H10) ·
-kelime zamanlaması yalnız cihazda (cihaz kapalıyken gecikir).
+Yok — hata defterindeki H3–H13 maddelerinin hepsi otomatik kapıya ya da izlemeye bağlandı (ayrıntı
+`KURUL2_YAPILMAYACAK_HATALAR.md`). Kelime zamanlaması yalnız cihazda üretilir; cihaz kapalıyken gecikir ama sağlık
+denetimi Kurul 2+ eksikliğini sabah bildirir.
 
 ## 13. Bilinçli olarak elle kalan
 Kod dağıtımı (`esitle_dagit`). Kurul 1 içerik düzeltmeleri. Çıkmış anahtar karantinasının sitede uygulanması (öneri +
