@@ -365,8 +365,27 @@ configureAdminAuthLog(path.resolve(__dirname, 'data'));
 app.use(adminAuthMiddleware('nofrostlife@gmail.com'));
 app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 
+// Enable CORS for all origins (canlı alan adı ve tünel erişimi)
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
+  // Sabit liste yeni bir başlık eklendiğinde (x-voter-uid, x-user-id) tarayıcıda
+  // "Failed to fetch" veriyordu; köken * ve kimlik bilgisi yok, istenen başlığı yansıtmak güvenli.
+  const requested = req.headers['access-control-request-headers'];
+  res.header('Access-Control-Allow-Headers', typeof requested === 'string' && requested
+    ? requested
+    : 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, x-admin-email, X-API-Password, x-voter-uid, x-user-id');
+  res.vary('Access-Control-Request-Headers');
+  if (req.method === 'OPTIONS') {
+    // Ön-kontrolü 1 gün önbelleğe al: her yazmada tünel üstünden ~300ms'lik ek tur gitmesin.
+    res.header('Access-Control-Max-Age', '86400');
+    return res.sendStatus(204);
+  }
+  next();
+});
+
 // Başarım: puan + ATP, hedefler, başarımlar, sıralama (src/services/basarim; kurallar src/data/basarim/tanim.json).
-// Topluluk eylemi ara katmanı rotalardan önce kurulur; profil yedeği kaydedilince kişi yeniden değerlendirilir.
+// CORS'tan sonra (api. alt alanından okunur), diğer rotalardan önce kurulur (topluluk eylemi ara katmanı); profil yedeği kaydedilince kişi yeniden değerlendirilir.
 const basarimMotor = createBasarimMotor({
   dataDir: path.resolve(__dirname, 'data'),
   srcDir: path.resolve(__dirname, 'src'),
@@ -387,25 +406,6 @@ const basarimYedekSonrasi = (uid: string) => {
     try { basarimMotor.yenidenDegerlendir(uid); basarimHaber(uid); } catch (e: any) { console.warn('[basarim] değerlendirme:', e?.message); }
   }, 20_000));
 };
-
-// Enable CORS for all origins (canlı alan adı ve tünel erişimi)
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
-  // Sabit liste yeni bir başlık eklendiğinde (x-voter-uid, x-user-id) tarayıcıda
-  // "Failed to fetch" veriyordu; köken * ve kimlik bilgisi yok, istenen başlığı yansıtmak güvenli.
-  const requested = req.headers['access-control-request-headers'];
-  res.header('Access-Control-Allow-Headers', typeof requested === 'string' && requested
-    ? requested
-    : 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, x-admin-email, X-API-Password, x-voter-uid, x-user-id');
-  res.vary('Access-Control-Request-Headers');
-  if (req.method === 'OPTIONS') {
-    // Ön-kontrolü 1 gün önbelleğe al: her yazmada tünel üstünden ~300ms'lik ek tur gitmesin.
-    res.header('Access-Control-Max-Age', '86400');
-    return res.sendStatus(204);
-  }
-  next();
-});
 
 // All data-changing routes require the local write password. The password lives
 // in `.env`, never in the public API catalogue or the client bundle.

@@ -1,22 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 140,
-  "baslik": "Çevrimdışı kullanım daha sağlam",
+  "onem": 141,
+  "baslik": "Sıralama ve Başarımlar açılıyor",
   "maddeler": [
-    "İndirdiğin içerik internetsizken (Wi-Fi bağlı ama internet yokken de) eksiksiz açılır; uygulama artık kendi kopyasını silmez.",
-    "İnternetsiz arama: çıkmış ve havuz soruları, sözlük ve ders başlıklarında cihazdaki verilerle arar.",
-    "Tek branş indirdiğinde de Spotlar, En önemliler, Soru çözücü, Sınav çalışması ve İstatistik internetsiz açılır.",
-    "Yazı tipleri, sesli dersin motivasyon klipleri ve TBG kampının sesli dersi indirilen pakete eklendi; internetsiz deneme sınavı kurulur."
+    "Sıralama ve Başarımlar ekranlarında internet varken çıkan \"Ağ bağlantısı yok (çevrimdışı)\" hatası giderildi."
   ],
-  "eklenen": [
-    "İnternetsiz arama: çıkmış ve havuz soruları, sözlük ve ders başlıklarında cihazdaki verilerle arar."
-  ],
-  "degisen": [
-    "İndirdiğin içerik internetsizken (Wi-Fi bağlı ama internet yokken de) eksiksiz açılır; uygulama artık kendi kopyasını silmez.",
-    "Yazı tipleri, sesli dersin motivasyon klipleri ve TBG kampının sesli dersi indirilen pakete eklendi; internetsiz deneme sınavı kurulur."
-  ],
+  "eklenen": [],
+  "degisen": [],
   "duzeltilen": [
-    "Tek branş indirdiğinde de Spotlar, En önemliler, Soru çözücü, Sınav çalışması ve İstatistik internetsiz açılır."
+    "Sıralama ve Başarımlar ekranlarında internet varken çıkan \"Ağ bağlantısı yok (çevrimdışı)\" hatası giderildi."
   ],
   "silinen": []
 }
