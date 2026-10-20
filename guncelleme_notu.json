@@ -1,9 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 54,
-  "baslik": "Etkileşimli ders PDF'i daha okunaklı",
+  "onem": 55,
+  "baslik": "Güncelleme günlüğü düzenlendi",
   "maddeler": [
-    "Etkileşimli derslerin PDF/Word dosyalarında uzun maddeler ana madde ve iç içe alt maddelere bölünüyor.",
-    "\"Klinik seyir:\" gibi satırlar alt başlık oluyor; yazıyla sayılar rakamla gösteriliyor."
-  ]
+    "Güncelleme günlüğünde her madde doğru türde gösteriliyor: Eklenen, Değişen, Düzeltilen ve Kaldırılan."
+  ],
+  "eklenen": [],
+  "degisen": [
+    "Güncelleme günlüğünde her madde doğru türde gösteriliyor: Eklenen, Değişen, Düzeltilen ve Kaldırılan."
+  ],
+  "duzeltilen": [],
+  "silinen": []
 }
