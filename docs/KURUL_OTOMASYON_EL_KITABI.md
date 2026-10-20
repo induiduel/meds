@@ -192,6 +192,9 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
   | yayın `denetim_hatasi` | panelde hatalar; düzelt/yeniden işle |
   | otomatik onay yok | bildirimdeki neden (eşleşme düşük, uyarı, güncelleme modu) → panelden karar |
   | Oracle ulaşılamıyor | Oracle Cloud konsolundan yeniden başlat; gece işleri kaçırılanı sonraki çalışmada tamamlar |
+- **Oracle işçi provası** (yayınsız): kapsayıcıda `MEDS_ISCI_DIR=/tmp/isci-prova` + `isle.isle(job)` (`konu_zorla` ile K2 dersi,
+  `isle.bildir` bastırılır) → taslağı ana makineye kopyala → `yayinla.uygula([taslak], …, deneme=True)`. 2026-10-20: TAMAM.
+- **Kamp provası:** `MEDS_KAMP_API=http://localhost:3000 otomasyon/kamp_zinciri.py --kurul N --brans B --prova`.
 - **Prova:** `otomasyon/prova.py` — yayımlanmış bir dersi sahte Kurul 2 dersi olarak tam zincirden geçirir, canlıya
   göndermez (`provak2`, çıktılar `meds_temp/prova/<zaman>/`).
 
