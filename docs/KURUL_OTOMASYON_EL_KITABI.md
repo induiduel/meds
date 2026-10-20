@@ -111,6 +111,20 @@ Kurulda ≥3 bağımsız denetimden geçmiş patoloji dersi olunca ve onaylı k�
 `scripts/patoloji_checkup/TALIMAT_CHECKUP.md` → `src/data/patoloji_checkup/k<N>/` → `dogrula.py --kurul N` (geçmezse önceki
 sürüm geri). Site: `/patoloji-check-up?kurul=N` (veri yoksa Kurul 1 gösterilir).
 
+### Aşama D3 — Cihaz: ders bilgi deposu (`scripts/dersler/bilgi_deposu.py`, gece)
+**Her PDF bir kez okunur:** yalnız ders işçisi (`cikar.py`) ve yalnız PDF karması değişince. Sonraki her ürün depodan beslenir:
+`meds_database_v2/ders_bilgi/<ders>/manifest.json` (kaynak klasörleri, karmalar) + `ozet.md` (bilgi paketi, önem puanları,
+tablolar, hoca vurgusu, görsel sayfalar, çıkmışlar — her satır `kod:sayfa`). Girdiler değişmezse yeniden derlenmez.
+Python: `from bilgi_deposu import ozet_yolu, manifest`. Yeni üretici yazarken PDF'i açma, depoyu kullan.
+
+### Aşama D4 — Cihaz: kurul kampı (`otomasyon/kamp_zinciri.py`, gece)
+Hoca tüyoları: öğrenci önerir (`POST /api/kamp/tuyo-oner`), yönetici onaylar ya da doğrudan ekler (Yönetim › Kamp tüyoları;
+`/api/admin/kamp/*`); defter `data/kamp/tuyolar.jsonl` (yalnız eklenir). Branşta ≥1 onaylı tüyo + deposu hazır ders olunca:
+Claude `scripts/kamp/TALIMAT_KAMP.md` (yalnız depo özetleri + onaylı tüyolar) → `scripts/kamp/dogrula.py` (her kaynak
+`kod:sayfa` ders metninde, her onaylı tüyo işlenmiş, şık açıklaması, üslup; ≤3 tur) → EMA `scripts/kamp/ses.py` →
+`src/data/kamp/k<N>/<brans>.json` + Oracle `data/kamp/ses/`. Kapı geçmezse yayımlanan kamp değişmez + bildirim.
+Site: `/kamp?kurul=N`, `/kamp/<N>/<brans>` (sesli anlatım, kalıp kartları, deneme). Kurul 1 TBG genetik kampı ayrı sayfasında kalır.
+
 ### Aşama E — RAG ve diğerleri
 RAG vektörleri 3 saatte bir + gece. Kimlik çözücü `/api/k/:id`, kısa bağlantı `/k/<id>`.
 
