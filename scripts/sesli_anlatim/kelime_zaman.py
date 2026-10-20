@@ -260,7 +260,7 @@ def oracle_sesi(key: str, vid: str, bayt: int) -> Path | None:
 
 
 def oracle_gonder() -> str:
-    r = subprocess.run(["rsync", "-az", "--checksum", f"{CIKTI}/", f"{ORACLE_SSH}:{ORACLE_KOK}/kelime_zaman/"],
+    r = subprocess.run(["rsync", "-rlz", "--checksum", "--omit-dir-times", "--no-perms", "--rsync-path=sudo -n rsync", f"{CIKTI}/", f"{ORACLE_SSH}:{ORACLE_KOK}/kelime_zaman/"],
                        capture_output=True, text=True)
     return "Oracle'a gönderildi" if r.returncode == 0 else f"Oracle'a gönderilemedi: {r.stderr.strip()[:200]}"
 
