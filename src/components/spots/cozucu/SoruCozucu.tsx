@@ -33,6 +33,7 @@ import '../../../styles/soru-cozucu.css';
  * Çözülen soruda şıka dokunmak o şıkkın açıklamasını okur. Ses yoksa okuma süresiyle ilerler (metin yine görünür).
  * Otomatik çöz (alt çubuk, A… değil "Z" tuşu): asistan soruyu baştan sona okur, çözüm yolunu (ipucu) söyler, yanlış seçenekleri
  *   gerekçesiyle tek tek eler, kalan seçeneğin neden doğru olduğunu ve çözümü anlatır; sonuç kaydı yazılmaz, mod açıkken sonraki soruya geçer.
+ *   Ayarlardaki "Otomatik çöz biçimi" Hızlı ise: soruyu okur, doğru şıkkı seçer, yalnız o şıkkın açıklamasını okur ve sonraki soruya geçer.
  * "Öğren" düğmesi (Ö tuşu) sorunun Öğren destesindeki karşılığını yan panelde/alt sayfada açar (OgrenYeri).
  */
 
@@ -84,7 +85,7 @@ const HARF_SES: Record<Harf, string> = { A: 'A', B: 'Be', C: 'Ce', D: 'De', E: '
 const kelimeSay = (s: string) => (s.match(/\S+/g) || []).length;
 const azHareket = () => typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 const tercihOku = () => {
-  const v = { hiz: 1, siklariOku: true, otomatik: true, ses: VARSAYILAN_SES, olcek: 1 };
+  const v = { hiz: 1, siklariOku: true, otomatik: true, ses: VARSAYILAN_SES, olcek: 1, ocStil: 'tam' as 'tam' | 'hizli' };
   try { return { ...v, ...JSON.parse(localStorage.getItem(TERCIH_KEY) || '{}') }; } catch { return v; }
 };
 
@@ -501,6 +502,14 @@ export const SoruCozucu: React.FC<Props> = ({
   const otomatikCoz = useCallback((s: CSoru) => {
     setDurum('cozuluyor'); setElenen([]); setAciklanan([]); setIpucuAcik(false); setSonSecim(null); setYanlisSecti(false);
     const secenekAdimi = (h: Harf): Adim => ({ ...kokAdimi(s, true), bas: HARFLER.indexOf(h) + 1, kes: HARFLER.indexOf(h) + 1 });
+    if (tercih.ocStil === 'hizli') { // oku → doğru şıkkı seç → yalnız onun açıklaması → sonraki soru
+      calSira([kokAdimi(s, true), {
+        ...secenekAdimi(s.dogru),
+        onBasla: () => { setDurum('gosterildi'); setSonSecim(s.dogru); setElenen(HARFLER.filter((x) => x !== s.dogru)); },
+      }, sikAdimi(s, s.dogru, () => { acikla(s.dogru); kaydir('.sc-aciklamalar'); })],
+      () => { otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 1000); });
+      return;
+    }
     const adimlar: Adim[] = [ocAdim('oc-bas'), kokAdimi(s, true), ocAdim('oc-yol'),
       { klasor: klasorAdi, klip: `i-${s.no}`, metinler: [s.ipucu], onBasla: () => { setIpucuAcik(true); kaydir('.sc-ipucu'); }, onCumle: () => setOkunan({ yer: 'ipucu' }) },
       ocAdim('oc-ele')];
@@ -514,7 +523,7 @@ export const SoruCozucu: React.FC<Props> = ({
       onCumle: (j) => setOkunan(j > 0 ? { yer: 'cozum' } : null),
     }, ocAdim('oc-son'));
     calSira(adimlar, () => { otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 1600); });
-  }, [calSira, kokAdimi, sikAdimi, klasorAdi, ileri]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [calSira, kokAdimi, sikAdimi, klasorAdi, ileri, tercih.ocStil]); // eslint-disable-line react-hooks/exhaustive-deps
   const otoCozDegis = () => {
     if (otoCoz) { setOtoCoz(false); if (otoRef.current) { window.clearTimeout(otoRef.current); otoRef.current = null; } durdur(); return; }
     setOtoCoz(true); setAyarAcik(false);
@@ -989,6 +998,13 @@ export const SoruCozucu: React.FC<Props> = ({
             <label className="sc-oto" title="Soruyu okurken seçenekleri de oku">
               <input type="checkbox" checked={tercih.siklariOku} onChange={(e) => setTercih({ siklariOku: e.target.checked })} />
               <span>Seçenekleri oku</span>
+            </label>
+            <label className="sc-oto" title="Otomatik çöz biçimi: tam anlatım ya da yalnız doğru şık ve açıklaması">
+              <WandSparkles aria-hidden />
+              <select value={tercih.ocStil} onChange={(e) => setTercih({ ocStil: e.target.value as 'tam' | 'hizli' })} aria-label="Otomatik çöz biçimi">
+                <option value="tam">Otomatik çöz: tam anlatım</option>
+                <option value="hizli">Otomatik çöz: doğru şık + açıklama</option>
+              </select>
             </label>
             <label className="sc-oto" title="Doğru cevaptan sonra sonraki soruya geç">
               <input type="checkbox" checked={tercih.otomatik} onChange={(e) => setTercih({ otomatik: e.target.checked })} />

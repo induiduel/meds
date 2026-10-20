@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 95,
-  "baslik": "Site daha hızlı açılıyor",
+  "onem": 96,
+  "baslik": "Soru çözücüde hızlı otomatik çöz",
   "maddeler": [
-    "İlk açılışta indirilen kod yaklaşık %30 azaldı; sayfalar daha akıcı açılıyor."
+    "Soru çözücü ayarlarına 'Otomatik çöz biçimi' eklendi: doğru şıkkı seçip yalnız onun açıklamasını okuyor ve sonraki soruya geçiyor."
   ],
-  "eklenen": [],
-  "degisen": [
-    "İlk açılışta indirilen kod yaklaşık %30 azaldı; sayfalar daha akıcı açılıyor."
+  "eklenen": [
+    "Soru çözücü ayarlarına 'Otomatik çöz biçimi' eklendi: doğru şıkkı seçip yalnız onun açıklamasını okuyor ve sonraki soruya geçiyor."
   ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
