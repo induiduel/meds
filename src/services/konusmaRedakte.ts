@@ -99,7 +99,7 @@ export function konusmaRedakte(md: string): string {
     if (li && sozcuk <= 9 && YONLENDIRME.test(d)) continue;
     if (li && /\?$/.test(d) && (sozcuk <= 3 || /^Peki/u.test(d))) continue;
     // Tek satırlık soru paragrafı ("Bu değişiklikler hangi düzeyde aranır?") alt başlık olur
-    if (li && /\?$/.test(d) && sat.length === 1 && !li[1] && sozcuk <= 12) { out.push(`### ${satirRedakte(govde).t}`); continue; }
+    if (li && /\?$/.test(d) && sat.length === 1 && !li[1] && sozcuk <= 12) { out.push(`- **${duz(satirRedakte(govde).t)}**`); continue; }
     if (!li) { out.push(bas ? bas[1] + satirRedakte(govde).t : l); continue; }
     const { t, no } = satirRedakte(govde);
     if (!duz(t).trim()) continue;

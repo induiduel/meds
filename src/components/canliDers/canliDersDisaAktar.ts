@@ -10,6 +10,7 @@ import { sayilariYaz } from '../../services/sayiYazim';
 import { paragrafMd } from '../../services/maddeDuzen';
 import { konusmaRedakte } from '../../services/konusmaRedakte';
 import type { CdDetay } from './canliDersStore';
+import type { SlaytBasliklari } from './cdSlaytBasliklari';
 
 function vurgula(metin: string, v?: [number, number, 'c' | 't', number][]): string {
   if (!v?.length) return metin;
@@ -29,16 +30,29 @@ function vurgula(metin: string, v?: [number, number, 'c' | 't', number][]): stri
 /** Paragraf içindeki satır sonları tek boşluk olur: aksi hâlde her satır ayrı blok sayılır ve paragraf sayfa arasında bölünür. */
 const tekSatir = (t: string) => t.replace(/[ \t]*\r?\n+[ \t]*/g, ' ').trim();
 
-export function cdAktarBelgesi(detay: CdDetay, etiket: string, vurguAcik = true): AktarBelge {
+const katla = (t: string) => t.toLocaleLowerCase('tr').replace(/^\s*\d+[.)-]?\s*/, '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+
+/** basliklar verilirse her paragrafın eşlendiği slaytın başlığı, değiştiği yerde alt başlık (###) olarak girer. */
+export function cdAktarBelgesi(detay: CdDetay, etiket: string, vurguAcik = true, basliklar?: SlaytBasliklari): AktarBelge {
   return {
     baslik: detay.baslik,
     dersDuzeni: true,
     alt: `${etiket} · Sesli ders metni${vurguAcik && detay.vurgu ? ' · işaretli yerler çıkmış, örnek soru ve spotlarla eşleşen önemli bilgiler' : ''}`,
-    bolumler: detay.bolumler.map((b) => ({
-      baslik: b.baslik.trim(),
-      md: b.paragraflar.filter((p) => p.metin.trim())
-        .map((p) => konusmaRedakte(paragrafMd(sayilariYaz(tekSatir(vurgula(p.metin, vurguAcik ? detay.vurgu?.[p.i] : undefined))))))
-        .join('\n'),
-    })),
+    bolumler: detay.bolumler.map((b) => {
+      let onceki = katla(b.baslik);
+      return {
+        baslik: b.baslik.trim(),
+        md: b.paragraflar.filter((p) => p.metin.trim())
+          .map((p) => {
+            const govde = konusmaRedakte(paragrafMd(sayilariYaz(tekSatir(vurgula(p.metin, vurguAcik ? detay.vurgu?.[p.i] : undefined)))));
+            const e = basliklar && detay.pdf?.paragraflar?.[p.i];
+            const sb = e ? basliklar!.get(`${e.dosya}:${e.sayfa}`) : undefined;
+            if (!sb || katla(sb) === onceki) return govde;
+            onceki = katla(sb);
+            return `### ${sb}\n${govde}`;
+          })
+          .join('\n'),
+      };
+    }),
   };
 }

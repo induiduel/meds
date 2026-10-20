@@ -12,7 +12,7 @@ const BICIMLER: { id: AktarBicim; ad: string; alt: string }[] = [
 ];
 
 export function MetinAktarMenu({ belge, dosyaAdi, dugmeSinif = 'cd-btn', etiket = 'Metni dışa aktar' }: {
-  belge: () => AktarBelge; dosyaAdi: string; dugmeSinif?: string; etiket?: string;
+  belge: (bicim: AktarBicim) => AktarBelge | Promise<AktarBelge>; dosyaAdi: string; dugmeSinif?: string; etiket?: string;
 }) {
   const [acik, setAcik] = useState(false);
   const [calisan, setCalisan] = useState<AktarBicim | null>(null);
@@ -21,7 +21,7 @@ export function MetinAktarMenu({ belge, dosyaAdi, dugmeSinif = 'cd-btn', etiket 
     setCalisan(b); setHata('');
     try {
       const { metniIndir } = await import('../services/metinDisaAktar');
-      await metniIndir(belge(), b, dosyaAdi);
+      await metniIndir(await belge(b), b, dosyaAdi);
     } catch (e) {
       console.warn('dışa aktarma', e);
       setHata('Dosya oluşturulamadı, yeniden dene.');

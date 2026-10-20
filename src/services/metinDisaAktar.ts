@@ -367,9 +367,11 @@ async function pdf(b: AktarBelge): Promise<Blob> {
   for (const bo of b.bolumler) {
     const blokDizisi = bloklar(bo.md);
     if (bo.baslik) {
-      doc.setFont(F, 'bold'); doc.setFontSize(13);
+      // dersDuzeni: bölüm başlığı slayt alt başlıklarından belirgin büyük
+      const BP = b.dersDuzeni ? 15.5 : 13;
+      doc.setFont(F, 'bold'); doc.setFontSize(BP);
       const s = doc.splitTextToSize(T(bo.baslik), CW - 4) as string[];
-      const hBaslik = s.length * lh(13) + 4.5;
+      const hBaslik = s.length * lh(BP) + 4.5;
       const hAlt = bo.alt ? satirla([{ t: bo.alt, i: true }], CW - 3.5, 9.5).length * lh(9.5) + 1 : 0;
       const hIlk = !blokDizisi.length ? 20
         : b.dersDuzeni && (blokDizisi[0].tur === 'h' || blokDizisi[0].tur === 'li') && kumeH(blokDizisi, 0, kumeBitis(blokDizisi, 0)) <= ALT - M - 30
@@ -388,10 +390,12 @@ async function pdf(b: AktarBelge): Promise<Blob> {
       }
 
       y += 3;
-      doc.setFillColor(...VURGU); doc.rect(M, y - 0.2, 1.2, s.length * lh(13) - 0.6, 'F');
+      doc.setFillColor(...VURGU); doc.rect(M, y - 0.2, 1.2, s.length * lh(BP) - 0.6, 'F');
+      doc.setFont(F, 'bold'); doc.setFontSize(BP); // ölçüm (satirla) yazı tipini normale çevirmişti
       doc.setTextColor(...VURGU);
-      s.forEach((t, i) => doc.text(t, M + 3.5, y + 4.2 + i * lh(13)));
-      y += s.length * lh(13) + 1.5;
+      s.forEach((t, i) => doc.text(t, M + 3.5, y + (b.dersDuzeni ? 5 : 4.2) + i * lh(BP)));
+      y += s.length * lh(BP) + 1.5;
+      if (b.dersDuzeni) { doc.setDrawColor(...CIZGI); doc.setLineWidth(0.3); doc.line(M, y + 0.5, W - M, y + 0.5); y += 2.5; }
     }
     if (bo.alt) {
       akit([{ t: bo.alt, i: true }], M + 3.5, CW - 3.5, 9.5, SOL, undefined, 1);

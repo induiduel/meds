@@ -1,17 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 117,
-  "baslik": "Sesli ders PDF'i ve ders notları düzeni",
+  "onem": 118,
+  "baslik": "Sesli ders PDF'inde başlık ve alt başlıklar",
   "maddeler": [
-    "Sesli ders PDF'i: başlık, alt başlık ve maddeler sayfa arasında bölünmez.",
-    "Sesli ders PDF'i konuşma dili yerine ders notu üslubuyla yazılır (1 -, 2 - sıralamalar; 'Burası önemli', 'bakalım' gibi ifadeler çıkarılır).",
-    "Ders notlarında düz paragraflar giriş + iç içe maddeler olarak gösterilir."
+    "Sesli ders PDF'inde slayt başlıkları alt başlık olarak yer alır; bölüm başlıkları daha belirgin.",
+    "'2 gruba ayrılırlar' gibi duyuruların ardındaki maddeler alt madde olarak dizilir."
   ],
   "eklenen": [],
   "degisen": [
-    "Sesli ders PDF'i: başlık, alt başlık ve maddeler sayfa arasında bölünmez.",
-    "Sesli ders PDF'i konuşma dili yerine ders notu üslubuyla yazılır (1 -, 2 - sıralamalar; 'Burası önemli', 'bakalım' gibi ifadeler çıkarılır).",
-    "Ders notlarında düz paragraflar giriş + iç içe maddeler olarak gösterilir."
+    "Sesli ders PDF'inde slayt başlıkları alt başlık olarak yer alır; bölüm başlıkları daha belirgin.",
+    "'2 gruba ayrılırlar' gibi duyuruların ardındaki maddeler alt madde olarak dizilir."
   ],
   "duzeltilen": [],
   "silinen": []

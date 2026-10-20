@@ -7,5 +7,9 @@ import { MetinAktarMenu } from '../MetinAktarMenu';
 
 export function MetniAktarDugme({ detay, vurguAcik }: { detay: CdDetay; vurguAcik: boolean }) {
   const etiket = cdDersEtiketi(detay);
-  return <MetinAktarMenu belge={() => cdAktarBelgesi(detay, etiket, vurguAcik)} dosyaAdi={`${etiket} - ${detay.baslik}`} />;
+  return <MetinAktarMenu belge={async (bicim) => {
+    // PDF/DOCX: slayt başlıkları alt başlık olur (PDF açılamazsa başlıksız sürer)
+    const basliklar = bicim === 'txt' ? undefined : await import('./cdSlaytBasliklari').then((m) => m.cdSlaytBasliklari(detay)).catch(() => undefined);
+    return cdAktarBelgesi(detay, etiket, vurguAcik, basliklar);
+  }} dosyaAdi={`${etiket} - ${detay.baslik}`} />;
 }

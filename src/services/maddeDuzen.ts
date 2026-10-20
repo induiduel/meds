@@ -35,7 +35,7 @@ function duyuru(d: string): number {
   const kisa = d.split(/\s+/).length <= 14;
   const sayi = d.match(/(?:^|\s)([2-6])\s+\p{L}/u);
   if (/:$/.test(d) || /(?<!\p{L})(şunlardır|şöyledir|şöyle sıralanır|şunlar|ayırın|ayırt edin)(?!\p{L})/u.test(d)) return sayi ? +sayi[1] : 99;
-  if (kisa && sayi && /(?<!\p{L})(ayrılır|dayan\p{L}*|vardır|bulunur|incelenir|görülür|sayılır|kullanılır)(?!\p{L})/u.test(d)) return +sayi[1];
+  if (kisa && sayi && /(?<!\p{L})(ayrıl\p{L}*|dayan\p{L}*|vardır|vardır\p{L}*|bulunur|incelenir|görülür|sayılır|kullanılır|toplanır|sınıflandırılır)(?!\p{L})/u.test(d)) return +sayi[1];
   return 0;
 }
 
