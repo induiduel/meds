@@ -1,20 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 98,
-  "baslik": "Kurul kampı: ilerlemeniz kaydediliyor",
+  "onem": 99,
+  "baslik": "Sesli ders sonunda kutlama",
   "maddeler": [
-    "Kurul kampında dinlediğiniz anlatımlar, deneme cevaplarınız ve bildiğiniz kalıplar hesabınıza kaydediliyor.",
-    "Denemede yanlışlarınızı tekrar çözebilirsiniz; kaynaklar ilgili Öğren dersine götürüyor.",
-    "Bitirdiklerim'de yeni modül: Kurul kampı.",
-    "Sesli derslerin başında, ortasında ve sonunda ilerleyişine göre değişen kısa teşvik cümleleri (ders ⋯ menüsünden kapatılabilir)."
+    "Sesli ders bitince animasyonlu kutlama ve teşvik sözü gösterilir; pekiştirme önerisi aynı pencerede.",
+    "Oynatma listesinde sonraki ders, pencereden 'Sonraki derse geç' ile başlar."
   ],
   "eklenen": [
-    "Sesli derslerin başında, ortasında ve sonunda ilerleyişine göre değişen kısa teşvik cümleleri (ders ⋯ menüsünden kapatılabilir).",
-    "15–20 dakika kesintisiz dinleyince ders durur; hikâyeli animasyonlu mola penceresi açılır (Zirve, Çalışma, Sevgi ve güç, Zor günler geçer)."
+    "Sesli ders bitince animasyonlu kutlama ve teşvik sözü gösterilir; pekiştirme önerisi aynı pencerede.",
+    "Oynatma listesinde sonraki ders, pencereden 'Sonraki derse geç' ile başlar."
   ],
-  "degisen": [
-    "En önemliler sayfası daha sıkı ve okunaklı: tek satır sayaçlar, katlanır ders özeti ve sınav adayları, sık madde listesi."
-  ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

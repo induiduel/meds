@@ -946,3 +946,4 @@
 .cd-mola-eylem .cd-btn.is-ana { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent, #fff); }
 .cd-mola-anim { width: 160px; height: 160px; border-radius: 20px; overflow: hidden; }
 .cd-mola-baslik { font-size: 16px; font-weight: 800; color: var(--color-ink); }
+.cd-bitti-mot { margin-bottom: 4px; } .cd-bitti-mot .cd-mola-anim { width: 140px; height: 140px; }

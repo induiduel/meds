@@ -77,8 +77,11 @@ export function cdMotivasyonSec(yer: Yer, key: string): Satir | null {
 
 /* ---------- mola penceresi durumu ---------- */
 export type MolaAnim = 'zirve' | 'calisma' | 'sevgi' | 'gunes' | 'kutlama';
-export interface MolaDurum { acik: boolean; metin: string; dk: number; anim: MolaAnim }
-let mola: MolaDurum = { acik: false, metin: '', dk: 0, anim: 'kutlama' };
+/** tip: 'mola' (15–20 dk) | 'bitis' (ders sonu; key = biten ders) */
+export interface MolaDurum { acik: boolean; metin: string; dk: number; anim: MolaAnim; tip: 'mola' | 'bitis'; key: string | null; baslik: string;
+  /** ders sonu: pekiştirme penceresi (CanliDersCozucuSoru) açıldıysa animasyon + söz onun içinde gösterilir */
+  birlesik: boolean }
+let mola: MolaDurum = { acik: false, metin: '', dk: 0, anim: 'kutlama', tip: 'mola', key: null, baslik: '', birlesik: false };
 const ANIM_KEY = 'medsoru_cd_mola_anim_v1';
 /** Hikâyeli animasyon: sınav yakınsa zirve (azim), gece güneş (zor günler geçer); yoksa dörtlü sırayla, öncekinden farklı */
 function animSec(bag: string | undefined): MolaAnim {
@@ -171,6 +174,8 @@ function izle() {
     cdDuraklat();
     if (!mola.acik) sonraSur = true;
   }
+  // Ders sonu penceresi açıkken oynatma listesi sonraki derse geçerse, pencere kapanana dek bekler
+  else if (mola.acik && mola.tip === 'bitis' && st.playing && key && key !== mola.key) cdDuraklat();
   if (!key) { oncekiKey = null; oncekiCaliyor = false; return; }
 
   const yeni = key !== oncekiKey;
@@ -180,6 +185,11 @@ function izle() {
   if (!yeni && oncekiCaliyor && !st.playing && st.dur > 0 && oncekiT >= st.dur - 1.5 && !klipCaliyor && acik && !yapildiMi(key, 'son')) {
     yap(key, 'son');
     const s = cdMotivasyonSec('son', key);
+    const dk = Math.round(dinlenen / 60);
+    molaYaz({ acik: true, tip: 'bitis', birlesik: false, key, baslik: st.baslik, anim: animSec(s?.bag), dk,
+      metin: s?.metin || 'Tebrikler, bu dersi bitirdin. Sınava bir adım daha yaklaştın.' });
+    dinlenen = 0;
+    yeniEsik();
     if (s) klipCal(s, false, null);
   }
 
@@ -210,7 +220,7 @@ function izle() {
     const dk = Math.round(dinlenen / 60);
     dinlenen = 0;
     yeniEsik();
-    molaYaz({ acik: true, anim: animSec(s?.bag), metin: s?.metin || 'Uzun süredir dinliyorsun, harikasın. Kısa bir mola ver, sonra kaldığın yerden devam edersin.', dk });
+    molaYaz({ acik: true, tip: 'mola', birlesik: false, key, baslik: st.baslik, anim: animSec(s?.bag), metin: s?.metin || 'Uzun süredir dinliyorsun, harikasın. Kısa bir mola ver, sonra kaldığın yerden devam edersin.', dk });
     if (s && acik) klipCal(s, false, null);
   }
 
@@ -236,6 +246,11 @@ export function cdMotivasyonKur() {
     else if (!st.playing && !klipCaliyor && !mola.acik) dinlenen = Math.max(0, dinlenen - gecen * 0.5); // uzun duraklama da moladır
     if (dinlenen >= molaEsik && !molaBekliyor && !mola.acik && cdMotivasyonAcik()) molaBekliyor = true;
   }, 1000);
+}
+
+/** Pekiştirme penceresi bu dersin sonu için açıldı: ayrı ders sonu penceresi gösterilmez. */
+export function cdBitisBirlestir(key: string) {
+  if (mola.acik && mola.tip === 'bitis' && mola.key === key && !mola.birlesik) molaYaz({ ...mola, birlesik: true });
 }
 
 export function cdMolaKapat(devam: boolean) {

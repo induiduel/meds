@@ -12,6 +12,8 @@ import { CD_SPOT_BRANS as BRANS, cdDersEtiketi } from './canliDersKategori';
 import { cozucuDizinYukle } from '../spots/cozucu/cozucuVeri';
 import { asistanDizinDosyasi } from '../spots/asistan/asistanVeri';
 import type { Brans } from '../spots/brans';
+import { Lottie } from '../ui/Lottie';
+import { cdBitisBirlestir, cdMolaKapat, useCdMola } from './canliDersMotivasyon';
 
 
 interface Oneri {
@@ -59,6 +61,11 @@ async function oneriBul(key: string): Promise<Oneri | null> {
 export default function CanliDersCozucuSoru() {
   const [oneri, setOneri] = useState<Oneri | null>(null);
   const ilkDugmeRef = useRef<HTMLButtonElement>(null);
+  const mola = useCdMola();
+  // Motivasyon açıksa ders sonu sözü + hikâyeli animasyon bu pencerenin başında
+  const mot = !!oneri && mola.acik && mola.tip === 'bitis' && mola.key === oneri.d.key ? mola : null;
+  useEffect(() => { if (oneri) cdBitisBirlestir(oneri.d.key); }, [oneri, mola.acik]);
+  const kapat = () => { setOneri(null); if (mot) cdMolaKapat(false); };
 
   useEffect(() => {
     const f = (e: Event) => {
@@ -72,7 +79,7 @@ export default function CanliDersCozucuSoru() {
   useEffect(() => {
     if (!oneri) return;
     ilkDugmeRef.current?.focus();
-    const k = (e: KeyboardEvent) => { if (e.key === 'Escape') setOneri(null); };
+    const k = (e: KeyboardEvent) => { if (e.key === 'Escape') kapat(); };
     document.addEventListener('keydown', k);
     return () => document.removeEventListener('keydown', k);
   }, [oneri]);
@@ -82,23 +89,28 @@ export default function CanliDersCozucuSoru() {
   const asistanAc = () => {
     const a = oneri.asistan;
     if (!a) return;
-    setOneri(null);
+    kapat();
     navigateTo(onemYolu({ brans: oneri.brans, ders: a.kod, asistan: '1' }));
   };
 
   const cozucuAc = () => {
     const c = oneri.cozucu;
     if (!c) return;
-    setOneri(null);
+    kapat();
     navigateTo(cozucuYolu({ brans: oneri.brans, ders: c.kod, coz: '1' }));
   };
 
   return (
-    <div className="cd-dlg" role="presentation" onClick={(e) => { if (e.target === e.currentTarget) setOneri(null); }}>
+    <div className="cd-dlg" role="presentation" onClick={(e) => { if (e.target === e.currentTarget) kapat(); }}>
       <div className="cd-dlg-kart is-dar" role="alertdialog" aria-modal="true" aria-labelledby="cd-cz-b" aria-describedby="cd-cz-m">
-        <button type="button" className="cd-dlg-x cd-btn is-ikon" onClick={() => setOneri(null)} aria-label="Kapat"><X aria-hidden /></button>
-        <span className="cd-ikon" aria-hidden><CircleHelp /></span>
-        <b id="cd-cz-b" className="cd-dlg-baslik">Ders bitti — pekiştirelim mi?</b>
+        <button type="button" className="cd-dlg-x cd-btn is-ikon" onClick={kapat} aria-label="Kapat"><X aria-hidden /></button>
+        {mot ? (
+          <div className="cd-mola cd-bitti-mot">
+            <Lottie key={mot.anim} name={mot.anim} className="cd-mola-anim" />
+            <p className="cd-mola-metin">{mot.metin}</p>
+          </div>
+        ) : <span className="cd-ikon" aria-hidden><CircleHelp /></span>}
+        <b id="cd-cz-b" className="cd-dlg-baslik">{mot ? 'Ders bitti, tebrikler! Pekiştirelim mi?' : 'Ders bitti — pekiştirelim mi?'}</b>
         <p id="cd-cz-m" className="cd-dlg-metin">
           <b>{cdDersEtiketi(oneri.d)} · {oneri.d.baslik}</b> tamamlandı. Konuyu hafızana kazımak için spot bilgilerle sesli asistanı dinleyebilir veya interaktif soruları çözebilirsin:
         </p>
@@ -136,7 +148,7 @@ export default function CanliDersCozucuSoru() {
         </div>
 
         <div className="cd-dlg-eylem">
-          <button type="button" className="cd-btn" onClick={() => setOneri(null)}>Daha sonra</button>
+          <button type="button" className="cd-btn" onClick={kapat}>Daha sonra</button>
         </div>
       </div>
     </div>
