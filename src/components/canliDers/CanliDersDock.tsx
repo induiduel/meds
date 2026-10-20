@@ -302,7 +302,7 @@ function ZamanCubugu() {
             const dolu = gen > 0 ? Math.min(1, Math.max(0, (goster - p.s) / gen)) : 0;
             const ustunde = ipucuParca === p && parcalar.length > 1;
             return (
-              <span key={p.k} className={`cd-parca${ustunde ? ' is-ustunde' : ''}${p.k === parcalar[etkinParca]?.k ? ' is-etkin' : ''}`} style={{ flexGrow: gen || 1 }}>
+              <span key={p.k} className={`cd-bparca${ustunde ? ' is-ustunde' : ''}${p.k === parcalar[etkinParca]?.k ? ' is-etkin' : ''}`} style={{ flexGrow: gen || 1 }}>
                 <i style={{ transform: `scaleX(${dolu})` }} />
               </span>
             );
