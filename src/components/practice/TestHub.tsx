@@ -11,7 +11,7 @@ import type { QuestionItem } from '../../types';
 import { PracticeMode } from '../PracticeMode';
 import { toast } from '../ui/Toast';
 import {
-  buildTest, loadArchiveTests, disciplineOptions, catalogCounts, randomCriteria, DEFAULT_CRITERIA, SOURCE_INFO, SOURCE_ORDER, KURUL1,
+  buildTest, loadArchiveTests, disciplineOptions, catalogCounts, randomCriteria, DEFAULT_CRITERIA, SOURCE_INFO, SOURCE_ORDER,
   difficultyActive, type TestCriteria, type TestQuestion, type TestSource, type Difficulty,
 } from '../../services/testBank';
 import { COMMITTEE_NAME } from '../pdf/pdfSources';
@@ -93,9 +93,13 @@ export const TestHub: React.FC<TestHubProps> = ({ onExit }) => {
     const m = new Map<string, number>();
     const srcs = c.sources.length ? c.sources : SOURCE_ORDER;
     (archive || []).forEach((q) => q.committeeId && m.set(q.committeeId, (m.get(q.committeeId) || 0) + (srcs.includes('cikmis') ? 1 : 0)));
-    // Kurul 1: seçili kaynaklara göre örnek + Öğren ögeleri de sayılır
-    const k1 = catalogCounts({ committeeId: KURUL1, disciplines: [] });
-    m.set(KURUL1, (m.get(KURUL1) || 0) + srcs.reduce((n, src) => n + (src === 'cikmis' ? 0 : src === 'ornek' ? k1.ornekQuestions : k1[src]), 0));
+    // Her kurul: seçili kaynaklara göre örnek + Öğren ögeleri de sayılır (öge kimliğinden kurul; Kurul 2+ yayınlandıkça)
+    for (let k = 1; k <= 6; k++) {
+      const id = `donem3-kurul${k}`;
+      const kc = catalogCounts({ committeeId: id, disciplines: [] });
+      const n = srcs.reduce((t, src) => t + (src === 'cikmis' ? 0 : src === 'ornek' ? kc.ornekQuestions : kc[src]), 0);
+      if (n || m.has(id)) m.set(id, (m.get(id) || 0) + n);
+    }
     const order = Object.keys(COMMITTEE_NAME);
     const rank = (id: string) => (order.indexOf(id) < 0 ? 99 : order.indexOf(id));
     return [...m.entries()].sort((a, b) => rank(a[0]) - rank(b[0]) || a[0].localeCompare(b[0], 'tr', { numeric: true }));
@@ -112,7 +116,7 @@ export const TestHub: React.FC<TestHubProps> = ({ onExit }) => {
     setC((prev) => (prev.disciplines.every((d) => ok.has(d)) ? prev : { ...prev, disciplines: prev.disciplines.filter((d) => ok.has(d)) }));
   }, [archive, c.committeeId]);
 
-  const k1Open = c.committeeId === 'all' || c.committeeId === KURUL1;
+  const k1Open = true; // kaynak kilidi kalktı: sayaçlar seçili kurulun ögelerinden (catalogCounts)
   const cat = useMemo(() => catalogCounts(c), [c]);
   const archiveCount = useMemo(
     () => (archive || []).filter((q) => (c.committeeId === 'all' || q.committeeId === c.committeeId) && (!c.disciplines.length || c.disciplines.includes(q.discipline))).length,
@@ -120,7 +124,6 @@ export const TestHub: React.FC<TestHubProps> = ({ onExit }) => {
   );
   const sourceCount = (src: TestSource): string => {
     if (src === 'cikmis') return archive ? fmt(archiveCount) : '…';
-    if (!k1Open) return '—';
     if (src === 'ornek') return fmt(cat.ornekQuestions);
     return fmt(cat[src]);
   };

@@ -24,11 +24,12 @@ export type Difficulty = 'kolay' | 'orta' | 'zor';
 export const SOURCE_ORDER: TestSource[] = ['cikmis', 'ornek', 'mini', 'vaka', 'tuzak', 'bosluk'];
 export const SOURCE_INFO: Record<TestSource, { label: string; hint: string; kurul1Only: boolean }> = {
   cikmis: { label: 'Çıkmış', hint: 'Geçmiş sınav soruları', kurul1Only: false },
-  ornek: { label: 'Örnek soru', hint: 'Kazanım temelli, zorluk seçilir', kurul1Only: true },
-  mini: { label: 'Mini soru', hint: 'Öğren adımlarındaki sorular', kurul1Only: true },
-  vaka: { label: 'Klinik karar', hint: 'Öğren vaka senaryoları', kurul1Only: true },
-  tuzak: { label: 'Tuzak avı', hint: 'Hangisi yanlıştır?', kurul1Only: true },
-  bosluk: { label: 'Boşluk doldurma', hint: 'Gizli terimi seç', kurul1Only: true },
+  // kurul1Only: geriye uyum için alan duruyor; Kurul 2+ içeriği gelince öge bazında süzülür (kurulOf), kilit yok
+  ornek: { label: 'Örnek soru', hint: 'Kazanım temelli, zorluk seçilir', kurul1Only: false },
+  mini: { label: 'Mini soru', hint: 'Öğren adımlarındaki sorular', kurul1Only: false },
+  vaka: { label: 'Klinik karar', hint: 'Öğren vaka senaryoları', kurul1Only: false },
+  tuzak: { label: 'Tuzak avı', hint: 'Hangisi yanlıştır?', kurul1Only: false },
+  bosluk: { label: 'Boşluk doldurma', hint: 'Gizli terimi seç', kurul1Only: false },
 };
 /** Örnek sorular ve Öğren desteleri şimdilik yalnız Kurul 1'de */
 export const KURUL1 = 'donem3-kurul1';
@@ -96,7 +97,15 @@ export function shuffle<T>(arr: T[]): T[] {
 /** Ölçüt yokken: bütün kaynaklardan, bütün kurullardan rastgele 20 soru */
 export const randomCriteria = (): TestCriteria => ({ ...DEFAULT_CRITERIA, sources: [...SOURCE_ORDER] });
 
-const usesKurul1 = (c: TestCriteria) => c.committeeId === 'all' || c.committeeId === KURUL1;
+/** Öğenin kurulu kimliğinden: deste `k2p-…`, örnek soru dersi `k2-…`; eski kimlikli desteler Kurul 1. */
+export const kurulOf = (id: string): string => {
+  const m = /^k(\d)(?:p-|-)/.exec(String(id || ''));
+  return `donem3-kurul${m ? m[1] : '1'}`;
+};
+const kapsar = (committeeId: string, id: string) => committeeId === 'all' || kurulOf(id) === committeeId;
+/** Örnek/deste kaynakları için seçili kapsamda öge var mı (Kurul 1 dışında da) */
+const usesKurul1 = (c: TestCriteria) =>
+  c.committeeId === 'all' || ORNEK_INDEX.some((r) => kapsar(c.committeeId, r.id)) || DECK_CATALOG.some((d) => kapsar(c.committeeId, d.id));
 const discOk = (c: TestCriteria, d: string) => !c.disciplines.length || c.disciplines.includes(d);
 
 /** Açıklamayı Test çöz'ün ayrıştırıcısına uygun başlıklarla kurar (【Doğru yanıt gerekçesi】 → "Neden X"). */
@@ -208,10 +217,9 @@ const deckTestCount = (d: any, srcs: readonly TestSource[]) =>
 
 /** Ölçütlere uyan soru sayıları (kurulumdaki sayaçlar için; yükleme yapmaz). */
 export function catalogCounts(c: Pick<TestCriteria, 'committeeId' | 'disciplines'>) {
-  const k1 = c.committeeId === 'all' || c.committeeId === KURUL1;
   const crit = { ...DEFAULT_CRITERIA, ...c };
-  const decks = k1 ? DECK_CATALOG.filter((d) => discOk(crit, disciplineName(d.discipline))) : [];
-  const ornek = k1 ? ORNEK_INDEX.filter((r) => discOk(crit, disciplineName(r.ders))) : [];
+  const decks = DECK_CATALOG.filter((d) => kapsar(c.committeeId, d.id) && discOk(crit, disciplineName(d.discipline)));
+  const ornek = ORNEK_INDEX.filter((r) => kapsar(c.committeeId, r.id) && discOk(crit, disciplineName(r.ders)));
   const deckItems = Object.fromEntries(DECK_SOURCES.map((x) => [x, decks.reduce((n, d) => n + deckTestCount(d, [x]), 0)])) as Record<DeckSource, number>;
   return { decks: decks.length, ornekFiles: ornek.length, ornekQuestions: ornek.reduce((n, r) => n + (r.soru_sayisi || 0), 0), ...deckItems };
 }
@@ -222,10 +230,8 @@ export function disciplineOptions(archive: TestQuestion[], committeeId: string, 
   const srcs = sources.length ? sources : SOURCE_ORDER;
   const add = (d: string, n: number) => m.set(d, (m.get(d) || 0) + n);
   if (srcs.includes('cikmis')) archive.filter((q) => committeeId === 'all' || q.committeeId === committeeId).forEach((q) => add(q.discipline, 1));
-  if (committeeId === 'all' || committeeId === KURUL1) {
-    DECK_CATALOG.forEach((d) => add(disciplineName(d.discipline), deckTestCount(d, srcs)));
-    if (srcs.includes('ornek')) ORNEK_INDEX.forEach((r) => add(disciplineName(r.ders), r.soru_sayisi || 0));
-  }
+  DECK_CATALOG.filter((d) => kapsar(committeeId, d.id)).forEach((d) => add(disciplineName(d.discipline), deckTestCount(d, srcs)));
+  if (srcs.includes('ornek')) ORNEK_INDEX.filter((r) => kapsar(committeeId, r.id)).forEach((r) => add(disciplineName(r.ders), r.soru_sayisi || 0));
   return [...m.entries()].filter(([, n]) => n > 0).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'tr'));
 }
 
@@ -276,7 +282,7 @@ export async function buildTest(c: TestCriteria, onProgress?: (msg: string) => v
 
   if (sources.includes('ornek') && usesKurul1(c)) {
     onProgress?.('Örnek sorular yükleniyor…');
-    const files = shuffle(ORNEK_INDEX.filter((r) => discOk(c, disciplineName(r.ders))));
+    const files = shuffle(ORNEK_INDEX.filter((r) => kapsar(c.committeeId, r.id) && discOk(c, disciplineName(r.ders))));
     const acc: TestQuestion[] = [];
     for (const r of files.slice(0, MAX_FILES)) {
       const qs = shuffle(await loadOrnekQuestions(r.id));
@@ -299,7 +305,7 @@ export async function buildTest(c: TestCriteria, onProgress?: (msg: string) => v
   if (deckSources.length && usesKurul1(c)) {
     onProgress?.('Öğren desteleri yükleniyor…');
     // Seçili türde ögesi olmayan desteler (ör. etkileşimsiz V1) hiç yüklenmez
-    const decks = shuffle(DECK_CATALOG.filter((d) => discOk(c, disciplineName(d.discipline)) && deckTestCount(d, deckSources) > 0));
+    const decks = shuffle(DECK_CATALOG.filter((d) => kapsar(c.committeeId, d.id) && discOk(c, disciplineName(d.discipline)) && deckTestCount(d, deckSources) > 0));
     const acc: Record<DeckSource, TestQuestion[]> = { mini: [], vaka: [], tuzak: [], bosluk: [] };
     for (const entry of decks.slice(0, MAX_DECKS)) {
       const deck = await loadDeck<any>(entry.id).catch(() => null);
