@@ -7,9 +7,9 @@
 .cd-vid-rozet-metin { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
 .cd-vid-rozet-metin > b { max-width: 46vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
 .cd-vid-rozet-metin > span { color: var(--color-ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; }
-/* telefon: üst çubuğun ortasındaki boşluğa sığan küçük hap (başlık ve ders düğmeleri örtülmez) */
+/* telefon: alt oynatıcının (yoksa alt çubuğun) hemen üstünde sağda küçük hap; üst çubuk düğmeleri sayfaya göre değiştiği için orası örtülmez */
 @media (max-width: 640px) {
-  .cd-vid-rozet { top: calc(env(safe-area-inset-top, 0px) + 14px); right: auto; left: 50%; transform: translateX(-50%); gap: 6px; min-height: 36px; padding: 2px 2px 2px 10px; border-radius: 999px; }
+  .cd-vid-rozet { top: auto; right: 12px; bottom: calc(max(var(--cd-dock-h, 0px), var(--sh-tabs-h, 0px) + env(safe-area-inset-bottom, 0px) + 16px) + 8px); gap: 6px; min-height: 36px; padding: 2px 2px 2px 10px; border-radius: 999px; }
   .cd-vid-rozet-metin > b { display: none; }
   .cd-vid-rozet-iptal { width: 32px; height: 32px; border-radius: 999px; }
 }
