@@ -1085,14 +1085,24 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const deferredQuery = useDeferredValue(searchQuery);
   const parsedQuery = useMemo(() => parseQuery(deferredQuery), [deferredQuery]);
   const hasQuery = parsedQuery.terms.length > 0 || parsedQuery.excluded.length > 0 || parsedQuery.number !== null;
+  // Artımlı arama: yazmaya devam edince sorgu yalnız uzar ("kole" → "koles", yeni terim eklenir). Her eski terim yeni
+  // karşılığının içinde geçiyor ve hariç tutulanlar/numara aynıysa yeni sonuçlar öncekilerin alt kümesidir; bu durumda
+  // yalnız önceki eşleşmeler taranır (4.000+ sorunun tüm alanlarını her tuşta baştan taramak telefonda donduruyordu).
+  const prevSearchRef = useRef<{ prepared: Prep[]; terms: string[]; excluded: string[]; number: number | null; ids: Set<string> } | null>(null);
   const searchScores = useMemo(() => {
-    if (!hasQuery) return null;
+    if (!hasQuery) { prevSearchRef.current = null; return null; }
+    const prev = prevSearchRef.current;
+    const narrows = !!prev && prev.prepared === prepared && prev.number === parsedQuery.number
+      && prev.excluded.length === parsedQuery.excluded.length && prev.excluded.every((x, i) => parsedQuery.excluded[i] === x)
+      && parsedQuery.terms.length >= prev.terms.length && prev.terms.every((t, i) => parsedQuery.terms[i].includes(t));
+    const pool = narrows ? prepared.filter((p) => prev!.ids.has(p.q.id)) : prepared;
     const m = new Map<string, number>();
-    for (const p of prepared) {
+    for (const p of pool) {
       if (parsedQuery.number !== null && p.q.questionNumber !== parsedQuery.number) continue;
       const s = scoreFields(p.fields, parsedQuery);
       if (s > 0) m.set(p.q.id, s);
     }
+    prevSearchRef.current = { prepared, terms: parsedQuery.terms, excluded: parsedQuery.excluded, number: parsedQuery.number, ids: new Set(m.keys()) };
     return m;
   }, [prepared, parsedQuery, hasQuery]);
 
