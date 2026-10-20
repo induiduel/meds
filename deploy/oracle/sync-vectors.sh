@@ -15,7 +15,7 @@ if [[ "${1:-}" != "--tam" ]]; then
 fi
 KEY="${SSH_KEY:-$HOME/.ssh/medsor-oracle.key}"
 ORACLE_USER="${ORACLE_USER:-ubuntu}"
-ORACLE_HOST="${ORACLE_HOST:?ORACLE_HOST tanımlı değil (export ORACLE_HOST=92.5.55.109)}"
+ORACLE_HOST="${ORACLE_HOST:-92.5.55.109}"
 SSH="ssh -i $KEY -o StrictHostKeyChecking=no"
 DUMP=/home/indu/medsor/meds_temp/rag_chunks_sync.dump
 

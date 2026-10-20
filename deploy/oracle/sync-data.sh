@@ -24,7 +24,7 @@ if [[ -z "$MODE" ]]; then
 fi
 
 ORACLE_USER="${ORACLE_USER:-ubuntu}"
-ORACLE_HOST="${ORACLE_HOST:?ORACLE_HOST tanımlı değil (örn: export ORACLE_HOST=150.136.x.x)}"
+ORACLE_HOST="${ORACLE_HOST:-92.5.55.109}"
 ORACLE_SSH_KEY="${ORACLE_SSH_KEY:-$HOME/.ssh/id_ed25519}"
 ORACLE_REPO="${ORACLE_REPO:-~/meds}"
 
