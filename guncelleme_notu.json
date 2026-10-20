@@ -1,14 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 121,
-  "baslik": "İyileştirmeler ve düzeltmeler",
+  "onem": 122,
+  "baslik": "Sesli derslerden video oluştur",
   "maddeler": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+    "Sesli ders ekranında ⋯ › Video oluştur: slaytlar, kelime kelime vurgulu metin ve ses senkron MP4 videoda birleşir (720p–4K, 60 fps).",
+    "Video tamamen kendi cihazında hazırlanır; PDF'in her sayfası videoda yer alır."
   ],
-  "eklenen": [],
-  "degisen": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+  "eklenen": [
+    "Sesli ders ekranında ⋯ › Video oluştur: slaytlar, kelime kelime vurgulu metin ve ses senkron MP4 videoda birleşir (720p–4K, 60 fps).",
+    "Video tamamen kendi cihazında hazırlanır; PDF'in her sayfası videoda yer alır."
   ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
