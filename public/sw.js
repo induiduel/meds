@@ -66,8 +66,19 @@ async function aralikYaniti(req, hit, tur) {
 
 /** Paketteki ses/PDF: aynı sürümse cihazdan, sürüm farklıysa önce ağ (ağ yoksa cihazdaki kopya) */
 async function paketDosyasi(req, url) {
-  const hit = await caches.open(PAKET_CACHE).then((c) => c.match(paketAnahtari(url)));
+  const c = await caches.open(PAKET_CACHE);
+  const hit = await c.match(paketAnahtari(url));
   if (!hit) return fetch(req);
+  // PDF eşlemesi / PDF'li deste listesi (küçük JSON): ağ 1,5 sn'de gelirse ağ (kopya tazelenir), yoksa cihazdaki
+  if (/^\/api\/lecture-pdf\/(decks$|deck\/[^/]+$)/.test(url.pathname)) {
+    const ag = fetch(req).then(async (r) => {
+      if (r && r.ok) await c.put(paketAnahtari(url), new Response(await r.clone().blob(), { headers: { 'Content-Type': 'application/json', 'X-Paket-Surum': '' } }));
+      return r;
+    });
+    const k = await Promise.race([ag.catch(() => null), new Promise((ok) => setTimeout(() => ok(null), 1500))]);
+    if (k && k.ok) return k;
+    return new Response(await hit.blob(), { headers: { 'Content-Type': 'application/json', 'X-From-Cache': '1' } });
+  }
   const istenen = url.searchParams.get('v');
   const surum = hit.headers.get('X-Paket-Surum') || '';
   if (PAKET_SES_RE.test(url.pathname) && istenen && surum && istenen !== surum) {

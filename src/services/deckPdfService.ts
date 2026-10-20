@@ -93,6 +93,20 @@ export function resolveDeckPdf(deckId: string): Promise<DeckPdfInfo> {
       /* sunucu yok → paketteki eşleme */
     }
     const e = (await loadBundledSources()).decks[deckId];
+    // Sunucuya ulaşılamadı: cihaza indirilmiş eşleme varsa (Çevrimdışı merkezi paketi ya da "Çevrimdışı için indir") ondan kur;
+    // PDF'in kendisi aynı adresle önbellekten gelir (sw.js / deviceStorage)
+    try {
+      const hit = typeof caches !== 'undefined'
+        ? await caches.match(new URL(`${apiBase()}/api/lecture-pdf/deck/${encodeURIComponent(deckId)}`, location.href).href, { ignoreVary: true })
+        : undefined;
+      if (hit) {
+        const j = await hit.json();
+        const files: DeckPdfFile[] = (j.files || []).map((f: ServerFile, i: number) => ({
+          name: f.name, folder: f.folder, size: f.size, pages: f.pages, fileId: f.fileId, url: f.available ? fileUrl(deckId, i, f) : undefined,
+        }));
+        return { files, slides: j.slides || undefined, missingDate: j.missing?.tarih, hasServerFile: files.some((f) => f.url) };
+      }
+    } catch { /* yok */ }
     return {
       files: (e?.files || []).map(({ path: _p, ...f }) => f),
       slides: e?.slides,

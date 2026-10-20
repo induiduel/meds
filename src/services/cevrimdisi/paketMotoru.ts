@@ -151,7 +151,7 @@ export const destek = () => typeof caches !== 'undefined' && typeof indexedDB !=
 const SES_RE = /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses)\//;
 /** Dosya türü (sunucu cevrimdisiKatalog.dosyaTuru ile aynı kural) */
 export const dosyaTuru = (u: string): DosyaTuru =>
-  /\.mp3($|\?)/i.test(u) || SES_RE.test(u) ? 'ses' : u.startsWith('/api/lecture-pdf/') ? 'pdf' : 'veri';
+  /\.mp3($|\?)/i.test(u) || SES_RE.test(u) ? 'ses' : u.startsWith('/api/lecture-pdf/') || u.startsWith('/vendor/pdfjs/') ? 'pdf' : 'veri';
 const tabanFor = (u: string) => (u.startsWith('/api/') ? (getCustomApiUrl(u) || '').replace(/\/$/, '') : '');
 /** Önbellek anahtarı (sw.js ile aynı kural): ses klipleri sorgusuz, diğerleri tam adres */
 export function anahtar(d: PDosya | string): string {
@@ -318,6 +318,8 @@ let calisiyor = false;
 let iptal: AbortController | null = null;
 
 export function kuyrugaEkle(ids: string[], basa = false, secim?: Secim) {
+  // İçerik inerken uygulama kodu da cihazda olmalı (yoksa ekranlar internetsiz açılmaz; PDF görüntüleyici, çizim işçisi vb.)
+  if (ids.some((x) => x !== 'uygulama') && !ids.includes('uygulama') && paketDurumu('uygulama') === 'yok') ids = ['uygulama', ...ids];
   if (secim) {
     const sm = { ...S.secimler };
     ids.forEach((id) => { sm[id] = secim; });

@@ -35,7 +35,15 @@ export interface Paket {
 /** Dosya türü (istemci paketMotoru.dosyaTuru ile aynı kural) */
 export const dosyaTuru = (u: string): 'ses' | 'pdf' | 'veri' =>
   /\.mp3($|\?)/i.test(u) || /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses)\//.test(u) ? 'ses'
-    : u.startsWith('/api/lecture-pdf/') ? 'pdf' : 'veri';
+    : u.startsWith('/api/lecture-pdf/') || u.startsWith('/vendor/pdfjs/') ? 'pdf' : 'veri';
+
+/** PDF.js'in çizim için istediği yardımcı dosyalar (yazı tipi, wasm, renk profili); server.ts /vendor/pdfjs'ten sunar */
+const PDFJS_YARDIMCI = [
+  ...['FoxitDingbats.pfb', 'FoxitFixed.pfb', 'FoxitFixedBold.pfb', 'FoxitFixedBoldItalic.pfb', 'FoxitFixedItalic.pfb', 'FoxitSerif.pfb',
+    'FoxitSerifBold.pfb', 'FoxitSerifBoldItalic.pfb', 'FoxitSerifItalic.pfb', 'FoxitSymbol.pfb', 'LiberationSans-Bold.ttf',
+    'LiberationSans-BoldItalic.ttf', 'LiberationSans-Italic.ttf', 'LiberationSans-Regular.ttf'].map((f) => `standard_fonts/${f}`),
+  'wasm/openjpeg.wasm', 'wasm/openjpeg_nowasm_fallback.js', 'wasm/qcms_bg.wasm', 'iccs/CGATS001Compat-v2-micro.icc',
+];
 
 const KOK = process.cwd();
 const DIST = path.join(KOK, 'dist');
@@ -156,6 +164,12 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
       pdfler = resolveDeckPdfs(id).map((f, j) => (f.full ? { u: `/api/lecture-pdf/deck/${encodeURIComponent(id)}/${j}?v=${f.size || 0}`, b: f.size } : null))
         .filter(Boolean) as PDosya[];
     } catch { /* eşleme yok */ }
+    if (pdfler.length) {
+      // Görüntüleyici önce eşlemeyi (dosya listesi + slayt→sayfa) ve PDF'li deste listesini ister; PDF.js yardımcıları da gerekir
+      const nm = process.env.MEDS_NODE_MODULES || path.join(KOK, 'node_modules');
+      pdfler.push({ u: `/api/lecture-pdf/deck/${encodeURIComponent(id)}`, b: 4_000 }, { u: '/api/lecture-pdf/decks', b: 60_000 },
+        ...PDFJS_YARDIMCI.map((f) => ({ u: `/vendor/pdfjs/${f}`, b: boyut(path.join(nm, 'pdfjs-dist', f)) })));
+    }
     const grup = String(d.discipline || 'Diğer').split('/')[0].trim();
     ekle({ id: `ogren:${id}`, modul: 'ogren', grup, baslik: d.shortTitle || d.title, alt: `${d.slideCount} adım${sesler.length ? ' · sesli' : ''}${pdfler.length ? ' · PDF' : ''}`, sira: i },
       [...veri(`decks/items/${safe}.json`), ...sesler, ...pdfler]);

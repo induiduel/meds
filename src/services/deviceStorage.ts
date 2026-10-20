@@ -115,12 +115,22 @@ export async function savePdfOffline(url: string): Promise<void> {
   const blob = await res.blob();
   const c = await caches.open(PDF_CACHE);
   await c.put(url, new Response(blob, { headers: { 'Content-Type': 'application/pdf', 'Content-Length': String(blob.size) } }));
+  // Eşleme (dosya listesi + slayt→sayfa) de saklanır: internetsiz açılışta görüntüleyici PDF adresini bundan bulur
+  const m = url.match(/^(.*\/api\/lecture-pdf\/deck\/[^/?]+)\/\d+/);
+  if (m) await fetch(m[1], { cache: 'no-store' }).then((r) => (r.ok ? c.put(m[1], r) : undefined)).catch(() => {});
   window.dispatchEvent(new Event(PDF_SAVED_EVENT));
 }
 
 export async function removeSavedPdf(url: string): Promise<void> {
   if (typeof caches === 'undefined') return;
   for (const k of await caches.keys()) await (await caches.open(k)).delete(url);
+  // Destenin başka kayıtlı PDF'i kalmadıysa eşlemesi de kalkar (yoksa internetsiz görüntüleyici olmayan dosyayı açmaya çalışır)
+  const m = url.match(/^(.*\/api\/lecture-pdf\/deck\/[^/?]+)\/\d+/);
+  if (m) {
+    const c = await caches.open(PDF_CACHE);
+    const kalan = (await c.keys()).some((r) => r.url.includes(m[1].replace(/^.*(\/api\/)/, '$1') + '/'));
+    if (!kalan) await c.delete(m[1]);
+  }
   window.dispatchEvent(new Event(PDF_SAVED_EVENT));
 }
 
