@@ -30,7 +30,7 @@ import {
   DENSITY_LABELS,
   LAYOUT_LABELS,
   READING_LABELS,
-  DESIGN_LABELS, DESIGN_ORDER,
+  DESIGN_CHOICES, DESIGN_CHOICE_LABELS, designChoiceOf, type DesignChoice,
   type DesignVersion,
   TEXT_SIZE_ORDER,
   TEXT_SIZE_PX,
@@ -249,10 +249,10 @@ const ProfileSettingsClassic: React.FC<Props> = ({ currentUser, isAdmin, questio
             <div className="ayr-row">
               <span className="ayr-row-t">
                 <b>Tasarım</b>
-                <span>Net (v12): sade, kompakt, tek ekranda bilgi. Sade (v11) ve Klasik (v10) önceki tasarımlardır; istediğin an geçebilirsin.</span>
+                <span>Ada (v13): yüzen menü adaları, şeritsiz, en kompakt. Net (v12), Sade (v11) ve Klasik (v10) önceki tasarımlardır; istediğin an geçebilirsin.</span>
               </span>
-              <Segmented<DesignVersion> label="Tasarım" value={look.design} onChange={(v) => look.set({ design: v })}
-                options={DESIGN_ORDER.map((v) => ({ value: v, label: DESIGN_LABELS[v] }))} />
+              <Segmented<DesignChoice> label="Tasarım" value={designChoiceOf(look)} onChange={(v) => look.set({ choice: v })}
+                options={DESIGN_CHOICES.map((v) => ({ value: v, label: DESIGN_CHOICE_LABELS[v] }))} />
             </div>
             <div className="ayr-row">
               <span className="ayr-row-t">

@@ -1,0 +1,3000 @@
+{
+ "surum": 2,
+ "ders_id": "k1-10",
+ "anahtar": "k1-10-kromozomal-hastaliklar-ve-genetik-danisma",
+ "baslik": "Kromozomal Hastalıklar ve Genetik Danışma",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-10-b01",
+   "baslik": "Kromozomal hastalıkların temeli ve sıklığı",
+   "paragraflar": [
+    {
+     "id": "k1-10-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-10-c0001",
+       "ses": "İnsan somatik hücreleri normalde 46 kromozom taşır; yani diploid sayı, 2n = 46.",
+       "ekran": "İnsan somatik hücreleri normalde 46 kromozom taşır; yani diploid sayı, 2n = 46.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0002",
+       "ses": "Bu kromozomlar hem sayı hem de yapı bakımından değişiklik gösterebilir ve kromozomal hastalıkların temelini işte bu değişiklikler oluşturur.",
+       "ekran": "Bu kromozomlar hem sayı hem de yapı bakımından değişiklik gösterebilir ve kromozomal hastalıkların temelini işte bu değişiklikler oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0003",
+       "ses": "Sayısal değişiklikte kromozom adedi 46'dan farklıdır, örneğin 47 ya da 45 olur.",
+       "ekran": "Sayısal değişiklikte kromozom adedi 46'dan farklıdır, örneğin 47 ya da 45 olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0004",
+       "ses": "Yapısal değişiklikte ise sayı korunsa bile bir segmentin kaybı, fazlalığı ya da yer değiştirmesi söz konusudur.",
+       "ekran": "Yapısal değişiklikte ise sayı korunsa bile bir segmentin kaybı, fazlalığı ya da yer değiştirmesi söz konusudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p002",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-10-c0005",
+       "ses": "Kromozomal hastalıklar kalıtsal hastalıkların önemli bir bölümünü oluşturur.",
+       "ekran": "Kromozomal hastalıklar kalıtsal hastalıkların önemli bir bölümünü oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0006",
+       "ses": "Bugüne kadar 100'den fazla farklı kromozomal sendrom bildirilmiştir.",
+       "ekran": "Bugüne kadar 100'den fazla farklı kromozomal sendrom bildirilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0007",
+       "ses": "Burası önemli: kromozomal bozukluklar tüm canlı doğumların yaklaşık %1'inde görülür.",
+       "ekran": "Burası önemli: kromozomal bozukluklar tüm canlı doğumların yaklaşık %1'inde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0008",
+       "ses": "Tek tek sendromlar nadir olsa da ağır morbidite ve mortaliteyle seyreder; yani nadir ama ağır ilkesini aklınızda tutun.",
+       "ekran": "Tek tek sendromlar nadir olsa da ağır morbidite ve mortaliteyle seyreder; yani nadir ama ağır ilkesini aklınızda tutun.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-10-c0009",
+       "ses": "Anormal karyotipin sıklığı yaşamın dönemine göre değişir.",
+       "ekran": "Anormal karyotipin sıklığı yaşamın dönemine göre değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0010",
+       "ses": "İlk trimester düşüklerinde anormal karyotiplerin %96'sı sayısal, %4'ü dengesiz yapısaldır.",
+       "ekran": "İlk trimester düşüklerinde anormal karyotiplerin %96'sı sayısal, %4'ü dengesiz yapısaldır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0011",
+       "ses": "35 yaş üstü annelerin fetüslerinde anormal karyotip 50'de 1'dir; bunların %85'i sayısal, %10'u dengeli, %5'i dengesiz yapısaldır.",
+       "ekran": "35 yaş üstü annelerin fetüslerinde anormal karyotip 50'de 1'dir; bunların %85'i sayısal, %10'u dengeli, %5'i dengesiz yapısaldır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0012",
+       "ses": "Canlı doğumlarda toplam sıklık 160'ta 1'dir; %60'ı sayısal, %30'u dengeli, %10'u dengesiz yapısaldır.",
+       "ekran": "Canlı doğumlarda toplam sıklık 160'ta 1'dir; %60'ı sayısal, %30'u dengeli, %10'u dengesiz yapısaldır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0013",
+       "ses": "Sayısal anomalilerin payı düşüklerden canlı doğumlara doğru azalır, çünkü bunların büyük kısmı gebeliğin erken döneminde elenir.",
+       "ekran": "Sayısal anomalilerin payı düşüklerden canlı doğumlara doğru azalır, çünkü bunların büyük kısmı gebeliğin erken döneminde elenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-10-c0014",
+       "ses": "Burası önemli: klinik öneme sahip kromozom anomalilerinin en yaygın tipi anöploididir ve anöploidi daima fiziksel ve ya da zihinsel sorunlarla seyreder.",
+       "ekran": "Burası önemli: klinik öneme sahip kromozom anomalilerinin en yaygın tipi anöploididir ve anöploidi daima fiziksel ve ya da zihinsel sorunlarla seyreder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0015",
+       "ses": "Yapısal düzensizlikler ise genomun içeriğini, yani gen miktarını değiştirdikleri ölçüde fenotipik etki gösterir.",
+       "ekran": "Yapısal düzensizlikler ise genomun içeriğini, yani gen miktarını değiştirdikleri ölçüde fenotipik etki gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0016",
+       "ses": "Dengeli anomaliler taşıyıcının kendisini genellikle etkilemez ama sonraki kuşakta riski artırır.",
+       "ekran": "Dengeli anomaliler taşıyıcının kendisini genellikle etkilemez ama sonraki kuşakta riski artırır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b02",
+   "baslik": "Klinik etkiye göre sınıflama: dengeli ve dengesiz anomaliler",
+   "paragraflar": [
+    {
+     "id": "k1-10-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-10-c0017",
+       "ses": "Klinik etkiye göre kromozom anomalileri dengeli ve dengesiz olarak ikiye ayrılır.",
+       "ekran": "Klinik etkiye göre kromozom anomalileri dengeli ve dengesiz olarak ikiye ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0018",
+       "ses": "Dengeli anomaliler yenidoğanlarda yaklaşık 500'de 1 görülür ve taşıyıcıda fenotipik etki göstermez.",
+       "ekran": "Dengeli anomaliler yenidoğanlarda yaklaşık 500'de 1 görülür ve taşıyıcıda fenotipik etki göstermez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0019",
+       "ses": "Ancak sonraki kuşakta risk artar ve bu risk yeniden düzenlenmenin tipine bağlı olarak %1 ile %100 arasında değişir.",
+       "ekran": "Ancak sonraki kuşakta risk artar ve bu risk yeniden düzenlenmenin tipine bağlı olarak %1 ile %100 arasında değişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p006",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-10-c0020",
+       "ses": "Burada görünürde dengeli kavramını bilmeniz gerekir.",
+       "ekran": "Burada görünürde dengeli kavramını bilmeniz gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0021",
+       "ses": "Dengeli bir yeniden düzenlenme oluşurken kromozom kırığı aktif bir genin yapısını ya da işlevini bozabilir; bu durumda gen miktarı korunduğu halde taşıyıcıda fenotipik bulgu ortaya çıkar.",
+       "ekran": "Dengeli bir yeniden düzenlenme oluşurken kromozom kırığı aktif bir genin yapısını ya da işlevini bozabilir; bu durumda gen miktarı korunduğu halde taşıyıcıda fenotipik bulgu ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0022",
+       "ses": "Klasik örnek, Duchenne müsküler distrofili olgularda, özellikle kız hastalarda görülen X kromozomunun kısa kolu ile bir otozom arasındaki translokasyonlardır; kırık noktası hastalıktan sorumlu geni böler.",
+       "ekran": "Klasik örnek, Duchenne müsküler distrofili olgularda, özellikle kız hastalarda görülen X kromozomunun kısa kolu ile bir otozom arasındaki translokasyonlardır; kırık noktası hastalıktan sorumlu geni böler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p007",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-10-c0023",
+       "ses": "Dengesiz anomalilerde ise ilke gen dozajıdır.",
+       "ekran": "Dengesiz anomalilerde ise ilke gen dozajıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0024",
+       "ses": "Genomda gen dozajını, yani bir genin kopya sayısını bozan herhangi bir değişim fenotipe yansır ve ortaya çıkan bulgular etkilenen genlere bağlı olarak farklılık gösterir.",
+       "ekran": "Genomda gen dozajını, yani bir genin kopya sayısını bozan herhangi bir değişim fenotipe yansır ve ortaya çıkan bulgular etkilenen genlere bağlı olarak farklılık gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b03",
+   "baslik": "Sayısal düzensizlikler: öploidi ve poliploidi",
+   "paragraflar": [
+    {
+     "id": "k1-10-p008",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-10-c0025",
+       "ses": "Sitogenetik açıdan kromozom anomalileri sayısal ve yapısal olarak ayrılır.",
+       "ekran": "Sitogenetik açıdan kromozom anomalileri sayısal ve yapısal olarak ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0026",
+       "ses": "Sayısal düzensizliklerin 2 kolu vardır.",
+       "ekran": "Sayısal düzensizliklerin 2 kolu vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0027",
+       "ses": "Öploidi, kromozom sayısının haploid takımın, yani 23 kromozomun tam katı kadar artmasıdır; hücre bölünmesi sırasında ortaya çıkan kusurlar ve sitoplazmanın bölünmemesiyle oluşur.",
+       "ekran": "Öploidi, kromozom sayısının haploid takımın, yani 23 kromozomun tam katı kadar artmasıdır; hücre bölünmesi sırasında ortaya çıkan kusurlar ve sitoplazmanın bölünmemesiyle oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0028",
+       "ses": "Anöploidi ise katı kadar olmayan değişimdir; nedenleri kromozom ayrılamaması ve anafazda geri kalmadır.",
+       "ekran": "Anöploidi ise katı kadar olmayan değişimdir; nedenleri kromozom ayrılamaması ve anafazda geri kalmadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p009",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-10-c0029",
+       "ses": "Haploidi eşey hücrelerinde, diploidi somatik hücrelerde normaldir.",
+       "ekran": "Haploidi eşey hücrelerinde, diploidi somatik hücrelerde normaldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0030",
+       "ses": "Poliploidinin insanda 2 örneği vardır: 3 haploid takımın bulunduğu, 69 kromozomlu triploidi ve 4 haploid takımın bulunduğu, 92 kromozomlu tetraploidi.",
+       "ekran": "Poliploidinin insanda 2 örneği vardır: 3 haploid takımın bulunduğu, 69 kromozomlu triploidi ve 4 haploid takımın bulunduğu, 92 kromozomlu tetraploidi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0031",
+       "ses": "Aynı bireyde farklı ploidide hücre dizileri bulunursa buna miksoploidi denir, örneğin diploid ve triploid hücrelerin birlikteliği.",
+       "ekran": "Aynı bireyde farklı ploidide hücre dizileri bulunursa buna miksoploidi denir, örneğin diploid ve triploid hücrelerin birlikteliği.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0032",
+       "ses": "Poliploidiler genellikle letaldir; nadiren triploid ya da tetraploid canlı doğum olabilir.",
+       "ekran": "Poliploidiler genellikle letaldir; nadiren triploid ya da tetraploid canlı doğum olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0033",
+       "ses": "Burası önemli: triploidi tanımlanmış gebeliklerin %1 ile 3'ünde görülür, birinci trimester spontan abortuslarının yaklaşık %20'sinden sorumludur ve triploid fetüs canlı doğsa bile yaşayamaz.",
+       "ekran": "Burası önemli: triploidi tanımlanmış gebeliklerin %1 ile 3'ünde görülür, birinci trimester spontan abortuslarının yaklaşık %20'sinden sorumludur ve triploid fetüs canlı doğsa bile yaşayamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0034",
+       "ses": "Dikkat edin, triploidi bir trizomi değil, öploidi yani poliploidi örneğidir.",
+       "ekran": "Dikkat edin, triploidi bir trizomi değil, öploidi yani poliploidi örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p010",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-10-c0035",
+       "ses": "Triploid bir fetüsün oluşması için 3 olasılık vardır.",
+       "ekran": "Triploid bir fetüsün oluşması için 3 olasılık vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0036",
+       "ses": "1.'si dispermidir, yani bir yumurtanın 2 spermle döllenmesi.",
+       "ekran": "1.'si dispermidir, yani bir yumurtanın 2 spermle döllenmesi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0037",
+       "ses": "2.'si diploid bir spermin haploid yumurtayı döllemesi, 3.'sü haploid bir spermin diploid yumurtayı döllemesidir.",
+       "ekran": "2.'si diploid bir spermin haploid yumurtayı döllemesi, 3.'sü haploid bir spermin diploid yumurtayı döllemesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0038",
+       "ses": "Diploid gametler mayozun tamamlanamaması gibi bölünme kusurlarıyla oluşur.",
+       "ekran": "Diploid gametler mayozun tamamlanamaması gibi bölünme kusurlarıyla oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0039",
+       "ses": "İlk iki yolda fazla takım babadan, üçüncüsünde anneden gelir ve fenotipik bulgular ekstra kromozom takımının parental kaynağına göre değişir.",
+       "ekran": "İlk iki yolda fazla takım babadan, üçüncüsünde anneden gelir ve fenotipik bulgular ekstra kromozom takımının parental kaynağına göre değişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b04",
+   "baslik": "Anöploidinin oluşumu: ayrılamama ve anafazda geri kalma",
+   "paragraflar": [
+    {
+     "id": "k1-10-p011",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-10-c0040",
+       "ses": "Anöploidinin birinci nedeni kromozom ayrılamamasıdır.",
+       "ekran": "Anöploidinin birinci nedeni kromozom ayrılamamasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0041",
+       "ses": "Normalde bölünmenin metafaz evresinde kromozomlar sentromerlerinden uzunlamasına bölünerek kutuplara çekilir.",
+       "ekran": "Normalde bölünmenin metafaz evresinde kromozomlar sentromerlerinden uzunlamasına bölünerek kutuplara çekilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0042",
+       "ses": "Ayrılamama olursa bir kutba kromozomun 2 kopyası giderken diğer kutba hiç kopya gitmez.",
+       "ekran": "Ayrılamama olursa bir kutba kromozomun 2 kopyası giderken diğer kutba hiç kopya gitmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0043",
+       "ses": "Böylece bir gamet 24, diğeri 22 kromozomlu olur; bunlar normal gametle birleşince sonuç trizomi ya da monozomidir.",
+       "ekran": "Böylece bir gamet 24, diğeri 22 kromozomlu olur; bunlar normal gametle birleşince sonuç trizomi ya da monozomidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p012",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-10-c0044",
+       "ses": "Ayrılamama mitotik ya da mayotik bölünmede olabilir ve mayoz I ile mayoz II'deki sonuçlar farklıdır.",
+       "ekran": "Ayrılamama mitotik ya da mayotik bölünmede olabilir ve mayoz I ile mayoz II'deki sonuçlar farklıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0045",
+       "ses": "Mayoz I'de homologlar ayrılamazsa 4 gametin tamamı anormaldir ve 24 kromozomlu gamet o kromozom için her iki parental homoloğu, yani ebeveynin annesinden ve babasından aldığı iki farklı homoloğu birlikte taşır.",
+       "ekran": "Mayoz I'de homologlar ayrılamazsa 4 gametin tamamı anormaldir ve 24 kromozomlu gamet o kromozom için her iki parental homoloğu, yani ebeveynin annesinden ve babasından aldığı iki farklı homoloğu birlikte taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0046",
+       "ses": "Mayoz II'de kardeş kromatitler ayrılamazsa gametlerin ikisi normaldir; ekstra kromozomlu gametteki 2 kopya aynı homologdan türediği için ikisi de aynı kaynağa aittir.",
+       "ekran": "Mayoz II'de kardeş kromatitler ayrılamazsa gametlerin ikisi normaldir; ekstra kromozomlu gametteki 2 kopya aynı homologdan türediği için ikisi de aynı kaynağa aittir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0047",
+       "ses": "Bu ayrım, trizomik bir bireyde ekstra kromozomun hangi bölünmede ve hangi ebeveynde oluştuğunu belirlemenin temelidir.",
+       "ekran": "Bu ayrım, trizomik bir bireyde ekstra kromozomun hangi bölünmede ve hangi ebeveynde oluştuğunu belirlemenin temelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p013",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-10-c0048",
+       "ses": "Burası önemli: canlı doğumlarda en sık gözlenen otozomal trizomiler 13, 18 ve 21 trizomileridir; bunların dışındaki tam otozomal trizomiler letaldir.",
+       "ekran": "Burası önemli: canlı doğumlarda en sık gözlenen otozomal trizomiler 13, 18 ve 21 trizomileridir; bunların dışındaki tam otozomal trizomiler letaldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0049",
+       "ses": "Otozomal monozomiler yaşamla bağdaşmaz; X kromozomu monozomisi olan Turner sendromu yaşamla bağdaşan tek monozomidir.",
+       "ekran": "Otozomal monozomiler yaşamla bağdaşmaz; X kromozomu monozomisi olan Turner sendromu yaşamla bağdaşan tek monozomidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p014",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-10-c0050",
+       "ses": "Anöploidinin ikinci nedeni anafazda geri kalmadır.",
+       "ekran": "Anöploidinin ikinci nedeni anafazda geri kalmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0051",
+       "ses": "Burada kromozomlardan biri özdeşine göre kutba gitmekte gecikir.",
+       "ekran": "Burada kromozomlardan biri özdeşine göre kutba gitmekte gecikir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0052",
+       "ses": "Geç kalan bu kromozom ya özdeşinin bulunduğu gruba katılır ya da hiçbir çekirdeğe katılamayıp ortadan kaybolur; sonuç yine trizomi ya da monozomidir.",
+       "ekran": "Geç kalan bu kromozom ya özdeşinin bulunduğu gruba katılır ya da hiçbir çekirdeğe katılamayıp ortadan kaybolur; sonuç yine trizomi ya da monozomidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0053",
+       "ses": "Bu olay döllenmeden sonraki mitozlarda olursa normal ve anöploid hücre dizileri birlikte bulunur; bu da mozaik karyotipin bir kaynağıdır.",
+       "ekran": "Bu olay döllenmeden sonraki mitozlarda olursa normal ve anöploid hücre dizileri birlikte bulunur; bu da mozaik karyotipin bir kaynağıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b05",
+   "baslik": "Anöploidi tipleri",
+   "paragraflar": [
+    {
+     "id": "k1-10-p015",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-10-c0054",
+       "ses": "Anöploidi, bir ya da birkaç kromozomun fazla ya da eksik olmasıdır.",
+       "ekran": "Anöploidi, bir ya da birkaç kromozomun fazla ya da eksik olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0055",
+       "ses": "Kromozom eksikliğiyle giden hipoploidi grubunda monozomi ve nullizomi, kromozom fazlalığıyla giden hiperploidi grubunda trizomi ve polizomi bulunur.",
+       "ekran": "Kromozom eksikliğiyle giden hipoploidi grubunda monozomi ve nullizomi, kromozom fazlalığıyla giden hiperploidi grubunda trizomi ve polizomi bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p016",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-10-c0056",
+       "ses": "Trizomi, herhangi 1 kromozomun 3 tane olmasıdır; 2n + 1, yani 47 kromozom.",
+       "ekran": "Trizomi, herhangi 1 kromozomun 3 tane olmasıdır; 2n + 1, yani 47 kromozom.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0057",
+       "ses": "Karyotip yazımında önce toplam sayı, sonra cinsiyet kromozomları, en sonda fazlalık yazılır.",
+       "ekran": "Karyotip yazımında önce toplam sayı, sonra cinsiyet kromozomları, en sonda fazlalık yazılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0058",
+       "ses": "47,XX,+21 Down sendromunu; 47,XY,+13 Patau sendromunu; 47,XY,+18 Edwards sendromunu; 47,XXY ise Klinefelter sendromunu gösterir.",
+       "ekran": "47,XX,+21 Down sendromunu; 47,XY,+13 Patau sendromunu; 47,XY,+18 Edwards sendromunu; 47,XXY ise Klinefelter sendromunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p017",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-10-c0059",
+       "ses": "Tetrazomi, belli bir homolog çiftten 4 tane bulunması ya da 2 ayrı homolog çiftin trizomisidir.",
+       "ekran": "Tetrazomi, belli bir homolog çiftten 4 tane bulunması ya da 2 ayrı homolog çiftin trizomisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0060",
+       "ses": "Nullizomi 1 kromozom çiftinin ikisinin birden olmamasıdır.",
+       "ekran": "Nullizomi 1 kromozom çiftinin ikisinin birden olmamasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0061",
+       "ses": "Monozomi ise diploid çiftten birinin olmamasıdır; 2n - 1, yani 45 kromozom.",
+       "ekran": "Monozomi ise diploid çiftten birinin olmamasıdır; 2n - 1, yani 45 kromozom.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0062",
+       "ses": "Klinikteki örneği 45,X karyotipli Turner sendromudur.",
+       "ekran": "Klinikteki örneği 45,X karyotipli Turner sendromudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0063",
+       "ses": "Dikkat edin, nullizomi ile monozomi karıştırılır: monozomide çiftin biri, nullizomide ikisi de yoktur.",
+       "ekran": "Dikkat edin, nullizomi ile monozomi karıştırılır: monozomide çiftin biri, nullizomide ikisi de yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b06",
+   "baslik": "Yapısal anomaliler ve delesyon",
+   "paragraflar": [
+    {
+     "id": "k1-10-p018",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-10-c0064",
+       "ses": "Yapısal düzensizlikler kromozom kırıkları ve kırılan bölgelerin kaybolması ya da farklı bir konumda birleşmesiyle ortaya çıkar.",
+       "ekran": "Yapısal düzensizlikler kromozom kırıkları ve kırılan bölgelerin kaybolması ya da farklı bir konumda birleşmesiyle ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0065",
+       "ses": "Yaklaşık 375 yenidoğanda 1 görülür, dengeli ya da dengesiz olabilir ve bir sonraki kuşağa aktarılabilir.",
+       "ekran": "Yaklaşık 375 yenidoğanda 1 görülür, dengeli ya da dengesiz olabilir ve bir sonraki kuşağa aktarılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0066",
+       "ses": "Dengesiz yeniden düzenlenmeler duplikasyon, delesyon, ring yani halka kromozom, marker kromozom ve izokromozomdur.",
+       "ekran": "Dengesiz yeniden düzenlenmeler duplikasyon, delesyon, ring yani halka kromozom, marker kromozom ve izokromozomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0067",
+       "ses": "Dengeli yeniden düzenlenmeler ise inversiyon ve translokasyondur.",
+       "ekran": "Dengeli yeniden düzenlenmeler ise inversiyon ve translokasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0068",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: translokasyon, duplikasyon, inversiyon ve delesyon kromozom mutasyonlarının örnekleridir; nokta mutasyonları ise gen düzeyindeki değişikliklerdir ve kromozom mutasyonu örneği sayılmaz.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: translokasyon, duplikasyon, inversiyon ve delesyon kromozom mutasyonlarının örnekleridir; nokta mutasyonları ise gen düzeyindeki değişikliklerdir ve kromozom mutasyonu örneği sayılmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p019",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-10-c0069",
+       "ses": "Delesyon 1 kromozom segmentinin kaybolmasıdır.",
+       "ekran": "Delesyon 1 kromozom segmentinin kaybolmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0070",
+       "ses": "Kaybolan bölge için tek kopya kaldığından delesyon bir parsiyel monozomidir ve klinik etkisi haploinsüfisyensle, yani tek kalan gen kopyasının normal işlev için yetmemesiyle açıklanır.",
+       "ekran": "Kaybolan bölge için tek kopya kaldığından delesyon bir parsiyel monozomidir ve klinik etkisi haploinsüfisyensle, yani tek kalan gen kopyasının normal işlev için yetmemesiyle açıklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0071",
+       "ses": "Etkinin şiddeti delesyona uğrayan segmentin büyüklüğü, bölgedeki genlerin sayısı ve işleviyle ilişkilidir.",
+       "ekran": "Etkinin şiddeti delesyona uğrayan segmentin büyüklüğü, bölgedeki genlerin sayısı ve işleviyle ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0072",
+       "ses": "Büyük otozomal delesyonlar yaşamla bağdaşmaz.",
+       "ekran": "Büyük otozomal delesyonlar yaşamla bağdaşmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0073",
+       "ses": "Delesyonlar yaklaşık 7000 canlı doğumda 1 görülür.",
+       "ekran": "Delesyonlar yaklaşık 7000 canlı doğumda 1 görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p020",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-10-c0074",
+       "ses": "Terminal delesyon kromozomun uç bölgesinde, tek darbeyle, yani tek kırıkla oluşur.",
+       "ekran": "Terminal delesyon kromozomun uç bölgesinde, tek darbeyle, yani tek kırıkla oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0075",
+       "ses": "Örneği 5. kromozomun kısa kolundaki delesyonla oluşan cri du chat sendromudur; karyotipi 46,XX, 5p15.2 bandından itibaren delesyon olarak yazılır.",
+       "ekran": "Örneği 5. kromozomun kısa kolundaki delesyonla oluşan cri du chat sendromudur; karyotipi 46,XX, 5p15.2 bandından itibaren delesyon olarak yazılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0076",
+       "ses": "İnterkalar ya da interstisyel delesyon ise kromozom kolunun içinde, çift darbeyle oluşur.",
+       "ekran": "İnterkalar ya da interstisyel delesyon ise kromozom kolunun içinde, çift darbeyle oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0077",
+       "ses": "Kopan parça sentromersiz, yani asentrikse bölünmede kutba çekilemez ve kaybolur; sentromerliyse hücrede kendini gösterir.",
+       "ekran": "Kopan parça sentromersiz, yani asentrikse bölünmede kutba çekilemez ve kaybolur; sentromerliyse hücrede kendini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0078",
+       "ses": "Örneği 22q11.2 delesyonuyla oluşan DiGeorge sendromudur.",
+       "ekran": "Örneği 22q11.2 delesyonuyla oluşan DiGeorge sendromudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0079",
+       "ses": "FISH incelemesinde normal 22 kromozomunda bölgeye özgü sinyal görülürken delesyonlu kromozomda bu sinyal eksiktir; bu küçük kayıp klasik karyotipte seçilemez.",
+       "ekran": "FISH incelemesinde normal 22 kromozomunda bölgeye özgü sinyal görülürken delesyonlu kromozomda bu sinyal eksiktir; bu küçük kayıp klasik karyotipte seçilemez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b07",
+   "baslik": "Mikrodelesyon sendromları ve zıt dozaj",
+   "paragraflar": [
+    {
+     "id": "k1-10-p021",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-10-c0080",
+       "ses": "Bazı delesyonlar o kadar küçüktür ki klasik karyotipte görülmez; bunlar mikrodelesyon sendromlarıdır ve hepsinde komşu birkaç genin birlikte kaybı söz konusudur.",
+       "ekran": "Bazı delesyonlar o kadar küçüktür ki klasik karyotipte görülmez; bunlar mikrodelesyon sendromlarıdır ve hepsinde komşu birkaç genin birlikte kaybı söz konusudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0081",
+       "ses": "Burası önemli, bölge ve sendrom eşleşmesi sorulur.",
+       "ekran": "Burası önemli, bölge ve sendrom eşleşmesi sorulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0082",
+       "ses": "17p11.2 delesyonu Smith-Magenis sendromunu, 15q11 ile q13 arası delesyon Prader-Willi ve Angelman sendromlarını, 7q11.23 delesyonu Williams sendromunu, 17q11.2 delesyonu nörofibromatozisi, 22q11 delesyonu ise DiGeorge sendromunu oluşturur.",
+       "ekran": "17p11.2 delesyonu Smith-Magenis sendromunu, 15q11 ile q13 arası delesyon Prader-Willi ve Angelman sendromlarını, 7q11.23 delesyonu Williams sendromunu, 17q11.2 delesyonu nörofibromatozisi, 22q11 delesyonu ise DiGeorge sendromunu oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0083",
+       "ses": "15. kromozomdaki delesyon, kaybolan kopyanın hangi ebeveynden geldiğine göre Prader-Willi ya da Angelman tablosu yapar; buna dersin sonunda döneceğiz.",
+       "ekran": "15. kromozomdaki delesyon, kaybolan kopyanın hangi ebeveynden geldiğine göre Prader-Willi ya da Angelman tablosu yapar; buna dersin sonunda döneceğiz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p022",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-10-c0084",
+       "ses": "Bazı bölgelerde delesyon bir sendroma, aynı bölgenin duplikasyonu başka bir sendroma yol açar; bu gen dozajı ilkesinin en açık kanıtıdır.",
+       "ekran": "Bazı bölgelerde delesyon bir sendroma, aynı bölgenin duplikasyonu başka bir sendroma yol açar; bu gen dozajı ilkesinin en açık kanıtıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0085",
+       "ses": "17p12 duplikasyonu Charcot-Marie-Tooth hastalığını, yani herediter motor duyusal nöropatiyi; aynı bölgenin delesyonu ise basıya duyarlı herediter nöropatiyi oluşturur.",
+       "ekran": "17p12 duplikasyonu Charcot-Marie-Tooth hastalığını, yani herediter motor duyusal nöropatiyi; aynı bölgenin delesyonu ise basıya duyarlı herediter nöropatiyi oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0086",
+       "ses": "22q11 delesyonu DiGeorge sendromunu, duplikasyonu ise kedi gözü sendromunu yapar.",
+       "ekran": "22q11 delesyonu DiGeorge sendromunu, duplikasyonu ise kedi gözü sendromunu yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0087",
+       "ses": "Yani fenotipi belirleyen yalnız genin varlığı değil, kopya sayısıdır.",
+       "ekran": "Yani fenotipi belirleyen yalnız genin varlığı değil, kopya sayısıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b08",
+   "baslik": "Duplikasyon",
+   "paragraflar": [
+    {
+     "id": "k1-10-p023",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-10-c0088",
+       "ses": "Duplikasyon 1 kromozom segmentinin trizomisidir, yani parsiyel trizomidir.",
+       "ekran": "Duplikasyon 1 kromozom segmentinin trizomisidir, yani parsiyel trizomidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0089",
+       "ses": "Klinik etkisi delesyona oranla daha azdır, çünkü fazladan kopya eksik kopyaya göre daha iyi tolere edilir.",
+       "ekran": "Klinik etkisi delesyona oranla daha azdır, çünkü fazladan kopya eksik kopyaya göre daha iyi tolere edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0090",
+       "ses": "Ancak gametlerde oluşabilecek duplikasyonlar daha ağır fenotipe neden olabilir.",
+       "ekran": "Ancak gametlerde oluşabilecek duplikasyonlar daha ağır fenotipe neden olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p024",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-10-c0091",
+       "ses": "Saptama sınırını bilin.",
+       "ekran": "Saptama sınırını bilin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0092",
+       "ses": "5 megabazdan büyük delesyon ve duplikasyonlar klasik sitogenetik, yani bantlı karyotip analiziyle saptanabilir.",
+       "ekran": "5 megabazdan büyük delesyon ve duplikasyonlar klasik sitogenetik, yani bantlı karyotip analiziyle saptanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0093",
+       "ses": "Daha küçük, submikroskobik delesyon ve duplikasyonlar ancak moleküler sitogenetik yöntemlerle, yani floresan in situ hibridizasyon dediğimiz FISH ve mikroarray ile saptanır; bunlara mikrodelesyon ve mikroduplikasyon denir.",
+       "ekran": "Daha küçük, submikroskobik delesyon ve duplikasyonlar ancak moleküler sitogenetik yöntemlerle, yani floresan in situ hibridizasyon dediğimiz FISH ve mikroarray ile saptanır; bunlara mikrodelesyon ve mikroduplikasyon denir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p025",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-10-c0094",
+       "ses": "Duplikasyon, homolog kromozomlardan birinden kopan parçanın diğerine eklenmesiyle oluşabilir; ancak genellikle mayozda eşit olmayan krossing over sonucu oluşur.",
+       "ekran": "Duplikasyon, homolog kromozomlardan birinden kopan parçanın diğerine eklenmesiyle oluşabilir; ancak genellikle mayozda eşit olmayan krossing over sonucu oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0095",
+       "ses": "Kayık hizalanan homologlar farklı uzunlukta parça değiştirir ve sonuçta homologlardan birinde duplikasyon, diğerinde delesyon ortaya çıkar.",
+       "ekran": "Kayık hizalanan homologlar farklı uzunlukta parça değiştirir ve sonuçta homologlardan birinde duplikasyon, diğerinde delesyon ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0096",
+       "ses": "17p12 ve 22q11 bölgelerindeki zıt dozaj çiftleri bu mekanizmayı yansıtır.",
+       "ekran": "17p12 ve 22q11 bölgelerindeki zıt dozaj çiftleri bu mekanizmayı yansıtır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0097",
+       "ses": "Kopyanın yerleşimine göre tandem duplikasyonda kopya aslının hemen yanına aynı yönde, ters duplikasyonda yanına ters yönde, tandem olmayan duplikasyonda ise kromozomun başka bir noktasına yerleşir.",
+       "ekran": "Kopyanın yerleşimine göre tandem duplikasyonda kopya aslının hemen yanına aynı yönde, ters duplikasyonda yanına ters yönde, tandem olmayan duplikasyonda ise kromozomun başka bir noktasına yerleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b09",
+   "baslik": "İnversiyon",
+   "paragraflar": [
+    {
+     "id": "k1-10-p026",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-10-c0098",
+       "ses": "İnversiyon, 1 kromozomda 2 kırık oluşması ve aradaki segmentin 180 derece dönerek yeniden birleşmesidir.",
+       "ekran": "İnversiyon, 1 kromozomda 2 kırık oluşması ve aradaki segmentin 180 derece dönerek yeniden birleşmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0099",
+       "ses": "Parasentrik inversiyonda ters dönen segment sentromer içermez, 2 kırık aynı koldadır.",
+       "ekran": "Parasentrik inversiyonda ters dönen segment sentromer içermez, 2 kırık aynı koldadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0100",
+       "ses": "Perisentrik inversiyonda ise segment sentromeri içerir.",
+       "ekran": "Perisentrik inversiyonda ise segment sentromeri içerir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0101",
+       "ses": "Para yanında, peri çevresinde demektir; böyle hatırlayabilirsiniz.",
+       "ekran": "Para yanında, peri çevresinde demektir; böyle hatırlayabilirsiniz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p027",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-10-c0102",
+       "ses": "İnversiyonlar dengeli yeniden düzenlenmelerdir; genetik materyal kaybolmaz, yalnız sırası değişir ve taşıyıcılarda fenotipik bulguya yol açmaz.",
+       "ekran": "İnversiyonlar dengeli yeniden düzenlenmelerdir; genetik materyal kaybolmaz, yalnız sırası değişir ve taşıyıcılarda fenotipik bulguya yol açmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0103",
+       "ses": "Sorun gametogenezdedir, dolayısıyla sonraki nesilde dengesiz gamet oluşum riski vardır.",
+       "ekran": "Sorun gametogenezdedir, dolayısıyla sonraki nesilde dengesiz gamet oluşum riski vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0104",
+       "ses": "Mayozda normal ve inversiyonlu homologlar eşleşebilmek için inversiyon bölgesinde bir halka oluşturur.",
+       "ekran": "Mayozda normal ve inversiyonlu homologlar eşleşebilmek için inversiyon bölgesinde bir halka oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0105",
+       "ses": "Parasentrik inversiyonda bu halka içindeki krossing over asentrik, yani sentromersiz ve disentrik, yani iki sentromerli kromozomlar üretir.",
+       "ekran": "Parasentrik inversiyonda bu halka içindeki krossing over asentrik, yani sentromersiz ve disentrik, yani iki sentromerli kromozomlar üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0106",
+       "ses": "Asentrik ve disentrik kromozomlar yaşamla bağdaşmaz ve bu gametlerle oluşan gebelikler erken kaybedilir.",
+       "ekran": "Asentrik ve disentrik kromozomlar yaşamla bağdaşmaz ve bu gametlerle oluşan gebelikler erken kaybedilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0107",
+       "ses": "Perisentrik inversiyonda ise krossing over bir bölgenin duplikasyonunu, diğerinin delesyonunu taşıyan rekombinant kromozomlar oluşturur; bu nedenle duplikasyon ve delesyon taşıyan çocuk doğabilir.",
+       "ekran": "Perisentrik inversiyonda ise krossing over bir bölgenin duplikasyonunu, diğerinin delesyonunu taşıyan rekombinant kromozomlar oluşturur; bu nedenle duplikasyon ve delesyon taşıyan çocuk doğabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b10",
+   "baslik": "Translokasyon: resiprokal tip ve segregasyon",
+   "paragraflar": [
+    {
+     "id": "k1-10-p028",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-10-c0108",
+       "ses": "Translokasyon kromozomlar arasında parça değişimidir ve 3 tipi vardır: resiprokal, Robertsonyan ve insersiyonal.",
+       "ekran": "Translokasyon kromozomlar arasında parça değişimidir ve 3 tipi vardır: resiprokal, Robertsonyan ve insersiyonal.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0109",
+       "ses": "Translokasyon sonrası oluşan anormal kromozomlara türev kromozom denir ve sentromerini aldığı kromozomun numarasını taşır.",
+       "ekran": "Translokasyon sonrası oluşan anormal kromozomlara türev kromozom denir ve sentromerini aldığı kromozomun numarasını taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0110",
+       "ses": "Örneğin 4 ile 20 arasındaki resiprokal translokasyonda uç segmentler yer değiştirir ve türev 4 ile türev 20 kromozomları oluşur.",
+       "ekran": "Örneğin 4 ile 20 arasındaki resiprokal translokasyonda uç segmentler yer değiştirir ve türev 4 ile türev 20 kromozomları oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p029",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-10-c0111",
+       "ses": "Resiprokal translokasyon homolog olmayan kromozomlarda, genellikle 2 kromozom arasında gerçekleşir.",
+       "ekran": "Resiprokal translokasyon homolog olmayan kromozomlarda, genellikle 2 kromozom arasında gerçekleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0112",
+       "ses": "Toplam kromozom kuruluşu değişmez, sayı 46'dır ve fenotipik etki oluşturmaz; ancak dengesiz gamet riski vardır.",
+       "ekran": "Toplam kromozom kuruluşu değişmez, sayı 46'dır ve fenotipik etki oluşturmaz; ancak dengesiz gamet riski vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0113",
+       "ses": "Burası önemli: resiprokal translokasyon sıklıkla klinik olarak etkilenmiş, dengesiz yapısal anomalili çocukların ebeveynlerinde, tekrarlayan fetal kayıp ya da infertilite öykülü çiftlerde ve prenatal tanı sırasında saptanır.",
+       "ekran": "Burası önemli: resiprokal translokasyon sıklıkla klinik olarak etkilenmiş, dengesiz yapısal anomalili çocukların ebeveynlerinde, tekrarlayan fetal kayıp ya da infertilite öykülü çiftlerde ve prenatal tanı sırasında saptanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0114",
+       "ses": "Tekrarlayan düşük öyküsü olan sağlıklı bir çiftte ebeveyn karyotipi istememizin nedeni budur.",
+       "ekran": "Tekrarlayan düşük öyküsü olan sağlıklı bir çiftte ebeveyn karyotipi istememizin nedeni budur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p030",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-10-c0115",
+       "ses": "Taşıyıcıda mayozda 2 normal ve 2 türev kromozom çarpı biçiminde bir kuadrivalan oluşturarak eşleşir; bu yapıdan kutuplara dağılıma segregasyon denir.",
+       "ekran": "Taşıyıcıda mayozda 2 normal ve 2 türev kromozom çarpı biçiminde bir kuadrivalan oluşturarak eşleşir; bu yapıdan kutuplara dağılıma segregasyon denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0116",
+       "ses": "Translokasyon 3 çeşit segregasyon gösterir.",
+       "ekran": "Translokasyon 3 çeşit segregasyon gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0117",
+       "ses": "En sık olanı 2:2 segregasyondur ve her kutba 2 kromozom gider.",
+       "ekran": "En sık olanı 2:2 segregasyondur ve her kutba 2 kromozom gider.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0118",
+       "ses": "Bunun alternat tipinde 2 normal ve 2 dengeli taşıyıcı gamet oluşur; adjasent 1 tipinde ve çok nadir olan adjasent 2 tipinde ise 4 gametin tamamı dengesizdir.",
+       "ekran": "Bunun alternat tipinde 2 normal ve 2 dengeli taşıyıcı gamet oluşur; adjasent 1 tipinde ve çok nadir olan adjasent 2 tipinde ise 4 gametin tamamı dengesizdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0119",
+       "ses": "3:1 segregasyonda bir kutba 3, diğerine 1 kromozom; 4:0 segregasyonda dördü birden aynı kutba gider.",
+       "ekran": "3:1 segregasyonda bir kutba 3, diğerine 1 kromozom; 4:0 segregasyonda dördü birden aynı kutba gider.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0120",
+       "ses": "Yani yalnız alternat segregasyon normal ya da dengeli gamet üretir.",
+       "ekran": "Yani yalnız alternat segregasyon normal ya da dengeli gamet üretir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b11",
+   "baslik": "Robertsonyan ve insersiyonal translokasyon",
+   "paragraflar": [
+    {
+     "id": "k1-10-p031",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-10-c0121",
+       "ses": "Robertsonyan translokasyon yaklaşık 500'de 1 sıklıkla görülür.",
+       "ekran": "Robertsonyan translokasyon yaklaşık 500'de 1 sıklıkla görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0122",
+       "ses": "Burası önemli, bir sınav tuzağıdır: en yaygın klinik önemli tip anöploidi iken, en yaygın kromozom anomalisi Robertsonyan translokasyondur.",
+       "ekran": "Burası önemli, bir sınav tuzağıdır: en yaygın klinik önemli tip anöploidi iken, en yaygın kromozom anomalisi Robertsonyan translokasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0123",
+       "ses": "Yalnız akrosentrik kromozomlarda, yani 13, 14, 15, 21 ve 22'de görülür.",
+       "ekran": "Yalnız akrosentrik kromozomlarda, yani 13, 14, 15, 21 ve 22'de görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0124",
+       "ses": "2 akrosentrik kromozom kısa kollarını kaybederek sentromerik ya da perisentromerik bölgelerinden birleşir ve taşıyıcıda 45 kromozom bulunur.",
+       "ekran": "2 akrosentrik kromozom kısa kollarını kaybederek sentromerik ya da perisentromerik bölgelerinden birleşir ve taşıyıcıda 45 kromozom bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0125",
+       "ses": "Kaybedilen kısa kollar satellit DNA ve ribozomal RNA genleri açısından zengindir; bu diziler diğer akrosentriklerde çok kopya bulunduğundan kayıp klinik etki yaratmaz ve karyotip dengeli kabul edilir.",
+       "ekran": "Kaybedilen kısa kollar satellit DNA ve ribozomal RNA genleri açısından zengindir; bu diziler diğer akrosentriklerde çok kopya bulunduğundan kayıp klinik etki yaratmaz ve karyotip dengeli kabul edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0126",
+       "ses": "En yaygın formları 13 ile 14 ve 14 ile 21 kromozomları arasındaki Robertsonyan translokasyonlardır.",
+       "ekran": "En yaygın formları 13 ile 14 ve 14 ile 21 kromozomları arasındaki Robertsonyan translokasyonlardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p032",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-10-c0127",
+       "ses": "13q ile 14q translokasyonu 1300'de 1 sıklıktadır.",
+       "ekran": "13q ile 14q translokasyonu 1300'de 1 sıklıktadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0128",
+       "ses": "Taşıyıcılar fenotipik olarak normaldir ama dengesiz gamet oluşturma riski yüksektir; risk translokasyonun tipine ve taşıyıcı ebeveynin cinsiyetine göre değişir ve taşıyıcı kadınlarda daha yüksektir.",
+       "ekran": "Taşıyıcılar fenotipik olarak normaldir ama dengesiz gamet oluşturma riski yüksektir; risk translokasyonun tipine ve taşıyıcı ebeveynin cinsiyetine göre değişir ve taşıyıcı kadınlarda daha yüksektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0129",
+       "ses": "Burası önemli: 14 ile 21 translokasyonunda translokasyon tipi Down sendromlu çocuk sahibi olma riski anne taşıyıcıysa %15, baba taşıyıcıysa %4 ile 5'tir.",
+       "ekran": "Burası önemli: 14 ile 21 translokasyonunda translokasyon tipi Down sendromlu çocuk sahibi olma riski anne taşıyıcıysa %15, baba taşıyıcıysa %4 ile 5'tir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0130",
+       "ses": "Bu taşıyıcıdan teorik olarak normal, dengeli taşıyıcı, translokasyon tipi Down sendromu, monozomi 21, trizomi 14 ve monozomi 14 zigotları çıkar; yalnız ilk üçü canlı doğar, diğerleri düşükle sonuçlanır.",
+       "ekran": "Bu taşıyıcıdan teorik olarak normal, dengeli taşıyıcı, translokasyon tipi Down sendromu, monozomi 21, trizomi 14 ve monozomi 14 zigotları çıkar; yalnız ilk üçü canlı doğar, diğerleri düşükle sonuçlanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p033",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-10-c0131",
+       "ses": "İnsersiyonal translokasyonda kopan segment başka 1 kromozomun içine girer.",
+       "ekran": "İnsersiyonal translokasyonda kopan segment başka 1 kromozomun içine girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0132",
+       "ses": "Bunun için 3 kırık bölgesi gerekir: segmentin iki ucunda 2 kırık ve alıcı kromozomda bir kırık.",
+       "ekran": "Bunun için 3 kırık bölgesi gerekir: segmentin iki ucunda 2 kırık ve alıcı kromozomda bir kırık.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0133",
+       "ses": "Bu yüzden daha nadir gözlenir, ama dengesiz gamet riski yüksektir ve taşıyıcılara prenatal tanı önerilmelidir.",
+       "ekran": "Bu yüzden daha nadir gözlenir, ama dengesiz gamet riski yüksektir ve taşıyıcılara prenatal tanı önerilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0134",
+       "ses": "Doğrudan insersiyonda parça orijinal yönünü korur, ters insersiyonda ters dönerek yerleşir.",
+       "ekran": "Doğrudan insersiyonda parça orijinal yönünü korur, ters insersiyonda ters dönerek yerleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b12",
+   "baslik": "İzokromozom, halka ve marker kromozom",
+   "paragraflar": [
+    {
+     "id": "k1-10-p034",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-10-c0135",
+       "ses": "İzokromozom, 1 kromozomun bir kolunun kaybolması ve diğer kolunun duplike olmasıdır; iki kolu ayna simetrisi gösterir.",
+       "ekran": "İzokromozom, 1 kromozomun bir kolunun kaybolması ve diğer kolunun duplike olmasıdır; iki kolu ayna simetrisi gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0136",
+       "ses": "Böylece duplike kol için parsiyel trizomi, kaybolan kol için parsiyel monozomi oluşur.",
+       "ekran": "Böylece duplike kol için parsiyel trizomi, kaybolan kol için parsiyel monozomi oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0137",
+       "ses": "En sık gözleneni X kromozomunun uzun kolunun izokromozomudur ve Turner sendromunun nedenlerinden biridir; burada kısa kol kaybı ile uzun kol fazlalığı vardır.",
+       "ekran": "En sık gözleneni X kromozomunun uzun kolunun izokromozomudur ve Turner sendromunun nedenlerinden biridir; burada kısa kol kaybı ile uzun kol fazlalığı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0138",
+       "ses": "Diğer örnekler fazladan bulunan 12p ve 18p izokromozomlarıdır.",
+       "ekran": "Diğer örnekler fazladan bulunan 12p ve 18p izokromozomlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0139",
+       "ses": "2 sentromer içeren izodisentrik kromozom ise nadir gözlenen bir anomalidir.",
+       "ekran": "2 sentromer içeren izodisentrik kromozom ise nadir gözlenen bir anomalidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p035",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-10-c0140",
+       "ses": "Halka kromozom, 1 kromozomun p ve q kollarında oluşan kırık noktalarının birleşmesiyle halka görünümü kazanmasıdır ve en sık X kromozomunda gözlenir.",
+       "ekran": "Halka kromozom, 1 kromozomun p ve q kollarında oluşan kırık noktalarının birleşmesiyle halka görünümü kazanmasıdır ve en sık X kromozomunda gözlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0141",
+       "ses": "Halka 46 kromozomlu kuruluşta normal kromozomlardan birinin yerini almışsa uçlardaki kayıp nedeniyle delesyon etkisi, 47 kromozomlu kuruluşta fazladan bulunuyorsa trizomi etkisi yapar.",
+       "ekran": "Halka 46 kromozomlu kuruluşta normal kromozomlardan birinin yerini almışsa uçlardaki kayıp nedeniyle delesyon etkisi, 47 kromozomlu kuruluşta fazladan bulunuyorsa trizomi etkisi yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0142",
+       "ses": "Mitoz bölünmede sorun çıkarır; instabilite oluşur ve mozaik karyotipler ortaya çıkar.",
+       "ekran": "Mitoz bölünmede sorun çıkarır; instabilite oluşur ve mozaik karyotipler ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p036",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-10-c0143",
+       "ses": "Marker kromozomlar klasik bantlama yöntemleriyle tanımlanamayan küçük kromozomlardır.",
+       "ekran": "Marker kromozomlar klasik bantlama yöntemleriyle tanımlanamayan küçük kromozomlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0144",
+       "ses": "Sıklıkla mozaik formdadır; disentrik, ring ya da monosentrik olabilir.",
+       "ekran": "Sıklıkla mozaik formdadır; disentrik, ring ya da monosentrik olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0145",
+       "ses": "De novo prenatal sıklığı 2500'de 1'dir ve büyük kısmı 15. kromozom ile cinsiyet kromozomlarından köken alır.",
+       "ekran": "De novo prenatal sıklığı 2500'de 1'dir ve büyük kısmı 15. kromozom ile cinsiyet kromozomlarından köken alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0146",
+       "ses": "Aktif gen içeriyorsa fenotipe etki edebilir.",
+       "ekran": "Aktif gen içeriyorsa fenotipe etki edebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0147",
+       "ses": "Burası önemli: fetal kromozom analizinde marker saptanırsa kökeninin FISH ya da mikroarray ile mutlaka belirlenmesi gerekir.",
+       "ekran": "Burası önemli: fetal kromozom analizinde marker saptanırsa kökeninin FISH ya da mikroarray ile mutlaka belirlenmesi gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p037",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-10-c0148",
+       "ses": "Anormal karyotip saptandığında yaklaşım şöyledir: önce segregasyon analizleriyle anomalinin ailede nasıl aktarıldığı ve taşıyıcılar belirlenir, ardından genetik danışmanlık verilir.",
+       "ekran": "Anormal karyotip saptandığında yaklaşım şöyledir: önce segregasyon analizleriyle anomalinin ailede nasıl aktarıldığı ve taşıyıcılar belirlenir, ardından genetik danışmanlık verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0149",
+       "ses": "Sonraki gebelikler için seçenek, gebelikte örneğin amniyon sıvısı örneklenerek yapılan prenatal tanı ya da tüp bebek uygulamasında embriyonun rahme yerleştirilmeden önce incelendiği preimplantasyon genetik tanıdır.",
+       "ekran": "Sonraki gebelikler için seçenek, gebelikte örneğin amniyon sıvısı örneklenerek yapılan prenatal tanı ya da tüp bebek uygulamasında embriyonun rahme yerleştirilmeden önce incelendiği preimplantasyon genetik tanıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0150",
+       "ses": "FISH ile interfaz çekirdeklerinde dengeli ve dengesiz sinyal dağılımları ayırt edilebilir.",
+       "ekran": "FISH ile interfaz çekirdeklerinde dengeli ve dengesiz sinyal dağılımları ayırt edilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b13",
+   "baslik": "Down sendromu: genel bakış ve fenotip",
+   "paragraflar": [
+    {
+     "id": "k1-10-p038",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-10-c0151",
+       "ses": "Kromozomal hastalıklar otozomal ve gonozomal olarak ikiye ayrılır.",
+       "ekran": "Kromozomal hastalıklar otozomal ve gonozomal olarak ikiye ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0152",
+       "ses": "Klinikte sık görülenler Down, Edwards ve Patau sendromları ile 47,XXY Klinefelter, 47,XYY, 47,XXX ve 45,X Turner sendromudur.",
+       "ekran": "Klinikte sık görülenler Down, Edwards ve Patau sendromları ile 47,XXY Klinefelter, 47,XYY, 47,XXX ve 45,X Turner sendromudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0153",
+       "ses": "Otozomal trizomiler genellikle ağır zihinsel gerilik ve çoklu malformasyonla seyreder, gonozomal anöploidilerin fenotipi çok daha hafiftir.",
+       "ekran": "Otozomal trizomiler genellikle ağır zihinsel gerilik ve çoklu malformasyonla seyreder, gonozomal anöploidilerin fenotipi çok daha hafiftir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p039",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-10-c0154",
+       "ses": "Trizomi 21 kromozomal hastalıkların en sık ve en iyi bilinen nedenidir.",
+       "ekran": "Trizomi 21 kromozomal hastalıkların en sık ve en iyi bilinen nedenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0155",
+       "ses": "Burası önemli: Down sendromu orta derece zekâ geriliğinin en sık rastlanan genetik sebebidir ve yaklaşık 660 canlı doğumda 1 görülür; bazı kaynaklarda 700'de 1 olarak verilir.",
+       "ekran": "Burası önemli: Down sendromu orta derece zekâ geriliğinin en sık rastlanan genetik sebebidir ve yaklaşık 660 canlı doğumda 1 görülür; bazı kaynaklarda 700'de 1 olarak verilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p040",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-10-c0156",
+       "ses": "Yenidoğan döneminde hipotoni ilk dikkati çeken bulgu olabilir.",
+       "ekran": "Yenidoğan döneminde hipotoni ilk dikkati çeken bulgu olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0157",
+       "ses": "Karakteristik dismorfik yüz bulguları şunlardır: burun kökü basıktır; kulaklar küçük, düşük yerleşimli ve kıvrılmıştır; geniş alın, hafif mikrosefali ve brakisefali, yani kısa yuvarlak kafa vardır.",
+       "ekran": "Karakteristik dismorfik yüz bulguları şunlardır: burun kökü basıktır; kulaklar küçük, düşük yerleşimli ve kıvrılmıştır; geniş alın, hafif mikrosefali ve brakisefali, yani kısa yuvarlak kafa vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0158",
+       "ses": "Palpebral aralıklar yukarı eğimlidir ve epikantal kıvrımlar bulunur.",
+       "ekran": "Palpebral aralıklar yukarı eğimlidir ve epikantal kıvrımlar bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0159",
+       "ses": "Ağız açıktır, dil öne çıkar, diş hipoplazisi vardır.",
+       "ekran": "Ağız açıktır, dil öne çıkar, diş hipoplazisi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0160",
+       "ses": "İriste, kenara yakın çevresel yerleşimli açık renkli Brushfield lekeleri görülür.",
+       "ekran": "İriste, kenara yakın çevresel yerleşimli açık renkli Brushfield lekeleri görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0161",
+       "ses": "Hastalar kısa boyludur, düz oksiput ve brakisefalileri vardır; boyunları kısa, ensedeki cilt gevşektir.",
+       "ekran": "Hastalar kısa boyludur, düz oksiput ve brakisefalileri vardır; boyunları kısa, ensedeki cilt gevşektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p041",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-10-c0162",
+       "ses": "Eller kısa ve geniştir; sıklıkla tek yatay palmar çizgi, yani simian çizgisi ile klinodaktili eşlik eder.",
+       "ekran": "Eller kısa ve geniştir; sıklıkla tek yatay palmar çizgi, yani simian çizgisi ile klinodaktili eşlik eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0163",
+       "ses": "Klinodaktilinin nedeni 5. parmağın orta falanks hipoplazisidir.",
+       "ekran": "Klinodaktilinin nedeni 5. parmağın orta falanks hipoplazisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0164",
+       "ses": "Ayaklarda 1. ve 2. parmaklar arasında geniş bir boşluk, yani sandal gap ve bu boşluktan proksimale uzanan derin bir cilt oluğu vardır.",
+       "ekran": "Ayaklarda 1. ve 2. parmaklar arasında geniş bir boşluk, yani sandal gap ve bu boşluktan proksimale uzanan derin bir cilt oluğu vardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p042",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-10-c0165",
+       "ses": "Down sendromuna ilginin en önemli sebebi zekâ geriliğidir.",
+       "ekran": "Down sendromuna ilginin en önemli sebebi zekâ geriliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0166",
+       "ses": "Çocuk test edilebilir yaşa ulaştığında zekâ katsayısı genellikle 30 ile 60 arasındadır.",
+       "ekran": "Çocuk test edilebilir yaşa ulaştığında zekâ katsayısı genellikle 30 ile 60 arasındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0167",
+       "ses": "Bu kısıtlılığa rağmen Down sendromlu çocuklar mutlu, iletişim kuran ve hatta kendilerine yetebilen bireylerdir.",
+       "ekran": "Bu kısıtlılığa rağmen Down sendromlu çocuklar mutlu, iletişim kuran ve hatta kendilerine yetebilen bireylerdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b14",
+   "baslik": "Down sendromu: malformasyonlar, riskler ve yaşam şansı",
+   "paragraflar": [
+    {
+     "id": "k1-10-p043",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-10-c0168",
+       "ses": "Burası önemli: konjenital kalp hastalığı tüm canlı doğanların üçte birinde, düşükle sonuçlananlarınsa daha büyük kısmında görülür ve tipik lezyon endokardiyal yastık defektidir, yani atriyoventriküler septal defekt.",
+       "ekran": "Burası önemli: konjenital kalp hastalığı tüm canlı doğanların üçte birinde, düşükle sonuçlananlarınsa daha büyük kısmında görülür ve tipik lezyon endokardiyal yastık defektidir, yani atriyoventriküler septal defekt.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0169",
+       "ses": "Endokardiyal yastıklar atriyoventriküler kanalı bölen ve kapak oluşumuna katılan embriyonik yapılardır; kusurlarında atriyum ile ventrikül arasında geniş bir septum açıklığı kalır.",
+       "ekran": "Endokardiyal yastıklar atriyoventriküler kanalı bölen ve kapak oluşumuna katılan embriyonik yapılardır; kusurlarında atriyum ile ventrikül arasında geniş bir septum açıklığı kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0170",
+       "ses": "Erken dönemdeki ölümler genellikle konjenital kalp hastalıklarından kaynaklanır.",
+       "ekran": "Erken dönemdeki ölümler genellikle konjenital kalp hastalıklarından kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0171",
+       "ses": "Duodenal atrezi ve trakeoözofageal fistül gibi malformasyonlar da sık görülür.",
+       "ekran": "Duodenal atrezi ve trakeoözofageal fistül gibi malformasyonlar da sık görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p044",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-10-c0172",
+       "ses": "Uzun dönemde lösemi riskinde 15 kat artış vardır ve akut lösemi önemli bir komplikasyondur.",
+       "ekran": "Uzun dönemde lösemi riskinde 15 kat artış vardır ve akut lösemi önemli bir komplikasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0173",
+       "ses": "Ayrıca katarakt, epilepsi, 1. ve 2. servikal vertebra arasındaki instabilite olan atlantoaksiyel subluksasyon, işitme kaybı, hipotiroidizm ve periodontal hastalık riski artmıştır.",
+       "ekran": "Ayrıca katarakt, epilepsi, 1. ve 2. servikal vertebra arasındaki instabilite olan atlantoaksiyel subluksasyon, işitme kaybı, hipotiroidizm ve periodontal hastalık riski artmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0174",
+       "ses": "Adolesan dönemde seksüel maturasyon tiroid problemlerinden dolayı genellikle eksik kalır.",
+       "ekran": "Adolesan dönemde seksüel maturasyon tiroid problemlerinden dolayı genellikle eksik kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0175",
+       "ses": "Artmış hava yolu stenozu riski obstrüktif uyku apne sendromuna ve uyku problemlerine yol açabilir.",
+       "ekran": "Artmış hava yolu stenozu riski obstrüktif uyku apne sendromuna ve uyku problemlerine yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0176",
+       "ses": "Enfeksiyonlara toplumdan daha sık yakalanırlar.",
+       "ekran": "Enfeksiyonlara toplumdan daha sık yakalanırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0177",
+       "ses": "Alzheimer hastalığı topluma göre daha erken yaşta ortaya çıkar; bu, 21. kromozomdaki amiloid öncü protein geninin fazla dozuyla açıklanır.",
+       "ekran": "Alzheimer hastalığı topluma göre daha erken yaşta ortaya çıkar; bu, 21. kromozomdaki amiloid öncü protein geninin fazla dozuyla açıklanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p045",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-10-c0178",
+       "ses": "Burası önemli: trizomi 21'li gebeliklerin yalnız %20 ile 25'i doğuma ulaşır.",
+       "ekran": "Burası önemli: trizomi 21'li gebeliklerin yalnız %20 ile 25'i doğuma ulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0179",
+       "ses": "Doğanlar içinde yaşam şansı en düşük olanlar konjenital kalp hastalığı olanlardır ve bunların dörtte biri ilk yaş gününden önce kaybedilir.",
+       "ekran": "Doğanlar içinde yaşam şansı en düşük olanlar konjenital kalp hastalığı olanlardır ve bunların dörtte biri ilk yaş gününden önce kaybedilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b15",
+   "baslik": "Down sendromu sitogenetiği ve tekrarlama riski",
+   "paragraflar": [
+    {
+     "id": "k1-10-p046",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-10-c0180",
+       "ses": "Down sendromunun klinik tanısında güçlük yaşanmaz, ama tanının doğrulanması ve genetik danışma için karyotiplendirme gereklidir, çünkü tip tekrarlama riskini belirler.",
+       "ekran": "Down sendromunun klinik tanısında güçlük yaşanmaz, ama tanının doğrulanması ve genetik danışma için karyotiplendirme gereklidir, çünkü tip tekrarlama riskini belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0181",
+       "ses": "Burası önemli: olguların %95'i tam trizomi 21'dir ve mayotik ayrılamamayla oluşur; fazla kromozom %90 maternal, %10 paternal kökenlidir. %4'ü translokasyon tipi, %1'i mozaik tiptir.",
+       "ekran": "Burası önemli: olguların %95'i tam trizomi 21'dir ve mayotik ayrılamamayla oluşur; fazla kromozom %90 maternal, %10 paternal kökenlidir. %4'ü translokasyon tipi, %1'i mozaik tiptir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0182",
+       "ses": "Artan anne yaşıyla kromozomların kutuplara çekilme gücü azalır ve mayotik ayrılamama problemleri oluşur; Down sendromu sıklığı 30 yaşına kadar düşük seyrederken 35 yaşından sonra keskin biçimde yükselir ve 45 yaşta yaklaşık %3 düzeyine ulaşır.",
+       "ekran": "Artan anne yaşıyla kromozomların kutuplara çekilme gücü azalır ve mayotik ayrılamama problemleri oluşur; Down sendromu sıklığı 30 yaşına kadar düşük seyrederken 35 yaşından sonra keskin biçimde yükselir ve 45 yaşta yaklaşık %3 düzeyine ulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p047",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-10-c0183",
+       "ses": "Robertsonyan translokasyon tipi trizomi 21, 21. kromozom ile başka bir akrosentrik kromozom, genellikle 14 ya da 22 arasındaki translokasyonla oluşur.",
+       "ekran": "Robertsonyan translokasyon tipi trizomi 21, 21. kromozom ile başka bir akrosentrik kromozom, genellikle 14 ya da 22 arasındaki translokasyonla oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0184",
+       "ses": "Karyotipte kromozom sayısı 46'dır ama 21q 3 kopyadır.",
+       "ekran": "Karyotipte kromozom sayısı 46'dır ama 21q 3 kopyadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0185",
+       "ses": "Klasik trizomiden farklı olarak artan anne yaşına bağlı değildir.",
+       "ekran": "Klasik trizomiden farklı olarak artan anne yaşına bağlı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0186",
+       "ses": "Klasik olgularda tekrarlama riski %1 iken translokasyon olgularında daha fazladır; bu nedenle parental karyotip analizi yapılmalıdır.",
+       "ekran": "Klasik olgularda tekrarlama riski %1 iken translokasyon olgularında daha fazladır; bu nedenle parental karyotip analizi yapılmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0187",
+       "ses": "21 ile 21 translokasyonunda iki 21 kromozomu birleşmiştir; taşıyıcı ebeveynin gametleri ya 2 kopya 21 taşır ya da hiç taşımaz, bu yüzden canlı doğan çocukların tamamı Down sendromludur.",
+       "ekran": "21 ile 21 translokasyonunda iki 21 kromozomu birleşmiştir; taşıyıcı ebeveynin gametleri ya 2 kopya 21 taşır ya da hiç taşımaz, bu yüzden canlı doğan çocukların tamamı Down sendromludur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p048",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-10-c0188",
+       "ses": "Tekrarlama riski annenin yaşına göre de değişir.",
+       "ekran": "Tekrarlama riski annenin yaşına göre de değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0189",
+       "ses": "30 yaşından genç anneler için tekrarlama riski %1,4'tür; daha yaşlı annelerde risk yaşa bağımlı riskle aynıdır.",
+       "ekran": "30 yaşından genç anneler için tekrarlama riski %1,4'tür; daha yaşlı annelerde risk yaşa bağımlı riskle aynıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0190",
+       "ses": "Genç annelerde artışın nedeni bilinmemektedir; ebeveynlerden birinde germ hattı, yani gonadal mozaiklik olası bir etkendir.",
+       "ekran": "Genç annelerde artışın nedeni bilinmemektedir; ebeveynlerden birinde germ hattı, yani gonadal mozaiklik olası bir etkendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0191",
+       "ses": "Böyle bir ebeveynin kan karyotipi normal olabilir, ama gonadındaki trizomik hücre dizisi tekrarlayan anormal gametler üretir.",
+       "ekran": "Böyle bir ebeveynin kan karyotipi normal olabilir, ama gonadındaki trizomik hücre dizisi tekrarlayan anormal gametler üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0192",
+       "ses": "Burası önemli, bu kavram pedigri sorusu olarak çıktı: kendisi ve anne babası sağlıklı bir erkeğin, sağlıklı iki ayrı eşinden doğan bir oğlunda ve bir kızında aynı hastalık görülürse, bu tablo otozomal resesif, X'e bağlı ya da imprinting ile değil, probandın germ hattı mozaiği olmasıyla açıklanır.",
+       "ekran": "Burası önemli, bu kavram pedigri sorusu olarak çıktı: kendisi ve anne babası sağlıklı bir erkeğin, sağlıklı iki ayrı eşinden doğan bir oğlunda ve bir kızında aynı hastalık görülürse, bu tablo otozomal resesif, X'e bağlı ya da imprinting ile değil, probandın germ hattı mozaiği olmasıyla açıklanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p049",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-10-c0193",
+       "ses": "Mozaisizm, aynı zigottan oluşan organizmada kromozom sayıları birbirinden farklı doku ya da hücrelerin bulunmasıdır.",
+       "ekran": "Mozaisizm, aynı zigottan oluşan organizmada kromozom sayıları birbirinden farklı doku ya da hücrelerin bulunmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0194",
+       "ses": "Mozaik Down sendromunda fenotip klasik tipe oranla hafiftir ve anomalinin oluştuğu embriyonik gelişim safhasına ve tutulan doku tipine göre çeşitlilik gösterir.",
+       "ekran": "Mozaik Down sendromunda fenotip klasik tipe oranla hafiftir ve anomalinin oluştuğu embriyonik gelişim safhasına ve tutulan doku tipine göre çeşitlilik gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0195",
+       "ses": "Olay ne kadar erken olursa trizomik hücre oranı o kadar yüksek ve fenotip o kadar ağırdır.",
+       "ekran": "Olay ne kadar erken olursa trizomik hücre oranı o kadar yüksek ve fenotip o kadar ağırdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b16",
+   "baslik": "Genetik danışma ve Down sendromunda yaklaşım",
+   "paragraflar": [
+    {
+     "id": "k1-10-p050",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-10-c0196",
+       "ses": "Down sendromunda genetik danışmanın ilk adımı sitogenetik tipi belirlemektir.",
+       "ekran": "Down sendromunda genetik danışmanın ilk adımı sitogenetik tipi belirlemektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0197",
+       "ses": "Tanı prenatal dönemde konmuşsa sorulacaklar şunlardır: trizomi klasik mi, translokasyona mı bağlı, mozaisizm var mı?",
+       "ekran": "Tanı prenatal dönemde konmuşsa sorulacaklar şunlardır: trizomi klasik mi, translokasyona mı bağlı, mozaisizm var mı?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0198",
+       "ses": "Tanı postnatal dönemde konmuşsa karyotipin klasik Down sendromu olup olmadığı ve mozaisizm bulunup bulunmadığı sorulur.",
+       "ekran": "Tanı postnatal dönemde konmuşsa karyotipin klasik Down sendromu olup olmadığı ve mozaisizm bulunup bulunmadığı sorulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0199",
+       "ses": "Translokasyon saptanırsa sıradaki soru ebeveynlerden birinin taşıyıcı olup olmadığıdır.",
+       "ekran": "Translokasyon saptanırsa sıradaki soru ebeveynlerden birinin taşıyıcı olup olmadığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p051",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k1-10-c0200",
+       "ses": "Hastaya ve aileye yaklaşımda ayrıntılı fizik muayene yapılmalı ve malformasyonlar ile beklenen tüm anomaliler için gerekli tetkikler istenmelidir.",
+       "ekran": "Hastaya ve aileye yaklaşımda ayrıntılı fizik muayene yapılmalı ve malformasyonlar ile beklenen tüm anomaliler için gerekli tetkikler istenmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0201",
+       "ses": "Pedigri analizi yapılır.",
+       "ekran": "Pedigri analizi yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0202",
+       "ses": "Olgunun zekâ düzeyi ve yaşına göre özel eğitim planlanır.",
+       "ekran": "Olgunun zekâ düzeyi ve yaşına göre özel eğitim planlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0203",
+       "ses": "Görülebilecek komplikasyonlar açısından belirli aralıklarla kontrole çağrılır, aile eğitilir ve ailenin bundan sonraki gebelikleri planlanır.",
+       "ekran": "Görülebilecek komplikasyonlar açısından belirli aralıklarla kontrole çağrılır, aile eğitilir ve ailenin bundan sonraki gebelikleri planlanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p052",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-10-c0204",
+       "ses": "Genetik danışma, kalıtsal bir hastalık taşıyan ya da taşıma riski bulunan kişilere ve akrabalarına hastalığın seyri ve tedavi yöntemleri, tekrarlama riskleri ve çözüm yolları ile hangi dönemde hangi testlerin yapılması gerektiği ve sonuçları hakkında bilgi verilmesidir.",
+       "ekran": "Genetik danışma, kalıtsal bir hastalık taşıyan ya da taşıma riski bulunan kişilere ve akrabalarına hastalığın seyri ve tedavi yöntemleri, tekrarlama riskleri ve çözüm yolları ile hangi dönemde hangi testlerin yapılması gerektiği ve sonuçları hakkında bilgi verilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0205",
+       "ses": "Tanı konmuş ya da genetik neden saptanmışsa aile; hastalığın yol açabileceği problemler, sonuçlar, yeni gebeliklerdeki riskler ve gebelik öncesi ile sonrası yapılması gerekenler konusunda aydınlatılır.",
+       "ekran": "Tanı konmuş ya da genetik neden saptanmışsa aile; hastalığın yol açabileceği problemler, sonuçlar, yeni gebeliklerdeki riskler ve gebelik öncesi ile sonrası yapılması gerekenler konusunda aydınlatılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0206",
+       "ses": "Danışmanın görevi bilgiyi doğru ve tam aktarmak ve çözüm yolları sunmaktır.",
+       "ekran": "Danışmanın görevi bilgiyi doğru ve tam aktarmak ve çözüm yolları sunmaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0207",
+       "ses": "Bu nedenle genetik danışma hiçbir zaman yönlendirici olmamalıdır; karar aileye aittir.",
+       "ekran": "Bu nedenle genetik danışma hiçbir zaman yönlendirici olmamalıdır; karar aileye aittir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p053",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k1-10-c0208",
+       "ses": "Örnek bir danışma notunda, aralarında akrabalık olmayan 36 yaşındaki anne ile 33 yaşındaki babanın ikinci gebeliğinde 15. haftadaki ikili tarama testinde trizomi 21 riski yüksek bulunmuş.",
+       "ekran": "Örnek bir danışma notunda, aralarında akrabalık olmayan 36 yaşındaki anne ile 33 yaşındaki babanın ikinci gebeliğinde 15. haftadaki ikili tarama testinde trizomi 21 riski yüksek bulunmuş.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0209",
+       "ses": "Koryon villus örneklemesiyle elde edilen hücrelerde kromozom analizi 47,XY,+21 çıkmış, FISH incelemesi de trizomi 21'le uyumlu sinyal göstermiş.",
+       "ekran": "Koryon villus örneklemesiyle elde edilen hücrelerde kromozom analizi 47,XY,+21 çıkmış, FISH incelemesi de trizomi 21'le uyumlu sinyal göstermiş.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0210",
+       "ses": "Aileye sendromun sıklığı, 35 yaş üstünde artan risk ve klinik bulgular anlatılmış ve sonraki gebeliklerde prenatal tanı endikasyonu olduğu belirtilmiştir.",
+       "ekran": "Aileye sendromun sıklığı, 35 yaş üstünde artan risk ve klinik bulgular anlatılmış ve sonraki gebeliklerde prenatal tanı endikasyonu olduğu belirtilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0211",
+       "ses": "Unutmayın, tarama testi risk belirler, kesin tanıyı koryon villus örneklemesi ya da amniyosentez materyalinde kromozom analizi koyar.",
+       "ekran": "Unutmayın, tarama testi risk belirler, kesin tanıyı koryon villus örneklemesi ya da amniyosentez materyalinde kromozom analizi koyar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b17",
+   "baslik": "Edwards sendromu: trizomi 18",
+   "paragraflar": [
+    {
+     "id": "k1-10-p054",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-10-c0212",
+       "ses": "Trizomi 18 Down sendromundan çok daha ağır seyreder.",
+       "ekran": "Trizomi 18 Down sendromundan çok daha ağır seyreder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0213",
+       "ses": "Slaytta sıklığı 750 canlı doğumda 1 olarak verilir; farklı kaynaklarda 7500 ile 8000 doğumda 1 olarak geçer.",
+       "ekran": "Slaytta sıklığı 750 canlı doğumda 1 olarak verilir; farklı kaynaklarda 7500 ile 8000 doğumda 1 olarak geçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0214",
+       "ses": "Burası önemli: olguların %95'i düşükle sonuçlanır, canlı doğanların %50'si ilk hafta içinde ölür, yalnız %5 ile 10'u ilk yıla kadar yaşar.",
+       "ekran": "Burası önemli: olguların %95'i düşükle sonuçlanır, canlı doğanların %50'si ilk hafta içinde ölür, yalnız %5 ile 10'u ilk yıla kadar yaşar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0215",
+       "ses": "Muhtemelen yaşamları lehine bir bulgu olarak canlı doğanların %80'i kızdır.",
+       "ekran": "Muhtemelen yaşamları lehine bir bulgu olarak canlı doğanların %80'i kızdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p055",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k1-10-c0216",
+       "ses": "İleri anne yaşı bir risk faktörüdür ve 35 yaşından sonra risk belirgin şekilde artar.",
+       "ekran": "İleri anne yaşı bir risk faktörüdür ve 35 yaşından sonra risk belirgin şekilde artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0217",
+       "ses": "Olguların %70'i normal anne babadan kromozom ayrılamaması sonucu oluşur ve fazla kromozom %95 maternaldir; %20'si translokasyona bağlıdır.",
+       "ekran": "Olguların %70'i normal anne babadan kromozom ayrılamaması sonucu oluşur ve fazla kromozom %95 maternaldir; %20'si translokasyona bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0218",
+       "ses": "Mozaik olguların kliniği daha hafiftir ve daha uzun süre yaşarlar.",
+       "ekran": "Mozaik olguların kliniği daha hafiftir ve daha uzun süre yaşarlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p056",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k1-10-c0219",
+       "ses": "Klinikte belirgin oksiput, düşük yerleşimli ve malforme kulaklar vardır.",
+       "ekran": "Klinikte belirgin oksiput, düşük yerleşimli ve malforme kulaklar vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0220",
+       "ses": "Elde clenched hand dediğimiz kenetli el görülür: işaret parmağı orta parmağın, beşinci parmak dördüncünün üzerine binmiştir.",
+       "ekran": "Elde clenched hand dediğimiz kenetli el görülür: işaret parmağı orta parmağın, beşinci parmak dördüncünün üzerine binmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0221",
+       "ses": "Tırnak hipoplazisi, başparmak hipoplazisi ya da aplazisi ve ellerde ulnar ya da radial deviasyon eşlik eder.",
+       "ekran": "Tırnak hipoplazisi, başparmak hipoplazisi ya da aplazisi ve ellerde ulnar ya da radial deviasyon eşlik eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0222",
+       "ses": "Ayakta rocker bottom ayak, yani fırlak topuklu, dışbükey tabanlı ayak, belirgin kalkaneus ve halluks dorsifleksiyonu bulunur.",
+       "ekran": "Ayakta rocker bottom ayak, yani fırlak topuklu, dışbükey tabanlı ayak, belirgin kalkaneus ve halluks dorsifleksiyonu bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0223",
+       "ses": "Sindaktili, postaksiyel polidaktili, böbrek anomalileri ve tiroid problemleri de önemli bulgulardır.",
+       "ekran": "Sindaktili, postaksiyel polidaktili, böbrek anomalileri ve tiroid problemleri de önemli bulgulardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p057",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "id": "k1-10-c0224",
+       "ses": "Gebelikte azalmış fetal aktivite, küçük plasenta, tek umbilikal arter ve büyüme geriliği görülebilir.",
+       "ekran": "Gebelikte azalmış fetal aktivite, küçük plasenta, tek umbilikal arter ve büyüme geriliği görülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0225",
+       "ses": "Burası önemli, tonus ayrımı sık sorulur: yenidoğanda hipertonisite tipiktir, Down sendromundaki hipotoninin tersidir.",
+       "ekran": "Burası önemli, tonus ayrımı sık sorulur: yenidoğanda hipertonisite tipiktir, Down sendromundaki hipotoninin tersidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0226",
+       "ses": "Her zaman zekâ ve büyüme geriliği, sıklıkla konjenital kalp hastalığı vardır.",
+       "ekran": "Her zaman zekâ ve büyüme geriliği, sıklıkla konjenital kalp hastalığı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p058",
+     "sayfa": 58,
+     "cumleler": [
+      {
+       "id": "k1-10-c0227",
+       "ses": "Örnek danışma notunda 30 yaşındaki annenin 19. hafta ultrasonunda kistik higroma, geniş ventriküler ve atriyal septal defekt ve artmış ense kalınlığı görülmüş, amniyosentezde 47,XY,+18 saptanmıştır.",
+       "ekran": "Örnek danışma notunda 30 yaşındaki annenin 19. hafta ultrasonunda kistik higroma, geniş ventriküler ve atriyal septal defekt ve artmış ense kalınlığı görülmüş, amniyosentezde 47,XY,+18 saptanmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0228",
+       "ses": "Aileye konsepsiyonda insidansın daha yüksek olduğu, olguların yaklaşık %95'inin kendiliğinden düştüğü, birkaç aydan uzun yaşamın nadir olduğu; hipertoni, kısa sternum ve hipoplastik tırnakların tipik olduğu anlatılmış ve sonraki gebeliklerde prenatal tanı önerilmiştir.",
+       "ekran": "Aileye konsepsiyonda insidansın daha yüksek olduğu, olguların yaklaşık %95'inin kendiliğinden düştüğü, birkaç aydan uzun yaşamın nadir olduğu; hipertoni, kısa sternum ve hipoplastik tırnakların tipik olduğu anlatılmış ve sonraki gebeliklerde prenatal tanı önerilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b18",
+   "baslik": "Patau sendromu ve 3 trizominin karşılaştırması",
+   "paragraflar": [
+    {
+     "id": "k1-10-p059",
+     "sayfa": 59,
+     "cumleler": [
+      {
+       "id": "k1-10-c0229",
+       "ses": "Trizomi 13 yaklaşık 5000 canlı doğumda 1 görülür, klinik olarak çok ağırdır ve olguların %90'ı ilk yıl içinde ölür; bir olgu 33 yaşına kadar yaşayabilmiştir.",
+       "ekran": "Trizomi 13 yaklaşık 5000 canlı doğumda 1 görülür, klinik olarak çok ağırdır ve olguların %90'ı ilk yıl içinde ölür; bir olgu 33 yaşına kadar yaşayabilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0230",
+       "ses": "Diğer trizomilerde olduğu gibi ileri anne yaşı risk faktörüdür ve mayotik ayrılamamaya bağlı gelişir. %20'si translokasyona bağlıdır, genellikle 13 ile 14 Robertsonyan translokasyonu şeklinde.",
+       "ekran": "Diğer trizomilerde olduğu gibi ileri anne yaşı risk faktörüdür ve mayotik ayrılamamaya bağlı gelişir. %20'si translokasyona bağlıdır, genellikle 13 ile 14 Robertsonyan translokasyonu şeklinde.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0231",
+       "ses": "Holoprozensefali gibi ön beyin, olfaktör bölge ve optik sinir gelişimini etkileyen merkezi sinir sistemi malformasyonları eşlik eder; holoprozensefalide ön beyin 2 hemisfere ayrılamaz.",
+       "ekran": "Holoprozensefali gibi ön beyin, olfaktör bölge ve optik sinir gelişimini etkileyen merkezi sinir sistemi malformasyonları eşlik eder; holoprozensefalide ön beyin 2 hemisfere ayrılamaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p060",
+     "sayfa": 60,
+     "cumleler": [
+      {
+       "id": "k1-10-c0232",
+       "ses": "Başın ön kısmı eğimli, sutur aralıkları geniştir.",
+       "ekran": "Başın ön kısmı eğimli, sutur aralıkları geniştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0233",
+       "ses": "Mikrosefali, mikroftalmi ya da göz küresinin yokluğu olan anoftalmi, düşük ve malforme kulaklar görülür.",
+       "ekran": "Mikrosefali, mikroftalmi ya da göz küresinin yokluğu olan anoftalmi, düşük ve malforme kulaklar görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0234",
+       "ses": "Frontal bölgede kapiller hemanjiom, oksipital bölgede kutis aplazi konjenita denen deri defektleri vardır.",
+       "ekran": "Frontal bölgede kapiller hemanjiom, oksipital bölgede kutis aplazi konjenita denen deri defektleri vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0235",
+       "ses": "Yarık damak dudak, mikrognati, kenetli el, sindaktili, postaksiyel polidaktili, omfalosel, böbrek ve kalp anomalileri önemli bulgulardır.",
+       "ekran": "Yarık damak dudak, mikrognati, kenetli el, sindaktili, postaksiyel polidaktili, omfalosel, böbrek ve kalp anomalileri önemli bulgulardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0236",
+       "ses": "Burası önemli: mikroftalmi, yarık dudak ve damak ile polidaktili triadı sendrom için karakteristiktir.",
+       "ekran": "Burası önemli: mikroftalmi, yarık dudak ve damak ile polidaktili triadı sendrom için karakteristiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0237",
+       "ses": "Trizomi 13 spontan abortus materyalinde %15'e kadar saptanmıştır ve bu olguların tekrarlama riski çok yüksektir.",
+       "ekran": "Trizomi 13 spontan abortus materyalinde %15'e kadar saptanmıştır ve bu olguların tekrarlama riski çok yüksektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p061",
+     "sayfa": 62,
+     "cumleler": [
+      {
+       "id": "k1-10-c0238",
+       "ses": "Mozaik trizomi 13 örneğinde, 22 haftalık gebelikte şiddetli polihidramniyos, beyin orta hat defekti, hiperekojen barsak, kardiyak anomali ve burun yanında kistik yapı görülmüş; amniyosentezde 5 normal ve 18 trizomik hücreden oluşan mozaik yapı bulunmuştur.",
+       "ekran": "Mozaik trizomi 13 örneğinde, 22 haftalık gebelikte şiddetli polihidramniyos, beyin orta hat defekti, hiperekojen barsak, kardiyak anomali ve burun yanında kistik yapı görülmüş; amniyosentezde 5 normal ve 18 trizomik hücreden oluşan mozaik yapı bulunmuştur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0239",
+       "ses": "Aileye ağır büyüme ve zekâ geriliği, arinensefali ve holoprozensefali gibi malformasyonlar anlatılmış, mozaik yapı nedeniyle bulguların farklılık gösterebileceği vurgulanmıştır.",
+       "ekran": "Aileye ağır büyüme ve zekâ geriliği, arinensefali ve holoprozensefali gibi malformasyonlar anlatılmış, mozaik yapı nedeniyle bulguların farklılık gösterebileceği vurgulanmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p062",
+     "sayfa": 63,
+     "cumleler": [
+      {
+       "id": "k1-10-c0240",
+       "ses": "3 trizomiyi karşılaştıralım.",
+       "ekran": "3 trizomiyi karşılaştıralım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0241",
+       "ses": "Down'da hipotoni, düz oksiput, simian çizgisi ve sandal gap; Edwards'ta hipertonisite, belirgin oksiput, kenetli el ve rocker bottom ayak; Patauda mikrosefali, eğimli alın, holoprozensefali ve triad öne çıkar.",
+       "ekran": "Down'da hipotoni, düz oksiput, simian çizgisi ve sandal gap; Edwards'ta hipertonisite, belirgin oksiput, kenetli el ve rocker bottom ayak; Patauda mikrosefali, eğimli alın, holoprozensefali ve triad öne çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0242",
+       "ses": "Dikkat edin, kenetli el hem Edwards hem Patauda görülür; ayırt ettiren rocker bottom ayak ile holoprozensefali ve triaddır.",
+       "ekran": "Dikkat edin, kenetli el hem Edwards hem Patauda görülür; ayırt ettiren rocker bottom ayak ile holoprozensefali ve triaddır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0243",
+       "ses": "Translokasyon oranı Down'da %4, Edwards ve Patauda %20'dir.",
+       "ekran": "Translokasyon oranı Down'da %4, Edwards ve Patauda %20'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0244",
+       "ses": "Her sendromun tam trizomi, translokasyon ve mozaik karyotip tipleri vardır.",
+       "ekran": "Her sendromun tam trizomi, translokasyon ve mozaik karyotip tipleri vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0245",
+       "ses": "Ayrıca Down'da umbilikal herni ve lösemi yatkınlığı, Edwards'ta kısıtlı kalça abdüksiyonu ve üst üste binen parmaklar, Patauda kalp ve böbrek defektleri karakteristiktir.",
+       "ekran": "Ayrıca Down'da umbilikal herni ve lösemi yatkınlığı, Edwards'ta kısıtlı kalça abdüksiyonu ve üst üste binen parmaklar, Patauda kalp ve böbrek defektleri karakteristiktir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b19",
+   "baslik": "Triploid sendrom",
+   "paragraflar": [
+    {
+     "id": "k1-10-p063",
+     "sayfa": 64,
+     "cumleler": [
+      {
+       "id": "k1-10-c0246",
+       "ses": "Burası önemli: triploid sendrom tüm kromozomal düşüklerin %20'sini oluşturur.",
+       "ekran": "Burası önemli: triploid sendrom tüm kromozomal düşüklerin %20'sini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0247",
+       "ses": "Tam triploid olgular nadiren doğar ya da erken dönemde ölür.",
+       "ekran": "Tam triploid olgular nadiren doğar ya da erken dönemde ölür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0248",
+       "ses": "Genellikle molar gebelikle birliktedir; plasenta büyüktür ve villusların ödemli, üzüm salkımı gibi şiştiği hidatiform değişiklikler gösterir.",
+       "ekran": "Genellikle molar gebelikle birliktedir; plasenta büyüktür ve villusların ödemli, üzüm salkımı gibi şiştiği hidatiform değişiklikler gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0249",
+       "ses": "Bu tabloda ekstra kromozom takımı baba kaynaklıdır ve genellikle ovumun 2 spermle birden döllenmesiyle oluşur.",
+       "ekran": "Bu tabloda ekstra kromozom takımı baba kaynaklıdır ve genellikle ovumun 2 spermle birden döllenmesiyle oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0250",
+       "ses": "Diploid ve triploid hücrelerin birlikte bulunduğu miksoploid olgular ise genellikle yaşar; asimetrik büyüme farkı ve ambigus, yani cinsiyeti net ayırt edilemeyen genitalya bu olguların ayırt edici özellikleridir.",
+       "ekran": "Diploid ve triploid hücrelerin birlikte bulunduğu miksoploid olgular ise genellikle yaşar; asimetrik büyüme farkı ve ambigus, yani cinsiyeti net ayırt edilemeyen genitalya bu olguların ayırt edici özellikleridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b20",
+   "baslik": "Cri du chat ve Wolf-Hirschhorn sendromları",
+   "paragraflar": [
+    {
+     "id": "k1-10-p064",
+     "sayfa": 66,
+     "cumleler": [
+      {
+       "id": "k1-10-c0251",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: 5. kromozomun kısa kolundaki delesyon, yani 5p eksi, cri du chat, Türkçesiyle kedi ağlaması sendromuna neden olur.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: 5. kromozomun kısa kolundaki delesyon, yani 5p eksi, cri du chat, Türkçesiyle kedi ağlaması sendromuna neden olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0252",
+       "ses": "Delesyon 5p15 bölgesindedir.",
+       "ekran": "Delesyon 5p15 bölgesindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0253",
+       "ses": "Olguların %85'i de novo, yani ebeveynde bulunmayan yeni bir değişikliktir; %15'i ise ebeveyndeki translokasyona bağlıdır, bu yüzden ebeveyn karyotipi tekrarlama riski için önemlidir.",
+       "ekran": "Olguların %85'i de novo, yani ebeveynde bulunmayan yeni bir değişikliktir; %15'i ise ebeveyndeki translokasyona bağlıdır, bu yüzden ebeveyn karyotipi tekrarlama riski için önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0254",
+       "ses": "Anormal larinks gelişimi nedeniyle infantil dönemde kedi miyavlamasına benzer ağlama görülür.",
+       "ekran": "Anormal larinks gelişimi nedeniyle infantil dönemde kedi miyavlamasına benzer ağlama görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0255",
+       "ses": "5p15.3 bölgesi ağlamayla, 5p15.2 bölgesi diğer klinik özelliklerle ilişkilidir.",
+       "ekran": "5p15.3 bölgesi ağlamayla, 5p15.2 bölgesi diğer klinik özelliklerle ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p065",
+     "sayfa": 67,
+     "cumleler": [
+      {
+       "id": "k1-10-c0256",
+       "ses": "Bebeklikte hipotoni ve tipik ağlama görülür; ağlama yetişkinlikte kaybolur.",
+       "ekran": "Bebeklikte hipotoni ve tipik ağlama görülür; ağlama yetişkinlikte kaybolur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0257",
+       "ses": "Zekâ geriliği, mikrosefali, yuvarlak yüz, gözler arası mesafenin arttığı hipertelorizm, aşağı dönük palpebral fissürler, epikantal katlantılar, düşük kulaklar, mikrognati, yarık damak dudak, konjenital kalp ve böbrek anomalileri önemli bulgularıdır.",
+       "ekran": "Zekâ geriliği, mikrosefali, yuvarlak yüz, gözler arası mesafenin arttığı hipertelorizm, aşağı dönük palpebral fissürler, epikantal katlantılar, düşük kulaklar, mikrognati, yarık damak dudak, konjenital kalp ve böbrek anomalileri önemli bulgularıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0258",
+       "ses": "Dikkat edin, palpebral fissürler Down'da yukarı, cri du chat'ta aşağı eğimlidir.",
+       "ekran": "Dikkat edin, palpebral fissürler Down'da yukarı, cri du chat'ta aşağı eğimlidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p066",
+     "sayfa": 68,
+     "cumleler": [
+      {
+       "id": "k1-10-c0259",
+       "ses": "Wolf-Hirschhorn sendromu, yani 4p eksi sendromu, 4p16.3 delesyonuyla oluşur ve yaklaşık 50.000 doğumda 1 görülür.",
+       "ekran": "Wolf-Hirschhorn sendromu, yani 4p eksi sendromu, 4p16.3 delesyonuyla oluşur ve yaklaşık 50.000 doğumda 1 görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0260",
+       "ses": "Şiddetli büyüme geriliği, psikomotor ve mental gerilik, korpus kallozum agenezisi, renal hipoplazi, hipertelorizm, mikrosefali, iki kaş arasındaki alın bölgesinin belirgin olduğu glabella ve balık ağzı görünümü vardır.",
+       "ekran": "Şiddetli büyüme geriliği, psikomotor ve mental gerilik, korpus kallozum agenezisi, renal hipoplazi, hipertelorizm, mikrosefali, iki kaş arasındaki alın bölgesinin belirgin olduğu glabella ve balık ağzı görünümü vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0261",
+       "ses": "Delesyon küçük olduğundan genellikle karyotip analizinde görülmez; tanı FISH ile konur.",
+       "ekran": "Delesyon küçük olduğundan genellikle karyotip analizinde görülmez; tanı FISH ile konur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b21",
+   "baslik": "Gonozomal hastalıklar ve Klinefelter sendromu",
+   "paragraflar": [
+    {
+     "id": "k1-10-p067",
+     "sayfa": 69,
+     "cumleler": [
+      {
+       "id": "k1-10-c0262",
+       "ses": "Gonozomal kromozom hastalıkları Klinefelter sendromu, XYY sendromu, trizomi X ve tetrazomi X ile Turner sendromudur.",
+       "ekran": "Gonozomal kromozom hastalıkları Klinefelter sendromu, XYY sendromu, trizomi X ve tetrazomi X ile Turner sendromudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0263",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: Down sendromu bir otozomal trizomidir, gonozomal anöploidi sayılmaz; Turner, Klinefelter, trizomi X ve XYY ise gonozomal anöploidilerdir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: Down sendromu bir otozomal trizomidir, gonozomal anöploidi sayılmaz; Turner, Klinefelter, trizomi X ve XYY ise gonozomal anöploidilerdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p068",
+     "sayfa": 70,
+     "cumleler": [
+      {
+       "id": "k1-10-c0264",
+       "ses": "Klinefelter sendromu 47,XXY karyotiplidir ve 2000 canlı doğumda 1 görülür.",
+       "ekran": "Klinefelter sendromu 47,XXY karyotiplidir ve 2000 canlı doğumda 1 görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0265",
+       "ses": "Hastaların %50'sinde neden, paternal mayoz I'de psödootozomal bölgedeki, yani Xp ile Yp arasındaki anormal rekombinasyon nedeniyle oluşan ayrılamamadır.",
+       "ekran": "Hastaların %50'sinde neden, paternal mayoz I'de psödootozomal bölgedeki, yani Xp ile Yp arasındaki anormal rekombinasyon nedeniyle oluşan ayrılamamadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0266",
+       "ses": "Bu bölge X ve Y'nin mayozda eşleşip rekombinasyon yapmasını sağlar; burada rekombinasyon olmazsa X ve Y ayrılamaz ve XY taşıyan sperm oluşur.",
+       "ekran": "Bu bölge X ve Y'nin mayozda eşleşip rekombinasyon yapmasını sağlar; burada rekombinasyon olmazsa X ve Y ayrılamaz ve XY taşıyan sperm oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0267",
+       "ses": "Hastaların %15'i mozaiktir; bunlarda fenotip değişkendir ve normal testiküler gelişim gösterebilirler.",
+       "ekran": "Hastaların %15'i mozaiktir; bunlarda fenotip değişkendir ve normal testiküler gelişim gösterebilirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0268",
+       "ses": "48,XXYY, 48,XXXY ve 49,XXXXY gibi varyantlar vardır.",
+       "ekran": "48,XXYY, 48,XXXY ve 49,XXXXY gibi varyantlar vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0269",
+       "ses": "Kural olarak X sayısı arttıkça fenotip daha dismorfik, seksüel gelişim daha eksik ve mental gerilik daha ağır olur.",
+       "ekran": "Kural olarak X sayısı arttıkça fenotip daha dismorfik, seksüel gelişim daha eksik ve mental gerilik daha ağır olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p069",
+     "sayfa": 71,
+     "cumleler": [
+      {
+       "id": "k1-10-c0270",
+       "ses": "Hastalar uzun boylu, ince ve uzun ekstremitelidir.",
+       "ekran": "Hastalar uzun boylu, ince ve uzun ekstremitelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0271",
+       "ses": "Puberteye kadar fiziksel gelişimleri normaldir; puberte normal zamanında olur ama testisler küçüktür ve sekonder seks karakterleri az gelişir.",
+       "ekran": "Puberteye kadar fiziksel gelişimleri normaldir; puberte normal zamanında olur ama testisler küçüktür ve sekonder seks karakterleri az gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0272",
+       "ses": "Seyrek sakal ve kıllanma, dar omuz, geniş kalça ve kadın tipi pubik kıllanma görülebilir.",
+       "ekran": "Seyrek sakal ve kıllanma, dar omuz, geniş kalça ve kadın tipi pubik kıllanma görülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0273",
+       "ses": "Burası önemli: germ hücre gelişimindeki başarısızlık nedeniyle daima infertildirler ve klinikte genellikle ilk bu nedenle tanı alırlar.",
+       "ekran": "Burası önemli: germ hücre gelişimindeki başarısızlık nedeniyle daima infertildirler ve klinikte genellikle ilk bu nedenle tanı alırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0274",
+       "ses": "Testosteron düşük, folikül uyarıcı hormon ve luteinleştirici hormon yüksek ya da normaldir; artan gonadotropin etkisiyle seminifer tübüllerde hiyalinizasyon ve fibrozis görülür.",
+       "ekran": "Testosteron düşük, folikül uyarıcı hormon ve luteinleştirici hormon yüksek ya da normaldir; artan gonadotropin etkisiyle seminifer tübüllerde hiyalinizasyon ve fibrozis görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0275",
+       "ses": "Sözel anlama ve uygulama düzeyleri ile zekâ testi performansları düşüktür, genellikle okumayı güç öğrenirler; psikososyal uyumsuzluk, çekingenlik ve olgunlaşmada gecikme görülebilir.",
+       "ekran": "Sözel anlama ve uygulama düzeyleri ile zekâ testi performansları düşüktür, genellikle okumayı güç öğrenirler; psikososyal uyumsuzluk, çekingenlik ve olgunlaşmada gecikme görülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p070",
+     "sayfa": 73,
+     "cumleler": [
+      {
+       "id": "k1-10-c0276",
+       "ses": "Eksik virilizasyon, jinekomasti ve azospermi vardır.",
+       "ekran": "Eksik virilizasyon, jinekomasti ve azospermi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0277",
+       "ses": "Skolyoz, diyabet, kronik bronşit, derin ven trombozu, ekstragonadal germ hücre tümörleri, meme kanseri, osteoporoz ve otoimmün hastalık riski artmıştır.",
+       "ekran": "Skolyoz, diyabet, kronik bronşit, derin ven trombozu, ekstragonadal germ hücre tümörleri, meme kanseri, osteoporoz ve otoimmün hastalık riski artmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0278",
+       "ses": "11 ile 12 yaşında başlanan prospektif testosteron replasmanı fenotipe fayda sağlar.",
+       "ekran": "11 ile 12 yaşında başlanan prospektif testosteron replasmanı fenotipe fayda sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0279",
+       "ses": "Genetik danışmada erken tanının önemi vurgulanır, puberteden önce hormon replasmanına başlanabileceği anlatılır ve infertilite nedeniyle başvuranlar üreme seçenekleri hakkında bilgilendirilir.",
+       "ekran": "Genetik danışmada erken tanının önemi vurgulanır, puberteden önce hormon replasmanına başlanabileceği anlatılır ve infertilite nedeniyle başvuranlar üreme seçenekleri hakkında bilgilendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0280",
+       "ses": "Örnek notta primer infertilite ve azospermiyle başvuran 25 yaşındaki erkekte uzun boy, jinekomasti ve küçük testis saptanmış, karyotip 47,XXY bulunmuştur.",
+       "ekran": "Örnek notta primer infertilite ve azospermiyle başvuran 25 yaşındaki erkekte uzun boy, jinekomasti ve küçük testis saptanmış, karyotip 47,XXY bulunmuştur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b22",
+   "baslik": "XYY sendromu ve trizomi X",
+   "paragraflar": [
+    {
+     "id": "k1-10-p071",
+     "sayfa": 75,
+     "cumleler": [
+      {
+       "id": "k1-10-c0281",
+       "ses": "47,XYY sendromuna paternal mayotik ayrılamama sebep olur; fazla kromozom Y olduğundan hata zorunlu olarak babadadır ve Y kardeş kromatitlerinin ayrılamadığı mayoz II hatası YY taşıyan sperm üretir.",
+       "ekran": "47,XYY sendromuna paternal mayotik ayrılamama sebep olur; fazla kromozom Y olduğundan hata zorunlu olarak babadadır ve Y kardeş kromatitlerinin ayrılamadığı mayoz II hatası YY taşıyan sperm üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0282",
+       "ses": "Uzun boylu ve iri görünseler de kas gelişimindeki problemler nedeniyle motor koordinasyonları zayıftır.",
+       "ekran": "Uzun boylu ve iri görünseler de kas gelişimindeki problemler nedeniyle motor koordinasyonları zayıftır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0283",
+       "ses": "Okul performansları düşüktür ve psikososyal problemler yaşarlar.",
+       "ekran": "Okul performansları düşüktür ve psikososyal problemler yaşarlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0284",
+       "ses": "Burası önemli: XYY sendromlu bireyler genelde fertildir ve normal çocukları olur; Klinefelter ise daima infertildir, ikisinde de boy uzundur.",
+       "ekran": "Burası önemli: XYY sendromlu bireyler genelde fertildir ve normal çocukları olur; Klinefelter ise daima infertildir, ikisinde de boy uzundur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p072",
+     "sayfa": 76,
+     "cumleler": [
+      {
+       "id": "k1-10-c0285",
+       "ses": "Örnek danışma notunda 31 yaşında, 6 yıldır çocuğu olmayan, primer infertilite ve azospermi nedeniyle araştırılan ve sol varikosel ameliyatı öyküsü bulunan bir erkekte karyotip 47,XYY bulunmuştur.",
+       "ekran": "Örnek danışma notunda 31 yaşında, 6 yıldır çocuğu olmayan, primer infertilite ve azospermi nedeniyle araştırılan ve sol varikosel ameliyatı öyküsü bulunan bir erkekte karyotip 47,XYY bulunmuştur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0286",
+       "ses": "Aileye sıklığın erkek doğumlarda 1000'de 1 olduğu, bu yapının belirgin fenotipik fark yaratmadığı, zekânın normal ve dismorfik özelliğin olmadığı, fertilitenin normal kabul edildiği ve kromozomal anomalili çocuk riskinin artmadığı anlatılmıştır.",
+       "ekran": "Aileye sıklığın erkek doğumlarda 1000'de 1 olduğu, bu yapının belirgin fenotipik fark yaratmadığı, zekânın normal ve dismorfik özelliğin olmadığı, fertilitenin normal kabul edildiği ve kromozomal anomalili çocuk riskinin artmadığı anlatılmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0287",
+       "ses": "Zekâ puanları ortalamanın 10 ile 15 puan altındadır ve eğitim ile davranış sorunları açısından daha fazla risk taşırlar.",
+       "ekran": "Zekâ puanları ortalamanın 10 ile 15 puan altındadır ve eğitim ile davranış sorunları açısından daha fazla risk taşırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0288",
+       "ses": "Bu olgudaki azospermi XYY'nin tipik sonucu değildir ve ayrıca değerlendirilmelidir.",
+       "ekran": "Bu olgudaki azospermi XYY'nin tipik sonucu değildir ve ayrıca değerlendirilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p073",
+     "sayfa": 77,
+     "cumleler": [
+      {
+       "id": "k1-10-c0289",
+       "ses": "XXX ve XXXX sendromlarına maternal mayotik ayrılamama sebep olur.",
+       "ekran": "XXX ve XXXX sendromlarına maternal mayotik ayrılamama sebep olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0290",
+       "ses": "Pubertal gelişimleri ve fertiliteleri genelde normaldir; öğrenme, konuşma ve davranış problemleri yaşarlar.",
+       "ekran": "Pubertal gelişimleri ve fertiliteleri genelde normaldir; öğrenme, konuşma ve davranış problemleri yaşarlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0291",
+       "ses": "Midfasiyal hipoplazi, epikantal katlantılar ve yukarı dönük palpebral fissürler fenotipik özellikleridir.",
+       "ekran": "Midfasiyal hipoplazi, epikantal katlantılar ve yukarı dönük palpebral fissürler fenotipik özellikleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0292",
+       "ses": "Fazla X kromozomları inaktive edildiği için fenotip hafiftir, ama X sayısı arttıkça bulgular ağırlaşır.",
+       "ekran": "Fazla X kromozomları inaktive edildiği için fenotip hafiftir, ama X sayısı arttıkça bulgular ağırlaşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b23",
+   "baslik": "Turner sendromu",
+   "paragraflar": [
+    {
+     "id": "k1-10-p074",
+     "sayfa": 78,
+     "cumleler": [
+      {
+       "id": "k1-10-c0293",
+       "ses": "Turner sendromu 4000 canlı kız doğumda 1 görülür.",
+       "ekran": "Turner sendromu 4000 canlı kız doğumda 1 görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0294",
+       "ses": "Burası önemli, karyotip dağılımı sorulur: olguların %50'si 45,X, %15'i 45,X ile 46,XX mozaiği, %15'i X uzun kol izokromozomudur. %5'er oranla izokromozomun normal hücrelerle mozaiği, X kısa kol delesyonu ve halka X ile 45,X mozaiği bulunur; kalan %5 diğer formlardır.",
+       "ekran": "Burası önemli, karyotip dağılımı sorulur: olguların %50'si 45,X, %15'i 45,X ile 46,XX mozaiği, %15'i X uzun kol izokromozomudur. %5'er oranla izokromozomun normal hücrelerle mozaiği, X kısa kol delesyonu ve halka X ile 45,X mozaiği bulunur; kalan %5 diğer formlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0295",
+       "ses": "Ortak nokta X kısa kolu materyalinin tamamen ya da kısmen eksikliğidir.",
+       "ekran": "Ortak nokta X kısa kolu materyalinin tamamen ya da kısmen eksikliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p075",
+     "sayfa": 79,
+     "cumleler": [
+      {
+       "id": "k1-10-c0296",
+       "ses": "Kromozom yapısı klinik özellikleri belirler.",
+       "ekran": "Kromozom yapısı klinik özellikleri belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0297",
+       "ses": "Uzun kol izokromozomunda kısa kol kaybı olduğundan tablo klasik 45,X olgularına benzer; kısa kol izokromozomu daha hafif seyreder.",
+       "ekran": "Uzun kol izokromozomunda kısa kol kaybı olduğundan tablo klasik 45,X olgularına benzer; kısa kol izokromozomu daha hafif seyreder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0298",
+       "ses": "Burası önemli: kısa kol delesyonunda kısa boy ve konjenital malformasyonlar sıktır, uzun kol delesyonunda ise yalnız gonadal disfonksiyon görülür.",
+       "ekran": "Burası önemli: kısa kol delesyonunda kısa boy ve konjenital malformasyonlar sıktır, uzun kol delesyonunda ise yalnız gonadal disfonksiyon görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0299",
+       "ses": "Kısa boyu belirleyen SHOX gibi genler kısa koldadır.",
+       "ekran": "Kısa boyu belirleyen SHOX gibi genler kısa koldadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0300",
+       "ses": "45,X gebeliklerin %95'i spontan abortusla sonuçlanır ve mevcut X kromozomu %70 maternal kökenlidir.",
+       "ekran": "45,X gebeliklerin %95'i spontan abortusla sonuçlanır ve mevcut X kromozomu %70 maternal kökenlidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p076",
+     "sayfa": 80,
+     "cumleler": [
+      {
+       "id": "k1-10-c0301",
+       "ses": "İntrauterin dönemdeki masif lenfödemin kalıntısı olarak yenidoğanda yele boyun, yani pterijiyum kolli, ayak sırtında ödem ve boyunda deri gevşekliği görülür; fetal dönemde bu ödem ultrasonda kistik higroma olarak izlenebilir.",
+       "ekran": "İntrauterin dönemdeki masif lenfödemin kalıntısı olarak yenidoğanda yele boyun, yani pterijiyum kolli, ayak sırtında ödem ve boyunda deri gevşekliği görülür; fetal dönemde bu ödem ultrasonda kistik higroma olarak izlenebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0302",
+       "ses": "Kısa boy, fibröz ve çizgi şeklinde gonadlarla giden gonadal disgenezi, düşük saç çizgisi, geniş göğüs, ayrık meme başları, kubitus valgus ve diğer dirsek anomalileri ile belirgin kulaklar önemli bulgulardır.",
+       "ekran": "Kısa boy, fibröz ve çizgi şeklinde gonadlarla giden gonadal disgenezi, düşük saç çizgisi, geniş göğüs, ayrık meme başları, kubitus valgus ve diğer dirsek anomalileri ile belirgin kulaklar önemli bulgulardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0303",
+       "ses": "Renal ve kardiyovasküler anomali, özellikle aort koarktasyonu ve biküspit aort riski artmıştır.",
+       "ekran": "Renal ve kardiyovasküler anomali, özellikle aort koarktasyonu ve biküspit aort riski artmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p077",
+     "sayfa": 81,
+     "cumleler": [
+      {
+       "id": "k1-10-c0304",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: Turner sendromlu hastalar mental açıdan normaldir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: Turner sendromlu hastalar mental açıdan normaldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0305",
+       "ses": "Down, Williams ve Prader-Willi sendromlarında zihinsel yetersizlik tabloya eşlik ederken Turner'da zekâ tipik olarak normaldir; sözel zekâ puanları yüksektir ama pek çoğu matematikte eğitim desteğine ihtiyaç duyar.",
+       "ekran": "Down, Williams ve Prader-Willi sendromlarında zihinsel yetersizlik tabloya eşlik ederken Turner'da zekâ tipik olarak normaldir; sözel zekâ puanları yüksektir ama pek çoğu matematikte eğitim desteğine ihtiyaç duyar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p078",
+     "sayfa": 82,
+     "cumleler": [
+      {
+       "id": "k1-10-c0306",
+       "ses": "Over gelişim problemleri nedeniyle östrojen düşük, folikül uyarıcı hormon ve luteinleştirici hormon yüksek ya da normaldir.",
+       "ekran": "Over gelişim problemleri nedeniyle östrojen düşük, folikül uyarıcı hormon ve luteinleştirici hormon yüksek ya da normaldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0307",
+       "ses": "Östrojen ve büyüme hormonu tedavileriyle fenotipik iyileşme sağlanabilir.",
+       "ekran": "Östrojen ve büyüme hormonu tedavileriyle fenotipik iyileşme sağlanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0308",
+       "ses": "Hastaların %10 ile 20'sinde spontan puberte, %2 ile 5'inde geçici spontan menstrüasyon görülür ve nadiren fertilite olabilir.",
+       "ekran": "Hastaların %10 ile 20'sinde spontan puberte, %2 ile 5'inde geçici spontan menstrüasyon görülür ve nadiren fertilite olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b24",
+   "baslik": "Mendel kalıtımında nadir durumlar ve uniparental dizomi",
+   "paragraflar": [
+    {
+     "id": "k1-10-p079",
+     "sayfa": 83,
+     "cumleler": [
+      {
+       "id": "k1-10-c0309",
+       "ses": "Tek gen hastalıkları her zaman beklenen Mendel oranlarıyla kalıtılmaz.",
+       "ekran": "Tek gen hastalıkları her zaman beklenen Mendel oranlarıyla kalıtılmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0310",
+       "ses": "Genetik heterojenite aynı tablonun farklı genlerdeki ya da aynı gendeki farklı mutasyonlarla oluşmasıdır.",
+       "ekran": "Genetik heterojenite aynı tablonun farklı genlerdeki ya da aynı gendeki farklı mutasyonlarla oluşmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0311",
+       "ses": "Penetrans, mutasyonu taşıyanların ne kadarında hastalığın ortaya çıktığıdır.",
+       "ekran": "Penetrans, mutasyonu taşıyanların ne kadarında hastalığın ortaya çıktığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0312",
+       "ses": "Ekspresivite farklılıkları aynı mutasyonu taşıyanlarda bulguların şiddetinin değişmesidir.",
+       "ekran": "Ekspresivite farklılıkları aynı mutasyonu taşıyanlarda bulguların şiddetinin değişmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0313",
+       "ses": "Bunlara mozaisizm, genetik olmayan bir nedenin genetik hastalığı taklit ettiği fenokopi, çevresel etkiler, hastalığın kuşaktan kuşağa daha erken ve ağır ortaya çıktığı antisipasyon ve genomik imprinting eklenir.",
+       "ekran": "Bunlara mozaisizm, genetik olmayan bir nedenin genetik hastalığı taklit ettiği fenokopi, çevresel etkiler, hastalığın kuşaktan kuşağa daha erken ve ağır ortaya çıktığı antisipasyon ve genomik imprinting eklenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p080",
+     "sayfa": 84,
+     "cumleler": [
+      {
+       "id": "k1-10-c0314",
+       "ses": "Anneden kalıtılan alel ile babadan kalıtılan alel arasında fenotipe yansıyan gen ekspresyonu farkı genomik imprinting ile açıklanır.",
+       "ekran": "Anneden kalıtılan alel ile babadan kalıtılan alel arasında fenotipe yansıyan gen ekspresyonu farkı genomik imprinting ile açıklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0315",
+       "ses": "İmprintli genlerde bir ebeveynin kopyası DNA metilasyonu gibi epigenetik mekanizmalarla susturulur ve yalnız diğerininki çalışır.",
+       "ekran": "İmprintli genlerde bir ebeveynin kopyası DNA metilasyonu gibi epigenetik mekanizmalarla susturulur ve yalnız diğerininki çalışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0316",
+       "ses": "Çalışan tek kopya kaybolursa ya da iki kopya da susturulan ebeveynden gelirse hastalık ortaya çıkar.",
+       "ekran": "Çalışan tek kopya kaybolursa ya da iki kopya da susturulan ebeveynden gelirse hastalık ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0317",
+       "ses": "Klasik örnekleri Prader-Willi ve Angelman sendromlarıdır.",
+       "ekran": "Klasik örnekleri Prader-Willi ve Angelman sendromlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p081",
+     "sayfa": 86,
+     "cumleler": [
+      {
+       "id": "k1-10-c0318",
+       "ses": "Fertilize ovumda iki homolog kromozomun tamamının ya da bir kısmının anne ya da babanın yalnız birinden gelmesine uniparental dizomi denir; kromozom sayısı normaldir.",
+       "ekran": "Fertilize ovumda iki homolog kromozomun tamamının ya da bir kısmının anne ya da babanın yalnız birinden gelmesine uniparental dizomi denir; kromozom sayısı normaldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0319",
+       "ses": "İzodizomide ebeveynin birinden gelen tek 1 kromozom duplike olur, heterodizomide ise bir ebeveynin iki farklı homoloğu doğrudan alınır.",
+       "ekran": "İzodizomide ebeveynin birinden gelen tek 1 kromozom duplike olur, heterodizomide ise bir ebeveynin iki farklı homoloğu doğrudan alınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0320",
+       "ses": "Mayoz I ayrılamaması heterodizomiye, mayoz II ayrılamaması ya da tek kromozomun duplikasyonu izodizomiye yol açar.",
+       "ekran": "Mayoz I ayrılamaması heterodizomiye, mayoz II ayrılamaması ya da tek kromozomun duplikasyonu izodizomiye yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p082",
+     "sayfa": 86,
+     "cumleler": [
+      {
+       "id": "k1-10-c0321",
+       "ses": "Uniparental dizominin sık nedeni trizomi kurtarmadır.",
+       "ekran": "Uniparental dizominin sık nedeni trizomi kurtarmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0322",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: ayrılamamayla 1 kromozom bakımından diploid olan gamet haploid gametle birleşir, trizomik zigot fazla homoloğu kaybederek yeniden diploid olur.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: ayrılamamayla 1 kromozom bakımından diploid olan gamet haploid gametle birleşir, trizomik zigot fazla homoloğu kaybederek yeniden diploid olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0323",
+       "ses": "Kaybedilen kromozom tek kopyalı ebeveyninki ise iki kopya da diğer ebeveynden gelir.",
+       "ekran": "Kaybedilen kromozom tek kopyalı ebeveyninki ise iki kopya da diğer ebeveynden gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0324",
+       "ses": "Bu durumda homologların maternal mi paternal mi olduğu önemlidir ve genomik imprinting rol oynar; yani dizomilerde imprinting rol almaz demek yanlıştır.",
+       "ekran": "Bu durumda homologların maternal mi paternal mi olduğu önemlidir ve genomik imprinting rol oynar; yani dizomilerde imprinting rol almaz demek yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0325",
+       "ses": "Maternal dizomi Prader-Willi sendromuna, paternal dizomi Angelman sendromuna örnektir.",
+       "ekran": "Maternal dizomi Prader-Willi sendromuna, paternal dizomi Angelman sendromuna örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-10-b25",
+   "baslik": "Prader-Willi ve Angelman sendromları",
+   "paragraflar": [
+    {
+     "id": "k1-10-p083",
+     "sayfa": 85,
+     "cumleler": [
+      {
+       "id": "k1-10-c0326",
+       "ses": "15q11 ile q13 bölgesinde Prader-Willi genleri yalnız paternal kopyadan, Angelman geni yalnız maternal kopyadan aktiftir.",
+       "ekran": "15q11 ile q13 bölgesinde Prader-Willi genleri yalnız paternal kopyadan, Angelman geni yalnız maternal kopyadan aktiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0327",
+       "ses": "Burası önemli: Prader-Willi sendromu paternal katkının yokluğudur; olguların %70'i paternal delesyon, %30'u maternal uniparental dizomidir.",
+       "ekran": "Burası önemli: Prader-Willi sendromu paternal katkının yokluğudur; olguların %70'i paternal delesyon, %30'u maternal uniparental dizomidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0328",
+       "ses": "Angelman sendromu maternal katkının yokluğudur; %70'i maternal delesyon, %3 ile 5'i paternal uniparental dizomidir, kalanında UBE3A gen mutasyonu ve imprinting merkezi kusurları rol oynar.",
+       "ekran": "Angelman sendromu maternal katkının yokluğudur; %70'i maternal delesyon, %3 ile 5'i paternal uniparental dizomidir, kalanında UBE3A gen mutasyonu ve imprinting merkezi kusurları rol oynar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0329",
+       "ses": "Dikkat edin, delesyon ile dizominin ebeveyni birbirinin zıttıdır; aynı delesyon babadan gelirse Prader-Willi, anneden gelirse Angelman oluşur.",
+       "ekran": "Dikkat edin, delesyon ile dizominin ebeveyni birbirinin zıttıdır; aynı delesyon babadan gelirse Prader-Willi, anneden gelirse Angelman oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p084",
+     "sayfa": 87,
+     "cumleler": [
+      {
+       "id": "k1-10-c0330",
+       "ses": "Klinik tablolar çok farklıdır.",
+       "ekran": "Klinik tablolar çok farklıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0331",
+       "ses": "Prader-Willi sendromunda obezite, aşırı yeme yani hiperfaji, küçük el ve ayaklar, kısa boy, hipogonadizm ve zekâ geriliği vardır.",
+       "ekran": "Prader-Willi sendromunda obezite, aşırı yeme yani hiperfaji, küçük el ve ayaklar, kısa boy, hipogonadizm ve zekâ geriliği vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-10-c0332",
+       "ses": "Angelman sendromunda maksiller hipoplazi, büyük ağız, kısa boy, zekâ geriliği, nöbetler ve geniş tabanlı duruş görülür.",
+       "ekran": "Angelman sendromunda maksiller hipoplazi, büyük ağız, kısa boy, zekâ geriliği, nöbetler ve geniş tabanlı duruş görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-10-p085",
+     "sayfa": 87,
+     "cumleler": [
+      {
+       "id": "k1-10-c0333",
+       "ses": "Özetle, kromozomal hastalıklara yaklaşımın ekseni şudur: anomalinin sayısal mı yapısal mı, dengeli mi dengesiz mi olduğunu belirlemek, sitogenetik tipi karyotiple doğrulamak, buna göre tekrarlama riskini hesaplamak ve aileye bu bilgiyi yönlendirici olmayan bir genetik danışmayla aktarmak.",
+       "ekran": "Özetle, kromozomal hastalıklara yaklaşımın ekseni şudur: anomalinin sayısal mı yapısal mı, dengeli mi dengesiz mi olduğunu belirlemek, sitogenetik tipi karyotiple doğrulamak, buna göre tekrarlama riskini hesaplamak ve aileye bu bilgiyi yönlendirici olmayan bir genetik danışmayla aktarmak.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

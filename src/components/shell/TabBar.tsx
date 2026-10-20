@@ -15,6 +15,7 @@ import { MORE_TREE, NAV_ITEMS, TAB_ITEMS } from './navModel';
 import { userNotificationService } from '../../services/userNotificationService';
 import { NotificationHistoryModal } from '../notifications/NotificationHistoryModal';
 import { TabBarV12 } from '../v12/ShellV12';
+import { TabBarV13 } from '../v13/ShellV13';
 
 const MODE_ICONS: Record<ThemeMode, React.ElementType> = { light: Sun, sepia: SunMedium, dark: Moon };
 
@@ -33,8 +34,11 @@ export type TabBarProps = {
 };
 
 /** v12 "Net" tasarımında kenara oturan düz alt çubuk (components/v12/ShellV12); v10/v11 aşağıdaki ada. */
-export const TabBar: React.FC<TabBarProps> = (props) =>
-  useAppearance().design === 'v12' ? <TabBarV12 {...props} /> : <TabBarClassic {...props} />;
+export const TabBar: React.FC<TabBarProps> = (props) => {
+  const a = useAppearance();
+  if (a.design !== 'v12') return <TabBarClassic {...props} />;
+  return a.v13 ? <TabBarV13 {...props} /> : <TabBarV12 {...props} />;
+};
 
 const TabBarClassic: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf, onOffline }) => {
   const [more, setMore] = useState(false);

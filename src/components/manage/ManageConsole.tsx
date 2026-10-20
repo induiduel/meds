@@ -14,6 +14,7 @@ import {
   ArrowLeft,
   Workflow,
   GitMerge,
+  GitBranch,
   Table2,
   FlaskConical,
   Menu,
@@ -60,6 +61,7 @@ import { ManageAutomationSection } from './ManageAutomationSection';
 import { ManageDataCoreSection } from './ManageDataCoreSection';
 import { ManageNotebookLMSection } from './ManageNotebookLMSection';
 import { ManagePendingOperationsSection } from './ManagePendingOperationsSection';
+import { ManageHatSection } from './ManageHatSection';
 const ManageSesliAnlatimSection = lazy(() => import('./ManageSesliAnlatimSection'));
 import { consoleLogBuffer } from './ConsoleLogBuffer';
 import { ManageMetrics } from './ManageMetrics';
@@ -86,7 +88,7 @@ import {
   deleteDraftEverywhere,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'overview' | 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database' | 'sesli';
+export type ManageSection = 'overview' | 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database' | 'sesli' | 'hat';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -126,6 +128,7 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
   { id: 'scripts', slug: 'betikler', label: 'Betikler', hint: 'Veri hattı betiklerini ve zincirleri çalıştır, çıktıyı canlı izle.', icon: Terminal, group: 'Sistem', keywords: 'script görev zincir' },
   { id: 'system', slug: 'sistem', label: 'Sistem ve günlükler', hint: 'Veritabanı ve AI sağlığı, servisler, tarayıcı konsolu.', icon: Activity, group: 'Sistem', keywords: 'log sağlık servis' },
   { id: 'automation', slug: 'otomasyon', label: 'Otomasyon', hint: 'Zamanlanmış işler, AI pencereleri, anahtarlar; Drive eşitlemesi ve masaüstü servisleri.', icon: Settings, group: 'Sistem', keywords: 'drive yedek anahtar zamanla' },
+  { id: 'hat', slug: 'hat', label: 'Hat panosu', hint: 'Tam otomatik içerik hattının aşamaları: otomatik/elle/plan durumu, bağımlılıklar, eksikler, son çalışma kodu ve günlük.', icon: GitBranch, group: 'Sistem', keywords: 'hat otomasyon aşama gece pipeline olası soru durum log' },
   { id: 'database', slug: 'veritabani', label: 'Veritabanı ve yedek', hint: 'Etkin veritabanı, eşitleme, dışa ve içe aktarım.', icon: HardDrive, group: 'Sistem', keywords: 'supabase firebase yedek dışa aktar' },
 ];
 /** v12 "Net": bölümler işe göre gruplanır (v10/v11 yukarıdaki sırayı ve grup adlarını korur). */
@@ -135,7 +138,7 @@ const V12_GROUPS: { label: string; ids: ManageSection[] }[] = [
   { label: 'Öğrenme içeriği', ids: ['ders_isci', 'sesli', 'catalog', 'notebooklm'] },
   { label: 'Veri', ids: ['data', 'phases', 'datacore', 'database'] },
   { label: 'Kişiler ve denetim', ids: ['people', 'users'] },
-  { label: 'Sistem', ids: ['system', 'automation', 'scripts'] },
+  { label: 'Sistem', ids: ['system', 'automation', 'hat', 'scripts'] },
 ];
 const V12_SECTIONS = V12_GROUPS.flatMap((g) => g.ids.map((id) => {
   const sec = SECTIONS.find((x) => x.id === id)!;
@@ -754,6 +757,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       {section === 'system' && <ManageSystemSection notify={notify} />}
       {section === 'datacore' && <ManageDataCoreSection notify={notify} />}
       {section === 'notebooklm' && <ManageNotebookLMSection />}
+      {section === 'hat' && <ManageHatSection adminEmail={adminEmail} />}
       {section === 'automation' && <SubTabs value={autoTab} onChange={setAutoTab} items={[['schedule', 'Zamanlama ve anahtarlar'], ['services', 'Drive ve servisler']]} />}
       {section === 'automation' && autoTab === 'schedule' && (
         <ManageAutomationSection adminEmail={adminEmail} selectedCommitteeId={selectedCommitteeId} onRefreshData={onRefreshData} notify={notify} />

@@ -1,0 +1,2614 @@
+{
+ "surum": 2,
+ "ders_id": "k1-04",
+ "anahtar": "k1-04-hucre-hasari-ve-nekroz-i",
+ "baslik": "Hücre Hasarı ve Nekroz - I",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-04-b01",
+   "baslik": "Hücre hasarı kavramı ve strese hücresel yanıt",
+   "paragraflar": [
+    {
+     "id": "k1-04-p001",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-04-c0001",
+       "ses": "Hücre hasarı, hücrenin normal homeostazını koruyamadığı durumdur.",
+       "ekran": "Hücre hasarı, hücrenin normal homeostazını koruyamadığı durumdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0002",
+       "ses": "Homeostaz dediğimiz şey, hücrenin iç ortamını, yani iyon dengesini, enerji üretimini ve protein yapısını dar fizyolojik sınırlar içinde tutabilmesidir.",
+       "ekran": "Homeostaz dediğimiz şey, hücrenin iç ortamını, yani iyon dengesini, enerji üretimini ve protein yapısını dar fizyolojik sınırlar içinde tutabilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0003",
+       "ses": "Bu denge kaybolduğunda iki olası sonuç vardır.",
+       "ekran": "Bu denge kaybolduğunda iki olası sonuç vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0004",
+       "ses": "Hasar sınırlı kalır ve etken ortadan kalkarsa hücre normale döner; buna geri dönüşümlü bozukluk diyoruz.",
+       "ekran": "Hasar sınırlı kalır ve etken ortadan kalkarsa hücre normale döner; buna geri dönüşümlü bozukluk diyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0005",
+       "ses": "Hasar eşiği aşılırsa ise geri dönüşümsüz hasar gelişir ve süreç hücre ölümüyle sonuçlanır.",
+       "ekran": "Hasar eşiği aşılırsa ise geri dönüşümsüz hasar gelişir ve süreç hücre ölümüyle sonuçlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0006",
+       "ses": "Yani hücre hasarı tek yönlü bir olay değildir; aynı süreç ya iyileşmeyle ya da ölümle bitebilir.",
+       "ekran": "Yani hücre hasarı tek yönlü bir olay değildir; aynı süreç ya iyileşmeyle ya da ölümle bitebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0007",
+       "ses": "Klinik açıdan önemi büyüktür, çünkü hücre hasarı birçok hastalığın temelini oluşturur ve organ işlev bozukluğunun hücresel karşılığıdır.",
+       "ekran": "Klinik açıdan önemi büyüktür, çünkü hücre hasarı birçok hastalığın temelini oluşturur ve organ işlev bozukluğunun hücresel karşılığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p002",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-04-c0008",
+       "ses": "Fizyolojik stres ve zararlı uyarılar hücreyi normal işlev sınırlarının dışına zorlar.",
+       "ekran": "Fizyolojik stres ve zararlı uyarılar hücreyi normal işlev sınırlarının dışına zorlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0009",
+       "ses": "Hücrenin bu zorlamaya iki yanıtı olabilir.",
+       "ekran": "Hücrenin bu zorlamaya iki yanıtı olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0010",
+       "ses": "1.'si adaptasyondur: hücre yapısını ve işlevini değiştirerek yeni bir denge kurar; burada hasar söz konusu değildir.",
+       "ekran": "1.'si adaptasyondur: hücre yapısını ve işlevini değiştirerek yeni bir denge kurar; burada hasar söz konusu değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0011",
+       "ses": "2.'si hasardır: uyum kapasitesi aşıldığında hücre zarar görür ve bu hasar geri dönüşümlü ya da geri dönüşümsüz olabilir.",
+       "ekran": "2.'si hasardır: uyum kapasitesi aşıldığında hücre zarar görür ve bu hasar geri dönüşümlü ya da geri dönüşümsüz olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0012",
+       "ses": "Dikkat edin, adaptasyon yeni denge, hasar ise dengenin kaybı demektir; ikisi aynı süreç değildir.",
+       "ekran": "Dikkat edin, adaptasyon yeni denge, hasar ise dengenin kaybı demektir; ikisi aynı süreç değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0013",
+       "ses": "Geri dönüşümsüz hasarın son noktası olan hücre ölümü, hastalık patogenezinde kritik bir olaydır.",
+       "ekran": "Geri dönüşümsüz hasarın son noktası olan hücre ölümü, hastalık patogenezinde kritik bir olaydır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b02",
+   "baslik": "Hastalık gelişiminin aşamaları ve hasarın sırası",
+   "paragraflar": [
+    {
+     "id": "k1-04-p003",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-04-c0014",
+       "ses": "Ders kitabındaki bir şema, bir hastalığın nedenden belirtiye nasıl ilerlediğini 4 basamakta özetler ve hücre hasarını bu sürecin merkezine yerleştirir.",
+       "ekran": "Ders kitabındaki bir şema, bir hastalığın nedenden belirtiye nasıl ilerlediğini 4 basamakta özetler ve hücre hasarını bu sürecin merkezine yerleştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0015",
+       "ses": "Birinci basamak etiyolojidir, yani hastalığın nedenleri: hipoksi ve iskemi, toksinler, enfeksiyonlar, anormal immün reaksiyonlar, genetik anormallikler, beslenme dengesizlikleri ve fiziksel etkenler.",
+       "ekran": "Birinci basamak etiyolojidir, yani hastalığın nedenleri: hipoksi ve iskemi, toksinler, enfeksiyonlar, anormal immün reaksiyonlar, genetik anormallikler, beslenme dengesizlikleri ve fiziksel etkenler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0016",
+       "ses": "Şekilde bu etiyolojilerin yalnızca bir kısmı gösterilmiştir.",
+       "ekran": "Şekilde bu etiyolojilerin yalnızca bir kısmı gösterilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0017",
+       "ses": "İkinci basamak patogenezdir, yani hastalığın mekanizmaları; etkenin oluşturduğu biyokimyasal ve yapısal değişikliklerdir.",
+       "ekran": "İkinci basamak patogenezdir, yani hastalığın mekanizmaları; etkenin oluşturduğu biyokimyasal ve yapısal değişikliklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0018",
+       "ses": "Üçüncü basamak hücre ve dokulardaki anormalliklerdir; bunlar moleküler, fonksiyonel ve morfolojik düzeyde ortaya çıkar.",
+       "ekran": "Üçüncü basamak hücre ve dokulardaki anormalliklerdir; bunlar moleküler, fonksiyonel ve morfolojik düzeyde ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0019",
+       "ses": "Dördüncü basamak klinik bulgulardır, yani hastalığın belirti ve bulguları.",
+       "ekran": "Dördüncü basamak klinik bulgulardır, yani hastalığın belirti ve bulguları.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0020",
+       "ses": "Patolog en çok üçüncü basamağı inceler; klinik tablo bu değişikliklerin dışa yansımasıdır.",
+       "ekran": "Patolog en çok üçüncü basamağı inceler; klinik tablo bu değişikliklerin dışa yansımasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-04-c0021",
+       "ses": "İkinci şema hasarın zaman içindeki sırasını gösterir.",
+       "ekran": "İkinci şema hasarın zaman içindeki sırasını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0022",
+       "ses": "Sağlıklı hücrede homeostaz korunur.",
+       "ekran": "Sağlıklı hücrede homeostaz korunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0023",
+       "ses": "Zararlı bir uyarıyla karşılaşan hücrede önce geri dönüşümlü hasar gelişir; toparlanma şansı hâlâ vardır.",
+       "ekran": "Zararlı bir uyarıyla karşılaşan hücrede önce geri dönüşümlü hasar gelişir; toparlanma şansı hâlâ vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0024",
+       "ses": "Uyarı şiddetli ve ilerleyici ise hasar geri dönüşümsüz hâle gelir ve ardından hücre ölümü gerçekleşir.",
+       "ekran": "Uyarı şiddetli ve ilerleyici ise hasar geri dönüşümsüz hâle gelir ve ardından hücre ölümü gerçekleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0025",
+       "ses": "Hücre ölümünün 2 ana tipi nekroz ve apoptozdur.",
+       "ekran": "Hücre ölümünün 2 ana tipi nekroz ve apoptozdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0026",
+       "ses": "Bu şemadaki kilit ifade \"şiddetli, ilerleyici\" nitelemesidir: geri dönüşümlü evreden geri dönüşümsüz evreye geçişi uyarının şiddeti ve sürekliliği belirler.",
+       "ekran": "Bu şemadaki kilit ifade \"şiddetli, ilerleyici\" nitelemesidir: geri dönüşümlü evreden geri dönüşümsüz evreye geçişi uyarının şiddeti ve sürekliliği belirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b03",
+   "baslik": "Hücre hasarının başlıca nedenleri ve hipoksi ile iskemi",
+   "paragraflar": [
+    {
+     "id": "k1-04-p005",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-04-c0027",
+       "ses": "Hücre hasarına yol açan etkenler 7 ana grupta toplanır: hipoksi ve iskemi, toksik kimyasallar, enfeksiyöz ajanlar, immünolojik reaksiyonlar, genetik anormallikler, beslenme dengesizlikleri ve fiziksel etkenler.",
+       "ekran": "Hücre hasarına yol açan etkenler 7 ana grupta toplanır: hipoksi ve iskemi, toksik kimyasallar, enfeksiyöz ajanlar, immünolojik reaksiyonlar, genetik anormallikler, beslenme dengesizlikleri ve fiziksel etkenler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0028",
+       "ses": "Bu liste, az önce gördüğümüz şemadaki etiyoloji kutusunun açılımıdır.",
+       "ekran": "Bu liste, az önce gördüğümüz şemadaki etiyoloji kutusunun açılımıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0029",
+       "ses": "Liste nedenler düzeyindedir; aynı nedenin hücrede ne kadar hasar yapacağını ise etkenin türü, süresi ve şiddeti belirler, buna birazdan döneceğiz.",
+       "ekran": "Liste nedenler düzeyindedir; aynı nedenin hücrede ne kadar hasar yapacağını ise etkenin türü, süresi ve şiddeti belirler, buna birazdan döneceğiz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0030",
+       "ses": "Şimdi grupları sırayla ele alalım.",
+       "ekran": "Şimdi grupları sırayla ele alalım.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p006",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-04-c0031",
+       "ses": "Hipoksi oksijen eksikliğidir.",
+       "ekran": "Hipoksi oksijen eksikliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0032",
+       "ses": "İskemi ise bir dokuya giden kan akımının azalması ya da kesilmesidir.",
+       "ekran": "İskemi ise bir dokuya giden kan akımının azalması ya da kesilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0033",
+       "ses": "Bu 2 kavram sık karıştırılır, o yüzden farkı netleştirelim.",
+       "ekran": "Bu 2 kavram sık karıştırılır, o yüzden farkı netleştirelim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0034",
+       "ses": "Hipokside kan akımı sürse bile kanın taşıdığı oksijen yetersiz olabilir.",
+       "ekran": "Hipokside kan akımı sürse bile kanın taşıdığı oksijen yetersiz olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0035",
+       "ses": "İskemide ise kan akımı kaybolduğu için hücre 3 sorunla aynı anda karşılaşır: oksijen azalır, besin azalır ve atıklar uzaklaştırılamaz.",
+       "ekran": "İskemide ise kan akımı kaybolduğu için hücre 3 sorunla aynı anda karşılaşır: oksijen azalır, besin azalır ve atıklar uzaklaştırılamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0036",
+       "ses": "Bu yüzden her iskemi hipoksi yaratır, ama her hipoksi iskemi değildir; örneğin anemi ya da karbon monoksit zehirlenmesi iskemi olmadan hipoksi yapar.",
+       "ekran": "Bu yüzden her iskemi hipoksi yaratır, ama her hipoksi iskemi değildir; örneğin anemi ya da karbon monoksit zehirlenmesi iskemi olmadan hipoksi yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0037",
+       "ses": "İskemide besin desteği de kesildiği ve atık biriktiği için iskemik hasar saf hipoksiye göre daha hızlı ve ağır seyreder.",
+       "ekran": "İskemide besin desteği de kesildiği ve atık biriktiği için iskemik hasar saf hipoksiye göre daha hızlı ve ağır seyreder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0038",
+       "ses": "Burası önemli, sınav spotudur: hipoksi ve iskemi, hücre hasarı ve nekrozun en sık nedenlerinden biridir.",
+       "ekran": "Burası önemli, sınav spotudur: hipoksi ve iskemi, hücre hasarı ve nekrozun en sık nedenlerinden biridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b04",
+   "baslik": "Hipoksinin nedenleri",
+   "paragraflar": [
+    {
+     "id": "k1-04-p007",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-04-c0039",
+       "ses": "Hipoksi, oksijenin dokuya ulaşma zincirinin herhangi bir halkasındaki kopukluktan doğabilir: kan akımı, kanın oksijenlenmesi ya da oksijen taşıma kapasitesi.",
+       "ekran": "Hipoksi, oksijenin dokuya ulaşma zincirinin herhangi bir halkasındaki kopukluktan doğabilir: kan akımı, kanın oksijenlenmesi ya da oksijen taşıma kapasitesi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0040",
+       "ses": "5 klasik neden vardır.",
+       "ekran": "5 klasik neden vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0041",
+       "ses": "1.'si iskemik arter tıkanmalarıdır; kan akımı kesilir ve oksijen dokuya hiç ulaşmaz.",
+       "ekran": "1.'si iskemik arter tıkanmalarıdır; kan akımı kesilir ve oksijen dokuya hiç ulaşmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0042",
+       "ses": "2.'si akciğer hastalıklarıdır; kanın akciğerde oksijenlenmesi azalır, akım sürse de kan yetersiz oksijen taşır.",
+       "ekran": "2.'si akciğer hastalıklarıdır; kanın akciğerde oksijenlenmesi azalır, akım sürse de kan yetersiz oksijen taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0043",
+       "ses": "3.'sü anemidir; oksijeni taşıyan hemoglobin azalmıştır.",
+       "ekran": "3.'sü anemidir; oksijeni taşıyan hemoglobin azalmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0044",
+       "ses": "4.'sü karbon monoksit zehirlenmesidir; karbon monoksit hemoglobine bağlanır ve onun oksijen taşıma kapasitesini işgal eder, yani hemoglobin miktarı normal olsa bile taşınan oksijen azalır.",
+       "ekran": "4.'sü karbon monoksit zehirlenmesidir; karbon monoksit hemoglobine bağlanır ve onun oksijen taşıma kapasitesini işgal eder, yani hemoglobin miktarı normal olsa bile taşınan oksijen azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0045",
+       "ses": "5.'si şiddetli kan kaybı ya da şoktur; dolaşan kan hacmi ve doku perfüzyonu düşer.",
+       "ekran": "5.'si şiddetli kan kaybı ya da şoktur; dolaşan kan hacmi ve doku perfüzyonu düşer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0046",
+       "ses": "Şunu da not edin: anemi ve karbon monoksit zehirlenmesinde sorun taşıyıcıdadır; birinde hemoglobin azdır, diğerinde hemoglobin vardır ama karbon monoksit tarafından bağlanmıştır.",
+       "ekran": "Şunu da not edin: anemi ve karbon monoksit zehirlenmesinde sorun taşıyıcıdadır; birinde hemoglobin azdır, diğerinde hemoglobin vardır ama karbon monoksit tarafından bağlanmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b05",
+   "baslik": "Toksinler, ilaçlar ve enfeksiyöz ajanlar",
+   "paragraflar": [
+    {
+     "id": "k1-04-p008",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-04-c0047",
+       "ses": "Kimyasal maddeler hücreye doğrudan zarar veren geniş bir neden grubudur ve 3 kaynağa ayrılır.",
+       "ekran": "Kimyasal maddeler hücreye doğrudan zarar veren geniş bir neden grubudur ve 3 kaynağa ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0048",
+       "ses": "Çevresel toksinler hava kirleticileri, böcek ilaçları, karbon monoksit ve asbesttir.",
+       "ekran": "Çevresel toksinler hava kirleticileri, böcek ilaçları, karbon monoksit ve asbesttir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0049",
+       "ses": "Yaşam tarzı toksinleri sigara dumanı ve etanol, yani alkoldür.",
+       "ekran": "Yaşam tarzı toksinleri sigara dumanı ve etanol, yani alkoldür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0050",
+       "ses": "İlaçlar ise terapötik dozda güvenlidir; ancak yüksek dozda ya da duyarlı bireyde toksik olabilir.",
+       "ekran": "İlaçlar ise terapötik dozda güvenlidir; ancak yüksek dozda ya da duyarlı bireyde toksik olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0051",
+       "ses": "Buradaki mesaj şudur: toksisite çoğu zaman maddenin kendisinden değil, maruziyetin büyüklüğünden ve kişinin duyarlılığından kaynaklanır.",
+       "ekran": "Buradaki mesaj şudur: toksisite çoğu zaman maddenin kendisinden değil, maruziyetin büyüklüğünden ve kişinin duyarlılığından kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0052",
+       "ses": "Karbon monoksitin hem çevresel toksin hem de hipoksi nedeni olarak 2 listede birden yer aldığına dikkat edin; bu kesişim sık sorulur.",
+       "ekran": "Karbon monoksitin hem çevresel toksin hem de hipoksi nedeni olarak 2 listede birden yer aldığına dikkat edin; bu kesişim sık sorulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0053",
+       "ses": "Çevresel ve beslenmeye bağlı hastalıkların ayrıntıları ilgili derslerde işlenir.",
+       "ekran": "Çevresel ve beslenmeye bağlı hastalıkların ayrıntıları ilgili derslerde işlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p009",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-04-c0054",
+       "ses": "Burası önemli, ilaç toksisitesinin klasik örneği çıkmış sorularda soruldu.",
+       "ekran": "Burası önemli, ilaç toksisitesinin klasik örneği çıkmış sorularda soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0055",
+       "ses": "Asetaminofen, yani parasetamol, aşırı dozda alındığında toksik etkilerinden NAPQI adı verilen toksik ürünü sorumludur.",
+       "ekran": "Asetaminofen, yani parasetamol, aşırı dozda alındığında toksik etkilerinden NAPQI adı verilen toksik ürünü sorumludur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0056",
+       "ses": "Bu ürün glutatyon depolarını tüketerek masif hepatosit nekrozuna ve akut karaciğer yetmezliğine yol açar.",
+       "ekran": "Bu ürün glutatyon depolarını tüketerek masif hepatosit nekrozuna ve akut karaciğer yetmezliğine yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0057",
+       "ses": "Asetil salisilik asit, alkol, eroin ya da marihuana bu sorunun çeldiricileridir; NAPQI asetaminofene aittir.",
+       "ekran": "Asetil salisilik asit, alkol, eroin ya da marihuana bu sorunun çeldiricileridir; NAPQI asetaminofene aittir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p010",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-04-c0058",
+       "ses": "Enfeksiyöz ajanlara gelince, her tip patojen hasar verebilir: bakteri, virüs, mantar ve parazitler.",
+       "ekran": "Enfeksiyöz ajanlara gelince, her tip patojen hasar verebilir: bakteri, virüs, mantar ve parazitler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0059",
+       "ses": "Hasar 3 mekanizmayla oluşur.",
+       "ekran": "Hasar 3 mekanizmayla oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0060",
+       "ses": "1.'si toksin üretimidir; patojen hücreye zarar veren ürünler salgılar ve hasar patojenden uzakta bile gelişebilir.",
+       "ekran": "1.'si toksin üretimidir; patojen hücreye zarar veren ürünler salgılar ve hasar patojenden uzakta bile gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0061",
+       "ses": "2.'si hücre içine girerek replikasyondur; patojen hücreye girip orada çoğalır ve hücrenin yapısını ve kaynaklarını kendi lehine kullanarak onu bozar.",
+       "ekran": "2.'si hücre içine girerek replikasyondur; patojen hücreye girip orada çoğalır ve hücrenin yapısını ve kaynaklarını kendi lehine kullanarak onu bozar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0062",
+       "ses": "3.'sü aşırı ya da kronik bağışıklık yanıtı tetiklemesidir; burada hasarın bir kısmı patojenden değil, konağın ona karşı verdiği yanıttan kaynaklanır.",
+       "ekran": "3.'sü aşırı ya da kronik bağışıklık yanıtı tetiklemesidir; burada hasarın bir kısmı patojenden değil, konağın ona karşı verdiği yanıttan kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0063",
+       "ses": "Bu üçüncü mekanizma enfeksiyon ile immünolojik hasar arasında bir köprü kurar.",
+       "ekran": "Bu üçüncü mekanizma enfeksiyon ile immünolojik hasar arasında bir köprü kurar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b06",
+   "baslik": "İmmünolojik reaksiyonlar ve genetik anormallikler",
+   "paragraflar": [
+    {
+     "id": "k1-04-p011",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-04-c0064",
+       "ses": "Bağışıklık sistemi normalde konak savunması için gereklidir.",
+       "ekran": "Bağışıklık sistemi normalde konak savunması için gereklidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0065",
+       "ses": "Ancak yanıt yanlış hedefe yöneldiğinde ya da ölçüsünü kaybettiğinde hücre hasarının nedeni hâline gelir.",
+       "ekran": "Ancak yanıt yanlış hedefe yöneldiğinde ya da ölçüsünü kaybettiğinde hücre hasarının nedeni hâline gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0066",
+       "ses": "3 patolojik durum vardır: bağışıklık sisteminin konağın kendi dokularına yöneldiği otoimmün hastalıklar, normalde zararsız dış uyaranlara abartılı yanıt verilen alerjik reaksiyonlar ve gereğinden şiddetli ya da uzun süren aşırı veya kronik immün yanıt.",
+       "ekran": "3 patolojik durum vardır: bağışıklık sisteminin konağın kendi dokularına yöneldiği otoimmün hastalıklar, normalde zararsız dış uyaranlara abartılı yanıt verilen alerjik reaksiyonlar ve gereğinden şiddetli ya da uzun süren aşırı veya kronik immün yanıt.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0067",
+       "ses": "Üçünün ortak sonucu inflamasyon ve sekonder doku hasarıdır.",
+       "ekran": "Üçünün ortak sonucu inflamasyon ve sekonder doku hasarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0068",
+       "ses": "Sekonder kelimesi, hasarın birincil etkenden değil, ona verilen yanıttan doğduğunu vurgular.",
+       "ekran": "Sekonder kelimesi, hasarın birincil etkenden değil, ona verilen yanıttan doğduğunu vurgular.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0069",
+       "ses": "Aşırı bağışıklık yanıtının hem enfeksiyon hem de immün hasar başlığında geçtiğine dikkat edin.",
+       "ekran": "Aşırı bağışıklık yanıtının hem enfeksiyon hem de immün hasar başlığında geçtiğine dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p012",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-04-c0070",
+       "ses": "Genetik anormallikler hücre hasarına hem büyük ölçekli hem tek nükleotid düzeyinde kusurlarla yol açar.",
+       "ekran": "Genetik anormallikler hücre hasarına hem büyük ölçekli hem tek nükleotid düzeyinde kusurlarla yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0071",
+       "ses": "Kromozom bozukluklarına örnek Down sendromudur.",
+       "ekran": "Kromozom bozukluklarına örnek Down sendromudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0072",
+       "ses": "Nokta mutasyonlarına, yani DNA'da tek bir nükleotidin değişmesine örnek orak hücreli anemidir.",
+       "ekran": "Nokta mutasyonlarına, yani DNA'da tek bir nükleotidin değişmesine örnek orak hücreli anemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0073",
+       "ses": "Bu kusurlar 3 mekanizmayla zarar verir.",
+       "ekran": "Bu kusurlar 3 mekanizmayla zarar verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0074",
+       "ses": "Fonksiyon kaybında gerekli bir protein işlev görmez; örneği enzim eksiklikleridir.",
+       "ekran": "Fonksiyon kaybında gerekli bir protein işlev görmez; örneği enzim eksiklikleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0075",
+       "ses": "Fonksiyon kazanımında protein aşırı ya da kontrolsüz işlev kazanır; örneği onkogenlerdir.",
+       "ekran": "Fonksiyon kazanımında protein aşırı ya da kontrolsüz işlev kazanır; örneği onkogenlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0076",
+       "ses": "Üçüncü mekanizma yanlış katlanmış protein birikimidir; doğru 3 boyutlu yapıyı alamayan proteinler hücrede birikerek hasar oluşturur.",
+       "ekran": "Üçüncü mekanizma yanlış katlanmış protein birikimidir; doğru 3 boyutlu yapıyı alamayan proteinler hücrede birikerek hasar oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0077",
+       "ses": "Genetik anormallikler kanser gelişiminde merkezi rol oynar ve onkogenlerdeki fonksiyon kazanımı bunun tipik örneğidir.",
+       "ekran": "Genetik anormallikler kanser gelişiminde merkezi rol oynar ve onkogenlerdeki fonksiyon kazanımı bunun tipik örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b07",
+   "baslik": "Beslenme dengesizlikleri ve fiziksel etkenler",
+   "paragraflar": [
+    {
+     "id": "k1-04-p013",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-04-c0078",
+       "ses": "Beslenme dengesizlikleri, hücre hasarının yalnızca eksiklikten doğmadığını gösteren tipik bir gruptur.",
+       "ekran": "Beslenme dengesizlikleri, hücre hasarının yalnızca eksiklikten doğmadığını gösteren tipik bir gruptur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0079",
+       "ses": "Yetersiz alım tarafında protein kalori malnütrisyonu ve vitamin eksiklikleri vardır.",
+       "ekran": "Yetersiz alım tarafında protein kalori malnütrisyonu ve vitamin eksiklikleri vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0080",
+       "ses": "Aşırı alım tarafında ise obezite, Tip 2 diyabet ve ateroskleroz yer alır.",
+       "ekran": "Aşırı alım tarafında ise obezite, Tip 2 diyabet ve ateroskleroz yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0081",
+       "ses": "Her iki uç da hücre ve organ hasarına zemin hazırlar.",
+       "ekran": "Her iki uç da hücre ve organ hasarına zemin hazırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0082",
+       "ses": "Yetersiz alımda hücre işlevi için gereken yapı taşları ve kofaktörler bulunmaz; aşırı alımda ise metabolik yük ve damar hastalıkları öne çıkar.",
+       "ekran": "Yetersiz alımda hücre işlevi için gereken yapı taşları ve kofaktörler bulunmaz; aşırı alımda ise metabolik yük ve damar hastalıkları öne çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0083",
+       "ses": "Ateroskleroz, aşırı beslenmenin damar duvarındaki sonucudur ve arterleri daraltarak az önce konuştuğumuz iskemiye de zemin hazırlar.",
+       "ekran": "Ateroskleroz, aşırı beslenmenin damar duvarındaki sonucudur ve arterleri daraltarak az önce konuştuğumuz iskemiye de zemin hazırlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p014",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-04-c0084",
+       "ses": "Fiziksel etkenler hücreye enerji aktararak ya da mekanik olarak zarar verir.",
+       "ekran": "Fiziksel etkenler hücreye enerji aktararak ya da mekanik olarak zarar verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0085",
+       "ses": "Mekanik travma dokuyu ezer, yırtar ya da keser.",
+       "ekran": "Mekanik travma dokuyu ezer, yırtar ya da keser.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0086",
+       "ses": "Aşırı ısı yanık, aşırı soğuk donma oluşturur.",
+       "ekran": "Aşırı ısı yanık, aşırı soğuk donma oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0087",
+       "ses": "İyonizan radyasyon ve ultraviyole radyasyon hücre hasarı yapar.",
+       "ekran": "İyonizan radyasyon ve ultraviyole radyasyon hücre hasarı yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0088",
+       "ses": "Elektrik çarpmasında akımın dokudan geçişi hasara yol açar.",
+       "ekran": "Elektrik çarpmasında akımın dokudan geçişi hasara yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0089",
+       "ses": "Son olarak ani basınç değişiklikleri vardır; bunun klasik örneği dalgıçlıkta görülen dekompresyon hastalığıdır ve sınavda dalgıçlık bağlamıyla sorulur.",
+       "ekran": "Son olarak ani basınç değişiklikleri vardır; bunun klasik örneği dalgıçlıkta görülen dekompresyon hastalığıdır ve sınavda dalgıçlık bağlamıyla sorulur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b08",
+   "baslik": "Hasarın sonucunu belirleyen ilkeler ve hedef hücre",
+   "paragraflar": [
+    {
+     "id": "k1-04-p015",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-04-c0090",
+       "ses": "Hücre hasarının sonucu 3 ana faktöre bağlıdır: etkenin türü, etkenin süresi ve etkenin şiddeti, yani dozu.",
+       "ekran": "Hücre hasarının sonucu 3 ana faktöre bağlıdır: etkenin türü, etkenin süresi ve etkenin şiddeti, yani dozu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0091",
+       "ses": "Bu ilkenin en çarpıcı sonucu, aynı etkenin farklı sonuçlar doğurabilmesidir.",
+       "ekran": "Bu ilkenin en çarpıcı sonucu, aynı etkenin farklı sonuçlar doğurabilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0092",
+       "ses": "Düşük dozda geri dönüşümlü hasar gelişir ve etken kalkınca hücre toparlanır.",
+       "ekran": "Düşük dozda geri dönüşümlü hasar gelişir ve etken kalkınca hücre toparlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0093",
+       "ses": "Yüksek dozda ise nekroz ya da apoptoz gelişir ve hücre ölür.",
+       "ekran": "Yüksek dozda ise nekroz ya da apoptoz gelişir ve hücre ölür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0094",
+       "ses": "Sınavda \"aynı etken neden bazen iyileşme, bazen ölüm yapar\" sorusunun cevabı süre ve şiddettir.",
+       "ekran": "Sınavda \"aynı etken neden bazen iyileşme, bazen ölüm yapar\" sorusunun cevabı süre ve şiddettir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p016",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-04-c0095",
+       "ses": "Hasarın sonucunu yalnızca etken değil, hasara uğrayan hücre de belirler; farklı hücre tipleri aynı strese farklı yanıtlar verir.",
+       "ekran": "Hasarın sonucunu yalnızca etken değil, hasara uğrayan hücre de belirler; farklı hücre tipleri aynı strese farklı yanıtlar verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0096",
+       "ses": "Burası önemli, bu sayılar sık sorulur: iskelet kası 2 ile 3 saat tam iskemiyi tolere edebilir, kalp kasında ise 20 ile 30 dakikada geri dönüşümsüz hasar gelişebilir.",
+       "ekran": "Burası önemli, bu sayılar sık sorulur: iskelet kası 2 ile 3 saat tam iskemiyi tolere edebilir, kalp kasında ise 20 ile 30 dakikada geri dönüşümsüz hasar gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0097",
+       "ses": "Bu fark, enerji ihtiyacı yüksek ve kesintisiz çalışan hücrelerin oksijen yokluğuna daha duyarlı olmasıyla uyumludur.",
+       "ekran": "Bu fark, enerji ihtiyacı yüksek ve kesintisiz çalışan hücrelerin oksijen yokluğuna daha duyarlı olmasıyla uyumludur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0098",
+       "ses": "Bir de genetik zemin vardır: genetik polimorfizmler, yani bireyler arasındaki genetik farklılıklar, toksin metabolizmasını ve hasar duyarlılığını etkiler.",
+       "ekran": "Bir de genetik zemin vardır: genetik polimorfizmler, yani bireyler arasındaki genetik farklılıklar, toksin metabolizmasını ve hasar duyarlılığını etkiler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0099",
+       "ses": "Bu nedenle aynı maruziyet bir kişide hasar yaparken diğerinde yapmayabilir.",
+       "ekran": "Bu nedenle aynı maruziyet bir kişide hasar yaparken diğerinde yapmayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p017",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-04-c0100",
+       "ses": "Zararlı etkenlerin hücrede hedef aldığı 5 ana yapı vardır.",
+       "ekran": "Zararlı etkenlerin hücrede hedef aldığı 5 ana yapı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0101",
+       "ses": "Plazma ve organel zarları bozulunca içerik karışır ya da dışarı sızar.",
+       "ekran": "Plazma ve organel zarları bozulunca içerik karışır ya da dışarı sızar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0102",
+       "ses": "Mitokondriler ATP üretiminin merkezidir ve hasarları enerji yetersizliğine yol açar.",
+       "ekran": "Mitokondriler ATP üretiminin merkezidir ve hasarları enerji yetersizliğine yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0103",
+       "ses": "Protein sentez mekanizması bozulunca yeni protein yapımı aksar.",
+       "ekran": "Protein sentez mekanizması bozulunca yeni protein yapımı aksar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0104",
+       "ses": "DNA ve kromatin hasarında genetik bilginin bütünlüğü bozulur.",
+       "ekran": "DNA ve kromatin hasarında genetik bilginin bütünlüğü bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0105",
+       "ses": "Sitoplazmik iskelet hasarında ise hücrenin şekli ve iç taşıma sistemi bozulur.",
+       "ekran": "Sitoplazmik iskelet hasarında ise hücrenin şekli ve iç taşıma sistemi bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0106",
+       "ses": "Temel ilke şudur: birden fazla hedef aynı anda etkilenebilir.",
+       "ekran": "Temel ilke şudur: birden fazla hedef aynı anda etkilenebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0107",
+       "ses": "Örneğin enerji kaybı zar pompalarını, zar hasarı da organel işlevini bozarak hasarı zincirleme büyütür.",
+       "ekran": "Örneğin enerji kaybı zar pompalarını, zar hasarı da organel işlevini bozarak hasarı zincirleme büyütür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b09",
+   "baslik": "Geri dönüşümlü hücre hasarı: tanım ve hücresel değişiklikler",
+   "paragraflar": [
+    {
+     "id": "k1-04-p018",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-04-c0108",
+       "ses": "Geri dönüşümlü hasar, zararlı uyarı ortadan kaldırıldığında hücrenin normale dönebildiği durumdur.",
+       "ekran": "Geri dönüşümlü hasar, zararlı uyarı ortadan kaldırıldığında hücrenin normale dönebildiği durumdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0109",
+       "ses": "Bu evrede hücrenin fonksiyonu ve morfolojisi bozulmuştur, ancak membran bütünlüğü korunmuştur; yani plazma zarı ve organel zarları yırtılmamıştır ve hücre içeriği dışarı sızmaz.",
+       "ekran": "Bu evrede hücrenin fonksiyonu ve morfolojisi bozulmuştur, ancak membran bütünlüğü korunmuştur; yani plazma zarı ve organel zarları yırtılmamıştır ve hücre içeriği dışarı sızmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0110",
+       "ses": "Burası önemli, sınav spotudur: geri dönüşümlü hasarın ayırt edici özelliği membran bütünlüğünün korunmasıdır.",
+       "ekran": "Burası önemli, sınav spotudur: geri dönüşümlü hasarın ayırt edici özelliği membran bütünlüğünün korunmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0111",
+       "ses": "Zar bütünlüğü kalıcı olarak bozulduğunda hasar geri dönüşümsüz hâle gelir.",
+       "ekran": "Zar bütünlüğü kalıcı olarak bozulduğunda hasar geri dönüşümsüz hâle gelir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p019",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-04-c0112",
+       "ses": "Geri dönüşümlü hasarla nekrozu karşılaştıran şemanın ilk yarısı, sağlıklı hücrenin geri dönüşümlü hasara uğradığında gösterdiği değişiklikleri çizer ve oklar iki yönlüdür, çünkü bu evreden iyileşme mümkündür.",
+       "ekran": "Geri dönüşümlü hasarla nekrozu karşılaştıran şemanın ilk yarısı, sağlıklı hücrenin geri dönüşümlü hasara uğradığında gösterdiği değişiklikleri çizer ve oklar iki yönlüdür, çünkü bu evreden iyileşme mümkündür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0113",
+       "ses": "Hücrenin boyutu artar, yani hücre şişer.",
+       "ekran": "Hücrenin boyutu artar, yani hücre şişer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0114",
+       "ses": "Çekirdekte kromatin kümelenir.",
+       "ekran": "Çekirdekte kromatin kümelenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0115",
+       "ses": "Endoplazmik retikulum ve mitokondriler su alarak şişer.",
+       "ekran": "Endoplazmik retikulum ve mitokondriler su alarak şişer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0116",
+       "ses": "Mitokondride küçük amorf birikintiler oluşur.",
+       "ekran": "Mitokondride küçük amorf birikintiler oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0117",
+       "ses": "Hücre yüzeyinde membran kabarcıkları belirir.",
+       "ekran": "Hücre yüzeyinde membran kabarcıkları belirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0118",
+       "ses": "Hasarlı zarlardan türeyen sarmal yapılar, yani miyelin figürleri görülür.",
+       "ekran": "Hasarlı zarlardan türeyen sarmal yapılar, yani miyelin figürleri görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0119",
+       "ses": "Sitoplazmada, endoplazmik retikulumun koparak ayrılmış parçalarından oluşan vakuoller vardır.",
+       "ekran": "Sitoplazmada, endoplazmik retikulumun koparak ayrılmış parçalarından oluşan vakuoller vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0120",
+       "ses": "Ribozomlar da endoplazmik retikulumdan ayrılır.",
+       "ekran": "Ribozomlar da endoplazmik retikulumdan ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0121",
+       "ses": "Mitokondrideki birikintilerin bu evrede küçük olması önemlidir; büyük amorf birikintiler ilerleyici hasarın işaretidir.",
+       "ekran": "Mitokondrideki birikintilerin bu evrede küçük olması önemlidir; büyük amorf birikintiler ilerleyici hasarın işaretidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p020",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-04-c0122",
+       "ses": "Şemanın ikinci yarısı şunu söyler: zararlı uyarı ortadan kaldırılmazsa geri dönüşümlü hasar ilerler ve nekrozla sonuçlanır.",
+       "ekran": "Şemanın ikinci yarısı şunu söyler: zararlı uyarı ortadan kaldırılmazsa geri dönüşümlü hasar ilerler ve nekrozla sonuçlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0123",
+       "ses": "Nekrozda plazma zarı, organeller ve çekirdek yıkılır.",
+       "ekran": "Nekrozda plazma zarı, organeller ve çekirdek yıkılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0124",
+       "ses": "Zar bütünlüğü kaybolduğu için hücre içeriği dışarı sızar.",
+       "ekran": "Zar bütünlüğü kaybolduğu için hücre içeriği dışarı sızar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0125",
+       "ses": "Mitokondride artık büyük amorf birikintiler vardır.",
+       "ekran": "Mitokondride artık büyük amorf birikintiler vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0126",
+       "ses": "Sızan içerik de çevre dokuda konağın inflamatuar yanıtını, yani konak reaksiyonunu başlatır.",
+       "ekran": "Sızan içerik de çevre dokuda konağın inflamatuar yanıtını, yani konak reaksiyonunu başlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0127",
+       "ses": "Farkı tek cümleyle söyleyelim: geri dönüşümlü hasarda zarlar sağlam, birikintiler küçük ve inflamasyon yoktur; nekrozda zarlar yıkılmış, birikintiler büyümüş ve konak reaksiyonu başlamıştır.",
+       "ekran": "Farkı tek cümleyle söyleyelim: geri dönüşümlü hasarda zarlar sağlam, birikintiler küçük ve inflamasyon yoktur; nekrozda zarlar yıkılmış, birikintiler büyümüş ve konak reaksiyonu başlamıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b10",
+   "baslik": "Elektron ve ışık mikroskobunda hasarın görüntüsü",
+   "paragraflar": [
+    {
+     "id": "k1-04-p021",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-04-c0128",
+       "ses": "Tavşan böbreğinde proksimal tübül hücrelerinin elektron mikroskobik görüntüleri hasarın evrelerini ultrastrüktürel düzeyde karşılaştırır.",
+       "ekran": "Tavşan böbreğinde proksimal tübül hücrelerinin elektron mikroskobik görüntüleri hasarın evrelerini ultrastrüktürel düzeyde karşılaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0129",
+       "ses": "Normal hücrede lümen yüzeyini bol miktarda mikrovillus kaplar ve mitokondriler düzenlidir.",
+       "ekran": "Normal hücrede lümen yüzeyini bol miktarda mikrovillus kaplar ve mitokondriler düzenlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0130",
+       "ses": "İskemiyi izleyen reperfüzyonla oluşan erken hasarda mikrovilluslar kaybolmuş ve apikal sitoplazmaya katılmıştır; kabarcıklar oluşmuş ve lümene doğru atılmıştır.",
+       "ekran": "İskemiyi izleyen reperfüzyonla oluşan erken hasarda mikrovilluslar kaybolmuş ve apikal sitoplazmaya katılmıştır; kabarcıklar oluşmuş ve lümene doğru atılmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0131",
+       "ses": "Mitokondriler iskemi sırasında şişmiş olacakken reperfüzyonla hızla yoğunlaşır ve elektron yoğun hâle gelir.",
+       "ekran": "Mitokondriler iskemi sırasında şişmiş olacakken reperfüzyonla hızla yoğunlaşır ve elektron yoğun hâle gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0132",
+       "ses": "Geri dönüşümsüz olması beklenen geç hasarda ise mitokondriler belirgin biçimde şişmiştir ve çökelmiş kalsiyum ve proteinler içeren elektron yoğun birikintiler taşır.",
+       "ekran": "Geri dönüşümsüz olması beklenen geç hasarda ise mitokondriler belirgin biçimde şişmiştir ve çökelmiş kalsiyum ve proteinler içeren elektron yoğun birikintiler taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0133",
+       "ses": "Daha yüksek büyütmede plazma zarının bozulduğu, organellerin şişip parçalandığı görülür.",
+       "ekran": "Daha yüksek büyütmede plazma zarının bozulduğu, organellerin şişip parçalandığı görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0134",
+       "ses": "Yani erken hasarın ultrastrüktürel imzası mikrovillus kaybı ve kabarcık, geç hasarınki ise kalsiyum ve protein içeren mitokondriyal birikintilerdir.",
+       "ekran": "Yani erken hasarın ultrastrüktürel imzası mikrovillus kaybı ve kabarcık, geç hasarınki ise kalsiyum ve protein içeren mitokondriyal birikintilerdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p022",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-04-c0135",
+       "ses": "Aynı süreç ışık mikroskobunda da böbrek tübüllerinde gösterilir.",
+       "ekran": "Aynı süreç ışık mikroskobunda da böbrek tübüllerinde gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0136",
+       "ses": "Normal tübüllerde canlı epitel hücreleri düzenli dizilmiştir ve çekirdekler belirgindir.",
+       "ekran": "Normal tübüllerde canlı epitel hücreleri düzenli dizilmiştir ve çekirdekler belirgindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0137",
+       "ses": "Erken, yani geri dönüşümlü iskemik hasarda yüzey kabarcıkları, sitoplazmanın artmış eozinofilisi, yani daha pembe boyanması ve bazı hücrelerde şişme görülür; ama hücreler çekirdeklerini korur.",
+       "ekran": "Erken, yani geri dönüşümlü iskemik hasarda yüzey kabarcıkları, sitoplazmanın artmış eozinofilisi, yani daha pembe boyanması ve bazı hücrelerde şişme görülür; ama hücreler çekirdeklerini korur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0138",
+       "ses": "Nekrozda, yani geri dönüşümsüz hasarda ise çekirdek kaybı, hücre parçalanması ve içerik sızıntısı vardır.",
+       "ekran": "Nekrozda, yani geri dönüşümsüz hasarda ise çekirdek kaybı, hücre parçalanması ve içerik sızıntısı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0139",
+       "ses": "Işık mikroskobunda geri dönüşümsüz hasarı ayıran en güvenilir ipucu çekirdek kaybı ve hücre parçalanmasıdır.",
+       "ekran": "Işık mikroskobunda geri dönüşümsüz hasarı ayıran en güvenilir ipucu çekirdek kaybı ve hücre parçalanmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b11",
+   "baslik": "Fonksiyon, ölüm ve morfoloji arasındaki zaman ilişkisi",
+   "paragraflar": [
+    {
+     "id": "k1-04-p023",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-04-c0140",
+       "ses": "Bir grafik, hasarın süresi uzadıkça hücrede neyin hangi sırayla değiştiğini gösterir.",
+       "ekran": "Bir grafik, hasarın süresi uzadıkça hücrede neyin hangi sırayla değiştiğini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0141",
+       "ses": "İlk ve hızla düşen parametre hücre fonksiyonudur.",
+       "ekran": "İlk ve hızla düşen parametre hücre fonksiyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0142",
+       "ses": "Hücre hasarın başlangıcından kısa süre sonra işlevsiz hâle gelebilir ama hâlâ canlıdır ve hasarı geri dönüşümlü olabilir.",
+       "ekran": "Hücre hasarın başlangıcından kısa süre sonra işlevsiz hâle gelebilir ama hâlâ canlıdır ve hasarı geri dönüşümlü olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0143",
+       "ses": "Hasar sürdükçe geri dönüşümsüzlük eşiği aşılır ve hücre ölümü gelişir.",
+       "ekran": "Hasar sürdükçe geri dönüşümsüzlük eşiği aşılır ve hücre ölümü gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0144",
+       "ses": "Ölümden sonra sırasıyla ultrastrüktürel, yani elektron mikroskobik değişiklikler, ardından ışık mikroskobik değişiklikler, en son da çıplak gözle görülen makroskopik değişiklikler belirginleşir.",
+       "ekran": "Ölümden sonra sırasıyla ultrastrüktürel, yani elektron mikroskobik değişiklikler, ardından ışık mikroskobik değişiklikler, en son da çıplak gözle görülen makroskopik değişiklikler belirginleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p024",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-04-c0145",
+       "ses": "Burası önemli, sınav spotudur: hücre ölümü tipik olarak ultrastrüktürel, ışık mikroskobik ve makroskopik morfolojik değişikliklerden önce gelir.",
+       "ekran": "Burası önemli, sınav spotudur: hücre ölümü tipik olarak ultrastrüktürel, ışık mikroskobik ve makroskopik morfolojik değişikliklerden önce gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0146",
+       "ses": "Sıra şöyledir: fonksiyon kaybı, hücre ölümü, ultrastrüktürel değişiklik, ışık mikroskobik değişiklik ve makroskopik değişiklik.",
+       "ekran": "Sıra şöyledir: fonksiyon kaybı, hücre ölümü, ultrastrüktürel değişiklik, ışık mikroskobik değişiklik ve makroskopik değişiklik.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0147",
+       "ses": "Bunun pratik sonucu şudur: çok erken dönemde ölmüş bir doku mikroskopta normal görünebilir.",
+       "ekran": "Bunun pratik sonucu şudur: çok erken dönemde ölmüş bir doku mikroskopta normal görünebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0148",
+       "ses": "Bu bölümü bağlamak için geri dönüşümlü hasarı nekrozdan ayıran 3 pratik ipucunu aklınızda tutun: zar bütünlüğünün korunmuş ya da yıkılmış olması, mitokondriyal birikintinin küçük ya da büyük olması ve çekirdeğin korunmuş ya da kaybolmuş olması.",
+       "ekran": "Bu bölümü bağlamak için geri dönüşümlü hasarı nekrozdan ayıran 3 pratik ipucunu aklınızda tutun: zar bütünlüğünün korunmuş ya da yıkılmış olması, mitokondriyal birikintinin küçük ya da büyük olması ve çekirdeğin korunmuş ya da kaybolmuş olması.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b12",
+   "baslik": "Geri dönüşümlü hasarın başlıca özellikleri ve hücresel şişme",
+   "paragraflar": [
+    {
+     "id": "k1-04-p025",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-04-c0149",
+       "ses": "Geri dönüşümlü hasarın morfolojik bulguları 7 maddede toplanır.",
+       "ekran": "Geri dönüşümlü hasarın morfolojik bulguları 7 maddede toplanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0150",
+       "ses": "Hücresel şişme, yani hidropik değişim.",
+       "ekran": "Hücresel şişme, yani hidropik değişim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0151",
+       "ses": "Yağlanma, özellikle karaciğer ve kalpte.",
+       "ekran": "Yağlanma, özellikle karaciğer ve kalpte.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0152",
+       "ses": "Plazma zarında kabarcıklanma ve mikrovillus kaybı.",
+       "ekran": "Plazma zarında kabarcıklanma ve mikrovillus kaybı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0153",
+       "ses": "Endoplazmik retikulumda dilatasyon.",
+       "ekran": "Endoplazmik retikulumda dilatasyon.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0154",
+       "ses": "Ribozomların ayrılması.",
+       "ekran": "Ribozomların ayrılması.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0155",
+       "ses": "Mitokondrilerde hafif şişme.",
+       "ekran": "Mitokondrilerde hafif şişme.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0156",
+       "ses": "Ve kromatin yoğunlaşması.",
+       "ekran": "Ve kromatin yoğunlaşması.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0157",
+       "ses": "Mitokondrideki şişmenin hafif olduğuna dikkat edin; belirgin şişme ve büyük birikintiler ilerleyici hasarı düşündürür.",
+       "ekran": "Mitokondrideki şişmenin hafif olduğuna dikkat edin; belirgin şişme ve büyük birikintiler ilerleyici hasarı düşündürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0158",
+       "ses": "Bu listedeki her bulgu zar bütünlüğü korunurken gelişir.",
+       "ekran": "Bu listedeki her bulgu zar bütünlüğü korunurken gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p026",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-04-c0159",
+       "ses": "Burası önemli, çıkmış sorularda geri dönüşümlü zedelenme bulgusu soruldu ve doğru cevap yağlı değişiklikti.",
+       "ekran": "Burası önemli, çıkmış sorularda geri dönüşümlü zedelenme bulgusu soruldu ve doğru cevap yağlı değişiklikti.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0160",
+       "ses": "Şıklarda karyoreksis, piknoz, karyolizis ve nekroz da vardı; bunların hepsi geri dönüşümsüz hasarın, yani nekrozun bulgularıdır.",
+       "ekran": "Şıklarda karyoreksis, piknoz, karyolizis ve nekroz da vardı; bunların hepsi geri dönüşümsüz hasarın, yani nekrozun bulgularıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0161",
+       "ses": "Yağlanma ise hücresel şişmeyle birlikte geri dönüşümlü hasarın 2 büyük örüntüsünden biridir.",
+       "ekran": "Yağlanma ise hücresel şişmeyle birlikte geri dönüşümlü hasarın 2 büyük örüntüsünden biridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p027",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-04-c0162",
+       "ses": "Hücresel şişme en erken geri dönüşümlü hasar bulgusudur ve mekanizması enerji eksikliğiyle başlar.",
+       "ekran": "Hücresel şişme en erken geri dönüşümlü hasar bulgusudur ve mekanizması enerji eksikliğiyle başlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0163",
+       "ses": "Hipoksi gibi etkenler hücrenin ATP üretimini azaltır.",
+       "ekran": "Hipoksi gibi etkenler hücrenin ATP üretimini azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0164",
+       "ses": "Sodyum potasyum ATPaz pompası çalışmak için ATP kullanır; ATP azalınca pompa bozulur ve sodyumu hücre dışına atamaz.",
+       "ekran": "Sodyum potasyum ATPaz pompası çalışmak için ATP kullanır; ATP azalınca pompa bozulur ve sodyumu hücre dışına atamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0165",
+       "ses": "Hücre içinde biriken sodyum suyu da beraberinde çeker ve hücre şişer.",
+       "ekran": "Hücre içinde biriken sodyum suyu da beraberinde çeker ve hücre şişer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0166",
+       "ses": "Zincirin ilk halkası ATP eksikliğidir; pompa bozulmadan şişme gelişmez.",
+       "ekran": "Zincirin ilk halkası ATP eksikliğidir; pompa bozulmadan şişme gelişmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b13",
+   "baslik": "ATP azalmasının ve iskeminin hücre içi sonuçları",
+   "paragraflar": [
+    {
+     "id": "k1-04-p028",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-04-c0167",
+       "ses": "Burası önemli, bu konu çıkmış sorularda defalarca soruldu.",
+       "ekran": "Burası önemli, bu konu çıkmış sorularda defalarca soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0168",
+       "ses": "ATP azalmasının şişme dışında başka sonuçları da vardır.",
+       "ekran": "ATP azalmasının şişme dışında başka sonuçları da vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0169",
+       "ses": "Hücre anaerobik glikolize yönelir ve glikojen depoları tükenir, yani hücre içi glikojen azalır.",
+       "ekran": "Hücre anaerobik glikolize yönelir ve glikojen depoları tükenir, yani hücre içi glikojen azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0170",
+       "ses": "Laktik asit birikir ve hücre içi pH düşer.",
+       "ekran": "Laktik asit birikir ve hücre içi pH düşer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0171",
+       "ses": "Hücre içine kalsiyum girişi artar ve sitozolik kalsiyum yükselir.",
+       "ekran": "Hücre içine kalsiyum girişi artar ve sitozolik kalsiyum yükselir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0172",
+       "ses": "Pompa durduğu için sodyum ve su hücre içine girer.",
+       "ekran": "Pompa durduğu için sodyum ve su hücre içine girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0173",
+       "ses": "Dolayısıyla iskemi sonucu hücrede sitozolik kalsiyum artışı ve hücreye su girişi gerçekleşir.",
+       "ekran": "Dolayısıyla iskemi sonucu hücrede sitozolik kalsiyum artışı ve hücreye su girişi gerçekleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p029",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-04-c0174",
+       "ses": "Sınavda sorular çoğunlukla ters kurulur, o yüzden çeldiricileri doğru biçimleriyle bilin.",
+       "ekran": "Sınavda sorular çoğunlukla ters kurulur, o yüzden çeldiricileri doğru biçimleriyle bilin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0175",
+       "ses": "Glikojen artmaz, azalır.",
+       "ekran": "Glikojen artmaz, azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0176",
+       "ses": "Hücre içi pH artmaz, düşer.",
+       "ekran": "Hücre içi pH artmaz, düşer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0177",
+       "ses": "Kalsiyum girişi azalmaz, artar.",
+       "ekran": "Kalsiyum girişi azalmaz, artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0178",
+       "ses": "Sodyum girişi azalmaz, artar.",
+       "ekran": "Sodyum girişi azalmaz, artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0179",
+       "ses": "Sodyum potasyum pompasının aktivitesi artmaz, azalır; bu nedenle potasyum hücre içine alınamaz ve hücre içi potasyum artmaz.",
+       "ekran": "Sodyum potasyum pompasının aktivitesi artmaz, azalır; bu nedenle potasyum hücre içine alınamaz ve hücre içi potasyum artmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0180",
+       "ses": "Protein sentezi de artmaz.",
+       "ekran": "Protein sentezi de artmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0181",
+       "ses": "En sık sorulan tuzak şudur: hücre dışına sodyum çıkışı ATP azalmasının sonucu değildir.",
+       "ekran": "En sık sorulan tuzak şudur: hücre dışına sodyum çıkışı ATP azalmasının sonucu değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0182",
+       "ses": "Pompa çalışmadığı için sodyum hücre dışına atılamaz ve içeride kalır.",
+       "ekran": "Pompa çalışmadığı için sodyum hücre dışına atılamaz ve içeride kalır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p030",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-04-c0183",
+       "ses": "Sitozolik kalsiyum artışının neden bu kadar önemli olduğunu da kısaca söyleyeyim.",
+       "ekran": "Sitozolik kalsiyum artışının neden bu kadar önemli olduğunu da kısaca söyleyeyim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0184",
+       "ses": "Normalde hücre içi serbest kalsiyum, hücre dışına göre çok düşük tutulur ve bu fark ATP bağımlı kalsiyum pompalarıyla korunur.",
+       "ekran": "Normalde hücre içi serbest kalsiyum, hücre dışına göre çok düşük tutulur ve bu fark ATP bağımlı kalsiyum pompalarıyla korunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0185",
+       "ses": "ATP tükenince pompalar çöker, kalsiyum sitozole dolar ve fosfolipazlar, proteazlar, endonükleazlar ve ATPazlar gibi yıkıcı enzimleri aktive eder.",
+       "ekran": "ATP tükenince pompalar çöker, kalsiyum sitozole dolar ve fosfolipazlar, proteazlar, endonükleazlar ve ATPazlar gibi yıkıcı enzimleri aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0186",
+       "ses": "Fosfolipazlar zarları, proteazlar hücre iskeletini, endonükleazlar DNA ve kromatini yıkar, ATPazlar ise kalan enerjiyi tüketir.",
+       "ekran": "Fosfolipazlar zarları, proteazlar hücre iskeletini, endonükleazlar DNA ve kromatini yıkar, ATPazlar ise kalan enerjiyi tüketir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0187",
+       "ses": "Böylece kalsiyum, hasarın geri dönüşümsüz faza geçmesinde önemli bir tetikleyici olur.",
+       "ekran": "Böylece kalsiyum, hasarın geri dönüşümsüz faza geçmesinde önemli bir tetikleyici olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b14",
+   "baslik": "Hücresel şişmenin görünümü ve yağlanma",
+   "paragraflar": [
+    {
+     "id": "k1-04-p031",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-04-c0188",
+       "ses": "Hücresel şişme hem mikroskopta hem çıplak gözle tanınabilir.",
+       "ekran": "Hücresel şişme hem mikroskopta hem çıplak gözle tanınabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0189",
+       "ses": "Işık mikroskobunda sitoplazmada berrak vakuoller görülür; bunlar endoplazmik retikulum dilatasyonuna karşılık gelir, yani genişlemiş kanallar boşluk gibi izlenir.",
+       "ekran": "Işık mikroskobunda sitoplazmada berrak vakuoller görülür; bunlar endoplazmik retikulum dilatasyonuna karşılık gelir, yani genişlemiş kanallar boşluk gibi izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0190",
+       "ses": "Birçok hücre etkilendiğinde makroskopik olarak organ soluk görünür, turgoru artmıştır, yani gergin ve dolgundur, ağırlığı da artabilir.",
+       "ekran": "Birçok hücre etkilendiğinde makroskopik olarak organ soluk görünür, turgoru artmıştır, yani gergin ve dolgundur, ağırlığı da artabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0191",
+       "ses": "Organın soluk görünmesi, şişen hücrelerin araya giren kılcalları sıkıştırmasıyla ilişkilendirilir.",
+       "ekran": "Organın soluk görünmesi, şişen hücrelerin araya giren kılcalları sıkıştırmasıyla ilişkilendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0192",
+       "ses": "Hidropik değişim geri dönüşümlü hasarın klasik örneğidir: etken kalktığında hücre fazla suyu atarak normal görünümüne döner.",
+       "ekran": "Hidropik değişim geri dönüşümlü hasarın klasik örneğidir: etken kalktığında hücre fazla suyu atarak normal görünümüne döner.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p032",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-04-c0193",
+       "ses": "Yağlanma, yani steatoz, trigliseridlerin sitoplazmik vakuollerde birikimidir.",
+       "ekran": "Yağlanma, yani steatoz, trigliseridlerin sitoplazmik vakuollerde birikimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0194",
+       "ses": "En sık karaciğer ve kalp kasında görülür.",
+       "ekran": "En sık karaciğer ve kalp kasında görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0195",
+       "ses": "Nedenleri alkol, obezite, diyabet, hipoksi ve toksinlerdir.",
+       "ekran": "Nedenleri alkol, obezite, diyabet, hipoksi ve toksinlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0196",
+       "ses": "Bu liste daha önce saydığımız neden gruplarıyla örtüşür: alkol bir yaşam tarzı toksinidir, obezite ve diyabet aşırı beslenmenin sonuçlarıdır, hipoksi ise oksijen yetersizliğidir.",
+       "ekran": "Bu liste daha önce saydığımız neden gruplarıyla örtüşür: alkol bir yaşam tarzı toksinidir, obezite ve diyabet aşırı beslenmenin sonuçlarıdır, hipoksi ise oksijen yetersizliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0197",
+       "ses": "Dikkat edin, iki vakuolü karıştırmayın: hücresel şişmedeki berrak vakuoller endoplazmik retikulum genişlemesine, yağlanmadaki vakuoller ise trigliserid birikimine karşılık gelir.",
+       "ekran": "Dikkat edin, iki vakuolü karıştırmayın: hücresel şişmedeki berrak vakuoller endoplazmik retikulum genişlemesine, yağlanmadaki vakuoller ise trigliserid birikimine karşılık gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0198",
+       "ses": "Yağlanmanın ayrıntıları karaciğer patolojisi dersinde işlenecektir.",
+       "ekran": "Yağlanmanın ayrıntıları karaciğer patolojisi dersinde işlenecektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b15",
+   "baslik": "Geri dönüşümsüz hasara geçiş",
+   "paragraflar": [
+    {
+     "id": "k1-04-p033",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-04-c0199",
+       "ses": "Stres kalıcı ya da şiddetli olursa geri dönüşümlü hasarın sınırı aşılır.",
+       "ekran": "Stres kalıcı ya da şiddetli olursa geri dönüşümlü hasarın sınırı aşılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0200",
+       "ses": "Burası önemli, sınav spotudur; geri dönüşümsüz hasarın 3 kriteri vardır.",
+       "ekran": "Burası önemli, sınav spotudur; geri dönüşümsüz hasarın 3 kriteri vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0201",
+       "ses": "1.'si mitokondriyal fonksiyonun geri kazanılamamasıdır; hücre ATP üretimini yeniden başlatamaz ve enerji krizi kalıcı hâle gelir.",
+       "ekran": "1.'si mitokondriyal fonksiyonun geri kazanılamamasıdır; hücre ATP üretimini yeniden başlatamaz ve enerji krizi kalıcı hâle gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0202",
+       "ses": "2.'si plazma ve organel zarlarında kalıcı hasardır; daha önce korunan zar bütünlüğü kaybolur ve içerik sızmaya başlar.",
+       "ekran": "2.'si plazma ve organel zarlarında kalıcı hasardır; daha önce korunan zar bütünlüğü kaybolur ve içerik sızmaya başlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0203",
+       "ses": "3.'sü DNA ve kromatin bütünlüğünün bozulmasıdır.",
+       "ekran": "3.'sü DNA ve kromatin bütünlüğünün bozulmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0204",
+       "ses": "Bu ölçütlerden biri ya da birkaçı gerçekleştiğinde süreç geri dönmez ve hücre ölümü, yani nekroz ya da apoptoz gelişir.",
+       "ekran": "Bu ölçütlerden biri ya da birkaçı gerçekleştiğinde süreç geri dönmez ve hücre ölümü, yani nekroz ya da apoptoz gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p034",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-04-c0205",
+       "ses": "Bu 3 kriterin hücresel hasarın ana hedefleriyle doğrudan örtüştüğüne dikkat edin: mitokondri, zarlar ve DNA ile kromatin.",
+       "ekran": "Bu 3 kriterin hücresel hasarın ana hedefleriyle doğrudan örtüştüğüne dikkat edin: mitokondri, zarlar ve DNA ile kromatin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0206",
+       "ses": "Aynı organel iki evrede farklı ölçütle sorgulanır: mitokondride hafif şişme geri dönüşümlü hasarı, mitokondriyal fonksiyonun geri kazanılamaması ise geri dönüşümsüz hasarı gösterir.",
+       "ekran": "Aynı organel iki evrede farklı ölçütle sorgulanır: mitokondride hafif şişme geri dönüşümlü hasarı, mitokondriyal fonksiyonun geri kazanılamaması ise geri dönüşümsüz hasarı gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b16",
+   "baslik": "Hücre ölümü tipleri: nekroz ve apoptoz",
+   "paragraflar": [
+    {
+     "id": "k1-04-p035",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-04-c0207",
+       "ses": "Geri dönüşümsüz hasar 2 ana ölüm biçimine yol açar.",
+       "ekran": "Geri dönüşümsüz hasar 2 ana ölüm biçimine yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0208",
+       "ses": "Nekroz kazara hücre ölümüdür; şiddetli enerji yetersizliği ya da toksik hasar sonucunda gelişir ve her zaman patolojiktir.",
+       "ekran": "Nekroz kazara hücre ölümüdür; şiddetli enerji yetersizliği ya da toksik hasar sonucunda gelişir ve her zaman patolojiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0209",
+       "ses": "Apoptoz ise programlı, düzenlenmiş hücre ölümüdür ve fizyolojik ya da patolojik olabilir.",
+       "ekran": "Apoptoz ise programlı, düzenlenmiş hücre ölümüdür ve fizyolojik ya da patolojik olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0210",
+       "ses": "Morfolojik fark da önemlidir: apoptozda hücre küçülür, zar bütünlüğü korunur ve içerik sızmadığı için inflamasyon gelişmez; nekrozda ise zarlar yıkılır ve inflamasyon gelişir.",
+       "ekran": "Morfolojik fark da önemlidir: apoptozda hücre küçülür, zar bütünlüğü korunur ve içerik sızmadığı için inflamasyon gelişmez; nekrozda ise zarlar yıkılır ve inflamasyon gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0211",
+       "ses": "Bunların dışında nekroptoz, piroptoz ve ferroptoz gibi diğer ölüm tipleri de vardır; bunlar ileri derslerde kısaca işlenecektir.",
+       "ekran": "Bunların dışında nekroptoz, piroptoz ve ferroptoz gibi diğer ölüm tipleri de vardır; bunlar ileri derslerde kısaca işlenecektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p036",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-04-c0212",
+       "ses": "Burası önemli, bu ayrım hem sınav spotu hem de çıkmış soru konusudur.",
+       "ekran": "Burası önemli, bu ayrım hem sınav spotu hem de çıkmış soru konusudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0213",
+       "ses": "Her zaman patolojik ifadesi yalnız nekroz için geçerlidir; fizyolojik olabilen yalnız apoptozdur.",
+       "ekran": "Her zaman patolojik ifadesi yalnız nekroz için geçerlidir; fizyolojik olabilen yalnız apoptozdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0214",
+       "ses": "Çıkmış bir soruda akut miyokard enfarktüsü geçiren bir hastanın kalp kasında, kanlanması bozulan bölgedeki hücrelerin geri dönüşümsüz olarak öldüğü ve çevrelerinde iltihabi yanıt geliştiği anlatıldı; bu hücre ölümünün adı nekrozdur.",
+       "ekran": "Çıkmış bir soruda akut miyokard enfarktüsü geçiren bir hastanın kalp kasında, kanlanması bozulan bölgedeki hücrelerin geri dönüşümsüz olarak öldüğü ve çevrelerinde iltihabi yanıt geliştiği anlatıldı; bu hücre ölümünün adı nekrozdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0215",
+       "ses": "Apoptoz inflamasyon yapmaz, otoliz ve inflamasyon ise bu ölümün adı değildir.",
+       "ekran": "Apoptoz inflamasyon yapmaz, otoliz ve inflamasyon ise bu ölümün adı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p037",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-04-c0216",
+       "ses": "Burası önemli, nekrozun tanımı da çıkmış sorularda soruldu: nekroz, hücre ölümünden sonra canlı dokuda oluşan değişikliklerdir.",
+       "ekran": "Burası önemli, nekrozun tanımı da çıkmış sorularda soruldu: nekroz, hücre ölümünden sonra canlı dokuda oluşan değişikliklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0217",
+       "ses": "Yani nekroz terimi canlı bir organizmadaki ölü hücre ve dokunun gösterdiği değişiklikleri anlatır.",
+       "ekran": "Yani nekroz terimi canlı bir organizmadaki ölü hücre ve dokunun gösterdiği değişiklikleri anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0218",
+       "ses": "Sadece doku ölümü ya da sadece hücre ölümü demek eksik kalır; programlanmış hücre ölümü apoptozdur, strese karşı geri dönüşümlü uyum ise adaptasyondur.",
+       "ekran": "Sadece doku ölümü ya da sadece hücre ölümü demek eksik kalır; programlanmış hücre ölümü apoptozdur, strese karşı geri dönüşümlü uyum ise adaptasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0219",
+       "ses": "Ölümden sonra tüm bedende gelişen erime ise nekroz değil, postmortem otoliz olarak adlandırılır.",
+       "ekran": "Ölümden sonra tüm bedende gelişen erime ise nekroz değil, postmortem otoliz olarak adlandırılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b17",
+   "baslik": "Nekrozun temel özellikleri ve sitoplazmik değişiklikler",
+   "paragraflar": [
+    {
+     "id": "k1-04-p038",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-04-c0220",
+       "ses": "Nekrozun 4 temel özelliği vardır ve her biri bir öncekinin sonucudur.",
+       "ekran": "Nekrozun 4 temel özelliği vardır ve her biri bir öncekinin sonucudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0221",
+       "ses": "Hücre ve organel zarları parçalanır.",
+       "ekran": "Hücre ve organel zarları parçalanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0222",
+       "ses": "Bunun sonucunda hücresel içerik dışarı sızar.",
+       "ekran": "Bunun sonucunda hücresel içerik dışarı sızar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0223",
+       "ses": "Sızan içerik çevre dokuda inflamatuar yanıt oluşturur.",
+       "ekran": "Sızan içerik çevre dokuda inflamatuar yanıt oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0224",
+       "ses": "Son olarak enzimler ölü hücreleri sindirir.",
+       "ekran": "Son olarak enzimler ölü hücreleri sindirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0225",
+       "ses": "Bu enzimler 2 kaynaktan gelir: ölen hücrenin kendi lizozomlarından ve inflamasyonla bölgeye gelen lökositlerden.",
+       "ekran": "Bu enzimler 2 kaynaktan gelir: ölen hücrenin kendi lizozomlarından ve inflamasyonla bölgeye gelen lökositlerden.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0226",
+       "ses": "Bu 2 kaynak ayrımı, birazdan göreceğimiz nekroz kalıplarının mantığını belirler.",
+       "ekran": "Bu 2 kaynak ayrımı, birazdan göreceğimiz nekroz kalıplarının mantığını belirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p039",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-04-c0227",
+       "ses": "Nekrotik hücrenin sitoplazması ışık mikroskobunda belirgin biçimde değişir.",
+       "ekran": "Nekrotik hücrenin sitoplazması ışık mikroskobunda belirgin biçimde değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0228",
+       "ses": "İlk bulgu artmış eozinofilidir, yani daha pembe boyanma.",
+       "ekran": "İlk bulgu artmış eozinofilidir, yani daha pembe boyanma.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0229",
+       "ses": "Burası önemli, 2 mekanizması sık sorulur: denatüre proteinlere eozin bağlanması ve RNA kaybına bağlı bazofili azalması.",
+       "ekran": "Burası önemli, 2 mekanizması sık sorulur: denatüre proteinlere eozin bağlanması ve RNA kaybına bağlı bazofili azalması.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0230",
+       "ses": "Mavi bileşen çekildikçe pembe renk baskınlaşır.",
+       "ekran": "Mavi bileşen çekildikçe pembe renk baskınlaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0231",
+       "ses": "İkinci bulgu camsı, homojen görünümdür; sitoplazma düz ve cam gibi yeknesak görünür.",
+       "ekran": "İkinci bulgu camsı, homojen görünümdür; sitoplazma düz ve cam gibi yeknesak görünür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0232",
+       "ses": "Bunun nedenleri glikojen kaybı ve protein denatürasyonudur.",
+       "ekran": "Bunun nedenleri glikojen kaybı ve protein denatürasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0233",
+       "ses": "Artmış eozinofili erken hasarda da görülebiliyordu; nekrozda bu değişiklik belirginleşir.",
+       "ekran": "Artmış eozinofili erken hasarda da görülebiliyordu; nekrozda bu değişiklik belirginleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0234",
+       "ses": "Üçüncü bulgu sitoplazmada vakuolizasyondur; sitoplazma boşluklu, delik deşik görünür.",
+       "ekran": "Üçüncü bulgu sitoplazmada vakuolizasyondur; sitoplazma boşluklu, delik deşik görünür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p040",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-04-c0235",
+       "ses": "Elektron mikroskobunda nekrozda plazma ve organel zarlarında süreksizlikler, mitokondrilerde belirgin şişme ve amorf yoğunluklar, lizozom rüptürü ve miyelin figürleri görülür.",
+       "ekran": "Elektron mikroskobunda nekrozda plazma ve organel zarlarında süreksizlikler, mitokondrilerde belirgin şişme ve amorf yoğunluklar, lizozom rüptürü ve miyelin figürleri görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0236",
+       "ses": "Lizozomlar yırtılınca sindirim enzimleri sitoplazmaya dökülür; bu da enzimatik sindirimin hücre içindeki başlangıç noktasıdır.",
+       "ekran": "Lizozomlar yırtılınca sindirim enzimleri sitoplazmaya dökülür; bu da enzimatik sindirimin hücre içindeki başlangıç noktasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0237",
+       "ses": "Miyelin figürleri geri dönüşümlü hasarda da görülebilir, ancak nekrozda zar yıkımı arttıkça daha belirgin hâle gelir.",
+       "ekran": "Miyelin figürleri geri dönüşümlü hasarda da görülebilir, ancak nekrozda zar yıkımı arttıkça daha belirgin hâle gelir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b18",
+   "baslik": "Nekrozda nükleer değişiklikler ve nekrotik hücrenin akıbeti",
+   "paragraflar": [
+    {
+     "id": "k1-04-p041",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-04-c0238",
+       "ses": "Nekrozda DNA ve kromatin parçalanır ve çekirdekte 3 temel görüntü ortaya çıkar.",
+       "ekran": "Nekrozda DNA ve kromatin parçalanır ve çekirdekte 3 temel görüntü ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0239",
+       "ses": "Piknozda çekirdek büzülür ve bazofilisi artar; küçük, koyu mavi bir nokta gibi görünür.",
+       "ekran": "Piknozda çekirdek büzülür ve bazofilisi artar; küçük, koyu mavi bir nokta gibi görünür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0240",
+       "ses": "Karyoreksiste piknotik çekirdek parçalanır ve çekirdek parçaları sitoplazmaya dağılır.",
+       "ekran": "Karyoreksiste piknotik çekirdek parçalanır ve çekirdek parçaları sitoplazmaya dağılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0241",
+       "ses": "Karyolizis ise bazofilinin kaybı, yani çekirdeğin solmasıdır; DNA enzimatik olarak yıkıldığı için çekirdek giderek silikleşir.",
+       "ekran": "Karyolizis ise bazofilinin kaybı, yani çekirdeğin solmasıdır; DNA enzimatik olarak yıkıldığı için çekirdek giderek silikleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0242",
+       "ses": "1 ile 2 gün içinde çekirdek tamamen kaybolabilir.",
+       "ekran": "1 ile 2 gün içinde çekirdek tamamen kaybolabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0243",
+       "ses": "Burası önemli, sınav spotudur: piknoz büzülme, karyoreksis parçalanma, karyolizis solmadır ve üçü de nekrozun bulgusudur.",
+       "ekran": "Burası önemli, sınav spotudur: piknoz büzülme, karyoreksis parçalanma, karyolizis solmadır ve üçü de nekrozun bulgusudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0244",
+       "ses": "Geri dönüşümlü hasarda çekirdek yalnız kromatin yoğunlaşması gösterir; bu yüzden nükleer değişiklikler nekrozun en güvenilir ışık mikroskobik işaretidir.",
+       "ekran": "Geri dönüşümlü hasarda çekirdek yalnız kromatin yoğunlaşması gösterir; bu yüzden nükleer değişiklikler nekrozun en güvenilir ışık mikroskobik işaretidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p042",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-04-c0245",
+       "ses": "Nekrotik hücrenin akıbetine gelince, hücre içi enzimler ve lökosit enzimleri ölü hücreleri sindirir ve kalıntılar zamanla temizlenir.",
+       "ekran": "Nekrotik hücrenin akıbetine gelince, hücre içi enzimler ve lökosit enzimleri ölü hücreleri sindirir ve kalıntılar zamanla temizlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0246",
+       "ses": "Miyelin figürleri hücre zarı fosfolipidlerinden türeyen oluşumlardır; ölü hücrelerde ya fagosite edilir ya da yağ asitlerine yıkılır.",
+       "ekran": "Miyelin figürleri hücre zarı fosfolipidlerinden türeyen oluşumlardır; ölü hücrelerde ya fagosite edilir ya da yağ asitlerine yıkılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0247",
+       "ses": "Son olarak kalsifikasyon gelişebilir: yağ asitleri kalsiyumla birleşebilir ve zamanla distrofik kalsifikasyon ortaya çıkar.",
+       "ekran": "Son olarak kalsifikasyon gelişebilir: yağ asitleri kalsiyumla birleşebilir ve zamanla distrofik kalsifikasyon ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0248",
+       "ses": "Distrofik nitelemesi, kalsiyum birikiminin ölü ya da hasarlı dokuda gerçekleştiğini anlatır.",
+       "ekran": "Distrofik nitelemesi, kalsiyum birikiminin ölü ya da hasarlı dokuda gerçekleştiğini anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0249",
+       "ses": "Bu basamak, nekrotik dokunun yıllar sonra bile kireçlenmiş görünebilmesini açıklar; ayrıntıları hücre içi birikimler dersinde işlenecektir.",
+       "ekran": "Bu basamak, nekrotik dokunun yıllar sonra bile kireçlenmiş görünebilmesini açıklar; ayrıntıları hücre içi birikimler dersinde işlenecektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b19",
+   "baslik": "Doku nekrozu kalıpları ve koagülatif nekroz",
+   "paragraflar": [
+    {
+     "id": "k1-04-p043",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-04-c0250",
+       "ses": "Ciddi yaralanmalarda yalnız tek tek hücreler değil, tüm doku ya da organ segmenti nekroza gidebilir.",
+       "ekran": "Ciddi yaralanmalarda yalnız tek tek hücreler değil, tüm doku ya da organ segmenti nekroza gidebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0251",
+       "ses": "Patolog bu durumda nekrozu dokunun makroskopik ve mikroskobik görünümüne göre adlandırır; kalıp, nekrozun nedenini ve mekanizmasını düşündürdüğü için tanısal değer taşır.",
+       "ekran": "Patolog bu durumda nekrozu dokunun makroskopik ve mikroskobik görünümüne göre adlandırır; kalıp, nekrozun nedenini ve mekanizmasını düşündürdüğü için tanısal değer taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0252",
+       "ses": "Başlıca kalıplar koagülatif nekroz, sıvılaşma yani likefaksiyon nekrozu, gangrenöz nekroz, kazeöz nekroz, yağ nekrozu ve fibrinoid nekrozdur.",
+       "ekran": "Başlıca kalıplar koagülatif nekroz, sıvılaşma yani likefaksiyon nekrozu, gangrenöz nekroz, kazeöz nekroz, yağ nekrozu ve fibrinoid nekrozdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0253",
+       "ses": "Bunlar ayrı hastalıklar değil, nekrozun dokuda aldığı farklı görünümlerdir.",
+       "ekran": "Bunlar ayrı hastalıklar değil, nekrozun dokuda aldığı farklı görünümlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0254",
+       "ses": "Bu derste ilk 3'ünü ayrıntılı işliyoruz.",
+       "ekran": "Bu derste ilk 3'ünü ayrıntılı işliyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p044",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-04-c0255",
+       "ses": "Burası önemli, çıkmış sorularda defalarca soruldu: en sık görülen nekroz tipi koagülatif, yani koagülasyon nekrozudur.",
+       "ekran": "Burası önemli, çıkmış sorularda defalarca soruldu: en sık görülen nekroz tipi koagülatif, yani koagülasyon nekrozudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0256",
+       "ses": "Kazeöz, fibrinoid, yağ ve likefaksiyon nekrozu bu sorunun çeldiricileridir.",
+       "ekran": "Kazeöz, fibrinoid, yağ ve likefaksiyon nekrozu bu sorunun çeldiricileridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0257",
+       "ses": "Koagülatif nekrozun ayırt edici özelliği, doku mimarisinin birkaç gün korunmasıdır; hücreler ölmüş olsa da dokunun genel yapısı ve hücre sınırları seçilebilir.",
+       "ekran": "Koagülatif nekrozun ayırt edici özelliği, doku mimarisinin birkaç gün korunmasıdır; hücreler ölmüş olsa da dokunun genel yapısı ve hücre sınırları seçilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0258",
+       "ses": "Makroskopik olarak doku sert, soluk ve kuru görünür.",
+       "ekran": "Makroskopik olarak doku sert, soluk ve kuru görünür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0259",
+       "ses": "Mekanizması şöyledir: yapısal proteinler ile enzimler birlikte denatüre olur.",
+       "ekran": "Mekanizması şöyledir: yapısal proteinler ile enzimler birlikte denatüre olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0260",
+       "ses": "Enzimler de denatüre olduğu için proteoliz gecikir ve ölü hücreler hemen sindirilemez.",
+       "ekran": "Enzimler de denatüre olduğu için proteoliz gecikir ve ölü hücreler hemen sindirilemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0261",
+       "ses": "Yani dokuyu eritecek enzimler de işlevini yitirmiştir ve mimari bu yüzden korunur.",
+       "ekran": "Yani dokuyu eritecek enzimler de işlevini yitirmiştir ve mimari bu yüzden korunur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p045",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-04-c0262",
+       "ses": "Bir böbrek enfarktüsü koagülatif nekrozu güzel gösterir.",
+       "ekran": "Bir böbrek enfarktüsü koagülatif nekrozu güzel gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0263",
+       "ses": "Makroskopik olarak böbrek kesitinde belirgin kenarlı, kama şeklinde, sarı soluk renkli bir enfarkt alanı vardır; çevredeki normal parankimden keskin bir sınırla ayrılır ve kamanın tabanı organ yüzeyine bakar.",
+       "ekran": "Makroskopik olarak böbrek kesitinde belirgin kenarlı, kama şeklinde, sarı soluk renkli bir enfarkt alanı vardır; çevredeki normal parankimden keskin bir sınırla ayrılır ve kamanın tabanı organ yüzeyine bakar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0264",
+       "ses": "Mikroskopta enfarktın kenarında normal böbrek ile enfarkt içindeki nekrotik hücreler yan yana izlenir.",
+       "ekran": "Mikroskopta enfarktın kenarında normal böbrek ile enfarkt içindeki nekrotik hücreler yan yana izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0265",
+       "ses": "Nekrotik hücreler çekirdek kaybıyla birlikte korunmuş konturlar gösterir; tübüllerin ve hücrelerin dış hatları seçilir ama çekirdekler görülmez.",
+       "ekran": "Nekrotik hücreler çekirdek kaybıyla birlikte korunmuş konturlar gösterir; tübüllerin ve hücrelerin dış hatları seçilir ama çekirdekler görülmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0266",
+       "ses": "Bölgede inflamatuar bir infiltrasyon da vardır, ancak bu büyütmede ayırt etmek zordur.",
+       "ekran": "Bölgede inflamatuar bir infiltrasyon da vardır, ancak bu büyütmede ayırt etmek zordur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0267",
+       "ses": "Korunmuş kontur ile çekirdek kaybı birlikteliği koagülatif nekrozun mikroskobik imzasıdır.",
+       "ekran": "Korunmuş kontur ile çekirdek kaybı birlikteliği koagülatif nekrozun mikroskobik imzasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b20",
+   "baslik": "Koagülatif nekrozun klinik önemi ve beyin istisnası",
+   "paragraflar": [
+    {
+     "id": "k1-04-p046",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-04-c0268",
+       "ses": "Koagülatif nekroz iskemiye bağlı enfarktların tipik nekrozudur; tipik organlar kalp, böbrek ve dalaktır.",
+       "ekran": "Koagülatif nekroz iskemiye bağlı enfarktların tipik nekrozudur; tipik organlar kalp, böbrek ve dalaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0269",
+       "ses": "Zamanla nekrotik alanda lökositler birikir, enzimler ölü hücreleri sindirir ve makrofajlar kalıntıları temizler.",
+       "ekran": "Zamanla nekrotik alanda lökositler birikir, enzimler ölü hücreleri sindirir ve makrofajlar kalıntıları temizler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0270",
+       "ses": "Yani korunan mimari kalıcı değildir; proteoliz gecikse de sonunda gelen lökositlerin enzimleriyle ölü doku sindirilir.",
+       "ekran": "Yani korunan mimari kalıcı değildir; proteoliz gecikse de sonunda gelen lökositlerin enzimleriyle ölü doku sindirilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p047",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-04-c0271",
+       "ses": "Burası önemli, sınav spotu ve çıkmış soru: bu kuralın büyük istisnası beyindir.",
+       "ekran": "Burası önemli, sınav spotu ve çıkmış soru: bu kuralın büyük istisnası beyindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0272",
+       "ses": "Beyin infarktlarında koagülatif değil, sıvılaşma nekrozu görülür.",
+       "ekran": "Beyin infarktlarında koagülatif değil, sıvılaşma nekrozu görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0273",
+       "ses": "Beyinde iskemi sonucu hangi tip nekroz oluştuğu sorulduğunda cevap likefaksiyon nekrozudur.",
+       "ekran": "Beyinde iskemi sonucu hangi tip nekroz oluştuğu sorulduğunda cevap likefaksiyon nekrozudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0274",
+       "ses": "Kural şöyle özetlenir: kalp, böbrek ve dalak iskemisi koagülatif nekroz, beyin iskemisi ise sıvılaşma nekrozu yapar.",
+       "ekran": "Kural şöyle özetlenir: kalp, böbrek ve dalak iskemisi koagülatif nekroz, beyin iskemisi ise sıvılaşma nekrozu yapar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b21",
+   "baslik": "Sıvılaşma nekrozu, püy ve apse",
+   "paragraflar": [
+    {
+     "id": "k1-04-p048",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-04-c0275",
+       "ses": "Sıvılaşma nekrozunda ölü doku korunmaz; tersine tamamen erir ve viskoz bir sıvıya döner.",
+       "ekran": "Sıvılaşma nekrozunda ölü doku korunmaz; tersine tamamen erir ve viskoz bir sıvıya döner.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0276",
+       "ses": "2 nedeni vardır: püy oluşturan bakteri ve mantar enfeksiyonları ile beyin infarktları, yani hipoksik ölüm.",
+       "ekran": "2 nedeni vardır: püy oluşturan bakteri ve mantar enfeksiyonları ile beyin infarktları, yani hipoksik ölüm.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0277",
+       "ses": "Mekanizmada lökosit enzimleri ve mikrobiyal enzimler dokuyu sıvılaştırır; enzimatik sindirim protein denatürasyonuna baskın gelir.",
+       "ekran": "Mekanizmada lökosit enzimleri ve mikrobiyal enzimler dokuyu sıvılaştırır; enzimatik sindirim protein denatürasyonuna baskın gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0278",
+       "ses": "Koagülatif nekrozla karşıtlığı tam burada: koagülatif nekrozda enzimler de denatüre olduğu için sindirim gecikir ve mimari korunur; sıvılaşma nekrozunda ise güçlü enzim aktivitesi dokuyu hızla eritir.",
+       "ekran": "Koagülatif nekrozla karşıtlığı tam burada: koagülatif nekrozda enzimler de denatüre olduğu için sindirim gecikir ve mimari korunur; sıvılaşma nekrozunda ise güçlü enzim aktivitesi dokuyu hızla eritir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p049",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-04-c0279",
+       "ses": "Klinik karşılıklara bakalım.",
+       "ekran": "Klinik karşılıklara bakalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0280",
+       "ses": "Püy, yani irin, sıvılaşma nekrozunun ürünü olan sarı krem renkli nekrotik materyaldir.",
+       "ekran": "Püy, yani irin, sıvılaşma nekrozunun ürünü olan sarı krem renkli nekrotik materyaldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0281",
+       "ses": "Püyün dokuda lokalize birikimine apse denir.",
+       "ekran": "Püyün dokuda lokalize birikimine apse denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0282",
+       "ses": "Beyin enfarktında ise kesitte normal gri ve beyaz cevher düzeninin kaybolduğu, yumuşamış, dağılmış ve kısmen boşluklaşmış bir alan izlenir; beyinde doku çözünmesi sıvılaşma nekrozunun makroskopik imzasıdır.",
+       "ekran": "Beyin enfarktında ise kesitte normal gri ve beyaz cevher düzeninin kaybolduğu, yumuşamış, dağılmış ve kısmen boşluklaşmış bir alan izlenir; beyinde doku çözünmesi sıvılaşma nekrozunun makroskopik imzasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0283",
+       "ses": "Bu görünüm, keskin sınırlı, sert ve kuru kama şekilli böbrek enfarktıyla belirgin bir karşıtlık oluşturur.",
+       "ekran": "Bu görünüm, keskin sınırlı, sert ve kuru kama şekilli böbrek enfarktıyla belirgin bir karşıtlık oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0284",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda tekrar tekrar soruldu: apseler ve beyin infarktüsü likefaksiyon, yani sıvılaşma nekrozuna örnektir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda tekrar tekrar soruldu: apseler ve beyin infarktüsü likefaksiyon, yani sıvılaşma nekrozuna örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0285",
+       "ses": "Kazeöz, fibrinoid, yağ ve koagülasyon nekrozu bu sorunun çeldiricileridir.",
+       "ekran": "Kazeöz, fibrinoid, yağ ve koagülasyon nekrozu bu sorunun çeldiricileridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b22",
+   "baslik": "Gangrenöz nekroz ve gazlı gangren",
+   "paragraflar": [
+    {
+     "id": "k1-04-p050",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-04-c0286",
+       "ses": "Gangrenöz nekroz ötekilerden farklıdır: klasik histolojik bir tip değil, klinik bir terimdir.",
+       "ekran": "Gangrenöz nekroz ötekilerden farklıdır: klasik histolojik bir tip değil, klinik bir terimdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0287",
+       "ses": "Burası önemli, sınav spotudur.",
+       "ekran": "Burası önemli, sınav spotudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0288",
+       "ses": "Genellikle alt ekstremitede ve kan akımının kesildiği alanlarda görülür.",
+       "ekran": "Genellikle alt ekstremitede ve kan akımının kesildiği alanlarda görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0289",
+       "ses": "Temel olarak geniş bir koagülatif nekroz alanını tanımlar; yani altta yatan doku değişikliği iskemiye bağlı koagülatif nekrozdur.",
+       "ekran": "Temel olarak geniş bir koagülatif nekroz alanını tanımlar; yani altta yatan doku değişikliği iskemiye bağlı koagülatif nekrozdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0290",
+       "ses": "Enfeksiyon eklenmemiş ve koagülatif nekrozun baskın olduğu tablo klinikte kuru gangren olarak anılır.",
+       "ekran": "Enfeksiyon eklenmemiş ve koagülatif nekrozun baskın olduğu tablo klinikte kuru gangren olarak anılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0291",
+       "ses": "Enfeksiyon eklendiğinde ise bakterilerin ve lökositlerin enzimleri ikincil sıvılaşmaya yol açar; bu tabloya ıslak gangren denir.",
+       "ekran": "Enfeksiyon eklendiğinde ise bakterilerin ve lökositlerin enzimleri ikincil sıvılaşmaya yol açar; bu tabloya ıslak gangren denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0292",
+       "ses": "Böylece gangren, aynı dokuda iki kalıbın üst üste binebildiğini gösterir: zemin koagülatif nekroz, üzerine eklenen enfeksiyon ise sıvılaşmadır.",
+       "ekran": "Böylece gangren, aynı dokuda iki kalıbın üst üste binebildiğini gösterir: zemin koagülatif nekroz, üzerine eklenen enfeksiyon ise sıvılaşmadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p051",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-04-c0293",
+       "ses": "Gangrenin özel bir biçimi gazlı gangrendir ve bu konu çıkmış sorularda soruldu.",
+       "ekran": "Gangrenin özel bir biçimi gazlı gangrendir ve bu konu çıkmış sorularda soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0294",
+       "ses": "Burası önemli, gazlı gangrenin etkeni Clostridium türleridir ve en sık etken Clostridium perfringens'tir.",
+       "ekran": "Burası önemli, gazlı gangrenin etkeni Clostridium türleridir ve en sık etken Clostridium perfringens'tir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0295",
+       "ses": "Clostridium tetani, botulinum ve difficile ile Corynebacterium diphtheriae bu sorunun çeldiricileridir.",
+       "ekran": "Clostridium tetani, botulinum ve difficile ile Corynebacterium diphtheriae bu sorunun çeldiricileridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0296",
+       "ses": "Bakterinin alfa toksini, yani lesitinaz, hücre zarlarındaki lesitini yıkarak kas nekrozuna yol açar.",
+       "ekran": "Bakterinin alfa toksini, yani lesitinaz, hücre zarlarındaki lesitini yıkarak kas nekrozuna yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0297",
+       "ses": "Bakteriler dokuda gaz üretir ve cilt altında krepitasyon, yani çıtırtı hissi alınabilir.",
+       "ekran": "Bakteriler dokuda gaz üretir ve cilt altında krepitasyon, yani çıtırtı hissi alınabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0298",
+       "ses": "Tablo travmatik nedenlere bağlı olabileceği gibi spontan da görülebilir.",
+       "ekran": "Tablo travmatik nedenlere bağlı olabileceği gibi spontan da görülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-04-p052",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-04-c0299",
+       "ses": "Burası önemli, gazlı gangrenin kliniğinde başlangıçta ciltte eritem ve ödem vardır; 24 ile 72 saatte bül ve renk değişikliği gelişir; cilt altı krepitasyon saptanabilir ve tablo sepsis ve çoklu organ yetmezliğiyle sonuçlanabilir.",
+       "ekran": "Burası önemli, gazlı gangrenin kliniğinde başlangıçta ciltte eritem ve ödem vardır; 24 ile 72 saatte bül ve renk değişikliği gelişir; cilt altı krepitasyon saptanabilir ve tablo sepsis ve çoklu organ yetmezliğiyle sonuçlanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0300",
+       "ses": "Erken dönemde ağrının görülmediği ifadesi yanlıştır; ağrı erken dönemde de vardır.",
+       "ekran": "Erken dönemde ağrının görülmediği ifadesi yanlıştır; ağrı erken dönemde de vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0301",
+       "ses": "Tedavide erken tanı ve tedavi hayat kurtarıcıdır ve nekrotik dokunun cerrahi debridmanı gereklidir.",
+       "ekran": "Tedavide erken tanı ve tedavi hayat kurtarıcıdır ve nekrotik dokunun cerrahi debridmanı gereklidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0302",
+       "ses": "Tedavide primer olarak karbapenem tercih edildiği ifadesi ise yanlıştır.",
+       "ekran": "Tedavide primer olarak karbapenem tercih edildiği ifadesi ise yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-04-b23",
+   "baslik": "Özetle",
+   "paragraflar": [
+    {
+     "id": "k1-04-p053",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-04-c0303",
+       "ses": "Özetle, hücre hasarı homeostazın kaybıdır ve 7 neden grubundan kaynaklanır.",
+       "ekran": "Özetle, hücre hasarı homeostazın kaybıdır ve 7 neden grubundan kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0304",
+       "ses": "Geri dönüşümlü hasarda zar bütünlüğü korunur; en erken bulgu hücresel şişme, diğer büyük örüntü yağlanmadır.",
+       "ekran": "Geri dönüşümlü hasarda zar bütünlüğü korunur; en erken bulgu hücresel şişme, diğer büyük örüntü yağlanmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0305",
+       "ses": "Mitokondriyal fonksiyon kaybı, kalıcı zar hasarı ve DNA bozulması geri dönüşümsüzlüğü gösterir.",
+       "ekran": "Mitokondriyal fonksiyon kaybı, kalıcı zar hasarı ve DNA bozulması geri dönüşümsüzlüğü gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0306",
+       "ses": "Nekroz kazara ve her zaman patolojiktir; çekirdekte piknoz, karyoreksis ve karyolizis görülür.",
+       "ekran": "Nekroz kazara ve her zaman patolojiktir; çekirdekte piknoz, karyoreksis ve karyolizis görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-04-c0307",
+       "ses": "Koagülatif nekroz en sık tiptir ve mimariyi korur, sıvılaşma nekrozu apse ve beyin infarktında dokuyu eritir, gangren ise koagülatif zemin üzerine enfeksiyonla sıvılaşmanın eklenebildiği klinik bir terimdir.",
+       "ekran": "Koagülatif nekroz en sık tiptir ve mimariyi korur, sıvılaşma nekrozu apse ve beyin infarktında dokuyu eritir, gangren ise koagülatif zemin üzerine enfeksiyonla sıvılaşmanın eklenebildiği klinik bir terimdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

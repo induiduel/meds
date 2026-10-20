@@ -1,0 +1,3106 @@
+{
+ "surum": 2,
+ "ders_id": "k1-60",
+ "anahtar": "k1-60-preimplantasyon-genetik-tani-pgt",
+ "baslik": "Preimplantasyon Genetik Tanı",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-60-b01",
+   "baslik": "Tanım ve temel özellikler",
+   "paragraflar": [
+    {
+     "id": "k1-60-p001",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-60-c0001",
+       "ses": "Preimplantasyon genetik tanı, kısaca PGD, yardımlı üreme tekniğiyle elde edilen embriyoların laboratuvar ortamında teste tabi tutulması, sağlıklı olanlarının tespit edilmesi ve yalnızca bunların anneye transfer edilmesi işlemidir.",
+       "ekran": "Preimplantasyon genetik tanı, kısaca PGD, yardımlı üreme tekniğiyle elde edilen embriyoların laboratuvar ortamında teste tabi tutulması, sağlıklı olanlarının tespit edilmesi ve yalnızca bunların anneye transfer edilmesi işlemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0002",
+       "ses": "Yani genetik tanı, gebelik başlamadan önce embriyo düzeyine taşınır.",
+       "ekran": "Yani genetik tanı, gebelik başlamadan önce embriyo düzeyine taşınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0003",
+       "ses": "Bu nedenle PGD her zaman bir tüp bebek döngüsünün parçasıdır; embriyo vücut dışında elde edilmeden test yapılamaz.",
+       "ekran": "Bu nedenle PGD her zaman bir tüp bebek döngüsünün parçasıdır; embriyo vücut dışında elde edilmeden test yapılamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0004",
+       "ses": "Şunu da baştan söyleyelim: PGD bir tedavi değil, bir seçim yöntemidir.",
+       "ekran": "Şunu da baştan söyleyelim: PGD bir tedavi değil, bir seçim yöntemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0005",
+       "ses": "Hastalıklı embriyoyu iyileştirmez, onun transfer edilmesini önler.",
+       "ekran": "Hastalıklı embriyoyu iyileştirmez, onun transfer edilmesini önler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p002",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-60-c0006",
+       "ses": "Bu işlemin kendine özgü zorlukları vardır.",
+       "ekran": "Bu işlemin kendine özgü zorlukları vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0007",
+       "ses": "1.'si, farklı disiplinlerin, yani kadın doğum kliniğinin, embriyoloji laboratuvarının ve genetik laboratuvarının birlikte ve koordineli çalışması gerekir.",
+       "ekran": "1.'si, farklı disiplinlerin, yani kadın doğum kliniğinin, embriyoloji laboratuvarının ve genetik laboratuvarının birlikte ve koordineli çalışması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0008",
+       "ses": "2.'si, elimizdeki genetik materyal minimaldir; tanı tek bir hücreden ya da birkaç hücreden konur ve bütün embriyonun genotipi bu küçük örnekten çıkarılır.",
+       "ekran": "2.'si, elimizdeki genetik materyal minimaldir; tanı tek bir hücreden ya da birkaç hücreden konur ve bütün embriyonun genotipi bu küçük örnekten çıkarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0009",
+       "ses": "3.'sü, testlerin kısa ve sınırlı bir zaman diliminde tamamlanma zorunluluğu vardır, çünkü embriyo transferi bekleyemez.",
+       "ekran": "3.'sü, testlerin kısa ve sınırlı bir zaman diliminde tamamlanma zorunluluğu vardır, çünkü embriyo transferi bekleyemez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-60-c0010",
+       "ses": "Burası önemli, sınavın sevdiği bir bilgi: PGD'nin en önemli yararı, hastayı olası bir gebelik terminasyonundan, yani medikal abortustan korumasıdır.",
+       "ekran": "Burası önemli, sınavın sevdiği bir bilgi: PGD'nin en önemli yararı, hastayı olası bir gebelik terminasyonundan, yani medikal abortustan korumasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0011",
+       "ses": "Prenatal tanıda etkilenmiş bir fetüs saptandığında aile gebeliği sonlandırma kararıyla yüz yüze gelir; PGD'de ise seçim gebelikten önce yapıldığı için bu ikilem ortadan kalkar.",
+       "ekran": "Prenatal tanıda etkilenmiş bir fetüs saptandığında aile gebeliği sonlandırma kararıyla yüz yüze gelir; PGD'de ise seçim gebelikten önce yapıldığı için bu ikilem ortadan kalkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-60-c0012",
+       "ses": "Daha teknik bir tanımla, PGD, in vitro fertilizasyon uygulamasında uterusa yerleştirilecek embriyoların seçimi sırasında, bu embriyoların belirli genetik hastalıkları taşıyıp taşımadıklarını anlamak için moleküler ya da moleküler sitogenetik tekniklerin kullanılmasıdır.",
+       "ekran": "Daha teknik bir tanımla, PGD, in vitro fertilizasyon uygulamasında uterusa yerleştirilecek embriyoların seçimi sırasında, bu embriyoların belirli genetik hastalıkları taşıyıp taşımadıklarını anlamak için moleküler ya da moleküler sitogenetik tekniklerin kullanılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0013",
+       "ses": "Moleküler tekniklere PCR ve dizileme, moleküler sitogenetik tekniklere ise FISH ve mikroarray örnek verilebilir.",
+       "ekran": "Moleküler tekniklere PCR ve dizileme, moleküler sitogenetik tekniklere ise FISH ve mikroarray örnek verilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0014",
+       "ses": "Burada sorulan soru hedeflidir: bu embriyo ailedeki belirli hastalığı taşıyor mu?",
+       "ekran": "Burada sorulan soru hedeflidir: bu embriyo ailedeki belirli hastalığı taşıyor mu?",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b02",
+   "baslik": "Preimplantasyon genetik tarama ve prenatal tanıya üstünlük",
+   "paragraflar": [
+    {
+     "id": "k1-60-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-60-c0015",
+       "ses": "Preimplantasyon genetik tarama, kısaca PGS, tüp bebek tedavilerinde gebelik başarısının artırılmasına yönelik bir uygulama alanıdır.",
+       "ekran": "Preimplantasyon genetik tarama, kısaca PGS, tüp bebek tedavilerinde gebelik başarısının artırılmasına yönelik bir uygulama alanıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0016",
+       "ses": "Anneye transfer edilecek aday embriyolarda anöploidi taraması yapılır ve kromozom sayısı normal olan, yani öploid embriyo ya da embriyolar endometriyuma transfer edilir.",
+       "ekran": "Anneye transfer edilecek aday embriyolarda anöploidi taraması yapılır ve kromozom sayısı normal olan, yani öploid embriyo ya da embriyolar endometriyuma transfer edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0017",
+       "ses": "Bu yöntem, Down sendromu gibi risklerin arttığı ileri anne yaşı olgularında yaygın olarak kullanılır.",
+       "ekran": "Bu yöntem, Down sendromu gibi risklerin arttığı ileri anne yaşı olgularında yaygın olarak kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0018",
+       "ses": "Güncel adlandırmada PGS, PGT-A olarak da anılır.",
+       "ekran": "Güncel adlandırmada PGS, PGT-A olarak da anılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p006",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-60-c0019",
+       "ses": "Burası önemli, çünkü bu 2 kavram sınavda sıkça karıştırılır.",
+       "ekran": "Burası önemli, çünkü bu 2 kavram sınavda sıkça karıştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0020",
+       "ses": "PGD, ailede bilinen belirli bir genetik hastalık için yapılan hedefli bir tanıdır.",
+       "ekran": "PGD, ailede bilinen belirli bir genetik hastalık için yapılan hedefli bir tanıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0021",
+       "ses": "PGS ise belirli bir hastalığı değil, kromozom sayısını hedefleyen genel bir taramadır ve amacı öploid embriyo seçerek gebelik başarısını artırmaktır.",
+       "ekran": "PGS ise belirli bir hastalığı değil, kromozom sayısını hedefleyen genel bir taramadır ve amacı öploid embriyo seçerek gebelik başarısını artırmaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0022",
+       "ses": "Kısacası biri tanı, diğeri tarama mantığıdır.",
+       "ekran": "Kısacası biri tanı, diğeri tarama mantığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p007",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-60-c0023",
+       "ses": "Mendel kurallarına göre kalıtılan birçok hastalıkta tekrarlama riski %25 ya da %50 gibi yüksek düzeydedir.",
+       "ekran": "Mendel kurallarına göre kalıtılan birçok hastalıkta tekrarlama riski %25 ya da %50 gibi yüksek düzeydedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0024",
+       "ses": "Bu tür yüksek risklerin söz konusu olduğu ailelerde yeni gebeliğin sağlıklı bebek doğumuyla sonuçlanması için PGD'nin prenatal tanıya göre çok büyük bir avantajı vardır.",
+       "ekran": "Bu tür yüksek risklerin söz konusu olduğu ailelerde yeni gebeliğin sağlıklı bebek doğumuyla sonuçlanması için PGD'nin prenatal tanıya göre çok büyük bir avantajı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0025",
+       "ses": "Koryon villus örneklemesi ya da amniyosentez gebelik başladıktan sonra yapılır; risk ne kadar yüksekse tekrarlayan gebelik sonlandırma olasılığı da o kadar artar.",
+       "ekran": "Koryon villus örneklemesi ya da amniyosentez gebelik başladıktan sonra yapılır; risk ne kadar yüksekse tekrarlayan gebelik sonlandırma olasılığı da o kadar artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0026",
+       "ses": "PGD bu döngüyü gebelikten önce kırar.",
+       "ekran": "PGD bu döngüyü gebelikten önce kırar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b03",
+   "baslik": "Tarihçe ve teknolojik gelişmeler",
+   "paragraflar": [
+    {
+     "id": "k1-60-p008",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-60-c0027",
+       "ses": "PGD'nin tarihçesi, embriyo biyopsisi ile tüp bebek tekniğinin buluşmasının hikâyesidir.",
+       "ekran": "PGD'nin tarihçesi, embriyo biyopsisi ile tüp bebek tekniğinin buluşmasının hikâyesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0028",
+       "ses": "1967'de Robert Edwards ve Richard Gardner ilk embriyo biyopsisini tavşan embriyolarında yapmıştır.",
+       "ekran": "1967'de Robert Edwards ve Richard Gardner ilk embriyo biyopsisini tavşan embriyolarında yapmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0029",
+       "ses": "İlk tüp bebek Louise Brown'dur; slaytta 1987 olarak verilir, ancak doğum yılının aslında 1978 olduğunu da bilin.",
+       "ekran": "İlk tüp bebek Louise Brown'dur; slaytta 1987 olarak verilir, ancak doğum yılının aslında 1978 olduğunu da bilin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0030",
+       "ses": "1989'da Alan Handyside ilk insan embriyosu biyopsisini ve ilk PGD uygulamasını X kromozomuna bağlı resesif bir hastalıkta gerçekleştirmiştir.",
+       "ekran": "1989'da Alan Handyside ilk insan embriyosu biyopsisini ve ilk PGD uygulamasını X kromozomuna bağlı resesif bir hastalıkta gerçekleştirmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0031",
+       "ses": "1990'da ise ilk sağlıklı PGD'li bebek dünyaya gelmiştir.",
+       "ekran": "1990'da ise ilk sağlıklı PGD'li bebek dünyaya gelmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p009",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-60-c0032",
+       "ses": "İlk klinik uygulamanın X kromozomuna bağlı bir hastalıkta yapılması tesadüf değildir; embriyonun cinsiyetini belirlemek, bu riski ayırmanın ilk yoluydu.",
+       "ekran": "İlk klinik uygulamanın X kromozomuna bağlı bir hastalıkta yapılması tesadüf değildir; embriyonun cinsiyetini belirlemek, bu riski ayırmanın ilk yoluydu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0033",
+       "ses": "Günümüzde orak hücre anemisi, beta talasemi ve kistik fibrozis gibi birçok hastalıkta ve kemik iliği nakli gereken olgularda HLA uyumlu kardeş amaçlı PGD uygulamaları yaygın olarak kullanılmaktadır.",
+       "ekran": "Günümüzde orak hücre anemisi, beta talasemi ve kistik fibrozis gibi birçok hastalıkta ve kemik iliği nakli gereken olgularda HLA uyumlu kardeş amaçlı PGD uygulamaları yaygın olarak kullanılmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p010",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-60-c0034",
+       "ses": "Teknolojik ilerlemeler sayesinde anöploidi taraması yapılabilmiş ve implantasyon başarısı artırılmıştır.",
+       "ekran": "Teknolojik ilerlemeler sayesinde anöploidi taraması yapılabilmiş ve implantasyon başarısı artırılmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0035",
+       "ses": "Bu amaçla özellikle mikroarray yöntemi, FISH uygulamalarının yerini almıştır; çünkü aynı anda çok daha fazla kromozom değerlendirilebilir.",
+       "ekran": "Bu amaçla özellikle mikroarray yöntemi, FISH uygulamalarının yerini almıştır; çünkü aynı anda çok daha fazla kromozom değerlendirilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0036",
+       "ses": "PCR tabanlı analiz yöntemleri de anöploidi taramalarında kullanılmıştır.",
+       "ekran": "PCR tabanlı analiz yöntemleri de anöploidi taramalarında kullanılmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0037",
+       "ses": "Yeni nesil dizileme platformlarıyla ise anöploidi taramasıyla birlikte, aynı anda ilgili tek gen hastalığının tanısı da yapılır hale gelmiştir.",
+       "ekran": "Yeni nesil dizileme platformlarıyla ise anöploidi taramasıyla birlikte, aynı anda ilgili tek gen hastalığının tanısı da yapılır hale gelmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b04",
+   "baslik": "Endikasyonlar",
+   "paragraflar": [
+    {
+     "id": "k1-60-p011",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-60-c0038",
+       "ses": "Teorik olarak prenatal ve postnatal dönemde genetik analizi yapılabilen tüm kondisyonlar için PGD yapılabilir; yöntemin çok geniş bir endikasyon alanı vardır.",
+       "ekran": "Teorik olarak prenatal ve postnatal dönemde genetik analizi yapılabilen tüm kondisyonlar için PGD yapılabilir; yöntemin çok geniş bir endikasyon alanı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0039",
+       "ses": "Ancak bazı durumlarda zorluklar söz konusudur: mozaiklik, mitokondriyal hastalıklar ve epigenetik değişiklikler.",
+       "ekran": "Ancak bazı durumlarda zorluklar söz konusudur: mozaiklik, mitokondriyal hastalıklar ve epigenetik değişiklikler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0040",
+       "ses": "Mozaik bir embriyoda biyopsiyle alınan hücre embriyonun geri kalanını temsil etmeyebilir; bu yüzden mozaiklik bu listenin başında yer alır.",
+       "ekran": "Mozaik bir embriyoda biyopsiyle alınan hücre embriyonun geri kalanını temsil etmeyebilir; bu yüzden mozaiklik bu listenin başında yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p012",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-60-c0041",
+       "ses": "Burası önemli, endikasyonlar çıkmış sorularda birden fazla kez soruldu.",
+       "ekran": "Burası önemli, endikasyonlar çıkmış sorularda birden fazla kez soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0042",
+       "ses": "PGD endikasyonları şunlardır: tek gen hastalıkları için taşıyıcı olan ya da hasta çocuk öyküsü bulunan aileler, 35 yaşından sonra tüp bebek yöntemine başvuran çiftler, 2 ya da daha fazla tüp bebek başarısızlığı olan çiftler, yapısal kromozom anomalisi olanlar ve HLA uyumlu kardeş isteyen çiftler.",
+       "ekran": "PGD endikasyonları şunlardır: tek gen hastalıkları için taşıyıcı olan ya da hasta çocuk öyküsü bulunan aileler, 35 yaşından sonra tüp bebek yöntemine başvuran çiftler, 2 ya da daha fazla tüp bebek başarısızlığı olan çiftler, yapısal kromozom anomalisi olanlar ve HLA uyumlu kardeş isteyen çiftler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0043",
+       "ses": "Buna karşılık, yalnızca annede bir anomali bulunan, örneğin yalnızca septat uterus gibi bir uterus anomalisi olan ve bilinen hiçbir genetik riski taşımayan bir çiftte PGD endikasyonu yoktur.",
+       "ekran": "Buna karşılık, yalnızca annede bir anomali bulunan, örneğin yalnızca septat uterus gibi bir uterus anomalisi olan ve bilinen hiçbir genetik riski taşımayan bir çiftte PGD endikasyonu yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0044",
+       "ses": "Dikkat edin, uterus anomalisi embriyonun genetik yapısıyla ilgili değildir; embriyo seçmek bu sorunu çözmez.",
+       "ekran": "Dikkat edin, uterus anomalisi embriyonun genetik yapısıyla ilgili değildir; embriyo seçmek bu sorunu çözmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p013",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-60-c0045",
+       "ses": "Endikasyonları hastalık türüne göre de gruplayabiliriz.",
+       "ekran": "Endikasyonları hastalık türüne göre de gruplayabiliriz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0046",
+       "ses": "Birinci grup tek gen hastalıklarıdır; geni bilinen ve tanısı konulabilen hastalıklar buraya girer.",
+       "ekran": "Birinci grup tek gen hastalıklarıdır; geni bilinen ve tanısı konulabilen hastalıklar buraya girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0047",
+       "ses": "İkinci grup X kromozomuna bağlı hastalıklardır ve bunlarda cinsiyet tayini önem taşır.",
+       "ekran": "İkinci grup X kromozomuna bağlı hastalıklardır ve bunlarda cinsiyet tayini önem taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0048",
+       "ses": "Üçüncü grup kromozom anomalileridir: sayısal anomaliler, yani anöploidiler ve özellikle trizomiler, bir de yapısal anomaliler.",
+       "ekran": "Üçüncü grup kromozom anomalileridir: sayısal anomaliler, yani anöploidiler ve özellikle trizomiler, bir de yapısal anomaliler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p014",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-60-c0049",
+       "ses": "Daha ayrıntılı bir listeyle, çiftlerde genetik ya da kalıtsal bir hastalık taşıyıcılığı bulunması, çiftlerde genetik ya da kalıtsal bir hastalık bulunması, daha önce genetik hastalığı olan çocuk ya da çocuklara sahip olunması, genetik predispozisyon gösteren hastalıkların tanımlanması, ileri maternal yaş, tekrarlayan gebelik kayıpları, erkek infertilitesi ile translokasyon ve inversiyon taşıyıcılığı da endikasyonlar arasında sayılır.",
+       "ekran": "Daha ayrıntılı bir listeyle, çiftlerde genetik ya da kalıtsal bir hastalık taşıyıcılığı bulunması, çiftlerde genetik ya da kalıtsal bir hastalık bulunması, daha önce genetik hastalığı olan çocuk ya da çocuklara sahip olunması, genetik predispozisyon gösteren hastalıkların tanımlanması, ileri maternal yaş, tekrarlayan gebelik kayıpları, erkek infertilitesi ile translokasyon ve inversiyon taşıyıcılığı da endikasyonlar arasında sayılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p015",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-60-c0050",
+       "ses": "Peki PGD kimlere yapılır?",
+       "ekran": "Peki PGD kimlere yapılır?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0051",
+       "ses": "Fertilite problemleri nedeniyle zaten tüp bebek uygulanacak çiftlerde uygulanabilir.",
+       "ekran": "Fertilite problemleri nedeniyle zaten tüp bebek uygulanacak çiftlerde uygulanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0052",
+       "ses": "Ciddi genetik bozukluklar açısından risk altında olan ailelerde, konvansiyonel prenatal tanı testleriyle gebeliği sonlandırmak geç olacağı için tercih edilebilir.",
+       "ekran": "Ciddi genetik bozukluklar açısından risk altında olan ailelerde, konvansiyonel prenatal tanı testleriyle gebeliği sonlandırmak geç olacağı için tercih edilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0053",
+       "ses": "Geç ortaya çıkan otozomal dominant hastalıklar açısından risk altındaki ailelerde de tercih edilebilir.",
+       "ekran": "Geç ortaya çıkan otozomal dominant hastalıklar açısından risk altındaki ailelerde de tercih edilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b05",
+   "baslik": "Kromozom düzensizliklerinde PGD: anöploidiler ve dengeli translokasyon",
+   "paragraflar": [
+    {
+     "id": "k1-60-p016",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-60-c0054",
+       "ses": "Kromozomal dengeli taşıyıcılıklar, PGD uygulamaları içinde oldukça önemli bir yer tutar.",
+       "ekran": "Kromozomal dengeli taşıyıcılıklar, PGD uygulamaları içinde oldukça önemli bir yer tutar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0055",
+       "ses": "Embriyolara ait kromozom bozuklukları sayısal ya da yapısal düzeyde olabilir.",
+       "ekran": "Embriyolara ait kromozom bozuklukları sayısal ya da yapısal düzeyde olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0056",
+       "ses": "1 kromozomun tamamını içeren bozukluklara anöploidi denir.",
+       "ekran": "1 kromozomun tamamını içeren bozukluklara anöploidi denir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p017",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-60-c0057",
+       "ses": "Burası önemli: anöploidiler genellikle maternal birinci mayoz hatalarından kaynaklanır.",
+       "ekran": "Burası önemli: anöploidiler genellikle maternal birinci mayoz hatalarından kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0058",
+       "ses": "Bu tür düzensizlikler PGS yöntemiyle araştırılır ve bu tarama ileri maternal yaş, tekrarlayan tüp bebek başarısızlıkları ve ilk trimester gebelik kayıpları bulunan eşlerde yapılır.",
+       "ekran": "Bu tür düzensizlikler PGS yöntemiyle araştırılır ve bu tarama ileri maternal yaş, tekrarlayan tüp bebek başarısızlıkları ve ilk trimester gebelik kayıpları bulunan eşlerde yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0059",
+       "ses": "Tekrarlayan gebelik kayıplarının ve tüp bebek başarısızlıklarının birçok nedeni vardır, ancak bunların en önemlisi sayısal kromozom anomalileridir.",
+       "ekran": "Tekrarlayan gebelik kayıplarının ve tüp bebek başarısızlıklarının birçok nedeni vardır, ancak bunların en önemlisi sayısal kromozom anomalileridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p018",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-60-c0060",
+       "ses": "Dengeli translokasyon taşıyıcılığı, PGD'de önemli bir endikasyon grubunu oluşturur.",
+       "ekran": "Dengeli translokasyon taşıyıcılığı, PGD'de önemli bir endikasyon grubunu oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0061",
+       "ses": "Dengeli taşıyıcının kendisi sağlıklıdır, ancak kromozomlar gamet oluşumunda dengesiz segregasyon ürünlerine yol açabilir; hatta translokasyon infertilite nedenleri arasında da yer alır.",
+       "ekran": "Dengeli taşıyıcının kendisi sağlıklıdır, ancak kromozomlar gamet oluşumunda dengesiz segregasyon ürünlerine yol açabilir; hatta translokasyon infertilite nedenleri arasında da yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0062",
+       "ses": "Bu yüzden translokasyon ya da inversiyon taşıyan eşler tüp bebek uygulamalarına yönlendirilir.",
+       "ekran": "Bu yüzden translokasyon ya da inversiyon taşıyan eşler tüp bebek uygulamalarına yönlendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p019",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-60-c0063",
+       "ses": "Burası önemli, sayıları iyi ezberleyin: dengeli translokasyon taşıyıcılığı yenidoğan popülasyonunda %0,2, infertil çiftlerde %0,6, ilk trimester kayıplarında ise %6 oranındadır.",
+       "ekran": "Burası önemli, sayıları iyi ezberleyin: dengeli translokasyon taşıyıcılığı yenidoğan popülasyonunda %0,2, infertil çiftlerde %0,6, ilk trimester kayıplarında ise %6 oranındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0064",
+       "ses": "Gördüğünüz gibi, sorun ne kadar üreme kaybına yöneliyorsa taşıyıcılık oranı da o kadar artıyor.",
+       "ekran": "Gördüğünüz gibi, sorun ne kadar üreme kaybına yöneliyorsa taşıyıcılık oranı da o kadar artıyor.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b06",
+   "baslik": "Segregasyon tipleri ve yapısal kromozom anomalileri",
+   "paragraflar": [
+    {
+     "id": "k1-60-p020",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-60-c0065",
+       "ses": "Dengeli translokasyon taşıyıcısında gamet oluşurken kromozomların ayrılma biçimi, yani segregasyon tipi, embriyonun dengeli olup olmayacağını belirler.",
+       "ekran": "Dengeli translokasyon taşıyıcısında gamet oluşurken kromozomların ayrılma biçimi, yani segregasyon tipi, embriyonun dengeli olup olmayacağını belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0066",
+       "ses": "Burası önemli: dengeli gamet ve embriyo veren tek segregasyon tipi alternet segregasyondur.",
+       "ekran": "Burası önemli: dengeli gamet ve embriyo veren tek segregasyon tipi alternet segregasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0067",
+       "ses": "Adjasent 1 ve adjasent 2 segregasyon ise dengesiz gamet ve embriyolara neden olur.",
+       "ekran": "Adjasent 1 ve adjasent 2 segregasyon ise dengesiz gamet ve embriyolara neden olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0068",
+       "ses": "Bu 3 segregasyon tipine sık rastlanır.",
+       "ekran": "Bu 3 segregasyon tipine sık rastlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0069",
+       "ses": "Sınavda adjasent tiplerin de dengeli olduğu sanılabilir; hayır, yalnızca alternet segregasyon dengelidir.",
+       "ekran": "Sınavda adjasent tiplerin de dengeli olduğu sanılabilir; hayır, yalnızca alternet segregasyon dengelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p021",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-60-c0070",
+       "ses": "Daha az rastlanan tipler de vardır.",
+       "ekran": "Daha az rastlanan tipler de vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0071",
+       "ses": "Tam trizomi ya da monozomiye neden olan 3:1 interchange segregasyonu ve derivatif kromozomun eşlik ettiği dengesiz yapıdaki 3:1 tersiyer segregasyonu bunlardır.",
+       "ekran": "Tam trizomi ya da monozomiye neden olan 3:1 interchange segregasyonu ve derivatif kromozomun eşlik ettiği dengesiz yapıdaki 3:1 tersiyer segregasyonu bunlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0072",
+       "ses": "Sonuç olarak dengeli translokasyon taşıyan eşleri 3 olasılık bekler: infertilite, tekrarlayan gebelik kayıpları ve dengesiz kromozom yapısında, yani anomalili bebek doğumu.",
+       "ekran": "Sonuç olarak dengeli translokasyon taşıyan eşleri 3 olasılık bekler: infertilite, tekrarlayan gebelik kayıpları ve dengesiz kromozom yapısında, yani anomalili bebek doğumu.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p022",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-60-c0073",
+       "ses": "Yapısal kromozom anomalileri dengeli translokasyonlar, insersiyon, inversiyon, delesyon ve duplikasyonlardır.",
+       "ekran": "Yapısal kromozom anomalileri dengeli translokasyonlar, insersiyon, inversiyon, delesyon ve duplikasyonlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0074",
+       "ses": "Özellikle dengeli translokasyonlar tekrarlayan gebelik kayıplarının önemli nedenlerindendir ve PGD için önemli bir endikasyondur.",
+       "ekran": "Özellikle dengeli translokasyonlar tekrarlayan gebelik kayıplarının önemli nedenlerindendir ve PGD için önemli bir endikasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0075",
+       "ses": "Dengeli translokasyon taşıyıcılığında dengesiz yapıda embriyo oluşma oranı %20 ile 100 arasında değişir.",
+       "ekran": "Dengeli translokasyon taşıyıcılığında dengesiz yapıda embriyo oluşma oranı %20 ile 100 arasında değişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p023",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-60-c0076",
+       "ses": "2 translokasyon tipini karıştırmayın.",
+       "ekran": "2 translokasyon tipini karıştırmayın.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0077",
+       "ses": "Resiprokal translokasyon, 2 kromozom arasında karşılıklı parça değişimidir.",
+       "ekran": "Resiprokal translokasyon, 2 kromozom arasında karşılıklı parça değişimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0078",
+       "ses": "Robertsoniyen translokasyon ise 2 akrosentrik kromozom arasında oluşan translokasyondur.",
+       "ekran": "Robertsoniyen translokasyon ise 2 akrosentrik kromozom arasında oluşan translokasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0079",
+       "ses": "Akrosentrik kelimesini duyduğunuz an aklınıza Robertsoniyen gelmeli.",
+       "ekran": "Akrosentrik kelimesini duyduğunuz an aklınıza Robertsoniyen gelmeli.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b07",
+   "baslik": "Tek gen hastalıklarında PGD ve haplotipleme",
+   "paragraflar": [
+    {
+     "id": "k1-60-p024",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-60-c0080",
+       "ses": "Günümüzde 4000'in üzerinde tek gen hastalığı tanımlıdır ve geni bilinen tüm tek gen hastalıkları için PGD uygulanabilir.",
+       "ekran": "Günümüzde 4000'in üzerinde tek gen hastalığı tanımlıdır ve geni bilinen tüm tek gen hastalıkları için PGD uygulanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0081",
+       "ses": "Burası önemli, endikasyonun kalıtım tipine göre değiştiği bir nokta: otozomal resesif hastalıklarda ebeveynlerden her ikisinin de hasta ya da taşıyıcı olması, otozomal dominant hastalıklarda ise ebeveynlerden yalnızca birinin hasta olması PGD endikasyonu doğurur.",
+       "ekran": "Burası önemli, endikasyonun kalıtım tipine göre değiştiği bir nokta: otozomal resesif hastalıklarda ebeveynlerden her ikisinin de hasta ya da taşıyıcı olması, otozomal dominant hastalıklarda ise ebeveynlerden yalnızca birinin hasta olması PGD endikasyonu doğurur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0082",
+       "ses": "Dominant hastalıkta iki ebeveynin birden etkilenmesi gerekmez.",
+       "ekran": "Dominant hastalıkta iki ebeveynin birden etkilenmesi gerekmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0083",
+       "ses": "Özellikle otozomal resesif talasemi, kistik fibrozis ve kas hastalıkları ile otozomal dominant Huntington hastalığı örnek olarak verilir.",
+       "ekran": "Özellikle otozomal resesif talasemi, kistik fibrozis ve kas hastalıkları ile otozomal dominant Huntington hastalığı örnek olarak verilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p025",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-60-c0084",
+       "ses": "Tek gen hastalıklarında, hastalığa neden olan mutasyonun analizi yapılmadan da PGD yapılabilir.",
+       "ekran": "Tek gen hastalıklarında, hastalığa neden olan mutasyonun analizi yapılmadan da PGD yapılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0085",
+       "ses": "Bunun için doğrudan hastalık yapıcı genin bulunduğu bölgeye yönelik STR, yani kısa ardışık tekrar analizi yapılır.",
+       "ekran": "Bunun için doğrudan hastalık yapıcı genin bulunduğu bölgeye yönelik STR, yani kısa ardışık tekrar analizi yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0086",
+       "ses": "Bu yöntemde ilgili gene komşu alleller takip edilir ve aynı kromozom bölgesinin referans kişiden aktarılıp aktarılmadığı kontrol edilir.",
+       "ekran": "Bu yöntemde ilgili gene komşu alleller takip edilir ve aynı kromozom bölgesinin referans kişiden aktarılıp aktarılmadığı kontrol edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0087",
+       "ses": "Yöntemin adı preimplantasyon genetik haplotiplemedir, kısaca PGH.",
+       "ekran": "Yöntemin adı preimplantasyon genetik haplotiplemedir, kısaca PGH.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p026",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-60-c0088",
+       "ses": "Burası önemli, PGH'nın kuralları sınav spotudur.",
+       "ekran": "Burası önemli, PGH'nın kuralları sınav spotudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0089",
+       "ses": "PGH özellikle mutasyona özgü test imkânı olmayan olgularda oldukça etkili ve çözüm odaklı bir yöntemdir.",
+       "ekran": "PGH özellikle mutasyona özgü test imkânı olmayan olgularda oldukça etkili ve çözüm odaklı bir yöntemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0090",
+       "ses": "Burada STR seçimi önemlidir ve en az 8 adet STR oluşturulmalıdır.",
+       "ekran": "Burada STR seçimi önemlidir ve en az 8 adet STR oluşturulmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0091",
+       "ses": "STR'ler hedeflenen gene yakın ve bilgi verici olmalıdır.",
+       "ekran": "STR'ler hedeflenen gene yakın ve bilgi verici olmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0092",
+       "ses": "PGH yalnızca tek gen hastalıklarında kullanılabilir.",
+       "ekran": "PGH yalnızca tek gen hastalıklarında kullanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0093",
+       "ses": "Akraba evliliği ise haplotip ve STR oluşturmayı olumsuz etkiler; çünkü akraba eşlerde alleller birbirine benzeyeceğinden ayırt edici, yani bilgi verici belirteç bulmak zorlaşır.",
+       "ekran": "Akraba evliliği ise haplotip ve STR oluşturmayı olumsuz etkiler; çünkü akraba eşlerde alleller birbirine benzeyeceğinden ayırt edici, yani bilgi verici belirteç bulmak zorlaşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b08",
+   "baslik": "SNP tabanlı haplotip analizi: karyomapping",
+   "paragraflar": [
+    {
+     "id": "k1-60-p027",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-60-c0094",
+       "ses": "SNP, yani tek nükleotid polimorfizmi, tüm genomda yaygın olarak bulunur.",
+       "ekran": "SNP, yani tek nükleotid polimorfizmi, tüm genomda yaygın olarak bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0095",
+       "ses": "SNP tabanlı haplotip analizinin örneği Illumina firmasının karyomapping platformudur.",
+       "ekran": "SNP tabanlı haplotip analizinin örneği Illumina firmasının karyomapping platformudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0096",
+       "ses": "Bu teknik tüm genom boyunca linkaj, yani bağlantı analizi yapılmasını sağlar ve teorik olarak kalıtılan tüm hastalıklar için uygun bir yöntemdir.",
+       "ekran": "Bu teknik tüm genom boyunca linkaj, yani bağlantı analizi yapılmasını sağlar ve teorik olarak kalıtılan tüm hastalıklar için uygun bir yöntemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0097",
+       "ses": "Temel prensip PGH ile aynıdır: ilgilenilen gene komşu aleller takip edilerek aynı kromozom bölgesinin referans kişiden aktarılıp aktarılmadığı tespit edilir.",
+       "ekran": "Temel prensip PGH ile aynıdır: ilgilenilen gene komşu aleller takip edilerek aynı kromozom bölgesinin referans kişiden aktarılıp aktarılmadığı tespit edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0098",
+       "ses": "Fark şudur: STR yerine SNP'ler kullanılır ve karyomapping bölgesel değil, tüm genom boyunca SNP taraması yapar.",
+       "ekran": "Fark şudur: STR yerine SNP'ler kullanılır ve karyomapping bölgesel değil, tüm genom boyunca SNP taraması yapar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p028",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-60-c0099",
+       "ses": "Karyomapping'in 3 avantajı vardır.",
+       "ekran": "Karyomapping'in 3 avantajı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0100",
+       "ses": "1.'si, SNP'ler tüm genomda sık ve homojen dağılmıştır ve tüm genomun homojen analizine imkân sağlar.",
+       "ekran": "1.'si, SNP'ler tüm genomda sık ve homojen dağılmıştır ve tüm genomun homojen analizine imkân sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0101",
+       "ses": "2.'si, tüm genom tarandığı için ilgili gen bölgesindeki rekombinasyon hata payı en aza iner.",
+       "ekran": "2.'si, tüm genom tarandığı için ilgili gen bölgesindeki rekombinasyon hata payı en aza iner.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0102",
+       "ses": "3.'sü, hastaya özgü bir tasarım ve ön hazırlık gerektirmez.",
+       "ekran": "3.'sü, hastaya özgü bir tasarım ve ön hazırlık gerektirmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p029",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-60-c0103",
+       "ses": "Uygulamada anne, baba ve hastalık durumu bulunan bir bireyin DNA örnekleri izole edilir ve SNP taraması yapılır.",
+       "ekran": "Uygulamada anne, baba ve hastalık durumu bulunan bir bireyin DNA örnekleri izole edilir ve SNP taraması yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0104",
+       "ses": "Mikroenjeksiyon yöntemiyle elde edilen embriyolarda SNP'lerin hangi ebeveynden geldiği, yani parental orijinleri ortaya konur.",
+       "ekran": "Mikroenjeksiyon yöntemiyle elde edilen embriyolarda SNP'lerin hangi ebeveynden geldiği, yani parental orijinleri ortaya konur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0105",
+       "ses": "Bu platformla genom boyunca 300.000 adet SNP analiz edilebilir; bu da yeterli güvenilirlik ve çözünürlükte genetik tanı imkânı sunar.",
+       "ekran": "Bu platformla genom boyunca 300.000 adet SNP analiz edilebilir; bu da yeterli güvenilirlik ve çözünürlükte genetik tanı imkânı sunar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b09",
+   "baslik": "Otozomal dominant hastalıklarda PGD",
+   "paragraflar": [
+    {
+     "id": "k1-60-p030",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-60-c0106",
+       "ses": "Otozomal dominant kalıtımda hasta kişinin çocuklarında hastalığın ortaya çıkma olasılığı her gebelikte %50'dir.",
+       "ekran": "Otozomal dominant kalıtımda hasta kişinin çocuklarında hastalığın ortaya çıkma olasılığı her gebelikte %50'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0107",
+       "ses": "Bu kalıtım Mendel kurallarına uyar, dikey bir kalıtım paterni gösterir ve hastalık her kuşakta gözlenir.",
+       "ekran": "Bu kalıtım Mendel kurallarına uyar, dikey bir kalıtım paterni gösterir ve hastalık her kuşakta gözlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0108",
+       "ses": "Ancak bazı durumlarda Mendel kurallarından sapmalar olur.",
+       "ekran": "Ancak bazı durumlarda Mendel kurallarından sapmalar olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0109",
+       "ses": "Bunlar sıklıkla de novo durumlardan kaynaklanır; yani etkilenmiş bir ebeveyn yoktur.",
+       "ekran": "Bunlar sıklıkla de novo durumlardan kaynaklanır; yani etkilenmiş bir ebeveyn yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0110",
+       "ses": "Yine de gonadal mozaisizm göz ardı edilmemeli, ayrıca değişken ekspressivite ve penetrans kaybı durumları incelenmelidir.",
+       "ekran": "Yine de gonadal mozaisizm göz ardı edilmemeli, ayrıca değişken ekspressivite ve penetrans kaybı durumları incelenmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p031",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-60-c0111",
+       "ses": "Otozomal dominant kalıtımda bireylerde fenotipik bulguların şiddeti ve ortaya çıkış şekli farklılık gösterebilir.",
+       "ekran": "Otozomal dominant kalıtımda bireylerde fenotipik bulguların şiddeti ve ortaya çıkış şekli farklılık gösterebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0112",
+       "ses": "Penetrans eksikliği ve değişken ekspressivite, bu hastalıkların yönetilmesinde ve genetik danışmanlık verilmesinde zorluk yaratır.",
+       "ekran": "Penetrans eksikliği ve değişken ekspressivite, bu hastalıkların yönetilmesinde ve genetik danışmanlık verilmesinde zorluk yaratır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0113",
+       "ses": "Bu nedenle PGD planlanırken her dominant kondisyonun kendine özgü özellikleri göz önünde bulundurulmalıdır.",
+       "ekran": "Bu nedenle PGD planlanırken her dominant kondisyonun kendine özgü özellikleri göz önünde bulundurulmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p032",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-60-c0114",
+       "ses": "Huntington hastalığı burada tipik bir örnektir ve bir etik sorun barındırır.",
+       "ekran": "Huntington hastalığı burada tipik bir örnektir ve bir etik sorun barındırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0115",
+       "ses": "Çiftlerin çoğu, kendisinde Huntington hastalığı olup olmadığını bilmek istemez.",
+       "ekran": "Çiftlerin çoğu, kendisinde Huntington hastalığı olup olmadığını bilmek istemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0116",
+       "ses": "Bu durumda ebeveyn taraması yapılmadan ve sonuç raporlanmadan, hastalıksız embriyolar analiz edilerek anneye transfer edilir.",
+       "ekran": "Bu durumda ebeveyn taraması yapılmadan ve sonuç raporlanmadan, hastalıksız embriyolar analiz edilerek anneye transfer edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0117",
+       "ses": "Böylece hem çocuk korunur hem de ebeveynin bilmeme hakkına saygı gösterilir.",
+       "ekran": "Böylece hem çocuk korunur hem de ebeveynin bilmeme hakkına saygı gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b10",
+   "baslik": "Otozomal resesif ve X kromozomuna bağlı hastalıklarda PGD",
+   "paragraflar": [
+    {
+     "id": "k1-60-p033",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-60-c0118",
+       "ses": "Otozomal resesif kalıtım her kuşakta kendini göstermez, yatay bir kalıtım paterni sergiler.",
+       "ekran": "Otozomal resesif kalıtım her kuşakta kendini göstermez, yatay bir kalıtım paterni sergiler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0119",
+       "ses": "Akraba evliliklerinde otozomal resesif hastalık riski artar.",
+       "ekran": "Akraba evliliklerinde otozomal resesif hastalık riski artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0120",
+       "ses": "Cinsiyetler eşit oranda tutulur ve hastalığın seyri ve şiddeti genellikle aynıdır.",
+       "ekran": "Cinsiyetler eşit oranda tutulur ve hastalığın seyri ve şiddeti genellikle aynıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0121",
+       "ses": "Heterozigot bir anne ve babanın hasta çocuk sahibi olma riski %25, taşıyıcı çocuk sahibi olma olasılığı %50, sağlıklı çocuk şansı ise %25'tir.",
+       "ekran": "Heterozigot bir anne ve babanın hasta çocuk sahibi olma riski %25, taşıyıcı çocuk sahibi olma olasılığı %50, sağlıklı çocuk şansı ise %25'tir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0122",
+       "ses": "Hasta çocuk, homozigot mutasyon taşır.",
+       "ekran": "Hasta çocuk, homozigot mutasyon taşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p034",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-60-c0123",
+       "ses": "Otozomal resesif durumlarda PGD'den önce ayrıntılı bir pedigri çizilmeli ve riskler iyi tespit edilmelidir.",
+       "ekran": "Otozomal resesif durumlarda PGD'den önce ayrıntılı bir pedigri çizilmeli ve riskler iyi tespit edilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0124",
+       "ses": "PGD uygulanan resesif hastalıklara hemoglobinopatiler, spinal müsküler atrofi, kistik fibrozis ve metabolik hastalıklar örnektir.",
+       "ekran": "PGD uygulanan resesif hastalıklara hemoglobinopatiler, spinal müsküler atrofi, kistik fibrozis ve metabolik hastalıklar örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0125",
+       "ses": "Uygulama sırasında hastalığa ait mutasyonun yanı sıra, testin güvenilirliğini ve doğruluğunu artırmak için bilgi verici, yani informatif belirteç tasarımlarının yapılması ve yeterli sayıda belirtecin test platformuna eklenmesi gerekir.",
+       "ekran": "Uygulama sırasında hastalığa ait mutasyonun yanı sıra, testin güvenilirliğini ve doğruluğunu artırmak için bilgi verici, yani informatif belirteç tasarımlarının yapılması ve yeterli sayıda belirtecin test platformuna eklenmesi gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p035",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-60-c0126",
+       "ses": "PGD uygulamasından sonra fetüsün durumu uygun haftada prenatal tanı yöntemiyle, yani amniyosentez ya da koryon villus örneklemesiyle kontrol edilmelidir.",
+       "ekran": "PGD uygulamasından sonra fetüsün durumu uygun haftada prenatal tanı yöntemiyle, yani amniyosentez ya da koryon villus örneklemesiyle kontrol edilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0127",
+       "ses": "Eşlere testin güvenilirlik oranları, hata payları ve diğer olası riskler hakkında yeterli bilgi verilmeli, tüm prosedürü anladıklarından emin olunmalı ve testi kabul ettiklerini gösteren onay beyanı imzalatılmalıdır.",
+       "ekran": "Eşlere testin güvenilirlik oranları, hata payları ve diğer olası riskler hakkında yeterli bilgi verilmeli, tüm prosedürü anladıklarından emin olunmalı ve testi kabul ettiklerini gösteren onay beyanı imzalatılmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0128",
+       "ses": "PGD ile elde edilen gebeliğin prenatal tanıyla kontrol edilmesini istemeyen çiftlerden de imzalı onam formu alınmalıdır.",
+       "ekran": "PGD ile elde edilen gebeliğin prenatal tanıyla kontrol edilmesini istemeyen çiftlerden de imzalı onam formu alınmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p036",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-60-c0129",
+       "ses": "X kromozomuna bağlı resesif kalıtılan hastalıklarda kadınlar heterozigot, yani taşıyıcıdır; erkekler ise hemizigot ve hastadır.",
+       "ekran": "X kromozomuna bağlı resesif kalıtılan hastalıklarda kadınlar heterozigot, yani taşıyıcıdır; erkekler ise hemizigot ve hastadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0130",
+       "ses": "Taşıyıcı annenin kız çocuklarının %50'si taşıyıcı, erkek çocuklarının ise %50'si hastadır.",
+       "ekran": "Taşıyıcı annenin kız çocuklarının %50'si taşıyıcı, erkek çocuklarının ise %50'si hastadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0131",
+       "ses": "Ancak X inaktivasyonuna bağlı olarak kız çocuklarında da hastalık görülebilir.",
+       "ekran": "Ancak X inaktivasyonuna bağlı olarak kız çocuklarında da hastalık görülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0132",
+       "ses": "Duchenne kas distrofisi, Charcot-Marie-Tooth hastalığı, frajil X sendromu, hemofili A ve B, hiper IgM sendromu ve Wiskott-Aldrich sendromu gibi birçok X kromozomuna bağlı hastalık için PGD uygulanmaktadır.",
+       "ekran": "Duchenne kas distrofisi, Charcot-Marie-Tooth hastalığı, frajil X sendromu, hemofili A ve B, hiper IgM sendromu ve Wiskott-Aldrich sendromu gibi birçok X kromozomuna bağlı hastalık için PGD uygulanmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b11",
+   "baslik": "Preimplantasyon genetik tarama: amaç, yöntemler ve ileri anne yaşı",
+   "paragraflar": [
+    {
+     "id": "k1-60-p037",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-60-c0133",
+       "ses": "Tüp bebek uygulamasının başarılı olabilmesi için tarama testlerinin yapılması önemlidir.",
+       "ekran": "Tüp bebek uygulamasının başarılı olabilmesi için tarama testlerinin yapılması önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0134",
+       "ses": "Embriyolar genetik taramadan geçirilir ve anöploid olanlar elimine edilir, çünkü tüp bebek başarısı embriyonun genetik yapısıyla doğrudan ilişkilidir.",
+       "ekran": "Embriyolar genetik taramadan geçirilir ve anöploid olanlar elimine edilir, çünkü tüp bebek başarısı embriyonun genetik yapısıyla doğrudan ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0135",
+       "ses": "PGS özellikle ileri anne yaşı, tekrarlayan tüp bebek başarısızlıkları, tekrarlayan gebelik kayıpları, ilk trimester düşükleri ve şiddetli erkek infertilitesi olgularında yaygın olarak kullanılır.",
+       "ekran": "PGS özellikle ileri anne yaşı, tekrarlayan tüp bebek başarısızlıkları, tekrarlayan gebelik kayıpları, ilk trimester düşükleri ve şiddetli erkek infertilitesi olgularında yaygın olarak kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p038",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-60-c0136",
+       "ses": "PGS'te kullanılan yöntemler zaman içinde değişmiştir.",
+       "ekran": "PGS'te kullanılan yöntemler zaman içinde değişmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0137",
+       "ses": "Multikolor FISH, array CGH ve blastomerden yapılan anöploidi taraması kullanılmıştır.",
+       "ekran": "Multikolor FISH, array CGH ve blastomerden yapılan anöploidi taraması kullanılmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0138",
+       "ses": "Günümüzde ise blastokist aşamasında trofoektoderm biyopsisi alınarak mikroarray yöntemiyle PGS uygulanmaktadır.",
+       "ekran": "Günümüzde ise blastokist aşamasında trofoektoderm biyopsisi alınarak mikroarray yöntemiyle PGS uygulanmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p039",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-60-c0139",
+       "ses": "İleri anne yaşında PGS'e bakalım.",
+       "ekran": "İleri anne yaşında PGS'e bakalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0140",
+       "ses": "Tüp bebek uygulamalarında temel amaç, infertil ya da subfertil çiftlerin sağlıklı bebek sahibi olmasıdır.",
+       "ekran": "Tüp bebek uygulamalarında temel amaç, infertil ya da subfertil çiftlerin sağlıklı bebek sahibi olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0141",
+       "ses": "Preimplantasyon embriyolarının önemli bir kısmı kromozom anomalisi taşır ve bu anomaliler anne yaşıyla birlikte artış gösterir.",
+       "ekran": "Preimplantasyon embriyolarının önemli bir kısmı kromozom anomalisi taşır ve bu anomaliler anne yaşıyla birlikte artış gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0142",
+       "ses": "Bunların tespitinde önceleri multikolor FISH yöntemi kullanılmış, bu sayede hızlı sonuç ve ploidi bozuklukları hakkında bilgi elde edilmiştir.",
+       "ekran": "Bunların tespitinde önceleri multikolor FISH yöntemi kullanılmış, bu sayede hızlı sonuç ve ploidi bozuklukları hakkında bilgi elde edilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0143",
+       "ses": "PGS, kromozom translokasyonu taşıyıcıları için hem anöploidi taramasını hem de eş zamanlı olarak dengeli embriyoların seçilebilmesini sağlar.",
+       "ekran": "PGS, kromozom translokasyonu taşıyıcıları için hem anöploidi taramasını hem de eş zamanlı olarak dengeli embriyoların seçilebilmesini sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b12",
+   "baslik": "Tekrarlayan gebelik kayıpları, implantasyon başarısızlığı ve erkek infertilitesi",
+   "paragraflar": [
+    {
+     "id": "k1-60-p040",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-60-c0144",
+       "ses": "Tekrarlayan gebelik kayıplarının etiyolojisi, kaybın meydana geldiği gebelik haftasına göre değişir.",
+       "ekran": "Tekrarlayan gebelik kayıplarının etiyolojisi, kaybın meydana geldiği gebelik haftasına göre değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0145",
+       "ses": "Tekrarlayan gebelik kaybı, üreme çağındaki kadınların %5'inde görülür.",
+       "ekran": "Tekrarlayan gebelik kaybı, üreme çağındaki kadınların %5'inde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0146",
+       "ses": "İleri gebelik haftasındaki kayıplar maternal sistemik hastalıklar, uterin nedenler ve servikal yetmezlik kaynaklıdır.",
+       "ekran": "İleri gebelik haftasındaki kayıplar maternal sistemik hastalıklar, uterin nedenler ve servikal yetmezlik kaynaklıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0147",
+       "ses": "Erken gebelik haftasındaki kayıplar ise fetüsteki kromozom düzensizliklerinden kaynaklanır.",
+       "ekran": "Erken gebelik haftasındaki kayıplar ise fetüsteki kromozom düzensizliklerinden kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0148",
+       "ses": "Düşük materyallerinin %50'sinde kromozom anomalisi bulunur ve bu çiftlerde eşlerin dengeli translokasyon taşıyıcılığı %5 oranındadır.",
+       "ekran": "Düşük materyallerinin %50'sinde kromozom anomalisi bulunur ve bu çiftlerde eşlerin dengeli translokasyon taşıyıcılığı %5 oranındadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p041",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-60-c0149",
+       "ses": "Daha önce anormal öykülü düşüğü olanlarda translokasyon tespit edilme oranı yüksektir ve taşıyıcılık kadınlarda erkeklere göre daha sık saptanır.",
+       "ekran": "Daha önce anormal öykülü düşüğü olanlarda translokasyon tespit edilme oranı yüksektir ve taşıyıcılık kadınlarda erkeklere göre daha sık saptanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0150",
+       "ses": "Eşlerden birinde translokasyon taşıyıcılığı saptanması, PGD destekli tüp bebek tedavisi endikasyonudur.",
+       "ekran": "Eşlerden birinde translokasyon taşıyıcılığı saptanması, PGD destekli tüp bebek tedavisi endikasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0151",
+       "ses": "Bu eşlere anöploidi taraması eşliğinde tüp bebek uygulaması ve genetik danışmanlık eşliğinde, oluşacak gebeliğin izlenmesi önerilir.",
+       "ekran": "Bu eşlere anöploidi taraması eşliğinde tüp bebek uygulaması ve genetik danışmanlık eşliğinde, oluşacak gebeliğin izlenmesi önerilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p042",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-60-c0152",
+       "ses": "Tekrarlayan başarısız tüp bebek denemelerinde de PGS uygulanır.",
+       "ekran": "Tekrarlayan başarısız tüp bebek denemelerinde de PGS uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0153",
+       "ses": "Tekrarlayan implantasyon başarısızlığı, iyi kalitede embriyo transferine rağmen 3 ya da daha fazla tüp bebek başarısızlığı olmasıdır.",
+       "ekran": "Tekrarlayan implantasyon başarısızlığı, iyi kalitede embriyo transferine rağmen 3 ya da daha fazla tüp bebek başarısızlığı olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0154",
+       "ses": "Etiyolojisinde uterin problemler, yetersiz endometrium proliferasyonu, hidrosalpenks gibi tubal bozukluklar ve olası genetik, hormonal, metabolik, hematolojik ve immünolojik nedenler yer alır.",
+       "ekran": "Etiyolojisinde uterin problemler, yetersiz endometrium proliferasyonu, hidrosalpenks gibi tubal bozukluklar ve olası genetik, hormonal, metabolik, hematolojik ve immünolojik nedenler yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0155",
+       "ses": "Yapısal ve sayısal kromozom düzensizlikleri de bu olgularda artış gösterir.",
+       "ekran": "Yapısal ve sayısal kromozom düzensizlikleri de bu olgularda artış gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p043",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-60-c0156",
+       "ses": "Şiddetli erkek infertilitesi olgularında da PGS önemlidir.",
+       "ekran": "Şiddetli erkek infertilitesi olgularında da PGS önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0157",
+       "ses": "Şiddetli infertil erkeklerde ICSI, yani intrasitoplazmik sperm enjeksiyonu ya da mikroenjeksiyon ile elde edilen embriyolarda anöploidi riski artar.",
+       "ekran": "Şiddetli infertil erkeklerde ICSI, yani intrasitoplazmik sperm enjeksiyonu ya da mikroenjeksiyon ile elde edilen embriyolarda anöploidi riski artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0158",
+       "ses": "ICSI'yi izleyen aşamada oositin fertilize olup klivaja girebilmesi ve düzenli mitotik aktivite gösterebilmesi için düzenli bir genom ve sentriyol aktivitesi gerekir.",
+       "ekran": "ICSI'yi izleyen aşamada oositin fertilize olup klivaja girebilmesi ve düzenli mitotik aktivite gösterebilmesi için düzenli bir genom ve sentriyol aktivitesi gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0159",
+       "ses": "Bu olgulardaki artmış anöploidi oranları PGS ile elimine edilerek gebelik başarısı artırılabilir.",
+       "ekran": "Bu olgulardaki artmış anöploidi oranları PGS ile elimine edilerek gebelik başarısı artırılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b13",
+   "baslik": "HLA uyumlu kardeş amaçlı PGD",
+   "paragraflar": [
+    {
+     "id": "k1-60-p044",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-60-c0160",
+       "ses": "HLA, insan lökosit antijeni demektir.",
+       "ekran": "HLA, insan lökosit antijeni demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0161",
+       "ses": "İnsanlarda bağışıklık sistemiyle ilgili birçok gen tanımlıdır ve bu genlerin çoğu 6. kromozomun kısa kolunda yer alır.",
+       "ekran": "İnsanlarda bağışıklık sistemiyle ilgili birçok gen tanımlıdır ve bu genlerin çoğu 6. kromozomun kısa kolunda yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0162",
+       "ses": "Organ nakillerinde en önemli faktör, alıcı ile verici arasında HLA uyumlu doku ya da organ bulunmasıdır.",
+       "ekran": "Organ nakillerinde en önemli faktör, alıcı ile verici arasında HLA uyumlu doku ya da organ bulunmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0163",
+       "ses": "HLA uyumlu embriyo seçildiğinde bu durum bir tedavi yöntemi olarak karşımıza çıkar.",
+       "ekran": "HLA uyumlu embriyo seçildiğinde bu durum bir tedavi yöntemi olarak karşımıza çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0164",
+       "ses": "Beta talasemi, Fanconi aplastik anemisi, orak hücre anemisi ve akut lösemiler gibi birçok ağır kan hastalığının en etkili tedavisi allojenik kök hücre transplantasyonudur ve en iyi sonuç, tamamen HLA uyumlu bir kardeş vericiden yapılan nakille elde edilir.",
+       "ekran": "Beta talasemi, Fanconi aplastik anemisi, orak hücre anemisi ve akut lösemiler gibi birçok ağır kan hastalığının en etkili tedavisi allojenik kök hücre transplantasyonudur ve en iyi sonuç, tamamen HLA uyumlu bir kardeş vericiden yapılan nakille elde edilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p045",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-60-c0165",
+       "ses": "Bu uygulamanın en büyük sıkıntısı, hem HLA açısından uyumlu hem de mutasyon açısından normal bir embriyoyu seçme olasılığının düşük olmasıdır.",
+       "ekran": "Bu uygulamanın en büyük sıkıntısı, hem HLA açısından uyumlu hem de mutasyon açısından normal bir embriyoyu seçme olasılığının düşük olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0166",
+       "ses": "PGD ile ilk HLA tiplemesi 2001 yılında Verlinsky ve arkadaşları tarafından Fanconi aplastik anemisi için yapılmış ve mutasyon analiziyle birleştirilmiştir.",
+       "ekran": "PGD ile ilk HLA tiplemesi 2001 yılında Verlinsky ve arkadaşları tarafından Fanconi aplastik anemisi için yapılmış ve mutasyon analiziyle birleştirilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0167",
+       "ses": "Ülkemizde HLA tiplemesini tek gen hastalıklarıyla birlikte ilk uygulayan Kahraman ve arkadaşlarıdır.",
+       "ekran": "Ülkemizde HLA tiplemesini tek gen hastalıklarıyla birlikte ilk uygulayan Kahraman ve arkadaşlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0168",
+       "ses": "2003 ile 2013 arasında 242 çifte uygulama yapılmış; bunların 170'i hemoglobinopati, 48'i hematolojik malignite, 9'u kemik iliği yetmezliği, 7'si metabolik hastalık, 5'i immün yetmezlik sendromu, 3'ü ise nadir tek gen hastalığı nedeniyledir.",
+       "ekran": "2003 ile 2013 arasında 242 çifte uygulama yapılmış; bunların 170'i hemoglobinopati, 48'i hematolojik malignite, 9'u kemik iliği yetmezliği, 7'si metabolik hastalık, 5'i immün yetmezlik sendromu, 3'ü ise nadir tek gen hastalığı nedeniyledir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0169",
+       "ses": "Sonuçta 80 çift, 94 sağlıklı ve HLA uyumlu bebek sahibi olmuştur.",
+       "ekran": "Sonuçta 80 çift, 94 sağlıklı ve HLA uyumlu bebek sahibi olmuştur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p046",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-60-c0170",
+       "ses": "HLA uyumlu bir donör yoksa, hasta çocuk için HLA uyumlu kardeş amaçlı PGD tek alternatiftir.",
+       "ekran": "HLA uyumlu bir donör yoksa, hasta çocuk için HLA uyumlu kardeş amaçlı PGD tek alternatiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0171",
+       "ses": "En önemli problemlerden biri transfer edilebilecek az sayıda embriyo bulunmasıdır ve bu nedenle gebelik şansı azalır.",
+       "ekran": "En önemli problemlerden biri transfer edilebilecek az sayıda embriyo bulunmasıdır ve bu nedenle gebelik şansı azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0172",
+       "ses": "Diğer zorluklar ovulasyon indüksiyonuna hastanın vereceği yanıtın öngörülememesi, beklenenden az yumurta elde edilmesi, gebelik oranlarının öngörülememesi ve yüksek maliyettir.",
+       "ekran": "Diğer zorluklar ovulasyon indüksiyonuna hastanın vereceği yanıtın öngörülememesi, beklenenden az yumurta elde edilmesi, gebelik oranlarının öngörülememesi ve yüksek maliyettir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0173",
+       "ses": "Ayrıca bu hastalara ICSI yapılması zorunludur; bu, sperm ya da başka hücrelere ait kontaminasyonun önlenmesi için gereklidir.",
+       "ekran": "Ayrıca bu hastalara ICSI yapılması zorunludur; bu, sperm ya da başka hücrelere ait kontaminasyonun önlenmesi için gereklidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p047",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-60-c0174",
+       "ses": "Aileye genetik danışma verilirken testlerin güvenilirlik oranı, hastanın gebe kalabilme yüzdesi, doğacak bebek için öngörülen ya da beklenen risklerin olup olmadığı, doğacak çocuğun dokularının hasta çocuğa en erken ne zaman verilebileceği, tedavi başarısı ve beklentiler anlatılmalı; aileden imzalı onam formu alınmalıdır.",
+       "ekran": "Aileye genetik danışma verilirken testlerin güvenilirlik oranı, hastanın gebe kalabilme yüzdesi, doğacak bebek için öngörülen ya da beklenen risklerin olup olmadığı, doğacak çocuğun dokularının hasta çocuğa en erken ne zaman verilebileceği, tedavi başarısı ve beklentiler anlatılmalı; aileden imzalı onam formu alınmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p048",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-60-c0175",
+       "ses": "Tek hücre düzeyinde çalışmanın kaçınılmaz riskleri vardır ve testin güvenilirliğini olumsuz etkileyen 3 temel risk sayılır.",
+       "ekran": "Tek hücre düzeyinde çalışmanın kaçınılmaz riskleri vardır ve testin güvenilirliğini olumsuz etkileyen 3 temel risk sayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0176",
+       "ses": "1.'si allel drop out, yani bir allelin çoğaltılamayıp kaybolmasıdır; heterozigot bir embriyo bu yüzden yanlışlıkla homozigot görünebilir.",
+       "ekran": "1.'si allel drop out, yani bir allelin çoğaltılamayıp kaybolmasıdır; heterozigot bir embriyo bu yüzden yanlışlıkla homozigot görünebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0177",
+       "ses": "2.'si DNA kontaminasyonudur.",
+       "ekran": "2.'si DNA kontaminasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0178",
+       "ses": "3.'sü amplifikasyon kaybıdır, yani hiç sonuca ulaşılamamasıdır.",
+       "ekran": "3.'sü amplifikasyon kaybıdır, yani hiç sonuca ulaşılamamasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p049",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-60-c0179",
+       "ses": "Bu riskleri ortadan kaldırmak ya da en aza indirmek için laboratuvar koşulları optimal olmalı, ortam kontaminasyon riski içermemeli, uygun donanımlı cihazlar bulunmalı ve hedef DNA bölgesine komşu, yeterli sayıda bilgi verici belirteç teste dahil edilmelidir.",
+       "ekran": "Bu riskleri ortadan kaldırmak ya da en aza indirmek için laboratuvar koşulları optimal olmalı, ortam kontaminasyon riski içermemeli, uygun donanımlı cihazlar bulunmalı ve hedef DNA bölgesine komşu, yeterli sayıda bilgi verici belirteç teste dahil edilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0180",
+       "ses": "Komşu belirteçler sayesinde bir allel kaybolsa bile hangi kromozom bölgesinin aktarıldığı yine izlenebilir.",
+       "ekran": "Komşu belirteçler sayesinde bir allel kaybolsa bile hangi kromozom bölgesinin aktarıldığı yine izlenebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b14",
+   "baslik": "Klinik uygulama, genetik danışmanlık ve hasta hazırlığı",
+   "paragraflar": [
+    {
+     "id": "k1-60-p050",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-60-c0181",
+       "ses": "PGD, genetik hastalıkların tekrarlanmasını önlemede çok önemli bir araçtır ve en önemli yararı anne adayını medikal düşükten korumasıdır.",
+       "ekran": "PGD, genetik hastalıkların tekrarlanmasını önlemede çok önemli bir araçtır ve en önemli yararı anne adayını medikal düşükten korumasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0182",
+       "ses": "Embriyoların genetik taramasında FISH, mikroarray, SNP, STR ve yeni nesil dizileme teknikleri kullanılır.",
+       "ekran": "Embriyoların genetik taramasında FISH, mikroarray, SNP, STR ve yeni nesil dizileme teknikleri kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p051",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-60-c0183",
+       "ses": "Hasta hazırlığı ve genetik danışmanlık aşamasında uygulanacak tanı yöntemleri hakkında ayrıntılı bilgi verilmeli, yöntemin güven aralığı, hastaya getireceği yararlar ve riskler anlatılmalı, hastanın aklındaki sorular yanıtlanmalıdır.",
+       "ekran": "Hasta hazırlığı ve genetik danışmanlık aşamasında uygulanacak tanı yöntemleri hakkında ayrıntılı bilgi verilmeli, yöntemin güven aralığı, hastaya getireceği yararlar ve riskler anlatılmalı, hastanın aklındaki sorular yanıtlanmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0184",
+       "ses": "Bilgilendirilmiş onam formları her iki eşe ayrı ayrı imzalatılmalıdır.",
+       "ekran": "Bilgilendirilmiş onam formları her iki eşe ayrı ayrı imzalatılmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0185",
+       "ses": "Unutmayın, yalnızca genetik tanının eksiksiz yapılması yetmez; tüp bebek işleminin de başarılı olması gerekir.",
+       "ekran": "Unutmayın, yalnızca genetik tanının eksiksiz yapılması yetmez; tüp bebek işleminin de başarılı olması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p052",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-60-c0186",
+       "ses": "Eşlere verilecek genetik danışmanlık 2 katmanlıdır.",
+       "ekran": "Eşlere verilecek genetik danışmanlık 2 katmanlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0187",
+       "ses": "Genel danışmanlıkta PGD yapılacak hastalığın genel özellikleri, tedavi olanakları, komplikasyonları, prognozu, kalıtım riski ve çevresel faktörlerin olası etkileri anlatılır.",
+       "ekran": "Genel danışmanlıkta PGD yapılacak hastalığın genel özellikleri, tedavi olanakları, komplikasyonları, prognozu, kalıtım riski ve çevresel faktörlerin olası etkileri anlatılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0188",
+       "ses": "Spesifik danışmanlıkta ise uygulanacak yöntemin sağlıklı embriyoyu seçme gücü, yanılma olasılığı ve gebelik şansı gibi bilgiler verilir.",
+       "ekran": "Spesifik danışmanlıkta ise uygulanacak yöntemin sağlıklı embriyoyu seçme gücü, yanılma olasılığı ve gebelik şansı gibi bilgiler verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0189",
+       "ses": "Hastalar bilgilendirilirken azalmış penetrans, değişken ekspressivite, mitokondriyal kondisyonlar, trinükleotid tekrar hastalıkları, de novo mutasyonlar, genetik heterojenite, fenokopi, genokopi ve germinal mozaisizm gibi durumlar mutlaka dikkate alınmalıdır.",
+       "ekran": "Hastalar bilgilendirilirken azalmış penetrans, değişken ekspressivite, mitokondriyal kondisyonlar, trinükleotid tekrar hastalıkları, de novo mutasyonlar, genetik heterojenite, fenokopi, genokopi ve germinal mozaisizm gibi durumlar mutlaka dikkate alınmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p053",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-60-c0190",
+       "ses": "Hasta hazırlığında görevler paylaşılır.",
+       "ekran": "Hasta hazırlığında görevler paylaşılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0191",
+       "ses": "Kadın doğum uzmanı, tüp bebek işleminden önce gebelik oluşumunu engelleyebilecek myom, enfeksiyon ve spermiyogram bozuklukları gibi durumları tedavi eder.",
+       "ekran": "Kadın doğum uzmanı, tüp bebek işleminden önce gebelik oluşumunu engelleyebilecek myom, enfeksiyon ve spermiyogram bozuklukları gibi durumları tedavi eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0192",
+       "ses": "Genetik uzmanı, pedigride gerekli görülen alt, üst ve aynı kuşaktaki kişilerden ve eşlerden kan örneği alır; mutasyonlara ve hedef bölgelere yönelik bilgi verici belirteç tasarımını tamamlar.",
+       "ekran": "Genetik uzmanı, pedigride gerekli görülen alt, üst ve aynı kuşaktaki kişilerden ve eşlerden kan örneği alır; mutasyonlara ve hedef bölgelere yönelik bilgi verici belirteç tasarımını tamamlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0193",
+       "ses": "Tüm hazırlıklar bitince ovulasyon indüksiyonu tedavisine başlanır.",
+       "ekran": "Tüm hazırlıklar bitince ovulasyon indüksiyonu tedavisine başlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0194",
+       "ses": "Yumurta toplama günü toplam oosit sayısı, fertilizasyon ve klivaj günlerinde ise embriyolar sayılır.",
+       "ekran": "Yumurta toplama günü toplam oosit sayısı, fertilizasyon ve klivaj günlerinde ise embriyolar sayılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b15",
+   "baslik": "Ovulasyon indüksiyonu, oosit toplama ve denüdasyon",
+   "paragraflar": [
+    {
+     "id": "k1-60-p054",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-60-c0195",
+       "ses": "Başarı için doğru hasta seçimi ve başarılı bir ovulasyon indüksiyonu programı gerekir.",
+       "ekran": "Başarı için doğru hasta seçimi ve başarılı bir ovulasyon indüksiyonu programı gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0196",
+       "ses": "Ovulasyon indüksiyonu, yumurtlamanın uyarılmasıdır.",
+       "ekran": "Ovulasyon indüksiyonu, yumurtlamanın uyarılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0197",
+       "ses": "Amaç, tüp bebek tedavisi sırasında metafaz II aşamasında, uygun sayıda ve sağlıklı oosit elde etmektir; metafaz II yaklaşık 36 saatte gerçekleşir.",
+       "ekran": "Amaç, tüp bebek tedavisi sırasında metafaz II aşamasında, uygun sayıda ve sağlıklı oosit elde etmektir; metafaz II yaklaşık 36 saatte gerçekleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p055",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-60-c0198",
+       "ses": "Oosit toplama işlemi, kısaca OPU, olabildiğince çok oositin toplanmasını hedefler.",
+       "ekran": "Oosit toplama işlemi, kısaca OPU, olabildiğince çok oositin toplanmasını hedefler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0199",
+       "ses": "Burası önemli, sayılar sınav spotudur: oosit toplama, hCG enjeksiyonundan 35 ile 36 saat sonrasına planlanır.",
+       "ekran": "Burası önemli, sayılar sınav spotudur: oosit toplama, hCG enjeksiyonundan 35 ile 36 saat sonrasına planlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0200",
+       "ses": "Toplanan oosit sayısının ideali 8 ile 13 arasıdır.",
+       "ekran": "Toplanan oosit sayısının ideali 8 ile 13 arasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0201",
+       "ses": "Oosit sayısının 5'in altında olması gebelik oranını azaltır, 20'nin üzerinde olması ise over hiperstimülasyon sendromuna neden olabilir.",
+       "ekran": "Oosit sayısının 5'in altında olması gebelik oranını azaltır, 20'nin üzerinde olması ise over hiperstimülasyon sendromuna neden olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p056",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-60-c0202",
+       "ses": "İşlem sırasında oositleri etkileyen en önemli parametreler ısı, osmolarite ve pH değişimleridir.",
+       "ekran": "İşlem sırasında oositleri etkileyen en önemli parametreler ısı, osmolarite ve pH değişimleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0203",
+       "ses": "İşlem transvajinal ultrasonografi eşliğinde, lokal ya da genel anestezi altında yapılır.",
+       "ekran": "İşlem transvajinal ultrasonografi eşliğinde, lokal ya da genel anestezi altında yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0204",
+       "ses": "Folikül sıvısı aspire edilir ve oosit aranmak üzere embriyoloji laboratuvarına gönderilir.",
+       "ekran": "Folikül sıvısı aspire edilir ve oosit aranmak üzere embriyoloji laboratuvarına gönderilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0205",
+       "ses": "Oositler stereo mikroskop altında aranır, bulunanlar Pasteur pipetiyle toplanıp kültür besiyerlerine alınır, 3 ile 4 saat inkübe edilir ve sonra denüdasyon işlemine geçilir.",
+       "ekran": "Oositler stereo mikroskop altında aranır, bulunanlar Pasteur pipetiyle toplanıp kültür besiyerlerine alınır, 3 ile 4 saat inkübe edilir ve sonra denüdasyon işlemine geçilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p057",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-60-c0206",
+       "ses": "Denüdasyon, oositin kümülüs ve korona hücrelerinden ayrılmasıdır; mikroenjeksiyondan önce bu hücrelerin temizlenmesi gerekir.",
+       "ekran": "Denüdasyon, oositin kümülüs ve korona hücrelerinden ayrılmasıdır; mikroenjeksiyondan önce bu hücrelerin temizlenmesi gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0207",
+       "ses": "Hiyalüronidaz enzimi içeren solüsyon ve cam Pasteur pipetleri kullanılır; enzim korona ve kümülüs hücrelerini uzaklaştırır.",
+       "ekran": "Hiyalüronidaz enzimi içeren solüsyon ve cam Pasteur pipetleri kullanılır; enzim korona ve kümülüs hücrelerini uzaklaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0208",
+       "ses": "Enzimin konsantrasyonu ve oositin enzime maruz kalma süresi iyi ayarlanmalıdır.",
+       "ekran": "Enzimin konsantrasyonu ve oositin enzime maruz kalma süresi iyi ayarlanmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0209",
+       "ses": "Temizlenen oositlerde polar cisimciğin varlığı, yani metafaz II, yokluğu, yani metafaz I, ya da germinal vezikül varlığı değerlendirilir ve oositler mikroenjeksiyona alınır.",
+       "ekran": "Temizlenen oositlerde polar cisimciğin varlığı, yani metafaz II, yokluğu, yani metafaz I, ya da germinal vezikül varlığı değerlendirilir ve oositler mikroenjeksiyona alınır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b16",
+   "baslik": "ICSI ve laboratuvar ilkesi",
+   "paragraflar": [
+    {
+     "id": "k1-60-p058",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k1-60-c0210",
+       "ses": "ICSI, tek bir spermin oosit sitoplazmasına mekanik olarak yerleştirilmesidir; mikromanipülatör ve cam mikropipetler kullanılır.",
+       "ekran": "ICSI, tek bir spermin oosit sitoplazmasına mekanik olarak yerleştirilmesidir; mikromanipülatör ve cam mikropipetler kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0211",
+       "ses": "Bu noktada infertilitenin tanımını da hatırlayalım: 1 yıl boyunca korunmasız ilişkiye rağmen çocuk sahibi olunamamasıdır.",
+       "ekran": "Bu noktada infertilitenin tanımını da hatırlayalım: 1 yıl boyunca korunmasız ilişkiye rağmen çocuk sahibi olunamamasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0212",
+       "ses": "İnfertilite kadın ya da erkek kaynaklı olabilir.",
+       "ekran": "İnfertilite kadın ya da erkek kaynaklı olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0213",
+       "ses": "İnfertilite tanısı alan çiftler; infertilite nedeni, süresi, kadının yaşı ve sosyal statüsü gibi faktörler dikkate alınarak tedavi edilmelidir.",
+       "ekran": "İnfertilite tanısı alan çiftler; infertilite nedeni, süresi, kadının yaşı ve sosyal statüsü gibi faktörler dikkate alınarak tedavi edilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p059",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-60-c0214",
+       "ses": "Burası önemli, ICSI endikasyonları sayısal bir sınav spotudur.",
+       "ekran": "Burası önemli, ICSI endikasyonları sayısal bir sınav spotudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0215",
+       "ses": "Ejakulattaki toplam sperm konsantrasyonunun mililitrede 2 milyondan az olması, sperm motilitesinin %5'ten düşük olması, semende normal morfolojinin %4'ten az olması, spermin cerrahi yöntemlerle elde edilmesi gereken durumlar ve oosit sayısının 3'ten az olması ICSI endikasyonlarıdır.",
+       "ekran": "Ejakulattaki toplam sperm konsantrasyonunun mililitrede 2 milyondan az olması, sperm motilitesinin %5'ten düşük olması, semende normal morfolojinin %4'ten az olması, spermin cerrahi yöntemlerle elde edilmesi gereken durumlar ve oosit sayısının 3'ten az olması ICSI endikasyonlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0216",
+       "ses": "En önemlisi, PGD uygulanacak her olguda ICSI mutlak olarak tercih edilmelidir; çünkü klasik yöntemde oositin çevresine yapışan fazla sperm, analizde kontaminasyon kaynağı olabilir.",
+       "ekran": "En önemlisi, PGD uygulanacak her olguda ICSI mutlak olarak tercih edilmelidir; çünkü klasik yöntemde oositin çevresine yapışan fazla sperm, analizde kontaminasyon kaynağı olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p060",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k1-60-c0217",
+       "ses": "Laboratuvar aşamasında gamet hücreleri ICSI ile birleştirilir ve embriyolar elde edilir.",
+       "ekran": "Laboratuvar aşamasında gamet hücreleri ICSI ile birleştirilir ve embriyolar elde edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0218",
+       "ses": "Tüm prosedür boyunca hücrelerin hasar görmemesi, kaybedilmemesi ve kontaminasyona yol açabilecek hatalardan kaçınılması hayati önem taşır.",
+       "ekran": "Tüm prosedür boyunca hücrelerin hasar görmemesi, kaybedilmemesi ve kontaminasyona yol açabilecek hatalardan kaçınılması hayati önem taşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b17",
+   "baslik": "Embriyo biyopsi yöntemleri ve polar cisim biyopsisi",
+   "paragraflar": [
+    {
+     "id": "k1-60-p061",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-60-c0219",
+       "ses": "PGD için farklı laboratuvarlarda farklı biyopsi yöntemleri kullanılır, ancak temelde 3 yöntem vardır: döllenme öncesi ve sonrasında polar cisim biyopsisi, bölünme aşamasında blastomer biyopsisi ve trofoektoderm dokusundan trofoblast hücrelerinin biyopsisi.",
+       "ekran": "PGD için farklı laboratuvarlarda farklı biyopsi yöntemleri kullanılır, ancak temelde 3 yöntem vardır: döllenme öncesi ve sonrasında polar cisim biyopsisi, bölünme aşamasında blastomer biyopsisi ve trofoektoderm dokusundan trofoblast hücrelerinin biyopsisi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0220",
+       "ses": "Bu yöntemler tek başına kullanılabileceği gibi, tanıyı doğrulamak amacıyla birlikte de kullanılabilir.",
+       "ekran": "Bu yöntemler tek başına kullanılabileceği gibi, tanıyı doğrulamak amacıyla birlikte de kullanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0221",
+       "ses": "İyi bir biyopside zamanlama taranacak genetik hataların doğru tanımlanmasına izin vermeli, saptanan anomali embriyodaki gerçek bir anormalliğe karşılık gelmeli, transfer için embriyo seçimine olanak verecek bir tanı elde edilmeli ve işlem embriyoya zarar vermemelidir.",
+       "ekran": "İyi bir biyopside zamanlama taranacak genetik hataların doğru tanımlanmasına izin vermeli, saptanan anomali embriyodaki gerçek bir anormalliğe karşılık gelmeli, transfer için embriyo seçimine olanak verecek bir tanı elde edilmeli ve işlem embriyoya zarar vermemelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p062",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-60-c0222",
+       "ses": "Birinci polar cisim biyopsisi bir gamet hücresi biyopsisidir ve metafaz II aşamasındaki oositten yapılır.",
+       "ekran": "Birinci polar cisim biyopsisi bir gamet hücresi biyopsisidir ve metafaz II aşamasındaki oositten yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0223",
+       "ses": "İkinci polar cisim biyopsisi ise 2 pronükleus aşamasındaki fertilize oositten yapılır.",
+       "ekran": "İkinci polar cisim biyopsisi ise 2 pronükleus aşamasındaki fertilize oositten yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0224",
+       "ses": "Blastomer ve trofoektoderm biyopsileri ise embriyonel biyopsi teknikleridir.",
+       "ekran": "Blastomer ve trofoektoderm biyopsileri ise embriyonel biyopsi teknikleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0225",
+       "ses": "Polar cisim biyopsisi ile oositin genel sağlık durumu ortaya konabilir.",
+       "ekran": "Polar cisim biyopsisi ile oositin genel sağlık durumu ortaya konabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p063",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k1-60-c0226",
+       "ses": "Polar cisimler, yumurta hücresinin olgunlaşması ve döllenmesi sırasında mayoz bölünmede atılan yan ürünlerdir; birinci ve ikinci olmak üzere 2 çeşittir.",
+       "ekran": "Polar cisimler, yumurta hücresinin olgunlaşması ve döllenmesi sırasında mayoz bölünmede atılan yan ürünlerdir; birinci ve ikinci olmak üzere 2 çeşittir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0227",
+       "ses": "Yumurta hücresi yumurtalıktan atıldıktan sonra genetik yapısının yarısını birinci polar cisim adı verilen bir parçayla dışarı atar.",
+       "ekran": "Yumurta hücresi yumurtalıktan atıldıktan sonra genetik yapısının yarısını birinci polar cisim adı verilen bir parçayla dışarı atar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0228",
+       "ses": "Krossing over yoksa birinci polar cisim, yumurtanın genetik yapısının tam bir kopyasını taşır.",
+       "ekran": "Krossing over yoksa birinci polar cisim, yumurtanın genetik yapısının tam bir kopyasını taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0229",
+       "ses": "Yumurta ve sperm birleştikten sonra bir kopya daha, bu kez ikinci polar cisim olarak dışarı atılır.",
+       "ekran": "Yumurta ve sperm birleştikten sonra bir kopya daha, bu kez ikinci polar cisim olarak dışarı atılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0230",
+       "ses": "Embriyolardaki sayısal kromozom anomalilerinin büyük kısmı birinci polar cismin oluştuğu aşamada, yani birinci mayozda meydana gelir.",
+       "ekran": "Embriyolardaki sayısal kromozom anomalilerinin büyük kısmı birinci polar cismin oluştuğu aşamada, yani birinci mayozda meydana gelir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p064",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-60-c0231",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: yalnızca maternal, yani mayoz kaynaklı kromozom anomalilerinin saptanmasına imkân veren ve X kromozomuna bağlı hastalıklarda da kullanılabilen biyopsi yöntemi polar cisim biyopsisidir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: yalnızca maternal, yani mayoz kaynaklı kromozom anomalilerinin saptanmasına imkân veren ve X kromozomuna bağlı hastalıklarda da kullanılabilen biyopsi yöntemi polar cisim biyopsisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0232",
+       "ses": "Polar cisim biyopsileri X kromozomuna bağlı hastalıklarda ve maternal yaş artışına bağlı anöploidilerde sıklıkla kullanılır.",
+       "ekran": "Polar cisim biyopsileri X kromozomuna bağlı hastalıklarda ve maternal yaş artışına bağlı anöploidilerde sıklıkla kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0233",
+       "ses": "Çoğunlukla ileri anne yaşındaki anöploidiler, X kromozomuna bağlı anomaliler ve translokasyonları saptamak için tercih edilir.",
+       "ekran": "Çoğunlukla ileri anne yaşındaki anöploidiler, X kromozomuna bağlı anomaliler ve translokasyonları saptamak için tercih edilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p065",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k1-60-c0234",
+       "ses": "Avantajlarına bakalım.",
+       "ekran": "Avantajlarına bakalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0235",
+       "ses": "Polar cisim biyopsisi fertilizasyondan önce ya da sonra uygulanabilir.",
+       "ekran": "Polar cisim biyopsisi fertilizasyondan önce ya da sonra uygulanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0236",
+       "ses": "Embriyo transferinden önce genetik analiz için daha uzun süre kalır.",
+       "ekran": "Embriyo transferinden önce genetik analiz için daha uzun süre kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0237",
+       "ses": "Alınmasının oosite zararı yoktur.",
+       "ekran": "Alınmasının oosite zararı yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0238",
+       "ses": "Embriyo biyopsisinin yasal olmadığı ülkelerde bir seçenektir.",
+       "ekran": "Embriyo biyopsisinin yasal olmadığı ülkelerde bir seçenektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0239",
+       "ses": "Maternal mutasyonları ve mayoz hatalarını gösterir.",
+       "ekran": "Maternal mutasyonları ve mayoz hatalarını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p066",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k1-60-c0240",
+       "ses": "Ancak dezavantajları avantajlarından fazladır.",
+       "ekran": "Ancak dezavantajları avantajlarından fazladır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0241",
+       "ses": "Paternal ve mitotik kaynaklı anöploidileri tespit edemez; mitotik hataların teşhisinde ve cinsiyet tayininde kullanılamaz.",
+       "ekran": "Paternal ve mitotik kaynaklı anöploidileri tespit edemez; mitotik hataların teşhisinde ve cinsiyet tayininde kullanılamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0242",
+       "ses": "Zaman alıcı ve maliyetlidir.",
+       "ekran": "Zaman alıcı ve maliyetlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0243",
+       "ses": "Polar cisimler parçalanmaya uğrayabilir; bu biyopsiyi zorlaştırır ve tüm parçalar alınmazsa yanlış tanıya yol açabilir.",
+       "ekran": "Polar cisimler parçalanmaya uğrayabilir; bu biyopsiyi zorlaştırır ve tüm parçalar alınmazsa yanlış tanıya yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0244",
+       "ses": "Ayrıca bu yaklaşım muhtemelen bölünme aşamasından sonraki embriyo gelişimine zarar vererek canlı doğum oranını azaltır; bu nedenle günümüzde nadiren kullanılır.",
+       "ekran": "Ayrıca bu yaklaşım muhtemelen bölünme aşamasından sonraki embriyo gelişimine zarar vererek canlı doğum oranını azaltır; bu nedenle günümüzde nadiren kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p067",
+     "sayfa": 65,
+     "cumleler": [
+      {
+       "id": "k1-60-c0245",
+       "ses": "Polar cisim incelemesi, indirekt bir genotip tayin yöntemidir.",
+       "ekran": "Polar cisim incelemesi, indirekt bir genotip tayin yöntemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0246",
+       "ses": "Birinci polar cisim birinci mayozda ovumdan ayrılır ve ovum ile birinci polar cisim, her kromozom çiftinin farklı bir homoloğunu alır.",
+       "ekran": "Birinci polar cisim birinci mayozda ovumdan ayrılır ve ovum ile birinci polar cisim, her kromozom çiftinin farklı bir homoloğunu alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0247",
+       "ses": "Dolayısıyla otozomal resesif bir mutasyon için heterozigot olan anne adayında polar cisimcikte mutasyon saptanırsa, oosit normal alleli taşıyor demektir.",
+       "ekran": "Dolayısıyla otozomal resesif bir mutasyon için heterozigot olan anne adayında polar cisimcikte mutasyon saptanırsa, oosit normal alleli taşıyor demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0248",
+       "ses": "Karşılaştırırsak: blastomer incelemesi embriyonun kendisi hakkında bilgi verir ve her iki ebeveynden kaynaklanan sorunlarda uygulanabilir; polar cisimcik incelemesi ise yalnızca anne kaynaklı genetik risklerde uygulanabilir.",
+       "ekran": "Karşılaştırırsak: blastomer incelemesi embriyonun kendisi hakkında bilgi verir ve her iki ebeveynden kaynaklanan sorunlarda uygulanabilir; polar cisimcik incelemesi ise yalnızca anne kaynaklı genetik risklerde uygulanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b18",
+   "baslik": "Blastomer ve blastokist biyopsisi",
+   "paragraflar": [
+    {
+     "id": "k1-60-p068",
+     "sayfa": 57,
+     "cumleler": [
+      {
+       "id": "k1-60-c0249",
+       "ses": "Klivaj, yani blastomer aşamasında biyopsiye geçelim.",
+       "ekran": "Klivaj, yani blastomer aşamasında biyopsiye geçelim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0250",
+       "ses": "Burası önemli: blastomer analizi fertilizasyondan sonraki 3. günde, 68. ile 72. saatler arasında, embriyonun 6 ile 8 hücreli aşamasında yapılır.",
+       "ekran": "Burası önemli: blastomer analizi fertilizasyondan sonraki 3. günde, 68. ile 72. saatler arasında, embriyonun 6 ile 8 hücreli aşamasında yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0251",
+       "ses": "Uzun süre PGD'de en çok kullanılan yöntem olmuştur, ancak günümüzde yerini blastokist biyopsisine bırakmıştır.",
+       "ekran": "Uzun süre PGD'de en çok kullanılan yöntem olmuştur, ancak günümüzde yerini blastokist biyopsisine bırakmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0252",
+       "ses": "Blastomer biyopsisi otozomal dominant ve resesif hastalıklarda, HLA amaçlı PGD'de, kromozomal translokasyon taşıyıcılığında ve anöploidi taramalarında yaygın olarak kullanılmıştır.",
+       "ekran": "Blastomer biyopsisi otozomal dominant ve resesif hastalıklarda, HLA amaçlı PGD'de, kromozomal translokasyon taşıyıcılığında ve anöploidi taramalarında yaygın olarak kullanılmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0253",
+       "ses": "Teknikte zona pellusidadaki açıklıktan biyopsi pipeti yerleştirilir, çekirdek içeren hedef blastomer pipete aspire edilir ve yavaşça ortama bırakılır.",
+       "ekran": "Teknikte zona pellusidadaki açıklıktan biyopsi pipeti yerleştirilir, çekirdek içeren hedef blastomer pipete aspire edilir ve yavaşça ortama bırakılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p069",
+     "sayfa": 60,
+     "cumleler": [
+      {
+       "id": "k1-60-c0254",
+       "ses": "Blastokist biyopsisi, trofoektoderm hücrelerinin biyopsiyle alınmasıdır ve döllenmeyi izleyen 5. günde yapılır.",
+       "ekran": "Blastokist biyopsisi, trofoektoderm hücrelerinin biyopsiyle alınmasıdır ve döllenmeyi izleyen 5. günde yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0255",
+       "ses": "Birçok yönden diğer 2 yönteme üstündür.",
+       "ekran": "Birçok yönden diğer 2 yönteme üstündür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0256",
+       "ses": "En önemli avantajı birden fazla hücre alınmasına izin vermesidir; tek seferde 6 ile 7 hücre alınabilir.",
+       "ekran": "En önemli avantajı birden fazla hücre alınmasına izin vermesidir; tek seferde 6 ile 7 hücre alınabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0257",
+       "ses": "Biyopsi tekniği daha kolaydır.",
+       "ekran": "Biyopsi tekniği daha kolaydır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0258",
+       "ses": "Embriyonal çıkıntıya uzak olduğu için daha etik ve güvenlidir.",
+       "ekran": "Embriyonal çıkıntıya uzak olduğu için daha etik ve güvenlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0259",
+       "ses": "Biyopsi trofoektodermden yapıldığı için embriyo açısından kritik hücreler alınmaz ve embriyonun tutunma şansı artar.",
+       "ekran": "Biyopsi trofoektodermden yapıldığı için embriyo açısından kritik hücreler alınmaz ve embriyonun tutunma şansı artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0260",
+       "ses": "Blastokist aşamasına ulaşan embriyoların implantasyon potansiyeli yüksek olduğundan daha az sayıda embriyo transfer edilir ve böylece çoğul gebelikler önlenir.",
+       "ekran": "Blastokist aşamasına ulaşan embriyoların implantasyon potansiyeli yüksek olduğundan daha az sayıda embriyo transfer edilir ve böylece çoğul gebelikler önlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p070",
+     "sayfa": 62,
+     "cumleler": [
+      {
+       "id": "k1-60-c0261",
+       "ses": "Dezavantajları da vardır: geç dönemde yapılması, embriyo dondurma işleminin beraberinde yapılması gerekliliği ve zaman problemi.",
+       "ekran": "Dezavantajları da vardır: geç dönemde yapılması, embriyo dondurma işleminin beraberinde yapılması gerekliliği ve zaman problemi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0262",
+       "ses": "Trofoektoderm tabakası plasentayı oluşturur; bu nedenle fetüs oluşumunda yer almayan dokuların örneklenmesinin embriyonik canlılık riskini azalttığı düşünülür.",
+       "ekran": "Trofoektoderm tabakası plasentayı oluşturur; bu nedenle fetüs oluşumunda yer almayan dokuların örneklenmesinin embriyonik canlılık riskini azalttığı düşünülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0263",
+       "ses": "Yine de biyopsi tamamen risksiz değildir; uygun olmayan boyutta bir biyopsi PGD sonuçlarını, hatta canlı doğum oranlarını olumsuz etkileyebileceğinden uygulayıcının bilgi ve deneyimi önemlidir.",
+       "ekran": "Yine de biyopsi tamamen risksiz değildir; uygun olmayan boyutta bir biyopsi PGD sonuçlarını, hatta canlı doğum oranlarını olumsuz etkileyebileceğinden uygulayıcının bilgi ve deneyimi önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p071",
+     "sayfa": 61,
+     "cumleler": [
+      {
+       "id": "k1-60-c0264",
+       "ses": "Teknik ayrıntıya bakalım.",
+       "ekran": "Teknik ayrıntıya bakalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0265",
+       "ses": "Şekilde, zona pellusidadaki bir açıklıktan trofoektodermi dışarı taşan, genişlemiş bir blastokist görülür; bu açıklık 3. ya da 4. günde bir mikrolazerle oluşturulmuştur.",
+       "ekran": "Şekilde, zona pellusidadaki bir açıklıktan trofoektodermi dışarı taşan, genişlemiş bir blastokist görülür; bu açıklık 3. ya da 4. günde bir mikrolazerle oluşturulmuştur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0266",
+       "ses": "Ardından dışarı taşan trofoektoderm hücreleri zona yoluyla aspire edilir, hücreler arasındaki sıkı bağlantılar lazer atışlarıyla kırılır ve sonuçta 2 ile 9 arasında hücre elde edilir.",
+       "ekran": "Ardından dışarı taşan trofoektoderm hücreleri zona yoluyla aspire edilir, hücreler arasındaki sıkı bağlantılar lazer atışlarıyla kırılır ve sonuçta 2 ile 9 arasında hücre elde edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0267",
+       "ses": "Bir başka özetle, blastokist biyopsisi fertilizasyondan sonra 4. ile 5. günlerde yapılır; zona pellusida lazerle, asit Tyrode solüsyonuyla ya da keskin cam pipetle açılır ve 5 ile 8 hücre aspire edilir.",
+       "ekran": "Bir başka özetle, blastokist biyopsisi fertilizasyondan sonra 4. ile 5. günlerde yapılır; zona pellusida lazerle, asit Tyrode solüsyonuyla ya da keskin cam pipetle açılır ve 5 ile 8 hücre aspire edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0268",
+       "ses": "Derste bu ölçüdeki hücre alımının embriyonun canlılığını etkilemediği vurgulanır.",
+       "ekran": "Derste bu ölçüdeki hücre alımının embriyonun canlılığını etkilemediği vurgulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0269",
+       "ses": "Bu yöntem en az zararlı ve en fazla DNA elde edilen yöntemdir.",
+       "ekran": "Bu yöntem en az zararlı ve en fazla DNA elde edilen yöntemdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b19",
+   "baslik": "Genetik testler: tüm genom amplifikasyonu ve tek hücre PCR",
+   "paragraflar": [
+    {
+     "id": "k1-60-p072",
+     "sayfa": 66,
+     "cumleler": [
+      {
+       "id": "k1-60-c0270",
+       "ses": "Biyopsiyle alınan birkaç hücrenin DNA'sı analiz için yetersizdir.",
+       "ekran": "Biyopsiyle alınan birkaç hücrenin DNA'sı analiz için yetersizdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0271",
+       "ses": "PGD'de kullanılan genetik testler PCR, tüm genom amplifikasyonu, FISH ve mikroarraydir; bunlara dizileme yöntemleri de eklenir.",
+       "ekran": "PGD'de kullanılan genetik testler PCR, tüm genom amplifikasyonu, FISH ve mikroarraydir; bunlara dizileme yöntemleri de eklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0272",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: güncel PGD'de rutin olarak kullanılan yöntemler PCR, interfaz FISH, mikroarray ve yeni nesil dizilemedir; restriksiyon fragman uzunluk polimorfizmi, yani RFLP, güncel preimplantasyon genetik tanıda rutin olarak kullanılmaz.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: güncel PGD'de rutin olarak kullanılan yöntemler PCR, interfaz FISH, mikroarray ve yeni nesil dizilemedir; restriksiyon fragman uzunluk polimorfizmi, yani RFLP, güncel preimplantasyon genetik tanıda rutin olarak kullanılmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p073",
+     "sayfa": 66,
+     "cumleler": [
+      {
+       "id": "k1-60-c0273",
+       "ses": "Tüm genom amplifikasyonu, çok az miktardaki DNA örneğinden genomik analiz yapılacağı zaman, analizden önce DNA miktarını artırmak için uygulanan bir yöntemdir.",
+       "ekran": "Tüm genom amplifikasyonu, çok az miktardaki DNA örneğinden genomik analiz yapılacağı zaman, analizden önce DNA miktarını artırmak için uygulanan bir yöntemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0274",
+       "ses": "FISH ise DNA'yı izole etmeden, bulunduğu ortamda analiz etmeyi sağlar ve blastomerlerden anöploidi taramasında kullanılmıştır.",
+       "ekran": "FISH ise DNA'yı izole etmeden, bulunduğu ortamda analiz etmeyi sağlar ve blastomerlerden anöploidi taramasında kullanılmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p074",
+     "sayfa": 67,
+     "cumleler": [
+      {
+       "id": "k1-60-c0275",
+       "ses": "PCR, tek gen hastalıklarının tanımlanmasında kullanılır.",
+       "ekran": "PCR, tek gen hastalıklarının tanımlanmasında kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0276",
+       "ses": "Önce PGD yapılacak hastalık için bilgi verici belirteç analizleri yapılır, belirteç primerleri seçilir ve mutasyona özgü minisekanslama primerleri tasarlanır.",
+       "ekran": "Önce PGD yapılacak hastalık için bilgi verici belirteç analizleri yapılır, belirteç primerleri seçilir ve mutasyona özgü minisekanslama primerleri tasarlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0277",
+       "ses": "Anne ve babadan gelen aleller tespit edilir, bu allellerin embriyoya geçişi izlenir ve mutasyonlu ile normal aleller belirlenir.",
+       "ekran": "Anne ve babadan gelen aleller tespit edilir, bu allellerin embriyoya geçişi izlenir ve mutasyonlu ile normal aleller belirlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p075",
+     "sayfa": 68,
+     "cumleler": [
+      {
+       "id": "k1-60-c0278",
+       "ses": "Tek hücre PCR yönteminde biyopsiyle alınan blastomer hücreleri, içinde lizis, yani eritme solüsyonu bulunan PCR tüplerine aktarılır.",
+       "ekran": "Tek hücre PCR yönteminde biyopsiyle alınan blastomer hücreleri, içinde lizis, yani eritme solüsyonu bulunan PCR tüplerine aktarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0279",
+       "ses": "Bu yolla serbest kalan saf DNA'da, hastalığın bulunduğu genetik bölgeyi milyonlarca kopya halinde çoğaltmaya yarayan özel tasarlanmış primerler kullanılarak tek hücre PCR'ı denen bir dizi enzimatik reaksiyon uygulanır.",
+       "ekran": "Bu yolla serbest kalan saf DNA'da, hastalığın bulunduğu genetik bölgeyi milyonlarca kopya halinde çoğaltmaya yarayan özel tasarlanmış primerler kullanılarak tek hücre PCR'ı denen bir dizi enzimatik reaksiyon uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0280",
+       "ses": "Ardından mutasyon analiziyle sağlıklı ve hastalıklı embriyolar ayırt edilir.",
+       "ekran": "Ardından mutasyon analiziyle sağlıklı ve hastalıklı embriyolar ayırt edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0281",
+       "ses": "Daha önce konuştuğumuz allel drop out ve kontaminasyon riskleri, tam da bu çoğaltma basamağında ortaya çıkar.",
+       "ekran": "Daha önce konuştuğumuz allel drop out ve kontaminasyon riskleri, tam da bu çoğaltma basamağında ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b20",
+   "baslik": "PGT alt tipleri",
+   "paragraflar": [
+    {
+     "id": "k1-60-p076",
+     "sayfa": 69,
+     "cumleler": [
+      {
+       "id": "k1-60-c0282",
+       "ses": "Güncel terminolojide PGD ve PGS, preimplantasyon genetik test, yani PGT çatısı altında 3 tipe ayrılır.",
+       "ekran": "Güncel terminolojide PGD ve PGS, preimplantasyon genetik test, yani PGT çatısı altında 3 tipe ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0283",
+       "ses": "Burası önemli: PGT-A, sayısal kromozom anomalilerinin, yani anöploidilerin tespitidir ve eski adı PGS'tir.",
+       "ekran": "Burası önemli: PGT-A, sayısal kromozom anomalilerinin, yani anöploidilerin tespitidir ve eski adı PGS'tir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0284",
+       "ses": "PGT-SR, translokasyon gibi yapısal kromozom anomalilerinin tespitidir.",
+       "ekran": "PGT-SR, translokasyon gibi yapısal kromozom anomalilerinin tespitidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0285",
+       "ses": "PGT-M ise monogenik hastalık oluşturan gen bozukluklarının tespitidir.",
+       "ekran": "PGT-M ise monogenik hastalık oluşturan gen bozukluklarının tespitidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0286",
+       "ses": "Basitçe eşleştirin: anöploidi taraması PGT-A, translokasyon taşıyıcılığı PGT-SR, tek gen hastalığı PGT-M.",
+       "ekran": "Basitçe eşleştirin: anöploidi taraması PGT-A, translokasyon taşıyıcılığı PGT-SR, tek gen hastalığı PGT-M.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p077",
+     "sayfa": 70,
+     "cumleler": [
+      {
+       "id": "k1-60-c0287",
+       "ses": "Biyopsi materyali olarak polar cisim, 1 ya da 2 blastomer ya da 5 ile 10 trofoektoderm hücresi kullanılabilir.",
+       "ekran": "Biyopsi materyali olarak polar cisim, 1 ya da 2 blastomer ya da 5 ile 10 trofoektoderm hücresi kullanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0288",
+       "ses": "Embriyo canlılığını etkileyen faktörler ise maternal ve paternal faktörler, optimal stimülasyon protokolleri ve gamet olgunlaşması, optimal gamet ve embriyo manipülasyonu, optimal kültür koşulları, başarılı embriyo seçimi ve transferi ile uygun rahim içi ortamdır.",
+       "ekran": "Embriyo canlılığını etkileyen faktörler ise maternal ve paternal faktörler, optimal stimülasyon protokolleri ve gamet olgunlaşması, optimal gamet ve embriyo manipülasyonu, optimal kültür koşulları, başarılı embriyo seçimi ve transferi ile uygun rahim içi ortamdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b21",
+   "baslik": "Floresan in situ hibridizasyon",
+   "paragraflar": [
+    {
+     "id": "k1-60-p078",
+     "sayfa": 71,
+     "cumleler": [
+      {
+       "id": "k1-60-c0289",
+       "ses": "Floresan in situ hibridizasyon, yani FISH, sayısal ve yapısal kromozom bozuklukları için kullanılan bir yöntemdir.",
+       "ekran": "Floresan in situ hibridizasyon, yani FISH, sayısal ve yapısal kromozom bozuklukları için kullanılan bir yöntemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0290",
+       "ses": "Teknik, biyopsi yapılan hücrenin cam lama fiksasyonu, floresan işaretli probun uygulanması, ardından denatürasyon, hibridizasyon ve son olarak yıkama aşamalarından oluşur.",
+       "ekran": "Teknik, biyopsi yapılan hücrenin cam lama fiksasyonu, floresan işaretli probun uygulanması, ardından denatürasyon, hibridizasyon ve son olarak yıkama aşamalarından oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0291",
+       "ses": "13, 18, 21, X ve Y kromozomları için anöploidi taraması yapılabilir.",
+       "ekran": "13, 18, 21, X ve Y kromozomları için anöploidi taraması yapılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0292",
+       "ses": "FISH özellikle dengeli translokasyonlar gibi yapısal kromozom anomalileri için kullanılan bir yöntemdir.",
+       "ekran": "FISH özellikle dengeli translokasyonlar gibi yapısal kromozom anomalileri için kullanılan bir yöntemdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p079",
+     "sayfa": 72,
+     "cumleler": [
+      {
+       "id": "k1-60-c0293",
+       "ses": "İnterfaz FISH, bölünmeyen hücre çekirdeğinde hedef bölgeye özgü analiz yapar.",
+       "ekran": "İnterfaz FISH, bölünmeyen hücre çekirdeğinde hedef bölgeye özgü analiz yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0294",
+       "ses": "PGT-SR ve PGT-A'da, X kromozomuna bağlı hastalıklarda cinsiyet seçiminde, translokasyon, inversiyon, delesyon, duplikasyon ve insersiyon gibi yapısal değişikliklerde kullanılır.",
+       "ekran": "PGT-SR ve PGT-A'da, X kromozomuna bağlı hastalıklarda cinsiyet seçiminde, translokasyon, inversiyon, delesyon, duplikasyon ve insersiyon gibi yapısal değişikliklerde kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0295",
+       "ses": "3. ve 5. gün embriyolarına uygulanabilir ve aile çalışması gerektirir.",
+       "ekran": "3. ve 5. gün embriyolarına uygulanabilir ve aile çalışması gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p080",
+     "sayfa": 72,
+     "cumleler": [
+      {
+       "id": "k1-60-c0296",
+       "ses": "İnterfaz FISH'in dezavantajları da vardır.",
+       "ekran": "İnterfaz FISH'in dezavantajları da vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0297",
+       "ses": "Floresan işaretleme ve analiz için deneyimli personel gerekir.",
+       "ekran": "Floresan işaretleme ve analiz için deneyimli personel gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0298",
+       "ses": "Sinyaller üst üste binebilir; bu, 1 kromozomun eksik sayılmasına yol açabilir.",
+       "ekran": "Sinyaller üst üste binebilir; bu, 1 kromozomun eksik sayılmasına yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0299",
+       "ses": "DNA bütünlüğünün bozulması parçalı prob bağlanmasına neden olabilir.",
+       "ekran": "DNA bütünlüğünün bozulması parçalı prob bağlanmasına neden olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0300",
+       "ses": "Subtelomerik bölgelerde ve 10 megabazın altındaki değişikliklerde analiz güçtür.",
+       "ekran": "Subtelomerik bölgelerde ve 10 megabazın altındaki değişikliklerde analiz güçtür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0301",
+       "ses": "Ayrıca çapraz hibridizasyon gösteren problar vardır; D1Z7, D15Z1 ve D19Z3 probları buna örnektir.",
+       "ekran": "Ayrıca çapraz hibridizasyon gösteren problar vardır; D1Z7, D15Z1 ve D19Z3 probları buna örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b22",
+   "baslik": "Mikroarray ve dizileme",
+   "paragraflar": [
+    {
+     "id": "k1-60-p081",
+     "sayfa": 74,
+     "cumleler": [
+      {
+       "id": "k1-60-c0302",
+       "ses": "Dizi karşılaştırmalı genomik hibridizasyon, yani array CGH, DNA miktarındaki dozaj farklarını saptayan yeni moleküler genetik yöntemlerden biridir.",
+       "ekran": "Dizi karşılaştırmalı genomik hibridizasyon, yani array CGH, DNA miktarındaki dozaj farklarını saptayan yeni moleküler genetik yöntemlerden biridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0303",
+       "ses": "Bu yöntemle embriyolardaki sayısal ve yapısal kromozom anomalileri tek bir işlemle anlaşılabilir; 24 kromozomun anöploidileri ile kromozomlardaki delesyon, duplikasyon ve dengeli translokasyonlar saptanabilir.",
+       "ekran": "Bu yöntemle embriyolardaki sayısal ve yapısal kromozom anomalileri tek bir işlemle anlaşılabilir; 24 kromozomun anöploidileri ile kromozomlardaki delesyon, duplikasyon ve dengeli translokasyonlar saptanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0304",
+       "ses": "Böylece embriyoda tüm kromozomların incelenmesi mümkün olur.",
+       "ekran": "Böylece embriyoda tüm kromozomların incelenmesi mümkün olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0305",
+       "ses": "Ancak önemli bir dezavantajı vardır: işlemin yaklaşık 4 ile 5 gün sürmesi nedeniyle embriyonun dondurulması zorunlu hale gelir.",
+       "ekran": "Ancak önemli bir dezavantajı vardır: işlemin yaklaşık 4 ile 5 gün sürmesi nedeniyle embriyonun dondurulması zorunlu hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p082",
+     "sayfa": 75,
+     "cumleler": [
+      {
+       "id": "k1-60-c0306",
+       "ses": "Sekanslama, yani dizileme, özellikle tek gen hastalıkları için kullanılır.",
+       "ekran": "Sekanslama, yani dizileme, özellikle tek gen hastalıkları için kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0307",
+       "ses": "Günümüzde PGD'de yaygın olarak kullanılan 2 dizileme yöntemi vardır: yeni nesil dizileme ve Sanger dizilemesi.",
+       "ekran": "Günümüzde PGD'de yaygın olarak kullanılan 2 dizileme yöntemi vardır: yeni nesil dizileme ve Sanger dizilemesi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0308",
+       "ses": "Embriyodan biyopsi yapıldıktan sonra hücre lizis solüsyonuna atılır, genomik DNA serbest kalır ve hastalığın bulunduğu bölgeye özgü primerlerle milyonlarca kopya elde edilir.",
+       "ekran": "Embriyodan biyopsi yapıldıktan sonra hücre lizis solüsyonuna atılır, genomik DNA serbest kalır ve hastalığın bulunduğu bölgeye özgü primerlerle milyonlarca kopya elde edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0309",
+       "ses": "Daha sonra dizilemeyle hastalığa neden olan mutasyon ya da mikrodelesyon gibi patolojilere bakılır.",
+       "ekran": "Daha sonra dizilemeyle hastalığa neden olan mutasyon ya da mikrodelesyon gibi patolojilere bakılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p083",
+     "sayfa": 76,
+     "cumleler": [
+      {
+       "id": "k1-60-c0310",
+       "ses": "Burası önemli, bu ikisi sınavda karşılaştırılır: Sanger dizi analizi yalnızca tek gen hastalıklarındaki patolojiler için analiz imkânı verir.",
+       "ekran": "Burası önemli, bu ikisi sınavda karşılaştırılır: Sanger dizi analizi yalnızca tek gen hastalıklarındaki patolojiler için analiz imkânı verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0311",
+       "ses": "Yeni nesil dizi analiziyle ise hem tek gen hastalıklarına bakılabilir hem de anöploidi taraması yapılabilir.",
+       "ekran": "Yeni nesil dizi analiziyle ise hem tek gen hastalıklarına bakılabilir hem de anöploidi taraması yapılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0312",
+       "ses": "Sanger ile anöploidi taraması yapılamaz.",
+       "ekran": "Sanger ile anöploidi taraması yapılamaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p084",
+     "sayfa": 77,
+     "cumleler": [
+      {
+       "id": "k1-60-c0313",
+       "ses": "Klasik akışı bir cümlede toparlarsak: in vitro fertilizasyon yapılır, 4 ile 8 hücre aşamasında blastomer biyopsisi alınır ve alınan hücreye genetik tanı testi uygulanır.",
+       "ekran": "Klasik akışı bir cümlede toparlarsak: in vitro fertilizasyon yapılır, 4 ile 8 hücre aşamasında blastomer biyopsisi alınır ve alınan hücreye genetik tanı testi uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0314",
+       "ses": "Bu test, 13, 18, 21, X ve Y kromozomları için FISH ya da PCR ve dizi analizi olabilir.",
+       "ekran": "Bu test, 13, 18, 21, X ve Y kromozomları için FISH ya da PCR ve dizi analizi olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b23",
+   "baslik": "Sorunlar, güvenilirlik ve mozaisizm",
+   "paragraflar": [
+    {
+     "id": "k1-60-p085",
+     "sayfa": 80,
+     "cumleler": [
+      {
+       "id": "k1-60-c0315",
+       "ses": "PGD güçlü bir yöntemdir ama sınırları vardır.",
+       "ekran": "PGD güçlü bir yöntemdir ama sınırları vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0316",
+       "ses": "Tüp bebekle doğan çocuklarda doğumsal anomaliler normal popülasyona göre biraz daha fazla görülmektedir.",
+       "ekran": "Tüp bebekle doğan çocuklarda doğumsal anomaliler normal popülasyona göre biraz daha fazla görülmektedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0317",
+       "ses": "Bunun nedeni olarak kültür koşulları ve embriyoya uygulanan mekanik muamele sorgulanmaktadır.",
+       "ekran": "Bunun nedeni olarak kültür koşulları ve embriyoya uygulanan mekanik muamele sorgulanmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0318",
+       "ses": "Ayrıca PGD testleri tek hücreden ya da sınırlı sayıda hücreden yapıldığı için doğruluk ve güvenilirlik oranları riskle doğrudan ilişkilidir.",
+       "ekran": "Ayrıca PGD testleri tek hücreden ya da sınırlı sayıda hücreden yapıldığı için doğruluk ve güvenilirlik oranları riskle doğrudan ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0319",
+       "ses": "Hata payı sıfır değildir; bu yüzden PGD sonrası prenatal tanıyla doğrulama önerilir.",
+       "ekran": "Hata payı sıfır değildir; bu yüzden PGD sonrası prenatal tanıyla doğrulama önerilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p086",
+     "sayfa": 86,
+     "cumleler": [
+      {
+       "id": "k1-60-c0320",
+       "ses": "Mozaisizmde anöploidinin kökeni yorumu değiştirir.",
+       "ekran": "Mozaisizmde anöploidinin kökeni yorumu değiştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0321",
+       "ses": "Anöploidi mayotik kaynaklıysa embriyodaki tüm hücreler etkilenmiştir; bu durumda stimülasyon protokollerine ve bunların oosit üzerindeki etkilerine odaklanılabilir.",
+       "ekran": "Anöploidi mayotik kaynaklıysa embriyodaki tüm hücreler etkilenmiştir; bu durumda stimülasyon protokollerine ve bunların oosit üzerindeki etkilerine odaklanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0322",
+       "ses": "Anöploidi mitotik kaynaklıysa laboratuvar koşulları üzerine odaklanılabilir.",
+       "ekran": "Anöploidi mitotik kaynaklıysa laboratuvar koşulları üzerine odaklanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0323",
+       "ses": "Çalışmalar, embriyonik mozaisizm oranlarının laboratuvarlar arasında ciddi farklılık gösterdiğine işaret eder; bazılarında bu oran %30'a kadar çıkabilir.",
+       "ekran": "Çalışmalar, embriyonik mozaisizm oranlarının laboratuvarlar arasında ciddi farklılık gösterdiğine işaret eder; bazılarında bu oran %30'a kadar çıkabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0324",
+       "ses": "Bu ciddi fark, modern laboratuvar koşullarının embriyoların uzun süreli kültürü sırasında mitoz bölünme hatalarını tetikleyebildiğini gösterir.",
+       "ekran": "Bu ciddi fark, modern laboratuvar koşullarının embriyoların uzun süreli kültürü sırasında mitoz bölünme hatalarını tetikleyebildiğini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b24",
+   "baslik": "Non invaziv PGT ve uygulanabilen hastalıklar",
+   "paragraflar": [
+    {
+     "id": "k1-60-p087",
+     "sayfa": 84,
+     "cumleler": [
+      {
+       "id": "k1-60-c0325",
+       "ses": "Şu anda trofoektoderm biyopsisi, embriyonun genetik özelliklerinin analizi için sağlam ve güvenilir bir embriyonik DNA kaynağıdır.",
+       "ekran": "Şu anda trofoektoderm biyopsisi, embriyonun genetik özelliklerinin analizi için sağlam ve güvenilir bir embriyonik DNA kaynağıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0326",
+       "ses": "Bu biyopsinin embriyonun üreme potansiyelini etkilemediği gösterilmiş olsa da, embriyoya müdahalenin azaltılmasına ya da tamamen önlenmesine artan bir ilgi vardır.",
+       "ekran": "Bu biyopsinin embriyonun üreme potansiyelini etkilemediği gösterilmiş olsa da, embriyoya müdahalenin azaltılmasına ya da tamamen önlenmesine artan bir ilgi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0327",
+       "ses": "Non invaziv PGT bu ilginin ürünüdür.",
+       "ekran": "Non invaziv PGT bu ilginin ürünüdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p088",
+     "sayfa": 81,
+     "cumleler": [
+      {
+       "id": "k1-60-c0328",
+       "ses": "PGT uygulanabilen hastalıklara derste bir tabloyla örnekler verilir.",
+       "ekran": "PGT uygulanabilen hastalıklara derste bir tabloyla örnekler verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0329",
+       "ses": "Otozomal resesif grupta kistik fibrozis, Tay-Sachs, beta talasemi, orak hücre anemisi, spinal müsküler atrofi, konjenital adrenal hiperplazi, Gaucher hastalığı ve Fanconi anemisi ile HLA uyumu yer alır.",
+       "ekran": "Otozomal resesif grupta kistik fibrozis, Tay-Sachs, beta talasemi, orak hücre anemisi, spinal müsküler atrofi, konjenital adrenal hiperplazi, Gaucher hastalığı ve Fanconi anemisi ile HLA uyumu yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0330",
+       "ses": "Üçlü tekrar hastalıkları grubunda frajil X sendromu, miyotonik distrofi ve Huntington hastalığı bulunur.",
+       "ekran": "Üçlü tekrar hastalıkları grubunda frajil X sendromu, miyotonik distrofi ve Huntington hastalığı bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0331",
+       "ses": "Otozomal dominant grupta Marfan sendromu, Charcot-Marie-Tooth Tip 1A, nörofibromatozis Tip 2, tüberoz skleroz, ailesel adenomatöz polipozis, Li-Fraumeni sendromu ve retinoblastom vardır.",
+       "ekran": "Otozomal dominant grupta Marfan sendromu, Charcot-Marie-Tooth Tip 1A, nörofibromatozis Tip 2, tüberoz skleroz, ailesel adenomatöz polipozis, Li-Fraumeni sendromu ve retinoblastom vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0332",
+       "ses": "X kromozomuna bağlı grupta ise Lesch-Nyhan sendromu, Duchenne kas distrofisi, hemofili ve Hunter sendromu sayılır.",
+       "ekran": "X kromozomuna bağlı grupta ise Lesch-Nyhan sendromu, Duchenne kas distrofisi, hemofili ve Hunter sendromu sayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0333",
+       "ses": "Ülkemizde Sağlık Bakanlığının EK-2K listesinde PGT ile tüp bebek yapılabilecek kalıtsal hastalıklar ve 5 kişilik sağlık kurulu raporu koşulu tanımlanmıştır.",
+       "ekran": "Ülkemizde Sağlık Bakanlığının EK-2K listesinde PGT ile tüp bebek yapılabilecek kalıtsal hastalıklar ve 5 kişilik sağlık kurulu raporu koşulu tanımlanmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-60-b25",
+   "baslik": "Monogenik hastalıklarda linkaj analizi",
+   "paragraflar": [
+    {
+     "id": "k1-60-p089",
+     "sayfa": 88,
+     "cumleler": [
+      {
+       "id": "k1-60-c0334",
+       "ses": "Monogenik hastalıklarda 2 temel yol vardır: linkaj, yani bağlantı analizleri ve yeni nesil dizi analizleri.",
+       "ekran": "Monogenik hastalıklarda 2 temel yol vardır: linkaj, yani bağlantı analizleri ve yeni nesil dizi analizleri.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0335",
+       "ses": "Linkaj analizi, tek gen hastalığı taşıyıcılığında en sık kullanılan PGT-M yöntemidir.",
+       "ekran": "Linkaj analizi, tek gen hastalığı taşıyıcılığında en sık kullanılan PGT-M yöntemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0336",
+       "ses": "Bu yöntemde özgün mutasyonun kendisi incelenmez; bunun yerine mutasyon lokusunda yer alan polimorfik belirteçler, yani STR bölgeleri izlenir.",
+       "ekran": "Bu yöntemde özgün mutasyonun kendisi incelenmez; bunun yerine mutasyon lokusunda yer alan polimorfik belirteçler, yani STR bölgeleri izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0337",
+       "ses": "Aile çalışması ve kapsamlı bir hazırlık aşaması gerekir.",
+       "ekran": "Aile çalışması ve kapsamlı bir hazırlık aşaması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p090",
+     "sayfa": 89,
+     "cumleler": [
+      {
+       "id": "k1-60-c0338",
+       "ses": "Laboratuvar akışı DNA ekstraksiyonu, multipleks PCR ve kapiller elektroforez şeklindedir.",
+       "ekran": "Laboratuvar akışı DNA ekstraksiyonu, multipleks PCR ve kapiller elektroforez şeklindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0339",
+       "ses": "Riskler yine allel drop out ve kontaminasyondur; ayrıca polimorfik STR bölgelerinin bilgi vermeyen, yani non informatif çıkması bir sorundur.",
+       "ekran": "Riskler yine allel drop out ve kontaminasyondur; ayrıca polimorfik STR bölgelerinin bilgi vermeyen, yani non informatif çıkması bir sorundur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0340",
+       "ses": "Derste retinoblastomda, RB1 geni örneğinde, embriyoların STR allelleriyle mutasyon taşıyan ve taşımayan olarak sınıflandırıldığı bir aile analizi gösterilir.",
+       "ekran": "Derste retinoblastomda, RB1 geni örneğinde, embriyoların STR allelleriyle mutasyon taşıyan ve taşımayan olarak sınıflandırıldığı bir aile analizi gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-60-p091",
+     "sayfa": 89,
+     "cumleler": [
+      {
+       "id": "k1-60-c0341",
+       "ses": "Özetle, PGD embriyoyu gebelikten önce test ederek medikal abortusu önler; PGS ise anöploid embriyoyu eleyerek tüp bebek başarısını artırır.",
+       "ekran": "Özetle, PGD embriyoyu gebelikten önce test ederek medikal abortusu önler; PGS ise anöploid embriyoyu eleyerek tüp bebek başarısını artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0342",
+       "ses": "Bugün en çok trofoektoderm biyopsisi kullanılır, polar cisim yalnızca maternal bilgiyi verir.",
+       "ekran": "Bugün en çok trofoektoderm biyopsisi kullanılır, polar cisim yalnızca maternal bilgiyi verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-60-c0343",
+       "ses": "Tek hücre analizinin riskleri, mozaisizm ve hata payı nedeniyle sonuç prenatal tanıyla doğrulanmalıdır.",
+       "ekran": "Tek hücre analizinin riskleri, mozaisizm ve hata payı nedeniyle sonuç prenatal tanıyla doğrulanmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

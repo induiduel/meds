@@ -18,6 +18,7 @@ import { auth } from './auth';
 import { FIREBASE_DB_ENABLED } from './dbFlags';
 import { Committee, QuestionItem, AdminNotification, LectureNote } from '../types';
 import firebaseConfig from '../../firebase-applet-config.json';
+import { aktifCommitteeId } from './kurulTakvimi';
 
 // Initialize Firestore using the configured database ID
 const firestoreDatabaseId = firebaseConfig.firestoreDatabaseId || undefined;
@@ -80,24 +81,8 @@ export const COMMITTEE_SORT_ORDER: Record<string, number> = {
  * based on the official medical school calendar.
  */
 export function getDefaultActiveCommitteeId(): string {
-  const now = new Date();
-  const schedule = [
-    { id: 'donem3-kurul1', examDate: new Date('2026-10-23T23:59:59') },
-    { id: 'donem3-kurul2', examDate: new Date('2026-12-04T23:59:59') },
-    { id: 'donem3-kurul3', examDate: new Date('2027-01-22T23:59:59') },
-    { id: 'donem3-kurul4', examDate: new Date('2027-03-05T23:59:59') },
-    { id: 'donem3-kurul5', examDate: new Date('2027-04-22T23:59:59') },
-    { id: 'donem3-kurul6', examDate: new Date('2027-06-11T23:59:59') },
-    { id: 'donem3-final', examDate: new Date('2027-06-28T23:59:59') },
-    { id: 'donem3-butunleme', examDate: new Date('2027-07-16T23:59:59') },
-  ];
-
-  for (const item of schedule) {
-    if (now <= item.examDate) {
-      return item.id;
-    }
-  }
-  return 'donem3-final';
+  // Tarihler ders programından üretilen takvimden gelir (src/services/kurulTakvimi.ts).
+  return aktifCommitteeId();
 }
 
 export const isCurrent2026_2027Committee = (c: any): boolean => {

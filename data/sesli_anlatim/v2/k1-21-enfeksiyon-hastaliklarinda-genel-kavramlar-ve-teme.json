@@ -1,0 +1,2929 @@
+{
+ "surum": 2,
+ "ders_id": "k1-21",
+ "anahtar": "k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme",
+ "baslik": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-21-b01",
+   "baslik": "Enfeksiyon ve enfeksiyon hastalığı",
+   "paragraflar": [
+    {
+     "id": "k1-21-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-21-c0001",
+       "ses": "Enfeksiyon, bir mikroorganizmanın konağa girmesi, yerleşmesi ve ya da çoğalmasıdır.",
+       "ekran": "Enfeksiyon, bir mikroorganizmanın konağa girmesi, yerleşmesi ve ya da çoğalmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0002",
+       "ses": "Bu tanımın hiçbir yerinde belirti şartı olmadığına dikkat edin.",
+       "ekran": "Bu tanımın hiçbir yerinde belirti şartı olmadığına dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0003",
+       "ses": "Mikroorganizma konağa girip çoğalsa bile klinik belirti ve bulguların ortaya çıkması zorunlu değildir.",
+       "ekran": "Mikroorganizma konağa girip çoğalsa bile klinik belirti ve bulguların ortaya çıkması zorunlu değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0004",
+       "ses": "Yani enfeksiyon asemptomatik, diğer adıyla subklinik seyredebilir; kişi hasta görünmez ama enfektedir.",
+       "ekran": "Yani enfeksiyon asemptomatik, diğer adıyla subklinik seyredebilir; kişi hasta görünmez ama enfektedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-21-c0005",
+       "ses": "Klinik belirti ve bulgular geliştiğinde ise artık enfeksiyon hastalığından söz ederiz.",
+       "ekran": "Klinik belirti ve bulgular geliştiğinde ise artık enfeksiyon hastalığından söz ederiz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0006",
+       "ses": "Aradaki ilişkiyi bir küme gibi düşünün: her enfeksiyon hastalığı bir enfeksiyondur, ancak her enfeksiyon, enfeksiyon hastalığı ile sonuçlanmaz.",
+       "ekran": "Aradaki ilişkiyi bir küme gibi düşünün: her enfeksiyon hastalığı bir enfeksiyondur, ancak her enfeksiyon, enfeksiyon hastalığı ile sonuçlanmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0007",
+       "ses": "Burası önemli, sınavın klasik tuzağıdır: enfeksiyonu hastalıkla eşitlemek yanlıştır; subklinik tablo da enfeksiyon sayılır.",
+       "ekran": "Burası önemli, sınavın klasik tuzağıdır: enfeksiyonu hastalıkla eşitlemek yanlıştır; subklinik tablo da enfeksiyon sayılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b02",
+   "baslik": "Enfeksiyon hastalıklarının genel belirtileri",
+   "paragraflar": [
+    {
+     "id": "k1-21-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-21-c0008",
+       "ses": "Enfeksiyonlar lokal ya da sistemik belirti ve bulgularla seyredebilir ve bu bulguları tutulan sisteme göre gruplarız.",
+       "ekran": "Enfeksiyonlar lokal ya da sistemik belirti ve bulgularla seyredebilir ve bu bulguları tutulan sisteme göre gruplarız.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0009",
+       "ses": "Genel bulgular ateş, üşüme titreme, halsizlik ve iştahsızlıktır; hemen her enfeksiyonda görülebilen, özgül olmayan bulgulardır.",
+       "ekran": "Genel bulgular ateş, üşüme titreme, halsizlik ve iştahsızlıktır; hemen her enfeksiyonda görülebilen, özgül olmayan bulgulardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0010",
+       "ses": "Kardiyovasküler sistemde taşikardi sık görülür; ağır enfeksiyon ya da sepsiste ise hipotansiyon ve dolaşım bozukluğu gelişir ve bu, tablonun ağırlaştığını gösterir.",
+       "ekran": "Kardiyovasküler sistemde taşikardi sık görülür; ağır enfeksiyon ya da sepsiste ise hipotansiyon ve dolaşım bozukluğu gelişir ve bu, tablonun ağırlaştığını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0011",
+       "ses": "Solunum sisteminde boğaz ağrısı, burun akıntısı, öksürük, balgam ve dispne, yani nefes darlığı; gastrointestinal sistemde bulantı, kusma, karın ağrısı ve ishal görülür.",
+       "ekran": "Solunum sisteminde boğaz ağrısı, burun akıntısı, öksürük, balgam ve dispne, yani nefes darlığı; gastrointestinal sistemde bulantı, kusma, karın ağrısı ve ishal görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p004",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-21-c0012",
+       "ses": "Lenfatik sistemde lokal ya da jeneralize lenfadenopati, bazı enfeksiyonlarda ise lenf düğümünün kendisinin iltihabı olan lenfadenit görülür.",
+       "ekran": "Lenfatik sistemde lokal ya da jeneralize lenfadenopati, bazı enfeksiyonlarda ise lenf düğümünün kendisinin iltihabı olan lenfadenit görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0013",
+       "ses": "Hematolojik ve retiküloendotelyal sistemde lökositoz ya da lökopeni, trombositopeni, anemi ve hepatosplenomegali, yani karaciğer ve dalağın birlikte büyümesi saptanabilir.",
+       "ekran": "Hematolojik ve retiküloendotelyal sistemde lökositoz ya da lökopeni, trombositopeni, anemi ve hepatosplenomegali, yani karaciğer ve dalağın birlikte büyümesi saptanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0014",
+       "ses": "Dikkat edin, lökosit sayısı iki yönde de değişebilir; enfeksiyonu yalnız lökositozla eşleştirmek yanlıştır.",
+       "ekran": "Dikkat edin, lökosit sayısı iki yönde de değişebilir; enfeksiyonu yalnız lökositozla eşleştirmek yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0015",
+       "ses": "Deri ve mukozalarda döküntü, peteşi ya da purpura, vezikül, ülser ve eskar, yani siyah kabuklu nekrotik lezyon görülebilir.",
+       "ekran": "Deri ve mukozalarda döküntü, peteşi ya da purpura, vezikül, ülser ve eskar, yani siyah kabuklu nekrotik lezyon görülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0016",
+       "ses": "Santral sinir sisteminde baş ağrısı, ense sertliği, bilinç değişikliği, fokal nörolojik bulgular ve nöbet ortaya çıkabilir.",
+       "ekran": "Santral sinir sisteminde baş ağrısı, ense sertliği, bilinç değişikliği, fokal nörolojik bulgular ve nöbet ortaya çıkabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b03",
+   "baslik": "Ateş, sepsis ve deri tablolarıyla ilgili çıkmış bilgiler",
+   "paragraflar": [
+    {
+     "id": "k1-21-p005",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-21-c0017",
+       "ses": "Ateş bu genel bulguların başında geldiği için çıkmış sorularda patogenezi de soruldu.",
+       "ekran": "Ateş bu genel bulguların başında geldiği için çıkmış sorularda patogenezi de soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0018",
+       "ses": "Burası önemli: termoregülasyon merkezi anterior hipotalamus ve preoptik alandır, posterior hipotalamus değil; bu merkez periferik ve santral mekanizmalarla denetlenir.",
+       "ekran": "Burası önemli: termoregülasyon merkezi anterior hipotalamus ve preoptik alandır, posterior hipotalamus değil; bu merkez periferik ve santral mekanizmalarla denetlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0019",
+       "ses": "Ateş oluşumunda en önemli adım, ateşi tetikleyen prostaglandin E2'nin üretilmesidir.",
+       "ekran": "Ateş oluşumunda en önemli adım, ateşi tetikleyen prostaglandin E2'nin üretilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0020",
+       "ses": "Endojen pirojenler hipotalamusta prostaglandin E2 sentezini artırarak ısı ayar noktasını yükseltir; azaltıp düşürdüğünü söyleyen ifade yanlıştır.",
+       "ekran": "Endojen pirojenler hipotalamusta prostaglandin E2 sentezini artırarak ısı ayar noktasını yükseltir; azaltıp düşürdüğünü söyleyen ifade yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0021",
+       "ses": "İnterlökin 1 ve tümör nekroz faktör alfa ise endojen pirojenlerdir.",
+       "ekran": "İnterlökin 1 ve tümör nekroz faktör alfa ise endojen pirojenlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0022",
+       "ses": "Ayrıca her enfeksiyonda ateş olmaz ve her ateş de enfeksiyon demek değildir.",
+       "ekran": "Ayrıca her enfeksiyonda ateş olmaz ve her ateş de enfeksiyon demek değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p006",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-21-c0023",
+       "ses": "Burası önemli: ayar noktası yükselince vücut ısıyı artırmaya çalışır.",
+       "ekran": "Burası önemli: ayar noktası yükselince vücut ısıyı artırmaya çalışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0024",
+       "ses": "Deride vazokonstriksiyon, titreme, ısı üretiminde artış ve adrenalin ile tiroksin etkisiyle kimyasal ısı üretimi vücut ısısını artıran mekanizmalardır.",
+       "ekran": "Deride vazokonstriksiyon, titreme, ısı üretiminde artış ve adrenalin ile tiroksin etkisiyle kimyasal ısı üretimi vücut ısısını artıran mekanizmalardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0025",
+       "ses": "Deride vazodilatasyon ise tam tersine ısı kaybettirir, yani ısıyı artıran mekanizmalardan biri değildir.",
+       "ekran": "Deride vazodilatasyon ise tam tersine ısı kaybettirir, yani ısıyı artıran mekanizmalardan biri değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0026",
+       "ses": "Ateşin fizyolojik etkilerinden biri taşikardidir; bazal metabolizma, sıvı ve oksijen ihtiyacı ile solunum hızı azalmaz, artar.",
+       "ekran": "Ateşin fizyolojik etkilerinden biri taşikardidir; bazal metabolizma, sıvı ve oksijen ihtiyacı ile solunum hızı azalmaz, artar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p007",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-21-c0027",
+       "ses": "Burası önemli, ateşin yararları da soruldu: ateşte T ve B hücre aktivasyonu, nötrofil migrasyonu, interferon üretimi ve nötrofillerin antibakteriyel madde üretimi artar.",
+       "ekran": "Burası önemli, ateşin yararları da soruldu: ateşte T ve B hücre aktivasyonu, nötrofil migrasyonu, interferon üretimi ve nötrofillerin antibakteriyel madde üretimi artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0028",
+       "ses": "Taşikardiye bağlı koroner yetersizlik gelişmesi ise bir yarar değil, zarardır.",
+       "ekran": "Taşikardiye bağlı koroner yetersizlik gelişmesi ise bir yarar değil, zarardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0029",
+       "ses": "Ateşli hastaya yaklaşımda titremesi olan hasta örtülür, oksijen desteği ve sıvı replasmanı yapılır, etiyolojiye yönelik tetkikler istenir.",
+       "ekran": "Ateşli hastaya yaklaşımda titremesi olan hasta örtülür, oksijen desteği ve sıvı replasmanı yapılır, etiyolojiye yönelik tetkikler istenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0030",
+       "ses": "Burası önemli: semptomatik soğutmada nabız alınan bölgelere ılık suyla ıslatılmış bez konur; buz kalıpları ve buzlu suyla soğuk uygulama, soğuk su banyosu ya da sıvı kısıtlaması yapılmaz, titreme anında da hasta soyulmaz.",
+       "ekran": "Burası önemli: semptomatik soğutmada nabız alınan bölgelere ılık suyla ıslatılmış bez konur; buz kalıpları ve buzlu suyla soğuk uygulama, soğuk su banyosu ya da sıvı kısıtlaması yapılmaz, titreme anında da hasta soyulmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p008",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-21-c0031",
+       "ses": "Sepsisteki hipotansiyon ve dolaşım bozukluğu ile ilgili skorlar da sınavda karşınıza çıktı.",
+       "ekran": "Sepsisteki hipotansiyon ve dolaşım bozukluğu ile ilgili skorlar da sınavda karşınıza çıktı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0032",
+       "ses": "Burası önemli: SOFA skorunda kardiyovasküler sistem yani hipotansiyon, koagülasyon yani trombositopeni, solunum yani arteriyel oksijen basıncının solunan oksijen oranına bölümü ve böbrek fonksiyonu yani kreatinin ya da idrar çıkışı irdelenir; ateş bu kriterlerden değildir.",
+       "ekran": "Burası önemli: SOFA skorunda kardiyovasküler sistem yani hipotansiyon, koagülasyon yani trombositopeni, solunum yani arteriyel oksijen basıncının solunan oksijen oranına bölümü ve böbrek fonksiyonu yani kreatinin ya da idrar çıkışı irdelenir; ateş bu kriterlerden değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0033",
+       "ses": "Buna karşılık sistemik inflamatuvar yanıt sendromu kriterleri ateş ya da hipotermi, takipne, lökositoz ve taşikardidir; arteriyel hipotansiyon bu sendromun kriterleri arasında yer almaz.",
+       "ekran": "Buna karşılık sistemik inflamatuvar yanıt sendromu kriterleri ateş ya da hipotermi, takipne, lökositoz ve taşikardidir; arteriyel hipotansiyon bu sendromun kriterleri arasında yer almaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0034",
+       "ses": "Burası önemli: bakteriyel enfeksiyonu viral ve diğer nedenlerden ayırmada C-reaktif proteinle birlikte bakılan ve doğruluğu daha yüksek akut faz belirteci prokalsitonindir.",
+       "ekran": "Burası önemli: bakteriyel enfeksiyonu viral ve diğer nedenlerden ayırmada C-reaktif proteinle birlikte bakılan ve doğruluğu daha yüksek akut faz belirteci prokalsitonindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0035",
+       "ses": "Deri bulgularıyla bağlantılı birkaç tablo da çıkmış sorularda geldi.",
+       "ekran": "Deri bulgularıyla bağlantılı birkaç tablo da çıkmış sorularda geldi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0036",
+       "ses": "Burası önemli: yüksek ateş, bulantı, kusma, şuur bulanıklığı ve şiddetli ağrıyla gelen, bacağında şişlik, kızarıklık, ısı artışı ve palpasyonda tahta sertliği olan hastada en olası tanı nekrotizan fasiittir; selülit, erizipel, karbonkül ya da deri apsesi değildir.",
+       "ekran": "Burası önemli: yüksek ateş, bulantı, kusma, şuur bulanıklığı ve şiddetli ağrıyla gelen, bacağında şişlik, kızarıklık, ısı artışı ve palpasyonda tahta sertliği olan hastada en olası tanı nekrotizan fasiittir; selülit, erizipel, karbonkül ya da deri apsesi değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0037",
+       "ses": "Yeşil tırnak sendromunun etkeni ise Pseudomonas aeruginosa'dır.",
+       "ekran": "Yeşil tırnak sendromunun etkeni ise Pseudomonas aeruginosa'dır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0038",
+       "ses": "Burası önemli, gazlı gangren etkeni Clostridium türlerinin en önemli toksini, lesitinaz ve sfingomiyelinaz aktivitesi olan bir enzim olan alfa toksindir.",
+       "ekran": "Burası önemli, gazlı gangren etkeni Clostridium türlerinin en önemli toksini, lesitinaz ve sfingomiyelinaz aktivitesi olan bir enzim olan alfa toksindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0039",
+       "ses": "Spontan, yani travmatik olmayan gazlı gangrende nötropeni, intestinal malignite ve diyabet risk faktörleridir; hipertansiyon ise risk faktörlerinden biri değildir.",
+       "ekran": "Spontan, yani travmatik olmayan gazlı gangrende nötropeni, intestinal malignite ve diyabet risk faktörleridir; hipertansiyon ise risk faktörlerinden biri değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b04",
+   "baslik": "Patojen, nonpatojen ve belirleyici 3 faktör",
+   "paragraflar": [
+    {
+     "id": "k1-21-p009",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-21-c0040",
+       "ses": "Hastalık oluşturan mikroorganizmalara patojen, hastalık oluşturmayan zararsız mikroorganizmalara ise nonpatojen denir.",
+       "ekran": "Hastalık oluşturan mikroorganizmalara patojen, hastalık oluşturmayan zararsız mikroorganizmalara ise nonpatojen denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0041",
+       "ses": "Ancak bir enfeksiyonun gelişip gelişmeyeceği yalnızca mikroba bağlı değildir.",
+       "ekran": "Ancak bir enfeksiyonun gelişip gelişmeyeceği yalnızca mikroba bağlı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0042",
+       "ses": "Burası önemli, enfeksiyonun gelişimini belirleyen başlıca 3 faktör vardır: mikroorganizmanın virülansı, yani hastalık yapma gücü; vücuda giren mikroorganizma miktarı, yani enfeksiyon dozu; ve konağın duyarlılığı, yani bağışıklık durumu.",
+       "ekran": "Burası önemli, enfeksiyonun gelişimini belirleyen başlıca 3 faktör vardır: mikroorganizmanın virülansı, yani hastalık yapma gücü; vücuda giren mikroorganizma miktarı, yani enfeksiyon dozu; ve konağın duyarlılığı, yani bağışıklık durumu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0043",
+       "ses": "Bu üçü bir denge gibi çalışır.",
+       "ekran": "Bu üçü bir denge gibi çalışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0044",
+       "ses": "Virülansı yüksek bir etkende düşük doz bile yeterli olabilir; savunması zayıf bir konakta ise daha az virülan bir etken de hastalık yapabilir.",
+       "ekran": "Virülansı yüksek bir etkende düşük doz bile yeterli olabilir; savunması zayıf bir konakta ise daha az virülan bir etken de hastalık yapabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0045",
+       "ses": "Sonucu bu 3 faktör birlikte belirler.",
+       "ekran": "Sonucu bu 3 faktör birlikte belirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b05",
+   "baslik": "Mikroorganizmaların sınıflandırılması",
+   "paragraflar": [
+    {
+     "id": "k1-21-p010",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-21-c0046",
+       "ses": "Mikroorganizmaları hücresel yapılarına göre 3 ana gruba ayırıyoruz.",
+       "ekran": "Mikroorganizmaları hücresel yapılarına göre 3 ana gruba ayırıyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0047",
+       "ses": "Birinci grup aselüler, yani hücresiz ajanlardır: prionlar, viroidler ve virüsler.",
+       "ekran": "Birinci grup aselüler, yani hücresiz ajanlardır: prionlar, viroidler ve virüsler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0048",
+       "ses": "Bunlarda hücre ve hücre zarı yoktur, ancak canlı hücre içinde çoğalabilirler.",
+       "ekran": "Bunlarda hücre ve hücre zarı yoktur, ancak canlı hücre içinde çoğalabilirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0049",
+       "ses": "Hücresel dal ise çekirdek zarı ve zarlı organeli olmayan prokaryotlar ile gerçek çekirdekli, zarlı organelli ökaryotlar olarak ikiye ayrılır.",
+       "ekran": "Hücresel dal ise çekirdek zarı ve zarlı organeli olmayan prokaryotlar ile gerçek çekirdekli, zarlı organelli ökaryotlar olarak ikiye ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p011",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-21-c0050",
+       "ses": "Tek hücreli prokaryotlar bakteriler, klamidyalar, mikoplazmalar ve riketsiyalardır.",
+       "ekran": "Tek hücreli prokaryotlar bakteriler, klamidyalar, mikoplazmalar ve riketsiyalardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0051",
+       "ses": "Tek hücreli ökaryotlar maya mantarlar ve protozoonlardır.",
+       "ekran": "Tek hücreli ökaryotlar maya mantarlar ve protozoonlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0052",
+       "ses": "Çok hücreliler ise küf mantarlar, helmintler ve artropodlardır; bitki, hayvan ve insan da bu gruptadır.",
+       "ekran": "Çok hücreliler ise küf mantarlar, helmintler ve artropodlardır; bitki, hayvan ve insan da bu gruptadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0053",
+       "ses": "Dikkat edin, mantarlar 2 yerde geçer: maya tek hücreli, küf çok hücreli ökaryottur.",
+       "ekran": "Dikkat edin, mantarlar 2 yerde geçer: maya tek hücreli, küf çok hücreli ökaryottur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0054",
+       "ses": "Klamidya, mikoplazma ve riketsiya da virüs değil, prokaryottur.",
+       "ekran": "Klamidya, mikoplazma ve riketsiya da virüs değil, prokaryottur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p012",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-21-c0055",
+       "ses": "Burası önemli, bu soru çıkmış sorularda defalarca tekrarlandı: verilen seçenekler arasında prokaryot olan Neisseria gonorrhoeae'dir, çünkü bir bakteridir.",
+       "ekran": "Burası önemli, bu soru çıkmış sorularda defalarca tekrarlandı: verilen seçenekler arasında prokaryot olan Neisseria gonorrhoeae'dir, çünkü bir bakteridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0056",
+       "ses": "HPV, yani İnsan papilloma virüsü (HPV) aselüler bir virüstür; Candida albicans maya mantarı, Trichomonas vaginalis bir protozoon, Sarcoptes scabiei ise bir artropoddur.",
+       "ekran": "HPV, yani İnsan papilloma virüsü (HPV) aselüler bir virüstür; Candida albicans maya mantarı, Trichomonas vaginalis bir protozoon, Sarcoptes scabiei ise bir artropoddur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0057",
+       "ses": "Bunların hiçbiri prokaryot değildir.",
+       "ekran": "Bunların hiçbiri prokaryot değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b06",
+   "baslik": "Prionlar",
+   "paragraflar": [
+    {
+     "id": "k1-21-p013",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-21-c0058",
+       "ses": "Prionlar küçük enfeksiyöz proteinlerdir ve aselüler ajanların en sıra dışı üyesidir.",
+       "ekran": "Prionlar küçük enfeksiyöz proteinlerdir ve aselüler ajanların en sıra dışı üyesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0059",
+       "ses": "Tamamen protein yapısındadırlar, DNA ya da RNA gibi nükleik asit içermezler ve en küçük virüslerden bile en az 100 kat küçüktürler.",
+       "ekran": "Tamamen protein yapısındadırlar, DNA ya da RNA gibi nükleik asit içermezler ve en küçük virüslerden bile en az 100 kat küçüktürler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0060",
+       "ses": "İnsanlardaki prion hastalıkları Creutzfeldt-Jakob hastalığı, deli dana hastalığı, yani sığırlardaki prion hastalığının insana geçişiyle ilişkili tablo, ölümcül ailevi uykusuzluk ve Kuru'dur.",
+       "ekran": "İnsanlardaki prion hastalıkları Creutzfeldt-Jakob hastalığı, deli dana hastalığı, yani sığırlardaki prion hastalığının insana geçişiyle ilişkili tablo, ölümcül ailevi uykusuzluk ve Kuru'dur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0061",
+       "ses": "Slayttaki görseller de prionun beyni hedef aldığını vurgular.",
+       "ekran": "Slayttaki görseller de prionun beyni hedef aldığını vurgular.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p014",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-21-c0062",
+       "ses": "Prionlar kronik, progresif ve dejeneratif tipte merkezi sinir sistemi bozukluklarına neden olur.",
+       "ekran": "Prionlar kronik, progresif ve dejeneratif tipte merkezi sinir sistemi bozukluklarına neden olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0063",
+       "ses": "Fiziksel ve kimyasal inaktivasyona dirençlidirler, bu yüzden dekontaminasyonları zordur.",
+       "ekran": "Fiziksel ve kimyasal inaktivasyona dirençlidirler, bu yüzden dekontaminasyonları zordur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0064",
+       "ses": "Bir paradoksa da dikkat edin: nükleik asit içermezler, ancak replike olabilirler.",
+       "ekran": "Bir paradoksa da dikkat edin: nükleik asit içermezler, ancak replike olabilirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0065",
+       "ses": "İnsan prion hastalıklarının ortak özellikleri şunlardır: majör patolojik bulgular merkezi sinir sistemindedir, inkübasyon dönemleri uzundur, örneğin Kuru hastalığında 30 yıl, ve seyir progresif ve fataldir.",
+       "ekran": "İnsan prion hastalıklarının ortak özellikleri şunlardır: majör patolojik bulgular merkezi sinir sistemindedir, inkübasyon dönemleri uzundur, örneğin Kuru hastalığında 30 yıl, ve seyir progresif ve fataldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0066",
+       "ses": "Burası önemli: bu üçlüyü, yani merkezi sinir sistemi tutulumu, uzun inkübasyon ve fatal seyri birlikte hatırlayın.",
+       "ekran": "Burası önemli: bu üçlüyü, yani merkezi sinir sistemi tutulumu, uzun inkübasyon ve fatal seyri birlikte hatırlayın.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p015",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-21-c0067",
+       "ses": "Burası önemli, prionlarla ilgili 4 ifadenin dördü de doğru kabul edildi: prionlar filtre edilebilen ajanlardır, onlara karşı inflamatuvar yanıt gelişmez, serolojik tanı konulamaz ve nükleik asitleri bulunmaz.",
+       "ekran": "Burası önemli, prionlarla ilgili 4 ifadenin dördü de doğru kabul edildi: prionlar filtre edilebilen ajanlardır, onlara karşı inflamatuvar yanıt gelişmez, serolojik tanı konulamaz ve nükleik asitleri bulunmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0068",
+       "ses": "Bunun nedeni, patolojik prion proteininin konağın kendi proteininin hatalı katlanmış bir biçimi olmasıdır; bağışıklık sistemi onu yabancı olarak algılamaz ve antikor yanıtı oluşmaz.",
+       "ekran": "Bunun nedeni, patolojik prion proteininin konağın kendi proteininin hatalı katlanmış bir biçimi olmasıdır; bağışıklık sistemi onu yabancı olarak algılamaz ve antikor yanıtı oluşmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b07",
+   "baslik": "Enfeksiyon etkenlerinin ana grupları",
+   "paragraflar": [
+    {
+     "id": "k1-21-p016",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-21-c0069",
+       "ses": "Klinik pratikte bakterileri biçim ve biyolojik özelliklerine göre 5 grupta örnekleriz.",
+       "ekran": "Klinik pratikte bakterileri biçim ve biyolojik özelliklerine göre 5 grupta örnekleriz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0070",
+       "ses": "Koklar Staphylococcus, Streptococcus, Enterococcus ve Neisseria'dır.",
+       "ekran": "Koklar Staphylococcus, Streptococcus, Enterococcus ve Neisseria'dır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0071",
+       "ses": "Basiller Escherichia coli, Klebsiella türleri, Pseudomonas aeruginosa ve Mycobacterium tuberculosis'tir.",
+       "ekran": "Basiller Escherichia coli, Klebsiella türleri, Pseudomonas aeruginosa ve Mycobacterium tuberculosis'tir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0072",
+       "ses": "Kıvrık ya da spiral bakteriler Vibrio, Campylobacter ve Helicobacter'dir.",
+       "ekran": "Kıvrık ya da spiral bakteriler Vibrio, Campylobacter ve Helicobacter'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0073",
+       "ses": "Spiroketler Treponema, Borrelia ve Leptospira'dır.",
+       "ekran": "Spiroketler Treponema, Borrelia ve Leptospira'dır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0074",
+       "ses": "Atipik bakteriler ise Mycoplasma, Chlamydia ya da Chlamydophila ve Rickettsia'dır.",
+       "ekran": "Atipik bakteriler ise Mycoplasma, Chlamydia ya da Chlamydophila ve Rickettsia'dır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0075",
+       "ses": "Dikkat edin, Helicobacter ve Campylobacter kıvrık bakteridir ama spiroket değildir.",
+       "ekran": "Dikkat edin, Helicobacter ve Campylobacter kıvrık bakteridir ama spiroket değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p017",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-21-c0076",
+       "ses": "Virüsleri taşıdıkları genetik materyalin türüne göre ikiye ayırırız.",
+       "ekran": "Virüsleri taşıdıkları genetik materyalin türüne göre ikiye ayırırız.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0077",
+       "ses": "DNA virüsleri herpesvirüsler, adenovirüs ve parvovirüs gibi virüslerdir; uçuk etkeni herpes simpleks virüsü de bu ailededir.",
+       "ekran": "DNA virüsleri herpesvirüsler, adenovirüs ve parvovirüs gibi virüslerdir; uçuk etkeni herpes simpleks virüsü de bu ailededir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0078",
+       "ses": "RNA virüsleri ise influenza, SARS koronavirüs 2, HIV, kızamık, kabakulak ve kuduz virüsleridir.",
+       "ekran": "RNA virüsleri ise influenza, SARS koronavirüs 2, HIV, kızamık, kabakulak ve kuduz virüsleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0079",
+       "ses": "Bir virüsü tanımlarken ilk sorulan soru genomunun DNA mı RNA mı olduğudur.",
+       "ekran": "Bir virüsü tanımlarken ilk sorulan soru genomunun DNA mı RNA mı olduğudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p018",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-21-c0080",
+       "ses": "Mantarları 3 grupta toplarız: Candida ve Cryptococcus gibi mayalar, Aspergillus ve Mucorales gibi küfler, ve koşullara göre farklı morfolojide bulunabilen dimorfik mantarlar.",
+       "ekran": "Mantarları 3 grupta toplarız: Candida ve Cryptococcus gibi mayalar, Aspergillus ve Mucorales gibi küfler, ve koşullara göre farklı morfolojide bulunabilen dimorfik mantarlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0081",
+       "ses": "Parazitler ise protozoonlar, yani Plasmodium, Entamoeba, Giardia, Toxoplasma ve Trichomonas; nematod, sestod ve trematodlardan oluşan helmintler; ve konağın vücut yüzeyinde yaşayan Sarcoptes scabiei ve bitler gibi ektoparazitlerdir.",
+       "ekran": "Parazitler ise protozoonlar, yani Plasmodium, Entamoeba, Giardia, Toxoplasma ve Trichomonas; nematod, sestod ve trematodlardan oluşan helmintler; ve konağın vücut yüzeyinde yaşayan Sarcoptes scabiei ve bitler gibi ektoparazitlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0082",
+       "ses": "Uyuz, bit, kene ve sivrisinek gibi canlılar ayrıca vektör olarak başka etkenleri de taşır.",
+       "ekran": "Uyuz, bit, kene ve sivrisinek gibi canlılar ayrıca vektör olarak başka etkenleri de taşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b08",
+   "baslik": "Virüslerin yapısı ve biyolojisi",
+   "paragraflar": [
+    {
+     "id": "k1-21-p019",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-21-c0083",
+       "ses": "Virüste genetik bilgiyi taşıyan nükleik asit, RNA ya da DNA'dır, ikisi birlikte değil.",
+       "ekran": "Virüste genetik bilgiyi taşıyan nükleik asit, RNA ya da DNA'dır, ikisi birlikte değil.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0084",
+       "ses": "Bu nükleik asit kapsid adı verilen protein bir kılıfla çevrilidir ve kapsid, kapsomer denen alt birimlerden oluşur.",
+       "ekran": "Bu nükleik asit kapsid adı verilen protein bir kılıfla çevrilidir ve kapsid, kapsomer denen alt birimlerden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0085",
+       "ses": "Nükleik asit ile kapsidin oluşturduğu bütün yapıya nükleokapsid denir.",
+       "ekran": "Nükleik asit ile kapsidin oluşturduğu bütün yapıya nükleokapsid denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0086",
+       "ses": "Bazı virüslerde kapsidi çevreleyen glikoprotein ya da lipoprotein yapıda bir zarf bulunur.",
+       "ekran": "Bazı virüslerde kapsidi çevreleyen glikoprotein ya da lipoprotein yapıda bir zarf bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0087",
+       "ses": "Slayttaki çizim 2 tipi yan yana gösterir: yalnız nükleokapsidden oluşan çıplak virüs ve yüzeyinde çıkıntılar taşıyan zarflı virüs.",
+       "ekran": "Slayttaki çizim 2 tipi yan yana gösterir: yalnız nükleokapsidden oluşan çıplak virüs ve yüzeyinde çıkıntılar taşıyan zarflı virüs.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0088",
+       "ses": "Zarfın yalnız bazı virüslerde bulunduğuna dikkat edin; bu ifade sınavda sık çevrilir.",
+       "ekran": "Zarfın yalnız bazı virüslerde bulunduğuna dikkat edin; bu ifade sınavda sık çevrilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p020",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-21-c0089",
+       "ses": "Virüsler yalnızca canlı hücrelerde çoğalır; enfekte ettikleri hücrenin sistemlerini kullanarak replike olurlar.",
+       "ekran": "Virüsler yalnızca canlı hücrelerde çoğalır; enfekte ettikleri hücrenin sistemlerini kullanarak replike olurlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0090",
+       "ses": "Yalnızca elektron mikroskobuyla görülebilirler, ışık mikroskobuyla görülemezler.",
+       "ekran": "Yalnızca elektron mikroskobuyla görülebilirler, ışık mikroskobuyla görülemezler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0091",
+       "ses": "Laboratuvarda da yapay besiyerinde değil, ancak canlı sistemlerde, yani embriyonlu yumurta, hücre kültürü ya da deney hayvanında üretilirler.",
+       "ekran": "Laboratuvarda da yapay besiyerinde değil, ancak canlı sistemlerde, yani embriyonlu yumurta, hücre kültürü ya da deney hayvanında üretilirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0092",
+       "ses": "Ayrıca bakterileri tutan filtrelerden geçebilirler.",
+       "ekran": "Ayrıca bakterileri tutan filtrelerden geçebilirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0093",
+       "ses": "Slayttaki şema bir retrovirüs olan HIV'yi örnekler: yüzeyde gp120 ve gp41 glikoproteinlerini taşıyan lipid zarf, içte matriks, kapsid, viral RNA genomu ile revers transkriptaz, integraz ve proteaz enzimleri yer alır.",
+       "ekran": "Slayttaki şema bir retrovirüs olan HIV'yi örnekler: yüzeyde gp120 ve gp41 glikoproteinlerini taşıyan lipid zarf, içte matriks, kapsid, viral RNA genomu ile revers transkriptaz, integraz ve proteaz enzimleri yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p021",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-21-c0094",
+       "ses": "Burası önemli, viral replikasyonun basamak sırası soruldu: önce hedef hücrenin tanınması ve tutunma, sonra penetrasyon ve soyulma, ardından sentez, en son da toplanma ve salınma gelir.",
+       "ekran": "Burası önemli, viral replikasyonun basamak sırası soruldu: önce hedef hücrenin tanınması ve tutunma, sonra penetrasyon ve soyulma, ardından sentez, en son da toplanma ve salınma gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0095",
+       "ses": "Burası önemli: DNA virüsleri genellikle konak hücre çekirdeğinde replike olur; replikasyonu konak hücrenin sitoplazmasında gerçekleşen DNA virüsü pox virüstür.",
+       "ekran": "Burası önemli: DNA virüsleri genellikle konak hücre çekirdeğinde replike olur; replikasyonu konak hücrenin sitoplazmasında gerçekleşen DNA virüsü pox virüstür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b09",
+   "baslik": "Virüslerin neden olduğu hastalıklar ve klinik grupları",
+   "paragraflar": [
+    {
+     "id": "k1-21-p022",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-21-c0096",
+       "ses": "Virüsler geniş bir hastalık yelpazesi oluşturur.",
+       "ekran": "Virüsler geniş bir hastalık yelpazesi oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0097",
+       "ses": "Kızamık, kızamıkçık, kabakulak, çocuk felci yani poliomiyelit ve suçiçeği çocukluk çağı hastalıklarıdır.",
+       "ekran": "Kızamık, kızamıkçık, kabakulak, çocuk felci yani poliomiyelit ve suçiçeği çocukluk çağı hastalıklarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0098",
+       "ses": "Kuduz, HIV enfeksiyonu ve edinsel immün yetmezlik sendromu, herpes simpleks enfeksiyonu yani uçuk, viral hepatitler A, B, C, D ve E, Ebola ve SARS, yani şiddetli akut solunum sendromu da viral hastalıklardır.",
+       "ekran": "Kuduz, HIV enfeksiyonu ve edinsel immün yetmezlik sendromu, herpes simpleks enfeksiyonu yani uçuk, viral hepatitler A, B, C, D ve E, Ebola ve SARS, yani şiddetli akut solunum sendromu da viral hastalıklardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0099",
+       "ses": "Dikkat edin, nezle ile grip ayrı tablolardır: soğuk algınlığı ya da nezlenin etkeni rinovirüs, gribin etkeni influenzadır.",
+       "ekran": "Dikkat edin, nezle ile grip ayrı tablolardır: soğuk algınlığı ya da nezlenin etkeni rinovirüs, gribin etkeni influenzadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p023",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-21-c0100",
+       "ses": "Klinik önemi olan virüsler yaptıkları enfeksiyonlara göre de sınıflandırılır.",
+       "ekran": "Klinik önemi olan virüsler yaptıkları enfeksiyonlara göre de sınıflandırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0101",
+       "ses": "Alt solunum yolu enfeksiyonlarında influenza, parainfluenza, respiratuvar sinsisyal virüs ve adenovirüs; enterik enfeksiyonlarda rotavirüs, astrovirüs ve kalisivirüs; ürogenital enfeksiyonda herpes simpleks virüsü Tip 2 ve HPV; hepatitte hepatit A, B, C, D ve E virüsleri öne çıkar.",
+       "ekran": "Alt solunum yolu enfeksiyonlarında influenza, parainfluenza, respiratuvar sinsisyal virüs ve adenovirüs; enterik enfeksiyonlarda rotavirüs, astrovirüs ve kalisivirüs; ürogenital enfeksiyonda herpes simpleks virüsü Tip 2 ve HPV; hepatitte hepatit A, B, C, D ve E virüsleri öne çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0102",
+       "ses": "Ateşli öksürük ve dispnede önce alt solunum yolu virüsleri, ishalde ise enterik virüsler, özellikle rotavirüs düşünülür.",
+       "ekran": "Ateşli öksürük ve dispnede önce alt solunum yolu virüsleri, ishalde ise enterik virüsler, özellikle rotavirüs düşünülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p024",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-21-c0103",
+       "ses": "Tablonun ikinci kısmı virüsleri tropizm ve uzun vadeli sonuçlarına göre gruplar.",
+       "ekran": "Tablonun ikinci kısmı virüsleri tropizm ve uzun vadeli sonuçlarına göre gruplar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0104",
+       "ses": "Onkojenik, yani tümör virüslerinden DNA tümör virüsleri HPV, EBV, İnsan herpes virüsü 8 (HHV-8) ve Hepatit B virüsüdür; RNA tümör virüsleri ise retrovirüslerdir, Hepatit C virüsü (HCV) derste soru işaretiyle, yani tartışmalı olarak gösterilmiştir.",
+       "ekran": "Onkojenik, yani tümör virüslerinden DNA tümör virüsleri HPV, EBV, İnsan herpes virüsü 8 (HHV-8) ve Hepatit B virüsüdür; RNA tümör virüsleri ise retrovirüslerdir, Hepatit C virüsü (HCV) derste soru işaretiyle, yani tartışmalı olarak gösterilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0105",
+       "ses": "Nörotropik virüsler poliovirüs, kabakulak virüsü, kuduz virüsü, arbovirüsler ve herpes simpleks virüsü tip 1'dir.",
+       "ekran": "Nörotropik virüsler poliovirüs, kabakulak virüsü, kuduz virüsü, arbovirüsler ve herpes simpleks virüsü tip 1'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0106",
+       "ses": "Perinatal enfeksiyon etkenleri ise rubella, sitomegalovirüs, Hepatit B virüsü (HBV), HIV, herpes simpleks virüsü ve Varisella zoster virüsüdür.",
+       "ekran": "Perinatal enfeksiyon etkenleri ise rubella, sitomegalovirüs, Hepatit B virüsü (HBV), HIV, herpes simpleks virüsü ve Varisella zoster virüsüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0107",
+       "ses": "Hepatit B virüsünün hem onkojenik hem perinatal listede yer aldığına dikkat edin.",
+       "ekran": "Hepatit B virüsünün hem onkojenik hem perinatal listede yer aldığına dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p025",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-21-c0108",
+       "ses": "Burası önemli, adenovirüs çıkmış sorularda 2 kez soruldu: çocuk yaş grubunda akut febril farenjit, faringokonjonktival ateş, hemorajik sistit ve ishal tablolarının etkeni adenovirüstür.",
+       "ekran": "Burası önemli, adenovirüs çıkmış sorularda 2 kez soruldu: çocuk yaş grubunda akut febril farenjit, faringokonjonktival ateş, hemorajik sistit ve ishal tablolarının etkeni adenovirüstür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0109",
+       "ses": "Burası önemli: ekovirüs, koksaki virüs, poliovirüs ve rinovirüs pikornavirüs ailesindendir; koronavirüs bu ailede değildir.",
+       "ekran": "Burası önemli: ekovirüs, koksaki virüs, poliovirüs ve rinovirüs pikornavirüs ailesindendir; koronavirüs bu ailede değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0110",
+       "ses": "Koksaki A virüsleri herpanjina, el ayak ağız hastalığı, akut hemorajik konjonktivit ve infantil diyarenin etkenleri arasındadır; plörodini, yani Bornholm hastalığı ise koksaki A virüslerinin yaptığı tablolardan sayılmaz.",
+       "ekran": "Koksaki A virüsleri herpanjina, el ayak ağız hastalığı, akut hemorajik konjonktivit ve infantil diyarenin etkenleri arasındadır; plörodini, yani Bornholm hastalığı ise koksaki A virüslerinin yaptığı tablolardan sayılmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b10",
+   "baslik": "Bakterilerin sınıflandırılması ve hücre yapısı",
+   "paragraflar": [
+    {
+     "id": "k1-21-p026",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-21-c0111",
+       "ses": "Bakteriler büyüklük, morfoloji, boyanma özellikleri, hareket, oksijen kullanımı ile kapsül ya da spor varlığına göre sınıflandırılır.",
+       "ekran": "Bakteriler büyüklük, morfoloji, boyanma özellikleri, hareket, oksijen kullanımı ile kapsül ya da spor varlığına göre sınıflandırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0112",
+       "ses": "Işık ya da elektron mikroskobunda 3 biçimde görülürler: yuvarlak olan kok, çomak biçimli basil ve sarmal biçimli spiral.",
+       "ekran": "Işık ya da elektron mikroskobunda 3 biçimde görülürler: yuvarlak olan kok, çomak biçimli basil ve sarmal biçimli spiral.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0113",
+       "ses": "Virüslerden farklı olarak ışık mikroskobunda da görülebildiklerine dikkat edin.",
+       "ekran": "Virüslerden farklı olarak ışık mikroskobunda da görülebildiklerine dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0114",
+       "ses": "Boyanma özelliklerine göre gram pozitif ya da gram negatif olarak ayrılırlar; gram boyamada mor kalanlar gram pozitiftir.",
+       "ekran": "Boyanma özelliklerine göre gram pozitif ya da gram negatif olarak ayrılırlar; gram boyamada mor kalanlar gram pozitiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0115",
+       "ses": "Oksijen kullanımı ve toleransına göre de oksijen varlığında üreyen aerop, oksijensiz ortamda üreyen anaerop ve her iki koşulda üreyebilen fakültatif anaerop olabilirler.",
+       "ekran": "Oksijen kullanımı ve toleransına göre de oksijen varlığında üreyen aerop, oksijensiz ortamda üreyen anaerop ve her iki koşulda üreyebilen fakültatif anaerop olabilirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p027",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-21-c0116",
+       "ses": "Slayttaki görseller bakterinin iki tanı yüzünü gösterir: kanlı agar plağında çizgi ekimle elde edilmiş krem beyaz, yuvarlak koloniler ve gram boyamada mor boyanan, kümeler oluşturan yuvarlak hücreler, yani gram pozitif koklar.",
+       "ekran": "Slayttaki görseller bakterinin iki tanı yüzünü gösterir: kanlı agar plağında çizgi ekimle elde edilmiş krem beyaz, yuvarlak koloniler ve gram boyamada mor boyanan, kümeler oluşturan yuvarlak hücreler, yani gram pozitif koklar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0117",
+       "ses": "Kanlı agar gibi cansız besiyerinde üreme bakterinin özelliğidir; virüsler burada üremez.",
+       "ekran": "Kanlı agar gibi cansız besiyerinde üreme bakterinin özelliğidir; virüsler burada üremez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p028",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-21-c0118",
+       "ses": "Bakteri hücresinin temel bileşenleri sitoplazma, sitoplazmik membran, hücre duvarı ve genomdur.",
+       "ekran": "Bakteri hücresinin temel bileşenleri sitoplazma, sitoplazmik membran, hücre duvarı ve genomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0119",
+       "ses": "Hücre duvarı mikoplazma dışında tüm prokaryotlarda vardır ve bakterinin gram boyanma özelliğinden sorumludur.",
+       "ekran": "Hücre duvarı mikoplazma dışında tüm prokaryotlarda vardır ve bakterinin gram boyanma özelliğinden sorumludur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0120",
+       "ses": "Genom, bakterinin ortasında tek 1 kromozom, yani çift iplikli çembersel DNA'dır.",
+       "ekran": "Genom, bakterinin ortasında tek 1 kromozom, yani çift iplikli çembersel DNA'dır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0121",
+       "ses": "Şemada ayrıca protein sentezi yapan ribozomlar, membranın içe kıvrımı olan mezozom ve kromozom dışındaki küçük DNA parçası olan plazmid işaretlenmiştir.",
+       "ekran": "Şemada ayrıca protein sentezi yapan ribozomlar, membranın içe kıvrımı olan mezozom ve kromozom dışındaki küçük DNA parçası olan plazmid işaretlenmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0122",
+       "ses": "Her bakteride bulunmayan ek yapılar ise kapsül, flagella, pili ya da fimbria ve spordur.",
+       "ekran": "Her bakteride bulunmayan ek yapılar ise kapsül, flagella, pili ya da fimbria ve spordur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0123",
+       "ses": "Kapsül hücre duvarının dışındaki örtüdür ve bakteriyi konak savunmasından korur; flagella yani kamçı hareket organelidir; pili yüzeylere tutunmada rol oynayan ince uzantılardır; spor ise olumsuz koşullara dayanıklı formdur.",
+       "ekran": "Kapsül hücre duvarının dışındaki örtüdür ve bakteriyi konak savunmasından korur; flagella yani kamçı hareket organelidir; pili yüzeylere tutunmada rol oynayan ince uzantılardır; spor ise olumsuz koşullara dayanıklı formdur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b11",
+   "baslik": "Klamidyalar ve mikoplazmalar",
+   "paragraflar": [
+    {
+     "id": "k1-21-p029",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-21-c0124",
+       "ses": "Atipik bakterilerin ilk üyesi klamidyalardır.",
+       "ekran": "Atipik bakterilerin ilk üyesi klamidyalardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0125",
+       "ses": "Chlamydia pneumoniae farenjit, sinüzit, bronşit ve pnömoni yapar.",
+       "ekran": "Chlamydia pneumoniae farenjit, sinüzit, bronşit ve pnömoni yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0126",
+       "ses": "Chlamydia trachomatis neonatal enfeksiyon, lenfogranuloma venereum, üretrit ve pelvik inflamatuvar hastalık yapar.",
+       "ekran": "Chlamydia trachomatis neonatal enfeksiyon, lenfogranuloma venereum, üretrit ve pelvik inflamatuvar hastalık yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0127",
+       "ses": "Chlamydia psittaci ise psittakoz etkenidir.",
+       "ekran": "Chlamydia psittaci ise psittakoz etkenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0128",
+       "ses": "Slayttaki akciğer grafisinde iki akciğerde, özellikle alt ve orta zonlarda yamalı pnömonik infiltrasyonlar görülür.",
+       "ekran": "Slayttaki akciğer grafisinde iki akciğerde, özellikle alt ve orta zonlarda yamalı pnömonik infiltrasyonlar görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p030",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-21-c0129",
+       "ses": "Klamidyaları ayıran 3 biyolojik özellik vardır.",
+       "ekran": "Klamidyaları ayıran 3 biyolojik özellik vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0130",
+       "ses": "Hücre duvarı vardır, ancak peptidoglikan tabaka yoktur.",
+       "ekran": "Hücre duvarı vardır, ancak peptidoglikan tabaka yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0131",
+       "ses": "ATP sentezleyemez ve protein sentezi için konağın ATP'sine ihtiyaç duyar; bu yüzden enerji paraziti olarak anılır.",
+       "ekran": "ATP sentezleyemez ve protein sentezi için konağın ATP'sine ihtiyaç duyar; bu yüzden enerji paraziti olarak anılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0132",
+       "ses": "Ve zorunlu hücre içi mikroorganizmadır.",
+       "ekran": "Ve zorunlu hücre içi mikroorganizmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0133",
+       "ses": "Virüsler gibi zorunlu hücre içidir, ama virüslerden farklı olarak prokaryot hücre yapısı ve hücre duvarı taşır.",
+       "ekran": "Virüsler gibi zorunlu hücre içidir, ama virüslerden farklı olarak prokaryot hücre yapısı ve hücre duvarı taşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p031",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-21-c0134",
+       "ses": "Mikoplazmalarda ise Mycoplasma pneumoniae atipik pnömoni, Mycoplasma hominis ve Mycoplasma genitalium üretrit, yani genitoüriner enfeksiyon yapar.",
+       "ekran": "Mikoplazmalarda ise Mycoplasma pneumoniae atipik pnömoni, Mycoplasma hominis ve Mycoplasma genitalium üretrit, yani genitoüriner enfeksiyon yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0135",
+       "ses": "Burası önemli, mikoplazma ile klamidya sık karıştırılır: mikoplazmada hücre duvarı yoktur, bu yüzden gram ile boyanmaz ve duvarı hedefleyen beta laktam antibiyotiklere dirençlidir.",
+       "ekran": "Burası önemli, mikoplazma ile klamidya sık karıştırılır: mikoplazmada hücre duvarı yoktur, bu yüzden gram ile boyanmaz ve duvarı hedefleyen beta laktam antibiyotiklere dirençlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0136",
+       "ses": "Hücre zarında kolesterol vardır ve yapay besiyerinde üretilebilir, yani zorunlu hücre içi değildir.",
+       "ekran": "Hücre zarında kolesterol vardır ve yapay besiyerinde üretilebilir, yani zorunlu hücre içi değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0137",
+       "ses": "Kısacası hücre duvarı yokluğu mikoplazmaya, enerji parazitliği klamidyaya aittir.",
+       "ekran": "Kısacası hücre duvarı yokluğu mikoplazmaya, enerji parazitliği klamidyaya aittir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0138",
+       "ses": "Slayttaki grafi ve tomografide bir akciğer alanında yoğun konsolidasyon ve çevresinde buzlu cam, yamalı infiltrasyonlar görülür.",
+       "ekran": "Slayttaki grafi ve tomografide bir akciğer alanında yoğun konsolidasyon ve çevresinde buzlu cam, yamalı infiltrasyonlar görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b12",
+   "baslik": "Riketsiyalar",
+   "paragraflar": [
+    {
+     "id": "k1-21-p032",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-21-c0139",
+       "ses": "Riketsiyalar 2 gruba ayrılır.",
+       "ekran": "Riketsiyalar 2 gruba ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0140",
+       "ses": "Benekli ateş grubunda Rickettsia rickettsii Kayalık Dağlar benekli ateşini, Rickettsia conorii ise Akdeniz benekli ateşini yapar.",
+       "ekran": "Benekli ateş grubunda Rickettsia rickettsii Kayalık Dağlar benekli ateşini, Rickettsia conorii ise Akdeniz benekli ateşini yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0141",
+       "ses": "Burası önemli: Akdeniz benekli ateşi Türkiye açısından önemlidir ve karakteristik bulgusu tache noire, yani inokülasyon eskarıdır.",
+       "ekran": "Burası önemli: Akdeniz benekli ateşi Türkiye açısından önemlidir ve karakteristik bulgusu tache noire, yani inokülasyon eskarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0142",
+       "ses": "Bu, etkenin deriye girdiği yerde, eritemli bir halenin ortasında oluşan koyu, kabuklu, nekrotik merkezli küçük lezyondur ve genel bulgulardaki eskarın riketsiyal örneğidir.",
+       "ekran": "Bu, etkenin deriye girdiği yerde, eritemli bir halenin ortasında oluşan koyu, kabuklu, nekrotik merkezli küçük lezyondur ve genel bulgulardaki eskarın riketsiyal örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p033",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-21-c0143",
+       "ses": "Tifüs grubunda Rickettsia prowazekii epidemik tifüsü, Rickettsia typhi ise endemik tifüsü yapar.",
+       "ekran": "Tifüs grubunda Rickettsia prowazekii epidemik tifüsü, Rickettsia typhi ise endemik tifüsü yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0144",
+       "ses": "Tüm riketsiyalar zorunlu hücre içidir, kok ya da basil biçiminde görülebilen pleomorfik mikroorganizmalardır ve çoğu artropodlarla insanlara bulaşır.",
+       "ekran": "Tüm riketsiyalar zorunlu hücre içidir, kok ya da basil biçiminde görülebilen pleomorfik mikroorganizmalardır ve çoğu artropodlarla insanlara bulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0145",
+       "ses": "Böylece 3 atipik bakterinin imzası ortaya çıkar: klamidyada ATP bağımlılığı, mikoplazmada duvar yokluğu, riketsiyada artropodla bulaş.",
+       "ekran": "Böylece 3 atipik bakterinin imzası ortaya çıkar: klamidyada ATP bağımlılığı, mikoplazmada duvar yokluğu, riketsiyada artropodla bulaş.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b13",
+   "baslik": "Mantarlar ve mikozlar",
+   "paragraflar": [
+    {
+     "id": "k1-21-p034",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-21-c0146",
+       "ses": "Ökaryotlar mantarlar, yani funguslar, algler ve protozoonlardır.",
+       "ekran": "Ökaryotlar mantarlar, yani funguslar, algler ve protozoonlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0147",
+       "ses": "İnsanlardaki mantar hastalıkları tutulumun derinliğine göre sınıflanır.",
+       "ekran": "İnsanlardaki mantar hastalıkları tutulumun derinliğine göre sınıflanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0148",
+       "ses": "Yüzeyel mikozlarda Malassezia türleri pitiriyazis versikolor yapar.",
+       "ekran": "Yüzeyel mikozlarda Malassezia türleri pitiriyazis versikolor yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0149",
+       "ses": "Kutanöz mikozlarda dermatofitler, yani Trichophyton, Microsporum ve Epidermophyton deri, saç ve tırnak enfeksiyonları yapar.",
+       "ekran": "Kutanöz mikozlarda dermatofitler, yani Trichophyton, Microsporum ve Epidermophyton deri, saç ve tırnak enfeksiyonları yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0150",
+       "ses": "Subkutan mikozlar sporotrikoz ve kromoblastomikozdur.",
+       "ekran": "Subkutan mikozlar sporotrikoz ve kromoblastomikozdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0151",
+       "ses": "Sistemik, yani derin mikozlar ise ikiye ayrılır: endemik ya da primer olanlar Histoplasma, Blastomyces ve Coccidioides; fırsatçı olanlar ise Candida, Aspergillus, Cryptococcus, Mucorales ve Pneumocystis jirovecii'dir.",
+       "ekran": "Sistemik, yani derin mikozlar ise ikiye ayrılır: endemik ya da primer olanlar Histoplasma, Blastomyces ve Coccidioides; fırsatçı olanlar ise Candida, Aspergillus, Cryptococcus, Mucorales ve Pneumocystis jirovecii'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0152",
+       "ses": "Burası önemli, subkutan mikozdan sporotrikozun etkeni soruldu: travma yoluyla vücuda girip lenfatiklerin izlediği yol boyunca ağrısız subkutan nodüllere ve ülsere lezyonlara yol açan, Gomori metenamin gümüşleme boyasında oval ya da puro şeklinde maya formu görülen etken Sporothrix schenckii'dir.",
+       "ekran": "Burası önemli, subkutan mikozdan sporotrikozun etkeni soruldu: travma yoluyla vücuda girip lenfatiklerin izlediği yol boyunca ağrısız subkutan nodüllere ve ülsere lezyonlara yol açan, Gomori metenamin gümüşleme boyasında oval ya da puro şeklinde maya formu görülen etken Sporothrix schenckii'dir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p035",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-21-c0153",
+       "ses": "Burası önemli, sistemik mikoz etkeni dimorfik mantarlarla ilgili yanlış ifade 2 kez soruldu: bu mantarlar insandan insana bulaşmaz.",
+       "ekran": "Burası önemli, sistemik mikoz etkeni dimorfik mantarlarla ilgili yanlış ifade 2 kez soruldu: bu mantarlar insandan insana bulaşmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0154",
+       "ses": "Doğru olanlar şunlardır: dünyada belli coğrafi bölgelerle sınırlı endemik enfeksiyonlara neden olurlar, sıklıkla doğadan solunum yoluyla alınıp akciğerlerde enfeksiyon yaparlar, hem sağlıklı hem immünsüprese kişilerde hastalık yaparlar ve amfoterisin B genellikle etkilidir.",
+       "ekran": "Doğru olanlar şunlardır: dünyada belli coğrafi bölgelerle sınırlı endemik enfeksiyonlara neden olurlar, sıklıkla doğadan solunum yoluyla alınıp akciğerlerde enfeksiyon yaparlar, hem sağlıklı hem immünsüprese kişilerde hastalık yaparlar ve amfoterisin B genellikle etkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0155",
+       "ses": "Dimorfik mantarlar doğada küf, vücut sıcaklığında dokuda maya formunda bulunur.",
+       "ekran": "Dimorfik mantarlar doğada küf, vücut sıcaklığında dokuda maya formunda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p036",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-21-c0156",
+       "ses": "Mayalar tek hücreli ökaryotik mantarlardır; örnekleri Candida albicans ve Cryptococcus neoformans'tır.",
+       "ekran": "Mayalar tek hücreli ökaryotik mantarlardır; örnekleri Candida albicans ve Cryptococcus neoformans'tır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0157",
+       "ses": "Oval ya da yuvarlak görünürler ve çoğu tomurcuklanma ile ürer.",
+       "ekran": "Oval ya da yuvarlak görünürler ve çoğu tomurcuklanma ile ürer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0158",
+       "ses": "Slayttaki görsellerde krem beyaz, parlak maya kolonileri, mor boyanan oval hücrelerden çıkan tomurcuklar ve dil yüzeyini kaplayan beyaz sarımsı plaklarla oral kandidiyaz görülür.",
+       "ekran": "Slayttaki görsellerde krem beyaz, parlak maya kolonileri, mor boyanan oval hücrelerden çıkan tomurcuklar ve dil yüzeyini kaplayan beyaz sarımsı plaklarla oral kandidiyaz görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0159",
+       "ses": "Küfler ise çok hücreli ökaryotik mantarlardır; örnek Aspergillus fumigatus'tur.",
+       "ekran": "Küfler ise çok hücreli ökaryotik mantarlardır; örnek Aspergillus fumigatus'tur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0160",
+       "ses": "Kültürde ortası koyu yeşil gri, kenarları beyaz, pamuksu kadifemsi geniş koloniler yapar; mikroskopide uzun bir sap olan konidiyoforun ucundaki şişkin baştan zincirler halinde dökülen yuvarlak sporlar, yani konidyalar görülür.",
+       "ekran": "Kültürde ortası koyu yeşil gri, kenarları beyaz, pamuksu kadifemsi geniş koloniler yapar; mikroskopide uzun bir sap olan konidiyoforun ucundaki şişkin baştan zincirler halinde dökülen yuvarlak sporlar, yani konidyalar görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p037",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-21-c0161",
+       "ses": "Mantar laboratuvarıyla ilgili 3 bilgi de soruldu.",
+       "ekran": "Mantar laboratuvarıyla ilgili 3 bilgi de soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0162",
+       "ses": "Burası önemli: zigospor eşeyli bir spordur; makrokonidya, mikrokonidya, blastospor ve artrospor ise eşeysizdir.",
+       "ekran": "Burası önemli: zigospor eşeyli bir spordur; makrokonidya, mikrokonidya, blastospor ve artrospor ise eşeysizdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0163",
+       "ses": "Burası önemli: mantarların direkt, boyasız mikroskobik incelemesinde %10 potasyum hidroksit çözeltisi kullanılır.",
+       "ekran": "Burası önemli: mantarların direkt, boyasız mikroskobik incelemesinde %10 potasyum hidroksit çözeltisi kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0164",
+       "ses": "Burası önemli: bakteri üremesini engellemek için kloramfenikol, saprofitik mantarları engellemek için sikloheksimid içeren, mantarların kültür ve izolasyonunda kullanılan besiyeri Sabouraud dekstroz agardır.",
+       "ekran": "Burası önemli: bakteri üremesini engellemek için kloramfenikol, saprofitik mantarları engellemek için sikloheksimid içeren, mantarların kültür ve izolasyonunda kullanılan besiyeri Sabouraud dekstroz agardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b14",
+   "baslik": "Protozoonlar",
+   "paragraflar": [
+    {
+     "id": "k1-21-p038",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-21-c0165",
+       "ses": "Protozoonlar tek hücreli, hücre duvarı olmayan ökaryotik mikroorganizmalardır.",
+       "ekran": "Protozoonlar tek hücreli, hücre duvarı olmayan ökaryotik mikroorganizmalardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0166",
+       "ses": "Hücre duvarsızlıkları onları mantarlardan, gerçek çekirdekleri bakterilerden ayırır.",
+       "ekran": "Hücre duvarsızlıkları onları mantarlardan, gerçek çekirdekleri bakterilerden ayırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0167",
+       "ses": "Neden oldukları hastalıklar şunlardır: sıtma yani malarya etkeni Plasmodium türleri; toksoplazmoz etkeni Toxoplasma gondii; kutanöz leişmanyazis yani şark çıbanı etkeni Leishmania türleri; amebiyaz yani amipli dizanteri etkeni Entamoeba histolytica; trikomoniyaz etkeni Trichomonas vaginalis; ve giardiyaz etkeni Giardia duodenalis, diğer adıyla Giardia lamblia.",
+       "ekran": "Neden oldukları hastalıklar şunlardır: sıtma yani malarya etkeni Plasmodium türleri; toksoplazmoz etkeni Toxoplasma gondii; kutanöz leişmanyazis yani şark çıbanı etkeni Leishmania türleri; amebiyaz yani amipli dizanteri etkeni Entamoeba histolytica; trikomoniyaz etkeni Trichomonas vaginalis; ve giardiyaz etkeni Giardia duodenalis, diğer adıyla Giardia lamblia.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p039",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-21-c0168",
+       "ses": "Mikroskobik görüntülerde Plasmodium falciparum kan yaymasında eritrositlerin içinde küçük halka biçimli formlar olarak, bazen bir eritrositte birden fazla halka halinde görülür; diğer görüntüdeki hilal ya da muz biçimli form gametosittir.",
+       "ekran": "Mikroskobik görüntülerde Plasmodium falciparum kan yaymasında eritrositlerin içinde küçük halka biçimli formlar olarak, bazen bir eritrositte birden fazla halka halinde görülür; diğer görüntüdeki hilal ya da muz biçimli form gametosittir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0169",
+       "ses": "Giardia lamblia armut biçimli, 2 çekirdekli, kamçılı bir trofozoittir ve çekirdekleri bir yüz görünümü verir.",
+       "ekran": "Giardia lamblia armut biçimli, 2 çekirdekli, kamçılı bir trofozoittir ve çekirdekleri bir yüz görünümü verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0170",
+       "ses": "Leishmania donovani iğ biçimli, kamçılı formlar halinde görülür.",
+       "ekran": "Leishmania donovani iğ biçimli, kamçılı formlar halinde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0171",
+       "ses": "Entamoeba histolytica trofozoitlerinde ise eritrosit fagositozu ve çekirdekte küçük, merkezi yerleşimli karyozom tanısaldır.",
+       "ekran": "Entamoeba histolytica trofozoitlerinde ise eritrosit fagositozu ve çekirdekte küçük, merkezi yerleşimli karyozom tanısaldır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p040",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-21-c0172",
+       "ses": "Burası önemli, sıtmayla ilgili çıkmış bilgiler: Türkiye artık sıtma için endemik bir ülke değildir, Türkiye'de 2011 yılında sıtma elimine edilmiştir.",
+       "ekran": "Burası önemli, sıtmayla ilgili çıkmış bilgiler: Türkiye artık sıtma için endemik bir ülke değildir, Türkiye'de 2011 yılında sıtma elimine edilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0173",
+       "ses": "Hem ülkemizde hem dünyada en sık görülen sıtma etkeni Plasmodium vivax'tır.",
+       "ekran": "Hem ülkemizde hem dünyada en sık görülen sıtma etkeni Plasmodium vivax'tır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0174",
+       "ses": "Sıtmada üşüme, titreme ve yüksek ateş, hemolize bağlı anemi görülür; nöbetlerin periyodu etkenin türüne göre değişir; şiddetli sıtmada koma, metabolik asidoz ve akut böbrek yetmezliği izlenebilir.",
+       "ekran": "Sıtmada üşüme, titreme ve yüksek ateş, hemolize bağlı anemi görülür; nöbetlerin periyodu etkenin türüne göre değişir; şiddetli sıtmada koma, metabolik asidoz ve akut böbrek yetmezliği izlenebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0175",
+       "ses": "Korunmada hastaları bulup tedavi etmek önemlidir; sıtma hastasının izleminde temas ve hava yolu izolasyonu önerilmez.",
+       "ekran": "Korunmada hastaları bulup tedavi etmek önemlidir; sıtma hastasının izleminde temas ve hava yolu izolasyonu önerilmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0176",
+       "ses": "Burası önemli: Plasmodium, Trypanosoma, Leishmania ve Toxoplasma kanda saptanabilir, ancak Entamoeba kanda tespit edilemez.",
+       "ekran": "Burası önemli: Plasmodium, Trypanosoma, Leishmania ve Toxoplasma kanda saptanabilir, ancak Entamoeba kanda tespit edilemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0177",
+       "ses": "Burası önemli: Dientamoeba fragilis ve Trichomonas vaginalis'in kist şekli yoktur; Entamoeba histolytica ve Balantidium coli ise kist oluşturur.",
+       "ekran": "Burası önemli: Dientamoeba fragilis ve Trichomonas vaginalis'in kist şekli yoktur; Entamoeba histolytica ve Balantidium coli ise kist oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b15",
+   "baslik": "Helmintler",
+   "paragraflar": [
+    {
+     "id": "k1-21-p041",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-21-c0178",
+       "ses": "Helmintler, yani solucanlar çok hücreli parazitlerdir ve 3 gruba ayrılır.",
+       "ekran": "Helmintler, yani solucanlar çok hücreli parazitlerdir ve 3 gruba ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0179",
+       "ses": "Nematodlar yuvarlak solucanlardır: askariyaz etkeni Ascaris lumbricoides; enterobiyaz ya da oksiyüriyaz etkeni Enterobius vermicularis, yani kıl kurdu; ankilostomiyaz etkenleri Ancylostoma duodenale ve Necator americanus, yani kancalı kurt; strongiloidiyaz etkeni Strongyloides stercoralis.",
+       "ekran": "Nematodlar yuvarlak solucanlardır: askariyaz etkeni Ascaris lumbricoides; enterobiyaz ya da oksiyüriyaz etkeni Enterobius vermicularis, yani kıl kurdu; ankilostomiyaz etkenleri Ancylostoma duodenale ve Necator americanus, yani kancalı kurt; strongiloidiyaz etkeni Strongyloides stercoralis.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0180",
+       "ses": "Ankilostomiyazın 2 etkeni olduğuna dikkat edin.",
+       "ekran": "Ankilostomiyazın 2 etkeni olduğuna dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p042",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-21-c0181",
+       "ses": "Sestodlar şeritlerdir: taeniyaz etkenleri Taenia saginata ve Taenia solium; sistiserkoz etkeni Taenia solium larvası; kistik ekinokokkoz yani hidatik kist etkeni Echinococcus granulosus'tur.",
+       "ekran": "Sestodlar şeritlerdir: taeniyaz etkenleri Taenia saginata ve Taenia solium; sistiserkoz etkeni Taenia solium larvası; kistik ekinokokkoz yani hidatik kist etkeni Echinococcus granulosus'tur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0182",
+       "ses": "Taenia solium'un 2 tablo yaptığını hatırlayın: erişkin form taeniyaz, larva formu sistiserkoz.",
+       "ekran": "Taenia solium'un 2 tablo yaptığını hatırlayın: erişkin form taeniyaz, larva formu sistiserkoz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0183",
+       "ses": "Slayttaki görselde Taenia saginata uzun, yassı ve çok sayıda segmentten oluşan şerit biçiminde görülür; bu segmentli yapı sestodların şerit adını açıklar.",
+       "ekran": "Slayttaki görselde Taenia saginata uzun, yassı ve çok sayıda segmentten oluşan şerit biçiminde görülür; bu segmentli yapı sestodların şerit adını açıklar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0184",
+       "ses": "Trematodlar ise kelebeklerdir: fasiyoliyaz etkeni Fasciola hepatica ve şistozomiyaz etkeni Schistosoma türleri.",
+       "ekran": "Trematodlar ise kelebeklerdir: fasiyoliyaz etkeni Fasciola hepatica ve şistozomiyaz etkeni Schistosoma türleri.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p043",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-21-c0185",
+       "ses": "Burası önemli, helmint grupları sınavda sıkça eşleştirilir: Taenia ve Echinococcus sestod, Ascaris ve Enterobius nematod, Fasciola ve Schistosoma trematoddur.",
+       "ekran": "Burası önemli, helmint grupları sınavda sıkça eşleştirilir: Taenia ve Echinococcus sestod, Ascaris ve Enterobius nematod, Fasciola ve Schistosoma trematoddur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0186",
+       "ses": "Çıkmış soruda ayrıca akciğerde enfeksiyon yapan trematodun Paragonimus westermani olduğu soruldu; Fasciola hepatica, Schistosoma türleri ve Fasciolopsis buski bu soruda doğru cevap değildir.",
+       "ekran": "Çıkmış soruda ayrıca akciğerde enfeksiyon yapan trematodun Paragonimus westermani olduğu soruldu; Fasciola hepatica, Schistosoma türleri ve Fasciolopsis buski bu soruda doğru cevap değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b16",
+   "baslik": "Artropodlar ve vektörler",
+   "paragraflar": [
+    {
+     "id": "k1-21-p044",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-21-c0187",
+       "ses": "Artropodlar 2 nedenle tıbbi öneme sahiptir: kendileri doğrudan hastalığa neden olabilirler, örneğin uyuz etkeni Sarcoptes scabiei ve bitler; ya da enfeksiyon etkenlerini vektör olarak taşıyabilirler.",
+       "ekran": "Artropodlar 2 nedenle tıbbi öneme sahiptir: kendileri doğrudan hastalığa neden olabilirler, örneğin uyuz etkeni Sarcoptes scabiei ve bitler; ya da enfeksiyon etkenlerini vektör olarak taşıyabilirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0188",
+       "ses": "Vektörler patojen mikroorganizmaları enfekte konak ya da rezervuardan alarak duyarlı konağa taşır.",
+       "ekran": "Vektörler patojen mikroorganizmaları enfekte konak ya da rezervuardan alarak duyarlı konağa taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0189",
+       "ses": "Taşınma biyolojik ya da mekanik olabilir: biyolojik taşımada etken vektörün vücudunda gelişir ya da çoğalır, mekanik taşımada ise vücut yüzeyinde ya da ağız parçalarında değişmeden taşınır.",
+       "ekran": "Taşınma biyolojik ya da mekanik olabilir: biyolojik taşımada etken vektörün vücudunda gelişir ya da çoğalır, mekanik taşımada ise vücut yüzeyinde ya da ağız parçalarında değişmeden taşınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0190",
+       "ses": "Slayttaki görselde deriye tutunmuş, kan emen bir kene görülür.",
+       "ekran": "Slayttaki görselde deriye tutunmuş, kan emen bir kene görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p045",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-21-c0191",
+       "ses": "Burası önemli, her vektör belirli hastalıklarla eşleşir.",
+       "ekran": "Burası önemli, her vektör belirli hastalıklarla eşleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0192",
+       "ses": "Pire veba yani Yersinia pestis ve murin tifüs yani Rickettsia typhi için vektördür.",
+       "ekran": "Pire veba yani Yersinia pestis ve murin tifüs yani Rickettsia typhi için vektördür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0193",
+       "ses": "Kene Kırım Kongo kanamalı ateşi, Lyme borelyozu, riketsiyozlar, tularemi ve babesiyozu taşır.",
+       "ekran": "Kene Kırım Kongo kanamalı ateşi, Lyme borelyozu, riketsiyozlar, tularemi ve babesiyozu taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0194",
+       "ses": "Sivrisinek sıtma, dengue, sarı humma, chikungunya, Zika ve Batı Nil virüsü enfeksiyonunu taşır.",
+       "ekran": "Sivrisinek sıtma, dengue, sarı humma, chikungunya, Zika ve Batı Nil virüsü enfeksiyonunu taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0195",
+       "ses": "Tatarcık, yani Phlebotomus leişmanyazis ve tatarcık hummasını taşır.",
+       "ekran": "Tatarcık, yani Phlebotomus leişmanyazis ve tatarcık hummasını taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0196",
+       "ses": "Bit, yani Pediculus ise epidemik tifüs, siper ateşi ve bit kaynaklı dönek ateş için vektör olabilir.",
+       "ekran": "Bit, yani Pediculus ise epidemik tifüs, siper ateşi ve bit kaynaklı dönek ateş için vektör olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p046",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-21-c0197",
+       "ses": "Böylece tifüs çifti tamamlanır: epidemik tifüs etkeni Rickettsia prowazekii ve vektörü bit; endemik ya da murin tifüs etkeni Rickettsia typhi ve vektörü piredir.",
+       "ekran": "Böylece tifüs çifti tamamlanır: epidemik tifüs etkeni Rickettsia prowazekii ve vektörü bit; endemik ya da murin tifüs etkeni Rickettsia typhi ve vektörü piredir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0198",
+       "ses": "Aynı şekilde Leishmania tatarcıkla, Plasmodium sivrisinekle taşınır.",
+       "ekran": "Aynı şekilde Leishmania tatarcıkla, Plasmodium sivrisinekle taşınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0199",
+       "ses": "Türkiye açısından Kırım Kongo kanamalı ateşi ve Akdeniz benekli ateşi keneyle ilişkili önemli tablolardır.",
+       "ekran": "Türkiye açısından Kırım Kongo kanamalı ateşi ve Akdeniz benekli ateşi keneyle ilişkili önemli tablolardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b17",
+   "baslik": "Patogenez terimleri ve enfeksiyonu etkileyen faktörler",
+   "paragraflar": [
+    {
+     "id": "k1-21-p047",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-21-c0200",
+       "ses": "İnvazyon, mikroorganizmanın konak hücrelere ya da dokulara girişi ve vücutta yayılmasıdır; yüzeyde kalmanın ötesine geçildiğini anlatır.",
+       "ekran": "İnvazyon, mikroorganizmanın konak hücrelere ya da dokulara girişi ve vücutta yayılmasıdır; yüzeyde kalmanın ötesine geçildiğini anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0201",
+       "ses": "Taşıyıcı ise asemptomatik enfeksiyonu olan ve etkeni başka bir insana bulaştıran kişidir; yani hasta değildir ama bulaştırıcıdır.",
+       "ekran": "Taşıyıcı ise asemptomatik enfeksiyonu olan ve etkeni başka bir insana bulaştıran kişidir; yani hasta değildir ama bulaştırıcıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p048",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-21-c0202",
+       "ses": "Fırsatçı ya da opportunistik patojen, normal koşullarda hastalık oluşturma potansiyeli sınırlı olan, ancak konak savunmasının bozulması, normal mikrobiyotanın değişmesi ya da uygun anatomik bölgeye ulaşması gibi koşullarda hastalığa neden olabilen mikroorganizmadır.",
+       "ekran": "Fırsatçı ya da opportunistik patojen, normal koşullarda hastalık oluşturma potansiyeli sınırlı olan, ancak konak savunmasının bozulması, normal mikrobiyotanın değişmesi ya da uygun anatomik bölgeye ulaşması gibi koşullarda hastalığa neden olabilen mikroorganizmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0203",
+       "ses": "Burası önemli, eşleşmeleri bilin: Candida türleri immünsüpresyon ve antibiyotik kullanımında, Pneumocystis jirovecii hücresel immün yetmezlikte, Clostridioides difficile ise antibiyotiklerle bağırsak mikrobiyotasının bozulması sonrasında hastalık yapar.",
+       "ekran": "Burası önemli, eşleşmeleri bilin: Candida türleri immünsüpresyon ve antibiyotik kullanımında, Pneumocystis jirovecii hücresel immün yetmezlikte, Clostridioides difficile ise antibiyotiklerle bağırsak mikrobiyotasının bozulması sonrasında hastalık yapar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p049",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-21-c0204",
+       "ses": "Patojenite, bir mikroorganizmanın konakta hastalık oluşturabilme kapasitesidir; patojen bir mikroorganizmayla enfekte olan her bireyde klinik hastalık gelişmeyebilir.",
+       "ekran": "Patojenite, bir mikroorganizmanın konakta hastalık oluşturabilme kapasitesidir; patojen bir mikroorganizmayla enfekte olan her bireyde klinik hastalık gelişmeyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0205",
+       "ses": "Virülans ise patojenitenin derecesidir, yani oluşturduğu hastalığın şiddeti ya da ağırlığıdır; aynı türün farklı suşları farklı virülansa sahip olabilir.",
+       "ekran": "Virülans ise patojenitenin derecesidir, yani oluşturduğu hastalığın şiddeti ya da ağırlığıdır; aynı türün farklı suşları farklı virülansa sahip olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0206",
+       "ses": "Burası önemli, bu tanım 2 kez soruldu: bir mikroorganizmanın hastalık oluşturma yeteneğinin derecesine virülans denir.",
+       "ekran": "Burası önemli, bu tanım 2 kez soruldu: bir mikroorganizmanın hastalık oluşturma yeteneğinin derecesine virülans denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0207",
+       "ses": "Hastalık oluşturabilme yeteneği ya da kapasitesi ise patojenitedir; çeldiricilerdeki invazyonsuz yerleşme kolonizasyonu, dokuya girip yayılma invazyonu, toksin üretme yeteneği ise toksijeniteyi anlatır.",
+       "ekran": "Hastalık oluşturabilme yeteneği ya da kapasitesi ise patojenitedir; çeldiricilerdeki invazyonsuz yerleşme kolonizasyonu, dokuya girip yayılma invazyonu, toksin üretme yeteneği ise toksijeniteyi anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0208",
+       "ses": "Mikroorganizmaya ait faktörler virülans faktörleri, adezinler ve kolonizasyon yeteneği, kapsül, toksinler, doku invazyonunu kolaylaştıran enzimler, biyofilm oluşturma ve konak immün yanıtından kaçış mekanizmalarıdır.",
+       "ekran": "Mikroorganizmaya ait faktörler virülans faktörleri, adezinler ve kolonizasyon yeteneği, kapsül, toksinler, doku invazyonunu kolaylaştıran enzimler, biyofilm oluşturma ve konak immün yanıtından kaçış mekanizmalarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0209",
+       "ses": "Adezinler konak yüzeyine tutunmayı sağlar; biyofilm ise yüzeylerde koruyucu bir topluluk oluşturmaktır ve özellikle kateter, protez gibi yabancı cisimlerde önemlidir.",
+       "ekran": "Adezinler konak yüzeyine tutunmayı sağlar; biyofilm ise yüzeylerde koruyucu bir topluluk oluşturmaktır ve özellikle kateter, protez gibi yabancı cisimlerde önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p050",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-21-c0210",
+       "ses": "Konağa ait faktörlerin ilki yaştır: yenidoğanlar, küçük çocuklar ve ileri yaştaki bireylerde bazı enfeksiyonlara duyarlılık artabilir.",
+       "ekran": "Konağa ait faktörlerin ilki yaştır: yenidoğanlar, küçük çocuklar ve ileri yaştaki bireylerde bazı enfeksiyonlara duyarlılık artabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0211",
+       "ses": "Biyolojik cinsiyet ve hormonal faktörler nedeniyle bazı enfeksiyonlar erkeklerde ya da kadınlarda daha sık görülür.",
+       "ekran": "Biyolojik cinsiyet ve hormonal faktörler nedeniyle bazı enfeksiyonlar erkeklerde ya da kadınlarda daha sık görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0212",
+       "ses": "Beslenme durumunda özellikle malnütrisyon, bağışıklık yanıtını bozarak enfeksiyon riskini artırır.",
+       "ekran": "Beslenme durumunda özellikle malnütrisyon, bağışıklık yanıtını bozarak enfeksiyon riskini artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0213",
+       "ses": "İmmün durumda konjenital ya da edinsel immün yetmezlik ve immünsüpresif tedaviler; komorbiditelerde diyabet, kronik böbrek ve karaciğer hastalıkları önemlidir.",
+       "ekran": "İmmün durumda konjenital ya da edinsel immün yetmezlik ve immünsüpresif tedaviler; komorbiditelerde diyabet, kronik böbrek ve karaciğer hastalıkları önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p051",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-21-c0214",
+       "ses": "Diğer konak faktörleri savunmanın dışarıdan bozulmasını anlatır.",
+       "ekran": "Diğer konak faktörleri savunmanın dışarıdan bozulmasını anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0215",
+       "ses": "Cerrahi, travma ve yanık anatomik bariyerleri bozar.",
+       "ekran": "Cerrahi, travma ve yanık anatomik bariyerleri bozar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0216",
+       "ses": "Kateter, protez ve implant gibi invaziv girişimler ve yabancı cisimler hem giriş yolu hem biyofilm için yüzey sağlar.",
+       "ekran": "Kateter, protez ve implant gibi invaziv girişimler ve yabancı cisimler hem giriş yolu hem biyofilm için yüzey sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0217",
+       "ses": "Mikrobiyotanın bozulmasında en önemli neden antibiyotik kullanımıdır ve bu, Clostridioides difficile gibi fırsatçıların önünü açar.",
+       "ekran": "Mikrobiyotanın bozulmasında en önemli neden antibiyotik kullanımıdır ve bu, Clostridioides difficile gibi fırsatçıların önünü açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0218",
+       "ses": "Son olarak aşılama durumu ve önceki bağışıklık konağın korumasını belirler.",
+       "ekran": "Son olarak aşılama durumu ve önceki bağışıklık konağın korumasını belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0219",
+       "ses": "Kateterli bir hastada hem invaziv girişim hem bariyer bozulması bir aradadır.",
+       "ekran": "Kateterli bir hastada hem invaziv girişim hem bariyer bozulması bir aradadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b18",
+   "baslik": "Normal mikrobiyota ve kolonizasyon",
+   "paragraflar": [
+    {
+     "id": "k1-21-p052",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-21-c0220",
+       "ses": "Normal mikrobiyota, yani flora, sağlıklı bireylerin deri ve mukozalarında normal olarak bulunan, çoğunlukla hastalığa neden olmadan konakla birlikte yaşayan mikroorganizmalar topluluğudur.",
+       "ekran": "Normal mikrobiyota, yani flora, sağlıklı bireylerin deri ve mukozalarında normal olarak bulunan, çoğunlukla hastalığa neden olmadan konakla birlikte yaşayan mikroorganizmalar topluluğudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0221",
+       "ses": "Kolonizasyon ise bir mikroorganizmanın konakta yerleşmesi ve çoğalması, ancak doku invazyonu ya da klinik hastalık oluşturmamasıdır.",
+       "ekran": "Kolonizasyon ise bir mikroorganizmanın konakta yerleşmesi ve çoğalması, ancak doku invazyonu ya da klinik hastalık oluşturmamasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0222",
+       "ses": "Örneğin burunda Staphylococcus aureus saptanması kolonizasyondur; aynı bakterinin deri ve yumuşak doku enfeksiyonu oluşturması ise enfeksiyondur.",
+       "ekran": "Örneğin burunda Staphylococcus aureus saptanması kolonizasyondur; aynı bakterinin deri ve yumuşak doku enfeksiyonu oluşturması ise enfeksiyondur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p053",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-21-c0223",
+       "ses": "Burası önemli, konak parazit ilişkisiyle ilgili çıkmış soruda doğru ifade şuydu: kolonize olmuş mikroorganizmanın vücutta bağışık yanıt oluşturmasına infeksiyon denir.",
+       "ekran": "Burası önemli, konak parazit ilişkisiyle ilgili çıkmış soruda doğru ifade şuydu: kolonize olmuş mikroorganizmanın vücutta bağışık yanıt oluşturmasına infeksiyon denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0224",
+       "ses": "Çeldiricileri de düzeltelim: bir tarafın yarar sağlayıp diğerinin zarar görmediği ilişki parazitik ilişki değildir; endojen infeksiyon mikroorganizmaların yüzeylere yerleşmesi değil, flora üyeleriyle oluşan enfeksiyondur; fırsatçı patojenler sağlıklı kişilerde değil, savunması bozulmuş konakta hastalık yapar; mikrobiyota da enfeksiyonu etkileyen konağa ait bir faktördür.",
+       "ekran": "Çeldiricileri de düzeltelim: bir tarafın yarar sağlayıp diğerinin zarar görmediği ilişki parazitik ilişki değildir; endojen infeksiyon mikroorganizmaların yüzeylere yerleşmesi değil, flora üyeleriyle oluşan enfeksiyondur; fırsatçı patojenler sağlıklı kişilerde değil, savunması bozulmuş konakta hastalık yapar; mikrobiyota da enfeksiyonu etkileyen konağa ait bir faktördür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p054",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-21-c0225",
+       "ses": "Normal mikrobiyota üyeleri genellikle konağa zarar vermez, ancak bazı koşullarda fırsatçı enfeksiyonlara neden olabilir.",
+       "ekran": "Normal mikrobiyota üyeleri genellikle konağa zarar vermez, ancak bazı koşullarda fırsatçı enfeksiyonlara neden olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0226",
+       "ses": "Bunu kolaylaştıran başlıca durumlar bağışıklık sisteminin baskılanması; cerrahi, travma, yanık gibi nedenlerle anatomik bariyerlerin bozulması; mikroorganizmaların normal yerleşim bölgelerinden steril bölgelere geçmesi; kateter ve diğer invaziv cihazların kullanılması; ve geniş spektrumlu ya da uzun süreli antibiyotik kullanımıdır.",
+       "ekran": "Bunu kolaylaştıran başlıca durumlar bağışıklık sisteminin baskılanması; cerrahi, travma, yanık gibi nedenlerle anatomik bariyerlerin bozulması; mikroorganizmaların normal yerleşim bölgelerinden steril bölgelere geçmesi; kateter ve diğer invaziv cihazların kullanılması; ve geniş spektrumlu ya da uzun süreli antibiyotik kullanımıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0227",
+       "ses": "Antibiyotik hem mikrobiyota dengesini bozar, buna disbiyoz denir, hem de dirençli mikroorganizmaları seçer.",
+       "ekran": "Antibiyotik hem mikrobiyota dengesini bozar, buna disbiyoz denir, hem de dirençli mikroorganizmaları seçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0228",
+       "ses": "Klasik örnek Escherichia coli'dir: bağırsak mikrobiyotasının üyesi olarak orada hastalık yapmadan bulunur, ama üriner sisteme geçerse üriner sistem enfeksiyonuna yol açabilir.",
+       "ekran": "Klasik örnek Escherichia coli'dir: bağırsak mikrobiyotasının üyesi olarak orada hastalık yapmadan bulunur, ama üriner sisteme geçerse üriner sistem enfeksiyonuna yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b19",
+   "baslik": "Flora bulunan ve steril bölgeler",
+   "paragraflar": [
+    {
+     "id": "k1-21-p055",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-21-c0229",
+       "ses": "Normal vücut florası deri, ağız, burun, boğaz, göz ve konjonktiva, üst solunum yolları, sindirim kanalı, genital organlar ve dış kulak yolunda bulunur.",
+       "ekran": "Normal vücut florası deri, ağız, burun, boğaz, göz ve konjonktiva, üst solunum yolları, sindirim kanalı, genital organlar ve dış kulak yolunda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0230",
+       "ses": "Floranın bulunmadığı, yani steril bölgeler ise merkezi sinir sistemi ve beyin omurilik sıvısı; trakea, bronşlar ve akciğerlerden oluşan alt solunum yolları; dolaşım sistemi; mesane, üreter, böbrekler ve serviksten oluşan üst ürogenital bölgeler; ve vücut boşluklarıdır.",
+       "ekran": "Floranın bulunmadığı, yani steril bölgeler ise merkezi sinir sistemi ve beyin omurilik sıvısı; trakea, bronşlar ve akciğerlerden oluşan alt solunum yolları; dolaşım sistemi; mesane, üreter, böbrekler ve serviksten oluşan üst ürogenital bölgeler; ve vücut boşluklarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p056",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-21-c0231",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda en çok tekrarlanan bilgidir: normalde mikrobiyal flora bulunmayan bölge üreterdir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda en çok tekrarlanan bilgidir: normalde mikrobiyal flora bulunmayan bölge üreterdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0232",
+       "ses": "Özofagus, konjonktiva, kolon ve vajende ise flora vardır.",
+       "ekran": "Özofagus, konjonktiva, kolon ve vajende ise flora vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0233",
+       "ses": "Burası önemli, aynı mantıkla normal vücut florası üyelerinin bulunmadığı bölge kan dolaşımıdır; deri, ağız boşluğu, burun, üst solunum yolları, genital organlar ve sindirim kanalında flora bulunur.",
+       "ekran": "Burası önemli, aynı mantıkla normal vücut florası üyelerinin bulunmadığı bölge kan dolaşımıdır; deri, ağız boşluğu, burun, üst solunum yolları, genital organlar ve sindirim kanalında flora bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0234",
+       "ses": "Steril bölgeden mikroorganizma üremesi bu yüzden anlamlıdır.",
+       "ekran": "Steril bölgeden mikroorganizma üremesi bu yüzden anlamlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p057",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-21-c0235",
+       "ses": "Flora bakterileri hastalık oluşturmaksızın organizmayla dengeli bir şekilde yaşar.",
+       "ekran": "Flora bakterileri hastalık oluşturmaksızın organizmayla dengeli bir şekilde yaşar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0236",
+       "ses": "Deride Staphylococcus epidermidis ve Propionibacterium acnes, bağırsakta Bacteroides fragilis ve Enterobacteriaceae üyeleri buna örnektir.",
+       "ekran": "Deride Staphylococcus epidermidis ve Propionibacterium acnes, bağırsakta Bacteroides fragilis ve Enterobacteriaceae üyeleri buna örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0237",
+       "ses": "Slayttaki vücut şeması her bölgenin florasını ayrı gösterir: konjonktiva ve dış kulakta koagülaz negatif stafilokoklar baskındır, konjonktivada Haemophilus ve streptokoklar da yer alır; burun, ağız ve orofarenkste viridans streptokoklar, koagülaz negatif stafilokoklar, Staphylococcus aureus, Neisseria, Streptococcus pneumoniae ve anaeroblar; mide ve ince bağırsakta Streptococcus, Lactobacillus ve az sayıda diğer bakteri; kalın bağırsakta Bacteroides, Clostridium, Escherichia coli ve diğer enterik bakteriler; üretra ve vajinada koagülaz negatif stafilokok ve difteroidler, vajinada ayrıca Lactobacillus bulunur.",
+       "ekran": "Slayttaki vücut şeması her bölgenin florasını ayrı gösterir: konjonktiva ve dış kulakta koagülaz negatif stafilokoklar baskındır, konjonktivada Haemophilus ve streptokoklar da yer alır; burun, ağız ve orofarenkste viridans streptokoklar, koagülaz negatif stafilokoklar, Staphylococcus aureus, Neisseria, Streptococcus pneumoniae ve anaeroblar; mide ve ince bağırsakta Streptococcus, Lactobacillus ve az sayıda diğer bakteri; kalın bağırsakta Bacteroides, Clostridium, Escherichia coli ve diğer enterik bakteriler; üretra ve vajinada koagülaz negatif stafilokok ve difteroidler, vajinada ayrıca Lactobacillus bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b20",
+   "baslik": "Bölgelere göre normal mikrobiyota",
+   "paragraflar": [
+    {
+     "id": "k1-21-p058",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-21-c0238",
+       "ses": "Deri mikrobiyotası anatomik bölgeye, nem ve sebum miktarına göre değişir.",
+       "ekran": "Deri mikrobiyotası anatomik bölgeye, nem ve sebum miktarına göre değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0239",
+       "ses": "Başlıca üyeleri koagülaz negatif stafilokoklar, özellikle Staphylococcus epidermidis; özellikle sebase yani yağlı bölgelerde Cutibacterium acnes, ki Propionibacterium acnes'in güncel adıdır; difteroidler denen Corynebacterium türleri; bazı bireylerde kolonizasyon yapan Staphylococcus aureus; ve Micrococcus türleridir.",
+       "ekran": "Başlıca üyeleri koagülaz negatif stafilokoklar, özellikle Staphylococcus epidermidis; özellikle sebase yani yağlı bölgelerde Cutibacterium acnes, ki Propionibacterium acnes'in güncel adıdır; difteroidler denen Corynebacterium türleri; bazı bireylerde kolonizasyon yapan Staphylococcus aureus; ve Micrococcus türleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0240",
+       "ses": "Mantar olarak özellikle Malassezia, daha az oranda Candida bulunur.",
+       "ekran": "Mantar olarak özellikle Malassezia, daha az oranda Candida bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0241",
+       "ses": "Malassezia hem deri florası üyesi hem de pitiriyazis versikolor etkenidir.",
+       "ekran": "Malassezia hem deri florası üyesi hem de pitiriyazis versikolor etkenidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p059",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-21-c0242",
+       "ses": "Üst solunum yollarında nazal kavitede Corynebacterium, Cutibacterium ve Staphylococcus epidermidis gibi koagülaz negatif stafilokoklar bulunur.",
+       "ekran": "Üst solunum yollarında nazal kavitede Corynebacterium, Cutibacterium ve Staphylococcus epidermidis gibi koagülaz negatif stafilokoklar bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0243",
+       "ses": "Burası önemli: erişkinlerin yaklaşık %20'sinde kalıcı nazal Staphylococcus aureus taşıyıcılığı vardır.",
+       "ekran": "Burası önemli: erişkinlerin yaklaşık %20'sinde kalıcı nazal Staphylococcus aureus taşıyıcılığı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0244",
+       "ses": "Orofarenkste viridans grup streptokoklar, Corynebacterium ve anaerob bakteriler bulunur.",
+       "ekran": "Orofarenkste viridans grup streptokoklar, Corynebacterium ve anaerob bakteriler bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0245",
+       "ses": "Sağlıklı bireylerde potansiyel patojenler de asemptomatik olarak kolonize olabilir: Streptococcus pneumoniae, Streptococcus pyogenes, Haemophilus influenzae ve Neisseria meningitidis.",
+       "ekran": "Sağlıklı bireylerde potansiyel patojenler de asemptomatik olarak kolonize olabilir: Streptococcus pneumoniae, Streptococcus pyogenes, Haemophilus influenzae ve Neisseria meningitidis.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0246",
+       "ses": "Yani sağlıklı kişide boğazda bu bakterilerin bulunması tek başına hastalık kanıtı değildir.",
+       "ekran": "Yani sağlıklı kişide boğazda bu bakterilerin bulunması tek başına hastalık kanıtı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p060",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-21-c0247",
+       "ses": "Gastrointestinal sistemde mikroorganizma yoğunluğu mideden kolona doğru belirgin olarak artar; bileşimi anatomik bölge, pH, oksijen düzeyi, safra asitleri, diyet ve ilaçlardan etkilenir.",
+       "ekran": "Gastrointestinal sistemde mikroorganizma yoğunluğu mideden kolona doğru belirgin olarak artar; bileşimi anatomik bölge, pH, oksijen düzeyi, safra asitleri, diyet ve ilaçlardan etkilenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0248",
+       "ses": "Ağız boşluğunda viridans grup streptokoklar, Actinomyces, Neisseria, Veillonella, Prevotella ve Fusobacterium türleri, çeşitli anaeroblar ve bazı bireylerde Candida bulunur.",
+       "ekran": "Ağız boşluğunda viridans grup streptokoklar, Actinomyces, Neisseria, Veillonella, Prevotella ve Fusobacterium türleri, çeşitli anaeroblar ve bazı bireylerde Candida bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0249",
+       "ses": "Midede düşük pH nedeniyle mikrobiyal yoğunluk düşüktür ve aside toleran mikroorganizmalar bulunabilir; Helicobacter pylori bazı bireylerde mide mukozasını kolonize eder ve prevalansı yaş ve coğrafi bölgeye göre önemli ölçüde değişir.",
+       "ekran": "Midede düşük pH nedeniyle mikrobiyal yoğunluk düşüktür ve aside toleran mikroorganizmalar bulunabilir; Helicobacter pylori bazı bireylerde mide mukozasını kolonize eder ve prevalansı yaş ve coğrafi bölgeye göre önemli ölçüde değişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p061",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-21-c0250",
+       "ses": "İnce bağırsakta duodenum ve jejunumda yoğunluk görece düşüktür; Streptococcus, Lactobacillus ve Enterococcus bulunabilir.",
+       "ekran": "İnce bağırsakta duodenum ve jejunumda yoğunluk görece düşüktür; Streptococcus, Lactobacillus ve Enterococcus bulunabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0251",
+       "ses": "Distal ileumda bakteri yoğunluğu giderek artar ve flora kolon florasına benzemeye başlar; anaeroblar ve Enterobacterales üyeleri artar.",
+       "ekran": "Distal ileumda bakteri yoğunluğu giderek artar ve flora kolon florasına benzemeye başlar; anaeroblar ve Enterobacterales üyeleri artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0252",
+       "ses": "Burası önemli: kolon vücuttaki en yoğun ve en çeşitli mikrobiyal topluluklardan birini barındırır ve burada anaerob bakteriler baskındır.",
+       "ekran": "Burası önemli: kolon vücuttaki en yoğun ve en çeşitli mikrobiyal topluluklardan birini barındırır ve burada anaerob bakteriler baskındır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0253",
+       "ses": "Başlıca gruplar Bacteroides ve diğer anaeroblar, Enterobacterales ve Enterococcus türleridir; Candida ve Saccharomyces gibi mantarlar da bağırsak florasının parçası olabilir.",
+       "ekran": "Başlıca gruplar Bacteroides ve diğer anaeroblar, Enterobacterales ve Enterococcus türleridir; Candida ve Saccharomyces gibi mantarlar da bağırsak florasının parçası olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p062",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-21-c0254",
+       "ses": "Ürogenital sistemde distal üretra, deri ve perine florasına benzer mikroorganizmalarla kolonize olabilir: koagülaz negatif stafilokoklar, Corynebacterium, Streptococcus ve Enterococcus türleri ve bazı bireylerde Enterobacterales üyeleri.",
+       "ekran": "Ürogenital sistemde distal üretra, deri ve perine florasına benzer mikroorganizmalarla kolonize olabilir: koagülaz negatif stafilokoklar, Corynebacterium, Streptococcus ve Enterococcus türleri ve bazı bireylerde Enterobacterales üyeleri.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0255",
+       "ses": "Bu nedenle uygun teknikle alınmayan idrar örneklerinde periüretral mikroorganizmalar kontaminasyona neden olabilir.",
+       "ekran": "Bu nedenle uygun teknikle alınmayan idrar örneklerinde periüretral mikroorganizmalar kontaminasyona neden olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0256",
+       "ses": "Mesane ve idrar klasik olarak steril kabul edilirdi; günümüzde ise sağlıklı mesanede düşük biyokütleli bir üriner mikrobiyota, yani ürobiyom bulunduğu gösterilmiştir.",
+       "ekran": "Mesane ve idrar klasik olarak steril kabul edilirdi; günümüzde ise sağlıklı mesanede düşük biyokütleli bir üriner mikrobiyota, yani ürobiyom bulunduğu gösterilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0257",
+       "ses": "Ancak mikrobiyota varlığı üriner sistem enfeksiyonu anlamına gelmez.",
+       "ekran": "Ancak mikrobiyota varlığı üriner sistem enfeksiyonu anlamına gelmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p063",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-21-c0258",
+       "ses": "Vajinal mikrobiyota yaş, hormonal durum, gebelik, menstrüel siklus ve pH gibi faktörlere göre değişir.",
+       "ekran": "Vajinal mikrobiyota yaş, hormonal durum, gebelik, menstrüel siklus ve pH gibi faktörlere göre değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0259",
+       "ses": "Üreme çağındaki birçok sağlıklı kadında Lactobacillus türleri baskındır ve laktik asit üretimiyle asidik vajinal pH'ın korunmasına katkıda bulunur.",
+       "ekran": "Üreme çağındaki birçok sağlıklı kadında Lactobacillus türleri baskındır ve laktik asit üretimiyle asidik vajinal pH'ın korunmasına katkıda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0260",
+       "ses": "Gardnerella, Prevotella ve çeşitli anaeroblar düşük miktarlarda bulunabilir; mikrobiyal dengenin bozulması bakteriyel vajinozis ile ilişkili olabilir.",
+       "ekran": "Gardnerella, Prevotella ve çeşitli anaeroblar düşük miktarlarda bulunabilir; mikrobiyal dengenin bozulması bakteriyel vajinozis ile ilişkili olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0261",
+       "ses": "Bu da disbiyozun vajinadaki karşılığıdır.",
+       "ekran": "Bu da disbiyozun vajinadaki karşılığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b21",
+   "baslik": "Endojen ve ekzojen enfeksiyon, epidemiyolojik terimler",
+   "paragraflar": [
+    {
+     "id": "k1-21-p064",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-21-c0262",
+       "ses": "Endojen enfeksiyon, normal flora üyesi mikroorganizmalarla, yani deri ve mukoza yüzeyindeki mikroorganizmalarla oluşan enfeksiyondur.",
+       "ekran": "Endojen enfeksiyon, normal flora üyesi mikroorganizmalarla, yani deri ve mukoza yüzeyindeki mikroorganizmalarla oluşan enfeksiyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0263",
+       "ses": "Örneğin deri mikrobiyotasındaki koagülaz negatif stafilokoklar kateter ilişkili kan dolaşımı enfeksiyonu, Candida türleri ise immünsüpresyon ya da bariyer bozukluğunda invaziv kandidiyaz yapar.",
+       "ekran": "Örneğin deri mikrobiyotasındaki koagülaz negatif stafilokoklar kateter ilişkili kan dolaşımı enfeksiyonu, Candida türleri ise immünsüpresyon ya da bariyer bozukluğunda invaziv kandidiyaz yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0264",
+       "ses": "Ekzojen enfeksiyon ise insanlar, hayvanlar ya da damar içi sıvılar gibi dış bir kaynaktan bulaş yoluyla oluşan enfeksiyondur.",
+       "ekran": "Ekzojen enfeksiyon ise insanlar, hayvanlar ya da damar içi sıvılar gibi dış bir kaynaktan bulaş yoluyla oluşan enfeksiyondur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p065",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-21-c0265",
+       "ses": "Rezervuar, patojen mikroorganizmanın insan dışında yaşadığı ekolojik ortamdır; Legionella için tatlı sular, Borrelia için küçük kemiriciler örnektir.",
+       "ekran": "Rezervuar, patojen mikroorganizmanın insan dışında yaşadığı ekolojik ortamdır; Legionella için tatlı sular, Borrelia için küçük kemiriciler örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0266",
+       "ses": "Konak, mikroorganizmanın üzerinde yaşadığı canlıdır.",
+       "ekran": "Konak, mikroorganizmanın üzerinde yaşadığı canlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0267",
+       "ses": "Portör, yani taşıyıcı, bir patojeni taşıyan ve klinik hastalık bulguları göstermeden etkeni başkalarına bulaştırabilen kişidir; Salmonella Typhi'nin kronik asemptomatik taşıyıcılığı klasik örnektir.",
+       "ekran": "Portör, yani taşıyıcı, bir patojeni taşıyan ve klinik hastalık bulguları göstermeden etkeni başkalarına bulaştırabilen kişidir; Salmonella Typhi'nin kronik asemptomatik taşıyıcılığı klasik örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0268",
+       "ses": "Kaynak ise mikroorganizmayı bulaştıran canlı ya da cansız ortamdır.",
+       "ekran": "Kaynak ise mikroorganizmayı bulaştıran canlı ya da cansız ortamdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0269",
+       "ses": "Rezervuar ile kaynağı, portör ile vektörü karıştırmayın.",
+       "ekran": "Rezervuar ile kaynağı, portör ile vektörü karıştırmayın.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p066",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-21-c0270",
+       "ses": "Burası önemli, epidemiyolojik terimlerle ilgili soruda yanlış olan tanım dezenfeksiyon tanımıydı: cansız ortamların sporlar dahil bütün patojen mikroorganizmalardan temizlenmesi dezenfeksiyon değildir.",
+       "ekran": "Burası önemli, epidemiyolojik terimlerle ilgili soruda yanlış olan tanım dezenfeksiyon tanımıydı: cansız ortamların sporlar dahil bütün patojen mikroorganizmalardan temizlenmesi dezenfeksiyon değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0271",
+       "ses": "Doğru verilen tanımlar şunlardır: konak, enfeksiyon etkeninin yerleştiği makroorganizmadır; portör, etkeni taşıyıp bulaştırabildiği halde kendisi belirti göstermeyen kişidir; inkübasyon süresi, etkenin alınmasından belirtilerin ortaya çıkışına kadar geçen süredir; pastörizasyon ise mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve soğutmaya dayalı bir işlemdir.",
+       "ekran": "Doğru verilen tanımlar şunlardır: konak, enfeksiyon etkeninin yerleştiği makroorganizmadır; portör, etkeni taşıyıp bulaştırabildiği halde kendisi belirti göstermeyen kişidir; inkübasyon süresi, etkenin alınmasından belirtilerin ortaya çıkışına kadar geçen süredir; pastörizasyon ise mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve soğutmaya dayalı bir işlemdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p067",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-21-c0272",
+       "ses": "Hastalığın toplumdaki sıklığını beklenen düzeyle karşılaştırarak tanımlarız.",
+       "ekran": "Hastalığın toplumdaki sıklığını beklenen düzeyle karşılaştırarak tanımlarız.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0273",
+       "ses": "Endemi, bir enfeksiyon etkeninin ya da hastalığın belirli bir coğrafyada ya da toplulukta alışılmış sıklıkta görülmesidir.",
+       "ekran": "Endemi, bir enfeksiyon etkeninin ya da hastalığın belirli bir coğrafyada ya da toplulukta alışılmış sıklıkta görülmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0274",
+       "ses": "Epidemi, yani salgın, bir hastalığın ya da sağlıkla ilgili olayın belli bir bölgede beklenenden daha fazla görülmesidir.",
+       "ekran": "Epidemi, yani salgın, bir hastalığın ya da sağlıkla ilgili olayın belli bir bölgede beklenenden daha fazla görülmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0275",
+       "ses": "Pandemi ise dünyada birden fazla ülkede ya da kıtada, çok geniş bir alanda yayılan salgın hastalıklara verilen genel isimdir.",
+       "ekran": "Pandemi ise dünyada birden fazla ülkede ya da kıtada, çok geniş bir alanda yayılan salgın hastalıklara verilen genel isimdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0276",
+       "ses": "Epidemik ve endemik tifüs ile endemik mikozlar adlarını bu kavramlardan alır.",
+       "ekran": "Epidemik ve endemik tifüs ile endemik mikozlar adlarını bu kavramlardan alır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p068",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-21-c0277",
+       "ses": "Burası önemli, 2 ayrı soruda bu ayrım soruldu: bir hastalığın belli bir bölgede, belli bir dönemde beklenenden anlamlı ölçüde fazla görülmesi epidemidir.",
+       "ekran": "Burası önemli, 2 ayrı soruda bu ayrım soruldu: bir hastalığın belli bir bölgede, belli bir dönemde beklenenden anlamlı ölçüde fazla görülmesi epidemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0278",
+       "ses": "Bir bölgede bir hastalığın ya da etkenin uzun süre belli bir düzeyde seyretmesi ise endemidir.",
+       "ekran": "Bir bölgede bir hastalığın ya da etkenin uzun süre belli bir düzeyde seyretmesi ise endemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0279",
+       "ses": "Bu 2 tanım sporadi, pandemi ve seküler değişimle karıştırılmamalıdır.",
+       "ekran": "Bu 2 tanım sporadi, pandemi ve seküler değişimle karıştırılmamalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b22",
+   "baslik": "Enfeksiyon zinciri",
+   "paragraflar": [
+    {
+     "id": "k1-21-p069",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-21-c0280",
+       "ses": "Mikroorganizmanın enfeksiyon oluşturabilmesi için belirli aşamalardan geçmesi gerekir; bu aşamalar zincirine enfeksiyon zinciri denir.",
+       "ekran": "Mikroorganizmanın enfeksiyon oluşturabilmesi için belirli aşamalardan geçmesi gerekir; bu aşamalar zincirine enfeksiyon zinciri denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0281",
+       "ses": "6 halkası vardır.",
+       "ekran": "6 halkası vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0282",
+       "ses": "Birinci halka etkendir: bakteri, virüs, fungus ya da parazit.",
+       "ekran": "Birinci halka etkendir: bakteri, virüs, fungus ya da parazit.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0283",
+       "ses": "2.'si kaynaktır: insanlar, hayvanlar, böcekler; enfekte canlı, su, toprak.",
+       "ekran": "2.'si kaynaktır: insanlar, hayvanlar, böcekler; enfekte canlı, su, toprak.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0284",
+       "ses": "3.'sü kaynaktan çıkıştır: solunum, gastrointestinal ve genitoüriner yollar; balgam, tükürük, idrar, dışkı, kan, meni ve vajen sekresyonu.",
+       "ekran": "3.'sü kaynaktan çıkıştır: solunum, gastrointestinal ve genitoüriner yollar; balgam, tükürük, idrar, dışkı, kan, meni ve vajen sekresyonu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0285",
+       "ses": "4.'sü taşınma, yani bulaşmadır: doğrudan temas ya da gıda, eller, araç gereç gibi dolaylı yollar; hava, toz, portör ve vektör.",
+       "ekran": "4.'sü taşınma, yani bulaşmadır: doğrudan temas ya da gıda, eller, araç gereç gibi dolaylı yollar; hava, toz, portör ve vektör.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0286",
+       "ses": "5.'si yeni konakçıya giriş kapısıdır: solunum yolu, gastrointestinal yol, deri ve mukozalar, yani ağız, burun, göz, kulak ve vajen.",
+       "ekran": "5.'si yeni konakçıya giriş kapısıdır: solunum yolu, gastrointestinal yol, deri ve mukozalar, yani ağız, burun, göz, kulak ve vajen.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0287",
+       "ses": "Altıncısı duyarlı konaktır: immün durum, beslenme, kronik hastalık, immünsüpresif ilaç kullanımı, travma, yaşlılık ve çocukluk.",
+       "ekran": "Altıncısı duyarlı konaktır: immün durum, beslenme, kronik hastalık, immünsüpresif ilaç kullanımı, travma, yaşlılık ve çocukluk.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p070",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-21-c0288",
+       "ses": "Burası önemli: enfeksiyon zincirini oluşturan 6 halkadan biri engellendiği takdirde enfeksiyon oluşamaz.",
+       "ekran": "Burası önemli: enfeksiyon zincirini oluşturan 6 halkadan biri engellendiği takdirde enfeksiyon oluşamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0289",
+       "ses": "Bu zincir iyi bilinip gerekli önlemler alınırsa bulaşıcı hastalıklardan korunmak mümkündür.",
+       "ekran": "Bu zincir iyi bilinip gerekli önlemler alınırsa bulaşıcı hastalıklardan korunmak mümkündür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0290",
+       "ses": "Slayttaki ayrıntılı şema zinciri hastane ortamına uyarlar.",
+       "ekran": "Slayttaki ayrıntılı şema zinciri hastane ortamına uyarlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0291",
+       "ses": "Canlı kaynaklar semptomatik ya da asemptomatik enfeksiyonu, florası ya da kolonizasyonu olan kişilerdir: hastanın kendisi ya da başka hasta, sağlık personeli, hasta yakını ve ziyaretçi.",
+       "ekran": "Canlı kaynaklar semptomatik ya da asemptomatik enfeksiyonu, florası ya da kolonizasyonu olan kişilerdir: hastanın kendisi ya da başka hasta, sağlık personeli, hasta yakını ve ziyaretçi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0292",
+       "ses": "Hastanın kendi florasının kaynak olması, endojen enfeksiyonun zincirdeki karşılığıdır.",
+       "ekran": "Hastanın kendi florasının kaynak olması, endojen enfeksiyonun zincirdeki karşılığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0293",
+       "ses": "Cansız kaynaklar alet, yüzey, su, hava ve yiyeceklerdir.",
+       "ekran": "Cansız kaynaklar alet, yüzey, su, hava ve yiyeceklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0294",
+       "ses": "Çıkış kapıları solunum yolu, yani konuşma, öksürme, hapşırma, aspirasyon ve ventilatör; genitoüriner sistem, yani kateter ve cinsel yolla bulaşan hastalıklar; gastrointestinal sistem, yani kusma ve gayta; cilt ve mukoza, yani yara ve kesi; kan, yani iğne batması ve kan transfüzyonu; ve transplasental yoldur.",
+       "ekran": "Çıkış kapıları solunum yolu, yani konuşma, öksürme, hapşırma, aspirasyon ve ventilatör; genitoüriner sistem, yani kateter ve cinsel yolla bulaşan hastalıklar; gastrointestinal sistem, yani kusma ve gayta; cilt ve mukoza, yani yara ve kesi; kan, yani iğne batması ve kan transfüzyonu; ve transplasental yoldur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p071",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-21-c0295",
+       "ses": "Taşınma temas, damlacık, solunum ve vektör aracılı olabilir ve sonucu mikroorganizma yükü, virülansı ve patojenitesi belirler.",
+       "ekran": "Taşınma temas, damlacık, solunum ve vektör aracılı olabilir ve sonucu mikroorganizma yükü, virülansı ve patojenitesi belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0296",
+       "ses": "Giriş kapıları solunum sistemi, genitoüriner sistem, gastrointestinal sistem, cilt ve mukoza, parenteral yol, yani enjeksiyon gibi sindirim kanalı dışı yol, ve transplasental yoldur.",
+       "ekran": "Giriş kapıları solunum sistemi, genitoüriner sistem, gastrointestinal sistem, cilt ve mukoza, parenteral yol, yani enjeksiyon gibi sindirim kanalı dışı yol, ve transplasental yoldur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0297",
+       "ses": "Duyarlı kişiyi fiziksel bariyer ile hücresel ve hümoral immünite, kateter, diyabet, HIV, sitomegalovirüs, malignite ve organ nakli gibi eşlik eden hastalıklar, kemoterapi ve steroid gibi ilaçlar ve antibiyotikle bozulan flora belirler.",
+       "ekran": "Duyarlı kişiyi fiziksel bariyer ile hücresel ve hümoral immünite, kateter, diyabet, HIV, sitomegalovirüs, malignite ve organ nakli gibi eşlik eden hastalıklar, kemoterapi ve steroid gibi ilaçlar ve antibiyotikle bozulan flora belirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p072",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k1-21-c0298",
+       "ses": "Enfeksiyonların önlenmesinde temel amaç, zincirin herhangi bir halkasını kırmaktır.",
+       "ekran": "Enfeksiyonların önlenmesinde temel amaç, zincirin herhangi bir halkasını kırmaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0299",
+       "ses": "Burası önemli: el hijyeni bulaşma yolunu, aşılama duyarlı konağı, izolasyon önlemleri ise özellikle çıkış kapısı ve bulaşma yolunu hedefleyerek zincirin kırılmasına katkı sağlar.",
+       "ekran": "Burası önemli: el hijyeni bulaşma yolunu, aşılama duyarlı konağı, izolasyon önlemleri ise özellikle çıkış kapısı ve bulaşma yolunu hedefleyerek zincirin kırılmasına katkı sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0300",
+       "ses": "Tek bir halka yeterli olduğu için tek bir etkili önlem bile zinciri kırabilir.",
+       "ekran": "Tek bir halka yeterli olduğu için tek bir etkili önlem bile zinciri kırabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b23",
+   "baslik": "Bakterilerin giriş yolları ve zoonozlar",
+   "paragraflar": [
+    {
+     "id": "k1-21-p073",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k1-21-c0301",
+       "ses": "Bazı bakterilerin organizmaya giriş yolları bir tabloyla verilir.",
+       "ekran": "Bazı bakterilerin organizmaya giriş yolları bir tabloyla verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0302",
+       "ses": "Sindirim yoluyla girenler Salmonella ve Shigella türleri, Yersinia enterocolitica, enterotoksijenik Escherichia coli, Vibrio ve Campylobacter türleri, Clostridium botulinum, Bacillus cereus, Listeria ve Brucella türleridir.",
+       "ekran": "Sindirim yoluyla girenler Salmonella ve Shigella türleri, Yersinia enterocolitica, enterotoksijenik Escherichia coli, Vibrio ve Campylobacter türleri, Clostridium botulinum, Bacillus cereus, Listeria ve Brucella türleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0303",
+       "ses": "Solunum yoluyla girenler Mycobacterium, Nocardia, Legionella, Bordetella türleri, Mycoplasma pneumoniae, Chlamydia psittaci ve Chlamydia pneumoniae'dir.",
+       "ekran": "Solunum yoluyla girenler Mycobacterium, Nocardia, Legionella, Bordetella türleri, Mycoplasma pneumoniae, Chlamydia psittaci ve Chlamydia pneumoniae'dir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p074",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k1-21-c0304",
+       "ses": "Doğrudan penetrasyonla girenler 4 alt yolda toplanır.",
+       "ekran": "Doğrudan penetrasyonla girenler 4 alt yolda toplanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0305",
+       "ses": "Travmayla Clostridium tetani ve Erysipelothrix rhusiopathiae; artropod ısırmasıyla Borrelia türleri ve Yersinia pestis; cinsel yolla Neisseria gonorrhoeae, Treponema pallidum ve Chlamydia trachomatis; transplasental yolla ise Treponema pallidum girer.",
+       "ekran": "Travmayla Clostridium tetani ve Erysipelothrix rhusiopathiae; artropod ısırmasıyla Borrelia türleri ve Yersinia pestis; cinsel yolla Neisseria gonorrhoeae, Treponema pallidum ve Chlamydia trachomatis; transplasental yolla ise Treponema pallidum girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0306",
+       "ses": "Treponema pallidumun hem cinsel hem transplasental yolda yer aldığına dikkat edin.",
+       "ekran": "Treponema pallidumun hem cinsel hem transplasental yolda yer aldığına dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p075",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-21-c0307",
+       "ses": "Kaynağı hayvan olan etkenlerle meydana gelen enfeksiyon hastalıklarına zoonozlar denir.",
+       "ekran": "Kaynağı hayvan olan etkenlerle meydana gelen enfeksiyon hastalıklarına zoonozlar denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0308",
+       "ses": "Sığır bruselloz, şarbon, salmonelloz ve Q ateşinin; koyun ve keçi bruselloz, Q ateşi ve şarbonun kaynağıdır.",
+       "ekran": "Sığır bruselloz, şarbon, salmonelloz ve Q ateşinin; koyun ve keçi bruselloz, Q ateşi ve şarbonun kaynağıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0309",
+       "ses": "Köpek kuduz ve kistik ekinokokkozun, kedi toksoplazmoz ve kedi tırmığı hastalığının kaynağıdır.",
+       "ekran": "Köpek kuduz ve kistik ekinokokkozun, kedi toksoplazmoz ve kedi tırmığı hastalığının kaynağıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0310",
+       "ses": "Kemiriciler leptospiroz, hantavirüs enfeksiyonları ve vebanın; kuşlar psittakoz ve bazı zoonotik influenza enfeksiyonlarının; tavşan ve yabani tavşan ise tularemi hastalığının kaynağıdır.",
+       "ekran": "Kemiriciler leptospiroz, hantavirüs enfeksiyonları ve vebanın; kuşlar psittakoz ve bazı zoonotik influenza enfeksiyonlarının; tavşan ve yabani tavşan ise tularemi hastalığının kaynağıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p076",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-21-c0311",
+       "ses": "Burası önemli, zoonoz eşleşmeleri sınavın sevdiği konulardandır: tavşan tularemi, kuş psittakoz, kedi toksoplazmoz, köpek kuduz ve kistik ekinokokkoz.",
+       "ekran": "Burası önemli, zoonoz eşleşmeleri sınavın sevdiği konulardandır: tavşan tularemi, kuş psittakoz, kedi toksoplazmoz, köpek kuduz ve kistik ekinokokkoz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0312",
+       "ses": "Aynı hastalıkta kaynak ve vektörün farklı olabildiğine de dikkat edin: vebada kaynak kemirici, vektör piredir; tularemide kaynak tavşandır, vektörlerden biri ise kenedir.",
+       "ekran": "Aynı hastalıkta kaynak ve vektörün farklı olabildiğine de dikkat edin: vebada kaynak kemirici, vektör piredir; tularemide kaynak tavşandır, vektörlerden biri ise kenedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b24",
+   "baslik": "Enfeksiyon hastalığının seyri",
+   "paragraflar": [
+    {
+     "id": "k1-21-p077",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k1-21-c0313",
+       "ses": "Enfeksiyon hastalıklarının seyrinde 5 temel basamak vardır.",
+       "ekran": "Enfeksiyon hastalıklarının seyrinde 5 temel basamak vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0314",
+       "ses": "1.'si etkenle karşılaşma ve enfektif ajanın alınmasıdır.",
+       "ekran": "1.'si etkenle karşılaşma ve enfektif ajanın alınmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0315",
+       "ses": "2.'si inkübasyon dönemidir: enfeksiyon etkeninin vücuda girmesinden prodromal belirtilerin ortaya çıkmasına kadar geçen dönemdir ve bu dönemde semptom ve bulgu yoktur.",
+       "ekran": "2.'si inkübasyon dönemidir: enfeksiyon etkeninin vücuda girmesinden prodromal belirtilerin ortaya çıkmasına kadar geçen dönemdir ve bu dönemde semptom ve bulgu yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0316",
+       "ses": "Prion hastalıklarında bu dönemin çok uzun olabildiğini, Kuru'da 30 yıla vardığını hatırlayın.",
+       "ekran": "Prion hastalıklarında bu dönemin çok uzun olabildiğini, Kuru'da 30 yıla vardığını hatırlayın.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0317",
+       "ses": "3.'sü prodromal dönemdir: inkübasyon döneminin sonundan tipik klinik bulguların ortaya çıkmasına kadar geçen, genellikle özgül olmayan belirti ve bulguların bulunduğu dönemdir.",
+       "ekran": "3.'sü prodromal dönemdir: inkübasyon döneminin sonundan tipik klinik bulguların ortaya çıkmasına kadar geçen, genellikle özgül olmayan belirti ve bulguların bulunduğu dönemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0318",
+       "ses": "Ateş, baş ağrısı, iştahsızlık, halsizlik, sırt ve bacak ağrıları ve mide bulantısı görülür.",
+       "ekran": "Ateş, baş ağrısı, iştahsızlık, halsizlik, sırt ve bacak ağrıları ve mide bulantısı görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-21-p078",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-21-c0319",
+       "ses": "4.'sü hastalık, yani klinik dönemdir: hastalığa ait karakteristik klinik belirti ve bulguların belirginleştiği dönemdir.",
+       "ekran": "4.'sü hastalık, yani klinik dönemdir: hastalığa ait karakteristik klinik belirti ve bulguların belirginleştiği dönemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0320",
+       "ses": "Hastalık iyileşme, kronikleşme, sekel gelişimi ya da ölümle sonuçlanabilir.",
+       "ekran": "Hastalık iyileşme, kronikleşme, sekel gelişimi ya da ölümle sonuçlanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0321",
+       "ses": "5.'si nekahat, yani konvalesan dönemdir: akut klinik bulguların gerilediği ve kişinin iyileşme sürecine girdiği dönemdir.",
+       "ekran": "5.'si nekahat, yani konvalesan dönemdir: akut klinik bulguların gerilediği ve kişinin iyileşme sürecine girdiği dönemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0322",
+       "ses": "Belirti ve bulgular azalır ya da kaybolur, fonksiyonlar giderek normale döner, ancak halsizlik ve yorgunluk bir süre devam edebilir.",
+       "ekran": "Belirti ve bulgular azalır ya da kaybolur, fonksiyonlar giderek normale döner, ancak halsizlik ve yorgunluk bir süre devam edebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0323",
+       "ses": "Bazı hastalarda sekel ya da kalıcı fonksiyon kaybı gelişebilir.",
+       "ekran": "Bazı hastalarda sekel ya da kalıcı fonksiyon kaybı gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0324",
+       "ses": "Burası önemli: inkübasyon belirtisiz, prodrom ise özgül olmayan belirtilerle giden dönemdir.",
+       "ekran": "Burası önemli: inkübasyon belirtisiz, prodrom ise özgül olmayan belirtilerle giden dönemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0325",
+       "ses": "Burası önemli, bir tuzak daha: bazı enfeksiyonlarda bulaştırıcılık klinik iyileşmeden sonra da sürebilir.",
+       "ekran": "Burası önemli, bir tuzak daha: bazı enfeksiyonlarda bulaştırıcılık klinik iyileşmeden sonra da sürebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0326",
+       "ses": "Yani nekahatteki kişi kendini iyi hissetse de bulaştırıcı olabilir; bunu portörlük kavramıyla birlikte düşünün.",
+       "ekran": "Yani nekahatteki kişi kendini iyi hissetse de bulaştırıcı olabilir; bunu portörlük kavramıyla birlikte düşünün.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-21-b25",
+   "baslik": "Özetle",
+   "paragraflar": [
+    {
+     "id": "k1-21-p079",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-21-c0327",
+       "ses": "Özetle, enfeksiyon belirti şartı taşımayan bir yerleşme ve çoğalmadır; sonucu virülans, doz ve konak duyarlılığı birlikte belirler.",
+       "ekran": "Özetle, enfeksiyon belirti şartı taşımayan bir yerleşme ve çoğalmadır; sonucu virülans, doz ve konak duyarlılığı birlikte belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-21-c0328",
+       "ses": "Etkenleri aselüler, prokaryot ve ökaryot gruplarıyla, normal florayı ve steril bölgeleri, enfeksiyon zincirinin 6 halkasını ve hastalığın 5 dönemini birbirine bağlayarak öğrendiğinizde, bir enfeksiyonu etkeni, kaynağı, vektörü, giriş kapısı ve seyriyle birlikte düşünebilirsiniz.",
+       "ekran": "Etkenleri aselüler, prokaryot ve ökaryot gruplarıyla, normal florayı ve steril bölgeleri, enfeksiyon zincirinin 6 halkasını ve hastalığın 5 dönemini birbirine bağlayarak öğrendiğinizde, bir enfeksiyonu etkeni, kaynağı, vektörü, giriş kapısı ve seyriyle birlikte düşünebilirsiniz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

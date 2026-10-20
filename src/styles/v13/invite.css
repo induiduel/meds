@@ -1,0 +1,20 @@
+/* v13 daveti (components/v13/V13Invite.tsx) — her tasarımda çalışır, yalnız palet token'ları */
+.a13i { display: flex; flex-direction: column; gap: 14px; }
+.a13i-art { width: 100%; height: auto; max-height: 180px; }
+.a13i-bg { fill: var(--color-canvas); stroke: var(--color-line); }
+.a13i-is { fill: var(--color-white); stroke: var(--color-line); }
+.a13i-ac { fill: var(--color-accent); }
+.a13i-acs { fill: var(--color-accent-soft); }
+.a13i-ln { fill: var(--color-field); }
+.a13i-ink { fill: var(--color-ink-3); opacity: .55; }
+.a13i-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.a13i-list li { display: flex; gap: 10px; align-items: flex-start; font: 400 14px/1.45 var(--font-sans); color: var(--color-ink-2); }
+.a13i-list li b { color: var(--color-ink); font-weight: 600; }
+.a13i-list svg { width: 16px; height: 16px; flex: none; margin-top: 3px; color: var(--color-accent); }
+.a13i-foot { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; width: 100%; }
+.a13i-btn { min-height: 44px; padding: 0 18px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink);
+  font: 600 14px/1 var(--font-sans); cursor: pointer; }
+.a13i-btn:hover { background: var(--color-field); }
+.a13i-btn.is-primary { border-color: transparent; background: var(--color-accent); color: var(--color-on-accent); }
+.a13i-btn.is-primary:hover { background: var(--color-accent-hover, var(--color-accent)); }
+@media (max-width: 480px) { .a13i-btn { flex: 1 1 0; padding: 0 10px; } }

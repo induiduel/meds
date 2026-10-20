@@ -1,0 +1,71 @@
+/*
+ * v13 "Ada" · temel katman. v12 sayfa bileşenlerinin üstüne biner (html[data-design='v12'][data-v13='on']).
+ * Amaç: sade + kompakt + taşmasız. Kurallar:
+ *  1) Kenardan kenara şerit yok: araç çubukları, uyarı bantları ve alt sayfalar yuvarlak, kenardan ayrık yüzeylerdir.
+ *  2) Taşma kalkanı: sayfa sütunu yatayda kırpılır, uzun sözcükler satır sonunda kırılır, medya sütuna sığar.
+ *  3) Tek vurgu rengi: renkli zeminler yalnız durum (doğru/yanlış/uyarı) içindir; süs renkleri sönükleşir.
+ *  4) Başlık tekrarı yok: sayfa adı başlık kapsülünde yazılır, sayfa araç çubuğu yalnız sayaç ve denetimleri taşır.
+ * Seçiciler ucuz tutulur (bkz. css-perf: ata konumunda [class*=] ve geniş :has yok).
+ */
+
+:root[data-design='v12'][data-v13='on'] {
+  --v12-r: 14px;
+  --v12-r-sm: 10px;
+  --dn-radius: 14px;
+  --radius-xl: 12px;
+  --radius-2xl: 14px;
+  --radius-3xl: 16px;
+  --shadow-sm: 0 0 0 1px var(--color-line);
+  --shadow-md: 0 0 0 1px var(--color-line), 0 4px 14px -8px rgb(16 24 40 / .14);
+
+  /* ── Sayfa sütunu: taşma kalkanı ── */
+  & .sh-main { overflow-x: clip; overflow-wrap: break-word; gap: 10px; padding-top: 6px; }
+  & .sh-main :is(img, video, canvas, iframe) { max-width: 100%; }
+  & .sh-main :is(pre, code) { overflow-wrap: anywhere; }
+  & .sh-main pre { white-space: pre-wrap; }
+  /* Geniş tablolar sütunu itmez, kendi içinde kayar */
+  & .sh-main table { max-width: 100%; }
+  & .sh-main :is(.overflow-x-auto, .table-wrap) { max-width: 100%; overscroll-behavior-x: contain; }
+
+  /* ── Sayfa araç çubuğu: şerit değil, yüzen kapsül; başlık kapsülde yazdığı için burada yalnız sayaç ── */
+  & .pt-root { margin: 0 0 8px; padding: 8px 10px; border: 1px solid var(--color-line); border-radius: 14px; background: var(--color-white);
+    backdrop-filter: none; -webkit-backdrop-filter: none; box-shadow: none; }
+  & .pt-root .pt-h { display: none; }
+  & .pt-title:not(:has(> .pt-count)) { display: none; }
+  & .pt-search { background: var(--color-field); box-shadow: none; }
+  @media (max-width: 767px) {
+    & .pt-row { grid-template-areas: "search filter" "seg seg" "title tools"; }
+    & .pt-root { padding: 6px; }
+  }
+
+  /* Sayfa içi büyük başlıklar kapsülle aynı adı tekrarlıyor: görünmez olur ama ekran okuyucu için başlık kalır */
+  & :is(.c12-title, .q12-title, .l12-h1, .g12-h1, .td12-h, .cx-title, .bs-h1) { position: absolute !important; width: 1px; height: 1px; margin: -1px;
+    padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+  /* ── Çevrimdışı uyarısı: bant değil, sütun içinde ada ── */
+  & .sh-offline { margin: 8px max(var(--dn-page-x, 12px), 12px) 0; padding: 8px 12px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--color-warn) 30%, transparent); }
+  @media (min-width: 768px) { & .sh-offline { margin-inline: max(var(--dn-page-x, 0px), 20px); } }
+
+  /* ── Alt sayfalar: telefonda da kenardan ayrık, dört köşesi yuvarlak ── */
+  & .sh-sheet { border-radius: 20px; box-shadow: var(--v12-pop); }
+  @media (max-width: 639px) {
+    & .sh-sheet-root { padding: 0 8px calc(env(safe-area-inset-bottom, 0px) + 8px); }
+    & .sh-sheet { border-radius: 20px; }
+  }
+
+  /* ── Bildirim kutucukları alt adanın üstünde ── */
+  & .tst-host { bottom: calc(var(--sh-tabs-h) + env(safe-area-inset-bottom, 0px) + 10px); }
+  @media (min-width: 768px) { & .tst-host { bottom: 20px; } }
+
+  /* ── Sayfa başı açıklamaları: kapsül başlığı yeterli, telefonda gizli ── */
+  @media (max-width: 767px) {
+    & :is(.cx-desc, .ui-page-desc) { display: none; }
+  }
+
+  /* ── Kart yüzeyleri: tek dil (beyaz yüzey + saç çizgisi, 14 px köşe) ── */
+  & :is(.ui-card, .dn-card) { border-radius: var(--v12-r); }
+
+  /* ── Odak halkası her yüzeyde görünür ── */
+  & :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+}

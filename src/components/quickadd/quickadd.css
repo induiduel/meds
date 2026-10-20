@@ -175,3 +175,18 @@ html[data-layout="odak"] .qh-grid { grid-template-columns: minmax(0, 1fr) 420px;
 .qh-combo.is-fill svg { width: 14px; height: 14px; }
 .qh-combo:disabled { opacity: .45; cursor: not-allowed; }
 @media (pointer: coarse) { .qh-prem-row .x { opacity: 1; } }
+
+/* Sınav penceresi: "Kaçıncı soruydu?" (QuickAddHero numaraOne; kurulPencere.sinavPenceresi) */
+.qa-numara {
+  display: flex; align-items: center; gap: 12px; min-width: 0; margin: 0 0 10px; padding: 10px 12px;
+  border: 1px solid var(--color-accent); border-radius: 14px; background: var(--color-accent-soft); cursor: text;
+}
+.qa-numara.is-full { margin: 10px 14px 4px; }
+.qa-numara-l { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; font: 600 15px/1.25 var(--font-sans); color: var(--color-ink); }
+.qa-numara-l small { font: 400 12.5px/1.35 var(--font-sans); color: var(--color-ink-2); }
+.qa-numara input {
+  flex: none; width: 76px; height: 44px; padding: 0 8px; text-align: center; box-sizing: border-box;
+  border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); color: var(--color-ink);
+  font: 650 20px var(--font-sans); font-variant-numeric: tabular-nums; outline: 0;
+}
+.qa-numara input:focus-visible { border-color: var(--color-accent); box-shadow: 0 0 0 2px var(--color-accent-soft); }

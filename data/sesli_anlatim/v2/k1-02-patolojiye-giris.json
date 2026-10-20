@@ -1,0 +1,3334 @@
+{
+ "surum": 2,
+ "ders_id": "k1-02",
+ "anahtar": "k1-02-patolojiye-giris",
+ "baslik": "Patolojiye Giriş",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-02-b01",
+   "baslik": "Patolojinin tanımı ve tıptaki yeri",
+   "paragraflar": [
+    {
+     "id": "k1-02-p001",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-02-c0001",
+       "ses": "Patoloji, hastalıkların nedenlerini, gelişim mekanizmalarını, yapısal yani morfolojik değişikliklerini ve bu değişikliklerin işlevsel ve klinik sonuçlarını inceleyen bilim dalıdır.",
+       "ekran": "Patoloji, hastalıkların nedenlerini, gelişim mekanizmalarını, yapısal yani morfolojik değişikliklerini ve bu değişikliklerin işlevsel ve klinik sonuçlarını inceleyen bilim dalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0002",
+       "ses": "Bu tanımdaki 4 öğeyi aklınızda bir iskelet gibi tutun: nedene etiyoloji, gelişim mekanizmasına patogenez deriz; bunlara dokudaki yapısal değişiklik ve hastaya yansıyan klinik sonuç eklenir.",
+       "ekran": "Bu tanımdaki 4 öğeyi aklınızda bir iskelet gibi tutun: nedene etiyoloji, gelişim mekanizmasına patogenez deriz; bunlara dokudaki yapısal değişiklik ve hastaya yansıyan klinik sonuç eklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0003",
+       "ses": "Dersin geri kalanı bu iskeletin üzerine kurulur.",
+       "ekran": "Dersin geri kalanı bu iskeletin üzerine kurulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0004",
+       "ses": "Sözcüğün kökenine bakalım.",
+       "ekran": "Sözcüğün kökenine bakalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0005",
+       "ses": "Yunanca pathos hastalık ve ıstırap demektir, logos ise bilim, söz, akıl anlamına gelir.",
+       "ekran": "Yunanca pathos hastalık ve ıstırap demektir, logos ise bilim, söz, akıl anlamına gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0006",
+       "ses": "İkisi birleşince patoloji, kelime anlamıyla hastalık bilimi olur; yani hastalıkların neden, mekanizma ve sonuçlarını inceleyen bilim alanıdır.",
+       "ekran": "İkisi birleşince patoloji, kelime anlamıyla hastalık bilimi olur; yani hastalıkların neden, mekanizma ve sonuçlarını inceleyen bilim alanıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p002",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-02-c0007",
+       "ses": "Patoloji ile fizyopatolojiyi birbirinden ayırmak gerekir.",
+       "ekran": "Patoloji ile fizyopatolojiyi birbirinden ayırmak gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0008",
+       "ses": "Fizyopatoloji, hastalıklarda ortaya çıkan fonksiyonel, yani işlevsel bozuklukları inceler; bir organın neyi yapamaz hâle geldiğini sorar.",
+       "ekran": "Fizyopatoloji, hastalıklarda ortaya çıkan fonksiyonel, yani işlevsel bozuklukları inceler; bir organın neyi yapamaz hâle geldiğini sorar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0009",
+       "ses": "Patoloji ise morfolojik ve yapısal değişikliklere odaklanır; dokuda ve hücrede neyin değiştiğini gösterir.",
+       "ekran": "Patoloji ise morfolojik ve yapısal değişikliklere odaklanır; dokuda ve hücrede neyin değiştiğini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0010",
+       "ses": "Klinik pratikte önemli bir sorun vardır: morfolojik değişiklikler her zaman belirgin olmayabilir.",
+       "ekran": "Klinik pratikte önemli bir sorun vardır: morfolojik değişiklikler her zaman belirgin olmayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0011",
+       "ses": "Hastalığın erken döneminde ya da işlev bozukluğu öne çıktığında doku görünümü normale yakın kalabilir.",
+       "ekran": "Hastalığın erken döneminde ya da işlev bozukluğu öne çıktığında doku görünümü normale yakın kalabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0012",
+       "ses": "Bu yüzden klinisyen ile patolog arasındaki iletişim tanı için kritiktir; morfolojik bulgunun silik olması hastalığın olmadığı anlamına gelmez.",
+       "ekran": "Bu yüzden klinisyen ile patolog arasındaki iletişim tanı için kritiktir; morfolojik bulgunun silik olması hastalığın olmadığı anlamına gelmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p003",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-02-c0013",
+       "ses": "Patoloji bağımsız bir temel bilimdir ve normal yapıyı öğreten anatomi ve histoloji ile hastayı tedavi eden klinik bilimler arasında köprü kurar.",
+       "ekran": "Patoloji bağımsız bir temel bilimdir ve normal yapıyı öğreten anatomi ve histoloji ile hastayı tedavi eden klinik bilimler arasında köprü kurar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0014",
+       "ses": "Tıptaki rolleri 3 başlıkta toplanır.",
+       "ekran": "Tıptaki rolleri 3 başlıkta toplanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0015",
+       "ses": "Bilimsel rolü, hastalık ve sağlık kavrayışımıza katkıdır.",
+       "ekran": "Bilimsel rolü, hastalık ve sağlık kavrayışımıza katkıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0016",
+       "ses": "Uygulamalı rolü, tanıya ve tedavi planına katkıdır; hastanın alacağı tedavi çoğu kez patoloji sonucuna göre belirlenir.",
+       "ekran": "Uygulamalı rolü, tanıya ve tedavi planına katkıdır; hastanın alacağı tedavi çoğu kez patoloji sonucuna göre belirlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0017",
+       "ses": "Eğitsel rolü ise tıp öğrencisinden uzmana kadar tüm düzeylerde eğitim ve öğretimdir.",
+       "ekran": "Eğitsel rolü ise tıp öğrencisinden uzmana kadar tüm düzeylerde eğitim ve öğretimdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p004",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-02-c0018",
+       "ses": "Patolojinin kapsamını 2 soruyla özetleyebiliriz.",
+       "ekran": "Patolojinin kapsamını 2 soruyla özetleyebiliriz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0019",
+       "ses": "Hastalık sürecinde ne tür değişiklikler incelenir?",
+       "ekran": "Hastalık sürecinde ne tür değişiklikler incelenir?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0020",
+       "ses": "Çıplak gözle görülen makroskobik değişiklikler, ancak mikroskopla görülebilen mikroskobik değişiklikler ve bunların organ işleyişine yansıması olan fonksiyon bozuklukları.",
+       "ekran": "Çıplak gözle görülen makroskobik değişiklikler, ancak mikroskopla görülebilen mikroskobik değişiklikler ve bunların organ işleyişine yansıması olan fonksiyon bozuklukları.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0021",
+       "ses": "Bu değişiklikler hangi düzeyde aranır?",
+       "ekran": "Bu değişiklikler hangi düzeyde aranır?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0022",
+       "ses": "Küçükten büyüğe hücre, doku, organ ve tüm organizma düzeylerinde.",
+       "ekran": "Küçükten büyüğe hücre, doku, organ ve tüm organizma düzeylerinde.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0023",
+       "ses": "Patolog aynı lezyonu bu farklı ölçeklerde değerlendirir; tek bir düzeye bakmak tabloyu eksik bırakır.",
+       "ekran": "Patolog aynı lezyonu bu farklı ölçeklerde değerlendirir; tek bir düzeye bakmak tabloyu eksik bırakır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b02",
+   "baslik": "Hastalık sürecinin 4 öğesi ve etiyoloji",
+   "paragraflar": [
+    {
+     "id": "k1-02-p005",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-02-c0024",
+       "ses": "Her hastalık, birbirini izleyen 4 öğeden oluşan bir süreç olarak çözümlenebilir.",
+       "ekran": "Her hastalık, birbirini izleyen 4 öğeden oluşan bir süreç olarak çözümlenebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0025",
+       "ses": "1.'si etiyoloji, yani neden.",
+       "ekran": "1.'si etiyoloji, yani neden.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0026",
+       "ses": "2.'si patogenez, yani gelişim mekanizması.",
+       "ekran": "2.'si patogenez, yani gelişim mekanizması.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0027",
+       "ses": "3.'sü morfolojik değişiklikler.",
+       "ekran": "3.'sü morfolojik değişiklikler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0028",
+       "ses": "4.'sü fonksiyonel ve klinik sonuçlar.",
+       "ekran": "4.'sü fonksiyonel ve klinik sonuçlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0029",
+       "ses": "Bu öğeler bir zincir gibi bağlıdır: neden olmadan mekanizma başlamaz, mekanizma morfolojiyi, morfoloji de klinik tabloyu belirler.",
+       "ekran": "Bu öğeler bir zincir gibi bağlıdır: neden olmadan mekanizma başlamaz, mekanizma morfolojiyi, morfoloji de klinik tabloyu belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0030",
+       "ses": "Sınavda bu sıra ve her öğenin karşılığı sık sorulur.",
+       "ekran": "Sınavda bu sıra ve her öğenin karşılığı sık sorulur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p006",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-02-c0031",
+       "ses": "Etiyolojiyi 2 büyük gruba ayırırız.",
+       "ekran": "Etiyolojiyi 2 büyük gruba ayırırız.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0032",
+       "ses": "Birinci grup genetik nedenlerdir; bireyin kendi genetik yapısından kaynaklandıkları için intrinsik, yani içsel nedenler olarak adlandırılırlar.",
+       "ekran": "Birinci grup genetik nedenlerdir; bireyin kendi genetik yapısından kaynaklandıkları için intrinsik, yani içsel nedenler olarak adlandırılırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0033",
+       "ses": "Bunlar kalıtsal mutasyonlar, somatik mutasyonlar ve kromozomal anomalilerdir.",
+       "ekran": "Bunlar kalıtsal mutasyonlar, somatik mutasyonlar ve kromozomal anomalilerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0034",
+       "ses": "Kalıtsal mutasyon ebeveynden aktarılır ve vücudun tüm hücrelerinde bulunur; somatik mutasyon ise yaşam boyunca tek tek hücrelerde sonradan oluşur.",
+       "ekran": "Kalıtsal mutasyon ebeveynden aktarılır ve vücudun tüm hücrelerinde bulunur; somatik mutasyon ise yaşam boyunca tek tek hücrelerde sonradan oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0035",
+       "ses": "Kromozomal anomaliler, kromozom sayısı ya da yapısındaki bozukluklardır.",
+       "ekran": "Kromozomal anomaliler, kromozom sayısı ya da yapısındaki bozukluklardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p007",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-02-c0036",
+       "ses": "Derste 2 örnek verilir.",
+       "ekran": "Derste 2 örnek verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0037",
+       "ses": "İlki BRCA1 ve BRCA2 mutasyonudur.",
+       "ekran": "İlki BRCA1 ve BRCA2 mutasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0038",
+       "ses": "Bu ad, İngilizce meme kanseri geni anlamına gelen ifadenin kısaltmasıdır.",
+       "ekran": "Bu ad, İngilizce meme kanseri geni anlamına gelen ifadenin kısaltmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0039",
+       "ses": "Dikkat edin, bu genler onkogen değildir; hücrelerdeki DNA hasarını onaran ve böylece kontrolsüz çoğalmayı ve kanser gelişimini önleyen tümör baskılayıcı genlerdir.",
+       "ekran": "Dikkat edin, bu genler onkogen değildir; hücrelerdeki DNA hasarını onaran ve böylece kontrolsüz çoğalmayı ve kanser gelişimini önleyen tümör baskılayıcı genlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0040",
+       "ses": "Bozulduklarında onarım aksar ve kanser riski artar.",
+       "ekran": "Bozulduklarında onarım aksar ve kanser riski artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0041",
+       "ses": "İkinci örnek trizomi 21, yani Down sendromudur: 21. kromozom çiftinde fazladan bir kromozom bulunur ve toplam kromozom sayısı 46 yerine 47'dir.",
+       "ekran": "İkinci örnek trizomi 21, yani Down sendromudur: 21. kromozom çiftinde fazladan bir kromozom bulunur ve toplam kromozom sayısı 46 yerine 47'dir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p008",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-02-c0042",
+       "ses": "İkinci grup edinsel nedenlerdir; bireyin dışından geldikleri için ekstrinsik, yani dışsal nedenler olarak adlandırılırlar.",
+       "ekran": "İkinci grup edinsel nedenlerdir; bireyin dışından geldikleri için ekstrinsik, yani dışsal nedenler olarak adlandırılırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0043",
+       "ses": "Enfeksiyöz etkenler bakteri, virüs, mantar ve parazitlerdir.",
+       "ekran": "Enfeksiyöz etkenler bakteri, virüs, mantar ve parazitlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0044",
+       "ses": "Kimyasal ajanlar ilaçlar ve toksinlerdir; tedavi amacıyla verilen bir ilaç bile doza ya da duyarlılığa bağlı olarak hasar yapabilir.",
+       "ekran": "Kimyasal ajanlar ilaçlar ve toksinlerdir; tedavi amacıyla verilen bir ilaç bile doza ya da duyarlılığa bağlı olarak hasar yapabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0045",
+       "ses": "Fiziksel etkenler travma, radyasyon ve ısıdır; ısı hem sıcak hem soğuk zararı kapsar.",
+       "ekran": "Fiziksel etkenler travma, radyasyon ve ısıdır; ısı hem sıcak hem soğuk zararı kapsar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0046",
+       "ses": "Diğer nedenler arasında beslenme bozuklukları ile hipoksi ve iskemik hasar, yani dokuya yeterli oksijenin ulaşamaması ve kan akımının azalması yer alır.",
+       "ekran": "Diğer nedenler arasında beslenme bozuklukları ile hipoksi ve iskemik hasar, yani dokuya yeterli oksijenin ulaşamaması ve kan akımının azalması yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0047",
+       "ses": "Bir hastalıkta genetik ve edinsel nedenler birlikte de rol oynayabilir.",
+       "ekran": "Bir hastalıkta genetik ve edinsel nedenler birlikte de rol oynayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b03",
+   "baslik": "Patogenez, morfoloji ve klinik sonuçlar",
+   "paragraflar": [
+    {
+     "id": "k1-02-p009",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-02-c0048",
+       "ses": "Patogenez, etiyolojik ajanın başlattığı ve basamak basamak ilerleyen olaylar zinciridir.",
+       "ekran": "Patogenez, etiyolojik ajanın başlattığı ve basamak basamak ilerleyen olaylar zinciridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0049",
+       "ses": "Moleküler düzeyde sinyal yolları ve gen ekspresyonu değişir; hasar ilk olarak burada başlar.",
+       "ekran": "Moleküler düzeyde sinyal yolları ve gen ekspresyonu değişir; hasar ilk olarak burada başlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0050",
+       "ses": "Hücresel düzeyde hücre ya adaptasyon gösterir ya da ölür; ölüm, düzenli ve programlı hücre ölümü olan apoptoz biçiminde ya da kontrolsüz hücre ve doku ölümü olan nekroz biçiminde olabilir.",
+       "ekran": "Hücresel düzeyde hücre ya adaptasyon gösterir ya da ölür; ölüm, düzenli ve programlı hücre ölümü olan apoptoz biçiminde ya da kontrolsüz hücre ve doku ölümü olan nekroz biçiminde olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0051",
+       "ses": "Doku ve organ düzeyinde ise inflamasyon, fibrozis yani bağ dokusu artışı ve sertleşme, ve neoplazi yani kontrolsüz yeni doku oluşumu ortaya çıkar.",
+       "ekran": "Doku ve organ düzeyinde ise inflamasyon, fibrozis yani bağ dokusu artışı ve sertleşme, ve neoplazi yani kontrolsüz yeni doku oluşumu ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0052",
+       "ses": "Şunu ayırın: apoptoz, nekroz ve adaptasyon hücresel; inflamasyon, fibrozis ve neoplazi doku ve organ düzeyindeki yanıtlardır.",
+       "ekran": "Şunu ayırın: apoptoz, nekroz ve adaptasyon hücresel; inflamasyon, fibrozis ve neoplazi doku ve organ düzeyindeki yanıtlardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p010",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-02-c0053",
+       "ses": "Patogenez zaman içinde de ilerler: önce subklinik dönem, sonra erken lezyon, en sonunda ilerlemiş hastalık.",
+       "ekran": "Patogenez zaman içinde de ilerler: önce subklinik dönem, sonra erken lezyon, en sonunda ilerlemiş hastalık.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0054",
+       "ses": "Subklinik dönemde hasta yakınmasızdır, erken lezyon dokuda saptanabilir, ilerlemiş hastalıkta ise klinik tablo belirginleşir.",
+       "ekran": "Subklinik dönemde hasta yakınmasızdır, erken lezyon dokuda saptanabilir, ilerlemiş hastalıkta ise klinik tablo belirginleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0055",
+       "ses": "Morfolojik değişiklikler, patogenezin dokuda bıraktığı görünür izdir.",
+       "ekran": "Morfolojik değişiklikler, patogenezin dokuda bıraktığı görünür izdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0056",
+       "ses": "Makroskobik bulgular organın boyutu, şekli ve rengi ile lezyonların sayısı, lokalizasyonu ve yayılımıdır.",
+       "ekran": "Makroskobik bulgular organın boyutu, şekli ve rengi ile lezyonların sayısı, lokalizasyonu ve yayılımıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0057",
+       "ses": "Mikroskobik bulgular 2 gruptur.",
+       "ekran": "Mikroskobik bulgular 2 gruptur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0058",
+       "ses": "Hücresel değişiklikler dejenerasyon, nekroz, displazi yani hücrelerde düzensiz ve atipik gelişim, ve neoplazidir.",
+       "ekran": "Hücresel değişiklikler dejenerasyon, nekroz, displazi yani hücrelerde düzensiz ve atipik gelişim, ve neoplazidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0059",
+       "ses": "Stromal yanıt ise hücreleri çevreleyen destek dokuda inflamasyon, fibrozis ve anjiyogenez, yani yeni damar oluşumudur.",
+       "ekran": "Stromal yanıt ise hücreleri çevreleyen destek dokuda inflamasyon, fibrozis ve anjiyogenez, yani yeni damar oluşumudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0060",
+       "ses": "Gerekirse ışık mikroskobunun ayrıntı sınırının ötesindeki ultrastrüktürel değişiklikler elektron mikroskobu ile incelenir.",
+       "ekran": "Gerekirse ışık mikroskobunun ayrıntı sınırının ötesindeki ultrastrüktürel değişiklikler elektron mikroskobu ile incelenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p011",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-02-c0061",
+       "ses": "Hastalık sürecinin son öğesi, yapısal değişikliklerin işleve ve klinik tabloya yansımasıdır.",
+       "ekran": "Hastalık sürecinin son öğesi, yapısal değişikliklerin işleve ve klinik tabloya yansımasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0062",
+       "ses": "Kalp, böbrek, karaciğer gibi organlarda yapısal hasar organ yetmezliğine yol açar; endokrin dokudaki değişiklik ise hormon üretiminin artmasına ya da azalmasına neden olur.",
+       "ekran": "Kalp, böbrek, karaciğer gibi organlarda yapısal hasar organ yetmezliğine yol açar; endokrin dokudaki değişiklik ise hormon üretiminin artmasına ya da azalmasına neden olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0063",
+       "ses": "Klinik tablo; semptomlar, fizik muayene bulguları ve laboratuvar ile görüntüleme sonuçlarından oluşur.",
+       "ekran": "Klinik tablo; semptomlar, fizik muayene bulguları ve laboratuvar ile görüntüleme sonuçlarından oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0064",
+       "ses": "Buradaki temel ilke şudur: patolojik ve klinik korelasyon tanıda esastır.",
+       "ekran": "Buradaki temel ilke şudur: patolojik ve klinik korelasyon tanıda esastır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0065",
+       "ses": "Morfoloji ile klinik tablo uyumlu değilse tanı yeniden sorgulanır.",
+       "ekran": "Morfoloji ile klinik tablo uyumlu değilse tanı yeniden sorgulanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b04",
+   "baslik": "Patolojinin klinik önemi ve patoloğun rolü",
+   "paragraflar": [
+    {
+     "id": "k1-02-p012",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-02-c0066",
+       "ses": "Burası önemli: patoloji birçok hastalıkta ve özellikle neoplazilerde altın standart tanı yöntemidir.",
+       "ekran": "Burası önemli: patoloji birçok hastalıkta ve özellikle neoplazilerde altın standart tanı yöntemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0067",
+       "ses": "Yani diğer testlerin sonuçlarının karşılaştırıldığı nihai tanı patolojik incelemeyle konur.",
+       "ekran": "Yani diğer testlerin sonuçlarının karşılaştırıldığı nihai tanı patolojik incelemeyle konur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0068",
+       "ses": "Cerrahi patoloji raporu tedaviyi yönlendiren 4 temel bilgi içerir.",
+       "ekran": "Cerrahi patoloji raporu tedaviyi yönlendiren 4 temel bilgi içerir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0069",
+       "ses": "Tanı, lezyonun ne olduğunu söyler.",
+       "ekran": "Tanı, lezyonun ne olduğunu söyler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0070",
+       "ses": "Evre, hastalığın ne kadar yayıldığını gösterir.",
+       "ekran": "Evre, hastalığın ne kadar yayıldığını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0071",
+       "ses": "Derece, tümörün mikroskobik olarak ne kadar saldırgan göründüğünü anlatır.",
+       "ekran": "Derece, tümörün mikroskobik olarak ne kadar saldırgan göründüğünü anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0072",
+       "ses": "Cerrahi sınır değerlendirmesi ise çıkarılan dokunun kenarında lezyon kalıp kalmadığını bildirir.",
+       "ekran": "Cerrahi sınır değerlendirmesi ise çıkarılan dokunun kenarında lezyon kalıp kalmadığını bildirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0073",
+       "ses": "Bu bilgiler tedavi ve prognozu doğrudan etkiler: cerrahiye ek olarak kemoterapi ya da radyoterapi verilmesi demek olan adjuvan tedavi kararı, tümörün özelliklerine göre seçilen hedefe yönelik tedavi ve hastanın nasıl izleneceğini belirleyen izlem planı rapora dayanır.",
+       "ekran": "Bu bilgiler tedavi ve prognozu doğrudan etkiler: cerrahiye ek olarak kemoterapi ya da radyoterapi verilmesi demek olan adjuvan tedavi kararı, tümörün özelliklerine göre seçilen hedefe yönelik tedavi ve hastanın nasıl izleneceğini belirleyen izlem planı rapora dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p013",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-02-c0074",
+       "ses": "Patoloji uzmanı doku ve hücre örneklerini önce makroskobik, sonra mikroskobik olarak inceler.",
+       "ekran": "Patoloji uzmanı doku ve hücre örneklerini önce makroskobik, sonra mikroskobik olarak inceler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0075",
+       "ses": "Rutin inceleme yetmediğinde ek yöntemlere başvurur: dokudaki belirli kimyasal maddeleri renklendiren histokimya, antikorlarla belirli proteinleri gösteren immünohistokimya ve gen düzeyindeki değişiklikleri araştıran moleküler testler.",
+       "ekran": "Rutin inceleme yetmediğinde ek yöntemlere başvurur: dokudaki belirli kimyasal maddeleri renklendiren histokimya, antikorlarla belirli proteinleri gösteren immünohistokimya ve gen düzeyindeki değişiklikleri araştıran moleküler testler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0076",
+       "ses": "Raporda tanı, evre ve derece, cerrahi sınır ile prognostik ve prediktif belirteçler yer alır.",
+       "ekran": "Raporda tanı, evre ve derece, cerrahi sınır ile prognostik ve prediktif belirteçler yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0077",
+       "ses": "Prognostik belirteç hastalığın seyrini, prediktif belirteç ise belirli bir tedaviye yanıtı öngörür.",
+       "ekran": "Prognostik belirteç hastalığın seyrini, prediktif belirteç ise belirli bir tedaviye yanıtı öngörür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p014",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-02-c0078",
+       "ses": "Patolog yalnızca mikroskoba bakan bir teknik uzman değildir; klinisyen için konsültan hekimdir.",
+       "ekran": "Patolog yalnızca mikroskoba bakan bir teknik uzman değildir; klinisyen için konsültan hekimdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0079",
+       "ses": "Kararını morfoloji, klinik bilgiler, radyoloji bulguları ve tedavi seçeneklerini birlikte tartarak verir.",
+       "ekran": "Kararını morfoloji, klinik bilgiler, radyoloji bulguları ve tedavi seçeneklerini birlikte tartarak verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0080",
+       "ses": "İyi bir rapor klinik soruları doğrudan yanıtlar.",
+       "ekran": "İyi bir rapor klinik soruları doğrudan yanıtlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0081",
+       "ses": "Patoloğun kendine sorduğu soru şudur: bu olguda klinisyen veya hasta olsaydım ne bilmek isterdim?",
+       "ekran": "Patoloğun kendine sorduğu soru şudur: bu olguda klinisyen veya hasta olsaydım ne bilmek isterdim?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0082",
+       "ses": "Bu bakış, raporu teknik bir tanımdan klinik karar aracına dönüştürür.",
+       "ekran": "Bu bakış, raporu teknik bir tanımdan klinik karar aracına dönüştürür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b05",
+   "baslik": "Klinik ile patolog arasındaki iletişim",
+   "paragraflar": [
+    {
+     "id": "k1-02-p015",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-02-c0083",
+       "ses": "Patoloğun doğru tanı koyabilmesi, klinisyenden gelen bilginin eksiksiz olmasına bağlıdır.",
+       "ekran": "Patoloğun doğru tanı koyabilmesi, klinisyenden gelen bilginin eksiksiz olmasına bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0084",
+       "ses": "Patoloğa iletilmesi gereken temel bilgiler şunlardır: yaş ve cinsiyet, çünkü birçok lezyonun olasılığı bunlara göre değişir; lezyonun lokalizasyonu; biyopsi mi rezeksiyon mu yapıldığını gösteren girişim türü; radyoloji ve operasyon bulguları; ve klinik ön tanı ile klinisyenin yanıt aradığı özel sorular.",
+       "ekran": "Patoloğa iletilmesi gereken temel bilgiler şunlardır: yaş ve cinsiyet, çünkü birçok lezyonun olasılığı bunlara göre değişir; lezyonun lokalizasyonu; biyopsi mi rezeksiyon mu yapıldığını gösteren girişim türü; radyoloji ve operasyon bulguları; ve klinik ön tanı ile klinisyenin yanıt aradığı özel sorular.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0085",
+       "ses": "Uygulamada 2 kural vardır.",
+       "ekran": "Uygulamada 2 kural vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0086",
+       "ses": "Klinik bilgi yetersizse patolog raporu geciktirebilir ve bilgi talep eder.",
+       "ekran": "Klinik bilgi yetersizse patolog raporu geciktirebilir ve bilgi talep eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0087",
+       "ses": "Ön tanı ile patoloji sonucu uyumsuzsa klinisyen ile patolog arasındaki temas zorunludur.",
+       "ekran": "Ön tanı ile patoloji sonucu uyumsuzsa klinisyen ile patolog arasındaki temas zorunludur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p016",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-02-c0088",
+       "ses": "Patoloji entelektüel bir oyun değildir; yaşam ve ölüm kararlarını etkileyen kritik bir alandır.",
+       "ekran": "Patoloji entelektüel bir oyun değildir; yaşam ve ölüm kararlarını etkileyen kritik bir alandır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0089",
+       "ses": "Bir raporun içeriği hastanın ameliyat olup olmayacağını ya da hangi tedaviyi alacağını belirleyebilir.",
+       "ekran": "Bir raporun içeriği hastanın ameliyat olup olmayacağını ya da hangi tedaviyi alacağını belirleyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0090",
+       "ses": "Bu nedenle nadir görülen ya da klinisyenin özellikle dikkat etmesi gereken lezyonlarda patolog açıklayıcı ve yönlendirici terimler kullanmalıdır.",
+       "ekran": "Bu nedenle nadir görülen ya da klinisyenin özellikle dikkat etmesi gereken lezyonlarda patolog açıklayıcı ve yönlendirici terimler kullanmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0091",
+       "ses": "Klinik konsültasyonun 3 yolu vardır: farklı uzmanların olguyu birlikte tartıştığı tümör konseyleri, acil ya da karmaşık durumlarda telefon veya yüz yüze görüşmeler, ve rapora eklenen yazılı ek açıklamalar.",
+       "ekran": "Klinik konsültasyonun 3 yolu vardır: farklı uzmanların olguyu birlikte tartıştığı tümör konseyleri, acil ya da karmaşık durumlarda telefon veya yüz yüze görüşmeler, ve rapora eklenen yazılı ek açıklamalar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b06",
+   "baslik": "Patolojinin alt dalları",
+   "paragraflar": [
+    {
+     "id": "k1-02-p017",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-02-c0092",
+       "ses": "Patoloji, inceleme yöntemine ve amacına göre 8 ana alt dala ayrılır.",
+       "ekran": "Patoloji, inceleme yöntemine ve amacına göre 8 ana alt dala ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0093",
+       "ses": "Patolojik anatomi, yani makroskopik patoloji, organ ve lezyonları çıplak gözle inceler.",
+       "ekran": "Patolojik anatomi, yani makroskopik patoloji, organ ve lezyonları çıplak gözle inceler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0094",
+       "ses": "Histopatoloji, diğer adıyla cerrahi ya da anatomik patoloji, dokunun mikroskopik incelenmesidir ve günlük pratiğin temelidir.",
+       "ekran": "Histopatoloji, diğer adıyla cerrahi ya da anatomik patoloji, dokunun mikroskopik incelenmesidir ve günlük pratiğin temelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0095",
+       "ses": "Sitopatoloji hücreleri inceler.",
+       "ekran": "Sitopatoloji hücreleri inceler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0096",
+       "ses": "Ultrastrüktürel patoloji elektron mikroskopisi ile hücre içi ince yapıya bakar.",
+       "ekran": "Ultrastrüktürel patoloji elektron mikroskopisi ile hücre içi ince yapıya bakar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0097",
+       "ses": "Histokimyasal ve immünohistokimyasal patoloji özel boyalar ve antikorlarla madde ve proteinleri gösterir.",
+       "ekran": "Histokimyasal ve immünohistokimyasal patoloji özel boyalar ve antikorlarla madde ve proteinleri gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0098",
+       "ses": "Moleküler patoloji gen ve nükleik asit düzeyindeki değişiklikleri araştırır.",
+       "ekran": "Moleküler patoloji gen ve nükleik asit düzeyindeki değişiklikleri araştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0099",
+       "ses": "Deneysel patoloji hastalık mekanizmalarını deneysel modellerde inceler.",
+       "ekran": "Deneysel patoloji hastalık mekanizmalarını deneysel modellerde inceler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0100",
+       "ses": "Adli, yani forensik patoloji ise hukuki boyutu olan ölüm ve yaralanmalarla ilgilenir.",
+       "ekran": "Adli, yani forensik patoloji ise hukuki boyutu olan ölüm ve yaralanmalarla ilgilenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0101",
+       "ses": "Bu dallar birbirinden kopuk değildir; tek bir olguda birkaçı birlikte kullanılabilir.",
+       "ekran": "Bu dallar birbirinden kopuk değildir; tek bir olguda birkaçı birlikte kullanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p018",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-02-c0102",
+       "ses": "Patoloji bilgisi 2 katmanda öğretilir.",
+       "ekran": "Patoloji bilgisi 2 katmanda öğretilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0103",
+       "ses": "Genel patoloji, hücre ve dokuların zedeleyici etkenlere verdiği temel yanıtları inceler: hücresel adaptasyon, hücre zedelenmesi ve ölümü, akut ve kronik inflamasyon, doku tamiri ve fibrozis, hemodinamik bozukluklar ve neoplazinin temel ilkeleri.",
+       "ekran": "Genel patoloji, hücre ve dokuların zedeleyici etkenlere verdiği temel yanıtları inceler: hücresel adaptasyon, hücre zedelenmesi ve ölümü, akut ve kronik inflamasyon, doku tamiri ve fibrozis, hemodinamik bozukluklar ve neoplazinin temel ilkeleri.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0104",
+       "ses": "Özel, yani sistemik patoloji ise kardiyovasküler sistem, solunum sistemi, gastrointestinal sistem, karaciğer, endokrin sistem gibi organ ve sistemlerin hastalıklarını inceler.",
+       "ekran": "Özel, yani sistemik patoloji ise kardiyovasküler sistem, solunum sistemi, gastrointestinal sistem, karaciğer, endokrin sistem gibi organ ve sistemlerin hastalıklarını inceler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0105",
+       "ses": "Kısaca genel patoloji doku nasıl tepki verir sorusunu, özel patoloji bu organda hangi hastalık var sorusunu yanıtlar.",
+       "ekran": "Kısaca genel patoloji doku nasıl tepki verir sorusunu, özel patoloji bu organda hangi hastalık var sorusunu yanıtlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p019",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-02-c0106",
+       "ses": "Anatomik patoloji ile cerrahi patoloji sık karıştırılır.",
+       "ekran": "Anatomik patoloji ile cerrahi patoloji sık karıştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0107",
+       "ses": "Anatomik patoloji daha geniş bir alandır; otopsi materyallerini, organ ve doku rezeksiyonlarını ve biyopsileri makroskopik ve mikroskopik incelemeyle değerlendirir.",
+       "ekran": "Anatomik patoloji daha geniş bir alandır; otopsi materyallerini, organ ve doku rezeksiyonlarını ve biyopsileri makroskopik ve mikroskopik incelemeyle değerlendirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0108",
+       "ses": "Cerrahi patoloji ise yaşayan hastadan alınan her türlü cerrahi materyali inceler ve klinik tanı, evreleme, tedavi planı ve prognozda doğrudan rol oynar.",
+       "ekran": "Cerrahi patoloji ise yaşayan hastadan alınan her türlü cerrahi materyali inceler ve klinik tanı, evreleme, tedavi planı ve prognozda doğrudan rol oynar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0109",
+       "ses": "Dikkat edin: otopsi anatomik patolojinin kapsamındadır, cerrahi patolojinin değil; cerrahi patolojinin ayırt edici özelliği materyalin yaşayan hastadan alınmasıdır.",
+       "ekran": "Dikkat edin: otopsi anatomik patolojinin kapsamındadır, cerrahi patolojinin değil; cerrahi patolojinin ayırt edici özelliği materyalin yaşayan hastadan alınmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p020",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-02-c0110",
+       "ses": "Sitopatoloji, patolojik değişiklikleri hücre düzeyinde inceler.",
+       "ekran": "Sitopatoloji, patolojik değişiklikleri hücre düzeyinde inceler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0111",
+       "ses": "Temel amacı minimal morbidite ile hızlı, güvenilir ve görece ekonomik tanı koymaktır.",
+       "ekran": "Temel amacı minimal morbidite ile hızlı, güvenilir ve görece ekonomik tanı koymaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0112",
+       "ses": "Kullanım alanları neoplazi taraması ve tanısı, tümör tipinin belirlenmesi, tedavi sonrası kalan ya da yeniden ortaya çıkan rezidüel veya tekrarlayan lezyonların değerlendirilmesi, inflamatuvar ve enfeksiyöz hastalıklar ve jinekolojik hormonal değerlendirmedir.",
+       "ekran": "Kullanım alanları neoplazi taraması ve tanısı, tümör tipinin belirlenmesi, tedavi sonrası kalan ya da yeniden ortaya çıkan rezidüel veya tekrarlayan lezyonların değerlendirilmesi, inflamatuvar ve enfeksiyöz hastalıklar ve jinekolojik hormonal değerlendirmedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p021",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-02-c0113",
+       "ses": "Son olarak klasik ayrımı güncel eğilimle birleştirelim.",
+       "ekran": "Son olarak klasik ayrımı güncel eğilimle birleştirelim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0114",
+       "ses": "Patoloji morfoloji ağırlıklı, fizyopatoloji ise fonksiyonel bozukluklar ağırlıklı bir yaklaşımdır.",
+       "ekran": "Patoloji morfoloji ağırlıklı, fizyopatoloji ise fonksiyonel bozukluklar ağırlıklı bir yaklaşımdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0115",
+       "ses": "Güncel eğilim, morfolojik, moleküler ve fonksiyonel bilgilerin entegrasyonudur; buna entegre patoloji ve entegre tanı kavramı denir.",
+       "ekran": "Güncel eğilim, morfolojik, moleküler ve fonksiyonel bilgilerin entegrasyonudur; buna entegre patoloji ve entegre tanı kavramı denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0116",
+       "ses": "Rapor artık yalnızca ne görünüyor sorusunu değil, moleküler olarak ne var ve işlevi nasıl etkiliyor sorusunu da yanıtlar.",
+       "ekran": "Rapor artık yalnızca ne görünüyor sorusunu değil, moleküler olarak ne var ve işlevi nasıl etkiliyor sorusunu da yanıtlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b07",
+   "baslik": "Tarihçe: Celsus'tan Virchow'a",
+   "paragraflar": [
+    {
+     "id": "k1-02-p022",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-02-c0117",
+       "ses": "Patolojinin tarihsel kökleri, hastalığın vücutta bıraktığı belirtilerin tanımlanmasına dayanır.",
+       "ekran": "Patolojinin tarihsel kökleri, hastalığın vücutta bıraktığı belirtilerin tanımlanmasına dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0118",
+       "ses": "Milattan önce 30 ile milattan sonra 38 yılları arasında yaşamış Aulus Cornelius Celsus, De Medicina adlı eserinde inflamasyonun 4 belirtisini tanımladı: kızarıklık yani rubor, sıcaklık yani kalor, ağrı yani dolor ve şişlik yani tumor.",
+       "ekran": "Milattan önce 30 ile milattan sonra 38 yılları arasında yaşamış Aulus Cornelius Celsus, De Medicina adlı eserinde inflamasyonun 4 belirtisini tanımladı: kızarıklık yani rubor, sıcaklık yani kalor, ağrı yani dolor ve şişlik yani tumor.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0119",
+       "ses": "130 ile 200 yılları arasında yaşayan Galen bunlara beşinci belirti olarak fonksiyon kaybını, yani functio laesa'yı ekledi.",
+       "ekran": "130 ile 200 yılları arasında yaşayan Galen bunlara beşinci belirti olarak fonksiyon kaybını, yani functio laesa'yı ekledi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0120",
+       "ses": "Bu 5 bulgu günümüzde de inflamasyonun klasik tanımıdır.",
+       "ekran": "Bu 5 bulgu günümüzde de inflamasyonun klasik tanımıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p023",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-02-c0121",
+       "ses": "Burası önemli: 4 kardinal belirti Celsus'a, beşinci belirti olan fonksiyon kaybı Galen'e aittir.",
+       "ekran": "Burası önemli: 4 kardinal belirti Celsus'a, beşinci belirti olan fonksiyon kaybı Galen'e aittir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0122",
+       "ses": "Nekroz bir hücre ölümü biçimidir, kardinal belirti değildir; sınavda bu tür çeldiricilere dikkat edin.",
+       "ekran": "Nekroz bir hücre ölümü biçimidir, kardinal belirti değildir; sınavda bu tür çeldiricilere dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0123",
+       "ses": "Orta Çağ'da İslam ve Türk hekimlerinin katkısı büyüktür.",
+       "ekran": "Orta Çağ'da İslam ve Türk hekimlerinin katkısı büyüktür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0124",
+       "ses": "980 ile 1037 yılları arasında yaşayan İbn-i Sina, Batı'da Avicenna olarak bilinir; El-Kanun fi't-Tıbb, Latince adıyla Canon Medicinae adlı eserinde fizyoloji, anatomi ve hastalıklar üzerine kapsamlı gözlemler sunmuştur.",
+       "ekran": "980 ile 1037 yılları arasında yaşayan İbn-i Sina, Batı'da Avicenna olarak bilinir; El-Kanun fi't-Tıbb, Latince adıyla Canon Medicinae adlı eserinde fizyoloji, anatomi ve hastalıklar üzerine kapsamlı gözlemler sunmuştur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0125",
+       "ses": "15. yüzyılda yaşayan Amasyalı Şerefeddin Sabuncuoğlu'nun eserleri Cerrahiyetü'l-Haniyye ve Mücerrebname'dir; bunlar ilk Türkçe tıp kitabı olarak kabul edilir.",
+       "ekran": "15. yüzyılda yaşayan Amasyalı Şerefeddin Sabuncuoğlu'nun eserleri Cerrahiyetü'l-Haniyye ve Mücerrebname'dir; bunlar ilk Türkçe tıp kitabı olarak kabul edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0126",
+       "ses": "Sabuncuoğlu cerrahi teknikler, plastik cerrahi, obstetri ve anestezi gibi alanlarda öncüdür.",
+       "ekran": "Sabuncuoğlu cerrahi teknikler, plastik cerrahi, obstetri ve anestezi gibi alanlarda öncüdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p024",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-02-c0127",
+       "ses": "Hastalığın vücudun belirli bir yerinde oturduğu fikri, patolojiyi bilimsel bir disipline dönüştürdü.",
+       "ekran": "Hastalığın vücudun belirli bir yerinde oturduğu fikri, patolojiyi bilimsel bir disipline dönüştürdü.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0128",
+       "ses": "1682 ile 1771 yılları arasında yaşayan Giovanni Battista Morgagni yaklaşık 700 otopsi yaptı ve bulgularını 1761'de De Sedibus et Causis Morborum, yani Hastalıkların Yerleri ve Nedenleri adlı eserinde topladı.",
+       "ekran": "1682 ile 1771 yılları arasında yaşayan Giovanni Battista Morgagni yaklaşık 700 otopsi yaptı ve bulgularını 1761'de De Sedibus et Causis Morborum, yani Hastalıkların Yerleri ve Nedenleri adlı eserinde topladı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0129",
+       "ses": "Hastalıkların belirli organ ve bölgelerde yerleştiğini gösterdi, hastanın yaşarken gösterdiği belirtileri otopsideki organ bulgularıyla karşılaştırarak kliniko-patolojik yaklaşımın temelini attı ve patolojik anatominin kurucusu kabul edilir.",
+       "ekran": "Hastalıkların belirli organ ve bölgelerde yerleştiğini gösterdi, hastanın yaşarken gösterdiği belirtileri otopsideki organ bulgularıyla karşılaştırarak kliniko-patolojik yaklaşımın temelini attı ve patolojik anatominin kurucusu kabul edilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p025",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-02-c0130",
+       "ses": "Bir sonraki adım hastalığın kaynağını hücreye indirmek oldu.",
+       "ekran": "Bir sonraki adım hastalığın kaynağını hücreye indirmek oldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0131",
+       "ses": "1821 ile 1902 yılları arasında yaşayan Rudolf Virchow, 1858'de Hücresel Patoloji adlı eserini yayımladı ve modern patolojinin kurucusu kabul edilir.",
+       "ekran": "1821 ile 1902 yılları arasında yaşayan Rudolf Virchow, 1858'de Hücresel Patoloji adlı eserini yayımladı ve modern patolojinin kurucusu kabul edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0132",
+       "ses": "Temel ilkesi omnis cellula e cellula, yani her hücre başka bir hücreden ortaya çıkar ilkesidir; bu ilkeyle tüm hastalıkların hücresel temeli olduğunu vurguladı.",
+       "ekran": "Temel ilkesi omnis cellula e cellula, yani her hücre başka bir hücreden ortaya çıkar ilkesidir; bu ilkeyle tüm hastalıkların hücresel temeli olduğunu vurguladı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0133",
+       "ses": "Mikroskobu da sistematik olarak otopsi ve biyopsi materyaline uyguladı.",
+       "ekran": "Mikroskobu da sistematik olarak otopsi ve biyopsi materyaline uyguladı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0134",
+       "ses": "Burası önemli, bu 2 isim sık karıştırılır: Morgagni patolojik anatominin, yani organ patolojisinin kurucusudur; Virchow ise hücresel patolojinin ve modern patolojinin kurucusudur.",
+       "ekran": "Burası önemli, bu 2 isim sık karıştırılır: Morgagni patolojik anatominin, yani organ patolojisinin kurucusudur; Virchow ise hücresel patolojinin ve modern patolojinin kurucusudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b08",
+   "baslik": "Türkiye'de patolojinin gelişimi",
+   "paragraflar": [
+    {
+     "id": "k1-02-p026",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-02-c0135",
+       "ses": "Türkiye'de modern patolojinin kökleri Osmanlı'daki tıp eğitimi reformlarına dayanır.",
+       "ekran": "Türkiye'de modern patolojinin kökleri Osmanlı'daki tıp eğitimi reformlarına dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0136",
+       "ses": "İkinci Mahmut döneminde kadavra ile anatomi öğretimi başladı ve modern tıp eğitiminin temelleri atıldı.",
+       "ekran": "İkinci Mahmut döneminde kadavra ile anatomi öğretimi başladı ve modern tıp eğitiminin temelleri atıldı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0137",
+       "ses": "14 Mart 1827'de Mekteb-i Tıbbiye-i Şahane açıldı; bu tarih bugün Tıp Bayramı olarak kutlanır.",
+       "ekran": "14 Mart 1827'de Mekteb-i Tıbbiye-i Şahane açıldı; bu tarih bugün Tıp Bayramı olarak kutlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0138",
+       "ses": "19. yüzyılın sonunda patoloji dersi tıp eğitimi programına girdi.",
+       "ekran": "19. yüzyılın sonunda patoloji dersi tıp eğitimi programına girdi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0139",
+       "ses": "İlk patoloji hocaları Ahmet Hilmi Paşa, Ohannes Tabibyan Bey, Ahmet Ferit Bey ve Rıfat Hüsamettin Paşa'dır.",
+       "ekran": "İlk patoloji hocaları Ahmet Hilmi Paşa, Ohannes Tabibyan Bey, Ahmet Ferit Bey ve Rıfat Hüsamettin Paşa'dır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p027",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-02-c0140",
+       "ses": "Türkiye'de patolojinin kurumsallaşmasında merkezi isim Hamdi Suat Aknar'dır.",
+       "ekran": "Türkiye'de patolojinin kurumsallaşmasında merkezi isim Hamdi Suat Aknar'dır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0141",
+       "ses": "1904'te Leipzig'de patolojik anatomi doktorası yaptı, Gülhane Askeri Tıp Fakültesi'nde patoloji hocası olarak görev aldı.",
+       "ekran": "1904'te Leipzig'de patolojik anatomi doktorası yaptı, Gülhane Askeri Tıp Fakültesi'nde patoloji hocası olarak görev aldı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0142",
+       "ses": "1909'da Darülfünun Tıp Fakültesi Patolojik Anatomi Kürsüsü Başkanı oldu; ilk patoloji laboratuvarını ve yaklaşık 1800 kavanozluk patoloji müzesini kurdu.",
+       "ekran": "1909'da Darülfünun Tıp Fakültesi Patolojik Anatomi Kürsüsü Başkanı oldu; ilk patoloji laboratuvarını ve yaklaşık 1800 kavanozluk patoloji müzesini kurdu.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p028",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-02-c0143",
+       "ses": "Aknar'ın çalışma alanları deri hastalıkları, hayvan tümörleri ve bitki tümörleridir.",
+       "ekran": "Aknar'ın çalışma alanları deri hastalıkları, hayvan tümörleri ve bitki tümörleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0144",
+       "ses": "Veba lenf nodu incelemelerinde fagositoz yapan hücreleri, yani retiküloendotelyal hücreleri tarif etti ve bu bulgular 1904'te Almanca yayımlandı.",
+       "ekran": "Veba lenf nodu incelemelerinde fagositoz yapan hücreleri, yani retiküloendotelyal hücreleri tarif etti ve bu bulgular 1904'te Almanca yayımlandı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0145",
+       "ses": "Kanserle mücadelede de öncüdür: ikinci ve üçüncü Milli Tıp Kongrelerinde kanser temalı oturumlar düzenledi ve 1933'te Kanserle Mücadele ve Taharri Cemiyeti'nin kuruluşuna öncülük etti.",
+       "ekran": "Kanserle mücadelede de öncüdür: ikinci ve üçüncü Milli Tıp Kongrelerinde kanser temalı oturumlar düzenledi ve 1933'te Kanserle Mücadele ve Taharri Cemiyeti'nin kuruluşuna öncülük etti.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p029",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-02-c0146",
+       "ses": "1933 üniversite reformuyla Darülfünun'un yerine İstanbul Üniversitesi kuruldu.",
+       "ekran": "1933 üniversite reformuyla Darülfünun'un yerine İstanbul Üniversitesi kuruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0147",
+       "ses": "Almanya'dan gelen patologlar Ordinaryüs Profesör Philipp Schwartz ve Profesör Siegfried Oberndorfer'dir.",
+       "ekran": "Almanya'dan gelen patologlar Ordinaryüs Profesör Philipp Schwartz ve Profesör Siegfried Oberndorfer'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0148",
+       "ses": "Schwartz Patolojik Anatomi Kürsüsü'nü yeniden yapılandırdı; makroskopi, mikroskopi ve otopsiyi eğitimin merkezine aldı, 1942'de kliniko-patolojik dersleri başlattı ve bugün de kullanılan arşiv sistemini kurdu.",
+       "ekran": "Schwartz Patolojik Anatomi Kürsüsü'nü yeniden yapılandırdı; makroskopi, mikroskopi ve otopsiyi eğitimin merkezine aldı, 1942'de kliniko-patolojik dersleri başlattı ve bugün de kullanılan arşiv sistemini kurdu.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p030",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-02-c0149",
+       "ses": "Diğer öncülere gelince, Kamile Şevki Mutlu Ankara Numune Patoloji Laboratuvarı'nı ve Ankara Üniversitesi Histoloji ve Embriyoloji Kürsüsü'nü kurdu.",
+       "ekran": "Diğer öncülere gelince, Kamile Şevki Mutlu Ankara Numune Patoloji Laboratuvarı'nı ve Ankara Üniversitesi Histoloji ve Embriyoloji Kürsüsü'nü kurdu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0150",
+       "ses": "Osman Nuri Aker ise Amerika Birleşik Devletleri'nde Doktor Papanicolaou ile çalıştı, Papanicolaou servikal sitoloji yöntemini Türkiye'ye getirdi ve sitopatolojinin ülkemizdeki öncülerindendir.",
+       "ekran": "Osman Nuri Aker ise Amerika Birleşik Devletleri'nde Doktor Papanicolaou ile çalıştı, Papanicolaou servikal sitoloji yöntemini Türkiye'ye getirdi ve sitopatolojinin ülkemizdeki öncülerindendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0151",
+       "ses": "Bu yöntem, rahim ağzından dökülen hücrelerin lam üzerinde incelenmesine dayanır.",
+       "ekran": "Bu yöntem, rahim ağzından dökülen hücrelerin lam üzerinde incelenmesine dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b09",
+   "baslik": "Tanısal araçlar ve makroskopik inceleme",
+   "paragraflar": [
+    {
+     "id": "k1-02-p031",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-02-c0152",
+       "ses": "Patolog bir olguyu değerlendirirken basitten karmaşığa doğru bir araç yelpazesi kullanır: makroskopik inceleme, ışık mikroskobu, histokimya, immünohistokimya, immünfloresan mikroskobi, dijital görüntüleme ve görüntü analizi, moleküler patoloji, in situ hibridizasyon ve elektron mikroskobu.",
+       "ekran": "Patolog bir olguyu değerlendirirken basitten karmaşığa doğru bir araç yelpazesi kullanır: makroskopik inceleme, ışık mikroskobu, histokimya, immünohistokimya, immünfloresan mikroskobi, dijital görüntüleme ve görüntü analizi, moleküler patoloji, in situ hibridizasyon ve elektron mikroskobu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0153",
+       "ses": "İmmünfloresan mikroskobide floresan işaretli antikorlarla karanlık zeminde parlayan bir boyanma elde edilir; slayttaki örnekte bir glomerül parlak yeşil görünür.",
+       "ekran": "İmmünfloresan mikroskobide floresan işaretli antikorlarla karanlık zeminde parlayan bir boyanma elde edilir; slayttaki örnekte bir glomerül parlak yeşil görünür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0154",
+       "ses": "İn situ hibridizasyon, belirli bir gen dizisini doku kesitinde yerinde gösterir.",
+       "ekran": "İn situ hibridizasyon, belirli bir gen dizisini doku kesitinde yerinde gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0155",
+       "ses": "Rutin tanının çoğu makroskopi ve ışık mikroskobuyla konur, diğer araçlar gerektiğinde eklenir.",
+       "ekran": "Rutin tanının çoğu makroskopi ve ışık mikroskobuyla konur, diğer araçlar gerektiğinde eklenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p032",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-02-c0156",
+       "ses": "Makroskopik inceleme, materyalin gözle değerlendirilmesi ve kesilerek açılması, yani diseksiyonudur.",
+       "ekran": "Makroskopik inceleme, materyalin gözle değerlendirilmesi ve kesilerek açılması, yani diseksiyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0157",
+       "ses": "Organ ve lezyonun boyutu, lokalizasyonu, rengi ve sınırları değerlendirilir; cerrahi sınırlar da bu aşamada belirlenir ve işaretlenir.",
+       "ekran": "Organ ve lezyonun boyutu, lokalizasyonu, rengi ve sınırları değerlendirilir; cerrahi sınırlar da bu aşamada belirlenir ve işaretlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0158",
+       "ses": "Ardından örnekleme yapılır, yani mikroskobik inceleme için dokudan hangi parçaların alınacağı seçilir.",
+       "ekran": "Ardından örnekleme yapılır, yani mikroskobik inceleme için dokudan hangi parçaların alınacağı seçilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0159",
+       "ses": "Örnekleme, mikroskobik incelemenin kalitesini belirleyen kritik basamaktır.",
+       "ekran": "Örnekleme, mikroskobik incelemenin kalitesini belirleyen kritik basamaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0160",
+       "ses": "Yanlış yapılırsa lezyonun en önemli bölgesi hiç mikroskoba ulaşmayabilir ve mikroskobik inceleme ne kadar iyi olursa olsun tanı eksik kalır.",
+       "ekran": "Yanlış yapılırsa lezyonun en önemli bölgesi hiç mikroskoba ulaşmayabilir ve mikroskobik inceleme ne kadar iyi olursa olsun tanı eksik kalır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p033",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-02-c0161",
+       "ses": "Rutin histopatolojide parafin bloklardan 3 ile 5 mikrometre kalınlığında kesitler alınır.",
+       "ekran": "Rutin histopatolojide parafin bloklardan 3 ile 5 mikrometre kalınlığında kesitler alınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0162",
+       "ses": "Bu incelik, ışığın dokudan geçerek hücrelerin tek tek görülmesini sağlar.",
+       "ekran": "Bu incelik, ışığın dokudan geçerek hücrelerin tek tek görülmesini sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0163",
+       "ses": "Gerekli durumlarda özel histokimyasal boyalar ve immünohistokimyasal incelemeler eklenir.",
+       "ekran": "Gerekli durumlarda özel histokimyasal boyalar ve immünohistokimyasal incelemeler eklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0164",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: histolojik ve patolojik kesitlerin rutin boyanmasında hematoksilen eozin kullanılır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: histolojik ve patolojik kesitlerin rutin boyanmasında hematoksilen eozin kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0165",
+       "ses": "Tüm rutin kesitler önce hematoksilen eozin ile boyanır.",
+       "ekran": "Tüm rutin kesitler önce hematoksilen eozin ile boyanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0166",
+       "ses": "Şıklarda karşınıza çıkan periyodik asit Schiff, Prusya mavisi, Masson trikrom ve Oil Red O rutin değil, özel histokimyasal boyalardır; Papanicolaou ve Giemsa ise sitolojide kullanılan boyalardır.",
+       "ekran": "Şıklarda karşınıza çıkan periyodik asit Schiff, Prusya mavisi, Masson trikrom ve Oil Red O rutin değil, özel histokimyasal boyalardır; Papanicolaou ve Giemsa ise sitolojide kullanılan boyalardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b10",
+   "baslik": "Histokimya, immünohistokimya ve moleküler patoloji",
+   "paragraflar": [
+    {
+     "id": "k1-02-p034",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-02-c0167",
+       "ses": "Histokimyasal boyalar, dokudaki belirli bir maddeyi kimyasal tepkimeyle renklendirerek gösterir ve her boyanın hedefi farklıdır.",
+       "ekran": "Histokimyasal boyalar, dokudaki belirli bir maddeyi kimyasal tepkimeyle renklendirerek gösterir ve her boyanın hedefi farklıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0168",
+       "ses": "Burası önemli, bu eşleştirmeyi ezberleyin: demir Prusya mavisi ile gösterilir.",
+       "ekran": "Burası önemli, bu eşleştirmeyi ezberleyin: demir Prusya mavisi ile gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0169",
+       "ses": "Glikojen ve nötral mukopolisakkaritler periyodik asit Schiff, kısaca pas boyası ile pembe mor renk alır.",
+       "ekran": "Glikojen ve nötral mukopolisakkaritler periyodik asit Schiff, kısaca pas boyası ile pembe mor renk alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0170",
+       "ses": "Lipidler Oil Red O ile gösterilir ve bu boya dondurulmuş kesitte uygulanır, çünkü rutin takipte kullanılan çözücüler yağı dokudan uzaklaştırır.",
+       "ekran": "Lipidler Oil Red O ile gösterilir ve bu boya dondurulmuş kesitte uygulanır, çünkü rutin takipte kullanılan çözücüler yağı dokudan uzaklaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0171",
+       "ses": "Bağ dokusu ise Masson trikrom, Van Gieson ve retikülin boyalarıyla gösterilir.",
+       "ekran": "Bağ dokusu ise Masson trikrom, Van Gieson ve retikülin boyalarıyla gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p035",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-02-c0172",
+       "ses": "Slayttaki renk kodu görseli, aynı dokunun hematoksilen eozin, pas, retikülin ve trikrom ile boyanmış hâlini yan yana gösterir.",
+       "ekran": "Slayttaki renk kodu görseli, aynı dokunun hematoksilen eozin, pas, retikülin ve trikrom ile boyanmış hâlini yan yana gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0173",
+       "ses": "Boyanmış doku beyaz arka plana karşı belirginleşir; boyamanın amacı dokuya renk kontrastı kazandırmaktır.",
+       "ekran": "Boyanmış doku beyaz arka plana karşı belirginleşir; boyamanın amacı dokuya renk kontrastı kazandırmaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0174",
+       "ses": "Farklı boyaların aynı bileşenleri boyamadığına dikkat edin; bunun nedeni boyaların kimyasal yapısı ve dokudaki moleküllerle etkileşimidir.",
+       "ekran": "Farklı boyaların aynı bileşenleri boyamadığına dikkat edin; bunun nedeni boyaların kimyasal yapısı ve dokudaki moleküllerle etkileşimidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p036",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-02-c0175",
+       "ses": "İmmünohistokimya antijen ve antikor temelli bir boyamadır: belirli bir proteine, yani antijene özgü antikor dokuya uygulanır ve bağlandığı yer renkli olarak görünür hâle gelir.",
+       "ekran": "İmmünohistokimya antijen ve antikor temelli bir boyamadır: belirli bir proteine, yani antijene özgü antikor dokuya uygulanır ve bağlandığı yer renkli olarak görünür hâle gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0176",
+       "ses": "Hedef antijenler hücre yüzeyinde, sitoplazmada ya da nükleusta olabilir.",
+       "ekran": "Hedef antijenler hücre yüzeyinde, sitoplazmada ya da nükleusta olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0177",
+       "ses": "Klinik kullanım alanlarından ilki tümör tipi ve köken tayinidir.",
+       "ekran": "Klinik kullanım alanlarından ilki tümör tipi ve köken tayinidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0178",
+       "ses": "2.'si prognoz ve prediksiyondur: östrojen ve progesteron reseptörleri, insan epidermal büyüme faktörü reseptörü 2, kısaca HER2, ve çoğalan hücrelerin oranını gösteren Ki-67 proliferasyon indeksi.",
+       "ekran": "2.'si prognoz ve prediksiyondur: östrojen ve progesteron reseptörleri, insan epidermal büyüme faktörü reseptörü 2, kısaca HER2, ve çoğalan hücrelerin oranını gösteren Ki-67 proliferasyon indeksi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0179",
+       "ses": "3.'sü enfeksiyöz ajanların gösterimidir: Epstein-Barr virüsü (EBV), sitomegalovirüs ve Hepatit B antijenleri.",
+       "ekran": "3.'sü enfeksiyöz ajanların gösterimidir: Epstein-Barr virüsü (EBV), sitomegalovirüs ve Hepatit B antijenleri.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p037",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-02-c0180",
+       "ses": "Moleküler patoloji tanıyı DNA ve RNA düzeyine taşır.",
+       "ekran": "Moleküler patoloji tanıyı DNA ve RNA düzeyine taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0181",
+       "ses": "Temel yöntemleri şunlardır.",
+       "ekran": "Temel yöntemleri şunlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0182",
+       "ses": "Polimeraz zincir reaksiyonu, kısaca PCR, belirli bir DNA bölgesini çoğaltarak saptanabilir hâle getirir.",
+       "ekran": "Polimeraz zincir reaksiyonu, kısaca PCR, belirli bir DNA bölgesini çoğaltarak saptanabilir hâle getirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0183",
+       "ses": "Ters transkripsiyon PCR yönteminde RNA önce DNA'ya çevrilir, sonra çoğaltılır.",
+       "ekran": "Ters transkripsiyon PCR yönteminde RNA önce DNA'ya çevrilir, sonra çoğaltılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0184",
+       "ses": "Floresan in situ hibridizasyon, kısaca FISH, floresan işaretli problarla gen ve kromozom değişikliklerini doku ya da hücrede gösterir.",
+       "ekran": "Floresan in situ hibridizasyon, kısaca FISH, floresan işaretli problarla gen ve kromozom değişikliklerini doku ya da hücrede gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0185",
+       "ses": "Yeni nesil dizileme ise çok sayıda geni aynı anda dizileyebilir.",
+       "ekran": "Yeni nesil dizileme ise çok sayıda geni aynı anda dizileyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p038",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-02-c0186",
+       "ses": "Moleküler patolojinin uygulamaları 3'tür.",
+       "ekran": "Moleküler patolojinin uygulamaları 3'tür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0187",
+       "ses": "Somatik mutasyon analizinde EGFR, KRAS ve BRAF genleri incelenir.",
+       "ekran": "Somatik mutasyon analizinde EGFR, KRAS ve BRAF genleri incelenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0188",
+       "ses": "Gen füzyonlarına örnek BCR-ABL1 ve ALK füzyonlarıdır.",
+       "ekran": "Gen füzyonlarına örnek BCR-ABL1 ve ALK füzyonlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0189",
+       "ses": "Üçüncü uygulama, tedavi sonrası çok az sayıda kalan tümör hücresinin izlenmesi olan minimal rezidüel hastalık takibidir.",
+       "ekran": "Üçüncü uygulama, tedavi sonrası çok az sayıda kalan tümör hücresinin izlenmesi olan minimal rezidüel hastalık takibidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0190",
+       "ses": "Mutasyon ile füzyon ayrımı eşleştirme sorusu olarak sık gelir: EGFR, KRAS, BRAF mutasyon; BCR-ABL1 ve ALK füzyondur.",
+       "ekran": "Mutasyon ile füzyon ayrımı eşleştirme sorusu olarak sık gelir: EGFR, KRAS, BRAF mutasyon; BCR-ABL1 ve ALK füzyondur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b11",
+   "baslik": "Materyal tipleri, biyopsi ve etiketleme",
+   "paragraflar": [
+    {
+     "id": "k1-02-p039",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-02-c0191",
+       "ses": "Patoloji laboratuvarına gelen materyaller 3 grupta toplanır.",
+       "ekran": "Patoloji laboratuvarına gelen materyaller 3 grupta toplanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0192",
+       "ses": "Birinci grup biyopsi örnekleridir.",
+       "ekran": "Birinci grup biyopsi örnekleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0193",
+       "ses": "İkinci grup rezeksiyon materyalleridir; bir organın tamamının ya da bir bölümünün çıkarıldığı organ rezeksiyonları ve bir uzvun ya da uzuv parçasının kesilip çıkarıldığı amputasyonlar buraya girer.",
+       "ekran": "İkinci grup rezeksiyon materyalleridir; bir organın tamamının ya da bir bölümünün çıkarıldığı organ rezeksiyonları ve bir uzvun ya da uzuv parçasının kesilip çıkarıldığı amputasyonlar buraya girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0194",
+       "ses": "Üçüncü grupta otopsi materyalleri, sitolojik örnekler ve moleküler ya da özel inceleme için gönderilen taze veya dondurulmuş dokular bulunur.",
+       "ekran": "Üçüncü grupta otopsi materyalleri, sitolojik örnekler ve moleküler ya da özel inceleme için gönderilen taze veya dondurulmuş dokular bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0195",
+       "ses": "Bu son dokular rutin fiksasyona konmadan saklanır, çünkü bazı moleküler ve özel testler işlenmemiş doku gerektirir.",
+       "ekran": "Bu son dokular rutin fiksasyona konmadan saklanır, çünkü bazı moleküler ve özel testler işlenmemiş doku gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p040",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-02-c0196",
+       "ses": "Biyopsi, canlıdan tanısal amaçla doku veya hücre örneği alınmasıdır.",
+       "ekran": "Biyopsi, canlıdan tanısal amaçla doku veya hücre örneği alınmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0197",
+       "ses": "Amaç, en az invaziv yöntemle en fazla tanısal bilgiyi elde etmektir.",
+       "ekran": "Amaç, en az invaziv yöntemle en fazla tanısal bilgiyi elde etmektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0198",
+       "ses": "Başlıca türleri şunlardır: insizyonel ve eksizyonel biyopsi; silindirik bir bıçakla yuvarlak doku alınan ve özellikle deride kullanılan panç biyopsi; kalın iğneyle doku silindiri alınan ve meme, karaciğer, böbrek ve prostatta kullanılan tru-cut ya da kor biyopsi; ince iğneyle hücre çekilen ince iğne aspirasyon sitolojisi; ve kamera eşliğinde iç organlardan örnek alınan endoskopik ya da laparoskopik biyopsi.",
+       "ekran": "Başlıca türleri şunlardır: insizyonel ve eksizyonel biyopsi; silindirik bir bıçakla yuvarlak doku alınan ve özellikle deride kullanılan panç biyopsi; kalın iğneyle doku silindiri alınan ve meme, karaciğer, böbrek ve prostatta kullanılan tru-cut ya da kor biyopsi; ince iğneyle hücre çekilen ince iğne aspirasyon sitolojisi; ve kamera eşliğinde iç organlardan örnek alınan endoskopik ya da laparoskopik biyopsi.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p041",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-02-c0199",
+       "ses": "Burası önemli, bu soru çıkmış sorularda en sık tekrar eden sorudur: herhangi bir lezyonun yalnızca bir kısmının, yani bir parçasının çıkarılmasına insizyonel biyopsi denir.",
+       "ekran": "Burası önemli, bu soru çıkmış sorularda en sık tekrar eden sorudur: herhangi bir lezyonun yalnızca bir kısmının, yani bir parçasının çıkarılmasına insizyonel biyopsi denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0200",
+       "ses": "Lezyonun tamamının çıkarılması ise eksizyonel biyopsidir ve tanıyla birlikte tedavi de sağlayabilir.",
+       "ekran": "Lezyonun tamamının çıkarılması ise eksizyonel biyopsidir ve tanıyla birlikte tedavi de sağlayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0201",
+       "ses": "İnsizyonel biyopsi daha çok büyük kitlelerde tanı amacıyla temsili bir parça almak için, eksizyonel biyopsi ise küçük ve sınırlı lezyonlarda tercih edilir.",
+       "ekran": "İnsizyonel biyopsi daha çok büyük kitlelerde tanı amacıyla temsili bir parça almak için, eksizyonel biyopsi ise küçük ve sınırlı lezyonlarda tercih edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0202",
+       "ses": "Şıklarda karşınıza çıkan panç biyopsi, küretaj ve tıraşlama biyopsisi bu tanımın karşılığı değildir.",
+       "ekran": "Şıklarda karşınıza çıkan panç biyopsi, küretaj ve tıraşlama biyopsisi bu tanımın karşılığı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p042",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-02-c0203",
+       "ses": "Doğru tanı, doğru hastaya ait doğru örnekle başlar.",
+       "ekran": "Doğru tanı, doğru hastaya ait doğru örnekle başlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0204",
+       "ses": "Her materyalde ad ve soyad, kimlik numarası, tarih ve saat, alındığı yer ve örnek tipi bulunmalıdır.",
+       "ekran": "Her materyalde ad ve soyad, kimlik numarası, tarih ve saat, alındığı yer ve örnek tipi bulunmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0205",
+       "ses": "İstek formunda klinik bilgi ve ön tanı ile ilgili klinik ve hekim yazılır.",
+       "ekran": "İstek formunda klinik bilgi ve ön tanı ile ilgili klinik ve hekim yazılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0206",
+       "ses": "Laboratuvarda materyale benzersiz bir patoloji protokol numarası verilir ve kayıt defterine ve bilgisayar sistemine işlenir.",
+       "ekran": "Laboratuvarda materyale benzersiz bir patoloji protokol numarası verilir ve kayıt defterine ve bilgisayar sistemine işlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0207",
+       "ses": "Slayttaki fotoğrafta etiketli örnek kabı ile istek formu aynı şeffaf poşet içinde birlikte gönderilir.",
+       "ekran": "Slayttaki fotoğrafta etiketli örnek kabı ile istek formu aynı şeffaf poşet içinde birlikte gönderilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p043",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-02-c0208",
+       "ses": "Doğru materyal yönetiminin 4 ilkesi vardır.",
+       "ekran": "Doğru materyal yönetiminin 4 ilkesi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0209",
+       "ses": "Kimlik hatalarının önlenmesi yanlış hastaya tanı konmasını ve tedavi verilmesini engeller.",
+       "ekran": "Kimlik hatalarının önlenmesi yanlış hastaya tanı konmasını ve tedavi verilmesini engeller.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0210",
+       "ses": "Yeterli klinik bilgi uygun örnekleme ve yorum için zorunludur.",
+       "ekran": "Yeterli klinik bilgi uygun örnekleme ve yorum için zorunludur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0211",
+       "ses": "Biyogüvenlik açısından enfeksiyon riski taşıyan materyaller uygun şekilde işaretlenmelidir.",
+       "ekran": "Biyogüvenlik açısından enfeksiyon riski taşıyan materyaller uygun şekilde işaretlenmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0212",
+       "ses": "Zamanlama açısından ise rezeksiyon materyalleri gecikmeden laboratuvara ulaştırılmalıdır, çünkü bekleyen doku bozulmaya başlar.",
+       "ekran": "Zamanlama açısından ise rezeksiyon materyalleri gecikmeden laboratuvara ulaştırılmalıdır, çünkü bekleyen doku bozulmaya başlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b12",
+   "baslik": "Histopatolojik teknik ve fiksasyon",
+   "paragraflar": [
+    {
+     "id": "k1-02-p044",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-02-c0213",
+       "ses": "Histopatolojik teknik, dokuyu mikroskopta incelenebilir hâle getirmeyi amaçlar.",
+       "ekran": "Histopatolojik teknik, dokuyu mikroskopta incelenebilir hâle getirmeyi amaçlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0214",
+       "ses": "3 hedefi vardır: hücre ve doku yapısını bozulmadan korumak, ince ve düzgün kesitler elde etmek ve artefaktları en aza indirmek.",
+       "ekran": "3 hedefi vardır: hücre ve doku yapısını bozulmadan korumak, ince ve düzgün kesitler elde etmek ve artefaktları en aza indirmek.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0215",
+       "ses": "Bu hedeflere şu sırayla ulaşılır: fiksasyon yani tespit, dehidrasyon yani suyun uzaklaştırılması, şeffaflaştırma, infiltrasyon yani parafin ile doyurma, gömme yani bloklama, mikrotomi yani kesit alma, kesitlerin lama alınması ve kurutma, en son da boyama ve lamelle kapatma.",
+       "ekran": "Bu hedeflere şu sırayla ulaşılır: fiksasyon yani tespit, dehidrasyon yani suyun uzaklaştırılması, şeffaflaştırma, infiltrasyon yani parafin ile doyurma, gömme yani bloklama, mikrotomi yani kesit alma, kesitlerin lama alınması ve kurutma, en son da boyama ve lamelle kapatma.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p045",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-02-c0216",
+       "ses": "Fiksasyon, dokunun canlıdan ayrıldığı anda başlayan bozulmayı durduran ilk ve en kritik basamaktır.",
+       "ekran": "Fiksasyon, dokunun canlıdan ayrıldığı anda başlayan bozulmayı durduran ilk ve en kritik basamaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0217",
+       "ses": "Amacı hücre ve dokuları otoliz ve putrefaksiyondan korumak, doku mimarisini ve hücresel ayrıntıları stabilize etmektir.",
+       "ekran": "Amacı hücre ve dokuları otoliz ve putrefaksiyondan korumak, doku mimarisini ve hücresel ayrıntıları stabilize etmektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0218",
+       "ses": "Otoliz hücrenin kendi enzimleriyle kendini sindirmesi, putrefaksiyon ise bakterilerin dokuyu çürütmesidir.",
+       "ekran": "Otoliz hücrenin kendi enzimleriyle kendini sindirmesi, putrefaksiyon ise bakterilerin dokuyu çürütmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0219",
+       "ses": "Burası önemli, fiksasyonun sayısal kuralları sınav spotudur.",
+       "ekran": "Burası önemli, fiksasyonun sayısal kuralları sınav spotudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0220",
+       "ses": "Fiksatif hacmi doku hacminin en az 10 ile 20 katı olmalıdır.",
+       "ekran": "Fiksatif hacmi doku hacminin en az 10 ile 20 katı olmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0221",
+       "ses": "Parça kalınlığı genellikle 3 ile 5 milimetredir.",
+       "ekran": "Parça kalınlığı genellikle 3 ile 5 milimetredir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0222",
+       "ses": "Formalin ortalama saatte yaklaşık 1 milimetre penetre olur; bu yüzden kalın bir parçanın merkezine fiksatifin ulaşması saatler alır ve merkez bu sürede bozulabilir.",
+       "ekran": "Formalin ortalama saatte yaklaşık 1 milimetre penetre olur; bu yüzden kalın bir parçanın merkezine fiksatifin ulaşması saatler alır ve merkez bu sürede bozulabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p046",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k1-02-c0223",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda pek çok kez farklı biçimlerde soruldu: patolojide rutin amaçlar için en yaygın kullanılan tespit, yani fiksasyon sıvısı formalindir; tam adıyla %10'luk nötral tamponlu formalindir ve formol olarak da anılır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda pek çok kez farklı biçimlerde soruldu: patolojide rutin amaçlar için en yaygın kullanılan tespit, yani fiksasyon sıvısı formalindir; tam adıyla %10'luk nötral tamponlu formalindir ve formol olarak da anılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0224",
+       "ses": "1 hacim formalin ile 9 hacim distile su karıştırılarak hazırlanır.",
+       "ekran": "1 hacim formalin ile 9 hacim distile su karıştırılarak hazırlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0225",
+       "ses": "Formol dokuya fiksasyon amacıyla uygulanır; dehidrasyon, şeffaflaştırma ya da boyama için değil.",
+       "ekran": "Formol dokuya fiksasyon amacıyla uygulanır; dehidrasyon, şeffaflaştırma ya da boyama için değil.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0226",
+       "ses": "Çeldiricilere dikkat edin: alkol dehidrasyonda kullanılır, ksilen şeffaflaştırıcıdır, parafin gömme maddesidir, serum fizyolojik ise fiksatif değildir.",
+       "ekran": "Çeldiricilere dikkat edin: alkol dehidrasyonda kullanılır, ksilen şeffaflaştırıcıdır, parafin gömme maddesidir, serum fizyolojik ise fiksatif değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p047",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k1-02-c0227",
+       "ses": "Özel durumlarda farklı fiksatifler seçilir.",
+       "ekran": "Özel durumlarda farklı fiksatifler seçilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0228",
+       "ses": "Zenker ve B5 fiksatifleri böbrek, kemik iliği, lenf nodu ve testiste kullanılır.",
+       "ekran": "Zenker ve B5 fiksatifleri böbrek, kemik iliği, lenf nodu ve testiste kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0229",
+       "ses": "Carnoy fiksatifi RNA ve glikojeni iyi korur.",
+       "ekran": "Carnoy fiksatifi RNA ve glikojeni iyi korur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0230",
+       "ses": "Bouin fiksatifi özellikle testis biyopsilerinde kullanılır.",
+       "ekran": "Bouin fiksatifi özellikle testis biyopsilerinde kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0231",
+       "ses": "Elektron mikroskopisi için ise glutaraldehit kullanılır.",
+       "ekran": "Elektron mikroskopisi için ise glutaraldehit kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0232",
+       "ses": "Ama en sık kullanılan fiksatif sorulduğunda cevap her zaman formalindir.",
+       "ekran": "Ama en sık kullanılan fiksatif sorulduğunda cevap her zaman formalindir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p048",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-02-c0233",
+       "ses": "Fiksatif dokuya 2 yolla ulaştırılır.",
+       "ekran": "Fiksatif dokuya 2 yolla ulaştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0234",
+       "ses": "İmmersiyonda doku doğrudan fiksatifin içine konur; bu, rutin uygulamada en sık kullanılan yöntemdir.",
+       "ekran": "İmmersiyonda doku doğrudan fiksatifin içine konur; bu, rutin uygulamada en sık kullanılan yöntemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0235",
+       "ses": "Perfüzyonda fiksatif damar içine verilir; daha çok deneysel çalışmalarda ve özel durumlarda kullanılır.",
+       "ekran": "Perfüzyonda fiksatif damar içine verilir; daha çok deneysel çalışmalarda ve özel durumlarda kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0236",
+       "ses": "Pratik noktalar şunlardır: yüzey hacim oranı yüksek, yani ince parçalar tercih edilir; büyük veya kanlı parçalar kesilerek açılmalı ve iç yüzey fiksatifle temas etmelidir; parça alındıktan hemen sonra fiksatifle temas sağlanmalıdır; formaldehit gibi maddeler de çeker ocakta ve kişisel koruyucu ile kullanılmalıdır.",
+       "ekran": "Pratik noktalar şunlardır: yüzey hacim oranı yüksek, yani ince parçalar tercih edilir; büyük veya kanlı parçalar kesilerek açılmalı ve iç yüzey fiksatifle temas etmelidir; parça alındıktan hemen sonra fiksatifle temas sağlanmalıdır; formaldehit gibi maddeler de çeker ocakta ve kişisel koruyucu ile kullanılmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b13",
+   "baslik": "Trimleme, doku takibi ve bloklama",
+   "paragraflar": [
+    {
+     "id": "k1-02-p049",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-02-c0237",
+       "ses": "Fiksasyondan sonra doku trimleme ve kasetleme aşamasına gelir.",
+       "ekran": "Fiksasyondan sonra doku trimleme ve kasetleme aşamasına gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0238",
+       "ses": "Önce dokunun pozisyonu belirlenir.",
+       "ekran": "Önce dokunun pozisyonu belirlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0239",
+       "ses": "Enine kesitler bağırsak gibi tübüler bir yapıyı dik keserek halka biçiminde tüm duvar katmanlarını gösterir; uzunlamasına kesitler ise yapıyı boylu boyunca keserek uzun eksen boyunca değişiklikleri gösterir.",
+       "ekran": "Enine kesitler bağırsak gibi tübüler bir yapıyı dik keserek halka biçiminde tüm duvar katmanlarını gösterir; uzunlamasına kesitler ise yapıyı boylu boyunca keserek uzun eksen boyunca değişiklikleri gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0240",
+       "ses": "Diseksiyonun yönü lezyonun ve cerrahi sınırların doğru görülmesine göre planlanır.",
+       "ekran": "Diseksiyonun yönü lezyonun ve cerrahi sınırların doğru görülmesine göre planlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0241",
+       "ses": "Slayttaki şema, kıvrımlı tübüler bir yapının farklı açılardan kesildiğinde halka, oval ya da uzun profiller verdiğini gösterir.",
+       "ekran": "Slayttaki şema, kıvrımlı tübüler bir yapının farklı açılardan kesildiğinde halka, oval ya da uzun profiller verdiğini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0242",
+       "ses": "Diseksiyondan sonra dokular trimlenir, yani uygun boyuta getirilir ve delikli doku takip kasetine alınır.",
+       "ekran": "Diseksiyondan sonra dokular trimlenir, yani uygun boyuta getirilir ve delikli doku takip kasetine alınır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p050",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k1-02-c0243",
+       "ses": "Kasetlenen doku, parafinle doyurulabilmesi için bir dizi çözeltiden geçirilir; buna doku takibi denir ve makineyle ya da elle yapılır.",
+       "ekran": "Kasetlenen doku, parafinle doyurulabilmesi için bir dizi çözeltiden geçirilir; buna doku takibi denir ve makineyle ya da elle yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0244",
+       "ses": "Dehidrasyonda dokudaki su, artan konsantrasyonlarda etanol serileriyle uzaklaştırılır: %70, %80 ile 90, %95 ve %100.",
+       "ekran": "Dehidrasyonda dokudaki su, artan konsantrasyonlarda etanol serileriyle uzaklaştırılır: %70, %80 ile 90, %95 ve %100.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0245",
+       "ses": "Ani yüksek konsantrasyon dokuyu büzüştüreceği için geçiş kademelidir.",
+       "ekran": "Ani yüksek konsantrasyon dokuyu büzüştüreceği için geçiş kademelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0246",
+       "ses": "Şeffaflaştırmada alkolün yerini ksilen, toluen, kloroform gibi organik çözücüler alır; parafin alkolle karışmadığından bu ara basamak parafinin dokuya girmesini sağlar.",
+       "ekran": "Şeffaflaştırmada alkolün yerini ksilen, toluen, kloroform gibi organik çözücüler alır; parafin alkolle karışmadığından bu ara basamak parafinin dokuya girmesini sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0247",
+       "ses": "İnfiltrasyonda ise erimiş parafin dokuya penetre olur.",
+       "ekran": "İnfiltrasyonda ise erimiş parafin dokuya penetre olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0248",
+       "ses": "Kısaca zincir şöyledir: su alkolle, alkol ksilenle, ksilen de parafinle yer değiştirir.",
+       "ekran": "Kısaca zincir şöyledir: su alkolle, alkol ksilenle, ksilen de parafinle yer değiştirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p051",
+     "sayfa": 57,
+     "cumleler": [
+      {
+       "id": "k1-02-c0249",
+       "ses": "Parafinle doyurulan doku, parafin dolu kalıba uygun pozisyonda yerleştirilir; pozisyon, mikrotomda kesilecek yüzeyi belirler.",
+       "ekran": "Parafinle doyurulan doku, parafin dolu kalıba uygun pozisyonda yerleştirilir; pozisyon, mikrotomda kesilecek yüzeyi belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0250",
+       "ses": "Hızlı soğutma büzüşme ve çatlakları azaltır.",
+       "ekran": "Hızlı soğutma büzüşme ve çatlakları azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0251",
+       "ses": "Pozisyonlamada tübüler yapılar tüm katmanları kesitte görülecek şekilde, deri ise epidermis ve dermis uygun açıda görülecek şekilde yerleştirilir.",
+       "ekran": "Pozisyonlamada tübüler yapılar tüm katmanları kesitte görülecek şekilde, deri ise epidermis ve dermis uygun açıda görülecek şekilde yerleştirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0252",
+       "ses": "Fotoğraflarda doku pensle sıcak parafin dolu metal kalıba konur, ardından bloklama cihazının soğuk plakasına alınır ve sonunda kasetlerin üzerinde katılaşmış parafin bloklar elde edilir.",
+       "ekran": "Fotoğraflarda doku pensle sıcak parafin dolu metal kalıba konur, ardından bloklama cihazının soğuk plakasına alınır ve sonunda kasetlerin üzerinde katılaşmış parafin bloklar elde edilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b14",
+   "baslik": "Kesit alma ve lama alma",
+   "paragraflar": [
+    {
+     "id": "k1-02-p052",
+     "sayfa": 60,
+     "cumleler": [
+      {
+       "id": "k1-02-c0253",
+       "ses": "Parafin bloktan ince kesitler mikrotom ile alınır.",
+       "ekran": "Parafin bloktan ince kesitler mikrotom ile alınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0254",
+       "ses": "Işık mikroskobu için kesit kalınlığı 3 ile 5 mikrometredir ve en sık kullanılan tip rotari mikrotomdur.",
+       "ekran": "Işık mikroskobu için kesit kalınlığı 3 ile 5 mikrometredir ve en sık kullanılan tip rotari mikrotomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0255",
+       "ses": "Dersin bir başka slaytında bu kalınlık 4 ile 6 mikron olarak verilir; rutin kesit kalınlığı birkaç mikron düzeyindedir.",
+       "ekran": "Dersin bir başka slaytında bu kalınlık 4 ile 6 mikron olarak verilir; rutin kesit kalınlığı birkaç mikron düzeyindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0256",
+       "ses": "Elektron mikroskobu için ise kesit 50 ile 100 nanometre kalınlığındadır; bunun için ultramikrotom ve cam ya da elmas bıçak kullanılır.",
+       "ekran": "Elektron mikroskobu için ise kesit 50 ile 100 nanometre kalınlığındadır; bunun için ultramikrotom ve cam ya da elmas bıçak kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0257",
+       "ses": "Karıştırmayın: fiksasyon için parça kalınlığı milimetre, ışık mikroskobu kesiti mikrometre, elektron mikroskobu kesiti nanometre düzeyindedir.",
+       "ekran": "Karıştırmayın: fiksasyon için parça kalınlığı milimetre, ışık mikroskobu kesiti mikrometre, elektron mikroskobu kesiti nanometre düzeyindedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p053",
+     "sayfa": 61,
+     "cumleler": [
+      {
+       "id": "k1-02-c0258",
+       "ses": "Mikrotom bıçakları çelik bıçaklar, kriostat için aşınmaz bıçaklar, tek kullanımlık yani disposable bıçaklar, cam bıçaklar ve elmas bıçaklardır.",
+       "ekran": "Mikrotom bıçakları çelik bıçaklar, kriostat için aşınmaz bıçaklar, tek kullanımlık yani disposable bıçaklar, cam bıçaklar ve elmas bıçaklardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0259",
+       "ses": "Kesit alma prosedürü 3 adımdır: blok mikrotom bıçağına paralel olarak yerleştirilir, bıçak bloğa yaklaştırılır, ardından tıraşlama yapılarak bloğun yüzeyindeki fazla parafin alınır ve kesit almaya başlanır.",
+       "ekran": "Kesit alma prosedürü 3 adımdır: blok mikrotom bıçağına paralel olarak yerleştirilir, bıçak bloğa yaklaştırılır, ardından tıraşlama yapılarak bloğun yüzeyindeki fazla parafin alınır ve kesit almaya başlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0260",
+       "ses": "Blok bıçağa paralel konmazsa kesit eğik ve eşit olmayan kalınlıkta çıkar.",
+       "ekran": "Blok bıçağa paralel konmazsa kesit eğik ve eşit olmayan kalınlıkta çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0261",
+       "ses": "Fotoğraflarda rotari mikrotomdan çıkan ince kesitlerin bir şerit hâlinde fırçayla kaldırıldığı görülür.",
+       "ekran": "Fotoğraflarda rotari mikrotomdan çıkan ince kesitlerin bir şerit hâlinde fırçayla kaldırıldığı görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p054",
+     "sayfa": 69,
+     "cumleler": [
+      {
+       "id": "k1-02-c0262",
+       "ses": "Mikrotomdan çıkan kesitler kırışık ve çok incedir.",
+       "ekran": "Mikrotomdan çıkan kesitler kırışık ve çok incedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0263",
+       "ses": "Kesitler yaklaşık 40 derecelik ılık su banyosunda yüzdürülür, kırışıklıklar açıldıktan sonra lama transfer edilir.",
+       "ekran": "Kesitler yaklaşık 40 derecelik ılık su banyosunda yüzdürülür, kırışıklıklar açıldıktan sonra lama transfer edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0264",
+       "ses": "Kesitin lama yapışmasını jelatin ve albumin sağlar.",
+       "ekran": "Kesitin lama yapışmasını jelatin ve albumin sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0265",
+       "ses": "Kurutma etüvde ya da oda sıcaklığında, havada yapılır.",
+       "ekran": "Kurutma etüvde ya da oda sıcaklığında, havada yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0266",
+       "ses": "Ardından rutin hematoksilen eozin boyaması ve gerektiğinde özel histokimya veya immünohistokimya uygulanır.",
+       "ekran": "Ardından rutin hematoksilen eozin boyaması ve gerektiğinde özel histokimya veya immünohistokimya uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b15",
+   "baslik": "Kriostat kesitleri ve boyama",
+   "paragraflar": [
+    {
+     "id": "k1-02-p055",
+     "sayfa": 72,
+     "cumleler": [
+      {
+       "id": "k1-02-c0267",
+       "ses": "Kriostat kesitleri dokunun parafin yerine dondurularak sertleştirildiği hızlı bir yöntemdir.",
+       "ekran": "Kriostat kesitleri dokunun parafin yerine dondurularak sertleştirildiği hızlı bir yöntemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0268",
+       "ses": "Sudan zengin dokular dondurma yoluyla sertleştirilerek kesilebilir hâle getirilir, boyanır ve ışık mikroskobunda incelenir.",
+       "ekran": "Sudan zengin dokular dondurma yoluyla sertleştirilerek kesilebilir hâle getirilir, boyanır ve ışık mikroskobunda incelenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0269",
+       "ses": "Daha çok biyopsi materyallerinde hızlı tanı için ve antijen kaybının minimum olması nedeniyle immünohistokimyasal incelemeler için tercih edilir.",
+       "ekran": "Daha çok biyopsi materyallerinde hızlı tanı için ve antijen kaybının minimum olması nedeniyle immünohistokimyasal incelemeler için tercih edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0270",
+       "ses": "Burası önemli, kriostat kesitinin artısını ve eksisini birlikte bilin: teknik yaklaşık 5 dakika gibi kısa sürede sonuca götürür ve antijen kaybı minimumdur, ancak doku morfolojisi iyi değildir.",
+       "ekran": "Burası önemli, kriostat kesitinin artısını ve eksisini birlikte bilin: teknik yaklaşık 5 dakika gibi kısa sürede sonuca götürür ve antijen kaybı minimumdur, ancak doku morfolojisi iyi değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0271",
+       "ses": "Fotoğraflarda soğutmalı bir kabin içinde mikrotom barındıran kriostat cihazı görülür.",
+       "ekran": "Fotoğraflarda soğutmalı bir kabin içinde mikrotom barındıran kriostat cihazı görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p056",
+     "sayfa": 73,
+     "cumleler": [
+      {
+       "id": "k1-02-c0272",
+       "ses": "Rutin boyama, zıt karakterli 2 boyanın birlikte kullanılmasına dayanır.",
+       "ekran": "Rutin boyama, zıt karakterli 2 boyanın birlikte kullanılmasına dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0273",
+       "ses": "Hematoksilen bazik bir boyadır ve bazofilik yapıları, yani DNA ve RNA'yı boyar; bu yüzden çekirdekler mavi mor görünür.",
+       "ekran": "Hematoksilen bazik bir boyadır ve bazofilik yapıları, yani DNA ve RNA'yı boyar; bu yüzden çekirdekler mavi mor görünür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0274",
+       "ses": "Belirginleştirme sodyum bikarbonat ile yapılır.",
+       "ekran": "Belirginleştirme sodyum bikarbonat ile yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0275",
+       "ses": "Eozin asidik bir boyadır ve asidofilik, diğer adıyla eozinofilik yapıları, yani mitokondri ve kollajeni boyar; sitoplazma ve bağ dokusu pembe görünür.",
+       "ekran": "Eozin asidik bir boyadır ve asidofilik, diğer adıyla eozinofilik yapıları, yani mitokondri ve kollajeni boyar; sitoplazma ve bağ dokusu pembe görünür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0276",
+       "ses": "Sınavda bu eşleştirme ters çevrilerek sorulur, dikkat edin.",
+       "ekran": "Sınavda bu eşleştirme ters çevrilerek sorulur, dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p057",
+     "sayfa": 73,
+     "cumleler": [
+      {
+       "id": "k1-02-c0277",
+       "ses": "Bu boyalar su bazlı olduğundan parafin kesitlerde önce hazırlık gerekir: parlatıcı ajanla parafin uzaklaştırılır, ardından rehidrasyonla kesit yeniden suyla buluşturulur.",
+       "ekran": "Bu boyalar su bazlı olduğundan parafin kesitlerde önce hazırlık gerekir: parlatıcı ajanla parafin uzaklaştırılır, ardından rehidrasyonla kesit yeniden suyla buluşturulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0278",
+       "ses": "Boyama, gözlemle ve zamanlamanın iyi ayarlanmasıyla yapılır.",
+       "ekran": "Boyama, gözlemle ve zamanlamanın iyi ayarlanmasıyla yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0279",
+       "ses": "Slayttaki görselde aynı doku yalnız hematoksilenle, yalnız eozinle ve ikisi birlikte boyanmış olarak karşılaştırılır; belirgin kontrast ancak ikisi birlikteyken oluşur.",
+       "ekran": "Slayttaki görselde aynı doku yalnız hematoksilenle, yalnız eozinle ve ikisi birlikte boyanmış olarak karşılaştırılır; belirgin kontrast ancak ikisi birlikteyken oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p058",
+     "sayfa": 74,
+     "cumleler": [
+      {
+       "id": "k1-02-c0280",
+       "ses": "Boyama elle ya da otomatik makineyle yapılabilir.",
+       "ekran": "Boyama elle ya da otomatik makineyle yapılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0281",
+       "ses": "Gerekli ekipman lamların toplu taşınmasını sağlayan boyama sepeti ile rehidrasyon, boyama ve dehidrasyon solüsyonlarıdır.",
+       "ekran": "Gerekli ekipman lamların toplu taşınmasını sağlayan boyama sepeti ile rehidrasyon, boyama ve dehidrasyon solüsyonlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0282",
+       "ses": "Son olarak doku lamel ve yapıştırıcı ajanla kapatılır; yapıştırıcı su bazlı olmamalıdır, çünkü boyama sonrası doku yeniden dehidrate edilir ve kalıcı preparat elde edilir.",
+       "ekran": "Son olarak doku lamel ve yapıştırıcı ajanla kapatılır; yapıştırıcı su bazlı olmamalıdır, çünkü boyama sonrası doku yeniden dehidrate edilir ve kalıcı preparat elde edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0283",
+       "ses": "Boyanmış dokular slaytında farklı organlardan alınmış kesitlerin her birinin kendine özgü pembe mor desen oluşturduğu görülür.",
+       "ekran": "Boyanmış dokular slaytında farklı organlardan alınmış kesitlerin her birinin kendine özgü pembe mor desen oluşturduğu görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b16",
+   "baslik": "Artefaktlar",
+   "paragraflar": [
+    {
+     "id": "k1-02-p059",
+     "sayfa": 80,
+     "cumleler": [
+      {
+       "id": "k1-02-c0284",
+       "ses": "Artefakt, dokuya ait olmayan, işleme veya teknik hatalara bağlı oluşan görünümdür.",
+       "ekran": "Artefakt, dokuya ait olmayan, işleme veya teknik hatalara bağlı oluşan görünümdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0285",
+       "ses": "Mikroskopta gerçek bir bulgu gibi görünebilir ama hastalıkla ilgisi yoktur.",
+       "ekran": "Mikroskopta gerçek bir bulgu gibi görünebilir ama hastalıkla ilgisi yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0286",
+       "ses": "Önemi şudur: tanıyı zorlaştırabilir ve yanlış tanıya yol açabilir.",
+       "ekran": "Önemi şudur: tanıyı zorlaştırabilir ve yanlış tanıya yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0287",
+       "ses": "Kaynağı fiksasyon, doku takibi, gömme, kesit alma, boyama ve lamelle kapatma olabilir; yani işleme zincirinin hemen her basamağı kendine özgü bir artefakt bırakabilir.",
+       "ekran": "Kaynağı fiksasyon, doku takibi, gömme, kesit alma, boyama ve lamelle kapatma olabilir; yani işleme zincirinin hemen her basamağı kendine özgü bir artefakt bırakabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p060",
+     "sayfa": 81,
+     "cumleler": [
+      {
+       "id": "k1-02-c0288",
+       "ses": "İlk basamaklardaki hatalardan başlayalım.",
+       "ekran": "İlk basamaklardaki hatalardan başlayalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0289",
+       "ses": "Yetersiz fiksasyon otolize ve hücre ayrıntılarında silinmeye yol açar; yapısal ayrıntılar zayıf gözlenir.",
+       "ekran": "Yetersiz fiksasyon otolize ve hücre ayrıntılarında silinmeye yol açar; yapısal ayrıntılar zayıf gözlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0290",
+       "ses": "Yetersiz dehidrasyon soluk veya düzensiz boyanma yapar.",
+       "ekran": "Yetersiz dehidrasyon soluk veya düzensiz boyanma yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0291",
+       "ses": "Kirli solventler bulanıklık ve arka plan kirlenmesine neden olur; özellikle kirli ksilen süt benzeri bulanıklık verir.",
+       "ekran": "Kirli solventler bulanıklık ve arka plan kirlenmesine neden olur; özellikle kirli ksilen süt benzeri bulanıklık verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0292",
+       "ses": "Yetersiz infiltrasyon, yani dokunun parafinle yeterince doyurulmaması ve yeterince bastırılmaması kabarcıklara yol açar.",
+       "ekran": "Yetersiz infiltrasyon, yani dokunun parafinle yeterince doyurulmaması ve yeterince bastırılmaması kabarcıklara yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0293",
+       "ses": "Bloklama hataları ise dokunun düzgün yerleştirilmemesi ve parafinde vakum uygulanmamasıdır.",
+       "ekran": "Bloklama hataları ise dokunun düzgün yerleştirilmemesi ve parafinde vakum uygulanmamasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p061",
+     "sayfa": 83,
+     "cumleler": [
+      {
+       "id": "k1-02-c0294",
+       "ses": "Kesit aşamasında kötü kesit 2 biçimde görülür: bıçağın körelmesine bağlı bıçak izleri, yani kesit boyunca çizgisel çizikler, ve bıçak ağzına paralel kıvrılmalar.",
+       "ekran": "Kesit aşamasında kötü kesit 2 biçimde görülür: bıçağın körelmesine bağlı bıçak izleri, yani kesit boyunca çizgisel çizikler, ve bıçak ağzına paralel kıvrılmalar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0295",
+       "ses": "Lamelle kapatılmış kesitlerde kesitin katlanması ya da yırtılması, yani kıvrım ve yırtık, ile yapıştırıcı olarak kullanılan albuminin fazlasının boyayı tutması görülür.",
+       "ekran": "Lamelle kapatılmış kesitlerde kesitin katlanması ya da yırtılması, yani kıvrım ve yırtık, ile yapıştırıcı olarak kullanılan albuminin fazlasının boyayı tutması görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0296",
+       "ses": "Mekanik hatalar genel olarak bıçak çizikleri, kıvrılma ve yırtılma ile lamel altında hava kabarcıkları olarak özetlenir.",
+       "ekran": "Mekanik hatalar genel olarak bıçak çizikleri, kıvrılma ve yırtılma ile lamel altında hava kabarcıkları olarak özetlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p062",
+     "sayfa": 85,
+     "cumleler": [
+      {
+       "id": "k1-02-c0297",
+       "ses": "Boyama aşamasında yetersiz rehidrasyon kararsız boyanmaya yol açar; boya kesitin her yerine eşit girmez.",
+       "ekran": "Boyama aşamasında yetersiz rehidrasyon kararsız boyanmaya yol açar; boya kesitin her yerine eşit girmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0298",
+       "ses": "Zamana dikkat etmemek koyu veya açık boyanma yapar.",
+       "ekran": "Zamana dikkat etmemek koyu veya açık boyanma yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0299",
+       "ses": "Yeterince çalkalamamak da boyanın eşit dağılmamasına neden olur.",
+       "ekran": "Yeterince çalkalamamak da boyanın eşit dağılmamasına neden olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0300",
+       "ses": "Lamel aşamasında ise lamel altında kalan hava kabarcıkları, fazla yapıştırıcı ve aynı kesitin üzerine 2 lamel kapatılması demek olan çift lamel görülür.",
+       "ekran": "Lamel aşamasında ise lamel altında kalan hava kabarcıkları, fazla yapıştırıcı ve aynı kesitin üzerine 2 lamel kapatılması demek olan çift lamel görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0301",
+       "ses": "Bir artefaktı tanımak, onu oluşturan basamağı bilmeyi gerektirir.",
+       "ekran": "Bir artefaktı tanımak, onu oluşturan basamağı bilmeyi gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b17",
+   "baslik": "Mikroskop türleri",
+   "paragraflar": [
+    {
+     "id": "k1-02-p063",
+     "sayfa": 88,
+     "cumleler": [
+      {
+       "id": "k1-02-c0302",
+       "ses": "Patolojide kullanılan mikroskoplar görüntü oluşturma ilkelerine göre ayrılır.",
+       "ekran": "Patolojide kullanılan mikroskoplar görüntü oluşturma ilkelerine göre ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0303",
+       "ses": "Klasik ışık mikroskobu rutin histopatolojinin temel aracıdır; slayttaki fotoğrafta kameraya ve bilgisayar ekranına bağlı bir ışık mikroskobu görülür.",
+       "ekran": "Klasik ışık mikroskobu rutin histopatolojinin temel aracıdır; slayttaki fotoğrafta kameraya ve bilgisayar ekranına bağlı bir ışık mikroskobu görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0304",
+       "ses": "Faz kontrast mikroskobu boyanmamış, saydam yapıların görülmesini kolaylaştırır.",
+       "ekran": "Faz kontrast mikroskobu boyanmamış, saydam yapıların görülmesini kolaylaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0305",
+       "ses": "Polarizasyon mikroskobu polarize ışıkla kristal ve lifsel yapıları belirginleştirir.",
+       "ekran": "Polarizasyon mikroskobu polarize ışıkla kristal ve lifsel yapıları belirginleştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0306",
+       "ses": "Floresans mikroskobu floresan işaretli moleküllerin karanlık zeminde parlamasını sağlar ve immünfloresan incelemenin aracıdır.",
+       "ekran": "Floresans mikroskobu floresan işaretli moleküllerin karanlık zeminde parlamasını sağlar ve immünfloresan incelemenin aracıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0307",
+       "ses": "Elektron mikroskobu ışık yerine elektron demeti kullanır ve 2 tipi vardır.",
+       "ekran": "Elektron mikroskobu ışık yerine elektron demeti kullanır ve 2 tipi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0308",
+       "ses": "Transmisyon elektron mikroskobunda elektronlar çok ince kesitin içinden geçer ve hücre içi yapı görülür.",
+       "ekran": "Transmisyon elektron mikroskobunda elektronlar çok ince kesitin içinden geçer ve hücre içi yapı görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0309",
+       "ses": "Taramalı elektron mikroskobunda ise elektronlar yüzeyi tarar ve yüzeyin 3 boyutlu görüntüsü elde edilir.",
+       "ekran": "Taramalı elektron mikroskobunda ise elektronlar yüzeyi tarar ve yüzeyin 3 boyutlu görüntüsü elde edilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b18",
+   "baslik": "Sitopatoloji: tarihçe, amaç ve materyal",
+   "paragraflar": [
+    {
+     "id": "k1-02-p064",
+     "sayfa": 89,
+     "cumleler": [
+      {
+       "id": "k1-02-c0310",
+       "ses": "Sitopatoloji, hücrelerin normal görünüm dışı sapmalarını inceler.",
+       "ekran": "Sitopatoloji, hücrelerin normal görünüm dışı sapmalarını inceler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0311",
+       "ses": "Tarihçesine bakarsak, 1928'de Doktor George Papanicolaou ve Doktor Aurel Babeș servikal eksfolyatif sitolojiyi tanımladı; eksfolyatif sitoloji serviksten kendiliğinden dökülen hücrelerin incelenmesidir.",
+       "ekran": "Tarihçesine bakarsak, 1928'de Doktor George Papanicolaou ve Doktor Aurel Babeș servikal eksfolyatif sitolojiyi tanımladı; eksfolyatif sitoloji serviksten kendiliğinden dökülen hücrelerin incelenmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0312",
+       "ses": "1943'te Papanicolaou ve Traut pap testini tanımladı.",
+       "ekran": "1943'te Papanicolaou ve Traut pap testini tanımladı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0313",
+       "ses": "1947'de ilk geniş kapsamlı sitoloji kursu düzenlendi ve Türkiye'den Osman Nuri Aker bu kursa katıldı.",
+       "ekran": "1947'de ilk geniş kapsamlı sitoloji kursu düzenlendi ve Türkiye'den Osman Nuri Aker bu kursa katıldı.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p065",
+     "sayfa": 90,
+     "cumleler": [
+      {
+       "id": "k1-02-c0314",
+       "ses": "Sitopatolojinin amacı minimal morbidite ile güvenilir tanı koymaktır.",
+       "ekran": "Sitopatolojinin amacı minimal morbidite ile güvenilir tanı koymaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0315",
+       "ses": "Avantajları minimal invaziv olması, uygun maliyetli olması ve servikal tarama gibi bazı alanlarda yüksek duyarlılık ve özgüllük göstermesidir.",
+       "ekran": "Avantajları minimal invaziv olması, uygun maliyetli olması ve servikal tarama gibi bazı alanlarda yüksek duyarlılık ve özgüllük göstermesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0316",
+       "ses": "Duyarlılık hastalığı olanı doğru yakalama, özgüllük ise hastalığı olmayanı doğru dışlama gücüdür.",
+       "ekran": "Duyarlılık hastalığı olanı doğru yakalama, özgüllük ise hastalığı olmayanı doğru dışlama gücüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0317",
+       "ses": "Dezavantajları hücre mimarisinin sınırlı olması, çünkü hücreler dokudaki dizilimlerinden ayrılmış olarak görülür, ve bazı durumlarda kesin tanı için histopatolojinin gerekmesidir.",
+       "ekran": "Dezavantajları hücre mimarisinin sınırlı olması, çünkü hücreler dokudaki dizilimlerinden ayrılmış olarak görülür, ve bazı durumlarda kesin tanı için histopatolojinin gerekmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p066",
+     "sayfa": 91,
+     "cumleler": [
+      {
+       "id": "k1-02-c0318",
+       "ses": "Sitolojik materyal 4 gruba ayrılır.",
+       "ekran": "Sitolojik materyal 4 gruba ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0319",
+       "ses": "Eksfolyatif sitolojide kendiliğinden dökülen hücreler incelenir: serviks, idrar, balgam ve seröz sıvılar.",
+       "ekran": "Eksfolyatif sitolojide kendiliğinden dökülen hücreler incelenir: serviks, idrar, balgam ve seröz sıvılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0320",
+       "ses": "Mekanik örneklemede hücreler bir işlemle yerinden alınır; lavaj, yani yıkama, aspirasyon ve parasentez ile gastrointestinal sistem, bronş ve üriner kanalda fırçalama buraya girer.",
+       "ekran": "Mekanik örneklemede hücreler bir işlemle yerinden alınır; lavaj, yani yıkama, aspirasyon ve parasentez ile gastrointestinal sistem, bronş ve üriner kanalda fırçalama buraya girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0321",
+       "ses": "Üçüncü grup ince iğne aspirasyon sitolojisidir.",
+       "ekran": "Üçüncü grup ince iğne aspirasyon sitolojisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0322",
+       "ses": "Dördüncü grup intraoperatif örneklemedir; ameliyat sırasında ince iğne aspirasyonu ya da dokunun kesit yüzeyinin lama dokundurulmasıyla yapılan imprint uygulanır.",
+       "ekran": "Dördüncü grup intraoperatif örneklemedir; ameliyat sırasında ince iğne aspirasyonu ya da dokunun kesit yüzeyinin lama dokundurulmasıyla yapılan imprint uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0323",
+       "ses": "Slayttaki görselde servikal yaymanın Papanicolaou boyalı görünümünde mavi yeşil ve pembe sitoplazmalı yassı epitel hücreleri izlenir.",
+       "ekran": "Slayttaki görselde servikal yaymanın Papanicolaou boyalı görünümünde mavi yeşil ve pembe sitoplazmalı yassı epitel hücreleri izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b19",
+   "baslik": "Servikal sitoloji ve Bethesda sistemi",
+   "paragraflar": [
+    {
+     "id": "k1-02-p067",
+     "sayfa": 92,
+     "cumleler": [
+      {
+       "id": "k1-02-c0324",
+       "ses": "Pap smear yönteminde serviks ve vajenden dökülen hücreler lam üzerine yayılır ve incelenir.",
+       "ekran": "Pap smear yönteminde serviks ve vajenden dökülen hücreler lam üzerine yayılır ve incelenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0325",
+       "ses": "Temel amacı preinvaziv ve invaziv serviks kanseri taramasıdır.",
+       "ekran": "Temel amacı preinvaziv ve invaziv serviks kanseri taramasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0326",
+       "ses": "Preinvaziv lezyon henüz alttaki dokuya yayılmamış öncü değişikliktir; erken yakalanırsa kansere dönüşmeden tedavi edilebilir.",
+       "ekran": "Preinvaziv lezyon henüz alttaki dokuya yayılmamış öncü değişikliktir; erken yakalanırsa kansere dönüşmeden tedavi edilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0327",
+       "ses": "Pap smear ayrıca benign atipiler, inflamatuvar ve enfeksiyöz değişiklikler, hormonal durum ve diğer genital sistem neoplazileri hakkında da bilgi verir.",
+       "ekran": "Pap smear ayrıca benign atipiler, inflamatuvar ve enfeksiyöz değişiklikler, hormonal durum ve diğer genital sistem neoplazileri hakkında da bilgi verir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p068",
+     "sayfa": 93,
+     "cumleler": [
+      {
+       "id": "k1-02-c0328",
+       "ses": "Bethesda sistemi servikal sitoloji sonuçlarını standart bir dille raporlar.",
+       "ekran": "Bethesda sistemi servikal sitoloji sonuçlarını standart bir dille raporlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0329",
+       "ses": "Önce örnek yeterliliği değerlendirilir: yeterli sayıda skuamöz ve endoservikal hücre bulunmalıdır.",
+       "ekran": "Önce örnek yeterliliği değerlendirilir: yeterli sayıda skuamöz ve endoservikal hücre bulunmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0330",
+       "ses": "Temel tanısal kategoriler şunlardır.",
+       "ekran": "Temel tanısal kategoriler şunlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0331",
+       "ses": "Negatif, intraepitelyal lezyon veya malignite olmadığı anlamına gelir.",
+       "ekran": "Negatif, intraepitelyal lezyon veya malignite olmadığı anlamına gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0332",
+       "ses": "ASC-US, önemi belirlenemeyen atipik skuamöz hücreleri ifade eder.",
+       "ekran": "ASC-US, önemi belirlenemeyen atipik skuamöz hücreleri ifade eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0333",
+       "ses": "ASC-H ise yüksek dereceli skuamöz intraepitelyal lezyonun dışlanamadığı, dikkat edilmesi gereken atipidir.",
+       "ekran": "ASC-H ise yüksek dereceli skuamöz intraepitelyal lezyonun dışlanamadığı, dikkat edilmesi gereken atipidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0334",
+       "ses": "LSIL, düşük dereceli skuamöz intraepitelyal lezyondur ve HPV ilişkili olabilir.",
+       "ekran": "LSIL, düşük dereceli skuamöz intraepitelyal lezyondur ve HPV ilişkili olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0335",
+       "ses": "HSIL, yüksek dereceli skuamöz intraepitelyal lezyondur ve ileri tetkik gerektirir.",
+       "ekran": "HSIL, yüksek dereceli skuamöz intraepitelyal lezyondur ve ileri tetkik gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0336",
+       "ses": "Bunların ötesinde skuamöz hücreli karsinom ve adenokarsinom gibi kategoriler yer alır.",
+       "ekran": "Bunların ötesinde skuamöz hücreli karsinom ve adenokarsinom gibi kategoriler yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0337",
+       "ses": "Sistem, HPV ilişkili değişikliklerin vurgulanmasına önem verir.",
+       "ekran": "Sistem, HPV ilişkili değişikliklerin vurgulanmasına önem verir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b20",
+   "baslik": "Solunum, vücut sıvıları ve ince iğne aspirasyonu",
+   "paragraflar": [
+    {
+     "id": "k1-02-p069",
+     "sayfa": 94,
+     "cumleler": [
+      {
+       "id": "k1-02-c0338",
+       "ses": "Solunum yolu sitolojisinde balgam, bronş yıkama, bronkoalveoler lavaj ve fırçalama örnekleri kullanılır.",
+       "ekran": "Solunum yolu sitolojisinde balgam, bronş yıkama, bronkoalveoler lavaj ve fırçalama örnekleri kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0339",
+       "ses": "Bu yöntem özellikle santral yerleşimli kitlelerde yararlıdır, çünkü büyük hava yollarına yakın kitlelerden dökülen hücreler bu örneklere daha kolay geçer.",
+       "ekran": "Bu yöntem özellikle santral yerleşimli kitlelerde yararlıdır, çünkü büyük hava yollarına yakın kitlelerden dökülen hücreler bu örneklere daha kolay geçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0340",
+       "ses": "Seröz sıvılar ise plevral, peritoneal ve perikardiyal effüzyonlardır, yani akciğer zarı, karın zarı ve kalp zarı boşluklarında biriken sıvılardır.",
+       "ekran": "Seröz sıvılar ise plevral, peritoneal ve perikardiyal effüzyonlardır, yani akciğer zarı, karın zarı ve kalp zarı boşluklarında biriken sıvılardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0341",
+       "ses": "Amaç malignite saptamak ve bazı enfeksiyon ve inflamatuvar durumları değerlendirmektir.",
+       "ekran": "Amaç malignite saptamak ve bazı enfeksiyon ve inflamatuvar durumları değerlendirmektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p070",
+     "sayfa": 95,
+     "cumleler": [
+      {
+       "id": "k1-02-c0342",
+       "ses": "İnce iğne aspirasyon sitolojisinde yaklaşık 22 gauge kalınlığında bir iğne ve enjektör kullanılır.",
+       "ekran": "İnce iğne aspirasyon sitolojisinde yaklaşık 22 gauge kalınlığında bir iğne ve enjektör kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0343",
+       "ses": "22 gauge iğne, dış çapı yaklaşık 0,70 milimetre olan orta kalınlıkta bir iğnedir.",
+       "ekran": "22 gauge iğne, dış çapı yaklaşık 0,70 milimetre olan orta kalınlıkta bir iğnedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0344",
+       "ses": "Negatif basınçla hücre çekilir, hücreler lam üzerine yayılıp boyanır.",
+       "ekran": "Negatif basınçla hücre çekilir, hücreler lam üzerine yayılıp boyanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0345",
+       "ses": "Burası önemli, bu sayılar sınav spotudur: ince iğne aspirasyon sitolojisinin tanısal doğruluğu uygun koşullarda %90 ile 95 arasındadır.",
+       "ekran": "Burası önemli, bu sayılar sınav spotudur: ince iğne aspirasyon sitolojisinin tanısal doğruluğu uygun koşullarda %90 ile 95 arasındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0346",
+       "ses": "Başlıca endikasyonları tiroid, meme ve lenf nodu gibi yüzeyel kitleler ile karaciğer, pankreas ve akciğer gibi derin kitlelerdir; derin kitlelerde işlem ultrason ya da bilgisayarlı tomografi eşliğinde yapılır.",
+       "ekran": "Başlıca endikasyonları tiroid, meme ve lenf nodu gibi yüzeyel kitleler ile karaciğer, pankreas ve akciğer gibi derin kitlelerdir; derin kitlelerde işlem ultrason ya da bilgisayarlı tomografi eşliğinde yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b21",
+   "baslik": "Sitolojik fiksasyon, boyama ve tanı kriterleri",
+   "paragraflar": [
+    {
+     "id": "k1-02-p071",
+     "sayfa": 96,
+     "cumleler": [
+      {
+       "id": "k1-02-c0347",
+       "ses": "Sitolojik yaymalar 2 farklı yolla hazırlanır.",
+       "ekran": "Sitolojik yaymalar 2 farklı yolla hazırlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0348",
+       "ses": "Burası önemli, bu eşleştirme yer değiştirilerek çeldirici yapılır: alkol fiksasyonlu preparatlarda Papanicolaou boyası, hematoksilen eozin ve immünohistokimya uygulanır.",
+       "ekran": "Burası önemli, bu eşleştirme yer değiştirilerek çeldirici yapılır: alkol fiksasyonlu preparatlarda Papanicolaou boyası, hematoksilen eozin ve immünohistokimya uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0349",
+       "ses": "Havada kuruyan preparatlarda ise May-Grünwald-Giemsa, Wright ve Diff-Quik boyaları kullanılır.",
+       "ekran": "Havada kuruyan preparatlarda ise May-Grünwald-Giemsa, Wright ve Diff-Quik boyaları kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0350",
+       "ses": "Pratikte örnekler kısa sürede laboratuvara ulaştırılmalıdır, çünkü hücreler sıvı içinde bozulmaya başlar; gecikme durumunda alkol eklenerek stabilize edilebilir.",
+       "ekran": "Pratikte örnekler kısa sürede laboratuvara ulaştırılmalıdır, çünkü hücreler sıvı içinde bozulmaya başlar; gecikme durumunda alkol eklenerek stabilize edilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p072",
+     "sayfa": 97,
+     "cumleler": [
+      {
+       "id": "k1-02-c0351",
+       "ses": "Sitopatolog bir yaymayı 4 başlıkta değerlendirir.",
+       "ekran": "Sitopatolog bir yaymayı 4 başlıkta değerlendirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0352",
+       "ses": "Nükleer özellikler büyüklük, şekil, kromatin paterni ile nükleol sayısı ve görünümüdür.",
+       "ekran": "Nükleer özellikler büyüklük, şekil, kromatin paterni ile nükleol sayısı ve görünümüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0353",
+       "ses": "Sitoplazmada miktar, nükleus sitoplazma oranı, boyanma paterni ve granülarite değerlendirilir.",
+       "ekran": "Sitoplazmada miktar, nükleus sitoplazma oranı, boyanma paterni ve granülarite değerlendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0354",
+       "ses": "Hücreler arası ilişkilerde pleomorfizm yani hücrelerin şekil ve büyüklük farklılığı, kalabalıklaşma, hücrelerin birbirine bastırarak kalıp gibi şekil alması demek olan molding ve üst üste binme aranır.",
+       "ekran": "Hücreler arası ilişkilerde pleomorfizm yani hücrelerin şekil ve büyüklük farklılığı, kalabalıklaşma, hücrelerin birbirine bastırarak kalıp gibi şekil alması demek olan molding ve üst üste binme aranır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0355",
+       "ses": "Zeminde ise nekroz, inflamasyon ve kanama artıklarına bakılır.",
+       "ekran": "Zeminde ise nekroz, inflamasyon ve kanama artıklarına bakılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0356",
+       "ses": "Sitolojide doku mimarisi sınırlı olduğu için tanı ağırlıkla tek hücrenin ve hücre gruplarının özelliklerine dayanır.",
+       "ekran": "Sitolojide doku mimarisi sınırlı olduğu için tanı ağırlıkla tek hücrenin ve hücre gruplarının özelliklerine dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b22",
+   "baslik": "Laboratuvar iş akışı ve raporun klinik etkisi",
+   "paragraflar": [
+    {
+     "id": "k1-02-p073",
+     "sayfa": 98,
+     "cumleler": [
+      {
+       "id": "k1-02-c0357",
+       "ses": "Patoloji laboratuvarındaki ekip uzman patologlar, uzmanlık eğitimi alan patoloji asistanları ve teknik basamakları yürüten tıbbi laboratuvar teknikerlerinden oluşur.",
+       "ekran": "Patoloji laboratuvarındaki ekip uzman patologlar, uzmanlık eğitimi alan patoloji asistanları ve teknik basamakları yürüten tıbbi laboratuvar teknikerlerinden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0358",
+       "ses": "İş akışı 6 adımdır: materyalin kabulü ve kaydı, makroskopi ve örnekleme, doku takibi ve bloklama, kesit alma ve boyama, mikroskopik değerlendirme, en son da rapor yazımı ve raporun klinikle paylaşılması.",
+       "ekran": "İş akışı 6 adımdır: materyalin kabulü ve kaydı, makroskopi ve örnekleme, doku takibi ve bloklama, kesit alma ve boyama, mikroskopik değerlendirme, en son da rapor yazımı ve raporun klinikle paylaşılması.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0359",
+       "ses": "Zincirin son halkasının yalnız rapor yazımı değil, paylaşım olduğuna dikkat edin.",
+       "ekran": "Zincirin son halkasının yalnız rapor yazımı değil, paylaşım olduğuna dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p074",
+     "sayfa": 99,
+     "cumleler": [
+      {
+       "id": "k1-02-c0360",
+       "ses": "Patoloji raporu cerrahi genişliği ve sınır güvenliğini, adjuvan tedavi gerekliliğini ve izlem protokolünü belirler.",
+       "ekran": "Patoloji raporu cerrahi genişliği ve sınır güvenliğini, adjuvan tedavi gerekliliğini ve izlem protokolünü belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0361",
+       "ses": "Örneğin meme karsinomunda raporda tümör boyutu ve lenf nodu durumu, östrojen reseptörü, progesteron reseptörü ve HER2 durumu ile Ki-67 indeksi yer alır.",
+       "ekran": "Örneğin meme karsinomunda raporda tümör boyutu ve lenf nodu durumu, östrojen reseptörü, progesteron reseptörü ve HER2 durumu ile Ki-67 indeksi yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0362",
+       "ses": "Tümör boyutu ve lenf nodu hastalığın yayılımını, reseptör durumu tedavi seçimini, Ki-67 ise tümörün çoğalma hızını gösterir.",
+       "ekran": "Tümör boyutu ve lenf nodu hastalığın yayılımını, reseptör durumu tedavi seçimini, Ki-67 ise tümörün çoğalma hızını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p075",
+     "sayfa": 100,
+     "cumleler": [
+      {
+       "id": "k1-02-c0363",
+       "ses": "Entegre tanı yaklaşımında rapor 3 bileşeni birleştirir: hematoksilen eozin ile morfoloji, immünohistokimya ve moleküler genetik analiz.",
+       "ekran": "Entegre tanı yaklaşımında rapor 3 bileşeni birleştirir: hematoksilen eozin ile morfoloji, immünohistokimya ve moleküler genetik analiz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0364",
+       "ses": "Akciğer adenokarsinomu örneğinde histolojik tip hematoksilen eozin ile belirlenir; TTF-1 ve Napsin A gibi immünohistokimyasal belirteçler tümörün akciğer kökenini destekler; EGFR, ALK, ROS1 ve KRAS gibi mutasyon ve füzyon analizleri ise hedefe yönelik tedavi seçimini belirler.",
+       "ekran": "Akciğer adenokarsinomu örneğinde histolojik tip hematoksilen eozin ile belirlenir; TTF-1 ve Napsin A gibi immünohistokimyasal belirteçler tümörün akciğer kökenini destekler; EGFR, ALK, ROS1 ve KRAS gibi mutasyon ve füzyon analizleri ise hedefe yönelik tedavi seçimini belirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b23",
+   "baslik": "Dijital patoloji, otopsi ve deneysel patoloji",
+   "paragraflar": [
+    {
+     "id": "k1-02-p076",
+     "sayfa": 101,
+     "cumleler": [
+      {
+       "id": "k1-02-c0365",
+       "ses": "Dijital patolojide cam lamlar dijital lam tarayıcılarıyla bilgisayar ortamına aktarılır.",
+       "ekran": "Dijital patolojide cam lamlar dijital lam tarayıcılarıyla bilgisayar ortamına aktarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0366",
+       "ses": "Bu görüntüler arşiv, eğitim ve görüntünün uzaktaki bir patoloğa gönderildiği telepatoloji için kullanılır.",
+       "ekran": "Bu görüntüler arşiv, eğitim ve görüntünün uzaktaki bir patoloğa gönderildiği telepatoloji için kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0367",
+       "ses": "Yapay zekâ uygulamaları Ki-67 ve mitotik indeks gibi hücre sayımları, tümör ile tümör olmayan dokunun ayrımı ve örneğin HER2 skorlaması gibi otomatik skorlamalardır.",
+       "ekran": "Yapay zekâ uygulamaları Ki-67 ve mitotik indeks gibi hücre sayımları, tümör ile tümör olmayan dokunun ayrımı ve örneğin HER2 skorlaması gibi otomatik skorlamalardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0368",
+       "ses": "Gelecekte yapay zekânın klinik karar destek sistemleriyle entegrasyonu beklenir.",
+       "ekran": "Gelecekte yapay zekânın klinik karar destek sistemleriyle entegrasyonu beklenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p077",
+     "sayfa": 103,
+     "cumleler": [
+      {
+       "id": "k1-02-c0369",
+       "ses": "Otopsi amacına göre ikiye ayrılır.",
+       "ekran": "Otopsi amacına göre ikiye ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0370",
+       "ses": "Adli otopsi ani, beklenmedik ve şüpheli ölümlerde yapılır; amacı ölüm nedeninin ve mekanizmasının belirlenmesidir.",
+       "ekran": "Adli otopsi ani, beklenmedik ve şüpheli ölümlerde yapılır; amacı ölüm nedeninin ve mekanizmasının belirlenmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0371",
+       "ses": "Klinik otopsi ise ölüm nedenini ve eşlik eden hastalıkları aydınlatır, klinik tanı ile patoloji arasındaki korelasyonu sağlar, yani hayattayken konan tanıların doğruluğunu sınar, ve eğitim ile araştırma için çok değerlidir.",
+       "ekran": "Klinik otopsi ise ölüm nedenini ve eşlik eden hastalıkları aydınlatır, klinik tanı ile patoloji arasındaki korelasyonu sağlar, yani hayattayken konan tanıların doğruluğunu sınar, ve eğitim ile araştırma için çok değerlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0372",
+       "ses": "Bu korelasyon işlevi, Morgagni'nin otopsi bulgularını klinik belirtilerle karşılaştırmasının günümüzdeki devamıdır.",
+       "ekran": "Bu korelasyon işlevi, Morgagni'nin otopsi bulgularını klinik belirtilerle karşılaştırmasının günümüzdeki devamıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p078",
+     "sayfa": 104,
+     "cumleler": [
+      {
+       "id": "k1-02-c0373",
+       "ses": "Deneysel patoloji, hayvan modellerinde hastalık mekanizmalarını inceler; tedavi yanıtını ve zaman içindeki değişimleri analiz eder.",
+       "ekran": "Deneysel patoloji, hayvan modellerinde hastalık mekanizmalarını inceler; tedavi yanıtını ve zaman içindeki değişimleri analiz eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0374",
+       "ses": "Moleküler patoloji ise hedefe yönelik tedavi seçiminde prognostik ve prediktif biyobelirteçleri sağlar ve kişiselleştirilmiş tıp uygulamalarının temel bileşenidir.",
+       "ekran": "Moleküler patoloji ise hedefe yönelik tedavi seçiminde prognostik ve prediktif biyobelirteçleri sağlar ve kişiselleştirilmiş tıp uygulamalarının temel bileşenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0375",
+       "ses": "Aynı tanıyı alan iki hastanın tümörü farklı moleküler değişiklikler taşıyabilir ve farklı tedavi gerektirebilir.",
+       "ekran": "Aynı tanıyı alan iki hastanın tümörü farklı moleküler değişiklikler taşıyabilir ve farklı tedavi gerektirebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-02-b24",
+   "baslik": "Kurumsallaşma, işbirliği ve patolojinin geleceği",
+   "paragraflar": [
+    {
+     "id": "k1-02-p079",
+     "sayfa": 105,
+     "cumleler": [
+      {
+       "id": "k1-02-c0376",
+       "ses": "Türkiye'de patolojinin öncü merkezleri İstanbul Üniversitesi, Gülhane ve Ankara Üniversitesi gibi kurumlardır.",
+       "ekran": "Türkiye'de patolojinin öncü merkezleri İstanbul Üniversitesi, Gülhane ve Ankara Üniversitesi gibi kurumlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0377",
+       "ses": "Kurucular Hamdi Suat Aknar, Philipp Schwartz, Siegfried Oberndorfer ve öğrencileridir.",
+       "ekran": "Kurucular Hamdi Suat Aknar, Philipp Schwartz, Siegfried Oberndorfer ve öğrencileridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0378",
+       "ses": "Günümüzde patoloji tüm tıp fakültelerinde temel ders olarak okutulur; yan dalları ve üst uzmanlık alanları gelişmektedir.",
+       "ekran": "Günümüzde patoloji tüm tıp fakültelerinde temel ders olarak okutulur; yan dalları ve üst uzmanlık alanları gelişmektedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0379",
+       "ses": "Klinik ile patolog arasındaki işbirliğinde iyi uygulamalar şunlardır: sürekli ve açık iletişim; tümör konseyleri ile kötü sonuçlanan olguların geriye dönük tartışıldığı morbidite ve mortalite toplantıları gibi ortak toplantılar; açık, standart ve klinik soruları yanıtlayan raporlar; ve klinik ekibin ön tanısını ve beklentilerini patoloğa net iletmesi.",
+       "ekran": "Klinik ile patolog arasındaki işbirliğinde iyi uygulamalar şunlardır: sürekli ve açık iletişim; tümör konseyleri ile kötü sonuçlanan olguların geriye dönük tartışıldığı morbidite ve mortalite toplantıları gibi ortak toplantılar; açık, standart ve klinik soruları yanıtlayan raporlar; ve klinik ekibin ön tanısını ve beklentilerini patoloğa net iletmesi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0380",
+       "ses": "İşbirliği iki yönlüdür.",
+       "ekran": "İşbirliği iki yönlüdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p080",
+     "sayfa": 107,
+     "cumleler": [
+      {
+       "id": "k1-02-c0381",
+       "ses": "Patolojinin geleceğinde 4 eğilim öne çıkar: daha ayrıntılı hücresel ve moleküler sınıflamalar, yapay zekâ destekli tanı süreçleri, dolaşımdaki tümör DNA ve RNA'sı ile hücrelerinin kandan incelendiği likit biyopsi, ve patolog, klinisyen, radyolog, genetikçi ve biyoinformatikçinin birlikte çalıştığı multidisipliner ekip çalışmasının artması.",
+       "ekran": "Patolojinin geleceğinde 4 eğilim öne çıkar: daha ayrıntılı hücresel ve moleküler sınıflamalar, yapay zekâ destekli tanı süreçleri, dolaşımdaki tümör DNA ve RNA'sı ile hücrelerinin kandan incelendiği likit biyopsi, ve patolog, klinisyen, radyolog, genetikçi ve biyoinformatikçinin birlikte çalıştığı multidisipliner ekip çalışmasının artması.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-02-p081",
+     "sayfa": 108,
+     "cumleler": [
+      {
+       "id": "k1-02-c0382",
+       "ses": "Özetle patoloji, hastalıkların neden, mekanizma, morfoloji ve sonuçlarını inceleyen temel bilimdir.",
+       "ekran": "Özetle patoloji, hastalıkların neden, mekanizma, morfoloji ve sonuçlarını inceleyen temel bilimdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0383",
+       "ses": "Tarihsel gelişimi Morgagni'den Virchow'a, Hamdi Suat Aknar'dan günümüze uzanır.",
+       "ekran": "Tarihsel gelişimi Morgagni'den Virchow'a, Hamdi Suat Aknar'dan günümüze uzanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0384",
+       "ses": "Güncel pratik cerrahi patoloji, sitopatoloji, moleküler ve dijital patolojinin entegrasyonudur.",
+       "ekran": "Güncel pratik cerrahi patoloji, sitopatoloji, moleküler ve dijital patolojinin entegrasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-02-c0385",
+       "ses": "Klinik başarı ise güçlü bir patoloji altyapısına ve etkin klinik ve patolog işbirliğine dayanır.",
+       "ekran": "Klinik başarı ise güçlü bir patoloji altyapısına ve etkin klinik ve patolog işbirliğine dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

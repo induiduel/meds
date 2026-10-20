@@ -39,6 +39,7 @@ const duz = (r: Run[]) => r.map((x) => x.t).join('');
 function bloklar(md: string): Blok[] {
   const out: Blok[] = [];
   const sat = md.replace(/\r/g, '').split('\n');
+  const girinti: number[] = [];
   for (let k = 0; k < sat.length; k++) {
     const l = sat[k];
     if (!l.trim()) continue;
@@ -67,9 +68,17 @@ function bloklar(md: string): Blok[] {
       continue;
     }
     const h = l.match(/^\s*#{1,6}\s+(.*)$/);
-    if (h) { out.push({ tur: 'h', r: satirIci(h[1]) }); continue; }
+    if (h) { girinti.length = 0; out.push({ tur: 'h', r: satirIci(h[1]) }); continue; }
     const li = l.match(/^(\s*)([-*•]|\d+[.)])\s+(.*)$/);
-    if (li) { out.push({ tur: 'li', r: satirIci(li[3]), isaret: /\d/.test(li[2]) ? li[2] : '•', dz: li[1].length >= 2 ? 1 : 0 }); continue; }
+    if (li) {
+      // iç içe düzey göreli girintiyle bulunur (2 ya da 4 boşluk fark etmez), en çok 3 düzey
+      const g = li[1].replace(/\t/g, '    ').length;
+      while (girinti.length && girinti[girinti.length - 1] > g) girinti.pop();
+      if (!girinti.length || girinti[girinti.length - 1] < g) girinti.push(g);
+      out.push({ tur: 'li', r: satirIci(li[3]), isaret: /\d/.test(li[2]) ? li[2] : '•', dz: Math.min(2, girinti.length - 1) });
+      continue;
+    }
+    girinti.length = 0;
     out.push({ tur: 'p', r: satirIci(l.trim()) });
   }
   return out;
@@ -86,7 +95,7 @@ function txt(b: AktarBelge): string {
     for (const x of bloklar(bo.md)) {
       if (x.tur === 'h') s.push('', duz(x.r));
       else if (x.tur === 'p') s.push(duz(x.r));
-      else if (x.tur === 'li') s.push(`${x.dz ? '    ' : ''}${x.isaret} ${duz(x.r)}`);
+      else if (x.tur === 'li') s.push(`${'    '.repeat(x.dz)}${x.isaret} ${duz(x.r)}`);
       else if (x.tur === 'not') s.push(...x.satirlar.map((r, i) => `${i === 0 && x.etiket ? `[${x.etiket}] ` : '    '}${duz(r)}`));
       else if (x.tur === 'tablo') s.push(...x.satirlar.map((r) => r.map(duz).join(' | ')));
     }
@@ -123,7 +132,7 @@ function docxXml(b: AktarBelge): Record<string, string> {
       else if (x.tur === 'li') {
         g.push(x.isaret === '•'
           ? par('ListParagraph', runsX(x.r), `<w:numPr><w:ilvl w:val="${x.dz}"/><w:numId w:val="1"/></w:numPr>`)
-          : par('ListParagraph', runX({ t: `${x.isaret}\t` }) + runsX(x.r), x.dz ? '<w:ind w:left="720" w:hanging="360"/>' : ''));
+          : par('ListParagraph', runX({ t: `${x.isaret}\t` }) + runsX(x.r), x.dz ? `<w:ind w:left="${360 * (x.dz + 1)}" w:hanging="360"/>` : ''));
       } else if (x.tur === 'not') {
         x.satirlar.forEach((r, i) => g.push(par('Callout', (i === 0 && x.etiket ? runX({ t: `${x.etiket}: `, b: true }) : '') + runsX(r))));
       } else if (x.tur === 'tablo') {
@@ -155,7 +164,7 @@ function docxXml(b: AktarBelge): Record<string, string> {
       + stil('Tablo', 'Tablo metni', '<w:spacing w:after="0" w:line="252" w:lineRule="auto"/>', '<w:sz w:val="19"/>')
       + `</w:styles>`,
     'word/numbering.xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:numbering ${W}><w:abstractNum w:abstractNumId="0"><w:multiLevelType w:val="hybridMultilevel"/>`
-      + [0, 1].map((l) => `<w:lvl w:ilvl="${l}"><w:start w:val="1"/><w:numFmt w:val="bullet"/><w:lvlText w:val="${l ? '◦' : '•'}"/><w:lvlJc w:val="left"/><w:pPr><w:ind w:left="${360 * (l + 1)}" w:hanging="360"/></w:pPr><w:rPr><w:color w:val="0D6E96"/></w:rPr></w:lvl>`).join('')
+      + [0, 1, 2].map((l) => `<w:lvl w:ilvl="${l}"><w:start w:val="1"/><w:numFmt w:val="bullet"/><w:lvlText w:val="${['•', '◦', '▪'][l]}"/><w:lvlJc w:val="left"/><w:pPr><w:ind w:left="${360 * (l + 1)}" w:hanging="360"/></w:pPr><w:rPr><w:color w:val="0D6E96"/></w:rPr></w:lvl>`).join('')
       + `</w:abstractNum><w:num w:numId="1"><w:abstractNumId w:val="0"/></w:num></w:numbering>`,
     'word/document.xml': `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document ${W}><w:body>${g.join('')}<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="567" w:footer="567" w:gutter="0"/></w:sectPr></w:body></w:document>`,
   };
@@ -259,7 +268,7 @@ async function pdf(b: AktarBelge): Promise<Blob> {
     if (x.tur === 'li') {
       const ic = x.isaret === '•' ? 5 : 6.5;
       const gen = CW - ic - x.dz * 5;
-      return satirla(x.r, gen, 10.5).length * lh(10.5) + 1.4;
+      return satirla(x.r, gen, 10.5).length * lh(10.5) + (x.dz ? 1 : 1.8);
     }
     if (x.tur === 'not') {
       const pt = 10, gen = CW - 9;
@@ -335,7 +344,8 @@ async function pdf(b: AktarBelge): Promise<Blob> {
 
       // Konu başlığı + alt başlığı + ilk bloğu bu sayfaya sığmıyorsa
       // veya sayfada 45 mm'den az alan kalmışsa konuyu ve başlığı yeni sayfada başlat
-      if (y > M && (y + hBaslik + hAlt + hIlk > ALT || ALT - y < 45)) {
+      // (+1: başlıktan sonraki boşluk, +2: yuvarlama payı — başlık sayfa sonunda yalnız kalmasın)
+      if (y > M && (y + hBaslik + hAlt + 1 + hIlk + 2 > ALT || ALT - y < 45)) {
         doc.addPage();
         y = M;
       }
@@ -360,7 +370,8 @@ async function pdf(b: AktarBelge): Promise<Blob> {
         const baslikH = baslikSatirlar.length * lh(11.2) + 2.3;
 
         // Alt başlık + sonraki blok mevcut sayfaya sığmıyorsa yeni sayfada başlat
-        if (y > M && y + baslikH + Math.min(sonrakiH, 35) > ALT) {
+        // Sonraki blok tek sayfaya sığıyorsa bütün taşınır; o yüzden başlık onun tamamıyla birlikte ölçülür
+        if (y > M && y + 1.5 + baslikH + (sonrakiH <= ALT - M ? sonrakiH : 35) + 2 > ALT) {
           doc.addPage();
           y = M;
         }
@@ -379,7 +390,11 @@ async function pdf(b: AktarBelge): Promise<Blob> {
           () => {
             if (x.isaret === '•') {
               doc.setFillColor(...VURGU);
-              doc.circle(gx + 1.3, y + 2.6, x.dz ? 0.55 : 0.75, 'F');
+              doc.setDrawColor(...VURGU);
+              doc.setLineWidth(0.25);
+              // 0: dolu yuvarlak, 1: boş halka, 2: küçük kare
+              if (x.dz === 2) doc.rect(gx + 0.85, y + 2.15, 0.9, 0.9, 'F');
+              else doc.circle(gx + 1.3, y + 2.6, x.dz ? 0.6 : 0.75, x.dz ? 'S' : 'F');
             } else {
               doc.setFont(F, 'bold');
               doc.setFontSize(10.5);
@@ -387,7 +402,7 @@ async function pdf(b: AktarBelge): Promise<Blob> {
               doc.text(x.isaret, gx, y + 3.7);
             }
           },
-          1.4
+          x.dz ? 1 : 1.8
         );
       } else if (x.tur === 'not') {
         const pt = 10, gen = CW - 9;

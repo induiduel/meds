@@ -1,0 +1,2373 @@
+{
+ "surum": 2,
+ "ders_id": "k1-33",
+ "anahtar": "k1-33-tumor-evrelemesi-derecelendirme-ve-laboratuvar-tan",
+ "baslik": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-33-b01",
+   "baslik": "Tümörün konak üzerindeki etkileri",
+   "paragraflar": [
+    {
+     "id": "k1-33-p001",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-33-c0001",
+       "ses": "Bir neoplazmın klinik önemi yalnızca malign olup olmamasıyla ölçülmez.",
+       "ekran": "Bir neoplazmın klinik önemi yalnızca malign olup olmamasıyla ölçülmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0002",
+       "ses": "İyi huylu, yani benign olsun ya da kötü huylu, yani malign olsun, her neoplazm konak üzerinde belirgin etkilere yol açabilir.",
+       "ekran": "İyi huylu, yani benign olsun ya da kötü huylu, yani malign olsun, her neoplazm konak üzerinde belirgin etkilere yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0003",
+       "ses": "Bu dersin amacı da prognoz ve tedavi planlamasında kullanılan temel kavramları kavramaktır; tümörün konağa etkileri, kaşeksi ve paraneoplastik sendromlar, derecelendirme ile evreleme ve son olarak laboratuvar tanı yöntemleri bu amaca hizmet eder.",
+       "ekran": "Bu dersin amacı da prognoz ve tedavi planlamasında kullanılan temel kavramları kavramaktır; tümörün konağa etkileri, kaşeksi ve paraneoplastik sendromlar, derecelendirme ile evreleme ve son olarak laboratuvar tanı yöntemleri bu amaca hizmet eder.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p002",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-33-c0004",
+       "ses": "Tümörün konağı etkileme mekanizmalarını 5 başlıkta toplarız.",
+       "ekran": "Tümörün konağı etkileme mekanizmalarını 5 başlıkta toplarız.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0005",
+       "ses": "1.'si lokal doku tahribi ve yer değiştirmedir; kitle komşu dokuyu sıkıştırır, iter ya da yıkar.",
+       "ekran": "1.'si lokal doku tahribi ve yer değiştirmedir; kitle komşu dokuyu sıkıştırır, iter ya da yıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0006",
+       "ses": "2.'si kanama, ülserasyon ve enfeksiyondur.",
+       "ekran": "2.'si kanama, ülserasyon ve enfeksiyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0007",
+       "ses": "3.'sü hormon ve diğer maddelerin salınımıdır.",
+       "ekran": "3.'sü hormon ve diğer maddelerin salınımıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0008",
+       "ses": "4.'sü bağışıklık fonksiyon bozukluğu, 5.'si ise kaşeksi ve metabolik bozukluklardır.",
+       "ekran": "4.'sü bağışıklık fonksiyon bozukluğu, 5.'si ise kaşeksi ve metabolik bozukluklardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0009",
+       "ses": "Şunu baştan aklınıza yazın arkadaşlar: benign bir tümör de kritik bir yerdeyse ya da hormon salgılıyorsa hastayı öldürebilir; benign demek zararsız demek değildir.",
+       "ekran": "Şunu baştan aklınıza yazın arkadaşlar: benign bir tümör de kritik bir yerdeyse ya da hormon salgılıyorsa hastayı öldürebilir; benign demek zararsız demek değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b02",
+   "baslik": "Lokal etkiler: yerleşim yeri, bası ve obstrüksiyon",
+   "paragraflar": [
+    {
+     "id": "k1-33-p003",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-33-c0010",
+       "ses": "Lokal etkilerde boyuttan çok tümörün yerleşim yeri belirleyicidir.",
+       "ekran": "Lokal etkilerde boyuttan çok tümörün yerleşim yeri belirleyicidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0011",
+       "ses": "Yerleşim yeri, klinik ciddiyet için en kritik faktörlerden biridir.",
+       "ekran": "Yerleşim yeri, klinik ciddiyet için en kritik faktörlerden biridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0012",
+       "ses": "En güzel örnek hipofizdir.",
+       "ekran": "En güzel örnek hipofizdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0013",
+       "ses": "Hipofiz kemik bir çukurda, sellada oturduğu için genişleyen kitle dışa doğru kolayca büyüyemez.",
+       "ekran": "Hipofiz kemik bir çukurda, sellada oturduğu için genişleyen kitle dışa doğru kolayca büyüyemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0014",
+       "ses": "1 santimetrelik bir hipofiz adenomu küçük ve benign olmasına rağmen normal hipofiz dokusunu sıkıştırır; sıkışan hücreler hormon üretemez ve hipopituitarizm gelişir.",
+       "ekran": "1 santimetrelik bir hipofiz adenomu küçük ve benign olmasına rağmen normal hipofiz dokusunu sıkıştırır; sıkışan hücreler hormon üretemez ve hipopituitarizm gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0015",
+       "ses": "Aynı boyuttaki bir kitle deri altında yalnızca kozmetik bir sorun olurdu.",
+       "ekran": "Aynı boyuttaki bir kitle deri altında yalnızca kozmetik bir sorun olurdu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0016",
+       "ses": "Yani önce nerede, sonra ne kadar büyük diye sormalıyız.",
+       "ekran": "Yani önce nerede, sonra ne kadar büyük diye sormalıyız.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p004",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-33-c0017",
+       "ses": "Tümör bir lümeni daralttığında yerleşimin önemi daha da artar.",
+       "ekran": "Tümör bir lümeni daralttığında yerleşimin önemi daha da artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0018",
+       "ses": "Böbrek arterinde yarım santimetrelik bir leiomyom, yani düz kas kökenli benign bir tümör, damar lümenini daraltır.",
+       "ekran": "Böbrek arterinde yarım santimetrelik bir leiomyom, yani düz kas kökenli benign bir tümör, damar lümenini daraltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0019",
+       "ses": "Böbreğe giden kan akımı azalır, böbrek iskemisi gelişir ve iskemik böbreğin yanıtıyla hipertansiyon ortaya çıkar.",
+       "ekran": "Böbreğe giden kan akımı azalır, böbrek iskemisi gelişir ve iskemik böbreğin yanıtıyla hipertansiyon ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0020",
+       "ses": "Safra kanalında küçük bir karsinom ise kanalı tıkar; safra akışı durur, obstrüktif sarılık ve durgun safrada enfeksiyonla kolanjit gelişir.",
+       "ekran": "Safra kanalında küçük bir karsinom ise kanalı tıkar; safra akışı durur, obstrüktif sarılık ve durgun safrada enfeksiyonla kolanjit gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0021",
+       "ses": "İki örnekte de tabloyu belirleyen tümörün boyutu değil, tıkadığı yapının işlevidir.",
+       "ekran": "İki örnekte de tabloyu belirleyen tümörün boyutu değil, tıkadığı yapının işlevidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0022",
+       "ses": "Bu yüzden safra kanalı karsinomu küçükken bile sarılıkla erken belirti verebilir.",
+       "ekran": "Bu yüzden safra kanalı karsinomu küçükken bile sarılıkla erken belirti verebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b03",
+   "baslik": "Hormon üretimi, ülserasyon ve bağışıklık",
+   "paragraflar": [
+    {
+     "id": "k1-33-p005",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-33-c0023",
+       "ses": "Endokrin bez tümörleri iyi ya da kötü huylu olabilir ve klinikte hiperfonksiyon semptomları sık görülür, çünkü tümör hücreleri köken aldıkları bezin hormonunu kontrolsüz biçimde üretmeye devam eder.",
+       "ekran": "Endokrin bez tümörleri iyi ya da kötü huylu olabilir ve klinikte hiperfonksiyon semptomları sık görülür, çünkü tümör hücreleri köken aldıkları bezin hormonunu kontrolsüz biçimde üretmeye devam eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0024",
+       "ses": "Pankreasın Langerhans adacıklarındaki beta hücre tümörleri hiperinsülinizm yapar; kan şekeri düşer, ağır hipoglisemi ve koma riski doğar.",
+       "ekran": "Pankreasın Langerhans adacıklarındaki beta hücre tümörleri hiperinsülinizm yapar; kan şekeri düşer, ağır hipoglisemi ve koma riski doğar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0025",
+       "ses": "Adrenal korteks adenomu ya da karsinomu aldosteron fazlalığıyla böbrekte sodyum tutar, potasyum kaybettirir; sonuç hipertansiyon ve hipokalemidir.",
+       "ekran": "Adrenal korteks adenomu ya da karsinomu aldosteron fazlalığıyla böbrekte sodyum tutar, potasyum kaybettirir; sonuç hipertansiyon ve hipokalemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0026",
+       "ses": "Önemli bir not: hormon üretimi iyi diferansiye benign tümörlerde daha olasıdır, çünkü köken aldığı hücreye daha çok benzeyen tümör hormon yapma yeteneğini korur.",
+       "ekran": "Önemli bir not: hormon üretimi iyi diferansiye benign tümörlerde daha olasıdır, çünkü köken aldığı hücreye daha çok benzeyen tümör hormon yapma yeteneğini korur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p006",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-33-c0027",
+       "ses": "Deri ve gastrointestinal mukozalar gibi yüzeyel yerleşimli tümörler büyüdükçe yüzeyde ülserasyon oluşturabilir.",
+       "ekran": "Deri ve gastrointestinal mukozalar gibi yüzeyel yerleşimli tümörler büyüdükçe yüzeyde ülserasyon oluşturabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0028",
+       "ses": "Ülser tabanında açığa çıkan damarlar kanar ve anemi gelişir; bozulan yüzey bariyerinden bakteriler girer ve sekonder bakteriyel enfeksiyon eklenir.",
+       "ekran": "Ülser tabanında açığa çıkan damarlar kanar ve anemi gelişir; bozulan yüzey bariyerinden bakteriler girer ve sekonder bakteriyel enfeksiyon eklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0029",
+       "ses": "Klinikteki en önemli örnek mide ya da kolon karsinomudur: ülsere tümör yüzeyinden kronik kan kaybı olur, kanla birlikte demir de kaybedilir ve demir eksikliği anemisi gelişir.",
+       "ekran": "Klinikteki en önemli örnek mide ya da kolon karsinomudur: ülsere tümör yüzeyinden kronik kan kaybı olur, kanla birlikte demir de kaybedilir ve demir eksikliği anemisi gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0030",
+       "ses": "Belirgin kanama öyküsü olmayan bir erişkinde açıklanamayan demir eksikliği anemisi görürseniz mide ya da kolon karsinomuna bağlı gizli kan kaybını düşünmelisiniz.",
+       "ekran": "Belirgin kanama öyküsü olmayan bir erişkinde açıklanamayan demir eksikliği anemisi görürseniz mide ya da kolon karsinomuna bağlı gizli kan kaybını düşünmelisiniz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p007",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-33-c0031",
+       "ses": "Geniş tümör yükü bağışıklık sistemini de baskılayabilir.",
+       "ekran": "Geniş tümör yükü bağışıklık sistemini de baskılayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0032",
+       "ses": "Derste bunun 3 nedeni sayılır: sitokin dengesinde değişiklik, protein kalori yetersizliği ve kemoterapi ya da radyoterapiye bağlı hücre kaybı.",
+       "ekran": "Derste bunun 3 nedeni sayılır: sitokin dengesinde değişiklik, protein kalori yetersizliği ve kemoterapi ya da radyoterapiye bağlı hücre kaybı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0033",
+       "ses": "Tedaviler hızla bölünen kemik iliği hücrelerini de öldürerek savunma hücrelerini azaltır.",
+       "ekran": "Tedaviler hızla bölünen kemik iliği hücrelerini de öldürerek savunma hücrelerini azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0034",
+       "ses": "Sonuçta enfeksiyon riski artar ve sağlıklı bireyde hastalık yapmayan fırsatçı patojenlerle enfeksiyonlar görülür.",
+       "ekran": "Sonuçta enfeksiyon riski artar ve sağlıklı bireyde hastalık yapmayan fırsatçı patojenlerle enfeksiyonlar görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0035",
+       "ses": "Kanser hastasındaki bu yatkınlığın bir kısmı tümörün kendisinden, bir kısmı tedaviden kaynaklanır.",
+       "ekran": "Kanser hastasındaki bu yatkınlığın bir kısmı tümörün kendisinden, bir kısmı tedaviden kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b04",
+   "baslik": "Kanser kaşeksisi",
+   "paragraflar": [
+    {
+     "id": "k1-33-p008",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-33-c0036",
+       "ses": "Kanser hastalarının önemli bir kısmında ilerleyici bir erime tablosu gelişir; buna kanser kaşeksisi denir.",
+       "ekran": "Kanser hastalarının önemli bir kısmında ilerleyici bir erime tablosu gelişir; buna kanser kaşeksisi denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0037",
+       "ses": "Kaşeksinin 4 bileşeni vardır: özellikle yağ ve kas dokusundan olan kilo kaybı, derin halsizlik, iştahsızlık ve anemi.",
+       "ekran": "Kaşeksinin 4 bileşeni vardır: özellikle yağ ve kas dokusundan olan kilo kaybı, derin halsizlik, iştahsızlık ve anemi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0038",
+       "ses": "Kaşeksinin şiddeti genellikle kanserin büyüklüğü ve yaygınlığı ile koreledir; tümör yükü arttıkça erime belirginleşir.",
+       "ekran": "Kaşeksinin şiddeti genellikle kanserin büyüklüğü ve yaygınlığı ile koreledir; tümör yükü arttıkça erime belirginleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0039",
+       "ses": "İleri evre kanserlerde önemli bir morbidite ve mortalite nedenidir.",
+       "ekran": "İleri evre kanserlerde önemli bir morbidite ve mortalite nedenidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p009",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-33-c0040",
+       "ses": "Burası önemli, sınav spotu: kaşeksi sadece azalmış besin alımına bağlı değildir; tümör ve konak kaynaklı mediyatörlerle ilişkili aktif bir süreçtir.",
+       "ekran": "Burası önemli, sınav spotu: kaşeksi sadece azalmış besin alımına bağlı değildir; tümör ve konak kaynaklı mediyatörlerle ilişkili aktif bir süreçtir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0041",
+       "ses": "Basit açlık ile kaşeksiyi karıştırmayın.",
+       "ekran": "Basit açlık ile kaşeksiyi karıştırmayın.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0042",
+       "ses": "Normal açlıkta vücut enerji tasarrufuna geçer ve bazal metabolizma düşer.",
+       "ekran": "Normal açlıkta vücut enerji tasarrufuna geçer ve bazal metabolizma düşer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0043",
+       "ses": "Kaşekside ise bazal metabolizma artmış kalır veya yükselir; hasta az yemesine rağmen enerji harcaması yüksek seyreder.",
+       "ekran": "Kaşekside ise bazal metabolizma artmış kalır veya yükselir; hasta az yemesine rağmen enerji harcaması yüksek seyreder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0044",
+       "ses": "Bu yüzden yalnızca beslenme desteğiyle kaşeksi geri döndürülemez.",
+       "ekran": "Bu yüzden yalnızca beslenme desteğiyle kaşeksi geri döndürülemez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p010",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-33-c0045",
+       "ses": "Bu farkı yaratan temel etken tümör nekroz faktörü, yani TNF'dir; eski adıyla kaşektin.",
+       "ekran": "Bu farkı yaratan temel etken tümör nekroz faktörü, yani TNF'dir; eski adıyla kaşektin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0046",
+       "ses": "Tümör nekroz faktörü makrofajlar veya tümör hücreleri tarafından üretilir; yani hem konak hem tümör kaynaklıdır.",
+       "ekran": "Tümör nekroz faktörü makrofajlar veya tümör hücreleri tarafından üretilir; yani hem konak hem tümör kaynaklıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0047",
+       "ses": "İki önemli etkisi vardır.",
+       "ekran": "İki önemli etkisi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0048",
+       "ses": "1.'si iştahı baskılar.",
+       "ekran": "1.'si iştahı baskılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0049",
+       "ses": "2.'si lipoprotein lipazı inhibe eder; bu enzim dolaşımdaki lipoproteinlerden yağ asidinin yağ dokusuna alınmasını sağlar, inhibisyonu ise yağ depolarından yağ asidi mobilizasyonunu etkiler.",
+       "ekran": "2.'si lipoprotein lipazı inhibe eder; bu enzim dolaşımdaki lipoproteinlerden yağ asidinin yağ dokusuna alınmasını sağlar, inhibisyonu ise yağ depolarından yağ asidi mobilizasyonunu etkiler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0050",
+       "ses": "Tümör nekroz faktörüne interlökin 1 ve interlökin 6 gibi diğer sitokinler de eşlik eder.",
+       "ekran": "Tümör nekroz faktörüne interlökin 1 ve interlökin 6 gibi diğer sitokinler de eşlik eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0051",
+       "ses": "Bu sitokin ağının ortak sonucu katabolizma artışı ile yağ ve kas kitlesinde kayıptır.",
+       "ekran": "Bu sitokin ağının ortak sonucu katabolizma artışı ile yağ ve kas kitlesinde kayıptır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0052",
+       "ses": "Tedavide net bir ilke vardır: nedensel tümör ortadan kaldırılmadan kaşeksinin etkili tedavisi yoktur.",
+       "ekran": "Tedavide net bir ilke vardır: nedensel tümör ortadan kaldırılmadan kaşeksinin etkili tedavisi yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b05",
+   "baslik": "Paraneoplastik sendromlar: tanım ve sık görülenler",
+   "paragraflar": [
+    {
+     "id": "k1-33-p011",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-33-c0053",
+       "ses": "Paraneoplastik sendrom, tümörün lokal veya uzak yayılımı ile açıklanamayan ve tümör dokusuna özgü hormon salgısı ile de açıklanamayan semptom ve bulgu kompleksleridir.",
+       "ekran": "Paraneoplastik sendrom, tümörün lokal veya uzak yayılımı ile açıklanamayan ve tümör dokusuna özgü hormon salgısı ile de açıklanamayan semptom ve bulgu kompleksleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0054",
+       "ses": "Bu iki dışlama ölçütüne dikkat edin.",
+       "ekran": "Bu iki dışlama ölçütüne dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0055",
+       "ses": "Örneğin beta hücre tümörünün insülin salgılaması bu tanıma girmez, çünkü insülin o dokuya özgü hormondur.",
+       "ekran": "Örneğin beta hücre tümörünün insülin salgılaması bu tanıma girmez, çünkü insülin o dokuya özgü hormondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0056",
+       "ses": "Paraneoplastik sendromlar kanser hastalarının yaklaşık %10 ile 15'inde görülür.",
+       "ekran": "Paraneoplastik sendromlar kanser hastalarının yaklaşık %10 ile 15'inde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p012",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-33-c0057",
+       "ses": "Burası önemli, sınav spotu: paraneoplastik sendrom gizli bir tümörün ilk belirtisi olabilir.",
+       "ekran": "Burası önemli, sınav spotu: paraneoplastik sendrom gizli bir tümörün ilk belirtisi olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0058",
+       "ses": "Ayrıca ciddi morbidite veya ölüm nedeni olabilir ve metastazı taklit ederek tanıyı güçleştirebilir; yanlışlıkla ileri evre hastalık düşünülebilir.",
+       "ekran": "Ayrıca ciddi morbidite veya ölüm nedeni olabilir ve metastazı taklit ederek tanıyı güçleştirebilir; yanlışlıkla ileri evre hastalık düşünülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0059",
+       "ses": "Bu yüzden açıklanamayan tromboz ya da hiperkalsemi gibi sistemik bir bulgu, gizli bir kanser için erken tanı fırsatıdır.",
+       "ekran": "Bu yüzden açıklanamayan tromboz ya da hiperkalsemi gibi sistemik bir bulgu, gizli bir kanser için erken tanı fırsatıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0060",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: paraneoplastik sendromların en sık eşlik ettiği ilk 3 malignite grubu içinde hematolojik maligniteler yer alır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: paraneoplastik sendromların en sık eşlik ettiği ilk 3 malignite grubu içinde hematolojik maligniteler yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0061",
+       "ses": "Soruda verilen kolon, karaciğer ve prostat kanserleri bu ilk 3'te değildir; doğru cevap yalnızca hematolojik malignitelerdi.",
+       "ekran": "Soruda verilen kolon, karaciğer ve prostat kanserleri bu ilk 3'te değildir; doğru cevap yalnızca hematolojik malignitelerdi.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p013",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-33-c0062",
+       "ses": "Sık görülen paraneoplastik sendromlara bakalım.",
+       "ekran": "Sık görülen paraneoplastik sendromlara bakalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0063",
+       "ses": "Hiperkalsemi en sık paraneoplastik sendromdur ve tümör kökenli paratiroid hormonu ilişkili proteinle bağlantılıdır.",
+       "ekran": "Hiperkalsemi en sık paraneoplastik sendromdur ve tümör kökenli paratiroid hormonu ilişkili proteinle bağlantılıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0064",
+       "ses": "Cushing sendromu ektopik adrenokortikotropik hormon ya da ona benzer peptit üretimine bağlıdır; fazla adrenokortikotropik hormon adrenal korteksi uyarır ve kortizol fazlalığı gelişir; özellikle küçük hücreli akciğer karsinomlarında görülür.",
+       "ekran": "Cushing sendromu ektopik adrenokortikotropik hormon ya da ona benzer peptit üretimine bağlıdır; fazla adrenokortikotropik hormon adrenal korteksi uyarır ve kortizol fazlalığı gelişir; özellikle küçük hücreli akciğer karsinomlarında görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0065",
+       "ses": "Ektopik sözcüğü, hormonun normalde onu üretmeyen bir dokudan salgılandığını anlatır.",
+       "ekran": "Ektopik sözcüğü, hormonun normalde onu üretmeyen bir dokudan salgılandığını anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0066",
+       "ses": "Üçüncü önemli grup hiperkoagülabilitedir; venöz tromboz ve bakteriyel olmayan trombotik endokarditle kendini gösterir.",
+       "ekran": "Üçüncü önemli grup hiperkoagülabilitedir; venöz tromboz ve bakteriyel olmayan trombotik endokarditle kendini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0067",
+       "ses": "Bunların dışında hipertrofik osteoartropati, dermatomiyozit ve nörolojik paraneoplastik sendromlar da sayılır.",
+       "ekran": "Bunların dışında hipertrofik osteoartropati, dermatomiyozit ve nörolojik paraneoplastik sendromlar da sayılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p014",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-33-c0068",
+       "ses": "Burası önemli, çıkmış sorularda 2 kez soruldu: en sık görülen 3 paraneoplastik sendrom hiperkalsemi, Cushing sendromu ve bakteriyel olmayan trombotik endokardittir.",
+       "ekran": "Burası önemli, çıkmış sorularda 2 kez soruldu: en sık görülen 3 paraneoplastik sendrom hiperkalsemi, Cushing sendromu ve bakteriyel olmayan trombotik endokardittir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0069",
+       "ses": "Şıklarda miyastenia gravis, hipoglisemi, nefrotik sendrom ve polisitemi de vardı; bunlar paraneoplastik olabilir ama en sık 3 sendrom arasında değildir.",
+       "ekran": "Şıklarda miyastenia gravis, hipoglisemi, nefrotik sendrom ve polisitemi de vardı; bunlar paraneoplastik olabilir ama en sık 3 sendrom arasında değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0070",
+       "ses": "Doğru cevap bakteriyel olmayan, yani nonbakteriyel trombotik endokardit idi.",
+       "ekran": "Doğru cevap bakteriyel olmayan, yani nonbakteriyel trombotik endokardit idi.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b06",
+   "baslik": "Paraneoplastik hiperkalsemi",
+   "paragraflar": [
+    {
+     "id": "k1-33-p015",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-33-c0071",
+       "ses": "En sık paraneoplastik sendrom olan hiperkalseminin birden fazla mekanizması vardır.",
+       "ekran": "En sık paraneoplastik sendrom olan hiperkalseminin birden fazla mekanizması vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0072",
+       "ses": "Ana mekanizma paratiroid hormonu ilişkili protein üretimidir; bu protein paratiroid hormonuna benzer biçimde kemikten kalsiyum salınımını ve böbrekte kalsiyum geri emilimini artırır.",
+       "ekran": "Ana mekanizma paratiroid hormonu ilişkili protein üretimidir; bu protein paratiroid hormonuna benzer biçimde kemikten kalsiyum salınımını ve böbrekte kalsiyum geri emilimini artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0073",
+       "ses": "Bunun yanında tümör kaynaklı transforme edici büyüme faktörü alfa ve aktif D vitamini metabolitleri de katkıda bulunur.",
+       "ekran": "Bunun yanında tümör kaynaklı transforme edici büyüme faktörü alfa ve aktif D vitamini metabolitleri de katkıda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0074",
+       "ses": "Sık ilişkili tümörler akciğerin skuamöz hücreli karsinomu, böbrek hücreli karsinom ve meme karsinomudur; tabloda bunlara erişkin T hücreli lösemi ve lenfoma da eklenir.",
+       "ekran": "Sık ilişkili tümörler akciğerin skuamöz hücreli karsinomu, böbrek hücreli karsinom ve meme karsinomudur; tabloda bunlara erişkin T hücreli lösemi ve lenfoma da eklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0075",
+       "ses": "Klinikte bulantı, kusma, mental durum değişikliği ve hayatı tehdit edebilen aritmi görülür.",
+       "ekran": "Klinikte bulantı, kusma, mental durum değişikliği ve hayatı tehdit edebilen aritmi görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0076",
+       "ses": "Burası önemli, sınav spotu: akciğerdeki iki tümörü karıştırmayın.",
+       "ekran": "Burası önemli, sınav spotu: akciğerdeki iki tümörü karıştırmayın.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0077",
+       "ses": "Paraneoplastik hiperkalsemi skuamöz hücreli akciğer karsinomuyla, paraneoplastik Cushing sendromu ise küçük hücreli akciğer karsinomuyla eşleşir.",
+       "ekran": "Paraneoplastik hiperkalsemi skuamöz hücreli akciğer karsinomuyla, paraneoplastik Cushing sendromu ise küçük hücreli akciğer karsinomuyla eşleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p016",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-33-c0078",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda 3 kez soruldu: kemik dışındaki bir primer tümörün kemiğe metastaz yapıp kemiği yıkması sonucu gelişen hiperkalsemi paraneoplastik sendrom değildir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda 3 kez soruldu: kemik dışındaki bir primer tümörün kemiğe metastaz yapıp kemiği yıkması sonucu gelişen hiperkalsemi paraneoplastik sendrom değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0079",
+       "ses": "Bu, tümörün doğrudan yayılımına bağlı osteolitik bir hiperkalsemidir ve tanım gereği yayılımla açıklanan tablo paraneoplastik sayılmaz.",
+       "ekran": "Bu, tümörün doğrudan yayılımına bağlı osteolitik bir hiperkalsemidir ve tanım gereği yayılımla açıklanan tablo paraneoplastik sayılmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0080",
+       "ses": "Buna karşılık kemik dışı bir neoplazmın hümoral madde, yani paratiroid hormonu ilişkili protein üretmesiyle gelişen hiperkalsemi paraneoplastiktir.",
+       "ekran": "Buna karşılık kemik dışı bir neoplazmın hümoral madde, yani paratiroid hormonu ilişkili protein üretmesiyle gelişen hiperkalsemi paraneoplastiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0081",
+       "ses": "Aynı soruda şu 3 tablo da paraneoplastik olarak doğru kabul edildi: akciğer neoplazmından kortikotropin salınımıyla gelişen Cushing sendromu, over karsinomunda insülin veya insülin benzeri madde salınımıyla oluşan hipoglisemi ve tümör antijenlerine karşı oluşup nöronal hücre antijenleriyle çapraz reaksiyon veren antikorların yaptığı nöromiyopati.",
+       "ekran": "Aynı soruda şu 3 tablo da paraneoplastik olarak doğru kabul edildi: akciğer neoplazmından kortikotropin salınımıyla gelişen Cushing sendromu, over karsinomunda insülin veya insülin benzeri madde salınımıyla oluşan hipoglisemi ve tümör antijenlerine karşı oluşup nöronal hücre antijenleriyle çapraz reaksiyon veren antikorların yaptığı nöromiyopati.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b07",
+   "baslik": "Paraneoplastik endokrinopatiler",
+   "paragraflar": [
+    {
+     "id": "k1-33-p017",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-33-c0082",
+       "ses": "Ders kitabındaki paraneoplastik sendromlar tablosu sendromu, başlıca tümörleri ve nedensel mekanizmayı yan yana verir.",
+       "ekran": "Ders kitabındaki paraneoplastik sendromlar tablosu sendromu, başlıca tümörleri ve nedensel mekanizmayı yan yana verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0083",
+       "ses": "İlk grup endokrinopatilerdir.",
+       "ekran": "İlk grup endokrinopatilerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0084",
+       "ses": "Cushing sendromu akciğerin küçük hücreli karsinomu, pankreas karsinomu ve nöral tümörlerde görülür; etken adrenokortikotropik hormon ya da ona benzer bir maddedir.",
+       "ekran": "Cushing sendromu akciğerin küçük hücreli karsinomu, pankreas karsinomu ve nöral tümörlerde görülür; etken adrenokortikotropik hormon ya da ona benzer bir maddedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0085",
+       "ses": "Uygunsuz antidiüretik hormon salınımı sendromu yine akciğerin küçük hücreli karsinomunda ve intrakraniyal neoplazmlarda görülür; etken antidiüretik hormondur.",
+       "ekran": "Uygunsuz antidiüretik hormon salınımı sendromu yine akciğerin küçük hücreli karsinomunda ve intrakraniyal neoplazmlarda görülür; etken antidiüretik hormondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0086",
+       "ses": "Bu hormon böbrekte su geri emilimini artırır, vücutta su tutulur ve serum sodyumu dilüe olur.",
+       "ekran": "Bu hormon böbrekte su geri emilimini artırır, vücutta su tutulur ve serum sodyumu dilüe olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0087",
+       "ses": "Burası önemli, sınav spotu: küçük hücreli akciğer karsinomu hem Cushing sendromu hem uygunsuz antidiüretik hormon salınımı sendromu yapar; aynı tümör iki farklı ektopik hormon üretebilir.",
+       "ekran": "Burası önemli, sınav spotu: küçük hücreli akciğer karsinomu hem Cushing sendromu hem uygunsuz antidiüretik hormon salınımı sendromu yapar; aynı tümör iki farklı ektopik hormon üretebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p018",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-33-c0088",
+       "ses": "Hiperkalsemiyi az önce gördük.",
+       "ekran": "Hiperkalsemiyi az önce gördük.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0089",
+       "ses": "Hipoglisemi fibrosarkomda, diğer sarkomlarda ve over karsinomunda görülür; etken insülin veya insülin benzeri bir maddedir.",
+       "ekran": "Hipoglisemi fibrosarkomda, diğer sarkomlarda ve over karsinomunda görülür; etken insülin veya insülin benzeri bir maddedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0090",
+       "ses": "Dikkat edin, pankreas beta hücre tümöründeki hipoglisemi doku özgü olduğundan bu tabloya girmez.",
+       "ekran": "Dikkat edin, pankreas beta hücre tümöründeki hipoglisemi doku özgü olduğundan bu tabloya girmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0091",
+       "ses": "Polisitemi ise renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda görülür; etken eritropoetindir ve kemik iliğinde eritrosit yapımını artırarak eritrosit kitlesini yükseltir.",
+       "ekran": "Polisitemi ise renal hücreli karsinom, serebellar hemanjiyom ve hepatoselüler karsinomda görülür; etken eritropoetindir ve kemik iliğinde eritrosit yapımını artırarak eritrosit kitlesini yükseltir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0092",
+       "ses": "Burası önemli, sınav spotu: renal hücreli karsinom hem hiperkalsemi hem eritropoetin aracılı polisitemi nedenidir.",
+       "ekran": "Burası önemli, sınav spotu: renal hücreli karsinom hem hiperkalsemi hem eritropoetin aracılı polisitemi nedenidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b08",
+   "baslik": "Sinir, kas, deri ve kemik sendromları",
+   "paragraflar": [
+    {
+     "id": "k1-33-p019",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-33-c0093",
+       "ses": "Tablonun ikinci grubu sinir ve kas sendromlarıdır ve buradaki ortak mekanizma immünolojiktir; tümöre karşı gelişen bağışıklık yanıtı benzer antijen taşıyan sinir ya da kas yapılarını da hedef alır.",
+       "ekran": "Tablonun ikinci grubu sinir ve kas sendromlarıdır ve buradaki ortak mekanizma immünolojiktir; tümöre karşı gelişen bağışıklık yanıtı benzer antijen taşıyan sinir ya da kas yapılarını da hedef alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0094",
+       "ses": "Miyasteni bronkojenik karsinom ve timomada görülür; sinir kas kavşağında iletim bozulur, kas güçsüzlüğü ve kolay yorulma gelişir.",
+       "ekran": "Miyasteni bronkojenik karsinom ve timomada görülür; sinir kas kavşağında iletim bozulur, kas güçsüzlüğü ve kolay yorulma gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0095",
+       "ses": "Santral ve periferik sinir sistemi bozuklukları ise meme karsinomu ve teratomda görülür; beyin, omurilik ya da periferik sinirler etkilenebilir.",
+       "ekran": "Santral ve periferik sinir sistemi bozuklukları ise meme karsinomu ve teratomda görülür; beyin, omurilik ya da periferik sinirler etkilenebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0096",
+       "ses": "Bu nörolojik tablolar tümör saptanmadan önce ortaya çıkabilir ve metastazla karışabilir; görüntülemede metastaz yoksa paraneoplastik süreç düşünülür.",
+       "ekran": "Bu nörolojik tablolar tümör saptanmadan önce ortaya çıkabilir ve metastazla karışabilir; görüntülemede metastaz yoksa paraneoplastik süreç düşünülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p020",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-33-c0097",
+       "ses": "Dermatolojik bozukluklarda akantozis nigrikans deride kalınlaşmış, koyu renkli, kadifemsi plaklarla tanınır.",
+       "ekran": "Dermatolojik bozukluklarda akantozis nigrikans deride kalınlaşmış, koyu renkli, kadifemsi plaklarla tanınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0098",
+       "ses": "Gastrik karsinom, akciğer karsinomu ve uterin karsinomda görülür; mekanizma epidermal büyüme faktörü veya diğer büyüme faktörlerinin salgılanmasıdır.",
+       "ekran": "Gastrik karsinom, akciğer karsinomu ve uterin karsinomda görülür; mekanizma epidermal büyüme faktörü veya diğer büyüme faktörlerinin salgılanmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0099",
+       "ses": "Sınavda akantozis nigrikansı en çok mide karsinomuyla eşleştirin.",
+       "ekran": "Sınavda akantozis nigrikansı en çok mide karsinomuyla eşleştirin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0100",
+       "ses": "Dermatomiyozit deri ve kası tutan inflamatuvar bir tablodur; bronkojenik karsinom ve meme karsinomunda görülür, mekanizması immünolojiktir.",
+       "ekran": "Dermatomiyozit deri ve kası tutan inflamatuvar bir tablodur; bronkojenik karsinom ve meme karsinomunda görülür, mekanizması immünolojiktir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p021",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-33-c0101",
+       "ses": "Kemik, eklem ve yumuşak doku değişiklikleri grubunda hipertrofik osteoartropati ve parmaklarda çomaklaşma vardır.",
+       "ekran": "Kemik, eklem ve yumuşak doku değişiklikleri grubunda hipertrofik osteoartropati ve parmaklarda çomaklaşma vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0102",
+       "ses": "Başlıca neoplazi bronkojenik karsinomdur ve mekanizma bilinmemektedir.",
+       "ekran": "Başlıca neoplazi bronkojenik karsinomdur ve mekanizma bilinmemektedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0103",
+       "ses": "Mekanizma ayrımını kısaca toparlayalım: akantozis nigrikans büyüme faktörü, dermatomiyozit immünolojik, hipertrofik osteoartropati ise bilinmiyor.",
+       "ekran": "Mekanizma ayrımını kısaca toparlayalım: akantozis nigrikans büyüme faktörü, dermatomiyozit immünolojik, hipertrofik osteoartropati ise bilinmiyor.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0104",
+       "ses": "Burası önemli, bu eşleştirme çıkmış sorularda soruldu: hipertrofik osteoartropati ve çomak parmağı gastrointestinal stromal tümörle eşleştiren şık yanlıştı; doğru eşleşme bronkojenik karsinomdur.",
+       "ekran": "Burası önemli, bu eşleştirme çıkmış sorularda soruldu: hipertrofik osteoartropati ve çomak parmağı gastrointestinal stromal tümörle eşleştiren şık yanlıştı; doğru eşleşme bronkojenik karsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b09",
+   "baslik": "Vasküler, hematolojik ve böbrek sendromları",
+   "paragraflar": [
+    {
+     "id": "k1-33-p022",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-33-c0105",
+       "ses": "Beşinci grup vasküler ve hematolojik değişikliklerdir.",
+       "ekran": "Beşinci grup vasküler ve hematolojik değişikliklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0106",
+       "ses": "Venöz tromboz, yani Trousseau fenomeni, başta pankreas karsinomu olmak üzere akciğer karsinomu ve diğer kanserlerde görülür.",
+       "ekran": "Venöz tromboz, yani Trousseau fenomeni, başta pankreas karsinomu olmak üzere akciğer karsinomu ve diğer kanserlerde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0107",
+       "ses": "Etken, pıhtılaşmayı aktive eden müsinler gibi tümör ürünleridir; müsin üreten adenokarsinomlar dolaşıma geçen ürünleriyle pıhtılaşma kaskadını uyarır ve farklı venlerde tekrarlayan trombozlar gelişebilir.",
+       "ekran": "Etken, pıhtılaşmayı aktive eden müsinler gibi tümör ürünleridir; müsin üreten adenokarsinomlar dolaşıma geçen ürünleriyle pıhtılaşma kaskadını uyarır ve farklı venlerde tekrarlayan trombozlar gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0108",
+       "ses": "Açıklanamayan, tekrarlayan venöz trombozu olan hastada başta pankreas karsinomu olmak üzere gizli bir kanser aranmalıdır.",
+       "ekran": "Açıklanamayan, tekrarlayan venöz trombozu olan hastada başta pankreas karsinomu olmak üzere gizli bir kanser aranmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0109",
+       "ses": "Nonbakteriyel trombotik endokardit, diğer adıyla marantik endokardit, ileri evre kanserlerde görülür ve mekanizması hiperkoagülabilitedir.",
+       "ekran": "Nonbakteriyel trombotik endokardit, diğer adıyla marantik endokardit, ileri evre kanserlerde görülür ve mekanizması hiperkoagülabilitedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0110",
+       "ses": "Kalp kapakçıklarında enfeksiyon içermeyen, steril trombotik vejetasyonlar oluşur; bunlar koparak emboli yapabilir.",
+       "ekran": "Kalp kapakçıklarında enfeksiyon içermeyen, steril trombotik vejetasyonlar oluşur; bunlar koparak emboli yapabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0111",
+       "ses": "Çıkmış bir soruda bu tablonun müsin salgılayan adenokarsinomlarla eşleştirilmesi doğru kabul edildi.",
+       "ekran": "Çıkmış bir soruda bu tablonun müsin salgılayan adenokarsinomlarla eşleştirilmesi doğru kabul edildi.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p023",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-33-c0112",
+       "ses": "Kırmızı hücre aplazisi timomada görülür ve mekanizması immünolojiktir; bağışıklık yanıtı kemik iliğindeki eritroid öncül hücreleri hedef alır, eritrosit yapımı durur ve anemi gelişir.",
+       "ekran": "Kırmızı hücre aplazisi timomada görülür ve mekanizması immünolojiktir; bağışıklık yanıtı kemik iliğindeki eritroid öncül hücreleri hedef alır, eritrosit yapımı durur ve anemi gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0113",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: timoma ile ilişkili paraneoplastik sendrom kırmızı hücre aplazisidir, saf kırmızı küre aplazisi olarak da geçer.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: timoma ile ilişkili paraneoplastik sendrom kırmızı hücre aplazisidir, saf kırmızı küre aplazisi olarak da geçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0114",
+       "ses": "Şıklardaki hiperkalsemi, Cushing sendromu, nonbakteriyel trombotik endokardit ve polisitemi timomayla eşleşmez.",
+       "ekran": "Şıklardaki hiperkalsemi, Cushing sendromu, nonbakteriyel trombotik endokardit ve polisitemi timomayla eşleşmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0115",
+       "ses": "Timomayı iki tabloda hatırlayın: miyasteni ve kırmızı hücre aplazisi.",
+       "ekran": "Timomayı iki tabloda hatırlayın: miyasteni ve kırmızı hücre aplazisi.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p024",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-33-c0116",
+       "ses": "Tablonun son satırı diğerleri grubundaki nefrotik sendromdur.",
+       "ekran": "Tablonun son satırı diğerleri grubundaki nefrotik sendromdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0117",
+       "ses": "Çeşitli kanserlerde görülür; mekanizma tümör antijenleri ve immün komplekslerdir.",
+       "ekran": "Çeşitli kanserlerde görülür; mekanizma tümör antijenleri ve immün komplekslerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0118",
+       "ses": "Tümör antijenine karşı oluşan antikorlar antijenle kompleks yapar ve bu kompleksler glomerüllerde birikerek proteinüriye yol açar.",
+       "ekran": "Tümör antijenine karşı oluşan antikorlar antijenle kompleks yapar ve bu kompleksler glomerüllerde birikerek proteinüriye yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0119",
+       "ses": "Çok tablolu tümörleri 1 kez daha bağlayalım: küçük hücreli akciğer karsinomu Cushing ve uygunsuz antidiüretik hormon salınımı, renal hücreli karsinom hiperkalsemi ve polisitemi, timoma miyasteni ve kırmızı hücre aplazisi, bronkojenik karsinom ise miyasteni, dermatomiyozit ve hipertrofik osteoartropati yapabilir.",
+       "ekran": "Çok tablolu tümörleri 1 kez daha bağlayalım: küçük hücreli akciğer karsinomu Cushing ve uygunsuz antidiüretik hormon salınımı, renal hücreli karsinom hiperkalsemi ve polisitemi, timoma miyasteni ve kırmızı hücre aplazisi, bronkojenik karsinom ise miyasteni, dermatomiyozit ve hipertrofik osteoartropati yapabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b10",
+   "baslik": "Kanser derecelendirmesi",
+   "paragraflar": [
+    {
+     "id": "k1-33-p025",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-33-c0120",
+       "ses": "Derecelendirme, yani grading, tümör hücrelerinin diferansiyasyon derecesine ve bazı morfolojik kriterlere dayalı sınıflamadır.",
+       "ekran": "Derecelendirme, yani grading, tümör hücrelerinin diferansiyasyon derecesine ve bazı morfolojik kriterlere dayalı sınıflamadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0121",
+       "ses": "4 unsur değerlendirilir.",
+       "ekran": "4 unsur değerlendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0122",
+       "ses": "1.'si diferansiyasyon derecesi, yani tümör hücresinin köken aldığı normal hücreye ne kadar benzediğidir.",
+       "ekran": "1.'si diferansiyasyon derecesi, yani tümör hücresinin köken aldığı normal hücreye ne kadar benzediğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0123",
+       "ses": "2.'si mitoz sayısıdır ve çoğalma hızını yansıtır.",
+       "ekran": "2.'si mitoz sayısıdır ve çoğalma hızını yansıtır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0124",
+       "ses": "3.'sü tümör nekrozunun varlığıdır; kanlanmasını aşacak hızda büyüyen tümörde ölü alanlar oluşur.",
+       "ekran": "3.'sü tümör nekrozunun varlığıdır; kanlanmasını aşacak hızda büyüyen tümörde ölü alanlar oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0125",
+       "ses": "4.'sü mimari bozulmadır, örneğin bir adenokarsinomda bez formasyonunun kaybı.",
+       "ekran": "4.'sü mimari bozulmadır, örneğin bir adenokarsinomda bez formasyonunun kaybı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0126",
+       "ses": "Derecelendirmenin amacı biyolojik agresifliği kaba olarak tahmin etmektir; az diferansiye, mitozu bol, nekrotik ve mimarisi bozulmuş tümör daha agresif davranma eğilimindedir.",
+       "ekran": "Derecelendirmenin amacı biyolojik agresifliği kaba olarak tahmin etmektir; az diferansiye, mitozu bol, nekrotik ve mimarisi bozulmuş tümör daha agresif davranma eğilimindedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p026",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-33-c0127",
+       "ses": "Burası önemli, bu konu çıkmış sorularda defalarca soruldu: derecelendirme tamamen hücrenin ve dokunun mikroskopik görünümüne dayanır.",
+       "ekran": "Burası önemli, bu konu çıkmış sorularda defalarca soruldu: derecelendirme tamamen hücrenin ve dokunun mikroskopik görünümüne dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0128",
+       "ses": "Diferansiyasyon, atipi, pleomorfizm, yani hücre ve çekirdeklerin boyut ve şekil bakımından değişkenliği, ve mitoz sayısı derecelendirmede göz önüne alınır.",
+       "ekran": "Diferansiyasyon, atipi, pleomorfizm, yani hücre ve çekirdeklerin boyut ve şekil bakımından değişkenliği, ve mitoz sayısı derecelendirmede göz önüne alınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0129",
+       "ses": "İnvazyon ise derecelendirmede göz önüne alınmaz.",
+       "ekran": "İnvazyon ise derecelendirmede göz önüne alınmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0130",
+       "ses": "Aynı şekilde tümör büyüklüğü, invazyon derinliği, lenf nodu metastazı ve uzak organ metastazı da derecelendirmenin değil evrelemenin konusudur; derecelendirmede dikkate alınan seçenek mitoz sayısıydı.",
+       "ekran": "Aynı şekilde tümör büyüklüğü, invazyon derinliği, lenf nodu metastazı ve uzak organ metastazı da derecelendirmenin değil evrelemenin konusudur; derecelendirmede dikkate alınan seçenek mitoz sayısıydı.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p027",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-33-c0131",
+       "ses": "Derece skalası tümör tipine göre değişir.",
+       "ekran": "Derece skalası tümör tipine göre değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0132",
+       "ses": "Genellikle düşük derece iyi diferansiye, orta derece ara özellikli, yüksek derece ise az diferansiye ya da anaplastik tümörü anlatır; anaplazi diferansiyasyonun tam kaybıdır.",
+       "ekran": "Genellikle düşük derece iyi diferansiye, orta derece ara özellikli, yüksek derece ise az diferansiye ya da anaplastik tümörü anlatır; anaplazi diferansiyasyonun tam kaybıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0133",
+       "ses": "Meme, prostat ve beyin tümörleri için kendilerine özgül derecelendirme sistemleri geliştirilmiştir.",
+       "ekran": "Meme, prostat ve beyin tümörleri için kendilerine özgül derecelendirme sistemleri geliştirilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0134",
+       "ses": "Derecelendirmenin temel sınırlılığı öznel olmasıdır; gözlemciye bağımlı olabilir ve aynı preparata iki patolog farklı derece verebilir.",
+       "ekran": "Derecelendirmenin temel sınırlılığı öznel olmasıdır; gözlemciye bağımlı olabilir ve aynı preparata iki patolog farklı derece verebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0135",
+       "ses": "Bu öznellik, derecenin tek başına prognozu belirlemek için neden yeterli olmadığını da açıklar.",
+       "ekran": "Bu öznellik, derecenin tek başına prognozu belirlemek için neden yeterli olmadığını da açıklar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b11",
+   "baslik": "Kanser evrelemesi ve TNM sistemi",
+   "paragraflar": [
+    {
+     "id": "k1-33-p028",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-33-c0136",
+       "ses": "Derecelendirme hücrenin görünümünü ölçerken, evreleme, yani staging, tümörün vücuttaki yayılım derecesini tanımlar.",
+       "ekran": "Derecelendirme hücrenin görünümünü ölçerken, evreleme, yani staging, tümörün vücuttaki yayılım derecesini tanımlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0137",
+       "ses": "Evreleme genel olarak 3 bileşene dayanır: primer tümörün boyutu ve lokal yayılımı, bölgesel lenf düğümü tutulumu ve uzak metastazların varlığı.",
+       "ekran": "Evreleme genel olarak 3 bileşene dayanır: primer tümörün boyutu ve lokal yayılımı, bölgesel lenf düğümü tutulumu ve uzak metastazların varlığı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0138",
+       "ses": "Burası önemli, sınav spotu: evreleme prognozu belirlemede derecelendirmeden daha üstündür ve tedavi planlamasında temel parametredir; cerrahi, radyoterapi ya da sistemik tedavi seçimi evreye göre yapılır.",
+       "ekran": "Burası önemli, sınav spotu: evreleme prognozu belirlemede derecelendirmeden daha üstündür ve tedavi planlamasında temel parametredir; cerrahi, radyoterapi ya da sistemik tedavi seçimi evreye göre yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p029",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-33-c0139",
+       "ses": "Burası önemli, bu soru çıkmış sorularda en sık tekrarlanan sorulardan biridir: tümör evrelemesinde histolojik diferansiyasyon derecesinin yeri yoktur.",
+       "ekran": "Burası önemli, bu soru çıkmış sorularda en sık tekrarlanan sorulardan biridir: tümör evrelemesinde histolojik diferansiyasyon derecesinin yeri yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0140",
+       "ses": "Anaplazi derecesi, pleomorfizm, diferansiyasyon ve mitoz sayısı derecelendirmeye aittir.",
+       "ekran": "Anaplazi derecesi, pleomorfizm, diferansiyasyon ve mitoz sayısı derecelendirmeye aittir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0141",
+       "ses": "Evrelemede ise tümörün büyüklüğü, lokal invazyon derecesi ve tümör derinliği, bölgesel lenf nodu yayılımı ve uzak organ metastazı dikkate alınır.",
+       "ekran": "Evrelemede ise tümörün büyüklüğü, lokal invazyon derecesi ve tümör derinliği, bölgesel lenf nodu yayılımı ve uzak organ metastazı dikkate alınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0142",
+       "ses": "Bir soruda evrelemede dikkate alınan seçenek olarak tümörün büyüklüğü istendi.",
+       "ekran": "Bir soruda evrelemede dikkate alınan seçenek olarak tümörün büyüklüğü istendi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0143",
+       "ses": "Kısaca derece hücreyi, evre yayılımı ölçer.",
+       "ekran": "Kısaca derece hücreyi, evre yayılımı ölçer.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p030",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-33-c0144",
+       "ses": "Evrelemenin uluslararası dili Amerikan Ortak Kanser Komitesinin TNM sistemidir.",
+       "ekran": "Evrelemenin uluslararası dili Amerikan Ortak Kanser Komitesinin TNM sistemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0145",
+       "ses": "T primer tümörü, N bölgesel lenf düğümlerini, M uzak metastazı gösterir.",
+       "ekran": "T primer tümörü, N bölgesel lenf düğümlerini, M uzak metastazı gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0146",
+       "ses": "T kategorisinde derste T0, bazal membranı aşmamış karsinoma in situyu gösterir; tümör hücreleri epitel içinde sınırlıdır ve invazyon yoktur.",
+       "ekran": "T kategorisinde derste T0, bazal membranı aşmamış karsinoma in situyu gösterir; tümör hücreleri epitel içinde sınırlıdır ve invazyon yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0147",
+       "ses": "Güncel uygulamada in situ karsinomun ayrıca Tis diye kodlandığını da bilin, ama sınavda dersteki tanımı esas alın.",
+       "ekran": "Güncel uygulamada in situ karsinomun ayrıca Tis diye kodlandığını da bilin, ama sınavda dersteki tanımı esas alın.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0148",
+       "ses": "T1'den T4'e kadar olan kategoriler artan tümör boyutu ve lokal invazyonu gösterir.",
+       "ekran": "T1'den T4'e kadar olan kategoriler artan tümör boyutu ve lokal invazyonu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p031",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-33-c0149",
+       "ses": "N kategorisinde N0 lenf düğümü tutulumu olmadığını, N1'den N3'e kadar olan kategoriler ise artan lenf düğümü sayısı ve bölgesel yaygınlığı gösterir.",
+       "ekran": "N kategorisinde N0 lenf düğümü tutulumu olmadığını, N1'den N3'e kadar olan kategoriler ise artan lenf düğümü sayısı ve bölgesel yaygınlığı gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0150",
+       "ses": "M kategorisinde M0 uzak metastaz olmadığını, M1 uzak metastazın mevcut olduğunu anlatır; bazı tümörlerde M2 gibi kategorilerle metastaz sayısı da yansıtılır.",
+       "ekran": "M kategorisinde M0 uzak metastaz olmadığını, M1 uzak metastazın mevcut olduğunu anlatır; bazı tümörlerde M2 gibi kategorilerle metastaz sayısı da yansıtılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p032",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-33-c0151",
+       "ses": "TNM kombinasyonları Evre 1'den Evre 4'e kadar klinik evrelere dönüştürülür.",
+       "ekran": "TNM kombinasyonları Evre 1'den Evre 4'e kadar klinik evrelere dönüştürülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0152",
+       "ses": "Genel kalıpta Evre 1 küçük, lokalize tümördür.",
+       "ekran": "Genel kalıpta Evre 1 küçük, lokalize tümördür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0153",
+       "ses": "Evre 2 ve 3 daha büyük tümör ve bölgesel lenf düğümü tutulumu olan hastalıktır.",
+       "ekran": "Evre 2 ve 3 daha büyük tümör ve bölgesel lenf düğümü tutulumu olan hastalıktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0154",
+       "ses": "Evre 4 ise uzak metastaz, yani M1 varlığıdır; tümörün boyutu ya da lenf düğümü durumu ne olursa olsun M1 hastayı Evre 4 yapar.",
+       "ekran": "Evre 4 ise uzak metastaz, yani M1 varlığıdır; tümörün boyutu ya da lenf düğümü durumu ne olursa olsun M1 hastayı Evre 4 yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0155",
+       "ses": "Klinik açıdan en önemli çıkarım şudur: aynı histolojik tipe sahip iki tümör farklı evrelerde çok farklı prognoza sahip olabilir.",
+       "ekran": "Klinik açıdan en önemli çıkarım şudur: aynı histolojik tipe sahip iki tümör farklı evrelerde çok farklı prognoza sahip olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0156",
+       "ses": "Histolojik tip ne tür tümör sorusunu, evre ne kadar yayılmış sorusunu yanıtlar.",
+       "ekran": "Histolojik tip ne tür tümör sorusunu, evre ne kadar yayılmış sorusunu yanıtlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p033",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-33-c0157",
+       "ses": "Evreleme ve derecelendirme birbirinin alternatifi değil, tamamlayıcısıdır, ama ağırlıkları farklıdır.",
+       "ekran": "Evreleme ve derecelendirme birbirinin alternatifi değil, tamamlayıcısıdır, ama ağırlıkları farklıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0158",
+       "ses": "Evreleme, özellikle solid tümörlerde, prognoz ve tedavi kararı için en önemli parametredir.",
+       "ekran": "Evreleme, özellikle solid tümörlerde, prognoz ve tedavi kararı için en önemli parametredir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0159",
+       "ses": "Derecelendirme ise tümör agresifliği ve nüks eğilimi hakkında yardımcı bilgiler sağlar.",
+       "ekran": "Derecelendirme ise tümör agresifliği ve nüks eğilimi hakkında yardımcı bilgiler sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0160",
+       "ses": "Modern yaklaşımda evre, derece ve moleküler özellikler birlikte değerlendirilir ve bu üçlü daha doğru bir risk sınıflaması sağlar.",
+       "ekran": "Modern yaklaşımda evre, derece ve moleküler özellikler birlikte değerlendirilir ve bu üçlü daha doğru bir risk sınıflaması sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b12",
+   "baslik": "Laboratuvar tanısı ve biyopsi yöntemleri",
+   "paragraflar": [
+    {
+     "id": "k1-33-p034",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-33-c0161",
+       "ses": "Kanserin laboratuvar tanısında temel prensip şudur: klinik ve radyolojik bilgilerle birlikte değerlendirilen histopatolojik tanı altın standarttır.",
+       "ekran": "Kanserin laboratuvar tanısında temel prensip şudur: klinik ve radyolojik bilgilerle birlikte değerlendirilen histopatolojik tanı altın standarttır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0162",
+       "ses": "Görüntülemedeki kitle ya da yüksek bir serum belirteci tanıyı düşündürür; kesin tanı doku örneğinin histopatolojik incelemesiyle konur.",
+       "ekran": "Görüntülemedeki kitle ya da yüksek bir serum belirteci tanıyı düşündürür; kesin tanı doku örneğinin histopatolojik incelemesiyle konur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0163",
+       "ses": "Kullanılan yöntemler morfolojik inceleme, yani histoloji ve sitoloji, immünohistokimya, akış sitometrisi, moleküler tanı ve serum tümör belirteçleridir.",
+       "ekran": "Kullanılan yöntemler morfolojik inceleme, yani histoloji ve sitoloji, immünohistokimya, akış sitometrisi, moleküler tanı ve serum tümör belirteçleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0164",
+       "ses": "Moleküler tanıda polimeraz zincir reaksiyonu, floresan in situ hibridizasyon ve dizileme kullanılır.",
+       "ekran": "Moleküler tanıda polimeraz zincir reaksiyonu, floresan in situ hibridizasyon ve dizileme kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p035",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-33-c0165",
+       "ses": "Eksizyonel biyopsi kitlenin tam çıkarılmasıdır; yalnızca tanı konmaz, tümör ve çevre sınırlar da değerlendirilir ve cerrahi sınırda tümör olup olmadığı raporlanır.",
+       "ekran": "Eksizyonel biyopsi kitlenin tam çıkarılmasıdır; yalnızca tanı konmaz, tümör ve çevre sınırlar da değerlendirilir ve cerrahi sınırda tümör olup olmadığı raporlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0166",
+       "ses": "İnsizyonel biyopsi tümörün bir kısmının alınmasıdır; özellikle büyük ya da kritik lokalizasyonlu lezyonlarda tercih edilir.",
+       "ekran": "İnsizyonel biyopsi tümörün bir kısmının alınmasıdır; özellikle büyük ya da kritik lokalizasyonlu lezyonlarda tercih edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0167",
+       "ses": "Tüm kitleyi çıkarmak riskli ya da gereksiz yere sakatlayıcı olacaksa önce tanı için küçük bir parça alınır, tedavi tanıya göre planlanır.",
+       "ekran": "Tüm kitleyi çıkarmak riskli ya da gereksiz yere sakatlayıcı olacaksa önce tanı için küçük bir parça alınır, tedavi tanıya göre planlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0168",
+       "ses": "İnsizyonel biyopsi sınır bilgisi vermez.",
+       "ekran": "İnsizyonel biyopsi sınır bilgisi vermez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p036",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-33-c0169",
+       "ses": "Hızlı dondurulmuş kesit, yani frozen, ameliyat masasında karar gerektiğinde kullanılır.",
+       "ekran": "Hızlı dondurulmuş kesit, yani frozen, ameliyat masasında karar gerektiğinde kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0170",
+       "ses": "Doku dondurularak kısa sürede kesilir ve boyanır; cerrahi sırasında hızlı tanı konur ve cerrahi sınırlar değerlendirilir.",
+       "ekran": "Doku dondurularak kısa sürede kesilir ve boyanır; cerrahi sırasında hızlı tanı konur ve cerrahi sınırlar değerlendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0171",
+       "ses": "Sınırda tümör varsa cerrah aynı seansta rezeksiyonu genişletebilir.",
+       "ekran": "Sınırda tümör varsa cerrah aynı seansta rezeksiyonu genişletebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0172",
+       "ses": "Ancak dondurma işlemi doku ayrıntısını rutin kesitler kadar iyi korumaz; bu nedenle sonucun daha sonra parafin kesitlerle doğrulanması gerekebilir.",
+       "ekran": "Ancak dondurma işlemi doku ayrıntısını rutin kesitler kadar iyi korumaz; bu nedenle sonucun daha sonra parafin kesitlerle doğrulanması gerekebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0173",
+       "ses": "Burası önemli, sınav spotu: histopatolojik tanı altın standarttır ve dondurulmuş kesit cerrahi sırasında hızlı tanı ve sınır değerlendirmesi sağlar.",
+       "ekran": "Burası önemli, sınav spotu: histopatolojik tanı altın standarttır ve dondurulmuş kesit cerrahi sırasında hızlı tanı ve sınır değerlendirmesi sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b13",
+   "baslik": "İnce iğne aspirasyonu ve sitoloji",
+   "paragraflar": [
+    {
+     "id": "k1-33-p037",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-33-c0174",
+       "ses": "İnce iğne aspirasyon biyopsisinde ince bir iğne ile kitleye girilir, hücreler aspire edilir, lam üzerine yayma hazırlanır ve sitolojik olarak incelenir.",
+       "ekran": "İnce iğne aspirasyon biyopsisinde ince bir iğne ile kitleye girilir, hücreler aspire edilir, lam üzerine yayma hazırlanır ve sitolojik olarak incelenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0175",
+       "ses": "Avantajları minimal invaziv, hızlı ve ucuz olmasıdır.",
+       "ekran": "Avantajları minimal invaziv, hızlı ve ucuz olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0176",
+       "ses": "Meme, tiroid, lenf düğümleri ve tükürük bezleri gibi yüzeyel organlarda kullanılır; görüntüleme eşliğinde ise karaciğer, pankreas ve pelvik lenf düğümleri gibi derin organlara da ulaşılabilir.",
+       "ekran": "Meme, tiroid, lenf düğümleri ve tükürük bezleri gibi yüzeyel organlarda kullanılır; görüntüleme eşliğinde ise karaciğer, pankreas ve pelvik lenf düğümleri gibi derin organlara da ulaşılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0177",
+       "ses": "Burada doku kesiti değil hücre yayması incelendiğini unutmayın.",
+       "ekran": "Burada doku kesiti değil hücre yayması incelendiğini unutmayın.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p038",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-33-c0178",
+       "ses": "Sitolojik, yani Papanicolaou incelemesinin temel prensibi, neoplastik hücrelerin daha az yapışkan olması ve sıvılara ya da yüzeylere kolayca dökülmesidir.",
+       "ekran": "Sitolojik, yani Papanicolaou incelemesinin temel prensibi, neoplastik hücrelerin daha az yapışkan olması ve sıvılara ya da yüzeylere kolayca dökülmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0179",
+       "ses": "Örnek kaynakları servikal smear, yani Papanicolaou testi, bronşiyal lavaj ve balgam, idrar ile plevra, periton ve beyin omurilik sıvılarıdır.",
+       "ekran": "Örnek kaynakları servikal smear, yani Papanicolaou testi, bronşiyal lavaj ve balgam, idrar ile plevra, periton ve beyin omurilik sıvılarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0180",
+       "ses": "Değerlendirmede hücre anaplazisi, nükleer atipi ve kohezivite kaybına bakılır.",
+       "ekran": "Değerlendirmede hücre anaplazisi, nükleer atipi ve kohezivite kaybına bakılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0181",
+       "ses": "Servikal kanserde Papanicolaou testi ile erken teşhis sayesinde mortalitede dramatik bir azalma sağlanmıştır; dökülen hücrelerdeki atipi kanser invaziv hale gelmeden yakalanabilir.",
+       "ekran": "Servikal kanserde Papanicolaou testi ile erken teşhis sayesinde mortalitede dramatik bir azalma sağlanmıştır; dökülen hücrelerdeki atipi kanser invaziv hale gelmeden yakalanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b14",
+   "baslik": "İmmünohistokimya ve akış sitometrisi",
+   "paragraflar": [
+    {
+     "id": "k1-33-p039",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-33-c0182",
+       "ses": "İmmünohistokimya, parafin kesitlerde spesifik antijenlere karşı monoklonal antikorlarla yapılan boyamadır; antikor hedef antijene bağlandığında renkli bir ürünle görünür hale gelir.",
+       "ekran": "İmmünohistokimya, parafin kesitlerde spesifik antijenlere karşı monoklonal antikorlarla yapılan boyamadır; antikor hedef antijene bağlandığında renkli bir ürünle görünür hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0183",
+       "ses": "Birinci kullanım alanı tümör tipinin belirlenmesidir.",
+       "ekran": "Birinci kullanım alanı tümör tipinin belirlenmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0184",
+       "ses": "Sitokeratin epitel hücrelerinin ara filamanıdır ve pozitifliği karsinomu gösterir.",
+       "ekran": "Sitokeratin epitel hücrelerinin ara filamanıdır ve pozitifliği karsinomu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0185",
+       "ses": "CD45 lökosit ortak antijenidir ve pozitifliği lenfoid tümör lehinedir.",
+       "ekran": "CD45 lökosit ortak antijenidir ve pozitifliği lenfoid tümör lehinedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0186",
+       "ses": "Morfolojide birbirine benzeyen az diferansiye bir karsinom ile lenfoma bu iki boyayla ayrılır.",
+       "ekran": "Morfolojide birbirine benzeyen az diferansiye bir karsinom ile lenfoma bu iki boyayla ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p040",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-33-c0187",
+       "ses": "İkinci kullanım alanı primer odağın saptanmasıdır.",
+       "ekran": "İkinci kullanım alanı primer odağın saptanmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0188",
+       "ses": "Primeri bilinmeyen bir metastazda prostat spesifik antijen pozitifliği metastatik prostat karsinomunu gösterir.",
+       "ekran": "Primeri bilinmeyen bir metastazda prostat spesifik antijen pozitifliği metastatik prostat karsinomunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0189",
+       "ses": "Üçüncü kullanım alanı prognostik ve prediktif belirteçlerdir; prognostik belirteç hastalığın seyrini, prediktif belirteç belirli bir tedaviye yanıtı öngörür.",
+       "ekran": "Üçüncü kullanım alanı prognostik ve prediktif belirteçlerdir; prognostik belirteç hastalığın seyrini, prediktif belirteç belirli bir tedaviye yanıtı öngörür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0190",
+       "ses": "Meme kanserinde östrojen reseptörü, progesteron reseptörü ve HER2, diğer adıyla ERBB2 durumu immünohistokimya ile belirlenir.",
+       "ekran": "Meme kanserinde östrojen reseptörü, progesteron reseptörü ve HER2, diğer adıyla ERBB2 durumu immünohistokimya ile belirlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0191",
+       "ses": "Burası önemli, sınav spotu: sitokeratin pozitifliği karsinomu, prostat spesifik antijen pozitifliği metastatik prostat karsinomunu gösterir; meme kanserinde östrojen reseptörü, progesteron reseptörü ve HER2 tedaviyi yönlendiren belirteçlerdir.",
+       "ekran": "Burası önemli, sınav spotu: sitokeratin pozitifliği karsinomu, prostat spesifik antijen pozitifliği metastatik prostat karsinomunu gösterir; meme kanserinde östrojen reseptörü, progesteron reseptörü ve HER2 tedaviyi yönlendiren belirteçlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p041",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-33-c0192",
+       "ses": "Akış sitometrisinde hücre yüzeyi veya hücre içi antijenlere karşı floresan işaretli antikorlar kullanılır ve tek tek hücrelerin çok parametreli analizi yapılır; hücreler cihazdan tek sıra halinde geçerken lazerle uyarılır ve her hücrenin belirteçleri aynı anda ölçülür.",
+       "ekran": "Akış sitometrisinde hücre yüzeyi veya hücre içi antijenlere karşı floresan işaretli antikorlar kullanılır ve tek tek hücrelerin çok parametreli analizi yapılır; hücreler cihazdan tek sıra halinde geçerken lazerle uyarılır ve her hücrenin belirteçleri aynı anda ölçülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0193",
+       "ses": "En sık kullanımı lösemi ve lenfomaların sınıflandırılmasıdır.",
+       "ekran": "En sık kullanımı lösemi ve lenfomaların sınıflandırılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0194",
+       "ses": "CD19, CD3 ve CD34 gibi yüzey belirteçleri değerlendirilir; CD19 B lenfosit, CD3 T lenfosit belirtecidir, CD34 ise öncül hücrelerde bulunur.",
+       "ekran": "CD19, CD3 ve CD34 gibi yüzey belirteçleri değerlendirilir; CD19 B lenfosit, CD3 T lenfosit belirtecidir, CD34 ise öncül hücrelerde bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0195",
+       "ses": "Bazı durumlarda DNA ploidisi ve hücre döngüsü de değerlendirilir.",
+       "ekran": "Bazı durumlarda DNA ploidisi ve hücre döngüsü de değerlendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b15",
+   "baslik": "Serum tümör belirteçleri",
+   "paragraflar": [
+    {
+     "id": "k1-33-p042",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-33-c0196",
+       "ses": "Tümör belirteci, tümörle ilişkili maddelerin kanda ölçülmesidir.",
+       "ekran": "Tümör belirteci, tümörle ilişkili maddelerin kanda ölçülmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0197",
+       "ses": "Türleri hormonlar, enzimler, onkofetal antijenler ve glikoproteinlerdir; onkofetal antijenler normalde fetal dönemde üretilip tümörde yeniden ortaya çıkan antijenlerdir.",
+       "ekran": "Türleri hormonlar, enzimler, onkofetal antijenler ve glikoproteinlerdir; onkofetal antijenler normalde fetal dönemde üretilip tümörde yeniden ortaya çıkan antijenlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0198",
+       "ses": "Burası önemli, sınav spotu: serum tümör belirteçleri tarama için genellikle uygun değildir, çünkü duyarlılık ve özgüllükleri sınırlıdır.",
+       "ekran": "Burası önemli, sınav spotu: serum tümör belirteçleri tarama için genellikle uygun değildir, çünkü duyarlılık ve özgüllükleri sınırlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0199",
+       "ses": "Tedavi yanıtını izlemede ve nüksü saptamada ise değerlidirler.",
+       "ekran": "Tedavi yanıtını izlemede ve nüksü saptamada ise değerlidirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0200",
+       "ses": "Tarama testi ifadesi sınavda klasik bir çeldiricidir.",
+       "ekran": "Tarama testi ifadesi sınavda klasik bir çeldiricidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p043",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-33-c0201",
+       "ses": "Önemli belirteçlere geçelim.",
+       "ekran": "Önemli belirteçlere geçelim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0202",
+       "ses": "Prostat spesifik antijen prostat karsinomunda ve benign prostat hiperplazisinde artabilir; prostat dokusuna özgüdür ama kansere özgü değildir.",
+       "ekran": "Prostat spesifik antijen prostat karsinomunda ve benign prostat hiperplazisinde artabilir; prostat dokusuna özgüdür ama kansere özgü değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0203",
+       "ses": "Karsinoembriyonik antijen kolorektal, pankreatik, mide ve meme karsinomlarında yükselebilir; birden çok organda yükseldiği için tek başına kaynağı göstermez.",
+       "ekran": "Karsinoembriyonik antijen kolorektal, pankreatik, mide ve meme karsinomlarında yükselebilir; birden çok organda yükseldiği için tek başına kaynağı göstermez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0204",
+       "ses": "Alfa fetoprotein hepatoselüler karsinom ve yolk kesesi tümörlerinde yükselir.",
+       "ekran": "Alfa fetoprotein hepatoselüler karsinom ve yolk kesesi tümörlerinde yükselir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0205",
+       "ses": "Kanser antijeni 125 epitelyal over karsinomlarıyla, kanser antijeni 19-9 ise pankreas, safra yolları ve bazı gastrointestinal tümörlerle ilişkilidir.",
+       "ekran": "Kanser antijeni 125 epitelyal over karsinomlarıyla, kanser antijeni 19-9 ise pankreas, safra yolları ve bazı gastrointestinal tümörlerle ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0206",
+       "ses": "Burası önemli, bu eşleşmeler yüksek önemli sınav spotudur.",
+       "ekran": "Burası önemli, bu eşleşmeler yüksek önemli sınav spotudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p044",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-33-c0207",
+       "ses": "Belirteçlerin iki sınırlaması vardır.",
+       "ekran": "Belirteçlerin iki sınırlaması vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0208",
+       "ses": "Düşük özgüllük, belirtecin benign durumlarda da yükselebilmesidir.",
+       "ekran": "Düşük özgüllük, belirtecin benign durumlarda da yükselebilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0209",
+       "ses": "Düşük duyarlılık ise erken evre kanserleri kaçırabilmesidir.",
+       "ekran": "Düşük duyarlılık ise erken evre kanserleri kaçırabilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0210",
+       "ses": "Prostat spesifik antijen iki sorunu birden gösterir: benign prostat hiperplazisinde artabilir ve normal bir prostat spesifik antijen değerinde de prostat kanseri mevcut olabilir.",
+       "ekran": "Prostat spesifik antijen iki sorunu birden gösterir: benign prostat hiperplazisinde artabilir ve normal bir prostat spesifik antijen değerinde de prostat kanseri mevcut olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0211",
+       "ses": "Yani normal belirteç kanseri dışlamaz, yüksek belirteç de tek başına tanı koydurmaz.",
+       "ekran": "Yani normal belirteç kanseri dışlamaz, yüksek belirteç de tek başına tanı koydurmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p045",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-33-c0212",
+       "ses": "En uygun kullanım tedavi sonrası izlemdir.",
+       "ekran": "En uygun kullanım tedavi sonrası izlemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0213",
+       "ses": "Tümör çıkarıldığında belirtecin kaynağı ortadan kalkar ve rezeksiyon sonrası değer normalleşir; izlemde yeniden yükselmesi nüks göstergesidir.",
+       "ekran": "Tümör çıkarıldığında belirtecin kaynağı ortadan kalkar ve rezeksiyon sonrası değer normalleşir; izlemde yeniden yükselmesi nüks göstergesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0214",
+       "ses": "Burada hasta zaten tanılıdır ve topluma göre bir eşik yerine aynı hastanın önceki değerleri karşılaştırılır.",
+       "ekran": "Burada hasta zaten tanılıdır ve topluma göre bir eşik yerine aynı hastanın önceki değerleri karşılaştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0215",
+       "ses": "Kısacası belirteç için doğru soru kanser var mı değil, tedavi edilen kanser geri döndü mü sorusudur.",
+       "ekran": "Kısacası belirteç için doğru soru kanser var mı değil, tedavi edilen kanser geri döndü mü sorusudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b16",
+   "baslik": "Moleküler tanı: tanısal kullanım",
+   "paragraflar": [
+    {
+     "id": "k1-33-p046",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-33-c0216",
+       "ses": "Moleküler tanıda 3 teknoloji kullanılır.",
+       "ekran": "Moleküler tanıda 3 teknoloji kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0217",
+       "ses": "Polimeraz zincir reaksiyonu hedef DNA ya da RNA dizisini çoğaltarak çok küçük miktarları bile saptanabilir hale getirir.",
+       "ekran": "Polimeraz zincir reaksiyonu hedef DNA ya da RNA dizisini çoğaltarak çok küçük miktarları bile saptanabilir hale getirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0218",
+       "ses": "Floresan in situ hibridizasyonda floresan işaretli problar hücre içindeki hedef bölgeye bağlanır.",
+       "ekran": "Floresan in situ hibridizasyonda floresan işaretli problar hücre içindeki hedef bölgeye bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0219",
+       "ses": "Dizi analizi ise Sanger dizilemesi ve yeni nesil dizileme ile yapılır.",
+       "ekran": "Dizi analizi ise Sanger dizilemesi ve yeni nesil dizileme ile yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0220",
+       "ses": "Kullanım alanları 5'tir: tanı, prognoz, minimal kalıntı hastalığın tespiti, kalıtsal yatkınlığın belirlenmesi ve hedefe yönelik tedavi seçimi.",
+       "ekran": "Kullanım alanları 5'tir: tanı, prognoz, minimal kalıntı hastalığın tespiti, kalıtsal yatkınlığın belirlenmesi ve hedefe yönelik tedavi seçimi.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p047",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-33-c0221",
+       "ses": "Tanısal kullanımın ilki klonalite belirlemedir.",
+       "ekran": "Tanısal kullanımın ilki klonalite belirlemedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0222",
+       "ses": "Her B lenfosit immünoglobulin genlerini, her T lenfosit T hücresi reseptörü genlerini olgunlaşırken kendine özgü biçimde yeniden düzenler.",
+       "ekran": "Her B lenfosit immünoglobulin genlerini, her T lenfosit T hücresi reseptörü genlerini olgunlaşırken kendine özgü biçimde yeniden düzenler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0223",
+       "ses": "Bu yeniden düzenlenmeler polimeraz zincir reaksiyonu ile saptanır.",
+       "ekran": "Bu yeniden düzenlenmeler polimeraz zincir reaksiyonu ile saptanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0224",
+       "ses": "Tüm hücreler aynı düzenlenmeyi taşıyorsa proliferasyon monoklonaldir ve neoplastiktir; hücreler farklı düzenlenmeler taşıyorsa poliklonaldir ve reaktiftir.",
+       "ekran": "Tüm hücreler aynı düzenlenmeyi taşıyorsa proliferasyon monoklonaldir ve neoplastiktir; hücreler farklı düzenlenmeler taşıyorsa poliklonaldir ve reaktiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0225",
+       "ses": "Lenfoma ile reaktif lenfadenopati ayrımının temel moleküler yaklaşımı budur.",
+       "ekran": "Lenfoma ile reaktif lenfadenopati ayrımının temel moleküler yaklaşımı budur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p048",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-33-c0226",
+       "ses": "Bazı tümörler kendine özgü bir genetik lezyon taşır.",
+       "ekran": "Bazı tümörler kendine özgü bir genetik lezyon taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0227",
+       "ses": "Ewing sarkomunda 11 ve 22 numaralı kromozomlar arasındaki translokasyon sonucu EWS-FLI1 füzyon geni oluşur.",
+       "ekran": "Ewing sarkomunda 11 ve 22 numaralı kromozomlar arasındaki translokasyon sonucu EWS-FLI1 füzyon geni oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0228",
+       "ses": "Kronik miyeloid lösemide BCR-ABL füzyon transkriptleri polimeraz zincir reaksiyonu ile saptanır.",
+       "ekran": "Kronik miyeloid lösemide BCR-ABL füzyon transkriptleri polimeraz zincir reaksiyonu ile saptanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0229",
+       "ses": "Nokta mutasyonlara örnek olarak polisitemia verada JAK2 mutasyonları gösterilir.",
+       "ekran": "Nokta mutasyonlara örnek olarak polisitemia verada JAK2 mutasyonları gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0230",
+       "ses": "Burası önemli, sınav spotu: Ewing sarkomu t(11;22) translokasyonu, polisitemia vera JAK2, kronik miyeloid lösemi ise BCR-ABL ile eşleşir.",
+       "ekran": "Burası önemli, sınav spotu: Ewing sarkomu t(11;22) translokasyonu, polisitemia vera JAK2, kronik miyeloid lösemi ise BCR-ABL ile eşleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b17",
+   "baslik": "Moleküler tanı: prognoz ve kalıntı hastalık",
+   "paragraflar": [
+    {
+     "id": "k1-33-p049",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-33-c0231",
+       "ses": "Amplifikasyon, bir genin kopya sayısının anormal artışıdır.",
+       "ekran": "Amplifikasyon, bir genin kopya sayısının anormal artışıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0232",
+       "ses": "HER2, yani ERBB2 amplifikasyonu meme kanserinde kötü prognoz göstergesidir ve aynı zamanda hedefli tedavi endikasyonudur.",
+       "ekran": "HER2, yani ERBB2 amplifikasyonu meme kanserinde kötü prognoz göstergesidir ve aynı zamanda hedefli tedavi endikasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0233",
+       "ses": "MYCN amplifikasyonu ise nöroblastomda kötü prognoz göstergesidir.",
+       "ekran": "MYCN amplifikasyonu ise nöroblastomda kötü prognoz göstergesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0234",
+       "ses": "Ders kitabındaki şekil insan nöroblastomunda bu amplifikasyonun görünümünü anlatır.",
+       "ekran": "Ders kitabındaki şekil insan nöroblastomunda bu amplifikasyonun görünümünü anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0235",
+       "ses": "MYCN geni normalde 2p kromozomunda bulunur.",
+       "ekran": "MYCN geni normalde 2p kromozomunda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0236",
+       "ses": "Amplifiye olduğunda ya kromozom dışında küçük eşli parçacıklar halinde, yani çift dakikalar olarak, ya da bir kromozoma entegre olmuş homojen boyama bölgesi olarak görülür; şekilde örnek olarak 5q kromozomunda böyle bir bölge çizilmiştir.",
+       "ekran": "Amplifiye olduğunda ya kromozom dışında küçük eşli parçacıklar halinde, yani çift dakikalar olarak, ya da bir kromozoma entegre olmuş homojen boyama bölgesi olarak görülür; şekilde örnek olarak 5q kromozomunda böyle bir bölge çizilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p050",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-33-c0237",
+       "ses": "Nokta mutasyonlar da prognostik bilgi taşır.",
+       "ekran": "Nokta mutasyonlar da prognostik bilgi taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0238",
+       "ses": "TP53 mutasyonları birçok kanserde kötü prognostik belirteçtir; bu tümör baskılayıcı gen kaybolunca tümör genetik hasar biriktirir.",
+       "ekran": "TP53 mutasyonları birçok kanserde kötü prognostik belirteçtir; bu tümör baskılayıcı gen kaybolunca tümör genetik hasar biriktirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0239",
+       "ses": "BRAF V600E mutasyonu melanom, tiroid ve kolon kanserlerinin bir alt grubunda görülür ve büyüme sinyalinin sürekli açık kalmasına yol açar.",
+       "ekran": "BRAF V600E mutasyonu melanom, tiroid ve kolon kanserlerinin bir alt grubunda görülür ve büyüme sinyalinin sürekli açık kalmasına yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p051",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-33-c0240",
+       "ses": "Minimal kalıntı hastalığın tespitinde amaç, tedavi sonrası çok düşük düzeyde kalan tümör hücrelerini saptamaktır.",
+       "ekran": "Minimal kalıntı hastalığın tespitinde amaç, tedavi sonrası çok düşük düzeyde kalan tümör hücrelerini saptamaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0241",
+       "ses": "Kronik miyeloid lösemide BCR-ABL transkriptleri polimeraz zincir reaksiyonu ile ölçülür; akut lösemilerde spesifik füzyon genleri veya mutasyonlar takip edilir.",
+       "ekran": "Kronik miyeloid lösemide BCR-ABL transkriptleri polimeraz zincir reaksiyonu ile ölçülür; akut lösemilerde spesifik füzyon genleri veya mutasyonlar takip edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0242",
+       "ses": "Sıvı biyopsi ise dolaşan tümör DNA'sı ve tümör hücrelerinin incelenmesidir ve nüksün erken saptanmasında kullanılabilir.",
+       "ekran": "Sıvı biyopsi ise dolaşan tümör DNA'sı ve tümör hücrelerinin incelenmesidir ve nüksün erken saptanmasında kullanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0243",
+       "ses": "Tanıda kullanılan aynı genetik işaret izlemde de kullanılır.",
+       "ekran": "Tanıda kullanılan aynı genetik işaret izlemde de kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b18",
+   "baslik": "Kalıtsal yatkınlık ve hedefe yönelik tedavi",
+   "paragraflar": [
+    {
+     "id": "k1-33-p052",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-33-c0244",
+       "ses": "Kalıtsal yatkınlıkta mutasyon germ hattındadır; vücudun tüm hücrelerinde bulunur ve kuşaktan kuşağa aktarılabilir.",
+       "ekran": "Kalıtsal yatkınlıkta mutasyon germ hattındadır; vücudun tüm hücrelerinde bulunur ve kuşaktan kuşağa aktarılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0245",
+       "ses": "BRCA1 ve BRCA2 mutasyonları meme ve ovaryum kanseri riskini artırır.",
+       "ekran": "BRCA1 ve BRCA2 mutasyonları meme ve ovaryum kanseri riskini artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0246",
+       "ses": "APC mutasyonu ailesel adenomatöz polipozis koli ile, germ hattı TP53 mutasyonu ise Li-Fraumeni sendromu ile ilişkilidir.",
+       "ekran": "APC mutasyonu ailesel adenomatöz polipozis koli ile, germ hattı TP53 mutasyonu ise Li-Fraumeni sendromu ile ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0247",
+       "ses": "Germ hattı mutasyon analizi bireye özel tarama stratejisi, profilaktik cerrahi kararı ve aile bireylerine genetik danışmanlık için kullanılır.",
+       "ekran": "Germ hattı mutasyon analizi bireye özel tarama stratejisi, profilaktik cerrahi kararı ve aile bireylerine genetik danışmanlık için kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0248",
+       "ses": "Dikkat edin, TP53 somatik olarak tümörde kötü prognoz belirteci, germ hattında ise Li-Fraumeni sendromunun nedenidir.",
+       "ekran": "Dikkat edin, TP53 somatik olarak tümörde kötü prognoz belirteci, germ hattında ise Li-Fraumeni sendromunun nedenidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p053",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-33-c0249",
+       "ses": "Moleküler tanının en doğrudan sonucu hedefe yönelik tedavidir.",
+       "ekran": "Moleküler tanının en doğrudan sonucu hedefe yönelik tedavidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0250",
+       "ses": "BCR-ABL tirozin kinaz inhibitörleri kronik miyeloid lösemide, HER2 hedefli antikorlar HER2 pozitif meme kanserinde, BRAF V600E inhibitörleri ise V600E mutant melanom ve diğer bazı tümörlerde kullanılır.",
+       "ekran": "BCR-ABL tirozin kinaz inhibitörleri kronik miyeloid lösemide, HER2 hedefli antikorlar HER2 pozitif meme kanserinde, BRAF V600E inhibitörleri ise V600E mutant melanom ve diğer bazı tümörlerde kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0251",
+       "ses": "Kritik ilke şudur: aynı genetik lezyon farklı organ tümörlerinde görülebilir ve ortak bir tedavi hedefi oluşturur; yani tedavi yalnızca organa göre değil, moleküler lezyona göre de seçilebilir.",
+       "ekran": "Kritik ilke şudur: aynı genetik lezyon farklı organ tümörlerinde görülebilir ve ortak bir tedavi hedefi oluşturur; yani tedavi yalnızca organa göre değil, moleküler lezyona göre de seçilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b19",
+   "baslik": "Omik yaklaşım ve immünoterapi",
+   "paragraflar": [
+    {
+     "id": "k1-33-p054",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-33-c0252",
+       "ses": "Tümörlerin moleküler profillendirilmesinde omik yaklaşım katman katman ilerler: genom için DNA dizilemesi, transkriptom için RNA ekspresyon profili, epigenom için metilasyon ve histon modifikasyonları, ardından proteom ve metabolom.",
+       "ekran": "Tümörlerin moleküler profillendirilmesinde omik yaklaşım katman katman ilerler: genom için DNA dizilemesi, transkriptom için RNA ekspresyon profili, epigenom için metilasyon ve histon modifikasyonları, ardından proteom ve metabolom.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0253",
+       "ses": "Yeni nesil dizileme ile yüzlerce kanser geni paralel olarak dizilenir ve düşük orandaki alt klon mutasyonları saptanabilir.",
+       "ekran": "Yeni nesil dizileme ile yüzlerce kanser geni paralel olarak dizilenir ve düşük orandaki alt klon mutasyonları saptanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0254",
+       "ses": "Bu yaklaşım özellikle akciğer ve meme karsinomlarında kişiselleştirilmiş tedavi seçimi için kullanılır.",
+       "ekran": "Bu yaklaşım özellikle akciğer ve meme karsinomlarında kişiselleştirilmiş tedavi seçimi için kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p055",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-33-c0255",
+       "ses": "Ders kitabındaki moleküler yönlendirilmiş tedavi şeması akciğer, meme, prostat, beyin ve kolon tümörlerinin genetik analizle iki yola ayrıldığını gösterir.",
+       "ekran": "Ders kitabındaki moleküler yönlendirilmiş tedavi şeması akciğer, meme, prostat, beyin ve kolon tümörlerinin genetik analizle iki yola ayrıldığını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0256",
+       "ses": "Birinci yolda tek tek genlerde mutasyonlar vardır; EGFR, yani epidermal büyüme faktörü reseptörü, PI3K, yani fosfatidilinositol 3 kinaz, HER2, BRAF ve RAS gibi mutant onkoproteinler belirli ilaçlarla hedeflenir.",
+       "ekran": "Birinci yolda tek tek genlerde mutasyonlar vardır; EGFR, yani epidermal büyüme faktörü reseptörü, PI3K, yani fosfatidilinositol 3 kinaz, HER2, BRAF ve RAS gibi mutant onkoproteinler belirli ilaçlarla hedeflenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0257",
+       "ses": "İkinci yolda hipermutasyonlu fenotip vardır; burada PD-1, PD-L1 ve CTLA-4 gibi molekülleri hedef alan immün kontrol noktası inhibitörleri kullanılır.",
+       "ekran": "İkinci yolda hipermutasyonlu fenotip vardır; burada PD-1, PD-L1 ve CTLA-4 gibi molekülleri hedef alan immün kontrol noktası inhibitörleri kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p056",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-33-c0258",
+       "ses": "Yüksek mutasyon yüklü tümörler iki kusurla ortaya çıkar: uyumsuzluk onarımı kusuru, yani mikrosatellit instabilitesi yüksek tümörler, ve DNA polimerazın kendi hatasını düzeltme, yani proofreading kusurları.",
+       "ekran": "Yüksek mutasyon yüklü tümörler iki kusurla ortaya çıkar: uyumsuzluk onarımı kusuru, yani mikrosatellit instabilitesi yüksek tümörler, ve DNA polimerazın kendi hatasını düzeltme, yani proofreading kusurları.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0259",
+       "ses": "Bu tümörlerde çok sayıda neoantijen bulunur ve bağışıklık sistemi bunları yabancı olarak tanıyabilir.",
+       "ekran": "Bu tümörlerde çok sayıda neoantijen bulunur ve bağışıklık sistemi bunları yabancı olarak tanıyabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0260",
+       "ses": "Burası önemli, sınav spotu: bu tümörler immün kontrol noktası inhibitörlerine daha iyi yanıt verir ve bu tedaviler doku tipinden bağımsız onay alan ilk tedavi örnekleridir.",
+       "ekran": "Burası önemli, sınav spotu: bu tümörler immün kontrol noktası inhibitörlerine daha iyi yanıt verir ve bu tedaviler doku tipinden bağımsız onay alan ilk tedavi örnekleridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-33-b20",
+   "baslik": "Entegre tanı, dijital patoloji ve özet",
+   "paragraflar": [
+    {
+     "id": "k1-33-p057",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-33-c0261",
+       "ses": "Histopatoloji anaplazi, invazyon ve tümör heterojenliği gibi özellikleri ortaya koyar; tümör ile stroma ve tümör ile bağışıklık sistemi arasındaki etkileşimler hakkında bilgi verir.",
+       "ekran": "Histopatoloji anaplazi, invazyon ve tümör heterojenliği gibi özellikleri ortaya koyar; tümör ile stroma ve tümör ile bağışıklık sistemi arasındaki etkileşimler hakkında bilgi verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0262",
+       "ses": "Moleküler testler ise sürücü mutasyonları, kopya sayısı değişikliklerini, translokasyonları, terapötik hedefleri ve direnç mekanizmalarını gösterir.",
+       "ekran": "Moleküler testler ise sürücü mutasyonları, kopya sayısı değişikliklerini, translokasyonları, terapötik hedefleri ve direnç mekanizmalarını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0263",
+       "ses": "En doğru tanı ve prognoz, morfolojik ve moleküler verilerin entegre edilmesiyle sağlanır.",
+       "ekran": "En doğru tanı ve prognoz, morfolojik ve moleküler verilerin entegre edilmesiyle sağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p058",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-33-c0264",
+       "ses": "Gelecekte dijital slayt tarayıcıları, bilgisayar destekli görüntü analizi ile makine öğrenimi ve yapay zekâ algoritmaları öne çıkıyor.",
+       "ekran": "Gelecekte dijital slayt tarayıcıları, bilgisayar destekli görüntü analizi ile makine öğrenimi ve yapay zekâ algoritmaları öne çıkıyor.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0265",
+       "ses": "Bunların olası katkıları tümör derecelendirmesinde nesnellik sağlamak, tümör ile bağışıklık hücreleri arasındaki etkileşimleri sayısal olarak ölçmek ve hassas onkoloji için çoklu veri katmanlarını entegre etmektir.",
+       "ekran": "Bunların olası katkıları tümör derecelendirmesinde nesnellik sağlamak, tümör ile bağışıklık hücreleri arasındaki etkileşimleri sayısal olarak ölçmek ve hassas onkoloji için çoklu veri katmanlarını entegre etmektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0266",
+       "ses": "Hatırlarsanız derecelendirmenin en büyük sorunu öznel olmasıydı; dijital patoloji bu soruna teknolojik bir yanıttır.",
+       "ekran": "Hatırlarsanız derecelendirmenin en büyük sorunu öznel olmasıydı; dijital patoloji bu soruna teknolojik bir yanıttır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-33-p059",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-33-c0267",
+       "ses": "Özetle, tümörler lokal yapı hasarı, hormon üretimi, kaşeksi ve paraneoplastik sendromlarla konağı etkiler.",
+       "ekran": "Özetle, tümörler lokal yapı hasarı, hormon üretimi, kaşeksi ve paraneoplastik sendromlarla konağı etkiler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0268",
+       "ses": "Derece diferansiyasyonu ve büyüme hızını yansıtır; evre ise yayılım derecesini ve prognozu belirler.",
+       "ekran": "Derece diferansiyasyonu ve büyüme hızını yansıtır; evre ise yayılım derecesini ve prognozu belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0269",
+       "ses": "Laboratuvar tanı morfoloji, immünohistokimya ve moleküler testlerin birlikteliğidir; serum tümör belirteçleri tedavi takibinde önemlidir.",
+       "ekran": "Laboratuvar tanı morfoloji, immünohistokimya ve moleküler testlerin birlikteliğidir; serum tümör belirteçleri tedavi takibinde önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-33-c0270",
+       "ses": "Gelecek, morfolojik, moleküler ve dijital verilerin entegre edildiği kişiselleştirilmiş onkolojik yaklaşımlardadır.",
+       "ekran": "Gelecek, morfolojik, moleküler ve dijital verilerin entegre edildiği kişiselleştirilmiş onkolojik yaklaşımlardadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

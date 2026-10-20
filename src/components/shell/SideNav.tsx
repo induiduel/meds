@@ -7,12 +7,16 @@ import { BrandWord } from './BrandWord';
 import { useSideCollapse } from './shellHooks';
 import { useAppearance } from '../../utils/appearance';
 import { SideNavV12 } from '../v12/ShellV12';
+import { SideNavV13 } from '../v13/ShellV13';
 
 export type SideNavProps = { active: AppRoute; onGo: (r: AppRoute) => void; isAdmin: boolean; user: AppUser | null };
 
 /** v12 "Net" tasarımında kendi rayı (components/v12/ShellV12); v10/v11 aşağıdaki klasik menü. */
-export const SideNav: React.FC<SideNavProps> = (props) =>
-  useAppearance().design === 'v12' ? <SideNavV12 {...props} /> : <SideNavClassic {...props} />;
+export const SideNav: React.FC<SideNavProps> = (props) => {
+  const a = useAppearance();
+  if (a.design !== 'v12') return <SideNavClassic {...props} />;
+  return a.v13 ? <SideNavV13 {...props} /> : <SideNavV12 {...props} />;
+};
 
 /**
  * v8 kenar menüsü (≥768px). Tablette 72px simge rayı (kısa etiketli), masaüstünde 236px gruplu menü;

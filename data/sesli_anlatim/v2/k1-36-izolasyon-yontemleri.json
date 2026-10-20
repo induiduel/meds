@@ -1,0 +1,2580 @@
+{
+ "surum": 2,
+ "ders_id": "k1-36",
+ "anahtar": "k1-36-izolasyon-yontemleri",
+ "baslik": "İzolasyon Yöntemleri",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-36-b01",
+   "baslik": "Enfeksiyon zinciri ve izolasyonun hedefi",
+   "paragraflar": [
+    {
+     "id": "k1-36-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-36-c0001",
+       "ses": "Bir enfeksiyonun bir kişiden diğerine geçebilmesi için birbirine bağlı 5 halkanın kesintisiz işlemesi gerekir.",
+       "ekran": "Bir enfeksiyonun bir kişiden diğerine geçebilmesi için birbirine bağlı 5 halkanın kesintisiz işlemesi gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0002",
+       "ses": "Bu diziye enfeksiyon zinciri diyoruz.",
+       "ekran": "Bu diziye enfeksiyon zinciri diyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0003",
+       "ses": "Sırası şöyledir: kaynak, çıkış kapısı, taşınma, giriş kapısı ve duyarlı kişi.",
+       "ekran": "Sırası şöyledir: kaynak, çıkış kapısı, taşınma, giriş kapısı ve duyarlı kişi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0004",
+       "ses": "Kaynak, mikroorganizmanın barındığı canlı ya da cansız ortamdır.",
+       "ekran": "Kaynak, mikroorganizmanın barındığı canlı ya da cansız ortamdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0005",
+       "ses": "Çıkış kapısı etkenin kaynaktan dışarı çıktığı yoldur; solunum yolu salgıları, kan ya da vücut sıvıları gibi.",
+       "ekran": "Çıkış kapısı etkenin kaynaktan dışarı çıktığı yoldur; solunum yolu salgıları, kan ya da vücut sıvıları gibi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0006",
+       "ses": "Taşınma, etkenin bir yerden diğerine aktarılma biçimidir.",
+       "ekran": "Taşınma, etkenin bir yerden diğerine aktarılma biçimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0007",
+       "ses": "Giriş kapısı etkenin yeni konağa girdiği yoldur; mukozalar ve hasarlı deri buna örnektir.",
+       "ekran": "Giriş kapısı etkenin yeni konağa girdiği yoldur; mukozalar ve hasarlı deri buna örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0008",
+       "ses": "Duyarlı kişi ise etkene karşı savunması yetersiz kalan konaktır.",
+       "ekran": "Duyarlı kişi ise etkene karşı savunması yetersiz kalan konaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0009",
+       "ses": "Burası önemli, sınav spotu olarak aklınızda kalsın: zincirin halkalarından biri kırıldığında bulaş durur ve izolasyon önlemleri bu zincirin taşınma halkasını hedef alır.",
+       "ekran": "Burası önemli, sınav spotu olarak aklınızda kalsın: zincirin halkalarından biri kırıldığında bulaş durur ve izolasyon önlemleri bu zincirin taşınma halkasını hedef alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0010",
+       "ses": "Bariyer önlemleri, el hijyeni ve uygun oda düzeni, mikroorganizmanın kaynaktan duyarlı kişiye ulaşmasını engeller.",
+       "ekran": "Bariyer önlemleri, el hijyeni ve uygun oda düzeni, mikroorganizmanın kaynaktan duyarlı kişiye ulaşmasını engeller.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-36-c0011",
+       "ses": "Burada izolasyonun tanımını da netleştirelim.",
+       "ekran": "Burada izolasyonun tanımını da netleştirelim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0012",
+       "ses": "Burası önemli, bu tanım çıkmış sorularda soruldu: bulaşıcı bir hastalığı taşıdığı bilinen vakaların, bu hastalığın bulaştırıcılık süresi boyunca sağlam bireylerden ayrılmasına tecrit, yani izolasyon denir.",
+       "ekran": "Burası önemli, bu tanım çıkmış sorularda soruldu: bulaşıcı bir hastalığı taşıdığı bilinen vakaların, bu hastalığın bulaştırıcılık süresi boyunca sağlam bireylerden ayrılmasına tecrit, yani izolasyon denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0013",
+       "ses": "Dikkat edin, şıklarda karantina, filyasyon, endemi ya da itlaf gibi terimler çeldirici olarak verilir; doğru karşılık tecrittir.",
+       "ekran": "Dikkat edin, şıklarda karantina, filyasyon, endemi ya da itlaf gibi terimler çeldirici olarak verilir; doğru karşılık tecrittir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b02",
+   "baslik": "Canlı ve cansız kaynaklar",
+   "paragraflar": [
+    {
+     "id": "k1-36-p003",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-36-c0014",
+       "ses": "Zincirin ilk halkası olan kaynak canlı ya da cansız olabilir.",
+       "ekran": "Zincirin ilk halkası olan kaynak canlı ya da cansız olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0015",
+       "ses": "Canlı kaynaklar mikroorganizmayı farklı biçimlerde taşıyan insanlardır.",
+       "ekran": "Canlı kaynaklar mikroorganizmayı farklı biçimlerde taşıyan insanlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0016",
+       "ses": "Kişide semptomatik enfeksiyon olabilir, yani hastalığın belirtileri vardır.",
+       "ekran": "Kişide semptomatik enfeksiyon olabilir, yani hastalığın belirtileri vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0017",
+       "ses": "Asemptomatik enfeksiyon olabilir; etken çoğalır ama belirti oluşmaz ve kişi farkında olmadan bulaştırabilir.",
+       "ekran": "Asemptomatik enfeksiyon olabilir; etken çoğalır ama belirti oluşmaz ve kişi farkında olmadan bulaştırabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0018",
+       "ses": "Mikroorganizma kişinin normal florasında yer alıyor olabilir.",
+       "ekran": "Mikroorganizma kişinin normal florasında yer alıyor olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0019",
+       "ses": "Ya da kolonizasyon söz konusudur; yani etken vücut yüzeyine yerleşmiş, hastalık oluşturmadan çoğalmaktadır.",
+       "ekran": "Ya da kolonizasyon söz konusudur; yani etken vücut yüzeyine yerleşmiş, hastalık oluşturmadan çoğalmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p004",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-36-c0020",
+       "ses": "Hastane ortamında canlı kaynak olabilecek kişiler 4 gruptur: hasta, yani hastanın kendisi ya da başka bir hasta; sağlık personeli; hasta yakını ve ziyaretçi.",
+       "ekran": "Hastane ortamında canlı kaynak olabilecek kişiler 4 gruptur: hasta, yani hastanın kendisi ya da başka bir hasta; sağlık personeli; hasta yakını ve ziyaretçi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0021",
+       "ses": "Hastanın kendisinin kaynak olması, kendi florasından enfeksiyon gelişebileceği anlamına gelir.",
+       "ekran": "Hastanın kendisinin kaynak olması, kendi florasından enfeksiyon gelişebileceği anlamına gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0022",
+       "ses": "Burası önemli: belirti göstermeyen kolonize bir kişi de kaynaktır.",
+       "ekran": "Burası önemli: belirti göstermeyen kolonize bir kişi de kaynaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0023",
+       "ses": "Bu yüzden izolasyon yalnız semptomatik enfeksiyonda değil, asemptomatik enfeksiyonda ve kolonizasyonda da uygulanır.",
+       "ekran": "Bu yüzden izolasyon yalnız semptomatik enfeksiyonda değil, asemptomatik enfeksiyonda ve kolonizasyonda da uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p005",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-36-c0024",
+       "ses": "Kaynağın ikinci kolu cansız ortamlardır ve slaytta 2 grupta özetlenir.",
+       "ekran": "Kaynağın ikinci kolu cansız ortamlardır ve slaytta 2 grupta özetlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0025",
+       "ses": "Birinci grup alet ve yüzeydir; hastaya temas eden tıbbi cihazlar ve yatak kenarı, masa gibi hasta çevresindeki yüzeyler kontamine olabilir.",
+       "ekran": "Birinci grup alet ve yüzeydir; hastaya temas eden tıbbi cihazlar ve yatak kenarı, masa gibi hasta çevresindeki yüzeyler kontamine olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0026",
+       "ses": "İkinci grup su, hava ve yiyeceklerdir.",
+       "ekran": "İkinci grup su, hava ve yiyeceklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0027",
+       "ses": "Cansız kaynakların önemi şudur: canlı kaynak ortamdan ayrıldıktan sonra da bulaş sürebilir.",
+       "ekran": "Cansız kaynakların önemi şudur: canlı kaynak ortamdan ayrıldıktan sonra da bulaş sürebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0028",
+       "ses": "Bu nedenle ekipman ve çevre yönetimi enfeksiyon kontrolünün ayrılmaz parçasıdır.",
+       "ekran": "Bu nedenle ekipman ve çevre yönetimi enfeksiyon kontrolünün ayrılmaz parçasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b03",
+   "baslik": "Taşınma yolları ve etkenin özellikleri",
+   "paragraflar": [
+    {
+     "id": "k1-36-p006",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-36-c0029",
+       "ses": "Kaynaktan çıkan mikroorganizmanın duyarlı kişiye ulaşması taşınma halkasıyla olur ve derste 4 taşınma yolu tanımlanır.",
+       "ekran": "Kaynaktan çıkan mikroorganizmanın duyarlı kişiye ulaşması taşınma halkasıyla olur ve derste 4 taşınma yolu tanımlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0030",
+       "ses": "Temas, etkenin doğrudan dokunmayla ya da aracı bir nesne üzerinden aktarılmasıdır.",
+       "ekran": "Temas, etkenin doğrudan dokunmayla ya da aracı bir nesne üzerinden aktarılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0031",
+       "ses": "Damlacık, solunum yolundan atılan ve kısa mesafede düşen partiküllerle aktarımdır.",
+       "ekran": "Damlacık, solunum yolundan atılan ve kısa mesafede düşen partiküllerle aktarımdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0032",
+       "ses": "Solunum yolu, havada asılı kalan küçük partiküllerle, yani aerosolle aktarımdır.",
+       "ekran": "Solunum yolu, havada asılı kalan küçük partiküllerle, yani aerosolle aktarımdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0033",
+       "ses": "Vektör aracılı taşınmada ise etken bir canlı taşıyıcı aracılığıyla aktarılır.",
+       "ekran": "Vektör aracılı taşınmada ise etken bir canlı taşıyıcı aracılığıyla aktarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0034",
+       "ses": "İzolasyon türleri de bu yollardan türer: temas izolasyonu, damlacık izolasyonu ve solunum izolasyonu.",
+       "ekran": "İzolasyon türleri de bu yollardan türer: temas izolasyonu, damlacık izolasyonu ve solunum izolasyonu.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p007",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-36-c0035",
+       "ses": "Taşınmanın enfeksiyonla sonuçlanması yalnız yola değil, etkenin kendi özelliklerine de bağlıdır.",
+       "ekran": "Taşınmanın enfeksiyonla sonuçlanması yalnız yola değil, etkenin kendi özelliklerine de bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0036",
+       "ses": "Mikroorganizma yükü, yani aktarılan etken miktarı arttıkça risk artar.",
+       "ekran": "Mikroorganizma yükü, yani aktarılan etken miktarı arttıkça risk artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0037",
+       "ses": "Virülans, etkenin hastalık oluşturma gücünün derecesidir.",
+       "ekran": "Virülans, etkenin hastalık oluşturma gücünün derecesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0038",
+       "ses": "Patojenite ise etkenin hastalık oluşturabilme yeteneğidir.",
+       "ekran": "Patojenite ise etkenin hastalık oluşturabilme yeteneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0039",
+       "ses": "Bu iki kavramı karıştırmayın: patojenite yapabilir mi sorusunun, virülans ne kadar güçlü yapar sorusunun cevabıdır.",
+       "ekran": "Bu iki kavramı karıştırmayın: patojenite yapabilir mi sorusunun, virülans ne kadar güçlü yapar sorusunun cevabıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b04",
+   "baslik": "Duyarlı kişi",
+   "paragraflar": [
+    {
+     "id": "k1-36-p008",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-36-c0040",
+       "ses": "Zincirin son halkası duyarlı kişidir.",
+       "ekran": "Zincirin son halkası duyarlı kişidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0041",
+       "ses": "Aynı etkene maruz kalan herkes hastalanmaz; belirleyici olan konağın savunma gücüdür.",
+       "ekran": "Aynı etkene maruz kalan herkes hastalanmaz; belirleyici olan konağın savunma gücüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0042",
+       "ses": "Bu savunmanın 3 katmanı vardır.",
+       "ekran": "Bu savunmanın 3 katmanı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0043",
+       "ses": "Fiziksel bariyer, yani sağlam deri ve mukozalar etkenin girişini engeller.",
+       "ekran": "Fiziksel bariyer, yani sağlam deri ve mukozalar etkenin girişini engeller.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0044",
+       "ses": "Hücresel immünite, hücre aracılı savunmadır ve özellikle hücre içi etkenlere karşı korur.",
+       "ekran": "Hücresel immünite, hücre aracılı savunmadır ve özellikle hücre içi etkenlere karşı korur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0045",
+       "ses": "Hümoral immünite ise antikor aracılı savunmadır.",
+       "ekran": "Hümoral immünite ise antikor aracılı savunmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0046",
+       "ses": "Bu savunmalardan biri zayıfladığında duyarlılık artar.",
+       "ekran": "Bu savunmalardan biri zayıfladığında duyarlılık artar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p009",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-36-c0047",
+       "ses": "Derste öne çıkan ilk risk faktörü kateterdir.",
+       "ekran": "Derste öne çıkan ilk risk faktörü kateterdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0048",
+       "ses": "Kateter deri ve mukoza bariyerini aşarak mikroorganizmaya doğrudan bir giriş yolu açar; böylece fiziksel bariyerin koruması devre dışı kalır.",
+       "ekran": "Kateter deri ve mukoza bariyerini aşarak mikroorganizmaya doğrudan bir giriş yolu açar; böylece fiziksel bariyerin koruması devre dışı kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0049",
+       "ses": "İkinci grup eşlik eden hastalıklardır: diyabetes mellitus, HIV enfeksiyonu, sitomegalovirüs enfeksiyonu, malignite ve organ nakli.",
+       "ekran": "İkinci grup eşlik eden hastalıklardır: diyabetes mellitus, HIV enfeksiyonu, sitomegalovirüs enfeksiyonu, malignite ve organ nakli.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0050",
+       "ses": "Üçüncü grup ilaçlardır; kemoterapi ve steroid immün yanıtı baskılar.",
+       "ekran": "Üçüncü grup ilaçlardır; kemoterapi ve steroid immün yanıtı baskılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0051",
+       "ses": "4.'sü floradır: antibiyotik kullanımı normal florayı bozar, koruyucu flora azalınca dirençli ya da fırsatçı etkenler yerleşebilir.",
+       "ekran": "4.'sü floradır: antibiyotik kullanımı normal florayı bozar, koruyucu flora azalınca dirençli ya da fırsatçı etkenler yerleşebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p010",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-36-c0052",
+       "ses": "Bu faktörleri taşıyan hastalarda aynı mikroorganizma yükü çok daha kolay enfeksiyona dönüşür.",
+       "ekran": "Bu faktörleri taşıyan hastalarda aynı mikroorganizma yükü çok daha kolay enfeksiyona dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0053",
+       "ses": "Bu yüzden izolasyon önlemlerine uyum, duyarlı hastaların yattığı servislerde daha da kritik hale gelir.",
+       "ekran": "Bu yüzden izolasyon önlemlerine uyum, duyarlı hastaların yattığı servislerde daha da kritik hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0054",
+       "ses": "Sınav için listeyi bir arada tutun: kateter, diyabet, HIV, sitomegalovirüs, malignite, organ nakli, kemoterapi, steroid ve antibiyotikle bozulan flora.",
+       "ekran": "Sınav için listeyi bir arada tutun: kateter, diyabet, HIV, sitomegalovirüs, malignite, organ nakli, kemoterapi, steroid ve antibiyotikle bozulan flora.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b05",
+   "baslik": "Temas yoluyla taşınma",
+   "paragraflar": [
+    {
+     "id": "k1-36-p011",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-36-c0055",
+       "ses": "Temas yoluyla taşınma 2 biçimde gerçekleşir.",
+       "ekran": "Temas yoluyla taşınma 2 biçimde gerçekleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0056",
+       "ses": "1.'si direkt temastır: mikroorganizma arada hiçbir aracı nesne olmadan doğrudan geçer.",
+       "ekran": "1.'si direkt temastır: mikroorganizma arada hiçbir aracı nesne olmadan doğrudan geçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0057",
+       "ses": "Klasik örnek, kan ya da enfekte vücut sıvılarının mukoza veya hasarlı deri ile temas etmesidir.",
+       "ekran": "Klasik örnek, kan ya da enfekte vücut sıvılarının mukoza veya hasarlı deri ile temas etmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0058",
+       "ses": "Sağlam deri güçlü bir bariyerdir; mukoza ve bütünlüğü bozulmuş deri ise etkenin kolayca girebildiği yüzeylerdir.",
+       "ekran": "Sağlam deri güçlü bir bariyerdir; mukoza ve bütünlüğü bozulmuş deri ise etkenin kolayca girebildiği yüzeylerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0059",
+       "ses": "Bu nedenle sağlık çalışanının ellerindeki yara ve çatlaklar, göz ve ağız mukozası direkt temasla bulaşta özellikle korunması gereken bölgelerdir.",
+       "ekran": "Bu nedenle sağlık çalışanının ellerindeki yara ve çatlaklar, göz ve ağız mukozası direkt temasla bulaşta özellikle korunması gereken bölgelerdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p012",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-36-c0060",
+       "ses": "İkinci biçim indirekt temastır: mikroorganizma kontamine bir alet, yüzey ya da kişi aracılığıyla taşınır.",
+       "ekran": "İkinci biçim indirekt temastır: mikroorganizma kontamine bir alet, yüzey ya da kişi aracılığıyla taşınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0061",
+       "ses": "Hastane ortamında bu aracıların başında sağlık personelinin elleri gelir.",
+       "ekran": "Hastane ortamında bu aracıların başında sağlık personelinin elleri gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0062",
+       "ses": "Eller 2 yolla kontamine olur: hastanın enfekte ya da kolonize vücut bölgesine temasla veya kontamine bir alete ya da yüzeye temasla.",
+       "ekran": "Eller 2 yolla kontamine olur: hastanın enfekte ya da kolonize vücut bölgesine temasla veya kontamine bir alete ya da yüzeye temasla.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0063",
+       "ses": "Kontamine ellerle bir sonraki hastanın bakımı yapıldığında etken o hastaya taşınır.",
+       "ekran": "Kontamine ellerle bir sonraki hastanın bakımı yapıldığında etken o hastaya taşınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0064",
+       "ses": "Elle taşınan mikroorganizma aynı hastanın başka bir bölgesine de aktarılabilir.",
+       "ekran": "Elle taşınan mikroorganizma aynı hastanın başka bir bölgesine de aktarılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0065",
+       "ses": "El hijyeni ve eldiven kurallarının temel gerekçesi budur.",
+       "ekran": "El hijyeni ve eldiven kurallarının temel gerekçesi budur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p013",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-36-c0066",
+       "ses": "İndirekt temasın ikinci önemli aracı, hastalar arasında ortak kullanılan kontamine aletlerdir.",
+       "ekran": "İndirekt temasın ikinci önemli aracı, hastalar arasında ortak kullanılan kontamine aletlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0067",
+       "ses": "Slaytta sayılan örnekler şunlardır: termometre, tansiyon ölçme aleti, glukometre, cerrahi aletler, endoskopi ve bronkoskopi cihazları, paylaşılan oyuncaklar ve su ısıtma cihazları.",
+       "ekran": "Slaytta sayılan örnekler şunlardır: termometre, tansiyon ölçme aleti, glukometre, cerrahi aletler, endoskopi ve bronkoskopi cihazları, paylaşılan oyuncaklar ve su ısıtma cihazları.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0068",
+       "ses": "Bu araçlar bir hastada kontamine olup temizlenmeden diğerinde kullanıldığında mikroorganizmayı taşır.",
+       "ekran": "Bu araçlar bir hastada kontamine olup temizlenmeden diğerinde kullanıldığında mikroorganizmayı taşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p014",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-36-c0069",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: indirekt temas yollarından olmayan seçenek kan transfüzyonudur.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: indirekt temas yollarından olmayan seçenek kan transfüzyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0070",
+       "ses": "Sağlık personelinin elleri, glukometre, tansiyon ölçme aleti ve hastalar arasında ortak kullanılan su ısıtma cihazı indirekt temas aracıdır; kan transfüzyonu ise kontamine bir aracın yüzey teması değildir, bu listede yer almaz.",
+       "ekran": "Sağlık personelinin elleri, glukometre, tansiyon ölçme aleti ve hastalar arasında ortak kullanılan su ısıtma cihazı indirekt temas aracıdır; kan transfüzyonu ise kontamine bir aracın yüzey teması değildir, bu listede yer almaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0071",
+       "ses": "Yani indirekt temasın ayırt edici özelliği arada kontamine bir aracının bulunmasıdır.",
+       "ekran": "Yani indirekt temasın ayırt edici özelliği arada kontamine bir aracının bulunmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b06",
+   "baslik": "Damlacık: süspansiyon ve fiziği",
+   "paragraflar": [
+    {
+     "id": "k1-36-p015",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-36-c0072",
+       "ses": "Solunum yolundan atılan partiküllerle olan taşınmanın ilk biçimi damlacıktır.",
+       "ekran": "Solunum yolundan atılan partiküllerle olan taşınmanın ilk biçimi damlacıktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0073",
+       "ses": "Fiziksel olarak katı ve sıvı karışımı bir süspansiyondur; içinde mikroorganizma bulunan mukozal salgı süspansiyonudur.",
+       "ekran": "Fiziksel olarak katı ve sıvı karışımı bir süspansiyondur; içinde mikroorganizma bulunan mukozal salgı süspansiyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0074",
+       "ses": "Solunum yolundan atılır, değişen ivme ile hareket eder ve başka bir kişinin ağız, burun ya da göz mukozasına ulaşarak mikroorganizmayı geçirir.",
+       "ekran": "Solunum yolundan atılır, değişen ivme ile hareket eder ve başka bir kişinin ağız, burun ya da göz mukozasına ulaşarak mikroorganizmayı geçirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0075",
+       "ses": "Damlacığın hedefi yüzdeki mukozalardır, distal solunum yollarına kadar ilerlemez; bu yüzden damlacığa karşı koruma yüz ve göz bölgesine odaklanır.",
+       "ekran": "Damlacığın hedefi yüzdeki mukozalardır, distal solunum yollarına kadar ilerlemez; bu yüzden damlacığa karşı koruma yüz ve göz bölgesine odaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p016",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-36-c0076",
+       "ses": "Damlacığın ne kadar uzağa gideceğini Newton'un ikinci yasası açıklar: kuvvet, kütle çarpı ivmeye eşittir.",
+       "ekran": "Damlacığın ne kadar uzağa gideceğini Newton'un ikinci yasası açıklar: kuvvet, kütle çarpı ivmeye eşittir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0077",
+       "ses": "Yani ivme, net kuvvetin kütleye oranıdır.",
+       "ekran": "Yani ivme, net kuvvetin kütleye oranıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0078",
+       "ses": "Net kuvveti oluşturan itici olaylar nefes alıp verme, konuşma, öksürme, hapşırma, aspirasyon ve entübasyondur.",
+       "ekran": "Net kuvveti oluşturan itici olaylar nefes alıp verme, konuşma, öksürme, hapşırma, aspirasyon ve entübasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0079",
+       "ses": "Buna karşı koyan kuvvetler hava direnci ve ağırlık kuvvetidir.",
+       "ekran": "Buna karşı koyan kuvvetler hava direnci ve ağırlık kuvvetidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0080",
+       "ses": "İtici kuvvet partikülü ileri fırlatır; hava direnci ve ağırlık onu yavaşlatıp aşağı çeker.",
+       "ekran": "İtici kuvvet partikülü ileri fırlatır; hava direnci ve ağırlık onu yavaşlatıp aşağı çeker.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0081",
+       "ses": "Dikkat edin, damlacık yalnız öksürük ve hapşırıkla değil, nefes alıp verme ve konuşmayla, ayrıca aspirasyon ve entübasyon gibi tıbbi işlemlerle de oluşur.",
+       "ekran": "Dikkat edin, damlacık yalnız öksürük ve hapşırıkla değil, nefes alıp verme ve konuşmayla, ayrıca aspirasyon ve entübasyon gibi tıbbi işlemlerle de oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p017",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-36-c0082",
+       "ses": "Denklemin ikinci bileşeni kütledir ve damlacığın kütlesi sabit değildir.",
+       "ekran": "Denklemin ikinci bileşeni kütledir ve damlacığın kütlesi sabit değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0083",
+       "ses": "Belirleyici olan, atılan başlangıç kütlesi ile havada ilerlerken bölünme ve kuruma sonucu kütlede meydana gelen değişimdir.",
+       "ekran": "Belirleyici olan, atılan başlangıç kütlesi ile havada ilerlerken bölünme ve kuruma sonucu kütlede meydana gelen değişimdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0084",
+       "ses": "Büyük damlacık daha küçük parçalara ayrılabilir; sıvı buharlaştıkça da kütle azalır.",
+       "ekran": "Büyük damlacık daha küçük parçalara ayrılabilir; sıvı buharlaştıkça da kütle azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0085",
+       "ses": "Kütle azaldığında ağırlık kuvvetinin etkisi küçülür, partikül yere daha geç düşer ve hava akımlarıyla daha uzağa taşınabilir.",
+       "ekran": "Kütle azaldığında ağırlık kuvvetinin etkisi küçülür, partikül yere daha geç düşer ve hava akımlarıyla daha uzağa taşınabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0086",
+       "ses": "Büyük ve ağır damlacık ise kısa mesafede yere iner.",
+       "ekran": "Büyük ve ağır damlacık ise kısa mesafede yere iner.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b07",
+   "baslik": "Solunum yolu taşınması: aerosol ve damlacık çekirdeği",
+   "paragraflar": [
+    {
+     "id": "k1-36-p018",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-36-c0087",
+       "ses": "Solunum yolu taşınmasında partikül artık yalnız bir süspansiyon değildir; katı, sıvı ve gaz karışımıdır, yani aerosoldür.",
+       "ekran": "Solunum yolu taşınmasında partikül artık yalnız bir süspansiyon değildir; katı, sıvı ve gaz karışımıdır, yani aerosoldür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0088",
+       "ses": "Mikroorganizma içeren mukozal salgı süspansiyonunun gaz içinde dağılmasına biyoaerosol denir.",
+       "ekran": "Mikroorganizma içeren mukozal salgı süspansiyonunun gaz içinde dağılmasına biyoaerosol denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0089",
+       "ses": "Bu partikül de solunum yolundan atılır, değişen ivme ile hareket eder ve aynı kuvvetlerin etkisindedir.",
+       "ekran": "Bu partikül de solunum yolundan atılır, değişen ivme ile hareket eder ve aynı kuvvetlerin etkisindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0090",
+       "ses": "Ancak hedefi başka bir kişinin ağız, burun ve göz mukozasıyla birlikte distal solunum yolları mukozasıdır.",
+       "ekran": "Ancak hedefi başka bir kişinin ağız, burun ve göz mukozasıyla birlikte distal solunum yolları mukozasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p019",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-36-c0091",
+       "ses": "Burası önemli, sınav spotudur: damlacık katı ve sıvı karışımı süspansiyondur, ağız, burun ve göz mukozasında kalır; aerosol ise katı, sıvı ve gaz karışımıdır ve distal solunum yollarına kadar ulaşır.",
+       "ekran": "Burası önemli, sınav spotudur: damlacık katı ve sıvı karışımı süspansiyondur, ağız, burun ve göz mukozasında kalır; aerosol ise katı, sıvı ve gaz karışımıdır ve distal solunum yollarına kadar ulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0092",
+       "ses": "Bu yüzden aerosole karşı yüzeyel koruma yetmez, solunan havanın süzülmesi gerekir.",
+       "ekran": "Bu yüzden aerosole karşı yüzeyel koruma yetmez, solunan havanın süzülmesi gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p020",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-36-c0093",
+       "ses": "Solunum yolu taşınmasında kütle değişiminin özel bir ürünü vardır: damlacık çekirdeği.",
+       "ekran": "Solunum yolu taşınmasında kütle değişiminin özel bir ürünü vardır: damlacık çekirdeği.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0094",
+       "ses": "Atılan damlacık bölünür ya da kurur, sıvı kısmı kaybolunca geriye küçük bir çekirdek kalır.",
+       "ekran": "Atılan damlacık bölünür ya da kurur, sıvı kısmı kaybolunca geriye küçük bir çekirdek kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0095",
+       "ses": "Kütlesi çok azaldığı için ağırlık kuvvetinin etkisi düşüktür; bu yüzden havada uzun süre asılı kalabilir ve hava akımlarıyla taşınabilir.",
+       "ekran": "Kütlesi çok azaldığı için ağırlık kuvvetinin etkisi düşüktür; bu yüzden havada uzun süre asılı kalabilir ve hava akımlarıyla taşınabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0096",
+       "ses": "Asılı kalan bu partiküller odaya sonradan giren kişiler tarafından da solunabilir.",
+       "ekran": "Asılı kalan bu partiküller odaya sonradan giren kişiler tarafından da solunabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0097",
+       "ses": "Yani damlacıkta kütle değişimi yalnız menzili etkilerken, solunum yolu taşınmasında aerosolün temel birimini üretir.",
+       "ekran": "Yani damlacıkta kütle değişimi yalnız menzili etkilerken, solunum yolu taşınmasında aerosolün temel birimini üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0098",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: tüberküloz basilinin başlıca bulaş yolu hava yoludur, yani aerosoldür ve basil damlacık çekirdekleri ile taşınır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: tüberküloz basilinin başlıca bulaş yolu hava yoludur, yani aerosoldür ve basil damlacık çekirdekleri ile taşınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0099",
+       "ses": "Şıklarda direkt bulaş, damlacık, vücut sıvıları ya da fekal oral yol çeldirici olarak verilir.",
+       "ekran": "Şıklarda direkt bulaş, damlacık, vücut sıvıları ya da fekal oral yol çeldirici olarak verilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b08",
+   "baslik": "Partikül boyutu ve düşme süreleri",
+   "paragraflar": [
+    {
+     "id": "k1-36-p021",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-36-c0100",
+       "ses": "Damlacık ile aerosol arasındaki ayrım partikül boyutuyla sayısallaştırılır.",
+       "ekran": "Damlacık ile aerosol arasındaki ayrım partikül boyutuyla sayısallaştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0101",
+       "ses": "Büyük damlacıklar 100 mikrometreden büyüktür.",
+       "ekran": "Büyük damlacıklar 100 mikrometreden büyüktür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0102",
+       "ses": "10 mikrometreden küçük damlacıklar ise aerosol olarak davranır.",
+       "ekran": "10 mikrometreden küçük damlacıklar ise aerosol olarak davranır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0103",
+       "ses": "Slayttaki hapşırık fotoğrafında küçük damlacıklar havada bir bulut gibi ilerlerken büyük damlacıklar balistik biçimde, yay çizerek yere düşer.",
+       "ekran": "Slayttaki hapşırık fotoğrafında küçük damlacıklar havada bir bulut gibi ilerlerken büyük damlacıklar balistik biçimde, yay çizerek yere düşer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0104",
+       "ses": "Görsel açıklamasına göre tek bir hapşırık, 0,5 ile 12 mikrometre boyutunda 40 bine kadar damlacığı saniyede 100 metre hızla saçabilir.",
+       "ekran": "Görsel açıklamasına göre tek bir hapşırık, 0,5 ile 12 mikrometre boyutunda 40 bine kadar damlacığı saniyede 100 metre hızla saçabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0105",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: öksürme, bağırma, şarkı söyleme ve konuşma arasında tek bir eylemle en çok sayıda solunum yolu partikülünün, yani damlacık ve aerosolün saçıldığı eylem hapşırmadır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: öksürme, bağırma, şarkı söyleme ve konuşma arasında tek bir eylemle en çok sayıda solunum yolu partikülünün, yani damlacık ve aerosolün saçıldığı eylem hapşırmadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p022",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-36-c0106",
+       "ses": "Slayttaki yörünge grafiği, Chen ve arkadaşlarının 2010 tarihli çalışmasından alınmıştır.",
+       "ekran": "Slayttaki yörünge grafiği, Chen ve arkadaşlarının 2010 tarihli çalışmasından alınmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0107",
+       "ses": "0,1 ve 10 mikrometrelik partiküller farklı havalandırma hızlarında odada uzun ve karmaşık yollar izler; 100 ve 200 mikrometrelik partiküller ise kısa mesafede yere iner.",
+       "ekran": "0,1 ve 10 mikrometrelik partiküller farklı havalandırma hızlarında odada uzun ve karmaşık yollar izler; 100 ve 200 mikrometrelik partiküller ise kısa mesafede yere iner.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0108",
+       "ses": "Kısacası küçük partikül hava akımına, büyük partikül yerçekimine bağımlıdır.",
+       "ekran": "Kısacası küçük partikül hava akımına, büyük partikül yerçekimine bağımlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p023",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-36-c0109",
+       "ses": "Partikül küçüldükçe yere düşme süresi belirgin biçimde uzar.",
+       "ekran": "Partikül küçüldükçe yere düşme süresi belirgin biçimde uzar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0110",
+       "ses": "Knight ve arkadaşlarının 1980 tarihli verilerine göre 100 mikrometrelik partikül 10 saniyede düşer.",
+       "ekran": "Knight ve arkadaşlarının 1980 tarihli verilerine göre 100 mikrometrelik partikül 10 saniyede düşer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0111",
+       "ses": "20 mikrometrelik partikül 4 dakikada, 10 mikrometrelik partikül 17 dakikada düşer.",
+       "ekran": "20 mikrometrelik partikül 4 dakikada, 10 mikrometrelik partikül 17 dakikada düşer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0112",
+       "ses": "1 ile 3 mikrometrelik partiküller ise uzun süre asılı kalır.",
+       "ekran": "1 ile 3 mikrometrelik partiküller ise uzun süre asılı kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0113",
+       "ses": "Burası önemli, sınav spotudur: boyut ile düşme süresi ters orantılıdır; 10 mikrometre 17 dakika, 20 mikrometre 4 dakika eşleştirmesini birbirine karıştırmayın.",
+       "ekran": "Burası önemli, sınav spotudur: boyut ile düşme süresi ters orantılıdır; 10 mikrometre 17 dakika, 20 mikrometre 4 dakika eşleştirmesini birbirine karıştırmayın.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p024",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-36-c0114",
+       "ses": "Sınav sorularında bu ayrım bir de 5 mikrometre sınırıyla karşınıza çıkar.",
+       "ekran": "Sınav sorularında bu ayrım bir de 5 mikrometre sınırıyla karşınıza çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0115",
+       "ses": "Burası önemli, çıkmış sorularda doğru ifade olarak şöyle geçti: damlacık izolasyonu 5 mikrometre ve üzerindeki partiküllerin saçılımıyla bulaşan enfeksiyonlardan korunmak için, solunum izolasyonu ise 5 mikrometrenin altındaki partiküllerin saçılımıyla bulaşan enfeksiyonlardan korunmak için uygulanır.",
+       "ekran": "Burası önemli, çıkmış sorularda doğru ifade olarak şöyle geçti: damlacık izolasyonu 5 mikrometre ve üzerindeki partiküllerin saçılımıyla bulaşan enfeksiyonlardan korunmak için, solunum izolasyonu ise 5 mikrometrenin altındaki partiküllerin saçılımıyla bulaşan enfeksiyonlardan korunmak için uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b09",
+   "baslik": "Mikroorganizmanın çevresel şartlara dayanıklılığı",
+   "paragraflar": [
+    {
+     "id": "k1-36-p025",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-36-c0116",
+       "ses": "Atılan bir mikroorganizmanın bulaş oluşturabilmesi, ortamda ne kadar süre canlı kalabildiğine bağlıdır.",
+       "ekran": "Atılan bir mikroorganizmanın bulaş oluşturabilmesi, ortamda ne kadar süre canlı kalabildiğine bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0117",
+       "ses": "Bu süreyi çevresel şartlar belirler: sıcaklık, nem ve hava akımı; ultraviyole ışınlar; ve kimyasallar.",
+       "ekran": "Bu süreyi çevresel şartlar belirler: sıcaklık, nem ve hava akımı; ultraviyole ışınlar; ve kimyasallar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0118",
+       "ses": "Nem partikülün kurumasını ve etkenin yaşamını etkiler, hava akımı partikülün dağılmasını belirler, ultraviyole ışınlar mikroorganizmaya zarar verir, dezenfektan ve antiseptikler de etkeni inaktive eder.",
+       "ekran": "Nem partikülün kurumasını ve etkenin yaşamını etkiler, hava akımı partikülün dağılmasını belirler, ultraviyole ışınlar mikroorganizmaya zarar verir, dezenfektan ve antiseptikler de etkeni inaktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p026",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-36-c0119",
+       "ses": "Mikroorganizmalar bu şartlara aynı direnci göstermez.",
+       "ekran": "Mikroorganizmalar bu şartlara aynı direnci göstermez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0120",
+       "ses": "Mycobacterium tuberculosis ve mantar sporları çevresel şartlara dayanıklıdır, ortamda uzun süre canlı kalabilir.",
+       "ekran": "Mycobacterium tuberculosis ve mantar sporları çevresel şartlara dayanıklıdır, ortamda uzun süre canlı kalabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0121",
+       "ses": "Zarflı virüsler ise sıcaklık ve nem değişikliğine ve ultraviyole ışınlara daha duyarlıdır; çünkü dış yüzeylerindeki lipid zarf ısı, kuruma, ultraviyole ve kimyasallarla kolayca bozulur.",
+       "ekran": "Zarflı virüsler ise sıcaklık ve nem değişikliğine ve ultraviyole ışınlara daha duyarlıdır; çünkü dış yüzeylerindeki lipid zarf ısı, kuruma, ultraviyole ve kimyasallarla kolayca bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0122",
+       "ses": "Tuzağa dikkat: zarflı virüsler dayanıklı grupta değil, duyarlı gruptadır.",
+       "ekran": "Tuzağa dikkat: zarflı virüsler dayanıklı grupta değil, duyarlı gruptadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b10",
+   "baslik": "SARS-CoV-2 tablosu: sıcaklık ve yüzeyler",
+   "paragraflar": [
+    {
+     "id": "k1-36-p027",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-36-c0123",
+       "ses": "Zarflı virüslerin çevreye duyarlılığı, slayttaki SARS-CoV-2 stabilite tablosunda sayısal olarak görülür.",
+       "ekran": "Zarflı virüslerin çevreye duyarlılığı, slayttaki SARS-CoV-2 stabilite tablosunda sayısal olarak görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0124",
+       "ses": "Virüs titresi Vero E6 hücrelerinde ölçülmüştür.",
+       "ekran": "Virüs titresi Vero E6 hücrelerinde ölçülmüştür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0125",
+       "ses": "Önce sıcaklık bölümüne bakalım.",
+       "ekran": "Önce sıcaklık bölümüne bakalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0126",
+       "ses": "4 derecede titre 14 gün boyunca neredeyse değişmez; soğukta virüs çok stabildir.",
+       "ekran": "4 derecede titre 14 gün boyunca neredeyse değişmez; soğukta virüs çok stabildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0127",
+       "ses": "22 derecede, yani oda sıcaklığında, titre günler içinde yavaşça düşer ve 14. günde saptanamaz hale gelir.",
+       "ekran": "22 derecede, yani oda sıcaklığında, titre günler içinde yavaşça düşer ve 14. günde saptanamaz hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0128",
+       "ses": "37 derecede birinci günde belirgin düşer, ikinci günde saptanamaz.",
+       "ekran": "37 derecede birinci günde belirgin düşer, ikinci günde saptanamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0129",
+       "ses": "56 derecede 30 dakikada, 70 derecede ise 5 dakikada saptanamaz.",
+       "ekran": "56 derecede 30 dakikada, 70 derecede ise 5 dakikada saptanamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0130",
+       "ses": "Yani sıcaklık arttıkça virüs daha hızlı inaktive olur.",
+       "ekran": "Yani sıcaklık arttıkça virüs daha hızlı inaktive olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p028",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-36-c0131",
+       "ses": "Tablonun yüzey bölümü cansız kaynakların önemini gösterir.",
+       "ekran": "Tablonun yüzey bölümü cansız kaynakların önemini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0132",
+       "ses": "Kâğıt ve kâğıt mendil üzerinde virüs 3 saatte saptanamaz.",
+       "ekran": "Kâğıt ve kâğıt mendil üzerinde virüs 3 saatte saptanamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0133",
+       "ses": "Ahşap ve kumaşta ikinci günde, cam ve banknotta dördüncü günde saptanamaz.",
+       "ekran": "Ahşap ve kumaşta ikinci günde, cam ve banknotta dördüncü günde saptanamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0134",
+       "ses": "Paslanmaz çelik, plastik ve maskenin iç katmanında yedinci günde saptanamaz hale gelir.",
+       "ekran": "Paslanmaz çelik, plastik ve maskenin iç katmanında yedinci günde saptanamaz hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0135",
+       "ses": "Maskenin dış katmanında ise yedinci günde hâlâ saptanabilir.",
+       "ekran": "Maskenin dış katmanında ise yedinci günde hâlâ saptanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0136",
+       "ses": "Pürüzsüz ve emici olmayan yüzeyler virüsü daha uzun süre barındırır; en uzun süre kontamine kalan yüzey kullanılmış maskenin dış yüzüdür.",
+       "ekran": "Pürüzsüz ve emici olmayan yüzeyler virüsü daha uzun süre barındırır; en uzun süre kontamine kalan yüzey kullanılmış maskenin dış yüzüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0137",
+       "ses": "Kişisel koruyucu ekipman çıkarıldıktan sonra el hijyeninin zorunlu olmasının bir gerekçesi de budur.",
+       "ekran": "Kişisel koruyucu ekipman çıkarıldıktan sonra el hijyeninin zorunlu olmasının bir gerekçesi de budur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b11",
+   "baslik": "SARS-CoV-2 tablosu: dezenfektanlar",
+   "paragraflar": [
+    {
+     "id": "k1-36-p029",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-36-c0138",
+       "ses": "Tablonun son bölümü kimyasalların etkisini gösterir.",
+       "ekran": "Tablonun son bölümü kimyasalların etkisini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0139",
+       "ses": "Virüs farklı dezenfektanlarla 5, 15 ve 30 dakika temas ettirilmiştir.",
+       "ekran": "Virüs farklı dezenfektanlarla 5, 15 ve 30 dakika temas ettirilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0140",
+       "ses": "5 dakikada virüsü saptanamaz hale getirenler şunlardır: 1:49 ve 1:99 oranında seyreltilmiş çamaşır suyu, %70'lik etanol, %7,5'lik povidon iyot, %0,05'lik kloroksilenol, %0,05'lik klorheksidin ve %0,1'lik benzalkonyum klorür.",
+       "ekran": "5 dakikada virüsü saptanamaz hale getirenler şunlardır: 1:49 ve 1:99 oranında seyreltilmiş çamaşır suyu, %70'lik etanol, %7,5'lik povidon iyot, %0,05'lik kloroksilenol, %0,05'lik klorheksidin ve %0,1'lik benzalkonyum klorür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p030",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-36-c0141",
+       "ses": "Tek istisna 1:49 oranındaki el sabunu çözeltisidir: beşinci dakikada düşük düzeyde virüs hâlâ saptanır, 15. dakikada saptanamaz hale gelir.",
+       "ekran": "Tek istisna 1:49 oranındaki el sabunu çözeltisidir: beşinci dakikada düşük düzeyde virüs hâlâ saptanır, 15. dakikada saptanamaz hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0142",
+       "ses": "Özetle soğuk ve pürüzsüz yüzey virüsü korur; ısı ve dezenfektan ise kısa sürede inaktive eder, sabun çözeltisinde biraz daha uzun temas gerekir.",
+       "ekran": "Özetle soğuk ve pürüzsüz yüzey virüsü korur; ısı ve dezenfektan ise kısa sürede inaktive eder, sabun çözeltisinde biraz daha uzun temas gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b12",
+   "baslik": "Standart önlemler: amaç ve kapsam",
+   "paragraflar": [
+    {
+     "id": "k1-36-p031",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-36-c0143",
+       "ses": "İzolasyon önlemleri iki katmanlıdır: tüm hastalarda uygulanan standart önlemler ve bunlara eklenen bulaş yoluna yönelik önlemler.",
+       "ekran": "İzolasyon önlemleri iki katmanlıdır: tüm hastalarda uygulanan standart önlemler ve bunlara eklenen bulaş yoluna yönelik önlemler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0144",
+       "ses": "Standart önlemlerin temel amacı, tanımlanmış ya da tanımlanmamış enfekte kan ve vücut sıvıları ile bulaştan korunmaktır.",
+       "ekran": "Standart önlemlerin temel amacı, tanımlanmış ya da tanımlanmamış enfekte kan ve vücut sıvıları ile bulaştan korunmaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0145",
+       "ses": "Kapsamı, tüm hastaların kanı, tüm vücut sıvıları, bütünlüğü bozulmuş cilt ve mukoza ile olası direkt ya da indirekt temastır.",
+       "ekran": "Kapsamı, tüm hastaların kanı, tüm vücut sıvıları, bütünlüğü bozulmuş cilt ve mukoza ile olası direkt ya da indirekt temastır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0146",
+       "ses": "Hangi hastanın kanında hangi etkenin bulunduğu çoğu zaman bilinmez; bu yüzden önlem tanıya göre değil, temasın niteliğine göre alınır.",
+       "ekran": "Hangi hastanın kanında hangi etkenin bulunduğu çoğu zaman bilinmez; bu yüzden önlem tanıya göre değil, temasın niteliğine göre alınır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p032",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-36-c0147",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda en sık sorulan bilgilerden biri: standart önlemler olası enfeksiyon tanısına bakılmaksızın tüm hastalara uygulanır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda en sık sorulan bilgilerden biri: standart önlemler olası enfeksiyon tanısına bakılmaksızın tüm hastalara uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0148",
+       "ses": "Standart izolasyonun yalnız HIV pozitif hastalara uygulandığını söyleyen ifade yanlıştır.",
+       "ekran": "Standart izolasyonun yalnız HIV pozitif hastalara uygulandığını söyleyen ifade yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0149",
+       "ses": "Aynı soruda doğru ifadeler olarak şunlar da yer aldı: temas izolasyonu çok ilaca dirençli mikroorganizmaların ve enterik enfeksiyona yol açan mikroorganizmaların bulaşını engellemek için uygulanır.",
+       "ekran": "Aynı soruda doğru ifadeler olarak şunlar da yer aldı: temas izolasyonu çok ilaca dirençli mikroorganizmaların ve enterik enfeksiyona yol açan mikroorganizmaların bulaşını engellemek için uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p033",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-36-c0150",
+       "ses": "Bu bilginin klinik karşılığı da soruldu.",
+       "ekran": "Bu bilginin klinik karşılığı da soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0151",
+       "ses": "Burası önemli: bir yıldır antiretroviral tedavi alan HIV pozitif bir hasta disk hernisi ameliyatı için servise yatırıldığında doğru yaklaşım, hasta bilgilerinin mahremiyetine özen göstererek standart izolasyon önlemlerini almaktır.",
+       "ekran": "Burası önemli: bir yıldır antiretroviral tedavi alan HIV pozitif bir hasta disk hernisi ameliyatı için servise yatırıldığında doğru yaklaşım, hasta bilgilerinin mahremiyetine özen göstererek standart izolasyon önlemlerini almaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0152",
+       "ses": "Dosya kapağına ya da kan tüplerine HIV pozitif yazmak, hastayı bu nedenle tek kişilik odaya almak ya da ameliyat listesinde sona koymak gerekmez.",
+       "ekran": "Dosya kapağına ya da kan tüplerine HIV pozitif yazmak, hastayı bu nedenle tek kişilik odaya almak ya da ameliyat listesinde sona koymak gerekmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0153",
+       "ses": "Gözle görülür kan içermeyen idrara çıplak elle temas da temas sonrası profilaksi gerektirmez.",
+       "ekran": "Gözle görülür kan içermeyen idrara çıplak elle temas da temas sonrası profilaksi gerektirmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p034",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-36-c0154",
+       "ses": "Standart önlemler 5 bileşenden oluşan bir pakettir.",
+       "ekran": "Standart önlemler 5 bileşenden oluşan bir pakettir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0155",
+       "ses": "Bunlar el hijyeni, eldiven kullanımı, önlük, maske, yüz ve göz koruyucusu kullanımı, güvenli enjeksiyon ve kontamine ekipman ile araçların uygun şekilde yönetilmesidir.",
+       "ekran": "Bunlar el hijyeni, eldiven kullanımı, önlük, maske, yüz ve göz koruyucusu kullanımı, güvenli enjeksiyon ve kontamine ekipman ile araçların uygun şekilde yönetilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0156",
+       "ses": "Her bileşen bulaşın farklı bir noktasını keser: el hijyeni elleri, eldiven ellerin kan ve vücut sıvılarıyla kirlenmesini, önlük ve yüz koruyucular sıçramayı, güvenli enjeksiyon iğne batmasını, ekipman yönetimi de aletlerin indirekt temas aracı olmasını hedefler.",
+       "ekran": "Her bileşen bulaşın farklı bir noktasını keser: el hijyeni elleri, eldiven ellerin kan ve vücut sıvılarıyla kirlenmesini, önlük ve yüz koruyucular sıçramayı, güvenli enjeksiyon iğne batmasını, ekipman yönetimi de aletlerin indirekt temas aracı olmasını hedefler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b13",
+   "baslik": "El hijyeni ve eldiven",
+   "paragraflar": [
+    {
+     "id": "k1-36-p035",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-36-c0157",
+       "ses": "El hijyeni 2 yöntemle yapılır: sabun ve su ile yıkama ya da antiseptikle, yani alkol bazlı el antiseptiği ile ovalama.",
+       "ekran": "El hijyeni 2 yöntemle yapılır: sabun ve su ile yıkama ya da antiseptikle, yani alkol bazlı el antiseptiği ile ovalama.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0158",
+       "ses": "Yöntem seçimi ellerin durumuna göre yapılır.",
+       "ekran": "Yöntem seçimi ellerin durumuna göre yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0159",
+       "ses": "Antiseptik, ellerde gözle görülür kirlenme yoksa uygundur.",
+       "ekran": "Antiseptik, ellerde gözle görülür kirlenme yoksa uygundur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0160",
+       "ses": "Gözle görülür kirlenme varsa sabun ve su tercih edilir, çünkü antiseptik görünür kiri uzaklaştıramaz.",
+       "ekran": "Gözle görülür kirlenme varsa sabun ve su tercih edilir, çünkü antiseptik görünür kiri uzaklaştıramaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p036",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-36-c0161",
+       "ses": "Zamanlama en az yöntem kadar önemlidir.",
+       "ekran": "Zamanlama en az yöntem kadar önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0162",
+       "ses": "El hijyeni hastaya temas öncesinde ve sonrasında yapılır.",
+       "ekran": "El hijyeni hastaya temas öncesinde ve sonrasında yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0163",
+       "ses": "Ayrıca eldiven giymeden önce ve eldiveni çıkardıktan sonra yapılır; eldiven el hijyeninin yerini tutmaz.",
+       "ekran": "Ayrıca eldiven giymeden önce ve eldiveni çıkardıktan sonra yapılır; eldiven el hijyeninin yerini tutmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0164",
+       "ses": "Slayttaki şema bunu 2 adımda gösterir: önce yıka, dokun, yıka.",
+       "ekran": "Slayttaki şema bunu 2 adımda gösterir: önce yıka, dokun, yıka.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0165",
+       "ses": "Mukoza, enfekte materyal ya da bütünlüğü bozulmuş deri teması varsa sıra şöyledir: yıka, eldiven giy, dokun, eldiveni çıkar, yıka.",
+       "ekran": "Mukoza, enfekte materyal ya da bütünlüğü bozulmuş deri teması varsa sıra şöyledir: yıka, eldiven giy, dokun, eldiveni çıkar, yıka.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0166",
+       "ses": "Eldiven çıkarılırken eller kontamine olabilir, eldivende fark edilmeyen delikler de bulunabilir; bu yüzden eldiven sonrası el hijyeni atlanmaz.",
+       "ekran": "Eldiven çıkarılırken eller kontamine olabilir, eldivende fark edilmeyen delikler de bulunabilir; bu yüzden eldiven sonrası el hijyeni atlanmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p037",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-36-c0167",
+       "ses": "Eldivenin ne zaman değiştirileceği de 2 durumla tanımlanır.",
+       "ekran": "Eldivenin ne zaman değiştirileceği de 2 durumla tanımlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0168",
+       "ses": "Aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı bir hastaya geçmeden önce eldiven çıkarılır, el hijyeni yapılır ve yeni eldiven giyilir.",
+       "ekran": "Aynı hastada kirli bölgeden temiz bölgeye geçmeden önce ve farklı bir hastaya geçmeden önce eldiven çıkarılır, el hijyeni yapılır ve yeni eldiven giyilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0169",
+       "ses": "Aynı hastada bile değişim gerekir, çünkü hasta kendisi için de kaynaktır ve kirli bölgedeki mikroorganizma eldivenle temiz bölgeye taşınabilir.",
+       "ekran": "Aynı hastada bile değişim gerekir, çünkü hasta kendisi için de kaynaktır ve kirli bölgedeki mikroorganizma eldivenle temiz bölgeye taşınabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0170",
+       "ses": "Eldivenle hastadan hastaya geçmek ise eldiveni indirekt temas aracına dönüştürür ve çapraz bulaşa yol açar.",
+       "ekran": "Eldivenle hastadan hastaya geçmek ise eldiveni indirekt temas aracına dönüştürür ve çapraz bulaşa yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0171",
+       "ses": "Şemadaki üçüncü adım bu yüzden temiz mi, kirli mi ayrımını yapmaktır.",
+       "ekran": "Şemadaki üçüncü adım bu yüzden temiz mi, kirli mi ayrımını yapmaktır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b14",
+   "baslik": "Önlük, maske, yüz ve göz koruyucu",
+   "paragraflar": [
+    {
+     "id": "k1-36-p038",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-36-c0172",
+       "ses": "Standart önlemlerin üçüncü bileşeni gerekli durumlarda kullanılan bariyer ekipmanıdır ve seçim beklenen maruziyete göre yapılır.",
+       "ekran": "Standart önlemlerin üçüncü bileşeni gerekli durumlarda kullanılan bariyer ekipmanıdır ve seçim beklenen maruziyete göre yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0173",
+       "ses": "Kan ve vücut sıvılarıyla ya da bunlarla kontamine olmuş bir yüzeyle temas ihtimali varsa önlük giyilir.",
+       "ekran": "Kan ve vücut sıvılarıyla ya da bunlarla kontamine olmuş bir yüzeyle temas ihtimali varsa önlük giyilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0174",
+       "ses": "Kan ve vücut sıvılarının sıçrama ihtimali varsa önlük, maske, yüz ve göz koruyucu birlikte kullanılır.",
+       "ekran": "Kan ve vücut sıvılarının sıçrama ihtimali varsa önlük, maske, yüz ve göz koruyucu birlikte kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0175",
+       "ses": "Slayttaki görseller koruyucu gözlük, maske ve bone takmış bir çalışanı ve farklı renklerde koruyucu önlükleri gösterir.",
+       "ekran": "Slayttaki görseller koruyucu gözlük, maske ve bone takmış bir çalışanı ve farklı renklerde koruyucu önlükleri gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p039",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-36-c0176",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: sıçrama ihtimali olan işlemlerde önlük ve eldiven giymenin tek başına yeterli olduğunu söyleyen ifade yanlıştır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: sıçrama ihtimali olan işlemlerde önlük ve eldiven giymenin tek başına yeterli olduğunu söyleyen ifade yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0177",
+       "ses": "Sıçrama, sıvının doğrudan ağız, burun ve göz mukozasına ulaşmasına yol açabilir; bu yüzden mukozaları kapatan maske ve gözlük ya da yüz siperi eklenir.",
+       "ekran": "Sıçrama, sıvının doğrudan ağız, burun ve göz mukozasına ulaşmasına yol açabilir; bu yüzden mukozaları kapatan maske ve gözlük ya da yüz siperi eklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0178",
+       "ses": "Aynı soruda doğru ifadeler olarak şunlar geçti: kullanılmış iğneler tekrar kılıflarına geçirilmez, eldiven çıkarıldıktan sonra da el hijyeni uygulanır, kesici delici aletler delinmeye dirençli özel kutulara atılır ve kan ve vücut sıvısıyla kirlenmiş malzemeler uygun şekilde imha edilir.",
+       "ekran": "Aynı soruda doğru ifadeler olarak şunlar geçti: kullanılmış iğneler tekrar kılıflarına geçirilmez, eldiven çıkarıldıktan sonra da el hijyeni uygulanır, kesici delici aletler delinmeye dirençli özel kutulara atılır ve kan ve vücut sıvısıyla kirlenmiş malzemeler uygun şekilde imha edilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b15",
+   "baslik": "Güvenli enjeksiyon, ekipman ve personel sağlığı",
+   "paragraflar": [
+    {
+     "id": "k1-36-p040",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-36-c0179",
+       "ses": "Güvenli enjeksiyon sağlık çalışanını iğne batması yaralanmalarından korur.",
+       "ekran": "Güvenli enjeksiyon sağlık çalışanını iğne batması yaralanmalarından korur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0180",
+       "ses": "Kan yoluyla bulaşan etkenler için en riskli anlardan biri kullanılmış iğnenin elden çıkarılmasıdır.",
+       "ekran": "Kan yoluyla bulaşan etkenler için en riskli anlardan biri kullanılmış iğnenin elden çıkarılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0181",
+       "ses": "Burası önemli, sınav spotudur: iğneler kılıfına geçirilmez, çünkü kapak takma girişimi iğnenin parmağa batmasına yol açar.",
+       "ekran": "Burası önemli, sınav spotudur: iğneler kılıfına geçirilmez, çünkü kapak takma girişimi iğnenin parmağa batmasına yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0182",
+       "ses": "Sağlık Bakanlığı posterine göre iğnelerin ucu da bükülmez ve bu kural tüm delici aletleri kapsar.",
+       "ekran": "Sağlık Bakanlığı posterine göre iğnelerin ucu da bükülmez ve bu kural tüm delici aletleri kapsar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0183",
+       "ses": "Kullanılmış iğne doğrudan delinmeye dirençli kaplarda biriktirilir.",
+       "ekran": "Kullanılmış iğne doğrudan delinmeye dirençli kaplarda biriktirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0184",
+       "ses": "Slayttaki görsel, elle kılıf takma girişimini ve üzerinde biyolojik tehlike işareti ile enfekte atık yazan sarı renkli delinmeye dirençli kutuyu gösterir.",
+       "ekran": "Slayttaki görsel, elle kılıf takma girişimini ve üzerinde biyolojik tehlike işareti ile enfekte atık yazan sarı renkli delinmeye dirençli kutuyu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p041",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-36-c0185",
+       "ses": "Son bileşen kontamine ekipman ve araçların uygun yönetimidir; hastada kullanılan araçlar indirekt temas aracı olmasın diye uygun biçimde ayrılır ve işlenir.",
+       "ekran": "Son bileşen kontamine ekipman ve araçların uygun yönetimidir; hastada kullanılan araçlar indirekt temas aracı olmasın diye uygun biçimde ayrılır ve işlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0186",
+       "ses": "Sağlık Bakanlığı posteri bunu 2 maddeyle tamamlar.",
+       "ekran": "Sağlık Bakanlığı posteri bunu 2 maddeyle tamamlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0187",
+       "ses": "Çevre kontaminasyonunun önlenmesi için kan ve vücut sıvılarıyla kirlenen tekstil malzemeleri özel sızdırmaz torbalar içinde alandan uzaklaştırılır.",
+       "ekran": "Çevre kontaminasyonunun önlenmesi için kan ve vücut sıvılarıyla kirlenen tekstil malzemeleri özel sızdırmaz torbalar içinde alandan uzaklaştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0188",
+       "ses": "Personel sağlığı için de personel ellerindeki tüm yara ve çatlakları pansuman malzemesiyle kapatmalıdır; çünkü ellerdeki çatlaklar hasarlı deri sayılır ve direkt temas için açık bir giriş kapısıdır.",
+       "ekran": "Personel sağlığı için de personel ellerindeki tüm yara ve çatlakları pansuman malzemesiyle kapatmalıdır; çünkü ellerdeki çatlaklar hasarlı deri sayılır ve direkt temas için açık bir giriş kapısıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b16",
+   "baslik": "Standart önlemler posteri",
+   "paragraflar": [
+    {
+     "id": "k1-36-p042",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-36-c0189",
+       "ses": "Sağlık Bakanlığı posteri standart önlemleri, olası enfeksiyon tanısına bakılmaksızın tüm hastalarda uygulanması gereken önlemler olarak tanımlar.",
+       "ekran": "Sağlık Bakanlığı posteri standart önlemleri, olası enfeksiyon tanısına bakılmaksızın tüm hastalarda uygulanması gereken önlemler olarak tanımlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0190",
+       "ses": "Odaya girişte hastaya temas öncesinde ve sonrasında el hijyeni sağlanır.",
+       "ekran": "Odaya girişte hastaya temas öncesinde ve sonrasında el hijyeni sağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0191",
+       "ses": "Kan, vücut sıvısı, bütünlüğü bozulmuş deri ve mukoza ile temas riski varlığında personel kişisel koruyucu ekipman giyer: eldiven, önlük, maske ve göz ya da yüz koruyucu.",
+       "ekran": "Kan, vücut sıvısı, bütünlüğü bozulmuş deri ve mukoza ile temas riski varlığında personel kişisel koruyucu ekipman giyer: eldiven, önlük, maske ve göz ya da yüz koruyucu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0192",
+       "ses": "Burada dikkat edilecek nokta şudur: vücut sıvıları arasında ter istisnadır; terle temas tek başına koruyucu ekipman gerektirmez.",
+       "ekran": "Burada dikkat edilecek nokta şudur: vücut sıvıları arasında ter istisnadır; terle temas tek başına koruyucu ekipman gerektirmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p043",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-36-c0193",
+       "ses": "Posterde eldiven kullanımında el hijyeni maddesi de yer alır: eldiven giymeden önce ve çıkarıldıktan sonra el hijyeni sağlanır.",
+       "ekran": "Posterde eldiven kullanımında el hijyeni maddesi de yer alır: eldiven giymeden önce ve çıkarıldıktan sonra el hijyeni sağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0194",
+       "ses": "Delici kesici alet maddesinde iğnenin kapağı kapatılmaz, ucu bükülmez ve delinmeye dirençli kutuya atılır.",
+       "ekran": "Delici kesici alet maddesinde iğnenin kapağı kapatılmaz, ucu bükülmez ve delinmeye dirençli kutuya atılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0195",
+       "ses": "Çevre kontaminasyonunun önlenmesi ve personel sağlığı maddeleri de posteri tamamlar.",
+       "ekran": "Çevre kontaminasyonunun önlenmesi ve personel sağlığı maddeleri de posteri tamamlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0196",
+       "ses": "Standart önlemler her izolasyon türünün tabanıdır; diğer izolasyonlar bunların yerine değil, bunlara ek olarak uygulanır.",
+       "ekran": "Standart önlemler her izolasyon türünün tabanıdır; diğer izolasyonlar bunların yerine değil, bunlara ek olarak uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b17",
+   "baslik": "Temas izolasyonu: bileşenler ve oda düzeni",
+   "paragraflar": [
+    {
+     "id": "k1-36-p044",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-36-c0197",
+       "ses": "Bulaşma yolu bilinen ya da kuşkulanılan hastalarda standart önlemlere bulaş yoluna yönelik önlemler eklenir: temas, damlacık ve solunum izolasyonu.",
+       "ekran": "Bulaşma yolu bilinen ya da kuşkulanılan hastalarda standart önlemlere bulaş yoluna yönelik önlemler eklenir: temas, damlacık ve solunum izolasyonu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0198",
+       "ses": "Temas izolasyonu, temas ile oluşabilecek hastalıklara karşı standart önlemlere ek olarak uygulanır.",
+       "ekran": "Temas izolasyonu, temas ile oluşabilecek hastalıklara karşı standart önlemlere ek olarak uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0199",
+       "ses": "Kişisel koruma bileşenleri el hijyeni, eldiven kullanımı ve önlük kullanımıdır.",
+       "ekran": "Kişisel koruma bileşenleri el hijyeni, eldiven kullanımı ve önlük kullanımıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0200",
+       "ses": "Eldiven hasta ve çevresine dokunurken elleri, önlük ise hasta ya da çevresiyle temas ihtimalinde giysiyi korur.",
+       "ekran": "Eldiven hasta ve çevresine dokunurken elleri, önlük ise hasta ya da çevresiyle temas ihtimalinde giysiyi korur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p045",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-36-c0201",
+       "ses": "Hasta yerleşiminde ilk tercih tek kişilik odadır.",
+       "ekran": "Hasta yerleşiminde ilk tercih tek kişilik odadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0202",
+       "ses": "Tek kişilik oda mümkün değilse aynı mikroorganizma ile enfekte ya da kolonize hastalar aynı odaya yerleştirilir; buna kohort uygulaması denir.",
+       "ekran": "Tek kişilik oda mümkün değilse aynı mikroorganizma ile enfekte ya da kolonize hastalar aynı odaya yerleştirilir; buna kohort uygulaması denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0203",
+       "ses": "Mantığı basittir: aynı etkeni taşıyan hastalar birbirine yeni bir etken bulaştırmaz, farklı etken taşıyanları aynı odaya koymak ise çapraz bulaşa zemin hazırlar.",
+       "ekran": "Mantığı basittir: aynı etkeni taşıyan hastalar birbirine yeni bir etken bulaştırmaz, farklı etken taşıyanları aynı odaya koymak ise çapraz bulaşa zemin hazırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0204",
+       "ses": "Tanımdaki kolonize kelimesi bilinçlidir; temas izolasyonu kolonizasyonu olanlara da uygulanır.",
+       "ekran": "Tanımdaki kolonize kelimesi bilinçlidir; temas izolasyonu kolonizasyonu olanlara da uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p046",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-36-c0205",
+       "ses": "Son 3 kural indirekt temas yolunu oda kapısında kesmeye yöneliktir.",
+       "ekran": "Son 3 kural indirekt temas yolunu oda kapısında kesmeye yöneliktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0206",
+       "ses": "Odalar ya da hastalar arasında malzeme veya tıbbi cihazın ortak kullanımı önlenir; tansiyon aleti, termometre gibi araçlar hastaya özel ayrılır.",
+       "ekran": "Odalar ya da hastalar arasında malzeme veya tıbbi cihazın ortak kullanımı önlenir; tansiyon aleti, termometre gibi araçlar hastaya özel ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0207",
+       "ses": "Kişisel koruyucu ekipmanlar hasta odasından ayrılmadan çıkarılır; kontamine eldiven ve önlük koridora taşınmaz.",
+       "ekran": "Kişisel koruyucu ekipmanlar hasta odasından ayrılmadan çıkarılır; kontamine eldiven ve önlük koridora taşınmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0208",
+       "ses": "Odadan ayrıldıktan sonra da el hijyeni yapılır.",
+       "ekran": "Odadan ayrıldıktan sonra da el hijyeni yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p047",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-36-c0209",
+       "ses": "Burası önemli, bu soru çıkmış sorularda birçok kez soruldu: temas izolasyonu için yapılması gerekenlerden olmayan seçenek, odaya girmeden önce N95 maske takılmasıdır.",
+       "ekran": "Burası önemli, bu soru çıkmış sorularda birçok kez soruldu: temas izolasyonu için yapılması gerekenlerden olmayan seçenek, odaya girmeden önce N95 maske takılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0210",
+       "ses": "Kohort uygulaması, ortak malzeme kullanımının önlenmesi, koruyucu ekipmanın odadan ayrılmadan çıkarılması ve odadan sonra el hijyeni temas izolasyonunun parçasıdır.",
+       "ekran": "Kohort uygulaması, ortak malzeme kullanımının önlenmesi, koruyucu ekipmanın odadan ayrılmadan çıkarılması ve odadan sonra el hijyeni temas izolasyonunun parçasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0211",
+       "ses": "N95 maske ise solunum yolu bulaşına yönelik bir ekipmandır; temas izolasyonunda maske rutin olarak yer almaz, çünkü hedeflenen yol solunum değil, dokunmadır.",
+       "ekran": "N95 maske ise solunum yolu bulaşına yönelik bir ekipmandır; temas izolasyonunda maske rutin olarak yer almaz, çünkü hedeflenen yol solunum değil, dokunmadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b18",
+   "baslik": "Temas izolasyonu endikasyonları",
+   "paragraflar": [
+    {
+     "id": "k1-36-p048",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-36-c0212",
+       "ses": "Temas izolasyonu, direkt temasla kolayca bulaşabilecek bir hastalığı olan ya da bundan kuşkulanılan hastalara uygulanır.",
+       "ekran": "Temas izolasyonu, direkt temasla kolayca bulaşabilecek bir hastalığı olan ya da bundan kuşkulanılan hastalara uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0213",
+       "ses": "Slayttaki tablonun ilk grubu dirençli bakterilerle enfeksiyon ya da kolonizasyondur: metisiline dirençli Staphylococcus aureus, vankomisine dirençli enterokok, genişlemiş spektrumlu beta laktamaz üreten bakteriler, çoklu dirençli Pseudomonas aeruginosa, Enterobacter cloacae ve karbapenem dirençli bakteriler.",
+       "ekran": "Slayttaki tablonun ilk grubu dirençli bakterilerle enfeksiyon ya da kolonizasyondur: metisiline dirençli Staphylococcus aureus, vankomisine dirençli enterokok, genişlemiş spektrumlu beta laktamaz üreten bakteriler, çoklu dirençli Pseudomonas aeruginosa, Enterobacter cloacae ve karbapenem dirençli bakteriler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0214",
+       "ses": "Bu grupta kolonizasyon da tek başına izolasyon nedenidir.",
+       "ekran": "Bu grupta kolonizasyon da tek başına izolasyon nedenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0215",
+       "ses": "İkinci grup enterik enfeksiyonlardır: Clostridium difficile, Escherichia coli O157:H7, hepatit A, rotavirüs ve şigella.",
+       "ekran": "İkinci grup enterik enfeksiyonlardır: Clostridium difficile, Escherichia coli O157:H7, hepatit A, rotavirüs ve şigella.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p049",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-36-c0216",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: karbapenem dirençli Klebsiella pneumoniae ile kolonize ya da enfekte bir hastada standart önlemlere ek olarak temas izolasyonu uygulanır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: karbapenem dirençli Klebsiella pneumoniae ile kolonize ya da enfekte bir hastada standart önlemlere ek olarak temas izolasyonu uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0217",
+       "ses": "Benzer bir vakada, kan kültüründe epidemiyolojik önemi olan Klebsiella pneumoniae suşu üreyen ve genel cerrahiye yatırılan hastada da doğru seçenek standart önlemler ile temas izolasyonudur.",
+       "ekran": "Benzer bir vakada, kan kültüründe epidemiyolojik önemi olan Klebsiella pneumoniae suşu üreyen ve genel cerrahiye yatırılan hastada da doğru seçenek standart önlemler ile temas izolasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0218",
+       "ses": "Dirençli etken için damlacık ya da solunum izolasyonu endike değildir.",
+       "ekran": "Dirençli etken için damlacık ya da solunum izolasyonu endike değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p050",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-36-c0219",
+       "ses": "Tablonun geri kalanı şunlardır.",
+       "ekran": "Tablonun geri kalanı şunlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0220",
+       "ses": "Bebek ya da çocuklarda solunum yolu enfeksiyonu olarak sinsityal virüs.",
+       "ekran": "Bebek ya da çocuklarda solunum yolu enfeksiyonu olarak sinsityal virüs.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0221",
+       "ses": "Bebek ve çocuklarda enteroviral enfeksiyonlar başlığında rotavirüs ve parainfluenza.",
+       "ekran": "Bebek ve çocuklarda enteroviral enfeksiyonlar başlığında rotavirüs ve parainfluenza.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0222",
+       "ses": "Yüksek bulaşıcılıktaki cilt enfeksiyonları: cilt difterisi, yenidoğanda ya da mukokütanöz herpes simpleks, pedikülöz, skabiyes, impetigo, açık apse, selülit ya da dekübit, stafilokokal fronkülozu olan çocuklar ve zoster enfeksiyonu.",
+       "ekran": "Yüksek bulaşıcılıktaki cilt enfeksiyonları: cilt difterisi, yenidoğanda ya da mukokütanöz herpes simpleks, pedikülöz, skabiyes, impetigo, açık apse, selülit ya da dekübit, stafilokokal fronkülozu olan çocuklar ve zoster enfeksiyonu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0223",
+       "ses": "Son olarak viral hemorajik konjonktivit ve viral hemorajik ateşler: Ebola, Lassa, Marburg ve Kırım Kongo.",
+       "ekran": "Son olarak viral hemorajik konjonktivit ve viral hemorajik ateşler: Ebola, Lassa, Marburg ve Kırım Kongo.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0224",
+       "ses": "Bu hastalıkların ortak noktası deri, mukoza, sekresyon ya da kontamine yüzeyle kolayca bulaşabilmeleridir.",
+       "ekran": "Bu hastalıkların ortak noktası deri, mukoza, sekresyon ya da kontamine yüzeyle kolayca bulaşabilmeleridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b19",
+   "baslik": "Temas izolasyonu posteri",
+   "paragraflar": [
+    {
+     "id": "k1-36-p051",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-36-c0225",
+       "ses": "Sağlık Bakanlığı posterlerinde her izolasyonun bir simgesi vardır.",
+       "ekran": "Sağlık Bakanlığı posterlerinde her izolasyonun bir simgesi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0226",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: temas izolasyonunu simgeleyen işaret kırmızı yıldızdır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: temas izolasyonunu simgeleyen işaret kırmızı yıldızdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0227",
+       "ses": "Damlacık izolasyonunun simgesi mavi çiçek, solunum izolasyonunun simgesi ise sarı yapraktır.",
+       "ekran": "Damlacık izolasyonunun simgesi mavi çiçek, solunum izolasyonunun simgesi ise sarı yapraktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0228",
+       "ses": "Temas izolasyonu posteri hastanın tek kişilik odaya yatırıldığını belirtir ve ekipmanın sırasını gösterir.",
+       "ekran": "Temas izolasyonu posteri hastanın tek kişilik odaya yatırıldığını belirtir ve ekipmanın sırasını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0229",
+       "ses": "Odaya girişte önce el hijyeni sağlanır, yani alkol bazlı el antiseptiği ile ovalama ya da el yıkama yapılır.",
+       "ekran": "Odaya girişte önce el hijyeni sağlanır, yani alkol bazlı el antiseptiği ile ovalama ya da el yıkama yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0230",
+       "ses": "Ardından hasta ve çevresiyle temas ihtimali varsa önlük giyilir, sonra eldiven giyilir.",
+       "ekran": "Ardından hasta ve çevresiyle temas ihtimali varsa önlük giyilir, sonra eldiven giyilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0231",
+       "ses": "Odadan çıkarken önce eldiven çıkarılır, sonra önlük çıkarılır, en son el hijyeni sağlanır.",
+       "ekran": "Odadan çıkarken önce eldiven çıkarılır, sonra önlük çıkarılır, en son el hijyeni sağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0232",
+       "ses": "Mantık şudur: en kirli ekipman ilk çıkarılır, tüm ekipman çıkarıldıktan sonra eller temizlenir.",
+       "ekran": "Mantık şudur: en kirli ekipman ilk çıkarılır, tüm ekipman çıkarıldıktan sonra eller temizlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b20",
+   "baslik": "Damlacık izolasyonu",
+   "paragraflar": [
+    {
+     "id": "k1-36-p052",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-36-c0233",
+       "ses": "Damlacık izolasyonu, öksürme, hapşırma ve konuşma ile bulaşabilecek hastalıklara karşı standart önlemlere ek olarak uygulanır.",
+       "ekran": "Damlacık izolasyonu, öksürme, hapşırma ve konuşma ile bulaşabilecek hastalıklara karşı standart önlemlere ek olarak uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0234",
+       "ses": "Kişisel koruma bileşenleri el hijyeni, eldiven kullanımı ve 1 metreden yakın mesafe için önlük, maske, yüz ve göz koruyucusudur.",
+       "ekran": "Kişisel koruma bileşenleri el hijyeni, eldiven kullanımı ve 1 metreden yakın mesafe için önlük, maske, yüz ve göz koruyucusudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0235",
+       "ses": "1 metre sınırı damlacığın fiziğinden gelir: 100 mikrometreden büyük damlacıklar balistik hareketle kısa mesafede yere düşer.",
+       "ekran": "1 metre sınırı damlacığın fiziğinden gelir: 100 mikrometreden büyük damlacıklar balistik hareketle kısa mesafede yere düşer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0236",
+       "ses": "Hastadan uzakta çalışırken bu partiküllerin mukozaya ulaşma olasılığı düşüktür, yakın çalışmada ise ağız, burun ve göz mukozası korunmalıdır.",
+       "ekran": "Hastadan uzakta çalışırken bu partiküllerin mukozaya ulaşma olasılığı düşüktür, yakın çalışmada ise ağız, burun ve göz mukozası korunmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p053",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-36-c0237",
+       "ses": "Oda düzeninde ilk tercih yine tek kişilik odadır; mümkün değilse aynı mikroorganizma ile enfekte ya da kolonize hastalarla kohort yapılır.",
+       "ekran": "Oda düzeninde ilk tercih yine tek kişilik odadır; mümkün değilse aynı mikroorganizma ile enfekte ya da kolonize hastalarla kohort yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0238",
+       "ses": "Damlacığa özgü ek kural şudur: farklı tanılı hastalar aynı odaya yerleştirildiğinde aralarında en az 1 metre mesafe bırakılır.",
+       "ekran": "Damlacığa özgü ek kural şudur: farklı tanılı hastalar aynı odaya yerleştirildiğinde aralarında en az 1 metre mesafe bırakılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0239",
+       "ses": "Odalar ya da hastalar arasında malzeme veya tıbbi cihaz ortak kullanılmaz, koruyucu ekipman odadan ayrılmadan çıkarılır ve odadan sonra el hijyeni yapılır.",
+       "ekran": "Odalar ya da hastalar arasında malzeme veya tıbbi cihaz ortak kullanılmaz, koruyucu ekipman odadan ayrılmadan çıkarılır ve odadan sonra el hijyeni yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p054",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-36-c0240",
+       "ses": "Hastanın görüntüleme ya da başka bir birime götürülmesi gerekirse hasta cerrahi maske kullanır; posterdeki ifadeyle hastanın nakli gerekliyse tıbbi maske kullanması sağlanır.",
+       "ekran": "Hastanın görüntüleme ya da başka bir birime götürülmesi gerekirse hasta cerrahi maske kullanır; posterdeki ifadeyle hastanın nakli gerekliyse tıbbi maske kullanması sağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0241",
+       "ses": "Maske damlacıkları kaynağında, yani hastanın ağız ve burnunda tutar ve koridordaki personeli, hastaları ve ziyaretçileri korur.",
+       "ekran": "Maske damlacıkları kaynağında, yani hastanın ağız ve burnunda tutar ve koridordaki personeli, hastaları ve ziyaretçileri korur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0242",
+       "ses": "Bunu kaynak kontrolü olarak düşünebilirsiniz: bariyer duyarlı kişiye değil, doğrudan kaynağa uygulanır.",
+       "ekran": "Bunu kaynak kontrolü olarak düşünebilirsiniz: bariyer duyarlı kişiye değil, doğrudan kaynağa uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0243",
+       "ses": "Sınav spotu olarak üç bir metreyi birlikte hatırlayın: koruyucu kullanım sınırı 1 metre, farklı tanılı hastalar arası mesafe en az 1 metre, transportta da maskeyi hasta takar.",
+       "ekran": "Sınav spotu olarak üç bir metreyi birlikte hatırlayın: koruyucu kullanım sınırı 1 metre, farklı tanılı hastalar arası mesafe en az 1 metre, transportta da maskeyi hasta takar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b21",
+   "baslik": "Damlacık izolasyonu endikasyonları ve posteri",
+   "paragraflar": [
+    {
+     "id": "k1-36-p055",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-36-c0244",
+       "ses": "Damlacık izolasyonu, damlacık yoluyla bulaşan bir enfeksiyonu olduğu bilinen ya da kuşkulanılan hastalara uygulanır.",
+       "ekran": "Damlacık izolasyonu, damlacık yoluyla bulaşan bir enfeksiyonu olduğu bilinen ya da kuşkulanılan hastalara uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0245",
+       "ses": "Slayttaki tablonun ilk grubu menenjit, pnömoni, epiglottit ve sepsis tablolarıdır: Neisseria meningitidis ve Haemophilus influenzae.",
+       "ekran": "Slayttaki tablonun ilk grubu menenjit, pnömoni, epiglottit ve sepsis tablolarıdır: Neisseria meningitidis ve Haemophilus influenzae.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0246",
+       "ses": "İkinci grup damlacık yoluyla yayılan diğer solunum yolu enfeksiyonlarıdır: difteri, boğmaca, Mycoplasma pneumoniae ve A grubu beta hemolitik streptokok enfeksiyonu.",
+       "ekran": "İkinci grup damlacık yoluyla yayılan diğer solunum yolu enfeksiyonlarıdır: difteri, boğmaca, Mycoplasma pneumoniae ve A grubu beta hemolitik streptokok enfeksiyonu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0247",
+       "ses": "Üçüncü grup damlacık yoluyla yayılan diğer ciddi viral hastalıklardır: adenovirüs, grip, kabakulak, parvovirüs B19 ve kızamıkçık.",
+       "ekran": "Üçüncü grup damlacık yoluyla yayılan diğer ciddi viral hastalıklardır: adenovirüs, grip, kabakulak, parvovirüs B19 ve kızamıkçık.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0248",
+       "ses": "Kızamıkçık bu listededir; adı benzeyen kızamıkla karıştırmayın.",
+       "ekran": "Kızamıkçık bu listededir; adı benzeyen kızamıkla karıştırmayın.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0249",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: parvovirüs B19 enfeksiyonunda rutin olarak solunum izolasyonuna gerek yoktur, çünkü parvovirüs B19 damlacık izolasyonu listesindedir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: parvovirüs B19 enfeksiyonunda rutin olarak solunum izolasyonuna gerek yoktur, çünkü parvovirüs B19 damlacık izolasyonu listesindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0250",
+       "ses": "Kızamık, su çiçeği ve akciğer tüberkülozu ise solunum izolasyonu gerektirir.",
+       "ekran": "Kızamık, su çiçeği ve akciğer tüberkülozu ise solunum izolasyonu gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p056",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-36-c0251",
+       "ses": "Damlacık izolasyonu posteri de hastanın tek kişilik odaya yatırıldığını belirtir.",
+       "ekran": "Damlacık izolasyonu posteri de hastanın tek kişilik odaya yatırıldığını belirtir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0252",
+       "ses": "Hastaya 1 metreden daha yakın çalışırken el hijyeni sağlanır, tıbbi maske ve gözlük ya da yüz koruyucu kullanılır.",
+       "ekran": "Hastaya 1 metreden daha yakın çalışırken el hijyeni sağlanır, tıbbi maske ve gözlük ya da yüz koruyucu kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0253",
+       "ses": "Hasta alanından ayrılırken el hijyeni sağlanır, gözlük ya da yüz koruyucu çıkarılır, maske hastadan en az 1 metre uzaklaştıktan sonra çıkarılır ve yeniden el hijyeni sağlanır.",
+       "ekran": "Hasta alanından ayrılırken el hijyeni sağlanır, gözlük ya da yüz koruyucu çıkarılır, maske hastadan en az 1 metre uzaklaştıktan sonra çıkarılır ve yeniden el hijyeni sağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0254",
+       "ses": "Standart önlem posterindeki adımlarla birleştirildiğinde giyme sırası el hijyeni, önlük, eldiven, maske, gözlük ya da yüz koruyucu olur; çıkarırken ilk eldiven, en son maske çıkarılır.",
+       "ekran": "Standart önlem posterindeki adımlarla birleştirildiğinde giyme sırası el hijyeni, önlük, eldiven, maske, gözlük ya da yüz koruyucu olur; çıkarırken ilk eldiven, en son maske çıkarılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b22",
+   "baslik": "Solunum izolasyonu: maske ve oda havası",
+   "paragraflar": [
+    {
+     "id": "k1-36-p057",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-36-c0255",
+       "ses": "Solunum izolasyonu, solunum yoluyla bulaşabileceği bilinen ya da kuşkulanılan bir hastalığı olanlarda standart önlemlere ek olarak uygulanır.",
+       "ekran": "Solunum izolasyonu, solunum yoluyla bulaşabileceği bilinen ya da kuşkulanılan bir hastalığı olanlarda standart önlemlere ek olarak uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0256",
+       "ses": "Kişisel koruma bileşenleri el hijyeni, eldiven ve önlük, maske, yüz ve göz koruyucusudur; fark maske türündedir.",
+       "ekran": "Kişisel koruma bileşenleri el hijyeni, eldiven ve önlük, maske, yüz ve göz koruyucusudur; fark maske türündedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0257",
+       "ses": "Burası önemli, sınav spotudur: solunum izolasyonunda personelin maskesi N95 ya da FFP2 olmalıdır.",
+       "ekran": "Burası önemli, sınav spotudur: solunum izolasyonunda personelin maskesi N95 ya da FFP2 olmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0258",
+       "ses": "Aerosol partikülleri havada uzun süre asılı kalır ve distal solunum yollarına ulaşabilir; bu yüzden personelin soluduğu hava yüksek filtrasyonlu maskeyle süzülür.",
+       "ekran": "Aerosol partikülleri havada uzun süre asılı kalır ve distal solunum yollarına ulaşabilir; bu yüzden personelin soluduğu hava yüksek filtrasyonlu maskeyle süzülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p058",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-36-c0259",
+       "ses": "Solunum izolasyonunun ayırt edici özelliği oda havasının yönetilmesidir, çünkü aerosol uzun süre asılı kaldığı için havanın kendisi kaynak olur.",
+       "ekran": "Solunum izolasyonunun ayırt edici özelliği oda havasının yönetilmesidir, çünkü aerosol uzun süre asılı kaldığı için havanın kendisi kaynak olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0260",
+       "ses": "Hasta tek kişilik odaya alınır; mümkün değilse aynı mikroorganizma ile enfekte ya da kolonize hastalarla kohort yapılır.",
+       "ekran": "Hasta tek kişilik odaya alınır; mümkün değilse aynı mikroorganizma ile enfekte ya da kolonize hastalarla kohort yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0261",
+       "ses": "Odada sürekli negatif basınç sağlanır; hava akımı koridordan odaya doğrudur, böylece kontamine oda havası koridora kaçmaz.",
+       "ekran": "Odada sürekli negatif basınç sağlanır; hava akımı koridordan odaya doğrudur, böylece kontamine oda havası koridora kaçmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0262",
+       "ses": "Saatte 6 ile 12 kez hava değişimi yapılır ve asılı partiküller seyreltilip uzaklaştırılır.",
+       "ekran": "Saatte 6 ile 12 kez hava değişimi yapılır ve asılı partiküller seyreltilip uzaklaştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0263",
+       "ses": "Posterde hastanın mümkünse negatif basınçlı izolasyon odasında izlenmesi ve oda kapısının sürekli kapalı tutulması vurgulanır; açık kapı basınç farkını bozar.",
+       "ekran": "Posterde hastanın mümkünse negatif basınçlı izolasyon odasında izlenmesi ve oda kapısının sürekli kapalı tutulması vurgulanır; açık kapı basınç farkını bozar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0264",
+       "ses": "Koruyucu ekipman yine odadan ayrılmadan çıkarılır ve odadan sonra el hijyeni yapılır.",
+       "ekran": "Koruyucu ekipman yine odadan ayrılmadan çıkarılır ve odadan sonra el hijyeni yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0265",
+       "ses": "Hastanın transportu gerekirse hasta cerrahi maske kullanır; kaynak kontrolü mantığı burada da geçerlidir.",
+       "ekran": "Hastanın transportu gerekirse hasta cerrahi maske kullanır; kaynak kontrolü mantığı burada da geçerlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0266",
+       "ses": "Personel N95 takarken hastaya cerrahi maske yeterlidir.",
+       "ekran": "Personel N95 takarken hastaya cerrahi maske yeterlidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b23",
+   "baslik": "Solunum izolasyonu endikasyonları",
+   "paragraflar": [
+    {
+     "id": "k1-36-p059",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-36-c0267",
+       "ses": "Solunum izolasyonu kızamık, su çiçeği yani varisella, yaygın zona ve akciğer ya da larenks tüberkülozunda uygulanır.",
+       "ekran": "Solunum izolasyonu kızamık, su çiçeği yani varisella, yaygın zona ve akciğer ya da larenks tüberkülozunda uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0268",
+       "ses": "SARS-CoV-2 ise aerosol oluşturan işlemler sırasında bu listeye girer.",
+       "ekran": "SARS-CoV-2 ise aerosol oluşturan işlemler sırasında bu listeye girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0269",
+       "ses": "Kızamık burada, kızamıkçık ise damlacık listesindedir; zoster de yaygın olduğunda solunum izolasyonu gerektirir.",
+       "ekran": "Kızamık burada, kızamıkçık ise damlacık listesindedir; zoster de yaygın olduğunda solunum izolasyonu gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0270",
+       "ses": "Burası önemli, bu soru çıkmış sorularda defalarca soruldu: kızamık, su çiçeği, SARS-CoV-2 enfeksiyonu ve tüberküloz aerosolle bulaşabilir; aerosolle bulaşan enfeksiyonlardan olmayan seçenek Neisseria meningitidis'tir.",
+       "ekran": "Burası önemli, bu soru çıkmış sorularda defalarca soruldu: kızamık, su çiçeği, SARS-CoV-2 enfeksiyonu ve tüberküloz aerosolle bulaşabilir; aerosolle bulaşan enfeksiyonlardan olmayan seçenek Neisseria meningitidis'tir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0271",
+       "ses": "Meningokok damlacık yoluyla bulaşır ve damlacık izolasyonu gerektirir.",
+       "ekran": "Meningokok damlacık yoluyla bulaşır ve damlacık izolasyonu gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p060",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-36-c0272",
+       "ses": "Bir başka çıkmış soru da solunum izolasyonu hakkındaki yanlış ifadeyi sordu.",
+       "ekran": "Bir başka çıkmış soru da solunum izolasyonu hakkındaki yanlış ifadeyi sordu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0273",
+       "ses": "Burası önemli: solunum izolasyonunun tüberküloz menenjiti olan bir hastada uygulandığını söyleyen ifade yanlıştır; solunum izolasyonu akciğer ya da larenks tüberkülozunda uygulanır.",
+       "ekran": "Burası önemli: solunum izolasyonunun tüberküloz menenjiti olan bir hastada uygulandığını söyleyen ifade yanlıştır; solunum izolasyonu akciğer ya da larenks tüberkülozunda uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0274",
+       "ses": "Aynı soruda doğru ifadeler olarak hasta odasında sürekli negatif basınç ve saatte 6 ile 12 hava değişimi, transportta hastaya cerrahi maske ve odaya girerken N95 maske kullanımı yer aldı.",
+       "ekran": "Aynı soruda doğru ifadeler olarak hasta odasında sürekli negatif basınç ve saatte 6 ile 12 hava değişimi, transportta hastaya cerrahi maske ve odaya girerken N95 maske kullanımı yer aldı.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b24",
+   "baslik": "Aerosol oluşturan işlemler ve solunum izolasyonu posteri",
+   "paragraflar": [
+    {
+     "id": "k1-36-p061",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-36-c0275",
+       "ses": "Slayttaki Sağlık Bakanlığı görseli, COVID-19'un olası ya da kesin olgularında N95 ya da FFP2 maske gerektiren aerosol oluşturan işlemleri sıralar.",
+       "ekran": "Slayttaki Sağlık Bakanlığı görseli, COVID-19'un olası ya da kesin olgularında N95 ya da FFP2 maske gerektiren aerosol oluşturan işlemleri sıralar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0276",
+       "ses": "Solunum yolu işlemleri olarak solunum yolundan örnek alınması, entübasyon, solunum sekresyonlarının aspirasyonu ve non invaziv ya da invaziv ventilasyon.",
+       "ekran": "Solunum yolu işlemleri olarak solunum yolundan örnek alınması, entübasyon, solunum sekresyonlarının aspirasyonu ve non invaziv ya da invaziv ventilasyon.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0277",
+       "ses": "Tedavi uygulamaları olarak yüksek akımlı oksijen tedavisi, nebülizer tedavisi ve kardiyopulmoner resüsitasyon.",
+       "ekran": "Tedavi uygulamaları olarak yüksek akımlı oksijen tedavisi, nebülizer tedavisi ve kardiyopulmoner resüsitasyon.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0278",
+       "ses": "Diğer girişimler olarak bronkoskopik ve endoskopik işlemler ile diş hekimliği uygulamaları.",
+       "ekran": "Diğer girişimler olarak bronkoskopik ve endoskopik işlemler ile diş hekimliği uygulamaları.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0279",
+       "ses": "Bu işlemler, damlacık fiziğinde gördüğümüz itici kuvveti artırarak aerosol oluşturur.",
+       "ekran": "Bu işlemler, damlacık fiziğinde gördüğümüz itici kuvveti artırarak aerosol oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p062",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-36-c0280",
+       "ses": "Solunum izolasyonu posterinde hasta alanına girmeden önce sıra şöyledir: el hijyeni sağla, önlük giy, N95 ya da FFP2 maske kullan, aerosol oluşturan işlem ve sıçrama ihtimali olan durumlarda gözlük ya da yüz koruyucu kullan ve eldiven giy.",
+       "ekran": "Solunum izolasyonu posterinde hasta alanına girmeden önce sıra şöyledir: el hijyeni sağla, önlük giy, N95 ya da FFP2 maske kullan, aerosol oluşturan işlem ve sıçrama ihtimali olan durumlarda gözlük ya da yüz koruyucu kullan ve eldiven giy.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0281",
+       "ses": "Hasta alanından ayrılırken eldiven çıkarılır ve ardından el hijyeni sağlanır, gözlük ya da yüz koruyucu ve önlük çıkarılır.",
+       "ekran": "Hasta alanından ayrılırken eldiven çıkarılır ve ardından el hijyeni sağlanır, gözlük ya da yüz koruyucu ve önlük çıkarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0282",
+       "ses": "Maske ise en son, hasta alanından çıktıktan sonra çıkarılır ve yeniden el hijyeni sağlanır.",
+       "ekran": "Maske ise en son, hasta alanından çıktıktan sonra çıkarılır ve yeniden el hijyeni sağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0283",
+       "ses": "Burası önemli, sınav spotudur: oda havası aerosol içerdiği için N95 maske odanın içinde değil, hasta alanının dışında çıkarılır.",
+       "ekran": "Burası önemli, sınav spotudur: oda havası aerosol içerdiği için N95 maske odanın içinde değil, hasta alanının dışında çıkarılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-36-b25",
+   "baslik": "3 izolasyonun karşılaştırması ve özet",
+   "paragraflar": [
+    {
+     "id": "k1-36-p063",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-36-c0284",
+       "ses": "Posterler 4 kategoriyi yan yana verir: tüm hastalara uygulanan standart önlemler ve bunlara eklenen temas, damlacık ve solunum izolasyonu.",
+       "ekran": "Posterler 4 kategoriyi yan yana verir: tüm hastalara uygulanan standart önlemler ve bunlara eklenen temas, damlacık ve solunum izolasyonu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0285",
+       "ses": "Personel maskesi temasta rutin değildir, damlacıkta 1 metreden yakın çalışırken tıbbi maskedir, solunumda N95 ya da FFP2dir.",
+       "ekran": "Personel maskesi temasta rutin değildir, damlacıkta 1 metreden yakın çalışırken tıbbi maskedir, solunumda N95 ya da FFP2dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0286",
+       "ses": "Oda havası için temas ve damlacıkta özel koşul yoktur; solunumda negatif basınç ve saatte 6 ile 12 hava değişimi gerekir.",
+       "ekran": "Oda havası için temas ve damlacıkta özel koşul yoktur; solunumda negatif basınç ve saatte 6 ile 12 hava değişimi gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0287",
+       "ses": "Transportta temas izolasyonunda ek kural yokken damlacık ve solunumda hasta cerrahi maske takar.",
+       "ekran": "Transportta temas izolasyonunda ek kural yokken damlacık ve solunumda hasta cerrahi maske takar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0288",
+       "ses": "Örnek olarak temas için metisiline dirençli Staphylococcus aureus ve Clostridium difficile, damlacık için meningokok ve boğmaca, solunum için kızamık ve tüberküloz akılda tutulabilir.",
+       "ekran": "Örnek olarak temas için metisiline dirençli Staphylococcus aureus ve Clostridium difficile, damlacık için meningokok ve boğmaca, solunum için kızamık ve tüberküloz akılda tutulabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-36-p064",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-36-c0289",
+       "ses": "Özetle, üç izolasyonun hepsinde el hijyeni ve eldiven vardır, koruyucu ekipman odadan ayrılmadan çıkarılır ve ardından el hijyeni yapılır; solunum izolasyonunda maske dışarıda çıkarılır.",
+       "ekran": "Özetle, üç izolasyonun hepsinde el hijyeni ve eldiven vardır, koruyucu ekipman odadan ayrılmadan çıkarılır ve ardından el hijyeni yapılır; solunum izolasyonunda maske dışarıda çıkarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0290",
+       "ses": "Ayrım bulaş yolundan gelir: temas dokunmayla, damlacık büyük partikülle, solunum aerosolle bulaşır.",
+       "ekran": "Ayrım bulaş yolundan gelir: temas dokunmayla, damlacık büyük partikülle, solunum aerosolle bulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-36-c0291",
+       "ses": "Hiçbir izolasyon standart önlemlerin yerini tutmaz; hepsi onlara eklenir.",
+       "ekran": "Hiçbir izolasyon standart önlemlerin yerini tutmaz; hepsi onlara eklenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

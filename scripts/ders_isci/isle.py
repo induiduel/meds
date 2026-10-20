@@ -128,6 +128,21 @@ def program_eslesmesi(yol: str, metin: str = "") -> dict:
     return out
 
 
+def ders_kaydi_eslesmesi(kurul: int, es: dict) -> dict | None:
+    """Kurul 2+: ders numarası/kodu ders kayıt defterinden (src/data/dersler/k<N>.json, scripts/dersler/ders_kaydi.py).
+    Böylece ders_id = k<N>-<program sırası>-<slug> olur ve tüm üreticiler (spot, asistan, çözücü, ses, olası soru) aynı
+    kimliği kullanır. Kurul 1 eski numaralandırmada kalır. Eşleşme: aynı branş + aynı konu (katlanmış)."""
+    if not kurul or kurul < 2:
+        return None
+    defter = oku(APP / "src" / "data" / "dersler" / f"k{kurul}.json", {})
+    for x in defter.get("dersler") or []:
+        k, e = fold(x.get("konu", "")), fold(es.get("konu", ""))
+        # programdaki konuya bazen hoca adı yapışık gelir ("Panik Bozukluk Doç. Dr. …"): önek eşleşmesi de kabul
+        if k and (k == e or (e.startswith(k + " ") and len(k) >= 8)) and fold(x.get("brans", "")) == fold(es.get("ders", "")):
+            return {"no": int(x["id"].split("-")[1]), "id": x["id"], "kod": x["kod"]}
+    return None
+
+
 def sonraki_numara(kurul: int) -> int:
     decks = oku(APP / "src" / "data" / "interactive_learning_decks.json", [])
     decks = decks if isinstance(decks, list) else decks.get("decks", [])
@@ -228,7 +243,8 @@ def baglam_hazirla(j: dict, d: Path, metin: str, bilgi: dict) -> dict:
             uyarilar.append(f"PDF adı '{pdf_en[1]['id']}' destesini, program eşleşmesi '{prg_en[1]['id']}' destesini gösteriyor — yeni taslak açıldı, kontrol et")
         if not es.get("programda"):
             uyarilar.append("ders programında güvenle eşleşen konu yok (adaylar rapordadır); ders PDF'in kendi adıyla açıldı")
-        n = sonraki_numara(kurul) if kurul else 0
+        kayit = ders_kaydi_eslesmesi(kurul, es) if es.get("programda") else None
+        n = kayit["no"] if kayit else (sonraki_numara(kurul) if kurul else 0)
         ad_kaynagi = es.get("konu") if es.get("programda") else pdf_adi
         ders_id = f"k{kurul}-{n:02d}-{slug(ad_kaynagi)}"
         deste_id = f"k{kurul}p-{ders_id}"
@@ -236,7 +252,7 @@ def baglam_hazirla(j: dict, d: Path, metin: str, bilgi: dict) -> dict:
     b = {
         "is_id": j["is_id"], "pdf_yolu": j["yol"], "pdf_adi": Path(j["yol"]).name, "yil": j.get("yil"),
         "uyari": "; ".join(u for u in uyarilar if u), "sayfa": bilgi["sayfa"], "ocr_sayfalar": bilgi["ocr_sayfalar"],
-        "program": es, "kurul": kurul, "numara": n, "ders_id": ders_id, "deste_id": deste_id, "mod": mod,
+        "program": es, "kurul": kurul, "numara": n, "ders_kodu": (ders_kaydi_eslesmesi(kurul, es) or {}).get("kod") if es.get("programda") else None, "ders_id": ders_id, "deste_id": deste_id, "mod": mod,
         "mevcut_eslesme": round(mevcut[0], 3),
         "committeeId": f"donem3-kurul{kurul}" if kurul else "",
         "mevcut_dersler": [d.get("title") for d in (decks if isinstance(decks, list) else []) if d.get("id", "").startswith(f"k{kurul}p-")],
@@ -327,8 +343,27 @@ def sayfalar_denetle(d: Path) -> list[str]:
     return h
 
 
+KONUSMA_V2 = APP / "scripts" / "sesli_anlatim" / "konusma_v2.py"
+
+
+def v2_mi(d: Path) -> bool:
+    """Kurul 2+: sesli metin v2 (cümle kimlikli, madde + vurgu, konusma_v2.json) zorunlu; eski biçim ondan türetilir."""
+    return int(oku(d / "baglam.json", {}).get("kurul") or 0) >= 2
+
+
 def metin_denetle(d: Path) -> dict:
-    """konusma_metni.md (+ konusma_sayfalari.json) → {"hata": n, "cikti": "..."}; dosya yoksa hata 999."""
+    """konusma_metni.md (+ konusma_sayfalari.json) → {"hata": n, "cikti": "..."}; dosya yoksa hata 999.
+    Kurul 2+: önce konusma_v2.json kapısı, sonra eski biçim v2'den türetilip aynı denetimden geçer."""
+    v2 = ""
+    if v2_mi(d):
+        if not (d / "konusma_v2.json").exists():
+            return {"hata": 999, "cikti": "konusma_v2.json yok (Kurul 2+: TALIMAT_SESLI.md §v2)"}
+        r2 = subprocess.run([sys.executable, str(KONUSMA_V2), "--dogrula", str(d)], capture_output=True, text=True)
+        if r2.returncode != 0:
+            m2 = re.search(r"(\d+) HATA", r2.stdout or "")
+            return {"hata": int(m2.group(1)) if m2 else 999, "cikti": (r2.stdout or r2.stderr)[-3000:]}
+        subprocess.run([sys.executable, str(KONUSMA_V2), "--turet", str(d)], capture_output=True, text=True)
+        v2 = (r2.stdout or "").strip().splitlines()[-1] + "\n"
     f = d / "konusma_metni.md"
     if not f.exists():
         return {"hata": 999, "cikti": "konusma_metni.md yok"}
@@ -336,7 +371,7 @@ def metin_denetle(d: Path) -> dict:
     m = re.search(r"(\d+) HATA", r.stdout or "")
     hata = int(m.group(1)) if m else (0 if r.returncode == 0 else 999)
     sh = sayfalar_denetle(d)
-    cikti = (r.stdout or r.stderr or "")[-3000:] + "".join(f"\n  HATA (sayfa) {x}" for x in sh)
+    cikti = v2 + (r.stdout or r.stderr or "")[-3000:] + "".join(f"\n  HATA (sayfa) {x}" for x in sh)
     return {"hata": hata + len(sh), "cikti": cikti}
 
 
@@ -350,8 +385,12 @@ def konusma_metni(d: Path) -> dict:
     oturum = onceki
     if den["hata"]:
         istem = (f"Talimat dosyası: {TALIMAT_SESLI}. Onu ve çalışma dizinindeki kaynak.md, deck.json, sayfa_haritasi.json, "
-                 "cikmis_baglantilari.json ve baglam.json'u oku; konusma_metni.md'yi yaz ve metin_denetle.py 0 HATA olana "
-                 "kadar düzelt. Başka dosyaya dokunma.")
+                 "cikmis_baglantilari.json ve baglam.json'u oku; "
+                 + ("Kurul 2+ dersi: talimatın §v2 bölümüne göre konusma_v2.json'u yaz (konusma_metni.md ve "
+                    "konusma_sayfalari.json ondan otomatik türetilir, elle yazma); konusma_v2.py --dogrula ve metin_denetle.py "
+                    "0 HATA olana kadar düzelt." if v2_mi(d) else
+                    "konusma_metni.md'yi yaz ve metin_denetle.py 0 HATA olana kadar düzelt.")
+                 + " Başka dosyaya dokunma.")
         if onceki:
             istem = "Kesinti nedeniyle yarım kaldın; konusma_metni.md'ye bakıp kaldığın yerden sür. " + istem
         r = claude(d, istem, onceki, oturum_dosya="oturum_sesli.json")

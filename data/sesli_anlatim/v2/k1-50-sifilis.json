@@ -1,0 +1,2590 @@
+{
+ "surum": 2,
+ "ders_id": "k1-50",
+ "anahtar": "k1-50-sifilis",
+ "baslik": "Sifiliz: Etken, Evreler, Tanı ve Tedavi",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-50-b01",
+   "baslik": "Spiroketlerin yapısı",
+   "paragraflar": [
+    {
+     "id": "k1-50-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-50-c0001",
+       "ses": "Sifilizin etkeni Treponema pallidum, spiroketler adı verilen bakteri grubunda yer alır.",
+       "ekran": "Sifilizin etkeni Treponema pallidum, spiroketler adı verilen bakteri grubunda yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0002",
+       "ses": "Bakterilerin 3 temel biçimi olan kok, basil ve spiral formlar içinde spiroketler ince, uzun ve sarmal gövdeleriyle ayrılır.",
+       "ekran": "Bakterilerin 3 temel biçimi olan kok, basil ve spiral formlar içinde spiroketler ince, uzun ve sarmal gövdeleriyle ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0003",
+       "ses": "Spiroketlerin 2 temel yapısal özelliği vardır: spiral şekilli olmaları ve ince duvar yapısına sahip olmaları.",
+       "ekran": "Spiroketlerin 2 temel yapısal özelliği vardır: spiral şekilli olmaları ve ince duvar yapısına sahip olmaları.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-50-c0004",
+       "ses": "Bu ince duvar içten dışa 3 katmandan oluşur.",
+       "ekran": "Bu ince duvar içten dışa 3 katmandan oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0005",
+       "ses": "En içte, protoplazmik silindir denilen hücre içeriğini saran sitoplazmik membran bulunur.",
+       "ekran": "En içte, protoplazmik silindir denilen hücre içeriğini saran sitoplazmik membran bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0006",
+       "ses": "Onun hemen dışında ince bir peptidoglikan tabakası yer alır; peptidoglikan bakteri duvarının destek tabakasıdır ve spiroketlerde belirgin biçimde incedir.",
+       "ekran": "Onun hemen dışında ince bir peptidoglikan tabakası yer alır; peptidoglikan bakteri duvarının destek tabakasıdır ve spiroketlerde belirgin biçimde incedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0007",
+       "ses": "En dışta ise hücreyi saran ikinci bir zar, yani dış membran bulunur.",
+       "ekran": "En dışta ise hücreyi saran ikinci bir zar, yani dış membran bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0008",
+       "ses": "İki zar arasında ince bir peptidoglikan tabakasının bulunduğu bu dizilim, Gram negatif hücreye benzer bir duvar yapısıdır.",
+       "ekran": "İki zar arasında ince bir peptidoglikan tabakasının bulunduğu bu dizilim, Gram negatif hücreye benzer bir duvar yapısıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0009",
+       "ses": "Burası önemli, sınav spotu olarak aklınızda kalsın: spiroket duvarı sitoplazmik membran, ince peptidoglikan ve dış membrandan oluşur ve Gram negatif hücre duvarına benzer.",
+       "ekran": "Burası önemli, sınav spotu olarak aklınızda kalsın: spiroket duvarı sitoplazmik membran, ince peptidoglikan ve dış membrandan oluşur ve Gram negatif hücre duvarına benzer.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b02",
+   "baslik": "Boyanma, görüntüleme ve burgu hareketi",
+   "paragraflar": [
+    {
+     "id": "k1-50-p003",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-50-c0010",
+       "ses": "Gram negatif benzeri duvarlarına karşın spiroketler Gram boyası ile iyi boyanmaz; bu nedenle rutin Gram preparatında genellikle gözden kaçarlar.",
+       "ekran": "Gram negatif benzeri duvarlarına karşın spiroketler Gram boyası ile iyi boyanmaz; bu nedenle rutin Gram preparatında genellikle gözden kaçarlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0011",
+       "ses": "Bu bakteriler karanlık alan mikroskopisi ile görülür.",
+       "ekran": "Bu bakteriler karanlık alan mikroskopisi ile görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0012",
+       "ses": "Karanlık alan, ya da karanlık saha mikroskopisinde, karanlık zemin üzerinde parlak, kıvrımlı, canlı bakteriler izlenir.",
+       "ekran": "Karanlık alan, ya da karanlık saha mikroskopisinde, karanlık zemin üzerinde parlak, kıvrımlı, canlı bakteriler izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0013",
+       "ses": "Burası önemli: spiroketler Gram boyası ile iyi boyanmaz, karanlık alan mikroskopisi ile görülür.",
+       "ekran": "Burası önemli: spiroketler Gram boyası ile iyi boyanmaz, karanlık alan mikroskopisi ile görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0014",
+       "ses": "Bu ilke, ileride sifiliz lezyonlarının doğrudan incelenmesinin de temelini oluşturur.",
+       "ekran": "Bu ilke, ileride sifiliz lezyonlarının doğrudan incelenmesinin de temelini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0015",
+       "ses": "Spiroket cinsleri kıvrımlarının biçimiyle birbirinden ayrılır.",
+       "ekran": "Spiroket cinsleri kıvrımlarının biçimiyle birbirinden ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0016",
+       "ses": "Borrelia daha gevşek ve geniş kıvrımlıdır; Treponema sık ve düzenli kıvrımlıdır; Leptospira ise çok sık sarmallıdır ve uçları kancalı görünür.",
+       "ekran": "Borrelia daha gevşek ve geniş kıvrımlıdır; Treponema sık ve düzenli kıvrımlıdır; Leptospira ise çok sık sarmallıdır ve uçları kancalı görünür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p004",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-50-c0017",
+       "ses": "Spiroketlerin hareket organeli de diğer bakterilerden farklıdır, çünkü hücrenin dışına uzanmaz.",
+       "ekran": "Spiroketlerin hareket organeli de diğer bakterilerden farklıdır, çünkü hücrenin dışına uzanmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0018",
+       "ses": "Dış membran ile peptidoglikan ve sitoplazmik membran arasında kalan boşluğa periplazmik aralık denir.",
+       "ekran": "Dış membran ile peptidoglikan ve sitoplazmik membran arasında kalan boşluğa periplazmik aralık denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0019",
+       "ses": "Flajellalar bu periplazmik aralıkta, hücre gövdesi boyunca uzanır ve tabanları sitoplazmik membrana bağlıdır; bu yapı aksiyel filaman olarak da bilinir.",
+       "ekran": "Flajellalar bu periplazmik aralıkta, hücre gövdesi boyunca uzanır ve tabanları sitoplazmik membrana bağlıdır; bu yapı aksiyel filaman olarak da bilinir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0020",
+       "ses": "Flajellalar döndükçe gövdeyi sarmal biçimde büker ve bakteri bir tirbuşon gibi burgu hareketiyle ilerler.",
+       "ekran": "Flajellalar döndükçe gövdeyi sarmal biçimde büker ve bakteri bir tirbuşon gibi burgu hareketiyle ilerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0021",
+       "ses": "Yani hareketin anahtarı, periplazmik aralıktaki flajella ve bunun sonucu olan burgu hareketidir.",
+       "ekran": "Yani hareketin anahtarı, periplazmik aralıktaki flajella ve bunun sonucu olan burgu hareketidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b03",
+   "baslik": "Treponema cinsi ve treponematozlar",
+   "paragraflar": [
+    {
+     "id": "k1-50-p005",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-50-c0022",
+       "ses": "Treponema cinsi, insanda farklı klinik tablolara yol açan 4 etken içerir.",
+       "ekran": "Treponema cinsi, insanda farklı klinik tablolara yol açan 4 etken içerir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0023",
+       "ses": "Bunların üçü Treponema pallidum türünün alt türleridir, 4.'sü ise ayrı bir türdür.",
+       "ekran": "Bunların üçü Treponema pallidum türünün alt türleridir, 4.'sü ise ayrı bir türdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0024",
+       "ses": "Treponema pallidum'un pallidum alt türü veneral sifilizin etkenidir.",
+       "ekran": "Treponema pallidum'un pallidum alt türü veneral sifilizin etkenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0025",
+       "ses": "Tüm dünyada yaygındır, belirli bir iklim kuşağıyla sınırlı değildir ve cinsel yolla bulaşır; veneral sözcüğü de bu cinsel bulaşı ifade eder.",
+       "ekran": "Tüm dünyada yaygındır, belirli bir iklim kuşağıyla sınırlı değildir ve cinsel yolla bulaşır; veneral sözcüğü de bu cinsel bulaşı ifade eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0026",
+       "ses": "Aynı tür adını taşıyan alt türler arasında cinsel yolla bulaşan ve dünya genelinde yaygın olan yalnız pallidum alt türüdür.",
+       "ekran": "Aynı tür adını taşıyan alt türler arasında cinsel yolla bulaşan ve dünya genelinde yaygın olan yalnız pallidum alt türüdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p006",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-50-c0027",
+       "ses": "Diğer 2 alt tür cinsel yolla değil, günlük yakın temasla bulaşır ve belirli coğrafyalarda endemiktir.",
+       "ekran": "Diğer 2 alt tür cinsel yolla değil, günlük yakın temasla bulaşır ve belirli coğrafyalarda endemiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0028",
+       "ses": "Pertenue alt türü yaws hastalığını yapar; tropikal Asya, Afrika, Kuzey ve Güney Amerika'da görülür ve cilt teması ile bulaşır.",
+       "ekran": "Pertenue alt türü yaws hastalığını yapar; tropikal Asya, Afrika, Kuzey ve Güney Amerika'da görülür ve cilt teması ile bulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0029",
+       "ses": "Endemicum alt türü bejel etkenidir; Afrika ve Orta Doğu'da görülür.",
+       "ekran": "Endemicum alt türü bejel etkenidir; Afrika ve Orta Doğu'da görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0030",
+       "ses": "Bejelin bulaşı cilt teması, mukozal bulaş ve kontamine yiyecek içecek kapları ile olur.",
+       "ekran": "Bejelin bulaşı cilt teması, mukozal bulaş ve kontamine yiyecek içecek kapları ile olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0031",
+       "ses": "Yani bejeli yaws'tan ayıran özellik, cilt temasına ek olarak mukozal yol ve ortak kullanılan kaplardır.",
+       "ekran": "Yani bejeli yaws'tan ayıran özellik, cilt temasına ek olarak mukozal yol ve ortak kullanılan kaplardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p007",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-50-c0032",
+       "ses": "Dördüncü hastalık pintadır ve etkeni bir alt tür değil, ayrı bir tür olan Treponema carateum'dur.",
+       "ekran": "Dördüncü hastalık pintadır ve etkeni bir alt tür değil, ayrı bir tür olan Treponema carateum'dur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0033",
+       "ses": "Pinta Kuzey ve Güney Amerika'da görülür ve cilt teması ile bulaşır.",
+       "ekran": "Pinta Kuzey ve Güney Amerika'da görülür ve cilt teması ile bulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0034",
+       "ses": "Treponematozları doku tutulumuna göre ikiye ayırırız.",
+       "ekran": "Treponematozları doku tutulumuna göre ikiye ayırırız.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0035",
+       "ses": "Veneral sifiliz, yaws ve bejel hem cilt hem kemik tutulumu yapabilir.",
+       "ekran": "Veneral sifiliz, yaws ve bejel hem cilt hem kemik tutulumu yapabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0036",
+       "ses": "Pintada ise yalnız cilt tutulur, kemik tutulumu yoktur.",
+       "ekran": "Pintada ise yalnız cilt tutulur, kemik tutulumu yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0037",
+       "ses": "Burası önemli, sınav spotu olarak eşleşmeleri ezberleyin: pallidum veneral sifiliz, pertenue yaws, endemicum bejel, Treponema carateum pinta; kemik tutulumu yapmayan tek treponematoz pintadır.",
+       "ekran": "Burası önemli, sınav spotu olarak eşleşmeleri ezberleyin: pallidum veneral sifiliz, pertenue yaws, endemicum bejel, Treponema carateum pinta; kemik tutulumu yapmayan tek treponematoz pintadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b04",
+   "baslik": "Küresel yük ve gebelikte sifiliz",
+   "paragraflar": [
+    {
+     "id": "k1-50-p008",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-50-c0038",
+       "ses": "Dünya Sağlık Örgütü verileri, sifilizin hâlâ yaygın bir halk sağlığı sorunu olduğunu gösterir.",
+       "ekran": "Dünya Sağlık Örgütü verileri, sifilizin hâlâ yaygın bir halk sağlığı sorunu olduğunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0039",
+       "ses": "Dünyada yaklaşık 18 milyon sifiliz olgusu bulunmaktadır.",
+       "ekran": "Dünyada yaklaşık 18 milyon sifiliz olgusu bulunmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0040",
+       "ses": "2016 verilerine göre yılda 6,3 milyon yeni sifiliz olgusu saptanmış ve yaklaşık 1 milyon gebede aktif sifiliz bildirilmiştir.",
+       "ekran": "2016 verilerine göre yılda 6,3 milyon yeni sifiliz olgusu saptanmış ve yaklaşık 1 milyon gebede aktif sifiliz bildirilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p009",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-50-c0041",
+       "ses": "Gebelikteki sifilizin sonuçları ağırdır.",
+       "ekran": "Gebelikteki sifilizin sonuçları ağırdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0042",
+       "ses": "2012 verilerinde sifilizli 930 bin gebede yaklaşık 350 bin istenmeyen olay gelişmiştir.",
+       "ekran": "2012 verilerinde sifilizli 930 bin gebede yaklaşık 350 bin istenmeyen olay gelişmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0043",
+       "ses": "Bu olaylar ölü doğum, preterm doğum, neonatal ölüm ve enfekte bebek doğumudur.",
+       "ekran": "Bu olaylar ölü doğum, preterm doğum, neonatal ölüm ve enfekte bebek doğumudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0044",
+       "ses": "Bu oran kabaca %38'e karşılık gelir; yani sifilizli gebeliklerin önemli bir kısmı kötü sonlanır.",
+       "ekran": "Bu oran kabaca %38'e karşılık gelir; yani sifilizli gebeliklerin önemli bir kısmı kötü sonlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0045",
+       "ses": "Gebelikteki sifiliz, bu ağır gebelik kayıplarının önlenebilir bir nedeni olduğu için gebelerde sifilizin saptanması bir halk sağlığı önceliğidir.",
+       "ekran": "Gebelikteki sifiliz, bu ağır gebelik kayıplarının önlenebilir bir nedeni olduğu için gebelerde sifilizin saptanması bir halk sağlığı önceliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b05",
+   "baslik": "Bulaş yolları",
+   "paragraflar": [
+    {
+     "id": "k1-50-p010",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-50-c0046",
+       "ses": "Sifiliz etkeni 4 yolla bulaşır.",
+       "ekran": "Sifiliz etkeni 4 yolla bulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0047",
+       "ses": "1.'si ve en önemlisi enfekte lezyonlara doğrudan temastır.",
+       "ekran": "1.'si ve en önemlisi enfekte lezyonlara doğrudan temastır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0048",
+       "ses": "Bol treponema içeren şankr ve kondiloma lata gibi lezyonlarla temas bulaşın temelidir ve bu temasın başlıca biçimi cinsel ilişkidir.",
+       "ekran": "Bol treponema içeren şankr ve kondiloma lata gibi lezyonlarla temas bulaşın temelidir ve bu temasın başlıca biçimi cinsel ilişkidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0049",
+       "ses": "2.'si anneden bebeğe geçiştir; bu geçiş transplasental yolla ya da doğum sırasında olur.",
+       "ekran": "2.'si anneden bebeğe geçiştir; bu geçiş transplasental yolla ya da doğum sırasında olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0050",
+       "ses": "Biraz önce sözünü ettiğimiz ölü doğum ve enfekte bebek bu yolun sonucudur.",
+       "ekran": "Biraz önce sözünü ettiğimiz ölü doğum ve enfekte bebek bu yolun sonucudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0051",
+       "ses": "3.'sü kan transfüzyonudur.",
+       "ekran": "3.'sü kan transfüzyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0052",
+       "ses": "4.'sü ise kontamine iğne gibi deriyi delen perkütan yaralanmalardır.",
+       "ekran": "4.'sü ise kontamine iğne gibi deriyi delen perkütan yaralanmalardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p011",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-50-c0053",
+       "ses": "Burası önemli, bulaş yolları çıkmış sorularda defalarca soruldu.",
+       "ekran": "Burası önemli, bulaş yolları çıkmış sorularda defalarca soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0054",
+       "ses": "Sifiliz cinsel ilişkiyle, lezyonlara doğrudan temasla, kan nakliyle ve anneden bebeğe bulaşır.",
+       "ekran": "Sifiliz cinsel ilişkiyle, lezyonlara doğrudan temasla, kan nakliyle ve anneden bebeğe bulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0055",
+       "ses": "Buna karşılık damlacık yoluyla, yani solunum yoluyla bulaşmaz; bu şık soruda yanlış ifade olarak verildi.",
+       "ekran": "Buna karşılık damlacık yoluyla, yani solunum yoluyla bulaşmaz; bu şık soruda yanlış ifade olarak verildi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0056",
+       "ses": "Yine aynı sorunun diğer biçimlerinde hastalığın tüm evrelerinde bulaşıcı olduğu ya da geç latent ve tersiyer evrelerde bulaşıcı olduğu ifadeleri yanlış seçenekti.",
+       "ekran": "Yine aynı sorunun diğer biçimlerinde hastalığın tüm evrelerinde bulaşıcı olduğu ya da geç latent ve tersiyer evrelerde bulaşıcı olduğu ifadeleri yanlış seçenekti.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0057",
+       "ses": "Bulaştırıcılığın hangi evrelerle sınırlı olduğunu biraz sonra evre sınıflamasında netleştireceğiz.",
+       "ekran": "Bulaştırıcılığın hangi evrelerle sınırlı olduğunu biraz sonra evre sınıflamasında netleştireceğiz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p012",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-50-c0058",
+       "ses": "Çıkmış sorularda etkenin özellikleri de soruldu.",
+       "ekran": "Çıkmış sorularda etkenin özellikleri de soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0059",
+       "ses": "Etken Treponema pallidum'un pallidum alt türüdür, karanlık alan mikroskobisinde incelenir, tanıda treponemal ve nontreponemal testler kullanılır ve bakteri ısıya, kuruluğa ve antiseptiklere duyarlıdır.",
+       "ekran": "Etken Treponema pallidum'un pallidum alt türüdür, karanlık alan mikroskobisinde incelenir, tanıda treponemal ve nontreponemal testler kullanılır ve bakteri ısıya, kuruluğa ve antiseptiklere duyarlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0060",
+       "ses": "Burası önemli: tanı için kültür yapmak gerekmez; bu ifade soruda yanlış seçenek olarak verildi.",
+       "ekran": "Burası önemli: tanı için kültür yapmak gerekmez; bu ifade soruda yanlış seçenek olarak verildi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0061",
+       "ses": "Tanı, ileride göreceğimiz gibi mikroskopi, seroloji ve moleküler testlerle konur.",
+       "ekran": "Tanı, ileride göreceğimiz gibi mikroskopi, seroloji ve moleküler testlerle konur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b06",
+   "baslik": "Patogenez ve inkübasyon",
+   "paragraflar": [
+    {
+     "id": "k1-50-p013",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-50-c0062",
+       "ses": "Treponema pallidum sağlam deriden giremez, bir giriş kapısına gereksinim duyar.",
+       "ekran": "Treponema pallidum sağlam deriden giremez, bir giriş kapısına gereksinim duyar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0063",
+       "ses": "Bakteri mukozal yüzeyden ya da bütünlüğü bozulmuş ciltten girer.",
+       "ekran": "Bakteri mukozal yüzeyden ya da bütünlüğü bozulmuş ciltten girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0064",
+       "ses": "Bulaş yollarındaki lezyon teması ve perkütan yaralanma bu kapıları açar.",
+       "ekran": "Bulaş yollarındaki lezyon teması ve perkütan yaralanma bu kapıları açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0065",
+       "ses": "Bakteri önce giriş yerinde çoğalır ve ilk klinik lezyon bu noktada gelişir.",
+       "ekran": "Bakteri önce giriş yerinde çoğalır ve ilk klinik lezyon bu noktada gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0066",
+       "ses": "Ardından kan ve lenf yoluyla, yani hematojen ve lenfojen yolla tüm vücuda yayılır.",
+       "ekran": "Ardından kan ve lenf yoluyla, yani hematojen ve lenfojen yolla tüm vücuda yayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0067",
+       "ses": "Bu nedenle sifiliz başlangıçta yerel görünse de kısa sürede sistemik bir enfeksiyona dönüşür.",
+       "ekran": "Bu nedenle sifiliz başlangıçta yerel görünse de kısa sürede sistemik bir enfeksiyona dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p014",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-50-c0068",
+       "ses": "Kanla ve lenfle yayılan treponema damar duvarını hedef alır.",
+       "ekran": "Kanla ve lenfle yayılan treponema damar duvarını hedef alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0069",
+       "ses": "Bakteri damar endotellerinde çoğalır ve perivasküler hücrelere, yani damar çevresindeki hücrelere girer.",
+       "ekran": "Bakteri damar endotellerinde çoğalır ve perivasküler hücrelere, yani damar çevresindeki hücrelere girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0070",
+       "ses": "Burası önemli: bu endotel tropizmi, sifilizin ileri dönemlerinde göreceğimiz damar merkezli hasarın, yani meningovasküler sifilizin ve endarteritis obliteransın patogenetik temelidir.",
+       "ekran": "Burası önemli: bu endotel tropizmi, sifilizin ileri dönemlerinde göreceğimiz damar merkezli hasarın, yani meningovasküler sifilizin ve endarteritis obliteransın patogenetik temelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p015",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-50-c0071",
+       "ses": "İnkübasyon süresi, bulaştan ilk lezyona kadar geçen ve hastanın belirti göstermediği dönemdir.",
+       "ekran": "İnkübasyon süresi, bulaştan ilk lezyona kadar geçen ve hastanın belirti göstermediği dönemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0072",
+       "ses": "Sifilizde bu süre 3 ile 90 gün arasındadır ve genellikle 3 haftadır.",
+       "ekran": "Sifilizde bu süre 3 ile 90 gün arasındadır ve genellikle 3 haftadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0073",
+       "ses": "Burası önemli, sınavda ortalama inkübasyon süresi sorulursa yanıt yaklaşık 3 haftadır; aralık ise 3 ile 90 gündür.",
+       "ekran": "Burası önemli, sınavda ortalama inkübasyon süresi sorulursa yanıt yaklaşık 3 haftadır; aralık ise 3 ile 90 gündür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b07",
+   "baslik": "Doğal seyir ve evrelerin zamansal sınıflaması",
+   "paragraflar": [
+    {
+     "id": "k1-50-p016",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-50-c0074",
+       "ses": "Tedavi edilmeyen sifiliz birbirini izleyen evrelerden geçer.",
+       "ekran": "Tedavi edilmeyen sifiliz birbirini izleyen evrelerden geçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0075",
+       "ses": "Dersteki doğal seyir şeması bu akışı özetler.",
+       "ekran": "Dersteki doğal seyir şeması bu akışı özetler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0076",
+       "ses": "İnokülasyondan sonra belirtisiz bir dönem vardır ve bakteri lenf ve kanla yayılır.",
+       "ekran": "İnokülasyondan sonra belirtisiz bir dönem vardır ve bakteri lenf ve kanla yayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0077",
+       "ses": "Primer evrede giriş yerinde şankr gelişir; şemada penis, labia ya da vajen örnek yerleşimler olarak gösterilir.",
+       "ekran": "Primer evrede giriş yerinde şankr gelişir; şemada penis, labia ya da vajen örnek yerleşimler olarak gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0078",
+       "ses": "Sekonder evre döküntü dönemidir; şemadaki fotoğrafta ayak tabanlarında yaygın lekeler görülür ve döküntüye hepatit, menenjit ya da glomerülonefrit eşlik edebilir.",
+       "ekran": "Sekonder evre döküntü dönemidir; şemadaki fotoğrafta ayak tabanlarında yaygın lekeler görülür ve döküntüye hepatit, menenjit ya da glomerülonefrit eşlik edebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0079",
+       "ses": "Latent evrede belirti yoktur ama bakteri vücutta bulunur; şemada bu dönem karanlık alanda görülen spiral bakterilerle gösterilir ve latentten sekonder evreye geri dönüş bir okla işaretlenir.",
+       "ekran": "Latent evrede belirti yoktur ama bakteri vücutta bulunur; şemada bu dönem karanlık alanda görülen spiral bakterilerle gösterilir ve latentten sekonder evreye geri dönüş bir okla işaretlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0080",
+       "ses": "Tersiyer evrenin örnek görüntüsü bir cilt gomudur; benzer lezyonlar derin organlarda, santral sinir sistemi dejenerasyonu ve çıkan aort anevrizmasıyla birlikte görülebilir.",
+       "ekran": "Tersiyer evrenin örnek görüntüsü bir cilt gomudur; benzer lezyonlar derin organlarda, santral sinir sistemi dejenerasyonu ve çıkan aort anevrizmasıyla birlikte görülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p017",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-50-c0081",
+       "ses": "Evreler, bulaş sonrası geçen süreye göre iki ana gruba ayrılır ve bu ayrımın klinik önemi bulaştırıcılıktır.",
+       "ekran": "Evreler, bulaş sonrası geçen süreye göre iki ana gruba ayrılır ve bu ayrımın klinik önemi bulaştırıcılıktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0082",
+       "ses": "Erken ya da infeksiyöz sifiliz grubunda 3 dönem vardır: 10 ile 90 gün arasındaki primer dönem, 4 hafta ile 6 ay arasındaki sekonder dönem ve bulaştan sonraki 1 yıl içindeki erken latent dönem.",
+       "ekran": "Erken ya da infeksiyöz sifiliz grubunda 3 dönem vardır: 10 ile 90 gün arasındaki primer dönem, 4 hafta ile 6 ay arasındaki sekonder dönem ve bulaştan sonraki 1 yıl içindeki erken latent dönem.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0083",
+       "ses": "Geç ya da non-infeksiyöz sifiliz grubunda ise 1 yıldan sonraki geç latent dönem ve bulaştan 3 ile 20 yıl sonra ortaya çıkan tersiyer dönem bulunur.",
+       "ekran": "Geç ya da non-infeksiyöz sifiliz grubunda ise 1 yıldan sonraki geç latent dönem ve bulaştan 3 ile 20 yıl sonra ortaya çıkan tersiyer dönem bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0084",
+       "ses": "Tersiyer sifilizin 3 biçimi vardır: gomatöz sifiliz, kardiyovasküler sifiliz ve nörosifiliz.",
+       "ekran": "Tersiyer sifilizin 3 biçimi vardır: gomatöz sifiliz, kardiyovasküler sifiliz ve nörosifiliz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p018",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-50-c0085",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: sifilizin cinsel yolla bulaştırıcı olduğu dönemler primer, sekonder ve erken latent dönemlerdir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: sifilizin cinsel yolla bulaştırıcı olduğu dönemler primer, sekonder ve erken latent dönemlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0086",
+       "ses": "Yalnız primer ya da yalnız primer ile sekonder demek eksiktir; tüm evrelerin eşit derecede bulaştırıcı olduğunu söylemek ise yanlıştır.",
+       "ekran": "Yalnız primer ya da yalnız primer ile sekonder demek eksiktir; tüm evrelerin eşit derecede bulaştırıcı olduğunu söylemek ise yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0087",
+       "ses": "1 yıllık sınır, bulaştırıcı erken sifilizi bulaştırıcı olmayan geç sifilizden ayırır.",
+       "ekran": "1 yıllık sınır, bulaştırıcı erken sifilizi bulaştırıcı olmayan geç sifilizden ayırır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b08",
+   "baslik": "Primer sifiliz: şankr",
+   "paragraflar": [
+    {
+     "id": "k1-50-p019",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-50-c0088",
+       "ses": "Primer sifilizin belirleyici lezyonu, bakterinin giriş yerinde oluşan şankrdır.",
+       "ekran": "Primer sifilizin belirleyici lezyonu, bakterinin giriş yerinde oluşan şankrdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0089",
+       "ses": "Şankr yaklaşık 3 haftalık inkübasyondan sonra ortaya çıkar ve ağrısız bir ülserdir.",
+       "ekran": "Şankr yaklaşık 3 haftalık inkübasyondan sonra ortaya çıkar ve ağrısız bir ülserdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0090",
+       "ses": "Ağrısızlık, hastanın lezyonu önemsememesine ve geç başvurmasına yol açabilir.",
+       "ekran": "Ağrısızlık, hastanın lezyonu önemsememesine ve geç başvurmasına yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0091",
+       "ses": "Ancak şankr bulaştırıcıdır; bol treponema içerir ve cinsel temasla bulaşın başlıca kaynağıdır.",
+       "ekran": "Ancak şankr bulaştırıcıdır; bol treponema içerir ve cinsel temasla bulaşın başlıca kaynağıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p020",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-50-c0092",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda pek çok kez soruldu: primer sifiliz için şankrın bulaştırıcı olmadığı ifadesi yanlıştır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda pek çok kez soruldu: primer sifiliz için şankrın bulaştırıcı olmadığı ifadesi yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0093",
+       "ses": "Aynı soruda doğru kabul edilen diğer ifadeleri de birlikte öğrenin: primer sifilizde şankr mevcuttur, şankr tedavisiz iyileşir, şankrla birlikte lenfadenopati bulunabilir ve şankr ile eşlik eden lenfadenopati genellikle ağrısızdır.",
+       "ekran": "Aynı soruda doğru kabul edilen diğer ifadeleri de birlikte öğrenin: primer sifilizde şankr mevcuttur, şankr tedavisiz iyileşir, şankrla birlikte lenfadenopati bulunabilir ve şankr ile eşlik eden lenfadenopati genellikle ağrısızdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0094",
+       "ses": "Ağrısız olduğu için önemsiz sanılması klasik bir tuzaktır.",
+       "ekran": "Ağrısız olduğu için önemsiz sanılması klasik bir tuzaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0095",
+       "ses": "Dersteki fotoğraflarda şankr dudakta, ağız içinde, peniste ve vulvada görülür.",
+       "ekran": "Dersteki fotoğraflarda şankr dudakta, ağız içinde, peniste ve vulvada görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0096",
+       "ses": "Lezyonlar tek, düzgün kenarlı, temiz tabanlı yuvarlak ülserlerdir.",
+       "ekran": "Lezyonlar tek, düzgün kenarlı, temiz tabanlı yuvarlak ülserlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0097",
+       "ses": "Oral ve genital yerleşim, giriş kapısının cinsel temas bölgesine göre değiştiğini gösterir; yani şankr genital dışı bölgelere de yerleşebilir.",
+       "ekran": "Oral ve genital yerleşim, giriş kapısının cinsel temas bölgesine göre değiştiğini gösterir; yani şankr genital dışı bölgelere de yerleşebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p021",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-50-c0098",
+       "ses": "Burası önemli, çıkmış sorularda şu vaka soruldu: peniste tek, ağrısız bir ülseri olan genç erkek hastada VDRL testi pozitif saptanıyor.",
+       "ekran": "Burası önemli, çıkmış sorularda şu vaka soruldu: peniste tek, ağrısız bir ülseri olan genç erkek hastada VDRL testi pozitif saptanıyor.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0099",
+       "ses": "Tanı primer sifilizdir.",
+       "ekran": "Tanı primer sifilizdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0100",
+       "ses": "Bir başka soruda peniste ağrısız, 3 santimetre çaplı, tabanı sert bir ülser ve lenfadenopati saptanmayan hastada öncelikle düşünülmesi gereken enfeksiyon yine sifilizdi.",
+       "ekran": "Bir başka soruda peniste ağrısız, 3 santimetre çaplı, tabanı sert bir ülser ve lenfadenopati saptanmayan hastada öncelikle düşünülmesi gereken enfeksiyon yine sifilizdi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0101",
+       "ses": "Bu sorularda herpes simpleks enfeksiyonu, şankroid ya da ulkus molle, lenfogranüloma venereum, granüloma inguinale ve kondiloma akuminata çeldirici olarak yer aldı.",
+       "ekran": "Bu sorularda herpes simpleks enfeksiyonu, şankroid ya da ulkus molle, lenfogranüloma venereum, granüloma inguinale ve kondiloma akuminata çeldirici olarak yer aldı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0102",
+       "ses": "Dikkat edin, yumuşak şankr dediğimiz şankroid ayrı bir hastalıktır; primer sifilizin lezyonu yumuşak şankr değil, sifilitik şankrdır.",
+       "ekran": "Dikkat edin, yumuşak şankr dediğimiz şankroid ayrı bir hastalıktır; primer sifilizin lezyonu yumuşak şankr değil, sifilitik şankrdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b09",
+   "baslik": "Primer sifiliz: lenfadenopati, spiroketemi ve seyir",
+   "paragraflar": [
+    {
+     "id": "k1-50-p022",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-50-c0103",
+       "ses": "Şankrdan yaklaşık 1 hafta sonra ağrısız bölgesel lenfadenopati gelişir.",
+       "ekran": "Şankrdan yaklaşık 1 hafta sonra ağrısız bölgesel lenfadenopati gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0104",
+       "ses": "Bölgesel lenfadenopati, lezyonun drene olduğu bölgedeki lenf düğümlerinin büyümesidir ve lenf yoluyla yayılımın klinik yansımasıdır.",
+       "ekran": "Bölgesel lenfadenopati, lezyonun drene olduğu bölgedeki lenf düğümlerinin büyümesidir ve lenf yoluyla yayılımın klinik yansımasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0105",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda doğru seçenek olarak soruldu: primer sifilizde bölgesel lenf nodları ağrısızdır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda doğru seçenek olarak soruldu: primer sifilizde bölgesel lenf nodları ağrısızdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0106",
+       "ses": "Şankr yaklaşık 1 ay içinde kendiliğinden iyileşir.",
+       "ekran": "Şankr yaklaşık 1 ay içinde kendiliğinden iyileşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0107",
+       "ses": "Lenfadenopati ise şankrdan daha uzun süre sebat edebilir; dolayısıyla şankr kaybolduktan sonra yalnız lenfadenopati saptanabilir.",
+       "ekran": "Lenfadenopati ise şankrdan daha uzun süre sebat edebilir; dolayısıyla şankr kaybolduktan sonra yalnız lenfadenopati saptanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p023",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-50-c0108",
+       "ses": "Primer evrede bakteri yalnız giriş yerinde kalmaz, kana da karışır.",
+       "ekran": "Primer evrede bakteri yalnız giriş yerinde kalmaz, kana da karışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0109",
+       "ses": "Kanda spiroket bulunmasına spiroketemi denir ve bu spiroketemi organ invazyonu için kaynak olabilir.",
+       "ekran": "Kanda spiroket bulunmasına spiroketemi denir ve bu spiroketemi organ invazyonu için kaynak olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0110",
+       "ses": "Sonraki evrelerin çok sistemli tutulumu buradan beslenir.",
+       "ekran": "Sonraki evrelerin çok sistemli tutulumu buradan beslenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0111",
+       "ses": "Derste primer dönem için olguların yaklaşık üçte ikisinin iyileştiği bilgisi verilir.",
+       "ekran": "Derste primer dönem için olguların yaklaşık üçte ikisinin iyileştiği bilgisi verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0112",
+       "ses": "Ancak görünür lezyonun kaybolması, kanla taşınan bakterinin ortadan kalktığı anlamına gelmez.",
+       "ekran": "Ancak görünür lezyonun kaybolması, kanla taşınan bakterinin ortadan kalktığı anlamına gelmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0113",
+       "ses": "Bu nedenle primer sifiliz tanı konduğu anda tedavi edilmelidir.",
+       "ekran": "Bu nedenle primer sifiliz tanı konduğu anda tedavi edilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0114",
+       "ses": "Primer sifilizi 3 sözcükle özetleyebiliriz: ağrısız, bulaştırıcı ve kendiliğinden iyileşen; ama hastalık sürer.",
+       "ekran": "Primer sifilizi 3 sözcükle özetleyebiliriz: ağrısız, bulaştırıcı ve kendiliğinden iyileşen; ama hastalık sürer.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b10",
+   "baslik": "Sekonder sifiliz: zamanlama ve deri bulguları",
+   "paragraflar": [
+    {
+     "id": "k1-50-p024",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-50-c0115",
+       "ses": "Primer evrede başlayan kan yoluyla yayılım, sekonder evrede yaygın deri ve mukoza bulgularıyla görünür hâle gelir.",
+       "ekran": "Primer evrede başlayan kan yoluyla yayılım, sekonder evrede yaygın deri ve mukoza bulgularıyla görünür hâle gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0116",
+       "ses": "Sekonder sifiliz genellikle şankr oluşumundan 2 ile 8 hafta sonra başlar; bu süre 24 haftaya kadar uzayabilir.",
+       "ekran": "Sekonder sifiliz genellikle şankr oluşumundan 2 ile 8 hafta sonra başlar; bu süre 24 haftaya kadar uzayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0117",
+       "ses": "Sekonder evrede en sık görülen bulgu cilt lezyonlarıdır.",
+       "ekran": "Sekonder evrede en sık görülen bulgu cilt lezyonlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0118",
+       "ses": "Lezyonlar maküler, makülopapüler, püstüler ya da psoriatik, yani sedef hastalığını andıran pullu tipte olabilir.",
+       "ekran": "Lezyonlar maküler, makülopapüler, püstüler ya da psoriatik, yani sedef hastalığını andıran pullu tipte olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0119",
+       "ses": "Tipik cilt lezyonları kaşıntısız, simetrik, bilateral ve yaygındır.",
+       "ekran": "Tipik cilt lezyonları kaşıntısız, simetrik, bilateral ve yaygındır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0120",
+       "ses": "Dersteki görsellerde gövde ve kollarda yaygın, simetrik, pullu papüller ile ensede kabuklu püstüler lezyonlar izlenir.",
+       "ekran": "Dersteki görsellerde gövde ve kollarda yaygın, simetrik, pullu papüller ile ensede kabuklu püstüler lezyonlar izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p025",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-50-c0121",
+       "ses": "Tanıya en çok yönlendiren yerleşim el ve ayak tabanlarıdır.",
+       "ekran": "Tanıya en çok yönlendiren yerleşim el ve ayak tabanlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0122",
+       "ses": "El ve ayak tabanı döküntüleri görüldüğünde sifiliz özellikle düşünülmelidir.",
+       "ekran": "El ve ayak tabanı döküntüleri görüldüğünde sifiliz özellikle düşünülmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0123",
+       "ses": "Ders görsellerinde avuç içlerinde ve ayak tabanlarında yaygın, kırmızı kahverengi, yer yer pullu maküller ve papüller görülür; doğal seyir şemasındaki sekonder evre fotoğrafı da ayak tabanında aynı döküntüyü gösterir.",
+       "ekran": "Ders görsellerinde avuç içlerinde ve ayak tabanlarında yaygın, kırmızı kahverengi, yer yer pullu maküller ve papüller görülür; doğal seyir şemasındaki sekonder evre fotoğrafı da ayak tabanında aynı döküntüyü gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0124",
+       "ses": "Avuç içi ve ayak tabanı birçok döküntülü hastalıkta korunduğu için bu bölgelerin tutulumu ayırıcı tanıda yol göstericidir.",
+       "ekran": "Avuç içi ve ayak tabanı birçok döküntülü hastalıkta korunduğu için bu bölgelerin tutulumu ayırıcı tanıda yol göstericidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p026",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-50-c0125",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda doğru seçenek olarak soruldu: sifilizde el ayaları ve ayak tabanlarında deri tutulumu sık görülür.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda doğru seçenek olarak soruldu: sifilizde el ayaları ve ayak tabanlarında deri tutulumu sık görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0126",
+       "ses": "Aynı soruda yer alan yanlış ifadeleri de düzeltelim: sekonder sifilizin anogenital lezyonu kondiloma akuminata değil, kondiloma latadır; gomlarda bulaştırıcılık yoktur; primer sifilizde yumuşak şankr görülmez; nörosifilizin tersiyer olguların %80'inden fazlasını oluşturduğu ifadesi de çeldirici olarak verilmiştir.",
+       "ekran": "Aynı soruda yer alan yanlış ifadeleri de düzeltelim: sekonder sifilizin anogenital lezyonu kondiloma akuminata değil, kondiloma latadır; gomlarda bulaştırıcılık yoktur; primer sifilizde yumuşak şankr görülmez; nörosifilizin tersiyer olguların %80'inden fazlasını oluşturduğu ifadesi de çeldirici olarak verilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b11",
+   "baslik": "Sekonder sifiliz: mukoza tutulumu ve kondiloma lata",
+   "paragraflar": [
+    {
+     "id": "k1-50-p027",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-50-c0127",
+       "ses": "Sekonder evrede deri ile birlikte mukozalar da tutulur.",
+       "ekran": "Sekonder evrede deri ile birlikte mukozalar da tutulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0128",
+       "ses": "Ağız, farinks, larinks ve vulvada eritemli zemin üzerinde gri beyaz lezyonlar görülür.",
+       "ekran": "Ağız, farinks, larinks ve vulvada eritemli zemin üzerinde gri beyaz lezyonlar görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0129",
+       "ses": "Ders fotoğraflarında damakta ve yumuşak damakta eritemli, gri beyaz yamalar ile alt dudak iç yüzünde gri beyaz, hafif kabarık bir mukoza plağı izlenir.",
+       "ekran": "Ders fotoğraflarında damakta ve yumuşak damakta eritemli, gri beyaz yamalar ile alt dudak iç yüzünde gri beyaz, hafif kabarık bir mukoza plağı izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0130",
+       "ses": "Mukoza lezyonları da treponema içerir; karanlık saha incelemesi için örnek alınabilecek lezyonlar arasındadır ve ağız yoluyla temasta bulaş kaynağı olabilir.",
+       "ekran": "Mukoza lezyonları da treponema içerir; karanlık saha incelemesi için örnek alınabilecek lezyonlar arasındadır ve ağız yoluyla temasta bulaş kaynağı olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p028",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-50-c0131",
+       "ses": "Sekonder sifilizin bulaş açısından en önemli lezyonu kondiloma latadır.",
+       "ekran": "Sekonder sifilizin bulaş açısından en önemli lezyonu kondiloma latadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0132",
+       "ses": "Kondiloma lata vulva, skrotum, perine ve meme altı gibi nemli ve sürtünmeye açık kıvrım bölgelerinde yerleşir.",
+       "ekran": "Kondiloma lata vulva, skrotum, perine ve meme altı gibi nemli ve sürtünmeye açık kıvrım bölgelerinde yerleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0133",
+       "ses": "Gri beyaz maküler, papüler ya da verrüköz, yani siğil benzeri lezyonlardır.",
+       "ekran": "Gri beyaz maküler, papüler ya da verrüköz, yani siğil benzeri lezyonlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0134",
+       "ses": "Ders fotoğraflarında perianal ve vulvar bölgede çok sayıda, birleşme eğiliminde, düz yüzlü, gri beyaz pembe kabarık plaklar görülür.",
+       "ekran": "Ders fotoğraflarında perianal ve vulvar bölgede çok sayıda, birleşme eğiliminde, düz yüzlü, gri beyaz pembe kabarık plaklar görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p029",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-50-c0135",
+       "ses": "Burası önemli: kondiloma lata bulaştırıcıdır ve bulaş yolları arasında şankrla birlikte anılan enfekte lezyondur.",
+       "ekran": "Burası önemli: kondiloma lata bulaştırıcıdır ve bulaş yolları arasında şankrla birlikte anılan enfekte lezyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0136",
+       "ses": "Çıkmış bir soruda sekonder sifilizin mukokutanöz lezyonlarının bulaşıcı olmadığı ifadesi yanlış seçenekti.",
+       "ekran": "Çıkmış bir soruda sekonder sifilizin mukokutanöz lezyonlarının bulaşıcı olmadığı ifadesi yanlış seçenekti.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0137",
+       "ses": "Bir başka soruda ise sekonder sifilizin anogenital lezyonu kondiloma akuminata olarak verildi ve bu da yanlıştı.",
+       "ekran": "Bir başka soruda ise sekonder sifilizin anogenital lezyonu kondiloma akuminata olarak verildi ve bu da yanlıştı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0138",
+       "ses": "Adı benzeyen bu iki lezyonu karıştırmayın; sekonder sifilizin lezyonu kondiloma latadır.",
+       "ekran": "Adı benzeyen bu iki lezyonu karıştırmayın; sekonder sifilizin lezyonu kondiloma latadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b12",
+   "baslik": "Sekonder sifiliz: kıl folikülü, lenfadenopati ve sistemik belirtiler",
+   "paragraflar": [
+    {
+     "id": "k1-50-p030",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-50-c0139",
+       "ses": "Sekonder evrede yaygın deri tutulumu kıl foliküllerini de etkiler.",
+       "ekran": "Sekonder evrede yaygın deri tutulumu kıl foliküllerini de etkiler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0140",
+       "ses": "Bunun sonucunda kaşlarda dökülme ve saçlı deride, yaygın sistemik enfeksiyona bağlı saç dökülmesi olan toksik alopesi görülür.",
+       "ekran": "Bunun sonucunda kaşlarda dökülme ve saçlı deride, yaygın sistemik enfeksiyona bağlı saç dökülmesi olan toksik alopesi görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0141",
+       "ses": "Kan yoluyla yayılan treponemanın deri ve eklerinde oluşturduğu inflamasyon kıl foliküllerini tutar.",
+       "ekran": "Kan yoluyla yayılan treponemanın deri ve eklerinde oluşturduğu inflamasyon kıl foliküllerini tutar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0142",
+       "ses": "Diğer sekonder bulgular gibi alopesi de geçicidir.",
+       "ekran": "Diğer sekonder bulgular gibi alopesi de geçicidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p031",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-50-c0143",
+       "ses": "Primer evredeki bölgesel lenfadenopatiden farklı olarak sekonder evrede lenfadenopati yaygındır.",
+       "ekran": "Primer evredeki bölgesel lenfadenopatiden farklı olarak sekonder evrede lenfadenopati yaygındır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0144",
+       "ses": "Genellikle inguinal, servikal, submental, yani çene altı, ve aksiller lenf düğümleri tutulur.",
+       "ekran": "Genellikle inguinal, servikal, submental, yani çene altı, ve aksiller lenf düğümleri tutulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0145",
+       "ses": "Dirseğin iç yüzünde, medial epikondil üzerinde yer alan epitroklear lenf düğümlerinin büyümesi saptandığında sifiliz özellikle düşünülmelidir.",
+       "ekran": "Dirseğin iç yüzünde, medial epikondil üzerinde yer alan epitroklear lenf düğümlerinin büyümesi saptandığında sifiliz özellikle düşünülmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0146",
+       "ses": "Burası önemli, sınav spotu olarak: sekonder sifilizin iki özellikle düşündüren ipucu el ve ayak tabanı döküntüsü ile epitroklear lenfadenopatidir.",
+       "ekran": "Burası önemli, sınav spotu olarak: sekonder sifilizin iki özellikle düşündüren ipucu el ve ayak tabanı döküntüsü ile epitroklear lenfadenopatidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p032",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-50-c0147",
+       "ses": "Sekonder sifiliz sistemik bir enfeksiyon evresidir ve deri bulgularına genel belirtiler eşlik eder.",
+       "ekran": "Sekonder sifiliz sistemik bir enfeksiyon evresidir ve deri bulgularına genel belirtiler eşlik eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0148",
+       "ses": "Bunlar ateş, halsizlik, kilo kaybı, farenjit ve artraljidir.",
+       "ekran": "Bunlar ateş, halsizlik, kilo kaybı, farenjit ve artraljidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0149",
+       "ses": "Bu belirtiler özgül değildir ve viral enfeksiyonları taklit edebilir; tanıyı yönlendiren, eşlik eden kaşıntısız yaygın döküntü, el ve ayak tabanı tutulumu ve yaygın lenfadenopatidir.",
+       "ekran": "Bu belirtiler özgül değildir ve viral enfeksiyonları taklit edebilir; tanıyı yönlendiren, eşlik eden kaşıntısız yaygın döküntü, el ve ayak tabanı tutulumu ve yaygın lenfadenopatidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b13",
+   "baslik": "Sekonder sifiliz: organ tutulumu ve akut nörosifiliz",
+   "paragraflar": [
+    {
+     "id": "k1-50-p033",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-50-c0150",
+       "ses": "Primer evredeki spiroketemi, sekonder evrede organ tutulumu olarak karşımıza çıkar.",
+       "ekran": "Primer evredeki spiroketemi, sekonder evrede organ tutulumu olarak karşımıza çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0151",
+       "ses": "Bu dönemde hepatit, üveit, sinovit, osteit, glomerülonefrit ve santral sinir sistemi tutulumu görülebilir.",
+       "ekran": "Bu dönemde hepatit, üveit, sinovit, osteit, glomerülonefrit ve santral sinir sistemi tutulumu görülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0152",
+       "ses": "Üveit gözün damar tabakasının, sinovit eklem zarının, osteit kemik dokusunun inflamasyonudur.",
+       "ekran": "Üveit gözün damar tabakasının, sinovit eklem zarının, osteit kemik dokusunun inflamasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0153",
+       "ses": "Doğal seyir şemasında da sekonder döküntüye hepatit, menenjit ya da glomerülonefritin eşlik edebileceği gösterilir.",
+       "ekran": "Doğal seyir şemasında da sekonder döküntüye hepatit, menenjit ya da glomerülonefritin eşlik edebileceği gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p034",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-50-c0154",
+       "ses": "Sekonder evredeki santral sinir sistemi tutulumuna akut nörosifiliz denir.",
+       "ekran": "Sekonder evredeki santral sinir sistemi tutulumuna akut nörosifiliz denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0155",
+       "ses": "Akut nörosifiliz baş ağrısı, kusma ve ense sertliği ile seyreden bir menenjit tablosu ya da kraniyal sinir tutulumu şeklinde ortaya çıkar.",
+       "ekran": "Akut nörosifiliz baş ağrısı, kusma ve ense sertliği ile seyreden bir menenjit tablosu ya da kraniyal sinir tutulumu şeklinde ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0156",
+       "ses": "En sık 7. ve 8. kraniyal sinirler, yani fasiyal ve vestibülokoklear sinirler tutulur; bunun sonucunda yüz felci ile işitme ve denge bozukluğu gelişebilir.",
+       "ekran": "En sık 7. ve 8. kraniyal sinirler, yani fasiyal ve vestibülokoklear sinirler tutulur; bunun sonucunda yüz felci ile işitme ve denge bozukluğu gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0157",
+       "ses": "Bu tablo erken sifilizin parçasıdır ve tersiyer dönemdeki kronik nörosifilizden ayrıdır.",
+       "ekran": "Bu tablo erken sifilizin parçasıdır ve tersiyer dönemdeki kronik nörosifilizden ayrıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0158",
+       "ses": "Sekonder sifilizin deri, mukoza, lenf düğümü, sistemik ve organ bulguları birkaç hafta ya da birkaç ay içinde kendiliğinden iyileşir.",
+       "ekran": "Sekonder sifilizin deri, mukoza, lenf düğümü, sistemik ve organ bulguları birkaç hafta ya da birkaç ay içinde kendiliğinden iyileşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0159",
+       "ses": "Ancak bulguların kaybolması hastalığın sona erdiği anlamına gelmez; hasta belirtisiz latent döneme girer.",
+       "ekran": "Ancak bulguların kaybolması hastalığın sona erdiği anlamına gelmez; hasta belirtisiz latent döneme girer.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p035",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-50-c0160",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: sekonder sifiliz bulgularından biri olmayan seçenek tabes dorsalistir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: sekonder sifiliz bulgularından biri olmayan seçenek tabes dorsalistir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0161",
+       "ses": "El ve ayak tabanında makülopapüler döküntü, hepatit, menenjit ve kondiloma lata sekonder sifiliz bulgularıdır; tabes dorsalis ise tersiyer, parankimatöz nörosifiliz bulgusudur.",
+       "ekran": "El ve ayak tabanında makülopapüler döküntü, hepatit, menenjit ve kondiloma lata sekonder sifiliz bulgularıdır; tabes dorsalis ise tersiyer, parankimatöz nörosifiliz bulgusudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0162",
+       "ses": "Yine çıkmış sorularda sekonder sifilizin asemptomatik olduğu ifadesi yanlış seçenek olarak verildi.",
+       "ekran": "Yine çıkmış sorularda sekonder sifilizin asemptomatik olduğu ifadesi yanlış seçenek olarak verildi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0163",
+       "ses": "Gördüğünüz gibi sekonder sifiliz döküntü, lenfadenopati, sistemik ve organ bulgularıyla son derece semptomatik bir evredir; asemptomatik olan latent dönemdir.",
+       "ekran": "Gördüğünüz gibi sekonder sifiliz döküntü, lenfadenopati, sistemik ve organ bulgularıyla son derece semptomatik bir evredir; asemptomatik olan latent dönemdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b14",
+   "baslik": "Sekonder sifilizde klinik yaklaşım",
+   "paragraflar": [
+    {
+     "id": "k1-50-p036",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-50-c0164",
+       "ses": "Çıkmış sorularda tekrar tekrar sorulan bir vakayı birlikte değerlendirelim.",
+       "ekran": "Çıkmış sorularda tekrar tekrar sorulan bir vakayı birlikte değerlendirelim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0165",
+       "ses": "37 yaşında bir erkek hasta gövde, bacaklar, el ve ayak tabanlarında döküntü ile başvuruyor.",
+       "ekran": "37 yaşında bir erkek hasta gövde, bacaklar, el ve ayak tabanlarında döküntü ile başvuruyor.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0166",
+       "ses": "Döküntü dışında yakınması yok ve öyküsünde 1 yıl önce kendiliğinden geçmiş ağrısız bir penil ülser var.",
+       "ekran": "Döküntü dışında yakınması yok ve öyküsünde 1 yıl önce kendiliğinden geçmiş ağrısız bir penil ülser var.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0167",
+       "ses": "Avuç içi ve ayak tabanı döküntüsü ile geçirilmiş ağrısız ülser öyküsü birlikte olduğunda ilk düşünülecek tanı sekonder sifilizdir.",
+       "ekran": "Avuç içi ve ayak tabanı döküntüsü ile geçirilmiş ağrısız ülser öyküsü birlikte olduğunda ilk düşünülecek tanı sekonder sifilizdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p037",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-50-c0168",
+       "ses": "Burası önemli: bu hastada öncelikle yapılması gerekenler sifiliz serolojisinin istenmesi, HIV serolojisinin ve hepatit serolojisinin istenmesi ile hastanın cinsel partnerinin taranması ve tedavi edilmesidir.",
+       "ekran": "Burası önemli: bu hastada öncelikle yapılması gerekenler sifiliz serolojisinin istenmesi, HIV serolojisinin ve hepatit serolojisinin istenmesi ile hastanın cinsel partnerinin taranması ve tedavi edilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0169",
+       "ses": "Sekonder sifiliz ön tanısıyla hastayı kardiyovasküler komplikasyonlar açısından araştırmak ise öncelikli yaklaşımlar arasında yer almaz.",
+       "ekran": "Sekonder sifiliz ön tanısıyla hastayı kardiyovasküler komplikasyonlar açısından araştırmak ise öncelikli yaklaşımlar arasında yer almaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0170",
+       "ses": "Nedeni açıktır: kardiyovasküler sifiliz, bulaştan yıllar sonra gelişen tersiyer evrenin bir biçimidir; sekonder evredeki bir hastada öncelik tanının doğrulanması, eşlik edebilecek diğer cinsel yolla bulaşan enfeksiyonların araştırılması ve bulaş zincirinin kırılmasıdır.",
+       "ekran": "Nedeni açıktır: kardiyovasküler sifiliz, bulaştan yıllar sonra gelişen tersiyer evrenin bir biçimidir; sekonder evredeki bir hastada öncelik tanının doğrulanması, eşlik edebilecek diğer cinsel yolla bulaşan enfeksiyonların araştırılması ve bulaş zincirinin kırılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b15",
+   "baslik": "Latent sifiliz",
+   "paragraflar": [
+    {
+     "id": "k1-50-p038",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-50-c0171",
+       "ses": "Sekonder bulguların kendiliğinden gerilemesiyle hastalık görünmez bir döneme girer.",
+       "ekran": "Sekonder bulguların kendiliğinden gerilemesiyle hastalık görünmez bir döneme girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0172",
+       "ses": "Latent sifiliz, sekonder sifiliz bulgularının kaybolmasından tersiyer sifiliz bulgularının ortaya çıkmasına kadar geçen süredir.",
+       "ekran": "Latent sifiliz, sekonder sifiliz bulgularının kaybolmasından tersiyer sifiliz bulgularının ortaya çıkmasına kadar geçen süredir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0173",
+       "ses": "Bu dönem asemptomatiktir; hastanın yakınması ve muayene bulgusu yoktur.",
+       "ekran": "Bu dönem asemptomatiktir; hastanın yakınması ve muayene bulgusu yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0174",
+       "ses": "Ancak belirti olmamasına karşın Treponema pallidum vücutta bulunmaya devam eder.",
+       "ekran": "Ancak belirti olmamasına karşın Treponema pallidum vücutta bulunmaya devam eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0175",
+       "ses": "Bu nedenle latent sifiliz ancak hasta aktif olarak araştırıldığında saptanabilir.",
+       "ekran": "Bu nedenle latent sifiliz ancak hasta aktif olarak araştırıldığında saptanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0176",
+       "ses": "Belirti yok demek, enfeksiyon yok demek değildir.",
+       "ekran": "Belirti yok demek, enfeksiyon yok demek değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0177",
+       "ses": "Burası önemli, çıkmış sorularda doğru ifade olarak soruldu: latent sifilizde treponemal testler pozitiftir.",
+       "ekran": "Burası önemli, çıkmış sorularda doğru ifade olarak soruldu: latent sifilizde treponemal testler pozitiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0178",
+       "ses": "Belirtisiz olması seropozitifliği ortadan kaldırmaz.",
+       "ekran": "Belirtisiz olması seropozitifliği ortadan kaldırmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p039",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-50-c0179",
+       "ses": "Latent dönem her zaman kesintisiz sessiz geçmez.",
+       "ekran": "Latent dönem her zaman kesintisiz sessiz geçmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0180",
+       "ses": "Hastalığın ilk 4 yılında sekonder sifiliz relapsları gelişebilir ve bu relapsların %75 ile 90'ı ilk yılda görülür.",
+       "ekran": "Hastalığın ilk 4 yılında sekonder sifiliz relapsları gelişebilir ve bu relapsların %75 ile 90'ı ilk yılda görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0181",
+       "ses": "Relaps en sık mukokutanöz bulgularla, yani deri ve mukoza lezyonlarıyla olur.",
+       "ekran": "Relaps en sık mukokutanöz bulgularla, yani deri ve mukoza lezyonlarıyla olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0182",
+       "ses": "Doğal seyir şemasındaki latentten sekondere geri dönüş oku bu relapsları gösterir.",
+       "ekran": "Doğal seyir şemasındaki latentten sekondere geri dönüş oku bu relapsları gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0183",
+       "ses": "Mukokutanöz lezyonlar, örneğin kondiloma lata, bulaştırıcı olduğu için relaps dönemi bulaş açısından önemlidir.",
+       "ekran": "Mukokutanöz lezyonlar, örneğin kondiloma lata, bulaştırıcı olduğu için relaps dönemi bulaş açısından önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p040",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-50-c0184",
+       "ses": "Latent dönem süresine göre ikiye ayrılır: ilk 1 yıl erken latent dönem, 1 yıldan sonrası geç latent dönemdir.",
+       "ekran": "Latent dönem süresine göre ikiye ayrılır: ilk 1 yıl erken latent dönem, 1 yıldan sonrası geç latent dönemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0185",
+       "ses": "Relapsların çoğunun ilk yılda olması bu yılın bulaş açısından daha riskli olmasını açıklar; erken latent dönemin erken, infeksiyöz sifiliz grubunda yer almasının nedeni budur.",
+       "ekran": "Relapsların çoğunun ilk yılda olması bu yılın bulaş açısından daha riskli olmasını açıklar; erken latent dönemin erken, infeksiyöz sifiliz grubunda yer almasının nedeni budur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0186",
+       "ses": "Latent dönem 3 ile 30 yıl sürebilir ve olguların %60 ile 70'inde ömür boyu sürebilir; bu hastalarda tersiyer bulgular hiç gelişmez.",
+       "ekran": "Latent dönem 3 ile 30 yıl sürebilir ve olguların %60 ile 70'inde ömür boyu sürebilir; bu hastalarda tersiyer bulgular hiç gelişmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0187",
+       "ses": "Burası önemli, sınav spotu olarak: ilk 1 yıl erken latent, sonrası geç latent; relapsların %75 ile 90'ı ilk yılda; olguların %60 ile 70'inde latent dönem ömür boyu sürer.",
+       "ekran": "Burası önemli, sınav spotu olarak: ilk 1 yıl erken latent, sonrası geç latent; relapsların %75 ile 90'ı ilk yılda; olguların %60 ile 70'inde latent dönem ömür boyu sürer.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b16",
+   "baslik": "Tersiyer sifiliz ve gom",
+   "paragraflar": [
+    {
+     "id": "k1-50-p041",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-50-c0188",
+       "ses": "Latent dönemi ömür boyu sürmeyen hastalarda bulaştan 3 ile 20 yıl sonra tersiyer sifiliz gelişebilir.",
+       "ekran": "Latent dönemi ömür boyu sürmeyen hastalarda bulaştan 3 ile 20 yıl sonra tersiyer sifiliz gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0189",
+       "ses": "Tersiyer sifilizin lezyonları yavaş seyirli, progresif ve destrüktif, yani doku yıkıcıdır.",
+       "ekran": "Tersiyer sifilizin lezyonları yavaş seyirli, progresif ve destrüktif, yani doku yıkıcıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0190",
+       "ses": "Santral sinir sistemi, kardiyovasküler sistem, kemik, cilt ve iç organlar tutulabilir.",
+       "ekran": "Santral sinir sistemi, kardiyovasküler sistem, kemik, cilt ve iç organlar tutulabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0191",
+       "ses": "Çıkmış sorularda tersiyer sifilizde nörolojik tutulumun ve gomatöz lezyonların görüldüğü doğru ifadeler olarak yer aldı.",
+       "ekran": "Çıkmış sorularda tersiyer sifilizde nörolojik tutulumun ve gomatöz lezyonların görüldüğü doğru ifadeler olarak yer aldı.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p042",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-50-c0192",
+       "ses": "Tersiyer sifilizin karakteristik lezyonu gomdur.",
+       "ekran": "Tersiyer sifilizin karakteristik lezyonu gomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0193",
+       "ses": "Gom bir granülomdur ve Tip 4 aşırı duyarlılık, yani T hücre aracılı gecikmiş tip bağışık yanıt sonucu gelişir.",
+       "ekran": "Gom bir granülomdur ve Tip 4 aşırı duyarlılık, yani T hücre aracılı gecikmiş tip bağışık yanıt sonucu gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0194",
+       "ses": "Dolayısıyla dokudaki hasar, bakterinin doğrudan etkisinden çok konağın aşırı hücresel yanıtından kaynaklanır ve gom genellikle bakteri içermez.",
+       "ekran": "Dolayısıyla dokudaki hasar, bakterinin doğrudan etkisinden çok konağın aşırı hücresel yanıtından kaynaklanır ve gom genellikle bakteri içermez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0195",
+       "ses": "Gom tüm doku ve organlarda olabilir, ancak genellikle cilt, kemik ve karaciğerde görülür.",
+       "ekran": "Gom tüm doku ve organlarda olabilir, ancak genellikle cilt, kemik ve karaciğerde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0196",
+       "ses": "Burası önemli: gom, bakteri içermeyen ve Tip 4 aşırı duyarlılıkla gelişen granülomdur.",
+       "ekran": "Burası önemli: gom, bakteri içermeyen ve Tip 4 aşırı duyarlılıkla gelişen granülomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0197",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: tersiyer, yani geç sifiliz lezyonu gomdur.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: tersiyer, yani geç sifiliz lezyonu gomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0198",
+       "ses": "Şankr primer, kondiloma lata sekonder sifilize aittir.",
+       "ekran": "Şankr primer, kondiloma lata sekonder sifilize aittir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0199",
+       "ses": "Gomun sıklığının arttığı ifadesi ise soruda yanlış seçenek olarak verilmiştir.",
+       "ekran": "Gomun sıklığının arttığı ifadesi ise soruda yanlış seçenek olarak verilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b17",
+   "baslik": "Gomun yerleşimleri: cilt, kemik ve karaciğer",
+   "paragraflar": [
+    {
+     "id": "k1-50-p043",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-50-c0200",
+       "ses": "Ciltte gom nodüler ülsere lezyonlar oluşturur; başlangıçta nodül olarak başlayan lezyon zamanla ülserleşir.",
+       "ekran": "Ciltte gom nodüler ülsere lezyonlar oluşturur; başlangıçta nodül olarak başlayan lezyon zamanla ülserleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0201",
+       "ses": "Ders fotoğraflarında damakta ortası çökmüş, kenarları kabarık, damak dokusunu harap eden yıkıcı bir gom; alında yuvarlak, kabuklu, ortası nekrotik ülsere bir nodül; ağız köşesi ve dudakta kahverengi siyah kabukla örtülü yıkıcı bir ülser görülür.",
+       "ekran": "Ders fotoğraflarında damakta ortası çökmüş, kenarları kabarık, damak dokusunu harap eden yıkıcı bir gom; alında yuvarlak, kabuklu, ortası nekrotik ülsere bir nodül; ağız köşesi ve dudakta kahverengi siyah kabukla örtülü yıkıcı bir ülser görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0202",
+       "ses": "Sekonder sifiliz döküntüsü iz bırakmadan gerilerken tersiyer cilt gomu nodüler, ülsere ve destrüktiftir.",
+       "ekran": "Sekonder sifiliz döküntüsü iz bırakmadan gerilerken tersiyer cilt gomu nodüler, ülsere ve destrüktiftir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p044",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-50-c0203",
+       "ses": "Burası önemli, çıkmış sorularda soruldu: üçüncü devrinde gom oluşumu sonucu damakta perforasyona neden olabilen spesifik hastalık sifilizdir.",
+       "ekran": "Burası önemli, çıkmış sorularda soruldu: üçüncü devrinde gom oluşumu sonucu damakta perforasyona neden olabilen spesifik hastalık sifilizdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0204",
+       "ses": "Damaktaki yıkıcı gom, damak dokusunu harap ederek perforasyona yol açabilir.",
+       "ekran": "Damaktaki yıkıcı gom, damak dokusunu harap ederek perforasyona yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0205",
+       "ses": "Kemik tutulumunda genellikle tibia, fibula, klavikula ve kraniyum, yani kafatası tutulur.",
+       "ekran": "Kemik tutulumunda genellikle tibia, fibula, klavikula ve kraniyum, yani kafatası tutulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0206",
+       "ses": "Bulgular gece ağrıları ve lokal hassasiyettir.",
+       "ekran": "Bulgular gece ağrıları ve lokal hassasiyettir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0207",
+       "ses": "Tibiada gece artan ağrı ve lokal hassasiyet tersiyer sifilizin kemik gomunu düşündürmelidir.",
+       "ekran": "Tibiada gece artan ağrı ve lokal hassasiyet tersiyer sifilizin kemik gomunu düşündürmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0208",
+       "ses": "Karaciğer tutulumunda ise sarılık, karaciğer yetmezliği ve siroz gelişebilir.",
+       "ekran": "Karaciğer tutulumunda ise sarılık, karaciğer yetmezliği ve siroz gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b18",
+   "baslik": "Kronik nörosifiliz",
+   "paragraflar": [
+    {
+     "id": "k1-50-p045",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-50-c0209",
+       "ses": "Tersiyer sifilizin santral sinir sistemi tutulumuna nörosifiliz ya da kronik nörosifiliz denir.",
+       "ekran": "Tersiyer sifilizin santral sinir sistemi tutulumuna nörosifiliz ya da kronik nörosifiliz denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0210",
+       "ses": "Sekonder evredeki akut nörosifilizden farklı olarak yıllar sonra ve ilerleyici biçimde gelişir.",
+       "ekran": "Sekonder evredeki akut nörosifilizden farklı olarak yıllar sonra ve ilerleyici biçimde gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0211",
+       "ses": "Kronik nörosifiliz 3 tipe ayrılır: asemptomatik, meningovasküler ve parankimatöz nörosifiliz.",
+       "ekran": "Kronik nörosifiliz 3 tipe ayrılır: asemptomatik, meningovasküler ve parankimatöz nörosifiliz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0212",
+       "ses": "Asemptomatik nörosifiliz en sık tiptir; santral sinir sistemi tutulumu vardır ama klinik belirti yoktur.",
+       "ekran": "Asemptomatik nörosifiliz en sık tiptir; santral sinir sistemi tutulumu vardır ama klinik belirti yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0213",
+       "ses": "Burası önemli: kronik nörosifilizin en sık tipi asemptomatik nörosifilizdir ve nörolojik bulgu olmaması tutulumu dışlamaz.",
+       "ekran": "Burası önemli: kronik nörosifilizin en sık tipi asemptomatik nörosifilizdir ve nörolojik bulgu olmaması tutulumu dışlamaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p046",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-50-c0214",
+       "ses": "Meningovasküler sifilizde beyin, spinal kord ve meninkslerin damarları tutulur.",
+       "ekran": "Meningovasküler sifilizde beyin, spinal kord ve meninkslerin damarları tutulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0215",
+       "ses": "Treponemanın damar endotelinde çoğalması ve perivasküler hücrelere girmesi bu damar hasarının temelidir.",
+       "ekran": "Treponemanın damar endotelinde çoğalması ve perivasküler hücrelere girmesi bu damar hasarının temelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0216",
+       "ses": "Klinik olarak kişilik değişikliği, baş ağrısı ve damar tutulumuna bağlı iskemik hasarın sonucu olarak paralizi görülür.",
+       "ekran": "Klinik olarak kişilik değişikliği, baş ağrısı ve damar tutulumuna bağlı iskemik hasarın sonucu olarak paralizi görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0217",
+       "ses": "Parankimatöz nörosifilizde hasar damarlardan çok sinir dokusunun kendisindedir: nöronların hasarı, yani demiyelinizasyon söz konusudur.",
+       "ekran": "Parankimatöz nörosifilizde hasar damarlardan çok sinir dokusunun kendisindedir: nöronların hasarı, yani demiyelinizasyon söz konusudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0218",
+       "ses": "Bulgular kişilik değişikliği, paranoya, reflekslerde hiperaktivite, parezi ve paralizidir.",
+       "ekran": "Bulgular kişilik değişikliği, paranoya, reflekslerde hiperaktivite, parezi ve paralizidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0219",
+       "ses": "Dikkat edin, kişilik değişikliği hem meningovasküler hem parankimatöz tipte görülebilir; ayırıcı nokta hasarın yeridir, damar mı yoksa nöron mu.",
+       "ekran": "Dikkat edin, kişilik değişikliği hem meningovasküler hem parankimatöz tipte görülebilir; ayırıcı nokta hasarın yeridir, damar mı yoksa nöron mu.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p047",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-50-c0220",
+       "ses": "Parankimatöz nörosifilizin 2 klasik tablosu vardır.",
+       "ekran": "Parankimatöz nörosifilizin 2 klasik tablosu vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0221",
+       "ses": "Tabes dorsalis spinal kordun dorsal kök gangliyonlarının tutulumudur; parezi, parestezi, düşük ayak, ataksi ve Romberg belirtisi görülür.",
+       "ekran": "Tabes dorsalis spinal kordun dorsal kök gangliyonlarının tutulumudur; parezi, parestezi, düşük ayak, ataksi ve Romberg belirtisi görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0222",
+       "ses": "Dorsal kök gangliyonları duyu iletiminden sorumlu olduğu için pozisyon duyusu bozulur; hasta dengesini gözüyle düzeltir, ayaklar bitişik dururken gözlerini kapatınca dengesi bozulur ve bu Romberg belirtisidir.",
+       "ekran": "Dorsal kök gangliyonları duyu iletiminden sorumlu olduğu için pozisyon duyusu bozulur; hasta dengesini gözüyle düzeltir, ayaklar bitişik dururken gözlerini kapatınca dengesi bozulur ve bu Romberg belirtisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0223",
+       "ses": "Genel parezi ise beyni tutan biçimdir; irritabilite, kişilik değişikliği, baş ağrısı, unutkanlık, depresyon ve demansla seyreder.",
+       "ekran": "Genel parezi ise beyni tutan biçimdir; irritabilite, kişilik değişikliği, baş ağrısı, unutkanlık, depresyon ve demansla seyreder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0224",
+       "ses": "Beyin nöronlarının hasarı önce davranış ve duygu durumunda, sonra bellek ve bilişte bozulmaya yol açar ve tablo demansa ilerler.",
+       "ekran": "Beyin nöronlarının hasarı önce davranış ve duygu durumunda, sonra bellek ve bilişte bozulmaya yol açar ve tablo demansa ilerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0225",
+       "ses": "Bu nedenle kişilik değişikliği ve demansla gelen hastada sifiliz ayırıcı tanıda düşünülmelidir.",
+       "ekran": "Bu nedenle kişilik değişikliği ve demansla gelen hastada sifiliz ayırıcı tanıda düşünülmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b19",
+   "baslik": "Kardiyovasküler sifiliz ve tersiyer evrede bulaştırıcılık",
+   "paragraflar": [
+    {
+     "id": "k1-50-p048",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-50-c0226",
+       "ses": "Kardiyovasküler sifilizin temel lezyonu endarteritis obliteranstır.",
+       "ekran": "Kardiyovasküler sifilizin temel lezyonu endarteritis obliteranstır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0227",
+       "ses": "Endarteritis obliterans, endotelin iç tabakasının inflamasyonu sonucu damar oklüzyonu, yani damarın tıkanmasıdır.",
+       "ekran": "Endarteritis obliterans, endotelin iç tabakasının inflamasyonu sonucu damar oklüzyonu, yani damarın tıkanmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0228",
+       "ses": "Bu inflamasyonun başlangıç noktası yine treponemanın damar endotelinde çoğalması ve perivasküler hücrelere girmesidir.",
+       "ekran": "Bu inflamasyonun başlangıç noktası yine treponemanın damar endotelinde çoğalması ve perivasküler hücrelere girmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0229",
+       "ses": "Tıkanan küçük damarların beslediği damar duvarı zayıflar ve bu zayıflık büyük damarlarda, özellikle aortta, yapısal bozukluklara zemin hazırlar.",
+       "ekran": "Tıkanan küçük damarların beslediği damar duvarı zayıflar ve bu zayıflık büyük damarlarda, özellikle aortta, yapısal bozukluklara zemin hazırlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p049",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-50-c0230",
+       "ses": "Kardiyovasküler sifilizde sıklıkla çıkan aort tutulur.",
+       "ekran": "Kardiyovasküler sifilizde sıklıkla çıkan aort tutulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0231",
+       "ses": "Tutulan aort duvarında kalsifikasyon gelişir ve bu kalsifikasyon grafilerde görülebilir.",
+       "ekran": "Tutulan aort duvarında kalsifikasyon gelişir ve bu kalsifikasyon grafilerde görülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0232",
+       "ses": "Zayıflayan duvarın genişlemesiyle aort anevrizması gelişir; doğal seyir şemasında da tersiyer sifilizde çıkan aort anevrizması vurgulanır.",
+       "ekran": "Zayıflayan duvarın genişlemesiyle aort anevrizması gelişir; doğal seyir şemasında da tersiyer sifilizde çıkan aort anevrizması vurgulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0233",
+       "ses": "Aort kökünün genişlemesiyle kapak kapanamaz hâle gelir ve aort yetmezliği ortaya çıkar.",
+       "ekran": "Aort kökünün genişlemesiyle kapak kapanamaz hâle gelir ve aort yetmezliği ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0234",
+       "ses": "Koroner arterlerin tutulumu sonucu ise anjina gelişir.",
+       "ekran": "Koroner arterlerin tutulumu sonucu ise anjina gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0235",
+       "ses": "Burası önemli, sınav spotu olarak: endarteritis obliterans sonucu sıklıkla çıkan aort tutulur; anevrizma, aort yetmezliği ve koroner tutulumla anjina görülür.",
+       "ekran": "Burası önemli, sınav spotu olarak: endarteritis obliterans sonucu sıklıkla çıkan aort tutulur; anevrizma, aort yetmezliği ve koroner tutulumla anjina görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p050",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-50-c0236",
+       "ses": "Tersiyer sifilizin klinik ağırlığı ile bulaştırıcılığı ters orantılıdır.",
+       "ekran": "Tersiyer sifilizin klinik ağırlığı ile bulaştırıcılığı ters orantılıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0237",
+       "ses": "Tersiyer dönemde bulaştırıcılık yoktur.",
+       "ekran": "Tersiyer dönemde bulaştırıcılık yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0238",
+       "ses": "Bunun 3 gerekçesi vardır.",
+       "ekran": "Bunun 3 gerekçesi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0239",
+       "ses": "1.'si, gom genellikle bakteri içermez ve doku hasarı Tip 4 aşırı duyarlılık yanıtından kaynaklanır.",
+       "ekran": "1.'si, gom genellikle bakteri içermez ve doku hasarı Tip 4 aşırı duyarlılık yanıtından kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0240",
+       "ses": "2.'si, bulaşın başlıca kaynakları olan şankr ve kondiloma lata erken evrelere aittir.",
+       "ekran": "2.'si, bulaşın başlıca kaynakları olan şankr ve kondiloma lata erken evrelere aittir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0241",
+       "ses": "3.'sü, zaman sınıflamasında tersiyer sifiliz geç latent dönemle birlikte geç, non-infeksiyöz grupta yer alır.",
+       "ekran": "3.'sü, zaman sınıflamasında tersiyer sifiliz geç latent dönemle birlikte geç, non-infeksiyöz grupta yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0242",
+       "ses": "Burası önemli: tersiyer sifilizli hasta ağır organ hasarı taşıyabilir ama bulaştırıcı değildir; geç latent ve tersiyer evrelerde bulaşıcı olduğu ifadesi yanlıştır.",
+       "ekran": "Burası önemli: tersiyer sifilizli hasta ağır organ hasarı taşıyabilir ama bulaştırıcı değildir; geç latent ve tersiyer evrelerde bulaşıcı olduğu ifadesi yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0243",
+       "ses": "Hastalığın ağır ve destrüktif olması bulaştırıcı olduğu anlamına gelmez.",
+       "ekran": "Hastalığın ağır ve destrüktif olması bulaştırıcı olduğu anlamına gelmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b20",
+   "baslik": "Tanı: karanlık saha mikroskobisi",
+   "paragraflar": [
+    {
+     "id": "k1-50-p051",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-50-c0244",
+       "ses": "Sifiliz tanısında 3 grup yöntem kullanılır: doğrudan mikroskopi, serolojik testler ve moleküler testler.",
+       "ekran": "Sifiliz tanısında 3 grup yöntem kullanılır: doğrudan mikroskopi, serolojik testler ve moleküler testler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0245",
+       "ses": "Spiroketler Gram boyası ile iyi boyanmadığından canlı bakteriler karanlık saha mikroskobisinde gösterilir.",
+       "ekran": "Spiroketler Gram boyası ile iyi boyanmadığından canlı bakteriler karanlık saha mikroskobisinde gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0246",
+       "ses": "Bu inceleme için şankr, kondiloma lata ve mukozal lezyonlardan alınan seröz akıntı, yani lezyondan gelen berrak, plazma benzeri sıvı kullanılır.",
+       "ekran": "Bu inceleme için şankr, kondiloma lata ve mukozal lezyonlardan alınan seröz akıntı, yani lezyondan gelen berrak, plazma benzeri sıvı kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0247",
+       "ses": "Bu 3 lezyon bol treponema içeren, bulaştırıcı erken evre lezyonları olduğu için doğrudan gösterim için en uygun örneklerdir.",
+       "ekran": "Bu 3 lezyon bol treponema içeren, bulaştırıcı erken evre lezyonları olduğu için doğrudan gösterim için en uygun örneklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p052",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-50-c0248",
+       "ses": "Serolojik testler 2 gruba ayrılır.",
+       "ekran": "Serolojik testler 2 gruba ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0249",
+       "ses": "Spesifik olmayan, yani nontreponemal testler VDRL ile RPR testleridir.",
+       "ekran": "Spesifik olmayan, yani nontreponemal testler VDRL ile RPR testleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0250",
+       "ses": "Spesifik, yani treponemal testler ise Treponema pallidum hemaglütinasyon testi olan TPHA ve floresan treponemal antikor absorpsiyon testi olan FTA-ABS testidir.",
+       "ekran": "Spesifik, yani treponemal testler ise Treponema pallidum hemaglütinasyon testi olan TPHA ve floresan treponemal antikor absorpsiyon testi olan FTA-ABS testidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0251",
+       "ses": "Moleküler test olarak ise etkenin genetik materyalini çoğaltarak saptayan polimeraz zincir reaksiyonu, yani PCR kullanılır.",
+       "ekran": "Moleküler test olarak ise etkenin genetik materyalini çoğaltarak saptayan polimeraz zincir reaksiyonu, yani PCR kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b21",
+   "baslik": "Spesifik olmayan testler: VDRL ve RPR",
+   "paragraflar": [
+    {
+     "id": "k1-50-p053",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-50-c0252",
+       "ses": "VDRL ve RPR testlerinin neden spesifik olmadığını ölçtükleri antikorun kaynağı açıklar.",
+       "ekran": "VDRL ve RPR testlerinin neden spesifik olmadığını ölçtükleri antikorun kaynağı açıklar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0253",
+       "ses": "Bu testler bakterinin kendisine karşı oluşan antikorları tespit etmez.",
+       "ekran": "Bu testler bakterinin kendisine karşı oluşan antikorları tespit etmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0254",
+       "ses": "Bakterinin verdiği hasar sonucu dokudan kardiyolipin, lesitin ve kolesterol antijenleri salınır.",
+       "ekran": "Bakterinin verdiği hasar sonucu dokudan kardiyolipin, lesitin ve kolesterol antijenleri salınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0255",
+       "ses": "Testler bu antijenlere karşı oluşan immünoglobulin M ve immünoglobulin G yapısındaki antikorları saptar.",
+       "ekran": "Testler bu antijenlere karşı oluşan immünoglobulin M ve immünoglobulin G yapısındaki antikorları saptar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0256",
+       "ses": "Yani test treponemanın kendisini değil, doku hasarına karşı gelişen bağışık yanıtı gösterir.",
+       "ekran": "Yani test treponemanın kendisini değil, doku hasarına karşı gelişen bağışık yanıtı gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p054",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-50-c0257",
+       "ses": "Spesifik olmayan testler tarama testi olarak, tedavi takibinde ve nörosifiliz tanısında kullanılır.",
+       "ekran": "Spesifik olmayan testler tarama testi olarak, tedavi takibinde ve nörosifiliz tanısında kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0258",
+       "ses": "Primer ve sekonder sifilizde pozitiftir.",
+       "ekran": "Primer ve sekonder sifilizde pozitiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0259",
+       "ses": "Tedavi ile 1 ya da 2 yıl içinde negatifleştikleri için tedavi takibinde kullanılırlar; başarılı tedavide sonuç zamanla negatife döner.",
+       "ekran": "Tedavi ile 1 ya da 2 yıl içinde negatifleştikleri için tedavi takibinde kullanılırlar; başarılı tedavide sonuç zamanla negatife döner.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0260",
+       "ses": "Burası önemli, bu iki bilgi çıkmış sorularda soruldu.",
+       "ekran": "Burası önemli, bu iki bilgi çıkmış sorularda soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0261",
+       "ses": "1.'si, VDRL testi sifilizde tarama testi olarak kullanılır; bruselloz, gonore, Lyme hastalığı ya da tifo için değil.",
+       "ekran": "1.'si, VDRL testi sifilizde tarama testi olarak kullanılır; bruselloz, gonore, Lyme hastalığı ya da tifo için değil.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0262",
+       "ses": "2.'si, sifilizin tedavi izleminde kullanılan tanı yöntemi VDRL testidir; TPHA gibi treponemal testler tedavi izleminde kullanılmaz.",
+       "ekran": "2.'si, sifilizin tedavi izleminde kullanılan tanı yöntemi VDRL testidir; TPHA gibi treponemal testler tedavi izleminde kullanılmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b22",
+   "baslik": "Spesifik testler: TPHA ve FTA-ABS",
+   "paragraflar": [
+    {
+     "id": "k1-50-p055",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-50-c0263",
+       "ses": "Spesifik testler treponemanın kendisine yöneliktir ve bakterinin kendisine karşı oluşan antikorları tespit eder.",
+       "ekran": "Spesifik testler treponemanın kendisine yöneliktir ve bakterinin kendisine karşı oluşan antikorları tespit eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0264",
+       "ses": "Primer sifiliz döneminde pozitifleşirler.",
+       "ekran": "Primer sifiliz döneminde pozitifleşirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0265",
+       "ses": "Burası önemli, sınav spotu olarak: TPHA ve FTA-ABS en erken yükselen ve en spesifik testlerdir.",
+       "ekran": "Burası önemli, sınav spotu olarak: TPHA ve FTA-ABS en erken yükselen ve en spesifik testlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0266",
+       "ses": "Bakteriye özgü oldukları için tanının doğrulanmasında değerlidirler.",
+       "ekran": "Bakteriye özgü oldukları için tanının doğrulanmasında değerlidirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0267",
+       "ses": "Bu testlerin belirleyici özelliği sonuçlarının kalıcı olmasıdır.",
+       "ekran": "Bu testlerin belirleyici özelliği sonuçlarının kalıcı olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0268",
+       "ses": "Primer dönemde pozitifleşen spesifik testler ömür boyu pozitif kalır.",
+       "ekran": "Primer dönemde pozitifleşen spesifik testler ömür boyu pozitif kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0269",
+       "ses": "Bu nedenle başarılı tedaviden sonra da sonuç pozitif kalır ve spesifik testler tedavi takibinde kullanılamaz.",
+       "ekran": "Bu nedenle başarılı tedaviden sonra da sonuç pozitif kalır ve spesifik testler tedavi takibinde kullanılamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0270",
+       "ses": "Belirtisiz latent sifilizde de bu testler pozitiftir.",
+       "ekran": "Belirtisiz latent sifilizde de bu testler pozitiftir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p056",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-50-c0271",
+       "ses": "İki grubu kısaca karşılaştıralım.",
+       "ekran": "İki grubu kısaca karşılaştıralım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0272",
+       "ses": "Spesifik olmayan testler tedaviden sonra 3 yılda negatifleşir ve tedavi takibinde kullanılır.",
+       "ekran": "Spesifik olmayan testler tedaviden sonra 3 yılda negatifleşir ve tedavi takibinde kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0273",
+       "ses": "Spesifik testler ise ömür boyu pozitif kalır ve tedavi takibinde kullanılamaz.",
+       "ekran": "Spesifik testler ise ömür boyu pozitif kalır ve tedavi takibinde kullanılamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0274",
+       "ses": "Hangi test tedavi izleminde kullanılır sorusunun yanıtı VDRL ve RPR, hangi test ömür boyu pozitif kalır sorusunun yanıtı ise TPHA ve FTA-ABS'tir.",
+       "ekran": "Hangi test tedavi izleminde kullanılır sorusunun yanıtı VDRL ve RPR, hangi test ömür boyu pozitif kalır sorusunun yanıtı ise TPHA ve FTA-ABS'tir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b23",
+   "baslik": "Tedavi: benzatin penisilin şemaları",
+   "paragraflar": [
+    {
+     "id": "k1-50-p057",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-50-c0275",
+       "ses": "Sifiliz tedavisinde temel ilaç benzatin penisilindir; benzatin penisilin kas içine uygulanan, uzun etkili bir penisilin preparatıdır.",
+       "ekran": "Sifiliz tedavisinde temel ilaç benzatin penisilindir; benzatin penisilin kas içine uygulanan, uzun etkili bir penisilin preparatıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0276",
+       "ses": "Doz şeması hastalığın evresine göre belirlenir.",
+       "ekran": "Doz şeması hastalığın evresine göre belirlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0277",
+       "ses": "Primer sifiliz, sekonder sifiliz ve erken latent sifilizde benzatin penisilin 2,4 milyon ünite, kas içine tek doz olarak uygulanır.",
+       "ekran": "Primer sifiliz, sekonder sifiliz ve erken latent sifilizde benzatin penisilin 2,4 milyon ünite, kas içine tek doz olarak uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0278",
+       "ses": "Bu 3 evrenin ortak noktası, zaman sınıflamasındaki erken, infeksiyöz sifiliz grubunu oluşturmalarıdır.",
+       "ekran": "Bu 3 evrenin ortak noktası, zaman sınıflamasındaki erken, infeksiyöz sifiliz grubunu oluşturmalarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p058",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-50-c0279",
+       "ses": "Geç latent sifiliz, gomatöz sifiliz ve kardiyovasküler sifilizde ise aynı ilaç, yine 2,4 milyon ünite kas içine, haftada 1 kez olmak üzere 3 hafta uygulanır.",
+       "ekran": "Geç latent sifiliz, gomatöz sifiliz ve kardiyovasküler sifilizde ise aynı ilaç, yine 2,4 milyon ünite kas içine, haftada 1 kez olmak üzere 3 hafta uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0280",
+       "ses": "Dikkat edin, doz miktarı 2 şemada aynıdır; fark uygulama sayısındadır: erken sifilizde tek doz, geç sifilizde haftada bir, 3 hafta.",
+       "ekran": "Dikkat edin, doz miktarı 2 şemada aynıdır; fark uygulama sayısındadır: erken sifilizde tek doz, geç sifilizde haftada bir, 3 hafta.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0281",
+       "ses": "Tersiyer sifilizin 3 biçiminden ikisi bu şemayla tedavi edilir; nörosifiliz bu listede yer almaz.",
+       "ekran": "Tersiyer sifilizin 3 biçiminden ikisi bu şemayla tedavi edilir; nörosifiliz bu listede yer almaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0282",
+       "ses": "Burası önemli, sınav spotu olarak: primer, sekonder ve erken latent sifilizde tek doz; geç latent, gomatöz ve kardiyovasküler sifilizde haftada bir, 3 hafta.",
+       "ekran": "Burası önemli, sınav spotu olarak: primer, sekonder ve erken latent sifilizde tek doz; geç latent, gomatöz ve kardiyovasküler sifilizde haftada bir, 3 hafta.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b24",
+   "baslik": "Tedavi: penisilin alerjisi ve nörosifiliz",
+   "paragraflar": [
+    {
+     "id": "k1-50-p059",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-50-c0283",
+       "ses": "Penisilin alerjisi olan hastada 3 alternatif ilaç vardır.",
+       "ekran": "Penisilin alerjisi olan hastada 3 alternatif ilaç vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0284",
+       "ses": "Tetrasiklin grubundan doksisiklin günde 2 kez 100 miligram, 4 hafta verilir.",
+       "ekran": "Tetrasiklin grubundan doksisiklin günde 2 kez 100 miligram, 4 hafta verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0285",
+       "ses": "Üçüncü kuşak sefalosporin olan seftriakson 1 gram, kas içi ya da damar içi yolla, 10 ile 14 gün uygulanır.",
+       "ekran": "Üçüncü kuşak sefalosporin olan seftriakson 1 gram, kas içi ya da damar içi yolla, 10 ile 14 gün uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0286",
+       "ses": "Makrolid grubundan azitromisin günde 1 kez 500 miligram, 1 hafta verilir; ancak azitromisinde direnç önemli bir sorun olarak özellikle vurgulanır.",
+       "ekran": "Makrolid grubundan azitromisin günde 1 kez 500 miligram, 1 hafta verilir; ancak azitromisinde direnç önemli bir sorun olarak özellikle vurgulanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-50-p060",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-50-c0287",
+       "ses": "Nörosifiliz, göz tutulumu olan oküler sifiliz ve kulak tutulumu olan otosifilizde benzatin penisilin şemaları yerine kristalize penisilin kullanılır.",
+       "ekran": "Nörosifiliz, göz tutulumu olan oküler sifiliz ve kulak tutulumu olan otosifilizde benzatin penisilin şemaları yerine kristalize penisilin kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0288",
+       "ses": "Kristalize penisilin günde birçok kez uygulanan kısa etkili bir penisilindir.",
+       "ekran": "Kristalize penisilin günde birçok kez uygulanan kısa etkili bir penisilindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0289",
+       "ses": "Şema günde 6 kez, 2 ile 4 milyon ünite, 10 ile 14 gündür.",
+       "ekran": "Şema günde 6 kez, 2 ile 4 milyon ünite, 10 ile 14 gündür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0290",
+       "ses": "Sekonder evrede tanımladığımız üveit de bir göz tutulumudur.",
+       "ekran": "Sekonder evrede tanımladığımız üveit de bir göz tutulumudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0291",
+       "ses": "Burası önemli: nörosifiliz, oküler sifiliz ve otosifilizde kristalize penisilin günde 6 kez 2 ile 4 milyon ünite, 10 ile 14 gün uygulanır.",
+       "ekran": "Burası önemli: nörosifiliz, oküler sifiliz ve otosifilizde kristalize penisilin günde 6 kez 2 ile 4 milyon ünite, 10 ile 14 gün uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-50-b25",
+   "baslik": "Özetle",
+   "paragraflar": [
+    {
+     "id": "k1-50-p061",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-50-c0292",
+       "ses": "Özetle, tedavi seçimi 3 soruya dayanır: hastalık erken mi geç mi, santral sinir sistemi, göz ya da kulak tutulumu var mı ve penisilin alerjisi var mı.",
+       "ekran": "Özetle, tedavi seçimi 3 soruya dayanır: hastalık erken mi geç mi, santral sinir sistemi, göz ya da kulak tutulumu var mı ve penisilin alerjisi var mı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0293",
+       "ses": "Erken sifilizde tek doz, geç latent, gomatöz ve kardiyovasküler sifilizde haftalık 3 doz benzatin penisilin, nörosifilizde kristalize penisilin kullanılır.",
+       "ekran": "Erken sifilizde tek doz, geç latent, gomatöz ve kardiyovasküler sifilizde haftalık 3 doz benzatin penisilin, nörosifilizde kristalize penisilin kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0294",
+       "ses": "Tedavi yanıtı VDRL ile izlenir, TPHA ömür boyu pozitif kalır.",
+       "ekran": "Tedavi yanıtı VDRL ile izlenir, TPHA ömür boyu pozitif kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-50-c0295",
+       "ses": "Bulaştırıcılık ise yalnız primer, sekonder ve erken latent dönemlerle sınırlıdır.",
+       "ekran": "Bulaştırıcılık ise yalnız primer, sekonder ve erken latent dönemlerle sınırlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

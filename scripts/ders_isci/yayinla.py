@@ -555,6 +555,12 @@ def _canli_ders_ekle(y) -> str:
     if not f.exists():
         return f"{y.ders_id}: konuşma metni yok (canlı derse eklenmedi)"
     b = oku(y.d / "baglam.json", {}) or {}
+    v2 = y.d / "konusma_v2.json"  # Kurul 2+: cümle kimlikli metin → data/sesli_anlatim/v2/<anahtar>.json (deeplink /k/<id>)
+    if v2.exists():
+        hedef = MEDS / "data" / "sesli_anlatim" / "v2" / f"{y.ders_id}.json"
+        hedef.parent.mkdir(parents=True, exist_ok=True)
+        d2 = json.loads(v2.read_text(encoding="utf-8")); d2["anahtar"] = y.ders_id
+        hedef.write_text(json.dumps(d2, ensure_ascii=False, indent=1), encoding="utf-8")
     yol = b.get("pdf_yolu") or ""
     indirilen = oku(ROOT / "meds_downloads" / "_downloads.json", {}) or {}
     file_id = next((fid for fid, v in indirilen.items() if isinstance(v, dict) and v.get("path") == f"drive_root/{yol}"), None)

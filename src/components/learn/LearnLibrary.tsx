@@ -76,6 +76,11 @@ export const isPublished = (d: DeckCatalogEntry) => !!(d.isNew || String(d.versi
 /** Kitaplıktaki kısa ders dalı adı: "Üroloji / Tıbbi Patoloji" → "Üroloji" */
 export const branchOf = (d: DeckCatalogEntry) => disciplineLabel(disciplineGroup(d.discipline));
 /** "Kurul 1 - Ürogenital…" → "Kurul 1"; kurul numarası yoksa "Diğer" */
+/** /ogren?kurul=N → "Kurul N" süzgeciyle açılır (Geçmiş kurullar bağlantısı); yoksa tümü */
+export const urlKurulSuzgeci = (): string => {
+  try { const n = Number(new URLSearchParams(location.search).get('kurul')); return n >= 1 && n <= 6 ? `Kurul ${n}` : 'all'; } catch { return 'all'; }
+};
+
 export const kurulOf = (d: DeckCatalogEntry) => {
   const m = /kurul\s*(\d+)/i.exec(String(d.committee || d.category || ''));
   return m ? `Kurul ${m[1]}` : 'Diğer';
@@ -128,7 +133,7 @@ export const LearnLibrary: React.FC<{
   const review = useReviewCounts();
   const [query, setQuery] = useState('');
   const [branch, setBranch] = useState('all');
-  const [kurul, setKurul] = useState('all');
+  const [kurul, setKurul] = useState(urlKurulSuzgeci);
   const [status, setStatus] = useState<Status>('all');
   const [limit, setLimit] = useState(PAGE);
   const [recent] = useState(readRecent);

@@ -42,6 +42,7 @@ import { MetaPicker } from './ui/MetaPicker';
 import './quickadd/quickadd.css';
 import '../styles/v12/quickadd.css';
 import { useAppearance } from '../utils/appearance';
+import { sinavPenceresi } from '../services/kurulPencere';
 
 const AiQuestionOptimizerModal = React.lazy(() =>
   import('./AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal }))
@@ -951,6 +952,27 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
   // Telefonda yazma alanı tam ekran açılır (animasyonla), kapatınca yerine animasyonla döner; geri tuşu da kapatır
   const [full, setFull] = useState<false | 'open' | 'closing'>(false);
+  // Sınav günü + sonraki 7 gün: "Kaçıncı soruydu?" alanı kökün üstünde öne çıkar (olası soru yuvası numarayla kurulur)
+  const sinavPen = useMemo(() => sinavPenceresi(), []);
+  const numaraOne = sinavPen ? (
+    <label className={`qa-numara ${full ? 'is-full' : ''}`}>
+      <span className="qa-numara-l">Kaçıncı soruydu?<small>Kurul {sinavPen.kurul.kurul} sınavı · 1–100, bilmiyorsan boş bırak</small></span>
+      <input
+        type="text"
+        inputMode="numeric"
+        enterKeyHint="done"
+        value={questionNumber}
+        onChange={(e) => {
+          const v = e.target.value.replace(/[^0-9]/g, '').slice(0, 3);
+          if (v && (Number(v) < 1 || Number(v) > 100)) return;
+          setQuestionNumber(v); setUserManualNumber(true); setAutoNum(false);
+        }}
+        onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); (e.target as HTMLInputElement).blur(); } }}
+        placeholder="—"
+        aria-label="Sınavda kaçıncı soruydu (1–100)"
+      />
+    </label>
+  ) : null;
   const fullRef = React.useRef(full);
   fullRef.current = full;
   const isClosingRef = React.useRef(false);
@@ -1542,6 +1564,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           </div>
         ) : (
           <>
+            {!full && numaraOne}
             <label htmlFor="hatira" className="sr-only">Hatırladığın kısım</label>
             <div className={`ms-composer ${showMeta ? 'has-meta' : ''} ${full ? `is-full ${full === 'closing' ? 'is-closing' : ''}` : ''}`}>
               {full && (
@@ -1567,6 +1590,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     ) : <span className="w-[74px]" aria-hidden />}
                   </div>
                   <div className="wz-progress" aria-hidden><i style={{ width: `${((wizSteps.indexOf(wiz) + 1) / (qType ? wizSteps.length : 4.5)) * 100}%` }} /></div>
+                  {wiz === 'kok' && numaraOne}
                 </>
               )}
               <FastTextarea

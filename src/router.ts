@@ -14,6 +14,8 @@
  *   /canliders   → Sesli ders (eski adı Canlı ders): sesli dersler (liste), /canliders/<key> metin + PDF ile dinleme
  *   /soru-cozucu → sesli soru çözücü (branş başlangıç ekranı; eski /spotlar?gorunum=cozucu buraya yönlenir)
  *   /cevrimdisi → çevrimdışı merkezi (ders paketlerini indir, güncelle, sil)
+ *   /olasi-sorular → sınav sonrası öğrenci hatıralarından kurulan olası sorular (?kurul=N)
+ *   /gecmis-kurullar → sınavı geçmiş kurulların içeriğine bağlantılar
  *   /alternatif-cozucu → patoloji alternatif sesli çözücü (kısa anlatım, otomatik geçiş)
  *   /en-onemliler → sınav için en önemliler (100 puan; eski /spotlar?gorunum=onem buraya yönlenir)
  *   /patoloji-check-up → Patoloji Hızlı Check Up: ders slaytlarından karşılaştırma tabloları + kısa notlar (?bolum=)
@@ -62,7 +64,9 @@ export type AppRoute =
   | 'patoloji_checkup'
   | 'genetik_checkup'
   | 'bitirdiklerim'
-  | 'cevrimdisi';
+  | 'cevrimdisi'
+  | 'olasi_sorular'
+  | 'gecmis_kurullar';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -104,6 +108,8 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   genetik_checkup: '/genetik-check-up',
   bitirdiklerim: '/bitirdiklerim',
   cevrimdisi: '/cevrimdisi',
+  olasi_sorular: '/olasi-sorular',
+  gecmis_kurullar: '/gecmis-kurullar',
 };
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
@@ -146,6 +152,8 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   genetik_checkup: 'Genetik Sınav Kalıbı & Check Up',
   bitirdiklerim: 'Bitirdiklerim',
   cevrimdisi: 'Çevrimdışı',
+  olasi_sorular: 'Olası sorular',
+  gecmis_kurullar: 'Geçmiş kurullar',
 };
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
@@ -255,6 +263,13 @@ const ALIASES: Record<string, AppRoute> = {
   offline: 'cevrimdisi',
   indirilenler: 'cevrimdisi',
   'cevrimdisi-mod': 'cevrimdisi',
+  olasi_sorular: 'olasi_sorular',
+  olasi: 'olasi_sorular',
+  'olasi-soru': 'olasi_sorular',
+  gecmis_kurullar: 'gecmis_kurullar',
+  'gecmis-kurul': 'gecmis_kurullar',
+  arsiv: 'gecmis_kurullar',
+  'kurul-arsivi': 'gecmis_kurullar',
 };
 
 export interface ParsedRoute {

@@ -1,0 +1,3225 @@
+{
+ "surum": 2,
+ "ders_id": "k1-28",
+ "anahtar": "k1-28-tumor-biyolojisi-ve-terminolojisi",
+ "baslik": "Tümör Biyolojisi ve Terminolojisi",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-28-b01",
+   "baslik": "Neoplazi, kanser ve klonal köken",
+   "paragraflar": [
+    {
+     "id": "k1-28-p001",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-28-c0001",
+       "ses": "Neoplazi, kelime anlamıyla yeni büyüme demektir.",
+       "ekran": "Neoplazi, kelime anlamıyla yeni büyüme demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0002",
+       "ses": "Neoplastik hücre, normal büyüme kontrolüne dirençlidir ve sürekli çoğalma eğilimi taşır; yani büyümesi, dokunun gerçek ihtiyacından bağımsız ilerler.",
+       "ekran": "Neoplastik hücre, normal büyüme kontrolüne dirençlidir ve sürekli çoğalma eğilimi taşır; yani büyümesi, dokunun gerçek ihtiyacından bağımsız ilerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0003",
+       "ses": "Kanser ise kötü huylu, yani malign neoplazmların tümü için kullanılan genel terimdir ve büyüme düzenindeki derin bir bozukluğu yansıtır.",
+       "ekran": "Kanser ise kötü huylu, yani malign neoplazmların tümü için kullanılan genel terimdir ve büyüme düzenindeki derin bir bozukluğu yansıtır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0004",
+       "ses": "Buradan ilk kuralımızı çıkaralım: her neoplazi kanser değildir, kanser terimi yalnız malign neoplazmları kapsar.",
+       "ekran": "Buradan ilk kuralımızı çıkaralım: her neoplazi kanser değildir, kanser terimi yalnız malign neoplazmları kapsar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p002",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-28-c0005",
+       "ses": "Kanser, DNA mutasyonlarına dayalı genetik bir hastalıktır.",
+       "ekran": "Kanser, DNA mutasyonlarına dayalı genetik bir hastalıktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0006",
+       "ses": "Bu mutasyonların üç kaynağı vardır.",
+       "ekran": "Bu mutasyonların üç kaynağı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0007",
+       "ses": "1.'si çevresel karsinojenlerdir; kimyasallar, radyasyon ve enfeksiyon etkenleri DNA üzerinde kalıcı hasar bırakır.",
+       "ekran": "1.'si çevresel karsinojenlerdir; kimyasallar, radyasyon ve enfeksiyon etkenleri DNA üzerinde kalıcı hasar bırakır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0008",
+       "ses": "2.'si hücresel süreçlerin hata payıdır; DNA kopyalanırken hiçbir dış etken olmadan kendiliğinden, yani spontan mutasyonlar oluşur.",
+       "ekran": "2.'si hücresel süreçlerin hata payıdır; DNA kopyalanırken hiçbir dış etken olmadan kendiliğinden, yani spontan mutasyonlar oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0009",
+       "ses": "3.'sü kalıtsal, yani germ hattı mutasyonlarıdır; ebeveynden aktarılır, vücudun tüm hücrelerinde bulunur ve kansere yatkınlığın zeminini oluşturur.",
+       "ekran": "3.'sü kalıtsal, yani germ hattı mutasyonlarıdır; ebeveynden aktarılır, vücudun tüm hücrelerinde bulunur ve kansere yatkınlığın zeminini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p003",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-28-c0010",
+       "ses": "Genetik koda dokunmayan ikinci bir mekanizma da vardır: epigenetik değişiklikler.",
+       "ekran": "Genetik koda dokunmayan ikinci bir mekanizma da vardır: epigenetik değişiklikler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0011",
+       "ses": "DNA metilasyonu ve histon modifikasyonları, gen ekspresyonunu mutasyon olmadan değiştirir.",
+       "ekran": "DNA metilasyonu ve histon modifikasyonları, gen ekspresyonunu mutasyon olmadan değiştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0012",
+       "ses": "Yani gen dizisi sağlam kalsa bile o gen susturulabilir ya da aşırı ifade edilebilir.",
+       "ekran": "Yani gen dizisi sağlam kalsa bile o gen susturulabilir ya da aşırı ifade edilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0013",
+       "ses": "Kanser hücresindeki bozukluk yalnız dizi değişikliğiyle sınırlı değildir; epigenetik düzenleme bozuklukları da aynı sonuca katkı verir.",
+       "ekran": "Kanser hücresindeki bozukluk yalnız dizi değişikliğiyle sınırlı değildir; epigenetik düzenleme bozuklukları da aynı sonuca katkı verir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p004",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-28-c0014",
+       "ses": "Kanser hücresinde oluşan genetik değişiklikler hücre bölünmesiyle kalıtsal hale gelir; 1 kez yerleşen değişiklik tüm yavru hücrelere aktarılır.",
+       "ekran": "Kanser hücresinde oluşan genetik değişiklikler hücre bölünmesiyle kalıtsal hale gelir; 1 kez yerleşen değişiklik tüm yavru hücrelere aktarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0015",
+       "ses": "Tümörler genellikle tek bir hücrenin soyundan gelir, yani klonaldir.",
+       "ekran": "Tümörler genellikle tek bir hücrenin soyundan gelir, yani klonaldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0016",
+       "ses": "Bölünmeler sürdükçe yeni değişiklikler eklenir ve tümör içinde farklı alt klonlar ortaya çıkar.",
+       "ekran": "Bölünmeler sürdükçe yeni değişiklikler eklenir ve tümör içinde farklı alt klonlar ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0017",
+       "ses": "Burada Darwinci seçilim devreye girer: büyüme ya da sağkalım avantajı sağlayan alt klonlar zaman içinde baskın hale gelir.",
+       "ekran": "Burada Darwinci seçilim devreye girer: büyüme ya da sağkalım avantajı sağlayan alt klonlar zaman içinde baskın hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0018",
+       "ses": "Tümör ilerlemesi dediğimiz şey, işte bu avantajlı alt klonların seçilmesi ve tümörün giderek daha saldırgan davranmasıdır.",
+       "ekran": "Tümör ilerlemesi dediğimiz şey, işte bu avantajlı alt klonların seçilmesi ve tümörün giderek daha saldırgan davranmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b02",
+   "baslik": "Kanserin ayırt edici özellikleri",
+   "paragraflar": [
+    {
+     "id": "k1-28-p005",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-28-c0019",
+       "ses": "Kanser hücreleri gelişimleri boyunca normal hücreden ayrılan 8 temel özellik kazanır.",
+       "ekran": "Kanser hücreleri gelişimleri boyunca normal hücreden ayrılan 8 temel özellik kazanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0020",
+       "ses": "1.'si büyüme sinyallerinde kendi kendine yeterliliktir; hücre dış uyarı olmadan çoğalma sinyali üretir.",
+       "ekran": "1.'si büyüme sinyallerinde kendi kendine yeterliliktir; hücre dış uyarı olmadan çoğalma sinyali üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0021",
+       "ses": "2.'si büyüme engelleyici sinyallere duyarsızlıktır; fren görevi gören sinyallere yanıt vermez.",
+       "ekran": "2.'si büyüme engelleyici sinyallere duyarsızlıktır; fren görevi gören sinyallere yanıt vermez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0022",
+       "ses": "3.'sü değişmiş hücresel metabolizmadır, buna Warburg etkisi denir.",
+       "ekran": "3.'sü değişmiş hücresel metabolizmadır, buna Warburg etkisi denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0023",
+       "ses": "Kanser hücresi oksijen varken bile glukozu ağırlıklı olarak glikolizle kullanır; bu nedenle Warburg etkisi aerobik glikoliz olarak da bilinir.",
+       "ekran": "Kanser hücresi oksijen varken bile glukozu ağırlıklı olarak glikolizle kullanır; bu nedenle Warburg etkisi aerobik glikoliz olarak da bilinir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0024",
+       "ses": "Bu yol enerji, yani ATP açısından verimsizdir, ama hızlıdır ve büyüme için yapı taşı sağlar.",
+       "ekran": "Bu yol enerji, yani ATP açısından verimsizdir, ama hızlıdır ve büyüme için yapı taşı sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p006",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-28-c0025",
+       "ses": "Dördüncü özellik apoptozdan, yani programlı hücre ölümünden kaçınmadır.",
+       "ekran": "Dördüncü özellik apoptozdan, yani programlı hücre ölümünden kaçınmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0026",
+       "ses": "5.'si sınırsız çoğalma potansiyelidir; hücre bir anlamda ölümsüzlük kazanır.",
+       "ekran": "5.'si sınırsız çoğalma potansiyelidir; hücre bir anlamda ölümsüzlük kazanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0027",
+       "ses": "Altıncısı sürekli anjiyogenezdir; yeni damar oluşumu kesintisiz uyarılır.",
+       "ekran": "Altıncısı sürekli anjiyogenezdir; yeni damar oluşumu kesintisiz uyarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0028",
+       "ses": "Yedincisi istila ve metastazdır, yani çevreye yayılma ve uzak bölgelere ulaşma yeteneği.",
+       "ekran": "Yedincisi istila ve metastazdır, yani çevreye yayılma ve uzak bölgelere ulaşma yeteneği.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0029",
+       "ses": "Sekizincisi bağışıklık gözetiminden kaçınmadır; tümör, bağışıklık sisteminin tanıma ve yok etme mekanizmalarından kurtulur.",
+       "ekran": "Sekizincisi bağışıklık gözetiminden kaçınmadır; tümör, bağışıklık sisteminin tanıma ve yok etme mekanizmalarından kurtulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0030",
+       "ses": "Bu özelliklerin hepsi genetik ve epigenetik lezyonların ortak sonucudur.",
+       "ekran": "Bu özelliklerin hepsi genetik ve epigenetik lezyonların ortak sonucudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p007",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-28-c0031",
+       "ses": "Kitabın Hanahan ve Weinberg şeması bu 8 özelliği kanser hücresinin etrafında bir çember olarak gösterir ve yanına 2 etkinleştirici faktör ekler.",
+       "ekran": "Kitabın Hanahan ve Weinberg şeması bu 8 özelliği kanser hücresinin etrafında bir çember olarak gösterir ve yanına 2 etkinleştirici faktör ekler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0032",
+       "ses": "1.'si genomik istikrarsızlıktır, mutatör fenotip de denir; mutasyon hızını artırarak diğer özelliklerin kazanılmasını hızlandırır.",
+       "ekran": "1.'si genomik istikrarsızlıktır, mutatör fenotip de denir; mutasyon hızını artırarak diğer özelliklerin kazanılmasını hızlandırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0033",
+       "ses": "2.'si tümör gelişimini destekleyen inflamasyondur; inflamatuvar ortam tümör hücrelerine destek sağlar.",
+       "ekran": "2.'si tümör gelişimini destekleyen inflamasyondur; inflamatuvar ortam tümör hücrelerine destek sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0034",
+       "ses": "Dikkat edin, bu ikisi kendi başına birer özellik değil, özelliklerin kazanılmasını kolaylaştıran etkinleştirici faktörlerdir.",
+       "ekran": "Dikkat edin, bu ikisi kendi başına birer özellik değil, özelliklerin kazanılmasını kolaylaştıran etkinleştirici faktörlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0035",
+       "ses": "Çoğu kanser hücresi bu özellikleri genellikle kritik genlerdeki mutasyonlar nedeniyle kazanır.",
+       "ekran": "Çoğu kanser hücresi bu özellikleri genellikle kritik genlerdeki mutasyonlar nedeniyle kazanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b03",
+   "baslik": "Ras sinyal yolu",
+   "paragraflar": [
+    {
+     "id": "k1-28-p008",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-28-c0036",
+       "ses": "Büyüme sinyalinin hücre içine nasıl taşındığını ras proteini üzerinden izleyelim.",
+       "ekran": "Büyüme sinyalinin hücre içine nasıl taşındığını ras proteini üzerinden izleyelim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0037",
+       "ses": "Büyüme faktörü, hücre zarındaki büyüme faktörü reseptörüne bağlanır; reseptör fosforillenir ve bir adaptör proteini etkinleştirir.",
+       "ekran": "Büyüme faktörü, hücre zarındaki büyüme faktörü reseptörüne bağlanır; reseptör fosforillenir ve bir adaptör proteini etkinleştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0038",
+       "ses": "Ras, farnesil membran çapası denen lipid bağlantısıyla hücre zarının iç yüzüne tutunmuş durumdadır.",
+       "ekran": "Ras, farnesil membran çapası denen lipid bağlantısıyla hücre zarının iç yüzüne tutunmuş durumdadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0039",
+       "ses": "İnaktif ras GDP, yani guanozin difosfata bağlıdır.",
+       "ekran": "İnaktif ras GDP, yani guanozin difosfata bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0040",
+       "ses": "Uyarı geldiğinde GTP, yani guanozin trifosfata bağlı aktif duruma geçer.",
+       "ekran": "Uyarı geldiğinde GTP, yani guanozin trifosfata bağlı aktif duruma geçer.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p009",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-28-c0041",
+       "ses": "Normal hücrede bu aktivasyon geçicidir.",
+       "ekran": "Normal hücrede bu aktivasyon geçicidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0042",
+       "ses": "Bunun 2 nedeni vardır: ras proteininin kendi içsel GTPaz aktivitesi ve GTP'nin parçalanmasını hızlandıran GTPaz aktive edici proteinler, kısaca GAP proteinleri.",
+       "ekran": "Bunun 2 nedeni vardır: ras proteininin kendi içsel GTPaz aktivitesi ve GTP'nin parçalanmasını hızlandıran GTPaz aktive edici proteinler, kısaca GAP proteinleri.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0043",
+       "ses": "GTP hidrolize olunca ras yeniden GDP'li inaktif hale döner.",
+       "ekran": "GTP hidrolize olunca ras yeniden GDP'li inaktif hale döner.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0044",
+       "ses": "Bu hidroliz engellenirse ras sürekli aktif kalır ve hücre kesintisiz büyüme sinyali alır.",
+       "ekran": "Bu hidroliz engellenirse ras sürekli aktif kalır ve hücre kesintisiz büyüme sinyali alır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p010",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-28-c0045",
+       "ses": "Aktive edilmiş ras, büyüme yanlısı sinyalleri 2 yol boyunca iletir.",
+       "ekran": "Aktive edilmiş ras, büyüme yanlısı sinyalleri 2 yol boyunca iletir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0046",
+       "ses": "1.'si RAF ve MAP kinaz yoludur; MAP kinaz, mitojenle aktive olan protein kinaz demektir.",
+       "ekran": "1.'si RAF ve MAP kinaz yoludur; MAP kinaz, mitojenle aktive olan protein kinaz demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0047",
+       "ses": "Bu yolun üyeleri arasında kanserde sıklıkla mutasyona uğrayan üye BRAF proteinidir.",
+       "ekran": "Bu yolun üyeleri arasında kanserde sıklıkla mutasyona uğrayan üye BRAF proteinidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0048",
+       "ses": "2.'si PI3 kinaz, yani fosfatidilinositol 3 kinaz ve AKT kinaz yoludur; bu yol mTOR, yani memeli rapamisin hedefi denen kinaza uzanır.",
+       "ekran": "2.'si PI3 kinaz, yani fosfatidilinositol 3 kinaz ve AKT kinaz yoludur; bu yol mTOR, yani memeli rapamisin hedefi denen kinaza uzanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0049",
+       "ses": "Her iki yolun her bileşeninin birkaç yakın ilişkili üyesi vardır.",
+       "ekran": "Her iki yolun her bileşeninin birkaç yakın ilişkili üyesi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0050",
+       "ses": "Bu sinyallerin sonunda çekirdekte büyüme yanlısı genlerin transkripsiyonu artar; büyümeyi destekleyen metabolizma, artmış protein sentezi ve hücre döngüsünde ilerleme ile hücre büyür.",
+       "ekran": "Bu sinyallerin sonunda çekirdekte büyüme yanlısı genlerin transkripsiyonu artar; büyümeyi destekleyen metabolizma, artmış protein sentezi ve hücre döngüsünde ilerleme ile hücre büyür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0051",
+       "ses": "Bu sistemin frenleri de önemlidir.",
+       "ekran": "Bu sistemin frenleri de önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0052",
+       "ses": "GAP proteinlerinin yanında, PI3 kinaz inhibitörü olan PTEN proteini, aktif rasın aşağı akışındaki sinyallemede önemli bir fren görevi görür.",
+       "ekran": "GAP proteinlerinin yanında, PI3 kinaz inhibitörü olan PTEN proteini, aktif rasın aşağı akışındaki sinyallemede önemli bir fren görevi görür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0053",
+       "ses": "Frenlerin kaybı da, gaz pedalının kilitlenmesi kadar büyüme sinyalini artırır.",
+       "ekran": "Frenlerin kaybı da, gaz pedalının kilitlenmesi kadar büyüme sinyalini artırır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b04",
+   "baslik": "Hücre döngüsü, siklinler ve fren aileleri",
+   "paragraflar": [
+    {
+     "id": "k1-28-p011",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-28-c0054",
+       "ses": "Hücre döngüsündeki ilerleme, siklinlerin siklin bağımlı kinazlarla, kısaca CDK'larla oluşturduğu komplekslerle yönetilir ve her kompleks döngünün belirli bir evresinde aktiftir.",
+       "ekran": "Hücre döngüsündeki ilerleme, siklinlerin siklin bağımlı kinazlarla, kısaca CDK'larla oluşturduğu komplekslerle yönetilir ve her kompleks döngünün belirli bir evresinde aktiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0055",
+       "ses": "G1 fazından S fazına geçişte siklin D ile CDK4, siklin D ile CDK6 ve siklin E ile CDK2 kompleksleri çalışır.",
+       "ekran": "G1 fazından S fazına geçişte siklin D ile CDK4, siklin D ile CDK6 ve siklin E ile CDK2 kompleksleri çalışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0056",
+       "ses": "Bunlar retinoblastom proteinini, kısaca RB proteinini fosforlayarak G1/S kontrol noktasından geçişi teşvik eder.",
+       "ekran": "Bunlar retinoblastom proteinini, kısaca RB proteinini fosforlayarak G1/S kontrol noktasından geçişi teşvik eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0057",
+       "ses": "RB proteini fosforlanmamışken bu kapıyı kapalı tutan bir frendir; fosforilasyon bu freni kaldırır.",
+       "ekran": "RB proteini fosforlanmamışken bu kapıyı kapalı tutan bir frendir; fosforilasyon bu freni kaldırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0058",
+       "ses": "S fazında siklin A ile CDK2 ve siklin A ile CDK1 aktiftir.",
+       "ekran": "S fazında siklin A ile CDK2 ve siklin A ile CDK1 aktiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0059",
+       "ses": "G2 fazından M fazına geçiş için ise siklin B ile CDK1 gereklidir.",
+       "ekran": "G2 fazından M fazına geçiş için ise siklin B ile CDK1 gereklidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p012",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-28-c0060",
+       "ses": "Bu gaz pedalına karşı hücre 2 CDK inhibitör ailesiyle fren uygular.",
+       "ekran": "Bu gaz pedalına karşı hücre 2 CDK inhibitör ailesiyle fren uygular.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0061",
+       "ses": "Birinci aile p15, p16, p18 ve p19'dur; seçici çalışır ve yalnız siklin D ile CDK4 ve CDK6 kompleksleri üzerine etki eder.",
+       "ekran": "Birinci aile p15, p16, p18 ve p19'dur; seçici çalışır ve yalnız siklin D ile CDK4 ve CDK6 kompleksleri üzerine etki eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0062",
+       "ses": "Böylece RB fosforilasyonunun ilk basamağını frenler.",
+       "ekran": "Böylece RB fosforilasyonunun ilk basamağını frenler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0063",
+       "ses": "İkinci aile p21, p27 ve p57'dir; geniş etkilidir ve tüm CDK'ları inhibe edebilir.",
+       "ekran": "İkinci aile p21, p27 ve p57'dir; geniş etkilidir ve tüm CDK'ları inhibe edebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0064",
+       "ses": "Bu frenlerin işlev kaybı, siklin CDK komplekslerinin denetimsiz çalışmasına ve büyüme engelleyici sinyallere duyarsızlığa zemin hazırlar.",
+       "ekran": "Bu frenlerin işlev kaybı, siklin CDK komplekslerinin denetimsiz çalışmasına ve büyüme engelleyici sinyallere duyarsızlığa zemin hazırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0065",
+       "ses": "Özetle gaz pedalı ras ve siklin CDK kompleksleri, frenler ise GAP, PTEN, RB ve CDK inhibitörleridir; bu dengenin bozulması proliferasyonun denetimden çıkmasının temelidir.",
+       "ekran": "Özetle gaz pedalı ras ve siklin CDK kompleksleri, frenler ise GAP, PTEN, RB ve CDK inhibitörleridir; bu dengenin bozulması proliferasyonun denetimden çıkmasının temelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b05",
+   "baslik": "Temel terimler, parankim ve stroma",
+   "paragraflar": [
+    {
+     "id": "k1-28-p013",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-28-c0066",
+       "ses": "Şimdi terminolojiye geçelim.",
+       "ekran": "Şimdi terminolojiye geçelim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0067",
+       "ses": "Neoplazi, yeni ve otonom hücre çoğalmasıdır; büyüme, dokunun gereksiniminden ve dış denetimden bağımsız ilerler.",
+       "ekran": "Neoplazi, yeni ve otonom hücre çoğalmasıdır; büyüme, dokunun gereksiniminden ve dış denetimden bağımsız ilerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0068",
+       "ses": "Tümör, aslen şişlik anlamı taşıyan, yaygın kullanılan bir klinik terimdir ve bugün her neoplazm için kullanılır; iyi ya da kötü huylu ayrımı yapmaz.",
+       "ekran": "Tümör, aslen şişlik anlamı taşıyan, yaygın kullanılan bir klinik terimdir ve bugün her neoplazm için kullanılır; iyi ya da kötü huylu ayrımı yapmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0069",
+       "ses": "Onkoloji ise tümörlerin bilimsel ve klinik incelenmesidir.",
+       "ekran": "Onkoloji ise tümörlerin bilimsel ve klinik incelenmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p014",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-28-c0070",
+       "ses": "Her tümör 2 bileşenden oluşur.",
+       "ekran": "Her tümör 2 bileşenden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0071",
+       "ses": "Parankim, neoplazmın dönüşmüş, neoplastik hücre bileşenidir.",
+       "ekran": "Parankim, neoplazmın dönüşmüş, neoplastik hücre bileşenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0072",
+       "ses": "Tümörün biyolojik davranışını parankim belirler ve tümörün adlandırılması parankime göre yapılır.",
+       "ekran": "Tümörün biyolojik davranışını parankim belirler ve tümörün adlandırılması parankime göre yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0073",
+       "ses": "Stroma ise konak kökenli destek dokusudur; bağ dokusu, damarlar ve inflamatuvar hücrelerden oluşur.",
+       "ekran": "Stroma ise konak kökenli destek dokusudur; bağ dokusu, damarlar ve inflamatuvar hücrelerden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0074",
+       "ses": "Tümöre beslenme ve kan desteği sağlar ve tümör hücreleriyle iki yönlü sinyal alışverişi yapar; yani pasif bir iskele değil, aktif bir ortaktır.",
+       "ekran": "Tümöre beslenme ve kan desteği sağlar ve tümör hücreleriyle iki yönlü sinyal alışverişi yapar; yani pasif bir iskele değil, aktif bir ortaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0075",
+       "ses": "Sınavda klasik tuzak şudur: stroma tümörü besler ama tümörün adını ve davranışını belirlemez; ad ve davranış parankime aittir.",
+       "ekran": "Sınavda klasik tuzak şudur: stroma tümörü besler ama tümörün adını ve davranışını belirlemez; ad ve davranış parankime aittir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b06",
+   "baslik": "Benign ve malign neoplazm",
+   "paragraflar": [
+    {
+     "id": "k1-28-p015",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-28-c0076",
+       "ses": "Benign, yani iyi huylu neoplazm, mikroskopik ve makroskopik olarak lokalize kalma eğilimindedir, çevre dokuları istila etmez ve uzak metastaz yapmaz.",
+       "ekran": "Benign, yani iyi huylu neoplazm, mikroskopik ve makroskopik olarak lokalize kalma eğilimindedir, çevre dokuları istila etmez ve uzak metastaz yapmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0077",
+       "ses": "Çoğu cerrahi olarak tamamen çıkarılabilir ve hasta genellikle iyileşir.",
+       "ekran": "Çoğu cerrahi olarak tamamen çıkarılabilir ve hasta genellikle iyileşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0078",
+       "ses": "Ancak iyi huylu her zaman zararsız demek değildir: tümör beyin, büyük damar ya da safra yolu gibi kritik bir bölgede büyürse ciddi morbiditeye ve hatta mortaliteye yol açabilir.",
+       "ekran": "Ancak iyi huylu her zaman zararsız demek değildir: tümör beyin, büyük damar ya da safra yolu gibi kritik bir bölgede büyürse ciddi morbiditeye ve hatta mortaliteye yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p016",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-28-c0079",
+       "ses": "Benign tümörün prototipini meme fibroadenomunda görürüz.",
+       "ekran": "Benign tümörün prototipini meme fibroadenomunda görürüz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0080",
+       "ses": "Makroskopik olarak kahverengi, kapsüllü bir tümördür ve çevresindeki beyaz meme dokusundan keskin bir sınırla ayrılır.",
+       "ekran": "Makroskopik olarak kahverengi, kapsüllü bir tümördür ve çevresindeki beyaz meme dokusundan keskin bir sınırla ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0081",
+       "ses": "Mikroskopide gevşek lifli bir stroma tarafından sıkıştırılmış ve kolajen bantlarıyla çevrili, koyu boyanan epitel kordonları izlenir.",
+       "ekran": "Mikroskopide gevşek lifli bir stroma tarafından sıkıştırılmış ve kolajen bantlarıyla çevrili, koyu boyanan epitel kordonları izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0082",
+       "ses": "Keskin sınır ve kapsül, tümörün çevreyi istila etmediğinin ipucudur.",
+       "ekran": "Keskin sınır ve kapsül, tümörün çevreyi istila etmediğinin ipucudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p017",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-28-c0083",
+       "ses": "Malign, yani kötü huylu neoplazmın iki temel özelliği lokal invazyon ve uzak metastaz yapma kapasitesidir.",
+       "ekran": "Malign, yani kötü huylu neoplazmın iki temel özelliği lokal invazyon ve uzak metastaz yapma kapasitesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0084",
+       "ses": "Tedavi edilmezse genellikle ölümcüldür ve kanser terimi tüm malign neoplazmları kapsar.",
+       "ekran": "Tedavi edilmezse genellikle ölümcüldür ve kanser terimi tüm malign neoplazmları kapsar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0085",
+       "ses": "Ancak agresiflik değişkendir: bazı kanserler yavaş seyreder, bazıları hızlı ilerler ama tedaviye duyarlıdır.",
+       "ekran": "Ancak agresiflik değişkendir: bazı kanserler yavaş seyreder, bazıları hızlı ilerler ama tedaviye duyarlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0086",
+       "ses": "Yani malign tanısı tek tip bir prognoz anlamına gelmez.",
+       "ekran": "Yani malign tanısı tek tip bir prognoz anlamına gelmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p018",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-28-c0087",
+       "ses": "Malign prototip olarak memenin invaziv duktal karsinomuna bakalım.",
+       "ekran": "Malign prototip olarak memenin invaziv duktal karsinomuna bakalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0088",
+       "ses": "Kesit yüzeyinde taş gibi sert, içeri çekilmiş bir lezyon vardır ve çevredeki meme dokusuna sızar.",
+       "ekran": "Kesit yüzeyinde taş gibi sert, içeri çekilmiş bir lezyon vardır ve çevredeki meme dokusuna sızar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0089",
+       "ses": "Mikroskopide tümör hücrelerinin yuvaları ve kordonları meme stromasını ve yağ dokusunu istila eder.",
+       "ekran": "Mikroskopide tümör hücrelerinin yuvaları ve kordonları meme stromasını ve yağ dokusunu istila eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0090",
+       "ses": "İyi tanımlanmış bir kapsül yoktur.",
+       "ekran": "İyi tanımlanmış bir kapsül yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0091",
+       "ses": "Aynı organdaki bu iki tümörü karşılaştırdığınızda, benign ve malign ayrımının en somut ölçütünün sınır ve invazyon olduğunu görürsünüz.",
+       "ekran": "Aynı organdaki bu iki tümörü karşılaştırdığınızda, benign ve malign ayrımının en somut ölçütünün sınır ve invazyon olduğunu görürsünüz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b07",
+   "baslik": "Benign tümörlerin adlandırılması",
+   "paragraflar": [
+    {
+     "id": "k1-28-p019",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-28-c0092",
+       "ses": "Mezenkimal doku kökenli benign tümörler basit bir kuralla adlandırılır: köken hücre tipi artı oma son eki.",
+       "ekran": "Mezenkimal doku kökenli benign tümörler basit bir kuralla adlandırılır: köken hücre tipi artı oma son eki.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0093",
+       "ses": "Fibroblast kökenli tümör fibroma, kıkırdak hücresi kökenli olan kondroma, yağ hücresi kökenli olan lipomadır.",
+       "ekran": "Fibroblast kökenli tümör fibroma, kıkırdak hücresi kökenli olan kondroma, yağ hücresi kökenli olan lipomadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0094",
+       "ses": "İskelet kasından gelişen benign tümör rabdomyoma, düz kastan gelişen benign tümör leiomyomadır.",
+       "ekran": "İskelet kasından gelişen benign tümör rabdomyoma, düz kastan gelişen benign tümör leiomyomadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0095",
+       "ses": "Rabdo öneki iskelet kasını, leio öneki düz kası anlatır.",
+       "ekran": "Rabdo öneki iskelet kasını, leio öneki düz kası anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p020",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-28-c0096",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: rabdomyom, iskelet kasının benign tümörüdür.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: rabdomyom, iskelet kasının benign tümörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0097",
+       "ses": "Şıklarda seminom, lenfoma, mezotelyoma ve melanom gibi oma ile biten ama malign olan tümörler verilir; benign olan seçenek rabdomyomdur.",
+       "ekran": "Şıklarda seminom, lenfoma, mezotelyoma ve melanom gibi oma ile biten ama malign olan tümörler verilir; benign olan seçenek rabdomyomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0098",
+       "ses": "Bu kuralın histolojik karşılığını iki örnekte görürüz.",
+       "ekran": "Bu kuralın histolojik karşılığını iki örnekte görürüz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0099",
+       "ses": "Kas içi lipomda neoplastik ama iyi diferansiye olmuş yağ hücreleri, normal iskelet kası hücrelerinin arasına yerleşerek onları birbirinden ayırır.",
+       "ekran": "Kas içi lipomda neoplastik ama iyi diferansiye olmuş yağ hücreleri, normal iskelet kası hücrelerinin arasına yerleşerek onları birbirinden ayırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0100",
+       "ses": "Kondromda ise düzensiz dağılımlı ama iyi huylu görünen kondrositler izlenir.",
+       "ekran": "Kondromda ise düzensiz dağılımlı ama iyi huylu görünen kondrositler izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p021",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-28-c0101",
+       "ses": "Benign epitelyal tümörler ise hücre tipinden çok mimari düzenlerine göre adlandırılır.",
+       "ekran": "Benign epitelyal tümörler ise hücre tipinden çok mimari düzenlerine göre adlandırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0102",
+       "ses": "Adenom, bez yapıları oluşturan ya da bezden türeyen benign epitelyal tümördür; yani tümör bez yapısı kurmasa bile bez epitelinden köken alıyorsa adenomdur.",
+       "ekran": "Adenom, bez yapıları oluşturan ya da bezden türeyen benign epitelyal tümördür; yani tümör bez yapısı kurmasa bile bez epitelinden köken alıyorsa adenomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0103",
+       "ses": "Papillom, mikroskopik ya da makroskopik parmak benzeri çıkıntılar oluşturan yüzey epitel tümörüdür.",
+       "ekran": "Papillom, mikroskopik ya da makroskopik parmak benzeri çıkıntılar oluşturan yüzey epitel tümörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0104",
+       "ses": "Memenin intraduktal papillomunda her papiller dalın ortasında geniş damarlı bir stroma ekseni vardır ve bu eksen epitelle kaplıdır.",
+       "ekran": "Memenin intraduktal papillomunda her papiller dalın ortasında geniş damarlı bir stroma ekseni vardır ve bu eksen epitelle kaplıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p022",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-28-c0105",
+       "ses": "Polip, mukozanın lümen içine doğru çıkıntı yaptığı kitledir.",
+       "ekran": "Polip, mukozanın lümen içine doğru çıkıntı yaptığı kitledir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0106",
+       "ses": "Dikkat edin, polip histolojik bir tanı değil, makroskopik bir şekil tanımıdır ve benign ya da malign olabilir; hangisi olduğuna mikroskopik inceleme karar verir.",
+       "ekran": "Dikkat edin, polip histolojik bir tanı değil, makroskopik bir şekil tanımıdır ve benign ya da malign olabilir; hangisi olduğuna mikroskopik inceleme karar verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0107",
+       "ses": "Kolonda birkaç saplı, kadifemsi polip bunun tipik görünümüdür.",
+       "ekran": "Kolonda birkaç saplı, kadifemsi polip bunun tipik görünümüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0108",
+       "ses": "Kistadenom ise kistik boşluklar oluşturan benign epitelyal tümördür ve sıklıkla ovaryumda görülür.",
+       "ekran": "Kistadenom ise kistik boşluklar oluşturan benign epitelyal tümördür ve sıklıkla ovaryumda görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b08",
+   "baslik": "Sarkom ve karsinom",
+   "paragraflar": [
+    {
+     "id": "k1-28-p023",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-28-c0109",
+       "ses": "Mezenkimal dokudan türeyen malign tümörlere sarkom denir.",
+       "ekran": "Mezenkimal dokudan türeyen malign tümörlere sarkom denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0110",
+       "ses": "Ad, köken hücre tipi ile sarkom ekinin birleşmesinden oluşur.",
+       "ekran": "Ad, köken hücre tipi ile sarkom ekinin birleşmesinden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0111",
+       "ses": "Liposarkom yağ benzeri hücrelerden, kondrosarkom kıkırdak hücrelerine benzer hücrelerden oluşur.",
+       "ekran": "Liposarkom yağ benzeri hücrelerden, kondrosarkom kıkırdak hücrelerine benzer hücrelerden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0112",
+       "ses": "Osteosarkom, rabdomyosarkom ve leiomyosarkom diğer örneklerdir.",
+       "ekran": "Osteosarkom, rabdomyosarkom ve leiomyosarkom diğer örneklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0113",
+       "ses": "Böylece aynı hücre tipinin benign tümörü oma, malign tümörü sarkom ile biter: lipoma ve liposarkom, kondroma ve kondrosarkom, leiomyoma ve leiomyosarkom gibi.",
+       "ekran": "Böylece aynı hücre tipinin benign tümörü oma, malign tümörü sarkom ile biter: lipoma ve liposarkom, kondroma ve kondrosarkom, leiomyoma ve leiomyosarkom gibi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0114",
+       "ses": "Kan hücrelerinin neoplazmları ise ayrı bir grup olarak ele alınır; kan yapıcı ve lenfoid hücrelerden köken alan lösemi ve lenfoma malign neoplazmlardır.",
+       "ekran": "Kan hücrelerinin neoplazmları ise ayrı bir grup olarak ele alınır; kan yapıcı ve lenfoid hücrelerden köken alan lösemi ve lenfoma malign neoplazmlardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p024",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-28-c0115",
+       "ses": "Epitel hücre kökenli malign neoplazmlara karsinom denir.",
+       "ekran": "Epitel hücre kökenli malign neoplazmlara karsinom denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0116",
+       "ses": "Burada kilit nokta şudur: karsinom tanımı embriyonik tabakadan bağımsızdır.",
+       "ekran": "Burada kilit nokta şudur: karsinom tanımı embriyonik tabakadan bağımsızdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0117",
+       "ses": "Epitel ektoderm, endoderm ya da mezoderm kökenli olsun, ondan gelişen malign tümör karsinomdur.",
+       "ekran": "Epitel ektoderm, endoderm ya da mezoderm kökenli olsun, ondan gelişen malign tümör karsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0118",
+       "ses": "Örneğin böbrek tübül epiteli mezoderm kökenlidir, ama böbrek hücreli karsinom yine bir karsinomdur; karaciğer hücresinden gelişen tümör de hepatosellüler karsinomdur.",
+       "ekran": "Örneğin böbrek tübül epiteli mezoderm kökenlidir, ama böbrek hücreli karsinom yine bir karsinomdur; karaciğer hücresinden gelişen tümör de hepatosellüler karsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0119",
+       "ses": "Karsinomlar gösterdikleri farklılaşmaya göre ayrılır: glandüler farklılaşma gösterenler adenokarsinom, skuamöz farklılaşma gösterenler skuamöz hücreli karsinomdur.",
+       "ekran": "Karsinomlar gösterdikleri farklılaşmaya göre ayrılır: glandüler farklılaşma gösterenler adenokarsinom, skuamöz farklılaşma gösterenler skuamöz hücreli karsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0120",
+       "ses": "Burası önemli, çıkmış sorularda epitelyal kökenli malign neoplazm soruldu ve doğru cevap prostatik adenokarsinomdu.",
+       "ekran": "Burası önemli, çıkmış sorularda epitelyal kökenli malign neoplazm soruldu ve doğru cevap prostatik adenokarsinomdu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0121",
+       "ses": "Adenokarsinom, glandüler farklılaşma gösteren epitel kökenli malign tümördür.",
+       "ekran": "Adenokarsinom, glandüler farklılaşma gösteren epitel kökenli malign tümördür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0122",
+       "ses": "Çeldiricilere bakalım: liposarkom mezenkimal kökenli maligndir, lenfoma lenfoid hücrelerin malign tümörüdür, ürotelyal papillom ise benign epitelyal tümördür.",
+       "ekran": "Çeldiricilere bakalım: liposarkom mezenkimal kökenli maligndir, lenfoma lenfoid hücrelerin malign tümörüdür, ürotelyal papillom ise benign epitelyal tümördür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p025",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-28-c0123",
+       "ses": "Derinin iyi diferansiye skuamöz hücreli karsinomunda tümör hücreleri, normal yassı epitelde olduğu gibi olgunlaşıp keratinleşir; buna terminal diferansiyasyon denir.",
+       "ekran": "Derinin iyi diferansiye skuamöz hücreli karsinomunda tümör hücreleri, normal yassı epitelde olduğu gibi olgunlaşıp keratinleşir; buna terminal diferansiyasyon denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0124",
+       "ses": "Tümör adacıklarının ortasında iç içe katmanlar halinde dizilmiş keratin incileri oluşur.",
+       "ekran": "Tümör adacıklarının ortasında iç içe katmanlar halinde dizilmiş keratin incileri oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0125",
+       "ses": "Keratin incisi skuamöz farklılaşmanın mikroskopik kanıtıdır ve tümörün iyi diferansiye olduğunu düşündürür.",
+       "ekran": "Keratin incisi skuamöz farklılaşmanın mikroskopik kanıtıdır ve tümörün iyi diferansiye olduğunu düşündürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0126",
+       "ses": "Yani malign bir tümör de köken aldığı epitelin özelliklerini koruyabilir.",
+       "ekran": "Yani malign bir tümör de köken aldığı epitelin özelliklerini koruyabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b09",
+   "baslik": "Terminolojide malign oma istisnaları",
+   "paragraflar": [
+    {
+     "id": "k1-28-p026",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-28-c0127",
+       "ses": "Genel kuralda oma son eki benign tümörü anlatır.",
+       "ekran": "Genel kuralda oma son eki benign tümörü anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0128",
+       "ses": "Ancak bazı malign tümörler tarihsel olarak yerleşmiş isimleri nedeniyle bu eki taşır.",
+       "ekran": "Ancak bazı malign tümörler tarihsel olarak yerleşmiş isimleri nedeniyle bu eki taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0129",
+       "ses": "Bunlar 4 tanedir: lenfoma, yani lenfoid hücrelerin malign tümörü; melanom, yani melanositlerin malign tümörü; mezotelyoma, yani mezotel döşemesinin malign tümörü; ve seminom, yani testisin germ hücreli malign tümörü.",
+       "ekran": "Bunlar 4 tanedir: lenfoma, yani lenfoid hücrelerin malign tümörü; melanom, yani melanositlerin malign tümörü; mezotelyoma, yani mezotel döşemesinin malign tümörü; ve seminom, yani testisin germ hücreli malign tümörü.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0130",
+       "ses": "Klinik pratikte bu tümörlerin her zaman malign kabul edildiği unutulmamalıdır; isimdeki oma burada yanıltıcıdır.",
+       "ekran": "Klinik pratikte bu tümörlerin her zaman malign kabul edildiği unutulmamalıdır; isimdeki oma burada yanıltıcıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p027",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-28-c0131",
+       "ses": "Burası önemli, bu istisnalar çıkmış sorularda tekrar tekrar soruldu.",
+       "ekran": "Burası önemli, bu istisnalar çıkmış sorularda tekrar tekrar soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0132",
+       "ses": "Hangisi kötü huyludur diye sorulduğunda mezotelyoma ve melanom doğru cevap oldu; şıklardaki nevüs, ürotelyal papillom, renal tübüler adenom, osteom, fibrom, hemanjiyom ve hidatidiform mol ise benign lezyonlardır.",
+       "ekran": "Hangisi kötü huyludur diye sorulduğunda mezotelyoma ve melanom doğru cevap oldu; şıklardaki nevüs, ürotelyal papillom, renal tübüler adenom, osteom, fibrom, hemanjiyom ve hidatidiform mol ise benign lezyonlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0133",
+       "ses": "Tersine, hangisi benigndir diye sorulduğunda da nevüs doğru cevaptı; seminom, liposarkom, epidermoid karsinom ve lenfoma malign seçeneklerdi.",
+       "ekran": "Tersine, hangisi benigndir diye sorulduğunda da nevüs doğru cevaptı; seminom, liposarkom, epidermoid karsinom ve lenfoma malign seçeneklerdi.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b10",
+   "baslik": "Karma tümör, teratom, hamartom ve koristom",
+   "paragraflar": [
+    {
+     "id": "k1-28-p028",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-28-c0134",
+       "ses": "Karma ya da mikst tümör, tek bir klonal hücreden türeyen ama birden fazla diferansiyasyon hattı gösteren tümördür.",
+       "ekran": "Karma ya da mikst tümör, tek bir klonal hücreden türeyen ama birden fazla diferansiyasyon hattı gösteren tümördür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0135",
+       "ses": "Görünümdeki çeşitlilik çok sayıda hücre kökeninden değil, tek klonun farklı yönlere olgunlaşmasından kaynaklanır.",
+       "ekran": "Görünümdeki çeşitlilik çok sayıda hücre kökeninden değil, tek klonun farklı yönlere olgunlaşmasından kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0136",
+       "ses": "Prototipi tükürük bezinin pleomorfik adenomudur: fibromiksoid stroma içinde epitel adacıkları bulunur ve bu stromada kıkırdak ya da kemik odakları gelişebilir.",
+       "ekran": "Prototipi tükürük bezinin pleomorfik adenomudur: fibromiksoid stroma içinde epitel adacıkları bulunur ve bu stromada kıkırdak ya da kemik odakları gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0137",
+       "ses": "Parotis bezinin karışık tümöründe bir yanda epitel hücre yuvaları, öbür yanda kıkırdak ve kemik oluşturan miksoid stroma görülür; kemik yapımı alışılmadık bir özelliktir.",
+       "ekran": "Parotis bezinin karışık tümöründe bir yanda epitel hücre yuvaları, öbür yanda kıkırdak ve kemik oluşturan miksoid stroma görülür; kemik yapımı alışılmadık bir özelliktir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p029",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-28-c0138",
+       "ses": "Teratom ise totipotent germ hücresi kökenlidir.",
+       "ekran": "Teratom ise totipotent germ hücresi kökenlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0139",
+       "ses": "Bu hücre her yöne farklılaşabildiği için tümör birden fazla germ tabakasından türeyen dokular içerir: epitel, kas, kemik, nöral doku gibi.",
+       "ekran": "Bu hücre her yöne farklılaşabildiği için tümör birden fazla germ tabakasından türeyen dokular içerir: epitel, kas, kemik, nöral doku gibi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0140",
+       "ses": "En sık ovaryum ve testiste görülür.",
+       "ekran": "En sık ovaryum ve testiste görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0141",
+       "ses": "Yumurtalığın iyi huylu kistik teratomuna dermoid kist denir; kistik boşluk iyi huylu skuamöz epitelle döşelidir ve altındaki yumuşak dokuda kıl folikülleri ve yağ bezleri bulunur.",
+       "ekran": "Yumurtalığın iyi huylu kistik teratomuna dermoid kist denir; kistik boşluk iyi huylu skuamöz epitelle döşelidir ve altındaki yumuşak dokuda kıl folikülleri ve yağ bezleri bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0142",
+       "ses": "Dikkat edin, pleomorfik adenomda kıkırdak ya da kemik görülse bile bu tümör teratom değildir; tek klon kökenlidir.",
+       "ekran": "Dikkat edin, pleomorfik adenomda kıkırdak ya da kemik görülse bile bu tümör teratom değildir; tek klon kökenlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0143",
+       "ses": "Teratom ise birden fazla germ tabakasına ait doku içerir.",
+       "ekran": "Teratom ise birden fazla germ tabakasına ait doku içerir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p030",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-28-c0144",
+       "ses": "Hamartom, bulunduğu organa ait olgun dokuların düzensiz, lokalize kitlesidir.",
+       "ekran": "Hamartom, bulunduğu organa ait olgun dokuların düzensiz, lokalize kitlesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0145",
+       "ses": "Uzun süre gelişimsel bir malformasyon sanılmıştır; ancak somatik mutasyon içerebildiği için benign neoplazm olarak kabul edilir.",
+       "ekran": "Uzun süre gelişimsel bir malformasyon sanılmıştır; ancak somatik mutasyon içerebildiği için benign neoplazm olarak kabul edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0146",
+       "ses": "Koristom ise heterotopik, yani olması gereken yerin dışındaki olgun doku adacıklarıdır; örneğin mide duvarında pankreas dokusu.",
+       "ekran": "Koristom ise heterotopik, yani olması gereken yerin dışındaki olgun doku adacıklarıdır; örneğin mide duvarında pankreas dokusu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0147",
+       "ses": "Genellikle klinik açıdan önemsizdir.",
+       "ekran": "Genellikle klinik açıdan önemsizdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0148",
+       "ses": "Kısaca hamartomda doku yerlidir ama düzensizdir; koristomda doku düzenlidir ama yerinde değildir.",
+       "ekran": "Kısaca hamartomda doku yerlidir ama düzensizdir; koristomda doku düzenlidir ama yerinde değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b11",
+   "baslik": "Seçilmiş tümörlerin adlandırma tablosu",
+   "paragraflar": [
+    {
+     "id": "k1-28-p031",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-28-c0149",
+       "ses": "Kitaptaki adlandırma tablosu, tümörleri doku kökenine ve davranışa göre benign ve malign çiftler halinde eşler.",
+       "ekran": "Kitaptaki adlandırma tablosu, tümörleri doku kökenine ve davranışa göre benign ve malign çiftler halinde eşler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0150",
+       "ses": "İlk bölüm başlıca tek bir hücre tipinden oluşan tümörlerdir.",
+       "ekran": "İlk bölüm başlıca tek bir hücre tipinden oluşan tümörlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0151",
+       "ses": "Bağ dokusu ve türevlerinde fibrom ile fibrosarkom, lipom ile liposarkom, kondrom ile kondrosarkom, osteom ile osteosarkom karşılıktır.",
+       "ekran": "Bağ dokusu ve türevlerinde fibrom ile fibrosarkom, lipom ile liposarkom, kondrom ile kondrosarkom, osteom ile osteosarkom karşılıktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0152",
+       "ses": "Endotel ve ilişkili hücrelerde kan damarı için hemanjiom ile anjiosarkom, lenf damarı için lenfanjiom ile lenfangiosarkom yer alır.",
+       "ekran": "Endotel ve ilişkili hücrelerde kan damarı için hemanjiom ile anjiosarkom, lenf damarı için lenfanjiom ile lenfangiosarkom yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0153",
+       "ses": "Mezotelyumda mezotelyoma vardır ve malign karşılığı da malign mezotelyoma olarak verilir.",
+       "ekran": "Mezotelyumda mezotelyoma vardır ve malign karşılığı da malign mezotelyoma olarak verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0154",
+       "ses": "Beyin zarlarında meningiomun malign karşılığı invaziv meningiomdur; bu adlandırma, malignite ölçütünün invazyon olduğunu yeniden hatırlatır.",
+       "ekran": "Beyin zarlarında meningiomun malign karşılığı invaziv meningiomdur; bu adlandırma, malignite ölçütünün invazyon olduğunu yeniden hatırlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0155",
+       "ses": "Hematopoietik hücrelerden lösemiler, lenfoid dokudan lenfomalar gelişir ve tabloda benign karşılıkları yoktur.",
+       "ekran": "Hematopoietik hücrelerden lösemiler, lenfoid dokudan lenfomalar gelişir ve tabloda benign karşılıkları yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0156",
+       "ses": "Kasta düz kas için leiomyom ve leiomyosarkom, çizgili kas için rabdomyom ve rabdomyosarkom yer alır.",
+       "ekran": "Kasta düz kas için leiomyom ve leiomyosarkom, çizgili kas için rabdomyom ve rabdomyosarkom yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p032",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-28-c0157",
+       "ses": "Epitel tümörlerinde çok katlı yassı epitelin benign tümörü skuamöz hücreli papillom, malign tümörü skuamöz hücreli ya da diğer adıyla epidermoid karsinomdur.",
+       "ekran": "Epitel tümörlerinde çok katlı yassı epitelin benign tümörü skuamöz hücreli papillom, malign tümörü skuamöz hücreli ya da diğer adıyla epidermoid karsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0158",
+       "ses": "Derinin ya da adnekslerin bazal hücrelerinden bazal hücreli karsinom gelişir ve tabloda benign karşılığı verilmez.",
+       "ekran": "Derinin ya da adnekslerin bazal hücrelerinden bazal hücreli karsinom gelişir ve tabloda benign karşılığı verilmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0159",
+       "ses": "Melanositlerde benign tümör nevüs, malign tümör melanomdur.",
+       "ekran": "Melanositlerde benign tümör nevüs, malign tümör melanomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0160",
+       "ses": "Bez ya da duktus epitelinde adenom ile adenokarsinom, papillom ile papiller karsinomlar, kistadenom ile kistadenokarsinom eşleşir.",
+       "ekran": "Bez ya da duktus epitelinde adenom ile adenokarsinom, papillom ile papiller karsinomlar, kistadenom ile kistadenokarsinom eşleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p033",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-28-c0161",
+       "ses": "Organa özgü çiftler de şöyledir: akciğerde bronşiyal adenom ve bronkojenik karsinom, böbrekte renal tübüler adenom ve renal hücreli karsinom, karaciğerde hepatik adenom ve hepatosellüler karsinom, mesanede ürotelyal papillom ve ürotelyal karsinom.",
+       "ekran": "Organa özgü çiftler de şöyledir: akciğerde bronşiyal adenom ve bronkojenik karsinom, böbrekte renal tübüler adenom ve renal hücreli karsinom, karaciğerde hepatik adenom ve hepatosellüler karsinom, mesanede ürotelyal papillom ve ürotelyal karsinom.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0162",
+       "ses": "Plasentada benign karşılık hidatidiform mol, malign karşılık koriokarsinomdur.",
+       "ekran": "Plasentada benign karşılık hidatidiform mol, malign karşılık koriokarsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0163",
+       "ses": "Testiste benign karşılık verilmez; malign tümörler seminom ve embriyonel karsinomdur.",
+       "ekran": "Testiste benign karşılık verilmez; malign tümörler seminom ve embriyonel karsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0164",
+       "ses": "Overde seröz ve müsinöz kistadenomun malign karşılıkları seröz ve müsinöz kistadenokarsinomdur.",
+       "ekran": "Overde seröz ve müsinöz kistadenomun malign karşılıkları seröz ve müsinöz kistadenokarsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p034",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-28-c0165",
+       "ses": "Tablonun son bölümü birden fazla hücre tipinden oluşan tümörlerdir.",
+       "ekran": "Tablonun son bölümü birden fazla hücre tipinden oluşan tümörlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0166",
+       "ses": "Normalde aynı germ tabakasından gelişen hücrelerden oluşanlara örnek, tükürük bezlerinde pleomorfik adenom, yani mikst tükürük bezi tümörü ve onun malign karşılığı olan malign mikst tükürük bezi tümörüdür.",
+       "ekran": "Normalde aynı germ tabakasından gelişen hücrelerden oluşanlara örnek, tükürük bezlerinde pleomorfik adenom, yani mikst tükürük bezi tümörü ve onun malign karşılığı olan malign mikst tükürük bezi tümörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0167",
+       "ses": "Böbrek taslağından, yani renal anlajdan gelişen malign tümör Wilms tümörüdür ve benign karşılığı verilmez.",
+       "ekran": "Böbrek taslağından, yani renal anlajdan gelişen malign tümör Wilms tümörüdür ve benign karşılığı verilmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0168",
+       "ses": "Birden fazla germ tabakasından gelişen tümörler ise gonadlardaki ya da embriyonik artıklardaki totipotent hücrelerden köken alır: matür teratom ve dermoid kist benign, immatür teratom ve teratokarsinom maligndir.",
+       "ekran": "Birden fazla germ tabakasından gelişen tümörler ise gonadlardaki ya da embriyonik artıklardaki totipotent hücrelerden köken alır: matür teratom ve dermoid kist benign, immatür teratom ve teratokarsinom maligndir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0169",
+       "ses": "Yani teratomda davranışı doku olgunluğu belirler.",
+       "ekran": "Yani teratomda davranışı doku olgunluğu belirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b12",
+   "baslik": "Diferansiyasyon ve anaplazi",
+   "paragraflar": [
+    {
+     "id": "k1-28-p035",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-28-c0170",
+       "ses": "Benign ve malign ayrımının mikroskopik ölçütlerine geçelim.",
+       "ekran": "Benign ve malign ayrımının mikroskopik ölçütlerine geçelim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0171",
+       "ses": "Diferansiyasyon, tümör hücrelerinin köken aldığı normal hücreye morfolojik ve fonksiyonel olarak benzerlik derecesidir.",
+       "ekran": "Diferansiyasyon, tümör hücrelerinin köken aldığı normal hücreye morfolojik ve fonksiyonel olarak benzerlik derecesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0172",
+       "ses": "Diferansiyasyon arttıkça tümör hücresi normal hücreye daha çok benzer.",
+       "ekran": "Diferansiyasyon arttıkça tümör hücresi normal hücreye daha çok benzer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0173",
+       "ses": "Anaplazi ise diferansiyasyon kaybıdır; hücreler normal morfoloji ve fonksiyonlarını yitirir ve anaplazi malignite için güvenilir bir belirteçtir.",
+       "ekran": "Anaplazi ise diferansiyasyon kaybıdır; hücreler normal morfoloji ve fonksiyonlarını yitirir ve anaplazi malignite için güvenilir bir belirteçtir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0174",
+       "ses": "Burası önemli, çıkmış sorularda tümör diferansiyasyonu arttıkça normal hücreye benzerliği azalır ifadesi yanlış şık olarak verildi; doğrusu benzerliğin arttığıdır.",
+       "ekran": "Burası önemli, çıkmış sorularda tümör diferansiyasyonu arttıkça normal hücreye benzerliği azalır ifadesi yanlış şık olarak verildi; doğrusu benzerliğin arttığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p036",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-28-c0175",
+       "ses": "Benign neoplazmlar genellikle iyi diferansiye hücrelerden oluşur ve normal karşılıklarına morfolojik ve fonksiyonel olarak benzer.",
+       "ekran": "Benign neoplazmlar genellikle iyi diferansiye hücrelerden oluşur ve normal karşılıklarına morfolojik ve fonksiyonel olarak benzer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0176",
+       "ses": "Örneğin lipom olgun yağ hücrelerinden, kondrom olgun kondrositlerden oluşur.",
+       "ekran": "Örneğin lipom olgun yağ hücrelerinden, kondrom olgun kondrositlerden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0177",
+       "ses": "Malign neoplazmlar ise iyi, orta ya da az diferansiye olabilir; bazıları tamamen anaplastik hücrelerden oluşur.",
+       "ekran": "Malign neoplazmlar ise iyi, orta ya da az diferansiye olabilir; bazıları tamamen anaplastik hücrelerden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0178",
+       "ses": "Burası önemli, çıkmış soruda bütün benign tümörler iyi, malign tümörler ise kötü diferansiyedir ifadesi yanlış olan şık olarak soruldu.",
+       "ekran": "Burası önemli, çıkmış soruda bütün benign tümörler iyi, malign tümörler ise kötü diferansiyedir ifadesi yanlış olan şık olarak soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0179",
+       "ses": "Malign tümörlerin bir kısmı da iyi diferansiye olabilir; hatırlayın, iyi diferansiye skuamöz hücreli karsinom keratin incisi yapıyordu.",
+       "ekran": "Malign tümörlerin bir kısmı da iyi diferansiye olabilir; hatırlayın, iyi diferansiye skuamöz hücreli karsinom keratin incisi yapıyordu.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p037",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-28-c0180",
+       "ses": "Anaplazinin morfolojik bulgularını sayalım.",
+       "ekran": "Anaplazinin morfolojik bulgularını sayalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0181",
+       "ses": "İlki hücresel ve nükleer pleomorfizmdir, yani hücre ve çekirdeklerin boyut ve şekil çeşitliliği.",
+       "ekran": "İlki hücresel ve nükleer pleomorfizmdir, yani hücre ve çekirdeklerin boyut ve şekil çeşitliliği.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0182",
+       "ses": "2.'si nükleer değişikliklerdir: çekirdeğin koyu boyanması, yani hiperkromazi, büyümüş nükleus ve yüksek nükleus sitoplazma oranı.",
+       "ekran": "2.'si nükleer değişikliklerdir: çekirdeğin koyu boyanması, yani hiperkromazi, büyümüş nükleus ve yüksek nükleus sitoplazma oranı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0183",
+       "ses": "Normalde 1:4 ile 1:6 arasında olan bu oran anaplazide yaklaşık 1:1'e yükselir.",
+       "ekran": "Normalde 1:4 ile 1:6 arasında olan bu oran anaplazide yaklaşık 1:1'e yükselir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0184",
+       "ses": "Kromatin de kaba kümeler halinde toplanabilir ve çekirdekte büyük, belirgin nükleoller görülebilir.",
+       "ekran": "Kromatin de kaba kümeler halinde toplanabilir ve çekirdekte büyük, belirgin nükleoller görülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0185",
+       "ses": "3.'sü tümör dev hücreleridir; tek bir dev çekirdeğe ya da çok sayıda çekirdeğe sahiptirler.",
+       "ekran": "3.'sü tümör dev hücreleridir; tek bir dev çekirdeğe ya da çok sayıda çekirdeğe sahiptirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0186",
+       "ses": "4.'sü mitozlardır: sayıca sıktır ve biçimce atipiktir, yani 3 ya da 4 kutuplu anormal mitotik figürler izlenir.",
+       "ekran": "4.'sü mitozlardır: sayıca sıktır ve biçimce atipiktir, yani 3 ya da 4 kutuplu anormal mitotik figürler izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0187",
+       "ses": "Mitozun sık olması proliferasyonu, atipik olması maligniteyi düşündürür.",
+       "ekran": "Mitozun sık olması proliferasyonu, atipik olması maligniteyi düşündürür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p038",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-28-c0188",
+       "ses": "Pleomorfik malign bir tümör olan rabdomiyosarkomda hücre ve çekirdek boyutlarında belirgin varyasyon, hiperkromatik çekirdekler ve tümör dev hücreleri dikkat çeker.",
+       "ekran": "Pleomorfik malign bir tümör olan rabdomiyosarkomda hücre ve çekirdek boyutlarında belirgin varyasyon, hiperkromatik çekirdekler ve tümör dev hücreleri dikkat çeker.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0189",
+       "ses": "Anaplastik hücrelerin yüksek büyütmesinde ise ortadaki belirgin bir hücrenin anormal 3 kutuplu bir iğ yapısına sahip olduğu görülür.",
+       "ekran": "Anaplastik hücrelerin yüksek büyütmesinde ise ortadaki belirgin bir hücrenin anormal 3 kutuplu bir iğ yapısına sahip olduğu görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0190",
+       "ses": "Burası önemli, çıkmış soruda anaplazi bulgusu olmayan seçenek soruldu ve doğru cevap matür bazal membran oluşumu ile hücrelerin düzenli apikobazal polaritesiydi.",
+       "ekran": "Burası önemli, çıkmış soruda anaplazi bulgusu olmayan seçenek soruldu ve doğru cevap matür bazal membran oluşumu ile hücrelerin düzenli apikobazal polaritesiydi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0191",
+       "ses": "Pleomorfizm, 1:1'e yaklaşan nükleus sitoplazma oranı, 3 ya da 4 kutuplu atipik mitozlar, kaba kromatin kümelenmesi ve dev nükleoller anaplazi bulgusudur; düzenli polarite ve olgun yapı ise anaplazinin tam tersidir.",
+       "ekran": "Pleomorfizm, 1:1'e yaklaşan nükleus sitoplazma oranı, 3 ya da 4 kutuplu atipik mitozlar, kaba kromatin kümelenmesi ve dev nükleoller anaplazi bulgusudur; düzenli polarite ve olgun yapı ise anaplazinin tam tersidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p039",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-28-c0192",
+       "ses": "Diferansiyasyon fonksiyonu da belirler.",
+       "ekran": "Diferansiyasyon fonksiyonu da belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0193",
+       "ses": "Diferansiye olmamış hücreler genellikle dokuya özgü fonksiyonlarını kaybetmiştir.",
+       "ekran": "Diferansiye olmamış hücreler genellikle dokuya özgü fonksiyonlarını kaybetmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0194",
+       "ses": "İyi diferansiye malign tümörler ise kök hücre dokusuna özgü fonksiyonları sürdürebilir: endokrin karsinomlar hormon üretir, skuamöz hücreli karsinom keratin yapabilir, hepatosellüler karsinom safra üretebilir.",
+       "ekran": "İyi diferansiye malign tümörler ise kök hücre dokusuna özgü fonksiyonları sürdürebilir: endokrin karsinomlar hormon üretir, skuamöz hücreli karsinom keratin yapabilir, hepatosellüler karsinom safra üretebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0195",
+       "ses": "Bazı tümörler ise köken dokusunda normalde üretilmeyen hormonları salgılar; bu ektopik hormon üretimi paraneoplastik sendromlara yol açabilir.",
+       "ekran": "Bazı tümörler ise köken dokusunda normalde üretilmeyen hormonları salgılar; bu ektopik hormon üretimi paraneoplastik sendromlara yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b13",
+   "baslik": "Displazi ve karsinoma in situ",
+   "paragraflar": [
+    {
+     "id": "k1-28-p040",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-28-c0196",
+       "ses": "Displazi, epitelde gelişen düzensiz proliferasyondur; hem hücresel atipi hem de mimari bozukluk vardır.",
+       "ekran": "Displazi, epitelde gelişen düzensiz proliferasyondur; hem hücresel atipi hem de mimari bozukluk vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0197",
+       "ses": "Özellikleri şunlardır: hücresel pleomorfizm, büyük ve hiperkromatik çekirdekler, normalde yalnız bazal katta görülen mitozların yüzeyel katlarda da görülmesi ve normal olgunlaşma ile polaritenin kaybı.",
+       "ekran": "Özellikleri şunlardır: hücresel pleomorfizm, büyük ve hiperkromatik çekirdekler, normalde yalnız bazal katta görülen mitozların yüzeyel katlarda da görülmesi ve normal olgunlaşma ile polaritenin kaybı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0198",
+       "ses": "Yani bazalden yüzeye doğru düzenli olgunlaşma ve hücrelerin düzenli dizilimi bozulur.",
+       "ekran": "Yani bazalden yüzeye doğru düzenli olgunlaşma ve hücrelerin düzenli dizilimi bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p041",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-28-c0199",
+       "ses": "Displazi epitel kalınlığının tamamını tuttuğunda lezyon karsinoma in situ adını alır.",
+       "ekran": "Displazi epitel kalınlığının tamamını tuttuğunda lezyon karsinoma in situ adını alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0200",
+       "ses": "Karsinoma in situ bazal membranı geçmez ve invaziv kansere ilerleme riski yüksektir.",
+       "ekran": "Karsinoma in situ bazal membranı geçmez ve invaziv kansere ilerleme riski yüksektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0201",
+       "ses": "Mikroskopik görüntüde düşük büyütmede epitelin tüm kalınlığının atipik displastik hücrelerle değiştiği, yassı hücrelerde düzenli farklılaşma olmadığı, bazal membranın sağlam olduğu ve subepitelyal stromada tümör bulunmadığı görülür.",
+       "ekran": "Mikroskopik görüntüde düşük büyütmede epitelin tüm kalınlığının atipik displastik hücrelerle değiştiği, yassı hücrelerde düzenli farklılaşma olmadığı, bazal membranın sağlam olduğu ve subepitelyal stromada tümör bulunmadığı görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0202",
+       "ses": "Yüksek büyütmede normal farklılaşmanın başarısızlığı, belirgin nükleer ve hücresel pleomorfizm ve yüzeye doğru uzanan çok sayıda mitotik figür izlenir.",
+       "ekran": "Yüksek büyütmede normal farklılaşmanın başarısızlığı, belirgin nükleer ve hücresel pleomorfizm ve yüzeye doğru uzanan çok sayıda mitotik figür izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0203",
+       "ses": "Karsinoma in situyu invaziv karsinomdan ayıran ölçüt bazal membranın sağlam olmasıdır.",
+       "ekran": "Karsinoma in situyu invaziv karsinomdan ayıran ölçüt bazal membranın sağlam olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p042",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-28-c0204",
+       "ses": "Displazi kanserle eş anlamlı değildir.",
+       "ekran": "Displazi kanserle eş anlamlı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0205",
+       "ses": "Hafif ve orta displazi, nedene yönelik tedavi ile gerileyebilir.",
+       "ekran": "Hafif ve orta displazi, nedene yönelik tedavi ile gerileyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0206",
+       "ses": "Ancak displazi çoğu zaman malign bir neoplazmın yanı başında görülür ve o dokuda kanser gelişme riskinin arttığını gösterir.",
+       "ekran": "Ancak displazi çoğu zaman malign bir neoplazmın yanı başında görülür ve o dokuda kanser gelişme riskinin arttığını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0207",
+       "ses": "Örnekleri sigara içenlerin bronş mukozasındaki displazi ve servikal intraepitelyal neoplazidir.",
+       "ekran": "Örnekleri sigara içenlerin bronş mukozasındaki displazi ve servikal intraepitelyal neoplazidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0208",
+       "ses": "Mikroskopik dizilimi şöyle aklınızda tutabilirsiniz: displazi, sonra bazal membranın sağlam olduğu karsinoma in situ, sonra bazal membranın aşıldığı invaziv karsinom.",
+       "ekran": "Mikroskopik dizilimi şöyle aklınızda tutabilirsiniz: displazi, sonra bazal membranın sağlam olduğu karsinoma in situ, sonra bazal membranın aşıldığı invaziv karsinom.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b14",
+   "baslik": "Lokal büyüme ve invazyon",
+   "paragraflar": [
+    {
+     "id": "k1-28-p043",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-28-c0209",
+       "ses": "Benign tümörler genellikle lokalize, genişleyen kitlelerdir; çevre dokuları iter ama istila etmez.",
+       "ekran": "Benign tümörler genellikle lokalize, genişleyen kitlelerdir; çevre dokuları iter ama istila etmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0210",
+       "ses": "Çevrelerinde sıkıştırılmış fibröz dokudan oluşan bir kapsül bulunur.",
+       "ekran": "Çevrelerinde sıkıştırılmış fibröz dokudan oluşan bir kapsül bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0211",
+       "ses": "Bu kapsül tümör ile çevre doku arasında düzlemsel bir sınır oluşturur ve cerrahi enükleasyonu, yani tümörün kapsülüyle birlikte bütün halinde çıkarılmasını kolaylaştırır.",
+       "ekran": "Bu kapsül tümör ile çevre doku arasında düzlemsel bir sınır oluşturur ve cerrahi enükleasyonu, yani tümörün kapsülüyle birlikte bütün halinde çıkarılmasını kolaylaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0212",
+       "ses": "İstisnası şudur: hemanjiyom gibi bazı benign vasküler tümörler kapsülle sınırlı olmayabilir.",
+       "ekran": "İstisnası şudur: hemanjiyom gibi bazı benign vasküler tümörler kapsülle sınırlı olmayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0213",
+       "ses": "Yani kapsül yokluğu tek başına maligniteyi kanıtlamaz.",
+       "ekran": "Yani kapsül yokluğu tek başına maligniteyi kanıtlamaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p044",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-28-c0214",
+       "ses": "Malign tümörler ise invaziv büyüme gösterir; çevre normal dokulara sızar ve onları tahrip eder.",
+       "ekran": "Malign tümörler ise invaziv büyüme gösterir; çevre normal dokulara sızar ve onları tahrip eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0215",
+       "ses": "Kapsül genellikle yoktur; olsa bile mikroskobik tümör dilcikleri kapsülü delip geçer.",
+       "ekran": "Kapsül genellikle yoktur; olsa bile mikroskobik tümör dilcikleri kapsülü delip geçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0216",
+       "ses": "Bu yüzden cerrahide yeterli genişlikte sağlam doku payı, yani cerrahi marjin gerekir ve patolojik incelemeyle temiz sınırın teyit edilmesi önemlidir; sınırda tümör hücresi kalmışsa tümör yinelenebilir.",
+       "ekran": "Bu yüzden cerrahide yeterli genişlikte sağlam doku payı, yani cerrahi marjin gerekir ve patolojik incelemeyle temiz sınırın teyit edilmesi önemlidir; sınırda tümör hücresi kalmışsa tümör yinelenebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p045",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-28-c0217",
+       "ses": "Miyometriyumun iyi huylu tümörü leiomyom ile benzer kökenli kötü huylu tümörü leiomyosarkomu karşılaştıralım.",
+       "ekran": "Miyometriyumun iyi huylu tümörü leiomyom ile benzer kökenli kötü huylu tümörü leiomyosarkomu karşılaştıralım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0218",
+       "ses": "Leiomyom küçük, iyi sınırlı ve yavaş büyüyen, invaziv olmayan, metastaz yapmayan ve iyi diferansiye bir tümördür.",
+       "ekran": "Leiomyom küçük, iyi sınırlı ve yavaş büyüyen, invaziv olmayan, metastaz yapmayan ve iyi diferansiye bir tümördür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0219",
+       "ses": "Leiomyosarkom ise büyük ve kötü sınırlıdır, hızlı büyür ve içinde kanama ve nekroz alanları bulunur; lokal invazivdir, metastaz yapar ve az diferansiyedir; şemada tümörün bir vene uzandığı görülür.",
+       "ekran": "Leiomyosarkom ise büyük ve kötü sınırlıdır, hızlı büyür ve içinde kanama ve nekroz alanları bulunur; lokal invazivdir, metastaz yapar ve az diferansiyedir; şemada tümörün bir vene uzandığı görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0220",
+       "ses": "Bu karşılaştırma boyut, sınır, büyüme hızı, invazyon, metastaz ve diferansiyasyon ölçütlerini tek bakışta özetler.",
+       "ekran": "Bu karşılaştırma boyut, sınır, büyüme hızı, invazyon, metastaz ve diferansiyasyon ölçütlerini tek bakışta özetler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p046",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-28-c0221",
+       "ses": "Burası önemli, çıkmış sorularda doğru ifade olarak benign tümörler bazen malign tümörlerden daha hızlı büyüyebilir seçeneği soruldu.",
+       "ekran": "Burası önemli, çıkmış sorularda doğru ifade olarak benign tümörler bazen malign tümörlerden daha hızlı büyüyebilir seçeneği soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0222",
+       "ses": "Büyüme hızı benign ve malign ayrımında kesin bir ölçüt değildir.",
+       "ekran": "Büyüme hızı benign ve malign ayrımında kesin bir ölçüt değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0223",
+       "ses": "Örneğin uterus leiomyomları gebelikteki yüksek östrojen etkisiyle hızla büyüyebilir.",
+       "ekran": "Örneğin uterus leiomyomları gebelikteki yüksek östrojen etkisiyle hızla büyüyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0224",
+       "ses": "Kesin ölçütler kapsül ve sınır, lokal invazyon ve metastazdır.",
+       "ekran": "Kesin ölçütler kapsül ve sınır, lokal invazyon ve metastazdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b15",
+   "baslik": "Metastaz: tanım ve sıklık",
+   "paragraflar": [
+    {
+     "id": "k1-28-p047",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-28-c0225",
+       "ses": "Metastaz, primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşmasıdır.",
+       "ekran": "Metastaz, primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0226",
+       "ses": "Malignite için ayırt edici özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir.",
+       "ekran": "Malignite için ayırt edici özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0227",
+       "ses": "Burası önemli, sınav spotu olarak istisnaları bilin: bazal hücreli karsinomlar ve birçok primer santral sinir sistemi tümörü lokal invazivdir ama nadiren metastaz yapar.",
+       "ekran": "Burası önemli, sınav spotu olarak istisnaları bilin: bazal hücreli karsinomlar ve birçok primer santral sinir sistemi tümörü lokal invazivdir ama nadiren metastaz yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0228",
+       "ses": "Metastatik kanserle kaplı bir karaciğerde, karaciğer parankimi içinde çok sayıda, farklı boyutlarda tümör nodülü dağılmıştır.",
+       "ekran": "Metastatik kanserle kaplı bir karaciğerde, karaciğer parankimi içinde çok sayıda, farklı boyutlarda tümör nodülü dağılmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p048",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-28-c0229",
+       "ses": "Teşhis anında katı tümörlü hastaların yaklaşık %30'unda klinik metastaz, yaklaşık %20'sinde ise henüz saptanamayan gizli, yani okült metastaz vardır.",
+       "ekran": "Teşhis anında katı tümörlü hastaların yaklaşık %30'unda klinik metastaz, yaklaşık %20'sinde ise henüz saptanamayan gizli, yani okült metastaz vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0230",
+       "ses": "Büyük ve anaplastik tümörlerde metastaz olasılığı artar; ancak küçük tümörler de metastaz yapabilir, boyut tek başına güvence vermez.",
+       "ekran": "Büyük ve anaplastik tümörlerde metastaz olasılığı artar; ancak küçük tümörler de metastaz yapabilir, boyut tek başına güvence vermez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0231",
+       "ses": "Lösemi ve lenfomaların ise kan ve lenfoid doku üzerinden yaygın oldukları varsayılır ve tanı anında sistemik kabul edilirler.",
+       "ekran": "Lösemi ve lenfomaların ise kan ve lenfoid doku üzerinden yaygın oldukları varsayılır ve tanı anında sistemik kabul edilirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b16",
+   "baslik": "Metastaz yolları: tohumlanma ve lenfatik yayılım",
+   "paragraflar": [
+    {
+     "id": "k1-28-p049",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-28-c0232",
+       "ses": "3 ana metastaz yolu vardır: vücut boşlukları içine tohumlanma, lenfatik yayılım ve hematogen, yani kan yoluyla yayılım.",
+       "ekran": "3 ana metastaz yolu vardır: vücut boşlukları içine tohumlanma, lenfatik yayılım ve hematogen, yani kan yoluyla yayılım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0233",
+       "ses": "Birçok tümör birden fazla yolu aynı anda kullanabilir.",
+       "ekran": "Birçok tümör birden fazla yolu aynı anda kullanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0234",
+       "ses": "Tohumlanmada tümör bir seröz boşluğa açılır ve hücreler boşluk yüzeylerine yayılır.",
+       "ekran": "Tohumlanmada tümör bir seröz boşluğa açılır ve hücreler boşluk yüzeylerine yayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0235",
+       "ses": "Tutulan boşluklar periton, plevra, perikard ve beyin ventrikülleridir.",
+       "ekran": "Tutulan boşluklar periton, plevra, perikard ve beyin ventrikülleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0236",
+       "ses": "Klasik örnek over karsinomudur; periton yüzeylerine karın içi tohumlanma şeklinde yayılır.",
+       "ekran": "Klasik örnek over karsinomudur; periton yüzeylerine karın içi tohumlanma şeklinde yayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0237",
+       "ses": "Santral sinir sisteminde medulloblastom ve ependimom, beyin omurilik sıvısı yoluyla meninks ve spinal yüzeylere yayılır.",
+       "ekran": "Santral sinir sisteminde medulloblastom ve ependimom, beyin omurilik sıvısı yoluyla meninks ve spinal yüzeylere yayılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p050",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-28-c0238",
+       "ses": "Lenfatik yayılım en çok karsinomlar için tipiktir.",
+       "ekran": "Lenfatik yayılım en çok karsinomlar için tipiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0239",
+       "ses": "Bölgesel lenf düğümleri ilk metastaz bölgesidir.",
+       "ekran": "Bölgesel lenf düğümleri ilk metastaz bölgesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0240",
+       "ses": "Akciğer karsinomunda sırasıyla bronşiyal, trakeobronşiyal ve hiler lenf düğümleri tutulur.",
+       "ekran": "Akciğer karsinomunda sırasıyla bronşiyal, trakeobronşiyal ve hiler lenf düğümleri tutulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0241",
+       "ses": "Meme karsinomu aksiller ya da internal meme lenf düğümlerine yayılır.",
+       "ekran": "Meme karsinomu aksiller ya da internal meme lenf düğümlerine yayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0242",
+       "ses": "Bekçi lenf düğümü, primer tümörden ilk lenf drenajını alan düğümdür.",
+       "ekran": "Bekçi lenf düğümü, primer tümörden ilk lenf drenajını alan düğümdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p051",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k1-28-c0243",
+       "ses": "Bekçi lenf düğümü, tümör çevresine boya ya da radyoaktif izleyici enjekte edilerek saptanır.",
+       "ekran": "Bekçi lenf düğümü, tümör çevresine boya ya da radyoaktif izleyici enjekte edilerek saptanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0244",
+       "ses": "Bu düğümün cerrahi biyopsisi metastaz varlığını gösterir ya da dışlar.",
+       "ekran": "Bu düğümün cerrahi biyopsisi metastaz varlığını gösterir ya da dışlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0245",
+       "ses": "Böylece evreleme ve tedavi planlamasına yön verir ve gereksiz geniş lenfadenektomiden kaçınmayı sağlar.",
+       "ekran": "Böylece evreleme ve tedavi planlamasına yön verir ve gereksiz geniş lenfadenektomiden kaçınmayı sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0246",
+       "ses": "Ama şunu unutmayın: lenf düğümü büyümesi reaktif hiperplazi de olabilir; metastaz tanısı için histolojik doğrulama şarttır.",
+       "ekran": "Ama şunu unutmayın: lenf düğümü büyümesi reaktif hiperplazi de olabilir; metastaz tanısı için histolojik doğrulama şarttır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b17",
+   "baslik": "Hematogen yayılım ve organ tropizmi",
+   "paragraflar": [
+    {
+     "id": "k1-28-p052",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-28-c0247",
+       "ses": "Hematogen yayılım sarkomlar için tipiktir ve en sık ince duvarlı venler yoluyla olur; arterler daha nadiren tutulur, çünkü arter duvarı tümör invazyonuna oldukça dirençlidir.",
+       "ekran": "Hematogen yayılım sarkomlar için tipiktir ve en sık ince duvarlı venler yoluyla olur; arterler daha nadiren tutulur, çünkü arter duvarı tümör invazyonuna oldukça dirençlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0248",
+       "ses": "Tümör hücreleri damar drenajına göre karşılaştıkları ilk kapiller yatakta tutunur.",
+       "ekran": "Tümör hücreleri damar drenajına göre karşılaştıkları ilk kapiller yatakta tutunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0249",
+       "ses": "Portal sisteme drene olan organlardan yayılım karaciğere, sistemik venöz drenajla yayılım akciğere olur.",
+       "ekran": "Portal sisteme drene olan organlardan yayılım karaciğere, sistemik venöz drenajla yayılım akciğere olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0250",
+       "ses": "Bu yüzden kan yoluyla metastazlar en sık karaciğer ve akciğerde görülür.",
+       "ekran": "Bu yüzden kan yoluyla metastazlar en sık karaciğer ve akciğerde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0251",
+       "ses": "Hepatosellüler karsinom ve renal hücreli karsinom inferior vena kavaya doğru damar içi büyüme gösterebilir.",
+       "ekran": "Hepatosellüler karsinom ve renal hücreli karsinom inferior vena kavaya doğru damar içi büyüme gösterebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0252",
+       "ses": "Omurga yakınındaki tümörler ise paravertebral ven pleksusu yoluyla vertebral metastaz yapar.",
+       "ekran": "Omurga yakınındaki tümörler ise paravertebral ven pleksusu yoluyla vertebral metastaz yapar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p053",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-28-c0253",
+       "ses": "Burası önemli, bu bilgiler çıkmış sorularda hem doğru hem yanlış şık olarak tekrar tekrar kullanıldı.",
+       "ekran": "Burası önemli, bu bilgiler çıkmış sorularda hem doğru hem yanlış şık olarak tekrar tekrar kullanıldı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0254",
+       "ses": "Doğruları şöyle aklınızda tutun: karsinomlar daha çok lenfatik yolla, sarkomlar daha çok kan damarı yoluyla yayılır; kan yoluyla metastazlar arterlerle değil daha çok venlerle olur; arter duvarı invazyona dirençlidir; hematogen metastazlar en sık karaciğer ve akciğerde görülür; iskelet kası ise nadir metastaz yeridir.",
+       "ekran": "Doğruları şöyle aklınızda tutun: karsinomlar daha çok lenfatik yolla, sarkomlar daha çok kan damarı yoluyla yayılır; kan yoluyla metastazlar arterlerle değil daha çok venlerle olur; arter duvarı invazyona dirençlidir; hematogen metastazlar en sık karaciğer ve akciğerde görülür; iskelet kası ise nadir metastaz yeridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p054",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k1-28-c0255",
+       "ses": "Metastazın yerini yalnız kan akımı belirlemez; bazı tümörler belirli organlara metastaz yapma eğilimindedir.",
+       "ekran": "Metastazın yerini yalnız kan akımı belirlemez; bazı tümörler belirli organlara metastaz yapma eğilimindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0256",
+       "ses": "Burası önemli, organ tropizmi sınav spotudur: prostat karsinomu kemiğe, bronkojenik karsinom adrenal beze ve beyne, nöroblastom karaciğer ve kemiğe, üveal melanom karaciğere metastaz yapar.",
+       "ekran": "Burası önemli, organ tropizmi sınav spotudur: prostat karsinomu kemiğe, bronkojenik karsinom adrenal beze ve beyne, nöroblastom karaciğer ve kemiğe, üveal melanom karaciğere metastaz yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0257",
+       "ses": "Tersine, iskelet kası gibi çok vasküler dokular nadir metastaz bölgesidir.",
+       "ekran": "Tersine, iskelet kası gibi çok vasküler dokular nadir metastaz bölgesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0258",
+       "ses": "Vücutta geniş yer kaplayan ve iyi kanlanan bir dokuda metastazın nadir olması, metastazın yalnız kan akımıyla açıklanamayacağını gösterir.",
+       "ekran": "Vücutta geniş yer kaplayan ve iyi kanlanan bir dokuda metastazın nadir olması, metastazın yalnız kan akımıyla açıklanamayacağını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0259",
+       "ses": "Seçici yerleşimin mekanizmasında adezyon molekülleri, kemokin reseptörleri ve stromal faktörler rol oynar.",
+       "ekran": "Seçici yerleşimin mekanizmasında adezyon molekülleri, kemokin reseptörleri ve stromal faktörler rol oynar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b18",
+   "baslik": "Kanser epidemiyolojisi",
+   "paragraflar": [
+    {
+     "id": "k1-28-p055",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k1-28-c0260",
+       "ses": "2018 tahminlerine göre dünyada yaklaşık 17 milyon yeni kanser vakası ve yaklaşık 9,6 milyon kanser ölümü olmuştur.",
+       "ekran": "2018 tahminlerine göre dünyada yaklaşık 17 milyon yeni kanser vakası ve yaklaşık 9,6 milyon kanser ölümü olmuştur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0261",
+       "ses": "Nüfus artışı ve yaşlanmayla bu sayılar yükselmektedir; 2035'te yaklaşık 24 milyon yeni vaka ve 14,6 milyon ölüm beklenmektedir.",
+       "ekran": "Nüfus artışı ve yaşlanmayla bu sayılar yükselmektedir; 2035'te yaklaşık 24 milyon yeni vaka ve 14,6 milyon ölüm beklenmektedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0262",
+       "ses": "Kanser, kardiyovasküler hastalıklardan sonra ikinci ölüm nedenidir.",
+       "ekran": "Kanser, kardiyovasküler hastalıklardan sonra ikinci ölüm nedenidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p056",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k1-28-c0263",
+       "ses": "Amerika Birleşik Devletleri için 2022 tahmini yaklaşık 1,9 milyon yeni vaka ve yaklaşık 609.000 ölümdür.",
+       "ekran": "Amerika Birleşik Devletleri için 2022 tahmini yaklaşık 1,9 milyon yeni vaka ve yaklaşık 609.000 ölümdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0264",
+       "ses": "Sık görülen kanserler erkekte prostat, akciğer ve kolorektal; kadında meme, akciğer ve kolorektal kanserlerdir.",
+       "ekran": "Sık görülen kanserler erkekte prostat, akciğer ve kolorektal; kadında meme, akciğer ve kolorektal kanserlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0265",
+       "ses": "İnsidansta erkekte prostat %27, kadında meme %31 ile ilk sıradadır; akciğer ve bronş erkekte %12, kadında %13'tür.",
+       "ekran": "İnsidansta erkekte prostat %27, kadında meme %31 ile ilk sıradadır; akciğer ve bronş erkekte %12, kadında %13'tür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0266",
+       "ses": "Mortalitede ise her iki cinsiyette de akciğer ve bronş %21 ile birinci sıradadır; ikinci sırada erkekte %11 ile prostat, kadında %15 ile meme gelir.",
+       "ekran": "Mortalitede ise her iki cinsiyette de akciğer ve bronş %21 ile birinci sıradadır; ikinci sırada erkekte %11 ile prostat, kadında %15 ile meme gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0267",
+       "ses": "Yani en sık görülen kanser ile en çok öldüren kanser aynı değildir.",
+       "ekran": "Yani en sık görülen kanser ile en çok öldüren kanser aynı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0268",
+       "ses": "Son 20-30 yılda kanser mortalitesi erkeklerde yaklaşık %20, kadınlarda yaklaşık %10 azalmıştır; bu düşüş sigara kullanımındaki azalma ve tanı ile tedavideki iyileşmeyle ilişkilidir.",
+       "ekran": "Son 20-30 yılda kanser mortalitesi erkeklerde yaklaşık %20, kadınlarda yaklaşık %10 azalmıştır; bu düşüş sigara kullanımındaki azalma ve tanı ile tedavideki iyileşmeyle ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b19",
+   "baslik": "Çevresel faktörler ve mesleki kanserler",
+   "paragraflar": [
+    {
+     "id": "k1-28-p057",
+     "sayfa": 57,
+     "cumleler": [
+      {
+       "id": "k1-28-c0269",
+       "ses": "Çevresel maruziyetler birçok yaygın kanser için baskın risk faktörüdür.",
+       "ekran": "Çevresel maruziyetler birçok yaygın kanser için baskın risk faktörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0270",
+       "ses": "Bunun kanıtı coğrafi farklılıklardır: meme kanseri Amerika ve Avrupa'da Japonya'ya göre 9 kat fazladır; mide kanseri Japonya'da Amerika'ya göre yaklaşık 7 kat fazladır; hepatosellüler karsinom bazı Afrika bölgelerinde en yaygın kanserdir.",
+       "ekran": "Bunun kanıtı coğrafi farklılıklardır: meme kanseri Amerika ve Avrupa'da Japonya'ya göre 9 kat fazladır; mide kanseri Japonya'da Amerika'ya göre yaklaşık 7 kat fazladır; hepatosellüler karsinom bazı Afrika bölgelerinde en yaygın kanserdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0271",
+       "ses": "Göç eden topluluklarda nesiller boyunca riskler yeni ülkenin populasyonuna doğru değişir.",
+       "ekran": "Göç eden topluluklarda nesiller boyunca riskler yeni ülkenin populasyonuna doğru değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0272",
+       "ses": "Genetik yapı bu kadar kısa sürede değişmediğine göre, bu kayma çevresel etkenlerin rolünü destekler.",
+       "ekran": "Genetik yapı bu kadar kısa sürede değişmediğine göre, bu kayma çevresel etkenlerin rolünü destekler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p058",
+     "sayfa": 58,
+     "cumleler": [
+      {
+       "id": "k1-28-c0273",
+       "ses": "Önemli çevresel risk faktörlerine bakalım.",
+       "ekran": "Önemli çevresel risk faktörlerine bakalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0274",
+       "ses": "Beslenme ve obezite birçok solid tümörün riskini artırır.",
+       "ekran": "Beslenme ve obezite birçok solid tümörün riskini artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0275",
+       "ses": "Sigara ağız, farenks, larenks, özofagus, pankreas ve mesane kanserleriyle ilişkilidir ve akciğer kanseri ölümlerinin yaklaşık %90'ı sigarayla ilişkilidir.",
+       "ekran": "Sigara ağız, farenks, larenks, özofagus, pankreas ve mesane kanserleriyle ilişkilidir ve akciğer kanseri ölümlerinin yaklaşık %90'ı sigarayla ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0276",
+       "ses": "Alkol orofarenks, larenks, özofagus, meme ve siroz ilişkili karaciğer kanserleriyle ilişkilidir ve sigarayla birlikte sinerjik etki gösterir; yani ikisinin birlikte riski ayrı risklerin toplamından fazladır.",
+       "ekran": "Alkol orofarenks, larenks, özofagus, meme ve siroz ilişkili karaciğer kanserleriyle ilişkilidir ve sigarayla birlikte sinerjik etki gösterir; yani ikisinin birlikte riski ayrı risklerin toplamından fazladır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0277",
+       "ses": "Üreme öyküsünde östrojen maruziyetinin artması endometrium ve meme kanseri riskini yükseltir.",
+       "ekran": "Üreme öyküsünde östrojen maruziyetinin artması endometrium ve meme kanseri riskini yükseltir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0278",
+       "ses": "Enfeksiyonlar ise dünya kanserlerinin yaklaşık %15'inden sorumludur.",
+       "ekran": "Enfeksiyonlar ise dünya kanserlerinin yaklaşık %15'inden sorumludur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p059",
+     "sayfa": 59,
+     "cumleler": [
+      {
+       "id": "k1-28-c0279",
+       "ses": "Mesleki kanserlerde etken ve kanser eşleşmeleri sınav spotudur.",
+       "ekran": "Mesleki kanserlerde etken ve kanser eşleşmeleri sınav spotudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0280",
+       "ses": "Arsenik ve bileşikleri akciğer ve deri karsinomuna yol açar; metal ergitmenin yan ürünüdür ve alaşımlarda, elektrik ve yarı iletken aygıtlarda, ilaçlarda, herbisit ve fungisitlerde bulunur.",
+       "ekran": "Arsenik ve bileşikleri akciğer ve deri karsinomuna yol açar; metal ergitmenin yan ürünüdür ve alaşımlarda, elektrik ve yarı iletken aygıtlarda, ilaçlarda, herbisit ve fungisitlerde bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0281",
+       "ses": "Asbest akciğer karsinomu ve mezotelyomaya yol açar; yangına, ısıya ve sürtünmeye dayanıklı olduğu için eskiden yaygın kullanılırdı ve hâlâ eski yapılarda, fren balatası gibi sürtünme malzemelerinde, çatı kaplamalarında ve yer karolarında bulunur.",
+       "ekran": "Asbest akciğer karsinomu ve mezotelyomaya yol açar; yangına, ısıya ve sürtünmeye dayanıklı olduğu için eskiden yaygın kullanılırdı ve hâlâ eski yapılarda, fren balatası gibi sürtünme malzemelerinde, çatı kaplamalarında ve yer karolarında bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0282",
+       "ses": "Benzen akut miyeloid lösemiye yol açar; hafif yağın başlıca bileşenidir ve baskı, boya, kauçuk, kuru temizleme, yapıştırıcı ve deterjanlarda kullanılır.",
+       "ekran": "Benzen akut miyeloid lösemiye yol açar; hafif yağın başlıca bileşenidir ve baskı, boya, kauçuk, kuru temizleme, yapıştırıcı ve deterjanlarda kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0283",
+       "ses": "Kadmiyum ve bileşikleri prostat karsinomuyla ilişkilidir; sarı pigment, lehim, pil ve metal kaplamalarda bulunur.",
+       "ekran": "Kadmiyum ve bileşikleri prostat karsinomuyla ilişkilidir; sarı pigment, lehim, pil ve metal kaplamalarda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0284",
+       "ses": "Krom bileşikleri akciğer karsinomuyla ilişkilidir; metal alaşımı, boya ve pigmentlerin bileşenidir.",
+       "ekran": "Krom bileşikleri akciğer karsinomuyla ilişkilidir; metal alaşımı, boya ve pigmentlerin bileşenidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p060",
+     "sayfa": 60,
+     "cumleler": [
+      {
+       "id": "k1-28-c0285",
+       "ses": "Nikel bileşikleri akciğer ve orofaringeal karsinoma yol açar; nikel kaplamada kullanılır, alaşım, seramik ve pillerin bileşenidir ve paslanmaz çelik ark kaynağının yan ürünüdür.",
+       "ekran": "Nikel bileşikleri akciğer ve orofaringeal karsinoma yol açar; nikel kaplamada kullanılır, alaşım, seramik ve pillerin bileşenidir ve paslanmaz çelik ark kaynağının yan ürünüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0286",
+       "ses": "Radon ve bozunma ürünleri akciğer karsinomuna yol açar; uranyum içeren minerallerin bozunmasından kaynaklanır ve taş ocakları ile yeraltı madenlerinde ciddi bir tehlikedir.",
+       "ekran": "Radon ve bozunma ürünleri akciğer karsinomuna yol açar; uranyum içeren minerallerin bozunmasından kaynaklanır ve taş ocakları ile yeraltı madenlerinde ciddi bir tehlikedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0287",
+       "ses": "Vinil klorür ise hepatik anjiosarkoma, yani karaciğerin damar kökenli sarkomuna yol açar; soğutucu, vinil polimerler için monomer ve plastik yapıştırıcısıdır, eskiden aerosol itici gazı olarak da kullanılmıştır.",
+       "ekran": "Vinil klorür ise hepatik anjiosarkoma, yani karaciğerin damar kökenli sarkomuna yol açar; soğutucu, vinil polimerler için monomer ve plastik yapıştırıcısıdır, eskiden aerosol itici gazı olarak da kullanılmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0288",
+       "ses": "Burası önemli, sınav spotu olarak 3 eşleşmeyi kesin bilin: asbest mezotelyoma, benzen akut miyeloid lösemi, vinil klorür hepatik anjiosarkom.",
+       "ekran": "Burası önemli, sınav spotu olarak 3 eşleşmeyi kesin bilin: asbest mezotelyoma, benzen akut miyeloid lösemi, vinil klorür hepatik anjiosarkom.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b20",
+   "baslik": "Yaş ve edinilmiş yatkınlık koşulları",
+   "paragraflar": [
+    {
+     "id": "k1-28-p061",
+     "sayfa": 61,
+     "cumleler": [
+      {
+       "id": "k1-28-c0289",
+       "ses": "Kanser insidansı yaşla birlikte artar ve kanser ölümlerinin çoğu 55 ile 75 yaş arasında görülür.",
+       "ekran": "Kanser insidansı yaşla birlikte artar ve kanser ölümlerinin çoğu 55 ile 75 yaş arasında görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0290",
+       "ses": "Bunun nedenleri somatik mutasyonların zaman içinde birikmesi ve yaşlanmaya bağlı bağışıklık gözetiminin azalmasıdır.",
+       "ekran": "Bunun nedenleri somatik mutasyonların zaman içinde birikmesi ve yaşlanmaya bağlı bağışıklık gözetiminin azalmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0291",
+       "ses": "Çocukluk çağında ise kanserler tüm çocuk ölümlerinin yaklaşık %10'unu oluşturur.",
+       "ekran": "Çocukluk çağında ise kanserler tüm çocuk ölümlerinin yaklaşık %10'unu oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0292",
+       "ses": "Çocuklarda sık görülen tipler akut lösemiler ve lenfomalar, santral sinir sistemi tümörleri ve yumuşak doku ile kemik sarkomlarıdır.",
+       "ekran": "Çocuklarda sık görülen tipler akut lösemiler ve lenfomalar, santral sinir sistemi tümörleri ve yumuşak doku ile kemik sarkomlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p062",
+     "sayfa": 62,
+     "cumleler": [
+      {
+       "id": "k1-28-c0293",
+       "ses": "Kalıtsal olmayan bazı durumlar da kansere zemin hazırlar.",
+       "ekran": "Kalıtsal olmayan bazı durumlar da kansere zemin hazırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0294",
+       "ses": "Kronik enflamasyon çoğunlukla karsinom gelişimi için zemin hazırlar: kronik gastrit mide adenokarsinomuna, kronik hepatit hepatosellüler karsinoma, inflamatuvar bağırsak hastalığı kolorektal karsinoma zemin olur.",
+       "ekran": "Kronik enflamasyon çoğunlukla karsinom gelişimi için zemin hazırlar: kronik gastrit mide adenokarsinomuna, kronik hepatit hepatosellüler karsinoma, inflamatuvar bağırsak hastalığı kolorektal karsinoma zemin olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0295",
+       "ses": "İmmün yetmezlik özellikle virüs kaynaklı tümörlere yatkınlık yaratır; örneğin Epstein-Barr virüsü (EBV) ilişkili lenfomalar.",
+       "ekran": "İmmün yetmezlik özellikle virüs kaynaklı tümörlere yatkınlık yaratır; örneğin Epstein-Barr virüsü (EBV) ilişkili lenfomalar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0296",
+       "ses": "Bağışıklık gözetimi zayıfladığı için virüsün dönüştürdüğü hücreler temizlenemez.",
+       "ekran": "Bağışıklık gözetimi zayıfladığı için virüsün dönüştürdüğü hücreler temizlenemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0297",
+       "ses": "Displazi ve bazı benign lezyonlar ise öncü, yani prekürsör lezyonlardır ve kansere ilerleme riskleri artmıştır.",
+       "ekran": "Displazi ve bazı benign lezyonlar ise öncü, yani prekürsör lezyonlardır ve kansere ilerleme riskleri artmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p063",
+     "sayfa": 63,
+     "cumleler": [
+      {
+       "id": "k1-28-c0298",
+       "ses": "Kronik inflamatuvar durumlar ve kanser tablosunda önemli eşleşmeler şunlardır.",
+       "ekran": "Kronik inflamatuvar durumlar ve kanser tablosunda önemli eşleşmeler şunlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0299",
+       "ses": "Asbestoz ve silikoz, asbest lifleri ve silika partikülleri nedeniyle mezotelyoma ve akciğer karsinomuyla ilişkilidir.",
+       "ekran": "Asbestoz ve silikoz, asbest lifleri ve silika partikülleri nedeniyle mezotelyoma ve akciğer karsinomuyla ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0300",
+       "ses": "İnflamatuvar bağırsak hastalığı kolorektal karsinomla, liken sklerozus vulvar skuamöz hücreli karsinomla ilişkilidir.",
+       "ekran": "İnflamatuvar bağırsak hastalığı kolorektal karsinomla, liken sklerozus vulvar skuamöz hücreli karsinomla ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0301",
+       "ses": "Pankreatit, kronik alkol kullanımı ve tripsinojen geni gibi germ hattı mutasyonları zemininde pankreas karsinomuna yol açar.",
+       "ekran": "Pankreatit, kronik alkol kullanımı ve tripsinojen geni gibi germ hattı mutasyonları zemininde pankreas karsinomuna yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0302",
+       "ses": "Kronik kolesistit, safra asitleri, bakteriler ve safra kesesi taşları nedeniyle safra kesesi kanserine zemin olur.",
+       "ekran": "Kronik kolesistit, safra asitleri, bakteriler ve safra kesesi taşları nedeniyle safra kesesi kanserine zemin olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0303",
+       "ses": "Reflü özofajiti ve Barrett özofagusunda etken mide asididir ve gelişen kanser özofagus adenokarsinomudur.",
+       "ekran": "Reflü özofajiti ve Barrett özofagusunda etken mide asididir ve gelişen kanser özofagus adenokarsinomudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0304",
+       "ses": "Sjögren sendromu ve Hashimoto tiroiditi ekstranodal marjinal zon lenfomayla ilişkilidir.",
+       "ekran": "Sjögren sendromu ve Hashimoto tiroiditi ekstranodal marjinal zon lenfomayla ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p064",
+     "sayfa": 64,
+     "cumleler": [
+      {
+       "id": "k1-28-c0305",
+       "ses": "Tablonun ikinci bölümünde etken çoğunlukla enfeksiyondur.",
+       "ekran": "Tablonun ikinci bölümünde etken çoğunlukla enfeksiyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0306",
+       "ses": "Opisthorchis viverrini denen, safra kanalına yerleşen yassı ve yaprak şeklinde karaciğer kelebeği, kolanjit zemininde kolanjiyokarsinom ve kolon karsinomuyla ilişkilidir.",
+       "ekran": "Opisthorchis viverrini denen, safra kanalına yerleşen yassı ve yaprak şeklinde karaciğer kelebeği, kolanjit zemininde kolanjiyokarsinom ve kolon karsinomuyla ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0307",
+       "ses": "Helicobacter pylori, gastrit ve ülser zemininde hem gastrik adenokarsinoma hem de ekstranodal marjinal zon lenfomaya yol açabilir.",
+       "ekran": "Helicobacter pylori, gastrit ve ülser zemininde hem gastrik adenokarsinoma hem de ekstranodal marjinal zon lenfomaya yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0308",
+       "ses": "Hepatit B ya da C virüsü hepatosellüler karsinoma, osteomiyelitteki bakteriyel enfeksiyon drenaj yapan sinüslerde karsinoma, şistozomiyazise bağlı kronik sistit ise mesane karsinomuna zemin hazırlar.",
+       "ekran": "Hepatit B ya da C virüsü hepatosellüler karsinoma, osteomiyelitteki bakteriyel enfeksiyon drenaj yapan sinüslerde karsinoma, şistozomiyazise bağlı kronik sistit ise mesane karsinomuna zemin hazırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0309",
+       "ses": "Burası önemli, sınav spotu olarak Helicobacter pylori ile mide adenokarsinomu ve marjinal zon lenfoma, şistozomiyazis ile mesane karsinomu, Barrett özofagusu ile özofagus adenokarsinomu eşleşmelerini bilin.",
+       "ekran": "Burası önemli, sınav spotu olarak Helicobacter pylori ile mide adenokarsinomu ve marjinal zon lenfoma, şistozomiyazis ile mesane karsinomu, Barrett özofagusu ile özofagus adenokarsinomu eşleşmelerini bilin.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b21",
+   "baslik": "Öncü lezyonlar ve benign tümörlerin riski",
+   "paragraflar": [
+    {
+     "id": "k1-28-p065",
+     "sayfa": 65,
+     "cumleler": [
+      {
+       "id": "k1-28-c0310",
+       "ses": "Bazı lezyonlar kendisi kanser olmadan belirli bir kanserin riskini açıkça artırır.",
+       "ekran": "Bazı lezyonlar kendisi kanser olmadan belirli bir kanserin riskini açıkça artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0311",
+       "ses": "Alışkanlık haline gelmiş sigara içenlerde bronş mukozasındaki skuamöz metaplazi ve displazi akciğer karsinomu riskini artırır.",
+       "ekran": "Alışkanlık haline gelmiş sigara içenlerde bronş mukozasındaki skuamöz metaplazi ve displazi akciğer karsinomu riskini artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0312",
+       "ses": "Karşılanmamış östrojen uyarımıyla gelişen endometrial hiperplazi ve displazi endometrium karsinomu riskini artırır.",
+       "ekran": "Karşılanmamış östrojen uyarımıyla gelişen endometrial hiperplazi ve displazi endometrium karsinomu riskini artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0313",
+       "ses": "Ağız, vulva ve penis mukozasındaki lökoplaki skuamöz hücreli karsinom riskini artırır.",
+       "ekran": "Ağız, vulva ve penis mukozasındaki lökoplaki skuamöz hücreli karsinom riskini artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0314",
+       "ses": "Kolon polibi olan villöz adenomun ise kolorektal karsinoma dönüşme riski artmıştır.",
+       "ekran": "Kolon polibi olan villöz adenomun ise kolorektal karsinoma dönüşme riski artmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p066",
+     "sayfa": 65,
+     "cumleler": [
+      {
+       "id": "k1-28-c0315",
+       "ses": "Burası önemli, çıkmış soruda edinsel preneoplastik lezyonlardan biri olmayan seçenek soruldu ve doğru cevap kalın bağırsaktaki hiperplastik polipti.",
+       "ekran": "Burası önemli, çıkmış soruda edinsel preneoplastik lezyonlardan biri olmayan seçenek soruldu ve doğru cevap kalın bağırsaktaki hiperplastik polipti.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0316",
+       "ses": "Hiperplastik polip neoplastik olmayan bir poliptir; kolonda öncü lezyon olan adenomatöz poliptir, örneğin villöz adenom.",
+       "ekran": "Hiperplastik polip neoplastik olmayan bir poliptir; kolonda öncü lezyon olan adenomatöz poliptir, örneğin villöz adenom.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0317",
+       "ses": "Ağız mukozasındaki lökoplaki, ülseratif kolit, solar keratoz ve kronik atrofik gastrit ise edinsel preneoplastik lezyonlar olarak kabul edilir.",
+       "ekran": "Ağız mukozasındaki lökoplaki, ülseratif kolit, solar keratoz ve kronik atrofik gastrit ise edinsel preneoplastik lezyonlar olarak kabul edilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p067",
+     "sayfa": 66,
+     "cumleler": [
+      {
+       "id": "k1-28-c0318",
+       "ses": "Peki iyi huylu tümörler kansere öncü müdür?",
+       "ekran": "Peki iyi huylu tümörler kansere öncü müdür?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0319",
+       "ses": "Genel olarak tüm benign tümörler premalign değildir, ama bazıları için malign dönüşüm riski anlamlıdır.",
+       "ekran": "Genel olarak tüm benign tümörler premalign değildir, ama bazıları için malign dönüşüm riski anlamlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0320",
+       "ses": "Kolon adenomunda derste vakaların yaklaşık %50'sinde karsinoma dönüşüm riski belirtilir.",
+       "ekran": "Kolon adenomunda derste vakaların yaklaşık %50'sinde karsinoma dönüşüm riski belirtilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0321",
+       "ses": "Uterus leiomyomunda ise malign dönüşüm son derece nadirdir.",
+       "ekran": "Uterus leiomyomunda ise malign dönüşüm son derece nadirdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0322",
+       "ses": "Bu nedenle her benign tümör tipi için risk ayrı değerlendirilmelidir; benign etiketi tek başına risk hakkında bilgi vermez.",
+       "ekran": "Bu nedenle her benign tümör tipi için risk ayrı değerlendirilmelidir; benign etiketi tek başına risk hakkında bilgi vermez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b22",
+   "baslik": "Kanser genleri ve mutasyon türleri",
+   "paragraflar": [
+    {
+     "id": "k1-28-p068",
+     "sayfa": 67,
+     "cumleler": [
+      {
+       "id": "k1-28-c0323",
+       "ses": "Kanser genleri, kanserlerde tekrar tekrar mutasyona uğrayan ve hücreye büyüme ya da sağkalım avantajı sağlayan genlerdir.",
+       "ekran": "Kanser genleri, kanserlerde tekrar tekrar mutasyona uğrayan ve hücreye büyüme ya da sağkalım avantajı sağlayan genlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0324",
+       "ses": "4 ana grupta toplanır: onkogenler, tümör baskılayıcı genler, apoptozu düzenleyen genler ve tümör konak etkileşimini ve bağışıklık yanıtını düzenleyen genler.",
+       "ekran": "4 ana grupta toplanır: onkogenler, tümör baskılayıcı genler, apoptozu düzenleyen genler ve tümör konak etkileşimini ve bağışıklık yanıtını düzenleyen genler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0325",
+       "ses": "Bu mutasyonların çoğu somatiktir, yani yalnız tümör hücrelerindedir; bazıları ise germ hattı kaynaklıdır ve ailesel kanser sendromlarına yol açar.",
+       "ekran": "Bu mutasyonların çoğu somatiktir, yani yalnız tümör hücrelerindedir; bazıları ise germ hattı kaynaklıdır ve ailesel kanser sendromlarına yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p069",
+     "sayfa": 68,
+     "cumleler": [
+      {
+       "id": "k1-28-c0326",
+       "ses": "Onkogenler, proto onkogenlerin işlev kazanımı mutasyonlarıyla oluşur ve büyümeyi teşvik eden onkoproteinler kodlar.",
+       "ekran": "Onkogenler, proto onkogenlerin işlev kazanımı mutasyonlarıyla oluşur ve büyümeyi teşvik eden onkoproteinler kodlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0327",
+       "ses": "Genellikle baskın etkilidir; tek alelin mutasyonu yeterlidir.",
+       "ekran": "Genellikle baskın etkilidir; tek alelin mutasyonu yeterlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0328",
+       "ses": "Tümör baskılayıcı genler ise büyümeyi frenler ve genomu korur; işlev kaybıyla kanser gelişimine izin verir ve çoğu durumda her iki alelin inaktivasyonu gerekir, buna ikinci vuruş denir.",
+       "ekran": "Tümör baskılayıcı genler ise büyümeyi frenler ve genomu korur; işlev kaybıyla kanser gelişimine izin verir ve çoğu durumda her iki alelin inaktivasyonu gerekir, buna ikinci vuruş denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0329",
+       "ses": "Burası önemli, sınavda bu iki kavram yer değiştirilerek sorulur: onkogende işlev kazanımı ve tek alel, tümör baskılayıcıda işlev kaybı ve çoğunlukla iki alel.",
+       "ekran": "Burası önemli, sınavda bu iki kavram yer değiştirilerek sorulur: onkogende işlev kazanımı ve tek alel, tümör baskılayıcıda işlev kaybı ve çoğunlukla iki alel.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0330",
+       "ses": "Ras bir onkogen örneği, RB ve PTEN ise tümör baskılayıcı fren örnekleridir.",
+       "ekran": "Ras bir onkogen örneği, RB ve PTEN ise tümör baskılayıcı fren örnekleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0331",
+       "ses": "Apoptoz genleri hücre sağkalımını ya da ölümünü düzenler; bağışıklık ve mikroçevre genleri bağışıklık gözetimini, immün kaçışı ve stromal hücrelerle etkileşimi yönetir.",
+       "ekran": "Apoptoz genleri hücre sağkalımını ya da ölümünü düzenler; bağışıklık ve mikroçevre genleri bağışıklık gözetimini, immün kaçışı ve stromal hücrelerle etkileşimi yönetir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p070",
+     "sayfa": 69,
+     "cumleler": [
+      {
+       "id": "k1-28-c0332",
+       "ses": "Sürücü mutasyonlar kanser genlerinin fonksiyonunu değiştirir, karsinogenez ve tümör ilerlemesine doğrudan katkı sağlar ve genellikle kanser genleri içinde kümelenir.",
+       "ekran": "Sürücü mutasyonlar kanser genlerinin fonksiyonunu değiştirir, karsinogenez ve tümör ilerlemesine doğrudan katkı sağlar ve genellikle kanser genleri içinde kümelenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0333",
+       "ses": "Yolcu mutasyonlar ise uygunluk açısından nötrdür, hücresel davranışı değiştirmez ve genom boyunca dağınıktır.",
+       "ekran": "Yolcu mutasyonlar ise uygunluk açısından nötrdür, hücresel davranışı değiştirmez ve genom boyunca dağınıktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0334",
+       "ses": "Ancak bir yolcu mutasyon, daha sonra tedavi baskısı altında direnç sağlayarak yeni bir sürücü haline gelebilir.",
+       "ekran": "Ancak bir yolcu mutasyon, daha sonra tedavi baskısı altında direnç sağlayarak yeni bir sürücü haline gelebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0335",
+       "ses": "Klinikte mutasyonel imza analizi, tümöre yol açan etkeni gösterebilir; örneğin ultraviyole, sigara ya da aflatoksin.",
+       "ekran": "Klinikte mutasyonel imza analizi, tümöre yol açan etkeni gösterebilir; örneğin ultraviyole, sigara ya da aflatoksin.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b23",
+   "baslik": "Genomik istikrarsızlık ve kalıtsal sendromlar",
+   "paragraflar": [
+    {
+     "id": "k1-28-p071",
+     "sayfa": 70,
+     "cumleler": [
+      {
+       "id": "k1-28-c0336",
+       "ses": "DNA onarım sistemleri mutasyon yükünü sınırlamada kritiktir.",
+       "ekran": "DNA onarım sistemleri mutasyon yükünü sınırlamada kritiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0337",
+       "ses": "Onarım kusurları mutasyon oranını artırır ve sürücü mutasyonların edinilmesini kolaylaştırır.",
+       "ekran": "Onarım kusurları mutasyon oranını artırır ve sürücü mutasyonların edinilmesini kolaylaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0338",
+       "ses": "Önemli onarım bozuklukları uyumsuzluk onarımı, nükleotid eksizyon onarımı, homolog rekombinasyon onarımı ve DNA polimerazın okuma düzeltme defektleridir.",
+       "ekran": "Önemli onarım bozuklukları uyumsuzluk onarımı, nükleotid eksizyon onarımı, homolog rekombinasyon onarımı ve DNA polimerazın okuma düzeltme defektleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0339",
+       "ses": "Sonuçta genomik instabilite karsinogenez için zemin hazırlar; doğrudan kanser yapmaz, sürücü mutasyon birikimini hızlandırır.",
+       "ekran": "Sonuçta genomik instabilite karsinogenez için zemin hazırlar; doğrudan kanser yapmaz, sürücü mutasyon birikimini hızlandırır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p072",
+     "sayfa": 71,
+     "cumleler": [
+      {
+       "id": "k1-28-c0340",
+       "ses": "Örnek sendromlara bakalım.",
+       "ekran": "Örnek sendromlara bakalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0341",
+       "ses": "Kalıtsal polipozsuz kolorektal kanser sendromu, yani Lynch sendromu, uyumsuzluk onarım genlerinin mutasyonlarına bağlıdır.",
+       "ekran": "Kalıtsal polipozsuz kolorektal kanser sendromu, yani Lynch sendromu, uyumsuzluk onarım genlerinin mutasyonlarına bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0342",
+       "ses": "Kseroderma pigmentozumda nükleotid eksizyon onarımı kusurludur ve ultraviyole ilişkili deri kanserlerinde dramatik bir artış görülür.",
+       "ekran": "Kseroderma pigmentozumda nükleotid eksizyon onarımı kusurludur ve ultraviyole ilişkili deri kanserlerinde dramatik bir artış görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0343",
+       "ses": "Homolog rekombinasyon bozuklukları olan Bloom sendromu, ataksi telanjiektazi ve Fanconi anemisinde lösemi, lenfoma ve solid tümör riski artar.",
+       "ekran": "Homolog rekombinasyon bozuklukları olan Bloom sendromu, ataksi telanjiektazi ve Fanconi anemisinde lösemi, lenfoma ve solid tümör riski artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0344",
+       "ses": "BRCA1 ve BRCA2 mutasyonlarında meme, ovaryum ve diğer kanserlerin riski artar.",
+       "ekran": "BRCA1 ve BRCA2 mutasyonlarında meme, ovaryum ve diğer kanserlerin riski artar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p073",
+     "sayfa": 72,
+     "cumleler": [
+      {
+       "id": "k1-28-c0345",
+       "ses": "Kansere kalıtsal yatkınlık tablosunda ilk grup otozomal dominant sendromlardır.",
+       "ekran": "Kansere kalıtsal yatkınlık tablosunda ilk grup otozomal dominant sendromlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0346",
+       "ses": "Retinoblastomda RB geni, çeşitli tümörlerle giden Li-Fraumeni sendromunda TP53 geni, melanomda CDKN2A geni, ailesel adenomatöz polipozis ve kolon kanserinde APC geni sorumludur.",
+       "ekran": "Retinoblastomda RB geni, çeşitli tümörlerle giden Li-Fraumeni sendromunda TP53 geni, melanomda CDKN2A geni, ailesel adenomatöz polipozis ve kolon kanserinde APC geni sorumludur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0347",
+       "ses": "Nörofibromatozis Tip 1 ve 2'de NF1 ve NF2, meme ve over tümörlerinde BRCA1 ve 2, multipl endokrin neoplazi Tip 1 ve 2'de MEN1 ve RET genleri rol oynar.",
+       "ekran": "Nörofibromatozis Tip 1 ve 2'de NF1 ve NF2, meme ve over tümörlerinde BRCA1 ve 2, multipl endokrin neoplazi Tip 1 ve 2'de MEN1 ve RET genleri rol oynar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0348",
+       "ses": "Kalıtsal nonpolipozis kolon kanserinde, yani Lynch sendromunda MSH2, MLH1 ve MSH6; nevoid bazal hücreli karsinom sendromunda ise PTCH1 geni sorumludur.",
+       "ekran": "Kalıtsal nonpolipozis kolon kanserinde, yani Lynch sendromunda MSH2, MLH1 ve MSH6; nevoid bazal hücreli karsinom sendromunda ise PTCH1 geni sorumludur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p074",
+     "sayfa": 72,
+     "cumleler": [
+      {
+       "id": "k1-28-c0349",
+       "ses": "Burası önemli, çıkmış soruda çocuklarda en sık görülen primer intraoküler malign tümör soruldu ve doğru cevap retinoblastomdu.",
+       "ekran": "Burası önemli, çıkmış soruda çocuklarda en sık görülen primer intraoküler malign tümör soruldu ve doğru cevap retinoblastomdu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0350",
+       "ses": "Bu tümör RB geniyle ilişkilidir; hatırlayın, RB proteini G1/S geçişini frenleyen tümör baskılayıcıdır.",
+       "ekran": "Bu tümör RB geniyle ilişkilidir; hatırlayın, RB proteini G1/S geçişini frenleyen tümör baskılayıcıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0351",
+       "ses": "Şıklardaki nöroblastom, medulloblastom ve Wilms tümörü göz içi tümörleri değildir.",
+       "ekran": "Şıklardaki nöroblastom, medulloblastom ve Wilms tümörü göz içi tümörleri değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p075",
+     "sayfa": 72,
+     "cumleler": [
+      {
+       "id": "k1-28-c0352",
+       "ses": "İkinci grup, DNA tamir bozukluğuna bağlı otozomal resesif sendromlardır.",
+       "ekran": "İkinci grup, DNA tamir bozukluğuna bağlı otozomal resesif sendromlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0353",
+       "ses": "Kseroderma pigmentozumda nükleotid eksizyon tamirinde görevli çeşitli genler, ataksi telanjiektazide ATM geni, Bloom sendromunda BLM geni, Fanconi anemisinde ise DNA çapraz bağlarının tamirinde görevli çeşitli genler sorumludur.",
+       "ekran": "Kseroderma pigmentozumda nükleotid eksizyon tamirinde görevli çeşitli genler, ataksi telanjiektazide ATM geni, Bloom sendromunda BLM geni, Fanconi anemisinde ise DNA çapraz bağlarının tamirinde görevli çeşitli genler sorumludur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0354",
+       "ses": "Kalıtsal kanser sendromlarının çoğu otozomal dominant iken bu 4 sendrom otozomal resesif kalıtılır.",
+       "ekran": "Kalıtsal kanser sendromlarının çoğu otozomal dominant iken bu 4 sendrom otozomal resesif kalıtılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-28-b24",
+   "baslik": "Kronik enflamasyon ve çok aşamalı karsinogenez",
+   "paragraflar": [
+    {
+     "id": "k1-28-p076",
+     "sayfa": 73,
+     "cumleler": [
+      {
+       "id": "k1-28-c0355",
+       "ses": "İnvaziv kanserler çoğu zaman kronik enflamatuvar infiltrasyon gösterir ve bu hücreler tümöre aktif katkı verir.",
+       "ekran": "İnvaziv kanserler çoğu zaman kronik enflamatuvar infiltrasyon gösterir ve bu hücreler tümöre aktif katkı verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0356",
+       "ses": "Epidermal büyüme faktörü gibi büyümeyi destekleyen faktörler salgılarlar.",
+       "ekran": "Epidermal büyüme faktörü gibi büyümeyi destekleyen faktörler salgılarlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0357",
+       "ses": "Hücre dışı matriksi parçalayan proteazlar üretirler.",
+       "ekran": "Hücre dışı matriksi parçalayan proteazlar üretirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0358",
+       "ses": "Vasküler endotelyal büyüme faktörü ile anjiyogenezi artırırlar.",
+       "ekran": "Vasküler endotelyal büyüme faktörü ile anjiyogenezi artırırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0359",
+       "ses": "Böylece istila ve metastazı kolaylaştırırlar.",
+       "ekran": "Böylece istila ve metastazı kolaylaştırırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0360",
+       "ses": "Ayrıca T düzenleyici hücreler ve miyeloid kökenli baskılayıcı hücreler aracılığıyla bağışıklık baskılayıcı bir mikroçevre oluştururlar.",
+       "ekran": "Ayrıca T düzenleyici hücreler ve miyeloid kökenli baskılayıcı hücreler aracılığıyla bağışıklık baskılayıcı bir mikroçevre oluştururlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0361",
+       "ses": "Tümörü destekleyen inflamasyonun etkinleştirici faktör sayılmasının nedeni budur.",
+       "ekran": "Tümörü destekleyen inflamasyonun etkinleştirici faktör sayılmasının nedeni budur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p077",
+     "sayfa": 74,
+     "cumleler": [
+      {
+       "id": "k1-28-c0362",
+       "ses": "Karsinogenez çok aşamalı bir süreçtir: birden çok genetik ve epigenetik olay zaman içinde birikir.",
+       "ekran": "Karsinogenez çok aşamalı bir süreçtir: birden çok genetik ve epigenetik olay zaman içinde birikir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0363",
+       "ses": "Sağlıklı bir hücrede karsinojenin tetiklediği ilk sürücü mutasyon, kök hücre benzeri özellikleri olan başlatılmış bir öncü hücre oluşturur.",
+       "ekran": "Sağlıklı bir hücrede karsinojenin tetiklediği ilk sürücü mutasyon, kök hücre benzeri özellikleri olan başlatılmış bir öncü hücre oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0364",
+       "ses": "Ek sürücü mutasyonlar, yanlarında yolcu mutasyonlarla birlikte birikir ve kanserin ayırt edici özelliklerini kazanmış kurucu kanser hücresi ortaya çıkar.",
+       "ekran": "Ek sürücü mutasyonlar, yanlarında yolcu mutasyonlarla birlikte birikir ve kanserin ayırt edici özelliklerini kazanmış kurucu kanser hücresi ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0365",
+       "ses": "İleri genetik evrimle yeni alt klonlar doğar ve tanı anında tümör genetik olarak heterojendir.",
+       "ekran": "İleri genetik evrimle yeni alt klonlar doğar ve tanı anında tümör genetik olarak heterojendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0366",
+       "ses": "Sürücü mutasyonların sırası genellikle bilinmez ve tümörden tümöre değişebilir.",
+       "ekran": "Sürücü mutasyonların sırası genellikle bilinmez ve tümörden tümöre değişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0367",
+       "ses": "Bu sürecin sonunda daha agresif ve tedaviye dirençli alt klonlar seçilir.",
+       "ekran": "Bu sürecin sonunda daha agresif ve tedaviye dirençli alt klonlar seçilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0368",
+       "ses": "Klinikte ileri tümörler genetik olarak heterojendir ve tek basamaklı tedaviye direnç gelişimi sık görülür; çünkü tek hedefli tedavi duyarlı klonları öldürürken dirençli alt klonları seçer.",
+       "ekran": "Klinikte ileri tümörler genetik olarak heterojendir ve tek basamaklı tedaviye direnç gelişimi sık görülür; çünkü tek hedefli tedavi duyarlı klonları öldürürken dirençli alt klonları seçer.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-28-p078",
+     "sayfa": 76,
+     "cumleler": [
+      {
+       "id": "k1-28-c0369",
+       "ses": "Özetle, neoplazi genetik ve epigenetik bozukluklara dayalı yeni büyümedir.",
+       "ekran": "Özetle, neoplazi genetik ve epigenetik bozukluklara dayalı yeni büyümedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0370",
+       "ses": "İyi ve kötü huylu ayrımı diferansiyasyon ve anaplazi, lokal invazyon ve metastaz ile yapılır.",
+       "ekran": "İyi ve kötü huylu ayrımı diferansiyasyon ve anaplazi, lokal invazyon ve metastaz ile yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0371",
+       "ses": "Adlandırmada oma, sarkom, karsinom, karma tümör, teratom ve özel isimler kullanılır.",
+       "ekran": "Adlandırmada oma, sarkom, karsinom, karma tümör, teratom ve özel isimler kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-28-c0372",
+       "ses": "Tümör biyolojisinin ana ekseni ise klonal köken ve tümör ilerlemesidir; genomik istikrarsızlık ve kronik enflamasyon bu ilerlemeyi kolaylaştırır.",
+       "ekran": "Tümör biyolojisinin ana ekseni ise klonal köken ve tümör ilerlemesidir; genomik istikrarsızlık ve kronik enflamasyon bu ilerlemeyi kolaylaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

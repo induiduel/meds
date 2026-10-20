@@ -21,7 +21,13 @@ DERS_AD = {
     'genetik': 'Tıbbi Genetik', 'halksagligi': 'Halk Sağlığı',
     'kadindogum': 'Kadın Hastalıkları ve Doğum', 'farmakoloji': 'Tıbbi Farmakoloji',
 }
-SES_AD = {'ema': 'EMA'}  # ses.py SESLER ile aynı kimlikler; varsayılan ilk
+SES_AD = {'ema': 'EMA'}
+
+
+def kurul_no(brans):
+    """Kurul 2+ branş klasörleri kurul önekli: k2noroloji → 2; önek yoksa Kurul 1."""
+    m = re.match(r'k(\d)', brans)
+    return int(m.group(1)) if m else 1  # ses.py SESLER ile aynı kimlikler; varsayılan ilk
 MAKS_SET = 40
 
 
@@ -122,7 +128,7 @@ def main():
     OD.mkdir(parents=True)
     for d in onem_d:
         json.dump(d, open(OD / f"{d['kod']}.json", 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-    json.dump({'surum': f'{brans}-onem-v1', 'kaynak': f"Kurul 1 {DERS_AD.get(brans, brans)} ders PDF'leri (2026-27 Drive)",
+    json.dump({'surum': f'{brans}-onem-v1', 'kaynak': f"Kurul {kurul_no(brans)} {DERS_AD.get(brans, brans)} ders PDF'leri (2026-27 Drive)",
                'dersler': [{'kod': d['kod'], 'no': d['no'], 'baslik': d['baslik'], 'madde': len(d['maddeler']),
                             'bant': {str(b): sum(1 for m in d['maddeler'] if min(max(m['puan'] // 10, 4), 9) == b) for b in range(4, 10)}}
                            for d in onem_d]}, open(OD / 'index.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

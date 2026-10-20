@@ -1,0 +1,2743 @@
+{
+ "surum": 2,
+ "ders_id": "k1-05",
+ "anahtar": "k1-05-hucre-hasari-ve-nekroz-ii",
+ "baslik": "Hücre Hasarı ve Nekroz II: Nekroz Kalıpları, Apoptoz ve Hücre Hasarının Biyokimyası",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-05-b01",
+   "baslik": "Nekroz kalıplarına devam",
+   "paragraflar": [
+    {
+     "id": "k1-05-p001",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-05-c0001",
+       "ses": "Nekroz, dokuya, etkene ve klinik zemine göre farklı makroskopik ve mikroskopik görünümler alır; bunlara nekroz kalıpları diyoruz.",
+       "ekran": "Nekroz, dokuya, etkene ve klinik zemine göre farklı makroskopik ve mikroskopik görünümler alır; bunlara nekroz kalıpları diyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0002",
+       "ses": "Önceki derste 3 kalıbı gördük: koagülatif nekroz, sıvılaşma nekrozu ve gangrenöz nekroz.",
+       "ekran": "Önceki derste 3 kalıbı gördük: koagülatif nekroz, sıvılaşma nekrozu ve gangrenöz nekroz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0003",
+       "ses": "Şimdi bunlara 3 yeni kalıp ekliyoruz: kazeöz nekroz, yağ nekrozu ve fibrinoid nekroz.",
+       "ekran": "Şimdi bunlara 3 yeni kalıp ekliyoruz: kazeöz nekroz, yağ nekrozu ve fibrinoid nekroz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0004",
+       "ses": "Böylece toplam 6 kalıplık bir ayırıcı tanı yelpazesi elde ediyoruz ve her kalıp belirli bir doku, etken ya da klinik zeminle eşleşiyor.",
+       "ekran": "Böylece toplam 6 kalıplık bir ayırıcı tanı yelpazesi elde ediyoruz ve her kalıp belirli bir doku, etken ya da klinik zeminle eşleşiyor.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0005",
+       "ses": "Bu 3 kalıbın ardından nekrotik hücreden kana kaçan enzimlere, yani biyokimyasal belirteçlere geçeceğiz.",
+       "ekran": "Bu 3 kalıbın ardından nekrotik hücreden kana kaçan enzimlere, yani biyokimyasal belirteçlere geçeceğiz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0006",
+       "ses": "Sonra apoptozun nedenlerini, mekanizmasını ve morfolojisini ayrıntılı işleyeceğiz.",
+       "ekran": "Sonra apoptozun nedenlerini, mekanizmasını ve morfolojisini ayrıntılı işleyeceğiz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0007",
+       "ses": "En sonda da diğer hücre ölümü biçimlerine, otofajiye ve hücre hasarının biyokimyasal mekanizmalarına değineceğiz.",
+       "ekran": "En sonda da diğer hücre ölümü biçimlerine, otofajiye ve hücre hasarının biyokimyasal mekanizmalarına değineceğiz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b02",
+   "baslik": "Kazeöz nekroz: genel özellikler ve makroskopi",
+   "paragraflar": [
+    {
+     "id": "k1-05-p002",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-05-c0008",
+       "ses": "Kazeöz nekroz, adını peynir benzeri makroskopik görünümünden alır; Latincede kazeus peynir demektir.",
+       "ekran": "Kazeöz nekroz, adını peynir benzeri makroskopik görünümünden alır; Latincede kazeus peynir demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0009",
+       "ses": "Bu kalıp en sık Mycobacterium tuberculosis enfeksiyon odaklarında, yani tüberkülozda görülür.",
+       "ekran": "Bu kalıp en sık Mycobacterium tuberculosis enfeksiyon odaklarında, yani tüberkülozda görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0010",
+       "ses": "Makroskopik olarak nekroz alanı yumuşak, kırılgan ve beyazımsıdır; kesit yüzü peynir kırıntılarına benzer.",
+       "ekran": "Makroskopik olarak nekroz alanı yumuşak, kırılgan ve beyazımsıdır; kesit yüzü peynir kırıntılarına benzer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0011",
+       "ses": "Kazeöz nekroz genellikle granülomatöz inflamasyonla birlikte bulunur.",
+       "ekran": "Kazeöz nekroz genellikle granülomatöz inflamasyonla birlikte bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0012",
+       "ses": "Granülomatöz inflamasyon, granülom oluşumuyla seyreden bir kronik inflamasyon tipidir.",
+       "ekran": "Granülomatöz inflamasyon, granülom oluşumuyla seyreden bir kronik inflamasyon tipidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p003",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-05-c0013",
+       "ses": "Şekil 1.8'de akciğer tüberkülozu görülüyor.",
+       "ekran": "Şekil 1.8'de akciğer tüberkülozu görülüyor.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0014",
+       "ses": "Koyu renkli akciğer parankiminin ortasında, sarı beyaz, peynir benzeri kalıntılarla dolu, düzensiz sınırlı geniş bir kazeöz nekroz alanı var.",
+       "ekran": "Koyu renkli akciğer parankiminin ortasında, sarı beyaz, peynir benzeri kalıntılarla dolu, düzensiz sınırlı geniş bir kazeöz nekroz alanı var.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0015",
+       "ses": "Odak, rengi ve ufalanan dokusuyla çevreden keskin biçimde ayrılıyor.",
+       "ekran": "Odak, rengi ve ufalanan dokusuyla çevreden keskin biçimde ayrılıyor.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0016",
+       "ses": "Burası önemli, sınav spotu olarak aklınızda kalsın: akciğerde sarı beyaz, ufalanan, peynirimsi bir odak gördüğünüzde ilk düşünmeniz gereken tablo tüberkülozdaki kazeöz nekrozdur ve bu nekroz granülomla birliktedir.",
+       "ekran": "Burası önemli, sınav spotu olarak aklınızda kalsın: akciğerde sarı beyaz, ufalanan, peynirimsi bir odak gördüğünüzde ilk düşünmeniz gereken tablo tüberkülozdaki kazeöz nekrozdur ve bu nekroz granülomla birliktedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b03",
+   "baslik": "Kazeöz nekroz: mikroskopi ve granülom",
+   "paragraflar": [
+    {
+     "id": "k1-05-p004",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-05-c0017",
+       "ses": "Işık mikroskobunda kazeöz nekroz alanı amorf, granüler ve pembe boyanan bir alan olarak görülür.",
+       "ekran": "Işık mikroskobunda kazeöz nekroz alanı amorf, granüler ve pembe boyanan bir alan olarak görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0018",
+       "ses": "Amorf, belirli bir yapı ya da şekil göstermeyen demektir.",
+       "ekran": "Amorf, belirli bir yapı ya da şekil göstermeyen demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0019",
+       "ses": "Burada doku mimarisi tamamen kaybolmuştur; nekrozdan önceki doku düzeni tanınmaz.",
+       "ekran": "Burada doku mimarisi tamamen kaybolmuştur; nekrozdan önceki doku düzeni tanınmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0020",
+       "ses": "Tek tek hücre hatları da seçilemez.",
+       "ekran": "Tek tek hücre hatları da seçilemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0021",
+       "ses": "Bu özellik kazeöz nekrozu, hücre dış hatlarının bir süre seçilebildiği nekroz biçimlerinden ayırır.",
+       "ekran": "Bu özellik kazeöz nekrozu, hücre dış hatlarının bir süre seçilebildiği nekroz biçimlerinden ayırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0022",
+       "ses": "Yani mikroskopta anahtar üçlü şudur: amorf granüler pembe alan, kaybolmuş doku mimarisi ve seçilemeyen hücre hatları.",
+       "ekran": "Yani mikroskopta anahtar üçlü şudur: amorf granüler pembe alan, kaybolmuş doku mimarisi ve seçilemeyen hücre hatları.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p005",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-05-c0023",
+       "ses": "Bu granüler pembe alan tek başına durmaz; çevresinde organizmanın etkeni sınırlamak için kurduğu hücresel bir kuşak bulunur.",
+       "ekran": "Bu granüler pembe alan tek başına durmaz; çevresinde organizmanın etkeni sınırlamak için kurduğu hücresel bir kuşak bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0024",
+       "ses": "Bu kuşakta 3 hücre tipi vardır.",
+       "ekran": "Bu kuşakta 3 hücre tipi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0025",
+       "ses": "1.'si epitelioid histiyositlerdir; epitel hücrelerine benzeyen, aktive makrofaj kökenli hücrelerdir.",
+       "ekran": "1.'si epitelioid histiyositlerdir; epitel hücrelerine benzeyen, aktive makrofaj kökenli hücrelerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0026",
+       "ses": "2.'si dev hücrelerdir; çok çekirdekli büyük hücrelerdir.",
+       "ekran": "2.'si dev hücrelerdir; çok çekirdekli büyük hücrelerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0027",
+       "ses": "3.'sü lenfositlerdir; kuşağın dış kesiminde yer alan kronik inflamasyon hücreleridir.",
+       "ekran": "3.'sü lenfositlerdir; kuşağın dış kesiminde yer alan kronik inflamasyon hücreleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0028",
+       "ses": "Merkezde nekroz, çevresinde bu 3 hücre tipinden oluşan nodüler yapıya granülom denir.",
+       "ekran": "Merkezde nekroz, çevresinde bu 3 hücre tipinden oluşan nodüler yapıya granülom denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0029",
+       "ses": "Kazeöz nekrozun granülomatöz inflamasyonla birlikte bulunmasının nedeni budur: nekroz granülomun merkezini oluşturur.",
+       "ekran": "Kazeöz nekrozun granülomatöz inflamasyonla birlikte bulunmasının nedeni budur: nekroz granülomun merkezini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0030",
+       "ses": "Merkezi kazeöz nekroz içeren granülom, tüberkülozun klasik görünümüdür.",
+       "ekran": "Merkezi kazeöz nekroz içeren granülom, tüberkülozun klasik görünümüdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b04",
+   "baslik": "Yağ nekrozu: tanım, nedenler ve pankreatit mekanizması",
+   "paragraflar": [
+    {
+     "id": "k1-05-p006",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-05-c0031",
+       "ses": "Yağ nekrozu, yağ dokusunun yıkımı ile giden nekroz odaklarına verilen addır; yani bir doku tipine özgü kalıptır.",
+       "ekran": "Yağ nekrozu, yağ dokusunun yıkımı ile giden nekroz odaklarına verilen addır; yani bir doku tipine özgü kalıptır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0032",
+       "ses": "En sık nedeni akut pankreatittir.",
+       "ekran": "En sık nedeni akut pankreatittir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0033",
+       "ses": "Burada pankreastan sızan enzimler çevredeki yağ dokusunu yıkar; buna enzimatik yağ nekrozu da denir.",
+       "ekran": "Burada pankreastan sızan enzimler çevredeki yağ dokusunu yıkar; buna enzimatik yağ nekrozu da denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0034",
+       "ses": "İkinci zemin travmaya uğramış yağ dokusudur; örneğin meme ve subkutan, yani deri altı yağ dokusunda travma sonrası yağ nekrozu odakları gelişebilir.",
+       "ekran": "İkinci zemin travmaya uğramış yağ dokusudur; örneğin meme ve subkutan, yani deri altı yağ dokusunda travma sonrası yağ nekrozu odakları gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0035",
+       "ses": "Yağ nekrozunu diğer kalıplardan ayıran kimyasal imza, açığa çıkan yağ asitlerinin kalsiyumla birleşmesidir.",
+       "ekran": "Yağ nekrozunu diğer kalıplardan ayıran kimyasal imza, açığa çıkan yağ asitlerinin kalsiyumla birleşmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p007",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-05-c0036",
+       "ses": "Akut pankreatitteki mekanizmayı adım adım kuralım.",
+       "ekran": "Akut pankreatitteki mekanizmayı adım adım kuralım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0037",
+       "ses": "Önce pankreas asiner hücrelerinden sindirim enzimleri çevre dokuya sızar.",
+       "ekran": "Önce pankreas asiner hücrelerinden sindirim enzimleri çevre dokuya sızar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0038",
+       "ses": "Bu enzimlerden lipazlar, peripankreatik yağ hücrelerindeki trigliseritleri yıkar.",
+       "ekran": "Bu enzimlerden lipazlar, peripankreatik yağ hücrelerindeki trigliseritleri yıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0039",
+       "ses": "Trigliserit yıkımıyla serbest yağ asitleri oluşur.",
+       "ekran": "Trigliserit yıkımıyla serbest yağ asitleri oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0040",
+       "ses": "Serbest yağ asitleri de kalsiyumla birleşir ve sabunlaşma, yani saponifikasyon alanları oluşur.",
+       "ekran": "Serbest yağ asitleri de kalsiyumla birleşir ve sabunlaşma, yani saponifikasyon alanları oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0041",
+       "ses": "Burası önemli, bu zincir sınav spotudur: asiner enzim sızıntısı, lipazın trigliseritleri yıkması, serbest yağ asidi oluşması ve kalsiyumla sabunlaşma.",
+       "ekran": "Burası önemli, bu zincir sınav spotudur: asiner enzim sızıntısı, lipazın trigliseritleri yıkması, serbest yağ asidi oluşması ve kalsiyumla sabunlaşma.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0042",
+       "ses": "Oluşan kalsiyum sabunları, yağ nekrozuna özgü beyaz birikintilerin kimyasal temelidir.",
+       "ekran": "Oluşan kalsiyum sabunları, yağ nekrozuna özgü beyaz birikintilerin kimyasal temelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b05",
+   "baslik": "Yağ nekrozu: makroskopi ve mikroskopi",
+   "paragraflar": [
+    {
+     "id": "k1-05-p008",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-05-c0043",
+       "ses": "Kalsiyum sabunlarının birikmesi yağ nekrozunu çıplak gözle tanınabilir kılar.",
+       "ekran": "Kalsiyum sabunlarının birikmesi yağ nekrozunu çıplak gözle tanınabilir kılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0044",
+       "ses": "Makroskopik olarak tebeşir beyazı, odaklanmış alanlar görülür; peynir kırıntısı görünümü de olabilir.",
+       "ekran": "Makroskopik olarak tebeşir beyazı, odaklanmış alanlar görülür; peynir kırıntısı görünümü de olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0045",
+       "ses": "Şekil 1.9'da akut pankreatitte yağ nekrozu gösteriliyor.",
+       "ekran": "Şekil 1.9'da akut pankreatitte yağ nekrozu gösteriliyor.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0046",
+       "ses": "Sarımsı mezenter yağ dokusunda dağınık, beyaz, tebeşirimsi birikinti alanları var.",
+       "ekran": "Sarımsı mezenter yağ dokusunda dağınık, beyaz, tebeşirimsi birikinti alanları var.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0047",
+       "ses": "Bu alanlar mezenterdeki lipid yıkım bölgelerinde kalsiyum sabunu oluşumunu temsil eder ve yağ nekrozu odaklarına karşılık gelir.",
+       "ekran": "Bu alanlar mezenterdeki lipid yıkım bölgelerinde kalsiyum sabunu oluşumunu temsil eder ve yağ nekrozu odaklarına karşılık gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0048",
+       "ses": "Mezenter, bağırsakları karın arka duvarına bağlayan, yağ dokusundan zengin periton katlantısıdır.",
+       "ekran": "Mezenter, bağırsakları karın arka duvarına bağlayan, yağ dokusundan zengin periton katlantısıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p009",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-05-c0049",
+       "ses": "Mikroskopta çekirdeğini kaybetmiş, yalnızca silik dış hatları kalan gölgeli yağ hücreleri görülür.",
+       "ekran": "Mikroskopta çekirdeğini kaybetmiş, yalnızca silik dış hatları kalan gölgeli yağ hücreleri görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0050",
+       "ses": "Bu hücrelerin çevreleri bazofilik kalsiyum tuzlarıyla sınırlıdır; kalsiyum hematoksilen eozin boyasında mavi mor boyanır.",
+       "ekran": "Bu hücrelerin çevreleri bazofilik kalsiyum tuzlarıyla sınırlıdır; kalsiyum hematoksilen eozin boyasında mavi mor boyanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0051",
+       "ses": "Nekrotik yağ odaklarının çevresinde inflamatuar hücreler de bulunur.",
+       "ekran": "Nekrotik yağ odaklarının çevresinde inflamatuar hücreler de bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0052",
+       "ses": "Bazofilik kalsiyum birikimi, makroskopide gördüğümüz tebeşir beyazı sabun odaklarının mikroskopik karşılığıdır.",
+       "ekran": "Bazofilik kalsiyum birikimi, makroskopide gördüğümüz tebeşir beyazı sabun odaklarının mikroskopik karşılığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p010",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-05-c0053",
+       "ses": "Burası önemli, sınavda sevilen bir tuzak var: dikkat edin, peynir kırıntısı benzetmesi hem kazeöz nekroz hem yağ nekrozu için kullanılabilir ve bu iki kalıp karıştırılır.",
+       "ekran": "Burası önemli, sınavda sevilen bir tuzak var: dikkat edin, peynir kırıntısı benzetmesi hem kazeöz nekroz hem yağ nekrozu için kullanılabilir ve bu iki kalıp karıştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0054",
+       "ses": "Ayırt edici nokta şudur: kazeöz nekrozda granülom vardır ve zemin tüberkülozdur; yağ nekrozunda ise görünüm yağ dokusundadır, tebeşir beyazıdır ve temelinde kalsiyum sabunu, yani sabunlaşma vardır.",
+       "ekran": "Ayırt edici nokta şudur: kazeöz nekrozda granülom vardır ve zemin tüberkülozdur; yağ nekrozunda ise görünüm yağ dokusundadır, tebeşir beyazıdır ve temelinde kalsiyum sabunu, yani sabunlaşma vardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b06",
+   "baslik": "Fibrinoid nekroz",
+   "paragraflar": [
+    {
+     "id": "k1-05-p011",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-05-c0055",
+       "ses": "Fibrinoid nekroz, öteki kalıplardan farklı olarak ışık mikroskobunda görülen özel bir nekroz tipidir; makroskopik olarak tanınmaz.",
+       "ekran": "Fibrinoid nekroz, öteki kalıplardan farklı olarak ışık mikroskobunda görülen özel bir nekroz tipidir; makroskopik olarak tanınmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0056",
+       "ses": "Özellikle küçük damarların duvarlarında gelişir.",
+       "ekran": "Özellikle küçük damarların duvarlarında gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0057",
+       "ses": "3 klinik bağlamda karşımıza çıkar.",
+       "ekran": "3 klinik bağlamda karşımıza çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0058",
+       "ses": "1.'si immün kompleks birikimidir, yani antijen antikor komplekslerinin damar duvarına çökmesi.",
+       "ekran": "1.'si immün kompleks birikimidir, yani antijen antikor komplekslerinin damar duvarına çökmesi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0059",
+       "ses": "2.'si şiddetli hipertansiyondur; damar duvarı aşırı basınçla hasarlanır.",
+       "ekran": "2.'si şiddetli hipertansiyondur; damar duvarı aşırı basınçla hasarlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0060",
+       "ses": "3.'sü vaskülitlerdir, yani damar duvarının inflamatuar hastalıkları.",
+       "ekran": "3.'sü vaskülitlerdir, yani damar duvarının inflamatuar hastalıkları.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0061",
+       "ses": "Üçünün ortak noktası damar duvarının hedef olmasıdır; bu yüzden fibrinoid nekroz bir doku tipine değil, damar duvarına özgü bir kalıptır.",
+       "ekran": "Üçünün ortak noktası damar duvarının hedef olmasıdır; bu yüzden fibrinoid nekroz bir doku tipine değil, damar duvarına özgü bir kalıptır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p012",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-05-c0062",
+       "ses": "Mikroskopta damar duvarında parlak pembe, amorf, camsı bir materyal birikir.",
+       "ekran": "Mikroskopta damar duvarında parlak pembe, amorf, camsı bir materyal birikir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0063",
+       "ses": "Bu materyalin 2 bileşeni vardır: antijen ile antikorun oluşturduğu immün kompleksler ve hasarlı damardan sızan plazma proteinleri, özellikle de fibrin.",
+       "ekran": "Bu materyalin 2 bileşeni vardır: antijen ile antikorun oluşturduğu immün kompleksler ve hasarlı damardan sızan plazma proteinleri, özellikle de fibrin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0064",
+       "ses": "Hematoksilen eozin kesitlerinde materyal fibrine benzediği için fibrinoid, yani fibrin benzeri diye adlandırılır.",
+       "ekran": "Hematoksilen eozin kesitlerinde materyal fibrine benzediği için fibrinoid, yani fibrin benzeri diye adlandırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0065",
+       "ses": "İçerik klinik bağlamla uyumludur: immün kompleks birikimi ve vaskülitte kompleksler, şiddetli hipertansiyonda ise duvardan sızan plazma proteinleri öne çıkar.",
+       "ekran": "İçerik klinik bağlamla uyumludur: immün kompleks birikimi ve vaskülitte kompleksler, şiddetli hipertansiyonda ise duvardan sızan plazma proteinleri öne çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p013",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-05-c0066",
+       "ses": "Fibrinoid nekrozun klasik görsel örneği, bir vaskülit türü olan poliarteritis nodosa hastasındaki arterdir.",
+       "ekran": "Fibrinoid nekrozun klasik görsel örneği, bir vaskülit türü olan poliarteritis nodosa hastasındaki arterdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0067",
+       "ses": "Şekil 1.10'da arter duvarını halka biçiminde saran, parlak pembe, homojen bir nekroz alanı görüyoruz.",
+       "ekran": "Şekil 1.10'da arter duvarını halka biçiminde saran, parlak pembe, homojen bir nekroz alanı görüyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0068",
+       "ses": "Bu pembe halka duvarda biriken protein materyaline karşılık gelir.",
+       "ekran": "Bu pembe halka duvarda biriken protein materyaline karşılık gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0069",
+       "ses": "Duvarın içinde ve çevresinde mor çekirdekli yoğun inflamatuar hücreler, ortadaki lümende de kırmızı eritrositler vardır.",
+       "ekran": "Duvarın içinde ve çevresinde mor çekirdekli yoğun inflamatuar hücreler, ortadaki lümende de kırmızı eritrositler vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0070",
+       "ses": "Yani vaskülitte damar duvarı hem nekroz hem inflamasyonla hasarlanır.",
+       "ekran": "Yani vaskülitte damar duvarı hem nekroz hem inflamasyonla hasarlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0071",
+       "ses": "Burası önemli, sınav spotu: fibrinoid nekroz küçük damar duvarında immün kompleks ve fibrin birikimiyle tanınır; zeminleri vaskülit, özellikle poliarteritis nodosa, immün kompleks birikimi ve şiddetli hipertansiyondur.",
+       "ekran": "Burası önemli, sınav spotu: fibrinoid nekroz küçük damar duvarında immün kompleks ve fibrin birikimiyle tanınır; zeminleri vaskülit, özellikle poliarteritis nodosa, immün kompleks birikimi ve şiddetli hipertansiyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0072",
+       "ses": "Bu dersin 3 kalıbını tek cümlede bağlayalım: kazeöz nekrozun anahtarı granülom, yağ nekrozunun anahtarı yağ asidi ile kalsiyumun birleşmesi, yani saponifikasyon, fibrinoid nekrozun anahtarı ise damar duvarında immün kompleks ve fibrindir.",
+       "ekran": "Bu dersin 3 kalıbını tek cümlede bağlayalım: kazeöz nekrozun anahtarı granülom, yağ nekrozunun anahtarı yağ asidi ile kalsiyumun birleşmesi, yani saponifikasyon, fibrinoid nekrozun anahtarı ise damar duvarında immün kompleks ve fibrindir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b07",
+   "baslik": "Nekroz ve serum biyobelirteçleri",
+   "paragraflar": [
+    {
+     "id": "k1-05-p014",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-05-c0073",
+       "ses": "Nekrozda hücre zarının bütünlüğü bozulur ve bunun klinikteki en önemli sonucu, hücre içi enzimlerin dolaşıma kaçmasıdır.",
+       "ekran": "Nekrozda hücre zarının bütünlüğü bozulur ve bunun klinikteki en önemli sonucu, hücre içi enzimlerin dolaşıma kaçmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0074",
+       "ses": "Normalde hücre içinde kalan proteinler kanda ölçülebilir hale gelir.",
+       "ekran": "Normalde hücre içinde kalan proteinler kanda ölçülebilir hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0075",
+       "ses": "Böylece hasarı mikroskop olmadan, bir kan örneğiyle gösterebiliriz; hangi enzimin yükseldiği de ölen hücrenin hangi organa ait olduğunu düşündürür.",
+       "ekran": "Böylece hasarı mikroskop olmadan, bir kan örneğiyle gösterebiliriz; hangi enzimin yükseldiği de ölen hücrenin hangi organa ait olduğunu düşündürür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p015",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-05-c0076",
+       "ses": "Miyokard nekrozunda troponin I ve troponin T ile kreatin kinazın miyokard izoenzimi, yani CK-MB artar.",
+       "ekran": "Miyokard nekrozunda troponin I ve troponin T ile kreatin kinazın miyokard izoenzimi, yani CK-MB artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0077",
+       "ses": "Hepatosit hasarında alanin aminotransferaz, kısaca ALT, ve aspartat aminotransferaz, kısaca AST yükselir.",
+       "ekran": "Hepatosit hasarında alanin aminotransferaz, kısaca ALT, ve aspartat aminotransferaz, kısaca AST yükselir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0078",
+       "ses": "Safra yolu hasarında ise alkalen fosfataz, yani ALP yüksekliği görülür.",
+       "ekran": "Safra yolu hasarında ise alkalen fosfataz, yani ALP yüksekliği görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0079",
+       "ses": "Burası önemli, bu eşleştirme sınav spotudur: CK-MB ve troponinler miyokardı, ALT ile AST hepatositi, ALP ise safra yolunu gösterir.",
+       "ekran": "Burası önemli, bu eşleştirme sınav spotudur: CK-MB ve troponinler miyokardı, ALT ile AST hepatositi, ALP ise safra yolunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b08",
+   "baslik": "Hücre ölümünün 2 yolu ve apoptozun temel özellikleri",
+   "paragraflar": [
+    {
+     "id": "k1-05-p016",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-05-c0080",
+       "ses": "Hücre ölümü 2 ana yoldan gerçekleşir.",
+       "ekran": "Hücre ölümü 2 ana yoldan gerçekleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0081",
+       "ses": "Nekrozun nedenleri şiddetli enerji yetersizliği, toksinler ve iskemidir; nekroz kontrolsüz bir süreçtir ve inflamasyonla birlikte seyreder.",
+       "ekran": "Nekrozun nedenleri şiddetli enerji yetersizliği, toksinler ve iskemidir; nekroz kontrolsüz bir süreçtir ve inflamasyonla birlikte seyreder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0082",
+       "ses": "Apoptoz ise enerji bağımlı, düzenlenmiş bir süreçtir ve fizyolojik ya da patolojik olabilir.",
+       "ekran": "Apoptoz ise enerji bağımlı, düzenlenmiş bir süreçtir ve fizyolojik ya da patolojik olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0083",
+       "ses": "Bu 2 yol birbirini dışlamaz: aynı dokuda hücre ölümü her iki yolu birden içerebilir.",
+       "ekran": "Bu 2 yol birbirini dışlamaz: aynı dokuda hücre ölümü her iki yolu birden içerebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0084",
+       "ses": "Örneğin bir hasar odağında bazı hücreler nekrozla, bazıları apoptozla ölebilir.",
+       "ekran": "Örneğin bir hasar odağında bazı hücreler nekrozla, bazıları apoptozla ölebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p017",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-05-c0085",
+       "ses": "Apoptoz, hücrenin kendi ölüm programını aktive ettiği, enerji bağımlı hücre ölümü biçimidir; bu yüzden programlanmış hücre ölümü olarak da anılır.",
+       "ekran": "Apoptoz, hücrenin kendi ölüm programını aktive ettiği, enerji bağımlı hücre ölümü biçimidir; bu yüzden programlanmış hücre ölümü olarak da anılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0086",
+       "ses": "Çekirdek ve sitoplazma rastgele değil, düzenli biçimde parçalanır.",
+       "ekran": "Çekirdek ve sitoplazma rastgele değil, düzenli biçimde parçalanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0087",
+       "ses": "Hücre, apoptotik cisimcik denen küçük, zarla çevrili parçalara ayrılır.",
+       "ekran": "Hücre, apoptotik cisimcik denen küçük, zarla çevrili parçalara ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0088",
+       "ses": "Plazma zarı genelde bütünlüğünü korur, içerik dışarı dökülmez.",
+       "ekran": "Plazma zarı genelde bütünlüğünü korur, içerik dışarı dökülmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0089",
+       "ses": "İnflamasyon minimaldir ya da hiç yoktur.",
+       "ekran": "İnflamasyon minimaldir ya da hiç yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0090",
+       "ses": "Bu son iki özellik birbirine bağlıdır: içerik çevre dokuya sızmadığı için inflamatuar hücreleri çağıran uyaran oluşmaz.",
+       "ekran": "Bu son iki özellik birbirine bağlıdır: içerik çevre dokuya sızmadığı için inflamatuar hücreleri çağıran uyaran oluşmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0091",
+       "ses": "Burası önemli, sınav spotu: apoptoz ATP bağımlıdır, zar korunur, inflamasyon yoktur ve apoptotik cisimcik oluşur.",
+       "ekran": "Burası önemli, sınav spotu: apoptoz ATP bağımlıdır, zar korunur, inflamasyon yoktur ve apoptotik cisimcik oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b09",
+   "baslik": "Apoptozun fizyolojik rolleri",
+   "paragraflar": [
+    {
+     "id": "k1-05-p018",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-05-c0092",
+       "ses": "Apoptoz çoğu zaman bir hastalık değil, organizmanın sağlıklı işleyişinin parçasıdır.",
+       "ekran": "Apoptoz çoğu zaman bir hastalık değil, organizmanın sağlıklı işleyişinin parçasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0093",
+       "ses": "Embriyogenez sırasında gereğinden fazla üretilen hücreler apoptozla ortadan kaldırılır ve organ ile dokuların son biçimi, belirli hücre gruplarının programlı ölümüyle şekillenir.",
+       "ekran": "Embriyogenez sırasında gereğinden fazla üretilen hücreler apoptozla ortadan kaldırılır ve organ ile dokuların son biçimi, belirli hücre gruplarının programlı ölümüyle şekillenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0094",
+       "ses": "Hormon düzeyi değişikliklerinde de apoptoz görev alır: menstruasyon sırasında endometriumun dökülmesi ve laktasyon sonrası memenin involüsyonu, yani fizyolojik olarak gerileyip küçülmesi apoptozla olur.",
+       "ekran": "Hormon düzeyi değişikliklerinde de apoptoz görev alır: menstruasyon sırasında endometriumun dökülmesi ve laktasyon sonrası memenin involüsyonu, yani fizyolojik olarak gerileyip küçülmesi apoptozla olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p019",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-05-c0095",
+       "ses": "Bağışıklık sistemi de apoptoza dayanır.",
+       "ekran": "Bağışıklık sistemi de apoptoza dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0096",
+       "ses": "Vücudun kendi antijenlerini, yani otoantijenleri tanıyan lenfositler apoptozla elimine edilir; böylece organizmanın kendi dokularına saldırması önlenir.",
+       "ekran": "Vücudun kendi antijenlerini, yani otoantijenleri tanıyan lenfositler apoptozla elimine edilir; böylece organizmanın kendi dokularına saldırması önlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0097",
+       "ses": "Bir yanıt sırasında gereğinden fazla üretilen ya da enfeksiyon veya inflamasyon bittiğinde görevini tamamlamış lökositler de apoptozla uzaklaştırılır.",
+       "ekran": "Bir yanıt sırasında gereğinden fazla üretilen ya da enfeksiyon veya inflamasyon bittiğinde görevini tamamlamış lökositler de apoptozla uzaklaştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0098",
+       "ses": "Böylece bağışıklık yanıtı doku hasarı bırakmadan sona erer.",
+       "ekran": "Böylece bağışıklık yanıtı doku hasarı bırakmadan sona erer.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p020",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-05-c0099",
+       "ses": "Tablo 1.2'nin fizyolojik satırları bu durumların ortak mekanizmasını gösterir.",
+       "ekran": "Tablo 1.2'nin fizyolojik satırları bu durumların ortak mekanizmasını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0100",
+       "ses": "Hücreler yaşamak için sürekli sinyal almalıdır; bu sinyal kesilince apoptoz kendiliğinden başlar.",
+       "ekran": "Hücreler yaşamak için sürekli sinyal almalıdır; bu sinyal kesilince apoptoz kendiliğinden başlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0101",
+       "ses": "Buna varsayılan mekanizma denir.",
+       "ekran": "Buna varsayılan mekanizma denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0102",
+       "ses": "Embriyogenezde hücrelerin programlı ölümü büyüme faktörü sinyallerinin kaybıyla olur.",
+       "ekran": "Embriyogenezde hücrelerin programlı ölümü büyüme faktörü sinyallerinin kaybıyla olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0103",
+       "ses": "Proliferatif dokular, örneğin bağırsak epiteli ile lenf düğümlerindeki ve timustaki lenfositler sürekli yenilenir; burada büyüme faktörü ya da hayatta kalma sinyallerinin kaybı, eski ve gereksiz hücrelerin apoptozla uzaklaştırılmasına yol açar.",
+       "ekran": "Proliferatif dokular, örneğin bağırsak epiteli ile lenf düğümlerindeki ve timustaki lenfositler sürekli yenilenir; burada büyüme faktörü ya da hayatta kalma sinyallerinin kaybı, eski ve gereksiz hücrelerin apoptozla uzaklaştırılmasına yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0104",
+       "ses": "Böylece yeni hücre üretimi ile hücre kaybı dengelenir ve doku büyüklüğü sabit kalır.",
+       "ekran": "Böylece yeni hücre üretimi ile hücre kaybı dengelenir ve doku büyüklüğü sabit kalır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p021",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-05-c0105",
+       "ses": "Hormon bağımlı dokuların involüsyonunda, örneğin endometriumda, azalan hormon düzeyleri hücrelerin aldığı hayatta kalma sinyallerini azaltır ve apoptozu tetikler.",
+       "ekran": "Hormon bağımlı dokuların involüsyonunda, örneğin endometriumda, azalan hormon düzeyleri hücrelerin aldığı hayatta kalma sinyallerini azaltır ve apoptozu tetikler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0106",
+       "ses": "İmmün ve inflamatuar yanıtların sonunda lökosit aktivasyonu için gerekli uyarı ortadan kalkınca hayatta kalma sinyalleri kaybolur ve lökosit sayısı apoptozla azalır.",
+       "ekran": "İmmün ve inflamatuar yanıtların sonunda lökosit aktivasyonu için gerekli uyarı ortadan kalkınca hayatta kalma sinyalleri kaybolur ve lökosit sayısı apoptozla azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0107",
+       "ses": "Oto reaktif lenfositlerin eliminasyonu ise farklıdır: burada sinyal kaybı değil, otoantijenlerin güçlü tanınması söz konusudur ve bu tanıma apoptozu hem mitokondriyal, yani intrinsik yol, hem de ölüm reseptörü, yani ekstrinsik yol üzerinden indükler.",
+       "ekran": "Oto reaktif lenfositlerin eliminasyonu ise farklıdır: burada sinyal kaybı değil, otoantijenlerin güçlü tanınması söz konusudur ve bu tanıma apoptozu hem mitokondriyal, yani intrinsik yol, hem de ölüm reseptörü, yani ekstrinsik yol üzerinden indükler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b10",
+   "baslik": "Apoptozun patolojik nedenleri ve çıkmış soru",
+   "paragraflar": [
+    {
+     "id": "k1-05-p022",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-05-c0108",
+       "ses": "Apoptoz yalnız fizyolojik değildir; hasar gören ve onarılamayan hücreler de bu yolla elenir.",
+       "ekran": "Apoptoz yalnız fizyolojik değildir; hasar gören ve onarılamayan hücreler de bu yolla elenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0109",
+       "ses": "Birinci neden DNA hasarıdır; radyasyon, kemoterapi ve reaktif oksijen türleri DNA'yı hasarlar.",
+       "ekran": "Birinci neden DNA hasarıdır; radyasyon, kemoterapi ve reaktif oksijen türleri DNA'yı hasarlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0110",
+       "ses": "Kemoterapi ve radyasyonun DNA hasarı yoluyla apoptozu tetiklemesi, patolojik apoptozun en sık sorulan örneğidir.",
+       "ekran": "Kemoterapi ve radyasyonun DNA hasarı yoluyla apoptozu tetiklemesi, patolojik apoptozun en sık sorulan örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0111",
+       "ses": "İkinci neden yanlış katlanmış protein birikimidir; bu birikim endoplazmik retikulumda stres oluşturur.",
+       "ekran": "İkinci neden yanlış katlanmış protein birikimidir; bu birikim endoplazmik retikulumda stres oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0112",
+       "ses": "3.'sü bazı virüs enfeksiyonlarıdır.",
+       "ekran": "3.'sü bazı virüs enfeksiyonlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0113",
+       "ses": "4.'sü kanal ve reseptör sinyallerinin bozulmasıdır; büyüme faktörü çekilmesi ya da ölüm reseptörü aktivasyonu apoptozu başlatır.",
+       "ekran": "4.'sü kanal ve reseptör sinyallerinin bozulmasıdır; büyüme faktörü çekilmesi ya da ölüm reseptörü aktivasyonu apoptozu başlatır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p023",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-05-c0114",
+       "ses": "Tablo 1.2'nin patolojik satırları her nedenin apoptoz makinesini nasıl çalıştırdığını gösterir.",
+       "ekran": "Tablo 1.2'nin patolojik satırları her nedenin apoptoz makinesini nasıl çalıştırdığını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0115",
+       "ses": "DNA hasarında proapoptotik BH3-only proteinler aktive olur, mitokondriyal yol üzerinden kaspazlar aktive edilir ve hasarlı hücre apoptoza gider.",
+       "ekran": "DNA hasarında proapoptotik BH3-only proteinler aktive olur, mitokondriyal yol üzerinden kaspazlar aktive edilir ve hasarlı hücre apoptoza gider.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0116",
+       "ses": "Yanlış katlanmış protein birikiminde de BH3-only proteinler aktive olur ve muhtemelen kaspazlar doğrudan aktive edilir.",
+       "ekran": "Yanlış katlanmış protein birikiminde de BH3-only proteinler aktive olur ve muhtemelen kaspazlar doğrudan aktive edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0117",
+       "ses": "Viral enfeksiyonlarda viral proteinler proapoptotik proteinleri veya kaspazları aktive eder; ayrıca enfekte hücreler sitotoksik T lenfositler tarafından öldürülürken kaspaz aktivasyonuyla apoptoz gelişir.",
+       "ekran": "Viral enfeksiyonlarda viral proteinler proapoptotik proteinleri veya kaspazları aktive eder; ayrıca enfekte hücreler sitotoksik T lenfositler tarafından öldürülürken kaspaz aktivasyonuyla apoptoz gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0118",
+       "ses": "Kaspazlar apoptozu yürüten enzimlerdir; nedenler farklı olsa da yol sonunda kaspaz aktivasyonuna çıkar.",
+       "ekran": "Kaspazlar apoptozu yürüten enzimlerdir; nedenler farklı olsa da yol sonunda kaspaz aktivasyonuna çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p024",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-05-c0119",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: hangisi apoptozla ilişkili değildir?",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: hangisi apoptozla ilişkili değildir?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0120",
+       "ses": "Sürekli çoğalan dokularda hücre sayısının apoptozla azaltılması, otoreaktif lenfositlerin ortadan kaldırılması, görevi sona eren hücrelerin ortadan kaldırılması ve sitotoksik T hücrelerinin başlattığı hücre ölümü apoptozun fizyolojik ya da patolojik görevleridir.",
+       "ekran": "Sürekli çoğalan dokularda hücre sayısının apoptozla azaltılması, otoreaktif lenfositlerin ortadan kaldırılması, görevi sona eren hücrelerin ortadan kaldırılması ve sitotoksik T hücrelerinin başlattığı hücre ölümü apoptozun fizyolojik ya da patolojik görevleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0121",
+       "ses": "Buna karşılık opsonize hücrelerin ortadan kaldırılması bir fagositoz olayıdır, apoptoz örneği değildir.",
+       "ekran": "Buna karşılık opsonize hücrelerin ortadan kaldırılması bir fagositoz olayıdır, apoptoz örneği değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0122",
+       "ses": "Yani doğru cevap opsonize hücrelerin ortadan kaldırılmasıdır.",
+       "ekran": "Yani doğru cevap opsonize hücrelerin ortadan kaldırılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b11",
+   "baslik": "Apoptozun morfolojisi",
+   "paragraflar": [
+    {
+     "id": "k1-05-p025",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-05-c0123",
+       "ses": "Apoptotik hücre mikroskopta şişip patlayan değil, küçülüp paketlenen bir hücre olarak görülür.",
+       "ekran": "Apoptotik hücre mikroskopta şişip patlayan değil, küçülüp paketlenen bir hücre olarak görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0124",
+       "ses": "Önce hücre büzülür ve sitoplazma yoğunlaşır.",
+       "ekran": "Önce hücre büzülür ve sitoplazma yoğunlaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0125",
+       "ses": "Sonra kromatin çekirdeğin kenarlarına toplanır ve yoğunlaşır.",
+       "ekran": "Sonra kromatin çekirdeğin kenarlarına toplanır ve yoğunlaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0126",
+       "ses": "Ardından sitoplazma ve çekirdek parçalarını içeren, zarla çevrili küçük apoptotik cisimcikler oluşur.",
+       "ekran": "Ardından sitoplazma ve çekirdek parçalarını içeren, zarla çevrili küçük apoptotik cisimcikler oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0127",
+       "ses": "Son olarak bu cisimcikler makrofajlar tarafından hızla fagosite edilir ve inflamatuar yanıt oluşmaz.",
+       "ekran": "Son olarak bu cisimcikler makrofajlar tarafından hızla fagosite edilir ve inflamatuar yanıt oluşmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0128",
+       "ses": "Burası önemli, sınav spotu: apoptozda hücre küçülür, kromatin kondanse olur, apoptotik cisimcikler oluşur ve hızlı fagositozla temizlenir.",
+       "ekran": "Burası önemli, sınav spotu: apoptozda hücre küçülür, kromatin kondanse olur, apoptotik cisimcikler oluşur ve hızlı fagositozla temizlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p026",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-05-c0129",
+       "ses": "Şekil 1.11'de bu süreç sağlıklı hücreden başlayarak sırayla çizilmiştir: hücre boyutu azalır, kromatin çekirdek zarının altında periferik olarak yoğunlaşır, organeller küçülen hücrede sıkıca paketlenir ama şişmez, hücre yüzeyinde zar kabarcıkları yani tomurcuklar oluşur, ardından hücre ve çekirdek parçalanır ve apoptotik cisim ortaya çıkar.",
+       "ekran": "Şekil 1.11'de bu süreç sağlıklı hücreden başlayarak sırayla çizilmiştir: hücre boyutu azalır, kromatin çekirdek zarının altında periferik olarak yoğunlaşır, organeller küçülen hücrede sıkıca paketlenir ama şişmez, hücre yüzeyinde zar kabarcıkları yani tomurcuklar oluşur, ardından hücre ve çekirdek parçalanır ve apoptotik cisim ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0130",
+       "ses": "En sonda fagosit apoptotik hücreleri ve parçaları yutar.",
+       "ekran": "En sonda fagosit apoptotik hücreleri ve parçaları yutar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0131",
+       "ses": "Zar kabarcıkları hücrenin parçalanmasının habercisidir.",
+       "ekran": "Zar kabarcıkları hücrenin parçalanmasının habercisidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p027",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-05-c0132",
+       "ses": "Şekil bize bu görünümü nekroz şemasıyla karşılaştırmamızı söyler.",
+       "ekran": "Şekil bize bu görünümü nekroz şemasıyla karşılaştırmamızı söyler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0133",
+       "ses": "Şekil 1.3'te geri dönüşümlü hasarda hücre büyür, yani şişer; kromatin kümelenir; endoplazmik retikulum ve mitokondriler şişer, mitokondride küçük amorf birikintiler görülür.",
+       "ekran": "Şekil 1.3'te geri dönüşümlü hasarda hücre büyür, yani şişer; kromatin kümelenir; endoplazmik retikulum ve mitokondriler şişer, mitokondride küçük amorf birikintiler görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0134",
+       "ses": "Ayrıca zar kabarcıkları, hasarlı zarlardan türeyen katmanlı fosfolipid yapılar olan miyelin figürleri, endoplazmik retikulumdan kopmuş sitoplazmik vakuoller ve ribozomların endoplazmik retikulumdan ayrılması izlenir.",
+       "ekran": "Ayrıca zar kabarcıkları, hasarlı zarlardan türeyen katmanlı fosfolipid yapılar olan miyelin figürleri, endoplazmik retikulumdan kopmuş sitoplazmik vakuoller ve ribozomların endoplazmik retikulumdan ayrılması izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0135",
+       "ses": "Hasar ilerlerse nekroz gelişir: plazma zarı, organeller ve çekirdek parçalanır, mitokondride büyük amorf birikintiler oluşur, içerik sızar ve konak inflamatuar reaksiyonu gelişir.",
+       "ekran": "Hasar ilerlerse nekroz gelişir: plazma zarı, organeller ve çekirdek parçalanır, mitokondride büyük amorf birikintiler oluşur, içerik sızar ve konak inflamatuar reaksiyonu gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0136",
+       "ses": "Zararlı uyaran ortadan kaldırılmazsa geri dönüşümlü hasar nekrozla sonuçlanır.",
+       "ekran": "Zararlı uyaran ortadan kaldırılmazsa geri dönüşümlü hasar nekrozla sonuçlanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b12",
+   "baslik": "Apoptozun doku ve laboratuvar kanıtları",
+   "paragraflar": [
+    {
+     "id": "k1-05-p028",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-05-c0137",
+       "ses": "Şekil 1.13, apoptozun normal bir dokudaki ışık mikroskobu görünümünü gösterir: kolon epitelinde normal bir kript.",
+       "ekran": "Şekil 1.13, apoptozun normal bir dokudaki ışık mikroskobu görünümünü gösterir: kolon epitelinde normal bir kript.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0138",
+       "ses": "Oklarla gösterilen apoptotik hücrelerde konsantre kromatinli, parçalanmış çekirdekler koyu mavi mor noktalar halinde, hücre gövdeleri de büzülmüş olarak görülür; bazılarının parçaları dökülmüştür.",
+       "ekran": "Oklarla gösterilen apoptotik hücrelerde konsantre kromatinli, parçalanmış çekirdekler koyu mavi mor noktalar halinde, hücre gövdeleri de büzülmüş olarak görülür; bazılarının parçaları dökülmüştür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0139",
+       "ses": "Normal dokuda bu kadar çok ölü hücrenin nedeni, kolonoskopi için uygulanan hazırlık rejiminin epitel hücrelerinde sıklıkla apoptozu tetiklemesidir.",
+       "ekran": "Normal dokuda bu kadar çok ölü hücrenin nedeni, kolonoskopi için uygulanan hazırlık rejiminin epitel hücrelerinde sıklıkla apoptozu tetiklemesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p029",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-05-c0140",
+       "ses": "Ek şekil 1.2, apoptozun ultrastrüktürel ve moleküler kanıtlarını kültürlenmiş hücrelerde gösterir.",
+       "ekran": "Ek şekil 1.2, apoptozun ultrastrüktürel ve moleküler kanıtlarını kültürlenmiş hücrelerde gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0141",
+       "ses": "Elektron mikrografında bazı çekirdeklerin çevresinde sıkıştırılmış kromatinden hilal biçimli yoğunluklar, diğerlerinde ise homojen biçimde yoğun ya da parçalanmış çekirdekler görülür.",
+       "ekran": "Elektron mikrografında bazı çekirdeklerin çevresinde sıkıştırılmış kromatinden hilal biçimli yoğunluklar, diğerlerinde ise homojen biçimde yoğun ya da parçalanmış çekirdekler görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0142",
+       "ses": "İkinci paneldeki 3 görüntüden soldaki faz kontrast mikrografı kabarcık ve apoptotik cisim oluşumunu, ortadaki DNA boyası nükleer parçalanmayı, sağdaki immünofloresan boyama ise kaspaz 3'ün aktif formuna özgü antikorla kırmızı boyanmayı, yani kaspaz 3 aktivasyonunu gösterir.",
+       "ekran": "İkinci paneldeki 3 görüntüden soldaki faz kontrast mikrografı kabarcık ve apoptotik cisim oluşumunu, ortadaki DNA boyası nükleer parçalanmayı, sağdaki immünofloresan boyama ise kaspaz 3'ün aktif formuna özgü antikorla kırmızı boyanmayı, yani kaspaz 3 aktivasyonunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0143",
+       "ses": "Aktif kaspaz 3'ün gösterilmesi, hücrenin apoptozun yürütme evresinde olduğunun moleküler kanıtıdır.",
+       "ekran": "Aktif kaspaz 3'ün gösterilmesi, hücrenin apoptozun yürütme evresinde olduğunun moleküler kanıtıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b13",
+   "baslik": "Apoptozun biyokimyasal temeli ve mitokondriyal yol",
+   "paragraflar": [
+    {
+     "id": "k1-05-p030",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-05-c0144",
+       "ses": "Apoptozun morfolojik değişikliklerinin arkasında 3 molekül grubu çalışır.",
+       "ekran": "Apoptozun morfolojik değişikliklerinin arkasında 3 molekül grubu çalışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0145",
+       "ses": "Kaspazlar, proteinleri aspartik asit kalıntısından sonra keserek parçalayan proteazlardır ve apoptozun yürütücüleridir.",
+       "ekran": "Kaspazlar, proteinleri aspartik asit kalıntısından sonra keserek parçalayan proteazlardır ve apoptozun yürütücüleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0146",
+       "ses": "BCL2 ailesi proteinler mitokondrinin geçirgenliğini denetleyerek ölüm kararını düzenler.",
+       "ekran": "BCL2 ailesi proteinler mitokondrinin geçirgenliğini denetleyerek ölüm kararını düzenler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0147",
+       "ses": "Ölüm reseptörleri ise Fas ve tümör nekroz faktörü reseptörü gibi hücre yüzeyi reseptörleridir ve dışarıdan gelen ölüm sinyalini alır.",
+       "ekran": "Ölüm reseptörleri ise Fas ve tümör nekroz faktörü reseptörü gibi hücre yüzeyi reseptörleridir ve dışarıdan gelen ölüm sinyalini alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0148",
+       "ses": "Bu oyuncular 2 ana yolda örgütlenir: hücre içinden kaynaklanan stresle başlayan mitokondriyal ya da içsel yol ve hücre yüzeyindeki reseptörlerden başlayan ölüm reseptörü ya da dışsal yol.",
+       "ekran": "Bu oyuncular 2 ana yolda örgütlenir: hücre içinden kaynaklanan stresle başlayan mitokondriyal ya da içsel yol ve hücre yüzeyindeki reseptörlerden başlayan ölüm reseptörü ya da dışsal yol.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0149",
+       "ses": "İki yol farklı başlar ama kaspaz kaskadında birleşir.",
+       "ekran": "İki yol farklı başlar ama kaspaz kaskadında birleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p031",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-05-c0150",
+       "ses": "Mitokondriyal yolun tetikleyicileri DNA hasarı, büyüme faktörü eksikliği, endoplazmik retikulum stresi ve reaktif oksijen türlerinin birikimidir.",
+       "ekran": "Mitokondriyal yolun tetikleyicileri DNA hasarı, büyüme faktörü eksikliği, endoplazmik retikulum stresi ve reaktif oksijen türlerinin birikimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0151",
+       "ses": "Bu stresler sonucunda mitokondri dış membranı geçirgen hale gelir.",
+       "ekran": "Bu stresler sonucunda mitokondri dış membranı geçirgen hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0152",
+       "ses": "Normalde mitokondrinin zarlar arası boşluğunda bulunan sitokrom c sitoplazmaya sızar.",
+       "ekran": "Normalde mitokondrinin zarlar arası boşluğunda bulunan sitokrom c sitoplazmaya sızar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0153",
+       "ses": "Sitokrom ce kofaktörlerle birlikte başlatıcı kaspaz 9'u aktive eder.",
+       "ekran": "Sitokrom ce kofaktörlerle birlikte başlatıcı kaspaz 9'u aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0154",
+       "ses": "Robbins'e göre sitokrom c'nin bağlandığı kofaktör APAF1'dir; ikisi birlikte apoptozom adlı kompleksi kurarak kaspaz 9'u etkinleştirir.",
+       "ekran": "Robbins'e göre sitokrom c'nin bağlandığı kofaktör APAF1'dir; ikisi birlikte apoptozom adlı kompleksi kurarak kaspaz 9'u etkinleştirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b14",
+   "baslik": "BCL2 ailesi ve anti apoptotik etki",
+   "paragraflar": [
+    {
+     "id": "k1-05-p032",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-05-c0155",
+       "ses": "Mitokondri dış membranının geçirgenleşip geçirgenleşmeyeceğine BCL2 ailesinin 3 grubu arasındaki denge karar verir.",
+       "ekran": "Mitokondri dış membranının geçirgenleşip geçirgenleşmeyeceğine BCL2 ailesinin 3 grubu arasındaki denge karar verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0156",
+       "ses": "Anti apoptotik üyeler BCL2 ve BCL-XL'dir; mitokondri membran bütünlüğünü korur ve hücreyi hayatta tutar.",
+       "ekran": "Anti apoptotik üyeler BCL2 ve BCL-XL'dir; mitokondri membran bütünlüğünü korur ve hücreyi hayatta tutar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0157",
+       "ses": "Pro apoptotik üyeler BAX ve BAK'tır; mitokondri geçirgenliğini artırır ve sitokrom c sızıntısının yolunu açar.",
+       "ekran": "Pro apoptotik üyeler BAX ve BAK'tır; mitokondri geçirgenliğini artırır ve sitokrom c sızıntısının yolunu açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0158",
+       "ses": "BH3-only proteinler ise hücre içi stres sensörleridir; BAX ve BAK'ı aktive eder, BCL2'yi baskılar.",
+       "ekran": "BH3-only proteinler ise hücre içi stres sensörleridir; BAX ve BAK'ı aktive eder, BCL2'yi baskılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0159",
+       "ses": "Stres yokken BCL2 ve BCL-XL baskındır; stres algılandığında BH3-only proteinler dengeyi iki yönden değiştirir: koruyucuyu baskılar, yıkıcıyı aktive eder.",
+       "ekran": "Stres yokken BCL2 ve BCL-XL baskındır; stres algılandığında BH3-only proteinler dengeyi iki yönden değiştirir: koruyucuyu baskılar, yıkıcıyı aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p033",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-05-c0160",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda birçok kez soruldu: hangisi anti apoptotik etki gösterir?",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda birçok kez soruldu: hangisi anti apoptotik etki gösterir?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0161",
+       "ses": "Doğru cevap BCL2 ve BCL-XL üretimidir.",
+       "ekran": "Doğru cevap BCL2 ve BCL-XL üretimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0162",
+       "ses": "Çeldiricilere dikkat edin: BH3-only proteinlerin aktivasyonu, BAX ve BAK proteinlerinin aktivasyonu, sitokrom c sızması ve kaspazların aktivasyonu apoptozu ilerletir, yani proapoptotiktir.",
+       "ekran": "Çeldiricilere dikkat edin: BH3-only proteinlerin aktivasyonu, BAX ve BAK proteinlerinin aktivasyonu, sitokrom c sızması ve kaspazların aktivasyonu apoptozu ilerletir, yani proapoptotiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0163",
+       "ses": "Aynı soru tek molekül olarak da soruldu: BAX, BAK, sitokrom c ve kaspaz 9 proapoptotiktir; anti apoptotik olan BCL2'dir.",
+       "ekran": "Aynı soru tek molekül olarak da soruldu: BAX, BAK, sitokrom c ve kaspaz 9 proapoptotiktir; anti apoptotik olan BCL2'dir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p034",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-05-c0164",
+       "ses": "Şekil 1.12'nin sol yarısı bu yolu moleküler düzeyde gösterir.",
+       "ekran": "Şekil 1.12'nin sol yarısı bu yolu moleküler düzeyde gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0165",
+       "ses": "Uyaranlar büyüme faktörü çekilmesi, hayatta kalma sinyalinin yokluğu, protein yanlış katlanması ve radyasyon, toksin ve serbest radikallere bağlı DNA hasarıdır.",
+       "ekran": "Uyaranlar büyüme faktörü çekilmesi, hayatta kalma sinyalinin yokluğu, protein yanlış katlanması ve radyasyon, toksin ve serbest radikallere bağlı DNA hasarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0166",
+       "ses": "BH3-only proteinler hayatta kalma sinyali eksikliğini ya da DNA ve protein hasarını algılar ve efektör molekülleri aktive eder.",
+       "ekran": "BH3-only proteinler hayatta kalma sinyali eksikliğini ya da DNA ve protein hasarını algılar ve efektör molekülleri aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0167",
+       "ses": "Efektörlerden BAX ya da BAK dimerleşerek mitokondri dış zarında bir kanal oluşturur.",
+       "ekran": "Efektörlerden BAX ya da BAK dimerleşerek mitokondri dış zarında bir kanal oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0168",
+       "ses": "BCL2 ve BCL-XL bu kanala karşı koyar; bunların eksikliğinde mitokondri sızdıran hale gelir ve zarlar arası boşluktaki sitokrom c ile diğer proapoptotik proteinler sitozole girerek kaspazları aktive eder.",
+       "ekran": "BCL2 ve BCL-XL bu kanala karşı koyar; bunların eksikliğinde mitokondri sızdıran hale gelir ve zarlar arası boşluktaki sitokrom c ile diğer proapoptotik proteinler sitozole girerek kaspazları aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b15",
+   "baslik": "Ölüm reseptörü yolu, kaspaz kaskadı ve temizlik",
+   "paragraflar": [
+    {
+     "id": "k1-05-p035",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-05-c0169",
+       "ses": "Dışsal yolda ölüm emri hücre dışından, yüzeydeki reseptörler aracılığıyla gelir.",
+       "ekran": "Dışsal yolda ölüm emri hücre dışından, yüzeydeki reseptörler aracılığıyla gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0170",
+       "ses": "Ana reseptörler Fas, diğer adıyla CD95, ve Tip 1 tümör nekroz faktörü reseptörüdür.",
+       "ekran": "Ana reseptörler Fas, diğer adıyla CD95, ve Tip 1 tümör nekroz faktörü reseptörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0171",
+       "ses": "Ligandları Fas ligandı ve tümör nekroz faktörü alfadır; Fas ligandı aktive T hücrelerinde bulunur.",
+       "ekran": "Ligandları Fas ligandı ve tümör nekroz faktörü alfadır; Fas ligandı aktive T hücrelerinde bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0172",
+       "ses": "Bu sayede bağışıklık sistemi hedef hücreleri ve kendi gereksiz hücrelerini bu yolla ortadan kaldırabilir.",
+       "ekran": "Bu sayede bağışıklık sistemi hedef hücreleri ve kendi gereksiz hücrelerini bu yolla ortadan kaldırabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0173",
+       "ses": "Şekil 1.12'nin sağ yarısına göre Fas ligandı reseptöre bağlanınca reseptörler çapraz bağlanır.",
+       "ekran": "Şekil 1.12'nin sağ yarısına göre Fas ligandı reseptöre bağlanınca reseptörler çapraz bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0174",
+       "ses": "Reseptörlerin sitoplazmik kısmındaki ölüm domaini bir adaptör proteine bağlanır.",
+       "ekran": "Reseptörlerin sitoplazmik kısmındaki ölüm domaini bir adaptör proteine bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0175",
+       "ses": "Adaptör proteinler bir araya gelerek ölüm indükleyici sinyal kompleksini oluşturur ve bu kompleks kaspaz 8'i aktive eder.",
+       "ekran": "Adaptör proteinler bir araya gelerek ölüm indükleyici sinyal kompleksini oluşturur ve bu kompleks kaspaz 8'i aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0176",
+       "ses": "Kaspaz 8 de infazcı kaspazları aktive eder.",
+       "ekran": "Kaspaz 8 de infazcı kaspazları aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0177",
+       "ses": "Şekle göre iki yol indüksiyon ve düzenleme açısından farklıdır, ama ikisi de kaspaz aktivasyonuyla aynı sonuca ulaşır.",
+       "ekran": "Şekle göre iki yol indüksiyon ve düzenleme açısından farklıdır, ama ikisi de kaspaz aktivasyonuyla aynı sonuca ulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p036",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-05-c0178",
+       "ses": "Kaspaz kaskadında 2 grup vardır.",
+       "ekran": "Kaspaz kaskadında 2 grup vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0179",
+       "ses": "Başlatıcı kaspazlar kaspaz 8 ve kaspaz 9'dur; yolun başında aktive olur ve infazcıları uyarır.",
+       "ekran": "Başlatıcı kaspazlar kaspaz 8 ve kaspaz 9'dur; yolun başında aktive olur ve infazcıları uyarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0180",
+       "ses": "İnfazcı, yani efektör kaspazlar kaspaz 3, kaspaz 6 ve kaspaz 7'dir; hücreyi fiilen parçalarlar.",
+       "ekran": "İnfazcı, yani efektör kaspazlar kaspaz 3, kaspaz 6 ve kaspaz 7'dir; hücreyi fiilen parçalarlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0181",
+       "ses": "Sonuçta çeşitli hücre içi proteinler parçalanır, DNA'yı kesen endonükleazlar aktive olur ve nükleer parçalanma gelişir, hücre iskeleti bozulur.",
+       "ekran": "Sonuçta çeşitli hücre içi proteinler parçalanır, DNA'yı kesen endonükleazlar aktive olur ve nükleer parçalanma gelişir, hücre iskeleti bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0182",
+       "ses": "Burası önemli, bu bir sınav tuzağıdır: kaspaz 8 dışsal yolun, kaspaz 9 içsel yolun başlatıcısıdır; kaspaz 3 başlatıcı değil, infazcıdır.",
+       "ekran": "Burası önemli, bu bir sınav tuzağıdır: kaspaz 8 dışsal yolun, kaspaz 9 içsel yolun başlatıcısıdır; kaspaz 3 başlatıcı değil, infazcıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p037",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-05-c0183",
+       "ses": "Apoptozun son adımı, ölen hücrenin içeriği dışarı sızmadan ortadan kaldırılmasıdır.",
+       "ekran": "Apoptozun son adımı, ölen hücrenin içeriği dışarı sızmadan ortadan kaldırılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0184",
+       "ses": "Plazma zarında fosfatidilserin iç tabakadan dış tabakaya geçer; bu, fagositler için bir beni ye sinyalidir.",
+       "ekran": "Plazma zarında fosfatidilserin iç tabakadan dış tabakaya geçer; bu, fagositler için bir beni ye sinyalidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0185",
+       "ses": "Apoptotik hücreden salınan çözünür çekici faktörler makrofajları bölgeye çeker.",
+       "ekran": "Apoptotik hücreden salınan çözünür çekici faktörler makrofajları bölgeye çeker.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0186",
+       "ses": "Hücreler içerik dışarı sızmadan hızla fagosite edilir ve inflamatuar reaksiyon minimal kalır.",
+       "ekran": "Hücreler içerik dışarı sızmadan hızla fagosite edilir ve inflamatuar reaksiyon minimal kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0187",
+       "ses": "Burası önemli, sınav spotu: fosfatidilserinin dış tabakaya geçmesi beni ye sinyalidir.",
+       "ekran": "Burası önemli, sınav spotu: fosfatidilserinin dış tabakaya geçmesi beni ye sinyalidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0188",
+       "ses": "Bu değişiklik, apoptozda zarın bütünlüğü korunsa da yapısının değiştiğini gösterir.",
+       "ekran": "Bu değişiklik, apoptozda zarın bütünlüğü korunsa da yapısının değiştiğini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b16",
+   "baslik": "Nekroz ve apoptozun karşılaştırması",
+   "paragraflar": [
+    {
+     "id": "k1-05-p038",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-05-c0189",
+       "ses": "Şimdi iki ölüm biçimini yan yana koyalım.",
+       "ekran": "Şimdi iki ölüm biçimini yan yana koyalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0190",
+       "ses": "Nekrozun nedeni şiddetli enerji yetersizliği, toksin ve iskemidir; geniş hücre grupları etkilenir, zar bütünlüğü bozulur, içerik sızar ve belirgin inflamatuar yanıt vardır.",
+       "ekran": "Nekrozun nedeni şiddetli enerji yetersizliği, toksin ve iskemidir; geniş hücre grupları etkilenir, zar bütünlüğü bozulur, içerik sızar ve belirgin inflamatuar yanıt vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0191",
+       "ses": "Apoptozun nedeni kontrollü bir programdır; DNA hasarı ve büyüme faktörü çekilmesi gibi uyaranlarla başlar ve tek hücreleri ya da küçük grupları etkiler.",
+       "ekran": "Apoptozun nedeni kontrollü bir programdır; DNA hasarı ve büyüme faktörü çekilmesi gibi uyaranlarla başlar ve tek hücreleri ya da küçük grupları etkiler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0192",
+       "ses": "Bu ölçek farkı mikroskopta hemen fark edilir: nekroz bir alanı kaplar, apoptoz sağlam doku içinde dağınık tek hücreler olarak görülür.",
+       "ekran": "Bu ölçek farkı mikroskopta hemen fark edilir: nekroz bir alanı kaplar, apoptoz sağlam doku içinde dağınık tek hücreler olarak görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p039",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-05-c0193",
+       "ses": "İkinci eksen enerjidir.",
+       "ekran": "İkinci eksen enerjidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0194",
+       "ses": "Nekroz enerji bağımlı değildir; tersine, enerji yetersizliği nekrozun nedenlerindendir.",
+       "ekran": "Nekroz enerji bağımlı değildir; tersine, enerji yetersizliği nekrozun nedenlerindendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0195",
+       "ses": "Apoptoz ise ATP gerektirir.",
+       "ekran": "Apoptoz ise ATP gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0196",
+       "ses": "Bunun pratik sonucu şudur: ATP'si tamamen tükenmiş bir hücre apoptoz programını yürütemez ve nekrozla ölür.",
+       "ekran": "Bunun pratik sonucu şudur: ATP'si tamamen tükenmiş bir hücre apoptoz programını yürütemez ve nekrozla ölür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0197",
+       "ses": "Nekroz yalnız patolojik süreçlere özgüdür, apoptoz hem fizyolojik hem patolojik süreçlerde görülür.",
+       "ekran": "Nekroz yalnız patolojik süreçlere özgüdür, apoptoz hem fizyolojik hem patolojik süreçlerde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0198",
+       "ses": "Nekrozun morfolojisi şişme, lizis ve karyolizis, apoptozunki hücre küçülmesi ve apoptotik cisimlerdir.",
+       "ekran": "Nekrozun morfolojisi şişme, lizis ve karyolizis, apoptozunki hücre küçülmesi ve apoptotik cisimlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0199",
+       "ses": "Burası önemli, bu sıklıkla ters çevrilerek sorulan bir tuzaktır: enerji açısından nekroz ATP bağımsız, apoptoz ATP bağımlıdır.",
+       "ekran": "Burası önemli, bu sıklıkla ters çevrilerek sorulan bir tuzaktır: enerji açısından nekroz ATP bağımsız, apoptoz ATP bağımlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p040",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-05-c0200",
+       "ses": "Tablo 1.1 bu farkları hücrenin her düzeyinde özetler.",
+       "ekran": "Tablo 1.1 bu farkları hücrenin her düzeyinde özetler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0201",
+       "ses": "Hücre boyutu nekrozda büyümüştür, yani şişmiştir; apoptozda azalmıştır, yani büzülmüştür.",
+       "ekran": "Hücre boyutu nekrozda büyümüştür, yani şişmiştir; apoptozda azalmıştır, yani büzülmüştür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0202",
+       "ses": "Çekirdekte nekrozda piknoz, yani çekirdeğin küçülüp koyulaşması, karyoreksis, yani parçalanması ve karyoliz, yani kromatinin solup kaybolması görülür; apoptozda ise çekirdek nükleozom boyutunda parçalara ayrılır.",
+       "ekran": "Çekirdekte nekrozda piknoz, yani çekirdeğin küçülüp koyulaşması, karyoreksis, yani parçalanması ve karyoliz, yani kromatinin solup kaybolması görülür; apoptozda ise çekirdek nükleozom boyutunda parçalara ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0203",
+       "ses": "Plazma zarı nekrozda bozulmuş ve bütünlüğü kaybolmuştur; apoptozda bütünlük korunur, ancak özellikle lipidlerin dağılımı ve oryantasyonu başta olmak üzere yapısında değişiklikler vardır.",
+       "ekran": "Plazma zarı nekrozda bozulmuş ve bütünlüğü kaybolmuştur; apoptozda bütünlük korunur, ancak özellikle lipidlerin dağılımı ve oryantasyonu başta olmak üzere yapısında değişiklikler vardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p041",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-05-c0204",
+       "ses": "Tablonun kalan satırlarına göre nekrozda hücre içeriği enzimatik sindirime uğrar ve hücre dışına sızabilir; apoptozda içerik bütünlüğünü korur ve apoptotik cisimcikler içinde paketlenerek salınabilir.",
+       "ekran": "Tablonun kalan satırlarına göre nekrozda hücre içeriği enzimatik sindirime uğrar ve hücre dışına sızabilir; apoptozda içerik bütünlüğünü korur ve apoptotik cisimcikler içinde paketlenerek salınabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0205",
+       "ses": "Komşu dokuda inflamasyon nekrozda sıktır, apoptozda yoktur.",
+       "ekran": "Komşu dokuda inflamasyon nekrozda sıktır, apoptozda yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0206",
+       "ses": "İçeriğin sızması ile inflamasyon arasında neden sonuç ilişkisi vardır: dokuya dökülen hücre içeriği inflamatuar yanıtı başlatır.",
+       "ekran": "İçeriğin sızması ile inflamasyon arasında neden sonuç ilişkisi vardır: dokuya dökülen hücre içeriği inflamatuar yanıtı başlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0207",
+       "ses": "Son olarak nekroz her zaman patolojiktir ve geri dönüşümsüz hücre hasarının son basamağıdır.",
+       "ekran": "Son olarak nekroz her zaman patolojiktir ve geri dönüşümsüz hücre hasarının son basamağıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0208",
+       "ses": "Apoptoz ise çoğunlukla fizyolojiktir ve gereksiz hücrelerin eliminasyonunda kullanılır; ancak bazı hücre hasarı biçimlerinden, özellikle DNA ve protein hasarından sonra patolojik olabilir.",
+       "ekran": "Apoptoz ise çoğunlukla fizyolojiktir ve gereksiz hücrelerin eliminasyonunda kullanılır; ancak bazı hücre hasarı biçimlerinden, özellikle DNA ve protein hasarından sonra patolojik olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0209",
+       "ses": "Burası önemli, sınav spotu: nekrozda hücre şişer, zar bozulur, inflamasyon sıktır; apoptozda hücre büzülür ve DNA nükleozom boyutunda parçalanır.",
+       "ekran": "Burası önemli, sınav spotu: nekrozda hücre şişer, zar bozulur, inflamasyon sıktır; apoptozda hücre büzülür ve DNA nükleozom boyutunda parçalanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b17",
+   "baslik": "Diğer hücre ölümü biçimleri ve otofaji",
+   "paragraflar": [
+    {
+     "id": "k1-05-p042",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-05-c0210",
+       "ses": "Nekroz ve apoptoz dışında, gelişmekte olan kavramlar olarak 3 ölüm biçimi daha tanımlanır.",
+       "ekran": "Nekroz ve apoptoz dışında, gelişmekte olan kavramlar olarak 3 ölüm biçimi daha tanımlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0211",
+       "ses": "Nekroptoz, tümör nekroz faktörü gibi sinyallerle tetiklenebilir ve nekroz ile apoptoz arasında hibrit özellikler taşır; apoptoz gibi düzenlenmiş bir programla başlar ama sonucu nekroza benzer.",
+       "ekran": "Nekroptoz, tümör nekroz faktörü gibi sinyallerle tetiklenebilir ve nekroz ile apoptoz arasında hibrit özellikler taşır; apoptoz gibi düzenlenmiş bir programla başlar ama sonucu nekroza benzer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0212",
+       "ses": "Piroptoz inflamozom aktivasyonuyla gelişir; inflamozom, hücre içinde inflamatuar sinyali başlatan çok proteinli bir komplekstir.",
+       "ekran": "Piroptoz inflamozom aktivasyonuyla gelişir; inflamozom, hücre içinde inflamatuar sinyali başlatan çok proteinli bir komplekstir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0213",
+       "ses": "Piroptoz interlökin 1 salınımı, ateş ve inflamasyonla seyreder; Robbins'e göre inflamozom kaspaz 1'i aktive eder ve kaspaz 1 interlökin 1'in aktif biçimini oluşturur.",
+       "ekran": "Piroptoz interlökin 1 salınımı, ateş ve inflamasyonla seyreder; Robbins'e göre inflamozom kaspaz 1'i aktive eder ve kaspaz 1 interlökin 1'in aktif biçimini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0214",
+       "ses": "Ferroptoz ise demir bağımlı lipid peroksidasyonuyla gelişir ve özellikle nörodejeneratif hastalık ve kanser araştırmalarında gündemdedir.",
+       "ekran": "Ferroptoz ise demir bağımlı lipid peroksidasyonuyla gelişir ve özellikle nörodejeneratif hastalık ve kanser araştırmalarında gündemdedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0215",
+       "ses": "Burası önemli, karıştırmamak için şöyle hatırlayın: piro ateşi ve interlökin 1'i, ferro demiri çağrıştırır; nekroptoz ise tümör nekroz faktörüyle tetiklenen hibrittir.",
+       "ekran": "Burası önemli, karıştırmamak için şöyle hatırlayın: piro ateşi ve interlökin 1'i, ferro demiri çağrıştırır; nekroptoz ise tümör nekroz faktörüyle tetiklenen hibrittir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p043",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-05-c0216",
+       "ses": "Otofaji, hücrenin kendi organel ve bileşenlerini lizozomlarda sindirerek yeniden kullanmasıdır ve temelde bir hayatta kalma mekanizmasıdır; stres altında hücreye besin ve yapı taşı sağlar.",
+       "ekran": "Otofaji, hücrenin kendi organel ve bileşenlerini lizozomlarda sindirerek yeniden kullanmasıdır ve temelde bir hayatta kalma mekanizmasıdır; stres altında hücreye besin ve yapı taşı sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0217",
+       "ses": "Ancak aşırı ve kontrolsüz otofaji hücresel yapıların aşırı tüketilmesine yol açar ve apoptoz ve nekrozla birleşen hücre ölümüne neden olabilir.",
+       "ekran": "Ancak aşırı ve kontrolsüz otofaji hücresel yapıların aşırı tüketilmesine yol açar ve apoptoz ve nekrozla birleşen hücre ölümüne neden olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0218",
+       "ses": "Artmış otofaji iskemik hasarda, miyopatilerde, yani kas hastalıklarında, ve bazı nörodejeneratif hastalıklarda görülür.",
+       "ekran": "Artmış otofaji iskemik hasarda, miyopatilerde, yani kas hastalıklarında, ve bazı nörodejeneratif hastalıklarda görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p044",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-05-c0219",
+       "ses": "Şekil 1.14'te otofajinin basamakları besin yoksunluğuyla başlar.",
+       "ekran": "Şekil 1.14'te otofajinin basamakları besin yoksunluğuyla başlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0220",
+       "ses": "Besin yoksunluğu gibi hücresel stresler sitoplazmik sensörlerle algılanır ve çekirdekte otofaji genlerini, yani ATG genlerini aktive eder.",
+       "ekran": "Besin yoksunluğu gibi hücresel stresler sitoplazmik sensörlerle algılanır ve çekirdekte otofaji genlerini, yani ATG genlerini aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0221",
+       "ses": "Bu genlerin ürünleri, organelleri izole eden zarla çevrili keseciklerin, yani fagoforun oluşumunu başlatır; buna başlatma ve uzama evreleri denir.",
+       "ekran": "Bu genlerin ürünleri, organelleri izole eden zarla çevrili keseciklerin, yani fagoforun oluşumunu başlatır; buna başlatma ve uzama evreleri denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0222",
+       "ses": "Organelleri içine alan kese kapanır ve otofagozom olgunlaşır.",
+       "ekran": "Organelleri içine alan kese kapanır ve otofagozom olgunlaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0223",
+       "ses": "Ardından kesecik lizozomla birleşerek otofagolizozomu oluşturur ve organeller sindirilir.",
+       "ekran": "Ardından kesecik lizozomla birleşerek otofagolizozomu oluşturur ve organeller sindirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0224",
+       "ses": "Ürünler metabolit olarak geri dönüştürülür ve hücreye besin sağlar.",
+       "ekran": "Ürünler metabolit olarak geri dönüştürülür ve hücreye besin sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0225",
+       "ses": "Aynı süreç, henüz tam tanımlanmamış mekanizmalarla apoptozu da tetikleyebilir.",
+       "ekran": "Aynı süreç, henüz tam tanımlanmamış mekanizmalarla apoptozu da tetikleyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b18",
+   "baslik": "Hücre hasarının 4 hedefi",
+   "paragraflar": [
+    {
+     "id": "k1-05-p045",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-05-c0226",
+       "ses": "Şekil 1.15, hücre hasarının başlıca biyokimyasal mekanizmalarını 4 hasar bölgesine göre düzenler.",
+       "ekran": "Şekil 1.15, hücre hasarının başlıca biyokimyasal mekanizmalarını 4 hasar bölgesine göre düzenler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0227",
+       "ses": "Birinci hedef mitokondridir: hipoksi ve iskemi, radyasyon ve diğer zararlı ajanlarla ATP azalır ve enerji bağımlı işlevler bozulur; ayrıca reaktif oksijen türleri artar ve lipit, protein ve nükleik asit hasarı gelişir.",
+       "ekran": "Birinci hedef mitokondridir: hipoksi ve iskemi, radyasyon ve diğer zararlı ajanlarla ATP azalır ve enerji bağımlı işlevler bozulur; ayrıca reaktif oksijen türleri artar ve lipit, protein ve nükleik asit hasarı gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0228",
+       "ses": "Sonuç hücre hasarı ve nekrozdur.",
+       "ekran": "Sonuç hücre hasarı ve nekrozdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0229",
+       "ses": "İkinci hedef hücre zarlarıdır: reaktif oksijen türleri ve diğer ajanlar lizozom zarını hasarlayarak enzim sızıntısına, plazma zarını hasarlayarak taşıma işlevinin bozulmasına ve içerik sızıntısına yol açar; sonuç yine nekrozdur.",
+       "ekran": "İkinci hedef hücre zarlarıdır: reaktif oksijen türleri ve diğer ajanlar lizozom zarını hasarlayarak enzim sızıntısına, plazma zarını hasarlayarak taşıma işlevinin bozulmasına ve içerik sızıntısına yol açar; sonuç yine nekrozdur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p046",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-05-c0230",
+       "ses": "Üçüncü hedef çekirdektir: radyasyon ve mutasyonlar DNA hasarı yapar; bu da hücre döngüsünün durmasına ya da BH3-only sensörlerin aktivasyonuna ve apoptoza götürür.",
+       "ekran": "Üçüncü hedef çekirdektir: radyasyon ve mutasyonlar DNA hasarı yapar; bu da hücre döngüsünün durmasına ya da BH3-only sensörlerin aktivasyonuna ve apoptoza götürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0231",
+       "ses": "Dördüncü hedef endoplazmik retikulumdur: mutasyon, hücre stresi ve enfeksiyonlarla yanlış katlanmış protein birikir; sonuç katlanmamış protein yanıtı ya da apoptozdur.",
+       "ekran": "Dördüncü hedef endoplazmik retikulumdur: mutasyon, hücre stresi ve enfeksiyonlarla yanlış katlanmış protein birikir; sonuç katlanmamış protein yanıtı ya da apoptozdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0232",
+       "ses": "Şekil nedenleri ayrı gösterse de örtüşme vardır: iskemi, oksidatif stres ve radyasyon hem nekroza hem apoptoza yol açabilir.",
+       "ekran": "Şekil nedenleri ayrı gösterse de örtüşme vardır: iskemi, oksidatif stres ve radyasyon hem nekroza hem apoptoza yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0233",
+       "ses": "Kabaca mitokondri ve zar hasarı ağırlıkla nekroza, DNA ve endoplazmik retikulum hasarı ağırlıkla apoptoza götürür.",
+       "ekran": "Kabaca mitokondri ve zar hasarı ağırlıkla nekroza, DNA ve endoplazmik retikulum hasarı ağırlıkla apoptoza götürür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b19",
+   "baslik": "DNA hasarı ve p53",
+   "paragraflar": [
+    {
+     "id": "k1-05-p047",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-05-c0234",
+       "ses": "DNA hasarının nedenleri radyasyon, reaktif oksijen türleri, kemoterapi ilaçları ve spontan mutasyonlardır.",
+       "ekran": "DNA hasarının nedenleri radyasyon, reaktif oksijen türleri, kemoterapi ilaçları ve spontan mutasyonlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0235",
+       "ses": "Bu hasar karşısında hücrenin kaderini belirleyen ana molekül p53'tür. p53, genom bekçisi olarak görev yapan tümör baskılayıcı bir proteindir.",
+       "ekran": "Bu hasar karşısında hücrenin kaderini belirleyen ana molekül p53'tür. p53, genom bekçisi olarak görev yapan tümör baskılayıcı bir proteindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0236",
+       "ses": "Hafif hasarda hücre döngüsünü durdurur ve onarıma izin verir; hasar giderilirse hücre yaşamaya devam eder.",
+       "ekran": "Hafif hasarda hücre döngüsünü durdurur ve onarıma izin verir; hasar giderilirse hücre yaşamaya devam eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0237",
+       "ses": "Şiddetli hasarda, yani onarım olanaksızsa, apoptozu indükler ve bunu mitokondriyal yol üzerinden yapar.",
+       "ekran": "Şiddetli hasarda, yani onarım olanaksızsa, apoptozu indükler ve bunu mitokondriyal yol üzerinden yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0238",
+       "ses": "Burası önemli, sınav spotu: p53 genom bekçisidir; hafif hasarda döngüyü durdurur, şiddetli DNA hasarında apoptozu başlatır.",
+       "ekran": "Burası önemli, sınav spotu: p53 genom bekçisidir; hafif hasarda döngüyü durdurur, şiddetli DNA hasarında apoptozu başlatır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p048",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-05-c0239",
+       "ses": "p53 mutasyonu ya da kaybında hasarlı DNA'lı hücreler apoptoza gitmez.",
+       "ekran": "p53 mutasyonu ya da kaybında hasarlı DNA'lı hücreler apoptoza gitmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0240",
+       "ses": "Hasarlar onarılmadan birikir ve genomik instabilite artar.",
+       "ekran": "Hasarlar onarılmadan birikir ve genomik instabilite artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0241",
+       "ses": "Sonuçta neoplastik dönüşüm, yani normal hücrenin tümör hücresine dönüşme riski artar.",
+       "ekran": "Sonuçta neoplastik dönüşüm, yani normal hücrenin tümör hücresine dönüşme riski artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0242",
+       "ses": "Nitekim birçok insan kanserinde p53 geninde inaktivasyon ya da fonksiyon kaybı mutasyonları vardır.",
+       "ekran": "Nitekim birçok insan kanserinde p53 geninde inaktivasyon ya da fonksiyon kaybı mutasyonları vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0243",
+       "ses": "Bu bağlantı bize apoptozun yalnız bir ölüm biçimi değil, aynı zamanda kansere karşı bir savunma olduğunu gösterir.",
+       "ekran": "Bu bağlantı bize apoptozun yalnız bir ölüm biçimi değil, aynı zamanda kansere karşı bir savunma olduğunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b20",
+   "baslik": "Endoplazmik retikulum stresi",
+   "paragraflar": [
+    {
+     "id": "k1-05-p049",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-05-c0244",
+       "ses": "Endoplazmik retikulumda proteinler katlanır.",
+       "ekran": "Endoplazmik retikulumda proteinler katlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0245",
+       "ses": "Yanlış katlanmış proteinler biriktiğinde endoplazmik retikulumda katlanmamış protein yanıtı tetiklenir.",
+       "ekran": "Yanlış katlanmış proteinler biriktiğinde endoplazmik retikulumda katlanmamış protein yanıtı tetiklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0246",
+       "ses": "Önce adaptif bir evre vardır: katlanmaya yardım eden şaperon proteinleri artar ve protein sentezi yavaşlar, böylece endoplazmik retikuluma gelen yeni yük azaltılır.",
+       "ekran": "Önce adaptif bir evre vardır: katlanmaya yardım eden şaperon proteinleri artar ve protein sentezi yavaşlar, böylece endoplazmik retikuluma gelen yeni yük azaltılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0247",
+       "ses": "Yük fazlaysa adaptif kapasite aşılır, proapoptotik sinyaller artar ve mitokondriyal apoptoz yolu aktive olur.",
+       "ekran": "Yük fazlaysa adaptif kapasite aşılır, proapoptotik sinyaller artar ve mitokondriyal apoptoz yolu aktive olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p050",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-05-c0248",
+       "ses": "Şekil 1.18 bu algılamanın nasıl olduğunu gösterir.",
+       "ekran": "Şekil 1.18 bu algılamanın nasıl olduğunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0249",
+       "ses": "Endoplazmik retikulum zarındaki IRE1 kinazı, yani inositol gerektiren enzim 1 gibi sensörler yanlış katlanmış proteinleri tespit eder.",
+       "ekran": "Endoplazmik retikulum zarındaki IRE1 kinazı, yani inositol gerektiren enzim 1 gibi sensörler yanlış katlanmış proteinleri tespit eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0250",
+       "ses": "Sensörler oligomer oluşturur ve fosforilasyonla aktive edilir; her ikisinin derecesi yanlış katlanmış protein miktarıyla orantılıdır.",
+       "ekran": "Sensörler oligomer oluşturur ve fosforilasyonla aktive edilir; her ikisinin derecesi yanlış katlanmış protein miktarıyla orantılıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0251",
+       "ses": "Hafif streste şaperon sentezi artar, protein sentezi azalır ve protein yıkımı artar; yanlış katlanmış protein yükü azalır ve buna adaptif katlanmamış protein yanıtı denir.",
+       "ekran": "Hafif streste şaperon sentezi artar, protein sentezi azalır ve protein yıkımı artar; yanlış katlanmış protein yükü azalır ve buna adaptif katlanmamış protein yanıtı denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0252",
+       "ses": "Şiddetli streste BH3 proteinleri ve kaspazlar aktive olur, mitokondriyal apoptoz yolu tetiklenir ve onarılamaz şekilde hasar görmüş hücre ölür; buna terminal katlanmamış protein yanıtı denir.",
+       "ekran": "Şiddetli streste BH3 proteinleri ve kaspazlar aktive olur, mitokondriyal apoptoz yolu tetiklenir ve onarılamaz şekilde hasar görmüş hücre ölür; buna terminal katlanmamış protein yanıtı denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0253",
+       "ses": "Dikkat ederseniz p53 de terminal endoplazmik retikulum stresi de apoptozu mitokondriyal yol üzerinden başlatır.",
+       "ekran": "Dikkat ederseniz p53 de terminal endoplazmik retikulum stresi de apoptozu mitokondriyal yol üzerinden başlatır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b21",
+   "baslik": "Hücre içi kalsiyum dengesizliği",
+   "paragraflar": [
+    {
+     "id": "k1-05-p051",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-05-c0254",
+       "ses": "Normalde sitoplazmik kalsiyum düzeyi çok düşüktür ve kalsiyumun çoğu mitokondri ve endoplazmik retikulumda depolanır.",
+       "ekran": "Normalde sitoplazmik kalsiyum düzeyi çok düşüktür ve kalsiyumun çoğu mitokondri ve endoplazmik retikulumda depolanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0255",
+       "ses": "Hücre hasarında hem hücre içine kalsiyum girişi artar hem de depolardan kalsiyum salınır.",
+       "ekran": "Hücre hasarında hem hücre içine kalsiyum girişi artar hem de depolardan kalsiyum salınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0256",
+       "ses": "Artan sitozolik kalsiyum yıkıcı enzimleri aktive eder: proteazlar proteinleri ve hücre iskeletini, fosfolipazlar zar fosfolipidlerini, endonükleazlar da DNA'yı parçalar.",
+       "ekran": "Artan sitozolik kalsiyum yıkıcı enzimleri aktive eder: proteazlar proteinleri ve hücre iskeletini, fosfolipazlar zar fosfolipidlerini, endonükleazlar da DNA'yı parçalar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0257",
+       "ses": "Böylece zar, sitoskeleton ve DNA hasarı artar.",
+       "ekran": "Böylece zar, sitoskeleton ve DNA hasarı artar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b22",
+   "baslik": "Reaktif oksijen türleri ve Tablo 1.3",
+   "paragraflar": [
+    {
+     "id": "k1-05-p052",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-05-c0258",
+       "ses": "Serbest radikaller, dış yörüngelerinde eşleşmemiş elektron taşıyan moleküllerdir; bu yüzden çok reaktiftirler ve çevredeki moleküllerle kolayca tepkimeye girerler.",
+       "ekran": "Serbest radikaller, dış yörüngelerinde eşleşmemiş elektron taşıyan moleküllerdir; bu yüzden çok reaktiftirler ve çevredeki moleküllerle kolayca tepkimeye girerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0259",
+       "ses": "Başlıca reaktif oksijen türleri süperoksit, hidrojen peroksit ve hidroksil radikalidir.",
+       "ekran": "Başlıca reaktif oksijen türleri süperoksit, hidrojen peroksit ve hidroksil radikalidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0260",
+       "ses": "Kaynakları mitokondriyal oksidatif fosforilasyon, inflamatuar hücrelerin mikropları öldürmek için yaptığı solunum patlaması ve radyasyon, toksinler ile bazı ilaçlardır.",
+       "ekran": "Kaynakları mitokondriyal oksidatif fosforilasyon, inflamatuar hücrelerin mikropları öldürmek için yaptığı solunum patlaması ve radyasyon, toksinler ile bazı ilaçlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0261",
+       "ses": "Yani reaktif oksijen türleri fizyolojik olarak da üretilir; sorun, üretimin temizlemeyi aşmasıdır.",
+       "ekran": "Yani reaktif oksijen türleri fizyolojik olarak da üretilir; sorun, üretimin temizlemeyi aşmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p053",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-05-c0262",
+       "ses": "Tablo 1.3 her radikali üretim, giderim ve patolojik etki yönünden tanımlar.",
+       "ekran": "Tablo 1.3 her radikali üretim, giderim ve patolojik etki yönünden tanımlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0263",
+       "ses": "Süperoksit, mitokondriyal oksidatif fosforilasyon sırasında oksijenin tam indirgenememesiyle ve lökositlerde fagosit oksidaz, yani NADPH oksidaz aktivitesiyle oluşur.",
+       "ekran": "Süperoksit, mitokondriyal oksidatif fosforilasyon sırasında oksijenin tam indirgenememesiyle ve lökositlerde fagosit oksidaz, yani NADPH oksidaz aktivitesiyle oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0264",
+       "ses": "Süperoksit dismutaz tarafından hidrojen peroksit ve oksijene dönüştürülür.",
+       "ekran": "Süperoksit dismutaz tarafından hidrojen peroksit ve oksijene dönüştürülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0265",
+       "ses": "Lipitler üzerinde lipid peroksidasyonu yoluyla, ayrıca proteinler ve DNA üzerinde doğrudan hasar yapar.",
+       "ekran": "Lipitler üzerinde lipid peroksidasyonu yoluyla, ayrıca proteinler ve DNA üzerinde doğrudan hasar yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0266",
+       "ses": "Hidrojen peroksit çoğunlukla süperoksitten, süperoksit dismutaz etkisiyle oluşur.",
+       "ekran": "Hidrojen peroksit çoğunlukla süperoksitten, süperoksit dismutaz etkisiyle oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0267",
+       "ses": "Katalaz ve glutatyon peroksidaz tarafından su ve oksijene dönüştürülür.",
+       "ekran": "Katalaz ve glutatyon peroksidaz tarafından su ve oksijene dönüştürülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0268",
+       "ses": "Hidroksil radikaline ve hipoklorite dönüşebilir; bu türevler mikropları ve aşırı durumda konak hücrelerini de yok eder.",
+       "ekran": "Hidroksil radikaline ve hipoklorite dönüşebilir; bu türevler mikropları ve aşırı durumda konak hücrelerini de yok eder.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p054",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-05-c0269",
+       "ses": "Hidroksil radikali sudan, hidrojen peroksitten ve oksijenden çeşitli kimyasal reaksiyonlarla, özellikle Fenton reaksiyonuyla üretilir.",
+       "ekran": "Hidroksil radikali sudan, hidrojen peroksitten ve oksijenden çeşitli kimyasal reaksiyonlarla, özellikle Fenton reaksiyonuyla üretilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0270",
+       "ses": "Robbins'e göre bu reaksiyonda ferröz demir hidrojen peroksiti indirger; ferrik demir, hidroksil radikali ve hidroksil iyonu oluşur.",
+       "ekran": "Robbins'e göre bu reaksiyonda ferröz demir hidrojen peroksiti indirger; ferrik demir, hidroksil radikali ve hidroksil iyonu oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0271",
+       "ses": "Hidroksil radikalini doğrudan gideren bir enzim yoktur; oluşumu, glutatyon peroksidaz ve diğer antioksidan sistemlerin hidrojen peroksiti uzaklaştırmasıyla dolaylı olarak sınırlandırılır.",
+       "ekran": "Hidroksil radikalini doğrudan gideren bir enzim yoktur; oluşumu, glutatyon peroksidaz ve diğer antioksidan sistemlerin hidrojen peroksiti uzaklaştırmasıyla dolaylı olarak sınırlandırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0272",
+       "ses": "Burası önemli, sınav spotu: lipitler, proteinler ve DNA üzerinde en güçlü ve doğrudan hasar verici serbest radikal hidroksil radikalidir ve Fenton reaksiyonuyla oluşur.",
+       "ekran": "Burası önemli, sınav spotu: lipitler, proteinler ve DNA üzerinde en güçlü ve doğrudan hasar verici serbest radikal hidroksil radikalidir ve Fenton reaksiyonuyla oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0273",
+       "ses": "Son satırda peroksinitrit vardır: süperoksit ile nitrik oksitin etkileşimiyle oluşur ve bu reaksiyon nitrik oksit sentaz aracılı süreçlerle ilişkilidir.",
+       "ekran": "Son satırda peroksinitrit vardır: süperoksit ile nitrik oksitin etkileşimiyle oluşur ve bu reaksiyon nitrik oksit sentaz aracılı süreçlerle ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0274",
+       "ses": "Mitokondri ve sitozoldeki çeşitli enzimlerle nitrit ve daha az reaktif metabolitlere dönüştürülür; lipitler, proteinler ve DNA üzerinde oksidatif ve nitrozatif hasar yapar.",
+       "ekran": "Mitokondri ve sitozoldeki çeşitli enzimlerle nitrit ve daha az reaktif metabolitlere dönüştürülür; lipitler, proteinler ve DNA üzerinde oksidatif ve nitrozatif hasar yapar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b23",
+   "baslik": "Reaktif oksijen türlerinin etkileri, korunma ve çıkmış soru",
+   "paragraflar": [
+    {
+     "id": "k1-05-p055",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k1-05-c0275",
+       "ses": "Şekil 1.16 bu döngüyü 3 kutuda özetler.",
+       "ekran": "Şekil 1.16 bu döngüyü 3 kutuda özetler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0276",
+       "ses": "Radyasyon, toksinler ve reperfüzyon reaktif oksijen türlerinin üretimini artırır.",
+       "ekran": "Radyasyon, toksinler ve reperfüzyon reaktif oksijen türlerinin üretimini artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0277",
+       "ses": "Oksijenden süperoksit, süperoksitten süperoksit dismutazla hidrojen peroksit, ondan da hidroksil radikali oluşur.",
+       "ekran": "Oksijenden süperoksit, süperoksitten süperoksit dismutazla hidrojen peroksit, ondan da hidroksil radikali oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0278",
+       "ses": "Serbest radikaller kendiliğinden bozunarak ya da özel enzimatik sistemlerle uzaklaştırılır; glutatyon peroksidaz ve katalaz hidrojen peroksiti suya çevirir.",
+       "ekran": "Serbest radikaller kendiliğinden bozunarak ya da özel enzimatik sistemlerle uzaklaştırılır; glutatyon peroksidaz ve katalaz hidrojen peroksiti suya çevirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0279",
+       "ses": "Aşırı üretim ya da yetersiz uzaklaştırma radikallerin birikmesine yol açar.",
+       "ekran": "Aşırı üretim ya da yetersiz uzaklaştırma radikallerin birikmesine yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p056",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-05-c0280",
+       "ses": "Birikim 3 hedefi vurur.",
+       "ekran": "Birikim 3 hedefi vurur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0281",
+       "ses": "Lipid peroksidasyonu zar fosfolipidlerinde zincirleme hasar başlatır; bir radikal komşu lipitleri de radikale çevirir ve membran hasarı yayılır.",
+       "ekran": "Lipid peroksidasyonu zar fosfolipidlerinde zincirleme hasar başlatır; bir radikal komşu lipitleri de radikale çevirir ve membran hasarı yayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0282",
+       "ses": "Protein oksidasyonu çapraz bağlanmaya, fonksiyon kaybına, protein yıkımına ve yanlış katlanmaya yol açar.",
+       "ekran": "Protein oksidasyonu çapraz bağlanmaya, fonksiyon kaybına, protein yıkımına ve yanlış katlanmaya yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0283",
+       "ses": "DNA hasarı tek ve çift zincir kırıkları, baz modifikasyonları ve mutasyonlar şeklinde ortaya çıkar.",
+       "ekran": "DNA hasarı tek ve çift zincir kırıkları, baz modifikasyonları ve mutasyonlar şeklinde ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0284",
+       "ses": "Hücresel sonuçlar nekroz, apoptoz, yaşlanma ve kanserdir; yani oksidatif stres hem akut hücre ölümünde hem kronik süreçlerde ortak bir aracıdır.",
+       "ekran": "Hücresel sonuçlar nekroz, apoptoz, yaşlanma ve kanserdir; yani oksidatif stres hem akut hücre ölümünde hem kronik süreçlerde ortak bir aracıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p057",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k1-05-c0285",
+       "ses": "Hücre iki katmanlı bir savunma kullanır.",
+       "ekran": "Hücre iki katmanlı bir savunma kullanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0286",
+       "ses": "Enzimatik savunmada süperoksit dismutaz, katalaz ve glutatyon peroksidaz vardır.",
+       "ekran": "Enzimatik savunmada süperoksit dismutaz, katalaz ve glutatyon peroksidaz vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0287",
+       "ses": "Enzimatik olmayan antioksidanlar ise vitamin E, vitamin C, vitamin A, beta karoten ve glutatyondur.",
+       "ekran": "Enzimatik olmayan antioksidanlar ise vitamin E, vitamin C, vitamin A, beta karoten ve glutatyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0288",
+       "ses": "Denge şöyle kurulur: üretim temizlemeyi aşarsa oksidatif stres ortaya çıkar ve hücre hasarı başlar.",
+       "ekran": "Denge şöyle kurulur: üretim temizlemeyi aşarsa oksidatif stres ortaya çıkar ve hücre hasarı başlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p058",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k1-05-c0289",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda çok sayıda soruldu: hangisi serbest oksijen radikallerini artırır?",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda çok sayıda soruldu: hangisi serbest oksijen radikallerini artırır?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0290",
+       "ses": "Doğru cevap reperfüzyondur.",
+       "ekran": "Doğru cevap reperfüzyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0291",
+       "ses": "İskemik dokuya kan akımı yeniden sağlandığında reaktif oksijen türleri sıklıkla üretilir.",
+       "ekran": "İskemik dokuya kan akımı yeniden sağlandığında reaktif oksijen türleri sıklıkla üretilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0292",
+       "ses": "Çeldiricilerdeki süperoksit dismutaz, glutatyon peroksidaz ve beta karoten ise serbest radikalleri artırmaz, tam tersine onları azaltan antioksidan savunmanın parçalarıdır.",
+       "ekran": "Çeldiricilerdeki süperoksit dismutaz, glutatyon peroksidaz ve beta karoten ise serbest radikalleri artırmaz, tam tersine onları azaltan antioksidan savunmanın parçalarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b24",
+   "baslik": "Membran hasarı ve iskeminin sonuçları",
+   "paragraflar": [
+    {
+     "id": "k1-05-p059",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-05-c0293",
+       "ses": "Şekil 1.17, membran hasarının mekanizmalarını tek şemada birleştirir.",
+       "ekran": "Şekil 1.17, membran hasarının mekanizmalarını tek şemada birleştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0294",
+       "ses": "Azalmış oksijen ve hasarla oluşan reaktif oksijen türleri zar lipitlerinde lipid peroksidasyonu yapar.",
+       "ekran": "Azalmış oksijen ve hasarla oluşan reaktif oksijen türleri zar lipitlerinde lipid peroksidasyonu yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0295",
+       "ses": "ATP azalması fosfolipid sentezini düşürür ve zar yenilenemez.",
+       "ekran": "ATP azalması fosfolipid sentezini düşürür ve zar yenilenemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0296",
+       "ses": "Artmış sitozolik kalsiyum fosfolipazları aktive eder; fosfolipid yıkımı artar ve açığa çıkan lipid yıkım ürünleri de zara zarar verir.",
+       "ekran": "Artmış sitozolik kalsiyum fosfolipazları aktive eder; fosfolipid yıkımı artar ve açığa çıkan lipid yıkım ürünleri de zara zarar verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0297",
+       "ses": "Kalsiyum ayrıca proteazları aktive eder ve sitoskeleton hasarı zarın desteğini bozar.",
+       "ekran": "Kalsiyum ayrıca proteazları aktive eder ve sitoskeleton hasarı zarın desteğini bozar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0298",
+       "ses": "Hasarlı lizozomdan enzimler de serbestleşir.",
+       "ekran": "Hasarlı lizozomdan enzimler de serbestleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0299",
+       "ses": "Tüm bu yollar membran hasarında birleşir.",
+       "ekran": "Tüm bu yollar membran hasarında birleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0300",
+       "ses": "Azalmış oksijen ve artmış sitoplazmik kalsiyum tipik olarak iskemide görülür, ama başka hasar biçimlerine de eşlik edebilir.",
+       "ekran": "Azalmış oksijen ve artmış sitoplazmik kalsiyum tipik olarak iskemide görülür, ama başka hasar biçimlerine de eşlik edebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0301",
+       "ses": "İskemik dokuların reperfüzyonunda sıklıkla üretilen reaktif oksijen türleri de membran hasarına neden olur.",
+       "ekran": "İskemik dokuların reperfüzyonunda sıklıkla üretilen reaktif oksijen türleri de membran hasarına neden olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p060",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-05-c0302",
+       "ses": "Şekil 1.19, arter tıkanmasıyla başlayan iskeminin işlevsel ve morfolojik sonuçlarını bir akış olarak gösterir.",
+       "ekran": "Şekil 1.19, arter tıkanmasıyla başlayan iskeminin işlevsel ve morfolojik sonuçlarını bir akış olarak gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0303",
+       "ses": "Arter tıkanınca iskemi gelişir ve mitokondride oksidatif fosforilasyon azalır, ATP düşer.",
+       "ekran": "Arter tıkanınca iskemi gelişir ve mitokondride oksidatif fosforilasyon azalır, ATP düşer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0304",
+       "ses": "Sodyum potasyum ATPaz pompası çalışamaz; sodyum hücrede kalır, potasyum kaybedilir ve su hücre içine girer.",
+       "ekran": "Sodyum potasyum ATPaz pompası çalışamaz; sodyum hücrede kalır, potasyum kaybedilir ve su hücre içine girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0305",
+       "ses": "Sonuç hücre şişmesi, zar kabarcıkları ve endoplazmik retikulum şişmesidir.",
+       "ekran": "Sonuç hücre şişmesi, zar kabarcıkları ve endoplazmik retikulum şişmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0306",
+       "ses": "Anaerobik glikoliz artar, laktik asit birikir, pH düşer ve hücresel enzim aktiviteleri azalır.",
+       "ekran": "Anaerobik glikoliz artar, laktik asit birikir, pH düşer ve hücresel enzim aktiviteleri azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0307",
+       "ses": "Ribozomlar endoplazmik retikulumdan ayrılır ve protein sentezi azalır.",
+       "ekran": "Ribozomlar endoplazmik retikulumdan ayrılır ve protein sentezi azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0308",
+       "ses": "Sonunda geri dönüşümsüz membran hasarı esas olarak nekrozla hücre ölümüne yol açar: lizozomdan enzim salınır, mitokondri hasarlanır, içerik sızar ve inflamasyon gelişir.",
+       "ekran": "Sonunda geri dönüşümsüz membran hasarı esas olarak nekrozla hücre ölümüne yol açar: lizozomdan enzim salınır, mitokondri hasarlanır, içerik sızar ve inflamasyon gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0309",
+       "ses": "Şekilde hücrenin yalnız sol alt kısmı şişmiş çizilmiştir, ama gerçekte şişme hasarlı hücrenin tamamında homojendir.",
+       "ekran": "Şekilde hücrenin yalnız sol alt kısmı şişmiş çizilmiştir, ama gerçekte şişme hasarlı hücrenin tamamında homojendir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-05-p061",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-05-c0310",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: hücrede iskemi sonucu ne gerçekleşir?",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: hücrede iskemi sonucu ne gerçekleşir?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0311",
+       "ses": "Doğru cevap sitozolik kalsiyum artışıdır.",
+       "ekran": "Doğru cevap sitozolik kalsiyum artışıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0312",
+       "ses": "Çeldiricileri doğru biçimleriyle bilin: iskemide pH artmaz, laktik asit nedeniyle düşer; hücre içi potasyum artmaz, kaybedilir; sodyum potasyum pompasının aktivitesi artmaz, ATP yetersizliğiyle durur.",
+       "ekran": "Çeldiricileri doğru biçimleriyle bilin: iskemide pH artmaz, laktik asit nedeniyle düşer; hücre içi potasyum artmaz, kaybedilir; sodyum potasyum pompasının aktivitesi artmaz, ATP yetersizliğiyle durur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-05-b25",
+   "baslik": "Genel özet",
+   "paragraflar": [
+    {
+     "id": "k1-05-p062",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k1-05-c0313",
+       "ses": "Özetle, bu derste nekrozun 3 ek kalıbını, yani kazeöz, yağ ve fibrinoid nekrozu gördük.",
+       "ekran": "Özetle, bu derste nekrozun 3 ek kalıbını, yani kazeöz, yağ ve fibrinoid nekrozu gördük.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0314",
+       "ses": "Apoptozun fizyolojik ve patolojik bir ölüm mekanizması olduğunu, mitokondriyal ve ölüm reseptörü yolakları üzerinden işlediğini öğrendik.",
+       "ekran": "Apoptozun fizyolojik ve patolojik bir ölüm mekanizması olduğunu, mitokondriyal ve ölüm reseptörü yolakları üzerinden işlediğini öğrendik.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0315",
+       "ses": "Nekroptoz, piroptoz ve ferroptoz gelişmekte olan kavramlardır.",
+       "ekran": "Nekroptoz, piroptoz ve ferroptoz gelişmekte olan kavramlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-05-c0316",
+       "ses": "Hücre ölümü mekanizmalarının etiyoloji ve patogenezle bağlantısı; tanı, prognoz ve tedavi hedeflerini anlamak için kritiktir.",
+       "ekran": "Hücre ölümü mekanizmalarının etiyoloji ve patogenezle bağlantısı; tanı, prognoz ve tedavi hedeflerini anlamak için kritiktir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

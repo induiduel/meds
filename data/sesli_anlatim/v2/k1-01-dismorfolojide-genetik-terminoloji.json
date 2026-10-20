@@ -1,0 +1,3508 @@
+{
+ "surum": 2,
+ "ders_id": "k1-01",
+ "anahtar": "k1-01-dismorfolojide-genetik-terminoloji",
+ "baslik": "Dismorfolojide Genetik Terminoloji",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-01-b01",
+   "baslik": "Genetik, tıbbi genetik ve alt dalları",
+   "paragraflar": [
+    {
+     "id": "k1-01-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-01-c0001",
+       "ses": "Genetik, yaşayan tüm organizmalarda kalıtım ve farklılıklarla ilgilenen bilim dalıdır.",
+       "ekran": "Genetik, yaşayan tüm organizmalarda kalıtım ve farklılıklarla ilgilenen bilim dalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0002",
+       "ses": "Tıbbi genetik ise aynı soruları yalnızca insan için sorar: bir özellik kuşaktan kuşağa nasıl geçer ve bireyler arasındaki farklılık nereden kaynaklanır?",
+       "ekran": "Tıbbi genetik ise aynı soruları yalnızca insan için sorar: bir özellik kuşaktan kuşağa nasıl geçer ve bireyler arasındaki farklılık nereden kaynaklanır?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0003",
+       "ses": "İnsan genetiği ve tıbbi genetik, çalışılan biyolojik düzeye göre kendi içinde özelleşmiş alanlara ayrılır.",
+       "ekran": "İnsan genetiği ve tıbbi genetik, çalışılan biyolojik düzeye göre kendi içinde özelleşmiş alanlara ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p002",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-01-c0004",
+       "ses": "Sitogenetik kromozomları çalışır; kromozomların sayı ve yapı değişiklikleri ışık mikroskobu düzeyinde değerlendirilir.",
+       "ekran": "Sitogenetik kromozomları çalışır; kromozomların sayı ve yapı değişiklikleri ışık mikroskobu düzeyinde değerlendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0005",
+       "ses": "Moleküler genetik, genlerin yapısını ve fonksiyonunu inceler; burada değişiklikler DNA dizisi düzeyindedir.",
+       "ekran": "Moleküler genetik, genlerin yapısını ve fonksiyonunu inceler; burada değişiklikler DNA dizisi düzeyindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0006",
+       "ses": "Popülasyon genetiği ise insan topluluklarındaki genetik farklılıkları ve alel sıklıklarını, yani bir gen varyantının toplumdaki görülme oranını araştırır.",
+       "ekran": "Popülasyon genetiği ise insan topluluklarındaki genetik farklılıkları ve alel sıklıklarını, yani bir gen varyantının toplumdaki görülme oranını araştırır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p003",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-01-c0007",
+       "ses": "Üç alan daha doğrudan gelişim süreci, hasta ve aileyle ilgilidir.",
+       "ekran": "Üç alan daha doğrudan gelişim süreci, hasta ve aileyle ilgilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0008",
+       "ses": "Gelişimsel genetik, gelişmenin genetik kontrolünü çalışır; embriyonun doğru zamanda doğru yapıyı nasıl kurduğunu sorar.",
+       "ekran": "Gelişimsel genetik, gelişmenin genetik kontrolünü çalışır; embriyonun doğru zamanda doğru yapıyı nasıl kurduğunu sorar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0009",
+       "ses": "Klinik genetik, genetiğin hasta tanı ve bakımına uygulandığı alandır; muayene, test seçimi ve sonuçların yorumlanması bu alana girer.",
+       "ekran": "Klinik genetik, genetiğin hasta tanı ve bakımına uygulandığı alandır; muayene, test seçimi ve sonuçların yorumlanması bu alana girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0010",
+       "ses": "Genetik danışma ise hastaya psikolojik ve eğitim desteğiyle birlikte genetik risk bilgilerinin verildiği, hasta ve ailesiyle ilgilenen yeni bir sağlık mesleğidir.",
+       "ekran": "Genetik danışma ise hastaya psikolojik ve eğitim desteğiyle birlikte genetik risk bilgilerinin verildiği, hasta ve ailesiyle ilgilenen yeni bir sağlık mesleğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0011",
+       "ses": "Dikkat edin, genetik danışma yalnızca bir risk sayısı söylemek değildir; psikolojik ve eğitim desteği tanımın parçasıdır.",
+       "ekran": "Dikkat edin, genetik danışma yalnızca bir risk sayısı söylemek değildir; psikolojik ve eğitim desteği tanımın parçasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b02",
+   "baslik": "Kromozomal düzensizlikler",
+   "paragraflar": [
+    {
+     "id": "k1-01-p004",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-01-c0012",
+       "ses": "Kromozomal düzensizlikler sayısal ve yapısal olmak üzere 2 ana gruba ayrılır.",
+       "ekran": "Kromozomal düzensizlikler sayısal ve yapısal olmak üzere 2 ana gruba ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0013",
+       "ses": "Sayısal düzensizliklerde kromozomların yapısı korunur, ancak hücredeki kromozom sayısı değişir.",
+       "ekran": "Sayısal düzensizliklerde kromozomların yapısı korunur, ancak hücredeki kromozom sayısı değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0014",
+       "ses": "Bunun 2 biçimi vardır.",
+       "ekran": "Bunun 2 biçimi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0015",
+       "ses": "Öploidi, haploid takımın, yani n'in tam katlarından oluşan sayı değişikliğidir.",
+       "ekran": "Öploidi, haploid takımın, yani n'in tam katlarından oluşan sayı değişikliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0016",
+       "ses": "Normal diploid hücre 2n taşır; triploid hücre 3n, tetraploid hücre 4n kromozom içerir.",
+       "ekran": "Normal diploid hücre 2n taşır; triploid hücre 3n, tetraploid hücre 4n kromozom içerir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0017",
+       "ses": "Anöploidi ise tek tek kromozomların fazlalığı ya da eksikliğidir ve takımın tam katı değildir.",
+       "ekran": "Anöploidi ise tek tek kromozomların fazlalığı ya da eksikliğidir ve takımın tam katı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0018",
+       "ses": "2n+1, bir kromozomun fazladan kopyasıdır, yani trizomi örüntüsüdür.",
+       "ekran": "2n+1, bir kromozomun fazladan kopyasıdır, yani trizomi örüntüsüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0019",
+       "ses": "2n-1 ise bir kromozomun eksik olmasıdır, yani monozomi örüntüsüdür.",
+       "ekran": "2n-1 ise bir kromozomun eksik olmasıdır, yani monozomi örüntüsüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0020",
+       "ses": "Kısacası öploidide bütün takım çoğalır, anöploidide yalnız tek bir kromozomun sayısı değişir.",
+       "ekran": "Kısacası öploidide bütün takım çoğalır, anöploidide yalnız tek bir kromozomun sayısı değişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p005",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-01-c0021",
+       "ses": "Yapısal düzensizliklerde kromozom sayısı aynı kalabilir; bozukluk, kromozomun kırılıp yeniden birleşmesi sonucu yapısında ortaya çıkar.",
+       "ekran": "Yapısal düzensizliklerde kromozom sayısı aynı kalabilir; bozukluk, kromozomun kırılıp yeniden birleşmesi sonucu yapısında ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0022",
+       "ses": "7 yapısal düzensizlik sayılır.",
+       "ekran": "7 yapısal düzensizlik sayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0023",
+       "ses": "Translokasyon ya da yer değiştirme, bir kromozom parçasının başka bir kromozoma taşınmasıdır.",
+       "ekran": "Translokasyon ya da yer değiştirme, bir kromozom parçasının başka bir kromozoma taşınmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0024",
+       "ses": "Delesyon ya da eksilme, kromozomdan bir parçanın kopup kaybolmasıdır.",
+       "ekran": "Delesyon ya da eksilme, kromozomdan bir parçanın kopup kaybolmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0025",
+       "ses": "Duplikasyon ya da artma, bir bölgenin fazladan kopyalanmasıdır; şemada kardeş kromatitten kopan parçanın eklenmesiyle gösterilir.",
+       "ekran": "Duplikasyon ya da artma, bir bölgenin fazladan kopyalanmasıdır; şemada kardeş kromatitten kopan parçanın eklenmesiyle gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0026",
+       "ses": "İnversiyon ya da ters dönme, kopan parçanın ters yönde aynı kromozoma yeniden yerleşmesidir.",
+       "ekran": "İnversiyon ya da ters dönme, kopan parçanın ters yönde aynı kromozoma yeniden yerleşmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0027",
+       "ses": "Halka kromozom, kromozomun iki ucunun birleşerek halka oluşturmasıdır.",
+       "ekran": "Halka kromozom, kromozomun iki ucunun birleşerek halka oluşturmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0028",
+       "ses": "İzokromozom, kolları birbirinin aynısı olan anormal kromozomdur.",
+       "ekran": "İzokromozom, kolları birbirinin aynısı olan anormal kromozomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0029",
+       "ses": "Marker kromozom ise kökeni standart yöntemle belirlenemeyen ek yapısal kromozomdur.",
+       "ekran": "Marker kromozom ise kökeni standart yöntemle belirlenemeyen ek yapısal kromozomdur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-01-c0030",
+       "ses": "Dikkat edin, kromozom mutasyonu örneklerini soran sorularda nokta mutasyonu klasik çeldiricidir.",
+       "ekran": "Dikkat edin, kromozom mutasyonu örneklerini soran sorularda nokta mutasyonu klasik çeldiricidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0031",
+       "ses": "Nokta mutasyonu tek nükleotid düzeyindedir ve bu yapısal düzensizlikler listesinde yer almaz.",
+       "ekran": "Nokta mutasyonu tek nükleotid düzeyindedir ve bu yapısal düzensizlikler listesinde yer almaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b03",
+   "baslik": "Dismorfolojinin tanımı ve tarihçesi",
+   "paragraflar": [
+    {
+     "id": "k1-01-p007",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-01-c0032",
+       "ses": "Dismorfoloji, klinik genetiğin doğumsal yapısal farklılıklara odaklanan dalıdır.",
+       "ekran": "Dismorfoloji, klinik genetiğin doğumsal yapısal farklılıklara odaklanan dalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0033",
+       "ses": "Adı Yunanca kökenlidir: dis, hastalık ya da anormallik; morf ise biçim anlamına gelir.",
+       "ekran": "Adı Yunanca kökenlidir: dis, hastalık ya da anormallik; morf ise biçim anlamına gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0034",
+       "ses": "Yani dismorfoloji kelime anlamıyla anormal biçimin bilimidir.",
+       "ekran": "Yani dismorfoloji kelime anlamıyla anormal biçimin bilimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0035",
+       "ses": "Bu dalın 3 görevi vardır: fiziksel gelişimdeki farklılıkları incelemek, normal morfogenezden, yani doku ve organların biçim kazanma sürecinden sapmaları değerlendirmek ve doğumsal defektler üzerine uzmanlaşmak.",
+       "ekran": "Bu dalın 3 görevi vardır: fiziksel gelişimdeki farklılıkları incelemek, normal morfogenezden, yani doku ve organların biçim kazanma sürecinden sapmaları değerlendirmek ve doğumsal defektler üzerine uzmanlaşmak.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0036",
+       "ses": "Alanın karmaşıklığı tek bir sayıyla özetlenir: 2000'in üzerinde tanımlanmış sendrom vardır.",
+       "ekran": "Alanın karmaşıklığı tek bir sayıyla özetlenir: 2000'in üzerinde tanımlanmış sendrom vardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p008",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-01-c0037",
+       "ses": "Dismorfoloji terimi ilk kez 1960 yılında Doktor David Smith tarafından tanımlanmıştır.",
+       "ekran": "Dismorfoloji terimi ilk kez 1960 yılında Doktor David Smith tarafından tanımlanmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0038",
+       "ses": "Bir özelliğin dismorfik sayılması için karşılaştırma ölçütü bellidir: aynı yaş ve etnik kökenden bireylerde yaygın olarak bulunmayan fiziksel özelliklere sahip olmak.",
+       "ekran": "Bir özelliğin dismorfik sayılması için karşılaştırma ölçütü bellidir: aynı yaş ve etnik kökenden bireylerde yaygın olarak bulunmayan fiziksel özelliklere sahip olmak.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0039",
+       "ses": "Dismorfolojinin konusu konjenital malformasyonlar, yani doğumda bulunan yapısal defektlerdir.",
+       "ekran": "Dismorfolojinin konusu konjenital malformasyonlar, yani doğumda bulunan yapısal defektlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p009",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-01-c0040",
+       "ses": "Burası önemli: tüm yenidoğanların %3'ünde en az bir malformasyon görülür.",
+       "ekran": "Burası önemli: tüm yenidoğanların %3'ünde en az bir malformasyon görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0041",
+       "ses": "Bu defektler vücudun dışında ya da içinde olabilir; sporadik, yani ailede başka örneği olmadan tek başına ortaya çıkabilir ya da kalıtsal olabilir; minör ya da majör, tekli ya da çoklu olabilir.",
+       "ekran": "Bu defektler vücudun dışında ya da içinde olabilir; sporadik, yani ailede başka örneği olmadan tek başına ortaya çıkabilir ya da kalıtsal olabilir; minör ya da majör, tekli ya da çoklu olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0042",
+       "ses": "Dersin felsefesi şu cümlede özetlenir: ne kadar çok görülürse o kadar çok bilinir, ne kadar çok bilinirse o kadar çok görülür.",
+       "ekran": "Dersin felsefesi şu cümlede özetlenir: ne kadar çok görülürse o kadar çok bilinir, ne kadar çok bilinirse o kadar çok görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p010",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-01-c0043",
+       "ses": "Konjenital anomali 2 kelimeden oluşur ve her biri ayrı bir anlam taşır.",
+       "ekran": "Konjenital anomali 2 kelimeden oluşur ve her biri ayrı bir anlam taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0044",
+       "ses": "Konjenital, doğumda mevcut olan, yani doğumsal demektir.",
+       "ekran": "Konjenital, doğumda mevcut olan, yani doğumsal demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0045",
+       "ses": "Anomali ise anormal gelişim ya da normal dışı yapısal özellik anlamına gelir.",
+       "ekran": "Anomali ise anormal gelişim ya da normal dışı yapısal özellik anlamına gelir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p011",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-01-c0046",
+       "ses": "Dismorfolojinin sınırını çizmek için metabolik hastalıklarla karşılaştırma yapılır.",
+       "ekran": "Dismorfolojinin sınırını çizmek için metabolik hastalıklarla karşılaştırma yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0047",
+       "ses": "Metabolik hastalıkta genellikle yapı normal, fakat fonksiyon anormaldir; organ biçim olarak sağlam görünür ama biyokimyasal işlev bozuktur.",
+       "ekran": "Metabolik hastalıkta genellikle yapı normal, fakat fonksiyon anormaldir; organ biçim olarak sağlam görünür ama biyokimyasal işlev bozuktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0048",
+       "ses": "Dismorfolojide ise anormal yapı vardır ve buna anormal fonksiyon eşlik edebilir ya da etmeyebilir.",
+       "ekran": "Dismorfolojide ise anormal yapı vardır ve buna anormal fonksiyon eşlik edebilir ya da etmeyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0049",
+       "ses": "Yapısal sapma esastır; bu sapmalar majör ya da minör dismorfizm olarak derecelendirilir.",
+       "ekran": "Yapısal sapma esastır; bu sapmalar majör ya da minör dismorfizm olarak derecelendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0050",
+       "ses": "Yani dismorfolojide ayırt edici öge yapının bozuk olmasıdır.",
+       "ekran": "Yani dismorfolojide ayırt edici öge yapının bozuk olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0051",
+       "ses": "Yapısı normal fakat işlevi bozuk bir tablo dismorfolojiden çok metabolik hastalığı düşündürür.",
+       "ekran": "Yapısı normal fakat işlevi bozuk bir tablo dismorfolojiden çok metabolik hastalığı düşündürür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b04",
+   "baslik": "Büyüklüğe göre sınıflama: minör anomaliler",
+   "paragraflar": [
+    {
+     "id": "k1-01-p012",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-01-c0052",
+       "ses": "Konjenital anomaliler 3 eksende sınıflandırılır: büyüklüklerine göre, oluşum şekline göre ve birlikte görülmelerine göre.",
+       "ekran": "Konjenital anomaliler 3 eksende sınıflandırılır: büyüklüklerine göre, oluşum şekline göre ve birlikte görülmelerine göre.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0053",
+       "ses": "Büyüklük ekseninde 2 grup vardır: minör anomaliler ve majör anomaliler.",
+       "ekran": "Büyüklük ekseninde 2 grup vardır: minör anomaliler ve majör anomaliler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p013",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-01-c0054",
+       "ses": "Minör anomalinin tanımı 3 ölçüte dayanır.",
+       "ekran": "Minör anomalinin tanımı 3 ölçüte dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0055",
+       "ses": "1.'si önemdir: bilinen bir medikal, cerrahi ya da kozmetik önemi yoktur ya da çok azdır.",
+       "ekran": "1.'si önemdir: bilinen bir medikal, cerrahi ya da kozmetik önemi yoktur ya da çok azdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0056",
+       "ses": "2.'si sıklıktır: popülasyonun %4'ünden daha azında görülen farklılıklardır.",
+       "ekran": "2.'si sıklıktır: popülasyonun %4'ünden daha azında görülen farklılıklardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0057",
+       "ses": "3.'sü sonuçtur: ciddi medikal ya da kozmetik sonuçlara yol açmayan morfolojik özelliklerdir.",
+       "ekran": "3.'sü sonuçtur: ciddi medikal ya da kozmetik sonuçlara yol açmayan morfolojik özelliklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0058",
+       "ses": "Burası önemli: minör anomali eşiği popülasyonun %4'üdür.",
+       "ekran": "Burası önemli: minör anomali eşiği popülasyonun %4'üdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0059",
+       "ses": "Slayttaki örnek görsel epikantal kıvrımı gösterir; iç göz köşesini örten bu deri katlantısı tek başına sağlık sorunu yaratmayan tipik bir minör anomalidir.",
+       "ekran": "Slayttaki örnek görsel epikantal kıvrımı gösterir; iç göz köşesini örten bu deri katlantısı tek başına sağlık sorunu yaratmayan tipik bir minör anomalidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p014",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-01-c0060",
+       "ses": "Her minör anomalinin tanı değeri aynı değildir.",
+       "ekran": "Her minör anomalinin tanı değeri aynı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0061",
+       "ses": "Bir bulgunun kaç sendromda görüldüğü, ayırıcı tanıyı ne kadar daralttığını belirler.",
+       "ekran": "Bir bulgunun kaç sendromda görüldüğü, ayırıcı tanıyı ne kadar daralttığını belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0062",
+       "ses": "Nonspesifik minör anomaliler çok sayıda sendroma eşlik eder ve tek başına tanıyı daraltmaz.",
+       "ekran": "Nonspesifik minör anomaliler çok sayıda sendroma eşlik eder ve tek başına tanıyı daraltmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0063",
+       "ses": "Hipertelorizm, yani gözler arası mesafenin artması, yaklaşık 400 sendromda görülür.",
+       "ekran": "Hipertelorizm, yani gözler arası mesafenin artması, yaklaşık 400 sendromda görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0064",
+       "ses": "Blefarofimozis, yani göz kapağı aralığının dar olması yaklaşık 100, telekantus, yani iç göz köşeleri arası mesafenin artması yaklaşık 90, hipotelorizm ise yaklaşık 80 sendromda görülür.",
+       "ekran": "Blefarofimozis, yani göz kapağı aralığının dar olması yaklaşık 100, telekantus, yani iç göz köşeleri arası mesafenin artması yaklaşık 90, hipotelorizm ise yaklaşık 80 sendromda görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0065",
+       "ses": "Spesifik minör anomaliler ise az sayıda sendroma eşlik eder ve ayırıcı tanıyı belirgin biçimde daraltır.",
+       "ekran": "Spesifik minör anomaliler ise az sayıda sendroma eşlik eder ve ayırıcı tanıyı belirgin biçimde daraltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0066",
+       "ses": "Göz kapağı kolobomu yaklaşık 31, saçın ön kısmındaki pigmentsiz beyaz tutam olan beyaz perçem yaklaşık 21, iki irisin ya da tek irisin bölümlerinin farklı renkte olması demek olan iris heterokromisi yaklaşık 13, tek ön kesici diş ise yaklaşık 11 sendromda görülür.",
+       "ekran": "Göz kapağı kolobomu yaklaşık 31, saçın ön kısmındaki pigmentsiz beyaz tutam olan beyaz perçem yaklaşık 21, iki irisin ya da tek irisin bölümlerinin farklı renkte olması demek olan iris heterokromisi yaklaşık 13, tek ön kesici diş ise yaklaşık 11 sendromda görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0067",
+       "ses": "Slayttaki tabloda blefarofimozis hem nonspesifik hem spesifik sütunda yer alır.",
+       "ekran": "Slayttaki tabloda blefarofimozis hem nonspesifik hem spesifik sütunda yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0068",
+       "ses": "Hipertelorizm en sık rastlanan ama en az yol gösteren bulgudur; tek ön kesici diş ya da beyaz perçem gibi spesifik bulgular tanıya çok daha fazla katkı verir.",
+       "ekran": "Hipertelorizm en sık rastlanan ama en az yol gösteren bulgudur; tek ön kesici diş ya da beyaz perçem gibi spesifik bulgular tanıya çok daha fazla katkı verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0069",
+       "ses": "Telekantusta iç göz köşeleri arası mesafe artmıştır ama göz bebekleri arası mesafe normaldir; hipertelorizmde ise gerçek göz aralığı genişlemiştir.",
+       "ekran": "Telekantusta iç göz köşeleri arası mesafe artmıştır ama göz bebekleri arası mesafe normaldir; hipertelorizmde ise gerçek göz aralığı genişlemiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b05",
+   "baslik": "Majör anomali ve yarık damak tuzağı",
+   "paragraflar": [
+    {
+     "id": "k1-01-p015",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-01-c0070",
+       "ses": "Büyüklük ekseninin ikinci grubu majör anomalilerdir.",
+       "ekran": "Büyüklük ekseninin ikinci grubu majör anomalilerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0071",
+       "ses": "Bunlar ciddi sağlık ve kozmetik problemlere yol açan anomalilerdir; normal spektrumdan sapmadır ve bu grup anomaliler ya da malformasyonlar olarak da adlandırılır.",
+       "ekran": "Bunlar ciddi sağlık ve kozmetik problemlere yol açan anomalilerdir; normal spektrumdan sapmadır ve bu grup anomaliler ya da malformasyonlar olarak da adlandırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0072",
+       "ses": "Slayttaki görsel, yüz ve kafada belirgin yapısal sapması olan bir bebeği göstererek majör anomalinin sağlık ve kozmetik yükünü örnekler.",
+       "ekran": "Slayttaki görsel, yüz ve kafada belirgin yapısal sapması olan bir bebeği göstererek majör anomalinin sağlık ve kozmetik yükünü örnekler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0073",
+       "ses": "Bir majör anomali saptandığında hemen bir klinik soru doğar: bu anomali izole mi, yoksa multipl mi?",
+       "ekran": "Bir majör anomali saptandığında hemen bir klinik soru doğar: bu anomali izole mi, yoksa multipl mi?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0074",
+       "ses": "Bu soru hem tanıyı hem tekrarlama riskini değiştirir.",
+       "ekran": "Bu soru hem tanıyı hem tekrarlama riskini değiştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0075",
+       "ses": "Soruyu yanıtlamak için merkezi sinir sistemi, kardiyovasküler sistem ve gastrointestinal sistem görüntülenmelidir, çünkü iç organ anomalileri dış muayenede görülmez.",
+       "ekran": "Soruyu yanıtlamak için merkezi sinir sistemi, kardiyovasküler sistem ve gastrointestinal sistem görüntülenmelidir, çünkü iç organ anomalileri dış muayenede görülmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p016",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-01-c0076",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda birden fazla kez soruldu: yarık damak ve yarık dudak minör anomali değildir, majör anomalidir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda birden fazla kez soruldu: yarık damak ve yarık dudak minör anomali değildir, majör anomalidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0077",
+       "ses": "Ciddi sağlık ve kozmetik sorun yarattığı için majör grupta yer alır ve aynı zamanda bir malformasyondur.",
+       "ekran": "Ciddi sağlık ve kozmetik sorun yarattığı için majör grupta yer alır ve aynı zamanda bir malformasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0078",
+       "ses": "Sorularda bunun karşısına minör anomaliler çeldirici olarak konur.",
+       "ekran": "Sorularda bunun karşısına minör anomaliler çeldirici olarak konur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0079",
+       "ses": "Avuç içinde tek transvers palmar çizgi olan simian çizgisi, epikantal kıvrım, kulak kepçesinde hafif rotasyon anomalisi, beşinci parmakta hafif eğrilik olan klinodaktili, beyaz perçem, telekantus, hipertelorizm ve iris heterokromisi minör anomalilerdir.",
+       "ekran": "Avuç içinde tek transvers palmar çizgi olan simian çizgisi, epikantal kıvrım, kulak kepçesinde hafif rotasyon anomalisi, beşinci parmakta hafif eğrilik olan klinodaktili, beyaz perçem, telekantus, hipertelorizm ve iris heterokromisi minör anomalilerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0080",
+       "ses": "Yani minör anomali sayılırken yarık dudak ya da damak listeye asla girmez.",
+       "ekran": "Yani minör anomali sayılırken yarık dudak ya da damak listeye asla girmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b06",
+   "baslik": "Gelişim dönemine ve oluşum şekline göre sınıflama",
+   "paragraflar": [
+    {
+     "id": "k1-01-p017",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-01-c0081",
+       "ses": "Dismorfizmin tipi, hatanın intrauterin gelişimin hangi döneminde oluştuğuna bağlıdır.",
+       "ekran": "Dismorfizmin tipi, hatanın intrauterin gelişimin hangi döneminde oluştuğuna bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0082",
+       "ses": "Slayttaki tablo 2 dönemi karşılaştırır.",
+       "ekran": "Slayttaki tablo 2 dönemi karşılaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0083",
+       "ses": "Embriyonik dönem dokuların kurulduğu evredir ve 3 gelişim basamağı vardır: proliferasyon, yani hücrelerin çoğalması; farklılaşma, yani hücrelerin belirli işleve göre özelleşmesi; ve organizasyon, yani hücrelerin doku ve yapı halinde düzenlenmesi.",
+       "ekran": "Embriyonik dönem dokuların kurulduğu evredir ve 3 gelişim basamağı vardır: proliferasyon, yani hücrelerin çoğalması; farklılaşma, yani hücrelerin belirli işleve göre özelleşmesi; ve organizasyon, yani hücrelerin doku ve yapı halinde düzenlenmesi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0084",
+       "ses": "Bu basamaklardaki hatalar malformasyon, displazi ve duraklama olarak ortaya çıkar.",
+       "ekran": "Bu basamaklardaki hatalar malformasyon, displazi ve duraklama olarak ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p018",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-01-c0085",
+       "ses": "Fetal dönemde ise organlar ve yapılar oluşmuştur; organizasyon sürerken dış faktörlerin etkisiyle deformasyon gelişir.",
+       "ekran": "Fetal dönemde ise organlar ve yapılar oluşmuştur; organizasyon sürerken dış faktörlerin etkisiyle deformasyon gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0086",
+       "ses": "Burası önemli: embriyonik dönemde malformasyon, displazi ve duraklama; fetal dönemde ise dış faktörlerle deformasyon ortaya çıkar.",
+       "ekran": "Burası önemli: embriyonik dönemde malformasyon, displazi ve duraklama; fetal dönemde ise dış faktörlerle deformasyon ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0087",
+       "ses": "Hatanın dönemi tipini belirler: içsel doku kurma hataları embriyonik dönemin, oluşmuş yapıya dışarıdan gelen mekanik etkiler ise fetal dönemin ürünüdür.",
+       "ekran": "Hatanın dönemi tipini belirler: içsel doku kurma hataları embriyonik dönemin, oluşmuş yapıya dışarıdan gelen mekanik etkiler ise fetal dönemin ürünüdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p019",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-01-c0088",
+       "ses": "Sınıflamanın ikinci ekseni oluşum şekli, yani etiyopatogenezdir.",
+       "ekran": "Sınıflamanın ikinci ekseni oluşum şekli, yani etiyopatogenezdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0089",
+       "ses": "Konjenital tek primer defektler oluşum mekanizmasına göre 4 gruba ayrılır.",
+       "ekran": "Konjenital tek primer defektler oluşum mekanizmasına göre 4 gruba ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0090",
+       "ses": "Deformasyon mekanik etkilerle oluşur.",
+       "ekran": "Deformasyon mekanik etkilerle oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0091",
+       "ses": "Malformasyon hatalı oluşum, yani konjenital biçim bozukluğudur.",
+       "ekran": "Malformasyon hatalı oluşum, yani konjenital biçim bozukluğudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0092",
+       "ses": "Displazi regülasyon bozulmasıdır; doku ve organ oluşumundaki hücrelerde bozukluk vardır.",
+       "ekran": "Displazi regülasyon bozulmasıdır; doku ve organ oluşumundaki hücrelerde bozukluk vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0093",
+       "ses": "Disrupsiyon ise kalıcı şekil bozukluğudur; normal olarak gelişim gösteren bir yapının destrüksiyon, yani yıkım sonucunda kalıcı olarak şekil bozukluğuna uğramasıdır.",
+       "ekran": "Disrupsiyon ise kalıcı şekil bozukluğudur; normal olarak gelişim gösteren bir yapının destrüksiyon, yani yıkım sonucunda kalıcı olarak şekil bozukluğuna uğramasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0094",
+       "ses": "4 defektin ortak noktası primer olmalarıdır; farkları mekanizmalarıdır ve mekanizma tekrarlama riskini, dolayısıyla danışmayı doğrudan değiştirir.",
+       "ekran": "4 defektin ortak noktası primer olmalarıdır; farkları mekanizmalarıdır ve mekanizma tekrarlama riskini, dolayısıyla danışmayı doğrudan değiştirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p020",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-01-c0095",
+       "ses": "Deformasyon, fetusta normal gelişen yapının dış mekanik etkilere maruz kalması sonucunda oluşan yapısal bozukluktur.",
+       "ekran": "Deformasyon, fetusta normal gelişen yapının dış mekanik etkilere maruz kalması sonucunda oluşan yapısal bozukluktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0096",
+       "ses": "Yapının genetik programı sağlamdır; sorun dışarıdan gelen kuvvettir.",
+       "ekran": "Yapının genetik programı sağlamdır; sorun dışarıdan gelen kuvvettir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0097",
+       "ses": "Normal gelişen organlarda kompresyon, yani bası, konstrüksiyon, yani kısıtlanma, ve hareketsizlik sonucu oluşur.",
+       "ekran": "Normal gelişen organlarda kompresyon, yani bası, konstrüksiyon, yani kısıtlanma, ve hareketsizlik sonucu oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0098",
+       "ses": "Sıklıkla kıkırdak, kemik ve eklemleri tutar ve doğum sonrası geri dönüşümlüdür; bası kalkınca yapı düzelme eğilimindedir.",
+       "ekran": "Sıklıkla kıkırdak, kemik ve eklemleri tutar ve doğum sonrası geri dönüşümlüdür; bası kalkınca yapı düzelme eğilimindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0099",
+       "ses": "Örnek olarak pes ekinovarus, yani İngilizce adıyla klab fut, ayrıca kalça çıkığı ve kraniyofasiyal şekil bozukluğu gösterilebilir.",
+       "ekran": "Örnek olarak pes ekinovarus, yani İngilizce adıyla klab fut, ayrıca kalça çıkığı ve kraniyofasiyal şekil bozukluğu gösterilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0100",
+       "ses": "Tekrarlama riski altta yatan nedene bağlı olarak değişkendir.",
+       "ekran": "Tekrarlama riski altta yatan nedene bağlı olarak değişkendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0101",
+       "ses": "Deformasyonun nedenleri 3 döneme ayrılır: antenatal dönemde fetal ve maternal nedenler, natal dönemde verteks ve makat gelişi, postnatal dönemde ise prematürite ve hipotonisite.",
+       "ekran": "Deformasyonun nedenleri 3 döneme ayrılır: antenatal dönemde fetal ve maternal nedenler, natal dönemde verteks ve makat gelişi, postnatal dönemde ise prematürite ve hipotonisite.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p021",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-01-c0102",
+       "ses": "Burası önemli: deformasyonun 2 ayırt edici özelliği vardır; yapı başlangıçta normaldir ve bozukluk doğumdan sonra geri dönebilir.",
+       "ekran": "Burası önemli: deformasyonun 2 ayırt edici özelliği vardır; yapı başlangıçta normaldir ve bozukluk doğumdan sonra geri dönebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0103",
+       "ses": "Çıkmış bir soruda tam olarak bu soruldu: oligohidramniyosa bağlı kraniyofasiyal basıklık ve talipes deformitesi bir deformasyon örneğidir.",
+       "ekran": "Çıkmış bir soruda tam olarak bu soruldu: oligohidramniyosa bağlı kraniyofasiyal basıklık ve talipes deformitesi bir deformasyon örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0104",
+       "ses": "Amniyotik sıvı azalınca uterus duvarı normal gelişmiş fetusu sıkıştırır; yüz basıklaşır, ayak içe dönük kalır.",
+       "ekran": "Amniyotik sıvı azalınca uterus duvarı normal gelişmiş fetusu sıkıştırır; yüz basıklaşır, ayak içe dönük kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0105",
+       "ses": "Aynı soruda çeldirici olarak verilen tabloların hiçbiri deformasyon değildir.",
+       "ekran": "Aynı soruda çeldirici olarak verilen tabloların hiçbiri deformasyon değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0106",
+       "ses": "Yarık dudak ve damak ile nöral tüp defekti, yani spina bifida malformasyondur.",
+       "ekran": "Yarık dudak ve damak ile nöral tüp defekti, yani spina bifida malformasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0107",
+       "ses": "Amniyotik banda bağlı ekstremite amputasyonu disrupsiyondur.",
+       "ekran": "Amniyotik banda bağlı ekstremite amputasyonu disrupsiyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0108",
+       "ses": "Trizomi 21'e bağlı çoklu organ anomalileri ise bir sendromdur.",
+       "ekran": "Trizomi 21'e bağlı çoklu organ anomalileri ise bir sendromdur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p022",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-01-c0109",
+       "ses": "Deformasyon yalnızca rahim içinde değil, doğumdan sonra da gelişebilir.",
+       "ekran": "Deformasyon yalnızca rahim içinde değil, doğumdan sonra da gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0110",
+       "ses": "2 klasik örnek bu 2 zaman dilimini temsil eder.",
+       "ekran": "2 klasik örnek bu 2 zaman dilimini temsil eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0111",
+       "ses": "Antenatal deformasyona örnek transvers duruştur: fetusun rahimde enine pozisyonda kalması yüz ve gövdeye sürekli bası uygular.",
+       "ekran": "Antenatal deformasyona örnek transvers duruştur: fetusun rahimde enine pozisyonda kalması yüz ve gövdeye sürekli bası uygular.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0112",
+       "ses": "Sonuçta düz yüz, çene gelişiminin sınırlanması ve skolyoz ortaya çıkar.",
+       "ekran": "Sonuçta düz yüz, çene gelişiminin sınırlanması ve skolyoz ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p023",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-01-c0113",
+       "ses": "Postnatal deformasyona örnek prematüre yenidoğandır.",
+       "ekran": "Postnatal deformasyona örnek prematüre yenidoğandır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0114",
+       "ses": "Prematüre bebekler daha hipotoniktir ve sürekli belli bir pozisyonda yatırıldıklarında yumuşak kafatası biçim değiştirir.",
+       "ekran": "Prematüre bebekler daha hipotoniktir ve sürekli belli bir pozisyonda yatırıldıklarında yumuşak kafatası biçim değiştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0115",
+       "ses": "Sonuçta skafosefali, yani kafatasının öne arkaya uzayıp daralması, ve plagiosefali, yani kafatasının asimetrik yassılaşması gelişebilir.",
+       "ekran": "Sonuçta skafosefali, yani kafatasının öne arkaya uzayıp daralması, ve plagiosefali, yani kafatasının asimetrik yassılaşması gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b07",
+   "baslik": "Disrupsiyon",
+   "paragraflar": [
+    {
+     "id": "k1-01-p024",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-01-c0116",
+       "ses": "Slaytta disrupsiyon, duraklama adıyla da anılır.",
+       "ekran": "Slaytta disrupsiyon, duraklama adıyla da anılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0117",
+       "ses": "Tanımı şudur: intrauterin dönemde normal biçimini alacak şekilde oluşmakta olan bir yapının, bir nedenden dolayı normal gelişimini tamamlayamadan gelişiminin duraklamasıdır.",
+       "ekran": "Tanımı şudur: intrauterin dönemde normal biçimini alacak şekilde oluşmakta olan bir yapının, bir nedenden dolayı normal gelişimini tamamlayamadan gelişiminin duraklamasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0118",
+       "ses": "Yapının potansiyeli normaldir; gelişim dışarıdan ya da dolaşım yoluyla kesilir.",
+       "ekran": "Yapının potansiyeli normaldir; gelişim dışarıdan ya da dolaşım yoluyla kesilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0119",
+       "ses": "Buna 2 temel mekanizma sebep olur.",
+       "ekran": "Buna 2 temel mekanizma sebep olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0120",
+       "ses": "1.'si dokunun yıkımına neden olan dış mekanik ajanların varlığıdır; en iyi örnek amniyotik bantlardır.",
+       "ekran": "1.'si dokunun yıkımına neden olan dış mekanik ajanların varlığıdır; en iyi örnek amniyotik bantlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0121",
+       "ses": "Amniyotik bantlar, amniyon zarından ayrılan, fetal yapılara sarılıp onları boğan lifli şeritlerdir.",
+       "ekran": "Amniyotik bantlar, amniyon zarından ayrılan, fetal yapılara sarılıp onları boğan lifli şeritlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0122",
+       "ses": "Amniyotik bant sekansında parmak ve ekstremitelerde halka şeklinde boğulma ve amputasyonlar izlenir.",
+       "ekran": "Amniyotik bant sekansında parmak ve ekstremitelerde halka şeklinde boğulma ve amputasyonlar izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0123",
+       "ses": "2.'si, normal gelişen vücut kısmında kan akışının kesintiye uğramasıdır; buna bağlı infarktüs, nekroz ya da yapıların rezorpsiyonu, yani emilerek ortadan kalkması gelişir.",
+       "ekran": "2.'si, normal gelişen vücut kısmında kan akışının kesintiye uğramasıdır; buna bağlı infarktüs, nekroz ya da yapıların rezorpsiyonu, yani emilerek ortadan kalkması gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0124",
+       "ses": "Bu mekanizmanın örnekleri duodenal ve intestinal atreziler ile gastroşizistir.",
+       "ekran": "Bu mekanizmanın örnekleri duodenal ve intestinal atreziler ile gastroşizistir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p025",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-01-c0125",
+       "ses": "Disrupsiyonda bütünüyle oluşmuş yapılar intrinsik ya da ekstrinsik nedenlerle majör yıkıma uğrar.",
+       "ekran": "Disrupsiyonda bütünüyle oluşmuş yapılar intrinsik ya da ekstrinsik nedenlerle majör yıkıma uğrar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0126",
+       "ses": "İntrinsik nedenler kanama ve iskemidir; ekstrinsik neden amniyotik banttır.",
+       "ekran": "İntrinsik nedenler kanama ve iskemidir; ekstrinsik neden amniyotik banttır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0127",
+       "ses": "Birçok doku tipi aynı anda etkilenir; deri, kas ve kemik birlikte tutulabilir.",
+       "ekran": "Birçok doku tipi aynı anda etkilenir; deri, kas ve kemik birlikte tutulabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0128",
+       "ses": "Defekt belli bir anatomik bölgeye sınırlıdır ve embriyolojik gelişimden bağımsızdır, yani embriyolojik sınırlara uymaz.",
+       "ekran": "Defekt belli bir anatomik bölgeye sınırlıdır ve embriyolojik gelişimden bağımsızdır, yani embriyolojik sınırlara uymaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0129",
+       "ses": "Örnekleri şunlardır: amniyotik bantlara bağlı ekstremite amputasyonları ya da fasiyal kleftler, yani yüz yarıkları; talidomid gibi ilaçlara bağlı embriyopatiler; vasküler nedenlere bağlı oluşan gastroşizis ve beyin dokusunda yıkım sonrası oluşan kistik boşluk olan porensefalik kist.",
+       "ekran": "Örnekleri şunlardır: amniyotik bantlara bağlı ekstremite amputasyonları ya da fasiyal kleftler, yani yüz yarıkları; talidomid gibi ilaçlara bağlı embriyopatiler; vasküler nedenlere bağlı oluşan gastroşizis ve beyin dokusunda yıkım sonrası oluşan kistik boşluk olan porensefalik kist.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p026",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-01-c0130",
+       "ses": "Burası önemli: disrupsiyonda genetik program sağlamdır, bu nedenle tekrarlama riski çok düşüktür.",
+       "ekran": "Burası önemli: disrupsiyonda genetik program sağlamdır, bu nedenle tekrarlama riski çok düşüktür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0131",
+       "ses": "Ayrıca sınavın klasik tuzağı şudur: gastroşizis ve amniyotik bant amputasyonu malformasyon değil disrupsiyondur; klab fut ise deformasyondur.",
+       "ekran": "Ayrıca sınavın klasik tuzağı şudur: gastroşizis ve amniyotik bant amputasyonu malformasyon değil disrupsiyondur; klab fut ise deformasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b08",
+   "baslik": "Displazi ve malformasyon",
+   "paragraflar": [
+    {
+     "id": "k1-01-p027",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-01-c0132",
+       "ses": "Displazi, vücuttaki belli bir dokuda anormal hücresel organizasyonun yapısal değişikliklere neden olmasıdır.",
+       "ekran": "Displazi, vücuttaki belli bir dokuda anormal hücresel organizasyonun yapısal değişikliklere neden olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0133",
+       "ses": "Belirli bir doku tipinde hücresel organizasyon bozukluğu sonucu ortaya çıkan morfogenez hatasıdır.",
+       "ekran": "Belirli bir doku tipinde hücresel organizasyon bozukluğu sonucu ortaya çıkan morfogenez hatasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0134",
+       "ses": "Hücre düzeyinde enzim yapımı ya da yapısal protein sentezi bozulur.",
+       "ekran": "Hücre düzeyinde enzim yapımı ya da yapısal protein sentezi bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0135",
+       "ses": "Örnekleri depo hastalıkları, iskelet displazileri ve ektodermal displazilerdir.",
+       "ekran": "Örnekleri depo hastalıkları, iskelet displazileri ve ektodermal displazilerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0136",
+       "ses": "Slayttaki görsellerde iskelet displazisinde kısa boylu çocuklar, ektodermal displazide ise az sayıda ve sivri, konik dişler görülür; her iki tabloda da sorun tek bir doku tipindedir.",
+       "ekran": "Slayttaki görsellerde iskelet displazisinde kısa boylu çocuklar, ektodermal displazide ise az sayıda ve sivri, konik dişler görülür; her iki tabloda da sorun tek bir doku tipindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0137",
+       "ses": "Displastik durumlar süreklilik gösterir.",
+       "ekran": "Displastik durumlar süreklilik gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0138",
+       "ses": "Burası önemli: dokuda intrinsik bir bozukluk olduğundan, doku büyüdükçe ya da fonksiyon gördükçe klinik bulgular ağırlaşır.",
+       "ekran": "Burası önemli: dokuda intrinsik bir bozukluk olduğundan, doku büyüdükçe ya da fonksiyon gördükçe klinik bulgular ağırlaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0139",
+       "ses": "Displazi ile deformasyon bu açıdan zıt seyirlidir: deformasyon zamanla düzelme eğilimindedir, displazi ise doku büyüdükçe ağırlaşır.",
+       "ekran": "Displazi ile deformasyon bu açıdan zıt seyirlidir: deformasyon zamanla düzelme eğilimindedir, displazi ise doku büyüdükçe ağırlaşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p028",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-01-c0140",
+       "ses": "Malformasyon, organogenez döneminde bir yapının ya da organın yapısında lokalize bir hatadan ortaya çıkan, kalıcı, primer bir yapısal defekttir.",
+       "ekran": "Malformasyon, organogenez döneminde bir yapının ya da organın yapısında lokalize bir hatadan ortaya çıkan, kalıcı, primer bir yapısal defekttir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0141",
+       "ses": "Doku ya da organ sisteminin erken gelişimindeki duraklama, gecikme ya da yanlış yönlenme sonucu kalıcı yapısal anomaliler oluşur.",
+       "ekran": "Doku ya da organ sisteminin erken gelişimindeki duraklama, gecikme ya da yanlış yönlenme sonucu kalıcı yapısal anomaliler oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0142",
+       "ses": "Hata yapının kendi gelişim programındadır; dış etki gerektirmez ve kendiliğinden geri dönmez.",
+       "ekran": "Hata yapının kendi gelişim programındadır; dış etki gerektirmez ve kendiliğinden geri dönmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0143",
+       "ses": "Konjenital kalp hastalıkları, yarık damak ve yarık dudak ile spina bifida, yani vertebra arkının kapanmamasıyla giden nöral tüp defekti, malformasyona örnek verilebilir.",
+       "ekran": "Konjenital kalp hastalıkları, yarık damak ve yarık dudak ile spina bifida, yani vertebra arkının kapanmamasıyla giden nöral tüp defekti, malformasyona örnek verilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0144",
+       "ses": "Malformasyon izole olarak görülebileceği gibi bir sendromun, sekansın ya da assosiasyonun komponenti de olabilir.",
+       "ekran": "Malformasyon izole olarak görülebileceği gibi bir sendromun, sekansın ya da assosiasyonun komponenti de olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p029",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-01-c0145",
+       "ses": "4 primer defekti bir arada hatırlayalım.",
+       "ekran": "4 primer defekti bir arada hatırlayalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0146",
+       "ses": "Geri dönüşümlü olan deformasyondur; doku büyüdükçe ilerleyen displazidir; tekrarlama riski çok düşük olan yıkım disrupsiyondur; organogenezde primer hata ise malformasyondur.",
+       "ekran": "Geri dönüşümlü olan deformasyondur; doku büyüdükçe ilerleyen displazidir; tekrarlama riski çok düşük olan yıkım disrupsiyondur; organogenezde primer hata ise malformasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b09",
+   "baslik": "Birlikte görülmeye göre sınıflama: izole anomaliler ve sekans",
+   "paragraflar": [
+    {
+     "id": "k1-01-p030",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-01-c0147",
+       "ses": "Sınıflamanın üçüncü ekseni anomalilerin birlikte görülme biçimidir.",
+       "ekran": "Sınıflamanın üçüncü ekseni anomalilerin birlikte görülme biçimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0148",
+       "ses": "4 grup tanımlanır: tek bir sistemi etkileyen izole defektler, sekanslar, sendromlar ve assosiasyonlar.",
+       "ekran": "4 grup tanımlanır: tek bir sistemi etkileyen izole defektler, sekanslar, sendromlar ve assosiasyonlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p031",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-01-c0149",
+       "ses": "İzole anomali tek organ sistemini tutar.",
+       "ekran": "İzole anomali tek organ sistemini tutar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0150",
+       "ses": "Kalıtımı tek gen ya da multifaktöriyeldir; multifaktöriyel, birden çok gen ve çevresel etkenin birlikte rol oynaması demektir.",
+       "ekran": "Kalıtımı tek gen ya da multifaktöriyeldir; multifaktöriyel, birden çok gen ve çevresel etkenin birlikte rol oynaması demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0151",
+       "ses": "Örnekleri yarık dudak ve damak, mide çıkışındaki kasın kalınlaşarak daraldığı pilor stenozu, doğumsal kalça çıkığı ve konjenital kalp hastalığıdır.",
+       "ekran": "Örnekleri yarık dudak ve damak, mide çıkışındaki kasın kalınlaşarak daraldığı pilor stenozu, doğumsal kalça çıkığı ve konjenital kalp hastalığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0152",
+       "ses": "Görselde tek taraflı yarık dudaklı bir çocuk vardır; dış görünüşte tek bir defekt bulunsa bile kalp ya da beyin anomalisi eşlik edebilir.",
+       "ekran": "Görselde tek taraflı yarık dudaklı bir çocuk vardır; dış görünüşte tek bir defekt bulunsa bile kalp ya da beyin anomalisi eşlik edebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0153",
+       "ses": "Bu yüzden izole mi, multipl mi sorusu yanıtlanmadan izole denmez; merkezi sinir sistemi, kardiyovasküler sistem ve gastrointestinal sistem görüntülenmelidir.",
+       "ekran": "Bu yüzden izole mi, multipl mi sorusu yanıtlanmadan izole denmez; merkezi sinir sistemi, kardiyovasküler sistem ve gastrointestinal sistem görüntülenmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p032",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-01-c0154",
+       "ses": "Sekans, erken morfogenez döneminde altta yatan tek primer defekte sekonder olarak görülen anomalilerin eşlik etmesidir.",
+       "ekran": "Sekans, erken morfogenez döneminde altta yatan tek primer defekte sekonder olarak görülen anomalilerin eşlik etmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0155",
+       "ses": "Primer malformasyonun ek defektleri belirlediği durumlardır; anomaliler bir zincirin halkaları gibi birbirine bağlıdır.",
+       "ekran": "Primer malformasyonun ek defektleri belirlediği durumlardır; anomaliler bir zincirin halkaları gibi birbirine bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0156",
+       "ses": "Başlatıcı yapısal bozukluk malformasyon, deformasyon, disrupsiyon ya da displazi olabilir.",
+       "ekran": "Başlatıcı yapısal bozukluk malformasyon, deformasyon, disrupsiyon ya da displazi olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0157",
+       "ses": "Tekrarlama riski, primer defektin görülme riskine göre değişir.",
+       "ekran": "Tekrarlama riski, primer defektin görülme riskine göre değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0158",
+       "ses": "Kalıtımı tek gen ya da multifaktöriyeldir.",
+       "ekran": "Kalıtımı tek gen ya da multifaktöriyeldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0159",
+       "ses": "Potter sekansı ve meningomiyelosel sekansı en bilinen sekans örnekleridir.",
+       "ekran": "Potter sekansı ve meningomiyelosel sekansı en bilinen sekans örnekleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0160",
+       "ses": "Nöral tüp defekti sekansında primer defekt spina bifidadır; spina bifida sekonder olarak hidrosefaliye, yani beyin ventriküllerinde beyin omurilik sıvısının birikmesine, ve pes ekinovarus gibi ayak deformitelerine neden olur.",
+       "ekran": "Nöral tüp defekti sekansında primer defekt spina bifidadır; spina bifida sekonder olarak hidrosefaliye, yani beyin ventriküllerinde beyin omurilik sıvısının birikmesine, ve pes ekinovarus gibi ayak deformitelerine neden olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b10",
+   "baslik": "Potter sekansı",
+   "paragraflar": [
+    {
+     "id": "k1-01-p033",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-01-c0161",
+       "ses": "Potter sekansı, bir malformasyonun zincirleme deformasyonlara yol açtığı en klasik sekanstır.",
+       "ekran": "Potter sekansı, bir malformasyonun zincirleme deformasyonlara yol açtığı en klasik sekanstır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0162",
+       "ses": "Primer defekt bilateral renal agenezidir, yani iki böbreğin de hiç gelişmemesidir.",
+       "ekran": "Primer defekt bilateral renal agenezidir, yani iki böbreğin de hiç gelişmemesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0163",
+       "ses": "Fetal idrar yapılamaz ve amniyotik sıvı azalır; bu oligohidramniyostur.",
+       "ekran": "Fetal idrar yapılamaz ve amniyotik sıvı azalır; bu oligohidramniyostur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0164",
+       "ses": "Sıvı yastığı ortadan kalkınca fetal yüz ve ekstremitelerde kompresyon oluşur ve bu kompresyon deformasyona neden olur.",
+       "ekran": "Sıvı yastığı ortadan kalkınca fetal yüz ve ekstremitelerde kompresyon oluşur ve bu kompresyon deformasyona neden olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0165",
+       "ses": "Öte yandan bronş dallanması sırasında amniyotik sıvı sirkülasyonu olmadığı için akciğer maturasyonu bozulur ve olgular doğum sonrası kısa sürede kaybedilir.",
+       "ekran": "Öte yandan bronş dallanması sırasında amniyotik sıvı sirkülasyonu olmadığı için akciğer maturasyonu bozulur ve olgular doğum sonrası kısa sürede kaybedilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p034",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-01-c0166",
+       "ses": "Potter sekansının akış şeması, oligohidramniyosun birkaç farklı başlangıçtan gelişebileceğini de gösterir.",
+       "ekran": "Potter sekansının akış şeması, oligohidramniyosun birkaç farklı başlangıçtan gelişebileceğini de gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0167",
+       "ses": "Renal agenezide idrar hiç yapılmaz.",
+       "ekran": "Renal agenezide idrar hiç yapılmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0168",
+       "ses": "Üretra ya da mesane boynunda obstrüksiyonda idrar yapılır ama amniyon boşluğuna ulaşamaz.",
+       "ekran": "Üretra ya da mesane boynunda obstrüksiyonda idrar yapılır ama amniyon boşluğuna ulaşamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0169",
+       "ses": "Amniyotik sıvının kronik kaybında ise sıvı yapılsa da sürekli kaybedilir.",
+       "ekran": "Amniyotik sıvının kronik kaybında ise sıvı yapılsa da sürekli kaybedilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0170",
+       "ses": "Hepsinin ortak yolu oligohidramniyostur.",
+       "ekran": "Hepsinin ortak yolu oligohidramniyostur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0171",
+       "ses": "Sonuçlar yassılmış yüz özellikleri, pulmoner hipoplazi, talipes ekinovarus, konjenital kalça displazisi ve ağır olgularda ölümdür; şemada ölüm pulmoner hipoplazinin devamında yer alır.",
+       "ekran": "Sonuçlar yassılmış yüz özellikleri, pulmoner hipoplazi, talipes ekinovarus, konjenital kalça displazisi ve ağır olgularda ölümdür; şemada ölüm pulmoner hipoplazinin devamında yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p035",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-01-c0172",
+       "ses": "Burası önemli: Potter sekansında zincir bilateral renal agenezi, oligohidramniyos, yüz ve ekstremite kompresyonu ve pulmoner hipoplazi şeklinde ilerler.",
+       "ekran": "Burası önemli: Potter sekansında zincir bilateral renal agenezi, oligohidramniyos, yüz ve ekstremite kompresyonu ve pulmoner hipoplazi şeklinde ilerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0173",
+       "ses": "Ölüm nedeni böbrek yokluğundan çok pulmoner hipoplazidir, çünkü akciğer gelişimi amniyotik sıvıya bağımlıdır.",
+       "ekran": "Ölüm nedeni böbrek yokluğundan çok pulmoner hipoplazidir, çünkü akciğer gelişimi amniyotik sıvıya bağımlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0174",
+       "ses": "Bir de tuzak var: Potter bir sendrom değil, sekanstır.",
+       "ekran": "Bir de tuzak var: Potter bir sendrom değil, sekanstır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b11",
+   "baslik": "Assosiasyon",
+   "paragraflar": [
+    {
+     "id": "k1-01-p036",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-01-c0175",
+       "ses": "Assosiasyon, klinik prezentasyonu değişkenlik gösteren çeşitli anomalilerin rastgele görülme olasılığından daha sık bir araya geldiği anomaliler topluluğudur.",
+       "ekran": "Assosiasyon, klinik prezentasyonu değişkenlik gösteren çeşitli anomalilerin rastgele görülme olasılığından daha sık bir araya geldiği anomaliler topluluğudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0176",
+       "ses": "Etiyopatogenezinde bileşenlerin embriyonik oluşum süreçleri aynı değildir, aralarında komşuluk ilişkisi yoktur; genelde sporadik gözlenir ve belli bir kalıtım modeliyle ilişkilendirilemez.",
+       "ekran": "Etiyopatogenezinde bileşenlerin embriyonik oluşum süreçleri aynı değildir, aralarında komşuluk ilişkisi yoktur; genelde sporadik gözlenir ve belli bir kalıtım modeliyle ilişkilendirilemez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p037",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-01-c0177",
+       "ses": "En bilinen örnek VACTERL assosiasyonudur.",
+       "ekran": "En bilinen örnek VACTERL assosiasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0178",
+       "ses": "Harfleri şöyle açılır: vertebral anomali, anal atrezi, kardiyak anomali, trakeoözofageal fistül, renal anomali ve ekstremite, yani İngilizce limb anomalisi.",
+       "ekran": "Harfleri şöyle açılır: vertebral anomali, anal atrezi, kardiyak anomali, trakeoözofageal fistül, renal anomali ve ekstremite, yani İngilizce limb anomalisi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0179",
+       "ses": "İkinci örnek MURCS assosiasyonudur: Müller kanalı aplazisi, renal aplazi ve servikotorasik somit displazisi.",
+       "ekran": "İkinci örnek MURCS assosiasyonudur: Müller kanalı aplazisi, renal aplazi ve servikotorasik somit displazisi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0180",
+       "ses": "Burası önemli: anal atrezili her bebekte özofagus, vertebra, kalp ve böbreklere bakmak gerekir.",
+       "ekran": "Burası önemli: anal atrezili her bebekte özofagus, vertebra, kalp ve böbreklere bakmak gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0181",
+       "ses": "Yani tek bir bileşen bulunduğunda diğerleri aktif olarak aranır.",
+       "ekran": "Yani tek bir bileşen bulunduğunda diğerleri aktif olarak aranır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p038",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-01-c0182",
+       "ses": "Assosiasyonda defektler 2 ya da daha fazla olacak şekilde ve herhangi bir kombinasyonda birlikte görülebilir; her hastada tüm bileşenler bulunmaz.",
+       "ekran": "Assosiasyonda defektler 2 ya da daha fazla olacak şekilde ve herhangi bir kombinasyonda birlikte görülebilir; her hastada tüm bileşenler bulunmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0183",
+       "ses": "Öngörülebilen bir kalıtım modeli ve bilinen ortak bir etiyolojisi olmadığı için sendrom olarak sınıflandırılamaz.",
+       "ekran": "Öngörülebilen bir kalıtım modeli ve bilinen ortak bir etiyolojisi olmadığı için sendrom olarak sınıflandırılamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0184",
+       "ses": "Tekrarlama riski oldukça düşüktür.",
+       "ekran": "Tekrarlama riski oldukça düşüktür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0185",
+       "ses": "Genetik danışma için assosiasyonun sendromdan ayırt edilmesi önemlidir, çünkü sendromda ortak neden ve kalıtım modeli olduğundan risk farklı hesaplanır.",
+       "ekran": "Genetik danışma için assosiasyonun sendromdan ayırt edilmesi önemlidir, çünkü sendromda ortak neden ve kalıtım modeli olduğundan risk farklı hesaplanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0186",
+       "ses": "Burası önemli: VACTERL bir sendrom değil assosiasyondur.",
+       "ekran": "Burası önemli: VACTERL bir sendrom değil assosiasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b12",
+   "baslik": "Sendrom",
+   "paragraflar": [
+    {
+     "id": "k1-01-p039",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-01-c0187",
+       "ses": "Sendrom kelimesi eski Yunancada birlikte giden anlamına gelir.",
+       "ekran": "Sendrom kelimesi eski Yunancada birlikte giden anlamına gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0188",
+       "ses": "Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması sendrom olarak adlandırılır.",
+       "ekran": "Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması sendrom olarak adlandırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0189",
+       "ses": "Aynı bulgular farklı hastalarda tekrar tekrar aynı birliktelikte görülür ve bu tekrarlayan örüntü sendromu tanınabilir kılar.",
+       "ekran": "Aynı bulgular farklı hastalarda tekrar tekrar aynı birliktelikte görülür ve bu tekrarlayan örüntü sendromu tanınabilir kılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0190",
+       "ses": "Bir sendrom tanımlanınca farklı olgular karşılaştırılarak etiyolojisi, klinik spektrumu ve patogenezi belirlenmeye çalışılır.",
+       "ekran": "Bir sendrom tanımlanınca farklı olgular karşılaştırılarak etiyolojisi, klinik spektrumu ve patogenezi belirlenmeye çalışılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0191",
+       "ses": "Slaytta Angelman sendromlu çocuklar gösterilir; farklı yaşlarda benzer yüz görünümü ve el duruşu kalıbı örnekler.",
+       "ekran": "Slaytta Angelman sendromlu çocuklar gösterilir; farklı yaşlarda benzer yüz görünümü ve el duruşu kalıbı örnekler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0192",
+       "ses": "Sekanstan farkı, anomalilerin tek bir primer defektin zincirleme sonuçları olarak değil, birlikte giden bir örüntü olarak ortaya çıkmasıdır.",
+       "ekran": "Sekanstan farkı, anomalilerin tek bir primer defektin zincirleme sonuçları olarak değil, birlikte giden bir örüntü olarak ortaya çıkmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p040",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-01-c0193",
+       "ses": "Bir sendromun çok sistemli doğası, aynı hastada bir arada görülen bulgu listesiyle en iyi anlaşılır.",
+       "ekran": "Bir sendromun çok sistemli doğası, aynı hastada bir arada görülen bulgu listesiyle en iyi anlaşılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0194",
+       "ses": "Derste örnek olarak verilen bulgu kümesi, klasik olarak trizomi 21, yani Down sendromu tablosudur.",
+       "ekran": "Derste örnek olarak verilen bulgu kümesi, klasik olarak trizomi 21, yani Down sendromu tablosudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0195",
+       "ses": "Dış görünümde tipik dismorfik yüz görünümü, avuç içinde simian çizgisi ve birinci ile ikinci ayak parmakları arasındaki mesafede artış vardır.",
+       "ekran": "Dış görünümde tipik dismorfik yüz görünümü, avuç içinde simian çizgisi ve birinci ile ikinci ayak parmakları arasındaki mesafede artış vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0196",
+       "ses": "Motor mental gerilik, kaslarda hipotoni ve eklem gevşekliği görülür.",
+       "ekran": "Motor mental gerilik, kaslarda hipotoni ve eklem gevşekliği görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0197",
+       "ses": "Konjenital kalp defektleri, duodenal stenoz ya da atrezi, kalın barsakta ganglion hücrelerinin doğuştan yokluğu olan Hirschsprung hastalığı ve diğer gastrointestinal malformasyonlar eşlik eder.",
+       "ekran": "Konjenital kalp defektleri, duodenal stenoz ya da atrezi, kalın barsakta ganglion hücrelerinin doğuştan yokluğu olan Hirschsprung hastalığı ve diğer gastrointestinal malformasyonlar eşlik eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0198",
+       "ses": "Bunlara immün sistem bozuklukları, lösemide risk artışı, hipotiroidi ve sensörinöral işitme kaybı eklenir.",
+       "ekran": "Bunlara immün sistem bozuklukları, lösemide risk artışı, hipotiroidi ve sensörinöral işitme kaybı eklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0199",
+       "ses": "Bu listede minör ve majör anomaliler aynı kalıbın parçası olarak birlikte yer alır.",
+       "ekran": "Bu listede minör ve majör anomaliler aynı kalıbın parçası olarak birlikte yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p041",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-01-c0200",
+       "ses": "Sendromu tanımlayan ölçütler şunlardır: tanımlanabilen bir kalıtım şekli ya da ortak bir etiyolojik nedeni vardır; 2 ya da daha çok sistem etkilenir; ve konjenital malformasyonların birlikteliği durumudur.",
+       "ekran": "Sendromu tanımlayan ölçütler şunlardır: tanımlanabilen bir kalıtım şekli ya da ortak bir etiyolojik nedeni vardır; 2 ya da daha çok sistem etkilenir; ve konjenital malformasyonların birlikteliği durumudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0201",
+       "ses": "Sendromların etiyolojisinde 5 grup yer alır: kromozomal anomaliler; mikroskopta görülemeyecek kadar küçük kromozom parçası kayıplarıyla oluşan mikrodelesyon sendromları; tek gen defektleri; poligenik, yani birden çok genin etkisiyle belirlenen hastalıklar; ve gebelikte embriyoya zarar veren dış etkenler olan teratojenler.",
+       "ekran": "Sendromların etiyolojisinde 5 grup yer alır: kromozomal anomaliler; mikroskopta görülemeyecek kadar küçük kromozom parçası kayıplarıyla oluşan mikrodelesyon sendromları; tek gen defektleri; poligenik, yani birden çok genin etkisiyle belirlenen hastalıklar; ve gebelikte embriyoya zarar veren dış etkenler olan teratojenler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0202",
+       "ses": "Özetle sekans bir zincirdir, sendrom ortak bir nedendir, assosiasyon ise istatistiksel bir birlikteliktir ve riski düşüktür.",
+       "ekran": "Özetle sekans bir zincirdir, sendrom ortak bir nedendir, assosiasyon ise istatistiksel bir birlikteliktir ve riski düşüktür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b13",
+   "baslik": "Konjenital anomalilerin sıklığı ve etiyolojisi",
+   "paragraflar": [
+    {
+     "id": "k1-01-p042",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-01-c0203",
+       "ses": "Konjenital anomalilerin yenidoğanda sıklığı %2 ile 4 arasındadır.",
+       "ekran": "Konjenital anomalilerin yenidoğanda sıklığı %2 ile 4 arasındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0204",
+       "ses": "Bu anomaliler birlikte görülme gruplarına göre şöyle dağılır: izole majör anomali %60 ile 65, sendromlar %20, Potter sekansı gibi sekanslar %8 ile 13, VACTERL gibi assosiasyonlar ise %3.",
+       "ekran": "Bu anomaliler birlikte görülme gruplarına göre şöyle dağılır: izole majör anomali %60 ile 65, sendromlar %20, Potter sekansı gibi sekanslar %8 ile 13, VACTERL gibi assosiasyonlar ise %3.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0205",
+       "ses": "Burası önemli: en büyük grup izole majör anomalidir, en seyrek grup assosiasyondur.",
+       "ekran": "Burası önemli: en büyük grup izole majör anomalidir, en seyrek grup assosiasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0206",
+       "ses": "Sıralama büyükten küçüğe izole majör anomali, sendrom, sekans ve assosiasyon şeklindedir.",
+       "ekran": "Sıralama büyükten küçüğe izole majör anomali, sendrom, sekans ve assosiasyon şeklindedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p043",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-01-c0207",
+       "ses": "Gelişimsel defektlerin özet şeması 2 sınıflamayı birleştirir.",
+       "ekran": "Gelişimsel defektlerin özet şeması 2 sınıflamayı birleştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0208",
+       "ses": "Tek primer defektler deformasyon, disrupsiyon, displazi ve malformasyondur.",
+       "ekran": "Tek primer defektler deformasyon, disrupsiyon, displazi ve malformasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0209",
+       "ses": "Çoklu defektler ise sendrom, assosiasyon ve sekanstır.",
+       "ekran": "Çoklu defektler ise sendrom, assosiasyon ve sekanstır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p044",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-01-c0210",
+       "ses": "Konjenital anomalilerin etiyolojisine baktığımızda dağılım, dismorfolojinin neden bu kadar zorlu bir alan olduğunu gösterir.",
+       "ekran": "Konjenital anomalilerin etiyolojisine baktığımızda dağılım, dismorfolojinin neden bu kadar zorlu bir alan olduğunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0211",
+       "ses": "Etiyolojisi bilinmeyenler %50 ile 60 ile en büyük gruptur.",
+       "ekran": "Etiyolojisi bilinmeyenler %50 ile 60 ile en büyük gruptur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0212",
+       "ses": "Multifaktöriyel nedenler %20 ile 25'tir ve bilinen nedenler içinde en sıktır.",
+       "ekran": "Multifaktöriyel nedenler %20 ile 25'tir ve bilinen nedenler içinde en sıktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0213",
+       "ses": "Çevresel faktörler %7 ile 10, mutant genler, yani tek gen nedenleri %7 ile 8, kromozomal anomaliler ise %6 ile 7'dir.",
+       "ekran": "Çevresel faktörler %7 ile 10, mutant genler, yani tek gen nedenleri %7 ile 8, kromozomal anomaliler ise %6 ile 7'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0214",
+       "ses": "Burası önemli: konjenital anomalilerin yarısından fazlasında neden bilinmez.",
+       "ekran": "Burası önemli: konjenital anomalilerin yarısından fazlasında neden bilinmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b14",
+   "baslik": "Dismorfik hastaya yaklaşım ve öykü",
+   "paragraflar": [
+    {
+     "id": "k1-01-p045",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-01-c0215",
+       "ses": "Dismorfik muayene, belirli durumlardan biri saptandığında başlatılır.",
+       "ekran": "Dismorfik muayene, belirli durumlardan biri saptandığında başlatılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0216",
+       "ses": "Bunlar anormal büyüme ve oranlar, yani büyümede gecikme ya da aşırı büyüme; anormal ya da alışılmadık yüz ve vücut özellikleri, yani doğum defektleri, 2'den fazla minör ya da 1 majör anomali; anormal genitalya ya da erken veya geç puberte; psikomotor gerilik, konuşmada gecikme ya da mental retardasyon; ve anormal nöromüsküler fonksiyon, körlük ya da sağırlıktır.",
+       "ekran": "Bunlar anormal büyüme ve oranlar, yani büyümede gecikme ya da aşırı büyüme; anormal ya da alışılmadık yüz ve vücut özellikleri, yani doğum defektleri, 2'den fazla minör ya da 1 majör anomali; anormal genitalya ya da erken veya geç puberte; psikomotor gerilik, konuşmada gecikme ya da mental retardasyon; ve anormal nöromüsküler fonksiyon, körlük ya da sağırlıktır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p046",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-01-c0217",
+       "ses": "Dismorfik hastada öykü, anomalinin nedenini gösterebilecek en değerli araçtır.",
+       "ekran": "Dismorfik hastada öykü, anomalinin nedenini gösterebilecek en değerli araçtır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0218",
+       "ses": "Özgeçmiş ve soygeçmişte ebeveynlerin yaşı, sağlığı, mesleği, hastalıkları ve daha önceki gebelikleri sorulur.",
+       "ekran": "Özgeçmiş ve soygeçmişte ebeveynlerin yaşı, sağlığı, mesleği, hastalıkları ve daha önceki gebelikleri sorulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0219",
+       "ses": "Annenin kullandığı ilaçlar, alkol ya da bağımlılık yapıcı maddeler, gebelikte ateş, döküntü ya da hastalık öyküsü sorgulanır.",
+       "ekran": "Annenin kullandığı ilaçlar, alkol ya da bağımlılık yapıcı maddeler, gebelikte ateş, döküntü ya da hastalık öyküsü sorgulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0220",
+       "ses": "Fetal hareketler ile polihidramniyos ya da oligohidramniyos olup olmadığı öğrenilir.",
+       "ekran": "Fetal hareketler ile polihidramniyos ya da oligohidramniyos olup olmadığı öğrenilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0221",
+       "ses": "Çocuğun doğum ağırlığı, boyu ve baş çevresi kaydedilir.",
+       "ekran": "Çocuğun doğum ağırlığı, boyu ve baş çevresi kaydedilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0222",
+       "ses": "3 kuşaklı pedigri çizilir, tüm sistemler muayene edilir, tetkikler, grafiler ve fotoğraf alınır.",
+       "ekran": "3 kuşaklı pedigri çizilir, tüm sistemler muayene edilir, tetkikler, grafiler ve fotoğraf alınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0223",
+       "ses": "Hasta ex olmuşsa otopsi ve gerekli görülen spesifik analizler önerilmeli, fotoğraf ve grafi gibi tanı için gerekli görüntüler ve bilgiler kaydedilmelidir.",
+       "ekran": "Hasta ex olmuşsa otopsi ve gerekli görülen spesifik analizler önerilmeli, fotoğraf ve grafi gibi tanı için gerekli görüntüler ve bilgiler kaydedilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p047",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-01-c0224",
+       "ses": "İki kavram birbirinden ayrılmalıdır.",
+       "ekran": "İki kavram birbirinden ayrılmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0225",
+       "ses": "Dismorfik çocuk, birinci derece akrabalarda mevcut olmayan 3 ya da daha fazla minör anomaliye sahip çocuktur.",
+       "ekran": "Dismorfik çocuk, birinci derece akrabalarda mevcut olmayan 3 ya da daha fazla minör anomaliye sahip çocuktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0226",
+       "ses": "Dismorfolojik değerlendirme ise bir ya da birden fazla konjenital anomalinin varlığında gerekir.",
+       "ekran": "Dismorfolojik değerlendirme ise bir ya da birden fazla konjenital anomalinin varlığında gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0227",
+       "ses": "Burası önemli: dismorfik çocuk tanımında eşik 3 minör anomalidir ve aile karşılaştırması zorunludur; anne, baba ya da kardeşte de bulunan bir bulgu ailesel kabul edilir ve sayılmaz.",
+       "ekran": "Burası önemli: dismorfik çocuk tanımında eşik 3 minör anomalidir ve aile karşılaştırması zorunludur; anne, baba ya da kardeşte de bulunan bir bulgu ailesel kabul edilir ve sayılmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0228",
+       "ses": "Dismorfik çocuğa yaklaşımda önemli noktalar anamnez, en az 3 kuşağı kapsayan aile öyküsü, dikkatli ve detaylı ölçümlerin alındığı fizik muayene, fotoğraflama, genetik testleri içeren tetkik, veri tabanları taraması ve genetik danışmadır.",
+       "ekran": "Dismorfik çocuğa yaklaşımda önemli noktalar anamnez, en az 3 kuşağı kapsayan aile öyküsü, dikkatli ve detaylı ölçümlerin alındığı fizik muayene, fotoğraflama, genetik testleri içeren tetkik, veri tabanları taraması ve genetik danışmadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b15",
+   "baslik": "Anamnez, Apgar skoru ve pedigri",
+   "paragraflar": [
+    {
+     "id": "k1-01-p048",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-01-c0229",
+       "ses": "Anamnez 2 zaman dilimine ayrılır.",
+       "ekran": "Anamnez 2 zaman dilimine ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0230",
+       "ses": "Prenatal öyküde anne yaşı ve parite, yani doğum sayısı sorulur.",
+       "ekran": "Prenatal öyküde anne yaşı ve parite, yani doğum sayısı sorulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0231",
+       "ses": "TORCH sorgulanır; bu, annedeki bir enfeksiyon etkeninin plasenta aracılığıyla ya da doğum sırasında bebeğe geçmesidir.",
+       "ekran": "TORCH sorgulanır; bu, annedeki bir enfeksiyon etkeninin plasenta aracılığıyla ya da doğum sırasında bebeğe geçmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0232",
+       "ses": "Fetal hareketler, gebelik komplikasyonları, teratojen maruziyeti, prenatal tanı sonuçları, tarama testleri ve ultrasonografi bulguları da prenatal öykünün parçasıdır.",
+       "ekran": "Fetal hareketler, gebelik komplikasyonları, teratojen maruziyeti, prenatal tanı sonuçları, tarama testleri ve ultrasonografi bulguları da prenatal öykünün parçasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0233",
+       "ses": "Perinatal öyküde gebelik süresi, prezentasyon, yani doğumda fetusun önde gelen kısmı, ve doğum şekli, doğum süreci ve ilaç kullanımı, Apgar skoru ve komplikasyonlar ile neonatal süreç sorgulanır.",
+       "ekran": "Perinatal öyküde gebelik süresi, prezentasyon, yani doğumda fetusun önde gelen kısmı, ve doğum şekli, doğum süreci ve ilaç kullanımı, Apgar skoru ve komplikasyonlar ile neonatal süreç sorgulanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p049",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-01-c0234",
+       "ses": "Apgar skoru, doğumdan sonra bebeklerin standart şekilde değerlendirilmesine olanak sağlayan skorlama sistemidir.",
+       "ekran": "Apgar skoru, doğumdan sonra bebeklerin standart şekilde değerlendirilmesine olanak sağlayan skorlama sistemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0235",
+       "ses": "Her biri 0, 1 ya da 2 puan alabilen 5 bileşenden oluşur: renk, kalp hızı, refleksler, kas tonusu ve solunum.",
+       "ekran": "Her biri 0, 1 ya da 2 puan alabilen 5 bileşenden oluşur: renk, kalp hızı, refleksler, kas tonusu ve solunum.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0236",
+       "ses": "Toplam puan 8 ile 10 arasındaysa normal, 4 ile 7 arasındaysa oksijene ihtiyaç var, 4'ün altındaysa şiddetli oksijen yetersizliği var demektir.",
+       "ekran": "Toplam puan 8 ile 10 arasındaysa normal, 4 ile 7 arasındaysa oksijene ihtiyaç var, 4'ün altındaysa şiddetli oksijen yetersizliği var demektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p050",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k1-01-c0237",
+       "ses": "Aile öyküsünde 3 jenerasyonlu pedigri esastır.",
+       "ekran": "Aile öyküsünde 3 jenerasyonlu pedigri esastır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0238",
+       "ses": "Sorgulanacak başlıklar etnik köken; diğer çocuklarda boy değişiklikleri, kafa şekilleri ve öğrenme güçlükleri; yenidoğan ölümleri; malformasyonlu doğmuş tüm çocuklar; akrabalık; aktarılan hastalıklar; infertilite ve tekrarlayan gebelik kaybıdır.",
+       "ekran": "Sorgulanacak başlıklar etnik köken; diğer çocuklarda boy değişiklikleri, kafa şekilleri ve öğrenme güçlükleri; yenidoğan ölümleri; malformasyonlu doğmuş tüm çocuklar; akrabalık; aktarılan hastalıklar; infertilite ve tekrarlayan gebelik kaybıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0239",
+       "ses": "Öykünün güvenilirliği konusunda 2 uyarı vardır.",
+       "ekran": "Öykünün güvenilirliği konusunda 2 uyarı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0240",
+       "ses": "Çoğu aile önce negatif öykü verir; ailede kimsede yok yanıtı ilk görüşmede sık alınır ve çoğu zaman yanıltıcıdır, bu yüzden sorular tekrarlanmalı ve somutlaştırılmalıdır.",
+       "ekran": "Çoğu aile önce negatif öykü verir; ailede kimsede yok yanıtı ilk görüşmede sık alınır ve çoğu zaman yanıltıcıdır, bu yüzden sorular tekrarlanmalı ve somutlaştırılmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0241",
+       "ses": "Pozitif öyküler ise doğrulanmadan kabul edilmemelidir.",
+       "ekran": "Pozitif öyküler ise doğrulanmadan kabul edilmemelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p051",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k1-01-c0242",
+       "ses": "Ders kitabından alınan 4 aile ağacı, pedigrinin tanıya nasıl yol gösterdiğini örnekler.",
+       "ekran": "Ders kitabından alınan 4 aile ağacı, pedigrinin tanıya nasıl yol gösterdiğini örnekler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0243",
+       "ses": "Karelerle erkekler, dairelerle kadınlar, dolu sembollerle hastalar gösterilir.",
+       "ekran": "Karelerle erkekler, dairelerle kadınlar, dolu sembollerle hastalar gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0244",
+       "ses": "Akraba evliliği ile birlikte aynı kuşakta farklı cinsiyetlerde birden fazla hasta varsa otozomal resesif kalıtım düşünülür; ebeveynler sağlıklıdır, hastalık kardeşler arasında görülür.",
+       "ekran": "Akraba evliliği ile birlikte aynı kuşakta farklı cinsiyetlerde birden fazla hasta varsa otozomal resesif kalıtım düşünülür; ebeveynler sağlıklıdır, hastalık kardeşler arasında görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0245",
+       "ses": "Vertikal kalıtım ve erkekten erkeğe geçiş varsa otozomal dominant kalıtım düşünülür; her kuşakta hasta vardır.",
+       "ekran": "Vertikal kalıtım ve erkekten erkeğe geçiş varsa otozomal dominant kalıtım düşünülür; her kuşakta hasta vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0246",
+       "ses": "Yalnızca erkekler etkileniyor ve erkekten erkeğe geçiş yoksa X kromozomuna bağlı resesif kalıtım düşünülür; hastalık taşıyıcı kadınlar üzerinden aktarılır.",
+       "ekran": "Yalnızca erkekler etkileniyor ve erkekten erkeğe geçiş yoksa X kromozomuna bağlı resesif kalıtım düşünülür; hastalık taşıyıcı kadınlar üzerinden aktarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0247",
+       "ses": "Erkekten erkeğe geçiş X kromozomuna bağlı kalıtımı dışlar, çünkü baba oğluna X değil Y kromozomu verir.",
+       "ekran": "Erkekten erkeğe geçiş X kromozomuna bağlı kalıtımı dışlar, çünkü baba oğluna X değil Y kromozomu verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0248",
+       "ses": "Çok sayıda abortus ya da ölü doğum öyküsü ise ebeveynlerden birinde dengeli kromozomal anomali olduğunu düşündürür; dengeli anomalide kromozom parçaları materyal kaybı ya da fazlası olmadan yer değiştirmiştir.",
+       "ekran": "Çok sayıda abortus ya da ölü doğum öyküsü ise ebeveynlerden birinde dengeli kromozomal anomali olduğunu düşündürür; dengeli anomalide kromozom parçaları materyal kaybı ya da fazlası olmadan yer değiştirmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b16",
+   "baslik": "Fizik muayene: ölçümler, kafa ve yüz",
+   "paragraflar": [
+    {
+     "id": "k1-01-p052",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-01-c0249",
+       "ses": "Dismorfik hastanın fizik muayenesi ölçümle başlar.",
+       "ekran": "Dismorfik hastanın fizik muayenesi ölçümle başlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0250",
+       "ses": "Boy, ağırlık ve baş çevresi persantil eğrilerine göre değerlendirilir; persantil, bir ölçümün aynı yaş ve cinsiyetteki dağılımdaki sırasıdır.",
+       "ekran": "Boy, ağırlık ve baş çevresi persantil eğrilerine göre değerlendirilir; persantil, bir ölçümün aynı yaş ve cinsiyetteki dağılımdaki sırasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0251",
+       "ses": "Ardından başta yüz dismorfolojisi olmak üzere tüm sistemler tek tek gözden geçirilir.",
+       "ekran": "Ardından başta yüz dismorfolojisi olmak üzere tüm sistemler tek tek gözden geçirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0252",
+       "ses": "Majör malformasyonlar kadar minör anomaliler de kaydedilir, hastanın elindeki tüm laboratuvar sonuçları, raporlar ve grafiler incelenir, ölçümler ve fotoğraflar alınır.",
+       "ekran": "Majör malformasyonlar kadar minör anomaliler de kaydedilir, hastanın elindeki tüm laboratuvar sonuçları, raporlar ve grafiler incelenir, ölçümler ve fotoğraflar alınır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p053",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-01-c0253",
+       "ses": "Slaytta örnek olarak Cornelia de Lange sendromu verilir.",
+       "ekran": "Slaytta örnek olarak Cornelia de Lange sendromu verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0254",
+       "ses": "Nadir görülen; büyüme geriliği, mental retardasyon, tipik yüz görünümü, orta hatta birleşen kalın kaşlar, yani sinofris, dar, ince ve aşağı dönük üst dudak ve ekstremitelerin kısa olması demek olan mikromeli ile karakterize bir sendromdur.",
+       "ekran": "Nadir görülen; büyüme geriliği, mental retardasyon, tipik yüz görünümü, orta hatta birleşen kalın kaşlar, yani sinofris, dar, ince ve aşağı dönük üst dudak ve ekstremitelerin kısa olması demek olan mikromeli ile karakterize bir sendromdur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p054",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k1-01-c0255",
+       "ses": "Bazı genel bulgular tek başına sendrom adı vermez ama altta yatan olası bir etiyolojik neden olduğunu düşündürür.",
+       "ekran": "Bazı genel bulgular tek başına sendrom adı vermez ama altta yatan olası bir etiyolojik neden olduğunu düşündürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0256",
+       "ses": "Bunlar hipotoni; üçüncü persantilin altında, yani -3 standart sapmanın altında boy olarak tanımlanan kısa yapı; 97. persantilin üzerinde, yani +3 standart sapmanın üzerinde boy olarak tanımlanan uzun yapı; boy ve kilonun -3 standart sapmanın altında olduğu gelişme geriliği; kilonun +3 standart sapmanın üzerinde olduğu obezite; baş çevresinin -3 standart sapmanın altında olduğu mikrosefali ve +3 standart sapmanın üzerinde olduğu makrosefalidir.",
+       "ekran": "Bunlar hipotoni; üçüncü persantilin altında, yani -3 standart sapmanın altında boy olarak tanımlanan kısa yapı; 97. persantilin üzerinde, yani +3 standart sapmanın üzerinde boy olarak tanımlanan uzun yapı; boy ve kilonun -3 standart sapmanın altında olduğu gelişme geriliği; kilonun +3 standart sapmanın üzerinde olduğu obezite; baş çevresinin -3 standart sapmanın altında olduğu mikrosefali ve +3 standart sapmanın üzerinde olduğu makrosefalidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0257",
+       "ses": "Kısa gövdeli ya da kısa ekstremiteli olabilen orantısız kısa yapı ve başını tutma, oturma ve konuşma zamanı gibi gelişim basamaklarının geri kalması da bu listededir.",
+       "ekran": "Kısa gövdeli ya da kısa ekstremiteli olabilen orantısız kısa yapı ve başını tutma, oturma ve konuşma zamanı gibi gelişim basamaklarının geri kalması da bu listededir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p055",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-01-c0258",
+       "ses": "Kafa ve yüz şekli, dismorfik muayenenin ilk bakışta değerlendirilen bölümüdür.",
+       "ekran": "Kafa ve yüz şekli, dismorfik muayenenin ilk bakışta değerlendirilen bölümüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0259",
+       "ses": "Makrosefali normalden büyük, mikrosefali normalden küçük kafatasıdır.",
+       "ekran": "Makrosefali normalden büyük, mikrosefali normalden küçük kafatasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0260",
+       "ses": "Brakisefali kafatasının arkasının düz olması, trigonosefali ise baş yapısının üçgenimsi olmasıdır.",
+       "ekran": "Brakisefali kafatasının arkasının düz olması, trigonosefali ise baş yapısının üçgenimsi olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0261",
+       "ses": "Daha önce gördüğümüz skafosefali ve plagiosefali de bu muayenede tanınır.",
+       "ekran": "Daha önce gördüğümüz skafosefali ve plagiosefali de bu muayenede tanınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0262",
+       "ses": "Yüz biçiminde uzun yüz, kaba yüz ve üçgen yüz görünümü tanımlanır.",
+       "ekran": "Yüz biçiminde uzun yüz, kaba yüz ve üçgen yüz görünümü tanımlanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p056",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k1-01-c0263",
+       "ses": "Göz ve kulak bölgesi minör anomalilerin en sık arandığı alanlardır.",
+       "ekran": "Göz ve kulak bölgesi minör anomalilerin en sık arandığı alanlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0264",
+       "ses": "Gözlerde palpebral aralığın, yani alt ve üst göz kapakları arasındaki açıklığın eğimi değerlendirilir; çizimlerde yukarı çekik, düz ve aşağı çekik eğimler karşılaştırılır.",
+       "ekran": "Gözlerde palpebral aralığın, yani alt ve üst göz kapakları arasındaki açıklığın eğimi değerlendirilir; çizimlerde yukarı çekik, düz ve aşağı çekik eğimler karşılaştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0265",
+       "ses": "Ön yüz çizimlerinde iç göz köşeleri arası mesafe gösterilir; bu ölçüm telekantus ve hipertelorizm gibi bulguları ayırmaya yarar.",
+       "ekran": "Ön yüz çizimlerinde iç göz köşeleri arası mesafe gösterilir; bu ölçüm telekantus ve hipertelorizm gibi bulguları ayırmaya yarar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0266",
+       "ses": "Kulaklarda yeri, yapısı ve büyüklüğü değerlendirilir.",
+       "ekran": "Kulaklarda yeri, yapısı ve büyüklüğü değerlendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0267",
+       "ses": "Kulak kepçesinin bölümleri heliks, yani dış kenar; skafa; antiheliks; dış kulak kanalı; kanalın önündeki küçük çıkıntı olan tragus; antitragus ve kulak memesi olan lobüldür.",
+       "ekran": "Kulak kepçesinin bölümleri heliks, yani dış kenar; skafa; antiheliks; dış kulak kanalı; kanalın önündeki küçük çıkıntı olan tragus; antitragus ve kulak memesi olan lobüldür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0268",
+       "ses": "Kulak önünde deri çıkıntıları ve yapısı bozuk kulak kepçeleri tipik örneklerdir.",
+       "ekran": "Kulak önünde deri çıkıntıları ve yapısı bozuk kulak kepçeleri tipik örneklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p057",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k1-01-c0269",
+       "ses": "Burunda görünüş, burun deliklerinin durumu ve burun kökü değerlendirilir.",
+       "ekran": "Burunda görünüş, burun deliklerinin durumu ve burun kökü değerlendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0270",
+       "ses": "Gaga burun, yani belirgin ve öne uzanan, gagayı andıran burun, Seckel sendromunda görülen örnektir.",
+       "ekran": "Gaga burun, yani belirgin ve öne uzanan, gagayı andıran burun, Seckel sendromunda görülen örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0271",
+       "ses": "Bifid burun ise burun ucunun ortadan çatallanmış görünümüdür.",
+       "ekran": "Bifid burun ise burun ucunun ortadan çatallanmış görünümüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0272",
+       "ses": "Ağızda dudak yapısı, filtrum, yani burun ile üst dudak arasındaki dikey oluk, damak, dişlerin yerleştiği alveolar yapı ve dil incelenir.",
+       "ekran": "Ağızda dudak yapısı, filtrum, yani burun ile üst dudak arasındaki dikey oluk, damak, dişlerin yerleştiği alveolar yapı ve dil incelenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0273",
+       "ses": "Düz yani silik filtrum ve ince üst dudak önemli bir dismorfik ipucudur.",
+       "ekran": "Düz yani silik filtrum ve ince üst dudak önemli bir dismorfik ipucudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b17",
+   "baslik": "Dismorfik hastada tanı yöntemleri ve yeni nesil dizileme",
+   "paragraflar": [
+    {
+     "id": "k1-01-p058",
+     "sayfa": 58,
+     "cumleler": [
+      {
+       "id": "k1-01-c0274",
+       "ses": "Dismorfik hastada genetik testler 3 gruptadır ve her biri farklı büyüklükteki bir değişikliği görür.",
+       "ekran": "Dismorfik hastada genetik testler 3 gruptadır ve her biri farklı büyüklükteki bir değişikliği görür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0275",
+       "ses": "Sitogenetikte karyotip ile kromozomlar mikroskopta sıralanır; sayı ve büyük yapısal değişiklikler görülür.",
+       "ekran": "Sitogenetikte karyotip ile kromozomlar mikroskopta sıralanır; sayı ve büyük yapısal değişiklikler görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0276",
+       "ses": "Moleküler sitogenetikte kromozomlar üzerinde floresan işaretli problarla belirli bölgeler incelenir.",
+       "ekran": "Moleküler sitogenetikte kromozomlar üzerinde floresan işaretli problarla belirli bölgeler incelenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0277",
+       "ses": "Moleküler genetikte DNA düzeyinde gen dizisi incelenir; görselde polimeraz zincir reaksiyonu, yani PCR ürünlerinin agaroz jelde merdiven belirteciyle birlikte doğrulanması gösterilir.",
+       "ekran": "Moleküler genetikte DNA düzeyinde gen dizisi incelenir; görselde polimeraz zincir reaksiyonu, yani PCR ürünlerinin agaroz jelde merdiven belirteciyle birlikte doğrulanması gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0278",
+       "ses": "Bu 3 grup büyükten küçüğe bir çözünürlük sıralaması oluşturur.",
+       "ekran": "Bu 3 grup büyükten küçüğe bir çözünürlük sıralaması oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p059",
+     "sayfa": 58,
+     "cumleler": [
+      {
+       "id": "k1-01-c0279",
+       "ses": "Yeni nesil dizileme, aynı anda çok sayıda DNA parçasının dizilenmesini sağlayan moleküler genetik yöntemidir.",
+       "ekran": "Yeni nesil dizileme, aynı anda çok sayıda DNA parçasının dizilenmesini sağlayan moleküler genetik yöntemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0280",
+       "ses": "Görseldeki iş akışı DNA ya da RNA ile başlar; örnek hazırlığı ve kütüphane oluşturma, klonal amplifikasyon, pozitif partiküllerin ayrılması, çipe yükleme ve dizileme ile sürer ve veri analiziyle biter.",
+       "ekran": "Görseldeki iş akışı DNA ya da RNA ile başlar; örnek hazırlığı ve kütüphane oluşturma, klonal amplifikasyon, pozitif partiküllerin ayrılması, çipe yükleme ve dizileme ile sürer ve veri analiziyle biter.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0281",
+       "ses": "Yeni nesil dizileme farklı ölçeklerde uygulanır.",
+       "ekran": "Yeni nesil dizileme farklı ölçeklerde uygulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0282",
+       "ses": "Tek gen düzeyinde genin protein kodlayan bölümü olan ekzonlar, kodlamayan ara bölümler olan intronlar ve ekzon intron kavşakları incelenir.",
+       "ekran": "Tek gen düzeyinde genin protein kodlayan bölümü olan ekzonlar, kodlamayan ara bölümler olan intronlar ve ekzon intron kavşakları incelenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0283",
+       "ses": "Gen panellerinde belirli bir klinik tabloyla ilişkili gen grubu birlikte dizilenir.",
+       "ekran": "Gen panellerinde belirli bir klinik tabloyla ilişkili gen grubu birlikte dizilenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0284",
+       "ses": "Ekzom analizinde tüm ekzom dizileme ve klinik ekzom dizileme yapılır.",
+       "ekran": "Ekzom analizinde tüm ekzom dizileme ve klinik ekzom dizileme yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0285",
+       "ses": "Genom analizinde ise tüm genom dizilenir.",
+       "ekran": "Genom analizinde ise tüm genom dizilenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b18",
+   "baslik": "Varyant yorumu ve sınıflandırma",
+   "paragraflar": [
+    {
+     "id": "k1-01-p060",
+     "sayfa": 62,
+     "cumleler": [
+      {
+       "id": "k1-01-c0286",
+       "ses": "Analiz sonunda her hasta için gen adı, kromozom konumu, varyantın intronik, ekzonik ya da splice bölgesinde olup olmadığı ve toplum sıklıklarıyla dolu yüzlerce satırlık bir varyant listesi elde edilir; tanı bu listenin süzülmesiyle konur.",
+       "ekran": "Analiz sonunda her hasta için gen adı, kromozom konumu, varyantın intronik, ekzonik ya da splice bölgesinde olup olmadığı ve toplum sıklıklarıyla dolu yüzlerce satırlık bir varyant listesi elde edilir; tanı bu listenin süzülmesiyle konur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0287",
+       "ses": "Sınıflandırmada kullanılan kaynaklar şunlardır.",
+       "ekran": "Sınıflandırmada kullanılan kaynaklar şunlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0288",
+       "ses": "Annovar, Vast ve SnpEff gibi varyant açıklayıcı programlar varyantı intronik, intragenik, splice ya da ekzonik olarak tanımlar.",
+       "ekran": "Annovar, Vast ve SnpEff gibi varyant açıklayıcı programlar varyantı intronik, intragenik, splice ya da ekzonik olarak tanımlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0289",
+       "ses": "Popülasyon veri tabanları, yani ExAC, 1000 Genom ve gnomAD, majör ve minör alel toplum frekanslarını verir.",
+       "ekran": "Popülasyon veri tabanları, yani ExAC, 1000 Genom ve gnomAD, majör ve minör alel toplum frekanslarını verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0290",
+       "ses": "Hasta veri tabanlarında verilerin güvenilirliği, kaynağı ve analiz yöntemi sorgulanır.",
+       "ekran": "Hasta veri tabanlarında verilerin güvenilirliği, kaynağı ve analiz yöntemi sorgulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0291",
+       "ses": "Literatür taranır.",
+       "ekran": "Literatür taranır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0292",
+       "ses": "PolyPhen-2, SIFT ve MutationTaster gibi in siliko, yani bilgisayar ortamında öngörü yapan değerlendirme programları kullanılır.",
+       "ekran": "PolyPhen-2, SIFT ve MutationTaster gibi in siliko, yani bilgisayar ortamında öngörü yapan değerlendirme programları kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0293",
+       "ses": "Bu araçların tek başına öngörü doğruluğu %65 ile 80 düzeyindedir; birlikte kullanıldığında %90'a yaklaşır.",
+       "ekran": "Bu araçların tek başına öngörü doğruluğu %65 ile 80 düzeyindedir; birlikte kullanıldığında %90'a yaklaşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p061",
+     "sayfa": 62,
+     "cumleler": [
+      {
+       "id": "k1-01-c0294",
+       "ses": "Varyantların yorumlanmasında Amerikan Tıbbi Genetik ve Genomik Koleji ile Moleküler Patoloji Derneği'nin ortak standartları, kısaca ACMG kılavuzu kullanılır.",
+       "ekran": "Varyantların yorumlanmasında Amerikan Tıbbi Genetik ve Genomik Koleji ile Moleküler Patoloji Derneği'nin ortak standartları, kısaca ACMG kılavuzu kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0295",
+       "ses": "Kanıtlar türlerine ve güçlerine göre derecelendirilir.",
+       "ekran": "Kanıtlar türlerine ve güçlerine göre derecelendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0296",
+       "ses": "Benign tarafta güçlü ve destekleyici; patojenik tarafta destekleyici, orta, güçlü ve çok güçlü kanıt düzeyleri vardır.",
+       "ekran": "Benign tarafta güçlü ve destekleyici; patojenik tarafta destekleyici, orta, güçlü ve çok güçlü kanıt düzeyleri vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0297",
+       "ses": "Kanıt türleri arasında popülasyon, hesaplamalı, fonksiyonel, segregasyon, de novo ve veri tabanı verileri vardır.",
+       "ekran": "Kanıt türleri arasında popülasyon, hesaplamalı, fonksiyonel, segregasyon, de novo ve veri tabanı verileri vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0298",
+       "ses": "Örneğin fonksiyon kaybının bilinen mekanizma olduğu gende null varyant çok güçlü, doğrulanmış de novo varyant güçlü, popülasyon veri tabanlarında bulunmama orta düzey patojenik kanıttır; hastalık için fazla yüksek toplum frekansı ise benign kanıttır.",
+       "ekran": "Örneğin fonksiyon kaybının bilinen mekanizma olduğu gende null varyant çok güçlü, doğrulanmış de novo varyant güçlü, popülasyon veri tabanlarında bulunmama orta düzey patojenik kanıttır; hastalık için fazla yüksek toplum frekansı ise benign kanıttır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p062",
+     "sayfa": 64,
+     "cumleler": [
+      {
+       "id": "k1-01-c0299",
+       "ses": "Burası önemli: kanıtlar birleştirildiğinde her varyant 5 sınıftan birine yerleştirilir.",
+       "ekran": "Burası önemli: kanıtlar birleştirildiğinde her varyant 5 sınıftan birine yerleştirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0300",
+       "ses": "Benign yani iyi huylu, muhtemelen benign, klinik önemi belirsiz varyant, muhtemelen patojenik ve patojenik.",
+       "ekran": "Benign yani iyi huylu, muhtemelen benign, klinik önemi belirsiz varyant, muhtemelen patojenik ve patojenik.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0301",
+       "ses": "Klinik önemi belirsiz varyant bir tanı değildir; bugün belirsiz olan varyant yeni veriyle ileride benign ya da patojenik sınıfa geçebilir.",
+       "ekran": "Klinik önemi belirsiz varyant bir tanı değildir; bugün belirsiz olan varyant yeni veriyle ileride benign ya da patojenik sınıfa geçebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0302",
+       "ses": "Bu yüzden hangi sınıfın nasıl raporlanacağı dikkatle belirlenmeli ve veri tabanları yıllık ya da 6 ayda bir yeniden değerlendirilmelidir.",
+       "ekran": "Bu yüzden hangi sınıfın nasıl raporlanacağı dikkatle belirlenmeli ve veri tabanları yıllık ya da 6 ayda bir yeniden değerlendirilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b19",
+   "baslik": "Genetik testle tanı alan olgular ve tanı algoritması",
+   "paragraflar": [
+    {
+     "id": "k1-01-p063",
+     "sayfa": 65,
+     "cumleler": [
+      {
+       "id": "k1-01-c0303",
+       "ses": "Dersteki olgu fotoğrafları, genetik testlerin dismorfik hastada nasıl tanı koydurduğunu gösterir.",
+       "ekran": "Dersteki olgu fotoğrafları, genetik testlerin dismorfik hastada nasıl tanı koydurduğunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0304",
+       "ses": "Her sendrom, kalıtsal hastalıkların çevrim içi kataloğu olan OMIM'deki numarasıyla tanımlanır; örneğin frajil X sendromunun numarası 300624, 22q11.2 delesyon sendromunun numarası 188400'dür.",
+       "ekran": "Her sendrom, kalıtsal hastalıkların çevrim içi kataloğu olan OMIM'deki numarasıyla tanımlanır; örneğin frajil X sendromunun numarası 300624, 22q11.2 delesyon sendromunun numarası 188400'dür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0305",
+       "ses": "Tanı alan diğer sendromlar CHARGE sendromu, Knobloch sendromu ve Cockayne sendromudur.",
+       "ekran": "Tanı alan diğer sendromlar CHARGE sendromu, Knobloch sendromu ve Cockayne sendromudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0306",
+       "ses": "Kopya sayısı değişikliklerine örnek olarak 6q25.1 mikrodelesyonu, 15q11.2 mikrodelesyonu ve Xq11.2 mikroduplikasyonu gösterilir.",
+       "ekran": "Kopya sayısı değişikliklerine örnek olarak 6q25.1 mikrodelesyonu, 15q11.2 mikrodelesyonu ve Xq11.2 mikroduplikasyonu gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0307",
+       "ses": "Nörogelişimsel örnekler ise otozomal dominant mental retardasyon tip 32, yani Arboleda-Tham sendromu, ve otizm yatkınlığı 18'dir; OMIM kaydında makrosefali, otizm, zihinsel yetersizlik ve nöbet gibi bulgular yüzdeleriyle listelenir.",
+       "ekran": "Nörogelişimsel örnekler ise otozomal dominant mental retardasyon tip 32, yani Arboleda-Tham sendromu, ve otizm yatkınlığı 18'dir; OMIM kaydında makrosefali, otizm, zihinsel yetersizlik ve nöbet gibi bulgular yüzdeleriyle listelenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0308",
+       "ses": "Bu küçük değişiklikler karyotipte görülmez.",
+       "ekran": "Bu küçük değişiklikler karyotipte görülmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p064",
+     "sayfa": 68,
+     "cumleler": [
+      {
+       "id": "k1-01-c0309",
+       "ses": "Multipl konjenital anomali ve mental retardasyonu olan hastada genetik yaklaşım bir algoritma izler.",
+       "ekran": "Multipl konjenital anomali ve mental retardasyonu olan hastada genetik yaklaşım bir algoritma izler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0310",
+       "ses": "Başlangıç noktası klinik, laboratuvar ve radyolojik değerlendirmedir; ardından tek bir soru sorulur: belirli bir sendrom şüphesi var mı?",
+       "ekran": "Başlangıç noktası klinik, laboratuvar ve radyolojik değerlendirmedir; ardından tek bir soru sorulur: belirli bir sendrom şüphesi var mı?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0311",
+       "ses": "Şüphe varsa sendroma yönelik hedefe spesifik testler yapılır: floresan in situ hibridizasyon, yani FISH; yeni nesil dizileme panelleri; Sanger sekanslama ve MLPA gibi testler.",
+       "ekran": "Şüphe varsa sendroma yönelik hedefe spesifik testler yapılır: floresan in situ hibridizasyon, yani FISH; yeni nesil dizileme panelleri; Sanger sekanslama ve MLPA gibi testler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0312",
+       "ses": "Şüphe yoksa basamaklı yol izlenir.",
+       "ekran": "Şüphe yoksa basamaklı yol izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0313",
+       "ses": "İlk aşama karyotiplemedir.",
+       "ekran": "İlk aşama karyotiplemedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0314",
+       "ses": "Karyotip normalse mikroarray analizi yapılır.",
+       "ekran": "Karyotip normalse mikroarray analizi yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0315",
+       "ses": "Mikroarray normalse klinik özelliklere yönelik gen panelleri düşünülür.",
+       "ekran": "Mikroarray normalse klinik özelliklere yönelik gen panelleri düşünülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0316",
+       "ses": "Son tercih ise tüm ekzom dizi analizidir.",
+       "ekran": "Son tercih ise tüm ekzom dizi analizidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0317",
+       "ses": "Burası önemli: sendrom şüphesi yoksa ilk test karyotip, son tercih tüm ekzom dizi analizidir.",
+       "ekran": "Burası önemli: sendrom şüphesi yoksa ilk test karyotip, son tercih tüm ekzom dizi analizidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p065",
+     "sayfa": 69,
+     "cumleler": [
+      {
+       "id": "k1-01-c0318",
+       "ses": "Tüm ekzom dizi analizinin algoritmada en sona konmasının somut nedenleri vardır.",
+       "ekran": "Tüm ekzom dizi analizinin algoritmada en sona konmasının somut nedenleri vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0319",
+       "ses": "Pahalıdır ve geri ödeme kapsamı tartışmalıdır.",
+       "ekran": "Pahalıdır ve geri ödeme kapsamı tartışmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0320",
+       "ses": "Yaklaşık 20.000 genin kodlayan bölgeleri incelendiği için analizi zordur.",
+       "ekran": "Yaklaşık 20.000 genin kodlayan bölgeleri incelendiği için analizi zordur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0321",
+       "ses": "Çok uzun süreçte sonuçlanır.",
+       "ekran": "Çok uzun süreçte sonuçlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0322",
+       "ses": "Her hasta için 10.000 ile 15.000 arası varyant çıkar.",
+       "ekran": "Her hasta için 10.000 ile 15.000 arası varyant çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0323",
+       "ses": "Ayrıca her genomik anomaliyi göstermez; özellikle büyük delesyonlar ve duplikasyonlar kaçabilir.",
+       "ekran": "Ayrıca her genomik anomaliyi göstermez; özellikle büyük delesyonlar ve duplikasyonlar kaçabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0324",
+       "ses": "Bu nedenle ilk aşamada kullanılması gereken bir test değildir ve karyotip analizi ile ileri moleküler sitogenetik tetkikler yapılmamış bir hastadan tüm ekzom dizi analizi çalışılması önerilmez.",
+       "ekran": "Bu nedenle ilk aşamada kullanılması gereken bir test değildir ve karyotip analizi ile ileri moleküler sitogenetik tetkikler yapılmamış bir hastadan tüm ekzom dizi analizi çalışılması önerilmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b20",
+   "baslik": "Kaynaklar, genetik danışma ve tanı olasılığı",
+   "paragraflar": [
+    {
+     "id": "k1-01-p066",
+     "sayfa": 70,
+     "cumleler": [
+      {
+       "id": "k1-01-c0325",
+       "ses": "2000'in üzerinde sendrom olduğundan dismorfolog hafızaya değil kaynaklara dayanır.",
+       "ekran": "2000'in üzerinde sendrom olduğundan dismorfolog hafızaya değil kaynaklara dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0326",
+       "ses": "Başvurulan referans kitapların başında Smith'in tanınabilir malformasyon örüntüleri atlası gelir; baş ve boyun sendromları, insan malformasyonları, genetik tanı ve danışma atlasları ile Oxford klinik genetik başvuru kitabı da kullanılır.",
+       "ekran": "Başvurulan referans kitapların başında Smith'in tanınabilir malformasyon örüntüleri atlası gelir; baş ve boyun sendromları, insan malformasyonları, genetik tanı ve danışma atlasları ile Oxford klinik genetik başvuru kitabı da kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0327",
+       "ses": "Genetik hastalıkları taramada kullanılan veri tabanları OMIM, Phenomizer, Google Akademik, PubMed, nadir hastalıklar veri tabanı olan Orphanet, GeneTests, Londra Dismorfoloji Veri Tabanı ile Londra Nörogenetik Veri Tabanı ve POSSUM'dur.",
+       "ekran": "Genetik hastalıkları taramada kullanılan veri tabanları OMIM, Phenomizer, Google Akademik, PubMed, nadir hastalıklar veri tabanı olan Orphanet, GeneTests, Londra Dismorfoloji Veri Tabanı ile Londra Nörogenetik Veri Tabanı ve POSSUM'dur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p067",
+     "sayfa": 74,
+     "cumleler": [
+      {
+       "id": "k1-01-c0328",
+       "ses": "Genetik danışma, tanı konduktan sonra aileyle kurulan yapılandırılmış bir süreçtir ve 4 bileşeni vardır: tanı, risk tayini, seçenekleri tartışma, uzun dönem iletişim ve destek.",
+       "ekran": "Genetik danışma, tanı konduktan sonra aileyle kurulan yapılandırılmış bir süreçtir ve 4 bileşeni vardır: tanı, risk tayini, seçenekleri tartışma, uzun dönem iletişim ve destek.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0329",
+       "ses": "3 temel terim karıştırılmamalıdır.",
+       "ekran": "3 temel terim karıştırılmamalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0330",
+       "ses": "Konsültant, genetik danışma veren kişidir.",
+       "ekran": "Konsültant, genetik danışma veren kişidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0331",
+       "ses": "Proband ya da indeks vaka, etkilenmiş aile bireyidir.",
+       "ekran": "Proband ya da indeks vaka, etkilenmiş aile bireyidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0332",
+       "ses": "Pedigri ise aile ağacıdır.",
+       "ekran": "Pedigri ise aile ağacıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p068",
+     "sayfa": 75,
+     "cumleler": [
+      {
+       "id": "k1-01-c0333",
+       "ses": "Genetik danışma, kalıtsal bir hastalık taşıyan ya da taşıma riski bulunan kişilere ve bu kişilerin akrabalarına; hastalığın seyri ve tedavi yöntemleri, tekrarlama riskleri ve çözüm yolları ile birlikte hangi dönemlerde hangi testlerin yapılması gerektiği ve bunların sonuçlarıyla ilgili bilgi verilmesidir.",
+       "ekran": "Genetik danışma, kalıtsal bir hastalık taşıyan ya da taşıma riski bulunan kişilere ve bu kişilerin akrabalarına; hastalığın seyri ve tedavi yöntemleri, tekrarlama riskleri ve çözüm yolları ile birlikte hangi dönemlerde hangi testlerin yapılması gerektiği ve bunların sonuçlarıyla ilgili bilgi verilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0334",
+       "ses": "Danışmanın görevi, tartışılan hastalıkla ilgili bilgileri aileye doğru ve tam olarak aktarmak ve çözüm yolları sunmaktır.",
+       "ekran": "Danışmanın görevi, tartışılan hastalıkla ilgili bilgileri aileye doğru ve tam olarak aktarmak ve çözüm yolları sunmaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0335",
+       "ses": "Burası önemli: bu nedenle genetik danışma hiçbir zaman yönlendirici olmamalıdır; danışman seçenekleri eksiksiz anlatır ama aile adına karar vermez.",
+       "ekran": "Burası önemli: bu nedenle genetik danışma hiçbir zaman yönlendirici olmamalıdır; danışman seçenekleri eksiksiz anlatır ama aile adına karar vermez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0336",
+       "ses": "Bu süreç öykü, aile ağacı oluşturulması, muayene, tanı, danışmanlık ve izlemi kapsar.",
+       "ekran": "Bu süreç öykü, aile ağacı oluşturulması, muayene, tanı, danışmanlık ve izlemi kapsar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p069",
+     "sayfa": 76,
+     "cumleler": [
+      {
+       "id": "k1-01-c0337",
+       "ses": "Tüm araçlar kullanıldığında bile dismorfik çocukların bir bölümü tanısız kalır.",
+       "ekran": "Tüm araçlar kullanıldığında bile dismorfik çocukların bir bölümü tanısız kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0338",
+       "ses": "Tanı konma olasılığı kromozom anomalilerinde yaklaşık %10, tek gen hastalıklarında yaklaşık %22, teratojenlerde yaklaşık %5'tir.",
+       "ekran": "Tanı konma olasılığı kromozom anomalilerinde yaklaşık %10, tek gen hastalıklarında yaklaşık %22, teratojenlerde yaklaşık %5'tir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0339",
+       "ses": "Olguların %50'sine ise tanı konulamaz.",
+       "ekran": "Olguların %50'sine ise tanı konulamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0340",
+       "ses": "Değerlendirmede amaç yalnızca bir isim koymak değildir; embriyogenezde patolojinin ne zaman ve hangi dokularda oluştuğu sorusunun cevabı aranır.",
+       "ekran": "Değerlendirmede amaç yalnızca bir isim koymak değildir; embriyogenezde patolojinin ne zaman ve hangi dokularda oluştuğu sorusunun cevabı aranır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0341",
+       "ses": "Slayttaki penguen fotoğrafı tanıdaki zorluğu özetler: birbirine çok benzeyen bireyler arasında hangisinin dismorfik olduğunu anlamak zor olabilir.",
+       "ekran": "Slayttaki penguen fotoğrafı tanıdaki zorluğu özetler: birbirine çok benzeyen bireyler arasında hangisinin dismorfik olduğunu anlamak zor olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b21",
+   "baslik": "Örnek sendromlar: Williams ve Prader-Willi",
+   "paragraflar": [
+    {
+     "id": "k1-01-p070",
+     "sayfa": 79,
+     "cumleler": [
+      {
+       "id": "k1-01-c0342",
+       "ses": "Williams sendromu otozomal dominant geçişlidir.",
+       "ekran": "Williams sendromu otozomal dominant geçişlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0343",
+       "ses": "Vakaların %90 ile 95'inden, elastin, yani ELN genini içeren 7q11.23 bölgesindeki delesyonlar sorumludur.",
+       "ekran": "Vakaların %90 ile 95'inden, elastin, yani ELN genini içeren 7q11.23 bölgesindeki delesyonlar sorumludur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0344",
+       "ses": "Tipik bulguları mental retardasyon, kısa boy, elfin yüz denen tipik yüz görünümü, aort kapağının hemen üstünde aortun daralması olan supravalvüler aort stenozu ve infantil hiperkalsemidir.",
+       "ekran": "Tipik bulguları mental retardasyon, kısa boy, elfin yüz denen tipik yüz görünümü, aort kapağının hemen üstünde aortun daralması olan supravalvüler aort stenozu ve infantil hiperkalsemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0345",
+       "ses": "Zekâ bölümü genellikle 50 ile 60 arasındadır.",
+       "ekran": "Zekâ bölümü genellikle 50 ile 60 arasındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0346",
+       "ses": "Burası önemli: supravalvüler aort stenozu, infantil hiperkalsemi ve elfin yüz birlikteliği Williams sendromunu düşündürür ve altta 7q11.23 delesyonu vardır.",
+       "ekran": "Burası önemli: supravalvüler aort stenozu, infantil hiperkalsemi ve elfin yüz birlikteliği Williams sendromunu düşündürür ve altta 7q11.23 delesyonu vardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p071",
+     "sayfa": 80,
+     "cumleler": [
+      {
+       "id": "k1-01-c0347",
+       "ses": "Prader-Willi sendromu davranışsal fenotipiyle tanınan bir sendromdur.",
+       "ekran": "Prader-Willi sendromu davranışsal fenotipiyle tanınan bir sendromdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0348",
+       "ses": "Çoğu hastada hiperfaji, yani aşırı yeme isteği, ayrıca obsesyonlar ve kompülsiyonlar gözlenir.",
+       "ekran": "Çoğu hastada hiperfaji, yani aşırı yeme isteği, ayrıca obsesyonlar ve kompülsiyonlar gözlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0349",
+       "ses": "Çoğu hastada ağlama ya da gülme nöbetleri de görülür ve sıklıkla davranış adaptasyonunda bozukluk eşlik eder.",
+       "ekran": "Çoğu hastada ağlama ya da gülme nöbetleri de görülür ve sıklıkla davranış adaptasyonunda bozukluk eşlik eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0350",
+       "ses": "Hiperfaji bu sendromun klinik açıdan en önemli bulgusudur, çünkü kontrol edilmediğinde ağır obeziteye yol açar.",
+       "ekran": "Hiperfaji bu sendromun klinik açıdan en önemli bulgusudur, çünkü kontrol edilmediğinde ağır obeziteye yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b22",
+   "baslik": "Frajil X sendromu",
+   "paragraflar": [
+    {
+     "id": "k1-01-p072",
+     "sayfa": 81,
+     "cumleler": [
+      {
+       "id": "k1-01-c0351",
+       "ses": "Frajil X sendromunun adı sitogenetik bir gözlemden gelir.",
+       "ekran": "Frajil X sendromunun adı sitogenetik bir gözlemden gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0352",
+       "ses": "1977'de mental geriliği olan erkeklerin bir bölümünde X kromozomunun ucunda frajil, yani kırılgan bir bölge saptanmış ve bu bölge sitogenetik belirteç olarak kullanılmıştır.",
+       "ekran": "1977'de mental geriliği olan erkeklerin bir bölümünde X kromozomunun ucunda frajil, yani kırılgan bir bölge saptanmış ve bu bölge sitogenetik belirteç olarak kullanılmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0353",
+       "ses": "Frajil X en sık görülen tek gen hastalığıdır ve en sık X kromozomuna bağlı mental retardasyon nedenidir.",
+       "ekran": "Frajil X en sık görülen tek gen hastalığıdır ve en sık X kromozomuna bağlı mental retardasyon nedenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0354",
+       "ses": "Erkeklerde orta derece mental retardasyonun Down sendromundan sonra en sık nedenidir.",
+       "ekran": "Erkeklerde orta derece mental retardasyonun Down sendromundan sonra en sık nedenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0355",
+       "ses": "Burası önemli: frajil X en sık X kromozomuna bağlı mental retardasyon nedenidir ve erkekteki orta derece mental retardasyonda Down sendromundan sonra ikinci sıradadır.",
+       "ekran": "Burası önemli: frajil X en sık X kromozomuna bağlı mental retardasyon nedenidir ve erkekteki orta derece mental retardasyonda Down sendromundan sonra ikinci sıradadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0356",
+       "ses": "Sıklığı 3717'de bir ile 8918'de bir arasındadır; erkeklerde yaklaşık 4000'de bir, kadınlarda yaklaşık 6000'de birdir.",
+       "ekran": "Sıklığı 3717'de bir ile 8918'de bir arasındadır; erkeklerde yaklaşık 4000'de bir, kadınlarda yaklaşık 6000'de birdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0357",
+       "ses": "Aile hikâyesi olan ve doğumsal anomalisi olmayan erkeklerdeki mental retardasyonun %3 ile 6'sını oluşturur.",
+       "ekran": "Aile hikâyesi olan ve doğumsal anomalisi olmayan erkeklerdeki mental retardasyonun %3 ile 6'sını oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p073",
+     "sayfa": 83,
+     "cumleler": [
+      {
+       "id": "k1-01-c0358",
+       "ses": "Frajil X bir dinamik mutasyon hastalığıdır; yani mutasyonun büyüklüğü kuşaktan kuşağa değişir.",
+       "ekran": "Frajil X bir dinamik mutasyon hastalığıdır; yani mutasyonun büyüklüğü kuşaktan kuşağa değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0359",
+       "ses": "FMR1 geninin 5' ucundaki çevrilmeyen bölgede, CGG üçlü tekrar dizisi bulunur.",
+       "ekran": "FMR1 geninin 5' ucundaki çevrilmeyen bölgede, CGG üçlü tekrar dizisi bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0360",
+       "ses": "Normalde tekrar sayısı yaklaşık 5 ile 50 arasındadır.",
+       "ekran": "Normalde tekrar sayısı yaklaşık 5 ile 50 arasındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0361",
+       "ses": "Tekrar sayısının 50'nin üstüne çıkmasıyla, yani 50 ile 200 arasında, kişide premutasyon oluşur.",
+       "ekran": "Tekrar sayısının 50'nin üstüne çıkmasıyla, yani 50 ile 200 arasında, kişide premutasyon oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0362",
+       "ses": "Sonraki kuşaklarda sayının 200'ün üzerine çıkmasıyla tam mutasyon oluşur.",
+       "ekran": "Sonraki kuşaklarda sayının 200'ün üzerine çıkmasıyla tam mutasyon oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0363",
+       "ses": "Tam mutasyonlu bireylerde genin promoter bölgesi metillendiği için aktivitesi kaybolur ve FMR1 proteini kısmen ya da tümüyle yapılamaz.",
+       "ekran": "Tam mutasyonlu bireylerde genin promoter bölgesi metillendiği için aktivitesi kaybolur ve FMR1 proteini kısmen ya da tümüyle yapılamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0364",
+       "ses": "Burası önemli: 50'den fazla tekrar premutasyon, 200'den fazla tekrar tam mutasyondur.",
+       "ekran": "Burası önemli: 50'den fazla tekrar premutasyon, 200'den fazla tekrar tam mutasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0365",
+       "ses": "Hastalık proteinin yapısının bozulmasından değil, promoter metilasyonuyla genin susturulmasından kaynaklanır.",
+       "ekran": "Hastalık proteinin yapısının bozulmasından değil, promoter metilasyonuyla genin susturulmasından kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p074",
+     "sayfa": 84,
+     "cumleler": [
+      {
+       "id": "k1-01-c0366",
+       "ses": "Fiziksel özellikler uzun ve ince yüz, büyük ve belirgin kulaklar ve puberte sonrasında belirginleşen makroorşidizm, yani testislerin büyük olmasıdır.",
+       "ekran": "Fiziksel özellikler uzun ve ince yüz, büyük ve belirgin kulaklar ve puberte sonrasında belirginleşen makroorşidizm, yani testislerin büyük olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0367",
+       "ses": "Olguların %80'inde bu bulgulardan en az biri vardır.",
+       "ekran": "Olguların %80'inde bu bulgulardan en az biri vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0368",
+       "ses": "Diğer özellikler çift eklemli parmaklar ve hiperekstansibilite, düz tabanlık, periorbital dolgunluk, pektus ekskavatum denen çökük göğüs kafesi ve skolyozdur.",
+       "ekran": "Diğer özellikler çift eklemli parmaklar ve hiperekstansibilite, düz tabanlık, periorbital dolgunluk, pektus ekskavatum denen çökük göğüs kafesi ve skolyozdur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p075",
+     "sayfa": 85,
+     "cumleler": [
+      {
+       "id": "k1-01-c0369",
+       "ses": "Davranışsal özellikler çoğu zaman fiziksel bulgulardan önce dikkat çeker.",
+       "ekran": "Davranışsal özellikler çoğu zaman fiziksel bulgulardan önce dikkat çeker.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0370",
+       "ses": "Bunlar dikkat eksikliği ve hiperaktivite; öfke nöbetleri ve duygu boşalımlarıyla giden duygulanım değişikliği; konvülziyonlar; ses, ışık ve koku gibi dış uyaranları algılama ve yorumlama sorunları; ve otistik bulgulardır.",
+       "ekran": "Bunlar dikkat eksikliği ve hiperaktivite; öfke nöbetleri ve duygu boşalımlarıyla giden duygulanım değişikliği; konvülziyonlar; ses, ışık ve koku gibi dış uyaranları algılama ve yorumlama sorunları; ve otistik bulgulardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0371",
+       "ses": "Otistik bulgular el sallama, el ısırma, göz kontağı kuramama ve dokunmaya reaksiyondur.",
+       "ekran": "Otistik bulgular el sallama, el ısırma, göz kontağı kuramama ve dokunmaya reaksiyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0372",
+       "ses": "Otizm %60 oranında görülür.",
+       "ekran": "Otizm %60 oranında görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b23",
+   "baslik": "Sendromları tanımadaki güçlükler",
+   "paragraflar": [
+    {
+     "id": "k1-01-p076",
+     "sayfa": 86,
+     "cumleler": [
+      {
+       "id": "k1-01-c0373",
+       "ses": "Sendrom tanısı neden zordur?",
+       "ekran": "Sendrom tanısı neden zordur?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0374",
+       "ses": "Ders 7 neden sayar.",
+       "ekran": "Ders 7 neden sayar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0375",
+       "ses": "1.'si hastanın bulgularını tam olarak tanımlayamamaktır; eksik muayene, eksik laboratuvar ve görüntüleme sonuçları ya da doğru terminolojinin kullanılamaması buna yol açar.",
+       "ekran": "1.'si hastanın bulgularını tam olarak tanımlayamamaktır; eksik muayene, eksik laboratuvar ve görüntüleme sonuçları ya da doğru terminolojinin kullanılamaması buna yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0376",
+       "ses": "2.'si çok nadir sendromların tüm bulgularının yeterince bilinmemesidir.",
+       "ekran": "2.'si çok nadir sendromların tüm bulgularının yeterince bilinmemesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0377",
+       "ses": "3.'sü değişken ekspressivitedir; aynı genetik değişiklik farklı bireylerde farklı ağırlıkta bulgu verir.",
+       "ekran": "3.'sü değişken ekspressivitedir; aynı genetik değişiklik farklı bireylerde farklı ağırlıkta bulgu verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0378",
+       "ses": "4.'sü azalmış penetranstır; genetik değişikliği taşıyan bireylerin bir kısmında klinik bulgu ortaya çıkmaz.",
+       "ekran": "4.'sü azalmış penetranstır; genetik değişikliği taşıyan bireylerin bir kısmında klinik bulgu ortaya çıkmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0379",
+       "ses": "5.'si pleiotropidir; bir gen birden fazla fenotip oluşturur, yani tek bir gen kusuru birbirinden ilgisiz görünen sistemleri etkiler.",
+       "ekran": "5.'si pleiotropidir; bir gen birden fazla fenotip oluşturur, yani tek bir gen kusuru birbirinden ilgisiz görünen sistemleri etkiler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0380",
+       "ses": "6.'sı belirli bir cinsiyetin etkilendiği, örneğin hipospadias ya da klitoris hipertrofisi gibi, ya da belirli cinsiyetle sınırlı, örneğin ailesel prostat kanseri gibi durumlardır.",
+       "ekran": "6.'sı belirli bir cinsiyetin etkilendiği, örneğin hipospadias ya da klitoris hipertrofisi gibi, ya da belirli cinsiyetle sınırlı, örneğin ailesel prostat kanseri gibi durumlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0381",
+       "ses": "7.'si etiyolojik heterojenitedir; farklı nedenler benzer klinik tablo oluşturabilir.",
+       "ekran": "7.'si etiyolojik heterojenitedir; farklı nedenler benzer klinik tablo oluşturabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p077",
+     "sayfa": 86,
+     "cumleler": [
+      {
+       "id": "k1-01-c0382",
+       "ses": "Burası önemli: pleiotropi, bir genin birden fazla fenotip oluşturmasıdır.",
+       "ekran": "Burası önemli: pleiotropi, bir genin birden fazla fenotip oluşturmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0383",
+       "ses": "Sınavda pleiotropi etiyolojik heterojeniteyle karıştırılır; heterojenite ise tersidir, farklı nedenlerin aynı tabloyu yapmasıdır.",
+       "ekran": "Sınavda pleiotropi etiyolojik heterojeniteyle karıştırılır; heterojenite ise tersidir, farklı nedenlerin aynı tabloyu yapmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-01-b24",
+   "baslik": "Yaklaşım algoritmaları ve tanı sonrası önlemler",
+   "paragraflar": [
+    {
+     "id": "k1-01-p078",
+     "sayfa": 87,
+     "cumleler": [
+      {
+       "id": "k1-01-c0384",
+       "ses": "Ders kitabından alınan algoritma, konjenital anomalili hastada özgeçmiş ve muayeneyle başlar ve ilk olarak anomalinin izole mi, çoklu mu olduğunu sorar.",
+       "ekran": "Ders kitabından alınan algoritma, konjenital anomalili hastada özgeçmiş ve muayeneyle başlar ve ilk olarak anomalinin izole mi, çoklu mu olduğunu sorar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0385",
+       "ses": "İzole anomali minörse ve normal varyasyonsa aileye rahatlatıcı bilgi verilir; majörse tedavi ve danışma planlanır.",
+       "ekran": "İzole anomali minörse ve normal varyasyonsa aileye rahatlatıcı bilgi verilir; majörse tedavi ve danışma planlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0386",
+       "ses": "Çoklu anomalide yalnız minör anomaliler varsa ve majör anomali eşlik etmiyorsa yine rahatlatıcı bilgi verilir.",
+       "ekran": "Çoklu anomalide yalnız minör anomaliler varsa ve majör anomali eşlik etmiyorsa yine rahatlatıcı bilgi verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0387",
+       "ses": "Minör ve majör anomaliler birlikte ise tutulum biçimine bakılır: tek doku tipi tutulumu displaziyi, birden fazla doku tutulumu ise malformasyon, duraklama ya da deformasyonu düşündürür.",
+       "ekran": "Minör ve majör anomaliler birlikte ise tutulum biçimine bakılır: tek doku tipi tutulumu displaziyi, birden fazla doku tutulumu ise malformasyon, duraklama ya da deformasyonu düşündürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0388",
+       "ses": "Son basamakta dokunun yıkımı duraklamaya, kemik ve eklemlerin mekanik etkilenmesi deformasyon dizisine ya da sendroma götürür.",
+       "ekran": "Son basamakta dokunun yıkımı duraklamaya, kemik ve eklemlerin mekanik etkilenmesi deformasyon dizisine ya da sendroma götürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0389",
+       "ses": "Çoklu malformasyonda sekonder anomalilere neden olan bir primer anomali varsa tablo malformasyon dizisi, yani sekanstır; yoksa sendrom, assosiasyon ya da komplekstir.",
+       "ekran": "Çoklu malformasyonda sekonder anomalilere neden olan bir primer anomali varsa tablo malformasyon dizisi, yani sekanstır; yoksa sendrom, assosiasyon ya da komplekstir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p079",
+     "sayfa": 89,
+     "cumleler": [
+      {
+       "id": "k1-01-c0390",
+       "ses": "Çoklu malformasyonu olan hastada 4 soruluk bir karar akışı da izlenir.",
+       "ekran": "Çoklu malformasyonu olan hastada 4 soruluk bir karar akışı da izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0391",
+       "ses": "Birinci soru: sekonder anomalilere neden olan primer malformasyon var mı?",
+       "ekran": "Birinci soru: sekonder anomalilere neden olan primer malformasyon var mı?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0392",
+       "ses": "Varsa tablo dizidir, yani sekanstır ve tekrarlama riski primer malformasyona göre verilir.",
+       "ekran": "Varsa tablo dizidir, yani sekanstır ve tekrarlama riski primer malformasyona göre verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0393",
+       "ses": "Yoksa ikinci soru: bilinen bir dismorfik sendrom var mı?",
+       "ekran": "Yoksa ikinci soru: bilinen bir dismorfik sendrom var mı?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0394",
+       "ses": "Varsa tanı mümkünse karyotip ve moleküler testlerle laboratuvarda desteklenir ve danışma verilir.",
+       "ekran": "Varsa tanı mümkünse karyotip ve moleküler testlerle laboratuvarda desteklenir ve danışma verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0395",
+       "ses": "Yoksa üçüncü soru: tanımlanmış bir assosiasyon var mı?",
+       "ekran": "Yoksa üçüncü soru: tanımlanmış bir assosiasyon var mı?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0396",
+       "ses": "Varsa tekrarlama için düşük risk danışması verilir.",
+       "ekran": "Varsa tekrarlama için düşük risk danışması verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0397",
+       "ses": "Hiçbiri değilse dismorfoloji veri tabanı taranır; tanı konursa ilgili yol izlenir, konamazsa malformasyonların tedavisi için hasta yönlendirilir ve izlenir.",
+       "ekran": "Hiçbiri değilse dismorfoloji veri tabanı taranır; tanı konursa ilgili yol izlenir, konamazsa malformasyonların tedavisi için hasta yönlendirilir ve izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p080",
+     "sayfa": 89,
+     "cumleler": [
+      {
+       "id": "k1-01-c0398",
+       "ses": "Muayene sırasında karşılaşılan anomalinin izole mi yoksa sendromik mi olduğunun ayrımını yapmak çok önemlidir.",
+       "ekran": "Muayene sırasında karşılaşılan anomalinin izole mi yoksa sendromik mi olduğunun ayrımını yapmak çok önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0399",
+       "ses": "İzole anomalide tüm sistem muayenesi yapılır; bebeğin açık bıngıldağından yapılan transfontanel ultrasonografi, batın ve pelvik ultrasonografi ve akciğer grafisi ile iç organlar taranır.",
+       "ekran": "İzole anomalide tüm sistem muayenesi yapılır; bebeğin açık bıngıldağından yapılan transfontanel ultrasonografi, batın ve pelvik ultrasonografi ve akciğer grafisi ile iç organlar taranır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0400",
+       "ses": "İzole diyebilmek için mutlaka diğer organ ve sistemlerde anomali olmadığından emin olmak gerekir.",
+       "ekran": "İzole diyebilmek için mutlaka diğer organ ve sistemlerde anomali olmadığından emin olmak gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0401",
+       "ses": "Sendromda minör ve majör anomalilerin listesi çıkarılır ve hasta majör anomaliye göre prenatal başlangıçlı kısa boy, aşırı büyüme, erken yaşlanma, ektodermal bulgular ya da iskelet bulguları gibi bir gruba yerleştirilir.",
+       "ekran": "Sendromda minör ve majör anomalilerin listesi çıkarılır ve hasta majör anomaliye göre prenatal başlangıçlı kısa boy, aşırı büyüme, erken yaşlanma, ektodermal bulgular ya da iskelet bulguları gibi bir gruba yerleştirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0402",
+       "ses": "Kromozom analizi, diğer laboratuvar testleri ve röntgen gibi gerekli analizler yapılır; kalıtım modeli, moleküler tanı ve prenatal tanı olasılıkları sorgulanır.",
+       "ekran": "Kromozom analizi, diğer laboratuvar testleri ve röntgen gibi gerekli analizler yapılır; kalıtım modeli, moleküler tanı ve prenatal tanı olasılıkları sorgulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0403",
+       "ses": "Tanısı bilinmeyen olguda ise tüm klinik bilgiler, fotoğraflar, tüm tetkik sonuçları ve hastaya ve ailesine ait DNA örnekleri saklanır.",
+       "ekran": "Tanısı bilinmeyen olguda ise tüm klinik bilgiler, fotoğraflar, tüm tetkik sonuçları ve hastaya ve ailesine ait DNA örnekleri saklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0404",
+       "ses": "Tanısını koyamadığımız olgularda daha sonra bulunabilecek tanı ve yöntemler için izlem ve gerekli belgelerin arşivlenmesi yapılmalıdır.",
+       "ekran": "Tanısını koyamadığımız olgularda daha sonra bulunabilecek tanı ve yöntemler için izlem ve gerekli belgelerin arşivlenmesi yapılmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p081",
+     "sayfa": 90,
+     "cumleler": [
+      {
+       "id": "k1-01-c0405",
+       "ses": "Tanı konduğunda süreç bitmez; 3 başlıkta önlem alınır.",
+       "ekran": "Tanı konduğunda süreç bitmez; 3 başlıkta önlem alınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0406",
+       "ses": "1.'si tedavidir: semptomatik tedavi ve varsa altta yatan nedene yönelik tedavi.",
+       "ekran": "1.'si tedavidir: semptomatik tedavi ve varsa altta yatan nedene yönelik tedavi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0407",
+       "ses": "2.'si danışma vermektir: tanı ile ilgili, hastalığın prognozu ile ilgili, nasıl bir bakım ve izlem yapılması gerektiği ile ilgili, tekrarlama riski ve fertilite ile ilgili danışma.",
+       "ekran": "2.'si danışma vermektir: tanı ile ilgili, hastalığın prognozu ile ilgili, nasıl bir bakım ve izlem yapılması gerektiği ile ilgili, tekrarlama riski ve fertilite ile ilgili danışma.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-01-c0408",
+       "ses": "3.'sü izlemdir: hastanın düzenli kontrollere çağrılarak izlenmesi, olası komplikasyonlar açısından takip ve risk altındaki aile üyelerinin takibi.",
+       "ekran": "3.'sü izlemdir: hastanın düzenli kontrollere çağrılarak izlenmesi, olası komplikasyonlar açısından takip ve risk altındaki aile üyelerinin takibi.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-01-p082",
+     "sayfa": 90,
+     "cumleler": [
+      {
+       "id": "k1-01-c0409",
+       "ses": "Özetle, bu dersin özü şudur: bulguyu doğru terimle tanımlayın, onu büyüklük, oluşum şekli ve birliktelik eksenlerinde sınıflayın, doğru testi doğru sırayla isteyin ve aileye yönlendirmeden, doğru ve eksiksiz danışma verin.",
+       "ekran": "Özetle, bu dersin özü şudur: bulguyu doğru terimle tanımlayın, onu büyüklük, oluşum şekli ve birliktelik eksenlerinde sınıflayın, doğru testi doğru sırayla isteyin ve aileye yönlendirmeden, doğru ve eksiksiz danışma verin.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+[Unit]
+Description=MeDSor gece hattı — her gece 02:30; bilgisayar kapalıysa açılışta (Persistent)
+
+[Timer]
+OnCalendar=*-*-* 02:30
+Persistent=true
+RandomizedDelaySec=5m
+
+[Install]
+WantedBy=timers.target

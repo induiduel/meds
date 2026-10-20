@@ -1,0 +1,2389 @@
+{
+ "surum": 2,
+ "ders_id": "k1-32",
+ "anahtar": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari",
+ "baslik": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-32-b01",
+   "baslik": "Bağışıklık gözetimi ve kanıtları",
+   "paragraflar": [
+    {
+     "id": "k1-32-p001",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-32-c0001",
+       "ses": "Bu konunun iki büyük ekseni var: kanser ile bağışıklık sistemi arasındaki ilişki ve tümörün uzak dokulara yayılmasını sağlayan metastaz basamakları.",
+       "ekran": "Bu konunun iki büyük ekseni var: kanser ile bağışıklık sistemi arasındaki ilişki ve tümörün uzak dokulara yayılmasını sağlayan metastaz basamakları.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0002",
+       "ses": "Temel kavramla başlayalım: bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir.",
+       "ekran": "Temel kavramla başlayalım: bağışıklık sistemi tümör hücrelerini tanıyabilir ve elimine edebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0003",
+       "ses": "Buna bağışıklık gözetimi, İngilizce adıyla immün sürveyans diyoruz.",
+       "ekran": "Buna bağışıklık gözetimi, İngilizce adıyla immün sürveyans diyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0004",
+       "ses": "Bağışıklık gözetimi, vücutta sürekli olarak ortaya çıkan kötü huylu hücrelerin bağışıklık sistemi tarafından tespit edilip yok edilmesidir.",
+       "ekran": "Bağışıklık gözetimi, vücutta sürekli olarak ortaya çıkan kötü huylu hücrelerin bağışıklık sistemi tarafından tespit edilip yok edilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0005",
+       "ses": "Mantığı şu: malign dönüşüm tek seferlik bir olay değildir, hücreler sürekli dönüşüme uğrayabilir ve gözetim bu hücreleri klinik tümöre dönüşmeden temizlemeye çalışır.",
+       "ekran": "Mantığı şu: malign dönüşüm tek seferlik bir olay değildir, hücreler sürekli dönüşüme uğrayabilir ve gözetim bu hücreleri klinik tümöre dönüşmeden temizlemeye çalışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0006",
+       "ses": "Yani kanseri yalnız hücrenin kendi genetik değişikliği olarak değil, konağın bağışıklık yanıtıyla birlikte değerlendirmemiz gerekir.",
+       "ekran": "Yani kanseri yalnız hücrenin kendi genetik değişikliği olarak değil, konağın bağışıklık yanıtıyla birlikte değerlendirmemiz gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p002",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-32-c0007",
+       "ses": "Gözetimin gerçekten işlediğini gösteren 3 kanıt var.",
+       "ekran": "Gözetimin gerçekten işlediğini gösteren 3 kanıt var.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0008",
+       "ses": "1.'si, tümör infiltrasyonunun prognozla ilişkisidir: tümör dokusuna bağışıklık hücrelerinin girmesi hastalığın seyriyle ilişkilidir ve bu, bağışıklık hücrelerinin tümörle aktif olarak etkileştiğini gösterir.",
+       "ekran": "1.'si, tümör infiltrasyonunun prognozla ilişkisidir: tümör dokusuna bağışıklık hücrelerinin girmesi hastalığın seyriyle ilişkilidir ve bu, bağışıklık hücrelerinin tümörle aktif olarak etkileştiğini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0009",
+       "ses": "2.'si, immün yetmezlikte artmış tümör riskidir.",
+       "ekran": "2.'si, immün yetmezlikte artmış tümör riskidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0010",
+       "ses": "Bağışıklık sistemi zayıfladığında, normalde temizlenecek malign klonlar büyüyebilir ve tümör sıklığı artar; bu, gözetimin varlığına dair en doğrudan klinik kanıttır.",
+       "ekran": "Bağışıklık sistemi zayıfladığında, normalde temizlenecek malign klonlar büyüyebilir ve tümör sıklığı artar; bu, gözetimin varlığına dair en doğrudan klinik kanıttır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0011",
+       "ses": "3.'sü, immünoterapi ile görülen dramatik yanıtlardır: bağışıklık yanıtını güçlendiren tedavilerle bazı tümörlerde belirgin gerileme görülmesi, bağışıklık sisteminin tümörü yok etme kapasitesi taşıdığını kanıtlar.",
+       "ekran": "3.'sü, immünoterapi ile görülen dramatik yanıtlardır: bağışıklık yanıtını güçlendiren tedavilerle bazı tümörlerde belirgin gerileme görülmesi, bağışıklık sisteminin tümörü yok etme kapasitesi taşıdığını kanıtlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b02",
+   "baslik": "Tümör antijenleri ve kaynakları",
+   "paragraflar": [
+    {
+     "id": "k1-32-p003",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-32-c0012",
+       "ses": "Bağışıklık sisteminin tümörü tanıyabilmesi için tümör hücresinin onu normal hücreden ayıran bir hedef taşıması gerekir.",
+       "ekran": "Bağışıklık sisteminin tümörü tanıyabilmesi için tümör hücresinin onu normal hücreden ayıran bir hedef taşıması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0013",
+       "ses": "Bu hedeflere tümör antijenleri denir.",
+       "ekran": "Bu hedeflere tümör antijenleri denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0014",
+       "ses": "Tümör antijenleri iki türlü olabilir: tümör hücrelerinde ekspresyonu artmış antijenler, yani normal hücrede de bulunan ama tümörde çok daha fazla miktarda olanlar, ya da sadece tümörde ifade edilen antijenler.",
+       "ekran": "Tümör antijenleri iki türlü olabilir: tümör hücrelerinde ekspresyonu artmış antijenler, yani normal hücrede de bulunan ama tümörde çok daha fazla miktarda olanlar, ya da sadece tümörde ifade edilen antijenler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0015",
+       "ses": "Bu antijenler bağışıklık sistemi tarafından yabancı olarak algılanabilir ve antitümör yanıtı başlatabilir.",
+       "ekran": "Bu antijenler bağışıklık sistemi tarafından yabancı olarak algılanabilir ve antitümör yanıtı başlatabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0016",
+       "ses": "Bir antijenin yabancı algılanabilmesi, bağışıklık sisteminin ona karşı tolerans geliştirmemiş olmasına bağlıdır.",
+       "ekran": "Bir antijenin yabancı algılanabilmesi, bağışıklık sisteminin ona karşı tolerans geliştirmemiş olmasına bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0017",
+       "ses": "Tolerans, bağışıklık sisteminin bir antijene yanıt vermemesidir.",
+       "ekran": "Tolerans, bağışıklık sisteminin bir antijene yanıt vermemesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0018",
+       "ses": "Bu yüzden bir proteinin normal dokuda ne zaman, nerede ve ne miktarda bulunduğu, ona karşı yanıt oluşup oluşmayacağını belirler.",
+       "ekran": "Bu yüzden bir proteinin normal dokuda ne zaman, nerede ve ne miktarda bulunduğu, ona karşı yanıt oluşup oluşmayacağını belirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p004",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-32-c0019",
+       "ses": "Tümör antijenlerinin 4 kaynağı vardır.",
+       "ekran": "Tümör antijenlerinin 4 kaynağı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0020",
+       "ses": "1.'si mutasyona uğramış proteinler, yani neoantijenlerdir; burada protein dizisi değişmiştir.",
+       "ekran": "1.'si mutasyona uğramış proteinler, yani neoantijenlerdir; burada protein dizisi değişmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0021",
+       "ses": "2.'si normalde sınırlı dokularda ifade edilen proteinlerdir; bunlar normalde başka dokularda sessizdir.",
+       "ekran": "2.'si normalde sınırlı dokularda ifade edilen proteinlerdir; bunlar normalde başka dokularda sessizdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0022",
+       "ses": "3.'sü viral proteinlerdir; bunlar virüs kökenlidir.",
+       "ekran": "3.'sü viral proteinlerdir; bunlar virüs kökenlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0023",
+       "ses": "4.'sü aşırı veya anormal koşullarda ifade edilen öz proteinlerdir; öz protein, vücudun kendi genlerinden üretilen normal proteindir.",
+       "ekran": "4.'sü aşırı veya anormal koşullarda ifade edilen öz proteinlerdir; öz protein, vücudun kendi genlerinden üretilen normal proteindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0024",
+       "ses": "4 kaynağı ezberlemek yerine her birinin neden yabancı algılandığını bilin: kimi dizi değişikliğiyle, kimi yanlış dokuda bulunmasıyla, kimi virüs kökenli olmasıyla, kimi de miktar ya da yapı anormalliğiyle bağışıklık sisteminin dikkatini çeker.",
+       "ekran": "4 kaynağı ezberlemek yerine her birinin neden yabancı algılandığını bilin: kimi dizi değişikliğiyle, kimi yanlış dokuda bulunmasıyla, kimi virüs kökenli olmasıyla, kimi de miktar ya da yapı anormalliğiyle bağışıklık sisteminin dikkatini çeker.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b03",
+   "baslik": "Neoantijenler ve mutasyon yükü",
+   "paragraflar": [
+    {
+     "id": "k1-32-p005",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-32-c0025",
+       "ses": "Neoantijen, tümör hücresindeki sürücü veya yolcu mutasyonlar sonucu protein dizisinde yeni bir peptit oluşmasıyla ortaya çıkar.",
+       "ekran": "Neoantijen, tümör hücresindeki sürücü veya yolcu mutasyonlar sonucu protein dizisinde yeni bir peptit oluşmasıyla ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0026",
+       "ses": "Sürücü mutasyon tümörün gelişmesine doğrudan katkı yapan mutasyondur; yolcu mutasyon ise tümör büyümesine katkısı olmayan, eşlik eden mutasyondur.",
+       "ekran": "Sürücü mutasyon tümörün gelişmesine doğrudan katkı yapan mutasyondur; yolcu mutasyon ise tümör büyümesine katkısı olmayan, eşlik eden mutasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0027",
+       "ses": "Dikkat edin, yolcu mutasyonlar da neoantijen üretebilir; önemli olan yeni bir peptidin oluşmasıdır.",
+       "ekran": "Dikkat edin, yolcu mutasyonlar da neoantijen üretebilir; önemli olan yeni bir peptidin oluşmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0028",
+       "ses": "Değişmiş amino asit dizisi, daha önce vücutta hiç bulunmamış bir peptit parçası yaratır.",
+       "ekran": "Değişmiş amino asit dizisi, daha önce vücutta hiç bulunmamış bir peptit parçası yaratır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-32-c0029",
+       "ses": "Neoantijenin bağışıklık açısından değeri iki özelliğinden gelir.",
+       "ekran": "Neoantijenin bağışıklık açısından değeri iki özelliğinden gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0030",
+       "ses": "Daha önce bağışıklık sistemiyle tanışmamıştır, çünkü gelişim sırasında hiç var olmamıştır.",
+       "ekran": "Daha önce bağışıklık sistemiyle tanışmamıştır, çünkü gelişim sırasında hiç var olmamıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0031",
+       "ses": "Bu yüzden ona karşı öz tolerans gelişmemiştir ve güçlü bir yanıt oluşabilir.",
+       "ekran": "Bu yüzden ona karşı öz tolerans gelişmemiştir ve güçlü bir yanıt oluşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0032",
+       "ses": "Bu nedenle neoantijen en yabancı tümör antijeni türüdür.",
+       "ekran": "Bu nedenle neoantijen en yabancı tümör antijeni türüdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p007",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-32-c0033",
+       "ses": "Her mutasyon yeni bir peptit üretebileceği için neoantijen sayısı tümörün taşıdığı mutasyon miktarıyla, yani mutasyon yüküyle orantılıdır.",
+       "ekran": "Her mutasyon yeni bir peptit üretebileceği için neoantijen sayısı tümörün taşıdığı mutasyon miktarıyla, yani mutasyon yüküyle orantılıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0034",
+       "ses": "Burası önemli: neoantijenler yüksek mutasyon yüküne sahip tümörlerde daha fazladır.",
+       "ekran": "Burası önemli: neoantijenler yüksek mutasyon yüküne sahip tümörlerde daha fazladır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0035",
+       "ses": "3 örnek grup var.",
+       "ekran": "3 örnek grup var.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0036",
+       "ses": "Sigara ilişkili akciğer kanserinde tütün dumanındaki mutajenler çok sayıda mutasyon biriktirir.",
+       "ekran": "Sigara ilişkili akciğer kanserinde tütün dumanındaki mutajenler çok sayıda mutasyon biriktirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0037",
+       "ses": "Güneş ilişkili melanomda ultraviyole ışığın oluşturduğu DNA hasarı yüksek mutasyon yükü yaratır.",
+       "ekran": "Güneş ilişkili melanomda ultraviyole ışığın oluşturduğu DNA hasarı yüksek mutasyon yükü yaratır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0038",
+       "ses": "DNA onarım kusuru olan kanserlerde ise hatalar düzeltilemez ve mutasyonlar birikir.",
+       "ekran": "DNA onarım kusuru olan kanserlerde ise hatalar düzeltilemez ve mutasyonlar birikir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0039",
+       "ses": "Ortak payda şudur: yüksek mutasyon yükü daha çok neoantijen, yani bağışıklık sistemi için daha çok yabancı hedef demektir.",
+       "ekran": "Ortak payda şudur: yüksek mutasyon yükü daha çok neoantijen, yani bağışıklık sistemi için daha çok yabancı hedef demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0040",
+       "ses": "Bu ilişkiyi tedavi yanıtında tekrar hatırlayacağız.",
+       "ekran": "Bu ilişkiyi tedavi yanıtında tekrar hatırlayacağız.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b04",
+   "baslik": "Kanser-testis, aşırı ifade ve diferansiyasyon antijenleri",
+   "paragraflar": [
+    {
+     "id": "k1-32-p008",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-32-c0041",
+       "ses": "Kanser-testis antijenleri, normalde sınırlı dokularda ifade edilen proteinlerin tipik örneğidir.",
+       "ekran": "Kanser-testis antijenleri, normalde sınırlı dokularda ifade edilen proteinlerin tipik örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0042",
+       "ses": "Normalde testis germ hücrelerinde ifade edilirler, diğer dokularda sessizdirler.",
+       "ekran": "Normalde testis germ hücrelerinde ifade edilirler, diğer dokularda sessizdirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0043",
+       "ses": "Tümörlerde ise çeşitli solid tümörlerde yeniden ifade edilirler.",
+       "ekran": "Tümörlerde ise çeşitli solid tümörlerde yeniden ifade edilirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0044",
+       "ses": "Peki bunlara karşı neden tolerans gelişmeyebilir?",
+       "ekran": "Peki bunlara karşı neden tolerans gelişmeyebilir?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0045",
+       "ses": "Çünkü testis germ hücrelerinde majör doku uyumluluk kompleksi sınıf I, kısaca MHC sınıf I ekspresyonu düşüktür.",
+       "ekran": "Çünkü testis germ hücrelerinde majör doku uyumluluk kompleksi sınıf I, kısaca MHC sınıf I ekspresyonu düşüktür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0046",
+       "ses": "MHC sınıf I, hücre içi peptitleri CD8 pozitif T hücrelerine sunan moleküldür.",
+       "ekran": "MHC sınıf I, hücre içi peptitleri CD8 pozitif T hücrelerine sunan moleküldür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0047",
+       "ses": "Antijen normal yaşamda T hücrelerine bu yolla sunulmadığı için bağışıklık sistemi onu öz olarak öğrenmez.",
+       "ekran": "Antijen normal yaşamda T hücrelerine bu yolla sunulmadığı için bağışıklık sistemi onu öz olarak öğrenmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0048",
+       "ses": "Sonuç olarak aynı antijen bir solid tümörde ortaya çıktığında bağışıklık sistemi ona karşı yanıt geliştirebilir.",
+       "ekran": "Sonuç olarak aynı antijen bir solid tümörde ortaya çıktığında bağışıklık sistemi ona karşı yanıt geliştirebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p009",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-32-c0049",
+       "ses": "Vücudun kendi proteini de tümör antijeni olabilir; bunun için miktarı ya da yapısı normalden sapmalıdır.",
+       "ekran": "Vücudun kendi proteini de tümör antijeni olabilir; bunun için miktarı ya da yapısı normalden sapmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0050",
+       "ses": "Aşırı ekspresyonun ders örneği HER2/neu aşırı ekspresyonudur.",
+       "ekran": "Aşırı ekspresyonun ders örneği HER2/neu aşırı ekspresyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0051",
+       "ses": "Bu protein normalde de vardır, ancak tümördeki aşırı miktar onu bağışıklık sistemi için belirgin bir hedef yapar.",
+       "ekran": "Bu protein normalde de vardır, ancak tümördeki aşırı miktar onu bağışıklık sistemi için belirgin bir hedef yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0052",
+       "ses": "Normal doku antijenlerinin anormal formu da olabilir: protein dizisi aynı kalsa bile glikozilasyon, yani şeker gruplarının eklenmesi, veya fosforilasyon, yani fosfat grubunun eklenmesi değişiklikleri antijenin yapısını değiştirir.",
+       "ekran": "Normal doku antijenlerinin anormal formu da olabilir: protein dizisi aynı kalsa bile glikozilasyon, yani şeker gruplarının eklenmesi, veya fosforilasyon, yani fosfat grubunun eklenmesi değişiklikleri antijenin yapısını değiştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0053",
+       "ses": "Karıştırmayın: neoantijende değişiklik protein dizisindedir, anormal formda ise dizi aynı kalır, değişiklik glikozilasyon ya da fosforilasyon düzeyindedir.",
+       "ekran": "Karıştırmayın: neoantijende değişiklik protein dizisindedir, anormal formda ise dizi aynı kalır, değişiklik glikozilasyon ya da fosforilasyon düzeyindedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p010",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-32-c0054",
+       "ses": "Diferansiyasyon antijenleri, bir hücre soyuna özgü olan ve o soydan gelişen tümörde de korunan antijenlerdir.",
+       "ekran": "Diferansiyasyon antijenleri, bir hücre soyuna özgü olan ve o soydan gelişen tümörde de korunan antijenlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0055",
+       "ses": "Ders örneği melanosit antijeni tirozinazdır.",
+       "ekran": "Ders örneği melanosit antijeni tirozinazdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0056",
+       "ses": "Tirozinaz hem normal melanositlerde hem de melanomda ifade edilir.",
+       "ekran": "Tirozinaz hem normal melanositlerde hem de melanomda ifade edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0057",
+       "ses": "Yani tümöre özgü değildir, melanosit soyuna özgüdür; melanom melanositten geliştiği için bu soy belirtecini taşımaya devam eder.",
+       "ekran": "Yani tümöre özgü değildir, melanosit soyuna özgüdür; melanom melanositten geliştiği için bu soy belirtecini taşımaya devam eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0058",
+       "ses": "Burası önemli, sınav tuzağıdır: tirozinaz normal melanositte de bulunduğu için tümöre özgü neoantijenle karıştırılmamalıdır.",
+       "ekran": "Burası önemli, sınav tuzağıdır: tirozinaz normal melanositte de bulunduğu için tümöre özgü neoantijenle karıştırılmamalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0059",
+       "ses": "Bu antijen grubunun ve diğer tümör antijenlerinin klinikte iki kullanımı vardır: tanıda, tümörün hangi hücreden köken aldığını göstermek için, ve immünoterapi hedefi olarak.",
+       "ekran": "Bu antijen grubunun ve diğer tümör antijenlerinin klinikte iki kullanımı vardır: tanıda, tümörün hangi hücreden köken aldığını göstermek için, ve immünoterapi hedefi olarak.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0060",
+       "ses": "Diferansiyasyon antijeni hedeflendiğinde aynı antijeni taşıyan normal hücreler de etkilenebilir.",
+       "ekran": "Diferansiyasyon antijeni hedeflendiğinde aynı antijeni taşıyan normal hücreler de etkilenebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b05",
+   "baslik": "Viral tümör antijenleri",
+   "paragraflar": [
+    {
+     "id": "k1-32-p011",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-32-c0061",
+       "ses": "Bazı tümörler virüslerle ilişkilidir ve bu tümörlerde virüsün proteinleri tümör antijeni işlevi görür.",
+       "ekran": "Bazı tümörler virüslerle ilişkilidir ve bu tümörlerde virüsün proteinleri tümör antijeni işlevi görür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0062",
+       "ses": "Dersin saydığı onkojenik virüsler şunlardır: İnsan papilloma virüsü (HPV), yani HPV; Epstein-Barr virüsü (EBV), yani EBV; hepatit B virüsü ve hepatit C virüsü; ve Kaposi sarkomu herpes virüsü (KSHV / HHV-8), kısaca KSHV.",
+       "ekran": "Dersin saydığı onkojenik virüsler şunlardır: İnsan papilloma virüsü (HPV), yani HPV; Epstein-Barr virüsü (EBV), yani EBV; hepatit B virüsü ve hepatit C virüsü; ve Kaposi sarkomu herpes virüsü (KSHV / HHV-8), kısaca KSHV.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0063",
+       "ses": "Bu sonuncunun diğer adı insan herpes virüsü 8'dir; iki adın aynı virüsü gösterdiğini bilin.",
+       "ekran": "Bu sonuncunun diğer adı insan herpes virüsü 8'dir; iki adın aynı virüsü gösterdiğini bilin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0064",
+       "ses": "Viral proteinler konağa ait olmadığından, öz toleransın hiç söz konusu olmadığı, açıkça yabancı hedeflerdir.",
+       "ekran": "Viral proteinler konağa ait olmadığından, öz toleransın hiç söz konusu olmadığı, açıkça yabancı hedeflerdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p012",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-32-c0065",
+       "ses": "Viral proteinler tümör hücresinin içinde üretilir ve MHC sınıf I ile sunulur.",
+       "ekran": "Viral proteinler tümör hücresinin içinde üretilir ve MHC sınıf I ile sunulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0066",
+       "ses": "Bu, onları hücre içi antijenleri tanıyan sitotoksik yanıtın doğal hedefi yapar.",
+       "ekran": "Bu, onları hücre içi antijenleri tanıyan sitotoksik yanıtın doğal hedefi yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0067",
+       "ses": "İki örnek çifti iyi bilin.",
+       "ekran": "İki örnek çifti iyi bilin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0068",
+       "ses": "HPV proteinleri olan E6 ve E7, servikal karsinomlarda ifade edilir.",
+       "ekran": "HPV proteinleri olan E6 ve E7, servikal karsinomlarda ifade edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0069",
+       "ses": "EBV proteinleri olan LMP1, yani latent membran proteini, ve EBNA, yani EBV nükleer antijeni, Burkitt lenfoma, nazofaringeal karsinom ve benzeri EBV ilişkili tümörlerde bulunur.",
+       "ekran": "EBV proteinleri olan LMP1, yani latent membran proteini, ve EBNA, yani EBV nükleer antijeni, Burkitt lenfoma, nazofaringeal karsinom ve benzeri EBV ilişkili tümörlerde bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0070",
+       "ses": "Burası önemli, eşleştirme sorularında çıkar: E6 ve E7 HPV ile servikal karsinomu, LMP1 ve EBNA ise EBV ile Burkitt lenfoma ve nazofaringeal karsinomu gösterir.",
+       "ekran": "Burası önemli, eşleştirme sorularında çıkar: E6 ve E7 HPV ile servikal karsinomu, LMP1 ve EBNA ise EBV ile Burkitt lenfoma ve nazofaringeal karsinomu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p013",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-32-c0071",
+       "ses": "Kısaca toparlarsak her antijen grubunun yabancılık nedeni farklıdır: neoantijende yeni dizi ve hiç tanışmamış olma, kanser-testis antijeninde testiste düşük MHC sınıf I, aşırı ifadede miktar, anormal formda değişmiş yapı, diferansiyasyon antijeninde soy belirteci, viral antijende ise virüs kökeni.",
+       "ekran": "Kısaca toparlarsak her antijen grubunun yabancılık nedeni farklıdır: neoantijende yeni dizi ve hiç tanışmamış olma, kanser-testis antijeninde testiste düşük MHC sınıf I, aşırı ifadede miktar, anormal formda değişmiş yapı, diferansiyasyon antijeninde soy belirteci, viral antijende ise virüs kökeni.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b06",
+   "baslik": "Antitümör bağışıklığın hücresel bileşenleri",
+   "paragraflar": [
+    {
+     "id": "k1-32-p014",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-32-c0072",
+       "ses": "Tümör antijeni tanındıktan sonra yanıtı yürüten hücreler iki düzeyde sınıflanır ve etkili antitümör bağışıklık ağırlıkla hücresel bir yanıttır.",
+       "ekran": "Tümör antijeni tanındıktan sonra yanıtı yürüten hücreler iki düzeyde sınıflanır ve etkili antitümör bağışıklık ağırlıkla hücresel bir yanıttır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0073",
+       "ses": "Temel efektörler sitotoksik T lenfositleri ve T yardımcı Tip 1 hücreleridir.",
+       "ekran": "Temel efektörler sitotoksik T lenfositleri ve T yardımcı Tip 1 hücreleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0074",
+       "ses": "Sitotoksik T lenfositleri CD8 pozitiftir ve tümör hücresini doğrudan öldüren ana hücrelerdir.",
+       "ekran": "Sitotoksik T lenfositleri CD8 pozitiftir ve tümör hücresini doğrudan öldüren ana hücrelerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0075",
+       "ses": "T yardımcı Tip 1 hücreleri ise CD4 pozitif T hücreleridir; sitokin üreterek yanıtı yönlendirir ve diğer efektörleri aktive eder.",
+       "ekran": "T yardımcı Tip 1 hücreleri ise CD4 pozitif T hücreleridir; sitokin üreterek yanıtı yönlendirir ve diğer efektörleri aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0076",
+       "ses": "Diğer katkılar doğal öldürücü hücreler, yani NK hücreleri, makrofajlar ve antikora bağımlı hücre aracılı sitotoksisitedir.",
+       "ekran": "Diğer katkılar doğal öldürücü hücreler, yani NK hücreleri, makrofajlar ve antikora bağımlı hücre aracılı sitotoksisitedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p015",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-32-c0077",
+       "ses": "Burası önemli, çıkmış sorularda soruldu: CD8 eksprese eden T lenfositi sitotoksik T lenfositidir.",
+       "ekran": "Burası önemli, çıkmış sorularda soruldu: CD8 eksprese eden T lenfositi sitotoksik T lenfositidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0078",
+       "ses": "Yardımcı ve düzenleyici T hücreleri ise CD4 pozitiftir; sorularda bunlar çeldirici olarak verilir.",
+       "ekran": "Yardımcı ve düzenleyici T hücreleri ise CD4 pozitiftir; sorularda bunlar çeldirici olarak verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0079",
+       "ses": "Antitümör bağışıklığın merkezinde CD8 pozitif sitotoksik T lenfositi ve CD4 pozitif T yardımcı Tip 1 hücresi vardır; NK hücresi, makrofaj ve antikor aracılı öldürme destekleyici katkılardır.",
+       "ekran": "Antitümör bağışıklığın merkezinde CD8 pozitif sitotoksik T lenfositi ve CD4 pozitif T yardımcı Tip 1 hücresi vardır; NK hücresi, makrofaj ve antikor aracılı öldürme destekleyici katkılardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b07",
+   "baslik": "Sitotoksik T lenfositi yanıtı",
+   "paragraflar": [
+    {
+     "id": "k1-32-p016",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-32-c0080",
+       "ses": "Sitotoksik T lenfositinin tümörü öldürebilmesi için önce o tümörün antijenine özgü olarak aktive olması gerekir.",
+       "ekran": "Sitotoksik T lenfositinin tümörü öldürebilmesi için önce o tümörün antijenine özgü olarak aktive olması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0081",
+       "ses": "İlk adım antijen sunumudur: tümör antijenini dendritik hücreler alır ve MHC sınıf I bağlamında çapraz sunum yapar.",
+       "ekran": "İlk adım antijen sunumudur: tümör antijenini dendritik hücreler alır ve MHC sınıf I bağlamında çapraz sunum yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0082",
+       "ses": "Çapraz sunumun anlamı şudur: dendritik hücre, kendi içinde üretmediği, dışarıdan aldığı tümör antijenini MHC sınıf I üzerinde sunar.",
+       "ekran": "Çapraz sunumun anlamı şudur: dendritik hücre, kendi içinde üretmediği, dışarıdan aldığı tümör antijenini MHC sınıf I üzerinde sunar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0083",
+       "ses": "Böylece CD8 pozitif T hücreleri tümöre ait bir antijenle karşılaşabilir.",
+       "ekran": "Böylece CD8 pozitif T hücreleri tümöre ait bir antijenle karşılaşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0084",
+       "ses": "İkinci adım aktivasyondur: antijeni tanıyan, tümör antijenine özgü CD8 pozitif hücreler klon genişlemesi gösterir, yani aynı özgüllükteki hücreler çoğalarak sayıca artar.",
+       "ekran": "İkinci adım aktivasyondur: antijeni tanıyan, tümör antijenine özgü CD8 pozitif hücreler klon genişlemesi gösterir, yani aynı özgüllükteki hücreler çoğalarak sayıca artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0085",
+       "ses": "Böylece yanıt tümöre özgü olur.",
+       "ekran": "Böylece yanıt tümöre özgü olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p017",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-32-c0086",
+       "ses": "Çoğalan hücreler tümör dokusuna ulaşır ve efektör faza geçer.",
+       "ekran": "Çoğalan hücreler tümör dokusuna ulaşır ve efektör faza geçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0087",
+       "ses": "Tümör hücreleri üzerindeki MHC sınıf I ile antijen kompleksini tanırlar; tümör hücresi yüzeyinde bu kompleks yoksa tanıma gerçekleşmez.",
+       "ekran": "Tümör hücreleri üzerindeki MHC sınıf I ile antijen kompleksini tanırlar; tümör hücresi yüzeyinde bu kompleks yoksa tanıma gerçekleşmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0088",
+       "ses": "Ardından tümör hücresinde apoptoz, yani programlı hücre ölümü başlatırlar.",
+       "ekran": "Ardından tümör hücresinde apoptoz, yani programlı hücre ölümü başlatırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0089",
+       "ses": "İki yol vardır.",
+       "ekran": "İki yol vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0090",
+       "ses": "Perforin ve granzim yolunda granüllerden salınan perforin hedef hücre zarında geçit oluşturur, granzimler bu geçitten girerek apoptozu başlatır.",
+       "ekran": "Perforin ve granzim yolunda granüllerden salınan perforin hedef hücre zarında geçit oluşturur, granzimler bu geçitten girerek apoptozu başlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0091",
+       "ses": "Fas ve Fas ligandı yolunda ise T hücresi üzerindeki Fas ligandı tümör hücresindeki Fas reseptörüne bağlanır ve hücre içi ölüm programını tetikler.",
+       "ekran": "Fas ve Fas ligandı yolunda ise T hücresi üzerindeki Fas ligandı tümör hücresindeki Fas reseptörüne bağlanır ve hücre içi ölüm programını tetikler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0092",
+       "ses": "Her iki yolun sonucu aynıdır: tümör hücresi enflamasyona yol açmadan, programlı biçimde ölür.",
+       "ekran": "Her iki yolun sonucu aynıdır: tümör hücresi enflamasyona yol açmadan, programlı biçimde ölür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0093",
+       "ses": "Burası önemli: temel antitümör efektör CD8 pozitif sitotoksik T lenfositidir; MHC sınıf I ile tanır, perforin granzim ve Fas Fas ligandı ile apoptoz yaptırır.",
+       "ekran": "Burası önemli: temel antitümör efektör CD8 pozitif sitotoksik T lenfositidir; MHC sınıf I ile tanır, perforin granzim ve Fas Fas ligandı ile apoptoz yaptırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0094",
+       "ses": "Bu öldürme yeteneğinin MHC sınıf I sunumuna bağımlı olduğunu aklınızda tutun, kaçış mekanizmalarının anahtarı burasıdır.",
+       "ekran": "Bu öldürme yeteneğinin MHC sınıf I sunumuna bağımlı olduğunu aklınızda tutun, kaçış mekanizmalarının anahtarı burasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b08",
+   "baslik": "T yardımcı Tip 1 hücreleri ve makrofajlar",
+   "paragraflar": [
+    {
+     "id": "k1-32-p018",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-32-c0095",
+       "ses": "T yardımcı Tip 1 hücreleri tümör hücresini doğrudan öldürmekten çok, sitokin üretimiyle diğer efektörleri güçlendirir.",
+       "ekran": "T yardımcı Tip 1 hücreleri tümör hücresini doğrudan öldürmekten çok, sitokin üretimiyle diğer efektörleri güçlendirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0096",
+       "ses": "Ana ürünleri interferon gamadır.",
+       "ekran": "Ana ürünleri interferon gamadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0097",
+       "ses": "İnterferon gama makrofajları aktive eder ve onları tümör hücresini öldürebilen efektörlere dönüştürür.",
+       "ekran": "İnterferon gama makrofajları aktive eder ve onları tümör hücresini öldürebilen efektörlere dönüştürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0098",
+       "ses": "İş bölümü şöyledir: CD8 pozitif hücre hedefi doğrudan tanıyıp öldürür, CD4 pozitif T yardımcı Tip 1 hücresi ise interferon gama ile makrofajları devreye sokar ve yanıtın etki alanını genişletir.",
+       "ekran": "İş bölümü şöyledir: CD8 pozitif hücre hedefi doğrudan tanıyıp öldürür, CD4 pozitif T yardımcı Tip 1 hücresi ise interferon gama ile makrofajları devreye sokar ve yanıtın etki alanını genişletir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p019",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-32-c0099",
+       "ses": "Aktive makrofaj öldürmeyi kimyasal ürünlerle yapar.",
+       "ekran": "Aktive makrofaj öldürmeyi kimyasal ürünlerle yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0100",
+       "ses": "Serbest radikaller hücre zarı, protein ve DNA üzerinde oksidatif hasar oluşturur; azot oksit hedef hücrede toksik etki gösterir; lizozomal enzimler ise hücre yapılarını parçalar.",
+       "ekran": "Serbest radikaller hücre zarı, protein ve DNA üzerinde oksidatif hasar oluşturur; azot oksit hedef hücrede toksik etki gösterir; lizozomal enzimler ise hücre yapılarını parçalar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0101",
+       "ses": "Bu ürünler hedefe özgü bir tanıma gerektirmeden etki ettiği için makrofaj yanıtı, sitotoksik T lenfositinin yüksek özgüllüklü öldürmesini tamamlar.",
+       "ekran": "Bu ürünler hedefe özgü bir tanıma gerektirmeden etki ettiği için makrofaj yanıtı, sitotoksik T lenfositinin yüksek özgüllüklü öldürmesini tamamlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0102",
+       "ses": "Bu T yardımcı Tip 1 ve makrofaj yanıtları özellikle bazı hematolojik ve solid tümörlerde önemli olabilir.",
+       "ekran": "Bu T yardımcı Tip 1 ve makrofaj yanıtları özellikle bazı hematolojik ve solid tümörlerde önemli olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b09",
+   "baslik": "Tümörlere karşı antikor yanıtı",
+   "paragraflar": [
+    {
+     "id": "k1-32-p020",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-32-c0103",
+       "ses": "Hümoral yanıtta antikorlar tümör antijenlerine bağlanır.",
+       "ekran": "Hümoral yanıtta antikorlar tümör antijenlerine bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0104",
+       "ses": "Antikorun kendisi öldürmez, bağlandığı hücreyi diğer efektörler için işaretler.",
+       "ekran": "Antikorun kendisi öldürmez, bağlandığı hücreyi diğer efektörler için işaretler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0105",
+       "ses": "İki olası etkisi vardır.",
+       "ekran": "İki olası etkisi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0106",
+       "ses": "1.'si antikora bağımlı hücre aracılı sitotoksisitedir: antikorla kaplanan tümör hücresi NK hücreleri ve makrofajlar tarafından tanınıp öldürülür; antikor burada hedef ile öldürücü hücre arasında köprü kurar.",
+       "ekran": "1.'si antikora bağımlı hücre aracılı sitotoksisitedir: antikorla kaplanan tümör hücresi NK hücreleri ve makrofajlar tarafından tanınıp öldürülür; antikor burada hedef ile öldürücü hücre arasında köprü kurar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0107",
+       "ses": "2.'si kompleman aktivasyonudur: tümör yüzeyine bağlanan antikor kompleman sistemini aktive eder ve hücre hasarına katkıda bulunur.",
+       "ekran": "2.'si kompleman aktivasyonudur: tümör yüzeyine bağlanan antikor kompleman sistemini aktive eder ve hücre hasarına katkıda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p021",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-32-c0108",
+       "ses": "Antikor yanıtının sınırları vardır.",
+       "ekran": "Antikor yanıtının sınırları vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0109",
+       "ses": "Solid tümörlerde antikor yanıtının öldürücü etkisi genellikle sınırlıdır; antikorun kitlenin içine ulaşması ve efektör hücreleri yeterince toplaması güçtür.",
+       "ekran": "Solid tümörlerde antikor yanıtının öldürücü etkisi genellikle sınırlıdır; antikorun kitlenin içine ulaşması ve efektör hücreleri yeterince toplaması güçtür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0110",
+       "ses": "Bazı hematolojik malignitelerde ise daha önemlidir, çünkü bu hücreler kanda ve lenfoid dokuda dağınık bulunur.",
+       "ekran": "Bazı hematolojik malignitelerde ise daha önemlidir, çünkü bu hücreler kanda ve lenfoid dokuda dağınık bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0111",
+       "ses": "Dikkat edin, solid tümörlerde antikor yanıtının en etkili öldürücü mekanizma olduğunu söyleyen ifade yanlıştır.",
+       "ekran": "Dikkat edin, solid tümörlerde antikor yanıtının en etkili öldürücü mekanizma olduğunu söyleyen ifade yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0112",
+       "ses": "Antitümör bağışıklığın asıl yükünü hücresel yanıt taşır ve her kolun ağırlığı tümör tipine göre değişir.",
+       "ekran": "Antitümör bağışıklığın asıl yükünü hücresel yanıt taşır ve her kolun ağırlığı tümör tipine göre değişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b10",
+   "baslik": "Bağışıklıktan kaçış: immün düzenleme ve MHC kaybı",
+   "paragraflar": [
+    {
+     "id": "k1-32-p022",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-32-c0113",
+       "ses": "Gözetim varken kanserler nasıl büyüyebiliyor?",
+       "ekran": "Gözetim varken kanserler nasıl büyüyebiliyor?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0114",
+       "ses": "Gelişmiş kanserler genellikle güçlü bağışıklık kaçış mekanizmaları gösterir.",
+       "ekran": "Gelişmiş kanserler genellikle güçlü bağışıklık kaçış mekanizmaları gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0115",
+       "ses": "Burada kanser immün düzenlemesi kavramı devreye girer.",
+       "ekran": "Burada kanser immün düzenlemesi kavramı devreye girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0116",
+       "ses": "Burası önemli: bağışıklık sistemi, tümör içindeki farklı alt klonlar arasından bağışıklık kaçış yeteneği en yüksek olanları seçer.",
+       "ekran": "Burası önemli: bağışıklık sistemi, tümör içindeki farklı alt klonlar arasından bağışıklık kaçış yeteneği en yüksek olanları seçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0117",
+       "ses": "Kolay tanınan klonlar yok edilir, tanınmayan ya da bağışıklığı baskılayan klonlar hayatta kalır ve çoğalır.",
+       "ekran": "Kolay tanınan klonlar yok edilir, tanınmayan ya da bağışıklığı baskılayan klonlar hayatta kalır ve çoğalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0118",
+       "ses": "Sonuçta yerleşik tümörler çoğunlukla bağışıklık tarafından zayıf tanınan ve aktif olarak immün baskı yapan hücrelerden oluşur.",
+       "ekran": "Sonuçta yerleşik tümörler çoğunlukla bağışıklık tarafından zayıf tanınan ve aktif olarak immün baskı yapan hücrelerden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0119",
+       "ses": "Yani bağışıklık sistemi tümörü tamamen yok edemediğinde, farkında olmadan ona karşı en dirençli klonları seçmiş olur.",
+       "ekran": "Yani bağışıklık sistemi tümörü tamamen yok edemediğinde, farkında olmadan ona karşı en dirençli klonları seçmiş olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p023",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-32-c0120",
+       "ses": "Birinci kaçış mekanizması MHC sınıf I ekspresyonunun azalmasıdır.",
+       "ekran": "Birinci kaçış mekanizması MHC sınıf I ekspresyonunun azalmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0121",
+       "ses": "Beta 2 mikroglobulin, MHC sınıf I molekülünün yapısal bileşenidir; bu genin mutasyonları molekülün hücre yüzeyinde oluşmasını bozar.",
+       "ekran": "Beta 2 mikroglobulin, MHC sınıf I molekülünün yapısal bileşenidir; bu genin mutasyonları molekülün hücre yüzeyinde oluşmasını bozar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0122",
+       "ses": "Antijen sunma yolunun diğer bileşenlerindeki kusurlar da yüzeyde sunulan kompleksi azaltır.",
+       "ekran": "Antijen sunma yolunun diğer bileşenlerindeki kusurlar da yüzeyde sunulan kompleksi azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0123",
+       "ses": "Burası önemli: sonuçta sitotoksik T lenfositleri tümör hücrelerini tanıyamaz, çünkü antijen hücrede olsa bile yüzeyde sergilenmez.",
+       "ekran": "Burası önemli: sonuçta sitotoksik T lenfositleri tümör hücrelerini tanıyamaz, çünkü antijen hücrede olsa bile yüzeyde sergilenmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p024",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-32-c0124",
+       "ses": "Bu avantajın bir bedeli vardır.",
+       "ekran": "Bu avantajın bir bedeli vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0125",
+       "ses": "MHC kaybı, doğrudan NK hücre aracılı öldürülmeyi artırabilir; çünkü NK hücreleri MHC sınıf I taşımayan hücreleri hedef alabilir.",
+       "ekran": "MHC kaybı, doğrudan NK hücre aracılı öldürülmeyi artırabilir; çünkü NK hücreleri MHC sınıf I taşımayan hücreleri hedef alabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0126",
+       "ses": "Ancak tümörler NK yanıtını da baskılayacak ek mekanizmalar kullanabilir.",
+       "ekran": "Ancak tümörler NK yanıtını da baskılayacak ek mekanizmalar kullanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0127",
+       "ses": "Böylece bağışıklığın kolları birbirini tamamlar: sitotoksik T lenfositi MHC sınıf I sunan tümörü, NK hücresi ise bunu kaybetmiş tümörü hedefler; her iki kola da direnç kazanan alt klon seçilim avantajı elde eder.",
+       "ekran": "Böylece bağışıklığın kolları birbirini tamamlar: sitotoksik T lenfositi MHC sınıf I sunan tümörü, NK hücresi ise bunu kaybetmiş tümörü hedefler; her iki kola da direnç kazanan alt klon seçilim avantajı elde eder.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b11",
+   "baslik": "İmmün kontrol noktaları ve diğer kaçış yolları",
+   "paragraflar": [
+    {
+     "id": "k1-32-p025",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-32-c0128",
+       "ses": "İmmün kontrol noktaları, T hücre yanıtını normalde sınırlayan inhibitör yollardır, yani T hücresi üzerindeki frenlerdir.",
+       "ekran": "İmmün kontrol noktaları, T hücre yanıtını normalde sınırlayan inhibitör yollardır, yani T hücresi üzerindeki frenlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0129",
+       "ses": "Programlanmış hücre ölümü ligandı 1, kısaca PD-L1, tümör hücreleri ve tümör çevresindeki miyeloid hücreler üzerinde ifade edilir.",
+       "ekran": "Programlanmış hücre ölümü ligandı 1, kısaca PD-L1, tümör hücreleri ve tümör çevresindeki miyeloid hücreler üzerinde ifade edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0130",
+       "ses": "Programlanmış hücre ölümü 1, kısaca PD-1, aktive T lenfositleri üzerindeki reseptördür.",
+       "ekran": "Programlanmış hücre ölümü 1, kısaca PD-1, aktive T lenfositleri üzerindeki reseptördür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0131",
+       "ses": "PD-L1'in PD-1'e bağlanması T hücre aktivitesini baskılar ve sitotoksik T lenfositlerini tükenmiş fenotipe iter; sürekli inhibitör sinyal altında kalan hücrenin öldürme kapasitesi azalır.",
+       "ekran": "PD-L1'in PD-1'e bağlanması T hücre aktivitesini baskılar ve sitotoksik T lenfositlerini tükenmiş fenotipe iter; sürekli inhibitör sinyal altında kalan hücrenin öldürme kapasitesi azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0132",
+       "ses": "Bu mekanizmayla tümör antijenini kaybetmeden de kaçabilir.",
+       "ekran": "Bu mekanizmayla tümör antijenini kaybetmeden de kaçabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0133",
+       "ses": "Burası önemli, klasik çeldiricidir: ligand tümör ve miyeloid hücrede, reseptör ise aktive T hücresindedir; yerleri karıştırmayın.",
+       "ekran": "Burası önemli, klasik çeldiricidir: ligand tümör ve miyeloid hücrede, reseptör ise aktive T hücresindedir; yerleri karıştırmayın.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0134",
+       "ses": "Diğer kontrol noktası sitotoksik T lenfosit antijeni 4'tür, kısaca CTLA-4.",
+       "ekran": "Diğer kontrol noktası sitotoksik T lenfosit antijeni 4'tür, kısaca CTLA-4.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0135",
+       "ses": "Bu molekül T hücre aktivasyonunu negatif regüle eder, yani T hücresinin uyarılmasını frenler.",
+       "ekran": "Bu molekül T hücre aktivasyonunu negatif regüle eder, yani T hücresinin uyarılmasını frenler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p026",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-32-c0136",
+       "ses": "Tümörler çözünür baskılayıcı sitokinler de kullanır: transforme edici büyüme faktörü beta, kısaca TGF-β, ve interlökin 10.",
+       "ekran": "Tümörler çözünür baskılayıcı sitokinler de kullanır: transforme edici büyüme faktörü beta, kısaca TGF-β, ve interlökin 10.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0137",
+       "ses": "Bu sitokinler hücreyle temas gerekmeden tümör çevresindeki çok sayıda bağışıklık hücresini etkiler ve sitotoksik T lenfositi tümörü tanısa bile yanıtın etkinliğini azaltabilir.",
+       "ekran": "Bu sitokinler hücreyle temas gerekmeden tümör çevresindeki çok sayıda bağışıklık hücresini etkiler ve sitotoksik T lenfositi tümörü tanısa bile yanıtın etkinliğini azaltabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0138",
+       "ses": "Dikkat edin, interferon gama ise tersine makrofajı aktive eden sitokindir.",
+       "ekran": "Dikkat edin, interferon gama ise tersine makrofajı aktive eden sitokindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0139",
+       "ses": "Ayrıca tümör çevresine toplanan konak kökenli baskılayıcı hücreler vardır: T düzenleyici hücreler ve miyeloid kökenli baskılayıcı hücreler.",
+       "ekran": "Ayrıca tümör çevresine toplanan konak kökenli baskılayıcı hücreler vardır: T düzenleyici hücreler ve miyeloid kökenli baskılayıcı hücreler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0140",
+       "ses": "Bunlar tümörün kendi hücreleri değildir ama tümör yararına çalışırlar.",
+       "ekran": "Bunlar tümörün kendi hücreleri değildir ama tümör yararına çalışırlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p027",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-32-c0141",
+       "ses": "Son iki mekanizma antijenle ilgilidir.",
+       "ekran": "Son iki mekanizma antijenle ilgilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0142",
+       "ses": "Antijen kaybında, bağışıklık yanıtının hedef aldığı tümör antijenlerini kaybeden alt klonlar seçilir; antijeni taşıyanlar yok edilirken antijensiz klonlar çoğalır.",
+       "ekran": "Antijen kaybında, bağışıklık yanıtının hedef aldığı tümör antijenlerini kaybeden alt klonlar seçilir; antijeni taşıyanlar yok edilirken antijensiz klonlar çoğalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0143",
+       "ses": "Antijen işlenmesindeki bozuklukta ise proteazom kusurları proteinlerin peptitlere parçalanmasını, TAP adı verilen transport proteininin kusurları ise peptitlerin MHC sınıf I'e yüklenmek üzere taşınmasını bozar.",
+       "ekran": "Antijen işlenmesindeki bozuklukta ise proteazom kusurları proteinlerin peptitlere parçalanmasını, TAP adı verilen transport proteininin kusurları ise peptitlerin MHC sınıf I'e yüklenmek üzere taşınmasını bozar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0144",
+       "ses": "Antijen kaybında hedef ortadan kalkar, işleme bozukluğunda hedef vardır ama sunulamaz.",
+       "ekran": "Antijen kaybında hedef ortadan kalkar, işleme bozukluğunda hedef vardır ama sunulamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0145",
+       "ses": "Kaçış yollarını iki grupta düşünebilirsiniz: tümörün görünmez olması, yani MHC, antijen ve işleme kayıpları; ve bağışıklığın aktif baskılanması, yani kontrol noktaları, sitokinler ve baskılayıcı hücreler.",
+       "ekran": "Kaçış yollarını iki grupta düşünebilirsiniz: tümörün görünmez olması, yani MHC, antijen ve işleme kayıpları; ve bağışıklığın aktif baskılanması, yani kontrol noktaları, sitokinler ve baskılayıcı hücreler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b12",
+   "baslik": "Çıkmış sorularda kaçış mekanizmaları",
+   "paragraflar": [
+    {
+     "id": "k1-32-p028",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-32-c0146",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda birkaç kez soruldu.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda birkaç kez soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0147",
+       "ses": "Kaçışta öne sürülen mekanizmalar arasında antijen negatif tümör alt kümelerinin seçici olarak çoğalması, doku uyumluluk yani MHC moleküllerinin kaybı veya azalması, tümörün immünsüpresif sitokinler salgılaması ve yüzey antijenlerinin maskelenmesi, yani antijen maskeleme vardır.",
+       "ekran": "Kaçışta öne sürülen mekanizmalar arasında antijen negatif tümör alt kümelerinin seçici olarak çoğalması, doku uyumluluk yani MHC moleküllerinin kaybı veya azalması, tümörün immünsüpresif sitokinler salgılaması ve yüzey antijenlerinin maskelenmesi, yani antijen maskeleme vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0148",
+       "ses": "Kostimülatör molekül ekspresyonunda artış ise bir kaçış mekanizması değildir.",
+       "ekran": "Kostimülatör molekül ekspresyonunda artış ise bir kaçış mekanizması değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0149",
+       "ses": "Kostimülatör moleküller T hücresinin uyarılması için gereken ikinci sinyali verir; bunların artması T hücre yanıtını güçlendirir, tümörün işine yaramaz.",
+       "ekran": "Kostimülatör moleküller T hücresinin uyarılması için gereken ikinci sinyali verir; bunların artması T hücre yanıtını güçlendirir, tümörün işine yaramaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0150",
+       "ses": "Tersine, baskılayıcı sitokinler antijen sunan hücrelerde kostimülatör molekül üretimini azaltarak kaçışa katkıda bulunur.",
+       "ekran": "Tersine, baskılayıcı sitokinler antijen sunan hücrelerde kostimülatör molekül üretimini azaltarak kaçışa katkıda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p029",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-32-c0151",
+       "ses": "Burası önemli, bu da çıkmış sorularda soruldu: tümöre bağlı immün baskıya aracılık eden molekül, bir immün kontrol noktası olan CTLA-4'tür.",
+       "ekran": "Burası önemli, bu da çıkmış sorularda soruldu: tümöre bağlı immün baskıya aracılık eden molekül, bir immün kontrol noktası olan CTLA-4'tür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0152",
+       "ses": "Karsinoembriyonik antijen, over kanseri antijeni olarak bilinen CA125, CD30 ve tümör testis antijenleri immün baskıya aracılık etmez; tümör testis antijenleri, gördüğümüz gibi, tersine bağışıklık yanıtının hedefi olabilen antijenlerdir.",
+       "ekran": "Karsinoembriyonik antijen, over kanseri antijeni olarak bilinen CA125, CD30 ve tümör testis antijenleri immün baskıya aracılık etmez; tümör testis antijenleri, gördüğümüz gibi, tersine bağışıklık yanıtının hedefi olabilen antijenlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0153",
+       "ses": "Bir başka soruda da tersinden soruldu: PD-1, PD-L1, CTLA-4 ve T düzenleyici hücre indüksiyonu tümöre bağlı immün supresyona aracılık eder; CAR-T hücreleri ise immün supresyona aracılık etmez, çünkü onlar tümörü öldürmek için kullanılan bir tedavidir.",
+       "ekran": "Bir başka soruda da tersinden soruldu: PD-1, PD-L1, CTLA-4 ve T düzenleyici hücre indüksiyonu tümöre bağlı immün supresyona aracılık eder; CAR-T hücreleri ise immün supresyona aracılık etmez, çünkü onlar tümörü öldürmek için kullanılan bir tedavidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b13",
+   "baslik": "İmmün kontrol noktası inhibitörleri",
+   "paragraflar": [
+    {
+     "id": "k1-32-p030",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-32-c0154",
+       "ses": "Kontrol noktası yolları doğrudan tedavi hedefine dönüştürülmüştür.",
+       "ekran": "Kontrol noktası yolları doğrudan tedavi hedefine dönüştürülmüştür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0155",
+       "ses": "Strateji tek cümleyle şudur: T hücreler üzerindeki frenleri kaldırmak.",
+       "ekran": "Strateji tek cümleyle şudur: T hücreler üzerindeki frenleri kaldırmak.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0156",
+       "ses": "Tümöre özgü T hücreleri çoğu zaman vardır ama kontrol noktası sinyalleriyle baskılanmıştır; fren kalkınca yeniden işlev kazanırlar.",
+       "ekran": "Tümöre özgü T hücreleri çoğu zaman vardır ama kontrol noktası sinyalleriyle baskılanmıştır; fren kalkınca yeniden işlev kazanırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0157",
+       "ses": "Hedefler PD-1, PD-L1 ve CTLA-4'tür.",
+       "ekran": "Hedefler PD-1, PD-L1 ve CTLA-4'tür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0158",
+       "ses": "PD-1 ya da PD-L1 bloke edildiğinde ligand ile reseptör bağlanamaz ve hücre tükenmiş fenotipe itilmez; CTLA-4 bloke edildiğinde aktivasyon üzerindeki negatif düzenleme kalkar.",
+       "ekran": "PD-1 ya da PD-L1 bloke edildiğinde ligand ile reseptör bağlanamaz ve hücre tükenmiş fenotipe itilmez; CTLA-4 bloke edildiğinde aktivasyon üzerindeki negatif düzenleme kalkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0159",
+       "ses": "Kullanılan ilaçlar monoklonal antikorlardır: PD-1 ve PD-L1'e karşı monoklonal antikorlar ile CTLA-4'e karşı monoklonal antikorlar.",
+       "ekran": "Kullanılan ilaçlar monoklonal antikorlardır: PD-1 ve PD-L1'e karşı monoklonal antikorlar ile CTLA-4'e karşı monoklonal antikorlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0160",
+       "ses": "Bu ilaçlar tümörü doğrudan öldürmez, hastanın kendi T hücrelerinin baskılanmış öldürme kapasitesini serbest bırakır.",
+       "ekran": "Bu ilaçlar tümörü doğrudan öldürmez, hastanın kendi T hücrelerinin baskılanmış öldürme kapasitesini serbest bırakır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p031",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-32-c0161",
+       "ses": "Burası önemli: klinikte melanom, akciğer karsinomu, mesane karsinomu, Hodgkin lenfoma ve diğerlerinde yüksek yanıt oranları elde edilir.",
+       "ekran": "Burası önemli: klinikte melanom, akciğer karsinomu, mesane karsinomu, Hodgkin lenfoma ve diğerlerinde yüksek yanıt oranları elde edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0162",
+       "ses": "Avantajları uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleri ile kalıcı bağışıklık yanıtıdır.",
+       "ekran": "Avantajları uzun süreli remisyon, bazı olgularda kür potansiyeli ve hafıza T hücreleri ile kalıcı bağışıklık yanıtıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0163",
+       "ses": "Hafıza T hücreleri tümör antijenini hatırlar ve tümör yeniden ortaya çıkarsa yanıtı hızla başlatabilir; ilaç vücuttan atılsa bile bu hafıza korunabilir.",
+       "ekran": "Hafıza T hücreleri tümör antijenini hatırlar ve tümör yeniden ortaya çıkarsa yanıtı hızla başlatabilir; ilaç vücuttan atılsa bile bu hafıza korunabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p032",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-32-c0164",
+       "ses": "Sınırlamalar da var.",
+       "ekran": "Sınırlamalar da var.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0165",
+       "ses": "Tümörlerin yalnızca küçük bir kısmı yanıt verir ve yanıtın öngörülmesi güçtür.",
+       "ekran": "Tümörlerin yalnızca küçük bir kısmı yanıt verir ve yanıtın öngörülmesi güçtür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0166",
+       "ses": "Yanıt, yüksek mutasyon yükü ve neoantijen sayısı ile ilişkilidir.",
+       "ekran": "Yanıt, yüksek mutasyon yükü ve neoantijen sayısı ile ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0167",
+       "ses": "Mantığı tutarlıdır: mutasyon yükü yüksek tümör çok neoantijen üretir, bunlara tolerans yoktur ve fren kalktığında serbest kalan T hücreleri daha fazla hedef bulur.",
+       "ekran": "Mantığı tutarlıdır: mutasyon yükü yüksek tümör çok neoantijen üretir, bunlara tolerans yoktur ve fren kalktığında serbest kalan T hücreleri daha fazla hedef bulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0168",
+       "ses": "Listedeki melanom ve sigara ilişkili akciğer kanserinin aynı zamanda yüksek mutasyon yüklü tümörler olması rastlantı değildir.",
+       "ekran": "Listedeki melanom ve sigara ilişkili akciğer kanserinin aynı zamanda yüksek mutasyon yüklü tümörler olması rastlantı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p033",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-32-c0169",
+       "ses": "Yan etkiler otoimmünite benzeri toksisitelerdir, çünkü frenler normal dokulara karşı yanıtı da sınırlar.",
+       "ekran": "Yan etkiler otoimmünite benzeri toksisitelerdir, çünkü frenler normal dokulara karşı yanıtı da sınırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0170",
+       "ses": "Burası önemli: kolit, dermatit, pnömonit ve endokrinopatiler görülür; yani bağırsak, deri, akciğer ve endokrin bezler etkilenir.",
+       "ekran": "Burası önemli: kolit, dermatit, pnömonit ve endokrinopatiler görülür; yani bağırsak, deri, akciğer ve endokrin bezler etkilenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0171",
+       "ses": "Bu toksisiteler genellikle kortikosteroid ve immünsüpresanlarla, yani bağışıklığı baskılayarak yönetilir.",
+       "ekran": "Bu toksisiteler genellikle kortikosteroid ve immünsüpresanlarla, yani bağışıklığı baskılayarak yönetilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b14",
+   "baslik": "Diğer immünoterapi yaklaşımları",
+   "paragraflar": [
+    {
+     "id": "k1-32-p034",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-32-c0172",
+       "ses": "Kontrol noktası blokajı mevcut T hücrelerini serbest bırakır; diğer yaklaşımlar ise yeni bir yanıt oluşturmayı ya da T hücre sayısını artırmayı hedefler.",
+       "ekran": "Kontrol noktası blokajı mevcut T hücrelerini serbest bırakır; diğer yaklaşımlar ise yeni bir yanıt oluşturmayı ya da T hücre sayısını artırmayı hedefler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0173",
+       "ses": "Tümör aşıları, tümöre spesifik neoantijenleri hedefleyen kişiselleştirilmiş aşılardır: hastanın tümörüne özgü neoantijenler belirlenir ve bağışıklık sistemi bunlara karşı uyarılır; tolerans olmadığı için güçlü yanıt beklenir.",
+       "ekran": "Tümör aşıları, tümöre spesifik neoantijenleri hedefleyen kişiselleştirilmiş aşılardır: hastanın tümörüne özgü neoantijenler belirlenir ve bağışıklık sistemi bunlara karşı uyarılır; tolerans olmadığı için güçlü yanıt beklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0174",
+       "ses": "Adaptif T hücre transferinde ise tümöre spesifik T hücreleri laboratuvar ortamında, yani in vitro çoğaltılır ve hastaya geri verilir; klon genişlemesi bir anlamda laboratuvarda sağlanmış olur.",
+       "ekran": "Adaptif T hücre transferinde ise tümöre spesifik T hücreleri laboratuvar ortamında, yani in vitro çoğaltılır ve hastaya geri verilir; klon genişlemesi bir anlamda laboratuvarda sağlanmış olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p035",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-32-c0175",
+       "ses": "Kimerik antijen reseptör T hücreleri, kısaca CAR-T tedavisinde T hücrelerine yapay reseptörler eklenir; bu reseptör T hücresini seçilen tümör antijenine yönlendirir.",
+       "ekran": "Kimerik antijen reseptör T hücreleri, kısaca CAR-T tedavisinde T hücrelerine yapay reseptörler eklenir; bu reseptör T hücresini seçilen tümör antijenine yönlendirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0176",
+       "ses": "Burası önemli: CAR-T özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+       "ekran": "Burası önemli: CAR-T özellikle B hücreli akut lenfoblastik lösemi ve bazı lenfomalarda başarılıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0177",
+       "ses": "Sınırlamaları ciddi sitokin salınım sendromudur; aktive olan çok sayıda T hücresi aşırı sitokin salgılayarak ağır sistemik bir inflamatuvar tablo oluşturabilir.",
+       "ekran": "Sınırlamaları ciddi sitokin salınım sendromudur; aktive olan çok sayıda T hücresi aşırı sitokin salgılayarak ağır sistemik bir inflamatuvar tablo oluşturabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0178",
+       "ses": "Ayrıca şu anda çoğunlukla hematolojik malignitelerde ve ikinci basamak tedavi olarak kullanılır.",
+       "ekran": "Ayrıca şu anda çoğunlukla hematolojik malignitelerde ve ikinci basamak tedavi olarak kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0179",
+       "ses": "Ayırt edin: kontrol noktası inhibitörünün yan etkisi otoimmünite benzeridir, CAR-T tedavisinin yan etkisi ise sitokin salınım sendromudur.",
+       "ekran": "Ayırt edin: kontrol noktası inhibitörünün yan etkisi otoimmünite benzeridir, CAR-T tedavisinin yan etkisi ise sitokin salınım sendromudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b15",
+   "baslik": "Metastazın klinik önemi ve basamakları",
+   "paragraflar": [
+    {
+     "id": "k1-32-p036",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-32-c0180",
+       "ses": "Dersin ikinci eksenine geçiyoruz.",
+       "ekran": "Dersin ikinci eksenine geçiyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0181",
+       "ses": "Burası önemli: metastaz kanser ilişkili ölümün başlıca nedenidir.",
+       "ekran": "Burası önemli: metastaz kanser ilişkili ölümün başlıca nedenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0182",
+       "ses": "Tümör evrelemesinde M durumu, yani uzak metastaz varlığı belirleyicidir; metastaz tedavi stratejisini ve prognozu şekillendirir.",
+       "ekran": "Tümör evrelemesinde M durumu, yani uzak metastaz varlığı belirleyicidir; metastaz tedavi stratejisini ve prognozu şekillendirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0183",
+       "ses": "Neden bu kadar önemli?",
+       "ekran": "Neden bu kadar önemli?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0184",
+       "ses": "Çünkü cerrahi ve radyoterapi gibi lokal tedavilerle tam eradikasyon zorlaşır ve sistemik, yani tüm vücudu etkileyen tedavi ihtiyacı doğar.",
+       "ekran": "Çünkü cerrahi ve radyoterapi gibi lokal tedavilerle tam eradikasyon zorlaşır ve sistemik, yani tüm vücudu etkileyen tedavi ihtiyacı doğar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p037",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-32-c0185",
+       "ses": "Metastaz tek bir olay değil, ardışık basamaklardan oluşan bir kaskaddır.",
+       "ekran": "Metastaz tek bir olay değil, ardışık basamaklardan oluşan bir kaskaddır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0186",
+       "ses": "Birinci basamak primer tümörden ayrılmadır.",
+       "ekran": "Birinci basamak primer tümörden ayrılmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0187",
+       "ses": "2.'si hücre dışı matriks ve bazal membran invazyonudur.",
+       "ekran": "2.'si hücre dışı matriks ve bazal membran invazyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0188",
+       "ses": "3.'sü damar içine giriş, yani intravazasyondur.",
+       "ekran": "3.'sü damar içine giriş, yani intravazasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0189",
+       "ses": "4.'sü dolaşımda sağkalımdır, burada tümör embolileri söz konusudur.",
+       "ekran": "4.'sü dolaşımda sağkalımdır, burada tümör embolileri söz konusudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0190",
+       "ses": "5.'si damar dışına çıkış, yani ekstravazasyondur.",
+       "ekran": "5.'si damar dışına çıkış, yani ekstravazasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0191",
+       "ses": "Altıncısı mikrometastaz oluşumudur.",
+       "ekran": "Altıncısı mikrometastaz oluşumudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0192",
+       "ses": "Yedincisi ise uygun koşullarda makroskopik metastaza büyümedir.",
+       "ekran": "Yedincisi ise uygun koşullarda makroskopik metastaza büyümedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0193",
+       "ses": "İlk iki basamak invazyonu, sonraki üçü damar içinde taşınmayı, son ikisi yeni dokuda yerleşme ve büyümeyi temsil eder.",
+       "ekran": "İlk iki basamak invazyonu, sonraki üçü damar içinde taşınmayı, son ikisi yeni dokuda yerleşme ve büyümeyi temsil eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0194",
+       "ses": "Hücre bu basamakların hepsini tamamlamak zorundadır; herhangi birinde başarısızlık yayılımı durdurur.",
+       "ekran": "Hücre bu basamakların hepsini tamamlamak zorundadır; herhangi birinde başarısızlık yayılımı durdurur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p038",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-32-c0195",
+       "ses": "Burası önemli, çıkmış sorularda sıralama soruldu: doğru sıra lokal invazyon, intravazasyon, ekstravazasyon ve metastatik kolonizasyondur.",
+       "ekran": "Burası önemli, çıkmış sorularda sıralama soruldu: doğru sıra lokal invazyon, intravazasyon, ekstravazasyon ve metastatik kolonizasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0196",
+       "ses": "İntra içine, ekstra dışına demektir; damara giriş ile damardan çıkışı karıştırmayın.",
+       "ekran": "İntra içine, ekstra dışına demektir; damara giriş ile damardan çıkışı karıştırmayın.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p039",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-32-c0197",
+       "ses": "Derste gösterilen şekil, hematogen yayılımın ardışık adımlarını tek bir damar kesiti üzerinde özetler.",
+       "ekran": "Derste gösterilen şekil, hematogen yayılımın ardışık adımlarını tek bir damar kesiti üzerinde özetler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0198",
+       "ses": "Dönüşmüş hücreden klonal genişleme, büyüme, çeşitlenme ve anjiyogenezle primer tümör oluşur; içinden yayılma yeteneği kazanmış metastatik bir alt klon ayrılır.",
+       "ekran": "Dönüşmüş hücreden klonal genişleme, büyüme, çeşitlenme ve anjiyogenezle primer tümör oluşur; içinden yayılma yeteneği kazanmış metastatik bir alt klon ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0199",
+       "ses": "Bu klon bazal membrana tutunup onu invaze eder, hücre dışı matriksten geçer ve damara girer.",
+       "ekran": "Bu klon bazal membrana tutunup onu invaze eder, hücre dışı matriksten geçer ve damara girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0200",
+       "ses": "Dolaşımda konak lenfoid hücreleriyle etkileşir ve trombositlerle sarılı bir tümör hücre embolisi oluşturur.",
+       "ekran": "Dolaşımda konak lenfoid hücreleriyle etkileşir ve trombositlerle sarılı bir tümör hücre embolisi oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0201",
+       "ses": "Uzak dokuda yeniden bazal membrana tutunur, damarı terk eder ve metastatik birikim anjiyogenez ve büyümeyle metastatik tümöre dönüşür.",
+       "ekran": "Uzak dokuda yeniden bazal membrana tutunur, damarı terk eder ve metastatik birikim anjiyogenez ve büyümeyle metastatik tümöre dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b16",
+   "baslik": "Lokal invazyon: E-kadherin kaybı ve matriks yıkımı",
+   "paragraflar": [
+    {
+     "id": "k1-32-p040",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-32-c0202",
+       "ses": "Ayrılma, epitel hücreleri arasındaki bağların gevşemesiyle başlar.",
+       "ekran": "Ayrılma, epitel hücreleri arasındaki bağların gevşemesiyle başlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0203",
+       "ses": "Normal epitelde E-kadherin aracılı güçlü hücre hücre bağlantıları vardır.",
+       "ekran": "Normal epitelde E-kadherin aracılı güçlü hücre hücre bağlantıları vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0204",
+       "ses": "Metastazın başlangıcında E-kadherin fonksiyon kaybı gelişir ve bunun 3 nedeni vardır: E-kadherin gen mutasyonları, beta katenin aktivasyonu ve Snail, Twist gibi transkripsiyon faktörleriyle baskılanma.",
+       "ekran": "Metastazın başlangıcında E-kadherin fonksiyon kaybı gelişir ve bunun 3 nedeni vardır: E-kadherin gen mutasyonları, beta katenin aktivasyonu ve Snail, Twist gibi transkripsiyon faktörleriyle baskılanma.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0205",
+       "ses": "Burası önemli: sonuçta hücreler arası kohezyon azalır ve tümör hücreleri ayrılıp hareket edebilir.",
+       "ekran": "Burası önemli: sonuçta hücreler arası kohezyon azalır ve tümör hücreleri ayrılıp hareket edebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p041",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-32-c0206",
+       "ses": "Ayrılan hücrenin önünde iki hücre dışı matriks bariyeri vardır: bazal membran ve interstisyel bağ dokusu.",
+       "ekran": "Ayrılan hücrenin önünde iki hücre dışı matriks bariyeri vardır: bazal membran ve interstisyel bağ dokusu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0207",
+       "ses": "Bunları aşmak için tümör hücreleri veya stromal hücreler proteazlar salgılar: matriks metalloproteinazlar, katepsin D ve ürokinaz tipi plazminojen aktivatörü.",
+       "ekran": "Bunları aşmak için tümör hücreleri veya stromal hücreler proteazlar salgılar: matriks metalloproteinazlar, katepsin D ve ürokinaz tipi plazminojen aktivatörü.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0208",
+       "ses": "Bunlar bazal membran ve matriks proteinlerini, yani kollajen ve laminini yıkar; ortaya çıkan matriks parçalanma ürünleri de göçü ve invazyonu kolaylaştırır.",
+       "ekran": "Bunlar bazal membran ve matriks proteinlerini, yani kollajen ve laminini yıkar; ortaya çıkan matriks parçalanma ürünleri de göçü ve invazyonu kolaylaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0209",
+       "ses": "Dikkat edin, proteazların kaynağı yalnız tümör hücresi değildir, çevredeki stromal hücreler de invazyona katkıda bulunur.",
+       "ekran": "Dikkat edin, proteazların kaynağı yalnız tümör hücresi değildir, çevredeki stromal hücreler de invazyona katkıda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p042",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-32-c0210",
+       "ses": "İnvazyon, hücrenin matrikse tutunma biçiminin değişmesiyle de ilerler.",
+       "ekran": "İnvazyon, hücrenin matrikse tutunma biçiminin değişmesiyle de ilerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0211",
+       "ses": "Normal epitel bazal kutupta integrinlerle matrikse sıkı bağlıdır ve bu bağlanma hücreyi yerinde tutar.",
+       "ekran": "Normal epitel bazal kutupta integrinlerle matrikse sıkı bağlıdır ve bu bağlanma hücreyi yerinde tutar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0212",
+       "ses": "Tümör hücrelerinde integrin ve diğer adezyon moleküllerinin örüntüsü değişir ve hücre değişmiş matriks bileşenlerine de bağlanabilir.",
+       "ekran": "Tümör hücrelerinde integrin ve diğer adezyon moleküllerinin örüntüsü değişir ve hücre değişmiş matriks bileşenlerine de bağlanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0213",
+       "ses": "Bazı matriks parçalanma ürünleri tümör hücreleri için kemotaktik, yani hücreyi kendine çeken, ve büyüme uyarıcıdır.",
+       "ekran": "Bazı matriks parçalanma ürünleri tümör hücreleri için kemotaktik, yani hücreyi kendine çeken, ve büyüme uyarıcıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0214",
+       "ses": "Böylece yıkım parçalar oluşturur, değişmiş tutunma bu parçalara yapışmayı sağlar, parçaların bir kısmı da hücreyi çeker.",
+       "ekran": "Böylece yıkım parçalar oluşturur, değişmiş tutunma bu parçalara yapışmayı sağlar, parçaların bir kısmı da hücreyi çeker.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b17",
+   "baslik": "Göç ve epitel mezenkimal geçiş",
+   "paragraflar": [
+    {
+     "id": "k1-32-p043",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-32-c0215",
+       "ses": "Burası önemli: göç, invazyonun son basamağıdır.",
+       "ekran": "Burası önemli: göç, invazyonun son basamağıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0216",
+       "ses": "Hücre iskeleti, yani aktin yeniden düzenlenir ve hücre ileri doğru uzantı oluşturur.",
+       "ekran": "Hücre iskeleti, yani aktin yeniden düzenlenir ve hücre ileri doğru uzantı oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0217",
+       "ses": "Ön uçta adezyon kurulur, arka uçta adezyon çözülür ve hücre ileri çekilir.",
+       "ekran": "Ön uçta adezyon kurulur, arka uçta adezyon çözülür ve hücre ileri çekilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0218",
+       "ses": "Hücre kemotaktik ve motijenik, yani hareketi uyaran sinyallere yanıt verir.",
+       "ekran": "Hücre kemotaktik ve motijenik, yani hareketi uyaran sinyallere yanıt verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0219",
+       "ses": "Tümör mikroçevresindeki göç uyarıcı faktörler hepatosit büyüme faktörü, diğer adıyla yayılma faktörü, ile tümörle ilişkili makrofajlar ve fibroblastlardan salgılanan kemokin ve sitokinlerdir.",
+       "ekran": "Tümör mikroçevresindeki göç uyarıcı faktörler hepatosit büyüme faktörü, diğer adıyla yayılma faktörü, ile tümörle ilişkili makrofajlar ve fibroblastlardan salgılanan kemokin ve sitokinlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0220",
+       "ses": "Yani mikroçevre invazyonun aktif ortağıdır.",
+       "ekran": "Yani mikroçevre invazyonun aktif ortağıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p044",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-32-c0221",
+       "ses": "Epitel mezenkimal geçiş, epitel hücrelerinin mezenkimal fenotipe geçişidir.",
+       "ekran": "Epitel mezenkimal geçiş, epitel hücrelerinin mezenkimal fenotipe geçişidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0222",
+       "ses": "Burası önemli: E-kadherin ve diğer epitel belirteçleri azalır, vimentin ve düz kas aktini gibi mezenkimal belirteçler artar.",
+       "ekran": "Burası önemli: E-kadherin ve diğer epitel belirteçleri azalır, vimentin ve düz kas aktini gibi mezenkimal belirteçler artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0223",
+       "ses": "Snail ve Twist transkripsiyon faktörleri E-kadherin gen ekspresyonunu baskılar.",
+       "ekran": "Snail ve Twist transkripsiyon faktörleri E-kadherin gen ekspresyonunu baskılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0224",
+       "ses": "Sonuçta hücre hareketliliği ve invazyon kapasitesi artar.",
+       "ekran": "Sonuçta hücre hareketliliği ve invazyon kapasitesi artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0225",
+       "ses": "Bu geçiş, E-kadherin kaybını bir programa dönüştürür: aynı faktörler hem epitel bağlarını çözer hem de hücreyi hareketli bir mezenkimal hücreye benzetir.",
+       "ekran": "Bu geçiş, E-kadherin kaybını bir programa dönüştürür: aynı faktörler hem epitel bağlarını çözer hem de hücreyi hareketli bir mezenkimal hücreye benzetir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0226",
+       "ses": "İnvazyonun moleküler sırasını şöyle aklınızda tutabilirsiniz: bağların çözülmesi, matriksin yıkılması, tutunmanın değişmesi ve göç.",
+       "ekran": "İnvazyonun moleküler sırasını şöyle aklınızda tutabilirsiniz: bağların çözülmesi, matriksin yıkılması, tutunmanın değişmesi ve göç.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b18",
+   "baslik": "İntravazasyon, dolaşım ve ekstravazasyon",
+   "paragraflar": [
+    {
+     "id": "k1-32-p045",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-32-c0227",
+       "ses": "İntravazasyon, tümör hücrelerinin damar içine girişidir ve tek başına gerçekleşmez; tümör hücreleri, makrofajlar ve endotel arasındaki bir etkileşimdir.",
+       "ekran": "İntravazasyon, tümör hücrelerinin damar içine girişidir ve tek başına gerçekleşmez; tümör hücreleri, makrofajlar ve endotel arasındaki bir etkileşimdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0228",
+       "ses": "Makrofajlar girişi kolaylaştırır, endotel ise geçilmesi gereken son engeldir.",
+       "ekran": "Makrofajlar girişi kolaylaştırır, endotel ise geçilmesi gereken son engeldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0229",
+       "ses": "Yine konak hücrelerinin pasif seyirci değil, aktif katılımcı olduğunu görüyoruz.",
+       "ekran": "Yine konak hücrelerinin pasif seyirci değil, aktif katılımcı olduğunu görüyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p046",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-32-c0230",
+       "ses": "Dolaşım tümör hücresi için düşmanca bir ortamdır.",
+       "ekran": "Dolaşım tümör hücresi için düşmanca bir ortamdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0231",
+       "ses": "Tümör hücreleri tek tek ya da trombositler ve lökositlerle agregatlar oluşturarak dolaşır.",
+       "ekran": "Tümör hücreleri tek tek ya da trombositler ve lökositlerle agregatlar oluşturarak dolaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0232",
+       "ses": "Bağışıklık hücreleri tarafından tanınma ve yok edilme riski vardır, yani gözetim metastaz sırasında da işler.",
+       "ekran": "Bağışıklık hücreleri tarafından tanınma ve yok edilme riski vardır, yani gözetim metastaz sırasında da işler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0233",
+       "ses": "Burası önemli: trombositler tümör hücrelerini mekanik ve immün saldırıdan koruyabilir.",
+       "ekran": "Burası önemli: trombositler tümör hücrelerini mekanik ve immün saldırıdan koruyabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0234",
+       "ses": "Kan akımının fiziksel stresine karşı kalkan oluşturur ve hücreyi bağışıklık hücrelerinin tanımasından kısmen gizlerler.",
+       "ekran": "Kan akımının fiziksel stresine karşı kalkan oluşturur ve hücreyi bağışıklık hücrelerinin tanımasından kısmen gizlerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0235",
+       "ses": "Şekilde embolinin trombositlerle sarılı çizilmesinin anlamı budur.",
+       "ekran": "Şekilde embolinin trombositlerle sarılı çizilmesinin anlamı budur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p047",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-32-c0236",
+       "ses": "Ekstravazasyon, tümör hücrelerinin kılcal yataktan çıkışıdır.",
+       "ekran": "Ekstravazasyon, tümör hücrelerinin kılcal yataktan çıkışıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0237",
+       "ses": "Endotel adezyon molekülleri hücrenin damar duvarına tutunmasını sağlar, kemokin reseptörleri ise hücrenin hangi noktada damarı terk edeceğini yönlendiren sinyallere yanıt vermesini sağlar.",
+       "ekran": "Endotel adezyon molekülleri hücrenin damar duvarına tutunmasını sağlar, kemokin reseptörleri ise hücrenin hangi noktada damarı terk edeceğini yönlendiren sinyallere yanıt vermesini sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0238",
+       "ses": "Bu basamak, invazyonun bu kez damar içinden dışarıya doğru ters yönde bir tekrarı gibidir.",
+       "ekran": "Bu basamak, invazyonun bu kez damar içinden dışarıya doğru ters yönde bir tekrarı gibidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b19",
+   "baslik": "Organ tropizmi ve kolonizasyon",
+   "paragraflar": [
+    {
+     "id": "k1-32-p048",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-32-c0239",
+       "ses": "Metastazlar vücuda rastgele dağılmaz, bazı tümörler belirli organları tercih eder; buna organ tropizmi denir.",
+       "ekran": "Metastazlar vücuda rastgele dağılmaz, bazı tümörler belirli organları tercih eder; buna organ tropizmi denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0240",
+       "ses": "Burası önemli: tümör hücrelerindeki kemokin reseptörleri, hedef organ stromasından salgılanan kemokinlere yanıt verir.",
+       "ekran": "Burası önemli: tümör hücrelerindeki kemokin reseptörleri, hedef organ stromasından salgılanan kemokinlere yanıt verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0241",
+       "ses": "Hedef organ kemokin salgılar, uygun reseptörü taşıyan tümör hücresi bunu algılar ve o organda damarı terk eder.",
+       "ekran": "Hedef organ kemokin salgılar, uygun reseptörü taşıyan tümör hücresi bunu algılar ve o organda damarı terk eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0242",
+       "ses": "Buna tümör stroma uyumu, yani tohum ve toprak hipotezi denir: tohum tümör hücresi, toprak hedef organın stromasıdır ve metastaz ikisinin uyduğu yerde gelişir.",
+       "ekran": "Buna tümör stroma uyumu, yani tohum ve toprak hipotezi denir: tohum tümör hücresi, toprak hedef organın stromasıdır ve metastaz ikisinin uyduğu yerde gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0243",
+       "ses": "Yani metastaz yalnız hücrenin nereye taşındığına değil, ulaştığı dokunun onu destekleyip desteklemediğine bağlıdır.",
+       "ekran": "Yani metastaz yalnız hücrenin nereye taşındığına değil, ulaştığı dokunun onu destekleyip desteklemediğine bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p049",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-32-c0244",
+       "ses": "Kolonizasyon, yerleşen hücrelerin yeni dokuda çoğalarak metastatik odak oluşturmasıdır.",
+       "ekran": "Kolonizasyon, yerleşen hücrelerin yeni dokuda çoğalarak metastatik odak oluşturmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0245",
+       "ses": "Mikrometastazlar uygun stromal destek ve anjiyogenez olmadan büyüyemez.",
+       "ekran": "Mikrometastazlar uygun stromal destek ve anjiyogenez olmadan büyüyemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0246",
+       "ses": "Stroma hayatta kalma ve çoğalma sinyalleri sağlamalı, odağın büyüyebilmesi için de yeni damar oluşmalıdır.",
+       "ekran": "Stroma hayatta kalma ve çoğalma sinyalleri sağlamalı, odağın büyüyebilmesi için de yeni damar oluşmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0247",
+       "ses": "Bu yüzden hedef dokuya ulaşmak tek başına yetmez; destek yoksa odak mikrometastaz olarak kalır.",
+       "ekran": "Bu yüzden hedef dokuya ulaşmak tek başına yetmez; destek yoksa odak mikrometastaz olarak kalır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b20",
+   "baslik": "Mikrometastaz ve tümör dormansisi",
+   "paragraflar": [
+    {
+     "id": "k1-32-p050",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-32-c0248",
+       "ses": "Mikrometastaz, histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük metastatik odaklardır.",
+       "ekran": "Mikrometastaz, histolojik veya moleküler düzeyde saptanabilen, klinik olarak sessiz küçük metastatik odaklardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0249",
+       "ses": "Mikroskopla ya da tümöre özgü moleküler belirteçlerle gösterilebilir ama belirti oluşturmaz.",
+       "ekran": "Mikroskopla ya da tümöre özgü moleküler belirteçlerle gösterilebilir ama belirti oluşturmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0250",
+       "ses": "Klinik önemi şudur: primer tümör lokal tedaviyle çıkarıldığında hasta hastalıksız görünebilir, ancak vücutta saptanamayan mikrometastazlar kalmış olabilir.",
+       "ekran": "Klinik önemi şudur: primer tümör lokal tedaviyle çıkarıldığında hasta hastalıksız görünebilir, ancak vücutta saptanamayan mikrometastazlar kalmış olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0251",
+       "ses": "Sistemik tedavi ihtiyacının biyolojik temeli de budur.",
+       "ekran": "Sistemik tedavi ihtiyacının biyolojik temeli de budur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p051",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-32-c0252",
+       "ses": "Tümör dormansisi, tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır; kanser hücreleri vücutta çoğalmayı durdurup sessiz, uyku benzeri bir durumda kalır.",
+       "ekran": "Tümör dormansisi, tümör hücrelerinin uzun süre bölünmeden canlı kalmasıdır; kanser hücreleri vücutta çoğalmayı durdurup sessiz, uyku benzeri bir durumda kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0253",
+       "ses": "3 nedeni vardır.",
+       "ekran": "3 nedeni vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0254",
+       "ses": "Yetersiz anjiyogenezde yeni damar oluşmadığı için odak büyüyemez.",
+       "ekran": "Yetersiz anjiyogenezde yeni damar oluşmadığı için odak büyüyemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0255",
+       "ses": "2.'si uygun stromal niş eksikliğidir; niş, hücrelerin hayatta kalmasını, büyümesini ve düzgün çalışmasını sağlayan mikroçevredir ve bu mikroçevre yapısal veya fonksiyonel olarak yetersiz kalabilir.",
+       "ekran": "2.'si uygun stromal niş eksikliğidir; niş, hücrelerin hayatta kalmasını, büyümesini ve düzgün çalışmasını sağlayan mikroçevredir ve bu mikroçevre yapısal veya fonksiyonel olarak yetersiz kalabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0256",
+       "ses": "3.'sü konak bağışıklık baskısıdır; bağışıklık sistemi hücreleri tamamen yok edemese de çoğalmalarını baskılayabilir.",
+       "ekran": "3.'sü konak bağışıklık baskısıdır; bağışıklık sistemi hücreleri tamamen yok edemese de çoğalmalarını baskılayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0257",
+       "ses": "Burası önemli: klinikte yıllar sonra geç metastaz veya nüks görülebilir; koşullar değiştiğinde uykudaki hücreler yeniden çoğalabilir.",
+       "ekran": "Burası önemli: klinikte yıllar sonra geç metastaz veya nüks görülebilir; koşullar değiştiğinde uykudaki hücreler yeniden çoğalabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b21",
+   "baslik": "Metastaz potansiyeli ve moleküler değişiklikler",
+   "paragraflar": [
+    {
+     "id": "k1-32-p052",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-32-c0258",
+       "ses": "Tümörlerin metastaz yapma eğilimi çok farklıdır.",
+       "ekran": "Tümörlerin metastaz yapma eğilimi çok farklıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0259",
+       "ses": "Burası önemli: küçük hücreli akciğer karsinomu erken ve sık metastaz yapar; bazal hücreli karsinom ve birçok primer santral sinir sistemi tümörü ise çok nadiren metastaz yapar.",
+       "ekran": "Burası önemli: küçük hücreli akciğer karsinomu erken ve sık metastaz yapar; bazal hücreli karsinom ve birçok primer santral sinir sistemi tümörü ise çok nadiren metastaz yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0260",
+       "ses": "Tuzağa dikkat edin: bazal hücreli karsinom malign olduğu hâlde nadiren metastaz yapar, yani malign her tümör sık metastaz yapar diye düşünmeyin.",
+       "ekran": "Tuzağa dikkat edin: bazal hücreli karsinom malign olduğu hâlde nadiren metastaz yapar, yani malign her tümör sık metastaz yapar diye düşünmeyin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0261",
+       "ses": "Tümör boyutu büyüdükçe metastaz olasılığı artar, ancak çok küçük tümörler de metastaz yapabilir; küçük boyut metastazı dışlamaz.",
+       "ekran": "Tümör boyutu büyüdükçe metastaz olasılığı artar, ancak çok küçük tümörler de metastaz yapabilir; küçük boyut metastazı dışlamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0262",
+       "ses": "Metastazın bir şans faktörü mü, yoksa tümörün içsel özelliği mi olduğu halen araştırılmaktadır.",
+       "ekran": "Metastazın bir şans faktörü mü, yoksa tümörün içsel özelliği mi olduğu halen araştırılmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p053",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-32-c0263",
+       "ses": "Metastatik potansiyeli artıran genler şunlardır: Snail ve Twist gibi epitel mezenkimal geçiş transkripsiyon faktörleri, matriks metalloproteinazlar, adezyon molekülleri ve kemokin reseptörleri.",
+       "ekran": "Metastatik potansiyeli artıran genler şunlardır: Snail ve Twist gibi epitel mezenkimal geçiş transkripsiyon faktörleri, matriks metalloproteinazlar, adezyon molekülleri ve kemokin reseptörleri.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0264",
+       "ses": "Bunların kaskadla örtüştüğüne dikkat edin: Snail ve Twist ayrılmayı ve geçişi, metalloproteinazlar matriks yıkımını, kemokin reseptörleri ekstravazasyon ve organ tropizmini yönetir.",
+       "ekran": "Bunların kaskadla örtüştüğüne dikkat edin: Snail ve Twist ayrılmayı ve geçişi, metalloproteinazlar matriks yıkımını, kemokin reseptörleri ekstravazasyon ve organ tropizmini yönetir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0265",
+       "ses": "Ancak saf metastaz onkogenlerini tanımlamak zordur; çoğu zaman aynı genler hem primer tümör büyümesini hem de metastazı destekler.",
+       "ekran": "Ancak saf metastaz onkogenlerini tanımlamak zordur; çoğu zaman aynı genler hem primer tümör büyümesini hem de metastazı destekler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-32-b22",
+   "baslik": "Kanser, bağışıklık ve metastaz ilişkisi",
+   "paragraflar": [
+    {
+     "id": "k1-32-p054",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-32-c0266",
+       "ses": "İki eksen burada birleşir.",
+       "ekran": "İki eksen burada birleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0267",
+       "ses": "İleri tümörler genellikle hem invazyon ve metastaz için özel bir gen ekspresyon profiline, hem de güçlü bağışıklık kaçış mekanizmalarına sahiptir.",
+       "ekran": "İleri tümörler genellikle hem invazyon ve metastaz için özel bir gen ekspresyon profiline, hem de güçlü bağışıklık kaçış mekanizmalarına sahiptir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0268",
+       "ses": "Bu özellikler tümör mikroçevresiyle şekillenir.",
+       "ekran": "Bu özellikler tümör mikroçevresiyle şekillenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0269",
+       "ses": "Mikroçevrede tümörle ilişkili fibroblastlar, tümörle ilişkili makrofajlar, özellikle M2 fenotipindekiler, endotel ve perisitler bulunur.",
+       "ekran": "Mikroçevrede tümörle ilişkili fibroblastlar, tümörle ilişkili makrofajlar, özellikle M2 fenotipindekiler, endotel ve perisitler bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0270",
+       "ses": "Burası önemli: bunların hepsi metastatik nişin hazırlanmasına katkı verir.",
+       "ekran": "Burası önemli: bunların hepsi metastatik nişin hazırlanmasına katkı verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0271",
+       "ses": "Hatırlayın, bu makrofaj ve fibroblastlar göç için kemokin salgılıyor, makrofajlar ve endotel intravazasyona katılıyordu; niş eksikliği dormansiye yol açarken hazırlanmış niş kolonizasyonu kolaylaştırır.",
+       "ekran": "Hatırlayın, bu makrofaj ve fibroblastlar göç için kemokin salgılıyor, makrofajlar ve endotel intravazasyona katılıyordu; niş eksikliği dormansiye yol açarken hazırlanmış niş kolonizasyonu kolaylaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-32-p055",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-32-c0272",
+       "ses": "Özetle, tümör immünolojisinde tümör antijenleri, sitotoksik T lenfositi yanıtı, kaçış yolları ve immünoterapiler; metastazda ise hücre ile matriks etkileşimi, epitel mezenkimal geçiş, invazyon, intravazasyon ve ekstravazasyondan oluşan çok basamaklı bir süreç var.",
+       "ekran": "Özetle, tümör immünolojisinde tümör antijenleri, sitotoksik T lenfositi yanıtı, kaçış yolları ve immünoterapiler; metastazda ise hücre ile matriks etkileşimi, epitel mezenkimal geçiş, invazyon, intravazasyon ve ekstravazasyondan oluşan çok basamaklı bir süreç var.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0273",
+       "ses": "Organ tropizmi ve dormansi önemli kavramlardır.",
+       "ekran": "Organ tropizmi ve dormansi önemli kavramlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-32-c0274",
+       "ses": "Klinik yansıması şudur: tedavi stratejileri hem tümör hücrelerini hem de immün yanıtı ve metastatik mikroçevreyi hedeflemeyi gerektirir.",
+       "ekran": "Klinik yansıması şudur: tedavi stratejileri hem tümör hücrelerini hem de immün yanıtı ve metastatik mikroçevreyi hedeflemeyi gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

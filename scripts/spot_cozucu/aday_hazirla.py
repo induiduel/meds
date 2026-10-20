@@ -63,8 +63,7 @@ def jacc(a, b):
     return len(a & b) / max(1, len(a | b))
 
 
-def main():
-    Q = json.load(open(MEDS / 'data/pastQuestions.json'))
+def gizli_silinen():
     gizli = set()
     for g in json.load(open(MEDS.parent / 'meds_database_v2/soru_birlestirme/birlestirmeler.json')).get('gruplar', []):
         if g.get('durum') != 'ayrildi':
@@ -73,6 +72,62 @@ def main():
         silinen = {str(x.get('id') if isinstance(x, dict) else x) for x in json.load(open(MEDS / 'data/deleted_past_questions.json'))}
     except Exception:
         silinen = set()
+    return gizli, silinen
+
+
+def aday(q, gizli, silinen):
+    """Sitede görünen, 4+ şıklı, cevaplı çıkmış → aday kaydı (değilse None)."""
+    cs = q.get('checkSolve') or {}
+    if q['id'] in gizli or q['id'] in silinen or q.get('hidden') or q.get('iptal'): return None
+    if cs.get('status') in ('karantina', 'kaldirildi') or q.get('status') == 'quarantined': return None
+    opts = {o['key']: str(o.get('text') or '').strip() for o in q.get('options') or [] if o.get('key') in 'ABCDE'}
+    if len(opts) < 4 or not q.get('stem') or q.get('correctAnswer') not in opts: return None
+    sk = q.get('sinavKimligi') or {}
+    yil = sk.get('yil') or (q.get('examYear') if re.match(r'^\d{4}-\d{4}$', str(q.get('examYear'))) else None)
+    return {'id': q['id'], 'yil': yil, 'sinav': sk.get('etiket') or str(q.get('examYear') or 'Yılı belirsiz'),
+            'kok': q['stem'].strip(), 'secenekler': opts, 'dogru': q['correctAnswer'],
+            'benzer_id': [s.get('id') for s in q.get('similarPastQuestions') or [] if s.get('id')],
+            **({'dikkat': True} if q.get('olasiHataliKayit') else {})}
+
+
+def grupla(L):
+    """Tekrar grupları: bağlı kimlik ya da (kök benzer + doğru şık metni aynı) ya da kök çok benzer.
+    Temsilci = en yeni yıl; `tekrar` = diğer yıllar; en çok tekrarlanan başta."""
+    ust = {c['id']: c['id'] for c in L}
+    def bul(x):
+        while ust[x] != x: ust[x] = ust[ust[x]]; x = ust[x]
+        return x
+    def bag(a, b): ust[bul(a)] = bul(b)
+    kw = {c['id']: kelimeler(c['kok'] + ' ' + ' '.join(sorted(c['secenekler'].values()))) for c in L}
+    dg = {c['id']: norm(c['secenekler'][c['dogru']]) for c in L}
+    ids = {c['id'] for c in L}
+    for i, a in enumerate(L):
+        for b in a['benzer_id']:
+            if b in ids: bag(a['id'], b)
+        for b in L[i + 1:]:
+            j = jacc(kw[a['id']], kw[b['id']])
+            if j >= 0.8 or (j >= 0.55 and dg[a['id']] == dg[b['id']]): bag(a['id'], b['id'])
+    G = defaultdict(list)
+    for c in L: G[bul(c['id'])].append(c)
+    out = []
+    for uy in G.values():
+        uy.sort(key=lambda c: (c['yil'] or '0000', c['id']), reverse=True)
+        t = dict(uy[0]); t.pop('benzer_id')
+        t['tekrar'] = [{'id': c['id'], 'sinav': c['sinav']} for c in uy[1:]]
+        t['yillar'] = sorted({c['yil'] for c in uy if c['yil']})
+        out.append(t)
+    out.sort(key=lambda c: (-len(c['tekrar']), c['yil'] or ''))
+    return out
+
+
+def ornek_hedefi(cikmis_tekil, sayfa):
+    """Çözücü seti 20–40 soru: tekil çıkmış + örnek; uzun PDF'te daha çok örnek."""
+    return max(14, min(30, round(0.5 * cikmis_tekil + 0.15 * (sayfa or 0))))
+
+
+def main():
+    Q = json.load(open(MEDS / 'data/pastQuestions.json'))
+    gizli, silinen = gizli_silinen()
     import sys
     secilen = set(sys.argv[1:]) or set(BRANS)
     for brans, (ders, KONU) in BRANS.items():
@@ -80,54 +135,20 @@ def main():
         konu_kod = {k: kod for kod, ks in KONU.items() for k in ks}
         by = defaultdict(list)
         for q in Q:
-            cs = q.get('checkSolve') or {}
-            m = cs.get('mufredat') or {}
+            m = (q.get('checkSolve') or {}).get('mufredat') or {}
             if m.get('kurul') != 1 or m.get('ders') != ders or m.get('konu') not in konu_kod: continue
-            if q['id'] in gizli or q['id'] in silinen or q.get('hidden') or q.get('iptal'): continue
-            if cs.get('status') in ('karantina', 'kaldirildi') or q.get('status') == 'quarantined': continue
-            opts = {o['key']: str(o.get('text') or '').strip() for o in q.get('options') or [] if o.get('key') in 'ABCDE'}
-            if len(opts) < 4 or not q.get('stem') or q.get('correctAnswer') not in opts: continue
-            sk = q.get('sinavKimligi') or {}
-            yil = sk.get('yil') or (q.get('examYear') if re.match(r'^\d{4}-\d{4}$', str(q.get('examYear'))) else None)
-            by[konu_kod[m['konu']]].append({
-                'id': q['id'], 'yil': yil, 'sinav': sk.get('etiket') or str(q.get('examYear') or 'Yılı belirsiz'),
-                'kok': q['stem'].strip(), 'secenekler': opts, 'dogru': q['correctAnswer'],
-                'benzer_id': [s.get('id') for s in q.get('similarPastQuestions') or [] if s.get('id')],
-                **({'dikkat': True} if q.get('olasiHataliKayit') else {})})
+            c = aday(q, gizli, silinen)
+            if c: by[konu_kod[m['konu']]].append(c)
         for kod, L in by.items():
-            # tekrar grupları: bağlı kimlik ya da (kök benzer + doğru şık metni aynı) ya da kök çok benzer
-            ust = {c['id']: c['id'] for c in L}
-            def bul(x):
-                while ust[x] != x: ust[x] = ust[ust[x]]; x = ust[x]
-                return x
-            def bag(a, b): ust[bul(a)] = bul(b)
-            kw = {c['id']: kelimeler(c['kok'] + ' ' + ' '.join(sorted(c['secenekler'].values()))) for c in L}
-            dg = {c['id']: norm(c['secenekler'][c['dogru']]) for c in L}
-            ids = {c['id'] for c in L}
-            for i, a in enumerate(L):
-                for b in a['benzer_id']:
-                    if b in ids: bag(a['id'], b)
-                for b in L[i + 1:]:
-                    j = jacc(kw[a['id']], kw[b['id']])
-                    if j >= 0.8 or (j >= 0.55 and dg[a['id']] == dg[b['id']]): bag(a['id'], b['id'])
-            G = defaultdict(list)
-            for c in L: G[bul(c['id'])].append(c)
-            out = []
-            for uy in G.values():
-                uy.sort(key=lambda c: (c['yil'] or '0000', c['id']), reverse=True)
-                t = dict(uy[0]); t.pop('benzer_id')
-                t['tekrar'] = [{'id': c['id'], 'sinav': c['sinav']} for c in uy[1:]]
-                t['yillar'] = sorted({c['yil'] for c in uy if c['yil']})
-                out.append(t)
-            out.sort(key=lambda c: (-len(c['tekrar']), c['yil'] or ''))
+            out = grupla(L)
             (W / brans / 'cikmis').mkdir(parents=True, exist_ok=True)
             json.dump(out, open(W / brans / 'cikmis' / f'{kod}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
             print(brans, kod, 'aday', len(L), '→ tekil', len(out), '· tekrarlı', sum(1 for c in out if c['tekrar']))
-        # ajan girdisi: ders bilgisi + örnek soru hedefi (çözücü seti 20–40 soru: tekil çıkmış + örnek; uzun PDF'te daha çok örnek)
+        # ajan girdisi: ders bilgisi + örnek soru hedefi
         (W / brans / 'girdi').mkdir(parents=True, exist_ok=True)
         for x in json.load(open(W / brans / 'pdf_liste.json')):
             c = len(by.get(x['kod']) and json.load(open(W / brans / 'cikmis' / f"{x['kod']}.json")) or [])
-            hedef = max(14, min(30, round(0.5 * c + 0.15 * x['sayfa'])))
+            hedef = ornek_hedefi(c, x['sayfa'])
             json.dump({**x, 'brans': brans, 'cikmis_tekil': c, 'ornek_hedef': hedef}, open(W / brans / 'girdi' / f"{x['kod']}.json", 'w', encoding='utf-8'),
                       ensure_ascii=False, indent=1)
             print('  girdi', x['kod'], 'çıkmış', c, 'örnek hedefi', hedef)

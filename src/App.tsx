@@ -20,6 +20,7 @@ import { Committee, QuestionItem, QuestionLectureMatch } from './types';
 import { MetricsBar } from './components/MetricsBar';
 import { PoolView } from './components/pool/PoolView';
 import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
+import KurulSeridi from './components/olasi/KurulSeridi';
 import { MusicPlayerProvider } from './components/music/MusicPlayerContext';
 import { MiniMusicPlayer } from './components/music/MiniMusicPlayer';
 import { SideNav } from './components/shell/SideNav';
@@ -33,6 +34,7 @@ import { LearnFab } from './components/learn/LearnFab';
 import { Onboarding } from './components/onboarding/Onboarding';
 import { tourSeen } from './components/onboarding/tourState';
 const WelcomeTour = React.lazy(() => import('./components/onboarding/WelcomeTour'));
+const V13Invite = React.lazy(() => import('./components/v13/V13Invite'));
 import { girisUyarisiKabulEdildi } from './components/onboarding/girisUyarisiDurum';
 const GirisUyarisi = React.lazy(() => import('./components/onboarding/GirisUyarisi'));
 import { PageLoader } from './components/ui/Animations';
@@ -130,6 +132,8 @@ const PatolojiCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/P
 const GenetikCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/GenetikCheckUp')));
 const BitirdiklerimView = React.lazy(() => wrapLazy(import('./components/takip/BitirdiklerimView')));
 const CevrimdisiView = React.lazy(() => wrapLazy(import('./components/cevrimdisi/CevrimdisiView')));
+const OlasiSorularView = React.lazy(() => wrapLazy(import('./components/olasi/OlasiSorularView')));
+const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/GecmisKurullarView')));
 const SinavCalismaView = React.lazy(() => wrapLazy(import('./components/SinavCalismaView').then(m => ({ default: m.SinavCalismaView }))));
 
 // Lazy-loaded Modals (Only downloaded when opened)
@@ -1433,6 +1437,12 @@ export default function App() {
           <WelcomeTour name={currentUser?.displayName} onGo={setActiveTab} onClose={() => setShowTour(false)} />
         </Suspense>
       )}
+      {/* v13 "Ada" daveti: açılışta bir kez sorulur (başka pencere açıkken beklenir) */}
+      {!girisUyarisi && !showTour && !(showOnboarding && !currentUser) && !getAppearance().v13Asked && (
+        <Suspense fallback={null}>
+          <V13Invite />
+        </Suspense>
+      )}
       <div className="min-h-dvh bg-canvas text-ink flex flex-col font-sans antialiased">
       <ToastHost />
       <ConfirmHost />
@@ -1608,6 +1618,7 @@ export default function App() {
         )}
 
         {/* TAB 0: Home — quick add, pool status, committees */}
+        {activeTab === 'quick_add' && <KurulSeridi soruEkleGoster={false} sola />}
         {activeTab === 'quick_add' && (
           <QuickAddHero
             committee={currentCommittee}
@@ -1857,6 +1868,20 @@ export default function App() {
           </Suspense>
         )}
 
+        {/* TAB: /olasi-sorular — sınav sonrası hatıralardan kurulan olası sorular (?kurul=N) */}
+        {activeTab === 'olasi_sorular' && (
+          <Suspense fallback={<ViewFallback />}>
+            <OlasiSorularView uid={currentUser?.uid} />
+          </Suspense>
+        )}
+
+        {/* TAB: /gecmis-kurullar — sınavı geçmiş kurulların içeriğine bağlantılar */}
+        {activeTab === 'gecmis_kurullar' && (
+          <Suspense fallback={<ViewFallback />}>
+            <GecmisKurullarView />
+          </Suspense>
+        )}
+
         {/* TAB: /cevrimdisi — çevrimdışı merkezi: ders paketlerini indir, güncelle, sil */}
         {activeTab === 'cevrimdisi' && (
           <Suspense fallback={<ViewFallback />}>
@@ -1938,6 +1963,7 @@ export default function App() {
         {/* /bugun — günlük giriş: kaldığın yer, hızlı erişim, günün spotu, haftalık çalışma */}
         {activeTab === 'today' && (
           <Suspense fallback={<ViewFallback />}>
+            <KurulSeridi />
             <TodayView committeeLabel={currentCommittee ? committeeShortLabel(currentCommittee) : undefined} onGo={(r) => setActiveTab(r)} />
           </Suspense>
         )}

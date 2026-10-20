@@ -1,0 +1,2593 @@
+{
+ "surum": 2,
+ "ders_id": "k1-03",
+ "anahtar": "k1-03-hucresel-adaptasyonlar",
+ "baslik": "Hücresel Adaptasyonlar",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-03-b01",
+   "baslik": "Hücre, homeostaz ve hücresel stres",
+   "paragraflar": [
+    {
+     "id": "k1-03-p001",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-03-c0001",
+       "ses": "Hücreler çevreleriyle sürekli etkileşim içindedir.",
+       "ekran": "Hücreler çevreleriyle sürekli etkileşim içindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0002",
+       "ses": "Besin, oksijen, hormon ya da mekanik yükteki her değişiklik er geç hücreye ulaşır.",
+       "ekran": "Besin, oksijen, hormon ya da mekanik yükteki her değişiklik er geç hücreye ulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0003",
+       "ses": "Hücrenin bu değişimler karşısındaki temel görevi homeostazı korumaktır.",
+       "ekran": "Hücrenin bu değişimler karşısındaki temel görevi homeostazı korumaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0004",
+       "ses": "Homeostaz, değişen iç ve dış koşullara rağmen iç dengenin korunması demektir.",
+       "ekran": "Homeostaz, değişen iç ve dış koşullara rağmen iç dengenin korunması demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0005",
+       "ses": "Fizyolojik durumda hücrenin büyüklüğü, sayısı ve fonksiyonu belirli sınırlar içinde tutulur.",
+       "ekran": "Fizyolojik durumda hücrenin büyüklüğü, sayısı ve fonksiyonu belirli sınırlar içinde tutulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0006",
+       "ses": "Bu 3 parametreyi aklınızda tutun, çünkü birazdan göreceğimiz her adaptasyon tipi, bunlardan birinin değişmesiyle tanımlanır.",
+       "ekran": "Bu 3 parametreyi aklınızda tutun, çünkü birazdan göreceğimiz her adaptasyon tipi, bunlardan birinin değişmesiyle tanımlanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p002",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-03-c0007",
+       "ses": "Homeostazın sınırlarını zorlayan her etken hücre için bir strestir.",
+       "ekran": "Homeostazın sınırlarını zorlayan her etken hücre için bir strestir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0008",
+       "ses": "Hücreler hem fizyolojik streslere, örneğin artan iş yüküne ya da hormon uyarısına, hem de zararlı uyaranlara maruz kalabilir.",
+       "ekran": "Hücreler hem fizyolojik streslere, örneğin artan iş yüküne ya da hormon uyarısına, hem de zararlı uyaranlara maruz kalabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0009",
+       "ses": "Stres karşısında hücrenin verebileceği 3 temel yanıt vardır.",
+       "ekran": "Stres karşısında hücrenin verebileceği 3 temel yanıt vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0010",
+       "ses": "1.'si adaptasyondur: hücre özelliklerini değiştirerek yeni koşula uyum sağlar ve canlı kalır.",
+       "ekran": "1.'si adaptasyondur: hücre özelliklerini değiştirerek yeni koşula uyum sağlar ve canlı kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0011",
+       "ses": "2.'si geri dönüşümlü hasardır: uyum kapasitesi aşılmıştır, ama uyaran ortadan kalkarsa hücre normale dönebilir.",
+       "ekran": "2.'si geri dönüşümlü hasardır: uyum kapasitesi aşılmıştır, ama uyaran ortadan kalkarsa hücre normale dönebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0012",
+       "ses": "3.'sü geri dönüşümsüz hasar ve ölümdür: hasar kalıcıdır ve hücre ölür.",
+       "ekran": "3.'sü geri dönüşümsüz hasar ve ölümdür: hasar kalıcıdır ve hücre ölür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0013",
+       "ses": "Bu sıralama, stresin şiddetini ve süresini yansıtan bir basamak dizisidir.",
+       "ekran": "Bu sıralama, stresin şiddetini ve süresini yansıtan bir basamak dizisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0014",
+       "ses": "Bu dersin odağı ilk basamak, yani adaptif değişikliklerdir.",
+       "ekran": "Bu dersin odağı ilk basamak, yani adaptif değişikliklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b02",
+   "baslik": "Adaptasyonun tanımı ve amacı",
+   "paragraflar": [
+    {
+     "id": "k1-03-p003",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-03-c0015",
+       "ses": "Adaptasyon, hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyon gibi özelliklerini geri dönüşümlü biçimde değiştirmesidir.",
+       "ekran": "Adaptasyon, hücrelerin sayı, boyut, fenotip, metabolik aktivite ve fonksiyon gibi özelliklerini geri dönüşümlü biçimde değiştirmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0016",
+       "ses": "Sayı değişebilir, yani hücre popülasyonu artar ya da azalır.",
+       "ekran": "Sayı değişebilir, yani hücre popülasyonu artar ya da azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0017",
+       "ses": "Boyut değişebilir, yani tek tek hücreler büyür ya da küçülür.",
+       "ekran": "Boyut değişebilir, yani tek tek hücreler büyür ya da küçülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0018",
+       "ses": "Fenotip değişebilir; fenotip hücrenin gözlenebilir yapısal ve işlevsel özellikleri, kısacası hücre tipidir.",
+       "ekran": "Fenotip değişebilir; fenotip hücrenin gözlenebilir yapısal ve işlevsel özellikleri, kısacası hücre tipidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0019",
+       "ses": "Metabolik aktivite, yani enerji üretimi ve sentez hızı yeni koşula göre ayarlanır; hücrenin iş kapasitesi de artırılır ya da kısılır.",
+       "ekran": "Metabolik aktivite, yani enerji üretimi ve sentez hızı yeni koşula göre ayarlanır; hücrenin iş kapasitesi de artırılır ya da kısılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p004",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-03-c0020",
+       "ses": "Tanımın anahtar kelimesi geri dönüşümlülüktür.",
+       "ekran": "Tanımın anahtar kelimesi geri dönüşümlülüktür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0021",
+       "ses": "Uyaran ortadan kalktığında hücre özgün durumuna dönebilir ve bu özellik adaptasyonu geri dönüşümsüz hasardan kesin biçimde ayırır.",
+       "ekran": "Uyaran ortadan kalktığında hücre özgün durumuna dönebilir ve bu özellik adaptasyonu geri dönüşümsüz hasardan kesin biçimde ayırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0022",
+       "ses": "Dikkat edin, adaptasyon bir hücre ölümü biçimi değildir; hasar ve ölümden önce gelen, geri dönebilen bir yanıttır.",
+       "ekran": "Dikkat edin, adaptasyon bir hücre ölümü biçimi değildir; hasar ve ölümden önce gelen, geri dönebilen bir yanıttır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0023",
+       "ses": "Sayı, boyut ve fenotip değişiklikleri, birazdan anlatacağımız adaptasyon tiplerinin her birinin temelini oluşturur.",
+       "ekran": "Sayı, boyut ve fenotip değişiklikleri, birazdan anlatacağımız adaptasyon tiplerinin her birinin temelini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p005",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-03-c0024",
+       "ses": "Adaptasyonun amacı stresi ortadan kaldırmak değil, stresle birlikte yaşayabilmektir.",
+       "ekran": "Adaptasyonun amacı stresi ortadan kaldırmak değil, stresle birlikte yaşayabilmektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0025",
+       "ses": "Hücre eski homeostaz düzeyine dönemediğinde yeni bir denge durumu, yani kararlı durum kurar.",
+       "ekran": "Hücre eski homeostaz düzeyine dönemediğinde yeni bir denge durumu, yani kararlı durum kurar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0026",
+       "ses": "Bu yeni denge, artmış ya da azalmış talebe göre ayarlanmış ama yine kararlı bir işleyiş düzeyidir.",
+       "ekran": "Bu yeni denge, artmış ya da azalmış talebe göre ayarlanmış ama yine kararlı bir işleyiş düzeyidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0027",
+       "ses": "Böylece hücre canlılığını, organ da işlevini sürdürür.",
+       "ekran": "Böylece hücre canlılığını, organ da işlevini sürdürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0028",
+       "ses": "Adaptasyonu 2 uç arasında düşünebilirsiniz: bir yanda normal homeostaz, diğer yanda hasar.",
+       "ekran": "Adaptasyonu 2 uç arasında düşünebilirsiniz: bir yanda normal homeostaz, diğer yanda hasar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0029",
+       "ses": "Adaptasyon, hücrenin hasar sınırına ulaşmadan yeni bir kararlılık bulduğu ara bölgedir.",
+       "ekran": "Adaptasyon, hücrenin hasar sınırına ulaşmadan yeni bir kararlılık bulduğu ara bölgedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0030",
+       "ses": "Yeni denge kurulamazsa ya da stres hücrenin uyum kapasitesini aşarsa hücre geri dönüşümlü hasar basamağına geçer.",
+       "ekran": "Yeni denge kurulamazsa ya da stres hücrenin uyum kapasitesini aşarsa hücre geri dönüşümlü hasar basamağına geçer.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b03",
+   "baslik": "Fizyolojik ve patolojik adaptasyon",
+   "paragraflar": [
+    {
+     "id": "k1-03-p006",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-03-c0031",
+       "ses": "Adaptasyonlar, onları tetikleyen uyaranın niteliğine göre 2 gruba ayrılır.",
+       "ekran": "Adaptasyonlar, onları tetikleyen uyaranın niteliğine göre 2 gruba ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0032",
+       "ses": "Fizyolojik adaptasyon, normal uyarılara verilen yanıttır ve ortada bir hastalık yoktur.",
+       "ekran": "Fizyolojik adaptasyon, normal uyarılara verilen yanıttır ve ortada bir hastalık yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0033",
+       "ses": "Tetikleyici, hormonlar ya da organizmanın doğal ihtiyaçlarındaki artış gibi olağan uyaranlardır.",
+       "ekran": "Tetikleyici, hormonlar ya da organizmanın doğal ihtiyaçlarındaki artış gibi olağan uyaranlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0034",
+       "ses": "Klasik örnek gebelikte uterus ve memenin büyümesidir: gebelik hormonlarının uyarısıyla uterus artan iş yüküne, meme ise emzirme hazırlığına uyum sağlar.",
+       "ekran": "Klasik örnek gebelikte uterus ve memenin büyümesidir: gebelik hormonlarının uyarısıyla uterus artan iş yüküne, meme ise emzirme hazırlığına uyum sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0035",
+       "ses": "Uyaran ortadan kalktığında, yani doğum ve emzirme bittiğinde, bu değişiklikler büyük ölçüde geriler.",
+       "ekran": "Uyaran ortadan kalktığında, yani doğum ve emzirme bittiğinde, bu değişiklikler büyük ölçüde geriler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0036",
+       "ses": "Fizyolojik adaptasyonda organın işlevi korunur, hatta artar.",
+       "ekran": "Fizyolojik adaptasyonda organın işlevi korunur, hatta artar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p007",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-03-c0037",
+       "ses": "Patolojik adaptasyon ise anormal ya da aşırı streslere verilen yanıttır ve bir hastalık sürecinin parçasıdır.",
+       "ekran": "Patolojik adaptasyon ise anormal ya da aşırı streslere verilen yanıttır ve bir hastalık sürecinin parçasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0038",
+       "ses": "Hücreyi hayatta tutar; hücre ölmek yerine değişerek direnç gösterir.",
+       "ekran": "Hücreyi hayatta tutar; hücre ölmek yerine değişerek direnç gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0039",
+       "ses": "Ancak bunun bir bedeli vardır: normal fonksiyon bozulabilir.",
+       "ekran": "Ancak bunun bir bedeli vardır: normal fonksiyon bozulabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0040",
+       "ses": "Hücre canlı kalır ama dokunun olağan görevi aksar.",
+       "ekran": "Hücre canlı kalır ama dokunun olağan görevi aksar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0041",
+       "ses": "Yani patolojik adaptasyonda hayatta kalma kazanılırken işlev kısmen feda edilir.",
+       "ekran": "Yani patolojik adaptasyonda hayatta kalma kazanılırken işlev kısmen feda edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0042",
+       "ses": "İki grubu ayıran ölçüt, uyaranın normal mi yoksa anormal ya da aşırı mı olduğu ve normal fonksiyon üzerindeki sonuçtur.",
+       "ekran": "İki grubu ayıran ölçüt, uyaranın normal mi yoksa anormal ya da aşırı mı olduğu ve normal fonksiyon üzerindeki sonuçtur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0043",
+       "ses": "Bu yüzden tek başına hipertrofinin varlığı, onun patolojik olduğunu göstermez.",
+       "ekran": "Bu yüzden tek başına hipertrofinin varlığı, onun patolojik olduğunu göstermez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b04",
+   "baslik": "4 ana adaptasyon tipi",
+   "paragraflar": [
+    {
+     "id": "k1-03-p008",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-03-c0044",
+       "ses": "Hücresel adaptasyonlar, değişen hücre özelliğine göre 4 ana tipe ayrılır.",
+       "ekran": "Hücresel adaptasyonlar, değişen hücre özelliğine göre 4 ana tipe ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0045",
+       "ses": "Hipertrofi hücre boyutunda artıştır.",
+       "ekran": "Hipertrofi hücre boyutunda artıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0046",
+       "ses": "Hiperplazi hücre sayısında artıştır.",
+       "ekran": "Hiperplazi hücre sayısında artıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0047",
+       "ses": "Atrofi hücre boyutu ve, veya, sayısında azalmadır.",
+       "ekran": "Atrofi hücre boyutu ve, veya, sayısında azalmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0048",
+       "ses": "Metaplazi ise bir olgun hücre tipinin başka bir olgun hücre tipi ile değişmesidir.",
+       "ekran": "Metaplazi ise bir olgun hücre tipinin başka bir olgun hücre tipi ile değişmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0049",
+       "ses": "İlk üçü niceliksel değişikliktir: hücreler büyür, çoğalır ya da küçülür ve azalır.",
+       "ekran": "İlk üçü niceliksel değişikliktir: hücreler büyür, çoğalır ya da küçülür ve azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0050",
+       "ses": "Metaplazi niteliksel bir değişimdir; değişen hücrenin sayısı ya da boyutu değil, tipi, yani fenotipidir.",
+       "ekran": "Metaplazi niteliksel bir değişimdir; değişen hücrenin sayısı ya da boyutu değil, tipi, yani fenotipidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0051",
+       "ses": "Atrofi tanımındaki ve veya ifadesine dikkat edin: atrofi hem hücrelerin küçülmesiyle hem de sayılarının azalmasıyla oluşabilir.",
+       "ekran": "Atrofi tanımındaki ve veya ifadesine dikkat edin: atrofi hem hücrelerin küçülmesiyle hem de sayılarının azalmasıyla oluşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0052",
+       "ses": "Metaplazide yer değiştiren iki hücre tipi de olgun hücrelerdir.",
+       "ekran": "Metaplazide yer değiştiren iki hücre tipi de olgun hücrelerdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p009",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-03-c0053",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: hipertrofi, hiperplazi, atrofi ve metaplazinin dördü de hücresel adaptasyon örneğidir; dördünün birden adaptasyon olduğunu bilmeniz beklenir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: hipertrofi, hiperplazi, atrofi ve metaplazinin dördü de hücresel adaptasyon örneğidir; dördünün birden adaptasyon olduğunu bilmeniz beklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0054",
+       "ses": "Yine burası önemli, apoptoz bir hücresel adaptasyon mekanizması değildir.",
+       "ekran": "Yine burası önemli, apoptoz bir hücresel adaptasyon mekanizması değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0055",
+       "ses": "Apoptoz, hücrenin kontrollü, programlı ölümüdür ve adaptasyon sınırı aşıldığında ortaya çıkan bir sonuçtur.",
+       "ekran": "Apoptoz, hücrenin kontrollü, programlı ölümüdür ve adaptasyon sınırı aşıldığında ortaya çıkan bir sonuçtur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0056",
+       "ses": "Aynı şekilde displazi de adaptasyon tiplerinden biri sayılmaz; onu metaplazinin olası sonuçları arasında göreceğiz.",
+       "ekran": "Aynı şekilde displazi de adaptasyon tiplerinden biri sayılmaz; onu metaplazinin olası sonuçları arasında göreceğiz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0057",
+       "ses": "Bir hücre değişikliğini yorumlarken sırayla 3 soru sorun: ne değişti, boyut mu, sayı mı, tip mi?",
+       "ekran": "Bir hücre değişikliğini yorumlarken sırayla 3 soru sorun: ne değişti, boyut mu, sayı mı, tip mi?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0058",
+       "ses": "Uyaran normal mi, aşırı mı?",
+       "ekran": "Uyaran normal mi, aşırı mı?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0059",
+       "ses": "Değişiklik geri dönebilir mi?",
+       "ekran": "Değişiklik geri dönebilir mi?",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b05",
+   "baslik": "Hipertrofi: tanım, mekanizma ve görüldüğü yerler",
+   "paragraflar": [
+    {
+     "id": "k1-03-p010",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-03-c0060",
+       "ses": "Hipertrofi, hücre boyutunda artıştır ve bu artış organın büyümesine yol açar.",
+       "ekran": "Hipertrofi, hücre boyutunda artıştır ve bu artış organın büyümesine yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0061",
+       "ses": "Tek tek hücreler büyüdüğü için hücrelerin toplam hacmi artar, organ da büyür ve ağırlaşır.",
+       "ekran": "Tek tek hücreler büyüdüğü için hücrelerin toplam hacmi artar, organ da büyür ve ağırlaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0062",
+       "ses": "Büyüyen organda yeni hücre oluşması gerekmez; büyüme mevcut hücrelerin genişlemesinden kaynaklanabilir.",
+       "ekran": "Büyüyen organda yeni hücre oluşması gerekmez; büyüme mevcut hücrelerin genişlemesinden kaynaklanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0063",
+       "ses": "Hipertrofik hücre şişmiş bir hücre değildir.",
+       "ekran": "Hipertrofik hücre şişmiş bir hücre değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0064",
+       "ses": "Büyüme hücrenin içine su dolmasıyla değil, iş görecek yeni yapıların eklenmesiyle olur; bu yüzden hipertrofik hücre daha fazla iş yapabilir.",
+       "ekran": "Büyüme hücrenin içine su dolmasıyla değil, iş görecek yeni yapıların eklenmesiyle olur; bu yüzden hipertrofik hücre daha fazla iş yapabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0065",
+       "ses": "Organ büyümesi tek başına hipertrofi tanısı koydurmaz; büyümenin hücre boyutundan mı, sayısından mı kaynaklandığı mikroskopik olarak değerlendirilir.",
+       "ekran": "Organ büyümesi tek başına hipertrofi tanısı koydurmaz; büyümenin hücre boyutundan mı, sayısından mı kaynaklandığı mikroskopik olarak değerlendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p011",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-03-c0066",
+       "ses": "Hipertrofinin mekanizması, yapısal proteinler ve organellerde artıştır.",
+       "ekran": "Hipertrofinin mekanizması, yapısal proteinler ve organellerde artıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0067",
+       "ses": "Hücre, kasılma ya da sentez kapasitesini artıracak proteinleri ve onları destekleyecek organelleri çoğaltır.",
+       "ekran": "Hücre, kasılma ya da sentez kapasitesini artıracak proteinleri ve onları destekleyecek organelleri çoğaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0068",
+       "ses": "Saf hipertrofide hücre sayısı artmaz, yalnızca hücreler büyür.",
+       "ekran": "Saf hipertrofide hücre sayısı artmaz, yalnızca hücreler büyür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0069",
+       "ses": "Yani saf hipertrofinin 2 koşulu vardır: hücreler büyür ve hücre sayısı değişmez.",
+       "ekran": "Yani saf hipertrofinin 2 koşulu vardır: hücreler büyür ve hücre sayısı değişmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0070",
+       "ses": "Hücre sayısı da artıyorsa olay saf hipertrofi değildir; hipertrofiye hiperplazi eşlik ediyordur.",
+       "ekran": "Hücre sayısı da artıyorsa olay saf hipertrofi değildir; hipertrofiye hiperplazi eşlik ediyordur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p012",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-03-c0071",
+       "ses": "Bir dokunun strese hipertrofiyle mi yanıt vereceğini, hücrelerinin bölünme kapasitesi belirler.",
+       "ekran": "Bir dokunun strese hipertrofiyle mi yanıt vereceğini, hücrelerinin bölünme kapasitesi belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0072",
+       "ses": "Hipertrofi özellikle bölünme kapasitesi sınırlı hücrelerde görülür; bu hücreler sayılarını artıramadığı için artan talebe yalnızca büyüyerek yanıt verebilir.",
+       "ekran": "Hipertrofi özellikle bölünme kapasitesi sınırlı hücrelerde görülür; bu hücreler sayılarını artıramadığı için artan talebe yalnızca büyüyerek yanıt verebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0073",
+       "ses": "Örnek dokular kalp kası ve iskelet kasıdır.",
+       "ekran": "Örnek dokular kalp kası ve iskelet kasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0074",
+       "ses": "Diğer dokularda ise hipertrofi ve hiperplazi birlikte olabilir.",
+       "ekran": "Diğer dokularda ise hipertrofi ve hiperplazi birlikte olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0075",
+       "ses": "Burası önemli, sınavda sık kurulan bir tuzaktır: kalp ve iskelet kası bölünemediği için artan yüke saf hipertrofiyle yanıt verir; erişkin kalpte hiperplazi beklenmez, bu ikisini karıştırmayın.",
+       "ekran": "Burası önemli, sınavda sık kurulan bir tuzaktır: kalp ve iskelet kası bölünemediği için artan yüke saf hipertrofiyle yanıt verir; erişkin kalpte hiperplazi beklenmez, bu ikisini karıştırmayın.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b06",
+   "baslik": "Fizyolojik hipertrofi: gebelik uterusu ve iskelet kası",
+   "paragraflar": [
+    {
+     "id": "k1-03-p013",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-03-c0076",
+       "ses": "Gebelik uterusu, fizyolojik büyümede 2 adaptasyonun birlikte kullanıldığı klasik örnektir.",
+       "ekran": "Gebelik uterusu, fizyolojik büyümede 2 adaptasyonun birlikte kullanıldığı klasik örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0077",
+       "ses": "Gebelikte uterus östrojen etkisiyle büyür.",
+       "ekran": "Gebelikte uterus östrojen etkisiyle büyür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0078",
+       "ses": "Hücresel düzeyde uterus düz kas hücrelerinde hem hipertrofi hem hiperplazi gelişir; hücreler hem büyür hem çoğalır.",
+       "ekran": "Hücresel düzeyde uterus düz kas hücrelerinde hem hipertrofi hem hiperplazi gelişir; hücreler hem büyür hem çoğalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0079",
+       "ses": "Sonuçta gebeliğin gerektirdiği artmış iş yüküne uyum sağlanır.",
+       "ekran": "Sonuçta gebeliğin gerektirdiği artmış iş yüküne uyum sağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0080",
+       "ses": "Düz kas hücresi, kalp ve iskelet kasından farklı olarak bölünebildiği için iki yanıtı birlikte verebilir.",
+       "ekran": "Düz kas hücresi, kalp ve iskelet kasından farklı olarak bölünebildiği için iki yanıtı birlikte verebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0081",
+       "ses": "Burası önemli: gebelik uterusu fizyolojik hipertrofi başlığında anlatılır, ama hücresel düzeyde hipertrofi ile hiperplazi birlikteliği vardır; yalnız hipertrofi diyen seçenek tuzaktır.",
+       "ekran": "Burası önemli: gebelik uterusu fizyolojik hipertrofi başlığında anlatılır, ama hücresel düzeyde hipertrofi ile hiperplazi birlikteliği vardır; yalnız hipertrofi diyen seçenek tuzaktır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p014",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-03-c0082",
+       "ses": "Ders kitabındaki şekil bunu makroskopik ve mikroskopik olarak gösterir.",
+       "ekran": "Ders kitabındaki şekil bunu makroskopik ve mikroskopik olarak gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0083",
+       "ses": "Makroskopik panelde gebelik geçirmemiş küçük bir uterus ile doğum sonrası kanama nedeniyle çıkarılmış, belirgin biçimde büyük bir gebelik uterusu yan yana durur.",
+       "ekran": "Makroskopik panelde gebelik geçirmemiş küçük bir uterus ile doğum sonrası kanama nedeniyle çıkarılmış, belirgin biçimde büyük bir gebelik uterusu yan yana durur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0084",
+       "ses": "Gebelik geçirmemiş uterusta düz kas hücreleri küçük ve iğne şeklindedir; gebelik geçirmiş uterusta ise büyük, şişkin, hipertrofik düz kas hücreleri görülür.",
+       "ekran": "Gebelik geçirmemiş uterusta düz kas hücreleri küçük ve iğne şeklindedir; gebelik geçirmiş uterusta ise büyük, şişkin, hipertrofik düz kas hücreleri görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0085",
+       "ses": "İki mikroskopik görüntü aynı büyütmede çekildiği için aradaki boyut farkı gerçek bir büyümeyi yansıtır.",
+       "ekran": "İki mikroskopik görüntü aynı büyütmede çekildiği için aradaki boyut farkı gerçek bir büyümeyi yansıtır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0086",
+       "ses": "Mikroskopik karşılaştırmada aynı büyütme koşulu şarttır; aksi halde hücre boyutu farkı yorumlanamaz.",
+       "ekran": "Mikroskopik karşılaştırmada aynı büyütme koşulu şarttır; aksi halde hücre boyutu farkı yorumlanamaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p015",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-03-c0087",
+       "ses": "İskelet kası, fizyolojik hipertrofinin ikinci klasik örneğidir.",
+       "ekran": "İskelet kası, fizyolojik hipertrofinin ikinci klasik örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0088",
+       "ses": "Uyaran artmış iş yüküdür, örneğin yoğun egzersiz ve ağırlık çalışması.",
+       "ekran": "Uyaran artmış iş yüküdür, örneğin yoğun egzersiz ve ağırlık çalışması.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0089",
+       "ses": "İskelet kası liflerinde hipertrofi gelişir.",
+       "ekran": "İskelet kası liflerinde hipertrofi gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0090",
+       "ses": "Hücre çoğalma kapasitesi sınırlı olduğu için temel yanıt boyut artışıdır.",
+       "ekran": "Hücre çoğalma kapasitesi sınırlı olduğu için temel yanıt boyut artışıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0091",
+       "ses": "Ağırlık çalışan birinde kasın büyümesi lif sayısının artmasıyla değil, var olan liflerin daha fazla kasılma proteini içerecek şekilde genişlemesiyle olur.",
+       "ekran": "Ağırlık çalışan birinde kasın büyümesi lif sayısının artmasıyla değil, var olan liflerin daha fazla kasılma proteini içerecek şekilde genişlemesiyle olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0092",
+       "ses": "Gebelik uterusundan farkı da budur: uterusta hipertrofi ve hiperplazi birlikte, iskelet kasında ise temel olarak boyut artışı görülür.",
+       "ekran": "Gebelik uterusundan farkı da budur: uterusta hipertrofi ve hiperplazi birlikte, iskelet kasında ise temel olarak boyut artışı görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0093",
+       "ses": "Özetle bölünemeyen dokuda büyüme hipertrofiyle, bölünebilen dokuda çoğunlukla hipertrofi ve hiperplazi birlikteliğiyle olur.",
+       "ekran": "Özetle bölünemeyen dokuda büyüme hipertrofiyle, bölünebilen dokuda çoğunlukla hipertrofi ve hiperplazi birlikteliğiyle olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b07",
+   "baslik": "Patolojik hipertrofi: kalp",
+   "paragraflar": [
+    {
+     "id": "k1-03-p016",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-03-c0094",
+       "ses": "Kalp, patolojik hipertrofinin en önemli örneğidir.",
+       "ekran": "Kalp, patolojik hipertrofinin en önemli örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0095",
+       "ses": "Burada uyaran fizyolojik bir yük değil, sürekli ve aşırı bir basınç yüküdür.",
+       "ekran": "Burada uyaran fizyolojik bir yük değil, sürekli ve aşırı bir basınç yüküdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0096",
+       "ses": "Nedenler hipertansiyon ve aort stenozudur.",
+       "ekran": "Nedenler hipertansiyon ve aort stenozudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0097",
+       "ses": "Hipertansiyonda direnç sistemik arterlerdedir; aort stenozunda ise daralmış aort kapağı sol ventrikülün çıkışını engeller.",
+       "ekran": "Hipertansiyonda direnç sistemik arterlerdedir; aort stenozunda ise daralmış aort kapağı sol ventrikülün çıkışını engeller.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0098",
+       "ses": "Kaynak farklı olsa da her iki durumda sol ventrikül kanı daha yüksek bir dirence karşı pompalamak zorundadır ve sürekli artmış basınca karşı miyositlerde, yani kalp kası hücrelerinde, hipertrofi gelişir.",
+       "ekran": "Kaynak farklı olsa da her iki durumda sol ventrikül kanı daha yüksek bir dirence karşı pompalamak zorundadır ve sürekli artmış basınca karşı miyositlerde, yani kalp kası hücrelerinde, hipertrofi gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0099",
+       "ses": "Kalp hipertrofisi başlangıçta işlevi koruyan bir adaptasyondur, ama uyaran anormal ve sürekli olduğu için patolojik adaptasyon grubundadır.",
+       "ekran": "Kalp hipertrofisi başlangıçta işlevi koruyan bir adaptasyondur, ama uyaran anormal ve sürekli olduğu için patolojik adaptasyon grubundadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0100",
+       "ses": "Hatırlayın: gebelik uterusu ve egzersizdeki iskelet kası fizyolojik, hipertansiyondaki kalp ise patolojik hipertrofidir.",
+       "ekran": "Hatırlayın: gebelik uterusu ve egzersizdeki iskelet kası fizyolojik, hipertansiyondaki kalp ise patolojik hipertrofidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p017",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-03-c0101",
+       "ses": "Makroskopik olarak ventrikül duvarı kalınlaşır ve kalp ağırlaşır.",
+       "ekran": "Makroskopik olarak ventrikül duvarı kalınlaşır ve kalp ağırlaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0102",
+       "ses": "Burası önemli, sayılar doğrudan sorulur: miyokard hipertrofisinde sol ventrikül duvarı 2 santimetreden kalındır; normal kalınlık 1 ila 1,5 santimetredir.",
+       "ekran": "Burası önemli, sayılar doğrudan sorulur: miyokard hipertrofisinde sol ventrikül duvarı 2 santimetreden kalındır; normal kalınlık 1 ila 1,5 santimetredir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0103",
+       "ses": "Bu ölçüt, otopside ya da cerrahi örnekte hipertrofinin nesnel olarak belgelenmesini sağlar.",
+       "ekran": "Bu ölçüt, otopside ya da cerrahi örnekte hipertrofinin nesnel olarak belgelenmesini sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b08",
+   "baslik": "Kalp hipertrofisinin mekanizması",
+   "paragraflar": [
+    {
+     "id": "k1-03-p018",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-03-c0104",
+       "ses": "Miyositin büyüme kararını 3 tür tetikleyici başlatır.",
+       "ekran": "Miyositin büyüme kararını 3 tür tetikleyici başlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0105",
+       "ses": "1.'si mekanik gerilmedir: artmış basınç yükü miyositi gerer ve bu gerilme algılanarak büyüme sinyaline dönüştürülür.",
+       "ekran": "1.'si mekanik gerilmedir: artmış basınç yükü miyositi gerer ve bu gerilme algılanarak büyüme sinyaline dönüştürülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0106",
+       "ses": "2.'si büyüme faktörleridir; örnek olarak dönüştürücü büyüme faktörü beta, insülin benzeri büyüme faktörü 1 ve fibroblast büyüme faktörü sayılabilir.",
+       "ekran": "2.'si büyüme faktörleridir; örnek olarak dönüştürücü büyüme faktörü beta, insülin benzeri büyüme faktörü 1 ve fibroblast büyüme faktörü sayılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0107",
+       "ses": "3.'sü adrenerjik uyarımdır, yani sempatik sistemin uyarısı.",
+       "ekran": "3.'sü adrenerjik uyarımdır, yani sempatik sistemin uyarısı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0108",
+       "ses": "Vazoaktif ajanlar olarak alfa adrenerjik agonistler, endotelin 1 ve anjiyotensin 2 de bu grupta anılır.",
+       "ekran": "Vazoaktif ajanlar olarak alfa adrenerjik agonistler, endotelin 1 ve anjiyotensin 2 de bu grupta anılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0109",
+       "ses": "Bu tetikleyiciler birbirini güçlendirir, hücre içinde protein sentezini artıran sinyal yollarını açar ve sonuçta miyosit çekirdeğinde kasılma proteinlerini kodlayan genlerin ifadesi artar.",
+       "ekran": "Bu tetikleyiciler birbirini güçlendirir, hücre içinde protein sentezini artıran sinyal yollarını açar ve sonuçta miyosit çekirdeğinde kasılma proteinlerini kodlayan genlerin ifadesi artar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p019",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-03-c0110",
+       "ses": "Bu sinyallerin miyositteki sonuçları 3'tür.",
+       "ekran": "Bu sinyallerin miyositteki sonuçları 3'tür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0111",
+       "ses": "1.'si yeni sarkomer sentezidir; sarkomer çizgili kasın temel kasılma birimidir.",
+       "ekran": "1.'si yeni sarkomer sentezidir; sarkomer çizgili kasın temel kasılma birimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0112",
+       "ses": "2.'si hücre başına miyofilament artışıdır; aktin ve miyozin miktarı artar ve tek hücrenin ürettiği kuvvet yükselir.",
+       "ekran": "2.'si hücre başına miyofilament artışıdır; aktin ve miyozin miktarı artar ve tek hücrenin ürettiği kuvvet yükselir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0113",
+       "ses": "3.'sü enerji açısından daha ekonomik izoformlara geçiştir.",
+       "ekran": "3.'sü enerji açısından daha ekonomik izoformlara geçiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0114",
+       "ses": "Bunun klasik örneği, miyozin ağır zincirinin hızlı alfa izoformundan daha yavaş ama daha az enerji harcayan beta izoformuna geçişidir.",
+       "ekran": "Bunun klasik örneği, miyozin ağır zincirinin hızlı alfa izoformundan daha yavaş ama daha az enerji harcayan beta izoformuna geçişidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0115",
+       "ses": "Yani hipertrofi yalnızca daha fazla protein değil, aynı zamanda daha verimli protein demektir; iş yükü artarken enerji tüketimi dengelenmeye çalışılır.",
+       "ekran": "Yani hipertrofi yalnızca daha fazla protein değil, aynı zamanda daha verimli protein demektir; iş yükü artarken enerji tüketimi dengelenmeye çalışılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b09",
+   "baslik": "Miyokardda adaptasyon, hasar ve ölüm",
+   "paragraflar": [
+    {
+     "id": "k1-03-p020",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-03-c0116",
+       "ses": "Kitaptaki bir şema, aynı hücre tipinde, yani miyokard hücresinde, adaptasyon, hasar ve ölümün ilişkisini tek bakışta gösterir.",
+       "ekran": "Kitaptaki bir şema, aynı hücre tipinde, yani miyokard hücresinde, adaptasyon, hasar ve ölümün ilişkisini tek bakışta gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0117",
+       "ses": "Başlangıç noktası normal miyosittir ve buradan 2 ayrı yol çıkar.",
+       "ekran": "Başlangıç noktası normal miyosittir ve buradan 2 ayrı yol çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0118",
+       "ses": "Artmış yüke yanıt olarak gelişen adaptasyon hipertrofidir.",
+       "ekran": "Artmış yüke yanıt olarak gelişen adaptasyon hipertrofidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0119",
+       "ses": "Diğer yolda geri dönüşümlü hasarın nedeni iskemidir, yani dokuya kan akımının azalmasıdır.",
+       "ekran": "Diğer yolda geri dönüşümlü hasarın nedeni iskemidir, yani dokuya kan akımının azalmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0120",
+       "ses": "Geri dönüşümsüz hasar ise iskemik koagülatif nekrozdur; koagülatif nekroz, hücre ölümünden sonra doku yapısının bir süre korunduğu nekroz tipidir.",
+       "ekran": "Geri dönüşümsüz hasar ise iskemik koagülatif nekrozdur; koagülatif nekroz, hücre ölümünden sonra doku yapısının bir süre korunduğu nekroz tipidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0121",
+       "ses": "Hipertrofi örneğinde sol ventrikül duvarının 2 santimetreyi aştığı kalın kesit görülür.",
+       "ekran": "Hipertrofi örneğinde sol ventrikül duvarının 2 santimetreyi aştığı kalın kesit görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0122",
+       "ses": "Bu şema, strese verilen 3 temel yanıtın miyokarddaki somut karşılığıdır.",
+       "ekran": "Bu şema, strese verilen 3 temel yanıtın miyokarddaki somut karşılığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p021",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-03-c0123",
+       "ses": "Geri dönüşümlü olarak hasar görmüş miyokard, makroskopik ya da ışık mikroskobik değişiklik olmadan yalnızca fonksiyonel bozulma gösterebilir; ya da hücresel şişme ve yağlanma gibi geri dönüşümlü değişiklikler taşır.",
+       "ekran": "Geri dönüşümlü olarak hasar görmüş miyokard, makroskopik ya da ışık mikroskobik değişiklik olmadan yalnızca fonksiyonel bozulma gösterebilir; ya da hücresel şişme ve yağlanma gibi geri dönüşümlü değişiklikler taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0124",
+       "ses": "Nekroz gösteren örnekte posterolateral sol ventrikülde, duvarın tüm kalınlığını tutan, yani transmural, açık renkli bir alan vardır; bu akut miyokard enfarktüsüdür.",
+       "ekran": "Nekroz gösteren örnekte posterolateral sol ventrikülde, duvarın tüm kalınlığını tutan, yani transmural, açık renkli bir alan vardır; bu akut miyokard enfarktüsüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0125",
+       "ses": "Kesitler trifeniltetrazolyum klorürle boyanmıştır.",
+       "ekran": "Kesitler trifeniltetrazolyum klorürle boyanmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0126",
+       "ses": "Bu enzim substratı canlı miyokardı magenta rengine boyar.",
+       "ekran": "Bu enzim substratı canlı miyokardı magenta rengine boyar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0127",
+       "ses": "Enfarkt alanı ise boyanmaz, soluk kalır; çünkü hücre ölümünden sonra enzim kaybolmuştur.",
+       "ekran": "Enfarkt alanı ise boyanmaz, soluk kalır; çünkü hücre ölümünden sonra enzim kaybolmuştur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0128",
+       "ses": "Böylece canlı ve ölü miyokard çıplak gözle ayırt edilir.",
+       "ekran": "Böylece canlı ve ölü miyokard çıplak gözle ayırt edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0129",
+       "ses": "Kısacası geri dönüşümlü hasar makroskopik iz bırakmayabilir, geri dönüşümsüz hasar ise boyanmayan soluk alanla ortaya çıkar.",
+       "ekran": "Kısacası geri dönüşümlü hasar makroskopik iz bırakmayabilir, geri dönüşümsüz hasar ise boyanmayan soluk alanla ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b10",
+   "baslik": "Hipertrofinin sınırları ve kalp yetmezliği",
+   "paragraflar": [
+    {
+     "id": "k1-03-p022",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-03-c0130",
+       "ses": "Hipertrofi sınırsız sürdürülemez; kalp kası büyüdükçe onu destekleyen sistemler geride kalır.",
+       "ekran": "Hipertrofi sınırsız sürdürülemez; kalp kası büyüdükçe onu destekleyen sistemler geride kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0131",
+       "ses": "3 sınır vardır.",
+       "ekran": "3 sınır vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0132",
+       "ses": "Vasküler sınır: damar sisteminin genişlemiş kası besleme kapasitesi sınırlıdır, kas kütlesi artarken damar desteği aynı ölçüde artmaz.",
+       "ekran": "Vasküler sınır: damar sisteminin genişlemiş kası besleme kapasitesi sınırlıdır, kas kütlesi artarken damar desteği aynı ölçüde artmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0133",
+       "ses": "Enerji sınırı: mitokondrinin ATP üretimi sınırlıdır ve büyüyen hücrenin enerji talebi karşılanamaz hale gelir.",
+       "ekran": "Enerji sınırı: mitokondrinin ATP üretimi sınırlıdır ve büyüyen hücrenin enerji talebi karşılanamaz hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0134",
+       "ses": "Sentez sınırı: biyosentetik kapasite, yani hücrenin yeni protein ve yapı üretme gücü sınırlıdır.",
+       "ekran": "Sentez sınırı: biyosentetik kapasite, yani hücrenin yeni protein ve yapı üretme gücü sınırlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0135",
+       "ses": "Bu 3 sınır birlikte hipertrofik miyokardı göreceli bir oksijen ve enerji açığına sürükler.",
+       "ekran": "Bu 3 sınır birlikte hipertrofik miyokardı göreceli bir oksijen ve enerji açığına sürükler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p023",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-03-c0136",
+       "ses": "Sınırlar aşıldığında hipertrofik kalp son aşamaya girer ve dekompanse olur.",
+       "ekran": "Sınırlar aşıldığında hipertrofik kalp son aşamaya girer ve dekompanse olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0137",
+       "ses": "Önce miyofibril kaybı olur; kasılma birimleri azalır ve hücre kuvvet üretme kapasitesini yitirir.",
+       "ekran": "Önce miyofibril kaybı olur; kasılma birimleri azalır ve hücre kuvvet üretme kapasitesini yitirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0138",
+       "ses": "Ardından ventrikül dilatasyonu gelişir; kalınlaşmış duvar zayıflar, ventrikül boşluğu genişler.",
+       "ekran": "Ardından ventrikül dilatasyonu gelişir; kalınlaşmış duvar zayıflar, ventrikül boşluğu genişler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0139",
+       "ses": "Sonuçta kalp yetmezliği ortaya çıkar, yani kalp dokuların ihtiyacını karşılayacak kanı pompalayamaz.",
+       "ekran": "Sonuçta kalp yetmezliği ortaya çıkar, yani kalp dokuların ihtiyacını karşılayacak kanı pompalayamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0140",
+       "ses": "Kalp, kalın duvarlı güçlü bir pompadan geniş boşluklu zayıf bir pompaya dönüşür.",
+       "ekran": "Kalp, kalın duvarlı güçlü bir pompadan geniş boşluklu zayıf bir pompaya dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0141",
+       "ses": "Patolojik adaptasyonun bedeli burada açıkça görülür: hipertansiyon ya da aort stenozu düzeltilmeden sürerse hipertrofi, dilatasyon ve kalp yetmezliği dizisi beklenir.",
+       "ekran": "Patolojik adaptasyonun bedeli burada açıkça görülür: hipertansiyon ya da aort stenozu düzeltilmeden sürerse hipertrofi, dilatasyon ve kalp yetmezliği dizisi beklenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b11",
+   "baslik": "Hiperplazi: tanım ve fizyolojik tipleri",
+   "paragraflar": [
+    {
+     "id": "k1-03-p024",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-03-c0142",
+       "ses": "Hiperplazi, hücre sayısında artıştır ve sonuçta organ büyür.",
+       "ekran": "Hiperplazi, hücre sayısında artıştır ve sonuçta organ büyür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0143",
+       "ses": "Bunun bir ön koşulu vardır: hücre popülasyonu bölünebilir olmalıdır.",
+       "ekran": "Bunun bir ön koşulu vardır: hücre popülasyonu bölünebilir olmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0144",
+       "ses": "Kalp kası gibi bölünemeyen hücreler hiperplazi gösteremez.",
+       "ekran": "Kalp kası gibi bölünemeyen hücreler hiperplazi gösteremez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0145",
+       "ses": "Hiperplazi genellikle hipertrofi ile birlikte görülür; çoğalan hücreler aynı zamanda büyüyebilir.",
+       "ekran": "Hiperplazi genellikle hipertrofi ile birlikte görülür; çoğalan hücreler aynı zamanda büyüyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0146",
+       "ses": "Hiperplazi ve hipertrofi aynı uyarana verilebilen iki farklı yanıttır; hangisinin baskın olacağını dokunun bölünme kapasitesi belirler.",
+       "ekran": "Hiperplazi ve hipertrofi aynı uyarana verilebilen iki farklı yanıttır; hangisinin baskın olacağını dokunun bölünme kapasitesi belirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p025",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-03-c0147",
+       "ses": "Fizyolojik hiperplazinin ilk alt tipi hormonal hiperplazidir; hormonlar hedef dokuda hücre çoğalmasını uyarır.",
+       "ekran": "Fizyolojik hiperplazinin ilk alt tipi hormonal hiperplazidir; hormonlar hedef dokuda hücre çoğalmasını uyarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0148",
+       "ses": "İlk örnek ergenlik ve gebelikte meme bezleridir.",
+       "ekran": "İlk örnek ergenlik ve gebelikte meme bezleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0149",
+       "ses": "Ergenlikte hormon uyarısıyla meme bezi epiteli çoğalır ve bez yapısı gelişir; gebelikte meme bezleri çoğalarak süt üretimine hazırlanır.",
+       "ekran": "Ergenlikte hormon uyarısıyla meme bezi epiteli çoğalır ve bez yapısı gelişir; gebelikte meme bezleri çoğalarak süt üretimine hazırlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0150",
+       "ses": "Gebelikte memenin büyümesini fizyolojik adaptasyonun klasik örneği olarak anmıştık; şimdi bu büyümenin hücre sayısındaki artışa dayandığını görüyoruz.",
+       "ekran": "Gebelikte memenin büyümesini fizyolojik adaptasyonun klasik örneği olarak anmıştık; şimdi bu büyümenin hücre sayısındaki artışa dayandığını görüyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0151",
+       "ses": "İkinci örnek endometriumdaki siklik proliferasyondur.",
+       "ekran": "İkinci örnek endometriumdaki siklik proliferasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0152",
+       "ses": "Her menstrüel siklusta endometrium, östrojen ve progesteron gibi hormonların çoğalmayı uyarmasıyla kalınlaşır ve olası bir gebeliğe hazırlanır.",
+       "ekran": "Her menstrüel siklusta endometrium, östrojen ve progesteron gibi hormonların çoğalmayı uyarmasıyla kalınlaşır ve olası bir gebeliğe hazırlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0153",
+       "ses": "Hormon varken hücre çoğalır, hormon çekildiğinde proliferasyon durur.",
+       "ekran": "Hormon varken hücre çoğalır, hormon çekildiğinde proliferasyon durur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0154",
+       "ses": "Bu sıkı bağımlılık, patolojik hiperplaziyi anlamanın temelidir.",
+       "ekran": "Bu sıkı bağımlılık, patolojik hiperplaziyi anlamanın temelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p026",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-03-c0155",
+       "ses": "Fizyolojik hiperplazinin ikinci alt tipi telafi edici, diğer adıyla kompansatuvar hiperplazidir; doku kaybı kalan hücrelerin çoğalmasıyla telafi edilir.",
+       "ekran": "Fizyolojik hiperplazinin ikinci alt tipi telafi edici, diğer adıyla kompansatuvar hiperplazidir; doku kaybı kalan hücrelerin çoğalmasıyla telafi edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0156",
+       "ses": "Burası önemli, klasik örnek parsiyel hepatektomi sonrası karaciğerdir.",
+       "ekran": "Burası önemli, klasik örnek parsiyel hepatektomi sonrası karaciğerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0157",
+       "ses": "Karaciğerin bir bölümü cerrahi olarak çıkarıldığında kalan hepatositlerde mitotik aktivite artar ve karaciğer normal kütlesine geri döner.",
+       "ekran": "Karaciğerin bir bölümü cerrahi olarak çıkarıldığında kalan hepatositlerde mitotik aktivite artar ve karaciğer normal kütlesine geri döner.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0158",
+       "ses": "Bu çoğalmayı hepatosit büyüme faktörü gibi büyüme faktörleri uyarır.",
+       "ekran": "Bu çoğalmayı hepatosit büyüme faktörü gibi büyüme faktörleri uyarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0159",
+       "ses": "Eksik kütle tamamlanınca çoğalma durur; bu da hiperplazinin kontrollü ve amaca yönelik doğasını gösterir.",
+       "ekran": "Eksik kütle tamamlanınca çoğalma durur; bu da hiperplazinin kontrollü ve amaca yönelik doğasını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0160",
+       "ses": "Hormonal hiperplaziden farkı, uyaranın hormon değil, doku kaybı ve büyüme faktörleri olmasıdır.",
+       "ekran": "Hormonal hiperplaziden farkı, uyaranın hormon değil, doku kaybı ve büyüme faktörleri olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b12",
+   "baslik": "Patolojik hiperplazi ve kanser ilişkisi",
+   "paragraflar": [
+    {
+     "id": "k1-03-p027",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-03-c0161",
+       "ses": "Patolojik hiperplazi, hormon ya da büyüme faktörü uyarısının aşırı veya dengesiz olmasından kaynaklanır.",
+       "ekran": "Patolojik hiperplazi, hormon ya da büyüme faktörü uyarısının aşırı veya dengesiz olmasından kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0162",
+       "ses": "Burası önemli, 2 klasik örneği eşleştirmeyi bilmelisiniz.",
+       "ekran": "Burası önemli, 2 klasik örneği eşleştirmeyi bilmelisiniz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0163",
+       "ses": "İlki endometrial hiperplazidir ve nedeni östrojen ile progesteron arasındaki dengesizliktir.",
+       "ekran": "İlki endometrial hiperplazidir ve nedeni östrojen ile progesteron arasındaki dengesizliktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0164",
+       "ses": "Östrojen endometriumu çoğaltır, progesteron bu etkiyi dengeler.",
+       "ekran": "Östrojen endometriumu çoğaltır, progesteron bu etkiyi dengeler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0165",
+       "ses": "Progesteronla karşılanmayan östrojen etkisi sürdükçe endometrium bezleri durmadan çoğalır.",
+       "ekran": "Progesteronla karşılanmayan östrojen etkisi sürdükçe endometrium bezleri durmadan çoğalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0166",
+       "ses": "Fizyolojik siklik proliferasyonda çoğalma siklusla sınırlıyken patolojik hiperplazide bu sınır kalkar.",
+       "ekran": "Fizyolojik siklik proliferasyonda çoğalma siklusla sınırlıyken patolojik hiperplazide bu sınır kalkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0167",
+       "ses": "Yani fizyolojik süreçte kullanılan aynı hormonlar, dengeleri bozulunca patolojik büyüme yaratır.",
+       "ekran": "Yani fizyolojik süreçte kullanılan aynı hormonlar, dengeleri bozulunca patolojik büyüme yaratır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p028",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-03-c0168",
+       "ses": "İkinci örnek benign prostat hiperplazisidir.",
+       "ekran": "İkinci örnek benign prostat hiperplazisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0169",
+       "ses": "Bu, androjen ve östrojen etkili bir hiperplazidir; prostat dokusunda hormon etkilerinin dengesi bozulur, bez ve destek dokusu hücreleri çoğalarak organı büyütür.",
+       "ekran": "Bu, androjen ve östrojen etkili bir hiperplazidir; prostat dokusunda hormon etkilerinin dengesi bozulur, bez ve destek dokusu hücreleri çoğalarak organı büyütür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0170",
+       "ses": "Büyüyen prostat çevre yapılara bası yapabilir, ama bu bir neoplazi değildir; hormonal uyarıya bağımlı bir sayı artışıdır.",
+       "ekran": "Büyüyen prostat çevre yapılara bası yapabilir, ama bu bir neoplazi değildir; hormonal uyarıya bağımlı bir sayı artışıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0171",
+       "ses": "İki örneğin ortak paydası hormon dengesizliğidir: biri östrojen progesteron, diğeri androjen östrojen ekseninde gelişir.",
+       "ekran": "İki örneğin ortak paydası hormon dengesizliğidir: biri östrojen progesteron, diğeri androjen östrojen ekseninde gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p029",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-03-c0172",
+       "ses": "Patolojik hiperplazinin 2 genel özelliği vardır.",
+       "ekran": "Patolojik hiperplazinin 2 genel özelliği vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0173",
+       "ses": "1.'si hormon veya büyüme faktörü dengesizliğidir; uyaran ya aşırıdır ya da dengeleyici etki eksiktir.",
+       "ekran": "1.'si hormon veya büyüme faktörü dengesizliğidir; uyaran ya aşırıdır ya da dengeleyici etki eksiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0174",
+       "ses": "2.'si uyarana bağımlılıktır: uyarı azalırsa hiperplazi gerileyebilir.",
+       "ekran": "2.'si uyarana bağımlılıktır: uyarı azalırsa hiperplazi gerileyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0175",
+       "ses": "Bu klinik açıdan çok değerlidir, çünkü tedavide hedef çoğunlukla uyaranı, örneğin hormon etkisini azaltmaktır.",
+       "ekran": "Bu klinik açıdan çok değerlidir, çünkü tedavide hedef çoğunlukla uyaranı, örneğin hormon etkisini azaltmaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0176",
+       "ses": "Böylece patolojik hiperplazi de adaptasyon tanımına uyar: geri dönüşümlüdür ve uyarana bağımlıdır.",
+       "ekran": "Böylece patolojik hiperplazi de adaptasyon tanımına uyar: geri dönüşümlüdür ve uyarana bağımlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p030",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-03-c0177",
+       "ses": "Patolojik hiperplazi kanser değildir, ama kansere giden yolda bir basamak olabilir.",
+       "ekran": "Patolojik hiperplazi kanser değildir, ama kansere giden yolda bir basamak olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0178",
+       "ses": "Büyüme kontrol mekanizmaları hâlâ kısmen korunmuştur ve uyarı kesilince büyüme durur.",
+       "ekran": "Büyüme kontrol mekanizmaları hâlâ kısmen korunmuştur ve uyarı kesilince büyüme durur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0179",
+       "ses": "Ancak burası önemli: uzamış ve kontrolsüz hiperplazi neoplazi için zemin oluşturabilir.",
+       "ekran": "Ancak burası önemli: uzamış ve kontrolsüz hiperplazi neoplazi için zemin oluşturabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0180",
+       "ses": "Sürekli çoğalan bir hücre popülasyonunda bölünme sırasında hata birikme olasılığı artar.",
+       "ekran": "Sürekli çoğalan bir hücre popülasyonunda bölünme sırasında hata birikme olasılığı artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0181",
+       "ses": "Örnek olarak endometrial hiperplazide endometrium kanseri riski artar.",
+       "ekran": "Örnek olarak endometrial hiperplazide endometrium kanseri riski artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0182",
+       "ses": "Hiperplazi ile neoplazi arasındaki temel fark uyarana bağımlılıktır: hiperplazi uyarı kesilince durur, neoplazi ise uyarandan bağımsız büyümeye devam eder.",
+       "ekran": "Hiperplazi ile neoplazi arasındaki temel fark uyarana bağımlılıktır: hiperplazi uyarı kesilince durur, neoplazi ise uyarandan bağımsız büyümeye devam eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0183",
+       "ses": "Hiperplazi sorusunda önce uyaranı belirleyin: hormon mu, doku kaybı mı, yoksa hormon dengesizliği mi?",
+       "ekran": "Hiperplazi sorusunda önce uyaranı belirleyin: hormon mu, doku kaybı mı, yoksa hormon dengesizliği mi?",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b13",
+   "baslik": "Atrofi: tanım ve nedenleri",
+   "paragraflar": [
+    {
+     "id": "k1-03-p031",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-03-c0184",
+       "ses": "Atrofi, hipertrofi ve hiperplazinin tersine küçülme yönünde bir adaptasyondur.",
+       "ekran": "Atrofi, hipertrofi ve hiperplazinin tersine küçülme yönünde bir adaptasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0185",
+       "ses": "Bir organ veya dokunun, hücre boyutu ve, veya, sayısında azalma ile küçülmesidir.",
+       "ekran": "Bir organ veya dokunun, hücre boyutu ve, veya, sayısında azalma ile küçülmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0186",
+       "ses": "Boyut azalmasında hücreler daha az yapı proteini ve organel içerir; sayı azalmasında popülasyondan hücre kaybı olur.",
+       "ekran": "Boyut azalmasında hücreler daha az yapı proteini ve organel içerir; sayı azalmasında popülasyondan hücre kaybı olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0187",
+       "ses": "Atrofik hücreler küçülmüş olsa da canlıdır ve daha düşük bir düzeyde işlev görmeye devam eder.",
+       "ekran": "Atrofik hücreler küçülmüş olsa da canlıdır ve daha düşük bir düzeyde işlev görmeye devam eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0188",
+       "ses": "Dikkat edin, atrofi hücre ölümüyle eş anlamlı değildir.",
+       "ekran": "Dikkat edin, atrofi hücre ölümüyle eş anlamlı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p032",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-03-c0189",
+       "ses": "Atrofinin 6 nedeni sayılır.",
+       "ekran": "Atrofinin 6 nedeni sayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0190",
+       "ses": "Azalmış iş yükü: kullanılmayan doku küçülür.",
+       "ekran": "Azalmış iş yükü: kullanılmayan doku küçülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0191",
+       "ses": "Sinir kaybı: innervasyonunu yitiren kas atrofiye uğrar.",
+       "ekran": "Sinir kaybı: innervasyonunu yitiren kas atrofiye uğrar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0192",
+       "ses": "Azalmış kan akımı, yani iskemi: yetersiz kanlanan doku küçülür.",
+       "ekran": "Azalmış kan akımı, yani iskemi: yetersiz kanlanan doku küçülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0193",
+       "ses": "Yetersiz beslenme: besin ve enerji eksikliği doku kütlesini azaltır.",
+       "ekran": "Yetersiz beslenme: besin ve enerji eksikliği doku kütlesini azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0194",
+       "ses": "Endokrin uyarı kaybı: hormona bağımlı dokular hormon çekilince küçülür.",
+       "ekran": "Endokrin uyarı kaybı: hormona bağımlı dokular hormon çekilince küçülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0195",
+       "ses": "Ve yaşlanma, buna senil atrofi denir.",
+       "ekran": "Ve yaşlanma, buna senil atrofi denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0196",
+       "ses": "Ortak nokta, hücreye yönelik talebin ya da desteğin azalmasıdır; hücre daha düşük bir düzeyde yeni bir denge kurar.",
+       "ekran": "Ortak nokta, hücreye yönelik talebin ya da desteğin azalmasıdır; hücre daha düşük bir düzeyde yeni bir denge kurar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0197",
+       "ses": "Bu liste büyüme uyaranlarının tersidir: artmış iş yükü hipertrofi, azalmış iş yükü atrofi yapar.",
+       "ekran": "Bu liste büyüme uyaranlarının tersidir: artmış iş yükü hipertrofi, azalmış iş yükü atrofi yapar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p033",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-03-c0198",
+       "ses": "Kitaptaki beyin atrofisi şekli, genç bir yetişkinin normal beynini aterosklerotik serebrovasküler hastalığı olan 81 yaşında bir erkeğin beyniyle karşılaştırır.",
+       "ekran": "Kitaptaki beyin atrofisi şekli, genç bir yetişkinin normal beynini aterosklerotik serebrovasküler hastalığı olan 81 yaşında bir erkeğin beyniyle karşılaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0199",
+       "ses": "Bu atrofi yaşlanmaya ve azalan kan akışına bağlıdır; yani senil atrofi ve iskemi aynı organda birleşmiştir.",
+       "ekran": "Bu atrofi yaşlanmaya ve azalan kan akışına bağlıdır; yani senil atrofi ve iskemi aynı organda birleşmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0200",
+       "ses": "Beyin maddesinin kaybı girusları, yani kıvrımları daraltır, sulkusları, yani aradaki olukları genişletir.",
+       "ekran": "Beyin maddesinin kaybı girusları, yani kıvrımları daraltır, sulkusları, yani aradaki olukları genişletir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0201",
+       "ses": "Beyin yüzeyini göstermek için örneklerin alt yarısından meninksler çıkarılmıştır.",
+       "ekran": "Beyin yüzeyini göstermek için örneklerin alt yarısından meninksler çıkarılmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0202",
+       "ses": "Makroskopik beyin atrofisinin imzası dar giruslar ve geniş sulkuslardır.",
+       "ekran": "Makroskopik beyin atrofisinin imzası dar giruslar ve geniş sulkuslardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b14",
+   "baslik": "Atrofi örnekleri",
+   "paragraflar": [
+    {
+     "id": "k1-03-p034",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-03-c0203",
+       "ses": "Atrofi nedenleri klinikte tanıdık tablolar olarak karşımıza çıkar.",
+       "ekran": "Atrofi nedenleri klinikte tanıdık tablolar olarak karşımıza çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0204",
+       "ses": "Kullanılmama atrofisinde alçıya alınan ekstremitede kas kitlesi kaybı gelişir; kas kullanılmadığı için iş yükü azalır ve lifler küçülür.",
+       "ekran": "Kullanılmama atrofisinde alçıya alınan ekstremitede kas kitlesi kaybı gelişir; kas kullanılmadığı için iş yükü azalır ve lifler küçülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0205",
+       "ses": "Alçı çıkarılıp kas yeniden çalıştırıldığında bu durum büyük ölçüde geri döner, bu da atrofinin adaptif ve geri dönüşümlü niteliğini gösterir.",
+       "ekran": "Alçı çıkarılıp kas yeniden çalıştırıldığında bu durum büyük ölçüde geri döner, bu da atrofinin adaptif ve geri dönüşümlü niteliğini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0206",
+       "ses": "İnnervasyon kaybında, yani denervasyon atrofisinde, motor sinir lezyonu sonrası kası uyaran sinyal kesildiği için kas atrofisi gelişir.",
+       "ekran": "İnnervasyon kaybında, yani denervasyon atrofisinde, motor sinir lezyonu sonrası kası uyaran sinyal kesildiği için kas atrofisi gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0207",
+       "ses": "Egzersizle büyüyen iskelet kası ile alçıda küçülen iskelet kası, aynı dokunun iş yüküne göre iki yönlü uyumudur.",
+       "ekran": "Egzersizle büyüyen iskelet kası ile alçıda küçülen iskelet kası, aynı dokunun iş yüküne göre iki yönlü uyumudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p035",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-03-c0208",
+       "ses": "Endokrin atrofinin örneği menopoz sonrası uterus ve overlerde küçülmedir; hormon uyarısı azalınca hormona bağımlı dokular küçülür.",
+       "ekran": "Endokrin atrofinin örneği menopoz sonrası uterus ve overlerde küçülmedir; hormon uyarısı azalınca hormona bağımlı dokular küçülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0209",
+       "ses": "Böylece aynı organ, uterus, uyarının varlığına göre iki yönde adapte olur: gebelikte östrojenle büyür, menopozda hormon kaybıyla küçülür.",
+       "ekran": "Böylece aynı organ, uterus, uyarının varlığına göre iki yönde adapte olur: gebelikte östrojenle büyür, menopozda hormon kaybıyla küçülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0210",
+       "ses": "Yaşlılıkta ise beyin atrofisi, kalp ve kas kütlesinde azalma görülür.",
+       "ekran": "Yaşlılıkta ise beyin atrofisi, kalp ve kas kütlesinde azalma görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0211",
+       "ses": "Yaşlılıktaki atrofi tek bir nedene bağlı değildir; azalan kan akımı, azalan iş yükü ve hücre kaybı birleşir.",
+       "ekran": "Yaşlılıktaki atrofi tek bir nedene bağlı değildir; azalan kan akımı, azalan iş yükü ve hücre kaybı birleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b15",
+   "baslik": "Atrofinin mekanizmaları",
+   "paragraflar": [
+    {
+     "id": "k1-03-p036",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-03-c0212",
+       "ses": "Atrofinin hücresel temeli, protein sentezi ile yıkımı arasındaki dengenin yıkım lehine bozulmasıdır.",
+       "ekran": "Atrofinin hücresel temeli, protein sentezi ile yıkımı arasındaki dengenin yıkım lehine bozulmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0213",
+       "ses": "Burası önemli, 3 mekanizmayı birlikte bilmelisiniz: azalmış protein sentezi, ubikuitin proteazom sistemiyle artmış protein yıkımı ve artmış otofaji.",
+       "ekran": "Burası önemli, 3 mekanizmayı birlikte bilmelisiniz: azalmış protein sentezi, ubikuitin proteazom sistemiyle artmış protein yıkımı ve artmış otofaji.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0214",
+       "ses": "1.'si, azalmış protein sentezi, düşük metabolik aktiviteye bağlıdır.",
+       "ekran": "1.'si, azalmış protein sentezi, düşük metabolik aktiviteye bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0215",
+       "ses": "Azalmış iş yükü, sinir ya da hormon uyarısının kaybı ve yetersiz besin hücrenin metabolik aktivitesini düşürür; hücre yeni yapı proteini üretimini azaltır.",
+       "ekran": "Azalmış iş yükü, sinir ya da hormon uyarısının kaybı ve yetersiz besin hücrenin metabolik aktivitesini düşürür; hücre yeni yapı proteini üretimini azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0216",
+       "ses": "Hipertrofide artan sentez hücreyi büyütüyordu; atrofide azalan sentez hücreyi küçültür.",
+       "ekran": "Hipertrofide artan sentez hücreyi büyütüyordu; atrofide azalan sentez hücreyi küçültür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p037",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-03-c0217",
+       "ses": "İkinci mekanizma artmış protein yıkımıdır ve bunu ubikuitin proteazom sistemi yürütür.",
+       "ekran": "İkinci mekanizma artmış protein yıkımıdır ve bunu ubikuitin proteazom sistemi yürütür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0218",
+       "ses": "Proteinler önce ubikuitin ile işaretlenir; ubikuitin, yıkılacak proteine bağlanan küçük bir etiket proteindir.",
+       "ekran": "Proteinler önce ubikuitin ile işaretlenir; ubikuitin, yıkılacak proteine bağlanan küçük bir etiket proteindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0219",
+       "ses": "İşaretli proteinler ardından proteazomda parçalanır; proteazom, hücre içi proteinleri küçük peptidlere ayıran büyük bir protein kompleksidir.",
+       "ekran": "İşaretli proteinler ardından proteazomda parçalanır; proteazom, hücre içi proteinleri küçük peptidlere ayıran büyük bir protein kompleksidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0220",
+       "ses": "Sistem yalnız işaretlenen proteinleri yıktığı için hedefe yöneliktir ve atrofide yapısal proteinler bu yolla azalır.",
+       "ekran": "Sistem yalnız işaretlenen proteinleri yıktığı için hedefe yöneliktir ve atrofide yapısal proteinler bu yolla azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0221",
+       "ses": "Böylece bir yandan az protein üretilirken öbür yandan mevcut proteinler hızla yıkılır.",
+       "ekran": "Böylece bir yandan az protein üretilirken öbür yandan mevcut proteinler hızla yıkılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p038",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-03-c0222",
+       "ses": "Üçüncü mekanizma artmış otofajidir; burada yıkım tek tek proteinler değil, organeller düzeyinde gerçekleşir.",
+       "ekran": "Üçüncü mekanizma artmış otofajidir; burada yıkım tek tek proteinler değil, organeller düzeyinde gerçekleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0223",
+       "ses": "Otofaji, hücre içi organellerin kendi kendine yenmesidir ve otofajik vakuoller oluşur.",
+       "ekran": "Otofaji, hücre içi organellerin kendi kendine yenmesidir ve otofajik vakuoller oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0224",
+       "ses": "Hücre kendi organellerini bu vakuoller içinde sindirir; besin ve enerji kısıtlıyken gereksiz organellerini ortadan kaldırarak hem kütlesini hem enerji ihtiyacını azaltır.",
+       "ekran": "Hücre kendi organellerini bu vakuoller içinde sindirir; besin ve enerji kısıtlıyken gereksiz organellerini ortadan kaldırarak hem kütlesini hem enerji ihtiyacını azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0225",
+       "ses": "Atrofik hücrede otofajik vakuollerin görülmesi artmış otofajinin morfolojik kanıtıdır.",
+       "ekran": "Atrofik hücrede otofajik vakuollerin görülmesi artmış otofajinin morfolojik kanıtıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p039",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-03-c0226",
+       "ses": "Atrofi, daha az kaynakla hayatta kalmak için enerji tasarrufu sağlayan bir adaptasyondur.",
+       "ekran": "Atrofi, daha az kaynakla hayatta kalmak için enerji tasarrufu sağlayan bir adaptasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0227",
+       "ses": "Ancak uzun sürerse ve şiddetli olursa hücreler apoptoza gidebilir ve sonuç geri dönüşümsüz hücre kaybıdır.",
+       "ekran": "Ancak uzun sürerse ve şiddetli olursa hücreler apoptoza gidebilir ve sonuç geri dönüşümsüz hücre kaybıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0228",
+       "ses": "Bu, atrofide boyut azalması ile sayı azalması arasındaki köprüdür: başlangıçta hücreler küçülür, uzamış ve şiddetli durumda ise apoptozla ölerek popülasyondan çıkar.",
+       "ekran": "Bu, atrofide boyut azalması ile sayı azalması arasındaki köprüdür: başlangıçta hücreler küçülür, uzamış ve şiddetli durumda ise apoptozla ölerek popülasyondan çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0229",
+       "ses": "Kısa süreli atrofi geri dönüşümlüdür; atrofi tek başına hücre ölümü değildir, ama uzarsa apoptoz gelişir.",
+       "ekran": "Kısa süreli atrofi geri dönüşümlüdür; atrofi tek başına hücre ölümü değildir, ama uzarsa apoptoz gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b16",
+   "baslik": "Metaplazi: tanım ve mekanizma",
+   "paragraflar": [
+    {
+     "id": "k1-03-p040",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-03-c0230",
+       "ses": "Metaplazi, adaptasyon tipleri içinde niteliksel değişimi temsil eder: hücrenin boyutu ya da sayısı değil, kimliği değişir.",
+       "ekran": "Metaplazi, adaptasyon tipleri içinde niteliksel değişimi temsil eder: hücrenin boyutu ya da sayısı değil, kimliği değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0231",
+       "ses": "Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir.",
+       "ekran": "Bir olgun hücre tipinin başka bir olgun hücre tipi ile yer değiştirmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0232",
+       "ses": "Hem kaybolan hem yerine gelen hücre tipi olgun, yani tam farklılaşmış hücrelerdir.",
+       "ekran": "Hem kaybolan hem yerine gelen hücre tipi olgun, yani tam farklılaşmış hücrelerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0233",
+       "ses": "Bir adaptasyon olarak metaplazi, uyaran ortadan kalkarsa geri dönebilir.",
+       "ekran": "Bir adaptasyon olarak metaplazi, uyaran ortadan kalkarsa geri dönebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0234",
+       "ses": "Metaplazide hücreler kontrolsüz çoğalmaz ve atipik görünüm kazanmaz; yerine gelen hücreler normal görünümlü olgun hücrelerdir.",
+       "ekran": "Metaplazide hücreler kontrolsüz çoğalmaz ve atipik görünüm kazanmaz; yerine gelen hücreler normal görünümlü olgun hücrelerdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p041",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-03-c0235",
+       "ses": "Metaplazi, olgun bir hücrenin doğrudan başka bir hücreye dönüşmesiyle değil, yeni hücrelerin farklı bir yönde üretilmesiyle oluşur.",
+       "ekran": "Metaplazi, olgun bir hücrenin doğrudan başka bir hücreye dönüşmesiyle değil, yeni hücrelerin farklı bir yönde üretilmesiyle oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0236",
+       "ses": "Mekanizma genellikle kök hücrelerin farklı bir yönde yeniden programlanmasıdır.",
+       "ekran": "Mekanizma genellikle kök hücrelerin farklı bir yönde yeniden programlanmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0237",
+       "ses": "Dokudaki kök hücreler stres sinyallerinin etkisiyle olağan hücre tipi yerine başka bir olgun tipe farklılaşır.",
+       "ekran": "Dokudaki kök hücreler stres sinyallerinin etkisiyle olağan hücre tipi yerine başka bir olgun tipe farklılaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0238",
+       "ses": "Yani değişen olgun hücrenin kendisi değil, kök hücrenin farklılaşma programıdır.",
+       "ekran": "Yani değişen olgun hücrenin kendisi değil, kök hücrenin farklılaşma programıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0239",
+       "ses": "Uyaran kaldırıldığında kök hücreler yeniden olağan yönde farklılaşabilir.",
+       "ekran": "Uyaran kaldırıldığında kök hücreler yeniden olağan yönde farklılaşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p042",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-03-c0240",
+       "ses": "Metaplazinin amacı, mevcut stres ortamına daha dayanıklı bir hücre tipi ile adaptasyondur.",
+       "ekran": "Metaplazinin amacı, mevcut stres ortamına daha dayanıklı bir hücre tipi ile adaptasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0241",
+       "ses": "Burası önemli, bu tanım çıkmış sorularda doğrudan soruldu: belli bir strese duyarlı hücre tipinin yerini, olumsuz koşullara daha dayanıklı başka bir hücre tipinin alması metaplazidir.",
+       "ekran": "Burası önemli, bu tanım çıkmış sorularda doğrudan soruldu: belli bir strese duyarlı hücre tipinin yerini, olumsuz koşullara daha dayanıklı başka bir hücre tipinin alması metaplazidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0242",
+       "ses": "Bu tanımı hiperplazi, hipertrofi, atrofi ya da displaziyle karıştırmayın; hücre tipinin değişmesi yalnız metaplazinin özelliğidir.",
+       "ekran": "Bu tanımı hiperplazi, hipertrofi, atrofi ya da displaziyle karıştırmayın; hücre tipinin değişmesi yalnız metaplazinin özelliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b17",
+   "baslik": "Epitel metaplazisi: sigara ve bronş",
+   "paragraflar": [
+    {
+     "id": "k1-03-p043",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-03-c0243",
+       "ses": "Kitaptaki bir şema, bir bronşta bazal membran üzerinde solda normal kolumnar epiteli, sağda ise yassı epitele dönüşümü, yani skuamöz metaplaziyi gösterir; aynı geçiş histolojik kesitte de izlenir.",
+       "ekran": "Kitaptaki bir şema, bir bronşta bazal membran üzerinde solda normal kolumnar epiteli, sağda ise yassı epitele dönüşümü, yani skuamöz metaplaziyi gösterir; aynı geçiş histolojik kesitte de izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0244",
+       "ses": "Uzun kolumnar hücrelerin yerini çok katlı, yüzeye doğru yassılaşan hücreler alır.",
+       "ekran": "Uzun kolumnar hücrelerin yerini çok katlı, yüzeye doğru yassılaşan hücreler alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0245",
+       "ses": "Dönüşüm boyunca epitel bazal membranın üzerinde kalır, değişim epitel içinde sınırlıdır.",
+       "ekran": "Dönüşüm boyunca epitel bazal membranın üzerinde kalır, değişim epitel içinde sınırlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0246",
+       "ses": "Normal ve metaplastik epitel aynı bronşta yan yana izlenebilir.",
+       "ekran": "Normal ve metaplastik epitel aynı bronşta yan yana izlenebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p044",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-03-c0247",
+       "ses": "Epitel metaplazisinin en bilinen örneği sigara içenlerin solunum yollarında gelişir.",
+       "ekran": "Epitel metaplazisinin en bilinen örneği sigara içenlerin solunum yollarında gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0248",
+       "ses": "Normalde trakea ve bronşlarda siliyalı psödostratifiye kolumnar epitel bulunur; psödostratifiye, tek katlı olduğu halde çekirdekleri farklı düzeylerde durduğu için çok katlı görünen epitel demektir.",
+       "ekran": "Normalde trakea ve bronşlarda siliyalı psödostratifiye kolumnar epitel bulunur; psödostratifiye, tek katlı olduğu halde çekirdekleri farklı düzeylerde durduğu için çok katlı görünen epitel demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0249",
+       "ses": "Sigara dumanına kronik maruziyette bu epitel yassı çok katlı epitele metaplazi gösterir.",
+       "ekran": "Sigara dumanına kronik maruziyette bu epitel yassı çok katlı epitele metaplazi gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0250",
+       "ses": "Siliyalı kolumnar epitel dumandaki kimyasallara karşı hassastır; kök hücreler kimyasal strese daha dayanıklı yassı çok katlı epitel yönünde farklılaşır.",
+       "ekran": "Siliyalı kolumnar epitel dumandaki kimyasallara karşı hassastır; kök hücreler kimyasal strese daha dayanıklı yassı çok katlı epitel yönünde farklılaşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p045",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-03-c0251",
+       "ses": "Bu metaplazi bir kazanım ve bir kayıp getirir.",
+       "ekran": "Bu metaplazi bir kazanım ve bir kayıp getirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0252",
+       "ses": "Kazanım, kimyasal strese dayanıklılığın artmasıdır.",
+       "ekran": "Kazanım, kimyasal strese dayanıklılığın artmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0253",
+       "ses": "Kayıplar ise 2 tanedir: mukus üretimi azalır, çünkü yassı epitelde mukus salgılayan hücreler yoktur; ve mukosiliyer temizlenme azalır, çünkü silyalar kaybolduğu için mukusun yakaladığı partikül ve mikroorganizmalar yukarı taşınamaz.",
+       "ekran": "Kayıplar ise 2 tanedir: mukus üretimi azalır, çünkü yassı epitelde mukus salgılayan hücreler yoktur; ve mukosiliyer temizlenme azalır, çünkü silyalar kaybolduğu için mukusun yakaladığı partikül ve mikroorganizmalar yukarı taşınamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0254",
+       "ses": "Bu da hava yollarında partikül ve mikroorganizma birikimine zemin hazırlar.",
+       "ekran": "Bu da hava yollarında partikül ve mikroorganizma birikimine zemin hazırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0255",
+       "ses": "Patolojik adaptasyonun hayatta tutar ama normal fonksiyonu bozar ilkesinin somut bir örneğidir.",
+       "ekran": "Patolojik adaptasyonun hayatta tutar ama normal fonksiyonu bozar ilkesinin somut bir örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b18",
+   "baslik": "Barrett metaplazisi ve mezenkimal metaplazi",
+   "paragraflar": [
+    {
+     "id": "k1-03-p046",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-03-c0256",
+       "ses": "Metaplazi her zaman kolumnardan yassıya doğru olmaz; özofagusta yön terstir.",
+       "ekran": "Metaplazi her zaman kolumnardan yassıya doğru olmaz; özofagusta yön terstir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0257",
+       "ses": "Kronik gastroözofageal reflüde, yani mide içeriğinin özofagusa geri kaçmasında, alt özofagus asit ve safraya maruz kalır.",
+       "ekran": "Kronik gastroözofageal reflüde, yani mide içeriğinin özofagusa geri kaçmasında, alt özofagus asit ve safraya maruz kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0258",
+       "ses": "Normal özofagusun çok katlı yassı epiteli asit ve safraya dayanıksızdır; bu nedenle alt özofagusta kolumnar, Barrett tipi epitel gelişir.",
+       "ekran": "Normal özofagusun çok katlı yassı epiteli asit ve safraya dayanıksızdır; bu nedenle alt özofagusta kolumnar, Barrett tipi epitel gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0259",
+       "ses": "Bu epitel çoğunlukla goblet hücreleri içeren intestinal tip özellik taşır.",
+       "ekran": "Bu epitel çoğunlukla goblet hücreleri içeren intestinal tip özellik taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0260",
+       "ses": "Klinik önemi, neoplaziye, özellikle adenokarsinoma zemin oluşturabilmesidir; adenokarsinom bez epitelinden köken alan malign tümördür.",
+       "ekran": "Klinik önemi, neoplaziye, özellikle adenokarsinoma zemin oluşturabilmesidir; adenokarsinom bez epitelinden köken alan malign tümördür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0261",
+       "ses": "Bu yüzden kolumnar metaplazi izlem gerektirir.",
+       "ekran": "Bu yüzden kolumnar metaplazi izlem gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p047",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-03-c0262",
+       "ses": "Burası önemli, sınavın sevdiği bir tuzaktır ve yönleri karıştırmamalısınız: sigarada bronşta kolumnardan yassıya, yani skuamöz metaplazi; reflüde özofagusta yassıdan kolumnara, yani Barrett metaplazisi gelişir.",
+       "ekran": "Burası önemli, sınavın sevdiği bir tuzaktır ve yönleri karıştırmamalısınız: sigarada bronşta kolumnardan yassıya, yani skuamöz metaplazi; reflüde özofagusta yassıdan kolumnara, yani Barrett metaplazisi gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0263",
+       "ses": "Barrett metaplazisinin zemininde gelişebilecek kanser adenokarsinomdur.",
+       "ekran": "Barrett metaplazisinin zemininde gelişebilecek kanser adenokarsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0264",
+       "ses": "Yani bronşta yerine gelen hücre yassı, özofagusta ise bez yapabilen kolumnar hücredir; gelişebilecek tümör tipini de bu yeni hücre tipi belirler.",
+       "ekran": "Yani bronşta yerine gelen hücre yassı, özofagusta ise bez yapabilen kolumnar hücredir; gelişebilecek tümör tipini de bu yeni hücre tipi belirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p048",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-03-c0265",
+       "ses": "Metaplazi yalnız epitelde değil, mezenkimal dokuda da görülebilir.",
+       "ekran": "Metaplazi yalnız epitelde değil, mezenkimal dokuda da görülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0266",
+       "ses": "Örnek, yumuşak dokuda kemik oluşumudur ve travma odaklarında ve skar dokusunda gelişir.",
+       "ekran": "Örnek, yumuşak dokuda kemik oluşumudur ve travma odaklarında ve skar dokusunda gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0267",
+       "ses": "Normalde kemik içermeyen yumuşak dokuda, hasar sonrası iyileşme sürecinde mezenkimal hücreler kemik yapıcı yönde farklılaşabilir.",
+       "ekran": "Normalde kemik içermeyen yumuşak dokuda, hasar sonrası iyileşme sürecinde mezenkimal hücreler kemik yapıcı yönde farklılaşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0268",
+       "ses": "Kas içinde travma sonrası kemik oluşumu, yani miyozitis ossifikans, bunun klinik örneği olarak bilinir.",
+       "ekran": "Kas içinde travma sonrası kemik oluşumu, yani miyozitis ossifikans, bunun klinik örneği olarak bilinir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0269",
+       "ses": "Mezenkimal metaplazi genellikle patolojik süreçlere eşlik eder ve uyumdan çok reaktif bir değişimdir; epitel metaplazisi gibi belirgin bir koruyucu amacı yoktur.",
+       "ekran": "Mezenkimal metaplazi genellikle patolojik süreçlere eşlik eder ve uyumdan çok reaktif bir değişimdir; epitel metaplazisi gibi belirgin bir koruyucu amacı yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b19",
+   "baslik": "Metaplazi: çift uçlu kılıç",
+   "paragraflar": [
+    {
+     "id": "k1-03-p049",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-03-c0270",
+       "ses": "Metaplazinin değerlendirmesi her zaman iki yönlüdür.",
+       "ekran": "Metaplazinin değerlendirmesi her zaman iki yönlüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0271",
+       "ses": "Avantajı, yeni hücre tipinin mevcut strese daha dayanıklı olmasıdır.",
+       "ekran": "Avantajı, yeni hücre tipinin mevcut strese daha dayanıklı olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0272",
+       "ses": "Dezavantajı ise iki yönlüdür.",
+       "ekran": "Dezavantajı ise iki yönlüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0273",
+       "ses": "1.'si normal fonksiyonların kaybolabilmesidir; örneğin solunum yollarında mukus ve silyadan oluşan bariyer kaybolur.",
+       "ekran": "1.'si normal fonksiyonların kaybolabilmesidir; örneğin solunum yollarında mukus ve silyadan oluşan bariyer kaybolur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0274",
+       "ses": "2.'si daha da önemlidir: uzamış metaplazi displazi ve malign dönüşüm için zemin oluşturur.",
+       "ekran": "2.'si daha da önemlidir: uzamış metaplazi displazi ve malign dönüşüm için zemin oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p050",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-03-c0275",
+       "ses": "Displazi, epitel hücrelerinin düzensiz büyüme ve atipi kazanmasıdır ve metaplazi ile kanser arasında bir ara basamak olabilir.",
+       "ekran": "Displazi, epitel hücrelerinin düzensiz büyüme ve atipi kazanmasıdır ve metaplazi ile kanser arasında bir ara basamak olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0276",
+       "ses": "Malign dönüşüm, hücrenin kanser hücresine dönüşmesidir.",
+       "ekran": "Malign dönüşüm, hücrenin kanser hücresine dönüşmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0277",
+       "ses": "Metaplazi kendi başına kanser değildir, ama uyaranın sürdüğü durumlarda metaplaziden displaziye, oradan malign dönüşüme uzanan bir dizi gelişebilir.",
+       "ekran": "Metaplazi kendi başına kanser değildir, ama uyaranın sürdüğü durumlarda metaplaziden displaziye, oradan malign dönüşüme uzanan bir dizi gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0278",
+       "ses": "Bu yüzden metaplazi çift uçlu bir kılıçtır: dayanıklılık kazandırır, fakat normal fonksiyonu ve uzun vadede güvenliği feda eder.",
+       "ekran": "Bu yüzden metaplazi çift uçlu bir kılıçtır: dayanıklılık kazandırır, fakat normal fonksiyonu ve uzun vadede güvenliği feda eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0279",
+       "ses": "Bir metaplazi sorusunda önce yönü belirleyin: kolumnardan yassıya mı, yassıdan kolumnara mı?",
+       "ekran": "Bir metaplazi sorusunda önce yönü belirleyin: kolumnardan yassıya mı, yassıdan kolumnara mı?",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b20",
+   "baslik": "Otofaji",
+   "paragraflar": [
+    {
+     "id": "k1-03-p051",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-03-c0280",
+       "ses": "Atrofi mekanizmaları arasında değindiğimiz otofaji, aslında hücrenin genel bir hayatta kalma programıdır.",
+       "ekran": "Atrofi mekanizmaları arasında değindiğimiz otofaji, aslında hücrenin genel bir hayatta kalma programıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0281",
+       "ses": "Otofaji, kelime anlamıyla kendini yeme, hücrenin kendi bileşenlerini lizozomlar içinde sindirmesidir.",
+       "ekran": "Otofaji, kelime anlamıyla kendini yeme, hücrenin kendi bileşenlerini lizozomlar içinde sindirmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0282",
+       "ses": "Lizozomlar sindirim enzimleri içeren hücre içi organellerdir.",
+       "ekran": "Lizozomlar sindirim enzimleri içeren hücre içi organellerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0283",
+       "ses": "Otofajinin 2 amacı vardır: besin kıtlığında enerji sağlamak ve hasarlı organelleri uzaklaştırmak.",
+       "ekran": "Otofajinin 2 amacı vardır: besin kıtlığında enerji sağlamak ve hasarlı organelleri uzaklaştırmak.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0284",
+       "ses": "Hücre kendi bileşenlerini parçalayarak yapı taşı ve enerji elde eder; bozulmuş organelleri ortadan kaldırarak da iç kalitesini korur.",
+       "ekran": "Hücre kendi bileşenlerini parçalayarak yapı taşı ve enerji elde eder; bozulmuş organelleri ortadan kaldırarak da iç kalitesini korur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0285",
+       "ses": "Yani otofaji hem bir enerji kaynağı hem de bir hücre içi temizlik mekanizmasıdır.",
+       "ekran": "Yani otofaji hem bir enerji kaynağı hem de bir hücre içi temizlik mekanizmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p052",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-03-c0286",
+       "ses": "Otofaji sıralı bir süreçtir.",
+       "ekran": "Otofaji sıralı bir süreçtir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0287",
+       "ses": "Önce sindirilecek sitoplazma bölümü ve organeller çift zarlı otofagozom içine alınır; çift zar, otofagozomu diğer veziküllerden ayıran özelliktir.",
+       "ekran": "Önce sindirilecek sitoplazma bölümü ve organeller çift zarlı otofagozom içine alınır; çift zar, otofagozomu diğer veziküllerden ayıran özelliktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0288",
+       "ses": "Sonra otofagozom lizozomlarla birleşir ve otofagolizozom oluşur.",
+       "ekran": "Sonra otofagozom lizozomlarla birleşir ve otofagolizozom oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0289",
+       "ses": "Bu füzyon şarttır, çünkü sindirim enzimleri lizozomdan gelir.",
+       "ekran": "Bu füzyon şarttır, çünkü sindirim enzimleri lizozomdan gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0290",
+       "ses": "Son basamakta lizozom enzimleri içeriği parçalar ve açığa çıkan yapı taşları hücre tarafından yeniden kullanılır.",
+       "ekran": "Son basamakta lizozom enzimleri içeriği parçalar ve açığa çıkan yapı taşları hücre tarafından yeniden kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p053",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-03-c0291",
+       "ses": "Otofaji, kıtlık ve stres dönemlerinde adaptif bir yanıttır ve hücreyi hayatta tutar.",
+       "ekran": "Otofaji, kıtlık ve stres dönemlerinde adaptif bir yanıttır ve hücreyi hayatta tutar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0292",
+       "ses": "Ancak aşırı otofaji hücresel yapıları tüketebilir ve apoptoz ile sonuçlanabilir.",
+       "ekran": "Ancak aşırı otofaji hücresel yapıları tüketebilir ve apoptoz ile sonuçlanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0293",
+       "ses": "Bu, atrofideki ilkeye benzer: ölçülü yanıt hücreyi korur, aşırı ve uzamış yanıt ölüme sürükler.",
+       "ekran": "Bu, atrofideki ilkeye benzer: ölçülü yanıt hücreyi korur, aşırı ve uzamış yanıt ölüme sürükler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0294",
+       "ses": "Otofaji klinik olarak iskemik hasarda, bazı miyopatilerde, yani kas hastalıklarında, ve nörodejeneratif hastalıklarda artmış olabilir.",
+       "ekran": "Otofaji klinik olarak iskemik hasarda, bazı miyopatilerde, yani kas hastalıklarında, ve nörodejeneratif hastalıklarda artmış olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0295",
+       "ses": "Bu tabloların ortak noktası hücrenin uzun süren bir strese maruz kalmasıdır; otofaji bu durumlarda hem koruyucu hem de hasarı derinleştirici rol oynayabilir.",
+       "ekran": "Bu tabloların ortak noktası hücrenin uzun süren bir strese maruz kalmasıdır; otofaji bu durumlarda hem koruyucu hem de hasarı derinleştirici rol oynayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-03-b21",
+   "baslik": "Adaptasyon ile hücre ölümü arasındaki sınır",
+   "paragraflar": [
+    {
+     "id": "k1-03-p054",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-03-c0296",
+       "ses": "Dersin bütün adaptasyonları stresin şiddeti ve süresi üzerinden tek bir spektrumda birleşir.",
+       "ekran": "Dersin bütün adaptasyonları stresin şiddeti ve süresi üzerinden tek bir spektrumda birleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0297",
+       "ses": "Hafif ya da orta şiddette streste adaptasyon gelişir: hipertrofi, hiperplazi, atrofi, metaplazi.",
+       "ekran": "Hafif ya da orta şiddette streste adaptasyon gelişir: hipertrofi, hiperplazi, atrofi, metaplazi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0298",
+       "ses": "Şiddetli ya da kalıcı streste ise önce geri dönüşümlü, ardından geri dönüşümsüz hasar ortaya çıkar ve sonuç nekroz veya apoptozdur.",
+       "ekran": "Şiddetli ya da kalıcı streste ise önce geri dönüşümlü, ardından geri dönüşümsüz hasar ortaya çıkar ve sonuç nekroz veya apoptozdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0299",
+       "ses": "Hücre ölümünün iki yolu bunlardır; adaptasyon ise ölümden önce gelen, geri dönebilen yanıttır.",
+       "ekran": "Hücre ölümünün iki yolu bunlardır; adaptasyon ise ölümden önce gelen, geri dönebilen yanıttır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0300",
+       "ses": "Klinik yorum şudur: aynı etken, doza ve süreye bağlı olarak adaptasyondan ölüme giden bir spektrum oluşturur.",
+       "ekran": "Klinik yorum şudur: aynı etken, doza ve süreye bağlı olarak adaptasyondan ölüme giden bir spektrum oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0301",
+       "ses": "Örneğin basınç yükü kalpte önce hipertrofi, sınırlar aşılınca hasar yapar; azalan kan akımı hafifse atrofiye, şiddetliyse hücre ölümüne yol açar.",
+       "ekran": "Örneğin basınç yükü kalpte önce hipertrofi, sınırlar aşılınca hasar yapar; azalan kan akımı hafifse atrofiye, şiddetliyse hücre ölümüne yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-03-p055",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-03-c0302",
+       "ses": "Özetle, hücresel adaptasyonlar stres altında yeni bir denge durumu oluşturur ve 4 temel tipi hipertrofi, hiperplazi, atrofi ve metaplazidir.",
+       "ekran": "Özetle, hücresel adaptasyonlar stres altında yeni bir denge durumu oluşturur ve 4 temel tipi hipertrofi, hiperplazi, atrofi ve metaplazidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0303",
+       "ses": "Otofaji hem hayatta kalma hem de hücre ölümüyle ilişkili özel bir yanıttır.",
+       "ekran": "Otofaji hem hayatta kalma hem de hücre ölümüyle ilişkili özel bir yanıttır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-03-c0304",
+       "ses": "Adaptasyonların tanınması, hasarın geri dönüşebilir olup olmadığının anlaşılmasına yardım eder: dokuda adaptasyon görmek hücrelerin hâlâ canlı ve uyum kapasitesi içinde olduğunu gösterir.",
+       "ekran": "Adaptasyonların tanınması, hasarın geri dönüşebilir olup olmadığının anlaşılmasına yardım eder: dokuda adaptasyon görmek hücrelerin hâlâ canlı ve uyum kapasitesi içinde olduğunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2582 @@
+{
+ "surum": 2,
+ "ders_id": "k1-20",
+ "anahtar": "k1-20-tromboz-patofizyolojisi",
+ "baslik": "Tromboz Patofizyolojisi",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-20-b01",
+   "baslik": "Hemostaz ve tromboz: temel ayrım",
+   "paragraflar": [
+    {
+     "id": "k1-20-p001",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-20-c0001",
+       "ses": "Hemostaz, vasküler yaralanmadan sonra kanamayı sınırlamak için kan pıhtısı oluşturulmasıdır.",
+       "ekran": "Hemostaz, vasküler yaralanmadan sonra kanamayı sınırlamak için kan pıhtısı oluşturulmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0002",
+       "ses": "Burada tetikleyici, damar bütünlüğünün bozulmasıdır ve yanıt tamamen amaca yöneliktir.",
+       "ekran": "Burada tetikleyici, damar bütünlüğünün bozulmasıdır ve yanıt tamamen amaca yöneliktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0003",
+       "ses": "Tromboz ise patolojik süreçler sonucunda damarın içinde pıhtı, yani trombüs oluşmasıdır.",
+       "ekran": "Tromboz ise patolojik süreçler sonucunda damarın içinde pıhtı, yani trombüs oluşmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0004",
+       "ses": "Trombozda ortada kapatılması gereken bir kanama yoktur.",
+       "ekran": "Trombozda ortada kapatılması gereken bir kanama yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0005",
+       "ses": "Aradaki temel farkı tek cümleyle şöyle söyleyebiliriz: hemostaz yaralanmaya verilen fizyolojik yanıttır, tromboz ise uygunsuz veya aşırı hemostatik yanıttır.",
+       "ekran": "Aradaki temel farkı tek cümleyle şöyle söyleyebiliriz: hemostaz yaralanmaya verilen fizyolojik yanıttır, tromboz ise uygunsuz veya aşırı hemostatik yanıttır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0006",
+       "ses": "Dikkat edin, ikisi de aynı pıhtılaşma makinesini kullanır; fark, bu makinenin doğru yerde mi yoksa yanlış yerde ve yanlış zamanda mı çalıştığıdır.",
+       "ekran": "Dikkat edin, ikisi de aynı pıhtılaşma makinesini kullanır; fark, bu makinenin doğru yerde mi yoksa yanlış yerde ve yanlış zamanda mı çalıştığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0007",
+       "ses": "Tromboz yeni bir mekanizma değildir, hemostazın aynı bileşenlerinin uygunsuz aktivasyonudur.",
+       "ekran": "Tromboz yeni bir mekanizma değildir, hemostazın aynı bileşenlerinin uygunsuz aktivasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0008",
+       "ses": "Bu yüzden trombozu anlamak için önce normal hemostazı iyi bilmek gerekir.",
+       "ekran": "Bu yüzden trombozu anlamak için önce normal hemostazı iyi bilmek gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b02",
+   "baslik": "Hemostazın bileşenleri ve 4 basamağı",
+   "paragraflar": [
+    {
+     "id": "k1-20-p002",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-20-c0009",
+       "ses": "Normal hemostaz tek bir hücrenin ya da proteinin işi değildir; 3 ana bileşenin birlikte çalışmasıyla yürür.",
+       "ekran": "Normal hemostaz tek bir hücrenin ya da proteinin işi değildir; 3 ana bileşenin birlikte çalışmasıyla yürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0010",
+       "ses": "1.'si trombositlerdir; hasarlı yüzeye ilk ulaşan ve tıkaç oluşturan hücre parçacıklarıdır.",
+       "ekran": "1.'si trombositlerdir; hasarlı yüzeye ilk ulaşan ve tıkaç oluşturan hücre parçacıklarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0011",
+       "ses": "2.'si pıhtılaşma faktörleridir; koagülasyon kaskadını oluşturan ve sonunda fibrin üreten plazma proteinleridir.",
+       "ekran": "2.'si pıhtılaşma faktörleridir; koagülasyon kaskadını oluşturan ve sonunda fibrin üreten plazma proteinleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0012",
+       "ses": "3.'sü endotel hücreleridir; damarın iç yüzünü döşer ve hem pıhtılaşmayı başlatan hem de sınırlayan sinyaller üretir.",
+       "ekran": "3.'sü endotel hücreleridir; damarın iç yüzünü döşer ve hem pıhtılaşmayı başlatan hem de sınırlayan sinyaller üretir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p003",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-20-c0013",
+       "ses": "Bu bileşenler bir terazi gibi çalışır.",
+       "ekran": "Bu bileşenler bir terazi gibi çalışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0014",
+       "ses": "Bir kefede pıhtı oluşumunu destekleyen prokoagülan mekanizmalar, diğer kefede pıhtının gereksiz yere oluşmasını ya da yayılmasını engelleyen antikoagülan mekanizmalar vardır.",
+       "ekran": "Bir kefede pıhtı oluşumunu destekleyen prokoagülan mekanizmalar, diğer kefede pıhtının gereksiz yere oluşmasını ya da yayılmasını engelleyen antikoagülan mekanizmalar vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0015",
+       "ses": "Sağlıklı durumda bu iki kol dengededir.",
+       "ekran": "Sağlıklı durumda bu iki kol dengededir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0016",
+       "ses": "Denge prokoagülan tarafa kayarsa tromboz, antikoagülan tarafa kayarsa kanama eğilimi ortaya çıkar.",
+       "ekran": "Denge prokoagülan tarafa kayarsa tromboz, antikoagülan tarafa kayarsa kanama eğilimi ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0017",
+       "ses": "Endotel, her iki kefede de rol alan bileşendir.",
+       "ekran": "Endotel, her iki kefede de rol alan bileşendir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p004",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-20-c0018",
+       "ses": "Damar yaralandığında hemostaz birbirini izleyen 4 basamakla ilerler.",
+       "ekran": "Damar yaralandığında hemostaz birbirini izleyen 4 basamakla ilerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0019",
+       "ses": "Birinci basamak arteriyel vazokonstriksiyondur.",
+       "ekran": "Birinci basamak arteriyel vazokonstriksiyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0020",
+       "ses": "İkinci basamak primer hemostazdır; burada trombosit tıkacı oluşur.",
+       "ekran": "İkinci basamak primer hemostazdır; burada trombosit tıkacı oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0021",
+       "ses": "Üçüncü basamak sekonder hemostazdır; pıhtılaşma kaskadı devreye girer ve fibrin ağı trombosit tıkacını güçlendirir.",
+       "ekran": "Üçüncü basamak sekonder hemostazdır; pıhtılaşma kaskadı devreye girer ve fibrin ağı trombosit tıkacını güçlendirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0022",
+       "ses": "Dördüncü basamak pıhtı stabilizasyonu ve çözülmedir.",
+       "ekran": "Dördüncü basamak pıhtı stabilizasyonu ve çözülmedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0023",
+       "ses": "Burası önemli, bu sıra sınav spotudur: vazokonstriksiyon, sonra trombosit tıkacı, sonra fibrin, en sonda faktör XIII ile stabilizasyon.",
+       "ekran": "Burası önemli, bu sıra sınav spotudur: vazokonstriksiyon, sonra trombosit tıkacı, sonra fibrin, en sonda faktör XIII ile stabilizasyon.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0024",
+       "ses": "Kısaca primer hemostaz trombositlerle, sekonder hemostaz fibrinle ilgilidir.",
+       "ekran": "Kısaca primer hemostaz trombositlerle, sekonder hemostaz fibrinle ilgilidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b03",
+   "baslik": "Vazokonstriksiyon ve primer hemostaz",
+   "paragraflar": [
+    {
+     "id": "k1-20-p005",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-20-c0025",
+       "ses": "Travmatik damar yaralanmasının hemen ardından kısa süreli bir arteriyel daralma gelişir.",
+       "ekran": "Travmatik damar yaralanmasının hemen ardından kısa süreli bir arteriyel daralma gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0026",
+       "ses": "Bunun 2 mekanizması vardır.",
+       "ekran": "Bunun 2 mekanizması vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0027",
+       "ses": "1.'si nörojenik reflekslerdir; lokal sinirsel refleksler damar düz kasını kasar.",
+       "ekran": "1.'si nörojenik reflekslerdir; lokal sinirsel refleksler damar düz kasını kasar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0028",
+       "ses": "2.'si endotelden salınan endotelindir; endotelin güçlü bir vazokonstriktördür ve arteriyol düz kasına etki ederek lümeni daraltır.",
+       "ekran": "2.'si endotelden salınan endotelindir; endotelin güçlü bir vazokonstriktördür ve arteriyol düz kasına etki ederek lümeni daraltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0029",
+       "ses": "Bu daralma kan akışını yalnızca geçici olarak azaltır, ardından trombositlerin ve koagülasyon faktörlerinin aktivasyonu izler.",
+       "ekran": "Bu daralma kan akışını yalnızca geçici olarak azaltır, ardından trombositlerin ve koagülasyon faktörlerinin aktivasyonu izler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0030",
+       "ses": "Yani vazokonstriksiyon tek başına kanamayı kalıcı olarak durduramaz; zaman kazandıran bir yanıttır.",
+       "ekran": "Yani vazokonstriksiyon tek başına kanamayı kalıcı olarak durduramaz; zaman kazandıran bir yanıttır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p006",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-20-c0031",
+       "ses": "Endotel bütünlüğü bozulduğunda, normalde kanla temas etmeyen subendotelyal kollajen, yani hücre dışı matris, ve von Willebrand faktörü açığa çıkar.",
+       "ekran": "Endotel bütünlüğü bozulduğunda, normalde kanla temas etmeyen subendotelyal kollajen, yani hücre dışı matris, ve von Willebrand faktörü açığa çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0032",
+       "ses": "Trombositler von Willebrand faktörü aracılığıyla hasarlı yüzeye yapışır.",
+       "ekran": "Trombositler von Willebrand faktörü aracılığıyla hasarlı yüzeye yapışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0033",
+       "ses": "Ardından aktive olur, şekil değiştirir ve granül içeriklerini dışarı salar; bu içeriklerin en önemlileri adenozin difosfat ve tromboksan A2'dir.",
+       "ekran": "Ardından aktive olur, şekil değiştirir ve granül içeriklerini dışarı salar; bu içeriklerin en önemlileri adenozin difosfat ve tromboksan A2'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0034",
+       "ses": "Salınan adenozin difosfat ve tromboksan, yeni trombositleri bölgeye toplar.",
+       "ekran": "Salınan adenozin difosfat ve tromboksan, yeni trombositleri bölgeye toplar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0035",
+       "ses": "Fibrinojen ile trombosit reseptörü glikoprotein IIb/IIIa arasındaki köprüleme etkileşimleriyle ek trombosit agregasyonu olur ve primer hemostatik tıkaç oluşur.",
+       "ekran": "Fibrinojen ile trombosit reseptörü glikoprotein IIb/IIIa arasındaki köprüleme etkileşimleriyle ek trombosit agregasyonu olur ve primer hemostatik tıkaç oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0036",
+       "ses": "Bu tıkaç henüz gevşektir, çünkü fibrinle sağlamlaştırılmamıştır.",
+       "ekran": "Bu tıkaç henüz gevşektir, çünkü fibrinle sağlamlaştırılmamıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b04",
+   "baslik": "Sekonder hemostaz ve pıhtı stabilizasyonu",
+   "paragraflar": [
+    {
+     "id": "k1-20-p007",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-20-c0037",
+       "ses": "Vasküler yaralanma tromboplastini, yani doku faktörünü açığa çıkarır.",
+       "ekran": "Vasküler yaralanma tromboplastini, yani doku faktörünü açığa çıkarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0038",
+       "ses": "Doku faktörü faktör VII ile kompleks yapar ve koagülasyon kaskadını başlatır.",
+       "ekran": "Doku faktörü faktör VII ile kompleks yapar ve koagülasyon kaskadını başlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0039",
+       "ses": "Kaskadın sonunda trombin oluşur.",
+       "ekran": "Kaskadın sonunda trombin oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0040",
+       "ses": "Trombinin burada 2 etkisi vardır: fibrinojeni çözünmeyen fibrine çevirir ve trombositleri daha da aktive eder.",
+       "ekran": "Trombinin burada 2 etkisi vardır: fibrinojeni çözünmeyen fibrine çevirir ve trombositleri daha da aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0041",
+       "ses": "Fibrin ağı ile trombositler birleşince sağlamlaşmış pıhtı oluşur.",
+       "ekran": "Fibrin ağı ile trombositler birleşince sağlamlaşmış pıhtı oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0042",
+       "ses": "Fibrin polimerizasyonu trombositleri sekonder bir hemostatik tıkaç halinde çimentolar.",
+       "ekran": "Fibrin polimerizasyonu trombositleri sekonder bir hemostatik tıkaç halinde çimentolar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0043",
+       "ses": "Trombinin hem kaskadın ürünü hem de trombosit aktivatörü olması, primer ve sekonder hemostazı birbirine bağlar.",
+       "ekran": "Trombinin hem kaskadın ürünü hem de trombosit aktivatörü olması, primer ve sekonder hemostazı birbirine bağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p008",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-20-c0044",
+       "ses": "Son basamakta fibrin, faktör XIII tarafından kovalent bağlarla çapraz bağlanır ve pıhtı stabil hale gelir; bu basamak olmadan fibrin pıhtısı mekanik olarak zayıf kalır.",
+       "ekran": "Son basamakta fibrin, faktör XIII tarafından kovalent bağlarla çapraz bağlanır ve pıhtı stabil hale gelir; bu basamak olmadan fibrin pıhtısı mekanik olarak zayıf kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0045",
+       "ses": "Aynı anda trombosit agregatları kasılarak büzülür ve pıhtı daha yoğun bir kitleye dönüşür.",
+       "ekran": "Aynı anda trombosit agregatları kasılarak büzülür ve pıhtı daha yoğun bir kitleye dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0046",
+       "ses": "Stabil pıhtının içinde hapsolmuş eritrositler ve nötrofiller görülür.",
+       "ekran": "Stabil pıhtının içinde hapsolmuş eritrositler ve nötrofiller görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0047",
+       "ses": "Sonrasında endotel kaynaklı antikoagülan ve fibrinolitik mekanizmalar pıhtının yayılmasını sınırlar ve zamanla çözülmesini sağlar.",
+       "ekran": "Sonrasında endotel kaynaklı antikoagülan ve fibrinolitik mekanizmalar pıhtının yayılmasını sınırlar ve zamanla çözülmesini sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p009",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-20-c0048",
+       "ses": "Her basamağın başlatıcısını ürünüyle eşleştirebiliyorsanız bu bölüm tamamdır: endotelin daralma yapar, von Willebrand faktörü ve kollajen yapışmayı ve gevşek tıkacı sağlar, doku faktörü ile faktör VII trombini ve fibrin ağını oluşturur, faktör XIII ise fibrini çapraz bağlayarak stabil pıhtıyı kurar.",
+       "ekran": "Her basamağın başlatıcısını ürünüyle eşleştirebiliyorsanız bu bölüm tamamdır: endotelin daralma yapar, von Willebrand faktörü ve kollajen yapışmayı ve gevşek tıkacı sağlar, doku faktörü ile faktör VII trombini ve fibrin ağını oluşturur, faktör XIII ise fibrini çapraz bağlayarak stabil pıhtıyı kurar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b05",
+   "baslik": "Trombositlerin yapısı ve granülleri",
+   "paragraflar": [
+    {
+     "id": "k1-20-p010",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-20-c0049",
+       "ses": "Trombositler, megakaryositlerden köken alan çekirdeksiz hücre parçacıklarıdır.",
+       "ekran": "Trombositler, megakaryositlerden köken alan çekirdeksiz hücre parçacıklarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0050",
+       "ses": "Sitoplazmalarında 2 tip granül bulunur: alfa granüller ve yoğun, diğer adıyla delta granüller.",
+       "ekran": "Sitoplazmalarında 2 tip granül bulunur: alfa granüller ve yoğun, diğer adıyla delta granüller.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0051",
+       "ses": "Alfa granüllerin içeriği büyük ölçüde protein yapısındadır.",
+       "ekran": "Alfa granüllerin içeriği büyük ölçüde protein yapısındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0052",
+       "ses": "Pıhtılaşma ile ilgili proteinler olarak fibrinojen, faktör V ve von Willebrand faktörü; yapışma ve onarım proteinleri olarak fibronektin, trombosit kaynaklı büyüme faktörü ve TGF-β bulunur.",
+       "ekran": "Pıhtılaşma ile ilgili proteinler olarak fibrinojen, faktör V ve von Willebrand faktörü; yapışma ve onarım proteinleri olarak fibronektin, trombosit kaynaklı büyüme faktörü ve TGF-β bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0053",
+       "ses": "P-selektin ise alfa granülün içinde değil, zarında yer alır; granül salındığında trombosit yüzeyine taşınır.",
+       "ekran": "P-selektin ise alfa granülün içinde değil, zarında yer alır; granül salındığında trombosit yüzeyine taşınır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p011",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-20-c0054",
+       "ses": "Yoğun granüller ise küçük moleküllü mediyatörler taşır: adenozin difosfat, adenozin trifosfat, kalsiyum, serotonin ve epinefrin.",
+       "ekran": "Yoğun granüller ise küçük moleküllü mediyatörler taşır: adenozin difosfat, adenozin trifosfat, kalsiyum, serotonin ve epinefrin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0055",
+       "ses": "Adenozin difosfat salındığında diğer trombositleri aktive eder ve trombosit toplanmasının ana sinyallerinden biridir.",
+       "ekran": "Adenozin difosfat salındığında diğer trombositleri aktive eder ve trombosit toplanmasının ana sinyallerinden biridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0056",
+       "ses": "Kalsiyum pıhtılaşma reaksiyonları için gerekli iyondur ve aktivasyonda granülden salınır.",
+       "ekran": "Kalsiyum pıhtılaşma reaksiyonları için gerekli iyondur ve aktivasyonda granülden salınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0057",
+       "ses": "Serotonin vazoaktif bir amin, epinefrin ise bir katekolamindir.",
+       "ekran": "Serotonin vazoaktif bir amin, epinefrin ise bir katekolamindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0058",
+       "ses": "Burası önemli, sınavda granül içerikleri yer değiştirilerek çeldirici yapılır: alfa granül büyük proteinler ve zarında P-selektin, yoğun granül ise küçük moleküller.",
+       "ekran": "Burası önemli, sınavda granül içerikleri yer değiştirilerek çeldirici yapılır: alfa granül büyük proteinler ve zarında P-selektin, yoğun granül ise küçük moleküller.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0059",
+       "ses": "Trombosit aktivasyonu sonucunda kalsiyumun salınması da doğru bir ifadedir, çünkü kalsiyum yoğun granül içeriğidir.",
+       "ekran": "Trombosit aktivasyonu sonucunda kalsiyumun salınması da doğru bir ifadedir, çünkü kalsiyum yoğun granül içeriğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b06",
+   "baslik": "Trombosit yapışması ve yapışma bozuklukları",
+   "paragraflar": [
+    {
+     "id": "k1-20-p012",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-20-c0060",
+       "ses": "Trombositin hasarlı damar yüzeyine tutunması doğrudan değil, bir köprü molekül aracılığıyla olur.",
+       "ekran": "Trombositin hasarlı damar yüzeyine tutunması doğrudan değil, bir köprü molekül aracılığıyla olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0061",
+       "ses": "Subendotelyal kollajen von Willebrand faktörü ile kaplıdır.",
+       "ekran": "Subendotelyal kollajen von Willebrand faktörü ile kaplıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0062",
+       "ses": "Trombosit yüzeyindeki yapışma reseptörü glikoprotein Ib'dir.",
+       "ekran": "Trombosit yüzeyindeki yapışma reseptörü glikoprotein Ib'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0063",
+       "ses": "Von Willebrand faktörü, bu reseptör ile kollajen arasında köprü kurar.",
+       "ekran": "Von Willebrand faktörü, bu reseptör ile kollajen arasında köprü kurar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0064",
+       "ses": "Yani yapışma ekseni kollajen, von Willebrand faktörü ve glikoprotein Ib zinciridir; köprünün herhangi bir halkası eksikse trombosit hasarlı yüzeye tutunamaz.",
+       "ekran": "Yani yapışma ekseni kollajen, von Willebrand faktörü ve glikoprotein Ib zinciridir; köprünün herhangi bir halkası eksikse trombosit hasarlı yüzeye tutunamaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p013",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-20-c0065",
+       "ses": "Bu köprünün iki ucunu etkileyen 2 kalıtsal hastalık vardır.",
+       "ekran": "Bu köprünün iki ucunu etkileyen 2 kalıtsal hastalık vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0066",
+       "ses": "Von Willebrand faktörü eksikliğinde von Willebrand hastalığı gelişir; trombosit reseptörü sağlamdır ama bağlanacağı köprü yoktur.",
+       "ekran": "Von Willebrand faktörü eksikliğinde von Willebrand hastalığı gelişir; trombosit reseptörü sağlamdır ama bağlanacağı köprü yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0067",
+       "ses": "Glikoprotein Ib eksikliğinde ise Bernard-Soulier sendromu gelişir; köprü kollajen üzerinde hazırdır ama trombosit ona tutunamaz.",
+       "ekran": "Glikoprotein Ib eksikliğinde ise Bernard-Soulier sendromu gelişir; köprü kollajen üzerinde hazırdır ama trombosit ona tutunamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0068",
+       "ses": "Mekanizma farklı olsa da ikisinde de primer hemostaz bozulur ve tablo kanama diyatezi ile seyreder.",
+       "ekran": "Mekanizma farklı olsa da ikisinde de primer hemostaz bozulur ve tablo kanama diyatezi ile seyreder.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p014",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-20-c0069",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: von Willebrand faktörü eksikliği tromboz gelişiminde rol oynamaz, tam tersine kanamaya yol açar.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: von Willebrand faktörü eksikliği tromboz gelişiminde rol oynamaz, tam tersine kanamaya yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0070",
+       "ses": "Aynı sorularda staz, endotel zedelenmesi, hiperkoagülabilite ve hiperviskozite ise tromboz gelişimine katkıda bulunan durumlar olarak yer alır.",
+       "ekran": "Aynı sorularda staz, endotel zedelenmesi, hiperkoagülabilite ve hiperviskozite ise tromboz gelişimine katkıda bulunan durumlar olarak yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0071",
+       "ses": "Endotel hasarı sonucunda trombositlerin özellikle von Willebrand faktörüne bağlanması da hemostazdaki doğru trombosit fonksiyonlarındandır.",
+       "ekran": "Endotel hasarı sonucunda trombositlerin özellikle von Willebrand faktörüne bağlanması da hemostazdaki doğru trombosit fonksiyonlarındandır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b07",
+   "baslik": "Trombosit aktivasyonu ve tetikleyicileri",
+   "paragraflar": [
+    {
+     "id": "k1-20-p015",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-20-c0072",
+       "ses": "Yapışan trombosit pasif kalmaz.",
+       "ekran": "Yapışan trombosit pasif kalmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0073",
+       "ses": "Yapışmayı takiben trombositler küresel ve dikenli bir şekil alır, uzantılar sayesinde yüzey alanı artar ve daha çok trombosit ve faktörle temas mümkün olur.",
+       "ekran": "Yapışmayı takiben trombositler küresel ve dikenli bir şekil alır, uzantılar sayesinde yüzey alanı artar ve daha çok trombosit ve faktörle temas mümkün olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0074",
+       "ses": "Alfa ve yoğun granüller içeriklerini salar.",
+       "ekran": "Alfa ve yoğun granüller içeriklerini salar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0075",
+       "ses": "Aktivasyonun en önemli biyokimyasal sonucu yüzey fosfolipidlerindedir: negatif yüklü fosfatidilserin dışa döner ve bu negatif yüklü yüzey pıhtılaşma faktör kompleksleri için bir platform oluşturur.",
+       "ekran": "Aktivasyonun en önemli biyokimyasal sonucu yüzey fosfolipidlerindedir: negatif yüklü fosfatidilserin dışa döner ve bu negatif yüklü yüzey pıhtılaşma faktör kompleksleri için bir platform oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0076",
+       "ses": "Trombosit ile koagülasyon faktörlerini birbirine bağlayan halka işte bu fosfatidilserindir.",
+       "ekran": "Trombosit ile koagülasyon faktörlerini birbirine bağlayan halka işte bu fosfatidilserindir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p016",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-20-c0077",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: şekil değişiminin yönüne dikkat edin.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: şekil değişiminin yönüne dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0078",
+       "ses": "Trombosit düzgün yüzeyli diskten, çok sayıda uzun dikensi membran uzantısı olan küreye dönüşür.",
+       "ekran": "Trombosit düzgün yüzeyli diskten, çok sayıda uzun dikensi membran uzantısı olan küreye dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0079",
+       "ses": "Sınavda tersi, yani dikenli kürelerden düzgün yüzeyli disklere geçiş, trombosit fonksiyonu olmayan yanlış ifade olarak sorulmuştur.",
+       "ekran": "Sınavda tersi, yani dikenli kürelerden düzgün yüzeyli disklere geçiş, trombosit fonksiyonu olmayan yanlış ifade olarak sorulmuştur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p017",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-20-c0080",
+       "ses": "Trombosit aktivasyonunu başlatan ve büyüten 3 temel sinyal vardır.",
+       "ekran": "Trombosit aktivasyonunu başlatan ve büyüten 3 temel sinyal vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0081",
+       "ses": "1.'si trombindir; trombosit yüzeyindeki proteazla aktive olan reseptörleri, yani PAR reseptörlerini aktive eder.",
+       "ekran": "1.'si trombindir; trombosit yüzeyindeki proteazla aktive olan reseptörleri, yani PAR reseptörlerini aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0082",
+       "ses": "Trombin bir proteaz olduğu için reseptörünü keserek uyarır.",
+       "ekran": "Trombin bir proteaz olduğu için reseptörünü keserek uyarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0083",
+       "ses": "2.'si adenozin difosfattır; yoğun granüllerden salınır ve diğer trombositleri aktive eder.",
+       "ekran": "2.'si adenozin difosfattır; yoğun granüllerden salınır ve diğer trombositleri aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0084",
+       "ses": "Aktive olan yeni trombositler de adenozin difosfat salar ve böylece toplanma döngüsü kendini büyütür.",
+       "ekran": "Aktive olan yeni trombositler de adenozin difosfat salar ve böylece toplanma döngüsü kendini büyütür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0085",
+       "ses": "3.'sü tromboksan A2'dir; trombositlerde sentezlenir, yani depolanmış bir granül içeriği değildir, ve güçlü bir agregasyon ve vazokonstriksiyon mediyatörüdür.",
+       "ekran": "3.'sü tromboksan A2'dir; trombositlerde sentezlenir, yani depolanmış bir granül içeriği değildir, ve güçlü bir agregasyon ve vazokonstriksiyon mediyatörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0086",
+       "ses": "Dikkat edin, adenozin difosfat depolanmış, tromboksan ise aktivasyonda yeni sentezlenen mediyatördür.",
+       "ekran": "Dikkat edin, adenozin difosfat depolanmış, tromboksan ise aktivasyonda yeni sentezlenen mediyatördür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0087",
+       "ses": "Burası önemli, adenozin difosfat ve tromboksan A2 salınımı da çıkmış sorularda doğru trombosit fonksiyonu olarak yer almıştır.",
+       "ekran": "Burası önemli, adenozin difosfat ve tromboksan A2 salınımı da çıkmış sorularda doğru trombosit fonksiyonu olarak yer almıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b08",
+   "baslik": "Trombosit agregasyonu ve Glanzmann trombastenisi",
+   "paragraflar": [
+    {
+     "id": "k1-20-p018",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-20-c0088",
+       "ses": "Aktive trombositlerin birbirine bağlanması, yani agregasyon, yapışmadan farklı bir reseptör kullanır.",
+       "ekran": "Aktive trombositlerin birbirine bağlanması, yani agregasyon, yapışmadan farklı bir reseptör kullanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0089",
+       "ses": "Glikoprotein IIb/IIIa reseptörü aktivasyonla konformasyonunu değiştirir ve fibrinojeni bağlayabilir hale gelir.",
+       "ekran": "Glikoprotein IIb/IIIa reseptörü aktivasyonla konformasyonunu değiştirir ve fibrinojeni bağlayabilir hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0090",
+       "ses": "Şekilde bu konformasyon değişikliğini adenozin difosfatın yaptırdığı gösterilir.",
+       "ekran": "Şekilde bu konformasyon değişikliğini adenozin difosfatın yaptırdığı gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0091",
+       "ses": "Fibrinojen, farklı trombositler üzerindeki bu reseptörlere bağlanarak trombositler arasında köprü oluşturur.",
+       "ekran": "Fibrinojen, farklı trombositler üzerindeki bu reseptörlere bağlanarak trombositler arasında köprü oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0092",
+       "ses": "İlk agregasyon geri dönüşümlü olabilir; trombosit kümesi henüz dağılabilir.",
+       "ekran": "İlk agregasyon geri dönüşümlü olabilir; trombosit kümesi henüz dağılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0093",
+       "ses": "Trombin varlığında ise fibrin ağı oluşur ve trombositler arasında kalıcı bağlantı sağlanır.",
+       "ekran": "Trombin varlığında ise fibrin ağı oluşur ve trombositler arasında kalıcı bağlantı sağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0094",
+       "ses": "Trombositlerin fibrinojenle çapraz köprü kurup kümelenmesi de çıkmış sorularda doğru trombosit fonksiyonu olarak geçmiştir.",
+       "ekran": "Trombositlerin fibrinojenle çapraz köprü kurup kümelenmesi de çıkmış sorularda doğru trombosit fonksiyonu olarak geçmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p019",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-20-c0095",
+       "ses": "Trombosit yapışması ve agregasyonunu birleştiren şemada her halkadaki doğuştan eksiklik ayrı bir hastalığa karşılık gelir.",
+       "ekran": "Trombosit yapışması ve agregasyonunu birleştiren şemada her halkadaki doğuştan eksiklik ayrı bir hastalığa karşılık gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0096",
+       "ses": "Von Willebrand faktörü eksikliği von Willebrand hastalığına, glikoprotein Ib eksikliği Bernard-Soulier sendromuna, glikoprotein IIb/IIIa eksikliği ise Glanzmann trombastenisine yol açar.",
+       "ekran": "Von Willebrand faktörü eksikliği von Willebrand hastalığına, glikoprotein Ib eksikliği Bernard-Soulier sendromuna, glikoprotein IIb/IIIa eksikliği ise Glanzmann trombastenisine yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0097",
+       "ses": "Glanzmann trombastenisinde trombositler yapışabilir ama fibrinojenle birbirine bağlanamaz, agregasyon gerçekleşmez.",
+       "ekran": "Glanzmann trombastenisinde trombositler yapışabilir ama fibrinojenle birbirine bağlanamaz, agregasyon gerçekleşmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0098",
+       "ses": "Burası önemli, bu sık karıştırılan bir tuzaktır: Bernard-Soulier bir yapışma kusurudur, Glanzmann ise bir agregasyon kusurudur.",
+       "ekran": "Burası önemli, bu sık karıştırılan bir tuzaktır: Bernard-Soulier bir yapışma kusurudur, Glanzmann ise bir agregasyon kusurudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0099",
+       "ses": "Üç hastalığın üçü de kanama diyatezi yapar.",
+       "ekran": "Üç hastalığın üçü de kanama diyatezi yapar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b09",
+   "baslik": "Pıhtılaşma faktörleri ve kaskadın prensipleri",
+   "paragraflar": [
+    {
+     "id": "k1-20-p020",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-20-c0100",
+       "ses": "Pıhtılaşma faktörleri plazma proteinleridir ve çoğu karaciğerde sentezlenir.",
+       "ekran": "Pıhtılaşma faktörleri plazma proteinleridir ve çoğu karaciğerde sentezlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0101",
+       "ses": "Çoğu inaktif proenzim şeklinde dolaşır; yani ancak kesilip aktive edildiğinde işlev görür.",
+       "ekran": "Çoğu inaktif proenzim şeklinde dolaşır; yani ancak kesilip aktive edildiğinde işlev görür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0102",
+       "ses": "Faktörler basamaklı bir enzimatik reaksiyon zinciriyle, yani koagülasyon kaskadıyla, birbirini sırayla aktive eder.",
+       "ekran": "Faktörler basamaklı bir enzimatik reaksiyon zinciriyle, yani koagülasyon kaskadıyla, birbirini sırayla aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0103",
+       "ses": "Zincirin son ürünü, fibrinojenden oluşan fibrin monomerleri ve bunların polimerize olmasıyla ortaya çıkan fibrindir.",
+       "ekran": "Zincirin son ürünü, fibrinojenden oluşan fibrin monomerleri ve bunların polimerize olmasıyla ortaya çıkan fibrindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0104",
+       "ses": "Kaskad düzeninin avantajı, küçük bir başlangıç sinyalinin yaralanma bölgesinde büyük miktarda fibrine dönüşebilmesidir.",
+       "ekran": "Kaskad düzeninin avantajı, küçük bir başlangıç sinyalinin yaralanma bölgesinde büyük miktarda fibrine dönüşebilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p021",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-20-c0105",
+       "ses": "Kaskadın her basamağı aynı mantıkla kurulmuş küçük bir reaksiyon birimidir.",
+       "ekran": "Kaskadın her basamağı aynı mantıkla kurulmuş küçük bir reaksiyon birimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0106",
+       "ses": "Enzim, aktif faktördür ve bir sonraki faktörü keserek aktive eder.",
+       "ekran": "Enzim, aktif faktördür ve bir sonraki faktörü keserek aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0107",
+       "ses": "Substrat, inaktif faktördür ve enzim tarafından aktive edilecek moleküldür.",
+       "ekran": "Substrat, inaktif faktördür ve enzim tarafından aktive edilecek moleküldür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0108",
+       "ses": "Kofaktör ise hızlandırıcı bir proteindir; kendisi enzim değildir ama reaksiyonun hızını büyük ölçüde artırır.",
+       "ekran": "Kofaktör ise hızlandırıcı bir proteindir; kendisi enzim değildir ama reaksiyonun hızını büyük ölçüde artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0109",
+       "ses": "Bu reaksiyonlar trombosit yüzeyindeki negatif yüklü fosfolipidler üzerinde, yani aktivasyonda dışa dönen fosfatidilserinin oluşturduğu platformda gerçekleşir.",
+       "ekran": "Bu reaksiyonlar trombosit yüzeyindeki negatif yüklü fosfolipidler üzerinde, yani aktivasyonda dışa dönen fosfatidilserinin oluşturduğu platformda gerçekleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0110",
+       "ses": "Böylece reaksiyon hem hızlanır hem de yaralanma bölgesine sınırlı kalır.",
+       "ekran": "Böylece reaksiyon hem hızlanır hem de yaralanma bölgesine sınırlı kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0111",
+       "ses": "Kalsiyum, bileşenleri bu yüzeyde bir arada tutan iyondur.",
+       "ekran": "Kalsiyum, bileşenleri bu yüzeyde bir arada tutan iyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0112",
+       "ses": "Kalsiyum faktör II, VII, IX ve X'un gama karboksiglutamat bölgelerine bağlanır ve gerekli bir kofaktördür.",
+       "ekran": "Kalsiyum faktör II, VII, IX ve X'un gama karboksiglutamat bölgelerine bağlanır ve gerekli bir kofaktördür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0113",
+       "ses": "Bu 4 faktördeki gama karboksiglutamat bölgelerinin oluşumu K vitaminine bağımlıdır; faktör VIII bu grupta yer almaz.",
+       "ekran": "Bu 4 faktördeki gama karboksiglutamat bölgelerinin oluşumu K vitaminine bağımlıdır; faktör VIII bu grupta yer almaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p022",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-20-c0114",
+       "ses": "Trombosit yüzeyindeki ardışık aktivasyonu gösteren şemada ilk kompleks, negatif yüklü fosfolipid yüzeyde bir araya gelen 3 parçadan oluşur: proteaz olarak aktif faktör IX, substrat olarak faktör X ve reaksiyon hızlandırıcı olarak aktif faktör VIII.",
+       "ekran": "Trombosit yüzeyindeki ardışık aktivasyonu gösteren şemada ilk kompleks, negatif yüklü fosfolipid yüzeyde bir araya gelen 3 parçadan oluşur: proteaz olarak aktif faktör IX, substrat olarak faktör X ve reaksiyon hızlandırıcı olarak aktif faktör VIII.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0115",
+       "ses": "Kalsiyum iyonları bu bileşenleri bir arada tutar.",
+       "ekran": "Kalsiyum iyonları bu bileşenleri bir arada tutar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0116",
+       "ses": "Oluşan aktif faktör X, bu kez farklı bir kofaktör olan aktif faktör V varlığında, protrombini trombine, yani aktif faktör II'ye dönüştüren bir sonraki kompleksin proteazı olur.",
+       "ekran": "Oluşan aktif faktör X, bu kez farklı bir kofaktör olan aktif faktör V varlığında, protrombini trombine, yani aktif faktör II'ye dönüştüren bir sonraki kompleksin proteazı olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0117",
+       "ses": "Yani 2 önemli kofaktör vardır: faktör VIII, X'un aktivasyonunda; faktör V ise protrombinin aktivasyonunda.",
+       "ekran": "Yani 2 önemli kofaktör vardır: faktör VIII, X'un aktivasyonunda; faktör V ise protrombinin aktivasyonunda.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b10",
+   "baslik": "Laboratuvar testleri ve canlıda pıhtılaşma",
+   "paragraflar": [
+    {
+     "id": "k1-20-p023",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-20-c0118",
+       "ses": "Kaskadın klasik olarak ekstrinsik ve intrinsik yollara ayrılması, 2 temel laboratuvar testini anlamak için kullanılır.",
+       "ekran": "Kaskadın klasik olarak ekstrinsik ve intrinsik yollara ayrılması, 2 temel laboratuvar testini anlamak için kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0119",
+       "ses": "Protrombin zamanı, ekstrinsik yol ile ortak yolu değerlendirir; ölçtüğü faktörler faktör VII, X, V, II yani protrombin ve fibrinojendir.",
+       "ekran": "Protrombin zamanı, ekstrinsik yol ile ortak yolu değerlendirir; ölçtüğü faktörler faktör VII, X, V, II yani protrombin ve fibrinojendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0120",
+       "ses": "Aktive parsiyel tromboplastin zamanı ise intrinsik yol ile ortak yolu değerlendirir; faktör XII, XI, IX, VIII, X, V, II ve fibrinojeni kapsar.",
+       "ekran": "Aktive parsiyel tromboplastin zamanı ise intrinsik yol ile ortak yolu değerlendirir; faktör XII, XI, IX, VIII, X, V, II ve fibrinojeni kapsar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0121",
+       "ses": "Bu testler kanama bozukluklarında hangi faktörlerin etkilendiğini ayırt etmede kullanılır.",
+       "ekran": "Bu testler kanama bozukluklarında hangi faktörlerin etkilendiğini ayırt etmede kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0122",
+       "ses": "Burası önemli: yalnız protrombin zamanında yer alan faktör VIIdir; yalnız aktive parsiyel tromboplastin zamanında yer alanlar XII, XI, IX ve VIII'dir.",
+       "ekran": "Burası önemli: yalnız protrombin zamanında yer alan faktör VIIdir; yalnız aktive parsiyel tromboplastin zamanında yer alanlar XII, XI, IX ve VIII'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0123",
+       "ses": "İkisini birlikte uzatan bir kusur ortak yolu, yani faktör X, V, II ya da fibrinojeni düşündürür.",
+       "ekran": "İkisini birlikte uzatan bir kusur ortak yolu, yani faktör X, V, II ya da fibrinojeni düşündürür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p024",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-20-c0124",
+       "ses": "Bu ayrım, pıhtılaşmanın deney tüpünde nasıl başlatıldığından doğar.",
+       "ekran": "Bu ayrım, pıhtılaşmanın deney tüpünde nasıl başlatıldığından doğar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0125",
+       "ses": "İçsel yolda pıhtılaşma fosfolipidler, kalsiyum ve cam boncuklar gibi negatif yüklü bir madde eklenerek başlatılır; negatif yüklü yüzey faktör XII'yi aktive eder, ardından faktör XI, IX ve X sırayla aktive olur.",
+       "ekran": "İçsel yolda pıhtılaşma fosfolipidler, kalsiyum ve cam boncuklar gibi negatif yüklü bir madde eklenerek başlatılır; negatif yüklü yüzey faktör XII'yi aktive eder, ardından faktör XI, IX ve X sırayla aktive olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0126",
+       "ses": "Dışsal yolda ise bir doku faktörü kaynağı eklenir; doku faktörü faktör VII ile birleşerek faktör X'u aktive eder.",
+       "ekran": "Dışsal yolda ise bir doku faktörü kaynağı eklenir; doku faktörü faktör VII ile birleşerek faktör X'u aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0127",
+       "ses": "Her iki yolda da aktif faktör X, faktör V ile birlikte protrombini trombine çevirir, trombin de fibrinojeni fibrin pıhtısına dönüştürür.",
+       "ekran": "Her iki yolda da aktif faktör X, faktör V ile birlikte protrombini trombine çevirir, trombin de fibrinojeni fibrin pıhtısına dönüştürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0128",
+       "ses": "Şemada kırmızı polipeptitler inaktif faktörleri, koyu yeşiller aktif faktörleri, açık yeşiller ise kofaktörleri gösterir.",
+       "ekran": "Şemada kırmızı polipeptitler inaktif faktörleri, koyu yeşiller aktif faktörleri, açık yeşiller ise kofaktörleri gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p025",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-20-c0129",
+       "ses": "Ancak canlıda pıhtılaşma bu iki yolun ayrı ayrı çalışmasıyla olmaz.",
+       "ekran": "Ancak canlıda pıhtılaşma bu iki yolun ayrı ayrı çalışmasıyla olmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0130",
+       "ses": "Burası önemli, sınav spotudur: canlıda pıhtılaşmanın asıl başlatıcısı doku faktörü ile aktif faktör VII kompleksidir.",
+       "ekran": "Burası önemli, sınav spotudur: canlıda pıhtılaşmanın asıl başlatıcısı doku faktörü ile aktif faktör VII kompleksidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0131",
+       "ses": "Bu kompleks faktör IX ve X'u aktive eder; yani intrinsik yolun faktör IX'unu da doğrudan devreye sokar.",
+       "ekran": "Bu kompleks faktör IX ve X'u aktive eder; yani intrinsik yolun faktör IX'unu da doğrudan devreye sokar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0132",
+       "ses": "Trombin ise faktör XI'i aktive ederek geri besleme yoluyla kaskadı güçlendirir.",
+       "ekran": "Trombin ise faktör XI'i aktive ederek geri besleme yoluyla kaskadı güçlendirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0133",
+       "ses": "Dolayısıyla canlıda faktör XII başlatıcı değildir.",
+       "ekran": "Dolayısıyla canlıda faktör XII başlatıcı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0134",
+       "ses": "Doku faktörü, vasküler hasarla açığa çıkmasının yanı sıra hasarlı veya sağlam endotel hücrelerinde de eksprese edilebilir.",
+       "ekran": "Doku faktörü, vasküler hasarla açığa çıkmasının yanı sıra hasarlı veya sağlam endotel hücrelerinde de eksprese edilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b11",
+   "baslik": "Trombinin merkezî rolü",
+   "paragraflar": [
+    {
+     "id": "k1-20-p026",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-20-c0135",
+       "ses": "Kaskadın bütün yolları trombinde birleşir; bu nedenle trombin en kritik pıhtılaşma faktörüdür.",
+       "ekran": "Kaskadın bütün yolları trombinde birleşir; bu nedenle trombin en kritik pıhtılaşma faktörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0136",
+       "ses": "Burası önemli, trombinin görevleri sınav spotudur.",
+       "ekran": "Burası önemli, trombinin görevleri sınav spotudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0137",
+       "ses": "Trombin fibrinojeni fibrine çevirir.",
+       "ekran": "Trombin fibrinojeni fibrine çevirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0138",
+       "ses": "Fibrini stabilize eden faktör XIII'ü aktive eder.",
+       "ekran": "Fibrini stabilize eden faktör XIII'ü aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0139",
+       "ses": "Faktör V, VIII ve XI'i aktive ederek kaskadı güçlendirir; V ve VIII, az önce gördüğümüz 2 kompleksin kofaktörleridir, XI ise canlıdaki geri besleme döngüsünü kurar.",
+       "ekran": "Faktör V, VIII ve XI'i aktive ederek kaskadı güçlendirir; V ve VIII, az önce gördüğümüz 2 kompleksin kofaktörleridir, XI ise canlıdaki geri besleme döngüsünü kurar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0140",
+       "ses": "Ayrıca trombositleri PAR reseptörleri üzerinden güçlü şekilde aktive eder.",
+       "ekran": "Ayrıca trombositleri PAR reseptörleri üzerinden güçlü şekilde aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0141",
+       "ses": "Yani trombin hem pıhtının yapısal iskeletini kurar hem de kendi üretimini artıran pozitif bir geri besleme motorudur.",
+       "ekran": "Yani trombin hem pıhtının yapısal iskeletini kurar hem de kendi üretimini artıran pozitif bir geri besleme motorudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p027",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-20-c0142",
+       "ses": "Trombinin etkileri pıhtılaşmayla sınırlı değildir.",
+       "ekran": "Trombinin etkileri pıhtılaşmayla sınırlı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0143",
+       "ses": "Endotel hücrelerinde de PAR reseptörleri üzerinden enflamasyon ve onarım süreçlerini etkiler.",
+       "ekran": "Endotel hücrelerinde de PAR reseptörleri üzerinden enflamasyon ve onarım süreçlerini etkiler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0144",
+       "ses": "Trombosit üzerinde tromboksan salgılanmasını, agregasyonu ve degranülasyonu artırır.",
+       "ekran": "Trombosit üzerinde tromboksan salgılanmasını, agregasyonu ve degranülasyonu artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0145",
+       "ses": "Endotel, lökosit yapışma molekülleri üreterek yanıt verir.",
+       "ekran": "Endotel, lökosit yapışma molekülleri üreterek yanıt verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0146",
+       "ses": "Lökositlerin aktive endotele yapışması artar; nötrofil yapışması, monosit ve lenfosit aktivasyonu olur.",
+       "ekran": "Lökositlerin aktive endotele yapışması artar; nötrofil yapışması, monosit ve lenfosit aktivasyonu olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0147",
+       "ses": "Şemada trombosit kaynaklı büyüme faktörünün hücre dışı matris ve düz kas hücreleriyle ilişkisi de gösterilir.",
+       "ekran": "Şemada trombosit kaynaklı büyüme faktörünün hücre dışı matris ve düz kas hücreleriyle ilişkisi de gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0148",
+       "ses": "Trombinin bir de ters yönlü yüzü vardır.",
+       "ekran": "Trombinin bir de ters yönlü yüzü vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0149",
+       "ses": "Normal endotelde trombin, trombomodulin aracılığıyla antikoagülan yollara da katılır.",
+       "ekran": "Normal endotelde trombin, trombomodulin aracılığıyla antikoagülan yollara da katılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0150",
+       "ses": "Aynı molekül, bağlandığı yere göre zıt etkiler gösterir: hasar bölgesinde prokoagülan ve proenflamatuar, sağlam endotelde ise antikoagülan.",
+       "ekran": "Aynı molekül, bağlandığı yere göre zıt etkiler gösterir: hasar bölgesinde prokoagülan ve proenflamatuar, sağlam endotelde ise antikoagülan.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b12",
+   "baslik": "Pıhtılaşmayı sınırlayan mekanizmalar ve fibrinoliz",
+   "paragraflar": [
+    {
+     "id": "k1-20-p028",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-20-c0151",
+       "ses": "Kaskad kendini büyüten bir sistem olduğu için pıhtının yalnız yaralanma bölgesinde kalmasını sağlayan frenler zorunludur.",
+       "ekran": "Kaskad kendini büyüten bir sistem olduğu için pıhtının yalnız yaralanma bölgesinde kalmasını sağlayan frenler zorunludur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0152",
+       "ses": "1.'si seyreltmedir; akan kan aktif faktörleri yaralanma bölgesinden uzaklaştırır.",
+       "ekran": "1.'si seyreltmedir; akan kan aktif faktörleri yaralanma bölgesinden uzaklaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0153",
+       "ses": "2.'si fosfolipid bağımlılığıdır; kaskad reaksiyonları negatif yüklü fosfolipidlere bağımlıdır ve bu yüzey sadece aktive trombositler üzerinde bulunur.",
+       "ekran": "2.'si fosfolipid bağımlılığıdır; kaskad reaksiyonları negatif yüklü fosfolipidlere bağımlıdır ve bu yüzey sadece aktive trombositler üzerinde bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0154",
+       "ses": "3.'sü endotel kaynaklı antikoagülanlardır: trombomodulin ile protein C ve S sistemi, heparin benzeri moleküller ile antitrombin III, ve doku faktörü yolu inhibitörü.",
+       "ekran": "3.'sü endotel kaynaklı antikoagülanlardır: trombomodulin ile protein C ve S sistemi, heparin benzeri moleküller ile antitrombin III, ve doku faktörü yolu inhibitörü.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0155",
+       "ses": "4.'sü fibrinolitik sistemdir; plazmin fibrini yıkar.",
+       "ekran": "4.'sü fibrinolitik sistemdir; plazmin fibrini yıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p029",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-20-c0156",
+       "ses": "Fibrinolitik sistemin etkin enzimi plazmindir.",
+       "ekran": "Fibrinolitik sistemin etkin enzimi plazmindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0157",
+       "ses": "Plazmin fibrini ve fibrinojeni yıkar; bu sırada fibrin yıkım ürünleri ve D-dimer açığa çıkar.",
+       "ekran": "Plazmin fibrini ve fibrinojeni yıkar; bu sırada fibrin yıkım ürünleri ve D-dimer açığa çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0158",
+       "ses": "D-dimer çapraz bağlanmış fibrinin yıkımından kaynaklanır; bu nedenle varlığı, vücutta bir pıhtının oluşup yıkılmakta olduğunu gösterir.",
+       "ekran": "D-dimer çapraz bağlanmış fibrinin yıkımından kaynaklanır; bu nedenle varlığı, vücutta bir pıhtının oluşup yıkılmakta olduğunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0159",
+       "ses": "Plazmin, dolaşımdaki inaktif öncülü olan plazminojenden oluşur.",
+       "ekran": "Plazmin, dolaşımdaki inaktif öncülü olan plazminojenden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0160",
+       "ses": "Plazminojen, doku plazminojen aktivatörü ile aktive edilir.",
+       "ekran": "Plazminojen, doku plazminojen aktivatörü ile aktive edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0161",
+       "ses": "Doku plazminojen aktivatörü endotel kökenlidir ve fibrine bağlı olduğunda en aktiftir; bu özellik, plazminin pıhtının bulunduğu yerde üretilmesini sağlar.",
+       "ekran": "Doku plazminojen aktivatörü endotel kökenlidir ve fibrine bağlı olduğunda en aktiftir; bu özellik, plazminin pıhtının bulunduğu yerde üretilmesini sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0162",
+       "ses": "Klinikte doku plazminojen aktivatörü ve benzeri ajanlar, miyokard enfarktüsü ve inme gibi akut trombotik olaylarda kullanılır.",
+       "ekran": "Klinikte doku plazminojen aktivatörü ve benzeri ajanlar, miyokard enfarktüsü ve inme gibi akut trombotik olaylarda kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0163",
+       "ses": "İlk saatlerde verildiğinde etkili fibrinolitik tedavilerdir; pıhtı yaşlandıkça ve organize oldukça etkinlik azalır.",
+       "ekran": "İlk saatlerde verildiğinde etkili fibrinolitik tedavilerdir; pıhtı yaşlandıkça ve organize oldukça etkinlik azalır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p030",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-20-c0164",
+       "ses": "Fibrinolitik sistemin hızlandırıcıları ve frenleri birlikte çalışır.",
+       "ekran": "Fibrinolitik sistemin hızlandırıcıları ve frenleri birlikte çalışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0165",
+       "ses": "Dolaşımdaki plazminojen fibrin pıhtılarıyla birleşir ve konformasyon değişikliğine uğrar; bu değişiklik onu doku plazminojen aktivatörü ve ürokinaz tarafından aktive edilmeye duyarlı hale getirir.",
+       "ekran": "Dolaşımdaki plazminojen fibrin pıhtılarıyla birleşir ve konformasyon değişikliğine uğrar; bu değişiklik onu doku plazminojen aktivatörü ve ürokinaz tarafından aktive edilmeye duyarlı hale getirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0166",
+       "ses": "Aktif plazmin fibrini parçalar.",
+       "ekran": "Aktif plazmin fibrini parçalar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0167",
+       "ses": "Pıhtıdan ayrılan serbest plazmin, dolaşımdaki alfa-2 antiplazmin tarafından inaktive edilir.",
+       "ekran": "Pıhtıdan ayrılan serbest plazmin, dolaşımdaki alfa-2 antiplazmin tarafından inaktive edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0168",
+       "ses": "Endotel ise plazmin aktivitesinin negatif düzenleyicileri olan plazminojen aktivatör inhibitörlerinin de kaynağıdır.",
+       "ekran": "Endotel ise plazmin aktivitesinin negatif düzenleyicileri olan plazminojen aktivatör inhibitörlerinin de kaynağıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0169",
+       "ses": "Yani endotel fibrinolizi hem başlatır hem frenler.",
+       "ekran": "Yani endotel fibrinolizi hem başlatır hem frenler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p031",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-20-c0170",
+       "ses": "Burası önemli, bu konu çıkmış sorularda en sık sorulan bilgidir.",
+       "ekran": "Burası önemli, bu konu çıkmış sorularda en sık sorulan bilgidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0171",
+       "ses": "Fibrinolitik etkili olanlar plazmin, doku plazminojen aktivatörü, ürokinaz ve streptokinazdır.",
+       "ekran": "Fibrinolitik etkili olanlar plazmin, doku plazminojen aktivatörü, ürokinaz ve streptokinazdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0172",
+       "ses": "Doku faktörü yolu inhibitörü ise fibrinolitik değildir; doku faktörü ile aktif faktör VII kompleksini inhibe eden bir antikoagülandır.",
+       "ekran": "Doku faktörü yolu inhibitörü ise fibrinolitik değildir; doku faktörü ile aktif faktör VII kompleksini inhibe eden bir antikoagülandır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0173",
+       "ses": "Aynı şekilde protein C de fibrinolitik etkili değildir, o da bir antikoagülandır.",
+       "ekran": "Aynı şekilde protein C de fibrinolitik etkili değildir, o da bir antikoagülandır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0174",
+       "ses": "Antikoagülan pıhtının oluşmasını ve yayılmasını engeller, fibrinolitik ise oluşmuş fibrini yıkar; bu ikisini karıştırmayın.",
+       "ekran": "Antikoagülan pıhtının oluşmasını ve yayılmasını engeller, fibrinolitik ise oluşmuş fibrini yıkar; bu ikisini karıştırmayın.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b13",
+   "baslik": "Endotelin antitrombotik özellikleri",
+   "paragraflar": [
+    {
+     "id": "k1-20-p032",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-20-c0175",
+       "ses": "Sağlam endotel, kanın akışkan kalmasını sağlayan aktif bir yüzeydir ve 3 düzeyde koruma yapar.",
+       "ekran": "Sağlam endotel, kanın akışkan kalmasını sağlayan aktif bir yüzeydir ve 3 düzeyde koruma yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0176",
+       "ses": "İlk grup etkiler trombositlere yöneliktir.",
+       "ekran": "İlk grup etkiler trombositlere yöneliktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0177",
+       "ses": "Prostasiklin, nitrik oksit ve adenozin difosfataz trombosit agregasyonunu azaltır ve vazodilatasyonu artırır.",
+       "ekran": "Prostasiklin, nitrik oksit ve adenozin difosfataz trombosit agregasyonunu azaltır ve vazodilatasyonu artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0178",
+       "ses": "Adenozin difosfataz, trombositlerin toplanma döngüsünü sürdüren adenozin difosfatı yıkar.",
+       "ekran": "Adenozin difosfataz, trombositlerin toplanma döngüsünü sürdüren adenozin difosfatı yıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0179",
+       "ses": "Bu moleküller, trombositin ürettiği tromboksan ve adenozin difosfatın tam karşıtı yönde çalışır.",
+       "ekran": "Bu moleküller, trombositin ürettiği tromboksan ve adenozin difosfatın tam karşıtı yönde çalışır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p033",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-20-c0180",
+       "ses": "İkinci grup antikoagülan etkilerdir.",
+       "ekran": "İkinci grup antikoagülan etkilerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0181",
+       "ses": "Trombomodulin endotel yüzeyinde trombini bağlar; trombomoduline bağlanan trombin artık fibrinojeni fibrine çevirmek yerine protein C'yi aktive eder.",
+       "ekran": "Trombomodulin endotel yüzeyinde trombini bağlar; trombomoduline bağlanan trombin artık fibrinojeni fibrine çevirmek yerine protein C'yi aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0182",
+       "ses": "Endotel protein C reseptörü de protein C'yi endotel yüzeyinde bağlayarak bu aktivasyona katkı verir.",
+       "ekran": "Endotel protein C reseptörü de protein C'yi endotel yüzeyinde bağlayarak bu aktivasyona katkı verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0183",
+       "ses": "Aktif protein C, kofaktörü protein S ile birlikte çalışır ve faktör V ile VIII'in aktif formlarını inhibe eder.",
+       "ekran": "Aktif protein C, kofaktörü protein S ile birlikte çalışır ve faktör V ile VIII'in aktif formlarını inhibe eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0184",
+       "ses": "Kofaktörler yıkılınca faktör X ve protrombin aktivasyon kompleksleri yavaşlar ve trombin üretimi azalır.",
+       "ekran": "Kofaktörler yıkılınca faktör X ve protrombin aktivasyon kompleksleri yavaşlar ve trombin üretimi azalır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p034",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-20-c0185",
+       "ses": "Aynı grupta heparin benzeri moleküller yer alır; endotel yüzeyindeki bu moleküller antitrombin III'ü aktive eder, aktive antitrombin de trombini ve diğer pıhtılaşma faktörlerini inaktive eder.",
+       "ekran": "Aynı grupta heparin benzeri moleküller yer alır; endotel yüzeyindeki bu moleküller antitrombin III'ü aktive eder, aktive antitrombin de trombini ve diğer pıhtılaşma faktörlerini inaktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0186",
+       "ses": "Doku faktörü yolu inhibitörü ise doku faktörü ile aktif faktör VII kompleksini inhibe eder, yani kaskadı tam başlangıç noktasında frenler.",
+       "ekran": "Doku faktörü yolu inhibitörü ise doku faktörü ile aktif faktör VII kompleksini inhibe eder, yani kaskadı tam başlangıç noktasında frenler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0187",
+       "ses": "Üçüncü grup fibrinolitik etkidir: endotel doku plazminojen aktivatörü üretir.",
+       "ekran": "Üçüncü grup fibrinolitik etkidir: endotel doku plazminojen aktivatörü üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0188",
+       "ses": "Burası önemli, doğal antikoagülanlar sınav spotudur: protein C ve S, V ve VIII'i; antitrombin III, heparin benzeri moleküllerle aktive olarak trombini; doku faktörü yolu inhibitörü ise doku faktörü ile VII kompleksini hedefler.",
+       "ekran": "Burası önemli, doğal antikoagülanlar sınav spotudur: protein C ve S, V ve VIII'i; antitrombin III, heparin benzeri moleküllerle aktive olarak trombini; doku faktörü yolu inhibitörü ise doku faktörü ile VII kompleksini hedefler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b14",
+   "baslik": "Tromboz tanımı ve Virchow üçlüsü",
+   "paragraflar": [
+    {
+     "id": "k1-20-p035",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-20-c0189",
+       "ses": "Tromboz, canlı bir organizmada damar içinde pıhtı, yani trombüs oluşmasıdır.",
+       "ekran": "Tromboz, canlı bir organizmada damar içinde pıhtı, yani trombüs oluşmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0190",
+       "ses": "Tanımdaki canlı vurgusu, ölüm sonrasında damarda oluşan pıhtıları trombozdan ayırır.",
+       "ekran": "Tanımdaki canlı vurgusu, ölüm sonrasında damarda oluşan pıhtıları trombozdan ayırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0191",
+       "ses": "Tromboz, normal hemostaz mekanizmalarının uygunsuz aktivasyonu ile ortaya çıkar ve kardiyovasküler ölümlerin büyük kısmının patolojik temelini oluşturur.",
+       "ekran": "Tromboz, normal hemostaz mekanizmalarının uygunsuz aktivasyonu ile ortaya çıkar ve kardiyovasküler ölümlerin büyük kısmının patolojik temelini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0192",
+       "ses": "Tromboza yol açan 3 ana patolojik mekanizma Virchow üçlüsü olarak bilinir: endotel hasarı veya disfonksiyonu, staz ya da türbülans biçimindeki anormal kan akımı ve kanın pıhtılaşmaya artmış eğilimi demek olan hiperkoagülabilite.",
+       "ekran": "Tromboza yol açan 3 ana patolojik mekanizma Virchow üçlüsü olarak bilinir: endotel hasarı veya disfonksiyonu, staz ya da türbülans biçimindeki anormal kan akımı ve kanın pıhtılaşmaya artmış eğilimi demek olan hiperkoagülabilite.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0193",
+       "ses": "Bu üçlüyü gösteren şemada 3 bileşen bir üçgenin köşelerinde, tromboz ise ortadadır.",
+       "ekran": "Bu üçlüyü gösteren şemada 3 bileşen bir üçgenin köşelerinde, tromboz ise ortadadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0194",
+       "ses": "Şemadan çıkan en önemli mesaj, endotel bütünlüğünün en önemli faktör olmasıdır.",
+       "ekran": "Şemadan çıkan en önemli mesaj, endotel bütünlüğünün en önemli faktör olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0195",
+       "ses": "Pıhtılaşmayı hızlandıran veya engelleyen maddelerdeki anormallikler dengeyi tromboz lehine çevirebilir.",
+       "ekran": "Pıhtılaşmayı hızlandıran veya engelleyen maddelerdeki anormallikler dengeyi tromboz lehine çevirebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0196",
+       "ses": "Anormal kan akışı da doğrudan ve dolaylı olarak, endotel disfonksiyonu yoluyla, hiperkoagülasyona yol açabilir; yani köşeler birbirini besler.",
+       "ekran": "Anormal kan akışı da doğrudan ve dolaylı olarak, endotel disfonksiyonu yoluyla, hiperkoagülasyona yol açabilir; yani köşeler birbirini besler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p036",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-20-c0197",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: alt ekstremite derin ven trombozunda klasik Virchow üçlüsünün 3 bileşeni endotel hasarı, venöz staz ve hiperkoagülabilitedir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: alt ekstremite derin ven trombozunda klasik Virchow üçlüsünün 3 bileşeni endotel hasarı, venöz staz ve hiperkoagülabilitedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0198",
+       "ses": "Dikkat edin, Virchow üçlüsünde trombosit ya da von Willebrand faktörü eksikliği yer almaz, çünkü bu eksiklikler kanama yapar.",
+       "ekran": "Dikkat edin, Virchow üçlüsünde trombosit ya da von Willebrand faktörü eksikliği yer almaz, çünkü bu eksiklikler kanama yapar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b15",
+   "baslik": "Endotel hasarı ve endotel aktivasyonu",
+   "paragraflar": [
+    {
+     "id": "k1-20-p037",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-20-c0199",
+       "ses": "Endotel 2 farklı biçimde protrombotik hale gelebilir: fiziksel olarak zedelenerek ya da bütünlüğü korunduğu halde işlevi bozularak.",
+       "ekran": "Endotel 2 farklı biçimde protrombotik hale gelebilir: fiziksel olarak zedelenerek ya da bütünlüğü korunduğu halde işlevi bozularak.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0200",
+       "ses": "Endotel zedelenmesi subendotelyal hücre dışı matrisi ve doku faktörünü açığa çıkarır; böylece trombosit yapışmasını ve pıhtılaşma aktivasyonunu tetikler.",
+       "ekran": "Endotel zedelenmesi subendotelyal hücre dışı matrisi ve doku faktörünü açığa çıkarır; böylece trombosit yapışmasını ve pıhtılaşma aktivasyonunu tetikler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0201",
+       "ses": "Endotel hasarı özellikle kalpte ve arteriyel dolaşımda önemlidir; yüksek akım hızlarında pıhtı oluşması için ön koşuldur, çünkü hızlı akan kanda pıhtı ancak hasarlı bir yüzeye tutunarak oluşabilir.",
+       "ekran": "Endotel hasarı özellikle kalpte ve arteriyel dolaşımda önemlidir; yüksek akım hızlarında pıhtı oluşması için ön koşuldur, çünkü hızlı akan kanda pıhtı ancak hasarlı bir yüzeye tutunarak oluşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0202",
+       "ses": "Endotel aktivasyonu ya da disfonksiyonunun nedenleri aterosklerotik plaklar, hipertansiyon, hiperkolesterolemi, sigara, enfeksiyonlar ve enflamatuar sitokinlerdir.",
+       "ekran": "Endotel aktivasyonu ya da disfonksiyonunun nedenleri aterosklerotik plaklar, hipertansiyon, hiperkolesterolemi, sigara, enfeksiyonlar ve enflamatuar sitokinlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0203",
+       "ses": "Disfonksiyonda endotel fiziksel olarak sağlam görünebilir; ancak antitrombotik ürünleri azalmış, protrombotik ürünleri artmıştır.",
+       "ekran": "Disfonksiyonda endotel fiziksel olarak sağlam görünebilir; ancak antitrombotik ürünleri azalmış, protrombotik ürünleri artmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p038",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-20-c0204",
+       "ses": "Aktive endotelin protrombotik etkileri 3 eksende toplanır.",
+       "ekran": "Aktive endotelin protrombotik etkileri 3 eksende toplanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0205",
+       "ses": "Pıhtılaşma inhibitörleri olan trombomodulin, protein C reseptörü ve doku faktörü yolu inhibitörü azalır.",
+       "ekran": "Pıhtılaşma inhibitörleri olan trombomodulin, protein C reseptörü ve doku faktörü yolu inhibitörü azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0206",
+       "ses": "Pıhtılaşmayı artıran doku faktörü artar.",
+       "ekran": "Pıhtılaşmayı artıran doku faktörü artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0207",
+       "ses": "Plazminojen aktivatör inhibitörleri arttığı için fibrinoliz azalır.",
+       "ekran": "Plazminojen aktivatör inhibitörleri arttığı için fibrinoliz azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0208",
+       "ses": "Net etki protrombotik bir yüzeydir ve tromboz riski artar.",
+       "ekran": "Net etki protrombotik bir yüzeydir ve tromboz riski artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0209",
+       "ses": "Yani normal endotel antitrombotik, aktive endotel protrombotik yüzlüdür; sınavda hangi molekülün hangi tarafta olduğu sorulur.",
+       "ekran": "Yani normal endotel antitrombotik, aktive endotel protrombotik yüzlüdür; sınavda hangi molekülün hangi tarafta olduğu sorulur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b16",
+   "baslik": "Anormal kan akımı: türbülans ve staz",
+   "paragraflar": [
+    {
+     "id": "k1-20-p039",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-20-c0210",
+       "ses": "Normal laminer akımda kan hücreleri lümenin merkezinde akar ve hücrelerle endotel arasında ince bir plazma tabakası bulunur; trombositler endotelle doğrudan temas etmez.",
+       "ekran": "Normal laminer akımda kan hücreleri lümenin merkezinde akar ve hücrelerle endotel arasında ince bir plazma tabakası bulunur; trombositler endotelle doğrudan temas etmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0211",
+       "ses": "Türbülans, yani girdaplı akım, ve staz, yani durgunluk, bu düzeni bozar.",
+       "ekran": "Türbülans, yani girdaplı akım, ve staz, yani durgunluk, bu düzeni bozar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0212",
+       "ses": "Türbülans ve staz endotel hasarını ve aktivasyonunu teşvik eder, trombosit ve lökositlerin endotelle temasını artırır ve pıhtılaşma faktörlerinin yıkanmasını azaltır.",
+       "ekran": "Türbülans ve staz endotel hasarını ve aktivasyonunu teşvik eder, trombosit ve lökositlerin endotelle temasını artırır ve pıhtılaşma faktörlerinin yıkanmasını azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0213",
+       "ses": "Bu son etki, daha önce gördüğümüz seyreltme frenini devre dışı bırakır; akan kan aktif faktörleri uzaklaştıramadığında kaskad yerel olarak büyür.",
+       "ekran": "Bu son etki, daha önce gördüğümüz seyreltme frenini devre dışı bırakır; akan kan aktif faktörleri uzaklaştıramadığında kaskad yerel olarak büyür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p040",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-20-c0214",
+       "ses": "Türbülansa yol açan durumlar ülserleşmiş aterosklerotik plaklar, aort ve büyük arterlerin anevrizmaları ve mitral stenoz gibi kapak hastalıklarıdır.",
+       "ekran": "Türbülansa yol açan durumlar ülserleşmiş aterosklerotik plaklar, aort ve büyük arterlerin anevrizmaları ve mitral stenoz gibi kapak hastalıklarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0215",
+       "ses": "Staza yol açan durumlar ise uzun süreli immobilizasyon ve yatak istirahati, kalp yetmezliği, varisli venler ve atriyal fibrilasyondur.",
+       "ekran": "Staza yol açan durumlar ise uzun süreli immobilizasyon ve yatak istirahati, kalp yetmezliği, varisli venler ve atriyal fibrilasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0216",
+       "ses": "Atriyal fibrilasyon, kulakçıkların hızlı ve düzensiz kasılmasıyla ortaya çıkan bir ritim bozukluğudur; kulakçık etkili kasılamadığı için kan özellikle sol atriyumda durgunlaşır ve staz zemininde trombüs oluşabilir.",
+       "ekran": "Atriyal fibrilasyon, kulakçıkların hızlı ve düzensiz kasılmasıyla ortaya çıkan bir ritim bozukluğudur; kulakçık etkili kasılamadığı için kan özellikle sol atriyumda durgunlaşır ve staz zemininde trombüs oluşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0217",
+       "ses": "Kısaca türbülans daha çok arter ve kapak düzeyinde, staz ise venlerde ve kalp odacıklarında belirgindir.",
+       "ekran": "Kısaca türbülans daha çok arter ve kapak düzeyinde, staz ise venlerde ve kalp odacıklarında belirgindir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b17",
+   "baslik": "Hiperkoagülabilite ve kalıtsal nedenler",
+   "paragraflar": [
+    {
+     "id": "k1-20-p041",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-20-c0218",
+       "ses": "Hiperkoagülabilite, kanın pıhtı oluşturma eğiliminin normalden fazla olmasıdır ve özellikle venöz tromboz için güçlü bir risk faktörüdür.",
+       "ekran": "Hiperkoagülabilite, kanın pıhtı oluşturma eğiliminin normalden fazla olmasıdır ve özellikle venöz tromboz için güçlü bir risk faktörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0219",
+       "ses": "Primer yani kalıtsal ve sekonder yani edinilmiş olarak ikiye ayrılır.",
+       "ekran": "Primer yani kalıtsal ve sekonder yani edinilmiş olarak ikiye ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0220",
+       "ses": "Kalıtsal hiperkoagülabilite sıklığa göre 3 gruba ayrılır.",
+       "ekran": "Kalıtsal hiperkoagülabilite sıklığa göre 3 gruba ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0221",
+       "ses": "Toplumun %1'inden fazlasında görülen sık nedenler faktör V mutasyonu yani faktör V Leiden, protrombin geninin G20210A varyantı ve faktör VIII, IX, XI ya da fibrinojen düzeylerinde artıştır.",
+       "ekran": "Toplumun %1'inden fazlasında görülen sık nedenler faktör V mutasyonu yani faktör V Leiden, protrombin geninin G20210A varyantı ve faktör VIII, IX, XI ya da fibrinojen düzeylerinde artıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0222",
+       "ses": "Nadir nedenler antitrombin, protein C ve protein S eksikliğidir.",
+       "ekran": "Nadir nedenler antitrombin, protein C ve protein S eksikliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0223",
+       "ses": "Çok nadir nedenler ise fibrinoliz defektleri ve homozigot homosistinüridir.",
+       "ekran": "Çok nadir nedenler ise fibrinoliz defektleri ve homozigot homosistinüridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p042",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-20-c0224",
+       "ses": "Faktör V Leiden en sık kalıtsal nedendir.",
+       "ekran": "Faktör V Leiden en sık kalıtsal nedendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0225",
+       "ses": "Mutasyonda faktör V'in 506. pozisyonundaki arjinin glutamine dönüşür ve faktör V protein C'ye dirençli hale gelir.",
+       "ekran": "Mutasyonda faktör V'in 506. pozisyonundaki arjinin glutamine dönüşür ve faktör V protein C'ye dirençli hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0226",
+       "ses": "Normalde aktif protein C, protein S ile birlikte faktör V'i inaktive ederek trombin üretimini frenler; mutasyonda bu fren çalışmaz.",
+       "ekran": "Normalde aktif protein C, protein S ile birlikte faktör V'i inaktive ederek trombin üretimini frenler; mutasyonda bu fren çalışmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0227",
+       "ses": "Yani değişen faktör V'in miktarı değil, protein C'ye duyarlılığıdır.",
+       "ekran": "Yani değişen faktör V'in miktarı değil, protein C'ye duyarlılığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0228",
+       "ses": "Burası önemli, risk katları sınav spotudur: heterozigotlarda venöz tromboz riski 3 ila 4 kat, homozigotlarda ise 25 ila 50 kat artar.",
+       "ekran": "Burası önemli, risk katları sınav spotudur: heterozigotlarda venöz tromboz riski 3 ila 4 kat, homozigotlarda ise 25 ila 50 kat artar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p043",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-20-c0229",
+       "ses": "Protrombin gen mutasyonu ise genin 3' ucundaki çevrilmeyen bölgede tek nükleotid değişimidir; proteinin kodlanan kısmında değildir.",
+       "ekran": "Protrombin gen mutasyonu ise genin 3' ucundaki çevrilmeyen bölgede tek nükleotid değişimidir; proteinin kodlanan kısmında değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0230",
+       "ses": "Protein yapısı normaldir ama protrombin düzeyi artar ve venöz tromboz riski yaklaşık 3 kat yükselir.",
+       "ekran": "Protein yapısı normaldir ama protrombin düzeyi artar ve venöz tromboz riski yaklaşık 3 kat yükselir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0231",
+       "ses": "Yani faktör V Leiden bir işlev, protrombin mutasyonu ise bir miktar değişikliğidir.",
+       "ekran": "Yani faktör V Leiden bir işlev, protrombin mutasyonu ise bir miktar değişikliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p044",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-20-c0232",
+       "ses": "Diğer kalıtsal nedenler antitrombin III, protein C ve protein S eksiklikleri ile sistatyonin beta sentaz eksikliğine bağlı homosistein yüksekliğidir.",
+       "ekran": "Diğer kalıtsal nedenler antitrombin III, protein C ve protein S eksiklikleri ile sistatyonin beta sentaz eksikliğine bağlı homosistein yüksekliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0233",
+       "ses": "Antitrombin üç eksikliğinde trombin frenlenemez; protein C eksikliğinde faktör V ve VIII'in aktif formları inaktive edilemez; protein S eksikliğinde aktif protein C kofaktöründen yoksun kalır.",
+       "ekran": "Antitrombin üç eksikliğinde trombin frenlenemez; protein C eksikliğinde faktör V ve VIII'in aktif formları inaktive edilemez; protein S eksikliğinde aktif protein C kofaktöründen yoksun kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0234",
+       "ses": "Bu hastalar genelde ergenlik veya erken erişkinlik döneminde tekrarlayan venöz tromboz ve tromboemboli ile başvurur.",
+       "ekran": "Bu hastalar genelde ergenlik veya erken erişkinlik döneminde tekrarlayan venöz tromboz ve tromboemboli ile başvurur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p045",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-20-c0235",
+       "ses": "Klinik pratikte faktör V Leiden ve protrombin mutasyonu heterozigotlarda riski hafifçe artırır; homozigotlarda veya 2 farklı mutasyonu birlikte taşıyan kombine heterozigotlarda ise ciddi artış vardır.",
+       "ekran": "Klinik pratikte faktör V Leiden ve protrombin mutasyonu heterozigotlarda riski hafifçe artırır; homozigotlarda veya 2 farklı mutasyonu birlikte taşıyan kombine heterozigotlarda ise ciddi artış vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0236",
+       "ses": "Kalıtsal yatkınlık çoğu kez gebelik, doğum sonrası dönem, uzun uçuşlar, immobilizasyon, cerrahi veya travma gibi ek bir tetikleyiciyle birleşince tromboza dönüşür.",
+       "ekran": "Kalıtsal yatkınlık çoğu kez gebelik, doğum sonrası dönem, uzun uçuşlar, immobilizasyon, cerrahi veya travma gibi ek bir tetikleyiciyle birleşince tromboza dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0237",
+       "ses": "Genetik test özellikle 50 yaşın altında derin ven trombozu, güçlü aile öyküsü ve belirgin edinilmiş risk faktörünün yokluğunda düşünülür.",
+       "ekran": "Genetik test özellikle 50 yaşın altında derin ven trombozu, güçlü aile öyküsü ve belirgin edinilmiş risk faktörünün yokluğunda düşünülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b18",
+   "baslik": "Edinilmiş hiperkoagülabilite",
+   "paragraflar": [
+    {
+     "id": "k1-20-p046",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-20-c0238",
+       "ses": "Edinilmiş hiperkoagülabilite durumları risk düzeyine göre 2 gruba ayrılır.",
+       "ekran": "Edinilmiş hiperkoagülabilite durumları risk düzeyine göre 2 gruba ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0239",
+       "ses": "Tromboz için yüksek riskli durumlar şunlardır: uzamış yatak istirahati veya immobilizasyon, miyokard enfarktüsü, atriyal fibrilasyon, cerrahi, kırık ve yanık gibi doku hasarı, kanser, prostetik kalp kapakları, yaygın damar içi pıhtılaşma, heparine bağlı trombositopeni ve antifosfolipid antikor sendromu.",
+       "ekran": "Tromboz için yüksek riskli durumlar şunlardır: uzamış yatak istirahati veya immobilizasyon, miyokard enfarktüsü, atriyal fibrilasyon, cerrahi, kırık ve yanık gibi doku hasarı, kanser, prostetik kalp kapakları, yaygın damar içi pıhtılaşma, heparine bağlı trombositopeni ve antifosfolipid antikor sendromu.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p047",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-20-c0240",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: uzamış yatak istirahati tromboz için yüksek risk grubundadır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: uzamış yatak istirahati tromboz için yüksek risk grubundadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0241",
+       "ses": "Aynı soruda çeldirici olarak verilen von Willebrand hastalığı, hemofili A, düzenli düşük doz aspirin kullanımı ve K vitamini eksikliği ise tromboz için risk grubu değildir.",
+       "ekran": "Aynı soruda çeldirici olarak verilen von Willebrand hastalığı, hemofili A, düzenli düşük doz aspirin kullanımı ve K vitamini eksikliği ise tromboz için risk grubu değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0242",
+       "ses": "Tromboz için artmış riskli durumlar ise kardiyomiyopati, nefrotik sendrom, gebelik ve doğum sonrası dönem gibi hiperöstrojenik durumlar, oral kontraseptif kullanımı, orak hücreli anemi ve sigara içimidir.",
+       "ekran": "Tromboz için artmış riskli durumlar ise kardiyomiyopati, nefrotik sendrom, gebelik ve doğum sonrası dönem gibi hiperöstrojenik durumlar, oral kontraseptif kullanımı, orak hücreli anemi ve sigara içimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0243",
+       "ses": "Edinilmiş hiperkoagülabilitenin yaygın nedenleri bir bütün olarak yatak istirahati ve immobilizasyon; miyokard enfarktüsü, kalp yetmezliği ve atriyal fibrilasyon; cerrahi, travma ve yanık; paraneoplastik hiperkoagülabilite olarak kanser; gebelik ve oral kontraseptif kullanımı; sigara, obezite ve ileri yaştır.",
+       "ekran": "Edinilmiş hiperkoagülabilitenin yaygın nedenleri bir bütün olarak yatak istirahati ve immobilizasyon; miyokard enfarktüsü, kalp yetmezliği ve atriyal fibrilasyon; cerrahi, travma ve yanık; paraneoplastik hiperkoagülabilite olarak kanser; gebelik ve oral kontraseptif kullanımı; sigara, obezite ve ileri yaştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0244",
+       "ses": "Burası önemli, bacaklarda derin ven trombozu risk faktörleri de çıkmış sorularda soruldu: postoperatif dönem, malignite, uzamış hareketsizlik ve gebelik risk faktörüdür; zayıflık ise risk faktörü değildir.",
+       "ekran": "Burası önemli, bacaklarda derin ven trombozu risk faktörleri de çıkmış sorularda soruldu: postoperatif dönem, malignite, uzamış hareketsizlik ve gebelik risk faktörüdür; zayıflık ise risk faktörü değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0245",
+       "ses": "Risk faktörü olan, tam tersine obezitedir.",
+       "ekran": "Risk faktörü olan, tam tersine obezitedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b19",
+   "baslik": "Heparine bağlı trombositopeni ve antifosfolipid antikor sendromu",
+   "paragraflar": [
+    {
+     "id": "k1-20-p048",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-20-c0246",
+       "ses": "Heparine bağlı trombositopeni, bir antikoagülan ilacın paradoksal biçimde tromboza yol açtığı özel bir durumdur.",
+       "ekran": "Heparine bağlı trombositopeni, bir antikoagülan ilacın paradoksal biçimde tromboza yol açtığı özel bir durumdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0247",
+       "ses": "Fraksiyone edilmemiş heparin kullananların yaklaşık %5'inde görülür.",
+       "ekran": "Fraksiyone edilmemiş heparin kullananların yaklaşık %5'inde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0248",
+       "ses": "Heparin ile trombosit faktörü 4 kompleksine karşı otoantikorlar gelişir.",
+       "ekran": "Heparin ile trombosit faktörü 4 kompleksine karşı otoantikorlar gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0249",
+       "ses": "Bu antikorlar trombosit aktivasyonuna ve tüketimine yol açar; sonuçta trombositopeni olur ve aynı anda protrombotik bir durum ortaya çıkar.",
+       "ekran": "Bu antikorlar trombosit aktivasyonuna ve tüketimine yol açar; sonuçta trombositopeni olur ve aynı anda protrombotik bir durum ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0250",
+       "ses": "Burası önemli: trombosit sayısının düşük olması her zaman kanama demek değildir.",
+       "ekran": "Burası önemli: trombosit sayısının düşük olması her zaman kanama demek değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0251",
+       "ses": "Bernard-Soulier ya da Glanzmann gibi işlev kusurları kanama yaparken, bu tabloda trombositler aşırı aktive edildiği için hem tükenir hem pıhtı oluşturur.",
+       "ekran": "Bernard-Soulier ya da Glanzmann gibi işlev kusurları kanama yaparken, bu tabloda trombositler aşırı aktive edildiği için hem tükenir hem pıhtı oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p049",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-20-c0252",
+       "ses": "Antifosfolipid antikor sendromunun klinik triadı venöz ve arteriyel tekrarlayan trombozlar, tekrarlayan düşükler ve trombositopenidir.",
+       "ekran": "Antifosfolipid antikor sendromunun klinik triadı venöz ve arteriyel tekrarlayan trombozlar, tekrarlayan düşükler ve trombositopenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0253",
+       "ses": "Diğer bulgular kalp kapak vejetasyonları ve böbrekte mikroanjiyopatidir.",
+       "ekran": "Diğer bulgular kalp kapak vejetasyonları ve böbrekte mikroanjiyopatidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0254",
+       "ses": "Antikorlar fosfolipidlere karşı gibi görünse de asıl hedef muhtemelen beta-2 glikoprotein I gibi proteinlerdir.",
+       "ekran": "Antikorlar fosfolipidlere karşı gibi görünse de asıl hedef muhtemelen beta-2 glikoprotein I gibi proteinlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0255",
+       "ses": "Kalıtsal trombofililerin çoğu venöz tromboz yaparken bu sendrom hem venöz hem arteriyel tromboz yapar; gebelikte tekrarlayan düşük klasik ipucudur.",
+       "ekran": "Kalıtsal trombofililerin çoğu venöz tromboz yaparken bu sendrom hem venöz hem arteriyel tromboz yapar; gebelikte tekrarlayan düşük klasik ipucudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p050",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k1-20-c0256",
+       "ses": "Antifosfolipid antikorlar pulmoner emboli, pulmoner hipertansiyon, inme ve bağırsak veya renal enfarktüs gibi tabloları tetikler.",
+       "ekran": "Antifosfolipid antikorlar pulmoner emboli, pulmoner hipertansiyon, inme ve bağırsak veya renal enfarktüs gibi tabloları tetikler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0257",
+       "ses": "Burası önemli, laboratuvar paradoksu sınav spotudur: bu antikorlar fosfolipid tabanlı pıhtılaşma testlerini uzatır, bu yüzden lupus antikoagülanı adını alır; oysa hasta canlıda trombofiliktir.",
+       "ekran": "Burası önemli, laboratuvar paradoksu sınav spotudur: bu antikorlar fosfolipid tabanlı pıhtılaşma testlerini uzatır, bu yüzden lupus antikoagülanı adını alır; oysa hasta canlıda trombofiliktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0258",
+       "ses": "Ayrıca sifiliz serolojisinde yalancı pozitiflik yapabilir.",
+       "ekran": "Ayrıca sifiliz serolojisinde yalancı pozitiflik yapabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0259",
+       "ses": "Sendromun sistemik lupus eritematozus ile ilişkili sekonder formu ve başka otoimmün hastalığın bulunmadığı primer formu vardır.",
+       "ekran": "Sendromun sistemik lupus eritematozus ile ilişkili sekonder formu ve başka otoimmün hastalığın bulunmadığı primer formu vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0260",
+       "ses": "Tedavi antikoagülasyon ve immünsupresyondur.",
+       "ekran": "Tedavi antikoagülasyon ve immünsupresyondur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b20",
+   "baslik": "Trombüsün morfolojisi ve Zahn çizgileri",
+   "paragraflar": [
+    {
+     "id": "k1-20-p051",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-20-c0261",
+       "ses": "Trombüsler herhangi bir damar veya kalp boşluğunda oluşabilir.",
+       "ekran": "Trombüsler herhangi bir damar veya kalp boşluğunda oluşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0262",
+       "ses": "Damar duvarına odaklı olarak bağlıdırlar ve çoğu kez kalbe doğru uzanırlar.",
+       "ekran": "Damar duvarına odaklı olarak bağlıdırlar ve çoğu kez kalbe doğru uzanırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0263",
+       "ses": "Zahn çizgileri, koyu renkli eritrositten zengin katmanlarla soluk renkli trombosit ve fibrinden zengin katmanların ardışık dizilmesidir.",
+       "ekran": "Zahn çizgileri, koyu renkli eritrositten zengin katmanlarla soluk renkli trombosit ve fibrinden zengin katmanların ardışık dizilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0264",
+       "ses": "Bu katmanlaşma, akım sürerken trombosit fibrin ve eritrosit birikiminin sırayla yer almasıyla oluşur; bu yüzden yalnızca yaşayan, dolaşan kanda oluşan trombüslerde görülür.",
+       "ekran": "Bu katmanlaşma, akım sürerken trombosit fibrin ve eritrosit birikiminin sırayla yer almasıyla oluşur; bu yüzden yalnızca yaşayan, dolaşan kanda oluşan trombüslerde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0265",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: canlıda akan kan içinde oluşan arteriyel veya kalp içi trombüslerde açık renkli trombosit fibrin tabakaları ile koyu kırmızı eritrosit tabakalarının ardışık dizildiği lameller yapı Zahn çizgileridir ve trombüsü ölüm sonrası pıhtıdan ayırır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: canlıda akan kan içinde oluşan arteriyel veya kalp içi trombüslerde açık renkli trombosit fibrin tabakaları ile koyu kırmızı eritrosit tabakalarının ardışık dizildiği lameller yapı Zahn çizgileridir ve trombüsü ölüm sonrası pıhtıdan ayırır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p052",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-20-c0266",
+       "ses": "Arteriyel ve kalp içi trombüsler genellikle endotel hasarı veya türbülans bölgelerinde oluşur, trombositten zengindir ve sıklıkla koroner, serebral ve femoral arterleri tutar.",
+       "ekran": "Arteriyel ve kalp içi trombüsler genellikle endotel hasarı veya türbülans bölgelerinde oluşur, trombositten zengindir ve sıklıkla koroner, serebral ve femoral arterleri tutar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0267",
+       "ses": "Venöz trombüsler, yani flebotromboz, neredeyse her zaman staz zemininde gelişir ve en sık alt ekstremite derin venlerinde görülür.",
+       "ekran": "Venöz trombüsler, yani flebotromboz, neredeyse her zaman staz zemininde gelişir ve en sık alt ekstremite derin venlerinde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0268",
+       "ses": "Bunlar kırmızı ya da staz trombüsleridir; eritrositten zengindir ve genellikle tıkayıcıdır.",
+       "ekran": "Bunlar kırmızı ya da staz trombüsleridir; eritrositten zengindir ve genellikle tıkayıcıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0269",
+       "ses": "Burası önemli, bu tuzak sınav spotudur: arteriyel trombüs trombositten, venöz trombüs eritrositten zengindir; zemin de sırasıyla hasar ve stazdır.",
+       "ekran": "Burası önemli, bu tuzak sınav spotudur: arteriyel trombüs trombositten, venöz trombüs eritrositten zengindir; zemin de sırasıyla hasar ve stazdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b21",
+   "baslik": "Mural trombüs, kapak vejetasyonları ve ölüm sonrası pıhtı",
+   "paragraflar": [
+    {
+     "id": "k1-20-p053",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k1-20-c0270",
+       "ses": "Mural trombüs, kalp odacığında veya büyük damar lümeninde duvara yapışık pıhtıdır.",
+       "ekran": "Mural trombüs, kalp odacığında veya büyük damar lümeninde duvara yapışık pıhtıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0271",
+       "ses": "Nedenleri miyokard enfarktüsü sonrası diskinetik, yani normal kasılamayan duvar segmenti, kardiyomiyopatiler, miyokardit, aort anevrizması ve ülserleşmiş plaktır.",
+       "ekran": "Nedenleri miyokard enfarktüsü sonrası diskinetik, yani normal kasılamayan duvar segmenti, kardiyomiyopatiler, miyokardit, aort anevrizması ve ülserleşmiş plaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0272",
+       "ses": "Makroskopik örneklerde sol ve sağ ventrikül apekslerinde beyaz lifli skar üzerine oturmuş trombüs, yani eski bir enfarktüs alanının üzerinde mural trombüs görülür.",
+       "ekran": "Makroskopik örneklerde sol ve sağ ventrikül apekslerinde beyaz lifli skar üzerine oturmuş trombüs, yani eski bir enfarktüs alanının üzerinde mural trombüs görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0273",
+       "ses": "Diğer örnekte genişlemiş bir abdominal aort anevrizmasında tabakalı trombüs vardır; daha proksimal aortun ilerlemiş aterosklerotik lezyonları üzerine de çok sayıda kırılgan duvar trombüsü yerleşmiştir.",
+       "ekran": "Diğer örnekte genişlemiş bir abdominal aort anevrizmasında tabakalı trombüs vardır; daha proksimal aortun ilerlemiş aterosklerotik lezyonları üzerine de çok sayıda kırılgan duvar trombüsü yerleşmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p054",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k1-20-c0274",
+       "ses": "Kalp kapakları üzerinde oluşan trombüslere vejetasyon denir.",
+       "ekran": "Kalp kapakları üzerinde oluşan trombüslere vejetasyon denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0275",
+       "ses": "Bakteriyel ya da fungal enfektif endokarditte mikroorganizmalar kapağı hasarlar ve vejetasyon mikroorganizma içerir.",
+       "ekran": "Bakteriyel ya da fungal enfektif endokarditte mikroorganizmalar kapağı hasarlar ve vejetasyon mikroorganizma içerir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0276",
+       "ses": "Bakteriyel olmayan trombotik endokarditte enfeksiyon yoktur; kapak üzerinde steril trombüs birikir.",
+       "ekran": "Bakteriyel olmayan trombotik endokarditte enfeksiyon yoktur; kapak üzerinde steril trombüs birikir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0277",
+       "ses": "Libman-Sacks endokarditi ise sistemik lupus eritematozus ile ilişkili kapak vejetasyonudur.",
+       "ekran": "Libman-Sacks endokarditi ise sistemik lupus eritematozus ile ilişkili kapak vejetasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p055",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k1-20-c0278",
+       "ses": "Otopside damarda bulunan her pıhtı trombüs değildir.",
+       "ekran": "Otopside damarda bulunan her pıhtı trombüs değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0279",
+       "ses": "Ölüm sonrası pıhtılar jelatinimsi ve gevşektir.",
+       "ekran": "Ölüm sonrası pıhtılar jelatinimsi ve gevşektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0280",
+       "ses": "Akım durduğu için eritrositler aşağı çöker; alt kısım koyu kırmızı, üst kısım ise sarıdır ve buna tavuk yağı görünümü denir.",
+       "ekran": "Akım durduğu için eritrositler aşağı çöker; alt kısım koyu kırmızı, üst kısım ise sarıdır ve buna tavuk yağı görünümü denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0281",
+       "ses": "Bu pıhtılar damar duvarına genellikle bağlı değildir.",
+       "ekran": "Bu pıhtılar damar duvarına genellikle bağlı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0282",
+       "ses": "Gerçek trombüs ise serttir, damar duvarına sıkıca yapışıktır, Zahn çizgileri bulunabilir, lümende uzanır ve emboli oluşturma eğilimi taşır.",
+       "ekran": "Gerçek trombüs ise serttir, damar duvarına sıkıca yapışıktır, Zahn çizgileri bulunabilir, lümende uzanır ve emboli oluşturma eğilimi taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0283",
+       "ses": "Ayırıcı olan duvara bağlanma ve kıvamdır.",
+       "ekran": "Ayırıcı olan duvara bağlanma ve kıvamdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-20-b22",
+   "baslik": "Trombüsün akıbeti ve klinik önemi",
+   "paragraflar": [
+    {
+     "id": "k1-20-p056",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k1-20-c0284",
+       "ses": "Oluşan bir trombüsün 4 olası sonu vardır.",
+       "ekran": "Oluşan bir trombüsün 4 olası sonu vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0285",
+       "ses": "1.'si yayılmadır; trombüs büyür ve damar tıkanıklığı artar.",
+       "ekran": "1.'si yayılmadır; trombüs büyür ve damar tıkanıklığı artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0286",
+       "ses": "2.'si embolizasyondur; trombüs parçaları kopup başka yerlere gider.",
+       "ekran": "2.'si embolizasyondur; trombüs parçaları kopup başka yerlere gider.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0287",
+       "ses": "Örnek olarak gösterilen kesitte, alt ekstremite derin ven trombozundan kopan ve akciğer atardamarı dalına yerleşmiş emboli görülür.",
+       "ekran": "Örnek olarak gösterilen kesitte, alt ekstremite derin ven trombozundan kopan ve akciğer atardamarı dalına yerleşmiş emboli görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0288",
+       "ses": "3.'sü çözünmedir; yeni trombüsler fibrinoliz ile tamamen ortadan kalkabilir.",
+       "ekran": "3.'sü çözünmedir; yeni trombüsler fibrinoliz ile tamamen ortadan kalkabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0289",
+       "ses": "4.'sü organizasyon ve rekanalizasyondur; endotel, düz kas ve fibroblastlar trombüs içine büyür ve kılcal kanallar oluşarak kısmi lümen açıklığı sağlanır.",
+       "ekran": "4.'sü organizasyon ve rekanalizasyondur; endotel, düz kas ve fibroblastlar trombüs içine büyür ve kılcal kanallar oluşarak kısmi lümen açıklığı sağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0290",
+       "ses": "Elastin boyalı kesitte orijinal lümenin iç elastik lamina ile sınırlandığı ve tamamen organize olmuş trombüsle dolduğu görülür.",
+       "ekran": "Elastin boyalı kesitte orijinal lümenin iç elastik lamina ile sınırlandığı ve tamamen organize olmuş trombüsle dolduğu görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0291",
+       "ses": "Taze trombüs çözünebilirken organize trombüsün çözünememesi, fibrinolitik tedavinin neden ilk saatlerde etkili olduğunu açıklar.",
+       "ekran": "Taze trombüs çözünebilirken organize trombüsün çözünememesi, fibrinolitik tedavinin neden ilk saatlerde etkili olduğunu açıklar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p057",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "id": "k1-20-c0292",
+       "ses": "Venöz trombozda, özellikle derin ven trombozunda, hayati önem pulmoner emboli riskinden kaynaklanır.",
+       "ekran": "Venöz trombozda, özellikle derin ven trombozunda, hayati önem pulmoner emboli riskinden kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0293",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: derin ven trombozunun en sık ve en ciddi komplikasyonu pulmoner embolidir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: derin ven trombozunun en sık ve en ciddi komplikasyonu pulmoner embolidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0294",
+       "ses": "Arteriyel tromboz ise koroner, serebral ve periferik arter tıkanmasıyla miyokard enfarktüsü, iskemik inme, akut ekstremite iskemisi ve bağırsak enfarktüsüne yol açar.",
+       "ekran": "Arteriyel tromboz ise koroner, serebral ve periferik arter tıkanmasıyla miyokard enfarktüsü, iskemik inme, akut ekstremite iskemisi ve bağırsak enfarktüsüne yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-20-p058",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "id": "k1-20-c0295",
+       "ses": "Tedavi ve korunma 3 kolda yürür: aspirin gibi antiplatelet ilaçlar; heparin, varfarin ve doğrudan etkili oral antikoagülanlar gibi antikoagülanlar; ve immobilizasyon, kanser ve östrojen preparatları gibi risk faktörlerinin kontrolü.",
+       "ekran": "Tedavi ve korunma 3 kolda yürür: aspirin gibi antiplatelet ilaçlar; heparin, varfarin ve doğrudan etkili oral antikoagülanlar gibi antikoagülanlar; ve immobilizasyon, kanser ve östrojen preparatları gibi risk faktörlerinin kontrolü.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0296",
+       "ses": "Arteriyel trombüs trombositten zengin olduğu için antiplatelet ilaçlar, venöz trombüs eritrosit ve fibrinden zengin olduğu için antikoagülanlar ön plandadır.",
+       "ekran": "Arteriyel trombüs trombositten zengin olduğu için antiplatelet ilaçlar, venöz trombüs eritrosit ve fibrinden zengin olduğu için antikoagülanlar ön plandadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0297",
+       "ses": "Özetle normal hemostaz, trombosit aktivasyonu, koagülasyon kaskadı ve endotel dengesiyle sıkı şekilde düzenlenir.",
+       "ekran": "Özetle normal hemostaz, trombosit aktivasyonu, koagülasyon kaskadı ve endotel dengesiyle sıkı şekilde düzenlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0298",
+       "ses": "Tromboz, Virchow üçlüsünün bir veya daha fazla bileşenindeki bozuklukla gelişir.",
+       "ekran": "Tromboz, Virchow üçlüsünün bir veya daha fazla bileşenindeki bozuklukla gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-20-c0299",
+       "ses": "Tromboz ve tromboembolizm, miyokard enfarktüsü, pulmoner emboli ve iskemik inmenin temel nedenlerindendir.",
+       "ekran": "Tromboz ve tromboembolizm, miyokard enfarktüsü, pulmoner emboli ve iskemik inmenin temel nedenlerindendir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

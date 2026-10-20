@@ -1,0 +1,3176 @@
+{
+ "surum": 2,
+ "ders_id": "k1-29",
+ "anahtar": "k1-29-karsinojenezin-molekuler-temeli",
+ "baslik": "Karsinojenezin Moleküler Temeli",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-29-b01",
+   "baslik": "Kanser genleri ve mutasyonların kökeni",
+   "paragraflar": [
+    {
+     "id": "k1-29-p001",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-29-c0001",
+       "ses": "Karsinogenezin temelinde, hücreye seçilim avantajı sağlayan genlerin bozulması yatar.",
+       "ekran": "Karsinogenezin temelinde, hücreye seçilim avantajı sağlayan genlerin bozulması yatar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0002",
+       "ses": "Bu genlere kanser genleri diyoruz.",
+       "ekran": "Bu genlere kanser genleri diyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0003",
+       "ses": "Kanser geni, kanserlerde tekrar tekrar mutasyona uğrayan gendir.",
+       "ekran": "Kanser geni, kanserlerde tekrar tekrar mutasyona uğrayan gendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0004",
+       "ses": "Yani tek bir tümörde rastlantısal olarak bozulmuş bir genden söz etmiyoruz; farklı hastalarda, farklı tümörlerde yinelenen bir değişiklikten söz ediyoruz.",
+       "ekran": "Yani tek bir tümörde rastlantısal olarak bozulmuş bir genden söz etmiyoruz; farklı hastalarda, farklı tümörlerde yinelenen bir değişiklikten söz ediyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0005",
+       "ses": "Bu mutasyonun işlevsel sonucu, hücreye büyüme ya da sağkalım avantajı kazandırmasıdır.",
+       "ekran": "Bu mutasyonun işlevsel sonucu, hücreye büyüme ya da sağkalım avantajı kazandırmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0006",
+       "ses": "Avantajlı hücre komşularından daha çok çoğalır ve bir klon oluşturur.",
+       "ekran": "Avantajlı hücre komşularından daha çok çoğalır ve bir klon oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p002",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-29-c0007",
+       "ses": "Kanser genlerindeki mutasyonların çoğu somatiktir; yani sonradan, vücut hücrelerinde edinilir ve kalıtılmaz.",
+       "ekran": "Kanser genlerindeki mutasyonların çoğu somatiktir; yani sonradan, vücut hücrelerinde edinilir ve kalıtılmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0008",
+       "ses": "Bir kısmı ise germ hattı mutasyonudur.",
+       "ekran": "Bir kısmı ise germ hattı mutasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0009",
+       "ses": "Germ hattı mutasyonu üreme hücreleri yoluyla kalıtılır, doğuştan tüm hücrelerde bulunur ve ailesel kanser sendromlarının temelini oluşturur.",
+       "ekran": "Germ hattı mutasyonu üreme hücreleri yoluyla kalıtılır, doğuştan tüm hücrelerde bulunur ve ailesel kanser sendromlarının temelini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0010",
+       "ses": "Bu mutasyonların toplam sonucu, kanserin ayırt edici özelliklerinin kazanılmasıdır.",
+       "ekran": "Bu mutasyonların toplam sonucu, kanserin ayırt edici özelliklerinin kazanılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0011",
+       "ses": "Her yeni mutasyon, hücreyi bu özelliklerden birine biraz daha yaklaştırır.",
+       "ekran": "Her yeni mutasyon, hücreyi bu özelliklerden birine biraz daha yaklaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b02",
+   "baslik": "Kanserin ayırt edici özellikleri",
+   "paragraflar": [
+    {
+     "id": "k1-29-p003",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-29-c0012",
+       "ses": "Hanahan ve Weinberg'in modeli, kanseri 8 ayırt edici özellik ve 2 etkinleştirici faktörle özetler.",
+       "ekran": "Hanahan ve Weinberg'in modeli, kanseri 8 ayırt edici özellik ve 2 etkinleştirici faktörle özetler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0013",
+       "ses": "Çoğu kanser hücresi bu özellikleri gelişimi sırasında, genellikle kritik genlerdeki mutasyonlar nedeniyle kazanır.",
+       "ekran": "Çoğu kanser hücresi bu özellikleri gelişimi sırasında, genellikle kritik genlerdeki mutasyonlar nedeniyle kazanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0014",
+       "ses": "İlk 4 özellik hücrenin kendi çoğalma programıyla ilgilidir.",
+       "ekran": "İlk 4 özellik hücrenin kendi çoğalma programıyla ilgilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0015",
+       "ses": "1.'si sürekli proliferatif sinyaldir; hücre büyüme sinyalini dış uyarı olmadan kendisi üretir ya da sürekli açık tutar.",
+       "ekran": "1.'si sürekli proliferatif sinyaldir; hücre büyüme sinyalini dış uyarı olmadan kendisi üretir ya da sürekli açık tutar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0016",
+       "ses": "2.'si büyüme baskılayıcılarından kaçıştır; hücre döngüsünü durduran frenler devre dışı kalır.",
+       "ekran": "2.'si büyüme baskılayıcılarından kaçıştır; hücre döngüsünü durduran frenler devre dışı kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0017",
+       "ses": "3.'sü hücre ölümüne dirençtir; hasarlı hücrenin apoptozla elenmesi engellenir.",
+       "ekran": "3.'sü hücre ölümüne dirençtir; hasarlı hücrenin apoptozla elenmesi engellenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0018",
+       "ses": "4.'sü sınırsız replikasyon, yani replikatif ölümsüzlüktür; hücre normal bölünme sınırını aşar.",
+       "ekran": "4.'sü sınırsız replikasyon, yani replikatif ölümsüzlüktür; hücre normal bölünme sınırını aşar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p004",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-29-c0019",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: hücrenin normal bölünme sınırına Hayflik sınırı denir ve kanser hücresinde bu sınırın telomeraz aktivasyonuyla aşılması, karsinogenez mekanizmalarında rol alan bir etkendir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: hücrenin normal bölünme sınırına Hayflik sınırı denir ve kanser hücresinde bu sınırın telomeraz aktivasyonuyla aşılması, karsinogenez mekanizmalarında rol alan bir etkendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0020",
+       "ses": "Telomeraz telomerleri koruyunca telomerler kısalmaz ve hücre ölümsüzleşir.",
+       "ekran": "Telomeraz telomerleri koruyunca telomerler kısalmaz ve hücre ölümsüzleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0021",
+       "ses": "Bu 4 özellik doğrudan gen sınıflarıyla eşleşir: proliferatif sinyal onkogenlerle, büyüme baskılayıcılarından kaçış tümör baskılayıcı gen kaybıyla, ölüme direnç ise apoptoz genleriyle ilişkilidir.",
+       "ekran": "Bu 4 özellik doğrudan gen sınıflarıyla eşleşir: proliferatif sinyal onkogenlerle, büyüme baskılayıcılarından kaçış tümör baskılayıcı gen kaybıyla, ölüme direnç ise apoptoz genleriyle ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p005",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-29-c0022",
+       "ses": "Çemberin ikinci yarısı tümör hücresinin çevresiyle ilişkisini tanımlar.",
+       "ekran": "Çemberin ikinci yarısı tümör hücresinin çevresiyle ilişkisini tanımlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0023",
+       "ses": "Beşinci özellik anjiyogenezin uyarılmasıdır; tümör kendi kan damarlarını oluşturarak oksijen ve besin ihtiyacını karşılar.",
+       "ekran": "Beşinci özellik anjiyogenezin uyarılmasıdır; tümör kendi kan damarlarını oluşturarak oksijen ve besin ihtiyacını karşılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0024",
+       "ses": "Altıncısı invazyon ve metastazın aktivasyonudur; hücreler komşu dokuya girer ve uzak organlara yayılır.",
+       "ekran": "Altıncısı invazyon ve metastazın aktivasyonudur; hücreler komşu dokuya girer ve uzak organlara yayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0025",
+       "ses": "Yedincisi hücresel enerji metabolizmasının yeniden düzenlenmesidir; hücre metabolizmasını hızlı büyümeye uyarlar.",
+       "ekran": "Yedincisi hücresel enerji metabolizmasının yeniden düzenlenmesidir; hücre metabolizmasını hızlı büyümeye uyarlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0026",
+       "ses": "Sekizincisi bağışıklık yıkımından kaçıştır; tümör, bağışıklık hücrelerinin onu tanıyıp öldürmesini engeller.",
+       "ekran": "Sekizincisi bağışıklık yıkımından kaçıştır; tümör, bağışıklık hücrelerinin onu tanıyıp öldürmesini engeller.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p006",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-29-c0027",
+       "ses": "2 etkinleştirici faktör ise kendisi bir özellik değil, özelliklerin kazanılmasını hızlandıran zemindir.",
+       "ekran": "2 etkinleştirici faktör ise kendisi bir özellik değil, özelliklerin kazanılmasını hızlandıran zemindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0028",
+       "ses": "1.'si genomik istikrarsızlıktır; eş anlamlısı mutatör fenotiptir ve mutasyon hızını artırarak yeni özelliklerin edinilmesini kolaylaştırır.",
+       "ekran": "1.'si genomik istikrarsızlıktır; eş anlamlısı mutatör fenotiptir ve mutasyon hızını artırarak yeni özelliklerin edinilmesini kolaylaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0029",
+       "ses": "2.'si tümörü destekleyen enflamasyondur; enflamatuar hücreler büyümeyi, anjiyogenezi ve invazyonu besler.",
+       "ekran": "2.'si tümörü destekleyen enflamasyondur; enflamatuar hücreler büyümeyi, anjiyogenezi ve invazyonu besler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0030",
+       "ses": "Burası önemli, sınavda klasik tuzaktır: genomik istikrarsızlık ve tümörü destekleyen enflamasyon özellik olarak değil, etkinleştirici faktör olarak sınıflanır.",
+       "ekran": "Burası önemli, sınavda klasik tuzaktır: genomik istikrarsızlık ve tümörü destekleyen enflamasyon özellik olarak değil, etkinleştirici faktör olarak sınıflanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b03",
+   "baslik": "Kanser genlerinin 4 sınıfı ve onkogenler",
+   "paragraflar": [
+    {
+     "id": "k1-29-p007",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-29-c0031",
+       "ses": "Kanser genleri işlevlerine göre 4 ana sınıfta toplanır.",
+       "ekran": "Kanser genleri işlevlerine göre 4 ana sınıfta toplanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0032",
+       "ses": "Onkogenler, proto-onkogenlerin işlev kazanımı mutasyonlarıyla oluşur ve büyümeyi teşvik eden onkoproteinler kodlar; sürekli proliferatif sinyalle bağlantılıdır.",
+       "ekran": "Onkogenler, proto-onkogenlerin işlev kazanımı mutasyonlarıyla oluşur ve büyümeyi teşvik eden onkoproteinler kodlar; sürekli proliferatif sinyalle bağlantılıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0033",
+       "ses": "Tümör baskılayıcı genler normalde hücre proliferasyonunu ve genom bütünlüğünü frenler; kayıpları frenin kalkması demektir ve büyüme baskılayıcılarından kaçışla bağlantılıdır.",
+       "ekran": "Tümör baskılayıcı genler normalde hücre proliferasyonunu ve genom bütünlüğünü frenler; kayıpları frenin kalkması demektir ve büyüme baskılayıcılarından kaçışla bağlantılıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0034",
+       "ses": "Apoptozu düzenleyen genler hücrenin hayatta kalmasını ya da ölmesini belirler; denge sağkalım lehine bozulursa hasarlı hücre korunur.",
+       "ekran": "Apoptozu düzenleyen genler hücrenin hayatta kalmasını ya da ölmesini belirler; denge sağkalım lehine bozulursa hasarlı hücre korunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0035",
+       "ses": "Tümör ile konak etkileşimini düzenleyen genler ise anjiyogenez, invazyon ve bağışıklık kaçışını yönetir.",
+       "ekran": "Tümör ile konak etkileşimini düzenleyen genler ise anjiyogenez, invazyon ve bağışıklık kaçışını yönetir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0036",
+       "ses": "Bir benzetmeyle, onkogen takılı kalmış gaz pedalı, tümör baskılayıcı kaybı bozuk fren, apoptoz bozukluğu devre dışı kalmış acil durdurma düğmesidir.",
+       "ekran": "Bir benzetmeyle, onkogen takılı kalmış gaz pedalı, tümör baskılayıcı kaybı bozuk fren, apoptoz bozukluğu devre dışı kalmış acil durdurma düğmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p008",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-29-c0037",
+       "ses": "Proto-onkogen, normal hücre büyümesini kontrollü biçimde düzenleyen gendir.",
+       "ekran": "Proto-onkogen, normal hücre büyümesini kontrollü biçimde düzenleyen gendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0038",
+       "ses": "İşlev kazanımı mutasyonu, gen ürününün aktivitesini artıran ya da ona yeni, kontrolsüz bir aktivite kazandıran mutasyondur.",
+       "ekran": "İşlev kazanımı mutasyonu, gen ürününün aktivitesini artıran ya da ona yeni, kontrolsüz bir aktivite kazandıran mutasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0039",
+       "ses": "Onkoproteinler normal sinyal moleküllerine benzer; aynı yolakta, aynı hedeflerle çalışırlar.",
+       "ekran": "Onkoproteinler normal sinyal moleküllerine benzer; aynı yolakta, aynı hedeflerle çalışırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0040",
+       "ses": "Fark şudur: onkoprotein aşırı, uygunsuz, yani yanlış zamanda ya da yerde, veya otonom, yani dış uyarıdan bağımsız biçimde aktiftir.",
+       "ekran": "Fark şudur: onkoprotein aşırı, uygunsuz, yani yanlış zamanda ya da yerde, veya otonom, yani dış uyarıdan bağımsız biçimde aktiftir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p009",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-29-c0041",
+       "ses": "Genetik davranış açısından tek alelde mutasyon genellikle yeterlidir, çünkü sağlam ikinci alel aşırı aktif proteini dengeleyemez.",
+       "ekran": "Genetik davranış açısından tek alelde mutasyon genellikle yeterlidir, çünkü sağlam ikinci alel aşırı aktif proteini dengeleyemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0042",
+       "ses": "Bu nedenle onkogen aktivitesi genetik olarak dominant davranır.",
+       "ekran": "Bu nedenle onkogen aktivitesi genetik olarak dominant davranır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0043",
+       "ses": "Sınav ayrımını şöyle aklınızda tutun: onkogen demek tek alel, işlev kazanımı ve dominant etki demektir.",
+       "ekran": "Sınav ayrımını şöyle aklınızda tutun: onkogen demek tek alel, işlev kazanımı ve dominant etki demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0044",
+       "ses": "Birazdan göreceğimiz tümör baskılayıcı genler ise bunun tam tersine çoğunlukla iki alelin kaybını gerektirir.",
+       "ekran": "Birazdan göreceğimiz tümör baskılayıcı genler ise bunun tam tersine çoğunlukla iki alelin kaybını gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b04",
+   "baslik": "Tümör baskılayıcı genler ve 2 vuruş hipotezi",
+   "paragraflar": [
+    {
+     "id": "k1-29-p010",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-29-c0045",
+       "ses": "Tümör baskılayıcı genler hücrenin fren ve denetim sistemidir.",
+       "ekran": "Tümör baskılayıcı genler hücrenin fren ve denetim sistemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0046",
+       "ses": "İki normal işlevleri vardır.",
+       "ekran": "İki normal işlevleri vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0047",
+       "ses": "1.'si frendir; hücre büyümesini ve bölünmesini sınırlar.",
+       "ekran": "1.'si frendir; hücre büyümesini ve bölünmesini sınırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0048",
+       "ses": "2.'si bekçiliktir; genom hasarını algılar ve onarımı tetikler.",
+       "ekran": "2.'si bekçiliktir; genom hasarını algılar ve onarımı tetikler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0049",
+       "ses": "Onkogenlerin tersine, bunların işlev kaybı kansere yol açar.",
+       "ekran": "Onkogenlerin tersine, bunların işlev kaybı kansere yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0050",
+       "ses": "İşlev kaybında hem büyüme frenleri kalkar hem de genetik hasarın birikmesine izin verilir; hücre hem çoğalır hem de yeni mutasyon biriktirir.",
+       "ekran": "İşlev kaybında hem büyüme frenleri kalkar hem de genetik hasarın birikmesine izin verilir; hücre hem çoğalır hem de yeni mutasyon biriktirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p011",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-29-c0051",
+       "ses": "Çoğu durumda iki alelin de inaktivasyonu gerekir, çünkü tek sağlam alel fren işlevini sürdürmeye yeter.",
+       "ekran": "Çoğu durumda iki alelin de inaktivasyonu gerekir, çünkü tek sağlam alel fren işlevini sürdürmeye yeter.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0052",
+       "ses": "Burası önemli, iki vuruş hipotezi çıkmış sorularda birden çok kez soruldu.",
+       "ekran": "Burası önemli, iki vuruş hipotezi çıkmış sorularda birden çok kez soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0053",
+       "ses": "Birinci vuruş bir aleli, ikinci vuruş diğer aleli devre dışı bırakır.",
+       "ekran": "Birinci vuruş bir aleli, ikinci vuruş diğer aleli devre dışı bırakır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0054",
+       "ses": "İkinci vuruş görüşü, bir genin her iki kopyasının da mutasyon sonucu değişerek işlevini yitirmesidir.",
+       "ekran": "İkinci vuruş görüşü, bir genin her iki kopyasının da mutasyon sonucu değişerek işlevini yitirmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0055",
+       "ses": "Knudson'ın tanımladığı bu modele göre ailesel sendromlarda ilk vuruş germ hattında doğuştan taşınır, ikinci vuruş ise somatik olarak edinilir.",
+       "ekran": "Knudson'ın tanımladığı bu modele göre ailesel sendromlarda ilk vuruş germ hattında doğuştan taşınır, ikinci vuruş ise somatik olarak edinilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0056",
+       "ses": "Yani genin iki alelinin de, biri germ hattı diğeri somatik mutasyonla, işlev kaybetmesi gerekir.",
+       "ekran": "Yani genin iki alelinin de, biri germ hattı diğeri somatik mutasyonla, işlev kaybetmesi gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0057",
+       "ses": "Dikkat edin, tek alelde aktive edici mutasyonun yeterli olması ya da genin ifadesinin artması onkogenin özelliğidir, iki vuruşun değil.",
+       "ekran": "Dikkat edin, tek alelde aktive edici mutasyonun yeterli olması ya da genin ifadesinin artması onkogenin özelliğidir, iki vuruşun değil.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0058",
+       "ses": "Kavram, Knudson'ın ailesel ve sporadik retinoblastom karşılaştırmasından doğmuştur; ailesel olguda ilk vuruş kalıtıldığı için tümör daha erken ortaya çıkar.",
+       "ekran": "Kavram, Knudson'ın ailesel ve sporadik retinoblastom karşılaştırmasından doğmuştur; ailesel olguda ilk vuruş kalıtıldığı için tümör daha erken ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p012",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-29-c0059",
+       "ses": "Burası önemli, hangi genin tümör baskılayıcı olduğu da sıkça soruldu.",
+       "ekran": "Burası önemli, hangi genin tümör baskılayıcı olduğu da sıkça soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0060",
+       "ses": "TP53 geni, retinoblastom yani RB geni, APC geni, CDKN2A, CDH1, BRCA1 ve TGF-β soru şıklarında tümör baskılayıcı tarafta yer alır.",
+       "ekran": "TP53 geni, retinoblastom yani RB geni, APC geni, CDKN2A, CDH1, BRCA1 ve TGF-β soru şıklarında tümör baskılayıcı tarafta yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0061",
+       "ses": "Buna karşılık KRAS, MYC ve ERBB2 onkogendir; BCL2 ise antiapoptotik bir gendir.",
+       "ekran": "Buna karşılık KRAS, MYC ve ERBB2 onkogendir; BCL2 ise antiapoptotik bir gendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0062",
+       "ses": "C-KIT proteinini kodlayan gen tümör baskılayıcı değildir.",
+       "ekran": "C-KIT proteinini kodlayan gen tümör baskılayıcı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0063",
+       "ses": "Telomeraz aktivitesinin artışı da bir tümör baskılayıcı gen değil, sınırsız replikasyonu sağlayan bir kanser özelliğidir.",
+       "ekran": "Telomeraz aktivitesinin artışı da bir tümör baskılayıcı gen değil, sınırsız replikasyonu sağlayan bir kanser özelliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0064",
+       "ses": "Son olarak, retinoblastom geni gibi bir tümör baskılayıcının kaybı tümör gelişimine neden olur; BCL2, RAS, MYC ya da ABL geninde ise sorun kayıp değil, aşırı aktivitedir.",
+       "ekran": "Son olarak, retinoblastom geni gibi bir tümör baskılayıcının kaybı tümör gelişimine neden olur; BCL2, RAS, MYC ya da ABL geninde ise sorun kayıp değil, aşırı aktivitedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b05",
+   "baslik": "Apoptoz genleri ve tümör konak etkileşim genleri",
+   "paragraflar": [
+    {
+     "id": "k1-29-p013",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-29-c0065",
+       "ses": "Apoptozu düzenleyen genler, hasarlı hücrenin yaşayıp yaşamayacağına karar verir.",
+       "ekran": "Apoptozu düzenleyen genler, hasarlı hücrenin yaşayıp yaşamayacağına karar verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0066",
+       "ses": "Apoptozun iç, yani mitokondriyal yolağı BCL2 protein ailesi tarafından kontrol edilir.",
+       "ekran": "Apoptozun iç, yani mitokondriyal yolağı BCL2 protein ailesi tarafından kontrol edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0067",
+       "ses": "Burası önemli, bu ailenin yönleri sınavda sıkça karıştırılır.",
+       "ekran": "Burası önemli, bu ailenin yönleri sınavda sıkça karıştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0068",
+       "ses": "BAX ve BAK proapoptotik üyelerdir; hücreyi ölüme yönlendirir ve mitokondri üzerinden apoptozu başlatırlar.",
+       "ekran": "BAX ve BAK proapoptotik üyelerdir; hücreyi ölüme yönlendirir ve mitokondri üzerinden apoptozu başlatırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0069",
+       "ses": "BCL2 ve BCL-XL ise antiapoptotik üyelerdir; proapoptotik üyeleri dengeleyerek hücreyi hayatta tutarlar.",
+       "ekran": "BCL2 ve BCL-XL ise antiapoptotik üyelerdir; proapoptotik üyeleri dengeleyerek hücreyi hayatta tutarlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0070",
+       "ses": "Hücrenin kaderi iki grubun göreceli miktarına bağlıdır; antiapoptotik üyeler baskın olursa hasarlı hücre bile ölmez.",
+       "ekran": "Hücrenin kaderi iki grubun göreceli miktarına bağlıdır; antiapoptotik üyeler baskın olursa hasarlı hücre bile ölmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0071",
+       "ses": "Kanserde sık görülen durum, apoptozu tetikleyen sinyallerin bloke edilmesi ve hücre ölümüne direnç gelişmesidir.",
+       "ekran": "Kanserde sık görülen durum, apoptozu tetikleyen sinyallerin bloke edilmesi ve hücre ölümüne direnç gelişmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0072",
+       "ses": "BCL2 aşırı eksprese edildiğinde hücre adeta ölmeyi unutur; hızlı bölünmese bile birikerek tümör oluşturabilir.",
+       "ekran": "BCL2 aşırı eksprese edildiğinde hücre adeta ölmeyi unutur; hızlı bölünmese bile birikerek tümör oluşturabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p014",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-29-c0073",
+       "ses": "Tümör ile konak etkileşim genleri, tümörün çevresindeki damar, matriks ve bağışıklık hücreleriyle ilişkisini belirler ve 3 grupta incelenir.",
+       "ekran": "Tümör ile konak etkileşim genleri, tümörün çevresindeki damar, matriks ve bağışıklık hücreleriyle ilişkisini belirler ve 3 grupta incelenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0074",
+       "ses": "Anjiyogenez düzenleyicileri arasında vasküler endotelyal büyüme faktörü, yani VEGF, yeni damar oluşumunu uyarır; tümör baskılayıcı p53 ve trombospondin 1 ise bu süreci frenler. p53 burada iki rolüyle karşımıza çıkar; bu yüzden kaybı damar oluşumunun da önünü açar.",
+       "ekran": "Anjiyogenez düzenleyicileri arasında vasküler endotelyal büyüme faktörü, yani VEGF, yeni damar oluşumunu uyarır; tümör baskılayıcı p53 ve trombospondin 1 ise bu süreci frenler. p53 burada iki rolüyle karşımıza çıkar; bu yüzden kaybı damar oluşumunun da önünü açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0075",
+       "ses": "İnvazyon ve metastaz genleri arasında matriks metalloproteinazlar hücre dışı matriksi yıkarak yol açar; e-kadherin ve integrinler ise hücre ile hücre ve hücre ile matriks bağlantısını düzenler.",
+       "ekran": "İnvazyon ve metastaz genleri arasında matriks metalloproteinazlar hücre dışı matriksi yıkarak yol açar; e-kadherin ve integrinler ise hücre ile hücre ve hücre ile matriks bağlantısını düzenler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0076",
+       "ses": "Bağışıklık düzenlenmesinde PD-L1, yani programlanmış hücre ölümü ligandı 1, PD-1, yani programlanmış hücre ölümü 1, ve CTLA-4, yani sitotoksik T lenfosit antijeni 4, T hücre yanıtını baskılayan kontrol noktası molekülleridir.",
+       "ekran": "Bağışıklık düzenlenmesinde PD-L1, yani programlanmış hücre ölümü ligandı 1, PD-1, yani programlanmış hücre ölümü 1, ve CTLA-4, yani sitotoksik T lenfosit antijeni 4, T hücre yanıtını baskılayan kontrol noktası molekülleridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b06",
+   "baslik": "Genetik lezyon türleri ve nokta mutasyonlar",
+   "paragraflar": [
+    {
+     "id": "k1-29-p015",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-29-c0077",
+       "ses": "Kanser genlerinin işlevi tek bir nükleotidden tüm kromozom sayısına kadar farklı ölçeklerde bozulabilir.",
+       "ekran": "Kanser genlerinin işlevi tek bir nükleotidden tüm kromozom sayısına kadar farklı ölçeklerde bozulabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0078",
+       "ses": "Derste 6 lezyon türü ayrılır.",
+       "ekran": "Derste 6 lezyon türü ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0079",
+       "ses": "1.'si nokta mutasyonlardır.",
+       "ekran": "1.'si nokta mutasyonlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0080",
+       "ses": "2.'si kromozomal yeniden düzenlemelerdir; translokasyon ve inversiyon bu gruptadır.",
+       "ekran": "2.'si kromozomal yeniden düzenlemelerdir; translokasyon ve inversiyon bu gruptadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0081",
+       "ses": "İnversiyon, 1 kromozom segmentinin kopup ters yönde yeniden yerleşmesidir.",
+       "ekran": "İnversiyon, 1 kromozom segmentinin kopup ters yönde yeniden yerleşmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0082",
+       "ses": "3.'sü kopya sayısı değişiklikleridir; delesyon kaybı, amplifikasyon artışı ifade eder.",
+       "ekran": "3.'sü kopya sayısı değişiklikleridir; delesyon kaybı, amplifikasyon artışı ifade eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0083",
+       "ses": "4.'sü anöploidi, yani kromozom sayısı bozukluğudur.",
+       "ekran": "4.'sü anöploidi, yani kromozom sayısı bozukluğudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0084",
+       "ses": "5.'si mikro RNA değişiklikleri, altıncısı ise DNA metilasyonu ve histon değişikliklerini içeren epigenetik modifikasyonlardır.",
+       "ekran": "5.'si mikro RNA değişiklikleri, altıncısı ise DNA metilasyonu ve histon değişikliklerini içeren epigenetik modifikasyonlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0085",
+       "ses": "İlk 4 lezyon DNA'nın yapısını ya da miktarını değiştirir; son ikisi ise genin dizisini korurken ne kadar ifade edileceğini değiştirir.",
+       "ekran": "İlk 4 lezyon DNA'nın yapısını ya da miktarını değiştirir; son ikisi ise genin dizisini korurken ne kadar ifade edileceğini değiştirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p016",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-29-c0086",
+       "ses": "Nokta mutasyon, hangi gende oluştuğuna göre zıt sonuçlar doğurabilir.",
+       "ekran": "Nokta mutasyon, hangi gende oluştuğuna göre zıt sonuçlar doğurabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0087",
+       "ses": "Proto-onkogende fonksiyon kazanımı yaparak onkogen aktivasyonuna yol açar; klasik örnek Ras gen ailesinde aktivasyondur ve mutant Ras proteini sinyali sürekli açık tutar.",
+       "ekran": "Proto-onkogende fonksiyon kazanımı yaparak onkogen aktivasyonuna yol açar; klasik örnek Ras gen ailesinde aktivasyondur ve mutant Ras proteini sinyali sürekli açık tutar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0088",
+       "ses": "Tümör baskılayıcı gende ise fonksiyon kaybı yapar; örnek, TP53 geninde inaktive edici mutasyonlardır ve p53'ün genom bekçisi işlevi kaybolur.",
+       "ekran": "Tümör baskılayıcı gende ise fonksiyon kaybı yapar; örnek, TP53 geninde inaktive edici mutasyonlardır ve p53'ün genom bekçisi işlevi kaybolur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0089",
+       "ses": "Burası önemli, nokta mutasyonlar birçok solid tümörde baskın lezyon tipidir.",
+       "ekran": "Burası önemli, nokta mutasyonlar birçok solid tümörde baskın lezyon tipidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0090",
+       "ses": "Lezyon aynıdır ama sonuç gen sınıfına göre zıttır: Ras'ta aktive edici, TP53'te inaktive edici.",
+       "ekran": "Lezyon aynıdır ama sonuç gen sınıfına göre zıttır: Ras'ta aktive edici, TP53'te inaktive edici.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b07",
+   "baslik": "Translokasyonlar ve klasik örnekleri",
+   "paragraflar": [
+    {
+     "id": "k1-29-p017",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-29-c0091",
+       "ses": "Translokasyon, kromozomlar arasında segment değişimidir.",
+       "ekran": "Translokasyon, kromozomlar arasında segment değişimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0092",
+       "ses": "Kırılma noktasının nereye denk geldiğine göre iki farklı onkojenik etki ortaya çıkar.",
+       "ekran": "Kırılma noktasının nereye denk geldiğine göre iki farklı onkojenik etki ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0093",
+       "ses": "Birincisinde proto-onkogen, sağlam yapısını koruyarak güçlü bir promotör ya da enhansır bölgesinin yanına taşınır; sonuç aşırı ekspresyondur, yani protein normaldir ama çok fazla üretilir.",
+       "ekran": "Birincisinde proto-onkogen, sağlam yapısını koruyarak güçlü bir promotör ya da enhansır bölgesinin yanına taşınır; sonuç aşırı ekspresyondur, yani protein normaldir ama çok fazla üretilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0094",
+       "ses": "İkincisinde iki genin parçaları birleşerek füzyon gen oluşturur; bu hibrit gen yeni, kimerik bir onkoprotein kodlar ve bu protein kontrolsüz çalışır.",
+       "ekran": "İkincisinde iki genin parçaları birleşerek füzyon gen oluşturur; bu hibrit gen yeni, kimerik bir onkoprotein kodlar ve bu protein kontrolsüz çalışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0095",
+       "ses": "Translokasyonlar hematolojik malignitelerde, yani lösemi ve lenfomalarda sıktır.",
+       "ekran": "Translokasyonlar hematolojik malignitelerde, yani lösemi ve lenfomalarda sıktır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p018",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-29-c0096",
+       "ses": "Burkitt lenfoma, promotör altına taşınmanın klasik örneğidir.",
+       "ekran": "Burkitt lenfoma, promotör altına taşınmanın klasik örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0097",
+       "ses": "Lezyon, 8 ve 14 numaralı kromozomlar arasındaki translokasyon ve onun varyantlarıdır.",
+       "ekran": "Lezyon, 8 ve 14 numaralı kromozomlar arasındaki translokasyon ve onun varyantlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0098",
+       "ses": "8. kromozomdaki MYC onkogeni, 14. kromozomdaki immünoglobulin ağır zincir lokusunun yanına taşınır.",
+       "ekran": "8. kromozomdaki MYC onkogeni, 14. kromozomdaki immünoglobulin ağır zincir lokusunun yanına taşınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0099",
+       "ses": "B hücresinde immünoglobulin genleri çok aktif biçimde okunduğu için MYC bu güçlü düzenleyici bölgenin denetimine girer ve aşırı eksprese edilir.",
+       "ekran": "B hücresinde immünoglobulin genleri çok aktif biçimde okunduğu için MYC bu güçlü düzenleyici bölgenin denetimine girer ve aşırı eksprese edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0100",
+       "ses": "Artmış MYC proteini, büyüme yanlısı genlerin ekspresyonunu artırır.",
+       "ekran": "Artmış MYC proteini, büyüme yanlısı genlerin ekspresyonunu artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0101",
+       "ses": "Şekilde kırık 8 ve 14 numaralı kromozomlar yer değiştirerek türev kromozomları oluşturur; MYC, türev 14 kromozomu üzerinde immünoglobulin geninin yanına yerleşir.",
+       "ekran": "Şekilde kırık 8 ve 14 numaralı kromozomlar yer değiştirerek türev kromozomları oluşturur; MYC, türev 14 kromozomu üzerinde immünoglobulin geninin yanına yerleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p019",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-29-c0102",
+       "ses": "Burası önemli, iki ayrı çıkmış soru buraya dayanıyor.",
+       "ekran": "Burası önemli, iki ayrı çıkmış soru buraya dayanıyor.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0103",
+       "ses": "1.'si, immünoglobulin genlerini içeren kromozom parçalarının translokasyonu ile ilişkili neoplazm Burkitt lenfomadır.",
+       "ekran": "1.'si, immünoglobulin genlerini içeren kromozom parçalarının translokasyonu ile ilişkili neoplazm Burkitt lenfomadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0104",
+       "ses": "2.'si, MYC hücre çoğalmasını destekleyen bir proto-onkogendir ve çekirdekte transkripsiyon faktörü olarak, yani genlerin çalışmasını düzenleyen bir protein olarak görev yapar.",
+       "ekran": "2.'si, MYC hücre çoğalmasını destekleyen bir proto-onkogendir ve çekirdekte transkripsiyon faktörü olarak, yani genlerin çalışmasını düzenleyen bir protein olarak görev yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0105",
+       "ses": "Burkitt lenfomada MYC proteini yapısal olarak normaldir; sorun miktarındadır.",
+       "ekran": "Burkitt lenfomada MYC proteini yapısal olarak normaldir; sorun miktarındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0106",
+       "ses": "Bu nedenle füzyon gen değil, promotör altına taşınma örneğidir.",
+       "ekran": "Bu nedenle füzyon gen değil, promotör altına taşınma örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p020",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-29-c0107",
+       "ses": "Foliküler lenfoma da promotör altına taşınma örneğidir, ancak bu kez taşınan gen bir büyüme geni değil, antiapoptotik BCL2'dir.",
+       "ekran": "Foliküler lenfoma da promotör altına taşınma örneğidir, ancak bu kez taşınan gen bir büyüme geni değil, antiapoptotik BCL2'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0108",
+       "ses": "Lezyon 14 ve 18 numaralı kromozomlar arasındaki translokasyondur.",
+       "ekran": "Lezyon 14 ve 18 numaralı kromozomlar arasındaki translokasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0109",
+       "ses": "BCL2 geni immünoglobulin ağır zincir lokusuna taşınır, aşırı eksprese edilir ve apoptoz baskılanır.",
+       "ekran": "BCL2 geni immünoglobulin ağır zincir lokusuna taşınır, aşırı eksprese edilir ve apoptoz baskılanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0110",
+       "ses": "Hücreler hızlı bölünmekten çok ölmeyerek birikir, çünkü mitokondriyal apoptoz yolağı antiapoptotik üyelerin baskınlığıyla bloke olmuştur.",
+       "ekran": "Hücreler hızlı bölünmekten çok ölmeyerek birikir, çünkü mitokondriyal apoptoz yolağı antiapoptotik üyelerin baskınlığıyla bloke olmuştur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0111",
+       "ses": "Burası önemli, çıkmış soruda BCL2 aşırı ekspresyonu sonucu apoptozun engellenmesinin önemli rol oynadığı neoplazi olarak foliküler lenfoma soruldu.",
+       "ekran": "Burası önemli, çıkmış soruda BCL2 aşırı ekspresyonu sonucu apoptozun engellenmesinin önemli rol oynadığı neoplazi olarak foliküler lenfoma soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0112",
+       "ses": "Dikkat edin, Burkitt ile foliküler lenfoma sıkça karıştırılır: ikisinde de ortak eş 14. kromozomdaki immünoglobulin ağır zincir lokusudur; Burkitt'te taşınan MYC proliferasyonu, foliküler lenfomada taşınan BCL2 ise apoptoz direncini sağlar.",
+       "ekran": "Dikkat edin, Burkitt ile foliküler lenfoma sıkça karıştırılır: ikisinde de ortak eş 14. kromozomdaki immünoglobulin ağır zincir lokusudur; Burkitt'te taşınan MYC proliferasyonu, foliküler lenfomada taşınan BCL2 ise apoptoz direncini sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p021",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-29-c0113",
+       "ses": "Kronik miyeloid lösemi, füzyon gen tipinin klasik örneğidir.",
+       "ekran": "Kronik miyeloid lösemi, füzyon gen tipinin klasik örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0114",
+       "ses": "Lezyon 9 ve 22 numaralı kromozomlar arasındaki translokasyondur; oluşan kısalmış türev 22. kromozoma Philadelphia kromozomu denir.",
+       "ekran": "Lezyon 9 ve 22 numaralı kromozomlar arasındaki translokasyondur; oluşan kısalmış türev 22. kromozoma Philadelphia kromozomu denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0115",
+       "ses": "9. kromozomdaki ABL onkogeni, 22. kromozomdaki BCR lokusunun yanına gelir ve BCR-ABL füzyon geni oluşur.",
+       "ekran": "9. kromozomdaki ABL onkogeni, 22. kromozomdaki BCR lokusunun yanına gelir ve BCR-ABL füzyon geni oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0116",
+       "ses": "Ürünü konstitütif aktif, yani uyarıdan bağımsız sürekli açık bir tirozin kinazdır; büyüme faktörü sinyal yollarını aktive eder, hücre proliferasyonunu ve sağkalımını artırır.",
+       "ekran": "Ürünü konstitütif aktif, yani uyarıdan bağımsız sürekli açık bir tirozin kinazdır; büyüme faktörü sinyal yollarını aktive eder, hücre proliferasyonunu ve sağkalımını artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0117",
+       "ses": "Burası önemli, bu kinaz imatinib gibi tirozin kinaz inhibitörleriyle doğrudan bloke edilebilir ve kronik miyeloid lösemi hedefe yönelik tedavinin modelidir.",
+       "ekran": "Burası önemli, bu kinaz imatinib gibi tirozin kinaz inhibitörleriyle doğrudan bloke edilebilir ve kronik miyeloid lösemi hedefe yönelik tedavinin modelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0118",
+       "ses": "Hedef normal hücrelerde bulunmayan kimerik protein olduğu için tedavi tümöre özgüdür.",
+       "ekran": "Hedef normal hücrelerde bulunmayan kimerik protein olduğu için tedavi tümöre özgüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0119",
+       "ses": "Kısacası Burkitt ve foliküler lenfoma aşırı ekspresyon, kronik miyeloid lösemi ise füzyon gen örneğidir.",
+       "ekran": "Kısacası Burkitt ve foliküler lenfoma aşırı ekspresyon, kronik miyeloid lösemi ise füzyon gen örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b08",
+   "baslik": "Delesyonlar ve gen amplifikasyonu",
+   "paragraflar": [
+    {
+     "id": "k1-29-p022",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-29-c0120",
+       "ses": "Delesyon, kopya sayısı değişikliklerinin kayıp yönüdür.",
+       "ekran": "Delesyon, kopya sayısı değişikliklerinin kayıp yönüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0121",
+       "ses": "1 kromozom segmentinin kaybı, o bölgedeki tümör baskılayıcı genlerin kaybına yol açar.",
+       "ekran": "1 kromozom segmentinin kaybı, o bölgedeki tümör baskılayıcı genlerin kaybına yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0122",
+       "ses": "Burası önemli, 13. kromozomun q14 bölgesinin delesyonu retinoblastom geninin kaybına yol açar ve retinoblastom ile osteosarkomda görülür; RB, hücre döngüsünün temel frenidir.",
+       "ekran": "Burası önemli, 13. kromozomun q14 bölgesinin delesyonu retinoblastom geninin kaybına yol açar ve retinoblastom ile osteosarkomda görülür; RB, hücre döngüsünün temel frenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0123",
+       "ses": "17. kromozomun kısa kolunun, yani 17p bölgesinin delesyonu ise TP53 kaybına yol açar ve p53'ün bekçi işlevi ortadan kalkar.",
+       "ekran": "17. kromozomun kısa kolunun, yani 17p bölgesinin delesyonu ise TP53 kaybına yol açar ve p53'ün bekçi işlevi ortadan kalkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0124",
+       "ses": "Çok sayıda solid tümörde delesyonlar aracılığıyla bialelik, yani her iki alelin birden tümör baskılayıcı inaktivasyonu görülür.",
+       "ekran": "Çok sayıda solid tümörde delesyonlar aracılığıyla bialelik, yani her iki alelin birden tümör baskılayıcı inaktivasyonu görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0125",
+       "ses": "Bir alel nokta mutasyonla ya da kalıtımla bozulmuşsa, diğer alelin bulunduğu bölgenin delesyonu ikinci vuruşu tamamlar.",
+       "ekran": "Bir alel nokta mutasyonla ya da kalıtımla bozulmuşsa, diğer alelin bulunduğu bölgenin delesyonu ikinci vuruşu tamamlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0126",
+       "ses": "Delesyon tümör baskılayıcı gen için anlamlıdır; onkogende ise kopya sayısı artışı etkili olur.",
+       "ekran": "Delesyon tümör baskılayıcı gen için anlamlıdır; onkogende ise kopya sayısı artışı etkili olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p023",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-29-c0127",
+       "ses": "Amplifikasyon, gen kopya sayısında artıştır.",
+       "ekran": "Amplifikasyon, gen kopya sayısında artıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0128",
+       "ses": "Kopya sayısı arttıkça onkogen ürünü de artar ve aşırı ekspresyon gelişir.",
+       "ekran": "Kopya sayısı arttıkça onkogen ürünü de artar ve aşırı ekspresyon gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0129",
+       "ses": "Burası önemli, amplifikasyonun iki sitogenetik bulgusu vardır.",
+       "ekran": "Burası önemli, amplifikasyonun iki sitogenetik bulgusu vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0130",
+       "ses": "1.'si çift dakikalardır: çekirdekte normal kromozomların dışında bulunan, sentromeri olmayan, yani asentrik, küçük ve genellikle dairesel kromozom dışı DNA parçalarıdır.",
+       "ekran": "1.'si çift dakikalardır: çekirdekte normal kromozomların dışında bulunan, sentromeri olmayan, yani asentrik, küçük ve genellikle dairesel kromozom dışı DNA parçalarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0131",
+       "ses": "Sentromerleri olmadığı için mitoz iğine bağlanamaz, yavru hücrelere eşit dağılmaz; bu yüzden kopya sayısı hücreden hücreye değişebilir.",
+       "ekran": "Sentromerleri olmadığı için mitoz iğine bağlanamaz, yavru hücrelere eşit dağılmaz; bu yüzden kopya sayısı hücreden hücreye değişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0132",
+       "ses": "2.'si homojen boyanan bölgelerdir: amplifiye DNA bir kromozoma entegre olur ve bantlama boyasıyla tek tip boyanan uzun bir segment olarak görülür.",
+       "ekran": "2.'si homojen boyanan bölgelerdir: amplifiye DNA bir kromozoma entegre olur ve bantlama boyasıyla tek tip boyanan uzun bir segment olarak görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0133",
+       "ses": "Karyotipte bu iki bulgudan birini görmek, o tümörde bir onkogenin amplifiye olduğunu düşündürür; hangi genin amplifiye olduğu ise tümör tipine göre değişir.",
+       "ekran": "Karyotipte bu iki bulgudan birini görmek, o tümörde bir onkogenin amplifiye olduğunu düşündürür; hangi genin amplifiye olduğu ise tümör tipine göre değişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b09",
+   "baslik": "MYCN ve HER2 amplifikasyonu",
+   "paragraflar": [
+    {
+     "id": "k1-29-p024",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-29-c0134",
+       "ses": "Amplifikasyonun ilk klasik örneği nöroblastomdur.",
+       "ekran": "Amplifikasyonun ilk klasik örneği nöroblastomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0135",
+       "ses": "Nöroblastom, nöral krista kökenli bir çocukluk çağı tümörüdür.",
+       "ekran": "Nöroblastom, nöral krista kökenli bir çocukluk çağı tümörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0136",
+       "ses": "MYC ailesinden bir onkogen olan MYCN, normalde 2. kromozomun kısa kolunda, yani 2p bölgesinde tek kopya halinde bulunur.",
+       "ekran": "MYC ailesinden bir onkogen olan MYCN, normalde 2. kromozomun kısa kolunda, yani 2p bölgesinde tek kopya halinde bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0137",
+       "ses": "Amplifiye MYCN iki biçimde görülebilir: kromozom dışı çok sayıda küçük yuvarlak çift dakika olarak ya da kromozoma entegre homojen boyanan bölge olarak.",
+       "ekran": "Amplifiye MYCN iki biçimde görülebilir: kromozom dışı çok sayıda küçük yuvarlak çift dakika olarak ya da kromozoma entegre homojen boyanan bölge olarak.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0138",
+       "ses": "Şekilde bu bölge 5. kromozomun uzun kolu üzerinde uzun bir segment halinde gösterilir; yani amplifiye bölge her zaman genin orijinal kromozomunda kalmaz.",
+       "ekran": "Şekilde bu bölge 5. kromozomun uzun kolu üzerinde uzun bir segment halinde gösterilir; yani amplifiye bölge her zaman genin orijinal kromozomunda kalmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0139",
+       "ses": "Burası önemli, MYCN amplifikasyonu nöroblastomda kötü prognozla ilişkilidir; kopya sayısı arttıkça ürün artar ve tümör daha agresif davranır.",
+       "ekran": "Burası önemli, MYCN amplifikasyonu nöroblastomda kötü prognozla ilişkilidir; kopya sayısı arttıkça ürün artar ve tümör daha agresif davranır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p025",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-29-c0140",
+       "ses": "İkinci klasik örnek HER2, diğer adıyla ERBB2 genidir.",
+       "ekran": "İkinci klasik örnek HER2, diğer adıyla ERBB2 genidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0141",
+       "ses": "Bu gen bir büyüme faktörü reseptörü kodlar.",
+       "ekran": "Bu gen bir büyüme faktörü reseptörü kodlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0142",
+       "ses": "HER2 amplifikasyonu meme karsinomlarının yaklaşık %20'sinde görülür.",
+       "ekran": "HER2 amplifikasyonu meme karsinomlarının yaklaşık %20'sinde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0143",
+       "ses": "Kopya sayısı artışı, reseptörün hücre yüzeyinde aşırı ekspresyonuna ve büyüme sinyalinin artmasına yol açar.",
+       "ekran": "Kopya sayısı artışı, reseptörün hücre yüzeyinde aşırı ekspresyonuna ve büyüme sinyalinin artmasına yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0144",
+       "ses": "Burası önemli, çıkmış soruda aşırı reseptör ekspresyonu yoluyla kanser gelişiminde rol oynayan gen olarak ERBB2 soruldu.",
+       "ekran": "Burası önemli, çıkmış soruda aşırı reseptör ekspresyonu yoluyla kanser gelişiminde rol oynayan gen olarak ERBB2 soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0145",
+       "ses": "HER2 amplifikasyonu aynı zamanda HER2'yi hedefleyen tedaviye yanıtı belirleyen göstergedir; klinikte bu tümörlerde HER2'yi hedefleyen monoklonal antikor trastuzumab kullanılır.",
+       "ekran": "HER2 amplifikasyonu aynı zamanda HER2'yi hedefleyen tedaviye yanıtı belirleyen göstergedir; klinikte bu tümörlerde HER2'yi hedefleyen monoklonal antikor trastuzumab kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0146",
+       "ses": "Karşılaştırırsak, MYCN amplifikasyonu nöroblastomda prognoz bilgisi verirken, HER2 amplifikasyonu meme karsinomunda tedaviye yanıtı öngörür.",
+       "ekran": "Karşılaştırırsak, MYCN amplifikasyonu nöroblastomda prognoz bilgisi verirken, HER2 amplifikasyonu meme karsinomunda tedaviye yanıtı öngörür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b10",
+   "baslik": "Anöploidi ve mikro RNA",
+   "paragraflar": [
+    {
+     "id": "k1-29-p026",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-29-c0147",
+       "ses": "Anöploidi, kromozom sayısının bozulmasıdır ve tanımı haploid sayıya göre yapılır: haploid sayının katı olmayan kromozom sayısıdır.",
+       "ekran": "Anöploidi, kromozom sayısının bozulmasıdır ve tanımı haploid sayıya göre yapılır: haploid sayının katı olmayan kromozom sayısıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0148",
+       "ses": "İnsanda bu, 23'ün katı olmayan bir sayı demektir; örneğin 47 ya da 45.",
+       "ekran": "İnsanda bu, 23'ün katı olmayan bir sayı demektir; örneğin 47 ya da 45.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0149",
+       "ses": "46 ve 69 23'ün katı olduğu için öploid sayılır.",
+       "ekran": "46 ve 69 23'ün katı olduğu için öploid sayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0150",
+       "ses": "Anöploidinin iki nedeni vardır.",
+       "ekran": "Anöploidinin iki nedeni vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0151",
+       "ses": "1.'si mitoz kontrol noktası kusurlarıdır; kromozomlar iğe doğru bağlanmadan bölünmenin sürmesine izin verilir.",
+       "ekran": "1.'si mitoz kontrol noktası kusurlarıdır; kromozomlar iğe doğru bağlanmadan bölünmenin sürmesine izin verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0152",
+       "ses": "2.'si kromozom ayrılma hatalarıdır; kardeş kromatidler yavru hücrelere eşit dağılmaz.",
+       "ekran": "2.'si kromozom ayrılma hatalarıdır; kardeş kromatidler yavru hücrelere eşit dağılmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0153",
+       "ses": "Sonuç bir doz etkisidir: fazladan kromozom onkogen dozunu artırır, kaybolan kromozom tümör baskılayıcı gen dozunu azaltır.",
+       "ekran": "Sonuç bir doz etkisidir: fazladan kromozom onkogen dozunu artırır, kaybolan kromozom tümör baskılayıcı gen dozunu azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0154",
+       "ses": "Anöploidi birçok tümörde yaygın genomik istikrarsızlığın göstergesidir.",
+       "ekran": "Anöploidi birçok tümörde yaygın genomik istikrarsızlığın göstergesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p027",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-29-c0155",
+       "ses": "Mikro RNA'lar kodlamayan, kısa, tek sarmallı RNA'lardır; protein üretmezler.",
+       "ekran": "Mikro RNA'lar kodlamayan, kısa, tek sarmallı RNA'lardır; protein üretmezler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0156",
+       "ses": "Hedef mesajcı RNA'nın translasyonunu baskılar ya da onu yıkıma uğratırlar.",
+       "ekran": "Hedef mesajcı RNA'nın translasyonunu baskılar ya da onu yıkıma uğratırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0157",
+       "ses": "Kanserde iki yoldan onkojenik etki yaparlar.",
+       "ekran": "Kanserde iki yoldan onkojenik etki yaparlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0158",
+       "ses": "Birinci yolda tümör baskılayıcı genin mesajcı RNA'sını hedefleyen mikro RNA artar ve tümör baskılayıcı protein azalır.",
+       "ekran": "Birinci yolda tümör baskılayıcı genin mesajcı RNA'sını hedefleyen mikro RNA artar ve tümör baskılayıcı protein azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0159",
+       "ses": "İkinci yolda normalde onkogenin mesajcı RNA'sını baskılayan mikro RNA kaybolur ve onkoprotein artar.",
+       "ekran": "İkinci yolda normalde onkogenin mesajcı RNA'sını baskılayan mikro RNA kaybolur ve onkoprotein artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0160",
+       "ses": "Onkojenik etkiye sahip mikro RNA'ya onkomir denir.",
+       "ekran": "Onkojenik etkiye sahip mikro RNA'ya onkomir denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0161",
+       "ses": "Mantığı tersine düşünmek gerekir: mikro RNA bir susturucudur; fren genini susturanın artışı da, gaz genini susturanın kaybı da büyüme lehine aynı dengeye çıkar.",
+       "ekran": "Mantığı tersine düşünmek gerekir: mikro RNA bir susturucudur; fren genini susturanın artışı da, gaz genini susturanın kaybı da büyüme lehine aynı dengeye çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b11",
+   "baslik": "Epigenetik değişiklikler",
+   "paragraflar": [
+    {
+     "id": "k1-29-p028",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-29-c0162",
+       "ses": "Epigenetik, DNA dizisi değişmeden gen ekspresyonunun kalıcı değişimidir.",
+       "ekran": "Epigenetik, DNA dizisi değişmeden gen ekspresyonunun kalıcı değişimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0163",
+       "ses": "Gen sağlamdır, ancak açılıp kapanması değişir ve bu durum hücre bölündükçe yavru hücrelere aktarılır.",
+       "ekran": "Gen sağlamdır, ancak açılıp kapanması değişir ve bu durum hücre bölündükçe yavru hücrelere aktarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0164",
+       "ses": "İki temel mekanizma vardır.",
+       "ekran": "İki temel mekanizma vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0165",
+       "ses": "DNA metilasyonunda sitozinlere metil grubu eklenir ve özellikle promotör bölgelerinde genin transkripsiyonu baskılanır.",
+       "ekran": "DNA metilasyonunda sitozinlere metil grubu eklenir ve özellikle promotör bölgelerinde genin transkripsiyonu baskılanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0166",
+       "ses": "Histon modifikasyonlarında ise DNA'nın sarıldığı histon proteinlerindeki kimyasal değişiklikler kromatinin açık ya da kapalı olmasını belirler; kapalı kromatindeki gen okunamaz.",
+       "ekran": "Histon modifikasyonlarında ise DNA'nın sarıldığı histon proteinlerindeki kimyasal değişiklikler kromatinin açık ya da kapalı olmasını belirler; kapalı kromatindeki gen okunamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0167",
+       "ses": "Epigenetik ve mikro RNA değişiklikleri, gen ekspresyonunda geri dönüşümlü ama kalıcı değişikliklerdir.",
+       "ekran": "Epigenetik ve mikro RNA değişiklikleri, gen ekspresyonunda geri dönüşümlü ama kalıcı değişikliklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0168",
+       "ses": "Bir benzetmeyle mutasyon yazının silinmesi, epigenetik değişiklik ise sayfanın kapatılmasıdır; metin aynıdır ama okunamaz.",
+       "ekran": "Bir benzetmeyle mutasyon yazının silinmesi, epigenetik değişiklik ise sayfanın kapatılmasıdır; metin aynıdır ama okunamaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p029",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-29-c0169",
+       "ses": "Kanser hücresinde metilasyon tek yönde değişmez; iki zıt değişiklik aynı anda görülür.",
+       "ekran": "Kanser hücresinde metilasyon tek yönde değişmez; iki zıt değişiklik aynı anda görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0170",
+       "ses": "Genomun genelinde metil grupları azalır, buna global DNA hipometilasyonu denir ve bu değişiklik kromozom yapısını kararsızlaştırarak genomik instabiliteye katkı yapar.",
+       "ekran": "Genomun genelinde metil grupları azalır, buna global DNA hipometilasyonu denir ve bu değişiklik kromozom yapısını kararsızlaştırarak genomik instabiliteye katkı yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0171",
+       "ses": "Öte yandan tümör baskılayıcı gen promotörlerinde hipermetilasyon olur ve bu genlerin ekspresyonu susturulur.",
+       "ekran": "Öte yandan tümör baskılayıcı gen promotörlerinde hipermetilasyon olur ve bu genlerin ekspresyonu susturulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0172",
+       "ses": "Promotör hipermetilasyonu, tümör baskılayıcı genin dizisine dokunmadan onu devre dışı bıraktığı için iki vuruş modelinde vuruşlardan biri olarak işlev görebilir.",
+       "ekran": "Promotör hipermetilasyonu, tümör baskılayıcı genin dizisine dokunmadan onu devre dışı bıraktığı için iki vuruş modelinde vuruşlardan biri olarak işlev görebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0173",
+       "ses": "Burası önemli, sınav tuzağıdır: kanserde genel hipometilasyon ile tümör baskılayıcı promotörlerinde hipermetilasyon birlikte bulunur.",
+       "ekran": "Burası önemli, sınav tuzağıdır: kanserde genel hipometilasyon ile tümör baskılayıcı promotörlerinde hipermetilasyon birlikte bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0174",
+       "ses": "Hipometilasyonu instabiliteyle, hipermetilasyonu susturmayla eşleştirin.",
+       "ekran": "Hipometilasyonu instabiliteyle, hipermetilasyonu susturmayla eşleştirin.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b12",
+   "baslik": "Genomik istikrarsızlık ve uyumsuzluk onarımı",
+   "paragraflar": [
+    {
+     "id": "k1-29-p030",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-29-c0175",
+       "ses": "Genomik istikrarsızlık, kanser özelliklerinin kazanılmasını kolaylaştıran etkinleştirici faktörlerden biridir.",
+       "ekran": "Genomik istikrarsızlık, kanser özelliklerinin kazanılmasını kolaylaştıran etkinleştirici faktörlerden biridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0176",
+       "ses": "Tanımı geniştir: mutasyon oranını artıran her durum genomik instabiliteye yol açar.",
+       "ekran": "Tanımı geniştir: mutasyon oranını artıran her durum genomik instabiliteye yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0177",
+       "ses": "DNA onarım sistemi bozulduğunda hatalar düzeltilmez ve çok sayıda sürücü ve yolcu mutasyon birikir.",
+       "ekran": "DNA onarım sistemi bozulduğunda hatalar düzeltilmez ve çok sayıda sürücü ve yolcu mutasyon birikir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0178",
+       "ses": "Sürücü mutasyon, hücreye büyüme ya da sağkalım avantajı kazandırarak kanser gelişimini ileri taşıyan mutasyondur.",
+       "ekran": "Sürücü mutasyon, hücreye büyüme ya da sağkalım avantajı kazandırarak kanser gelişimini ileri taşıyan mutasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0179",
+       "ses": "Yolcu mutasyon ise seçilim avantajı sağlamayan, sürücülerle birlikte yolculuk eden mutasyondur.",
+       "ekran": "Yolcu mutasyon ise seçilim avantajı sağlamayan, sürücülerle birlikte yolculuk eden mutasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0180",
+       "ses": "Kalıtsal DNA onarım bozuklukları kanser riskini dramatik biçimde artırır.",
+       "ekran": "Kalıtsal DNA onarım bozuklukları kanser riskini dramatik biçimde artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0181",
+       "ses": "Aynı onarım sistemleri sonradan, somatik olarak bozulduğunda ise çeşitli sporadik kanserlerde benzer mutasyon imzaları görülür; mutasyon imzası, belirli bir hasara ya da onarım kusuruna özgü mutasyon desenidir.",
+       "ekran": "Aynı onarım sistemleri sonradan, somatik olarak bozulduğunda ise çeşitli sporadik kanserlerde benzer mutasyon imzaları görülür; mutasyon imzası, belirli bir hasara ya da onarım kusuruna özgü mutasyon desenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0182",
+       "ses": "Bu bölümde 4 onarım sistemi işlenir.",
+       "ekran": "Bu bölümde 4 onarım sistemi işlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p031",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-29-c0183",
+       "ses": "1.'si uyumsuzluk onarımıdır.",
+       "ekran": "1.'si uyumsuzluk onarımıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0184",
+       "ses": "Bu sistem DNA replikasyonunda yanlış eşleşen bazları düzeltir; polimerazın atladığı hataları replikasyondan hemen sonra yakalayan bir yazım denetimi gibidir.",
+       "ekran": "Bu sistem DNA replikasyonunda yanlış eşleşen bazları düzeltir; polimerazın atladığı hataları replikasyondan hemen sonra yakalayan bir yazım denetimi gibidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0185",
+       "ses": "Kusurunun klasik örneği Lynch sendromu, diğer adıyla kalıtsal polipozsuz kolorektal kanser sendromudur.",
+       "ekran": "Kusurunun klasik örneği Lynch sendromu, diğer adıyla kalıtsal polipozsuz kolorektal kanser sendromudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0186",
+       "ses": "Burası önemli: birinci vuruş olarak uyumsuzluk onarım genlerinden birinde germ hattı mutasyonu kalıtılır, ikinci vuruş olarak kalan sağlam alelde somatik bir ikinci darbe gelişir.",
+       "ekran": "Burası önemli: birinci vuruş olarak uyumsuzluk onarım genlerinden birinde germ hattı mutasyonu kalıtılır, ikinci vuruş olarak kalan sağlam alelde somatik bir ikinci darbe gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0187",
+       "ses": "Sistem tamamen kaybolur, replikasyon hataları düzeltilmez ve mutasyon birikimi hızlanır.",
+       "ekran": "Sistem tamamen kaybolur, replikasyon hataları düzeltilmez ve mutasyon birikimi hızlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0188",
+       "ses": "Lynch sendromu, iki vuruş hipotezinin bir onarım geninde uygulanmasıdır.",
+       "ekran": "Lynch sendromu, iki vuruş hipotezinin bir onarım geninde uygulanmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p032",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-29-c0189",
+       "ses": "Uyumsuzluk onarım kaybının laboratuvarda görülebilen izi mikrosatellit instabilitesidir.",
+       "ekran": "Uyumsuzluk onarım kaybının laboratuvarda görülebilen izi mikrosatellit instabilitesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0190",
+       "ses": "Mikrosatellitler, genomda 1 ile 6 baz arasındaki kısa dizilerin art arda tekrarlandığı bölgelerdir.",
+       "ekran": "Mikrosatellitler, genomda 1 ile 6 baz arasındaki kısa dizilerin art arda tekrarlandığı bölgelerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0191",
+       "ses": "Bu tekrar dizilerinde polimeraz kayabilir ve birkaç tekrar fazla ya da eksik kopyalanabilir; normalde bu kaymaları uyumsuzluk onarımı düzeltir.",
+       "ekran": "Bu tekrar dizilerinde polimeraz kayabilir ve birkaç tekrar fazla ya da eksik kopyalanabilir; normalde bu kaymaları uyumsuzluk onarımı düzeltir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0192",
+       "ses": "Sistem kaybolduğunda tekrar dizilerinin uzunluğu değişir ve tümör DNA'sındaki mikrosatellitler normal dokudakinden farklı uzunlukta bulunur.",
+       "ekran": "Sistem kaybolduğunda tekrar dizilerinin uzunluğu değişir ve tümör DNA'sındaki mikrosatellitler normal dokudakinden farklı uzunlukta bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0193",
+       "ses": "Mikrosatellit instabilitesi Lynch sendromu tümörlerinde ve bazı sporadik kanserlerde sıktır.",
+       "ekran": "Mikrosatellit instabilitesi Lynch sendromu tümörlerinde ve bazı sporadik kanserlerde sıktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0194",
+       "ses": "Bu nedenle onarım kusurunun dolaylı kanıtıdır, ama tek başına kalıtsal sendromu kanıtlamaz.",
+       "ekran": "Bu nedenle onarım kusurunun dolaylı kanıtıdır, ama tek başına kalıtsal sendromu kanıtlamaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b13",
+   "baslik": "Nükleotid eksizyon onarımı ve homolog rekombinasyon",
+   "paragraflar": [
+    {
+     "id": "k1-29-p033",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-29-c0195",
+       "ses": "İkinci sistem nükleotid eksizyon onarımıdır.",
+       "ekran": "İkinci sistem nükleotid eksizyon onarımıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0196",
+       "ses": "Ultraviyole ışınları DNA'da pirimidin dimerleri oluşturur; komşu iki pirimidin bazı birbirine kovalent bağlanır ve sarmal bozulur.",
+       "ekran": "Ultraviyole ışınları DNA'da pirimidin dimerleri oluşturur; komşu iki pirimidin bazı birbirine kovalent bağlanır ve sarmal bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0197",
+       "ses": "Nükleotid eksizyon onarımı bu lezyonu içeren DNA parçasını çıkarır ve sağlam ipliği kalıp alarak boşluğu doldurur.",
+       "ekran": "Nükleotid eksizyon onarımı bu lezyonu içeren DNA parçasını çıkarır ve sağlam ipliği kalıp alarak boşluğu doldurur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0198",
+       "ses": "Burası önemli, kseroderma pigmentozum bu yolun otozomal resesif kusurudur.",
+       "ekran": "Burası önemli, kseroderma pigmentozum bu yolun otozomal resesif kusurudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0199",
+       "ses": "Ultraviyole hasarı kalıcı mutasyona dönüşür ve güneş gören ciltte melanom, skuamöz hücreli karsinom ve bazal hücreli karsinom riski dramatik biçimde artar.",
+       "ekran": "Ultraviyole hasarı kalıcı mutasyona dönüşür ve güneş gören ciltte melanom, skuamöz hücreli karsinom ve bazal hücreli karsinom riski dramatik biçimde artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0200",
+       "ses": "Risk vücudun tamamında değil güneş gören ciltte artar, çünkü kusurlu olan tam da ultraviyolenin yaptığı hasarı onaran sistemdir.",
+       "ekran": "Risk vücudun tamamında değil güneş gören ciltte artar, çünkü kusurlu olan tam da ultraviyolenin yaptığı hasarı onaran sistemdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p034",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-29-c0201",
+       "ses": "Üçüncü sistem homolog rekombinasyondur.",
+       "ekran": "Üçüncü sistem homolog rekombinasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0202",
+       "ses": "Bu sistem DNA'daki ağır hasarları, sağlam homolog kopyayı kalıp alarak hatasız onarır.",
+       "ekran": "Bu sistem DNA'daki ağır hasarları, sağlam homolog kopyayı kalıp alarak hatasız onarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0203",
+       "ses": "Kusurlu olduğu 3 klasik hastalık Bloom sendromu, ataksi telenjiektazi ve Fanconi anemisidir.",
+       "ekran": "Kusurlu olduğu 3 klasik hastalık Bloom sendromu, ataksi telenjiektazi ve Fanconi anemisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0204",
+       "ses": "Ortak özellikleri iki tanedir.",
+       "ekran": "Ortak özellikleri iki tanedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0205",
+       "ses": "1.'si, iyonlaştırıcı radyasyon gibi DNA'ya zarar veren ajanlara aşırı duyarlılıktır; hasar onarılamadığı için hücre ya ölür ya da mutasyon biriktirir.",
+       "ekran": "1.'si, iyonlaştırıcı radyasyon gibi DNA'ya zarar veren ajanlara aşırı duyarlılıktır; hasar onarılamadığı için hücre ya ölür ya da mutasyon biriktirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0206",
+       "ses": "2.'si kromozomal kırıklar ve yeniden düzenlemelerdir; onarılmayan kırık uçlar yanlış birleşir, translokasyon ve delesyon gibi değişiklikler artar.",
+       "ekran": "2.'si kromozomal kırıklar ve yeniden düzenlemelerdir; onarılmayan kırık uçlar yanlış birleşir, translokasyon ve delesyon gibi değişiklikler artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0207",
+       "ses": "Karşılaştırırsak, uyumsuzluk onarımı kusuru nokta mutasyon ve mikrosatellit instabilitesiyle, homolog rekombinasyon kusuru ise kromozom kırıklarıyla karakterizedir.",
+       "ekran": "Karşılaştırırsak, uyumsuzluk onarımı kusuru nokta mutasyon ve mikrosatellit instabilitesiyle, homolog rekombinasyon kusuru ise kromozom kırıklarıyla karakterizedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p035",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-29-c0208",
+       "ses": "BRCA1 ve BRCA2, homolog rekombinasyon tamirinde görevli genlerdir.",
+       "ekran": "BRCA1 ve BRCA2, homolog rekombinasyon tamirinde görevli genlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0209",
+       "ses": "Kalıtılan germ hattı mutasyonları meme, over ve diğer kanserlerde risk artışına yol açar.",
+       "ekran": "Kalıtılan germ hattı mutasyonları meme, over ve diğer kanserlerde risk artışına yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0210",
+       "ses": "Taşıyıcının hücrelerinde bir alel doğuştan bozuktur; tümör gelişimi için sağlam alelin de kaybı gerekir.",
+       "ekran": "Taşıyıcının hücrelerinde bir alel doğuştan bozuktur; tümör gelişimi için sağlam alelin de kaybı gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0211",
+       "ses": "Homolog rekombinasyon kaybolunca hücre kırıkları hatalı yollarla birleştirir ve kromozomal yeniden düzenlemeler birikir.",
+       "ekran": "Homolog rekombinasyon kaybolunca hücre kırıkları hatalı yollarla birleştirir ve kromozomal yeniden düzenlemeler birikir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0212",
+       "ses": "Bu genler onkogen değil, genom bütünlüğünü koruyan tümör baskılayıcı onarım genleridir ve ailesel meme ve over kanseri riskinin temelini oluşturur.",
+       "ekran": "Bu genler onkogen değil, genom bütünlüğünü koruyan tümör baskılayıcı onarım genleridir ve ailesel meme ve over kanseri riskinin temelini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b14",
+   "baslik": "Polimeraz düzeltme kusuru ve lenfoid kararsızlık",
+   "paragraflar": [
+    {
+     "id": "k1-29-p036",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-29-c0213",
+       "ses": "Dördüncü sistem DNA polimerazın düzeltme, yani proofreading işlevidir.",
+       "ekran": "Dördüncü sistem DNA polimerazın düzeltme, yani proofreading işlevidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0214",
+       "ses": "Polimeraz yalnızca DNA sentezlemez; 3'ten 5'e yönündeki ekzonükleaz aktivitesiyle yanlış eklediği nükleotidi hemen geri çıkarıp düzeltir.",
+       "ekran": "Polimeraz yalnızca DNA sentezlemez; 3'ten 5'e yönündeki ekzonükleaz aktivitesiyle yanlış eklediği nükleotidi hemen geri çıkarıp düzeltir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0215",
+       "ses": "Bu işlev kusurlu olduğunda nokta mutasyon oranında büyük artış olur.",
+       "ekran": "Bu işlev kusurlu olduğunda nokta mutasyon oranında büyük artış olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0216",
+       "ses": "Bu kusur bazı endometrium ve kolorektal karsinom alt tiplerinde görülür.",
+       "ekran": "Bu kusur bazı endometrium ve kolorektal karsinom alt tiplerinde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0217",
+       "ses": "Çok sayıda mutasyon, bağışıklık sisteminin yabancı olarak tanıyabileceği çok sayıda neoantijen üretir.",
+       "ekran": "Çok sayıda mutasyon, bağışıklık sisteminin yabancı olarak tanıyabileceği çok sayıda neoantijen üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0218",
+       "ses": "Burası önemli, yüksek neoantijen yükü nedeniyle bu tümörler immün kontrol noktası inhibitörlerine iyi yanıt verir.",
+       "ekran": "Burası önemli, yüksek neoantijen yükü nedeniyle bu tümörler immün kontrol noktası inhibitörlerine iyi yanıt verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0219",
+       "ses": "Paradoks şudur: mutasyon yükü çok yüksek olan tümör, bağışıklık açısından daha görünür olduğu için immünoterapiye daha iyi yanıt verir.",
+       "ekran": "Paradoks şudur: mutasyon yükü çok yüksek olan tümör, bağışıklık açısından daha görünür olduğu için immünoterapiye daha iyi yanıt verir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p037",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-29-c0220",
+       "ses": "4 sistemi tek cümlede eşleştirelim: uyumsuzluk onarımı ile Lynch sendromu ve mikrosatellit instabilitesi, nükleotid eksizyon onarımı ile kseroderma pigmentozum ve ultraviyoleye bağlı cilt kanseri, homolog rekombinasyon ile BRCA genleri, Bloom, ataksi telenjiektazi, Fanconi ve kromozom kırıkları, polimeraz düzeltme kusuru ile hipermutasyon ve bazı endometrium karsinomları.",
+       "ekran": "4 sistemi tek cümlede eşleştirelim: uyumsuzluk onarımı ile Lynch sendromu ve mikrosatellit instabilitesi, nükleotid eksizyon onarımı ile kseroderma pigmentozum ve ultraviyoleye bağlı cilt kanseri, homolog rekombinasyon ile BRCA genleri, Bloom, ataksi telenjiektazi, Fanconi ve kromozom kırıkları, polimeraz düzeltme kusuru ile hipermutasyon ve bazı endometrium karsinomları.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p038",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-29-c0221",
+       "ses": "Lenfositler ise diğer hücrelerden farklı olarak kendi DNA'larını bilerek keser ve yeniden düzenler.",
+       "ekran": "Lenfositler ise diğer hücrelerden farklı olarak kendi DNA'larını bilerek keser ve yeniden düzenler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0222",
+       "ses": "Normal adaptif bağışıklık, immünoglobulin ve T hücresi reseptörü genlerinin çeşitlenmesine dayanır.",
+       "ekran": "Normal adaptif bağışıklık, immünoglobulin ve T hücresi reseptörü genlerinin çeşitlenmesine dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0223",
+       "ses": "RAG1 ve RAG2, yani rekombinasyonu aktive eden genler, antijen reseptör gen segmentlerini kesip birleştirerek çeşitlilik yaratır.",
+       "ekran": "RAG1 ve RAG2, yani rekombinasyonu aktive eden genler, antijen reseptör gen segmentlerini kesip birleştirerek çeşitlilik yaratır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0224",
+       "ses": "Aktivasyonla uyarılan sitidin deaminaz ise B hücrelerinde sınıf değişimi gibi olaylarda DNA'da hedefli değişiklik yapar.",
+       "ekran": "Aktivasyonla uyarılan sitidin deaminaz ise B hücrelerinde sınıf değişimi gibi olaylarda DNA'da hedefli değişiklik yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0225",
+       "ses": "Bu kontrollü kırılmalar bazen hatalı sonuçlanır; yanlış rekombinasyon ve sınıf değişim olayları çeşitli lenfoma ve lösemilerde görülen translokasyonların temelinde yatar.",
+       "ekran": "Bu kontrollü kırılmalar bazen hatalı sonuçlanır; yanlış rekombinasyon ve sınıf değişim olayları çeşitli lenfoma ve lösemilerde görülen translokasyonların temelinde yatar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0226",
+       "ses": "Bu düzenlenmiş kararsızlık, translokasyonların neden hematolojik malignitelerde sık olduğunu ve Burkitt ile foliküler lenfomada ortak eşin neden immünoglobulin ağır zincir lokusu olduğunu açıklar.",
+       "ekran": "Bu düzenlenmiş kararsızlık, translokasyonların neden hematolojik malignitelerde sık olduğunu ve Burkitt ile foliküler lenfomada ortak eşin neden immünoglobulin ağır zincir lokusu olduğunu açıklar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b15",
+   "baslik": "Tümörü destekleyen enflamasyon",
+   "paragraflar": [
+    {
+     "id": "k1-29-p039",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-29-c0227",
+       "ses": "Tümörü destekleyen enflamasyon, iki etkinleştirici faktörden ikincisidir.",
+       "ekran": "Tümörü destekleyen enflamasyon, iki etkinleştirici faktörden ikincisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0228",
+       "ses": "Bağışıklık hücreleri tümörü her zaman yok etmez; bazı koşullarda onu besler.",
+       "ekran": "Bağışıklık hücreleri tümörü her zaman yok etmez; bazı koşullarda onu besler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0229",
+       "ses": "İnvaziv tümörler çoğunlukla kronik enflamatuar infiltrasyonla birlikte bulunur.",
+       "ekran": "İnvaziv tümörler çoğunlukla kronik enflamatuar infiltrasyonla birlikte bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0230",
+       "ses": "Tümörle ilişkili enflamatuar hücreler makrofajlar, nötrofiller ve lenfositlerdir.",
+       "ekran": "Tümörle ilişkili enflamatuar hücreler makrofajlar, nötrofiller ve lenfositlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0231",
+       "ses": "Bu hücreler tümörün büyümesini, anjiyogenezini, invazyonunu ve bağışıklık kaçışını destekler.",
+       "ekran": "Bu hücreler tümörün büyümesini, anjiyogenezini, invazyonunu ve bağışıklık kaçışını destekler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0232",
+       "ses": "Burası önemli, invaziv kanser stroması iyileşen yara stromasına benzer; yara iyileşmesindeki büyüme faktörü salınımı, damar oluşumu ve matriks yeniden yapılanması tümörde de görülür.",
+       "ekran": "Burası önemli, invaziv kanser stroması iyileşen yara stromasına benzer; yara iyileşmesindeki büyüme faktörü salınımı, damar oluşumu ve matriks yeniden yapılanması tümörde de görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0233",
+       "ses": "Tümör, hiç iyileşmeyen bir yara gibi bu programı sürekli açık tutar.",
+       "ekran": "Tümör, hiç iyileşmeyen bir yara gibi bu programı sürekli açık tutar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p040",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-29-c0234",
+       "ses": "Enflamatuar hücreler tümörü 4 yoldan destekler.",
+       "ekran": "Enflamatuar hücreler tümörü 4 yoldan destekler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0235",
+       "ses": "1.'si, epidermal büyüme faktörü ve diğer büyüme faktörleri tümör hücresinin çoğalmasını uyarır.",
+       "ekran": "1.'si, epidermal büyüme faktörü ve diğer büyüme faktörleri tümör hücresinin çoğalmasını uyarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0236",
+       "ses": "2.'si, matriks metalloproteinazlar hücre dışı matriksi yeniden şekillendirir ve tümör hücre göçünü ve invazyonu kolaylaştırır.",
+       "ekran": "2.'si, matriks metalloproteinazlar hücre dışı matriksi yeniden şekillendirir ve tümör hücre göçünü ve invazyonu kolaylaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0237",
+       "ses": "3.'sü, VEGF salınımıyla anjiyogenez artar.",
+       "ekran": "3.'sü, VEGF salınımıyla anjiyogenez artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0238",
+       "ses": "4.'sü, bağışıklık baskılayıcı bir mikroçevre oluşur: düzenleyici T hücreleri ve miyeloid kökenli baskılayıcı hücreler birikir, transforme edici büyüme faktörü beta üretilir.",
+       "ekran": "4.'sü, bağışıklık baskılayıcı bir mikroçevre oluşur: düzenleyici T hücreleri ve miyeloid kökenli baskılayıcı hücreler birikir, transforme edici büyüme faktörü beta üretilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0239",
+       "ses": "Bu üçlü, tümörü sitotoksik bağışıklık yanıtından korur.",
+       "ekran": "Bu üçlü, tümörü sitotoksik bağışıklık yanıtından korur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b16",
+   "baslik": "Kimyasal karsinojenler",
+   "paragraflar": [
+    {
+     "id": "k1-29-p041",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-29-c0240",
+       "ses": "Kimyasal karsinojenlerin çoğu mutajeniktir.",
+       "ekran": "Kimyasal karsinojenlerin çoğu mutajeniktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0241",
+       "ses": "Elektronca fakir, yani elektrofil gruplar içerirler ve bu gruplar elektronca zengin DNA bazlarıyla kovalent bağ oluşturarak kalıcı hasar yapar.",
+       "ekran": "Elektronca fakir, yani elektrofil gruplar içerirler ve bu gruplar elektronca zengin DNA bazlarıyla kovalent bağ oluşturarak kalıcı hasar yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0242",
+       "ses": "Hedefleri daha önce gördüğümüz kanser genleridir; örneğin Ras'ta aktive edici, TP53'te inaktive edici mutasyonlar.",
+       "ekran": "Hedefleri daha önce gördüğümüz kanser genleridir; örneğin Ras'ta aktive edici, TP53'te inaktive edici mutasyonlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0243",
+       "ses": "Kimyasal karsinojenler iki gruba ayrılır: doğrudan etkili olanlar metabolik aktivasyona gerek duymaz, kendileri aktiftir; dolaylı etkili olanlar ise vücutta aktif kanserojene dönüştürülür.",
+       "ekran": "Kimyasal karsinojenler iki gruba ayrılır: doğrudan etkili olanlar metabolik aktivasyona gerek duymaz, kendileri aktiftir; dolaylı etkili olanlar ise vücutta aktif kanserojene dönüştürülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p042",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-29-c0244",
+       "ses": "Doğrudan etkili karsinojenlerin örneği bazı alkilleyici kemoterapi ilaçlarıdır.",
+       "ekran": "Doğrudan etkili karsinojenlerin örneği bazı alkilleyici kemoterapi ilaçlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0245",
+       "ses": "Bu ilaçlar Hodgkin lenfoma gibi tümörlerin tedavisinde kullanılır ve tümör DNA'sını hasarlayarak etki eder; ancak aynı hasar normal hücrelerde de oluşur.",
+       "ekran": "Bu ilaçlar Hodgkin lenfoma gibi tümörlerin tedavisinde kullanılır ve tümör DNA'sını hasarlayarak etki eder; ancak aynı hasar normal hücrelerde de oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0246",
+       "ses": "Burası önemli, alkilleyici ajanlar yıllar sonra akut miyeloid lösemi riskini artırabilir.",
+       "ekran": "Burası önemli, alkilleyici ajanlar yıllar sonra akut miyeloid lösemi riskini artırabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0247",
+       "ses": "Ayrıca romatoid artrit gibi neoplastik olmayan hastalıklarda da uzun süreli kullanılabildikleri için ikinci malignite riski dikkate alınmalı ve yarar ile risk dengesi gözetilmelidir.",
+       "ekran": "Ayrıca romatoid artrit gibi neoplastik olmayan hastalıklarda da uzun süreli kullanılabildikleri için ikinci malignite riski dikkate alınmalı ve yarar ile risk dengesi gözetilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p043",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-29-c0248",
+       "ses": "Dolaylı etkili karsinojenler metabolik aktivasyon gerektirir; alındıkları biçimde zararsız ya da az zararlıdır.",
+       "ekran": "Dolaylı etkili karsinojenler metabolik aktivasyon gerektirir; alındıkları biçimde zararsız ya da az zararlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0249",
+       "ses": "Polisiklik aromatik hidrokarbonlar fosil yakıt, tütün dumanı, ızgara ve tütsülenmiş etlerde bulunur; örnekleri benzo[a]pirendir.",
+       "ekran": "Polisiklik aromatik hidrokarbonlar fosil yakıt, tütün dumanı, ızgara ve tütsülenmiş etlerde bulunur; örnekleri benzo[a]pirendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0250",
+       "ses": "Aromatik aminler ve azo boyalar, kimya ve kauçuk endüstrilerinde çalışanlarda mesane kanseri riski yaratır ve mesleki maruziyetin klasik örneğidir.",
+       "ekran": "Aromatik aminler ve azo boyalar, kimya ve kauçuk endüstrilerinde çalışanlarda mesane kanseri riski yaratır ve mesleki maruziyetin klasik örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0251",
+       "ses": "Aflatoksin B1 ise Aspergillus türlerinin ürettiği bir mantar toksinidir; nemli ve sıcak ortamda küflenen, uygunsuz saklanmış tahıl ve yemişlerde bulunur ve hepatosellüler karsinomla güçlü ilişkilidir.",
+       "ekran": "Aflatoksin B1 ise Aspergillus türlerinin ürettiği bir mantar toksinidir; nemli ve sıcak ortamda küflenen, uygunsuz saklanmış tahıl ve yemişlerde bulunur ve hepatosellüler karsinomla güçlü ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0252",
+       "ses": "Dolaylı karsinojenlerin çoğu sitokrom P450 enzimleri tarafından aktive edilir; bu enzimler yabancı maddeleri atmaya çalışırken bazılarını DNA'ya bağlanabilen elektrofilik ara ürünlere dönüştürür.",
+       "ekran": "Dolaylı karsinojenlerin çoğu sitokrom P450 enzimleri tarafından aktive edilir; bu enzimler yabancı maddeleri atmaya çalışırken bazılarını DNA'ya bağlanabilen elektrofilik ara ürünlere dönüştürür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p044",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-29-c0253",
+       "ses": "Burası önemli, sınavda tuzak şudur: benzo[a]piren ve aflatoksin dolaylı etkilidir ve P450 aktivasyonu gerektirir; doğrudan etkili olanlar alkilleyici ajanlardır.",
+       "ekran": "Burası önemli, sınavda tuzak şudur: benzo[a]piren ve aflatoksin dolaylı etkilidir ve P450 aktivasyonu gerektirir; doğrudan etkili olanlar alkilleyici ajanlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0254",
+       "ses": "Sık sorulan eşleşmeler de şunlardır: alkilleyici ajan ile akut miyeloid lösemi, aromatik amin ve azo boya ile mesane kanseri, aflatoksin B1 ile hepatosellüler karsinom.",
+       "ekran": "Sık sorulan eşleşmeler de şunlardır: alkilleyici ajan ile akut miyeloid lösemi, aromatik amin ve azo boya ile mesane kanseri, aflatoksin B1 ile hepatosellüler karsinom.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b17",
+   "baslik": "Başlatıcılar ve promotörler",
+   "paragraflar": [
+    {
+     "id": "k1-29-p045",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-29-c0255",
+       "ses": "Kimyasal karsinogenezde iki tür etken birlikte rol oynar.",
+       "ekran": "Kimyasal karsinogenezde iki tür etken birlikte rol oynar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0256",
+       "ses": "Başlatıcı, kalıcı DNA hasarı yani mutasyon oluşturur; tek doz yeterli olabilir ve hasar geri dönüşsüzdür.",
+       "ekran": "Başlatıcı, kalıcı DNA hasarı yani mutasyon oluşturur; tek doz yeterli olabilir ve hasar geri dönüşsüzdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0257",
+       "ses": "Promotör ise tek başına tümör oluşturmaz ve mutasyon yapmaz; başlatılmış hücrelerin klonal proliferasyonunu uyarır.",
+       "ekran": "Promotör ise tek başına tümör oluşturmaz ve mutasyon yapmaz; başlatılmış hücrelerin klonal proliferasyonunu uyarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0258",
+       "ses": "Etkili olması için başlatıcıdan sonra ve tekrarlayan biçimde uygulanması gerekir.",
+       "ekran": "Etkili olması için başlatıcıdan sonra ve tekrarlayan biçimde uygulanması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0259",
+       "ses": "Başlatılmış ve çoğalan hücrelerde ek mutasyonlar birikir ve çok aşamalı tümör gelişimi gerçekleşir.",
+       "ekran": "Başlatılmış ve çoğalan hücrelerde ek mutasyonlar birikir ve çok aşamalı tümör gelişimi gerçekleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0260",
+       "ses": "Burası önemli, sıra kritiktir: promotör başlatıcıdan önce verilirse ya da tek seferlik uygulanırsa tümör oluşmaz.",
+       "ekran": "Burası önemli, sıra kritiktir: promotör başlatıcıdan önce verilirse ya da tek seferlik uygulanırsa tümör oluşmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p046",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-29-c0261",
+       "ses": "Şekil bu yolu iki evrede gösterir.",
+       "ekran": "Şekil bu yolu iki evrede gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0262",
+       "ses": "Başlatma evresinde karsinojen metabolik aktivasyonla elektrofilik ara ürüne dönüşür; bir kısmı ise detoksifiye edilip atılır.",
+       "ekran": "Başlatma evresinde karsinojen metabolik aktivasyonla elektrofilik ara ürüne dönüşür; bir kısmı ise detoksifiye edilip atılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0263",
+       "ses": "Elektrofilik ara ürün DNA'ya bağlanarak DNA addüktü oluşturur.",
+       "ekran": "Elektrofilik ara ürün DNA'ya bağlanarak DNA addüktü oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0264",
+       "ses": "Bundan sonra 3 olası son vardır: addükt DNA onarımıyla düzeltilirse hücre normal kalır, hasar ağırsa hücre ölür, onarılamayıp kalıcılaşırsa kalıcı lezyonlu başlatılmış hücre oluşur.",
+       "ekran": "Bundan sonra 3 olası son vardır: addükt DNA onarımıyla düzeltilirse hücre normal kalır, hasar ağırsa hücre ölür, onarılamayıp kalıcılaşırsa kalıcı lezyonlu başlatılmış hücre oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0265",
+       "ses": "Promosyon evresinde promotörler başlatılmış hücrenin klonal genişlemesine ve değişmiş farklılaşmasına yol açar ve preneoplastik, yani prekanseröz bir klon oluşur.",
+       "ekran": "Promosyon evresinde promotörler başlatılmış hücrenin klonal genişlemesine ve değişmiş farklılaşmasına yol açar ve preneoplastik, yani prekanseröz bir klon oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0266",
+       "ses": "Daha fazla çoğalma ek mutasyonların birikmesine ve malign klonun ortaya çıkmasına neden olur.",
+       "ekran": "Daha fazla çoğalma ek mutasyonların birikmesine ve malign klonun ortaya çıkmasına neden olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0267",
+       "ses": "Detoksifikasyon ve DNA onarımı başlatmanın önündeki iki bariyerdir; bunların etkinliği bireyler arası risk farkını açıklar.",
+       "ekran": "Detoksifikasyon ve DNA onarımı başlatmanın önündeki iki bariyerdir; bunların etkinliği bireyler arası risk farkını açıklar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b18",
+   "baslik": "Radyasyon karsinogenezi",
+   "paragraflar": [
+    {
+     "id": "k1-29-p047",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-29-c0268",
+       "ses": "Fiziksel karsinojenlerin ilk grubu iyonlaştırıcı radyasyondur.",
+       "ekran": "Fiziksel karsinojenlerin ilk grubu iyonlaştırıcı radyasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0269",
+       "ses": "Kaynakları X ışınları, gama ışınları, radon ve nükleer kazalardır.",
+       "ekran": "Kaynakları X ışınları, gama ışınları, radon ve nükleer kazalardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0270",
+       "ses": "DNA'da çift sarmal kırıkları, translokasyonlar ve delesyonlar oluşturur; kırık uçların hatalı birleşmesi kromozomal yeniden düzenlemelere yol açar.",
+       "ekran": "DNA'da çift sarmal kırıkları, translokasyonlar ve delesyonlar oluşturur; kırık uçların hatalı birleşmesi kromozomal yeniden düzenlemelere yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0271",
+       "ses": "İlişkili kanserlerin başında lösemiler gelir; latent dönem yaklaşık 7 yıldır ve radyasyona bağlı kanserler arasında en erken ortaya çıkan gruptur.",
+       "ekran": "İlişkili kanserlerin başında lösemiler gelir; latent dönem yaklaşık 7 yıldır ve radyasyona bağlı kanserler arasında en erken ortaya çıkan gruptur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0272",
+       "ses": "Tiroid, meme, akciğer ve kolon karsinomları da artar.",
+       "ekran": "Tiroid, meme, akciğer ve kolon karsinomları da artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0273",
+       "ses": "İnsan örnekleri Hiroshima ve Nagasaki atom bombası kurtulanlarında artan kanser sıklığı ve Çernobil kazası sonrasında artan tiroid kanseridir.",
+       "ekran": "İnsan örnekleri Hiroshima ve Nagasaki atom bombası kurtulanlarında artan kanser sıklığı ve Çernobil kazası sonrasında artan tiroid kanseridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0274",
+       "ses": "Çift sarmal kırıkları homolog rekombinasyonun onardığı hasar tipidir; homolog rekombinasyon kusurlu hastaların bu ajanlara aşırı duyarlı olması da bundandır.",
+       "ekran": "Çift sarmal kırıkları homolog rekombinasyonun onardığı hasar tipidir; homolog rekombinasyon kusurlu hastaların bu ajanlara aşırı duyarlı olması da bundandır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p048",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-29-c0275",
+       "ses": "Ultraviyole radyasyonun kaynağı güneş ışığı, özellikle ultraviyole B'dir.",
+       "ekran": "Ultraviyole radyasyonun kaynağı güneş ışığı, özellikle ultraviyole B'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0276",
+       "ses": "Oluşturduğu hasar pirimidin dimerleridir ve bunlar nükleotid eksizyon onarımıyla onarılır.",
+       "ekran": "Oluşturduğu hasar pirimidin dimerleridir ve bunlar nükleotid eksizyon onarımıyla onarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0277",
+       "ses": "İlişkili kanserler melanom, skuamöz hücreli karsinom ve bazal hücreli karsinomdur.",
+       "ekran": "İlişkili kanserler melanom, skuamöz hücreli karsinom ve bazal hücreli karsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0278",
+       "ses": "En büyük risk grubu açık tenli ve güneşli bölgede yaşayan kişilerdir.",
+       "ekran": "En büyük risk grubu açık tenli ve güneşli bölgede yaşayan kişilerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0279",
+       "ses": "Arada bir yaşanan şiddetli güneş yanıkları gibi yoğun aralıklı maruziyet özellikle melanom için risklidir.",
+       "ekran": "Arada bir yaşanan şiddetli güneş yanıkları gibi yoğun aralıklı maruziyet özellikle melanom için risklidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0280",
+       "ses": "Burası önemli, sınavda bu iki radyasyon tipi ters çevrilir: pirimidin dimeri ultraviyoleye, çift sarmal kırığı iyonlaştırıcı radyasyona aittir.",
+       "ekran": "Burası önemli, sınavda bu iki radyasyon tipi ters çevrilir: pirimidin dimeri ultraviyoleye, çift sarmal kırığı iyonlaştırıcı radyasyona aittir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b19",
+   "baslik": "Mikrobiyal karsinogenez ve HTLV-1",
+   "paragraflar": [
+    {
+     "id": "k1-29-p049",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-29-c0281",
+       "ses": "Bazı mikroorganizmalar kronik enfeksiyon yoluyla kanserin doğrudan ya da dolaylı nedeni olur.",
+       "ekran": "Bazı mikroorganizmalar kronik enfeksiyon yoluyla kanserin doğrudan ya da dolaylı nedeni olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0282",
+       "ses": "Derste 3 ana sınıf ayrılır: RNA virüsleri, DNA virüsleri ve bakteriler.",
+       "ekran": "Derste 3 ana sınıf ayrılır: RNA virüsleri, DNA virüsleri ve bakteriler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0283",
+       "ses": "RNA virüslerinin örneği bir retrovirüs olan HTLV-1, DNA virüslerinin örnekleri İnsan papilloma virüsü (HPV), Epstein-Barr virüsü (EBV) ve Hepatit B virüsü (HBV), bakterilerin örneği ise Helicobacter pylori'dir.",
+       "ekran": "RNA virüslerinin örneği bir retrovirüs olan HTLV-1, DNA virüslerinin örnekleri İnsan papilloma virüsü (HPV), Epstein-Barr virüsü (EBV) ve Hepatit B virüsü (HBV), bakterilerin örneği ise Helicobacter pylori'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0284",
+       "ses": "İnsan papilloma virüsü (HPV), Epstein-Barr virüsü (EBV), Hepatit B ve Hepatit C virüsleri gibi virüsler küresel kanserlerin yaklaşık %15 ile 20'sinden sorumludur.",
+       "ekran": "İnsan papilloma virüsü (HPV), Epstein-Barr virüsü (EBV), Hepatit B ve Hepatit C virüsleri gibi virüsler küresel kanserlerin yaklaşık %15 ile 20'sinden sorumludur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0285",
+       "ses": "Bu oran, aşılama, tarama ve eradikasyonla enfeksiyonun önlenmesinin kanserden korunmada ne kadar önemli olduğunu gösterir.",
+       "ekran": "Bu oran, aşılama, tarama ve eradikasyonla enfeksiyonun önlenmesinin kanserden korunmada ne kadar önemli olduğunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0286",
+       "ses": "Burası önemli, çıkmış soruda onkojenik olmayan etken olarak Varisella zoster virüsü (VZV) soruldu; Hepatit B, Hepatit C, İnsan papilloma virüsü (HPV) ve Epstein-Barr virüsü (EBV) ise onkojenik enfeksiyon etkenleridir.",
+       "ekran": "Burası önemli, çıkmış soruda onkojenik olmayan etken olarak Varisella zoster virüsü (VZV) soruldu; Hepatit B, Hepatit C, İnsan papilloma virüsü (HPV) ve Epstein-Barr virüsü (EBV) ise onkojenik enfeksiyon etkenleridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p050",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-29-c0287",
+       "ses": "İnsan T hücreli lösemi virüsü Tip 1, yani HTLV-1, derste işlenen onkojenik RNA virüsüdür.",
+       "ekran": "İnsan T hücreli lösemi virüsü Tip 1, yani HTLV-1, derste işlenen onkojenik RNA virüsüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0288",
+       "ses": "Bir retrovirüstür ve CD4 pozitif T hücrelerine tropizm gösterir.",
+       "ekran": "Bir retrovirüstür ve CD4 pozitif T hücrelerine tropizm gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0289",
+       "ses": "Yol açtığı tümör erişkin T hücreli lösemi ve lenfomadır.",
+       "ekran": "Yol açtığı tümör erişkin T hücreli lösemi ve lenfomadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0290",
+       "ses": "Viral Tax proteini T hücre proliferasyonunu uyarır, nükleer faktör kappa B ve diğer büyüme yollarını aktive eder.",
+       "ekran": "Viral Tax proteini T hücre proliferasyonunu uyarır, nükleer faktör kappa B ve diğer büyüme yollarını aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0291",
+       "ses": "Enfeksiyondan tümöre kadar 40 ile 60 yıllık uzun bir latent dönem vardır.",
+       "ekran": "Enfeksiyondan tümöre kadar 40 ile 60 yıllık uzun bir latent dönem vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0292",
+       "ses": "Tax'ın uyardığı poliklonal çoğalma zemininde ek mutasyonlar ve genomik istikrarsızlık birikir ve sonunda tek bir klon malign hale gelir; buna monoklonal transformasyon denir.",
+       "ekran": "Tax'ın uyardığı poliklonal çoğalma zemininde ek mutasyonlar ve genomik istikrarsızlık birikir ve sonunda tek bir klon malign hale gelir; buna monoklonal transformasyon denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0293",
+       "ses": "Tax tek başına kanser yapmaz; bu, çok aşamalı karsinogenezin viral bir örneğidir.",
+       "ekran": "Tax tek başına kanser yapmaz; bu, çok aşamalı karsinogenezin viral bir örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b20",
+   "baslik": "Onkojenik de ne a virüsleri ve İnsan papilloma virüsü (HPV)",
+   "paragraflar": [
+    {
+     "id": "k1-29-p051",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-29-c0294",
+       "ses": "Derste sayılan onkojenik DNA virüsleri İnsan papilloma virüsü (HPV), Epstein-Barr virüsü (EBV), Kaposi sarkomu herpes virüsü (KSHV / HHV-8), Hepatit B virüsü (HBV) ve Merkel hücre polioma virüsüdür.",
+       "ekran": "Derste sayılan onkojenik DNA virüsleri İnsan papilloma virüsü (HPV), Epstein-Barr virüsü (EBV), Kaposi sarkomu herpes virüsü (KSHV / HHV-8), Hepatit B virüsü (HBV) ve Merkel hücre polioma virüsüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0295",
+       "ses": "Kaposi sarkomu herpes virüsünün diğer adı insan herpes virüsü 8'dir.",
+       "ekran": "Kaposi sarkomu herpes virüsünün diğer adı insan herpes virüsü 8'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0296",
+       "ses": "Burası önemli, çıkmış soruda bu virüs soruldu: gama herpes virüs alt grubunun bir üyesidir, Kaposi sarkomlarının yaklaşık %95'inde saptanır ve lenfoma ile lenfoproliferatif hastalıklara da yol açabilir.",
+       "ekran": "Burası önemli, çıkmış soruda bu virüs soruldu: gama herpes virüs alt grubunun bir üyesidir, Kaposi sarkomlarının yaklaşık %95'inde saptanır ve lenfoma ile lenfoproliferatif hastalıklara da yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0297",
+       "ses": "Bu virüsler 3 temel mekanizmayla kanser oluşturur.",
+       "ekran": "Bu virüsler 3 temel mekanizmayla kanser oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0298",
+       "ses": "1.'si, viral onkoproteinlerin tümör baskılayıcı proteinlere bağlanarak onları devre dışı bırakmasıdır; en iyi örneği insan papilloma virüsüdür.",
+       "ekran": "1.'si, viral onkoproteinlerin tümör baskılayıcı proteinlere bağlanarak onları devre dışı bırakmasıdır; en iyi örneği insan papilloma virüsüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0299",
+       "ses": "2.'si kronik enflamasyon ve rejenerasyondur; süregen hasar ve onarım döngüsü bölünmeyi ve mutasyon olasılığını artırır, bu özellikle hepatit virüslerinde öne çıkar.",
+       "ekran": "2.'si kronik enflamasyon ve rejenerasyondur; süregen hasar ve onarım döngüsü bölünmeyi ve mutasyon olasılığını artırır, bu özellikle hepatit virüslerinde öne çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0300",
+       "ses": "3.'sü genomik instabilitedir.",
+       "ekran": "3.'sü genomik instabilitedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p052",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-29-c0301",
+       "ses": "İnsan papilloma virüsü (HPV) tipleri düşük ve yüksek risk olarak ayrılır.",
+       "ekran": "İnsan papilloma virüsü (HPV) tipleri düşük ve yüksek risk olarak ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0302",
+       "ses": "Düşük riskli 6 ve 11 tipleri genital siğillere, yani kondilomlara ve benign papillomlara yol açar.",
+       "ekran": "Düşük riskli 6 ve 11 tipleri genital siğillere, yani kondilomlara ve benign papillomlara yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0303",
+       "ses": "Yüksek riskli 16, 18 ve benzeri tipler servikal skuamöz hücreli karsinom, anogenital bölge karsinomları ve orofarenks skuamöz hücreli karsinomlarına yol açar.",
+       "ekran": "Yüksek riskli 16, 18 ve benzeri tipler servikal skuamöz hücreli karsinom, anogenital bölge karsinomları ve orofarenks skuamöz hücreli karsinomlarına yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0304",
+       "ses": "Farkın moleküler temeli şudur: yüksek risk tiplerde viral E6 ve E7 onkoproteinleri hücre proteinlerine yüksek afiniteyle bağlanır, düşük risk tiplerde bu bağlanma zayıftır.",
+       "ekran": "Farkın moleküler temeli şudur: yüksek risk tiplerde viral E6 ve E7 onkoproteinleri hücre proteinlerine yüksek afiniteyle bağlanır, düşük risk tiplerde bu bağlanma zayıftır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p053",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-29-c0305",
+       "ses": "Burası önemli, E6 ile E7'nin hedefleri sınavda sıkça ters çevrilir.",
+       "ekran": "Burası önemli, E6 ile E7'nin hedefleri sınavda sıkça ters çevrilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0306",
+       "ses": "E6, p53'e bağlanır ve yıkımını artırır; p53'ün genom hasarını algılama ve onarımı tetikleme işlevi kaybolur ve hasarlı hücre çoğalmaya devam eder.",
+       "ekran": "E6, p53'e bağlanır ve yıkımını artırır; p53'ün genom hasarını algılama ve onarımı tetikleme işlevi kaybolur ve hasarlı hücre çoğalmaya devam eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0307",
+       "ses": "E6 ayrıca telomeraz ters transkriptaz, yani TERT ekspresyonunu uyarır; telomerler kısalmaz ve hücre ölümsüzleşir.",
+       "ekran": "E6 ayrıca telomeraz ters transkriptaz, yani TERT ekspresyonunu uyarır; telomerler kısalmaz ve hücre ölümsüzleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0308",
+       "ses": "E7 ise retinoblastom proteini ile etkileşir ve E2F'yi serbest bırakır.",
+       "ekran": "E7 ise retinoblastom proteini ile etkileşir ve E2F'yi serbest bırakır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0309",
+       "ses": "Normalde RB, E2F transkripsiyon faktörünü bağlı tutarak hücreyi G1 evresinde bekletir; serbest kalan E2F transkripsiyonu başlatır ve hücre döngüsü ilerler.",
+       "ekran": "Normalde RB, E2F transkripsiyon faktörünü bağlı tutarak hücreyi G1 evresinde bekletir; serbest kalan E2F transkripsiyonu başlatır ve hücre döngüsü ilerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0310",
+       "ses": "E7 ayrıca siklin bağımlı kinaz inhibitörü p21'i inhibe eder; böylece CDK4 ve siklin D aktivitesi artar.",
+       "ekran": "E7 ayrıca siklin bağımlı kinaz inhibitörü p21'i inhibe eder; böylece CDK4 ve siklin D aktivitesi artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0311",
+       "ses": "Kısacası E6 bekçiyi, E7 freni ortadan kaldırır.",
+       "ekran": "Kısacası E6 bekçiyi, E7 freni ortadan kaldırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0312",
+       "ses": "İkisinin net etkisi hücreleri ölümsüzleştirmek, hücre ölümünden korumak ve çoğalma üzerindeki kısıtlamaları kaldırmaktır; sonuçta ölümsüzleşme, artmış proliferasyon ve genomik instabilite gelişir.",
+       "ekran": "İkisinin net etkisi hücreleri ölümsüzleştirmek, hücre ölümünden korumak ve çoğalma üzerindeki kısıtlamaları kaldırmaktır; sonuçta ölümsüzleşme, artmış proliferasyon ve genomik instabilite gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p054",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-29-c0313",
+       "ses": "Virüsün hücre içindeki fiziksel durumu da önemlidir.",
+       "ekran": "Virüsün hücre içindeki fiziksel durumu da önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0314",
+       "ses": "Öncü servikal lezyonda virüs genomu epizomaldir; konak kromozomlarından ayrı, halkasal yapıda bulunur.",
+       "ekran": "Öncü servikal lezyonda virüs genomu epizomaldir; konak kromozomlarından ayrı, halkasal yapıda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0315",
+       "ses": "İnvaziv kanserde ise viral DNA konak genomuna entegredir.",
+       "ekran": "İnvaziv kanserde ise viral DNA konak genomuna entegredir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0316",
+       "ses": "Entegrasyon sırasında viral genomdaki negatif düzenleyici bölge bozulur, E6 ve E7 üzerindeki fren kalkar ve bu iki onkoprotein aşırı eksprese edilir.",
+       "ekran": "Entegrasyon sırasında viral genomdaki negatif düzenleyici bölge bozulur, E6 ve E7 üzerindeki fren kalkar ve bu iki onkoprotein aşırı eksprese edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0317",
+       "ses": "Sonuç hücre döngüsünün kontrolsüz aktivasyonu, apoptozun baskılanması ve genomik instabilitedir.",
+       "ekran": "Sonuç hücre döngüsünün kontrolsüz aktivasyonu, apoptozun baskılanması ve genomik instabilitedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0318",
+       "ses": "Entegrasyon bu yüzden invaziv kanserin işaretidir.",
+       "ekran": "Entegrasyon bu yüzden invaziv kanserin işaretidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b21",
+   "baslik": "Epstein-Barr virüsü (EBV)",
+   "paragraflar": [
+    {
+     "id": "k1-29-p055",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-29-c0319",
+       "ses": "Epstein-Barr virüsü (EBV) herpes virüs ailesinin üyesidir ve B lenfositlerini enfekte eder; giriş reseptörü CD21'dir.",
+       "ekran": "Epstein-Barr virüsü (EBV) herpes virüs ailesinin üyesidir ve B lenfositlerini enfekte eder; giriş reseptörü CD21'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0320",
+       "ses": "Burası önemli, ilişkili tümörler şunlardır: özellikle endemik, yani Afrika tipi Burkitt lenfoma, Hodgkin lenfoma alt tipleri, burun arkası yutak epitelinden gelişen nazofaringeal karsinom ve immün baskılanmış hastalarda B hücreli lenfomalar.",
+       "ekran": "Burası önemli, ilişkili tümörler şunlardır: özellikle endemik, yani Afrika tipi Burkitt lenfoma, Hodgkin lenfoma alt tipleri, burun arkası yutak epitelinden gelişen nazofaringeal karsinom ve immün baskılanmış hastalarda B hücreli lenfomalar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0321",
+       "ses": "Nazofaringeal karsinom, virüsün B hücresi dışında epitel kökenli bir tümörle de ilişkili olduğunu gösterir.",
+       "ekran": "Nazofaringeal karsinom, virüsün B hücresi dışında epitel kökenli bir tümörle de ilişkili olduğunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0322",
+       "ses": "İmmün baskılanmada ise bağışıklık denetimi zayıfladığı için enfekte B hücreleri kontrolsüz çoğalabilir.",
+       "ekran": "İmmün baskılanmada ise bağışıklık denetimi zayıfladığı için enfekte B hücreleri kontrolsüz çoğalabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p056",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-29-c0323",
+       "ses": "Virüs, enfekte ettiği B hücresini çoğalmaya iten iki temel protein üretir.",
+       "ekran": "Virüs, enfekte ettiği B hücresini çoğalmaya iten iki temel protein üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0324",
+       "ses": "Latent membran proteini 1, yani LMP1, CD40 sinyalini taklit eder.",
+       "ekran": "Latent membran proteini 1, yani LMP1, CD40 sinyalini taklit eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0325",
+       "ses": "CD40 normalde B hücresini aktive eden bir yüzey reseptörüdür; LMP1 bu sinyali dış uyarı olmadan sürekli verir ve nükleer faktör kappa B yolunu aktive eder.",
+       "ekran": "CD40 normalde B hücresini aktive eden bir yüzey reseptörüdür; LMP1 bu sinyali dış uyarı olmadan sürekli verir ve nükleer faktör kappa B yolunu aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0326",
+       "ses": "Bu, HTLV-1 Tax proteininin etkisine benzer; iki farklı virüs lenfositi aynı yolak üzerinden çoğalmaya iter.",
+       "ekran": "Bu, HTLV-1 Tax proteininin etkisine benzer; iki farklı virüs lenfositi aynı yolak üzerinden çoğalmaya iter.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0327",
+       "ses": "Epstein-Barr nükleer antijen 2, yani EBNA2 ise siklin D ve SRC ailesi gibi büyümeyi destekleyen genlerin ekspresyonunu uyarır.",
+       "ekran": "Epstein-Barr nükleer antijen 2, yani EBNA2 ise siklin D ve SRC ailesi gibi büyümeyi destekleyen genlerin ekspresyonunu uyarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0328",
+       "ses": "Ortak sonuç poliklonal B hücre proliferasyonudur.",
+       "ekran": "Ortak sonuç poliklonal B hücre proliferasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p057",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-29-c0329",
+       "ses": "Şekil, virüsle ilişkili Burkitt lenfomanın olası evrimini adım adım gösterir.",
+       "ekran": "Şekil, virüsle ilişkili Burkitt lenfomanın olası evrimini adım adım gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0330",
+       "ses": "Virüs CD21 aracılığıyla B hücresine girer ve latent enfeksiyon oluşturur.",
+       "ekran": "Virüs CD21 aracılığıyla B hücresine girer ve latent enfeksiyon oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0331",
+       "ses": "EBNA2 ve LMP1 gibi gen ürünleri poliklonal B hücre proliferasyonunu sağlar.",
+       "ekran": "EBNA2 ve LMP1 gibi gen ürünleri poliklonal B hücre proliferasyonunu sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0332",
+       "ses": "Bu çoğalma genellikle virüse özgü sitotoksik T hücreleri tarafından kontrol edilir; bu bağışıklık yanıtı bazen sistemik semptomlara, yani enfeksiyöz mononükleoza yol açar.",
+       "ekran": "Bu çoğalma genellikle virüse özgü sitotoksik T hücreleri tarafından kontrol edilir; bu bağışıklık yanıtı bazen sistemik semptomlara, yani enfeksiyöz mononükleoza yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0333",
+       "ses": "Az sayıda enfekte B hücresi, immünojenik viral proteinlerin ekspresyonunu azaltarak bağışıklık yanıtından kaçar.",
+       "ekran": "Az sayıda enfekte B hücresi, immünojenik viral proteinlerin ekspresyonunu azaltarak bağışıklık yanıtından kaçar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0334",
+       "ses": "Bu hücreler 8. kromozomdaki MYC genini içeren bir translokasyon kazanırsa MYC proteini artar ve ek mutasyonlarla agresif bir B hücreli tümör, Burkitt lenfoma ortaya çıkar.",
+       "ekran": "Bu hücreler 8. kromozomdaki MYC genini içeren bir translokasyon kazanırsa MYC proteini artar ve ek mutasyonlarla agresif bir B hücreli tümör, Burkitt lenfoma ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0335",
+       "ses": "Yani virüs tek başına yetmez; çoğalma zemini, bağışıklık kaçışı ve MYC translokasyonu birlikte gereklidir.",
+       "ekran": "Yani virüs tek başına yetmez; çoğalma zemini, bağışıklık kaçışı ve MYC translokasyonu birlikte gereklidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b22",
+   "baslik": "Helicobacter pylori",
+   "paragraflar": [
+    {
+     "id": "k1-29-p058",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k1-29-c0336",
+       "ses": "Helicobacter pylori, derste işlenen bakteriyel karsinojen örneğidir ve mide mukozasında kronik gastrit ile ülser nedenidir.",
+       "ekran": "Helicobacter pylori, derste işlenen bakteriyel karsinojen örneğidir ve mide mukozasında kronik gastrit ile ülser nedenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0337",
+       "ses": "Burası önemli, iki kanserle ilişkilidir: mide adenokarsinomu ve ekstranodal marjinal zon lenfoması olarak da bilinen MALT lenfoması.",
+       "ekran": "Burası önemli, iki kanserle ilişkilidir: mide adenokarsinomu ve ekstranodal marjinal zon lenfoması olarak da bilinen MALT lenfoması.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0338",
+       "ses": "Adenokarsinom patogenezi basamaklı bir dizi izler.",
+       "ekran": "Adenokarsinom patogenezi basamaklı bir dizi izler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0339",
+       "ses": "Kronik gastrit, süregen enflamasyonla bezlerin kaybolduğu atrofik gastrite ilerler.",
+       "ekran": "Kronik gastrit, süregen enflamasyonla bezlerin kaybolduğu atrofik gastrite ilerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0340",
+       "ses": "Ardından mide epitelinin bağırsak tipi epitele dönüştüğü intestinal metaplazi gelişir.",
+       "ekran": "Ardından mide epitelinin bağırsak tipi epitele dönüştüğü intestinal metaplazi gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0341",
+       "ses": "Sonra hücresel atipiyle displazi ve en sonunda invaziv karsinom ortaya çıkar.",
+       "ekran": "Sonra hücresel atipiyle displazi ve en sonunda invaziv karsinom ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0342",
+       "ses": "Aracılar reaktif oksijen türleri, sitokinler ve büyüme faktörleridir.",
+       "ekran": "Aracılar reaktif oksijen türleri, sitokinler ve büyüme faktörleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0343",
+       "ses": "Burada karsinogenez bir viral onkoproteinle değil, kronik enflamasyonun aracılarıyla gerçekleşir; bu, tümörü destekleyen enflamasyonun klinik bir örneğidir.",
+       "ekran": "Burada karsinogenez bir viral onkoproteinle değil, kronik enflamasyonun aracılarıyla gerçekleşir; bu, tümörü destekleyen enflamasyonun klinik bir örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p059",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k1-29-c0344",
+       "ses": "MALT lenfomasının patogenezi antijen uyarılı B hücre proliferasyonudur.",
+       "ekran": "MALT lenfomasının patogenezi antijen uyarılı B hücre proliferasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0345",
+       "ses": "Bakteri antijenleri mide mukozasında B hücrelerini sürekli uyarır ve bu hücreler çoğalır.",
+       "ekran": "Bakteri antijenleri mide mukozasında B hücrelerini sürekli uyarır ve bu hücreler çoğalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0346",
+       "ses": "Erken evrede tümör hücrelerinin çoğalması hâlâ bu antijen uyarısına bağlıdır.",
+       "ekran": "Erken evrede tümör hücrelerinin çoğalması hâlâ bu antijen uyarısına bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0347",
+       "ses": "Bu nedenle MALT lenfoması erken evrede Helicobacter pylori eradikasyonu ile gerileyebilir; uyaran ortadan kalkınca proliferasyon durur.",
+       "ekran": "Bu nedenle MALT lenfoması erken evrede Helicobacter pylori eradikasyonu ile gerileyebilir; uyaran ortadan kalkınca proliferasyon durur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0348",
+       "ses": "Yani antibiyotik tedavisiyle gerileyebilen bir lenfoma örneğidir.",
+       "ekran": "Yani antibiyotik tedavisiyle gerileyebilen bir lenfoma örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0349",
+       "ses": "Adenokarsinomda ise basamaklı epitel değişiklikleri söz konusudur ve eradikasyonun böyle doğrudan bir gerileme etkisi tanımlanmaz.",
+       "ekran": "Adenokarsinomda ise basamaklı epitel değişiklikleri söz konusudur ve eradikasyonun böyle doğrudan bir gerileme etkisi tanımlanmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b23",
+   "baslik": "Çok aşamalı karsinogenez",
+   "paragraflar": [
+    {
+     "id": "k1-29-p060",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-29-c0350",
+       "ses": "Dersin tüm parçaları tek bir ilkede birleşir: karsinogenez çok aşamalı bir süreçtir.",
+       "ekran": "Dersin tüm parçaları tek bir ilkede birleşir: karsinogenez çok aşamalı bir süreçtir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0351",
+       "ses": "Başlangıç evresinde kalıcı DNA hasarı oluşur ve hücre ilk mutasyonu kazanır.",
+       "ekran": "Başlangıç evresinde kalıcı DNA hasarı oluşur ve hücre ilk mutasyonu kazanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0352",
+       "ses": "Promosyon evresinde mutasyona uğramış hücreler klonal olarak genişler.",
+       "ekran": "Promosyon evresinde mutasyona uğramış hücreler klonal olarak genişler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0353",
+       "ses": "İlerleme evresinde ek mutasyonlar birikir ve tümör agresif bir fenotip kazanır.",
+       "ekran": "İlerleme evresinde ek mutasyonlar birikir ve tümör agresif bir fenotip kazanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0354",
+       "ses": "Bu sürecin iki sonucu vardır.",
+       "ekran": "Bu sürecin iki sonucu vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0355",
+       "ses": "1.'si genetik heterojenliktir; tümör hücreleri genetik olarak tek tip değildir ve farklı mutasyon kombinasyonlarına sahip alt klonlar bulunur.",
+       "ekran": "1.'si genetik heterojenliktir; tümör hücreleri genetik olarak tek tip değildir ve farklı mutasyon kombinasyonlarına sahip alt klonlar bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0356",
+       "ses": "2.'si tedaviye dirençli alt klonların seçilimidir; tedavi duyarlı hücreleri öldürürken dirençli alt klonlar hayatta kalıp çoğalır.",
+       "ekran": "2.'si tedaviye dirençli alt klonların seçilimidir; tedavi duyarlı hücreleri öldürürken dirençli alt klonlar hayatta kalıp çoğalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0357",
+       "ses": "Süreç Darwinci seçilimle şekillenir: avantajlı mutasyon taşıyan hücre seçilir, çoğalır ve yeni mutasyonlarla evrimleşir.",
+       "ekran": "Süreç Darwinci seçilimle şekillenir: avantajlı mutasyon taşıyan hücre seçilir, çoğalır ve yeni mutasyonlarla evrimleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p061",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-29-c0358",
+       "ses": "Bir şekil bu birikimi gösterir.",
+       "ekran": "Bir şekil bu birikimi gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0359",
+       "ses": "Karsinojenle oluşan ilk sürücü mutasyon, yani başlatıcı mutasyon, sağlıklı hücreyi kök hücre benzeri özellikler taşıyan başlatılmış bir öncül hücreye dönüştürür.",
+       "ekran": "Karsinojenle oluşan ilk sürücü mutasyon, yani başlatıcı mutasyon, sağlıklı hücreyi kök hücre benzeri özellikler taşıyan başlatılmış bir öncül hücreye dönüştürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0360",
+       "ses": "Ek sürücü mutasyonlar ve onlarla birlikte yolcu mutasyonlar birikir; hücre kanser özelliklerini kazanır ve kurucu kanser hücresi olur.",
+       "ekran": "Ek sürücü mutasyonlar ve onlarla birlikte yolcu mutasyonlar birikir; hücre kanser özelliklerini kazanır ve kurucu kanser hücresi olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0361",
+       "ses": "Daha fazla mutasyon ve alt klonların ortaya çıkışıyla, tanı anında genetik olarak heterojen bir tümör vardır.",
+       "ekran": "Daha fazla mutasyon ve alt klonların ortaya çıkışıyla, tanı anında genetik olarak heterojen bir tümör vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0362",
+       "ses": "Şeklin üstündeki üçgen, zamanla sürücü ve yolcu mutasyon sayısının sürekli arttığını gösterir.",
+       "ekran": "Şeklin üstündeki üçgen, zamanla sürücü ve yolcu mutasyon sayısının sürekli arttığını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0363",
+       "ses": "Burası önemli, kanser tamamlayıcı sürücü mutasyonların kademeli birikimiyle gelişir ve bu mutasyonların meydana gelme sırası genellikle bilinmez, tümörden tümöre değişebilir.",
+       "ekran": "Burası önemli, kanser tamamlayıcı sürücü mutasyonların kademeli birikimiyle gelişir ve bu mutasyonların meydana gelme sırası genellikle bilinmez, tümörden tümöre değişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-29-b24",
+   "baslik": "Klinik çıkarımlar",
+   "paragraflar": [
+    {
+     "id": "k1-29-p062",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-29-c0364",
+       "ses": "Karsinogenezin moleküler bilgisi doğrudan tedaviye dönüşmüştür.",
+       "ekran": "Karsinogenezin moleküler bilgisi doğrudan tedaviye dönüşmüştür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0365",
+       "ses": "Hedefe yönelik tedaviler tümöre özgü moleküler lezyonu hedefler; örnekleri kronik miyeloid lösemideki BCR-ABL füzyon kinazı, amplifiye meme karsinomundaki ERBB2, yani HER2 ve BRAF V600E gibi aktive edici mutasyonlardır.",
+       "ekran": "Hedefe yönelik tedaviler tümöre özgü moleküler lezyonu hedefler; örnekleri kronik miyeloid lösemideki BCR-ABL füzyon kinazı, amplifiye meme karsinomundaki ERBB2, yani HER2 ve BRAF V600E gibi aktive edici mutasyonlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0366",
+       "ses": "BRAF V600E, BRAF geninin 600. kodonunda valinin glutamata dönüştüğü aktive edici mutasyondur.",
+       "ekran": "BRAF V600E, BRAF geninin 600. kodonunda valinin glutamata dönüştüğü aktive edici mutasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0367",
+       "ses": "İmmün kontrol noktası inhibitörleri ise PD-1, PD-L1 ve CTLA-4 blokajı yaparak T hücre yanıtını serbestleştirir.",
+       "ekran": "İmmün kontrol noktası inhibitörleri ise PD-1, PD-L1 ve CTLA-4 blokajı yaparak T hücre yanıtını serbestleştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0368",
+       "ses": "Bu kontrol noktaları tümör ile konak etkileşim genlerinin bağışıklık grubundadır ve yüksek neoantijen yükü olan tümörler bu tedaviye daha iyi yanıt verir.",
+       "ekran": "Bu kontrol noktaları tümör ile konak etkileşim genlerinin bağışıklık grubundadır ve yüksek neoantijen yükü olan tümörler bu tedaviye daha iyi yanıt verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0369",
+       "ses": "Hedefe yönelik tedavi tümör hücresinin kendi onkoproteinini, kontrol noktası inhibitörü ise bağışıklık sisteminin frenini hedefler.",
+       "ekran": "Hedefe yönelik tedavi tümör hücresinin kendi onkoproteinini, kontrol noktası inhibitörü ise bağışıklık sisteminin frenini hedefler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p063",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-29-c0370",
+       "ses": "Moleküler bilgi tanıyı da değiştirmiştir.",
+       "ekran": "Moleküler bilgi tanıyı da değiştirmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0371",
+       "ses": "Moleküler profilleme sürücü mutasyonları tanımlar, prognozu ve tedavi yanıtını öngörür; örneğin nöroblastomda MYCN, memede HER2.",
+       "ekran": "Moleküler profilleme sürücü mutasyonları tanımlar, prognozu ve tedavi yanıtını öngörür; örneğin nöroblastomda MYCN, memede HER2.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0372",
+       "ses": "Karsinogenez bilgisi artık hem tanıda hem tedavi seçiminde merkezi konumdadır.",
+       "ekran": "Karsinogenez bilgisi artık hem tanıda hem tedavi seçiminde merkezi konumdadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0373",
+       "ses": "Moleküler profil, hangi kanser sorusunun yanına hangi sürücü mutasyon sorusunu ekler.",
+       "ekran": "Moleküler profil, hangi kanser sorusunun yanına hangi sürücü mutasyon sorusunu ekler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-29-p064",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k1-29-c0374",
+       "ses": "Özetle, kanserin moleküler temelinde onkogenler, tümör baskılayıcı genler, apoptoz genleri ve mikroçevre genleri yer alır.",
+       "ekran": "Özetle, kanserin moleküler temelinde onkogenler, tümör baskılayıcı genler, apoptoz genleri ve mikroçevre genleri yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0375",
+       "ses": "Bu genler nokta mutasyon, translokasyon, delesyon, amplifikasyon ve anöploidiyle, ayrıca geri dönüşümlü ama kalıcı epigenetik ve mikro RNA değişiklikleriyle bozulur.",
+       "ekran": "Bu genler nokta mutasyon, translokasyon, delesyon, amplifikasyon ve anöploidiyle, ayrıca geri dönüşümlü ama kalıcı epigenetik ve mikro RNA değişiklikleriyle bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0376",
+       "ses": "DNA onarım kusurları genomik instabilite ve yüksek mutasyon yükü yaratır.",
+       "ekran": "DNA onarım kusurları genomik instabilite ve yüksek mutasyon yükü yaratır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-29-c0377",
+       "ses": "Kimyasal, fiziksel, viral ve bakteriyel karsinojenler bu lezyonları başlatır; Darwinci seçilim de onları heterojen bir tümöre dönüştürür.",
+       "ekran": "Kimyasal, fiziksel, viral ve bakteriyel karsinojenler bu lezyonları başlatır; Darwinci seçilim de onları heterojen bir tümöre dönüştürür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

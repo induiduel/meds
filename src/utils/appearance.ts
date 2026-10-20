@@ -38,6 +38,16 @@ export type DesignVersion = 'v12' | 'v11' | 'v10';
 export const DESIGN_ORDER: DesignVersion[] = ['v12', 'v11', 'v10'];
 /** v11 yapısını kullanan tasarımlar (v11 ve v12) */
 export const isSadeFamily = (d: DesignVersion) => d !== 'v10';
+/**
+ * v13 "Ada": v12'nin sayfa mantığını ve bileşenlerini kullanır (design = 'v12' kalır, v12 dalları çalışır) ama
+ * iskeleti kendine aittir — yüzen kenar adası, sütun içi başlık kapsülü, telefonda yüzen alt ada; tam genişlik
+ * şerit yok. Kök öğeye `data-v13="on"` yazılır; kurallar styles/v13/*.css, kabuk components/v13/ShellV13.tsx.
+ * Seçim isteğe bağlıdır: ilk açılışta bir kez sorulur (components/v13/V13Invite.tsx), Ayarlar › Tasarım'dan değişir.
+ */
+export type DesignChoice = 'v13' | DesignVersion;
+export const DESIGN_CHOICES: DesignChoice[] = ['v13', 'v12', 'v11', 'v10'];
+export const DESIGN_CHOICE_LABELS: Record<DesignChoice, string> = { v13: 'Ada (v13)', v12: 'Net (v12)', v11: 'Sade (v11)', v10: 'Klasik (v10)' };
+export const designChoiceOf = (a: Pick<Appearance, 'design' | 'v13'>): DesignChoice => (a.design === 'v12' && a.v13 ? 'v13' : a.design);
 
 /** Çıkmış soru kartı: tam (varsayılan) · katlanır (yalnız kök + künye, dokununca şıklar) · dar (sıkı şıklar) */
 export type QCardMode = 'tam' | 'katlanir' | 'dar';
@@ -83,6 +93,10 @@ export interface Appearance {
   designPicked?: boolean;
   /** v11 → v12 taşımasının zamanı (taşınan değerin profil eşitlemesiyle sunucuya gitmesi için kayıt değişir) */
   designMigratedAt?: number;
+  /** v13 "Ada" iskeleti açık mı (design === 'v12' iken geçerli) */
+  v13?: boolean;
+  /** v13 daveti cevaplandı mı (bir kez sorulur) */
+  v13Asked?: boolean;
   /** Vurgu rengi seçimi, "<tema>:<palet>" anahtarıyla (yalnız `accents` tanımlı paletler; utils/palettes.ts) */
   accents?: Record<string, string>;
 }
@@ -152,6 +166,8 @@ function read(): Appearance {
         designPicked: p.designPicked === true,
         designMigratedAt: typeof p.designMigratedAt === 'number' ? p.designMigratedAt : undefined,
         accents: p.accents && typeof p.accents === 'object' ? { ...p.accents } : {},
+        v13: p.v13 === true,
+        v13Asked: p.v13Asked === true,
       };
       // Taşınan tasarım seçimi kalıcı olsun (aksi halde sonraki açılışta v11'e döner)
       if (out.design !== p.design) { try { localStorage.setItem(KEY, JSON.stringify(out)); } catch { /* ignore */ } }
@@ -213,6 +229,7 @@ export function applyAppearance(a: Appearance = current) {
   el.dataset.qtags = a.qtags ? 'on' : 'off';
   el.dataset.motion = a.motion;
   el.dataset.design = a.design;
+  if (a.design === 'v12' && a.v13) el.dataset.v13 = 'on'; else delete el.dataset.v13;
   el.classList.toggle('theme-dark', a.mode === 'dark');
   el.style.colorScheme = a.mode === 'dark' ? 'dark' : 'light';
   syncPwaChrome(a);
@@ -237,7 +254,8 @@ export const pwaManifestHref = (tc: string, bg: string) => `/manifest.json?v=9&t
 function syncPwaChrome(a: Appearance) {
   const cs = getComputedStyle(document.documentElement);
   // v12 üst/alt çubuğu yüzey rengindedir (--color-white); Klasik/Sade üst çubuğu zemin rengindedir
-  const tc = hex6(cs.getPropertyValue(a.design === 'v12' ? '--color-white' : '--color-canvas'));
+  // v13'te tam genişlik çubuk yok: tarayıcı kromu zemin rengini alır
+  const tc = hex6(cs.getPropertyValue(a.design === 'v12' && !a.v13 ? '--color-white' : '--color-canvas'));
   const bg = hex6(cs.getPropertyValue('--color-canvas'));
   if (!tc || !bg) return;
   document.querySelector('meta[name="theme-color"]')?.setAttribute('content', `#${tc}`);
@@ -341,7 +359,7 @@ async function switchAppearance(next: Appearance) {
   }
 }
 
-export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'accents' | 'qcard'>> & { qcard?: Partial<QCardPrefs>; palette?: Palette; accent?: string }) {
+export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'accents' | 'qcard'>> & { qcard?: Partial<QCardPrefs>; palette?: Palette; accent?: string; choice?: DesignChoice }) {
   const next: Appearance = { ...current, palettes: { ...current.palettes }, accents: { ...(current.accents || {}) } };
   if (patch.mode) next.mode = patch.mode;
   if (patch.density) next.density = patch.density;
@@ -353,7 +371,15 @@ export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'acce
   if (typeof patch.qtags === 'boolean') next.qtags = patch.qtags;
   if (patch.qcard) next.qcard = readQCard({ ...next.qcard, ...patch.qcard });
   if (patch.motion) next.motion = patch.motion;
-  if (patch.design) { next.design = patch.design; next.designPicked = true; }
+  if (patch.design) { next.design = patch.design; next.designPicked = true; if (patch.design !== 'v12') next.v13 = false; }
+  if (patch.choice) {
+    next.design = patch.choice === 'v13' ? 'v12' : patch.choice;
+    next.v13 = patch.choice === 'v13';
+    next.designPicked = true;
+    next.v13Asked = true;
+  }
+  if (typeof patch.v13 === 'boolean') next.v13 = patch.v13;
+  if (typeof patch.v13Asked === 'boolean') next.v13Asked = patch.v13Asked;
   if (patch.palette) next.palettes[next.mode] = patch.palette;
   // Vurgu rengi: örtüsüz, anında (yalnız 4 token değişir)
   if (patch.accent) {

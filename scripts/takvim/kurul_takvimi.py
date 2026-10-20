@@ -97,4 +97,7 @@ if __name__ == "__main__":
         print("HATA: tarih çıkarılamadı:", eksik); sys.exit(1)
     if a.yaz:
         CIKTI.write_text(json.dumps(veri, ensure_ascii=False, indent=1) + "\n")
-        print("yazıldı:", CIKTI)
+        ozet = {k: v for k, v in veri.items() if k != "kurullar"}
+        ozet["kurullar"] = [{k: v for k, v in x.items() if k != "dersler"} for x in veri["kurullar"]]
+        (CIKTI.parent / "kurul_takvimi_ozet.json").write_text(json.dumps(ozet, ensure_ascii=False, indent=1) + "\n")
+        print("yazıldı:", CIKTI, "+ kurul_takvimi_ozet.json")

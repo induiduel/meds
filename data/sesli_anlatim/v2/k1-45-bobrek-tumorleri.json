@@ -1,0 +1,2220 @@
+{
+ "surum": 2,
+ "ders_id": "k1-45",
+ "anahtar": "k1-45-bobrek-tumorleri",
+ "baslik": "Böbrek Tümörleri",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-45-b01",
+   "baslik": "İdrar yolu neoplazmlarına giriş ve sıklık",
+   "paragraflar": [
+    {
+     "id": "k1-45-p001",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-45-c0001",
+       "ses": "İdrar yollarında iyi huylu, yani benign olanlardan öldürücü kanserlere kadar uzanan geniş bir neoplazm yelpazesi görülür.",
+       "ekran": "İdrar yollarında iyi huylu, yani benign olanlardan öldürücü kanserlere kadar uzanan geniş bir neoplazm yelpazesi görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0002",
+       "ses": "Neoplazm dediğimiz şey, hücrelerin kontrolsüz ve otonom çoğalmasıyla oluşan yeni doku kitlesidir; benign de olabilir, malign de.",
+       "ekran": "Neoplazm dediğimiz şey, hücrelerin kontrolsüz ve otonom çoğalmasıyla oluşan yeni doku kitlesidir; benign de olabilir, malign de.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0003",
+       "ses": "Bu yelpazenin en sessiz ucunda küçük kortikal papiller adenomlar durur.",
+       "ekran": "Bu yelpazenin en sessiz ucunda küçük kortikal papiller adenomlar durur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0004",
+       "ses": "Otopsi serilerinde erişkinlerin %40'ına kadarında böbrek korteksinde yarım santimetreden küçük, papiller yapılı bu adenomlar bulunur.",
+       "ekran": "Otopsi serilerinde erişkinlerin %40'ına kadarında böbrek korteksinde yarım santimetreden küçük, papiller yapılı bu adenomlar bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0005",
+       "ses": "Bu lezyonlar çoğunlukla klinik olarak önemsizdir; kişi yaşamı boyunca hiçbir belirti vermeden onlarla yaşar.",
+       "ekran": "Bu lezyonlar çoğunlukla klinik olarak önemsizdir; kişi yaşamı boyunca hiçbir belirti vermeden onlarla yaşar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0006",
+       "ses": "Buradan çıkaracağımız ders şudur: bir böbrek lezyonunun sık görülmesi, onun tehlikeli olduğu anlamına gelmez.",
+       "ekran": "Buradan çıkaracağımız ders şudur: bir böbrek lezyonunun sık görülmesi, onun tehlikeli olduğu anlamına gelmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p002",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-45-c0007",
+       "ses": "Şimdi sıklık sıralamasına bakalım, çünkü hangi tümörü önce düşüneceğimizi bu sıralama belirler.",
+       "ekran": "Şimdi sıklık sıralamasına bakalım, çünkü hangi tümörü önce düşüneceğimizi bu sıralama belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0008",
+       "ses": "Böbreğin en sık malign tümörü renal hücreli karsinomdur.",
+       "ekran": "Böbreğin en sık malign tümörü renal hücreli karsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0009",
+       "ses": "Daha az sıklıkla nefroblastom, yani Wilms tümörü ile kaliks ve pelvisin, yani böbreğin idrarı toplayan boşluk sisteminin primer neoplazmları görülür.",
+       "ekran": "Daha az sıklıkla nefroblastom, yani Wilms tümörü ile kaliks ve pelvisin, yani böbreğin idrarı toplayan boşluk sisteminin primer neoplazmları görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0010",
+       "ses": "Burası önemli: böbreğin en sık malign tümörü renal hücreli karsinomdur, ama üriner sistemin bütününe baktığınızda alt idrar yolu neoplazmları renal hücreli karsinomdan yaklaşık 2 kat daha yaygındır.",
+       "ekran": "Burası önemli: böbreğin en sık malign tümörü renal hücreli karsinomdur, ama üriner sistemin bütününe baktığınızda alt idrar yolu neoplazmları renal hücreli karsinomdan yaklaşık 2 kat daha yaygındır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0011",
+       "ses": "Dikkat edin, bu iki ayrı sıralama sık karıştırılır.",
+       "ekran": "Dikkat edin, bu iki ayrı sıralama sık karıştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0012",
+       "ses": "Böbrek içinde lider renal hücreli karsinomdur; sistem düzeyinde ise tümörlerin çoğu böbrekte değil, alt idrar yolundadır.",
+       "ekran": "Böbrek içinde lider renal hücreli karsinomdur; sistem düzeyinde ise tümörlerin çoğu böbrekte değil, alt idrar yolundadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b02",
+   "baslik": "Renal hücreli karsinom: köken, sıklık ve demografi",
+   "paragraflar": [
+    {
+     "id": "k1-45-p003",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-45-c0013",
+       "ses": "Renal hücreli karsinom, böbreğin tubuler epitelinden gelişen bir karsinomdur; yani epitel kökenli malign bir tümördür.",
+       "ekran": "Renal hücreli karsinom, böbreğin tubuler epitelinden gelişen bir karsinomdur; yani epitel kökenli malign bir tümördür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0014",
+       "ses": "Tübüllerin yoğun olduğu bölge korteks olduğu için tümör ağırlıkla böbrek korteksine yerleşir.",
+       "ekran": "Tübüllerin yoğun olduğu bölge korteks olduğu için tümör ağırlıkla böbrek korteksine yerleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0015",
+       "ses": "Burası önemli, bu tanım çıkmış sorularda neredeyse kelimesi kelimesine soruldu: renal tubuler epitelden köken alan, böbreğin tüm primer malign tümörlerinin %80 ile 85'ini ve tüm erişkin kanserlerinin %2 ile 3'ünü oluşturan tümör renal hücreli karsinomdur.",
+       "ekran": "Burası önemli, bu tanım çıkmış sorularda neredeyse kelimesi kelimesine soruldu: renal tubuler epitelden köken alan, böbreğin tüm primer malign tümörlerinin %80 ile 85'ini ve tüm erişkin kanserlerinin %2 ile 3'ünü oluşturan tümör renal hücreli karsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0016",
+       "ses": "Şıklarda transizyonel hücreli karsinom, Wilms tümörü, mezoblastik nefroma ya da rabdoid tümör görseniz de bu üçlü sayı yalnız renal hücreli karsinomu tarif eder.",
+       "ekran": "Şıklarda transizyonel hücreli karsinom, Wilms tümörü, mezoblastik nefroma ya da rabdoid tümör görseniz de bu üçlü sayı yalnız renal hücreli karsinomu tarif eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0017",
+       "ses": "Böylece tümör böbrekte baskın, ama tüm erişkin kanserleri içinde görece küçük bir paya sahiptir.",
+       "ekran": "Böylece tümör böbrekte baskın, ama tüm erişkin kanserleri içinde görece küçük bir paya sahiptir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p004",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-45-c0018",
+       "ses": "Bu tümörün klinik ağırlığı yalnız sıklığından değil, öldürücülüğünden de gelir.",
+       "ekran": "Bu tümörün klinik ağırlığı yalnız sıklığından değil, öldürücülüğünden de gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0019",
+       "ses": "Amerika Birleşik Devletleri'nde yılda yaklaşık 65.000 yeni olgu görülür ve hastaların yaklaşık %40'ı bu hastalık nedeniyle kaybedilir.",
+       "ekran": "Amerika Birleşik Devletleri'nde yılda yaklaşık 65.000 yeni olgu görülür ve hastaların yaklaşık %40'ı bu hastalık nedeniyle kaybedilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0020",
+       "ses": "Bu yüksek ölüm oranı, olguların önemli bir kısmının geç tanı aldığını düşündürür.",
+       "ekran": "Bu yüksek ölüm oranı, olguların önemli bir kısmının geç tanı aldığını düşündürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0021",
+       "ses": "En sık altıncı ve yedinci dekatta, yani 50 ile 69 yaş arasında görülür.",
+       "ekran": "En sık altıncı ve yedinci dekatta, yani 50 ile 69 yaş arasında görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0022",
+       "ses": "Erkek kadın oranı yaklaşık 2'ye 1'dir; yani erkeklerde 2 kat sıktır.",
+       "ekran": "Erkek kadın oranı yaklaşık 2'ye 1'dir; yani erkeklerde 2 kat sıktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0023",
+       "ses": "Altmışlı yaşlarda bir erkekte saptanan böbrek kitlesi bu nedenle renal hücreli karsinom açısından yüksek ön olasılık taşır.",
+       "ekran": "Altmışlı yaşlarda bir erkekte saptanan böbrek kitlesi bu nedenle renal hücreli karsinom açısından yüksek ön olasılık taşır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b03",
+   "baslik": "Risk faktörleri ve kronik diyaliz",
+   "paragraflar": [
+    {
+     "id": "k1-45-p005",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-45-c0024",
+       "ses": "Renal hücreli karsinom için dört majör risk faktörü tanımlanır: sigara kullanımı, hipertansiyon, obezite ve mesleki kadmiyum maruziyeti.",
+       "ekran": "Renal hücreli karsinom için dört majör risk faktörü tanımlanır: sigara kullanımı, hipertansiyon, obezite ve mesleki kadmiyum maruziyeti.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0025",
+       "ses": "Kadmiyum endüstride kullanılan toksik bir ağır metaldir ve bu listedeki tek mesleki kimyasal maruziyettir.",
+       "ekran": "Kadmiyum endüstride kullanılan toksik bir ağır metaldir ve bu listedeki tek mesleki kimyasal maruziyettir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0026",
+       "ses": "Bu faktörlerin çoğu yaşam tarzı ya da çevreyle ilişkili olduğu için önlenebilir niteliktedir.",
+       "ekran": "Bu faktörlerin çoğu yaşam tarzı ya da çevreyle ilişkili olduğu için önlenebilir niteliktedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0027",
+       "ses": "Böbrek kitlesi olan bir hastada sigara, kan basıncı, kilo ve meslek mutlaka sorgulanır; sigarayı bırakmak, kilo ve tansiyon kontrolü ve iş yerinde korunma da riski azaltmaya yöneliktir.",
+       "ekran": "Böbrek kitlesi olan bir hastada sigara, kan basıncı, kilo ve meslek mutlaka sorgulanır; sigarayı bırakmak, kilo ve tansiyon kontrolü ve iş yerinde korunma da riski azaltmaya yöneliktir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p006",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-45-c0028",
+       "ses": "Bunların yanında çok güçlü bir özel risk durumu vardır: kronik diyaliz.",
+       "ekran": "Bunların yanında çok güçlü bir özel risk durumu vardır: kronik diyaliz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0029",
+       "ses": "Uzun süre diyalize giren hastalarda zamanla edinilmiş polikistik böbrek hastalığı gelişebilir.",
+       "ekran": "Uzun süre diyalize giren hastalarda zamanla edinilmiş polikistik böbrek hastalığı gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0030",
+       "ses": "Bu kistler doğuştan değil, diyaliz sürecinde ortaya çıkar; kalıtsal polikistik hastalıktan bu yönüyle ayrılır.",
+       "ekran": "Bu kistler doğuştan değil, diyaliz sürecinde ortaya çıkar; kalıtsal polikistik hastalıktan bu yönüyle ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0031",
+       "ses": "Bu hastalarda renal hücreli karsinom riski yaklaşık 30 kat artar.",
+       "ekran": "Bu hastalarda renal hücreli karsinom riski yaklaşık 30 kat artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0032",
+       "ses": "Yani sigara ya da obezitenin yarattığı riske göre çok daha güçlü bir zemindir.",
+       "ekran": "Yani sigara ya da obezitenin yarattığı riske göre çok daha güçlü bir zemindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0033",
+       "ses": "Uzun süredir diyalizde olan bir hastada böbrekte yeni bir solid odak görüldüğünde malignite açısından ciddiye alınmalıdır.",
+       "ekran": "Uzun süredir diyalizde olan bir hastada böbrekte yeni bir solid odak görüldüğünde malignite açısından ciddiye alınmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0034",
+       "ses": "Küçük bir not düşeyim: vasküler ve kistik böbrek hastalıkları dersinde bu risk yaklaşık 100 kat olarak verilir; bu derste ise sayı yaklaşık 30 kattır.",
+       "ekran": "Küçük bir not düşeyim: vasküler ve kistik böbrek hastalıkları dersinde bu risk yaklaşık 100 kat olarak verilir; bu derste ise sayı yaklaşık 30 kattır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b04",
+   "baslik": "Moleküler sınıflama ve 3 ana alt tip",
+   "paragraflar": [
+    {
+     "id": "k1-45-p007",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-45-c0035",
+       "ses": "Renal hücreli karsinom tek bir hastalık değil, farklı genetik yolaklardan gelişen bir tümör ailesidir.",
+       "ekran": "Renal hücreli karsinom tek bir hastalık değil, farklı genetik yolaklardan gelişen bir tümör ailesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0036",
+       "ses": "Genetik bilgi arttıkça, morfolojik benzerliklerin ardında farklı gen değişiklikleri olduğu anlaşıldı ve moleküler temelli sınıflama benimsendi.",
+       "ekran": "Genetik bilgi arttıkça, morfolojik benzerliklerin ardında farklı gen değişiklikleri olduğu anlaşıldı ve moleküler temelli sınıflama benimsendi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0037",
+       "ses": "En sık üç alt tip berrak hücreli karsinom, papiller böbrek hücreli karsinom ve kromofob böbrek hücreli karsinomdur.",
+       "ekran": "En sık üç alt tip berrak hücreli karsinom, papiller böbrek hücreli karsinom ve kromofob böbrek hücreli karsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0038",
+       "ses": "Sıklık sıralaması şöyledir: berrak hücreli yaklaşık %65, papiller %10 ile 15, kromofob ise yaklaşık %5.",
+       "ekran": "Sıklık sıralaması şöyledir: berrak hücreli yaklaşık %65, papiller %10 ile 15, kromofob ise yaklaşık %5.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0039",
+       "ses": "Her alt tip kendine özgü bir moleküler değişiklikle tanımlanır ve tümörün davranışı, prognozu ve tedavi yaklaşımı hakkında bilgi verir.",
+       "ekran": "Her alt tip kendine özgü bir moleküler değişiklikle tanımlanır ve tümörün davranışı, prognozu ve tedavi yaklaşımı hakkında bilgi verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0040",
+       "ses": "Dikkat edin, onkositoma, anjiyomiyolipom ve Wilms tümörü bu üçlüye dahil değildir; onlar ayrı böbrek tümörleridir.",
+       "ekran": "Dikkat edin, onkositoma, anjiyomiyolipom ve Wilms tümörü bu üçlüye dahil değildir; onlar ayrı böbrek tümörleridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b05",
+   "baslik": "Berrak hücreli karsinom ve von Hippel-Lindau geni",
+   "paragraflar": [
+    {
+     "id": "k1-45-p008",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-45-c0041",
+       "ses": "Berrak hücreli karsinom renal hücreli karsinomların yaklaşık %65'ini oluşturur ve adını hücrelerin mikroskoptaki görünümünden alır.",
+       "ekran": "Berrak hücreli karsinom renal hücreli karsinomların yaklaşık %65'ini oluşturur ve adını hücrelerin mikroskoptaki görünümünden alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0042",
+       "ses": "Tümör hücrelerinin sitoplazması berraktır, çünkü hücreler bol miktarda lipit ve glikojen içerir.",
+       "ekran": "Tümör hücrelerinin sitoplazması berraktır, çünkü hücreler bol miktarda lipit ve glikojen içerir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0043",
+       "ses": "Bu depo maddeleri rutin doku hazırlığı sırasında çözünüp boşalır ve geride boyanmayan, saydam görünen bir sitoplazma kalır.",
+       "ekran": "Bu depo maddeleri rutin doku hazırlığı sırasında çözünüp boşalır ve geride boyanmayan, saydam görünen bir sitoplazma kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0044",
+       "ses": "Burası önemli, çıkmış sorularda 2 kez soruldu: erişkinde en sık saptanan böbrek kanseri, yani erişkin yaş grubunda en sık primer malign böbrek tümörü berrak hücreli renal hücreli karsinomdur.",
+       "ekran": "Burası önemli, çıkmış sorularda 2 kez soruldu: erişkinde en sık saptanan böbrek kanseri, yani erişkin yaş grubunda en sık primer malign böbrek tümörü berrak hücreli renal hücreli karsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0045",
+       "ses": "Şıklarda onkositom, papiller tip, kromofob tip ve Wilms tümörü çeldirici olarak yer alır; onkositom benigndir, papiller ve kromofob daha nadirdir, Wilms ise çocukluk çağı tümörüdür.",
+       "ekran": "Şıklarda onkositom, papiller tip, kromofob tip ve Wilms tümörü çeldirici olarak yer alır; onkositom benigndir, papiller ve kromofob daha nadirdir, Wilms ise çocukluk çağı tümörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p009",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-45-c0046",
+       "ses": "Berrak hücreli karsinomu diğer alt tiplerden ayıran moleküler olay, Von Hippel Lindau genindedir.",
+       "ekran": "Berrak hücreli karsinomu diğer alt tiplerden ayıran moleküler olay, Von Hippel Lindau genindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0047",
+       "ses": "Ayırt edici özellik, bu genin her iki kopyasında kayıp ya da inaktivasyondur.",
+       "ekran": "Ayırt edici özellik, bu genin her iki kopyasında kayıp ya da inaktivasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0048",
+       "ses": "Tek kopyanın kaybı yetmez; tümör gelişimi için iki alelin de işlevsiz kalması gerekir.",
+       "ekran": "Tek kopyanın kaybı yetmez; tümör gelişimi için iki alelin de işlevsiz kalması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0049",
+       "ses": "Bu da Von Hippel Lindau geninin bir tümör baskılayıcı gen gibi davrandığını gösterir.",
+       "ekran": "Bu da Von Hippel Lindau geninin bir tümör baskılayıcı gen gibi davrandığını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0050",
+       "ses": "Olguların büyük çoğunluğu sporadiktir, yani kalıtsal bir zemin yoktur ve değişiklikler tümör hücresinde sonradan oluşur.",
+       "ekran": "Olguların büyük çoğunluğu sporadiktir, yani kalıtsal bir zemin yoktur ve değişiklikler tümör hücresinde sonradan oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0051",
+       "ses": "Bir kısmı ise ailesel geçişlidir ya da Von Hippel Lindau hastalığı ile ilişkilidir.",
+       "ekran": "Bir kısmı ise ailesel geçişlidir ya da Von Hippel Lindau hastalığı ile ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b06",
+   "baslik": "von Hippel-Lindau hastalığı",
+   "paragraflar": [
+    {
+     "id": "k1-45-p010",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-45-c0052",
+       "ses": "Von Hippel Lindau hastalığı otozomal dominant kalıtılır ve kişiye çoklu neoplazm yatkınlığı kazandırır; aynı kişide birden çok organda tümör gelişebilir.",
+       "ekran": "Von Hippel Lindau hastalığı otozomal dominant kalıtılır ve kişiye çoklu neoplazm yatkınlığı kazandırır; aynı kişide birden çok organda tümör gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0053",
+       "ses": "Bu hastalığın klasik tümörleri serebellar hemanjiyoblastomlar ve retinal hemanjiyoblastomlardır.",
+       "ekran": "Bu hastalığın klasik tümörleri serebellar hemanjiyoblastomlar ve retinal hemanjiyoblastomlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0054",
+       "ses": "Hemanjiyoblastom, beyincik ve retinada görülen, damardan zengin benign bir tümördür.",
+       "ekran": "Hemanjiyoblastom, beyincik ve retinada görülen, damardan zengin benign bir tümördür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0055",
+       "ses": "Burası önemli, bu senaryo çıkmış sorularda aynen soruldu: retinasında ve serebellumunda hemanjiyoblastom tanısı almış bir kişide böbrekte de kitle saptanıyorsa, beklenen gen mutasyonu ve sendrom Von Hippel Lindau'dur.",
+       "ekran": "Burası önemli, bu senaryo çıkmış sorularda aynen soruldu: retinasında ve serebellumunda hemanjiyoblastom tanısı almış bir kişide böbrekte de kitle saptanıyorsa, beklenen gen mutasyonu ve sendrom Von Hippel Lindau'dur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0056",
+       "ses": "Şıklarda MET ailesel geni, Denys-Drash, WAGR ve Beckwith-Wiedemann sendromları çeldiricidir; MET geni papiller karsinomla, diğer üç sendrom ise biraz sonra göreceğimiz gibi Wilms tümörüyle ilişkilidir.",
+       "ekran": "Şıklarda MET ailesel geni, Denys-Drash, WAGR ve Beckwith-Wiedemann sendromları çeldiricidir; MET geni papiller karsinomla, diğer üç sendrom ise biraz sonra göreceğimiz gibi Wilms tümörüyle ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p011",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-45-c0057",
+       "ses": "Bu hastalıkta böbrek tutulumu sık ve karakteristiktir.",
+       "ekran": "Bu hastalıkta böbrek tutulumu sık ve karakteristiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0058",
+       "ses": "Etkilenen bireylerin %40 ile 60'ında bilateral ve sıklıkla multipl berrak hücreli karsinomlar gelişir.",
+       "ekran": "Etkilenen bireylerin %40 ile 60'ında bilateral ve sıklıkla multipl berrak hücreli karsinomlar gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0059",
+       "ses": "Genetik temel, Von Hippel Lindau geninde kalıtsal germ hattı fonksiyon kaybı mutasyonudur ve gen lokusu 3. kromozomun kısa kolunda, 3p25 bölgesindedir.",
+       "ekran": "Genetik temel, Von Hippel Lindau geninde kalıtsal germ hattı fonksiyon kaybı mutasyonudur ve gen lokusu 3. kromozomun kısa kolunda, 3p25 bölgesindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0060",
+       "ses": "Germ hattı mutasyonu döllenmeden itibaren vücudun tüm hücrelerinde bulunduğu için iki böbrekte de, birden çok odakta tümör çıkabilir.",
+       "ekran": "Germ hattı mutasyonu döllenmeden itibaren vücudun tüm hücrelerinde bulunduğu için iki böbrekte de, birden çok odakta tümör çıkabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0061",
+       "ses": "Sporadik olguda ise genellikle tek, tek taraflı bir kitle görürüz.",
+       "ekran": "Sporadik olguda ise genellikle tek, tek taraflı bir kitle görürüz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0062",
+       "ses": "Yani iki taraflı ve çok odaklı berrak hücreli karsinom gördüğünüzde ailesel zemini, özellikle Von Hippel Lindau hastalığını düşünmelisiniz.",
+       "ekran": "Yani iki taraflı ve çok odaklı berrak hücreli karsinom gördüğünüzde ailesel zemini, özellikle Von Hippel Lindau hastalığını düşünmelisiniz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b07",
+   "baslik": "2 vuruş hipotezi ve sporadik tümörlerde 3p kaybı",
+   "paragraflar": [
+    {
+     "id": "k1-45-p012",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-45-c0063",
+       "ses": "İki kopyanın da kaybolması gerektiği bilgisi iki vuruş hipoteziyle açıklanır.",
+       "ekran": "İki kopyanın da kaybolması gerektiği bilgisi iki vuruş hipoteziyle açıklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0064",
+       "ses": "Ailesel olguda ilk vuruş germ hattı Von Hippel Lindau mutasyonudur; kişi bir bozuk aleli doğuştan taşır.",
+       "ekran": "Ailesel olguda ilk vuruş germ hattı Von Hippel Lindau mutasyonudur; kişi bir bozuk aleli doğuştan taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0065",
+       "ses": "İkinci vuruş tümörde gerçekleşir ve diğer alelin kaybı ya da susturulmasıdır.",
+       "ekran": "İkinci vuruş tümörde gerçekleşir ve diğer alelin kaybı ya da susturulmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0066",
+       "ses": "Bu, somatik bir mutasyonla olabileceği gibi hipermetilasyonla da olabilir.",
+       "ekran": "Bu, somatik bir mutasyonla olabileceği gibi hipermetilasyonla da olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0067",
+       "ses": "Hipermetilasyon, gen promotorunun aşırı metillenmesiyle alelin, dizisi değişmeden epigenetik olarak susturulmasıdır.",
+       "ekran": "Hipermetilasyon, gen promotorunun aşırı metillenmesiyle alelin, dizisi değişmeden epigenetik olarak susturulmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0068",
+       "ses": "Yani ikinci vuruş yalnız mutasyon değildir; hipermetilasyonla susturma da ikinci vuruş sayılır.",
+       "ekran": "Yani ikinci vuruş yalnız mutasyon değildir; hipermetilasyonla susturma da ikinci vuruş sayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0069",
+       "ses": "Ailesel olguda her hücrede bir vuruş zaten hazır olduğu için tek bir somatik olay tümörü başlatabilir; bu da çok odaklılığı açıklar.",
+       "ekran": "Ailesel olguda her hücrede bir vuruş zaten hazır olduğu için tek bir somatik olay tümörü başlatabilir; bu da çok odaklılığı açıklar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p013",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-45-c0070",
+       "ses": "Berrak hücreli karsinomların çoğu sporadik olduğuna göre iki vuruş bu olgularda da olmalıdır; ancak burada iki vuruş da somatiktir.",
+       "ekran": "Berrak hücreli karsinomların çoğu sporadik olduğuna göre iki vuruş bu olgularda da olmalıdır; ancak burada iki vuruş da somatiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0071",
+       "ses": "Çoğu sporadik tümörde 3. kromozomun kısa kol segmentinde monoallelik delesyon vardır; yani Von Hippel Lindau genini taşıyan bölge bir kromozomdan silinir.",
+       "ekran": "Çoğu sporadik tümörde 3. kromozomun kısa kol segmentinde monoallelik delesyon vardır; yani Von Hippel Lindau genini taşıyan bölge bir kromozomdan silinir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0072",
+       "ses": "Diğer alelde ise mutasyon ya da inaktivasyon gelişir.",
+       "ekran": "Diğer alelde ise mutasyon ya da inaktivasyon gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0073",
+       "ses": "Sonuç, Von Hippel Lindau protein fonksiyonunun kaybıdır.",
+       "ekran": "Sonuç, Von Hippel Lindau protein fonksiyonunun kaybıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0074",
+       "ses": "Delesyonun tam da genin bulunduğu kolda olması tesadüf değildir.",
+       "ekran": "Delesyonun tam da genin bulunduğu kolda olması tesadüf değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0075",
+       "ses": "Özetle ailesel yolda ilk vuruş doğuştan, 2.'si somatiktir; sporadik yolda ise iki vuruş da tümör hücresinde sonradan oluşur.",
+       "ekran": "Özetle ailesel yolda ilk vuruş doğuştan, 2.'si somatiktir; sporadik yolda ise iki vuruş da tümör hücresinde sonradan oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0076",
+       "ses": "Ortak payda her iki yolda da proteinin işlevini yitirmesidir.",
+       "ekran": "Ortak payda her iki yolda da proteinin işlevini yitirmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b08",
+   "baslik": "von Hippel-Lindau, HIF, damar yapımı ve metabolizma",
+   "paragraflar": [
+    {
+     "id": "k1-45-p014",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-45-c0077",
+       "ses": "Peki bu proteinin kaybı neden tümör yapar?",
+       "ekran": "Peki bu proteinin kaybı neden tümör yapar?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0078",
+       "ses": "Cevap, hipoksiyle indüklenen faktörler üzerindeki denetimindedir; bunlara kısaca HIF diyoruz.",
+       "ekran": "Cevap, hipoksiyle indüklenen faktörler üzerindeki denetimindedir; bunlara kısaca HIF diyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0079",
+       "ses": "Normalde Von Hippel Lindau proteini HIF için oksijene bağımlı degradasyon sağlar; oksijen yeterliyken HIF sürekli yıkılır ve düzeyi düşük tutulur.",
+       "ekran": "Normalde Von Hippel Lindau proteini HIF için oksijene bağımlı degradasyon sağlar; oksijen yeterliyken HIF sürekli yıkılır ve düzeyi düşük tutulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0080",
+       "ses": "Protein yokluğunda HIF düzeyleri yüksek kalır ve normoksik koşullarda, yani oksijen normalken bile HIF stabildir.",
+       "ekran": "Protein yokluğunda HIF düzeyleri yüksek kalır ve normoksik koşullarda, yani oksijen normalken bile HIF stabildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0081",
+       "ses": "Bunu bir yanlış alarm gibi düşünün: hücre oksijeni yeterli olduğu hâlde kendini sürekli oksijensiz ortamdaymış gibi programlar ve hipoksiye uyum için tasarlanmış genetik programlar açık kalır.",
+       "ekran": "Bunu bir yanlış alarm gibi düşünün: hücre oksijeni yeterli olduğu hâlde kendini sürekli oksijensiz ortamdaymış gibi programlar ve hipoksiye uyum için tasarlanmış genetik programlar açık kalır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p015",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-45-c0082",
+       "ses": "HIF bir transkripsiyon faktörüdür, yani hedef genlerin okunmasını başlatır.",
+       "ekran": "HIF bir transkripsiyon faktörüdür, yani hedef genlerin okunmasını başlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0083",
+       "ses": "Artmış HIF aktivitesi vasküler endotelyal büyüme faktörünün ekspresyonunu artırır.",
+       "ekran": "Artmış HIF aktivitesi vasküler endotelyal büyüme faktörünün ekspresyonunu artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0084",
+       "ses": "Bunun sonucunda tümörün anjiyogenezi ve vaskülarizasyonu artar; yeni damarlar büyüyen kitleye oksijen ve besin taşır.",
+       "ekran": "Bunun sonucunda tümörün anjiyogenezi ve vaskülarizasyonu artar; yeni damarlar büyüyen kitleye oksijen ve besin taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0085",
+       "ses": "Berrak hücreli karsinomun damardan zengin yapısının moleküler gerekçesi bu eksendir.",
+       "ekran": "Berrak hücreli karsinomun damardan zengin yapısının moleküler gerekçesi bu eksendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0086",
+       "ses": "Anjiyogenezin genel mekanizmalarını neoplazi konusunda ayrıntılı görmüştük.",
+       "ekran": "Anjiyogenezin genel mekanizmalarını neoplazi konusunda ayrıntılı görmüştük.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p016",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-45-c0087",
+       "ses": "HIF'in etkisi yalnız damarla sınırlı değildir.",
+       "ekran": "HIF'in etkisi yalnız damarla sınırlı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0088",
+       "ses": "HIF, hücre büyümesini yöneten bir proto onkogen olan MYC ile iş birliği yapar.",
+       "ekran": "HIF, hücre büyümesini yöneten bir proto onkogen olan MYC ile iş birliği yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0089",
+       "ses": "Bunun sonucunda hücresel metabolizma proliferasyonu destekleyecek şekilde yeniden programlanır ve bu değişiklikler berrak hücreli karsinomda tümör büyümesini hızlandırır.",
+       "ekran": "Bunun sonucunda hücresel metabolizma proliferasyonu destekleyecek şekilde yeniden programlanır ve bu değişiklikler berrak hücreli karsinomda tümör büyümesini hızlandırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0090",
+       "ses": "Yani HIF birikimi tümöre hem bir yakıt hattı, yani damar, hem de bir üretim bandı, yani bölünmeye göre ayarlanmış metabolizma sağlar.",
+       "ekran": "Yani HIF birikimi tümöre hem bir yakıt hattı, yani damar, hem de bir üretim bandı, yani bölünmeye göre ayarlanmış metabolizma sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p017",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-45-c0091",
+       "ses": "Tablonun bir katmanı daha var: epigenom.",
+       "ekran": "Tablonun bir katmanı daha var: epigenom.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0092",
+       "ses": "Derin genom dizileme çalışmaları, histon metilasyonunu düzenleyen genlerde sık fonksiyon kaybı mutasyonları gösterir.",
+       "ekran": "Derin genom dizileme çalışmaları, histon metilasyonunu düzenleyen genlerde sık fonksiyon kaybı mutasyonları gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0093",
+       "ses": "Epigenetik düzenleme, DNA dizisi değişmeden genlerin açılıp kapanmasını belirler; histon metilasyonu da DNA'nın sarıldığı histon proteinlerine metil grubu eklenerek hangi genin okunacağını etkiler.",
+       "ekran": "Epigenetik düzenleme, DNA dizisi değişmeden genlerin açılıp kapanmasını belirler; histon metilasyonu da DNA'nın sarıldığı histon proteinlerine metil grubu eklenerek hangi genin okunacağını etkiler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0094",
+       "ses": "Bu düzenleyici genler işlev yitirince gen ekspresyon düzeni bozulur.",
+       "ekran": "Bu düzenleyici genler işlev yitirince gen ekspresyon düzeni bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0095",
+       "ses": "Sonuçta epigenomdaki değişiklikler berrak hücreli karsinom gelişiminde önemli rol oynar.",
+       "ekran": "Sonuçta epigenomdaki değişiklikler berrak hücreli karsinom gelişiminde önemli rol oynar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0096",
+       "ses": "Tek cümleyle özetlersek: Von Hippel Lindau kaybı HIF'i stabil kılar, HIF damar yapımını ve MYC ile birlikte metabolizmayı yönlendirir, epigenetik değişiklikler de buna katkı yapar.",
+       "ekran": "Tek cümleyle özetlersek: Von Hippel Lindau kaybı HIF'i stabil kılar, HIF damar yapımını ve MYC ile birlikte metabolizmayı yönlendirir, epigenetik değişiklikler de buna katkı yapar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b09",
+   "baslik": "Papiller böbrek hücreli karsinom ve MET geni",
+   "paragraflar": [
+    {
+     "id": "k1-45-p018",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-45-c0097",
+       "ses": "Papiller böbrek hücreli karsinom ikinci sık alt tiptir ve tüm böbrek kanserlerinin %10 ile 15'ini oluşturur.",
+       "ekran": "Papiller böbrek hücreli karsinom ikinci sık alt tiptir ve tüm böbrek kanserlerinin %10 ile 15'ini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0098",
+       "ses": "Adını büyüme paterninden alır; hücreler parmak benzeri papiller çıkıntılar oluşturur.",
+       "ekran": "Adını büyüme paterninden alır; hücreler parmak benzeri papiller çıkıntılar oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0099",
+       "ses": "Klinik olarak sıklıkla multifokal, yani aynı böbrekte birden çok odaklı, sıklıkla da bilateral, yani iki taraflıdır ve genellikle erken evrede saptanır.",
+       "ekran": "Klinik olarak sıklıkla multifokal, yani aynı böbrekte birden çok odaklı, sıklıkla da bilateral, yani iki taraflıdır ve genellikle erken evrede saptanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0100",
+       "ses": "Bu yüzden çok odaklı ve iki taraflı böbrek tümörü gördüğünüzde yalnız Von Hippel Lindau hastalığını değil, papiller karsinomu da düşünmelisiniz.",
+       "ekran": "Bu yüzden çok odaklı ve iki taraflı böbrek tümörü gördüğünüzde yalnız Von Hippel Lindau hastalığını değil, papiller karsinomu da düşünmelisiniz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p019",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-45-c0101",
+       "ses": "Papiller karsinomun hem ailesel hem sporadik formları vardır ve her ikisinde de ortak özellik MET fonksiyonunun artışıdır.",
+       "ekran": "Papiller karsinomun hem ailesel hem sporadik formları vardır ve her ikisinde de ortak özellik MET fonksiyonunun artışıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0102",
+       "ses": "MET, mezenkimal epitelyal geçiş ifadesinin kısaltmasıdır.",
+       "ekran": "MET, mezenkimal epitelyal geçiş ifadesinin kısaltmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0103",
+       "ses": "MET geni 7. kromozomun uzun kolunda, yani 7q üzerindedir ve bir tirozin kinaz reseptörünü kodlar.",
+       "ekran": "MET geni 7. kromozomun uzun kolunda, yani 7q üzerindedir ve bir tirozin kinaz reseptörünü kodlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0104",
+       "ses": "Bu reseptör normalde hepatosit büyüme faktörü üzerinden uyarılır ve hücre büyümesi ile hücre motilitesi, yani hareketi ile ilişkilidir.",
+       "ekran": "Bu reseptör normalde hepatosit büyüme faktörü üzerinden uyarılır ve hücre büyümesi ile hücre motilitesi, yani hareketi ile ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0105",
+       "ses": "Hepatosit büyüme faktörü reseptöre bağlanınca kinaz bölgesi aktive olur ve hücre içine büyüme ve hareket sinyali iletilir.",
+       "ekran": "Hepatosit büyüme faktörü reseptöre bağlanınca kinaz bölgesi aktive olur ve hücre içine büyüme ve hareket sinyali iletilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p020",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-45-c0106",
+       "ses": "MET işlevi farklı yollarla artabilir.",
+       "ekran": "MET işlevi farklı yollarla artabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0107",
+       "ses": "Sporadik tümörlerde MET kopya sayısında artış ya da MET'te somatik aktive edici mutasyonlar görülür.",
+       "ekran": "Sporadik tümörlerde MET kopya sayısında artış ya da MET'te somatik aktive edici mutasyonlar görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0108",
+       "ses": "Ailesel olgularda ise germ hattı aktive edici MET mutasyonları vardır.",
+       "ekran": "Ailesel olgularda ise germ hattı aktive edici MET mutasyonları vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0109",
+       "ses": "Tüm olgularda net etki MET sinyallemesinde artıştır; sonuç da proksimal tubuler epitel hücrelerinde anormal proliferasyon ve tümör gelişimidir.",
+       "ekran": "Tüm olgularda net etki MET sinyallemesinde artıştır; sonuç da proksimal tubuler epitel hücrelerinde anormal proliferasyon ve tümör gelişimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0110",
+       "ses": "Burada mantığın berrak hücreli tipe göre tersine döndüğüne dikkat edin.",
+       "ekran": "Burada mantığın berrak hücreli tipe göre tersine döndüğüne dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0111",
+       "ses": "Berrak hücreli tipte bir tümör baskılayıcı genin kaybı, yani 3p üzerindeki Von Hippel Lindau kaybı vardır.",
+       "ekran": "Berrak hücreli tipte bir tümör baskılayıcı genin kaybı, yani 3p üzerindeki Von Hippel Lindau kaybı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0112",
+       "ses": "Papiller tipte ise bir büyüme sinyali geninin işlev kazancı, yani 7q üzerindeki MET artışı vardır.",
+       "ekran": "Papiller tipte ise bir büyüme sinyali geninin işlev kazancı, yani 7q üzerindeki MET artışı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0113",
+       "ses": "Yönler ve kromozomlar sınavda sık karıştırılır.",
+       "ekran": "Yönler ve kromozomlar sınavda sık karıştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b10",
+   "baslik": "Kromofob renal hücreli karsinom: köken, genetik ve prognoz",
+   "paragraflar": [
+    {
+     "id": "k1-45-p021",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-45-c0114",
+       "ses": "Üç ana alt tipin 3.'sü kromofob renal hücreli karsinomdur.",
+       "ekran": "Üç ana alt tipin 3.'sü kromofob renal hücreli karsinomdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0115",
+       "ses": "Renal hücreli karsinomların en nadir formudur ve tümünün yaklaşık %5'ini oluşturur.",
+       "ekran": "Renal hücreli karsinomların en nadir formudur ve tümünün yaklaşık %5'ini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0116",
+       "ses": "Kökeni diğerlerinden farklıdır: toplayıcı kanalların ara hücrelerinden gelişir.",
+       "ekran": "Kökeni diğerlerinden farklıdır: toplayıcı kanalların ara hücrelerinden gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0117",
+       "ses": "Hücrelerinin sitoplazması hafif eozinofilik ve soluktur, ancak berrak hücreli karsinom kadar berrak değildir.",
+       "ekran": "Hücrelerinin sitoplazması hafif eozinofilik ve soluktur, ancak berrak hücreli karsinom kadar berrak değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0118",
+       "ses": "Yani berrak hücreli ve papiller tipler tubuler epitel kökenliyken, kromofob tip nefronun daha distalindeki toplayıcı kanal ara hücrelerinden doğar.",
+       "ekran": "Yani berrak hücreli ve papiller tipler tubuler epitel kökenliyken, kromofob tip nefronun daha distalindeki toplayıcı kanal ara hücrelerinden doğar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p022",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-45-c0119",
+       "ses": "Genetik tablosu da farklıdır.",
+       "ekran": "Genetik tablosu da farklıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0120",
+       "ses": "Sıklıkla çok sayıda kromozom kaybı ve aşırı hipoploidi, yani normalden daha az kromozom sayısı görülür.",
+       "ekran": "Sıklıkla çok sayıda kromozom kaybı ve aşırı hipoploidi, yani normalden daha az kromozom sayısı görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0121",
+       "ses": "Kritik gen değişiklikleri ise henüz net tanımlanmamıştır.",
+       "ekran": "Kritik gen değişiklikleri ise henüz net tanımlanmamıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0122",
+       "ses": "Berrak hücreli tipte belirleyici tek gen kaybı, papiller tipte tek gen aktivasyonu varken, kromofobda belirleyici olan kromozomların toplu kaybıdır.",
+       "ekran": "Berrak hücreli tipte belirleyici tek gen kaybı, papiller tipte tek gen aktivasyonu varken, kromofobda belirleyici olan kromozomların toplu kaybıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p023",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-45-c0123",
+       "ses": "Moleküler sınıflamanın klinik değeri prognozda açıkça görülür.",
+       "ekran": "Moleküler sınıflamanın klinik değeri prognozda açıkça görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0124",
+       "ses": "Kromofob karsinomun genel prognozu diğer alt tiplere göre daha olumludur ve tanı sonrası daha iyi sağkalımla ilişkilidir.",
+       "ekran": "Kromofob karsinomun genel prognozu diğer alt tiplere göre daha olumludur ve tanı sonrası daha iyi sağkalımla ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0125",
+       "ses": "Renal hücreli karsinom genelinde hastaların yaklaşık %40'ı kaybedilirken kromofob alt tip daha iyi seyreder.",
+       "ekran": "Renal hücreli karsinom genelinde hastaların yaklaşık %40'ı kaybedilirken kromofob alt tip daha iyi seyreder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0126",
+       "ses": "Yani üç ana alt tip içinde en nadir olan kromofob tip, aynı zamanda en olumlu prognozlu olandır.",
+       "ekran": "Yani üç ana alt tip içinde en nadir olan kromofob tip, aynı zamanda en olumlu prognozlu olandır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b11",
+   "baslik": "Berrak hücreli karsinomun makroskopisi",
+   "paragraflar": [
+    {
+     "id": "k1-45-p024",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-45-c0127",
+       "ses": "Moleküler temeli öğrendikten sonra berrak hücreli karsinomun çıplak gözle görünümüne geçelim.",
+       "ekran": "Moleküler temeli öğrendikten sonra berrak hücreli karsinomun çıplak gözle görünümüne geçelim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0128",
+       "ses": "Tümör tanı anında sıklıkla 3 ile 15 santimetre çapındadır.",
+       "ekran": "Tümör tanı anında sıklıkla 3 ile 15 santimetre çapındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0129",
+       "ses": "Genellikle tek, küresel bir kitledir ve korteksin hemen her yerinde olabilir.",
+       "ekran": "Genellikle tek, küresel bir kitledir ve korteksin hemen her yerinde olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0130",
+       "ses": "Yüksek çözünürlüklü görüntüleme teknikleri sayesinde daha küçük lezyonlar başka bir nedenle yapılan incelemelerde tesadüfen saptanabilir.",
+       "ekran": "Yüksek çözünürlüklü görüntüleme teknikleri sayesinde daha küçük lezyonlar başka bir nedenle yapılan incelemelerde tesadüfen saptanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0131",
+       "ses": "Tek ve küresel kitle sporadik olgunun tipik görünümüdür; Von Hippel Lindau hastalığındaki bilateral ve multipl tümörler bu kuralın ailesel istisnasıdır.",
+       "ekran": "Tek ve küresel kitle sporadik olgunun tipik görünümüdür; Von Hippel Lindau hastalığındaki bilateral ve multipl tümörler bu kuralın ailesel istisnasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p025",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-45-c0132",
+       "ses": "Kesit yüzü sarı turuncu renktedir ve bu renk bol lipit içeriğiyle ilişkilidir.",
+       "ekran": "Kesit yüzü sarı turuncu renktedir ve bu renk bol lipit içeriğiyle ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0133",
+       "ses": "Sıklıkla nekroz alanları, belirgin kistik yumuşama ve kanama odakları bulunur.",
+       "ekran": "Sıklıkla nekroz alanları, belirgin kistik yumuşama ve kanama odakları bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0134",
+       "ses": "Bu karışım kesit yüzüne alacalı bir görünüm verir: sarı alanlar, kırmızı kahverengi kanama, beyazımsı nekroz ve kistik boşluklar bir arada izlenir.",
+       "ekran": "Bu karışım kesit yüzüne alacalı bir görünüm verir: sarı alanlar, kırmızı kahverengi kanama, beyazımsı nekroz ve kistik boşluklar bir arada izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0135",
+       "ses": "Derste gösterilen temsili kesitte böbreğin bir kutbunda sarımsı, küresel bir neoplazm görülür; aynı kesitte genişlemiş ve tromboze olmuş böbrek veni içinde de tümör dokusu vardır.",
+       "ekran": "Derste gösterilen temsili kesitte böbreğin bir kutbunda sarımsı, küresel bir neoplazm görülür; aynı kesitte genişlemiş ve tromboze olmuş böbrek veni içinde de tümör dokusu vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0136",
+       "ses": "Bu, tümörün ven içinde ilerleme eğiliminin makroskopik kanıtıdır.",
+       "ekran": "Bu, tümörün ven içinde ilerleme eğiliminin makroskopik kanıtıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b12",
+   "baslik": "Berrak hücreli karsinomun yayılımı",
+   "paragraflar": [
+    {
+     "id": "k1-45-p026",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-45-c0137",
+       "ses": "Tümör sınırları çoğu olguda iyi tanımlıdır, ancak bu görünüm yanıltıcı olabilir; lokal yayılımla ana kitlenin çevresinde uydu lezyonlar oluşabilir.",
+       "ekran": "Tümör sınırları çoğu olguda iyi tanımlıdır, ancak bu görünüm yanıltıcı olabilir; lokal yayılımla ana kitlenin çevresinde uydu lezyonlar oluşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0138",
+       "ses": "Yani iyi sınırlı olmak benign olmak demek değildir.",
+       "ekran": "Yani iyi sınırlı olmak benign olmak demek değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0139",
+       "ses": "Tümör büyüdükçe toplayıcı sistem duvarına doğru mantar tarzında genişler, kaliks ve pelvis içine uzanır ve üretere kadar ilerleyebilir.",
+       "ekran": "Tümör büyüdükçe toplayıcı sistem duvarına doğru mantar tarzında genişler, kaliks ve pelvis içine uzanır ve üretere kadar ilerleyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0140",
+       "ses": "Tümör dokusu idrarın aktığı boşluklara ulaştığında idrara kan karışabilir; biraz sonra konuşacağımız hematürinin anatomik zemini budur.",
+       "ekran": "Tümör dokusu idrarın aktığı boşluklara ulaştığında idrara kan karışabilir; biraz sonra konuşacağımız hematürinin anatomik zemini budur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p027",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-45-c0141",
+       "ses": "Berrak hücreli karsinomun en ayırt edici yayılım özelliği venöz sisteme ilerlemesidir.",
+       "ekran": "Berrak hücreli karsinomun en ayırt edici yayılım özelliği venöz sisteme ilerlemesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0142",
+       "ses": "Burası önemli: tümör sıklıkla renal veni invaze eder ve ven içinde katı bir tümör kolonu oluşturur.",
+       "ekran": "Burası önemli: tümör sıklıkla renal veni invaze eder ve ven içinde katı bir tümör kolonu oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0143",
+       "ses": "İleri olgularda bu kolon inferior vena kava içine, nadiren de kalbin sağ tarafına kadar uzanır.",
+       "ekran": "İleri olgularda bu kolon inferior vena kava içine, nadiren de kalbin sağ tarafına kadar uzanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0144",
+       "ses": "Yani yol renal venden inferior vena kavaya, oradan sağ atriyuma doğrudur.",
+       "ekran": "Yani yol renal venden inferior vena kavaya, oradan sağ atriyuma doğrudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0145",
+       "ses": "Venöz tümör kolonu ilerlemiş hastalığın göstergesidir ve tedavi planlamasını değiştirir.",
+       "ekran": "Venöz tümör kolonu ilerlemiş hastalığın göstergesidir ve tedavi planlamasını değiştirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p028",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-45-c0146",
+       "ses": "Buna karşılık tümörün böbreği çevreleyen dokulara doğrudan ilerlemesi daha nadirdir.",
+       "ekran": "Buna karşılık tümörün böbreği çevreleyen dokulara doğrudan ilerlemesi daha nadirdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0147",
+       "ses": "Perirenal yağ dokusuna ya da adrenal beze direkt invazyon nadiren görülür ve lokal ileri hastalığın göstergesidir.",
+       "ekran": "Perirenal yağ dokusuna ya da adrenal beze direkt invazyon nadiren görülür ve lokal ileri hastalığın göstergesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0148",
+       "ses": "Dikkat edin, renal ven invazyonu sık, perirenal yağ ve adrenal invazyonu ise nadir ama lokal ileri hastalık işaretidir.",
+       "ekran": "Dikkat edin, renal ven invazyonu sık, perirenal yağ ve adrenal invazyonu ise nadir ama lokal ileri hastalık işaretidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0149",
+       "ses": "Böylece üç yayılım yolumuz olur: toplayıcı sisteme doğru, venöz sisteme doğru ve çevre dokulara doğru.",
+       "ekran": "Böylece üç yayılım yolumuz olur: toplayıcı sisteme doğru, venöz sisteme doğru ve çevre dokulara doğru.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b13",
+   "baslik": "Berrak hücreli karsinomun mikroskopisi ve derecelendirme",
+   "paragraflar": [
+    {
+     "id": "k1-45-p029",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-45-c0150",
+       "ses": "Mikroskopta neoplastik hücreler bol lipit ve glikojen içerir; sitoplazma vakuollü ve berraktır, hücre membranları belirgindir, yani hücre sınırları net seçilir.",
+       "ekran": "Mikroskopta neoplastik hücreler bol lipit ve glikojen içerir; sitoplazma vakuollü ve berraktır, hücre membranları belirgindir, yani hücre sınırları net seçilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0151",
+       "ses": "Hücreler ince fibrovasküler stroma ile birbirinden ayrılan yuvalar hâlinde dizilir.",
+       "ekran": "Hücreler ince fibrovasküler stroma ile birbirinden ayrılan yuvalar hâlinde dizilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0152",
+       "ses": "Çekirdekler genellikle küçük ve yuvarlaktır.",
+       "ekran": "Çekirdekler genellikle küçük ve yuvarlaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0153",
+       "ses": "Ders şeklindeki ilk panelde saydam sitoplazmalı hücre yuvaları ve aralarında ince, kanla dolu damarsal ağ görülür; bu ağın zenginliği, HIF ve damar büyüme faktörü ekseninin doku düzeyindeki yansımasıdır.",
+       "ekran": "Ders şeklindeki ilk panelde saydam sitoplazmalı hücre yuvaları ve aralarında ince, kanla dolu damarsal ağ görülür; bu ağın zenginliği, HIF ve damar büyüme faktörü ekseninin doku düzeyindeki yansımasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p030",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-45-c0154",
+       "ses": "Her berrak hücreli karsinom bu klasik görünümde değildir; iki morfolojik varyant tanımlanır.",
+       "ekran": "Her berrak hücreli karsinom bu klasik görünümde değildir; iki morfolojik varyant tanımlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0155",
+       "ses": "Birinci varyantta tümör hücrelerinin sitoplazması granüler, yani taneli görünümdedir ve tubuler epitele benzer; berraklık belirgin olmadığından tanı zorlaşabilir.",
+       "ekran": "Birinci varyantta tümör hücrelerinin sitoplazması granüler, yani taneli görünümdedir ve tubuler epitele benzer; berraklık belirgin olmadığından tanı zorlaşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0156",
+       "ses": "İkinci varyant anaplastiktir: çok sayıda mitotik figür ve büyük, hiperkromatik, pleomorfik çekirdekler görülür.",
+       "ekran": "İkinci varyant anaplastiktir: çok sayıda mitotik figür ve büyük, hiperkromatik, pleomorfik çekirdekler görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0157",
+       "ses": "Anaplazi farklılaşma kaybıdır; mitoz artışı ve çekirdeklerin koyu boyanıp boyut ve şekilce farklılaşması agresif davranışın morfolojik işaretleridir.",
+       "ekran": "Anaplazi farklılaşma kaybıdır; mitoz artışı ve çekirdeklerin koyu boyanıp boyut ve şekilce farklılaşması agresif davranışın morfolojik işaretleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0158",
+       "ses": "Burası önemli, çıkmış sorularda soruldu: böbrek tümörlerinin derecelendirilmesinde kullanılan sistem Furman sistemidir, güncel adıyla ISUP derecelendirmesi.",
+       "ekran": "Burası önemli, çıkmış sorularda soruldu: böbrek tümörlerinin derecelendirilmesinde kullanılan sistem Furman sistemidir, güncel adıyla ISUP derecelendirmesi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0159",
+       "ses": "Şıklarda Nottingham, Milano, Paris ve Barselona gibi başka sistemler çeldirici olarak yer alır.",
+       "ekran": "Şıklarda Nottingham, Milano, Paris ve Barselona gibi başka sistemler çeldirici olarak yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p031",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-45-c0160",
+       "ses": "Hücreler yuvaların yanında abortif, yani tam gelişmemiş tübüller, kordonlar ya da düzensiz kitleler de oluşturabilir.",
+       "ekran": "Hücreler yuvaların yanında abortif, yani tam gelişmemiş tübüller, kordonlar ya da düzensiz kitleler de oluşturabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0161",
+       "ses": "Stroma genellikle azdır, ancak belirgin derecede vasküler yapı gösterir.",
+       "ekran": "Stroma genellikle azdır, ancak belirgin derecede vasküler yapı gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0162",
+       "ses": "Az stroma, tümörün çoğunlukla hücreden oluştuğunu; zengin damar ağı ise HIF birikimine bağlı damar büyüme faktörü artışını yansıtır.",
+       "ekran": "Az stroma, tümörün çoğunlukla hücreden oluştuğunu; zengin damar ağı ise HIF birikimine bağlı damar büyüme faktörü artışını yansıtır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0163",
+       "ses": "Kesit yüzündeki kanama odakları da, tümörün renal vene ilerleme eğilimi de bu damardan zengin biyolojinin parçalarıdır.",
+       "ekran": "Kesit yüzündeki kanama odakları da, tümörün renal vene ilerleme eğilimi de bu damardan zengin biyolojinin parçalarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b14",
+   "baslik": "Papiller ve kromofob karsinomun morfolojisi",
+   "paragraflar": [
+    {
+     "id": "k1-45-p032",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-45-c0164",
+       "ses": "Papiller renal hücreli karsinom makroskopik olarak bilateral ve multipl lezyon eğilimi gösterir.",
+       "ekran": "Papiller renal hücreli karsinom makroskopik olarak bilateral ve multipl lezyon eğilimi gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0165",
+       "ses": "Nekroz, kanama ve kistik dejenerasyon görülebilir.",
+       "ekran": "Nekroz, kanama ve kistik dejenerasyon görülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0166",
+       "ses": "Rengi berrak hücreli karsinoma göre daha mat, daha az canlı bir turuncu sarıdır; bunun nedeni daha düşük lipit içeriğidir.",
+       "ekran": "Rengi berrak hücreli karsinoma göre daha mat, daha az canlı bir turuncu sarıdır; bunun nedeni daha düşük lipit içeriğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0167",
+       "ses": "Yani lipit ne kadar azsa renk o kadar mattır.",
+       "ekran": "Yani lipit ne kadar azsa renk o kadar mattır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0168",
+       "ses": "Mikroskopta hücreler kübik ya da alçak sütunlu epiteldir; sitoplazma eozinofilikten berrak görünüme kadar değişebilir.",
+       "ekran": "Mikroskopta hücreler kübik ya da alçak sütunlu epiteldir; sitoplazma eozinofilikten berrak görünüme kadar değişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0169",
+       "ses": "Bu hücreler fibrovasküler çekirdekli papillaları, yani ortasında bağ dokusu ve damar ekseni bulunan parmak benzeri çıkıntıları çevreler.",
+       "ekran": "Bu hücreler fibrovasküler çekirdekli papillaları, yani ortasında bağ dokusu ve damar ekseni bulunan parmak benzeri çıkıntıları çevreler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0170",
+       "ses": "Dikkat edin, papiller karsinomda da berrak sitoplazma görülebileceği için ayırımda belirleyici olan hücre rengi değil, papiller mimaridir.",
+       "ekran": "Dikkat edin, papiller karsinomda da berrak sitoplazma görülebileceği için ayırımda belirleyici olan hücre rengi değil, papiller mimaridir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p033",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-45-c0171",
+       "ses": "Kromofob renal hücreli karsinom makroskopik olarak ten rengi ile kahverengi arası bir kitledir ve genellikle tek, iyi sınırlı bir tümör olarak izlenir.",
+       "ekran": "Kromofob renal hücreli karsinom makroskopik olarak ten rengi ile kahverengi arası bir kitledir ve genellikle tek, iyi sınırlı bir tümör olarak izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0172",
+       "ses": "Mikroskopta soluk granüler hücrelerle karışık eozinofilik sitoplazma, çok belirgin ve keskin hücre zarları ve sıklıkla perinükleer halo, yani çekirdeğin çevresinde açık renkli bir kuşak görülür.",
+       "ekran": "Mikroskopta soluk granüler hücrelerle karışık eozinofilik sitoplazma, çok belirgin ve keskin hücre zarları ve sıklıkla perinükleer halo, yani çekirdeğin çevresinde açık renkli bir kuşak görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0173",
+       "ses": "Bu özelliklerin birleşimi kromofob görünümden sorumludur; kromofob zaten boyayı az tutan anlamına gelir.",
+       "ekran": "Bu özelliklerin birleşimi kromofob görünümden sorumludur; kromofob zaten boyayı az tutan anlamına gelir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p034",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-45-c0174",
+       "ses": "Üç alt tipi yan yana koyarsak, ders şeklinin üç paneli bu karşılaştırmayı özetler.",
+       "ekran": "Üç alt tipi yan yana koyarsak, ders şeklinin üç paneli bu karşılaştırmayı özetler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0175",
+       "ses": "Berrak hücreli tip canlı sarı turuncu, tek ve küresel bir kitledir; mikroskopta ince fibrovasküler stromalı berrak hücre yuvaları görülür.",
+       "ekran": "Berrak hücreli tip canlı sarı turuncu, tek ve küresel bir kitledir; mikroskopta ince fibrovasküler stromalı berrak hücre yuvaları görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0176",
+       "ses": "Papiller tip mat turuncu sarı, bilateral ve multipldir; mikroskopta fibrovasküler çekirdekli papillalar izlenir.",
+       "ekran": "Papiller tip mat turuncu sarı, bilateral ve multipldir; mikroskopta fibrovasküler çekirdekli papillalar izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0177",
+       "ses": "Kromofob tip ten rengi kahverengi, tek ve iyi sınırlıdır; mikroskopta keskin hücre zarları ve perinükleer halo vardır.",
+       "ekran": "Kromofob tip ten rengi kahverengi, tek ve iyi sınırlıdır; mikroskopta keskin hücre zarları ve perinükleer halo vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0178",
+       "ses": "Kısacası renk lipit miktarını, mimari alt tipi, perinükleer halo ise kromofobu gösterir.",
+       "ekran": "Kısacası renk lipit miktarını, mimari alt tipi, perinükleer halo ise kromofobu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b15",
+   "baslik": "Klinik özellikler: triad, hematüri ve sistemik bulgular",
+   "paragraflar": [
+    {
+     "id": "k1-45-p035",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k1-45-c0179",
+       "ses": "Renal hücreli karsinomun klasik klinik triadı ağrısız hematüri, ele gelen abdominal kitle ve künt yan ağrısıdır.",
+       "ekran": "Renal hücreli karsinomun klasik klinik triadı ağrısız hematüri, ele gelen abdominal kitle ve künt yan ağrısıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0180",
+       "ses": "Ancak bu üçlü birlikte yalnızca olguların yaklaşık %10'unda görülür.",
+       "ekran": "Ancak bu üçlü birlikte yalnızca olguların yaklaşık %10'unda görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0181",
+       "ses": "Bu yüzden triadın tamamını beklemek tanıyı geciktirir; triadın yokluğu bu tümörü dışlamaz.",
+       "ekran": "Bu yüzden triadın tamamını beklemek tanıyı geciktirir; triadın yokluğu bu tümörü dışlamaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p036",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-45-c0182",
+       "ses": "En sık başvuru semptomu hematüridir ve olguların %50'sinden fazlasında görülür.",
+       "ekran": "En sık başvuru semptomu hematüridir ve olguların %50'sinden fazlasında görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0183",
+       "ses": "Hematüri tipik olarak aralıklı ve geçici makroskopik hematüri şeklindedir; idrarın gözle görülür şekilde kanlı olduğu ataklar gelip geçer.",
+       "ekran": "Hematüri tipik olarak aralıklı ve geçici makroskopik hematüri şeklindedir; idrarın gözle görülür şekilde kanlı olduğu ataklar gelip geçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0184",
+       "ses": "Altta ise sürekli mikroskopik hematüri bulunabilir.",
+       "ekran": "Altta ise sürekli mikroskopik hematüri bulunabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0185",
+       "ses": "Kanamanın kendiliğinden durması hastayı ve hekimi yanıltabilir; oysa gözle görülen kanama durmuşken bile idrar mikroskopisinde eritrositler saptanabilir.",
+       "ekran": "Kanamanın kendiliğinden durması hastayı ve hekimi yanıltabilir; oysa gözle görülen kanama durmuşken bile idrar mikroskopisinde eritrositler saptanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0186",
+       "ses": "Erişkinde ağrısız, aralıklı makroskopik hematüri bu nedenle mutlaka araştırılmalıdır.",
+       "ekran": "Erişkinde ağrısız, aralıklı makroskopik hematüri bu nedenle mutlaka araştırılmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p037",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k1-45-c0187",
+       "ses": "Yan ağrısı ve palpe edilebilen abdominal kitle daha az sıktır ve tümör boyutuyla ilişkilidir; yani bunlar büyük tümörün işaretleridir.",
+       "ekran": "Yan ağrısı ve palpe edilebilen abdominal kitle daha az sıktır ve tümör boyutuyla ilişkilidir; yani bunlar büyük tümörün işaretleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0188",
+       "ses": "Küçük tümörler ise çoğu zaman radyolojik incelemelerde tesadüfen saptanır.",
+       "ekran": "Küçük tümörler ise çoğu zaman radyolojik incelemelerde tesadüfen saptanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0189",
+       "ses": "Tümör ayrıca böbrek dışı sistemik belirtilerle de ortaya çıkabilir: ateş ve polisitemi.",
+       "ekran": "Tümör ayrıca böbrek dışı sistemik belirtilerle de ortaya çıkabilir: ateş ve polisitemi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0190",
+       "ses": "Bu bulgular spesifik değildir ve bu nedenle böbrek tümörü tanısı gecikebilir.",
+       "ekran": "Bu bulgular spesifik değildir ve bu nedenle böbrek tümörü tanısı gecikebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0191",
+       "ses": "Açıklanamayan ateşte enfeksiyon odağı aranırken ya da polisitemide önce kemik iliği hastalıkları düşünülürken böbrekteki tümör gözden kaçabilir.",
+       "ekran": "Açıklanamayan ateşte enfeksiyon odağı aranırken ya da polisitemide önce kemik iliği hastalıkları düşünülürken böbrekteki tümör gözden kaçabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b16",
+   "baslik": "Paraneoplastik sendromlar ve metastaz",
+   "paragraflar": [
+    {
+     "id": "k1-45-p038",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k1-45-c0192",
+       "ses": "Polisitemi hastaların %5 ile 10'unda görülür ve nedeni neoplastik hücreler tarafından eritropoietin üretimidir.",
+       "ekran": "Polisitemi hastaların %5 ile 10'unda görülür ve nedeni neoplastik hücreler tarafından eritropoietin üretimidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0193",
+       "ses": "Eritropoietin kemik iliğinde kırmızı kan hücresi yapımını uyaran hormondur; tümör hücreleri bunu salgılayınca kemik iliği gereğinden fazla eritrosit üretir ve kırmızı hücre kütlesi artar.",
+       "ekran": "Eritropoietin kemik iliğinde kırmızı kan hücresi yapımını uyaran hormondur; tümör hücreleri bunu salgılayınca kemik iliği gereğinden fazla eritrosit üretir ve kırmızı hücre kütlesi artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0194",
+       "ses": "Bu bir paraneoplastik bulgudur; yani tümörün kitlesi ya da metastazıyla değil, salgıladığı maddeyle oluşturduğu uzak bir etkidir.",
+       "ekran": "Bu bir paraneoplastik bulgudur; yani tümörün kitlesi ya da metastazıyla değil, salgıladığı maddeyle oluşturduğu uzak bir etkidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p039",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-45-c0195",
+       "ses": "Daha nadir paraneoplastik sendromlar da vardır: hiperkalsiyemi, hipertansiyon, Cushing sendromu, yani kortizol fazlalığı tablosu, ve feminizasyon ya da maskülinizasyon, yani erkekte kadınsı ya da kadında erkeksi özelliklerin gelişmesi.",
+       "ekran": "Daha nadir paraneoplastik sendromlar da vardır: hiperkalsiyemi, hipertansiyon, Cushing sendromu, yani kortizol fazlalığı tablosu, ve feminizasyon ya da maskülinizasyon, yani erkekte kadınsı ya da kadında erkeksi özelliklerin gelişmesi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0196",
+       "ses": "Bu tabloların çoğu hormon fazlalığıyla uyumludur ve hasta endokrin bir hastalıkla başvuruyormuş gibi görünebilir.",
+       "ekran": "Bu tabloların çoğu hormon fazlalığıyla uyumludur ve hasta endokrin bir hastalıkla başvuruyormuş gibi görünebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0197",
+       "ses": "Hipertansiyonun hem majör risk faktörü hem de nadir bir paraneoplastik bulgu olabildiğine dikkat edin.",
+       "ekran": "Hipertansiyonun hem majör risk faktörü hem de nadir bir paraneoplastik bulgu olabildiğine dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0198",
+       "ses": "Paraneoplastik sendromların genel mekanizmalarını neoplazi konusunda görmüştük.",
+       "ekran": "Paraneoplastik sendromların genel mekanizmalarını neoplazi konusunda görmüştük.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p040",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k1-45-c0199",
+       "ses": "Metastaza bağlı semptomlar bazen hastanın ilk başvuru nedenidir.",
+       "ekran": "Metastaza bağlı semptomlar bazen hastanın ilk başvuru nedenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0200",
+       "ses": "Burası önemli, çıkmış sorularda soruldu: renal hücreli karsinomun sık metastaz bölgeleri akciğerler ve kemiklerdir; en sık uzak metastaz görülen organ akciğerdir.",
+       "ekran": "Burası önemli, çıkmış sorularda soruldu: renal hücreli karsinomun sık metastaz bölgeleri akciğerler ve kemiklerdir; en sık uzak metastaz görülen organ akciğerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0201",
+       "ses": "Şıklarda karaciğer, lenf sistemi ve dalak çeldiricidir; kemik de sık bir bölgedir ama ilk sırada akciğer gelir.",
+       "ekran": "Şıklarda karaciğer, lenf sistemi ve dalak çeldiricidir; kemik de sık bir bölgedir ama ilk sırada akciğer gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0202",
+       "ses": "Bunun mantığı açıktır: renal ven ve vena kava içine uzanan tümör, hücrelerin sistemik dolaşıma ulaşmasını kolaylaştırır ve venöz dolaşım sağ kalpten ilk olarak akciğere ulaşır.",
+       "ekran": "Bunun mantığı açıktır: renal ven ve vena kava içine uzanan tümör, hücrelerin sistemik dolaşıma ulaşmasını kolaylaştırır ve venöz dolaşım sağ kalpten ilk olarak akciğere ulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0203",
+       "ses": "Uzak metastaz ileri evre hastalık göstergesidir.",
+       "ekran": "Uzak metastaz ileri evre hastalık göstergesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b17",
+   "baslik": "Diğer böbrek tümörlerine genel bakış ve onkositoma",
+   "paragraflar": [
+    {
+     "id": "k1-45-p041",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k1-45-c0204",
+       "ses": "Renal hücreli karsinomu tamamladık; şimdi diğer önemli böbrek tümörlerine geçiyoruz: onkositoma, anjiyomiyolipom ve Wilms tümörü.",
+       "ekran": "Renal hücreli karsinomu tamamladık; şimdi diğer önemli böbrek tümörlerine geçiyoruz: onkositoma, anjiyomiyolipom ve Wilms tümörü.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0205",
+       "ses": "Bunların çoğu benign ya da çocukluk çağında görülen tümörlerdir.",
+       "ekran": "Bunların çoğu benign ya da çocukluk çağında görülen tümörlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0206",
+       "ses": "Benign olanlar görüntülemede renal hücreli karsinomla karışabilir; Wilms tümörü ise çocuk yaş grubuyla öne çıkar.",
+       "ekran": "Benign olanlar görüntülemede renal hücreli karsinomla karışabilir; Wilms tümörü ise çocuk yaş grubuyla öne çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0207",
+       "ses": "Yani böbrekteki her kitle renal hücreli karsinom değildir.",
+       "ekran": "Yani böbrekteki her kitle renal hücreli karsinom değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p042",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k1-45-c0208",
+       "ses": "Onkositoma benign bir böbrek tümörüdür, toplayıcı kanalların ara hücrelerinden köken alır ve böbrek neoplazmlarının %3 ile 7'sini oluşturur.",
+       "ekran": "Onkositoma benign bir böbrek tümörüdür, toplayıcı kanalların ara hücrelerinden köken alır ve böbrek neoplazmlarının %3 ile 7'sini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0209",
+       "ses": "Dikkat edin, kromofob renal hücreli karsinom da aynı ara hücrelerden köken alır; fark, kromofobun malign, onkositomanın benign olmasıdır.",
+       "ekran": "Dikkat edin, kromofob renal hücreli karsinom da aynı ara hücrelerden köken alır; fark, kromofobun malign, onkositomanın benign olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0210",
+       "ses": "Ortak köken iki tümörün morfolojik olarak birbirine benzeyebilmesinin temelidir.",
+       "ekran": "Ortak köken iki tümörün morfolojik olarak birbirine benzeyebilmesinin temelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p043",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "id": "k1-45-c0211",
+       "ses": "Onkositomanın bütün morfolojik özellikleri tek bir hücresel özellikten kaynaklanır: tümör hücreleri bol miktarda mitokondri içerir.",
+       "ekran": "Onkositomanın bütün morfolojik özellikleri tek bir hücresel özellikten kaynaklanır: tümör hücreleri bol miktarda mitokondri içerir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0212",
+       "ses": "Bunun sonucu kahverengi renkli bir tümör kesiti ve ince taneli, eozinofilik sitoplazmadır.",
+       "ekran": "Bunun sonucu kahverengi renkli bir tümör kesiti ve ince taneli, eozinofilik sitoplazmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0213",
+       "ses": "Tipik makroskopik bulgu merkezi, yıldız şeklinde bir skardır.",
+       "ekran": "Tipik makroskopik bulgu merkezi, yıldız şeklinde bir skardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0214",
+       "ses": "Ders şeklinde ışık mikroskobunda granüler eozinofilik sitoplazmalı, birbirine benzeyen tek tip hücreler; elektron mikroskobunda ise sitoplazması mitokondriyle dolu bir onkositoma hücresi görülür.",
+       "ekran": "Ders şeklinde ışık mikroskobunda granüler eozinofilik sitoplazmalı, birbirine benzeyen tek tip hücreler; elektron mikroskobunda ise sitoplazması mitokondriyle dolu bir onkositoma hücresi görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p044",
+     "sayfa": 58,
+     "cumleler": [
+      {
+       "id": "k1-45-c0215",
+       "ses": "Onkositomada görülebilen kromozomal değişiklikler 1. kromozomun kaybı, Y kromozomunun kaybı ve siklin D1 lokusunu içeren yeniden düzenlemelerdir.",
+       "ekran": "Onkositomada görülebilen kromozomal değişiklikler 1. kromozomun kaybı, Y kromozomunun kaybı ve siklin D1 lokusunu içeren yeniden düzenlemelerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0216",
+       "ses": "Siklin D1 hücre döngüsünü ilerleten bir proteindir.",
+       "ekran": "Siklin D1 hücre döngüsünü ilerleten bir proteindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0217",
+       "ses": "Mitokondri yükünün nedeni ise mitokondriyal bir kusurdur: tümör hücreleri kompleks 1'de yıkıcı mutasyonlar taşır.",
+       "ekran": "Mitokondri yükünün nedeni ise mitokondriyal bir kusurdur: tümör hücreleri kompleks 1'de yıkıcı mutasyonlar taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0218",
+       "ses": "Kompleks 1, oksidatif fosforilasyon için gerekli elektron taşıma zincirinin bir bileşenidir.",
+       "ekran": "Kompleks 1, oksidatif fosforilasyon için gerekli elektron taşıma zincirinin bir bileşenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0219",
+       "ses": "Bu kusur mitokondriyal proliferasyonu artıran geri bildirim döngülerini başlatır; mitokondriler verimli enerji üretemeyince hücre daha fazla mitokondri yapar ve sitoplazma mitokondriyle dolar.",
+       "ekran": "Bu kusur mitokondriyal proliferasyonu artıran geri bildirim döngülerini başlatır; mitokondriler verimli enerji üretemeyince hücre daha fazla mitokondri yapar ve sitoplazma mitokondriyle dolar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0220",
+       "ses": "Onkositik morfolojiden sorumlu olan bu süreçtir.",
+       "ekran": "Onkositik morfolojiden sorumlu olan bu süreçtir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p045",
+     "sayfa": 60,
+     "cumleler": [
+      {
+       "id": "k1-45-c0221",
+       "ses": "Tüberöz skleroz, birçok organda iyi huylu tümör büyümesine neden olan genetik bir hastalıktır ve bu hastalarda çoklu onkositomlar görülebilir; bu hastalarda böbrek tümörü spektrumu geniştir.",
+       "ekran": "Tüberöz skleroz, birçok organda iyi huylu tümör büyümesine neden olan genetik bir hastalıktır ve bu hastalarda çoklu onkositomlar görülebilir; bu hastalarda böbrek tümörü spektrumu geniştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0222",
+       "ses": "Klinik açıdan onkositomaları renal hücreli karsinomdan ayırt etmek zordur.",
+       "ekran": "Klinik açıdan onkositomaları renal hücreli karsinomdan ayırt etmek zordur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0223",
+       "ses": "Ortak köken, kahverengi kesit yüzü ve eozinofilik sitoplazma kromofob karsinomla benzerlik yaratır; ayırımda onkositomanın yıldız skarı ve mitokondri zenginliği, kromofobun ise perinükleer halosu yol gösterir.",
+       "ekran": "Ortak köken, kahverengi kesit yüzü ve eozinofilik sitoplazma kromofob karsinomla benzerlik yaratır; ayırımda onkositomanın yıldız skarı ve mitokondri zenginliği, kromofobun ise perinükleer halosu yol gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0224",
+       "ses": "Çoklu onkositik nodülü olan hastaların %10 ile 30'unda eş zamanlı renal hücreli karsinom bulunabilir.",
+       "ekran": "Çoklu onkositik nodülü olan hastaların %10 ile 30'unda eş zamanlı renal hücreli karsinom bulunabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0225",
+       "ses": "Bu nedenle benign tanı izlemden muaf tutmaz; dikkatli ve uzun süreli izlem gereklidir.",
+       "ekran": "Bu nedenle benign tanı izlemden muaf tutmaz; dikkatli ve uzun süreli izlem gereklidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b18",
+   "baslik": "Anjiyomiyolipom",
+   "paragraflar": [
+    {
+     "id": "k1-45-p046",
+     "sayfa": 62,
+     "cumleler": [
+      {
+       "id": "k1-45-c0226",
+       "ses": "Anjiyomiyolipom benign bir böbrek tümörüdür ve epitel kökenli değildir; perivasküler hücrelerden, yani damar duvarını çevreleyen perisitlerden köken alır.",
+       "ekran": "Anjiyomiyolipom benign bir böbrek tümörüdür ve epitel kökenli değildir; perivasküler hücrelerden, yani damar duvarını çevreleyen perisitlerden köken alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0227",
+       "ses": "Böbrek tümörlerinin %1 ile 2'sini oluşturur.",
+       "ekran": "Böbrek tümörlerinin %1 ile 2'sini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0228",
+       "ses": "Adı, içerdiği üç doku bileşenine işaret eder: kan damarları, düz kas ve yağ dokusu.",
+       "ekran": "Adı, içerdiği üç doku bileşenine işaret eder: kan damarları, düz kas ve yağ dokusu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0229",
+       "ses": "En sık tüberöz skleroz kompleksi ile birlikte görülür.",
+       "ekran": "En sık tüberöz skleroz kompleksi ile birlikte görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0230",
+       "ses": "Çoğu olgu insidental olarak, yani başka bir nedenle yapılan incelemede rastlantısal olarak saptanır.",
+       "ekran": "Çoğu olgu insidental olarak, yani başka bir nedenle yapılan incelemede rastlantısal olarak saptanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0231",
+       "ses": "Büyük lezyonlarda ise spontan kanama riski akılda tutulmalıdır; tümör içindeki damar yapıları lezyon büyüdükçe kendiliğinden yırtılıp kanayabilir.",
+       "ekran": "Büyük lezyonlarda ise spontan kanama riski akılda tutulmalıdır; tümör içindeki damar yapıları lezyon büyüdükçe kendiliğinden yırtılıp kanayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0232",
+       "ses": "Böylece tüberöz sklerozun iki böbrek tümörünü öğrenmiş olduk: çoklu onkositoma ve anjiyomiyolipom.",
+       "ekran": "Böylece tüberöz sklerozun iki böbrek tümörünü öğrenmiş olduk: çoklu onkositoma ve anjiyomiyolipom.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b19",
+   "baslik": "Wilms tümörü",
+   "paragraflar": [
+    {
+     "id": "k1-45-p047",
+     "sayfa": 64,
+     "cumleler": [
+      {
+       "id": "k1-45-c0233",
+       "ses": "Wilms tümörü, yani nefroblastom, bu dersin çocukluk çağı temsilcisidir.",
+       "ekran": "Wilms tümörü, yani nefroblastom, bu dersin çocukluk çağı temsilcisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0234",
+       "ses": "Erişkinlerde nadirdir.",
+       "ekran": "Erişkinlerde nadirdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0235",
+       "ses": "10 yaşın altındaki çocuklarda ise en sık görülen üçüncü katı, yani hematolojik olmayan kanserdir; lösemi ve lenfoma gibi kan kanserleri bu sıralamaya dahil edilmez.",
+       "ekran": "10 yaşın altındaki çocuklarda ise en sık görülen üçüncü katı, yani hematolojik olmayan kanserdir; lösemi ve lenfoma gibi kan kanserleri bu sıralamaya dahil edilmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0236",
+       "ses": "Burası önemli, çıkmış sorularda defalarca soruldu: çocukluk döneminde en sık görülen primer böbrek tümörü Wilms tümörüdür.",
+       "ekran": "Burası önemli, çıkmış sorularda defalarca soruldu: çocukluk döneminde en sık görülen primer böbrek tümörü Wilms tümörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0237",
+       "ses": "Şıklardaki renal hücreli karsinom erişkinin tümörüdür; anjiyomiyolipom ve onkositom benigndir.",
+       "ekran": "Şıklardaki renal hücreli karsinom erişkinin tümörüdür; anjiyomiyolipom ve onkositom benigndir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0238",
+       "ses": "Yani erişkinde böbrek malignitesi denince renal hücreli karsinom, çocukta böbrek kitlesi denince Wilms tümörü akla gelir.",
+       "ekran": "Yani erişkinde böbrek malignitesi denince renal hücreli karsinom, çocukta böbrek kitlesi denince Wilms tümörü akla gelir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p048",
+     "sayfa": 65,
+     "cumleler": [
+      {
+       "id": "k1-45-c0239",
+       "ses": "Wilms tümörü sporadik ya da ailesel olabilir; ailesel olgularda tümör yatkınlığı otozomal dominant özellik olarak kalıtılır.",
+       "ekran": "Wilms tümörü sporadik ya da ailesel olabilir; ailesel olgularda tümör yatkınlığı otozomal dominant özellik olarak kalıtılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0240",
+       "ses": "Patogenezi, genetiği ve morfolojisi çocukluk çağı tümörleri ile birlikte ayrıntılı olarak işlenir; bu derste yalnız böbrek tümörleri spektrumu içindeki yeri vurgulanır.",
+       "ekran": "Patogenezi, genetiği ve morfolojisi çocukluk çağı tümörleri ile birlikte ayrıntılı olarak işlenir; bu derste yalnız böbrek tümörleri spektrumu içindeki yeri vurgulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0241",
+       "ses": "Yine de çıkmış sorularda sorulan noktaları burada toplayalım.",
+       "ekran": "Yine de çıkmış sorularda sorulan noktaları burada toplayalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0242",
+       "ses": "WAGR sendromu, Denys-Drash sendromu ve Beckwith-Wiedemann sendromu gibi konjenital malformasyon sendromlarında Wilms tümörünün görülme sıklığı artmıştır.",
+       "ekran": "WAGR sendromu, Denys-Drash sendromu ve Beckwith-Wiedemann sendromu gibi konjenital malformasyon sendromlarında Wilms tümörünün görülme sıklığı artmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0243",
+       "ses": "Lezyonların çoğunda blastemal, stromal ve epitelyal hücre tiplerinin trifazik kombinasyonu görülür.",
+       "ekran": "Lezyonların çoğunda blastemal, stromal ve epitelyal hücre tiplerinin trifazik kombinasyonu görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p049",
+     "sayfa": 66,
+     "cumleler": [
+      {
+       "id": "k1-45-c0244",
+       "ses": "Burası önemli, bir vaka sorusunda 4 yaşında, batında orta hattı geçip pelvise uzanan, böbrek kaynaklı bir kitle soruldu ve beklenmeyen ifade arandı.",
+       "ekran": "Burası önemli, bir vaka sorusunda 4 yaşında, batında orta hattı geçip pelvise uzanan, böbrek kaynaklı bir kitle soruldu ve beklenmeyen ifade arandı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0245",
+       "ses": "Wilms tümöründe tümör dışındaki böbrek parankiminde nefrojenik rest saptanabilir, tümörün bir kısmı küçük mavi hücrelerden oluşur, trifazik hücre kombinasyonu görülür ve olguların yaklaşık %10'u bilateral olabilir.",
+       "ekran": "Wilms tümöründe tümör dışındaki böbrek parankiminde nefrojenik rest saptanabilir, tümörün bir kısmı küçük mavi hücrelerden oluşur, trifazik hücre kombinasyonu görülür ve olguların yaklaşık %10'u bilateral olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0246",
+       "ses": "Beklenmeyen ifade ise yüksek oranda anaplazi saptanırsa kemoterapiye yanıtın çok iyi olacağıdır.",
+       "ekran": "Beklenmeyen ifade ise yüksek oranda anaplazi saptanırsa kemoterapiye yanıtın çok iyi olacağıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0247",
+       "ses": "Tam tersine, tümörlerin yaklaşık %5'inde prognozla yakından ilişkili anaplazi odakları bulunur ve anaplazi olumsuz bir bulgudur.",
+       "ekran": "Tam tersine, tümörlerin yaklaşık %5'inde prognozla yakından ilişkili anaplazi odakları bulunur ve anaplazi olumsuz bir bulgudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-45-p050",
+     "sayfa": 66,
+     "cumleler": [
+      {
+       "id": "k1-45-c0248",
+       "ses": "Burası önemli, başka bir soruda Wilms tümörüyle ilgili yanlış ifade arandı: nefrektomiyle tümör çıkarılmasına karşın hastaların %50'sinden azının 5 yıl yaşadığı ifadesi yanlıştır.",
+       "ekran": "Burası önemli, başka bir soruda Wilms tümörüyle ilgili yanlış ifade arandı: nefrektomiyle tümör çıkarılmasına karşın hastaların %50'sinden azının 5 yıl yaşadığı ifadesi yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0249",
+       "ses": "Wilms tümörünün prognozu iyidir ve hastaların çoğu uzun süre yaşar.",
+       "ekran": "Wilms tümörünün prognozu iyidir ve hastaların çoğu uzun süre yaşar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0250",
+       "ses": "Son olarak, Wilms tümörü çocukluk çağının küçük yuvarlak mavi hücreli tümörlerinden biridir; bu grupta nöroblastom, retinoblastom ve rabdomiyosarkom da yer alır.",
+       "ekran": "Son olarak, Wilms tümörü çocukluk çağının küçük yuvarlak mavi hücreli tümörlerinden biridir; bu grupta nöroblastom, retinoblastom ve rabdomiyosarkom da yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0251",
+       "ses": "Burası önemli, bu da soruldu: berrak hücreli karsinom bu grupta yer almaz; o, berrak sitoplazmalı hücrelerden oluşan bir erişkin tümörüdür.",
+       "ekran": "Burası önemli, bu da soruldu: berrak hücreli karsinom bu grupta yer almaz; o, berrak sitoplazmalı hücrelerden oluşan bir erişkin tümörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-45-b20",
+   "baslik": "Genel özet ve klinik uygulama",
+   "paragraflar": [
+    {
+     "id": "k1-45-p051",
+     "sayfa": 67,
+     "cumleler": [
+      {
+       "id": "k1-45-c0252",
+       "ses": "Özetle böbrek tümörleri benign ve malign uçları olan geniş bir spektrumdur ve renal hücreli karsinom erişkinlerde en sık böbrek malignitesidir.",
+       "ekran": "Özetle böbrek tümörleri benign ve malign uçları olan geniş bir spektrumdur ve renal hücreli karsinom erişkinlerde en sık böbrek malignitesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0253",
+       "ses": "Berrak hücreli, papiller ve kromofob alt tipler farklı moleküler yolaklara ve farklı prognozlara sahiptir: berrak hücrelide Von Hippel Lindau kaybı ve HIF birikimi, papillerde MET sinyal artışı, kromofobda kromozom kaybı ve en olumlu prognoz.",
+       "ekran": "Berrak hücreli, papiller ve kromofob alt tipler farklı moleküler yolaklara ve farklı prognozlara sahiptir: berrak hücrelide Von Hippel Lindau kaybı ve HIF birikimi, papillerde MET sinyal artışı, kromofobda kromozom kaybı ve en olumlu prognoz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0254",
+       "ses": "Klinik uygulamada sigara, obezite, hipertansiyon ve kronik diyaliz gibi risk faktörlerini tanımak; moleküler alt tipin prognoz ve tedavi seçimi için önemini bilmek; onkositoma, anjiyomiyolipom ve Wilms tümörünü ayırıcı tanı ve izlem açısından akılda tutmak gerekir.",
+       "ekran": "Klinik uygulamada sigara, obezite, hipertansiyon ve kronik diyaliz gibi risk faktörlerini tanımak; moleküler alt tipin prognoz ve tedavi seçimi için önemini bilmek; onkositoma, anjiyomiyolipom ve Wilms tümörünü ayırıcı tanı ve izlem açısından akılda tutmak gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-45-c0255",
+       "ses": "Çoklu onkositik nodülde eş zamanlı karsinom olasılığı, büyük anjiyomiyolipomda kanama riski ve diyaliz hastasındaki yüksek risk, izlemin neden önemli olduğunu gösterir.",
+       "ekran": "Çoklu onkositik nodülde eş zamanlı karsinom olasılığı, büyük anjiyomiyolipomda kanama riski ve diyaliz hastasındaki yüksek risk, izlemin neden önemli olduğunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

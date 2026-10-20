@@ -17,6 +17,7 @@ import { BrandWord } from './BrandWord';
 import { usePhone, useSearchShortcut } from './shellHooks';
 import { useAppearance } from '../../utils/appearance';
 import { TopBarV12 } from '../v12/ShellV12';
+import { TopBarV13 } from '../v13/ShellV13';
 
 /**
  * v8 üst çubuk. Sol: telefonda logo; sayfa aşağı kayınca logo yerine sayfa adı belirir (büyük başlık → çubuk başlığı).
@@ -36,8 +37,11 @@ export type TopBarProps = {
 };
 
 /** v12 "Net" tasarımında kendi üst çubuğu (components/v12/ShellV12); v10/v11 aşağıdaki klasik çubuk. */
-export const TopBar: React.FC<TopBarProps> = (props) =>
-  useAppearance().design === 'v12' ? <TopBarV12 {...props} /> : <TopBarClassic {...props} />;
+export const TopBar: React.FC<TopBarProps> = (props) => {
+  const a = useAppearance();
+  if (a.design !== 'v12') return <TopBarClassic {...props} />;
+  return a.v13 ? <TopBarV13 {...props} /> : <TopBarV12 {...props} />;
+};
 
 const TopBarClassic: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, searchQuery = '', onSearch, onOpenOffline, actions }) => {
   const phone = usePhone();

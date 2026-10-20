@@ -1,0 +1,2797 @@
+{
+ "surum": 2,
+ "ders_id": "k1-69",
+ "anahtar": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya",
+ "baslik": "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-69-b01",
+   "baslik": "Antibiyotik direnci kavramı ve bir antibiyogram örneği",
+   "paragraflar": [
+    {
+     "id": "k1-69-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-69-c0001",
+       "ses": "Antimikrobiyal direnç, bir mikroorganizmanın daha önce etkili olan antimikrobiyal ilacın varlığında üremeye devam edebilmesidir.",
+       "ekran": "Antimikrobiyal direnç, bir mikroorganizmanın daha önce etkili olan antimikrobiyal ilacın varlığında üremeye devam edebilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0002",
+       "ses": "Sonuç tedavi başarısızlığıdır.",
+       "ekran": "Sonuç tedavi başarısızlığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0003",
+       "ses": "Dirençli bir enfeksiyonda hastanede kalış uzar, maliyet ve ölüm artar; üstelik dirençli bakteri hastadan hastaya ve topluma yayıldığı için sorun tek bir hastayla sınırlı kalmaz, bir halk sağlığı sorununa dönüşür.",
+       "ekran": "Dirençli bir enfeksiyonda hastanede kalış uzar, maliyet ve ölüm artar; üstelik dirençli bakteri hastadan hastaya ve topluma yayıldığı için sorun tek bir hastayla sınırlı kalmaz, bir halk sağlığı sorununa dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-69-c0004",
+       "ses": "Dersin ilk görselinde yan yana 2 kültür plağı görürsünüz.",
+       "ekran": "Dersin ilk görselinde yan yana 2 kültür plağı görürsünüz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0005",
+       "ses": "Her iki plağa da antibiyotik emdirilmiş diskler yerleştirilmiştir.",
+       "ekran": "Her iki plağa da antibiyotik emdirilmiş diskler yerleştirilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0006",
+       "ses": "Duyarlı bakterinin üretildiği plakta disklerin çevresinde bakterinin üreyemediği geniş, açık alanlar oluşur.",
+       "ekran": "Duyarlı bakterinin üretildiği plakta disklerin çevresinde bakterinin üreyemediği geniş, açık alanlar oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0007",
+       "ses": "Dirençli bakterinin plağında ise disklerin etrafındaki bu alanlar çok küçüktür ya da hiç yoktur; bakteri ilacın hemen yanına kadar ürer.",
+       "ekran": "Dirençli bakterinin plağında ise disklerin etrafındaki bu alanlar çok küçüktür ya da hiç yoktur; bakteri ilacın hemen yanına kadar ürer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0008",
+       "ses": "Direnç, laboratuvarda işte bu biçimde gözle görülür hâle gelir.",
+       "ekran": "Direnç, laboratuvarda işte bu biçimde gözle görülür hâle gelir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-69-c0009",
+       "ses": "Ardından gerçek bir antibiyogram raporu gösterilir.",
+       "ekran": "Ardından gerçek bir antibiyogram raporu gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0010",
+       "ses": "Apse yara kültüründe üreme saptanmış, etken Enterobacter cloacae olarak bildirilmiştir.",
+       "ekran": "Apse yara kültüründe üreme saptanmış, etken Enterobacter cloacae olarak bildirilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0011",
+       "ses": "Rapora bakın: amoksisilin klavulanik asit, ampisilin, piperasilin, piperasilin tazobaktam, sefepim, seftazidim ve seftriakson dirençlidir.",
+       "ekran": "Rapora bakın: amoksisilin klavulanik asit, ampisilin, piperasilin, piperasilin tazobaktam, sefepim, seftazidim ve seftriakson dirençlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0012",
+       "ses": "Karbapenemlerin üçü, yani ertapenem, imipenem ve meropenem de dirençlidir.",
+       "ekran": "Karbapenemlerin üçü, yani ertapenem, imipenem ve meropenem de dirençlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0013",
+       "ses": "Netilmisin ve trimetoprim sülfametoksazol dirençli, gentamisin ve siprofloksasin orta duyarlıdır.",
+       "ekran": "Netilmisin ve trimetoprim sülfametoksazol dirençli, gentamisin ve siprofloksasin orta duyarlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0014",
+       "ses": "Yalnız amikasin ve aztreonam duyarlı kalmıştır.",
+       "ekran": "Yalnız amikasin ve aztreonam duyarlı kalmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0015",
+       "ses": "Bu tablo, günlük pratikte elimizdeki seçeneklerin ne kadar daralabildiğini çok somut gösterir.",
+       "ekran": "Bu tablo, günlük pratikte elimizdeki seçeneklerin ne kadar daralabildiğini çok somut gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b02",
+   "baslik": "Antibiyotiklerin bakterideki hedefleri",
+   "paragraflar": [
+    {
+     "id": "k1-69-p004",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-69-c0016",
+       "ses": "Direnci anlamanın ilk adımı, her antibiyotiğin bakteride hangi hedefe etki ettiğini bilmektir.",
+       "ekran": "Direnci anlamanın ilk adımı, her antibiyotiğin bakteride hangi hedefe etki ettiğini bilmektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0017",
+       "ses": "Ders şeması bunu 5 küme hâlinde verir.",
+       "ekran": "Ders şeması bunu 5 küme hâlinde verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0018",
+       "ses": "Birinci küme hücre duvarıdır.",
+       "ekran": "Birinci küme hücre duvarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0019",
+       "ses": "Bakteri hücre duvarı insan hücresinde olmadığı için en seçici hedeftir.",
+       "ekran": "Bakteri hücre duvarı insan hücresinde olmadığı için en seçici hedeftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0020",
+       "ses": "Beta laktamlar, yani penisilinler, sefalosporinler, monobaktamlar ve karbapenemler, peptidoglikan çapraz bağlarını kuran penisilin bağlayan proteinleri bloke eder.",
+       "ekran": "Beta laktamlar, yani penisilinler, sefalosporinler, monobaktamlar ve karbapenemler, peptidoglikan çapraz bağlarını kuran penisilin bağlayan proteinleri bloke eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0021",
+       "ses": "Glikopeptidlerden vankomisin, peptidoglikan öncüsünün D-alanin-D-alanin ucuna bağlanarak duvar yapımını durdurur.",
+       "ekran": "Glikopeptidlerden vankomisin, peptidoglikan öncüsünün D-alanin-D-alanin ucuna bağlanarak duvar yapımını durdurur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0022",
+       "ses": "Basitrasin ise duvar öncülerini taşıyan lipid taşıyıcının geri dönüşümünü engeller.",
+       "ekran": "Basitrasin ise duvar öncülerini taşıyan lipid taşıyıcının geri dönüşümünü engeller.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0023",
+       "ses": "Vankomisin büyük bir moleküldür ve Gram negatiflerin dış membranından geçemez; bu bilgiyi birazdan doğal direnç örneği olarak yeniden kullanacağız.",
+       "ekran": "Vankomisin büyük bir moleküldür ve Gram negatiflerin dış membranından geçemez; bu bilgiyi birazdan doğal direnç örneği olarak yeniden kullanacağız.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p005",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-69-c0024",
+       "ses": "İkinci küme plazma membranıdır.",
+       "ekran": "İkinci küme plazma membranıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0025",
+       "ses": "Polimiksinler, yani polimiksin B ve kolistin, katyonik deterjan gibi davranır; Gram negatiflerin dış membranındaki lipopolisakkaride bağlanıp zarı bozar.",
+       "ekran": "Polimiksinler, yani polimiksin B ve kolistin, katyonik deterjan gibi davranır; Gram negatiflerin dış membranındaki lipopolisakkaride bağlanıp zarı bozar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0026",
+       "ses": "Lipopeptid olan daptomisin ise kalsiyuma bağımlı olarak Gram pozitiflerin sitoplazma zarına girer, depolarizasyon ve hücre ölümü yapar.",
+       "ekran": "Lipopeptid olan daptomisin ise kalsiyuma bağımlı olarak Gram pozitiflerin sitoplazma zarına girer, depolarizasyon ve hücre ölümü yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0027",
+       "ses": "Yani polimiksinler Gram negatiflere, daptomisin Gram pozitiflere etkilidir.",
+       "ekran": "Yani polimiksinler Gram negatiflere, daptomisin Gram pozitiflere etkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0028",
+       "ses": "Membrana etki eden ilaçlar hızlı bakterisidaldir ama seçicilikleri daha düşüktür.",
+       "ekran": "Membrana etki eden ilaçlar hızlı bakterisidaldir ama seçicilikleri daha düşüktür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p006",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-69-c0029",
+       "ses": "Üçüncü küme ribozom, yani protein sentezidir.",
+       "ekran": "Üçüncü küme ribozom, yani protein sentezidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0030",
+       "ses": "Bakteri ribozomu 70S, insan ribozomu 80S olduğu için bu fark seçicilik sağlar.",
+       "ekran": "Bakteri ribozomu 70S, insan ribozomu 80S olduğu için bu fark seçicilik sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0031",
+       "ses": "50S alt birimine makrolidler, linkozamidlerden klindamisin, kloramfenikol ve oksazolidinonlardan linezolid bağlanır.",
+       "ekran": "50S alt birimine makrolidler, linkozamidlerden klindamisin, kloramfenikol ve oksazolidinonlardan linezolid bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0032",
+       "ses": "30S alt birimine ise aminoglikozidler ve tetrasiklinler etki eder.",
+       "ekran": "30S alt birimine ise aminoglikozidler ve tetrasiklinler etki eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0033",
+       "ses": "Aminoglikozidler okuma hatası yaparak bakterisidal etki gösterir; tetrasiklinler aminoasil transfer erene bağlanmasını engeller.",
+       "ekran": "Aminoglikozidler okuma hatası yaparak bakterisidal etki gösterir; tetrasiklinler aminoasil transfer erene bağlanmasını engeller.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0034",
+       "ses": "Protein sentez inhibitörlerinin çoğu bakteriyostatiktir, aminoglikozidler bu açıdan ayrılır.",
+       "ekran": "Protein sentez inhibitörlerinin çoğu bakteriyostatiktir, aminoglikozidler bu açıdan ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p007",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-69-c0035",
+       "ses": "Dördüncü küme nükleik asit sentezidir.",
+       "ekran": "Dördüncü küme nükleik asit sentezidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0036",
+       "ses": "DNA sentezinde florokinolonlar, yani siprofloksasin, levofloksasin ve moksifloksasin, DNA giraz ve topoizomeraz IV'ü bloke eder.",
+       "ekran": "DNA sentezinde florokinolonlar, yani siprofloksasin, levofloksasin ve moksifloksasin, DNA giraz ve topoizomeraz IV'ü bloke eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0037",
+       "ses": "RNA sentezinde ise rifamisinlerden rifampisin, DNA bağımlı RNA polimerazın beta alt birimine bağlanır.",
+       "ekran": "RNA sentezinde ise rifamisinlerden rifampisin, DNA bağımlı RNA polimerazın beta alt birimine bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0038",
+       "ses": "Rifampisin tüberküloz tedavisinin temel ilaçlarındandır ve tek başına kullanılırsa hızla direnç gelişir.",
+       "ekran": "Rifampisin tüberküloz tedavisinin temel ilaçlarındandır ve tek başına kullanılırsa hızla direnç gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0039",
+       "ses": "Beşinci küme metabolik yollardır.",
+       "ekran": "Beşinci küme metabolik yollardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0040",
+       "ses": "Bakteriler folik asidi kendileri sentezler, insan ise hazır folatı besinden alır.",
+       "ekran": "Bakteriler folik asidi kendileri sentezler, insan ise hazır folatı besinden alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0041",
+       "ses": "Sülfonamidler ve sülfonlar para aminobenzoik asit benzeri olarak dihidropteroat sentazı, trimetoprim ise bir sonraki basamaktaki dihidrofolat redüktazı inhibe eder; ikisi birlikte ardışık blokaj yapar.",
+       "ekran": "Sülfonamidler ve sülfonlar para aminobenzoik asit benzeri olarak dihidropteroat sentazı, trimetoprim ise bir sonraki basamaktaki dihidrofolat redüktazı inhibe eder; ikisi birlikte ardışık blokaj yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0042",
+       "ses": "İzoniazid ise mikobakteri duvarının özgün bileşeni olan mikolik asidin sentezini durdurur.",
+       "ekran": "İzoniazid ise mikobakteri duvarının özgün bileşeni olan mikolik asidin sentezini durdurur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b03",
+   "baslik": "Direnç mekanizmalarının 4 ana sınıfı",
+   "paragraflar": [
+    {
+     "id": "k1-69-p008",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-69-c0043",
+       "ses": "Bir sonraki şema hedeflerin karşısına direnç mekanizmalarını yerleştirir.",
+       "ekran": "Bir sonraki şema hedeflerin karşısına direnç mekanizmalarını yerleştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0044",
+       "ses": "Tüm mekanizmalar 4 ana sınıfta toplanır: ilacı yıkan ya da değiştiren inaktive edici enzimler, ilacı dışarı atan efluks pompaları, ilacın bağlandığı yerin değiştiği hedef modifikasyonu ve hedefin korunması ya da bloke edilen basamağın atlanması.",
+       "ekran": "Tüm mekanizmalar 4 ana sınıfta toplanır: ilacı yıkan ya da değiştiren inaktive edici enzimler, ilacı dışarı atan efluks pompaları, ilacın bağlandığı yerin değiştiği hedef modifikasyonu ve hedefin korunması ya da bloke edilen basamağın atlanması.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p009",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-69-c0045",
+       "ses": "İnaktive edici enzimlerin etkilediği gruplar beta laktamlar, aminoglikozidler, makrolidler ve rifamisinlerdir.",
+       "ekran": "İnaktive edici enzimlerin etkilediği gruplar beta laktamlar, aminoglikozidler, makrolidler ve rifamisinlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0046",
+       "ses": "Beta laktamazlar beta laktam halkasını hidrolize eder; aminoglikozidlere asetil, fosfat ya da nükleotid grubu eklenir ve ilaç ribozoma bağlanamaz.",
+       "ekran": "Beta laktamazlar beta laktam halkasını hidrolize eder; aminoglikozidlere asetil, fosfat ya da nükleotid grubu eklenir ve ilaç ribozoma bağlanamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0047",
+       "ses": "Efluks pompaları şemada florokinolonları, aminoglikozidleri, tetrasiklinleri, beta laktamları ve makrolidleri hücre dışına atar.",
+       "ekran": "Efluks pompaları şemada florokinolonları, aminoglikozidleri, tetrasiklinleri, beta laktamları ve makrolidleri hücre dışına atar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0048",
+       "ses": "Hedef modifikasyonu en geniş listeye sahiptir: florokinolonlarda giraz mutasyonu, rifamisinlerde RNA polimeraz mutasyonu, vankomisinde duvar öncüsünün değişimi, penisilinlerde penisilin bağlayan proteinin değişimi, makrolid ve aminoglikozidlerde ribozomal değişiklik.",
+       "ekran": "Hedef modifikasyonu en geniş listeye sahiptir: florokinolonlarda giraz mutasyonu, rifamisinlerde RNA polimeraz mutasyonu, vankomisinde duvar öncüsünün değişimi, penisilinlerde penisilin bağlayan proteinin değişimi, makrolid ve aminoglikozidlerde ribozomal değişiklik.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0049",
+       "ses": "Koruma ve atlama yolu ise tetrasiklinlerde ribozomu koruyan proteinlerle, trimetoprim ve sülfonamidlerde ilaca duyarsız alternatif enzim ya da dışarıdan hazır ürün kullanımıyla, vankomisinde de değişmiş öncüyle yolun atlanmasıyla örneklenir.",
+       "ekran": "Koruma ve atlama yolu ise tetrasiklinlerde ribozomu koruyan proteinlerle, trimetoprim ve sülfonamidlerde ilaca duyarsız alternatif enzim ya da dışarıdan hazır ürün kullanımıyla, vankomisinde de değişmiş öncüyle yolun atlanmasıyla örneklenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p010",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-69-c0050",
+       "ses": "Üçüncü görsel bu mekanizmaları tek bir bakteri hücresi üzerinde birlikte gösterir.",
+       "ekran": "Üçüncü görsel bu mekanizmaları tek bir bakteri hücresi üzerinde birlikte gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0051",
+       "ses": "İnaktivasyonda ilaca fosfat grubu eklenir ve ilaç ribozoma bağlanamaz.",
+       "ekran": "İnaktivasyonda ilaca fosfat grubu eklenir ve ilaç ribozoma bağlanamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0052",
+       "ses": "Geçirgenlik azalmasında hücre duvarı proteini, yani porin değişmiştir ve ilaç içeri giremez.",
+       "ekran": "Geçirgenlik azalmasında hücre duvarı proteini, yani porin değişmiştir ve ilaç içeri giremez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0053",
+       "ses": "Dışarı pompalamada aktif efluks artmıştır.",
+       "ekran": "Dışarı pompalamada aktif efluks artmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0054",
+       "ses": "Hedef modifikasyonunda ilacın hedefi değişmiştir.",
+       "ekran": "Hedef modifikasyonunda ilacın hedefi değişmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0055",
+       "ses": "Görselde ayrıca bir plazmid çizilmiştir; bu da direnç genlerinin plazmidlerle taşınabildiğini hatırlatır.",
+       "ekran": "Görselde ayrıca bir plazmid çizilmiştir; bu da direnç genlerinin plazmidlerle taşınabildiğini hatırlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0056",
+       "ses": "Aynı bakteride birden çok mekanizma bir arada bulunabilir ve bu durum yüksek düzey ve çoklu dirence yol açar.",
+       "ekran": "Aynı bakteride birden çok mekanizma bir arada bulunabilir ve bu durum yüksek düzey ve çoklu dirence yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b04",
+   "baslik": "Antibiyotik direncinin esas mekanizmaları tablosu",
+   "paragraflar": [
+    {
+     "id": "k1-69-p011",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-69-c0057",
+       "ses": "Tablo 2, antibiyotik direncinin esas mekanizmalarını 12 ilaç grubu için karşılaştırır ve her hücrede o mekanizmanın genetik kontrolünü bir harfle verir.",
+       "ekran": "Tablo 2, antibiyotik direncinin esas mekanizmalarını 12 ilaç grubu için karşılaştırır ve her hücrede o mekanizmanın genetik kontrolünü bir harfle verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0058",
+       "ses": "C harfi kromozom kontrolünde, P harfi plazmid kontrolünde, B harfi ise her ikisi birlikte demektir; çizgi henüz belirlenmemiş anlamına gelir.",
+       "ekran": "C harfi kromozom kontrolünde, P harfi plazmid kontrolünde, B harfi ise her ikisi birlikte demektir; çizgi henüz belirlenmemiş anlamına gelir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p012",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-69-c0059",
+       "ses": "Enzimatik inhibisyon beta laktam ve aminoglikozidlerde hem kromozom hem plazmid kontrolündedir, kloramfenikol ve makrolidlerde plazmid kontrolündedir.",
+       "ekran": "Enzimatik inhibisyon beta laktam ve aminoglikozidlerde hem kromozom hem plazmid kontrolündedir, kloramfenikol ve makrolidlerde plazmid kontrolündedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0060",
+       "ses": "Geçirgenlik azalması en yaygın satırdır: beta laktam, aminoglikozid, sülfonamid, trimetoprim, vankomisin ve polimiksinde kromozomal, kloramfenikolde plazmid, tetrasiklinde her ikisi kontrolündedir.",
+       "ekran": "Geçirgenlik azalması en yaygın satırdır: beta laktam, aminoglikozid, sülfonamid, trimetoprim, vankomisin ve polimiksinde kromozomal, kloramfenikolde plazmid, tetrasiklinde her ikisi kontrolündedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0061",
+       "ses": "Hücre dışına aktif pompalama makrolid, linkozamid ve kinolonlarda kromozomal, tetrasiklinde her ikisinin kontrolündedir.",
+       "ekran": "Hücre dışına aktif pompalama makrolid, linkozamid ve kinolonlarda kromozomal, tetrasiklinde her ikisinin kontrolündedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p013",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-69-c0062",
+       "ses": "Ribozomda hedef değişimi aminoglikozid ve kloramfenikolde kromozomal, makrolid, linkozamid ve tetrasiklinde her ikisinin kontrolündedir.",
+       "ekran": "Ribozomda hedef değişimi aminoglikozid ve kloramfenikolde kromozomal, makrolid, linkozamid ve tetrasiklinde her ikisinin kontrolündedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0063",
+       "ses": "Hücre duvarı öncü maddelerinde değişim yalnız vankomisin sütununda işaretlidir: D-alanin-D-alanin ucu D-alanin-D-laktata dönüşür ve vankomisin bağlanamaz.",
+       "ekran": "Hücre duvarı öncü maddelerinde değişim yalnız vankomisin sütununda işaretlidir: D-alanin-D-alanin ucu D-alanin-D-laktata dönüşür ve vankomisin bağlanamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0064",
+       "ses": "Hedef enzimlerde değişiklik beta laktam, kinolon ve rifampisinde kromozomal, sülfonamid ve trimetoprimde her ikisinin kontrolündedir.",
+       "ekran": "Hedef enzimlerde değişiklik beta laktam, kinolon ve rifampisinde kromozomal, sülfonamid ve trimetoprimde her ikisinin kontrolündedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0065",
+       "ses": "Hedef enzimin aşırı sentezi sülfonamid ve trimetoprimde kromozomaldir; ilacı adeta seyreltir.",
+       "ekran": "Hedef enzimin aşırı sentezi sülfonamid ve trimetoprimde kromozomaldir; ilacı adeta seyreltir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0066",
+       "ses": "Son satır, inhibe edilen evreleri atlayan oksotrof mutantlardır; yine yalnız sülfonamid ve trimetoprimde görülür ve bakteri hazır ürünü dışarıdan alır.",
+       "ekran": "Son satır, inhibe edilen evreleri atlayan oksotrof mutantlardır; yine yalnız sülfonamid ve trimetoprimde görülür ve bakteri hazır ürünü dışarıdan alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0067",
+       "ses": "Dikkat edin, folat yolu inhibitörleri tablonun son 3 satırının hepsinde yer alır.",
+       "ekran": "Dikkat edin, folat yolu inhibitörleri tablonun son 3 satırının hepsinde yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b05",
+   "baslik": "Doğal direnç",
+   "paragraflar": [
+    {
+     "id": "k1-69-p014",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-69-c0068",
+       "ses": "Direnç mekanizmaları kaynağına göre 2 ana gruba ayrılır: doğal, yani intrensek direnç ve kazanılmış direnç.",
+       "ekran": "Direnç mekanizmaları kaynağına göre 2 ana gruba ayrılır: doğal, yani intrensek direnç ve kazanılmış direnç.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0069",
+       "ses": "Kazanılmış direnç de kromozom aracılı, plazmid aracılı, yani R plazmidleri ile ve transpozon aracılı, yani küçük DNA dizileri ile gelişebilir.",
+       "ekran": "Kazanılmış direnç de kromozom aracılı, plazmid aracılı, yani R plazmidleri ile ve transpozon aracılı, yani küçük DNA dizileri ile gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p015",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-69-c0070",
+       "ses": "Doğal direnç, mikroorganizmaların doğal yapısı nedeniyle antibiyotiklerin etkisiz olmasıdır.",
+       "ekran": "Doğal direnç, mikroorganizmaların doğal yapısı nedeniyle antibiyotiklerin etkisiz olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0071",
+       "ses": "Mutasyon ya da gen edinimi gerekmez ve türün tüm suşlarında bulunur.",
+       "ekran": "Mutasyon ya da gen edinimi gerekmez ve türün tüm suşlarında bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0072",
+       "ses": "2 yolu vardır: ilacın hedefinin olmaması ya da ilacın hedefine ulaşmasının mümkün olmaması.",
+       "ekran": "2 yolu vardır: ilacın hedefinin olmaması ya da ilacın hedefine ulaşmasının mümkün olmaması.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0073",
+       "ses": "Örneğin hücre duvarı olmayan bir mikroorganizmada beta laktamın hedefi yoktur.",
+       "ekran": "Örneğin hücre duvarı olmayan bir mikroorganizmada beta laktamın hedefi yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0074",
+       "ses": "Hedef var olduğu hâlde dış membran büyük bir molekülün girişini engelliyorsa ya da ilacın hücreye alınması için gereken taşıma sistemi çalışmıyorsa ilaç hedefine ulaşamaz.",
+       "ekran": "Hedef var olduğu hâlde dış membran büyük bir molekülün girişini engelliyorsa ya da ilacın hücreye alınması için gereken taşıma sistemi çalışmıyorsa ilaç hedefine ulaşamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0075",
+       "ses": "Doğal direnç öngörülebilir olduğu için antibiyogram beklenmeden ilaç seçimini yönlendirir; o türe karşı o ilaç ampirik tedavide hiç seçilmez.",
+       "ekran": "Doğal direnç öngörülebilir olduğu için antibiyogram beklenmeden ilaç seçimini yönlendirir; o türe karşı o ilaç ampirik tedavide hiç seçilmez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p016",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-69-c0076",
+       "ses": "Burası önemli, doğal direnç örnekleri sınavlarda eşleştirme biçiminde sık sorulur.",
+       "ekran": "Burası önemli, doğal direnç örnekleri sınavlarda eşleştirme biçiminde sık sorulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0077",
+       "ses": "Gram negatif bakteriler vankomisine doğal dirençlidir, çünkü büyük vankomisin molekülü dış membranı geçemez.",
+       "ekran": "Gram negatif bakteriler vankomisine doğal dirençlidir, çünkü büyük vankomisin molekülü dış membranı geçemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0078",
+       "ses": "Enterokoklar, Listeria ve Legionella türleri sefalosporinlere doğal dirençlidir; enterokoklarda penisilin bağlayan proteinlerin sefalosporinlere afinitesi düşüktür.",
+       "ekran": "Enterokoklar, Listeria ve Legionella türleri sefalosporinlere doğal dirençlidir; enterokoklarda penisilin bağlayan proteinlerin sefalosporinlere afinitesi düşüktür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0079",
+       "ses": "Listeria menenjiti düşünülen hastada sefalosporine ampisilin eklenmesinin nedeni budur.",
+       "ekran": "Listeria menenjiti düşünülen hastada sefalosporine ampisilin eklenmesinin nedeni budur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0080",
+       "ses": "Anaeroblar aminoglikozidlere doğal dirençlidir, çünkü aminoglikozidin hücreye alınması oksijene bağımlı bir taşıma gerektirir.",
+       "ekran": "Anaeroblar aminoglikozidlere doğal dirençlidir, çünkü aminoglikozidin hücreye alınması oksijene bağımlı bir taşıma gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0081",
+       "ses": "Stenotrophomonas ise karbapenemlere doğal dirençlidir; kromozomal metallo beta laktamazı karbapenemleri hidrolize eder.",
+       "ekran": "Stenotrophomonas ise karbapenemlere doğal dirençlidir; kromozomal metallo beta laktamazı karbapenemleri hidrolize eder.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b06",
+   "baslik": "Kazanılmış direnç ve direnç tanımları",
+   "paragraflar": [
+    {
+     "id": "k1-69-p017",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-69-c0082",
+       "ses": "Kazanılmış direnç, mutasyon sonucunda ya da direnç geni taşıyan DNA dizilerinin başka bakterilerden edinilmesi sonucunda antibiyotiklerin etkisiz olmasıdır.",
+       "ekran": "Kazanılmış direnç, mutasyon sonucunda ya da direnç geni taşıyan DNA dizilerinin başka bakterilerden edinilmesi sonucunda antibiyotiklerin etkisiz olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0083",
+       "ses": "Sonuç doğal dirençle aynıdır: ilacın hedefi ortadan kalkmış gibidir ya da ilaç hedefine ulaşamaz.",
+       "ekran": "Sonuç doğal dirençle aynıdır: ilacın hedefi ortadan kalkmış gibidir ya da ilaç hedefine ulaşamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0084",
+       "ses": "Fark kaynaktadır; burada direnç, daha önce duyarlı olan bir suşa sonradan gelen genetik değişiklikle ortaya çıkar.",
+       "ekran": "Fark kaynaktadır; burada direnç, daha önce duyarlı olan bir suşa sonradan gelen genetik değişiklikle ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0085",
+       "ses": "Suştan suşa değiştiği için öngörülemez ve kültür ile antibiyogram gerektirir.",
+       "ekran": "Suştan suşa değiştiği için öngörülemez ve kültür ile antibiyogram gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0086",
+       "ses": "Antibiyotik kullanımı duyarlı bakterileri öldürür ve dirençlilerin çoğalmasına alan açar; buna seçilim baskısı diyoruz.",
+       "ekran": "Antibiyotik kullanımı duyarlı bakterileri öldürür ve dirençlilerin çoğalmasına alan açar; buna seçilim baskısı diyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p018",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-69-c0087",
+       "ses": "Kazanılmış direncin 3 kaynağı vardır.",
+       "ekran": "Kazanılmış direncin 3 kaynağı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0088",
+       "ses": "Kromozomal direnç kendiliğinden ve nadir oluşan mutasyonlarla gelişir; antibiyotik mutasyonu yaratmaz, yalnız mutantı seçer.",
+       "ekran": "Kromozomal direnç kendiliğinden ve nadir oluşan mutasyonlarla gelişir; antibiyotik mutasyonu yaratmaz, yalnız mutantı seçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0089",
+       "ses": "Bu direnç bölünmeyle yavru hücrelere, yani dikey olarak aktarılır.",
+       "ekran": "Bu direnç bölünmeyle yavru hücrelere, yani dikey olarak aktarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0090",
+       "ses": "Kinolonlarda DNA giraz, rifampisinde RNA polimeraz mutasyonu tipik örneklerdir ve tek ilaçla tedavide hızla seçilir.",
+       "ekran": "Kinolonlarda DNA giraz, rifampisinde RNA polimeraz mutasyonu tipik örneklerdir ve tek ilaçla tedavide hızla seçilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0091",
+       "ses": "Kombinasyon tedavisi 2 ilaca birden dirençli mutantın seçilme olasılığını çok azaltır; tüberkülozun çoklu ilaçla tedavi edilmesi bu yüzdendir.",
+       "ekran": "Kombinasyon tedavisi 2 ilaca birden dirençli mutantın seçilme olasılığını çok azaltır; tüberkülozun çoklu ilaçla tedavi edilmesi bu yüzdendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0092",
+       "ses": "Kromozomal direnç genellikle tek ilacı etkiler.",
+       "ekran": "Kromozomal direnç genellikle tek ilacı etkiler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p019",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-69-c0093",
+       "ses": "Plazmid ve transpozon aracılı dirençte ise genler bakteriler arasında yatay olarak taşınır ve bu, en hızlı yayılan direnç tipidir.",
+       "ekran": "Plazmid ve transpozon aracılı dirençte ise genler bakteriler arasında yatay olarak taşınır ve bu, en hızlı yayılan direnç tipidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0094",
+       "ses": "R plazmidleri kromozom dışı, kendi kendine çoğalan DNA halkalarıdır ve birden çok direnç genini birlikte taşıyabilir; tek bir R plazmidinin aktarılması alıcı bakteriyi aynı anda birçok ilaca dirençli yapabilir.",
+       "ekran": "R plazmidleri kromozom dışı, kendi kendine çoğalan DNA halkalarıdır ve birden çok direnç genini birlikte taşıyabilir; tek bir R plazmidinin aktarılması alıcı bakteriyi aynı anda birçok ilaca dirençli yapabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0095",
+       "ses": "Transpozonlar plazmid ile kromozom arasında ya da plazmidler arasında yer değiştirebilen küçük DNA dizileridir.",
+       "ekran": "Transpozonlar plazmid ile kromozom arasında ya da plazmidler arasında yer değiştirebilen küçük DNA dizileridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0096",
+       "ses": "Aktarım yolları konjugasyon, yani pilusla plazmid aktarımı, transformasyon, yani ortamdaki çıplak DNA'nın alınması ve transdüksiyon, yani bakteriyofaj aracılı aktarımdır.",
+       "ekran": "Aktarım yolları konjugasyon, yani pilusla plazmid aktarımı, transformasyon, yani ortamdaki çıplak DNA'nın alınması ve transdüksiyon, yani bakteriyofaj aracılı aktarımdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p020",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-69-c0097",
+       "ses": "Burası önemli, direncin kapsamını derecelendiren 3 tanım vardır.",
+       "ekran": "Burası önemli, direncin kapsamını derecelendiren 3 tanım vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0098",
+       "ses": "Çok ilaca dirençli, yani MDR, en az 3 antibiyotik grubuna dirençli bakteridir.",
+       "ekran": "Çok ilaca dirençli, yani MDR, en az 3 antibiyotik grubuna dirençli bakteridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0099",
+       "ses": "XDR, kolistin ve tigesiklin dışındaki tüm ilaçlara dirençlidir; elde yalnız bu 2 seçenek kalır.",
+       "ekran": "XDR, kolistin ve tigesiklin dışındaki tüm ilaçlara dirençlidir; elde yalnız bu 2 seçenek kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0100",
+       "ses": "PDR ise tüm ilaçlara dirençlidir.",
+       "ekran": "PDR ise tüm ilaçlara dirençlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0101",
+       "ses": "Direnç derecesi MDR'den XDR'ye, oradan PDR'ye doğru artar.",
+       "ekran": "Direnç derecesi MDR'den XDR'ye, oradan PDR'ye doğru artar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b07",
+   "baslik": "Enzimatik direnç ve beta laktamazların tarihçesi",
+   "paragraflar": [
+    {
+     "id": "k1-69-p021",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-69-c0102",
+       "ses": "Beta laktam antibiyotiklere karşı en önemli direnç yolu enzimatik dirençtir.",
+       "ekran": "Beta laktam antibiyotiklere karşı en önemli direnç yolu enzimatik dirençtir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0103",
+       "ses": "Beta laktamazlar ilacın beta laktam halkasını hidrolize eder ve ilaç penisilin bağlayan proteine bağlanamaz.",
+       "ekran": "Beta laktamazlar ilacın beta laktam halkasını hidrolize eder ve ilaç penisilin bağlayan proteine bağlanamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0104",
+       "ses": "Ders bu enzimleri spektrumu giderek genişleyen 3 basamakta inceler: klasik beta laktamaz, genişlemiş spektrumlu beta laktamaz ve karbapenemi hidrolize eden beta laktamaz, yani karbapenemazlar.",
+       "ekran": "Ders bu enzimleri spektrumu giderek genişleyen 3 basamakta inceler: klasik beta laktamaz, genişlemiş spektrumlu beta laktamaz ve karbapenemi hidrolize eden beta laktamaz, yani karbapenemazlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0105",
+       "ses": "Enzimin spektrumu genişledikçe kullanılabilecek beta laktam sayısı azalır.",
+       "ekran": "Enzimin spektrumu genişledikçe kullanılabilecek beta laktam sayısı azalır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p022",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-69-c0106",
+       "ses": "Zaman çizelgesi her yeni beta laktamı kısa sürede yeni bir beta laktamazın izlediğini gösterir.",
+       "ekran": "Zaman çizelgesi her yeni beta laktamı kısa sürede yeni bir beta laktamazın izlediğini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0107",
+       "ses": "1940'ta Escherichia coli'de AmpC tipi bir penisilinaz tanımlanmıştı; penisilin ise kullanıma 1941'de girdi.",
+       "ekran": "1940'ta Escherichia coli'de AmpC tipi bir penisilinaz tanımlanmıştı; penisilin ise kullanıma 1941'de girdi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0108",
+       "ses": "Yani penisilinaz, penisilinin klinik kullanımından önce bile vardı.",
+       "ekran": "Yani penisilinaz, penisilinin klinik kullanımından önce bile vardı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0109",
+       "ses": "1944'te Staphylococcus aureus'ta penisilinaz bildirildi.",
+       "ekran": "1944'te Staphylococcus aureus'ta penisilinaz bildirildi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0110",
+       "ses": "1959'da metisilin, 1960'lı yılların başında ampisilin ve sefalotin geldi.",
+       "ekran": "1959'da metisilin, 1960'lı yılların başında ampisilin ve sefalotin geldi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0111",
+       "ses": "1965'te Escherichia coli'de TEM-1 tanımlandı; bu, geniş spektrumlu ve plazmid ilişkili ilk beta laktamazdır.",
+       "ekran": "1965'te Escherichia coli'de TEM-1 tanımlandı; bu, geniş spektrumlu ve plazmid ilişkili ilk beta laktamazdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p023",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-69-c0112",
+       "ses": "1970'li yıllarda klavulanik asit, sefuroksim ve aztreonam kullanıma girdi, Klebsiella pneumoniae'da SHV-1 saptandı.",
+       "ekran": "1970'li yıllarda klavulanik asit, sefuroksim ve aztreonam kullanıma girdi, Klebsiella pneumoniae'da SHV-1 saptandı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0113",
+       "ses": "1980'li yıllarda sefotaksim, seftazidim ve imipenem geldi; hemen ardından genişlemiş spektrumlu beta laktamazlar çoğaldı: Klebsiella ozaenae'da SHV-2, Escherichia coli'de CTX-M-1, Klebsiella pneumoniae'da TEM-3.",
+       "ekran": "1980'li yıllarda sefotaksim, seftazidim ve imipenem geldi; hemen ardından genişlemiş spektrumlu beta laktamazlar çoğaldı: Klebsiella ozaenae'da SHV-2, Escherichia coli'de CTX-M-1, Klebsiella pneumoniae'da TEM-3.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0114",
+       "ses": "1990'lı yıllarda Pseudomonas aeruginosa'da OXA-11 tanımlandı ve sefepim kullanıma girdi; 1994'te Klebsiella pneumoniae'da plazmid ilişkili ilk AmpC beta laktamazı olan CMY-1 bildirildi.",
+       "ekran": "1990'lı yıllarda Pseudomonas aeruginosa'da OXA-11 tanımlandı ve sefepim kullanıma girdi; 1994'te Klebsiella pneumoniae'da plazmid ilişkili ilk AmpC beta laktamazı olan CMY-1 bildirildi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0115",
+       "ses": "Çizelgenin mesajı açıktır: ilaç geliştirme ile direnç arasında bitmeyen bir yarış vardır ve yeni ilacın yaygın kullanımı yeni enzimi seçer.",
+       "ekran": "Çizelgenin mesajı açıktır: ilaç geliştirme ile direnç arasında bitmeyen bir yarış vardır ve yeni ilacın yaygın kullanımı yeni enzimi seçer.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b08",
+   "baslik": "Klasik beta laktamazlar",
+   "paragraflar": [
+    {
+     "id": "k1-69-p024",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-69-c0116",
+       "ses": "Klasik beta laktamazlar ilk kez 1960'lı yıllarda Yunanistan'da saptandı.",
+       "ekran": "Klasik beta laktamazlar ilk kez 1960'lı yıllarda Yunanistan'da saptandı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0117",
+       "ses": "Bunlar plazmid aracılı TEM-1 ve TEM-2 enzimleridir; plazmidle taşındıkları için hızla farklı türlere yayıldılar.",
+       "ekran": "Bunlar plazmid aracılı TEM-1 ve TEM-2 enzimleridir; plazmidle taşındıkları için hızla farklı türlere yayıldılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0118",
+       "ses": "TEM adı, enzimin ilk izole edildiği hastanın adından, Temoniera'dan gelir.",
+       "ekran": "TEM adı, enzimin ilk izole edildiği hastanın adından, Temoniera'dan gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0119",
+       "ses": "Gram negatif bakterilerde en sık görülen beta laktamazlardır ve Escherichia coli'deki ampisilin direncinin en önemli nedeni TEM-1'dir.",
+       "ekran": "Gram negatif bakterilerde en sık görülen beta laktamazlardır ve Escherichia coli'deki ampisilin direncinin en önemli nedeni TEM-1'dir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p025",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-69-c0120",
+       "ses": "Bu enzimlerin etkili olduğu, yani yıktığı antibiyotikler penisilinler ve birinci kuşak sefalosporinlerdir; örnek olarak sefalotin ve sefazolin.",
+       "ekran": "Bu enzimlerin etkili olduğu, yani yıktığı antibiyotikler penisilinler ve birinci kuşak sefalosporinlerdir; örnek olarak sefalotin ve sefazolin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0121",
+       "ses": "Etkisiz kaldığı antibiyotikler ise ikinci ve üçüncü kuşak sefalosporinler ile beta laktamaz inhibitörleridir.",
+       "ekran": "Etkisiz kaldığı antibiyotikler ise ikinci ve üçüncü kuşak sefalosporinler ile beta laktamaz inhibitörleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0122",
+       "ses": "Klavulanik asit ve sulbaktam klasik beta laktamazı bağlayıp inaktive eder; bu yüzden amoksisilin klavulanik asit ve ampisilin sulbaktam bu enzimi üreten suşlara etkilidir.",
+       "ekran": "Klavulanik asit ve sulbaktam klasik beta laktamazı bağlayıp inaktive eder; bu yüzden amoksisilin klavulanik asit ve ampisilin sulbaktam bu enzimi üreten suşlara etkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0123",
+       "ses": "Şunu unutmayın, enzim inhibitörü tek başına antibakteriyel değildir, yalnız eşlik eden beta laktamı korur.",
+       "ekran": "Şunu unutmayın, enzim inhibitörü tek başına antibakteriyel değildir, yalnız eşlik eden beta laktamı korur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0124",
+       "ses": "Klasik beta laktamazlar aynı zamanda genişlemiş spektrumlu enzimlerin atasıdır; TEM ve SHV genlerindeki nokta mutasyonları spektrumu genişletmiştir.",
+       "ekran": "Klasik beta laktamazlar aynı zamanda genişlemiş spektrumlu enzimlerin atasıdır; TEM ve SHV genlerindeki nokta mutasyonları spektrumu genişletmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b09",
+   "baslik": "Genişlemiş spektrumlu beta laktamazlar",
+   "paragraflar": [
+    {
+     "id": "k1-69-p026",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-69-c0125",
+       "ses": "Genişlemiş spektrumlu beta laktamaz, kısaca GSBL, sefotaksimin 1980'de kullanıma sunulmasından kısa bir süre sonra Almanya'da bir Klebsiella pneumoniae suşunda saptandı.",
+       "ekran": "Genişlemiş spektrumlu beta laktamaz, kısaca GSBL, sefotaksimin 1980'de kullanıma sunulmasından kısa bir süre sonra Almanya'da bir Klebsiella pneumoniae suşunda saptandı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0126",
+       "ses": "Geniş spektrumlu sefalosporinlerin yoğun kullanımının doğrudan sonucudur.",
+       "ekran": "Geniş spektrumlu sefalosporinlerin yoğun kullanımının doğrudan sonucudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0127",
+       "ses": "Klasik TEM ve SHV enzimlerinde aktif bölgeyi değiştiren nokta mutasyonları spektrumu genişletmiştir; günümüzde CTX-M tipi enzimler de çok yaygındır.",
+       "ekran": "Klasik TEM ve SHV enzimlerinde aktif bölgeyi değiştiren nokta mutasyonları spektrumu genişletmiştir; günümüzde CTX-M tipi enzimler de çok yaygındır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0128",
+       "ses": "Başta Klebsiella pneumoniae ve Escherichia coli olmak üzere enterik bakterilerde bulunur ve genler plazmidle taşınır.",
+       "ekran": "Başta Klebsiella pneumoniae ve Escherichia coli olmak üzere enterik bakterilerde bulunur ve genler plazmidle taşınır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p027",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-69-c0129",
+       "ses": "Bu enzimi klasik beta laktamazdan ayıran özellik, oksiimino sefalosporinlere direnç oluşturmasıdır: sefotaksim, seftazidim, seftriakson ve sefepim.",
+       "ekran": "Bu enzimi klasik beta laktamazdan ayıran özellik, oksiimino sefalosporinlere direnç oluşturmasıdır: sefotaksim, seftazidim, seftriakson ve sefepim.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0130",
+       "ses": "Monobaktam olan aztreonam da bu enzimle hidrolize olur.",
+       "ekran": "Monobaktam olan aztreonam da bu enzimle hidrolize olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0131",
+       "ses": "Karbapenemler ise dayanıklıdır, sefamisinler de büyük ölçüde etkilenmez.",
+       "ekran": "Karbapenemler ise dayanıklıdır, sefamisinler de büyük ölçüde etkilenmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0132",
+       "ses": "Klinik sonucu şudur: antibiyogramda üçüncü kuşak sefalosporine duyarlı görünse bile genişlemiş spektrumlu beta laktamaz saptanan suşta bu ilaçlara güvenilmez.",
+       "ekran": "Klinik sonucu şudur: antibiyogramda üçüncü kuşak sefalosporine duyarlı görünse bile genişlemiş spektrumlu beta laktamaz saptanan suşta bu ilaçlara güvenilmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0133",
+       "ses": "Bu enzimi üreten bakterinin üçüncü kuşak sefalosporinle tedavi edilebileceği ifadesi klasik bir yanlış önermedir.",
+       "ekran": "Bu enzimi üreten bakterinin üçüncü kuşak sefalosporinle tedavi edilebileceği ifadesi klasik bir yanlış önermedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p028",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-69-c0134",
+       "ses": "Burası önemli, genişlemiş spektrumlu beta laktamaz üreten bir bakterinin neden olduğu enfeksiyonun tedavisinde karbapenem grubu antibiyotikler kullanılır: imipenem, meropenem ve ertapenem.",
+       "ekran": "Burası önemli, genişlemiş spektrumlu beta laktamaz üreten bir bakterinin neden olduğu enfeksiyonun tedavisinde karbapenem grubu antibiyotikler kullanılır: imipenem, meropenem ve ertapenem.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0135",
+       "ses": "İmipenem böbrekte dehidropeptidazla yıkılmaması için silastatinle birlikte verilir.",
+       "ekran": "İmipenem böbrekte dehidropeptidazla yıkılmaması için silastatinle birlikte verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0136",
+       "ses": "Meropenem Pseudomonas aeruginosa'ya da etkilidir.",
+       "ekran": "Meropenem Pseudomonas aeruginosa'ya da etkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0137",
+       "ses": "Ertapenem günde tek doz verilir; Pseudomonas ve Acinetobacter'e etkisi zayıftır, toplum kaynaklı bu tür enfeksiyonlarda tercih edilebilir.",
+       "ekran": "Ertapenem günde tek doz verilir; Pseudomonas ve Acinetobacter'e etkisi zayıftır, toplum kaynaklı bu tür enfeksiyonlarda tercih edilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0138",
+       "ses": "Ancak dikkat edin, karbapenemlerin gereksiz ve aşırı kullanımı sonraki basamakta karbapenemaz üreten suşların seçilmesine zemin hazırlar.",
+       "ekran": "Ancak dikkat edin, karbapenemlerin gereksiz ve aşırı kullanımı sonraki basamakta karbapenemaz üreten suşların seçilmesine zemin hazırlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b10",
+   "baslik": "Ambler sınıflaması ve enterik bakterilerde beta laktamazlar",
+   "paragraflar": [
+    {
+     "id": "k1-69-p029",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-69-c0139",
+       "ses": "Ders şeması enterik bakterilerdeki başlıca beta laktamazları Ambler sınıflamasına göre 4 sınıfta gösterir ve her enzimi kromozomal, yani doğal ya da plazmid kaynaklı, yani edinilmiş direnç olarak ayırır.",
+       "ekran": "Ders şeması enterik bakterilerdeki başlıca beta laktamazları Ambler sınıflamasına göre 4 sınıfta gösterir ve her enzimi kromozomal, yani doğal ya da plazmid kaynaklı, yani edinilmiş direnç olarak ayırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0140",
+       "ses": "Sınıf A, inhibitöre duyarlı serin beta laktamazlardır.",
+       "ekran": "Sınıf A, inhibitöre duyarlı serin beta laktamazlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0141",
+       "ses": "Sınıf B metallo beta laktamazlardır; aktif bölgede çinko taşır ve klavulanik asitle inhibe olmaz.",
+       "ekran": "Sınıf B metallo beta laktamazlardır; aktif bölgede çinko taşır ve klavulanik asitle inhibe olmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0142",
+       "ses": "Sınıf C sefalosporinazlar, yani AmpC enzimleridir.",
+       "ekran": "Sınıf C sefalosporinazlar, yani AmpC enzimleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0143",
+       "ses": "Sınıf D ise oksasilinazlardır.",
+       "ekran": "Sınıf D ise oksasilinazlardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p030",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-69-c0144",
+       "ses": "Kromozomal yarıda, sınıf A içinde Klebsiella türlerinin ve Citrobacter koseri'nin penisilinazları yer alır; Klebsiella'nın ampisiline doğal direnci buradan gelir.",
+       "ekran": "Kromozomal yarıda, sınıf A içinde Klebsiella türlerinin ve Citrobacter koseri'nin penisilinazları yer alır; Klebsiella'nın ampisiline doğal direnci buradan gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0145",
+       "ses": "Sınıf C içinde Escherichia coli'nin indüklenemeyen AmpC enzimi vardır.",
+       "ekran": "Sınıf C içinde Escherichia coli'nin indüklenemeyen AmpC enzimi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0146",
+       "ses": "İndüklenebilir AmpC ise Enterobacter türleri, Citrobacter freundii, Serratia marcescens, Morganella morganii, Hafnia alvei ve Providencia stuartii için gösterilir; bu bakterilerde beta laktam maruziyetiyle enzim üretimi artar.",
+       "ekran": "İndüklenebilir AmpC ise Enterobacter türleri, Citrobacter freundii, Serratia marcescens, Morganella morganii, Hafnia alvei ve Providencia stuartii için gösterilir; bu bakterilerde beta laktam maruziyetiyle enzim üretimi artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0147",
+       "ses": "Bu enzimin baskısı kalkmış, yani derepresse AmpC mutantları seçildiğinde ikinci ve üçüncü kuşak sefalosporinlere direnç gelişir.",
+       "ekran": "Bu enzimin baskısı kalkmış, yani derepresse AmpC mutantları seçildiğinde ikinci ve üçüncü kuşak sefalosporinlere direnç gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0148",
+       "ses": "Bu nedenle Enterobacter, Citrobacter freundii ve Serratia enfeksiyonunda üçüncü kuşak sefalosporinle tedavi başarısızlığı riski akılda tutulur.",
+       "ekran": "Bu nedenle Enterobacter, Citrobacter freundii ve Serratia enfeksiyonunda üçüncü kuşak sefalosporinle tedavi başarısızlığı riski akılda tutulur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p031",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-69-c0149",
+       "ses": "Plazmid kaynaklı yarıda, sınıf A içinde TEM ve SHV penisilinazları, inhibitöre dirençli varyantlarıyla birlikte bulunur; bunlar penisilinleri ve birinci kuşak sefalosporinleri hidrolize eder.",
+       "ekran": "Plazmid kaynaklı yarıda, sınıf A içinde TEM ve SHV penisilinazları, inhibitöre dirençli varyantlarıyla birlikte bulunur; bunlar penisilinleri ve birinci kuşak sefalosporinleri hidrolize eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0150",
+       "ses": "Bunların altında TEM, SHV ve CTX-M tipi genişlemiş spektrumlu enzimler ve en altta sınıf A karbapenemazı olan KPC yer alır.",
+       "ekran": "Bunların altında TEM, SHV ve CTX-M tipi genişlemiş spektrumlu enzimler ve en altta sınıf A karbapenemazı olan KPC yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0151",
+       "ses": "Sınıf B karbapenemazları VIM, IMP ve NDM'dir.",
+       "ekran": "Sınıf B karbapenemazları VIM, IMP ve NDM'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0152",
+       "ses": "Sınıf C'de plazmid kaynaklı AmpC, örneğin CMY-2 bulunur.",
+       "ekran": "Sınıf C'de plazmid kaynaklı AmpC, örneğin CMY-2 bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0153",
+       "ses": "Sınıf D'de inhibitöre dirençli dar spektrumlu OXA enzimleri, seyrek görülen genişlemiş spektrumlu OXA enzimleri ve OXA-48 varyantı karbapenemazlar vardır.",
+       "ekran": "Sınıf D'de inhibitöre dirençli dar spektrumlu OXA enzimleri, seyrek görülen genişlemiş spektrumlu OXA enzimleri ve OXA-48 varyantı karbapenemazlar vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0154",
+       "ses": "Şemanın sağındaki renk anahtarı hidroliz spektrumunu özetler: en açık renk penisilinler ve birinci kuşak, orta renk ikinci ve üçüncü kuşak, bazen dördüncü kuşak sefalosporinler, en koyu renk ise karbapenemler ve diğer beta laktamlardır.",
+       "ekran": "Şemanın sağındaki renk anahtarı hidroliz spektrumunu özetler: en açık renk penisilinler ve birinci kuşak, orta renk ikinci ve üçüncü kuşak, bazen dördüncü kuşak sefalosporinler, en koyu renk ise karbapenemler ve diğer beta laktamlardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b11",
+   "baslik": "Karbapenemazlar",
+   "paragraflar": [
+    {
+     "id": "k1-69-p032",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-69-c0155",
+       "ses": "Karbapenemazlar plazmid aracılıdır ve derste 4 ana tipi verilir.",
+       "ekran": "Karbapenemazlar plazmid aracılıdır ve derste 4 ana tipi verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0156",
+       "ses": "VIM, Verona integron aracılı metallo beta laktamazdır.",
+       "ekran": "VIM, Verona integron aracılı metallo beta laktamazdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0157",
+       "ses": "KPC, Klebsiella pneumoniae karbapenemazıdır.",
+       "ekran": "KPC, Klebsiella pneumoniae karbapenemazıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0158",
+       "ses": "NDM, Yeni Delhi metallo beta laktamazıdır.",
+       "ekran": "NDM, Yeni Delhi metallo beta laktamazıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0159",
+       "ses": "OXA-48 ise Türkiye'den köken almış oksasilinaz tipi karbapenemazdır ve ülkemizde en sık karbapenemazdır.",
+       "ekran": "OXA-48 ise Türkiye'den köken almış oksasilinaz tipi karbapenemazdır ve ülkemizde en sık karbapenemazdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p033",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-69-c0160",
+       "ses": "Karbapenemazlar genellikle genişlemiş spektrumlu beta laktamaz ve AmpC gibi diğer mekanizmalarla birlikte bulunur; bu yüzden bu suşlar sıklıkla çok ilaca dirençlidir.",
+       "ekran": "Karbapenemazlar genellikle genişlemiş spektrumlu beta laktamaz ve AmpC gibi diğer mekanizmalarla birlikte bulunur; bu yüzden bu suşlar sıklıkla çok ilaca dirençlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0161",
+       "ses": "Karbapenem grubu antibiyotikleri hidrolize ederek etkisiz bırakırlar ve böylece beta laktam seçeneği büyük ölçüde ortadan kalkar.",
+       "ekran": "Karbapenem grubu antibiyotikleri hidrolize ederek etkisiz bırakırlar ve böylece beta laktam seçeneği büyük ölçüde ortadan kalkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p034",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-69-c0162",
+       "ses": "Burası önemli, bu suşlar çoğunlukla kolistine duyarlıdır ve tedavide kolistin kullanılmaktadır.",
+       "ekran": "Burası önemli, bu suşlar çoğunlukla kolistine duyarlıdır ve tedavide kolistin kullanılmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0163",
+       "ses": "Kolistinin böbrek ve sinir sistemi üzerine toksisite riski nedeniyle izlem gerekir.",
+       "ekran": "Kolistinin böbrek ve sinir sistemi üzerine toksisite riski nedeniyle izlem gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0164",
+       "ses": "Kolistin bu durumda kurtarıcı tedavidir; onun da gereksiz kullanımı kolistin direncini seçer.",
+       "ekran": "Kolistin bu durumda kurtarıcı tedavidir; onun da gereksiz kullanımı kolistin direncini seçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0165",
+       "ses": "Türkiye'de karbapeneme dirençli Klebsiella denince önce OXA-48 düşünülür.",
+       "ekran": "Türkiye'de karbapeneme dirençli Klebsiella denince önce OXA-48 düşünülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b12",
+   "baslik": "Türkiye verileri: Escherichia coli ve Klebsiella pneumoniae",
+   "paragraflar": [
+    {
+     "id": "k1-69-p035",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-69-c0166",
+       "ses": "Ampirik tedavi seçimi ülkemizin direnç verilerine dayanır.",
+       "ekran": "Ampirik tedavi seçimi ülkemizin direnç verilerine dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0167",
+       "ses": "Derste 2 kaynak gösterilir: Ulusal Antimikrobiyal Direnç Sürveyans Sistemi'nin 2016 raporu ve Dünya Sağlık Örgütü Avrupa Bölge Ofisi'nin Orta Asya ve Doğu Avrupa Antimikrobiyal Direnç Sürveyansı, kısaca CAESAR ağının 2018 raporu.",
+       "ekran": "Derste 2 kaynak gösterilir: Ulusal Antimikrobiyal Direnç Sürveyans Sistemi'nin 2016 raporu ve Dünya Sağlık Örgütü Avrupa Bölge Ofisi'nin Orta Asya ve Doğu Avrupa Antimikrobiyal Direnç Sürveyansı, kısaca CAESAR ağının 2018 raporu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0168",
+       "ses": "2.'si Türkiye'deki kan ve beyin omurilik sıvısı izolatlarının 2017 direnç yüzdelerini verir.",
+       "ekran": "2.'si Türkiye'deki kan ve beyin omurilik sıvısı izolatlarının 2017 direnç yüzdelerini verir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p036",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-69-c0169",
+       "ses": "Ulusal raporda 4342 Escherichia coli izolatı incelenmiştir.",
+       "ekran": "Ulusal raporda 4342 Escherichia coli izolatı incelenmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0170",
+       "ses": "Ampisilin ve amoksisilin direnci %78,5'tir; bu ilaçlar Escherichia coli'de ampirik olarak kullanılamaz.",
+       "ekran": "Ampisilin ve amoksisilin direnci %78,5'tir; bu ilaçlar Escherichia coli'de ampirik olarak kullanılamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0171",
+       "ses": "Amoksisilin klavulanik asit ve ampisilin sulbaktam direnci %64,6, piperasilin direnci %76, piperasilin tazobaktam direnci ise %27,7'dir.",
+       "ekran": "Amoksisilin klavulanik asit ve ampisilin sulbaktam direnci %64,6, piperasilin direnci %76, piperasilin tazobaktam direnci ise %27,7'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0172",
+       "ses": "Piperasilin ile piperasilin tazobaktam arasındaki bu büyük fark, dirençte beta laktamazların payını gösterir.",
+       "ekran": "Piperasilin ile piperasilin tazobaktam arasındaki bu büyük fark, dirençte beta laktamazların payını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0173",
+       "ses": "Seftriakson ve sefotaksim direnci %51,1, seftazidim %54,2'dir; bu oranlar yaygın genişlemiş spektrumlu beta laktamaz üretimini yansıtır.",
+       "ekran": "Seftriakson ve sefotaksim direnci %51,1, seftazidim %54,2'dir; bu oranlar yaygın genişlemiş spektrumlu beta laktamaz üretimini yansıtır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0174",
+       "ses": "Gentamisin %29,3, tobramisin %54,9, amikasin yalnız %8,7'dir.",
+       "ekran": "Gentamisin %29,3, tobramisin %54,9, amikasin yalnız %8,7'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0175",
+       "ses": "Siprofloksasin ve levofloksasin direnci %54,5, imipenem ve meropenem %5, ertapenem %8,2, çoklu ilaç direnci %25'tir.",
+       "ekran": "Siprofloksasin ve levofloksasin direnci %54,5, imipenem ve meropenem %5, ertapenem %8,2, çoklu ilaç direnci %25'tir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0176",
+       "ses": "Kısacası Escherichia coli'de her 2 izolattan biri üçüncü kuşak sefalosporine ve kinolona dirençlidir, karbapenem direnci ise henüz düşüktür.",
+       "ekran": "Kısacası Escherichia coli'de her 2 izolattan biri üçüncü kuşak sefalosporine ve kinolona dirençlidir, karbapenem direnci ise henüz düşüktür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p037",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-69-c0177",
+       "ses": "3218 Klebsiella pneumoniae izolatında tablo çok daha ağırdır.",
+       "ekran": "3218 Klebsiella pneumoniae izolatında tablo çok daha ağırdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0178",
+       "ses": "Amoksisilin klavulanik asit direnci %76,8, piperasilin tazobaktam %66,6, seftriakson ve sefotaksim %68,5, seftazidim %75,3'tür.",
+       "ekran": "Amoksisilin klavulanik asit direnci %76,8, piperasilin tazobaktam %66,6, seftriakson ve sefotaksim %68,5, seftazidim %75,3'tür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0179",
+       "ses": "Gentamisin %49,2, tobramisin %79, amikasin %30'dur.",
+       "ekran": "Gentamisin %49,2, tobramisin %79, amikasin %30'dur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0180",
+       "ses": "Kinolon direnci %62,7, imipenem ve meropenem direnci %40,1, ertapenem %48,9, çoklu ilaç direnci %46,1'dir.",
+       "ekran": "Kinolon direnci %62,7, imipenem ve meropenem direnci %40,1, ertapenem %48,9, çoklu ilaç direnci %46,1'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0181",
+       "ses": "Escherichia coli'de %5 olan karbapenem direnci Klebsiella'da %40'ı aşar; karbapenemaz, özellikle OXA-48 üreten Klebsiella ülkemizin en önemli direnç sorunlarındandır.",
+       "ekran": "Escherichia coli'de %5 olan karbapenem direnci Klebsiella'da %40'ı aşar; karbapenemaz, özellikle OXA-48 üreten Klebsiella ülkemizin en önemli direnç sorunlarındandır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p038",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-69-c0182",
+       "ses": "CAESAR raporu aynı yönü doğrular ve Klebsiella her ilaçta daha dirençlidir.",
+       "ekran": "CAESAR raporu aynı yönü doğrular ve Klebsiella her ilaçta daha dirençlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0183",
+       "ses": "Escherichia coli ve Klebsiella için sırasıyla: amoksisilin klavulanik asit %59 ve 72, piperasilin tazobaktam %22 ve 58, üçüncü kuşak sefalosporin direnci %52 ve 71, seftazidim %44 ve 69, ertapenem %6 ve 43, imipenem ve meropenem %3 ve 32, gentamisin ve tobramisin %27 ve 45, amikasin %2 ve 19, florokinolon %52 ve 61, çoklu ilaç direnci %19 ve 39'dur.",
+       "ekran": "Escherichia coli ve Klebsiella için sırasıyla: amoksisilin klavulanik asit %59 ve 72, piperasilin tazobaktam %22 ve 58, üçüncü kuşak sefalosporin direnci %52 ve 71, seftazidim %44 ve 69, ertapenem %6 ve 43, imipenem ve meropenem %3 ve 32, gentamisin ve tobramisin %27 ve 45, amikasin %2 ve 19, florokinolon %52 ve 61, çoklu ilaç direnci %19 ve 39'dur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0184",
+       "ses": "Escherichia coli'de amoksisilin ve ampisilin direnci %78'dir.",
+       "ekran": "Escherichia coli'de amoksisilin ve ampisilin direnci %78'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0185",
+       "ses": "Klebsiella'da karbapenem direnci Escherichia coli'nin yaklaşık 10 katıdır.",
+       "ekran": "Klebsiella'da karbapenem direnci Escherichia coli'nin yaklaşık 10 katıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b13",
+   "baslik": "Türkiye verileri: Pseudomonas aeruginosa ve Acinetobacter",
+   "paragraflar": [
+    {
+     "id": "k1-69-p039",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-69-c0186",
+       "ses": "Pseudomonas aeruginosa hastane enfeksiyonlarının önemli etkenidir ve düşük geçirgenlik, efluks pompaları ve AmpC gibi çok sayıda doğal direnç mekanizmasına sahiptir.",
+       "ekran": "Pseudomonas aeruginosa hastane enfeksiyonlarının önemli etkenidir ve düşük geçirgenlik, efluks pompaları ve AmpC gibi çok sayıda doğal direnç mekanizmasına sahiptir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0187",
+       "ses": "Ulusal raporda 1466 izolat incelenmiştir.",
+       "ekran": "Ulusal raporda 1466 izolat incelenmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0188",
+       "ses": "Piperasilin tazobaktam direnci %30,1, seftazidim %23,5, sefepim %30,5'tir.",
+       "ekran": "Piperasilin tazobaktam direnci %30,1, seftazidim %23,5, sefepim %30,5'tir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0189",
+       "ses": "Gentamisin ve tobramisin %26,1, amikasin %23,2, siprofloksasin ve levofloksasin %37,7'dir.",
+       "ekran": "Gentamisin ve tobramisin %26,1, amikasin %23,2, siprofloksasin ve levofloksasin %37,7'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0190",
+       "ses": "İmipenem ve meropenem direnci %46,1, çoklu ilaç direnci %32,6'dır.",
+       "ekran": "İmipenem ve meropenem direnci %46,1, çoklu ilaç direnci %32,6'dır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0191",
+       "ses": "Yani Pseudomonas'ta en yüksek direnç karbapenemlerdedir; antipsödomonal beta laktamlar arasında en düşük direnç seftazidimdedir.",
+       "ekran": "Yani Pseudomonas'ta en yüksek direnç karbapenemlerdedir; antipsödomonal beta laktamlar arasında en düşük direnç seftazidimdedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p040",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-69-c0192",
+       "ses": "CAESAR raporunda Pseudomonas aeruginosa için piperasilin tazobaktam %37, seftazidim %30, sefepim %34, karbapenem direnci %37, orta duyarlılar da eklenince %44, gentamisin ve tobramisin %27, amikasin %19, florokinolon %36, çoklu ilaç direnci %32'dir.",
+       "ekran": "CAESAR raporunda Pseudomonas aeruginosa için piperasilin tazobaktam %37, seftazidim %30, sefepim %34, karbapenem direnci %37, orta duyarlılar da eklenince %44, gentamisin ve tobramisin %27, amikasin %19, florokinolon %36, çoklu ilaç direnci %32'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0193",
+       "ses": "Acinetobacter türlerinde ise karbapenem direnci %91, orta duyarlılarla %92; gentamisin ve tobramisin %78, amikasin %71, florokinolon %93, çoklu ilaç direnci %78'dir.",
+       "ekran": "Acinetobacter türlerinde ise karbapenem direnci %91, orta duyarlılarla %92; gentamisin ve tobramisin %78, amikasin %71, florokinolon %93, çoklu ilaç direnci %78'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0194",
+       "ses": "Acinetobacter ülkemizde en dirençli Gram negatif etkendir ve karbapeneme dirençli suşlarda tedavi çoğunlukla kolistine dayanır.",
+       "ekran": "Acinetobacter ülkemizde en dirençli Gram negatif etkendir ve karbapeneme dirençli suşlarda tedavi çoğunlukla kolistine dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b14",
+   "baslik": "Aminoglikozid direnci",
+   "paragraflar": [
+    {
+     "id": "k1-69-p041",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-69-c0195",
+       "ses": "Aminoglikozidlere karşı 3 mekanizma tanımlanır ve her birinin sıklığı ile çapraz direnç özelliği farklıdır.",
+       "ekran": "Aminoglikozidlere karşı 3 mekanizma tanımlanır ve her birinin sıklığı ile çapraz direnç özelliği farklıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0196",
+       "ses": "Ribozomal direnç nadirdir, çapraz direnç oluşturmaz; tipik örneği streptomisin direncidir.",
+       "ekran": "Ribozomal direnç nadirdir, çapraz direnç oluşturmaz; tipik örneği streptomisin direncidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0197",
+       "ses": "Geçirgenlik azalması Pseudomonas türleri, Escherichia coli ve Staphylococcus aureus'ta görülür; ilaç hücreye giremediği için grup içinde çapraz direnç vardır.",
+       "ekran": "Geçirgenlik azalması Pseudomonas türleri, Escherichia coli ve Staphylococcus aureus'ta görülür; ilaç hücreye giremediği için grup içinde çapraz direnç vardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p042",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-69-c0198",
+       "ses": "Burası önemli, aminoglikozid direncinde en sık mekanizma enzimatiktir ve plazmid aracılıdır.",
+       "ekran": "Burası önemli, aminoglikozid direncinde en sık mekanizma enzimatiktir ve plazmid aracılıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0199",
+       "ses": "Yani en sık sorusunun cevabı enzimatik, çapraz direnç yok sorusunun cevabı ribozomal mekanizmadır.",
+       "ekran": "Yani en sık sorusunun cevabı enzimatik, çapraz direnç yok sorusunun cevabı ribozomal mekanizmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0200",
+       "ses": "Enzimatik direnç ilacı yıkmaktan çok kimyasal olarak değiştirmeye dayanır.",
+       "ekran": "Enzimatik direnç ilacı yıkmaktan çok kimyasal olarak değiştirmeye dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0201",
+       "ses": "Asetiltransferazlar amino gruplarına asetil, fosfotransferazlar hidroksil gruplarına fosfat, nükleotidiltransferazlar ise hidroksil gruplarına adenozin monofosfat ekler.",
+       "ekran": "Asetiltransferazlar amino gruplarına asetil, fosfotransferazlar hidroksil gruplarına fosfat, nükleotidiltransferazlar ise hidroksil gruplarına adenozin monofosfat ekler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0202",
+       "ses": "Değişmiş ilaç ribozoma bağlanamaz ve hücreye alımı da azalır.",
+       "ekran": "Değişmiş ilaç ribozoma bağlanamaz ve hücreye alımı da azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0203",
+       "ses": "Amikasinin yan zinciri bu enzimlerin çoğunun bağlanma bölgesini korur; bu yüzden gentamisine dirençli suşların çoğunda etkili kalır.",
+       "ekran": "Amikasinin yan zinciri bu enzimlerin çoğunun bağlanma bölgesini korur; bu yüzden gentamisine dirençli suşların çoğunda etkili kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0204",
+       "ses": "Ulusal raporda Escherichia coli'de gentamisin direncinin %29,3, amikasin direncinin %8,7 olması bu farkla uyumludur.",
+       "ekran": "Ulusal raporda Escherichia coli'de gentamisin direncinin %29,3, amikasin direncinin %8,7 olması bu farkla uyumludur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b15",
+   "baslik": "Kinolon direnci",
+   "paragraflar": [
+    {
+     "id": "k1-69-p043",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-69-c0205",
+       "ses": "Kinolon direncinin temel nedeni hedef enzim olan DNA girazda mutasyondur.",
+       "ekran": "Kinolon direncinin temel nedeni hedef enzim olan DNA girazda mutasyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0206",
+       "ses": "DNA giraz GyrA ve GyrB alt birimlerinden oluşur ve mutasyonlar en sık GyrA alt birimindedir.",
+       "ekran": "DNA giraz GyrA ve GyrB alt birimlerinden oluşur ve mutasyonlar en sık GyrA alt birimindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0207",
+       "ses": "İkinci hedef topoizomeraz IV'tür; Gram negatiflerde birincil hedef DNA giraz, Gram pozitiflerde çoğunlukla topoizomeraz IV'tür.",
+       "ekran": "İkinci hedef topoizomeraz IV'tür; Gram negatiflerde birincil hedef DNA giraz, Gram pozitiflerde çoğunlukla topoizomeraz IV'tür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0208",
+       "ses": "Tek mutasyon düşük düzey, her iki enzimde ardışık mutasyonlar yüksek düzey direnç oluşturur.",
+       "ekran": "Tek mutasyon düşük düzey, her iki enzimde ardışık mutasyonlar yüksek düzey direnç oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0209",
+       "ses": "Kromozomal olduğu için tedavi sırasında da gelişebilir.",
+       "ekran": "Kromozomal olduğu için tedavi sırasında da gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p044",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-69-c0210",
+       "ses": "Hedef mutasyonunun yanında 2 mekanizma daha vardır.",
+       "ekran": "Hedef mutasyonunun yanında 2 mekanizma daha vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0211",
+       "ses": "Geçirgenlik azalmasında Gram negatiflerde porin kaybı kinolonun hücreye girişini azaltır.",
+       "ekran": "Geçirgenlik azalmasında Gram negatiflerde porin kaybı kinolonun hücreye girişini azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0212",
+       "ses": "Aktif pompa sisteminde ise pompalar kinolonu hücre dışına atar; aynı pompalar başka grupları da atabildiği için çoklu dirence katkıda bulunur.",
+       "ekran": "Aktif pompa sisteminde ise pompalar kinolonu hücre dışına atar; aynı pompalar başka grupları da atabildiği için çoklu dirence katkıda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0213",
+       "ses": "Hedefi koruyan proteinler gibi plazmid aracılı düşük düzey mekanizmalar da tanımlanmıştır.",
+       "ekran": "Hedefi koruyan proteinler gibi plazmid aracılı düşük düzey mekanizmalar da tanımlanmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0214",
+       "ses": "Hedef mutasyonu efluks ya da geçirgenlik azalmasıyla birleşince yüksek düzey direnç gelişir.",
+       "ekran": "Hedef mutasyonu efluks ya da geçirgenlik azalmasıyla birleşince yüksek düzey direnç gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0215",
+       "ses": "Ulusal raporda Escherichia coli'de levofloksasin direncinin %54,5 olması bu mekanizmaların ülkemizdeki yaygınlığını gösterir.",
+       "ekran": "Ulusal raporda Escherichia coli'de levofloksasin direncinin %54,5 olması bu mekanizmaların ülkemizdeki yaygınlığını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b16",
+   "baslik": "Gram pozitiflerde direnç: Staphylococcus aureus",
+   "paragraflar": [
+    {
+     "id": "k1-69-p045",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-69-c0216",
+       "ses": "Gram pozitiflerde direncin en tipik örneği Staphylococcus aureus'tur.",
+       "ekran": "Gram pozitiflerde direncin en tipik örneği Staphylococcus aureus'tur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0217",
+       "ses": "Zaman çizelgesinde önce bakterinin keşfi, ardından penisilinin keşfi görülür.",
+       "ekran": "Zaman çizelgesinde önce bakterinin keşfi, ardından penisilinin keşfi görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0218",
+       "ses": "Sonra Staphylococcus aureus penisilinle başarıyla tedavi edildi.",
+       "ekran": "Sonra Staphylococcus aureus penisilinle başarıyla tedavi edildi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0219",
+       "ses": "Ancak penisilinaz üreten suşlar yayıldı ve penisiline direnç gelişti.",
+       "ekran": "Ancak penisilinaz üreten suşlar yayıldı ve penisiline direnç gelişti.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0220",
+       "ses": "Bunun üzerine penisilinaza dayanıklı metisilin devreye girdi ve kısa süre sonra ilk metisiline dirençli Staphylococcus aureus tanımlandı.",
+       "ekran": "Bunun üzerine penisilinaza dayanıklı metisilin devreye girdi ve kısa süre sonra ilk metisiline dirençli Staphylococcus aureus tanımlandı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0221",
+       "ses": "Çizelgede Amerika Birleşik Devletleri'ndeki ilk vaka da işaretlidir.",
+       "ekran": "Çizelgede Amerika Birleşik Devletleri'ndeki ilk vaka da işaretlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0222",
+       "ses": "En sonunda ilk vankomisine dirençli suş tanımlandı.",
+       "ekran": "En sonunda ilk vankomisine dirençli suş tanımlandı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0223",
+       "ses": "Yani yeni ilaç, yeni direnç döngüsünün Gram pozitiflerdeki en net örneği budur.",
+       "ekran": "Yani yeni ilaç, yeni direnç döngüsünün Gram pozitiflerdeki en net örneği budur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p046",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-69-c0224",
+       "ses": "Burası önemli, metisiline dirençli Staphylococcus aureus, kısaca MRSA, bütün sefalosporinlere, penisilinlere ve karbapenemlere dirençlidir.",
+       "ekran": "Burası önemli, metisiline dirençli Staphylococcus aureus, kısaca MRSA, bütün sefalosporinlere, penisilinlere ve karbapenemlere dirençlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0225",
+       "ses": "Moleküler temeli mecA genidir; bu gen beta laktamlara düşük afiniteli PBP2a proteinini kodlar.",
+       "ekran": "Moleküler temeli mecA genidir; bu gen beta laktamlara düşük afiniteli PBP2a proteinini kodlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0226",
+       "ses": "Bu bir hedef modifikasyonudur, enzim değildir; bu yüzden beta laktamaz inhibitörü eklemek işe yaramaz.",
+       "ekran": "Bu bir hedef modifikasyonudur, enzim değildir; bu yüzden beta laktamaz inhibitörü eklemek işe yaramaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0227",
+       "ses": "MRSA kinolonlara duyarlı görünse de tedavi sırasında direnç gelişir, bu nedenle kinolonlara güvenilmez.",
+       "ekran": "MRSA kinolonlara duyarlı görünse de tedavi sırasında direnç gelişir, bu nedenle kinolonlara güvenilmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0228",
+       "ses": "Tedavide vankomisin, teikoplanin, linezolid ve daptomisin kullanılır.",
+       "ekran": "Tedavide vankomisin, teikoplanin, linezolid ve daptomisin kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p047",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-69-c0229",
+       "ses": "Bu 4 ilaç farklı hedeflere etki eder.",
+       "ekran": "Bu 4 ilaç farklı hedeflere etki eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0230",
+       "ses": "Vankomisin ve teikoplanin glikopeptiddir, hücre duvarına etki eder ve ciddi enfeksiyonlarda temel seçenektir.",
+       "ekran": "Vankomisin ve teikoplanin glikopeptiddir, hücre duvarına etki eder ve ciddi enfeksiyonlarda temel seçenektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0231",
+       "ses": "Linezolid oksazolidinon grubu protein sentezi inhibitörüdür ve oral formu vardır.",
+       "ekran": "Linezolid oksazolidinon grubu protein sentezi inhibitörüdür ve oral formu vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0232",
+       "ses": "Daptomisin lipopeptiddir, hücre zarına etki eder; bakteriyemi ve endokarditte kullanılır, ancak akciğer sürfaktanıyla inaktive olduğu için pnömonide kullanılmaz.",
+       "ekran": "Daptomisin lipopeptiddir, hücre zarına etki eder; bakteriyemi ve endokarditte kullanılır, ancak akciğer sürfaktanıyla inaktive olduğu için pnömonide kullanılmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p048",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-69-c0233",
+       "ses": "Vankomisinin yaygın kullanımı Gram pozitiflerde glikopeptid direncini ortaya çıkarmıştır.",
+       "ekran": "Vankomisinin yaygın kullanımı Gram pozitiflerde glikopeptid direncini ortaya çıkarmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0234",
+       "ses": "VISA, vankomisine duyarlılığı azalmış Staphylococcus aureus'tur; kalınlaşmış hücre duvarı vankomisini dış katmanlarda tutar ve hedefe ulaşmasını azaltır.",
+       "ekran": "VISA, vankomisine duyarlılığı azalmış Staphylococcus aureus'tur; kalınlaşmış hücre duvarı vankomisini dış katmanlarda tutar ve hedefe ulaşmasını azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0235",
+       "ses": "VRE ise vankomisine dirençli enterokoktur. vanA ve vanB genleri D-alanin-D-alanin ucunu D-alanin-D-laktata dönüştürür; bu, tablodaki hücre duvarı öncü maddelerinde değişim satırının klinik karşılığıdır.",
+       "ekran": "VRE ise vankomisine dirençli enterokoktur. vanA ve vanB genleri D-alanin-D-alanin ucunu D-alanin-D-laktata dönüştürür; bu, tablodaki hücre duvarı öncü maddelerinde değişim satırının klinik karşılığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0236",
+       "ses": "VRE'de linezolid ve daptomisin seçeneklerdir.",
+       "ekran": "VRE'de linezolid ve daptomisin seçeneklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0237",
+       "ses": "VRE hastane içinde kolay yayılır ve temas izolasyonu gerekir.",
+       "ekran": "VRE hastane içinde kolay yayılır ve temas izolasyonu gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b17",
+   "baslik": "Antibiyotik direnci nasıl yayılır",
+   "paragraflar": [
+    {
+     "id": "k1-69-p049",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-69-c0238",
+       "ses": "Amerikan Hastalık Kontrol ve Önleme Merkezi kaynaklı bir görsel, direncin insan, hayvan ve çevre arasında nasıl dolaştığını gösterir.",
+       "ekran": "Amerikan Hastalık Kontrol ve Önleme Merkezi kaynaklı bir görsel, direncin insan, hayvan ve çevre arasında nasıl dolaştığını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0239",
+       "ses": "Antibiyotik aldıkça bizde de direnç gelişir.",
+       "ekran": "Antibiyotik aldıkça bizde de direnç gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0240",
+       "ses": "Hayvanlar antibiyotik aldıkça onların vücudunda da direnç gelişir.",
+       "ekran": "Hayvanlar antibiyotik aldıkça onların vücudunda da direnç gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0241",
+       "ses": "Hayvansal ürünler iyi işlenmez ve pişirilmezse ilaçlara dirençli bakteriler insanlara geçer.",
+       "ekran": "Hayvansal ürünler iyi işlenmez ve pişirilmezse ilaçlara dirençli bakteriler insanlara geçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0242",
+       "ses": "Dirençli bakteri içeren hayvan dışkıları gübre olarak kullanılır ve sulara karışır; dirençli bakteriler tarımsal ürünlerin üzerinde kalabilir ve yendiğinde insanlara geçebilir.",
+       "ekran": "Dirençli bakteri içeren hayvan dışkıları gübre olarak kullanılır ve sulara karışır; dirençli bakteriler tarımsal ürünlerin üzerinde kalabilir ve yendiğinde insanlara geçebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p050",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-69-c0243",
+       "ses": "Görselin diğer yarısı sağlık ortamını anlatır.",
+       "ekran": "Görselin diğer yarısı sağlık ortamını anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0244",
+       "ses": "Günlük hayatımızı sürerken dirençli bakterileri biz de yayarız.",
+       "ekran": "Günlük hayatımızı sürerken dirençli bakterileri biz de yayarız.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0245",
+       "ses": "Rahatsızlandığımızda hastane ya da diğer tedavi merkezlerine gideriz.",
+       "ekran": "Rahatsızlandığımızda hastane ya da diğer tedavi merkezlerine gideriz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0246",
+       "ses": "Orada dirençli bakteriler doğrudan diğer hastalara bulaşabilir ya da sağlık görevlileri dolaylı olarak bulaştırabilir.",
+       "ekran": "Orada dirençli bakteriler doğrudan diğer hastalara bulaşabilir ya da sağlık görevlileri dolaylı olarak bulaştırabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0247",
+       "ses": "Dirençli bakteriler hastanedeki yüzeylerde kalarak yayılmaya devam eder ve hastaneye gelenler evlerine döndüğünde döngü toplumda yeniden başlar.",
+       "ekran": "Dirençli bakteriler hastanedeki yüzeylerde kalarak yayılmaya devam eder ve hastaneye gelenler evlerine döndüğünde döngü toplumda yeniden başlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b18",
+   "baslik": "Ne yapmalı: antibiyotiklerin doğru kullanımı",
+   "paragraflar": [
+    {
+     "id": "k1-69-p051",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-69-c0248",
+       "ses": "Direnç sorununa karşı ne yapmalı sorusunun cevabı antibiyotiklerin doğru kullanımıdır.",
+       "ekran": "Direnç sorununa karşı ne yapmalı sorusunun cevabı antibiyotiklerin doğru kullanımıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0249",
+       "ses": "Bu, klinik ve laboratuvar ile doğru tanı konmuş ve antibiyotiğin gerekli olduğuna karar verilmiş hastada başlar.",
+       "ekran": "Bu, klinik ve laboratuvar ile doğru tanı konmuş ve antibiyotiğin gerekli olduğuna karar verilmiş hastada başlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0250",
+       "ses": "Viral enfeksiyonlar ve kolonizasyon antibiyotik endikasyonu değildir; gereksiz başlanan her antibiyotik yarar sağlamadan seçilim baskısı oluşturur.",
+       "ekran": "Viral enfeksiyonlar ve kolonizasyon antibiyotik endikasyonu değildir; gereksiz başlanan her antibiyotik yarar sağlamadan seçilim baskısı oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0251",
+       "ses": "En akılcı antibiyotik, gereksiz yere hiç başlanmayan antibiyotiktir.",
+       "ekran": "En akılcı antibiyotik, gereksiz yere hiç başlanmayan antibiyotiktir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p052",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-69-c0252",
+       "ses": "Gerekli olduğuna karar verildikten sonra doğru, yani en dar spektrumlu ilaç seçilir; etkeni kapsayan en dar ilaç hem normal florayı korur hem seçilim baskısını azaltır.",
+       "ekran": "Gerekli olduğuna karar verildikten sonra doğru, yani en dar spektrumlu ilaç seçilir; etkeni kapsayan en dar ilaç hem normal florayı korur hem seçilim baskısını azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0253",
+       "ses": "Bu ilaç doğru dozda verilmelidir; düşük doz etkisizlik ve direnç seçimine, yüksek doz toksisiteye yol açar.",
+       "ekran": "Bu ilaç doğru dozda verilmelidir; düşük doz etkisizlik ve direnç seçimine, yüksek doz toksisiteye yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0254",
+       "ses": "Doğru sürede verilmelidir; gereğinden kısa tedavi nükse, gereğinden uzun tedavi dirence yol açar.",
+       "ekran": "Doğru sürede verilmelidir; gereğinden kısa tedavi nükse, gereğinden uzun tedavi dirence yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0255",
+       "ses": "Doğru doz aralıklarıyla, yani ilacın farmakokinetiğine uygun aralıklarla verilmelidir.",
+       "ekran": "Doğru doz aralıklarıyla, yani ilacın farmakokinetiğine uygun aralıklarla verilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0256",
+       "ses": "Son olarak hastaya uygun antibiyotikler arasından en ucuzu kullanılmalıdır.",
+       "ekran": "Son olarak hastaya uygun antibiyotikler arasından en ucuzu kullanılmalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b19",
+   "baslik": "Uygun antibiyotik seçiminin 4 koşulu",
+   "paragraflar": [
+    {
+     "id": "k1-69-p053",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-69-c0257",
+       "ses": "Uygun antibiyotik seçimi 4 koşula dayanır.",
+       "ekran": "Uygun antibiyotik seçimi 4 koşula dayanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0258",
+       "ses": "1.'si, enfeksiyon nedeni olan mikroorganizma bilinmeli ya da tahmin edilmelidir.",
+       "ekran": "1.'si, enfeksiyon nedeni olan mikroorganizma bilinmeli ya da tahmin edilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0259",
+       "ses": "Kültür sonucu yoksa klinik tablo, enfeksiyonun yeri ve hastanın özellikleri en olası etkeni gösterir.",
+       "ekran": "Kültür sonucu yoksa klinik tablo, enfeksiyonun yeri ve hastanın özellikleri en olası etkeni gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0260",
+       "ses": "2.'si, etken olan ya da etken olması muhtemel mikroorganizmanın antimikrobiyal duyarlılık durumu bilinmeli ya da tahmin edilmelidir.",
+       "ekran": "2.'si, etken olan ya da etken olması muhtemel mikroorganizmanın antimikrobiyal duyarlılık durumu bilinmeli ya da tahmin edilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0261",
+       "ses": "Antibiyogram gelene kadar az önce gördüğümüz ulusal ve yerel sürveyans verileri yol gösterir.",
+       "ekran": "Antibiyogram gelene kadar az önce gördüğümüz ulusal ve yerel sürveyans verileri yol gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0262",
+       "ses": "Etken belirlenmeden olası patojene ve duyarlılık tahminine göre başlanan bu tedaviye ampirik tedavi denir; kültür sonucu gelince doğrulanır ve gerekirse daraltılır.",
+       "ekran": "Etken belirlenmeden olası patojene ve duyarlılık tahminine göre başlanan bu tedaviye ampirik tedavi denir; kültür sonucu gelince doğrulanır ve gerekirse daraltılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p054",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-69-c0263",
+       "ses": "3.'sü, kullanılacak antimikrobiyal ilacın etkisini ve toksisitesini etkileyecek hastaya ait özellikler bilinmelidir: yaş, böbrek ve karaciğer işlevi, gebelik ve emzirme, alerji öyküsü, bağışıklık durumu ve enfeksiyonun yeri.",
+       "ekran": "3.'sü, kullanılacak antimikrobiyal ilacın etkisini ve toksisitesini etkileyecek hastaya ait özellikler bilinmelidir: yaş, böbrek ve karaciğer işlevi, gebelik ve emzirme, alerji öyküsü, bağışıklık durumu ve enfeksiyonun yeri.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0264",
+       "ses": "4.'sü, kullanılacak antibiyotiğin özellikleri hakkında bilgi sahibi olunmalıdır: spektrumu, dokuya geçişi, farmakokinetiği, yan etkileri ve etkileşimleri.",
+       "ekran": "4.'sü, kullanılacak antibiyotiğin özellikleri hakkında bilgi sahibi olunmalıdır: spektrumu, dokuya geçişi, farmakokinetiği, yan etkileri ve etkileşimleri.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0265",
+       "ses": "Dikkat edin, ateşi olan her hastaya antibiyotik başlanmalıdır gibi bir ifade bu 4 koşulun hiçbirinde yer almaz ve sınavlarda yanlış seçenek olarak karşınıza çıkar.",
+       "ekran": "Dikkat edin, ateşi olan her hastaya antibiyotik başlanmalıdır gibi bir ifade bu 4 koşulun hiçbirinde yer almaz ve sınavlarda yanlış seçenek olarak karşınıza çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b20",
+   "baslik": "Antibiyotik kullanımındaki hatalar: muayene ve poliklinik",
+   "paragraflar": [
+    {
+     "id": "k1-69-p055",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-69-c0266",
+       "ses": "Antibiyotik kullanımındaki hata ve yetersizlikler poliklinik ve hastane düzeyinde ayrı ele alınır.",
+       "ekran": "Antibiyotik kullanımındaki hata ve yetersizlikler poliklinik ve hastane düzeyinde ayrı ele alınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0267",
+       "ses": "Muayene ve polikliniklerdeki en sık sorun ateşi olan her hastaya antibiyotik verilmesidir; viral üst solunum yolu enfeksiyonu ve gastroenterit gibi antibiyotik gerektirmeyen tablolarda bile reçete yazılır.",
+       "ekran": "Muayene ve polikliniklerdeki en sık sorun ateşi olan her hastaya antibiyotik verilmesidir; viral üst solunum yolu enfeksiyonu ve gastroenterit gibi antibiyotik gerektirmeyen tablolarda bile reçete yazılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0268",
+       "ses": "İkinci sorun, enfeksiyon hastalıkları ve antibiyotik endikasyonları konusundaki eğitim yetersizliğidir.",
+       "ekran": "İkinci sorun, enfeksiyon hastalıkları ve antibiyotik endikasyonları konusundaki eğitim yetersizliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0269",
+       "ses": "Yarar sağlamayan her reçete hem yan etki riski hem de toplumda direnç seçimi demektir.",
+       "ekran": "Yarar sağlamayan her reçete hem yan etki riski hem de toplumda direnç seçimi demektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p056",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-69-c0270",
+       "ses": "Birinci basamaktaki durumu göstermek için Sağlık Bakanlığı'nın elektronik reçeteleri izleyen Reçete Bilgi Sistemi'nden 2014 yılına ait, aile hekimlerinde antibiyotik bulunan reçete yüzdesi grafiği verilir.",
+       "ekran": "Birinci basamaktaki durumu göstermek için Sağlık Bakanlığı'nın elektronik reçeteleri izleyen Reçete Bilgi Sistemi'nden 2014 yılına ait, aile hekimlerinde antibiyotik bulunan reçete yüzdesi grafiği verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0271",
+       "ses": "Türkiye ortalaması %31,47'dir.",
+       "ekran": "Türkiye ortalaması %31,47'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0272",
+       "ses": "En yüksek oranlar Diyarbakır'da %51,25, Mardin'de %50,75 ve Şanlıurfa'da %48,75'tir; Şırnak, Batman, Gaziantep, Kilis, Hatay, Osmaniye ve Adana da %40'ın üzerindedir.",
+       "ekran": "En yüksek oranlar Diyarbakır'da %51,25, Mardin'de %50,75 ve Şanlıurfa'da %48,75'tir; Şırnak, Batman, Gaziantep, Kilis, Hatay, Osmaniye ve Adana da %40'ın üzerindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0273",
+       "ses": "En düşük oranlar ise yaklaşık %20 ile 24 arasında Çanakkale, Yalova, Zonguldak, Kastamonu, Bolu, Edirne, Giresun, Sinop, Rize ve Artvin'dedir; en düşüğü Artvin, %20,6'dır.",
+       "ekran": "En düşük oranlar ise yaklaşık %20 ile 24 arasında Çanakkale, Yalova, Zonguldak, Kastamonu, Bolu, Edirne, Giresun, Sinop, Rize ve Artvin'dedir; en düşüğü Artvin, %20,6'dır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0274",
+       "ses": "İller arasındaki bu 2,5 kata varan fark, hekime geri bildirim ve eğitim müdahalelerinin nereye yönlendirileceğini gösterir.",
+       "ekran": "İller arasındaki bu 2,5 kata varan fark, hekime geri bildirim ve eğitim müdahalelerinin nereye yönlendirileceğini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b21",
+   "baslik": "Hastanelerdeki sorunlar ve gereksiz kullanımın sonuçları",
+   "paragraflar": [
+    {
+     "id": "k1-69-p057",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-69-c0275",
+       "ses": "Hastanelerdeki sorunlar 4 başlıkta toplanır.",
+       "ekran": "Hastanelerdeki sorunlar 4 başlıkta toplanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0276",
+       "ses": "1.'si, kültür için örnekler alınmadan antibiyotik başlanmasıdır ve daha çok acil serviste görülür.",
+       "ekran": "1.'si, kültür için örnekler alınmadan antibiyotik başlanmasıdır ve daha çok acil serviste görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0277",
+       "ses": "Antibiyotik başladıktan sonra alınan kültür çoğu zaman üremez; etkeni ve duyarlılığını öğrenme fırsatı kaybolur ve tedavi daraltılamaz.",
+       "ekran": "Antibiyotik başladıktan sonra alınan kültür çoğu zaman üremez; etkeni ve duyarlılığını öğrenme fırsatı kaybolur ve tedavi daraltılamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0278",
+       "ses": "Kural, kültür önce, antibiyotik sonradır; ancak sepsis gibi acil durumlarda kültür alınması tedaviyi geciktirmemelidir.",
+       "ekran": "Kural, kültür önce, antibiyotik sonradır; ancak sepsis gibi acil durumlarda kültür alınması tedaviyi geciktirmemelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0279",
+       "ses": "2.'si, gerek olmadan geniş spektrumlu antibiyotiklerin ya da kombinasyon tedavilerinin seçilmesidir.",
+       "ekran": "2.'si, gerek olmadan geniş spektrumlu antibiyotiklerin ya da kombinasyon tedavilerinin seçilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p058",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-69-c0280",
+       "ses": "3.'sü, enfeksiyon olmadığı hâlde antibiyotik kullanılmasıdır; örneğin sondalı hastada belirtisiz bakteriüri gibi bir kolonizasyonun ya da enfeksiyon dışı ateşin tedavi edilmesi.",
+       "ekran": "3.'sü, enfeksiyon olmadığı hâlde antibiyotik kullanılmasıdır; örneğin sondalı hastada belirtisiz bakteriüri gibi bir kolonizasyonun ya da enfeksiyon dışı ateşin tedavi edilmesi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0281",
+       "ses": "4.'sü, antibiyotik tedavisinin gereğinden fazla uzatılmasıdır; cerrahi profilaksinin günlerce sürdürülmesi tipik örnektir.",
+       "ekran": "4.'sü, antibiyotik tedavisinin gereğinden fazla uzatılmasıdır; cerrahi profilaksinin günlerce sürdürülmesi tipik örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0282",
+       "ses": "Gereksiz her antibiyotik günü direnç seçilimi, Clostridioides difficile enfeksiyonu ve maliyet artışı demektir.",
+       "ekran": "Gereksiz her antibiyotik günü direnç seçilimi, Clostridioides difficile enfeksiyonu ve maliyet artışı demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0283",
+       "ses": "Çözüm, kültür sonucu gelince tedaviyi daraltmak ve süreyi endikasyona göre sınırlamaktır.",
+       "ekran": "Çözüm, kültür sonucu gelince tedaviyi daraltmak ve süreyi endikasyona göre sınırlamaktır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p059",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-69-c0284",
+       "ses": "Antibiyotiklerin gereksiz ve yaygın kullanımlarının 3 temel sonucu vardır.",
+       "ekran": "Antibiyotiklerin gereksiz ve yaygın kullanımlarının 3 temel sonucu vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0285",
+       "ses": "İlki dirençli bakterilerin seçilmesidir: duyarlılar ölür, dirençliler çoğalır.",
+       "ekran": "İlki dirençli bakterilerin seçilmesidir: duyarlılar ölür, dirençliler çoğalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0286",
+       "ses": "2.'si yeni direnç paternlerinin ortaya çıkmasıdır; genişlemiş spektrumlu beta laktamazların ve karbapenemazların tarihçesi bunun örneğidir.",
+       "ekran": "2.'si yeni direnç paternlerinin ortaya çıkmasıdır; genişlemiş spektrumlu beta laktamazların ve karbapenemazların tarihçesi bunun örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0287",
+       "ses": "3.'sü ekolojik dengenin bozulmasıdır: normal flora zarar görür, Clostridioides difficile ve mantar enfeksiyonları gibi fırsatçı tablolar ortaya çıkar ve hastane ortamında dirençli flora baskın hâle gelir.",
+       "ekran": "3.'sü ekolojik dengenin bozulmasıdır: normal flora zarar görür, Clostridioides difficile ve mantar enfeksiyonları gibi fırsatçı tablolar ortaya çıkar ve hastane ortamında dirençli flora baskın hâle gelir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p060",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-69-c0288",
+       "ses": "Dersin başlığındaki antimikrobiyal yönetim, bu akılcı kullanım ilkelerini kurumsal bir programa dönüştürmektir.",
+       "ekran": "Dersin başlığındaki antimikrobiyal yönetim, bu akılcı kullanım ilkelerini kurumsal bir programa dönüştürmektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0289",
+       "ses": "Amacı doğru hastada doğru ilacın doğru doz, yol ve sürede kullanılması ve direnç, yan etki ve maliyetin azaltılmasıdır.",
+       "ekran": "Amacı doğru hastada doğru ilacın doğru doz, yol ve sürede kullanılması ve direnç, yan etki ve maliyetin azaltılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0290",
+       "ses": "Temel bileşenleri kurum yönetiminin desteği, sorumlu hekim ve eczacı, ön onay, ileriye dönük denetim ve geri bildirim, 48 ile 72. saatte tedavinin gözden geçirilmesi, kullanım ve direnç izlemi, raporlama ve eğitimdir.",
+       "ekran": "Temel bileşenleri kurum yönetiminin desteği, sorumlu hekim ve eczacı, ön onay, ileriye dönük denetim ve geri bildirim, 48 ile 72. saatte tedavinin gözden geçirilmesi, kullanım ve direnç izlemi, raporlama ve eğitimdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0291",
+       "ses": "Ulusal direnç sürveyansı ve reçete göstergeleri bu programın izlem araçlarıdır.",
+       "ekran": "Ulusal direnç sürveyansı ve reçete göstergeleri bu programın izlem araçlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b22",
+   "baslik": "Antibiyotik ve direncin kısa tarihçesi",
+   "paragraflar": [
+    {
+     "id": "k1-69-p061",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-69-c0292",
+       "ses": "Antibiyotik öncesi çağda küçük enfeksiyonlardan ölmek yaygındı.",
+       "ekran": "Antibiyotik öncesi çağda küçük enfeksiyonlardan ölmek yaygındı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0293",
+       "ses": "1910'da ilk antimikrobiyal ilaç Salvarsan kumaş boyasından sentezlendi ve sifiliz tedavisinde kullanıldı.",
+       "ekran": "1910'da ilk antimikrobiyal ilaç Salvarsan kumaş boyasından sentezlendi ve sifiliz tedavisinde kullanıldı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0294",
+       "ses": "1928'de Alexander Fleming penisilini keşfetti ve antibiyotik potansiyelini araştırmaya başladı.",
+       "ekran": "1928'de Alexander Fleming penisilini keşfetti ve antibiyotik potansiyelini araştırmaya başladı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0295",
+       "ses": "1935'te sülfonamidler kullanıma sunuldu ve sistematik olarak kullanılan ilk antibiyotikler oldu.",
+       "ekran": "1935'te sülfonamidler kullanıma sunuldu ve sistematik olarak kullanılan ilk antibiyotikler oldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0296",
+       "ses": "1941'de Ernst Chain ve Howard Florey penisilinin ilk klinik denemelerini başlattı.",
+       "ekran": "1941'de Ernst Chain ve Howard Florey penisilinin ilk klinik denemelerini başlattı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0297",
+       "ses": "1943'te İkinci Dünya Savaşı'ndaki müttefik askerlere antibiyotik ulaştırılmaya başlandı ve binlerce hayat kurtarıldı.",
+       "ekran": "1943'te İkinci Dünya Savaşı'ndaki müttefik askerlere antibiyotik ulaştırılmaya başlandı ve binlerce hayat kurtarıldı.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p062",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-69-c0298",
+       "ses": "1945'te Fleming, Florey ve Chain antibiyotik çalışmaları nedeniyle Nobel ödülü aldı ve Fleming ödül konuşmasında antibiyotik direncinin tehlikelerine dikkat çekti.",
+       "ekran": "1945'te Fleming, Florey ve Chain antibiyotik çalışmaları nedeniyle Nobel ödülü aldı ve Fleming ödül konuşmasında antibiyotik direncinin tehlikelerine dikkat çekti.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0299",
+       "ses": "Bu uyarı kısa sürede gerçekleşti: 1948'de penisiline dirençli stafilokok küresel bir pandemi hâline geldi.",
+       "ekran": "Bu uyarı kısa sürede gerçekleşti: 1948'de penisiline dirençli stafilokok küresel bir pandemi hâline geldi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0300",
+       "ses": "1953'te antibiyotikler Avrupa'da hayvan yemine katılmaya başlandı.",
+       "ekran": "1953'te antibiyotikler Avrupa'da hayvan yemine katılmaya başlandı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0301",
+       "ses": "1959'da penisiline dirençli stafilokoklarla mücadele için metisilin geliştirildi ve yalnız 1 yıl sonra, 1960'ta ilk metisiline dirençli Staphylococcus aureus suşları ortaya çıktı.",
+       "ekran": "1959'da penisiline dirençli stafilokoklarla mücadele için metisilin geliştirildi ve yalnız 1 yıl sonra, 1960'ta ilk metisiline dirençli Staphylococcus aureus suşları ortaya çıktı.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p063",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-69-c0302",
+       "ses": "1987'de daptomisin bulundu; ardından yaklaşık 30 yıl boyunca yeni bir antibiyotik sınıfı keşfedilmedi.",
+       "ekran": "1987'de daptomisin bulundu; ardından yaklaşık 30 yıl boyunca yeni bir antibiyotik sınıfı keşfedilmedi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0303",
+       "ses": "2014'te İngiltere'de halk, 10 milyon sterlinlik Longitude ödülünün antibiyotik direncine ayrılmasını oyladı.",
+       "ekran": "2014'te İngiltere'de halk, 10 milyon sterlinlik Longitude ödülünün antibiyotik direncine ayrılmasını oyladı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0304",
+       "ses": "2015'te Dünya Sağlık Örgütü ilk Antibiyotik Farkındalık Haftası'nı başlattı.",
+       "ekran": "2015'te Dünya Sağlık Örgütü ilk Antibiyotik Farkındalık Haftası'nı başlattı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0305",
+       "ses": "2017'de bilim insanları, süper bakterileri yok etme potansiyeli taşıyan yeni bir antibiyotik sınıfı olan teiksobaktinin geliştirilmiş bir formunu üretti.",
+       "ekran": "2017'de bilim insanları, süper bakterileri yok etme potansiyeli taşıyan yeni bir antibiyotik sınıfı olan teiksobaktinin geliştirilmiş bir formunu üretti.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0306",
+       "ses": "Günümüzde bireyler, araştırmacılar ve politika yapıcılar dirence karşı birlikte çalışıyor.",
+       "ekran": "Günümüzde bireyler, araştırmacılar ve politika yapıcılar dirence karşı birlikte çalışıyor.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0307",
+       "ses": "Yeni sınıf bulma hızı direncin gelişme hızının gerisinde kaldığı için elimizdeki ilaçları korumak zorundayız.",
+       "ekran": "Yeni sınıf bulma hızı direncin gelişme hızının gerisinde kaldığı için elimizdeki ilaçları korumak zorundayız.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-69-b23",
+   "baslik": "2050 öngörüsü",
+   "paragraflar": [
+    {
+     "id": "k1-69-p064",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-69-c0308",
+       "ses": "Son 2 görsel antimikrobiyal direncin geleceğe dönük yükünü gösterir.",
+       "ekran": "Son 2 görsel antimikrobiyal direncin geleceğe dönük yükünü gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0309",
+       "ses": "Bugün antimikrobiyal dirence bağlı ölümler en düşük tahminle yılda 700.000'dir.",
+       "ekran": "Bugün antimikrobiyal dirence bağlı ölümler en düşük tahminle yılda 700.000'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0310",
+       "ses": "Önlem alınmazsa 2050'de bu sayının yılda 10 milyona çıkacağı öngörülür.",
+       "ekran": "Önlem alınmazsa 2050'de bu sayının yılda 10 milyona çıkacağı öngörülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0311",
+       "ses": "Karşılaştırma için kanser yılda 8,2 milyon ölüme neden olur; yani 2050'de antimikrobiyal direnç kanseri geride bırakır.",
+       "ekran": "Karşılaştırma için kanser yılda 8,2 milyon ölüme neden olur; yani 2050'de antimikrobiyal direnç kanseri geride bırakır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0312",
+       "ses": "Diğer nedenler çok daha geridedir: diyabet 1,5 milyon, diyare hastalıkları 1,4 milyon, trafik kazaları 1,2 milyon, kızamık 130.000, kolera 100.000 ile 120.000, tetanoz ise 60.000 ölüme yol açar.",
+       "ekran": "Diğer nedenler çok daha geridedir: diyabet 1,5 milyon, diyare hastalıkları 1,4 milyon, trafik kazaları 1,2 milyon, kızamık 130.000, kolera 100.000 ile 120.000, tetanoz ise 60.000 ölüme yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p065",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-69-c0313",
+       "ses": "Dünya haritası 2050'deki yıllık ölümlerin bölgelere dağılımını verir.",
+       "ekran": "Dünya haritası 2050'deki yıllık ölümlerin bölgelere dağılımını verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0314",
+       "ses": "En yüksek yük Asya'dadır, 4.730.000.",
+       "ekran": "En yüksek yük Asya'dadır, 4.730.000.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0315",
+       "ses": "Onu Afrika 4.150.000 ile izler.",
+       "ekran": "Onu Afrika 4.150.000 ile izler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0316",
+       "ses": "Latin Amerika'da 392.000, Avrupa'da 390.000, Kuzey Amerika'da 317.000, Okyanusya'da ise 22.000 ölüm beklenir.",
+       "ekran": "Latin Amerika'da 392.000, Avrupa'da 390.000, Kuzey Amerika'da 317.000, Okyanusya'da ise 22.000 ölüm beklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0317",
+       "ses": "Yükün büyük bölümü düşük ve orta gelirli bölgelerde yoğunlaşır; enfeksiyon sıklığının yüksekliği, temiz su ve sanitasyon eksikliği, tanı olanaklarının kısıtlılığı ve reçetesiz antibiyotiğe kolay erişim bunun nedenleri arasındadır.",
+       "ekran": "Yükün büyük bölümü düşük ve orta gelirli bölgelerde yoğunlaşır; enfeksiyon sıklığının yüksekliği, temiz su ve sanitasyon eksikliği, tanı olanaklarının kısıtlılığı ve reçetesiz antibiyotiğe kolay erişim bunun nedenleri arasındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0318",
+       "ses": "Direnç sınır tanımaz; bir bölgede seçilen dirençli bakteri seyahat ve ticaretle tüm dünyaya yayılabilir.",
+       "ekran": "Direnç sınır tanımaz; bir bölgede seçilen dirençli bakteri seyahat ve ticaretle tüm dünyaya yayılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-69-p066",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-69-c0319",
+       "ses": "Özetle arkadaşlar, direnç ya türün doğasından gelir ya da mutasyon ve plazmidlerle sonradan kazanılır.",
+       "ekran": "Özetle arkadaşlar, direnç ya türün doğasından gelir ya da mutasyon ve plazmidlerle sonradan kazanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0320",
+       "ses": "Beta laktamlara karşı en önemli yol enzimatik dirençtir ve klasik beta laktamazdan karbapenemazlara uzanan basamaklar tedavi seçeneklerimizi giderek daraltır.",
+       "ekran": "Beta laktamlara karşı en önemli yol enzimatik dirençtir ve klasik beta laktamazdan karbapenemazlara uzanan basamaklar tedavi seçeneklerimizi giderek daraltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0321",
+       "ses": "Ülkemiz verileri bu tehdidin bugün de gerçek olduğunu gösterir.",
+       "ekran": "Ülkemiz verileri bu tehdidin bugün de gerçek olduğunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-69-c0322",
+       "ses": "Elimizdeki en güçlü araç, doğru tanı, gerçek gereklilik, en dar spektrum, doğru doz ve süreyle akılcı antibiyotik kullanımıdır.",
+       "ekran": "Elimizdeki en güçlü araç, doğru tanı, gerçek gereklilik, en dar spektrum, doğru doz ve süreyle akılcı antibiyotik kullanımıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

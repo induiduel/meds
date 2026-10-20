@@ -1,0 +1,2304 @@
+{
+ "surum": 2,
+ "ders_id": "k1-30",
+ "anahtar": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi",
+ "baslik": "İleri Tümör Genetiği ve Metabolizması",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-30-b01",
+   "baslik": "6 eksende moleküler onkoloji",
+   "paragraflar": [
+    {
+     "id": "k1-30-p001",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-30-c0001",
+       "ses": "Moleküler onkolojinin giriş düzeyinde özetlenen konularını burada derinleştiriyoruz.",
+       "ekran": "Moleküler onkolojinin giriş düzeyinde özetlenen konularını burada derinleştiriyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0002",
+       "ses": "Kanser hücresinin büyüme frenlerini nasıl kaybettiğini, enerjisini nasıl yeniden programladığını ve kendine nasıl damar ağı kurduğunu 6 eksende inceleyeceğiz.",
+       "ekran": "Kanser hücresinin büyüme frenlerini nasıl kaybettiğini, enerjisini nasıl yeniden programladığını ve kendine nasıl damar ağı kurduğunu 6 eksende inceleyeceğiz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0003",
+       "ses": "Birinci eksen retinoblastoma proteini, kısaca RB proteini ve G1/S kontrol noktasıdır; yani hücre döngüsüne giriş kapısının ana freni.",
+       "ekran": "Birinci eksen retinoblastoma proteini, kısaca RB proteini ve G1/S kontrol noktasıdır; yani hücre döngüsüne giriş kapısının ana freni.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0004",
+       "ses": "İkinci eksen, genomun koruyucusu lakabıyla bilinen TP53 genidir; stres altındaki hücreyi durduran ya da ortadan kaldıran sensör.",
+       "ekran": "İkinci eksen, genomun koruyucusu lakabıyla bilinen TP53 genidir; stres altındaki hücreyi durduran ya da ortadan kaldıran sensör.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p002",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-30-c0005",
+       "ses": "Üçüncü eksende TGF-β, yani transforme edici büyüme faktörü beta, E-kadherin ve APC ile Wnt yolu var; bunlar büyümeyi baskılayan ve doku mimarisini koruyan diğer tümör baskılayıcı sistemlerdir.",
+       "ekran": "Üçüncü eksende TGF-β, yani transforme edici büyüme faktörü beta, E-kadherin ve APC ile Wnt yolu var; bunlar büyümeyi baskılayan ve doku mimarisini koruyan diğer tümör baskılayıcı sistemlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0006",
+       "ses": "Dördüncü eksen değişmiş hücresel metabolizma, yani Warburg etkisidir: oksijen varken bile glikolize yönelme.",
+       "ekran": "Dördüncü eksen değişmiş hücresel metabolizma, yani Warburg etkisidir: oksijen varken bile glikolize yönelme.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0007",
+       "ses": "Beşinci eksen otofaji ve onkometabolitlerdir.",
+       "ekran": "Beşinci eksen otofaji ve onkometabolitlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0008",
+       "ses": "Onkometabolit, mutant bir metabolik enzimin ürettiği ve kanser gelişimini destekleyen anormal metabolittir; bunun en iyi örneği izositrat dehidrogenaz, kısaca IDH mutasyonlarıdır.",
+       "ekran": "Onkometabolit, mutant bir metabolik enzimin ürettiği ve kanser gelişimini destekleyen anormal metabolittir; bunun en iyi örneği izositrat dehidrogenaz, kısaca IDH mutasyonlarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0009",
+       "ses": "Altıncı eksen anjiyogenez, yani var olan damar ağından yeni damar filizlerinin oluşması ve bunun ilaçla hedeflenmesidir.",
+       "ekran": "Altıncı eksen anjiyogenez, yani var olan damar ağından yeni damar filizlerinin oluşması ve bunun ilaçla hedeflenmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0010",
+       "ses": "Bu başlıklar birbirinden bağımsız değildir; sonunda hepsinin tek bir ağ içinde birbirine bağlandığını göreceğiz.",
+       "ekran": "Bu başlıklar birbirinden bağımsız değildir; sonunda hepsinin tek bir ağ içinde birbirine bağlandığını göreceğiz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b02",
+   "baslik": "RB proteini ve ilk tümör baskılayıcı gen",
+   "paragraflar": [
+    {
+     "id": "k1-30-p003",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-30-c0011",
+       "ses": "Retinoblastoma proteini, hücre döngüsünde G1 fazından S fazına geçişin ana negatif düzenleyicisidir.",
+       "ekran": "Retinoblastoma proteini, hücre döngüsünde G1 fazından S fazına geçişin ana negatif düzenleyicisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0012",
+       "ses": "Yani hücrenin DNA sentezine başlayıp başlamayacağına karar veren kapının bekçisidir.",
+       "ekran": "Yani hücrenin DNA sentezine başlayıp başlamayacağına karar veren kapının bekçisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0013",
+       "ses": "RB aktif olduğu sürece hücre G1/S sınırını geçemez ve proliferasyon durur.",
+       "ekran": "RB aktif olduğu sürece hücre G1/S sınırını geçemez ve proliferasyon durur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0014",
+       "ses": "G1/S geçişi 1 kez aşılırsa hücre DNA'sını kopyalar ve bölünmeye yönelir; bu yüzden bu noktadaki fren, kanserde en sık bozulan mekanizmalardan biridir.",
+       "ekran": "G1/S geçişi 1 kez aşılırsa hücre DNA'sını kopyalar ve bölünmeye yönelir; bu yüzden bu noktadaki fren, kanserde en sık bozulan mekanizmalardan biridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0015",
+       "ses": "RB işlevini kaybederse hücre büyüme sinyali beklemeden döngüye girer; bu, kontrolsüz proliferasyonun temel adımıdır.",
+       "ekran": "RB işlevini kaybederse hücre büyüme sinyali beklemeden döngüye girer; bu, kontrolsüz proliferasyonun temel adımıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-30-c0016",
+       "ses": "Burası önemli: RB geni keşfedilen ilk tümör baskılayıcı gendir ve tümör baskılayıcı genlerin nasıl inaktive olduğunu anlatan prototip iki vuruş modeli bu gen üzerinden kurulmuştur.",
+       "ekran": "Burası önemli: RB geni keşfedilen ilk tümör baskılayıcı gendir ve tümör baskılayıcı genlerin nasıl inaktive olduğunu anlatan prototip iki vuruş modeli bu gen üzerinden kurulmuştur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0017",
+       "ses": "Çocukluk çağının göz tümörü retinoblastomanın incelenmesi, tümör baskılayıcı gen kavramının doğmasını sağlamıştır.",
+       "ekran": "Çocukluk çağının göz tümörü retinoblastomanın incelenmesi, tümör baskılayıcı gen kavramının doğmasını sağlamıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0018",
+       "ses": "Tümör baskılayıcı gen, ürünü hücre proliferasyonunu frenleyen ve her iki alelinin kaybıyla kanser gelişimine katkıda bulunan gendir.",
+       "ekran": "Tümör baskılayıcı gen, ürünü hücre proliferasyonunu frenleyen ve her iki alelinin kaybıyla kanser gelişimine katkıda bulunan gendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0019",
+       "ses": "RB kaybı yalnız retinoblastomaya özgü değildir: kemiğin malign tümörü olan osteosarkomda ve meme, akciğer ile mesane karsinomlarında da sık görülür.",
+       "ekran": "RB kaybı yalnız retinoblastomaya özgü değildir: kemiğin malign tümörü olan osteosarkomda ve meme, akciğer ile mesane karsinomlarında da sık görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b03",
+   "baslik": "2 vuruş hipotezi ve retinoblastomanın 2 formu",
+   "paragraflar": [
+    {
+     "id": "k1-30-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-30-c0020",
+       "ses": "İki vuruş hipotezinin temel ilkesi şudur: bir tümör baskılayıcı genin işlevini kaybetmesi için her iki alelinin de inaktive olması gerekir.",
+       "ekran": "İki vuruş hipotezinin temel ilkesi şudur: bir tümör baskılayıcı genin işlevini kaybetmesi için her iki alelinin de inaktive olması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0021",
+       "ses": "Alel, bir genin homolog kromozomlardaki iki kopyasından her biridir.",
+       "ekran": "Alel, bir genin homolog kromozomlardaki iki kopyasından her biridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0022",
+       "ses": "Birinci vuruşta alellerden biri mutasyona uğrar, ama hücre hâlâ normal davranır, çünkü diğer alel proteini üretmeye devam eder; tek sağlam alel freni çalıştırmaya yeter.",
+       "ekran": "Birinci vuruşta alellerden biri mutasyona uğrar, ama hücre hâlâ normal davranır, çünkü diğer alel proteini üretmeye devam eder; tek sağlam alel freni çalıştırmaya yeter.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0023",
+       "ses": "İkinci vuruşta kalan sağlam alel de bozulur, RB proteini artık hiç üretilmez ve fren tamamen kalkar.",
+       "ekran": "İkinci vuruşta kalan sağlam alel de bozulur, RB proteini artık hiç üretilmez ve fren tamamen kalkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p006",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-30-c0024",
+       "ses": "Retinoblastoma iki biçimde görülür ve fark, ilk vuruşun nereden geldiğindedir.",
+       "ekran": "Retinoblastoma iki biçimde görülür ve fark, ilk vuruşun nereden geldiğindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0025",
+       "ses": "Ailesel retinoblastomada germ hattında bir mutant RB aleli miras alınır; yani birinci vuruş doğuştan vücudun tüm hücrelerindedir.",
+       "ekran": "Ailesel retinoblastomada germ hattında bir mutant RB aleli miras alınır; yani birinci vuruş doğuştan vücudun tüm hücrelerindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0026",
+       "ses": "Tümör için ikinci alelde tek bir somatik mutasyon, yani ikinci darbe yeterlidir; bu yüzden tümör gelişme olasılığı yüksektir.",
+       "ekran": "Tümör için ikinci alelde tek bir somatik mutasyon, yani ikinci darbe yeterlidir; bu yüzden tümör gelişme olasılığı yüksektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0027",
+       "ses": "Sporadik retinoblastomada ise doğuştan iki alel de sağlamdır ve aynı retina hücresinde her iki RB alelinde de somatik mutasyon gerekir.",
+       "ekran": "Sporadik retinoblastomada ise doğuştan iki alel de sağlamdır ve aynı retina hücresinde her iki RB alelinde de somatik mutasyon gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0028",
+       "ses": "İki bağımsız olayın aynı hücrede birleşmesi gerektiği için bu daha nadirdir.",
+       "ekran": "İki bağımsız olayın aynı hücrede birleşmesi gerektiği için bu daha nadirdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0029",
+       "ses": "Germ hattı mutasyonu üreme hücrelerinden kalıtılıp tüm hücrelerde bulunan mutasyondur; somatik mutasyon ise sonradan belirli bir vücut hücresinde ortaya çıkar ve kalıtılmaz.",
+       "ekran": "Germ hattı mutasyonu üreme hücrelerinden kalıtılıp tüm hücrelerde bulunan mutasyondur; somatik mutasyon ise sonradan belirli bir vücut hücresinde ortaya çıkar ve kalıtılmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p007",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-30-c0030",
+       "ses": "Burası önemli, sınavda klasik bir tuzaktır: ailesel retinoblastomada kalıtım otozomal dominant bir eğilim gibi görünür, ancak hücre düzeyinde mutasyonun etkisi resesiftir.",
+       "ekran": "Burası önemli, sınavda klasik bir tuzaktır: ailesel retinoblastomada kalıtım otozomal dominant bir eğilim gibi görünür, ancak hücre düzeyinde mutasyonun etkisi resesiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0031",
+       "ses": "Hastalığın ortaya çıkması için retina hücresinde ikinci darbenin gerçekleşmesi, yani iki alelin de kaybolması gerekir.",
+       "ekran": "Hastalığın ortaya çıkması için retina hücresinde ikinci darbenin gerçekleşmesi, yani iki alelin de kaybolması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p008",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-30-c0032",
+       "ses": "Retinoblastomanın patogenezini gösteren şekilde iki form, ebeveyn hücrelerinden göz tümörüne kadar yan yana çizilmiştir.",
+       "ekran": "Retinoblastomanın patogenezini gösteren şekilde iki form, ebeveyn hücrelerinden göz tümörüne kadar yan yana çizilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0033",
+       "ses": "Burası önemli: RB lokusu 13. kromozomun uzun kolunda, 13q14 bölgesinde yer alır ve her iki alelinin işlev kaybı retina hücrelerinin neoplastik proliferasyonuna yol açar.",
+       "ekran": "Burası önemli: RB lokusu 13. kromozomun uzun kolunda, 13q14 bölgesinde yer alır ve her iki alelinin işlev kaybı retina hücrelerinin neoplastik proliferasyonuna yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0034",
+       "ses": "Sporadik formda ebeveynlerin germ hücreleri ve zigot normaldir; çocuğun retina hücreleri dahil tüm somatik hücreleri başlangıçta iki fonksiyonel RB kopyasına sahiptir ve şekilde yeşil boyanmıştır.",
+       "ekran": "Sporadik formda ebeveynlerin germ hücreleri ve zigot normaldir; çocuğun retina hücreleri dahil tüm somatik hücreleri başlangıçta iki fonksiyonel RB kopyasına sahiptir ve şekilde yeşil boyanmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0035",
+       "ses": "Ailesel formda taşıyıcı ebeveynden gelen mutant alel zigota geçer; dönüşüme uğramamış retina hücreleri dahil tüm somatik hücreler yalnız bir fonksiyonel kopya taşır, yani heterozigottur ve kırmızı yeşil gösterilir.",
+       "ekran": "Ailesel formda taşıyıcı ebeveynden gelen mutant alel zigota geçer; dönüşüme uğramamış retina hücreleri dahil tüm somatik hücreler yalnız bir fonksiyonel kopya taşır, yani heterozigottur ve kırmızı yeşil gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0036",
+       "ses": "Her iki formda da tümör, iki alelini kaybetmiş, yani homozigot kayıp gösteren retina hücresinden gelişir.",
+       "ekran": "Her iki formda da tümör, iki alelini kaybetmiş, yani homozigot kayıp gösteren retina hücresinden gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b04",
+   "baslik": "G1 kararı ve RB'nin 2 formu",
+   "paragraflar": [
+    {
+     "id": "k1-30-p009",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-30-c0037",
+       "ses": "G1 fazında hücre önemli bir karar verir: bölünmeye mi gidecek, yoksa durgunluk ya da diferansiyasyon yoluna mı girecek?",
+       "ekran": "G1 fazında hücre önemli bir karar verir: bölünmeye mi gidecek, yoksa durgunluk ya da diferansiyasyon yoluna mı girecek?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0038",
+       "ses": "RB bu kararın merkezindedir ve fosforilasyon durumuna göre iki formda bulunur.",
+       "ekran": "RB bu kararın merkezindedir ve fosforilasyon durumuna göre iki formda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0039",
+       "ses": "Hipofosforile RB aktif formdur; E2F transkripsiyon faktörlerini bağlar ve baskılar, hücre G1'de kalır.",
+       "ekran": "Hipofosforile RB aktif formdur; E2F transkripsiyon faktörlerini bağlar ve baskılar, hücre G1'de kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0040",
+       "ses": "Hiperfosforile RB ise inaktif formdur; E2F'yi serbest bırakır ve serbest E2F ile G1/S geçişi ve DNA sentezi başlar.",
+       "ekran": "Hiperfosforile RB ise inaktif formdur; E2F'yi serbest bırakır ve serbest E2F ile G1/S geçişi ve DNA sentezi başlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0041",
+       "ses": "Proliferasyon sinyalleri ile RB fosforilasyonu arasındaki denge, kapının açılıp açılmayacağını belirler.",
+       "ekran": "Proliferasyon sinyalleri ile RB fosforilasyonu arasındaki denge, kapının açılıp açılmayacağını belirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p010",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-30-c0042",
+       "ses": "Burası önemli, çünkü sezgiye ters düşer: pek çok proteinde fosforilasyon aktivasyon demektir, ama RB'de fosfat eklenmesi proteini kapatır.",
+       "ekran": "Burası önemli, çünkü sezgiye ters düşer: pek çok proteinde fosforilasyon aktivasyon demektir, ama RB'de fosfat eklenmesi proteini kapatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0043",
+       "ses": "Fosforilasyon, RB'nin inaktivasyonu ve E2F'nin serbestleşmesi demektir.",
+       "ekran": "Fosforilasyon, RB'nin inaktivasyonu ve E2F'nin serbestleşmesi demektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0044",
+       "ses": "Hipofosforile RB aktiftir ve E2F'yi bağlar; hiperfosforile RB inaktiftir ve E2F serbesttir.",
+       "ekran": "Hipofosforile RB aktiftir ve E2F'yi bağlar; hiperfosforile RB inaktiftir ve E2F serbesttir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p011",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-30-c0045",
+       "ses": "E2F transkripsiyon faktörleri, S fazı için gerekli genleri aktive eder; bunlara bir örnek siklin E'dir.",
+       "ekran": "E2F transkripsiyon faktörleri, S fazı için gerekli genleri aktive eder; bunlara bir örnek siklin E'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0046",
+       "ses": "Erken G1'de aktif, hipofosforile RB bu kaskadı iki katmanda durdurur.",
+       "ekran": "Erken G1'de aktif, hipofosforile RB bu kaskadı iki katmanda durdurur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0047",
+       "ses": "1.'si, E2F'ye bağlanarak onun transkripsiyonu başlatmasını doğrudan engeller.",
+       "ekran": "1.'si, E2F'ye bağlanarak onun transkripsiyonu başlatmasını doğrudan engeller.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0048",
+       "ses": "2.'si, histon deasetilaz ve histon metiltransferaz gibi kromatin yeniden şekillendirme enzimlerini bölgeye çekerek kromatini kapalı tutar; histon deasetilaz asetil grubunu uzaklaştırır, histon metiltransferaz metil grubu ekler.",
+       "ekran": "2.'si, histon deasetilaz ve histon metiltransferaz gibi kromatin yeniden şekillendirme enzimlerini bölgeye çekerek kromatini kapalı tutar; histon deasetilaz asetil grubunu uzaklaştırır, histon metiltransferaz metil grubu ekler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0049",
+       "ses": "Böylece S fazı genlerinin promotörlerine erişim kapanır.",
+       "ekran": "Böylece S fazı genlerinin promotörlerine erişim kapanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b05",
+   "baslik": "Büyüme sinyalleri, siklinler ve CDK inhibitörleri",
+   "paragraflar": [
+    {
+     "id": "k1-30-p012",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-30-c0050",
+       "ses": "RB'nin rolünü gösteren şekil, onu iki karşıt sinyal grubunun nasıl yönettiğini anlatır.",
+       "ekran": "RB'nin rolünü gösteren şekil, onu iki karşıt sinyal grubunun nasıl yönettiğini anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0051",
+       "ses": "Bir yanda büyüme inhibitörleri vardır: TGF-β ve p53 gibi inhibitörler, p16 gibi CDK inhibitörlerinin sentezini uyarır.",
+       "ekran": "Bir yanda büyüme inhibitörleri vardır: TGF-β ve p53 gibi inhibitörler, p16 gibi CDK inhibitörlerinin sentezini uyarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0052",
+       "ses": "CDK inhibitörü, siklin ve siklin bağımlı kinaz komplekslerini baskılayarak RB'nin fosforilasyonunu önleyen proteindir.",
+       "ekran": "CDK inhibitörü, siklin ve siklin bağımlı kinaz komplekslerini baskılayarak RB'nin fosforilasyonunu önleyen proteindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0053",
+       "ses": "Böylece RB hipofosforile kalır, E2F ile kompleks halinde DNA'ya bağlanır, kromatin faktörlerini toplar ve S fazı genlerinin transkripsiyonunu engeller; sonuç G1/S geçiş bloğudur.",
+       "ekran": "Böylece RB hipofosforile kalır, E2F ile kompleks halinde DNA'ya bağlanır, kromatin faktörlerini toplar ve S fazı genlerinin transkripsiyonunu engeller; sonuç G1/S geçiş bloğudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p013",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-30-c0054",
+       "ses": "Öbür yanda büyüme faktörleri vardır: epidermal büyüme faktörü, yani EGF ve trombosit kaynaklı büyüme faktörü, yani PDGF, kendi reseptörlerine bağlanır.",
+       "ekran": "Öbür yanda büyüme faktörleri vardır: epidermal büyüme faktörü, yani EGF ve trombosit kaynaklı büyüme faktörü, yani PDGF, kendi reseptörlerine bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0055",
+       "ses": "Büyüme faktörleri siklin D ekspresyonunu artırır; siklin D, CDK4 ya da CDK6 kinazlarıyla eşleşir.",
+       "ekran": "Büyüme faktörleri siklin D ekspresyonunu artırır; siklin D, CDK4 ya da CDK6 kinazlarıyla eşleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0056",
+       "ses": "Siklin D ile CDK4, siklin D ile CDK6 ve siklin E ile CDK2 kompleksleri RB'yi fosforlar.",
+       "ekran": "Siklin D ile CDK4, siklin D ile CDK6 ve siklin E ile CDK2 kompleksleri RB'yi fosforlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0057",
+       "ses": "Fosforile RB E2F'yi bırakır, serbest E2F siklin E gibi S fazı genlerini açar ve hücre DNA sentezine girer.",
+       "ekran": "Fosforile RB E2F'yi bırakır, serbest E2F siklin E gibi S fazı genlerini açar ve hücre DNA sentezine girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0058",
+       "ses": "Böylece dışarıdan gelen büyüme sinyali, tek bir kinaz kompleksi aracılığıyla hücre içindeki frene aktarılır.",
+       "ekran": "Böylece dışarıdan gelen büyüme sinyali, tek bir kinaz kompleksi aracılığıyla hücre içindeki frene aktarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0059",
+       "ses": "Siklin D ile CDK4 ve 6 ekseni RB'nin doğrudan düzenleyicisidir; bu eksendeki kalıcı bir aktivasyon RB'yi sürekli inaktif bırakabilir.",
+       "ekran": "Siklin D ile CDK4 ve 6 ekseni RB'nin doğrudan düzenleyicisidir; bu eksendeki kalıcı bir aktivasyon RB'yi sürekli inaktif bırakabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p014",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-30-c0060",
+       "ses": "Bu noktada şeklin altını çizdiği genel bir kural var: hemen hemen tüm kanser hücreleri G1/S kontrol noktasında düzensizlik gösterir.",
+       "ekran": "Bu noktada şeklin altını çizdiği genel bir kural var: hemen hemen tüm kanser hücreleri G1/S kontrol noktasında düzensizlik gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0061",
+       "ses": "En sık neden, RB, CDK4, siklin D ya da CDKN2A genlerindeki mutasyonlardır.",
+       "ekran": "En sık neden, RB, CDK4, siklin D ya da CDKN2A genlerindeki mutasyonlardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b06",
+   "baslik": "RB yolunu bozan değişiklikler ve HPV E7",
+   "paragraflar": [
+    {
+     "id": "k1-30-p015",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-30-c0062",
+       "ses": "RB geninin kendisi sağlam olsa bile, onu yöneten eksen bozulursa fren yine çalışmaz.",
+       "ekran": "RB geninin kendisi sağlam olsa bile, onu yöneten eksen bozulursa fren yine çalışmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0063",
+       "ses": "3 tip onkojenik değişiklik vurgulanır.",
+       "ekran": "3 tip onkojenik değişiklik vurgulanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0064",
+       "ses": "Siklin D genlerinde amplifikasyon, yani kopya sayısı artışı, ya da aşırı ekspresyon olur; fazla siklin D RB'yi sürekli fosforlar.",
+       "ekran": "Siklin D genlerinde amplifikasyon, yani kopya sayısı artışı, ya da aşırı ekspresyon olur; fazla siklin D RB'yi sürekli fosforlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0065",
+       "ses": "CDK4'te aktivasyon mutasyonları ya da amplifikasyon görülür; kinaz sürekli çalışır.",
+       "ekran": "CDK4'te aktivasyon mutasyonları ya da amplifikasyon görülür; kinaz sürekli çalışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0066",
+       "ses": "CDKN2A geninin kodladığı CDK inhibitörü p16'da ise delesyon ya da epigenetik susturma olur; epigenetik susturma, DNA dizisi değişmeden, metilasyon gibi mekanizmalarla bir genin ifadesinin kapatılmasıdır.",
+       "ekran": "CDKN2A geninin kodladığı CDK inhibitörü p16'da ise delesyon ya da epigenetik susturma olur; epigenetik susturma, DNA dizisi değişmeden, metilasyon gibi mekanizmalarla bir genin ifadesinin kapatılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0067",
+       "ses": "Ortak sonuç aynıdır: RB sürekli hiperfosforile ve inaktif kalır, G1/S kontrol noktası devre dışı kalır.",
+       "ekran": "Ortak sonuç aynıdır: RB sürekli hiperfosforile ve inaktif kalır, G1/S kontrol noktası devre dışı kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0068",
+       "ses": "Dikkat edin, siklin D ve CDK4 için kazanım, p16 için kayıp onkojeniktir; yön tersine sorulursa tuzaktır.",
+       "ekran": "Dikkat edin, siklin D ve CDK4 için kazanım, p16 için kayıp onkojeniktir; yön tersine sorulursa tuzaktır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p016",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-30-c0069",
+       "ses": "Burası önemli: CDKN2A, yani p16 delesyonu pankreas karsinomu, melanom ve baş boyun karsinomlarında çok sık görülür.",
+       "ekran": "Burası önemli: CDKN2A, yani p16 delesyonu pankreas karsinomu, melanom ve baş boyun karsinomlarında çok sık görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0070",
+       "ses": "Bu tümörlerde RB geni sağlam olabilir; ancak p16 kaybolduğu için CDK4 ve 6 sürekli çalışır ve RB yine işlevsiz kalır.",
+       "ekran": "Bu tümörlerde RB geni sağlam olabilir; ancak p16 kaybolduğu için CDK4 ve 6 sürekli çalışır ve RB yine işlevsiz kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0071",
+       "ses": "Bu, RB yolunun dolaylı inaktivasyonunun en iyi bilinen örneğidir.",
+       "ekran": "Bu, RB yolunun dolaylı inaktivasyonunun en iyi bilinen örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0072",
+       "ses": "Özetle doğrudan kayıp, RB geninin kendisinin mutasyonudur ve retinoblastoma ile osteosarkomda görülür; dolaylı kayıp ise siklin D, CDK4 ya da p16'daki değişikliktir.",
+       "ekran": "Özetle doğrudan kayıp, RB geninin kendisinin mutasyonudur ve retinoblastoma ile osteosarkomda görülür; dolaylı kayıp ise siklin D, CDK4 ya da p16'daki değişikliktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0073",
+       "ses": "Her iki durumda da sonuç G1/S freninin kalkmasıdır.",
+       "ekran": "Her iki durumda da sonuç G1/S freninin kalkmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p017",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-30-c0074",
+       "ses": "Bazı DNA virüsleri, RB'yi doğrudan hedefleyen onkoproteinler üretir.",
+       "ekran": "Bazı DNA virüsleri, RB'yi doğrudan hedefleyen onkoproteinler üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0075",
+       "ses": "En iyi örnek insan papilloma virüsünün, yani HPV'nin E7 proteinidir.",
+       "ekran": "En iyi örnek insan papilloma virüsünün, yani HPV'nin E7 proteinidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0076",
+       "ses": "E7 aktif formdaki hipofosforile RB'ye bağlanır ve onun işlevini engeller; fosforilasyona gerek kalmadan E2F'yi serbest bırakır; ayrıca CDK inhibitörü p21'i de inhibe ederek frenin frenini ortadan kaldırır.",
+       "ekran": "E7 aktif formdaki hipofosforile RB'ye bağlanır ve onun işlevini engeller; fosforilasyona gerek kalmadan E2F'yi serbest bırakır; ayrıca CDK inhibitörü p21'i de inhibe ederek frenin frenini ortadan kaldırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0077",
+       "ses": "Sonuçta hücre büyüme faktörüne gerek duymadan G1/S geçişini yapar ve hücre döngüsü üzerindeki kontrol kaybolur.",
+       "ekran": "Sonuçta hücre büyüme faktörüne gerek duymadan G1/S geçişini yapar ve hücre döngüsü üzerindeki kontrol kaybolur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0078",
+       "ses": "Burada RB gen düzeyinde değil protein düzeyinde inaktive olur; yani gen sağlam olsa bile fren çalışmaz.",
+       "ekran": "Burada RB gen düzeyinde değil protein düzeyinde inaktive olur; yani gen sağlam olsa bile fren çalışmaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p018",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-30-c0079",
+       "ses": "RB yolunu bir cümlede toparlarsak: hangi yoldan bozulursa bozulsun, iki alelin kaybıyla doğrudan, siklin D, CDK4 ya da p16 değişikliğiyle dolaylı, ya da HPV E7 ile viral olarak, son ortak nokta aynıdır.",
+       "ekran": "RB yolunu bir cümlede toparlarsak: hangi yoldan bozulursa bozulsun, iki alelin kaybıyla doğrudan, siklin D, CDK4 ya da p16 değişikliğiyle dolaylı, ya da HPV E7 ile viral olarak, son ortak nokta aynıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0080",
+       "ses": "RB işlevsizdir, E2F serbesttir ve G1/S kontrol noktası devre dışıdır.",
+       "ekran": "RB işlevsizdir, E2F serbesttir ve G1/S kontrol noktası devre dışıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b07",
+   "baslik": "TP53: genomun koruyucusu",
+   "paragraflar": [
+    {
+     "id": "k1-30-p019",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-30-c0081",
+       "ses": "Burası önemli: TP53 geni, p53 tümör baskılayıcı proteinini kodlar ve insan kanserinde en sık mutasyona uğrayan gendir.",
+       "ekran": "Burası önemli: TP53 geni, p53 tümör baskılayıcı proteinini kodlar ve insan kanserinde en sık mutasyona uğrayan gendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0082",
+       "ses": "Görevi, hücreye zarar verebilecek streslere, yani DNA hasarına, hipoksiye ve onkogen aktivasyonuna yanıt vererek genom bütünlüğünü korumaktır. p53'ün 3 ana işlevi vardır.",
+       "ekran": "Görevi, hücreye zarar verebilecek streslere, yani DNA hasarına, hipoksiye ve onkogen aktivasyonuna yanıt vererek genom bütünlüğünü korumaktır. p53'ün 3 ana işlevi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0083",
+       "ses": "1.'si geçici hücre döngüsü durdurulması, yani durgunluktur; hücreye onarım için zaman kazandırır.",
+       "ekran": "1.'si geçici hücre döngüsü durdurulması, yani durgunluktur; hücreye onarım için zaman kazandırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0084",
+       "ses": "2.'si kalıcı durdurulma, yani hücresel yaşlanma ya da senesenstir; hücre bir daha bölünmez.",
+       "ekran": "2.'si kalıcı durdurulma, yani hücresel yaşlanma ya da senesenstir; hücre bir daha bölünmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0085",
+       "ses": "3.'sü programlanmış hücre ölümü, yani apoptozun tetiklenmesidir.",
+       "ekran": "3.'sü programlanmış hücre ölümü, yani apoptozun tetiklenmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0086",
+       "ses": "RB yalnız G1/S kapısını yönetirken p53 bir stres sensörüdür; hasarlı hücreyi durdurmak, yaşlandırmak ya da öldürmek arasında karar verir.",
+       "ekran": "RB yalnız G1/S kapısını yönetirken p53 bir stres sensörüdür; hasarlı hücreyi durdurmak, yaşlandırmak ya da öldürmek arasında karar verir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p020",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-30-c0087",
+       "ses": "Stres olmayan normal hücrede p53 düzeyi düşüktür.",
+       "ekran": "Stres olmayan normal hücrede p53 düzeyi düşüktür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0088",
+       "ses": "Burası önemli: proteinin yarı ömrü yaklaşık 20 dakikadır; sürekli üretilir ama hızla yıkılır.",
+       "ekran": "Burası önemli: proteinin yarı ömrü yaklaşık 20 dakikadır; sürekli üretilir ama hızla yıkılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0089",
+       "ses": "Bu düşük düzeyi sağlayan protein MDM2'dir.",
+       "ekran": "Bu düşük düzeyi sağlayan protein MDM2'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0090",
+       "ses": "MDM2 p53'e bağlanır ve onu proteazom aracılı yıkıma hedefler; proteazom, hücre içinde işaretlenmiş proteinleri parçalayan komplekstir.",
+       "ekran": "MDM2 p53'e bağlanır ve onu proteazom aracılı yıkıma hedefler; proteazom, hücre içinde işaretlenmiş proteinleri parçalayan komplekstir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0091",
+       "ses": "Böylece p53 birikemez ve hedef genlerini açamaz; hücre normal koşullarda gereksiz yere durdurulmaz ya da öldürülmez.",
+       "ekran": "Böylece p53 birikemez ve hedef genlerini açamaz; hücre normal koşullarda gereksiz yere durdurulmaz ya da öldürülmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0092",
+       "ses": "Kısa yarı ömrün bir faydası da hızlı yanıttır: yıkım durduğu anda protein dakikalar içinde birikebilir.",
+       "ekran": "Kısa yarı ömrün bir faydası da hızlı yanıttır: yıkım durduğu anda protein dakikalar içinde birikebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0093",
+       "ses": "MDM2, p53'ün doğal kapatma düğmesidir.",
+       "ekran": "MDM2, p53'ün doğal kapatma düğmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b08",
+   "baslik": "p53'ün aktivasyonu ve hedef genleri",
+   "paragraflar": [
+    {
+     "id": "k1-30-p021",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-30-c0094",
+       "ses": "Hücre DNA hasarı, hipoksi ya da onkojenik sinyal gibi bir stresle karşılaştığında p53'ün yıkımı durdurulur.",
+       "ekran": "Hücre DNA hasarı, hipoksi ya da onkojenik sinyal gibi bir stresle karşılaştığında p53'ün yıkımı durdurulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0095",
+       "ses": "DNA hasarını algılayan sensör kinazlar, yani ATM ve ATR kinazları aktive olur ve p53'ü fosforlar.",
+       "ekran": "DNA hasarını algılayan sensör kinazlar, yani ATM ve ATR kinazları aktive olur ve p53'ü fosforlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0096",
+       "ses": "Fosforile p53 MDM2'den ayrılır, yıkımdan kurtulur, stabil hale gelir ve çekirdekte birikir.",
+       "ekran": "Fosforile p53 MDM2'den ayrılır, yıkımdan kurtulur, stabil hale gelir ve çekirdekte birikir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0097",
+       "ses": "Birikmiş p53 hedef genlerin transkripsiyonunu başlatır.",
+       "ekran": "Birikmiş p53 hedef genlerin transkripsiyonunu başlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0098",
+       "ses": "Vurgulanan hedef genler şunlardır: hücre döngüsünü durduran p21'i kodlayan CDKN1A, DNA onarımıyla ilişkili GADD45 ve apoptozu başlatan proapoptotik gen puma.",
+       "ekran": "Vurgulanan hedef genler şunlardır: hücre döngüsünü durduran p21'i kodlayan CDKN1A, DNA onarımıyla ilişkili GADD45 ve apoptozu başlatan proapoptotik gen puma.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p022",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-30-c0099",
+       "ses": "Burası önemli ve RB ile karşılaştırıldığında güzel bir zıtlık oluşturur: p53'ü aktive eden olay fosforilasyondur ve bu fosforilasyon p53'ü MDM2'den koparır.",
+       "ekran": "Burası önemli ve RB ile karşılaştırıldığında güzel bir zıtlık oluşturur: p53'ü aktive eden olay fosforilasyondur ve bu fosforilasyon p53'ü MDM2'den koparır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0100",
+       "ses": "RB'de ise fosforilasyon inaktivasyon demekti.",
+       "ekran": "RB'de ise fosforilasyon inaktivasyon demekti.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0101",
+       "ses": "Akış şöyledir: stres, ATM ve ATR, p53 fosforilasyonu, MDM2'den ayrılma ve p21, GADD45, puma gibi genlerin açılması.",
+       "ekran": "Akış şöyledir: stres, ATM ve ATR, p53 fosforilasyonu, MDM2'den ayrılma ve p21, GADD45, puma gibi genlerin açılması.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p023",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-30-c0102",
+       "ses": "p53'ün genom bütünlüğünü korumadaki rolünü gösteren şekil 3 panelden oluşur.",
+       "ekran": "p53'ün genom bütünlüğünü korumadaki rolünü gösteren şekil 3 panelden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0103",
+       "ses": "Sol panelde stressiz, sağlıklı hücre vardır; DNA hasarı yoktur ve p53 düzeyi, onu parçalayan bir kompleks oluşturan MDM2 nedeniyle düşüktür.",
+       "ekran": "Sol panelde stressiz, sağlıklı hücre vardır; DNA hasarı yoktur ve p53 düzeyi, onu parçalayan bir kompleks oluşturan MDM2 nedeniyle düşüktür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0104",
+       "ses": "Orta panelde iyonize radyasyon ya da karsinojenler DNA'yı hasarlar; kinaz sensörleri p53'ü fosforlayıp parçalanmadan korur, p53 birikir ve DNA'ya bağlanır. p21 artışıyla G1'de durma ve p53 aracılı DNA onarımı olur.",
+       "ekran": "Orta panelde iyonize radyasyon ya da karsinojenler DNA'yı hasarlar; kinaz sensörleri p53'ü fosforlayıp parçalanmadan korur, p53 birikir ve DNA'ya bağlanır. p21 artışıyla G1'de durma ve p53 aracılı DNA onarımı olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0105",
+       "ses": "Onarım başarılıysa hücre sağlıklı olarak döngüye döner.",
+       "ekran": "Onarım başarılıysa hücre sağlıklı olarak döngüye döner.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0106",
+       "ses": "Onarım başarısızsa ya p21 ifadesinin sürmesi ve RB'nin aktif kalmasıyla senesens, ya da proapoptotik genlerin artışıyla apoptoz gelişir.",
+       "ekran": "Onarım başarısızsa ya p21 ifadesinin sürmesi ve RB'nin aktif kalmasıyla senesens, ya da proapoptotik genlerin artışıyla apoptoz gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0107",
+       "ses": "Sağ panelde p53 işlevini kaybetmiş hücre vardır: p53'e bağımlı genler aktive olmaz, hücre döngüsü durmaz, DNA onarılmaz, senesens gelişmez.",
+       "ekran": "Sağ panelde p53 işlevini kaybetmiş hücre vardır: p53'e bağımlı genler aktive olmaz, hücre döngüsü durmaz, DNA onarılmaz, senesens gelişmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0108",
+       "ses": "Mutant hücreler çoğalır, ek mutasyonlar birikir ve sonunda malign tümör oluşur.",
+       "ekran": "Mutant hücreler çoğalır, ek mutasyonlar birikir ve sonunda malign tümör oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b09",
+   "baslik": "p21, DNA onarımı ve MDM2 geri bildirimi",
+   "paragraflar": [
+    {
+     "id": "k1-30-p024",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-30-c0109",
+       "ses": "p53'ün ilk ve en hızlı yanıtı hücreyi durdurmaktır ve bunu CDKN1A geninin ürünü p21 aracılığıyla yapar. p21 siklin ve CDK komplekslerini inhibe eder, böylece G1 fazında RB'nin fosforilasyonunu önler.",
+       "ekran": "p53'ün ilk ve en hızlı yanıtı hücreyi durdurmaktır ve bunu CDKN1A geninin ürünü p21 aracılığıyla yapar. p21 siklin ve CDK komplekslerini inhibe eder, böylece G1 fazında RB'nin fosforilasyonunu önler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0110",
+       "ses": "RB hipofosforile ve aktif kalır, E2F baskılı kalır ve hücre G1/S kontrol noktasında durur.",
+       "ekran": "RB hipofosforile ve aktif kalır, E2F baskılı kalır ve hücre G1/S kontrol noktasında durur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0111",
+       "ses": "İşTP53 ile RB yollarının birleştiği nokta budur: p53, p21 üzerinden RB'nin frenini sıkar. p53 aktif tuttuğu RB ile hücreyi G1'de durdurur demek, bu zincirin kısaltmasıdır.",
+       "ekran": "İşTP53 ile RB yollarının birleştiği nokta budur: p53, p21 üzerinden RB'nin frenini sıkar. p53 aktif tuttuğu RB ile hücreyi G1'de durdurur demek, bu zincirin kısaltmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p025",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-30-c0112",
+       "ses": "p53 hücreyi durdurduktan sonra hasarı onarmaya çalışır ve DNA onarım genlerinin ekspresyonunu uyarır.",
+       "ekran": "p53 hücreyi durdurduktan sonra hasarı onarmaya çalışır ve DNA onarım genlerinin ekspresyonunu uyarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0113",
+       "ses": "Onarım başarılı olursa sistem kendini kapatır: p53, hedef genlerinden biri olan MDM2'nin transkripsiyonunu artırır; artan MDM2 p53'ü yeniden proteazoma gönderir ve p53 kendi yıkımını sağlamış olur. p53 ve p21 düzeyi düşer, RB tekrar fosforlanabilir ve hücre döngüsü yeniden başlar.",
+       "ekran": "Onarım başarılı olursa sistem kendini kapatır: p53, hedef genlerinden biri olan MDM2'nin transkripsiyonunu artırır; artan MDM2 p53'ü yeniden proteazoma gönderir ve p53 kendi yıkımını sağlamış olur. p53 ve p21 düzeyi düşer, RB tekrar fosforlanabilir ve hücre döngüsü yeniden başlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0114",
+       "ses": "Bu bir negatif geri bildirim döngüsüdür: p53 işini bitirince kendi baskılayıcısını üretir.",
+       "ekran": "Bu bir negatif geri bildirim döngüsüdür: p53 işini bitirince kendi baskılayıcısını üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0115",
+       "ses": "Demek ki MDM2, hem normal hücrede p53'ü düşük tutan hem de onarım sonrası onu kapatan proteindir.",
+       "ekran": "Demek ki MDM2, hem normal hücrede p53'ü düşük tutan hem de onarım sonrası onu kapatan proteindir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b10",
+   "baslik": "Onarılamayan hasar: senesens ve apoptoz",
+   "paragraflar": [
+    {
+     "id": "k1-30-p026",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-30-c0116",
+       "ses": "DNA hasarı onarılamazsa p53 hücreyi iki yoldan birine yönlendirir.",
+       "ekran": "DNA hasarı onarılamazsa p53 hücreyi iki yoldan birine yönlendirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0117",
+       "ses": "Birinci yol yaşlanma, yani senesenstir.",
+       "ekran": "Birinci yol yaşlanma, yani senesenstir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0118",
+       "ses": "Senesenste hücre döngüsü kalıcı olarak durur ve kromatin yapısında kalıcı değişiklikler oluşur; durma hali kromatin düzeyinde kilitlenir.",
+       "ekran": "Senesenste hücre döngüsü kalıcı olarak durur ve kromatin yapısında kalıcı değişiklikler oluşur; durma hali kromatin düzeyinde kilitlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0119",
+       "ses": "Moleküler olarak p21 ifadesi sürer ve RB aktif kalır.",
+       "ekran": "Moleküler olarak p21 ifadesi sürer ve RB aktif kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0120",
+       "ses": "Dikkat edin, geçici durgunlukta hücre onarım sonrası döngüye döner; senesenste ise dönüş yoktur.",
+       "ekran": "Dikkat edin, geçici durgunlukta hücre onarım sonrası döngüye döner; senesenste ise dönüş yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0121",
+       "ses": "Bu ayrım sık sorulan bir tuzaktır.",
+       "ekran": "Bu ayrım sık sorulan bir tuzaktır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p027",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-30-c0122",
+       "ses": "İkinci yol apoptozdur. p53 puma ve baks gibi proapoptotik genlerin ekspresyonunu artırır; bu proteinler mitokondri üzerinden apoptozun iç yolunu, yani intrinsik yolunu başlatır ve hasarlı genom ortadan kalkar.",
+       "ekran": "İkinci yol apoptozdur. p53 puma ve baks gibi proapoptotik genlerin ekspresyonunu artırır; bu proteinler mitokondri üzerinden apoptozun iç yolunu, yani intrinsik yolunu başlatır ve hasarlı genom ortadan kalkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0123",
+       "ses": "Senesens ve apoptozun ortak amacı, genetik olarak tehlikeli hücrelerin kalıcı olarak devre dışı bırakılmasıdır; biri hücreyi kalıcı olarak durdurur, diğeri öldürür. p53 kaybında bu iki güvenlik çıkışı da kapanır; hasarlı hücre hayatta kalır ve çoğalır.",
+       "ekran": "Senesens ve apoptozun ortak amacı, genetik olarak tehlikeli hücrelerin kalıcı olarak devre dışı bırakılmasıdır; biri hücreyi kalıcı olarak durdurur, diğeri öldürür. p53 kaybında bu iki güvenlik çıkışı da kapanır; hasarlı hücre hayatta kalır ve çoğalır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b11",
+   "baslik": "TP53 mutasyonları ve Li-Fraumeni sendromu",
+   "paragraflar": [
+    {
+     "id": "k1-30-p028",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-30-c0124",
+       "ses": "p53 işlevi kanserde iki farklı yolla kaybolabilir.",
+       "ekran": "p53 işlevi kanserde iki farklı yolla kaybolabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0125",
+       "ses": "Sporadik kanserlerde TP53'te somatik bialelik mutasyonlar, yani iki aleli birden etkileyen mutasyonlar çok yaygındır; özellikle akciğer, kolon ve meme karsinomlarında sıktır.",
+       "ekran": "Sporadik kanserlerde TP53'te somatik bialelik mutasyonlar, yani iki aleli birden etkileyen mutasyonlar çok yaygındır; özellikle akciğer, kolon ve meme karsinomlarında sıktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0126",
+       "ses": "İkinci yol MDM2 amplifikasyonudur ve bazı sarkomlarda görülür: TP53 geni sağlam olsa bile artan MDM2 p53'ü sürekli yıkar ve işlevsiz bırakır.",
+       "ekran": "İkinci yol MDM2 amplifikasyonudur ve bazı sarkomlarda görülür: TP53 geni sağlam olsa bile artan MDM2 p53'ü sürekli yıkar ve işlevsiz bırakır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0127",
+       "ses": "Bu, RB yolundaki doğrudan ve dolaylı kayıp ayrımının p53'teki karşılığıdır. p53 kaybının sonucu genomik istikrarsızlık, yani mutasyonların ve kromozom değişikliklerinin artmış hızda birikmesi ve tümör gelişimini doğrudan ilerleten çoklu sürücü mutasyonların birikmesidir.",
+       "ekran": "Bu, RB yolundaki doğrudan ve dolaylı kayıp ayrımının p53'teki karşılığıdır. p53 kaybının sonucu genomik istikrarsızlık, yani mutasyonların ve kromozom değişikliklerinin artmış hızda birikmesi ve tümör gelişimini doğrudan ilerleten çoklu sürücü mutasyonların birikmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p029",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-30-c0128",
+       "ses": "Burası önemli: Li Fraumeni sendromunda germ hattında bir mutant TP53 aleli kalıtılır.",
+       "ekran": "Burası önemli: Li Fraumeni sendromunda germ hattında bir mutant TP53 aleli kalıtılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0129",
+       "ses": "Herhangi bir dokuda ikinci alelin somatik mutasyonuyla erken yaşta çoklu primer tümör gelişir.",
+       "ekran": "Herhangi bir dokuda ikinci alelin somatik mutasyonuyla erken yaşta çoklu primer tümör gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0130",
+       "ses": "Sendromda görülen tümörler sarkom, meme kanseri, lösemi, beyin tümörü ve böbreküstü bezinin korteksinden köken alan adrenal korteks karsinomudur.",
+       "ekran": "Sendromda görülen tümörler sarkom, meme kanseri, lösemi, beyin tümörü ve böbreküstü bezinin korteksinden köken alan adrenal korteks karsinomudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0131",
+       "ses": "Bu sendrom, iki vuruş modelinin p53'teki kalıtsal örneğidir; ailesel retinoblastomanın karşılığı gibi düşünebilirsiniz.",
+       "ekran": "Bu sendrom, iki vuruş modelinin p53'teki kalıtsal örneğidir; ailesel retinoblastomanın karşılığı gibi düşünebilirsiniz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0132",
+       "ses": "Ancak bir farkı var: retinoblastomada tümör retinaya yoğunlaşırken, p53 tüm dokularda koruyucu olduğu için Li Fraumeni sendromunda çok farklı organlarda çoklu primer tümör gelişir.",
+       "ekran": "Ancak bir farkı var: retinoblastomada tümör retinaya yoğunlaşırken, p53 tüm dokularda koruyucu olduğu için Li Fraumeni sendromunda çok farklı organlarda çoklu primer tümör gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b12",
+   "baslik": "TGF-β sinyal yolu",
+   "paragraflar": [
+    {
+     "id": "k1-30-p030",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-30-c0133",
+       "ses": "Transforme edici büyüme faktörü beta, normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü bir inhibitörüdür.",
+       "ekran": "Transforme edici büyüme faktörü beta, normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü bir inhibitörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0134",
+       "ses": "RB yolunda büyüme inhibitörü olarak adını andığımız TGF-β'nın mekanizması şöyledir: TGF-β reseptörüne bağlanır ve SMAD proteinleri aktive olur; fosforile SMAD2 ve SMAD3, SMAD4 ile kompleks oluşturarak çekirdeğe girer.",
+       "ekran": "RB yolunda büyüme inhibitörü olarak adını andığımız TGF-β'nın mekanizması şöyledir: TGF-β reseptörüne bağlanır ve SMAD proteinleri aktive olur; fosforile SMAD2 ve SMAD3, SMAD4 ile kompleks oluşturarak çekirdeğe girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0135",
+       "ses": "Çekirdekte p15 ve p21 gibi CDK inhibitörlerinin transkripsiyonu artar; aynı anda MYC ve CDK4 gibi büyümeyi teşvik eden genler baskılanır.",
+       "ekran": "Çekirdekte p15 ve p21 gibi CDK inhibitörlerinin transkripsiyonu artar; aynı anda MYC ve CDK4 gibi büyümeyi teşvik eden genler baskılanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0136",
+       "ses": "Sonuç, G1/S geçişinde durma ve proliferasyonun baskılanmasıdır.",
+       "ekran": "Sonuç, G1/S geçişinde durma ve proliferasyonun baskılanmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0137",
+       "ses": "Yani TGF-β iki yönden çalışır: freni artırır, gazı keser; ikisi de RB'yi aktif tutmaya hizmet eder.",
+       "ekran": "Yani TGF-β iki yönden çalışır: freni artırır, gazı keser; ikisi de RB'yi aktif tutmaya hizmet eder.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p031",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-30-c0138",
+       "ses": "Burası önemli, bu mekanizma çıkmış sorularda doğrudan soruldu: reseptörüne bağlanarak CDK inhibitörlerinin transkripsiyonel aktivasyonuyla sonuçlanan olaylar dizisini başlatan molekül TGF-β'dır; p53, ras, MYC ya da c-erbB-2 değildir. p53 de CDK inhibitörü p21'i artırır ama bir reseptöre bağlanan dış ligand değildir.",
+       "ekran": "Burası önemli, bu mekanizma çıkmış sorularda doğrudan soruldu: reseptörüne bağlanarak CDK inhibitörlerinin transkripsiyonel aktivasyonuyla sonuçlanan olaylar dizisini başlatan molekül TGF-β'dır; p53, ras, MYC ya da c-erbB-2 değildir. p53 de CDK inhibitörü p21'i artırır ama bir reseptöre bağlanan dış ligand değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0139",
+       "ses": "Yine burası önemli: SMAD proteinleri, SMAD4 dahil, TGF-β sinyalizasyonunda rol alır; hücre siklusu aktivasyonunda, temas inhibisyonunda ya da apoptoz inhibisyonunda değil.",
+       "ekran": "Yine burası önemli: SMAD proteinleri, SMAD4 dahil, TGF-β sinyalizasyonunda rol alır; hücre siklusu aktivasyonunda, temas inhibisyonunda ya da apoptoz inhibisyonunda değil.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p032",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-30-c0140",
+       "ses": "Birçok kanserde TGF-β sinyal yolu bileşenlerinde, reseptör ya da SMAD genlerinde mutasyonlar bulunur; örneğin pankreas ve kolon karsinomlarında TGF-β Tip 2 reseptörü ya da SMAD4 mutasyonla inaktive olabilir.",
+       "ekran": "Birçok kanserde TGF-β sinyal yolu bileşenlerinde, reseptör ya da SMAD genlerinde mutasyonlar bulunur; örneğin pankreas ve kolon karsinomlarında TGF-β Tip 2 reseptörü ya da SMAD4 mutasyonla inaktive olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0141",
+       "ses": "Burası önemli, çıkmış sorularda soruldu: pankreas kanserlerinin tamamında TGF-β sinyal yolunun bileşenlerinden en az birinde mutasyon vardır; prostat, akciğer, meme ya da mide kanseri bu soruda doğru cevap değildir.",
+       "ekran": "Burası önemli, çıkmış sorularda soruldu: pankreas kanserlerinin tamamında TGF-β sinyal yolunun bileşenlerinden en az birinde mutasyon vardır; prostat, akciğer, meme ya da mide kanseri bu soruda doğru cevap değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p033",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-30-c0142",
+       "ses": "Burası önemli, TGF-β'nın iki yüzü vardır.",
+       "ekran": "Burası önemli, TGF-β'nın iki yüzü vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0143",
+       "ses": "Erken evrede TGF-β yolunun kaybı büyüme frenini kaldırır ve hücre proliferasyon baskısından kurtulur.",
+       "ekran": "Erken evrede TGF-β yolunun kaybı büyüme frenini kaldırır ve hücre proliferasyon baskısından kurtulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0144",
+       "ses": "İleri evrede ise TGF-β bazen tümör destekleyici olabilir: epitel mezenkimal geçişi, invazyon ve metastazı ve immün baskılayıcı bir mikroçevreyi destekler.",
+       "ekran": "İleri evrede ise TGF-β bazen tümör destekleyici olabilir: epitel mezenkimal geçişi, invazyon ve metastazı ve immün baskılayıcı bir mikroçevreyi destekler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0145",
+       "ses": "Yani TGF-β yolu bağlam bağımlı olarak tümör baskılayıcı ya da tümör destekleyici davranabilir.",
+       "ekran": "Yani TGF-β yolu bağlam bağımlı olarak tümör baskılayıcı ya da tümör destekleyici davranabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0146",
+       "ses": "Sınavda TGF-β her zaman tümör baskılayıcıdır ifadesi tuzaktır.",
+       "ekran": "Sınavda TGF-β her zaman tümör baskılayıcıdır ifadesi tuzaktır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b13",
+   "baslik": "E-kadherin, merlin ve epitel mezenkimal geçiş",
+   "paragraflar": [
+    {
+     "id": "k1-30-p034",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-30-c0147",
+       "ses": "Normal epitel hücreleri birbirine değdiğinde bölünmeyi durdurur; buna temas inhibisyonu denir.",
+       "ekran": "Normal epitel hücreleri birbirine değdiğinde bölünmeyi durdurur; buna temas inhibisyonu denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0148",
+       "ses": "Bu sistemin iki önemli bileşeni E-kadherin ve NF2'dir.",
+       "ekran": "Bu sistemin iki önemli bileşeni E-kadherin ve NF2'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0149",
+       "ses": "E-kadherin, epitel hücrelerinde temel hücre hücre adezyon molekülüdür ve hücre polaritesi ile temas inhibisyonu için önemlidir.",
+       "ekran": "E-kadherin, epitel hücrelerinde temel hücre hücre adezyon molekülüdür ve hücre polaritesi ile temas inhibisyonu için önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0150",
+       "ses": "NF2 geninin ürünü olan nörofibromin 2, diğer adıyla merlin, E-kadherin sonrası temas inhibisyonu yolunda görev alır; E-kadherin temas sinyalini başlatır, merlin bu sinyali hücre içinde iletir.",
+       "ekran": "NF2 geninin ürünü olan nörofibromin 2, diğer adıyla merlin, E-kadherin sonrası temas inhibisyonu yolunda görev alır; E-kadherin temas sinyalini başlatır, merlin bu sinyali hücre içinde iletir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0151",
+       "ses": "Burası önemli: NF2 kaybı nörofibromatozis tip 2'ye yol açar ve bu hastalarda sinir kılıfı tümörleri ile beyin zarlarından köken alan meningiomlar gelişir.",
+       "ekran": "Burası önemli: NF2 kaybı nörofibromatozis tip 2'ye yol açar ve bu hastalarda sinir kılıfı tümörleri ile beyin zarlarından köken alan meningiomlar gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p035",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-30-c0152",
+       "ses": "Burası önemli: kanserde E-kadherin kaybı, epitel mezenkimal geçişin kilit olayıdır.",
+       "ekran": "Burası önemli: kanserde E-kadherin kaybı, epitel mezenkimal geçişin kilit olayıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0153",
+       "ses": "Epitel mezenkimal geçiş, epitel hücrelerinin adezyon ve polaritelerini yitirip hareketli mezenkimal özellik kazanmasıdır.",
+       "ekran": "Epitel mezenkimal geçiş, epitel hücrelerinin adezyon ve polaritelerini yitirip hareketli mezenkimal özellik kazanmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0154",
+       "ses": "E-kadherin, Snail ve Twist gibi transkripsiyon faktörleriyle baskılanır.",
+       "ekran": "E-kadherin, Snail ve Twist gibi transkripsiyon faktörleriyle baskılanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0155",
+       "ses": "Hücreler arası kohezyon azalır, tümör hücreleri birbirinden ayrılabilir ve çevre dokuya yayılır, yani invazyon artar.",
+       "ekran": "Hücreler arası kohezyon azalır, tümör hücreleri birbirinden ayrılabilir ve çevre dokuya yayılır, yani invazyon artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0156",
+       "ses": "Böylece E-kadherin kaybı hem temas inhibisyonunu kaldırarak proliferasyona, hem de hücreleri birbirinden koparak invazyona katkıda bulunur.",
+       "ekran": "Böylece E-kadherin kaybı hem temas inhibisyonunu kaldırarak proliferasyona, hem de hücreleri birbirinden koparak invazyona katkıda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0157",
+       "ses": "TGF-β'nın ileri evrede desteklediği epitel mezenkimal geçiş, hücre düzeyinde büyük ölçüde bu kayıp üzerinden işler.",
+       "ekran": "TGF-β'nın ileri evrede desteklediği epitel mezenkimal geçiş, hücre düzeyinde büyük ölçüde bu kayıp üzerinden işler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b14",
+   "baslik": "APC, beta katenin ve WNT yolu",
+   "paragraflar": [
+    {
+     "id": "k1-30-p036",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-30-c0158",
+       "ses": "APC, yani adenomatöz polipozis koli proteini, sitoplazmik bir tümör baskılayıcı proteindir ve beta katenin yıkım kompleksinin parçasıdır.",
+       "ekran": "APC, yani adenomatöz polipozis koli proteini, sitoplazmik bir tümör baskılayıcı proteindir ve beta katenin yıkım kompleksinin parçasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0159",
+       "ses": "Hedefi olan beta kateninin hücrede iki görevi vardır.",
+       "ekran": "Hedefi olan beta kateninin hücrede iki görevi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0160",
+       "ses": "1.'si, E-kadherin ile birlikte hücre hücre adezyonunda yer alır.",
+       "ekran": "1.'si, E-kadherin ile birlikte hücre hücre adezyonunda yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0161",
+       "ses": "2.'si, Wnt sinyal yolunda transkripsiyon kofaktörüdür.",
+       "ekran": "2.'si, Wnt sinyal yolunda transkripsiyon kofaktörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0162",
+       "ses": "Wnt ligandları reseptörlerine bağlandığında beta katenin yıkımı engellenir; yıkılmayan beta katenin çekirdeğe gider ve büyümeyi teşvik edici genleri aktive eder.",
+       "ekran": "Wnt ligandları reseptörlerine bağlandığında beta katenin yıkımı engellenir; yıkılmayan beta katenin çekirdeğe gider ve büyümeyi teşvik edici genleri aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0163",
+       "ses": "Beta katenin, E-kadherin ile APC yolunu birbirine bağlayan ortak moleküldür.",
+       "ekran": "Beta katenin, E-kadherin ile APC yolunu birbirine bağlayan ortak moleküldür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0164",
+       "ses": "Burası önemli, çıkmış sorularda soruldu: temas inhibisyonunda rol alan molekül olarak APC sorulmuştur; PDGF, ERBB1, ras proteini ve MYC ise büyümeyi teşvik eden sinyallerdir, temas inhibisyonunun bileşeni değildir.",
+       "ekran": "Burası önemli, çıkmış sorularda soruldu: temas inhibisyonunda rol alan molekül olarak APC sorulmuştur; PDGF, ERBB1, ras proteini ve MYC ise büyümeyi teşvik eden sinyallerdir, temas inhibisyonunun bileşeni değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p037",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-30-c0165",
+       "ses": "Beta katenin stabilitesini gösteren şekil aynı yolu 3 hücrede karşılaştırır.",
+       "ekran": "Beta katenin stabilitesini gösteren şekil aynı yolu 3 hücrede karşılaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0166",
+       "ses": "Dinlenen hücrede Wnt yoktur; beta katenin APC'yi içeren makromoleküler yıkım kompleksine bağlanır ve parçalanır, hücre içi düzeyi düşük kalır ve proliferasyon olmaz.",
+       "ekran": "Dinlenen hücrede Wnt yoktur; beta katenin APC'yi içeren makromoleküler yıkım kompleksine bağlanır ve parçalanır, hücre içi düzeyi düşük kalır ve proliferasyon olmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0167",
+       "ses": "Wnt ile uyarılan hücrede salgılanan Wnt molekülleri reseptöre bağlanınca yıkım kompleksi devre dışı kalır; sitoplazmik beta katenin yükselir, çekirdeğe geçer ve TCF'ye bağlanır.",
+       "ekran": "Wnt ile uyarılan hücrede salgılanan Wnt molekülleri reseptöre bağlanınca yıkım kompleksi devre dışı kalır; sitoplazmik beta katenin yükselir, çekirdeğe geçer ve TCF'ye bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0168",
+       "ses": "TCF, hücre çoğalmasında rol oynayan genleri aktive eden bir transkripsiyon faktörüdür ve proliferasyon olur.",
+       "ekran": "TCF, hücre çoğalmasında rol oynayan genleri aktive eden bir transkripsiyon faktörüdür ve proliferasyon olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0169",
+       "ses": "TCF aslında T hücresi faktörü demektir; ama birçok hücre tipinde ifade edildiği için bu adlandırma yanıltıcıdır.",
+       "ekran": "TCF aslında T hücresi faktörü demektir; ama birçok hücre tipinde ifade edildiği için bu adlandırma yanıltıcıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0170",
+       "ses": "Mutant APC'li tümör hücresinde ise beta katenin yıkılamaz; burası önemli, hücre Wnt uyarısı yokken bile sürekli uyarılıyormuş gibi davranır ve anormal büyüme gösterir.",
+       "ekran": "Mutant APC'li tümör hücresinde ise beta katenin yıkılamaz; burası önemli, hücre Wnt uyarısı yokken bile sürekli uyarılıyormuş gibi davranır ve anormal büyüme gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p038",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-30-c0171",
+       "ses": "Normalde APC, beta katenini fosforilasyon ve proteazomal yıkım için işaretler.",
+       "ekran": "Normalde APC, beta katenini fosforilasyon ve proteazomal yıkım için işaretler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0172",
+       "ses": "APC kaybında bu işaretleme yapılamaz, Wnt ligandı olmasa bile beta katenin birikir ve çekirdekte proliferasyonu destekleyen genleri aktive eder.",
+       "ekran": "APC kaybında bu işaretleme yapılamaz, Wnt ligandı olmasa bile beta katenin birikir ve çekirdekte proliferasyonu destekleyen genleri aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0173",
+       "ses": "Burası önemli: ailesel adenomatöz polipozis kolide germ hattı APC mutasyonu vardır; çok sayıda adenom, yani glandüler epitelden köken alan benign neoplazm gelişir ve karsinom riski yüksektir.",
+       "ekran": "Burası önemli: ailesel adenomatöz polipozis kolide germ hattı APC mutasyonu vardır; çok sayıda adenom, yani glandüler epitelden köken alan benign neoplazm gelişir ve karsinom riski yüksektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0174",
+       "ses": "Sporadik kolon karsinomlarının da %70 ile 80 kadarında APC mutasyonu bulunur.",
+       "ekran": "Sporadik kolon karsinomlarının da %70 ile 80 kadarında APC mutasyonu bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0175",
+       "ses": "Yani APC, kolon kanserinin hem kalıtsal hem sporadik formlarında merkezî tümör baskılayıcıdır.",
+       "ekran": "Yani APC, kolon kanserinin hem kalıtsal hem sporadik formlarında merkezî tümör baskılayıcıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p039",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-30-c0176",
+       "ses": "Bu 3 sistemin, yani TGF-β, E-kadherin ve APC ile Wnt yolunun ortak noktası, normalde büyümeyi baskılamaları ve doku mimarisini korumalarıdır; kanserde ise sıklıkla devre dışı kalırlar ya da tümör lehine yeniden kullanılırlar.",
+       "ekran": "Bu 3 sistemin, yani TGF-β, E-kadherin ve APC ile Wnt yolunun ortak noktası, normalde büyümeyi baskılamaları ve doku mimarisini korumalarıdır; kanserde ise sıklıkla devre dışı kalırlar ya da tümör lehine yeniden kullanılırlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b15",
+   "baslik": "Warburg etkisi",
+   "paragraflar": [
+    {
+     "id": "k1-30-p040",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-30-c0177",
+       "ses": "Kanser hücresi yalnız büyüme frenlerini kaybetmez, enerji metabolizmasını da yeniden programlar.",
+       "ekran": "Kanser hücresi yalnız büyüme frenlerini kaybetmez, enerji metabolizmasını da yeniden programlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0178",
+       "ses": "Normal hücre oksijen varlığında enerjisini mitokondriyal oksidatif fosforilasyonla, yani oksijen kullanarak yüksek verimle üretir.",
+       "ekran": "Normal hücre oksijen varlığında enerjisini mitokondriyal oksidatif fosforilasyonla, yani oksijen kullanarak yüksek verimle üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0179",
+       "ses": "Tümör hücresi ise oksijen olsa bile aerobik glikoliz kullanır; buna Warburg etkisi denir.",
+       "ekran": "Tümör hücresi ise oksijen olsa bile aerobik glikoliz kullanır; buna Warburg etkisi denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0180",
+       "ses": "Glikozu laktata çevirir ve bu yolla ATP üretimi nispeten düşüktür.",
+       "ekran": "Glikozu laktata çevirir ve bu yolla ATP üretimi nispeten düşüktür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0181",
+       "ses": "Dikkat edin, tanımdaki anahtar ifade oksijen varlığında bile glikolizdir; oksijensizlikte glikolize geçiş Warburg etkisi değildir.",
+       "ekran": "Dikkat edin, tanımdaki anahtar ifade oksijen varlığında bile glikolizdir; oksijensizlikte glikolize geçiş Warburg etkisi değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p041",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-30-c0182",
+       "ses": "Peki bu verimsiz görünen yol neden avantajlıdır?",
+       "ekran": "Peki bu verimsiz görünen yol neden avantajlıdır?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0183",
+       "ses": "Glikoliz ara ürünleri, nükleotid, amino asit ve lipit sentezi için karbon iskeleti sağlar.",
+       "ekran": "Glikoliz ara ürünleri, nükleotid, amino asit ve lipit sentezi için karbon iskeleti sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0184",
+       "ses": "Hızla bölünen hücre her bölünmede genomunu, proteinlerini ve membranlarını ikiye katlamak zorundadır; asıl kısıtlayıcı ihtiyacı yalnız ATP değil, yapı taşıdır.",
+       "ekran": "Hızla bölünen hücre her bölünmede genomunu, proteinlerini ve membranlarını ikiye katlamak zorundadır; asıl kısıtlayıcı ihtiyacı yalnız ATP değil, yapı taşıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0185",
+       "ses": "Böylece Warburg etkisi tümörün anabolik ihtiyaçlarını karşılar: glikoz yakılıp tüketilmek yerine kısmen yeni hücre bileşenlerine dönüştürülür.",
+       "ekran": "Böylece Warburg etkisi tümörün anabolik ihtiyaçlarını karşılar: glikoz yakılıp tüketilmek yerine kısmen yeni hücre bileşenlerine dönüştürülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p042",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-30-c0186",
+       "ses": "Burası önemli, bu konu çıkmış sorularda kanser gelişimi açısından yanlış olan ifadeyi bulma şeklinde soruldu.",
+       "ekran": "Burası önemli, bu konu çıkmış sorularda kanser gelişimi açısından yanlış olan ifadeyi bulma şeklinde soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0187",
+       "ses": "Kanserde glikozun glikoliz yolunda yüksek verimle enerjiye dönüştürülmesinde artma olmaz; tersine, tümör hücresi düşük ATP verimli aerobik glikolizi seçer.",
+       "ekran": "Kanserde glikozun glikoliz yolunda yüksek verimle enerjiye dönüştürülmesinde artma olmaz; tersine, tümör hücresi düşük ATP verimli aerobik glikolizi seçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0188",
+       "ses": "Buna karşılık apoptotik mekanizmaların işlevsel bozukluğu, oksijen ihtiyacına bağlı neovaskülarizasyon ve kromozomal yeniden düzenlenmeler kanser gelişiminde doğru ifadelerdir.",
+       "ekran": "Buna karşılık apoptotik mekanizmaların işlevsel bozukluğu, oksijen ihtiyacına bağlı neovaskülarizasyon ve kromozomal yeniden düzenlenmeler kanser gelişiminde doğru ifadelerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0189",
+       "ses": "Aynı soru başka bir sınavda, aşırı bölünmenin aşırı enerji ve oksijen ihtiyacını beraberinde getirdiği ifadesi yanlış kabul edilerek de soruldu.",
+       "ekran": "Aynı soru başka bir sınavda, aşırı bölünmenin aşırı enerji ve oksijen ihtiyacını beraberinde getirdiği ifadesi yanlış kabul edilerek de soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0190",
+       "ses": "Buradaki mantık şudur: hızla bölünen tümör hücresinin amacı en fazla enerji değil, en fazla yapı taşıdır; bu yüzden oksijen varken bile oksijeni verimli kullanmayan glikolize yönelir.",
+       "ekran": "Buradaki mantık şudur: hızla bölünen tümör hücresinin amacı en fazla enerji değil, en fazla yapı taşıdır; bu yüzden oksijen varken bile oksijeni verimli kullanmayan glikolize yönelir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b16",
+   "baslik": "Warburg etkisini yönlendiren onkogenler ve FDG PET",
+   "paragraflar": [
+    {
+     "id": "k1-30-p043",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-30-c0191",
+       "ses": "Warburg metabolizması rastlantısal değildir; onkogenler ve tümör baskılayıcılar tarafından yönlendirilir.",
+       "ekran": "Warburg metabolizması rastlantısal değildir; onkogenler ve tümör baskılayıcılar tarafından yönlendirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0192",
+       "ses": "Ras ile PI3K ve AKT yolu, glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır ve lipogenez için mitokondriyal ara ürünlerin yönlendirilmesini teşvik eder.",
+       "ekran": "Ras ile PI3K ve AKT yolu, glikoz taşıyıcı ve glikolitik enzim ekspresyonunu artırır ve lipogenez için mitokondriyal ara ürünlerin yönlendirilmesini teşvik eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0193",
+       "ses": "MYC, glikolitik ve glutaminolitik enzimlerin ekspresyonunu artırır; burası önemli, MYC'nin ayırt edici metabolik özelliği glutamin bağımlılığını artırmasıdır.",
+       "ekran": "MYC, glikolitik ve glutaminolitik enzimlerin ekspresyonunu artırır; burası önemli, MYC'nin ayırt edici metabolik özelliği glutamin bağımlılığını artırmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0194",
+       "ses": "TP53 ise büyüme destekleyici metabolik genleri baskılar; yani normal p53 Warburg metabolizmasına karşı bir frendir.",
+       "ekran": "TP53 ise büyüme destekleyici metabolik genleri baskılar; yani normal p53 Warburg metabolizmasına karşı bir frendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0195",
+       "ses": "Sonuçta onkogen aktivasyonu ile tümör baskılayıcı kaybı birlikte Warburg metabolizmasını sürdürülebilir hale getirir.",
+       "ekran": "Sonuçta onkogen aktivasyonu ile tümör baskılayıcı kaybı birlikte Warburg metabolizmasını sürdürülebilir hale getirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p044",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-30-c0196",
+       "ses": "Metabolizma ve hücre büyümesini gösteren şekil, durgun ve büyüyen hücreyi yan yana koyar.",
+       "ekran": "Metabolizma ve hücre büyümesini gösteren şekil, durgun ve büyüyen hücreyi yan yana koyar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0197",
+       "ses": "Durgun hücre ATP üretimi için esas olarak Krebs döngüsüne güvenir, lipit ve amino asit katabolizmasından yararlanır; aç kaldığında yakıt sağlamak için otofaji, yani kendini yeme tetiklenir.",
+       "ekran": "Durgun hücre ATP üretimi için esas olarak Krebs döngüsüne güvenir, lipit ve amino asit katabolizmasından yararlanır; aç kaldığında yakıt sağlamak için otofaji, yani kendini yeme tetiklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0198",
+       "ses": "Büyüyen hücrede, sağlıklı ya da tümör hücresi olsun, büyüme faktörü reseptör tirozin kinaza bağlanır; ras, PI3K ve AKT aktive olur ve hücre glikoz ile glutamin alımını önemli ölçüde artırır.",
+       "ekran": "Büyüyen hücrede, sağlıklı ya da tümör hücresi olsun, büyüme faktörü reseptör tirozin kinaza bağlanır; ras, PI3K ve AKT aktive olur ve hücre glikoz ile glutamin alımını önemli ölçüde artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0199",
+       "ses": "Glikoz, glikoz 6 fosfat üzerinden artmış glikolitik ara ürünlere dönüşür ve nükleotid ile amino asit sentezine gider.",
+       "ekran": "Glikoz, glikoz 6 fosfat üzerinden artmış glikolitik ara ürünlere dönüşür ve nükleotid ile amino asit sentezine gider.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0200",
+       "ses": "Fosfoenolpiruvatı piruvata çeviren piruvat kinaz basamağı düzenlenir ve piruvatın bir kısmı laktata döner.",
+       "ekran": "Fosfoenolpiruvatı piruvata çeviren piruvat kinaz basamağı düzenlenir ve piruvatın bir kısmı laktata döner.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0201",
+       "ses": "Mitokondriden çıkan sitrat lipogeneze, alfa ketoglutarat amino asit sentezine yönelir; glutamin ise glutamat ve alfa ketoglutarat üzerinden Krebs döngüsüne girer ve MYC glutamin kullanımını artırır.",
+       "ekran": "Mitokondriden çıkan sitrat lipogeneze, alfa ketoglutarat amino asit sentezine yönelir; glutamin ise glutamat ve alfa ketoglutarat üzerinden Krebs döngüsüne girer ve MYC glutamin kullanımını artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0202",
+       "ses": "Şekilde yıldızla işaretli moleküller, yani reseptör tirozin kinaz, ras, PI3K, AKT ve MYC, kanserde sık mutasyona uğrayan gen ürünleridir; onkojenik işlev kazanımı bu yolları kontrolsüz büyümeye yönlendirir.",
+       "ekran": "Şekilde yıldızla işaretli moleküller, yani reseptör tirozin kinaz, ras, PI3K, AKT ve MYC, kanserde sık mutasyona uğrayan gen ürünleridir; onkojenik işlev kazanımı bu yolları kontrolsüz büyümeye yönlendirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p045",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-30-c0203",
+       "ses": "Warburg etkisi doğrudan bir klinik araca dönüşmüştür: florodeoksiglukoz pozitron emisyon tomografisi, kısaca FDG PET.",
+       "ekran": "Warburg etkisi doğrudan bir klinik araca dönüşmüştür: florodeoksiglukoz pozitron emisyon tomografisi, kısaca FDG PET.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0204",
+       "ses": "Bu yöntemde flor 18 ile işaretlenmiş bir glikoz analoğu kullanılır ve glikoz alımı artmış dokular görüntülenir.",
+       "ekran": "Bu yöntemde flor 18 ile işaretlenmiş bir glikoz analoğu kullanılır ve glikoz alımı artmış dokular görüntülenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0205",
+       "ses": "Tümörler genellikle yüksek FDG tutulumu gösterir; tutulum özellikle yüksek proliferatif tümörlerde belirgindir.",
+       "ekran": "Tümörler genellikle yüksek FDG tutulumu gösterir; tutulum özellikle yüksek proliferatif tümörlerde belirgindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0206",
+       "ses": "FDG PET primer tümör ve metastaz taramasında ve tedavi yanıtının izlenmesinde kullanılır.",
+       "ekran": "FDG PET primer tümör ve metastaz taramasında ve tedavi yanıtının izlenmesinde kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0207",
+       "ses": "Yani bu görüntüleme tümörün Warburg metabolizmasını, artmış glikoz alımını gösterir.",
+       "ekran": "Yani bu görüntüleme tümörün Warburg metabolizmasını, artmış glikoz alımını gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b17",
+   "baslik": "Otofaji ve tedavi direnci",
+   "paragraflar": [
+    {
+     "id": "k1-30-p046",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-30-c0208",
+       "ses": "Otofaji, şiddetli besin eksikliğinde hücrenin kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlamasıdır.",
+       "ekran": "Otofaji, şiddetli besin eksikliğinde hücrenin kendi organellerini, proteinlerini ve membranlarını yıkıp enerji sağlamasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0209",
+       "ses": "Normalde hücre sağkalımının adaptif bir yanıtıdır.",
+       "ekran": "Normalde hücre sağkalımının adaptif bir yanıtıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0210",
+       "ses": "Kanserde rolü evreye göre değişir.",
+       "ekran": "Kanserde rolü evreye göre değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0211",
+       "ses": "Erken evrede zarar görmüş organellerin temizlenmesiyle tümör baskılayıcı olabilir.",
+       "ekran": "Erken evrede zarar görmüş organellerin temizlenmesiyle tümör baskılayıcı olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0212",
+       "ses": "Geç evrede ise besin ve hipoksi stresinde tümör hücrelerinin canlı kalmasını sağlayabilir ve tedaviye dirençli, uykuda hücre popülasyonları oluşturabilir.",
+       "ekran": "Geç evrede ise besin ve hipoksi stresinde tümör hücrelerinin canlı kalmasını sağlayabilir ve tedaviye dirençli, uykuda hücre popülasyonları oluşturabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0213",
+       "ses": "Burası önemli: otofaji de TGF-β gibi iki yüzlüdür; yalnız koruyucu değildir, geç evrede tümörü kemoterapi ve radyoterapiye karşı korur.",
+       "ekran": "Burası önemli: otofaji de TGF-β gibi iki yüzlüdür; yalnız koruyucu değildir, geç evrede tümörü kemoterapi ve radyoterapiye karşı korur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p047",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-30-c0214",
+       "ses": "Kemoterapi ve radyoterapi, tümör hücresinde DNA hasarı, metabolik stres ve hipoksi oluşturur.",
+       "ekran": "Kemoterapi ve radyoterapi, tümör hücresinde DNA hasarı, metabolik stres ve hipoksi oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0215",
+       "ses": "Bazı tümör hücreleri otofajiyi aktive ederek bu strese dayanır, proliferasyonu yavaşlatıp uykuda kalır; bölünmeyen hücre birçok tedaviye daha az duyarlıdır.",
+       "ekran": "Bazı tümör hücreleri otofajiyi aktive ederek bu strese dayanır, proliferasyonu yavaşlatıp uykuda kalır; bölünmeyen hücre birçok tedaviye daha az duyarlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0216",
+       "ses": "Klinik önemi şudur: bu uykuda hücreler tedavi sonrası nükslerde, yani hastalığın yeniden ortaya çıkmasında rol oynayabilir, çünkü daha sonra yeniden çoğalabilirler.",
+       "ekran": "Klinik önemi şudur: bu uykuda hücreler tedavi sonrası nükslerde, yani hastalığın yeniden ortaya çıkmasında rol oynayabilir, çünkü daha sonra yeniden çoğalabilirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0217",
+       "ses": "Otofajiyi baskılayan inhibitörler ya da artıran indükleyiciler, yani otofaji modülatörleri, gelecekte kombinasyon tedavilerinde yer alabilir.",
+       "ekran": "Otofajiyi baskılayan inhibitörler ya da artıran indükleyiciler, yani otofaji modülatörleri, gelecekte kombinasyon tedavilerinde yer alabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b18",
+   "baslik": "IDH mutasyonları ve onkometabolit",
+   "paragraflar": [
+    {
+     "id": "k1-30-p048",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-30-c0218",
+       "ses": "İzositrat dehidrogenaz, Krebs döngüsünün bir enzimidir ve normalde izositratı alfa ketoglutarata çevirir.",
+       "ekran": "İzositrat dehidrogenaz, Krebs döngüsünün bir enzimidir ve normalde izositratı alfa ketoglutarata çevirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0219",
+       "ses": "Onkojenik IDH mutasyonlarında enzimin aktif bölgesinde spesifik bir amino asit değişimi olur.",
+       "ekran": "Onkojenik IDH mutasyonlarında enzimin aktif bölgesinde spesifik bir amino asit değişimi olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0220",
+       "ses": "Normal izositrattan alfa ketoglutarata dönüşüm kaybolur ve enzim bunun yerine 2-hidroksiglutarat üretir.",
+       "ekran": "Normal izositrattan alfa ketoglutarata dönüşüm kaybolur ve enzim bunun yerine 2-hidroksiglutarat üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0221",
+       "ses": "Yani mutasyon enzimi yalnız kapatmaz, ona yeni ve zararlı bir işlev kazandırır.",
+       "ekran": "Yani mutasyon enzimi yalnız kapatmaz, ona yeni ve zararlı bir işlev kazandırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0222",
+       "ses": "2-hidroksiglutarat, kanser gelişimini destekleyen bir onkometabolittir.",
+       "ekran": "2-hidroksiglutarat, kanser gelişimini destekleyen bir onkometabolittir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p049",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-30-c0223",
+       "ses": "Burası önemli: 2-hidroksiglutaratın en önemli hedefi TET2 gibi DNA demetilasyon enzimleridir.",
+       "ekran": "Burası önemli: 2-hidroksiglutaratın en önemli hedefi TET2 gibi DNA demetilasyon enzimleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0224",
+       "ses": "TET2, tet metilsitozin dioksigenaz 2'dir.",
+       "ekran": "TET2, tet metilsitozin dioksigenaz 2'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0225",
+       "ses": "2-hidroksiglutarat TET2'yi inhibe eder; TET2 kaybıyla DNA metilasyonu artar, geniş çaplı DNA ve histon metilasyon değişiklikleri gelişir ve onkojenik gen ekspresyon değişiklikleri oluşur.",
+       "ekran": "2-hidroksiglutarat TET2'yi inhibe eder; TET2 kaybıyla DNA metilasyonu artar, geniş çaplı DNA ve histon metilasyon değişiklikleri gelişir ve onkojenik gen ekspresyon değişiklikleri oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0226",
+       "ses": "Şekilde bu yol, mitokondrideki mutant IDH'den çekirdekteki gen ifadesine kadar izlenir ve sonuç belirli hücre tiplerinde hücresel dönüşümün teşvik edilmesidir.",
+       "ekran": "Şekilde bu yol, mitokondrideki mutant IDH'den çekirdekteki gen ifadesine kadar izlenir ve sonuç belirli hücre tiplerinde hücresel dönüşümün teşvik edilmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0227",
+       "ses": "Bu, tümör metabolizmasının epigenetik yeniden programlamaya bağlandığı noktadır: bir metabolit, gen ifadesini doğrudan değiştirir.",
+       "ekran": "Bu, tümör metabolizmasının epigenetik yeniden programlamaya bağlandığı noktadır: bir metabolit, gen ifadesini doğrudan değiştirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p050",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-30-c0228",
+       "ses": "IDH mutasyonları belirli tümörlerde yoğunlaşır: düşük ve orta dereceli gliomlar, bazı akut miyeloid lösemi alt tipleri, bazı kolanjiyokarsinomlar ve sarkomlar.",
+       "ekran": "IDH mutasyonları belirli tümörlerde yoğunlaşır: düşük ve orta dereceli gliomlar, bazı akut miyeloid lösemi alt tipleri, bazı kolanjiyokarsinomlar ve sarkomlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0229",
+       "ses": "Bu alt tipler homojen IDH mutasyonu taşır ve belirgin bir metabolik ve epigenetik imza gösterir.",
+       "ekran": "Bu alt tipler homojen IDH mutasyonu taşır ve belirgin bir metabolik ve epigenetik imza gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0230",
+       "ses": "Tedavide mutant IDH'yi spesifik olarak inhibe eden ilaçlar geliştirilmiştir; özellikle akut miyeloid lösemide onaylanmış ajanlar vardır, örneğin IDH1 için ivosidenib, IDH2 için enasidenib.",
+       "ekran": "Tedavide mutant IDH'yi spesifik olarak inhibe eden ilaçlar geliştirilmiştir; özellikle akut miyeloid lösemide onaylanmış ajanlar vardır, örneğin IDH1 için ivosidenib, IDH2 için enasidenib.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0231",
+       "ses": "Bu ilaçlar yalnız mutant enzimi hedefler; metabolik bir değişikliğin doğrudan tedavi hedefi olabildiğini gösterir.",
+       "ekran": "Bu ilaçlar yalnız mutant enzimi hedefler; metabolik bir değişikliğin doğrudan tedavi hedefi olabildiğini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b19",
+   "baslik": "Sürekli anjiyogenez",
+   "paragraflar": [
+    {
+     "id": "k1-30-p051",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-30-c0232",
+       "ses": "Katı tümörler büyüyebilmek için oksijen ve besin taşıyacak yeni damar oluşumuna ihtiyaç duyar.",
+       "ekran": "Katı tümörler büyüyebilmek için oksijen ve besin taşıyacak yeni damar oluşumuna ihtiyaç duyar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0233",
+       "ses": "Anjiyogenezin ana tetikleyicisi hipoksidir.",
+       "ekran": "Anjiyogenezin ana tetikleyicisi hipoksidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0234",
+       "ses": "Tümör büyüdükçe hücreler oksijensiz kalır; hipoksi, hipoksi indüklenebilir faktör 1 alfayı, kısaca HIF-1α'yı stabilize eder.",
+       "ekran": "Tümör büyüdükçe hücreler oksijensiz kalır; hipoksi, hipoksi indüklenebilir faktör 1 alfayı, kısaca HIF-1α'yı stabilize eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0235",
+       "ses": "HIF-1α, vasküler endotelyal büyüme faktörü, yani VEGF transkripsiyonunu artırır ve VEGF var olan damarlardan yeni filizlerin oluşmasını uyarır.",
+       "ekran": "HIF-1α, vasküler endotelyal büyüme faktörü, yani VEGF transkripsiyonunu artırır ve VEGF var olan damarlardan yeni filizlerin oluşmasını uyarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0236",
+       "ses": "Burası önemli: hipoksi, HIF-1α stabilizasyonu ve VEGF artışı ekseni tümör anjiyogenezinin merkezî tetikleyicisidir.",
+       "ekran": "Burası önemli: hipoksi, HIF-1α stabilizasyonu ve VEGF artışı ekseni tümör anjiyogenezinin merkezî tetikleyicisidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p052",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-30-c0237",
+       "ses": "Anjiyogenezi tümörün genetik değişiklikleri de yönlendirir.",
+       "ekran": "Anjiyogenezi tümörün genetik değişiklikleri de yönlendirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0238",
+       "ses": "Ras ve MYC gibi onkogenler VEGF ile diğer anjiyojenik faktörleri artırır.",
+       "ekran": "Ras ve MYC gibi onkogenler VEGF ile diğer anjiyojenik faktörleri artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0239",
+       "ses": "Burası önemli: tümör baskılayıcı TP53, anti anjiyojenik bir faktör olan trombospondin 1'in üretimini artırır ve VEGF'yi baskılar.",
+       "ekran": "Burası önemli: tümör baskılayıcı TP53, anti anjiyojenik bir faktör olan trombospondin 1'in üretimini artırır ve VEGF'yi baskılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0240",
+       "ses": "Bu, p53'ün hücre döngüsünü durdurma, apoptoz ve metabolik fren işlevlerine eklenen bir başka koruyucu rolüdür. p53 kaybolduğunda trombospondin 1 azalır, VEGF üzerindeki baskı kalkar ve onkogen aktivasyonu da eklenince denge belirgin biçimde anjiyogenez lehine döner.",
+       "ekran": "Bu, p53'ün hücre döngüsünü durdurma, apoptoz ve metabolik fren işlevlerine eklenen bir başka koruyucu rolüdür. p53 kaybolduğunda trombospondin 1 azalır, VEGF üzerindeki baskı kalkar ve onkogen aktivasyonu da eklenince denge belirgin biçimde anjiyogenez lehine döner.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p053",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-30-c0241",
+       "ses": "Tümörde oluşan yeni damarlar normal damarlara benzemez; sızıntılı, düzensiz ve yapısal olarak anormaldir.",
+       "ekran": "Tümörde oluşan yeni damarlar normal damarlara benzemez; sızıntılı, düzensiz ve yapısal olarak anormaldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0242",
+       "ses": "Bu damarlar tümöre oksijen ve besin sağlar, ayrıca metastatik hücrelerin dolaşıma girmesini kolaylaştırır.",
+       "ekran": "Bu damarlar tümöre oksijen ve besin sağlar, ayrıca metastatik hücrelerin dolaşıma girmesini kolaylaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0243",
+       "ses": "Yani anjiyogenez yalnız büyüme için değil, metastaz için de gereklidir.",
+       "ekran": "Yani anjiyogenez yalnız büyüme için değil, metastaz için de gereklidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0244",
+       "ses": "Tümör mikroçevresinin hücreleri de sürece katılır: tümörle ilişkili makrofajlar VEGF ile fibroblast büyüme faktörü, yani FGF gibi faktörler üreterek anjiyogenezi destekler.",
+       "ekran": "Tümör mikroçevresinin hücreleri de sürece katılır: tümörle ilişkili makrofajlar VEGF ile fibroblast büyüme faktörü, yani FGF gibi faktörler üreterek anjiyogenezi destekler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b20",
+   "baslik": "Anti anjiyojen tedavi ve sınırları",
+   "paragraflar": [
+    {
+     "id": "k1-30-p054",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-30-c0245",
+       "ses": "Burası önemli: bevasizumab, VEGF'yi nötralize eden bir monoklonal antikordur ve anjiyogenezin merkezî faktörünü doğrudan hedefler.",
+       "ekran": "Burası önemli: bevasizumab, VEGF'yi nötralize eden bir monoklonal antikordur ve anjiyogenezin merkezî faktörünü doğrudan hedefler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0246",
+       "ses": "Kolorektal, akciğer ve böbrek hücreli karsinom gibi tümörlerde kombinasyon tedavilerinin parçası olarak kullanılır.",
+       "ekran": "Kolorektal, akciğer ve böbrek hücreli karsinom gibi tümörlerde kombinasyon tedavilerinin parçası olarak kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0247",
+       "ses": "Tümör büyümesini yavaşlatabilir ve yaşam süresini genellikle yıllar değil aylar düzeyinde uzatır.",
+       "ekran": "Tümör büyümesini yavaşlatabilir ve yaşam süresini genellikle yıllar değil aylar düzeyinde uzatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0248",
+       "ses": "Sınırları da vardır: tümörler başka anjiyojen faktörlerine geçebilir ve daha invaziv bir fenotipe kayabilir.",
+       "ekran": "Sınırları da vardır: tümörler başka anjiyojen faktörlerine geçebilir ve daha invaziv bir fenotipe kayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p055",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-30-c0249",
+       "ses": "Genel olarak anti anjiyojen tedaviler, onkogene hedefli tedaviler kadar dramatik sonuç vermez.",
+       "ekran": "Genel olarak anti anjiyojen tedaviler, onkogene hedefli tedaviler kadar dramatik sonuç vermez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0250",
+       "ses": "Olası mekanizmalar 3'tür: anjiyojenik faktör değişimi, yani VEGF baskılanınca başka faktörlere geçilmesi; stromal adaptasyon, yani tümör çevresindeki stromanın yeni koşullara uyum sağlaması; ve tümör hücrelerinin damar bağımlılığını azaltan adaptasyonlar.",
+       "ekran": "Olası mekanizmalar 3'tür: anjiyojenik faktör değişimi, yani VEGF baskılanınca başka faktörlere geçilmesi; stromal adaptasyon, yani tümör çevresindeki stromanın yeni koşullara uyum sağlaması; ve tümör hücrelerinin damar bağımlılığını azaltan adaptasyonlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0251",
+       "ses": "Klinik ders şudur: tek hedefli yaklaşımlar yerine çoklu yolakları aynı anda hedefleyen kombinasyon stratejileri gerekebilir.",
+       "ekran": "Klinik ders şudur: tek hedefli yaklaşımlar yerine çoklu yolakları aynı anda hedefleyen kombinasyon stratejileri gerekebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0252",
+       "ses": "Anti VEGF tedaviler kısmi ve geçici fayda sağlar.",
+       "ekran": "Anti VEGF tedaviler kısmi ve geçici fayda sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-30-b21",
+   "baslik": "Ağ düzeyinde kanser ve özet",
+   "paragraflar": [
+    {
+     "id": "k1-30-p056",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-30-c0253",
+       "ses": "Bu yollar ayrı ayrı anlatılsa da kanser hücresinde birbirinden bağımsız çalışmaz; bu yüzden kanser tedavisi tek yolak yerine ağ düzeyinde anlayış gerektirir.",
+       "ekran": "Bu yollar ayrı ayrı anlatılsa da kanser hücresinde birbirinden bağımsız çalışmaz; bu yüzden kanser tedavisi tek yolak yerine ağ düzeyinde anlayış gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0254",
+       "ses": "Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı şekilde bağlıdır.",
+       "ekran": "Sinyal yolları, metabolizma, DNA onarımı ve mikroçevre birbirine sıkı şekilde bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0255",
+       "ses": "Örneğin TP53 hem hücre döngüsünü, hem metabolizmayı, hem de anjiyogenezi etkiler; ras ile PI3K ve AKT hem proliferasyonu hem glikoz alımını yönlendirir.",
+       "ekran": "Örneğin TP53 hem hücre döngüsünü, hem metabolizmayı, hem de anjiyogenezi etkiler; ras ile PI3K ve AKT hem proliferasyonu hem glikoz alımını yönlendirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0256",
+       "ses": "Hedefe yönelik ilaç geliştirme iki düzeyde düşünülür: mutant IDH gibi bireysel sürücü mutasyonlar ve RB, TP53, PI3K ile AKT ve anjiyogenez gibi birçok yolun kesiştiği ortak nodal noktalar.",
+       "ekran": "Hedefe yönelik ilaç geliştirme iki düzeyde düşünülür: mutant IDH gibi bireysel sürücü mutasyonlar ve RB, TP53, PI3K ile AKT ve anjiyogenez gibi birçok yolun kesiştiği ortak nodal noktalar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0257",
+       "ses": "Bu moleküler bilgiler, yeni biyobelirteçlerin ve tedavi hedeflerinin keşfine temel oluşturur.",
+       "ekran": "Bu moleküler bilgiler, yeni biyobelirteçlerin ve tedavi hedeflerinin keşfine temel oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-30-p057",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-30-c0258",
+       "ses": "Özetle, RB yolu G1/S kontrol noktasının merkezindedir ve siklin D, CDK4, p16, RB ve E2F eksenindeki değişikliklerle birçok kanserde doğrudan ya da dolaylı kaybolur.",
+       "ekran": "Özetle, RB yolu G1/S kontrol noktasının merkezindedir ve siklin D, CDK4, p16, RB ve E2F eksenindeki değişikliklerle birçok kanserde doğrudan ya da dolaylı kaybolur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0259",
+       "ses": "TP53 stres sensörüdür ve kaybı genomik instabilite ile çoklu sürücü mutasyon birikimine yol açar.",
+       "ekran": "TP53 stres sensörüdür ve kaybı genomik instabilite ile çoklu sürücü mutasyon birikimine yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0260",
+       "ses": "TGF-β, E-kadherin ve APC ile Wnt yolu büyümeyi baskılar ve doku mimarisini korur.",
+       "ekran": "TGF-β, E-kadherin ve APC ile Wnt yolu büyümeyi baskılar ve doku mimarisini korur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-30-c0261",
+       "ses": "Tümör metabolizması Warburg etkisiyle anabolik ihtiyaçları karşılar, 2-hidroksiglutarat gibi onkometabolitlerle epigenetik yeniden programlama yapar; anjiyogenez ise büyüme ve metastaz için vazgeçilmezdir.",
+       "ekran": "Tümör metabolizması Warburg etkisiyle anabolik ihtiyaçları karşılar, 2-hidroksiglutarat gibi onkometabolitlerle epigenetik yeniden programlama yapar; anjiyogenez ise büyüme ve metastaz için vazgeçilmezdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

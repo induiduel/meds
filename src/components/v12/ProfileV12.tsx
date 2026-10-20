@@ -30,7 +30,9 @@ import { QuestionItem } from '../../types';
 import { validateNamePolicy } from '../../utils/namePolicy';
 import {
   DENSITY_LABELS,
-  DESIGN_ORDER,
+  DESIGN_CHOICES,
+  designChoiceOf,
+  type DesignChoice,
   FILTER_MODE_LABELS,
   LAYOUT_LABELS,
   MODE_LABELS,
@@ -1130,8 +1132,9 @@ const DataPanel: React.FC<{ onOpenOffline: () => void }> = ({ onOpenOffline }) =
  * Görünüm ve tasarım (canvas Settings.dc.html)
  * ---------------------------------------------------------------------------------------------- */
 
-const DESIGN_INFO: Record<DesignVersion, { name: string; hint: string }> = {
-  v12: { name: 'Net', hint: 'Sade, kompakt, tek ekranda bilgi. Önerilen.' },
+const DESIGN_INFO: Record<DesignChoice, { name: string; hint: string }> = {
+  v13: { name: 'Ada', hint: 'Yüzen menü adaları, şeritsiz, en kompakt. Telefon ve tablete göre kuruldu.' },
+  v12: { name: 'Net', hint: 'Sade, kompakt, tek ekranda bilgi.' },
   v11: { name: 'Sade', hint: 'Geniş boşluklar, okuma odaklı.' },
   v10: { name: 'Klasik', hint: 'Kart ızgaraları, renkli bölümler.' },
 };
@@ -1162,14 +1165,14 @@ const AppearancePanel: React.FC = () => {
           <span className="u12-meta">Eski sürümler kalır; istediğin an geç.</span>
         </div>
         <div className="u12-designs" role="radiogroup" aria-labelledby="u12-tasarim-h">
-          {DESIGN_ORDER.map((v) => {
-            const on = look.design === v;
+          {DESIGN_CHOICES.map((v) => {
+            const on = designChoiceOf(look) === v;
             return (
-              <button key={v} type="button" role="radio" aria-checked={on} className={`u12-design is-${v} ${on ? 'is-on' : ''}`} onClick={() => look.set({ design: v })}>
+              <button key={v} type="button" role="radio" aria-checked={on} className={`u12-design is-${v} ${on ? 'is-on' : ''}`} onClick={() => look.set({ choice: v })}>
                 <span className="u12-mini" aria-hidden="true"><i /><i /><i /><i /></span>
                 <span className="u12-design-t">
                   <span className="u12-h3">{DESIGN_INFO[v].name}</span>
-                  <span className={`u12-badge ${v === 'v12' ? 'is-acc' : ''}`}>{v}</span>
+                  <span className={`u12-badge ${v === 'v13' ? 'is-acc' : ''}`}>{v}</span>
                   {on && <Check className="u12-design-ok" aria-hidden />}
                 </span>
                 <span className="u12-meta">{DESIGN_INFO[v].hint}</span>

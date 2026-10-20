@@ -19,7 +19,7 @@ import { useReviewCounts } from '../../hooks/useReviewCounts';
 import { QuickOptions, QuickPill } from '../ui/PageToolbar';
 import type { ArchiveFilter } from '../learn/LearnHub';
 import {
-  PAGE, SORT_KEY, SORT_LABEL, VIEW_KEY, branchOf, isPublished, kurulOf, orderOf, readPref, readRecent, schedOf, stateOf, trDate,
+  PAGE, SORT_KEY, SORT_LABEL, VIEW_KEY, branchOf, isPublished, kurulOf, urlKurulSuzgeci, orderOf, readPref, readRecent, schedOf, stateOf, trDate,
   unknownSource, writePref, type Progress, type Sort, type Status, type View,
 } from '../learn/LearnLibrary';
 import { KonuDugmeleri, KonuSureEtiketi } from '../takip/KonuTakip';
@@ -72,7 +72,7 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
   const [input, setInput] = useState('');
   const query = useDeferredValue(input);
   const [branch, setBranch] = useState('all');
-  const [kurul, setKurul] = useState('all');
+  const [kurul, setKurul] = useState(urlKurulSuzgeci);
   const [status, setStatus] = useState<Status>('all');
   const [limit, setLimit] = useState(PAGE);
   const [recent] = useState(readRecent);

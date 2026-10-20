@@ -1,6 +1,8 @@
 import {
   Activity,
   Archive,
+  History,
+  Sparkles,
   AudioLines,
   CircleCheckBig,
   CloudDownload,
@@ -73,11 +75,13 @@ const I: Record<string, NavItem> = {
   past_exams: { id: 'past_exams', label: 'Çıkmış sorular', short: 'Çıkmış', hint: 'Kurullara göre çıkmışlar', icon: Archive, tint: '#007AFF' },
   questions: { id: 'questions', label: 'Soru havuzu', short: 'Havuz', hint: 'Öğrencilerin birlikte kurduğu kurul soruları', icon: Library, tint: '#5856D6' },
   ornek_sorular: { id: 'ornek_sorular', label: 'Örnek sorular', short: 'Örnek', hint: 'Kazanım temelli sorular', icon: Target, tint: '#FF9500' },
+  olasi_sorular: { id: 'olasi_sorular', label: 'Olası sorular', short: 'Olası', hint: 'Sınavdan sonra hatıralardan kurulan sorular; çöz, doğrula', icon: Sparkles, tint: '#AF52DE' },
   practice: { id: 'practice', label: 'Deneme sınavı', short: 'Deneme', hint: 'Süreli deneme sınavı', icon: Timer, tint: '#0A84FF' },
   // Başvuru
   glossary: { id: 'glossary', label: 'Sözlük', hint: 'Hastalık ve ilaç ansiklopedisi', icon: BookOpenText, tint: '#A2845E' },
   diseases: { id: 'diseases', label: 'Hastalıklar', short: 'Atlas', hint: 'Tıbbi hastalık ve klinik atlası', icon: Activity, tint: '#06B6D4' },
   health_ministry: { id: 'health_ministry', label: 'Sağlık Bakanlığı', short: 'Bakanlık', hint: 'Resmî veriler: aşı, yenidoğan, anne, tarama, salgın, Karabük', icon: Landmark, tint: '#C8102E' },
+  gecmis_kurullar: { id: 'gecmis_kurullar', label: 'Geçmiş kurullar', short: 'Geçmiş', tile: 'Geçmiş kurullar', hint: 'Sınavı biten kurulların dersleri, spotları ve soruları', icon: History, tint: '#8E8E93' },
   kazanimlar: { id: 'kazanimlar', label: 'Kazanımlar', hint: 'Müfredat ve kazanım haritası', icon: Compass, tint: '#00A79D' },
   // Topluluk
   matrix: { id: 'matrix', label: 'Soru haritası', short: 'Harita', hint: 'Havuzda 1–100 soru doluluğu', icon: LayoutGrid, tint: '#64748B' },
@@ -104,8 +108,8 @@ export const NAV_TREE: NavGroup[] = [
   { label: null, items: [I.today] },
   { label: 'Ders çalış', items: [I.learn, I.canli_ders, I.notes, I.flashcards, I.summaries] },
   { label: 'Sınava hazırlan', items: [I.sinav_calisma, I.soru_cozucu, I.alternatif_cozucu, I.en_onemliler, I.patoloji_checkup, I.genetik_checkup, I.spots] },
-  { label: 'Soru çöz', items: [I.past_exams, I.questions, I.practice, I.ornek_sorular] },
-  { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar] },
+  { label: 'Soru çöz', items: [I.past_exams, I.questions, I.practice, I.ornek_sorular, I.olasi_sorular] },
+  { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar, I.gecmis_kurullar] },
   { label: 'Topluluk', items: [I.matrix, I.leaderboard] },
   { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music] },
 ];
@@ -125,7 +129,7 @@ const V12_RAIL_IDS = new Set<AppRoute>([
   'today',
   'learn', 'canli_ders', 'notes', 'flashcards',
   'sinav_calisma', 'soru_cozucu', 'alternatif_cozucu', 'en_onemliler', 'patoloji_checkup', 'genetik_checkup', 'spots',
-  'past_exams', 'questions', 'practice',
+  'past_exams', 'questions', 'practice', 'olasi_sorular',
   'glossary', 'diseases',
   'bitirdiklerim', 'cevrimdisi',
 ]);

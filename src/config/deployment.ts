@@ -32,7 +32,7 @@ export function defaultApiBaseForThisHost(): string {
 export const PANEL_TARGET_KEY = 'medsoru_panel_hedef';
 // Kişiler (kişisel veri): yerel sunucuya gider, o da Oracle'a gizli anahtarla vekillik eder (x-panel-target: oracle);
 // başlıktaki e-postaya güvenen doğrudan istek Oracle'da reddedilir.
-const PANEL_DEVICE_ONLY = ['/api/admin/ders-revize', '/api/automation/', '/api/admin/scripts/', '/api/admin/people'];
+const PANEL_DEVICE_ONLY = ['/api/admin/ders-revize', '/api/automation/', '/api/admin/scripts/', '/api/admin/people', '/api/admin/hat'];
 
 export function isLocalHost(): boolean {
   if (typeof window === 'undefined') return false;

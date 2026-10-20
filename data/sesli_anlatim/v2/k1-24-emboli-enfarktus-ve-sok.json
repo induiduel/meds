@@ -1,0 +1,3049 @@
+{
+ "surum": 2,
+ "ders_id": "k1-24",
+ "anahtar": "k1-24-emboli-enfarktus-ve-sok",
+ "baslik": "Emboli, Enfarktüs ve Şok",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-24-b01",
+   "baslik": "Emboli: tanım ve tromboemboli",
+   "paragraflar": [
+    {
+     "id": "k1-24-p001",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-24-c0001",
+       "ses": "Emboli, kan akımı ile taşınan ve kaynak noktasından kopmuş katı, sıvı veya gaz kitlesidir.",
+       "ekran": "Emboli, kan akımı ile taşınan ve kaynak noktasından kopmuş katı, sıvı veya gaz kitlesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0002",
+       "ses": "Bu tanımın 2 öğesini birlikte aklınızda tutun: kitle oluştuğu yerde kalmaz, kanla uzak bir damar yatağına taşınır; ve fiziksel olarak 3 biçimde olabilir.",
+       "ekran": "Bu tanımın 2 öğesini birlikte aklınızda tutun: kitle oluştuğu yerde kalmaz, kanla uzak bir damar yatağına taşınır; ve fiziksel olarak 3 biçimde olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0003",
+       "ses": "Katı emboliye trombüs, sıvı emboliye yağ ya da amniyotik sıvı, gaz emboliye de hava veya azot kabarcıkları örnektir.",
+       "ekran": "Katı emboliye trombüs, sıvı emboliye yağ ya da amniyotik sıvı, gaz emboliye de hava veya azot kabarcıkları örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0004",
+       "ses": "Embolilerin çoğu trombüs parçalarından oluşur, bu yüzden en sık kullandığımız terim tromboembolidir.",
+       "ekran": "Embolilerin çoğu trombüs parçalarından oluşur, bu yüzden en sık kullandığımız terim tromboembolidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p002",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-24-c0005",
+       "ses": "Burası önemli, emboli tanımı çıkmış sorularda doğru bir önerme olarak defalarca geldi: emboli, kaynaklandığı yerden uzak bir yere kan yoluyla taşınan damar içi katı, sıvı veya gaz kitlesidir; neredeyse tamamı kopmuş trombüs parçalarından oluştuğu için tromboembolizm terimi kullanılır.",
+       "ekran": "Burası önemli, emboli tanımı çıkmış sorularda doğru bir önerme olarak defalarca geldi: emboli, kaynaklandığı yerden uzak bir yere kan yoluyla taşınan damar içi katı, sıvı veya gaz kitlesidir; neredeyse tamamı kopmuş trombüs parçalarından oluştuğu için tromboembolizm terimi kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0006",
+       "ses": "Taşınan kitle damar çapı daraldıkça ilerleyemez ve küçük damarlara takılır.",
+       "ekran": "Taşınan kitle damar çapı daraldıkça ilerleyemez ve küçük damarlara takılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0007",
+       "ses": "Takıldığı yerde parsiyel, yani kısmi, ya da tam vasküler tıkanma yapar.",
+       "ekran": "Takıldığı yerde parsiyel, yani kısmi, ya da tam vasküler tıkanma yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0008",
+       "ses": "Tıkanmanın derecesi, distaldeki dokunun ne kadar etkileneceğini belirler.",
+       "ekran": "Tıkanmanın derecesi, distaldeki dokunun ne kadar etkileneceğini belirler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p003",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-24-c0009",
+       "ses": "Embolinin klinik sonucu, takıldığı dolaşım yatağına göre değişir.",
+       "ekran": "Embolinin klinik sonucu, takıldığı dolaşım yatağına göre değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0010",
+       "ses": "Sistemik emboli arteriyel yatağı tıkar; distaldeki doku kansız kalır ve iskemik nekroz, yani enfarktüs gelişir.",
+       "ekran": "Sistemik emboli arteriyel yatağı tıkar; distaldeki doku kansız kalır ve iskemik nekroz, yani enfarktüs gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0011",
+       "ses": "Pulmoner emboli ise pulmoner dolaşımı tıkar ve 3 ağır sonuç doğurur.",
+       "ekran": "Pulmoner emboli ise pulmoner dolaşımı tıkar ve 3 ağır sonuç doğurur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0012",
+       "ses": "1.'si hipoksidir, çünkü ventile olan ama perfüze olmayan akciğer alanı gaz değişimine katılamaz.",
+       "ekran": "1.'si hipoksidir, çünkü ventile olan ama perfüze olmayan akciğer alanı gaz değişimine katılamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0013",
+       "ses": "2.'si sağ kalp yetmezliğidir, çünkü sağ ventrikül tıkalı pulmoner yatağa karşı pompalamak zorunda kalır.",
+       "ekran": "2.'si sağ kalp yetmezliğidir, çünkü sağ ventrikül tıkalı pulmoner yatağa karşı pompalamak zorunda kalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0014",
+       "ses": "3.'sü ani ölümdür.",
+       "ekran": "3.'sü ani ölümdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0015",
+       "ses": "Tromboembolik hastalık, morbidite ve mortalitenin önde gelen nedenlerindendir.",
+       "ekran": "Tromboembolik hastalık, morbidite ve mortalitenin önde gelen nedenlerindendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0016",
+       "ses": "Dersin eksenini de buradan kurabilirsiniz: emboli lokal tıkanmayla enfarktüse, yani lokal iskemik nekroza, masif pulmoner emboli ise pompa yetmezliği üzerinden şoka, yani generalize hücresel hipoksiye bağlanır.",
+       "ekran": "Dersin eksenini de buradan kurabilirsiniz: emboli lokal tıkanmayla enfarktüse, yani lokal iskemik nekroza, masif pulmoner emboli ise pompa yetmezliği üzerinden şoka, yani generalize hücresel hipoksiye bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b02",
+   "baslik": "Pulmoner tromboembolizmin kaynağı ve tanısı",
+   "paragraflar": [
+    {
+     "id": "k1-24-p004",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-24-c0017",
+       "ses": "Burası önemli: pulmoner embolilerin %95'ten fazlası derin ven trombozlarından köken alır.",
+       "ekran": "Burası önemli: pulmoner embolilerin %95'ten fazlası derin ven trombozlarından köken alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0018",
+       "ses": "Özellikle sorumlu olanlar diz üzerindeki derin bacak venleri, yani popliteal, femoral ve iliak venlerdir.",
+       "ekran": "Özellikle sorumlu olanlar diz üzerindeki derin bacak venleri, yani popliteal, femoral ve iliak venlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0019",
+       "ses": "Bu büyük çaplı venlerde oluşan trombüsler, kopunca pulmoner arteri tıkayabilecek boyuttadır.",
+       "ekran": "Bu büyük çaplı venlerde oluşan trombüsler, kopunca pulmoner arteri tıkayabilecek boyuttadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0020",
+       "ses": "Embolinin izlediği yol şöyledir: venöz sistem, sağ kalp, pulmoner arter.",
+       "ekran": "Embolinin izlediği yol şöyledir: venöz sistem, sağ kalp, pulmoner arter.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0021",
+       "ses": "Venöz kan önce sağ atriyum ve sağ ventrikülden geçer, emboli de ilk daralan damar yatağı olan pulmoner arterde takılır.",
+       "ekran": "Venöz kan önce sağ atriyum ve sağ ventrikülden geçer, emboli de ilk daralan damar yatağı olan pulmoner arterde takılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0022",
+       "ses": "Venöz trombüs normal koşulda sistemik arterlere değil, akciğere gider.",
+       "ekran": "Venöz trombüs normal koşulda sistemik arterlere değil, akciğere gider.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p005",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-24-c0023",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda birkaç kez soruldu: derin bacak venleri trombozunun en sık görülen ve en ciddi komplikasyonu pulmoner embolidir; pulmoner emboli çoğu olguda tromboflebitin, yani bu venöz trombozun ilk belirtisidir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda birkaç kez soruldu: derin bacak venleri trombozunun en sık görülen ve en ciddi komplikasyonu pulmoner embolidir; pulmoner emboli çoğu olguda tromboflebitin, yani bu venöz trombozun ilk belirtisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0024",
+       "ses": "Bacakta ödem, ağrı ve kızarıklık, süperior ya da inferior vena kava sendromu veya gezici tromboflebit bu sorunun doğru cevabı değildir.",
+       "ekran": "Bacakta ödem, ağrı ve kızarıklık, süperior ya da inferior vena kava sendromu veya gezici tromboflebit bu sorunun doğru cevabı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0025",
+       "ses": "Bir de tekrarlama kuralını bilin: bir pulmoner emboli geçiren hastada yeni pulmoner emboli riski artar, çünkü altta yatan trombotik eğilim çoğu zaman devam eder.",
+       "ekran": "Bir de tekrarlama kuralını bilin: bir pulmoner emboli geçiren hastada yeni pulmoner emboli riski artar, çünkü altta yatan trombotik eğilim çoğu zaman devam eder.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-24-c0026",
+       "ses": "Tanı tarafında da bir bilgi sınavlarda tekrar tekrar karşımıza çıktı.",
+       "ekran": "Tanı tarafında da bir bilgi sınavlarda tekrar tekrar karşımıza çıktı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0027",
+       "ses": "Burası önemli: ani başlayan nefes darlığı, plöritik göğüs ağrısı, taşikardi ve hemoptizi ile gelen, derin ven trombozu öyküsü olan bir hastada pulmoner tromboemboli düşündüğünüzde, tanı için günümüzde ilk tercih edilen altın standart görüntüleme yöntemi kontrastlı bilgisayarlı tomografi pulmoner anjiyografidir.",
+       "ekran": "Burası önemli: ani başlayan nefes darlığı, plöritik göğüs ağrısı, taşikardi ve hemoptizi ile gelen, derin ven trombozu öyküsü olan bir hastada pulmoner tromboemboli düşündüğünüzde, tanı için günümüzde ilk tercih edilen altın standart görüntüleme yöntemi kontrastlı bilgisayarlı tomografi pulmoner anjiyografidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0028",
+       "ses": "Kısaca pulmoner BT anjiyografi de denir.",
+       "ekran": "Kısaca pulmoner BT anjiyografi de denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0029",
+       "ses": "Düz akciğer grafisi, kontrastsız tomografi, ultrasonografi, manyetik rezonans görüntüleme, ekokardiyografi ya da tek başına ventilasyon sintigrafisi bu sorunun cevabı değildir.",
+       "ekran": "Düz akciğer grafisi, kontrastsız tomografi, ultrasonografi, manyetik rezonans görüntüleme, ekokardiyografi ya da tek başına ventilasyon sintigrafisi bu sorunun cevabı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b03",
+   "baslik": "Pulmoner embolide boyut ve sonuç",
+   "paragraflar": [
+    {
+     "id": "k1-24-p007",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-24-c0030",
+       "ses": "Pulmoner embolinin kliniği büyük ölçüde embolinin boyutuna bağlıdır.",
+       "ekran": "Pulmoner embolinin kliniği büyük ölçüde embolinin boyutuna bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0031",
+       "ses": "Aynı kaynaktan kopan trombüs, büyüklüğüne göre hiç belirti vermeyebilir ya da hastayı dakikalar içinde öldürebilir.",
+       "ekran": "Aynı kaynaktan kopan trombüs, büyüklüğüne göre hiç belirti vermeyebilir ya da hastayı dakikalar içinde öldürebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0032",
+       "ses": "Küçük embolilerin çoğu klinik olarak sessizdir.",
+       "ekran": "Küçük embolilerin çoğu klinik olarak sessizdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0033",
+       "ses": "Bunlar zamanla organize olur, yani bağ dokusuyla yer değiştirir ve damar duvarına entegre olur.",
+       "ekran": "Bunlar zamanla organize olur, yani bağ dokusuyla yer değiştirir ve damar duvarına entegre olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p008",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-24-c0034",
+       "ses": "Büyük emboli ise ana pulmoner arteri veya onun bifürkasyonunu tıkar.",
+       "ekran": "Büyük emboli ise ana pulmoner arteri veya onun bifürkasyonunu tıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0035",
+       "ses": "Bifürkasyona ata biner gibi yerleşen bu emboliye eyer emboli denir.",
+       "ekran": "Bifürkasyona ata biner gibi yerleşen bu emboliye eyer emboli denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0036",
+       "ses": "Burası önemli: eyer embolide pulmoner akım ani ve masif biçimde kesilir, sonuç ani ölüm ya da akut sağ kalp yetmezliğidir.",
+       "ekran": "Burası önemli: eyer embolide pulmoner akım ani ve masif biçimde kesilir, sonuç ani ölüm ya da akut sağ kalp yetmezliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0037",
+       "ses": "Büyük emboli sağ ventrikülün önüne aniden yüksek bir direnç koyduğu için kalp bu yüke uyum sağlayacak zamanı bulamaz.",
+       "ekran": "Büyük emboli sağ ventrikülün önüne aniden yüksek bir direnç koyduğu için kalp bu yüke uyum sağlayacak zamanı bulamaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p009",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-24-c0038",
+       "ses": "Orta büyüklükteki emboliler pulmoner arterin daha periferik dallarına yerleşir ve normalde enfarkt yapmayabilir.",
+       "ekran": "Orta büyüklükteki emboliler pulmoner arterin daha periferik dallarına yerleşir ve normalde enfarkt yapmayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0039",
+       "ses": "Bunun nedeni akciğerin çift dolaşımıdır: pulmoner arter dalı tıkansa bile parankim, bronşiyal arterlerden gelen sistemik kanla beslenmeye devam eder.",
+       "ekran": "Bunun nedeni akciğerin çift dolaşımıdır: pulmoner arter dalı tıkansa bile parankim, bronşiyal arterlerden gelen sistemik kanla beslenmeye devam eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0040",
+       "ses": "Burası önemli: hastada sol kalp yetmezliği ya da genel hipoperfüzyon varsa bronşiyal dolaşım tıkanan bölgeyi besleyemez ve aynı orta boy emboli pulmoner enfarkta yol açar.",
+       "ekran": "Burası önemli: hastada sol kalp yetmezliği ya da genel hipoperfüzyon varsa bronşiyal dolaşım tıkanan bölgeyi besleyemez ve aynı orta boy emboli pulmoner enfarkta yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0041",
+       "ses": "Bu tablo bize enfarktüsün yalnız tıkanmaya değil, dokunun alternatif kan kaynağının yeterliliğine de bağlı olduğunu gösterir.",
+       "ekran": "Bu tablo bize enfarktüsün yalnız tıkanmaya değil, dokunun alternatif kan kaynağının yeterliliğine de bağlı olduğunu gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p010",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-24-c0042",
+       "ses": "Embolinin boyutu küçüldükçe daha distale, arteriyollere kadar ilerler.",
+       "ekran": "Embolinin boyutu küçüldükçe daha distale, arteriyollere kadar ilerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0043",
+       "ses": "Distal arteriyollere yerleşen küçük emboliler sıklıkla enfarktüs oluşturur; periferde, plevraya yakın küçük enfarkt alanları gelişir.",
+       "ekran": "Distal arteriyollere yerleşen küçük emboliler sıklıkla enfarktüs oluşturur; periferde, plevraya yakın küçük enfarkt alanları gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0044",
+       "ses": "Klinik tuzak şudur: bu tablo enfeksiyon tablosuyla karışabilir, çünkü ateş, göğüs ağrısı ve akciğerde lokal infiltrasyon pnömoniyi düşündürebilir.",
+       "ekran": "Klinik tuzak şudur: bu tablo enfeksiyon tablosuyla karışabilir, çünkü ateş, göğüs ağrısı ve akciğerde lokal infiltrasyon pnömoniyi düşündürebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0045",
+       "ses": "Yani büyük emboli eşittir enfarkt sezgisi yanlıştır.",
+       "ekran": "Yani büyük emboli eşittir enfarkt sezgisi yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0046",
+       "ses": "Büyük emboli çoğu kez enfarkt oluşturacak süre tanımadan ani ölüm yapar, orta boy emboli çift dolaşımla telafi edilir, distal küçük emboli ise sıklıkla enfarkt bırakır.",
+       "ekran": "Büyük emboli çoğu kez enfarkt oluşturacak süre tanımadan ani ölüm yapar, orta boy emboli çift dolaşımla telafi edilir, distal küçük emboli ise sıklıkla enfarkt bırakır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p011",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-24-c0047",
+       "ses": "Bu enfarktın görünümü de çıkmış sorularda soruldu.",
+       "ekran": "Bu enfarktın görünümü de çıkmış sorularda soruldu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0048",
+       "ses": "Burası önemli: pulmoner tromboemboli sonrasında kalp yetersizliği olan bir hastada gelişen akciğer enfarktüsü plevra tabanlı, kama biçimli ve koyu kırmızı renkte, yani hemorajik bir kırmızı enfarkttır.",
+       "ekran": "Burası önemli: pulmoner tromboemboli sonrasında kalp yetersizliği olan bir hastada gelişen akciğer enfarktüsü plevra tabanlı, kama biçimli ve koyu kırmızı renkte, yani hemorajik bir kırmızı enfarkttır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0049",
+       "ses": "Bunun temel anatomik nedeni akciğerin hem pulmoner arterden hem de bronşiyal arterlerden çift kan akımı almasıdır.",
+       "ekran": "Bunun temel anatomik nedeni akciğerin hem pulmoner arterden hem de bronşiyal arterlerden çift kan akımı almasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0050",
+       "ses": "Akciğer gevşek, süngerimsi bir doku olduğu için bronşiyal arterlerden gelen kan nekroz alanına dolar ve enfarktı kırmızıya boyar.",
+       "ekran": "Akciğer gevşek, süngerimsi bir doku olduğu için bronşiyal arterlerden gelen kan nekroz alanına dolar ve enfarktı kırmızıya boyar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b04",
+   "baslik": "Tekrarlayan küçük emboliler ve kor pulmonale",
+   "paragraflar": [
+    {
+     "id": "k1-24-p012",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-24-c0051",
+       "ses": "Tek bir küçük emboli çoğu zaman sessizdir, ancak bu emboliler tekrar tekrar geldiğinde tablo değişir.",
+       "ekran": "Tek bir küçük emboli çoğu zaman sessizdir, ancak bu emboliler tekrar tekrar geldiğinde tablo değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0052",
+       "ses": "Her emboli pulmoner arter yatağının bir bölümünü kalıcı olarak daraltır; zamanla toplam yatak kesiti azalır ve pulmoner arter basıncı yükselir.",
+       "ekran": "Her emboli pulmoner arter yatağının bir bölümünü kalıcı olarak daraltır; zamanla toplam yatak kesiti azalır ve pulmoner arter basıncı yükselir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0053",
+       "ses": "Bu tabloya kronik tromboembolik pulmoner hipertansiyon denir.",
+       "ekran": "Bu tabloya kronik tromboembolik pulmoner hipertansiyon denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0054",
+       "ses": "Sağ ventrikül yükselen dirence karşı çalışmak için kas kitlesini artırır, yani hipertrofiye olur.",
+       "ekran": "Sağ ventrikül yükselen dirence karşı çalışmak için kas kitlesini artırır, yani hipertrofiye olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0055",
+       "ses": "Hipertrofi uzun vadede yetersiz kalır ve sağ ventrikül yetmezliği gelişir.",
+       "ekran": "Hipertrofi uzun vadede yetersiz kalır ve sağ ventrikül yetmezliği gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0056",
+       "ses": "Akciğer damar yatağındaki hastalığa bağlı gelişen bu sağ ventrikül hipertrofisi ve yetmezliğine kor pulmonale denir.",
+       "ekran": "Akciğer damar yatağındaki hastalığa bağlı gelişen bu sağ ventrikül hipertrofisi ve yetmezliğine kor pulmonale denir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p013",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-24-c0057",
+       "ses": "Eyer embolinin yaptığı ani sağ kalp yetmezliğiyle karıştırmayın: tekrarlayan küçük embolilerde süreç yavaş ilerler ve sağ ventrikülün hipertrofiyle uyum sağlamasına zaman tanır.",
+       "ekran": "Eyer embolinin yaptığı ani sağ kalp yetmezliğiyle karıştırmayın: tekrarlayan küçük embolilerde süreç yavaş ilerler ve sağ ventrikülün hipertrofiyle uyum sağlamasına zaman tanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0058",
+       "ses": "Pulmoner hipertansiyonun tanı eşiği de çıkmış sorularda karşımıza çıktı.",
+       "ekran": "Pulmoner hipertansiyonun tanı eşiği de çıkmış sorularda karşımıza çıktı.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0059",
+       "ses": "Burası önemli: sağ kalp kateterizasyonu ile istirahat halinde ölçülen ortalama pulmoner arter basıncı 20 milimetre cıvanın üzerinde saptanırsa pulmoner hipertansiyon tanısı konur.",
+       "ekran": "Burası önemli: sağ kalp kateterizasyonu ile istirahat halinde ölçülen ortalama pulmoner arter basıncı 20 milimetre cıvanın üzerinde saptanırsa pulmoner hipertansiyon tanısı konur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0060",
+       "ses": "12, 15, 35 ya da 45 gibi değerler bu sorunun çeldiricileriydi.",
+       "ekran": "12, 15, 35 ya da 45 gibi değerler bu sorunun çeldiricileriydi.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b05",
+   "baslik": "Sistemik tromboembolizm: kaynaklar ve paradoksal emboli",
+   "paragraflar": [
+    {
+     "id": "k1-24-p014",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-24-c0061",
+       "ses": "Sistemik, yani arteriyel tromboemboli, arteriyel dolaşımda taşınıp sistemik arterleri tıkayan embolilerdir.",
+       "ekran": "Sistemik, yani arteriyel tromboemboli, arteriyel dolaşımda taşınıp sistemik arterleri tıkayan embolilerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0062",
+       "ses": "Pulmoner emboliden farklı olarak kaynak bacak venleri değil, büyük ölçüde kalbin kendisidir.",
+       "ekran": "Pulmoner emboliden farklı olarak kaynak bacak venleri değil, büyük ölçüde kalbin kendisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0063",
+       "ses": "Burası önemli: sistemik embolilerin yaklaşık %80'i intrakardiyak mural trombüslerden köken alır.",
+       "ekran": "Burası önemli: sistemik embolilerin yaklaşık %80'i intrakardiyak mural trombüslerden köken alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0064",
+       "ses": "Mural trombüs, kalp boşluğunun duvarına yapışık trombüstür.",
+       "ekran": "Mural trombüs, kalp boşluğunun duvarına yapışık trombüstür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0065",
+       "ses": "Bunların yaklaşık üçte ikisi sol ventrikül enfarktüsleriyle ilişkilidir; enfarkt alanında hareket etmeyen duvar ve hasarlı endokard trombüs için zemin oluşturur.",
+       "ekran": "Bunların yaklaşık üçte ikisi sol ventrikül enfarktüsleriyle ilişkilidir; enfarkt alanında hareket etmeyen duvar ve hasarlı endokard trombüs için zemin oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0066",
+       "ses": "Yaklaşık dörtte biri ise dilate sol atriyumla ilişkilidir; örneğin mitral stenozda genişleyen sol atriyumda kan akımı yavaşlar ve trombüs gelişir.",
+       "ekran": "Yaklaşık dörtte biri ise dilate sol atriyumla ilişkilidir; örneğin mitral stenozda genişleyen sol atriyumda kan akımı yavaşlar ve trombüs gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0067",
+       "ses": "Sol kalpteki trombüsten kopan parça aortaya, oradan da herhangi bir sistemik artere ulaşabilir.",
+       "ekran": "Sol kalpteki trombüsten kopan parça aortaya, oradan da herhangi bir sistemik artere ulaşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p015",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-24-c0068",
+       "ses": "Mural trombüs dışındaki kaynaklar şunlardır.",
+       "ekran": "Mural trombüs dışındaki kaynaklar şunlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0069",
+       "ses": "Aort anevrizmalarında genişlemiş lümende akım yavaşlar ve duvara yapışık trombüs oluşur.",
+       "ekran": "Aort anevrizmalarında genişlemiş lümende akım yavaşlar ve duvara yapışık trombüs oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0070",
+       "ses": "Ülserleşmiş aterosklerotik plaklarda plak yüzeyi açılınca üzerinde trombüs gelişir ve parçaları distale taşınır.",
+       "ekran": "Ülserleşmiş aterosklerotik plaklarda plak yüzeyi açılınca üzerinde trombüs gelişir ve parçaları distale taşınır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0071",
+       "ses": "Kapak vejetasyonlarından, yani kapaklar üzerinde oluşan trombotik ya da enfekte kitlelerden kopan parçalar da arteriyel dolaşıma karışır.",
+       "ekran": "Kapak vejetasyonlarından, yani kapaklar üzerinde oluşan trombotik ya da enfekte kitlelerden kopan parçalar da arteriyel dolaşıma karışır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p016",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-24-c0072",
+       "ses": "Son kaynak venöz sistemdir ve buna paradoksal emboli denir.",
+       "ekran": "Son kaynak venöz sistemdir ve buna paradoksal emboli denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0073",
+       "ses": "Venöz trombüs normalde akciğerde takılır.",
+       "ekran": "Venöz trombüs normalde akciğerde takılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0074",
+       "ses": "Ancak kalpte sağdan sola geçişe izin veren bir açıklık varsa, örneğin patent foramen ovale ya da septal defekt, trombüs akciğeri atlayarak sistemik dolaşıma geçer.",
+       "ekran": "Ancak kalpte sağdan sola geçişe izin veren bir açıklık varsa, örneğin patent foramen ovale ya da septal defekt, trombüs akciğeri atlayarak sistemik dolaşıma geçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0075",
+       "ses": "Venöz kaynaklı bir trombüsün sistemik arteriyel embolizasyon yapması beklenmedik olduğu için paradoks adını alır.",
+       "ekran": "Venöz kaynaklı bir trombüsün sistemik arteriyel embolizasyon yapması beklenmedik olduğu için paradoks adını alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0076",
+       "ses": "Kuralı şöyle özetleyin: venöz trombüs akciğere, sol kalp ve arteriyel trombüs sistemik arterlere gider; venöz trombüsün sistemik embolizasyonu yalnız paradoksal emboliyle olur.",
+       "ekran": "Kuralı şöyle özetleyin: venöz trombüs akciğere, sol kalp ve arteriyel trombüs sistemik arterlere gider; venöz trombüsün sistemik embolizasyonu yalnız paradoksal emboliyle olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b06",
+   "baslik": "Sistemik embolilerin yerleştiği bölgeler",
+   "paragraflar": [
+    {
+     "id": "k1-24-p017",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-24-c0077",
+       "ses": "Arteriyel dolaşıma giren emboli kan akımının büyük kısmını alan damarlara sürüklenir.",
+       "ekran": "Arteriyel dolaşıma giren emboli kan akımının büyük kısmını alan damarlara sürüklenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0078",
+       "ses": "Burası önemli: sistemik embolilerin en sık hedefi yaklaşık %75'le alt ekstremite arterleridir; bacak arterlerinin tıkanması akut iskemi ve gangrene yol açabilir.",
+       "ekran": "Burası önemli: sistemik embolilerin en sık hedefi yaklaşık %75'le alt ekstremite arterleridir; bacak arterlerinin tıkanması akut iskemi ve gangrene yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0079",
+       "ses": "İkinci sık hedef yaklaşık %10'la beyindir ve sonuç embolik inmedir.",
+       "ekran": "İkinci sık hedef yaklaşık %10'la beyindir ve sonuç embolik inmedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0080",
+       "ses": "Diğer hedefler bağırsağın mezenterik damarları, böbrekler ve dalaktır.",
+       "ekran": "Diğer hedefler bağırsağın mezenterik damarları, böbrekler ve dalaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0081",
+       "ses": "Bu organların önemli kısmı uç arterle beslenir.",
+       "ekran": "Bu organların önemli kısmı uç arterle beslenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0082",
+       "ses": "Uç arter, kollateral desteği olmayan ve bir bölgeyi tek başına besleyen arterdir.",
+       "ekran": "Uç arter, kollateral desteği olmayan ve bir bölgeyi tek başına besleyen arterdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0083",
+       "ses": "Uç arter tıkandığında alternatif kan yolu olmadığı için enfarktüs gelişimi sıktır.",
+       "ekran": "Uç arter tıkandığında alternatif kan yolu olmadığı için enfarktüs gelişimi sıktır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b07",
+   "baslik": "Yağ embolisi ve yağ embolisi sendromu",
+   "paragraflar": [
+    {
+     "id": "k1-24-p018",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-24-c0084",
+       "ses": "Şimdi trombüs dışı embolilere geçiyoruz.",
+       "ekran": "Şimdi trombüs dışı embolilere geçiyoruz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0085",
+       "ses": "Yağ embolisinde damarı tıkayan kitle pıhtı değil, mikroskobik yağ kürecikleridir.",
+       "ekran": "Yağ embolisinde damarı tıkayan kitle pıhtı değil, mikroskobik yağ kürecikleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0086",
+       "ses": "Burası önemli, bu bilgi çıkmış soruda doğru önerme olarak geldi: yağ embolisinde yumuşak doku ezilme yaralanmaları ve uzun kemik kırıkları sonucu dolaşıma mikroskobik yağ globülleri karışır.",
+       "ekran": "Burası önemli, bu bilgi çıkmış soruda doğru önerme olarak geldi: yağ embolisinde yumuşak doku ezilme yaralanmaları ve uzun kemik kırıkları sonucu dolaşıma mikroskobik yağ globülleri karışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0087",
+       "ses": "Patogenez şöyledir: kırık hattında kemik iliği sinüzoidleri yırtılır, kemik iliğindeki yağ hücrelerinden açığa çıkan mikroskobik yağ kürecikleri bu yırtık sinüzoidlerden venöz dolaşıma karışır ve önce akciğer kapillerlerine ulaşır.",
+       "ekran": "Patogenez şöyledir: kırık hattında kemik iliği sinüzoidleri yırtılır, kemik iliğindeki yağ hücrelerinden açığa çıkan mikroskobik yağ kürecikleri bu yırtık sinüzoidlerden venöz dolaşıma karışır ve önce akciğer kapillerlerine ulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0088",
+       "ses": "Travma sonrası mikroskobik yağ embolileri yaygındır, ancak genellikle klinik olarak sessizdir.",
+       "ekran": "Travma sonrası mikroskobik yağ embolileri yaygındır, ancak genellikle klinik olarak sessizdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p019",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-24-c0089",
+       "ses": "Ciddi olgularda yağ embolisi sendromu adı verilen sistemik bir tablo gelişir.",
+       "ekran": "Ciddi olgularda yağ embolisi sendromu adı verilen sistemik bir tablo gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0090",
+       "ses": "Burası önemli: belirtiler travmadan hemen sonra değil, 1 ila 3 gün sonra ortaya çıkar ve klasik bir triad oluşturur.",
+       "ekran": "Burası önemli: belirtiler travmadan hemen sonra değil, 1 ila 3 gün sonra ortaya çıkar ve klasik bir triad oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0091",
+       "ses": "1.'si solunum yetmezliğidir; dispne ve taşipne görülür, çünkü yağ kürecikleri önce akciğer kapillerlerini tıkar.",
+       "ekran": "1.'si solunum yetmezliğidir; dispne ve taşipne görülür, çünkü yağ kürecikleri önce akciğer kapillerlerini tıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0092",
+       "ses": "2.'si nörolojik belirtilerdir; kürecikler beyin damarlarına ulaşınca konfüzyon ve koma gelişir.",
+       "ekran": "2.'si nörolojik belirtilerdir; kürecikler beyin damarlarına ulaşınca konfüzyon ve koma gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0093",
+       "ses": "3.'sü peteşiyal döküntüdür; deride, özellikle gövde ve konjonktivada iğne başı büyüklüğünde noktasal kanamalar görülür.",
+       "ekran": "3.'sü peteşiyal döküntüdür; deride, özellikle gövde ve konjonktivada iğne başı büyüklüğünde noktasal kanamalar görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0094",
+       "ses": "Kırık sonrası ilk günlerde bu üçlü bir arada görülürse tanı güçlü biçimde desteklenir.",
+       "ekran": "Kırık sonrası ilk günlerde bu üçlü bir arada görülürse tanı güçlü biçimde desteklenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p020",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-24-c0095",
+       "ses": "Sendromda anemi ve trombositopeni de görülür; trombositler yağ küreciklerine yapışıp tüketilir ve bu da peteşilere katkıda bulunur.",
+       "ekran": "Sendromda anemi ve trombositopeni de görülür; trombositler yağ küreciklerine yapışıp tüketilir ve bu da peteşilere katkıda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0096",
+       "ses": "Mekanizma yalnız fiziksel tıkanma değildir.",
+       "ekran": "Mekanizma yalnız fiziksel tıkanma değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0097",
+       "ses": "Bir yanda mekanik damar tıkanması, öbür yanda yağ asidi toksisitesi vardır: kürecik yağlarından açığa çıkan serbest yağ asitleri endoteli doğrudan hasarlar.",
+       "ekran": "Bir yanda mekanik damar tıkanması, öbür yanda yağ asidi toksisitesi vardır: kürecik yağlarından açığa çıkan serbest yağ asitleri endoteli doğrudan hasarlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0098",
+       "ses": "Trombosit aktivasyonu ve nötrofil toplanması da endotelyal hasarı artırır ve damar geçirgenliği bozulur.",
+       "ekran": "Trombosit aktivasyonu ve nötrofil toplanması da endotelyal hasarı artırır ve damar geçirgenliği bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0099",
+       "ses": "Biyokimyasal hasarın gelişmesi zaman aldığı için tablo 1 ila 3 günlük gecikmeyle ortaya çıkar.",
+       "ekran": "Biyokimyasal hasarın gelişmesi zaman aldığı için tablo 1 ila 3 günlük gecikmeyle ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b08",
+   "baslik": "Amniyotik sıvı embolisi",
+   "paragraflar": [
+    {
+     "id": "k1-24-p021",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-24-c0100",
+       "ses": "Amniyotik sıvı embolisi nadir fakat çok ciddi bir doğum komplikasyonudur.",
+       "ekran": "Amniyotik sıvı embolisi nadir fakat çok ciddi bir doğum komplikasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0101",
+       "ses": "İnsidansı yaklaşık 40.000 doğumda birdir, mortalitesi ise %80'e yakındır.",
+       "ekran": "İnsidansı yaklaşık 40.000 doğumda birdir, mortalitesi ise %80'e yakındır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0102",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda en çok tekrarlanan bilgilerden biri: emboli türleri arasında mortalitesi en yüksek olan amniyotik sıvı embolisidir; sistemik ya da pulmoner tromboemboli, yağ embolisi ve hava embolisi değil.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda en çok tekrarlanan bilgilerden biri: emboli türleri arasında mortalitesi en yüksek olan amniyotik sıvı embolisidir; sistemik ya da pulmoner tromboemboli, yağ embolisi ve hava embolisi değil.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0103",
+       "ses": "Yanlış önerme sorularında da sık geldi: amniyotik sıvı embolisi erken postpartum dönemde görülebilen nadir bir doğum komplikasyonudur, ama mortalitesi düşük değil, aksine çok yüksektir.",
+       "ekran": "Yanlış önerme sorularında da sık geldi: amniyotik sıvı embolisi erken postpartum dönemde görülebilen nadir bir doğum komplikasyonudur, ama mortalitesi düşük değil, aksine çok yüksektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p022",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-24-c0104",
+       "ses": "Patogenezde plasenta zarlarında ya da uterin damarlarda bir yırtık oluşur.",
+       "ekran": "Patogenezde plasenta zarlarında ya da uterin damarlarda bir yırtık oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0105",
+       "ses": "Bu açıklıktan amniyotik sıvı ve fetal hücreler anne dolaşımına geçer, venöz yolla anne akciğerlerine ulaşır ve pulmoner mikrosirkülasyona yerleşir.",
+       "ekran": "Bu açıklıktan amniyotik sıvı ve fetal hücreler anne dolaşımına geçer, venöz yolla anne akciğerlerine ulaşır ve pulmoner mikrosirkülasyona yerleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0106",
+       "ses": "Burada emboliyi oluşturan materyal ne trombüs ne de yağdır; fetüse ait hücre ve maddelerdir.",
+       "ekran": "Burada emboliyi oluşturan materyal ne trombüs ne de yağdır; fetüse ait hücre ve maddelerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0107",
+       "ses": "Bu yüzden tablo yalnız mekanik tıkanmayla değil, anne dolaşımının yabancı materyale verdiği şiddetli yanıtla da açıklanır.",
+       "ekran": "Bu yüzden tablo yalnız mekanik tıkanmayla değil, anne dolaşımının yabancı materyale verdiği şiddetli yanıtla da açıklanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p023",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-24-c0108",
+       "ses": "Klinik tablo ani ve dramatiktir.",
+       "ekran": "Klinik tablo ani ve dramatiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0109",
+       "ses": "Anne ani ve ciddi dispne ile siyanoza girer, hipotansiyon ve şok gelişir, nöbet ve koma görülür.",
+       "ekran": "Anne ani ve ciddi dispne ile siyanoza girer, hipotansiyon ve şok gelişir, nöbet ve koma görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0110",
+       "ses": "Sıklıkla yaygın damar içi pıhtılaşma, yani dissemine intravasküler koagülasyon gelişir.",
+       "ekran": "Sıklıkla yaygın damar içi pıhtılaşma, yani dissemine intravasküler koagülasyon gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0111",
+       "ses": "Amniyotik sıvı pıhtılaşmayı tetikleyen maddeler içerir; yaygın mikrotrombüsler oluşurken pıhtılaşma faktörleri tükenir ve kanama eğilimi ortaya çıkar.",
+       "ekran": "Amniyotik sıvı pıhtılaşmayı tetikleyen maddeler içerir; yaygın mikrotrombüsler oluşurken pıhtılaşma faktörleri tükenir ve kanama eğilimi ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p024",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-24-c0112",
+       "ses": "Kesin tanı çoğu zaman otopside, anne akciğer mikrosirkülasyonunda fetal materyalin gösterilmesiyle konur.",
+       "ekran": "Kesin tanı çoğu zaman otopside, anne akciğer mikrosirkülasyonunda fetal materyalin gösterilmesiyle konur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0113",
+       "ses": "Burada 4 şey aranır: fetüs derisinden dökülen fetal skuamöz hücreler; lanugo kılları, yani anne karnındaki bebeğin vücudunu kaplayan ince, yumuşak ve renksiz tüyler; verniks kazeoza yağları, yani bebeğin cildini kaplayan beyaz, kremsi ve mumsu koruyucu tabakanın yağları; ve mukus.",
+       "ekran": "Burada 4 şey aranır: fetüs derisinden dökülen fetal skuamöz hücreler; lanugo kılları, yani anne karnındaki bebeğin vücudunu kaplayan ince, yumuşak ve renksiz tüyler; verniks kazeoza yağları, yani bebeğin cildini kaplayan beyaz, kremsi ve mumsu koruyucu tabakanın yağları; ve mukus.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0114",
+       "ses": "Ek bulgular pulmoner ödem, yaygın alveolar hasar ve yaygın damar içi pıhtılaşmaya bağlı fibrin trombüsleridir.",
+       "ekran": "Ek bulgular pulmoner ödem, yaygın alveolar hasar ve yaygın damar içi pıhtılaşmaya bağlı fibrin trombüsleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0115",
+       "ses": "Bu maddelerin hepsi fetüse ait olduğu için anne akciğerinde görülmeleri tanıyı kanıtlar.",
+       "ekran": "Bu maddelerin hepsi fetüse ait olduğu için anne akciğerinde görülmeleri tanıyı kanıtlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b09",
+   "baslik": "Olağandışı embolilerin mikroskopisi",
+   "paragraflar": [
+    {
+     "id": "k1-24-p025",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-24-c0116",
+       "ses": "Kitapta bu iki trombüs dışı emboli tipi yan yana bir şekilde gösterilir.",
+       "ekran": "Kitapta bu iki trombüs dışı emboli tipi yan yana bir şekilde gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0117",
+       "ses": "Yağ embolisi panelinde akciğerdeki damarın lümenini dolduran emboli, hematopoetik elementlerden, yani kan yapıcı kemik iliği hücrelerinden ve yağ hücrelerinden oluşur.",
+       "ekran": "Yağ embolisi panelinde akciğerdeki damarın lümenini dolduran emboli, hematopoetik elementlerden, yani kan yapıcı kemik iliği hücrelerinden ve yağ hücrelerinden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0118",
+       "ses": "Rutin doku takibinde yağ çözündüğü için yağ hücreleri yuvarlak boşluklar olarak görülür; yağın kendisini göstermek için yağ boyaları gerekir.",
+       "ekran": "Rutin doku takibinde yağ çözündüğü için yağ hücreleri yuvarlak boşluklar olarak görülür; yağın kendisini göstermek için yağ boyaları gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0119",
+       "ses": "Bu kitle bir trombüse bağlıdır, yani yağ embolisi damar içinde pıhtılaşmayı da tetikler.",
+       "ekran": "Bu kitle bir trombüse bağlıdır, yani yağ embolisi damar içinde pıhtılaşmayı da tetikler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0120",
+       "ses": "İlik elemanlarının varlığı embolinin kemik iliğinden geldiğini doğrudan kanıtlar.",
+       "ekran": "İlik elemanlarının varlığı embolinin kemik iliğinden geldiğini doğrudan kanıtlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p026",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-24-c0121",
+       "ses": "Amniyotik sıvı embolisi panelinde iki küçük pulmoner arteriyol, fetal skuamöz hücrelerin katmanlı girdaplarıyla doludur; çevredeki akciğer ödemli ve konjesyonedir.",
+       "ekran": "Amniyotik sıvı embolisi panelinde iki küçük pulmoner arteriyol, fetal skuamöz hücrelerin katmanlı girdaplarıyla doludur; çevredeki akciğer ödemli ve konjesyonedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0122",
+       "ses": "Her iki panelde de emboli küçük akciğer damarlarındadır, çünkü iki materyal de venöz yolla taşınır ve ilk kapiller ağ olan akciğerde takılır.",
+       "ekran": "Her iki panelde de emboli küçük akciğer damarlarındadır, çünkü iki materyal de venöz yolla taşınır ve ilk kapiller ağ olan akciğerde takılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0123",
+       "ses": "Ayırıcı özellik damarın içeriğidir: yağ boşlukları ve ilik elemanları yağ embolisini, katmanlı skuamöz hücre girdapları amniyotik sıvı embolisini gösterir.",
+       "ekran": "Ayırıcı özellik damarın içeriğidir: yağ boşlukları ve ilik elemanları yağ embolisini, katmanlı skuamöz hücre girdapları amniyotik sıvı embolisini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p027",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-24-c0124",
+       "ses": "Bu iki tabloyu şöyle karşılaştırın.",
+       "ekran": "Bu iki tabloyu şöyle karşılaştırın.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0125",
+       "ses": "Yağ embolisi travmaya bağlıdır, gecikmelidir, 1 ila 3 gün sonra triadla ortaya çıkar ve anemi ile trombositopeni eşlik eder.",
+       "ekran": "Yağ embolisi travmaya bağlıdır, gecikmelidir, 1 ila 3 gün sonra triadla ortaya çıkar ve anemi ile trombositopeni eşlik eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0126",
+       "ses": "Amniyotik sıvı embolisi ise doğum sırasında ani başlar, sıklıkla yaygın damar içi pıhtılaşmayla seyreder ve çok ölümcüldür.",
+       "ekran": "Amniyotik sıvı embolisi ise doğum sırasında ani başlar, sıklıkla yaygın damar içi pıhtılaşmayla seyreder ve çok ölümcüldür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b10",
+   "baslik": "Hava embolisi",
+   "paragraflar": [
+    {
+     "id": "k1-24-p028",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-24-c0127",
+       "ses": "Hava ya da gaz embolisinde damarı tıkayan kitle, damar içine giren hava veya gaz kabarcıklarıdır.",
+       "ekran": "Hava ya da gaz embolisinde damarı tıkayan kitle, damar içine giren hava veya gaz kabarcıklarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0128",
+       "ses": "Küçük kabarcıklar birleşerek daha büyük gaz kitleleri oluşturur ve kan akımını tıkayabilir.",
+       "ekran": "Küçük kabarcıklar birleşerek daha büyük gaz kitleleri oluşturur ve kan akımını tıkayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0129",
+       "ses": "Kaynaklar 3 başlıkta toplanır: cerrahi işlemler, özellikle obstetrik ve laparoskopik girişimler; göğüs travması; ve santral venöz kateter komplikasyonları, çünkü kateter takılırken ya da çıkarılırken venöz sisteme hava kaçabilir.",
+       "ekran": "Kaynaklar 3 başlıkta toplanır: cerrahi işlemler, özellikle obstetrik ve laparoskopik girişimler; göğüs travması; ve santral venöz kateter komplikasyonları, çünkü kateter takılırken ya da çıkarılırken venöz sisteme hava kaçabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p029",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-24-c0130",
+       "ses": "Sonuç hacme bağlıdır.",
+       "ekran": "Sonuç hacme bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0131",
+       "ses": "Pulmoner dolaşımda tıkanma hipoksiye yol açar.",
+       "ekran": "Pulmoner dolaşımda tıkanma hipoksiye yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0132",
+       "ses": "Büyük miktarlarda ise kalp boşluklarında biriken hava hava kilidi oluşturur.",
+       "ekran": "Büyük miktarlarda ise kalp boşluklarında biriken hava hava kilidi oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0133",
+       "ses": "Gaz sıkıştırılabilir olduğu için kalp kasıldığında kanı ileri itemez, pompa işlevi durur ve ölüm gelişir.",
+       "ekran": "Gaz sıkıştırılabilir olduğu için kalp kasıldığında kanı ileri itemez, pompa işlevi durur ve ölüm gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0134",
+       "ses": "Yani küçük hacimler hipoksi, büyük hacimler hava kilidi ve ölüm demektir.",
+       "ekran": "Yani küçük hacimler hipoksi, büyük hacimler hava kilidi ve ölüm demektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b11",
+   "baslik": "Dekompresyon hastalığı",
+   "paragraflar": [
+    {
+     "id": "k1-24-p030",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-24-c0135",
+       "ses": "Burası önemli, çıkmış soruda doğru önerme olarak geldi: dekompresyon hastalığı, gaz embolisinin özel bir şeklidir ve atmosfer, yani ortam basıncındaki ani değişikliğe bağlı olarak meydana gelir.",
+       "ekran": "Burası önemli, çıkmış soruda doğru önerme olarak geldi: dekompresyon hastalığı, gaz embolisinin özel bir şeklidir ve atmosfer, yani ortam basıncındaki ani değişikliğe bağlı olarak meydana gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0136",
+       "ses": "Burada gaz dışarıdan damara girmez; kanda ve dokularda zaten çözünmüş olan gaz, basınç düşünce kabarcık haline gelir.",
+       "ekran": "Burada gaz dışarıdan damara girmez; kanda ve dokularda zaten çözünmüş olan gaz, basınç düşünce kabarcık haline gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0137",
+       "ses": "Tipik örnek, derin deniz dalışı sonrası hızlı yükselmedir.",
+       "ekran": "Tipik örnek, derin deniz dalışı sonrası hızlı yükselmedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0138",
+       "ses": "Basınç altında solunan azot, kanda ve dokularda normalden fazla çözünür.",
+       "ekran": "Basınç altında solunan azot, kanda ve dokularda normalden fazla çözünür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0139",
+       "ses": "Basınç yavaş düşerse azot akciğerlerden kademeli olarak atılır.",
+       "ekran": "Basınç yavaş düşerse azot akciğerlerden kademeli olarak atılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0140",
+       "ses": "Basınç hızlı düşerse azot çözeltiden çıkar ve kan ile dokularda kabarcıklar oluşur.",
+       "ekran": "Basınç hızlı düşerse azot çözeltiden çıkar ve kan ile dokularda kabarcıklar oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0141",
+       "ses": "Kabarcıklar damarları tıkayarak iskemi yaratır, dokuların içinde de mekanik hasar yapar.",
+       "ekran": "Kabarcıklar damarları tıkayarak iskemi yaratır, dokuların içinde de mekanik hasar yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0142",
+       "ses": "Gazlı içeceğin kapağı aniden açıldığında kabarcık oluşması bu sürecin günlük hayattaki karşılığıdır.",
+       "ekran": "Gazlı içeceğin kapağı aniden açıldığında kabarcık oluşması bu sürecin günlük hayattaki karşılığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p031",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-24-c0143",
+       "ses": "Akut formun 3 görünümü vardır.",
+       "ekran": "Akut formun 3 görünümü vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0144",
+       "ses": "Bends, yani kıvrılmalar, eklemlerde ve kaslarda şiddetli ağrıdır; hasta ağrı nedeniyle kıvrılarak durur.",
+       "ekran": "Bends, yani kıvrılmalar, eklemlerde ve kaslarda şiddetli ağrıdır; hasta ağrı nedeniyle kıvrılarak durur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0145",
+       "ses": "Akciğer tutulumunda ödem, kanama, fokal atelektazi ya da amfizem gelişir ve şiddetli dispne ortaya çıkar; bu tabloya chokes, yani akciğer dekompresyon hastalığı denir.",
+       "ekran": "Akciğer tutulumunda ödem, kanama, fokal atelektazi ya da amfizem gelişir ve şiddetli dispne ortaya çıkar; bu tabloya chokes, yani akciğer dekompresyon hastalığı denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0146",
+       "ses": "Beyin tutulumunda ise nörolojik defisit ve koma gelişebilir.",
+       "ekran": "Beyin tutulumunda ise nörolojik defisit ve koma gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0147",
+       "ses": "Kısaca bends eklem ve kas ağrısı, chokes akciğer tutulumu ve dispnedir.",
+       "ekran": "Kısaca bends eklem ve kas ağrısı, chokes akciğer tutulumu ve dispnedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p032",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-24-c0148",
+       "ses": "Dekompresyon hastalığının kronik formu Keson hastalığıdır; adını basınçlı su altı çalışma odalarında, yani kesonlarda çalışan işçilerde görülmesinden alır.",
+       "ekran": "Dekompresyon hastalığının kronik formu Keson hastalığıdır; adını basınçlı su altı çalışma odalarında, yani kesonlarda çalışan işçilerde görülmesinden alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0149",
+       "ses": "Burada tekrarlayan gaz embolileri vardır; her basınç değişiminde küçük kabarcıklar damarları kısa süreli tıkar.",
+       "ekran": "Burada tekrarlayan gaz embolileri vardır; her basınç değişiminde küçük kabarcıklar damarları kısa süreli tıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0150",
+       "ses": "Hedef doku kemiktir, özellikle uzun kemik epifizleri, ve buralarda iskemik nekroz gelişir.",
+       "ekran": "Hedef doku kemiktir, özellikle uzun kemik epifizleri, ve buralarda iskemik nekroz gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0151",
+       "ses": "Epifizlerin kollateral dolaşımı sınırlı olduğu için tekrarlayan tıkanmalara dayanıksızdırlar; eklem yüzeyine yakın kemiğin ölümü zamanla, örneğin femur ve humerus başında, eklem hasarına ve ağrıya yol açar.",
+       "ekran": "Epifizlerin kollateral dolaşımı sınırlı olduğu için tekrarlayan tıkanmalara dayanıksızdırlar; eklem yüzeyine yakın kemiğin ölümü zamanla, örneğin femur ve humerus başında, eklem hasarına ve ağrıya yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0152",
+       "ses": "Akut form dakikalar ve saatler içinde, kronik form ise yıllar içinde sinsi biçimde gelişir.",
+       "ekran": "Akut form dakikalar ve saatler içinde, kronik form ise yıllar içinde sinsi biçimde gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p033",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-24-c0153",
+       "ses": "Tedavi, hastalığa yol açan fizik ilkesinin tersine çevrilmesine dayanır ve 2 aşamalıdır.",
+       "ekran": "Tedavi, hastalığa yol açan fizik ilkesinin tersine çevrilmesine dayanır ve 2 aşamalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0154",
+       "ses": "Önce hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; artan basınç kabarcıklardaki gazı yeniden çözeltide eritir.",
+       "ekran": "Önce hasta yüksek basınç odasında tekrar yüksek basınca maruz bırakılır; artan basınç kabarcıklardaki gazı yeniden çözeltide eritir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0155",
+       "ses": "Ardından basınç yavaşça azaltılır.",
+       "ekran": "Ardından basınç yavaşça azaltılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0156",
+       "ses": "Amaç kabarcıkların tekrar oluşmasını önlemek ve gazın kademeli olarak emilip akciğerler yoluyla atılmasını sağlamaktır.",
+       "ekran": "Amaç kabarcıkların tekrar oluşmasını önlemek ve gazın kademeli olarak emilip akciğerler yoluyla atılmasını sağlamaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0157",
+       "ses": "Kritik nokta ikinci aşamadır: basınç yeniden hızla düşürülürse aynı süreç baştan yaşanır.",
+       "ekran": "Kritik nokta ikinci aşamadır: basınç yeniden hızla düşürülürse aynı süreç baştan yaşanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0158",
+       "ses": "Böylece emboli tiplerini tamamladık: katı olarak trombüs, sıvı olarak yağ ve amniyotik sıvı, gaz olarak hava ve azot.",
+       "ekran": "Böylece emboli tiplerini tamamladık: katı olarak trombüs, sıvı olarak yağ ve amniyotik sıvı, gaz olarak hava ve azot.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b12",
+   "baslik": "Enfarktüs: tanım ve nedenler",
+   "paragraflar": [
+    {
+     "id": "k1-24-p034",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-24-c0159",
+       "ses": "Enfarktüs, bir dokunun veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır.",
+       "ekran": "Enfarktüs, bir dokunun veya organın kan akımının ani kesilmesine bağlı iskemik nekroz alanıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0160",
+       "ses": "Tanımda ani kesilme vurgusu önemlidir; akımın yavaşça azalması değil, aniden durması belirleyicidir.",
+       "ekran": "Tanımda ani kesilme vurgusu önemlidir; akımın yavaşça azalması değil, aniden durması belirleyicidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0161",
+       "ses": "Kalp ve beyin enfarktüsleri en sık ölüm nedenleri arasındadır.",
+       "ekran": "Kalp ve beyin enfarktüsleri en sık ölüm nedenleri arasındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0162",
+       "ses": "Diğer önemli örnekler pulmoner enfarktüs, bağırsak enfarktüsü ve diyabette ekstremite gangrenidir.",
+       "ekran": "Diğer önemli örnekler pulmoner enfarktüs, bağırsak enfarktüsü ve diyabette ekstremite gangrenidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0163",
+       "ses": "Gangren, damar hastalığına bağlı iskemik nekrozun büyük bir doku bölümünü etkilediği klinik bir terimdir.",
+       "ekran": "Gangren, damar hastalığına bağlı iskemik nekrozun büyük bir doku bölümünü etkilediği klinik bir terimdir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p035",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-24-c0164",
+       "ses": "Burası önemli: enfarktüsün en sık nedenleri arteriyel tromboz ve arteriyel embolidir.",
+       "ekran": "Burası önemli: enfarktüsün en sık nedenleri arteriyel tromboz ve arteriyel embolidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0165",
+       "ses": "Arteriyel tromboz, örneğin ateroskleroz zemininde damarda yerinde oluşan trombüstür; arteriyel emboli ise uzaktan gelen trombüs ya da başka bir kitlenin artere yerleşmesidir.",
+       "ekran": "Arteriyel tromboz, örneğin ateroskleroz zemininde damarda yerinde oluşan trombüstür; arteriyel emboli ise uzaktan gelen trombüs ya da başka bir kitlenin artere yerleşmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0166",
+       "ses": "Daha nadir nedenler şunlardır: vazospazm, yani damar duvarındaki düz kasın şiddetli ve uzun kasılması; plak içi kanama ile aterom genişlemesi; tümör, dissekan aort anevrizması ya da ödem gibi dıştan bası.",
+       "ekran": "Daha nadir nedenler şunlardır: vazospazm, yani damar duvarındaki düz kasın şiddetli ve uzun kasılması; plak içi kanama ile aterom genişlemesi; tümör, dissekan aort anevrizması ya da ödem gibi dıştan bası.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p036",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-24-c0167",
+       "ses": "Mekanik nedenler de vardır.",
+       "ekran": "Mekanik nedenler de vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0168",
+       "ses": "Vasküler torsiyonda organ kendi sapı etrafında döner ve damarlar bükülür; klasik örnekleri spermatik kordun döndüğü testis torsiyonu ve bağırsak ansının mezenteri etrafında döndüğü volvulustur.",
+       "ekran": "Vasküler torsiyonda organ kendi sapı etrafında döner ve damarlar bükülür; klasik örnekleri spermatik kordun döndüğü testis torsiyonu ve bağırsak ansının mezenteri etrafında döndüğü volvulustur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0169",
+       "ses": "Fıtık kesesinde sıkışmada keseye giren ans boyun kısmında sıkışır ve damarlar ezilir.",
+       "ekran": "Fıtık kesesinde sıkışmada keseye giren ans boyun kısmında sıkışır ve damarlar ezilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0170",
+       "ses": "Travmatik vasküler rüptürde ise yırtılan damar distal dokuyu kansız bırakır.",
+       "ekran": "Travmatik vasküler rüptürde ise yırtılan damar distal dokuyu kansız bırakır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0171",
+       "ses": "Torsiyon ve sıkışmada ince duvarlı venler kalın duvarlı arterlerden önce kapanır; kan dokuya girmeye devam eder ama çıkamaz, doku önce kanla dolar, sonra nekroza uğrar.",
+       "ekran": "Torsiyon ve sıkışmada ince duvarlı venler kalın duvarlı arterlerden önce kapanır; kan dokuya girmeye devam eder ama çıkamaz, doku önce kanla dolar, sonra nekroza uğrar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0172",
+       "ses": "Bu bilgi kırmızı enfarktta yeniden karşımıza çıkacak.",
+       "ekran": "Bu bilgi kırmızı enfarktta yeniden karşımıza çıkacak.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b13",
+   "baslik": "Enfarktüs sınıflaması: kırmızı ve beyaz enfarkt",
+   "paragraflar": [
+    {
+     "id": "k1-24-p037",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-24-c0173",
+       "ses": "Enfarktüsler 2 bağımsız ölçüte göre sınıflandırılır.",
+       "ekran": "Enfarktüsler 2 bağımsız ölçüte göre sınıflandırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0174",
+       "ses": "Rengine göre kırmızı, yani hemorajik enfarktüs ve beyaz, yani anemik enfarktüs vardır.",
+       "ekran": "Rengine göre kırmızı, yani hemorajik enfarktüs ve beyaz, yani anemik enfarktüs vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0175",
+       "ses": "Enfeksiyon varlığına göre ise septik ve aseptik enfarktüs ayrılır; enfarktüslerin çoğu aseptiktir.",
+       "ekran": "Enfeksiyon varlığına göre ise septik ve aseptik enfarktüs ayrılır; enfarktüslerin çoğu aseptiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0176",
+       "ses": "Bir enfarktüs her iki eksende birden tanımlanabilir, örneğin aseptik beyaz enfarkt.",
+       "ekran": "Bir enfarktüs her iki eksende birden tanımlanabilir, örneğin aseptik beyaz enfarkt.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0177",
+       "ses": "Renk, enfarkt alanına ne kadar kan girebildiğini yansıtır.",
+       "ekran": "Renk, enfarkt alanına ne kadar kan girebildiğini yansıtır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p038",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-24-c0178",
+       "ses": "Kırmızı enfarktüsün 4 klasik koşulu vardır.",
+       "ekran": "Kırmızı enfarktüsün 4 klasik koşulu vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0179",
+       "ses": "1.'si venöz tıkanıklıktır, örneğin testis torsiyonu; kan dokuya girer ama çıkamaz.",
+       "ekran": "1.'si venöz tıkanıklıktır, örneğin testis torsiyonu; kan dokuya girer ama çıkamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0180",
+       "ses": "2.'si çift dolaşımlı dokulardır, yani akciğer ve ince bağırsak; tıkanan damarın yerine ikinci dolaşımdan gelen kan nekrotik alana dolar.",
+       "ekran": "2.'si çift dolaşımlı dokulardır, yani akciğer ve ince bağırsak; tıkanan damarın yerine ikinci dolaşımdan gelen kan nekrotik alana dolar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0181",
+       "ses": "3.'sü önceden konjesyonu olan dokulardır.",
+       "ekran": "3.'sü önceden konjesyonu olan dokulardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0182",
+       "ses": "4.'sü tıkanmış bir alanda reperfüzyondur; tıkanma açıldığında kan, duvarı hasar görmüş damarlardan nekroz alanına sızar.",
+       "ekran": "4.'sü tıkanmış bir alanda reperfüzyondur; tıkanma açıldığında kan, duvarı hasar görmüş damarlardan nekroz alanına sızar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0183",
+       "ses": "Kırmızı enfarktta dokuda yaygın hemoraji vardır ve sıklıkla gevşek yapılı dokularda görülür, çünkü gevşek doku kanın enfarkt alanında toplanmasına izin verir.",
+       "ekran": "Kırmızı enfarktta dokuda yaygın hemoraji vardır ve sıklıkla gevşek yapılı dokularda görülür, çünkü gevşek doku kanın enfarkt alanında toplanmasına izin verir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p039",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-24-c0184",
+       "ses": "Beyaz enfarktüs, nekroz alanına kanın giremediği koşullarda gelişir.",
+       "ekran": "Beyaz enfarktüs, nekroz alanına kanın giremediği koşullarda gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0185",
+       "ses": "Burası önemli, çıkmış soruda soruldu: tipik olarak beyaz, yani anemik enfarktüs görülen organlar kalp, dalak ve böbrektir; akciğer bu listede yoktur.",
+       "ekran": "Burası önemli, çıkmış soruda soruldu: tipik olarak beyaz, yani anemik enfarktüs görülen organlar kalp, dalak ve böbrektir; akciğer bu listede yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0186",
+       "ses": "Bunlar katı, uç arter dolaşımlı organlardır.",
+       "ekran": "Bunlar katı, uç arter dolaşımlı organlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0187",
+       "ses": "Uç arter tıkanınca alternatif kan kaynağı olmadığı için nekroz alanına kan girmez, katı doku yapısı da komşu kılcallardan kan sızmasını sınırlar.",
+       "ekran": "Uç arter tıkanınca alternatif kan kaynağı olmadığı için nekroz alanına kan girmez, katı doku yapısı da komşu kılcallardan kan sızmasını sınırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0188",
+       "ses": "Beyaz enfarktlar sınırları belirgin, soluk alanlardır ve genellikle kama şeklindedir: tabanı organ yüzeyine, ucu tıkalı damara yöneliktir.",
+       "ekran": "Beyaz enfarktlar sınırları belirgin, soluk alanlardır ve genellikle kama şeklindedir: tabanı organ yüzeyine, ucu tıkalı damara yöneliktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0189",
+       "ses": "Bu şekil, arter dallandıkça beslediği alanın yüzeye doğru genişlemesini yansıtır.",
+       "ekran": "Bu şekil, arter dallandıkça beslediği alanın yüzeye doğru genişlemesini yansıtır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p040",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-24-c0190",
+       "ses": "Tuzağı açıkça söyleyeyim: akciğer enfarktı kırmızı, böbrek, dalak ve kalp enfarktı beyazdır; testis torsiyonu ise venöz tıkanma olduğu için kırmızı enfarkt yapar.",
+       "ekran": "Tuzağı açıkça söyleyeyim: akciğer enfarktı kırmızı, böbrek, dalak ve kalp enfarktı beyazdır; testis torsiyonu ise venöz tıkanma olduğu için kırmızı enfarkt yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0191",
+       "ses": "Kitaptaki şekil bu farkı yan yana gösterir: akciğerde hemorajik, kabaca kama şeklinde koyu kırmızı bir enfarkt, dalakta ise keskin sınırlarla ayrılmış soluk bir enfarkt görülür.",
+       "ekran": "Kitaptaki şekil bu farkı yan yana gösterir: akciğerde hemorajik, kabaca kama şeklinde koyu kırmızı bir enfarkt, dalakta ise keskin sınırlarla ayrılmış soluk bir enfarkt görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0192",
+       "ses": "Akciğer çift dolaşımlı ve gevşek olduğu için nekroz alanı kanla dolmuştur, dalak katı ve uç arterli olduğu için dolmamıştır.",
+       "ekran": "Akciğer çift dolaşımlı ve gevşek olduğu için nekroz alanı kanla dolmuştur, dalak katı ve uç arterli olduğu için dolmamıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b14",
+   "baslik": "Enfarktüs morfolojisi",
+   "paragraflar": [
+    {
+     "id": "k1-24-p041",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-24-c0193",
+       "ses": "Enfarktüsün görünümü zamanla değişir.",
+       "ekran": "Enfarktüsün görünümü zamanla değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0194",
+       "ses": "Makroskopik olarak erken dönemde alan kızarık ve hafif sınır belirsizdir; kanlanma ve ödem nedeniyle çevreden zor ayrılır.",
+       "ekran": "Makroskopik olarak erken dönemde alan kızarık ve hafif sınır belirsizdir; kanlanma ve ödem nedeniyle çevreden zor ayrılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0195",
+       "ses": "Zamanla sınırlar belirginleşir ve anemik enfarktlar soluk ve sert hale gelir.",
+       "ekran": "Zamanla sınırlar belirginleşir ve anemik enfarktlar soluk ve sert hale gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0196",
+       "ses": "Mikroskopik olarak çoğu organda tipik koagülatif nekroz görülür; hücre sınırları ve doku iskeleti bir süre korunur, hücreler adeta hayalet gibi görünür.",
+       "ekran": "Mikroskopik olarak çoğu organda tipik koagülatif nekroz görülür; hücre sınırları ve doku iskeleti bir süre korunur, hücreler adeta hayalet gibi görünür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0197",
+       "ses": "Burası önemli, klasik bir sınav tuzağıdır: beyinde enfarkt her zaman sıvılaşma nekrozu yapar.",
+       "ekran": "Burası önemli, klasik bir sınav tuzağıdır: beyinde enfarkt her zaman sıvılaşma nekrozu yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0198",
+       "ses": "Beyin dokusu lipitten zengin ve destek stroması zayıf olduğu için nekrotik alan erir ve sıvılaşır.",
+       "ekran": "Beyin dokusu lipitten zengin ve destek stroması zayıf olduğu için nekrotik alan erir ve sıvılaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0199",
+       "ses": "Yani enfarktın klasik nekrozu koagülatiftir, beyin bunun istisnasıdır.",
+       "ekran": "Yani enfarktın klasik nekrozu koagülatiftir, beyin bunun istisnasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b15",
+   "baslik": "Enfarktüs iyileşmesi ve septik enfarktüs",
+   "paragraflar": [
+    {
+     "id": "k1-24-p042",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-24-c0200",
+       "ses": "Enfarktüs alanı ölü bir dokudur ve onarım canlı kalan kenardan merkeze doğru ilerler.",
+       "ekran": "Enfarktüs alanı ölü bir dokudur ve onarım canlı kalan kenardan merkeze doğru ilerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0201",
+       "ses": "Kenarlarda inflamatuar yanıt saatler içinde başlar ve 1 ila 2 gün içinde belirginleşir.",
+       "ekran": "Kenarlarda inflamatuar yanıt saatler içinde başlar ve 1 ila 2 gün içinde belirginleşir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0202",
+       "ses": "Zamanla makrofajlar nekrotik dokuyu temizler, ölü hücre artıklarını fagosite eder.",
+       "ekran": "Zamanla makrofajlar nekrotik dokuyu temizler, ölü hücre artıklarını fagosite eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0203",
+       "ses": "Ardından granülasyon dokusu, yani yeni kılcal damarlar ve fibroblastlardan oluşan genç bağ dokusu temizlenen alanı doldurur.",
+       "ekran": "Ardından granülasyon dokusu, yani yeni kılcal damarlar ve fibroblastlardan oluşan genç bağ dokusu temizlenen alanı doldurur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0204",
+       "ses": "Bu sıralama enfarktın yaşını tahmin etmede de kullanılır: kenarda yalnız inflamasyon erken, makrofaj ve granülasyon dokusu daha geç bir evreyi gösterir.",
+       "ekran": "Bu sıralama enfarktın yaşını tahmin etmede de kullanılır: kenarda yalnız inflamasyon erken, makrofaj ve granülasyon dokusu daha geç bir evreyi gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p043",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-24-c0205",
+       "ses": "İyileşmenin son ürünü, dokunun destek iskeletinin korunup korunmamasına bağlıdır.",
+       "ekran": "İyileşmenin son ürünü, dokunun destek iskeletinin korunup korunmamasına bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0206",
+       "ses": "Çoğu organda sonuç skar dokusudur, çünkü nekroz parankimle birlikte stromayı da yıkar ve granülasyon dokusu olgunlaşarak fibrotik skara dönüşür.",
+       "ekran": "Çoğu organda sonuç skar dokusudur, çünkü nekroz parankimle birlikte stromayı da yıkar ve granülasyon dokusu olgunlaşarak fibrotik skara dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0207",
+       "ses": "Bazı durumlarda, altta yatan stromal iskelet korunmuşsa, sınırlı parankim rejenerasyonu mümkündür; kalan iskelet yeni hücrelerin düzenli yerleşmesine rehberlik eder.",
+       "ekran": "Bazı durumlarda, altta yatan stromal iskelet korunmuşsa, sınırlı parankim rejenerasyonu mümkündür; kalan iskelet yeni hücrelerin düzenli yerleşmesine rehberlik eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0208",
+       "ses": "Kitaptaki eski böbrek enfarktüsü örneğinde enfarkt alanı büyük bir fibrotik skarla yer değiştirmiştir; skarın büzüşmesi organ yüzeyinde çöküntü yapar.",
+       "ekran": "Kitaptaki eski böbrek enfarktüsü örneğinde enfarkt alanı büyük bir fibrotik skarla yer değiştirmiştir; skarın büzüşmesi organ yüzeyinde çöküntü yapar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p044",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-24-c0209",
+       "ses": "Septik enfarktüs, iskemik nekroz alanına mikroorganizmaların eklendiği enfarktüstür ve 2 yolla oluşur.",
+       "ekran": "Septik enfarktüs, iskemik nekroz alanına mikroorganizmaların eklendiği enfarktüstür ve 2 yolla oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0210",
+       "ses": "1.'si enfekte tromboembolidir; klasik örnek, enfektif endokardit vejetasyonundan kopan parçanın hem damarı tıkaması hem de mikroorganizmayı taşımasıdır.",
+       "ekran": "1.'si enfekte tromboembolidir; klasik örnek, enfektif endokardit vejetasyonundan kopan parçanın hem damarı tıkaması hem de mikroorganizmayı taşımasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0211",
+       "ses": "2.'si, başlangıçta aseptik olan nekrotik alana sonradan mikrobiyal yerleşimdir.",
+       "ekran": "2.'si, başlangıçta aseptik olan nekrotik alana sonradan mikrobiyal yerleşimdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0212",
+       "ses": "Septik enfarktta enfarkt alanı apseye dönüşebilir, inflamasyon daha yoğundur ve iyileşme organizasyon ve fibrozisle olur.",
+       "ekran": "Septik enfarktta enfarkt alanı apseye dönüşebilir, inflamasyon daha yoğundur ve iyileşme organizasyon ve fibrozisle olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b16",
+   "baslik": "Enfarkt gelişimini etkileyen faktörler",
+   "paragraflar": [
+    {
+     "id": "k1-24-p045",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-24-c0213",
+       "ses": "Aynı tıkanma bir organda geniş enfarkt yaparken başka bir organda hiç hasar bırakmayabilir.",
+       "ekran": "Aynı tıkanma bir organda geniş enfarkt yaparken başka bir organda hiç hasar bırakmayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0214",
+       "ses": "Bunu 3 faktör belirler.",
+       "ekran": "Bunu 3 faktör belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0215",
+       "ses": "1.'si vasküler beslenmenin anatomisidir.",
+       "ekran": "1.'si vasküler beslenmenin anatomisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0216",
+       "ses": "Çift dolaşımlı organlarda, yani pulmoner ve bronşiyal arterle beslenen akciğerde ve hepatik arter ile portal venle beslenen karaciğerde, bir kaynak tıkansa da diğeri dokuyu beslemeye devam eder ve enfarkt riski azalır.",
+       "ekran": "Çift dolaşımlı organlarda, yani pulmoner ve bronşiyal arterle beslenen akciğerde ve hepatik arter ile portal venle beslenen karaciğerde, bir kaynak tıkansa da diğeri dokuyu beslemeye devam eder ve enfarkt riski azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0217",
+       "ses": "Uç arter dolaşımlı organlarda, yani böbrek ve dalakta, her dal belirli bir bölgeyi tek başına besler ve enfarkt riski artar.",
+       "ekran": "Uç arter dolaşımlı organlarda, yani böbrek ve dalakta, her dal belirli bir bölgeyi tek başına besler ve enfarkt riski artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0218",
+       "ses": "Bu faktör daha önce gördüğümüz iki bilgiyi birleştirir: orta boy pulmoner embolinin çoğu zaman enfarkt yapmaması ve sistemik embolinin böbrek ve dalakta sıklıkla enfarkt bırakması.",
+       "ekran": "Bu faktör daha önce gördüğümüz iki bilgiyi birleştirir: orta boy pulmoner embolinin çoğu zaman enfarkt yapmaması ve sistemik embolinin böbrek ve dalakta sıklıkla enfarkt bırakması.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p046",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-24-c0219",
+       "ses": "İkinci faktör tıkanma hızıdır.",
+       "ekran": "İkinci faktör tıkanma hızıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0220",
+       "ses": "Damar lümeni aylar ya da yıllar içinde yavaşça daralırsa, örneğin ilerleyen bir aterosklerotik plakta, komşu damarlar arasındaki küçük bağlantılar genişler ve kollateral dolaşım gelişir; damar tamamen kapansa bile doku beslenebilir ve enfarkt riski azalır.",
+       "ekran": "Damar lümeni aylar ya da yıllar içinde yavaşça daralırsa, örneğin ilerleyen bir aterosklerotik plakta, komşu damarlar arasındaki küçük bağlantılar genişler ve kollateral dolaşım gelişir; damar tamamen kapansa bile doku beslenebilir ve enfarkt riski azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0221",
+       "ses": "Ani tıkanmada, örneğin emboli ya da ani trombozda, kollateral gelişimine zaman yoktur ve enfarkt riski artar.",
+       "ekran": "Ani tıkanmada, örneğin emboli ya da ani trombozda, kollateral gelişimine zaman yoktur ve enfarkt riski artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0222",
+       "ses": "Enfarktüs tanımındaki ani kesilme vurgusunun nedeni budur.",
+       "ekran": "Enfarktüs tanımındaki ani kesilme vurgusunun nedeni budur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p047",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-24-c0223",
+       "ses": "Üçüncü faktör dokunun hipoksiye duyarlılığıdır.",
+       "ekran": "Üçüncü faktör dokunun hipoksiye duyarlılığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0224",
+       "ses": "Burası önemli: nöronlar 3 ila 4 dakikada geri dönüşümsüz hasar görür, miyokard 20 ila 30 dakikada, fibroblastlar ise saatlerce hipoksiyi tolere edebilir.",
+       "ekran": "Burası önemli: nöronlar 3 ila 4 dakikada geri dönüşümsüz hasar görür, miyokard 20 ila 30 dakikada, fibroblastlar ise saatlerce hipoksiyi tolere edebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0225",
+       "ses": "Yüksek enerji gereksinimi ve depo yokluğu nöronu en duyarlı hücre yapar, düşük metabolik hızları da fibroblastları dayanıklı kılar.",
+       "ekran": "Yüksek enerji gereksinimi ve depo yokluğu nöronu en duyarlı hücre yapar, düşük metabolik hızları da fibroblastları dayanıklı kılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0226",
+       "ses": "Bu yüzden beyin ve kalp iskemisinde müdahale için zaman penceresi çok dardır.",
+       "ekran": "Bu yüzden beyin ve kalp iskemisinde müdahale için zaman penceresi çok dardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0227",
+       "ses": "En yüksek enfarkt riski, uç arterli bir organda ani bir tıkanmanın hipoksiye duyarlı bir dokuyu etkilemesidir.",
+       "ekran": "En yüksek enfarkt riski, uç arterli bir organda ani bir tıkanmanın hipoksiye duyarlı bir dokuyu etkilemesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b17",
+   "baslik": "Şok: tanım ve tipleri",
+   "paragraflar": [
+    {
+     "id": "k1-24-p048",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-24-c0228",
+       "ses": "Enfarktüs lokal bir dolaşım kaybıyken, şok tüm vücudun dolaşımını etkiler.",
+       "ekran": "Enfarktüs lokal bir dolaşım kaybıyken, şok tüm vücudun dolaşımını etkiler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0229",
+       "ses": "Şok, azalmış kalp debisi ya da etkili dolaşımdaki kan hacminin azalması sonucu doku perfüzyonunun bozulması ve generalize hücresel hipoksi ile karakterize bir tablodur.",
+       "ekran": "Şok, azalmış kalp debisi ya da etkili dolaşımdaki kan hacminin azalması sonucu doku perfüzyonunun bozulması ve generalize hücresel hipoksi ile karakterize bir tablodur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0230",
+       "ses": "Başlangıçta hücre hasarı geri dönüşümlü olabilir; dolaşım düzeltilirse hücreler toparlanır.",
+       "ekran": "Başlangıçta hücre hasarı geri dönüşümlü olabilir; dolaşım düzeltilirse hücreler toparlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0231",
+       "ses": "Şok uzadığında ise geri dönüşümsüz doku hasarı ve ölüm gelişir.",
+       "ekran": "Şok uzadığında ise geri dönüşümsüz doku hasarı ve ölüm gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0232",
+       "ses": "Hipoksi tüm vücutta olduğu için en duyarlı organlar, beyin ve kalp, ilk etkilenenlerdendir.",
+       "ekran": "Hipoksi tüm vücutta olduğu için en duyarlı organlar, beyin ve kalp, ilk etkilenenlerdendir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p049",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-24-c0233",
+       "ses": "Burası önemli, şok tiplerini mekanizmalarıyla birlikte bilmelisiniz.",
+       "ekran": "Burası önemli, şok tiplerini mekanizmalarıyla birlikte bilmelisiniz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0234",
+       "ses": "Kardiyojenik şokta sorun miyokardın pompa yetmezliğidir.",
+       "ekran": "Kardiyojenik şokta sorun miyokardın pompa yetmezliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0235",
+       "ses": "Klinik örnekleri miyokard enfarktüsü, ventrikül rüptürü, ventriküler aritmiler, kardiyak tamponad ve masif pulmoner embolidir.",
+       "ekran": "Klinik örnekleri miyokard enfarktüsü, ventrikül rüptürü, ventriküler aritmiler, kardiyak tamponad ve masif pulmoner embolidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0236",
+       "ses": "3 mekanizma vardır: miyokard enfarktüsünde olduğu gibi intrinsik miyokard hasarı; perikard tamponadında olduğu gibi kalp üzerine dış bası, yani perikard boşluğundaki sıvının kalbin dolmasını engellemesi; ve masif pulmoner embolide olduğu gibi ventrikül çıkış yolunda obstrüksiyon.",
+       "ekran": "3 mekanizma vardır: miyokard enfarktüsünde olduğu gibi intrinsik miyokard hasarı; perikard tamponadında olduğu gibi kalp üzerine dış bası, yani perikard boşluğundaki sıvının kalbin dolmasını engellemesi; ve masif pulmoner embolide olduğu gibi ventrikül çıkış yolunda obstrüksiyon.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0237",
+       "ses": "Bu son mekanizma emboli ile şok arasındaki doğrudan bağlantıdır: eyer emboli çıkış yolunu tıkayarak kardiyojenik şok tablosu yaratır.",
+       "ekran": "Bu son mekanizma emboli ile şok arasındaki doğrudan bağlantıdır: eyer emboli çıkış yolunu tıkayarak kardiyojenik şok tablosu yaratır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p050",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-24-c0238",
+       "ses": "Hipovolemik şokta kalp sağlamdır; sorun damar içindeki kan veya plazma hacminin yetersizliğidir.",
+       "ekran": "Hipovolemik şokta kalp sağlamdır; sorun damar içindeki kan veya plazma hacminin yetersizliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0239",
+       "ses": "Nedenleri masif kanama, yani hemoraji ve su ya da plazma kaybıdır; kusma, ishal ve ciddi yanıklar bu gruptadır, yanık yüzeyinden yoğun plazma kaybı olur.",
+       "ekran": "Nedenleri masif kanama, yani hemoraji ve su ya da plazma kaybıdır; kusma, ishal ve ciddi yanıklar bu gruptadır, yanık yüzeyinden yoğun plazma kaybı olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0240",
+       "ses": "Dolaşımdaki efektif kan hacmi azalınca kalbe dönen kan azalır, kalp dolamadığı için debi düşer ve doku perfüzyonu bozulur.",
+       "ekran": "Dolaşımdaki efektif kan hacmi azalınca kalbe dönen kan azalır, kalp dolamadığı için debi düşer ve doku perfüzyonu bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0241",
+       "ses": "Burada debinin düşmesi kalbin hastalığından değil, pompalanacak kanın yetersizliğinden kaynaklanır; kardiyojenik şoktan temel farkı budur.",
+       "ekran": "Burada debinin düşmesi kalbin hastalığından değil, pompalanacak kanın yetersizliğinden kaynaklanır; kardiyojenik şoktan temel farkı budur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p051",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-24-c0242",
+       "ses": "Septik şokta sorun ne kalpte ne de kan kaybındadır; konağın enfeksiyona verdiği yanıttadır.",
+       "ekran": "Septik şokta sorun ne kalpte ne de kan kaybındadır; konağın enfeksiyona verdiği yanıttadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0243",
+       "ses": "Neden çoğunlukla mikrobiyal enfeksiyonlardır ve tabloya şiddetli sistemik inflamatuar yanıt sendromu eşlik eder.",
+       "ekran": "Neden çoğunlukla mikrobiyal enfeksiyonlardır ve tabloya şiddetli sistemik inflamatuar yanıt sendromu eşlik eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0244",
+       "ses": "Klinik örnekleri yaygın mikrobiyal enfeksiyonlar, bakteriyel ve fungal sepsis ile süperantijenlerdir; süperantijen örneği toksik şok sendromudur.",
+       "ekran": "Klinik örnekleri yaygın mikrobiyal enfeksiyonlar, bakteriyel ve fungal sepsis ile süperantijenlerdir; süperantijen örneği toksik şok sendromudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0245",
+       "ses": "Patojenik mekanizmalar periferik vazodilatasyon ve kan göllenmesi, endotel aktivasyonu ve hasarı, lökosit aracılı doku hasarı, yaygın damar içi pıhtılaşma ve TNF ile interlökin 1 gibi sitokin kaskadlarının aşırı aktivasyonudur.",
+       "ekran": "Patojenik mekanizmalar periferik vazodilatasyon ve kan göllenmesi, endotel aktivasyonu ve hasarı, lökosit aracılı doku hasarı, yaygın damar içi pıhtılaşma ve TNF ile interlökin 1 gibi sitokin kaskadlarının aşırı aktivasyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p052",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k1-24-c0246",
+       "ses": "Daha nadir 2 şok tipi de vardır.",
+       "ekran": "Daha nadir 2 şok tipi de vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0247",
+       "ses": "Nörojenik şok anestezi ya da omurilik yaralanmasına bağlıdır; mekanizması generalize damar tonusu kaybıdır, damarları kasılı tutan sempatik etki kaybolur, damar yatağı genişler ve kan periferde birikir.",
+       "ekran": "Nörojenik şok anestezi ya da omurilik yaralanmasına bağlıdır; mekanizması generalize damar tonusu kaybıdır, damarları kasılı tutan sempatik etki kaybolur, damar yatağı genişler ve kan periferde birikir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0248",
+       "ses": "Anafilaktik şok immünoglobulin E aracılı aşırı duyarlılığa bağlıdır; yaygın vazodilatasyon ve damar permeabilitesinde artış görülür.",
+       "ekran": "Anafilaktik şok immünoglobulin E aracılı aşırı duyarlılığa bağlıdır; yaygın vazodilatasyon ve damar permeabilitesinde artış görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0249",
+       "ses": "Bu iki tipte kan hacmi başlangıçta normaldir, ama genişleyen damar yatağı bu hacmi göreceli olarak yetersiz bırakır.",
+       "ekran": "Bu iki tipte kan hacmi başlangıçta normaldir, ama genişleyen damar yatağı bu hacmi göreceli olarak yetersiz bırakır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0250",
+       "ses": "Kısacası kalp kaynaklıysa kardiyojenik, hacim kaynaklıysa hipovolemik, damar yatağının genişlemesiyle seyrediyorsa septik, nörojenik ya da anafilaktik şok düşünürüz.",
+       "ekran": "Kısacası kalp kaynaklıysa kardiyojenik, hacim kaynaklıysa hipovolemik, damar yatağının genişlemesiyle seyrediyorsa septik, nörojenik ya da anafilaktik şok düşünürüz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b18",
+   "baslik": "Septik şok: epidemiyoloji ve temel mekanizma",
+   "paragraflar": [
+    {
+     "id": "k1-24-p053",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-24-c0251",
+       "ses": "Septik şok, hastane yatışlarının yaklaşık %2'si ile ilişkilidir ve yoğun bakım ünitesi hastalarının yaklaşık yarısını etkileyebilir.",
+       "ekran": "Septik şok, hastane yatışlarının yaklaşık %2'si ile ilişkilidir ve yoğun bakım ünitesi hastalarının yaklaşık yarısını etkileyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0252",
+       "ses": "Amerika Birleşik Devletlerinde yıllık olgu sayısı yaklaşık 750.000'dir.",
+       "ekran": "Amerika Birleşik Devletlerinde yıllık olgu sayısı yaklaşık 750.000'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0253",
+       "ses": "Burası önemli: septik şokta en sık etken gram pozitif bakterilerdir; ardından gram negatif bakteriler ve mantarlar gelir.",
+       "ekran": "Burası önemli: septik şokta en sık etken gram pozitif bakterilerdir; ardından gram negatif bakteriler ve mantarlar gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0254",
+       "ses": "Gram negatif bakteriler klasik olarak sepsisle özdeşleştirilse de en sık etken gram pozitiflerdir; bu ayrım çeldirici olarak sık kullanılır.",
+       "ekran": "Gram negatif bakteriler klasik olarak sepsisle özdeşleştirilse de en sık etken gram pozitiflerdir; bu ayrım çeldirici olarak sık kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0255",
+       "ses": "Mortalite %20 ile 30 civarındadır ve tedavideki gelişmelere rağmen hâlâ yüksektir.",
+       "ekran": "Mortalite %20 ile 30 civarındadır ve tedavideki gelişmelere rağmen hâlâ yüksektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p054",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-24-c0256",
+       "ses": "Septik şokta dokuyu asıl hasarlayan mikroorganizmanın kendisi değil, konağın ona verdiği yanıttır.",
+       "ekran": "Septik şokta dokuyu asıl hasarlayan mikroorganizmanın kendisi değil, konağın ona verdiği yanıttır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0257",
+       "ses": "Temel olay, mikroorganizmalara karşı doğuştan ve adaptif immün yanıtın kontrolsüz sistemik aktivasyonudur; normalde lokal kalması gereken inflamatuar yanıt tüm vücuda yayılır.",
+       "ekran": "Temel olay, mikroorganizmalara karşı doğuştan ve adaptif immün yanıtın kontrolsüz sistemik aktivasyonudur; normalde lokal kalması gereken inflamatuar yanıt tüm vücuda yayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0258",
+       "ses": "Sonuçları yaygın vazodilatasyon, kapiller sızıntı ve interstisyel ödem, venöz kan göllenmesi, doku hipoperfüzyonu ve hipoksi ile çoklu organ disfonksiyonudur.",
+       "ekran": "Sonuçları yaygın vazodilatasyon, kapiller sızıntı ve interstisyel ödem, venöz kan göllenmesi, doku hipoperfüzyonu ve hipoksi ile çoklu organ disfonksiyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0259",
+       "ses": "Bu sonuçlar birbirini ağırlaştırır: vazodilatasyon ve sızıntı efektif hacmi azaltır, göllenme kalbe dönüşü düşürür, hipoperfüzyon organları yetmezliğe sürükler.",
+       "ekran": "Bu sonuçlar birbirini ağırlaştırır: vazodilatasyon ve sızıntı efektif hacmi azaltır, göllenme kalbe dönüşü düşürür, hipoperfüzyon organları yetmezliğe sürükler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p055",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-24-c0260",
+       "ses": "Burası önemli, sepsis patogenezi çıkmış soruda böyle soruldu: konak yanıtının düzensizleşmesiyle sitokin fırtınası gelişir.",
+       "ekran": "Burası önemli, sepsis patogenezi çıkmış soruda böyle soruldu: konak yanıtının düzensizleşmesiyle sitokin fırtınası gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0261",
+       "ses": "Aynı sorudaki yanlış önermelerin doğru biçimlerini de bilin.",
+       "ekran": "Aynı sorudaki yanlış önermelerin doğru biçimlerini de bilin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0262",
+       "ses": "Lipopolisakkarit, yani endotoksin, gram pozitif değil gram negatif bakterilerin hücre duvarında bulunur.",
+       "ekran": "Lipopolisakkarit, yani endotoksin, gram pozitif değil gram negatif bakterilerin hücre duvarında bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0263",
+       "ses": "Sepsiste yalnız proinflamatuar yanıt gelişmez, antiinflamatuar yanıt da görülür.",
+       "ekran": "Sepsiste yalnız proinflamatuar yanıt gelişmez, antiinflamatuar yanıt da görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0264",
+       "ses": "Sepsisteki yaygın damar içi pıhtılaşmada trombosit sayısı artmaz, tüketildiği için azalır.",
+       "ekran": "Sepsisteki yaygın damar içi pıhtılaşmada trombosit sayısı artmaz, tüketildiği için azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0265",
+       "ses": "Sepsis tanısı için kan kültüründe üreme olması da zorunlu değildir.",
+       "ekran": "Sepsis tanısı için kan kültüründe üreme olması da zorunlu değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p056",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-24-c0266",
+       "ses": "Sepsisle ilgili bir başka çıkmış soruda 4 önermenin 4'ü de doğruydu.",
+       "ekran": "Sepsisle ilgili bir başka çıkmış soruda 4 önermenin 4'ü de doğruydu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0267",
+       "ses": "Burası önemli: sepsis, enfeksiyon sonucu sistemik inflamatuar yanıt sendromu bulgularından 2 veya daha fazlasının bulunmasıdır.",
+       "ekran": "Burası önemli: sepsis, enfeksiyon sonucu sistemik inflamatuar yanıt sendromu bulgularından 2 veya daha fazlasının bulunmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0268",
+       "ses": "Septik şok, yeterli sıvı tedavisine rağmen hipotansiyonla birlikte perfüzyon bozukluğu belirtilerinin devam etmesidir.",
+       "ekran": "Septik şok, yeterli sıvı tedavisine rağmen hipotansiyonla birlikte perfüzyon bozukluğu belirtilerinin devam etmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0269",
+       "ses": "Sepsiste merkezi sinir sistemi tutulumu olmadan bilinç değişikliği gelişebilir.",
+       "ekran": "Sepsiste merkezi sinir sistemi tutulumu olmadan bilinç değişikliği gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0270",
+       "ses": "Ve sepsiste laktat ile glukoz yükselir; bunların mekanizmasını birazdan metabolik bozukluklarda göreceğiz.",
+       "ekran": "Ve sepsiste laktat ile glukoz yükselir; bunların mekanizmasını birazdan metabolik bozukluklarda göreceğiz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b19",
+   "baslik": "Septik şokta inflamatuar yanıt ve endotel hasarı",
+   "paragraflar": [
+    {
+     "id": "k1-24-p057",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-24-c0271",
+       "ses": "Septik şokun ilk basamağı mikrobiyal ürünlerin tanınmasıdır.",
+       "ekran": "Septik şokun ilk basamağı mikrobiyal ürünlerin tanınmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0272",
+       "ses": "Mikroorganizmalara ait yapılar Toll benzeri reseptörler, G proteinli reseptörler ve C tipi lektin reseptörleri ile algılanır.",
+       "ekran": "Mikroorganizmalara ait yapılar Toll benzeri reseptörler, G proteinli reseptörler ve C tipi lektin reseptörleri ile algılanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0273",
+       "ses": "Yanıt veren hücreler makrofajlar, nötrofiller, dendritik hücreler ve endotel hücreleridir.",
+       "ekran": "Yanıt veren hücreler makrofajlar, nötrofiller, dendritik hücreler ve endotel hücreleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0274",
+       "ses": "Endotelin bu listede olması önemlidir: endotel pasif bir döşeme değil, mikrobiyal ürünleri doğrudan algılayıp yanıt veren aktif bir hücredir.",
+       "ekran": "Endotelin bu listede olması önemlidir: endotel pasif bir döşeme değil, mikrobiyal ürünleri doğrudan algılayıp yanıt veren aktif bir hücredir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p058",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-24-c0275",
+       "ses": "Aktive hücreler çok sayıda mediyatör salgılar: TNF, interlökin 1, interlökin 6, interlökin 12 ve interlökin 18 gibi proinflamatuar sitokinler; Tip 1 interferonlar; prostaglandinler ve lökotrienler gibi lipid mediyatörler; ve reaktif oksijen türleri.",
+       "ekran": "Aktive hücreler çok sayıda mediyatör salgılar: TNF, interlökin 1, interlökin 6, interlökin 12 ve interlökin 18 gibi proinflamatuar sitokinler; Tip 1 interferonlar; prostaglandinler ve lökotrienler gibi lipid mediyatörler; ve reaktif oksijen türleri.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0276",
+       "ses": "TNF ve interlökin 1 tablonun merkezindeki sitokinlerdir.",
+       "ekran": "TNF ve interlökin 1 tablonun merkezindeki sitokinlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0277",
+       "ses": "Kompleman sistemi de devreye girer: C3a mast hücresini aktive eder, C5a kemotaktiktir ve lökositleri çeker, C3b opsonindir ve mikroorganizmayı fagositoz için işaretler, C5b ile C9 arasındaki bileşenler ise membran atak kompleksini oluşturur.",
+       "ekran": "Kompleman sistemi de devreye girer: C3a mast hücresini aktive eder, C5a kemotaktiktir ve lökositleri çeker, C3b opsonindir ve mikroorganizmayı fagositoz için işaretler, C5b ile C9 arasındaki bileşenler ise membran atak kompleksini oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0278",
+       "ses": "Bu mediyatörler birlikte ateş, vazodilatasyon, geçirgenlik artışı ve lökosit aktivasyonu yapar.",
+       "ekran": "Bu mediyatörler birlikte ateş, vazodilatasyon, geçirgenlik artışı ve lökosit aktivasyonu yapar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p059",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-24-c0279",
+       "ses": "Proinflamatuar sitokinlerin en önemli hedeflerinden biri endoteldir.",
+       "ekran": "Proinflamatuar sitokinlerin en önemli hedeflerinden biri endoteldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0280",
+       "ses": "Aktive endotelde yapışma molekülleri artar ve lökositler endotele yapışır.",
+       "ekran": "Aktive endotelde yapışma molekülleri artar ve lökositler endotele yapışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0281",
+       "ses": "Sıkı bağlantılar zayıflar, vasküler geçirgenlik artar ve protein açısından zengin ödem sıvısı damar dışında birikir.",
+       "ekran": "Sıkı bağlantılar zayıflar, vasküler geçirgenlik artar ve protein açısından zengin ödem sıvısı damar dışında birikir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0282",
+       "ses": "Ödem, kılcal damar ile hücre arasındaki mesafeyi artırır ve doku perfüzyonu bozulur.",
+       "ekran": "Ödem, kılcal damar ile hücre arasındaki mesafeyi artırır ve doku perfüzyonu bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0283",
+       "ses": "Burası önemli, bir klinik paradoks: septik şokta intravenöz sıvı tedavisi bazen ödemi artırarak durumu kötüleştirebilir, çünkü geçirgen damarlardan verilen sıvının bir bölümü damar dışına kaçar.",
+       "ekran": "Burası önemli, bir klinik paradoks: septik şokta intravenöz sıvı tedavisi bazen ödemi artırarak durumu kötüleştirebilir, çünkü geçirgen damarlardan verilen sıvının bir bölümü damar dışına kaçar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b20",
+   "baslik": "Septik şokta pıhtılaşma bozukluğu",
+   "paragraflar": [
+    {
+     "id": "k1-24-p060",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-24-c0284",
+       "ses": "Septik şokta pıhtılaşma dengesi belirgin biçimde pıhtılaşma lehine kayar ve bu kayma 3 koldan olur.",
+       "ekran": "Septik şokta pıhtılaşma dengesi belirgin biçimde pıhtılaşma lehine kayar ve bu kayma 3 koldan olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0285",
+       "ses": "Burası önemli: 1.'si, pıhtılaşmayı başlatan doku faktörü artar; aktive monosit ve endotel yüzeyinde ifade edilir.",
+       "ekran": "Burası önemli: 1.'si, pıhtılaşmayı başlatan doku faktörü artar; aktive monosit ve endotel yüzeyinde ifade edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0286",
+       "ses": "2.'si, doğal antikoagülanlar azalır: doku faktörü yolu inhibitörü, trombomodulin ve protein C reseptörü düşer.",
+       "ekran": "2.'si, doğal antikoagülanlar azalır: doku faktörü yolu inhibitörü, trombomodulin ve protein C reseptörü düşer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0287",
+       "ses": "3.'sü, fibrinoliz baskılanır, çünkü plazminojen aktivatör inhibitörü 1 artar ve oluşan pıhtının çözülmesi engellenir.",
+       "ekran": "3.'sü, fibrinoliz baskılanır, çünkü plazminojen aktivatör inhibitörü 1 artar ve oluşan pıhtının çözülmesi engellenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0288",
+       "ses": "Sonuçta hem daha fazla pıhtı oluşur hem de oluşan pıhtı çözülemez.",
+       "ekran": "Sonuçta hem daha fazla pıhtı oluşur hem de oluşan pıhtı çözülemez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p061",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-24-c0289",
+       "ses": "Bu prokoagülan dengenin sonucu yaygın damar içi pıhtılaşmadır ve aynı anda hem tromboz hem kanama ile seyreden paradoksal bir tablodur.",
+       "ekran": "Bu prokoagülan dengenin sonucu yaygın damar içi pıhtılaşmadır ve aynı anda hem tromboz hem kanama ile seyreden paradoksal bir tablodur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0290",
+       "ses": "Tromboz kolunda mikrodamarlarda fibrin açısından zengin trombüsler oluşur, küçük damarları tıkar ve doku perfüzyonu daha da bozulur.",
+       "ekran": "Tromboz kolunda mikrodamarlarda fibrin açısından zengin trombüsler oluşur, küçük damarları tıkar ve doku perfüzyonu daha da bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0291",
+       "ses": "Kanama kolunda ise yaygın pıhtılaşma sırasında pıhtılaşma faktörleri ve trombositler tüketilir ve kanama eğilimi ortaya çıkar.",
+       "ekran": "Kanama kolunda ise yaygın pıhtılaşma sırasında pıhtılaşma faktörleri ve trombositler tüketilir ve kanama eğilimi ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0292",
+       "ses": "Buna tüketim koagülopatisi denir.",
+       "ekran": "Buna tüketim koagülopatisi denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0293",
+       "ses": "Amniyotik sıvı embolisinde gördüğümüz yaygın damar içi pıhtılaşma da aynı mantıkla gelişir.",
+       "ekran": "Amniyotik sıvı embolisinde gördüğümüz yaygın damar içi pıhtılaşma da aynı mantıkla gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b21",
+   "baslik": "Septik şokta metabolik bozukluklar ve organ disfonksiyonu",
+   "paragraflar": [
+    {
+     "id": "k1-24-p062",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-24-c0294",
+       "ses": "Septik şok ara metabolizmayı da bozar.",
+       "ekran": "Septik şok ara metabolizmayı da bozar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0295",
+       "ses": "Sitokinler ve stres hormonları, yani glukagon, glukokortikoidler ve katekolaminler, glukoneogenezi artırır.",
+       "ekran": "Sitokinler ve stres hormonları, yani glukagon, glukokortikoidler ve katekolaminler, glukoneogenezi artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0296",
+       "ses": "Aynı zamanda kas ve yağ dokusunda GLUT4, yani glukoz taşıyıcı 4 ifadesi azalır ve glukoz hücre içine alınamaz.",
+       "ekran": "Aynı zamanda kas ve yağ dokusunda GLUT4, yani glukoz taşıyıcı 4 ifadesi azalır ve glukoz hücre içine alınamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0297",
+       "ses": "Burası önemli: sonuç insülin direnci ve hiperglisemidir.",
+       "ekran": "Burası önemli: sonuç insülin direnci ve hiperglisemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0298",
+       "ses": "Kanda glukoz bol olduğu halde dokular onu kullanamaz.",
+       "ekran": "Kanda glukoz bol olduğu halde dokular onu kullanamaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p063",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-24-c0299",
+       "ses": "Adrenal yanıt 2 evrelidir.",
+       "ekran": "Adrenal yanıt 2 evrelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0300",
+       "ses": "Başlangıçta glukokortikoid üretimi artar, sonra adrenal yetersizlik gelişebilir.",
+       "ekran": "Başlangıçta glukokortikoid üretimi artar, sonra adrenal yetersizlik gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0301",
+       "ses": "Bunun ağır örneği Waterhouse-Friderichsen sendromudur; sepsis seyrinde iki taraflı adrenal kanamaya bağlı akut adrenal yetmezliktir.",
+       "ekran": "Bunun ağır örneği Waterhouse-Friderichsen sendromudur; sepsis seyrinde iki taraflı adrenal kanamaya bağlı akut adrenal yetmezliktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0302",
+       "ses": "Bir de laktik asidoz vardır: hücresel hipoksi nedeniyle oksidatif fosforilasyon bozulur, hücre enerjiyi oksijensiz yoldan sağlamaya çalışır, anaerobik glikoliz artar ve son ürün olan laktat birikir.",
+       "ekran": "Bir de laktik asidoz vardır: hücresel hipoksi nedeniyle oksidatif fosforilasyon bozulur, hücre enerjiyi oksijensiz yoldan sağlamaya çalışır, anaerobik glikoliz artar ve son ürün olan laktat birikir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0303",
+       "ses": "Laktat yüksekliği doku hipoperfüzyonunun biyokimyasal göstergesidir.",
+       "ekran": "Laktat yüksekliği doku hipoperfüzyonunun biyokimyasal göstergesidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p064",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-24-c0304",
+       "ses": "Tüm bu mekanizmalar organ disfonksiyonunda buluşur.",
+       "ekran": "Tüm bu mekanizmalar organ disfonksiyonunda buluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0305",
+       "ses": "Düşen kan basıncı, ödem ve tromboz birleşir ve doku oksijenlenmesi azalır.",
+       "ekran": "Düşen kan basıncı, ödem ve tromboz birleşir ve doku oksijenlenmesi azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0306",
+       "ses": "Hücresel hipoksi mitokondriyal hasar yapar ve enerji üretimi bozulur.",
+       "ekran": "Hücresel hipoksi mitokondriyal hasar yapar ve enerji üretimi bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0307",
+       "ses": "Böbrekte akut tübüler nekroz gelişir ve oligüri ya da anüri ortaya çıkar.",
+       "ekran": "Böbrekte akut tübüler nekroz gelişir ve oligüri ya da anüri ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0308",
+       "ses": "Karaciğerde hepatik disfonksiyon, akciğerde akut solunum sıkıntısı sendromu, kalpte miyokard depresyonu görülür.",
+       "ekran": "Karaciğerde hepatik disfonksiyon, akciğerde akut solunum sıkıntısı sendromu, kalpte miyokard depresyonu görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0309",
+       "ses": "Kalbin etkilenmesi bir kısır döngü yaratır; septik şok kardiyojenik bir bileşen kazanır.",
+       "ekran": "Kalbin etkilenmesi bir kısır döngü yaratır; septik şok kardiyojenik bir bileşen kazanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0310",
+       "ses": "Sonuç çoklu organ yetmezliği ve ölümdür.",
+       "ekran": "Sonuç çoklu organ yetmezliği ve ölümdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p065",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k1-24-c0311",
+       "ses": "Kitaptaki şema septik şokun başlıca patojenik yollarını tek bir tabloda birleştirir.",
+       "ekran": "Kitaptaki şema septik şokun başlıca patojenik yollarını tek bir tabloda birleştirir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0312",
+       "ses": "Mikroorganizmalara ait patojenle ilişkili moleküler paternler, Toll benzeri reseptörler aracılığıyla nötrofil ve monositleri aktive eder.",
+       "ekran": "Mikroorganizmalara ait patojenle ilişkili moleküler paternler, Toll benzeri reseptörler aracılığıyla nötrofil ve monositleri aktive eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0313",
+       "ses": "Proinflamatuar kolda sitokinler, reaktif oksijen türleri, prostaglandinler, trombosit aktive edici faktör, ateş ve kompleman aktivasyonu yer alır.",
+       "ekran": "Proinflamatuar kolda sitokinler, reaktif oksijen türleri, prostaglandinler, trombosit aktive edici faktör, ateş ve kompleman aktivasyonu yer alır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0314",
+       "ses": "Prokoagülan kolda faktör XII ve doku faktörü artar; doku faktörü yolu inhibitörü, trombomodulin, protein C ve endotel protein C reseptörü azalır, plazminojen aktivatör inhibitörü 1 artar ve mikrovasküler tromboz gelişir.",
+       "ekran": "Prokoagülan kolda faktör XII ve doku faktörü artar; doku faktörü yolu inhibitörü, trombomodulin, protein C ve endotel protein C reseptörü azalır, plazminojen aktivatör inhibitörü 1 artar ve mikrovasküler tromboz gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0315",
+       "ses": "Endotel aktivasyonu damar sızıntısı ve ödeme yol açar.",
+       "ekran": "Endotel aktivasyonu damar sızıntısı ve ödeme yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0316",
+       "ses": "Nitrik oksit damar düz kasını gevşeterek hipotansiyon yapar.",
+       "ekran": "Nitrik oksit damar düz kasını gevşeterek hipotansiyon yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0317",
+       "ses": "Metabolik kolda insülin direnci ve hiperglisemi vardır.",
+       "ekran": "Metabolik kolda insülin direnci ve hiperglisemi vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0318",
+       "ses": "Kontrol edilmezse bu kolların hepsi çoklu organ yetmezliğinde birleşir.",
+       "ekran": "Kontrol edilmezse bu kolların hepsi çoklu organ yetmezliğinde birleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b22",
+   "baslik": "Şokun evreleri",
+   "paragraflar": [
+    {
+     "id": "k1-24-p066",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-24-c0319",
+       "ses": "Şok, tipi ne olursa olsun 3 evreden geçer.",
+       "ekran": "Şok, tipi ne olursa olsun 3 evreden geçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0320",
+       "ses": "Burası önemli, evreleri sırasıyla bilin.",
+       "ekran": "Burası önemli, evreleri sırasıyla bilin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0321",
+       "ses": "Birinci evre ilerlemeyen, yani kompansasyonlu evredir.",
+       "ekran": "Birinci evre ilerlemeyen, yani kompansasyonlu evredir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0322",
+       "ses": "Baroreseptör refleksleri kan basıncındaki düşüşü algılar; katekolaminler, antidiüretik hormon ve renin anjiyotensin aldosteron sistemi aktive olur.",
+       "ekran": "Baroreseptör refleksleri kan basıncındaki düşüşü algılar; katekolaminler, antidiüretik hormon ve renin anjiyotensin aldosteron sistemi aktive olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0323",
+       "ses": "Sonuçta taşikardi gelişir ve kalp debisi korunmaya çalışılır; periferik vazokonstriksiyon deri ve kaslardan kanı çekerek beyin ve kalbe yönlendirir; böbrekte sıvı tutulumu damar içi hacmi artırır.",
+       "ekran": "Sonuçta taşikardi gelişir ve kalp debisi korunmaya çalışılır; periferik vazokonstriksiyon deri ve kaslardan kanı çekerek beyin ve kalbe yönlendirir; böbrekte sıvı tutulumu damar içi hacmi artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0324",
+       "ses": "Bu evrede hücre hasarı geri dönüşümlüdür.",
+       "ekran": "Bu evrede hücre hasarı geri dönüşümlüdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p067",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-24-c0325",
+       "ses": "İkinci evre ilerleyici evredir.",
+       "ekran": "İkinci evre ilerleyici evredir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0326",
+       "ses": "Kompansasyon yetersiz kalır, doku hipoperfüzyonu artar ve hipoksik hücreler anaerobik glikolize geçtiği için laktik asidoz gelişir.",
+       "ekran": "Kompansasyon yetersiz kalır, doku hipoperfüzyonu artar ve hipoksik hücreler anaerobik glikolize geçtiği için laktik asidoz gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0327",
+       "ses": "Asidoz ortamında arteriyoller kasılma yeteneğini kaybeder, yani vazomotor yanıtlar bozulur.",
+       "ekran": "Asidoz ortamında arteriyoller kasılma yeteneğini kaybeder, yani vazomotor yanıtlar bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0328",
+       "ses": "Genişleyen arteriyollerden giren kan mikrosirkülasyonda göllenir, kalbe dönüş azalır ve debi daha da düşer.",
+       "ekran": "Genişleyen arteriyollerden giren kan mikrosirkülasyonda göllenir, kalbe dönüş azalır ve debi daha da düşer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0329",
+       "ses": "Laktik asidoz ve mikrosirkülasyonda göllenme bu evrenin imzasıdır.",
+       "ekran": "Laktik asidoz ve mikrosirkülasyonda göllenme bu evrenin imzasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0330",
+       "ses": "Üçüncü evre geri dönüşümsüz evredir.",
+       "ekran": "Üçüncü evre geri dönüşümsüz evredir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0331",
+       "ses": "Yaygın hücre ve doku hasarı gelişir, organ fonksiyonları toparlanamaz ve dolaşım düzeltilse bile ölüm kaçınılmazdır.",
+       "ekran": "Yaygın hücre ve doku hasarı gelişir, organ fonksiyonları toparlanamaz ve dolaşım düzeltilse bile ölüm kaçınılmazdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0332",
+       "ses": "İlerleyici evre kısır döngülerin başladığı, geri dönüşümsüz evre ise tedavinin artık sonucu değiştiremediği noktadır.",
+       "ekran": "İlerleyici evre kısır döngülerin başladığı, geri dönüşümsüz evre ise tedavinin artık sonucu değiştiremediği noktadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b23",
+   "baslik": "Şokta morfoloji, klinik ve prognoz",
+   "paragraflar": [
+    {
+     "id": "k1-24-p068",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-24-c0333",
+       "ses": "Şokta doku hasarının 2 temel nedeni hipoksi ve mikrotrombozdur.",
+       "ekran": "Şokta doku hasarının 2 temel nedeni hipoksi ve mikrotrombozdur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0334",
+       "ses": "En sık etkilenen organlar beyin, kalp, böbrekler, adrenal bezler ve gastrointestinal sistemdir.",
+       "ekran": "En sık etkilenen organlar beyin, kalp, böbrekler, adrenal bezler ve gastrointestinal sistemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0335",
+       "ses": "Burası önemli, şokun morfolojik bulguları şunlardır: glomerüllerde fibrin trombüsleri, yani mikrotrombozun böbrekteki izi; adrenal kortekste lipid tükenmesi, çünkü kortikal hücreler depoladıkları lipidi steroid hormon yapımında hızla kullanır ve bu artmış stres yanıtının göstergesidir; beyin ve kalpte diffüz hipoksik değişiklikler; ve akciğerde şok akciğeri denen akut solunum sıkıntısı sendromu tablosu.",
+       "ekran": "Burası önemli, şokun morfolojik bulguları şunlardır: glomerüllerde fibrin trombüsleri, yani mikrotrombozun böbrekteki izi; adrenal kortekste lipid tükenmesi, çünkü kortikal hücreler depoladıkları lipidi steroid hormon yapımında hızla kullanır ve bu artmış stres yanıtının göstergesidir; beyin ve kalpte diffüz hipoksik değişiklikler; ve akciğerde şok akciğeri denen akut solunum sıkıntısı sendromu tablosu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0336",
+       "ses": "Akut solunum sıkıntısı sendromu ani gelişen, sıvı birikmesi ve ağır iltihaplanma ile karakterize, yaşamı tehdit eden ciddi bir solunum yetmezliğidir.",
+       "ekran": "Akut solunum sıkıntısı sendromu ani gelişen, sıvı birikmesi ve ağır iltihaplanma ile karakterize, yaşamı tehdit eden ciddi bir solunum yetmezliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p069",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-24-c0337",
+       "ses": "Klinik görünüm tipe ve evreye göre değişir.",
+       "ekran": "Klinik görünüm tipe ve evreye göre değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0338",
+       "ses": "Hipovolemik ve kardiyojenik şokta hipotansiyon, zayıf ve hızlı nabız, taşipne ve soğuk, nemli, soluk ya da siyanozlu cilt görülür; kompansatuvar periferik vazokonstriksiyon deriden kanı çeker.",
+       "ekran": "Hipovolemik ve kardiyojenik şokta hipotansiyon, zayıf ve hızlı nabız, taşipne ve soğuk, nemli, soluk ya da siyanozlu cilt görülür; kompansatuvar periferik vazokonstriksiyon deriden kanı çeker.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0339",
+       "ses": "Burası önemli, klasik bir tuzaktır: septik şokun erken döneminde periferik vazodilatasyon nedeniyle cilt sıcak ve kızarık olabilir.",
+       "ekran": "Burası önemli, klasik bir tuzaktır: septik şokun erken döneminde periferik vazodilatasyon nedeniyle cilt sıcak ve kızarık olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0340",
+       "ses": "Yani şok eşittir soğuk soluk cilt ezberi septik şokun erken fazında geçerli değildir.",
+       "ekran": "Yani şok eşittir soğuk soluk cilt ezberi septik şokun erken fazında geçerli değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0341",
+       "ses": "İlerleyen fazda ise oligüri, asidoz, konfüzyon ve koma gelişir.",
+       "ekran": "İlerleyen fazda ise oligüri, asidoz, konfüzyon ve koma gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p070",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-24-c0342",
+       "ses": "Prognoz da tipe göre çok farklıdır.",
+       "ekran": "Prognoz da tipe göre çok farklıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0343",
+       "ses": "Genç ve sağlıklı bireylerde hipovolemik şok uygun tedaviyle %90'ın üzerinde sağkalıma sahiptir, çünkü kayıp hacim yerine konduğunda altta yatan organ hastalığı yoktur.",
+       "ekran": "Genç ve sağlıklı bireylerde hipovolemik şok uygun tedaviyle %90'ın üzerinde sağkalıma sahiptir, çünkü kayıp hacim yerine konduğunda altta yatan organ hastalığı yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0344",
+       "ses": "Kardiyojenik ve septik şokta ise en iyi bakıma rağmen mortalite yüksektir; kardiyojenik şokta pompanın kendisi hasarlıdır, septik şokta kontrolsüz immün yanıt ve çoklu organ disfonksiyonu tabloya eşlik eder.",
+       "ekran": "Kardiyojenik ve septik şokta ise en iyi bakıma rağmen mortalite yüksektir; kardiyojenik şokta pompanın kendisi hasarlıdır, septik şokta kontrolsüz immün yanıt ve çoklu organ disfonksiyonu tabloya eşlik eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0345",
+       "ses": "Prognozu belirleyen etkenler nedendir, yani miyokard enfarktüsü, sepsis ya da travma; şokun süresi ve şiddeti; eşlik eden hastalıklar; ve tedaviye yanıt hızıdır.",
+       "ekran": "Prognozu belirleyen etkenler nedendir, yani miyokard enfarktüsü, sepsis ya da travma; şokun süresi ve şiddeti; eşlik eden hastalıklar; ve tedaviye yanıt hızıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0346",
+       "ses": "Kompansasyonlu evrede başlanan tedavi, geri dönüşümsüz evreye geçişi önleyerek prognozu belirgin biçimde iyileştirir.",
+       "ekran": "Kompansasyonlu evrede başlanan tedavi, geri dönüşümsüz evreye geçişi önleyerek prognozu belirgin biçimde iyileştirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-24-b24",
+   "baslik": "Özet ve hemodinamik bozukluklar bloğu",
+   "paragraflar": [
+    {
+     "id": "k1-24-p071",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-24-c0347",
+       "ses": "Özetle, emboli, özellikle tromboemboli, pulmoner ve sistemik emboli biçiminde, enfarktüs, hipoksi ve ani ölümün başlıca nedenlerindendir.",
+       "ekran": "Özetle, emboli, özellikle tromboemboli, pulmoner ve sistemik emboli biçiminde, enfarktüs, hipoksi ve ani ölümün başlıca nedenlerindendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0348",
+       "ses": "Enfarktüs arteriyel tıkanmaya bağlı iskemik nekroz alanıdır ve renk, dolaşım tipi ve enfeksiyon durumuna göre sınıflandırılır.",
+       "ekran": "Enfarktüs arteriyel tıkanmaya bağlı iskemik nekroz alanıdır ve renk, dolaşım tipi ve enfeksiyon durumuna göre sınıflandırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0349",
+       "ses": "Şok dolaşım yetmezliğine bağlı genelleşmiş hipoksidir; farklı tipleri olsa da hepsi çoklu organ yetmezliğiyle sonuçlanabilir.",
+       "ekran": "Şok dolaşım yetmezliğine bağlı genelleşmiş hipoksidir; farklı tipleri olsa da hepsi çoklu organ yetmezliğiyle sonuçlanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-24-p072",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-24-c0350",
+       "ses": "Ödem, hiperemi, konjesyon, kanama, tromboz, emboli, enfarktüs ve şok kardiyovasküler patolojinin çekirdek konularıdır.",
+       "ekran": "Ödem, hiperemi, konjesyon, kanama, tromboz, emboli, enfarktüs ve şok kardiyovasküler patolojinin çekirdek konularıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0351",
+       "ses": "Klinikte miyokard enfarktüsü, inme, pulmoner emboli ve sepsis gibi sık görülen durumların patofizyolojik temelini oluştururlar.",
+       "ekran": "Klinikte miyokard enfarktüsü, inme, pulmoner emboli ve sepsis gibi sık görülen durumların patofizyolojik temelini oluştururlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-24-c0352",
+       "ses": "Arkadaşlar, bu süreçlerin iyi anlaşılması tanı ve tedavide risk değerlendirmesi ve zamanında müdahale için kritik önemdedir.",
+       "ekran": "Arkadaşlar, bu süreçlerin iyi anlaşılması tanı ve tedavide risk değerlendirmesi ve zamanında müdahale için kritik önemdedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

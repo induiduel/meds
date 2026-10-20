@@ -1,0 +1,2210 @@
+{
+ "surum": 2,
+ "ders_id": "k1-68",
+ "anahtar": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi",
+ "baslik": "Enfeksiyon Hastalıklarının Epidemiyolojisi: Genel Epidemiyolojik Özellikler",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-68-b01",
+   "baslik": "Enfeksiyon hastalıklarının tarihsel ve güncel önemi",
+   "paragraflar": [
+    {
+     "id": "k1-68-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-68-c0001",
+       "ses": "Enfeksiyon hastalıkları insanlık tarihinin yönünü değiştiren olayların başında gelir.",
+       "ekran": "Enfeksiyon hastalıkları insanlık tarihinin yönünü değiştiren olayların başında gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0002",
+       "ses": "Tarih boyunca zaman zaman büyük salgınlara, kitlesel ölümlere, savaşların kaybedilmesine, hatta devletlerin ve medeniyetlerin yıkılmasına neden olmuşlardır.",
+       "ekran": "Tarih boyunca zaman zaman büyük salgınlara, kitlesel ölümlere, savaşların kaybedilmesine, hatta devletlerin ve medeniyetlerin yıkılmasına neden olmuşlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0003",
+       "ses": "Ordular arasında yayılan bir hastalık, savaşın sonucunu silahlardan daha fazla belirleyebilmiştir; nüfusun hızla erimesi de üretimin ve yönetimin çökmesine zemin hazırlamıştır.",
+       "ekran": "Ordular arasında yayılan bir hastalık, savaşın sonucunu silahlardan daha fazla belirleyebilmiştir; nüfusun hızla erimesi de üretimin ve yönetimin çökmesine zemin hazırlamıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0004",
+       "ses": "Yani bu hastalıklar yalnız bireysel bir tıbbi sorun değil, toplumların geleceğini belirleyen bir halk sağlığı konusudur.",
+       "ekran": "Yani bu hastalıklar yalnız bireysel bir tıbbi sorun değil, toplumların geleceğini belirleyen bir halk sağlığı konusudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p002",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-68-c0005",
+       "ses": "Günümüzde enfeksiyon hastalıklarının önemi azalmış gibi görünür, ama bu izlenim yanıltıcıdır.",
+       "ekran": "Günümüzde enfeksiyon hastalıklarının önemi azalmış gibi görünür, ama bu izlenim yanıltıcıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0006",
+       "ses": "3 gerekçe vardır.",
+       "ekran": "3 gerekçe vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0007",
+       "ses": "1.'si, bazı enfeksiyon hastalıkları hâlen önemini sürdürmektedir.",
+       "ekran": "1.'si, bazı enfeksiyon hastalıkları hâlen önemini sürdürmektedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0008",
+       "ses": "2.'si, kaybolmaya yüz tutmuş bazı hastalıklar yeniden gündeme gelebilmektedir.",
+       "ekran": "2.'si, kaybolmaya yüz tutmuş bazı hastalıklar yeniden gündeme gelebilmektedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0009",
+       "ses": "3.'sü, daha önce olmayan ya da bilinmeyen bazı hastalıklar ortaya çıkabilmektedir.",
+       "ekran": "3.'sü, daha önce olmayan ya da bilinmeyen bazı hastalıklar ortaya çıkabilmektedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0010",
+       "ses": "Bu nedenlerle bulaşıcı hastalıklar, özellikle en az gelişmiş ve gelişmekte olan ülkeler için önemli halk sağlığı sorunları arasındadır.",
+       "ekran": "Bu nedenlerle bulaşıcı hastalıklar, özellikle en az gelişmiş ve gelişmekte olan ülkeler için önemli halk sağlığı sorunları arasındadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p003",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-68-c0011",
+       "ses": "Enfeksiyon hastalıklarıyla etkin biçimde mücadele edebilmek için 2 düzeyde bilgi gerekir.",
+       "ekran": "Enfeksiyon hastalıklarıyla etkin biçimde mücadele edebilmek için 2 düzeyde bilgi gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0012",
+       "ses": "Bir yanda bütün enfeksiyonlarda ortak olan genel epidemiyolojik özellikler vardır: enfeksiyon zinciri, etkenin epidemiyolojik özellikleri ve konakçının savunması gibi.",
+       "ekran": "Bir yanda bütün enfeksiyonlarda ortak olan genel epidemiyolojik özellikler vardır: enfeksiyon zinciri, etkenin epidemiyolojik özellikleri ve konakçının savunması gibi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0013",
+       "ses": "Öbür yanda her enfeksiyon hastalığının kendine has epidemiyolojik özellikleri vardır: kendine özgü kaynağı, bulaşma yolu ve duyarlı grubu.",
+       "ekran": "Öbür yanda her enfeksiyon hastalığının kendine has epidemiyolojik özellikleri vardır: kendine özgü kaynağı, bulaşma yolu ve duyarlı grubu.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0014",
+       "ses": "Genel çerçeve hangi soruların sorulacağını belirler; hastalığa özgü bilgi bu soruların yanıtını verir.",
+       "ekran": "Genel çerçeve hangi soruların sorulacağını belirler; hastalığa özgü bilgi bu soruların yanıtını verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0015",
+       "ses": "Bu dersin konusu genel çerçevedir.",
+       "ekran": "Bu dersin konusu genel çerçevedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b02",
+   "baslik": "Enfeksiyon, enfeksiyon hastalığı ve enfestasyon",
+   "paragraflar": [
+    {
+     "id": "k1-68-p004",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-68-c0016",
+       "ses": "Epidemiyolojideki ilk ayrım, mikroorganizmanın konakta bulunması ile bunun hastalığa dönüşmesi arasındadır.",
+       "ekran": "Epidemiyolojideki ilk ayrım, mikroorganizmanın konakta bulunması ile bunun hastalığa dönüşmesi arasındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0017",
+       "ses": "Enfeksiyon, bir patojen mikroorganizmanın daha büyük bir organizmaya, yani konağa girip yerleşmesi ve orada üreyip çoğalmasıdır.",
+       "ekran": "Enfeksiyon, bir patojen mikroorganizmanın daha büyük bir organizmaya, yani konağa girip yerleşmesi ve orada üreyip çoğalmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0018",
+       "ses": "Enfeksiyon hastalığı ise enfeksiyon sonucunda oluşan klinik tablodur.",
+       "ekran": "Enfeksiyon hastalığı ise enfeksiyon sonucunda oluşan klinik tablodur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0019",
+       "ses": "Bu iki tanımın mantıksal ilişkisine dikkat edin.",
+       "ekran": "Bu iki tanımın mantıksal ilişkisine dikkat edin.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0020",
+       "ses": "Bir enfeksiyon hastalığından söz edebilmek için önce bir enfeksiyonun bulunması gerekir.",
+       "ekran": "Bir enfeksiyon hastalığından söz edebilmek için önce bir enfeksiyonun bulunması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0021",
+       "ses": "Ama her enfeksiyonun sonucunda bir klinik tablonun, yani enfeksiyon hastalığının oluşması gerekmez.",
+       "ekran": "Ama her enfeksiyonun sonucunda bir klinik tablonun, yani enfeksiyon hastalığının oluşması gerekmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0022",
+       "ses": "Örneğin bir kişi Hepatit B virüsü (HBV) ile enfekte olup hiçbir hastalık belirtisi göstermeden bu etkeni ömür boyu taşıyabilir.",
+       "ekran": "Örneğin bir kişi Hepatit B virüsü (HBV) ile enfekte olup hiçbir hastalık belirtisi göstermeden bu etkeni ömür boyu taşıyabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0023",
+       "ses": "Bunu iç içe iki küme gibi düşünün: her enfeksiyon hastalığı bir enfeksiyondur, ama her enfeksiyon bir hastalık değildir.",
+       "ekran": "Bunu iç içe iki küme gibi düşünün: her enfeksiyon hastalığı bir enfeksiyondur, ama her enfeksiyon bir hastalık değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p005",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-68-c0024",
+       "ses": "Bu tanımlar yalnız mikroorganizmaların konakçıda yerleşimini ifade eder; dolayısıyla makroparazitlerin, yani helmintlerin ve ektoparazitlerin konakçıda yerleşimini ve hastalık tablosu oluşturmasını kapsamaz.",
+       "ekran": "Bu tanımlar yalnız mikroorganizmaların konakçıda yerleşimini ifade eder; dolayısıyla makroparazitlerin, yani helmintlerin ve ektoparazitlerin konakçıda yerleşimini ve hastalık tablosu oluşturmasını kapsamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0025",
+       "ses": "Bu parazitlerin konakçıda yerleşimine enfestasyon adı verilir.",
+       "ekran": "Bu parazitlerin konakçıda yerleşimine enfestasyon adı verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0026",
+       "ses": "Ancak makroparazitlerin yerleşimi ve bulaşma özellikleri enfeksiyonlara benzerlik gösterdiğinden enfestasyonlar da enfeksiyonlarla birlikte incelenir.",
+       "ekran": "Ancak makroparazitlerin yerleşimi ve bulaşma özellikleri enfeksiyonlara benzerlik gösterdiğinden enfestasyonlar da enfeksiyonlarla birlikte incelenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0027",
+       "ses": "Bu nedenle ders boyunca makroparazitlerin konakçıda yerleşimi ve hastalık tablosu oluşturması da enfeksiyon olarak ifade edilecektir.",
+       "ekran": "Bu nedenle ders boyunca makroparazitlerin konakçıda yerleşimi ve hastalık tablosu oluşturması da enfeksiyon olarak ifade edilecektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0028",
+       "ses": "Terim farkı biyolojik ölçekten kaynaklanır; epidemiyolojik mantık ise aynıdır.",
+       "ekran": "Terim farkı biyolojik ölçekten kaynaklanır; epidemiyolojik mantık ise aynıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b03",
+   "baslik": "Konak, ana konak, ara konak ve kaynak",
+   "paragraflar": [
+    {
+     "id": "k1-68-p006",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-68-c0029",
+       "ses": "Konak ya da konakçı, enfeksiyon etkeninin yerleştiği makroorganizmadır.",
+       "ekran": "Konak ya da konakçı, enfeksiyon etkeninin yerleştiği makroorganizmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0030",
+       "ses": "Halk sağlığında insan sağlığı esas alındığından daha çok insan konakçılar üzerinde durulur; ancak kimi durumlarda hayvan konakçılar da insan sağlığı açısından önemli olabilir.",
+       "ekran": "Halk sağlığında insan sağlığı esas alındığından daha çok insan konakçılar üzerinde durulur; ancak kimi durumlarda hayvan konakçılar da insan sağlığı açısından önemli olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0031",
+       "ses": "Parazitlerde ayrıca bir konak ayrımı yapılır.",
+       "ekran": "Parazitlerde ayrıca bir konak ayrımı yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0032",
+       "ses": "Parazitin erişkin formunun yaşadığı canlıya ana konak, diğer formlarının yaşadığı canlıya ise ara konak adı verilir.",
+       "ekran": "Parazitin erişkin formunun yaşadığı canlıya ana konak, diğer formlarının yaşadığı canlıya ise ara konak adı verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0033",
+       "ses": "Dikkat edin, bu ayrım canlının büyüklüğüne ya da hastalanıp hastalanmamasına göre değil, parazitin hangi gelişim formunun orada yaşadığına göre yapılır.",
+       "ekran": "Dikkat edin, bu ayrım canlının büyüklüğüne ya da hastalanıp hastalanmamasına göre değil, parazitin hangi gelişim formunun orada yaşadığına göre yapılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p007",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-68-c0034",
+       "ses": "Kaynak ya da rezervuar, enfeksiyon etkeninin üreyip çoğaldığı canlı ve cansız ortamlardır.",
+       "ekran": "Kaynak ya da rezervuar, enfeksiyon etkeninin üreyip çoğaldığı canlı ve cansız ortamlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0035",
+       "ses": "Canlı kaynaklar insan ve hayvandır; cansız kaynaklar ise toprak ve yiyecekler gibi ortamlardır.",
+       "ekran": "Canlı kaynaklar insan ve hayvandır; cansız kaynaklar ise toprak ve yiyecekler gibi ortamlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0036",
+       "ses": "Konakçılar hastalık etkeni ile enfekte olduktan sonra genel olarak kaynak hâline gelirler; yani etkeni başkalarına aktarabilecek duruma geçerler.",
+       "ekran": "Konakçılar hastalık etkeni ile enfekte olduktan sonra genel olarak kaynak hâline gelirler; yani etkeni başkalarına aktarabilecek duruma geçerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0037",
+       "ses": "Konak ile kaynağı karıştırmayın: konak tanımı etkenin yerleşmesine dayanır ve bir makroorganizmadır; kaynak ise etkenin üreyip çoğaldığı ve buradan yayılabildiği ortamdır, cansız da olabilir.",
+       "ekran": "Konak ile kaynağı karıştırmayın: konak tanımı etkenin yerleşmesine dayanır ve bir makroorganizmadır; kaynak ise etkenin üreyip çoğaldığı ve buradan yayılabildiği ortamdır, cansız da olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0038",
+       "ses": "Konağın enfekte olup kaynağa dönüşmesi, birazdan göreceğimiz zincirin kendini nasıl yenilediğini anlamanın temelidir.",
+       "ekran": "Konağın enfekte olup kaynağa dönüşmesi, birazdan göreceğimiz zincirin kendini nasıl yenilediğini anlamanın temelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b04",
+   "baslik": "Portör ve portörlük türleri",
+   "paragraflar": [
+    {
+     "id": "k1-68-p008",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-68-c0039",
+       "ses": "Bulaştırıcılık, hastalık belirtilerinin varlığına bağlı değildir.",
+       "ekran": "Bulaştırıcılık, hastalık belirtilerinin varlığına bağlı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0040",
+       "ses": "Portör, hastalık etkenini taşıyıp başka konakçılara bulaştırabildiği hâlde kendisi hastalık belirtisi göstermeyen kişidir.",
+       "ekran": "Portör, hastalık etkenini taşıyıp başka konakçılara bulaştırabildiği hâlde kendisi hastalık belirtisi göstermeyen kişidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0041",
+       "ses": "Yani iki koşul birlikte bulunur: etkeni taşımak ve bulaştırabilmek, ama belirti göstermemek.",
+       "ekran": "Yani iki koşul birlikte bulunur: etkeni taşımak ve bulaştırabilmek, ama belirti göstermemek.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0042",
+       "ses": "Portörü hastadan ayıran ölçüt bulaştırıcılık değil, belirti yokluğudur.",
+       "ekran": "Portörü hastadan ayıran ölçüt bulaştırıcılık değil, belirti yokluğudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0043",
+       "ses": "Portörlük zaman eksenine göre 3 biçimde karşımıza çıkar.",
+       "ekran": "Portörlük zaman eksenine göre 3 biçimde karşımıza çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0044",
+       "ses": "1.'si, birçok enfeksiyon hastalığının kuluçka döneminde kişiler bulaştırıcı olabilir; buna inkübasyon dönemi portörlüğü denir.",
+       "ekran": "1.'si, birçok enfeksiyon hastalığının kuluçka döneminde kişiler bulaştırıcı olabilir; buna inkübasyon dönemi portörlüğü denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0045",
+       "ses": "Kişi henüz hasta olduğunu bilmeden çevresine etkeni yayar; belirti başladığında bulaşma çoktan gerçekleşmiş olabilir.",
+       "ekran": "Kişi henüz hasta olduğunu bilmeden çevresine etkeni yayar; belirti başladığında bulaşma çoktan gerçekleşmiş olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0046",
+       "ses": "2.'si, bazı hastalıklarda hastalık iyileştikten sonra bir süre daha bulaştırıcılık devam eder; buna konvalesan dönem portörlüğü adı verilir.",
+       "ekran": "2.'si, bazı hastalıklarda hastalık iyileştikten sonra bir süre daha bulaştırıcılık devam eder; buna konvalesan dönem portörlüğü adı verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0047",
+       "ses": "3.'sü, bazı hastalık etkenleri uzun süreli portörlüğe, yani kronik portörlüğe neden olur; derste verilen örnekler Hepatit B ve tifodur.",
+       "ekran": "3.'sü, bazı hastalık etkenleri uzun süreli portörlüğe, yani kronik portörlüğe neden olur; derste verilen örnekler Hepatit B ve tifodur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0048",
+       "ses": "Kronik portörlük iki yoldan gelişebilir: kişide hiçbir hastalık belirtisi olmadan portörlük meydana gelebilir ya da hastalık geçirildikten sonra kişi kronik portör olarak kalabilir.",
+       "ekran": "Kronik portörlük iki yoldan gelişebilir: kişide hiçbir hastalık belirtisi olmadan portörlük meydana gelebilir ya da hastalık geçirildikten sonra kişi kronik portör olarak kalabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p009",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k1-68-c0049",
+       "ses": "Hastalıkların bulaşmasında portörler hastalardan daha önemli olabilir.",
+       "ekran": "Hastalıkların bulaşmasında portörler hastalardan daha önemli olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0050",
+       "ses": "Nedeni şudur: hasta belirti gösterdiği için tanınır, kontrol altında tutulabilir ve tedavi edilir; sağlam insanların kendilerini hastadan koruması da daha kolaydır.",
+       "ekran": "Nedeni şudur: hasta belirti gösterdiği için tanınır, kontrol altında tutulabilir ve tedavi edilir; sağlam insanların kendilerini hastadan koruması da daha kolaydır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0051",
+       "ses": "Portör ise belirti göstermediğinden tanınmaz, kontrol edilmez, tedavi edilmez; çevresindekiler de kendini korumaz.",
+       "ekran": "Portör ise belirti göstermediğinden tanınmaz, kontrol edilmez, tedavi edilmez; çevresindekiler de kendini korumaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0052",
+       "ses": "Böylece etkeni fark edilmeden yayar.",
+       "ekran": "Böylece etkeni fark edilmeden yayar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0053",
+       "ses": "Bu yüzden hastalık kontrolünde yalnız hastaları bulmak yetmez, portörleri ortaya çıkarmak ayrı bir hedeftir.",
+       "ekran": "Bu yüzden hastalık kontrolünde yalnız hastaları bulmak yetmez, portörleri ortaya çıkarmak ayrı bir hedeftir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b05",
+   "baslik": "Kuluçka süresi, kontaminasyon ve kanda etken",
+   "paragraflar": [
+    {
+     "id": "k1-68-p010",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-68-c0054",
+       "ses": "İnkübasyon periyodu, yani kuluçka süresi, enfeksiyon etkeninin konakçı tarafından alınmasından hastalık belirtilerinin ortaya çıkışına kadar geçen süredir.",
+       "ekran": "İnkübasyon periyodu, yani kuluçka süresi, enfeksiyon etkeninin konakçı tarafından alınmasından hastalık belirtilerinin ortaya çıkışına kadar geçen süredir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0055",
+       "ses": "Başlangıç noktası etkenin alınması, bitiş noktası belirtilerin başlamasıdır; bu iki noktanın yer değiştirildiği ifadeler sık çeldiricidir.",
+       "ekran": "Başlangıç noktası etkenin alınması, bitiş noktası belirtilerin başlamasıdır; bu iki noktanın yer değiştirildiği ifadeler sık çeldiricidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0056",
+       "ses": "Bu süre her hastalıkta birbirinden farklıdır; üstelik aynı hastalıkta bile vakalar arasında farklılıklar olabilir.",
+       "ekran": "Bu süre her hastalıkta birbirinden farklıdır; üstelik aynı hastalıkta bile vakalar arasında farklılıklar olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0057",
+       "ses": "Bu yüzden kuluçka süresini tek bir sayı değil, bir aralık olarak düşünün.",
+       "ekran": "Bu yüzden kuluçka süresini tek bir sayı değil, bir aralık olarak düşünün.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0058",
+       "ses": "Kuluçka döneminde kişi belirti göstermez ama bulaştırıcı olabilir; dolayısıyla kuluçka süresi aynı zamanda sessiz yayılımın süresidir.",
+       "ekran": "Kuluçka döneminde kişi belirti göstermez ama bulaştırıcı olabilir; dolayısıyla kuluçka süresi aynı zamanda sessiz yayılımın süresidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p011",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-68-c0059",
+       "ses": "Kontaminasyon, ortamların ve canlı yüzeylerinin mikroorganizmalarla kirlenmesi anlamına gelir.",
+       "ekran": "Kontaminasyon, ortamların ve canlı yüzeylerinin mikroorganizmalarla kirlenmesi anlamına gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0060",
+       "ses": "Kirlenmiş bir yüzey ya da ortam, etkenin yeni konakçıya ulaşmasında aracı olabilir.",
+       "ekran": "Kirlenmiş bir yüzey ya da ortam, etkenin yeni konakçıya ulaşmasında aracı olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0061",
+       "ses": "Bakteriyemi, bakterilerin kanda bulunma durumunu ifade eder.",
+       "ekran": "Bakteriyemi, bakterilerin kanda bulunma durumunu ifade eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0062",
+       "ses": "Aynı durum virüsler için viremi, mantarlar için fungemi olarak adlandırılır.",
+       "ekran": "Aynı durum virüsler için viremi, mantarlar için fungemi olarak adlandırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0063",
+       "ses": "Bu üç terim etkenin kanda bulunmasını anlatır.",
+       "ekran": "Bu üç terim etkenin kanda bulunmasını anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0064",
+       "ses": "Sepsis ise mikroorganizmaların kanda çoğalma durumudur.",
+       "ekran": "Sepsis ise mikroorganizmaların kanda çoğalma durumudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0065",
+       "ses": "Yani sepsis bakteriyemi ve viremiden farklıdır ve genellikle ağır bir klinik tabloya yol açar.",
+       "ekran": "Yani sepsis bakteriyemi ve viremiden farklıdır ve genellikle ağır bir klinik tabloya yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0066",
+       "ses": "Sıralamayı akılda tutun: kanda bulunma, kanda çoğalma, ağır klinik tablo.",
+       "ekran": "Sıralamayı akılda tutun: kanda bulunma, kanda çoğalma, ağır klinik tablo.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0067",
+       "ses": "Günümüz uluslararası kılavuzları sepsisi enfeksiyona karşı düzensiz konak yanıtının yol açtığı, yaşamı tehdit eden organ işlev bozukluğu olarak tanımlar; ancak bu derste esas alınan epidemiyolojik tanım kanda çoğalmadır.",
+       "ekran": "Günümüz uluslararası kılavuzları sepsisi enfeksiyona karşı düzensiz konak yanıtının yol açtığı, yaşamı tehdit eden organ işlev bozukluğu olarak tanımlar; ancak bu derste esas alınan epidemiyolojik tanım kanda çoğalmadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b06",
+   "baslik": "Dezenfeksiyon ve sterilizasyon",
+   "paragraflar": [
+    {
+     "id": "k1-68-p012",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-68-c0068",
+       "ses": "Kontaminasyonla mücadelenin ilk basamağı dezenfeksiyondur.",
+       "ekran": "Kontaminasyonla mücadelenin ilk basamağı dezenfeksiyondur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0069",
+       "ses": "Dezenfeksiyon, cansız ortamların patojen mikroorganizmalardan temizlenmesi işlemidir ve çeşitli fiziksel ve kimyasal yöntemlerle gerçekleştirilir.",
+       "ekran": "Dezenfeksiyon, cansız ortamların patojen mikroorganizmalardan temizlenmesi işlemidir ve çeşitli fiziksel ve kimyasal yöntemlerle gerçekleştirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0070",
+       "ses": "Tanımdaki iki kelimeye dikkat edin: hedef yalnız patojen, yani hastalık yapabilen mikroorganizmalardır; uygulama alanı da cansız ortamlardır.",
+       "ekran": "Tanımdaki iki kelimeye dikkat edin: hedef yalnız patojen, yani hastalık yapabilen mikroorganizmalardır; uygulama alanı da cansız ortamlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0071",
+       "ses": "Dezenfeksiyon tanımında sporların ve bütün mikroorganizmaların yok edilmesi yer almaz.",
+       "ekran": "Dezenfeksiyon tanımında sporların ve bütün mikroorganizmaların yok edilmesi yer almaz.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p013",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k1-68-c0072",
+       "ses": "Sterilizasyon ise ortamların sporlar dâhil bütün mikroorganizmalardan arındırılması anlamına gelir.",
+       "ekran": "Sterilizasyon ise ortamların sporlar dâhil bütün mikroorganizmalardan arındırılması anlamına gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0073",
+       "ses": "Dezenfeksiyon ve sterilizasyon işlemleri benzer amaçlarla uygulanır; ancak sterilizasyon için daha etkili yöntemlerin uygulanması gerekir.",
+       "ekran": "Dezenfeksiyon ve sterilizasyon işlemleri benzer amaçlarla uygulanır; ancak sterilizasyon için daha etkili yöntemlerin uygulanması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0074",
+       "ses": "Dikkat edin arkadaşlar, en sık tuzak, sterilizasyona ait olan sporlar dâhil bütün mikroorganizmalar ifadesinin dezenfeksiyon tanımına taşınmasıdır.",
+       "ekran": "Dikkat edin arkadaşlar, en sık tuzak, sterilizasyona ait olan sporlar dâhil bütün mikroorganizmalar ifadesinin dezenfeksiyon tanımına taşınmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0075",
+       "ses": "Ayrım iki kelimede saklıdır: dezenfeksiyonda patojenler, sterilizasyonda sporlar dâhil bütün mikroorganizmalar.",
+       "ekran": "Ayrım iki kelimede saklıdır: dezenfeksiyonda patojenler, sterilizasyonda sporlar dâhil bütün mikroorganizmalar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b07",
+   "baslik": "Pastörizasyon, tindalizasyon, asepsi ve antisepsi",
+   "paragraflar": [
+    {
+     "id": "k1-68-p014",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-68-c0076",
+       "ses": "Pastörizasyon, çeşitli ortamlardaki mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve hızlı soğutmaya dayalı bir işlemdir.",
+       "ekran": "Pastörizasyon, çeşitli ortamlardaki mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve hızlı soğutmaya dayalı bir işlemdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0077",
+       "ses": "Bu işlemden tam bir sterilizasyon sağlanması beklenmez.",
+       "ekran": "Bu işlemden tam bir sterilizasyon sağlanması beklenmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0078",
+       "ses": "Çok yüksek sıcaklığın zararlı olacağı düşünülen süt, bazı alkoller ve meyve suları gibi sıvılar belli bir sıcaklıkta tutulur: ya 63 santigrat derecede 30 dakika, ya da 72 santigrat derecede 15 saniye.",
+       "ekran": "Çok yüksek sıcaklığın zararlı olacağı düşünülen süt, bazı alkoller ve meyve suları gibi sıvılar belli bir sıcaklıkta tutulur: ya 63 santigrat derecede 30 dakika, ya da 72 santigrat derecede 15 saniye.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0079",
+       "ses": "Ardından sıvı hızla 10 santigrat dereceye indirilir.",
+       "ekran": "Ardından sıvı hızla 10 santigrat dereceye indirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0080",
+       "ses": "Düşük sıcaklıkta uzun süre ile yüksek sıcaklıkta kısa süre aynı amaca hizmet eder.",
+       "ekran": "Düşük sıcaklıkta uzun süre ile yüksek sıcaklıkta kısa süre aynı amaca hizmet eder.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p015",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k1-68-c0081",
+       "ses": "Tindalizasyon ise 100 santigrat derecenin üstünde zarar görebilecek sıvılar için uygulanan bir sterilizasyon yöntemidir.",
+       "ekran": "Tindalizasyon ise 100 santigrat derecenin üstünde zarar görebilecek sıvılar için uygulanan bir sterilizasyon yöntemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0082",
+       "ses": "Tindalize edilecek maddeler, dayanabileceği sıcaklığa göre 55 ile 100 santigrat derece arasında yarım saat süreyle bekletilir, sonra oda sıcaklığına düşürülür.",
+       "ekran": "Tindalize edilecek maddeler, dayanabileceği sıcaklığa göre 55 ile 100 santigrat derece arasında yarım saat süreyle bekletilir, sonra oda sıcaklığına düşürülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0083",
+       "ses": "Bu işleme üst üste 3 gün ya da daha uzun süre devam edilir.",
+       "ekran": "Bu işleme üst üste 3 gün ya da daha uzun süre devam edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0084",
+       "ses": "Pastörizasyonla farkını netleştirelim: pastörizasyon tek seferlik hızlı ısıtma ve soğutmadır ve yalnız mikroorganizma yoğunluğunu azaltır; tindalizasyon günlerce tekrarlanan ısıtmadır ve bir sterilizasyon yöntemi olarak sınıflanır.",
+       "ekran": "Pastörizasyonla farkını netleştirelim: pastörizasyon tek seferlik hızlı ısıtma ve soğutmadır ve yalnız mikroorganizma yoğunluğunu azaltır; tindalizasyon günlerce tekrarlanan ısıtmadır ve bir sterilizasyon yöntemi olarak sınıflanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p016",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-68-c0085",
+       "ses": "Asepsi, tıbbi ve cerrahi işlemlerin mikroorganizmalarla kirlenmeyi önleyecek koşullarda gerçekleştirilmesini ve ortamda mikroorganizma bulunmaması durumunu ifade eder.",
+       "ekran": "Asepsi, tıbbi ve cerrahi işlemlerin mikroorganizmalarla kirlenmeyi önleyecek koşullarda gerçekleştirilmesini ve ortamda mikroorganizma bulunmaması durumunu ifade eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0086",
+       "ses": "Antisepsi ise vücut yüzeyinde ve lezyonlarda bulunan patojen mikroorganizmaların yok edilmesi işlemidir.",
+       "ekran": "Antisepsi ise vücut yüzeyinde ve lezyonlarda bulunan patojen mikroorganizmaların yok edilmesi işlemidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0087",
+       "ses": "Ayırt etmek için nerede sorusunu sorun: cansız ortamdaysa dezenfeksiyon, vücut yüzeyi ve lezyondaysa antisepsi, işlemin kirlenme olmadan yürütülmesi söz konusuysa asepsi.",
+       "ekran": "Ayırt etmek için nerede sorusunu sorun: cansız ortamdaysa dezenfeksiyon, vücut yüzeyi ve lezyondaysa antisepsi, işlemin kirlenme olmadan yürütülmesi söz konusuysa asepsi.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b08",
+   "baslik": "Enfeksiyon zinciri ve Şekil 1",
+   "paragraflar": [
+    {
+     "id": "k1-68-p017",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k1-68-c0088",
+       "ses": "Bir bulaşıcı hastalığın meydana gelmesi ve bu durumun devam edebilmesi için gerekli olan enfeksiyon kaynağı, bulaşma yolu ve yeni konakçılardan oluşan zincire enfeksiyon zinciri, ya da bulaşma zinciri adı verilir.",
+       "ekran": "Bir bulaşıcı hastalığın meydana gelmesi ve bu durumun devam edebilmesi için gerekli olan enfeksiyon kaynağı, bulaşma yolu ve yeni konakçılardan oluşan zincire enfeksiyon zinciri, ya da bulaşma zinciri adı verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0089",
+       "ses": "Bütün enfeksiyon hastalıklarında bu zincirin temel halkaları aynıdır; ancak halkaların özellikleri her hastalıkta az çok farklılık gösterebilir.",
+       "ekran": "Bütün enfeksiyon hastalıklarında bu zincirin temel halkaları aynıdır; ancak halkaların özellikleri her hastalıkta az çok farklılık gösterebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0090",
+       "ses": "Örneğin kaynağın insan mı hayvan mı olduğu ya da bulaşmanın hangi yolla gerçekleştiği hastalıktan hastalığa değişir.",
+       "ekran": "Örneğin kaynağın insan mı hayvan mı olduğu ya da bulaşmanın hangi yolla gerçekleştiği hastalıktan hastalığa değişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0091",
+       "ses": "Yani halkalar geneldir, halkaların içeriği hastalığa özgüdür.",
+       "ekran": "Yani halkalar geneldir, halkaların içeriği hastalığa özgüdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p018",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k1-68-c0092",
+       "ses": "Derste zincir, Şekil 1 ile bir üçgen şema hâlinde gösterilir.",
+       "ekran": "Derste zincir, Şekil 1 ile bir üçgen şema hâlinde gösterilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0093",
+       "ses": "Üst köşede kaynak yer alır; etken buradan çıkar ve bir okla sağ alt köşedeki bulaşma yoluna geçer.",
+       "ekran": "Üst köşede kaynak yer alır; etken buradan çıkar ve bir okla sağ alt köşedeki bulaşma yoluna geçer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0094",
+       "ses": "Bulaşma yolundan sol alttaki yeni konakçıya uzanan kalın ok, etkenin yeni konakçıya taşınmasını vurgular.",
+       "ekran": "Bulaşma yolundan sol alttaki yeni konakçıya uzanan kalın ok, etkenin yeni konakçıya taşınmasını vurgular.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0095",
+       "ses": "Yeni konakçıdan yeniden kaynağa dönen ok ise enfekte olan konakçının yeni bir kaynağa dönüşmesini gösterir.",
+       "ekran": "Yeni konakçıdan yeniden kaynağa dönen ok ise enfekte olan konakçının yeni bir kaynağa dönüşmesini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0096",
+       "ses": "Şemanın mesajı şudur: zincir doğrusal değil, döngüseldir.",
+       "ekran": "Şemanın mesajı şudur: zincir doğrusal değil, döngüseldir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b09",
+   "baslik": "Zincirin kırılması ve salgın kavramı",
+   "paragraflar": [
+    {
+     "id": "k1-68-p019",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-68-c0097",
+       "ses": "Bu zinciri oluşturan halkalardan birinin ortadan kaldırılması hâlinde zincir kırılır, yani hastalığın bulaşması sona erer.",
+       "ekran": "Bu zinciri oluşturan halkalardan birinin ortadan kaldırılması hâlinde zincir kırılır, yani hastalığın bulaşması sona erer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0098",
+       "ses": "Bütün halkalara aynı anda saldırmak gerekmez; tek bir halkanın etkin biçimde kaldırılması yeterlidir.",
+       "ekran": "Bütün halkalara aynı anda saldırmak gerekmez; tek bir halkanın etkin biçimde kaldırılması yeterlidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0099",
+       "ses": "Zincir kırılamazsa, kaynaktan enfeksiyon etkenini alan konakçılar genel olarak bir süre sonra kaynak hâline gelir ve hastalığı başkalarına bulaştırmaya devam eder.",
+       "ekran": "Zincir kırılamazsa, kaynaktan enfeksiyon etkenini alan konakçılar genel olarak bir süre sonra kaynak hâline gelir ve hastalığı başkalarına bulaştırmaya devam eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0100",
+       "ses": "Her kaynak hastalık etkenini birden fazla yeni konakçıya bulaştırabileceği için, mücadele edilmezse kaynak sayısı giderek artar ve hastalık toplumda genişleyen bir ağ hâlinde yayılır.",
+       "ekran": "Her kaynak hastalık etkenini birden fazla yeni konakçıya bulaştırabileceği için, mücadele edilmezse kaynak sayısı giderek artar ve hastalık toplumda genişleyen bir ağ hâlinde yayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0101",
+       "ses": "Bu yüzden enfeksiyon hastalıklarıyla mücadele, her hastalıkta bu zincirin incelenmesini ve en uygun biçimde kırılmasını gerektirir.",
+       "ekran": "Bu yüzden enfeksiyon hastalıklarıyla mücadele, her hastalıkta bu zincirin incelenmesini ve en uygun biçimde kırılmasını gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p020",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k1-68-c0102",
+       "ses": "Kaynak sayısının böyle artması bizi salgın kavramına götürür.",
+       "ekran": "Kaynak sayısının böyle artması bizi salgın kavramına götürür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0103",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: epidemi, yani salgın, bir hastalığın bir toplulukta alışılmış seyrinden daha fazla görülmesidir.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda defalarca soruldu: epidemi, yani salgın, bir hastalığın bir toplulukta alışılmış seyrinden daha fazla görülmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0104",
+       "ses": "Başka bir ifadeyle, bir hastalığın belli bir bölgede, belli bir dönemde beklenenden anlamlı ölçüde fazla görülmesine epidemi denir.",
+       "ekran": "Başka bir ifadeyle, bir hastalığın belli bir bölgede, belli bir dönemde beklenenden anlamlı ölçüde fazla görülmesine epidemi denir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p021",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-68-c0105",
+       "ses": "Burası önemli, çeldiricilere dikkat edin: bir hastalığın toplulukta alışılmış sıklıkta görülmesi salgın değildir.",
+       "ekran": "Burası önemli, çeldiricilere dikkat edin: bir hastalığın toplulukta alışılmış sıklıkta görülmesi salgın değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0106",
+       "ses": "Bir hastalığın yalnızca yüksek oranda görülmesi de tek başına salgını tanımlamaz; çünkü ölçüt mutlak sıklık değil, o topluluk için alışılmış ve beklenen düzeyle karşılaştırmadır.",
+       "ekran": "Bir hastalığın yalnızca yüksek oranda görülmesi de tek başına salgını tanımlamaz; çünkü ölçüt mutlak sıklık değil, o topluluk için alışılmış ve beklenen düzeyle karşılaştırmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0107",
+       "ses": "Düşük oranda görülme ya da hiç görülmeme de elbette salgın tanımına uymaz.",
+       "ekran": "Düşük oranda görülme ya da hiç görülmeme de elbette salgın tanımına uymaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0108",
+       "ses": "Şıklarda pandemi, endemi, sporadi ya da seküler değişim gibi başka terimler görürseniz, beklenenden fazla görülme tanımının karşılığının epidemi olduğunu hatırlayın.",
+       "ekran": "Şıklarda pandemi, endemi, sporadi ya da seküler değişim gibi başka terimler görürseniz, beklenenden fazla görülme tanımının karşılığının epidemi olduğunu hatırlayın.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b10",
+   "baslik": "Kaynak halkası ve etkenin çıkış yolları",
+   "paragraflar": [
+    {
+     "id": "k1-68-p022",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-68-c0109",
+       "ses": "Zincirin ilk halkası olan kaynağın niteliği, mücadelenin nereye yöneleceğini belirler.",
+       "ekran": "Zincirin ilk halkası olan kaynağın niteliği, mücadelenin nereye yöneleceğini belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0110",
+       "ses": "İnsanlarda görülen bulaşıcı hastalıkların çoğunluğunda enfeksiyon kaynağı insandır.",
+       "ekran": "İnsanlarda görülen bulaşıcı hastalıkların çoğunluğunda enfeksiyon kaynağı insandır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0111",
+       "ses": "Bazı hastalıkların kaynağı omurgalı hayvanlardır; derste verilen örnekler kuduz, şarbon ve ruamdır.",
+       "ekran": "Bazı hastalıkların kaynağı omurgalı hayvanlardır; derste verilen örnekler kuduz, şarbon ve ruamdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0112",
+       "ses": "Tetanozda ise hastalık kaynağı toprak olarak kabul edilir.",
+       "ekran": "Tetanozda ise hastalık kaynağı toprak olarak kabul edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0113",
+       "ses": "Kaynak insansa hasta ve portörlerin bulunması öne çıkar; kaynak hayvansa hayvan popülasyonu da mücadelenin hedefi olur; kaynak toprak gibi cansız bir ortamsa kaynağın ortadan kaldırılması güçtür ve diğer halkalara yönelmek gerekir.",
+       "ekran": "Kaynak insansa hasta ve portörlerin bulunması öne çıkar; kaynak hayvansa hayvan popülasyonu da mücadelenin hedefi olur; kaynak toprak gibi cansız bir ortamsa kaynağın ortadan kaldırılması güçtür ve diğer halkalara yönelmek gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p023",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-68-c0114",
+       "ses": "Hastalık kaynağının insan veya hayvan olması durumunda, enfeksiyon etkeninin kaynaktan çıkış yolunun da bilinmesi gerekir.",
+       "ekran": "Hastalık kaynağının insan veya hayvan olması durumunda, enfeksiyon etkeninin kaynaktan çıkış yolunun da bilinmesi gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0115",
+       "ses": "Enfeksiyon etkenleri genel olarak kaynaktan solunum yolu ya da anal yoldan, zaman zaman da deri veya genitoüriner yol gibi diğer yollardan çıkarlar.",
+       "ekran": "Enfeksiyon etkenleri genel olarak kaynaktan solunum yolu ya da anal yoldan, zaman zaman da deri veya genitoüriner yol gibi diğer yollardan çıkarlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0116",
+       "ses": "Çıkış yolu, etkenin başka konakçılara ulaşma ve onları enfekte edebilme şansını etkiler.",
+       "ekran": "Çıkış yolu, etkenin başka konakçılara ulaşma ve onları enfekte edebilme şansını etkiler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0117",
+       "ses": "Örneğin solunum yolu ile kaynaktan çıkan etkenler geniş bir alana yayılarak yeni konakçılara kolaylıkla bulaşabilir; genital yoldan atılan etkenler ise ancak kaynakla çok yakın temasta bulunan kişilere bulaşabilir.",
+       "ekran": "Örneğin solunum yolu ile kaynaktan çıkan etkenler geniş bir alana yayılarak yeni konakçılara kolaylıkla bulaşabilir; genital yoldan atılan etkenler ise ancak kaynakla çok yakın temasta bulunan kişilere bulaşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b11",
+   "baslik": "Bulaşma yolu ve doğrudan bulaşma",
+   "paragraflar": [
+    {
+     "id": "k1-68-p024",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k1-68-c0118",
+       "ses": "Zincirin ikinci halkası bulaşma yoludur.",
+       "ekran": "Zincirin ikinci halkası bulaşma yoludur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0119",
+       "ses": "Bulaşma yolu, enfeksiyon etkeninin kaynaktan çıkışını, yeni konakçıya kadar taşınmasını ve yeni konakçıya giriş yolunu kapsar.",
+       "ekran": "Bulaşma yolu, enfeksiyon etkeninin kaynaktan çıkışını, yeni konakçıya kadar taşınmasını ve yeni konakçıya giriş yolunu kapsar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0120",
+       "ses": "Yani bulaşma yolunu yalnız taşınma olarak düşünmek eksiktir; çıkış ve giriş de tanımın içindedir.",
+       "ekran": "Yani bulaşma yolunu yalnız taşınma olarak düşünmek eksiktir; çıkış ve giriş de tanımın içindedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0121",
+       "ses": "Enfeksiyon etkenleri kaynaktan çıktıktan sonra bir aracıya gerek kalmaksızın yeni konakçıya taşınabileceği gibi, çeşitli aracılar yardımıyla da taşınabilir.",
+       "ekran": "Enfeksiyon etkenleri kaynaktan çıktıktan sonra bir aracıya gerek kalmaksızın yeni konakçıya taşınabileceği gibi, çeşitli aracılar yardımıyla da taşınabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0122",
+       "ses": "Buna göre doğrudan ve dolaylı bulaşmadan söz edilir.",
+       "ekran": "Buna göre doğrudan ve dolaylı bulaşmadan söz edilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p025",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-68-c0123",
+       "ses": "Doğrudan bulaşma, enfeksiyon etkeninin hiçbir aracı olmadan kaynaktan çıkıp yeni konakçıya bulaşmasıdır ve 2 biçimde gerçekleşir: direkt temas ve direkt damlacık.",
+       "ekran": "Doğrudan bulaşma, enfeksiyon etkeninin hiçbir aracı olmadan kaynaktan çıkıp yeni konakçıya bulaşmasıdır ve 2 biçimde gerçekleşir: direkt temas ve direkt damlacık.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0124",
+       "ses": "Direkt temas, kaynak ve yeni konakçının temas hâlinde olması durumunda cilt veya mukozalar yoluyla bulaşmadır.",
+       "ekran": "Direkt temas, kaynak ve yeni konakçının temas hâlinde olması durumunda cilt veya mukozalar yoluyla bulaşmadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0125",
+       "ses": "Cinsel yolla bulaşan hastalıklar, örneğin AIDS, sifiliz ve gonore ile cilt teması ile bulaşan hastalıklar, örneğin uyuz ve çeşitli mantar hastalıkları direkt temasla bulaşır.",
+       "ekran": "Cinsel yolla bulaşan hastalıklar, örneğin AIDS, sifiliz ve gonore ile cilt teması ile bulaşan hastalıklar, örneğin uyuz ve çeşitli mantar hastalıkları direkt temasla bulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0126",
+       "ses": "Genital yoldan atılan etkenlerin yalnız yakın temasla bulaşabilmesi, cinsel yolla bulaşan hastalıkların bu grupta yer almasıyla örtüşür.",
+       "ekran": "Genital yoldan atılan etkenlerin yalnız yakın temasla bulaşabilmesi, cinsel yolla bulaşan hastalıkların bu grupta yer almasıyla örtüşür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p026",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-68-c0127",
+       "ses": "Direkt damlacık yolu ise öksürme ve hapşırma sırasında oluşan damlacıkların, kaynaktan çıkarken kazandıkları hızla belli bir mesafeye ulaşması ve bu mesafede bulunan konakçılar tarafından alınmasıyla oluşur.",
+       "ekran": "Direkt damlacık yolu ise öksürme ve hapşırma sırasında oluşan damlacıkların, kaynaktan çıkarken kazandıkları hızla belli bir mesafeye ulaşması ve bu mesafede bulunan konakçılar tarafından alınmasıyla oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0128",
+       "ses": "Damlacığı taşıyan şey havanın aracılığı değil, kaynaktan çıkarken kazandığı hızdır; bu yüzden aracısız, yani doğrudan bulaşma sayılır.",
+       "ekran": "Damlacığı taşıyan şey havanın aracılığı değil, kaynaktan çıkarken kazandığı hızdır; bu yüzden aracısız, yani doğrudan bulaşma sayılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0129",
+       "ses": "Solunum yolu ile bulaşan hastalıklarda bu yol çok önemlidir.",
+       "ekran": "Solunum yolu ile bulaşan hastalıklarda bu yol çok önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b12",
+   "baslik": "Dolaylı bulaşma ve hava yolu farkı",
+   "paragraflar": [
+    {
+     "id": "k1-68-p027",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-68-c0130",
+       "ses": "Dolaylı bulaşma, enfeksiyon etkeninin canlı veya cansız bir aracı ile kaynaktan yeni konakçıya taşınmasıdır.",
+       "ekran": "Dolaylı bulaşma, enfeksiyon etkeninin canlı veya cansız bir aracı ile kaynaktan yeni konakçıya taşınmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0131",
+       "ses": "Bulaşmada rol oynayan en önemli aracılar hava, su ve besinler, vektörler ve eşyalardır.",
+       "ekran": "Bulaşmada rol oynayan en önemli aracılar hava, su ve besinler, vektörler ve eşyalardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0132",
+       "ses": "Su, besin ve eşyaların aracı olabilmesi için önce mikroorganizmalarla kirlenmesi, yani kontamine olması gerekir.",
+       "ekran": "Su, besin ve eşyaların aracı olabilmesi için önce mikroorganizmalarla kirlenmesi, yani kontamine olması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0133",
+       "ses": "Doğrudan ve dolaylı bulaşmanın tek ayırt edici ölçütü aracının varlığıdır.",
+       "ekran": "Doğrudan ve dolaylı bulaşmanın tek ayırt edici ölçütü aracının varlığıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p028",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-68-c0134",
+       "ses": "Burada sözü edilen hava yoluyla bulaşma, direkt damlacıkla bulaşmadan farklıdır; bu iki kavram çok karıştırılır.",
+       "ekran": "Burada sözü edilen hava yoluyla bulaşma, direkt damlacıkla bulaşmadan farklıdır; bu iki kavram çok karıştırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0135",
+       "ses": "Direkt damlacık yolunda damlacıklar kaynaktan çıkarken kazandıkları hızla belli bir mesafeye ulaşır ve havanın aracılığı yoktur.",
+       "ekran": "Direkt damlacık yolunda damlacıklar kaynaktan çıkarken kazandıkları hızla belli bir mesafeye ulaşır ve havanın aracılığı yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0136",
+       "ses": "Hava yolunda ise genellikle suyunu kaybederek ağırlığı azalan damlacık çekirdekleri belli bir süre havada asılı kalır ve hava hareketleri ile daha uzaklara taşınabilir.",
+       "ekran": "Hava yolunda ise genellikle suyunu kaybederek ağırlığı azalan damlacık çekirdekleri belli bir süre havada asılı kalır ve hava hareketleri ile daha uzaklara taşınabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0137",
+       "ses": "Kısacası direkt damlacık hız, belli mesafe ve aracısızlık demektir; hava yolu ise damlacık çekirdeği, havada asılı kalma ve uzak mesafe demektir.",
+       "ekran": "Kısacası direkt damlacık hız, belli mesafe ve aracısızlık demektir; hava yolu ise damlacık çekirdeği, havada asılı kalma ve uzak mesafe demektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p029",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k1-68-c0138",
+       "ses": "Enfeksiyon hastalıklarının bulaşma yolları, etkenin kaynaktan çıkış yolu ile yakından ilişkilidir.",
+       "ekran": "Enfeksiyon hastalıklarının bulaşma yolları, etkenin kaynaktan çıkış yolu ile yakından ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0139",
+       "ses": "Kaynağı solunum yoluyla terk eden etkenler genel olarak direkt damlacık veya hava yoluyla yeni konakçıya ulaşır ve yine solunum yoluyla yeni konakçıya girer.",
+       "ekran": "Kaynağı solunum yoluyla terk eden etkenler genel olarak direkt damlacık veya hava yoluyla yeni konakçıya ulaşır ve yine solunum yoluyla yeni konakçıya girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0140",
+       "ses": "Buna karşılık kaynağı anal yolla terk eden etkenler su ve besinler ya da el ve eşyalar yardımıyla yeni konakçıya ulaşır ve yeni konakçıya ağız yoluyla girer.",
+       "ekran": "Buna karşılık kaynağı anal yolla terk eden etkenler su ve besinler ya da el ve eşyalar yardımıyla yeni konakçıya ulaşır ve yeni konakçıya ağız yoluyla girer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0141",
+       "ses": "Bu yol fekal oral yol olarak ifade edilir.",
+       "ekran": "Bu yol fekal oral yol olarak ifade edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0142",
+       "ses": "Fekal oral yolda aracılar önce dışkıyla kirlenir, sonra etkeni ağza taşır; halkayı kırmak için bu aracıların kirlenmesini önlemek hedeflenir.",
+       "ekran": "Fekal oral yolda aracılar önce dışkıyla kirlenir, sonra etkeni ağza taşır; halkayı kırmak için bu aracıların kirlenmesini önlemek hedeflenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b13",
+   "baslik": "Vektörler, eşyalar ve yeni konakçı",
+   "paragraflar": [
+    {
+     "id": "k1-68-p030",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-68-c0143",
+       "ses": "Vektörler, enfeksiyon etkenlerinin bulaşmasında rol oynayan eklem bacaklılardır ve dolaylı bulaşmanın canlı aracılarıdır.",
+       "ekran": "Vektörler, enfeksiyon etkenlerinin bulaşmasında rol oynayan eklem bacaklılardır ve dolaylı bulaşmanın canlı aracılarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0144",
+       "ses": "Vektörler 2 biçimde rol oynar.",
+       "ekran": "Vektörler 2 biçimde rol oynar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0145",
+       "ses": "Biyolojik vektörlükte vektör etkeni kendi vücuduna alır, onun gelişmesini ve çoğalmasını sağlar.",
+       "ekran": "Biyolojik vektörlükte vektör etkeni kendi vücuduna alır, onun gelişmesini ve çoğalmasını sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0146",
+       "ses": "Mekanik vektörlükte ise vektör etkeni dış yüzeylerinde taşır; etken vektörde gelişmez ve çoğalmaz, yalnız bir yerden başka yere aktarılır.",
+       "ekran": "Mekanik vektörlükte ise vektör etkeni dış yüzeylerinde taşır; etken vektörde gelişmez ve çoğalmaz, yalnız bir yerden başka yere aktarılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0147",
+       "ses": "Ayırt edici soru şudur: etken vektörün içinde gelişip çoğalıyor mu?",
+       "ekran": "Ayırt edici soru şudur: etken vektörün içinde gelişip çoğalıyor mu?",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0148",
+       "ses": "Evetse biyolojik, değilse mekanik vektörlüktür.",
+       "ekran": "Evetse biyolojik, değilse mekanik vektörlüktür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p031",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-68-c0149",
+       "ses": "Çeşitli eşyalar ve cansız varlıklar da enfeksiyonların bulaşmasında aracılık edebilir.",
+       "ekran": "Çeşitli eşyalar ve cansız varlıklar da enfeksiyonların bulaşmasında aracılık edebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0150",
+       "ses": "Bunlar arasında kaşık, tarak, havlu gibi bireysel eşyaların ve enjektör gibi tıbbi araçların önemli bir yeri vardır.",
+       "ekran": "Bunlar arasında kaşık, tarak, havlu gibi bireysel eşyaların ve enjektör gibi tıbbi araçların önemli bir yeri vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0151",
+       "ses": "Fekal oral yoldaki el ve eşyalar da bu grubun örneğidir.",
+       "ekran": "Fekal oral yoldaki el ve eşyalar da bu grubun örneğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0152",
+       "ses": "Bu halkayı kırmak için cansız eşyalarda dezenfeksiyon, tıbbi araçlarda sterilizasyon ve işlemlerin asepsi koşullarında yapılması önem kazanır.",
+       "ekran": "Bu halkayı kırmak için cansız eşyalarda dezenfeksiyon, tıbbi araçlarda sterilizasyon ve işlemlerin asepsi koşullarında yapılması önem kazanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p032",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-68-c0153",
+       "ses": "Zincirin son halkası yeni konakçı, yani sağlam kişidir; enfeksiyon etkeni ile enfekte olabilecek konakçıları ifade eder.",
+       "ekran": "Zincirin son halkası yeni konakçı, yani sağlam kişidir; enfeksiyon etkeni ile enfekte olabilecek konakçıları ifade eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0154",
+       "ses": "Enfeksiyon hastalıklarının birçoğunda toplumun hemen tamamı risk altındadır.",
+       "ekran": "Enfeksiyon hastalıklarının birçoğunda toplumun hemen tamamı risk altındadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0155",
+       "ses": "Bazı hastalıklarda hastalığın geçirilmesi ya da aşılama sayesinde kalıcı bağışıklık sağlanabilir.",
+       "ekran": "Bazı hastalıklarda hastalığın geçirilmesi ya da aşılama sayesinde kalıcı bağışıklık sağlanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0156",
+       "ses": "Bağışıklığın yeterli olması durumunda konakçı enfeksiyon etkeni ile karşılaşsa bile enfeksiyon gelişemez.",
+       "ekran": "Bağışıklığın yeterli olması durumunda konakçı enfeksiyon etkeni ile karşılaşsa bile enfeksiyon gelişemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0157",
+       "ses": "Böyle bir kişi zincirde yeni bir kaynağa dönüşmez; yani bağışık konakçı, şemadaki yeni konakçıdan kaynağa dönen oku keser.",
+       "ekran": "Böyle bir kişi zincirde yeni bir kaynağa dönüşmez; yani bağışık konakçı, şemadaki yeni konakçıdan kaynağa dönen oku keser.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p033",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-68-c0158",
+       "ses": "Bulaşıcı hastalıklarla mücadelede yapılması gereken en doğru şey, enfeksiyon zincirini uygun biçimde kırmaktır.",
+       "ekran": "Bulaşıcı hastalıklarla mücadelede yapılması gereken en doğru şey, enfeksiyon zincirini uygun biçimde kırmaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0159",
+       "ses": "Her halka için bir müdahale vardır.",
+       "ekran": "Her halka için bir müdahale vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0160",
+       "ses": "Kaynağa yönelik olarak enfeksiyon kaynaklarının ortaya çıkarılıp tedavi edilmesi veya izole edilmesi; bulaşma yoluna yönelik olarak bulaşma yolunun ortadan kaldırılması; yeni konakçıya yönelik olarak da tüm toplumun hastalığa karşı aşılanarak bağışık hâle getirilmesi.",
+       "ekran": "Kaynağa yönelik olarak enfeksiyon kaynaklarının ortaya çıkarılıp tedavi edilmesi veya izole edilmesi; bulaşma yoluna yönelik olarak bulaşma yolunun ortadan kaldırılması; yeni konakçıya yönelik olarak da tüm toplumun hastalığa karşı aşılanarak bağışık hâle getirilmesi.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0161",
+       "ses": "Bu durumların her birinde enfeksiyon zinciri kırılır; hangisinin seçileceği hastalığın halkalarının özelliklerine göre belirlenir.",
+       "ekran": "Bu durumların her birinde enfeksiyon zinciri kırılır; hangisinin seçileceği hastalığın halkalarının özelliklerine göre belirlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b14",
+   "baslik": "Etkenin intrensek ve epidemiyolojik özellikleri",
+   "paragraflar": [
+    {
+     "id": "k1-68-p034",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-68-c0162",
+       "ses": "Enfeksiyon etkenlerinin özellikleri 2 grupta incelenir: intrensek, yani mikrobiyolojik özellikler ve epidemiyolojik özellikler.",
+       "ekran": "Enfeksiyon etkenlerinin özellikleri 2 grupta incelenir: intrensek, yani mikrobiyolojik özellikler ve epidemiyolojik özellikler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0163",
+       "ses": "İntrensek özellikler etkende doğal olarak var olan büyüklük, şekil, hareket, yapı, enzimler, toksinler, üreme biçimi ve beslenme gibi özelliklerdir.",
+       "ekran": "İntrensek özellikler etkende doğal olarak var olan büyüklük, şekil, hareket, yapı, enzimler, toksinler, üreme biçimi ve beslenme gibi özelliklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0164",
+       "ses": "Daha çok mikrobiyolojinin ilgi alanına giren bu özellikler, etkenin hastalık yapma durumunu da etkileyebilir.",
+       "ekran": "Daha çok mikrobiyolojinin ilgi alanına giren bu özellikler, etkenin hastalık yapma durumunu da etkileyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0165",
+       "ses": "Örneğin güçlü bir ekzotoksini olan tetanoz ve difteri basilleri bu toksinleri sayesinde ağır hastalık tabloları oluşturur.",
+       "ekran": "Örneğin güçlü bir ekzotoksini olan tetanoz ve difteri basilleri bu toksinleri sayesinde ağır hastalık tabloları oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0166",
+       "ses": "Epidemiyolojik özellikler ise etken ile konakçı arasındaki ilişkilere bağlı özelliklerdir.",
+       "ekran": "Epidemiyolojik özellikler ise etken ile konakçı arasındaki ilişkilere bağlı özelliklerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0167",
+       "ses": "Konakçının bulunmadığı bir ortamda bu özelliklerden söz edilemez.",
+       "ekran": "Konakçının bulunmadığı bir ortamda bu özelliklerden söz edilemez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0168",
+       "ses": "Kısaca toksin, enzim, şekil gibi özellikler intrensektir; konakçı olmadan tanımlanamayan özellikler epidemiyolojiktir.",
+       "ekran": "Kısaca toksin, enzim, şekil gibi özellikler intrensektir; konakçı olmadan tanımlanamayan özellikler epidemiyolojiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0169",
+       "ses": "Şimdi bu epidemiyolojik özellikleri tek tek ele alalım.",
+       "ekran": "Şimdi bu epidemiyolojik özellikleri tek tek ele alalım.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b15",
+   "baslik": "Patojenite, virulans ve enfektivite",
+   "paragraflar": [
+    {
+     "id": "k1-68-p035",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-68-c0170",
+       "ses": "Patojenite, enfeksiyon etkeninin hastalık yapabilme özelliğidir.",
+       "ekran": "Patojenite, enfeksiyon etkeninin hastalık yapabilme özelliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0171",
+       "ses": "Zaten bir enfeksiyonun olabilmesi için patojen bir etkenin bulunması gerekir.",
+       "ekran": "Zaten bir enfeksiyonun olabilmesi için patojen bir etkenin bulunması gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0172",
+       "ses": "Ancak bir etkenin patojenliğinden söz edebilmek için, etkenin hastalık yapacağı bir konakçı olmalıdır; yani patojenlik etken ile konakçıyı birlikte ilgilendiren bir kavramdır.",
+       "ekran": "Ancak bir etkenin patojenliğinden söz edebilmek için, etkenin hastalık yapacağı bir konakçı olmalıdır; yani patojenlik etken ile konakçıyı birlikte ilgilendiren bir kavramdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0173",
+       "ses": "Patojenlik derecesini belirlemek için, etkenle enfekte olan bireyler içinde klinik belirti verenlerin oranı kullanılabilir.",
+       "ekran": "Patojenlik derecesini belirlemek için, etkenle enfekte olan bireyler içinde klinik belirti verenlerin oranı kullanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0174",
+       "ses": "Paydaya dikkat edin: payda bütün toplum değil, enfekte olanlardır.",
+       "ekran": "Paydaya dikkat edin: payda bütün toplum değil, enfekte olanlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0175",
+       "ses": "Enfekte olanların çoğu belirti gösteriyorsa patojenite yüksek, çoğu belirtisiz kalıyorsa düşüktür.",
+       "ekran": "Enfekte olanların çoğu belirti gösteriyorsa patojenite yüksek, çoğu belirtisiz kalıyorsa düşüktür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p036",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-68-c0176",
+       "ses": "Virulans ise patojen mikroorganizmaların ağır hastalık yapabilme özelliğidir.",
+       "ekran": "Virulans ise patojen mikroorganizmaların ağır hastalık yapabilme özelliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0177",
+       "ses": "Virulansı ölçmek için vaka fatalite hızları ya da ağır hastalık oranları kullanılabilir.",
+       "ekran": "Virulansı ölçmek için vaka fatalite hızları ya da ağır hastalık oranları kullanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0178",
+       "ses": "Aynı hastalık etkeninin farklı suşlarının virulansı birbirinden farklı olabilir; örneğin çeşitli influenza salgınlarında vaka fatalite hızları birbirinden farklı olabilmektedir.",
+       "ekran": "Aynı hastalık etkeninin farklı suşlarının virulansı birbirinden farklı olabilir; örneğin çeşitli influenza salgınlarında vaka fatalite hızları birbirinden farklı olabilmektedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0179",
+       "ses": "Karıştırmayın: patojenite belirti veriyor mu sorusunu, virulans ne kadar ağır sorusunu yanıtlar.",
+       "ekran": "Karıştırmayın: patojenite belirti veriyor mu sorusunu, virulans ne kadar ağır sorusunu yanıtlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p037",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k1-68-c0180",
+       "ses": "Enfektivite, enfeksiyon etkeninin konakçıda enfeksiyon oluşturabilme gücüdür ve konakçılarda enfeksiyona neden olabilecek mikroorganizma sayıları ile ölçülür.",
+       "ekran": "Enfektivite, enfeksiyon etkeninin konakçıda enfeksiyon oluşturabilme gücüdür ve konakçılarda enfeksiyona neden olabilecek mikroorganizma sayıları ile ölçülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0181",
+       "ses": "Az sayıda mikroorganizmanın enfeksiyon yapabildiği durumlarda enfektivitenin daha yüksek olduğu söylenebilir.",
+       "ekran": "Az sayıda mikroorganizmanın enfeksiyon yapabildiği durumlarda enfektivitenin daha yüksek olduğu söylenebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0182",
+       "ses": "İlişki terstir: enfeksiyon için gereken mikroorganizma sayısı ne kadar azsa enfektivite o kadar yüksektir.",
+       "ekran": "İlişki terstir: enfeksiyon için gereken mikroorganizma sayısı ne kadar azsa enfektivite o kadar yüksektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0183",
+       "ses": "Enfektiviteyi ölçmek için deneysel araştırmalardan yararlanılarak median enfektif doz, kısaca ID50, ve median letal doz, kısaca LD50, gibi değerler bulunabilir.",
+       "ekran": "Enfektiviteyi ölçmek için deneysel araştırmalardan yararlanılarak median enfektif doz, kısaca ID50, ve median letal doz, kısaca LD50, gibi değerler bulunabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0184",
+       "ses": "Median enfektif doz deney grubundaki konakçıların yarısında enfeksiyon oluşturan dozdur, median letal doz ise yarısını öldüren dozdur; ID50 ne kadar küçükse enfektivite o kadar yüksektir.",
+       "ekran": "Median enfektif doz deney grubundaki konakçıların yarısında enfeksiyon oluşturan dozdur, median letal doz ise yarısını öldüren dozdur; ID50 ne kadar küçükse enfektivite o kadar yüksektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0185",
+       "ses": "Enfektivite hem mikroorganizmanın kolay üreyebilme gibi intrensek özelliklerine hem de konakçının özelliklerine bağlıdır.",
+       "ekran": "Enfektivite hem mikroorganizmanın kolay üreyebilme gibi intrensek özelliklerine hem de konakçının özelliklerine bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b16",
+   "baslik": "Tropizm, bulaşıcılık ve immünojenite",
+   "paragraflar": [
+    {
+     "id": "k1-68-p038",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k1-68-c0186",
+       "ses": "Tropizm, enfeksiyon etkeninin konakçıda belli organ ve dokulara yönelme özelliğidir.",
+       "ekran": "Tropizm, enfeksiyon etkeninin konakçıda belli organ ve dokulara yönelme özelliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0187",
+       "ses": "Örneğin polio ve kuduz virüsleri sinir sistemine yönelir, yani nörotroptur; hepatit virüsleri ise karaciğere yönelir, yani hepatotroptur.",
+       "ekran": "Örneğin polio ve kuduz virüsleri sinir sistemine yönelir, yani nörotroptur; hepatit virüsleri ise karaciğere yönelir, yani hepatotroptur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0188",
+       "ses": "Bu özellik hem enfeksiyon etkeninin tercih ettiği ortam özelliklerine hem de konakçı organizmanın belli doku ve organlarının etkenin tercih ettiği özelliklere sahip olmasına bağlıdır.",
+       "ekran": "Bu özellik hem enfeksiyon etkeninin tercih ettiği ortam özelliklerine hem de konakçı organizmanın belli doku ve organlarının etkenin tercih ettiği özelliklere sahip olmasına bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p039",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k1-68-c0189",
+       "ses": "Transmisibilite, yani bulaşıcılık, enfeksiyon etkeninin bir konakçıdan diğerine taşınabilme özelliğidir.",
+       "ekran": "Transmisibilite, yani bulaşıcılık, enfeksiyon etkeninin bir konakçıdan diğerine taşınabilme özelliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0190",
+       "ses": "Bazı etkenler ancak çok yoğun temas sonucu ya da çok özel durumlarda taşınabilirken, bazıları kısa sürede çok sayıda konakçıya bulaşabilir.",
+       "ekran": "Bazı etkenler ancak çok yoğun temas sonucu ya da çok özel durumlarda taşınabilirken, bazıları kısa sürede çok sayıda konakçıya bulaşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0191",
+       "ses": "Bu özellik, etkenin kaynaktan çıkma yolu ve dış ortam koşullarına dayanma gücü ile yakından ilişkilidir.",
+       "ekran": "Bu özellik, etkenin kaynaktan çıkma yolu ve dış ortam koşullarına dayanma gücü ile yakından ilişkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0192",
+       "ses": "Örneğin kızamık, suçiçeği ve kızamıkçık gibi kaynaktan solunum yoluyla çıkan etkenler hava ya da direkt damlacık yoluyla çok sayıda konakçıya ulaşabilir; sifiliz gibi mukoza yoluyla kaynaktan çıkan etkenler ise ancak yakın temasla yeni konakçıya ulaşabilir.",
+       "ekran": "Örneğin kızamık, suçiçeği ve kızamıkçık gibi kaynaktan solunum yoluyla çıkan etkenler hava ya da direkt damlacık yoluyla çok sayıda konakçıya ulaşabilir; sifiliz gibi mukoza yoluyla kaynaktan çıkan etkenler ise ancak yakın temasla yeni konakçıya ulaşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p040",
+     "sayfa": 57,
+     "cumleler": [
+      {
+       "id": "k1-68-c0193",
+       "ses": "İmmünojenite, enfeksiyon etkenlerinin konakçı organizmada immün cevap meydana getirebilme özelliğidir.",
+       "ekran": "İmmünojenite, enfeksiyon etkenlerinin konakçı organizmada immün cevap meydana getirebilme özelliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0194",
+       "ses": "Bu özellik sayesinde konakçı enfeksiyon etkenlerini tanır, onlara karşı spesifik savunma mekanizmaları geliştirir; 1 kez geçirilen enfeksiyon hastalığı bir daha geçirilmez ve bağışıklama yapılarak hastalığın tamamen önlenmesi mümkün olur.",
+       "ekran": "Bu özellik sayesinde konakçı enfeksiyon etkenlerini tanır, onlara karşı spesifik savunma mekanizmaları geliştirir; 1 kez geçirilen enfeksiyon hastalığı bir daha geçirilmez ve bağışıklama yapılarak hastalığın tamamen önlenmesi mümkün olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0195",
+       "ses": "İmmünojenite hem enfeksiyon etkeninin antijenik yapısına hem de konakçının immün cevap oluşturabilme yeteneğine bağlıdır.",
+       "ekran": "İmmünojenite hem enfeksiyon etkeninin antijenik yapısına hem de konakçının immün cevap oluşturabilme yeteneğine bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0196",
+       "ses": "Yeni konakçıda hastalığı geçirme ve aşılama ile kalıcı bağışıklık sağlanabilmesinin etken tarafındaki karşılığı budur.",
+       "ekran": "Yeni konakçıda hastalığı geçirme ve aşılama ile kalıcı bağışıklık sağlanabilmesinin etken tarafındaki karşılığı budur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b17",
+   "baslik": "Antibiyotiklere direnç geliştirebilme",
+   "paragraflar": [
+    {
+     "id": "k1-68-p041",
+     "sayfa": 59,
+     "cumleler": [
+      {
+       "id": "k1-68-c0197",
+       "ses": "Bir mikroorganizmanın bazı suşlarının bazı antibiyotiklere karşı dirençli olması ya da çeşitli mekanizmalarla direnç geliştirmesi antibiyotik direnci olarak ifade edilir.",
+       "ekran": "Bir mikroorganizmanın bazı suşlarının bazı antibiyotiklere karşı dirençli olması ya da çeşitli mekanizmalarla direnç geliştirmesi antibiyotik direnci olarak ifade edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0198",
+       "ses": "Bir mikroorganizmanın belli antibiyotiklere dirençli olması 2 şeye bağlıdır.",
+       "ekran": "Bir mikroorganizmanın belli antibiyotiklere dirençli olması 2 şeye bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0199",
+       "ses": "1.'si mikroorganizmanın intrensek özellikleridir; örneğin beta laktamaz enzimi salgılaması.",
+       "ekran": "1.'si mikroorganizmanın intrensek özellikleridir; örneğin beta laktamaz enzimi salgılaması.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0200",
+       "ses": "2.'si insanların antibiyotikleri kullanma durumudur.",
+       "ekran": "2.'si insanların antibiyotikleri kullanma durumudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0201",
+       "ses": "Antibiyotiklerin uygunsuz biçimde kullanılması dirençli mikroorganizmaların yaygınlaşmasını kolaylaştırmaktadır.",
+       "ekran": "Antibiyotiklerin uygunsuz biçimde kullanılması dirençli mikroorganizmaların yaygınlaşmasını kolaylaştırmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0202",
+       "ses": "Böylece direnç, etkene ait bir özellikle başlayıp insan davranışıyla toplum düzeyinde bir epidemiyolojik soruna dönüşür.",
+       "ekran": "Böylece direnç, etkene ait bir özellikle başlayıp insan davranışıyla toplum düzeyinde bir epidemiyolojik soruna dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b18",
+   "baslik": "Konakçının kademeli savunması",
+   "paragraflar": [
+    {
+     "id": "k1-68-p042",
+     "sayfa": 61,
+     "cumleler": [
+      {
+       "id": "k1-68-c0203",
+       "ses": "Enfeksiyon etkenlerinin hedefi durumundaki konakçılar çeşitli yollarla kendini savunmaya çalışır.",
+       "ekran": "Enfeksiyon etkenlerinin hedefi durumundaki konakçılar çeşitli yollarla kendini savunmaya çalışır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0204",
+       "ses": "Bu savunmada rol oynayan faktörlere direnç faktörleri, bu direnç faktörlerinin oluşturduğu savunmaya ise bağışıklık adı verilir.",
+       "ekran": "Bu savunmada rol oynayan faktörlere direnç faktörleri, bu direnç faktörlerinin oluşturduğu savunmaya ise bağışıklık adı verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0205",
+       "ses": "Konakçı, enfeksiyon etkeni ile karşılaştığı noktadan itibaren kademeli bir savunma sistemine sahiptir.",
+       "ekran": "Konakçı, enfeksiyon etkeni ile karşılaştığı noktadan itibaren kademeli bir savunma sistemine sahiptir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0206",
+       "ses": "Enfeksiyon etkenlerinin konakçıyla genel olarak ilk temas ettiği dokular deri ve mukozalardır; bu nedenle savunmanın ilk kademesini de deri ve mukozalar oluşturur.",
+       "ekran": "Enfeksiyon etkenlerinin konakçıyla genel olarak ilk temas ettiği dokular deri ve mukozalardır; bu nedenle savunmanın ilk kademesini de deri ve mukozalar oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0207",
+       "ses": "Deri ve mukozaların anatomik bütünlüğü, mikroorganizmaların iç dokulara girişini büyük ölçüde önler; bütünlüğü bozulmuş deri ve mukozalardan etkenlerin girişi çok daha kolaydır.",
+       "ekran": "Deri ve mukozaların anatomik bütünlüğü, mikroorganizmaların iç dokulara girişini büyük ölçüde önler; bütünlüğü bozulmuş deri ve mukozalardan etkenlerin girişi çok daha kolaydır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0208",
+       "ses": "Bu pasif savunma çeşitli aktif mekanizmalarla da desteklenmiştir.",
+       "ekran": "Bu pasif savunma çeşitli aktif mekanizmalarla da desteklenmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0209",
+       "ses": "Deri üzerindeki ter ve yağ bezlerinin oluşturduğu asit manto, mukozalar üzerindeki çeşitli sekresyonlar, submukozal adale hareketleri ve refleksler mikroorganizmaların ortamdan uzaklaştırılmasına yardımcı olur.",
+       "ekran": "Deri üzerindeki ter ve yağ bezlerinin oluşturduğu asit manto, mukozalar üzerindeki çeşitli sekresyonlar, submukozal adale hareketleri ve refleksler mikroorganizmaların ortamdan uzaklaştırılmasına yardımcı olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p043",
+     "sayfa": 66,
+     "cumleler": [
+      {
+       "id": "k1-68-c0210",
+       "ses": "Derinin hijyeni bir denge işidir.",
+       "ekran": "Derinin hijyeni bir denge işidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0211",
+       "ses": "Derinin kirlenmesi ortamın pH'sının değişmesine ve asit mantonun bozulmasına neden olabilir.",
+       "ekran": "Derinin kirlenmesi ortamın pH'sının değişmesine ve asit mantonun bozulmasına neden olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0212",
+       "ses": "Aşırı temizleme de asit mantonun, hatta derinin anatomik bütünlüğünün bozulmasına yol açabilir.",
+       "ekran": "Aşırı temizleme de asit mantonun, hatta derinin anatomik bütünlüğünün bozulmasına yol açabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0213",
+       "ses": "Yani etkili bir savunma için derinin anatomik ve fonksiyonel bütünlüğüne zarar vermeden deriyi temiz tutmak gerekir.",
+       "ekran": "Yani etkili bir savunma için derinin anatomik ve fonksiyonel bütünlüğüne zarar vermeden deriyi temiz tutmak gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0214",
+       "ses": "Ne kadar çok temizlik o kadar iyi savunma düşüncesi yanlıştır.",
+       "ekran": "Ne kadar çok temizlik o kadar iyi savunma düşüncesi yanlıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p044",
+     "sayfa": 67,
+     "cumleler": [
+      {
+       "id": "k1-68-c0215",
+       "ses": "Herhangi bir nedenle deri ve mukoza bariyerini aşarak derin dokulara ulaşan mikroorganizmalar, doku içinde bulunan fagositoz yeteneğine sahip hücreler tarafından fagosite edilir.",
+       "ekran": "Herhangi bir nedenle deri ve mukoza bariyerini aşarak derin dokulara ulaşan mikroorganizmalar, doku içinde bulunan fagositoz yeteneğine sahip hücreler tarafından fagosite edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0216",
+       "ses": "Bu yeterli olmaz ve etken dokuda yerleşirse daha organize bir savunma mekanizması olan iltihap olayı gelişir; böylece enfeksiyon lokalize edilmeye, yani yerinde sınırlandırılmaya çalışılır.",
+       "ekran": "Bu yeterli olmaz ve etken dokuda yerleşirse daha organize bir savunma mekanizması olan iltihap olayı gelişir; böylece enfeksiyon lokalize edilmeye, yani yerinde sınırlandırılmaya çalışılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0217",
+       "ses": "Enfeksiyon lokalize edilemezse etken kan ve lenf dolaşımına ulaşarak sistemik hâle gelir.",
+       "ekran": "Enfeksiyon lokalize edilemezse etken kan ve lenf dolaşımına ulaşarak sistemik hâle gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0218",
+       "ses": "Bu aşamada fagositer hücrelerin oluşturduğu hücresel direncin yanı sıra çeşitli spesifik ve nonspesifik humoral faktörler savunmaya yardımcı olur; bunların en önemlisi immünoglobulinlerin oluşturduğu spesifik dirençtir.",
+       "ekran": "Bu aşamada fagositer hücrelerin oluşturduğu hücresel direncin yanı sıra çeşitli spesifik ve nonspesifik humoral faktörler savunmaya yardımcı olur; bunların en önemlisi immünoglobulinlerin oluşturduğu spesifik dirençtir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0219",
+       "ses": "Bu kademeli mekanizmaların yanı sıra vücut ısısı gibi mekanizmalar da savunmaya katkı sağlar.",
+       "ekran": "Bu kademeli mekanizmaların yanı sıra vücut ısısı gibi mekanizmalar da savunmaya katkı sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b19",
+   "baslik": "Hormonlar, beslenme ve belirtilere müdahale",
+   "paragraflar": [
+    {
+     "id": "k1-68-p045",
+     "sayfa": 70,
+     "cumleler": [
+      {
+       "id": "k1-68-c0220",
+       "ses": "Savunma mekanizmalarının düzenli işlemesinde hormonların ve beslenmenin önemli rolü vardır.",
+       "ekran": "Savunma mekanizmalarının düzenli işlemesinde hormonların ve beslenmenin önemli rolü vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0221",
+       "ses": "Vücudun enerji metabolizmasında önemli rolü olan insülin ve immün reaksiyonların düzenlenmesinde rolü olan kortikosteroidler, enfeksiyon etkenlerine karşı savunmada da önemli rol oynar.",
+       "ekran": "Vücudun enerji metabolizmasında önemli rolü olan insülin ve immün reaksiyonların düzenlenmesinde rolü olan kortikosteroidler, enfeksiyon etkenlerine karşı savunmada da önemli rol oynar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0222",
+       "ses": "Savunma mekanizmalarının düzenli çalışabilmesi için protein, enerji, vitamin ve minerallerin yeterli ve dengeli biçimde alınması önemlidir.",
+       "ekran": "Savunma mekanizmalarının düzenli çalışabilmesi için protein, enerji, vitamin ve minerallerin yeterli ve dengeli biçimde alınması önemlidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p046",
+     "sayfa": 72,
+     "cumleler": [
+      {
+       "id": "k1-68-c0223",
+       "ses": "Enfeksiyon hastalıklarında ortaya çıkan öksürük, ishal ve ateş gibi belirti ve bulguların bazıları, konakçının enfeksiyon etkenlerine karşı savunmasının bir parçasıdır ve zorunlu olmadıkça bu duruma müdahale edilmemelidir.",
+       "ekran": "Enfeksiyon hastalıklarında ortaya çıkan öksürük, ishal ve ateş gibi belirti ve bulguların bazıları, konakçının enfeksiyon etkenlerine karşı savunmasının bir parçasıdır ve zorunlu olmadıkça bu duruma müdahale edilmemelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0224",
+       "ses": "Öksürük ve ishal etkenin ortamdan atılmasına, ateş ise vücut ısısının savunmaya katkısına karşılık gelir.",
+       "ekran": "Öksürük ve ishal etkenin ortamdan atılmasına, ateş ise vücut ısısının savunmaya katkısına karşılık gelir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0225",
+       "ses": "Öte yandan hormon dengesi veya beslenmesi bozuk olan kişilerde enfeksiyonların daha kolay meydana gelebileceği bilinmeli; zorunlu olmadıkça hormon ve beslenme dengesine de müdahale edilmemelidir.",
+       "ekran": "Öte yandan hormon dengesi veya beslenmesi bozuk olan kişilerde enfeksiyonların daha kolay meydana gelebileceği bilinmeli; zorunlu olmadıkça hormon ve beslenme dengesine de müdahale edilmemelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b20",
+   "baslik": "Bağışıklık ve doğal bağışıklık",
+   "paragraflar": [
+    {
+     "id": "k1-68-p047",
+     "sayfa": 74,
+     "cumleler": [
+      {
+       "id": "k1-68-c0226",
+       "ses": "Konakçının enfeksiyon etkenlerine karşı geliştirdiği direnç faktörlerinin oluşturduğu duruma bağışıklık adı verilir.",
+       "ekran": "Konakçının enfeksiyon etkenlerine karşı geliştirdiği direnç faktörlerinin oluşturduğu duruma bağışıklık adı verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0227",
+       "ses": "Bağışıklık farklı düzeyde olabilir; yeterli olması durumunda konakçı enfeksiyon etkenleriyle karşılaşsa bile enfeksiyon olmaz.",
+       "ekran": "Bağışıklık farklı düzeyde olabilir; yeterli olması durumunda konakçı enfeksiyon etkenleriyle karşılaşsa bile enfeksiyon olmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0228",
+       "ses": "Bağışıklığı meydana geliş biçimine göre doğal ve kazanılmış olarak ikiye ayırırız.",
+       "ekran": "Bağışıklığı meydana geliş biçimine göre doğal ve kazanılmış olarak ikiye ayırırız.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0229",
+       "ses": "Doğal bağışıklık, enfeksiyon etkenleri ile karşılaşma söz konusu olmaksızın konakçıda doğal olarak var olan bağışıklıktır.",
+       "ekran": "Doğal bağışıklık, enfeksiyon etkenleri ile karşılaşma söz konusu olmaksızın konakçıda doğal olarak var olan bağışıklıktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0230",
+       "ses": "Konakçının vücut ısısı, organ ve dokularının çeşitli özellikleri gibi faktörler doğal bağışıklığı sağlayabilir.",
+       "ekran": "Konakçının vücut ısısı, organ ve dokularının çeşitli özellikleri gibi faktörler doğal bağışıklığı sağlayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0231",
+       "ses": "Doğal bağışıklık sayesinde diğer canlılarda hastalık yapabilen bazı mikroorganizmalar insanlarda hastalık yapmaz; bu durumun tersi de doğrudur.",
+       "ekran": "Doğal bağışıklık sayesinde diğer canlılarda hastalık yapabilen bazı mikroorganizmalar insanlarda hastalık yapmaz; bu durumun tersi de doğrudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p048",
+     "sayfa": 76,
+     "cumleler": [
+      {
+       "id": "k1-68-c0232",
+       "ses": "Doğal bağışıklık genişten dara doğru 3 düzeyde görülür.",
+       "ekran": "Doğal bağışıklık genişten dara doğru 3 düzeyde görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0233",
+       "ses": "Türe has bağışıklık, farklı canlı türlerinin bazı mikroorganizmalara karşı bağışık olmasıdır; bu nedenle bir canlı türünü kolaylıkla enfekte edebilen bir mikroorganizma başka bir canlı türünde çoğalmayabilir.",
+       "ekran": "Türe has bağışıklık, farklı canlı türlerinin bazı mikroorganizmalara karşı bağışık olmasıdır; bu nedenle bir canlı türünü kolaylıkla enfekte edebilen bir mikroorganizma başka bir canlı türünde çoğalmayabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0234",
+       "ses": "Irka has bağışıklık, aynı canlı türünün farklı ırklarının bir mikroorganizmaya karşı farklı düzeyde bağışık olmasıdır.",
+       "ekran": "Irka has bağışıklık, aynı canlı türünün farklı ırklarının bir mikroorganizmaya karşı farklı düzeyde bağışık olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0235",
+       "ses": "Bireysel bağışıklık ise aynı ırkın farklı bireylerinin aynı enfeksiyon etkenine farklı düzeylerde bağışık olmasıdır.",
+       "ekran": "Bireysel bağışıklık ise aynı ırkın farklı bireylerinin aynı enfeksiyon etkenine farklı düzeylerde bağışık olmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0236",
+       "ses": "Tarih boyunca görülen salgınlarda çok sayıda insan etkilenirken bazı bireylerin etkilenmemesinde bu tür bağışıklığın rolü vardır.",
+       "ekran": "Tarih boyunca görülen salgınlarda çok sayıda insan etkilenirken bazı bireylerin etkilenmemesinde bu tür bağışıklığın rolü vardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b21",
+   "baslik": "Kazanılmış bağışıklık: aktif ve pasif",
+   "paragraflar": [
+    {
+     "id": "k1-68-p049",
+     "sayfa": 80,
+     "cumleler": [
+      {
+       "id": "k1-68-c0237",
+       "ses": "Kazanılmış bağışıklık, konakçının enfeksiyon etkeni veya ona ait ürünlerle karşılaşması sonucunda ortaya çıkan bağışıklıktır ve iki türlü elde edilir.",
+       "ekran": "Kazanılmış bağışıklık, konakçının enfeksiyon etkeni veya ona ait ürünlerle karşılaşması sonucunda ortaya çıkan bağışıklıktır ve iki türlü elde edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0238",
+       "ses": "Aktif kazanılmış bağışıklık, konakçının kendisinin enfeksiyon etkeni veya ona ait ürünlerle karşılaşması sonucunda kazandığı bağışıklıktır.",
+       "ekran": "Aktif kazanılmış bağışıklık, konakçının kendisinin enfeksiyon etkeni veya ona ait ürünlerle karşılaşması sonucunda kazandığı bağışıklıktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0239",
+       "ses": "Doğal aktif bağışıklık, konakçının doğal olarak enfeksiyon etkenini alması sonucunda kazanılır; bu karşılaşmada kişi hastalanabilir ya da hastalık belirtisi göstermeden bağışıklık geliştirebilir.",
+       "ekran": "Doğal aktif bağışıklık, konakçının doğal olarak enfeksiyon etkenini alması sonucunda kazanılır; bu karşılaşmada kişi hastalanabilir ya da hastalık belirtisi göstermeden bağışıklık geliştirebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0240",
+       "ses": "Kızamık, kabakulak ve suçiçeği gibi hastalıkları 1 kez geçiren kişilerin aynı hastalığı bir daha geçirmemesi bu tür bağışıklığa bağlıdır.",
+       "ekran": "Kızamık, kabakulak ve suçiçeği gibi hastalıkları 1 kez geçiren kişilerin aynı hastalığı bir daha geçirmemesi bu tür bağışıklığa bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0241",
+       "ses": "Yapay aktif bağışıklık ise enfeksiyon etkenine ait antijenlerin yapay olarak konakçılara uygulanması, yani aşılama ile elde edilir.",
+       "ekran": "Yapay aktif bağışıklık ise enfeksiyon etkenine ait antijenlerin yapay olarak konakçılara uygulanması, yani aşılama ile elde edilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p050",
+     "sayfa": 84,
+     "cumleler": [
+      {
+       "id": "k1-68-c0242",
+       "ses": "Pasif kazanılmış bağışıklıkta konakçı bağışıklığı kendisi üretmez.",
+       "ekran": "Pasif kazanılmış bağışıklıkta konakçı bağışıklığı kendisi üretmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0243",
+       "ses": "Bir konakçının enfeksiyon etkeni veya ürünleriyle karşılaşması sonucunda oluşan bağışıklık ürünleri bir başka konakçıya verilir.",
+       "ekran": "Bir konakçının enfeksiyon etkeni veya ürünleriyle karşılaşması sonucunda oluşan bağışıklık ürünleri bir başka konakçıya verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0244",
+       "ses": "Doğal pasif bağışıklıkta bu ürünler doğal koşullarda başka bir konakçıya geçer; intrauterin dönemde anneden bebeğe immünoglobulinlerin plasenta aracılığıyla, doğumdan sonra ise anne sütü ile geçmesi buna örnektir.",
+       "ekran": "Doğal pasif bağışıklıkta bu ürünler doğal koşullarda başka bir konakçıya geçer; intrauterin dönemde anneden bebeğe immünoglobulinlerin plasenta aracılığıyla, doğumdan sonra ise anne sütü ile geçmesi buna örnektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0245",
+       "ses": "Yapay pasif bağışıklıkta ise bağışıklık ürünleri yapay olarak başka bir konakçıya verilir; serum ve immünoglobulin uygulaması ile sağlanan bağışıklık yapay pasif bağışıklıktır.",
+       "ekran": "Yapay pasif bağışıklıkta ise bağışıklık ürünleri yapay olarak başka bir konakçıya verilir; serum ve immünoglobulin uygulaması ile sağlanan bağışıklık yapay pasif bağışıklıktır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-68-p051",
+     "sayfa": 86,
+     "cumleler": [
+      {
+       "id": "k1-68-c0246",
+       "ses": "Aşılama ile immünoglobulin uygulaması en sık karıştırılan çifttir.",
+       "ekran": "Aşılama ile immünoglobulin uygulaması en sık karıştırılan çifttir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0247",
+       "ses": "Aşıda antijen verilir ve konakçı yanıtı kendisi üretir, bu yapay aktiftir; immünoglobulin uygulamasında ise hazır bağışıklık ürünü verilir, bu yapay pasiftir.",
+       "ekran": "Aşıda antijen verilir ve konakçı yanıtı kendisi üretir, bu yapay aktiftir; immünoglobulin uygulamasında ise hazır bağışıklık ürünü verilir, bu yapay pasiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0248",
+       "ses": "Aktif sözcüğü bağışıklığı konakçının kendisinin ürettiğini, doğal ya da yapay sözcüğü ise karşılaşmanın nasıl gerçekleştiğini anlatır.",
+       "ekran": "Aktif sözcüğü bağışıklığı konakçının kendisinin ürettiğini, doğal ya da yapay sözcüğü ise karşılaşmanın nasıl gerçekleştiğini anlatır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-68-b22",
+   "baslik": "Özetle",
+   "paragraflar": [
+    {
+     "id": "k1-68-p052",
+     "sayfa": 86,
+     "cumleler": [
+      {
+       "id": "k1-68-c0249",
+       "ses": "Özetle, bulaşıcı bir hastalık kaynak, bulaşma yolu ve yeni konakçıdan oluşan döngüsel bir zincirle sürer ve tek halkanın kırılması bulaşmayı durdurur.",
+       "ekran": "Özetle, bulaşıcı bir hastalık kaynak, bulaşma yolu ve yeni konakçıdan oluşan döngüsel bir zincirle sürer ve tek halkanın kırılması bulaşmayı durdurur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0250",
+       "ses": "Etkenin patojenite, virulans, enfektivite, tropizm, bulaşıcılık, immünojenite ve direnç özellikleri ile konakçının kademeli savunması bu zincirin her hastalıkta nasıl işleyeceğini belirler.",
+       "ekran": "Etkenin patojenite, virulans, enfektivite, tropizm, bulaşıcılık, immünojenite ve direnç özellikleri ile konakçının kademeli savunması bu zincirin her hastalıkta nasıl işleyeceğini belirler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-68-c0251",
+       "ses": "Toplumun aşılanması, yani yapay aktif bağışıklık, zinciri yeni konakçı halkasından kırar; immünojenite de bu müdahaleyi mümkün kılan etken özelliğidir.",
+       "ekran": "Toplumun aşılanması, yani yapay aktif bağışıklık, zinciri yeni konakçı halkasından kırar; immünojenite de bu müdahaleyi mümkün kılan etken özelliğidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

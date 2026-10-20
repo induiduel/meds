@@ -89,3 +89,26 @@ metin bloğu bir paragraftır), `kaynak.md`'deki `=== SAYFA n ===` numaralarıyl
 5. Son mesajın tek satır: `BİTTİ-SESLİ: <kelime> kelime · <bölüm> bölüm · <burası önemli> önemli · <karşılanan>/<toplam> çıkmış`.
 
 Yalnız `konusma_metni.md` ve `konusma_sayfalari.json` yazılır; başka dosyaya dokunma (deck.json ve diğer çıktılar bitti).
+
+## §v2 — Kurul 2 ve sonrası: `konusma_v2.json` (ZORUNLU; kullanıcı kararı 2026-10-20)
+Kurul 2+ derslerinde **yalnız `konusma_v2.json` yazılır**; `konusma_metni.md` ve `konusma_sayfalari.json` ondan otomatik
+türetilir (`scripts/sesli_anlatim/konusma_v2.py --turet`), elle yazma. Yukarıdaki kapsam, sadakat, sıra ve çıkmış
+kuralları aynen geçerlidir. Şema ve kimlik kuralları `konusma_v2.py` başındadır; özet:
+
+- **İki yüz, tek içerik:** her cümlenin
+  - `ses` alanı: bir tıp doktorunun karşısındaki tıp öğrencisine anlatır gibi kurduğu, doğal, tam Türkçe cümle (EMA bunu
+    okur; markdown/işaret yok, kısaltmalar okunuşa uygun). Mekanizmayı neden-sonuç bağıyla anlat; "şimdi şuna bakalım",
+    "bunu sınavda sık sorarlar" gibi hoca dili serbest, ama abartma ve dolgu yok.
+  - `ekran` alanı: aynı bilginin ekranda gösterilecek **madde** hâli (en çok 28 kelime; kısa, isim cümlesi olabilir).
+    Kilit kavramı `**…**` ile işaretle. `duzey` 0 = ana madde, 1 = alt madde (bir öncekinin ayrıntısı).
+- **Vurgu kodu:** `vurgu: [{"metin": "<ekran metninde geçen ifade>", "tur": "terim|sayi|tuzak|cikmis|tanim"}]`.
+  `cikmis` = bu ifade bir çıkmış sorunun cevabıdır (`cikmis` alanına o soru kimliklerini de yaz); `tuzak` = klasik
+  çeldirici; `sayi` = eşik/oran/doz/süre; `tanim` = tanım cümlesinin çekirdeği. Her cümlede vurgu zorunlu değil.
+- **Bağlar:** paragrafın `sayfa`'sı `kaynak.md` sayfası (eski konusma_sayfalari kuralı); cümlenin `slayt_adim`'ı
+  deck.json'daki ilgili adımın kimliği (`<ders_id>-d-s<adım no 2 hane>`), varsa `spot` kimliği.
+- **Kimlik:** `ders_id` = `baglam.json` → `ders_id`'nin ilk iki parçası (ör. `k2-07`). Bölüm `k2-07-b01`, paragraf
+  `k2-07-p001`, cümle `k2-07-c0001`; ders içinde tekil. İlk yazımda sırayla ver. Düzeltme turunda var olan cümlenin
+  kimliğini **değiştirme** (soru açıklamaları ve deeplinkler buna bağlanır); araya eklenen cümle kullanılmamış bir
+  sonraki numarayı alır, silinen cümlenin numarası yeniden kullanılmaz.
+- **Kapı:** `python3 /app/scripts/sesli_anlatim/konusma_v2.py --dogrula .` 0 HATA (Türkçe üslup dahil), sonra
+  `metin_denetle.py` 0 HATA.

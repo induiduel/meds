@@ -257,7 +257,9 @@ class Denetim:
 
         if (self.d / "deck.json").exists():
             r = subprocess.run([sys.executable, str(APP / "scripts" / "validate_learning_decks.py"), str(self.d / "deck.json")]
-                               + ([] if self.yenileme else ["--oyun-zorunlu"]),  # yenilemede deste önceden üretilmiş
+                               + ([] if self.yenileme else ["--oyun-zorunlu"])  # yenilemede deste önceden üretilmiş
+                               # Kurul 2+: Türkçe üslup + şık açıklama kapıları HATA (AGENTS.md 14); Kurul 1 eski kural
+                               + (["--kurul2"] if int((paket or {}).get("kurul") or 0) >= 2 else []),
                                capture_output=True, text=True)
             ozet = (r.stdout.strip().splitlines() or [""])[-1]
             if r.returncode != 0 or " 0 HATA" not in ozet:

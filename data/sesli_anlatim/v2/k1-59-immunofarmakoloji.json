@@ -1,0 +1,3236 @@
+{
+ "surum": 2,
+ "ders_id": "k1-59",
+ "anahtar": "k1-59-immunofarmakoloji",
+ "baslik": "İmmünofarmakoloji: İmmün Yanıt, İmmünosüpresifler, Monoklonal Antikorlar ve İmmünomodülasyon",
+ "kaynak": "k1-donusum",
+ "bolumler": [
+  {
+   "id": "k1-59-b01",
+   "baslik": "İmmünofarmakolojinin amacı ve normal immün yanıt",
+   "paragraflar": [
+    {
+     "id": "k1-59-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-59-c0001",
+       "ses": "İmmün sistemi baskılayan ilaçlar, organ ya da doku naklinden sonra gelişebilecek rejeksiyonun, yani reddin önlenmesinde ve bağışıklık sistemindeki bozukluklardan kaynaklanan bazı hastalıkların tedavisinde önemli bir yere sahiptir.",
+       "ekran": "İmmün sistemi baskılayan ilaçlar, organ ya da doku naklinden sonra gelişebilecek rejeksiyonun, yani reddin önlenmesinde ve bağışıklık sistemindeki bozukluklardan kaynaklanan bazı hastalıkların tedavisinde önemli bir yere sahiptir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0002",
+       "ses": "Bağışıklık yanıtını artıran ya da sistemin farklı bileşenleri arasındaki dengeyi değiştiren ilaçlar ise kanser, edinsel bağışıklık yetmezliği sendromu yani AIDS, otoimmün ve inflamatuvar hastalıkların tedavisinde kullanılabilir.",
+       "ekran": "Bağışıklık yanıtını artıran ya da sistemin farklı bileşenleri arasındaki dengeyi değiştiren ilaçlar ise kanser, edinsel bağışıklık yetmezliği sendromu yani AIDS, otoimmün ve inflamatuvar hastalıkların tedavisinde kullanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k1-59-c0003",
+       "ses": "Bu ilaçları anlamak için önce normal immün yanıtı hatırlayalım.",
+       "ekran": "Bu ilaçları anlamak için önce normal immün yanıtı hatırlayalım.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0004",
+       "ses": "İmmün sistemin temel görevi vücudu hastalık yapıcı patojenlerden korumak ve oluşan hastalıkları ortadan kaldırmaktır.",
+       "ekran": "İmmün sistemin temel görevi vücudu hastalık yapıcı patojenlerden korumak ve oluşan hastalıkları ortadan kaldırmaktır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0005",
+       "ses": "Normal bir immün sistem vücudun kendi hücre ve dokularını yabancı maddelerden ayırt edebilir.",
+       "ekran": "Normal bir immün sistem vücudun kendi hücre ve dokularını yabancı maddelerden ayırt edebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0006",
+       "ses": "Daha önce tanıdığı ve zarar vermeyen antijenlere karşı tolerans gösterirken, vücuda giren zararlı patojenlere karşı güçlü bir bağışıklık yanıtı oluşturur.",
+       "ekran": "Daha önce tanıdığı ve zarar vermeyen antijenlere karşı tolerans gösterirken, vücuda giren zararlı patojenlere karşı güçlü bir bağışıklık yanıtı oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b02",
+   "baslik": "Doğal immün sistem ve bileşenleri",
+   "paragraflar": [
+    {
+     "id": "k1-59-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k1-59-c0007",
+       "ses": "Doğal immün sistem, vücuda giren bakteri, virüs, mantar ve parazit gibi istilacı patojenlere karşı savunmanın ilk basamağıdır ve 3 temel bileşenden oluşur.",
+       "ekran": "Doğal immün sistem, vücuda giren bakteri, virüs, mantar ve parazit gibi istilacı patojenlere karşı savunmanın ilk basamağıdır ve 3 temel bileşenden oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0008",
+       "ses": "1.'si mekanik bileşenlerdir: patojenlerin girişini engelleyen fiziksel bariyerler, yani deri, daha doğrusu epidermis, ve mukus.",
+       "ekran": "1.'si mekanik bileşenlerdir: patojenlerin girişini engelleyen fiziksel bariyerler, yani deri, daha doğrusu epidermis, ve mukus.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0009",
+       "ses": "2.'si biyokimyasal bileşenlerdir: antimikrobiyal peptit ve proteinler, kompleman sistemi, enzimler, interferonlar, asidik pH ve hidrojen peroksit, süperoksit anyonu gibi serbest radikaller.",
+       "ekran": "2.'si biyokimyasal bileşenlerdir: antimikrobiyal peptit ve proteinler, kompleman sistemi, enzimler, interferonlar, asidik pH ve hidrojen peroksit, süperoksit anyonu gibi serbest radikaller.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0010",
+       "ses": "3.'sü hücresel bileşenlerdir: nötrofiller, monositler, makrofajlar, doğal öldürücü yani NK hücreleri ve doğal öldürücü T yani NKT hücreleri.",
+       "ekran": "3.'sü hücresel bileşenlerdir: nötrofiller, monositler, makrofajlar, doğal öldürücü yani NK hücreleri ve doğal öldürücü T yani NKT hücreleri.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k1-59-c0011",
+       "ses": "Doğal immünite, edinsel immüniteden farklı olarak enfeksiyon oluşmadan önce vardır, tekrarlayan enfeksiyonlarla güçlenmez ve genel olarak belirli bir antijene özgü değildir.",
+       "ekran": "Doğal immünite, edinsel immüniteden farklı olarak enfeksiyon oluşmadan önce vardır, tekrarlayan enfeksiyonlarla güçlenmez ve genel olarak belirli bir antijene özgü değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0012",
+       "ses": "Deri ve mukozalar ilk savunma bariyeridir; bu bariyerler bozulduğunda inflamasyon adı verilen hızlı bir doğal immün yanıt gelişir.",
+       "ekran": "Deri ve mukozalar ilk savunma bariyeridir; bu bariyerler bozulduğunda inflamasyon adı verilen hızlı bir doğal immün yanıt gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0013",
+       "ses": "Patojenlerin ortadan kaldırılmasında lizozim gibi biyokimyasal maddeler ve kompleman sistemi önemli rol oynar.",
+       "ekran": "Patojenlerin ortadan kaldırılmasında lizozim gibi biyokimyasal maddeler ve kompleman sistemi önemli rol oynar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b03",
+   "baslik": "Kompleman sistemi ve lökosit göçü",
+   "paragraflar": [
+    {
+     "id": "k1-59-p005",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k1-59-c0014",
+       "ses": "Kompleman sistemi, aktivasyon sırasında fragmanlara ayrılan C1'den C9'a kadar 9 proteinden oluşur ve doğal immünitenin 3 ayrı silahını üretir.",
+       "ekran": "Kompleman sistemi, aktivasyon sırasında fragmanlara ayrılan C1'den C9'a kadar 9 proteinden oluşur ve doğal immünitenin 3 ayrı silahını üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0015",
+       "ses": "Burası önemli, bu eşleştirme sınav spotudur: C3b opsonindir; bakteriyi kaplar, fagositlerce tanınmasını, içeri alınmasını ve sindirilmesini kolaylaştırır.",
+       "ekran": "Burası önemli, bu eşleştirme sınav spotudur: C3b opsonindir; bakteriyi kaplar, fagositlerce tanınmasını, içeri alınmasını ve sindirilmesini kolaylaştırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0016",
+       "ses": "C3a ile C5a ise kemotaktiktir; fagositleri, yani monosit ve makrofajları, kan akımından inflamatuvar bölgeye çeker ve makrofaj ile nötrofillerin fagositozunu artırır.",
+       "ekran": "C3a ile C5a ise kemotaktiktir; fagositleri, yani monosit ve makrofajları, kan akımından inflamatuvar bölgeye çeker ve makrofaj ile nötrofillerin fagositozunu artırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0017",
+       "ses": "C5b, C6, C7, C8 ve C9 birleşerek membran atak kompleksini oluşturur; bu kompleks bakteri zarında delik açar, tuz, protein ve su dışarı kaçar ve bakteri lizise uğrar.",
+       "ekran": "C5b, C6, C7, C8 ve C9 birleşerek membran atak kompleksini oluşturur; bu kompleks bakteri zarında delik açar, tuz, protein ve su dışarı kaçar ve bakteri lizise uğrar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p006",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k1-59-c0018",
+       "ses": "Enfeksiyon sırasında gelişen inflamatuvar yanıt, nötrofil ve monositlerin kandan enfeksiyon bölgesindeki dokulara geçişini sağlar.",
+       "ekran": "Enfeksiyon sırasında gelişen inflamatuvar yanıt, nötrofil ve monositlerin kandan enfeksiyon bölgesindeki dokulara geçişini sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0019",
+       "ses": "Bu göçü, inflamasyon bölgesindeki endotel ve bağışıklık hücrelerinin salgıladığı kemokinler yönlendirir; özellikle makrofaj kemotaktik protein ve makrofaj inflamatuvar protein 1 rol oynar.",
+       "ekran": "Bu göçü, inflamasyon bölgesindeki endotel ve bağışıklık hücrelerinin salgıladığı kemokinler yönlendirir; özellikle makrofaj kemotaktik protein ve makrofaj inflamatuvar protein 1 rol oynar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0020",
+       "ses": "Damardan dokuya geçiş, hücre yüzeyi reseptörleri ile aktive endoteldeki ligandların etkileşimiyle olur.",
+       "ekran": "Damardan dokuya geçiş, hücre yüzeyi reseptörleri ile aktive endoteldeki ligandların etkileşimiyle olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0021",
+       "ses": "Başarılı bir doğal yanıt enfeksiyonu önler ya da hastalığın süresini ve şiddetini azaltır.",
+       "ekran": "Başarılı bir doğal yanıt enfeksiyonu önler ya da hastalığın süresini ve şiddetini azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b04",
+   "baslik": "Doğal öldürücü hücreler ve gama delta T hücreleri",
+   "paragraflar": [
+    {
+     "id": "k1-59-p007",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-59-c0022",
+       "ses": "Monosit ve nötrofillere ek olarak NK hücreleri, NKT hücreleri ve gama delta T hücreleri de doğal immün yanıta katkıda bulunur.",
+       "ekran": "Monosit ve nötrofillere ek olarak NK hücreleri, NKT hücreleri ve gama delta T hücreleri de doğal immün yanıta katkıda bulunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0023",
+       "ses": "Bu hücreler interferon gama ve interlökin 17 salgılayarak dokudaki dendritik hücre ve makrofajları aktive eder, nötrofillerin enfeksiyon bölgesine yönelmesini sağlar.",
+       "ekran": "Bu hücreler interferon gama ve interlökin 17 salgılayarak dokudaki dendritik hücre ve makrofajları aktive eder, nötrofillerin enfeksiyon bölgesine yönelmesini sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p008",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k1-59-c0024",
+       "ses": "NK hücreleri, önceden aktive edilmeye gerek olmadan virüsle enfekte hücreleri ve tümör hücrelerini tanıyıp öldürebilir.",
+       "ekran": "NK hücreleri, önceden aktive edilmeye gerek olmadan virüsle enfekte hücreleri ve tümör hücrelerini tanıyıp öldürebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0025",
+       "ses": "Aktiviteleri, yüzeylerindeki öldürücü hücre immünoglobulin benzeri reseptörler, kısaca KIR reseptörleri aracılığıyla düzenlenir.",
+       "ekran": "Aktiviteleri, yüzeylerindeki öldürücü hücre immünoglobulin benzeri reseptörler, kısaca KIR reseptörleri aracılığıyla düzenlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0026",
+       "ses": "KIR reseptörleri hedef hücrenin yüzeyindeki MHC sınıf I moleküllerini, yani majör histokompatibilite kompleksi sınıf I moleküllerini tanır.",
+       "ekran": "KIR reseptörleri hedef hücrenin yüzeyindeki MHC sınıf I moleküllerini, yani majör histokompatibilite kompleksi sınıf I moleküllerini tanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0027",
+       "ses": "Burada mantık şöyledir: NK hücresi normal hücredeki MHC sınıf I'i tanıdığında inhibitör bir sinyal oluşur ve sağlıklı konak hücre öldürülmez.",
+       "ekran": "Burada mantık şöyledir: NK hücresi normal hücredeki MHC sınıf I'i tanıdığında inhibitör bir sinyal oluşur ve sağlıklı konak hücre öldürülmez.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0028",
+       "ses": "Ancak bazı tümör hücreleri ve virüsle enfekte hücreler MHC sınıf I düzeyini azaltır.",
+       "ekran": "Ancak bazı tümör hücreleri ve virüsle enfekte hücreler MHC sınıf I düzeyini azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0029",
+       "ses": "Bu durumda inhibitör reseptörler yeterince uyarılamaz, NK hücresi aktive olur ve hedefi yok eder.",
+       "ekran": "Bu durumda inhibitör reseptörler yeterince uyarılamaz, NK hücresi aktive olur ve hedefi yok eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0030",
+       "ses": "Öldürme, perforin ve granzim içeren sitotoksik granüllerin serbest bırakılmasıyla olur; bu maddeler hedef hücrede programlanmış hücre ölümünü, yani apoptozu başlatır.",
+       "ekran": "Öldürme, perforin ve granzim içeren sitotoksik granüllerin serbest bırakılmasıyla olur; bu maddeler hedef hücrede programlanmış hücre ölümünü, yani apoptozu başlatır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b05",
+   "baslik": "Edinsel immünite ve T hücre aktivasyonu",
+   "paragraflar": [
+    {
+     "id": "k1-59-p009",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k1-59-c0031",
+       "ses": "Edinsel immün sistem, doğal immün sistemin enfeksiyonu kontrol etmekte yetersiz kaldığı durumlarda devreye girer ve patojenleri daha etkili, hedefe yönelik biçimde tanır.",
+       "ekran": "Edinsel immün sistem, doğal immün sistemin enfeksiyonu kontrol etmekte yetersiz kaldığı durumlarda devreye girer ve patojenleri daha etkili, hedefe yönelik biçimde tanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0032",
+       "ses": "3 temel özelliği vardır: antijen özgüllüğü, yani her antijene özgül bir yanıt; kendini ve yabancıyı ayırt etme, yani öz antijenleri öz olmayanlardan ayırma; ve immünolojik bellek, yani aynı antijenle tekrar karşılaşıldığında daha hızlı ve güçlü yanıt.",
+       "ekran": "3 temel özelliği vardır: antijen özgüllüğü, yani her antijene özgül bir yanıt; kendini ve yabancıyı ayırt etme, yani öz antijenleri öz olmayanlardan ayırma; ve immünolojik bellek, yani aynı antijenle tekrar karşılaşıldığında daha hızlı ve güçlü yanıt.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p010",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k1-59-c0033",
+       "ses": "Edinsel yanıt 2 temel mekanizma üzerinden işler.",
+       "ekran": "Edinsel yanıt 2 temel mekanizma üzerinden işler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0034",
+       "ses": "Burası önemli, bu kavram çıkmış sorularda soruldu: antikora bağlı immüniteye humoral immünite denir.",
+       "ekran": "Burası önemli, bu kavram çıkmış sorularda soruldu: antikora bağlı immüniteye humoral immünite denir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0035",
+       "ses": "Humoral immünite antikor üreten B lenfositleri aracılığıyla antikor yapımıyla, hücresel immünite ise T lenfositlerinin aktivasyonuyla gerçekleşir.",
+       "ekran": "Humoral immünite antikor üreten B lenfositleri aracılığıyla antikor yapımıyla, hücresel immünite ise T lenfositlerinin aktivasyonuyla gerçekleşir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p011",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-59-c0036",
+       "ses": "Spesifik edinsel immünitenin başlatılmasına dendritik hücreler, makrofajlar ve B lenfositlerinden oluşan profesyonel antijen sunan hücreler katılır.",
+       "ekran": "Spesifik edinsel immünitenin başlatılmasına dendritik hücreler, makrofajlar ve B lenfositlerinden oluşan profesyonel antijen sunan hücreler katılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0037",
+       "ses": "Bu hücreler antijeni fagositoz ya da endositozla alıp peptitlere yıkar; peptitler sınıf I ya da sınıf II MHC proteinlerine yüklenerek T hücre reseptörüne sunulur.",
+       "ekran": "Bu hücreler antijeni fagositoz ya da endositozla alıp peptitlere yıkar; peptitler sınıf I ya da sınıf II MHC proteinlerine yüklenerek T hücre reseptörüne sunulur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p012",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k1-59-c0038",
+       "ses": "Burası önemli, T hücresinin aktivasyonu için 2 sinyal gerekir.",
+       "ekran": "Burası önemli, T hücresinin aktivasyonu için 2 sinyal gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0039",
+       "ses": "Birinci sinyal T hücre reseptörünün peptit yüklü MHC molekülüyle birleşmesidir.",
+       "ekran": "Birinci sinyal T hücre reseptörünün peptit yüklü MHC molekülüyle birleşmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0040",
+       "ses": "İkinci sinyal ise antijen sunan hücre üzerindeki eş uyaran moleküllerin, yani CD40, CD80 ve CD86'nın uygun ligandlarına bağlanmasıdır.",
+       "ekran": "İkinci sinyal ise antijen sunan hücre üzerindeki eş uyaran moleküllerin, yani CD40, CD80 ve CD86'nın uygun ligandlarına bağlanmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p013",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-59-c0041",
+       "ses": "T lenfositleri timusta gelişir ve burada öz ile yabancıyı ayırt etmeyi öğrenir.",
+       "ekran": "T lenfositleri timusta gelişir ve burada öz ile yabancıyı ayırt etmeyi öğrenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0042",
+       "ses": "Öz antijenlere yüksek afiniteyle bağlanan T hücreleri apoptoza uğrayarak ortadan kaldırılır.",
+       "ekran": "Öz antijenlere yüksek afiniteyle bağlanan T hücreleri apoptoza uğrayarak ortadan kaldırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0043",
+       "ses": "Yabancı antijenleri öz MHC molekülleri aracılığıyla tanıyabilen T hücreleri ise gelişimini sürdürür, periferik dokulara geçer ve MHC üzerinde sunulan antijenle karşılaştığında aktive olur.",
+       "ekran": "Yabancı antijenleri öz MHC molekülleri aracılığıyla tanıyabilen T hücreleri ise gelişimini sürdürür, periferik dokulara geçer ve MHC üzerinde sunulan antijenle karşılaştığında aktive olur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b06",
+   "baslik": "Yardımcı T alt grupları, sitotoksik T ve B hücre yanıtı",
+   "paragraflar": [
+    {
+     "id": "k1-59-p014",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k1-59-c0044",
+       "ses": "Aktive T lenfositleri, salgıladıkları sitokinlere göre farklı yardımcı T alt gruplarına ayrılır; temel gruplar Th1 ve Th2'dir.",
+       "ekran": "Aktive T lenfositleri, salgıladıkları sitokinlere göre farklı yardımcı T alt gruplarına ayrılır; temel gruplar Th1 ve Th2'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0045",
+       "ses": "Bu ayrım insanlarda farelerdeki kadar kesin değildir.",
+       "ekran": "Bu ayrım insanlarda farelerdeki kadar kesin değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0046",
+       "ses": "Th1 hücreleri özellikle interferon gama, interlökin 2 ve interlökin 12 ile ilişkilidir; makrofajları, sitotoksik T lenfositlerini ve NK hücrelerini aktive ederek hücresel yanıtı destekler.",
+       "ekran": "Th1 hücreleri özellikle interferon gama, interlökin 2 ve interlökin 12 ile ilişkilidir; makrofajları, sitotoksik T lenfositlerini ve NK hücrelerini aktive ederek hücresel yanıtı destekler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0047",
+       "ses": "Th2 hücreleri ise interlökin 4, 5, 6, 10 ve 13'ü üretir; bu sitokinler B lenfositlerinin çoğalmasını ve antikor üreten plazma hücrelerine farklılaşmasını destekler.",
+       "ekran": "Th2 hücreleri ise interlökin 4, 5, 6, 10 ve 13'ü üretir; bu sitokinler B lenfositlerinin çoğalmasını ve antikor üreten plazma hücrelerine farklılaşmasını destekler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p015",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k1-59-c0048",
+       "ses": "Hücre dışı bakteriler genellikle Th2 ağırlıklı yanıtı uyarır; nötralizan antikor üretimi artar ve bakteriler etkisiz hâle getirilir.",
+       "ekran": "Hücre dışı bakteriler genellikle Th2 ağırlıklı yanıtı uyarır; nötralizan antikor üretimi artar ve bakteriler etkisiz hâle getirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0049",
+       "ses": "Mikobakteri gibi hücre içinde yaşayan mikroorganizmalar ise makrofaj gibi efektör hücreleri aktive eden Th1 tipi yanıtı uyarır.",
+       "ekran": "Mikobakteri gibi hücre içinde yaşayan mikroorganizmalar ise makrofaj gibi efektör hücreleri aktive eden Th1 tipi yanıtı uyarır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0050",
+       "ses": "CD8 T lenfositleri, yani sitotoksik T hücreleri, virüsle enfekte hücreler ve tümör hücrelerinin sunduğu, hücre içinde işlenmiş endojen antijenleri tanır ve bu hücreleri doğrudan öldürür.",
+       "ekran": "CD8 T lenfositleri, yani sitotoksik T hücreleri, virüsle enfekte hücreler ve tümör hücrelerinin sunduğu, hücre içinde işlenmiş endojen antijenleri tanır ve bu hücreleri doğrudan öldürür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p016",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k1-59-c0051",
+       "ses": "Bir B hücresi antijenle karşılaştığında onu tanır, işler ve parçalarını CD4 yardımcı T hücrelerine sunar.",
+       "ekran": "Bir B hücresi antijenle karşılaştığında onu tanır, işler ve parçalarını CD4 yardımcı T hücrelerine sunar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0052",
+       "ses": "CD4 T hücreleri interlökin 4 ve interlökin 5 gibi sitokinlerle B hücresinin çoğalmasını ve farklılaşmasını destekler; B hücresi bellek B hücresine ve plazma hücresine dönüşür.",
+       "ekran": "CD4 T hücreleri interlökin 4 ve interlökin 5 gibi sitokinlerle B hücresinin çoğalmasını ve farklılaşmasını destekler; B hücresi bellek B hücresine ve plazma hücresine dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0053",
+       "ses": "İlk antikor yanıtında immünoglobulin M üretilir.",
+       "ekran": "İlk antikor yanıtında immünoglobulin M üretilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0054",
+       "ses": "Aynı antijenle tekrar karşılaşıldığında daha güçlü bir ikincil yanıt oluşur, sınıf değişimi gerçekleşir ve immünoglobulin G, A ya da E üretimi artar.",
+       "ekran": "Aynı antijenle tekrar karşılaşıldığında daha güçlü bir ikincil yanıt oluşur, sınıf değişimi gerçekleşir ve immünoglobulin G, A ya da E üretimi artar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0055",
+       "ses": "Antikorlar fagositozu ve hücresel sitotoksisiteyi destekler, komplemanı aktive ederek özellikle bakterileri lizise uğratır.",
+       "ekran": "Antikorlar fagositozu ve hücresel sitotoksisiteyi destekler, komplemanı aktive ederek özellikle bakterileri lizise uğratır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b07",
+   "baslik": "Anormal immün yanıtlar ve Tip 1 aşırı duyarlılık",
+   "paragraflar": [
+    {
+     "id": "k1-59-p017",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k1-59-c0056",
+       "ses": "Normal immün sistem toksinleri nötralize eder, virüsleri ve tümörleşmiş hücreleri yok eder; ancak yanıtın aşırı ya da yanlış çalışması 3 tür hastalığa yol açar.",
+       "ekran": "Normal immün sistem toksinleri nötralize eder, virüsleri ve tümörleşmiş hücreleri yok eder; ancak yanıtın aşırı ya da yanlış çalışması 3 tür hastalığa yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0057",
+       "ses": "Aşırı duyarlılıkta immün sistem aşırı yanıt verir ve doku hasarı oluşur.",
+       "ekran": "Aşırı duyarlılıkta immün sistem aşırı yanıt verir ve doku hasarı oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0058",
+       "ses": "Otoimmünitede sistem vücudun kendi antijenlerine tepki gösterir.",
+       "ekran": "Otoimmünitede sistem vücudun kendi antijenlerine tepki gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0059",
+       "ses": "Bağışıklık yetmezliğinde ise uygun hedeflere yeterli yanıt oluşturulamaz ve temel savunma zayıflar.",
+       "ekran": "Bağışıklık yetmezliğinde ise uygun hedeflere yeterli yanıt oluşturulamaz ve temel savunma zayıflar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p018",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-59-c0060",
+       "ses": "Burası önemli, aşırı duyarlılığın sınıflaması sınav spotudur: Tip 1, 2 ve 3 antikor aracılı, Tip 4 ise hücre aracılıdır.",
+       "ekran": "Burası önemli, aşırı duyarlılığın sınıflaması sınav spotudur: Tip 1, 2 ve 3 antikor aracılı, Tip 4 ise hücre aracılıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0061",
+       "ses": "Aşırı duyarlılık 2 aşamada gelişir.",
+       "ekran": "Aşırı duyarlılık 2 aşamada gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0062",
+       "ses": "Sensitizasyon fazı antijenle ilk karşılaşmada oluşur; efektör faz immünolojik bellek içerir ve sonraki maruziyetlerde doku patolojisiyle sonuçlanır.",
+       "ekran": "Sensitizasyon fazı antijenle ilk karşılaşmada oluşur; efektör faz immünolojik bellek içerir ve sonraki maruziyetlerde doku patolojisiyle sonuçlanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p019",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k1-59-c0063",
+       "ses": "Tip 1, yani ani aşırı duyarlılık, immünoglobulin E aracılıdır ve antijenle tekrar karşılaşan hastada sıklıkla dakikalar içinde belirti verir.",
+       "ekran": "Tip 1, yani ani aşırı duyarlılık, immünoglobulin E aracılıdır ve antijenle tekrar karşılaşan hastada sıklıkla dakikalar içinde belirti verir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0064",
+       "ses": "Mekanizma şöyledir: alerjene ilk maruziyette alerjene özgü B hücrelerinden farklılaşan plazma hücreleri immünoglobulin E üretir.",
+       "ekran": "Mekanizma şöyledir: alerjene ilk maruziyette alerjene özgü B hücrelerinden farklılaşan plazma hücreleri immünoglobulin E üretir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0065",
+       "ses": "Bu antikor kan bazofilleri ve doku mast hücrelerindeki özgül reseptörlere bağlanır.",
+       "ekran": "Bu antikor kan bazofilleri ve doku mast hücrelerindeki özgül reseptörlere bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0066",
+       "ses": "Alerjenle tekrar karşılaşıldığında membrana bağlı immünoglobulin E çapraz bağlanır, hücre degranüle olur.",
+       "ekran": "Alerjenle tekrar karşılaşıldığında membrana bağlı immünoglobulin E çapraz bağlanır, hücre degranüle olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0067",
+       "ses": "Histamin, lökotrienler ve eozinofil kemotaktik faktör gibi mediatörler salınır; vazodilatasyon, düz kas kasılması ve artmış damar geçirgenliği gelişir.",
+       "ekran": "Histamin, lökotrienler ve eozinofil kemotaktik faktör gibi mediatörler salınır; vazodilatasyon, düz kas kasılması ve artmış damar geçirgenliği gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0068",
+       "ses": "Sonuç anafilaksi, astım, saman nezlesi ya da ürtikerdir.",
+       "ekran": "Sonuç anafilaksi, astım, saman nezlesi ya da ürtikerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0069",
+       "ses": "Böcek sokması, bazı gıdalar ya da ilaç aşırı duyarlılığına bağlı sistemik anafilaksi acil tıbbi müdahale gerektirir.",
+       "ekran": "Böcek sokması, bazı gıdalar ya da ilaç aşırı duyarlılığına bağlı sistemik anafilaksi acil tıbbi müdahale gerektirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p020",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-59-c0070",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda tekrar tekrar soruldu: penisilin gibi ilaçlara karşı Tip 1, yani ani tip alerji geliştiğinde, ilaç ile hapten birleşiğine karşı özgül olarak immünoglobulin E oluşur.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda tekrar tekrar soruldu: penisilin gibi ilaçlara karşı Tip 1, yani ani tip alerji geliştiğinde, ilaç ile hapten birleşiğine karşı özgül olarak immünoglobulin E oluşur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0071",
+       "ses": "İmmünoglobulin M, immünoglobulin A ya da immünoglobulin G alt sınıfları bu tablonun cevabı değildir.",
+       "ekran": "İmmünoglobulin M, immünoglobulin A ya da immünoglobulin G alt sınıfları bu tablonun cevabı değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p021",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k1-59-c0072",
+       "ses": "Omalizumab ise immünoglobulin E'nin mast hücreleri ve bazofillerdeki reseptörlerine bağlanmasını önleyerek degranülasyonu engeller.",
+       "ekran": "Omalizumab ise immünoglobulin E'nin mast hücreleri ve bazofillerdeki reseptörlerine bağlanmasını önleyerek degranülasyonu engeller.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b08",
+   "baslik": "Tip 2, Tip 3 ve Tip 4 aşırı duyarlılık",
+   "paragraflar": [
+    {
+     "id": "k1-59-p022",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k1-59-c0073",
+       "ses": "Tip 2 aşırı duyarlılık, hücre yüzeyindeki yabancı antijen ile immünoglobulin M ya da immünoglobulin G arasında antijen antikor kompleksi oluşmasıyla gelişir.",
+       "ekran": "Tip 2 aşırı duyarlılık, hücre yüzeyindeki yabancı antijen ile immünoglobulin M ya da immünoglobulin G arasında antijen antikor kompleksi oluşmasıyla gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0074",
+       "ses": "Klasik örnek, uygun çapraz karşılaştırma yapılmadan verilen kanla gelişen transfüzyon reaksiyonudur; transfüze edilen kırmızı kan hücreleri membran atak kompleksiyle lize edilir.",
+       "ekran": "Klasik örnek, uygun çapraz karşılaştırma yapılmadan verilen kanla gelişen transfüzyon reaksiyonudur; transfüze edilen kırmızı kan hücreleri membran atak kompleksiyle lize edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0075",
+       "ses": "Yenidoğanın hemolitik hastalığında rezus negatif annenin ürettiği anti rezus immünoglobulin G antikorları plasentayı geçer, rezus pozitif fetüsün kırmızı kan hücrelerine bağlanır ve onları hasara uğratır.",
+       "ekran": "Yenidoğanın hemolitik hastalığında rezus negatif annenin ürettiği anti rezus immünoglobulin G antikorları plasentayı geçer, rezus pozitif fetüsün kırmızı kan hücrelerine bağlanır ve onları hasara uğratır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0076",
+       "ses": "Tip 2 aşırı duyarlılık, alerjik hastalara penisilin gibi bir ilaç uygulanmasıyla da gelişebilir.",
+       "ekran": "Tip 2 aşırı duyarlılık, alerjik hastalara penisilin gibi bir ilaç uygulanmasıyla da gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p023",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-59-c0077",
+       "ses": "Tip 3 aşırı duyarlılık, dolaşımda yüksek düzeyde bulunan antijen antikor komplekslerinin doku ve damar bazal membranlarında birikmesiyle gelişir.",
+       "ekran": "Tip 3 aşırı duyarlılık, dolaşımda yüksek düzeyde bulunan antijen antikor komplekslerinin doku ve damar bazal membranlarında birikmesiyle gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0078",
+       "ses": "Komplekslerin birikimi ve nötrofillerden salınan litik enzimler deri döküntüsü, glomerülonefrit ve artrit oluşturur.",
+       "ekran": "Komplekslerin birikimi ve nötrofillerden salınan litik enzimler deri döküntüsü, glomerülonefrit ve artrit oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0079",
+       "ses": "Belirtiler sıklıkla antijenle karşılaşmadan 7 gün sonra başlar.",
+       "ekran": "Belirtiler sıklıkla antijenle karşılaşmadan 7 gün sonra başlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p024",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k1-59-c0080",
+       "ses": "Tip 4, yani gecikmiş tip aşırı duyarlılık, diğer üçünden farklı olarak hücre aracılıdır ve duyarlılaştıran antijene maruziyetten sonra 5 gün içinde yanıt oluşturur.",
+       "ekran": "Tip 4, yani gecikmiş tip aşırı duyarlılık, diğer üçünden farklı olarak hücre aracılıdır ve duyarlılaştıran antijene maruziyetten sonra 5 gün içinde yanıt oluşturur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0081",
+       "ses": "Antijene özgü Th1 hücreleri nedeniyle gelişir ve antijene özgü olmayan makrofajların birikimiyle karakterize lokal bir inflamasyon başlatır.",
+       "ekran": "Antijene özgü Th1 hücreleri nedeniyle gelişir ve antijene özgü olmayan makrofajların birikimiyle karakterize lokal bir inflamasyon başlatır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0082",
+       "ses": "Zararlı görünse de Mycobacterium tuberculosis ve Leishmania gibi hücre içi patojenlerin ortadan kaldırılmasında çok etkilidir.",
+       "ekran": "Zararlı görünse de Mycobacterium tuberculosis ve Leishmania gibi hücre içi patojenlerin ortadan kaldırılmasında çok etkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0083",
+       "ses": "Klinikteki örneği tüberkülin aşırı duyarlılığıdır: tüberkülozla karşılaşma deri testiyle belirlenir.",
+       "ekran": "Klinikteki örneği tüberkülin aşırı duyarlılığıdır: tüberkülozla karşılaşma deri testiyle belirlenir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0084",
+       "ses": "Pozitif yanıtta enjeksiyon bölgesine makrofaj ve T hücresi akışı nedeniyle endürasyon, yani yumuşak dokunun lokal sertleşmesi, ve kızarıklık görülür.",
+       "ekran": "Pozitif yanıtta enjeksiyon bölgesine makrofaj ve T hücresi akışı nedeniyle endürasyon, yani yumuşak dokunun lokal sertleşmesi, ve kızarıklık görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p025",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-59-c0085",
+       "ses": "Dikkat edin, Tip 3 ile Tip 4 karıştırılır, çünkü ikisi de gecikmeli görünür.",
+       "ekran": "Dikkat edin, Tip 3 ile Tip 4 karıştırılır, çünkü ikisi de gecikmeli görünür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0086",
+       "ses": "Tip 3 antikor ve immün kompleks aracılıdır ve 7 günde ortaya çıkar; Tip 4 ise hücre aracılıdır ve 5 günde ortaya çıkar.",
+       "ekran": "Tip 3 antikor ve immün kompleks aracılıdır ve 7 günde ortaya çıkar; Tip 4 ise hücre aracılıdır ve 5 günde ortaya çıkar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b09",
+   "baslik": "Otoimmünite ve immün yetmezlik hastalıkları",
+   "paragraflar": [
+    {
+     "id": "k1-59-p026",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k1-59-c0087",
+       "ses": "Vücut kendine karşı toleransını kaybettiğinde ya da öz dokusunu yabancıdan ayıramadığında otoimmün hastalık gelişir.",
+       "ekran": "Vücut kendine karşı toleransını kaybettiğinde ya da öz dokusunu yabancıdan ayıramadığında otoimmün hastalık gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0088",
+       "ses": "Bu durum, öz antijenleri hedefleyen hücresel ya da humoral yanıtlara ortam hazırlayan öze reaktif T ve B lenfositlerinden kaynaklanır.",
+       "ekran": "Bu durum, öz antijenleri hedefleyen hücresel ya da humoral yanıtlara ortam hazırlayan öze reaktif T ve B lenfositlerinden kaynaklanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0089",
+       "ses": "Örnekler romatoid artrit, psoriazis, sistemik lupus eritematozus, multipl skleroz ve Tip 1 diyabettir.",
+       "ekran": "Örnekler romatoid artrit, psoriazis, sistemik lupus eritematozus, multipl skleroz ve Tip 1 diyabettir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0090",
+       "ses": "Öne sürülen 3 mekanizma vardır.",
+       "ekran": "Öne sürülen 3 mekanizma vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0091",
+       "ses": "1.'si, daha önce immün sistemden ayrı tutulmuş antijenlerin öze reaktif lenfositlerle karşılaşmasıdır.",
+       "ekran": "1.'si, daha önce immün sistemden ayrı tutulmuş antijenlerin öze reaktif lenfositlerle karşılaşmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0092",
+       "ses": "2.'si moleküler benzeşmedir: patojenin antijenik determinantlarına yönelen yanıt, benzer ya da aynı epitopları taşıyan normal konak hücrelerini de hedefler.",
+       "ekran": "2.'si moleküler benzeşmedir: patojenin antijenik determinantlarına yönelen yanıt, benzer ya da aynı epitopları taşıyan normal konak hücrelerini de hedefler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0093",
+       "ses": "3.'sü, normalde sınıf II MHC taşımayan hücrelerde, örneğin pankreas adacık beta hücrelerinde, uygunsuz sınıf II MHC ekspresyonudur.",
+       "ekran": "3.'sü, normalde sınıf II MHC taşımayan hücrelerde, örneğin pankreas adacık beta hücrelerinde, uygunsuz sınıf II MHC ekspresyonudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p027",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-59-c0094",
+       "ses": "İmmün yetmezlik, bağışıklık sisteminin yeterince çalışamaması sonucu enfeksiyonlara karşı savunmanın zayıflamasıdır; enfeksiyona yatkınlık, hastalığın ağır ve uzun seyri ile kendini gösterir.",
+       "ekran": "İmmün yetmezlik, bağışıklık sisteminin yeterince çalışamaması sonucu enfeksiyonlara karşı savunmanın zayıflamasıdır; enfeksiyona yatkınlık, hastalığın ağır ve uzun seyri ile kendini gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0095",
+       "ses": "Doğuştan olabilir ya da bakteriyel ve viral enfeksiyonlar ve bazı ilaç tedavileri gibi dış etkenlerle sonradan gelişebilir.",
+       "ekran": "Doğuştan olabilir ya da bakteriyel ve viral enfeksiyonlar ve bazı ilaç tedavileri gibi dış etkenlerle sonradan gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0096",
+       "ses": "Bu kişiler fırsatçı mikroorganizmalara karşı savunmasızdır.",
+       "ekran": "Bu kişiler fırsatçı mikroorganizmalara karşı savunmasızdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p028",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k1-59-c0097",
+       "ses": "Burası önemli, 3 doğuştan immün yetmezlik sınav spotudur.",
+       "ekran": "Burası önemli, 3 doğuştan immün yetmezlik sınav spotudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0098",
+       "ses": "X'e bağlı agammaglobulinemi özellikle erkeklerde görülür; B hücrelerinin olgunlaşıp plazma hücresine dönüşmesi bozulur.",
+       "ekran": "X'e bağlı agammaglobulinemi özellikle erkeklerde görülür; B hücrelerinin olgunlaşıp plazma hücresine dönüşmesi bozulur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0099",
+       "ses": "Antikor üretimi yetersizdir, hücresel yanıt büyük ölçüde korunur, ama tekrarlayan bakteriyel enfeksiyonlara yatkınlık vardır.",
+       "ekran": "Antikor üretimi yetersizdir, hücresel yanıt büyük ölçüde korunur, ama tekrarlayan bakteriyel enfeksiyonlara yatkınlık vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0100",
+       "ses": "DiGeorge sendromu genellikle 22. kromozomdaki bir genetik bozukluktan kaynaklanır; timus gelişmediği için T hücrelerinin gelişimi ve işlevi azalır.",
+       "ekran": "DiGeorge sendromu genellikle 22. kromozomdaki bir genetik bozukluktan kaynaklanır; timus gelişmediği için T hücrelerinin gelişimi ve işlevi azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0101",
+       "ses": "B hücreleri kısmen korunsa da T hücre yardımı eksik olduğundan yanıt tam etkili olamaz.",
+       "ekran": "B hücreleri kısmen korunsa da T hücre yardımı eksik olduğundan yanıt tam etkili olamaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0102",
+       "ses": "Adenozin deaminaz, yani ADA enzimi, lenfositler için toksik olan deoksi-ATP birikimini önler.",
+       "ekran": "Adenozin deaminaz, yani ADA enzimi, lenfositler için toksik olan deoksi-ATP birikimini önler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0103",
+       "ses": "Enzim eksik olduğunda deoksi-ATP birikir, T ve B lenfositleri ölür, hem hücresel hem humoral bağışıklık bozulur ve ağır kombine immün yetmezlik gelişir.",
+       "ekran": "Enzim eksik olduğunda deoksi-ATP birikir, T ve B lenfositleri ölür, hem hücresel hem humoral bağışıklık bozulur ve ağır kombine immün yetmezlik gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b10",
+   "baslik": "İmmünosüpresif tedavi ve glukokortikoidler",
+   "paragraflar": [
+    {
+     "id": "k1-59-p029",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-59-c0104",
+       "ses": "İmmünosüpresif ajanlar, abartılı ya da uygunsuz immün yanıtların zararlı etkilerini engellemede ya da en aza indirmede çok etkilidir.",
+       "ekran": "İmmünosüpresif ajanlar, abartılı ya da uygunsuz immün yanıtların zararlı etkilerini engellemede ya da en aza indirmede çok etkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0105",
+       "ses": "Ancak hastalığa yol açma, enfeksiyon ve kötü huylu tümör riskini artırma potansiyelleri de vardır.",
+       "ekran": "Ancak hastalığa yol açma, enfeksiyon ve kötü huylu tümör riskini artırma potansiyelleri de vardır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p030",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k1-59-c0106",
+       "ses": "Burası önemli: glukokortikoidler, yani kortikosteroidler, lenfolitik özelliği olan ilk hormonal ajanlardır.",
+       "ekran": "Burası önemli: glukokortikoidler, yani kortikosteroidler, lenfolitik özelliği olan ilk hormonal ajanlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0107",
+       "ses": "Uygulandıklarında lenf düğümü ve dalaktaki lenfoid hücre sayısını azaltırlar; buna karşılık kemik iliğindeki miyeloid ve eritroid kök hücrelere belirgin toksik etki göstermezler.",
+       "ekran": "Uygulandıklarında lenf düğümü ve dalaktaki lenfoid hücre sayısını azaltırlar; buna karşılık kemik iliğindeki miyeloid ve eritroid kök hücrelere belirgin toksik etki göstermezler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0108",
+       "ses": "Bazı T hücre alt gruplarına sitotoksiktirler, ama asıl etkileri hücre işlevlerini değiştirmeleridir.",
+       "ekran": "Bazı T hücre alt gruplarına sitotoksiktirler, ama asıl etkileri hücre işlevlerini değiştirmeleridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0109",
+       "ses": "Glukokortikoidler hücresel immüniteyi humoral immüniteden daha fazla baskılar.",
+       "ekran": "Glukokortikoidler hücresel immüniteyi humoral immüniteden daha fazla baskılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0110",
+       "ses": "Önce yeni antikor oluşumu, tedavi uzarsa önceden oluşmuş antikorlar da azalır.",
+       "ekran": "Önce yeni antikor oluşumu, tedavi uzarsa önceden oluşmuş antikorlar da azalır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0111",
+       "ses": "Alerjik reaksiyonları hafifletmede, astım tedavisinde ve kan ürünleri ya da kemoterapi öncesinde istenmeyen immün yanıtı önlemek için ön tedavi olarak kullanılırlar.",
+       "ekran": "Alerjik reaksiyonları hafifletmede, astım tedavisinde ve kan ürünleri ya da kemoterapi öncesinde istenmeyen immün yanıtı önlemek için ön tedavi olarak kullanılırlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p031",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k1-59-c0112",
+       "ses": "Ders kitabındaki bir tablo, immünosüpresiflerin klinik kullanımını özetler.",
+       "ekran": "Ders kitabındaki bir tablo, immünosüpresiflerin klinik kullanımını özetler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0113",
+       "ses": "İdiyopatik trombositopenik purpura, otoimmün hemolitik anemi, akut glomerülonefrit ve edinsel faktör XIII antikorlarında prednizon, siklofosfamid, merkaptopürin, azatioprin, vinkristin ve yüksek doz gama globulin gibi ajanlarla yanıt genellikle iyidir.",
+       "ekran": "İdiyopatik trombositopenik purpura, otoimmün hemolitik anemi, akut glomerülonefrit ve edinsel faktör XIII antikorlarında prednizon, siklofosfamid, merkaptopürin, azatioprin, vinkristin ve yüksek doz gama globulin gibi ajanlarla yanıt genellikle iyidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0114",
+       "ses": "Lupus, romatoid artrit, skleroderma, multipl skleroz, Wegener granülomatozu ve inflamatuvar bağırsak hastalığı gibi otoreaktif doku bozukluklarında bunlara metotreksat, interferon alfa ve beta, siklosporin, infliksimab, etanersept ve adalimumab eklenir; yanıt değişkendir.",
+       "ekran": "Lupus, romatoid artrit, skleroderma, multipl skleroz, Wegener granülomatozu ve inflamatuvar bağırsak hastalığı gibi otoreaktif doku bozukluklarında bunlara metotreksat, interferon alfa ve beta, siklosporin, infliksimab, etanersept ve adalimumab eklenir; yanıt değişkendir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0115",
+       "ses": "Yenidoğanın hemolitik hastalığında Rh0(D) immünoglobuliniyle yanıt mükemmeldir.",
+       "ekran": "Yenidoğanın hemolitik hastalığında Rh0(D) immünoglobuliniyle yanıt mükemmeldir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0116",
+       "ses": "Nakilde siklosporin, azatioprin, prednizon, antilenfosit globulin, OKT3, takrolimus ve sirolimus kullanılır; yanıt böbrekte çok iyi, kalpte ve kemik iliğinde iyi, karaciğerde ortadır.",
+       "ekran": "Nakilde siklosporin, azatioprin, prednizon, antilenfosit globulin, OKT3, takrolimus ve sirolimus kullanılır; yanıt böbrekte çok iyi, kalpte ve kemik iliğinde iyi, karaciğerde ortadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0117",
+       "ses": "Basiliksimab ve daklizumab yalnız böbrek nakli için onaylıdır.",
+       "ekran": "Basiliksimab ve daklizumab yalnız böbrek nakli için onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0118",
+       "ses": "Koroner stentlerde sirolimus emdirilmiş stent, neovasküler maküler dejenerasyonda ranibizumab ve endikasyon dışı bevasizumab kullanılır.",
+       "ekran": "Koroner stentlerde sirolimus emdirilmiş stent, neovasküler maküler dejenerasyonda ranibizumab ve endikasyon dışı bevasizumab kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b11",
+   "baslik": "Kalsinörin inhibitörleri: siklosporin ve takrolimus",
+   "paragraflar": [
+    {
+     "id": "k1-59-p032",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-59-c0119",
+       "ses": "Siklosporin, diğer adıyla siklosporin A, güçlü bir immünosüpresiftir.",
+       "ekran": "Siklosporin, diğer adıyla siklosporin A, güçlü bir immünosüpresiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0120",
+       "ses": "Organ nakillerinde, hematopoetik kök hücre naklinden sonra gelişebilen graft versus host hastalığının tedavisinde ve bazı otoimmün hastalıklarda kullanılır.",
+       "ekran": "Organ nakillerinde, hematopoetik kök hücre naklinden sonra gelişebilen graft versus host hastalığının tedavisinde ve bazı otoimmün hastalıklarda kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0121",
+       "ses": "Özellikle T lenfositlerinin aktivasyonunu, T hücre antijen reseptörüyle uyarılmadan sonraki erken aşamada baskılar.",
+       "ekran": "Özellikle T lenfositlerinin aktivasyonunu, T hücre antijen reseptörüyle uyarılmadan sonraki erken aşamada baskılar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p033",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k1-59-c0122",
+       "ses": "Siklosporin, immünofilin adı verilen hücre içi protein ailesinden siklofiline bağlanır.",
+       "ekran": "Siklosporin, immünofilin adı verilen hücre içi protein ailesinden siklofiline bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0123",
+       "ses": "Siklosporin siklofilin kompleksi, hücre içi bir fosfataz olan kalsinörini inhibe eder.",
+       "ekran": "Siklosporin siklofilin kompleksi, hücre içi bir fosfataz olan kalsinörini inhibe eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0124",
+       "ses": "Kalsinörin, aktive T hücrelerinin nükleer faktörü adlı transkripsiyon faktörünün aktivasyonu için gereklidir; bu faktör başta interlökin 2 olmak üzere sitokin genlerinin üretiminde rol oynar.",
+       "ekran": "Kalsinörin, aktive T hücrelerinin nükleer faktörü adlı transkripsiyon faktörünün aktivasyonu için gereklidir; bu faktör başta interlökin 2 olmak üzere sitokin genlerinin üretiminde rol oynar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0125",
+       "ses": "Kalsinörin inhibe olunca bu faktör aktive olamaz ve çekirdeğe geçemez, interlökin 2, interlökin 3, interferon gama ve diğer bazı sitokinlerin üretimi azalır, T hücre aktivasyonu baskılanır.",
+       "ekran": "Kalsinörin inhibe olunca bu faktör aktive olamaz ve çekirdeğe geçemez, interlökin 2, interlökin 3, interferon gama ve diğer bazı sitokinlerin üretimi azalır, T hücre aktivasyonu baskılanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p034",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-59-c0126",
+       "ses": "Burası önemli, bu bilgi çıkmış sorularda soruldu: kalsinörin fosfatazı inhibe ederek aktive T hücrelerinin nükleer faktörünün çekirdeğe geçişini ve dolayısıyla interlökin 2 transkripsiyonunu baskılayan ilaç çifti siklosporin ve takrolimustur.",
+       "ekran": "Burası önemli, bu bilgi çıkmış sorularda soruldu: kalsinörin fosfatazı inhibe ederek aktive T hücrelerinin nükleer faktörünün çekirdeğe geçişini ve dolayısıyla interlökin 2 transkripsiyonunu baskılayan ilaç çifti siklosporin ve takrolimustur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0127",
+       "ses": "Sirolimus ile everolimus ise kalsinörini değil mTOR'u hedefler.",
+       "ekran": "Sirolimus ile everolimus ise kalsinörini değil mTOR'u hedefler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p035",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k1-59-c0128",
+       "ses": "Siklosporin oral ya da damar içi verilebilir.",
+       "ekran": "Siklosporin oral ya da damar içi verilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0129",
+       "ses": "Oral emilimi düzensiz olduğundan biyoyararlanımı hastadan hastaya çok değişir.",
+       "ekran": "Oral emilimi düzensiz olduğundan biyoyararlanımı hastadan hastaya çok değişir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p036",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-59-c0130",
+       "ses": "Burası önemli, bu da çıkmış soru: kalsinörin inhibitörleri içinde ciddi kuru göz sendromunda ve oküler graft versus host hastalığında kullanılan ilaç oftalmik siklosporindir.",
+       "ekran": "Burası önemli, bu da çıkmış soru: kalsinörin inhibitörleri içinde ciddi kuru göz sendromunda ve oküler graft versus host hastalığında kullanılan ilaç oftalmik siklosporindir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0131",
+       "ses": "Akciğer naklinde inhale siklosporin kullanımı ise araştırılmaktadır.",
+       "ekran": "Akciğer naklinde inhale siklosporin kullanımı ise araştırılmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p037",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-59-c0132",
+       "ses": "Burası önemli, siklosporinin toksisiteleri çok çeşitlidir: nefrotoksisite, hipertansiyon, hiperglisemi, karaciğer işlev bozukluğu, hiperkalemi, değişken mental durum, nöbet ve hirsutizm.",
+       "ekran": "Burası önemli, siklosporinin toksisiteleri çok çeşitlidir: nefrotoksisite, hipertansiyon, hiperglisemi, karaciğer işlev bozukluğu, hiperkalemi, değişken mental durum, nöbet ve hirsutizm.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0133",
+       "ses": "Ayrıca siklosporinin tümör invazyonunu ve metastazı destekleyen dönüştürücü büyüme faktörü beta sitokinini indükleyebildiği öne sürülmektedir.",
+       "ekran": "Ayrıca siklosporinin tümör invazyonunu ve metastazı destekleyen dönüştürücü büyüme faktörü beta sitokinini indükleyebildiği öne sürülmektedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p038",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k1-59-c0134",
+       "ses": "Siklosporin tek başına ya da başta glukokortikoidler olmak üzere diğer immünosüpresiflerle birlikte kullanılabilir.",
+       "ekran": "Siklosporin tek başına ya da başta glukokortikoidler olmak üzere diğer immünosüpresiflerle birlikte kullanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0135",
+       "ses": "Böbrek, pankreas ve karaciğerin kadavradan naklinde tek başına immünosüpresan olarak başarıyla kullanılır; kalp naklinde de etkilidir.",
+       "ekran": "Böbrek, pankreas ve karaciğerin kadavradan naklinde tek başına immünosüpresan olarak başarıyla kullanılır; kalp naklinde de etkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0136",
+       "ses": "Metotreksatla kombinasyonu, allojenik kök hücre naklinden sonra graft versus host hastalığını önlemede standart profilaktik rejimdir.",
+       "ekran": "Metotreksatla kombinasyonu, allojenik kök hücre naklinden sonra graft versus host hastalığını önlemede standart profilaktik rejimdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0137",
+       "ses": "Üveit, romatoid artrit, psoriazis yani sedef gibi pek çok otoimmün hastalıkta ve astımda da yararlı olduğu gösterilmiştir.",
+       "ekran": "Üveit, romatoid artrit, psoriazis yani sedef gibi pek çok otoimmün hastalıkta ve astımda da yararlı olduğu gösterilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p039",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-59-c0138",
+       "ses": "Takrolimus, diğer adıyla FK506, Streptomyces tsukubaensis tarafından sentezlenen immünosüpresif bir makrolid antibiyotiktir.",
+       "ekran": "Takrolimus, diğer adıyla FK506, Streptomyces tsukubaensis tarafından sentezlenen immünosüpresif bir makrolid antibiyotiktir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0139",
+       "ses": "Siklosporinden farkı bağlandığı immünofilindir: takrolimus FK bağlayıcı proteine bağlanır.",
+       "ekran": "Siklosporinden farkı bağlandığı immünofilindir: takrolimus FK bağlayıcı proteine bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0140",
+       "ses": "Oluşan kompleks, yine aktive T hücrelerinin nükleer faktörü için gerekli olan kalsinörini inhibe eder.",
+       "ekran": "Oluşan kompleks, yine aktive T hücrelerinin nükleer faktörü için gerekli olan kalsinörini inhibe eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0141",
+       "ses": "Dikkat edin, sınavda tuzak burada kurulur: siklosporin siklofiline, takrolimus FK bağlayıcı proteine bağlanır, ama ikisinin ortak hedefi kalsinörindir.",
+       "ekran": "Dikkat edin, sınavda tuzak burada kurulur: siklosporin siklofiline, takrolimus FK bağlayıcı proteine bağlanır, ama ikisinin ortak hedefi kalsinörindir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p040",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k1-59-c0142",
+       "ses": "Takrolimus immün yanıtı inhibe etmede siklosporinden 10 ile 100 kat daha etkilidir.",
+       "ekran": "Takrolimus immün yanıtı inhibe etmede siklosporinden 10 ile 100 kat daha etkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0143",
+       "ses": "Siklosporinle aynı endikasyonlarda, özellikle organ ve kök hücre naklinde kullanılır; standart rejeksiyon tedavileri, hatta anti T hücre antikorları başarısız olduğunda bile etkili olabilir.",
+       "ekran": "Siklosporinle aynı endikasyonlarda, özellikle organ ve kök hücre naklinde kullanılır; standart rejeksiyon tedavileri, hatta anti T hücre antikorları başarısız olduğunda bile etkili olabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0144",
+       "ses": "Damar içi ya da oral verilir; damar içi formun yarılanma ömrü yaklaşık 9 ile 12 saattir.",
+       "ekran": "Damar içi ya da oral verilir; damar içi formun yarılanma ömrü yaklaşık 9 ile 12 saattir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0145",
+       "ses": "Toksik etkileri siklosporine benzer: nefrotoksisite, nörotoksisite, hiperglisemi, hipertansiyon, hiperkalemi ve gastrointestinal şikâyetler.",
+       "ekran": "Toksik etkileri siklosporine benzer: nefrotoksisite, nörotoksisite, hiperglisemi, hipertansiyon, hiperkalemi ve gastrointestinal şikâyetler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0146",
+       "ses": "Takrolimus merhemi son dönemde atopik dermatit ve psoriazis tedavisinde kullanılmaktadır.",
+       "ekran": "Takrolimus merhemi son dönemde atopik dermatit ve psoriazis tedavisinde kullanılmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b12",
+   "baslik": "Proliferasyon sinyal inhibitörleri ve tofasitinib",
+   "paragraflar": [
+    {
+     "id": "k1-59-p041",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k1-59-c0147",
+       "ses": "Proliferasyon sinyal inhibitörleri yeni nesil bir immünosüpresif gruptur; sirolimus, diğer adıyla rapamisin, ve everolimus bu gruptadır.",
+       "ekran": "Proliferasyon sinyal inhibitörleri yeni nesil bir immünosüpresif gruptur; sirolimus, diğer adıyla rapamisin, ve everolimus bu gruptadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0148",
+       "ses": "Etki mekanizmaları kalsinörin inhibitörlerinden farklıdır.",
+       "ekran": "Etki mekanizmaları kalsinörin inhibitörlerinden farklıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0149",
+       "ses": "Sirolimus ve everolimus, FK bağlayıcı protein 12 adlı immünofiline bağlanır.",
+       "ekran": "Sirolimus ve everolimus, FK bağlayıcı protein 12 adlı immünofiline bağlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0150",
+       "ses": "Oluşan kompleks kalsinörini değil, memeli rapamisin hedefi, yani mTOR adlı kinazı inhibe eder. mTOR büyüme, proliferasyon, anjiyogenez ve metabolizmayı düzenler; inhibe edilince T hücre çoğalması ve aktivasyonu azalır.",
+       "ekran": "Oluşan kompleks kalsinörini değil, memeli rapamisin hedefi, yani mTOR adlı kinazı inhibe eder. mTOR büyüme, proliferasyon, anjiyogenez ve metabolizmayı düzenler; inhibe edilince T hücre çoğalması ve aktivasyonu azalır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p042",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k1-59-c0151",
+       "ses": "Sirolimus, Streptomyces hygroscopicus tarafından üretilen bir makrolid antibiyotiktir ve yapısal olarak takrolimusa benzer.",
+       "ekran": "Sirolimus, Streptomyces hygroscopicus tarafından üretilen bir makrolid antibiyotiktir ve yapısal olarak takrolimusa benzer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0152",
+       "ses": "Yalnız oral olarak bulunur; yarılanma ömrü yaklaşık 60 saattir, everolimusunki ise yaklaşık 43 saattir.",
+       "ekran": "Yalnız oral olarak bulunur; yarılanma ömrü yaklaşık 60 saattir, everolimusunki ise yaklaşık 43 saattir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0153",
+       "ses": "İkisi de hızla emilir; sitokrom P450 ve P-glikoproteinin substratı oldukları için eliminasyonları siklosporin ve takrolimusa benzer.",
+       "ekran": "İkisi de hızla emilir; sitokrom P450 ve P-glikoproteinin substratı oldukları için eliminasyonları siklosporin ve takrolimusa benzer.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0154",
+       "ses": "Sirolimus tek başına ya da kortikosteroid, siklosporin, takrolimus ve mikofenolat mofetille birlikte solid organ rejeksiyonunu önlemede kullanılır.",
+       "ekran": "Sirolimus tek başına ya da kortikosteroid, siklosporin, takrolimus ve mikofenolat mofetille birlikte solid organ rejeksiyonunu önlemede kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0155",
+       "ses": "Hematopoetik kök hücre naklinde profilaksi amacıyla ve steroide dirençli akut ve kronik graft versus host hastalığında da kullanılır.",
+       "ekran": "Hematopoetik kök hücre naklinde profilaksi amacıyla ve steroide dirençli akut ve kronik graft versus host hastalığında da kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0156",
+       "ses": "Topikal sirolimus bazı deri hastalıklarında, siklosporinle birlikte de üveoretinitte kullanılır.",
+       "ekran": "Topikal sirolimus bazı deri hastalıklarında, siklosporinle birlikte de üveoretinitte kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p043",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-59-c0157",
+       "ses": "Burası önemli, bu soru çıkmış sorularda defalarca geldi: kalsinörin inhibitörleri olan siklosporin ve takrolimusun majör endişesi nefrotoksisitedir.",
+       "ekran": "Burası önemli, bu soru çıkmış sorularda defalarca geldi: kalsinörin inhibitörleri olan siklosporin ve takrolimusun majör endişesi nefrotoksisitedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0158",
+       "ses": "Sirolimusta ise renal toksisite genellikle gözlenmez; bu nedenle sirolimus solid organ ve kök hücre naklinde sıklıkla ilk tercih edilen immünosüpresiftir.",
+       "ekran": "Sirolimusta ise renal toksisite genellikle gözlenmez; bu nedenle sirolimus solid organ ve kök hücre naklinde sıklıkla ilk tercih edilen immünosüpresiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0159",
+       "ses": "Dikkat edin, bu soruda siklosporin cevap değildir, çünkü sorunun kendisi nefrotoksik olduğu için onu dışlıyor.",
+       "ekran": "Dikkat edin, bu soruda siklosporin cevap değildir, çünkü sorunun kendisi nefrotoksik olduğu için onu dışlıyor.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p044",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k1-59-c0160",
+       "ses": "Tofasitinib, sitokin ya da büyüme faktörü sinyaline yanıt olarak hematopoezi ve bağışıklık hücresi işlevini uyaran Janus kinaz, yani JAK enzimlerini inhibe eder.",
+       "ekran": "Tofasitinib, sitokin ya da büyüme faktörü sinyaline yanıt olarak hematopoezi ve bağışıklık hücresi işlevini uyaran Janus kinaz, yani JAK enzimlerini inhibe eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0161",
+       "ses": "Dolaşımdaki NK hücrelerini, serum immünoglobulinlerini ve C-reaktif proteini azaltır.",
+       "ekran": "Dolaşımdaki NK hücrelerini, serum immünoglobulinlerini ve C-reaktif proteini azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0162",
+       "ses": "Orta ya da şiddetli romatoid artritli yetişkinler için onaylıdır.",
+       "ekran": "Orta ya da şiddetli romatoid artritli yetişkinler için onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b13",
+   "baslik": "Mikofenolat mofetil ve talidomid",
+   "paragraflar": [
+    {
+     "id": "k1-59-p045",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k1-59-c0163",
+       "ses": "Mikofenolat mofetil, Penicillium küfünden izole edilen mikofenolik asidin yarı sentetik bir türevidir.",
+       "ekran": "Mikofenolat mofetil, Penicillium küfünden izole edilen mikofenolik asidin yarı sentetik bir türevidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0164",
+       "ses": "Mitojen ve lenfosit yanıtlarını, muhtemelen pürinlerin de novo sentezini inhibe ederek ortadan kaldırır.",
+       "ekran": "Mitojen ve lenfosit yanıtlarını, muhtemelen pürinlerin de novo sentezini inhibe ederek ortadan kaldırır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0165",
+       "ses": "Oral ve damar içi formları vardır; oral form hızla mikofenolik aside dönüşür.",
+       "ekran": "Oral ve damar içi formları vardır; oral form hızla mikofenolik aside dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0166",
+       "ses": "Solid organ nakli hastalarında dirençli rejeksiyonda ve siklosporin ile takrolimusu tolere edemeyen hastalarda prednizonla birlikte alternatif olarak kullanılır.",
+       "ekran": "Solid organ nakli hastalarında dirençli rejeksiyonda ve siklosporin ile takrolimusu tolere edemeyen hastalarda prednizonla birlikte alternatif olarak kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0167",
+       "ses": "Antiproliferatif özellikleri sayesinde kalp nakli alıcılarında kronik allograft vaskülopatisini azaltmada ve engellemede ilk seçenektir.",
+       "ekran": "Antiproliferatif özellikleri sayesinde kalp nakli alıcılarında kronik allograft vaskülopatisini azaltmada ve engellemede ilk seçenektir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0168",
+       "ses": "Kök hücre nakli alıcılarında akut ve kronik graft versus host hastalığının profilaksi ve tedavisinde de kullanılır.",
+       "ekran": "Kök hücre nakli alıcılarında akut ve kronik graft versus host hastalığının profilaksi ve tedavisinde de kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0169",
+       "ses": "Toksisiteleri gastrointestinal rahatsızlık, baş ağrısı, hipertansiyon ve başlıca nötropeni biçiminde geçici miyelosüpresyondur.",
+       "ekran": "Toksisiteleri gastrointestinal rahatsızlık, baş ağrısı, hipertansiyon ve başlıca nötropeni biçiminde geçici miyelosüpresyondur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p046",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k1-59-c0170",
+       "ses": "Talidomid, gebelikte yıkıcı teratojenik etkileri nedeniyle 1960'lı yıllarda piyasadan çekilmiş sedatif bir ilaçtır.",
+       "ekran": "Talidomid, gebelikte yıkıcı teratojenik etkileri nedeniyle 1960'lı yıllarda piyasadan çekilmiş sedatif bir ilaçtır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0171",
+       "ses": "Bugün immünomodülatör olarak kullanılır: anjiyogenezi inhibe eder, anti inflamatuvar ve immünomodülatör etkilidir.",
+       "ekran": "Bugün immünomodülatör olarak kullanılır: anjiyogenezi inhibe eder, anti inflamatuvar ve immünomodülatör etkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0172",
+       "ses": "Tümör nekroz faktör alfayı inhibe eder, nötrofil fagositozunu azaltır, interlökin 10 yapımını artırır ve T hücreleri yoluyla hücre aracılı immüniteyi artırır.",
+       "ekran": "Tümör nekroz faktör alfayı inhibe eder, nötrofil fagositozunu azaltır, interlökin 10 yapımını artırır ve T hücreleri yoluyla hücre aracılı immüniteyi artırır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p047",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k1-59-c0173",
+       "ses": "Burası önemli: talidomid multipl miyelomun tanı anındaki tedavisinde ve tekrarlayan dirençli hastalıkta kullanılır.",
+       "ekran": "Burası önemli: talidomid multipl miyelomun tanı anındaki tedavisinde ve tekrarlayan dirençli hastalıkta kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0174",
+       "ses": "Hastalar sıklıkla ilaç başlandıktan 2-3 ay içinde yanıt işaretleri gösterir; deksametazonla birlikte verildiğinde yanıt oranı %90'lara ulaşır.",
+       "ekran": "Hastalar sıklıkla ilaç başlandıktan 2-3 ay içinde yanıt işaretleri gösterir; deksametazonla birlikte verildiğinde yanıt oranı %90'lara ulaşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0175",
+       "ses": "Miyelodisplastik sendrom, akut miyeloid lösemi, graft versus host hastalığı ve bazı solid tümörlerde değişken sonuçlu çalışmalar vardır.",
+       "ekran": "Miyelodisplastik sendrom, akut miyeloid lösemi, graft versus host hastalığı ve bazı solid tümörlerde değişken sonuçlu çalışmalar vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0176",
+       "ses": "Lepranın bazı belirtilerinde ve lupusun deri belirtilerinde de kullanılır.",
+       "ekran": "Lepranın bazı belirtilerinde ve lupusun deri belirtilerinde de kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p048",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k1-59-c0177",
+       "ses": "Talidomidin en önemli toksisitesi teratojenitedir.",
+       "ekran": "Talidomidin en önemli toksisitesi teratojenitedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0178",
+       "ses": "Diğer yan etkileri periferik nöropati, konstipasyon, döküntü, halsizlik, hipotiroidi ve artmış derin ven trombozu riskidir.",
+       "ekran": "Diğer yan etkileri periferik nöropati, konstipasyon, döküntü, halsizlik, hipotiroidi ve artmış derin ven trombozu riskidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0179",
+       "ses": "Lenalidomid talidomide benzer etkiler gösterir, ama daha az toksisite ve özellikle daha az teratojenite taşır.",
+       "ekran": "Lenalidomid talidomide benzer etkiler gösterir, ama daha az toksisite ve özellikle daha az teratojenite taşır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0180",
+       "ses": "Pomalidomid ise multipl miyelom ve miyelodisplazi tedavisinde kullanılır.",
+       "ekran": "Pomalidomid ise multipl miyelom ve miyelodisplazi tedavisinde kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b14",
+   "baslik": "Sitotoksik ajanlar: azatioprin ve siklofosfamid",
+   "paragraflar": [
+    {
+     "id": "k1-59-p049",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-59-c0181",
+       "ses": "Azatioprin, merkaptopürinin ön ilacıdır ve onun gibi antimetabolit olarak çalışır; immünosüpresyon amacıyla merkaptopürinden daha yaygın kullanılır.",
+       "ekran": "Azatioprin, merkaptopürinin ön ilacıdır ve onun gibi antimetabolit olarak çalışır; immünosüpresyon amacıyla merkaptopürinden daha yaygın kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0182",
+       "ses": "Gastrointestinal yoldan iyi emilir ve başlıca merkaptopürine dönüşür.",
+       "ekran": "Gastrointestinal yoldan iyi emilir ve başlıca merkaptopürine dönüşür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0183",
+       "ses": "Bir kısmı böbrekle atıldığından anefrik ya da anürik hastalarda toksisite yaklaşık 2 kat artabilir.",
+       "ekran": "Bir kısmı böbrekle atıldığından anefrik ya da anürik hastalarda toksisite yaklaşık 2 kat artabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p050",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k1-59-c0184",
+       "ses": "Burası önemli: azatioprinin inaktivasyonunun çoğu ksantin oksidaza bağlıdır.",
+       "ekran": "Burası önemli: azatioprinin inaktivasyonunun çoğu ksantin oksidaza bağlıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0185",
+       "ses": "Bu yüzden hiperürisemiyi kontrol etmek için allopurinol, yani bir ksantin oksidaz inhibitörü, kullanan hastalar dozun dörtte birini ya da üçte birini almalıdır.",
+       "ekran": "Bu yüzden hiperürisemiyi kontrol etmek için allopurinol, yani bir ksantin oksidaz inhibitörü, kullanan hastalar dozun dörtte birini ya da üçte birini almalıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p051",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k1-59-c0186",
+       "ses": "Azatioprin ve merkaptopürin, antijenik uyarıyı izleyen lenfoid hücre proliferasyonu için gerekli pürin nükleik asit metabolizmasına müdahale ederek immünosüpresyon yapar.",
+       "ekran": "Azatioprin ve merkaptopürin, antijenik uyarıyı izleyen lenfoid hücre proliferasyonu için gerekli pürin nükleik asit metabolizmasına müdahale ederek immünosüpresyon yapar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0187",
+       "ses": "Hücresel immünite yanında birincil ve ikincil antikor yanıtlarını da bloke ederler.",
+       "ekran": "Hücresel immünite yanında birincil ve ikincil antikor yanıtlarını da bloke ederler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0188",
+       "ses": "Böbrek naklinde kesin yararlıdırlar.",
+       "ekran": "Böbrek naklinde kesin yararlıdırlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0189",
+       "ses": "Akut glomerülonefritte ve lupusun böbrek tutulumunda, ayrıca romatoid artrit, Crohn hastalığı ve multipl sklerozda yararlı oldukları gösterilmiştir.",
+       "ekran": "Akut glomerülonefritte ve lupusun böbrek tutulumunda, ayrıca romatoid artrit, Crohn hastalığı ve multipl sklerozda yararlı oldukları gösterilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0190",
+       "ses": "Ana toksik etkileri sıklıkla lökopeniyle karakterize kemik iliği baskılanmasıdır; anemi ve trombositopeni de gelişebilir.",
+       "ekran": "Ana toksik etkileri sıklıkla lökopeniyle karakterize kemik iliği baskılanmasıdır; anemi ve trombositopeni de gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0191",
+       "ses": "Döküntü, ateş, bulantı, kusma ve ishal daha çok yüksek dozlarda görülür.",
+       "ekran": "Döküntü, ateş, bulantı, kusma ve ishal daha çok yüksek dozlarda görülür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p052",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k1-59-c0192",
+       "ses": "Alkilleyici bir ajan olan siklofosfamid, en etkili immünosüpresiflerden biridir.",
+       "ekran": "Alkilleyici bir ajan olan siklofosfamid, en etkili immünosüpresiflerden biridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0193",
+       "ses": "Çoğalan lenfoid hücreleri ortadan kaldırır, ama bazı hücrelerde DNA ve başka molekülleri de alkiller.",
+       "ekran": "Çoğalan lenfoid hücreleri ortadan kaldırır, ama bazı hücrelerde DNA ve başka molekülleri de alkiller.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0194",
+       "ses": "Çok yüksek dozlarda, örneğin birkaç gün boyunca damar içi kilogram başına 120 miligramın üzerinde verildiğinde, antijenle eş zamanlı ya da hemen ardından uygulanırsa yeni bir antijene özgü tolerans gelişebilir.",
+       "ekran": "Çok yüksek dozlarda, örneğin birkaç gün boyunca damar içi kilogram başına 120 miligramın üzerinde verildiğinde, antijenle eş zamanlı ya da hemen ardından uygulanırsa yeni bir antijene özgü tolerans gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0195",
+       "ses": "Daha düşük dozlarda lupus dahil otoimmün hastalıklarda, kanama hastalıklarında, otoimmün hemolitik anemide ve antikor aracılı saf kırmızı hücre aplazisinde etkilidir.",
+       "ekran": "Daha düşük dozlarda lupus dahil otoimmün hastalıklarda, kanama hastalıklarında, otoimmün hemolitik anemide ve antikor aracılı saf kırmızı hücre aplazisinde etkilidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0196",
+       "ses": "İlik naklinde tolerans sağlasa da, doku uyumu düşük vericide ağır, hatta ölümcül graft versus host hastalığını engellemez.",
+       "ekran": "İlik naklinde tolerans sağlasa da, doku uyumu düşük vericide ağır, hatta ölümcül graft versus host hastalığını engellemez.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p053",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k1-59-c0197",
+       "ses": "Burası önemli: siklofosfamid hemorajik sistite yol açabilir; bu durum mesna ile önlenebilir ya da tedavi edilebilir.",
+       "ekran": "Burası önemli: siklofosfamid hemorajik sistite yol açabilir; bu durum mesna ile önlenebilir ya da tedavi edilebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0198",
+       "ses": "Diğer yan etkileri bulantı, kusma, kardiyak toksisite ve elektrolit bozukluklarıdır.",
+       "ekran": "Diğer yan etkileri bulantı, kusma, kardiyak toksisite ve elektrolit bozukluklarıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b15",
+   "baslik": "Leflunomid, hidroksiklorokin ve diğer sitotoksik ajanlar",
+   "paragraflar": [
+    {
+     "id": "k1-59-p054",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k1-59-c0199",
+       "ses": "Leflunomid, pürin değil pirimidin sentezi inhibitörünün bir ön ilacıdır.",
+       "ekran": "Leflunomid, pürin değil pirimidin sentezi inhibitörünün bir ön ilacıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0200",
+       "ses": "Oral yoldan aktiftir ve aktif metabolitinin yarılanma ömrü birkaç haftadır.",
+       "ekran": "Oral yoldan aktiftir ve aktif metabolitinin yarılanma ömrü birkaç haftadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0201",
+       "ses": "Başlıca aktif metaboliti teriflunomiddir.",
+       "ekran": "Başlıca aktif metaboliti teriflunomiddir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0202",
+       "ses": "İkisi de pirimidin sentezindeki mitokondriyal dihidroorotat dehidrojenaz enzimini geri dönüşümlü olarak inhibe eder ve sonuçta lenfosit aktivasyonunu azaltır.",
+       "ekran": "İkisi de pirimidin sentezindeki mitokondriyal dihidroorotat dehidrojenaz enzimini geri dönüşümlü olarak inhibe eder ve sonuçta lenfosit aktivasyonunu azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0203",
+       "ses": "Leflunomid günümüzde yalnız romatoid artrit için onaylıdır; mikofenolat mofetille kombinasyonunun çeşitli otoimmün ve inflamatuvar deri hastalıklarında ve solid organ allograftlarının korunmasında kullanımı araştırılmaktadır.",
+       "ekran": "Leflunomid günümüzde yalnız romatoid artrit için onaylıdır; mikofenolat mofetille kombinasyonunun çeşitli otoimmün ve inflamatuvar deri hastalıklarında ve solid organ allograftlarının korunmasında kullanımı araştırılmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0204",
+       "ses": "Toksisiteleri karaciğer hasarı, karaciğer enzimlerinde yükselme, böbrek bozukluğu ve teratojenitedir.",
+       "ekran": "Toksisiteleri karaciğer hasarı, karaciğer enzimlerinde yükselme, böbrek bozukluğu ve teratojenitedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0205",
+       "ses": "Karıştırmayın: leflunomid pirimidin sentezini, mikofenolat mofetil ve azatioprin ise pürin metabolizmasını hedefler.",
+       "ekran": "Karıştırmayın: leflunomid pirimidin sentezini, mikofenolat mofetil ve azatioprin ise pürin metabolizmasını hedefler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p055",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-59-c0206",
+       "ses": "Burası önemli, bu çıkmış sorularda en sık sorulan bilgilerden biri: hidroksiklorokin, immünosüpresif özellikler gösteren antimalaryal bir ajandır.",
+       "ekran": "Burası önemli, bu çıkmış sorularda en sık sorulan bilgilerden biri: hidroksiklorokin, immünosüpresif özellikler gösteren antimalaryal bir ajandır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0207",
+       "ses": "Lizozomal ve endozomal bölmede pH değerini yükselterek hücre içi antijen işlenmesini ve peptitlerin MHC sınıf II moleküllerine yüklenmesini baskıladığı, böylece T hücre aktivasyonunu azalttığı düşünülmektedir.",
+       "ekran": "Lizozomal ve endozomal bölmede pH değerini yükselterek hücre içi antijen işlenmesini ve peptitlerin MHC sınıf II moleküllerine yüklenmesini baskıladığı, böylece T hücre aktivasyonunu azalttığı düşünülmektedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0208",
+       "ses": "Bu nedenle romatoid artrit ve sistemik lupus eritematozus gibi otoimmün hastalıklarda kullanılır; allojenik kök hücre naklinden sonra graft versus host hastalığının tedavisi ve önlenmesinde de kullanılmaktadır.",
+       "ekran": "Bu nedenle romatoid artrit ve sistemik lupus eritematozus gibi otoimmün hastalıklarda kullanılır; allojenik kök hücre naklinden sonra graft versus host hastalığının tedavisi ve önlenmesinde de kullanılmaktadır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0209",
+       "ses": "Vinkristin, talidomid, alemtuzumab ve abatasept antimalaryal değildir.",
+       "ekran": "Vinkristin, talidomid, alemtuzumab ve abatasept antimalaryal değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p056",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k1-59-c0210",
+       "ses": "Vinkristin, metotreksat ve sitarabin gibi diğer sitotoksik ajanların da immünosüpresif etkileri vardır.",
+       "ekran": "Vinkristin, metotreksat ve sitarabin gibi diğer sitotoksik ajanların da immünosüpresif etkileri vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0211",
+       "ses": "Antibiyotik daktinomisin, böbrek naklinde gelişmekte olan ret döneminde belli ölçüde başarıyla kullanılmıştır.",
+       "ekran": "Antibiyotik daktinomisin, böbrek naklinde gelişmekte olan ret döneminde belli ölçüde başarıyla kullanılmıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0212",
+       "ses": "Vinkristin, prednizona dirençli idiyopatik trombositopenik purpurada yararlı görünmektedir.",
+       "ekran": "Vinkristin, prednizona dirençli idiyopatik trombositopenik purpurada yararlı görünmektedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0213",
+       "ses": "Vinblastinin hücre içinde mikrotübüllere bağlanarak mast hücre degranülasyonunu ve histamin ile diğer vazoaktif maddelerin salınımını laboratuvar ortamında engellediği gösterilmiştir.",
+       "ekran": "Vinblastinin hücre içinde mikrotübüllere bağlanarak mast hücre degranülasyonunu ve histamin ile diğer vazoaktif maddelerin salınımını laboratuvar ortamında engellediği gösterilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0214",
+       "ses": "Pentostatin ise öncelikle lenfoid malignitelerde antineoplastik olarak kullanılan bir adenozin deaminaz inhibitörüdür ve derin lenfopeniye yol açar.",
+       "ekran": "Pentostatin ise öncelikle lenfoid malignitelerde antineoplastik olarak kullanılan bir adenozin deaminaz inhibitörüdür ve derin lenfopeniye yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b16",
+   "baslik": "Multipl sklerozda kullanılan immünomodülatörler",
+   "paragraflar": [
+    {
+     "id": "k1-59-p057",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k1-59-c0215",
+       "ses": "Üç immünomodülatör yalnız tekrarlayan multipl sklerozda kullanılır.",
+       "ekran": "Üç immünomodülatör yalnız tekrarlayan multipl sklerozda kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0216",
+       "ses": "Dimetil fumarat, fumarik asidin metil esteridir.",
+       "ekran": "Dimetil fumarat, fumarik asidin metil esteridir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0217",
+       "ses": "Kesin mekanizması bilinmez, ama nükleer faktör eritroid 2 ilişkili faktör 2 adlı transkripsiyon yolunu aktive ettiği görülmektedir.",
+       "ekran": "Kesin mekanizması bilinmez, ama nükleer faktör eritroid 2 ilişkili faktör 2 adlı transkripsiyon yolunu aktive ettiği görülmektedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0218",
+       "ses": "Böylece demiyelinizasyona katkı veren oksidatif stres azalır ve sinir hücreleri inflamasyondan korunur.",
+       "ekran": "Böylece demiyelinizasyona katkı veren oksidatif stres azalır ve sinir hücreleri inflamasyondan korunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0219",
+       "ses": "Oral verilir; lenfopeni önemli olabileceğinden kan sayımları düzenli izlenmelidir.",
+       "ekran": "Oral verilir; lenfopeni önemli olabileceğinden kan sayımları düzenli izlenmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0220",
+       "ses": "Tedavi başında kızarma yaygındır; diğer yan etkiler bulantı, ishal, karın ağrısı, karaciğer enzimlerinde artış ve eozinofilidir.",
+       "ekran": "Tedavi başında kızarma yaygındır; diğer yan etkiler bulantı, ishal, karın ağrısı, karaciğer enzimlerinde artış ve eozinofilidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p058",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k1-59-c0221",
+       "ses": "Glatiramer asetat, sabit bir mol oranında 4 amino asitten, yani L glutamik asit, L alanin, L lizin ve L tirozinden oluşan sentetik polipeptitlerin karışımıdır.",
+       "ekran": "Glatiramer asetat, sabit bir mol oranında 4 amino asitten, yani L glutamik asit, L alanin, L lizin ve L tirozinden oluşan sentetik polipeptitlerin karışımıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0222",
+       "ses": "Multipl sklerozdaki mekanizması bilinmemektedir; çalışmalar, merkezi sinir sistemine göç eden baskılayıcı T hücrelerini indükleyip aktive ederek miyelin antijenlerine karşı yanıtı düzenlediğini göstermektedir.",
+       "ekran": "Multipl sklerozdaki mekanizması bilinmemektedir; çalışmalar, merkezi sinir sistemine göç eden baskılayıcı T hücrelerini indükleyip aktive ederek miyelin antijenlerine karşı yanıtı düzenlediğini göstermektedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0223",
+       "ses": "Damar içi değil, deri altı enjeksiyonla verilir.",
+       "ekran": "Damar içi değil, deri altı enjeksiyonla verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0224",
+       "ses": "Toksisiteleri deri aşırı duyarlılığı ve nadiren enjeksiyon yerinde lipoatrofi ve deri nekrozudur.",
+       "ekran": "Toksisiteleri deri aşırı duyarlılığı ve nadiren enjeksiyon yerinde lipoatrofi ve deri nekrozudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p059",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k1-59-c0225",
+       "ses": "Fingolimod hidroklorür, mantar metaboliti miriosinden türetilen, oral yoldan aktif bir sfingozin-1-fosfat reseptör modülatörüdür.",
+       "ekran": "Fingolimod hidroklorür, mantar metaboliti miriosinden türetilen, oral yoldan aktif bir sfingozin-1-fosfat reseptör modülatörüdür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0226",
+       "ses": "Bu reseptörün alt tip 1'i, lenf düğümlerinden ve timustan lenfosit çıkışını kontrol eder.",
+       "ekran": "Bu reseptörün alt tip 1'i, lenf düğümlerinden ve timustan lenfosit çıkışını kontrol eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0227",
+       "ses": "Fingolimod, fingolimod fosfata dönüşür, reseptöre bağlanır ve sonunda periferde ve merkezi sinir sisteminde dolaşan lenfosit sayısını azaltır.",
+       "ekran": "Fingolimod, fingolimod fosfata dönüşür, reseptöre bağlanır ve sonunda periferde ve merkezi sinir sisteminde dolaşan lenfosit sayısını azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0228",
+       "ses": "Reseptör nöronlarda da bulunduğundan nörodejenerasyon, gliozis ve onarımı da etkileyebilir.",
+       "ekran": "Reseptör nöronlarda da bulunduğundan nörodejenerasyon, gliozis ve onarımı da etkileyebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0229",
+       "ses": "Burası önemli: fingolimod bradikardi ve QT uzaması gibi ciddi kardiyak toksisiteye yol açabilir; bu yüzden ilk dozdan sonra 6 saat kardiyak izlem gerekir.",
+       "ekran": "Burası önemli: fingolimod bradikardi ve QT uzaması gibi ciddi kardiyak toksisiteye yol açabilir; bu yüzden ilk dozdan sonra 6 saat kardiyak izlem gerekir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0230",
+       "ses": "Miyokard enfarktüsü ya da kalp yetmezliği öyküsü olanlarda kontrendikedir.",
+       "ekran": "Miyokard enfarktüsü ya da kalp yetmezliği öyküsü olanlarda kontrendikedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0231",
+       "ses": "Daha seyrek yan etkiler maküler ödem, karaciğer enzimlerinde yükselme, baş ağrısı, ishal ve öksürüktür; ilaç başlıca sitokrom P450 sistemiyle metabolize olur.",
+       "ekran": "Daha seyrek yan etkiler maküler ödem, karaciğer enzimlerinde yükselme, baş ağrısı, ishal ve öksürüktür; ilaç başlıca sitokrom P450 sistemiyle metabolize olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0232",
+       "ses": "Siponimod ise sekonder progresif multipl sklerozda kullanılan yeni bir oral ajandır; sfingozin-1-fosfat reseptörlerine bağlanır ve lenfositlerin merkezi sinir sistemine göçünü engeller.",
+       "ekran": "Siponimod ise sekonder progresif multipl sklerozda kullanılan yeni bir oral ajandır; sfingozin-1-fosfat reseptörlerine bağlanır ve lenfositlerin merkezi sinir sistemine göçünü engeller.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b17",
+   "baslik": "İmmünosüpresif antikorlar ve adlandırma",
+   "paragraflar": [
+    {
+     "id": "k1-59-p060",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k1-59-c0233",
+       "ses": "Moleküler biyoloji kullanılarak monoklonal antikorlar geliştirilmiştir.",
+       "ekran": "Moleküler biyoloji kullanılarak monoklonal antikorlar geliştirilmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0234",
+       "ses": "HIV gibi virüslere, bakteriyel proteinlere, tümör antijenlerine, hatta sitokinlere karşı antikorlar üretilmiş, bir kısmı onay almıştır.",
+       "ekran": "HIV gibi virüslere, bakteriyel proteinlere, tümör antijenlerine, hatta sitokinlere karşı antikorlar üretilmiş, bir kısmı onay almıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p061",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k1-59-c0235",
+       "ses": "Burası önemli, bu bilgi de çıkmış sorularda yer aldı: monoklonal antikorların modern tıpta en temel ve yaygın kullanım alanı, otoimmün ve inflamatuvar hastalıkların ve çeşitli kanserlerin hedefe yönelik tedavisidir.",
+       "ekran": "Burası önemli, bu bilgi de çıkmış sorularda yer aldı: monoklonal antikorların modern tıpta en temel ve yaygın kullanım alanı, otoimmün ve inflamatuvar hastalıkların ve çeşitli kanserlerin hedefe yönelik tedavisidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0236",
+       "ses": "Yine çıkmış sorularda sorulduğu gibi, Burası önemli: infliksimab gibi monoklonal antikorlar biyolojik ajan olarak sınıflandırılır.",
+       "ekran": "Yine çıkmış sorularda sorulduğu gibi, Burası önemli: infliksimab gibi monoklonal antikorlar biyolojik ajan olarak sınıflandırılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0237",
+       "ses": "Siklofosfamid, azatioprin, prednizolon ve metotreksat ise klasik immünosüpresif ilaçlardır, biyolojik ajan değildir.",
+       "ekran": "Siklofosfamid, azatioprin, prednizolon ve metotreksat ise klasik immünosüpresif ilaçlardır, biyolojik ajan değildir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p062",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k1-59-c0238",
+       "ses": "İnsana verilen fare antikorları insan anti fare antikorlarının, kısaca HAMA antikorlarının, oluşmasına yol açar; bu da fare proteininin çok hızlı yıkımına neden olur.",
+       "ekran": "İnsana verilen fare antikorları insan anti fare antikorlarının, kısaca HAMA antikorlarının, oluşmasına yol açar; bu da fare proteininin çok hızlı yıkımına neden olur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0239",
+       "ses": "Bu yüzden antijeniteyi azaltıp yarılanma ömrünü uzatmak için kimerik ve insansılaştırılmış versiyonlar geliştirilir.",
+       "ekran": "Bu yüzden antijeniteyi azaltıp yarılanma ömrünü uzatmak için kimerik ve insansılaştırılmış versiyonlar geliştirilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0240",
+       "ses": "İnsansılaştırmada yalnız fare antikorunun antijene özgü değişken bölgeleri korunur.",
+       "ekran": "İnsansılaştırmada yalnız fare antikorunun antijene özgü değişken bölgeleri korunur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0241",
+       "ses": "Burası önemli, adlandırma kuralı sınav spotudur: umab ya da zumab ekiyle biten adlar insansılaştırılmış antikorları, imab ya da ksimab ekiyle bitenler ise kimerik ürünleri gösterir.",
+       "ekran": "Burası önemli, adlandırma kuralı sınav spotudur: umab ya da zumab ekiyle biten adlar insansılaştırılmış antikorları, imab ya da ksimab ekiyle bitenler ise kimerik ürünleri gösterir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p063",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "id": "k1-59-c0242",
+       "ses": "Antilenfosit globulin ve antitimosit globulin, organ naklinin bir tedavi seçeneği olmasıyla yeni önem kazanmıştır ve bugün pek çok merkezde özellikle nakil programlarında kullanılır.",
+       "ekran": "Antilenfosit globulin ve antitimosit globulin, organ naklinin bir tedavi seçeneği olmasıyla yeni önem kazanmıştır ve bugün pek çok merkezde özellikle nakil programlarında kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0243",
+       "ses": "Antiserum genellikle at, koyun ya da tavşanların insan lenfoid hücreleriyle bağışıklanmasıyla elde edilir.",
+       "ekran": "Antiserum genellikle at, koyun ya da tavşanların insan lenfoid hücreleriyle bağışıklanmasıyla elde edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0244",
+       "ses": "Başlıca kan ile lenf arasında dolaşan küçük, uzun ömürlü lenfositlere etki eder.",
+       "ekran": "Başlıca kan ile lenf arasında dolaşan küçük, uzun ömürlü lenfositlere etki eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0245",
+       "ses": "T hücrelerinin yıkımı ya da inaktivasyonu sonucu gecikmiş tip aşırı duyarlılık ve hücresel immünite bozulur, ama humoral antikor yapımı görece sağlam kalır.",
+       "ekran": "T hücrelerinin yıkımı ya da inaktivasyonu sonucu gecikmiş tip aşırı duyarlılık ve hücresel immünite bozulur, ama humoral antikor yapımı görece sağlam kalır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p064",
+     "sayfa": 58,
+     "cumleler": [
+      {
+       "id": "k1-59-c0246",
+       "ses": "Nakillerde antilenfosit globulin ve monoklonal antikorlar immünosüpresyonun başlatılmasında, rejeksiyonun ve steroide dirençli rejeksiyonun tedavisinde kullanılabilir.",
+       "ekran": "Nakillerde antilenfosit globulin ve monoklonal antikorlar immünosüpresyonun başlatılmasında, rejeksiyonun ve steroide dirençli rejeksiyonun tedavisinde kullanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0247",
+       "ses": "Antilenfosit ve antitimosit globulinin siklosporinle birlikte kemik iliği nakli alıcılarında hazırlık amacıyla kullanılması başarı sağlamıştır.",
+       "ekran": "Antilenfosit ve antitimosit globulinin siklosporinle birlikte kemik iliği nakli alıcılarında hazırlık amacıyla kullanılması başarı sağlamıştır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0248",
+       "ses": "Yan etkilerin çoğu yabancı protein enjeksiyonuna bağlıdır: enjeksiyon yerinde sıklıkla lokal ağrı ve Tip 3 aşırı duyarlılığa bağlı eritem gelişir.",
+       "ekran": "Yan etkilerin çoğu yabancı protein enjeksiyonuna bağlıdır: enjeksiyon yerinde sıklıkla lokal ağrı ve Tip 3 aşırı duyarlılığa bağlı eritem gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0249",
+       "ses": "Humoral mekanizmalar aktif kaldığı için yabancı immünoglobulin G'ye karşı deri reaksiyonu veren ve presipite olan antikorlar da oluşabilir.",
+       "ekran": "Humoral mekanizmalar aktif kaldığı için yabancı immünoglobulin G'ye karşı deri reaksiyonu veren ve presipite olan antikorlar da oluşabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b18",
+   "baslik": "İmmün globulinler: damar içi immün globulin, rezus ve hiperimmün preparatlar",
+   "paragraflar": [
+    {
+     "id": "k1-59-p065",
+     "sayfa": 59,
+     "cumleler": [
+      {
+       "id": "k1-59-c0250",
+       "ses": "İmmün modülasyonda bir başka yaklaşım poliklonal insan immünoglobulininin damar içi kullanılmasıdır.",
+       "ekran": "İmmün modülasyonda bir başka yaklaşım poliklonal insan immünoglobulininin damar içi kullanılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0251",
+       "ses": "Sıklıkla immünoglobulin G olan bu preparat binlerce sağlıklı vericiden elde edilen havuzdan hazırlanır ve bu terapötik antikorun tek bir özgül hedefi yoktur.",
+       "ekran": "Sıklıkla immünoglobulin G olan bu preparat binlerce sağlıklı vericiden elde edilen havuzdan hazırlanır ve bu terapötik antikorun tek bir özgül hedefi yoktur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0252",
+       "ses": "Kilogram başına 2 gram gibi yüksek dozlarda immünoglobulin yetersizliklerinden otoimmün bozukluklara, HIV hastalığından kemik iliği nakline kadar geniş bir kullanım alanı vardır.",
+       "ekran": "Kilogram başına 2 gram gibi yüksek dozlarda immünoglobulin yetersizliklerinden otoimmün bozukluklara, HIV hastalığından kemik iliği nakline kadar geniş bir kullanım alanı vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0253",
+       "ses": "Sistemik lupus eritematozusta ve dirençli idiyopatik trombositopenik purpurada iyi klinik yanıt alınır.",
+       "ekran": "Sistemik lupus eritematozusta ve dirençli idiyopatik trombositopenik purpurada iyi klinik yanıt alınır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p066",
+     "sayfa": 60,
+     "cumleler": [
+      {
+       "id": "k1-59-c0254",
+       "ses": "İmmünofarmakolojideki en erken ilerlemelerden biri, yenidoğanın rezus hemolitik hastalığının önlenmesidir.",
+       "ekran": "İmmünofarmakolojideki en erken ilerlemelerden biri, yenidoğanın rezus hemolitik hastalığının önlenmesidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0255",
+       "ses": "Fikir şudur: antijenle karşılaşma sırasında o antijene özgü antikor pasif olarak verilirse birincil antikor yanıtı bloke edilir.",
+       "ekran": "Fikir şudur: antijenle karşılaşma sırasında o antijene özgü antikor pasif olarak verilirse birincil antikor yanıtı bloke edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0256",
+       "ses": "Rh0(D) immünoglobulini, kırmızı kan hücrelerindeki de antijenine karşı yüksek titrede antikor içeren, %15'lik konsantre bir insan immünoglobulin G çözeltisidir.",
+       "ekran": "Rh0(D) immünoglobulini, kırmızı kan hücrelerindeki de antijenine karşı yüksek titrede antikor içeren, %15'lik konsantre bir insan immünoglobulin G çözeltisidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p067",
+     "sayfa": 61,
+     "cumleler": [
+      {
+       "id": "k1-59-c0257",
+       "ses": "Rezus negatif annenin duyarlanması genellikle rezus pozitif bebeğin doğumu sırasında fetal kırmızı kan hücrelerinin anne dolaşımına sızmasıyla olur; düşük ya da ektopik gebeliklerde de gelişebilir.",
+       "ekran": "Rezus negatif annenin duyarlanması genellikle rezus pozitif bebeğin doğumu sırasında fetal kırmızı kan hücrelerinin anne dolaşımına sızmasıyla olur; düşük ya da ektopik gebeliklerde de gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0258",
+       "ses": "Sonraki gebeliklerde anneden gelen antikor üçüncü trimesterde fetüse geçer ve eritroblastozis fetalise, yani yenidoğanın hemolitik hastalığına yol açar.",
+       "ekran": "Sonraki gebeliklerde anneden gelen antikor üçüncü trimesterde fetüse geçer ve eritroblastozis fetalise, yani yenidoğanın hemolitik hastalığına yol açar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0259",
+       "ses": "Burası önemli: rezus negatif anneye, rezus pozitif bebeğin doğumundan sonraki 24 ile 72 saat içinde Rh0(D) antikoru enjekte edilirse annenin kendi antikor yanıtı baskılanır.",
+       "ekran": "Burası önemli: rezus negatif anneye, rezus pozitif bebeğin doğumundan sonraki 24 ile 72 saat içinde Rh0(D) antikoru enjekte edilirse annenin kendi antikor yanıtı baskılanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0260",
+       "ses": "Çünkü bebeğin kırmızı kan hücreleri, anne bunlara karşı B hücre yanıtı oluşturamadan dolaşımdan temizlenir.",
+       "ekran": "Çünkü bebeğin kırmızı kan hücreleri, anne bunlara karşı B hücre yanıtı oluşturamadan dolaşımdan temizlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p068",
+     "sayfa": 63,
+     "cumleler": [
+      {
+       "id": "k1-59-c0261",
+       "ses": "Hiperimmün immünoglobulinler, virüs ya da toksin gibi belirli ajanlara karşı yüksek titrede antikoru olan seçilmiş insan ya da hayvan vericilerinden hazırlanan preparatlardır.",
+       "ekran": "Hiperimmün immünoglobulinler, virüs ya da toksin gibi belirli ajanlara karşı yüksek titrede antikoru olan seçilmiş insan ya da hayvan vericilerinden hazırlanan preparatlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0262",
+       "ses": "Solunum sinsityal virüsü, sitomegalovirüs, Varisella zoster, Hepatit B virüsü (HBV), kuduz, tetanoz ve digoksin zehirlenmesinin tedavisinde kullanılabilir.",
+       "ekran": "Solunum sinsityal virüsü, sitomegalovirüs, Varisella zoster, Hepatit B virüsü (HBV), kuduz, tetanoz ve digoksin zehirlenmesinin tedavisinde kullanılabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0263",
+       "ses": "Kuduz globulini yara çevresine ve damar içine, tetanoz globulini profilakside damar içine verilir.",
+       "ekran": "Kuduz globulini yara çevresine ve damar içine, tetanoz globulini profilakside damar içine verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0264",
+       "ses": "Yılan antivenomları ise at ya da küçükbaş kökenlidir.",
+       "ekran": "Yılan antivenomları ise at ya da küçükbaş kökenlidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b19",
+   "baslik": "Antitümör monoklonal antikorlar",
+   "paragraflar": [
+    {
+     "id": "k1-59-p069",
+     "sayfa": 64,
+     "cumleler": [
+      {
+       "id": "k1-59-c0265",
+       "ses": "Burası önemli, antikor ile hedef eşleştirmeleri sınav spotudur.",
+       "ekran": "Burası önemli, antikor ile hedef eşleştirmeleri sınav spotudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0266",
+       "ses": "Alemtuzumab, normal ve malign B ve T lenfositleri, NK hücreleri, monosit, makrofaj ve küçük bir granülosit grubunda bulunan CD52'ye bağlanan, kappa zincirli, insansılaştırılmış bir immünoglobulin G1'dir.",
+       "ekran": "Alemtuzumab, normal ve malign B ve T lenfositleri, NK hücreleri, monosit, makrofaj ve küçük bir granülosit grubunda bulunan CD52'ye bağlanan, kappa zincirli, insansılaştırılmış bir immünoglobulin G1'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0267",
+       "ses": "Alkilleyici ajanlarla tedavi görmüş ve fludarabine yanıtsız B hücreli kronik lenfositik lösemide onaylıdır.",
+       "ekran": "Alkilleyici ajanlarla tedavi görmüş ve fludarabine yanıtsız B hücreli kronik lenfositik lösemide onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0268",
+       "ses": "Daratumumab, miyelom hücrelerinde aşırı eksprese edilen CD38'e bağlanır; tek başına ya da proteazom inhibitörleri gibi miyelom ilaçlarıyla birlikte, standart tedaviye dirençli multipl miyelomda onaylıdır.",
+       "ekran": "Daratumumab, miyelom hücrelerinde aşırı eksprese edilen CD38'e bağlanır; tek başına ya da proteazom inhibitörleri gibi miyelom ilaçlarıyla birlikte, standart tedaviye dirençli multipl miyelomda onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0269",
+       "ses": "Elotuzumab, miyelom hücrelerindeki sinyal veren lenfositik aktivasyon molekülü F7'ye bağlanır, antikor bağımlı hücre aracılı sitotoksisiteyle miyelom hücrelerini öldürür ve nükseden multipl miyelomda diğer ilaçlarla birlikte onaylıdır.",
+       "ekran": "Elotuzumab, miyelom hücrelerindeki sinyal veren lenfositik aktivasyon molekülü F7'ye bağlanır, antikor bağımlı hücre aracılı sitotoksisiteyle miyelom hücrelerini öldürür ve nükseden multipl miyelomda diğer ilaçlarla birlikte onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0270",
+       "ses": "Dinutuksimab ise gangliozid GD2'ye bağlanır; granülosit makrofaj koloni uyarıcı faktör, interlökin 2 ve 13-cis retinoik asitle birlikte, tedaviye kısmi yanıt veren yüksek riskli nöroblastomlu çocuklarda onaylıdır.",
+       "ekran": "Dinutuksimab ise gangliozid GD2'ye bağlanır; granülosit makrofaj koloni uyarıcı faktör, interlökin 2 ve 13-cis retinoik asitle birlikte, tedaviye kısmi yanıt veren yüksek riskli nöroblastomlu çocuklarda onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p070",
+     "sayfa": 66,
+     "cumleler": [
+      {
+       "id": "k1-59-c0271",
+       "ses": "Anti vasküler endotelyal büyüme faktörü antikorları, bu faktörün özellikle endotel hücrelerindeki reseptörüne bağlanmasını önleyerek damar büyümesini, yani anjiyogenezi engelleyen antianjiyojenik ilaçlardır.",
+       "ekran": "Anti vasküler endotelyal büyüme faktörü antikorları, bu faktörün özellikle endotel hücrelerindeki reseptörüne bağlanmasını önleyerek damar büyümesini, yani anjiyogenezi engelleyen antianjiyojenik ilaçlardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0272",
+       "ses": "Bevasizumab, vasküler endotelyal büyüme faktörüne bağlanan insansılaştırılmış bir immünoglobulin G1'dir.",
+       "ekran": "Bevasizumab, vasküler endotelyal büyüme faktörüne bağlanan insansılaştırılmış bir immünoglobulin G1'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0273",
+       "ses": "Metastatik kolorektal kanserde tek başına ya da 5-florourasil temelli kemoterapiyle birlikte ilk seçenek olarak onaylıdır.",
+       "ekran": "Metastatik kolorektal kanserde tek başına ya da 5-florourasil temelli kemoterapiyle birlikte ilk seçenek olarak onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0274",
+       "ses": "Ayrıca küçük hücreli dışı akciğer kanseri, glioblastoma multiforme, interferon alfa ile birlikte metastatik böbrek kanseri, serviks kanseri ve kemoterapiyle birlikte epitel kökenli over, fallop tüpü ya da primer periton kanserinde onaylıdır.",
+       "ekran": "Ayrıca küçük hücreli dışı akciğer kanseri, glioblastoma multiforme, interferon alfa ile birlikte metastatik böbrek kanseri, serviks kanseri ve kemoterapiyle birlikte epitel kökenli over, fallop tüpü ya da primer periton kanserinde onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0275",
+       "ses": "Antianjiyojenik olduğu için cerrahi sonrası iyileşme tamamlanmadan verilmez; kanama, gastrointestinal perforasyon ve yara iyileşme sorunları izlenir.",
+       "ekran": "Antianjiyojenik olduğu için cerrahi sonrası iyileşme tamamlanmadan verilmez; kanama, gastrointestinal perforasyon ve yara iyileşme sorunları izlenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p071",
+     "sayfa": 68,
+     "cumleler": [
+      {
+       "id": "k1-59-c0276",
+       "ses": "Ranibizumab, vasküler endotelyal büyüme faktörü A'ya bağlanan rekombinant insansılaştırılmış bir immünoglobulin G1'dir.",
+       "ekran": "Ranibizumab, vasküler endotelyal büyüme faktörü A'ya bağlanan rekombinant insansılaştırılmış bir immünoglobulin G1'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0277",
+       "ses": "Yaşa bağlı makula dejenerasyonu, retinal ven tıkanıklığı sonrası makula ödemi ve diyabetik makula ödeminde göz içine enjekte edilir.",
+       "ekran": "Yaşa bağlı makula dejenerasyonu, retinal ven tıkanıklığı sonrası makula ödemi ve diyabetik makula ödeminde göz içine enjekte edilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0278",
+       "ses": "Pegaptanib hücre dışı vasküler endotelyal büyüme faktörüne bağlanır ve makula dejenerasyonunu yavaşlatmak için yine göz içine verilir.",
+       "ekran": "Pegaptanib hücre dışı vasküler endotelyal büyüme faktörüne bağlanır ve makula dejenerasyonunu yavaşlatmak için yine göz içine verilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0279",
+       "ses": "Ramusirumab ise tümör hücrelerindeki vasküler endotelyal büyüme faktörü reseptörü 2'ye antagonist olarak bağlanan bir insan antikorudur; metastatik kolon kanseri, akciğer kanseri, mide ya da gastroözofageal bileşke adenokarsinomu ve hepatoselüler karsinomda onaylıdır.",
+       "ekran": "Ramusirumab ise tümör hücrelerindeki vasküler endotelyal büyüme faktörü reseptörü 2'ye antagonist olarak bağlanan bir insan antikorudur; metastatik kolon kanseri, akciğer kanseri, mide ya da gastroözofageal bileşke adenokarsinomu ve hepatoselüler karsinomda onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b20",
+   "baslik": "Epidermal büyüme faktörü, CD20 ve görüntüleme antikorları",
+   "paragraflar": [
+    {
+     "id": "k1-59-p072",
+     "sayfa": 69,
+     "cumleler": [
+      {
+       "id": "k1-59-c0280",
+       "ses": "Setuksimab, epidermal büyüme faktörü reseptörünü hedefleyen insan fare kimerik bir antikordur; bu reseptörü taşıyan metastatik kolorektal kanserde ve radyoterapiyle birlikte baş boyun kanserinde kullanılır.",
+       "ekran": "Setuksimab, epidermal büyüme faktörü reseptörünü hedefleyen insan fare kimerik bir antikordur; bu reseptörü taşıyan metastatik kolorektal kanserde ve radyoterapiyle birlikte baş boyun kanserinde kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0281",
+       "ses": "Nesitumumab da aynı reseptörü hedefler; gemsitabin ve sisplatinle birlikte metastatik skuamöz küçük hücreli dışı akciğer kanserinde kullanılır.",
+       "ekran": "Nesitumumab da aynı reseptörü hedefler; gemsitabin ve sisplatinle birlikte metastatik skuamöz küçük hücreli dışı akciğer kanserinde kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0282",
+       "ses": "Setuksimabın aksine tamamen insan antikorudur.",
+       "ekran": "Setuksimabın aksine tamamen insan antikorudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0283",
+       "ses": "Deri ve infüzyon yan etkileri yaygındır, ama HAMA oluşturmadığı için yarılanma ömrü daha uzundur.",
+       "ekran": "Deri ve infüzyon yan etkileri yaygındır, ama HAMA oluşturmadığı için yarılanma ömrü daha uzundur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0284",
+       "ses": "Panitumumab, tamamen insan kaynaklı, kappa hafif zincirli bir immünoglobulin G2'dir; bu reseptörü eksprese eden ilerleyici metastatik kolorektal karsinomda onaylıdır.",
+       "ekran": "Panitumumab, tamamen insan kaynaklı, kappa hafif zincirli bir immünoglobulin G2'dir; bu reseptörü eksprese eden ilerleyici metastatik kolorektal karsinomda onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p073",
+     "sayfa": 70,
+     "cumleler": [
+      {
+       "id": "k1-59-c0285",
+       "ses": "Rituksimab, normal ve malign B lenfositlerinin yüzeyindeki CD20'ye bağlanan kimerik fare insan immünoglobulin G1'dir.",
+       "ekran": "Rituksimab, normal ve malign B lenfositlerinin yüzeyindeki CD20'ye bağlanan kimerik fare insan immünoglobulin G1'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0286",
+       "ses": "Ayrıca anti tümör nekroz faktör tedavisinin başarısız olduğu romatoid artritte metotreksatla birlikte onaylıdır.",
+       "ekran": "Ayrıca anti tümör nekroz faktör tedavisinin başarısız olduğu romatoid artritte metotreksatla birlikte onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0287",
+       "ses": "Trastuzumab, insan epidermal büyüme faktörü reseptörü olan HER2/neu proteininin hücre dışı bölümüne bağlanan insansılaştırılmış bir antikordur.",
+       "ekran": "Trastuzumab, insan epidermal büyüme faktörü reseptörü olan HER2/neu proteininin hücre dışı bölümüne bağlanan insansılaştırılmış bir antikordur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0288",
+       "ses": "HER2/neu pozitif meme kanserinde ve metastatik mide ya da gastroözofageal bileşke adenokarsinomunda onaylıdır; tek başına meme kanserinde yaklaşık %15 ile 20 oranında remisyon sağlar.",
+       "ekran": "HER2/neu pozitif meme kanserinde ve metastatik mide ya da gastroözofageal bileşke adenokarsinomunda onaylıdır; tek başına meme kanserinde yaklaşık %15 ile 20 oranında remisyon sağlar.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p074",
+     "sayfa": 71,
+     "cumleler": [
+      {
+       "id": "k1-59-c0289",
+       "ses": "Bazı antikorlar izotop ya da toksinleri tümöre taşımak için kullanılır.",
+       "ekran": "Bazı antikorlar izotop ya da toksinleri tümöre taşımak için kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0290",
+       "ses": "Arkitumomab, metastatik kolorektal karsinomda hastalığın yayılımını göstermek için immünosintigrafide kullanılan, teknesyum-99m ile işaretli, karsinoembriyonik antijene yönelik bir fare Fab parçasıdır.",
+       "ekran": "Arkitumomab, metastatik kolorektal karsinomda hastalığın yayılımını göstermek için immünosintigrafide kullanılan, teknesyum-99m ile işaretli, karsinoembriyonik antijene yönelik bir fare Fab parçasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p075",
+     "sayfa": 71,
+     "cumleler": [
+      {
+       "id": "k1-59-c0291",
+       "ses": "Burası önemli, bu çıkmış sorularda en sık sorulan bilgilerden biridir: kapromab pendetid, prostat spesifik membran antijenine özgül bir fare monoklonal antikorudur.",
+       "ekran": "Burası önemli, bu çıkmış sorularda en sık sorulan bilgilerden biridir: kapromab pendetid, prostat spesifik membran antijenine özgül bir fare monoklonal antikorudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0292",
+       "ses": "Prostat kanserli hastalarda ve prostatektomi sonrası prostat spesifik antijen düzeyi yükselen olgularda hastalığın yaygınlığını belirlemek için yapılan immünosintigrafide kullanılır.",
+       "ekran": "Prostat kanserli hastalarda ve prostatektomi sonrası prostat spesifik antijen düzeyi yükselen olgularda hastalığın yaygınlığını belirlemek için yapılan immünosintigrafide kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0293",
+       "ses": "Karıştırmayın: arkitumomab kolorektal kanserde görüntüleme içindir; adalimumab anti tümör nekroz faktör, alemtuzumab anti-CD52, bevasizumab ise anti vasküler endotelyal büyüme faktörü antikorudur.",
+       "ekran": "Karıştırmayın: arkitumomab kolorektal kanserde görüntüleme içindir; adalimumab anti tümör nekroz faktör, alemtuzumab anti-CD52, bevasizumab ise anti vasküler endotelyal büyüme faktörü antikorudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0294",
+       "ses": "İbritumomab tiyuksetan da itriyum-90 ya da indiyum-111 ile işaretli bir anti-CD20 fare antikorudur.",
+       "ekran": "İbritumomab tiyuksetan da itriyum-90 ya da indiyum-111 ile işaretli bir anti-CD20 fare antikorudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b21",
+   "baslik": "İmmünomodülatör antikorlar ve füzyon proteinleri",
+   "paragraflar": [
+    {
+     "id": "k1-59-p076",
+     "sayfa": 72,
+     "cumleler": [
+      {
+       "id": "k1-59-c0295",
+       "ses": "Adalimumab, sertolizumab pegol, etanersept, golimumab ve infliksimab, romatoid artrit ve benzeri inflamatuvar hastalıklarda önemli bir proinflamatuvar sitokin olan tümör nekroz faktör alfayı bağlar.",
+       "ekran": "Adalimumab, sertolizumab pegol, etanersept, golimumab ve infliksimab, romatoid artrit ve benzeri inflamatuvar hastalıklarda önemli bir proinflamatuvar sitokin olan tümör nekroz faktör alfayı bağlar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0296",
+       "ses": "Bu sitokinin reseptörüne bağlanması engellenince interlökin 1, interlökin 6 ve lökosit göçünde rol alan yapışma molekülleri baskılanır.",
+       "ekran": "Bu sitokinin reseptörüne bağlanması engellenince interlökin 1, interlökin 6 ve lökosit göçünde rol alan yapışma molekülleri baskılanır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p077",
+     "sayfa": 73,
+     "cumleler": [
+      {
+       "id": "k1-59-c0297",
+       "ses": "Adalimumab tamamen insan kaynaklı bir immünoglobulin G1'dir; romatoid artrit, juvenil idiyopatik artrit, psoriatik artrit, ankilozan spondilit, Crohn hastalığı ve plak tipi psoriaziste onaylıdır.",
+       "ekran": "Adalimumab tamamen insan kaynaklı bir immünoglobulin G1'dir; romatoid artrit, juvenil idiyopatik artrit, psoriatik artrit, ankilozan spondilit, Crohn hastalığı ve plak tipi psoriaziste onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0298",
+       "ses": "Sertolizumab pegol tümör nekroz faktör alfayı nötralize eder; Crohn hastalığı ve romatoid artritte endikedir.",
+       "ekran": "Sertolizumab pegol tümör nekroz faktör alfayı nötralize eder; Crohn hastalığı ve romatoid artritte endikedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0299",
+       "ses": "Burası önemli: etanersept bir antikor değil, insan immünoglobulin G1 sabit bölgesinin tümör nekroz faktör reseptörüyle birleştirilmesiyle oluşturulan dimerik bir füzyon proteinidir.",
+       "ekran": "Burası önemli: etanersept bir antikor değil, insan immünoglobulin G1 sabit bölgesinin tümör nekroz faktör reseptörüyle birleştirilmesiyle oluşturulan dimerik bir füzyon proteinidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0300",
+       "ses": "Erişkin romatoid artrit, poliartiküler juvenil idiyopatik artrit, ankilozan spondilit ve psoriatik artritte onaylıdır.",
+       "ekran": "Erişkin romatoid artrit, poliartiküler juvenil idiyopatik artrit, ankilozan spondilit ve psoriatik artritte onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0301",
+       "ses": "Golimumab çözünür ve zara bağlı tümör nekroz faktör alfaya bağlanan bir insan antikorudur; romatoid artrit, ankilozan spondilit ve psoriatik artritte endikedir.",
+       "ekran": "Golimumab çözünür ve zara bağlı tümör nekroz faktör alfaya bağlanan bir insan antikorudur; romatoid artrit, ankilozan spondilit ve psoriatik artritte endikedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0302",
+       "ses": "İnfliksimab ise damar içi verilen bir immünoglobulin G1 antikorudur.",
+       "ekran": "İnfliksimab ise damar içi verilen bir immünoglobulin G1 antikorudur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p078",
+     "sayfa": 74,
+     "cumleler": [
+      {
+       "id": "k1-59-c0303",
+       "ses": "Abatasept, sitotoksik T lenfositle ilişkili antijen 4'ün hücre dışı bölümü ile insan immünoglobulin G1'in birleştirildiği rekombinant bir füzyon proteinidir.",
+       "ekran": "Abatasept, sitotoksik T lenfositle ilişkili antijen 4'ün hücre dışı bölümü ile insan immünoglobulin G1'in birleştirildiği rekombinant bir füzyon proteinidir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0304",
+       "ses": "Abatasept CD80 ya da CD86'ya bağlanır; böylece T hücresindeki CD28 bu moleküllere bağlanamaz, T hücresi aktive olamaz ve sitokin salınmaz.",
+       "ekran": "Abatasept CD80 ya da CD86'ya bağlanır; böylece T hücresindeki CD28 bu moleküllere bağlanamaz, T hücresi aktive olamaz ve sitokin salınmaz.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0305",
+       "ses": "Romatoid artrit ve juvenil idiyopatik artritte onaylıdır.",
+       "ekran": "Romatoid artrit ve juvenil idiyopatik artritte onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0306",
+       "ses": "Anti tümör nekroz faktör ajanlarda olduğu gibi hastalar izlenmeli ve abatasept başlanmadan önce latent tüberküloz açısından tedavi edilmelidir.",
+       "ekran": "Anti tümör nekroz faktör ajanlarda olduğu gibi hastalar izlenmeli ve abatasept başlanmadan önce latent tüberküloz açısından tedavi edilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p079",
+     "sayfa": 75,
+     "cumleler": [
+      {
+       "id": "k1-59-c0307",
+       "ses": "Alefasept, lökosit işlev ilişkili antijen 3'ün CD2 bağlayan bölümü ile insan immünoglobulin G1 Fc bölgesinin birleştirilmesiyle yapılmış bir füzyon proteinidir ve plak tipi psoriaziste onaylıdır.",
+       "ekran": "Alefasept, lökosit işlev ilişkili antijen 3'ün CD2 bağlayan bölümü ile insan immünoglobulin G1 Fc bölgesinin birleştirilmesiyle yapılmış bir füzyon proteinidir ve plak tipi psoriaziste onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0308",
+       "ses": "Kullananlarda periferik T hücre sayıları izlenmeli, CD4 düzeyi mikrolitrede 250 hücrenin altına düşerse ilaç kesilmelidir.",
+       "ekran": "Kullananlarda periferik T hücre sayıları izlenmeli, CD4 düzeyi mikrolitrede 250 hücrenin altına düşerse ilaç kesilmelidir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p080",
+     "sayfa": 75,
+     "cumleler": [
+      {
+       "id": "k1-59-c0309",
+       "ses": "Burası önemli: basiliksimab, aktive T lenfositlerin yüzeyindeki interlökin 2 reseptörünün alfa zinciri olan CD25'e bağlanan kimerik fare insan immünoglobulin G1'dir.",
+       "ekran": "Burası önemli: basiliksimab, aktive T lenfositlerin yüzeyindeki interlökin 2 reseptörünün alfa zinciri olan CD25'e bağlanan kimerik fare insan immünoglobulin G1'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0310",
+       "ses": "Daklizumab da aynı alfa alt birime bağlanan insansılaştırılmış bir immünoglobulin G1'dir.",
+       "ekran": "Daklizumab da aynı alfa alt birime bağlanan insansılaştırılmış bir immünoglobulin G1'dir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0311",
+       "ses": "İkisi de böbrek naklinde akut rejeksiyonun profilaksisinde endikedir.",
+       "ekran": "İkisi de böbrek naklinde akut rejeksiyonun profilaksisinde endikedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b22",
+   "baslik": "Natalizumab, omalizumab, tosilizumab, ustekinumab ve diğer antikorlar",
+   "paragraflar": [
+    {
+     "id": "k1-59-p081",
+     "sayfa": 76,
+     "cumleler": [
+      {
+       "id": "k1-59-c0312",
+       "ses": "Natalizumab, nötrofiller dışındaki tüm lökositlerin yüzeyindeki bir yapıyı hedefleyen insansılaştırılmış bir immünoglobulin G4 antikorudur; geleneksel tedaviyi tolere edemeyen ya da yetersiz yanıt veren multipl skleroz ve Crohn hastalarında endikedir.",
+       "ekran": "Natalizumab, nötrofiller dışındaki tüm lökositlerin yüzeyindeki bir yapıyı hedefleyen insansılaştırılmış bir immünoglobulin G4 antikorudur; geleneksel tedaviyi tolere edemeyen ya da yetersiz yanıt veren multipl skleroz ve Crohn hastalarında endikedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0313",
+       "ses": "Omalizumab, rekombinant ve insansılaştırılmış bir anti immünoglobulin E antikoru olarak, belirtileri inhale steroidlere dirençli erişkin ve ergen alerjik astımında onaylıdır.",
+       "ekran": "Omalizumab, rekombinant ve insansılaştırılmış bir anti immünoglobulin E antikoru olarak, belirtileri inhale steroidlere dirençli erişkin ve ergen alerjik astımında onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0314",
+       "ses": "Tosilizumab, çözünür ya da zara bağlı interlökin 6 reseptörüne bağlanan insansılaştırılmış bir immünoglobulin G1'dir ve lenfositlerde interlökin 6 aracılı sinyali inhibe ederek inflamasyonu baskılar.",
+       "ekran": "Tosilizumab, çözünür ya da zara bağlı interlökin 6 reseptörüne bağlanan insansılaştırılmış bir immünoglobulin G1'dir ve lenfositlerde interlökin 6 aracılı sinyali inhibe ederek inflamasyonu baskılar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0315",
+       "ses": "Ustekinumab, interlökin 12 ve interlökin 23'ün ortak p40 alt birimine bağlanan bir insan antikorudur; bu sitokinlerin reseptörlerine bağlanmasını engeller ve orta ağır plak tipi psoriaziste endikedir.",
+       "ekran": "Ustekinumab, interlökin 12 ve interlökin 23'ün ortak p40 alt birimine bağlanan bir insan antikorudur; bu sitokinlerin reseptörlerine bağlanmasını engeller ve orta ağır plak tipi psoriaziste endikedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p082",
+     "sayfa": 77,
+     "cumleler": [
+      {
+       "id": "k1-59-c0316",
+       "ses": "Absiksimab, aktive trombositlerdeki glikoprotein IIb/IIIa integrin reseptörüne bağlanan bir fare insan antikorunun Fab parçasıdır; perkütan koroner girişimde kardiyak iskemik komplikasyonları önlemede yardımcıdır.",
+       "ekran": "Absiksimab, aktive trombositlerdeki glikoprotein IIb/IIIa integrin reseptörüne bağlanan bir fare insan antikorunun Fab parçasıdır; perkütan koroner girişimde kardiyak iskemik komplikasyonları önlemede yardımcıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p083",
+     "sayfa": 78,
+     "cumleler": [
+      {
+       "id": "k1-59-c0317",
+       "ses": "Burası önemli, bu da çıkmış soru: denosumab, nükleer faktör kappa B ligandının reseptör aktivatörü, yani RANK ligandı için özgül bir insan immünoglobulin G2 antikorudur.",
+       "ekran": "Burası önemli, bu da çıkmış soru: denosumab, nükleer faktör kappa B ligandının reseptör aktivatörü, yani RANK ligandı için özgül bir insan immünoglobulin G2 antikorudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0318",
+       "ses": "Osteoklast olgunlaşmasını inhibe eder ve kırık riski yüksek, osteoporozlu postmenopozal kadınların tedavisinde endikedir.",
+       "ekran": "Osteoklast olgunlaşmasını inhibe eder ve kırık riski yüksek, osteoporozlu postmenopozal kadınların tedavisinde endikedir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0319",
+       "ses": "Aynı sorudaki ekulizumab ise komplemanın C5 bileşenine bağlanan insansılaştırılmış bir antikordur; kırmızı kan hücresi lizisine bağlı damar içi hemolizi inhibe ederek anemi, halsizlik, tromboz ve hemoglobinemi gibi belirtileri önler.",
+       "ekran": "Aynı sorudaki ekulizumab ise komplemanın C5 bileşenine bağlanan insansılaştırılmış bir antikordur; kırmızı kan hücresi lizisine bağlı damar içi hemolizi inhibe ederek anemi, halsizlik, tromboz ve hemoglobinemi gibi belirtileri önler.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p084",
+     "sayfa": 79,
+     "cumleler": [
+      {
+       "id": "k1-59-c0320",
+       "ses": "Palivizumab, rekombinant DNA teknolojisiyle üretilen ve solunum sinsityal virüsünün yol açtığı ağır hastalıkları önlemek için kullanılan bir antikordur.",
+       "ekran": "Palivizumab, rekombinant DNA teknolojisiyle üretilen ve solunum sinsityal virüsünün yol açtığı ağır hastalıkları önlemek için kullanılan bir antikordur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0321",
+       "ses": "Prematüre doğum ya da kalp veya akciğer hastalığı nedeniyle yüksek risk taşıyan bebeklere önerilir; en sık yan etkileri ateş ve döküntüdür.",
+       "ekran": "Prematüre doğum ya da kalp veya akciğer hastalığı nedeniyle yüksek risk taşıyan bebeklere önerilir; en sık yan etkileri ateş ve döküntüdür.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b23",
+   "baslik": "Nakilde immünosüpresifler ve rejeksiyon tipleri",
+   "paragraflar": [
+    {
+     "id": "k1-59-p085",
+     "sayfa": 80,
+     "cumleler": [
+      {
+       "id": "k1-59-c0322",
+       "ses": "İmmünosüpresifler başlıca 2 klinik durumda kullanılır: nakil ve otoimmün bozukluklar.",
+       "ekran": "İmmünosüpresifler başlıca 2 klinik durumda kullanılır: nakil ve otoimmün bozukluklar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0323",
+       "ses": "Yakın doku uyumu ret olasılığını ve yoğun immünosüpresyon gereksinimini azaltır.",
+       "ekran": "Yakın doku uyumu ret olasılığını ve yoğun immünosüpresyon gereksinimini azaltır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0324",
+       "ses": "Hastalar nakil öncesinde antitimosit globulin, daklizumab ya da basiliksimab içeren bir rejime alınabilir.",
+       "ekran": "Hastalar nakil öncesinde antitimosit globulin, daklizumab ya da basiliksimab içeren bir rejime alınabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p086",
+     "sayfa": 81,
+     "cumleler": [
+      {
+       "id": "k1-59-c0325",
+       "ses": "Burası önemli, solid organ alıcısında 4 tip rejeksiyon gelişebilir.",
+       "ekran": "Burası önemli, solid organ alıcısında 4 tip rejeksiyon gelişebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0326",
+       "ses": "Hiperakut rejeksiyon, verici organına karşı önceden var olan anti kan grubu antikorları gibi antikorlara bağlıdır; nakilden saatler içinde gelişir, immünosüpresiflerle durdurulamaz, hızlı nekroz ve organ yetmezliğiyle sonuçlanır.",
+       "ekran": "Hiperakut rejeksiyon, verici organına karşı önceden var olan anti kan grubu antikorları gibi antikorlara bağlıdır; nakilden saatler içinde gelişir, immünosüpresiflerle durdurulamaz, hızlı nekroz ve organ yetmezliğiyle sonuçlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0327",
+       "ses": "Akselere rejeksiyon 2 ile 7 gün sonra ortaya çıkar, hem antikorlar hem T hücreleri aracılıdır ve yine immünosüpresiflerle durdurulamaz; böbrek naklinden sonra nadir olsa da genellikle greft kaybıyla sonuçlanır.",
+       "ekran": "Akselere rejeksiyon 2 ile 7 gün sonra ortaya çıkar, hem antikorlar hem T hücreleri aracılıdır ve yine immünosüpresiflerle durdurulamaz; böbrek naklinden sonra nadir olsa da genellikle greft kaybıyla sonuçlanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0328",
+       "ses": "Akut rejeksiyon günler ya da aylar içinde gelişir ve esas olarak hücresel immüniteyi ilgilendirir; azatioprin, mikofenolat mofetil, siklosporin, takrolimus, glukokortikoidler, siklofosfamid, metotreksat ve sirolimus ile sıklıkla geri döndürülebilir.",
+       "ekran": "Akut rejeksiyon günler ya da aylar içinde gelişir ve esas olarak hücresel immüniteyi ilgilendirir; azatioprin, mikofenolat mofetil, siklosporin, takrolimus, glukokortikoidler, siklofosfamid, metotreksat ve sirolimus ile sıklıkla geri döndürülebilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0329",
+       "ses": "Kronik rejeksiyon aylar hatta yıllar sonra ortaya çıkar, nakledilen organın damarlarında kalınlaşma ve fibrozla karakterizedir ve hem hücresel hem humoral bağışıklığı ilgilendirir.",
+       "ekran": "Kronik rejeksiyon aylar hatta yıllar sonra ortaya çıkar, nakledilen organın damarlarında kalınlaşma ve fibrozla karakterizedir ve hem hücresel hem humoral bağışıklığı ilgilendirir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p087",
+     "sayfa": 82,
+     "cumleler": [
+      {
+       "id": "k1-59-c0330",
+       "ses": "Burası önemli, çıkmış sorularda soruldu: solid organ naklinden sonra gelişen akut hücresel rejeksiyon atağında ilk seçenek olarak yüksek dozda, yani pulse şeklinde verilen ajan bir glukokortikoid olan metilprednizolondur.",
+       "ekran": "Burası önemli, çıkmış sorularda soruldu: solid organ naklinden sonra gelişen akut hücresel rejeksiyon atağında ilk seçenek olarak yüksek dozda, yani pulse şeklinde verilen ajan bir glukokortikoid olan metilprednizolondur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p088",
+     "sayfa": 82,
+     "cumleler": [
+      {
+       "id": "k1-59-c0331",
+       "ses": "Graft versus host hastalığı çok sıktır ve allojenik nakil yapılan hastaların çoğunda gelişir.",
+       "ekran": "Graft versus host hastalığı çok sıktır ve allojenik nakil yapılan hastaların çoğunda gelişir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0332",
+       "ses": "Nakil öncesi siklosporin ve metotreksatla önleme yapılsa da sık görülür.",
+       "ekran": "Nakil öncesi siklosporin ve metotreksatla önleme yapılsa da sık görülür.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0333",
+       "ses": "Burası önemli: akut graft versus host hastalığı ilk 100 gün içinde gelişir ve sıklıkla deri döküntüsü, ağır ishal ya da hepatotoksisiteyle kendini gösterir; hastalar genellikle 100 günden sonra kronik forma ilerler.",
+       "ekran": "Burası önemli: akut graft versus host hastalığı ilk 100 gün içinde gelişir ve sıklıkla deri döküntüsü, ağır ishal ya da hepatotoksisiteyle kendini gösterir; hastalar genellikle 100 günden sonra kronik forma ilerler.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0334",
+       "ses": "Tedaviye mutlaka önce yüksek doz kortikosteroidle başlanır; mikofenolat mofetil, sirolimus, takrolimus, daklizumab ve diğer ilaçlarla farklı başarı oranlarında desteklenir.",
+       "ekran": "Tedaviye mutlaka önce yüksek doz kortikosteroidle başlanır; mikofenolat mofetil, sirolimus, takrolimus, daklizumab ve diğer ilaçlarla farklı başarı oranlarında desteklenir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p089",
+     "sayfa": 83,
+     "cumleler": [
+      {
+       "id": "k1-59-c0335",
+       "ses": "Otoimmün bozukluklarda immünosüpresif tedaviyle otoimmün hemolitik anemi, idiyopatik trombositopenik purpura, Tip 1 diyabet, Hashimoto tiroiditi ve temporal arterit gibi çoğu durumda remisyon sağlanabilir.",
+       "ekran": "Otoimmün bozukluklarda immünosüpresif tedaviyle otoimmün hemolitik anemi, idiyopatik trombositopenik purpura, Tip 1 diyabet, Hashimoto tiroiditi ve temporal arterit gibi çoğu durumda remisyon sağlanabilir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0336",
+       "ses": "Kronik astımda da immünosüpresif tedavi kullanılır; burada siklosporin sıklıkla etkilidir, sirolimus da bir seçenektir.",
+       "ekran": "Kronik astımda da immünosüpresif tedavi kullanılır; burada siklosporin sıklıkla etkilidir, sirolimus da bir seçenektir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k1-59-b24",
+   "baslik": "İmmünomodülasyon: sitokinler, interferonlar ve sitokin inhibitörleri",
+   "paragraflar": [
+    {
+     "id": "k1-59-p090",
+     "sayfa": 83,
+     "cumleler": [
+      {
+       "id": "k1-59-c0337",
+       "ses": "İmmün yanıtı baskılamaktan çok değiştiren ajanların gelişmesiyle immünomodülasyon farmakolojinin önemli bir alanı hâline gelmiştir.",
+       "ekran": "İmmün yanıtı baskılamaktan çok değiştiren ajanların gelişmesiyle immünomodülasyon farmakolojinin önemli bir alanı hâline gelmiştir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0338",
+       "ses": "Bu ilaçlar seçici ya da genel immün yetmezlikte yanıtı artırabilir.",
+       "ekran": "Bu ilaçlar seçici ya da genel immün yetmezlikte yanıtı artırabilir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p091",
+     "sayfa": 84,
+     "cumleler": [
+      {
+       "id": "k1-59-c0339",
+       "ses": "Sitokinler, farklı işlevleri olan büyük ve heterojen bir protein grubudur.",
+       "ekran": "Sitokinler, farklı işlevleri olan büyük ve heterojen bir protein grubudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0340",
+       "ses": "Bir kısmı lenforetiküler hücrelerde sentezlenen bağışıklık düzenleyici proteinlerdir ve immün işlevler ile hematopoezin kontrolünde rol oynar.",
+       "ekran": "Bir kısmı lenforetiküler hücrelerde sentezlenen bağışıklık düzenleyici proteinlerdir ve immün işlevler ile hematopoezin kontrolünde rol oynar.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0341",
+       "ses": "Antiproliferatif, antimikrobiyal ve antitümör etkileri de vardır.",
+       "ekran": "Antiproliferatif, antimikrobiyal ve antitümör etkileri de vardır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0342",
+       "ses": "Yeni keşfedilenlerin çoğu interlökindir ve tanımlanma sırasına göre numaralanır.",
+       "ekran": "Yeni keşfedilenlerin çoğu interlökindir ve tanımlanma sırasına göre numaralanır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0343",
+       "ses": "Tümör nekroz faktör alfa, interferon gama, interlökin 2, granülosit koloni uyarıcı faktör ve granülosit makrofaj koloni uyarıcı faktör gibi çoğu sitokinin serum yarılanma ömrü dakikalar düzeyindedir.",
+       "ekran": "Tümör nekroz faktör alfa, interferon gama, interlökin 2, granülosit koloni uyarıcı faktör ve granülosit makrofaj koloni uyarıcı faktör gibi çoğu sitokinin serum yarılanma ömrü dakikalar düzeyindedir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p092",
+     "sayfa": 85,
+     "cumleler": [
+      {
+       "id": "k1-59-c0344",
+       "ses": "İnterferonlar 3 ailede toplanır: interferon alfa, beta ve gama.",
+       "ekran": "İnterferonlar 3 ailede toplanır: interferon alfa, beta ve gama.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0345",
+       "ses": "Alfa ve beta, Tip 1 interferonları oluşturur; asit kararlı proteinlerdir ve hedef hücrede aynı reseptöre etki eder.",
+       "ekran": "Alfa ve beta, Tip 1 interferonları oluşturur; asit kararlı proteinlerdir ve hedef hücrede aynı reseptöre etki eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0346",
+       "ses": "Tip 2 interferon olan interferon gama ise asit kararsızdır ve farklı bir reseptöre etki eder.",
+       "ekran": "Tip 2 interferon olan interferon gama ise asit kararsızdır ve farklı bir reseptöre etki eder.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0347",
+       "ses": "Tip 1 interferonlar genellikle viral enfeksiyonlarla indüklenir; interferon alfayı lökositler, interferon betayı fibroblast ve epitel hücreleri, interferon gamayı ise çoğunlukla aktive T hücreleri üretir.",
+       "ekran": "Tip 1 interferonlar genellikle viral enfeksiyonlarla indüklenir; interferon alfayı lökositler, interferon betayı fibroblast ve epitel hücreleri, interferon gamayı ise çoğunlukla aktive T hücreleri üretir.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p093",
+     "sayfa": 86,
+     "cumleler": [
+      {
+       "id": "k1-59-c0348",
+       "ses": "Burası önemli, çıkmış sorularda soruldu: interferonlar immünosüpresif ilaç değildir.",
+       "ekran": "Burası önemli, çıkmış sorularda soruldu: interferonlar immünosüpresif ilaç değildir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0349",
+       "ses": "Makrofaj, NK hücresi ve sitotoksik T lenfosit aktivasyonu gibi bağışıklığı artırıcı özelliklere sahip immünomodülatörlerdir.",
+       "ekran": "Makrofaj, NK hücresi ve sitotoksik T lenfosit aktivasyonu gibi bağışıklığı artırıcı özelliklere sahip immünomodülatörlerdir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0350",
+       "ses": "Oysa mikofenolat mofetil, takrolimus, azatioprin ve siklosporin immünosüpresiftir.",
+       "ekran": "Oysa mikofenolat mofetil, takrolimus, azatioprin ve siklosporin immünosüpresiftir.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0351",
+       "ses": "İnterferon alfa saçaklı hücreli lösemi, kronik miyeloid lösemi, malign melanom ve Kaposi sarkomu gibi neoplazilerde ve Hepatit B ile Hepatit C enfeksiyonlarında kullanılır.",
+       "ekran": "İnterferon alfa saçaklı hücreli lösemi, kronik miyeloid lösemi, malign melanom ve Kaposi sarkomu gibi neoplazilerde ve Hepatit B ile Hepatit C enfeksiyonlarında kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0352",
+       "ses": "İnterferon beta multipl sklerozda, interferon gama kronik granülomatöz hastalıkta onaylıdır.",
+       "ekran": "İnterferon beta multipl sklerozda, interferon gama kronik granülomatöz hastalıkta onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0353",
+       "ses": "İnterlökin iki ise metastatik böbrek hücreli karsinom ve malign melanomda onaylıdır.",
+       "ekran": "İnterlökin iki ise metastatik böbrek hücreli karsinom ve malign melanomda onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p094",
+     "sayfa": 87,
+     "cumleler": [
+      {
+       "id": "k1-59-c0354",
+       "ses": "İmmünomodülasyonun daha yeni uygulamalarından biri, interlökin 1 ve tümör nekroz faktör alfa gibi sitokinlerin patogenezde rol oynadığı septik şok ve inflamatuvar hastalıklarda sitokin inhibitörlerinin kullanılmasıdır.",
+       "ekran": "İmmünomodülasyonun daha yeni uygulamalarından biri, interlökin 1 ve tümör nekroz faktör alfa gibi sitokinlerin patogenezde rol oynadığı septik şok ve inflamatuvar hastalıklarda sitokin inhibitörlerinin kullanılmasıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0355",
+       "ses": "Anakinra, bir ya da birden çok hastalık modifiye edici antiromatizmal ilaca yanıt vermeyen erişkin romatoid artritte onaylıdır.",
+       "ekran": "Anakinra, bir ya da birden çok hastalık modifiye edici antiromatizmal ilaca yanıt vermeyen erişkin romatoid artritte onaylıdır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0356",
+       "ses": "Ailesel Akdeniz ateşinin sık olduğu ülkelerde kolşisine yanıtsız hastalar için büyük avantaj sağlamıştır.",
+       "ekran": "Ailesel Akdeniz ateşinin sık olduğu ülkelerde kolşisine yanıtsız hastalar için büyük avantaj sağlamıştır.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    },
+    {
+     "id": "k1-59-p095",
+     "sayfa": 87,
+     "cumleler": [
+      {
+       "id": "k1-59-c0357",
+       "ses": "Burası önemli: kanakinumab, rekombinant bir insan anti interlökin 1 beta monoklonal antikorudur.",
+       "ekran": "Burası önemli: kanakinumab, rekombinant bir insan anti interlökin 1 beta monoklonal antikorudur.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0358",
+       "ses": "Dirençli ailesel Akdeniz ateşinde, diğer otoinflamatuvar periyodik ateş sendromlarında ve son zamanlarda akut gut hastalığında kullanılır.",
+       "ekran": "Dirençli ailesel Akdeniz ateşinde, diğer otoinflamatuvar periyodik ateş sendromlarında ve son zamanlarda akut gut hastalığında kullanılır.",
+       "duzey": 0,
+       "vurgu": []
+      },
+      {
+       "id": "k1-59-c0359",
+       "ses": "Tek uygulama yolu deri altı enjeksiyondur.",
+       "ekran": "Tek uygulama yolu deri altı enjeksiyondur.",
+       "duzey": 0,
+       "vurgu": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
