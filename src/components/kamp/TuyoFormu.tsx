@@ -1,6 +1,6 @@
 /**
  * Öğrencinin hoca tüyosu önerisi (POST /api/kamp/tuyo-oner). Öneri yönetici onayından sonra kampa girer
- * (Yönetim › Kamp tüyoları). Branşlar o kurulun ders defterinden (kampVeri.kurulBranslari).
+ * (Yönetim › Kamp tüyoları). Branş ve ders listesi her kurulda (Kurul 1 dahil, data/dersler/k1.json) ders defterinden.
  */
 import React, { useMemo, useState } from 'react';
 import { CheckCircle2, Lightbulb, Send, X } from 'lucide-react';

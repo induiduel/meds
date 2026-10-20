@@ -14,7 +14,7 @@ import { useCallback, useEffect, useRef, useSyncExternalStore } from 'react';
  * seçimi; 'tekrar' → "Tekrar et" ile yeni tur başladı (türetilen bitti yok sayılır, yeniden "Bitirdim" beklenir).
  */
 
-export type TakipModul = 'sesli' | 'ogren' | 'cozucu' | 'onem';
+export type TakipModul = 'sesli' | 'ogren' | 'cozucu' | 'onem' | 'kamp';
 export type KonuDurum = 'bitti' | 'tekrar' | 'acik';
 
 export interface KonuKaydi {
@@ -43,6 +43,7 @@ export const MODUL_AD: Record<TakipModul, string> = {
   ogren: 'Etkileşimli dersler',
   cozucu: 'Soru çözücü',
   onem: 'En önemliler',
+  kamp: 'Kurul kampı',
 };
 
 const anahtar = (m: TakipModul, konu: string) => `${m}:${konu}`;

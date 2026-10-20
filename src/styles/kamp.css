@@ -37,7 +37,7 @@
 .km-tuyo { font-size: 13.5px; line-height: 1.5; font-style: italic; color: var(--color-ink-2); padding: 8px 12px; border-left: 3px solid var(--color-warn, var(--color-accent)); background: var(--color-field); border-radius: 0 8px 8px 0; }
 .km-metin { font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; }
 .km-kaynak { display: flex; flex-wrap: wrap; gap: 6px; }
-.km-kaynak span { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--color-field); color: var(--color-ink-2); overflow-wrap: anywhere; }
+.km-kaynak > :where(span, a), .km-kaynak-k { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--color-field); color: var(--color-ink-2); overflow-wrap: anywhere; }
 
 /* tüyo formu */
 .km-form { display: grid; gap: 12px; padding: 16px; border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); min-width: 0; }
@@ -56,3 +56,21 @@
 .km-form-tamam > svg { width: 22px; height: 22px; color: var(--color-ok, var(--color-accent)); }
 .km-form-tamam p { font-size: 13.5px; color: var(--color-ink-2); margin-top: 4px; }
 .km-form-tamam .km-form-arac { grid-column: 1 / -1; }
+a.km-kaynak-k, .km-kaynak > a { color: var(--color-accent); text-decoration: none; }
+a.km-kaynak-k:hover, .km-kaynak > a:hover { text-decoration: underline; }
+.tk-tablo-s .km-kaynak-k { display: inline-block; margin: 4px 6px 0 0; }
+
+/* ilerleme */
+.km-ilerleme { display: grid; gap: 4px; }
+.km-ilerleme-bar { display: block; height: 5px; border-radius: 999px; background: var(--color-field); overflow: hidden; }
+.km-ilerleme-bar > span { display: block; height: 100%; background: var(--color-accent); border-radius: inherit; }
+.km-ilerleme-t { font-size: 12px; color: var(--color-ink-3); }
+.km-ozet { font-size: 13px; line-height: 1.5; color: var(--color-ink-2); }
+.km-dinlendi { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; color: var(--color-ok, var(--color-accent)); }
+.km-dinlendi svg { width: 13px; height: 13px; }
+.km-bildim-btn { display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; padding: 2px 8px; border: 1px solid var(--color-line); border-radius: 999px; background: none; font-size: 12px; color: var(--color-ink-3); }
+.km-bildim-btn svg { width: 12px; height: 12px; }
+.km-bildim-btn.is-on { border-color: transparent; background: var(--color-ok-soft, var(--color-accent-soft)); color: var(--color-ok, var(--color-accent)); }
+.tk-tablo-s.km-bildim > span:first-child { color: var(--color-ink-3); }
+.km-deneme-arac { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.km-tur { font-size: 13px; font-weight: 600; color: var(--color-accent); }

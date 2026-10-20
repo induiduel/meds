@@ -5,6 +5,7 @@
  */
 import { getCustomApiUrl } from '../../services/api';
 import bransRaw from '../../data/dersler/branslar.json';
+import { DECK_CATALOG } from '../../data/deckStore';
 
 export interface KampAnlatim { id: string; baslik: string; metin: string; k?: string[]; puan: number; tuyo?: string | null }
 export interface KampKalipSatir { s: string; t: string; k?: string; h?: number }
@@ -49,6 +50,25 @@ export function kaynakYaz(k: string): string {
   const d = KOD_DERS.get(kod);
   const s = sayfa ? ` · s.${sayfa}` : '';
   return d ? `Ders ${dersNo(d)} · ${d.konu}${s}` : `${kod}${s}`;
+}
+
+/**
+ * Kaynak bağlantısı: "2f01:12" → ders defteri (k2-07) → o dersin Öğren destesi (`k<N>p-<ders_id>-…`, sürümlüyse en
+ * yeni sürüm) varsa `/ogren/<deckId>` (uygulama içi), yoksa sunucu kısa bağlantısı `/k/<ders_id>` (tam yükleme).
+ * Öğren'de PDF sayfasına giden adres parametresi olmadığından sayfa numarası yalnız etikette kalır.
+ * DECK_CATALOG tembel yüklenir (deckStore.loadDeckCatalog); yüklenmeden çağrılırsa kısa bağlantı döner.
+ */
+export function kaynakHedef(k: string): { url: string; ic: boolean } | null {
+  const d = KOD_DERS.get(String(k || '').split(':')[0]);
+  if (!d) return null;
+  const on = `k${d.kurul}p-${d.id}-`;
+  const L = DECK_CATALOG.filter((x) => x.id.startsWith(on));
+  if (L.length) {
+    // Kitaplıktaki sıra (InteractiveDeckView.versionsOf): versionLabel sayısal artan, son öğe en yeni sürüm
+    const en = [...L].sort((a, b) => String(a.versionLabel || 'V1').localeCompare(String(b.versionLabel || 'V1'), 'tr', { numeric: true })).pop()!;
+    return { url: `/ogren/${en.id}`, ic: true };
+  }
+  return { url: `/k/${d.id}`, ic: false };
 }
 
 /** Kurulun kamp dosyaları (yalnız yol; içerik tembel yüklenir) */

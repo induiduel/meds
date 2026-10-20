@@ -1,11 +1,11 @@
 /**
- * Bitirdiklerim (/bitirdiklerim?m=sesli|ogren|cozucu|onem): dört modülde ders → konu kontrol listesi.
+ * Bitirdiklerim (/bitirdiklerim?m=sesli|ogren|cozucu|onem|kamp): beş modülde ders → konu kontrol listesi.
  * Her konu: bitti işareti (dokunarak), harcanan etkin süre, çözülen soru, tekrar turu; "Aç" / "Tekrar et".
  * Her ders ve modül için biten/kalan, toplam süre, soru ve ortalama hıza göre tahmini kalan süre.
  * Veri: services/calismaTakip (süre, soru, durum) + bitirdiklerimVeri (konu listeleri). Stil: styles/takip.css (.bd-*).
  */
 import React, { useEffect, useMemo, useState } from 'react';
-import { BookOpen, ChevronDown, Headphones, ListChecks, MessageCircleQuestion, Play, RotateCcw, Search, Star, X } from 'lucide-react';
+import { BookOpen, ChevronDown, Tent, Headphones, ListChecks, MessageCircleQuestion, Play, RotateCcw, Search, Star, X } from 'lucide-react';
 import {
   MODUL_AD, bittiMi, grupOzeti, gunYaz, hizHesapla, sureYaz, tekrarBasla, useTakip, type Hiz, type TakipModul,
 } from '../../services/calismaTakip';
@@ -18,8 +18,9 @@ const MODULLER: { id: TakipModul; ikon: React.ComponentType<{ 'aria-hidden'?: bo
   { id: 'ogren', ikon: BookOpen },
   { id: 'cozucu', ikon: MessageCircleQuestion },
   { id: 'onem', ikon: Star },
+  { id: 'kamp', ikon: Tent },
 ];
-const MODUL_KISA: Record<TakipModul, string> = { sesli: 'Sesli ders', ogren: 'Etkileşimli', cozucu: 'Soru çözücü', onem: 'En önemliler' };
+const MODUL_KISA: Record<TakipModul, string> = { sesli: 'Sesli ders', ogren: 'Etkileşimli', cozucu: 'Soru çözücü', onem: 'En önemliler', kamp: 'Kurul kampı' };
 type Suzgec = 'tum' | 'kalan' | 'biten' | 'tekrar';
 const SUZGEC_AD: Record<Suzgec, string> = { tum: 'Tümü', kalan: 'Kalanlar', biten: 'Bitenler', tekrar: 'Tekrarda' };
 

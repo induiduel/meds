@@ -17,6 +17,9 @@ import { cozucuyaGit, onemeGit } from '../spots/spotsYol';
 import { DECK_CATALOG, type DeckCatalogEntry, loadDeckCatalog } from '../../data/deckStore';
 import { branchOf, isPublished, stateOf, type Progress } from '../learn/LearnLibrary';
 import { ogrenBasaAl, onemAsistanBasaAl } from './basaAl';
+import { KURULLAR } from '../../services/kurulTakvimi';
+import { bransAdi, kurulKampYollari, type Kamp } from '../kamp/kampVeri';
+import { kampAnahtar, kampKaydi, kampOzeti, kampSifirla } from '../kamp/kampIlerleme';
 // Katalog tembel yüklenir; bu modül eşzamanlı okuduğundan yüklenirken hazır olmasını bekle.
 await loadDeckCatalog().catch(() => undefined);
 
@@ -177,9 +180,38 @@ async function onemYukle(): Promise<BdDers[]> {
   });
 }
 
+/** Kurul kampı: kurul → branş kampı; konu kimliği `k<N>/<brans>` (takipte `kamp:k<N>/<brans>`) */
+async function kampYukle(): Promise<BdDers[]> {
+  const out: BdDers[] = [];
+  for (const { kurul } of KURULLAR) {
+    const L = (await Promise.all(kurulKampYollari(kurul).map((x) => x.yukle().catch(() => null)))).filter((x): x is Kamp => !!x);
+    if (!L.length) continue;
+    out.push({
+      id: `k${kurul}`,
+      ad: `Kurul ${kurul}`,
+      konular: L.sort((a, b) => a.baslik.localeCompare(b.baslik, 'tr')).map((k) => {
+        const a = kampAnahtar(k.kurul, k.brans);
+        const o = kampOzeti(k, kampKaydi(a));
+        const ac = () => navigateTo(`/kamp/${k.kurul}/${k.brans}`);
+        return {
+          id: a,
+          ad: k.baslik,
+          alt: `${bransAdi(k.brans)} · %${o.yuzde}`,
+          beklenen: k.anlatim.length * MADDE_SN + k.deneme.length * SORU_SN + o.satirToplam * 10,
+          turetilen: o.tamam,
+          ac,
+          tekrar: () => { kampSifirla(a); ac(); },
+        };
+      }),
+    });
+  }
+  return out;
+}
+
 export const MODUL_YUKLE: Record<TakipModul, () => Promise<BdDers[]>> = {
   sesli: sesliYukle,
   ogren: ogrenYukle,
   cozucu: cozucuYukle,
   onem: onemYukle,
+  kamp: kampYukle,
 };
