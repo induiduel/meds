@@ -5,6 +5,18 @@
 # Kullanım (cihazdan, meds/ içinde): ./deploy/oracle/deploy-code.sh [--build]
 set -euo pipefail
 
+# Cihaz kilidi (2026-10-20): iki oturum aynı anda dağıtınca Oracle'da eşzamanlı derleme belleği tüketip
+# sunucuyu düşürdü. Tüm çalışma ağaçları (meds, meds-dagitim, ...) aynı kilit dosyasını paylaşır; ikinci
+# dağıtım beklemez, hemen durur. Kilit süreç bitince (çökse bile) çekirdek tarafından bırakılır.
+if [ -z "${MEDS_DEPLOY_LOCKED:-}" ]; then
+  exec 9>"${XDG_RUNTIME_DIR:-/tmp}/medsor-deploy.lock"
+  if ! flock -n 9; then
+    echo "DURDU: başka bir dağıtım sürüyor (kilit: ${XDG_RUNTIME_DIR:-/tmp}/medsor-deploy.lock). O bitince yeniden çalıştırın." >&2
+    exit 75
+  fi
+  export MEDS_DEPLOY_LOCKED=1
+fi
+
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 MEDS_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
 KEY="${SSH_KEY:-$HOME/.ssh/medsor-oracle.key}"
