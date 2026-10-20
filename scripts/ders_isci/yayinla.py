@@ -597,6 +597,12 @@ def _canli_ders_ekle(y) -> str:
         hedef.parent.mkdir(parents=True, exist_ok=True)
         d2 = json.loads(v2.read_text(encoding="utf-8")); d2["anahtar"] = y.ders_id
         hedef.write_text(json.dumps(d2, ensure_ascii=False, indent=1), encoding="utf-8")
+        # sesli ders ekranının vurguları (önemli cümle + terim) v2 vurgu kodlarından (vurgu_uret.py Kurul 1'e bağlı)
+        sys.path.insert(0, str(MEDS / "scripts" / "sesli_anlatim"))
+        import konusma_v2 as _kv
+        vy = MEDS / "data" / "sesli_anlatim" / "vurgu" / f"{y.ders_id}.json"
+        vy.parent.mkdir(parents=True, exist_ok=True)
+        vy.write_text(json.dumps(_kv.vurgu_turet(d2), ensure_ascii=False), encoding="utf-8")
     yol = b.get("pdf_yolu") or ""
     indirilen = oku(ROOT / "meds_downloads" / "_downloads.json", {}) or {}
     file_id = next((fid for fid, v in indirilen.items() if isinstance(v, dict) and v.get("path") == f"drive_root/{yol}"), None)

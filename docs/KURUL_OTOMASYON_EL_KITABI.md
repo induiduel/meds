@@ -196,7 +196,7 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
 
 ## 12. Açık kapılar (hata defteri H7–H12)
 çıkmış anahtar çelişkisi
-karantinası (H10) · `vurgu_uret.py` hatta alınması · deste `versionGroup` kapısı ·
+karantinası (H10) ·
 kelime zamanlaması yalnız cihazda (cihaz kapalıyken gecikir).
 
 ## 13. Bilinçli olarak elle kalan

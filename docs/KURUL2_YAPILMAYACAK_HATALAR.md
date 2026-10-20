@@ -120,8 +120,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 |---|---|
 | Konuşma v2, cümle zamanı, PDF işareti | hatta |
 | Kelime zamanlaması | **yalnız cihazda** (`meds-kelime-zaman-hat`); cihaz kapalıyken gecikir — panoda izlenmeli |
-| Önemli cümle vurgusu (`vurgu_uret.py`) | **açık**: hatta bağlı değil. K2'de `konusma_v2.vurgu` alanı birincil; `vurgu_uret` ek olarak hatta alınmalı (karar bekliyor) |
+| Önemli cümle vurgusu | **EKLENDİ**: Kurul 2+'da yayın, `konusma_v2.vurgu_turet` ile `data/sesli_anlatim/vurgu/<anahtar>.json` yazar (çıkmışa bağlı cümle 3, tuzak/sayı/tanım 2, terimler). `vurgu_uret.py` Kurul 1'e bağlı kalır |
 | "Öğren'de bu bilgi" (`ogren_esle.py`) | **EKLENDİ**: zincirin birleştirme adımında |
-| Deste `versionGroup` / Bitirdiklerim konu kimliği | kimlikler defterden; deste doğrulayıcıya kontrol **açık** |
+| Deste `versionGroup` / Bitirdiklerim konu kimliği | gerekmez: konu kimliği `versionGroup || id` (id her zaman var), K2 kimlikleri defterden |
 | Patoloji/Genetik Check Up, Genetik sınav kampı | **elle**; K2 eşdeğeri için karar bekliyor |
 | Örnek sorular K1–6, hastalıklar, sözlük, olası soru | hatta |

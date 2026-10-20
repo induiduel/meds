@@ -120,6 +120,35 @@ def turet(d):
     return "\n".join(satir).rstrip() + "\n", sayfalar
 
 
+def vurgu_turet(d):
+    """v2 → sesli ders vurgu dosyası (data/sesli_anlatim/vurgu/<anahtar>.json; vurgu_uret.py biçimi):
+    {"surum": 1, "kaynak": "konusma_v2", "p": {"<paragraf sırası>": [[bas, son, "c"|"t", onem], …]}}
+    Aralıklar turet() ile oluşan paragraf metninde (cümlelerin `ses` hâli, boşlukla birleşik). Önemli cümle: çıkmışa bağlı = 3,
+    tuzak/sayı/tanım vurgusu = 2. Terim: vurgu ifadesi ses metninde geçiyorsa "t" (ekran ile ses farklıysa bulunmayan atlanır)."""
+    out, i = {}, 0
+    for b in d["bolumler"]:
+        for p in b["paragraflar"]:
+            konum, aralik = 0, []
+            for j, c in enumerate(p["cumleler"]):
+                ses = c["ses"].strip()
+                bas, son = konum, konum + len(ses)
+                turler = {v.get("tur") for v in c.get("vurgu", [])}
+                onem = 3 if (c.get("cikmis") or "cikmis" in turler) else 2 if turler & {"tuzak", "sayi", "tanim"} else 0
+                if onem:
+                    aralik.append([bas, son, "c", onem])
+                kucuk = ses.casefold()
+                for v in c.get("vurgu", []):
+                    m = (v.get("metin") or "").replace("**", "").strip()
+                    k = kucuk.find(m.casefold()) if m else -1
+                    if k >= 0:
+                        aralik.append([bas + k, bas + k + len(m), "t", 0])
+                konum = son + 1  # turet(): cümleler tek boşlukla birleşir
+            if aralik:
+                out[str(i)] = aralik
+            i += 1
+    return {"surum": 1, "kaynak": "konusma_v2", "p": out}
+
+
 def k1_donustur(key):
     """Eski Kurul 1 metnine kimlik ver (içerik değişmez; ekran = ses; vurgu boş). Deeplink ve referans için."""
     md = (MEDS / f"data/sesli_anlatim/metin/{key}.md").read_text()
