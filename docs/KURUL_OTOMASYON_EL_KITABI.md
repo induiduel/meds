@@ -195,7 +195,7 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
 6. Sınavdan sonra kurul arşive geçer (`/gecmis-kurullar`), aktif içerik bir sonraki kurula.
 
 ## 12. Açık kapılar (hata defteri H7–H12)
-PDF içerik tekrarı (H8) · çıkmış anahtar çelişkisi
+çıkmış anahtar çelişkisi
 karantinası (H10) · `vurgu_uret.py` hatta alınması · deste `versionGroup` kapısı ·
 kelime zamanlaması yalnız cihazda (cihaz kapalıyken gecikir).
 

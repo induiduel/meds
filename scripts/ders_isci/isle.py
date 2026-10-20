@@ -202,6 +202,40 @@ def cikmis_adaylari(metin: str, kurul: int | None, en_cok: int = 40) -> list[dic
     return sorted(toplam.values(), key=lambda e: (-e["kez"], -e["puan"]))[:en_cok]
 
 
+def _sayfa_kumeleri(metin: str) -> list[set]:
+    out = []
+    for parca in metin.split("=== SAYFA ")[1:]:
+        w = {x for x in re.findall(r"\w{4,}", fold(parca.split("===", 1)[-1])) if not x.isdigit()}
+        if len(w) >= 12:  # neredeyse boş sayfa karşılaştırmaya girmez
+            out.append(w)
+    return out
+
+
+def tekrar_denetle(metin: str, kurul: int, haric_deste: str | None) -> str | None:
+    """H8 (2026-10-20): yeni PDF, aynı kurulda yayımlanmış bir dersin tekrarı/kısmı mı? Sayfaların yarısından fazlası tek
+    bir mevcut derste neredeyse aynıysa (kelime kümesi Jaccard ≥0,8) uyarı metni döner → otomatik onay kapanır."""
+    yeni = _sayfa_kumeleri(metin)
+    if len(yeni) < 4:
+        return None
+    kok = DATABASE.parent / "meds_database_v2" / "ders_isci" / "yayinlanan"
+    en = (0.0, None)
+    for bp in kok.glob("*/baglam.json"):
+        b = oku(bp, {}) or {}
+        if int(b.get("kurul") or 0) != int(kurul or 0) or (haric_deste and b.get("deste_id") == haric_deste):
+            continue
+        eski = _sayfa_kumeleri((bp.parent / "kaynak.md").read_text(encoding="utf-8")) if (bp.parent / "kaynak.md").exists() else []
+        if not eski:
+            continue
+        ayni = sum(1 for a in yeni if any(len(a & e) / len(a | e) >= 0.8 for e in eski))
+        oran = ayni / len(yeni)
+        if oran > en[0]:
+            en = (oran, b)
+    if en[0] > 0.5:
+        return (f"Bu PDF'in sayfalarının %{round(100 * en[0])}'i yayımlanmış {en[1].get('ders_id')} dersiyle aynı — tekrar ya da "
+                "kısım olabilir; ayrı ders açılmadan önce yönetici kararı gerekir")
+    return None
+
+
 def baglam_hazirla(j: dict, d: Path, metin: str, bilgi: dict) -> dict:
     kz = j.get("konu_zorla")
     if kz:  # kapsam tespitinden gelen konu (çok konulu PDF'te her alt iş kendi konusunu taşır)
@@ -255,6 +289,13 @@ def baglam_hazirla(j: dict, d: Path, metin: str, bilgi: dict) -> dict:
         ders_id = f"k{kurul}-{n:02d}-{slug(ad_kaynagi)}"
         deste_id = f"k{kurul}p-{ders_id}"
         mod = "yeni"
+    if mod == "yeni" and kurul:
+        try:
+            t = tekrar_denetle(metin, kurul, None)
+            if t:
+                uyarilar.append(t)
+        except Exception as e:  # noqa: BLE001
+            uyarilar.append(f"tekrar denetimi yapılamadı: {e}")
     b = {
         "is_id": j["is_id"], "pdf_yolu": j["yol"], "pdf_adi": Path(j["yol"]).name, "yil": j.get("yil"),
         "uyari": "; ".join(u for u in uyarilar if u), "sayfa": bilgi["sayfa"], "ocr_sayfalar": bilgi["ocr_sayfalar"],

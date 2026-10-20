@@ -88,7 +88,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 
 ### H8 — Aynı PDF iki ders / yanlış PDF eşleşmesi
 - **Kural:** PDF içerikle tanınır; mevcut dersle yüksek sayfa örtüşmesinde yeni ders açılmaz ("tekrar/kısım").
-- **Kapı — KISMEN:** işçi güncelleme kararını PDF adı + program eşleşmesiyle veriyor; içerik örtüşme kapısı AÇIK (plan P2).
+- **Kapı — EKLENDİ:** `isle.tekrar_denetle`: yeni dersin sayfalarının >%50'si aynı kuruldaki yayımlanmış tek bir derste
+  neredeyse aynıysa (kelime kümesi Jaccard ≥0,8) uyarı → otomatik onay kapanır, yönetici karar verir. 19 yayımlanmış derste
+  0 yanlış uyarı; aynı PDF'in yeniden gelişi %100 yakalandı.
 
 ### H9 — Görsel ya da bozuk OCR'lı sayfa içerikte yok
 - **Kural:** metni zayıf sayfa görüntüden okunur; sayfa kapsaması ölçülür.
