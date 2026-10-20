@@ -6,6 +6,7 @@
  * yorum veya otomasyon değişikliği olduğunda istemciye anında iletir.
  */
 
+import { adminIdTokenForStream } from './adminFetchAuth';
 import { AdminNotification } from '../types';
 import { getLocalAdminSession } from './auth';
 import { panelProxied } from '../config/deployment';
@@ -95,6 +96,8 @@ class RealtimeEventService {
       const qs = new URLSearchParams();
       if (panelProxied('/api/realtime/events')) qs.set('panelProxy', 'oracle');
       if (adminSession?.email) qs.set('adminEmail', adminSession.email);
+      const streamToken = adminIdTokenForStream();
+      if (streamToken) qs.set('idToken', streamToken);
       if (this.lastEventId) qs.set('lastEventId', this.lastEventId);
       const url = `${base}/api/realtime/events${qs.toString() ? `?${qs}` : ''}`;
       this.connectedAdmin = !!adminSession?.email;

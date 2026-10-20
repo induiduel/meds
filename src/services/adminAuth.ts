@@ -58,6 +58,9 @@ export function adminAuthMiddleware(adminEmail: string): express.RequestHandler 
       return next();
     }
     req.adminAuth = { ok: false, via: null };
+    // EventSource başlık yollayamaz: yalnız canlı olay akışında jeton sorgu parametresiyle gelebilir
+    const qTok = req.path === '/api/realtime/events' ? String((req.query as any)?.idToken || '') : '';
+    if (qTok && !req.headers.authorization) req.headers.authorization = `Bearer ${qTok}`;
     if (!bearerToken(req)) return next();
     // firebaseIdentity jeton doğrulamasını jeton özetine göre 10 dk önbellekte tutar (her istekte Google'a gidilmez)
     requestUser(req)

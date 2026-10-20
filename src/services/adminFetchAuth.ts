@@ -68,3 +68,21 @@ export function installAdminFetchAuth() {
     return inner(input, init);
   };
 }
+
+/** EventSource başlık taşıyamaz: yönetici jetonu canlı olay akışının adresine eklenir (yalnız /api/realtime/events kabul eder). */
+let cachedToken = '';
+let tokenWatch = false;
+export function adminIdTokenForStream(): string {
+  if (!tokenWatch && typeof window !== 'undefined') {
+    tokenWatch = true;
+    void import('./auth').then(({ auth }) => {
+      auth?.onIdTokenChanged?.(async (u: any) => {
+        const had = !!cachedToken;
+        cachedToken = u && String(u.email || '').toLowerCase() === ADMIN ? await u.getIdToken().catch(() => '') : '';
+        // İlk jeton gelince canlı akış yönetici olaylarıyla yeniden kurulsun
+        if (!had && cachedToken) window.dispatchEvent(new Event('medsoru:admin-session'));
+      });
+    }).catch(() => {});
+  }
+  return cachedToken;
+}
