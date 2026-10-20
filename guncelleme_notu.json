@@ -1,10 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 53,
-  "baslik": "Ders ekranı ve canlı ders iyileştirmeleri",
+  "onem": 54,
+  "baslik": "Etkileşimli ders PDF'i daha okunaklı",
   "maddeler": [
-    "Öğren ders oynatıcısı ve ders kitaplığında düzenleme iyileştirmeleri.",
-    "Canlı ders dışa aktarımı ve görünümü güncellendi.",
-    "Bugün ekranında düzeltmeler."
+    "Etkileşimli derslerin PDF/Word dosyalarında uzun maddeler ana madde ve iç içe alt maddelere bölünüyor.",
+    "\"Klinik seyir:\" gibi satırlar alt başlık oluyor; yazıyla sayılar rakamla gösteriliyor."
   ]
 }
