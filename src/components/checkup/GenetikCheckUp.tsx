@@ -649,9 +649,38 @@ export const GenetikCheckUp: React.FC<GenetikCheckUpProps> = ({ onBack }) => {
           <span className="gcu-ust">Kurul 1 · Tıbbi Biyoloji ve Genetik</span>
           <h1>Genetik sınav kalıbı</h1>
           <p>
-            Sorular üç kalıptan gelir: <b>bulgudan sendroma</b>, <b>kanserde hedef ilaç</b> ve{' '}
-            <b>kanser ile prenatal belirteçler</b>. 11 aşamalı sesli dersle ilerle, sonra tablo, spot ve sorularla pekiştir.
+            Üç soru kalıbı: <b>bulgudan sendrom</b>, <b>kanserde hedef ilaç</b>, <b>kanser ve prenatal belirteçler</b>.
           </p>
+        </div>
+        {/* İLERLEME */}
+        <div className="gcu-ilerleme">
+          <div className="gcu-ilerleme-oge">
+            <span>Sesli ders</span>
+            <b className="gcu-mono">
+              {istatistik.tamamAdim}/{g07.noktalar.length} aşama
+            </b>
+            <i style={{ ['--p' as string]: `${(istatistik.tamamAdim / g07.noktalar.length) * 100}%` }} />
+          </div>
+          <div className="gcu-ilerleme-oge">
+            <span>Ders soruları</span>
+            <b className="gcu-mono">
+              {asistanDogru}/{asistanToplam} doğru
+            </b>
+            <i style={{ ['--p' as string]: `${(asistanDogru / Math.max(1, asistanToplam)) * 100}%` }} />
+          </div>
+          <div className="gcu-ilerleme-oge">
+            <span>Soru bankası</span>
+            <b className="gcu-mono">
+              {istatistik.dogruSayisi}/{istatistik.toplamSoru} doğru
+            </b>
+            <i style={{ ['--p' as string]: `${(istatistik.dogruSayisi / Math.max(1, istatistik.toplamSoru)) * 100}%` }} />
+          </div>
+          {(istatistik.cozulen > 0 || istatistik.tamamAdim > 0) && (
+            <button type="button" className="gcu-metin-btn" onClick={cevaplariSifirla}>
+              <RotateCcw />
+              Sıfırla
+            </button>
+          )}
         </div>
         <div className="gcu-bas-arac">
           <button
@@ -699,37 +728,6 @@ export const GenetikCheckUp: React.FC<GenetikCheckUpProps> = ({ onBack }) => {
           </div>
         </div>
       </header>
-
-      {/* İLERLEME */}
-      <div className="gcu-ilerleme">
-        <div className="gcu-ilerleme-oge">
-          <span>Sesli ders</span>
-          <b className="gcu-mono">
-            {istatistik.tamamAdim}/{g07.noktalar.length} aşama
-          </b>
-          <i style={{ ['--p' as string]: `${(istatistik.tamamAdim / g07.noktalar.length) * 100}%` }} />
-        </div>
-        <div className="gcu-ilerleme-oge">
-          <span>Ders soruları</span>
-          <b className="gcu-mono">
-            {asistanDogru}/{asistanToplam} doğru
-          </b>
-          <i style={{ ['--p' as string]: `${(asistanDogru / Math.max(1, asistanToplam)) * 100}%` }} />
-        </div>
-        <div className="gcu-ilerleme-oge">
-          <span>Soru bankası</span>
-          <b className="gcu-mono">
-            {istatistik.dogruSayisi}/{istatistik.toplamSoru} doğru
-          </b>
-          <i style={{ ['--p' as string]: `${(istatistik.dogruSayisi / Math.max(1, istatistik.toplamSoru)) * 100}%` }} />
-        </div>
-        {(istatistik.cozulen > 0 || istatistik.tamamAdim > 0) && (
-          <button type="button" className="gcu-metin-btn" onClick={cevaplariSifirla}>
-            <RotateCcw />
-            Sıfırla
-          </button>
-        )}
-      </div>
 
       {/* SEKMELER */}
       <nav className="gcu-sekme" aria-label="Bölümler">

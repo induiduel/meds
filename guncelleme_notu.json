@@ -1,14 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 58,
-  "baslik": "Güncelleme günlüğünde geliştirme notları düzenlendi",
+  "onem": 59,
+  "baslik": "Genetik Check Up sayfası yenilendi",
   "maddeler": [
-    "Güncelleme günlüğünde geliştirme notları da doğru türde gösteriliyor: Eklenen, Değişen, Düzeltilen ve Kaldırılan."
+    "Tıbbi Biyoloji ve Genetik sayfası daha sade ve kompakt: ilerleme başlık satırında, sekmeler kayarken üstte kalıyor.",
+    "Sesli derste 11 aşama solda bölümlere göre listeleniyor; anlatım, sınav kuralı ve sorular tek kartta sırayla geliyor.",
+    "Her aşamanın kendi karşılaştırma tablosu artık doğru gösteriliyor."
   ],
   "eklenen": [],
   "degisen": [
-    "Güncelleme günlüğünde geliştirme notları da doğru türde gösteriliyor: Eklenen, Değişen, Düzeltilen ve Kaldırılan."
+    "Tıbbi Biyoloji ve Genetik sayfası daha sade ve kompakt: ilerleme başlık satırında, sekmeler kayarken üstte kalıyor.",
+    "Sesli derste 11 aşama solda bölümlere göre listeleniyor; anlatım, sınav kuralı ve sorular tek kartta sırayla geliyor."
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Her aşamanın kendi karşılaştırma tablosu artık doğru gösteriliyor."
+  ],
   "silinen": []
 }
