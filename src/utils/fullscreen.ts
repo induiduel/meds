@@ -232,7 +232,12 @@ export function useAppFullscreen(): [boolean, (el?: HTMLElement | null) => void,
     document.addEventListener('fullscreenchange', onNativeChange);
     document.addEventListener('webkitfullscreenchange', onNativeChange);
     window.addEventListener(FS_EVENT, sync);
+    // Bazı tam ekran oynatıcılar (ders, çözücü, asistan) sınıfı doğrudan ekler ve olay yollamaz;
+    // html sınıfı izlenir ki kabuk (gezinme adası, tam ekran düğmesi) her durumda eşlensin.
+    const mo = new MutationObserver(sync);
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
     return () => {
+      mo.disconnect();
       document.removeEventListener('fullscreenchange', onNativeChange);
       document.removeEventListener('webkitfullscreenchange', onNativeChange);
       window.removeEventListener(FS_EVENT, sync);

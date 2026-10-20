@@ -1,14 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 70,
-  "baslik": "Sesli ders tablette daha okunaklı",
+  "onem": 71,
+  "baslik": "Sesli ders ve etkileşimli derste tam ekran gezinme",
   "maddeler": [
-    "Sesli ders: dikey tablette görünüm sekmeleri ikinci sıraya indi; ders adı artık kesilmeden okunuyor."
+    "Sesli ders ve etkileşimli derslerin tam ekranında da gezinme çubuğu çıkıyor; tam ekrandan çıkmadan başka sayfaya geçip geri dönebilirsin.",
+    "Tam ekrandayken bir etkileşimli derse dönünce ders doğrudan tam ekran kipinde açılıyor."
   ],
-  "eklenen": [
-    "TBG Sınav Kampı Hızlı modunda Preimplantasyon genetik tanı bölümü de gelir: polar cisim biyopsisi adımı ve çıkmış sorusu (16 adım)."
-  ],
+  "eklenen": [],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Sesli ders ve etkileşimli derslerin tam ekranında da gezinme çubuğu çıkıyor; tam ekrandan çıkmadan başka sayfaya geçip geri dönebilirsin.",
+    "Tam ekrandayken bir etkileşimli derse dönünce ders doğrudan tam ekran kipinde açılıyor."
+  ],
   "silinen": []
 }

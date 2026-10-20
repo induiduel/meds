@@ -58,7 +58,7 @@ import { useDeckPdf } from '../../../services/deckPdfService';
 import { QuestionFocus, focusMarks } from '../../../services/questionFocus';
 import { detectIosDevice, openPwaInstallGuide } from '../../../services/pwaService';
 import { shouldAvoidNativeFullscreen } from '../../../utils/device';
-import { releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../../utils/fullscreen';
+import { isAppFullscreen, releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../../utils/fullscreen';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
 import { toast } from '../../ui/Toast';
 import { deckName } from '../../../data/deckStore';
@@ -757,7 +757,8 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
 
   /* --- tam ekran (destek yoksa odak modu) --- */
   const [isFs, setIsFs] = useState(false);
-  const [immersive, setImmersive] = useState(false);
+  // Uygulama tam ekrandayken açılan ders (tam ekranda sayfa geçişi, Geri) doğrudan tam ekran kipinde başlar.
+  const [immersive, setImmersive] = useState(() => isAppFullscreen());
   const hadNativeFsRef = useRef(false);
   // Tam ekran/immersive açıkken belge kaymasın: iOS'ta adres çubuğu geri gelip katmanı kaydırmasın.
   useEffect(() => {
