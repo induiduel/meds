@@ -27,7 +27,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import { execFile } from 'child_process';
-import { isStrongAdmin } from './peopleInsights';
+import { isLoopback, isStrongAdmin } from './peopleInsights';
 import { requestUser } from './firebaseIdentity';
 
 type Action = 'restart' | 'stop' | 'start';
@@ -138,13 +138,32 @@ export function registerServiceControlRoutes(app: express.Express, deps: { rootD
   const statusFile = path.join(ctlDir, 'durum.json');
   let lastAction = 0;
 
-  const guard: express.RequestHandler = async (req, res, next) => {
+  // Yerel panel "Canlı" hedefindeyken (x-panel-target: oracle) istek Oracle'a gizli anahtarla iletilir (pgAdminRoutes ile aynı yol)
+  const proxyToOracle = async (req: express.Request, res: express.Response) => {
+    const secret = String(process.env.MEDS_PANEL_SECRET || '').trim();
+    if (!secret) return res.status(503).json({ error: "MEDS_PANEL_SECRET tanımlı değil; canlı servislere yerelden ulaşılamıyor." });
+    const base = String(process.env.MEDS_ORACLE_API_URL || 'https://api.nofrostlife.com.tr').replace(/\/$/, '');
     try {
-      if (await strongAdmin(req, deps.adminEmail)) return next();
+      const r = await fetch(`${base}${req.originalUrl}`, {
+        method: req.method,
+        headers: { 'content-type': 'application/json', 'x-panel-secret': secret, 'x-admin-email': deps.adminEmail },
+        body: req.method === 'GET' ? undefined : JSON.stringify(req.body || {}),
+      });
+      res.status(r.status).type(r.headers.get('content-type') || 'application/json').send(Buffer.from(await r.arrayBuffer()));
+    } catch (e: any) {
+      res.status(502).json({ error: `Oracle'a ulaşılamadı: ${e?.message || e}` });
+    }
+  };
+  const guard: express.RequestHandler = async (req, res, next) => {
+    let ok = false;
+    try {
+      ok = await strongAdmin(req, deps.adminEmail);
     } catch {
       /* düşer */
     }
-    res.status(403).json({ error: 'Bu işlem yalnız yönetici oturumuyla yapılabilir.' });
+    if (!ok) return void res.status(403).json({ error: 'Bu işlem yalnız yönetici oturumuyla yapılabilir.' });
+    if (!oracle && req.headers['x-panel-target'] === 'oracle' && isLoopback(req)) return void proxyToOracle(req, res);
+    next();
   };
 
   const readOracleStatus = (): { at?: string; services?: Record<string, any> } => {

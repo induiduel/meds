@@ -12,7 +12,8 @@
 # Kullanım:  servis_isci.sh isle   → bekleyen istekleri uygula + durum dök (path birimi çağırır)
 #            servis_isci.sh durum  → yalnız durum dök (zamanlayıcı dakikada bir çağırır; zararsız)
 #
-# Kurulum (Oracle):
+# Kurulum (Oracle) — root çalıştığı için betik ubuntu'nun yazabildiği depo yolundan DEĞİL, root sahipli kopyadan çalışır:
+#   sudo install -o root -g root -m 755 deploy/oracle/servis_isci.sh /usr/local/sbin/meds-servis-isci   (her güncellemede yinele)
 #   sudo cp deploy/oracle/systemd/meds-servis-isci.{path,service} deploy/oracle/systemd/meds-servis-durum.{service,timer} /etc/systemd/system/
 #   sudo systemctl daemon-reload
 #   sudo systemctl enable --now meds-servis-isci.path meds-servis-durum.timer

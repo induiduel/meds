@@ -8,7 +8,7 @@ Description=MeDSor panel servis işçisi (durum)
 After=docker.service
 [Service]
 Type=oneshot
-ExecStart=/home/ubuntu/medsor/meds/deploy/oracle/servis_isci.sh durum
+ExecStart=/usr/local/sbin/meds-servis-isci durum
 Environment=CUDA_VISIBLE_DEVICES= TZ=Europe/Istanbul
 Nice=10
 MemoryMax=256M
