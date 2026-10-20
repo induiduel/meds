@@ -57,6 +57,8 @@ import { backupUserDataToDatabase } from './services/userDataSyncService';
 import { syncNotes } from './services/notesSync';
 import { buildDeepLinkUrl, executeDeepLinkFocus, initDeepLinkAutoScroll, openDeepLink } from './services/universalRedirectService';
 
+import CevrimdisiYok from './components/cevrimdisi/CevrimdisiYok';
+
 function wrapLazy<T extends { default: React.ComponentType<any> }>(
   promise: Promise<T>
 ): Promise<T> {
@@ -77,37 +79,19 @@ function wrapLazy<T extends { default: React.ComponentType<any> }>(
         }
       }
     }
+    if (!isOnline) {
+      // İnternetsiz ve parça cihazda yok: bilgi ekranı (bağlantı gelince kendiliğinden yenilenir)
+      return { default: (() => <CevrimdisiYok />) as unknown as T['default'] } as T;
+    }
     return {
       default: (() => (
         <div className="p-8 text-center text-ink-3 max-w-md mx-auto my-12 bg-white rounded-2xl border border-line shadow-sm">
           <div className="text-3xl mb-3">📶</div>
-          <p className="font-semibold text-ink text-base">
-            {isOnline ? 'Bileşen yüklenirken bir sorun oluştu.' : 'Bu bölüm henüz cihazınıza indirilmemiş.'}
-          </p>
-          <p className="text-sm mt-1.5 text-ink-2">
-            {isOnline
-              ? 'Lütfen sayfayı yenileyiniz veya bağlantınızı kontrol ediniz.'
-              : 'İnternet bağlantısı olduğunda bu sayfayı açarak veya Ayarlar\'dan Çevrimdışı Veritabanını indirerek tam erişebilirsiniz.'}
-          </p>
+          <p className="font-semibold text-ink text-base">Bileşen yüklenirken bir sorun oluştu.</p>
+          <p className="text-sm mt-1.5 text-ink-2">Lütfen sayfayı yenileyiniz veya bağlantınızı kontrol ediniz.</p>
           <div className="mt-5 flex items-center justify-center gap-2.5">
-            <button
-              type="button"
-              onClick={() => {
-                if (window.history.length > 1) {
-                  window.history.back();
-                } else {
-                  window.location.href = '/';
-                }
-              }}
-              className="px-4 py-2 bg-field text-ink rounded-xl text-sm font-semibold hover:bg-line cursor-pointer transition-colors"
-            >
-              Geri Dön
-            </button>
-            <button
-              type="button"
-              onClick={() => window.location.reload()}
-              className="px-4 py-2 bg-accent text-white rounded-xl text-sm font-semibold hover:bg-accent-hover cursor-pointer transition-colors"
-            >
+            <button type="button" onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-accent text-white rounded-xl text-sm font-semibold hover:bg-accent-hover cursor-pointer transition-colors">
               Yeniden Dene
             </button>
           </div>

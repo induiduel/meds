@@ -5,11 +5,12 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
   AlertTriangle, BookOpen, Check, ChevronDown, CloudDownload, CloudOff, Database, Download, Headphones, HardDrive, Loader2,
-  MessageCircleQuestion, Pause, Play, RefreshCw, Search, Smartphone, Star, Trash2, Wifi, X,
+  MessageCircleQuestion, Pause, Play, RefreshCw, Search, Smartphone, Star, Trash2, Wifi, X, FileText, VolumeX, Sparkles,
 } from 'lucide-react';
 import {
   agTuru, ayarYaz, cevrimdisiBaslat, cevrimdisiModuAc, cevrimdisiModuKapat, duraklat, guncellemeler, katalogYenile, kuyrugaEkle,
-  kuyruktanCikar, paketDurumu, paketSil, useCevrimdisi, useDepolama, type Durum, type Modul, type Paket,
+  kuyruktanCikar, dosyaTuru, modulDokumu, paketDurumu, paketSil, secimAl, secimDegistir, secimliBayt, useCevrimdisi, useDepolama, yerAc,
+  type Durum, type Modul, type Paket, type Secim,
 } from '../../services/cevrimdisi/paketMotoru';
 import { useNetState } from '../../services/net';
 import EsitlemeKarti from './EsitlemeKarti';
@@ -42,7 +43,27 @@ const sureYaz = (sn: number) => {
 const katla = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
 
 /* ---------------------------------------------------------------- satır ---------------------------------------------------------------- */
+/** Ses / PDF parçası aç-kapa: indirilmişse kaldırmak anında yer açar, eklemek eksik dosyaları indirir */
+function EkCip({ p, tur, secim }: { p: Paket; tur: 'ses' | 'pdf'; secim: Secim }) {
+  const e = p.ek?.[tur];
+  if (!e) return null;
+  const acik = secim[tur];
+  const Ik = tur === 'ses' ? Headphones : FileText;
+  const ad = tur === 'ses' ? 'Ses' : 'PDF';
+  return (
+    <button type="button" className={`cv-ek${acik ? ' is-on' : ''}`} aria-pressed={acik}
+      title={acik ? `${ad} dahil (${boyutYaz(e.b)}). Kaldırmak için dokun.` : `${ad} dahil değil. Eklemek için dokun (+${boyutYaz(e.b)}).`}
+      aria-label={`${p.baslik}: ${ad.toLocaleLowerCase('tr-TR')} ${acik ? 'dahil, kaldır' : 'dahil değil, ekle'} (${boyutYaz(e.b)})`}
+      onClick={() => void secimDegistir([p.id], { [tur]: !acik })}>
+      {acik ? <Ik aria-hidden="true" /> : tur === 'ses' ? <VolumeX aria-hidden="true" /> : <FileText aria-hidden="true" />}
+      <span>{acik ? ad : tur === 'ses' ? 'Sessiz' : 'PDF yok'}</span>
+    </button>
+  );
+}
+
 function PaketSatiri({ p, durum, hata, oran }: { p: Paket; durum: Durum; hata?: string; oran?: number }) {
+  const S = useCevrimdisi();
+  const secim = secimAl(p.id, S);
   const [onay, setOnay] = useState(false);
   useEffect(() => {
     if (!onay) return;
@@ -57,12 +78,18 @@ function PaketSatiri({ p, durum, hata, oran }: { p: Paket; durum: Durum; hata?: 
       <span className="cv-satir-metin">
         <b>{p.baslik}</b>
         <small>
-          {p.alt ? `${p.alt} · ` : ''}{boyutYaz(p.bayt)}
+          {p.alt ? `${p.alt} · ` : ''}{boyutYaz(durum === 'tamam' || durum === 'guncelleme' ? (S.kayitlar[p.id]?.bayt || secimliBayt(p, secim)) : secimliBayt(p, secim))}
           {durum === 'guncelleme' && <em className="cv-etiket is-warn">Güncelleme var</em>}
           {durum === 'kuyrukta' && <em className="cv-etiket">Sırada</em>}
           {durum === 'iniyor' && <em className="cv-etiket is-acc">%{Math.round((oran || 0) * 100)}</em>}
         </small>
         {durum === 'hata' && hata && <small className="cv-hata">{hata}</small>}
+        {p.ek && (
+          <span className="cv-ekler">
+            <EkCip p={p} tur="ses" secim={secim} />
+            <EkCip p={p} tur="pdf" secim={secim} />
+          </span>
+        )}
         {durum === 'iniyor' && <span className="cv-cubuk"><i style={{ width: `${Math.round((oran || 0) * 100)}%` }} /></span>}
       </span>
       <span className="cv-satir-eylem">
@@ -101,6 +128,8 @@ function HizliKurulum({ katalog, kapat }: { katalog: Paket[]; kapat?: () => void
   }, [katalog]);
   const [grupSec, setGrupSec] = useState<string[]>([]);
   const [modulSec, setModulSec] = useState<Modul[]>(['sesli', 'cozucu', 'onem', 'db']);
+  const ayar = useCevrimdisi().ayar;
+  const [secim, setSecim] = useState<Secim>({ ses: ayar.ses, pdf: ayar.pdf });
   useEffect(() => { if (!grupSec.length && gruplar.length) setGrupSec(gruplar.slice(0, 1)); }, [gruplar]); // eslint-disable-line react-hooks/exhaustive-deps
   const MODS: { id: Modul; ad: string }[] = [
     { id: 'sesli', ad: 'Sesli dersler' }, { id: 'cozucu', ad: 'Soru çözücü' }, { id: 'onem', ad: 'En önemliler + sesli asistan' },
@@ -108,7 +137,9 @@ function HizliKurulum({ katalog, kapat }: { katalog: Paket[]; kapat?: () => void
     { id: 'veri', ad: 'Sözlük, özetler, notlar' },
   ];
   const secilen = katalog.filter((p) => modulSec.includes(p.modul) && (p.modul === 'db' || p.modul === 'veri' || grupSec.includes(p.grup)));
-  const bayt = secilen.reduce((a, p) => a + (paketDurumu(p.id) === 'tamam' ? 0 : p.bayt), 0);
+  const bayt = secilen.reduce((a, p) => a + (paketDurumu(p.id) === 'tamam' ? 0 : secimliBayt(p, secim)), 0);
+  const sesBayt = secilen.reduce((a, p) => a + (paketDurumu(p.id) === 'tamam' ? 0 : p.ek?.ses?.b || 0), 0);
+  const pdfBayt = secilen.reduce((a, p) => a + (paketDurumu(p.id) === 'tamam' ? 0 : p.ek?.pdf?.b || 0), 0);
   const ac = (arr: string[], x: string) => (arr.includes(x) ? arr.filter((y) => y !== x) : [...arr, x]);
   return (
     <section className="cv-kart cv-kurulum" aria-labelledby="cv-kurulum-b">
@@ -134,10 +165,22 @@ function HizliKurulum({ katalog, kapat }: { katalog: Paket[]; kapat?: () => void
           ))}
         </div>
       </div>
+      <div className="cv-alan">
+        <span className="cv-alan-ad">Ek dosyalar</span>
+        <div className="cv-cipler">
+          <button type="button" className={`cv-cip${secim.ses ? ' is-on' : ''}`} aria-pressed={secim.ses} onClick={() => setSecim({ ...secim, ses: !secim.ses })}>
+            {secim.ses ? 'Sesli' : 'Sessiz'}{sesBayt ? ` · ${boyutYaz(sesBayt)}` : ''}
+          </button>
+          <button type="button" className={`cv-cip${secim.pdf ? ' is-on' : ''}`} aria-pressed={secim.pdf} onClick={() => setSecim({ ...secim, pdf: !secim.pdf })}>
+            {secim.pdf ? 'Ders PDF\'leri dahil' : 'PDF yok'}{pdfBayt ? ` · ${boyutYaz(pdfBayt)}` : ''}
+          </button>
+        </div>
+      </div>
+      <p className="cv-not">Sessiz indirilen dersler metin, soru ve açıklamalarla tam çalışır; sesi sonra tek dokunuşla ekleyebilirsin.</p>
       <div className="cv-kurulum-alt">
         <span><b>{secilen.length}</b> paket · yaklaşık <b>{boyutYaz(bayt)}</b> indirilecek</span>
         <button type="button" className="cv-btn is-birincil is-buyuk" disabled={!secilen.length}
-          onClick={() => { cevrimdisiModuAc(secilen.filter((p) => paketDurumu(p.id) !== 'tamam').map((p) => p.id)); kapat?.(); }}>
+          onClick={() => { cevrimdisiModuAc(secilen.filter((p) => paketDurumu(p.id) !== 'tamam').map((p) => p.id), secim); kapat?.(); }}>
           <CloudDownload aria-hidden="true" /> <span>İndirmeyi başlat</span>
         </button>
       </div>
@@ -260,6 +303,20 @@ export default function CevrimdisiView() {
             <input type="checkbox" checked={S.ayar.otoGuncelle} onChange={(e) => ayarYaz({ otoGuncelle: e.target.checked })} />
             <span>Güncellemeleri kendiliğinden indir</span>
           </label>
+          <label className="cv-onay">
+            <input type="checkbox" checked={S.ayar.ses} onChange={(e) => ayarYaz({ ses: e.target.checked })} />
+            <span>Yeni derslerde sesleri de indir</span>
+          </label>
+          <label className="cv-onay">
+            <input type="checkbox" checked={S.ayar.pdf} onChange={(e) => ayarYaz({ pdf: e.target.checked })} />
+            <span>Yeni derslerde ders PDF'lerini de indir</span>
+          </label>
+          <label className="cv-onay cv-secim">
+            <span>Cihazda boş bırak</span>
+            <select value={S.ayar.pay} onChange={(e) => ayarYaz({ pay: Number(e.target.value) })}>
+              {[100, 300, 1024, 2048].map((m) => <option key={m} value={m * 1024 * 1024}>{m >= 1024 ? `${m / 1024} GB` : `${m} MB`}</option>)}
+            </select>
+          </label>
         </div>
       </section>
 
@@ -366,16 +423,26 @@ export default function CevrimdisiView() {
                 <button type="button" className="cv-grup-ac" aria-expanded={acik} onClick={() => setKapali({ ...kapali, [anahtar]: acik })}>
                   <ChevronDown aria-hidden="true" className={acik ? '' : 'is-kapali'} />
                   <b>{g}</b>
-                  <small>{inen.length}/{ps.length} cihazda · {boyutYaz(inen.reduce((x, p) => x + p.bayt, 0))} / {boyutYaz(ps.reduce((x, p) => x + p.bayt, 0))}</small>
+                  <small>{inen.length}/{ps.length} cihazda · {boyutYaz(inen.reduce((x, p) => x + (S.kayitlar[p.id]?.bayt || p.bayt), 0))} / {boyutYaz(ps.reduce((x, p) => x + secimliBayt(p, secimAl(p.id, S)), 0))}</small>
                 </button>
                 <span className="cv-grup-eylem">
                   {gun.length > 0 && <button type="button" className="cv-btn" onClick={() => kuyrugaEkle(gun.map((p) => p.id), true)}><RefreshCw aria-hidden="true" /> <span>Güncelle</span></button>}
                   {eksik.length > 0 && (
                     <button type="button" className="cv-btn is-birincil" onClick={() => kuyrugaEkle(eksik.map((p) => p.id))}>
                       <Download aria-hidden="true" /> <span>{eksik.length === ps.length ? 'Hepsini indir' : `Kalan ${eksik.length}`}</span>
-                      <em>{boyutYaz(eksik.reduce((x, p) => x + p.bayt, 0))}</em>
+                      <em>{boyutYaz(eksik.reduce((x, p) => x + secimliBayt(p, secimAl(p.id, S)), 0))}</em>
                     </button>
                   )}
+                  {(() => {
+                    const sesli = inen.filter((p) => p.ek?.ses && secimAl(p.id, S).ses);
+                    const sesB = sesli.reduce((x, p) => x + (p.ek?.ses?.b || 0), 0);
+                    return sesli.length > 1 ? (
+                      <button type="button" className="cv-btn" onClick={() => void secimDegistir(sesli.map((p) => p.id), { ses: false })}
+                        title="Bu gruptaki indirilmiş derslerin seslerini sil; dersler sessiz çalışır">
+                        <VolumeX aria-hidden="true" /> <span>Sesleri kaldır</span><em>{boyutYaz(sesB)}</em>
+                      </button>
+                    ) : null;
+                  })()}
                   {inen.length > 1 && <GrupSil ids={inen.filter((p) => !p.zorunlu).map((p) => p.id)} />}
                 </span>
               </div>
@@ -390,6 +457,8 @@ export default function CevrimdisiView() {
           );
         })
       )}
+
+      {cihazSay > 0 && <AlanKarti />}
 
       <EsitlemeKarti />
 
@@ -418,5 +487,49 @@ function GrupSil({ ids, etiket = 'Sil' }: { ids: string[]; etiket?: string }) {
     <button type="button" className={`cv-btn is-sil${onay ? ' is-onay' : ''}`} onClick={() => (onay ? (setOnay(false), void paketSil(ids)) : setOnay(true))}>
       <Trash2 aria-hidden="true" /> <span>{onay ? `${ids.length} paket silinsin mi?` : etiket}</span>
     </button>
+  );
+}
+
+const MODUL_AD: Record<Modul, string> = {
+  uygulama: 'Uygulama dosyaları', sesli: 'Sesli dersler', cozucu: 'Soru çözücü', onem: 'En önemliler', alt: 'Alternatif çözücü',
+  ogren: 'Etkileşimli dersler', veri: 'Başvuru verileri', db: 'Çıkmış sorular ve havuz',
+};
+
+/** Yer kullanımı: modül başına döküm, sesleri toplu kaldırma ve artık dosya temizliği */
+function AlanKarti() {
+  const S = useCevrimdisi();
+  const dokum = useMemo(() => modulDokumu(S), [S]);
+  const [sonuc, setSonuc] = useState<string | null>(null);
+  const [calisiyor, setCalisiyor] = useState(false);
+  const toplam = dokum.reduce((a, x) => a + x.bayt, 0) || 1;
+  const sesliIds = Object.values(S.kayitlar).filter((k) => !k.yarim && k.dosyalar.some((d) => dosyaTuru(d.u) === 'ses')).map((k) => k.id)
+    .filter((id) => S.katalog.find((p) => p.id === id)?.ek?.ses);
+  const sesToplam = dokum.reduce((a, x) => a + (x.modul === 'sesli' ? 0 : x.ses), 0);
+  return (
+    <section className="cv-kart cv-alan-kart" aria-labelledby="cv-alan-b">
+      <div className="cv-kart-bas"><h2 id="cv-alan-b">Cihazdaki yer</h2></div>
+      <ul className="cv-dokum">
+        {dokum.map((x) => (
+          <li key={x.modul}>
+            <span>{MODUL_AD[x.modul]}<small> · {x.n} paket{x.ses && x.modul !== 'sesli' ? ` · ses ${boyutYaz(x.ses)}` : ''}</small></span>
+            <b>{boyutYaz(x.bayt)}</b>
+            <span className="cv-cubuk"><i style={{ width: `${Math.max(2, (x.bayt / toplam) * 100)}%` }} /></span>
+          </li>
+        ))}
+      </ul>
+      <div className="cv-alan-eylem">
+        {sesliIds.length > 0 && sesToplam > 0 && (
+          <button type="button" className="cv-btn" onClick={() => void secimDegistir(sesliIds, { ses: false })}>
+            <VolumeX aria-hidden="true" /> <span>Tüm sesleri kaldır</span><em>{boyutYaz(sesToplam)}</em>
+          </button>
+        )}
+        <button type="button" className="cv-btn" disabled={calisiyor}
+          onClick={async () => { setCalisiyor(true); const b = await yerAc().catch(() => 0); setCalisiyor(false); setSonuc(b ? `${boyutYaz(b)} artık dosya silindi.` : 'Silinecek artık dosya yok.'); }}>
+          {calisiyor ? <Loader2 className="cv-don" aria-hidden="true" /> : <Sparkles aria-hidden="true" />} <span>Artık dosyaları temizle</span>
+        </button>
+      </div>
+      {sonuc && <p className="cv-not" role="status">{sonuc}</p>}
+      <p className="cv-not">Sesleri kaldırılan dersler internetsiz de açılır; ses yerine metin ve açıklamalar gösterilir.</p>
+    </section>
   );
 }
