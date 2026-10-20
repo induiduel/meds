@@ -63,7 +63,8 @@ def main():
     hedef = KOK / "meds_temp/prova" / dt.datetime.now().strftime("%Y%m%d_%H%M")
     hedef.mkdir(parents=True, exist_ok=True)
     for p in list((MEDS / "src/data").glob(f"{BRANS}_*")) + list((MEDS / "data").glob(f"{BRANS}_*")):
-        shutil.move(str(p), hedef / f"{p.parent.name}__{p.name}")  # pakete/dağıtıma girmesin
+        on = "src_data" if p.parent == MEDS / "src/data" else "data"  # iki kökte aynı adlı klasörler var
+        shutil.move(str(p), hedef / f"{on}__{p.name}")  # pakete/dağıtıma girmesin
     (hedef / "rapor.json").write_text(json.dumps(rapor, ensure_ascii=False, indent=1))
     print("\nRAPOR", json.dumps(rapor, ensure_ascii=False))
     return 0 if ok else 1
