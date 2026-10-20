@@ -4,17 +4,20 @@ import { AdminPanelModal } from '../../AdminPanelModal';
 import { Drawer } from '../../manage/consoleUi';
 import { ApiService } from '../../../services/api';
 import { triggerBackupNow } from '../../../services/manageConsoleService';
-import { Card14, DataTable, FactList, PageActions, Pill, StatRow, Tabs14, Toolbar, type Col } from '../pageKit';
+import { adminCall } from '../../../services/peopleService';
+import { BulkBar, useSelection } from '../manageKit';
+import { Card14, DataTable, DetailLayout, DetailNav, FactList, PageActions, Pill, StatRow, Tabs14, Toolbar, type Col } from '../pageKit';
 
 /**
  * v14 "Veritabanı ve yedek" (canvas Yedekler.dc.html).
- * Yedek listesi API'si yok; bu yüzden tablo yerel veri kümelerini ve son eşitleme sonucunu gösterir.
+ * Yedekler: Oracle'daki gece pg_dump yedekleri (GET /api/admin/pg/backups, salt okunur; liste backup.sh'tan gelir).
+ * Eşitleme durumu: yerel veri kümeleri ve son eşitleme sonucu.
  * Eşitleme ve içe aktarma hiçbir zaman kendiliğinden çalışmaz; içe aktarma açık onay ister.
  * Eski sekmenin geri kalan araçları (çoklu veritabanı modu, anahtarlar, DeepSeek, slayt onarımı) "Gelişmiş araçlar"da.
  */
 
 type Props = React.ComponentProps<typeof AdminPanelModal>;
-type Tab = 'status' | 'io';
+type Tab = 'backups' | 'status' | 'io';
 type SetRow = { id: string; name: string; count: number | null; where: string };
 type SyncResult = { at: string; ok: boolean; message: string };
 type Pending = { name: string; questions: number; committees: number; data: any };
@@ -23,7 +26,7 @@ const CONFIRM_WORD = 'İÇE AKTAR';
 
 export const ManageDatabaseV14: React.FC<Props> = (props) => {
   const { adminEmail, committees, questions, onRefreshData } = props;
-  const [tab, setTab] = useState<Tab>('status');
+  const [tab, setTab] = useState<Tab>('backups');
   const [pgOnline, setPgOnline] = useState<boolean | null>(null);
   const [checking, setChecking] = useState(false);
   const [syncing, setSyncing] = useState(false);
@@ -173,9 +176,11 @@ export const ManageDatabaseV14: React.FC<Props> = (props) => {
           label="Veritabanı görünümü"
           value={tab}
           onChange={setTab}
-          options={[{ id: 'status', label: 'Eşitleme durumu' }, { id: 'io', label: 'İçe / dışa aktarma' }]}
+          options={[{ id: 'backups', label: 'Gece yedekleri' }, { id: 'status', label: 'Eşitleme durumu' }, { id: 'io', label: 'İçe / dışa aktarma' }]}
         />
       </Toolbar>
+
+      {tab === 'backups' && <YedekListesi />}
 
       {tab === 'status' && (
         <DataTable rows={rows} cols={cols} rowKey={(r) => r.id} onOpen={setDetail} activeKey={detail?.id} minWidth={520} />
@@ -273,3 +278,91 @@ export const ManageDatabaseV14: React.FC<Props> = (props) => {
 };
 
 export default ManageDatabaseV14;
+
+type Yedek = { ad: string; boyut: number; tarih: string; ogeler: number; tablolar: number; dogrulandi: boolean };
+type YedekYaniti = { available: boolean; note?: string; guncellendi?: string; klasor?: string; saklama_gun?: number; backups: Yedek[]; geri_yukleme?: string };
+
+const tarihYaz = (iso: string) => new Date(iso).toLocaleString('tr-TR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+const boyutYaz = (b: number) => (b > 1e9 ? `${(b / 1e9).toFixed(2)} GB` : `${Math.round(b / 1e6)} MB`);
+const kopyala = (t: string) => navigator.clipboard?.writeText(t).catch(() => {});
+
+/** Gece yedekleri: listeleme, içindekiler denetimi sonucu, geri yükleme komutu (geri yükleme sunucudan elle yapılır). */
+const YedekListesi: React.FC = () => {
+  const [veri, setVeri] = useState<YedekYaniti | null>(null);
+  const [hata, setHata] = useState('');
+  const [acik, setAcik] = useState<Yedek | null>(null);
+  const [bilgi, setBilgi] = useState('');
+  const sec = useSelection<string>();
+  const yukle = useCallback(async () => {
+    try { setVeri(await adminCall<YedekYaniti>('/api/admin/pg/backups')); setHata(''); }
+    catch (e: any) { setHata(e?.message || 'Yedek listesi alınamadı.'); }
+  }, []);
+  useEffect(() => { void yukle(); }, [yukle]);
+  const liste = veri?.backups || [];
+  const komut = (y: Yedek) => (veri?.geri_yukleme || 'docker exec -i meds-pg pg_restore -U meds -d meds --clean --if-exists < DOSYA').replace('DOSYA', `${veri?.klasor || '~/yedek/meds-pg'}/${y.ad}`);
+  const cols: Col<Yedek>[] = [
+    { key: 'ad', label: 'Yedek', main: true, render: (y) => y.ad },
+    { key: 'd', label: 'Doğrulama', render: (y) => <Pill tone={y.dogrulandi ? 'ok' : 'bad'}>{y.dogrulandi ? 'Doğrulandı' : 'Sorunlu'}</Pill> },
+    { key: 'b', label: 'Boyut', right: true, render: (y) => boyutYaz(y.boyut) },
+    { key: 't', label: 'Tablo verisi', right: true, render: (y) => y.tablolar.toLocaleString('tr-TR') },
+    { key: 'z', label: 'Tarih', muted: true, render: (y) => tarihYaz(y.tarih) },
+  ];
+  if (hata) return <p className="pk14-note" role="alert" style={{ color: 'var(--color-bad)' }}>{hata}</p>;
+  if (!veri) return <p className="pk14-note">Yükleniyor…</p>;
+  if (!veri.available) return <Card14 title="Gece yedekleri"><p className="pk14-note">{veri.note}</p></Card14>;
+  const secili = liste.filter((y) => sec.has(y.ad));
+  return (
+    <>
+      <p className="pk14-note">
+        {liste.length} yedek · her gece 03:30 alınır, son {veri.saklama_gun ?? 7} gün saklanır · liste {veri.guncellendi ? tarihYaz(veri.guncellendi) : '—'} tarihinde güncellendi.
+        Doğrulama, dosyanın içindekiler listesinin okunabildiğini ve tablo verisi içerdiğini gösterir.
+      </p>
+      {bilgi && <p className="pk14-note" role="status">{bilgi}</p>}
+      <BulkBar
+        count={sec.count}
+        noun="yedek"
+        onClear={sec.clear}
+        actions={[
+          { label: 'Geri yükleme komutlarını kopyala', kind: 'main', run: () => { void kopyala(secili.map(komut).join('\n')); setBilgi(`${secili.length} komut panoya kopyalandı.`); } },
+          { label: 'Listeyi JSON indir', run: () => {
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(new Blob([JSON.stringify(secili, null, 2)], { type: 'application/json' }));
+            a.download = 'yedekler.json';
+            a.click();
+            setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+          } },
+        ]}
+      />
+      <DataTable rows={liste} cols={cols} rowKey={(y) => y.ad} onOpen={setAcik} activeKey={acik?.ad} selection={sec} minWidth={620} />
+      <Drawer
+        open={!!acik}
+        onClose={() => setAcik(null)}
+        title={acik?.ad || ''}
+        head={acik ? <DetailNav list={liste} current={acik} same={(a, b) => a.ad === b.ad} onGo={setAcik} /> : undefined}
+        foot={acik ? <button type="button" className="m14-btn primary" onClick={() => { void kopyala(komut(acik)); setBilgi('Geri yükleme komutu panoya kopyalandı.'); }}>Geri yükleme komutunu kopyala</button> : undefined}
+      >
+        {acik && (
+          <DetailLayout
+            main={
+              <Card14 title="Geri yükleme">
+                <p className="pk14-note">
+                  Geri yükleme canlı veritabanının üzerine yazar ve panelden çalıştırılmaz. Oracle sunucusunda önce yeni bir yedek alın
+                  (<code>bash deploy/pg/backup.sh</code>), sonra aşağıdaki komutu çalıştırın.
+                </p>
+                <pre className="jv14-raw">{komut(acik)}</pre>
+              </Card14>
+            }
+            side={<FactList items={[
+              { k: 'Durum', v: <Pill tone={acik.dogrulandi ? 'ok' : 'bad'}>{acik.dogrulandi ? 'Doğrulandı' : 'Sorunlu'}</Pill> },
+              { k: 'Boyut', v: boyutYaz(acik.boyut) },
+              { k: 'Tarih', v: tarihYaz(acik.tarih) },
+              { k: 'İçindekiler', v: `${acik.ogeler.toLocaleString('tr-TR')} öge` },
+              { k: 'Tablo verisi', v: acik.tablolar.toLocaleString('tr-TR') },
+              { k: 'Klasör', v: veri.klasor },
+            ]} />}
+          />
+        )}
+      </Drawer>
+    </>
+  );
+};

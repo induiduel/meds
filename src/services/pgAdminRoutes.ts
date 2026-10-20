@@ -7,6 +7,8 @@
  * Tablo/sütun adları yalnız katalogdan gelen listeyle eşleşirse kullanılır; değerler her zaman parametredir.
  */
 import type express from 'express';
+import fs from 'fs';
+import path from 'path';
 import { pgDb } from './pgDb';
 import { isLoopback, isStrongAdmin } from './peopleInsights';
 
@@ -127,6 +129,25 @@ export function registerPgAdminRoutes(app: express.Express, deps: { adminEmail: 
     return true;
   };
   const fail = (res: express.Response, e: any) => res.status(e?.status || 500).json({ error: e?.message || String(e) });
+
+  // Gece yedekleri (Oracle: deploy/pg/backup.sh her çalışmada yedek_listesi.json yazar; konteyner yedek klasörünü
+  // göremediği için liste meds_temp üzerinden gelir). Salt okunur: yedek alma/silme/geri yükleme sunucudan yapılmaz.
+  app.get('/api/admin/pg/backups', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    const adaylar = [
+      process.env.MEDS_PG_BACKUP_INDEX,
+      '/home/ubuntu/medsor/meds_temp/yedek_listesi.json',
+      path.resolve(process.cwd(), '..', 'meds_temp', 'yedek_listesi.json'),
+    ].filter(Boolean) as string[];
+    const dosya = adaylar.find((f) => fs.existsSync(f));
+    if (!dosya) return res.json({ available: false, backups: [], note: 'Bu sunucuda yedek listesi yok (gece yedeği yalnız Oracle\'da alınır).' });
+    try {
+      const j = JSON.parse(fs.readFileSync(dosya, 'utf8'));
+      res.json({ available: true, ...j });
+    } catch (e) {
+      fail(res, e);
+    }
+  });
 
   app.get('/api/admin/pg/tables', async (req, res) => {
     if (!(await guard(req, res))) return;

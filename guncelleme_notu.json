@@ -1,27 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 102,
-  "baslik": "Yeni tasarım: Ada (v13) ve bölümlü ses çubuğu",
+  "onem": 103,
+  "baslik": "Yönetim paneli: gece yedekleri listesi",
   "maddeler": [
-    "İsteğe bağlı yeni tasarım Ada (v13): yüzen menü adaları, şeritsiz, kompakt; açılışta bir kez sorulur, Ayarlar › Tasarım'dan değiştirilir.",
-    "Sesli ders ve alternatif çözücüde YouTube tarzı bölüm çubuğu: üstüne gelince bölüm adı ve zaman, tıklayınca o bölüme atlar (Shift + ok ile bölüm atla).",
-    "Telefonda sayfalar daha kompakt: başlıklar, istatistik panelleri, ders notu satırları ve test kaynakları daha az yer kaplar.",
-    "Soru çözücü ve alternatif çözücüde geniş ve çok dar ekranlarda alt çubuğun taşması.",
-    "PDF stüdyosu ve çevrimdışı penceresinin dar telefonda ekrandan taşması."
+    "Veritabanı ve yedek sayfasında gece yedekleri listelenir; her yedeğin içeriği denetlenir.",
+    "Ayrıntı alanlarında düğme boyutu ve ekran yüksekliği düzeltildi."
   ],
   "eklenen": [
-    "İsteğe bağlı yeni tasarım Ada (v13): yüzen menü adaları, şeritsiz, kompakt; açılışta bir kez sorulur, Ayarlar › Tasarım'dan değiştirilir.",
-    "Sesli ders ve alternatif çözücüde YouTube tarzı bölüm çubuğu: üstüne gelince bölüm adı ve zaman, tıklayınca o bölüme atlar (Shift + ok ile bölüm atla)."
+    "Veritabanı ve yedek sayfasında gece yedekleri listelenir; her yedeğin içeriği denetlenir."
   ],
-  "degisen": [
-    "Telefonda sayfalar daha kompakt: başlıklar, istatistik panelleri, ders notu satırları ve test kaynakları daha az yer kaplar.",
-    "TBG Sınav Kampı sadeleşti: tek satır mod seçici ve tek başlat düğmesi."
-  ],
+  "degisen": [],
   "duzeltilen": [
-    "Soru çözücü ve alternatif çözücüde geniş ve çok dar ekranlarda alt çubuğun taşması.",
-    "PDF stüdyosu ve çevrimdışı penceresinin dar telefonda ekrandan taşması.",
-    "Koyu temada sınav spotu istatistik kartlarının okunmaması; TBG düğmelerinde yazının görünmemesi.",
-    "Genetik sayfasında yapışkan listenin alttaki kartların üstüne binmesi."
+    "Ayrıntı alanlarında düğme boyutu ve ekran yüksekliği düzeltildi."
   ],
   "silinen": []
 }

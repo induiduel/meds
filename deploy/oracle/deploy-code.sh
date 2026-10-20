@@ -152,7 +152,7 @@ else
 fi
 
 if [[ "$NEED_RESTART" == "1" || "$DO_IMAGE" == "1" ]]; then  # yüklenen kodun karması (bir sonraki dağıtım karşılaştırır)
-  $SSH "$ORACLE_USER@$ORACLE_HOST" "$KOD_KARMA_KOMUT > $ORACLE_DIR/.sunucu_kod_karma.tmp && mv $ORACLE_DIR/.sunucu_kod_karma.tmp $ORACLE_DIR/.sunucu_kod_karma" || true
+  $SSH "$ORACLE_USER@$ORACLE_HOST" "$KOD_KARMA_KOMUT > /tmp/.sunucu_kod_karma.tmp && cat /tmp/.sunucu_kod_karma.tmp > $ORACLE_DIR/.sunucu_kod_karma && rm -f /tmp/.sunucu_kod_karma.tmp" || true
 fi
 echo "==> [4/4] sağlık kontrolü (kapı üzerinden, en çok 120 sn)"
 $SSH "$ORACLE_USER@$ORACLE_HOST" 'for i in $(seq 1 60); do curl -sf -m 5 http://127.0.0.1:3000/api/health && exit 0; sleep 2; done; echo "sağlık kontrolü geçmedi"; docker logs meds-app --tail 40; exit 1' | head -c 2000
