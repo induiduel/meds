@@ -1384,7 +1384,7 @@ export function registerSesliAnlatimRoutes(
       const gecerli = hz.paragraflar.length === pars.length && hz.paragraflar.every((x: any) => x && Number.isInteger(x.dosya) && x.dosya >= 0 && x.dosya < n
         && Number.isInteger(x.sayfa) && x.sayfa >= 1 && (!Array.isArray(x.dosyalar) || x.dosyalar.every((d: unknown) => Number.isInteger(d) && (d as number) >= 0 && (d as number) < n)));
       if (gecerli) {
-        yaz(path.join(KOK, 'hizalama', `${k}.json`), { deckId: String(hz.deckId || req.body?.deckId || ''), dosyalar: hz.dosyalar, paragraflar: hz.paragraflar, kaynak: String(hz.kaynak || 'ders-ekle') });
+        yaz(path.join(KOK, 'hizalama', `${k}.json`), { deckId: String(hz.deckId || req.body?.deckId || ''), dosyalar: hz.dosyalar, paragraflar: hz.paragraflar, kaynak: String(hz.kaynak || 'ders-ekle'), ...(Array.isArray(hz.sayfaKaynak) ? { sayfaKaynak: hz.sayfaKaynak } : {}) });
         hizalama = 'yazıldı (çok dosyalı)';
       } else hizalama = `atlandı (hizalama ${hz.paragraflar.length} ≠ ${pars.length} paragraf ya da geçersiz)`;
     }

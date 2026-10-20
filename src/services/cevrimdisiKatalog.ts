@@ -195,6 +195,36 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
       bagimli: ['sesli:k1-70-tbg-sinav-kampi'] },
     Object.entries<any>(g07.klip || {}).map(([k, x]) => ses(`/api/patoloji-asistan/ses/g07/${k}.mp3`, path.join(DATA, 'genetik_asistan', 'ses', 'g07', `${k}.mp3`), x.v)));
   }
+  // Son Prova (/son-prova): part başına veri (dizin + branş soruları) + aşama/check-up sorularının EMA klipleri; sesli özetin
+  // kendisi (ses + kırpılmış PDF) bağımlı sesli ders paketiyle iner. Kurul başına genel check-up + deneme paketi (deneme sessiz).
+  for (const k of Object.keys(m.veri).filter((x) => /^src\/data\/son_prova\/k\d+\/index\.json$/.test(x)).sort()) {
+    const kurul = Number(k.match(/k(\d+)\/index/)![1]);
+    const ix = jsonOku(path.join(KOK, k));
+    if (!ix?.dersler) continue;
+    const klipler = (refs: string[]) => refs.flatMap((ref) => {
+      const [brans, kalan] = ref.split('/');
+      const no = kalan.split('#')[1];
+      const q = jsonOku(path.join(SRC_DATA, 'son_prova', `k${kurul}`, 'sorular', `${brans}.json`))?.[ref];
+      if (!q?.klip || !q.kl) return [];
+      return Object.entries<string>(q.klip).map(([t, v]) => {
+        const ad = t.startsWith('s') && t.length === 2 ? `s-${no}-${t[1]}` : `${t}-${no}`;
+        return ses(`/api/cozucu-ses/${brans}/ema/${q.kl}/${ad}.mp3`, path.join(DATA, `${brans}_cozucu`, 'ses', q.kl, `${ad}.mp3`), v);
+      });
+    });
+    const dVeri = (b?: string) => [...veri(`son_prova/k${kurul}/index.json`), ...(b ? veri(`son_prova/k${kurul}/sorular/${b}.json`) : [])];
+    let sira = 0;
+    for (const d of ix.dersler) {
+      for (const p of d.partlar) {
+        const refs = p.asamalar.flatMap((a: any) => [...a.sorular, ...a.checkup]);
+        ekle({ id: `sonprova:${p.key}`, modul: 'veri', grup: `Son Prova · Kurul ${kurul}`, baslik: `${d.ad}${d.partlar.length > 1 ? ` · Part ${p.no}` : ''}`,
+          alt: `${p.asamalar.length} aşama · ${refs.length} soru · sesli özet ${p.tahminiDk} dk`, sira: sira++, bagimli: [`sesli:${p.key}`] },
+        [...dVeri(d.brans), ...klipler(refs)]);
+      }
+    }
+    ekle({ id: `sonprova:k${kurul}:deneme`, modul: 'veri', grup: `Son Prova · Kurul ${kurul}`, baslik: 'Genel check-up ve denemeler',
+      alt: `${ix.denemeler.length} deneme · ${ix.dersler.length} dersin genel check-up'ı`, sira: 99 },
+    [...dVeri(), ...ix.dersler.flatMap((d: any) => [...veri(`son_prova/k${kurul}/sorular/${d.brans}.json`), ...klipler(d.genel)])]);
+  }
   // Olası sorular: yayımlanmış kurul setleri (data/olasi_sorular/k<N>.json) + özet listesi
   const olasi = [1, 2, 3, 4, 5, 6].filter((k) => boyut(path.join(DATA, 'olasi_sorular', `k${k}.json`)) > 0);
   if (olasi.length) {

@@ -1379,8 +1379,14 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     <div className="cd-bolme cd-pdf-bolme">
       <div className="cd-pdf-bar">
         <FileText aria-hidden />
-        <span className="cd-pdf-ad" title={dosya?.name}>{dosya?.name || 'Ders PDF\'i'}</span>
-        <span className="cd-pdf-sayfa">s. {gor.sayfa}{dosya?.pages ? ` / ${dosya.pages}` : ''}</span>
+        {pdf.sayfaKaynak?.[gor.sayfa - 1] ? (() => {
+          // Özet (kırpılmış) PDF: sayfanın asıl dersi ve slayt numarası (Son Prova)
+          const k = pdf.sayfaKaynak![gor.sayfa - 1];
+          return <span className="cd-pdf-ad" title={`${k.no}) ${k.ad} · slayt ${k.s} — özet PDF sayfa ${gor.sayfa}/${dosya?.pages || ''}`}>{k.no}) {k.ad} · <b>slayt {k.s}</b></span>;
+        })() : <>
+          <span className="cd-pdf-ad" title={dosya?.name}>{dosya?.name || 'Ders PDF\'i'}</span>
+          <span className="cd-pdf-sayfa">s. {gor.sayfa}{dosya?.pages ? ` / ${dosya.pages}` : ''}</span>
+        </>}
         {pdf.dosyalar.length > 1 && (
           <span className="cd-pdf-dosya">{(gor.dosya || 0) + 1}/{pdf.dosyalar.length}</span>
         )}

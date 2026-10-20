@@ -49,7 +49,11 @@ export interface CdParagraf { i: number; metin: string }
 export interface CdBolum { baslik: string; paragraflar: CdParagraf[] }
 export interface CdPdfDosya { path: string; name: string; fileId?: string; pages?: number }
 export interface CdPdfEsleme { dosya: number; sayfa: number; guven?: number; sayfalar?: number[]; dosyalar?: number[] }
-export interface CdPdf { deckId: string; dosyalar: CdPdfDosya[]; paragraflar: (CdPdfEsleme | null)[] }
+export interface CdPdf {
+  deckId: string; dosyalar: CdPdfDosya[]; paragraflar: (CdPdfEsleme | null)[];
+  /** Özet (kırpılmış) PDF'te sayfa (i+1) → asıl ders ve slayt (Son Prova) */
+  sayfaKaynak?: { kod: string; no: string; ad: string; s: number }[];
+}
 export interface CdDetay {
   key: string;
   no: string | number;

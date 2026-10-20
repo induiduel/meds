@@ -136,7 +136,7 @@ def uzun_kisaltma_ayarla(anahtar: str) -> None:
     global UZUN_KISALTMA, MODUL_OKUNUS
     import modul_okunus
     UZUN_KISALTMA = bool(re.match(r"k[2-6](p-k[2-6])?-", str(anahtar or "")))
-    MODUL_OKUNUS = str(anahtar or "") in modul_okunus.MODUL_ANAHTARLAR
+    MODUL_OKUNUS = modul_okunus.modul_mu(str(anahtar or ""))
 
 
 def _ks():

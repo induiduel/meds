@@ -30,6 +30,8 @@ ws.addEventListener('message', (m) => {
 const send = (method, params = {}) => new Promise((res, rej) => { const i = ++id; pend.set(i, { res, rej }); ws.send(JSON.stringify({ id: i, method, params })); });
 const ev = async (expr) => { const r = await send('Runtime.evaluate', { expression: expr, awaitPromise: true, returnByValue: true }); return r.result?.value; };
 await send('Page.enable'); await send('Runtime.enable');
+// Zorunlu giriş: AI_COOKIE=<meds_ai_test değeri> (POST /api/ai-test/oturum, x-panel-secret) ile test oturumu
+if (process.env.AI_COOKIE) { await send('Network.enable'); await send('Network.setCookie', { name: 'meds_ai_test', value: process.env.AI_COOKIE, url: BASE, httpOnly: true, sameSite: 'Strict' }); }
 
 const SEED = `(() => { const now = new Date().toISOString();
   const s = (k, v) => localStorage.setItem(k, v);

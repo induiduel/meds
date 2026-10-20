@@ -118,6 +118,13 @@ for k in metin hizalama vurgu; do
     "$MEDS_DIR/$SA/$k/" "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/$SA/$k/" | grep -c '^>f' || true)
   echo "  $k: $n dosya"
 done
+# Son Prova kırpılmış özet PDF'leri (git dışı; scripts/son_prova/pdf_kirp.mjs üretir, hizalama sayfa numaraları bunlara bağlı)
+if [[ -d "$MEDS_DIR/data/son_prova/pdf" ]]; then
+  $SSH "$ORACLE_USER@$ORACLE_HOST" "sudo mkdir -p $ORACLE_DIR/data/son_prova/pdf"
+  n=$(rsync -az --checksum --rsync-path='sudo rsync' --out-format='%i %n' -e "$SSH" \
+    "$MEDS_DIR/data/son_prova/pdf/" "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/data/son_prova/pdf/" | grep -c '^>f' || true)
+  echo "  son_prova/pdf: $n dosya"
+fi
 
 if grep -qE '^(package(-lock)?\.json|deploy/oracle/(Dockerfile\.oracle|docker-compose\.oracle\.yml))$' "$CHANGED"; then DO_IMAGE=1; fi
 # Sunucunun belleğe aldığı her şey: dist/, public/, ön yüz bileşenleri, belgeler dışındaki her değişiklik

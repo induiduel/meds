@@ -29,6 +29,7 @@ import type React from 'react';
 
 export type AppRoute =
   | 'quick_add'
+  | 'son_prova'
   | 'today'
   | 'learn'
   | 'glossary'
@@ -111,6 +112,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   en_onemliler: '/en-onemliler',
   patoloji_checkup: '/patoloji-check-up',
   genetik_checkup: '/genetik-check-up',
+  son_prova: '/son-prova',
   bitirdiklerim: '/bitirdiklerim',
   basarimlar: '/basarimlar',
   cevrimdisi: '/cevrimdisi',
@@ -158,6 +160,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   en_onemliler: 'En önemliler',
   patoloji_checkup: 'Patoloji Hızlı Check Up',
   genetik_checkup: 'TBG Sınav Kampı',
+  son_prova: 'Son Prova',
   bitirdiklerim: 'Bitirdiklerim',
   basarimlar: 'Başarımlar',
   cevrimdisi: 'Çevrimdışı',
@@ -261,6 +264,11 @@ const ALIASES: Record<string, AppRoute> = {
   checkup: 'patoloji_checkup',
   'patoloji-checkup': 'patoloji_checkup',
   genetik_checkup: 'genetik_checkup',
+  son_prova: 'son_prova',
+  'son-prova': 'son_prova',
+  sonprova: 'son_prova',
+  prova: 'son_prova',
+  'sinav-provasi': 'son_prova',
   'genetik-checkup': 'genetik_checkup',
   'genetik-check-up': 'genetik_checkup',
   genetik: 'genetik_checkup',

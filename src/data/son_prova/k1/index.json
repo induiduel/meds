@@ -1,0 +1,3136 @@
+{
+ "kurul": 1,
+ "ad": "Son Prova",
+ "sinav": {
+  "patoloji": {
+   "ad": "Tıbbi Patoloji",
+   "soru": 34
+  },
+  "enfeksiyon": {
+   "ad": "Enfeksiyon Hastalıkları",
+   "soru": 22
+  },
+  "genetik": {
+   "ad": "Tıbbi Genetik",
+   "soru": 12
+  },
+  "uroloji": {
+   "ad": "Üroloji",
+   "soru": 12
+  },
+  "halksagligi": {
+   "ad": "Halk Sağlığı",
+   "soru": 10
+  },
+  "kadindogum": {
+   "ad": "Kadın Hastalıkları ve Doğum",
+   "soru": 6
+  },
+  "farmakoloji": {
+   "ad": "Tıbbi Farmakoloji",
+   "soru": 4
+  }
+ },
+ "dersler": [
+  {
+   "brans": "patoloji",
+   "ad": "Tıbbi Patoloji",
+   "soru": 34,
+   "genel": [
+    "patoloji/01#36",
+    "patoloji/01#31",
+    "patoloji/02#38",
+    "patoloji/02#37",
+    "patoloji/03#43",
+    "patoloji/03#17",
+    "patoloji/04#24",
+    "patoloji/04#16",
+    "patoloji/05#18",
+    "patoloji/05#26",
+    "patoloji/06#24",
+    "patoloji/06#22",
+    "patoloji/07#51",
+    "patoloji/07#38",
+    "patoloji/08#48",
+    "patoloji/08#18",
+    "patoloji/09#20",
+    "patoloji/09#49",
+    "patoloji/10#16",
+    "patoloji/10#48",
+    "patoloji/11#45",
+    "patoloji/11#50",
+    "patoloji/12#53",
+    "patoloji/12#22",
+    "patoloji/13#25",
+    "patoloji/13#52",
+    "patoloji/14#45",
+    "patoloji/14#44",
+    "patoloji/14#56",
+    "patoloji/14#54",
+    "patoloji/15#34",
+    "patoloji/15#38",
+    "patoloji/16#39",
+    "patoloji/16#53",
+    "patoloji/17#39",
+    "patoloji/17#45",
+    "patoloji/18#24",
+    "patoloji/18#21",
+    "patoloji/19#41",
+    "patoloji/19#26",
+    "patoloji/20#41",
+    "patoloji/20#40",
+    "patoloji/21#39",
+    "patoloji/21#30",
+    "patoloji/22#30",
+    "patoloji/22#45",
+    "patoloji/23#22",
+    "patoloji/23#45",
+    "patoloji/24#24",
+    "patoloji/24#35",
+    "patoloji/25#14",
+    "patoloji/25#36",
+    "patoloji/26#17",
+    "patoloji/26#24",
+    "patoloji/26b#14",
+    "patoloji/26b#38",
+    "patoloji/28#23",
+    "patoloji/28#37",
+    "patoloji/39#16",
+    "patoloji/39#31",
+    "patoloji/30#18",
+    "patoloji/30#35",
+    "patoloji/30#40",
+    "patoloji/30#39",
+    "patoloji/31#35",
+    "patoloji/31#40",
+    "patoloji/32#37",
+    "patoloji/32#32",
+    "patoloji/33#42",
+    "patoloji/33#46",
+    "patoloji/34#40",
+    "patoloji/34#50",
+    "patoloji/35#43",
+    "patoloji/35#21"
+   ],
+   "partlar": [
+    {
+     "key": "k1-81-son-prova-patoloji-1",
+     "no": 1,
+     "baslik": "Hücre hasarı, adaptasyon ve enflamasyon",
+     "kelime": 6371,
+     "tahminiDk": 57,
+     "sayfa": 288,
+     "dersler": [
+      {
+       "kod": "p01",
+       "no": "1",
+       "ad": "Patolojiye Giriş"
+      },
+      {
+       "kod": "p02",
+       "no": "2",
+       "ad": "Hücre Hasarı ve Nekroz - I"
+      },
+      {
+       "kod": "p03",
+       "no": "3",
+       "ad": "Hücre Hasarı ve Nekroz - II: Nekroz Kalıpları, Apoptoz ve Hücre Hasarının Biyokimyası"
+      },
+      {
+       "kod": "p04",
+       "no": "4",
+       "ad": "Hücresel Adaptasyonlar"
+      },
+      {
+       "kod": "p05",
+       "no": "5",
+       "ad": "Hücre İçi Birikimler ve Kalsifikasyonlar"
+      },
+      {
+       "kod": "p06",
+       "no": "6",
+       "ad": "Hücresel Yaşlanma"
+      },
+      {
+       "kod": "p07",
+       "no": "7",
+       "ad": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar"
+      },
+      {
+       "kod": "p08",
+       "no": "8",
+       "ad": "Enflamasyonun Kimyasal Mediyatörleri"
+      },
+      {
+       "kod": "p09",
+       "no": "9",
+       "ad": "Kronik ve Granülomatöz Enflamasyon"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "Patolojiye giriş",
+       "ders": "p01",
+       "dersAd": "Patolojiye Giriş",
+       "dersNo": "1",
+       "p": [
+        0,
+        16
+       ],
+       "sorular": [
+        "patoloji/01#28",
+        "patoloji/01#6",
+        "patoloji/01#8",
+        "patoloji/01#21"
+       ],
+       "checkup": [
+        "patoloji/01#27",
+        "patoloji/01#29",
+        "patoloji/01#5"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Hücre hasarı ve nekroz",
+       "ders": "p02",
+       "dersAd": "Hücre Hasarı ve Nekroz - I",
+       "dersNo": "2",
+       "p": [
+        17,
+        29
+       ],
+       "sorular": [
+        "patoloji/02#25",
+        "patoloji/02#1",
+        "patoloji/02#5",
+        "patoloji/02#8"
+       ],
+       "checkup": [
+        "patoloji/02#23",
+        "patoloji/02#24",
+        "patoloji/02#26"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "Nekroz kalıpları, apoptoz ve serbest radikaller",
+       "ders": "p03",
+       "dersAd": "Hücre Hasarı ve Nekroz - II: Nekroz Kalıpları, Apoptoz ve Hücre Hasarının Biyokimyası",
+       "dersNo": "3",
+       "p": [
+        30,
+        39
+       ],
+       "sorular": [
+        "patoloji/03#1",
+        "patoloji/03#6",
+        "patoloji/03#7",
+        "patoloji/03#28",
+        "patoloji/03#3"
+       ],
+       "checkup": [
+        "patoloji/03#27",
+        "patoloji/03#26",
+        "patoloji/03#25"
+       ]
+      },
+      {
+       "no": 4,
+       "baslik": "Hücresel adaptasyonlar",
+       "ders": "p04",
+       "dersAd": "Hücresel Adaptasyonlar",
+       "dersNo": "4",
+       "p": [
+        40,
+        48
+       ],
+       "sorular": [
+        "patoloji/04#21",
+        "patoloji/04#3",
+        "patoloji/04#4",
+        "patoloji/04#9",
+        "patoloji/04#7"
+       ],
+       "checkup": [
+        "patoloji/04#10",
+        "patoloji/04#1",
+        "patoloji/04#25"
+       ]
+      },
+      {
+       "no": 5,
+       "baslik": "Hücre içi birikimler ve kalsifikasyonlar",
+       "ders": "p05",
+       "dersAd": "Hücre İçi Birikimler ve Kalsifikasyonlar",
+       "dersNo": "5",
+       "p": [
+        49,
+        59
+       ],
+       "sorular": [
+        "patoloji/05#24",
+        "patoloji/05#2",
+        "patoloji/05#4",
+        "patoloji/05#9"
+       ],
+       "checkup": [
+        "patoloji/05#23",
+        "patoloji/05#7",
+        "patoloji/05#6"
+       ]
+      },
+      {
+       "no": 6,
+       "baslik": "Hücresel yaşlanma",
+       "ders": "p06",
+       "dersAd": "Hücresel Yaşlanma",
+       "dersNo": "6",
+       "p": [
+        60,
+        68
+       ],
+       "sorular": [
+        "patoloji/06#21",
+        "patoloji/06#1",
+        "patoloji/06#25",
+        "patoloji/06#36"
+       ],
+       "checkup": [
+        "patoloji/06#3",
+        "patoloji/06#6",
+        "patoloji/06#8"
+       ]
+      },
+      {
+       "no": 7,
+       "baslik": "Akut enflamasyon",
+       "ders": "p07",
+       "dersAd": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+       "dersNo": "7",
+       "p": [
+        69,
+        80
+       ],
+       "sorular": [
+        "patoloji/07#27",
+        "patoloji/07#31",
+        "patoloji/07#4",
+        "patoloji/07#12",
+        "patoloji/07#9"
+       ],
+       "checkup": [
+        "patoloji/07#29",
+        "patoloji/07#28",
+        "patoloji/07#3"
+       ]
+      },
+      {
+       "no": 8,
+       "baslik": "Enflamasyonun kimyasal mediyatörleri",
+       "ders": "p08",
+       "dersAd": "Enflamasyonun Kimyasal Mediyatörleri",
+       "dersNo": "8",
+       "p": [
+        81,
+        91
+       ],
+       "sorular": [
+        "patoloji/08#31",
+        "patoloji/08#1",
+        "patoloji/08#3",
+        "patoloji/08#4",
+        "patoloji/08#12"
+       ],
+       "checkup": [
+        "patoloji/08#33",
+        "patoloji/08#32",
+        "patoloji/08#6"
+       ]
+      },
+      {
+       "no": 9,
+       "baslik": "Kronik ve granülomatöz enflamasyon",
+       "ders": "p09",
+       "dersAd": "Kronik ve Granülomatöz Enflamasyon",
+       "dersNo": "9",
+       "p": [
+        92,
+        102
+       ],
+       "sorular": [
+        "patoloji/09#31",
+        "patoloji/09#2",
+        "patoloji/09#10",
+        "patoloji/09#9",
+        "patoloji/09#4"
+       ],
+       "checkup": [
+        "patoloji/09#34",
+        "patoloji/09#32",
+        "patoloji/09#35"
+       ]
+      }
+     ]
+    },
+    {
+     "key": "k1-82-son-prova-patoloji-2",
+     "no": 2,
+     "baslik": "Onarım, hemodinami, immünopatoloji ve tümör biyolojisi",
+     "kelime": 7448,
+     "tahminiDk": 66,
+     "sayfa": 322,
+     "dersler": [
+      {
+       "kod": "p10",
+       "no": "10",
+       "ad": "Doku Onarımı ve Yara İyileşmesi"
+      },
+      {
+       "kod": "p11",
+       "no": "11",
+       "ad": "Ödem, Hiperemi, Konjesyon ve Kanama"
+      },
+      {
+       "kod": "p12",
+       "no": "12",
+       "ad": "Tromboz Patofizyolojisi"
+      },
+      {
+       "kod": "p13",
+       "no": "13",
+       "ad": "Emboli, Enfarktüs ve Şok"
+      },
+      {
+       "kod": "p14",
+       "no": "14",
+       "ad": "Aşırı Duyarlılık ve Otoimmünite: Hipersensitivite Tipleri, Tolerans, Otoimmün Hastalıklar, Transplantasyon, İmmün Yetmezlik ve Amiloidoz"
+      },
+      {
+       "kod": "p15",
+       "no": "15",
+       "ad": "Genetik, Pediatrik ve Çevresel Patoloji"
+      },
+      {
+       "kod": "p16",
+       "no": "16",
+       "ad": "Tümör Biyolojisi ve Terminolojisi"
+      },
+      {
+       "kod": "p17",
+       "no": "17",
+       "ad": "Karsinojenezin Moleküler Temeli"
+      },
+      {
+       "kod": "p18",
+       "no": "18",
+       "ad": "İleri Tümör Genetiği ve Metabolizması"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "Doku onarımı ve yara iyileşmesi",
+       "ders": "p10",
+       "dersAd": "Doku Onarımı ve Yara İyileşmesi",
+       "dersNo": "10",
+       "p": [
+        0,
+        8
+       ],
+       "sorular": [
+        "patoloji/10#30",
+        "patoloji/10#3",
+        "patoloji/10#37",
+        "patoloji/10#7",
+        "patoloji/10#10"
+       ],
+       "checkup": [
+        "patoloji/10#31",
+        "patoloji/10#29",
+        "patoloji/10#12"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Ödem, hiperemi, konjesyon ve kanama",
+       "ders": "p11",
+       "dersAd": "Ödem, Hiperemi, Konjesyon ve Kanama",
+       "dersNo": "11",
+       "p": [
+        9,
+        16
+       ],
+       "sorular": [
+        "patoloji/11#1",
+        "patoloji/11#3",
+        "patoloji/11#7",
+        "patoloji/11#10",
+        "patoloji/11#29"
+       ],
+       "checkup": [
+        "patoloji/11#31",
+        "patoloji/11#33",
+        "patoloji/11#30"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "Tromboz patofizyolojisi",
+       "ders": "p12",
+       "dersAd": "Tromboz Patofizyolojisi",
+       "dersNo": "12",
+       "p": [
+        17,
+        24
+       ],
+       "sorular": [
+        "patoloji/12#25",
+        "patoloji/12#2",
+        "patoloji/12#7",
+        "patoloji/12#10",
+        "patoloji/12#32"
+       ],
+       "checkup": [
+        "patoloji/12#31",
+        "patoloji/12#33",
+        "patoloji/12#35",
+        "patoloji/12#14"
+       ]
+      },
+      {
+       "no": 4,
+       "baslik": "Emboli, enfarktüs ve şok",
+       "ders": "p13",
+       "dersAd": "Emboli, Enfarktüs ve Şok",
+       "dersNo": "13",
+       "p": [
+        25,
+        33
+       ],
+       "sorular": [
+        "patoloji/13#1",
+        "patoloji/13#34",
+        "patoloji/13#5",
+        "patoloji/13#9",
+        "patoloji/13#15"
+       ],
+       "checkup": [
+        "patoloji/13#31",
+        "patoloji/13#32",
+        "patoloji/13#35"
+       ]
+      },
+      {
+       "no": 5,
+       "baslik": "Aşırı duyarlılık tipleri",
+       "ders": "p14",
+       "dersAd": "Aşırı Duyarlılık ve Otoimmünite: Hipersensitivite Tipleri, Tolerans, Otoimmün Hastalıklar, Transplantasyon, İmmün Yetmezlik ve Amiloidoz",
+       "dersNo": "14",
+       "p": [
+        34,
+        46
+       ],
+       "sorular": [
+        "patoloji/14#33",
+        "patoloji/14#1",
+        "patoloji/14#6",
+        "patoloji/14#38",
+        "patoloji/14#7"
+       ],
+       "checkup": [
+        "patoloji/14#5",
+        "patoloji/14#37",
+        "patoloji/14#27"
+       ]
+      },
+      {
+       "no": 6,
+       "baslik": "Otoimmünite, nakil, immün yetmezlik ve amiloidoz",
+       "ders": "p14",
+       "dersAd": "Aşırı Duyarlılık ve Otoimmünite: Hipersensitivite Tipleri, Tolerans, Otoimmün Hastalıklar, Transplantasyon, İmmün Yetmezlik ve Amiloidoz",
+       "dersNo": "14",
+       "p": [
+        47,
+        58
+       ],
+       "sorular": [
+        "patoloji/14#32",
+        "patoloji/14#9",
+        "patoloji/14#35",
+        "patoloji/14#13",
+        "patoloji/14#14"
+       ],
+       "checkup": [
+        "patoloji/14#31",
+        "patoloji/14#34",
+        "patoloji/14#10",
+        "patoloji/14#8"
+       ]
+      },
+      {
+       "no": 7,
+       "baslik": "Genetik, pediatrik ve çevresel patoloji",
+       "ders": "p15",
+       "dersAd": "Genetik, Pediatrik ve Çevresel Patoloji",
+       "dersNo": "15",
+       "p": [
+        59,
+        69
+       ],
+       "sorular": [
+        "patoloji/15#28",
+        "patoloji/15#3",
+        "patoloji/15#6",
+        "patoloji/15#8",
+        "patoloji/15#9"
+       ],
+       "checkup": [
+        "patoloji/15#27",
+        "patoloji/15#1",
+        "patoloji/15#11",
+        "patoloji/15#12"
+       ]
+      },
+      {
+       "no": 8,
+       "baslik": "Tümör biyolojisi ve terminolojisi",
+       "ders": "p16",
+       "dersAd": "Tümör Biyolojisi ve Terminolojisi",
+       "dersNo": "16",
+       "p": [
+        70,
+        80
+       ],
+       "sorular": [
+        "patoloji/16#29",
+        "patoloji/16#1",
+        "patoloji/16#4",
+        "patoloji/16#8",
+        "patoloji/16#3"
+       ],
+       "checkup": [
+        "patoloji/16#31",
+        "patoloji/16#30",
+        "patoloji/16#7",
+        "patoloji/16#10"
+       ]
+      },
+      {
+       "no": 9,
+       "baslik": "Karsinogenezin moleküler temeli",
+       "ders": "p17",
+       "dersAd": "Karsinojenezin Moleküler Temeli",
+       "dersNo": "17",
+       "p": [
+        81,
+        88
+       ],
+       "sorular": [
+        "patoloji/17#26",
+        "patoloji/17#2",
+        "patoloji/17#4",
+        "patoloji/17#10",
+        "patoloji/17#8"
+       ],
+       "checkup": [
+        "patoloji/17#25",
+        "patoloji/17#27",
+        "patoloji/17#3",
+        "patoloji/17#7"
+       ]
+      },
+      {
+       "no": 10,
+       "baslik": "İleri tümör genetiği ve metabolizması",
+       "ders": "p18",
+       "dersAd": "İleri Tümör Genetiği ve Metabolizması",
+       "dersNo": "18",
+       "p": [
+        89,
+        96
+       ],
+       "sorular": [
+        "patoloji/18#26",
+        "patoloji/18#2",
+        "patoloji/18#13",
+        "patoloji/18#9",
+        "patoloji/18#8"
+       ],
+       "checkup": [
+        "patoloji/18#25",
+        "patoloji/18#27",
+        "patoloji/18#4",
+        "patoloji/18#6"
+       ]
+      }
+     ]
+    },
+    {
+     "key": "k1-83-son-prova-patoloji-3",
+     "no": 3,
+     "baslik": "Tümör immünolojisi, evreleme ve böbrek-mesane patolojisi",
+     "kelime": 7131,
+     "tahminiDk": 64,
+     "sayfa": 273,
+     "dersler": [
+      {
+       "kod": "p19",
+       "no": "19",
+       "ad": "Tümör İmmünolojisi ve Metastaz Mekanizmaları"
+      },
+      {
+       "kod": "p20",
+       "no": "20",
+       "ad": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı"
+      },
+      {
+       "kod": "p21",
+       "no": "21",
+       "ad": "Glomerüler Hastalıklar: Nefrotik Sendrom"
+      },
+      {
+       "kod": "p22",
+       "no": "22",
+       "ad": "Glomerüler Hastalıklar: Nefritik Sendrom"
+      },
+      {
+       "kod": "p23",
+       "no": "23",
+       "ad": "Sistemik Hastalıklarda Böbrek Hasarı"
+      },
+      {
+       "kod": "p24",
+       "no": "24",
+       "ad": "Tübülointerstisyel Hastalıklar"
+      },
+      {
+       "kod": "p25",
+       "no": "25",
+       "ad": "Vasküler ve Kistik Böbrek Hastalıkları"
+      },
+      {
+       "kod": "p26",
+       "no": "26",
+       "ad": "Böbrek Tümörleri"
+      },
+      {
+       "kod": "p26b",
+       "no": "27",
+       "ad": "Mesane Hastalıkları ve Tümörleri · Cinsel Yolla Bulaşan Enfeksiyonların Patolojisi"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "Tümör immünolojisi ve metastaz mekanizmaları",
+       "ders": "p19",
+       "dersAd": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+       "dersNo": "19",
+       "p": [
+        0,
+        9
+       ],
+       "sorular": [
+        "patoloji/19#23",
+        "patoloji/19#2",
+        "patoloji/19#4",
+        "patoloji/19#6"
+       ],
+       "checkup": [
+        "patoloji/19#24",
+        "patoloji/19#25",
+        "patoloji/19#19"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Tümör evrelemesi, derecelendirme ve laboratuvar tanısı",
+       "ders": "p20",
+       "dersAd": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
+       "dersNo": "20",
+       "p": [
+        10,
+        19
+       ],
+       "sorular": [
+        "patoloji/20#25",
+        "patoloji/20#28",
+        "patoloji/20#1",
+        "patoloji/20#9",
+        "patoloji/20#10"
+       ],
+       "checkup": [
+        "patoloji/20#26",
+        "patoloji/20#27",
+        "patoloji/20#7"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "Glomerüler hastalıklar: nefrotik sendrom",
+       "ders": "p21",
+       "dersAd": "Glomerüler Hastalıklar: Nefrotik Sendrom",
+       "dersNo": "21",
+       "p": [
+        20,
+        29
+       ],
+       "sorular": [
+        "patoloji/21#25",
+        "patoloji/21#29",
+        "patoloji/21#9",
+        "patoloji/21#10",
+        "patoloji/21#11"
+       ],
+       "checkup": [
+        "patoloji/21#27",
+        "patoloji/21#28",
+        "patoloji/21#26"
+       ]
+      },
+      {
+       "no": 4,
+       "baslik": "Glomerüler hastalıklar: nefritik sendrom",
+       "ders": "p22",
+       "dersAd": "Glomerüler Hastalıklar: Nefritik Sendrom",
+       "dersNo": "22",
+       "p": [
+        30,
+        37
+       ],
+       "sorular": [
+        "patoloji/22#31",
+        "patoloji/22#33",
+        "patoloji/22#4",
+        "patoloji/22#9",
+        "patoloji/22#14"
+       ],
+       "checkup": [
+        "patoloji/22#34",
+        "patoloji/22#32",
+        "patoloji/22#6"
+       ]
+      },
+      {
+       "no": 5,
+       "baslik": "Sistemik hastalıklarda böbrek hasarı",
+       "ders": "p23",
+       "dersAd": "Sistemik Hastalıklarda Böbrek Hasarı",
+       "dersNo": "23",
+       "p": [
+        38,
+        48
+       ],
+       "sorular": [
+        "patoloji/23#30",
+        "patoloji/23#29",
+        "patoloji/23#6",
+        "patoloji/23#8",
+        "patoloji/23#13"
+       ],
+       "checkup": [
+        "patoloji/23#31",
+        "patoloji/23#2",
+        "patoloji/23#5"
+       ]
+      },
+      {
+       "no": 6,
+       "baslik": "Tübülointerstisyel hastalıklar",
+       "ders": "p24",
+       "dersAd": "Tübülointerstisyel Hastalıklar",
+       "dersNo": "24",
+       "p": [
+        49,
+        58
+       ],
+       "sorular": [
+        "patoloji/24#1",
+        "patoloji/24#26",
+        "patoloji/24#4",
+        "patoloji/24#25",
+        "patoloji/24#9"
+       ],
+       "checkup": [
+        "patoloji/24#3",
+        "patoloji/24#10",
+        "patoloji/24#18"
+       ]
+      },
+      {
+       "no": 7,
+       "baslik": "Vasküler ve kistik böbrek hastalıkları",
+       "ders": "p25",
+       "dersAd": "Vasküler ve Kistik Böbrek Hastalıkları",
+       "dersNo": "25",
+       "p": [
+        59,
+        66
+       ],
+       "sorular": [
+        "patoloji/25#28",
+        "patoloji/25#27",
+        "patoloji/25#2",
+        "patoloji/25#1",
+        "patoloji/25#11"
+       ],
+       "checkup": [
+        "patoloji/25#29",
+        "patoloji/25#30",
+        "patoloji/25#12"
+       ]
+      },
+      {
+       "no": 8,
+       "baslik": "Böbrek tümörleri",
+       "ders": "p26",
+       "dersAd": "Böbrek Tümörleri",
+       "dersNo": "26",
+       "p": [
+        67,
+        76
+       ],
+       "sorular": [
+        "patoloji/26#26",
+        "patoloji/26#2",
+        "patoloji/26#5",
+        "patoloji/26#9",
+        "patoloji/26#11"
+       ],
+       "checkup": [
+        "patoloji/26#25",
+        "patoloji/26#27",
+        "patoloji/26#41"
+       ]
+      },
+      {
+       "no": 9,
+       "baslik": "Mesane hastalıkları, tümörleri ve cinsel yolla bulaşan enfeksiyonlar",
+       "ders": "p26b",
+       "dersAd": "Mesane Hastalıkları ve Tümörleri · Cinsel Yolla Bulaşan Enfeksiyonların Patolojisi",
+       "dersNo": "27",
+       "p": [
+        77,
+        85
+       ],
+       "sorular": [
+        "patoloji/26b#2",
+        "patoloji/26b#27",
+        "patoloji/26b#6",
+        "patoloji/26b#29",
+        "patoloji/26b#11"
+       ],
+       "checkup": [
+        "patoloji/26b#3",
+        "patoloji/26b#28",
+        "patoloji/26b#13"
+       ]
+      }
+     ]
+    },
+    {
+     "key": "k1-84-son-prova-patoloji-4",
+     "no": 4,
+     "baslik": "Kadın genital, meme ve erkek genital patolojisi",
+     "kelime": 7288,
+     "tahminiDk": 65,
+     "sayfa": 373,
+     "dersler": [
+      {
+       "kod": "p28",
+       "no": "28",
+       "ad": "Vulva, Vajen ve Serviks Hastalıkları"
+      },
+      {
+       "kod": "p39",
+       "no": "29",
+       "ad": "İnvaziv Serviks Kanseri ve Endometriyozis"
+      },
+      {
+       "kod": "p30",
+       "no": "30",
+       "ad": "Endometrial Hiperplazi ve Kanserleri"
+      },
+      {
+       "kod": "p31",
+       "no": "31",
+       "ad": "Ovidukt ve Ovaryum Patolojisi: Fallop Tüpü, Over Kistleri ve Over Tümörleri"
+      },
+      {
+       "kod": "p32",
+       "no": "32",
+       "ad": "Gebelik Hastalıkları"
+      },
+      {
+       "kod": "p33",
+       "no": "33",
+       "ad": "Meme Kanseri ve Moleküler Tipleri"
+      },
+      {
+       "kod": "p34",
+       "no": "34",
+       "ad": "Erkek Genital Sistem ve Prostat Hastalıkları"
+      },
+      {
+       "kod": "p35",
+       "no": "35",
+       "ad": "Meme Kanseri ve Moleküler Tipleri"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "Vulva, vajen ve serviks hastalıkları",
+       "ders": "p28",
+       "dersAd": "Vulva, Vajen ve Serviks Hastalıkları",
+       "dersNo": "28",
+       "p": [
+        0,
+        11
+       ],
+       "sorular": [
+        "patoloji/28#26",
+        "patoloji/28#29",
+        "patoloji/28#11",
+        "patoloji/28#12"
+       ],
+       "checkup": [
+        "patoloji/28#27",
+        "patoloji/28#28",
+        "patoloji/28#9"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "İnvaziv serviks kanseri",
+       "ders": "p39",
+       "dersAd": "İnvaziv Serviks Kanseri ve Endometriyozis",
+       "dersNo": "29",
+       "p": [
+        12,
+        22
+       ],
+       "sorular": [
+        "patoloji/39#28",
+        "patoloji/39#29",
+        "patoloji/39#3",
+        "patoloji/39#8"
+       ],
+       "checkup": [
+        "patoloji/39#27",
+        "patoloji/39#25",
+        "patoloji/39#11"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "Endometrit, adenomyoz, endometriozis ve hiperplazi",
+       "ders": "p30",
+       "dersAd": "Endometrial Hiperplazi ve Kanserleri",
+       "dersNo": "30",
+       "p": [
+        23,
+        33
+       ],
+       "sorular": [
+        "patoloji/30#25",
+        "patoloji/30#27",
+        "patoloji/30#1",
+        "patoloji/30#3"
+       ],
+       "checkup": [
+        "patoloji/30#28",
+        "patoloji/30#4",
+        "patoloji/30#14"
+       ]
+      },
+      {
+       "no": 4,
+       "baslik": "Endometrial karsinom, polip ve düz kas tümörleri",
+       "ders": "p30",
+       "dersAd": "Endometrial Hiperplazi ve Kanserleri",
+       "dersNo": "30",
+       "p": [
+        34,
+        41
+       ],
+       "sorular": [
+        "patoloji/30#26",
+        "patoloji/30#29",
+        "patoloji/30#10",
+        "patoloji/30#12"
+       ],
+       "checkup": [
+        "patoloji/30#9",
+        "patoloji/30#11",
+        "patoloji/30#41"
+       ]
+      },
+      {
+       "no": 5,
+       "baslik": "Ovidukt ve ovaryum patolojisi",
+       "ders": "p31",
+       "dersAd": "Ovidukt ve Ovaryum Patolojisi: Fallop Tüpü, Over Kistleri ve Over Tümörleri",
+       "dersNo": "31",
+       "p": [
+        42,
+        52
+       ],
+       "sorular": [
+        "patoloji/31#30",
+        "patoloji/31#31",
+        "patoloji/31#1",
+        "patoloji/31#10"
+       ],
+       "checkup": [
+        "patoloji/31#28",
+        "patoloji/31#27",
+        "patoloji/31#29",
+        "patoloji/31#6"
+       ]
+      },
+      {
+       "no": 6,
+       "baslik": "Gebelik hastalıkları",
+       "ders": "p32",
+       "dersAd": "Gebelik Hastalıkları",
+       "dersNo": "32",
+       "p": [
+        53,
+        66
+       ],
+       "sorular": [
+        "patoloji/32#27",
+        "patoloji/32#3",
+        "patoloji/32#9",
+        "patoloji/32#5",
+        "patoloji/32#11"
+       ],
+       "checkup": [
+        "patoloji/32#28",
+        "patoloji/32#30",
+        "patoloji/32#29"
+       ]
+      },
+      {
+       "no": 7,
+       "baslik": "Memenin benign hastalıkları ve kanser biyolojisi",
+       "ders": "p33",
+       "dersAd": "Meme Kanseri ve Moleküler Tipleri",
+       "dersNo": "33",
+       "p": [
+        67,
+        78
+       ],
+       "sorular": [
+        "patoloji/33#27",
+        "patoloji/33#5",
+        "patoloji/33#9",
+        "patoloji/33#1",
+        "patoloji/33#10"
+       ],
+       "checkup": [
+        "patoloji/33#28",
+        "patoloji/33#29",
+        "patoloji/33#31"
+       ]
+      },
+      {
+       "no": 8,
+       "baslik": "Erkek genital sistem ve prostat hastalıkları",
+       "ders": "p34",
+       "dersAd": "Erkek Genital Sistem ve Prostat Hastalıkları",
+       "dersNo": "34",
+       "p": [
+        79,
+        89
+       ],
+       "sorular": [
+        "patoloji/34#9",
+        "patoloji/34#7",
+        "patoloji/34#12",
+        "patoloji/34#13",
+        "patoloji/34#31"
+       ],
+       "checkup": [
+        "patoloji/34#30",
+        "patoloji/34#33",
+        "patoloji/34#29",
+        "patoloji/34#32"
+       ]
+      },
+      {
+       "no": 9,
+       "baslik": "Meme kanseri ve moleküler tipleri",
+       "ders": "p35",
+       "dersAd": "Meme Kanseri ve Moleküler Tipleri",
+       "dersNo": "35",
+       "p": [
+        90,
+        99
+       ],
+       "sorular": [
+        "patoloji/35#28",
+        "patoloji/35#2",
+        "patoloji/35#7",
+        "patoloji/35#5",
+        "patoloji/35#9"
+       ],
+       "checkup": [
+        "patoloji/35#26",
+        "patoloji/35#25",
+        "patoloji/35#29",
+        "patoloji/35#27"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "brans": "enfeksiyon",
+   "ad": "Enfeksiyon Hastalıkları",
+   "soru": 22,
+   "genel": [
+    "enfeksiyon/e01#1",
+    "enfeksiyon/e01#13",
+    "enfeksiyon/e01#4",
+    "enfeksiyon/e02-2#11",
+    "enfeksiyon/e02-1#2",
+    "enfeksiyon/e02-1#41",
+    "enfeksiyon/e03-2#10",
+    "enfeksiyon/e03-2#15",
+    "enfeksiyon/e03-1#6",
+    "enfeksiyon/e04-1#64",
+    "enfeksiyon/e04-1#46",
+    "enfeksiyon/e04-1#53",
+    "enfeksiyon/e04-1#47",
+    "enfeksiyon/e04-2#50",
+    "enfeksiyon/e04-1#48",
+    "enfeksiyon/e04-2#28",
+    "enfeksiyon/e04-2#56",
+    "enfeksiyon/e04-2#27",
+    "enfeksiyon/e05-1#29",
+    "enfeksiyon/e05-1#7",
+    "enfeksiyon/e05-2#15",
+    "enfeksiyon/e06#5",
+    "enfeksiyon/e06#18",
+    "enfeksiyon/e06#15",
+    "enfeksiyon/e07#17",
+    "enfeksiyon/e07#36",
+    "enfeksiyon/e07#15",
+    "enfeksiyon/e08#2",
+    "enfeksiyon/e08#28",
+    "enfeksiyon/e08#37",
+    "enfeksiyon/e09#11",
+    "enfeksiyon/e09#18",
+    "enfeksiyon/e09#10",
+    "enfeksiyon/e09#12",
+    "enfeksiyon/e09#16",
+    "enfeksiyon/e09#36",
+    "enfeksiyon/e10#34",
+    "enfeksiyon/e10#33",
+    "enfeksiyon/e10#32",
+    "enfeksiyon/e11-2#14",
+    "enfeksiyon/e11-2#12",
+    "enfeksiyon/e11-2#18"
+   ],
+   "partlar": [
+    {
+     "key": "k1-85-son-prova-enfeksiyon-1",
+     "no": 1,
+     "baslik": "Cinsel yolla bulaşan hastalıklar, izolasyon, temel kavramlar ve üriner enfeksiyon",
+     "kelime": 6309,
+     "tahminiDk": 56,
+     "sayfa": 135,
+     "dersler": [
+      {
+       "kod": "e01",
+       "no": "1",
+       "ad": "Cinsel Yolla Bulaşan Hastalıklarda Tedavi"
+      },
+      {
+       "kod": "e02",
+       "no": "2",
+       "ad": "Genital Enfeksiyonlar"
+      },
+      {
+       "kod": "e03",
+       "no": "3",
+       "ad": "İzolasyon Yöntemleri"
+      },
+      {
+       "kod": "e04",
+       "no": "4",
+       "ad": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler"
+      },
+      {
+       "kod": "e05",
+       "no": "5",
+       "ad": "Üriner Sistem Enfeksiyonları"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "Cinsel yolla bulaşan hastalıklarda tedavi",
+       "ders": "e01",
+       "dersAd": "Cinsel Yolla Bulaşan Hastalıklarda Tedavi",
+       "dersNo": "1",
+       "p": [
+        0,
+        15
+       ],
+       "sorular": [
+        "enfeksiyon/e01#26",
+        "enfeksiyon/e01#20",
+        "enfeksiyon/e01#25",
+        "enfeksiyon/e01#5",
+        "enfeksiyon/e01#16"
+       ],
+       "checkup": [
+        "enfeksiyon/e01#23",
+        "enfeksiyon/e01#22",
+        "enfeksiyon/e01#21"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Genital enfeksiyonlar",
+       "ders": "e02",
+       "dersAd": "Genital Enfeksiyonlar",
+       "dersNo": "2",
+       "p": [
+        16,
+        32
+       ],
+       "sorular": [
+        "enfeksiyon/e02-1#22",
+        "enfeksiyon/e02-2#24",
+        "enfeksiyon/e02-2#29",
+        "enfeksiyon/e02-1#12",
+        "enfeksiyon/e02-2#25"
+       ],
+       "checkup": [
+        "enfeksiyon/e02-1#26",
+        "enfeksiyon/e02-1#20",
+        "enfeksiyon/e02-1#21"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "İzolasyon yöntemleri",
+       "ders": "e03",
+       "dersAd": "İzolasyon Yöntemleri",
+       "dersNo": "3",
+       "p": [
+        33,
+        45
+       ],
+       "sorular": [
+        "enfeksiyon/e03-1#18",
+        "enfeksiyon/e03-1#22",
+        "enfeksiyon/e03-2#19",
+        "enfeksiyon/e03-2#27",
+        "enfeksiyon/e03-1#21"
+       ],
+       "checkup": [
+        "enfeksiyon/e03-2#25",
+        "enfeksiyon/e03-2#23",
+        "enfeksiyon/e03-1#24"
+       ]
+      },
+      {
+       "no": 4,
+       "baslik": "Enfeksiyon kavramı, ateş, prionlar ve virüsler",
+       "ders": "e04",
+       "dersAd": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler",
+       "dersNo": "4",
+       "p": [
+        46,
+        57
+       ],
+       "sorular": [
+        "enfeksiyon/e04-1#37",
+        "enfeksiyon/e04-1#1",
+        "enfeksiyon/e04-1#57",
+        "enfeksiyon/e04-1#7"
+       ],
+       "checkup": [
+        "enfeksiyon/e04-1#3",
+        "enfeksiyon/e04-1#8"
+       ]
+      },
+      {
+       "no": 5,
+       "baslik": "Bakteriler, mantarlar, parazitler ve vektörler",
+       "ders": "e04",
+       "dersAd": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler",
+       "dersNo": "4",
+       "p": [
+        58,
+        67
+       ],
+       "sorular": [
+        "enfeksiyon/e04-1#44",
+        "enfeksiyon/e04-1#11",
+        "enfeksiyon/e04-1#17",
+        "enfeksiyon/e04-2#19"
+       ],
+       "checkup": [
+        "enfeksiyon/e04-1#42",
+        "enfeksiyon/e04-1#13"
+       ]
+      },
+      {
+       "no": 6,
+       "baslik": "Patogenez, flora, epidemiyoloji ve hastalık seyri",
+       "ders": "e04",
+       "dersAd": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler",
+       "dersNo": "4",
+       "p": [
+        68,
+        77
+       ],
+       "sorular": [
+        "enfeksiyon/e04-2#41",
+        "enfeksiyon/e04-2#38",
+        "enfeksiyon/e04-2#23",
+        "enfeksiyon/e04-2#31"
+       ],
+       "checkup": [
+        "enfeksiyon/e04-2#40",
+        "enfeksiyon/e04-2#43",
+        "enfeksiyon/e04-2#39"
+       ]
+      },
+      {
+       "no": 7,
+       "baslik": "Üriner sistem enfeksiyonları",
+       "ders": "e05",
+       "dersAd": "Üriner Sistem Enfeksiyonları",
+       "dersNo": "5",
+       "p": [
+        78,
+        90
+       ],
+       "sorular": [
+        "enfeksiyon/e05-1#21",
+        "enfeksiyon/e05-1#23",
+        "enfeksiyon/e05-1#9",
+        "enfeksiyon/e05-2#14",
+        "enfeksiyon/e05-1#8"
+       ],
+       "checkup": [
+        "enfeksiyon/e05-2#22",
+        "enfeksiyon/e05-2#24",
+        "enfeksiyon/e05-2#39"
+       ]
+      }
+     ]
+    },
+    {
+     "key": "k1-86-son-prova-enfeksiyon-2",
+     "no": 2,
+     "baslik": "Korunma, sifiliz, üretral akıntı, intrauterin enfeksiyonlar, direnç ve bağışıklığı baskılı hasta",
+     "kelime": 7344,
+     "tahminiDk": 66,
+     "sayfa": 180,
+     "dersler": [
+      {
+       "kod": "e06",
+       "no": "6",
+       "ad": "Cinsel Yolla Bulaşan Enfeksiyonlarda Korunma ve Profilaksi"
+      },
+      {
+       "kod": "e07",
+       "no": "7",
+       "ad": "Sifiliz: Etken, Evreler, Tanı ve Tedavi"
+      },
+      {
+       "kod": "e08",
+       "no": "8",
+       "ad": "Üretral Akıntı"
+      },
+      {
+       "kod": "e09",
+       "no": "9",
+       "ad": "İntrauterin Enfeksiyonlar: Geçiş Yolları, Etkenler, Tanı ve Korunma"
+      },
+      {
+       "kod": "e10",
+       "no": "10",
+       "ad": "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim"
+      },
+      {
+       "kod": "e11",
+       "no": "11",
+       "ad": "Bağışıklığı Baskılı Hastalarda Enfeksiyon: TIP 310"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "Cinsel yolla bulaşan enfeksiyonlarda korunma ve profilaksi",
+       "ders": "e06",
+       "dersAd": "Cinsel Yolla Bulaşan Enfeksiyonlarda Korunma ve Profilaksi",
+       "dersNo": "6",
+       "p": [
+        0,
+        13
+       ],
+       "sorular": [
+        "enfeksiyon/e06#21",
+        "enfeksiyon/e06#2",
+        "enfeksiyon/e06#8",
+        "enfeksiyon/e06#12",
+        "enfeksiyon/e06#31"
+       ],
+       "checkup": [
+        "enfeksiyon/e06#24",
+        "enfeksiyon/e06#22",
+        "enfeksiyon/e06#27"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Sifiliz",
+       "ders": "e07",
+       "dersAd": "Sifiliz: Etken, Evreler, Tanı ve Tedavi",
+       "dersNo": "7",
+       "p": [
+        14,
+        27
+       ],
+       "sorular": [
+        "enfeksiyon/e07#25",
+        "enfeksiyon/e07#20",
+        "enfeksiyon/e07#29",
+        "enfeksiyon/e07#16",
+        "enfeksiyon/e07#10"
+       ],
+       "checkup": [
+        "enfeksiyon/e07#21",
+        "enfeksiyon/e07#24",
+        "enfeksiyon/e07#30"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "Üretral akıntı",
+       "ders": "e08",
+       "dersAd": "Üretral Akıntı",
+       "dersNo": "8",
+       "p": [
+        28,
+        40
+       ],
+       "sorular": [
+        "enfeksiyon/e08#22",
+        "enfeksiyon/e08#24",
+        "enfeksiyon/e08#7",
+        "enfeksiyon/e08#26",
+        "enfeksiyon/e08#19"
+       ],
+       "checkup": [
+        "enfeksiyon/e08#23",
+        "enfeksiyon/e08#27",
+        "enfeksiyon/e08#25"
+       ]
+      },
+      {
+       "no": 4,
+       "baslik": "İntrauterin enfeksiyonlar: yollar, grup B streptokok, Listeria, HIV ve hepatitler",
+       "ders": "e09",
+       "dersAd": "İntrauterin Enfeksiyonlar: Geçiş Yolları, Etkenler, Tanı ve Korunma",
+       "dersNo": "9",
+       "p": [
+        41,
+        50
+       ],
+       "sorular": [
+        "enfeksiyon/e09#24",
+        "enfeksiyon/e09#30",
+        "enfeksiyon/e09#14",
+        "enfeksiyon/e09#13"
+       ],
+       "checkup": [
+        "enfeksiyon/e09#25",
+        "enfeksiyon/e09#22"
+       ]
+      },
+      {
+       "no": 5,
+       "baslik": "TORCH etkenleri: toksoplazma, rubella, CMV, herpes, sifiliz ve diğer virüsler",
+       "ders": "e09",
+       "dersAd": "İntrauterin Enfeksiyonlar: Geçiş Yolları, Etkenler, Tanı ve Korunma",
+       "dersNo": "9",
+       "p": [
+        51,
+        63
+       ],
+       "sorular": [
+        "enfeksiyon/e09#21",
+        "enfeksiyon/e09#26",
+        "enfeksiyon/e09#35",
+        "enfeksiyon/e09#29",
+        "enfeksiyon/e09#8"
+       ],
+       "checkup": [
+        "enfeksiyon/e09#33",
+        "enfeksiyon/e09#37",
+        "enfeksiyon/e09#23"
+       ]
+      },
+      {
+       "no": 6,
+       "baslik": "Mikroorganizmalarda direnç ve antimikrobiyal yönetim",
+       "ders": "e10",
+       "dersAd": "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim",
+       "dersNo": "10",
+       "p": [
+        64,
+        74
+       ],
+       "sorular": [
+        "enfeksiyon/e10#20",
+        "enfeksiyon/e10#4",
+        "enfeksiyon/e10#12",
+        "enfeksiyon/e10#15",
+        "enfeksiyon/e10#19"
+       ],
+       "checkup": [
+        "enfeksiyon/e10#21",
+        "enfeksiyon/e10#22",
+        "enfeksiyon/e10#7"
+       ]
+      },
+      {
+       "no": 7,
+       "baslik": "Bağışıklığı baskılı hasta: savunma hatları, hücresel ve hümoral yetmezlik",
+       "ders": "e11",
+       "dersAd": "Bağışıklığı Baskılı Hastalarda Enfeksiyon: TIP 310",
+       "dersNo": "11",
+       "p": [
+        75,
+        88
+       ],
+       "sorular": [
+        "enfeksiyon/e11-2#31",
+        "enfeksiyon/e11-2#22",
+        "enfeksiyon/e11-1#32",
+        "enfeksiyon/e11-1#24",
+        "enfeksiyon/e11-2#34"
+       ],
+       "checkup": [
+        "enfeksiyon/e11-1#28",
+        "enfeksiyon/e11-1#21",
+        "enfeksiyon/e11-2#35"
+       ]
+      },
+      {
+       "no": 8,
+       "baslik": "Nötropeni, fırsatçı mantarlar ve nakil sonrası enfeksiyonlar",
+       "ders": "e11",
+       "dersAd": "Bağışıklığı Baskılı Hastalarda Enfeksiyon: TIP 310",
+       "dersNo": "11",
+       "p": [
+        89,
+        100
+       ],
+       "sorular": [
+        "enfeksiyon/e11-1#36",
+        "enfeksiyon/e11-1#30",
+        "enfeksiyon/e11-1#39",
+        "enfeksiyon/e11-1#20",
+        "enfeksiyon/e11-1#3"
+       ],
+       "checkup": [
+        "enfeksiyon/e11-2#25",
+        "enfeksiyon/e11-1#26",
+        "enfeksiyon/e11-1#40"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "brans": "genetik",
+   "ad": "Tıbbi Genetik",
+   "soru": 12,
+   "genel": [
+    "genetik/g01-2#31",
+    "genetik/g01-2#39",
+    "genetik/g01-1#19",
+    "genetik/g02-2#32",
+    "genetik/g02-1#11",
+    "genetik/g02-1#47",
+    "genetik/g03-2#41",
+    "genetik/g03-2#6",
+    "genetik/g03-1#37",
+    "genetik/g04-1#9",
+    "genetik/g04-2#12",
+    "genetik/g04-1#45",
+    "genetik/g04-1#8",
+    "genetik/g04-1#27",
+    "genetik/g04-1#20",
+    "genetik/g04-1#35",
+    "genetik/g04-1#3",
+    "genetik/g04-1#43",
+    "genetik/g05-1#44",
+    "genetik/g05-2#47",
+    "genetik/g05-2#15",
+    "genetik/g06-1#42",
+    "genetik/g06-1#45",
+    "genetik/g06-2#19"
+   ],
+   "partlar": [
+    {
+     "key": "k1-87-son-prova-genetik-1",
+     "no": 1,
+     "baslik": "Dismorfoloji, kromozom hastalıkları ve cinsiyet gelişimi",
+     "kelime": 3785,
+     "tahminiDk": 34,
+     "sayfa": 145,
+     "dersler": [
+      {
+       "kod": "g01",
+       "no": "1",
+       "ad": "Dismorfolojide Genetik Terminoloji"
+      },
+      {
+       "kod": "g02",
+       "no": "2",
+       "ad": "Kromozomal Hastalıklar ve Genetik Danışma"
+      },
+      {
+       "kod": "g03",
+       "no": "3",
+       "ad": "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "Dismorfoloji: bulgudan anomali tipine",
+       "ders": "g01",
+       "dersAd": "Dismorfolojide Genetik Terminoloji",
+       "dersNo": "1",
+       "p": [
+        0,
+        16
+       ],
+       "sorular": [
+        "genetik/g01-1#23",
+        "genetik/g01-1#22",
+        "genetik/g01-1#4",
+        "genetik/g01-1#5"
+       ],
+       "checkup": [
+        "genetik/g01-1#46",
+        "genetik/g01-2#9",
+        "genetik/g01-1#2"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Kromozom sendromları: bulgudan tanıya",
+       "ders": "g02",
+       "dersAd": "Kromozomal Hastalıklar ve Genetik Danışma",
+       "dersNo": "2",
+       "p": [
+        17,
+        35
+       ],
+       "sorular": [
+        "genetik/g02-1#26",
+        "genetik/g02-1#24",
+        "genetik/g02-2#22",
+        "genetik/g02-2#7"
+       ],
+       "checkup": [
+        "genetik/g02-1#23",
+        "genetik/g02-2#25",
+        "genetik/g02-2#27"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "Cinsiyet gelişimi bozuklukları: genitalya ve laboratuvardan tanıya",
+       "ders": "g03",
+       "dersAd": "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri",
+       "dersNo": "3",
+       "p": [
+        36,
+        54
+       ],
+       "sorular": [
+        "genetik/g03-2#26",
+        "genetik/g03-1#27",
+        "genetik/g03-2#22",
+        "genetik/g03-2#24"
+       ],
+       "checkup": [
+        "genetik/g03-1#23",
+        "genetik/g03-1#31",
+        "genetik/g03-2#21",
+        "genetik/g03-1#32"
+       ]
+      }
+     ]
+    },
+    {
+     "key": "k1-88-son-prova-genetik-2",
+     "no": 2,
+     "baslik": "Ürogenital tümör belirteçleri, prenatal tanı ve PGT",
+     "kelime": 5305,
+     "tahminiDk": 47,
+     "sayfa": 150,
+     "dersler": [
+      {
+       "kod": "g04",
+       "no": "4",
+       "ad": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler"
+      },
+      {
+       "kod": "g05",
+       "no": "5",
+       "ad": "Prenatal Tanı ve Uygulama Alanları"
+      },
+      {
+       "kod": "g06",
+       "no": "6",
+       "ad": "Preimplantasyon Genetik Tanı (PGD/PGT): Endikasyonlar, Biyopsi ve Genetik Testler"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "Kanser yatkınlık sendromları: bulgudan sendroma",
+       "ders": "g04",
+       "dersAd": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler",
+       "dersNo": "4",
+       "p": [
+        0,
+        15
+       ],
+       "sorular": [
+        "genetik/g04-1#6",
+        "genetik/g04-2#40",
+        "genetik/g04-2#16"
+       ],
+       "checkup": [
+        "genetik/g04-1#10",
+        "genetik/g04-1#47"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Kanserde hedef ilaçlar: hangi kansere hangi ilaç",
+       "ders": "g04",
+       "dersAd": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler",
+       "dersNo": "4",
+       "p": [
+        16,
+        25
+       ],
+       "sorular": [
+        "genetik/g04-2#21",
+        "genetik/g04-1#25",
+        "genetik/g04-2#39"
+       ],
+       "checkup": [
+        "genetik/g04-2#1",
+        "genetik/g04-1#14"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "Kanser belirteçleri: tanı ve prognoz",
+       "ders": "g04",
+       "dersAd": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler",
+       "dersNo": "4",
+       "p": [
+        26,
+        37
+       ],
+       "sorular": [
+        "genetik/g04-2#23",
+        "genetik/g04-1#22",
+        "genetik/g04-1#28"
+       ],
+       "checkup": [
+        "genetik/g04-1#42",
+        "genetik/g04-2#5"
+       ]
+      },
+      {
+       "no": 4,
+       "baslik": "Prenatal tarama ve tanı: belirteçten sendroma",
+       "ders": "g05",
+       "dersAd": "Prenatal Tanı ve Uygulama Alanları",
+       "dersNo": "5",
+       "p": [
+        38,
+        53
+       ],
+       "sorular": [
+        "genetik/g05-1#28",
+        "genetik/g05-1#23",
+        "genetik/g05-1#29",
+        "genetik/g05-2#26"
+       ],
+       "checkup": [
+        "genetik/g05-2#25",
+        "genetik/g05-2#32",
+        "genetik/g05-1#30"
+       ]
+      },
+      {
+       "no": 5,
+       "baslik": "Preimplantasyon genetik tanı",
+       "ders": "g06",
+       "dersAd": "Preimplantasyon Genetik Tanı (PGD/PGT): Endikasyonlar, Biyopsi ve Genetik Testler",
+       "dersNo": "6",
+       "p": [
+        54,
+        70
+       ],
+       "sorular": [
+        "genetik/g06-1#23",
+        "genetik/g06-1#21",
+        "genetik/g06-2#22",
+        "genetik/g06-2#26"
+       ],
+       "checkup": [
+        "genetik/g06-2#28",
+        "genetik/g06-2#33"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "brans": "uroloji",
+   "ad": "Üroloji",
+   "soru": 12,
+   "genel": [
+    "uroloji/u01-1#40",
+    "uroloji/u01-2#19",
+    "uroloji/u01-2#14",
+    "uroloji/u02-1#2",
+    "uroloji/u02-1#7",
+    "uroloji/u02-2#10",
+    "uroloji/u03-1#74",
+    "uroloji/u03-1#5",
+    "uroloji/u03-1#73",
+    "uroloji/u03-2#17",
+    "uroloji/u03-2#18",
+    "uroloji/u03-2#58",
+    "uroloji/u03-2#28",
+    "uroloji/u03-2#24",
+    "uroloji/u03-2#25",
+    "uroloji/u04-1#13",
+    "uroloji/u04-1#70",
+    "uroloji/u04-1#15",
+    "uroloji/u04-2#66",
+    "uroloji/u04-2#19",
+    "uroloji/u04-2#24",
+    "uroloji/u04-2#68",
+    "uroloji/u04-2#30",
+    "uroloji/u04-2#33",
+    "uroloji/u05-1#5",
+    "uroloji/u05-1#46",
+    "uroloji/u05-2#19",
+    "uroloji/u06-2#38",
+    "uroloji/u06-2#19",
+    "uroloji/u06-2#11"
+   ],
+   "partlar": [
+    {
+     "key": "k1-89-son-prova-uroloji-1",
+     "no": 1,
+     "baslik": "Obstrüksiyon, taş hastalığı ve üriner sistem enfeksiyonları",
+     "kelime": 4251,
+     "tahminiDk": 38,
+     "sayfa": 149,
+     "dersler": [
+      {
+       "kod": "u01",
+       "no": "1",
+       "ad": "Üriner Obstrüksiyon: Patofizyoloji, Klinik ve Tedavi"
+      },
+      {
+       "kod": "u02",
+       "no": "2",
+       "ad": "Ürolitiyazis Patofizyolojisi"
+      },
+      {
+       "kod": "u03",
+       "no": "3",
+       "ad": "Üriner Sistem Enfeksiyonları"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "Üriner obstrüksiyon",
+       "ders": "u01",
+       "dersAd": "Üriner Obstrüksiyon: Patofizyoloji, Klinik ve Tedavi",
+       "dersNo": "1",
+       "p": [
+        0,
+        14
+       ],
+       "sorular": [
+        "uroloji/u01-1#25",
+        "uroloji/u01-1#23",
+        "uroloji/u01-2#10",
+        "uroloji/u01-2#17",
+        "uroloji/u01-2#37"
+       ],
+       "checkup": [
+        "uroloji/u01-1#21",
+        "uroloji/u01-2#24",
+        "uroloji/u01-2#22"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Ürolitiyazis patofizyolojisi",
+       "ders": "u02",
+       "dersAd": "Ürolitiyazis Patofizyolojisi",
+       "dersNo": "2",
+       "p": [
+        15,
+        27
+       ],
+       "sorular": [
+        "uroloji/u02-1#24",
+        "uroloji/u02-1#21",
+        "uroloji/u02-1#8",
+        "uroloji/u02-2#25",
+        "uroloji/u02-2#19"
+       ],
+       "checkup": [
+        "uroloji/u02-1#23",
+        "uroloji/u02-1#26",
+        "uroloji/u02-1#22"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "Üriner sistem enfeksiyonları: epidemiyoloji, etken ve sınıflama",
+       "ders": "u03",
+       "dersAd": "Üriner Sistem Enfeksiyonları",
+       "dersNo": "3",
+       "p": [
+        28,
+        35
+       ],
+       "sorular": [
+        "uroloji/u03-1#47",
+        "uroloji/u03-1#36",
+        "uroloji/u03-1#8",
+        "uroloji/u03-1#6",
+        "uroloji/u03-1#37"
+       ],
+       "checkup": [
+        "uroloji/u03-1#44",
+        "uroloji/u03-1#39",
+        "uroloji/u03-1#34"
+       ]
+      },
+      {
+       "no": 4,
+       "baslik": "Üriner sistem enfeksiyonlarında tanı",
+       "ders": "u03",
+       "dersAd": "Üriner Sistem Enfeksiyonları",
+       "dersNo": "3",
+       "p": [
+        36,
+        43
+       ],
+       "sorular": [
+        "uroloji/u03-1#38",
+        "uroloji/u03-2#35",
+        "uroloji/u03-1#43",
+        "uroloji/u03-2#51",
+        "uroloji/u03-1#16"
+       ],
+       "checkup": [
+        "uroloji/u03-2#46",
+        "uroloji/u03-2#40",
+        "uroloji/u03-1#41",
+        "uroloji/u03-2#45"
+       ]
+      },
+      {
+       "no": 5,
+       "baslik": "Üriner sistem enfeksiyonlarında kültür endikasyonu, görüntüleme ve tedavi",
+       "ders": "u03",
+       "dersAd": "Üriner Sistem Enfeksiyonları",
+       "dersNo": "3",
+       "p": [
+        44,
+        56
+       ],
+       "sorular": [
+        "uroloji/u03-2#48",
+        "uroloji/u03-2#50",
+        "uroloji/u03-2#23",
+        "uroloji/u03-2#27",
+        "uroloji/u03-2#31"
+       ],
+       "checkup": [
+        "uroloji/u03-2#49",
+        "uroloji/u03-2#42",
+        "uroloji/u03-1#33"
+       ]
+      }
+     ]
+    },
+    {
+     "key": "k1-90-son-prova-uroloji-2",
+     "no": 2,
+     "baslik": "Enfeksiyon epidemiyolojisi, spesifik enfeksiyonlar ve enürezis",
+     "kelime": 4847,
+     "tahminiDk": 43,
+     "sayfa": 150,
+     "dersler": [
+      {
+       "kod": "u04",
+       "no": "4",
+       "ad": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi"
+      },
+      {
+       "kod": "u05",
+       "no": "5",
+       "ad": "Üriner Sistemin Spesifik Enfeksiyonları"
+      },
+      {
+       "kod": "u06",
+       "no": "6",
+       "ad": "Enürezis Nokturna"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "ÜSE tanımları, epidemiyoloji ve risk grupları",
+       "ders": "u04",
+       "dersAd": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+       "dersNo": "4",
+       "p": [
+        0,
+        15
+       ],
+       "sorular": [
+        "uroloji/u04-1#58",
+        "uroloji/u04-1#53",
+        "uroloji/u04-1#45",
+        "uroloji/u04-1#49",
+        "uroloji/u04-1#5"
+       ],
+       "checkup": [
+        "uroloji/u04-1#44",
+        "uroloji/u04-1#37",
+        "uroloji/u04-1#55"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Hematüri, ağrı ve alt üriner sistem semptomları",
+       "ders": "u04",
+       "dersAd": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+       "dersNo": "4",
+       "p": [
+        16,
+        25
+       ],
+       "sorular": [
+        "uroloji/u04-2#50",
+        "uroloji/u04-2#36",
+        "uroloji/u04-2#41",
+        "uroloji/u04-2#42"
+       ],
+       "checkup": [
+        "uroloji/u04-1#43",
+        "uroloji/u04-2#56",
+        "uroloji/u04-2#18"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "Klinik tablolar: prostatit, orşit, epididimit, üretrit",
+       "ders": "u04",
+       "dersAd": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+       "dersNo": "4",
+       "p": [
+        26,
+        33
+       ],
+       "sorular": [
+        "uroloji/u04-2#38",
+        "uroloji/u04-2#48",
+        "uroloji/u04-1#47",
+        "uroloji/u04-2#34"
+       ],
+       "checkup": [
+        "uroloji/u04-2#31",
+        "uroloji/u04-2#57",
+        "uroloji/u04-2#29"
+       ]
+      },
+      {
+       "no": 4,
+       "baslik": "Spesifik enfeksiyonlar: tüberküloz, prostatit, orşit, kist hidatik",
+       "ders": "u05",
+       "dersAd": "Üriner Sistemin Spesifik Enfeksiyonları",
+       "dersNo": "5",
+       "p": [
+        34,
+        45
+       ],
+       "sorular": [
+        "uroloji/u05-1#27",
+        "uroloji/u05-2#26",
+        "uroloji/u05-1#24",
+        "uroloji/u05-2#21",
+        "uroloji/u05-2#23"
+       ],
+       "checkup": [
+        "uroloji/u05-1#22",
+        "uroloji/u05-1#25",
+        "uroloji/u05-1#28",
+        "uroloji/u05-2#16"
+       ]
+      },
+      {
+       "no": 5,
+       "baslik": "Enürezis nokturna",
+       "ders": "u06",
+       "dersAd": "Enürezis Nokturna",
+       "dersNo": "6",
+       "p": [
+        46,
+        57
+       ],
+       "sorular": [
+        "uroloji/u06-1#24",
+        "uroloji/u06-1#28",
+        "uroloji/u06-2#22",
+        "uroloji/u06-2#27",
+        "uroloji/u06-2#21"
+       ],
+       "checkup": [
+        "uroloji/u06-1#29",
+        "uroloji/u06-2#23",
+        "uroloji/u06-2#30",
+        "uroloji/u06-1#31"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "brans": "halksagligi",
+   "ad": "Halk Sağlığı",
+   "soru": 10,
+   "genel": [
+    "halksagligi/h01-2#45",
+    "halksagligi/h01-2#7",
+    "halksagligi/h01-2#46",
+    "halksagligi/h02-2#5",
+    "halksagligi/h02-1#36",
+    "halksagligi/h02-1#46",
+    "halksagligi/h03-2#3",
+    "halksagligi/h03-1#17",
+    "halksagligi/h03-1#49",
+    "halksagligi/h04-2#18",
+    "halksagligi/h04-1#40",
+    "halksagligi/h04-1#13",
+    "halksagligi/h05#25",
+    "halksagligi/h05#35",
+    "halksagligi/h05#29",
+    "halksagligi/h06#18",
+    "halksagligi/h06#13",
+    "halksagligi/h06#11",
+    "halksagligi/h07#12",
+    "halksagligi/h07#13",
+    "halksagligi/h07#17"
+   ],
+   "partlar": [
+    {
+     "key": "k1-91-son-prova-halk-sagligi-1",
+     "no": 1,
+     "baslik": "Tarihçe, ana çocuk sağlığı, bebek beslenmesi ve salgın kontrolü",
+     "kelime": 4446,
+     "tahminiDk": 40,
+     "sayfa": 181,
+     "dersler": [
+      {
+       "kod": "h01",
+       "no": "1",
+       "ad": "Halk Sağlığı Tarihçesi"
+      },
+      {
+       "kod": "h02",
+       "no": "2",
+       "ad": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi"
+      },
+      {
+       "kod": "h03",
+       "no": "3",
+       "ad": "Bebek Beslenmesi: Göstergeler, Gereksinimler, Anne Sütü ve Tamamlayıcı Beslenme"
+      },
+      {
+       "kod": "h04",
+       "no": "4",
+       "ad": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "Halk sağlığı tarihçesi ve koruma düzeyleri",
+       "ders": "h01",
+       "dersAd": "Halk Sağlığı Tarihçesi",
+       "dersNo": "1",
+       "p": [
+        0,
+        15
+       ],
+       "sorular": [
+        "halksagligi/h01-1#28",
+        "halksagligi/h01-1#9",
+        "halksagligi/h01-1#27",
+        "halksagligi/h01-2#25",
+        "halksagligi/h01-2#30"
+       ],
+       "checkup": [
+        "halksagligi/h01-2#32",
+        "halksagligi/h01-2#29",
+        "halksagligi/h01-2#36"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Ana çocuk sağlığı izlemi",
+       "ders": "h02",
+       "dersAd": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+       "dersNo": "2",
+       "p": [
+        16,
+        32
+       ],
+       "sorular": [
+        "halksagligi/h02-1#26",
+        "halksagligi/h02-1#28",
+        "halksagligi/h02-2#15",
+        "halksagligi/h02-2#33",
+        "halksagligi/h02-1#7"
+       ],
+       "checkup": [
+        "halksagligi/h02-1#31",
+        "halksagligi/h02-2#29",
+        "halksagligi/h02-1#27"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "Bebek beslenmesi ve anne sütü",
+       "ders": "h03",
+       "dersAd": "Bebek Beslenmesi: Göstergeler, Gereksinimler, Anne Sütü ve Tamamlayıcı Beslenme",
+       "dersNo": "3",
+       "p": [
+        33,
+        45
+       ],
+       "sorular": [
+        "halksagligi/h03-2#32",
+        "halksagligi/h03-2#44",
+        "halksagligi/h03-2#34",
+        "halksagligi/h03-1#41",
+        "halksagligi/h03-1#36"
+       ],
+       "checkup": [
+        "halksagligi/h03-2#42",
+        "halksagligi/h03-1#35",
+        "halksagligi/h03-1#31"
+       ]
+      },
+      {
+       "no": 4,
+       "baslik": "Salgınlarda kontrol ve korunma",
+       "ders": "h04",
+       "dersAd": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+       "dersNo": "4",
+       "p": [
+        46,
+        54
+       ],
+       "sorular": [
+        "halksagligi/h04-2#22",
+        "halksagligi/h04-2#23",
+        "halksagligi/h04-1#25",
+        "halksagligi/h04-2#6"
+       ],
+       "checkup": [
+        "halksagligi/h04-1#20",
+        "halksagligi/h04-1#5",
+        "halksagligi/h04-2#8"
+       ]
+      }
+     ]
+    },
+    {
+     "key": "k1-92-son-prova-halk-sagligi-2",
+     "no": 2,
+     "baslik": "Enfeksiyon epidemiyolojisi, sağlık hizmetleri ve gebelikte beslenme",
+     "kelime": 3559,
+     "tahminiDk": 32,
+     "sayfa": 150,
+     "dersler": [
+      {
+       "kod": "h05",
+       "no": "5",
+       "ad": "Enfeksiyon Hastalıklarının Epidemiyolojisi: Genel Epidemiyolojik Özellikler"
+      },
+      {
+       "kod": "h06",
+       "no": "6",
+       "ad": "Türkiye'de Sağlık Hizmetleri"
+      },
+      {
+       "kod": "h07",
+       "no": "7",
+       "ad": "Gebelik ve Emzirme Döneminde Beslenme"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "Enfeksiyon hastalıklarının genel epidemiyolojisi",
+       "ders": "h05",
+       "dersAd": "Enfeksiyon Hastalıklarının Epidemiyolojisi: Genel Epidemiyolojik Özellikler",
+       "dersNo": "5",
+       "p": [
+        0,
+        16
+       ],
+       "sorular": [
+        "halksagligi/h05#21",
+        "halksagligi/h05#4",
+        "halksagligi/h05#5",
+        "halksagligi/h05#3",
+        "halksagligi/h05#6"
+       ],
+       "checkup": [
+        "halksagligi/h05#22",
+        "halksagligi/h05#38",
+        "halksagligi/h05#31",
+        "halksagligi/h05#9"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Türkiye'de sağlık hizmetleri",
+       "ders": "h06",
+       "dersAd": "Türkiye'de Sağlık Hizmetleri",
+       "dersNo": "6",
+       "p": [
+        17,
+        30
+       ],
+       "sorular": [
+        "halksagligi/h06#10",
+        "halksagligi/h06#14",
+        "halksagligi/h06#15",
+        "halksagligi/h06#20",
+        "halksagligi/h06#9"
+       ],
+       "checkup": [
+        "halksagligi/h06#21",
+        "halksagligi/h06#8",
+        "halksagligi/h06#17"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "Gebelik ve emzirme döneminde beslenme",
+       "ders": "h07",
+       "dersAd": "Gebelik ve Emzirme Döneminde Beslenme",
+       "dersNo": "7",
+       "p": [
+        31,
+        52
+       ],
+       "sorular": [
+        "halksagligi/h07#21",
+        "halksagligi/h07#20",
+        "halksagligi/h07#19",
+        "halksagligi/h07#11",
+        "halksagligi/h07#9"
+       ],
+       "checkup": [
+        "halksagligi/h07#22",
+        "halksagligi/h07#14",
+        "halksagligi/h07#2"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "brans": "kadindogum",
+   "ad": "Kadın Hastalıkları ve Doğum",
+   "soru": 6,
+   "genel": [
+    "kadindogum/k01-1#45",
+    "kadindogum/k01-1#1",
+    "kadindogum/k01-2#10",
+    "kadindogum/k01-2#18",
+    "kadindogum/k02-2#15",
+    "kadindogum/k02-2#17"
+   ],
+   "partlar": [
+    {
+     "key": "k1-93-son-prova-kadin-dogum",
+     "no": 1,
+     "baslik": "Abortus ve gebelik terminolojisi",
+     "kelime": 4515,
+     "tahminiDk": 40,
+     "sayfa": 79,
+     "dersler": [
+      {
+       "kod": "k01",
+       "no": "1",
+       "ad": "Abortus ve Erken Gebelik Kaybı"
+      },
+      {
+       "kod": "k02",
+       "no": "2",
+       "ad": "Gebelik Terminolojisi ve Kavramları"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "Abortus tanımı, sıklığı ve nedenleri",
+       "ders": "k01",
+       "dersAd": "Abortus ve Erken Gebelik Kaybı",
+       "dersNo": "1",
+       "p": [
+        0,
+        9
+       ],
+       "sorular": [
+        "kadindogum/k01-1#29",
+        "kadindogum/k01-1#42",
+        "kadindogum/k01-1#22",
+        "kadindogum/k01-1#20"
+       ],
+       "checkup": [
+        "kadindogum/k01-1#2",
+        "kadindogum/k01-1#21"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Abortus tipleri, tanı ve tekrarlayan gebelik kaybı",
+       "ders": "k01",
+       "dersAd": "Abortus ve Erken Gebelik Kaybı",
+       "dersNo": "1",
+       "p": [
+        10,
+        23
+       ],
+       "sorular": [
+        "kadindogum/k01-1#31",
+        "kadindogum/k01-2#32",
+        "kadindogum/k01-2#30",
+        "kadindogum/k01-2#7",
+        "kadindogum/k01-1#8"
+       ],
+       "checkup": [
+        "kadindogum/k01-1#33",
+        "kadindogum/k01-2#28",
+        "kadindogum/k01-2#24"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "Gebelik tanımları, obstetrik formül ve term sınırları",
+       "ders": "k02",
+       "dersAd": "Gebelik Terminolojisi ve Kavramları",
+       "dersNo": "2",
+       "p": [
+        24,
+        31
+       ],
+       "sorular": [
+        "kadindogum/k02-1#42",
+        "kadindogum/k02-2#28",
+        "kadindogum/k02-2#11",
+        "kadindogum/k02-2#16"
+       ],
+       "checkup": [
+        "kadindogum/k02-1#40",
+        "kadindogum/k02-2#38",
+        "kadindogum/k02-1#35"
+       ]
+      },
+      {
+       "no": 4,
+       "baslik": "Gebelik tanısı, Naegele kuralı ve muayene bulguları",
+       "ders": "k02",
+       "dersAd": "Gebelik Terminolojisi ve Kavramları",
+       "dersNo": "2",
+       "p": [
+        32,
+        39
+       ],
+       "sorular": [
+        "kadindogum/k02-1#24",
+        "kadindogum/k02-1#23",
+        "kadindogum/k02-1#41",
+        "kadindogum/k02-1#3"
+       ],
+       "checkup": [
+        "kadindogum/k02-1#26",
+        "kadindogum/k02-1#34",
+        "kadindogum/k02-1#2"
+       ]
+      },
+      {
+       "no": 5,
+       "baslik": "Gebelik fizyolojisi ve ilk izlem tetkikleri",
+       "ders": "k02",
+       "dersAd": "Gebelik Terminolojisi ve Kavramları",
+       "dersNo": "2",
+       "p": [
+        40,
+        50
+       ],
+       "sorular": [
+        "kadindogum/k02-2#12",
+        "kadindogum/k02-1#33",
+        "kadindogum/k02-1#29"
+       ],
+       "checkup": [
+        "kadindogum/k02-2#10",
+        "kadindogum/k02-2#8"
+       ]
+      },
+      {
+       "no": 6,
+       "baslik": "Prenatal testler, destek tedavisi, fetal iyilik ve ilaç güvenliği",
+       "ders": "k02",
+       "dersAd": "Gebelik Terminolojisi ve Kavramları",
+       "dersNo": "2",
+       "p": [
+        51,
+        59
+       ],
+       "sorular": [
+        "kadindogum/k02-1#31",
+        "kadindogum/k02-1#37",
+        "kadindogum/k02-1#25"
+       ],
+       "checkup": [
+        "kadindogum/k02-1#36",
+        "kadindogum/k02-1#30",
+        "kadindogum/k02-1#32"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "brans": "farmakoloji",
+   "ad": "Tıbbi Farmakoloji",
+   "soru": 4,
+   "genel": [
+    "farmakoloji/f01-1#9",
+    "farmakoloji/f01-1#61",
+    "farmakoloji/f01-1#44",
+    "farmakoloji/f01-1#18",
+    "farmakoloji/f01-1#46",
+    "farmakoloji/f01-1#23",
+    "farmakoloji/f01-2#47",
+    "farmakoloji/f01-2#2",
+    "farmakoloji/f01-2#21",
+    "farmakoloji/f01-2#55",
+    "farmakoloji/f01-2#17",
+    "farmakoloji/f01-2#8"
+   ],
+   "partlar": [
+    {
+     "key": "k1-94-son-prova-farmakoloji",
+     "no": 1,
+     "baslik": "İmmünofarmakoloji",
+     "kelime": 4133,
+     "tahminiDk": 37,
+     "sayfa": 85,
+     "dersler": [
+      {
+       "kod": "f01",
+       "no": "1",
+       "ad": "İmmünofarmakoloji: İmmün Yanıt, İmmünosüpresifler, Monoklonal Antikorlar ve İmmünomodülasyon"
+      }
+     ],
+     "asamalar": [
+      {
+       "no": 1,
+       "baslik": "İmmün yanıtın temelleri ve bozuklukları",
+       "ders": "f01",
+       "dersAd": "İmmünofarmakoloji: İmmün Yanıt, İmmünosüpresifler, Monoklonal Antikorlar ve İmmünomodülasyon",
+       "dersNo": "1",
+       "p": [
+        0,
+        11
+       ],
+       "sorular": [
+        "farmakoloji/f01-1#41",
+        "farmakoloji/f01-1#33",
+        "farmakoloji/f01-1#19"
+       ],
+       "checkup": [
+        "farmakoloji/f01-1#24",
+        "farmakoloji/f01-1#64"
+       ]
+      },
+      {
+       "no": 2,
+       "baslik": "Glukokortikoidler ve kalsinörin inhibitörleri",
+       "ders": "f01",
+       "dersAd": "İmmünofarmakoloji: İmmün Yanıt, İmmünosüpresifler, Monoklonal Antikorlar ve İmmünomodülasyon",
+       "dersNo": "1",
+       "p": [
+        12,
+        21
+       ],
+       "sorular": [
+        "farmakoloji/f01-1#30",
+        "farmakoloji/f01-1#32",
+        "farmakoloji/f01-1#66"
+       ],
+       "checkup": [
+        "farmakoloji/f01-1#36",
+        "farmakoloji/f01-1#39"
+       ]
+      },
+      {
+       "no": 3,
+       "baslik": "mTOR inhibitörleri, JAK inhibitörü, mikofenolat ve talidomid",
+       "ders": "f01",
+       "dersAd": "İmmünofarmakoloji: İmmün Yanıt, İmmünosüpresifler, Monoklonal Antikorlar ve İmmünomodülasyon",
+       "dersNo": "1",
+       "p": [
+        22,
+        30
+       ],
+       "sorular": [
+        "farmakoloji/f01-1#27",
+        "farmakoloji/f01-1#37",
+        "farmakoloji/f01-1#12"
+       ],
+       "checkup": [
+        "farmakoloji/f01-1#1",
+        "farmakoloji/f01-1#3"
+       ]
+      },
+      {
+       "no": 4,
+       "baslik": "Sitotoksik ajanlar ve multipl skleroz ilaçları",
+       "ders": "f01",
+       "dersAd": "İmmünofarmakoloji: İmmün Yanıt, İmmünosüpresifler, Monoklonal Antikorlar ve İmmünomodülasyon",
+       "dersNo": "1",
+       "p": [
+        31,
+        40
+       ],
+       "sorular": [
+        "farmakoloji/f01-2#34",
+        "farmakoloji/f01-2#11",
+        "farmakoloji/f01-2#15"
+       ],
+       "checkup": [
+        "farmakoloji/f01-2#13",
+        "farmakoloji/f01-2#14"
+       ]
+      },
+      {
+       "no": 5,
+       "baslik": "İmmünosüpresif antikorlar ve antitümör monoklonal antikorlar",
+       "ders": "f01",
+       "dersAd": "İmmünofarmakoloji: İmmün Yanıt, İmmünosüpresifler, Monoklonal Antikorlar ve İmmünomodülasyon",
+       "dersNo": "1",
+       "p": [
+        41,
+        51
+       ],
+       "sorular": [
+        "farmakoloji/f01-2#38",
+        "farmakoloji/f01-2#28",
+        "farmakoloji/f01-2#50"
+       ],
+       "checkup": [
+        "farmakoloji/f01-2#25",
+        "farmakoloji/f01-2#54"
+       ]
+      },
+      {
+       "no": 6,
+       "baslik": "Biyolojik immünomodülatörler, klinik kullanım ve sitokinler",
+       "ders": "f01",
+       "dersAd": "İmmünofarmakoloji: İmmün Yanıt, İmmünosüpresifler, Monoklonal Antikorlar ve İmmünomodülasyon",
+       "dersNo": "1",
+       "p": [
+        52,
+        63
+       ],
+       "sorular": [
+        "farmakoloji/f01-1#40",
+        "farmakoloji/f01-2#35",
+        "farmakoloji/f01-2#29"
+       ],
+       "checkup": [
+        "farmakoloji/f01-1#31",
+        "farmakoloji/f01-2#10"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "denemeler": [
+  {
+   "no": 1,
+   "sure": 120,
+   "sorular": [
+    "patoloji/01#22",
+    "patoloji/02#40",
+    "patoloji/03#44",
+    "patoloji/04#36",
+    "patoloji/05#44",
+    "patoloji/06#15",
+    "patoloji/07#26",
+    "patoloji/08#29",
+    "patoloji/09#53",
+    "patoloji/10#42",
+    "patoloji/11#37",
+    "patoloji/12#20",
+    "patoloji/13#56",
+    "patoloji/14#49",
+    "patoloji/15#19",
+    "patoloji/16#37",
+    "patoloji/17#29",
+    "patoloji/18#35",
+    "patoloji/20#33",
+    "patoloji/21#32",
+    "patoloji/22#43",
+    "patoloji/23#48",
+    "patoloji/24#27",
+    "patoloji/25#42",
+    "patoloji/26#43",
+    "patoloji/26b#47",
+    "patoloji/28#41",
+    "patoloji/39#41",
+    "patoloji/30#31",
+    "patoloji/31#41",
+    "patoloji/32#34",
+    "patoloji/33#26",
+    "patoloji/34#38",
+    "patoloji/35#18",
+    "enfeksiyon/e01#32",
+    "enfeksiyon/e02-1#23",
+    "enfeksiyon/e02-2#31",
+    "enfeksiyon/e03-1#20",
+    "enfeksiyon/e03-2#44",
+    "enfeksiyon/e04-2#45",
+    "enfeksiyon/e04-2#32",
+    "enfeksiyon/e04-2#36",
+    "enfeksiyon/e04-2#26",
+    "enfeksiyon/e04-1#6",
+    "enfeksiyon/e05-2#17",
+    "enfeksiyon/e06#25",
+    "enfeksiyon/e06#13",
+    "enfeksiyon/e07#19",
+    "enfeksiyon/e07#13",
+    "enfeksiyon/e08#15",
+    "enfeksiyon/e09#32",
+    "enfeksiyon/e09#9",
+    "enfeksiyon/e10#5",
+    "enfeksiyon/e11-1#27",
+    "enfeksiyon/e11-2#19",
+    "enfeksiyon/e11-2#17",
+    "genetik/g01-2#16",
+    "genetik/g02-1#15",
+    "genetik/g02-1#12",
+    "genetik/g03-1#28",
+    "genetik/g03-1#56",
+    "genetik/g03-1#33",
+    "genetik/g03-2#13",
+    "genetik/g04-2#15",
+    "genetik/g05-1#27",
+    "genetik/g05-2#13",
+    "genetik/g05-1#10",
+    "genetik/g06-1#3",
+    "uroloji/u01-2#11",
+    "uroloji/u02-1#5",
+    "uroloji/u03-1#10",
+    "uroloji/u03-2#21",
+    "uroloji/u03-1#76",
+    "uroloji/u04-1#40",
+    "uroloji/u04-2#65",
+    "uroloji/u04-2#71",
+    "uroloji/u04-2#67",
+    "uroloji/u05-1#3",
+    "uroloji/u06-1#32",
+    "uroloji/u06-2#50",
+    "halksagligi/h01-2#26",
+    "halksagligi/h01-1#56",
+    "halksagligi/h02-1#32",
+    "halksagligi/h02-1#45",
+    "halksagligi/h02-2#16",
+    "halksagligi/h03-1#40",
+    "halksagligi/h03-1#9",
+    "halksagligi/h04-2#16",
+    "halksagligi/h06#12",
+    "halksagligi/h07#15",
+    "kadindogum/k01-2#36",
+    "kadindogum/k01-2#5",
+    "kadindogum/k02-2#39",
+    "kadindogum/k02-2#14",
+    "kadindogum/k02-2#21",
+    "kadindogum/k02-2#13",
+    "farmakoloji/f01-2#6",
+    "farmakoloji/f01-2#22",
+    "farmakoloji/f01-1#4",
+    "farmakoloji/f01-1#62"
+   ]
+  },
+  {
+   "no": 2,
+   "sure": 120,
+   "sorular": [
+    "patoloji/01#32",
+    "patoloji/02#19",
+    "patoloji/03#19",
+    "patoloji/04#33",
+    "patoloji/05#39",
+    "patoloji/07#18",
+    "patoloji/08#38",
+    "patoloji/09#21",
+    "patoloji/10#22",
+    "patoloji/11#48",
+    "patoloji/12#47",
+    "patoloji/13#27",
+    "patoloji/14#30",
+    "patoloji/15#46",
+    "patoloji/16#26",
+    "patoloji/17#22",
+    "patoloji/18#47",
+    "patoloji/19#16",
+    "patoloji/20#38",
+    "patoloji/21#17",
+    "patoloji/22#27",
+    "patoloji/23#36",
+    "patoloji/24#31",
+    "patoloji/25#51",
+    "patoloji/26#22",
+    "patoloji/26b#17",
+    "patoloji/28#36",
+    "patoloji/39#30",
+    "patoloji/30#16",
+    "patoloji/31#36",
+    "patoloji/32#25",
+    "patoloji/33#41",
+    "patoloji/34#15",
+    "patoloji/35#33",
+    "enfeksiyon/e01#38",
+    "enfeksiyon/e02-1#27",
+    "enfeksiyon/e02-2#18",
+    "enfeksiyon/e03-2#26",
+    "enfeksiyon/e03-1#42",
+    "enfeksiyon/e04-2#62",
+    "enfeksiyon/e04-1#18",
+    "enfeksiyon/e04-2#34",
+    "enfeksiyon/e04-2#59",
+    "enfeksiyon/e04-2#29",
+    "enfeksiyon/e05-1#30",
+    "enfeksiyon/e06#26",
+    "enfeksiyon/e06#11",
+    "enfeksiyon/e07#22",
+    "enfeksiyon/e07#32",
+    "enfeksiyon/e08#30",
+    "enfeksiyon/e09#34",
+    "enfeksiyon/e09#15",
+    "enfeksiyon/e09#17",
+    "enfeksiyon/e11-1#38",
+    "enfeksiyon/e11-2#10",
+    "enfeksiyon/e11-2#16",
+    "genetik/g01-1#1",
+    "genetik/g02-2#6",
+    "genetik/g03-2#25",
+    "genetik/g03-2#17",
+    "genetik/g03-2#49",
+    "genetik/g03-2#5",
+    "genetik/g04-1#44",
+    "genetik/g05-1#24",
+    "genetik/g05-1#52",
+    "genetik/g05-2#16",
+    "genetik/g06-1#24",
+    "genetik/g06-2#11",
+    "uroloji/u02-2#17",
+    "uroloji/u03-1#56",
+    "uroloji/u03-1#4",
+    "uroloji/u03-1#2",
+    "uroloji/u04-1#54",
+    "uroloji/u04-1#7",
+    "uroloji/u04-2#20",
+    "uroloji/u04-1#11",
+    "uroloji/u05-1#2",
+    "uroloji/u05-2#15",
+    "uroloji/u06-1#33",
+    "uroloji/u06-2#40",
+    "halksagligi/h01-2#35",
+    "halksagligi/h01-2#13",
+    "halksagligi/h02-1#30",
+    "halksagligi/h02-1#1",
+    "halksagligi/h02-2#38",
+    "halksagligi/h03-1#38",
+    "halksagligi/h03-1#47",
+    "halksagligi/h04-1#15",
+    "halksagligi/h05#23",
+    "halksagligi/h06#16",
+    "kadindogum/k01-2#15",
+    "kadindogum/k02-2#43",
+    "kadindogum/k02-1#27",
+    "kadindogum/k02-2#9",
+    "kadindogum/k02-2#19",
+    "kadindogum/k02-2#18",
+    "farmakoloji/f01-2#5",
+    "farmakoloji/f01-1#42",
+    "farmakoloji/f01-2#59",
+    "farmakoloji/f01-2#7"
+   ]
+  },
+  {
+   "no": 3,
+   "sure": 120,
+   "sorular": [
+    "patoloji/02#12",
+    "patoloji/03#13",
+    "patoloji/04#11",
+    "patoloji/05#32",
+    "patoloji/06#35",
+    "patoloji/07#49",
+    "patoloji/08#39",
+    "patoloji/09#39",
+    "patoloji/10#40",
+    "patoloji/12#21",
+    "patoloji/13#46",
+    "patoloji/14#40",
+    "patoloji/15#37",
+    "patoloji/15#41",
+    "patoloji/16#46",
+    "patoloji/17#49",
+    "patoloji/18#18",
+    "patoloji/19#34",
+    "patoloji/20#35",
+    "patoloji/21#35",
+    "patoloji/22#36",
+    "patoloji/23#44",
+    "patoloji/24#43",
+    "patoloji/25#47",
+    "patoloji/26#31",
+    "patoloji/26b#24",
+    "patoloji/28#18",
+    "patoloji/39#24",
+    "patoloji/30#43",
+    "patoloji/31#32",
+    "patoloji/32#42",
+    "patoloji/33#43",
+    "patoloji/34#54",
+    "patoloji/35#42",
+    "enfeksiyon/e01#15",
+    "enfeksiyon/e02-2#36",
+    "enfeksiyon/e03-2#32",
+    "enfeksiyon/e03-1#4",
+    "enfeksiyon/e04-1#12",
+    "enfeksiyon/e04-1#5",
+    "enfeksiyon/e04-1#16",
+    "enfeksiyon/e04-2#52",
+    "enfeksiyon/e04-2#61",
+    "enfeksiyon/e05-1#26",
+    "enfeksiyon/e05-2#10",
+    "enfeksiyon/e06#20",
+    "enfeksiyon/e06#35",
+    "enfeksiyon/e07#26",
+    "enfeksiyon/e07#6",
+    "enfeksiyon/e08#36",
+    "enfeksiyon/e09#20",
+    "enfeksiyon/e09#28",
+    "enfeksiyon/e09#31",
+    "enfeksiyon/e11-1#37",
+    "enfeksiyon/e11-2#11",
+    "enfeksiyon/e11-2#15",
+    "genetik/g01-1#27",
+    "genetik/g01-2#30",
+    "genetik/g02-2#37",
+    "genetik/g03-1#30",
+    "genetik/g03-2#16",
+    "genetik/g03-1#53",
+    "genetik/g03-1#4",
+    "genetik/g05-2#31",
+    "genetik/g05-2#46",
+    "genetik/g05-2#42",
+    "genetik/g06-2#10",
+    "genetik/g06-1#15",
+    "uroloji/u02-2#32",
+    "uroloji/u03-1#52",
+    "uroloji/u03-1#72",
+    "uroloji/u04-1#46",
+    "uroloji/u04-2#69",
+    "uroloji/u04-2#73",
+    "uroloji/u04-2#27",
+    "uroloji/u05-2#31",
+    "uroloji/u05-2#41",
+    "uroloji/u06-1#26",
+    "uroloji/u06-2#12",
+    "uroloji/u06-2#8",
+    "halksagligi/h01-2#34",
+    "halksagligi/h01-1#52",
+    "halksagligi/h02-1#3",
+    "halksagligi/h02-2#13",
+    "halksagligi/h02-2#12",
+    "halksagligi/h03-2#50",
+    "halksagligi/h04-2#21",
+    "halksagligi/h04-1#38",
+    "halksagligi/h05#17",
+    "halksagligi/h06#19",
+    "kadindogum/k01-2#40",
+    "kadindogum/k01-1#34",
+    "kadindogum/k02-1#1",
+    "kadindogum/k02-2#20",
+    "kadindogum/k02-2#22",
+    "kadindogum/k02-1#4",
+    "farmakoloji/f01-2#58",
+    "farmakoloji/f01-1#60",
+    "farmakoloji/f01-2#51",
+    "farmakoloji/f01-2#57"
+   ]
+  }
+ ],
+ "surum": "385d54d791"
+}

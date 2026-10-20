@@ -127,6 +127,7 @@ const SaglikView = React.lazy(() => wrapLazy(import('./components/saglik/SaglikV
 const CanliDersView = React.lazy(() => wrapLazy(import('./components/canliDers/CanliDersView')));
 const PatolojiCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/PatolojiCheckUp')));
 const GenetikCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/GenetikCheckUp')));
+const SonProvaView = React.lazy(() => wrapLazy(import('./components/sonProva/SonProvaView')));
 const BasarimView = React.lazy(() => wrapLazy(import('./components/basarim/BasarimView')));
 const BasarimKatmani = React.lazy(() => wrapLazy(import('./components/basarim/BasarimKatmani')));
 const BitirdiklerimView = React.lazy(() => wrapLazy(import('./components/takip/BitirdiklerimView')));
@@ -506,7 +507,7 @@ export default function App() {
       const qs = sp.toString();
       const cur = window.location.pathname.replace(/^\/meds(?=\/|$)/, '');
       // Yönetim alt derin bağlantısı (/manage/kisiler/<kişi>) üçüncü parçayı taşır; kırpılmaz
-      const deeperManage = (initialRoute.route === 'manage' || initialRoute.route === 'kamp') && cur.startsWith(`${next}/`);
+      const deeperManage = (initialRoute.route === 'manage' || initialRoute.route === 'kamp' || initialRoute.route === 'son_prova') && cur.startsWith(`${next}/`);
       if ((cur !== next && !deeperManage) || window.location.search.includes('questionId')) {
         window.history.replaceState({ route: initialRoute.route, param: initialRoute.param }, '', next + (qs ? `?${qs}` : '') + window.location.hash);
       }
@@ -1939,6 +1940,13 @@ export default function App() {
         {activeTab === 'gecmis_kurullar' && (
           <Suspense fallback={<ViewFallback />}>
             <GecmisKurullarView />
+          </Suspense>
+        )}
+
+        {/* TAB: /son-prova — Son Prova: kurulun tüm dersleri sesli özet partları, aşama soruları, check-up, 3 deneme (yolu kendisi okur) */}
+        {activeTab === 'son_prova' && (
+          <Suspense fallback={<ViewFallback />}>
+            <SonProvaView />
           </Suspense>
         )}
 

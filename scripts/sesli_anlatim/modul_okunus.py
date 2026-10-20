@@ -13,6 +13,11 @@ import re
 import sys
 
 MODUL_ANAHTARLAR = {"k1-70-tbg-sinav-kampi"}
+SON_PROVA = re.compile(r"^k\d+-\d+-son-prova-")  # Son Prova partları da modül yazımıyla (BRCA1, IL-6) yazılır
+
+
+def modul_mu(anahtar: str) -> bool:
+    return anahtar in MODUL_ANAHTARLAR or bool(SON_PROVA.match(anahtar))
 
 UZUN = {"A": "aa", "B": "bee", "C": "cee", "Ç": "çee", "D": "dee", "E": "ee", "F": "fee", "G": "gee", "H": "haa", "I": "ıı",
         "İ": "ii", "J": "jee", "K": "kaa", "L": "lee", "M": "mee", "N": "nee", "O": "oo", "Ö": "öö", "P": "pee", "R": "ree",
@@ -28,7 +33,17 @@ KELIME = {
     "mTOR": "em tor", "PIK": "pik", "VUS": "vee uu see", "NTRK": "en te er ka", "POR": "por", "AXL": "aa iks el", "ERBB": "er bee bee",
     "CTLA": "cee tee lee aa", "TP": "tee pee", "DNA": "dee nee aa", "mRNA": "mee ree nee aa", "hCG": "haa cee gee",
     "RhD": "ree haa dee", "pRB": "pee ree bee", "EGFR": "ee gee fee ree", "FGFR": "fee gee fee ree",
+    # Son Prova (2026-10-21): kelime gibi okunan kısaltmalar
+    "AIDS": "eyds", "ELISA": "eliza", "SOFA": "sofa", "SIRS": "sirs", "TORCH": "torç", "TORCHS": "torçs", "ANCA": "anka",
+    "UNICEF": "yunisef", "MERS": "mers", "CREST": "krest", "PUMA": "puma", "SNAIL": "sneyl", "TWIST": "tvist",
+    "HELLP": "help", "NICE": "nays", "KRAS": "kaa ras", "HRAS": "haa ras", "BRAF": "bee raf", "MALT": "malt", "JAK": "jak",
+    "SMAD": "smad", "RANKL": "rankl", "AmpC": "amp cee", "CAR": "kar", "NAPQI": "nee aa pee kiyu ıı", "KETEM": "ketem",
+    "SARS": "sars", "CoV": "kov", "SCID": "skid", "GLUT": "glut", "AIRE": "eyr", "CART": "kart", "OXA": "oksa",
+    "VISA": "vize", "MRSA": "mee ree see aa", "Scl": "skl", "Sm": "smit",
 }
+# Roma rakamı (tip II, faktör XIII, sınıf IV): sayıyla. XX, XXX, XY gibi kromozom formülleri DEĞİL (X tek başına da değil)
+ROMEN = {"II": 2, "III": 3, "IV": 4, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "XI": 11, "XII": 12, "XIII": 13}
+ROMEN_RE = re.compile(r"^(II|III|IV|VI|VII|VIII|IX|XI|XII|XIII)([abAB]?)$")
 BIR = ["", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz"]
 ON = ["", "on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen", "doksan"]
 
@@ -52,6 +67,12 @@ def parca_oku(p: str) -> str:
         x = m.group()
         if x.isdigit():
             out.append(sayi_oku(int(x)))
+        elif ROMEN_RE.match(x):
+            r = ROMEN_RE.match(x)
+            out.append(sayi_oku(ROMEN[r.group(1)]) + (" " + UZUN[r.group(2).upper()] if r.group(2) else ""))
+        elif re.fullmatch(r"Gp(II|III|IV|I)([ab]?)", x):
+            r = re.fullmatch(r"Gp(II|III|IV|I)([ab]?)", x)
+            out.append("gee pee " + sayi_oku({"I": 1, **ROMEN}[r.group(1)]) + (" " + UZUN[r.group(2).upper()] if r.group(2) else ""))
         elif x in KELIME:
             out.append(KELIME[x])
         elif sum(c.isupper() for c in x) >= 2 or (len(x) == 1 and x.isupper()) or (len(x) <= 2 and x[:1].isupper()):

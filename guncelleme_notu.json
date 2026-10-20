@@ -1,14 +1,22 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 142,
-  "baslik": "Hesap verileri tek profilde",
+  "onem": 143,
+  "baslik": "Büyük güncelleme: Son Prova",
   "maddeler": [
-    "Google ile ya da e-posta ile girişte aynı hesabın verileri artık ayrı kişiler gibi görünmez; profil gerçek hesaba bağlanır."
+    "Son Prova: Kurul 1'in yedi dersi sınav odaklı sesli özet partlarıyla (Patoloji 4 part, diğerleri 1–2 part; part başına en çok bir buçuk saat), EMA sesiyle ve kelime kelime takiple.",
+    "Her cümle kendi ders slaytına bağlı: yalnız anlatılan slaytlardan kırpılmış özet PDF, her sayfada hangi dersin hangi slaytı olduğu yazılı.",
+    "Her aşamanın sonunda sesli asistanla soru çözme, her partın sonunda check-up, her dersin genel check-up'ı; yanlışlar seni eksik bölüme götürür.",
+    "Sınav dağılımıyla (Patoloji 34, Enfeksiyon 22, Genetik 12, Üroloji 12, Halk Sağlığı 10, Kadın Doğum 6, Farmakoloji 4) 100 soruluk 3 deneme.",
+    "Partlar önce cihaza iner; internet gitse de, ekrandan çıkıp dönsen de kaldığın yerden devam edersin. Özetleri PDF olarak indirebilirsin."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Son Prova: Kurul 1'in yedi dersi sınav odaklı sesli özet partlarıyla (Patoloji 4 part, diğerleri 1–2 part; part başına en çok bir buçuk saat), EMA sesiyle ve kelime kelime takiple.",
+    "Her cümle kendi ders slaytına bağlı: yalnız anlatılan slaytlardan kırpılmış özet PDF, her sayfada hangi dersin hangi slaytı olduğu yazılı.",
+    "Her aşamanın sonunda sesli asistanla soru çözme, her partın sonunda check-up, her dersin genel check-up'ı; yanlışlar seni eksik bölüme götürür.",
+    "Sınav dağılımıyla (Patoloji 34, Enfeksiyon 22, Genetik 12, Üroloji 12, Halk Sağlığı 10, Kadın Doğum 6, Farmakoloji 4) 100 soruluk 3 deneme.",
+    "Partlar önce cihaza iner; internet gitse de, ekrandan çıkıp dönsen de kaldığın yerden devam edersin. Özetleri PDF olarak indirebilirsin."
+  ],
   "degisen": [],
-  "duzeltilen": [
-    "Google ile ya da e-posta ile girişte aynı hesabın verileri artık ayrı kişiler gibi görünmez; profil gerçek hesaba bağlanır."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }

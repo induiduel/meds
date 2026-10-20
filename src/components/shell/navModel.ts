@@ -11,6 +11,7 @@ import {
   CloudDownload,
   ClipboardCheck,
   Dna,
+  Flag,
   Headphones,
   MessageCircleQuestion,
   Star,
@@ -72,6 +73,7 @@ const I: Record<string, NavItem> = {
   alternatif_cozucu: { id: 'alternatif_cozucu', label: 'Alternatif çözücü', short: 'Alternatif', hint: 'Her soru baştan sona sesli anlatılır, otomatik geçer', icon: Headphones, tint: '#6366F1' },
   en_onemliler: { id: 'en_onemliler', label: 'En önemliler', short: 'Önemli', hint: 'Konu başına en önemli bilgiler, 100 puan', icon: Star, tint: '#F59E0B' },
   patoloji_checkup: { id: 'patoloji_checkup', label: 'Patoloji Check Up', short: 'Check Up', tile: 'Patoloji Check Up', hint: 'Mediyatör, sitokin, hücre ve hastalık tabloları; kendini sına', icon: Table2, tint: '#14B8A6' },
+  son_prova: { id: 'son_prova', label: 'Son Prova', short: 'Prova', tile: 'Son Prova', hint: 'Kurulun tüm dersleri sesli özetle, aşama soruları, check-up ve 100 soruluk 3 deneme', icon: Flag, tint: '#E11D48' },
   genetik_checkup: { id: 'genetik_checkup', label: 'TBG Sınav Kampı', short: 'Genetik', tile: 'TBG Sınav Kampı', hint: 'Hızlı ve tam mod sesli ders: bulgudan sendrom, kanserde hedef ilaç, belirteçler, çıkmışlar ve 12 soruluk deneme', icon: Dna, tint: '#10B981' },
   kamp: { id: 'kamp', label: 'Kurul kampı', short: 'Kamp', tile: 'Kurul kampı', hint: 'Hocanın derste verdiği ipuçlarından hızlı tekrar: sesli anlatım, kalıp kartları, deneme', icon: Tent, tint: '#EA580C' },
   spots: { id: 'spots', label: 'Sınav spotları', short: 'Spotlar', hint: 'En sık, ayırıcı bulgular, tuzaklar', icon: Crosshair, tint: '#FF3B30' },
@@ -113,7 +115,7 @@ export const NAV_ITEMS = I;
 export const NAV_TREE: NavGroup[] = [
   { label: null, items: [I.today] },
   { label: 'Ders çalış', items: [I.learn, I.canli_ders, I.notes, I.flashcards, I.summaries] },
-  { label: 'Sınava hazırlan', items: [I.sinav_calisma, I.soru_cozucu, I.alternatif_cozucu, I.en_onemliler, I.kamp, I.patoloji_checkup, I.genetik_checkup, I.spots] },
+  { label: 'Sınava hazırlan', items: [I.son_prova, I.sinav_calisma, I.soru_cozucu, I.alternatif_cozucu, I.en_onemliler, I.kamp, I.patoloji_checkup, I.genetik_checkup, I.spots] },
   { label: 'Soru çöz', items: [I.past_exams, I.questions, I.practice, I.ornek_sorular, I.olasi_sorular] },
   { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar, I.gecmis_kurullar, I.guncellemeler] },
   { label: 'Topluluk', items: [I.basarimlar, I.leaderboard, I.matrix] },
@@ -134,7 +136,7 @@ export const MORE_TREE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items
 const V12_RAIL_IDS = new Set<AppRoute>([
   'today',
   'learn', 'canli_ders', 'notes', 'flashcards',
-  'sinav_calisma', 'soru_cozucu', 'alternatif_cozucu', 'en_onemliler', 'kamp', 'patoloji_checkup', 'genetik_checkup', 'spots',
+  'son_prova', 'sinav_calisma', 'soru_cozucu', 'alternatif_cozucu', 'en_onemliler', 'kamp', 'patoloji_checkup', 'genetik_checkup', 'spots',
   'past_exams', 'questions', 'practice', 'olasi_sorular',
   'glossary', 'diseases',
   'bitirdiklerim', 'cevrimdisi', 'basarimlar',

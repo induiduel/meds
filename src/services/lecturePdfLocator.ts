@@ -209,6 +209,8 @@ function resolveFile(f: SourceFile): string | null {
  * eşleme dosyasında olmayan deste için boş döner (başlığa göre tahmin yapılmaz).
  */
 export function resolveDeckPdfs(deckId: string): ResolvedDeckPdf[] {
+  const ozet = ozetPdf(deckId);
+  if (ozet) return [ozet];
   const entry = deckSourceEntry(deckId);
   return (entry?.files || []).map((f) => {
     const full = resolveFile(f);
@@ -235,13 +237,40 @@ export function resolveDeckPdfs(deckId: string): ResolvedDeckPdf[] {
   });
 }
 
+/*
+ * Son Prova özet PDF'leri (scripts/son_prova/pdf_kirp.mjs): partın konuşma metninde atıf yapılan slayt sayfaları,
+ * kaynak derslerin PDF'lerinden kırpılıp tek PDF'te birleştirilir → data/son_prova/pdf/<partKey>.pdf (+ .json: ad, sayfa).
+ * Deste kimliği "k<kurul>p-<partKey>" (ör. k1p-k1-81-son-prova-patoloji-1); eşleme dosyasına girmez.
+ */
+const OZET_DECK_RE = /^k\d+p-(k\d+-\d+-son-prova-[a-z0-9-]+)$/;
+const ozetDir = () => path.resolve(process.cwd(), 'data', 'son_prova', 'pdf');
+function ozetPdf(deckId: string): ResolvedDeckPdf | null {
+  const m = OZET_DECK_RE.exec(deckId);
+  if (!m) return null;
+  const full = path.join(ozetDir(), `${m[1]}.pdf`);
+  let meta: { name?: string; pages?: number } = {};
+  try { meta = JSON.parse(fs.readFileSync(path.join(ozetDir(), `${m[1]}.json`), 'utf8')); } catch { /* yok */ }
+  let size = 0;
+  let mtimeMs = 0;
+  try { const st = fs.statSync(full); size = st.size; mtimeMs = st.mtimeMs; } catch { /* henüz üretilmedi */ }
+  return { name: meta.name || `${m[1]}.pdf`, folder: 'Son Prova', full: size ? full : null, size, mtimeMs, pages: meta.pages };
+}
+const ozetDesteleri = (): string[] => {
+  try {
+    return fs.readdirSync(ozetDir()).filter((f) => /\.pdf$/.test(f)).map((f) => {
+      const key = f.replace(/\.pdf$/, '');
+      return `k${/^k(\d+)-/.exec(key)?.[1] || '1'}p-${key}`;
+    });
+  } catch { return []; }
+};
+
 export type DeckPdfPublic = { name: string; folder: string; size: number; pages?: number; fileId?: string; available: boolean };
 export const toPublic = (f: ResolvedDeckPdf): DeckPdfPublic => ({ name: f.name, folder: f.folder, size: f.size, pages: f.pages, fileId: f.fileId, available: !!f.full });
 
 /** Tüm desteler için diskte açılabilen PDF listesi (Öğren kataloğundaki PDF düğmeleri için). */
 export function deckPdfAvailability(): Record<string, DeckPdfPublic[]> {
   const out: Record<string, DeckPdfPublic[]> = {};
-  for (const id of [...Object.keys(deckSources().decks), ...Object.keys(SANAL_DESTELER)]) {
+  for (const id of [...Object.keys(deckSources().decks), ...Object.keys(SANAL_DESTELER), ...ozetDesteleri()]) {
     const files = resolveDeckPdfs(id);
     if (files.some((f) => f.full)) out[id] = files.map(toPublic);
   }
