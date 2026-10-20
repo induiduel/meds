@@ -864,14 +864,43 @@ function vurguParcasi(metin: string, v: Vurgu | undefined, a: number, b: number)
 
 /** Paragrafı ses cümleleriyle aynı sınırlardan maddeler: ilk cümle giriş, kalanlar madde. Metin (ve karakter
  *  konumları) aynen korunur; madde imi yalnız CSS ::before olduğundan ses/cümle vurgusu etkilenmez. */
+const SAYI_SOZ: Record<string, number> = { iki: 2, üç: 3, dört: 4, beş: 5, altı: 6 };
+const SAYIM_RE = /(?:^|\s)(\d|iki|üç|dört|beş|altı)\s+(?:\S+\s+)?(?:temel\s+|ana\s+)?(bilgi|tip|tür|grup|aşama|evre|özellik|neden|bulgu|basamak|kategori|bileşen|öge|madde|yol|yöntem|sınıf|faktör|etken)/i;
+const AYRINTI_RE = /^(Yani|Örneğin|Mesela|Başka bir deyişle|Bir başka deyişle|Diğer bir deyişle|Bu da|Bu sayede|Bunun anlamı)\b/;
+const TOPLAM_RE = /^(Bu |Bunlar|Böylece|Sonuç olarak|Özetle|Kısacası|Ancak|Fakat)/;
+
+/** Cümle düzeyleri (0 giriş, 1 madde, 2 alt madde): sayım cümlesinin ("4 temel bilgi içerir") ardındaki N cümle,
+ *  iki noktayla biten cümlenin ardındakiler (toparlayan cümleye dek) ve "Yani/Örneğin" açıklamaları alt maddedir. */
+function cumleDuzeyleri(cumleler: string[]): number[] {
+  const d: number[] = cumleler.map((_, c) => (c ? 1 : 0));
+  let kalan = 0, acik = false;
+  cumleler.forEach((t, c) => {
+    if (!c) { /* giriş */ }
+    else if (kalan > 0) { d[c] = 2; kalan--; }
+    else if (acik && !TOPLAM_RE.test(t)) d[c] = 2;
+    else if (AYRINTI_RE.test(t) && c > 1) d[c] = 2;
+    acik = acik && d[c] === 2 && !TOPLAM_RE.test(t);
+    if (d[c] < 2 || kalan === 0) {
+      const m = t.match(SAYIM_RE);
+      const n = m ? (SAYI_SOZ[m[1].toLocaleLowerCase('tr')] ?? +m[1]) : 0;
+      if (n >= 2 && n <= 6 && c + 1 < cumleler.length) { kalan = n; acik = false; }
+      else if (/:\s*$/.test(t)) { acik = true; kalan = 0; }
+    }
+  });
+  // Giriş cümlesinden sonraki ilk cümle alt madde olamaz (üst madde yoksa) → giriş sayımı da 1. düzeyle başlar
+  return d.map((x, c) => (x === 2 && c > 0 && d[c - 1] === 0 ? 1 : x));
+}
+
 function VurguluMetin({ metin, v, i }: { metin: string; v?: Vurgu; i: number }) {
   const sin = cdParagrafSinirlari(i, metin);
   if (sin.length < 3) return <>{vurguParcasi(metin, v, 0, metin.length)}</>;
+  const duz = cumleDuzeyleri(sin.map((e, c) => metin.slice(c ? sin[c - 1] : 0, e).trim()));
   return (
     <>
       {sin.map((e, c) => {
         const a = c ? sin[c - 1] : 0;
-        return <span key={a} className={c ? 'cd-madde' : 'cd-giris'}>{vurguParcasi(metin, v, a, e)}</span>;
+        const k = duz[c] === 0 ? 'cd-giris' : duz[c] === 2 ? 'cd-madde is-alt' : 'cd-madde';
+        return <span key={a} className={k}>{vurguParcasi(metin, v, a, e)}</span>;
       })}
     </>
   );

@@ -1,13 +1,13 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 75,
-  "baslik": "Sesli ders metni maddelere ayrıldı",
+  "onem": 76,
+  "baslik": "Sesli ders metninde iç içe maddeler",
   "maddeler": [
-    "Sesli ders metni maddeler halinde: her paragrafın ilk cümlesi giriş, kalan cümleler ayrı madde (ses değişmedi)."
+    "Sesli ders metninde iç içe maddeler: sayılan ögeler ve açıklamalar alt madde olarak gösteriliyor (ses değişmedi)."
   ],
   "eklenen": [],
   "degisen": [
-    "Sesli ders metni maddeler halinde: her paragrafın ilk cümlesi giriş, kalan cümleler ayrı madde (ses değişmedi)."
+    "Sesli ders metninde iç içe maddeler: sayılan ögeler ve açıklamalar alt madde olarak gösteriliyor (ses değişmedi)."
   ],
   "duzeltilen": [],
   "silinen": []

@@ -129,6 +129,8 @@
 .cd-p .cd-giris { display: block; font-weight: 600; color: var(--color-ink); }
 .cd-p .cd-madde { display: block; position: relative; padding-left: 1.15em; margin-top: 0.3em; }
 .cd-p .cd-madde::before { content: ""; position: absolute; left: 0.3em; top: 0.72em; width: 0.36em; height: 0.36em; border-radius: 50%; background: var(--color-accent); opacity: 0.75; }
+.cd-p .cd-madde.is-alt { padding-left: 2.4em; margin-top: 0.2em; font-size: 0.96em; color: var(--color-ink-2); }
+.cd-p .cd-madde.is-alt::before { left: 1.35em; top: 0.68em; width: 0.4em; height: 0.4em; background: transparent; border: 1.5px solid var(--color-accent); }
 .cd-metin ::highlight(cd-cumle) { background-color: color-mix(in srgb, var(--color-accent) 26%, transparent); color: var(--color-ink); }
 .cd-metin mark.cd-cumle { background: color-mix(in srgb, var(--color-accent) 26%, transparent); color: var(--color-ink); border-radius: 3px; }
 
