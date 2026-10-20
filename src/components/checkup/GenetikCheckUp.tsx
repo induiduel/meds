@@ -4,8 +4,9 @@
  * Tek kaynak: data/genetik_asistan/g07.json (asistan_birlestir.py; EMA klipleri /api/patoloji-asistan/ses/g07/<klip>.mp3)
  * ve data/genetik_kamp/kalip.json (hızlı tekrar tabloları). Hızlı mod = puan ≥ 97 adımlar + adım başına 1 soru; Tam mod = hepsi.
  */
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
+  Headphones,
   Check, ChevronLeft, ChevronRight, Dna, Eye, EyeOff, LifeBuoy, ListChecks, Pause, Play,
   RotateCcw, Search, Shuffle, Table2, Volume2, X, Zap, BookOpen, Layers,
 } from 'lucide-react';
@@ -16,6 +17,8 @@ import type { AktarBelge } from '../../services/metinDisaAktar';
 import dersRaw from '../../data/genetik_asistan/g07.json';
 import kalipRaw from '../../data/genetik_kamp/kalip.json';
 import '../../styles/genetik-kamp.css';
+
+const GenetikSesliDers = lazy(() => import('./GenetikSesliDers'));
 
 interface Klip { v: string; sure: number; zaman: [number, number][] }
 interface Soru {
@@ -45,7 +48,7 @@ const ANAHTAR = 'medsoru_genetik_kamp_v1';
 const KATEGORI: Record<string, string> = { sendrom: 'Bulgu → sendrom', ilac: 'Kanser → ilaç', belirtec: 'Belirteç', tani: 'Tanı yöntemi' };
 
 type Mod = 'hizli' | 'yavas' | 'tam';
-type Sekme = 'ders' | 'kalip' | 'deneme';
+type Sekme = 'ders' | 'sesli' | 'kalip' | 'deneme';
 interface Kayit { mod: Mod; adim: Record<Mod, number>; tamam: Record<string, 1>; cevap: Record<string, string>; hiz: number; oto: boolean }
 
 function kayitOku(): Kayit {
@@ -265,8 +268,8 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
       </details>
 
       <nav className="tk-sekme" role="tablist" aria-label="Bölümler">
-        {([['ders', 'Adım adım ders', ListChecks], ['kalip', 'Kalıp kartları', Table2], ['deneme', '12 soruluk deneme', Shuffle]] as const).map(([id, ad, Ic]) => (
-          <button key={id} type="button" role="tab" aria-selected={sekme === id} className={sekme === id ? 'is-on' : ''} onClick={() => setSekme(id)}>
+        {([['ders', 'Adım adım ders', ListChecks], ['sesli', 'Sesli ders + slayt', Headphones], ['kalip', 'Kalıp kartları', Table2], ['deneme', '12 soruluk deneme', Shuffle]] as const).map(([id, ad, Ic]) => (
+          <button key={id} type="button" role="tab" aria-selected={sekme === id} className={sekme === id ? 'is-on' : ''} onClick={() => { durdur(); setSekme(id); }}>
             <Ic aria-hidden /> {ad}
           </button>
         ))}
@@ -356,6 +359,11 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
       )}
 
       {sekme === 'kalip' && <KalipKartlari mod={mod} />}
+      {sekme === 'sesli' && (
+        <Suspense fallback={<div className="tk-bos">Yükleniyor…</div>}>
+          <GenetikSesliDers ders={DERS} adimlar={adimlar} />
+        </Suspense>
+      )}
       {sekme === 'deneme' && <Deneme mod={mod} havuz={adimlar} cal={cal} durdur={durdur} />}
 
       {tamEkran && <PatolojiAsistan key={tamEkran} kod={DERS.kod} suz={tamEkran === 'hizli' ? hizliSuz : tamEkran === 'yavas' ? yavasSuz : undefined} onClose={() => setTamEkran(null)} />}

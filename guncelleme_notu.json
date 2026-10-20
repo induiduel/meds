@@ -1,17 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 93,
-  "baslik": "Yeni: Kurul kampı ve hoca tüyoları",
+  "onem": 94,
+  "baslik": "Genetik: Sesli ders + slayt",
   "maddeler": [
-    "Kurul kampı: hocanızın derste verdiği ipuçlarından sesli anlatım, kalıp kartları ve deneme sınavı.",
-    "Hocanın tüyosunu ekle: derste duyduğunuz ipucunu önerin; onaylanınca kampa eklenir.",
-    "Kurul 2 sesli asistanları ve deneme sınavı kaynakları kurula göre doğru açılıyor."
+    "TBG Sınav Kampı'na \"Sesli ders + slayt\" sekmesi eklendi: ders özeti maddeler halinde EMA sesiyle kesintisiz okunur, okunan bilginin hocanın ders PDF'indeki slaytı yanda açılır.",
+    "6 ders PDF'i cümle cümle eşlendi; başlık başka derse geçerken sıradaki PDF önceden yüklenmiş olur."
   ],
-  "eklenen": [],
-  "degisen": [
-    "Hoş geldin turu Ada (v13) tasarımında doğru menü öğelerini gösteriyor.",
-    "Telefonda tur, alt adadaki bölümleri ve Menü sayfasındaki sayfaları vurguluyor."
+  "eklenen": [
+    "TBG Sınav Kampı'na \"Sesli ders + slayt\" sekmesi eklendi: ders özeti maddeler halinde EMA sesiyle kesintisiz okunur, okunan bilginin hocanın ders PDF'indeki slaytı yanda açılır.",
+    "6 ders PDF'i cümle cümle eşlendi; başlık başka derse geçerken sıradaki PDF önceden yüklenmiş olur."
   ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
