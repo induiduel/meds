@@ -169,10 +169,49 @@ export const LectureNotesV12: React.FC<LectureNotesV12Props> = (p) => {
   const [readingId, setReadingId] = useState<string | null>(null);
   const reading = readingId ? p.notes.find((n) => n.id === readingId) || null : null;
 
+  // Açık not adreste tutulur (/notlar?id=<not>): okuyucu açılınca geçmişe kayıt eklenir, böylece başka sayfaya
+  // gidip Geri ile dönünce (tam ekranda da) aynı not yeniden açılır; telefonda geri hareketi okuyucuyu kapatır.
+  const pushedRef = useRef(false);
+  const urlId = () => new URLSearchParams(window.location.search).get('id');
   const read = (note: LectureNote) => {
     p.setActiveNote(note);
     setReadingId(note.id);
+    if (urlId() !== note.id) {
+      const sp = new URLSearchParams(window.location.search);
+      sp.set('id', note.id);
+      sp.delete('page');
+      window.history.pushState(window.history.state, '', `${window.location.pathname}?${sp}`);
+      pushedRef.current = true;
+    }
   };
+  const closeReader = () => {
+    setReadingId(null);
+    if (!urlId()) return;
+    if (pushedRef.current) {
+      pushedRef.current = false;
+      window.history.back();
+      return;
+    }
+    const sp = new URLSearchParams(window.location.search);
+    sp.delete('id');
+    sp.delete('page');
+    const q = sp.toString();
+    window.history.replaceState(window.history.state, '', window.location.pathname + (q ? `?${q}` : ''));
+  };
+  useEffect(() => {
+    const onPop = () => {
+      const id = urlId();
+      pushedRef.current = false;
+      if (!id) return setReadingId(null);
+      const note = p.notes.find((n) => n.id === id);
+      if (note) {
+        p.setActiveNote(note);
+        setReadingId(id);
+      }
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [p.notes]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Derin bağlantı: üst bileşen notu seçince okuyucu bir kez kendiliğinden açılır
   const autoOpened = useRef(false);
@@ -342,7 +381,7 @@ export const LectureNotesV12: React.FC<LectureNotesV12Props> = (p) => {
         <NoteReader
           note={reading}
           title={p.splitTitle(reading.title).title}
-          onClose={() => setReadingId(null)}
+          onClose={closeReader}
           isAdmin={p.isAdmin}
           pdfHref={p.pdfHrefFor(reading)}
           onFullscreen={() => {

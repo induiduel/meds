@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { pathFor } from '../router';
 import { Check, ChevronRight, Download, Search } from 'lucide-react';
 import { FilterPills, PageToolbar, type ToolbarChip } from './ui/PageToolbar';
 import { disciplineClass, disciplineLabel } from '../utils/discipline';
@@ -255,6 +256,44 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
     }
   };
 
+  // Açık özet adreste tutulur (/ozetler/<id>): okuyucu açılınca geçmişe kayıt eklenir, böylece başka sayfaya gidip
+  // Geri ile dönünce (tam ekranda da) aynı özet yeniden açılır; telefonda geri hareketi okuyucuyu kapatır.
+  const pushedRef = useRef(false);
+  const activeIdRef = useRef<string | null>(null);
+  activeIdRef.current = active?.id ?? null;
+  const yolId = () => {
+    const m = window.location.pathname.match(/^\/ozetler\/([^/?#]+)/);
+    return m ? decodeURIComponent(m[1]) : new URLSearchParams(window.location.search).get('id');
+  };
+  const openAt = (meta: SummaryMeta, replace = false) => {
+    void open(meta);
+    if (yolId() === meta.id) return;
+    window.history[replace ? 'replaceState' : 'pushState'](window.history.state, '', pathFor('summaries', meta.id));
+    if (!replace) pushedRef.current = true;
+  };
+  const closeReader = () => {
+    setActive(null);
+    if (!yolId()) return;
+    if (pushedRef.current) {
+      pushedRef.current = false;
+      window.history.back();
+      return;
+    }
+    window.history.replaceState(window.history.state, '', pathFor('summaries'));
+  };
+  useEffect(() => {
+    const onPop = () => {
+      pushedRef.current = false;
+      const id = yolId();
+      if (!id) return setActive(null);
+      const meta = byId.get(id);
+      if (meta && activeIdRef.current !== id) void open(meta);
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [byId]);
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const target = initialSummaryId || params.get('id') || params.get('summaryId') || params.get('noteId');
@@ -338,7 +377,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
     setReadFilter('all');
   };
   const reader = active && (
-    <SummaryReader summary={active} onClose={() => setActive(null)} onOpenPdfModal={onOpenPdfModal} next={next} onOpenNext={next ? () => open(next) : undefined} />
+    <SummaryReader summary={active} onClose={closeReader} onOpenPdfModal={onOpenPdfModal} next={next} onOpenNext={next ? () => openAt(next, true) : undefined} />
   );
 
   if (v12)
@@ -354,7 +393,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
         progress={progress}
         kurulAll={kurul === 'all'}
         lessonNo={lessonNo}
-        onOpen={open}
+        onOpen={(m) => openAt(m)}
         reader={reader}
       />
     );
@@ -372,7 +411,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
           <ul className="sl-list">
             {inProgress.map(({ s, m }) => (
               <li key={s.id} className={`sl-item ${disciplineClass(s.discipline)}`}>
-                <button type="button" className="sl-row" onClick={() => open(s)}>
+                <button type="button" className="sl-row" onClick={() => openAt(s)}>
                   <span className="sr-ring is-sm" style={{ '--p': m.p } as React.CSSProperties} aria-hidden />
                   <span className="sl-row-main">
                     <span className="sl-row-t">{s.title}</span>
@@ -430,7 +469,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
               )}
               <ul className="sl-list">
                 {g.items.map((s) => (
-                  <Row key={s.id} s={s} no={lessonNo(s.id, ++idx)} mark={progress[s.id]} showKurul={kurul === 'all' && !g.title} onOpen={() => open(s)} />
+                  <Row key={s.id} s={s} no={lessonNo(s.id, ++idx)} mark={progress[s.id]} showKurul={kurul === 'all' && !g.title} onOpen={() => openAt(s)} />
                 ))}
               </ul>
             </section>
@@ -441,10 +480,10 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
       {active && (
         <SummaryReader
           summary={active}
-          onClose={() => setActive(null)}
+          onClose={closeReader}
           onOpenPdfModal={onOpenPdfModal}
           next={next}
-          onOpenNext={next ? () => open(next) : undefined}
+          onOpenNext={next ? () => openAt(next, true) : undefined}
         />
       )}
     </div>

@@ -1,17 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 85,
-  "baslik": "Sesli derste slaytlar daha hızlı açılıyor",
+  "onem": 86,
+  "baslik": "Okuyucuda Geri ile açık not geri geliyor",
   "maddeler": [
-    "Sesli derste slaytlar daha hızlı açılıyor: sıradaki anlatılacak slaytlar önceden hazırlanıyor, sayfa değişince beklemeden görünüyor.",
-    "Başka sekmede dinleyip geri döndüğünüzde slaytlar boş kalmadan hemen çiziliyor."
+    "Ders notu ve ders özeti okuyucusunda açık not adreste tutuluyor: başka sayfaya gidip Geri ile dönünce aynı not (tam ekrandaysan tam ekranda) yeniden açılıyor.",
+    "Telefonda geri hareketi önce okuyucuyu kapatıp listeye döndürüyor; İleri ile not yeniden açılıyor."
   ],
   "eklenen": [],
   "degisen": [
-    "Sesli derste slaytlar daha hızlı açılıyor: sıradaki anlatılacak slaytlar önceden hazırlanıyor, sayfa değişince beklemeden görünüyor."
+    "Ders notu ve ders özeti okuyucusunda açık not adreste tutuluyor: başka sayfaya gidip Geri ile dönünce aynı not (tam ekrandaysan tam ekranda) yeniden açılıyor.",
+    "Telefonda geri hareketi önce okuyucuyu kapatıp listeye döndürüyor; İleri ile not yeniden açılıyor."
   ],
-  "duzeltilen": [
-    "Başka sekmede dinleyip geri döndüğünüzde slaytlar boş kalmadan hemen çiziliyor."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
