@@ -41,16 +41,44 @@ const ekli = (n: string, ek: string) => (ek ? `${n}'${ek}` : n);
 const R_ONDALIK = new RegExp(`${ON_EK}([yY]üzde\\s+)?(${DIZI})\\s+virgül\\s+(${DIZI})(${EK})${SON}`, 'giu');
 const R_YUZDE = new RegExp(`${ON_EK}[yY]üzde\\s+(${DIZI})(${EK})${SON}`, 'giu');
 
+const ondalikYaz = (_m: string, yuzde: string | undefined, tam: string, kesir: string, ek: string) => {
+  const n = `${deger(kelimeler(tam.toLocaleLowerCase('tr')))},${ondalik(kelimeler(kesir.toLocaleLowerCase('tr')))}`;
+  return ekli(yuzde ? `%${n}` : n, ek);
+};
+const yuzdeYaz = (_m: string, dizi: string, ek: string) => ekli(`%${deger(kelimeler(dizi.toLocaleLowerCase('tr')))}`, ek);
+
 export function sayilariYaz(metin: string): string {
-  if (!/virgül|yüzde/i.test(metin)) return metin;
-  return metin
-    .replace(R_ONDALIK, (_m, yuzde: string | undefined, tam: string, kesir: string, ek: string) => {
-      const ks = kelimeler(kesir.toLocaleLowerCase('tr'));
-      const n = `${deger(kelimeler(tam.toLocaleLowerCase('tr')))},${ondalik(ks)}`;
-      return ekli(yuzde ? `%${n}` : n, ek);
-    })
-    .replace(R_YUZDE, (_m, dizi: string, ek: string) => {
-      const ks = kelimeler(dizi.toLocaleLowerCase('tr'));
-      return ekli(`%${deger(ks)}`, ek);
+  if (!/virgül|üzde/i.test(metin)) return metin;
+  return metin.replace(R_ONDALIK, ondalikYaz as any).replace(R_YUZDE, yuzdeYaz as any);
+}
+
+/** sayilariYaz + eski karakter konumunu yeni metne çeviren işlev (vurgu / cümle aralıkları kaymasın diye).
+ *  Dönüşen parçanın içine düşen konum parçanın başına (başlangıç) ya da sonuna (bitiş) yapışır. */
+export function sayilariYazEslemeli(metin: string): { metin: string; konum: (k: number, bitis?: boolean) => number } {
+  if (!/virgül|üzde/i.test(metin)) return { metin, konum: (k) => k };
+  // [eski baş, eski son, yeni baş, yeni son] — iki geçiş art arda uygulanır
+  const gecis = (t: string, re: RegExp, fn: (...a: any[]) => string) => {
+    const d: [number, number, number, number][] = [];
+    let kay = 0;
+    const yeni = t.replace(re, (...a: any[]) => {
+      const m = a[0] as string, i = a[a.length - 2] as number;
+      const r = fn(...a);
+      d.push([i, i + m.length, i + kay, i + kay + r.length]);
+      kay += r.length - m.length;
+      return r;
     });
+    const f = (k: number, bitis = false) => {
+      let off = 0;
+      for (const [os, oe, ns, ne] of d) {
+        if (k < os || (k === os && !bitis)) break;
+        if (k < oe || (k === oe && bitis && k === os)) return bitis ? ne : ns;
+        off = ne - oe;
+      }
+      return k + off;
+    };
+    return { yeni, f };
+  };
+  const a = gecis(metin, R_ONDALIK, ondalikYaz);
+  const b = gecis(a.yeni, R_YUZDE, yuzdeYaz);
+  return { metin: b.yeni, konum: (k, bitis) => b.f(a.f(k, bitis), bitis) };
 }

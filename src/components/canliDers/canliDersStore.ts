@@ -7,6 +7,7 @@
  * Durum `useCd(seçici)` ile okunur; seçici ilkel değer döndürmeli (her çağrıda yeni nesne → sonsuz çizim).
  * Zaman (t) çalarken her karede güncellenir; paragraf/cümle dizini yalnız değişince değişir (metin listesi yeniden çizilmez).
  */
+import { sayilariYazEslemeli } from '../../services/sayiYazim';
 import { useSyncExternalStore } from 'react';
 import { getCustomApiUrl, safeJsonFetch } from '../../services/api';
 import { cdCevrimdisiKayitlari, cdCevrimdisiVid } from './canliDersCevrimdisiKayit';
@@ -131,6 +132,21 @@ export function cdListeGetir(yenile = false): Promise<CdListeDers[]> {
 }
 // Ders ayrıntısı (metin + zamanlama + PDF eşlemesi) 3 dk önbellekte: ses yeniden üretilir/onarılırsa zamanlama da tazelenir
 const DETAY_OMUR_MS = 3 * 60 * 1000;
+/** Okunuş için yazıya dökülmüş sayıları ("iki virgül bir", "yüzde kırkına") ekranda rakamla gösterir; önemli cümle /
+ *  terim aralıkları yeni metne taşınır. Cümle sınırları değişmez (dönüşüm nokta eklemez/silmez), ses senkronu korunur. */
+function sayilariDuzelt(d: CdDetay): CdDetay {
+  for (const b of d.bolumler) {
+    for (const p of b.paragraflar) {
+      const r = sayilariYazEslemeli(p.metin);
+      if (r.metin === p.metin) continue;
+      p.metin = r.metin;
+      const v = d.vurgu?.[p.i];
+      if (v) d.vurgu![p.i] = v.map(([bas, son, tur, onem]) => [r.konum(bas), r.konum(son, true), tur, onem]);
+    }
+  }
+  return d;
+}
+
 const detayCache = new Map<string, { p: Promise<CdDetay>; at: number }>();
 export function cdDetayGetir(key: string, yenile = false): Promise<CdDetay> {
   const hit = detayCache.get(key);
@@ -142,13 +158,13 @@ export function cdDetayGetir(key: string, yenile = false): Promise<CdDetay> {
         return import('./canliDersCevrimdisi').then((m) => m.cdYerelDetay(key)).then((d) => {
           if (!d) throw new Error(r.error || `Ders alınamadı (${r.status})`);
           surumKaydet(key, d.varyantlar as any);
-          return d;
+          return sayilariDuzelt(d);
         });
       }
       throw new Error(r.status === 404 ? 'Bu ders bulunamadı.' : r.error || `Ders alınamadı (${r.status})`);
     }
     surumKaydet(key, r.data.varyantlar as any);
-    return r.data;
+    return sayilariDuzelt(r.data);
   });
   detayCache.set(key, { p, at: Date.now() });
   return p;
