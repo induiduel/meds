@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 151,
-  "baslik": "Son Prova: her aşamaya yeni örnek sorular",
+  "onem": 152,
+  "baslik": "Öğren: tam ekran düzeni iyileştirildi",
   "maddeler": [
-    "Son Prova'nın 89 aşamasının her birine, o aşamada anlatılanlardan çıkmış üslubunda 2 yeni örnek soru eklendi (toplam 178); aşama biter bitmez sesli asistanla çözülür.",
-    "Yeni sorular bağımsız denetimden geçti; her şık için ne olduğu, ne işe yaradığı ve neden doğru/yanlış olduğu sesli anlatılır."
+    "Geniş ekranda tam ekrana geçince anlatım ve Pekiştir paneli artık ekranı dolduruyor; içerik ortada küçük kalmıyor, yazı bir kademe büyüyor."
   ],
-  "eklenen": [
-    "Son Prova'nın 89 aşamasının her birine, o aşamada anlatılanlardan çıkmış üslubunda 2 yeni örnek soru eklendi (toplam 178); aşama biter bitmez sesli asistanla çözülür.",
-    "Yeni sorular bağımsız denetimden geçti; her şık için ne olduğu, ne işe yaradığı ve neden doğru/yanlış olduğu sesli anlatılır."
+  "eklenen": [],
+  "degisen": [
+    "Geniş ekranda tam ekrana geçince anlatım ve Pekiştir paneli artık ekranı dolduruyor; içerik ortada küçük kalmıyor, yazı bir kademe büyüyor."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

@@ -657,3 +657,14 @@
       padding: 14px; border: 1px solid var(--color-line); border-top: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); }
   }
 }
+
+/* Tam ekran · geniş ekran (2026-10-21): 1920 px tam ekranda 760+540 sütunlar ortada küçük bir blok kalıp
+ * altı ve iki yanı boş görünüyordu. Tam ekranda sütunlar genişler, blok dikeyde ortalanır, yazı bir kademe büyür. */
+@media (min-width: 1500px) {
+  :root[data-design='v12'].is-app-fullscreen .ls-A:not(.x12-has-notes):not(.x12-is-studio) .ls-A-main > .ls-col:not(.is-flow):not(.x12-studio-col):has(> .ls-practice) {
+    grid-template-columns: minmax(0, 940px) minmax(420px, 660px); column-gap: 48px;
+    min-height: 100%; align-content: center; padding-top: 40px;
+    & > :not(.ls-practice) { font-size: 1.08em; }
+    & > .ls-practice { max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - 130px); }
+  }
+}
