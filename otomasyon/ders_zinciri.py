@@ -135,7 +135,10 @@ def a_hazirla(d, pk, W, kuru):
         {**liste[-1], "brans": W.name, "cikmis_tekil": len(cik), "ornek_hedef": AH.ornek_hedefi(len(cik), sayfa)},
         ensure_ascii=False, indent=1))
     print(f"   {kod}: {sayfa} sayfa · çıkmış aday {len(L)} → tekil {len(cik)}")
-    return 0
+    # Önem haritası: sayfa başına sınava konu olma puanı (çıkmış benzerliği × sıklık × yakınlık) → tüm üreticilere girdi
+    return calistir([str(MEDS / ".venv-ocr/bin/python"), str(MEDS / "scripts/onem/onem_haritasi.py"),
+                     str(W / "pdf_metin" / f"{kod}.md"), str(W / "cikmis" / f"{kod}.json"), "--kod", kod,
+                     "--yaz", str(W / "onem_haritasi" / f"{kod}.json")])
 
 
 def a_onem(d, pk, W, kuru):
@@ -143,6 +146,8 @@ def a_onem(d, pk, W, kuru):
     return kapili_claude(
         f"{SC}/TALIMAT_ONEM.md talimatını uygula. Çalışma klasörü: {W} (branş klasörü {W.name}, Kurul {d['kurul']} "
         f"{d['brans']}). Yalnız ders kodu {k}: girdi/{k}.json, cikmis/{k}.json, pdf_metin/{k}.md → onem/{k}.json. "
+        f"onem_haritasi/{k}.json her sayfanın çıkmış sorularla örtüşme puanını (0–100) ve bağlı çıkmışları verir: madde "
+        f"puanlarını ve sırasını buna dayandır; puanı yüksek sayfaların bilgisi mutlaka madde olsun. "
         f"Kurul 2 kuralları: {MEDS}/docs/KURUL2_YAPILMAYACAK_HATALAR.md, TURKCE_USLUP_STANDARDI.md, SIK_ACIKLAMA_STANDARDI.md.",
         f"python3 {SC}/onem_dogrula.py {W}/onem/{k}.json", W, kuru)
 

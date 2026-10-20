@@ -90,15 +90,15 @@
   {
    "id": "onem_haritasi",
    "kapsam": "ders",
-   "durum": "plan",
+   "durum": "hazir",
    "gerekir": [
     "okuma_ocr"
    ],
-   "komut": "meds/scripts/onem/onem_haritasi.py --ders {ders_id}",
+   "komut": "ders_zinciri.py hazirla adımı · .venv-ocr/bin/python meds/scripts/onem/onem_haritasi.py <kaynak.md> <cikmis.json>",
    "cikti": [
-    "meds_database_v2/onem/{ders_id}.json"
+    "meds_temp/spot_cozucu/k{N}<brans>/onem_haritasi/<kod>.json"
    ],
-   "not": "Sayfa/cümle başına önem puanı: çıkmış soru sıklığı + yakınlık + tekrar ailesi + hocanın vurgusu. Tüm üreticilere girdi — plan P2.2"
+   "not": "Sayfa başına 0–100: çıkmış benzerliği (bge-m3; genel köklüde kök+şıklar) × soruldu sayısı × yakınlık + hoca vurgusu. Spot/önem yazarı girdi alır (2026-10-20). Sınamada 3 K1 dersinde bağlanamayan çıkmış 0."
   },
   {
    "id": "ders_paketi",
