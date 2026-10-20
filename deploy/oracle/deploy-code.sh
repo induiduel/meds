@@ -51,9 +51,11 @@ if [[ "$SKIP_LOCAL_BUILD" == "0" ]]; then
 fi
 [[ -f "$MEDS_DIR/dist/index.html" ]] || { echo "DURDU: dist/index.html yok"; exit 1; }
 
-echo "==> [1/4] rsync kod + dist (src/data DAHİL, .env HARİÇ; boyut+zaman karşılaştırması)"
+echo "==> [1/4] rsync kod + dist (src/data DAHİL, .env HARİÇ; içerik karşılaştırması)"
 CHANGED="$(mktemp)"; trap 'rm -f "$CHANGED"' EXIT
-rsync -az --out-format='%n' \
+# --checksum: değişiklik listesi içeriğe göre (worktree checkout'u tarihleri yeniler; tarihe bakınca package.json
+# 'değişti' sayılıp imaj gereksiz kuruluyordu, 2026-10-20). Ölçüm: ~2 sn.
+rsync -az --checksum --out-format='%n' \
   --exclude='/node_modules' --exclude='/dist-gh' \
   --exclude='/data' --exclude='/.git' --exclude='/models' \
   --exclude='/training_data' --exclude='/linux' \
