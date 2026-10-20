@@ -21,8 +21,10 @@ ELLE = KOK / 'scripts/surum_gunlugu_turler.json'   # madde metni → tür (elle 
 TURLER = ('eklenen', 'degisen', 'duzeltilen', 'silinen')
 
 
-try: ELLE_TUR: dict[str, str] = json.loads(ELLE.read_text(encoding='utf-8'))
-except Exception: ELLE_TUR = {}
+try: _ELLE = json.loads(ELLE.read_text(encoding='utf-8'))
+except Exception: _ELLE = {}
+ELLE_TUR: dict[str, str] = _ELLE.get('maddeler', {})      # madde metni → tür
+ELLE_COMMIT: dict[str, str] = _ELLE.get('commitler', {})  # kısa hash → tür (geliştirme notları)
 
 
 def git(*a: str) -> str:
@@ -69,7 +71,7 @@ def dosya_ozeti(eski: str | None, yeni: str) -> dict:
 
 
 def notlar(commitler: list[tuple[str, str, str]]) -> list[dict]:
-    return [{'tur': commit_turu(k), 'metin': temiz_konu(k), 'commit': h, 'tarih': t} for h, t, k in commitler]
+    return [{'tur': ELLE_COMMIT.get(h) or commit_turu(k), 'metin': temiz_konu(k), 'commit': h, 'tarih': t} for h, t, k in commitler]
 
 
 def main() -> int:

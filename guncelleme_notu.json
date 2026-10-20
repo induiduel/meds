@@ -1,13 +1,13 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 57,
-  "baslik": "Yeni sesli derslerde de cümle takibi",
+  "onem": 58,
+  "baslik": "Güncelleme günlüğünde geliştirme notları düzenlendi",
   "maddeler": [
-    "Yeni eklenen sesli derslerde de okunan cümle sesle birebir eşleşiyor; vurgu kendiliğinden hazırlanıyor."
+    "Güncelleme günlüğünde geliştirme notları da doğru türde gösteriliyor: Eklenen, Değişen, Düzeltilen ve Kaldırılan."
   ],
   "eklenen": [],
   "degisen": [
-    "Güncelleme günlüğünde her madde doğru türde gösteriliyor: Eklenen, Değişen, Düzeltilen ve Kaldırılan."
+    "Güncelleme günlüğünde geliştirme notları da doğru türde gösteriliyor: Eklenen, Değişen, Düzeltilen ve Kaldırılan."
   ],
   "duzeltilen": [],
   "silinen": []
