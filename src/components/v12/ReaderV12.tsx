@@ -19,7 +19,7 @@ import { useAppearance, TEXT_PX_MAX, TEXT_PX_MIN } from '../../utils/appearance'
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { detectIosDevice, openPwaInstallGuide } from '../../services/pwaService';
 import { shouldAvoidNativeFullscreen } from '../../utils/device';
-import { wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
+import { isAppFullscreen, useAppFullscreenWhile, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
 import { toast } from '../ui/Toast';
 import '../../styles/v12/reader.css';
 
@@ -231,8 +231,10 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
   const [tocPop, setTocPop] = useState(false);
   const [focusPref, setFocus] = useState<boolean>(() => readPref().focus === true);
   const [isFs, setIsFs] = useState(false);
-  const [immersive, setImmersive] = useState(false);
+  // Uygulama tam ekrandayken açılan okuyucu (tam ekranda sayfa geçişi, Geri) doğrudan tam ekran kipinde başlar.
+  const [immersive, setImmersive] = useState(() => isAppFullscreen());
   const fsOn = isFs || immersive;
+  useAppFullscreenWhile(fsOn);
   // Telefonda kenar paneli/ray zaten yok: Odak düğmesi gizlenir ve kayıtlı Odak tercihi içindekileri kilitlemez
   const focus = (focusPref && !narrow) || fsOn;
   const [menuOpen, setMenuOpen] = useState(false);

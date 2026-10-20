@@ -24,14 +24,14 @@ export const TamEkranGezinme: React.FC<{ active: AppRoute; onGo: (r: AppRoute) =
   const durt = () => setCanli((n) => n + 1);
 
   // Açık bir pencere (tanıtım, onay, ayar diyaloğu) varken ada gizlenir; üstüne binmesin, odak tuzağını bozmasın.
-  // Tam ekran oynatıcılar da aria-modal taşır (ders, çözücü, asistan): onlar pencere sayılmaz.
+  // Tam ekran oynatıcılar da aria-modal taşır (ders, çözücü, asistan, büyütülmüş PDF, tam ekran okuyucu): onlar pencere sayılmaz.
   const [pencere, setPencere] = useState(false);
   useEffect(() => {
     if (!fs) return;
     let raf = 0;
     const bak = () => {
       raf = 0;
-      setPencere(!!document.querySelector('[aria-modal="true"]:not(.ls-root):not(.sc):not(.pa), .sh-sheet-root'));
+      setPencere(!!document.querySelector('[aria-modal="true"]:not(.ls-root):not(.sc):not(.pa):not(.dpv):not(.r12-root.is-immersive), .sh-sheet-root'));
     };
     bak();
     const mo = new MutationObserver(() => { if (!raf) raf = window.setTimeout(bak, 50); });

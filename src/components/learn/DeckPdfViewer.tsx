@@ -13,7 +13,7 @@ import { getSlidePdfLocation } from '../../services/slidePdfMappingService';
 import { drivePreviewUrl, driveViewUrl, useDeckPdf, type DeckPdfFile } from '../../services/deckPdfService';
 import { PDF_SAVED_EVENT, removeSavedPdf, savePdfOffline, savedPdfObjectUrl } from '../../services/deviceStorage';
 import { shouldAvoidNativeFullscreen } from '../../utils/device';
-import { wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
+import { useAppFullscreenWhile, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { toast } from '../ui/Toast';
 import './pdf/pdfDoc.css';
@@ -132,6 +132,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
     };
   }, []);
   const fsOn = isFs || maxed;
+  useAppFullscreenWhile(fsOn);
   const toggleFs = () => {
     const d = document as any;
     if (maxed || isFs) {

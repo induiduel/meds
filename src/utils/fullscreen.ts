@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { isIosDevice, shouldAvoidNativeFullscreen } from './device';
 
 type WebkitDocument = Document & {
@@ -253,4 +253,34 @@ export function useAppFullscreen(): [boolean, (el?: HTMLElement | null) => void,
   };
 
   return [active, toggle, exit];
+}
+
+/**
+ * Kendi tam ekran kipini yöneten bileşenler (okuyucu, PDF görüntüleyici) için: kip açıkken uygulama tam
+ * ekranı da açılır (kabuk gizlenir, gezinme adası görünür). Sınıf bileşen tarafından eklendiyse kip
+ * kapanınca kaldırılır; önceden açıksa (ör. ders oynatıcısı tam ekrandayken PDF büyütme) dokunulmaz.
+ * Kip açıkken bileşen kapanırsa `releasePageFullscreen`: sayfa geçişinde tam ekran sürer.
+ */
+export function useAppFullscreenWhile(active: boolean): void {
+  const ownedRef = useRef(false);
+  const activeRef = useRef(active);
+  activeRef.current = active;
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    const root = document.documentElement;
+    if (active) {
+      if (!root.classList.contains(APP_FS_CLASS)) {
+        root.classList.add(APP_FS_CLASS);
+        ownedRef.current = true;
+        notifyFullscreenChange();
+      }
+    } else if (ownedRef.current) {
+      ownedRef.current = false;
+      root.classList.remove(APP_FS_CLASS);
+      notifyFullscreenChange();
+    }
+  }, [active]);
+  useEffect(() => () => {
+    if (activeRef.current && ownedRef.current) releasePageFullscreen();
+  }, []);
 }

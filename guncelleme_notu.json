@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 76,
-  "baslik": "Sesli ders metninde iç içe maddeler",
+  "onem": 77,
+  "baslik": "Okuyucu ve PDF görüntüleyicide tam ekran gezinme",
   "maddeler": [
-    "Sesli ders metninde iç içe maddeler: sayılan ögeler ve açıklamalar alt madde olarak gösteriliyor (ses değişmedi)."
+    "Ders notu okuyucusu ve ders PDF görüntüleyicisi tam ekrandayken de gezinme çubuğu çıkıyor; tam ekrandan çıkmadan başka sayfaya geçebilirsin."
   ],
   "eklenen": [],
-  "degisen": [
-    "Sesli ders metninde iç içe maddeler: sayılan ögeler ve açıklamalar alt madde olarak gösteriliyor (ses değişmedi)."
+  "degisen": [],
+  "duzeltilen": [
+    "Ders notu okuyucusu ve ders PDF görüntüleyicisi tam ekrandayken de gezinme çubuğu çıkıyor; tam ekrandan çıkmadan başka sayfaya geçebilirsin."
   ],
-  "duzeltilen": [],
   "silinen": []
 }
