@@ -6,7 +6,7 @@
  */
 import CanliDersKimlikHedef from './CanliDersKimlikHedef';
 import React, { Suspense, lazy, memo, useCallback, useMemo, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { ArrowLeftRight, ArrowUpDown, ChevronDown, ChevronLeft, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
+import { ArrowLeftRight, ArrowUpDown, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import { releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
@@ -114,13 +114,24 @@ const ORAN_MAX = 80;
 const oranSinirla = (v: number) => Math.max(ORAN_MIN, Math.min(ORAN_MAX, Math.round(v)));
 
 const VURGU_ANAHTAR = 'medsoru_canli_ders_vurgu_v1';
+const ASAMA_KEY = 'medsoru_kamp_asama_v1';
+function cdKayitliAsama(key: string): number | null {
+  try { const v = JSON.parse(localStorage.getItem(ASAMA_KEY) || '{}')[key]; return Number.isFinite(v) ? v : null; } catch { return null; }
+}
+function cdAsamaKaydet(key: string, no: number) {
+  try { const o = JSON.parse(localStorage.getItem(ASAMA_KEY) || '{}'); o[key] = no; localStorage.setItem(ASAMA_KEY, JSON.stringify(o)); } catch { /* yok */ }
+}
 
 function useVurguAcik(): [boolean, (v: boolean) => void] {
   const [v, setV] = useState(() => { try { return localStorage.getItem(VURGU_ANAHTAR) !== '0'; } catch { return true; } });
   return [v, (x: boolean) => { setV(x); try { localStorage.setItem(VURGU_ANAHTAR, x ? '1' : '0'); } catch { /* yok */ } }];
 }
 
-export default function CanliDersDers({ dersKey }: { dersKey: string }) {
+/** Modül içinde gömülü kullanım (TBG Sınav Kampı): geri bağlantısı yerine modülün gezinmesi, aşama aşama metin,
+ *  yazı boyutu tam ekran dışında da. Bölüm başlıkları "N · Aşama adı" (aşama girişi) ve "N.M · Alt başlık" biçimindedir. */
+export interface CdKamp { geri: React.ReactNode }
+
+export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp?: CdKamp }) {
   const [vurguAcik, setVurguAcik] = useVurguAcik();
   // Bitirdiklerim: ses çalarken süreyi depo sayar; duraklatılmışken metni/slaytı okumak da bu derse sayılır
   const buDersCaliyor = useCd((s) => s.key === dersKey && s.playing);
@@ -417,10 +428,10 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
   if (hata) {
     return (
       <div className="cd-root">
-        <GeriBag />
+        {kamp ? kamp.geri : <GeriBag />}
         <div className="cd-bos">
-          <p>{hata}</p>
-          <button type="button" className="cd-btn is-ana" onClick={() => navigateTo(pathFor('canli_ders'))}>Tüm sesli derslere dön</button>
+          <p>{kamp && /sesi henüz yok|bulunamadı/.test(hata) ? 'Sesli ders hazırlanıyor; birazdan burada olacak. Bu sırada diğer bölümleri kullanabilirsin.' : hata}</p>
+          {!kamp && <button type="button" className="cd-btn is-ana" onClick={() => navigateTo(pathFor('canli_ders'))}>Tüm sesli derslere dön</button>}
         </div>
       </div>
     );
@@ -428,7 +439,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
   if (!detay) {
     return (
       <div className="cd-root">
-        <GeriBag />
+        {kamp ? kamp.geri : <GeriBag />}
         <div className="cd-bos" role="status"><span className="cd-spin" aria-hidden /> Ders yükleniyor…</div>
       </div>
     );
@@ -453,20 +464,20 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     : undefined;
 
   const birinciBolme = bolmeTers
-    ? <CdMetinBolme key="metin" detay={detay} canli={buDers} />
+    ? <CdMetinBolme key="metin" detay={detay} canli={buDers} kamp={!!kamp} />
     : <CdPdfBolme key="pdf" detay={detay} canli={buDers} />;
   const ikinciBolme = bolmeTers
     ? <CdPdfBolme key="pdf" detay={detay} canli={buDers} />
-    : <CdMetinBolme key="metin" detay={detay} canli={buDers} />;
+    : <CdMetinBolme key="metin" detay={detay} canli={buDers} kamp={!!kamp} />;
 
   return (
     <div
-      className={`cd-root cd-ders is-${mod}${tamEkran ? ' is-tam' : ''}${vurguAcik ? '' : ' cd-vurgu-kapali'}`}
+      className={`cd-root cd-ders is-${mod}${tamEkran ? ' is-tam' : ''}${vurguAcik ? '' : ' cd-vurgu-kapali'}${kamp ? ' cd-kamp' : ''}`}
       ref={rootRef}
-      style={tamEkran ? ({ '--cd-tam-yazi': `${yazi}px` } as React.CSSProperties) : yuk ? { height: yuk } : undefined}
+      style={tamEkran ? ({ '--cd-tam-yazi': `${yazi}px` } as React.CSSProperties) : yuk ? ({ height: yuk, ...(kamp ? { '--cd-tam-yazi': `${yazi}px` } : {}) } as React.CSSProperties) : undefined}
     >
       <header className="cd-ders-bas">
-        <GeriBag />
+        {kamp ? kamp.geri : <GeriBag />}
         <div className="cd-ders-baslik">
           <small className="cd-ders-ust">{cdDersEtiketi(detay)}<DersBolumEtiketi detay={detay} /></small>
           <h1 className="cd-ders-ad" title={`${cdDersEtiketi(detay)} · ${detay.baslik}`}>{detay.baslik}</h1>
@@ -563,6 +574,9 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
           )}
             </CdDaha>
           )}
+          {kamp && !tamEkran && metinGoster && (
+            <YaziAyar yazi={yazi} setYazi={setYazi} />
+          )}
           {tamEkran ? (
             <>
               {metinGoster && (
@@ -630,7 +644,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
         ) : (
           <>
             {pdfGoster && <CdPdfBolme detay={detay} canli={buDers} />}
-            {metinGoster && <CdMetinBolme detay={detay} canli={buDers} />}
+            {metinGoster && <CdMetinBolme detay={detay} canli={buDers} kamp={!!kamp} />}
           </>
         )}
       </div>
@@ -792,6 +806,44 @@ function TamEkranOynat({ dersKey, onBasla, onAc }: { dersKey: string; onBasla: (
   );
 }
 
+/** Yazı boyutu (kamp kipinde tam ekran dışında da görünür) */
+function YaziAyar({ yazi, setYazi }: { yazi: number; setYazi: (n: number) => void }) {
+  return (
+    <span className="cd-yazi" role="group" aria-label="Yazı boyutu">
+      <button type="button" className="cd-btn is-ikon" onClick={() => setYazi(yazi - 2)} disabled={yazi <= YAZI_ENAZ} aria-label="Yazıyı küçült" title="Yazıyı küçült">
+        <span aria-hidden className="cd-yazi-a is-kucuk">A</span>
+      </button>
+      <button type="button" className="cd-yazi-n" onClick={() => setYazi(20)} title="Varsayılan boyut" aria-label={`Yazı boyutu ${yazi} piksel, varsayılana dön`}>{yazi}</button>
+      <button type="button" className="cd-btn is-ikon" onClick={() => setYazi(yazi + 2)} disabled={yazi >= YAZI_ENCOK} aria-label="Yazıyı büyüt" title="Yazıyı büyüt">
+        <span aria-hidden className="cd-yazi-a">A</span>
+      </button>
+    </span>
+  );
+}
+
+/* ---------------- kamp: aşamalar ---------------- */
+
+/** Bölüm başlığı "N · Ad" aşama girişi, "N.M · Ad" alt başlıktır. */
+export function kampBaslik(b: string): { asama: number; alt: number | null; ad: string } | null {
+  const m = /^(\d+)(?:\.(\d+))?\s*·\s*(.+)$/.exec(b || '');
+  return m ? { asama: +m[1], alt: m[2] ? +m[2] : null, ad: m[3].trim() } : null;
+}
+interface KampAsama { no: number; ad: string; bolumler: number[]; ilkP: number; sonP: number }
+export function kampAsamalari(d: CdDetay): KampAsama[] {
+  const out: KampAsama[] = [];
+  d.bolumler.forEach((b, bi) => {
+    const k = kampBaslik(b.baslik);
+    if (!k || !b.paragraflar.length) return;
+    let a = out.find((x) => x.no === k.asama);
+    if (!a) { a = { no: k.asama, ad: k.alt === null ? k.ad : `Aşama ${k.asama}`, bolumler: [], ilkP: b.paragraflar[0].i, sonP: b.paragraflar[0].i }; out.push(a); }
+    if (k.alt === null) a.ad = k.ad;
+    a.bolumler.push(bi);
+    a.ilkP = Math.min(a.ilkP, b.paragraflar[0].i);
+    a.sonP = Math.max(a.sonP, b.paragraflar[b.paragraflar.length - 1].i);
+  });
+  return out;
+}
+
 function GeriBag() {
   return (
     <a
@@ -945,12 +997,18 @@ function CdParagrafYildizDugme({
 }
 
 /** Paragraf listesi bir kez çizilir; vurgu DOM üzerinden değişir (uzun metinde yeniden çizim yok). */
-const MetinListe = memo(function MetinListe({ detay, onTik }: { detay: CdDetay; onTik: (i: number) => void }) {
+const MetinListe = memo(function MetinListe({ detay, onTik, kamp = false }: { detay: CdDetay; onTik: (i: number) => void; kamp?: boolean }) {
   return (
     <>
-      {detay.bolumler.map((b, bi) => (
-        <section key={bi} className="cd-bolum" aria-label={b.baslik || `Bölüm ${bi + 1}`}>
-          {b.baslik && <h2 className="cd-bolum-ad">{b.baslik}</h2>}
+      {detay.bolumler.map((b, bi) => {
+        const k = kamp ? kampBaslik(b.baslik) : null;
+        return (
+        <section key={bi} className={`cd-bolum${k ? (k.alt === null ? ' cd-k-giris' : ' cd-k-alt') : ''}`} data-asama={k?.asama} aria-label={k ? k.ad : b.baslik || `Bölüm ${bi + 1}`}>
+          {k ? (
+            k.alt === null
+              ? <h2 className="cd-bolum-ad cd-k-asama"><span className="cd-k-no">Aşama {k.asama}</span>{k.ad}</h2>
+              : <h3 className="cd-bolum-ad cd-k-baslik"><span className="cd-k-no">{k.asama}.{k.alt}</span>{k.ad}</h3>
+          ) : b.baslik && <h2 className="cd-bolum-ad">{b.baslik}</h2>}
           {b.paragraflar.map((p) => (
             <div key={p.i} className="cd-p-sar">
               <p data-i={p.i} className="cd-p" onClick={() => onTik(p.i)}><VurguluMetin metin={p.metin} v={detay.vurgu?.[p.i]} i={p.i} /></p>
@@ -967,10 +1025,33 @@ const MetinListe = memo(function MetinListe({ detay, onTik }: { detay: CdDetay; 
             </div>
           ))}
         </section>
-      ))}
+        );
+      })}
     </>
   );
 });
+
+/** Aşama çubuğu: hangi aşamadasın, hangileri bitti; dokununca o aşamaya geçilir (çalıyorsa ses de oraya atlar). */
+function KampAsamaCubugu({ asamalar, gor, sesAsama, onSec }: { asamalar: KampAsama[]; gor: number; sesAsama: number; onSec: (no: number) => void }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    ref.current?.querySelector<HTMLElement>('.is-on')?.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  }, [gor]);
+  return (
+    <nav className="cd-k-cubuk" aria-label="Aşamalar" ref={ref}>
+      {asamalar.map((a) => {
+        const durum = a.no === gor ? ' is-on' : sesAsama >= 0 && a.no < sesAsama ? ' is-bitti' : '';
+        return (
+          <button key={a.no} type="button" className={`cd-k-cip${durum}${a.no === sesAsama ? ' is-ses' : ''}`} onClick={() => onSec(a.no)}
+            aria-current={a.no === gor ? 'step' : undefined} title={a.ad}>
+            <span className="cd-k-cip-no">{a.no === 0 ? '★' : a.no}</span>
+            <span className="cd-k-cip-ad">{a.ad}</span>
+          </button>
+        );
+      })}
+    </nav>
+  );
+}
 
 /** Kelime kelime: sesin o an okuduğu kelime metinde işaretlenir. Ayrı ve görünmez bileşen: kelime değişince
  *  yalnız bu çalışır, ders metni yeniden çizilmez. Yalnız Highlight API ile (DOM'a dokunmaz). */
@@ -992,11 +1073,33 @@ function CdKelimeIsaret({ pane, aktif, acik }: { pane: React.RefObject<HTMLDivEl
   return null;
 }
 
-function CdMetinBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
+function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: boolean; kamp?: boolean }) {
   const paneRef = useRef<HTMLDivElement>(null);
   const aktif = useCd((s) => (canli ? s.aktif : -1));
   const cumle = useCd((s) => (canli ? s.cumle : -1));
   const { durdu, durdur, surdur } = useTakip();
+  // Kamp: metin aşama aşama gösterilir; görünen aşama sesi izler, elle seçilince oraya geçer
+  const asamalar = useMemo(() => (kamp ? kampAsamalari(detay) : []), [kamp, detay]);
+  const asamaOf = useCallback((i: number) => asamalar.find((a) => i >= a.ilkP && i <= a.sonP)?.no ?? -1, [asamalar]);
+  const sesAsama = aktif >= 0 ? asamaOf(aktif) : -1;
+  const [gorAsama, setGorAsama] = useState<number>(() => {
+    const k = cdKayitliAsama(detay.key);
+    return k ?? asamalar[0]?.no ?? 0;
+  });
+  useEffect(() => { if (kamp && sesAsama >= 0 && !durdu) setGorAsama(sesAsama); }, [kamp, sesAsama, durdu]);
+  useEffect(() => { if (kamp) cdAsamaKaydet(detay.key, gorAsama); }, [kamp, detay.key, gorAsama]);
+  const asamaSec = useCallback((no: number) => {
+    setGorAsama(no);
+    paneRef.current?.scrollTo({ top: 0 });
+    const a = asamalar.find((x) => x.no === no);
+    // Ses çalıyorsa o aşamanın başına atlar; çalmıyorsa yalnız metin değişir (Dinle'ye basınca oradan başlar)
+    if (!a) return;
+    const st = cdDurum();
+    if (st.key === detay.key && st.playing) { if (asamaOf(st.aktif) !== no) { cdParagrafa(a.ilkP); surdur(); } }
+    else if (st.key === detay.key) cdParagrafa(a.ilkP, false);
+    else if (!st.playing) { const v = cdTercihVaryant(detay.varyantlar); if (v) cdOynat(detay, v.id, { oynat: false }); cdParagrafa(a.ilkP, false); }
+  }, [asamalar, asamaOf, detay.key, surdur]);
+  const gorIdx = asamalar.findIndex((a) => a.no === gorAsama);
   const onceki = useRef<HTMLElement | null>(null);
   const isaret = useRef<{ el: HTMLElement; metin: string } | null>(null);
   const ilk = useRef(true);
@@ -1137,9 +1240,25 @@ function CdMetinBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   }, [durdur]);
 
   return (
-    <div className="cd-bolme cd-metin-bolme">
+    <div className={`cd-bolme cd-metin-bolme${kamp ? ' is-kamp' : ''}`} data-gor-asama={kamp ? gorAsama : undefined}>
+      {kamp && asamalar.length > 1 && <KampAsamaCubugu asamalar={asamalar} gor={gorAsama} sesAsama={sesAsama} onSec={asamaSec} />}
       <div className="cd-metin" ref={paneRef} tabIndex={0} aria-label="Konuşma metni">
-        <MetinListe detay={detay} onTik={onTik} />
+        {kamp && <style>{`.cd-metin-bolme[data-gor-asama="${gorAsama}"] .cd-bolum[data-asama]:not([data-asama="${gorAsama}"]){display:none}`}</style>}
+        <MetinListe detay={detay} onTik={onTik} kamp={kamp} />
+        {kamp && gorIdx >= 0 && (
+          <div className="cd-k-son">
+            {gorIdx > 0 && (
+              <button type="button" className="cd-btn" onClick={() => asamaSec(asamalar[gorIdx - 1].no)}>
+                <ChevronLeft aria-hidden /> <span>{asamalar[gorIdx - 1].ad}</span>
+              </button>
+            )}
+            {gorIdx < asamalar.length - 1 && (
+              <button type="button" className="cd-btn is-ana" onClick={() => asamaSec(asamalar[gorIdx + 1].no)}>
+                <span>Sonraki aşama: {asamalar[gorIdx + 1].ad}</span> <ChevronRight aria-hidden />
+              </button>
+            )}
+          </div>
+        )}
       </div>
       <CdKelimeIsaret pane={paneRef} aktif={aktif} acik={canli && !durdu} />
       {durdu && canli ? (

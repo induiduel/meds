@@ -18,7 +18,9 @@ import dersRaw from '../../data/genetik_asistan/g07.json';
 import kalipRaw from '../../data/genetik_kamp/kalip.json';
 import '../../styles/genetik-kamp.css';
 
-const GenetikSesliDers = lazy(() => import('./GenetikSesliDers'));
+const CanliDersDers = lazy(() => import('../canliDers/CanliDersDers'));
+/** Kampın sesli dersi: altı genetik dersinin slaytlarıyla tek ders (data/sesli_anlatim, sanal deste k1p-k1-70-…) */
+export const TBG_DERS_KEY = 'k1-70-tbg-sinav-kampi';
 
 interface Klip { v: string; sure: number; zaman: [number, number][] }
 interface Soru {
@@ -48,7 +50,39 @@ const ANAHTAR = 'medsoru_genetik_kamp_v1';
 const KATEGORI: Record<string, string> = { sendrom: 'Bulgu → sendrom', ilac: 'Kanser → ilaç', belirtec: 'Belirteç', tani: 'Tanı yöntemi' };
 
 type Mod = 'hizli' | 'yavas' | 'tam';
-type Sekme = 'ders' | 'sesli' | 'kalip' | 'deneme';
+type Sekme = 'sesli' | 'ders' | 'kalip' | 'deneme';
+const SEKMELER: [Sekme, string, string, React.ComponentType<{ 'aria-hidden'?: boolean }>][] = [
+  ['sesli', 'Sesli ders', 'Aşama aşama, slaytlarla', Headphones],
+  ['ders', 'Soru çözerek', 'Adım adım, her adımda çıkmış', ListChecks],
+  ['kalip', 'Kalıp kartları', 'Bulgu → tanı, kanser → ilaç', Table2],
+  ['deneme', 'Deneme', '12 soruluk sınav provası', Shuffle],
+];
+/** Sayfa adresi: /genetik-check-up?b=ders|kalip|deneme (yoksa sesli ders) — her bölüm ayrı sayfa, Geri ile dönülür */
+const sekmeOku = (): Sekme => {
+  const b = new URLSearchParams(window.location.search).get('b');
+  return b === 'ders' || b === 'kalip' || b === 'deneme' ? b : 'sesli';
+};
+function sekmeYaz(b: Sekme) {
+  const u = new URL(window.location.href);
+  if (b === 'sesli') u.searchParams.delete('b'); else u.searchParams.set('b', b);
+  if (u.href !== window.location.href) window.history.pushState(window.history.state, '', u.pathname + u.search + u.hash);
+}
+
+/** Kampın ortak başı: ad + bölüm sayfaları (sesli ders ekranında geri bağlantısının yerine geçer) */
+function KampGezinme({ sekme, onSekme, sade = false }: { sekme: Sekme; onSekme: (s: Sekme) => void; sade?: boolean }) {
+  return (
+    <nav className={`tk-gez${sade ? ' is-sade' : ''}`} aria-label="TBG Sınav Kampı bölümleri">
+      <span className="tk-gez-ad" title="Kurul 1 · Tıbbi Biyoloji ve Genetik · 12 soru"><Dna aria-hidden /><b>TBG Sınav Kampı</b></span>
+      <span className="tk-gez-sek" role="tablist">
+        {SEKMELER.map(([id, ad, alt, Ic]) => (
+          <button key={id} type="button" role="tab" aria-selected={sekme === id} className={sekme === id ? 'is-on' : ''} title={alt} onClick={() => onSekme(id)}>
+            <Ic aria-hidden /><span>{ad}</span>
+          </button>
+        ))}
+      </span>
+    </nav>
+  );
+}
 interface Kayit { mod: Mod; adim: Record<Mod, number>; tamam: Record<string, 1>; cevap: Record<string, string>; hiz: number; oto: boolean }
 
 function kayitOku(): Kayit {
@@ -83,7 +117,14 @@ const yavasSuz = (d: Ders): Ders => ({ ...d, noktalar: d.noktalar.filter((n) => 
 
 export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
   const [kayit, setKayit] = useState<Kayit>(kayitOku);
-  const [sekme, setSekme] = useState<Sekme>('ders');
+  const [sekme, setSekme0] = useState<Sekme>(sekmeOku);
+  const setSekme = useCallback((b: Sekme) => { setSekme0(b); sekmeYaz(b); window.scrollTo({ top: 0 }); }, []);
+  useEffect(() => {
+    const f = () => setSekme0(sekmeOku());
+    window.addEventListener('popstate', f);
+    return () => window.removeEventListener('popstate', f);
+  }, []);
+  useEffect(() => { document.title = 'TBG Sınav Kampı · MeDSor'; }, [sekme]);
   const [tamEkran, setTamEkran] = useState<Mod | null>(null);
   const [yardim, setYardim] = useState<Record<string, boolean>>({});
   const [calan, setCalan] = useState<{ id: string; cumle: number; oynuyor: boolean } | null>(null);
@@ -222,63 +263,67 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
     ],
   }), [adimlar, mod]);
 
+  // Sesli ders: sesli ders ekranının kendisi (kamp kipinde); tüm alanı kaplar
+  if (sekme === 'sesli') {
+    return (
+      <div className="tk-sesli">
+        <Suspense fallback={<div className="tk-bos">Yükleniyor…</div>}>
+          <CanliDersDers dersKey={TBG_DERS_KEY} kamp={{ geri: <KampGezinme sekme={sekme} onSekme={setSekme} sade /> }} />
+        </Suspense>
+      </div>
+    );
+  }
+
   return (
     <div className="tk">
-      {/* Sade baş: konu + tek satır kalıp özeti; mod seçici ve tek başlat düğmesi aynı satırda (eskiden 3 büyük kart) */}
-      <header className="tk-bas">
-        <span className="tk-ic" aria-hidden><Dna /></span>
-        <div className="tk-bas-t">
-          <span className="tk-ust">Kurul 1 · Tıbbi Biyoloji ve Genetik · 12 soru</span>
-          <h1>TBG Sınav Kampı</h1>
-          <p>Üç kalıp: <b>bulgudan sendrom</b> · <b>kanserde hedef ilaç</b> · <b>spesifik belirteç</b></p>
+      <KampGezinme sekme={sekme} onSekme={(b) => { durdur(); setSekme(b); }} />
+
+      {sekme !== 'kalip' && (
+        <section className="tk-mod tk-mod-sade" aria-label="Çalışma modu">
+          <div className="tk-mod-sec" role="radiogroup" aria-label="Mod">
+            {MODLAR.map((m) => {
+              const N = DERS.noktalar.filter((n) => modda(n, m));
+              return (
+                <button key={m} type="button" role="radio" aria-checked={mod === m} className={`tk-mod-k${mod === m ? ' is-on' : ''}`} title={MOD_ALT[m]}
+                  onClick={() => { durdur(); guncelle((k) => ({ ...k, mod: m })); }}>
+                  <span className="tk-mod-ad">{m === 'hizli' ? <Zap aria-hidden /> : m === 'yavas' ? <BookOpen aria-hidden /> : <Layers aria-hidden />}{MOD_AD[m]}</span>
+                  <span className="tk-mod-say">{N.length} adım · {N.reduce((t, n) => t + modSorulari(n, m).length, 0)} soru · ~{sure[m]} dk</span>
+                </button>
+              );
+            })}
+          </div>
+          <button type="button" className="tk-btn tk-btn-ana tk-mod-basla" onClick={() => { durdur(); setTamEkran(mod); }}>
+            <Play aria-hidden /> Asistanla başla
+          </button>
+        </section>
+      )}
+
+      {sekme === 'ders' && (
+        <div className="tk-ust-satir">
+          <details className="tk-harita">
+            <summary className="tk-harita-bas">
+              <span className="tk-ust">Son yılların çıkmışları nereden geliyor</span>
+              <span className="tk-harita-top"><b>{tumSorular.filter((x) => x.s.tur === 'cikmis').length}</b> çıkmış · <b>{tumSorular.filter((x) => x.s.tur === 'ornek').length}</b> kalıba uygun örnek</span>
+            </summary>
+            <ul>
+              {cikmisDagilim.map((d) => (
+                <li key={d.ad}><span>{d.ad}</span><i style={{ ['--w' as string]: `${(d.n / enCok) * 100}%` }} /><b className="tk-mono">{d.n}</b></li>
+              ))}
+            </ul>
+          </details>
+          <span className="tk-ilerleme">
+            <span>{bitenAdim}/{adimlar.length} adım</span>
+            <span>{dogruSay}/{cevapSay || 0} doğru</span>
+            <button type="button" className="tk-metin-btn" onClick={sifirla} title="İlerlemeyi sıfırla"><RotateCcw aria-hidden /></button>
+          </span>
         </div>
-        <div className="tk-bas-arac">
+      )}
+      {sekme === 'kalip' && (
+        <div className="tk-ust-satir">
+          <p className="tk-kalip-not">Hocanın kalıbı: <b>bulgudan sendrom</b> · <b>kanserde hedef ilaç</b> · <b>spesifik belirteç</b></p>
           <MetinAktarMenu belge={belge} dosyaAdi={`tbg-sinav-kampi-${mod}`} dugmeSinif="tk-btn" etiket="Özeti indir" />
         </div>
-      </header>
-
-      <section className="tk-mod tk-mod-sade" aria-label="Çalışma modu">
-        <div className="tk-mod-sec" role="radiogroup" aria-label="Mod">
-          {MODLAR.map((m) => {
-            const N = DERS.noktalar.filter((n) => modda(n, m));
-            return (
-              <button key={m} type="button" role="radio" aria-checked={mod === m} className={`tk-mod-k${mod === m ? ' is-on' : ''}`} title={MOD_ALT[m]}
-                onClick={() => { durdur(); guncelle((k) => ({ ...k, mod: m })); }}>
-                <span className="tk-mod-ad">{m === 'hizli' ? <Zap aria-hidden /> : m === 'yavas' ? <BookOpen aria-hidden /> : <Layers aria-hidden />}{MOD_AD[m]}</span>
-                <span className="tk-mod-say">{N.length} adım · {N.reduce((t, n) => t + modSorulari(n, m).length, 0)} soru · ~{sure[m]} dk</span>
-              </button>
-            );
-          })}
-        </div>
-        <button type="button" className="tk-btn tk-btn-ana tk-mod-basla" onClick={() => { durdur(); setTamEkran(mod); }}>
-          <Play aria-hidden /> Asistanla başla
-        </button>
-      </section>
-
-      <details className="tk-harita">
-        <summary className="tk-harita-bas">
-          <span className="tk-ust">Son yılların çıkmışları nereden geliyor</span>
-          <span className="tk-harita-top"><b>{tumSorular.filter((x) => x.s.tur === 'cikmis').length}</b> çıkmış · <b>{tumSorular.filter((x) => x.s.tur === 'ornek').length}</b> kalıba uygun örnek</span>
-        </summary>
-        <ul>
-          {cikmisDagilim.map((d) => (
-            <li key={d.ad}><span>{d.ad}</span><i style={{ ['--w' as string]: `${(d.n / enCok) * 100}%` }} /><b className="tk-mono">{d.n}</b></li>
-          ))}
-        </ul>
-      </details>
-
-      <nav className="tk-sekme" role="tablist" aria-label="Bölümler">
-        {([['ders', 'Adım adım ders', ListChecks], ['sesli', 'Sesli ders + slayt', Headphones], ['kalip', 'Kalıp kartları', Table2], ['deneme', '12 soruluk deneme', Shuffle]] as const).map(([id, ad, Ic]) => (
-          <button key={id} type="button" role="tab" aria-selected={sekme === id} className={sekme === id ? 'is-on' : ''} onClick={() => { durdur(); setSekme(id); }}>
-            <Ic aria-hidden /> {ad}
-          </button>
-        ))}
-        <span className="tk-ilerleme">
-          <span>{bitenAdim}/{adimlar.length} adım</span>
-          <span>{dogruSay}/{cevapSay || 0} doğru</span>
-          <button type="button" className="tk-metin-btn" onClick={sifirla} title="İlerlemeyi sıfırla"><RotateCcw aria-hidden /></button>
-        </span>
-      </nav>
+      )}
 
       {sekme === 'ders' && nokta && (
         <div className="tk-ders">
@@ -345,7 +390,7 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
               {idx < adimlar.length - 1 ? (
                 <button type="button" className="tk-btn tk-btn-ana" onClick={() => { guncelle((k) => ({ ...k, tamam: { ...k.tamam, [nokta.id]: 1 } })); git(idx + 1, calan !== null); }}>Sonraki adım <ChevronRight aria-hidden /></button>
               ) : (
-                <button type="button" className="tk-btn tk-btn-ana" onClick={() => { guncelle((k) => ({ ...k, tamam: { ...k.tamam, [nokta.id]: 1 } })); setSekme('deneme'); }}>Bitir, denemeye geç <ChevronRight aria-hidden /></button>
+                <button type="button" className="tk-btn tk-btn-ana" onClick={() => { durdur(); guncelle((k) => ({ ...k, tamam: { ...k.tamam, [nokta.id]: 1 } })); setSekme('deneme'); }}>Bitir, denemeye geç <ChevronRight aria-hidden /></button>
               )}
             </div>
             {idx === adimlar.length - 1 && DERS.kapanis.length > 0 && (
@@ -359,11 +404,6 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
       )}
 
       {sekme === 'kalip' && <KalipKartlari mod={mod} />}
-      {sekme === 'sesli' && (
-        <Suspense fallback={<div className="tk-bos">Yükleniyor…</div>}>
-          <GenetikSesliDers ders={DERS} adimlar={adimlar} />
-        </Suspense>
-      )}
       {sekme === 'deneme' && <Deneme mod={mod} havuz={adimlar} cal={cal} durdur={durdur} />}
 
       {tamEkran && <PatolojiAsistan key={tamEkran} kod={DERS.kod} suz={tamEkran === 'hizli' ? hizliSuz : tamEkran === 'yavas' ? yavasSuz : undefined} onClose={() => setTamEkran(null)} />}

@@ -1,15 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 135,
-  "baslik": "Kişiler: botlar ve sınama araçları ayrıldı",
+  "onem": 136,
+  "baslik": "TBG Sınav Kampı yenilendi: aşama aşama sesli ders",
   "maddeler": [
-    "Yönetim › Kişiler listesinde arama motoru botları, tarama/sınama araçları ve boş kayıtlar artık kişi sayılmıyor; ayrı \"Bot / otomasyon / boş\" süzgecinde görünüyor.",
-    "Girişsiz kişilerde cihaz, tarayıcı, ilk görülme, oturum sayısı ve son sayfa gösteriliyor.",
-    "Aynı adla girişsiz kullanan kişinin farklı cihazları tek satırda birleşiyor."
+    "TBG Sınav Kampı artık sesli ders ekranıyla açılıyor: 6 genetik dersinin tamamı, hocanın kalıbına göre 10 aşamada (~70 dk, EMA sesi).",
+    "Okunan cümle ve kelime metinde vurgulanır; ilgili dersin slaytı yanda kendiliğinden açılır ve okunan satır işaretlenir.",
+    "Aşama çubuğuyla istediğin aşamaya geç; ses de oraya atlar. Yazı boyutu, metin/slayt düzeni, hız, bölümler, PDF çıktısı ve çevrimdışı indirme sesli dersteki gibi.",
+    "Soru çözerek, Kalıp kartları ve Deneme artık ayrı sayfalar; içerik çıkmışlarla ve hocanın tüyosuyla genişletildi."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "TBG Sınav Kampı artık sesli ders ekranıyla açılıyor: 6 genetik dersinin tamamı, hocanın kalıbına göre 10 aşamada (~70 dk, EMA sesi).",
+    "Okunan cümle ve kelime metinde vurgulanır; ilgili dersin slaytı yanda kendiliğinden açılır ve okunan satır işaretlenir.",
+    "Aşama çubuğuyla istediğin aşamaya geç; ses de oraya atlar. Yazı boyutu, metin/slayt düzeni, hız, bölümler, PDF çıktısı ve çevrimdışı indirme sesli dersteki gibi."
+  ],
   "degisen": [
-    "Görünüm ayarları (tema, palet, yoğunluk, Öğren düzeni ve yakınlaştırma vb.) artık her cihazda ayrı saklanıyor; telefondaki değişiklik bilgisayarı veya tableti etkilemiyor."
+    "Soru çözerek, Kalıp kartları ve Deneme artık ayrı sayfalar; içerik çıkmışlarla ve hocanın tüyosuyla genişletildi."
   ],
   "duzeltilen": [],
   "silinen": []

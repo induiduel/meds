@@ -226,82 +226,57 @@
   .tk-mod-sade .tk-mod-say { white-space: normal; }
 }
 
-/* ——— Sesli ders + slayt (GenetikSesliDers.tsx) ——— */
-.gsd { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 8px; height: calc(100dvh - var(--sh-top-h, 0px) - var(--sh-tabs-h, 0px) - 120px); min-height: 520px; }
-.tk.gsd-tam-kap { position: fixed; inset: 0; z-index: 2147483000; display: block; max-width: none; margin: 0; padding: 0; background: var(--color-canvas, var(--color-white)); }
-.gsd.is-tam { height: 100dvh; min-height: 0; padding: max(10px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); background: var(--color-canvas, var(--color-white)); }
-.gsd:fullscreen { background: var(--color-canvas, var(--color-white)); }
 
-/* araç çubuğu */
-.gsd-arac { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
-.gsd-sec { display: inline-flex; padding: 3px; gap: 2px; border-radius: 11px; background: var(--color-field); }
-.gsd-sec button { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 12px; border: 0; border-radius: 8px; background: transparent; font: 600 13px/1 var(--font-sans); color: var(--color-ink-2); }
-.gsd-sec button svg { width: 15px; height: 15px; }
-.gsd-sec button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 1px 3px rgb(0 0 0 / .1); }
-.gsd-oran input { width: 120px; accent-color: var(--color-accent); }
-.gsd-yazi { display: inline-flex; align-items: center; gap: 2px; font-size: 12px; color: var(--color-ink-3); }
-.gsd-tam-btn { margin-left: auto; }
+/* ——— kamp gezinmesi: ad + bölüm sayfaları (sesli ders ekranında başlığın solunda) ——— */
+.tk-gez { display: flex; align-items: center; gap: 8px 14px; flex-wrap: wrap; min-width: 0; font-family: var(--font-sans); color: var(--color-ink); }
+.tk-gez svg { flex: none; width: 16px; height: 16px; }
+.tk-gez-ad { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; white-space: nowrap; }
+.tk-gez-ad svg { width: 20px; height: 20px; color: var(--color-accent); }
+.tk-gez-ad b { font-weight: 700; letter-spacing: -.01em; }
+.tk-gez-sek { display: inline-flex; gap: 2px; padding: 3px; border-radius: 12px; background: var(--color-field); max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+.tk-gez-sek::-webkit-scrollbar { display: none; }
+.tk-gez-sek > button { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 12px; border: 0; border-radius: 9px; background: transparent;
+  color: var(--color-ink-2); font: 550 14px/1 var(--font-sans); white-space: nowrap; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.tk-gez-sek > button:hover { color: var(--color-ink); }
+.tk-gez-sek > button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 0 0 1px var(--color-line); }
+.tk-gez-sek > button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.tk > .tk-gez { padding-bottom: 2px; }
+.tk > .tk-gez .tk-gez-ad { font-size: 20px; }
+/* sesli ders başında: sığmazsa yalnız simgeler */
+.tk-gez.is-sade { flex-wrap: nowrap; }
+.tk-gez.is-sade .tk-gez-ad b { display: none; }
+@media (max-width: 760px) { .tk-gez.is-sade .tk-gez-sek > button span { display: none; } .tk-gez.is-sade .tk-gez-sek > button { padding: 0 10px; } }
+@media (max-width: 560px) { .tk > .tk-gez .tk-gez-sek { width: 100%; } .tk > .tk-gez .tk-gez-sek > button { flex: 1 0 auto; justify-content: center; } }
+.tk-sesli { width: 100%; min-width: 0; }
+.tk-ust-satir { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; }
+.tk-ust-satir .tk-harita { flex: 1 1 360px; }
+.tk-kalip-not { font-size: 14px; color: var(--color-ink-2); }
 
-/* gövde: görünüm + taraf + oran */
-.gsd-govde { display: grid; gap: 12px; min-height: 0; grid-template-columns: minmax(0, var(--gsd-oran, 1fr)) minmax(0, var(--gsd-pdf-oran, 1.15fr)); }
-.gsd-t-sol .gsd-pdf { order: -1; }
-.gsd-g-metin .gsd-govde, .gsd-g-pdf .gsd-govde { grid-template-columns: minmax(0, 1fr); }
-.gsd-g-metin .gsd-pdf { display: none; }
-.gsd-g-pdf .gsd-metin { display: none; }
-
-/* metin */
-.gsd-metin { min-width: 0; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 4px 14px 30vh 8px; border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); font-size: calc(15px * var(--gsd-yazi, 1)); contain: content; }
-.gsd-g-metin .gsd-metin { padding-inline: max(14px, calc((100% - 820px) / 2)); }
-.gsd-b { display: grid; gap: 3px; width: 100%; margin: 16px 0 6px; padding: 10px 12px; border: 0; border-radius: 10px; background: var(--color-field); text-align: left; font: 650 1.02em/1.35 var(--font-sans); }
-.gsd-b span { font-size: .72em; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
-.gsd-b small { font-size: .88em; font-weight: 400; line-height: 1.5; color: var(--color-ink-2); }
-.gsd-b.is-on { background: var(--color-accent-soft); }
-.gsd-n { padding: 10px 4px 4px; }
-.gsd-n h4 { margin: 0 0 6px; font: 700 1.04em/1.35 var(--font-sans); color: var(--color-ink); }
-.gsd-n:not(.is-on) h4 { color: var(--color-ink-2); }
-.gsd-n ul { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
-.gsd-c button { position: relative; display: block; width: 100%; padding: 5px 8px 5px 24px; border: 0; border-radius: 8px; background: transparent; text-align: left; font: inherit; line-height: 1.6; color: var(--color-ink-2); }
-.gsd-c button::before { content: ''; position: absolute; left: 10px; top: calc(5px + .8em - 3px); width: 6px; height: 6px; border-radius: 50%; background: var(--color-ink-3); }
-.gsd-c.is-alt button { padding-left: 46px; }
-.gsd-c.is-alt button::before { left: 30px; width: 8px; height: 2px; border-radius: 1px; top: calc(5px + .8em - 1px); }
-.gsd-c button:hover { background: var(--color-field); }
-.gsd-c.is-gecti button { color: var(--color-ink); }
-.gsd-c.is-on button { background: var(--color-accent-soft); color: var(--color-ink); }
-.gsd-c.is-on button::before { background: var(--color-accent); }
-.gsd-c.is-not button { box-shadow: inset 3px 0 0 var(--color-warn, #e0a100); }
-.gsd-c.is-not button::before { background: var(--color-warn, #e0a100); }
-/* cümle içi alt maddeler: "tanım; örnekler" */
-.gsd-p { display: block; }
-.gsd-p.gsd-d1 { position: relative; margin-top: 2px; padding-left: 20px; }
-.gsd-p.gsd-d1::before { content: ''; position: absolute; left: 6px; top: calc(.8em - 1px); width: 8px; height: 2px; border-radius: 1px; background: var(--color-ink-3); }
-.gsd-k { border-radius: 4px; transition: background-color .1s; }
-.gsd-k.is-on { background: color-mix(in srgb, var(--color-accent) 30%, transparent); color: var(--color-ink); box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-accent) 30%, transparent); }
-
-/* slayt */
-.gsd-pdf { min-width: 0; min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); overflow: hidden; }
-.gsd-pdf-bas { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; padding: 8px 12px; border-bottom: 1px solid var(--color-line); font-size: 13px; color: var(--color-ink-2); }
-.gsd-pdf-bas b { color: var(--color-ink); }
-.gsd-pdf-bas small { margin-left: auto; font-size: 11.5px; color: var(--color-ink-3); }
-.gsd-pdf-alan { position: relative; min-height: 0; }
-/* görüntüleyici (.pdv flex: 1) kendi içinde kaysın: kap esnek sütun olmalı, yoksa sayfaya hiç gidilmez */
-.gsd-pdf-k { position: absolute; inset: 0; display: flex; flex-direction: column; visibility: hidden; pointer-events: none; }
-.gsd-pdf-k.is-on { visibility: visible; pointer-events: auto; }
-.gsd-pdf-bos { display: grid; place-items: center; height: 100%; font-size: 13px; color: var(--color-ink-3); }
-
-/* oynatıcı: gövdenin altında kendi satırı (metnin üstüne binmez) */
-.gsd-oynatici { display: flex; align-items: center; gap: 6px; padding: 8px 10px; border: 1px solid var(--color-line); border-radius: 14px; background: var(--color-white); }
-.gsd-oyna { min-width: 104px; }
-.gsd-ilerle { flex: 1 1 auto; min-width: 40px; height: 5px; border-radius: 3px; background: var(--color-field); position: relative; overflow: hidden; }
-.gsd-ilerle i { position: absolute; inset: 0 auto 0 0; width: var(--w); background: var(--color-accent); border-radius: 3px; }
-.gsd-sure { font-size: 12px; color: var(--color-ink-3); white-space: nowrap; }
-@media (max-width: 900px) {
-  .gsd-g-ikisi .gsd-govde { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 42%) minmax(0, 1fr); }
-  .gsd-g-ikisi .gsd-pdf { order: -1; }
-  .gsd-oran, .gsd-taraf { display: none; }
-}
-@media (max-width: 560px) {
-  .gsd-sure, .gsd-oynatici .tk-hiz { display: none; }
-  .gsd-oyna { min-width: 0; }
-  .gsd-sec button span { display: none; }
-  .gsd-tam-btn { padding-inline: 10px; }
-}
+/* ——— kamp kipi (TBG Sınav Kampı): aşama aşama metin, büyük yazı her zaman ayarlı ——— */
+.cd-ders.cd-kamp .cd-p { font-size: var(--cd-tam-yazi, 19px); line-height: 1.65; }
+.cd-ders.cd-kamp .cd-ders-bas { gap: 10px 14px; }
+.cd-k-cubuk { flex: none; display: flex; gap: 6px; padding: 8px 10px; overflow-x: auto; scrollbar-width: thin; border-bottom: 1px solid var(--color-line-soft, var(--color-line)); background: var(--color-white); }
+.cd-k-cip { flex: none; display: inline-flex; align-items: center; gap: 7px; max-width: 240px; min-height: 36px; padding: 0 12px 0 6px; border: 1px solid var(--color-line); border-radius: 999px;
+  background: var(--color-white); color: var(--color-ink-2); font: 550 13.5px/1.1 var(--font-sans); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.cd-k-cip:hover { background: var(--color-field); color: var(--color-ink); }
+.cd-k-cip-no { display: grid; place-items: center; flex: none; min-width: 24px; height: 24px; padding: 0 4px; border-radius: 999px; background: var(--color-field); color: var(--color-ink-2); font: 700 12px/1 var(--font-sans); font-variant-numeric: tabular-nums; }
+.cd-k-cip-ad { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cd-k-cip.is-bitti .cd-k-cip-no { background: color-mix(in srgb, var(--color-success, var(--color-accent)) 18%, transparent); color: var(--color-success, var(--color-accent)); }
+.cd-k-cip.is-on { border-color: transparent; background: var(--color-accent); color: var(--color-on-accent); }
+.cd-k-cip.is-on .cd-k-cip-no { background: color-mix(in srgb, var(--color-on-accent) 22%, transparent); color: var(--color-on-accent); }
+.cd-k-cip.is-ses:not(.is-on) { border-color: var(--color-accent); color: var(--color-accent); }
+@media (max-width: 640px) { .cd-k-cip:not(.is-on) .cd-k-cip-ad { display: none; } .cd-k-cip:not(.is-on) { padding-right: 6px; } }
+.cd-metin-bolme.is-kamp .cd-bolum.cd-k-giris { padding-top: 14px; }
+.cd-metin-bolme.is-kamp .cd-k-asama { position: static; margin: 0 0 8px; padding: 0; border: 0; background: none; text-transform: none; letter-spacing: -.015em;
+  font: 720 clamp(20px, 2.2vw, 26px)/1.25 var(--font-sans); color: var(--color-ink); display: flex; flex-direction: column; gap: 6px; }
+.cd-metin-bolme.is-kamp .cd-k-asama .cd-k-no { font: 700 12px/1 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--color-accent); }
+.cd-metin-bolme.is-kamp .cd-k-giris .cd-p { font-size: calc(var(--cd-tam-yazi, 19px) * .95); color: var(--color-ink-2); }
+.cd-metin-bolme.is-kamp .cd-k-giris .cd-p .cd-giris { font-weight: 500; }
+.cd-metin-bolme.is-kamp .cd-k-baslik { display: flex; align-items: baseline; gap: 10px; text-transform: none; letter-spacing: -.01em; font: 680 clamp(16px, 1.5vw, 19px)/1.3 var(--font-sans); color: var(--color-ink); }
+.cd-metin-bolme.is-kamp .cd-k-baslik .cd-k-no { flex: none; font: 700 13px/1 var(--font-mono, ui-monospace, monospace); color: var(--color-accent); }
+.cd-metin-bolme.is-kamp .cd-bolum.cd-k-alt { padding-top: 18px; }
+.cd-metin-bolme.is-kamp .cd-p .cd-madde { margin-top: .45em; }
+.cd-k-son { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin: 28px 0 8px; padding-top: 16px; border-top: 1px solid var(--color-line-soft, var(--color-line)); }
+.cd-k-son .cd-btn { max-width: 100%; }
+.cd-k-son .cd-btn span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cd-k-son .cd-btn.is-ana { margin-left: auto; }
