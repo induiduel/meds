@@ -21,9 +21,16 @@ import {
 } from '../services/api';
 import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
 import { toast } from './ui/Toast';
-import { Panel, EmptyState, SearchBox, ChipBar, Switch, Drawer, logTone } from './manage/consoleUi';
+import { Panel, EmptyState, Switch, Drawer, logTone } from './manage/consoleUi';
+import { PageActions, Toolbar, Tabs14, SearchField, DataTable, Pill, type Col } from './v14/pageKit';
+import { BulkBar, useSelection } from './v14/manageKit';
 import { guardedInterval } from '../services/net';
 
+/**
+ * Betikler (v14, canvas Betikler.dc.html): kategori sekmeleri + arama → zincirler → seçimli betik tablosu →
+ * seçilenleri sırayla çalıştır (her biri bitmeden sonraki başlamaz; biri hata verirse sıra durur) → çıktı konsolu (Drawer).
+ * Sunucu zinciri (runScriptPipeline) yalnız tanımlı zincir kimliği alır; serbest seçim tek tek runScript ile yürür.
+ */
 interface AdminScriptsTabProps {
   adminEmail: string;
   onRefreshAllData?: () => Promise<void>;
@@ -62,6 +69,10 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
   const [autoScroll, setAutoScroll] = useState(true);
   const [copied, setCopied] = useState(false);
   const [runningJobName, setRunningJobName] = useState<string | null>(null);
+
+  const scriptSel = useSelection<string>();
+  const [seq, setSeq] = useState<{ i: number; n: number; name: string } | null>(null);
+  const seqStop = useRef(false);
 
   const logsEndRef = useRef<HTMLDivElement>(null);
   const pollingRef = useRef<any>(null);
@@ -206,6 +217,54 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
     }
   };
 
+  /** Seçilen betikleri sırayla çalıştırır: her işin bitmesi beklenir; hata ya da durdurma sırayı keser */
+  const runSequence = async () => {
+    const names = scripts.filter((x) => scriptSel.has(x.name)).map((x) => x.name);
+    if (!names.length) return;
+    seqStop.current = false;
+    let ok = 0;
+    let bad = 0;
+    for (let i = 0; i < names.length; i++) {
+      if (seqStop.current) break;
+      const name = names[i];
+      setSeq({ i: i + 1, n: names.length, name });
+      setRunningJobName(name);
+      try {
+        const res = await ApiService.runScript(name, customArgs[name] || '', adminEmail);
+        if (!res.success || !res.job?.id) {
+          bad++;
+          setFeedback({ text: `${name} başlatılamadı: ${res.message}`, type: 'error' });
+          break;
+        }
+        setTerminalJobId(res.job.id);
+        setTerminalJob(res.job);
+        setTerminalLogs(res.job.logs || []);
+        setIsTerminalOpen(true);
+        let status = res.job.status;
+        while (status === 'running') {
+          await new Promise((r) => setTimeout(r, 1500));
+          const st = await ApiService.getScriptJobStatus(res.job.id);
+          if (st.success && st.job) status = st.job.status;
+        }
+        if (status === 'completed') ok++;
+        else {
+          bad++;
+          break;
+        }
+      } catch (e: any) {
+        bad++;
+        setFeedback({ text: `${name}: ${e?.message || 'hata'}`, type: 'error' });
+        break;
+      }
+    }
+    setSeq(null);
+    setRunningJobName(null);
+    await loadScriptsData(true);
+    const msg = `${ok} başarılı, ${bad} hata${seqStop.current ? ' (durduruldu)' : ''}.`;
+    if (bad) toast.error(msg);
+    else toast.success(msg);
+  };
+
   const openTerminalForJob = (job: AdminScriptJob) => {
     setTerminalJobId(job.id);
     setTerminalJob(job);
@@ -256,20 +315,88 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
       <span className="ms-tag is-bad">{status === 'cancelled' ? 'Durduruldu' : 'Hata'}</span>
     ) : null;
 
+  const stop = (e: React.SyntheticEvent) => e.stopPropagation();
+  const scriptCols: Col<AdminScriptItem>[] = [
+    {
+      key: 'title',
+      label: 'Betik',
+      render: (script) => (
+        <span className="flex flex-col gap-0.5 min-w-0" style={{ maxWidth: 360 }}>
+          <span className="font-semibold text-ink truncate">{cleanTitle(script.title)}</span>
+          <span className="text-sm text-ink-3 truncate" title={script.description}>{script.description}</span>
+          <code className="font-mono text-xs text-ink-2 truncate">{script.name}{script.tags?.length ? ` · ${script.tags.map((t) => `#${t}`).join(' ')}` : ''}</code>
+        </span>
+      ),
+    },
+    { key: 'rt', label: 'Ortam', render: (script) => <span className="flex flex-wrap gap-1"><Pill>{RUNTIME_LABEL[script.runtime] || script.runtime}</Pill>{script.isCustom && <Pill tone="acc">Yeni</Pill>}</span> },
+    {
+      key: 'state',
+      label: 'Durum',
+      render: (script) => (activeJobs[script.name] || runningJobName === script.name ? <Pill tone="warn">Çalışıyor</Pill> : <span className="text-ink-3">Hazır</span>),
+    },
+    {
+      key: 'args',
+      label: 'Argümanlar',
+      render: (script) => {
+        const userArg = customArgs[script.name] !== undefined ? customArgs[script.name] : script.defaultArgs || '';
+        return (
+          <span className="flex items-center gap-1" onClick={stop} onKeyDown={stop}>
+            <input
+              type="text"
+              value={userArg}
+              onChange={(e) => setCustomArgs((prev) => ({ ...prev, [script.name]: e.target.value }))}
+              placeholder="--all …"
+              aria-label={`${script.title} argümanları`}
+              spellCheck={false}
+              className="ms-input is-sm is-mono"
+              style={{ width: 180 }}
+            />
+            {script.defaultArgs && userArg !== script.defaultArgs && (
+              <button type="button" onClick={() => setCustomArgs((prev) => ({ ...prev, [script.name]: script.defaultArgs || '' }))} className="m14-btn ghost" title={`Varsayılan: ${script.defaultArgs}`}>
+                Varsayılan
+              </button>
+            )}
+          </span>
+        );
+      },
+    },
+    {
+      key: 'act',
+      label: <span className="sr-only">İşlemler</span>,
+      render: (script) => {
+        const activeJob = activeJobs[script.name];
+        const running = Boolean(activeJob || runningJobName === script.name);
+        return (
+          <span className="flex items-center justify-end gap-1" onClick={stop} onKeyDown={stop}>
+            <button type="button" onClick={() => openLogsFor(script)} className="m14-btn ghost" title="Bu betiğin son günlüğü">
+              <Eye aria-hidden="true" /> Günlük
+            </button>
+            {running && activeJob ? (
+              <button type="button" onClick={() => handleStopJob(activeJob.id)} className="m14-btn danger">
+                <Square aria-hidden="true" /> Durdur
+              </button>
+            ) : (
+              <button type="button" onClick={() => handleRunScript(script.name)} disabled={running || !!seq} className="m14-btn primary">
+                <Play aria-hidden="true" /> Çalıştır
+              </button>
+            )}
+          </span>
+        );
+      },
+    },
+  ];
+
   return (
     <div className="flex flex-col gap-3 min-w-0">
-      <div className="flex flex-col md:flex-row md:items-center gap-2">
-        <SearchBox value={searchQuery} onChange={setSearchQuery} placeholder="Betik adı, açıklama ya da etiket (slide, supabase, verify…)" count={`${filteredScripts.length} betik`} className="flex-1" />
-        <div className="flex items-center gap-2">
-          <button type="button" onClick={() => setIsTerminalOpen(true)} className="ms-btn" title="Canlı betik konsolunu aç">
-            <FileCode /> Konsol
-            {runningCount > 0 && <span className="ms-btn-badge">{runningCount}</span>}
-          </button>
-          <button type="button" onClick={() => loadScriptsData()} disabled={isLoading} className="ms-btn is-ghost" title="scripts/ klasörünü yeniden tarar; yeni betikler kendiliğinden listelenir">
-            <RefreshCw className={isLoading ? 'animate-spin' : ''} /> {isLoading ? 'Taranıyor…' : 'Yeniden tara'}
-          </button>
-        </div>
-      </div>
+      <PageActions note={seq ? `Sırayla çalışıyor · ${seq.i} / ${seq.n} · ${seq.name}` : 'Seçilen betikler sırayla çalışır; biri hata verirse sıra durur.'}>
+        <button type="button" onClick={() => setIsTerminalOpen(true)} className="m14-btn" title="Canlı betik konsolunu aç">
+          <FileCode aria-hidden="true" /> Çıktı konsolu
+          {runningCount > 0 && <span className="ms-btn-badge">{runningCount}</span>}
+        </button>
+        <button type="button" onClick={() => loadScriptsData()} disabled={isLoading} className="m14-btn ghost" title="scripts/ klasörünü yeniden tarar; yeni betikler kendiliğinden listelenir">
+          <RefreshCw className={isLoading ? 'animate-spin' : ''} aria-hidden="true" /> {isLoading ? 'Taranıyor…' : 'Yeniden tara'}
+        </button>
+      </PageActions>
 
       <Panel flush title="Zincirler" icon={Zap} count={pipelines.length} desc="Birden çok betiği sırayla çalıştırır; bir adım hata verirse zincir durur.">
         <ul className="ms-rows">
@@ -294,7 +421,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
                   </ol>
                 </div>
                 <div className="ms-row-actions">
-                  <button type="button" onClick={() => handleRunPipeline(pipe.id)} disabled={running} className={`ms-btn is-sm ${running ? 'is-warn' : 'is-primary'}`}>
+                  <button type="button" onClick={() => handleRunPipeline(pipe.id)} disabled={running} className={`m14-btn ${running ? '' : 'primary'}`}>
                     {running ? <RefreshCw className="animate-spin" /> : <Play />} {running ? 'Çalışıyor…' : 'Başlat'}
                   </button>
                 </div>
@@ -304,75 +431,35 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
         </ul>
       </Panel>
 
-      <ChipBar
-        label="Kategori"
-        value={selectedCategory}
-        onChange={setSelectedCategory}
-        options={categories.map((cat) => ({ id: cat, label: cat, n: catCount(cat) }))}
-      />
+      <Toolbar>
+        <Tabs14 label="Kategori" value={selectedCategory} onChange={setSelectedCategory} options={categories.map((cat) => ({ id: cat, label: cat, n: catCount(cat) }))} />
+        <SearchField value={searchQuery} onChange={setSearchQuery} placeholder="Betik adı, açıklama ya da etiket" label="Betik ara" />
+        <span className="pk14-note">{filteredScripts.length} betik</span>
+      </Toolbar>
 
-      <Panel flush>
-        {filteredScripts.length === 0 ? (
-          <EmptyState icon={Search} title="Betik bulunamadı">Aramayı ya da kategoriyi değiştir.</EmptyState>
-        ) : (
-          <ul className="ms-rows">
-            {filteredScripts.map((script) => {
-              const activeJob = activeJobs[script.name];
-              const running = Boolean(activeJob || runningJobName === script.name);
-              const userArg = customArgs[script.name] !== undefined ? customArgs[script.name] : script.defaultArgs || '';
-              return (
-                <li key={script.name} className={`ms-row ${running ? 'bg-accent-soft/50' : ''}`}>
-                  <span className={`ms-ricon ${running ? 'is-warn' : ''}`}><Code aria-hidden="true" /></span>
-                  <div className="ms-row-main">
-                    <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                      <span className="ms-row-title">{cleanTitle(script.title)}</span>
-                      <span className="ms-tag">{RUNTIME_LABEL[script.runtime] || script.runtime}</span>
-                      {script.isCustom && <span className="ms-tag is-accent">Yeni</span>}
-                      {running && <span className="ms-tag is-warn"><span className="ms-sdot is-warn is-live" /> Çalışıyor</span>}
-                    </span>
-                    <span className="ms-row-text">{script.description}</span>
-                    <span className="ms-row-meta">
-                      <code className="font-mono text-xs text-ink-2">{script.name}</code>
-                      {script.sizeBytes ? <span>{(script.sizeBytes / 1024).toFixed(1)} KB</span> : null}
-                      {script.tags && script.tags.length > 0 && <span>{script.tags.map((t) => `#${t}`).join(' ')}</span>}
-                    </span>
-                    <span className="flex items-center gap-2 pt-1.5 max-w-[640px]">
-                      <input
-                        type="text"
-                        value={userArg}
-                        onChange={(e) => setCustomArgs((prev) => ({ ...prev, [script.name]: e.target.value }))}
-                        placeholder="Argümanlar (isteğe bağlı): --all, --unverified …"
-                        aria-label={`${script.title} argümanları`}
-                        spellCheck={false}
-                        className="ms-input is-sm is-mono flex-1"
-                      />
-                      {script.defaultArgs && userArg !== script.defaultArgs && (
-                        <button type="button" onClick={() => setCustomArgs((prev) => ({ ...prev, [script.name]: script.defaultArgs || '' }))} className="ms-btn is-sm is-ghost" title={`Varsayılan: ${script.defaultArgs}`}>
-                          Varsayılan
-                        </button>
-                      )}
-                    </span>
-                  </div>
-                  <div className="ms-row-actions">
-                    <button type="button" onClick={() => openLogsFor(script)} className="ms-btn is-sm is-ghost" title="Bu betiğin son günlüğü">
-                      <Eye /> Günlük
-                    </button>
-                    {running && activeJob ? (
-                      <button type="button" onClick={() => handleStopJob(activeJob.id)} className="ms-btn is-sm is-danger">
-                        <Square /> Durdur
-                      </button>
-                    ) : (
-                      <button type="button" onClick={() => handleRunScript(script.name)} disabled={running} className="ms-btn is-sm is-primary">
-                        <Play /> Çalıştır
-                      </button>
-                    )}
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        )}
-      </Panel>
+      <BulkBar
+        count={scriptSel.count}
+        noun="betik"
+        busy={!!seq}
+        onClear={scriptSel.clear}
+        actions={[{ label: 'Sırayla çalıştır', kind: 'main', run: runSequence }]}
+      />
+      {seq && (
+        <div className="pk14-actions">
+          <p className="pk14-note" aria-live="polite">Çalışıyor · {seq.i} / {seq.n}: {seq.name}</p>
+          <div className="pk14-actions-btns">
+            <button type="button" className="m14-btn danger" onClick={() => { seqStop.current = true; if (terminalJob?.status === 'running') void handleStopJob(terminalJob.id); }}>
+              <Square aria-hidden="true" /> Sırayı durdur
+            </button>
+          </div>
+        </div>
+      )}
+
+      {filteredScripts.length === 0 ? (
+        <EmptyState icon={Search} title="Betik bulunamadı">Aramayı ya da kategoriyi değiştir.</EmptyState>
+      ) : (
+        <DataTable rows={filteredScripts} cols={scriptCols} rowKey={(x) => x.name} onOpen={openLogsFor} selection={scriptSel} activeKey={seq?.name || null} minWidth={880} />
+      )}
 
       <Drawer
         open={isTerminalOpen}

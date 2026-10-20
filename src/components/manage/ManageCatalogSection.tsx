@@ -1,11 +1,12 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowUpRight, CheckCircle2, ChevronLeft, ChevronRight, CircleAlert, CircleDashed, Copy, Download, Eye, Link2, Plus, RotateCcw, Save, Tag, Trash2, X } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, ChevronLeft, ChevronRight, CircleAlert, CircleDashed, Copy, Download, Eye, Link2, Plus, Save, Tag, Trash2, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
-import { Sheet } from '../ui/Sheet';
 import { TagInput } from '../ui/TagInput';
 import { confirmDialog } from '../ui/ConfirmDialog';
-import { SearchBox, EmptyState } from './consoleUi';
+import { EmptyState, Drawer, Seg } from './consoleUi';
+import { PageActions, StatRow, Tabs14, SearchField, Toolbar, DataTable, DetailNav, Pill, type Col } from '../v14/pageKit';
+import { BulkBar, useSelection, JsonView, type BulkAction } from '../v14/manageKit';
 import './catalog.css';
 
 /**
@@ -71,7 +72,8 @@ export const ManageCatalogSection: React.FC<{ adminEmail: string }> = ({ adminEm
   const [list, setList] = useState<ListResp | null>(null);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState('');
-  const [sel, setSel] = useState<Set<string>>(new Set());
+  const selection = useSelection<string>();
+  const sel = selection.sel;
   const [open, setOpen] = useState<{ entity: string; id: string } | null>(null);
   const [creating, setCreating] = useState<CreateTarget | null>(null);
   const reqId = useRef(0);
@@ -96,9 +98,9 @@ export const ManageCatalogSection: React.FC<{ adminEmail: string }> = ({ adminEm
     try { localStorage.setItem('medsoru_catalog_entity', entity); } catch { /* yok */ }
     setFilters({});
     setPage(0);
-    setSel(new Set());
+    selection.clear();
   }, [entity]);
-  useEffect(() => { setPage(0); setSel(new Set()); }, [debQ, filters, sort]);
+  useEffect(() => { setPage(0); selection.clear(); }, [debQ, filters, sort]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const load = useCallback(() => {
     const id = ++reqId.current;
@@ -123,7 +125,7 @@ export const ManageCatalogSection: React.FC<{ adminEmail: string }> = ({ adminEm
     try {
       await annotate(ids, body);
       toast.success(label, `${ids.length} kayıt güncellendi.`);
-      setSel(new Set());
+      selection.clear();
     } catch (e: any) {
       toast.error('Güncellenemedi', e.message);
     }
@@ -138,7 +140,8 @@ export const ManageCatalogSection: React.FC<{ adminEmail: string }> = ({ adminEm
     for (const [k, v] of Object.entries(filters)) if (v) p.set(`f.${k}`, v);
     try {
       const d = await api<{ ids: string[] }>(`/api/admin/catalog/${entity}?${p}`, { headers });
-      setSel(new Set(d.ids));
+      selection.clear();
+      selection.toggleAll(d.ids);
     } catch (e: any) {
       toast.error('Seçilemedi', e.message);
     }
@@ -146,16 +149,11 @@ export const ManageCatalogSection: React.FC<{ adminEmail: string }> = ({ adminEm
 
   const removeSelected = async (permanent: boolean) => {
     const ids = Array.from(sel);
-    const n = ids.length.toLocaleString('tr-TR');
-    const ok = await confirmDialog(permanent || isTrash
-      ? { title: `${n} kayıt kalıcı olarak silinsin mi?`, message: 'Bu işlem geri alınamaz; kayıtlar çöp kutusuna da gitmez ve değerlendirmeleri silinir. (Kaynak dosyanın sunucudaki son 10 yedeği durur.)', confirmLabel: 'Kalıcı sil', tone: 'danger' }
-      : { title: `${n} kayıt silinsin mi?`, message: `Kayıtlar ${info?.label || 'kaynak'} verisinden çıkar ve Çöp kutusuna taşınır; oradan geri yükleyebilirsiniz.`, confirmLabel: 'Çöp kutusuna taşı', tone: 'danger' });
-    if (!ok) return;
     setBusyBulk(true);
     try {
       const r = await api<{ deleted: number }>(`/api/admin/catalog/${entity}/delete`, { method: 'POST', headers, body: JSON.stringify({ ids, permanent }) });
       toast.success(permanent || isTrash ? 'Kalıcı olarak silindi' : 'Çöp kutusuna taşındı', `${r.deleted.toLocaleString('tr-TR')} kayıt.`);
-      setSel(new Set());
+      selection.clear();
       load();
       loadEntities();
     } catch (e: any) {
@@ -172,7 +170,7 @@ export const ManageCatalogSection: React.FC<{ adminEmail: string }> = ({ adminEm
     try {
       const r = await api<{ ids: string[]; note: string }>(`/api/admin/catalog/${entity}/duplicate`, { method: 'POST', headers, body: JSON.stringify({ ids }) });
       toast.success(`${r.ids.length.toLocaleString('tr-TR')} kayıt çoğaltıldı`, r.note);
-      setSel(new Set());
+      selection.clear();
     } catch (e: any) {
       toast.error('Çoğaltılamadı', e.message);
     } finally {
@@ -189,7 +187,7 @@ export const ManageCatalogSection: React.FC<{ adminEmail: string }> = ({ adminEm
       const r = await api<{ restored: number; errors: string[] }>('/api/admin/catalog/trash/restore', { method: 'POST', headers, body: JSON.stringify({ ids }) });
       if (r.errors?.length) toast.error('Bazıları geri yüklenemedi', r.errors.join(' · '));
       if (r.restored) toast.success('Geri yüklendi', `${r.restored.toLocaleString('tr-TR')} kayıt kaynağına döndü.`);
-      setSel(new Set());
+      selection.clear();
       load();
       loadEntities();
     } catch (e: any) {
@@ -210,7 +208,39 @@ export const ManageCatalogSection: React.FC<{ adminEmail: string }> = ({ adminEm
   };
 
   const pages = list ? Math.max(1, Math.ceil(list.total / PAGE)) : 1;
-  const allOnPage = !!list?.items.length && list.items.every((i) => sel.has(i.id));
+  const items = list?.items || [];
+  const reviewedN = info ? Object.entries(info.reviewed || {}).reduce((a, [k, v]) => (k && k !== 'yok' ? a + (v || 0) : a), 0) : 0;
+  const trashN = entities.find((e) => e.id === 'trash')?.count;
+  const statusTab = (filters.status || 'all') as string;
+
+  const cols: Col<Item>[] = [
+    { key: 'title', label: 'Kayıt', main: true, render: (it) => (
+      <>{it.title || <i>(başlıksız)</i>}{it.subtitle ? <span className="ct-sub"> · {it.subtitle}</span> : null}</>
+    ) },
+    { key: 'status', label: 'Durum', width: 140, render: (it) => {
+      const st = statusMeta(it.ann?.status);
+      return st && it.ann?.status ? <Pill tone={st.tone === 'is-ok' ? 'ok' : st.tone === 'is-warn' ? 'warn' : 'bad'}>{st.label}</Pill> : <span className="ct-muted">—</span>;
+    } },
+    { key: 'tags', label: 'Etiketler', width: 180, render: (it) => (
+      <span className="ct-tags">{(it.ann?.tags || []).slice(0, 3).map((t) => <span key={t} className="ui-tag">#{t}</span>)}</span>
+    ) },
+    { key: 'id', label: 'Kimlik', mono: true, width: 150, render: (it) => it.id },
+  ];
+
+  const bulkActions: BulkAction[] = isTrash
+    ? [
+        { label: 'Geri yükle', kind: 'main', run: restoreSelected },
+        { label: 'Kalıcı sil', kind: 'danger', confirm: `${sel.size} kaydı kalıcı sil (geri alınamaz)`, run: () => removeSelected(true) },
+      ]
+    : [
+        ...STATUS.slice(0, 3).map((s): BulkAction => ({ label: s.label, kind: s.id === 'onayli' ? 'main' : undefined, run: () => bulk({ status: s.id }, s.label) })),
+        { label: 'Durumu kaldır', run: () => bulk({ status: '' }, 'Değerlendirme kaldırıldı') },
+        ...(info?.creatable ? [{ label: 'Çoğalt', run: duplicateSelected } as BulkAction] : []),
+        ...(info?.deletable ? [
+          { label: 'Çöpe taşı', kind: 'danger', confirm: `${sel.size} kaydı çöpe taşı`, run: () => removeSelected(false) } as BulkAction,
+          { label: 'Kalıcı sil', kind: 'danger', confirm: `${sel.size} kaydı kalıcı sil (geri alınamaz)`, run: () => removeSelected(true) } as BulkAction,
+        ] : []),
+      ];
 
   return (
     <div className="ct-root">
@@ -231,133 +261,97 @@ export const ManageCatalogSection: React.FC<{ adminEmail: string }> = ({ adminEm
       </nav>
 
       <div className="ct-main">
-        <header className="ct-head">
-          <div className="min-w-0">
-            <h2>{info?.label || 'Veri kataloğu'}</h2>
-            <p>
-              {info ? <>Kaynak: <code>{info.source}</code> · {info.editable.length ? 'düzenlenebilir alanlar var' : 'salt okunur (değerlendirme açık)'}</> : 'Yükleniyor…'}
-            </p>
-          </div>
-          <div className="ct-head-act">
-            <select className="ct-select" value={sort} onChange={(e) => setSort(e.target.value)} aria-label="Sıralama">
-              <option value="">Varsayılan sıra</option>
-              <option value="title">Başlığa göre</option>
-              <option value="updated">Son güncellenen</option>
-            </select>
-            <button type="button" className="ui-btn is-sm" onClick={exportCsv} disabled={!list?.items.length} title="Bu sayfayı CSV olarak indir"><Download /> CSV</button>
-            {info?.creatable && (
-              <button type="button" className="ui-btn is-sm is-primary" onClick={() => setCreating({ entity })} title="Bu türün şablonuyla yeni kayıt ekle"><Plus /> Yeni kayıt</button>
-            )}
-          </div>
-        </header>
+        <PageActions note={info ? <>{info.label} · kaynak <code className="ct-code">{info.source}</code> · {info.editable.length ? 'düzenlenebilir alanlar var' : 'salt okunur (değerlendirme açık)'}</> : 'Yükleniyor…'}>
+          {!isTrash && entities.some((e) => e.id === 'trash') && (
+            <button type="button" className="m14-btn" onClick={() => setEntity('trash')}><Trash2 aria-hidden /> Çöp kutusu</button>
+          )}
+          <button type="button" className="m14-btn" onClick={exportCsv} disabled={!list?.items.length} title="Bu sayfayı CSV olarak indir"><Download aria-hidden /> CSV</button>
+          {info?.creatable && (
+            <button type="button" className="m14-btn primary" onClick={() => setCreating({ entity })} title="Bu türün şablonuyla yeni kayıt ekle"><Plus aria-hidden /> Yeni kayıt</button>
+          )}
+        </PageActions>
 
-        <SearchBox value={q} onChange={setQ} placeholder={`${info?.label || 'Kayıt'} içinde ara…`} count={list ? list.total.toLocaleString('tr-TR') : undefined} />
+        <StatRow stats={[
+          { label: 'Kayıt', value: (list?.total ?? info?.count ?? 0).toLocaleString('tr-TR') },
+          { label: 'Değerlendirilmiş', value: reviewedN.toLocaleString('tr-TR'), tone: 'ok' },
+          { label: 'Sorunlu', value: (info?.reviewed.sorunlu || 0).toLocaleString('tr-TR'), tone: (info?.reviewed.sorunlu || 0) > 0 ? 'bad' : undefined, onClick: () => setFilters((f) => ({ ...f, status: 'sorunlu' })), hint: 'Sorunluları süz' },
+          ...(trashN !== undefined ? [{ label: 'Çöpte', value: trashN.toLocaleString('tr-TR'), onClick: () => setEntity('trash'), hint: 'Çöp kutusunu aç' }] : []),
+        ]} />
 
-        {/* Sınıflar */}
-        <div className="ct-filters">
-          <div className="ct-status" role="radiogroup" aria-label="Değerlendirme durumu">
-            <button type="button" role="radio" aria-checked={!filters.status} className={!filters.status ? 'is-on' : ''} onClick={() => setFilters((f) => ({ ...f, status: '' }))}>Tümü</button>
-            {STATUS.map((s) => {
-              const n = list?.facets.status?.find((x) => x.value === s.id)?.n;
-              return (
-                <button key={s.id} type="button" role="radio" aria-checked={filters.status === s.id} className={`${s.tone} ${filters.status === s.id ? 'is-on' : ''}`} onClick={() => setFilters((f) => ({ ...f, status: f.status === s.id ? '' : s.id }))}>
-                  <s.icon aria-hidden /> {s.label}{n ? <b>{n}</b> : null}
-                </button>
-              );
-            })}
-          </div>
+        <Toolbar>
+          <Tabs14<string>
+            label="Değerlendirme durumu"
+            value={statusTab}
+            onChange={(v) => setFilters((f) => ({ ...f, status: v === 'all' ? '' : v }))}
+            options={[{ id: 'all', label: 'Tümü' }, ...STATUS.map((s) => ({ id: s.id as string, label: s.label, n: list?.facets.status?.find((x) => x.value === s.id)?.n }))]}
+          />
+          <SearchField value={q} onChange={setQ} placeholder={`${info?.label || 'Kayıt'} içinde ara`} />
+        </Toolbar>
+        <Toolbar>
+          <select className="pk14-sel" value={sort} onChange={(e) => setSort(e.target.value)} aria-label="Sıralama">
+            <option value="">Varsayılan sıra</option>
+            <option value="title">Başlığa göre</option>
+            <option value="updated">Son güncellenen</option>
+          </select>
           {info?.facets.map((f) => {
             const opts = list?.facets[f.key] || [];
             if (!opts.length && !filters[f.key]) return null;
             return (
-              <select key={f.key} className={`ct-select ${filters[f.key] ? 'is-on' : ''}`} value={filters[f.key] || ''} onChange={(e) => setFilters((x) => ({ ...x, [f.key]: e.target.value }))} aria-label={f.label}>
+              <select key={f.key} className={`pk14-sel ${filters[f.key] ? 'is-on' : ''}`} value={filters[f.key] || ''} onChange={(e) => setFilters((x) => ({ ...x, [f.key]: e.target.value }))} aria-label={f.label}>
                 <option value="">{f.label}: tümü</option>
                 {opts.map((o) => <option key={o.value} value={o.value}>{o.value} ({o.n})</option>)}
               </select>
             );
           })}
           {(list?.facets.tag?.length || filters.tag) ? (
-            <select className={`ct-select ${filters.tag ? 'is-on' : ''}`} value={filters.tag || ''} onChange={(e) => setFilters((x) => ({ ...x, tag: e.target.value }))} aria-label="Etiket">
+            <select className={`pk14-sel ${filters.tag ? 'is-on' : ''}`} value={filters.tag || ''} onChange={(e) => setFilters((x) => ({ ...x, tag: e.target.value }))} aria-label="Etiket">
               <option value="">Etiket: tümü</option>
               {(list?.facets.tag || []).map((o) => <option key={o.value} value={o.value}>#{o.value} ({o.n})</option>)}
             </select>
           ) : null}
           {Object.values(filters).some(Boolean) && (
-            <button type="button" className="ui-btn is-sm is-ghost" onClick={() => setFilters({})}><X /> Süzgeçleri temizle</button>
+            <button type="button" className="m14-btn ghost" onClick={() => setFilters({})}><X aria-hidden /> Süzgeçleri temizle</button>
           )}
-        </div>
+          {list && <span className="ct-count">{list.total.toLocaleString('tr-TR')} kayıt · sayfa {page + 1}/{pages}</span>}
+        </Toolbar>
 
-        {/* Toplu değerlendirme çubuğu */}
+        <BulkBar count={sel.size} noun="kayıt" busy={busyBulk} onClear={selection.clear} actions={bulkActions} />
         {sel.size > 0 && (
-          <div className="ct-bulk" role="toolbar" aria-label="Toplu işlem">
-            <b>{sel.size.toLocaleString('tr-TR')} seçili</b>
+          <div className="ct-bulk-extra">
             {list && sel.size < list.total && (
-              <button type="button" className="ui-btn is-sm is-ghost" onClick={() => void selectAllMatching()}>Tümünü seç ({list.total.toLocaleString('tr-TR')})</button>
+              <button type="button" className="m14-btn ghost" onClick={() => void selectAllMatching()}>Süzgece uyan tümünü seç ({list.total.toLocaleString('tr-TR')})</button>
             )}
-            {isTrash ? (
-              <>
-                <button type="button" className="ui-btn is-sm is-tonal" disabled={busyBulk} onClick={() => void restoreSelected()}><RotateCcw /> Geri yükle</button>
-                <button type="button" className="ui-btn is-sm is-danger" disabled={busyBulk} onClick={() => void removeSelected(true)}><Trash2 /> Kalıcı sil</button>
-              </>
-            ) : <>
-            {STATUS.slice(0, 3).map((s) => (
-              <button key={s.id} type="button" className={`ui-btn is-sm ${s.id === 'onayli' ? 'is-tonal' : ''}`} onClick={() => void bulk({ status: s.id }, s.label)}><s.icon /> {s.label}</button>
-            ))}
-            <button type="button" className="ui-btn is-sm is-ghost" onClick={() => void bulk({ status: '' }, 'Değerlendirme kaldırıldı')}>Durumu kaldır</button>
-            {info?.creatable && <button type="button" className="ui-btn is-sm" disabled={busyBulk} onClick={() => void duplicateSelected()} title="Seçili kayıtların kopyasını aslının arkasına ekle"><Copy /> Çoğalt</button>}
-            <form className="ct-bulk-tag" onSubmit={(e) => { e.preventDefault(); if (bulkTag.trim()) { void bulk({ addTags: [bulkTag.trim()] }, 'Etiket eklendi'); setBulkTag(''); } }}>
-              <Tag aria-hidden />
-              <input value={bulkTag} onChange={(e) => setBulkTag(e.target.value)} placeholder="Etiket ekle" aria-label="Seçililere etiket ekle" />
-            </form>
-            {info?.deletable && (
-              <span className="ct-bulk-del">
-                <button type="button" className="ui-btn is-sm is-danger" disabled={busyBulk} onClick={() => void removeSelected(false)} title="Çöp kutusuna taşı (geri yüklenebilir)"><Trash2 /> Sil</button>
-                <button type="button" className="ui-btn is-sm is-danger" disabled={busyBulk} onClick={() => void removeSelected(true)} title="Geri alınamaz">Kalıcı sil</button>
-              </span>
+            {!isTrash && (
+              <form className="ct-bulk-tag" onSubmit={(e) => { e.preventDefault(); if (bulkTag.trim()) { void bulk({ addTags: [bulkTag.trim()] }, 'Etiket eklendi'); setBulkTag(''); } }}>
+                <Tag aria-hidden />
+                <input value={bulkTag} onChange={(e) => setBulkTag(e.target.value)} placeholder="Seçililere etiket ekle" aria-label="Seçililere etiket ekle" />
+              </form>
             )}
-            </>}
-            <button type="button" className="ui-btn is-sm is-ghost" onClick={() => setSel(new Set())} aria-label="Seçimi temizle"><X /></button>
           </div>
+        )}
+        {sel.size === 0 && list && list.total > list.items.length && (
+          <button type="button" className="ct-selall" onClick={() => void selectAllMatching()}>Süzgece uyan tümünü seç ({list.total.toLocaleString('tr-TR')})</button>
         )}
 
         {err && <div className="ui-callout is-bad"><CircleAlert /> {err}</div>}
 
-        <div className={`ct-list ${loading ? 'is-loading' : ''}`} aria-busy={loading}>
-          {list && list.items.length > 0 && (
-            <label className="ct-row is-head">
-              <input type="checkbox" checked={allOnPage} onChange={() => setSel((s) => { const n = new Set(s); list.items.forEach((i) => (allOnPage ? n.delete(i.id) : n.add(i.id))); return n; })} aria-label="Bu sayfadakilerin tümünü seç" />
-              <span>{list.total.toLocaleString('tr-TR')} kayıt · sayfa {page + 1}/{pages}</span>
-              {list.total > list.items.length && sel.size === 0 && (
-                <button type="button" className="ct-selall" onClick={(e) => { e.preventDefault(); void selectAllMatching(); }}>Tümünü seç ({list.total.toLocaleString('tr-TR')})</button>
-              )}
-            </label>
-          )}
-          {list?.items.map((it, i) => {
-            const st = statusMeta(it.ann?.status);
-            return (
-              <div key={it.id} className={`ct-row ${sel.has(it.id) ? 'is-sel' : ''}`} style={{ animationDelay: `${Math.min(i, 12) * 18}ms` }}>
-                <input type="checkbox" checked={sel.has(it.id)} onChange={() => setSel((s) => { const n = new Set(s); n.has(it.id) ? n.delete(it.id) : n.add(it.id); return n; })} aria-label="Seç" />
-                <button type="button" className="ct-row-main" onClick={() => setOpen({ entity, id: it.id })}>
-                  <b>{it.title || <i>(başlıksız)</i>}</b>
-                  <span>{it.subtitle}</span>
-                </button>
-                <div className="ct-row-end">
-                  {(it.ann?.tags || []).slice(0, 3).map((t) => <span key={t} className="ui-tag">#{t}</span>)}
-                  {st && it.ann?.status ? <span className={`ui-tag ${st.tone}`}><st.icon className="w-3 h-3" /> {st.label}</span> : null}
-                  <ChevronRight className="ct-chev" aria-hidden />
-                </div>
-              </div>
-            );
-          })}
-          {list && !list.items.length && !loading && <EmptyState title="Kayıt yok">Aramayı ya da süzgeçleri değiştirin.</EmptyState>}
-          {!list && loading && Array.from({ length: 6 }, (_, i) => <div key={i} className="ct-row"><span className="ui-skel" style={{ height: 14, width: `${60 + (i % 3) * 12}%` }} /></div>)}
-        </div>
+        <DataTable<Item>
+          rows={items}
+          cols={cols}
+          rowKey={(it) => it.id}
+          onOpen={(it) => setOpen({ entity, id: it.id })}
+          selection={selection}
+          busy={loading}
+          minWidth={720}
+          activeKey={open?.entity === entity ? open.id : null}
+          empty={loading ? 'Yükleniyor…' : <EmptyState title="Kayıt yok">Aramayı ya da süzgeçleri değiştirin.</EmptyState>}
+        />
 
         {pages > 1 && (
           <nav className="ct-pager" aria-label="Sayfalar">
-            <button type="button" className="ui-btn is-sm" disabled={page === 0} onClick={() => setPage((p) => p - 1)}><ChevronLeft /> Önceki</button>
+            <button type="button" className="m14-btn" disabled={page === 0} onClick={() => setPage((p) => p - 1)}><ChevronLeft aria-hidden /> Önceki</button>
             <span>{page + 1} / {pages}</span>
-            <button type="button" className="ui-btn is-sm" disabled={page >= pages - 1} onClick={() => setPage((p) => p + 1)}>Sonraki <ChevronRight /></button>
+            <button type="button" className="m14-btn" disabled={page >= pages - 1} onClick={() => setPage((p) => p + 1)}>Sonraki <ChevronRight aria-hidden /></button>
           </nav>
         )}
       </div>
@@ -368,6 +362,7 @@ export const ManageCatalogSection: React.FC<{ adminEmail: string }> = ({ adminEm
           target={open}
           entities={entities}
           headers={headers}
+          nav={open.entity === entity ? items : []}
           onClose={() => setOpen(null)}
           onNavigate={(t) => setOpen(t)}
           onSaved={() => { load(); loadEntities(); }}
@@ -394,15 +389,17 @@ const CatalogDetail: React.FC<{
   target: { entity: string; id: string };
   entities: EntityInfo[];
   headers: Record<string, string>;
+  nav: Item[];
   onClose: () => void;
   onNavigate: (t: { entity: string; id: string }) => void;
   onSaved: () => void;
   annotate: (ids: string[], body: Record<string, unknown>, ent?: string) => Promise<void>;
   onDuplicate: (base: { id: string; title: string; form: Record<string, any> }) => void;
-}> = ({ target, entities, headers, onClose, onNavigate, onSaved, annotate, onDuplicate }) => {
+}> = ({ target, entities, headers, nav, onClose, onNavigate, onSaved, annotate, onDuplicate }) => {
   const [d, setD] = useState<Detail | null>(null);
   const [err, setErr] = useState('');
   const [tab, setTab] = useState<'fields' | 'review' | 'rel' | 'raw'>('fields');
+  const [rawView, setRawView] = useState<'gorsel' | 'ham'>('gorsel');
   const [draft, setDraft] = useState<Record<string, any>>({});
   const [ann, setAnn] = useState<Ann>({ status: '', tags: [], note: '', updatedAt: '' });
   const [busy, setBusy] = useState(false);
@@ -459,30 +456,35 @@ const CatalogDetail: React.FC<{
   const long = (k: string) => /stem|definition|description|explanation|back|front|note|clinicalPearl|metin|soru/i.test(k);
 
   return (
-    <Sheet
+    <Drawer
       open
       onClose={onClose}
-      size="full"
-      width={760}
+      wide
       title={d?.title || (err ? 'Kayıt' : 'Yükleniyor…')}
-      subtitle={ent ? `${ent.label} · ${target.id}` : target.id}
-      actions={d?.form ? (
-        <button type="button" className="ui-btn is-sm" onClick={() => onDuplicate({ id: d.id, title: d.title, form: d.form! })} title="Bu kaydın kopyasını düzenleyip ekle"><Copy /> Çoğalt</button>
-      ) : undefined}
-      footer={
+      label={ent ? `${ent.label} · ${target.id}` : target.id}
+      head={
+        <>
+          <DetailNav list={nav} current={nav.find((x) => x.id === target.id) || null} same={(a, b) => a.id === b.id} onGo={(it) => onNavigate({ entity: target.entity, id: it.id })} />
+          {d?.form && (
+            <button type="button" className="m14-btn" onClick={() => onDuplicate({ id: d.id, title: d.title, form: d.form! })} title="Bu kaydın kopyasını düzenleyip ekle"><Copy aria-hidden /> Çoğalt</button>
+          )}
+        </>
+      }
+      foot={
         tab === 'fields' && d?.editable.length ? (
           <div className="ct-foot">
             <span>{dirty ? 'Kaydedilmemiş değişiklik var' : 'Değişiklik yok'}</span>
-            <button type="button" className={`ui-btn is-primary ${busy ? 'is-loading' : ''}`} disabled={!dirty || busy} onClick={() => void saveFields()}><Save /> Kaydet</button>
+            <button type="button" className="m14-btn primary" disabled={!dirty || busy} onClick={() => void saveFields()}><Save aria-hidden /> {busy ? 'Kaydediliyor…' : 'Kaydet'}</button>
           </div>
         ) : tab === 'review' ? (
           <div className="ct-foot">
             <span>{ann.updatedAt ? `Son: ${new Date(ann.updatedAt).toLocaleString('tr-TR')}${ann.by ? ` · ${ann.by}` : ''}` : 'Henüz değerlendirilmedi'}</span>
-            <button type="button" className={`ui-btn is-primary ${busy ? 'is-loading' : ''}`} disabled={busy} onClick={() => void saveReview()}><Save /> Değerlendirmeyi kaydet</button>
+            <button type="button" className="m14-btn primary" disabled={busy} onClick={() => void saveReview()}><Save aria-hidden /> {busy ? 'Kaydediliyor…' : 'Değerlendirmeyi kaydet'}</button>
           </div>
         ) : undefined
       }
     >
+      <p className="ct-sub-line">{ent ? `${ent.label} · ` : ''}<code className="ct-code">{target.id}</code></p>
       {err && <div className="ui-callout is-warn"><CircleAlert /> {err}</div>}
       {!d && !err && <div className="flex flex-col gap-2 p-1">{[80, 60, 70].map((w) => <span key={w} className="ui-skel" style={{ height: 14, width: `${w}%` }} />)}</div>}
       {d && (
@@ -500,12 +502,17 @@ const CatalogDetail: React.FC<{
           {d.site?.status === 'hidden' && (
             <div className="ui-callout is-warn"><CircleAlert /> Bu soru sitede gösterilmiyor (karantinada ya da yayından kaldırılmış).</div>
           )}
-          <div className="ui-seg ct-tabs" role="tablist">
-            {d.editable.length > 0 && <button type="button" role="tab" aria-checked={tab === 'fields'} aria-selected={tab === 'fields'} onClick={() => setTab('fields')}>Alanlar</button>}
-            <button type="button" role="tab" aria-checked={tab === 'review'} aria-selected={tab === 'review'} onClick={() => setTab('review')}>Değerlendirme</button>
-            <button type="button" role="tab" aria-checked={tab === 'rel'} aria-selected={tab === 'rel'} onClick={() => setTab('rel')}>İlişkiler{d.relations.length ? ` (${d.relations.length})` : ''}</button>
-            <button type="button" role="tab" aria-checked={tab === 'raw'} aria-selected={tab === 'raw'} onClick={() => setTab('raw')}>Ham veri</button>
-          </div>
+          <Tabs14<'fields' | 'review' | 'rel' | 'raw'>
+            label="Kayıt görünümü"
+            value={tab}
+            onChange={setTab}
+            options={[
+              ...(d.editable.length > 0 ? [{ id: 'fields' as const, label: 'Alanlar' }] : []),
+              { id: 'review' as const, label: 'Değerlendirme' },
+              { id: 'rel' as const, label: 'İlişkiler', n: d.relations.length || undefined },
+              { id: 'raw' as const, label: 'Veri' },
+            ]}
+          />
 
           {tab === 'fields' && (
             <div className="ct-fields" key="f">
@@ -569,10 +576,15 @@ const CatalogDetail: React.FC<{
             </div>
           )}
 
-          {tab === 'raw' && <pre className="ct-raw" key="j">{JSON.stringify(d.record, null, 2)}</pre>}
+          {tab === 'raw' && (
+            <div className="ct-fields" key="j">
+              <Seg value={rawView} onChange={setRawView} label="Veri görünümü" options={[{ id: 'gorsel' as const, label: 'Görsel' }, { id: 'ham' as const, label: 'Ham JSON' }]} />
+              {rawView === 'gorsel' ? <JsonView value={d.record} /> : <pre className="ct-raw">{JSON.stringify(d.record, null, 2)}</pre>}
+            </div>
+          )}
         </div>
       )}
-    </Sheet>
+    </Drawer>
   );
 };
 
@@ -665,31 +677,30 @@ const CatalogCreate: React.FC<{
   };
 
   return (
-    <Sheet
+    <Drawer
       open
       onClose={onClose}
-      size="full"
-      width={760}
+      wide
       title={isDup ? 'Kaydı çoğalt' : `Yeni kayıt · ${entity?.label || target.entity}`}
-      subtitle={isDup ? `Asıl: ${target.base!.title}` : entity ? `Kaynak: ${entity.source}` : undefined}
-      footer={
+      foot={
         <div className="ct-foot">
           <span>{isDup ? 'Kopya yeni kimlikle aslının arkasına eklenir.' : 'Kimlik otomatik verilir; kayıt bu türün şablonuyla kurulur.'}</span>
           <div className="ct-foot-act">
-            <button type="button" className="ui-btn" onClick={onClose}>Vazgeç</button>
-            <button type="button" className={`ui-btn is-primary ${busy ? 'is-loading' : ''}`} disabled={busy || !fields} onClick={() => void submit()}>
-              {isDup ? <><Copy /> Kopyayı oluştur</> : <><Plus /> Ekle</>}
+            <button type="button" className="m14-btn" onClick={onClose}>Vazgeç</button>
+            <button type="button" className="m14-btn primary" disabled={busy || !fields} onClick={() => void submit()}>
+              {isDup ? <><Copy aria-hidden /> Kopyayı oluştur</> : <><Plus aria-hidden /> Ekle</>}
             </button>
           </div>
         </div>
       }
     >
+      {(isDup || entity) && <p className="ct-sub-line">{isDup ? `Asıl: ${target.base!.title}` : `Kaynak: ${entity!.source}`}</p>}
       <form className="ct-fields" onSubmit={(e) => { e.preventDefault(); void submit(); }}>
         {err && <div className="ui-callout is-bad"><CircleAlert /> {err}</div>}
         {!fields && !err && [80, 60, 70].map((w) => <span key={w} className="ui-skel" style={{ height: 14, width: `${w}%` }} />)}
         {fields?.map(field)}
         {isDup && <p className="ui-hint">Formda görünmeyen alanlar (kaynak, kanıt, kazanım vb.) asıl kayıttan aynen kopyalanır; oy, beğeni ve bildirimler sıfırlanır.</p>}
       </form>
-    </Sheet>
+    </Drawer>
   );
 };

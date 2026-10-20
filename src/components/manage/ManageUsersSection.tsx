@@ -12,11 +12,14 @@ import {
   deleteManageUser,
   purgeAuthorContributions,
 } from '../../services/manageConsoleService';
-import { EmptyState, SearchBox, Seg, ConfirmButton, Drawer, Field } from './consoleUi';
+import { EmptyState, Seg, ConfirmButton, Drawer, Field } from './consoleUi';
+import { PageActions, StatRow, Toolbar, Tabs14, SearchField, DataTable, Pill, DetailNav, type Col } from '../v14/pageKit';
+import { BulkBar, useSelection } from '../v14/manageKit';
 
 /**
- * Kullanıcılar: kayıtlı hesaplar ve katkı istatistikleri iki tabloda. Satıra dokununca ayrıntı
- * yan çekmecede açılır (katkıları, parçaları, bildirimleri, yorumları); e-posta da oradan yazılır.
+ * Kullanıcılar (v14, canvas Kullanicilar.dc.html): sayılar → sekme + arama → toplu işlem → seçimli tablo.
+ * Satıra dokununca ayrıntı tam sayfa çalışma alanında açılır (önceki/sonraki); e-posta ve bildirim de oradan.
+ * Toplu e-posta / bildirim / silme tekil işlevleri sırayla çağırır ve yalnız "Gönder" ya da onayla başlar.
  */
 interface Props {
   adminEmail: string;
@@ -64,6 +67,11 @@ export const ManageUsersSection: React.FC<Props> = ({
   const [body, setBody] = useState('');
   const [sending, setSending] = useState(false);
   const [busy, setBusy] = useState<string | null>(null);
+  const regSel = useSelection<string>();
+  const actSel = useSelection<string>();
+  const [bulk, setBulk] = useState<null | 'mail' | 'notify'>(null);
+  const [bulkBusy, setBulkBusy] = useState(false);
+  const [bulkDone, setBulkDone] = useState(0);
 
   const isOwner = (email?: string) => {
     const e = (email || '').toLowerCase();
@@ -283,25 +291,134 @@ export const ManageUsersSection: React.FC<Props> = ({
     </div>
   );
 
+  const regKey = (u: ManageUser) => normKey(u.email || u.uid || u.displayName);
+  const regCols: Col<ManageUser>[] = [
+    {
+      key: 'user',
+      label: 'Kullanıcı',
+      main: true,
+      render: (u) => (
+        <span className="flex items-center gap-2.5 min-w-0">
+          <span className={`ms-avatar ${u.role === 'admin' || isOwner(u.email) ? 'is-accent' : ''}`}>{initial(u.displayName || u.email)}</span>
+          <span className="min-w-0 flex flex-col">
+            <span className="font-semibold truncate">{u.displayName || 'İsimsiz öğrenci'}</span>
+            <span className="text-sm text-ink-3 truncate">{u.email || '—'}</span>
+          </span>
+        </span>
+      ),
+    },
+    { key: 'role', label: 'Rol', render: (u) => (u.role === 'admin' || isOwner(u.email) ? <Pill tone="acc">Yönetici</Pill> : <Pill>Öğrenci</Pill>) },
+    { key: 'no', label: 'Öğrenci no', mono: true, render: (u) => u.studentNumber || '—' },
+    { key: 'created', label: 'Kayıt', muted: true, render: (u) => fmtDate(u.createdAt) },
+    { key: 'login', label: 'Son giriş', muted: true, render: (u) => fmtDate(u.lastLoginAt) },
+    { key: 'act', label: <span className="sr-only">İşlemler</span>, render: (u) => <RowActions uid={u.uid} email={u.email} rowKey={regKey(u)} hasAccount total={0} /> },
+  ];
+  const actCols: Col<UserActivityRow>[] = [
+    {
+      key: 'user',
+      label: 'Kişi',
+      main: true,
+      render: (u) => (
+        <span className="min-w-0 flex flex-col">
+          <span className="font-semibold truncate">{u.name}</span>
+          {u.email && <span className="text-sm text-ink-3 truncate">{u.email}</span>}
+        </span>
+      ),
+    },
+    { key: 'q', label: 'Soru', right: true, render: (u) => u.questions },
+    { key: 'rev', label: 'Düzenleme', right: true, render: (u) => u.revisions || 0 },
+    { key: 'frag', label: 'Parça', right: true, render: (u) => u.fragments },
+    { key: 'opt', label: 'Şık', right: true, render: (u) => u.options },
+    { key: 'rep', label: 'Bildirim', right: true, render: (u) => u.reports },
+    { key: 'com', label: 'Yorum', right: true, render: (u) => u.comments },
+    { key: 'tot', label: 'Toplam', right: true, render: (u) => <b>{u.total}</b> },
+    {
+      key: 'act',
+      label: <span className="sr-only">İşlemler</span>,
+      render: (u) => {
+        const reg = regOf(u.key) || (u.email ? registeredUsers.find((r) => r.email && normKey(r.email) === normKey(u.email)) : undefined);
+        return <RowActions uid={reg?.uid} email={u.email || reg?.email} rowKey={u.key} hasAccount={!!reg} total={u.total} />;
+      },
+    },
+  ];
+  const actShown = actRows.slice(0, 200);
+  const activeSel = tab === 'registered' ? regSel : actSel;
+  /** Seçilen satırlar → alıcı listesi (ad, e-posta, uid) */
+  const targets = useMemo(() => {
+    if (tab === 'registered') return regRows.filter((u) => regSel.has(regKey(u))).map((u) => ({ key: regKey(u), name: u.displayName || u.email || '', email: u.email, uid: u.uid }));
+    return actShown
+      .filter((u) => actSel.has(u.key))
+      .map((u) => {
+        const reg = regOf(u.key) || (u.email ? registeredUsers.find((r) => r.email && normKey(r.email) === normKey(u.email)) : undefined);
+        return { key: u.key, name: u.name, email: u.email || reg?.email, uid: reg?.uid };
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tab, regRows, actShown, regSel.sel, actSel.sel, registeredUsers]);
+  const deletable = targets.filter((x) => x.uid && !isOwner(x.email));
+
+  const runBulk = async (fn: (x: (typeof targets)[number]) => Promise<{ ok: boolean }>, list = targets) => {
+    setBulkBusy(true);
+    let ok = 0;
+    let bad = 0;
+    for (const x of list) {
+      try {
+        const r = await fn(x);
+        if (r.ok) ok++;
+        else bad++;
+      } catch {
+        bad++;
+      }
+      setBulkDone(ok + bad);
+    }
+    setBulkBusy(false);
+    notify(`${ok} başarılı, ${bad} hata.`);
+    return bad;
+  };
+  const bulkDelete = async () => {
+    await runBulk(async (x) => {
+      const res = await deleteManageUser(adminEmail, x.uid!);
+      if (res.ok) setRegisteredUsers((prev) => prev.filter((r) => r.uid !== x.uid));
+      return res;
+    }, deletable);
+    activeSel.clear();
+  };
+  const bulkSend = async () => {
+    setBulkDone(0);
+    if (bulk === 'mail') {
+      if (!subject.trim() || !body.trim()) return;
+      const bad = await runBulk((x) => sendUserEmail(x.email!, subject.trim(), body.trim().replace(/\{ad\}/g, x.name)), targets.filter((x) => x.email));
+      if (!bad) setBulk(null);
+    } else if (bulk === 'notify') {
+      if (!notifTitle.trim() || !notifMessage.trim()) return;
+      const bad = await runBulk((x) =>
+        sendAdminNotification(adminEmail, {
+          target: 'single',
+          targetUser: { uid: x.uid, email: x.email },
+          title: notifTitle.trim(),
+          message: notifMessage.trim(),
+          type: notifType,
+          deepLinkUrl: notifUrl.trim() || '/',
+        }),
+      );
+      if (!bad) setBulk(null);
+    }
+  };
+  const startBulk = (m: 'mail' | 'notify') => {
+    setSubject('');
+    setBody('Merhaba {ad},\n\n');
+    setNotifTitle('');
+    setNotifMessage('');
+    setNotifType('app_info');
+    setNotifUrl('/');
+    setBulkDone(0);
+    setBulk(m);
+  };
+  const openRows = tab === 'registered' ? regRows.map((u) => regKey(u)) : actShown.map((u) => u.key);
+  const curKey = openKey && openKey !== '__ALL__' ? (sel?.key && openRows.includes(sel.key) ? sel.key : openKey) : null;
+
   return (
     <div className="flex flex-col gap-3 min-w-0">
-      <div className="flex flex-col md:flex-row md:items-center gap-2">
-        <Seg
-          label="Kullanıcı görünümü"
-          value={tab}
-          onChange={(v) => setTab(v)}
-          options={[
-            { id: 'registered', label: 'Kayıtlı hesaplar', n: registeredUsers.length },
-            { id: 'activity', label: 'Katkılar', n: activity.length },
-          ]}
-        />
-        <SearchBox
-          value={query}
-          onChange={setQuery}
-          placeholder={tab === 'registered' ? 'İsim, e-posta ya da öğrenci no' : 'İsim ya da e-posta'}
-          count={tab === 'registered' ? `${regRows.length} hesap` : `${actRows.length} kişi`}
-          className="flex-1"
-        />
+      <PageActions note={registeredUsers.length > 0 ? `${registeredUsers.length - admins} öğrenci, ${admins} yönetici. Hesaplar Supabase ve yerel veritabanından birleştirilir.` : undefined}>
         <button
           type="button"
           onClick={() => {
@@ -313,110 +430,117 @@ export const ManageUsersSection: React.FC<Props> = ({
             setNotifType('app_info');
             setNotifUrl('/');
           }}
-          className="ms-btn is-sm is-accent shrink-0 flex items-center gap-1.5"
+          className="m14-btn primary"
           title="Tüm kullanıcılara toplu bildirim / duyuru gönder"
         >
-          <Bell className="w-3.5 h-3.5" /> Toplu Bildirim
+          <Bell aria-hidden="true" /> Herkese duyuru
         </button>
-      </div>
-      {tab === 'registered' && registeredUsers.length > 0 && (
-        <p className="m-0 text-sm text-ink-3">
-          {registeredUsers.length - admins} öğrenci, {admins} yönetici. Hesaplar Supabase ve yerel veritabanından birleştirilir.
-        </p>
-      )}
+      </PageActions>
+      <StatRow
+        stats={[
+          { label: 'Kayıtlı hesap', value: registeredUsers.length, onClick: () => setTab('registered') },
+          { label: 'Katkı yapan', value: activity.length, onClick: () => setTab('activity') },
+          { label: 'Yönetici', value: admins },
+        ]}
+      />
+      <Toolbar>
+        <Tabs14
+          label="Kullanıcı görünümü"
+          value={tab}
+          onChange={(v) => setTab(v)}
+          options={[
+            { id: 'registered', label: 'Hesaplar', n: registeredUsers.length },
+            { id: 'activity', label: 'Katkılar', n: activity.length },
+          ]}
+        />
+        <SearchField value={query} onChange={setQuery} placeholder={tab === 'registered' ? 'Ad, e-posta, öğrenci no ya da kimlik' : 'Ad ya da e-posta'} label="Kullanıcı ara" />
+        <span className="pk14-note">{tab === 'registered' ? `${regRows.length} hesap` : `${actRows.length} kişi`}</span>
+      </Toolbar>
+
+      <BulkBar
+        count={activeSel.count}
+        noun="kişi"
+        busy={bulkBusy}
+        onClear={activeSel.clear}
+        actions={[
+          { label: 'Bildirim gönder', kind: 'main', run: () => startBulk('notify') },
+          { label: 'E-posta gönder', disabled: !targets.some((x) => x.email), run: () => startBulk('mail') },
+          { label: `Hesapları sil (${deletable.length})`, kind: 'danger', disabled: !deletable.length, confirm: `${deletable.length} hesabı kalıcı silmeyi onayla`, run: bulkDelete },
+        ]}
+      />
 
       {tab === 'registered' ? (
-        <div className="ms-table-wrap">
-          {regRows.length === 0 ? (
-            <EmptyState icon={Users} title={query ? 'Aramaya uyan hesap yok' : 'Kayıtlı hesap yok'} />
-          ) : (
-            <table className="ms-table min-w-[760px]">
-              <thead>
-                <tr>
-                  <th scope="col">Kullanıcı</th>
-                  <th scope="col">Öğrenci no</th>
-                  <th scope="col">Rol</th>
-                  <th scope="col">Kayıt</th>
-                  <th scope="col">Son giriş</th>
-                  <th scope="col" className="text-right"><span className="sr-only">İşlemler</span></th>
-                </tr>
-              </thead>
-              <tbody>
-                {regRows.map((u) => {
-                  const key = normKey(u.email || u.uid || u.displayName);
-                  const admin = u.role === 'admin' || isOwner(u.email);
-                  return (
-                    <tr key={u.uid || u.email} onClick={() => open(u.email || u.uid || u.displayName || '')} className={`is-button ${openKey === key ? 'is-on' : ''}`}>
-                      <td>
-                        <div className="flex items-center gap-2.5 min-w-0">
-                          <span className={`ms-avatar ${admin ? 'is-accent' : ''}`}>{initial(u.displayName || u.email)}</span>
-                          <div className="min-w-0">
-                            <div className="font-semibold truncate max-w-[240px]">{u.displayName || 'İsimsiz öğrenci'}</div>
-                            <div className="text-sm text-ink-3 truncate max-w-[260px]">{u.email || '—'}</div>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="font-mono text-sm">{u.studentNumber || <span className="text-ink-3 font-sans">—</span>}</td>
-                      <td>{admin ? <span className="ms-tag is-accent"><ShieldCheck /> Yönetici</span> : <span className="ms-tag">Öğrenci</span>}</td>
-                      <td className="text-ink-2 whitespace-nowrap">{fmtDate(u.createdAt)}</td>
-                      <td className="text-ink-2 whitespace-nowrap">{fmtDate(u.lastLoginAt)}</td>
-                      <td><RowActions uid={u.uid} email={u.email} rowKey={key} hasAccount total={0} /></td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          )}
-        </div>
+        regRows.length === 0 ? (
+          <EmptyState icon={Users} title={query ? 'Aramaya uyan hesap yok' : 'Kayıtlı hesap yok'} />
+        ) : (
+          <DataTable rows={regRows} cols={regCols} rowKey={regKey} onOpen={(u) => open(u.email || u.uid || u.displayName || '')} selection={regSel} activeKey={openKey} />
+        )
+      ) : actRows.length === 0 ? (
+        <EmptyState icon={Users} title={query ? 'Aramaya uyan kişi yok' : 'Katkı kaydı yok'} />
       ) : (
-        <div className="ms-table-wrap">
-          {actRows.length === 0 ? (
-            <EmptyState icon={Users} title={query ? 'Aramaya uyan kişi yok' : 'Katkı kaydı yok'} />
-          ) : (
-            <table className="ms-table min-w-[760px]">
-              <thead>
-                <tr>
-                  <th scope="col">Kişi</th>
-                  <th scope="col" className="is-num">Soru</th>
-                  <th scope="col" className="is-num">Düzenleme</th>
-                  <th scope="col" className="is-num">Parça</th>
-                  <th scope="col" className="is-num">Şık</th>
-                  <th scope="col" className="is-num">Bildirim</th>
-                  <th scope="col" className="is-num">Yorum</th>
-                  <th scope="col" className="is-num">Toplam</th>
-                  <th scope="col"><span className="sr-only">İşlemler</span></th>
-                </tr>
-              </thead>
-              <tbody>
-                {actRows.slice(0, 200).map((u) => {
-                  const reg = regOf(u.key) || (u.email ? registeredUsers.find((r) => r.email && normKey(r.email) === normKey(u.email)) : undefined);
-                  return (
-                    <tr key={u.key} onClick={() => open(u.key)} className={`is-button ${openKey === u.key ? 'is-on' : ''}`}>
-                      <td>
-                        <div className="font-semibold truncate max-w-[260px]">{u.name}</div>
-                        {u.email && <div className="text-sm text-ink-3 truncate max-w-[260px]">{u.email}</div>}
-                      </td>
-                      <td className="is-num">{u.questions}</td>
-                      <td className="is-num">{u.revisions || 0}</td>
-                      <td className="is-num">{u.fragments}</td>
-                      <td className="is-num">{u.options}</td>
-                      <td className="is-num">{u.reports}</td>
-                      <td className="is-num">{u.comments}</td>
-                      <td className="is-num font-semibold">{u.total}</td>
-                      <td><RowActions uid={reg?.uid} email={u.email || reg?.email} rowKey={u.key} hasAccount={!!reg} total={u.total} /></td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          )}
-        </div>
+        <DataTable rows={actShown} cols={actCols} rowKey={(u) => u.key} onOpen={(u) => open(u.key)} selection={actSel} activeKey={openKey} minWidth={860} />
       )}
+
+      <Drawer
+        open={!!bulk}
+        onClose={() => !bulkBusy && setBulk(null)}
+        title={bulk === 'mail' ? `Toplu e-posta · ${targets.filter((x) => x.email).length} kişi` : `Toplu bildirim · ${targets.length} kişi`}
+        foot={
+          <>
+            <button type="button" className="m14-btn ghost" onClick={() => setBulk(null)} disabled={bulkBusy}>Vazgeç</button>
+            <button
+              type="button"
+              className="m14-btn primary"
+              onClick={() => void bulkSend()}
+              disabled={bulkBusy || (bulk === 'mail' ? !subject.trim() || !body.trim() : !notifTitle.trim() || !notifMessage.trim())}
+            >
+              <Send aria-hidden="true" /> {bulkBusy ? `Gönderiliyor… ${bulkDone}` : 'Gönder'}
+            </button>
+          </>
+        }
+      >
+        {bulk === 'mail' ? (
+          <>
+            <Field label="Konu">
+              <input value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Konu başlığı" className="ms-input" />
+            </Field>
+            <Field label="Mesaj">
+              <textarea value={body} onChange={(e) => setBody(e.target.value)} rows={8} className="ms-input" />
+            </Field>
+            <p className="pk14-note">{'{ad}'} her kişinin adıyla değiştirilir. İletiler tek tek, sırayla gönderilir.</p>
+          </>
+        ) : (
+          <>
+            <Field label="Bildirim başlığı">
+              <input value={notifTitle} onChange={(e) => setNotifTitle(e.target.value)} className="ms-input" />
+            </Field>
+            <Field label="Bildirim türü">
+              <Seg label="Bildirim türü" value={notifType} onChange={setNotifType} options={[{ id: 'app_info', label: 'Bilgi' }, { id: 'app_success', label: 'Başarı' }, { id: 'app_error', label: 'Uyarı' }]} />
+            </Field>
+            <Field label="Hedef bağlantı (isteğe bağlı)">
+              <input value={notifUrl} onChange={(e) => setNotifUrl(e.target.value)} className="ms-input font-mono text-xs" />
+            </Field>
+            <Field label="Mesaj">
+              <textarea value={notifMessage} onChange={(e) => setNotifMessage(e.target.value)} rows={6} className="ms-input" />
+            </Field>
+          </>
+        )}
+        <p className="pk14-note">Alıcılar: {targets.map((x) => x.name || x.email).join(', ')}</p>
+      </Drawer>
 
       <Drawer
         open={!!sel}
         onClose={() => setOpenKey(null)}
         label="Kullanıcı ayrıntısı"
+        wide
+        head={
+          openKey !== '__ALL__' && mode === 'detail' ? (
+            <DetailNav list={openRows} current={curKey} same={(a, b) => a === b} onGo={(k) => {
+              if (tab === 'registered') { const u = regRows.find((x) => regKey(x) === k); if (u) open(u.email || u.uid || u.displayName || ''); }
+              else open(k);
+            }} />
+          ) : undefined
+        }
         title={mode === 'mail' ? 'E-posta yaz' : mode === 'notify' ? (notifTarget === 'all' ? 'Toplu Bildirim & Duyuru' : 'Bildirim Gönder') : sel?.name || 'Kullanıcı'}
         foot={
           sel &&
@@ -510,9 +634,9 @@ export const ManageUsersSection: React.FC<Props> = ({
                 <div className="flex gap-2">
                   {(
                     [
-                      ['app_info', 'ℹ️ Bilgi'],
-                      ['app_success', '✓ Başarı'],
-                      ['app_error', '⚠️ Uyarı / Önemli'],
+                      ['app_info', 'Bilgi'],
+                      ['app_success', 'Başarı'],
+                      ['app_error', 'Uyarı / önemli'],
                     ] as const
                   ).map(([k, lbl]) => (
                     <button

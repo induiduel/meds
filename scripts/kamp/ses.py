@@ -16,7 +16,8 @@ import ogren_ses_uret as O  # noqa: E402
 def main():
     yol = Path(sys.argv[1]); k = json.loads(yol.read_text())
     E.uzun_kisaltma_ayarla(f"k{k['kurul']}-kamp")
-    hedef = MEDS / "data/kamp/ses" / f"k{k['kurul']}" / k["brans"]; hedef.mkdir(parents=True, exist_ok=True)
+    kok = Path(sys.argv[sys.argv.index("--ses-kok") + 1]) if "--ses-kok" in sys.argv else MEDS / "data/kamp/ses"
+    hedef = kok / f"k{k['kurul']}" / k["brans"]; hedef.mkdir(parents=True, exist_ok=True)
     isler = [(a["id"], [a["baslik"] + ".", a["metin"]]) for a in k["anlatim"]]
     for q in k["deneme"]:
         isler.append((q["id"], [q["kok"]] + [f"{h} şıkkı: {m}" for h, m in q["secenekler"].items()]))

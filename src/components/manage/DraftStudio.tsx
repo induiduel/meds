@@ -5,7 +5,6 @@ import {
   Workflow,
   Tags,
   Plus,
-  Search,
   Sparkles,
   Undo2,
   Redo2,
@@ -27,7 +26,6 @@ import {
   Maximize,
   Merge,
   CircleDot,
-  ListChecks,
   Bot,
   Cpu,
   Cloud,
@@ -59,6 +57,9 @@ import {
   uid,
   fold,
 } from '../../services/draftStudioService';
+import { Drawer } from './consoleUi';
+import { PageActions, Pill, SearchField, StatRow, Tabs14, Toolbar } from '../v14/pageKit';
+import { BulkBar } from '../v14/manageKit';
 
 /**
  * Taslak stüdyosu: öğrencilerin eklediği soru parçalarını elle bir araya getirip
@@ -160,6 +161,13 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
   const [busy, setBusy] = useState<string | null>(null);
   const [inspectorOpen, setInspectorOpen] = useState(false);
   const [poolOpen, setPoolOpen] = useState(true);
+  const [wideInsp, setWideInsp] = useState(() => typeof window !== 'undefined' && window.matchMedia('(min-width: 1280px)').matches);
+  useEffect(() => {
+    const m = window.matchMedia('(min-width: 1280px)');
+    const on = () => setWideInsp(m.matches);
+    m.addEventListener('change', on);
+    return () => m.removeEventListener('change', on);
+  }, []);
   const importRef = useRef<HTMLInputElement>(null);
   const [openCands, setOpenCands] = useState<Set<string>>(new Set());
   const [editingGroup, setEditingGroup] = useState<string | null>(null);
@@ -861,7 +869,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
   const fragIds = (it: DragItem) => (it.ids && it.ids.length ? it.ids : [it.id]);
 
   // ---------------------------------------------------------------- küçük parçalar
-  const FragChip = ({ f, compact, inCand }: { f: StudioFragment; compact?: boolean; inCand?: string }) => {
+  const FragChip = ({ f, compact, inCand, pickable }: { f: StudioFragment; compact?: boolean; inCand?: string; pickable?: boolean }) => {
     const on = sel?.t === 'frag' && sel.id === f.id;
     const isPicked = picked.includes(f.id);
     return (
@@ -880,6 +888,16 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
         } ${hidden.has(f.id) ? 'opacity-50' : ''}`}
         title="Sürükle: adaya bırak · Shift/Ctrl+tık: çoklu seç"
       >
+        {pickable && (
+          <input
+            type="checkbox"
+            checked={isPicked}
+            onClick={(e) => e.stopPropagation()}
+            onChange={() => setPicked((p) => (p.includes(f.id) ? p.filter((x) => x !== f.id) : [...p, f.id]))}
+            aria-label="Parçayı seç"
+            className="mt-0.5 w-4 h-4 shrink-0 cursor-pointer accent-[var(--color-accent)]"
+          />
+        )}
         <GripVertical className="w-3.5 h-3.5 mt-0.5 text-ink-3 shrink-0 opacity-0 group-hover/frag:opacity-100" aria-hidden="true" />
         <span className="flex-1 min-w-0">
           <span className="flex items-center gap-1.5 mb-0.5">
@@ -1721,125 +1739,136 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
     { id: 'terms', label: 'Terimler', icon: Tags },
   ];
   const chip = (on: boolean) => `h-8 px-3 rounded-full text-sm whitespace-nowrap cursor-pointer transition-colors ${on ? 'bg-ink text-white font-semibold' : 'bg-field text-ink-2 hover:text-ink'}`;
+  const inspTitle = selCand ? 'Birleşik soru' : selFrag ? 'Parça' : 'Konu';
+  const inspBody = (
+    <>
+      {selCand && <React.Fragment key={selCand.id}>{CandidateEditor({ c: selCand })}</React.Fragment>}
+      {selFrag && <React.Fragment key={selFrag.id}>{FragmentInspector({ f: selFrag })}</React.Fragment>}
+      {selGroup && <React.Fragment key={selGroup.id}>{GroupEditor({ g: selGroup })}</React.Fragment>}
+    </>
+  );
+  const hasSel = !!(sel && (selCand || selFrag || selGroup));
+  const poolTitle = VIEWS.find((v) => v.id === view)?.label || '';
 
   return (
-    <div className="flex flex-col gap-3 min-w-0">
-      {/* Başlık + araç çubuğu */}
-      <div className="flex flex-wrap items-center gap-2">
-        <div className="min-w-0 mr-auto">
-          <p className="m-0 text-sm text-ink-2">
-            {committeeName || 'Kurul'} · {stats.frags} parça · <b className="text-ink">{stats.free}</b> eşlenmemiş · {stats.cands} aday · {stats.ready} hazır · {stats.done} soru oldu
-          </p>
-        </div>
-        <div role="tablist" aria-label="Görünüm" className="ms-seg">
-          {VIEWS.map((v) => {
-            const Icon = v.icon;
-            return (
-              <button key={v.id} type="button" role="tab" aria-selected={view === v.id} onClick={() => setView(v.id)}>
-                <Icon className="w-4 h-4" /> {v.label}
-              </button>
-            );
-          })}
-        </div>
-        <button type="button" onClick={autoGroup} className="ms-btn is-primary" title="Eşlenmemiş benzer parçalardan aday öner">
-          <Sparkles /> Otomatik grupla
-        </button>
-        <button type="button" onClick={() => createGroup(null, discF !== 'all' ? discF : '')} className="ms-btn">
-          <FolderPlus /> Konu
-        </button>
-        <span className="inline-flex">
-          <button type="button" onClick={undo} disabled={!past.current.length} aria-label="Geri al" title="Geri al (Ctrl+Z)" className="ms-btn is-ghost is-icon"><Undo2 className="w-4 h-4" /></button>
-          <button type="button" onClick={redo} disabled={!future.current.length} aria-label="Yinele" title="Yinele (Ctrl+Shift+Z)" className="ms-btn is-ghost is-icon"><Redo2 className="w-4 h-4" /></button>
-          <button type="button" onClick={exportJson} aria-label="Dışa aktar" title="Stüdyoyu JSON olarak indir" className="ms-btn is-ghost is-icon"><Download className="w-4 h-4" /></button>
-          <button type="button" onClick={() => importRef.current?.click()} aria-label="İçe aktar" title="JSON içe aktar" className="ms-btn is-ghost is-icon"><Upload className="w-4 h-4" /></button>
+    <div className="flex flex-col gap-4 min-w-0">
+      <PageActions note={<>{committeeName || 'Kurul'} · parçaları sürükle ya da işaretle; soru adayında kök, şıklar ve cevap birleşir.</>}>
+        <span className="inline-flex flex-wrap gap-1">
+          <button type="button" onClick={undo} disabled={!past.current.length} aria-label="Geri al" title="Geri al (Ctrl+Z)" className="m14-btn icon ghost"><Undo2 aria-hidden="true" /></button>
+          <button type="button" onClick={redo} disabled={!future.current.length} aria-label="Yinele" title="Yinele (Ctrl+Shift+Z)" className="m14-btn icon ghost"><Redo2 aria-hidden="true" /></button>
+          <button type="button" onClick={exportJson} aria-label="Dışa aktar" title="Stüdyoyu JSON olarak indir" className="m14-btn icon ghost"><Download aria-hidden="true" /></button>
+          <button type="button" onClick={() => importRef.current?.click()} aria-label="İçe aktar" title="JSON içe aktar" className="m14-btn icon ghost"><Upload aria-hidden="true" /></button>
           <input ref={importRef} type="file" accept="application/json" hidden onChange={(e) => e.target.files?.[0] && void importJson(e.target.files[0])} />
         </span>
-      </div>
+        <button type="button" onClick={() => createGroup(null, discF !== 'all' ? discF : '')} className="m14-btn">
+          <FolderPlus aria-hidden="true" /> Konu
+        </button>
+        <button type="button" onClick={autoGroup} className="m14-btn primary" title="Eşlenmemiş benzer parçalardan aday öner">
+          <Sparkles aria-hidden="true" /> Otomatik grupla
+        </button>
+      </PageActions>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)] xl:grid-cols-[300px_minmax(0,1fr)_380px] gap-3 items-start">
-        {/* Sol: parça havuzu */}
-        <aside className="bg-white rounded-2xl shadow-sm flex flex-col min-h-0 lg:sticky lg:top-3 lg:max-h-[calc(100dvh-140px)]" aria-label="Parça havuzu">
-          <button type="button" onClick={() => setPoolOpen((v) => !v)} className="lg:hidden flex items-center gap-2 px-4 h-12 text-base font-semibold cursor-pointer">
-            Parça havuzu · {pool.length} {poolOpen ? <ChevronDown className="w-4 h-4 ml-auto" /> : <ChevronRight className="w-4 h-4 ml-auto" />}
-          </button>
+      <StatRow
+        stats={[
+          { label: 'Parça', value: stats.frags },
+          { label: 'Eşlenmemiş', value: stats.free, tone: stats.free ? 'warn' : 'ok', onClick: () => setOnlyFree(true) },
+          { label: 'Aday', value: stats.cands },
+          { label: 'Hazır', value: stats.ready, tone: 'acc' },
+          { label: 'Soru oldu', value: stats.done, tone: 'ok' },
+        ]}
+      />
+
+      <Toolbar>
+        <Tabs14<View> label="Görünüm" value={view} onChange={setView}
+          options={VIEWS.map((v) => { const Icon = v.icon; return { id: v.id, label: <><Icon className="w-4 h-4" aria-hidden="true" /> {v.label}</> }; })} />
+        <SearchField value={q} onChange={setQ} placeholder="Parçalarda metin ya da terim" label="Parçalarda ara" />
+        <select value={discF} onChange={(e) => setDiscF(e.target.value)} aria-label="Ders" className="pk14-sel">
+          <option value="all">Tüm dersler</option>
+          {disciplines.map((d) => <option key={d} value={d}>{d}</option>)}
+        </select>
+      </Toolbar>
+
+      <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] xl:grid-cols-[320px_minmax(0,1fr)_400px] gap-3 items-start">
+        {/* Sol: parça listesi (çoklu seçim) */}
+        <aside className="pk14-card flex flex-col min-h-0 lg:sticky lg:top-3 lg:max-h-[calc(100dvh-140px)]" aria-label="Parça havuzu">
+          <header className="flex flex-wrap items-center gap-2" style={{ padding: '12px 16px', borderBottom: '1px solid var(--color-line)' }}>
+            <h2 className="flex-1 min-w-0 text-[15px] font-semibold truncate">Parçalar · {poolTitle}</h2>
+            {picked.length > 0 && <Pill tone="acc">{picked.length} seçili</Pill>}
+            <button type="button" onClick={() => setPoolOpen((v) => !v)} aria-expanded={poolOpen} aria-label={poolOpen ? 'Parça listesini daralt' : 'Parça listesini aç'} className="lg:hidden m14-btn icon ghost">
+              {poolOpen ? <ChevronDown aria-hidden="true" /> : <ChevronRight aria-hidden="true" />}
+            </button>
+          </header>
           <div className={`${poolOpen ? 'flex' : 'hidden'} lg:flex flex-col gap-2 p-3 border-b border-line-soft`}>
-            <label className="flex items-center gap-2 h-9 px-3 rounded-full bg-field">
-              <Search className="w-4 h-4 text-ink-3" />
-              <span className="sr-only">Parçalarda ara</span>
-              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Metin ya da terim" className="flex-1 min-w-0 bg-transparent outline-0 text-base" />
-              {q && <button type="button" aria-label="Temizle" onClick={() => setQ('')} className="cursor-pointer"><X className="w-4 h-4 text-ink-3" /></button>}
-            </label>
             <div className="flex flex-wrap gap-1">
               {(['all', 'stem', 'option', 'clue', 'answer'] as const).map((k) => (
-                <button key={k} type="button" onClick={() => setKindF(k)} className={chip(kindF === k)}>
+                <button key={k} type="button" onClick={() => setKindF(k)} className={chip(kindF === k)} aria-pressed={kindF === k}>
                   {k === 'all' ? 'Tümü' : KIND_LABEL[k]}
                 </button>
               ))}
             </div>
-            <select value={discF} onChange={(e) => setDiscF(e.target.value)} aria-label="Ders" className="h-9 px-3 rounded-full bg-field text-sm outline-0 cursor-pointer">
-              <option value="all">Tüm dersler</option>
-              {disciplines.map((d) => <option key={d} value={d}>{d}</option>)}
-            </select>
-            <div className="flex items-center gap-3 text-sm text-ink-2">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-2">
               <label className="inline-flex items-center gap-1.5 cursor-pointer"><input type="checkbox" checked={onlyFree} onChange={(e) => setOnlyFree(e.target.checked)} /> Yalnız eşlenmemiş</label>
               <label className="inline-flex items-center gap-1.5 cursor-pointer"><input type="checkbox" checked={showHidden} onChange={(e) => setShowHidden(e.target.checked)} /> Gizlileri göster</label>
+              {pool.length > 0 && (
+                <button type="button" className="m14-btn ghost ml-auto" onClick={() => { const ids = pool.slice(0, 400).map((f) => f.id); const all = ids.every((id) => picked.includes(id)); setPicked(all ? [] : ids); }}>
+                  {pool.slice(0, 400).every((f) => picked.includes(f.id)) ? 'Seçimi kaldır' : 'Tümünü seç'}
+                </button>
+              )}
             </div>
           </div>
-          {picked.length > 0 && (
-            <div className="ms-pop-in mx-3 mt-2 rounded-xl bg-ink text-white px-3 py-2 flex items-center gap-2 text-sm">
-              <ListChecks className="w-4 h-4" /> {picked.length} seçili
-              <span className="flex-1" />
-              <button type="button" onClick={() => createCandidate(picked)} className="h-7 px-2.5 rounded-full bg-white/15 hover:bg-white/25 font-semibold cursor-pointer">Aday yap</button>
-              <button type="button" onClick={() => { toggleHide(picked); setPicked([]); }} className="h-7 px-2 rounded-full hover:bg-white/15 cursor-pointer">Gizle</button>
-              <button type="button" aria-label="Seçimi temizle" onClick={() => setPicked([])} className="w-7 h-7 rounded-full hover:bg-white/15 flex items-center justify-center cursor-pointer"><X className="w-4 h-4" /></button>
-            </div>
-          )}
           <div className={`${poolOpen ? 'flex' : 'hidden'} lg:flex flex-col gap-1.5 p-3 overflow-y-auto overscroll-contain min-h-0 max-h-[60dvh] lg:max-h-none`}>
             {pool.length === 0 && <span className="text-sm text-ink-3 py-6 text-center">{allFrags.length ? 'Bu süzgeçte parça yok.' : 'Bu kurulda taslak parça yok.'}</span>}
             {pool.slice(0, 400).map((f) => (
-              <React.Fragment key={f.id}>{FragChip({ f: f })}</React.Fragment>
+              <React.Fragment key={f.id}>{FragChip({ f: f, pickable: true })}</React.Fragment>
             ))}
             {pool.length > 400 && <span className="text-xs text-ink-3 text-center py-2">İlk 400 parça gösteriliyor; süzgeçle daralt.</span>}
           </div>
+          {picked.length > 0 && (
+            <div className="p-3 border-t border-line-soft">
+              <BulkBar
+                count={picked.length}
+                noun="parça"
+                onClear={() => setPicked([])}
+                actions={[
+                  ...(selCand ? [{ label: 'Seçilenleri soruya ekle', kind: 'main' as const, run: () => { attach(picked, selCand.id); setPicked([]); } }] : []),
+                  { label: 'Yeni aday yap', kind: selCand ? undefined : ('main' as const), run: () => { createCandidate(picked); } },
+                  { label: 'Gizle', run: () => { toggleHide(picked); setPicked([]); } },
+                ]}
+              />
+            </div>
+          )}
         </aside>
 
         {/* Orta: görünüm */}
-        <section aria-label="Stüdyo görünümü" className="min-w-0 bg-white rounded-2xl shadow-sm p-3 sm:p-4" onClick={() => setPicked([])}>
+        <section aria-label="Stüdyo görünümü" className="pk14-card min-w-0 p-3 sm:p-4" onClick={() => setPicked([])}>
           {view === 'tree' && TreeView()}
           {view === 'board' && BoardView()}
           {view === 'flow' && FlowView()}
           {view === 'terms' && TermsView()}
         </section>
 
-        {/* Sağ: düzenleyici (geniş ekranda sabit, dar ekranda çekmece) */}
-        {(sel && (selCand || selFrag || selGroup)) ? (
-          <>
-            {inspectorOpen && <button type="button" aria-label="Düzenleyiciyi kapat" onClick={() => setInspectorOpen(false)} className="xl:hidden ms-fade-in fixed inset-0 z-40 bg-[var(--color-scrim)] cursor-default" />}
-            <aside
-              aria-label="Düzenleyici"
-              className={`${inspectorOpen ? 'flex' : 'hidden'} xl:flex ms-slide-left xl:animate-none fixed xl:sticky z-50 xl:z-auto top-0 xl:top-3 right-0 bottom-0 xl:bottom-auto w-[min(420px,94vw)] xl:w-auto xl:max-h-[calc(100dvh-140px)] flex-col bg-white xl:rounded-2xl shadow-xl xl:shadow-sm overflow-y-auto overscroll-contain p-4`}
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <CircleDot className="w-4 h-4 text-accent" />
-                <span className="text-sm font-semibold text-ink-2 flex-1">
-                  {selCand ? 'Soru adayı' : selFrag ? 'Parça' : 'Konu'}
-                </span>
-                <button type="button" aria-label="Kapat" onClick={() => { setSel(null); setInspectorOpen(false); }} className="ms-btn is-ghost is-icon is-sm"><X /></button>
-              </div>
-              {selCand && <React.Fragment key={selCand.id}>{CandidateEditor({ c: selCand })}</React.Fragment>}
-              {selFrag && <React.Fragment key={selFrag.id}>{FragmentInspector({ f: selFrag })}</React.Fragment>}
-              {selGroup && <React.Fragment key={selGroup.id}>{GroupEditor({ g: selGroup })}</React.Fragment>}
-            </aside>
-          </>
+        {/* Sağ: birleşik soru / düzenleyici (geniş ekranda sabit, dar ekranda tam alan çalışma alanı) */}
+        {wideInsp && (hasSel ? (
+          <aside aria-label="Düzenleyici" className="pk14-card flex flex-col sticky top-3 max-h-[calc(100dvh-140px)] overflow-y-auto overscroll-contain">
+            <header className="flex items-center gap-2" style={{ padding: '12px 16px', borderBottom: '1px solid var(--color-line)' }}>
+              <CircleDot className="w-4 h-4 text-accent" aria-hidden="true" />
+              <h2 className="text-[15px] font-semibold flex-1 min-w-0 truncate">{inspTitle}</h2>
+              <button type="button" aria-label="Kapat" onClick={() => { setSel(null); setInspectorOpen(false); }} className="m14-btn icon ghost"><X aria-hidden="true" /></button>
+            </header>
+            <div className="p-4">{inspBody}</div>
+          </aside>
         ) : (
-          <aside className="hidden xl:flex flex-col gap-2 bg-white rounded-2xl shadow-sm p-4 text-sm text-ink-2 sticky top-3">
-            <Check className="w-5 h-5 text-accent" />
-            <b className="text-ink text-base">Bir şey seç</b>
+          <aside className="pk14-card flex flex-col gap-2 p-4 text-sm text-ink-2 sticky top-3">
+            <Check className="w-5 h-5 text-accent" aria-hidden="true" />
+            <b className="text-ink text-base">Birleşik soru</b>
             Aday, parça ya da konuya tıkla; tüm alanları burada düzenlersin.
             <span className="text-ink-3 text-xs mt-2">Kısayollar: Ctrl+Z geri al · Ctrl+Shift+Z yinele · Shift+tık çoklu seç · Esc seçimi bırak</span>
           </aside>
-        )}
+        ))}
       </div>
+      <Drawer open={!wideInsp && hasSel && inspectorOpen} onClose={() => setInspectorOpen(false)} wide title={inspTitle}>
+        {inspBody}
+      </Drawer>
       {aiFor && candById.get(aiFor) && AiPanel({ c: candById.get(aiFor)! })}
     </div>
   );

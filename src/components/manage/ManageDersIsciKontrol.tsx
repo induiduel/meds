@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Pause, Play, Radar, Save, SlidersHorizontal } from 'lucide-react';
 import { toast } from '../ui/Toast';
-import { Field, Panel, Switch } from './consoleUi';
+import { Drawer, Field, Switch } from './consoleUi';
+import { FactList, PageActions, StatRow, type Stat } from '../v14/pageKit';
 
 /**
  * Ders işçisi denetimi: canlı durum (şu an işlenen, bugün başlanan/sınır, sonraki başlama), duraklat/sürdür, Drive'ı şimdi
@@ -54,7 +55,11 @@ export const IsciKontrol: React.FC<{
   onDegisti: () => void;
   /** Liste yenilemesinde artar: ayar formu düzenlenmiyorsa sunucudaki son değerle eşitlenir */
   tazele: number;
-}> = ({ api, durum, onDegisti, tazele }) => {
+  /** Bölümün kendi sayıları (StatRow başına eklenir) */
+  ekStat?: Stat[];
+  /** Ek sayfa eylemleri (ör. Yenile) */
+  ekEylem?: React.ReactNode;
+}> = ({ api, durum, onDegisti, tazele, ekStat, ekEylem }) => {
   const [veri, setVeri] = useState<AyarYanit | null>(null);
   const [taslak, setTaslak] = useState<IsciAyar | null>(null);
   const [acik, setAcik] = useState(false);
@@ -109,80 +114,73 @@ export const IsciKontrol: React.FC<{
     </Field>
   );
 
+  const durumMetni = a?.duraklat ? 'Duraklatıldı' : durum.calisan ? `İşliyor · ${sure(durum.calisan.basladi)}` : 'Bekliyor';
   return (
-    <Panel
-      title="İşçi denetimi"
-      icon={SlidersHorizontal}
-      desc="Ders işçisinin canlı durumu ve çalışma kuralları. Değişiklikler kaydedilince en geç 30 saniyede uygulanır."
-      tools={
-        <>
-          <button type="button" className="ms-btn is-sm" disabled={busy} onClick={tara}>
-            <Radar aria-hidden /> Drive'ı şimdi tara
+    <>
+      <PageActions note={durum.calisan ? `Şu an işlenen: ${durum.calisan.baslik}` : undefined}>
+        {ekEylem}
+        {a && (
+          <button
+            type="button"
+            className="m14-btn"
+            disabled={busy}
+            onClick={() => kaydet({ duraklat: !a.duraklat }, a.duraklat ? 'İşçi sürdürülüyor.' : 'İşçi duraklatıldı; yeni ders başlamaz.')}
+          >
+            {a.duraklat ? <Play aria-hidden /> : <Pause aria-hidden />} {a.duraklat ? 'Sürdür' : 'Duraklat'}
           </button>
-          {a && (
-            <button
-              type="button"
-              className={`ms-btn is-sm ${a.duraklat ? 'is-ok' : 'is-warn'}`}
-              disabled={busy}
-              onClick={() => kaydet({ duraklat: !a.duraklat }, a.duraklat ? 'İşçi sürdürülüyor.' : 'İşçi duraklatıldı; yeni ders başlamaz.')}
-            >
-              {a.duraklat ? <Play aria-hidden /> : <Pause aria-hidden />} {a.duraklat ? 'Sürdür' : 'Duraklat'}
-            </button>
-          )}
-        </>
-      }
-    >
-      <dl className="grid gap-x-6 gap-y-2 text-sm" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))' }}>
-        <div>
-          <dt className="text-ink-3">Durum</dt>
-          <dd className="m-0">
-            {a?.duraklat ? (
-              <b className="text-warn">Duraklatıldı</b>
-            ) : durum.calisan ? (
-              <b>İşliyor · {sure(durum.calisan.basladi)}</b>
-            ) : (
-              <b>Bekliyor</b>
-            )}
-          </dd>
-        </div>
-        <div>
-          <dt className="text-ink-3">Şu an işlenen</dt>
-          <dd className="m-0">{durum.calisan ? durum.calisan.baslik : '—'}</dd>
-        </div>
-        <div>
-          <dt className="text-ink-3">Bugün başlanan</dt>
-          <dd className="m-0">
-            <b>{durum.bugun}</b> / {a?.gunluk_sinir ?? '?'}
-          </dd>
-        </div>
-        <div>
-          <dt className="text-ink-3">Sıradaki başlama</dt>
-          <dd className="m-0">{durum.bekleyen ? `~${saat(durum.sonraki)} (${durum.bekleyen} bekleyen)` : 'kuyruk boş'}</dd>
-        </div>
-        <div>
-          <dt className="text-ink-3">Son Drive taraması</dt>
-          <dd className="m-0">
-            {saat(durum.sonTarama)}
-            {a ? ` · ${a.otomatik_tarama ? `${a.tarama_dk} dk'da bir` : 'otomatik kapalı'}` : ''}
-          </dd>
-        </div>
-        <div>
-          <dt className="text-ink-3">Kural</dt>
-          <dd className="m-0">
-            {a
-              ? `günde ≤${a.gunluk_sinir} · ${a.ders_arasi_dk} dk arayla · ${String(a.saat_bas).padStart(2, '0')}–${String(a.saat_bit).padStart(2, '0')} · ${MODEL_AD[a.model] || a.model}`
-              : '…'}
-          </dd>
-        </div>
-      </dl>
+        )}
+        <button type="button" className="m14-btn" onClick={() => setAcik(true)}>
+          <SlidersHorizontal aria-hidden /> İşçi ayarları{kirli ? ' ·' : ''}
+        </button>
+        <button type="button" className="m14-btn primary" disabled={busy} onClick={tara}>
+          <Radar aria-hidden /> Drive’ı şimdi tara
+        </button>
+      </PageActions>
+      <StatRow
+        stats={[
+          ...(ekStat || []),
+          { label: 'Bugün başlanan', value: `${durum.bugun} / ${a?.gunluk_sinir ?? '?'}` },
+          { label: 'İşçi', value: durumMetni, tone: a?.duraklat ? 'warn' : durum.calisan ? 'acc' : undefined, hint: durum.calisan?.baslik },
+          { label: 'Sıradaki başlama', value: durum.bekleyen ? `~${saat(durum.sonraki)}` : 'Kuyruk boş', hint: durum.bekleyen ? `${durum.bekleyen} bekleyen` : undefined },
+        ]}
+      />
 
-      <details className="mt-3" open={acik} onToggle={(e) => setAcik((e.target as HTMLDetailsElement).open)}>
-        <summary className="text-sm font-semibold" style={{ cursor: 'pointer' }}>
-          Ayarlar{kirli ? ' · kaydedilmemiş değişiklik' : ''}
-        </summary>
+      <Drawer
+        open={acik}
+        onClose={() => setAcik(false)}
+        title="İşçi ayarları"
+        foot={
+          taslak ? (
+            <>
+              <button type="button" className="m14-btn" disabled={busy || !kirli} onClick={() => veri && setTaslak(veri.ayar)}>
+                Vazgeç
+              </button>
+              <button type="button" className="m14-btn primary" disabled={busy || !kirli} onClick={() => kaydet(taslak, 'Ayarlar kaydedildi.')}>
+                <Save aria-hidden /> Kaydet
+              </button>
+            </>
+          ) : undefined
+        }
+      >
+        <p className="m-0 text-sm text-ink-2">Değişiklikler kaydedilince en geç 30 saniyede uygulanır.{kirli ? ' Kaydedilmemiş değişiklik var.' : ''}</p>
+        <FactList
+          items={[
+            { k: 'Durum', v: durumMetni },
+            { k: 'Şu an işlenen', v: durum.calisan ? durum.calisan.baslik : '—' },
+            { k: 'Bugün başlanan', v: `${durum.bugun} / ${a?.gunluk_sinir ?? '?'}` },
+            { k: 'Sıradaki başlama', v: durum.bekleyen ? `~${saat(durum.sonraki)} (${durum.bekleyen} bekleyen)` : 'kuyruk boş' },
+            { k: 'Son Drive taraması', v: `${saat(durum.sonTarama)}${a ? ` · ${a.otomatik_tarama ? `${a.tarama_dk} dk'da bir` : 'otomatik kapalı'}` : ''}` },
+            {
+              k: 'Kural',
+              v: a
+                ? `günde ≤${a.gunluk_sinir} · ${a.ders_arasi_dk} dk arayla · ${String(a.saat_bas).padStart(2, '0')}–${String(a.saat_bit).padStart(2, '0')} · ${MODEL_AD[a.model] || a.model}`
+                : '…',
+            },
+          ]}
+        />
         {taslak && (
           <div className="flex flex-col gap-3 mt-3">
-            <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
+            <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
               {sayi('gunluk_sinir', 'Günlük ders sınırı', 'Bir günde işlenmeye başlanan en çok ders (PDF).', [0, 48])}
               {sayi('ders_arasi_dk', 'İki ders arası (dk)', 'İki dersin başlangıcı arasında en az bu kadar dakika; 60 = saatte 1.', [0, 1440])}
               {sayi('saat_bas', 'İşleme başlangıç saati', 'TR saati, 0–23.', [0, 23])}
@@ -220,17 +218,9 @@ export const IsciKontrol: React.FC<{
               label="Yeni PDF'leri otomatik kuyruğa al"
               hint="Kapalıyken yeni PDF'ler 'PDF görüldü' listesinde bekler; 'Kuyruğa al' ile sen seçersin."
             />
-            <div className="flex flex-wrap gap-2">
-              <button type="button" className="ms-btn is-primary" disabled={busy || !kirli} onClick={() => kaydet(taslak, 'Ayarlar kaydedildi.')}>
-                <Save aria-hidden /> Kaydet
-              </button>
-              <button type="button" className="ms-btn" disabled={busy || !kirli} onClick={() => veri && setTaslak(veri.ayar)}>
-                Vazgeç
-              </button>
-            </div>
           </div>
         )}
-      </details>
-    </Panel>
+      </Drawer>
+    </>
   );
 };

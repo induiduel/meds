@@ -1,18 +1,17 @@
-import React, { startTransition, useEffect, useMemo, useRef, useState } from 'react';
-import {
-  Search, RefreshCw, Download, Copy, Link2, Mail, Pencil, Trash2, X, MoreHorizontal, ChevronLeft, ChevronRight, ArrowLeft,
-  Shield, UserRound, ExternalLink,
-} from 'lucide-react';
+import React, { startTransition, useEffect, useMemo, useState } from 'react';
+import { RefreshCw, Download, Link2, Mail, Pencil, Trash2, ChevronLeft, ChevronRight, Shield, ExternalLink } from 'lucide-react';
 import type { PeopleList, PersonRow, PersonDetail } from '../../services/peopleService';
 import { fmtDuration, relTime, personDeepLink, siteLink } from '../../services/peopleService';
-import { deleteManageUser } from '../../services/manageConsoleService';
-import { ConfirmButton } from '../manage/consoleUi';
+import { deleteManageUser, sendUserEmail } from '../../services/manageConsoleService';
+import { ConfirmButton, Drawer } from '../manage/consoleUi';
+import { PageActions, StatRow, Toolbar, Tabs14, SearchField, DataTable, Pill, DetailNav, Card14, type Col } from '../v14/pageKit';
+import { BulkBar, useSelection } from '../v14/manageKit';
 import type { PeopleV12Parts, PeopleFilter, PeopleSort, PeopleTab } from '../manage/ManagePeopleSection';
 import '../../styles/v12/manage.css';
 
 /**
- * Yönetim › Kişiler — v12 "Net" denetim düzeni (canvas: ManageUsers.dc.html).
- * Kayıtlı görünüm hapları (mevcut süzgeçler), süzgeç çubuğu, seçimli tablo + toplu işlem çubuğu, sağda sekmeli ayrıntı.
+ * Yönetim › Kişiler — v14 düzeni (canvas: Kisiler.dc.html): sayılar, görünüm sekmeleri + arama, toplu işlem çubuğu, seçimli tablo;
+ * satıra tıklayınca tam sayfa 360° profil (Drawer, önceki/sonraki). Toplu e-posta tek e-posta işlevini sırayla çağırır.
  * Veri, canlı tazeleme ve adres (/manage/kisiler/<anahtar>?sekme=…) ManagePeopleSection'da kalır.
  * Uyar / kısıtla / askıya al / risk puanı için sunucu ucu yok: bu öğeler bilerek çizilmez.
  */
@@ -56,7 +55,6 @@ const ageMs = (iso?: string | null) => {
   return Number.isFinite(t) ? Date.now() - t : Infinity;
 };
 const roleOf = (p: { kind: string; role: string }) => (p.role === 'admin' ? 'Yönetici' : p.kind === 'guest' ? 'Misafir' : 'Öğrenci');
-const roleCls = (p: { kind: string; role: string }) => (p.role === 'admin' ? 'm12-badge acc' : p.kind === 'guest' ? 'm12-role' : 'm12-badge');
 
 const copyText = async (text: string, notify: (m: string) => void, msg: string) => {
   try {
@@ -96,23 +94,15 @@ const Avatar: React.FC<{ name: string; photo?: string | null; online?: boolean; 
   </span>
 );
 
-/** Yerli onay kutusu; "kısmen" durumu DOM özelliğiyle */
-const Check: React.FC<{ checked: boolean; mixed?: boolean; onChange: () => void; label: string }> = ({ checked, mixed, onChange, label }) => {
-  const ref = useRef<HTMLInputElement>(null);
-  useEffect(() => {
-    if (ref.current) ref.current.indeterminate = !!mixed && !checked;
-  }, [mixed, checked]);
-  return <input ref={ref} type="checkbox" className="m12-cb" checked={checked} onChange={onChange} aria-label={label} />;
-};
-
 export const ManagePeopleV12: React.FC<Props> = (p) => {
   const { list, rows, parts } = p;
   const [q, setQ] = useState(p.query);
   const [role, setRole] = useState<RoleF>('all');
   const [seen, setSeen] = useState<SeenF>('any');
   const [page, setPage] = useState(0);
-  const [sel, setSel] = useState<Set<string>>(() => new Set());
-  const [menu, setMenu] = useState<string | null>(null);
+  const sel = useSelection<string>();
+  const [bulkMail, setBulkMail] = useState(false);
+  const [busy, setBusy] = useState(false);
 
   const filtered = useMemo(
     () =>
@@ -134,48 +124,7 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
   const pg = Math.min(page, pages - 1);
   const pageRows = filtered.slice(pg * PAGE, pg * PAGE + PAGE);
 
-  // Seçim: görünmeyen (süzgeçle düşen) kişiler seçimden çıkar
-  useEffect(() => {
-    setSel((cur) => {
-      if (!cur.size) return cur;
-      const keep = new Set(filtered.map((r) => r.key));
-      const next = new Set([...cur].filter((k) => keep.has(k)));
-      return next.size === cur.size ? cur : next;
-    });
-  }, [filtered]);
-  const selRows = useMemo(() => filtered.filter((r) => sel.has(r.key)), [filtered, sel]);
-  const pageSel = pageRows.filter((r) => sel.has(r.key)).length;
-  const allOn = pageRows.length > 0 && pageSel === pageRows.length;
-  const toggleAll = () =>
-    setSel((cur) => {
-      const next = new Set(cur);
-      if (allOn) pageRows.forEach((r) => next.delete(r.key));
-      else pageRows.forEach((r) => next.add(r.key));
-      return next;
-    });
-  const toggle = (k: string) =>
-    setSel((cur) => {
-      const next = new Set(cur);
-      if (next.has(k)) next.delete(k);
-      else next.add(k);
-      return next;
-    });
-
-  // Satır menüsü: dışarı tıklayınca ya da Esc ile kapanır
-  useEffect(() => {
-    if (!menu) return;
-    const onDown = (e: MouseEvent) => {
-      if (!(e.target as HTMLElement).closest?.('.m12-rowmenu')) setMenu(null);
-    };
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setMenu(null);
-    document.addEventListener('mousedown', onDown);
-    document.addEventListener('keydown', onKey);
-    return () => {
-      document.removeEventListener('mousedown', onDown);
-      document.removeEventListener('keydown', onKey);
-    };
-  }, [menu]);
-
+  const selRows = useMemo(() => filtered.filter((r) => sel.has(r.key)), [filtered, sel.sel]); // eslint-disable-line react-hooks/exhaustive-deps
   const t = list?.totals;
   const dirty = !!q || role !== 'all' || seen !== 'any' || p.sort !== 'seen';
   const clear = () => {
@@ -186,248 +135,221 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
     p.setSort('seen');
   };
   const emails = selRows.map((r) => r.email).filter(Boolean) as string[];
+  const deletable = selRows.filter((r) => r.uid && r.kind === 'account' && r.role !== 'admin');
+  const current = p.openKey ? filtered.find((r) => r.key === p.openKey) || rows.find((r) => r.key === p.openKey) || null : null;
+
+  const bulkDelete = async () => {
+    setBusy(true);
+    let ok = 0;
+    let bad = 0;
+    for (const r of deletable) {
+      const res = await deleteManageUser(p.adminEmail, r.uid!);
+      if (res.ok) ok++;
+      else bad++;
+    }
+    setBusy(false);
+    p.notify(`${ok} başarılı, ${bad} hata.`);
+    sel.clear();
+    p.reload();
+  };
+
+  const cols: Col<PersonRow>[] = [
+    {
+      key: 'user',
+      label: 'Kişi',
+      main: true,
+      render: (r) => (
+        <span className="m12-user" style={{ pointerEvents: 'none' }}>
+          <Avatar name={r.name} photo={r.photoURL} online={r.online} />
+          <span className="tx">
+            <span className="nm m12-clamp1">{r.name}</span>
+            <span className="em m12-clamp1">{[r.email, r.studentNumber && `No ${r.studentNumber}`].filter(Boolean).join(' · ') || 'Girişsiz cihaz'}</span>
+          </span>
+        </span>
+      ),
+    },
+    { key: 'role', label: 'Rol', render: (r) => <Pill tone={r.role === 'admin' ? 'acc' : ''}>{roleOf(r)}</Pill> },
+    { key: 'state', label: 'Durum', render: (r) => (r.online ? <Pill tone="ok">Çevrim içi</Pill> : <Pill>Çevrim dışı</Pill>) },
+    { key: 'contrib', label: 'Katkı', right: true, render: (r) => parts.contribTotal(r) },
+    { key: 'report', label: 'Bildirim', right: true, render: (r) => r.counts.report },
+    { key: 'use', label: 'Kullanım', right: true, render: (r) => fmtDuration(r.totalSeconds) },
+    {
+      key: 'study',
+      label: 'Çalışma',
+      right: true,
+      render: (r) =>
+        r.study?.konu ? (
+          <button type="button" className="m12-linkbtn" onClick={(e) => { e.stopPropagation(); p.open(r.key, 'calisma'); }} title={`${r.study.konu} konu · son 7 gün ${fmtDuration(r.study.haftaSn)}`}>
+            {fmtDuration(r.study.sn)} · {r.study.bitti} bitti
+          </button>
+        ) : '—',
+    },
+    { key: 'seen', label: 'Son görülme', muted: true, render: (r) => (r.online ? 'şimdi' : relTime(r.lastSeen)) },
+    { key: 'dev', label: 'Cihaz', right: true, render: (r) => r.deviceCount },
+  ];
 
   return (
-    <div className={`m12-pp ${p.openKey ? 'has-open' : ''}`}>
-      <div className="m12-pp-split">
-        <div className="m12-pp-list">
-          <div className="m12-pp-row1">
-            <div className="m12-chips" role="group" aria-label="Kayıtlı görünümler">
-              {p.filters.map(([id, label, n]) => (
-                <button key={id} type="button" className={`m12-pill ${p.filter === id ? 'on' : ''}`} aria-pressed={p.filter === id} onClick={() => p.setFilter(id)}>
-                  <span>{label}</span>
-                  {n !== undefined && <b className="m12-num">{n.toLocaleString('tr-TR')}</b>}
-                </button>
-              ))}
-            </div>
-            <span className="m12-grow" />
-            <button type="button" className="m12-btn sm" onClick={() => downloadCsv(filtered, parts.contribTotal)} disabled={!filtered.length}>
-              <Download aria-hidden="true" />
-              Dışa aktar
-            </button>
-            <button type="button" className="m12-btn sm icon" onClick={p.onRefresh} aria-label="Listeyi yenile" title="Listeyi yenile">
-              <RefreshCw key={p.pulse} className="m12-spin-once" aria-hidden="true" />
-            </button>
-          </div>
+    <div className="m12-pp">
+      <PageActions
+        note={
+          <span>
+            <span className="m12-av-dot" style={{ position: 'static', display: 'inline-block', marginRight: 6 }} aria-hidden="true" />
+            Şu an çevrim içi: {t?.online ?? '—'}
+          </span>
+        }
+      >
+        <button type="button" className="m14-btn" onClick={() => downloadCsv(filtered, parts.contribTotal)} disabled={!filtered.length}>
+          <Download aria-hidden="true" /> Dışa aktar
+        </button>
+        <button type="button" className="m14-btn" onClick={p.onRefresh} aria-label="Listeyi yenile">
+          <RefreshCw key={p.pulse} className="m12-spin-once" aria-hidden="true" /> Yenile
+        </button>
+      </PageActions>
 
-          <div className="m12-filters">
-            <label className="m12-field m12-qs">
-              <Search aria-hidden="true" />
-              <span className="sr-only">Kişi ara</span>
-              <input
-                type="search"
-                value={q}
-                placeholder="Ad, e-posta, numara, cihaz…"
-                onChange={(e) => {
-                  const v = e.target.value;
-                  setQ(v);
-                  startTransition(() => p.setQuery(v));
-                }}
-              />
-            </label>
-            <label className="m12-field m12-f">
-              <span className="fl">Rol</span>
-              <select value={role} onChange={(e) => setRole(e.target.value as RoleF)}>
-                <option value="all">Tümü</option>
-                <option value="student">Öğrenci</option>
-                <option value="admin">Yönetici</option>
-              </select>
-            </label>
-            <label className="m12-field m12-f">
-              <span className="fl">Son görülme</span>
-              <select value={seen} onChange={(e) => setSeen(e.target.value as SeenF)}>
-                <option value="any">Her zaman</option>
-                <option value="24h">Son 24 saat</option>
-                <option value="7d">Son 7 gün</option>
-                <option value="old">30 günden eski</option>
-              </select>
-            </label>
-            <label className="m12-field m12-f">
-              <span className="fl">Sırala</span>
-              <select value={p.sort} onChange={(e) => p.setSort(e.target.value as PeopleSort)}>
-                <option value="seen">Son görülme</option>
-                <option value="usage">Kullanım süresi</option>
-                <option value="study">Çalışma süresi</option>
-                <option value="contrib">Katkı sayısı</option>
-              </select>
-            </label>
-            {dirty && (
-              <button type="button" className="m12-btn sm ghost" onClick={clear}>
-                Temizle
-              </button>
-            )}
-          </div>
+      <StatRow
+        stats={[
+          { label: 'Kişi', value: t?.people ?? '—' },
+          { label: 'Şu an çevrim içi', value: t?.online ?? '—', tone: 'ok', onClick: () => p.setFilter('online') },
+          { label: 'Cihaz', value: t?.devices ?? '—' },
+          { label: 'Son 7 gün', value: t ? fmtDuration(t.weekSeconds) : '—' },
+        ]}
+      />
 
-          {list && !list.database && (
-            <p className="m12-note warn">Veritabanı şu an bağlı değil: cihaz ve etkinlik verisi geçici olarak eksik; yazımlar kuyrukta bekliyor.</p>
-          )}
-          {p.listErr && <p className="m12-note bad">{p.listErr}</p>}
+      <Toolbar>
+        <Tabs14 label="Kayıtlı görünümler" value={p.filter} onChange={p.setFilter} options={p.filters.map(([id, label, n]) => ({ id, label, n }))} />
+        <SearchField
+          value={q}
+          onChange={(v) => {
+            setQ(v);
+            startTransition(() => p.setQuery(v));
+          }}
+          placeholder="Ad, e-posta, numara, cihaz…"
+          label="Kişi ara"
+        />
+        <select className="m14-select" value={role} onChange={(e) => setRole(e.target.value as RoleF)} aria-label="Rol">
+          <option value="all">Her rol</option>
+          <option value="student">Öğrenci</option>
+          <option value="admin">Yönetici</option>
+        </select>
+        <select className="m14-select" value={seen} onChange={(e) => setSeen(e.target.value as SeenF)} aria-label="Son görülme">
+          <option value="any">Her zaman</option>
+          <option value="24h">Son 24 saat</option>
+          <option value="7d">Son 7 gün</option>
+          <option value="old">30 günden eski</option>
+        </select>
+        <select className="m14-select" value={p.sort} onChange={(e) => p.setSort(e.target.value as PeopleSort)} aria-label="Sırala">
+          <option value="seen">Son görülmeye göre</option>
+          <option value="usage">Kullanım süresine göre</option>
+          <option value="study">Çalışma süresine göre</option>
+          <option value="contrib">Katkı sayısına göre</option>
+        </select>
+        {dirty && <button type="button" className="m14-btn ghost" onClick={clear}>Temizle</button>}
+      </Toolbar>
 
-          <section className="m12-panel" aria-label="Kişiler">
-            {selRows.length > 0 ? (
-              <div className="m12-bar bulk" role="toolbar" aria-label="Toplu işlemler">
-                <b>{selRows.length.toLocaleString('tr-TR')} seçili</b>
-                <span className="m12-grow" />
-                {emails.length > 0 && (
-                  <button type="button" className="m12-btn sm" onClick={() => copyText(emails.join(', '), p.notify, `${emails.length} e-posta kopyalandı.`)}>
-                    <Copy aria-hidden="true" />
-                    E-postaları kopyala
-                  </button>
-                )}
-                <button type="button" className="m12-btn sm" onClick={() => downloadCsv(selRows, parts.contribTotal)}>
-                  <Download aria-hidden="true" />
-                  Seçileni dışa aktar
-                </button>
-                <button type="button" className="m12-btn sm ghost" onClick={() => setSel(new Set())}>
-                  Seçimi kaldır
-                </button>
-              </div>
-            ) : (
-              <div className="m12-bar">
-                <span className="m12-meta m12-grow">
-                  <span className="m12-num">{filtered.length.toLocaleString('tr-TR')}</span> kişi
-                  {t ? (
-                    <>
-                      {' · '}
-                      <span className="m12-num">{t.online}</span> çevrimiçi · <span className="m12-num">{t.devices}</span> cihaz · son 7 gün{' '}
-                      <span className="m12-num">{fmtDuration(t.weekSeconds)}</span>
-                    </>
-                  ) : null}
-                </span>
-              </div>
-            )}
+      {list && !list.database && <p className="m12-note warn">Veritabanı şu an bağlı değil: cihaz ve etkinlik verisi geçici olarak eksik; yazımlar kuyrukta bekliyor.</p>}
+      {p.listErr && <p className="m12-note bad">{p.listErr}</p>}
 
-            <div className="m12-tbl-box">
-              <table className="m12-tbl m12-ptbl">
-                <thead>
-                  <tr>
-                    <th className="c-cb">
-                      <Check checked={allOn} mixed={pageSel > 0} onChange={toggleAll} label="Bu sayfadakilerin tümünü seç" />
-                    </th>
-                    <th>Kişi</th>
-                    <th>Rol</th>
-                    <th>Durum</th>
-                    <th className="n">Katkı</th>
-                    <th className="n">Bildirim</th>
-                    <th className="n">Kullanım</th>
-                    <th className="n" title="Konu takibindeki etkin çalışma (toplam · bitti konu)">Çalışma</th>
-                    <th>Son görülme</th>
-                    <th className="n">Cihaz</th>
-                    <th className="c-act"><span className="sr-only">İşlemler</span></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {!list && !p.listErr && (
-                    <tr>
-                      <td colSpan={11} className="m12-td-empty" aria-busy="true">Yükleniyor…</td>
-                    </tr>
-                  )}
-                  {list && pageRows.length === 0 && (
-                    <tr>
-                      <td colSpan={11} className="m12-td-empty">Eşleşen kişi yok. Süzgeci ya da aramayı değiştir.</td>
-                    </tr>
-                  )}
-                  {pageRows.map((r, i) => {
-                    const on = sel.has(r.key);
-                    const cur = p.openKey === r.key;
-                    const contrib = parts.contribTotal(r);
-                    return (
-                      <tr key={r.key} className={cur ? 'cur' : on ? 'sel' : ''}>
-                        <td className="c-cb">
-                          <Check checked={on} onChange={() => toggle(r.key)} label={`Seç: ${r.name}`} />
-                        </td>
-                        <td className="c-user">
-                          <button type="button" className="m12-user" onClick={() => p.open(r.key)} aria-current={cur ? 'true' : undefined}>
-                            <Avatar name={r.name} photo={r.photoURL} online={r.online} />
-                            <span className="tx">
-                              <span className="nm m12-clamp1">{r.name}</span>
-                              <span className="em m12-clamp1">
-                                {[r.email, r.studentNumber && `No ${r.studentNumber}`].filter(Boolean).join(' · ') || 'Girişsiz cihaz'}
-                              </span>
-                            </span>
-                          </button>
-                        </td>
-                        <td><span className={roleCls(r)}>{roleOf(r)}</span></td>
-                        <td>{r.online ? <span className="m12-badge ok">çevrimiçi</span> : <span className="m12-meta">çevrimdışı</span>}</td>
-                        <td className="n"><span className="m12-num">{contrib}</span></td>
-                        <td className="n"><span className={`m12-num ${r.counts.report ? 'warn' : ''}`}>{r.counts.report}</span></td>
-                        <td className="n"><span className="m12-num">{fmtDuration(r.totalSeconds)}</span></td>
-                        <td className="n">
-                          {r.study?.konu ? (
-                            <button type="button" className="m12-linkbtn" onClick={() => p.open(r.key, 'calisma')} title={`${r.study.konu} konu · son 7 gün ${fmtDuration(r.study.haftaSn)}`}>
-                              <span className="m12-num">{fmtDuration(r.study.sn)}</span> <span className="m12-meta">· {r.study.bitti} bitti</span>
-                            </button>
-                          ) : (
-                            <span className="m12-meta">—</span>
-                          )}
-                        </td>
-                        <td><span className="m12-meta">{r.online ? 'şimdi' : relTime(r.lastSeen)}</span></td>
-                        <td className="n"><span className="m12-num">{r.deviceCount}</span></td>
-                        <td className="c-act">
-                          <div className="m12-rowmenu">
-                            <button
-                              type="button"
-                              className="m12-btn sm ghost icon"
-                              aria-label={`${r.name} için işlemler`}
-                              aria-haspopup="menu"
-                              aria-expanded={menu === r.key}
-                              onClick={() => setMenu(menu === r.key ? null : r.key)}
-                            >
-                              <MoreHorizontal aria-hidden="true" />
-                            </button>
-                            {menu === r.key && (
-                              <div className={`m12-pop m12-menu ${i >= pageRows.length - 3 && pageRows.length > 4 ? 'up' : ''}`} role="menu">
-                                <button type="button" role="menuitem" onClick={() => { setMenu(null); p.open(r.key); }}>
-                                  <UserRound aria-hidden="true" /> Profili aç
-                                </button>
-                                <button type="button" role="menuitem" onClick={() => { setMenu(null); void copyText(personDeepLink(r.key), p.notify, 'Kişi bağlantısı kopyalandı.'); }}>
-                                  <Link2 aria-hidden="true" /> Bağlantıyı kopyala
-                                </button>
-                                {r.email && (
-                                  <button type="button" role="menuitem" onClick={() => { setMenu(null); void copyText(r.email!, p.notify, 'E-posta kopyalandı.'); }}>
-                                    <Copy aria-hidden="true" /> E-postayı kopyala
-                                  </button>
-                                )}
-                              </div>
-                            )}
-                          </div>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-            <div className="m12-panel-f">
-              <span className="m12-meta m12-grow">
-                {filtered.length
-                  ? `${(pg * PAGE + 1).toLocaleString('tr-TR')}–${Math.min(filtered.length, pg * PAGE + PAGE).toLocaleString('tr-TR')} / ${filtered.length.toLocaleString('tr-TR')}`
-                  : '0 kişi'}
-              </span>
-              <button type="button" className="m12-btn sm icon" aria-label="Önceki sayfa" disabled={pg === 0} onClick={() => setPage(pg - 1)}>
-                <ChevronLeft aria-hidden="true" />
-              </button>
-              <button type="button" className="m12-btn sm icon" aria-label="Sonraki sayfa" disabled={pg >= pages - 1} onClick={() => setPage(pg + 1)}>
-                <ChevronRight aria-hidden="true" />
-              </button>
-            </div>
-          </section>
+      <BulkBar
+        count={selRows.length}
+        noun="kişi"
+        busy={busy}
+        onClear={sel.clear}
+        actions={[
+          { label: 'E-posta gönder', kind: 'main', disabled: !emails.length, run: () => setBulkMail(true) },
+          { label: 'E-postaları kopyala', disabled: !emails.length, run: () => copyText(emails.join(', '), p.notify, `${emails.length} e-posta kopyalandı.`) },
+          { label: 'Seçileni dışa aktar', run: () => downloadCsv(selRows, parts.contribTotal) },
+          { label: `Hesapları sil (${deletable.length})`, kind: 'danger', disabled: !deletable.length, confirm: `${deletable.length} hesabı silmeyi onayla`, run: bulkDelete },
+        ]}
+      />
+
+      <DataTable
+        rows={pageRows}
+        cols={cols}
+        rowKey={(r) => r.key}
+        onOpen={(r) => p.open(r.key)}
+        selection={sel}
+        activeKey={p.openKey}
+        busy={!list && !p.listErr}
+        empty={!list ? 'Yükleniyor…' : 'Eşleşen kişi yok. Süzgeci ya da aramayı değiştir.'}
+        minWidth={900}
+      />
+      <div className="pk14-actions">
+        <p className="pk14-note">
+          {filtered.length
+            ? `${(pg * PAGE + 1).toLocaleString('tr-TR')}–${Math.min(filtered.length, pg * PAGE + PAGE).toLocaleString('tr-TR')} / ${filtered.length.toLocaleString('tr-TR')}`
+            : '0 kişi'}
+        </p>
+        <div className="pk14-actions-btns">
+          <button type="button" className="m14-btn icon" aria-label="Önceki sayfa" disabled={pg === 0} onClick={() => setPage(pg - 1)}><ChevronLeft aria-hidden="true" /></button>
+          <button type="button" className="m14-btn icon" aria-label="Sonraki sayfa" disabled={pg >= pages - 1} onClick={() => setPage(pg + 1)}><ChevronRight aria-hidden="true" /></button>
         </div>
-
-        {p.openKey && (
-          <aside className="m12-panel m12-pp-drawer" aria-label="Kişi ayrıntısı">
-            {p.detailErr && !p.detail && (
-              <div className="m12-dsec">
-                <button type="button" className="m12-btn sm" onClick={() => p.open(null)}><ArrowLeft aria-hidden="true" /> Listeye dön</button>
-                <p className="m12-note bad">{p.detailErr}</p>
-              </div>
-            )}
-            {!p.detail && !p.detailErr && <div className="m12-td-empty" aria-busy="true">{p.loadingDetail ? 'Yükleniyor…' : ''}</div>}
-            {p.detail && <PersonDrawer key={p.detail.person.key} {...p} d={p.detail} />}
-          </aside>
-        )}
       </div>
+
+      <BulkMail open={bulkMail} onClose={() => setBulkMail(false)} rows={selRows.filter((r) => r.email)} notify={p.notify} />
+
+      <Drawer
+        open={!!p.openKey}
+        onClose={() => p.open(null)}
+        title={p.detail?.person.name || current?.name || 'Kişi'}
+        label="Kişi profili"
+        wide
+        head={<DetailNav list={filtered} current={current} same={(a, b) => a.key === b.key} onGo={(r) => p.open(r.key, p.tab)} />}
+      >
+        {p.detailErr && !p.detail && <p className="m12-note bad">{p.detailErr}</p>}
+        {!p.detail && !p.detailErr && <div className="m12-td-empty" aria-busy="true">{p.loadingDetail ? 'Yükleniyor…' : ''}</div>}
+        {p.detail && <PersonDrawer key={p.detail.person.key} {...p} d={p.detail} />}
+      </Drawer>
     </div>
+  );
+};
+
+/** Toplu e-posta: her kişiye mevcut tek e-posta işleviyle sırayla; yalnız "Gönder" düğmesiyle başlar */
+const BulkMail: React.FC<{ open: boolean; onClose: () => void; rows: PersonRow[]; notify: (m: string) => void }> = ({ open, onClose, rows, notify }) => {
+  const [subject, setSubject] = useState('');
+  const [body, setBody] = useState('Merhaba {ad},\n\n');
+  const [busy, setBusy] = useState(false);
+  const [done, setDone] = useState(0);
+  const send = async () => {
+    if (!subject.trim() || !body.trim() || !rows.length) return;
+    setBusy(true);
+    setDone(0);
+    let ok = 0;
+    let bad = 0;
+    for (const r of rows) {
+      const res = await sendUserEmail(r.email!, subject.trim(), body.replace(/\{ad\}/g, r.name || ''));
+      if (res.ok) ok++;
+      else bad++;
+      setDone(ok + bad);
+    }
+    setBusy(false);
+    notify(`${ok} başarılı, ${bad} hata.`);
+    if (!bad) onClose();
+  };
+  return (
+    <Drawer
+      open={open}
+      onClose={() => !busy && onClose()}
+      title={`Toplu e-posta · ${rows.length} kişi`}
+      foot={
+        <>
+          <button type="button" className="m14-btn ghost" onClick={onClose} disabled={busy}>Vazgeç</button>
+          <button type="button" className="m14-btn primary" onClick={() => void send()} disabled={busy || !subject.trim() || !body.trim() || !rows.length}>
+            <Mail aria-hidden="true" /> {busy ? `Gönderiliyor… ${done} / ${rows.length}` : `${rows.length} kişiye gönder`}
+          </button>
+        </>
+      }
+    >
+      <Card14 title="İleti">
+        <div className="pp-form">
+          <input value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Konu" aria-label="Konu" />
+          <textarea value={body} onChange={(e) => setBody(e.target.value)} rows={8} aria-label="İleti" />
+          <p className="pk14-note">{'{ad}'} her kişinin adıyla değiştirilir. İletiler sırayla tek tek gönderilir.</p>
+        </div>
+      </Card14>
+      <Card14 title="Alıcılar">
+        <p className="m12-meta">{rows.map((r) => r.email).join(', ') || 'E-postası olan kişi seçilmedi.'}</p>
+      </Card14>
+    </Drawer>
   );
 };
 
@@ -465,44 +387,36 @@ const PersonDrawer: React.FC<Props & { d: PersonDetail }> = ({ d, tab, setTab, o
   return (
     <div className="m12-dr">
       <div className="m12-dh">
-        <button type="button" className="m12-btn sm icon ghost m12-pp-back" onClick={() => open(null)} aria-label="Listeye dön">
-          <ArrowLeft aria-hidden="true" />
-        </button>
         <Avatar name={pr.name} photo={pr.photoURL} online={online} big />
         <div className="m12-dh-t">
           <h2 className="m12-h2 m12-clamp1">{pr.name}</h2>
           {pr.email && <a className="m12-meta m12-clamp1" href={`mailto:${pr.email}`}>{pr.email}</a>}
           <span className="m12-dh-b">
-            <span className={roleCls(pr)}>{pr.role === 'admin' ? <><Shield aria-hidden="true" /> Yönetici</> : pr.kind === 'guest' ? 'Misafir cihaz' : 'Öğrenci'}</span>
-            {online ? <span className="m12-badge ok">çevrimiçi</span> : <span className="m12-badge">çevrimdışı</span>}
-            {pr.kind === 'account' && <span className={`m12-badge ${pr.verified ? '' : 'warn'}`}>{pr.verified ? 'doğrulanmış' : 'doğrulanmamış'}</span>}
+            <Pill tone={pr.role === 'admin' ? 'acc' : ''}>{pr.role === 'admin' ? <><Shield aria-hidden="true" /> Yönetici</> : pr.kind === 'guest' ? 'Misafir cihaz' : 'Öğrenci'}</Pill>
+            {online ? <Pill tone="ok">Çevrim içi</Pill> : <Pill>Çevrim dışı</Pill>}
+            {pr.kind === 'account' && <Pill tone={pr.verified ? '' : 'warn'}>{pr.verified ? 'Doğrulanmış' : 'Doğrulanmamış'}</Pill>}
           </span>
         </div>
-        <button type="button" className="m12-btn sm icon ghost m12-dh-x" onClick={() => open(null)} aria-label="Ayrıntıyı kapat">
-          <X aria-hidden="true" />
-        </button>
       </div>
 
-      <div className="m12-acts">
-        <button type="button" className="m12-btn sm" onClick={() => copyText(personDeepLink(pr.key, tab), notify, 'Kişi bağlantısı kopyalandı.')}>
-          <Link2 aria-hidden="true" /> Bağlantı
-        </button>
-        {pr.email && (
-          <button type="button" className={`m12-btn sm ${mode === 'mail' ? 'is-on' : ''}`} aria-expanded={mode === 'mail'} onClick={() => setMode(mode === 'mail' ? 'none' : 'mail')}>
-            <Mail aria-hidden="true" /> E-posta
+      <div className="pk14-actions">
+        <div className="pk14-actions-btns">
+          <button type="button" className="m14-btn" onClick={() => copyText(personDeepLink(pr.key, tab), notify, 'Kişi bağlantısı kopyalandı.')}>
+            <Link2 aria-hidden="true" /> Bağlantı
           </button>
-        )}
-        {pr.uid && pr.kind === 'account' && (
-          <button type="button" className={`m12-btn sm ${mode === 'edit' ? 'is-on' : ''}`} aria-expanded={mode === 'edit'} onClick={() => setMode(mode === 'edit' ? 'none' : 'edit')}>
-            <Pencil aria-hidden="true" /> Düzenle
-          </button>
-        )}
-        {canDelete && (
-          <>
-            <span className="m12-grow" />
-            <span className="vr" aria-hidden="true" />
+          {pr.email && (
+            <button type="button" className={`m14-btn ${mode === 'mail' ? 'primary' : ''}`} aria-expanded={mode === 'mail'} onClick={() => setMode(mode === 'mail' ? 'none' : 'mail')}>
+              <Mail aria-hidden="true" /> E-posta gönder
+            </button>
+          )}
+          {pr.uid && pr.kind === 'account' && (
+            <button type="button" className={`m14-btn ${mode === 'edit' ? 'primary' : ''}`} aria-expanded={mode === 'edit'} onClick={() => setMode(mode === 'edit' ? 'none' : 'edit')}>
+              <Pencil aria-hidden="true" /> Düzenle
+            </button>
+          )}
+          {canDelete && (
             <ConfirmButton
-              className="m12-btn sm danger"
+              className="m14-btn danger"
               confirmLabel="Evet, sil"
               icon={Trash2}
               title="Kullanıcı kaydı kalkar, katkıları kalır"
@@ -517,8 +431,8 @@ const PersonDrawer: React.FC<Props & { d: PersonDetail }> = ({ d, tab, setTab, o
             >
               Hesabı sil
             </ConfirmButton>
-          </>
-        )}
+          )}
+        </div>
       </div>
 
       {(mode === 'mail' || mode === 'edit') && (
@@ -528,14 +442,7 @@ const PersonDrawer: React.FC<Props & { d: PersonDetail }> = ({ d, tab, setTab, o
         </div>
       )}
 
-      <nav className="m12-tabs" role="tablist" aria-label="Kişi sekmeleri">
-        {TABS.map((x) => (
-          <button key={x.id} type="button" role="tab" aria-selected={tab === x.id} className={tab === x.id ? 'on' : ''} onClick={() => setTab(x.id)}>
-            {x.label}
-            {counts[x.id] ? <span className="m12-num">{counts[x.id]}</span> : null}
-          </button>
-        ))}
-      </nav>
+      <Tabs14 label="Profil bölümleri" value={tab} onChange={setTab} options={TABS.map((x) => ({ id: x.id, label: x.label, n: counts[x.id] || undefined }))} />
 
       <div className="m12-dbody" role="tabpanel">
         {tab === 'ozet' && <Summary d={d} setTab={setTab} parts={parts} />}

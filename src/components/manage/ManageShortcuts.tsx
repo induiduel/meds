@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Database, Globe, HardDrive, Link2, Users, Table2, Boxes, Activity, Github, Flame, Cloud, KeyRound, FolderOpen, Terminal, Copy, Server, Search,
 } from 'lucide-react';
 import { Panel } from './consoleUi';
+import { PageActions, Toolbar, SearchField, Pill, Card14 } from '../v14/pageKit';
 import { NAV_TREE } from '../shell/navModel';
 import { pathFor } from '../../router';
 import { siteLink } from '../../services/peopleService';
@@ -14,6 +15,7 @@ import './db-explorer.css';
 /**
  * Yönetim › Kısayollar: panelin veri ekranları, canlı sitenin her sayfası, API/sağlık uçları, dış yönetim konsolları
  * (Drive, GitHub, Firebase, Oracle, Cloudflare, AI anahtarları) ve veritabanına bağlanma komutları tek yerde.
+ * v14 (canvas Kisayollar.dc.html): üstte uç sağlığı rozetleri, arama, gruplu bağlantı kartları ve klavye kısayolları.
  */
 type Card = { label: string; hint: string; icon: React.ElementType; href?: string; section?: string };
 
@@ -75,41 +77,79 @@ export const ManageShortcuts: React.FC<{ notify: (m: string) => void }> = ({ not
     { label: 'Herkese açık API dizini', hint: '/v1', icon: Link2, href: `${api}/v1` },
     { label: 'API belgesi', hint: '/v1/documentation', icon: Link2, href: `${api}/v1/documentation` },
   ];
+  const [q, setQ] = useState('');
+  const [health, setHealth] = useState<Record<string, number | 'hata' | null>>({ health: null, vec: null });
+  useEffect(() => {
+    let alive = true;
+    const probe = (k: string, url: string) =>
+      fetch(url, { cache: 'no-store' })
+        .then((r) => alive && setHealth((h) => ({ ...h, [k]: r.status })))
+        .catch(() => alive && setHealth((h) => ({ ...h, [k]: 'hata' })));
+    void probe('health', `${api}/api/health`);
+    void probe('vec', `${api}/api/rag/vectors/health`);
+    return () => { alive = false; };
+  }, [api]);
+  const fq = q.toLocaleLowerCase('tr-TR').trim();
+  const match = (c: Card) => !fq || `${c.label} ${c.hint}`.toLocaleLowerCase('tr-TR').includes(fq);
+  const tone = (v: number | 'hata' | null) => (v === null ? '' : v === 200 ? 'ok' : 'bad');
   const copy = (s: string) => {
     void navigator.clipboard?.writeText(s).then(() => notify('Komut panoya kopyalandı.'), () => notify(s));
   };
+  const kartlar = (list: Card[]) => {
+    const l = list.filter(match);
+    return l.length ? <div className="ksy-grid">{l.map((c) => <CardView key={c.label} c={c} />)}</div> : <p className="pk14-note">Aramaya uyan bağlantı yok.</p>;
+  };
   return (
     <div className="ksy">
+      <PageActions>
+        <Pill tone={tone(health.health)}>/api/health {health.health ?? '…'}</Pill>
+        <Pill tone={tone(health.vec)}>Vektör servisi {health.vec ?? '…'}</Pill>
+      </PageActions>
+      <Toolbar>
+        <SearchField value={q} onChange={setQ} placeholder="Bağlantı ya da yol ara" label="Kısayol ara" />
+      </Toolbar>
       <Panel title="Veri ve veritabanı" icon={Database} desc="Panelin içindeki veri ekranları — tüm site verisi buradan görülür ve düzenlenir.">
-        <div className="ksy-grid">{VERI.map((c) => <CardView key={c.label} c={c} />)}</div>
+        {kartlar(VERI)}
       </Panel>
       <Panel title="Veritabanına bağlan" icon={Terminal} desc="Masaüstü araçla (psql, DBeaver, TablePlus) doğrudan bağlanmak için. Parola Oracle'da ~/medsor/meds/.env → MEDS_PG_PASSWORD.">
         <div className="ksy-grid" style={{ gridTemplateColumns: 'minmax(0,1fr)' }}>
-          {KOMUT.map(([l, cmd]) => (
+          {KOMUT.filter(([l, cmd]) => !fq || `${l} ${cmd}`.toLocaleLowerCase('tr-TR').includes(fq)).map(([l, cmd]) => (
             <div key={cmd} className="ksy-cmd">
               <span style={{ flex: '0 1 300px', minWidth: 0 }}>{l}</span>
               <code>{cmd}</code>
-              <button type="button" className="ms-btn is-sm" onClick={() => copy(cmd)} aria-label={`Kopyala: ${cmd}`}><Copy aria-hidden /></button>
+              <button type="button" className="m14-btn icon" onClick={() => copy(cmd)} aria-label={`Kopyala: ${cmd}`}><Copy aria-hidden /></button>
             </div>
           ))}
         </div>
       </Panel>
       <Panel title="Sitenin sayfaları" icon={Globe} desc={PANEL_ON_ORACLE_AT_BOOT || !/localhost|127\.0\.0\.1/.test(window.location.hostname) ? 'Canlı sitede yeni sekmede açılır.' : 'Bu sunucuda yeni sekmede açılır.'}>
-        {NAV_TREE.map((g, i) => (
-          <div key={g.label || i} style={{ marginBottom: 10 }}>
-            {g.label && <h3 className="ms-panel-desc" style={{ margin: '0 0 6px', fontWeight: 600 }}>{g.label}</h3>}
-            <div className="ksy-grid">
-              {g.items.map((it) => <CardView key={it.id} c={{ label: it.label, hint: pathFor(it.id), icon: it.icon, href: siteLink(pathFor(it.id)) }} />)}
+        {NAV_TREE.map((g, i) => {
+          const items = g.items.map((it) => ({ label: it.label, hint: pathFor(it.id), icon: it.icon, href: siteLink(pathFor(it.id)), id: it.id })).filter(match);
+          if (!items.length) return null;
+          return (
+            <div key={g.label || i} style={{ marginBottom: 10 }}>
+              {g.label && <h3 className="ms-panel-desc" style={{ margin: '0 0 6px', fontWeight: 600 }}>{g.label}</h3>}
+              <div className="ksy-grid">
+                {items.map((it) => <CardView key={it.id} c={it} />)}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </Panel>
       <Panel title="API ve sağlık" icon={Link2}>
-        <div className="ksy-grid">{API.map((c) => <CardView key={c.label} c={c} />)}</div>
+        {kartlar(API)}
       </Panel>
       <Panel title="Dış yönetim konsolları" icon={Cloud}>
-        <div className="ksy-grid">{DIS.map((c) => <CardView key={c.label} c={c} />)}</div>
+        {kartlar(DIS)}
       </Panel>
+      <Card14 title="Klavye">
+        <ul className="flex flex-wrap gap-x-5 gap-y-2 m-0 p-0 list-none text-sm text-ink-2">
+          <li><kbd className="m14-kbd">Ctrl K</kbd> sayfa ara</li>
+          <li><kbd className="m14-kbd">X</kbd> ya da <kbd className="m14-kbd">Boşluk</kbd> satırı seç</li>
+          <li><kbd className="m14-kbd">Enter</kbd> ayrıntıyı aç</li>
+          <li><kbd className="m14-kbd">Esc</kbd> listeye dön</li>
+        </ul>
+      </Card14>
     </div>
   );
 };

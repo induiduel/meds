@@ -60,3 +60,6 @@
   :root[data-design='v12'][data-v13='on'] .l13 .l12-sub { font-size: 12px; }
   :root[data-design='v12'][data-v13='on'] .l13 .l12-badge { height: 18px; font-size: 10.5px; padding: 0 5px; }
 }
+/* Seçili dal hapı: v12'nin ".l12 button { color }" kuralı yazıyı zeminle aynı renge çekiyordu */
+:root[data-design='v12'][data-v13='on'] .l13 .l13-branch[aria-checked='true'] { color: var(--color-white); background: var(--color-ink); border-color: var(--color-ink); }
+:root[data-design='v12'][data-v13='on'] .l13 .l13-branch { color: var(--color-ink-2); }

@@ -38,6 +38,11 @@ import {
   Lightbulb,
 } from 'lucide-react';
 import { ManageShellV12, ManageOverviewV12, type M12NavGroup } from '../v12/ManageV12';
+import { ManageShellV14 } from '../v14/ManageShellV14';
+import { Tabs14 } from '../v14/pageKit';
+
+/** v14 kabuğu varsayılandır; eski v12 kabuğuna dönmek için localStorage medsoru_manage_kabuk = 'v12' */
+const v14ShellOn = () => { try { return localStorage.getItem('medsoru_manage_kabuk') !== 'v12'; } catch { return true; } };
 import type { QuestionItem, Committee, AdminNotification } from '../../types';
 import { ApiService } from '../../services/api';
 import { AdminScriptsTab } from '../AdminScriptsTab';
@@ -730,7 +735,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           onRefreshData={onRefreshData}
         />
       )}
-      {section === 'users' && <SubTabs value={usersTab} onChange={setUsersTab} items={[['activity', 'Katkılar'], ['accounts', 'Hesaplar ve e-posta']]} />}
+      {section === 'users' && <Tabs14 label="Kullanıcılar görünümü" value={usersTab} onChange={setUsersTab} options={[{ id: 'activity', label: 'Katkılar' }, { id: 'accounts', label: 'Hesaplar ve e-posta' }]} />}
       {section === 'users' && usersTab === 'accounts' && (
         <AdminPanelModal
           variant="embedded"
@@ -770,7 +775,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       {section === 'kamp' && <ManageKampSection adminEmail={adminEmail} />}
       {section === 'dbexplorer' && <ManageDatabaseExplorer notify={notify} />}
       {section === 'shortcuts' && <ManageShortcuts notify={notify} />}
-      {section === 'automation' && <SubTabs value={autoTab} onChange={setAutoTab} items={[['schedule', 'Zamanlama ve anahtarlar'], ['services', 'Drive ve servisler']]} />}
+      {section === 'automation' && <Tabs14 label="Otomasyon görünümü" value={autoTab} onChange={setAutoTab} options={[{ id: 'schedule', label: 'Zamanlama ve anahtarlar' }, { id: 'services', label: 'Drive ve servisler' }]} />}
       {section === 'automation' && autoTab === 'schedule' && (
         <ManageAutomationSection adminEmail={adminEmail} selectedCommitteeId={selectedCommitteeId} onRefreshData={onRefreshData} notify={notify} />
       )}
@@ -823,9 +828,10 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     const currentGroup = section === 'overview' ? 'Konsol' : V12_SECTIONS.find((x) => x.id === section)?.group || current.group;
     const sourceLive = localHost ? panelTarget === 'oracle' : !isLocalHost();
     const overviewHint = `${sourceLive ? 'Canlı veri (Oracle)' : 'Yerel veri'}${syncLabel ? ` · son eşitleme ${syncLabel}` : ''} · canlı kanal ${liveStatus === 'connected' ? 'bağlı' : liveStatus === 'connecting' ? 'bağlanıyor' : 'kopuk'}`;
+    const Shell = v14ShellOn() ? ManageShellV14 : ManageShellV12;
     return (
       <>
-        <ManageShellV12
+        <Shell
           groups={groups}
           section={section}
           currentLabel={current.label}
@@ -877,7 +883,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           ) : (
             sectionBody
           )}
-        </ManageShellV12>
+        </Shell>
         {paletteEl}
         {draftModal}
       </>

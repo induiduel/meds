@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Database, RefreshCw, Search, Plus, Save, Trash2, Play, Download, AlertTriangle, ChevronLeft, ChevronRight, Table2, TerminalSquare } from 'lucide-react';
+import { Database, RefreshCw, Search, Plus, Save, Trash2, Play, Download, AlertTriangle, ChevronLeft, ChevronRight, Table2, TerminalSquare, KeyRound } from 'lucide-react';
+import { BulkBar, JsonCell, JsonView, SelectAllBox, useSelection } from '../v14/manageKit';
 import { adminCall } from '../../services/peopleService';
 import { Panel, EmptyState, ConfirmButton, Drawer, Seg } from './consoleUi';
 import { PANEL_ON_ORACLE_AT_BOOT } from '../../config/deployment';
@@ -45,9 +46,9 @@ const fromEdit = (c: Col, s: string, wasNull: boolean): any => {
 };
 const csv = (fields: string[], rows: any[][]) =>
   [fields, ...rows].map((r) => r.map((v) => { const s = show(v); return /[",\n;]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; }).join(',')).join('\n');
-const indir = (name: string, text: string) => {
+const indir = (name: string, text: string, type = 'text/csv;charset=utf-8') => {
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob(['﻿' + text], { type: 'text/csv;charset=utf-8' }));
+  a.href = URL.createObjectURL(new Blob([type.startsWith('text/csv') ? '﻿' + text : text], { type }));
   a.download = name;
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 2000);
@@ -73,6 +74,10 @@ export const ManageDatabaseExplorer: React.FC<{ notify: (m: string) => void }> =
   const [loading, setLoading] = useState(false);
   const [edit, setEdit] = useState<{ row: Record<string, any> | null; vals: Record<string, string> } | null>(null);
   const [busy, setBusy] = useState(false);
+  const [view, setView] = useState<'gorsel' | 'duzenle' | 'ham'>('gorsel');
+  const picked = useSelection<string>();
+  const [bulkSet, setBulkSet] = useState<{ col: string; val: string } | null>(null);
+  const [bulkBusy, setBulkBusy] = useState(false);
 
   const table = meta?.tables.find((t) => t.name === sel) || null;
 
@@ -106,6 +111,8 @@ export const ManageDatabaseExplorer: React.FC<{ notify: (m: string) => void }> =
       setLoading(false);
     }
   }, [sel, q, qCol, order, page, limit]);
+  // Seçim yalnız görünen sayfaya aittir: tablo, sayfa ya da süzgeç değişince sıfırlanır
+  useEffect(() => { picked.clear(); setBulkSet(null); }, [sel, page, limit, q, qCol, order]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     const t = setTimeout(() => void loadRows(), q ? 300 : 0);
     return () => clearTimeout(t);
@@ -131,6 +138,7 @@ export const ManageDatabaseExplorer: React.FC<{ notify: (m: string) => void }> =
       const sp = new URLSearchParams({ table: table.name, key: JSON.stringify(keyOf(r)) });
       const { row } = await adminCall<{ row: Record<string, any> }>(`/api/admin/pg/row?${sp}`);
       setEdit({ row, vals: Object.fromEntries(cols.map((c) => [c.name, toEdit(c, row[c.name])])) });
+      setView((v) => (v === 'duzenle' ? v : 'gorsel'));
     } catch (e: any) {
       notify(e?.message || 'Satır açılamadı.');
     }
@@ -175,6 +183,52 @@ export const ManageDatabaseExplorer: React.FC<{ notify: (m: string) => void }> =
     } finally {
       setBusy(false);
     }
+  };
+
+  const selectedRows = () => (rows?.rows || []).filter((r) => picked.has(String(r.__ctid)));
+  const stripRow = (r: Record<string, any>) => Object.fromEntries(Object.entries(r).filter(([k]) => k !== '__ctid'));
+  const bulkDelete = async () => {
+    if (!table) return;
+    const list = selectedRows();
+    setBulkBusy(true);
+    let ok = 0;
+    const fails: string[] = [];
+    for (const r of list) {
+      try { await adminCall('/api/admin/pg/row', { method: 'DELETE', body: JSON.stringify({ table: table.name, key: keyOf(r) }) }); ok++; }
+      catch (e: any) { fails.push(e?.message || 'hata'); }
+    }
+    setBulkBusy(false);
+    notify(fails.length ? `${ok} satır silindi, ${fails.length} satır silinemedi: ${fails[0]}` : `${ok} satır silindi.`);
+    picked.clear();
+    void loadRows();
+  };
+  const bulkPatch = async () => {
+    if (!table || !bulkSet?.col) return;
+    const c = cols.find((x) => x.name === bulkSet.col);
+    if (!c) return;
+    let val: any;
+    try { val = fromEdit(c, bulkSet.val, true); } catch { notify(`${c.name}: geçerli JSON değil.`); return; }
+    const list = selectedRows();
+    setBulkBusy(true);
+    let ok = 0;
+    const fails: string[] = [];
+    for (const r of list) {
+      try { await adminCall('/api/admin/pg/row', { method: 'PATCH', body: JSON.stringify({ table: table.name, key: keyOf(r), set: { [c.name]: val } }) }); ok++; }
+      catch (e: any) { fails.push(e?.message || 'hata'); }
+    }
+    setBulkBusy(false);
+    notify(fails.length ? `${ok} satır güncellendi, ${fails.length} satırda hata: ${fails[0]}` : `${ok} satırda ${c.name} güncellendi.`);
+    setBulkSet(null);
+    picked.clear();
+    void loadRows();
+  };
+  const sameRow = (a: Record<string, any>, b: Record<string, any>) =>
+    table?.pk.length ? table.pk.every((k) => String(a[k]) === String(b[k])) : a.__ctid === b.__ctid;
+  const rowIdx = edit?.row ? (rows?.rows || []).findIndex((r) => sameRow(r, edit.row!)) : -1;
+  const step = (d: number) => {
+    const list = rows?.rows || [];
+    if (rowIdx < 0 || !list.length) return;
+    void openRow(list[(rowIdx + d + list.length) % list.length]);
   };
 
   const tables = useMemo(() => {
@@ -261,14 +315,45 @@ export const ManageDatabaseExplorer: React.FC<{ notify: (m: string) => void }> =
                     </select>
                   </div>
                   {rowsErr && <p className="dbx-err" role="alert">{rowsErr}</p>}
+                  <BulkBar
+                    count={picked.count}
+                    noun="satır"
+                    busy={bulkBusy}
+                    onClear={() => { picked.clear(); setBulkSet(null); }}
+                    actions={[
+                      { label: 'JSON indir', kind: 'main', run: () => indir(`${table.name}-secim.json`, JSON.stringify(selectedRows().map(stripRow), null, 2), 'application/json;charset=utf-8') },
+                      { label: 'CSV indir', run: () => indir(`${table.name}-secim.csv`, csv(cols.map((c) => c.name), selectedRows().map((r) => cols.map((c) => r[c.name])))) },
+                      { label: 'Alanı toplu değiştir', run: () => setBulkSet((b) => (b ? null : { col: cols.find((c) => c.udt !== 'vector' && !table.pk.includes(c.name))?.name || '', val: '' })) },
+                      { label: 'Sil', kind: 'danger', confirm: `${picked.count} satır kalıcı silinsin mi?`, run: bulkDelete },
+                    ]}
+                  />
+                  {bulkSet && picked.count > 0 && (
+                    <div className="dbx-bulkset">
+                      <label>
+                        <span>Sütun</span>
+                        <select className="dbx-sel" value={bulkSet.col} onChange={(e) => setBulkSet({ ...bulkSet, col: e.target.value })}>
+                          {cols.filter((c) => c.udt !== 'vector' && !table.pk.includes(c.name)).map((c) => <option key={c.name} value={c.name}>{c.name} · {c.type}</option>)}
+                        </select>
+                      </label>
+                      <label className="dbx-grow">
+                        <span>Yeni değer (boş = NULL{cols.find((c) => c.name === bulkSet.col && isJson(c)) ? ', JSON' : ''})</span>
+                        <input value={bulkSet.val} onChange={(e) => setBulkSet({ ...bulkSet, val: e.target.value })} spellCheck={false} />
+                      </label>
+                      <button type="button" className="ms-btn" onClick={() => setBulkSet(null)}>Vazgeç</button>
+                      <button type="button" className="ms-btn is-primary" disabled={bulkBusy || !bulkSet.col} onClick={() => void bulkPatch()}>{picked.count} satıra uygula</button>
+                    </div>
+                  )}
                   <div className="dbx-tablewrap" aria-busy={loading}>
                     <table className="dbx-table">
                       <thead>
                         <tr>
+                          <th className="dbx-chk">
+                            <SelectAllBox all={picked.allOf((rows?.rows || []).map((r) => String(r.__ctid)))} some={picked.someOf((rows?.rows || []).map((r) => String(r.__ctid)))} onChange={() => picked.toggleAll((rows?.rows || []).map((r) => String(r.__ctid)))} />
+                          </th>
                           {cols.map((c) => (
                             <th key={c.name} aria-sort={order.col === c.name ? (order.dir === 'asc' ? 'ascending' : 'descending') : undefined}>
                               <button type="button" onClick={() => { setOrder((o) => ({ col: c.name, dir: o.col === c.name && o.dir === 'desc' ? 'asc' : 'desc' })); setPage(0); }} title={`${c.type}${c.nullable ? '' : ' · zorunlu'}`}>
-                                {table.pk.includes(c.name) ? '🔑 ' : ''}{c.name}{order.col === c.name ? (order.dir === 'asc' ? ' ↑' : ' ↓') : ''}
+                                {table.pk.includes(c.name) && <KeyRound className="dbx-pk" aria-label="anahtar" />}{c.name}{order.col === c.name ? (order.dir === 'asc' ? ' ↑' : ' ↓') : ''}
                               </button>
                             </th>
                           ))}
@@ -276,11 +361,14 @@ export const ManageDatabaseExplorer: React.FC<{ notify: (m: string) => void }> =
                       </thead>
                       <tbody>
                         {rows?.rows.map((r) => (
-                          <tr key={r.__ctid} tabIndex={0} onClick={() => void openRow(r)} onKeyDown={(e) => { if (e.key === 'Enter') (e.currentTarget as HTMLElement).click(); }}>
-                            {cols.map((c) => <td key={c.name} className={r[c.name] == null ? 'is-null' : ''}>{show(r[c.name]).slice(0, 140)}</td>)}
+                          <tr key={r.__ctid} tabIndex={0} className={picked.has(String(r.__ctid)) ? 'is-picked' : ''} onClick={() => void openRow(r)} onKeyDown={(e) => { if (e.key === 'Enter') (e.currentTarget as HTMLElement).click(); if (e.key === 'x' || e.key === ' ') { e.preventDefault(); picked.toggle(String(r.__ctid)); } }}>
+                            <td className="dbx-chk" onClick={(e) => e.stopPropagation()}>
+                              <input type="checkbox" checked={picked.has(String(r.__ctid))} onChange={() => picked.toggle(String(r.__ctid))} aria-label="Satırı seç" />
+                            </td>
+                            {cols.map((c) => <td key={c.name} className={r[c.name] == null ? 'is-null' : ''}>{isJson(c) ? <JsonCell value={r[c.name]} /> : show(r[c.name]).slice(0, 140)}</td>)}
                           </tr>
                         ))}
-                        {rows && !rows.rows.length && <tr><td colSpan={cols.length || 1} className="dbx-muted">Satır yok.</td></tr>}
+                        {rows && !rows.rows.length && <tr><td colSpan={(cols.length || 1) + 1} className="dbx-muted">Satır yok.</td></tr>}
                       </tbody>
                     </table>
                   </div>
@@ -288,7 +376,7 @@ export const ManageDatabaseExplorer: React.FC<{ notify: (m: string) => void }> =
                     <button type="button" className="ms-btn is-sm" disabled={page === 0} onClick={() => setPage(page - 1)} aria-label="Önceki sayfa"><ChevronLeft aria-hidden /></button>
                     <span>Sayfa {page + 1} / {pages.toLocaleString('tr-TR')}</span>
                     <button type="button" className="ms-btn is-sm" disabled={page + 1 >= pages} onClick={() => setPage(page + 1)} aria-label="Sonraki sayfa"><ChevronRight aria-hidden /></button>
-                    <span className="dbx-muted">Satıra tıkla: düzenle / sil</span>
+                    <span className="dbx-muted">Satıra tıkla: görsel ayrıntı ve düzenleme · kutucuk ya da X: seç</span>
                   </div>
                 </>
               )}
@@ -301,7 +389,14 @@ export const ManageDatabaseExplorer: React.FC<{ notify: (m: string) => void }> =
         open={!!edit && !!table}
         onClose={() => setEdit(null)}
         wide
-        title={edit?.row ? `${table?.name} · satırı düzenle` : `${table?.name} · yeni satır`}
+        title={edit?.row ? `${table?.name} · satır${rowIdx >= 0 ? ` ${page * limit + rowIdx + 1}` : ''}` : `${table?.name} · yeni satır`}
+        head={edit?.row ? (
+          <>
+            <Seg value={view} onChange={setView} label="Görünüm" options={[{ id: 'gorsel' as const, label: 'Görsel' }, { id: 'duzenle' as const, label: 'Düzenle' }, { id: 'ham' as const, label: 'Ham JSON' }]} />
+            <button type="button" className="ms-btn is-icon" onClick={() => step(-1)} disabled={rowIdx < 0} aria-label="Önceki satır"><ChevronLeft aria-hidden /></button>
+            <button type="button" className="ms-btn is-icon" onClick={() => step(1)} disabled={rowIdx < 0} aria-label="Sonraki satır"><ChevronRight aria-hidden /></button>
+          </>
+        ) : undefined}
         foot={
           <>
             {edit?.row && (
@@ -315,7 +410,9 @@ export const ManageDatabaseExplorer: React.FC<{ notify: (m: string) => void }> =
           </>
         }
       >
-        {edit && table && (
+        {edit?.row && table && view === 'gorsel' && <JsonView value={stripRow(edit.row)} />}
+        {edit?.row && table && view === 'ham' && <pre className="jv14-raw">{JSON.stringify(stripRow(edit.row), null, 2)}</pre>}
+        {edit && table && (!edit.row || view === 'duzenle') && (
           <div className="dbx-form">
             {table.mirror && <p className="dbx-warn"><AlertTriangle aria-hidden /> Kopya tablo: kalıcı kaynak {table.mirror}.</p>}
             {cols.map((c) => {

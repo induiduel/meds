@@ -247,3 +247,22 @@
     & .sh-main { gap: 8px; padding-top: 4px; }
   }
 }
+
+/* Kısa ekran (yatay telefon, ≤500 px yükseklik): kapsül ince, yol gizli; kenar adasında etiketsiz simgeler */
+@media (max-height: 500px) and (min-width: 768px) {
+  :root[data-design='v12'][data-v13='on'] {
+    --sh-top-h: 48px;
+    --a13-spine: 52px;
+    & .a13-top { padding-top: calc(env(safe-area-inset-top, 0px) + 6px); }
+    & .a13-crumb { display: none; }
+    & .a13-h { font-size: 15px; }
+    & .a13-ib { min-width: 34px; height: 34px; }
+    & .a13-acct { width: 34px; height: 34px; }
+    & .a13-spine { padding: 6px 4px; gap: 0; }
+    & .a13-mark { width: 30px; height: 30px; margin-bottom: 2px; }
+    & .a13-sbtn { width: 42px; min-height: 36px; padding: 4px 2px; }
+    & .a13-sbtn-l { display: none; }
+    & .a13-sep { margin: 3px 0; }
+    & .sh-main { gap: 8px; padding-top: 4px; }
+  }
+}

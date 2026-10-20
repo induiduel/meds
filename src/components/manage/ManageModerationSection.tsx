@@ -1,9 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Flag, Save, Wand2, FilePlus2, Eye, EyeOff, Check, Trash2, Inbox, ShieldCheck } from 'lucide-react';
+import { Flag, Save, Wand2, FilePlus2, Eye, EyeOff, Check, Trash2, Inbox } from 'lucide-react';
 import type { QuestionItem, QuestionOption } from '../../types';
 import { ApiService, safeJsonFetch } from '../../services/api';
 import type { InboxReport } from '../../services/manageConsoleService';
-import { Panel, EmptyState, Seg, ConfirmButton, Field, timeLabel } from './consoleUi';
+import { EmptyState, ConfirmButton, Field, timeLabel, Drawer } from './consoleUi';
+import { StatRow, Tabs14, SearchField, Toolbar, DataTable, Pill, DetailNav, DetailLayout, FactList, Card14, type Col } from '../v14/pageKit';
+import { BulkBar, useSelection } from '../v14/manageKit';
 
 const AiQuestionOptimizerModal = React.lazy(() => import('../AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal || (m as any).default })));
 
@@ -57,9 +59,17 @@ export const ManageModerationSection: React.FC<Props> = ({
   const isDone = (r: InboxReport) => resolvedIds.has(r.id) || (r.status || 'pending') !== 'pending';
   const pending = useMemo(() => reports.filter((r) => !isDone(r)), [reports, resolvedIds]); // eslint-disable-line react-hooks/exhaustive-deps
   const resolved = useMemo(() => reports.filter((r) => isDone(r)), [reports, resolvedIds]); // eslint-disable-line react-hooks/exhaustive-deps
-  const list = status === 'pending' ? pending : status === 'resolved' ? resolved : reports;
+  const [q, setQ] = useState('');
+  const list = useMemo(() => {
+    const base = status === 'pending' ? pending : status === 'resolved' ? resolved : reports;
+    const t = q.trim().toLocaleLowerCase('tr-TR');
+    if (!t) return base;
+    return base.filter((r) => [r.reason, r.details, r.questionTopic, r.questionId, r.reportedBy].some((x) => String(x || '').toLocaleLowerCase('tr-TR').includes(t)));
+  }, [status, pending, resolved, reports, q]);
+  const selection = useSelection<string>();
+  const [bulkBusy, setBulkBusy] = useState(false);
 
-  const report = useMemo(() => reports.find((r) => r.id === (focusReportId || pending[0]?.id)) || null, [reports, focusReportId, pending]);
+  const report = useMemo(() => (focusReportId ? reports.find((r) => r.id === focusReportId) || null : null), [reports, focusReportId]);
   const question: QuestionItem | null = useMemo(() => {
     if (!report) return null;
     return pastQuestions.find((q) => q.id === report.questionId) || questions.find((q) => q.id === report.questionId) || null;
@@ -84,7 +94,6 @@ export const ManageModerationSection: React.FC<Props> = ({
     setExplanation(question.reconstruction?.explanation || '');
     const opts = (question.reconstruction?.options || (question.options || []).map((o: QuestionOption) => ({ key: o.key, text: o.text }))) as { key: string; text: string }[];
     setOptions(KEYS.map((k) => ({ key: k, text: opts.find((o) => o.key === k)?.text || '' })));
-    if (!focusReportId && report) setFocusReportId(report.id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [question?.id]);
 
@@ -201,143 +210,172 @@ export const ManageModerationSection: React.FC<Props> = ({
     }
   };
 
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-3 items-start min-w-0">
-      <Panel flush className="lg:sticky lg:top-0">
-        <div className="p-2 border-b border-line-soft">
-          <Seg
-            label="Bildirim durumu"
-            value={status}
-            onChange={setStatus}
-            className="w-full [&>button]:flex-1 [&>button]:justify-center"
-            options={[
-              { id: 'pending', label: 'Bekleyen', n: pending.length },
-              { id: 'resolved', label: 'Çözülen', n: resolved.length },
-              { id: 'all', label: 'Tümü' },
-            ]}
-          />
-        </div>
-        {list.length === 0 ? (
-          <EmptyState icon={status === 'pending' ? ShieldCheck : Inbox} title={status === 'pending' ? 'Bekleyen şikâyet yok' : 'Bu filtrede kayıt yok'} />
-        ) : (
-          <ul className="ms-rows max-h-[38vh] lg:max-h-[calc(var(--vvh,100dvh)-260px)] overflow-y-auto overscroll-contain">
-            {list.map((r) => {
-              const on = report?.id === r.id;
-              const done = isDone(r);
-              return (
-                <li key={r.id}>
-                  <button type="button" onClick={() => setFocusReportId(r.id)} aria-current={on || undefined} className={`ms-row is-button ${on ? 'is-on' : ''}`}>
-                    <span className={`ms-ricon ${done ? '' : 'is-bad'}`}>
-                      {done ? <Check aria-hidden="true" /> : <Flag aria-hidden="true" />}
-                    </span>
-                    <span className="ms-row-main">
-                      <span className="ms-row-title truncate">{r.reason}</span>
-                      <span className="text-sm text-ink-2 truncate">{r.questionTopic || r.questionId}</span>
-                      <span className="ms-row-meta">
-                        <span className="truncate max-w-[18ch]">{r.reportedBy || 'Anonim'}</span>
-                        {r.createdAt && <span>{timeLabel(r.createdAt, true)}</span>}
-                      </span>
-                    </span>
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        )}
-      </Panel>
+  const bulkResolve = async () => {
+    const items = reports.filter((r) => selection.has(r.id) && !isDone(r));
+    setBulkBusy(true);
+    let ok = 0;
+    let bad = 0;
+    for (const r of items) {
+      try { await onResolve(r); ok++; } catch { bad++; }
+    }
+    setBulkBusy(false);
+    notify(`${ok} başarılı, ${bad} hata.`);
+    if (!bad) selection.clear();
+    try { await reloadInbox(); } catch {}
+  };
 
-      {!report ? (
-        <Panel>
-          <EmptyState icon={Flag} title="Bir şikâyet seç">Soldaki listeden bir bildirim seçince şikâyet edilen soru burada açılır.</EmptyState>
-        </Panel>
-      ) : (
-        <section className="ms-panel" aria-label="Şikâyet edilen soru">
-          <header className="flex items-start gap-3 px-4 py-3.5 border-b border-line-soft">
-            <span className="ms-ricon is-bad mt-0.5"><Flag aria-hidden="true" /></span>
-            <div className="min-w-0 flex-1 flex flex-col gap-1">
-              <h2 className="m-0 text-md font-semibold text-ink leading-snug">{report.reason}</h2>
-              <p className="m-0 text-base text-ink-2 leading-relaxed [overflow-wrap:anywhere]">{report.details || 'Öğrenci ayrıntı yazmamış.'}</p>
-              <span className="ms-row-meta">
-                <span>{report.reportedBy || 'Anonim'}</span>
-                {report.createdAt && <span>{new Date(report.createdAt).toLocaleString('tr-TR', { dateStyle: 'medium', timeStyle: 'short' })}</span>}
-                {isDone(report) && <span className="ms-tag is-ok"><Check /> Kapatıldı</span>}
-              </span>
-            </div>
-          </header>
+  const cols: Col<InboxReport>[] = [
+    { key: 'reason', label: 'Bildirim', main: true, render: (r) => r.reason },
+    { key: 'topic', label: 'Soru', render: (r) => <span className="clip">{r.questionTopic || r.questionId}</span>, width: '28%' },
+    { key: 'who', label: 'Gönderen', muted: true, render: (r) => r.reportedBy || 'Anonim' },
+    { key: 'st', label: 'Durum', render: (r) => (isDone(r) ? <Pill tone="ok">Kapatıldı</Pill> : <Pill tone="bad">Açık</Pill>) },
+    { key: 'when', label: 'Zaman', muted: true, render: (r) => (r.createdAt ? timeLabel(r.createdAt, true) : '—') },
+  ];
 
-          {!question ? (
-            <EmptyState icon={Inbox} title="Bağlı soru bulunamadı" action={<button type="button" onClick={() => void closeClean()} disabled={busy === 'resolve'} className="ms-btn">Bildirimi kapat</button>}>
-              Soru silinmiş ya da başka bir kurula taşınmış olabilir.
-            </EmptyState>
-          ) : (
-            <>
-              <div className="px-4 py-4 flex flex-col gap-4">
-                <div className="flex flex-wrap items-center gap-1.5 text-sm text-ink-3">
-                  <span className={`ms-tag ${isPast ? '' : 'is-accent'}`}>{isPast ? 'Çıkmış soru' : 'Havuz sorusu'}</span>
-                  {hidden && <span className="ms-tag is-warn"><EyeOff /> Gizli</span>}
-                  <span className="truncate">{[question.discipline, question.topic, question.examYear, `S.${question.questionNumber || '?'}`].filter(Boolean).join(' · ')}</span>
-                  <span className="font-mono text-xs text-ink-3 ml-auto truncate max-w-[24ch]" title={question.id}>{question.id}</span>
-                </div>
-
-                <Field label="Soru kökü">
-                  <textarea value={stem} onChange={(e) => setStem(e.target.value)} rows={4} className="ms-input text-md" />
-                </Field>
-
-                <div className="ms-field">
-                  <span className="lbl">Şıklar · doğru cevabı harfe dokunarak seç</span>
-                  <ol className="m-0 p-0 list-none flex flex-col gap-1.5">
-                    {options.map((o, i) => {
-                      const correct = answer === o.key;
-                      return (
-                        <li key={o.key} className={`ms-opt ${correct ? 'is-correct' : ''} !grid-cols-[28px_minmax(0,1fr)] !py-1 !pl-1.5`}>
-                          <button type="button" onClick={() => setAnswer(o.key)} aria-pressed={correct} aria-label={`${o.key} şıkkını doğru cevap yap`} className="ms-opt-key cursor-pointer">
-                            {o.key}
-                          </button>
-                          <input
-                            value={o.text}
-                            onChange={(e) => setOptions((prev) => prev.map((x, j) => (j === i ? { ...x, text: e.target.value } : x)))}
-                            placeholder={`${o.key} şıkkı`}
-                            aria-label={`${o.key} şıkkı`}
-                            className="ms-bare-input w-full min-w-0 h-9 bg-transparent border-0 outline-0 text-md text-ink"
-                          />
-                        </li>
-                      );
-                    })}
-                  </ol>
-                </div>
-
-                <Field label="Açıklama" hint="Öğrenci doğru cevabın gerekçesini burada görür.">
-                  <textarea value={explanation} onChange={(e) => setExplanation(e.target.value)} rows={3} className="ms-input" />
-                </Field>
-              </div>
-
-              <div className="ms-actionbar">
-                <button type="button" onClick={() => void save()} disabled={saving || !stem.trim()} className="ms-btn is-primary">
-                  <Save /> {saving ? 'Kaydediliyor…' : 'Düzelt ve kapat'}
-                </button>
-                <button type="button" onClick={() => setAiOpen(true)} className="ms-btn is-tonal">
-                  <Wand2 /> AI ile düzelt
-                </button>
-                <button type="button" onClick={() => void closeClean()} disabled={busy === 'resolve'} className="ms-btn" title="Soru doğru; bildirimi kapat">
-                  <Check /> Hatasız, kapat
-                </button>
-                <button type="button" onClick={() => void toDraft()} disabled={busy === 'draft'} className="ms-btn is-ghost" title="Soruyu havuza taslak olarak kopyala, aslını gizle">
-                  <FilePlus2 /> Taslağa çevir
-                </button>
-                {isPast && (
-                  <button type="button" onClick={() => void toggleHide()} disabled={busy === 'hide'} className="ms-btn is-ghost">
-                    {hidden ? <Eye /> : <EyeOff />} {hidden ? 'Yayına al' : 'Gizle'}
-                  </button>
-                )}
-                <span className="flex-1" />
-                <ConfirmButton icon={Trash2} className="ms-btn is-danger" confirmLabel="Kalıcı silmeyi onayla" busy={busy === 'delete'} busyLabel="Siliniyor…" onConfirm={remove}>
-                  Sil
-                </ConfirmButton>
-              </div>
-            </>
-          )}
-        </section>
+  const actions = question ? (
+    <>
+      <ConfirmButton icon={Trash2} className="m14-btn danger" confirmLabel="Kalıcı silmeyi onayla" busy={busy === 'delete'} busyLabel="Siliniyor…" onConfirm={remove}>
+        Sil
+      </ConfirmButton>
+      {isPast && (
+        <button type="button" onClick={() => void toggleHide()} disabled={busy === 'hide'} className="m14-btn ghost">
+          {hidden ? <Eye aria-hidden="true" /> : <EyeOff aria-hidden="true" />} {hidden ? 'Yayına al' : 'Gizle'}
+        </button>
       )}
+      <button type="button" onClick={() => void toDraft()} disabled={busy === 'draft'} className="m14-btn ghost" title="Soruyu havuza taslak olarak kopyala, aslını gizle">
+        <FilePlus2 aria-hidden="true" /> Taslağa çevir
+      </button>
+      <button type="button" onClick={() => void closeClean()} disabled={busy === 'resolve'} className="m14-btn" title="Soru doğru; bildirimi kapat">
+        <Check aria-hidden="true" /> Hatasız, kapat
+      </button>
+      <button type="button" onClick={() => setAiOpen(true)} className="m14-btn">
+        <Wand2 aria-hidden="true" /> AI ile düzelt
+      </button>
+      <button type="button" onClick={() => void save()} disabled={saving || !stem.trim()} className="m14-btn primary">
+        <Save aria-hidden="true" /> {saving ? 'Kaydediliyor…' : 'Düzelt ve kapat'}
+      </button>
+    </>
+  ) : report ? (
+    <button type="button" onClick={() => void closeClean()} disabled={busy === 'resolve'} className="m14-btn primary">Bildirimi kapat</button>
+  ) : null;
+
+  return (
+    <div className="min-w-0 flex flex-col gap-3">
+      <StatRow
+        stats={[
+          { label: 'Bekleyen', value: pending.length, tone: pending.length ? 'bad' : 'ok', onClick: () => setStatus('pending') },
+          { label: 'Çözülen', value: resolved.length, onClick: () => setStatus('resolved') },
+          { label: 'Toplam bildirim', value: reports.length, onClick: () => setStatus('all') },
+        ]}
+      />
+      <Toolbar>
+        <Tabs14
+          label="Bildirim durumu"
+          value={status}
+          onChange={setStatus}
+          options={[
+            { id: 'pending', label: 'Bekleyen', n: pending.length },
+            { id: 'resolved', label: 'Çözülen', n: resolved.length },
+            { id: 'all', label: 'Tümü', n: reports.length },
+          ]}
+        />
+        <SearchField value={q} onChange={setQ} placeholder="Bildirim, soru ya da kişi" />
+      </Toolbar>
+      <BulkBar
+        count={selection.count}
+        noun="bildirim"
+        busy={bulkBusy}
+        onClear={selection.clear}
+        actions={[{ label: 'Hatasız kapat', kind: 'main', run: bulkResolve }]}
+      />
+      <DataTable
+        rows={list}
+        cols={cols}
+        rowKey={(r) => r.id}
+        onOpen={(r) => setFocusReportId(r.id)}
+        selection={selection}
+        activeKey={report?.id || null}
+        minWidth={720}
+        empty={status === 'pending' ? 'Bekleyen şikâyet yok.' : 'Bu filtrede kayıt yok.'}
+      />
+
+      <Drawer
+        open={!!report}
+        onClose={() => setFocusReportId('')}
+        title={report?.reason || 'Bildirim'}
+        label="Şikâyet edilen soru"
+        wide
+        head={<DetailNav list={list} current={report} same={(a, b) => a.id === b.id} onGo={(r) => setFocusReportId(r.id)} />}
+        foot={actions}
+      >
+        {report && (
+          <DetailLayout
+            main={
+              <>
+                <Card14 title="Bildirim metni">
+                  <p className="m-0 text-base text-ink leading-relaxed [overflow-wrap:anywhere]">{report.details || 'Öğrenci ayrıntı yazmamış.'}</p>
+                </Card14>
+                {!question ? (
+                  <Card14>
+                    <EmptyState icon={Inbox} title="Bağlı soru bulunamadı">Soru silinmiş ya da başka bir kurula taşınmış olabilir.</EmptyState>
+                  </Card14>
+                ) : (
+                  <Card14 title="İlgili soru" tools={hidden ? <Pill tone="warn"><EyeOff aria-hidden="true" /> Gizli</Pill> : undefined}>
+                    <div className="flex flex-col gap-4">
+                      <Field label="Soru kökü">
+                        <textarea value={stem} onChange={(e) => setStem(e.target.value)} rows={4} className="ms-input text-md" />
+                      </Field>
+                      <div className="ms-field">
+                        <span className="lbl">Şıklar · doğru cevabı harfe dokunarak seç</span>
+                        <ol className="m-0 p-0 list-none flex flex-col gap-1.5">
+                          {options.map((o, i) => {
+                            const correct = answer === o.key;
+                            return (
+                              <li key={o.key} className={`ms-opt ${correct ? 'is-correct' : ''} !grid-cols-[28px_minmax(0,1fr)] !py-1 !pl-1.5`}>
+                                <button type="button" onClick={() => setAnswer(o.key)} aria-pressed={correct} aria-label={`${o.key} şıkkını doğru cevap yap`} className="ms-opt-key cursor-pointer">
+                                  {o.key}
+                                </button>
+                                <input
+                                  value={o.text}
+                                  onChange={(e) => setOptions((prev) => prev.map((x, j) => (j === i ? { ...x, text: e.target.value } : x)))}
+                                  placeholder={`${o.key} şıkkı`}
+                                  aria-label={`${o.key} şıkkı`}
+                                  className="ms-bare-input w-full min-w-0 h-9 bg-transparent border-0 outline-0 text-md text-ink"
+                                />
+                              </li>
+                            );
+                          })}
+                        </ol>
+                      </div>
+                      <Field label="Açıklama" hint="Öğrenci doğru cevabın gerekçesini burada görür.">
+                        <textarea value={explanation} onChange={(e) => setExplanation(e.target.value)} rows={3} className="ms-input" />
+                      </Field>
+                    </div>
+                  </Card14>
+                )}
+              </>
+            }
+            side={
+              <Card14 title="Bilgi">
+                <FactList
+                  items={[
+                    { k: 'Gönderen', v: report.reportedBy || 'Anonim' },
+                    { k: 'Tarih', v: report.createdAt ? new Date(report.createdAt).toLocaleString('tr-TR', { dateStyle: 'medium', timeStyle: 'short' }) : '—' },
+                    { k: 'Durum', v: isDone(report) ? <Pill tone="ok"><Check aria-hidden="true" /> Kapatıldı</Pill> : <Pill tone="bad"><Flag aria-hidden="true" /> Açık</Pill> },
+                    ...(question
+                      ? [
+                          { k: 'Tür', v: isPast ? 'Çıkmış soru' : 'Havuz sorusu' },
+                          { k: 'Konu', v: [question.discipline, question.topic, question.examYear, `S.${question.questionNumber || '?'}`].filter(Boolean).join(' · ') },
+                          { k: 'Kimlik', v: <span className="font-mono text-xs [overflow-wrap:anywhere]">{question.id}</span> },
+                        ]
+                      : [{ k: 'Soru kimliği', v: <span className="font-mono text-xs [overflow-wrap:anywhere]">{report.questionId}</span> }]),
+                  ]}
+                />
+              </Card14>
+            }
+          />
+        )}
+      </Drawer>
 
       {aiOpen && question && (
         <React.Suspense fallback={null}>

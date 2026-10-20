@@ -3,7 +3,9 @@ import { AudioLines, Download, Play, Plus, RotateCcw, X, ArrowUp, Star, Trash2, 
 import { safeJsonFetch, getCustomApiUrl } from '../../services/api';
 import { toast } from '../ui/Toast';
 import { confirmDialog } from '../ui/ConfirmDialog';
-import { ChipBar, ConfirmButton, EmptyState, Panel, SearchBox, timeLabel } from './consoleUi';
+import { ConfirmButton, Drawer, EmptyState, timeLabel } from './consoleUi';
+import { Card14, DataTable, DetailNav, PageActions, Pill, SearchField, StatRow, Tabs14, Toolbar } from '../v14/pageKit';
+import { BulkBar, useSelection } from '../v14/manageKit';
 import { useLiveEvent } from '../../hooks/useLiveEvent';
 import { auth } from '../../services/auth';
 import './sesli-anlatim.css';
@@ -96,6 +98,8 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
   const [acik, setAcik] = useState<string | null>(null);
   const [calan, setCalan] = useState<{ key: string; vid: string } | null>(null);
   const [kuyrukAcik, setKuyrukAcik] = useState(false);
+  const secim = useSelection<string>();
+  const [topluBusy, setTopluBusy] = useState(false);
 
   const yukle = useCallback(async () => {
     const r = await safeJsonFetch<Durum>('/api/sesli-anlatim', { headers });
@@ -166,96 +170,287 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
   if (!d) return <div className="h-48 rounded-2xl ms-shimmer" role="status" aria-label="Yükleniyor" />;
 
   const bekleyenIsler = d.kuyruk.filter((x) => ['bekliyor', 'calisiyor', 'kota-bekliyor', 'hata', 'butce-durdu'].includes(x.durum));
+  const yerelCevrimici = !!d.yerel && [d.yerel.isciler?.['xtts-yerel'] ?? d.yerel, d.yerel.isciler?.['ema-yerel']].some((o) => o?.cevrimici);
+  const acikDers = acik ? d.dersler.find((x) => x.key === acik) || null : null;
+  const secDersler = d.dersler.filter((x) => secim.has(x.key));
+  const topluCalistir = async (ogeler: { ad: string; is: () => Promise<boolean> }[]) => {
+    setTopluBusy(true);
+    let ok = 0;
+    let bad = 0;
+    for (const o of ogeler) {
+      if (await o.is().catch(() => false)) ok++;
+      else bad++;
+    }
+    setTopluBusy(false);
+    (bad ? toast.error : toast.success)(`${ok} başarılı, ${bad} hata`);
+    if (ok) secim.clear();
+    await yukle();
+  };
+  const postSessiz = async (yol: string, body?: any) => {
+    const r = await safeJsonFetch<any>(yol, { method: 'POST', headers: await yetkili(headers), body: JSON.stringify(body || {}) });
+    return r.ok;
+  };
+  const varsayilanYerel = d.saglayicilar.find((x) => x.id === 'xtts-yerel') || d.saglayicilar.find((x) => x.id === 'ema-yerel');
+  const durumHapi = (x: Ders) =>
+    x.varyantlar[0] ? (
+      <Pill tone={x.varyantlar[0].metinGuncel === false ? 'warn' : 'ok'}>{x.varyantlar[0].metinGuncel === false ? 'Metin değişti' : 'Hazır'}</Pill>
+    ) : x.isler.length ? (
+      <Pill tone={x.isler[0].durum === 'hata' ? 'bad' : 'acc'}>
+        {DURUM_ETIKET[x.isler[0].durum] || x.isler[0].durum}
+        {x.isler[0].ilerleme.toplam ? ` ${x.isler[0].ilerleme.bitti}/${x.isler[0].ilerleme.toplam}` : ''}
+      </Pill>
+    ) : (
+      <Pill tone={x.metin ? 'warn' : ''}>{x.metin ? 'Ses yok' : 'Metin bekliyor'}</Pill>
+    );
 
   return (
     <div className="sa-wrap flex flex-col gap-3 min-w-0">
-      <div className="sa-stats">
-        <div>
-          <b>{say.metin} / {say.hepsi}</b><span>konuşma metni hazır</span>
-          <div className="sa-mini"><i style={{ width: `${(100 * say.metin) / Math.max(1, say.hepsi)}%` }} /></div>
-        </div>
-        <div>
-          <b>{say.emel} / {say.hepsi}</b><span>Emel sesi hazır (varsayılan)</span>
-          <div className="sa-mini"><i style={{ width: `${(100 * say.emel) / Math.max(1, say.hepsi)}%` }} /></div>
-        </div>
-        <div>
-          <b>{say.aoede} / {say.hepsi}</b><span>Aoede alternatifi hazır (ücretsiz)</span>
-          <div className="sa-mini"><i style={{ width: `${(100 * say.aoede) / Math.max(1, say.hepsi)}%` }} /></div>
-        </div>
-        <div><b>{say.kuyrukta}</b><span>ders kuyrukta · toplam ses {sure(toplamSure)}</span></div>
-        <div className={`sa-paid ${d.butce.harcananTL > d.butce.kilitTL * 0.8 ? 'is-warn' : ''}`} title={d.butce.varsayim}>
-          <b>{d.butce.harcananTL.toLocaleString('tr-TR')} TL</b>
-          <span><Wallet className="w-3 h-3 inline" /> ücretli harcama · kilit {d.butce.kilitTL} / tavan {d.butce.tavanTL} TL · {say.ucretli} ders</span>
-          <label className="sa-switch">
-            <input
-              type="checkbox"
-              checked={d.ucretliAktif}
-              disabled={!d.butce.anahtarVar}
-              onChange={async (e) => {
-                const ac = e.target.checked;
-                if (ac && !(await confirmDialog({ title: 'Ücretli üretim açılsın mı?', message: `Açıkken: (1) ücretsiz anahtarların hepsi dolunca sıradaki Aoede sesi aynı dersten ücretli anahtarla tamamlanır, (2) "Alternatif oluştur" ile ücretli Gemini sesi üretilebilir. Kalan bütçe ${d.butce.kalanTL} TL; ${d.butce.kilitTL} TL'de kendiliğinden kilitlenir.`, confirmLabel: 'Aç', tone: 'danger' }))) return;
-                await post('/api/sesli-anlatim/ucretli', { aktif: ac });
-              }}
-            />
-            <span>{d.ucretliAktif ? 'Ücretli üretim AÇIK' : 'Ücretli üretim kapalı'}</span>
-          </label>
-        </div>
-      </div>
+      <PageActions>
+        <button type="button" className="m14-btn" onClick={() => setKuyrukAcik(true)}>
+          <ListOrdered /> Kuyruğu göster{bekleyenIsler.length ? ` (${bekleyenIsler.length})` : ''}
+        </button>
+        {d.yerelPlan && <YerelPlan d={d} post={post} ornekUrl={ornekUrl} />}
+      </PageActions>
 
-      {d.yerel && (() => {
-        const y = d.yerel;
-        // Yerel işçiler: XTTS (GPU ≤ %70 + CPU) ve EMA (yalnız CPU); eski sunucuda yalnız ortak sinyal vardır
-        const isciler: { id: Saglayici; ad: string; servis: string; o: YerelOzet }[] = [
-          { id: 'xtts-yerel', ad: 'Coqui XTTS v2', servis: 'meds-xtts', o: y.isciler?.['xtts-yerel'] ?? y },
-          ...(y.isciler?.['ema-yerel'] ? [{ id: 'ema-yerel' as Saglayici, ad: 'EMA Lightning', servis: 'meds-ema', o: y.isciler['ema-yerel']! }] : []),
-        ];
-        const herhangi = isciler.some((x) => x.o.cevrimici);
-        return (
-          <div className={`sa-yerel ${herhangi ? 'is-on' : ''}`}>
-            <div className="sa-yerel-bas">
-              <Cpu className="w-4 h-4" aria-hidden />
-              <b>Bu PC · yerel ses işçileri</b>
-              <button type="button" className="ms-btn is-sm sa-yerel-btn" onClick={() => void post('/api/sesli-anlatim/yerel/aktif', { aktif: !y.aktif })}>
-                {y.aktif ? <><Pause /> Durdur</> : <><Play /> Aç</>}
-              </button>
-            </div>
-            <ul className="sa-yerel-liste">
-              {isciler.map((x) => (
-                <li key={x.id}>
-                  <span className={`ms-tag ${x.o.cevrimici ? 'is-ok' : ''}`}>{x.o.cevrimici ? 'Çevrimiçi' : 'Çevrimdışı'}</span>
-                  <b>{x.ad}</b>
-                  <small>
-                    {x.o.cevrimici
-                      ? `${x.o.not || 'iş bekliyor'} · son sinyal ${timeLabel(x.o.sonSinyal!, true)}`
-                      : x.o.sonSinyal
-                        ? `son sinyal ${timeLabel(x.o.sonSinyal, true)} — bilgisayar açılınca sıradaki işi kendisi alır`
-                        : `bağlanmadı — bilgisayarda: systemctl --user start ${x.servis}`}
-                  </small>
-                </li>
-              ))}
-            </ul>
-            <small className="sa-yerel-not">
-              {y.aktif ? '' : 'Yerel işçiler panelden durduruldu; yeni iş almıyorlar. '}
-              "Yerel ses planı" ya da ders satırındaki "Alternatif oluştur" ile onayladığın dersler bu bilgisayarda seslendirilir: XTTS GPU'yu en fazla %70 kullanır (80 °C üstünde yavaşlar), EMA yalnız CPU.
-            </small>
+      <StatRow
+        stats={[
+          { label: 'Sesli ders', value: `${say.hazir} / ${say.hepsi}`, hint: `Emel ${say.emel} · Aoede ${say.aoede} · toplam ses ${sure(toplamSure)}` },
+          { label: 'Konuşma metni', value: `${say.metin} / ${say.hepsi}` },
+          { label: 'Kuyrukta', value: say.kuyrukta, tone: say.kuyrukta ? 'acc' : undefined, onClick: () => setKuyrukAcik(true) },
+          { label: 'Yerel işçi', value: !d.yerel ? '—' : !d.yerel.aktif ? 'Durduruldu' : yerelCevrimici ? 'Çevrimiçi' : 'Çevrimdışı', tone: yerelCevrimici && d.yerel?.aktif ? 'ok' : 'warn' },
+          { label: 'Ücretli üretim', value: d.ucretliAktif ? 'Açık' : 'Yalnız elle', tone: d.ucretliAktif ? 'bad' : undefined, hint: `${d.butce.harcananTL} TL harcandı` },
+        ]}
+      />
+
+      <Card14 title="Üretim kaynakları">
+        <div className="sa-kaynak">
+          <div className={`sa-paid ${d.butce.harcananTL > d.butce.kilitTL * 0.8 ? 'is-warn' : ''}`} title={d.butce.varsayim}>
+            <b>{d.butce.harcananTL.toLocaleString('tr-TR')} TL</b>
+            <span><Wallet className="w-3 h-3 inline" /> ücretli harcama · kilit {d.butce.kilitTL} / tavan {d.butce.tavanTL} TL · {say.ucretli} ders</span>
+            <label className="sa-switch">
+              <input
+                type="checkbox"
+                checked={d.ucretliAktif}
+                disabled={!d.butce.anahtarVar}
+                onChange={async (e) => {
+                  const ac = e.target.checked;
+                  if (ac && !(await confirmDialog({ title: 'Ücretli üretim açılsın mı?', message: `Açıkken: (1) ücretsiz anahtarların hepsi dolunca sıradaki Aoede sesi aynı dersten ücretli anahtarla tamamlanır, (2) "Alternatif oluştur" ile ücretli Gemini sesi üretilebilir. Kalan bütçe ${d.butce.kalanTL} TL; ${d.butce.kilitTL} TL'de kendiliğinden kilitlenir.`, confirmLabel: 'Aç', tone: 'danger' }))) return;
+                  await post('/api/sesli-anlatim/ucretli', { aktif: ac });
+                }}
+              />
+              <span>{d.ucretliAktif ? 'Ücretli üretim AÇIK' : 'Ücretli üretim kapalı'}</span>
+            </label>
           </div>
-        );
-      })()}
+        {d.yerel && (() => {
+          const y = d.yerel;
+          // Yerel işçiler: XTTS (GPU ≤ %70 + CPU) ve EMA (yalnız CPU); eski sunucuda yalnız ortak sinyal vardır
+          const isciler: { id: Saglayici; ad: string; servis: string; o: YerelOzet }[] = [
+            { id: 'xtts-yerel', ad: 'Coqui XTTS v2', servis: 'meds-xtts', o: y.isciler?.['xtts-yerel'] ?? y },
+            ...(y.isciler?.['ema-yerel'] ? [{ id: 'ema-yerel' as Saglayici, ad: 'EMA Lightning', servis: 'meds-ema', o: y.isciler['ema-yerel']! }] : []),
+          ];
+          const herhangi = isciler.some((x) => x.o.cevrimici);
+          return (
+            <div className={`sa-yerel ${herhangi ? 'is-on' : ''}`}>
+              <div className="sa-yerel-bas">
+                <Cpu className="w-4 h-4" aria-hidden />
+                <b>Bu PC · yerel ses işçileri</b>
+                <button type="button" className="ms-btn is-sm sa-yerel-btn" onClick={() => void post('/api/sesli-anlatim/yerel/aktif', { aktif: !y.aktif })}>
+                  {y.aktif ? <><Pause /> Durdur</> : <><Play /> Aç</>}
+                </button>
+              </div>
+              <ul className="sa-yerel-liste">
+                {isciler.map((x) => (
+                  <li key={x.id}>
+                    <span className={`ms-tag ${x.o.cevrimici ? 'is-ok' : ''}`}>{x.o.cevrimici ? 'Çevrimiçi' : 'Çevrimdışı'}</span>
+                    <b>{x.ad}</b>
+                    <small>
+                      {x.o.cevrimici
+                        ? `${x.o.not || 'iş bekliyor'} · son sinyal ${timeLabel(x.o.sonSinyal!, true)}`
+                        : x.o.sonSinyal
+                          ? `son sinyal ${timeLabel(x.o.sonSinyal, true)} — bilgisayar açılınca sıradaki işi kendisi alır`
+                          : `bağlanmadı — bilgisayarda: systemctl --user start ${x.servis}`}
+                    </small>
+                  </li>
+                ))}
+              </ul>
+              <small className="sa-yerel-not">
+                {y.aktif ? '' : 'Yerel işçiler panelden durduruldu; yeni iş almıyorlar. '}
+                "Yerel ses planı" ya da ders satırındaki "Alternatif oluştur" ile onayladığın dersler bu bilgisayarda seslendirilir: XTTS GPU'yu en fazla %70 kullanır (80 °C üstünde yavaşlar), EMA yalnız CPU.
+              </small>
+            </div>
+          );
+        })()}
+        </div>
+      </Card14>
 
-      {d.yerelPlan && <YerelPlan d={d} post={post} ornekUrl={ornekUrl} />}
+      <Toolbar>
+        <Tabs14<Filtre>
+          label="Süz"
+          value={filtre}
+          onChange={setFiltre}
+          options={[
+            { id: 'hepsi', label: 'Tüm dersler', n: say.hepsi },
+            { id: 'hazir', label: 'Ses hazır', n: say.hazir },
+            { id: 'kuyrukta', label: 'Kuyrukta', n: say.kuyrukta },
+            { id: 'metin', label: 'Metni hazır', n: say.metin },
+            { id: 'bekliyor', label: 'Metin bekliyor', n: say.bekliyor },
+          ]}
+        />
+        <SearchField value={ara} onChange={setAra} placeholder="Ders adı ya da no" label="Ders ara" />
+      </Toolbar>
 
-      <Panel
-        title="Seslendirme kuyruğu"
-        icon={ListOrdered}
-        count={bekleyenIsler.length}
-        tools={
+      <BulkBar
+        count={secim.count}
+        noun="ders"
+        busy={topluBusy}
+        onClear={secim.clear}
+        actions={[
+          {
+            label: varsayilanYerel ? `Yerel plana ata (${varsayilanYerel.varsayilanSes})` : 'Yerel plana ata',
+            kind: 'main',
+            disabled: !varsayilanYerel || !d.yerelPlan || !secDersler.some((x) => x.metin),
+            run: () =>
+              topluCalistir([
+                {
+                  ad: 'plan',
+                  is: () =>
+                    postSessiz('/api/sesli-anlatim/yerel/plan', {
+                      plan: Object.fromEntries(secDersler.filter((x) => x.metin).map((x) => [x.key, { saglayici: varsayilanYerel!.id, ses: varsayilanYerel!.varsayilanSes }])),
+                    }),
+                },
+              ]),
+          },
+          {
+            label: 'Plandakileri yerel kuyruğa al',
+            disabled: !secDersler.some((x) => d.yerelPlan?.[x.key]),
+            run: async () => {
+              const keys = secDersler.filter((x) => d.yerelPlan?.[x.key]).map((x) => x.key);
+              const ok = await confirmDialog({
+                title: `${keys.length} ders bu bilgisayarda seslendirilsin mi?`,
+                message: 'Yalnız planı olan ve henüz hazır ya da sırada olmayan dersler kuyruğa girer. Dersler sırayla alınır, ücretsiz.',
+                confirmLabel: 'Onayla ve kuyruğa al',
+              });
+              if (!ok) return;
+              await topluCalistir([{ ad: 'kuyruk', is: () => postSessiz('/api/sesli-anlatim/yerel/plan/kuyruga', { keys }) }]);
+            },
+          },
+          {
+            label: 'MP3 indir',
+            disabled: !secDersler.some((x) => x.varyantlar[0]),
+            run: async () => {
+              const hedef = secDersler.filter((x) => x.varyantlar[0]);
+              for (const x of hedef) {
+                const el = document.createElement('a');
+                el.href = sesUrl(x.key, x.varyantlar[0].id, true);
+                el.download = '';
+                document.body.appendChild(el);
+                el.click();
+                el.remove();
+                await new Promise((r) => setTimeout(r, 400));
+              }
+              toast.success(`${hedef.length} başarılı, ${secDersler.length - hedef.length} hata`);
+            },
+          },
+          {
+            label: 'Kuyruk işlerini iptal et',
+            kind: 'danger',
+            confirm: 'Seçili derslerin işlerini iptal etmeyi onayla',
+            disabled: !secDersler.some((x) => x.isler.length),
+            run: () => topluCalistir(secDersler.flatMap((x) => x.isler.map((j) => ({ ad: j.id, is: () => postSessiz(`/api/sesli-anlatim/kuyruk/${j.id}/iptal`) })))),
+          },
+        ]}
+      />
+
+      <DataTable<Ders>
+        rows={liste}
+        rowKey={(x) => x.key}
+        selection={secim}
+        onOpen={(x) => setAcik(x.key)}
+        activeKey={acik}
+        minWidth={860}
+        empty={<EmptyState icon={AudioLines} title="Bu süzgeçte ders yok" />}
+        cols={[
+          { key: 'no', label: 'No', right: true, width: 52, render: (x) => x.no },
+          { key: 'ders', label: 'Ders', main: true, render: (x) => x.baslik },
+          { key: 'durum', label: 'Ses durumu', width: 150, render: durumHapi },
+          { key: 'ses', label: 'Varsayılan ses', render: (x) => (x.varyantlar[0] ? kisaEtiket(x.varyantlar[0]) : '—') },
+          { key: 'sure', label: 'Süre', right: true, render: (x) => (x.varyantlar[0] ? sure(x.varyantlar[0].sureSn) : x.metin ? `~${x.tahminiDk} dk` : '—') },
+          { key: 'alt', label: 'Alternatif', right: true, muted: true, render: (x) => Math.max(0, x.varyantlar.length - 1) },
+          {
+            key: 'dinle',
+            label: 'Dinle',
+            render: (x) =>
+              x.varyantlar[0] ? (
+                <span onClick={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
+                  <Oynatici dersKey={x.key} v={x.varyantlar[0]} calan={calan} setCalan={setCalan} sesUrl={sesUrl} />
+                </span>
+              ) : null,
+          },
+        ]}
+      />
+
+      <Drawer
+        open={!!acikDers}
+        onClose={() => setAcik(null)}
+        wide
+        label="Ders sesi"
+        title={acikDers ? `${acikDers.no}. ${acikDers.baslik}` : ''}
+        head={<DetailNav<Ders> list={liste} current={acikDers} same={(x, y) => x.key === y.key} onGo={(x) => setAcik(x.key)} />}
+        foot={
+          acikDers ? (
+            <>
+              {acikDers.varyantlar[0] && (
+                <a className="m14-btn" href={sesUrl(acikDers.key, acikDers.varyantlar[0].id, true)} download>
+                  <Download /> İndir
+                </a>
+              )}
+              <button
+                type="button"
+                className="m14-btn primary"
+                onClick={() => {
+                  const i = liste.findIndex((x) => x.key === acikDers.key);
+                  const n = liste[i + 1];
+                  setAcik(n ? n.key : null);
+                }}
+              >
+                Sonraki
+              </button>
+            </>
+          ) : undefined
+        }
+      >
+        {acikDers && (
+          <DersAyrinti
+            key={acikDers.key}
+            ders={acikDers}
+            saglayicilar={d.saglayicilar}
+            butce={d.butce}
+            ucretliAktif={d.ucretliAktif}
+            calan={calan}
+            setCalan={setCalan}
+            sesUrl={sesUrl}
+            post={post}
+            headers={headers}
+            yukle={yukle}
+            d={d}
+            ornekUrl={ornekUrl}
+          />
+        )}
+      </Drawer>
+
+      <Drawer
+        open={kuyrukAcik}
+        onClose={() => setKuyrukAcik(false)}
+        label="Seslendirme kuyruğu"
+        title={`Seslendirme kuyruğu · ${bekleyenIsler.length}`}
+        head={
           <>
             <span className={`ms-tag ${d.isci.aktif ? 'is-ok' : ''}`} title="Bu sunucudaki Emel / Gemini seslendirme işçisi (yerel XTTS/EMA işçilerinden ayrı)">
               {d.isci.aktif ? 'Sunucu işçisi çalışıyor' : 'Sunucu işçisi durdu'}
             </span>
             <button
               type="button"
-              className="ms-btn is-sm"
+              className="m14-btn"
               title="Emel / Gemini işçisi — yerel XTTS/EMA işçilerini etkilemez"
               onClick={async () => {
                 if (!d.isci.aktif && !(await confirmDialog({ title: 'Sunucu işçisi başlatılsın mı?', message: `Bu, bağlı olduğun sunucudaki Emel / Gemini seslendirme işçisidir (yerel XTTS/EMA işçileri bundan bağımsız çalışır).${d.ucretliAktif ? ' Ücretli üretim AÇIK: sıradaki ücretli işler başlar.' : ''} Kuyruk Oracle'da çalışıyorsa yerel sunucuda açma — iki makine aynı işi yapar.`, confirmLabel: 'Başlat', tone: d.ucretliAktif ? 'danger' : undefined }))) return;
@@ -264,14 +459,15 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
             >
               {d.isci.aktif ? <><Pause /> Durdur</> : <><Play /> Başlat</>}
             </button>
-            <button type="button" className="ms-btn is-sm" onClick={() => setKuyrukAcik((v) => !v)}>{kuyrukAcik ? 'Gizle' : 'Göster'}</button>
           </>
         }
-        desc="Emel, ücretsiz Gemini ve ücretli Gemini üç ayrı şeritte paralel; ücretli işler hiç beklemez, her şerit kendi içinde dersleri sırayla, tek tek seslendirir. Gemini sesi bitmeden sonraki derse geçilmez: önce tüm ücretsiz anahtarlar denenir, hepsi doluysa ücretli üretim açıksa ücretli anahtarla sürer, kapalıysa kota açılınca kaldığı parçadan devam eder."
-        flush={!kuyrukAcik}
       >
-        {kuyrukAcik &&
-          (bekleyenIsler.length ? (
+        <p className="m-0 text-sm text-ink-2">
+          Emel, ücretsiz Gemini ve ücretli Gemini üç ayrı şeritte paralel; ücretli işler hiç beklemez, her şerit kendi içinde dersleri sırayla, tek tek seslendirir.
+          Gemini sesi bitmeden sonraki derse geçilmez: önce tüm ücretsiz anahtarlar denenir, hepsi doluysa ücretli üretim açıksa ücretli anahtarla sürer, kapalıysa
+          kota açılınca kaldığı parçadan devam eder.
+        </p>
+        {(bekleyenIsler.length ? (
             <ol className="sa-queue">
               {bekleyenIsler.map((x, i) => {
                 const ders = d.dersler.find((y) => y.key === x.key);
@@ -296,12 +492,12 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
                     </div>
                     <div className="sa-qact">
                       {['hata', 'butce-durdu', 'kota-bekliyor'].includes(x.durum) && (
-                        <button type="button" className="ms-btn is-sm" title="Yeniden dene" onClick={() => void post(`/api/sesli-anlatim/kuyruk/${x.id}/yeniden`)}><RotateCcw /></button>
+                        <button type="button" className="ms-btn is-sm" title="Yeniden dene" aria-label="Yeniden dene" onClick={() => void post(`/api/sesli-anlatim/kuyruk/${x.id}/yeniden`)}><RotateCcw /></button>
                       )}
                       {['bekliyor', 'kota-bekliyor'].includes(x.durum) && i > 0 && (
-                        <button type="button" className="ms-btn is-sm" title="Öne al" onClick={() => void post(`/api/sesli-anlatim/kuyruk/${x.id}/one-al`)}><ArrowUp /></button>
+                        <button type="button" className="ms-btn is-sm" title="Öne al" aria-label="Öne al" onClick={() => void post(`/api/sesli-anlatim/kuyruk/${x.id}/one-al`)}><ArrowUp /></button>
                       )}
-                      <button type="button" className="ms-btn is-sm" title="İptal" onClick={() => void post(`/api/sesli-anlatim/kuyruk/${x.id}/iptal`)}><X /></button>
+                      <button type="button" className="ms-btn is-sm" title="İptal" aria-label="İptal" onClick={() => void post(`/api/sesli-anlatim/kuyruk/${x.id}/iptal`)}><X /></button>
                     </div>
                   </li>
                 );
@@ -310,52 +506,7 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
           ) : (
             <EmptyState icon={ListOrdered} title="Kuyruk boş" />
           ))}
-      </Panel>
-
-      <div className="flex flex-wrap items-center gap-2">
-        <ChipBar
-          label="Süz"
-          value={filtre}
-          onChange={setFiltre}
-          wrap
-          options={[
-            { id: 'hepsi', label: 'Tümü', n: say.hepsi },
-            { id: 'hazir', label: 'Ses hazır', n: say.hazir },
-            { id: 'kuyrukta', label: 'Kuyrukta', n: say.kuyrukta },
-            { id: 'metin', label: 'Metni hazır', n: say.metin },
-            { id: 'bekliyor', label: 'Metin bekliyor', n: say.bekliyor },
-          ]}
-        />
-        <div className="flex-1 min-w-[200px]"><SearchBox value={ara} onChange={setAra} placeholder="Ders adı ya da no" /></div>
-      </div>
-
-      <Panel title="Dersler" icon={AudioLines} count={liste.length} flush>
-        {liste.length === 0 ? (
-          <EmptyState icon={AudioLines} title="Bu süzgeçte ders yok" />
-        ) : (
-          <ul className="sa-list">
-            {liste.map((x) => (
-              <DersSatiri
-                key={x.key}
-                ders={x}
-                saglayicilar={d.saglayicilar}
-                butce={d.butce}
-                ucretliAktif={d.ucretliAktif}
-                acik={acik === x.key}
-                onAc={() => setAcik((k) => (k === x.key ? null : x.key))}
-                calan={calan}
-                setCalan={setCalan}
-                sesUrl={sesUrl}
-                post={post}
-                headers={headers}
-                yukle={yukle}
-                d={d}
-                ornekUrl={ornekUrl}
-              />
-            ))}
-          </ul>
-        )}
-      </Panel>
+      </Drawer>
     </div>
   );
 };
@@ -377,13 +528,11 @@ const Oynatici: React.FC<{
   ),
 );
 
-const DersSatiri: React.FC<{
+const DersAyrinti: React.FC<{
   ders: Ders;
   saglayicilar: SaglayiciBilgi[];
   butce: Durum['butce'];
   ucretliAktif: boolean;
-  acik: boolean;
-  onAc: () => void;
   calan: { key: string; vid: string } | null;
   setCalan: (v: { key: string; vid: string } | null) => void;
   sesUrl: (key: string, vid: string, indir?: boolean) => string;
@@ -392,7 +541,7 @@ const DersSatiri: React.FC<{
   yukle: () => Promise<void>;
   d: Durum;
   ornekUrl: (sag: string, ses: string) => string;
-}> = ({ ders, saglayicilar, butce, ucretliAktif, acik, onAc, calan, setCalan, sesUrl, post, headers, yukle, d, ornekUrl }) => {
+}> = ({ ders, saglayicilar, butce, ucretliAktif, calan, setCalan, sesUrl, post, headers, yukle, d, ornekUrl }) => {
   const [sag, setSag] = useState<Saglayici>('gemini-ucretsiz');
   const [ses, setSes] = useState('Aoede');
   const [metin, setMetin] = useState<string | null>(null);
@@ -433,36 +582,12 @@ const DersSatiri: React.FC<{
   };
 
   return (
-    <li className={`sa-row ${acik ? 'is-open' : ''}`}>
-      <div className="sa-head">
-        <button type="button" className="sa-title" onClick={onAc} aria-expanded={acik}>
-          <span className="sa-no">{ders.no}</span>
-          <span className="min-w-0">
-            <b>{ders.baslik}</b>
-            <small>
-              {ders.metin ? `${ders.kelime.toLocaleString('tr-TR')} kelime · ~${ders.tahminiDk} dk · ${ders.bolum} bölüm` : 'Konuşma metni hazırlanıyor'}
-            </small>
-          </span>
-        </button>
-        <div className="sa-badges">
-          {ana ? (
-            <span className="ms-tag is-ok" title={ana.etiket}><AudioLines className="w-3 h-3" /> {ana.etiket} · {sure(ana.sureSn)}</span>
-          ) : ders.isler.length ? (
-            <span className="ms-tag is-accent">{DURUM_ETIKET[ders.isler[0].durum]}{ders.isler[0].ilerleme.toplam ? ` ${ders.isler[0].ilerleme.bitti}/${ders.isler[0].ilerleme.toplam}` : ''}</span>
-          ) : (
-            <span className="ms-tag">{ders.metin ? 'Ses yok' : 'Metin bekliyor'}</span>
-          )}
-          {ders.varyantlar.length > 1 && <span className="ms-tag">+{ders.varyantlar.length - 1} alternatif</span>}
-        </div>
-        {ana && (
-          <div className="sa-quick">
-            <Oynatici dersKey={ders.key} v={ana} calan={calan} setCalan={setCalan} sesUrl={sesUrl} />
-            <a className="ms-btn is-sm" href={sesUrl(ders.key, ana.id, true)} download><Download /> MP3</a>
-          </div>
-        )}
-      </div>
-
-      {acik && (
+    <div className="sa-row is-open">
+      <p className="m-0 text-sm text-ink-2">
+        {ders.metin ? `${ders.kelime.toLocaleString('tr-TR')} kelime · ~${ders.tahminiDk} dk · ${ders.bolum} bölüm` : 'Konuşma metni hazırlanıyor'}
+        {!ana && !ders.isler.length ? ` · ${ders.metin ? 'Ses yok' : 'Metin bekliyor'}` : ''}
+      </p>
+      {(
         <div className="sa-body">
           {ders.varyantlar.length > 0 && (
             <ul className="sa-variants">
@@ -547,7 +672,7 @@ const DersSatiri: React.FC<{
           )}
         </div>
       )}
-    </li>
+    </div>
   );
 };
 
@@ -604,22 +729,28 @@ const YerelPlan: React.FC<{ d: Durum; post: (yol: string, body?: any) => Promise
   const tumSecili = dersler.length > 0 && dersler.every((x) => secili.has(x.key));
 
   return (
-    <Panel
-      title="Yerel ses planı"
-      icon={Cpu}
-      count={Object.keys(plan).length}
-      desc="Hangi derse hangi yerel sesle (Coqui XTTS v2 konuşmacısı ya da EMA) alternatif oluşturulacağını seç. Plan kaydedilir; onayladığında yalnız henüz hazır ya da sırada olmayan dersler bu bilgisayarın kuyruğuna girer."
-      flush={!acik}
-      tools={
-        <>
-          <span className="ms-tag">{bekleyen.length} bekliyor</span>
-          <button type="button" className="ms-btn is-sm is-primary" disabled={!bekleyen.length} onClick={() => void kuyrugaAl()}>
-            <ListOrdered /> Planı kuyruğa al
+    <>
+      <button type="button" className="m14-btn" onClick={() => setAcik(true)}>
+        <Cpu /> Yerel ses planı ({Object.keys(plan).length})
+      </button>
+      <button type="button" className="m14-btn primary" disabled={!bekleyen.length} onClick={() => void kuyrugaAl()}>
+        <ListOrdered /> Yerel planı kuyruğa al{bekleyen.length ? ` (${bekleyen.length})` : ''}
+      </button>
+      <Drawer
+        open={acik}
+        onClose={() => setAcik(false)}
+        wide
+        title="Yerel ses planı"
+        foot={
+          <button type="button" className="m14-btn primary" disabled={!bekleyen.length} onClick={() => void kuyrugaAl()}>
+            <ListOrdered /> Planı kuyruğa al ({bekleyen.length})
           </button>
-          <button type="button" className="ms-btn is-sm" onClick={() => setAcik((v) => !v)}>{acik ? 'Gizle' : 'Düzenle'}</button>
-        </>
-      }
-    >
+        }
+      >
+        <p className="m-0 text-sm text-ink-2">
+          Hangi derse hangi yerel sesle (Coqui XTTS v2 konuşmacısı ya da EMA) alternatif oluşturulacağını seç. Plan kaydedilir; onayladığında yalnız henüz hazır ya da
+          sırada olmayan dersler bu bilgisayarın kuyruğuna girer.
+        </p>
       {acik && (
         <div className="sa-plan">
           <div className="sa-plan-bar">
@@ -643,7 +774,7 @@ const YerelPlan: React.FC<{ d: Durum; post: (yol: string, body?: any) => Promise
             {secili.size > 0 && (
               <button type="button" className="ms-btn is-sm" onClick={() => void kuyrugaAl([...secili])}>Seçilenleri kuyruğa al</button>
             )}
-            <div className="flex-1 min-w-[180px]"><SearchBox value={ara} onChange={setAra} placeholder="Ders adı ya da no" /></div>
+            <SearchField value={ara} onChange={setAra} placeholder="Ders adı ya da no" label="Plan içinde ara" />
           </div>
           <ul className="sa-plan-list">
             {dersler.map((x) => {
@@ -696,7 +827,8 @@ const YerelPlan: React.FC<{ d: Durum; post: (yol: string, body?: any) => Promise
           </ul>
         </div>
       )}
-    </Panel>
+      </Drawer>
+    </>
   );
 };
 

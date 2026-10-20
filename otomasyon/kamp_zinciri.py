@@ -13,7 +13,8 @@ MEDS = Path(__file__).resolve().parents[1]; KOK = MEDS.parent
 sys.path.insert(0, str(MEDS / "scripts/dersler")); sys.path.insert(0, str(MEDS / "otomasyon"))
 import bilgi_deposu as BD  # noqa: E402
 IZIN = "Read,Write,Edit,Glob,Grep,Bash(python3 *)"
-API = "https://api.nofrostlife.com.tr"
+import os
+API = os.environ.get("MEDS_KAMP_API", "https://api.nofrostlife.com.tr")  # prova: yerel 3000
 EMA_PY = Path.home() / ".local/share/meds-ema/venv/bin/python"
 
 
@@ -24,6 +25,7 @@ def onayli_tuyolar(kurul):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--kurul", type=int); ap.add_argument("--brans"); ap.add_argument("--kuru", action="store_true")
+    ap.add_argument("--prova", action="store_true", help="çıktı + ses meds_temp/prova/kamp/'a; src/data ve Oracle'a dokunmaz")
     a = ap.parse_args()
     if a.kurul:
         kurullar = [a.kurul]
@@ -52,7 +54,7 @@ def main():
                                   "kaynak": str(Path(m["kaynak_dizin"]) / "kaynak.md")} for m in dersler]}
             iz = hashlib.sha256(json.dumps([[t["id"], t["metin"]] for t in ts] + [m["ozet_sha"] for m in dersler]).encode()).hexdigest()[:16]
             W = KOK / f"meds_temp/kamp/k{k}/{brans}"; W.mkdir(parents=True, exist_ok=True)
-            yayin = MEDS / f"src/data/kamp/k{k}/{brans}.json"
+            yayin = (KOK / f"meds_temp/prova/kamp/k{k}/{brans}.json") if a.prova else MEDS / f"src/data/kamp/k{k}/{brans}.json"
             if (W / "iz.txt").exists() and (W / "iz.txt").read_text() == iz and yayin.exists():
                 print(f"Kurul {k} {brans}: değişiklik yok"); continue
             if yayin.exists():
@@ -85,11 +87,14 @@ def main():
                 bildir(f"Kurul {k} {brans} kampı kapıdan geçmedi", (r.stdout or "")[-1500:] + "\nYayımlanan kamp değişmedi.", hedef="kamp")
                 continue
             s = subprocess.run(["systemd-run", "--user", "--scope", "-q", "-p", "CPUQuota=300%", "-p", "MemoryMax=2200M", "--nice=10",
-                                "env", "CUDA_VISIBLE_DEVICES=", str(EMA_PY), str(MEDS / "scripts/kamp/ses.py"), str(W / "kamp.json")])
+                                "env", "CUDA_VISIBLE_DEVICES=", str(EMA_PY), str(MEDS / "scripts/kamp/ses.py"), str(W / "kamp.json")]
+                               + (["--ses-kok", str(KOK / "meds_temp/prova/kamp/ses")] if a.prova else []))
             if s.returncode:
                 print("   HATA: kamp sesi üretilemedi"); hata += 1; continue
             yayin.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy(W / "kamp.json", yayin)
+            if a.prova:
+                print(f"   PROVA tamam: {yayin} (Oracle'a gönderilmedi)"); (W / "iz.txt").write_text(iz); continue
             sk = MEDS / "data/kamp/ses" / f"k{k}" / brans
             o = subprocess.run(["rsync", "-az", "--mkpath", "--rsync-path=flock /tmp/meds-deploy.lock sudo rsync", f"{sk}/",
                                 f"medsor-oracle:/home/ubuntu/medsor/meds/data/kamp/ses/k{k}/{brans}/"], timeout=900)

@@ -3,7 +3,9 @@ import { Search, ArrowUp, ArrowDown, Columns3, Download, X, Trash2, CheckCircle2
 import { Committee, QuestionItem } from '../../types';
 import { ApiService, safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
-import { Seg, SearchBox, EmptyState, ConfirmButton, Drawer } from './consoleUi';
+import { Drawer, ConfirmButton } from './consoleUi';
+import { PageActions, Tabs14, SearchField, Toolbar, DataTable, DetailNav, type Col } from '../v14/pageKit';
+import { BulkBar, useSelection, JsonView } from '../v14/manageKit';
 import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
 
 /**
@@ -65,7 +67,10 @@ const collectIx = (slide: any): any[] => {
   ['interactiveElements', 'elements', 'interaction', 'interactiveElement', 'microQuiz'].forEach((k) => push(slide?.[k]));
   return out;
 };
-const Pill: React.FC<{ cls: string; children: React.ReactNode }> = ({ cls, children }) => <span className={`ms-tag ${cls}`}>{children}</span>;
+/* Eski ton sınıflarını v14 hap tonuna çevirir */
+const Pill: React.FC<{ cls: string; children: React.ReactNode }> = ({ cls, children }) => (
+  <span className={`m14-pill ${cls === 'is-ok' ? 'ok' : cls === 'is-warn' ? 'warn' : cls === 'is-accent' ? 'acc' : cls === 'is-bad' ? 'bad' : ''}`}>{children}</span>
+);
 
 export const ManageDataSection: React.FC<Props> = ({
   adminEmail,
@@ -318,7 +323,8 @@ export const ManageDataSection: React.FC<Props> = ({
   const [sort, setSort] = useState(ds.defaultSort);
   const [hidden, setHidden] = useState<Record<string, boolean>>({});
   const [colMenu, setColMenu] = useState(false);
-  const [selected, setSelected] = useState<string[]>([]);
+  const selection = useSelection<string>();
+  const selected = Array.from(selection.sel);
   const [openId, setOpenId] = useState<string | null>(initialFocusId || null);
   const [limit, setLimit] = useState(100);
   const [busy, setBusy] = useState(false);
@@ -336,7 +342,7 @@ export const ManageDataSection: React.FC<Props> = ({
   const [editDraft, setEditDraft] = useState<Row | null>(null);
   const [jsonText, setJsonText] = useState<string>('');
   const [jsonError, setJsonError] = useState<string | null>(null);
-  const [editTab, setEditTab] = useState<'form' | 'json' | 'history'>('form');
+  const [editTab, setEditTab] = useState<'form' | 'visual' | 'json' | 'history'>('form');
   const [savingRow, setSavingRow] = useState(false);
   const [wizardQuestion, setWizardQuestion] = useState<QuestionItem | null>(null);
 
@@ -356,7 +362,7 @@ export const ManageDataSection: React.FC<Props> = ({
   useEffect(() => {
     setSort(ds.defaultSort);
     setHidden({});
-    setSelected([]);
+    selection.clear();
     setOpenId(null);
     setQuery('');
     setLimit(100);
@@ -369,7 +375,6 @@ export const ManageDataSection: React.FC<Props> = ({
   }, [questions, dsId]);
 
   const cols = ds.columns.filter((c) => !hidden[c.key]);
-  const grid = `28px ${cols.map((c) => c.width || '1fr').join(' ')}`;
 
   const visible = useMemo(() => {
     const q = query.trim().toLocaleLowerCase('tr-TR');
@@ -387,7 +392,6 @@ export const ManageDataSection: React.FC<Props> = ({
   }, [rows, query, sort, ds]);
 
   const shown = visible.slice(0, limit);
-  const allOnPage = shown.length > 0 && shown.every((r) => selected.includes(ds.idOf(r)));
   const openRow = openId ? rows.find((r) => ds.idOf(r) === openId) : null;
 
   // openRow değiştiğinde düzenleme taslağını senkronize et
@@ -406,7 +410,22 @@ export const ManageDataSection: React.FC<Props> = ({
   }, [openId, openRow]);
 
   const toggleSort = (key: string) => setSort((s) => (s.key === key ? { key, dir: s.dir === 1 ? -1 : 1 } : { key, dir: 1 }));
-  const toggleRow = (id: string) => setSelected((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
+  const tableCols: Col<Row>[] = cols.map((c) => ({
+    key: c.key,
+    mono: c.mono,
+    right: c.mono && c.key !== 'id',
+    main: c.width === 'minmax(0,1fr)',
+    width: c.width && c.width !== 'minmax(0,1fr)' ? c.width : undefined,
+    label: (
+      <button type="button" onClick={() => toggleSort(c.key)} className="inline-flex items-center gap-1 cursor-pointer hover:text-ink" style={{ font: 'inherit', letterSpacing: 'inherit', textTransform: 'inherit', color: sort.key === c.key ? 'var(--color-ink)' : undefined }} aria-sort={sort.key === c.key ? (sort.dir === 1 ? 'ascending' : 'descending') : undefined} aria-label={`${c.label} sütununa göre sırala`}>
+        {c.label}
+        {sort.key === c.key && (sort.dir === 1 ? <ArrowUp aria-hidden className="w-3 h-3" /> : <ArrowDown aria-hidden className="w-3 h-3" />)}
+      </button>
+    ),
+    render: (r: Row) => (
+      <span title={String(c.value(r))}>{c.render ? c.render(r) : c.value(r) || '—'}</span>
+    ),
+  }));
 
   // Düzenleme yardımcıları
   const handleFormChange = (key: string, value: any) => {
@@ -530,8 +549,8 @@ export const ManageDataSection: React.FC<Props> = ({
   };
 
   // Veriyi kaydetme
-  const saveRow = async () => {
-    if (!editDraft || !openRow) return;
+  const saveRow = async (): Promise<boolean> => {
+    if (!editDraft || !openRow) return false;
     setSavingRow(true);
     try {
       let payload = editDraft;
@@ -541,7 +560,7 @@ export const ManageDataSection: React.FC<Props> = ({
         } catch (e: any) {
           toast.error('Geçersiz JSON', e.message || 'Lütfen JSON sözdizimini düzeltin.');
           setSavingRow(false);
-          return;
+          return false;
         }
       }
 
@@ -591,8 +610,10 @@ export const ManageDataSection: React.FC<Props> = ({
       setRows((prev) => prev.map((r) => (ds.idOf(r) === id ? { ...r, ...payload } : r)));
       setEditDraft({ ...payload });
       setJsonText(JSON.stringify(payload, null, 2));
+      return true;
     } catch (e: any) {
       toast.error('Kaydedilemedi', e?.message || 'Bilinmeyen bir hata oluştu.');
+      return false;
     } finally {
       setSavingRow(false);
     }
@@ -631,7 +652,7 @@ export const ManageDataSection: React.FC<Props> = ({
       }
       if (ok) toast.success(kind === 'delete' ? 'Silindi' : 'Doğrulandı', `${ok} kayıt`);
       if (ok < ids.length) toast.error('Bazı kayıtlar işlenemedi', `${ids.length - ok} kayıt değişmedi.`);
-      setSelected([]);
+      selection.clear();
       setOpenId(null);
       if (ds.id === 'questions') {
         await onRefreshData();
@@ -652,113 +673,71 @@ export const ManageDataSection: React.FC<Props> = ({
 
   return (
     <div className="flex flex-col gap-3 min-w-0">
-      <div className="rb-ds-scroll" role="region" aria-label="Veri kümeleri">
-        <Seg label="Veri kümesi" value={dsId} onChange={setDsId} options={DATASETS.map((d) => ({ id: d.id, label: d.label }))} className="self-start" />
-      </div>
-
-      <div className="flex flex-wrap items-center gap-2">
-        <SearchBox value={query} onChange={setQuery} placeholder={`${ds.label} içinde ara`} count={`${visible.length.toLocaleString('tr-TR')} kayıt`} className="flex-1 min-w-[220px]" />
-        <div className="relative">
-          <button type="button" onClick={() => setColMenu((v) => !v)} aria-expanded={colMenu} className="ms-btn">
-            <Columns3 /> Sütunlar
-          </button>
-          {colMenu && (
-            <>
-              <div className="fixed inset-0 z-20" onClick={() => setColMenu(false)} aria-hidden="true" />
-              <div className="ms-menu">
-                {ds.columns.map((c) => (
-                  <label key={c.key} className="ms-menu-item">
-                    <input type="checkbox" checked={!hidden[c.key]} onChange={() => setHidden((h) => ({ ...h, [c.key]: !h[c.key] }))} />
-                    {c.label}
-                  </label>
-                ))}
-              </div>
-            </>
-          )}
-        </div>
-        <button type="button" onClick={() => exportCsv(false)} className="ms-btn">
-          <Download /> CSV
+      <PageActions note={`${ds.label}: ${visible.length.toLocaleString('tr-TR')} kayıt`}>
+        <button type="button" onClick={() => setColMenu(true)} className="m14-btn">
+          <Columns3 aria-hidden /> Sütunları seç
         </button>
-        <button type="button" onClick={() => void load()} aria-label="Yenile" title="Yenile" className="ms-btn is-ghost is-icon">
-          <RefreshCw className={loading ? 'animate-spin' : ''} />
+        <button type="button" onClick={() => void load()} className="m14-btn" disabled={loading}>
+          <RefreshCw aria-hidden className={loading ? 'animate-spin' : ''} /> Yenile
         </button>
-      </div>
+        <button type="button" onClick={() => exportCsv(false)} className="m14-btn primary">
+          <Download aria-hidden /> CSV indir
+        </button>
+      </PageActions>
 
-      <div className="ms-table-wrap">
-        <div className="w-full min-w-[760px]">
-          <div className="grid items-center gap-x-3 h-10 px-3 border-b border-line text-xs font-semibold text-ink-3 sticky top-0 bg-white z-[1]" style={{ gridTemplateColumns: grid }}>
-            <input
-              type="checkbox"
-              aria-label="Bu sayfadakilerin hepsini seç"
-              checked={allOnPage}
-              onChange={() => setSelected((s) => (allOnPage ? s.filter((id) => !shown.some((r) => ds.idOf(r) === id)) : Array.from(new Set([...s, ...shown.map(ds.idOf)]))))}
-              className="w-[15px] h-[15px] accent-accent cursor-pointer"
-            />
-            {cols.map((c) => (
-              <button key={c.key} type="button" onClick={() => toggleSort(c.key)} className={`text-left inline-flex items-center gap-1 cursor-pointer hover:text-ink whitespace-nowrap ${sort.key === c.key ? 'text-ink' : ''}`} aria-sort={sort.key === c.key ? (sort.dir === 1 ? 'ascending' : 'descending') : undefined}>
-                {c.label}
-                {sort.key === c.key && (sort.dir === 1 ? <ArrowUp className="w-3 h-3" /> : <ArrowDown className="w-3 h-3" />)}
-              </button>
-            ))}
-          </div>
-          {loading && rows.length === 0 ? (
-            <div className="p-3 flex flex-col gap-2" role="status" aria-label="Yükleniyor">
-              {[0, 1, 2, 3, 4].map((i) => <div key={i} className="h-8 rounded-lg ms-shimmer" />)}
-            </div>
-          ) : shown.length === 0 ? (
-            <EmptyState icon={Search} title={query ? 'Aramaya uyan kayıt yok' : 'Bu kümede kayıt yok'} />
-          ) : (
-            shown.map((r) => {
-              const id = ds.idOf(r);
-              const sel = selected.includes(id);
-              const open = openId === id;
-              return (
-                <div
-                  key={id}
-                  onClick={() => setOpenId(open ? null : id)}
-                  className={`grid items-center gap-x-3 min-h-10 px-3 py-1.5 border-b border-line-soft last:border-b-0 text-base cursor-pointer transition-colors ${sel || open ? 'bg-accent-soft' : 'hover:bg-canvas'}`}
-                  style={{ gridTemplateColumns: grid }}
-                >
-                  <input type="checkbox" checked={sel} onClick={(e) => e.stopPropagation()} onChange={() => toggleRow(id)} aria-label="Satırı seç" className="w-[15px] h-[15px] accent-accent cursor-pointer" />
-                  {cols.map((c) => (
-                    <span key={c.key} className={`min-w-0 truncate ${c.mono ? 'font-mono text-sm' : ''}`} title={String(c.value(r))}>
-                      {c.render ? c.render(r) : c.value(r) || '—'}
-                    </span>
-                  ))}
-                </div>
-              );
-            })
-          )}
-          {visible.length > limit && (
-            <button type="button" onClick={() => setLimit((n) => n + 200)} className="w-full h-11 border-t border-line-soft text-sm font-semibold text-accent cursor-pointer inline-flex items-center justify-center gap-1 hover:bg-canvas">
-              <ChevronDown className="w-4 h-4" />
-              {(visible.length - limit).toLocaleString('tr-TR')} kayıt daha
-            </button>
-          )}
-        </div>
-      </div>
+      <Toolbar>
+        <Tabs14<DatasetId> label="Veri kümesi" value={dsId} onChange={setDsId} options={DATASETS.map((d) => ({ id: d.id, label: d.label, n: d.id === dsId && !loading ? rows.length : undefined }))} />
+      </Toolbar>
+      <Toolbar>
+        <SearchField value={query} onChange={setQuery} placeholder={`${ds.label} içinde ara`} label={`${ds.label} içinde ara`} />
+      </Toolbar>
 
-      {selected.length > 0 && (
-        <div className="ms-bulkbar">
-          <b>{selected.length} seçili</b>
-          <button type="button" onClick={() => exportCsv(true)} className="ms-btn is-sm">
-            <Download /> CSV
-          </button>
-          {ds.canVerify && (
-            <button type="button" disabled={busy} onClick={() => void runBulk('verify', selected)} className="ms-btn is-sm">
-              <CheckCircle2 /> Doğrula
-            </button>
-          )}
-          {ds.canDelete && (
-            <ConfirmButton icon={Trash2} className="ms-btn is-sm" confirmLabel={`Emin misin? ${selected.length} kaydı sil`} busy={busy} onConfirm={() => runBulk('delete', selected)}>
-              Sil
-            </ConfirmButton>
-          )}
-          <button type="button" onClick={() => setSelected([])} aria-label="Seçimi temizle" className="ms-btn is-sm is-icon">
-            <X />
-          </button>
+      <BulkBar
+        count={selected.length}
+        noun="kayıt"
+        busy={busy}
+        onClear={selection.clear}
+        actions={[
+          { label: 'Seçilenleri CSV indir', run: () => exportCsv(true) },
+          ...(ds.canVerify ? [{ label: 'Doğrula', kind: 'main' as const, run: () => runBulk('verify', selected) }] : []),
+          ...(ds.canDelete ? [{ label: 'Sil', kind: 'danger' as const, confirm: `Emin misin? ${selected.length} kaydı sil`, run: () => runBulk('delete', selected) }] : []),
+        ]}
+      />
+
+      {loading && rows.length === 0 ? (
+        <div className="p-3 flex flex-col gap-2" role="status" aria-label="Yükleniyor">
+          {[0, 1, 2, 3, 4].map((i) => <div key={i} className="h-8 rounded-lg ms-shimmer" />)}
         </div>
+      ) : (
+        <DataTable<Row>
+          rows={shown}
+          cols={tableCols}
+          rowKey={ds.idOf}
+          onOpen={(r) => setOpenId(ds.idOf(r))}
+          selection={selection}
+          activeKey={openId}
+          busy={loading}
+          minWidth={760}
+          empty={query ? 'Aramaya uyan kayıt yok' : 'Bu kümede kayıt yok'}
+        />
       )}
+      {visible.length > limit && (
+        <button type="button" onClick={() => setLimit((n) => n + 200)} className="m14-btn ghost self-center">
+          <ChevronDown aria-hidden className="w-4 h-4" />
+          {(visible.length - limit).toLocaleString('tr-TR')} kayıt daha
+        </button>
+      )}
+
+      <Drawer open={colMenu} onClose={() => setColMenu(false)} title="Sütunları seç" foot={<button type="button" className="m14-btn primary" onClick={() => setColMenu(false)}>Bitti</button>}>
+        <div className="flex flex-col gap-2">
+          {ds.columns.map((c) => (
+            <label key={c.key} className="ms-menu-item">
+              <input type="checkbox" checked={!hidden[c.key]} onChange={() => setHidden((h) => ({ ...h, [c.key]: !h[c.key] }))} />
+              {c.label}
+            </label>
+          ))}
+        </div>
+      </Drawer>
 
       <Drawer
         open={!!openRow}
@@ -781,49 +760,25 @@ export const ManageDataSection: React.FC<Props> = ({
           ) : ''
         }
         head={
-          <div className="flex items-center gap-1 bg-surface-2 p-1 rounded-lg border border-line-soft">
-            <button
-              type="button"
-              onClick={() => {
-                setEditTab('form');
-                if (editDraft) setJsonText(JSON.stringify(editDraft, null, 2));
+          <>
+            <DetailNav list={visible} current={openRow || null} same={(x, y) => ds.idOf(x) === ds.idOf(y)} onGo={(r) => setOpenId(ds.idOf(r))} />
+            <Tabs14<'form' | 'visual' | 'history' | 'json'>
+              label="Kayıt görünümü"
+              value={editTab}
+              onChange={(v) => {
+                if ((v === 'form' || v === 'json') && editDraft) setJsonText(JSON.stringify(editDraft, null, 2));
+                setEditTab(v);
               }}
-              className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${
-                editTab === 'form' ? 'bg-white shadow-xs text-ink font-semibold' : 'text-ink-3 hover:text-ink'
-              }`}
-            >
-              Form Düzenleyici
-            </button>
-            {(ds.id === 'questions' || ds.id === 'past') && (
-              <button
-                type="button"
-                onClick={() => setEditTab('history')}
-                className={`px-3 py-1 text-xs font-medium rounded-md transition-all inline-flex items-center gap-1.5 ${
-                  editTab === 'history' ? 'bg-white shadow-xs text-ink font-semibold' : 'text-ink-3 hover:text-ink'
-                }`}
-              >
-                <History className="w-3.5 h-3.5" />
-                <span>Geçmiş & Katkılar</span>
-                {Boolean((openRow?.revisions?.length || 0) + (openRow?.fragments?.length || 0)) && (
-                  <span className="px-1.5 py-0.2 rounded-full bg-accent-soft text-accent text-2xs font-bold">
-                    {(openRow?.revisions?.length || 0) + (openRow?.fragments?.length || 0)}
-                  </span>
-                )}
-              </button>
-            )}
-            <button
-              type="button"
-              onClick={() => {
-                setEditTab('json');
-                if (editDraft) setJsonText(JSON.stringify(editDraft, null, 2));
-              }}
-              className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${
-                editTab === 'json' ? 'bg-white shadow-xs text-ink font-semibold' : 'text-ink-3 hover:text-ink'
-              }`}
-            >
-              Tüm Alanlar (JSON)
-            </button>
-          </div>
+              options={[
+                { id: 'form', label: 'Form' },
+                { id: 'visual', label: 'Görsel' },
+                ...(ds.id === 'questions' || ds.id === 'past'
+                  ? [{ id: 'history' as const, label: 'Geçmiş ve katkılar', n: (openRow?.revisions?.length || 0) + (openRow?.fragments?.length || 0) || undefined }]
+                  : []),
+                { id: 'json', label: 'Ham JSON' },
+              ]}
+            />
+          </>
         }
         foot={
           openRow && editDraft && (
@@ -833,16 +788,31 @@ export const ManageDataSection: React.FC<Props> = ({
                   type="button"
                   disabled={savingRow}
                   onClick={() => void saveRow()}
-                  className="ms-btn is-ok inline-flex items-center gap-1.5 font-semibold shadow-xs"
+                  className="m14-btn"
                 >
-                  <Save className={`w-4 h-4 ${savingRow ? 'animate-spin' : ''}`} />
+                  <Save aria-hidden className={`w-4 h-4 ${savingRow ? 'animate-spin' : ''}`} />
                   {savingRow ? 'Kaydediliyor…' : 'Kaydet'}
                 </button>
+                {visible.length > 1 && (
+                  <button
+                    type="button"
+                    disabled={savingRow}
+                    onClick={async () => {
+                      const i = visible.findIndex((r) => ds.idOf(r) === ds.idOf(openRow));
+                      if (!(await saveRow())) return;
+                      const next = visible[(i + 1) % visible.length];
+                      if (next) setOpenId(ds.idOf(next));
+                    }}
+                    className="m14-btn primary"
+                  >
+                    Kaydet ve sonraki
+                  </button>
+                )}
                 <button
                   type="button"
                   disabled={savingRow}
                   onClick={handleResetDraft}
-                  className="ms-btn is-ghost text-ink-3 hover:text-ink"
+                  className="m14-btn ghost"
                   title="İlk haline dön"
                 >
                   <RotateCcw className="w-4 h-4" /> Sıfırla
@@ -868,8 +838,9 @@ export const ManageDataSection: React.FC<Props> = ({
                       () => toast.error('Kopyalanamadı'),
                     );
                   }}
-                  className="ms-btn is-ghost is-sm"
-                  title="JSON Kopyala"
+                  className="m14-btn ghost"
+                  title="JSON kopyala"
+                  aria-label="JSON kopyala"
                 >
                   <Copy className="w-3.5 h-3.5" />
                 </button>
@@ -886,7 +857,7 @@ export const ManageDataSection: React.FC<Props> = ({
                 {ds.canDelete && (
                   <ConfirmButton
                     icon={Trash2}
-                    className="ms-btn is-sm is-danger"
+                    className="m14-btn danger"
                     confirmLabel="Emin misin? Sil"
                     busy={busy}
                     onConfirm={() => runBulk('delete', [ds.idOf(openRow)])}
@@ -901,7 +872,9 @@ export const ManageDataSection: React.FC<Props> = ({
       >
         {openRow && editDraft && (
           <div className="flex flex-col gap-4">
-            {editTab === 'json' ? (
+            {editTab === 'visual' ? (
+              <JsonView value={editDraft} />
+            ) : editTab === 'json' ? (
               <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-between text-xs text-ink-3 bg-surface-2 p-2.5 rounded-lg border border-line-soft">
                   <span>Bu verinin tamamını (alt nesneler, diziler, özel alanlar) doğrudan JSON olarak düzenleyebilirsiniz.</span>

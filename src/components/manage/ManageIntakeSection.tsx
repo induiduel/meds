@@ -2,7 +2,9 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Info, RefreshCw, RotateCcw, ChevronDown, AlertTriangle, ShieldAlert, Inbox, Quote, ListChecks, DatabaseZap, Network, Link2 } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
-import { ChipBar, EmptyState, SearchBox, timeLabel } from './consoleUi';
+import { EmptyState, timeLabel, Drawer } from './consoleUi';
+import { PageActions, StatRow, Tabs14, SearchField, Toolbar, DataTable, Pill, DetailNav, DetailLayout, FactList, Card14, type Col } from '../v14/pageKit';
+import { BulkBar, useSelection } from '../v14/manageKit';
 
 /**
  * "Serbest girdiler": öğrencilerin tek kutuya yazdığı metinler ve sunucudaki ayrıştırma sonucu
@@ -80,13 +82,13 @@ const STATUS_LABEL: Record<Status, string> = {
   kota_bekliyor: 'Kota bekliyor',
   hata: 'Hata',
 };
-const STATUS_TONE: Record<Status, string> = {
+const STATUS_TONE: Record<Status, 'ok' | 'warn' | 'bad' | 'acc' | ''> = {
   bekliyor: '',
-  isleniyor: 'is-accent',
-  ayristirildi: 'is-ok',
+  isleniyor: 'acc',
+  ayristirildi: 'ok',
   icerik_yok: '',
-  kota_bekliyor: 'is-warn',
-  hata: 'is-bad',
+  kota_bekliyor: 'warn',
+  hata: 'bad',
 };
 const kurulLabel = (id: string) => {
   const m = /donem(\d)-kurul(\d+)/.exec(id);
@@ -167,6 +169,9 @@ export const ManageIntakeSection: React.FC<{ adminEmail: string }> = ({ adminEma
   const [limit, setLimit] = useState(PAGE);
   const [busy, setBusy] = useState<string | null>(null);
   const [openErr, setOpenErr] = useState<Set<string>>(new Set());
+  const [openId, setOpenId] = useState<string | null>(null);
+  const selection = useSelection<string>();
+  const [bulkBusy, setBulkBusy] = useState(false);
   const reqId = useRef(0);
   type ClusterStatus = { running: boolean; scheduled: boolean; aiQueue: number; aiRunning: boolean; lastRun: { at: string; ms: number; items: number; clusters: number } | null };
   const [kume, setKume] = useState<ClusterStatus | null>(null);
@@ -242,22 +247,201 @@ export const ManageIntakeSection: React.FC<{ adminEmail: string }> = ({ adminEma
 
   const c = data?.counts || {};
   const retryable = (data?.outdated || 0) + (c.hata || 0);
+  const items = data?.items || [];
+  const openRow = items.find((r) => r.raw.id === openId) || null;
+
+  const bulkReparse = async () => {
+    const ids = items.filter((r) => selection.has(r.raw.id)).map((r) => r.raw.id);
+    setBulkBusy(true);
+    let ok = 0;
+    let bad = 0;
+    for (const id of ids) {
+      const r = await safeJsonFetch(`/api/admin/question-intake/${encodeURIComponent(id)}/reparse`, { method: 'POST', headers });
+      if (r.ok) ok++; else bad++;
+    }
+    setBulkBusy(false);
+    if (bad) toast.error(`${ok} başarılı, ${bad} hata.`);
+    else { toast.success(`${ok} başarılı, 0 hata.`); selection.clear(); }
+    load(true);
+  };
+
+  const cols: Col<Row>[] = [
+    { key: 'txt', label: 'Girdi', main: true, render: (row) => row.raw.rawText || 'Metin yok, yalnız şık' },
+    {
+      key: 'st', label: 'Ayrıştırma', render: (row) => {
+        const st = row.state?.status || 'bekliyor';
+        const old = row.parse && row.parse.promptVersion !== data?.promptVersion;
+        return (
+          <span className="inline-flex gap-1 flex-wrap">
+            <Pill tone={STATUS_TONE[st]}>{STATUS_LABEL[st]}</Pill>
+            {old && <Pill tone="warn">Eski</Pill>}
+            {row.parse?.enjeksiyon_suphesi && <Pill tone="bad">Enjeksiyon</Pill>}
+          </span>
+        );
+      },
+    },
+    { key: 'ders', label: 'Ders', render: (row) => <span className="clip">{row.parse?.units?.[0]?.ders_tahmini || row.raw.discipline || '—'}</span> },
+    { key: 'g', label: 'Güven', right: true, render: (row) => { const u = row.parse?.units?.[0]; return u ? <span className={tone(u.ders_guveni)}>{pct(u.ders_guveni)}</span> : '—'; } },
+    { key: 'k', label: 'Kurul', muted: true, render: (row) => kurulLabel(row.raw.committeeId) },
+    { key: 't', label: 'Zaman', muted: true, render: (row) => timeLabel(row.raw.createdAt, true) },
+  ];
+
+  const renderDetail = (row: Row) => {
+    const st = row.state?.status || 'bekliyor';
+    const p = row.parse;
+    const old = p && p.promptVersion !== data?.promptVersion;
+    const errs = p?.validationErrors || [];
+    const errOpen = openErr.has(row.raw.id);
+    return (
+      <DetailLayout
+        main={
+          <>
+            <Card14 title={<span className="inline-flex items-center gap-1.5"><Quote className="w-4 h-4" aria-hidden="true" /> Öğrencinin yazdığı</span>}>
+              <div className="flex flex-col gap-2">
+                <p className="m-0 text-base text-ink leading-relaxed break-words whitespace-pre-wrap">{row.raw.rawText || <i className="text-ink-3">Metin yok, yalnız şık</i>}</p>
+                {row.raw.formOptions && row.raw.formOptions.length > 0 && (
+                  <ul className="m-0 p-0 list-none flex flex-col gap-0.5 text-sm text-ink-2">
+                    {row.raw.formOptions.map((o) => <li key={o.key}><b className="font-mono">{o.key})</b> {o.text}{row.raw.formClaimedAnswer === o.key && <span className="text-ok font-semibold"> · işaretledi</span>}</li>)}
+                  </ul>
+                )}
+                {row.raw.formClaimedAnswer && !row.raw.formOptions?.some((o) => o.key === row.raw.formClaimedAnswer) && (
+                  <p className="m-0 text-sm text-ink-2">İşaretlediği: <b>{row.raw.formClaimedAnswer}</b></p>
+                )}
+              </div>
+            </Card14>
+            <Card14 title={<span className="inline-flex items-center gap-1.5"><ListChecks className="w-4 h-4" aria-hidden="true" /> Ayrıştırma kanıtı</span>}>
+              <div className="flex flex-col gap-3 min-w-0">
+                {st === 'ayristirildi' && p ? (
+                  p.units.map((u, i) => (
+                    <div key={i} className={i > 0 ? 'pt-3 border-t border-line-soft' : ''}>
+                      <UnitView u={u} n={i + 1} of={p.units.length} />
+                    </div>
+                  ))
+                ) : st === 'icerik_yok' ? (
+                  <p className="m-0 text-sm text-ink-3">Metinde soruya ait bilgi bulunmadı (sohbet ya da şikâyet).</p>
+                ) : st === 'kota_bekliyor' || st === 'hata' ? (
+                  <div className="flex flex-col gap-1 text-sm">
+                    <p className={`m-0 flex gap-1.5 ${st === 'hata' ? 'text-bad-text' : 'text-warn'}`}>
+                      <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" aria-hidden="true" />
+                      {st === 'hata' ? `${row.state?.attempts || 0} denemede ayrıştırılamadı.` : `Ücretsiz kota ya da model yoğunluğu; ${row.state?.attempts || 0}. deneme bekliyor.`}
+                    </p>
+                    {row.state?.nextTryAt && st !== 'hata' && <p className="m-0 text-ink-3">Sonraki deneme: {timeLabel(row.state.nextTryAt, true)}</p>}
+                    {row.state?.lastError && <p className="m-0 text-xs font-mono text-ink-3 break-words">{row.state.lastError}</p>}
+                  </div>
+                ) : (
+                  <div className="flex flex-col gap-2" role="status">
+                    <span className="text-sm text-ink-3">{st === 'isleniyor' ? 'Ajanlar çalışıyor…' : 'Sırada bekliyor…'}</span>
+                    <span className="ms-progress is-indeterminate"><span /></span>
+                  </div>
+                )}
+                {p && (
+                  <div className="flex flex-wrap items-center gap-2 text-xs text-ink-3">
+                    <span className="font-mono break-words">{p.models.join(' → ')}</span>
+                    <span>· {timeLabel(p.createdAt, true)}</span>
+                    {errs.length > 0 && (
+                      <button
+                        type="button"
+                        className="m14-btn ghost"
+                        aria-expanded={errOpen}
+                        onClick={() => setOpenErr((s) => { const n = new Set(s); n.has(row.raw.id) ? n.delete(row.raw.id) : n.add(row.raw.id); return n; })}
+                      >
+                        <ChevronDown className={errOpen ? 'rotate-180' : ''} aria-hidden="true" /> Denetim notu ({errs.length})
+                      </button>
+                    )}
+                  </div>
+                )}
+                {errOpen && (
+                  <ul className="m-0 pl-4 text-xs text-ink-2 flex flex-col gap-0.5">
+                    {errs.map((e, i) => <li key={i} className="break-words">{e}</li>)}
+                  </ul>
+                )}
+              </div>
+            </Card14>
+          </>
+        }
+        side={
+          <Card14 title="Bilgi">
+            <FactList
+              items={[
+                { k: 'Durum', v: <Pill tone={STATUS_TONE[st]}>{STATUS_LABEL[st]}</Pill> },
+                ...(old ? [{ k: 'Sürüm', v: <Pill tone="warn">Eski: {p!.promptVersion}</Pill> }] : []),
+                ...(p?.enjeksiyon_suphesi ? [{ k: 'Uyarı', v: <Pill tone="bad"><ShieldAlert aria-hidden="true" /> Talimat enjeksiyonu</Pill> }] : []),
+                ...(row.state?.geriYazma === 'yazildi' ? [{ k: 'Soru kaydı', v: <Pill tone="ok"><Link2 aria-hidden="true" /> Soruya yazıldı</Pill> }] : []),
+                ...(row.state?.geriYazma === 'bekliyor' ? [{ k: 'Soru kaydı', v: <Pill tone="warn">Soruya yazılacak</Pill> }] : []),
+                { k: 'Kurul', v: kurulLabel(row.raw.committeeId) },
+                ...(row.raw.questionNumber ? [{ k: 'Soru no', v: row.raw.questionNumber }] : []),
+                { k: 'Zaman', v: timeLabel(row.raw.createdAt, true) },
+                { k: 'Gönderen', v: row.raw.author || '—' },
+                ...(row.raw.discipline ? [{ k: 'Formdaki ders', v: row.raw.discipline }] : []),
+                { k: 'Kaynak', v: row.raw.source },
+                ...(row.raw.questionId ? [{ k: 'Bağlı soru', v: <span className="font-mono text-xs [overflow-wrap:anywhere]">{row.raw.questionId}</span> }] : []),
+                { k: 'Kimlik', v: <span className="font-mono text-xs [overflow-wrap:anywhere]">{row.raw.id}</span> },
+              ]}
+            />
+          </Card14>
+        }
+      />
+    );
+  };
 
   return (
     <div className="flex flex-col gap-3 min-w-0">
+      <PageActions
+        note={
+          <span className="inline-flex flex-wrap items-center gap-1.5">
+            <Network className="w-4 h-4" aria-hidden="true" />
+            {kume?.lastRun
+              ? <span>Kümeleme: {kume.lastRun.items} öge → <b>{kume.lastRun.clusters} küme</b> · {kume.lastRun.ms} ms · {timeLabel(kume.lastRun.at, true)}</span>
+              : <span>Kümeleme henüz çalışmadı.</span>}
+            {kume?.running && <Pill tone="acc">Hesaplanıyor</Pill>}
+            {kume?.scheduled && !kume.running && <Pill>Sırada</Pill>}
+            {kume && kume.aiQueue > 0 && <Pill>AI kuyruğu {kume.aiQueue}</Pill>}
+          </span>
+        }
+      >
+        <button type="button" onClick={() => load()} className="m14-btn ghost"><RefreshCw aria-hidden="true" /> Yenile</button>
+        <button type="button" disabled={busy === 'backfill'} onClick={backfill} className="m14-btn" title="Serbest metin girdisi olmayan havuz sorularını da ayrıştırır (ders, konu, terimler); kümeleme bunları kullanır">
+          <DatabaseZap aria-hidden="true" /> Havuz sorularını ayrıştır
+        </button>
+        <button type="button" disabled={busy === '*' || !retryable} onClick={reparseOutdated} className="m14-btn" title="İstem sürümü eskimiş ve hata almış kayıtları yeniden ayrıştırır">
+          <RotateCcw aria-hidden="true" /> Eskileri yeniden ayrıştır{retryable ? ` (${retryable})` : ''}
+        </button>
+        <button type="button" disabled={busy === 'kume' || kume?.running} onClick={reclusterNow} className="m14-btn primary"><RefreshCw aria-hidden="true" /> Kümeleme hattını çalıştır</button>
+      </PageActions>
+
       <div className="ms-alert is-accent">
         <Info aria-hidden="true" />
         <span>
-          Öğrencilerin hızlı ekle kutusuna yazdığı metinler. Solda öğrencinin yazdığı (<b>değişmez ham kayıt</b>), sağda ücretsiz Gemini ajanlarının
-          çıkardığı ve kod denetiminden geçen alanlar. Bir ögenin üzerine gelince dayandığı alıntı ve güveni görünür; kanıtı metinde olmayan
-          öge zaten düşürülmüştür. İstem sürümü: <span className="font-mono">{data?.promptVersion || '…'}</span>
+          Öğrencilerin hızlı ekle kutusuna yazdığı metinler (<b>değişmez ham kayıt</b>) ve ücretsiz Gemini ajanlarının çıkardığı, kod denetiminden
+          geçen alanlar. Ayrıntıda her ögenin üzerine gelince dayandığı alıntı ve güveni görünür. İstem sürümü: <span className="font-mono">{data?.promptVersion || '…'}</span>
         </span>
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <div className="flex-1 min-w-0 basis-full sm:basis-[16rem]">
-          <SearchBox value={query} onChange={(v) => { setQuery(v); setLimit(PAGE); }} placeholder="Metin, ders ya da terim ara" count={data ? `${data.matched}` : undefined} className="w-full" />
-        </div>
+      <StatRow
+        stats={[
+          { label: 'Ayrıştırılmış', value: (c.ayristirildi || 0).toLocaleString('tr-TR'), tone: 'ok', onClick: () => { setFilter('ayristirildi'); setLimit(PAGE); } },
+          { label: 'Eski ayrıştırıcı', value: (data?.outdated || 0).toLocaleString('tr-TR'), tone: data?.outdated ? 'warn' : undefined, onClick: () => { setFilter('eski'); setLimit(PAGE); } },
+          { label: 'Sırada', value: pending.toLocaleString('tr-TR'), onClick: () => { setFilter('sirada'); setLimit(PAGE); } },
+          { label: 'Hata', value: (c.hata || 0).toLocaleString('tr-TR'), tone: c.hata ? 'bad' : undefined, onClick: () => { setFilter('hata'); setLimit(PAGE); } },
+        ]}
+      />
+
+      <Toolbar>
+        <Tabs14
+          label="Durum"
+          value={filter}
+          onChange={(v) => { setFilter(v); setLimit(PAGE); }}
+          options={[
+            { id: 'hepsi', label: 'Hepsi', n: data?.total },
+            { id: 'ayristirildi', label: 'Ayrıştırıldı', n: c.ayristirildi || 0 },
+            { id: 'sirada', label: 'Sırada', n: pending },
+            { id: 'kota_bekliyor', label: 'Kota bekliyor', n: c.kota_bekliyor || 0 },
+            { id: 'hata', label: 'Hata', n: c.hata || 0 },
+            { id: 'icerik_yok', label: 'İçerik yok', n: c.icerik_yok || 0 },
+            { id: 'eski', label: 'Eski sürüm', n: data?.outdated || 0 },
+          ]}
+        />
+        <SearchField value={query} onChange={(v) => { setQuery(v); setLimit(PAGE); }} placeholder="Metin, ders ya da terim ara" label="Girdi metninde ara" />
         <label className="ms-select-chip !h-9">
           <span className="sr-only">Kurul</span>
           <select value={committee} onChange={(e) => { setCommittee(e.target.value); setLimit(PAGE); }}>
@@ -265,39 +449,15 @@ export const ManageIntakeSection: React.FC<{ adminEmail: string }> = ({ adminEma
             {(data?.committees || []).map((id) => <option key={id} value={id}>{kurulLabel(id)}</option>)}
           </select>
         </label>
-        <button type="button" onClick={() => load()} className="ms-btn is-sm" aria-label="Yenile"><RefreshCw /> Yenile</button>
-        <button type="button" disabled={busy === 'backfill'} onClick={backfill} className="ms-btn is-sm is-tonal" title="Serbest metin girdisi olmayan havuz sorularını da ayrıştırır (ders, konu, terimler); kümeleme bunları kullanır">
-          <DatabaseZap /> Havuz sorularını ayrıştır
-        </button>
-        <button type="button" disabled={busy === '*' || !retryable} onClick={reparseOutdated} className="ms-btn is-sm is-tonal" title="İstem sürümü eskimiş ve hata almış kayıtları yeniden ayrıştırır">
-          <RotateCcw /> Eski ve hatalıları yeniden ayrıştır{retryable ? ` (${retryable})` : ''}
-        </button>
-      </div>
+        {data && <span className="text-sm text-ink-3 tabular-nums">{data.matched.toLocaleString('tr-TR')} sonuç</span>}
+      </Toolbar>
 
-      <div className="flex flex-wrap items-center gap-2 text-sm text-ink-3">
-        <Network className="w-4 h-4" aria-hidden />
-        {kume?.lastRun
-          ? <span>Kümeleme: {kume.lastRun.items} öge → <b className="text-ink-2">{kume.lastRun.clusters} küme</b> · {kume.lastRun.ms} ms · {timeLabel(kume.lastRun.at, true)}</span>
-          : <span>Kümeleme henüz çalışmadı.</span>}
-        {kume?.running && <span className="ms-tag is-accent">Hesaplanıyor</span>}
-        {kume?.scheduled && !kume.running && <span className="ms-tag">Sırada</span>}
-        {kume && kume.aiQueue > 0 && <span className="ms-tag" title="Yapay zekâ birleştirmesi bekleyen küme">AI kuyruğu {kume.aiQueue}</span>}
-        <button type="button" disabled={busy === 'kume' || kume?.running} onClick={reclusterNow} className="ms-btn is-ghost is-sm"><RefreshCw /> Kümeleri yeniden hesapla</button>
-      </div>
-
-      <ChipBar
-        label="Durum"
-        value={filter}
-        onChange={(v) => { setFilter(v); setLimit(PAGE); }}
-        options={[
-          { id: 'hepsi', label: 'Hepsi', n: data?.total },
-          { id: 'ayristirildi', label: 'Ayrıştırıldı', n: c.ayristirildi || 0 },
-          { id: 'sirada', label: 'Sırada', n: pending },
-          { id: 'kota_bekliyor', label: 'Kota bekliyor', n: c.kota_bekliyor || 0 },
-          { id: 'hata', label: 'Hata', n: c.hata || 0 },
-          { id: 'icerik_yok', label: 'İçerik yok', n: c.icerik_yok || 0 },
-          { id: 'eski', label: 'Eski sürüm', n: data?.outdated || 0 },
-        ]}
+      <BulkBar
+        count={selection.count}
+        noun="girdi"
+        busy={bulkBusy}
+        onClear={selection.clear}
+        actions={[{ label: 'Yeniden ayrıştır', kind: 'main', run: bulkReparse }]}
       />
 
       {data === null ? (
@@ -312,109 +472,30 @@ export const ManageIntakeSection: React.FC<{ adminEmail: string }> = ({ adminEma
         </section>
       ) : (
         <>
-          {data.items.map((row) => {
-            const st = row.state?.status || 'bekliyor';
-            const p = row.parse;
-            const old = p && p.promptVersion !== data.promptVersion;
-            const errs = p?.validationErrors || [];
-            const errOpen = openErr.has(row.raw.id);
-            return (
-              <section key={row.raw.id} className="ms-panel">
-                <header className="ms-panel-head">
-                  <span className="flex flex-wrap items-center gap-1.5 min-w-0">
-                    <span className={`ms-tag ${STATUS_TONE[st]}`}>{STATUS_LABEL[st]}</span>
-                    {old && <span className="ms-tag is-warn" title={`Ayrıştırıldığı sürüm: ${p!.promptVersion}`}>Eski sürüm</span>}
-                    {p?.enjeksiyon_suphesi && <span className="ms-tag is-bad"><ShieldAlert /> Talimat enjeksiyonu</span>}
-                    {row.state?.geriYazma === 'yazildi' && <span className="ms-tag is-ok" title="Ayrıştırma soru kaydına yazıldı"><Link2 /> Soruya yazıldı</span>}
-                    {row.state?.geriYazma === 'bekliyor' && <span className="ms-tag is-warn" title="Soru kaydı sunucuya ulaşınca yazılacak">Soruya yazılacak</span>}
-                    <span className="text-sm text-ink-2">{kurulLabel(row.raw.committeeId)}</span>
-                    {row.raw.questionNumber && <span className="text-sm text-ink-3">· Soru {row.raw.questionNumber}</span>}
-                    <span className="text-sm text-ink-3 tabular-nums">· {timeLabel(row.raw.createdAt, true)}</span>
-                    <span className="font-mono text-xs text-ink-3 truncate max-w-[22ch]" title={row.raw.id}>{row.raw.id}</span>
-                  </span>
-                  <span className="ms-panel-tools">
-                    <button type="button" disabled={busy === row.raw.id || st === 'isleniyor'} onClick={() => reparse(row.raw.id)} className="ms-btn is-sm">
-                      <RotateCcw /> Yeniden ayrıştır
-                    </button>
-                  </span>
-                </header>
-
-                <div className="p-3 grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))' }}>
-                  <article className="rounded-xl p-3 bg-canvas flex flex-col gap-2 min-w-0">
-                    <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-ink-3"><Quote className="w-3.5 h-3.5" /> Öğrencinin yazdığı</span>
-                    <p className="m-0 text-base text-ink leading-relaxed break-words whitespace-pre-wrap">{row.raw.rawText || <i className="text-ink-3">Metin yok, yalnız şık</i>}</p>
-                    {row.raw.formOptions && row.raw.formOptions.length > 0 && (
-                      <ul className="m-0 p-0 list-none flex flex-col gap-0.5 text-sm text-ink-2">
-                        {row.raw.formOptions.map((o) => <li key={o.key}><b className="font-mono">{o.key})</b> {o.text}{row.raw.formClaimedAnswer === o.key && <span className="text-ok font-semibold"> · işaretledi</span>}</li>)}
-                      </ul>
-                    )}
-                    {row.raw.formClaimedAnswer && !row.raw.formOptions?.some((o) => o.key === row.raw.formClaimedAnswer) && (
-                      <p className="m-0 text-sm text-ink-2">İşaretlediği: <b>{row.raw.formClaimedAnswer}</b></p>
-                    )}
-                    <p className="m-0 mt-auto pt-1 text-xs text-ink-3 break-words">
-                      {[row.raw.author, row.raw.discipline && `formdaki ders: ${row.raw.discipline}`, row.raw.source].filter(Boolean).join(' · ')}
-                      {row.raw.questionId && <> · bağlı soru <span className="font-mono">{row.raw.questionId}</span></>}
-                    </p>
-                  </article>
-
-                  <article className="rounded-xl p-3 border border-line-soft flex flex-col gap-3 min-w-0">
-                    <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-ink-3"><ListChecks className="w-3.5 h-3.5" /> Ayrıştırılan</span>
-                    {st === 'ayristirildi' && p ? (
-                      p.units.map((u, i) => (
-                        <div key={i} className={i > 0 ? 'pt-3 border-t border-line-soft' : ''}>
-                          <UnitView u={u} n={i + 1} of={p.units.length} />
-                        </div>
-                      ))
-                    ) : st === 'icerik_yok' ? (
-                      <p className="m-0 text-sm text-ink-3">Metinde soruya ait bilgi bulunmadı (sohbet ya da şikâyet).</p>
-                    ) : st === 'kota_bekliyor' || st === 'hata' ? (
-                      <div className="flex flex-col gap-1 text-sm">
-                        <p className={`m-0 flex gap-1.5 ${st === 'hata' ? 'text-bad-text' : 'text-warn'}`}>
-                          <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
-                          {st === 'hata' ? `${row.state?.attempts || 0} denemede ayrıştırılamadı.` : `Ücretsiz kota ya da model yoğunluğu; ${row.state?.attempts || 0}. deneme bekliyor.`}
-                        </p>
-                        {row.state?.nextTryAt && st !== 'hata' && <p className="m-0 text-ink-3">Sonraki deneme: {timeLabel(row.state.nextTryAt, true)}</p>}
-                        {row.state?.lastError && <p className="m-0 text-xs font-mono text-ink-3 break-words">{row.state.lastError}</p>}
-                      </div>
-                    ) : (
-                      <div className="flex flex-col gap-2" role="status">
-                        <span className="text-sm text-ink-3">{st === 'isleniyor' ? 'Ajanlar çalışıyor…' : 'Sırada bekliyor…'}</span>
-                        <span className="ms-progress is-indeterminate"><span /></span>
-                      </div>
-                    )}
-                    {p && (
-                      <div className="mt-auto flex flex-wrap items-center gap-2 text-xs text-ink-3">
-                        <span className="font-mono">{p.models.join(' → ')}</span>
-                        <span>· {timeLabel(p.createdAt, true)}</span>
-                        {errs.length > 0 && (
-                          <button
-                            type="button"
-                            className="ms-btn is-ghost is-sm"
-                            aria-expanded={errOpen}
-                            onClick={() => setOpenErr((s) => { const n = new Set(s); n.has(row.raw.id) ? n.delete(row.raw.id) : n.add(row.raw.id); return n; })}
-                          >
-                            <ChevronDown className={errOpen ? 'rotate-180' : ''} /> Denetim notu ({errs.length})
-                          </button>
-                        )}
-                      </div>
-                    )}
-                    {errOpen && (
-                      <ul className="m-0 pl-4 text-xs text-ink-2 flex flex-col gap-0.5">
-                        {errs.map((e, i) => <li key={i} className="break-words">{e}</li>)}
-                      </ul>
-                    )}
-                  </article>
-                </div>
-              </section>
-            );
-          })}
+          <DataTable rows={items} cols={cols} rowKey={(r) => r.raw.id} onOpen={(r) => setOpenId(r.raw.id)} selection={selection} activeKey={openId} minWidth={820} />
           {data.matched > data.items.length && (
-            <button type="button" onClick={() => setLimit((n) => n + PAGE)} className="ms-btn self-center">
-              <ChevronDown /> {data.matched - data.items.length} girdi daha
+            <button type="button" onClick={() => setLimit((n) => n + PAGE)} className="m14-btn self-center">
+              <ChevronDown aria-hidden="true" /> {data.matched - data.items.length} girdi daha
             </button>
           )}
         </>
       )}
+
+      <Drawer
+        open={!!openRow}
+        onClose={() => setOpenId(null)}
+        title={openRow ? (openRow.raw.rawText || 'Serbest girdi').slice(0, 80) : 'Serbest girdi'}
+        label="Serbest girdi ayrıntısı"
+        wide
+        head={<DetailNav list={items} current={openRow} same={(a, b) => a.raw.id === b.raw.id} onGo={(r) => setOpenId(r.raw.id)} />}
+        foot={openRow && (
+          <button type="button" disabled={busy === openRow.raw.id || openRow.state?.status === 'isleniyor'} onClick={() => reparse(openRow.raw.id)} className="m14-btn primary">
+            <RotateCcw aria-hidden="true" /> Yeniden ayrıştır
+          </button>
+        )}
+      >
+        {openRow && renderDetail(openRow)}
+      </Drawer>
     </div>
   );
 };

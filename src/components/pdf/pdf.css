@@ -308,7 +308,7 @@ body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-step { border-bottom-
    PDF Stüdyosu arayüzü (ps-*)
    =========================================================================== */
 .ps-overlay { position: fixed; inset: 0; z-index: 80; display: flex; align-items: stretch; justify-content: center; background: var(--color-scrim); }
-.ps-dialog { position: relative; width: 100%; height: 100%; max-width: 1360px; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; overflow: hidden; background: var(--color-white); color: var(--color-ink); font-family: var(--font-sans); }
+.ps-dialog { position: relative; width: 100%; height: 100%; max-width: 1360px; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr) auto; overflow: hidden; background: var(--color-white); color: var(--color-ink); font-family: var(--font-sans); }
 .ps-dialog svg { flex-shrink: 0; }
 @media (min-width: 640px) {
   .ps-overlay { align-items: center; padding: 18px; }
@@ -574,4 +574,11 @@ body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-step { border-bottom-
 @media (prefers-reduced-motion: reduce) {
   .ps-spin { animation: none; }
   .ps-knob, .ps-knob i, .ps-step, .ps-choice { transition: none; }
+}
+/* Çok dar telefon: alt çubuk sığsın (Ayarlar/Önizleme simgesiz, indir düğmesi esner ve kısalmaz) */
+@media (max-width: 380px) {
+  .ps-foot { gap: 6px; padding-inline: 8px; }
+  .ps-viewseg button { padding: 0 8px; gap: 4px; }
+  .ps-viewseg button svg { display: none; }
+  .ps-foot .ps-btn.is-primary { min-width: 0; padding: 0 10px; white-space: nowrap; }
 }

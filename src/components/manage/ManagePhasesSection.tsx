@@ -3,7 +3,9 @@ import { Search, Save, RotateCcw, FlaskConical, Code2, ChevronLeft, ChevronRight
 import { safeJsonFetch } from '../../services/api';
 import { QuestionInsightsPanel, clearInsightsCache } from '../QuestionInsightsPanel';
 import { toast } from '../ui/Toast';
-import { SearchBox, ChipBar, EmptyState, Drawer } from './consoleUi';
+import { EmptyState, Drawer } from './consoleUi';
+import { StatRow, Tabs14, SearchField, Toolbar, DataTable, Pill, DetailNav } from '../v14/pageKit';
+import { BulkBar, useSelection } from '../v14/manageKit';
 import { ApiService } from '../../services/api';
 
 /**
@@ -88,6 +90,9 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
     const t = window.setTimeout(() => setEq((q) => (q.deger === degerInput ? q : { ...q, deger: degerInput, sayfa: 1 })), 300);
     return () => window.clearTimeout(t);
   }, [degerInput]);
+  const picked = useSelection<string>();
+  const [bulkBusy, setBulkBusy] = useState(false);
+  const navIds = useMemo(() => Array.from(new Set((ex?.satirlar || []).map((r) => String(r.soru_id)))), [ex]);
   const curCat = cats.find((c) => c.id === eq.kategori);
   const cols = (ex?.alanlar || []).filter((k) => k !== 'soru_id');
 
@@ -262,113 +267,159 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
   const kay = detail?.kayitlar || {};
   const faz11Keys = new Set((test?.faz11 || []).map((s) => `${fold(s.kaynak)}#${s.sayfa}`));
 
+  const rows = ex?.satirlar || [];
+  const rowKeyOf = (r: Record<string, any>) => `${r.soru_id}|${rows.indexOf(r)}`;
+  const pickedIds = () => Array.from(new Set(Array.from(picked.sel).map((k) => k.split('|')[0])));
+  const bulkRereview = async (tur: 'slayt' | 'konu' | 'faz14') => {
+    const ids = pickedIds();
+    setBulkBusy(true);
+    let ok = 0;
+    let bad = 0;
+    for (const id of ids) {
+      try {
+        if (tur === 'faz14') await ApiService.reEvaluateUnchangedPastQuestionReviews(adminEmail, id);
+        else {
+          const r = await safeJsonFetch<any>(`/api/admin/phases/question/${encodeURIComponent(id)}/rereview`, { method: 'POST', headers, body: JSON.stringify({ tur }) });
+          if (!r.ok) throw new Error('hata');
+        }
+        ok++;
+      } catch {
+        bad++;
+      }
+    }
+    setBulkBusy(false);
+    if (bad) toast.error(`${ok} başarılı, ${bad} hata`);
+    else toast.success(`${ok} başarılı, 0 hata`);
+    if (ok) picked.clear();
+  };
+
   return (
     <div className="flex flex-col gap-3 min-w-0">
-      <div className="relative">
-        <SearchBox value={term} onChange={setTerm} placeholder="Soruya git: numara (#1529), kimlik ya da kökten bir parça" />
-        {term.trim().length >= 2 && (
-          <div className="ms-suggest">
-            {matches.length === 0 ? (
-              <p className="m-0 px-3 py-3 text-sm text-ink-3">Eşleşen soru yok.</p>
-            ) : (
-              matches.map((q) => (
-                <button key={q.id} type="button" onClick={() => { void load(q.id); setTerm(''); }} className="ms-suggest-row !min-h-[42px]">
-                  <span className="font-mono text-xs text-ink-3 shrink-0">#{q.questionNumber}</span>
-                  <span className="truncate">{stemOf(q).slice(0, 140)}</span>
-                </button>
-              ))
-            )}
-          </div>
-        )}
-      </div>
-
-      <ChipBar
-        label="Veri kategorisi"
-        value={eq.kategori}
-        onChange={(id) => {
-          setDegerInput('');
-          setEq({ kategori: id, alan: '', deger: '', sirala: '', yon: 'artan', sayfa: 1, boyut: eq.boyut });
-        }}
-        options={cats.map((c) => ({ id: c.id, label: c.label, n: c.soru }))}
+      <StatRow
+        stats={[
+          { label: 'Kategori', value: cats.length.toLocaleString('tr-TR') },
+          { label: 'Çıkmış soru', value: pool.length.toLocaleString('tr-TR') },
+          { label: curCat ? `${curCat.label} · kayıt` : 'Kayıt', value: (curCat?.satir ?? 0).toLocaleString('tr-TR') },
+          { label: 'Bu sorguda', value: (ex?.toplam ?? 0).toLocaleString('tr-TR') },
+        ]}
       />
 
-      <section className="ms-panel">
-        <header className="ms-panel-head">
-          <h2 className="ms-panel-title">{curCat?.label || 'Kategori'}</h2>
-          {curCat && <span className="text-sm text-ink-3 tabular-nums">{curCat.satir.toLocaleString('tr-TR')} kayıt · {curCat.soru.toLocaleString('tr-TR')} soru</span>}
-          {curCat?.desc && <p className="ms-panel-desc">{curCat.desc}</p>}
-        </header>
-        <div className="px-4 pt-3 pb-2 flex flex-col gap-2">
-          <div className="grid gap-2 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)_minmax(0,11rem)_auto]">
-            <select className="ms-input" value={eq.alan} onChange={(e) => setEq((q) => ({ ...q, alan: e.target.value, sayfa: 1 }))} aria-label="Sorgulanacak alan">
-              <option value="">Tüm alanlar</option>
-              {cols.map((k) => <option key={k} value={k}>{k}</option>)}
-            </select>
-            <input className="ms-input" value={degerInput} onChange={(e) => setDegerInput(e.target.value)} placeholder='Değer: içerir · "=yuksek" tam eşleşme · "boş" / "dolu"' aria-label="Sorgu değeri" />
-            <select className="ms-input" value={eq.sirala} onChange={(e) => setEq((q) => ({ ...q, sirala: e.target.value }))} aria-label="Sıralama alanı">
-              <option value="">Sıralama yok</option>
-              {cols.map((k) => <option key={k} value={k}>{k}</option>)}
-            </select>
-            <button type="button" onClick={() => setEq((q) => ({ ...q, yon: q.yon === 'artan' ? 'azalan' : 'artan' }))} className="ms-btn" aria-label="Sıralama yönü">
-              <ArrowUpDown /> {eq.yon === 'artan' ? 'Artan' : 'Azalan'}
-            </button>
-          </div>
-          {eq.alan && (ex?.dagilim?.length ?? 0) > 0 && (
-            <div className="ms-chipbar is-wrap">
-              <span className="text-sm text-ink-3 self-center">{eq.alan}:</span>
-              {ex!.dagilim.map((d) => (
-                <button key={d.deger} type="button" onClick={() => setDegerInput('=' + d.deger)} className={`ms-fchip !h-7 ${eq.deger === '=' + d.deger ? 'is-on' : ''}`}>
-                  {d.deger.length > 40 ? d.deger.slice(0, 40) + '…' : d.deger} <span className="n">{d.sayi}</span>
-                </button>
-              ))}
+      {cats.length > 0 && (
+        <Tabs14
+          label="Veri kategorisi"
+          value={eq.kategori}
+          onChange={(id) => {
+            setDegerInput('');
+            picked.clear();
+            setEq({ kategori: id, alan: '', deger: '', sirala: '', yon: 'artan', sayfa: 1, boyut: eq.boyut });
+          }}
+          options={cats.map((c) => ({ id: c.id, label: c.label, n: c.soru }))}
+        />
+      )}
+      {curCat?.desc && <p className="m-0 text-sm text-ink-3">{curCat.desc}</p>}
+
+      <Toolbar>
+        <div className="relative min-w-0" style={{ flex: '1 1 16rem' }}>
+          <SearchField value={term} onChange={setTerm} placeholder="Soruya git: numara (#1529), kimlik ya da kök" label="Soruya git" />
+          {term.trim().length >= 2 && (
+            <div className="ms-suggest">
+              {matches.length === 0 ? (
+                <p className="m-0 px-3 py-3 text-sm text-ink-3">Eşleşen soru yok.</p>
+              ) : (
+                matches.map((q) => (
+                  <button key={q.id} type="button" onClick={() => { void load(q.id); setTerm(''); }} className="ms-suggest-row !min-h-[42px]">
+                    <span className="font-mono text-xs text-ink-3 shrink-0">#{q.questionNumber}</span>
+                    <span className="truncate">{stemOf(q).slice(0, 140)}</span>
+                  </button>
+                ))
+              )}
             </div>
           )}
         </div>
-        <div className="overflow-x-auto">
-          <table className={`ms-table ${exLoading ? 'opacity-60' : ''}`}>
-            <thead>
-              <tr>
-                <th scope="col">Soru</th>
-                {cols.map((k) => <th key={k} scope="col">{k}</th>)}
-              </tr>
-            </thead>
-            <tbody>
-              {(ex?.satirlar || []).map((r, i) => (
-                <tr key={i} onClick={() => load(String(r.soru_id))} className={`is-button ${r.soru_id === selId ? 'is-on' : ''}`}>
-                  <td className="max-w-[22rem]">
-                    <span className="block truncate" title={r._kok}>{r._kok || <span className="font-mono text-ink-3">{r.soru_id}</span>}</span>
-                    {(r._durum || r._elle) && (
-                      <span className="flex gap-1 pt-0.5">
-                        {r._durum && <span className={`ms-tag ${r._durum === 'kaldırıldı' ? 'is-bad' : 'is-warn'}`}>{r._durum}</span>}
-                        {r._elle && <span className="ms-tag is-warn">Elle düzeltildi</span>}
-                      </span>
-                    )}
-                  </td>
-                  {cols.map((k) => (
-                    <td key={k} className="max-w-[16rem]">
-                      <span className="block truncate" title={String(r[k] ?? '')}>{r[k] === true ? 'evet' : r[k] === false ? 'hayır' : String(r[k] ?? '—')}</span>
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          {ex && ex.toplam === 0 && <EmptyState icon={Search} title="Bu sorguya uyan kayıt yok" />}
-          {!ex && <div className="p-3 flex flex-col gap-2">{[0, 1, 2, 3].map((i) => <div key={i} className="h-8 rounded-lg ms-shimmer" />)}</div>}
+        <select className="ms-input !w-auto max-w-full" value={eq.alan} onChange={(e) => setEq((q) => ({ ...q, alan: e.target.value, sayfa: 1 }))} aria-label="Sorgulanacak alan">
+          <option value="">Tüm alanlar</option>
+          {cols.map((k) => <option key={k} value={k}>{k}</option>)}
+        </select>
+        <input className="ms-input min-w-0" style={{ flex: '1 1 12rem' }} value={degerInput} onChange={(e) => setDegerInput(e.target.value)} placeholder='Değer: içerir · "=yuksek" tam · "boş" / "dolu"' aria-label="Sorgu değeri" />
+        <select className="ms-input !w-auto max-w-full" value={eq.sirala} onChange={(e) => setEq((q) => ({ ...q, sirala: e.target.value }))} aria-label="Sıralama alanı">
+          <option value="">Sıralama yok</option>
+          {cols.map((k) => <option key={k} value={k}>{k}</option>)}
+        </select>
+        <button type="button" onClick={() => setEq((q) => ({ ...q, yon: q.yon === 'artan' ? 'azalan' : 'artan' }))} className="m14-btn" aria-label="Sıralama yönü">
+          <ArrowUpDown /> {eq.yon === 'artan' ? 'Artan' : 'Azalan'}
+        </button>
+      </Toolbar>
+      {eq.alan && (ex?.dagilim?.length ?? 0) > 0 && (
+        <div className="ms-chipbar is-wrap">
+          <span className="text-sm text-ink-3 self-center">{eq.alan}:</span>
+          {ex!.dagilim.map((d) => (
+            <button key={d.deger} type="button" onClick={() => setDegerInput('=' + d.deger)} className={`ms-fchip !h-7 ${eq.deger === '=' + d.deger ? 'is-on' : ''}`}>
+              {d.deger.length > 40 ? d.deger.slice(0, 40) + '…' : d.deger} <span className="n">{d.sayi}</span>
+            </button>
+          ))}
         </div>
-        {ex && ex.toplam > 0 && (
-          <footer className="flex flex-wrap items-center justify-between gap-2 px-4 py-2.5 border-t border-line-soft text-sm text-ink-3">
-            <span className="tabular-nums">{ex.toplam.toLocaleString('tr-TR')} kayıt · sayfa {ex.sayfa} / {Math.max(1, Math.ceil(ex.toplam / ex.boyut))} · satıra dokununca ayrıntı açılır</span>
-            <div className="flex items-center gap-1">
-              <select className="ms-input is-sm !w-auto" value={eq.boyut} onChange={(e) => setEq((q) => ({ ...q, boyut: Number(e.target.value), sayfa: 1 }))} aria-label="Sayfa boyutu">
-                {[25, 50, 100, 200].map((n) => <option key={n} value={n}>{n} satır</option>)}
-              </select>
-              <button type="button" disabled={eq.sayfa <= 1} onClick={() => setEq((q) => ({ ...q, sayfa: q.sayfa - 1 }))} className="ms-btn is-sm is-icon is-ghost" aria-label="Önceki sayfa"><ChevronLeft /></button>
-              <button type="button" disabled={eq.sayfa * eq.boyut >= ex.toplam} onClick={() => setEq((q) => ({ ...q, sayfa: q.sayfa + 1 }))} className="ms-btn is-sm is-icon is-ghost" aria-label="Sonraki sayfa"><ChevronRight /></button>
-            </div>
-          </footer>
-        )}
-      </section>
+      )}
+
+      <BulkBar
+        count={picked.count}
+        noun="satır"
+        busy={bulkBusy}
+        onClear={picked.clear}
+        actions={[
+          { label: 'Yeniden değerlendir · slayt', kind: 'main', run: () => bulkRereview('slayt') },
+          { label: 'Yeniden değerlendir · konu', run: () => bulkRereview('konu') },
+          { label: 'Faz 14 · soru düzeltme', run: () => bulkRereview('faz14') },
+        ]}
+      />
+
+      {!ex ? (
+        <div className="p-3 flex flex-col gap-2">{[0, 1, 2, 3].map((i) => <div key={i} className="h-8 rounded-lg ms-shimmer" />)}</div>
+      ) : (
+        <DataTable<Record<string, any>>
+          rows={rows}
+          rowKey={rowKeyOf}
+          busy={exLoading}
+          selection={picked}
+          activeKey={selId ? rows.map(rowKeyOf).find((k) => k.split('|')[0] === selId) || null : null}
+          onOpen={(r) => void load(String(r.soru_id))}
+          empty={<EmptyState icon={Search} title="Bu sorguya uyan kayıt yok" />}
+          minWidth={Math.max(640, 360 + cols.length * 160)}
+          cols={[
+            {
+              key: '_kok',
+              label: 'Soru',
+              main: true,
+              width: '22rem',
+              render: (r) => (
+                <>
+                  {r._durum && <Pill tone={r._durum === 'kaldırıldı' ? 'bad' : 'warn'}>{r._durum}</Pill>}{' '}
+                  {r._elle && <Pill tone="warn">Elle düzeltildi</Pill>}{' '}
+                  <span title={r._kok}>{r._kok || <span className="font-mono text-ink-3">{r.soru_id}</span>}</span>
+                </>
+              ),
+            },
+            ...cols.map((k) => ({
+              key: k,
+              label: k,
+              render: (r: Record<string, any>) => (
+                <span className="block truncate max-w-[16rem]" title={String(r[k] ?? '')}>{r[k] === true ? 'evet' : r[k] === false ? 'hayır' : String(r[k] ?? '—')}</span>
+              ),
+            })),
+          ]}
+        />
+      )}
+      {ex && ex.toplam > 0 && (
+        <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-ink-3">
+          <span className="tabular-nums">{ex.toplam.toLocaleString('tr-TR')} kayıt · sayfa {ex.sayfa} / {Math.max(1, Math.ceil(ex.toplam / ex.boyut))}</span>
+          <div className="flex items-center gap-1">
+            <select className="ms-input is-sm !w-auto" value={eq.boyut} onChange={(e) => setEq((q) => ({ ...q, boyut: Number(e.target.value), sayfa: 1 }))} aria-label="Sayfa boyutu">
+              {[25, 50, 100, 200].map((n) => <option key={n} value={n}>{n} satır</option>)}
+            </select>
+            <button type="button" disabled={eq.sayfa <= 1} onClick={() => setEq((q) => ({ ...q, sayfa: q.sayfa - 1 }))} className="m14-btn icon ghost" aria-label="Önceki sayfa"><ChevronLeft /></button>
+            <button type="button" disabled={eq.sayfa * eq.boyut >= ex.toplam} onClick={() => setEq((q) => ({ ...q, sayfa: q.sayfa + 1 }))} className="m14-btn icon ghost" aria-label="Sonraki sayfa"><ChevronRight /></button>
+          </div>
+        </div>
+      )}
 
       <Drawer
         open={!!detail}
@@ -377,9 +428,21 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
         label="Faz verisi ayrıntısı"
         title={selQ ? `#${selQ.questionNumber}` : 'Soru'}
         head={
-          <button type="button" onClick={() => setShowRaw((v) => !v)} className="ms-btn is-sm is-ghost">
-            <Code2 /> {showRaw ? 'Kartlar' : 'Ham JSON'}
-          </button>
+          <>
+            <DetailNav<string> list={navIds} current={selId} same={(x, y) => x === y} onGo={(id) => void load(id)} />
+            <button type="button" onClick={() => setShowRaw((v) => !v)} className="m14-btn ghost">
+              <Code2 /> {showRaw ? 'Kartlar' : 'Ham JSON'}
+            </button>
+          </>
+        }
+        foot={
+          detail ? (
+            <>
+              <button type="button" disabled={busy !== ''} onClick={runTest} className="m14-btn"><FlaskConical /> Arama testi çalıştır</button>
+              <button type="button" disabled={busy !== ''} onClick={() => save(false)} className="m14-btn primary"><Save /> Düzeltmeyi kaydet</button>
+              <button type="button" disabled={busy !== ''} onClick={async () => { await save(false); const i = navIds.indexOf(selId || ''); if (i >= 0 && navIds.length > 1) void load(navIds[(i + 1) % navIds.length]); }} className="m14-btn primary">Kaydet ve sonraki</button>
+            </>
+          ) : undefined
         }
       >
       {detail && (

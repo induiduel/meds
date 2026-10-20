@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 99,
-  "baslik": "Sesli ders sonunda kutlama",
+  "onem": 100,
+  "baslik": "İyileştirmeler ve düzeltmeler",
   "maddeler": [
-    "Sesli ders bitince animasyonlu kutlama ve teşvik sözü gösterilir; pekiştirme önerisi aynı pencerede.",
-    "Oynatma listesinde sonraki ders, pencereden 'Sonraki derse geç' ile başlar."
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "eklenen": [
-    "Sesli ders bitince animasyonlu kutlama ve teşvik sözü gösterilir; pekiştirme önerisi aynı pencerede.",
-    "Oynatma listesinde sonraki ders, pencereden 'Sonraki derse geç' ile başlar."
+  "eklenen": [],
+  "degisen": [
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

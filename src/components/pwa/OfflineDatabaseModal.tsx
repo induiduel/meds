@@ -252,7 +252,7 @@ export const OfflineDatabaseModal: React.FC<OfflineDatabaseModalProps> = ({ isOp
       onClose={onClose}
       width={isAdmin ? 'max-w-lg' : 'max-w-md'}
     >
-      <button type="button" className="ui-btn ui-btn-primary" style={{ width: '100%', marginBottom: 12 }}
+      <button type="button" className="ui-btn is-primary" style={{ width: '100%', marginBottom: 12, whiteSpace: 'normal', height: 'auto', minHeight: 44, padding: '10px 14px', lineHeight: 1.3, textAlign: 'center' }}
         onClick={() => { onClose(); void import('../../router').then((m) => m.navigateTo('/cevrimdisi')); }}>
         Çevrimdışı merkezini aç — dersleri seç, indir, yönet
       </button>

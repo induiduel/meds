@@ -49,11 +49,11 @@
 :root[data-design='v12'][data-v13='on'] .sh-main .bs-ic svg { width: 17px; height: 17px; }
 :root[data-design='v12'][data-v13='on'] .sh-main .bs-desc { font-size: 13.5px; line-height: 1.45; max-width: 70ch; }
 :root[data-design='v12'][data-v13='on'] .sh-main .bs-ozet { grid-column: 2; }
-@media (max-width: 767px) {
+@media (max-width: 767px), (max-height: 500px) {
   :root[data-design='v12'][data-v13='on'] .sh-main .bs-desc { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 13px; }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px), (max-height: 500px) {
   /* Spotlar istatistik paneli: iki kart yan yana, yalnız başlık + ilerleme; "kaldığın yer" ve devam düğmesi gizli (kartın kendisi dokunulabilir değilse düğme kalsın diye ikinci düğme küçülür) */
   :root[data-design='v12'][data-v13='on'] .sh-main .scd-panel { padding: 10px; gap: 8px; }
   :root[data-design='v12'][data-v13='on'] .sh-main .scd-ust-bilgi { flex-direction: row; align-items: center; gap: 8px; }
@@ -84,4 +84,48 @@
   :root[data-design='v12'][data-v13='on'] .sh-main .u12-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 4px 10px; }
   :root[data-design='v12'][data-v13='on'] .sh-main .u12-head .u12-av-wrap { transform: scale(.8); transform-origin: left center; }
   :root[data-design='v12'][data-v13='on'] .sh-main .u12-head .u12-grow p { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 12px; }
+}
+
+/* ── Telefon kompakt 2. tur ── */
+@media (max-width: 767px), (max-height: 500px) {
+  /* Bitirdiklerim: simge gizli, açıklama 2 satır; modül sekmeleri tek kaydırılabilir satır; özet kutuları alçak, açıklamasız */
+  :root[data-design='v12'][data-v13='on'] .sh-main .bd-ic { display: none; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .bd-bas p { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 13px; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .bd-modul { display: flex; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; gap: 6px; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .bd-modul::-webkit-scrollbar { display: none; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .bd-modul > button { flex: none; min-height: 38px; padding-inline: 10px; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .bd-ozet { gap: 6px; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .bd-kart { padding: 10px; min-height: 0; gap: 2px; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .bd-kart em { display: none; }
+
+  /* Ders notları satırı: durum rozeti künyenin yanında, eylemler aynı satırın sağında (iki satır yerine tek blok) */
+  :root[data-design='v12'][data-v13='on'] .sh-main .r12-row.is-wrap { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 4px 8px; padding: 8px 10px; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .r12-row.is-wrap > .r12-no { grid-row: span 2; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .r12-row.is-wrap > .r12-row-main { grid-column: 2 / -1; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .r12-row.is-wrap > .r12-badge { grid-column: 2; justify-self: start; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .r12-row.is-wrap > .r12-acts { grid-column: 3; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .r12-row.is-wrap .r12-ib { width: 34px; height: 34px; }
+
+  /* Patoloji Check Up başı: simge gizli, açıklama 2 satır */
+  :root[data-design='v12'][data-v13='on'] .sh-main .cu-ic { display: none; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .cu-bas-t > p:first-child { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 13px; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .cu-bolum { min-height: 0; }
+
+  /* Soru havuzu: sayfa açıklaması gizli (kapsül adı yeterli), araç satırı tek satır */
+  :root[data-design='v12'][data-v13='on'] .sh-main .q12-head-t { display: none; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .q12-head-a .q12-kurul { flex: 1 1 auto; min-width: 0; }
+
+  /* Deneme sınavı kaynakları: iki sütun küçük kart */
+  :root[data-design='v12'][data-v13='on'] .tb-srcs, :root[data-design='v12'][data-v13='on'] .tb-src-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 6px; }
+  :root[data-design='v12'][data-v13='on'] .tb-src { padding: 8px; gap: 6px; min-height: 0; }
+  :root[data-design='v12'][data-v13='on'] .tb-src small, :root[data-design='v12'][data-v13='on'] .tb-src-d { display: none; }
+}
+@media (max-width: 767px), (max-height: 500px) {
+  :root[data-design='v12'][data-v13='on'] .tb-src { grid-template-columns: minmax(0, 1fr) auto; }
+  :root[data-design='v12'][data-v13='on'] .tb-src .tb-src-ic { display: none; }
+}
+@media (max-width: 767px), (max-height: 500px) {
+  :root[data-design='v12'][data-v13='on'] .tb-src { grid-template-columns: minmax(0, 1fr) auto auto; gap: 6px; }
+  :root[data-design='v12'][data-v13='on'] .tb-src-n { font-size: 11px; }
+  :root[data-design='v12'][data-v13='on'] .sh-main .cu .cu-bas .cu-bas-t > p:not(.cu-ozet) { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 13px; }
 }

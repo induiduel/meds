@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Search, X } from 'lucide-react';
+import { Search, X, ChevronLeft } from 'lucide-react';
 
 /**
  * Yönetim konsolunun ortak parçaları. Görünüm index.css içindeki
@@ -170,16 +170,26 @@ export const Drawer: React.FC<{
     };
   }, [open, onClose]);
   if (!open) return null;
+  // v14 kabuğunda çekmece yerine içerik alanının tamamını kaplayan çalışma alanı (Listeye dön)
+  const ws = typeof document !== 'undefined' && document.documentElement.classList.contains('m14-on');
   return createPortal(
     <>
       <div className="ms-drawer-scrim" onClick={onClose} aria-hidden="true" />
-      <aside ref={ref} tabIndex={-1} role="dialog" aria-modal="true" aria-label={label || (typeof title === 'string' ? title : undefined)} className={`ms-drawer outline-none ${wide ? 'is-wide' : ''}`}>
+      <aside ref={ref} tabIndex={-1} role="dialog" aria-modal="true" aria-label={label || (typeof title === 'string' ? title : undefined)} className={`ms-drawer outline-none ${wide ? 'is-wide' : ''} ${ws ? 'is-ws14' : ''}`}>
         <div className="ms-drawer-head">
+          {ws && (
+            <button type="button" onClick={onClose} className="m14-btn ws14-back">
+              <ChevronLeft aria-hidden="true" />
+              Geri dön
+            </button>
+          )}
           <h2 className="ms-drawer-title truncate">{title}</h2>
           {head}
-          <button type="button" onClick={onClose} className="ms-btn is-ghost is-icon" aria-label="Kapat">
-            <X />
-          </button>
+          {!ws && (
+            <button type="button" onClick={onClose} className="ms-btn is-ghost is-icon" aria-label="Kapat">
+              <X />
+            </button>
+          )}
         </div>
         <div className="ms-drawer-body">{children}</div>
         {foot && <div className="ms-drawer-foot">{foot}</div>}

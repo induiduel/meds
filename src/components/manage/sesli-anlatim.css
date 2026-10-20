@@ -87,3 +87,11 @@
   .sa-plan-list li { grid-template-columns: auto minmax(0, 1fr) minmax(0, 1.35fr) 34px; grid-template-areas: "chk t t drm" ". sag ses dinle"; }
   .sa-plan-drm { align-self: start; }
 }
+
+/* v14: üretim kaynakları kartı (ücretli bütçe + yerel işçiler) */
+.sa-kaynak { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 10px; min-width: 0; }
+.sa-kaynak .sa-paid { grid-column: auto; display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border: 1px solid var(--color-line); border-radius: 12px; min-width: 0; }
+.sa-kaynak .sa-paid b { font-variant-numeric: tabular-nums; }
+.sa-kaynak .sa-paid span { font-size: .8rem; color: var(--color-ink-3); }
+.sa-kaynak .sa-paid.is-warn b { color: var(--color-bad); }
+.sa-wrap .sa-audio { max-width: min(320px, 100%); }

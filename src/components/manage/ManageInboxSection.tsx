@@ -1,8 +1,11 @@
 import React, { useMemo, useState } from 'react';
-import { Flag, MessageSquare, FileText, Bell, Eye, Check, Send, Pencil, Trash2, Inbox, CheckCircle2, ChevronDown, Smartphone, User, ExternalLink } from 'lucide-react';
+import { Flag, MessageSquare, FileText, Bell, Eye, Check, Send, Pencil, Trash2, Inbox, CheckCircle2, ChevronDown, Smartphone, ExternalLink } from 'lucide-react';
 import type { QuestionItem, AdminNotification } from '../../types';
 import type { InboxReport, InboxComment } from '../../services/manageConsoleService';
-import { Panel, EmptyState, SearchBox, ChipBar, Switch, ConfirmButton, dayLabel, timeLabel } from './consoleUi';
+import { EmptyState, Switch, ConfirmButton, timeLabel, Drawer, Field } from './consoleUi';
+import { PageActions, StatRow, Tabs14, SearchField, Toolbar, DataTable, Pill, DetailNav, DetailLayout, FactList, Card14, type Col } from '../v14/pageKit';
+import { BulkBar, useSelection } from '../v14/manageKit';
+import { toast } from '../ui/Toast';
 import { AdminMobileNotificationCard } from '../AdminMobileNotificationCard';
 import { inAppPath } from '../../services/universalRedirectService';
 
@@ -32,10 +35,10 @@ interface QueueItem {
   draft?: QuestionItem;
 }
 
-const KIND_META: Record<Kind, { icon: React.ElementType; tone: string; label: string }> = {
-  report: { icon: Flag, tone: 'is-bad', label: 'Hata bildirimi' },
-  comment: { icon: MessageSquare, tone: 'is-accent', label: 'Yorum' },
-  draft: { icon: FileText, tone: 'is-warn', label: 'Taslak' },
+const KIND_META: Record<Kind, { icon: React.ElementType; tone: 'bad' | 'acc' | 'warn' | ''; label: string }> = {
+  report: { icon: Flag, tone: 'bad', label: 'Hata bildirimi' },
+  comment: { icon: MessageSquare, tone: 'acc', label: 'Yorum' },
+  draft: { icon: FileText, tone: 'warn', label: 'Taslak' },
   notice: { icon: Bell, tone: '', label: 'Sistem uyarısı' },
 };
 
@@ -164,219 +167,275 @@ export const ManageInboxSection: React.FC<Props> = ({
 
   const [editingReport, setEditingReport] = useState<{ report: InboxReport; reason: string; details: string } | null>(null);
   const [editingComment, setEditingComment] = useState<{ comment: InboxComment; text: string } | null>(null);
+  const [openKey, setOpenKey] = useState<string | null>(null);
+  const selection = useSelection<string>();
+  const [bulkBusy, setBulkBusy] = useState(false);
+  const openItem = all.find((i) => i.key === openKey) || null;
+  const picked = () => all.filter((i) => selection.has(i.key));
 
-  // Gün başlıklarıyla gruplanmış satırlar
-  const rows: React.ReactNode[] = [];
-  let lastDay = '';
-  for (const item of shown) {
-    const day = dayLabel(item.at);
-    if (day !== lastDay) {
-      rows.push(
-        <li key={`day-${day}-${item.key}`} className="ms-day" aria-hidden="true">
-          {day}
-        </li>,
-      );
-      lastDay = day;
+  /** Seçili ögelerde tek öge işleyicisini sırayla çalıştırır */
+  const runBulk = async (pick: (i: QueueItem) => boolean, fn: (i: QueueItem) => unknown) => {
+    const items = picked().filter(pick);
+    if (!items.length) { toast.error('Seçimde bu işleme uygun öge yok.'); return; }
+    setBulkBusy(true);
+    let ok = 0;
+    let bad = 0;
+    for (const it of items) {
+      try { await fn(it); ok++; } catch { bad++; }
     }
-    rows.push(
-      <QueueRow
-        key={item.key}
-        item={item}
-        busyAction={busyAction}
-        onReview={onReview}
-        onResolve={onResolve}
-        onStartEditReport={(r) => setEditingReport({ report: r, reason: r.reason || '', details: r.details || '' })}
-        onDeleteReport={onDeleteReport}
-        onStartEditComment={(c) => setEditingComment({ comment: c, text: c.text || '' })}
-        onDeleteComment={onDeleteComment}
-        onEditDraft={onEditDraft}
-        onPublishDraft={onPublishDraft}
-        onDeleteDraft={onDeleteDraft}
-        onNavigateToData={onNavigateToData}
-      />
-    );
-  }
+    setBulkBusy(false);
+    if (bad) toast.error(`${ok} başarılı, ${bad} hata.`);
+    else { toast.success(`${ok} başarılı, 0 hata.`); selection.clear(); }
+  };
+
+  const cols: Col<QueueItem>[] = [
+    {
+      key: 'title', label: 'Başlık', main: true, render: (i) => (
+        <>{i.unread && <span className="sr-only">Yeni: </span>}{i.title}</>
+      ),
+    },
+    {
+      key: 'kind', label: 'Tür', render: (i) => (
+        <span className="inline-flex gap-1 flex-wrap">
+          <Pill tone={KIND_META[i.kind].tone}>{KIND_META[i.kind].label}</Pill>
+          {i.done && <Pill tone="ok">Çözüldü</Pill>}
+          {i.unread && <Pill tone="acc">Yeni</Pill>}
+        </span>
+      ),
+    },
+    { key: 'from', label: 'Gönderen', render: (i) => <span className="clip">{i.sender || 'Bilinmiyor'}</span> },
+    { key: 'ctx', label: 'Bağlam', muted: true, render: (i) => <span className="clip">{i.meta[0] || '—'}</span>, width: '22%' },
+    { key: 'at', label: 'Zaman', muted: true, render: (i) => timeLabel(i.at) || '—' },
+  ];
+
+  const deleteActions = [
+    onDeleteReport && { label: 'Bildirimleri sil', test: (i: QueueItem) => !!i.report, fn: (i: QueueItem) => onDeleteReport(i.report!) },
+    { label: 'Yorumları sil', test: (i: QueueItem) => !!i.comment, fn: (i: QueueItem) => onDeleteComment(i.comment!) },
+    { label: 'Taslakları sil', test: (i: QueueItem) => !!i.draft, fn: (i: QueueItem) => onDeleteDraft(i.draft!) },
+  ].filter(Boolean) as { label: string; test: (i: QueueItem) => boolean; fn: (i: QueueItem) => unknown }[];
+  const sel = picked();
 
   return (
     <div className="flex flex-col gap-3 min-w-0">
-      <div className="flex flex-col md:flex-row md:items-center gap-2">
-        <SearchBox value={query} onChange={(v) => { setQuery(v); setLimit(PAGE); }} placeholder="Kuyrukta ara: bildirim, yorum, taslak, kişi" className="flex-1" />
+      <PageActions>
+        {resolvedCount > 0 && <Switch checked={showResolved} onChange={setShowResolved} label={`Çözülenleri göster (${resolvedCount})`} />}
         <button
           type="button"
           onClick={() => setShowNotificationCard(!showNotificationCard)}
           aria-pressed={showNotificationCard}
-          className={`ui-btn is-sm shrink-0 ${showNotificationCard ? 'is-primary' : 'is-tonal'}`}
+          className={`m14-btn ${showNotificationCard ? 'primary' : ''}`}
           title="Telefonda (nofrostlife.com.tr) yönetici bildirim ayarları"
         >
-          <Smartphone />
+          <Smartphone aria-hidden="true" />
           <span>{showNotificationCard ? 'Bildirim ayarlarını kapat' : 'Telefon bildirimleri'}</span>
         </button>
-        {resolvedCount > 0 && <Switch checked={showResolved} onChange={setShowResolved} label={`Çözülenleri göster (${resolvedCount})`} />}
-      </div>
+      </PageActions>
 
       {showNotificationCard && (
         <div className="animate-fade-in my-1">
           <AdminMobileNotificationCard onClose={() => setShowNotificationCard(false)} />
         </div>
       )}
-      <ChipBar
-        label="Tür"
-        value={filter}
-        onChange={(v) => { setFilter(v); setLimit(PAGE); }}
-        options={[
-          { id: 'all', label: 'Tümü', n: base.length },
-          { id: 'report', label: 'Hata bildirimi', n: count('report'), icon: Flag },
-          { id: 'comment', label: 'Yorum', n: count('comment'), icon: MessageSquare },
-          { id: 'draft', label: 'Taslak', n: count('draft'), icon: FileText },
-          { id: 'notice', label: 'Sistem uyarısı', n: count('notice'), icon: Bell },
+
+      <StatRow
+        stats={[
+          { label: 'Bekleyen bildirim', value: pendingReports, tone: pendingReports ? 'bad' : 'ok', onClick: () => setFilter('report') },
+          { label: 'Taslak', value: drafts.length, tone: drafts.length ? 'warn' : undefined, onClick: () => setFilter('draft') },
+          { label: 'Yorum', value: comments.length, onClick: () => setFilter('comment') },
+          { label: 'Okunmamış uyarı', value: notifications.filter((n) => !n.isRead).length, onClick: () => setFilter('notice') },
         ]}
       />
 
-      <Panel flush>
-        {loading && all.length === 0 ? (
-          <div className="px-4 py-6 flex flex-col gap-2" role="status" aria-label="Kuyruk yükleniyor">
-            {[0, 1, 2].map((i) => (
-              <div key={i} className="h-14 rounded-xl bg-field ms-shimmer" />
-            ))}
-          </div>
-        ) : shown.length === 0 ? (
-          q ? (
-            <EmptyState icon={Inbox} title="Aramaya uyan kayıt yok">“{query}” için kuyrukta bir şey bulunamadı.</EmptyState>
-          ) : (
-            <EmptyState icon={CheckCircle2} title="Kuyruk boş">
-              {filter === 'all' ? 'Bekleyen bildirim, yorum, taslak ya da uyarı yok.' : `Bu türde bekleyen ${KIND_META[filter].label.toLocaleLowerCase('tr-TR')} yok.`}
-            </EmptyState>
-          )
-        ) : (
-          <ul className="ms-rows">{rows}</ul>
-        )}
-        {visible.length > limit && (
-          <button type="button" onClick={() => setLimit((n) => n + PAGE)} className="w-full h-11 border-t border-line-soft text-sm font-semibold text-accent inline-flex items-center justify-center gap-1 cursor-pointer hover:bg-canvas rounded-b-2xl">
-            <ChevronDown className="w-4 h-4" /> {visible.length - limit} kayıt daha
-          </button>
-        )}
-      </Panel>
+      <Toolbar>
+        <Tabs14
+          label="Tür"
+          value={filter}
+          onChange={(v) => { setFilter(v); setLimit(PAGE); }}
+          options={[
+            { id: 'all', label: 'Tümü', n: base.length },
+            { id: 'report', label: 'Bildirim', n: count('report') },
+            { id: 'comment', label: 'Yorum', n: count('comment') },
+            { id: 'draft', label: 'Taslak', n: count('draft') },
+            { id: 'notice', label: 'Uyarı', n: count('notice') },
+          ]}
+        />
+        <SearchField value={query} onChange={(v) => { setQuery(v); setLimit(PAGE); }} placeholder="Bildirim, yorum, taslak, kişi" label="Kuyrukta ara" />
+      </Toolbar>
 
-      {/* Hata Bildirimi Düzenleme Penceresi */}
-      {editingReport && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[var(--color-scrim)] animate-fade-in" onClick={() => setEditingReport(null)}>
-          <div className="bg-white rounded-2xl shadow-2xl border border-line w-full max-w-lg p-5 flex flex-col gap-4" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center justify-between pb-2 border-b border-line">
-              <h3 className="font-bold text-base text-ink flex items-center gap-2">
-                <Flag className="w-4 h-4 text-bad" />
-                <span>Hata Bildirimini Düzenle</span>
-              </h3>
-              <span className="text-xs font-mono text-ink-3">#{editingReport.report.id}</span>
-            </div>
+      <BulkBar
+        count={selection.count}
+        noun="öge"
+        busy={bulkBusy || !!busyAction}
+        onClear={selection.clear}
+        actions={[
+          ...(sel.some((i) => i.report && !i.done) ? [{ label: 'Çözüldü', kind: 'main' as const, run: () => runBulk((i) => !!i.report && !i.done, (i) => onResolve(i.report!)) }] : []),
+          ...(sel.some((i) => i.draft) ? [{ label: 'Taslakları yayınla', run: () => runBulk((i) => !!i.draft, (i) => onPublishDraft(i.draft!)) }] : []),
+          ...deleteActions.filter((a) => sel.some(a.test)).map((a) => ({ label: a.label, kind: 'danger' as const, confirm: `${sel.filter(a.test).length} öge kalıcı silinsin`, run: () => runBulk(a.test, a.fn) })),
+        ]}
+      />
 
-            <div className="flex flex-col gap-3">
-              <label className="flex flex-col gap-1">
-                <span className="text-xs font-semibold text-ink-2">Bildirim Konusu / Sebep:</span>
-                <input
-                  type="text"
-                  value={editingReport.reason}
-                  onChange={(e) => setEditingReport({ ...editingReport, reason: e.target.value })}
-                  className="h-10 px-3 rounded-lg border border-line-2 text-sm focus:border-accent outline-0"
-                  placeholder="Örn: Yanlış şık / Doğru cevap C olmalı"
-                />
-              </label>
-
-              <label className="flex flex-col gap-1">
-                <span className="text-xs font-semibold text-ink-2">Detaylı Açıklama:</span>
-                <textarea
-                  value={editingReport.details}
-                  onChange={(e) => setEditingReport({ ...editingReport, details: e.target.value })}
-                  rows={4}
-                  className="p-3 rounded-lg border border-line-2 text-sm focus:border-accent outline-0 resize-y"
-                  placeholder="Öğrencinin veya kullanıcının bildirdiği hata ayrıntısı..."
-                />
-              </label>
-            </div>
-
-            <div className="flex items-center justify-end gap-2 pt-2 border-t border-line">
-              <button
-                type="button"
-                onClick={() => setEditingReport(null)}
-                className="px-4 py-2 rounded-lg text-xs font-semibold text-ink-2 hover:bg-field"
-              >
-                Vazgeç
-              </button>
-              <button
-                type="button"
-                disabled={!editingReport.reason.trim()}
-                onClick={async () => {
-                  if (onEditReport) {
-                    await onEditReport(editingReport.report, {
-                      reason: editingReport.reason.trim(),
-                      details: editingReport.details.trim(),
-                    });
-                  }
-                  setEditingReport(null);
-                }}
-                className="px-4 py-2 rounded-lg text-xs font-semibold bg-accent text-white hover:bg-accent/90 disabled:opacity-50"
-              >
-                Değişiklikleri Kaydet
-              </button>
-            </div>
-          </div>
+      {loading && all.length === 0 ? (
+        <div className="flex flex-col gap-2" role="status" aria-label="Kuyruk yükleniyor">
+          {[0, 1, 2].map((i) => <div key={i} className="h-14 rounded-xl bg-field ms-shimmer" />)}
         </div>
+      ) : (
+        <DataTable
+          rows={shown}
+          cols={cols}
+          rowKey={(i) => i.key}
+          onOpen={(i) => setOpenKey(i.key)}
+          selection={selection}
+          activeKey={openKey}
+          minWidth={760}
+          empty={
+            q ? (
+              <EmptyState icon={Inbox} title="Aramaya uyan kayıt yok">“{query}” için kuyrukta bir şey bulunamadı.</EmptyState>
+            ) : (
+              <EmptyState icon={CheckCircle2} title="Kuyruk boş">
+                {filter === 'all' ? 'Bekleyen bildirim, yorum, taslak ya da uyarı yok.' : `Bu türde bekleyen ${KIND_META[filter].label.toLocaleLowerCase('tr-TR')} yok.`}
+              </EmptyState>
+            )
+          }
+        />
+      )}
+      {visible.length > limit && (
+        <button type="button" onClick={() => setLimit((n) => n + PAGE)} className="m14-btn self-center">
+          <ChevronDown aria-hidden="true" /> {visible.length - limit} kayıt daha
+        </button>
       )}
 
-      {/* Yorum Düzenleme Penceresi */}
-      {editingComment && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[var(--color-scrim)] animate-fade-in" onClick={() => setEditingComment(null)}>
-          <div className="bg-white rounded-2xl shadow-2xl border border-line w-full max-w-lg p-5 flex flex-col gap-4" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center justify-between pb-2 border-b border-line">
-              <h3 className="font-bold text-base text-ink flex items-center gap-2">
-                <MessageSquare className="w-4 h-4 text-accent" />
-                <span>Öğrenci Yorumunu Düzenle</span>
-              </h3>
-              <span className="text-xs font-mono text-ink-3">#{editingComment.comment.id}</span>
-            </div>
-
-            <div className="flex flex-col gap-3">
-              <label className="flex flex-col gap-1">
-                <span className="text-xs font-semibold text-ink-2">Yorum Metni:</span>
-                <textarea
-                  value={editingComment.text}
-                  onChange={(e) => setEditingComment({ ...editingComment, text: e.target.value })}
-                  rows={4}
-                  className="p-3 rounded-lg border border-line-2 text-sm focus:border-accent outline-0 resize-y"
-                  placeholder="Yorum veya çözüm önerisi..."
+      <Drawer
+        open={!!openItem && !editingReport && !editingComment}
+        onClose={() => setOpenKey(null)}
+        title={openItem?.title || 'Öge'}
+        label="Gelen kutusu ögesi"
+        wide
+        head={<DetailNav list={visible} current={openItem} same={(a, b) => a.key === b.key} onGo={(i) => setOpenKey(i.key)} />}
+        foot={openItem && (
+          <ItemActions
+            item={openItem}
+            busyAction={busyAction}
+            onReview={onReview}
+            onResolve={onResolve}
+            onStartEditReport={onEditReport ? (r) => setEditingReport({ report: r, reason: r.reason || '', details: r.details || '' }) : undefined}
+            onDeleteReport={onDeleteReport}
+            onStartEditComment={onEditComment ? (c) => setEditingComment({ comment: c, text: c.text || '' }) : undefined}
+            onDeleteComment={onDeleteComment}
+            onEditDraft={onEditDraft}
+            onPublishDraft={onPublishDraft}
+            onDeleteDraft={onDeleteDraft}
+          />
+        )}
+      >
+        {openItem && (
+          <DetailLayout
+            main={
+              <Card14 title="İçerik">
+                <p className="m-0 text-base text-ink leading-relaxed whitespace-pre-wrap [overflow-wrap:anywhere]">{openItem.text || openItem.title}</p>
+              </Card14>
+            }
+            side={
+              <Card14 title="Bilgi">
+                <FactList
+                  items={[
+                    { k: 'Tür', v: <Pill tone={KIND_META[openItem.kind].tone}>{KIND_META[openItem.kind].label}</Pill> },
+                    { k: 'Gönderen', v: openItem.sender || 'Bilinmiyor' },
+                    { k: 'Neden', v: openItem.reason || '—' },
+                    { k: 'Zaman', v: openItem.at ? new Date(openItem.at).toLocaleString('tr-TR', { dateStyle: 'medium', timeStyle: 'short' }) : '—' },
+                    ...(openItem.done ? [{ k: 'Durum', v: <Pill tone="ok"><Check aria-hidden="true" /> Çözüldü</Pill> }] : []),
+                    ...openItem.meta.map((m) => ({ k: 'Not', v: m })),
+                    ...(openItem.questionId && onNavigateToData
+                      ? [{
+                          k: 'Soru',
+                          v: (
+                            <button type="button" onClick={() => onNavigateToData(openItem.questionId!)} className="m14-btn ghost" title="Bu soruyu veritabanında bul ve düzenle">
+                              {openItem.questionId.startsWith('past-') ? 'Çıkmış soru' : 'Soru'} #{openItem.questionId.replace(/^q-|^past-/, '')} <ExternalLink aria-hidden="true" />
+                            </button>
+                          ),
+                        }]
+                      : []),
+                    ...(openItem.url
+                      ? [{ k: 'Bağlantı', v: <a href={openItem.url} target="_blank" rel="noopener" title="Bildirilen yeri sitede yeni sekmede aç">Sitede gör <ExternalLink className="inline w-3 h-3" aria-hidden="true" /></a> }]
+                      : []),
+                  ]}
                 />
-              </label>
-            </div>
+              </Card14>
+            }
+          />
+        )}
+      </Drawer>
 
-            <div className="flex items-center justify-end gap-2 pt-2 border-t border-line">
-              <button
-                type="button"
-                onClick={() => setEditingComment(null)}
-                className="px-4 py-2 rounded-lg text-xs font-semibold text-ink-2 hover:bg-field"
-              >
-                Vazgeç
-              </button>
-              <button
-                type="button"
-                disabled={!editingComment.text.trim()}
-                onClick={async () => {
-                  if (onEditComment) {
-                    await onEditComment(editingComment.comment, editingComment.text.trim());
-                  }
-                  setEditingComment(null);
-                }}
-                className="px-4 py-2 rounded-lg text-xs font-semibold bg-accent text-white hover:bg-accent/90 disabled:opacity-50"
-              >
-                Değişiklikleri Kaydet
-              </button>
+      <Drawer
+        open={!!editingReport}
+        onClose={() => setEditingReport(null)}
+        title="Hata bildirimini düzenle"
+        head={editingReport && <span className="font-mono text-xs text-ink-3">#{editingReport.report.id}</span>}
+        foot={editingReport && (
+          <>
+            <button type="button" onClick={() => setEditingReport(null)} className="m14-btn ghost">Vazgeç</button>
+            <button
+              type="button"
+              disabled={!editingReport.reason.trim()}
+              onClick={async () => {
+                if (onEditReport) await onEditReport(editingReport.report, { reason: editingReport.reason.trim(), details: editingReport.details.trim() });
+                setEditingReport(null);
+              }}
+              className="m14-btn primary"
+            >
+              Değişiklikleri kaydet
+            </button>
+          </>
+        )}
+      >
+        {editingReport && (
+          <Card14>
+            <div className="flex flex-col gap-3">
+              <Field label="Bildirim konusu">
+                <input type="text" value={editingReport.reason} onChange={(e) => setEditingReport({ ...editingReport, reason: e.target.value })} className="ms-input" placeholder="Örn: Yanlış şık / Doğru cevap C olmalı" />
+              </Field>
+              <Field label="Ayrıntılı açıklama">
+                <textarea value={editingReport.details} onChange={(e) => setEditingReport({ ...editingReport, details: e.target.value })} rows={5} className="ms-input" placeholder="Öğrencinin bildirdiği hata ayrıntısı" />
+              </Field>
             </div>
-          </div>
-        </div>
-      )}
+          </Card14>
+        )}
+      </Drawer>
+
+      <Drawer
+        open={!!editingComment}
+        onClose={() => setEditingComment(null)}
+        title="Öğrenci yorumunu düzenle"
+        head={editingComment && <span className="font-mono text-xs text-ink-3">#{editingComment.comment.id}</span>}
+        foot={editingComment && (
+          <>
+            <button type="button" onClick={() => setEditingComment(null)} className="m14-btn ghost">Vazgeç</button>
+            <button
+              type="button"
+              disabled={!editingComment.text.trim()}
+              onClick={async () => {
+                if (onEditComment) await onEditComment(editingComment.comment, editingComment.text.trim());
+                setEditingComment(null);
+              }}
+              className="m14-btn primary"
+            >
+              Değişiklikleri kaydet
+            </button>
+          </>
+        )}
+      >
+        {editingComment && (
+          <Card14>
+            <Field label="Yorum metni">
+              <textarea value={editingComment.text} onChange={(e) => setEditingComment({ ...editingComment, text: e.target.value })} rows={6} className="ms-input" placeholder="Yorum veya çözüm önerisi" />
+            </Field>
+          </Card14>
+        )}
+      </Drawer>
     </div>
   );
 };
 
-interface QueueRowProps {
+interface ItemActionsProps {
   item: QueueItem;
   busyAction: string | null;
   onReview: (r: InboxReport) => void;
@@ -388,137 +447,49 @@ interface QueueRowProps {
   onEditDraft: (d: QuestionItem) => void;
   onPublishDraft: (d: QuestionItem) => void;
   onDeleteDraft: (d: QuestionItem) => void;
-  onNavigateToData?: (questionId: string, dsId?: 'questions' | 'past') => void;
 }
 
-const QueueRow: React.FC<QueueRowProps> = ({
-  item,
-  busyAction,
-  onReview,
-  onResolve,
-  onStartEditReport,
-  onDeleteReport,
-  onStartEditComment,
-  onDeleteComment,
-  onEditDraft,
-  onPublishDraft,
-  onDeleteDraft,
-  onNavigateToData,
-}) => {
-  const m = KIND_META[item.kind];
-  const Icon = m.icon;
-  const time = timeLabel(item.at);
-  return (
-    <li className={`ms-row ${item.done ? 'is-done' : ''}`}>
-      <span className={`ms-ricon ${m.tone}`} title={m.label}>
-        <Icon aria-hidden="true" />
-      </span>
-      <div className="ms-row-main">
-        {/* Kimden & Neden Başlığı */}
-        <div className="flex flex-wrap items-center gap-1.5 text-xs text-ink-3">
-          <span className="inline-flex items-center gap-1 font-semibold text-ink bg-surface-2 px-2 py-0.5 rounded-md border border-line-soft">
-            <User className="w-3.5 h-3.5 text-accent" />
-            {item.sender || 'Bilinmiyor'}
-          </span>
-          <span className="text-ink-3">·</span>
-          <span className="text-ink-2 font-medium bg-warn-soft text-warn border border-warn/60 px-2 py-0.5 rounded-md text-xs">
-            {item.reason || m.label}
-          </span>
-          {item.questionId && onNavigateToData && (
-            <button
-              type="button"
-              onClick={() => onNavigateToData(item.questionId!)}
-              className="text-accent hover:underline inline-flex items-center gap-0.5 text-xs font-semibold ml-1 cursor-pointer"
-              title="Bu soruyu veritabanında bul ve düzenle"
-            >
-              <span>{item.questionId.startsWith('past-') ? 'Çıkmış Soru' : 'Soru'} #{item.questionId.replace(/^q-|^past-/, '')}</span>
-              <ExternalLink className="w-3 h-3" />
-            </button>
-          )}
-          {item.url && (
-            <a
-              href={item.url}
-              target="_blank"
-              rel="noopener"
-              className="text-accent hover:underline inline-flex items-center gap-0.5 text-xs font-semibold ml-1"
-              title="Bildirilen yeri sitede yeni sekmede aç"
-            >
-              <span>Sitede gör</span>
-              <ExternalLink className="w-3 h-3" />
-            </a>
-          )}
-        </div>
-
-        <span className={`ms-row-title ${item.kind === 'comment' ? 'font-medium' : ''} mt-0.5`}>
-          <span className="sr-only">{m.label}: </span>
-          {item.title}
-        </span>
-        {item.text && <span className="ms-row-text">{item.text}</span>}
-        <span className="ms-row-meta">
-          {item.done && <span className="ms-tag is-ok"><Check /> Çözüldü</span>}
-          {item.unread && <span className="ms-tag is-accent">Yeni</span>}
-          {item.meta.map((x, i) => (
-            <span key={i} className="truncate max-w-[32ch]">{x}</span>
-          ))}
-          {time && <span className="tabular-nums">{time}</span>}
-        </span>
-      </div>
-      <div className="ms-row-actions">
-        {item.report && (
-          <>
-            <button type="button" onClick={() => onReview(item.report!)} className="ms-btn is-sm is-tonal" title="Soruyu incele">
-              <Eye /> İncele
-            </button>
-            {onStartEditReport && (
-              <button type="button" onClick={() => onStartEditReport(item.report!)} className="ms-btn is-sm" title="Hata bildirimini düzenle">
-                <Pencil /> Düzenle
-              </button>
-            )}
-            {!item.done && (
-              <button type="button" onClick={() => onResolve(item.report!)} disabled={busyAction === `resolve-${item.report.id}`} className="ms-btn is-sm" title="Bildirimi kapat">
-                <Check /> Çözüldü
-              </button>
-            )}
-            {onDeleteReport && (
-              <ConfirmButton
-                icon={Trash2}
-                confirmLabel="Kalıcı Silinsin mi?"
-                busy={busyAction === `delreport-${item.report.id}`}
-                onConfirm={() => onDeleteReport(item.report!)}
-                title="Hata bildirimini tüm veritabanından kalıcı olarak sil"
-              >
-                Sil
-              </ConfirmButton>
-            )}
-          </>
+/** Ayrıntı alanının alt eylem şeridi: türe göre */
+const ItemActions: React.FC<ItemActionsProps> = ({
+  item, busyAction, onReview, onResolve, onStartEditReport, onDeleteReport, onStartEditComment, onDeleteComment, onEditDraft, onPublishDraft, onDeleteDraft,
+}) => (
+  <>
+    {item.report && (
+      <>
+        {onDeleteReport && (
+          <ConfirmButton icon={Trash2} className="m14-btn danger" confirmLabel="Kalıcı silinsin mi?" busy={busyAction === `delreport-${item.report.id}`} onConfirm={() => onDeleteReport(item.report!)} title="Hata bildirimini tüm veritabanından kalıcı olarak sil">
+            Sil
+          </ConfirmButton>
         )}
-        {item.comment && (
-          <>
-            {onStartEditComment && (
-              <button type="button" onClick={() => onStartEditComment(item.comment!)} className="ms-btn is-sm" title="Yorumu düzenle">
-                <Pencil /> Düzenle
-              </button>
-            )}
-            <ConfirmButton icon={Trash2} confirmLabel="Emin misin? Sil" busy={busyAction === `comment-${item.comment.id}`} onConfirm={() => onDeleteComment(item.comment!)} title="Yorumu sil">
-              Sil
-            </ConfirmButton>
-          </>
+        {onStartEditReport && (
+          <button type="button" onClick={() => onStartEditReport(item.report!)} className="m14-btn"><Pencil aria-hidden="true" /> Düzenle</button>
         )}
-        {item.draft && (
-          <>
-            <button type="button" onClick={() => onEditDraft(item.draft!)} className="ms-btn is-sm">
-              <Pencil /> Düzenle
-            </button>
-            <button type="button" onClick={() => onPublishDraft(item.draft!)} disabled={busyAction === `publish-${item.draft.id}`} className="ms-btn is-sm is-ok" title="Taslağı onayla ve yayınla">
-              <Send /> {busyAction === `publish-${item.draft.id}` ? 'Yayınlanıyor…' : 'Yayınla'}
-            </button>
-            <ConfirmButton icon={Trash2} confirmLabel="Emin misin?" busy={busyAction === `deldraft-${item.draft.id}`} onConfirm={() => onDeleteDraft(item.draft!)} title="Taslağı her yerden sil">
-              Sil
-            </ConfirmButton>
-          </>
+        <button type="button" onClick={() => onReview(item.report!)} className="m14-btn" title="Soruyu moderasyonda incele"><Eye aria-hidden="true" /> İncele</button>
+        {!item.done && (
+          <button type="button" onClick={() => onResolve(item.report!)} disabled={busyAction === `resolve-${item.report.id}`} className="m14-btn primary"><Check aria-hidden="true" /> Çözüldü</button>
         )}
-      </div>
-    </li>
-  );
-};
-
+      </>
+    )}
+    {item.comment && (
+      <>
+        <ConfirmButton icon={Trash2} className="m14-btn danger" confirmLabel="Emin misin? Sil" busy={busyAction === `comment-${item.comment.id}`} onConfirm={() => onDeleteComment(item.comment!)} title="Yorumu sil">
+          Sil
+        </ConfirmButton>
+        {onStartEditComment && (
+          <button type="button" onClick={() => onStartEditComment(item.comment!)} className="m14-btn primary"><Pencil aria-hidden="true" /> Düzenle</button>
+        )}
+      </>
+    )}
+    {item.draft && (
+      <>
+        <ConfirmButton icon={Trash2} className="m14-btn danger" confirmLabel="Emin misin?" busy={busyAction === `deldraft-${item.draft.id}`} onConfirm={() => onDeleteDraft(item.draft!)} title="Taslağı her yerden sil">
+          Sil
+        </ConfirmButton>
+        <button type="button" onClick={() => onEditDraft(item.draft!)} className="m14-btn"><Pencil aria-hidden="true" /> Düzenle</button>
+        <button type="button" onClick={() => onPublishDraft(item.draft!)} disabled={busyAction === `publish-${item.draft.id}`} className="m14-btn primary" title="Taslağı onayla ve yayınla">
+          <Send aria-hidden="true" /> {busyAction === `publish-${item.draft.id}` ? 'Yayınlanıyor…' : 'Yayınla'}
+        </button>
+      </>
+    )}
+  </>
+);

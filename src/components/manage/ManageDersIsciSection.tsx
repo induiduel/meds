@@ -1,10 +1,12 @@
 import React, { Suspense, useEffect, useMemo, useState } from 'react';
-import { BookOpenCheck, CheckCircle2, ClipboardList, Eye, FileWarning, RefreshCw, RotateCcw, XCircle, PenLine, Library, Play, ArrowUp, ArrowDown, Trash2, ListPlus, ShieldOff } from 'lucide-react';
+import { CheckCircle2, ClipboardList, Eye, FileWarning, RefreshCw, RotateCcw, XCircle, PenLine, Play, ArrowUp, ArrowDown, Trash2, ListPlus, ShieldOff } from 'lucide-react';
 import { CalendarClock, Cpu, FileSearch, RefreshCcw, ShieldCheck, Hourglass, AlertTriangle, Ban, Wrench, Inbox, Layers } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
 import { NoteMarkdown } from '../ui/NoteMarkdown';
-import { ChipBar, EmptyState, Panel } from './consoleUi';
+import { Drawer, EmptyState } from './consoleUi';
+import { Card14, DataTable, DetailNav, PageActions, Pill, SearchField, Tabs14, Toolbar } from '../v14/pageKit';
+import { BulkBar, useSelection } from '../v14/manageKit';
 import { IsciKontrol, type IsciDurum } from './ManageDersIsciKontrol';
 import { AsamaSeridi, type SesDurumu, type TaslakAsama } from './ManageDersIsciAsama';
 
@@ -258,7 +260,7 @@ export const ManageDersIsciSection: React.FC<{ adminEmail: string }> = ({ adminE
   };
   return (
     <div className="flex flex-col gap-3">
-      <ChipBar<Kategori>
+      <Tabs14<Kategori>
         label="Ders işçisi kategorisi"
         value={kategori}
         onChange={sec}
@@ -381,15 +383,16 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
   }, [sekme, secili]);
 
   const karar = async (k: 'onayla' | 'reddet' | 'duzelt') => {
-    if (!secili) return;
-    if (k !== 'onayla' && !not.trim()) return toast.error('Reddetme ya da düzeltme için kısa bir not yaz.');
+    if (!secili) return false;
+    if (k !== 'onayla' && !not.trim()) { toast.error('Reddetme ya da düzeltme için kısa bir not yaz.'); return false; }
     setBusy(true);
     const r = await api(`/taslak/${secili}/karar`, { method: 'POST', body: JSON.stringify({ karar: k, not }) });
     setBusy(false);
-    if (!r.ok) return toast.error((r.data as any)?.hata || r.error || 'Karar kaydedilemedi.');
+    if (!r.ok) { toast.error((r.data as any)?.hata || r.error || 'Karar kaydedilemedi.'); return false; }
     toast.success(k === 'onayla' ? 'Onaylandı; yayına birleştirme sırasına alındı.' : k === 'reddet' ? 'Reddedildi.' : 'Düzeltme istendi.');
     await yukle();
     api(`/taslak/${secili}`).then((x) => x.ok && setAyr(x.data));
+    return true;
   };
 
   const yenidenGonder = async () => {
@@ -472,283 +475,394 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     .sort((a, b) => (filtre === 'hepsi' ? SIRA.indexOf(a.kat) - SIRA.indexOf(b.kat) : 0));
 
   const s = ayr?.sayilar || {};
+  const [ara, setAra] = useState('');
+  const [acikAnahtar, setAcikAnahtar] = useState<string | null>(null);
+  const secim = useSelection<string>();
+  const [topluBusy, setTopluBusy] = useState(false);
+  const liste2 = useMemo(() => {
+    const t = ara.trim().toLocaleLowerCase('tr-TR');
+    if (!t) return gorunen;
+    return gorunen.filter((x) => [x.baslik, x.anahtar, x.taslak?.ders_id, ...x.etiketler].filter(Boolean).join(' ').toLocaleLowerCase('tr-TR').includes(t));
+  }, [gorunen, ara]);
+  const acik = acikAnahtar ? satirlar.find((x) => x.anahtar === acikAnahtar) || null : null;
+  const ac = (x: Satir) => {
+    setAcikAnahtar(x.anahtar);
+    setSecili(x.taslak?.is_id || null);
+  };
+  const kapat = () => {
+    setAcikAnahtar(null);
+    setSecili(null);
+  };
+  const sonraki = () => {
+    const i = acik ? liste2.findIndex((x) => x.anahtar === acik.anahtar) : -1;
+    const n = liste2.filter((_, j) => j !== i)[i >= 0 ? Math.min(i, liste2.length - 2) : 0];
+    if (n) ac(n);
+    else kapat();
+  };
+  const ton = (cls: string) => (cls === 'is-warn' ? 'warn' : cls === 'is-ok' ? 'ok' : cls === 'is-bad' ? 'bad' : '') as 'warn' | 'ok' | 'bad' | '';
+
+  // Toplu işlem: seçili satırlardan uygun olanlara tek tek mevcut uç çağrılır
+  const secili2 = satirlar.filter((x) => secim.has(x.anahtar));
+  const onaylanacak = secili2.filter((x) => x.taslak && x.kat === 'onay' && !x.taslak.karar);
+  const kuyrukSatir = secili2.filter((x) => x.anahtar.startsWith('k:'));
+  const alinacak = secili2.filter((x) => (x.kat === 'goruldu' || x.kat === 'yenilenmeli') && x.pdfler?.length);
+  const toplu = async (ogeler: Satir[], fn: (x: Satir) => Promise<{ ok: boolean }>) => {
+    setTopluBusy(true);
+    let ok = 0;
+    let bad = 0;
+    for (const x of ogeler) {
+      const r = await fn(x).catch(() => ({ ok: false }));
+      if (r.ok) ok++;
+      else bad++;
+    }
+    setTopluBusy(false);
+    (bad ? toast.error : toast.success)(`${ok} başarılı, ${bad} hata`);
+    if (ok) secim.clear();
+    await yukle();
+  };
+
   return (
     <div className="flex flex-col gap-3">
-      {!hata && <IsciKontrol api={api} durum={isciDurum} onDegisti={yukle} tazele={tazele} />}
-      <Panel
-        title="Otomatik Ders İşçisi"
-        icon={BookOpenCheck}
-        count={liste ? satirlar.length : undefined}
-        desc="Drive'a eklenen ders PDF'lerinden ders işçisinin ürettiği paketler. İncele, önizle, karar ver; onaylananlar yayına birleştirilir."
-        tools={
-          <button type="button" className="ms-btn is-sm" onClick={yukle}>
+      {!hata ? (
+        <IsciKontrol
+          api={api}
+          durum={isciDurum}
+          onDegisti={yukle}
+          tazele={tazele}
+          ekStat={[
+            { label: 'Onay bekleyen paket', value: sayim.onay || 0, tone: sayim.onay ? 'warn' : undefined, onClick: () => setFiltre('onay') },
+            { label: 'Kapıda takılan', value: sayim.hata || 0, tone: sayim.hata ? 'bad' : undefined, onClick: () => setFiltre('hata') },
+          ]}
+          ekEylem={
+            <button type="button" className="m14-btn ghost" onClick={yukle}>
+              <RefreshCw aria-hidden /> Yenile
+            </button>
+          }
+        />
+      ) : (
+        <PageActions>
+          <button type="button" className="m14-btn" onClick={yukle}>
             <RefreshCw aria-hidden /> Yenile
           </button>
-        }
-      >
-        {ozet?.sayim && (
-          <p className="text-sm text-ink-2 mb-2">
-            <b>2026-27 checklist</b> ({ozet.uretim}): tamam {ozet.sayim.tamam_2627 || 0} · onay bekliyor {ozet.sayim.onay_bekliyor || 0} ·
-            kuyrukta {(ozet.sayim.kuyrukta || 0) + (ozet.sayim.isleniyor || 0)} · yenilenmeli {ozet.sayim.yenilenmeli || 0} · işlenmeli{' '}
-            {ozet.sayim.islenmeli || 0} · geçen yıl kaynaklı {ozet.sayim.gecen_yil_kaynakli || 0} · PDF bekleniyor {ozet.sayim.pdf_bekleniyor || 0}
-          </p>
-        )}
-        {olay && <DriveEtkinligi akis={olay} />}
-        <ChipBar<Filtre>
+        </PageActions>
+      )}
+
+      {(ozet?.sayim || olay) && (
+        <Card14 title="Drive ve 2026-27 checklist">
+          {ozet?.sayim && (
+            <p className="text-sm text-ink-2 mb-2" style={{ marginTop: 0 }}>
+              <b>Checklist</b> ({ozet.uretim}): tamam {ozet.sayim.tamam_2627 || 0} · onay bekliyor {ozet.sayim.onay_bekliyor || 0} ·
+              kuyrukta {(ozet.sayim.kuyrukta || 0) + (ozet.sayim.isleniyor || 0)} · yenilenmeli {ozet.sayim.yenilenmeli || 0} · işlenmeli{' '}
+              {ozet.sayim.islenmeli || 0} · geçen yıl kaynaklı {ozet.sayim.gecen_yil_kaynakli || 0} · PDF bekleniyor {ozet.sayim.pdf_bekleniyor || 0}
+            </p>
+          )}
+          {olay && <DriveEtkinligi akis={olay} />}
+        </Card14>
+      )}
+
+      <Toolbar>
+        <Tabs14<Filtre>
           label="Ders durumu süzgeci"
-          wrap
           value={filtre}
           onChange={setFiltre}
           options={[
-            ...SIRA.filter((id) => sayim[id] || id === filtre || id === 'onay').map((id) => ({
-              id,
-              label: KATEGORI[id].label,
-              icon: KATEGORI[id].icon,
-              n: sayim[id] || 0,
-            })),
-            { id: 'hepsi' as Filtre, label: 'Hepsi', icon: Layers, n: satirlar.length },
+            ...SIRA.filter((id) => sayim[id] || id === filtre || id === 'onay').map((id) => ({ id, label: KATEGORI[id].label, n: sayim[id] || 0 })),
+            { id: 'hepsi' as Filtre, label: 'Hepsi', n: satirlar.length },
           ]}
         />
-        {hata && <EmptyState icon={FileWarning} title={/Oracle/.test(hata) ? 'Ders işçisi bu sunucuda yok' : 'Ders işçisine ulaşılamıyor'}>{hata}</EmptyState>}
-        {!hata && liste && gorunen.length === 0 && <EmptyState icon={ClipboardList} title="Bu kategoride ders yok" />}
-        <ul className="flex flex-col gap-2 mt-2">
-          {gorunen.map((x) => {
-            const d = KATEGORI[x.kat];
-            const icerik = (
-              <>
-                <div className="flex flex-wrap items-center gap-2">
-                  <b className="min-w-0">{x.baslik}</b>
-                  {x.etiketler.map((e) => (
-                    <span key={e} className="ms-tag">
-                      {e}
-                    </span>
-                  ))}
-                  <span className={`ms-tag ${d.cls}`}>{d.label}</span>
-                </div>
-                {x.mesaj && <p className="text-sm text-ink-2 mt-1">{x.mesaj}</p>}
-                {x.zamanNot && <p className="text-xs text-ink-3 mt-1">{x.zamanNot}</p>}
-                {x.uyari && <p className="text-sm text-warn mt-1">⚠ {x.uyari}</p>}
-                {x.taslak?.asama && (
-                  <AsamaSeridi
-                    a={x.taslak.asama}
-                    isleniyor={x.kat === 'isleniyor'}
-                    durum={x.taslak.durum}
-                    karar={x.taslak.karar?.karar}
-                    yayin={x.taslak.yayin?.durum}
-                    ses={x.taslak.ders_id ? sesler[x.taslak.ders_id] ?? null : null}
-                  />
-                )}
-              </>
-            );
-            const id = x.taslak?.is_id;
-            return (
-              <li key={x.anahtar}>
-                {id ? (
-                  <button
-                    type="button"
-                    onClick={() => setSecili(id)}
-                    aria-pressed={secili === id}
-                    className={`ms-panel w-full text-left p-3 ${secili === id ? 'is-on' : ''}`}
-                  >
-                    {icerik}
-                  </button>
-                ) : (
-                  <div className="ms-panel w-full p-3">{icerik}</div>
-                )}
-                {x.anahtar.startsWith('k:') && (x.kat === 'programlandi' || x.kat === 'hata') && (
-                  <div className="flex flex-wrap justify-end gap-1.5 mt-1">
-                    <button type="button" className="ms-btn is-sm is-primary" disabled={busy} onClick={() => hemenIsle(x.anahtar.slice(2), x.baslik)}>
-                      <Play aria-hidden /> Hemen işle
-                    </button>
-                    {x.kat === 'programlandi' ? (
-                      <>
-                        <button type="button" className="ms-btn is-sm" disabled={busy} onClick={() => kuyrukEylem(x.anahtar.slice(2), 'one-al', x.baslik)}>
-                          <ArrowUp aria-hidden /> Öne al
-                        </button>
-                        <button type="button" className="ms-btn is-sm" disabled={busy} onClick={() => kuyrukEylem(x.anahtar.slice(2), 'sona-at', x.baslik)}>
-                          <ArrowDown aria-hidden /> Sona at
-                        </button>
-                      </>
-                    ) : (
-                      <button type="button" className="ms-btn is-sm" disabled={busy} onClick={() => kuyrukEylem(x.anahtar.slice(2), 'yeniden-dene', x.baslik)}>
-                        <RotateCcw aria-hidden /> Yeniden dene
-                      </button>
-                    )}
-                    <button type="button" className="ms-btn is-sm is-ghost" disabled={busy} onClick={() => kuyrukEylem(x.anahtar.slice(2), 'kaldir', x.baslik)}>
-                      <Trash2 aria-hidden /> Kuyruktan çıkar
-                    </button>
-                  </div>
-                )}
-                {(x.kat === 'goruldu' || x.kat === 'yenilenmeli') && !!x.pdfler?.length && (
-                  <div className="flex justify-end mt-1">
-                    <button type="button" className="ms-btn is-sm" disabled={busy} onClick={() => kuyrugaAl(x.pdfler || [], x.baslik)}>
-                      <ListPlus aria-hidden /> Kuyruğa al
-                    </button>
-                  </div>
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </Panel>
+        <SearchField value={ara} onChange={setAra} placeholder="Ders adı ya da kimliği" label="Ders ara" />
+      </Toolbar>
 
-      {secili && (
-        <Panel
-          title={ayr?.program?.konu || 'Taslak yükleniyor…'}
-          icon={Library}
-          desc={
-            ayr
-              ? `${ayr.program?.ders || ''} · Kurul ${ayr.program?.kurul ?? '?'} · ${ayr.program?.ogretim_uyesi || 'hoca belirsiz'} · program eşleşmesi: ${ayr.program?.guven || '?'} · PDF: ${ayr.pdf || ''}`
-              : undefined
-          }
-        >
-          {ayr && (
+      <BulkBar
+        count={secim.count}
+        noun="ders"
+        busy={topluBusy || busy}
+        onClear={secim.clear}
+        actions={[
+          {
+            label: `Onayla${onaylanacak.length ? ` (${onaylanacak.length})` : ''}`,
+            kind: 'main',
+            disabled: !onaylanacak.length,
+            run: () => toplu(onaylanacak, (x) => api(`/taslak/${x.taslak!.is_id}/karar`, { method: 'POST', body: JSON.stringify({ karar: 'onayla', not: '' }) })),
+          },
+          {
+            label: `Kuyruğa al${alinacak.length ? ` (${alinacak.length})` : ''}`,
+            disabled: !alinacak.length,
+            run: () => toplu(alinacak, (x) => api('/pdf/kuyruga', { method: 'POST', body: JSON.stringify({ yollar: x.pdfler }) })),
+          },
+          {
+            label: 'Öne al',
+            disabled: !kuyrukSatir.some((x) => x.kat === 'programlandi'),
+            run: () => toplu(kuyrukSatir.filter((x) => x.kat === 'programlandi'), (x) => api(`/kuyruk/${x.anahtar.slice(2)}/one-al`, { method: 'POST', body: '{}' })),
+          },
+          {
+            label: 'Yeniden dene',
+            disabled: !kuyrukSatir.some((x) => x.kat === 'hata'),
+            run: () => toplu(kuyrukSatir.filter((x) => x.kat === 'hata'), (x) => api(`/kuyruk/${x.anahtar.slice(2)}/yeniden-dene`, { method: 'POST', body: '{}' })),
+          },
+          {
+            label: `Kuyruktan çıkar${kuyrukSatir.length ? ` (${kuyrukSatir.length})` : ''}`,
+            kind: 'danger',
+            confirm: `${kuyrukSatir.length} işi kuyruktan çıkarmayı onayla`,
+            disabled: !kuyrukSatir.length,
+            run: () => toplu(kuyrukSatir, (x) => api(`/kuyruk/${x.anahtar.slice(2)}/kaldir`, { method: 'POST', body: '{}' })),
+          },
+        ]}
+      />
+
+      {hata ? (
+        <EmptyState icon={FileWarning} title={/Oracle/.test(hata) ? 'Ders işçisi bu sunucuda yok' : 'Ders işçisine ulaşılamıyor'}>{hata}</EmptyState>
+      ) : (
+        <DataTable<Satir>
+          rows={liste2}
+          rowKey={(x) => x.anahtar}
+          selection={secim}
+          onOpen={ac}
+          activeKey={acikAnahtar}
+          busy={!liste}
+          minWidth={820}
+          empty={<EmptyState icon={ClipboardList} title={liste ? 'Bu kategoride ders yok' : 'Yükleniyor…'} />}
+          cols={[
+            { key: 'ders', label: 'Ders', main: true, render: (x) => <span title={x.mesaj}>{x.baslik}</span> },
+            { key: 'kat', label: 'Aşama', width: 170, render: (x) => <Pill tone={ton(KATEGORI[x.kat].cls)}>{KATEGORI[x.kat].label}</Pill> },
+            { key: 'kimlik', label: 'Kimlik', mono: true, width: 120, render: (x) => x.taslak?.ders_id || x.taslak?.deste_id || '—' },
+            { key: 'slayt', label: 'Slayt', right: true, width: 70, render: (x) => x.taslak?.sayilar?.slayt ?? '—' },
+            { key: 'etiket', label: 'Etiket', muted: true, render: (x) => <span className="block truncate max-w-[14rem]">{x.etiketler.join(' · ') || '—'}</span> },
+            { key: 'zaman', label: 'Zaman', muted: true, render: (x) => <span className="block truncate max-w-[16rem]" title={x.zamanNot}>{x.zamanNot || '—'}</span> },
+          ]}
+        />
+      )}
+
+      <Drawer
+        open={!!acik}
+        onClose={kapat}
+        wide
+        label="Ders paketi"
+        title={acik ? ayr?.program?.konu || acik.baslik : ''}
+        head={<DetailNav<Satir> list={liste2} current={acik} same={(x, y) => x.anahtar === y.anahtar} onGo={ac} />}
+        foot={
+          ayr && !ayr.karar && ayr.durum === 'onay_bekliyor' ? (
             <>
-              <p className="text-sm mb-2">
-                <b>{s.slayt || 0}</b> slayt · <b>{s.soru || 0}</b> soru · <b>{s.terim || 0}</b> terim · <b>{s.hastalik || 0}</b> hastalık ·{' '}
-                <b>{s.havuz || 0}</b> bilgi · <b>{s.bag || 0}</b> çıkmış bağı · <b>{ayr.referans || 0}</b> kitaptan tamamlanan · denetim{' '}
-                <b className={ayr.denetim_hata ? 'text-bad' : 'text-ok'}>{ayr.denetim_hata ?? '?'} hata</b>
-              </p>
-              {ayr.uyari && <p className="text-sm text-warn mb-2">⚠ {ayr.uyari}</p>}
-              <ChipBar<Sekme>
-                label="Taslak bölümleri"
-                wrap
-                value={sekme}
-                onChange={setSekme}
-                options={[
-                  { id: 'rapor', label: 'Rapor' },
-                  { id: 'deste', label: 'Deste', n: s.slayt },
-                  { id: 'sorular', label: 'Sorular', n: s.soru },
-                  { id: 'sozluk', label: 'Sözlük', n: s.terim },
-                  { id: 'hastaliklar', label: 'Hastalıklar', n: s.hastalik },
-                  { id: 'havuz', label: 'Bilgi havuzu', n: s.havuz },
-                  { id: 'cikmis', label: 'Çıkmış bağları', n: s.bag },
-                  { id: 'kaynak', label: 'Kitaptan', n: ayr.referans },
-                ]}
+              <button type="button" disabled={busy} className="m14-btn danger" onClick={() => karar('reddet')}>
+                <XCircle aria-hidden /> Reddet
+              </button>
+              <button type="button" disabled={busy} className="m14-btn" onClick={() => karar('duzelt')}>
+                <PenLine aria-hidden /> Düzeltme iste
+              </button>
+              <button
+                type="button"
+                disabled={busy}
+                className="m14-btn"
+                onClick={async () => {
+                  const d = await dosyaAl('deck.json');
+                  if (d) setOnizle(d);
+                  else toast.error('Deste dosyası alınamadı.');
+                }}
+              >
+                <Eye aria-hidden /> Önizle
+              </button>
+              <button type="button" disabled={busy} className="m14-btn primary" onClick={async () => { if (await karar('onayla')) sonraki(); }}>
+                <CheckCircle2 aria-hidden /> Onayla ve sonraki
+              </button>
+            </>
+          ) : undefined
+        }
+      >
+        {acik && (
+          <div className="flex flex-col gap-2">
+            <div className="flex flex-wrap items-center gap-1.5">
+              <Pill tone={ton(KATEGORI[acik.kat].cls)}>{KATEGORI[acik.kat].label}</Pill>
+              {acik.etiketler.map((e) => (
+                <Pill key={e}>{e}</Pill>
+              ))}
+            </div>
+            {acik.mesaj && <p className="m-0 text-sm text-ink-2">{acik.mesaj}</p>}
+            {acik.zamanNot && <p className="m-0 text-xs text-ink-3">{acik.zamanNot}</p>}
+            {acik.uyari && <p className="m-0 text-sm text-warn">Uyarı: {acik.uyari}</p>}
+            {acik.taslak?.asama && (
+              <AsamaSeridi
+                a={acik.taslak.asama}
+                isleniyor={acik.kat === 'isleniyor'}
+                durum={acik.taslak.durum}
+                karar={acik.taslak.karar?.karar}
+                yayin={acik.taslak.yayin?.durum}
+                ses={acik.taslak.ders_id ? sesler[acik.taslak.ders_id] ?? null : null}
               />
-              <div className="mt-3">
-                {sekme === 'rapor' && <NoteMarkdown text={ayr.rapor || '_Rapor yok._'} />}
-                {sekme === 'deste' && (
-                  <div className="flex flex-col gap-2">
-                    <p className="text-sm text-ink-2">
-                      Deste, sitedeki ders oynatıcısıyla açılır; öğrencinin göreceğinin aynısıdır. Kimlik: <code>{ayr.deste_id}</code>
-                      {ayr.mod === 'guncelleme' ? ' (onaylanırsa mevcut destenin yerine geçer)' : ' (yeni deste)'}.
-                    </p>
-                    <button
-                      type="button"
-                      className="ms-btn is-primary self-start"
-                      onClick={async () => {
-                        const d = await dosyaAl('deck.json');
-                        if (d) setOnizle(d);
-                        else toast.error('Deste dosyası alınamadı.');
-                      }}
-                    >
-                      <Eye aria-hidden /> Desteyi önizle
+            )}
+            {acik.anahtar.startsWith('k:') && (acik.kat === 'programlandi' || acik.kat === 'hata') && (
+              <div className="flex flex-wrap gap-1.5">
+                <button type="button" className="m14-btn primary" disabled={busy} onClick={() => hemenIsle(acik.anahtar.slice(2), acik.baslik)}>
+                  <Play aria-hidden /> Hemen işle
+                </button>
+                {acik.kat === 'programlandi' ? (
+                  <>
+                    <button type="button" className="m14-btn" disabled={busy} onClick={() => kuyrukEylem(acik.anahtar.slice(2), 'one-al', acik.baslik)}>
+                      <ArrowUp aria-hidden /> Öne al
                     </button>
-                  </div>
+                    <button type="button" className="m14-btn" disabled={busy} onClick={() => kuyrukEylem(acik.anahtar.slice(2), 'sona-at', acik.baslik)}>
+                      <ArrowDown aria-hidden /> Sona at
+                    </button>
+                  </>
+                ) : (
+                  <button type="button" className="m14-btn" disabled={busy} onClick={() => kuyrukEylem(acik.anahtar.slice(2), 'yeniden-dene', acik.baslik)}>
+                    <RotateCcw aria-hidden /> Yeniden dene
+                  </button>
                 )}
-                {sekme === 'sorular' && <Sorular veri={dosya['ornek_sorular.json']} />}
-                {sekme === 'sozluk' && <Sozluk veri={dosya['sozluk.json']} />}
-                {sekme === 'hastaliklar' && <Hastaliklar veri={dosya['hastaliklar.json']} />}
-                {sekme === 'havuz' && <Havuz veri={dosya['bilgi_havuzu.jsonl']} />}
-                {sekme === 'cikmis' && <Cikmis veri={dosya['cikmis_baglantilari.json']} />}
-                {sekme === 'kaynak' && (
-                  <ul className="flex flex-col gap-1 text-sm">
-                    {(ayr.denetim?.referansla_tamamlanan || []).map((r, i) => (
-                      <li key={i}>📚 {r}</li>
+                <button type="button" className="m14-btn ghost" disabled={busy} onClick={() => kuyrukEylem(acik.anahtar.slice(2), 'kaldir', acik.baslik)}>
+                  <Trash2 aria-hidden /> Kuyruktan çıkar
+                </button>
+              </div>
+            )}
+            {(acik.kat === 'goruldu' || acik.kat === 'yenilenmeli') && !!acik.pdfler?.length && (
+              <button type="button" className="m14-btn self-start" disabled={busy} onClick={() => kuyrugaAl(acik.pdfler || [], acik.baslik)}>
+                <ListPlus aria-hidden /> Kuyruğa al
+              </button>
+            )}
+            {acik.taslak && !ayr && <p className="text-sm text-ink-2">Taslak yükleniyor…</p>}
+            {ayr && (
+              <p className="m-0 text-sm text-ink-3">
+                {`${ayr.program?.ders || ''} · Kurul ${ayr.program?.kurul ?? '?'} · ${ayr.program?.ogretim_uyesi || 'hoca belirsiz'} · program eşleşmesi: ${ayr.program?.guven || '?'} · PDF: ${ayr.pdf || ''}`}
+              </p>
+            )}
+            <div className="min-w-0">
+      {ayr && (
+        <>
+          <p className="text-sm mb-2">
+            <b>{s.slayt || 0}</b> slayt · <b>{s.soru || 0}</b> soru · <b>{s.terim || 0}</b> terim · <b>{s.hastalik || 0}</b> hastalık ·{' '}
+            <b>{s.havuz || 0}</b> bilgi · <b>{s.bag || 0}</b> çıkmış bağı · <b>{ayr.referans || 0}</b> kitaptan tamamlanan · denetim{' '}
+            <b className={ayr.denetim_hata ? 'text-bad' : 'text-ok'}>{ayr.denetim_hata ?? '?'} hata</b>
+          </p>
+          {ayr.uyari && <p className="text-sm text-warn mb-2">{ayr.uyari}</p>}
+          <Tabs14<Sekme>
+            label="Taslak bölümleri"
+            value={sekme}
+            onChange={setSekme}
+            options={[
+              { id: 'rapor', label: 'Rapor' },
+              { id: 'deste', label: 'Deste', n: s.slayt },
+              { id: 'sorular', label: 'Sorular', n: s.soru },
+              { id: 'sozluk', label: 'Sözlük', n: s.terim },
+              { id: 'hastaliklar', label: 'Hastalıklar', n: s.hastalik },
+              { id: 'havuz', label: 'Bilgi havuzu', n: s.havuz },
+              { id: 'cikmis', label: 'Çıkmış bağları', n: s.bag },
+              { id: 'kaynak', label: 'Kitaptan', n: ayr.referans },
+            ]}
+          />
+          <div className="mt-3">
+            {sekme === 'rapor' && <NoteMarkdown text={ayr.rapor || '_Rapor yok._'} />}
+            {sekme === 'deste' && (
+              <div className="flex flex-col gap-2">
+                <p className="text-sm text-ink-2">
+                  Deste, sitedeki ders oynatıcısıyla açılır; öğrencinin göreceğinin aynısıdır. Kimlik: <code>{ayr.deste_id}</code>
+                  {ayr.mod === 'guncelleme' ? ' (onaylanırsa mevcut destenin yerine geçer)' : ' (yeni deste)'}.
+                </p>
+                <button
+                  type="button"
+                  className="m14-btn primary self-start"
+                  onClick={async () => {
+                    const d = await dosyaAl('deck.json');
+                    if (d) setOnizle(d);
+                    else toast.error('Deste dosyası alınamadı.');
+                  }}
+                >
+                  <Eye aria-hidden /> Desteyi önizle
+                </button>
+              </div>
+            )}
+            {sekme === 'sorular' && <Sorular veri={dosya['ornek_sorular.json']} />}
+            {sekme === 'sozluk' && <Sozluk veri={dosya['sozluk.json']} />}
+            {sekme === 'hastaliklar' && <Hastaliklar veri={dosya['hastaliklar.json']} />}
+            {sekme === 'havuz' && <Havuz veri={dosya['bilgi_havuzu.jsonl']} />}
+            {sekme === 'cikmis' && <Cikmis veri={dosya['cikmis_baglantilari.json']} />}
+            {sekme === 'kaynak' && (
+              <ul className="flex flex-col gap-1 text-sm">
+                {(ayr.denetim?.referansla_tamamlanan || []).map((r, i) => (
+                  <li key={i}>{r}</li>
+                ))}
+                {!ayr.denetim?.referansla_tamamlanan?.length && <li>Kitaptan tamamlanan bilgi yok; her bilgi ders PDF'inden alıntıyla doğrulandı.</li>}
+              </ul>
+            )}
+          </div>
+
+          <div className="mt-4 border-t border-line pt-3 flex flex-col gap-2">
+            {ayr.karar ? (
+              <>
+                <p className="text-sm">
+                  Karar: <b>{DURUM[ayr.karar.karar]?.label}</b>
+                  {ayr.karar.not ? ` — ${ayr.karar.not}` : ''}
+                  {ayr.karar.kim ? ` (${ayr.karar.kim})` : ''}
+                  {ayr.karar.karar === 'onayla' &&
+                    (ayr.yayin?.durum === 'yayinlandi' && ayr.yayin.site_derlendi === false
+                      ? ' · Kaynaklara yazıldı ama site derlenemedi.'
+                      : ayr.durum === 'yayinlandi'
+                      ? ' · Sitede yayında.'
+                      : ayr.yayin?.durum === 'denetim_hatasi'
+                        ? ' · Yayınlanamadı (yayın denetimi):'
+                        : ' · Sunucu en geç 10 dakika içinde siteye ekler.')}
+                </p>
+                {ayr.yayin?.durum === 'denetim_hatasi' && (
+                  <ul className="text-sm text-ink-2 list-disc pl-5">
+                    {(ayr.yayin.hatalar || []).slice(0, 8).map((h) => (
+                      <li key={h}>{h}</li>
                     ))}
-                    {!ayr.denetim?.referansla_tamamlanan?.length && <li>Kitaptan tamamlanan bilgi yok; her bilgi ders PDF'inden alıntıyla doğrulandı.</li>}
                   </ul>
                 )}
-              </div>
-
-              <div className="mt-4 border-t border-line pt-3 flex flex-col gap-2">
-                {ayr.karar ? (
+                {ayr.yayin?.durum === 'denetim_hatasi' && (
                   <>
-                    <p className="text-sm">
-                      Karar: <b>{DURUM[ayr.karar.karar]?.label}</b>
-                      {ayr.karar.not ? ` — ${ayr.karar.not}` : ''}
-                      {ayr.karar.kim ? ` (${ayr.karar.kim})` : ''}
-                      {ayr.karar.karar === 'onayla' &&
-                        (ayr.yayin?.durum === 'yayinlandi' && ayr.yayin.site_derlendi === false
-                          ? ' · Kaynaklara yazıldı ama site derlenemedi.'
-                          : ayr.durum === 'yayinlandi'
-                          ? ' · Sitede yayında.'
-                          : ayr.yayin?.durum === 'denetim_hatasi'
-                            ? ' · Yayınlanamadı (yayın denetimi):'
-                            : ' · Sunucu en geç 10 dakika içinde siteye ekler.')}
+                    <p className="text-sm text-ink-2">
+                      {(ayr.yayin.hatalar || []).every((h) => h.includes('sadakati'))
+                        ? 'Yalnız sadakat eşiğine takıldı: eşiği bu ders için yok sayabilir ya da düzeltme isteyebilirsin.'
+                        : 'Bu hata yeniden göndermekle geçmez: düzeltme iste (işçi notunla yeniden üretir) ya da reddet.'}
                     </p>
-                    {ayr.yayin?.durum === 'denetim_hatasi' && (
-                      <ul className="text-sm text-ink-2 list-disc pl-5">
-                        {(ayr.yayin.hatalar || []).slice(0, 8).map((h) => (
-                          <li key={h}>{h}</li>
-                        ))}
-                      </ul>
-                    )}
-                    {ayr.yayin?.durum === 'denetim_hatasi' && (
-                      <>
-                        <p className="text-sm text-ink-2">
-                          {(ayr.yayin.hatalar || []).every((h) => h.includes('sadakati'))
-                            ? 'Yalnız sadakat eşiğine takıldı: eşiği bu ders için yok sayabilir ya da düzeltme isteyebilirsin.'
-                            : 'Bu hata yeniden göndermekle geçmez: düzeltme iste (işçi notunla yeniden üretir) ya da reddet.'}
-                        </p>
-                        <textarea
-                          aria-label="Düzeltme ya da ret notu"
-                          className="ms-input min-h-[64px]"
-                          placeholder="Düzeltme ya da ret notu"
-                          value={not}
-                          onChange={(e) => setNot(e.target.value)}
-                        />
-                        <div className="flex flex-wrap gap-2">
-                          {(ayr.yayin.hatalar || []).every((h) => h.includes('sadakati')) && (
-                            <button type="button" disabled={busy} className="ms-btn is-ok" onClick={esikAtla}>
-                              <ShieldOff aria-hidden /> Eşiği yok say ve yayınla
-                            </button>
-                          )}
-                          <button type="button" disabled={busy} className="ms-btn" onClick={() => karar('duzelt')}>
-                            <PenLine aria-hidden /> Düzeltme iste
-                          </button>
-                          <button type="button" disabled={busy} className="ms-btn is-bad" onClick={() => karar('reddet')}>
-                            <XCircle aria-hidden /> Reddet
-                          </button>
-                        </div>
-                      </>
-                    )}
-                    {ayr.karar.karar === 'onayla' &&
-                      ayr.yayin &&
-                      ayr.yayin.durum !== 'denetim_hatasi' &&
-                      (ayr.yayin.durum !== 'yayinlandi' || ayr.yayin.site_derlendi === false) && (
-                        <button type="button" disabled={busy} className="ms-btn is-bad self-start" onClick={yenidenGonder}>
-                          <RotateCcw aria-hidden /> {ayr.yayin.durum === 'yayinlandi' ? 'Siteyi yeniden derle' : 'Yeniden gönder'}
+                    <textarea
+                      aria-label="Düzeltme ya da ret notu"
+                      className="ms-input min-h-[64px]"
+                      placeholder="Düzeltme ya da ret notu"
+                      value={not}
+                      onChange={(e) => setNot(e.target.value)}
+                    />
+                    <div className="flex flex-wrap gap-2">
+                      {(ayr.yayin.hatalar || []).every((h) => h.includes('sadakati')) && (
+                        <button type="button" disabled={busy} className="m14-btn primary" onClick={esikAtla}>
+                          <ShieldOff aria-hidden /> Eşiği yok say ve yayınla
                         </button>
                       )}
-                  </>
-                ) : ayr.durum === 'onay_bekliyor' ? (
-                  <>
-                    <label className="text-sm text-ink-2" htmlFor="isci-not">
-                      Not (reddetme ya da düzeltme için gerekli; düzeltmede işçi bu notla taslağı yeniden üretir)
-                    </label>
-                    <textarea id="isci-not" className="ms-input min-h-[72px]" value={not} onChange={(e) => setNot(e.target.value)} />
-                    <div className="flex flex-wrap gap-2">
-                      <button type="button" disabled={busy} className="ms-btn is-ok" onClick={() => karar('onayla')}>
-                        <CheckCircle2 aria-hidden /> Onayla
-                      </button>
-                      <button type="button" disabled={busy} className="ms-btn" onClick={() => karar('duzelt')}>
+                      <button type="button" disabled={busy} className="m14-btn" onClick={() => karar('duzelt')}>
                         <PenLine aria-hidden /> Düzeltme iste
                       </button>
-                      <button type="button" disabled={busy} className="ms-btn is-bad" onClick={() => karar('reddet')}>
+                      <button type="button" disabled={busy} className="m14-btn danger" onClick={() => karar('reddet')}>
                         <XCircle aria-hidden /> Reddet
                       </button>
                     </div>
                   </>
-                ) : (
-                  <p className="text-sm text-ink-2">Taslak hâlâ işleniyor.</p>
                 )}
-              </div>
-            </>
-          )}
-        </Panel>
+                {ayr.karar.karar === 'onayla' &&
+                  ayr.yayin &&
+                  ayr.yayin.durum !== 'denetim_hatasi' &&
+                  (ayr.yayin.durum !== 'yayinlandi' || ayr.yayin.site_derlendi === false) && (
+                    <button type="button" disabled={busy} className="m14-btn danger self-start" onClick={yenidenGonder}>
+                      <RotateCcw aria-hidden /> {ayr.yayin.durum === 'yayinlandi' ? 'Siteyi yeniden derle' : 'Yeniden gönder'}
+                    </button>
+                  )}
+              </>
+            ) : ayr.durum === 'onay_bekliyor' ? (
+              <>
+                <label className="text-sm text-ink-2" htmlFor="isci-not">
+                  Not (reddetme ya da düzeltme için gerekli; düzeltmede işçi bu notla taslağı yeniden üretir)
+                </label>
+                <textarea id="isci-not" className="ms-input min-h-[72px]" value={not} onChange={(e) => setNot(e.target.value)} />
+                <p className="m-0 text-xs text-ink-3">Kararı alttaki eylem şeridinden ver.</p>
+              </>
+            ) : (
+              <p className="text-sm text-ink-2">Taslak hâlâ işleniyor.</p>
+            )}
+          </div>
+        </>
       )}
+            </div>
+          </div>
+        )}
+      </Drawer>
 
       {onizle && (
         <Suspense fallback={null}>
@@ -764,7 +878,7 @@ const Yukleniyor: React.FC<{ veri: any }> = ({ veri }) =>
 
 const Kanit: React.FC<{ k?: any }> = ({ k }) =>
   !k ? null : k.referans ? (
-    <span className="text-xs text-ink-3">📚 {k.referans}</span>
+    <span className="text-xs text-ink-3">Kitap: {k.referans}</span>
   ) : (
     <span className="text-xs text-ink-3">
       s.{k.sayfa}: “{k.alinti}”

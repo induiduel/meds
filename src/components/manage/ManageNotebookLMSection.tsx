@@ -28,6 +28,9 @@ import {
 import { toast } from '../ui/Toast';
 import { FlatfileDataOnboarding } from './FlatfileDataOnboarding';
 import { getCustomApiUrl } from '../../services/api';
+import { Drawer } from './consoleUi';
+import { DataTable, DetailNav, PageActions, Pill, SearchField, StatRow, Tabs14, Toolbar } from '../v14/pageKit';
+import { BulkBar, useSelection } from '../v14/manageKit';
 import { ADMIN_EMAIL } from '../../services/auth';
 /** NotebookLM uçları: Ayarlar'daki/canlı API tabanını kullanır ve yönetici başlığını ekler (ham fetch ikisini de atlıyordu). */
 const nlmFetch = (url: string, init: RequestInit = {}) => {
@@ -171,6 +174,8 @@ export const ManageNotebookLMSection: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'all' | 'active' | 'alternative' | 'questions' | 'decks' | 'summaries'>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const picked = useSelection<string>();
+  const [bulkBusy, setBulkBusy] = useState(false);
 
   // Upload & Editor state
   const [showUploadModal, setShowUploadModal] = useState(false);
@@ -432,19 +437,20 @@ export const ManageNotebookLMSection: React.FC = () => {
 
   // Delete contribution
   const handleDelete = async (item: NotebookLMItem) => {
-    if (!(await confirmText(`"${item.title}" kaydını silmek istediğinize emin misiniz?`))) return;
+    if (!(await confirmText(`"${item.title}" kaydını silmek istediğinize emin misiniz?`))) return false;
     try {
       const res = await nlmFetch(`/api/notebooklm/manage/contribution/${item.id}`, { method: 'DELETE' });
       const data = await res.json();
       if (data.success) {
         toast.success(data.message);
         await fetchItems();
-      } else {
-        toast.error(data.message);
+        return true;
       }
+      toast.error(data.message);
     } catch (err: any) {
       toast.error('Silinemedi: ' + err.message);
     }
+    return false;
   };
 
   // Save edited contribution
@@ -500,288 +506,120 @@ export const ManageNotebookLMSection: React.FC = () => {
     };
   }, [items]);
 
+  const isLabel = (s: NotebookLMItem['status']) => (s === 'active' ? 'Etkin' : s === 'archived' ? 'Pasif' : 'Bekliyor');
+  const bulkRun = async (fn: (it: NotebookLMItem) => Promise<boolean>) => {
+    const hedef = items.filter((it) => picked.has(it.id));
+    setBulkBusy(true);
+    let ok = 0;
+    let bad = 0;
+    for (const it of hedef) {
+      if (await fn(it).catch(() => false)) ok++;
+      else bad++;
+    }
+    setBulkBusy(false);
+    (bad ? toast.error : toast.success)(`${ok} başarılı, ${bad} hata`);
+    if (ok) picked.clear();
+    await fetchItems();
+  };
+  const callOk = async (url: string, init?: RequestInit) => {
+    const res = await nlmFetch(url, init);
+    const data = await res.json().catch(() => ({}));
+    return !!data.success;
+  };
+
   return (
-    <div className="flex flex-col gap-5 min-w-0">
-      {/* Top Header */}
-      <div className="flex flex-wrap items-center justify-between gap-4 p-5 bg-card border border-border rounded-xl">
-        <div>
-          <div className="flex items-center gap-2 text-primary font-semibold text-xs tracking-wider uppercase mb-1">
-            <Brain className="w-4 h-4" />
-            <span>NotebookLM &amp; Yapay Zeka Entegrasyonu</span>
+    <div className="flex flex-col gap-3 min-w-0">
+      <PageActions note="Yüklenen içerik mevcut verinin üzerine yazılmaz; önce alternatif olarak saklanır, siz etkinleştirene kadar ana sistem korunur ve tek tıkla geri dönülebilir.">
+        <button type="button" onClick={fetchItems} className="m14-btn ghost" title="Listeyi yenile">
+          <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} /> Yenile
+        </button>
+        <button type="button" onClick={() => setShowOnboardingModal(true)} className="m14-btn" title="Kolon eşleme ve tablosal doğrulama ile içe aktar">
+          <Table className="w-3.5 h-3.5" /> Tablo ile içe aktar
+        </button>
+        <button type="button" onClick={() => setShowUploadModal(true)} className="m14-btn primary">
+          <Upload className="w-4 h-4" /> JSON / MD yükle
+        </button>
+      </PageActions>
+
+      <StatRow
+        stats={[
+          { label: 'Katkı', value: stats.total },
+          { label: 'Etkin', value: stats.active, tone: 'ok', onClick: () => setActiveTab('active') },
+          { label: 'Karşılaştırma bekleyen', value: stats.alternative, tone: stats.alternative ? 'warn' : undefined, onClick: () => setActiveTab('alternative') },
+          { label: 'RAG’e entegre', value: stats.rag, tone: 'acc' },
+        ]}
+      />
+
+      <Toolbar>
+        <Tabs14
+          label="Katkı süzgeci"
+          value={activeTab}
+          onChange={setActiveTab}
+          options={[
+            { id: 'all', label: 'Tümü', n: items.length },
+            { id: 'alternative', label: 'Bekleyen', n: stats.alternative },
+            { id: 'active', label: 'Etkin', n: stats.active },
+            { id: 'questions', label: 'Sorular' },
+            { id: 'decks', label: 'Desteler' },
+            { id: 'summaries', label: 'Özetler' },
+          ]}
+        />
+        <SearchField value={searchQuery} onChange={setSearchQuery} placeholder="Katkı, kimlik ya da tür ara" label="Katkı ara" />
+      </Toolbar>
+
+      <BulkBar
+        count={picked.count}
+        noun="katkı"
+        busy={bulkBusy}
+        onClear={picked.clear}
+        actions={[
+          { label: 'Etkinleştir', kind: 'main', run: () => bulkRun((it) => (it.status === 'active' ? Promise.resolve(true) : callOk(`/api/notebooklm/manage/activate/${it.id}`, { method: 'POST' }))) },
+          { label: 'Pasifleştir', run: () => bulkRun((it) => (it.status !== 'active' ? Promise.resolve(true) : callOk(`/api/notebooklm/manage/deactivate/${it.id}`, { method: 'POST' }))) },
+          { label: 'Sil', kind: 'danger', confirm: `${picked.count} katkıyı silmeyi onayla`, run: () => bulkRun((it) => callOk(`/api/notebooklm/manage/contribution/${it.id}`, { method: 'DELETE' })) },
+        ]}
+      />
+
+      <DataTable<NotebookLMItem>
+        rows={filteredItems}
+        rowKey={(it) => it.id}
+        selection={picked}
+        onOpen={openDiff}
+        activeKey={selectedItemForDiff?.id || null}
+        busy={loading}
+        minWidth={860}
+        empty={
+          <div className="flex flex-col items-center gap-2 py-6">
+            <span>Henüz kayıtlı bir NotebookLM alternatifi yok.</span>
+            <button type="button" onClick={() => setShowUploadModal(true)} className="m14-btn primary">İlk JSON’ı yükle</button>
           </div>
-          <h2 className="text-xl font-bold text-ink">NotebookLM Stüdyosu &amp; Alternatif Seçim Masası</h2>
-          <p className="text-xs text-ink-3 mt-1">
-            NotebookLM çıktılarını mevcut verileri ezmeden güvenle yükleyin; orijinal ile yan yana karşılaştırıp tercihinizi yapın.
-          </p>
-        </div>
+        }
+        cols={[
+          { key: 'title', label: 'Katkı', main: true, render: (it) => <span title={it.notes || it.title}>{it.title}</span> },
+          { key: 'status', label: 'Durum', width: 110, render: (it) => <Pill tone={it.status === 'active' ? 'ok' : it.status === 'archived' ? '' : 'warn'}>{isLabel(it.status)}</Pill> },
+          { key: 'type', label: 'Tür', render: (it) => (TYPE_LABELS[it.type] || TYPE_LABELS.raw_json).label },
+          { key: 'target', label: 'Hedef', mono: true, render: (it) => <span className="block truncate max-w-[12rem]">{it.targetId || '—'}</span> },
+          { key: 'n', label: 'Öge', right: true, render: (it) => it.itemCount },
+          { key: 'rag', label: 'RAG', render: (it) => (it.ragOptimized ? <Pill tone="acc">Etkin</Pill> : '—') },
+          { key: 'at', label: 'Yüklenme', muted: true, render: (it) => new Date(it.createdAt).toLocaleString('tr-TR') },
+        ]}
+      />
 
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={fetchItems}
-            className="ms-btn is-sm is-ghost flex items-center gap-1.5"
-            title="Listeyi yenile"
-          >
-            <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
-            Yenile
-          </button>
-          <button
-            type="button"
-            onClick={() => setShowOnboardingModal(true)}
-            className="ms-btn is-sm is-secondary flex items-center gap-2 text-xs shadow-xs"
-            title="Flatfile tarzı kolon eşleme ve tablosal doğrulama ile içe aktar"
-          >
-            <Table className="w-3.5 h-3.5 text-primary" />
-            <span>Flatfile Data Onboarding</span>
-            <span className="text-2xs px-1.5 py-0.2 rounded-full bg-ok/10 text-ok font-extrabold">
-              YENİ
-            </span>
-          </button>
-          <button
-            type="button"
-            onClick={() => setShowUploadModal(true)}
-            className="ms-btn is-primary flex items-center gap-2 text-sm shadow-sm"
-          >
-            <Plus className="w-4 h-4" />
-            Hızlı JSON Yükle
-          </button>
-        </div>
-      </div>
 
-      {/* Peace of Mind Callout */}
-      <div className="flex items-start gap-3 p-4 bg-ok/5 border border-ok/20 rounded-xl text-xs text-ok ">
-        <CheckCircle2 className="w-4 h-4 text-ok shrink-0 mt-0.5" />
-        <div>
-          <strong className="font-semibold">Sıfır Çakışma ve Güvenli Alternatif Garantisi:</strong> Yüklediğiniz hiçbir dosya veya JSON mevcut veritabanınızın üzerine doğrudan yazılmaz. İlk aşamada <em>"Alternatif"</em> olarak depolanır; siz yan yana inceleyip <em>"Tercih Et"</em> butonuna basana kadar ana sistem korunur. Dilediğiniz an tek tıkla orijinal veriye geri dönebilirsiniz.
-        </div>
-      </div>
-
-      {/* Stats Bar */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <div className="p-3.5 bg-card border border-border rounded-xl flex flex-col gap-0.5">
-          <span className="text-xs text-ink-3">Toplam Yüklenen</span>
-          <span className="text-xl font-bold text-ink">{stats.total}</span>
-        </div>
-        <div className="p-3.5 bg-card border border-border rounded-xl flex flex-col gap-0.5">
-          <span className="text-xs text-ok font-medium">Tercih Edilen (Aktif)</span>
-          <span className="text-xl font-bold text-ok">{stats.active}</span>
-        </div>
-        <div className="p-3.5 bg-card border border-border rounded-xl flex flex-col gap-0.5">
-          <span className="text-xs text-warn font-medium">Bekleyen Alternatif</span>
-          <span className="text-xl font-bold text-warn">{stats.alternative}</span>
-        </div>
-        <div className="p-3.5 bg-card border border-border rounded-xl flex flex-col gap-0.5">
-          <span className="text-xs text-accent font-medium">RAG'e Entegre</span>
-          <span className="text-xl font-bold text-accent">{stats.rag}</span>
-        </div>
-      </div>
-
-      {/* Filter Tabs & Search */}
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <div className="flex flex-wrap items-center gap-1.5 p-1 bg-surface-2 border border-border rounded-lg text-xs">
-          <button
-            type="button"
-            onClick={() => setActiveTab('all')}
-            className={`px-3 py-1.5 rounded-md font-medium transition ${activeTab === 'all' ? 'bg-card text-ink shadow-xs' : 'text-ink-3 hover:text-ink'}`}
-          >
-            Tümü ({items.length})
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab('active')}
-            className={`px-3 py-1.5 rounded-md font-medium transition ${activeTab === 'active' ? 'bg-card text-ok shadow-xs' : 'text-ink-3 hover:text-ink'}`}
-          >
-            🟢 Aktifler ({stats.active})
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab('alternative')}
-            className={`px-3 py-1.5 rounded-md font-medium transition ${activeTab === 'alternative' ? 'bg-card text-warn shadow-xs' : 'text-ink-3 hover:text-ink'}`}
-          >
-            🟡 Alternatifler ({stats.alternative})
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab('questions')}
-            className={`px-3 py-1.5 rounded-md font-medium transition ${activeTab === 'questions' ? 'bg-card text-ink shadow-xs' : 'text-ink-3 hover:text-ink'}`}
-          >
-            Sorular
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab('decks')}
-            className={`px-3 py-1.5 rounded-md font-medium transition ${activeTab === 'decks' ? 'bg-card text-ink shadow-xs' : 'text-ink-3 hover:text-ink'}`}
-          >
-            Desteler
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab('summaries')}
-            className={`px-3 py-1.5 rounded-md font-medium transition ${activeTab === 'summaries' ? 'bg-card text-ink shadow-xs' : 'text-ink-3 hover:text-ink'}`}
-          >
-            Özetler
-          </button>
-        </div>
-
-        <div className="relative min-w-[220px]">
-          <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-ink-3" />
-          <input
-            type="text"
-            placeholder="Başlık, ID veya tip ara..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="ms-input !pl-8 text-xs !py-1.5 w-full"
-          />
-        </div>
-      </div>
-
-      {/* Contributions List */}
-      <div className="flex flex-col gap-3">
-        {filteredItems.length === 0 ? (
-          <div className="p-12 text-center bg-card border border-border rounded-xl">
-            <Brain className="w-10 h-10 mx-auto text-ink-3 mb-3 opacity-40" />
-            <h4 className="text-sm font-semibold text-ink">Henüz kayıtlı bir NotebookLM alternatifi yok</h4>
-            <p className="text-xs text-ink-3 max-w-md mx-auto mt-1 mb-4">
-              NotebookLM'den aldığınız çıktıları yüklemek için "Yeni JSON / Dosya Yükle" butonunu kullanabilirsiniz.
-            </p>
-            <button
-              type="button"
-              onClick={() => setShowUploadModal(true)}
-              className="ms-btn is-primary is-sm"
-            >
-              İlk JSON'ı Yükle
+      {/* Yükleme çalışma alanı */}
+      <Drawer
+        open={showUploadModal}
+        onClose={() => setShowUploadModal(false)}
+        title="NotebookLM JSON / çıktı yükleme"
+        foot={
+          <>
+            <button type="button" onClick={() => setShowUploadModal(false)} className="m14-btn ghost">İptal</button>
+            <button type="button" onClick={handleStageSubmit} disabled={submitting} className="m14-btn primary">
+              <Upload className="w-3.5 h-3.5" />
+              {submitting ? 'Kaydediliyor…' : 'Alternatif olarak kaydet'}
             </button>
-          </div>
-        ) : (
-          filteredItems.map((item) => {
-            const typeConfig = TYPE_LABELS[item.type] || TYPE_LABELS.raw_json;
-            const Icon = typeConfig.icon;
-            const isActive = item.status === 'active';
-
-            return (
-              <div
-                key={item.id}
-                className={`p-4 bg-card border rounded-xl transition flex flex-col gap-3 ${
-                  isActive ? 'border-ok/40 shadow-xs' : 'border-border'
-                }`}
-              >
-                <div className="flex flex-wrap items-start justify-between gap-3">
-                  <div className="flex items-start gap-3">
-                    <div className="p-2.5 bg-surface-2 rounded-lg text-ink shrink-0 mt-0.5">
-                      <Icon className="w-4 h-4 text-primary" />
-                    </div>
-                    <div>
-                      <div className="flex flex-wrap items-center gap-2">
-                        <h4 className="text-sm font-bold text-ink">{item.title}</h4>
-                        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-medium border ${typeConfig.color}`}>
-                          {typeConfig.label}
-                        </span>
-                        {isActive ? (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-semibold bg-ok/10 text-ok border border-ok/30">
-                            🟢 Tercih Edilen (Aktif)
-                          </span>
-                        ) : (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-semibold bg-warn/10 text-warn border border-warn/30">
-                            🟡 Alternatif (Beklemede)
-                          </span>
-                        )}
-                        {item.ragOptimized && (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-semibold bg-accent/10 text-accent border border-accent/30">
-                            RAG Aktif
-                          </span>
-                        )}
-                      </div>
-
-                      <div className="flex flex-wrap items-center gap-3 text-xs text-ink-3 mt-1.5">
-                        {item.targetId && (
-                          <span>Hedef ID: <code className="bg-surface-2 px-1 rounded">{item.targetId}</code></span>
-                        )}
-                        <span>{item.itemCount} Öge</span>
-                        <span>•</span>
-                        <span>{new Date(item.createdAt).toLocaleString('tr-TR')}</span>
-                        {item.notes && <span>• {item.notes}</span>}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Actions */}
-                  <div className="flex items-center gap-2">
-                    <button
-                      type="button"
-                      onClick={() => openDiff(item)}
-                      className="ms-btn is-sm is-ghost text-xs flex items-center gap-1"
-                    >
-                      <GitCompare className="w-3.5 h-3.5 text-accent" />
-                      Karşılaştır / İncele
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setEditingItem(item);
-                        setEditJsonText(JSON.stringify(item.proposedData, null, 2));
-                      }}
-                      className="ms-btn is-sm is-ghost text-xs flex items-center gap-1"
-                      title="JSON'ı düzenle"
-                    >
-                      <Edit3 className="w-3.5 h-3.5" />
-                      Düzenle
-                    </button>
-
-                    {isActive ? (
-                      <button
-                        type="button"
-                        onClick={() => handleDeactivate(item)}
-                        className="ms-btn is-sm is-outline text-xs text-warn border-warn/30 hover:bg-warn/10"
-                        title="Orijinal veriye geri dön"
-                      >
-                        Orijinal Veriye Dön
-                      </button>
-                    ) : (
-                      <button
-                        type="button"
-                        onClick={() => handleActivate(item)}
-                        className="ms-btn is-sm is-primary text-xs bg-ok hover:bg-ok"
-                        title="Bu alternatifi sisteme uygula"
-                      >
-                        Tercih Et (Uygula)
-                      </button>
-                    )}
-
-                    <button
-                      type="button"
-                      onClick={() => handleDelete(item)}
-                      className="ms-btn is-sm is-ghost text-xs text-bad-text hover:bg-bad/10"
-                      title="Kaydı sil"
-                    >
-                      <Trash2 className="w-3.5 h-3.5" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            );
-          })
-        )}
-      </div>
-
-      {/* Upload & Staging Modal */}
-      {showUploadModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[var(--color-scrim)]">
-          <div className="bg-card border border-border rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
-            <div className="flex items-center justify-between p-4 border-b border-border bg-surface-1">
-              <div className="flex items-center gap-2">
-                <Brain className="w-5 h-5 text-primary" />
-                <h3 className="text-base font-bold text-ink">NotebookLM JSON / Çıktı Yükleme</h3>
-              </div>
-              <button
-                type="button"
-                onClick={() => setShowUploadModal(false)}
-                className="p-1 rounded-lg text-ink-3 hover:text-ink hover:bg-surface-2"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
+          </>
+        }
+      >
             <div className="p-5 flex flex-col gap-4 overflow-y-auto">
               <div className="p-3 bg-primary/5 border border-primary/20 rounded-xl text-xs text-primary flex items-start gap-2">
                 <Sparkles className="w-4 h-4 shrink-0 mt-0.5" />
@@ -931,41 +769,18 @@ export const ManageNotebookLMSection: React.FC = () => {
                 </button>
               </div>
             </div>
+      </Drawer>
 
-            <div className="flex items-center justify-end gap-2 p-4 border-t border-border bg-surface-1">
-              <button
-                type="button"
-                onClick={() => setShowUploadModal(false)}
-                className="ms-btn is-sm is-ghost text-xs"
-              >
-                İptal
-              </button>
-              <button
-                type="button"
-                onClick={handleStageSubmit}
-                disabled={submitting}
-                className="ms-btn is-sm is-primary text-xs flex items-center gap-1.5"
-              >
-                <Upload className="w-3.5 h-3.5" />
-                {submitting ? 'Kaydediliyor...' : 'Alternatif Olarak Güvenle Kaydet'}
-              </button>
-            </div>
-          </div>
+      {/* Tablo ile içe aktarma */}
+      <Drawer open={showOnboardingModal} onClose={() => setShowOnboardingModal(false)} wide title="Tablo ile içe aktar">
+        <div className="flex flex-col min-h-[70vh]">
+          <FlatfileDataOnboarding
+            targetMode="notebooklm_alternative"
+            onComplete={handleOnboardingComplete}
+            onCancel={() => setShowOnboardingModal(false)}
+          />
         </div>
-      )}
-
-      {/* Flatfile Data Onboarding Full Modal */}
-      {showOnboardingModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-[var(--color-scrim)]">
-          <div className="w-full max-w-6xl max-h-[94vh] h-[850px] flex flex-col">
-            <FlatfileDataOnboarding
-              targetMode="notebooklm_alternative"
-              onComplete={handleOnboardingComplete}
-              onCancel={() => setShowOnboardingModal(false)}
-            />
-          </div>
-        </div>
-      )}
+      </Drawer>
 
       {/* Side-by-Side Visual UI Diff Modal */}
       {selectedItemForDiff && (() => {
@@ -992,70 +807,74 @@ export const ManageNotebookLMSection: React.FC = () => {
           String(origQ.correctAnswer).toUpperCase() !== String(propQ.correctAnswer).toUpperCase();
 
         return (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-[var(--color-scrim)]">
-            <div className="bg-card border border-border rounded-2xl w-full max-w-6xl max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
-              {/* Modal Header */}
-              <div className="flex flex-wrap items-center justify-between p-3.5 sm:p-4 border-b border-border bg-surface-1 gap-2">
-                <div className="flex items-center gap-2">
-                  <GitCompare className="w-5 h-5 text-accent shrink-0" />
-                  <div>
-                    <h3 className="text-sm sm:text-base font-bold text-ink flex items-center gap-2">
-                      Görsel Karşılaştırma: {selectedItemForDiff.title}
-                    </h3>
-                    <div className="flex flex-wrap items-center gap-1.5 mt-0.5">
-                      <p className="text-2xs text-ink-3">
-                        {isQuestionType
-                          ? `Toplam ${qList.length} soru önerisi • Birebir karşılıklı soru incelemesi`
-                          : 'Veri paketi görsel incelemesi'}
-                      </p>
-                      {selectedItemForDiff.proposedData?.batch !== undefined && (
-                        <span className="text-2xs font-semibold px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">
-                          Batch {selectedItemForDiff.proposedData.batch}
-                        </span>
-                      )}
-                      {selectedItemForDiff.proposedData?.questionRange && (
-                        <span className="text-2xs font-semibold px-2 py-0.5 rounded-full bg-ai/10 text-ai border border-ai/20">
-                          Sorular: {selectedItemForDiff.proposedData.questionRange}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  {/* Mode switcher: UI vs JSON */}
-                  <div className="flex items-center p-0.5 bg-surface-2 rounded-lg border border-border text-2xs">
-                    <button
-                      type="button"
-                      onClick={() => setDiffMode('ui')}
-                      className={`flex items-center gap-1 px-2.5 py-1 rounded-md font-medium transition ${
-                        diffMode === 'ui' ? 'bg-card text-ink shadow-xs' : 'text-ink-3 hover:text-ink'
-                      }`}
-                    >
-                      <Eye className="w-3.5 h-3.5" />
-                      Görsel UI
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setDiffMode('json')}
-                      className={`flex items-center gap-1 px-2.5 py-1 rounded-md font-medium transition ${
-                        diffMode === 'json' ? 'bg-card text-ink shadow-xs' : 'text-ink-3 hover:text-ink'
-                      }`}
-                    >
-                      <Code className="w-3.5 h-3.5" />
-                      Ham JSON
-                    </button>
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={() => setSelectedItemForDiff(null)}
-                    className="p-1.5 rounded-lg text-ink-3 hover:text-ink hover:bg-surface-2 transition"
-                  >
-                    <X className="w-5 h-5" />
+          <Drawer
+            open
+            onClose={() => setSelectedItemForDiff(null)}
+            wide
+            label="Özgün içerikle karşılaştırma"
+            title={selectedItemForDiff.title}
+            head={
+              <>
+                <DetailNav<NotebookLMItem> list={filteredItems} current={selectedItemForDiff} same={(a, b) => a.id === b.id} onGo={openDiff} />
+                <button type="button" aria-pressed={diffMode === 'ui'} onClick={() => setDiffMode('ui')} className={`m14-btn ${diffMode === 'ui' ? 'primary' : 'ghost'}`}>
+                  <Eye className="w-3.5 h-3.5" /> Görsel
+                </button>
+                <button type="button" aria-pressed={diffMode === 'json'} onClick={() => setDiffMode('json')} className={`m14-btn ${diffMode === 'json' ? 'primary' : 'ghost'}`}>
+                  <Code className="w-3.5 h-3.5" /> Ham JSON
+                </button>
+              </>
+            }
+            foot={
+              <>
+                <span className="text-xs text-ink-3 mr-auto">
+                  {selectedItemForDiff.status === 'active' ? 'Bu katkı şu anda canlı veride etkin.' : 'Alternatif havuzunda bekliyor; etkinleştirildiğinde sisteme uygulanır.'}
+                </span>
+                <button
+                  type="button"
+                  className="m14-btn ghost"
+                  onClick={() => {
+                    setEditingItem(selectedItemForDiff);
+                    setEditJsonText(JSON.stringify(selectedItemForDiff.proposedData, null, 2));
+                  }}
+                >
+                  <Edit3 className="w-3.5 h-3.5" /> JSON düzenle
+                </button>
+                <button type="button" className="m14-btn danger" aria-label="Katkıyı sil" onClick={async () => { if (await handleDelete(selectedItemForDiff)) setSelectedItemForDiff(null); }}>
+                  <Trash2 className="w-3.5 h-3.5" /> Sil
+                </button>
+                {selectedItemForDiff.status === 'active' ? (
+                  <button type="button" onClick={() => { handleDeactivate(selectedItemForDiff); setSelectedItemForDiff(null); }} className="m14-btn">
+                    Orijinal veriye dön
                   </button>
-                </div>
-              </div>
+                ) : (
+                  <>
+                    <button type="button" onClick={() => { handleActivate(selectedItemForDiff); setSelectedItemForDiff(null); }} className="m14-btn">
+                      Etkinleştir
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const it = selectedItemForDiff;
+                        const i = filteredItems.findIndex((x) => x.id === it.id);
+                        const n = filteredItems.filter((x) => x.id !== it.id)[Math.max(0, i)];
+                        handleActivate(it);
+                        if (n) openDiff(n);
+                        else setSelectedItemForDiff(null);
+                      }}
+                      className="m14-btn primary"
+                    >
+                      Etkinleştir ve sonraki
+                    </button>
+                  </>
+                )}
+              </>
+            }
+          >
+            <p className="m-0 text-xs text-ink-3 flex flex-wrap items-center gap-1.5">
+              {isQuestionType ? `Toplam ${qList.length} soru önerisi · birebir karşılıklı inceleme` : 'Veri paketi görsel incelemesi'}
+              {selectedItemForDiff.proposedData?.batch !== undefined && <Pill tone="acc">Batch {selectedItemForDiff.proposedData.batch}</Pill>}
+              {selectedItemForDiff.proposedData?.questionRange && <Pill>Sorular: {selectedItemForDiff.proposedData.questionRange}</Pill>}
+            </p>
 
               {/* Multi-Question Navigator Bar (when more than 1 question) */}
               {isQuestionType && qList.length > 1 && diffMode === 'ui' && (
@@ -1493,106 +1312,30 @@ export const ManageNotebookLMSection: React.FC = () => {
                   </div>
                 )}
               </div>
-
-              {/* Modal Footer */}
-              <div className="flex flex-wrap items-center justify-between p-3 sm:p-4 border-t border-border bg-surface-1 gap-2">
-                <span className="text-xs text-ink-3 flex items-center gap-1.5">
-                  {selectedItemForDiff.status === 'active' ? (
-                    <span className="text-ok font-semibold flex items-center gap-1">
-                      <CheckCircle2 className="w-4 h-4" /> Bu alternatif şu anda canlı veritabanında aktiftir.
-                    </span>
-                  ) : (
-                    <span className="text-warn font-medium flex items-center gap-1">
-                      <Clock className="w-4 h-4" /> Alternatif havuzunda beklemede; onaylandığında sisteme uygulanır.
-                    </span>
-                  )}
-                </span>
-
-                <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedItemForDiff(null)}
-                    className="ms-btn is-sm is-ghost text-xs"
-                  >
-                    Kapat
-                  </button>
-
-                  {selectedItemForDiff.status === 'active' ? (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        handleDeactivate(selectedItemForDiff);
-                        setSelectedItemForDiff(null);
-                      }}
-                      className="ms-btn is-sm is-outline text-xs text-warn border-warn/30 hover:bg-warn/10"
-                    >
-                      Orijinal Veriye Geri Dön
-                    </button>
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        handleActivate(selectedItemForDiff);
-                        setSelectedItemForDiff(null);
-                      }}
-                      className="ms-btn is-sm is-primary text-xs bg-ok hover:bg-ok"
-                    >
-                      Bu Alternatifi Tercih Et (Sisteme Uygula)
-                    </button>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
+          </Drawer>
         );
       })()}
 
-      {/* Edit Modal */}
-      {editingItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[var(--color-scrim)]">
-          <div className="bg-card border border-border rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
-            <div className="flex items-center justify-between p-4 border-b border-border bg-surface-1">
-              <div className="flex items-center gap-2">
-                <Edit3 className="w-5 h-5 text-primary" />
-                <h3 className="text-base font-bold text-ink">JSON Düzenle: {editingItem.title}</h3>
-              </div>
-              <button
-                type="button"
-                onClick={() => setEditingItem(null)}
-                className="p-1 rounded-lg text-ink-3 hover:text-ink"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            <div className="p-4 flex flex-col gap-3">
-              <textarea
-                rows={16}
-                value={editJsonText}
-                onChange={(e) => setEditJsonText(e.target.value)}
-                className="ms-input font-mono text-xs w-full leading-relaxed"
-              />
-            </div>
-
-            <div className="flex items-center justify-end gap-2 p-4 border-t border-border bg-surface-1">
-              <button
-                type="button"
-                onClick={() => setEditingItem(null)}
-                className="ms-btn is-sm is-ghost text-xs"
-              >
-                İptal
-              </button>
-              <button
-                type="button"
-                onClick={handleSaveEdit}
-                className="ms-btn is-sm is-primary text-xs"
-              >
-                Değişiklikleri Kaydet
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* JSON düzenleme */}
+      <Drawer
+        open={!!editingItem}
+        onClose={() => setEditingItem(null)}
+        title={editingItem ? `JSON düzenle: ${editingItem.title}` : ''}
+        foot={
+          <>
+            <button type="button" onClick={() => setEditingItem(null)} className="m14-btn ghost">İptal</button>
+            <button type="button" onClick={handleSaveEdit} className="m14-btn primary">Değişiklikleri kaydet</button>
+          </>
+        }
+      >
+        <textarea
+          rows={20}
+          value={editJsonText}
+          onChange={(e) => setEditJsonText(e.target.value)}
+          aria-label="Katkı JSON'u"
+          className="ms-input font-mono text-xs w-full leading-relaxed"
+        />
+      </Drawer>
     </div>
   );
 };

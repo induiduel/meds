@@ -1,8 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Archive, Download, Info, ShieldCheck, ShieldAlert, Tags, PencilLine, StickyNote, FileJson } from 'lucide-react';
+import { Archive, Download, ShieldCheck, ShieldAlert, Tags, PencilLine, StickyNote, FileJson } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
-import { ChipBar, Drawer, EmptyState, Field, SearchBox, Seg } from './consoleUi';
+import { Drawer, EmptyState, Field, Seg } from './consoleUi';
+import { Card14, DataTable, DetailLayout, DetailNav, FactList, PageActions, Pill, SearchField, StatRow, Tabs14, Toolbar, type Col } from '../v14/pageKit';
+import { BulkBar, useSelection } from '../v14/manageKit';
 
 /**
  * Ham soru havuzu: kullanıcıların eklediği her soru ve o soruya gelen her katkı (parça/ipucu, şık, "şık yoktu"
@@ -64,6 +66,9 @@ export const ManageRawPoolSection: React.FC<{ adminEmail: string }> = ({ adminEm
   const [filtre, setFiltre] = useState<Filtre>('hepsi');
   const [open, setOpen] = useState<Cluster | null>(null);
   const [tab, setTab] = useState<'kume' | 'olaylar' | 'json'>('kume');
+  const secim = useSelection<string>();
+  const [topluBusy, setTopluBusy] = useState(false);
+  const [topluSinif, setTopluSinif] = useState(false);
 
   const yukle = () =>
     safeJsonFetch<{ items: Summary[] }>('/api/admin/raw-pool', { headers }).then((r) => {
@@ -123,63 +128,111 @@ export const ManageRawPoolSection: React.FC<{ adminEmail: string }> = ({ adminEm
       .filter((x) => !t || `${x.title} ${x.qid} ${x.discipline} ${x.committeeId} ${JSON.stringify(x.classification)}`.toLocaleLowerCase('tr').includes(t))
       .sort((a, b) => String(b.lastEvent).localeCompare(String(a.lastEvent)));
   }, [items, q, filtre, say]);
+  const gorunen = liste.slice(0, 300);
+  const secili = () => [...secim.sel];
+
+  // Seçilenlere aynı sınıflandırmayı tek tek olay olarak yazar (ham kayıt değişmez)
+  const topluSiniflandir = async (body: { category: string; quality: string; tags: string[] }) => {
+    const ids = secili();
+    setTopluBusy(true);
+    let ok = 0, err = 0;
+    for (const id of ids) {
+      const r = await safeJsonFetch<any>(`/api/admin/raw-pool/${encodeURIComponent(id)}/classify`, { method: 'POST', headers, body: JSON.stringify(body) });
+      if (r.ok && r.data?.success) ok++; else err++;
+    }
+    setTopluBusy(false);
+    (err ? toast.error : toast.success)(`Sınıflandırma: ${ok} başarılı, ${err} hata.`);
+    if (!err) { secim.clear(); setTopluSinif(false); }
+    yukle();
+  };
+
+  const sinifMetni = (x: Summary) => [x.classification?.category, x.classification?.quality, ...(x.classification?.tags || [])].filter(Boolean).join(', ');
+  const cols: Col<Summary>[] = [
+    { key: 't', label: 'Soru', main: true, render: (x) => x.title || x.qid },
+    { key: 's', label: 'Sınıf', render: (x) => (Object.keys(x.classification || {}).length ? <Pill tone="ok">{sinifMetni(x) || 'Sınıflandı'}</Pill> : <Pill tone="warn">Sınıflanmamış</Pill>) },
+    { key: 'k', label: 'Kaynak', muted: true, render: (x) => [x.committeeId, x.questionNumber ? `S.${x.questionNumber}` : null, x.discipline].filter(Boolean).join(' · ') || '—' },
+    { key: 'd', label: 'Durum', render: (x) => (
+      <span className="inline-flex gap-1">
+        {x.chain.ok ? <Pill tone="ok"><ShieldCheck className="w-3.5 h-3.5" aria-hidden="true" /> Zincir sağlam</Pill> : <Pill tone="bad"><ShieldAlert className="w-3.5 h-3.5" aria-hidden="true" /> Zincir bozuk</Pill>}
+        {x.deleted && <Pill>Havuzdan kaldırıldı</Pill>}
+        {x.aiCount > 0 && <Pill tone="acc">YZ {x.aiCount}</Pill>}
+      </span>
+    ) },
+    { key: 'e', label: 'Olay', right: true, render: (x) => x.eventCount },
+    { key: 'q', label: 'Kayıt no', mono: true, render: (x) => x.qid },
+    { key: 'z', label: 'Son olay', muted: true, render: (x) => fmt(x.lastEvent) },
+  ];
+
+  const sonraki = () => {
+    if (!open) return;
+    const i = liste.findIndex((x) => x.qid === open.qid);
+    const n = liste[i + 1];
+    if (n) ac(n.qid); else setOpen(null);
+  };
 
   return (
-    <div className="flex flex-col gap-3 min-w-0">
-      <div className="ms-alert is-accent">
-        <Info aria-hidden="true" />
-        <span>
-          Kullanıcıların eklediği sorular ve katkıları <b>ham veridir</b>: soru başına tek kümede, yalnız eklenen bir defterde tutulur. Hiçbir
-          olay silinmez ya da değiştirilmez; sınıflandırma, düzenleme ve YZ önerileri ayrı olay olarak eklenir. Havuz soruları RAG'e alınmaz.
-        </span>
-      </div>
+    <div className="flex flex-col gap-4 min-w-0">
+      <PageActions
+        note={<>Kullanıcıların eklediği sorular ve katkıları <b>ham veridir</b>: soru başına tek kümede, yalnız eklenen bir defterde tutulur. Hiçbir olay silinmez ya da değiştirilmez; sınıflandırma, düzenleme ve YZ önerileri ayrı olay olarak eklenir. Havuz soruları RAG'e alınmaz.</>}
+      >
+        <button type="button" className="m14-btn primary" onClick={() => indir('json')}><Download aria-hidden="true" /> JSON (kümeler)</button>
+        <button type="button" className="m14-btn" onClick={() => indir('jsonl')}><FileJson aria-hidden="true" /> JSONL (olaylar)</button>
+        <button type="button" className="m14-btn" onClick={() => indir('csv')}><Download aria-hidden="true" /> CSV</button>
+      </PageActions>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <SearchBox value={q} onChange={setQ} placeholder="Soru, ders, etiket ara" count={liste.length} className="flex-1 min-w-[220px]" />
-        <button type="button" className="ms-btn" onClick={() => indir('json')}><Download /> JSON (kümeler)</button>
-        <button type="button" className="ms-btn" onClick={() => indir('jsonl')}><FileJson /> JSONL (olaylar)</button>
-        <button type="button" className="ms-btn" onClick={() => indir('csv')}><Download /> CSV</button>
-      </div>
+      <StatRow
+        stats={[
+          { label: 'Defterdeki küme', value: items ? say.hepsi.toLocaleString('tr-TR') : '…', onClick: () => setFiltre('hepsi') },
+          { label: 'Sınıflanmamış', value: items ? say.siniflanmamis.toLocaleString('tr-TR') : '…', tone: say.siniflanmamis ? 'warn' : 'ok', onClick: () => setFiltre('siniflanmamis') },
+          { label: 'Katkı almış', value: items ? say.katki.toLocaleString('tr-TR') : '…', onClick: () => setFiltre('katki') },
+          { label: 'Zincir bozuk', value: items ? say.bozuk.toLocaleString('tr-TR') : '…', tone: say.bozuk ? 'bad' : 'ok', onClick: say.bozuk ? () => setFiltre('bozuk') : undefined },
+        ]}
+      />
 
-      <ChipBar
-        label="Süzgeç"
-        value={filtre}
-        onChange={setFiltre}
-        wrap
-        options={[
-          { id: 'hepsi', label: 'Hepsi', n: say.hepsi },
-          { id: 'katki', label: 'Katkı almış', n: say.katki },
-          { id: 'siniflanmamis', label: 'Sınıflanmamış', n: say.siniflanmamis },
-          { id: 'yz', label: 'YZ önerisi var', n: say.yz },
-          { id: 'silinmis', label: 'Havuzdan kaldırılmış', n: say.silinmis },
-          ...(say.bozuk ? [{ id: 'bozuk' as const, label: 'Zincir bozuk', n: say.bozuk }] : []),
+      <Toolbar>
+        <Tabs14<Filtre>
+          label="Süzgeç"
+          value={filtre}
+          onChange={setFiltre}
+          options={[
+            { id: 'hepsi', label: 'Hepsi', n: say.hepsi },
+            { id: 'siniflanmamis', label: 'Sınıflanmamış', n: say.siniflanmamis },
+            { id: 'katki', label: 'Katkı almış', n: say.katki },
+            { id: 'yz', label: 'YZ önerisi var', n: say.yz },
+            { id: 'silinmis', label: 'Havuzdan kaldırılmış', n: say.silinmis },
+            ...(say.bozuk ? [{ id: 'bozuk' as const, label: 'Zincir bozuk', n: say.bozuk }] : []),
+          ]}
+        />
+        <SearchField value={q} onChange={setQ} placeholder="Soru, ders, etiket ara" />
+        <span className="text-sm text-ink-3 tabular-nums">{liste.length.toLocaleString('tr-TR')} küme{liste.length > 300 ? ' · ilk 300 gösteriliyor' : ''}</span>
+      </Toolbar>
+
+      <BulkBar
+        count={secim.count}
+        noun="küme"
+        busy={topluBusy}
+        onClear={secim.clear}
+        actions={[
+          { label: 'Sınıflandır', kind: 'main', run: () => setTopluSinif(true) },
+          { label: 'JSON indir', run: () => { void indir('json', secili()); } },
+          { label: 'JSONL indir', run: () => { void indir('jsonl', secili()); } },
+          { label: 'CSV indir', run: () => { void indir('csv', secili()); } },
         ]}
       />
 
       {items === null ? (
         <div className="h-48 rounded-2xl ms-shimmer" role="status" aria-label="Yükleniyor" />
-      ) : liste.length === 0 ? (
-        <section className="ms-panel"><EmptyState icon={Archive} title="Bu süzgeçte küme yok" /></section>
       ) : (
-        <section className="ms-panel" style={{ padding: 0 }}>
-          {liste.slice(0, 300).map((x) => (
-            <button key={x.qid} type="button" className="ms-row w-full text-left" onClick={() => ac(x.qid)} style={{ display: 'flex', gap: 12, padding: '10px 14px', alignItems: 'flex-start' }}>
-              {x.chain.ok ? <ShieldCheck className="w-4 h-4 shrink-0 text-ok" aria-label="Zincir sağlam" /> : <ShieldAlert className="w-4 h-4 shrink-0 text-danger" aria-label="Zincir bozuk" />}
-              <span className="min-w-0 flex-1">
-                <span className="block truncate font-medium">{x.title}</span>
-                <span className="block text-sm text-ink-3 truncate">
-                  {[x.committeeId, x.questionNumber ? `S.${x.questionNumber}` : null, x.discipline, x.deleted ? 'havuzdan kaldırıldı' : null].filter(Boolean).join(' · ')}
-                  {Object.keys(x.classification || {}).length ? ` · sınıf: ${[x.classification.category, x.classification.quality, ...(x.classification.tags || [])].filter(Boolean).join(', ')}` : ''}
-                </span>
-              </span>
-              <span className="text-sm text-ink-3 tabular-nums shrink-0 text-right">
-                {x.eventCount} olay
-                <br />
-                {fmt(x.lastEvent)}
-              </span>
-            </button>
-          ))}
-        </section>
+        <DataTable
+          rows={gorunen}
+          cols={cols}
+          rowKey={(x) => x.qid}
+          onOpen={(x) => ac(x.qid)}
+          activeKey={open?.qid ?? null}
+          selection={secim}
+          minWidth={900}
+          empty={<EmptyState icon={Archive} title="Bu süzgeçte küme yok" />}
+        />
       )}
 
       <Drawer
@@ -187,18 +240,23 @@ export const ManageRawPoolSection: React.FC<{ adminEmail: string }> = ({ adminEm
         onClose={() => setOpen(null)}
         wide
         title={open?.title || ''}
-        head={open && <Seg label="Görünüm" value={tab} onChange={setTab} options={[{ id: 'kume', label: 'Küme' }, { id: 'olaylar', label: 'Olaylar', n: open.events.length }, { id: 'json', label: 'JSON' }]} />}
+        head={open && (
+          <>
+            <DetailNav list={liste} current={open as Summary} same={(a, b) => a.qid === b.qid} onGo={(x) => ac(x.qid)} />
+            <Seg label="Görünüm" value={tab} onChange={setTab} options={[{ id: 'kume', label: 'Küme' }, { id: 'olaylar', label: 'Olaylar', n: open.events.length }, { id: 'json', label: 'JSON' }]} />
+          </>
+        )}
         foot={open && (
-          <div className="flex gap-2">
-            <button type="button" className="ms-btn" onClick={() => indir('json', [open.qid])}><Download /> Bu kümeyi JSON indir</button>
+          <div className="flex flex-wrap gap-2">
+            <button type="button" className="m14-btn" onClick={() => indir('json', [open.qid])}><Download aria-hidden="true" /> Bu kümeyi JSON indir</button>
           </div>
         )}
       >
-        {open && tab === 'kume' && <KumeGorunumu c={open} headers={headers} onChanged={() => { ac(open.qid); yukle(); }} />}
+        {open && tab === 'kume' && <KumeGorunumu key={open.qid} c={open} headers={headers} onChanged={() => { ac(open.qid); yukle(); }} onNext={sonraki} />}
         {open && tab === 'olaylar' && (
           <ol className="flex flex-col gap-2">
             {open.events.map((e) => (
-              <li key={e.eventId} className="ms-panel" style={{ padding: '8px 12px' }}>
+              <li key={e.eventId} className="pk14-card" style={{ padding: '8px 12px' }}>
                 <div className="text-sm text-ink-3">#{e.seq} · {fmt(e.ts)} · {who(e.actor)}</div>
                 <div className="font-medium">{TYPE_LABEL[e.type] || e.type}</div>
                 <div className="text-sm break-words">{preview(e.payload)}</div>
@@ -208,15 +266,41 @@ export const ManageRawPoolSection: React.FC<{ adminEmail: string }> = ({ adminEm
         )}
         {open && tab === 'json' && <pre className="text-xs whitespace-pre-wrap break-words">{JSON.stringify(open, null, 2)}</pre>}
       </Drawer>
+
+      <Drawer open={topluSinif} onClose={() => setTopluSinif(false)} title={`${secim.count} kümeyi sınıflandır`}>
+        <SiniflandirFormu busy={topluBusy} onSave={(b) => topluSiniflandir(b)} saveLabel={`${secim.count} kümeye kaydet`} />
+      </Drawer>
     </div>
   );
 };
 
-const KumeGorunumu: React.FC<{ c: Cluster; headers: Record<string, string>; onChanged: () => void }> = ({ c, headers, onChanged }) => {
-  const cls = c.classification || {};
-  const [category, setCategory] = useState(cls.category || '');
-  const [quality, setQuality] = useState(cls.quality || '');
-  const [tags, setTags] = useState((cls.tags || []).join(', '));
+const SiniflandirFormu: React.FC<{
+  initial?: Record<string, any>;
+  busy?: boolean;
+  saveLabel: string;
+  onSave: (b: { category: string; quality: string; tags: string[] }) => void;
+  extra?: (b: { category: string; quality: string; tags: string[] }) => React.ReactNode;
+}> = ({ initial = {}, busy, saveLabel, onSave, extra }) => {
+  const [category, setCategory] = useState(initial.category || '');
+  const [quality, setQuality] = useState(initial.quality || '');
+  const [tags, setTags] = useState((initial.tags || []).join(', '));
+  const body = { category, quality, tags: tags.split(',').map((t: string) => t.trim()).filter(Boolean) };
+  return (
+    <div className="flex flex-col gap-2">
+      <div className="grid gap-2" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))' }}>
+        <Field label="Kategori"><input className="ms-input" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="ör. kök-tam, şık-eksik" /></Field>
+        <Field label="Kalite"><select className="ms-input" value={quality} onChange={(e) => setQuality(e.target.value)}><option value="">—</option><option value="tam">Tam</option><option value="kismi">Kısmi</option><option value="belirsiz">Belirsiz</option><option value="kopya">Kopya</option><option value="hatali">Hatalı</option></select></Field>
+        <Field label="Etiketler (virgülle)"><input className="ms-input" value={tags} onChange={(e) => setTags(e.target.value)} /></Field>
+      </div>
+      <div className="flex flex-wrap gap-2">
+        <button type="button" className="m14-btn primary" disabled={busy} onClick={() => onSave(body)}>{saveLabel}</button>
+        {extra?.(body)}
+      </div>
+    </div>
+  );
+};
+
+const KumeGorunumu: React.FC<{ c: Cluster; headers: Record<string, string>; onChanged: () => void; onNext: () => void }> = ({ c, headers, onChanged, onNext }) => {
   const [discipline, setDiscipline] = useState(c.current?.discipline || '');
   const [topic, setTopic] = useState(c.current?.topic || '');
   const [answer, setAnswer] = useState(c.current?.claimedAnswer || '');
@@ -224,65 +308,79 @@ const KumeGorunumu: React.FC<{ c: Cluster; headers: Record<string, string>; onCh
 
   const post = async (path: string, body: any, ok: string) => {
     const r = await safeJsonFetch<any>(`/api/admin/raw-pool/${encodeURIComponent(c.qid)}/${path}`, { method: 'POST', headers, body: JSON.stringify(body) });
-    if (r.ok && r.data?.success) { toast.success(ok); onChanged(); } else toast.error(r.data?.error || 'Kaydedilemedi.');
+    if (r.ok && r.data?.success) { toast.success(ok); onChanged(); return true; }
+    toast.error(r.data?.error || 'Kaydedilemedi.');
+    return false;
   };
 
   const Liste: React.FC<{ title: string; rows: any[]; render: (r: any) => React.ReactNode }> = ({ title, rows, render }) =>
-    rows.length ? (
-      <section>
-        <h3 className="font-semibold mb-1">{title} <span className="text-ink-3">({rows.length})</span></h3>
+    rows?.length ? (
+      <Card14 title={<>{title} <span className="text-ink-3 font-normal">({rows.length})</span></>}>
         <ul className="flex flex-col gap-1">
-          {rows.map((r, i) => <li key={i} className="text-sm border-l-2 border-line pl-2">{render(r)}</li>)}
+          {rows.map((r, i) => <li key={i} className="text-sm border-l-2 border-line pl-2 break-words">{render(r)}</li>)}
         </ul>
-      </section>
+      </Card14>
     ) : null;
   const meta = (r: any) => <span className="text-ink-3"> — {r.author || r.suggestedBy || r.reportedBy || r.actor?.name || r.actor?.uid || 'anonim'} · {fmt(r.ts)}</span>;
+  const katkiYok = !['fragments', 'options', 'alternativeOptions', 'comments', 'reports', 'fieldChanges'].some((k) => c.contributions?.[k]?.length) && !c.guard?.length && !c.ai?.length && !c.admin?.length;
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="text-sm text-ink-3">
-        {c.qid} · {c.eventCount} olay · ilk kayıt {fmt(c.firstSeen)} · {c.chain.ok ? 'karma zinciri sağlam' : `zincir #${c.chain.brokenAt} olayında bozuk`}
-        {c.deleted ? ' · havuzdan kaldırılmış (tüm veri defterde)' : ''}
-      </div>
-
-      <Liste title="Parçalar / ipuçları" rows={c.contributions.fragments} render={(r) => <>[{r.type || 'parça'}] {r.text}{meta(r)}</>} />
-      <Liste title="Eklenen şıklar" rows={c.contributions.options} render={(r) => <>{r.key}) {r.text}{meta(r)}</>} />
-      <Liste title='Alternatif şıklar / "bu şık yoktu" itirazları' rows={c.contributions.alternativeOptions} render={(r) => <>{r.key ? `${r.key}) ` : ''}{r.text || r.reason || JSON.stringify(r)}{meta(r)}</>} />
-      <Liste title="Yorumlar" rows={c.contributions.comments} render={(r) => <>{r.text}{meta(r)}</>} />
-      <Liste title="Bildirimler" rows={c.contributions.reports} render={(r) => <>{r.reason || r.text || r.message}{meta(r)}</>} />
-      <Liste title="Değişiklik geçmişi (önceki hal saklı)" rows={c.contributions.fieldChanges} render={(r) => <>{preview(r)}{meta(r)}</>} />
-      <Liste title="Koruma: geri konan katkılar" rows={c.guard} render={(r) => <>{r.field}: {r.note || `${(r.items || []).length} öge`}{meta(r)}</>} />
-      <Liste title="YZ önerileri (ham veriyi değiştirmez)" rows={c.ai} render={(r) => <>{r.kind}: {JSON.stringify(r.result || r.optimizedData).slice(0, 220)}{meta(r)}</>} />
-      <Liste title="Yönetici işlemleri" rows={c.admin} render={(r) => <>{TYPE_LABEL[r.type] || r.type}: {preview(r)}{meta(r)}</>} />
-
-      <section className="ms-panel" style={{ padding: 12 }}>
-        <h3 className="font-semibold mb-2 flex items-center gap-1"><Tags className="w-4 h-4" /> Sınıflandır</h3>
-        <div className="grid gap-2" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))' }}>
-          <Field label="Kategori"><input className="ms-input" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="ör. kök-tam, şık-eksik" /></Field>
-          <Field label="Kalite"><select className="ms-input" value={quality} onChange={(e) => setQuality(e.target.value)}><option value="">—</option><option value="tam">Tam</option><option value="kismi">Kısmi</option><option value="belirsiz">Belirsiz</option><option value="kopya">Kopya</option><option value="hatali">Hatalı</option></select></Field>
-          <Field label="Etiketler (virgülle)"><input className="ms-input" value={tags} onChange={(e) => setTags(e.target.value)} /></Field>
-        </div>
-        <button type="button" className="ms-btn is-primary mt-2" onClick={() => post('classify', { category, quality, tags: tags.split(',').map((t: string) => t.trim()).filter(Boolean) }, 'Sınıflandırma kaydedildi.')}>Sınıflandırmayı kaydet</button>
-      </section>
-
-      {!c.deleted && (
-        <section className="ms-panel" style={{ padding: 12 }}>
-          <h3 className="font-semibold mb-2 flex items-center gap-1"><PencilLine className="w-4 h-4" /> Çalışma kopyasını düzenle</h3>
-          <p className="text-sm text-ink-3 mb-2">Önceki değer ve düzenleme deftere ayrı olay olarak yazılır; ham katkılar değişmez.</p>
-          <div className="grid gap-2" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))' }}>
-            <Field label="Ders"><input className="ms-input" value={discipline} onChange={(e) => setDiscipline(e.target.value)} /></Field>
-            <Field label="Konu"><input className="ms-input" value={topic} onChange={(e) => setTopic(e.target.value)} /></Field>
-            <Field label="Cevap"><select className="ms-input" value={answer} onChange={(e) => setAnswer(e.target.value)}><option value="">—</option>{['A', 'B', 'C', 'D', 'E'].map((k) => <option key={k}>{k}</option>)}</select></Field>
-          </div>
-          <button type="button" className="ms-btn mt-2" onClick={() => post('edit', { patch: { discipline, topic, claimedAnswer: answer || undefined } }, 'Düzenleme kaydedildi.')}>Düzenlemeyi kaydet</button>
-        </section>
-      )}
-
-      <section className="ms-panel" style={{ padding: 12 }}>
-        <h3 className="font-semibold mb-2 flex items-center gap-1"><StickyNote className="w-4 h-4" /> Not ekle</h3>
-        <textarea className="ms-input w-full" rows={2} value={note} onChange={(e) => setNote(e.target.value)} />
-        <button type="button" className="ms-btn mt-2" disabled={!note.trim()} onClick={() => { post('note', { text: note }, 'Not eklendi.'); setNote(''); }}>Notu ekle</button>
-      </section>
-    </div>
+    <DetailLayout
+      main={
+        <>
+          <Card14 title="Ham kayıt (değiştirilemez)">
+            <p className="text-sm text-ink-3">Bu defter yalnız eklemeyle büyür: kayıt silinemez ve üzerine yazılamaz. Yalnız sınıf, çalışma kopyası ve not ayrı olay olarak eklenir.</p>
+          </Card14>
+          {katkiYok && <p className="text-sm text-ink-3">Bu kümeye henüz katkı gelmemiş.</p>}
+          <Liste title="Parçalar / ipuçları" rows={c.contributions.fragments} render={(r) => <>[{r.type || 'parça'}] {r.text}{meta(r)}</>} />
+          <Liste title="Eklenen şıklar" rows={c.contributions.options} render={(r) => <>{r.key}) {r.text}{meta(r)}</>} />
+          <Liste title='Alternatif şıklar / "bu şık yoktu" itirazları' rows={c.contributions.alternativeOptions} render={(r) => <>{r.key ? `${r.key}) ` : ''}{r.text || r.reason || JSON.stringify(r)}{meta(r)}</>} />
+          <Liste title="Yorumlar" rows={c.contributions.comments} render={(r) => <>{r.text}{meta(r)}</>} />
+          <Liste title="Bildirimler" rows={c.contributions.reports} render={(r) => <>{r.reason || r.text || r.message}{meta(r)}</>} />
+          <Liste title="Değişiklik geçmişi (önceki hal saklı)" rows={c.contributions.fieldChanges} render={(r) => <>{preview(r)}{meta(r)}</>} />
+          <Liste title="Koruma: geri konan katkılar" rows={c.guard} render={(r) => <>{r.field}: {r.note || `${(r.items || []).length} öge`}{meta(r)}</>} />
+          <Liste title="YZ önerileri (ham veriyi değiştirmez)" rows={c.ai} render={(r) => <>{r.kind}: {JSON.stringify(r.result || r.optimizedData).slice(0, 220)}{meta(r)}</>} />
+          <Liste title="Yönetici işlemleri" rows={c.admin} render={(r) => <>{TYPE_LABEL[r.type] || r.type}: {preview(r)}{meta(r)}</>} />
+        </>
+      }
+      side={
+        <>
+          <FactList
+            items={[
+              { k: 'Kayıt no', v: <span className="font-mono text-xs">{c.qid}</span> },
+              { k: 'Olay', v: c.eventCount },
+              { k: 'İlk kayıt', v: fmt(c.firstSeen) },
+              { k: 'Zincir', v: c.chain.ok ? <Pill tone="ok">Karma zinciri sağlam</Pill> : <Pill tone="bad">#{c.chain.brokenAt} olayında bozuk</Pill> },
+              ...(c.deleted ? [{ k: 'Durum', v: 'Havuzdan kaldırılmış (tüm veri defterde)' }] : []),
+            ]}
+          />
+          <Card14 title={<span className="inline-flex items-center gap-1"><Tags className="w-4 h-4" aria-hidden="true" /> Sınıflandır</span>}>
+            <SiniflandirFormu
+              initial={c.classification || {}}
+              saveLabel="Sınıfı kaydet"
+              onSave={(b) => post('classify', b, 'Sınıflandırma kaydedildi.')}
+              extra={(b) => (
+                <button type="button" className="m14-btn" onClick={async () => { if (await post('classify', b, 'Sınıflandırma kaydedildi.')) onNext(); }}>Kaydet ve sonraki</button>
+              )}
+            />
+          </Card14>
+          {!c.deleted && (
+            <Card14 title={<span className="inline-flex items-center gap-1"><PencilLine className="w-4 h-4" aria-hidden="true" /> Çalışma kopyasını düzenle</span>}>
+              <p className="text-sm text-ink-3 mb-2">Önceki değer ve düzenleme deftere ayrı olay olarak yazılır; ham katkılar değişmez.</p>
+              <div className="grid gap-2" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 160px), 1fr))' }}>
+                <Field label="Ders"><input className="ms-input" value={discipline} onChange={(e) => setDiscipline(e.target.value)} /></Field>
+                <Field label="Konu"><input className="ms-input" value={topic} onChange={(e) => setTopic(e.target.value)} /></Field>
+                <Field label="Cevap"><select className="ms-input" value={answer} onChange={(e) => setAnswer(e.target.value)}><option value="">—</option>{['A', 'B', 'C', 'D', 'E'].map((k) => <option key={k}>{k}</option>)}</select></Field>
+              </div>
+              <button type="button" className="m14-btn mt-2" onClick={() => post('edit', { patch: { discipline, topic, claimedAnswer: answer || undefined } }, 'Düzenleme kaydedildi.')}>Düzenlemeyi kaydet</button>
+            </Card14>
+          )}
+          <Card14 title={<span className="inline-flex items-center gap-1"><StickyNote className="w-4 h-4" aria-hidden="true" /> Not ekle</span>}>
+            <textarea className="ms-input w-full" rows={2} value={note} onChange={(e) => setNote(e.target.value)} aria-label="Not" />
+            <button type="button" className="m14-btn mt-2" disabled={!note.trim()} onClick={() => { post('note', { text: note }, 'Not eklendi.'); setNote(''); }}>Notu ekle</button>
+          </Card14>
+        </>
+      }
+    />
   );
 };

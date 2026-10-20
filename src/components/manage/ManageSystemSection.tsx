@@ -5,10 +5,12 @@ import { systemHealthMonitor, SystemOverallHealth } from '../../services/systemH
 import { fetchSystemServices, fetchWorkerHeartbeat, ManageServiceItem } from '../../services/manageConsoleService';
 import { consoleLogBuffer, ManageLogEntry } from './ConsoleLogBuffer';
 import { Panel, EmptyState, Seg } from './consoleUi';
+import { PageActions, StatRow, SearchField, Pill } from '../v14/pageKit';
+import { BulkBar, useSelection, SelectAllBox } from '../v14/manageKit';
 
 /**
- * Sistem: veritabanı ve AI sağlığı tek şeritte, arka plan servisleri kategoriye göre,
- * tarayıcı konsolu canlı günlük ekranında.
+ * Sistem (v14, canvas Sistem.dc.html): eylemler → durum sayıları → seçilebilir servis kartları (toplu çubuk) →
+ * düzey süzgeçli ve aramalı günlük ekranı. Servis yeniden başlatma ucu yok; toplu işlem bilgiyi kopyalar.
  */
 const STATUS_LABEL: Record<string, string> = {
   online: 'Çevrimiçi',
@@ -53,6 +55,10 @@ export const ManageSystemSection: React.FC<{ notify: (msg: string) => void }> = 
   const [level, setLevel] = useState<Level>('all');
   const [copied, setCopied] = useState(false);
   const [realtime, setRealtime] = useState<{ running: boolean; message?: string }>({ running: false });
+  const [logQ, setLogQ] = useState('');
+  const [live, setLive] = useState(true);
+  const [frozen, setFrozen] = useState<ManageLogEntry[] | null>(null);
+  const svcSel = useSelection<string>();
 
   useEffect(() => {
     consoleLogBuffer.install();
@@ -109,7 +115,16 @@ export const ManageSystemSection: React.FC<{ notify: (msg: string) => void }> = 
   }, [services]);
 
   const levelCount = (lv: ManageLogEntry['level']) => logs.filter((l) => l.level === lv).length;
-  const shownLogs = logs.filter((l) => level === 'all' || l.level === level).slice(-300);
+  const lq = logQ.toLocaleLowerCase('tr-TR').trim();
+  const shownLogs = (live ? logs : frozen || logs)
+    .filter((l) => (level === 'all' || l.level === level) && (!lq || `${l.source} ${l.message}`.toLocaleLowerCase('tr-TR').includes(lq)))
+    .slice(-300);
+  const svcKeys = services.map((s) => s.id);
+  const pickedSvc = services.filter((s) => svcSel.has(s.id));
+  const copySvc = () => {
+    void navigator.clipboard.writeText(pickedSvc.map((s) => `${s.name}\t${s.statusLabel || s.status}\t${s.description || ''}`).join('\n'));
+    notify(`${pickedSvc.length} servis bilgisi kopyalandı.`);
+  };
 
   const status = [
     { name: 'Firebase', s: health.firebase.status, detail: health.firebase.details || '' },
@@ -123,64 +138,58 @@ export const ManageSystemSection: React.FC<{ notify: (msg: string) => void }> = 
 
   return (
     <div className="flex flex-col gap-3 min-w-0">
-      <section className="ms-panel ms-statusgrid grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4" aria-label="Sistem durumu">
-        {status.map((x) => (
-          <div key={x.name} className="px-4 py-3.5 flex flex-col gap-1 min-w-0">
-            <span className="text-sm font-medium text-ink-3">{x.name}</span>
-            <span className="flex items-center gap-2 text-md font-semibold text-ink">
-              <span className={`ms-sdot ${toneOf(x.s)}`} aria-hidden="true" />
-              {STATUS_LABEL[x.s] || x.s}
-            </span>
-            <span className="text-sm text-ink-3 truncate" title={x.detail}>{x.detail}</span>
-          </div>
-        ))}
-        <div className="px-4 py-3.5 flex flex-col gap-1 min-w-0">
-          <span className="text-sm font-medium text-ink-3">Arka plan işçisi</span>
-          <span className="flex items-center gap-2 text-md font-semibold text-ink">
-            <span className={`ms-sdot ${heartbeat ? (heartbeat.isOnline ? 'is-ok is-live' : 'is-bad') : ''}`} aria-hidden="true" />
-            {heartbeat ? (heartbeat.isOnline ? 'Çevrimiçi' : 'Çevrimdışı') : 'Bilinmiyor'}
-          </span>
-          <span className="text-sm text-ink-3 truncate" title={heartbeat?.message}>
-            {heartbeat ? `${heartbeat.diffSeconds !== undefined ? `${heartbeat.diffSeconds} sn önce · ` : ''}${heartbeat.message}` : 'Servisler yüklenince görünür'}
-          </span>
-        </div>
-      </section>
+      <PageActions note={realtime.message}>
+        <button type="button" onClick={() => void diagnose()} disabled={diagnosing} className="m14-btn primary">
+          <Activity className={diagnosing ? 'animate-pulse' : ''} aria-hidden="true" /> {diagnosing ? 'Teşhis sürüyor…' : 'Tam teşhis çalıştır'}
+        </button>
+        <button type="button" onClick={() => void realtimeTest()} disabled={realtime.running} className="m14-btn">
+          <Radio aria-hidden="true" /> {realtime.running ? 'Canlı bağlantı sınanıyor…' : 'Canlı bağlantı tur testi'}
+        </button>
+        <button type="button" onClick={() => void loadServices()} disabled={loadingServices} className="m14-btn">
+          <RefreshCw className={loadingServices ? 'animate-spin' : ''} aria-hidden="true" /> Servisleri yenile
+        </button>
+      </PageActions>
+
+      <StatRow
+        stats={[
+          ...status.map((x) => ({ label: x.name, value: STATUS_LABEL[x.s] || x.s, tone: (toneOf(x.s) === 'is-ok' ? 'ok' : toneOf(x.s) === 'is-bad' ? 'bad' : 'warn') as 'ok' | 'bad' | 'warn', hint: x.detail })),
+          {
+            label: 'Arka plan işçisi',
+            value: heartbeat ? (heartbeat.isOnline ? 'Çevrim içi' : 'Çevrim dışı') : 'Bilinmiyor',
+            tone: heartbeat ? (heartbeat.isOnline ? 'ok' : 'bad') : undefined,
+            hint: heartbeat ? `${heartbeat.diffSeconds !== undefined ? `${heartbeat.diffSeconds} sn önce · ` : ''}${heartbeat.message}` : 'Servisler yüklenince görünür',
+          },
+        ]}
+      />
 
       {exhausted.length > 0 && (
         <div role="alert" className="ms-alert is-bad">
           <AlertTriangle aria-hidden="true" />
           <span>
-            <b>Limite ulaşan AI anahtarları:</b> {exhausted.map((k) => `${k.label} (${STATUS_LABEL[k.status] || k.status})`).join(' · ')}
+            <b>Limite ulaşan yapay zekâ anahtarları:</b> {exhausted.map((k) => `${k.label} (${STATUS_LABEL[k.status] || k.status})`).join(' · ')}
           </span>
         </div>
       )}
 
-      <div className="flex flex-wrap items-center gap-2">
-        <button type="button" onClick={() => void diagnose()} disabled={diagnosing} className="ms-btn is-primary">
-          <Activity className={diagnosing ? 'animate-pulse' : ''} /> {diagnosing ? 'Teşhis sürüyor…' : 'Tam teşhis çalıştır'}
-        </button>
-        <button type="button" onClick={() => void realtimeTest()} disabled={realtime.running} className="ms-btn">
-          <Radio /> {realtime.running ? 'Realtime test ediliyor…' : 'Realtime tur testi'}
-        </button>
-        {realtime.message && <span className="text-sm text-ink-2">{realtime.message}</span>}
-      </div>
+      <BulkBar
+        count={pickedSvc.length}
+        noun="servis"
+        onClear={svcSel.clear}
+        actions={[{ label: 'Bilgilerini kopyala', kind: 'main', run: copySvc }]}
+      />
 
       <Panel
         flush
         title="Servisler"
         icon={Server}
         tools={
-          <>
-            {services.length > 0 && (
-              <>
-                <span className="ms-tag is-ok">{running} çalışıyor</span>
-                <span className="ms-tag">{services.length - running} duruyor</span>
-              </>
-            )}
-            <button type="button" onClick={() => void loadServices()} disabled={loadingServices} className="ms-btn is-sm is-ghost" aria-label="Servisleri yenile">
-              <RefreshCw className={loadingServices ? 'animate-spin' : ''} /> Yenile
-            </button>
-          </>
+          services.length > 0 ? (
+            <>
+              <Pill tone="ok">{running} çalışıyor</Pill>
+              <Pill>{services.length - running} duruyor</Pill>
+              <SelectAllBox all={svcSel.allOf(svcKeys)} some={svcSel.someOf(svcKeys)} onChange={() => svcSel.toggleAll(svcKeys)} label="Tüm servisleri seç" />
+            </>
+          ) : undefined
         }
       >
         {services.length === 0 ? (
@@ -188,35 +197,54 @@ export const ManageSystemSection: React.FC<{ notify: (msg: string) => void }> = 
             {loadingServices ? null : 'Yerel sunucu çevrimdışı olabilir.'}
           </EmptyState>
         ) : (
-          <ul className="ms-rows">
+          <div className="flex flex-col gap-3 p-3">
             {groups.map(([cat, items]) => (
-              <React.Fragment key={cat}>
-                {groups.length > 1 && <li className="ms-day" aria-hidden="true">{CATEGORY_LABEL[cat.toLowerCase()] || cat}</li>}
-                {items.map((s) => {
-                  const on = isRunning(s);
-                  return (
-                    <li key={s.id} className="ms-row !py-2.5 items-center">
-                      <span className={`ms-sdot ${on ? 'is-ok' : ''}`} aria-hidden="true" />
-                      <div className="ms-row-main !gap-0.5">
-                        <span className="text-base font-medium text-ink truncate">{s.name}</span>
-                        {s.description && <span className="text-sm text-ink-3 truncate" title={s.description}>{s.description}</span>}
-                      </div>
-                      <span className={`text-sm font-semibold shrink-0 ${on ? 'text-ok' : 'text-ink-3'}`}>{s.statusLabel || s.status}</span>
-                    </li>
-                  );
-                })}
-              </React.Fragment>
+              <section key={cat} className="flex flex-col gap-2" aria-label={CATEGORY_LABEL[cat.toLowerCase()] || cat}>
+                {groups.length > 1 && <h3 className="m-0 text-sm font-semibold text-ink-3">{CATEGORY_LABEL[cat.toLowerCase()] || cat}</h3>}
+                <div className="grid gap-2" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 260px), 1fr))' }}>
+                  {items.map((s) => {
+                    const on = isRunning(s);
+                    const picked = svcSel.has(s.id);
+                    return (
+                      <label
+                        key={s.id}
+                        className="flex items-start gap-3 p-3 rounded-xl cursor-pointer min-w-0"
+                        style={{ border: `1px solid ${picked ? 'var(--color-accent)' : 'var(--color-line)'}`, background: picked ? 'var(--color-accent-soft)' : 'transparent' }}
+                      >
+                        <input type="checkbox" checked={picked} onChange={() => svcSel.toggle(s.id)} aria-label={`Seç: ${s.name}`} style={{ width: 18, height: 18, accentColor: 'var(--color-accent)', flex: 'none', marginTop: 2 }} />
+                        <span className="flex flex-col gap-0.5 min-w-0 flex-1">
+                          <span className="text-base font-medium text-ink truncate">{s.name}</span>
+                          {s.description && <span className="text-sm text-ink-3 truncate" title={s.description}>{s.description}</span>}
+                        </span>
+                        <Pill tone={on ? 'ok' : ''}>{s.statusLabel || s.status}</Pill>
+                      </label>
+                    );
+                  })}
+                </div>
+              </section>
             ))}
-          </ul>
+          </div>
         )}
       </Panel>
 
       <Panel
-        title="Tarayıcı konsolu"
+        title="Günlük"
         icon={Terminal}
         count={logs.length}
         tools={
           <>
+            <SearchField value={logQ} onChange={setLogQ} placeholder="Günlükte ara" label="Günlükte ara" />
+            <label className="flex items-center gap-1.5 text-sm text-ink-2">
+              <input
+                type="checkbox"
+                checked={live}
+                onChange={(e) => {
+                  setFrozen(e.target.checked ? null : logs);
+                  setLive(e.target.checked);
+                }}
+              />
+              Canlı akış
+            </label>
             <Seg
               label="Günlük seviyesi"
               value={level}
@@ -226,7 +254,7 @@ export const ManageSystemSection: React.FC<{ notify: (msg: string) => void }> = 
                 { id: 'error', label: 'Hata', n: levelCount('error') || undefined },
                 { id: 'warn', label: 'Uyarı', n: levelCount('warn') || undefined },
                 { id: 'info', label: 'Bilgi' },
-                { id: 'log', label: 'Log' },
+                { id: 'log', label: 'Kayıt' },
               ]}
             />
             <button
@@ -236,11 +264,11 @@ export const ManageSystemSection: React.FC<{ notify: (msg: string) => void }> = 
                 setCopied(true);
                 window.setTimeout(() => setCopied(false), 2000);
               }}
-              className="ms-btn is-sm is-ghost"
+              className="m14-btn ghost"
             >
               {copied ? <Check /> : <Copy />} {copied ? 'Kopyalandı' : 'Kopyala'}
             </button>
-            <button type="button" onClick={() => consoleLogBuffer.clear()} className="ms-btn is-sm is-ghost">
+            <button type="button" onClick={() => consoleLogBuffer.clear()} className="m14-btn ghost">
               <Eraser /> Temizle
             </button>
           </>
