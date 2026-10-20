@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 79,
-  "baslik": "Yönetim paneli veritabanı gezgini düzeltmesi",
+  "onem": 80,
+  "baslik": "Ders özeti okuyucusunda tam ekran her cihazda",
   "maddeler": [
-    "Yönetim panelindeki veritabanı gezgini, sunucu tablo listesi döndürmediğinde çökmek yerine açıklayıcı bir uyarı gösteriyor."
+    "Ders özeti okuyucusu artık iPhone dahil her cihazda tam ekran açılıyor (\"Tam ekran desteklenmiyor\" uyarısı kalktı); tam ekranda gezinme çubuğu da çıkıyor."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Yönetim panelindeki veritabanı gezgini, sunucu tablo listesi döndürmediğinde çökmek yerine açıklayıcı bir uyarı gösteriyor."
+    "Ders özeti okuyucusu artık iPhone dahil her cihazda tam ekran açılıyor (\"Tam ekran desteklenmiyor\" uyarısı kalktı); tam ekranda gezinme çubuğu da çıkıyor."
   ],
   "silinen": []
 }

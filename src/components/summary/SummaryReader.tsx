@@ -34,6 +34,8 @@ import { Sheet } from '../ui/Sheet';
 import { toast } from '../ui/Toast';
 import { MODE_LABELS, useAppearance, type ThemeMode } from '../../utils/appearance';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
+import { exitNativeFullscreen, isAppFullscreen, isNativeFullscreen, useAppFullscreenWhile, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
+import { shouldAvoidNativeFullscreen } from '../../utils/device';
 import { disciplineClass, disciplineLabel } from '../../utils/discipline';
 import { driveViewUrl, resolveDeckPdf, type DeckPdfInfo } from '../../services/deckPdfService';
 import { ReaderPanel, useLessonSpots, useScopeMarks, type ScopeMark } from './ReaderPanel';
@@ -109,7 +111,9 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
   const [picked, setPicked] = useState<Record<string, string>>({});
   const [revealed, setRevealed] = useState<Record<string, boolean>>({});
   const [resume, setResume] = useState<{ p: number; y: number } | null>(null);
-  const [fullscreen, setFullscreen] = useState(false);
+  // Uygulama içi tam ekran (her cihazda; iPhone'da tarayıcı tam ekranı yok). Uygulama tam ekrandayken açılırsa öyle başlar.
+  const [fullscreen, setFullscreen] = useState(() => isAppFullscreen());
+  useAppFullscreenWhile(fullscreen);
   const [scrolled, setScrolled] = useState(false);
 
   // --- Açılış: arka sayfa kilitlenir; özet değişince en başa dönülür -------------------------------
@@ -188,7 +192,6 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
   const close = useCallback(() => {
     if (closing) return;
     saveNow();
-    if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
     setClosing(true);
     window.setTimeout(onClose, reduceMotion() ? 0 : 200);
   }, [closing, onClose, saveNow]);
@@ -328,7 +331,7 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
     const onKey = (e: KeyboardEvent) => {
       if (tocSheet) return; // alt sayfa kendi Esc'ini işler
       if (e.key === 'Escape') {
-        if (document.fullscreenElement) return; // tarayıcı tam ekrandan çıkar
+        if (isNativeFullscreen()) return; // tarayıcı tam ekrandan çıkar
         if (aaOpen) return setAaOpen(false);
         if (searchOpen) return closeSearch();
         return close();
@@ -344,13 +347,35 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
 
   // --- Tam ekran --------------------------------------------------------------------------------
   useEffect(() => {
-    const on = () => setFullscreen(!!document.fullscreenElement && document.fullscreenElement === rootRef.current);
+    let hadNative = false;
+    const on = () => {
+      if (isNativeFullscreen()) { hadNative = true; return; }
+      // Tarayıcı tam ekranı Esc/sistem hareketiyle kapandıysa okuyucu da tam ekrandan çıkar (kaydırma kaynaklı değilse).
+      if (hadNative && !wasRecentlyScrollingOrTouching()) setFullscreen(false);
+      hadNative = false;
+    };
     document.addEventListener('fullscreenchange', on);
-    return () => document.removeEventListener('fullscreenchange', on);
+    document.addEventListener('webkitfullscreenchange', on);
+    return () => {
+      document.removeEventListener('fullscreenchange', on);
+      document.removeEventListener('webkitfullscreenchange', on);
+    };
   }, []);
   const toggleFullscreen = () => {
-    if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
-    else rootRef.current?.requestFullscreen?.().catch(() => toast.info('Tam ekran desteklenmiyor', 'Bu tarayıcı okuyucuyu tam ekran açamıyor.'));
+    if (fullscreen) {
+      setFullscreen(false);
+      exitNativeFullscreen();
+      return;
+    }
+    setFullscreen(true);
+    if (shouldAvoidNativeFullscreen()) return;
+    const el = document.documentElement as HTMLElement & { webkitRequestFullscreen?: () => Promise<void> | void };
+    const req = el.requestFullscreen || el.webkitRequestFullscreen;
+    try {
+      (req?.call(el, { navigationUI: 'hide' } as FullscreenOptions) as Promise<void> | undefined)?.catch?.(() => {});
+    } catch {
+      /* uygulama içi tam ekran sürer */
+    }
   };
 
   const copyMarkdown = () => {
@@ -531,7 +556,6 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
               <R12MenuItem icon={Search} label="Özette ara" hint="/" onClick={() => setSearchOpen(true)} />
               {pdfHref && <R12MenuItem icon={FileText} label="Slayt PDF’i" href={pdfHref} />}
               {onOpenPdfModal && <R12MenuItem icon={Download} label="PDF indir" onClick={onOpenPdfModal} />}
-              <R12MenuItem icon={fullscreen ? Shrink : Expand} label={fullscreen ? 'Tam ekrandan çık' : 'Tam ekran'} onClick={toggleFullscreen} />
               <R12MenuItem icon={Printer} label="Yazdır / PDF" onClick={() => window.setTimeout(() => window.print(), 50)} />
               <R12MenuItem icon={Copy} label="Metni kopyala" onClick={copyMarkdown} />
             </R12MenuGroup>
@@ -678,7 +702,7 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
   return (
     <div
       ref={rootRef}
-      className={`sr-root ${disciplineClass(summary.discipline)} ${closing ? 'is-closing' : ''} ${panelSide ? 'has-panel' : ''}`}
+      className={`sr-root ${disciplineClass(summary.discipline)} ${closing ? 'is-closing' : ''} ${panelSide ? 'has-panel' : ''} ${fullscreen ? 'is-tam' : ''}`}
       role="dialog"
       aria-label={summary.title}
     >
