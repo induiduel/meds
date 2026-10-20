@@ -1,6 +1,7 @@
 /**
  * Evrensel kimlik çözücü (GELECEK_PLANLAMASI §5): her kimlikli veri tek adresten bulunur.
  *   GET /api/k/:id → {id, tur, baslik, metin, yol, ust?}   (yol = ön yüzde gidilecek adres; #kimlik ile o öğeye kaydırılır)
+ *   GET /k/:id     → 302 yol (paylaşılabilir kısa bağlantı; ön yüz yönlendiricisine bağlı değil)
  *
  * Desteklenen kimlikler:
  *   k2-07-c0142 / -p012 / -b03 → sesli ders cümlesi / paragrafı / bölümü (data/sesli_anlatim/v2/<anahtar>.json)
@@ -66,15 +67,28 @@ export function registerKimlikRoutes(app: Express, opts: { rootDir: string }) {
     }],
   ];
 
-  app.get('/api/k/:id', (req: Request, res: Response) => {
-    const id = String(req.params.id || '').trim().toLowerCase();
-    if (!/^[a-z0-9-]{3,40}$/.test(id)) return res.status(400).json({ error: 'geçersiz kimlik' });
-    for (const [re, coz] of COZUCULER) {
+  const coz = (ham: unknown): Sonuc | null | 'gecersiz' => {
+    const id = String(ham || '').trim().toLowerCase();
+    if (!/^[a-z0-9-]{3,40}$/.test(id)) return 'gecersiz';
+    for (const [re, f] of COZUCULER) {
       const m = re.exec(id);
-      if (!m) continue;
-      const s = coz(m);
-      if (s) { res.set('Cache-Control', 'public, max-age=120'); return res.json(s); }
+      if (m) { const s = f(m); if (s) return s; }
     }
-    res.status(404).json({ error: 'Bu kimlikle kayıt bulunamadı.', id });
+    return null;
+  };
+
+  app.get('/api/k/:id', (req: Request, res: Response) => {
+    const s = coz(req.params.id);
+    if (s === 'gecersiz') return res.status(400).json({ error: 'geçersiz kimlik' });
+    if (!s) return res.status(404).json({ error: 'Bu kimlikle kayıt bulunamadı.', id: req.params.id });
+    res.set('Cache-Control', 'public, max-age=120');
+    res.json(s);
+  });
+
+  /** Paylaşılabilir kısa bağlantı: /k/k2-07-c0142 → ilgili sayfa (302). Bulunamazsa ana sayfa + bilgi. */
+  app.get('/k/:id', (req: Request, res: Response) => {
+    const s = coz(req.params.id);
+    if (s && s !== 'gecersiz') return res.redirect(302, s.yol);
+    res.redirect(302, `/?kimlik_yok=${encodeURIComponent(String(req.params.id || '').slice(0, 40))}`);
   });
 }

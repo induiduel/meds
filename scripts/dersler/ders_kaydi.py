@@ -19,13 +19,7 @@ from pathlib import Path
 MEDS = Path(__file__).resolve().parents[2]
 TAKVIM = MEDS / "src/data/kurul_takvimi.json"
 DISIPLIN = MEDS / "src/data/curriculum_disciplines.json"
-HARF = {  # branş → kod harfi (kurul öneki ile birlikte tekil)
-    "Tıbbi Patoloji": "p", "Tıbbi Genetik": "g", "Tıbbi Farmakoloji": "f", "Nöroloji": "n", "Psikiyatri": "s",
-    "Aile Hekimliği": "a", "Anesteziyoloji ve Reanimasyon": "r", "FTR": "t", "Beyin ve Sinir Cerrahisi": "b",
-    "Enfeksiyon Hastalıkları": "e", "Halk Sağlığı": "h", "Üroloji": "u", "Kadın Hastalıkları ve Doğum": "k",
-    "İç Hastalıkları": "i", "Çocuk Sağlığı ve Hastalıkları": "c", "Göğüs Hastalıkları": "o", "Kardiyoloji": "d",
-    "Genel Cerrahi": "x", "Ortopedi ve Travmatoloji": "y", "Radyoloji": "z", "Nükleer Tıp": "m",
-}
+HARF = {b["ad"]: b["harf"] for b in json.loads((MEDS / "src/data/dersler/branslar.json").read_text())["branslar"]}  # tek kaynak
 UNVAN = re.compile(r"\b(?:PROF|DOÇ|DOC|DR|UZM|ÖĞR|ÜYESİ|Prof|Doç|Dr|Uzm)\b\.?")
 DISI = re.compile(r"(?i)^(klinik ve mesleki beceriler|bağımsız öğrenme|resmi tatil|alan dışı seçmeli)")
 

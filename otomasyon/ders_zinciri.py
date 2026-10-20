@@ -24,13 +24,7 @@ DURUM = KOK / "meds_temp/hat/dersler"
 sys.path.insert(0, str(SC))
 import aday_hazirla as AH  # noqa: E402  gizli_silinen, aday, grupla, ornek_hedefi, norm
 
-BRANS_SLUG = {
-    "Tıbbi Patoloji": "patoloji", "Tıbbi Genetik": "genetik", "Tıbbi Farmakoloji": "farmakoloji", "Nöroloji": "noroloji",
-    "Psikiyatri": "psikiyatri", "Aile Hekimliği": "aile", "Anesteziyoloji ve Reanimasyon": "anestezi", "FTR": "ftr",
-    "Beyin ve Sinir Cerrahisi": "beyincerrahi", "Enfeksiyon Hastalıkları": "enfeksiyon", "Halk Sağlığı": "halksagligi",
-    "Üroloji": "uroloji", "Kadın Hastalıkları ve Doğum": "kadindogum", "İç Hastalıkları": "dahiliye",
-    "Çocuk Sağlığı ve Hastalıkları": "cocuk", "Göğüs Hastalıkları": "gogus", "Kardiyoloji": "kardiyoloji",
-}
+BRANS_SLUG = {b["ad"]: b["slug"] for b in json.loads((MEDS / "src/data/dersler/branslar.json").read_text())["branslar"]}  # tek kaynak
 ADIMLAR = ["hazirla", "onem", "cozucu", "denetim", "birlestir", "asistan", "ses", "oracle"]
 IZIN = "Read,Write,Edit,Glob,Grep,Bash(python3 *),Bash(curl -s http://127.0.0.1:3000/*)"
 

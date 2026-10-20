@@ -9,6 +9,8 @@ import path from 'path';
 import type { Express, Request, Response } from 'express';
 
 const BRANSLAR = new Set(['patoloji', 'enfeksiyon', 'uroloji', 'genetik', 'halksagligi', 'kadindogum', 'farmakoloji']);
+/** Kurul 2+ branş klasörleri kurul öneklidir (k2noroloji); kodlar 2n03 (src/data/dersler/branslar.json). */
+const bransGecerli = (b: string) => BRANSLAR.has(b) || /^k[2-6][a-z]{2,16}$/.test(b);
 const VARSAYILAN_SES = 'ema';
 const KOK = path.resolve(process.cwd(), 'data');
 
@@ -18,7 +20,7 @@ export function registerCozucuSesRoutes(app: Express) {
     const ses = String(req.params.ses || '');
     const kod = String(req.params.kod || '');
     const klip = String(req.params.dosya || '').replace(/\.mp3$/, '');
-    if (!BRANSLAR.has(brans) || !/^[a-z0-9]{2,16}$/.test(ses) || !/^([a-z]?\d{2}[a-z]?|ortak)$/.test(kod) || !/^[a-zA-Z0-9-]{1,40}$/.test(klip)) {
+    if (!bransGecerli(brans) || !/^[a-z0-9]{2,16}$/.test(ses) || !/^((\d[a-z]|[a-z])?\d{2}[a-z]?|ortak)$/.test(kod) || !/^[a-zA-Z0-9-]{1,40}$/.test(klip)) {
       return res.status(400).json({ error: 'geçersiz istek' });
     }
     const klasor = ses === VARSAYILAN_SES ? 'ses' : `ses_${ses}`;

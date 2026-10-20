@@ -1,0 +1,132 @@
+{
+ "surum": 1,
+ "aciklama": "Branş harfi ↔ ad ↔ klasör adı. Kurul 2+ ders kodu = <kurul><harf><sıra> (2n03); veri klasörü = k<kurul><slug> (k2noroloji). Python (ders_kaydi.py, ders_zinciri.py) ve TS (brans.ts, ses uçları) bu dosyayı okur.",
+ "branslar": [
+  {
+   "harf": "p",
+   "ad": "Tıbbi Patoloji",
+   "slug": "patoloji",
+   "kisa": "Patoloji"
+  },
+  {
+   "harf": "g",
+   "ad": "Tıbbi Genetik",
+   "slug": "genetik",
+   "kisa": "Genetik"
+  },
+  {
+   "harf": "f",
+   "ad": "Tıbbi Farmakoloji",
+   "slug": "farmakoloji",
+   "kisa": "Farmakoloji"
+  },
+  {
+   "harf": "n",
+   "ad": "Nöroloji",
+   "slug": "noroloji",
+   "kisa": "Nöroloji"
+  },
+  {
+   "harf": "s",
+   "ad": "Psikiyatri",
+   "slug": "psikiyatri",
+   "kisa": "Psikiyatri"
+  },
+  {
+   "harf": "a",
+   "ad": "Aile Hekimliği",
+   "slug": "aile",
+   "kisa": "Aile Hekimliği"
+  },
+  {
+   "harf": "r",
+   "ad": "Anesteziyoloji ve Reanimasyon",
+   "slug": "anestezi",
+   "kisa": "Anestezi"
+  },
+  {
+   "harf": "t",
+   "ad": "FTR",
+   "slug": "ftr",
+   "kisa": "FTR"
+  },
+  {
+   "harf": "b",
+   "ad": "Beyin ve Sinir Cerrahisi",
+   "slug": "beyincerrahi",
+   "kisa": "Beyin Cerrahisi"
+  },
+  {
+   "harf": "e",
+   "ad": "Enfeksiyon Hastalıkları",
+   "slug": "enfeksiyon",
+   "kisa": "Enfeksiyon"
+  },
+  {
+   "harf": "h",
+   "ad": "Halk Sağlığı",
+   "slug": "halksagligi",
+   "kisa": "Halk Sağlığı"
+  },
+  {
+   "harf": "u",
+   "ad": "Üroloji",
+   "slug": "uroloji",
+   "kisa": "Üroloji"
+  },
+  {
+   "harf": "k",
+   "ad": "Kadın Hastalıkları ve Doğum",
+   "slug": "kadindogum",
+   "kisa": "Kadın Doğum"
+  },
+  {
+   "harf": "i",
+   "ad": "İç Hastalıkları",
+   "slug": "dahiliye",
+   "kisa": "Dahiliye"
+  },
+  {
+   "harf": "c",
+   "ad": "Çocuk Sağlığı ve Hastalıkları",
+   "slug": "cocuk",
+   "kisa": "Çocuk Sağlığı"
+  },
+  {
+   "harf": "o",
+   "ad": "Göğüs Hastalıkları",
+   "slug": "gogus",
+   "kisa": "Göğüs Hastalıkları"
+  },
+  {
+   "harf": "d",
+   "ad": "Kardiyoloji",
+   "slug": "kardiyoloji",
+   "kisa": "Kardiyoloji"
+  },
+  {
+   "harf": "x",
+   "ad": "Genel Cerrahi",
+   "slug": "cerrahi",
+   "kisa": "Genel Cerrahi"
+  },
+  {
+   "harf": "y",
+   "ad": "Ortopedi ve Travmatoloji",
+   "slug": "ortopedi",
+   "kisa": "Ortopedi"
+  },
+  {
+   "harf": "z",
+   "ad": "Radyoloji",
+   "slug": "radyoloji",
+   "kisa": "Radyoloji"
+  },
+  {
+   "harf": "m",
+   "ad": "Nükleer Tıp",
+   "slug": "nukleer",
+   "kisa": "Nükleer Tıp"
+  }
+ ]
+}
