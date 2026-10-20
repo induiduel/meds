@@ -1,16 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 71,
-  "baslik": "Sesli ders ve etkileşimli derste tam ekran gezinme",
+  "onem": 72,
+  "baslik": "Sesli derste slayt işaretleri iyileşti",
   "maddeler": [
-    "Sesli ders ve etkileşimli derslerin tam ekranında da gezinme çubuğu çıkıyor; tam ekrandan çıkmadan başka sayfaya geçip geri dönebilirsin.",
-    "Tam ekrandayken bir etkileşimli derse dönünce ders doğrudan tam ekran kipinde açılıyor."
+    "Sesli derste okunan cümlenin slayttaki karşılığı daha çok derste bulunuyor; anlatım slayttan farklı sırayla ilerlese de doğru madde işaretleniyor.",
+    "Fotoğraf veya tarama olarak eklenmiş slaytlardaki yazılar da okunup işaretleniyor.",
+    "Lazer imleci artık yalnız bir görsel anlatılırken çıkıyor; ilgisiz resimlere gitmiyor."
   ],
-  "eklenen": [],
-  "degisen": [],
+  "eklenen": [
+    "Fotoğraf veya tarama olarak eklenmiş slaytlardaki yazılar da okunup işaretleniyor."
+  ],
+  "degisen": [
+    "Sesli derste okunan cümlenin slayttaki karşılığı daha çok derste bulunuyor; anlatım slayttan farklı sırayla ilerlese de doğru madde işaretleniyor."
+  ],
   "duzeltilen": [
-    "Sesli ders ve etkileşimli derslerin tam ekranında da gezinme çubuğu çıkıyor; tam ekrandan çıkmadan başka sayfaya geçip geri dönebilirsin.",
-    "Tam ekrandayken bir etkileşimli derse dönünce ders doğrudan tam ekran kipinde açılıyor."
+    "Lazer imleci artık yalnız bir görsel anlatılırken çıkıyor; ilgisiz resimlere gitmiyor."
   ],
   "silinen": []
 }

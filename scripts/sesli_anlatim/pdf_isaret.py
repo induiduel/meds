@@ -54,7 +54,8 @@ CIKTI = KOK / "isaret"
 API = os.environ.get("MEDS_API", "http://127.0.0.1:3000")
 KELIME = re.compile(r"[\wçğıöşüâîû]+", re.I)
 MADDE_IMI = re.compile(r"^(?:[•●▪■◦○➢➤►▶✓✔\-–—*]|\d{1,2}[.)]|[a-zA-Z][.)])$")
-SURUM = 3  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
+GORSEL = re.compile(r"\b(görsel|görüntü|şekil|resim|fotoğraf|grafik|şema|tablo|çizim|mikrograf|kesit|plak|görürsünüz|görüyoruz|görülüyor|görülen|bakın|bakalım)", re.I)
+SURUM = 5  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
 MADDE_ORAN = 0.80  # slayt maddesinin en az bu kadarı okunan cümlede geçmeli (kullanıcı kuralı)
 CUMLE_RE = re.compile(r"[.!?…]+[\"'”’)\]]*(?:\s+|$)")
 
@@ -94,8 +95,52 @@ def tokenler(metin: str) -> list[tuple[str, int, int]]:
     return [(k, m.start(), m.end()) for m in KELIME.finditer(metin) if (k := kok(m.group(0)))]
 
 
+def ocr_kelimeler(pg: pymupdf.Page, anahtar: str) -> list:
+    """Taranmış (metin katmanı olmayan) slayt: Tesseract (tur) ile kelime kutuları; sonuç önbelleğe yazılır.
+    Tesseract yoksa boş döner (sayfa yalnız sayfa vurgusu alır)."""
+    yol = Path(os.environ.get("PDF_ONBELLEK", str(KOK / ".pdf_onbellek"))) / "ocr" / f"{anahtar}.json"
+    if yol.exists():
+        return json.loads(yol.read_text())
+    import shutil
+    import subprocess
+    import tempfile
+    if not shutil.which("tesseract") or pg.rotation:  # döndürülmüş sayfada kırpma koordinatı ayrı tutulmaz
+        return []
+    # Tam sayfa değil resim kutusu kırpılır: geniş boş kenarlı sayfada Tesseract bölütleme yapamayıp boş döner
+    dpi = 300
+    k = 72 / dpi
+    W, H = pg.rect.width, pg.rect.height
+    kutular = []
+    for im in pg.get_image_info():
+        r = pymupdf.Rect(im["bbox"]) & pg.rect
+        if r.width * r.height >= 0.04 * W * H:
+            kutular.append(r)
+    ws = []
+    with tempfile.TemporaryDirectory() as td:
+        for bi, r in enumerate(kutular[:6]):
+            png = Path(td) / f"r{bi}.png"
+            pg.get_pixmap(dpi=dpi, clip=r, colorspace=pymupdf.csGRAY).save(str(png))
+            try:
+                tsv = subprocess.run(["nice", "-n", "15", "tesseract", str(png), "-", "-l", "tur", "--psm", "3", "tsv"],
+                                     capture_output=True, text=True, timeout=180,
+                                     env={**os.environ, "OMP_THREAD_LIMIT": "1"}).stdout
+            except Exception:
+                continue
+            for ln in tsv.splitlines()[1:]:
+                c = ln.split("\t")
+                if len(c) < 12 or c[0] != "5" or not c[11].strip() or float(c[10]) < 40:
+                    continue
+                x, y, w, h = (int(v) * k for v in c[6:10])
+                # (x0, y0, x1, y1, kelime, blok, satır, sıra): blok = resim×10⁶ + blok×10³ + paragraf
+                ws.append([r.x0 + x, r.y0 + y, r.x0 + x + w, r.y0 + y + h, c[11],
+                           bi * 1_000_000 + int(c[2]) * 1000 + int(c[3]), int(c[4]), int(c[5])])
+    yol.parent.mkdir(parents=True, exist_ok=True)
+    yol.write_text(json.dumps(ws, ensure_ascii=False))
+    return ws
+
+
 class Sayfa:
-    def __init__(self, pg: pymupdf.Page):
+    def __init__(self, pg: pymupdf.Page, ocr_anahtar: str | None = None):
         W, H = pg.rect.width, pg.rect.height
         self.W, self.H = W, H
         M = pg.rotation_matrix  # sayfa kendi içinde döndürülmüşse kutular görünen yöne çevrilir (pdf.js de öyle çizer)
@@ -109,24 +154,31 @@ class Sayfa:
         self.kelimeler = []
         self.maddeler: list[dict] = []
         satirlar: dict[tuple, list] = {}
-        for x0, y0, x1, y1, w, b, l, _ in pg.get_text("words"):
+        kelimeler = pg.get_text("words")
+        self.ocr = False
+        if ocr_anahtar and sum(1 for w in kelimeler if kok(w[4])) < 5 and pg.get_images():
+            kelimeler = ocr_kelimeler(pg, ocr_anahtar) or kelimeler
+            self.ocr = kelimeler is not None and len(kelimeler) > 0
+        for x0, y0, x1, y1, w, b, l, _ in kelimeler:
             satirlar.setdefault((b, l), []).append((w, (x0, y0, x1, y1)))
         onceki_blok, acik = None, None
         for (b, l), ws in sorted(satirlar.items()):
             ilk = ws[0][0]
             im = bool(MADDE_IMI.match(ilk))
             if b != onceki_blok or im or acik is None or acik["bitti"]:
-                acik = {"satirlar": [], "kok": 0, "bitti": False}
+                acik = {"satirlar": [], "kok": 0, "bitti": False, "metin": [], "koks": set()}
                 self.maddeler.append(acik)
             onceki_blok = b
             r = (min(x[1][0] for x in ws), min(x[1][1] for x in ws), max(x[1][2] for x in ws), max(x[1][3] for x in ws))
             acik["satirlar"].append(r)
             mi = len(self.maddeler) - 1
             for w, box in ws:
+                acik["metin"].append(w)
                 k = kok(w)
                 if k:
                     self.kelimeler.append((k, mi, box))
                     acik["kok"] += 1
+                    acik["koks"].add(k)
             acik["bitti"] = bool(re.search(r"[.!?:]$", ws[-1][0]))
         self.tablolar = []
         try:
@@ -177,26 +229,38 @@ def c_oran(c: int, n: int) -> float:
 
 
 def eslestir(cumle: str, sy: Sayfa):
-    """Sıra korumalı kelime eşlemesi. Madde zemini yalnız maddenin içeriğinin ≥%80'i cümlede okunuyorsa;
-    kelime işareti yalnız gerçekten anlatılan maddede (≥2 eşleşme ya da maddenin yarısı)."""
+    """Kelime eşlemesi: önce sıra korumalı (LCS), sonra madde içinde sırasız ortak kökler (anlatım slaytı başka sırayla
+    anlatabilir). Madde zemini yalnız maddenin farklı köklerinin ≥%80'i cümlede geçiyorsa; kelime işareti yalnız
+    gerçekten anlatılan maddede (≥2 farklı ortak kök ve maddenin en az %30'u, ya da ≥3 ortak kök)."""
     tk = tokenler(cumle)
     if not tk or not sy.kelimeler:
         return 0, None
-    es = lcs([k for k, _, _ in tk], [k for k, _, _ in sy.kelimeler])
-    say: dict[int, int] = {}
-    bas: set[int] = set()  # cümlenin ilk 3 kelimesinde karşılığı olan maddeler (başlık maddesi: "Patoloji:")
-    for i, j in es:
-        m = sy.kelimeler[j][1]
-        say[m] = say.get(m, 0) + 1
-        if i < 3:
-            bas.add(m)
-    # tek ortak kelime ancak maddenin kendisi tek kelimeyse ve cümle o kelimeyle açılıyorsa sayılır
-    yeter = lambda m, c: c >= 2 or (m in bas and sy.maddeler[m]["kok"] == 1)  # noqa: E731
-    anlatilan = {m for m, c in say.items() if yeter(m, c) and (c >= 2 or c * 2 >= sy.maddeler[m]["kok"])}
-    tam = {m for m in anlatilan if c_oran(say[m], sy.maddeler[m]["kok"]) >= MADDE_ORAN}
-    es = [(i, j) for i, j in es if sy.kelimeler[j][1] in anlatilan]
-    if not es:
+    S = {k for k, _, _ in tk}
+    ilk3 = {k for k, _, _ in tk[:3]}
+    anlatilan, tam = set(), set()
+    for m, md in enumerate(sy.maddeler):
+        ks = md["koks"]
+        if not ks:
+            continue
+        d = len(ks & S)
+        oran = d / len(ks)
+        # tek kelimelik madde (başlık: "Patoloji:") ancak cümle o kelimeyle açılıyorsa
+        if d >= 3 or (d >= 2 and oran >= 0.3) or (len(ks) == 1 and ks <= ilk3):
+            anlatilan.add(m)
+            if oran >= MADDE_ORAN:
+                tam.add(m)
+    if not anlatilan:
         return 0, None
+    # konuşulan kelime → slayt kelimesi: LCS çiftleri öncelikli, kalanlar ilk boş eşiyle (her iki taraf tekil)
+    es = [(i, j) for i, j in lcs([k for k, _, _ in tk], [k for k, _, _ in sy.kelimeler]) if sy.kelimeler[j][1] in anlatilan]
+    kul_i, kul_j = {i for i, _ in es}, {j for _, j in es}
+    for j, (k, m, _) in enumerate(sy.kelimeler):
+        if m not in anlatilan or j in kul_j:
+            continue
+        i = next((i for i, (kk, _, _) in enumerate(tk) if kk == k and i not in kul_i), None)
+        if i is not None:
+            es.append((i, j)); kul_i.add(i); kul_j.add(j)
+    es.sort()
     w = [[tk[i][1], tk[i][2], *sy.n(sy.kelimeler[j][2])] for i, j in es]
     l, tablo = [], 0
     for m in sorted(tam):
@@ -270,13 +334,14 @@ def cumle_capalari(metin: str, sinir: list[int], capa: list[dict]) -> list[list[
 class Pdf:
     def __init__(self, yol: Path):
         self.doc = pymupdf.open(yol)
+        self.kimlik = hashlib.sha1(f"{Path(yol).name}:{Path(yol).stat().st_size}".encode()).hexdigest()[:16]
         self.cache: dict[int, Sayfa] = {}
 
     def sayfa(self, s: int) -> Sayfa | None:
         if not 1 <= s <= self.doc.page_count:
             return None
         if s not in self.cache:
-            self.cache[s] = Sayfa(self.doc[s - 1])
+            self.cache[s] = Sayfa(self.doc[s - 1], f"{self.kimlik}_{s}")
         return self.cache[s]
 
 
@@ -390,22 +455,24 @@ def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
                 say["yok"] += 1
                 continue
             en = (0, None, s0)
-            for s in (s0, s0 - 1, s0 + 1):
+            # komşu slaytlar: uzaklaştıkça daha güçlü kanıt (±1: 3 kelime, ±2–3: 4 kelime ve atanan sayfanın 1,5 katı)
+            for s in (s0, s0 - 1, s0 + 1, s0 + 2, s0 - 2, s0 + 3, s0 - 3):
                 sy = pdf.sayfa(s)
                 if not sy:
                     continue
                 n, r = eslestir(cumle, sy)
-                esik = en[0] * 1.5 if s != s0 else 0
-                if r and n > esik and (s == s0 or n >= 3):
-                    if en[1] is None or n > en[0]:
-                        en = (n, r, s)
+                uz = abs(s - s0)
+                esik = 0 if not uz else max(3 if uz == 1 else 4, en[0] * 1.5)
+                if r and n >= max(1, esik) and (en[1] is None or n > en[0]):
+                    en = (n, r, s)
             n, r, s = en
             if r:
                 isr = {"d": d0, "s": s, **r}
             else:
                 sy = pdf.sayfa(s0)
-                # taranmış (metinsiz) sayfanın tamamı resimdir: orada resim kutusu yanıltır, yalnız sayfa vurgulanır
-                if sy and sy.resimler and len(sy.kelimeler) >= 5:
+                # Lazer yalnız görsel anlatılırken: cümle görselden söz ediyor ya da slayt neredeyse yalnız resim.
+                # Bağlam/geçiş cümlesinde resme lazer yanıltır → yalnız sayfa vurgusu.
+                if sy and sy.resimler and (GORSEL.search(cumle) or (len(sy.kelimeler) < 15 and not sy.ocr)):
                     rb = max(sy.resimler, key=lambda b: (b[2] - b[0]) * (b[3] - b[1]))
                     isr = {"d": d0, "s": s0, "t": "resim", "l": [sy.n(rb)], "w": []}
                 else:
