@@ -440,6 +440,29 @@ class OfflineDatabaseService {
   }
 
   /**
+   * Kurulun cihazdaki havuz sorularını sunucu listesiyle değiştir (sunucuda silinenler cihazdan da gider)
+   */
+  public async replaceCommitteeQuestions(committeeId: string, questions: QuestionItem[]): Promise<void> {
+    const db = await this.initDb();
+    if (!db || !db.objectStoreNames.contains(STORE_QUESTIONS)) return;
+    const eski = await this.getQuestions(committeeId);
+    const tut = new Set(questions.map((q) => q.id));
+    await new Promise<void>((resolve) => {
+      try {
+        const tx = db.transaction(STORE_QUESTIONS, 'readwrite');
+        const store = tx.objectStore(STORE_QUESTIONS);
+        for (const q of eski) if (!tut.has(q.id)) store.delete(q.id);
+        for (const q of questions) store.put(q);
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => resolve();
+        tx.onabort = () => resolve();
+      } catch {
+        resolve();
+      }
+    });
+  }
+
+  /**
    * Havuz sorularını cihaza kaydet
    */
   public async saveQuestions(questions: QuestionItem[]): Promise<void> {
@@ -614,6 +637,16 @@ class OfflineDatabaseService {
         if (res.ok) {
           const data = await res.json();
           poolQuestions = data.questions || [];
+          // Sunucu kesin kaynak: cihazdaki eski havuzu temizle (boşaltılan havuz geri gelmesin)
+          if (db.objectStoreNames.contains(STORE_QUESTIONS)) {
+            await new Promise<void>((r) => {
+              try {
+                const tx = db.transaction(STORE_QUESTIONS, 'readwrite');
+                tx.objectStore(STORE_QUESTIONS).clear();
+                tx.oncomplete = () => r(); tx.onerror = () => r(); tx.onabort = () => r();
+              } catch { r(); }
+            });
+          }
         }
       } catch (e) {
         console.warn('[OfflineDb] Havuz soruları API uyarısı:', e);

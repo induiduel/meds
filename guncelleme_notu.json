@@ -1,14 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 83,
-  "baslik": "İyileştirmeler ve düzeltmeler",
+  "onem": 84,
+  "baslik": "Soru havuzu sıfırlandı",
   "maddeler": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+    "2026-2027 soru havuzu temizlendi; eski sorular artık cihazlardan geri gelmiyor.",
+    "Sunucu boş havuz döndürünce cihazdaki eski önbellek de silinir."
   ],
   "eklenen": [],
   "degisen": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+    "2026-2027 soru havuzu temizlendi; eski sorular artık cihazlardan geri gelmiyor.",
+    "Sunucu boş havuz döndürünce cihazdaki eski önbellek de silinir."
   ],
-  "duzeltilen": [],
-  "silinen": []
+  "duzeltilen": [
+    "Sunucu boş havuz döndürünce cihazdaki eski önbellek de silinir."
+  ],
+  "silinen": [
+    "2026-2027 soru havuzu temizlendi; eski sorular artık cihazlardan geri gelmiyor."
+  ]
 }

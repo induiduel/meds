@@ -326,9 +326,21 @@ class MultiDbManager {
       } catch (e) {}
     }
 
-    // 6. Fallback to Local PC server
+    // 6. Sunucu yanıt verdiyse (boş liste dahil) o kesin kaynaktır: cihaz önbelleklerine düşme,
+    // onları sunucuyla eşitle. Yoksa havuz boşaltıldığında eski sorular IndexedDB/localStorage'dan geri gelir.
     if (!questionsList.length) {
-      questionsList = await this.getLocalQuestions(committeeId);
+      const server = await this.fetchServerQuestions(committeeId);
+      if (server) {
+        if (!server.length) {
+          offlineDatabaseService.replaceCommitteeQuestions(committeeId, []).catch(() => {});
+          const local = getLocalDb();
+          const kalan = (local.questions || []).filter((q) => q.committeeId !== committeeId);
+          if (kalan.length !== (local.questions || []).length) saveLocalDb({ ...local, questions: kalan });
+        }
+        questionsList = server;
+        if (server.length) offlineDatabaseService.replaceCommitteeQuestions(committeeId, server).catch(() => {});
+        return questionsList;
+      }
     }
 
     // 7. Çevrimdışı IndexedDB Fallback
@@ -352,6 +364,11 @@ class MultiDbManager {
   }
 
   private async getLocalQuestions(committeeId: string): Promise<QuestionItem[]> {
+    return (await this.fetchServerQuestions(committeeId)) || [];
+  }
+
+  /** Sunucu yanıtı; istek başarısızsa null (boş havuz = []). */
+  private async fetchServerQuestions(committeeId: string): Promise<QuestionItem[] | null> {
     try {
       const customUrl = getCustomApiUrl();
       const endpoint = customUrl
@@ -362,7 +379,7 @@ class MultiDbManager {
         return res.data.questions;
       }
     } catch (e) {}
-    return [];
+    return null;
   }
 
   /**
