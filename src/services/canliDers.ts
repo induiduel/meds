@@ -55,8 +55,9 @@ const BRANS_DUZELT: Record<string, [string, number, number?]> = {
   // Drive: Böbrek ve Mesane ikisi de "26)", İnvaziv Serviks "39)" — patoloji önem listesiyle aynı numara
   'k1-46-mesane-hastaliklari-ve-tumorleri': ['Tıbbi Patoloji', 27],
   'k1-49-invaziv-serviks-kanseri-ve-endometriyozis': ['Tıbbi Patoloji', 29],
-  // Drive: Meme Kanseri de "33)" (Memenin Benign ile çakışır) — önem listesinde 35
-  'k1-65-meme-kanseri-ve-molekuler-tipleri': ['Tıbbi Patoloji', 35],
+  // Drive: Meme Kanseri de "33)" (Memenin Benign ile çakışır); liste sırayla gitsin diye 34, Erkek Genital 35
+  'k1-65-meme-kanseri-ve-molekuler-tipleri': ['Tıbbi Patoloji', 34],
+  'k1-66-erkek-genital-sistem-ve-prostat-hastaliklari': ['Tıbbi Patoloji', 35],
 };
 /** Listede gösterilmeyen dersler (adresle açılmaya devam eder). Uterus Düz Kas ve Trofoblastik: ayrı slaytı yok,
  *  30. PDF s.76–91 (Endometrial dersinin sonu) + 32. PDF s.35–64 (Gebelik Hastalıkları) tekrarı — kullanıcı kararı. */
@@ -71,8 +72,12 @@ const BRANS_YEDEK: Record<string, [string, number]> = {
   'k1-66-erkek-genital-sistem-ve-prostat-hastaliklari': ['Tıbbi Patoloji', 34],
 };
 const bransOnbellek = new Map<string, { mtime: number; v: { brans: string; bransNo: number } | null }>();
-function bransBilgisi(d: Ders): { brans: string; bransNo: number; kurul: number; parca?: number } {
+/** Modül dersleri (birden çok dersin özeti): branş içi numara yerine etiket. TBG Sınav Kampı → "Genetik · Sınav kampı". */
+const MODUL_DERS: Record<string, [string, string]> = { 'k1-70-tbg-sinav-kampi': ['Tıbbi Genetik', 'Sınav kampı'] };
+function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul: number; parca?: number } {
   const kurul = Number(/^k(\d+)-/.exec(d.key)?.[1]) || 0;
+  const modul = MODUL_DERS[d.key];
+  if (modul) return { brans: modul[0], bransNo: modul[1], kurul };
   const elle = BRANS_DUZELT[d.key];
   if (elle) return { brans: elle[0], bransNo: elle[1], kurul, ...(elle[2] ? { parca: elle[2] } : {}) };
   const p = P.hizalama(d.key);
