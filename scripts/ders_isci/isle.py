@@ -244,7 +244,13 @@ def baglam_hazirla(j: dict, d: Path, metin: str, bilgi: dict) -> dict:
         if not es.get("programda"):
             uyarilar.append("ders programında güvenle eşleşen konu yok (adaylar rapordadır); ders PDF'in kendi adıyla açıldı")
         kayit = ders_kaydi_eslesmesi(kurul, es) if es.get("programda") else None
+        if kurul and kurul >= 2 and not kayit:
+            # Kurul 2+: kimlik ders defterinden gelmeli; gelmezse otomatik onay kapanır (uyarı), yönetici bakar
+            uyarilar.append(f"Kurul {kurul}: ders kayıt defterinde eşleşme yok (dersler/k{kurul}.json) — numara geçici")
         n = kayit["no"] if kayit else (sonraki_numara(kurul) if kurul else 0)
+        if kayit:  # defterdeki temiz konu (programda hoca adı yapışık olabilir) → yayın betiğiyle aynı kimlik
+            es["konu"] = next(x["konu"] for x in oku(APP / "src" / "data" / "dersler" / f"k{kurul}.json", {})["dersler"]
+                              if x["id"] == kayit["id"])
         ad_kaynagi = es.get("konu") if es.get("programda") else pdf_adi
         ders_id = f"k{kurul}-{n:02d}-{slug(ad_kaynagi)}"
         deste_id = f"k{kurul}p-{ders_id}"

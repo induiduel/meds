@@ -95,6 +95,10 @@ if __name__ == "__main__":
     eksik = [k["kurul"] for k in veri["kurullar"] if not (k["baslangic"] and k["sinav"])]
     if eksik:
         print("HATA: tarih çıkarılamadı:", eksik); sys.exit(1)
+    if a.yaz and CIKTI.exists():  # ayrıştırma bozulduysa iyi takvimi ezme (aktif kurul hesabı buna bağlı)
+        eski = json.loads(CIKTI.read_text())
+        if len(veri["kurullar"]) < len(eski.get("kurullar", [])):
+            print(f"HATA: {len(veri['kurullar'])} kurul çıktı, önceki {len(eski['kurullar'])} — yazılmadı"); sys.exit(1)
     if a.yaz:
         CIKTI.write_text(json.dumps(veri, ensure_ascii=False, indent=1) + "\n")
         ozet = {k: v for k, v in veri.items() if k != "kurullar"}

@@ -34,7 +34,8 @@ def main():
     if r.returncode:
         print("HATA: öneriler Oracle'dan çekilemedi:", r.stderr.strip()[:300]); return 1
     durum = json.loads(DURUM.read_text()) if DURUM.exists() else {}
-    bekleyen = [p for p in sorted(ONERI.glob("k*.json")) if durum.get(p.stem) != sha(p)][: a.en_cok]
+    # Yalnız Kurul 2+: Kurul 1 verisine otomatik toplu müdahale yok (KURUL2_YAPILMAYACAK_HATALAR.md; denetim 2026-10-20)
+    bekleyen = [p for p in sorted(ONERI.glob("k[2-6]-*.json")) if durum.get(p.stem) != sha(p)][: a.en_cok]
     print(f"{len(bekleyen)} ders önerisi şema 2 bekliyor")
     for p in bekleyen:
         istem = (f"{MEDS}/scripts/diseases/TALIMAT_SEMA2.md talimatını uygula. Girdi: {p}. Çıktı klasörü: {ONERI}/sema2/. "
@@ -44,8 +45,11 @@ def main():
             continue
         (ONERI / "sema2").mkdir(exist_ok=True)
         with open(KOK / "meds_temp/hat/hastalik_claude.log", "a") as log:
-            k = subprocess.run(["claude", "-p", istem, "--model", "claude-opus-5-5", "--allowedTools", IZIN, "--add-dir", str(KOK)],
-                               cwd=KOK, stdout=log, stderr=subprocess.STDOUT, timeout=3 * 3600).returncode
+            try:
+                k = subprocess.run(["claude", "-p", istem, "--model", "claude-opus-5-5", "--allowedTools", IZIN, "--add-dir", str(KOK)],
+                                   cwd=KOK, stdout=log, stderr=subprocess.STDOUT, timeout=3 * 3600).returncode
+            except subprocess.TimeoutExpired:
+                print("   claude zaman aşımı (3 sa) — sonraki gece yeniden"); k = 124
         if k == 0:
             durum[p.stem] = sha(p); DURUM.parent.mkdir(parents=True, exist_ok=True)
             DURUM.write_text(json.dumps(durum, ensure_ascii=False, indent=1))
@@ -53,7 +57,12 @@ def main():
         return 0
     once = sha(DIS); onceki = {d["id"]: json.dumps(d, sort_keys=True) for d in json.loads(DIS.read_text())}
     sys.path.insert(0, str(MEDS / "scripts/ders_isci")); import yayinla
-    yayinla.hastaliklari_uygula()
+    sonuc = yayinla.hastaliklari_uygula()
+    if sonuc:  # geri alındı (denetim hatası arttı) ya da yazılamadı: önerileri yeniden denemeye aç, hatayı göster
+        for p in bekleyen:
+            durum.pop(p.stem, None)
+        DURUM.write_text(json.dumps(durum, ensure_ascii=False, indent=1))
+        print(f"HATA: birleştirme kod {sonuc} (geri alındı) — öneriler sonraki gece yeniden"); return 1
     if sha(DIS) == once:
         print("diseases.json değişmedi"); return 0
     ids = [d["id"] for d in json.loads(DIS.read_text()) if onceki.get(d["id"]) != json.dumps(d, sort_keys=True)]
@@ -61,12 +70,13 @@ def main():
                         "medsor-oracle:/home/ubuntu/medsor/meds/data/content/diseases.json"], timeout=120)
     if r.returncode:
         print("HATA: canlı katmana gönderilemedi"); return 1
-    govde = json.dumps({"ids": ids})
+    import shlex
+    govde = shlex.quote(json.dumps({"ids": ids}))
     # Oracle'da /api yazmaları loopback'ten de parola ister: parola ve panel sırrı sunucunun .env'inden okunur
     uzak = ("cd /home/ubuntu/medsor/meds && PW=$(grep -m1 '^MEDSORU_API_PASSWORD=' .env | cut -d= -f2-) && "
             "PS=$(grep -m1 '^MEDS_PANEL_SECRET=' .env | cut -d= -f2-) && "
             "curl -s -X POST -H 'Content-Type: application/json' -H \"X-API-Password: $PW\" -H \"x-panel-secret: $PS\" "
-            f"--data '{govde}' http://127.0.0.1:3000/api/admin/icerik/diseases/degisti")
+            f"--data {govde} http://127.0.0.1:3000/api/admin/icerik/diseases/degisti")
     r = subprocess.run(["ssh", "medsor-oracle", uzak],
                        capture_output=True, text=True, timeout=60)
     print(f"canlı: {len(ids)} hastalık kaydı → {r.stdout.strip()[:160]}")

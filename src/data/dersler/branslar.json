@@ -1,6 +1,6 @@
 {
  "surum": 1,
- "aciklama": "Branş harfi ↔ ad ↔ klasör adı. Kurul 2+ ders kodu = <kurul><harf><sıra> (2n03); veri klasörü = k<kurul><slug> (k2noroloji). Python (ders_kaydi.py, ders_zinciri.py) ve TS (brans.ts, ses uçları) bu dosyayı okur.",
+ "aciklama": "Branş harfi ↔ ad ↔ klasör adı. Kurul 2+ ders kodu = <kurul><harf><sıra> (2n03); veri klasörü = k<kurul><slug> (k2noroloji). Python (ders_kaydi.py, ders_zinciri.py) ve TS (brans.ts, ses uçları) bu dosyayı okur. Aynı branşın farklı yazımları aynı harfi ve slug'ı paylaşır (sayaç harfe göre).",
  "branslar": [
   {
    "harf": "p",
@@ -127,6 +127,36 @@
    "ad": "Nükleer Tıp",
    "slug": "nukleer",
    "kisa": "Nükleer Tıp"
+  },
+  {
+   "harf": "r",
+   "ad": "Anestezi ve Reanimasyon",
+   "slug": "anestezi",
+   "kisa": "Anestezi"
+  },
+  {
+   "harf": "v",
+   "ad": "Kalp ve Damar Cerrahisi",
+   "slug": "kvc",
+   "kisa": "Kalp Damar Cerrahisi"
+  },
+  {
+   "harf": "j",
+   "ad": "Acil Tıp",
+   "slug": "acil",
+   "kisa": "Acil Tıp"
+  },
+  {
+   "harf": "l",
+   "ad": "Göğüs Cerrahisi",
+   "slug": "gogucerrahi",
+   "kisa": "Göğüs Cerrahisi"
+  },
+  {
+   "harf": "w",
+   "ad": "Tıbbi Biyokimya",
+   "slug": "biyokimya",
+   "kisa": "Biyokimya"
   }
  ]
 }

@@ -1102,14 +1102,18 @@ export function chunkDeepSeekData(): RagChunk[] {
 // Örnek sorular (ornek_sorular/k1/*.json: ders → kazanım → sorular)
 // ==============================================================================
 export function chunkOrnekSorular(): RagChunk[] {
-  const base = path.resolve(PROJECT_ROOT, 'src', 'data', 'ornek_sorular', 'k1');
+  // Kurul 1–6 (ornek_sorular/k<N>/; Kurul 2+ ders işçisi yayınlar, 2026-10-20)
+  const kok = path.resolve(PROJECT_ROOT, 'src', 'data', 'ornek_sorular');
   const chunks: RagChunk[] = [];
   const now = new Date().toISOString();
-  let files: string[] = [];
-  try {
-    files = fs.readdirSync(base).filter((f) => f.endsWith('.json') && f !== 'index.json');
-  } catch { return []; }
-  for (const f of files) {
+  const files: Array<{ base: string; f: string; kurul: number }> = [];
+  for (let k = 1; k <= 6; k++) {
+    const base = path.join(kok, `k${k}`);
+    try {
+      for (const f of fs.readdirSync(base)) if (f.endsWith('.json') && f !== 'index.json') files.push({ base, f, kurul: k });
+    } catch { /* bu kurul için yok */ }
+  }
+  for (const { base, f, kurul } of files) {
     let ders: any;
     try { ders = JSON.parse(fs.readFileSync(path.join(base, f), 'utf-8')); } catch { continue; }
     const dersAd = ders.ders || 'Tıp';
@@ -1128,7 +1132,7 @@ export function chunkOrnekSorular(): RagChunk[] {
           id: `chunk-ornek-${s.id || h.slice(0, 12)}`,
           documentId: String(s.id || ders.id || f),
           documentType: 'ornek_question',
-          committeeId: 'donem3-kurul1',
+          committeeId: `donem3-kurul${kurul}`,
           discipline: dersAd,
           title: `Örnek Soru: ${konu || dersAd}`,
           pageNumber: undefined,

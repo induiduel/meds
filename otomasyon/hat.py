@@ -52,16 +52,27 @@ def dogrula(df):
     return hata
 
 
+def kaydet_durum(aid, kod, not_=""):
+    """durum.json'a tek aşamanın sonucunu yazar (kilitli oku-değiştir-yaz: elle --calistir ile gece işi çakışmasın)."""
+    import fcntl
+    DURUM.parent.mkdir(parents=True, exist_ok=True)
+    with open(DURUM.parent / ".durum.lock", "w") as k:
+        fcntl.flock(k, fcntl.LOCK_EX)
+        durum = json.loads(DURUM.read_text()) if DURUM.exists() else {}
+        simdi = dt.datetime.now().isoformat(timespec="seconds")
+        onceki = durum.get(aid, {})
+        durum[aid] = {"son": simdi, "kod": kod, "son_basari": simdi if kod == 0 else onceki.get("son_basari"),
+                      **({"not": not_} if not_ else {})}
+        tmp = DURUM.with_suffix(".tmp"); tmp.write_text(json.dumps(durum, ensure_ascii=False, indent=1)); tmp.replace(DURUM)
+    with open(DURUM.parent / "hat.log", "a") as f:
+        f.write(f"{dt.datetime.now().isoformat(timespec='seconds')} {aid} kod={kod}{' ' + not_ if not_ else ''}\n")
+
+
 def calistir(a, v):
-    durum = json.loads(DURUM.read_text()) if DURUM.exists() else {}
     komut = a["komut"].format(**v, ders_id="", deste_id="")
-    bas = dt.datetime.now().isoformat(timespec="seconds")
     print(f"▶ {a['id']}: {komut}")
     r = subprocess.run(komut, shell=True, cwd=KOK, env={**os.environ, "CUDA_VISIBLE_DEVICES": ""})
-    durum[a["id"]] = {"son": bas, "kod": r.returncode, **({"son_basari": bas} if r.returncode == 0 else
-                      {"son_basari": durum.get(a["id"], {}).get("son_basari")})}
-    DURUM.parent.mkdir(parents=True, exist_ok=True); DURUM.write_text(json.dumps(durum, ensure_ascii=False, indent=1))
-    with open(DURUM.parent / "hat.log", "a") as f: f.write(f"{bas} {a['id']} kod={r.returncode}\n")
+    kaydet_durum(a["id"], r.returncode)
     return r.returncode
 
 
@@ -88,12 +99,24 @@ def main():
     if a.gece:
         dr = json.loads(DURUM.read_text()) if DURUM.exists() else {}
         bugun = dt.date.today().isoformat(); kotu = 0
+        dusen: set[str] = set()  # bu gece başarısız olan (ya da bağımlılığı düştüğü için atlanan) aşamalar
         for s in sira(df["asamalar"]):
             if s["durum"] != "hazir" or "gece" not in s.get("tetik", []) or s["komut"].startswith("Oracle:"):
                 continue
             if a.kacirilan and (dr.get(s["id"], {}).get("son_basari") or "") >= bugun:
                 continue  # bugün zaten başarıyla çalıştı
-            kotu += calistir(s, v) != 0
+            neden = [g for g in s.get("gerekir", []) if g in dusen]
+            if neden:  # bağımlılık bu gece düştü: bu aşama çalışmaz (yarım girdiyle yayın yok)
+                dusen.add(s["id"]); kotu += 1
+                kaydet_durum(s["id"], 10, f"bağımlılık başarısız: {', '.join(neden)}")
+                print(f"⏭ {s['id']}: atlandı (bağımlılık başarısız: {', '.join(neden)})")
+                continue
+            kod = calistir(s, v)
+            if kod == 3:  # bilinçli atlama (ör. çalışma ağacı kirli): hata değil ama başarı da değil, panoda görünür
+                print(f"⏭ {s['id']}: atlandı (kod 3)")
+                continue
+            if kod != 0:
+                dusen.add(s["id"]); kotu += 1
         sys.exit(1 if kotu else 0)
     ap.print_help()
 

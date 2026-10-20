@@ -20,6 +20,7 @@ from datetime import datetime
 
 from .. import config
 
+KURUL = 1
 PAKET_DIR = config.PROJECT_ROOT / "meds_database_v2" / "kurul1_ders_paketleri"
 SORU_DIR = config.PROJECT_ROOT / "meds_database_v2" / "questions"
 WORK = config.TEMP_DIR / "study" / "ornek"
@@ -29,6 +30,15 @@ OUT_DIR = config.PROJECT_ROOT / "meds_database_v2" / "ornek_sorular_k1"
 SITE_DIR = config.MEDS_DIR / "src" / "data" / "ornek_sorular" / "k1"
 
 HARFLER = "ABCDE"
+
+
+def kurul_ayarla(k: int) -> None:
+    """Kurul 2+ yayını: paket/çıktı/site yolları kurula bağlanır (Kurul 1 varsayılanı değişmez)."""
+    global KURUL, PAKET_DIR, OUT_DIR, SITE_DIR
+    KURUL = k
+    PAKET_DIR = config.PROJECT_ROOT / "meds_database_v2" / f"kurul{k}_ders_paketleri"
+    OUT_DIR = config.PROJECT_ROOT / "meds_database_v2" / f"ornek_sorular_k{k}"
+    SITE_DIR = config.MEDS_DIR / "src" / "data" / "ornek_sorular" / f"k{k}"
 ZORLUK = ("kolay", "orta", "zor")
 _DUR = set("""ve ile veya bir bu şu o da de ki için gibi olan olarak daha en çok az ise hangisi hangisidir
 aşağıdakilerden aşağıdaki doğru yanlış değildir değil mi mu olur olması olup sonra önce kadar göre
@@ -53,7 +63,7 @@ def _terimler(s: str) -> list[str]:
 def _paketler() -> list[dict]:
     sira = {x["id"]: x["sira"] for x in json.loads((PAKET_DIR / "index.json").read_text(encoding="utf-8"))}
     out = []
-    for p in sorted(PAKET_DIR.glob("k1-*.json")):
+    for p in sorted(PAKET_DIR.glob(f"k{KURUL}-*.json")):
         d = json.loads(p.read_text(encoding="utf-8"))
         d["sira"] = sira.get(d["id"], 0)
         out.append(d)
@@ -253,7 +263,7 @@ def build(export: bool = False) -> dict:
     baglar = json.loads((WORK / "baglar.json").read_text(encoding="utf-8")) if (WORK / "baglar.json").exists() else {}
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     index, rapor = [], {}
-    for f in sorted(YAZIM_DIR.glob("k1-*.json")):
+    for f in sorted(YAZIM_DIR.glob(f"k{KURUL}-*.json")):
         d = json.loads(f.read_text(encoding="utf-8"))
         p = paketler[f.stem]
         konu_cik = [by_id[i] for i in baglar.get(p["id"], {}).get("konu_cikmis", []) if i in by_id]

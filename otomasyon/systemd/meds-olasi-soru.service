@@ -1,0 +1,16 @@
+[Unit]
+Description=MeDSor olası soru (sınav sonrası öğrenci kayıtları → 100 yuva → Claude sentezi) — akşam çalıştırması
+After=network-online.target meds-embed-bge.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/indu/medsor
+Environment=CUDA_VISIBLE_DEVICES=
+Environment=PATH=/home/indu/.local/bin:/home/indu/.nvm/versions/node/v24.21.0/bin:/usr/local/bin:/usr/bin:/bin
+# LLM gerektiren aşamalar yalnız Claude (claude -p) ile çalışır — kullanıcı kararı 2026-10-20
+ExecStart=/usr/bin/python3 /home/indu/medsor/meds/otomasyon/hat.py --calistir olasi_soru
+Nice=10
+MemoryMax=3G
+CPUQuota=150%
+OOMScoreAdjust=500
+TimeoutStartSec=3h

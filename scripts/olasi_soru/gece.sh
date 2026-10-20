@@ -3,9 +3,17 @@
 # Kullanım: gece.sh [kurul]   (kurul verilmezse takvimden sınavı geçmiş en son kurul)
 set -euo pipefail
 KOK="$(cd "$(dirname "$0")/../../.." && pwd)"; cd "$KOK/meds"
+# Akşam (meds-olasi-soru.timer) ve gece (meds-hat-gece) çalıştırmaları üst üste binmesin
+exec 8>"${XDG_RUNTIME_DIR:-/tmp}/medsor-olasi-soru.lock"; flock -n 8 || { echo "olası soru işi zaten çalışıyor"; exit 0; }
 K="${1:-$(python3 scripts/takvim/aktif_kurul.py --son-sinav)}"
 [ "$K" = 0 ] && { echo "Henüz sınavı yapılmış kurul yok; olası soru işi bekliyor"; exit 0; }
-set +e; python3 scripts/olasi_soru/topla.py --kurul "$K"; rc=$?; set -e
+# Öğrenci kayıtları canlıda (Oracle) birikir: güncel kopyayı salt-okunur çek (çekilemezse DUR, eski veriyle sentez yok)
+V="$KOK/meds_temp/olasi_soru/oracle_veri"; mkdir -p "$V/question_ledger" "$V/olasi_sorular"
+U=medsor-oracle:/home/ubuntu/medsor/meds/data
+rsync -az "$U/questions.json" "$V/questions.json" && rsync -az --delete "$U/question_ledger/" "$V/question_ledger/" \
+  && { rsync -az "$U/olasi_sorular/geri_bildirim_k$K.jsonl" "$V/olasi_sorular/" 2>/dev/null || true; } \
+  || { echo "HATA: Oracle'dan öğrenci kayıtları çekilemedi"; exit 5; }
+set +e; python3 scripts/olasi_soru/topla.py --kurul "$K" --veri "$V"; rc=$?; set -e
 [ "$rc" = 3 ] && { echo "Kurul $K: yeni kanıt yok, sentez atlandı"; exit 0; }
 [ "$rc" != 0 ] && exit "$rc"
 D="$KOK/meds_temp/olasi_soru/k$K"
@@ -23,11 +31,12 @@ yayinla() {
 }
 # Claude (başsız). Dar izin listesi: yalnız dosya okuma/yazma + doğrulayıcı + yerel API okuma.
 IZIN='Read,Write,Edit,Glob,Grep,Bash(python3 *),Bash(curl -s http://127.0.0.1:3000/*)'
-cl() { claude -p "$1" --model claude-opus-5-5 --allowedTools "$IZIN" --add-dir "$KOK" >> "$D/claude.log" 2>&1; }
+cl() { timeout 3h claude -p "$1" --model claude-opus-5-5 --allowedTools "$IZIN" --add-dir "$KOK" >> "$D/claude.log" 2>&1 || echo "claude çıkış $? (devam: kapı karar verir)" >> "$D/claude.log"; }
 echo "=== $(date -Is) kurul $K sentez ===" >> "$D/claude.log"
 cl "meds/scripts/olasi_soru/TALIMAT.md talimatını uygula (kurul $K). Çalışma dizini: $D. Proje kökü: $KOK. Bitince 'python3 $KOK/meds/scripts/olasi_soru/dogrula.py --kurul $K' çalıştır ve 0 HATA olana kadar düzelt."
 for tur in 1 2; do
-  python3 "$KOK/meds/scripts/olasi_soru/dogrula.py" --kurul "$K" > "$D/dogrula.txt" && { tail -1 "$D/dogrula.txt"; yayinla; exit 0; }
+  python3 "$KOK/meds/scripts/olasi_soru/dogrula.py" --kurul "$K" > "$D/dogrula.txt" && { tail -1 "$D/dogrula.txt"; yayinla
+    python3 -c "import json;print(json.load(open('$D/yuvalar.json'))['parmak_izi'])" > "$D/yayinlanan_iz.txt"; exit 0; }
   cl "dogrula.py HATA verdi ($D/dogrula.txt). Yalnız olasi_sorular.json'u düzelt, sonra dogrula.py'yi yeniden çalıştır."
 done
 python3 "$KOK/meds/scripts/olasi_soru/dogrula.py" --kurul "$K"

@@ -100,9 +100,13 @@ def takvimden(kurul):
 
 def kimliklendir(kurul, dersler, onceki):
     eski = {(x["brans"], norm(x["konu"])): x for x in onceki}
-    sayac, out = {}, []
+    sayac, out = {}, []  # sayaç HARFE göre: aynı branşın farklı yazımları (Anestezi/Anesteziyoloji) çakışmasın
+    bilinmeyen = sorted({x["brans"] for x in dersler.values() if x["brans"] not in HARF})
+    if bilinmeyen:
+        raise SystemExit(f"HATA: branslar.json'da tanımsız branş: {bilinmeyen} — src/data/dersler/branslar.json'a ekleyin")
     for x in onceki:  # kararlılık: önceki kimlik/kodlar
-        sayac[x["brans"]] = max(sayac.get(x["brans"], 0), int(re.sub(r"\D", "", x["kod"][1:]) or 0))
+        h = x["kod"][1]
+        sayac[h] = max(sayac.get(h, 0), int(x["kod"][2:]))
     sira = max([int(x["id"].split("-")[1]) for x in onceki] or [0])
     for anahtar, x in sorted(dersler.items(), key=lambda kv: (kv[1]["tarih"], kv[1]["saat"])):
         e = eski.pop(anahtar, None)
@@ -110,8 +114,9 @@ def kimliklendir(kurul, dersler, onceki):
             e.update({k2: x[k2] for k2 in ("tarih", "saat", "saat_sayisi")})
             if not e.get("ogretim_uyesi"): e["ogretim_uyesi"] = x["ogretim_uyesi"]
             out.append(e); continue
-        sira += 1; sayac[x["brans"]] = sayac.get(x["brans"], 0) + 1
-        out.append({"id": f"k{kurul}-{sira:02d}", "kod": f"{kurul}{HARF.get(x['brans'], 'q')}{sayac[x['brans']]:02d}",
+        h = HARF[x["brans"]]
+        sira += 1; sayac[h] = sayac.get(h, 0) + 1
+        out.append({"id": f"k{kurul}-{sira:02d}", "kod": f"{kurul}{h}{sayac[h]:02d}",
                     "kurul": kurul, **x, "pdf": None, "cikmis_konular": [], "durum": {}})
     for e in eski.values():  # programdan düşen ders silinmez, işaretlenir
         e["programda_yok"] = True; out.append(e)
@@ -126,6 +131,10 @@ if __name__ == "__main__":
     dersler = uret(a.kurul, onceki)
     for x in dersler:
         print(f"{x['id']} {x['kod']:5} {x['tarih']} {x['saat_sayisi']}s {x['brans'][:16]:16} {x['konu'][:55]:55} {x['ogretim_uyesi'][:30]}")
+    import collections
+    cift = [k for k, n in collections.Counter(x["kod"] for x in dersler).items() if n > 1]
+    if cift:
+        print("HATA: aynı kod birden çok derste:", cift); sys.exit(1)
     print(f"{len(dersler)} ders")
     if a.yaz:
         yol.write_text(json.dumps({"surum": 1, "kurul": a.kurul, "kaynak": "kurul_takvimi.json", "dersler": dersler},

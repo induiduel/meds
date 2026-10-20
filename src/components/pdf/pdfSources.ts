@@ -172,12 +172,12 @@ export function fromPoolQuestion(q: QuestionItem): PdfQuestion | null {
  * Örnek sorular (src/data/ornek_sorular/k1/<ders>.json)
  * ------------------------------------------------------------------------- */
 export interface OrnekIndexRow { id: string; sira: number; ders: string; konu: string; ogretim_uyesi: string; soru_sayisi: number; kazanim: number }
-const ornekIndex = import.meta.glob('../../data/ornek_sorular/k1/index.json', { eager: true, import: 'default' }) as Record<string, OrnekIndexRow[]>;
-const ornekLoaders = import.meta.glob('../../data/ornek_sorular/k1/k1-*.json', { import: 'default' }) as Record<string, () => Promise<any>>;
-export const ORNEK_INDEX: OrnekIndexRow[] = Object.values(ornekIndex)[0] || [];
+const ornekIndex = import.meta.glob('../../data/ornek_sorular/k[1-6]/index.json', { eager: true, import: 'default' }) as Record<string, OrnekIndexRow[]>;
+const ornekLoaders = import.meta.glob('../../data/ornek_sorular/k[1-6]/k[1-6]-*.json', { import: 'default' }) as Record<string, () => Promise<any>>;
+export const ORNEK_INDEX: OrnekIndexRow[] = Object.keys(ornekIndex).sort().flatMap((k) => ornekIndex[k] || []);
 
 export async function loadOrnekQuestions(dersId: string): Promise<PdfQuestion[]> {
-  const loader = ornekLoaders[`../../data/ornek_sorular/k1/${dersId}.json`];
+  const loader = ornekLoaders[`../../data/ornek_sorular/k${/^k(\d)-/.exec(dersId)?.[1] || '1'}/${dersId}.json`];
   if (!loader) return [];
   const ders = await loader();
   const out: PdfQuestion[] = [];

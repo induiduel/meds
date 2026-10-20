@@ -51,7 +51,7 @@ const fmtDate = (s?: string) => (s ? new Date(s).toLocaleDateString('tr-TR', { d
 const stemOf = (q: Row) => q?.reconstruction?.stem || q?.stem || q?.rawQuestion?.stem || q?.fragments?.[0]?.text || q?.topic || '';
 
 /* Yeniden kurulum (2026-10-11): platformdaki her veri tipi aynı masada. Ağır kaynaklar yalnız seçilince yüklenir. */
-const ornekLoaders = import.meta.glob('../../data/ornek_sorular/k1/k1-*.json', { import: 'default' }) as Record<string, () => Promise<any>>;
+const ornekLoaders = import.meta.glob('../../data/ornek_sorular/k[1-6]/k[1-6]-*.json', { import: 'default' }) as Record<string, () => Promise<any>>;
 const IX_LABEL: Record<string, string> = {
   micro_quiz: 'Mini soru', cloze_masking: 'Boşluk doldurma', interactive_table: 'Gizli tablo', before_after_slider: 'Karşılaştırma',
   branching_logic: 'Klinik karar', causal_chain: 'Mekanizma zinciri', active_recall: 'Aktif hatırlama', spot_the_lie: 'Tuzak avı',

@@ -89,7 +89,10 @@ def claude(istem, W, kuru):
         return 0
     with open(W / "claude.log", "a") as log:
         log.write(f"\n=== {dt.datetime.now().isoformat(timespec='seconds')} ===\n{istem}\n")
-        return subprocess.run(kom, cwd=W, stdout=log, stderr=subprocess.STDOUT).returncode
+        try:  # takılan oturum gecenin tamamını yemesin
+            return subprocess.run(kom, cwd=W, stdout=log, stderr=subprocess.STDOUT, timeout=3 * 3600).returncode
+        except subprocess.TimeoutExpired:
+            log.write("\n!!! claude zaman aşımı (3 sa)\n"); return 124
 
 
 def kapili_claude(istem, kapi, W, kuru, tur=3):
@@ -165,18 +168,37 @@ def a_cozucu(d, pk, W, kuru):
         f"python3 {SC}/cozucu_dogrula.py {W}/cozucu/{k}.json", W, kuru)
 
 
+def onayli_yaz(W, kod, ekle):
+    """Bağımsız denetimi geçmiş kodlar (birlestir.py / asistan_birlestir.py yalnız bunları yayına alır)."""
+    p = W / "onayli.json"
+    o = set(json.loads(p.read_text())) if p.exists() else set()
+    (o.add if ekle else o.discard)(kod)
+    p.write_text(json.dumps(sorted(o), ensure_ascii=False))
+
+
 def a_denetim(d, pk, W, kuru):
     """Bağımsız denetçi (yazar ≠ denetçi): DENETIM.md; düzeltmeden sonra iki kapı yeniden."""
     k = d["kod"]
     claude(f"Sen bağımsız denetçisin (yazar değil). {SC}/DENETIM.md talimatını uygula. Çalışma klasörü: {W}. Yalnız ders "
            f"kodu {k}: onem/{k}.json ve cozucu/{k}.json'u pdf_metin/{k}.md'ye karşı denetle, hataları düzelt, "
            f"denetim/{k}.md raporu yaz.", W, kuru)
-    return (calistir(f"python3 {SC}/onem_dogrula.py {W}/onem/{k}.json", kuru=kuru)
-            or calistir(f"python3 {SC}/cozucu_dogrula.py {W}/cozucu/{k}.json", kuru=kuru))
+    r = (calistir(f"python3 {SC}/onem_dogrula.py {W}/onem/{k}.json", kuru=kuru)
+         or calistir(f"python3 {SC}/cozucu_dogrula.py {W}/cozucu/{k}.json", kuru=kuru))
+    if not kuru and r == 0 and not (W / "denetim" / f"{k}.md").exists():
+        print("   denetçi raporu yazılmadı (denetim/<kod>.md) — denetim yapılmış sayılmaz"); r = 8
+    if not kuru:
+        onayli_yaz(W, k, r == 0)
+    return r
 
 
 def a_birlestir(d, pk, W, kuru):
-    return calistir(f"python3 {SC}/birlestir.py {W.name} --taslak", kuru=kuru)
+    r = calistir(f"python3 {SC}/birlestir.py {W.name} --taslak", kuru=kuru)
+    if kuru or r:
+        return r
+    # --taslak hatalı dersi atlayıp 0 döner: bu dersin çıktısı gerçekten yazıldı mı?
+    if not (MEDS / "src/data" / f"{W.name}_onem" / f"{d['kod']}.json").exists():
+        print(f"   birleştirme {d['kod']} önem çıktısını yazmadı"); return 9
+    return 0
 
 
 def a_asistan(d, pk, W, kuru):
@@ -222,12 +244,16 @@ def main():
     ap.add_argument("--durum", action="store_true"); ap.add_argument("--kuru", action="store_true")
     ap.add_argument("--en-cok", type=int, default=3, help="bir çalıştırmada en çok kaç ders (gece süresi)")
     a = ap.parse_args()
-    if not a.kurul:
+    if a.kurul:
+        kurullar = [a.kurul]
+    else:  # aktif kurul + önceki Kurul 2+ kurulları (önceki kurulun yarım dersleri terk edilmez)
         sys.path.insert(0, str(MEDS / "scripts/takvim")); from aktif_kurul import durum
-        a.kurul = durum(dt.date.today().isoformat())["aktif"]
-    if a.kurul < 2:
+        kurullar = list(range(2, durum(dt.date.today().isoformat())["aktif"] + 1))
+    kurullar = [k for k in kurullar if k >= 2]
+    if not kurullar:
         print("Kurul 1 eski hattında (elle); zincir Kurul 2+ için."); return 0
-    defter = json.loads((MEDS / f"src/data/dersler/k{a.kurul}.json").read_text())["dersler"]
+    defter = [d for k in sorted(kurullar, reverse=True)  # aktif kurul önce
+              for d in json.loads((MEDS / f"src/data/dersler/k{k}.json").read_text())["dersler"]]
     kayit = yayinlar(); hata = 0; islenen = 0
     for d in defter:
         if a.ders and d["id"] != a.ders:
@@ -242,13 +268,30 @@ def main():
             continue
         kp = kaynak_getir(pk)
         sha = hashlib.sha256(kp.read_bytes()).hexdigest()[:16] if kp.exists() else ""
+        if not sha:
+            print(f"  {d['id']}: kaynak.md alınamadı — sonraki gece (durum korunur)"); hata += 1; continue
+        if s.get("kaynak_sha") and s.get("kaynak_sha") != sha:  # kaynak değişti: eski ara dosyalar kenara, onay düşer
+            Wk = W0 / brans_klasoru(d); eski = Wk / "_eski" / f"{d['kod']}-{dt.datetime.now():%Y%m%d%H%M}"
+            for alt in ("onem", "cozucu", "denetim", "asistan/cikti"):
+                f = Wk / alt / (f"{d['kod']}.md" if alt == "denetim" else f"{d['kod']}.json")
+                if f.exists():
+                    eski.mkdir(parents=True, exist_ok=True); f.rename(eski / f"{alt.replace('/', '_')}_{f.name}")
+            if Wk.exists():
+                onayli_yaz(Wk, d["kod"], False)
         if s.get("kaynak_sha") != sha:
-            s = {"kaynak_sha": sha, "adimlar": {}}  # kaynak değişti → zincir baştan
+            s = {"kaynak_sha": sha, "adimlar": {}, "hata_sayisi": 0}  # kaynak değişti → zincir baştan
         bekleyen = [x for x in ADIMLAR if (s["adimlar"].get(x) or {}).get("kod") != 0]
         if a.adim:
             bekleyen = [a.adim]
         if not bekleyen:
             continue
+        # geri çekilme: art arda hata veren ders 1, 2, 4 … gün (en çok 7) bekler; kota diğer dersleri tıkamaz
+        n_hata = int(s.get("hata_sayisi") or 0)
+        son_h = s.get("son_hata")
+        if n_hata and son_h and not a.ders and not a.adim:
+            bekle = min(7, 2 ** (n_hata - 1))
+            if dt.datetime.now() - dt.datetime.fromisoformat(son_h) < dt.timedelta(days=bekle):
+                print(f"  {d['id']}: {n_hata} kez hata, {bekle} gün bekliyor"); continue
         if islenen >= a.en_cok:
             break
         islenen += 1
@@ -261,11 +304,21 @@ def main():
                 s["adimlar"][x] = {"zaman": dt.datetime.now().isoformat(timespec="seconds"), "kod": kod}
                 durum_yaz(d, s)
             if kod:
+                if not a.kuru:
+                    s["hata_sayisi"] = int(s.get("hata_sayisi") or 0) + 1
+                    s["son_hata"] = dt.datetime.now().isoformat(timespec="seconds"); durum_yaz(d, s)
                 print(f"  ✗ {x} kod={kod} — ders bu adımda kaldı"); hata += 1; break
             if x == "oracle" and not a.kuru:  # zincir bitti → içerik seti sürümleri (göç 0001), yerel + Oracle
                 sys.path.insert(0, str(MEDS / "scripts/db")); from icerik_kaydi import kaydet
-                for tur, alt in (("onem", "onem"), ("cozucu", "cozucu"), ("asistan", "asistan")):
-                    kaydet(d["id"], tur, s.get("kaynak_sha"), f"src/data/{W.name}_{alt}/{d['kod']}.json", d["kurul"], oracle=True)
+                kayit_hata = 0
+                for tur in ("onem", "cozucu", "asistan"):
+                    yol = next(iter(sorted((MEDS / "src/data" / f"{W.name}_{tur}").glob(f"{d['kod']}*.json"))), None)
+                    if yol:  # çözücü 40+ soruda <kod>-1.json setlerine bölünür
+                        kayit_hata += kaydet(d["id"], tur, s.get("kaynak_sha"), str(yol.relative_to(MEDS)), d["kurul"], oracle=True)
+                if kayit_hata:  # sürüm kaydı yazılamadı: oracle adımı yeniden denensin
+                    s["adimlar"]["oracle"]["kod"] = 6; durum_yaz(d, s); hata += 1
+                else:
+                    s["hata_sayisi"] = 0; durum_yaz(d, s)
     return 1 if hata else 0
 
 

@@ -21,6 +21,10 @@ DERS_AD = {
     'genetik': 'Tıbbi Genetik', 'halksagligi': 'Halk Sağlığı',
     'kadindogum': 'Kadın Hastalıkları ve Doğum', 'farmakoloji': 'Tıbbi Farmakoloji',
 }
+# Kurul 2+ klasörleri (k2noroloji): ders adı ortak branş tanımından (src/data/dersler/branslar.json)
+for _b in json.load(open(MEDS / 'src/data/dersler/branslar.json', encoding='utf-8'))['branslar']:
+    for _k in range(2, 7):
+        DERS_AD.setdefault(f"k{_k}{_b['slug']}", _b['ad'])
 SES_AD = {'ema': 'EMA'}
 
 
@@ -46,6 +50,11 @@ def main():
     nump = W / 'numara.json'
     numara = json.load(open(nump)) if nump.exists() else {}
     G = sorted((json.load(open(p)) for p in (W / 'girdi').glob('*.json')), key=lambda g: g['no'])
+    # Kurul 2+ ders zinciri: yalnız bağımsız denetimi geçmiş kodlar (onayli.json; otomasyon/ders_zinciri.py yazar).
+    # Dosya yoksa (Kurul 1 elle hattı) davranış değişmez.
+    if (W / 'onayli.json').exists():
+        onayli = set(json.load(open(W / 'onayli.json')))
+        G = [g for g in G if g['kod'] in onayli]
     onem_d, cozucu_d, hatali = [], [], []
     for g in G:
         kod = g['kod']

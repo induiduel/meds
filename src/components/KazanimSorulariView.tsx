@@ -56,9 +56,10 @@ type Ders = {
 };
 type IndexRow = { id: string; sira: number; ders: string; konu: string; ogretim_uyesi: string; soru_sayisi: number; kazanim: number };
 
-const indexModules = import.meta.glob('../data/ornek_sorular/k1/index.json', { eager: true, import: 'default' }) as Record<string, IndexRow[]>;
-const loaders = import.meta.glob('../data/ornek_sorular/k1/k1-*.json', { import: 'default' }) as Record<string, () => Promise<Ders>>;
-const INDEX: IndexRow[] = Object.values(indexModules)[0] || [];
+// Kurul 1–6: ornek_sorular/k<N>/ (Kurul 2+ ders işçisi yayınlar); kimlik k<N>-… klasörü belirler
+const indexModules = import.meta.glob('../data/ornek_sorular/k[1-6]/index.json', { eager: true, import: 'default' }) as Record<string, IndexRow[]>;
+const loaders = import.meta.glob('../data/ornek_sorular/k[1-6]/k[1-6]-*.json', { import: 'default' }) as Record<string, () => Promise<Ders>>;
+const INDEX: IndexRow[] = Object.keys(indexModules).sort().flatMap((k) => indexModules[k] || []);
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
 const SECIM_KEY = 'medsoru_ornek_k1_ders';
@@ -530,7 +531,7 @@ function DersGorunumu({ id, initialKazanimNo, initialQuestionId, onBack }: { id:
   useEffect(() => onContentChanged('ornek', (ids) => { if (!ids.length || isContentChanged('ornek', `k1/${id}`)) setCanli((n) => n + 1); }), [id]);
 
   useEffect(() => {
-    const load = loaders[`../data/ornek_sorular/k1/${id}.json`];
+    const load = loaders[`../data/ornek_sorular/k${/^k(\d)-/.exec(id)?.[1] || '1'}/${id}.json`];
     if (!load) { setHata(true); return; }
     if (!canli) setDers(null);
     (async (): Promise<Ders> => {

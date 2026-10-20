@@ -1,0 +1,10 @@
+[Unit]
+Description=MeDSor olası soru — her akşam 20:00 ve 23:30 (yeni kayıt yoksa saniyede biter; gece hattı 02:30'da da çalıştırır)
+
+[Timer]
+OnCalendar=*-*-* 20:00
+OnCalendar=*-*-* 23:30
+Persistent=false
+
+[Install]
+WantedBy=timers.target

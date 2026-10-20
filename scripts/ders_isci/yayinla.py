@@ -63,6 +63,28 @@ DECKS = SITE / "interactive_learning_decks.json"
 GLOSSARY = SITE / "medical_glossary.json"
 ENCYCLOPEDIA = SITE / "medical_encyclopedia.json"
 PAKET = s16.PAKET_DIR
+KURUL = 1  # süreç başına tek kurul (kurula_bagla); uygula() bir çağrıda yalnız bir kurulu işler
+
+
+def kurula_bagla(k: int) -> None:
+    """Kurul 2+ yayını (2026-10-20): s14/s16 yolları, ders listesi (ders defteri), paket klasörü, deste kurul adı."""
+    global KURUL, PAKET, COMMITTEE
+    if k == KURUL:
+        return
+    s14.kurul_ayarla(k); s16.kurul_ayarla(k)
+    KURUL, PAKET = k, s16.PAKET_DIR
+    t = next((x for x in json.loads((SITE / "kurul_takvimi_ozet.json").read_text(encoding="utf-8"))["kurullar"]
+              if x["kurul"] == k), None)
+    def tr_baslik(x: str) -> str:  # Türkçe: İ→i, I→ı küçült; kelime başı i→İ, ı→I büyüt ("ve" küçük)
+        k_ = x.replace("İ", "i").replace("I", "ı").lower()
+        return " ".join(w if w == "ve" else (w[0].replace("i", "İ").replace("ı", "I").upper() + w[1:]) for w in k_.split())
+    ad = tr_baslik(t["ad"]) if t else ""
+    COMMITTEE = f"Kurul {k} - {ad}" if ad else f"Kurul {k}"
+
+
+def git_hedef() -> list[str]:
+    ek = [f"src/data/summaries/kurul{k}.json" for k in range(2, 7)] + [f"src/data/ornek_sorular/k{k}" for k in range(2, 7)]
+    return GIT_HEDEF + [x for x in ek if (MEDS / x).exists()]
 STUDY = ROOT / "meds_temp" / "study"
 DB2 = ROOT / "meds_database_v2"
 LINKS = ROOT / "meds_database" / "derived" / "learn_links.json"
@@ -148,15 +170,15 @@ class Yayin:
             self.hata.append("bu revize zaten yayında (aynı revize ikinci kez gönderilemez)")
         if k.get("karar") != "onayla":
             self.hata.append(f"karar onayla değil ({k.get('karar')})")
-        if b.get("kurul") != 1:
-            self.hata.append(f"şimdilik yalnız Kurul 1 yayınlanır (kurul={b.get('kurul')})")
+        if b.get("kurul") != KURUL:  # uygula() kurula_bagla ile bu kurula geçti; tutarsızlık = programlama hatası
+            self.hata.append(f"kurul {b.get('kurul')} bu yayın turunun kurulu ({KURUL}) değil")
         den = oku(self.d / "denetim.json", {})
         if den.get("hata"):
             self.hata.append(f"işçi denetimi {den.get('hata')} HATA")
         self.n = int(b.get("numara") or 0)
         self.ders_id = b.get("ders_id") or ""
         self.deste_id = b.get("deste_id") or ""
-        if p.get("id") != self.ders_id or self.deck.get("id") != self.deste_id or not re.fullmatch(rf"k1p-{re.escape(self.ders_id)}(-v\d+)?", self.deste_id):
+        if p.get("id") != self.ders_id or self.deck.get("id") != self.deste_id or not re.fullmatch(rf"k{KURUL}p-{re.escape(self.ders_id)}(-v\d+)?", self.deste_id):
             self.hata.append(f"kimlikler tutarsız: paket={p.get('id')} deste={self.deck.get('id')} bağlam={self.ders_id}")
         mevcut = dict(enumerate(s14.LESSONS, 1))
         if self.n in mevcut:  # güncelleme: ders kimliği ve konusu LESSONS'taki gibi kalmalı (kimlik konudan üretilir)
@@ -170,7 +192,9 @@ class Yayin:
             self.hata.append(f"numara {self.n} başka bir yayınlanmış derse ait")
         if not kaynak_id:
             self.hata.append("PDF'in kaynak kimliği (manifest) bulunamadı")
-        self.kayit = {"is_id": self.d.name, "kurul": 1, "numara": self.n, "ders_id": self.ders_id,
+        if KURUL >= 2 and self.n not in mevcut:
+            self.hata.append(f"Kurul {KURUL}: numara {self.n} ders kayıt defterinde yok (dersler/k{KURUL}.json)")
+        self.kayit = {"is_id": self.d.name, "kurul": KURUL, "numara": self.n, "ders_id": self.ders_id,
                       "deste_id": self.deste_id, "ders": ders, "konu": konu, "hoca": p.get("ogretim_uyesi") or hoca,
                       "tarih": p.get("tarih") or tarih or "", "kaynak_idleri": [kaynak_id] if kaynak_id else [],
                       "pdf": b.get("pdf_yolu"), "mod": b.get("mod"),
@@ -311,7 +335,7 @@ class Yayin:
 
     def _not_kayitlari(self, md: str):
         k = self.kayit
-        rec = {"id": self.ders_id, "kurul": 1, "committeeId": "donem3-kurul1", "discipline": k["ders"], "title": k["konu"],
+        rec = {"id": self.ders_id, "kurul": KURUL, "committeeId": f"donem3-kurul{KURUL}", "discipline": k["ders"], "title": k["konu"],
                "instructor": k["hoca"] or "", "fileName": f"{self.n:02d}_{s14._slug(k['konu'])}.md", "keyPoints": s14._key_points(md),
                "charCount": len(md), "readingTimeMinutes": max(1, round(len(md.split()) / 180)), "content": md}
         meta_f = ("id", "kurul", "committeeId", "discipline", "title", "instructor", "fileName", "keyPoints",
@@ -359,7 +383,7 @@ class Yayin:
             if t.get("aliases"):
                 rec["aliases"] = t["aliases"]
             rec["dogrulama"] = {"durum": "ders_isci", "destek": 1.0, "uretici": "s13_study", "is_id": self.d.name}
-            rec["kaynaklar"] = [{"chunk_id": None, "kaynak": k["pdf"], "ders": k["ders"], "kurul": 1,
+            rec["kaynaklar"] = [{"chunk_id": None, "kaynak": k["pdf"], "ders": k["ders"], "kurul": KURUL,
                                  "sayfa": kanit.get("sayfa"), "alinti": kanit.get("alinti")}]
             g[key] = rec
             mevcut[norm_key(term)] = key
@@ -469,7 +493,7 @@ def yayin_kaydi_bul(is_id: str, kaynak: list[dict]) -> str | None:
 
 
 def git_kirli() -> list[str]:
-    r = subprocess.run(["git", "status", "--porcelain", "--", *GIT_HEDEF], cwd=MEDS, capture_output=True, text=True)
+    r = subprocess.run(["git", "status", "--porcelain", "--", *git_hedef()], cwd=MEDS, capture_output=True, text=True)
     return [x for x in r.stdout.splitlines() if x.strip()]
 
 
@@ -477,6 +501,15 @@ def uygula(dizinler: list[Path], kimlik, deneme: bool = False) -> tuple[list[Yay
     """Denetle + yaz. `kimlik(Yayin) -> source_id`. Dönüş: (yazılanlar, denetimden kalanlar)."""
     yedek = YEDEK / time.strftime("%Y%m%d_%H%M%S")
     ok_, red = [], []
+    # Tek kurul: s14/s16 modül durumu kurula bağlı. En küçük kurul işlenir, diğerleri sonraki turda (10 dk).
+    kurullar = {d: int((oku(d / "baglam.json", {}) or {}).get("kurul") or 1) for d in dizinler}
+    if kurullar:
+        k = min(kurullar.values())
+        ertelenen = [d.name for d, x in kurullar.items() if x != k]
+        if ertelenen:
+            print(f"Kurul {k} işleniyor; sonraki tura kalan:", ertelenen)
+        kurula_bagla(k)
+        dizinler = [d for d in dizinler if kurullar[d] == k]
     for d in dizinler:
         y = Yayin(d, deneme, yedek)
         ok = y.denetle(kimlik(y))
@@ -570,6 +603,8 @@ def _canli_ders_ekle(y) -> str:
     govde = {"key": y.ders_id, "no": y.kayit.get("numara"), "baslik": y.kayit.get("konu") or b.get("program", {}).get("konu"),
              "metin": f.read_text(encoding="utf-8"), "sayfalar": oku(y.d / "konusma_sayfalari.json", []) or [],
              "deckId": y.deste_id,
+             # Kurul 2+: cümle başına slayt çapası (konusma_v2.py --turet) → canlı derste kelime kelime PDF işareti
+             "capalar": oku(y.d / "konusma_capalari.json", None),
              "dosya": {"path": yol, "name": b.get("pdf_adi") or Path(yol).name, "pages": b.get("sayfa"), "fileId": file_id}}
     h = {"Content-Type": "application/json", "x-panel-secret": _env("MEDS_PANEL_SECRET")}
     if _env("MEDSORU_API_PASSWORD"):
@@ -698,9 +733,9 @@ def esitle() -> int:
         print("Hedef dosyalarda başka değişiklikler vardı; commit ATILMADI (elle commit'le):", *kirli_once, sep="\n  ")
     else:
         mesaj = "ders işçisi: Oracle yayınları eşitlendi — " + ", ".join(y.ders_id for y in sonuc)
-        subprocess.run(["git", "add", "--", *GIT_HEDEF], cwd=MEDS, check=True)
+        subprocess.run(["git", "add", "--", *git_hedef()], cwd=MEDS, check=True)
         subprocess.run(["git", "commit", "-q", "-m", mesaj + "\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
-                        "--", *GIT_HEDEF], cwd=MEDS, check=False)
+                        "--", *git_hedef()], cwd=MEDS, check=False)
     print("eşitlendi:", [y.ders_id for y in sonuc])
     return 0
 

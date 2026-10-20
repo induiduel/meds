@@ -23,8 +23,8 @@ TABLO = """CREATE TABLE IF NOT EXISTS schema_migrations (
   no integer PRIMARY KEY, ad text NOT NULL, sha text NOT NULL, uygulandi timestamptz NOT NULL DEFAULT now());"""
 
 
-def psql(sql, oracle, tA=False):
-    kom = PSQL + (["-tA"] if tA else []) + ["-c", sql] if not sql.startswith("@") else PSQL
+def psql(sql, oracle, tA=False, tek_islem=False):
+    kom = PSQL + (["-tA"] if tA else []) + ["-c", sql] if not sql.startswith("@") else PSQL + (["-1"] if tek_islem else [])
     if oracle:
         kom = ["ssh", "-o", "ConnectTimeout=15", "medsor-oracle", " ".join(_tirnak(k) for k in kom)]
     girdi = Path(sql[1:]).read_text() if sql.startswith("@") else None
@@ -39,8 +39,13 @@ def _tirnak(s):
 
 
 def gocler():
+    """Yalnız commit'lenmiş göçler (yarım yazılmış .sql dosyası gece Oracle'a uygulanmasın)."""
+    izli = set(subprocess.run(["git", "-C", str(MEDS), "ls-files", "--", str(GOC.relative_to(MEDS))],
+                              capture_output=True, text=True).stdout.split())
     out = []
     for p in sorted(GOC.glob("*.sql")):
+        if str(p.relative_to(MEDS)) not in izli:
+            print(f"  · {p.name} commit'lenmemiş — atlandı"); continue
         m = re.match(r"(\d{4})_([\w-]+)\.sql$", p.name)
         if not m:
             raise SystemExit(f"HATA göç adı NNNN_ad.sql olmalı: {p.name}")
@@ -76,8 +81,13 @@ def main():
             print(f"▶ {no:04d}_{ad} → {hedef}")
             if a.kuru:
                 continue
-            psql("@" + str(p), a.oracle)
-            psql(f"INSERT INTO schema_migrations(no, ad, sha) VALUES ({no}, '{ad}', '{sha}') ON CONFLICT (no) DO NOTHING", a.oracle)
+            # göç + kaydı tek işlemde (-1): yarıda kalırsa ikisi de geri alınır
+            tmp = Path("/tmp") / f"medsor-goc-{no}.sql"
+            tmp.write_text(p.read_text() + f"\nINSERT INTO schema_migrations(no, ad, sha) VALUES ({no}, '{ad}', '{sha}') ON CONFLICT (no) DO NOTHING;\n")
+            try:
+                psql("@" + str(tmp), a.oracle, tek_islem=True)
+            finally:
+                tmp.unlink(missing_ok=True)
     print(f"{hedef}: {len(yapilan)} uygulanmış · {len(bekleyen)} bekleyen" + (" (uygulandı)" if a.uygula and not a.kuru else ""))
 
 

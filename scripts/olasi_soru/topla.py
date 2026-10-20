@@ -11,7 +11,8 @@ cevap iddiaları + oy, katkıda bulunan kişi sayısı, branş.
 Çıktı (sonraki adım TALIMAT.md ile Claude'un olası soruyu kurması):
   meds_temp/olasi_soru/k<N>/kanit.jsonl   — her kanıt bir satır (kimlik: kanit id'si kararlı)
   meds_temp/olasi_soru/k<N>/yuvalar.json  — yuva → uzlaşı özeti
-  meds_temp/olasi_soru/k<N>/parmak_izi.txt — girdi karması; değişmediyse gece işi atlanır
+  meds_temp/olasi_soru/k<N>/yayinlanan_iz.txt — son YAYIMLANAN setin girdi karması (gece.sh yayından sonra yazar);
+                                               aynıysa gece işi atlanır. Sentez/yayın başarısızsa yazılmaz → yeniden denenir
 
 Kullanım: python3 topla.py --kurul 1 [--esik 0.80] [--modelsiz]
 """
@@ -22,6 +23,9 @@ KOK = Path(__file__).resolve().parents[3]
 MEDS = KOK / "meds"
 sys.path.insert(0, str(MEDS / "scripts/agents"))
 
+# Veri kökü: öğrenci kayıtları canlı sitede (Oracle) birikir. gece.sh önce Oracle'dan salt-okunur kopya çeker ve
+# --veri ile verir (questions.json, question_ledger/, olasi_sorular/geri_bildirim_k<N>.jsonl). Varsayılan yerel data/.
+VERI = MEDS / "data"
 YER_TUTUCU = re.compile(r"^\s*şık\s*[a-e]\s*$", re.I)
 
 
@@ -33,6 +37,21 @@ def kid(*parca):
     return hashlib.sha1("|".join(map(str, parca)).encode()).hexdigest()[:12]
 
 
+SINAV_SAATI = "10:00"  # ders programı: KURUL SINAVI 10:00–12:00 (Türkiye saati)
+
+
+def tr_zaman(ts):
+    """ISO zaman damgası (UTC ya da ofsetli) → Türkiye saati 'YYYY-AA-GGTSS:DD' (UTC+3, yaz saati yok)."""
+    import datetime as dt
+    try:
+        z = dt.datetime.fromisoformat(str(ts).replace("Z", "+00:00"))
+    except ValueError:
+        return ""
+    if z.tzinfo is None:
+        z = z.replace(tzinfo=dt.timezone.utc)
+    return z.astimezone(dt.timezone(dt.timedelta(hours=3))).strftime("%Y-%m-%dT%H:%M")
+
+
 def sinav_tarihi(kurul):
     t = json.loads((MEDS / "src/data/kurul_takvimi.json").read_text())
     return next(k["sinav"] for k in t["kurullar"] if k["kurul"] == kurul)
@@ -41,7 +60,7 @@ def sinav_tarihi(kurul):
 def kurul_sorulari(kurul, tum=False):
     """Bu yılın sınavına ait kayıtlar: sınav gününden (dahil) sonra oluşturulanlar.
     Geçmiş yıl çıkmışları (isPastExam / eski examYear) bu sınavın kanıtı değildir."""
-    d = json.loads((MEDS / "data/questions.json").read_text())
+    d = json.loads((VERI / "questions.json").read_text())
     q = d["questions"] if isinstance(d, dict) else d
     cid, sinav = f"donem3-kurul{kurul}", sinav_tarihi(kurul)
     yil = int(sinav[:4])
@@ -52,7 +71,7 @@ def kurul_sorulari(kurul, tum=False):
             return True
         if x.get("examYear") and int(str(x["examYear"])[:4]) < yil:
             return False
-        return str(x.get("createdAt", ""))[:10] >= sinav
+        return tr_zaman(x.get("createdAt")) >= f"{sinav}T{SINAV_SAATI}"
     return [x for x in q if uygun(x)]
 
 
@@ -87,7 +106,7 @@ def kanitlar(soru):
     for c in soru.get("comments") or []:
         ekle("yorum", c.get("text"), c.get("authorUid", ""))
     # Defter: kullanıcı katkıları (ai_* olayları ham kanıt sayılmaz)
-    defter = MEDS / "data/question_ledger" / (re.sub(r"[^A-Za-z0-9._-]", "_", qid)[:160] + ".jsonl")
+    defter = VERI / "question_ledger" / (re.sub(r"[^A-Za-z0-9._-]", "_", qid)[:160] + ".jsonl")
     if defter.exists():
         for satir in defter.read_text().splitlines():
             try:
@@ -105,7 +124,7 @@ def kanitlar(soru):
 
 def geri_bildirimler(kurul):
     """Olası sorular ekranındaki öğrenci geri bildirimi (data/olasi_sorular/geri_bildirim_k<N>.jsonl) → yuvaya kanıt."""
-    p = MEDS / f"data/olasi_sorular/geri_bildirim_k{kurul}.jsonl"
+    p = VERI / f"olasi_sorular/geri_bildirim_k{kurul}.jsonl"
     out = []
     if not p.exists():
         return out
@@ -190,9 +209,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--kurul", type=int, required=True)
     ap.add_argument("--esik", type=float, default=0.80)
+    ap.add_argument("--veri", help="veri kökü (Oracle kopyası); varsayılan meds/data")
     ap.add_argument("--tum", action="store_true", help="tarih süzgeci olmadan (deneme için)")
     ap.add_argument("--modelsiz", action="store_true", help="vektör servisi olmadan (numarasızlar serbest kalır)")
     a = ap.parse_args()
+    global VERI
+    if a.veri:
+        VERI = Path(a.veri)
+        if not (VERI / "questions.json").exists():
+            print(f"HATA: {VERI}/questions.json yok"); sys.exit(1)
     hedef = KOK / f"meds_temp/olasi_soru/k{a.kurul}"; hedef.mkdir(parents=True, exist_ok=True)
     sorular = kurul_sorulari(a.kurul, a.tum)
     satirlar = [k for s in sorular for k in kanitlar(s)] + geri_bildirimler(a.kurul)
@@ -205,8 +230,7 @@ def main():
     (hedef / "yuvalar.json").write_text(json.dumps(
         {"surum": 1, "kurul": a.kurul, "parmak_izi": iz, "havuz_sorusu": len(sorular),
          "kanit": len(satirlar), "yuvalar": yv}, ensure_ascii=False, indent=1))
-    onceki = (hedef / "parmak_izi.txt").read_text().strip() if (hedef / "parmak_izi.txt").exists() else ""
-    (hedef / "parmak_izi.txt").write_text(iz)
+    onceki = (hedef / "yayinlanan_iz.txt").read_text().strip() if (hedef / "yayinlanan_iz.txt").exists() else ""
     numarali = sum(1 for k in yv if k.isdigit())
     print(f"Kurul {a.kurul}: {len(sorular)} havuz sorusu → {len(satirlar)} kanıt → {numarali} numaralı yuva + "
           f"{len(yv) - numarali} serbest küme · {'DEĞİŞİKLİK VAR' if iz != onceki else 'değişiklik yok'}")

@@ -11,9 +11,13 @@ ONEM = f'/home/indu/medsor/meds/src/data/{brans}_onem/index.json'
 sira = {d['kod']: i for i, d in enumerate(json.load(open(ONEM))['dersler'])}
 os.makedirs(OUT, exist_ok=True)
 dersler, hatali = [], []
+# Kurul 2+ ders zinciri: yalnız bağımsız denetimi geçmiş kodlar (onayli.json yoksa davranış değişmez)
+_onayli_p = f'/home/indu/medsor/meds_temp/spot_cozucu/{brans}/onayli.json'
+ONAYLI = set(json.load(open(_onayli_p))) if os.path.exists(_onayli_p) else None
 for f in sorted(os.listdir(f'{A}/cikti'), key=lambda x: sira.get(x[:-5], 999)):
     if not f.endswith('.json'): continue
     kod = f[:-5]
+    if ONAYLI is not None and kod not in ONAYLI: continue
     r = subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'asistan_dogrula.py'), f'{A}/cikti/{f}'], capture_output=True, text=True)
     if r.returncode:
         hatali.append(kod); continue

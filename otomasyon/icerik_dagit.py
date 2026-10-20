@@ -5,9 +5,9 @@ Neden: Oracle'da ön yüz derlenmez (dist cihazda üretilir, 2026-10-20). Ders i
 soru/sözlük ve ders zincirinin yerelde ürettiği k<N><brans>_onem|_cozucu|_asistan verisi ön yüz paketine gömülüdür;
 derlenip dist gönderilmeden sitede görünmez.
 
-Güvenlik: çalışma ağacından DERLENMEZ (başka oturumların yarım ön yüz işi pakete girerdi). Akış:
-  1. origin/main'in son commit'inden geçici git worktree (node_modules ana ağaçtan bağlanır)
-  2. Oracle src/data → worktree src/data (yayımlanan içeriğin asıl yeri Oracle'dır; salt-okunur çekilir)
+Güvenlik: çalışma ağacından DERLENMEZ; canlıdaki kod birebir yeniden üretilir. Akış:
+  1. Oracle dist/dagitim.json (deploy-code.sh yazar): dağıtılan commit + o anki commit'lenmemiş kod. Kirliyse ATLA (3).
+  2. O commit'ten geçici git worktree; Oracle src/data birebir + panel katmanı (data/content) üstüne
   3. yerel zincir çıktıları (src/data/k[2-6]*_onem|_cozucu|_asistan, cozucu_ogren) → worktree + Oracle src/data
   4. vite build (worktree) → dist rsync (silmeden; eski parçalar açık sekmeler için kalır) → sağlık + sürüm denetimi
 Değişiklik yoksa (girdi karması aynı) hiçbir şey yapılmaz. Cihaz dağıtım kilidini paylaşır (deploy-code.sh ile çakışmaz).
@@ -52,49 +52,58 @@ def main():
         fcntl.flock(kilit, fcntl.LOCK_EX | fcntl.LOCK_NB)
     except BlockingIOError:
         print("başka dağıtım sürüyor; sonraki gece"); return 0
-    # Başka bir oturum çalışma ağacından (commit'lenmemiş ön yüz koduyla) dağıttıysa, temiz commit'ten derlemek onun
-    # canlıdaki işini geri alır: ön yüz/sunucu kodunda commit'lenmemiş değişiklik varken içerik dağıtımı yapılmaz.
-    kirli = subprocess.run(["git", "-C", str(MEDS), "status", "--porcelain", "--", "src", ":!src/data", "server.ts",
-                            "index.html", "vite.config.ts", "public"], capture_output=True, text=True).stdout.strip()
-    ileri = subprocess.run(["git", "-C", str(MEDS), "rev-list", "--count", "origin/main..HEAD"], capture_output=True, text=True).stdout.strip()
-    if (kirli or ileri not in ("", "0")) and not a.zorla:
-        print("ATLANDI: çalışma ağacında commit'lenmemiş/gönderilmemiş kod var; canlı sürüm ondan dağıtılmış olabilir:")
-        print("  " + "\n  ".join((kirli.splitlines() + ([f"{ileri} commit gönderilmemiş"] if ileri not in ("", "0") else []))[:10]))
+    # Canlıdaki kodu birebir yeniden üret: deploy-code.sh dist/dagitim.json'a dağıtılan commit'i ve o anki
+    # commit'lenmemiş kod listesini yazar. Kirli dağıtılmışsa canlı kod yeniden üretilemez → ATLA (yanlış kodu dağıtma).
+    r = subprocess.run(["ssh", "-o", "ConnectTimeout=15", "medsor-oracle", "cat /home/ubuntu/medsor/meds/dist/dagitim.json"],
+                       capture_output=True, text=True, timeout=60)
+    try:
+        damga = json.loads(r.stdout)
+    except ValueError:
+        print("ATLANDI: Oracle'da dağıtım damgası (dist/dagitim.json) yok — önce bir kod dağıtımı (deploy-code.sh) gerekir")
+        return 3
+    if damga.get("kirli") and not a.zorla:
+        print(f"ATLANDI: canlı kod {damga['commit'][:8]} + commit'lenmemiş değişiklikle dağıtılmış "
+              f"({', '.join(damga['kirli'][:5])}); birebir yeniden derlenemez. Sonraki temiz kod dağıtımından sonra çalışır.")
         return 3
     tmp = Path(tempfile.mkdtemp(prefix="medsor-icerik-"))
     wt = tmp / "wt"
+    # Oracle'daki uzak rsync sunucunun yayın kilidini (yayinla.py / deploy-code.sh: /tmp/meds-deploy.lock) tutarak çalışır
+    UZ_RSYNC = "--rsync-path=flock /tmp/meds-deploy.lock sudo rsync"  # kilit ubuntu olarak (protected_regular), rsync root
     try:
-        sh(["git", "-C", str(MEDS), "fetch", "-q", "origin", "main"], check=True)
-        sh(["git", "-C", str(MEDS), "worktree", "add", "-q", "--detach", str(wt), "origin/main"], check=True)
-        # meds/ deponun kökü değilse worktree içinde meds alt klasörü olur
+        sh(["git", "-C", str(MEDS), "fetch", "-q", "origin"], check=True)
+        sh(["git", "-C", str(MEDS), "worktree", "add", "-q", "--detach", str(wt), damga["commit"]], check=True)
         wm = wt / "meds" if (wt / "meds" / "package.json").exists() else wt
         (wm / "node_modules").symlink_to(MEDS / "node_modules")
-        r = sh(["rsync", "-az", "--exclude=decks/items", f"{UZAK}/src/data/", f"{wm}/src/data/"], timeout=900)
-        if r.returncode:
-            print("HATA: Oracle src/data çekilemedi"); return 1
+        # Oracle src/data birebir (yayımlanan içeriğin asıl yeri), üstüne panel katmanı (deploy-code.sh [0b] gibi)
+        r = sh(["rsync", "-az", "--delete", "--exclude=decks/items", UZ_RSYNC, f"{UZAK}/src/data/", f"{wm}/src/data/"], timeout=900)
+        r2 = sh(["rsync", "-az", "--exclude=_ids.json", UZ_RSYNC, f"{UZAK}/data/content/", f"{wm}/src/data/"], timeout=300)
+        if r.returncode or r2.returncode:
+            print("HATA: Oracle src/data ya da panel katmanı çekilemedi"); return 1
         for k in zincir_klasorleri():
-            sh(["rsync", "-a", f"{k}/", f"{wm}/src/data/{k.name}/"], check=True)
-        oz = karma([wm / "src/data"]) + sh(["git", "-C", str(wt), "rev-parse", "--short", "HEAD"],
-                                            capture_output=True, text=True).stdout.strip()
+            sh(["rsync", "-a", "--delete", f"{k}/", f"{wm}/src/data/{k.name}/"], check=True)
+        oz = karma([wm / "src/data"]) + damga["commit"][:12]
         onceki = json.loads(DURUM.read_text()).get("karma") if DURUM.exists() else None
         if oz == onceki and not a.zorla:
             print("içerik ve kod değişmedi; dağıtım yok"); return 0
         if a.kuru:
-            print("kuru: derleme ve gönderim atlandı"); return 0
-        r = sh("nice -n 10 npx vite build", cwd=wm, shell=True, capture_output=True, text=True, timeout=1800,
+            print(f"kuru: {damga['commit'][:8]} + Oracle içeriği hazır; derleme ve gönderim atlandı"); return 0
+        r = sh("nice -n 10 npm run build --silent", cwd=wm, shell=True, capture_output=True, text=True, timeout=1800,
                env={**os.environ, "CUDA_VISIBLE_DEVICES": ""})
         if r.returncode or not (wm / "dist/index.html").exists():
             print("HATA: derleme:", (r.stderr or r.stdout)[-1500:]); return 1
+        (wm / "dist/dagitim.json").write_text(json.dumps({**damga, "icerik_dagit": time.strftime("%Y-%m-%dT%H:%M:%S")},
+                                                         ensure_ascii=False))
         for k in zincir_klasorleri():  # Oracle src/data da güncel kalsın (sonraki tam dağıtım/eşitleme için)
-            sh(["rsync", "-az", "--rsync-path=sudo rsync", f"{k}/", f"{UZAK}/src/data/{k.name}/"], check=True)
-        r = sh(["rsync", "-az", "--rsync-path=sudo rsync", f"{wm}/dist/", f"{UZAK}/dist/"], timeout=900)
+            sh(["rsync", "-az", UZ_RSYNC, f"{k}/", f"{UZAK}/src/data/{k.name}/"], check=True)
+        r = sh(["rsync", "-az", UZ_RSYNC, f"{wm}/dist/", f"{UZAK}/dist/"], timeout=900)
         if r.returncode:
             print("HATA: dist gönderilemedi"); return 1
         time.sleep(3)
         s = subprocess.run(["curl", "-s", "-m", "20", "https://api.nofrostlife.com.tr/api/surum"], capture_output=True, text=True).stdout
         ok = '"surum"' in s
         DURUM.parent.mkdir(parents=True, exist_ok=True)
-        DURUM.write_text(json.dumps({"karma": oz, "zaman": time.strftime("%Y-%m-%dT%H:%M:%S"), "surum": s[:200]}, ensure_ascii=False))
+        DURUM.write_text(json.dumps({"karma": oz, "commit": damga["commit"], "zaman": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                                     "surum": s[:200]}, ensure_ascii=False))
         print("dağıtıldı:", s[:120] if ok else "sürüm okunamadı!")
         return 0 if ok else 1
     finally:

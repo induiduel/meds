@@ -50,6 +50,17 @@ if [[ "$SKIP_LOCAL_BUILD" == "0" ]]; then
   (cd "$MEDS_DIR" && npm run build --silent >/dev/null) || { echo "DURDU: yerel derleme başarısız"; exit 1; }
 fi
 [[ -f "$MEDS_DIR/dist/index.html" ]] || { echo "DURDU: dist/index.html yok"; exit 1; }
+# Dağıtım damgası (2026-10-20): gece içerik dağıtımı (otomasyon/icerik_dagit.py) canlıdaki kodu birebir yeniden
+# derleyebilsin diye commit + commit'lenmemiş kod listesi dist/dagitim.json'a yazılır (src/data hariç: içerik).
+( cd "$MEDS_DIR" && python3 - <<'PYEOF'
+import json, subprocess, time
+g = lambda *a: subprocess.run(["git", *a], capture_output=True, text=True).stdout.strip()
+kirli = [l[3:] for l in g("status", "--porcelain", "--", "src", ":!src/data", "server.ts", "index.html", "vite.config.ts",
+                         "public", "package.json", "scripts/vite").splitlines() if l.strip()]
+json.dump({"commit": g("rev-parse", "HEAD"), "kirli": kirli, "zaman": time.strftime("%Y-%m-%dT%H:%M:%S")},
+          open("dist/dagitim.json", "w"), ensure_ascii=False)
+PYEOF
+) || echo "  UYARI: dağıtım damgası yazılamadı"
 
 echo "==> [1/4] rsync kod + dist (src/data DAHİL, .env HARİÇ; içerik karşılaştırması)"
 CHANGED="$(mktemp)"; trap 'rm -f "$CHANGED"' EXIT

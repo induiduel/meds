@@ -130,6 +130,24 @@ def _kaynak_md(n: int) -> str | None:
     return None
 
 
+def kurul_ayarla(k: int) -> None:
+    """Kurul 2+ yayını (ders işçisi, 2026-10-20): yolları ve ders listesini kurula bağlar. Kurul 1 varsayılanı değişmez.
+    Kurul 2+ ders listesi = ders kayıt defteri (src/data/dersler/k<N>.json; sıra = defter kimliği k<N>-NN)."""
+    global KURUL, WORK, SUMMARY_JSON, LESSONS
+    if k == KURUL:
+        return
+    if k == 1:
+        raise RuntimeError("Kurul 1'e geri dönüş desteklenmez (süreç başına tek kurul)")
+    import json as _json
+    defter = _json.loads((SITE / "dersler" / f"k{k}.json").read_text(encoding="utf-8"))["dersler"]
+    defter = sorted(defter, key=lambda x: int(x["id"].split("-")[1]))
+    if [int(x["id"].split("-")[1]) for x in defter] != list(range(1, len(defter) + 1)):
+        raise RuntimeError(f"ders defteri k{k}: kimlikler 1..n ardışık değil")
+    KURUL, WORK = k, config.TEMP_DIR / "study" / f"k{k}"
+    SUMMARY_JSON = SITE / "summaries" / f"kurul{k}.json"
+    LESSONS = [(x["brans"], x["konu"], x.get("ogretim_uyesi") or "", x.get("tarih") or "", [], False) for x in defter]
+
+
 def _slug(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", ids.fold_tr(text)).strip("_")[:50]
 

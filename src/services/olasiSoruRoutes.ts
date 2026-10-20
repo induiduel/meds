@@ -10,6 +10,7 @@
  *
  * Set gece hattında üretilir (scripts/olasi_soru/gece.sh): kapı 0 HATA → data/olasi_sorular/k<N>.json → Oracle.
  */
+import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
 import type { Express, Request, Response, RequestHandler } from 'express';
@@ -54,7 +55,15 @@ export function registerOlasiSoruRoutes(app: Express, opts: { rootDir: string; r
     });
   });
 
+  // Hız sınırı: IP başına saatte 30 geri bildirim (metin Claude sentezine kanıt olarak gider; doldurulmasın)
+  const sayac = new Map<string, number[]>();
   app.post('/api/olasi-sorular/:kurul/:id/geri-bildirim', (req: Request, res: Response) => {
+    const ip = String(req.headers['cf-connecting-ip'] || req.ip || '');
+    const simdi = Date.now();
+    const son = (sayac.get(ip) || []).filter((t) => simdi - t < 3600_000);
+    if (son.length >= 30) return res.status(429).json({ error: 'Çok fazla geri bildirim; bir saat sonra yeniden deneyin.' });
+    sayac.set(ip, [...son, simdi]);
+    if (sayac.size > 5000) sayac.clear();
     const k = kurulNo(req.params.kurul);
     const id = String(req.params.id || '');
     const { karar, metin, cevap } = req.body || {};
@@ -64,7 +73,8 @@ export function registerOlasiSoruRoutes(app: Express, opts: { rootDir: string; r
     const satir = {
       ts: new Date().toISOString(), kurul: k, id, karar,
       metin: String(metin || '').slice(0, 2000), cevap: String(cevap || '').slice(0, 2),
-      uid: String(req.header('x-user-uid') || '').slice(0, 128),
+      uid: String(req.header('x-user-uid') || '').slice(0, 128),  // doğrulanmamış (istemci bildirir)
+      ip: ip ? crypto.createHash('sha256').update(ip).digest('hex').slice(0, 12) : '',  // aynı kaynaktan çoklu oy ayıklama
     };
     fs.mkdirSync(VERI, { recursive: true });
     fs.appendFile(path.join(VERI, `geri_bildirim_k${k}.jsonl`), JSON.stringify(satir) + '\n', (err) => {
