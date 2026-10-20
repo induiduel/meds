@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 133,
-  "baslik": "Görünüm ayarları cihaza özgü",
+  "onem": 134,
+  "baslik": "Kişiler listesi düzeltildi",
   "maddeler": [
-    "Görünüm ayarları (tema, palet, yoğunluk, Öğren düzeni ve yakınlaştırma vb.) artık her cihazda ayrı saklanıyor; telefondaki değişiklik bilgisayarı veya tableti etkilemiyor."
+    "Yönetim › Kişiler tablosunda satırların ekran boyu uzayıp boş yer kaplaması giderildi.",
+    "Öğren ekranındaki Hata defteri kartı ve ders bilgi kutucuklarında aynı görünüm çakışması önlendi."
   ],
   "eklenen": [],
   "degisen": [
