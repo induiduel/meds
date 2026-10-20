@@ -214,9 +214,9 @@ Düşük riskli trombofili faktör V Leiden heterozigotluğu ve protrombin mutas
 Toplam puan profilaksinin zamanını belirler.
 Burası önemli: antenatal toplam puan 4 ve üzeriyse birinci trimesterden itibaren, 3 ise 28. gebelik haftasından itibaren tromboprofilaksi önerilir.
 Postnatal toplam puan 2 ve üzeriyse en az 10 gün tromboprofilaksi yapılır.
-Doğum öncesinde düşük molekül ağırlıklı ya da anfraksiyone heparin alan ve sezaryen ihtimali olan gebe, doğumdan 1 gün önce profilaktik dozunu almalı, ancak operasyon sabah dozu alınmadan yapılmalıdır; böylece ameliyatta kanama artmadan tromboz koruması sürer.
+Doğum öncesinde düşük molekül ağırlıklı ya da fraksiyone olmayan heparin alan ve sezaryen ihtimali olan gebe, doğumdan 1 gün önce profilaktik dozunu almalı, ancak operasyon sabah dozu alınmadan yapılmalıdır; böylece ameliyatta kanama artmadan tromboz koruması sürer.
 
-@@ İlk izlem laboratuvarı ve Rezus uyuşmazlığı
+@@ İlk izlem laboratuvarı ve Rh uyuşmazlığı
 İlk izlemin laboratuvar basamağında tam idrar tetkiki ve idrar kültürü istenir. Asemptomatik bakteriüri saptanırsa yakınma olmasa da tedavi başlanır, çünkü tedavi edilmezse piyelonefrit ve erken doğum riski artar. Progesteronla genişlemiş, hipotonik üreterler bakteriürinin yukarı ilerlemesini kolaylaştırır. Tam kan sayımında hemoglobin desilitrede 11 gramın, ortalama eritrosit hacmi 80 femtolitrenin altındaysa demir tedavisi başlanır; gebelikte mikrositer aneminin en sık nedeni demir eksikliğidir.
 
 Kan grubu hem anne hem baba için bakılır; gerekirse indirekt Coombs testi yapılır ve anti-D immünoglobulin G, yani RhoGAM uygulanır.
@@ -225,9 +225,9 @@ HIV testi gebenin bilgisi ve onayı dahilinde istenir.
 Sifiliz taraması tüm gebelerde yapılır ve tiroid uyarıcı hormon ile tiroid işlevi değerlendirilir.
 Burası önemli, çıkmış sorularda pek çok kez soruldu: gebelik planlayan kişinin ya da gebenin ilk değerlendirmesinde sifiliz serolojisi, açlık kan şekeri, HIV serolojisi ve hemogram istenir; anti streptolizin O ise bu rutin tetkiklerden biri değildir.
 
-Rezus uyuşmazlığı, annenin Rezus negatif, bebeğin Rezus pozitif olmasıdır.
-Rezus izoimmünizasyonu ise fetomaternal hemorajiyle bebekten D antijeninin anneye geçmesi ve annede anti-D antikorlarının oluşmasıdır.
-Oluşan immünoglobulin G yapısındaki antikorlar plasentayı geçer ve sonraki Rezus pozitif fetüsün eritrositlerini yıkarak hemolitik hastalığa yol açabilir.
+Rh uyuşmazlığı, annenin Rh negatif, bebeğin Rh pozitif olmasıdır.
+Rh izoimmünizasyonu ise fetomaternal hemorajiyle bebekten D antijeninin anneye geçmesi ve annede anti-D antikorlarının oluşmasıdır.
+Oluşan immünoglobulin G yapısındaki antikorlar plasentayı geçer ve sonraki Rh pozitif fetüsün eritrositlerini yıkarak hemolitik hastalığa yol açabilir.
 Burası önemli: hiçbir şey yapılmazsa immünizasyon riski %13'tür, doğumda anti-D profilaksisiyle %2'ye, buna ek olarak 28. haftada da anti-D verilirse %0,1'e iner.
 Antenatal doz gebeliğin son dönemindeki sessiz kanamalara karşı korur, doğumdaki doz ise en büyük fetal kan geçişini kapsar.
 
@@ -289,7 +289,7 @@ Gebelikte dietilstilbestrol maruziyeti dişi fetüste postpubertal dönemde vaji
 
 Bu dersle birlikte jinekolojik semptom terminolojisi de soruldu, burası önemli.
 Dismenore ağrılı adet görmedir; ağrılı cinsel ilişki ise disparonidir ve bu ikisi şıklarda yer değiştirilir.
-Spoting, lekelenme tarzında kanamadır ve ovülasyon sırasında fizyolojik spoting görülebilir.
+Spotting, lekelenme tarzında kanamadır ve ovülasyon sırasında fizyolojik spotting görülebilir.
 Postkoital kanama serviks kanserini düşündürmelidir.
 Menstrüel siklusun 21 ile 35 günde bir olması normal kabul edilir.
 Abortus imminens düşük tehdidi demektir; örneğin 13 haftalık gebede vajinal kanama düşük tehdidi olarak adlandırılabilir.
@@ -299,11 +299,11 @@ Obstetrik öyküde genital lezyon öyküsü önemlidir.
 Burası önemli, yanlış ifade olarak soruldu: jinekolojik muayenede vulva, vajen ve serviks görülebilir, ancak uterus doğrudan görülemez.
 
 @@ Risk değerlendirme formu ve sevk
-Risk değerlendirme formu yüksek riskli gebeleri saptamak için tüm gebelere uygulanır. Ölçütlerden birine bile evet yanıtı verilirse gebe kadın hastalıkları ve doğum uzmanı bulunan bir kuruma sevk edilir; tedaviyi, takip sıklığını ve işlemleri uzman belirler. Obstetrik öykü bölümünde sezaryen, miyomektomi, metroplasti ve septum rezeksiyonu gibi geçirilmiş uterin cerrahi, pelvik kitle, miyom ve uterin malformasyon; 3 ve üzeri tekrarlayan düşük, 2500 gramın altında düşük doğum ağırlıklı ya da 4000 gramın üstünde makrozomik bebek, ölü doğum, erken doğum, günaşımı, anomalili bebek ve yenidoğan ölümü yer alır. Bunlara preeklampsi ve eklampsi, gestasyonel diyabet, venöz tromboemboli, ektopik gebelik, Rezus uygunsuzluğu, antepartum kanama, plasenta previa, plasenta dekolmanı, postpartum kanama ile zor ve müdahaleli doğum eklenir.
+Risk değerlendirme formu yüksek riskli gebeleri saptamak için tüm gebelere uygulanır. Ölçütlerden birine bile evet yanıtı verilirse gebe kadın hastalıkları ve doğum uzmanı bulunan bir kuruma sevk edilir; tedaviyi, takip sıklığını ve işlemleri uzman belirler. Obstetrik öykü bölümünde sezaryen, miyomektomi, metroplasti ve septum rezeksiyonu gibi geçirilmiş uterin cerrahi, pelvik kitle, miyom ve uterin malformasyon; 3 ve üzeri tekrarlayan düşük, 2500 gramın altında düşük doğum ağırlıklı ya da 4000 gramın üstünde makrozomik bebek, ölü doğum, erken doğum, günaşımı, anomalili bebek ve yenidoğan ölümü yer alır. Bunlara preeklampsi ve eklampsi, gestasyonel diyabet, venöz tromboemboli, ektopik gebelik, Rh uygunsuzluğu, antepartum kanama, plasenta previa, plasenta dekolmanı, postpartum kanama ile zor ve müdahaleli doğum eklenir.
 
 Mevcut gebelik bölümünde 18 yaş altı ve 35 yaş üstü, sigara, alkol ya da madde kullanımı, 5 ve üzeri doğum demek olan grandmultiparite, 2 yıldan sık gebelik, vücut kitle indeksinin 30'un üstünde ya da 18'in altında olması ve infertilite tedavisi sonrası gebelik sorgulanır.
-Rezus uygunsuzluğu, çoğul gebelik, gestasyonel diyabet, plasenta previa, tromboemboli, varis, polihidramniyoz ya da oligohidramniyoz, anomalili fetüs, servikal yetmezlik, vajinal kanama, preeklampsi, gebelikte cerrahi, yatış gerektiren hiperemezis, preterm eylem, travma, şiddetli enfeksiyon, hemoglobinin desilitrede 7 gramın altında olduğu ciddi anemi ve preterm erken membran rüptürü de ölçütlerdir.
-Anormal HPV ve smir sonucu, tekrarlayan sistit, intrauterin gelişme geriliği ve hafta ile uterus büyüklüğü uyumsuzluğu da listededir.
+Rh uygunsuzluğu, çoğul gebelik, gestasyonel diyabet, plasenta previa, tromboemboli, varis, polihidramniyoz ya da oligohidramniyoz, anomalili fetüs, servikal yetmezlik, vajinal kanama, preeklampsi, gebelikte cerrahi, yatış gerektiren hiperemezis, preterm eylem, travma, şiddetli enfeksiyon, hemoglobinin desilitrede 7 gramın altında olduğu ciddi anemi ve preterm erken membran rüptürü de ölçütlerdir.
+Anormal HPV ve smear sonucu, tekrarlayan sistit, intrauterin gelişme geriliği ve hafta ile uterus büyüklüğü uyumsuzluğu da listededir.
 Fetal iyilik açısından 10 ile 12. haftadan itibaren el Doppleriyle, 16 ile 20. haftadan itibaren fetal stetoskopla kalp seslerinin duyulmaması ve 20. haftadan sonra fetal hareketlerin hissedilmemesi sevk nedenidir.
 
 Bazı durumlarda ise gebe beklemeden acilen sevk edilir.
@@ -313,7 +313,7 @@ Baldır bulguları derin ven trombozunu, nefes darlığı ve göğüs ağrısı 
 @@ Fetal iyilik hali ve stres testleri
 Fetal iyilik hali tek bir testle değil, birbirini tamamlayan bir test ailesiyle değerlendirilir: fetal hareketlerin izlenmesi ve fetal hareket sayımı, non-stres testi ve kontraksiyon stres testi, biyofizik profil, amniyon sıvısı indeksi ile non-stres testinin birleşimi olan modifiye biyofizik profil, amniyon sıvısı indeksi takibi ve Doppler incelemeleri. Annenin hissettiği hareket azalması ilk uyarıdır.
 
-Kontraksiyon stres testi, ya da oksitosin çelenç testi, uterus kasılmaları sırasında fetal kalp hızının geç deselerasyon verip vermediğini sınar.
+Kontraksiyon stres testi, ya da oksitosin challenge testi, uterus kasılmaları sırasında fetal kalp hızının geç deselerasyon verip vermediğini sınar.
 Yeterli test için 10 dakikada her biri en az 40 saniye süren en az 3 kontraksiyon gerekir.
 Geç ya da belirgin değişken deselerasyon yoksa test negatiftir.
 Kontraksiyonların yarısından fazlasını geç deselerasyon izliyorsa pozitiftir.

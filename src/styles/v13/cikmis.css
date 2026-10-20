@@ -1,0 +1,42 @@
+/* v13 "Ada" · Çıkmış sorular (CikmisV12 içinde v13 dalı). Üst başlık satırı kalkar (ad kapsülde); görünüm + Test oluştur
+ * sonuç satırına iner. Telefonda durum sekmeleri ve hızlı süzgeçler tek kaydırılabilir satır. */
+.c13-row { display: contents; }
+:root[data-v13='on'] .c12 .c12-bar { padding: 8px; border-radius: 16px; background: var(--color-white); border: 1px solid var(--color-line); }
+:root[data-v13='on'] .c12 .c12-head { flex-wrap: wrap; row-gap: 6px; }
+@media (max-width: 767px) {
+  :root[data-v13='on'] .c12 .c12-bar { display: flex; flex-direction: column; align-items: stretch; gap: 8px; }
+  :root[data-v13='on'] .c13-row { display: flex; align-items: center; gap: 6px; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; margin: 0 -8px; padding: 0 8px; }
+  :root[data-v13='on'] .c13-row::-webkit-scrollbar { display: none; }
+  :root[data-v13='on'] .c13-row > * { flex: none; }
+  :root[data-v13='on'] .c13-row .c12-quick { flex-wrap: nowrap; }
+  :root[data-v13='on'] .c12 .c12-head .c12-tagsw { display: none; }
+}
+:root[data-v13='on'] .c12 .c12-searchwrap { min-width: 0; width: 100%; flex: 1 1 auto; }
+:root[data-v13='on'] .c12 .c12-search { min-width: 0; width: 100%; box-sizing: border-box; }
+@media (max-width: 767px) {
+  :root[data-v13='on'] .c12 .c12-head { flex-wrap: nowrap; gap: 6px; }
+  :root[data-v13='on'] .c12 .c12-head .c12-sort { flex: 1 1 auto; min-width: 0; }
+  :root[data-v13='on'] .c12 .c12-head .c12-sort select { min-width: 0; width: 100%; }
+  :root[data-v13='on'] .c12 .c12-head > .c12-meta { flex: none; }
+  :root[data-v13='on'] .c12 .c12-head > a.c12-btn { flex: none; padding-inline: 10px; }
+}
+/* Kart künyesi: kaydet + ⋯ sağ üst köşede sabit, künye metni kalan genişlikte sarar (ayrı satıra düşmez) */
+:root[data-v13='on'] .c12 .ck { position: relative; }
+:root[data-v13='on'] .c12 .ck > .ck-meta { padding-right: 84px; }
+:root[data-v13='on'] .c12 .ck > .ck-meta > :is(.c12-qsave, .ck-menu) { position: absolute; top: 10px; }
+:root[data-v13='on'] .c12 .ck > .ck-meta > .c12-qsave { right: 48px; }
+:root[data-v13='on'] .c12 .ck > .ck-meta > .ck-menu { right: 8px; }
+@media (max-width: 767px) { :root[data-v13='on'] .c12 .c12-head > .c12-meta .c12-num:not(.c12-ink), :root[data-v13='on'] .c12 .c12-head > .c12-meta { font-size: 12px; } }
+
+/* Kompakt kart: künye tek satır (taşarsa kayar, iki satıra bölünmez), "diğer yıllar" tek satır kaydırılabilir şerit */
+:root[data-v13='on'] .c12 .ck > .ck-meta { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; white-space: nowrap; min-height: 28px; gap: 6px; font-size: 12px; }
+:root[data-v13='on'] .c12 .ck > .ck-meta::-webkit-scrollbar { display: none; }
+:root[data-v13='on'] .c12 .ck > .ck-meta > * { flex: none; }
+:root[data-v13='on'] .c12 .ck > .ck-meta > :is(.c12-qsave, .ck-menu) { top: 6px; width: 34px; height: 34px; min-width: 34px; min-height: 34px; }
+:root[data-v13='on'] .c12 .ck > .ck-meta > .c12-qsave { right: 44px; }
+:root[data-v13='on'] .c12 .ck > .ck-meta > .ck-menu { right: 6px; }
+:root[data-v13='on'] .c12 .cx-alt { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-top: 6px; padding-top: 6px; }
+:root[data-v13='on'] .c12 .cx-alt::-webkit-scrollbar { display: none; }
+:root[data-v13='on'] .c12 .cx-alt > * { flex: none; white-space: nowrap; }
+/* Kayan künye düğmelerin altına girmesin: alanı dış boşlukla daralt (kayan kutuda iç boşluk içerikle örtüşür) */
+:root[data-v13='on'] .c12 .ck > .ck-meta { padding-right: 0; margin-right: 80px; }

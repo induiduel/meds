@@ -12,7 +12,7 @@ import { focusMarks } from '../../services/questionFocus';
 type Block =
   | { kind: 'h'; text: string }
   | { kind: 'p'; text: string }
-  | { kind: 'li'; items: { mark: string; text: string }[]; ordered: boolean }
+  | { kind: 'li'; items: { mark: string; text: string; dz?: number }[]; ordered: boolean }
   | { kind: 'note'; label: string; text: string };
 
 const BULLET = /^\s*(?:[-–•*▪●◦·►➢✓]|(\d{1,2})[.)]|([a-eA-E])\))\s+(.+)$/;
@@ -50,13 +50,15 @@ function splitLongParagraph(text: string): string[] {
 export function parseSourceText(raw: string): Block[] {
   const text = String(raw || '')
     .replace(/\r/g, '')
-    .replace(/[ \t ]+/g, ' ')
+    // satır başı girintisi korunur (iç içe madde düzeyi ondan bulunur), satır içi boşluklar tekleşir
+    .replace(/(\S)[ \t ]+/g, '$1 ')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
   if (!text) return [];
   const lines = text.split('\n');
   const blocks: Block[] = [];
   let para: string[] = [];
+  let girinti: number[] = [];
   const flush = () => {
     if (!para.length) return;
     const joined = para.join(' ').trim();
@@ -74,9 +76,15 @@ export function parseSourceText(raw: string): Block[] {
     if (b) {
       flush();
       const mark = b[1] || b[2] || '';
+      const g = (lines[i].match(/^[ \t ]*/)?.[0] || '').replace(/\t/g, '    ').length;
       const last = blocks[blocks.length - 1];
-      if (last && last.kind === 'li' && last.ordered === Boolean(mark)) last.items.push({ mark, text: b[3] });
-      else blocks.push({ kind: 'li', items: [{ mark, text: b[3] }], ordered: Boolean(mark) });
+      const ayniListe = !!last && last.kind === 'li' && (g > 0 || last.ordered === Boolean(mark));
+      if (!ayniListe) girinti = [];
+      while (girinti.length && girinti[girinti.length - 1] > g) girinti.pop();
+      if (!girinti.length || girinti[girinti.length - 1] < g) girinti.push(g);
+      const it = { mark, text: b[3], dz: Math.min(2, girinti.length - 1) };
+      if (ayniListe) (last as Extract<Block, { kind: 'li' }>).items.push(it);
+      else blocks.push({ kind: 'li', items: [it], ordered: Boolean(mark) });
       continue;
     }
     // Maddenin alt satırı (girintisiz devam): önceki madde boş satırla kesilmediyse ona eklenir
@@ -171,8 +179,8 @@ export const SourceText: React.FC<{
           return (
             <ul key={i} className={`ms-src-list ${b.ordered ? 'is-ordered' : ''}`}>
               {b.items.map((it, j) => (
-                <li key={j}>
-                  <span className="ms-src-mark" aria-hidden>{b.ordered ? `${it.mark}.` : '•'}</span>
+                <li key={j} className={it.dz ? `is-dz${it.dz}` : undefined} style={it.dz ? { marginInlineStart: `${it.dz * 1.15}em` } : undefined}>
+                  <span className="ms-src-mark" aria-hidden>{it.mark ? `${it.mark}.` : ['•', '◦', '▪'][it.dz || 0]}</span>
                   <span className="min-w-0"><Inline text={it.text} terms={folded} answerTerms={ans} /></span>
                 </li>
               ))}

@@ -109,7 +109,7 @@ Sağ panelde p53 işlevini kaybetmiş hücre vardır: p53'e bağımlı genler ak
 Mutant hücreler çoğalır, ek mutasyonlar birikir ve sonunda malign tümör oluşur.
 
 @@ p21, DNA onarımı ve MDM2 geri bildirimi
-p53'ün ilk ve en hızlı yanıtı hücreyi durdurmaktır ve bunu CDKN1A geninin ürünü p21 aracılığıyla yapar. p21 siklin ve CDK komplekslerini inhibe eder, böylece G1 fazında RB'nin fosforilasyonunu önler. RB hipofosforile ve aktif kalır, E2F baskılı kalır ve hücre G1/S kontrol noktasında durur. İşTP53 ile RB yollarının birleştiği nokta budur: p53, p21 üzerinden RB'nin frenini sıkar. p53 aktif tuttuğu RB ile hücreyi G1'de durdurur demek, bu zincirin kısaltmasıdır.
+p53'ün ilk ve en hızlı yanıtı hücreyi durdurmaktır ve bunu CDKN1A geninin ürünü p21 aracılığıyla yapar. p21 siklin ve CDK komplekslerini inhibe eder, böylece G1 fazında RB'nin fosforilasyonunu önler. RB hipofosforile ve aktif kalır, E2F baskılı kalır ve hücre G1/S kontrol noktasında durur. İşte p53 ile RB yollarının birleştiği nokta budur: p53, p21 üzerinden RB'nin frenini sıkar. p53 aktif tuttuğu RB ile hücreyi G1'de durdurur demek, bu zincirin kısaltmasıdır.
 
 p53 hücreyi durdurduktan sonra hasarı onarmaya çalışır ve DNA onarım genlerinin ekspresyonunu uyarır.
 Onarım başarılı olursa sistem kendini kapatır: p53, hedef genlerinden biri olan MDM2'nin transkripsiyonunu artırır; artan MDM2 p53'ü yeniden proteazoma gönderir ve p53 kendi yıkımını sağlamış olur.
@@ -121,7 +121,7 @@ Demek ki MDM2, hem normal hücrede p53'ü düşük tutan hem de onarım sonrası
 DNA hasarı onarılamazsa p53 hücreyi iki yoldan birine yönlendirir. Birinci yol yaşlanma, yani senesenstir. Senesenste hücre döngüsü kalıcı olarak durur ve kromatin yapısında kalıcı değişiklikler oluşur; durma hali kromatin düzeyinde kilitlenir. Moleküler olarak p21 ifadesi sürer ve RB aktif kalır. Dikkat edin, geçici durgunlukta hücre onarım sonrası döngüye döner; senesenste ise dönüş yoktur. Bu ayrım sık sorulan bir tuzaktır.
 
 İkinci yol apoptozdur.
-p53 puma ve baks gibi proapoptotik genlerin ekspresyonunu artırır; bu proteinler mitokondri üzerinden apoptozun iç yolunu, yani intrinsik yolunu başlatır ve hasarlı genom ortadan kalkar.
+p53, PUMA ve BAX gibi proapoptotik genlerin ekspresyonunu artırır; bu proteinler mitokondri üzerinden apoptozun iç yolunu, yani intrinsik yolunu başlatır ve hasarlı genom ortadan kalkar.
 Senesens ve apoptozun ortak amacı, genetik olarak tehlikeli hücrelerin kalıcı olarak devre dışı bırakılmasıdır; biri hücreyi kalıcı olarak durdurur, diğeri öldürür.
 p53 kaybında bu iki güvenlik çıkışı da kapanır; hasarlı hücre hayatta kalır ve çoğalır.
 

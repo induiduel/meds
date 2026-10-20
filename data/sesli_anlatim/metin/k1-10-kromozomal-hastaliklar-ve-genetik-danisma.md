@@ -130,7 +130,7 @@ Tekrarlayan düşük öyküsü olan sağlıklı bir çiftte ebeveyn karyotipi is
 Taşıyıcıda mayozda 2 normal ve 2 türev kromozom çarpı biçiminde bir kuadrivalan oluşturarak eşleşir; bu yapıdan kutuplara dağılıma segregasyon denir.
 Translokasyon 3 çeşit segregasyon gösterir.
 En sık olanı 2:2 segregasyondur ve her kutba 2 kromozom gider.
-Bunun alternat tipinde 2 normal ve 2 dengeli taşıyıcı gamet oluşur; adjasent 1 tipinde ve çok nadir olan adjasent 2 tipinde ise 4 gametin tamamı dengesizdir.
+Bunun alternat tipinde 2 normal ve 2 dengeli taşıyıcı gamet oluşur; adjacent 1 tipinde ve çok nadir olan adjacent 2 tipinde ise 4 gametin tamamı dengesizdir.
 3:1 segregasyonda bir kutba 3, diğerine 1 kromozom; 4:0 segregasyonda dördü birden aynı kutba gider.
 Yani yalnız alternat segregasyon normal ya da dengeli gamet üretir.
 

@@ -33,7 +33,7 @@ Kısacası, hematüri ve proteinüri bariyerden, oligüri ve azotemi filtrasyon 
 Her bulguyu bir mekanizmaya bağlayabilirseniz, sonraki hastalıkların klinik tablolarını ezberlemeden açıklayabilirsiniz.
 
 @@ Başlıca nedenler
-Nefritik sendrom yapan hastalıklar 5 başlıkta toplanır. 1.'si akut enfeksiyon sonrası glomerülonefrittir; özellikle poststreptokokal formu. 2.'si hızlı ilerleyen ya da hilal glomerülonefritidir; İngilizce adının kısaltmasıyla da anılır. Bunun 3 immünolojik tipi vardır: glomerüler bazal membrana karşı antikorların olduğu anti glomerüler bazal membran tipi, immün kompleks tipi ve pausi immün tip. Pausi, az demektir; bu tipte glomerülde belirgin immün birikim görülmez ve tablo, küçük kan damarlarında iltihap ve hasara yol açan, bağışıklık sistemiyle ilişkili otoimmün bir vaskülitle, yani ANCA ilişkili vaskülitle bağlantılıdır. ANCA, antinötrofil sitoplazmik antikor demektir. Üçüncü neden sistemik lupus eritematozusla ilişkili lupus nefriti, 4.'sü immünoglobulin A nefropatisi, 5.'si ise kalıtsal nefritlerdir: Alport sendromu ve ince bazal membran hastalığı.
+Nefritik sendrom yapan hastalıklar 5 başlıkta toplanır. 1.'si akut enfeksiyon sonrası glomerülonefrittir; özellikle poststreptokokal formu. 2.'si hızlı ilerleyen ya da hilal glomerülonefritidir; İngilizce adının kısaltmasıyla da anılır. Bunun 3 immünolojik tipi vardır: glomerüler bazal membrana karşı antikorların olduğu anti glomerüler bazal membran tipi, immün kompleks tipi ve pauci immün tip. Pauci, az demektir; bu tipte glomerülde belirgin immün birikim görülmez ve tablo, küçük kan damarlarında iltihap ve hasara yol açan, bağışıklık sistemiyle ilişkili otoimmün bir vaskülitle, yani ANCA ilişkili vaskülitle bağlantılıdır. ANCA, antinötrofil sitoplazmik antikor demektir. Üçüncü neden sistemik lupus eritematozusla ilişkili lupus nefriti, 4.'sü immünoglobulin A nefropatisi, 5.'si ise kalıtsal nefritlerdir: Alport sendromu ve ince bazal membran hastalığı.
 
 @@ Primer glomerüler hastalıklar tablosu: nefrotik kutup
 Robbins'in primer glomerüler hastalıkları özetleyen tablosu, her hastalığı en sık klinik tablo, patogenez, ışık mikroskopisi, immünfloresan ve elektron mikroskopisi açısından karşılaştırır. Nefritik hastalıkları tanımak için önce bu tablonun nefrotik ve karışık kutbunu hızlıca hatırlayalım, çünkü ayırıcı tanıda hep bunlarla karşılaştıracağız.
@@ -138,12 +138,12 @@ Henoch-Schönlein purpurası, immünoglobulin A vasküliti olarak da bilinir; k�
 İmmünfloresanda granüler, yani taneli, noktasal immünoglobulin ve kompleman birikimi görülür; granüler desen immün kompleks birikiminin karakteristik özelliğidir.
 Bu tipte altta yatan hastalığın kendi özellikleri de korunur.
 
-Tip 3, pausi immün tiptir.
+Tip 3, pauci immün tiptir.
 Glomerülde hasar ağırdır ama immünfloresan neredeyse boştur, belirgin immünoglobulin ya da kompleman birikimi yoktur.
 Sıklıkla ANCA pozitiftir: ya proteinaz 3'e karşı PR3-ANCA, ya da miyeloperoksidaza karşı MPO-ANCA.
-Pausi immün tip, ANCA ilişkili sistemik vaskülitlerin bir bileşenidir; yani böbrek dışı küçük damarlar da tutulabilir.
+Pauci immün tip, ANCA ilişkili sistemik vaskülitlerin bir bileşenidir; yani böbrek dışı küçük damarlar da tutulabilir.
 Dikkat edin, immünfloresan negatifliği minimal değişiklik hastalığında da vardır, ama orada ışık mikroskopisi normaldir ve tablo nefrotiktir; burada ise immünfloresan negatifken ışık mikroskopisinde hilal ve nekroz vardır.
-Burası önemli, sınav spotu: Tip 1 anti glomerüler bazal membran ve lineer immünoglobulin G, Tip 2 immün kompleks ve granüler desen, Tip 3 pausi immün ve ANCA.
+Burası önemli, sınav spotu: Tip 1 anti glomerüler bazal membran ve lineer immünoglobulin G, Tip 2 immün kompleks ve granüler desen, Tip 3 pauci immün ve ANCA.
 
 @@ Hilal morfolojisi, immünfloresan ve elektron mikroskopisi
 3 tipin ortak ışık mikroskopisi bulgusu, Bowman kapsülü boşluğunda gelişen hilaldir. Hilalin 2 bileşeni vardır: Bowman kapsülünü döşeyen parietal epitel hücrelerinin proliferasyonu ve bu hücre kitlesine katılan monosit ve diğer lökositlerin göçü. Hilale kapiller duvarlarda segmental nekroz ve bazal membran kırıkları eşlik eder. Tabloda bu süreç, Bowman boşluğuna doğru ekstrakapiller proliferasyon olarak tanımlanır; yani çoğalma kılcalın içinde değil, dışında olur. Dikkat edin, enfeksiyon sonrası glomerülonefritte proliferasyon kılcal içidir, yani endokapillerdir; burada ise ekstrakapillerdir. Ders şeklinde, PAS boyalı kesitte, glomerül yumakları Bowman kapsülü içinde sıkışmış, çevrelerinde hilal şeklinde çoğalan epitel hücreleri ve lökosit kitlesi görülür.
@@ -152,9 +152,9 @@ Burası önemli, bu bilgi çıkmış sorularda birkaç kez soruldu: glomerüler 
 Çeldirici şıklar olarak verilen nodüler mezangiyal skleroz, yani Kimmelstiel-Wilson lezyonu, diffüz glomerüloskleroz, bazal membran kalınlaşması ve podosit ayak çıkıntılarında düzleşme bu anlamı taşımaz.
 
 Hilal 3 tipte de ortak olduğundan tipleri immünfloresan ayırır.
-Anti glomerüler bazal membran tipinde bazal membran boyunca lineer immünoglobulin G ve C3, immün kompleks tipinde granüler immünoglobulin ve kompleman, pausi immün tipte ise immünoglobulin ve kompleman için negatif ya da minimal boyanma görülür; pausi immün tipte hilallerde fibrin bulunur.
+Anti glomerüler bazal membran tipinde bazal membran boyunca lineer immünoglobulin G ve C3, immün kompleks tipinde granüler immünoglobulin ve kompleman, pauci immün tipte ise immünoglobulin ve kompleman için negatif ya da minimal boyanma görülür; pauci immün tipte hilallerde fibrin bulunur.
 Elektron mikroskopisinde ortak bulgu bazal membran yırtıkları ve fibrin sızıntısıdır; fibrin Bowman boşluğuna geçer ve hilal oluşumunu uyaran olay da budur.
-İmmün kompleks formlarında ayrıca elektron yoğun birikintiler görülür, pausi immün tipte belirgin depozit yoktur.
+İmmün kompleks formlarında ayrıca elektron yoğun birikintiler görülür, pauci immün tipte belirgin depozit yoktur.
 Ders şeklindeki elektron mikrografı, bazal membranın karakteristik kırışıklığını ve oklarla gösterilen odaksal bozulmaları gösterir.
 
 @@ Hızlı ilerleyen glomerülonefritin kliniği, prognozu ve tedavisi
@@ -266,10 +266,10 @@ Burası önemli, bu bilgi çıkmış sorularda soruldu: bazal membranda düzensi
 @@ Nefritik sendromda klinik yaklaşım
 Akut nefritik sendrom genellikle acil bir durumdur; oligüri, hipertansiyon ve azotemi belirgin olabilir. Tanının ilk basamağı idrar analizidir: eritrositler ve glomerüler kaynağı gösteren eritrosit silendirleri aranır, proteinüri düzeyi değerlendirilir. Biyokimyada kreatinin, üre, elektrolitler ve kompleman düzeyleri bakılır; kompleman düzeyi nedeni daraltmada yol göstericidir, örneğin poststreptokokal glomerülonefritte C3 düşer.
 
-Seroloji nedene işaret eder: anti streptolizin O poststreptokokal glomerülonefriti, anti DNA lupus nefritini, ANCA pausi immün tipi, anti glomerüler bazal membran antikoru Goodpasture hastalığını, viral markerler ise Hepatit B ve Hepatit C gibi enfeksiyon sonrası tetikleyicileri düşündürür.
+Seroloji nedene işaret eder: anti streptolizin O poststreptokokal glomerülonefriti, anti DNA lupus nefritini, ANCA pauci immün tipi, anti glomerüler bazal membran antikoru Goodpasture hastalığını, viral markerler ise Hepatit B ve Hepatit C gibi enfeksiyon sonrası tetikleyicileri düşündürür.
 Böbrek biyopsisi morfolojik sınıfı ve immün paterni belirler; örneğin lupus sınıfını ya da hızlı ilerleyen glomerülonefritin tipini ortaya koyar.
 Tedavi nedene spesifik tedavi ile destek tedavinin birleşimidir; destek tedavi sıvı dengesi ve kan basıncı kontrolünü içerir.
 Klinik yönetimin hedefi, erken tanı, nedene yönelik immünsüpresyon ve destek tedavi ile böbrek fonksiyonunu korumaktır.
 
 @@ Özetle
-Özetle bir biyopsiyi okurken 3 soru sorun. İmmünfloresan deseni ne: lineer immünoglobulin G anti glomerüler bazal membran hastalığını, granüler desen immün kompleks hastalıklarını, mezangiyal immünoglobulin A immünoglobulin A nefropatisini, negatif boyanma ile hilal pausi immün tipi gösterir. Depozit nerede: subepitelyal hump enfeksiyon sonrası glomerülonefriti, subendotelyal tel halka lupus sınıf IV'ü, mezangiyal depozit immünoglobulin A nefropatisini işaret eder; depozit yok ama bazal membran yapısı bozuksa Alport ya da ince bazal membran hastalığı düşünülür. Klinik zamanlama nasıl: enfeksiyondan 1 ila 4 hafta sonra poststreptokokal glomerülonefrit, 3 gün sonra immünoglobulin A nefropatisi, haftalar ya da aylar içinde böbrek yetmezliği ise hızlı ilerleyen glomerülonefrit.
+Özetle bir biyopsiyi okurken 3 soru sorun. İmmünfloresan deseni ne: lineer immünoglobulin G anti glomerüler bazal membran hastalığını, granüler desen immün kompleks hastalıklarını, mezangiyal immünoglobulin A immünoglobulin A nefropatisini, negatif boyanma ile hilal pauci immün tipi gösterir. Depozit nerede: subepitelyal hump enfeksiyon sonrası glomerülonefriti, subendotelyal tel halka lupus sınıf IV'ü, mezangiyal depozit immünoglobulin A nefropatisini işaret eder; depozit yok ama bazal membran yapısı bozuksa Alport ya da ince bazal membran hastalığı düşünülür. Klinik zamanlama nasıl: enfeksiyondan 1 ila 4 hafta sonra poststreptokokal glomerülonefrit, 3 gün sonra immünoglobulin A nefropatisi, haftalar ya da aylar içinde böbrek yetmezliği ise hızlı ilerleyen glomerülonefrit.

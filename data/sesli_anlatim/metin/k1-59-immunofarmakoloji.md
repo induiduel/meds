@@ -86,7 +86,7 @@ Burası önemli, bu bilgi çıkmış sorularda tekrar tekrar soruldu: penisilin 
 Omalizumab ise immünoglobulin E'nin mast hücreleri ve bazofillerdeki reseptörlerine bağlanmasını önleyerek degranülasyonu engeller.
 
 @@ Tip 2, Tip 3 ve Tip 4 aşırı duyarlılık
-Tip 2 aşırı duyarlılık, hücre yüzeyindeki yabancı antijen ile immünoglobulin M ya da immünoglobulin G arasında antijen antikor kompleksi oluşmasıyla gelişir. Klasik örnek, uygun çapraz karşılaştırma yapılmadan verilen kanla gelişen transfüzyon reaksiyonudur; transfüze edilen kırmızı kan hücreleri membran atak kompleksiyle lize edilir. Yenidoğanın hemolitik hastalığında rezus negatif annenin ürettiği anti rezus immünoglobulin G antikorları plasentayı geçer, rezus pozitif fetüsün kırmızı kan hücrelerine bağlanır ve onları hasara uğratır. Tip 2 aşırı duyarlılık, alerjik hastalara penisilin gibi bir ilaç uygulanmasıyla da gelişebilir.
+Tip 2 aşırı duyarlılık, hücre yüzeyindeki yabancı antijen ile immünoglobulin M ya da immünoglobulin G arasında antijen antikor kompleksi oluşmasıyla gelişir. Klasik örnek, uygun çapraz karşılaştırma yapılmadan verilen kanla gelişen transfüzyon reaksiyonudur; transfüze edilen kırmızı kan hücreleri membran atak kompleksiyle lize edilir. Yenidoğanın hemolitik hastalığında Rh negatif annenin ürettiği anti-Rh immünoglobulin G antikorları plasentayı geçer, Rh pozitif fetüsün kırmızı kan hücrelerine bağlanır ve onları hasara uğratır. Tip 2 aşırı duyarlılık, alerjik hastalara penisilin gibi bir ilaç uygulanmasıyla da gelişebilir.
 
 Tip 3 aşırı duyarlılık, dolaşımda yüksek düzeyde bulunan antijen antikor komplekslerinin doku ve damar bazal membranlarında birikmesiyle gelişir.
 Komplekslerin birikimi ve nötrofillerden salınan litik enzimler deri döküntüsü, glomerülonefrit ve artrit oluşturur.
@@ -280,16 +280,16 @@ Antilenfosit ve antitimosit globulinin siklosporinle birlikte kemik iliği nakli
 Yan etkilerin çoğu yabancı protein enjeksiyonuna bağlıdır: enjeksiyon yerinde sıklıkla lokal ağrı ve Tip 3 aşırı duyarlılığa bağlı eritem gelişir.
 Humoral mekanizmalar aktif kaldığı için yabancı immünoglobulin G'ye karşı deri reaksiyonu veren ve presipite olan antikorlar da oluşabilir.
 
-@@ İmmün globulinler: damar içi immün globulin, rezus ve hiperimmün preparatlar
+@@ İmmün globulinler: damar içi immün globulin, Rh ve hiperimmün preparatlar
 İmmün modülasyonda bir başka yaklaşım poliklonal insan immünoglobulininin damar içi kullanılmasıdır. Sıklıkla immünoglobulin G olan bu preparat binlerce sağlıklı vericiden elde edilen havuzdan hazırlanır ve bu terapötik antikorun tek bir özgül hedefi yoktur. Kilogram başına 2 gram gibi yüksek dozlarda immünoglobulin yetersizliklerinden otoimmün bozukluklara, HIV hastalığından kemik iliği nakline kadar geniş bir kullanım alanı vardır. Sistemik lupus eritematozusta ve dirençli idiyopatik trombositopenik purpurada iyi klinik yanıt alınır.
 
-İmmünofarmakolojideki en erken ilerlemelerden biri, yenidoğanın rezus hemolitik hastalığının önlenmesidir.
+İmmünofarmakolojideki en erken ilerlemelerden biri, yenidoğanın Rh hemolitik hastalığının önlenmesidir.
 Fikir şudur: antijenle karşılaşma sırasında o antijene özgü antikor pasif olarak verilirse birincil antikor yanıtı bloke edilir.
 Rh0(D) immünoglobulini, kırmızı kan hücrelerindeki de antijenine karşı yüksek titrede antikor içeren, %15'lik konsantre bir insan immünoglobulin G çözeltisidir.
 
-Rezus negatif annenin duyarlanması genellikle rezus pozitif bebeğin doğumu sırasında fetal kırmızı kan hücrelerinin anne dolaşımına sızmasıyla olur; düşük ya da ektopik gebeliklerde de gelişebilir.
+Rh negatif annenin duyarlanması genellikle Rh pozitif bebeğin doğumu sırasında fetal kırmızı kan hücrelerinin anne dolaşımına sızmasıyla olur; düşük ya da ektopik gebeliklerde de gelişebilir.
 Sonraki gebeliklerde anneden gelen antikor üçüncü trimesterde fetüse geçer ve eritroblastozis fetalise, yani yenidoğanın hemolitik hastalığına yol açar.
-Burası önemli: rezus negatif anneye, rezus pozitif bebeğin doğumundan sonraki 24 ile 72 saat içinde Rh0(D) antikoru enjekte edilirse annenin kendi antikor yanıtı baskılanır.
+Burası önemli: Rh negatif anneye, Rh pozitif bebeğin doğumundan sonraki 24 ile 72 saat içinde Rh0(D) antikoru enjekte edilirse annenin kendi antikor yanıtı baskılanır.
 Çünkü bebeğin kırmızı kan hücreleri, anne bunlara karşı B hücre yanıtı oluşturamadan dolaşımdan temizlenir.
 
 Hiperimmün immünoglobulinler, virüs ya da toksin gibi belirli ajanlara karşı yüksek titrede antikoru olan seçilmiş insan ya da hayvan vericilerinden hazırlanan preparatlardır.

@@ -293,7 +293,7 @@ Burası önemli, alkolün organ eşleşmeleri sınav spotudur.
 En ağır biçim şiddetli akut yetersiz beslenmedir.
 Dünya Sağlık Örgütü tanımına göre ağırlık boy oranının medyanın en az 3 standart sapma altında olması ya da belirgin zayıflık veya beslenme ödemi bulunması bu tabloyu tanımlar.
 Ödem ölçütü önemlidir, çünkü ödem çocuğun zayıflığını gizleyebilir.
-Klinik spektrumun iki ucu vardır: kalori eksikliğinin baskın olduğu marasmus ve protein eksikliğinin baskın olduğu kuaşiorkor.
+Klinik spektrumun iki ucu vardır: kalori eksikliğinin baskın olduğu marasmus ve protein eksikliğinin baskın olduğu kwashiorkor.
 
 Marasmusta vücut eksik enerjiyi kendi dokularını yıkarak karşılar.
 Belirgin büyüme geriliği, ciddi kas kütlesi ve deri altı yağ kaybı vardır; kollar ve bacaklar çubuk gibi incelir, buna zayıf çomak görünümü denir.
@@ -303,7 +303,7 @@ Bu yüzden marasmusta ödem yoktur.
 Kuaşiorkorda protein yoksunluğu kaloriye göre daha fazladır.
 Tipik bağlam erken sütten kesilme ve karbonhidrat ağırlıklı diyettir.
 Periferik ya da yaygın ödem, karaciğerde yağlanma, deride açık ve koyu alanların yan yana bulunduğu mozaik pigmentasyon, saçta renk kaybı ve saç boyunca açık koyu bantların sıralandığı bayrak işareti görülür.
-Burası önemli, ödem kuaşiorkora özgüdür; marasmusta ciddi kas ve yağ kaybı olur ama ödem yoktur.
+Burası önemli, ödem kwashiorkor'a özgüdür; marasmusta ciddi kas ve yağ kaybı olur ama ödem yoktur.
 
 Her iki tipte de ortak sistemik etkiler vardır.
 Özellikle yağda çözünen vitaminler ve B vitaminleri eksiktir.

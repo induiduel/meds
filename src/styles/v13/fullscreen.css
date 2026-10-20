@@ -18,3 +18,15 @@
   }
   & .sc-ilerleme { margin-inline: 12px; }
 }
+
+/* Alt çubuklar yüzen karttır: içerikten alan kesmez. Kart katmanın altında mutlak konumda durur, kayan alan kartın
+ * altına kadar uzanır ve kart yüksekliği kadar iç boşluk alır (son satır kartın üstüne kaydırılabilir). */
+:root[data-design='v12'][data-v13='on'] {
+  & .sc { position: fixed; }
+  & .sc > .sc-alt { position: absolute; z-index: 5; left: 0; right: 0; bottom: 0; box-shadow: 0 14px 40px -12px rgb(16 24 40 / .32), 0 0 0 1px var(--color-line); }
+  & .sc > .sc-sahne { padding-bottom: 150px; scroll-padding-bottom: 150px; }
+  @media (min-width: 761px) { & .sc > .sc-sahne { padding-bottom: 110px; scroll-padding-bottom: 110px; } }
+  & .ls-root { position: fixed; }
+  & .ls-root > .lv-bottombar { position: absolute; z-index: 5; left: 0; right: 0; bottom: 0; box-shadow: 0 14px 40px -12px rgb(16 24 40 / .32), 0 0 0 1px var(--color-line); }
+  & .ls-root .ls-A-main { padding-bottom: 96px; scroll-padding-bottom: 96px; }
+}

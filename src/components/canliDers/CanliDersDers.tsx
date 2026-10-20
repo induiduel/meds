@@ -92,8 +92,8 @@ const ilkGorunum = (): Gorunum => {
 };
 const GORUNUMLER: { id: Gorunum; ad: string; ikon: React.ReactNode }[] = [
   { id: 'metin', ad: 'Metin', ikon: <ScrollText aria-hidden /> },
-  { id: 'ikisi', ad: 'Metin + PDF', ikon: <Columns2 aria-hidden /> },
-  { id: 'pdf', ad: 'PDF', ikon: <FileText aria-hidden /> },
+  { id: 'ikisi', ad: 'Metin + Slayt', ikon: <Columns2 aria-hidden /> },
+  { id: 'pdf', ad: 'Slayt', ikon: <FileText aria-hidden /> },
 ];
 
 /** Tam ekran metin yazı boyutu (px), cihazda saklanır */
@@ -464,7 +464,10 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     >
       <header className="cd-ders-bas">
         <GeriBag />
-        <h1 className="cd-ders-ad" title={`${cdDersEtiketi(detay)} · ${detay.baslik}`}><span>{cdDersEtiketi(detay)} ·</span> {detay.baslik}</h1>
+        <div className="cd-ders-baslik">
+          <small className="cd-ders-ust">{cdDersEtiketi(detay)}<DersBolumEtiketi detay={detay} /></small>
+          <h1 className="cd-ders-ad" title={`${cdDersEtiketi(detay)} · ${detay.baslik}`}>{detay.baslik}</h1>
+        </div>
         <div className="cd-ders-arac">
           {pdfVar && (
             <div className="cd-sekmeler" role="radiogroup" aria-label="Görünüm">
@@ -483,7 +486,32 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
               ))}
             </div>
           )}
-          {mod === 'ikisi' && (
+        </div>
+        <div className="cd-ders-uc">
+          {!tamEkran && (
+            <KonuDugmeleri kucuk className="cd-ders-takip" modul="sesli" konu={detay.key} ad={detay.baslik}
+              onTekrar={() => { const v = cdTercihVaryant(detay.varyantlar); if (v) cdOynat(detay, v.id, { t: 0 }); }} />
+          )}
+          {!tamEkran && (
+            <CdDaha etiket="Ders seçenekleri (çevrimdışı, listem, metni dışa aktar, tanıtım)" className="cd-ders-daha">
+              <button
+                type="button"
+                className="cd-btn"
+                onClick={() => setYildizModalAcik(true)}
+              >
+                <Star aria-hidden /> <span>Yıldızlı paragraflar ({yildizSayisi})</span>
+              </button>
+              <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
+              <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} etiketli />
+              <MetniAktarDugme detay={detay} vurguAcik={vurguAcik} />
+              {detay.vurgu && (
+                <button type="button" className={`cd-btn${vurguAcik ? ' is-on' : ''}`} aria-pressed={vurguAcik} onClick={() => setVurguAcik(!vurguAcik)}
+                  title="Çıkmışta, örnek sorularda ve spotlarda geçen cümleleri kırmızı ve işaretli göster">
+                  <Highlighter aria-hidden /> <span>Önemli yerleri vurgula</span>
+                </button>
+              )}
+              {tanitim.dugme}
+              {mod === 'ikisi' && (
             <div className="cd-duzen-arac" role="group" aria-label="Metin ve PDF bölme düzeni ve boyutu">
               <button
                 type="button"
@@ -528,44 +556,6 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
               </div>
             </div>
           )}
-        </div>
-        <div className="cd-ders-uc">
-          {!tamEkran && (
-            <KonuDugmeleri kucuk className="cd-ders-takip" modul="sesli" konu={detay.key} ad={detay.baslik}
-              onTekrar={() => { const v = cdTercihVaryant(detay.varyantlar); if (v) cdOynat(detay, v.id, { t: 0 }); }} />
-          )}
-          {!tamEkran && (
-            <button
-              type="button"
-              className={`cd-btn cd-btn-yildizli${yildizSayisi > 0 ? ' is-on' : ''}`}
-              onClick={() => setYildizModalAcik(true)}
-              title="Yıldızlı paragraflar (Tekrar listem)"
-              aria-label={`Yıldızlı paragraflar${yildizSayisi > 0 ? ` (${yildizSayisi})` : ''}`}
-              data-sayi={yildizSayisi > 0 ? (yildizSayisi > 99 ? '99+' : String(yildizSayisi)) : undefined}
-            >
-              <Star className="w-4 h-4" fill={yildizSayisi > 0 ? '#f59e0b' : 'none'} color={yildizSayisi > 0 ? '#f59e0b' : 'currentColor'} aria-hidden />
-              <span>Yıldızlılar{yildizSayisi > 0 ? ` (${yildizSayisi})` : ''}</span>
-            </button>
-          )}
-          {!tamEkran && (
-            <CdDaha etiket="Ders seçenekleri (çevrimdışı, listem, metni dışa aktar, tanıtım)" className="cd-ders-daha">
-              <button
-                type="button"
-                className="cd-btn"
-                onClick={() => setYildizModalAcik(true)}
-              >
-                <Star aria-hidden /> <span>Yıldızlı paragraflar ({yildizSayisi})</span>
-              </button>
-              <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
-              <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} etiketli />
-              <MetniAktarDugme detay={detay} vurguAcik={vurguAcik} />
-              {detay.vurgu && (
-                <button type="button" className={`cd-btn${vurguAcik ? ' is-on' : ''}`} aria-pressed={vurguAcik} onClick={() => setVurguAcik(!vurguAcik)}
-                  title="Çıkmışta, örnek sorularda ve spotlarda geçen cümleleri kırmızı ve işaretli göster">
-                  <Highlighter aria-hidden /> <span>Önemli yerleri vurgula</span>
-                </button>
-              )}
-              {tanitim.dugme}
             </CdDaha>
           )}
           {tamEkran ? (
@@ -1130,36 +1120,16 @@ function CdMetinBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
           <Crosshair aria-hidden /> Canlı konuma dön
         </button>
       ) : (
-        <BaslaCagri canli={canli} />
+        null
       )}
     </div>
   );
 }
 
-/** Ders ekranı ilk açıldığında (henüz çalmadıysa) ne yapılacağını söyleyen büyük düğme; ilk çalmadan sonra gizlenir. */
-function BaslaCagri({ canli }: { canli: boolean }) {
-  const playing = useCd((s) => canli && s.playing);
-  const t = useCd((s) => (canli ? Math.floor(s.t) : 0));
-  const [goster, setGoster] = useState(true);
-  useEffect(() => { if (playing) setGoster(false); }, [playing]);
-  if (!canli || !goster || playing) return null;
-  const devam = t >= 5;
-  const basla = () => {
-    setGoster(false);
-    cdToggle();
-  };
-  return (
-    <div className="cd-basla" role="group" aria-label="Dinlemeye başla">
-      <button type="button" className="cd-basla-btn" onClick={basla}>
-        <span className="cd-basla-ikon" aria-hidden><Play /></span>
-        <span>
-          <b>{devam ? 'Kaldığın yerden devam et' : 'Dinlemeye başla'}</b>
-          <small>{devam ? `${fmtSure(t)} konumundan sürer` : 'ya da bir paragrafa dokun, oradan başlasın'}</small>
-        </span>
-      </button>
-      <button type="button" className="cd-basla-kapat" onClick={() => setGoster(false)} aria-label="Bu ipucunu gizle">×</button>
-    </div>
-  );
+/** Başlık üst satırında etkin bölüm (ders çalarken) */
+function DersBolumEtiketi({ detay }: { detay: CdDetay }) {
+  const b = useCd((s) => (s.key === detay.key ? s.bolum : -1));
+  return b >= 0 ? <> · Bölüm {b + 1} / {detay.bolumler.length}</> : null;
 }
 
 /* ---------------- PDF ---------------- */

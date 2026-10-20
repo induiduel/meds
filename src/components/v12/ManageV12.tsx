@@ -10,6 +10,7 @@ import { fetchSystemServices, fetchWorkerHeartbeat } from '../../services/manage
 import { systemHealthMonitor, type SystemOverallHealth } from '../../services/systemHealthMonitor';
 import type { RealtimeConnectionStatus } from '../../services/realtimeEvents';
 import '../../styles/v12/manage.css';
+import '../../styles/v13/manage.css';
 
 /**
  * Yönetim konsolu — v12 "Net" kabuğu ve "Genel bakış" (canvas: Manage.dc.html).

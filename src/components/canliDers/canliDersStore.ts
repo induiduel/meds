@@ -26,6 +26,8 @@ export interface CdVaryant {
   cumleZaman?: Record<string, number[]> | null;
   /** cümle başına sesteki konuşma parçaları [a1, b1, a2, b2, …] sn (cumle_zaman.py surum 2) */
   cumleKonusma?: Record<string, number[][]> | null;
+  /** Paragraf → her kelimenin (/\S+/g) seste başladığı saniye (kelime_zaman.py: konuşma tanıma + harf hizalama) */
+  kelimeZaman?: Record<string, number[]> | null;
 }
 export interface CdListeDers {
   key: string;
@@ -251,6 +253,8 @@ let ends: number[] = [];
 let bolumBas: number[] = []; // her bölümün ilk paragrafının konumu (paras dizini)
 let cumleBas: (number[] | null)[] = []; // paras dizini → ölçülü cümle başlangıçları
 let konusma: (number[][] | null)[] = []; // paras dizini → cümle başına konuşma parçaları
+let kelimeT: (number[] | null)[] = []; // paras dizini → ölçülü kelime başlangıçları (saniye)
+let kelimeC: (number[] | null)[] = []; // paras dizini → kelimelerin paragraf içi karakter başlangıçları
 
 function parasKur(d: CdDetay | null) {
   paras = [];
@@ -269,6 +273,8 @@ function zamanlamaKur() {
   ends = [];
   cumleBas = [];
   konusma = [];
+  kelimeT = [];
+  kelimeC = [];
   const v = st.varyantlar.find((x) => x.id === st.vid);
   const z = v?.zamanlama;
   if (paras.length && z && z.length) {
@@ -290,6 +296,25 @@ function zamanlamaKur() {
       konusma = paras.map((p, k) => {
         const x = ck?.[String(p.i)];
         return cumleBas[k] && Array.isArray(x) && x.length === cumleSinirlari(p).length ? x : null;
+      });
+      // Ölçülü kelime zamanı: kelime sayısı istemcideki bölmeyle tutuyorsa kullanılır; cümle başları da ondan türer
+      // (cümlenin ilk kelimesinin sesteki başı) — metin, slayt işareti ve cümle geçişi tek ölçümden yürür.
+      const kz = v?.kelimeZaman;
+      paras.forEach((p, k) => {
+        const t = kz?.[String(p.i)];
+        const c = [...p.metin.matchAll(/\S+/g)].map((m) => m.index!);
+        if (!Array.isArray(t) || t.length !== c.length || !c.length) { kelimeT.push(null); kelimeC.push(null); return; }
+        kelimeT.push(t);
+        kelimeC.push(c);
+        const sinir = cumleSinirlari(p);
+        const cb: number[] = [];
+        let w = 0;
+        for (let q = 0; q + 1 < sinir.length; q++) {
+          while (w < c.length && c[w] < sinir[q]) w++;
+          if (w >= c.length) break;
+          cb.push(t[w]);
+        }
+        if (cb.length === sinir.length - 1) { cumleBas[k] = cb; konusma[k] = null; }
       });
       return void set({ zs: st.zs + 1 });
     }
@@ -356,9 +381,17 @@ export function cdKonusulanKarakter(): { cumleBas: number; c: number } | null {
   const r = cdCumleAraligi(st.aktif, st.cumle);
   if (k == null || !r) return null;
   const p = paras[k];
+  const t = st.t + ONDE * (st.rate || 1);
+  const kt = kelimeT[k], kc = kelimeC[k];
+  if (kt && kc) {
+    // Ölçülü: sesin geçtiği son kelime; cümle dışına taşmasın
+    let lo = 0, hi = kt.length - 1, w = 0;
+    while (lo <= hi) { const m = (lo + hi) >> 1; if (kt[m] <= t) { w = m; lo = m + 1; } else hi = m - 1; }
+    const c = Math.min(Math.max(kc[w], r[0]), r[1] - 1);
+    return { cumleBas: r[0], c: c - r[0] };
+  }
   const metin = p.metin.slice(r[0], r[1]);
   const h = heceler(metin);
-  const t = st.t + ONDE * (st.rate || 1);
   const parca = konusma[k]?.[st.cumle];
   let oran: number;
   if (parca && parca.length >= 2) {

@@ -283,7 +283,7 @@ Burası önemli, bu da çıkmış sorularda soruldu: koruma düzeyleriyle ilgili
 Aynı sorudaki yanlış ifadeleri de düzeltelim: ikincil korumanın hedef kitlesi semptomatik hastalar değil, henüz belirti vermemiş kişilerdir; her koruma düzeyinin hedefi rehabilitasyon değildir; önce zarar verme ilkesi hekimin hastaya zarar vermekten kaçınmasıyla ilgilidir ve primordial korumanın hedefi değildir; üçüncül koruma da asemptomatik grubu değil, hastalığı yerleşmiş kişileri hedefler.
 
 @@ İkincil korunma ve taramalar
-İkincil korumanın temel amacı, kronik hastalığın pre-semptomatik dönemde erken tanısıyla hastalığın ilerlemesinin durdurulmasıdır. Pre-semptomatik dönem, hastalığın başladığı ama kişinin henüz yakınma duymadığı evredir; kişi bu yüzden kendiliğinden hekime gelmez ve ancak tarama ile yakalanır. Bu şekilde hastalığın komplikasyonları önlenmiş olur. Halk sağlığında ikincil önlemi başarmak için klinik taramalar önemli bir yer tutar. Örnekler: kan basıncı ölçümü, serviks kanseri için smir alınması yani servikal sürüntü, tüberkülin testi ve çocuklarda görme ve işitme taramaları.
+İkincil korumanın temel amacı, kronik hastalığın pre-semptomatik dönemde erken tanısıyla hastalığın ilerlemesinin durdurulmasıdır. Pre-semptomatik dönem, hastalığın başladığı ama kişinin henüz yakınma duymadığı evredir; kişi bu yüzden kendiliğinden hekime gelmez ve ancak tarama ile yakalanır. Bu şekilde hastalığın komplikasyonları önlenmiş olur. Halk sağlığında ikincil önlemi başarmak için klinik taramalar önemli bir yer tutar. Örnekler: kan basıncı ölçümü, serviks kanseri için smear alınması yani servikal sürüntü, tüberkülin testi ve çocuklarda görme ve işitme taramaları.
 
 Burası önemli, bu bilgi çıkmış sorularda soruldu: mamografi bir ikincil koruma yöntemidir.
 Yenidoğanlarda fenilketonüri ve konjenital hipotiroidi için topuk kanı taraması yapılması da ikincil koruma uygulamasıdır.
@@ -303,7 +303,7 @@ Diyabetin hem birincil hem de ikincil korumanın başarı listesinde yer aldığ
 
 Ayırt etme anahtarını tek cümlede toplayalım.
 Riskli yaşam özelliği henüz oluşmamışsa primordial, hastalık henüz oluşmamışsa birincil, hastalık var ama belirti yoksa ikincil, hastalık ilerlemişse üçüncül koruma söz konusudur.
-Örnekleri de eşleştirin: çocuklara sigara karşıtı okul eğitimi primordial, bağışıklama birincil, smir alınması ikincil, diyabetik hastada ayak amputasyonunun önlenmesi üçüncül korumadır.
+Örnekleri de eşleştirin: çocuklara sigara karşıtı okul eğitimi primordial, bağışıklama birincil, smear alınması ikincil, diyabetik hastada ayak amputasyonunun önlenmesi üçüncül korumadır.
 Burası önemli, çıkmış sorularda koruyucu sağlık hizmetlerinin kime yöneldiği de soruldu: bağışıklama, aile planlaması ve erken teşhis kişiye yönelik koruyucu sağlık hizmetleridir.
 Besin kontrolü ise kişiye değil, çevreye yönelik bir hizmettir.
 

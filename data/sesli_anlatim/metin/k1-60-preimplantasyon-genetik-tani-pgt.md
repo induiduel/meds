@@ -74,7 +74,7 @@ Burası önemli, sayıları iyi ezberleyin: dengeli translokasyon taşıyıcıl�
 Gördüğünüz gibi, sorun ne kadar üreme kaybına yöneliyorsa taşıyıcılık oranı da o kadar artıyor.
 
 @@ Segregasyon tipleri ve yapısal kromozom anomalileri
-Dengeli translokasyon taşıyıcısında gamet oluşurken kromozomların ayrılma biçimi, yani segregasyon tipi, embriyonun dengeli olup olmayacağını belirler. Burası önemli: dengeli gamet ve embriyo veren tek segregasyon tipi alternet segregasyondur. Adjasent 1 ve adjasent 2 segregasyon ise dengesiz gamet ve embriyolara neden olur. Bu 3 segregasyon tipine sık rastlanır. Sınavda adjasent tiplerin de dengeli olduğu sanılabilir; hayır, yalnızca alternet segregasyon dengelidir.
+Dengeli translokasyon taşıyıcısında gamet oluşurken kromozomların ayrılma biçimi, yani segregasyon tipi, embriyonun dengeli olup olmayacağını belirler. Burası önemli: dengeli gamet ve embriyo veren tek segregasyon tipi alternate segregasyondur. Adjacent 1 ve adjacent 2 segregasyon ise dengesiz gamet ve embriyolara neden olur. Bu 3 segregasyon tipine sık rastlanır. Sınavda adjacent tiplerin de dengeli olduğu sanılabilir; hayır, yalnızca alternate segregasyon dengelidir.
 
 Daha az rastlanan tipler de vardır.
 Tam trizomi ya da monozomiye neden olan 3:1 interchange segregasyonu ve derivatif kromozomun eşlik ettiği dengesiz yapıdaki 3:1 tersiyer segregasyonu bunlardır.

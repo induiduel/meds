@@ -206,24 +206,24 @@ Dikkat edin, kolostrumun yağdan zengin olduğu ifadesi klasik bir tuzaktır.
 @@ Prematüre sütü, ön süt ve son süt
 Süt bileşimi doğum zamanına göre de değişir. Erken doğum yapan annelerin sütleri, zamanında doğum yapanların sütlerine göre protein, sodyum ve klor yönünden daha zengin, laktoz yönünden ise daha düşüktür. Bir emzirme seansı içinde de bileşim değişir. Emzirmenin başlangıcındaki süt, yani ön süt karbonhidrattan; emzirmenin sonundaki süt, yani son süt yağdan zengindir. Anne sütündeki yağ ve protein miktarının emzirmenin sonuna doğru sırasıyla 9 kat ve %50 oranında arttığı gösterilmiştir. Burası önemli: çıkmış soruda "ön süt yağdan, son süt karbonhidrattan zengindir" ifadesi yanlış olarak verilmişti; doğrusu tam tersidir. Bebek yağdan zengin son sütü alabilmek için memeyi yeterince boşaltmalıdır.
 
-@@ Protein profili: vey ve kazein
-Anne sütü ile inek sütü arasındaki en temel farklardan biri protein miktarı ve türüdür. Anne sütünde enerjinin %6 ile 7'si proteinden, inek sütünde ise %20'si proteinden sağlanır. Anne sütü proteininin %30 ile 40'ı kazein, %60 ile 70'i vey, yani peynir altı suyu proteinidir. İnek sütünde ise başlıca protein kazein olup toplam proteinin %80'ini oluşturur. Kazein sütün asitle çöken, vey ise sıvı kısımda kalan protein fraksiyonudur. Anne sütünde kazein beta kazein olarak bulunur ve yapısında fosfor, çinko, kalsiyum, demir ve bakır bulunur.
+@@ Protein profili: whey ve kazein
+Anne sütü ile inek sütü arasındaki en temel farklardan biri protein miktarı ve türüdür. Anne sütünde enerjinin %6 ile 7'si proteinden, inek sütünde ise %20'si proteinden sağlanır. Anne sütü proteininin %30 ile 40'ı kazein, %60 ile 70'i whey, yani peynir altı suyu proteinidir. İnek sütünde ise başlıca protein kazein olup toplam proteinin %80'ini oluşturur. Kazein sütün asitle çöken, whey ise sıvı kısımda kalan protein fraksiyonudur. Anne sütünde kazein beta kazein olarak bulunur ve yapısında fosfor, çinko, kalsiyum, demir ve bakır bulunur.
 
 Burası önemli, bu karşılaştırma çıkmış sorularda birkaç kez soruldu.
-Doğru ifade şudur: anne sütü proteinlerinin yaklaşık %60'ı vey proteinlerinden oluşurken inek sütünde başlıca protein kazeindir.
-Aynı soruların çeldiricilerini doğru biçimleriyle bilin: anne sütünde enerjinin %20'si değil %13'ü proteinden gelir; anne sütü proteininin büyük kısmını kazein değil vey oluşturur.
+Doğru ifade şudur: anne sütü proteinlerinin yaklaşık %60'ı whey proteinlerinden oluşurken inek sütünde başlıca protein kazeindir.
+Aynı soruların çeldiricilerini doğru biçimleriyle bilin: anne sütünde enerjinin %20'si değil %13'ü proteinden gelir; anne sütü proteininin büyük kısmını kazein değil whey oluşturur.
 İnek sütünün enerjisinin yaklaşık 3 katı fazlasını proteinden alması, immatür böbrek için ayrıca bir yük demektir.
 
-Anne sütünün vey proteinlerinin büyük bölümünü laktoferrin, alfa laktalbumin, lizozim, immünoglobulinler ve serum albümini oluşturur.
+Anne sütünün whey proteinlerinin büyük bölümünü laktoferrin, alfa laktalbumin, lizozim, immünoglobulinler ve serum albümini oluşturur.
 Lizozim bakteri duvarını parçalayan koruyucu bir enzimdir.
 Alerjen olan beta laktoglobulin ise anne sütünde bulunmaz; bu protein inek sütü alerjisinin önemli alerjenidir.
 Burası önemli: "anne sütünde daha az bulunan ya da hiç bulunmayan protein hangisidir" sorusunun cevabı beta laktoglobulindir.
-Vey proteini, sekretuvar immünoglobulin A, laktoferrin ve C vitamini ise anne sütünde boldur.
-Bir başka soruda "anne sütünde alerjen olan alfa laktalbumin bulunmaz" ifadesi yanlış olarak soruldu; alfa laktalbumin anne sütünün temel vey proteinlerinden biridir, bulunmayan alerjen beta laktoglobulindir.
+Whey proteini, sekretuvar immünoglobulin A, laktoferrin ve C vitamini ise anne sütünde boldur.
+Bir başka soruda "anne sütünde alerjen olan alfa laktalbumin bulunmaz" ifadesi yanlış olarak soruldu; alfa laktalbumin anne sütünün temel whey proteinlerinden biridir, bulunmayan alerjen beta laktoglobulindir.
 "Beta laktoglobulin anne sütünün başlıca alerjen proteinidir" ifadesi de bu yüzden yanlıştır.
 
 @@ Laktoferrin ve taurin
-Anne sütünde bulunan laktoferrin demir bağlayıcı bir proteindir ve bebekleri gastrointestinal enfeksiyonlardan bakteriyostatik etkisiyle, yani bakterileri öldürmeden üremelerini durdurarak korur. Aynı zamanda anne sütündeki demirin biyoyararlılığını, yani emilip kullanılabilen oranını artırır. Dikkat edin, laktoferrin inek sütünün kazein fraksiyonunda değil, anne sütünün vey fraksiyonunda bulunur; çıkmış soruda tersi çeldirici olarak verilmişti.
+Anne sütünde bulunan laktoferrin demir bağlayıcı bir proteindir ve bebekleri gastrointestinal enfeksiyonlardan bakteriyostatik etkisiyle, yani bakterileri öldürmeden üremelerini durdurarak korur. Aynı zamanda anne sütündeki demirin biyoyararlılığını, yani emilip kullanılabilen oranını artırır. Dikkat edin, laktoferrin inek sütünün kazein fraksiyonunda değil, anne sütünün whey fraksiyonunda bulunur; çıkmış soruda tersi çeldirici olarak verilmişti.
 
 Anne sütünde bulunan amino asitlerden taurinin düzeyi inek sütünden 30 ile 40 kez daha fazladır.
 Taurin büyümeyi düzenleyen, hücre membranının bütünlüğünü sağlayan ve retina harabiyetini önleyen önemli bir amino asittir.

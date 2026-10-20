@@ -4,7 +4,7 @@
  * canliDersStore'dadır; bu bileşen yalnız denetimdir.
  */
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { ArrowUpRight, Download, ListOrdered, Pause, Play, RotateCcw, RotateCw, SkipBack, SkipForward, X } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, ChevronUp, Download, ListOrdered, Pause, Play, RotateCcw, RotateCw, SkipBack, SkipForward, X } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import {
   CD_HIZLAR, cdAtla, cdBolumAtla, cdBolumBaslari, cdDosyaAdi, cdHiz, cdHizDongu, cdKapat, cdSar, cdSesKisa, cdSesUrl, cdToggle, cdVaryant, cdDurum,
@@ -17,11 +17,17 @@ import '../../styles/canli-ders.css';
 
 const hizYaz = (r: number) => `${String(r).replace('.', ',')}×`;
 
+/** Ders ekranında oynatıcı küçük hapa indirilebilir (metin alanı genişler); tercih cihazda saklanır */
+const GIZLI_KEY = 'medsoru_cd_dock_kucuk_v1';
+const gizliOku = () => { try { return localStorage.getItem(GIZLI_KEY) === '1'; } catch { return false; } };
+
 export default function CanliDersDock({ activeTab, dersKey }: { activeTab: string; dersKey?: string }) {
   const key = useCd((s) => s.key);
   const tam = activeTab === 'canli_ders' && !!dersKey && dersKey === key;
   const ref = useRef<HTMLDivElement>(null);
   const [alt, setAlt] = useState(0);
+  const [kucuk, setKucukHam] = useState(gizliOku);
+  const setKucuk = (v: boolean) => { setKucukHam(v); try { localStorage.setItem(GIZLI_KEY, v ? '1' : '0'); } catch { /* yok */ } };
 
   // Konum: telefonda alt sekme çubuğunun üstü; yüksekliği sayfaya bildirilir (içerik altta kalmasın)
   useLayoutEffect(() => {
@@ -82,7 +88,7 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
       document.documentElement.style.removeProperty('--cd-dock-h');
       window.dispatchEvent(new Event('cd:dock'));
     };
-  }, [tam, key]);
+  }, [tam, key, kucuk]);
 
   // Klavye / TV kumandası (yalnız ders ekranında): boşluk-OK-⏯ oynat/duraklat, ←/→ 10 sn, ⏪/⏩ 30 sn,
   // TV'de ▲/▼ ve kanal/parça tuşları bölüm atlar (CanliDersTv)
@@ -130,8 +136,8 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
 
   if (!key) return null;
   return (
-    <div ref={ref} className={`cd-root cd-dock ${tam ? 'is-tam' : 'is-mini'}`} style={{ bottom: alt }} role="region" aria-label="Sesli ders oynatıcısı">
-      {tam ? <TamOynatici /> : <MiniOynatici />}
+    <div ref={ref} className={`cd-root cd-dock ${tam ? (kucuk ? 'is-tam is-kucuk' : 'is-tam') : 'is-mini'}`} style={{ bottom: alt }} role="region" aria-label="Sesli ders oynatıcısı">
+      {!tam ? <MiniOynatici /> : kucuk ? <KucukOynatici onAc={() => setKucuk(false)} /> : <TamOynatici onKucult={() => setKucuk(true)} />}
       {tvIz && <div key={tvIz.n} className="cd-tv-iz" role="status">{tvIz.m}</div>}
     </div>
   );
@@ -364,9 +370,41 @@ function SimdikiBolum() {
   );
 }
 
-function TamOynatici() {
+/** Ders ekranında küçültülmüş oynatıcı: oynat/duraklat, ince ilerleme, bölüm adı; dokununca açılır */
+function KucukOynatici({ onAc }: { onAc: () => void }) {
+  const t = useCd((s) => Math.floor(s.t));
+  const dur = useCd((s) => s.dur);
+  const bolum = useCd((s) => s.bolum);
+  const detay = useCd((s) => s.detay);
+  const ad = (bolum >= 0 && detay?.bolumler[bolum]?.baslik) || 'Sesli ders';
+  return (
+    <div className="cd-kucuk">
+      <OynatDugme />
+      <button type="button" className="cd-kucuk-ad" onClick={onAc} aria-label="Oynatıcıyı aç">
+        <b>{ad}</b>
+        <span className="cd-kucuk-ilerleme" aria-hidden><i style={{ transform: `scaleX(${dur ? Math.min(1, t / dur) : 0})` }} /></span>
+        <small>{fmtSure(t)} / {fmtSure(dur)}</small>
+      </button>
+      <button type="button" className="cd-ib" onClick={onAc} aria-label="Oynatıcıyı aç" title="Oynatıcıyı aç"><ChevronUp aria-hidden /></button>
+    </div>
+  );
+}
+
+/** Henüz dinlenmemiş derste ne yapılacağını söyleyen satır (metnin üstüne binmez) */
+function BaslaIpucu() {
+  const playing = useCd((s) => s.playing);
+  const t = useCd((s) => Math.floor(s.t));
+  const [basladi, setBasladi] = useState(false);
+  useEffect(() => { if (playing) setBasladi(true); }, [playing]);
+  if (basladi || playing) return null;
+  return <p className="cd-basla-satir">{t >= 5 ? `Oynat'a bas: ${fmtSure(t)} konumundan sürer.` : "Başlatmak için oynat'a bas ya da metinde bir paragrafa dokun."}</p>;
+}
+
+function TamOynatici({ onKucult }: { onKucult: () => void }) {
   return (
     <div className="cd-tam">
+      <button type="button" className="cd-ib cd-kucult" onClick={onKucult} aria-label="Oynatıcıyı küçült" title="Oynatıcıyı küçült"><ChevronDown aria-hidden /></button>
+      <BaslaIpucu />
       <SimdikiBolum />
       <ZamanCubugu />
       <ListeDockDenetim dar />

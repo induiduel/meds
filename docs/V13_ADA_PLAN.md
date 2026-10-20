@@ -23,10 +23,11 @@ v12 korunur, v13 isteğe bağlıdır (açılışta sorulur).
 | 2 | Temel katman: taşma kalkanı, araç çubuğu kapsülü, başlık tekrarı, çevrimdışı adası | ✅ |
 | 3 | **Ortak katmanlar:** Sheet, Confirm, Toast, Tooltip, ActionMenu, AccountMenu, SearchPalette, Bildirim geçmişi, Tailwind `fixed inset-0` modalları (39 dosya), açılır listeler | ✅ ilk tur (styles/v13/components.css) |
 | 4 | **Tam ekranlar:** Öğren ders oynatıcı (`ls-root`), okuyucular (`r12-root`), sesli ders (`cd-ders`), soru çözücü / alternatif çözücü (`sc`), asistan (`pa`), test (`p12`), kart oturumu | ✅ ilk tur: üst/alt çubuklar yüzen ada (styles/v13/fullscreen.css), alternatif çözücü taşması düzeltildi |
-| 5 | Ana sayfalar: Soru ekle, Bugün, Öğren kitaplığı, Çıkmış, Havuz, Test, Kartlar | ⏳ |
-| 6 | Okuma sayfaları: Notlar, Özetler, Sesli ders listesi, Sözlük, Hastalıklar, Sağlık Bakanlığı, Kazanımlar | ⏳ |
-| 7 | Sınav sayfaları: Sınav çalışması, En önemliler, Spotlar, Check Up (patoloji/genetik), Olası sorular, Örnek sorular, Geçmiş kurullar | ⏳ |
-| 8 | Kişisel/topluluk: Profil ve ayarlar, İstatistik, Bitirdiklerim, Çevrimdışı, Çalışma masam, Sıralama, Harita, Müzik, Güncellemeler | ⏳ |
+| 4b | **Yüzen alt kartlar:** alt oynatıcı/çubuklar içerikten alan kesmez; içerik altlarından kayar, kayan alana kart yüksekliği kadar iç boşluk (sesli ders `--cd-ortu`, çözücüler `.sc-alt`, ders oynatıcı `.lv-bottombar`); sesli ders oynatıcısı v13 alt adasının üstüne oturur | ✅ |
+| 5 | Ana sayfalar: Soru ekle, Bugün, Öğren kitaplığı, Çıkmış, Havuz, Test, Kartlar | ⏳ Bugün ✅ (gün planı), Öğren ✅ (dal şeridi, yüzde halkası, ad kırpılmaz), Çıkmış ✅ (iki satır araç, tek satır künye, kaydırılabilir diğer yıllar), Soru ekle hizası ✅ |
+| 6 | Okuma sayfaları: Notlar, Özetler, Sesli ders listesi, Sözlük, Hastalıklar, Sağlık Bakanlığı, Kazanımlar | ✅ hizalama + sesli ders başı tek satır; Notlar/Özetler/Ses kayıtları geniş ekranda kart ızgarası; Sözlük/Hastalıklar/Kazanımlar iki ada (liste yapışkan, ayrıntı okunur genişlik); Sağlık blokları ada (`styles/v13/wide.css`) |
+| 7 | Sınav sayfaları: Sınav çalışması, En önemliler, Spotlar, Check Up (patoloji/genetik), Olası sorular, Örnek sorular, Geçmiş kurullar | ✅ sütun hizası (dar ortalı kutular kalktı), cx-dock şeridi ada |
+| 8 | Kişisel/topluluk: Profil ve ayarlar, İstatistik, Bitirdiklerim, Çevrimdışı, Çalışma masam, Sıralama, Harita, Müzik, Güncellemeler | ✅ sütun hizası, harita sakin |
 | 9 | Giriş/kayıt, tanıtım turu, giriş uyarısı, hata/boş/yükleniyor durumları | ⏳ |
 | 10 | Yönetim konsolu (`/manage` tüm bölümler) | ⏳ |
 | 11 | Son tarama: tüm rotalar × 9 boyut × 3 tema; dokunma/adsız düğme/kontrast raporu sıfır | ⏳ |
@@ -40,3 +41,16 @@ Aşama 5–10 için ilk tur yapıldı: 30 rota telefon (390), 18 rota tablet (82
 yatay taşma 0; sayfa içi başlık tekrarları kaldırıldı. Sayfa gövdeleri hâlâ v12 bileşenleri + v13 katmanı. Sıradaki tur:
 her sayfanın gövdesini TSX düzeyinde v13 anatomisine taşımak (Bugün, Öğren, Çıkmış ile başlayarak), Soru haritası renkleri,
 Yönetim konsolu (yönetici oturumuyla), dokunma hedefi/kontrast raporunun sıfırlanması.
+
+## Hizalama kuralı (2026-10-20, kullanıcı bildirimi)
+Başlık kapsülü, kurul şeridi ve sayfa içeriği aynı sütun kutusunu paylaşır: `.a13-top` = `.sh-main` ile aynı en büyük
+genişlik ve yan boşluk; sayfa içi tam genişlik şeritler (`.ks`) sütunu doldurur; içerik kutuları sütunun sol kenarından başlar.
+Yeni sayfada bu kenar dışına taşan ya da içeride kalan kutu hata sayılır.
+
+## Bulunan ve düzeltilen hatalar
+- Genetik Check Up: yapışkan aşama listesi alttaki ders kartlarıyla aynı ızgaradaydı, kaydırınca kartların üstüne biniyordu (tüm tasarımlar) → kartlar ızgara dışına.
+- Sesli ders: oynatıcı v13 telefonda alt adanın üstüne biniyordu (gezinme kapanıyordu) → ada ölçülür, oynatıcı üstüne oturur.
+- Soru haritası: 100 turuncu karo → beyaz karo + durum noktası.
+
+- Hizalama ölçümü: 30 rota × 1440/390, içerik kutusu kenarı − kapsül kenarı = 0 (Havuz sağ sütunu kutusuz, 10 px). Öğren yüzde halkası geniş ekranda elipsti → daire.
+- Açık: Yönetim konsolu (yönetici oturumu gerekir), Test/deneme kurucu kendi tam ekranında.

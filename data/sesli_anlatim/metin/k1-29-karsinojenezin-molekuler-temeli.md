@@ -256,7 +256,7 @@ Enfeksiyondan tümöre kadar 40 ile 60 yıllık uzun bir latent dönem vardır.
 Tax'ın uyardığı poliklonal çoğalma zemininde ek mutasyonlar ve genomik istikrarsızlık birikir ve sonunda tek bir klon malign hale gelir; buna monoklonal transformasyon denir.
 Tax tek başına kanser yapmaz; bu, çok aşamalı karsinogenezin viral bir örneğidir.
 
-@@ Onkojenik de ne a virüsleri ve İnsan papilloma virüsü (HPV)
+@@ Onkojenik DNA virüsleri ve İnsan papilloma virüsü (HPV)
 Derste sayılan onkojenik DNA virüsleri İnsan papilloma virüsü (HPV), Epstein-Barr virüsü (EBV), Kaposi sarkomu herpes virüsü (KSHV / HHV-8), Hepatit B virüsü (HBV) ve Merkel hücre polioma virüsüdür. Kaposi sarkomu herpes virüsünün diğer adı insan herpes virüsü 8'dir. Burası önemli, çıkmış soruda bu virüs soruldu: gama herpes virüs alt grubunun bir üyesidir, Kaposi sarkomlarının yaklaşık %95'inde saptanır ve lenfoma ile lenfoproliferatif hastalıklara da yol açabilir. Bu virüsler 3 temel mekanizmayla kanser oluşturur. 1.'si, viral onkoproteinlerin tümör baskılayıcı proteinlere bağlanarak onları devre dışı bırakmasıdır; en iyi örneği insan papilloma virüsüdür. 2.'si kronik enflamasyon ve rejenerasyondur; süregen hasar ve onarım döngüsü bölünmeyi ve mutasyon olasılığını artırır, bu özellikle hepatit virüslerinde öne çıkar. 3.'sü genomik instabilitedir.
 
 İnsan papilloma virüsü (HPV) tipleri düşük ve yüksek risk olarak ayrılır.

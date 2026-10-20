@@ -878,3 +878,31 @@
  * ("Dinlemeye başla" ve "Canlı konuma dön" oynatıcının arkasında kalıp görünmüyordu, canlı iPhone testi 2026-10-20) */
 .cd-ders .cd-bolme > :is(.cd-basla, .cd-donus) { bottom: calc(var(--cd-ortu, 0px) + 14px); }
 :root.cd-tam-oynatici .cd-ders.is-tam .cd-bolme > :is(.cd-basla, .cd-donus) { bottom: calc(var(--cd-dock-h, 0px) + 14px); }
+
+/* ── Ders ekranı yeniden düzen (2026-10-20, tasarım tuvali "Sesli ders ekranı") ── */
+.cd-ders-baslik { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.cd-ders-ust { font-size: 11.5px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; color: var(--color-ink-3); font-variant-numeric: tabular-nums;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cd-ders-baslik .cd-ders-ad { flex: none; order: 0; flex-basis: auto; padding: 0; display: block; white-space: nowrap; font-size: 18px; }
+/* Oynatıcı: yüzen ada; bölüm işaretleri çubuğu kalabalıklaştırmasın (bölümler listeden) */
+.cd-dock.is-tam .cd-tam { position: relative; border-radius: 18px; padding: 8px 14px 6px; }
+.cd-dock.is-tam .cd-isaret { display: none; }
+.cd-kucult { position: absolute; top: 4px; right: 6px; width: 32px; height: 32px; z-index: 1; }
+.cd-basla-satir { margin: 2px 40px 2px 2px; font-size: 13px; color: var(--color-ink-2); }
+.cd-kucuk { display: flex; align-items: center; gap: 8px; width: max-content; max-width: min(460px, 100%); margin-inline: auto; padding: 6px 6px 6px 8px; border: 1px solid var(--color-line);
+  border-radius: 999px; background: var(--color-white); box-shadow: 0 8px 28px rgb(0 0 0 / .14), 0 1px 3px rgb(0 0 0 / .06); box-sizing: border-box; }
+.cd-kucuk-ad { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; padding: 2px 4px; border: 0; background: transparent; color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; }
+.cd-kucuk-ad b { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 280px; }
+.cd-kucuk-ad small { font-size: 11px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.cd-kucuk-ilerleme { display: block; height: 3px; border-radius: 2px; background: var(--color-field); overflow: hidden; }
+.cd-kucuk-ilerleme > i { display: block; height: 100%; background: var(--color-accent); transform-origin: 0 50%; }
+@media (max-width: 767px) {
+  .cd-ders-bas > .cd-ders-baslik { grid-area: ad; }
+  .cd-ders-bas .cd-ders-baslik .cd-ders-ad { font-size: 15px; white-space: nowrap; display: block; }
+  .cd-ders-ust { font-size: 10.5px; }
+  .cd-kucuk-ad b { max-width: 190px; }
+}
+/* Sakin vurgu: okunan önemli cümlede ek sarı dolgu + çerçeve yok (cümle vurgusu zaten var); kelime tek işaret */
+.cd-metin .cd-onem.is-canli { background: linear-gradient(transparent 52%, rgba(255, 214, 10, .42) 52%, rgba(255, 214, 10, .42) 92%, transparent 92%); box-shadow: none; }
+:root[data-mode="dark"] .cd-metin .cd-onem.is-canli { background: linear-gradient(transparent 52%, rgba(255, 214, 10, .2) 52%, rgba(255, 214, 10, .2) 92%, transparent 92%); box-shadow: none; }
+.cd-metin ::highlight(cd-kelime) { background-color: color-mix(in srgb, var(--color-accent) 42%, transparent); text-decoration: none; }

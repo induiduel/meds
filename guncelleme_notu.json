@@ -1,19 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 66,
-  "baslik": "Genetik: TBG Sınav Kampı yenilendi",
+  "onem": 67,
+  "baslik": "Sesli ders kelime takibi ve tasarım iyileştirmeleri",
   "maddeler": [
-    "Genetik sayfası baştan yenilendi: hocanın soru kalıplarına (bulgudan sendrom, kanserde hedef ilaç, spesifik belirteç) ve son yılların çıkmışlarına göre adım adım sesli ders.",
-    "Hızlı mod (en önemli 15 adım, ~18 dk) ve Tam mod (34 adım, 77 soru); her yanlışta ve \"Yardım al\"da sesli açıklama.",
-    "Kalıp kartlarıyla hızlı tekrar ve 12 soruluk sınav provası; özet PDF/Word olarak indirilebilir."
+    "Sesli derste konuşulan kelime metinde ve PDF'te anlık işaretleniyor.",
+    "Yeni tasarımda (Ada) çıkmış, öğren ve geniş sayfalar daha düzenli.",
+    "Çeşitli görünüm ve oynatıcı düzeltmeleri."
   ],
   "eklenen": [
-    "Hızlı mod (en önemli 15 adım, ~18 dk) ve Tam mod (34 adım, 77 soru); her yanlışta ve \"Yardım al\"da sesli açıklama.",
-    "Kalıp kartlarıyla hızlı tekrar ve 12 soruluk sınav provası; özet PDF/Word olarak indirilebilir."
+    "Sesli derste konuşulan kelime metinde ve PDF'te anlık işaretleniyor."
   ],
   "degisen": [
-    "Genetik sayfası baştan yenilendi: hocanın soru kalıplarına (bulgudan sendrom, kanserde hedef ilaç, spesifik belirteç) ve son yılların çıkmışlarına göre adım adım sesli ders."
+    "Yeni tasarımda (Ada) çıkmış, öğren ve geniş sayfalar daha düzenli."
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Çeşitli görünüm ve oynatıcı düzeltmeleri."
+  ],
   "silinen": []
 }

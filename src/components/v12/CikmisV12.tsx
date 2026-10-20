@@ -20,6 +20,7 @@ import { QuickOptions, QuickPill, type ToolbarQuick } from '../ui/PageToolbar';
 import { Sheet } from '../ui/Sheet';
 import { CikmisViewSwitch, type CikmisGorunum } from '../cikmis/CikmisViewSwitch';
 import '../../styles/v12/cikmis.css';
+import '../../styles/v13/cikmis.css';
 
 export interface C12Option { id: string; label: string; count?: number; group?: string }
 export interface C12Facet { id: string; label: string; value: string; options: C12Option[]; onPick: (v: string) => void }
@@ -305,10 +306,23 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
   );
 
   const showAside = adv && wide;
+  const v13 = !!look.v13;
+  const topActions = (
+    <>
+      {p.adminHref && (
+        <a href={p.adminHref} className="c12-btn sm ghost icon" title="Faz 14 düzeltme önerilerini incele" aria-label="Faz 14 incelemesi">
+          <Sparkles aria-hidden />
+        </a>
+      )}
+      <CikmisViewSwitch value={p.view.value} onChange={p.view.onChange} />
+      <a href={p.practiceHref} className="c12-btn sm">Test oluştur</a>
+    </>
+  );
 
   return (
     <div ref={rootRef} className={`c12 ${showAside ? 'is-adv' : ''} ${small ? 'is-sm' : ''}`}>
-      <header className="c12-top">
+      {v13 && <h1 className="c12-title">Çıkmış sorular</h1>}
+      {!v13 && <header className="c12-top">
         <h1 className="c12-title">Çıkmış sorular</h1>
         <span className="c12-meta" aria-live="polite">
           <span className="c12-num">{tr(p.total)}</span> soru{p.scope ? ` · ${p.scope}` : ''}
@@ -321,7 +335,7 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
         )}
         <CikmisViewSwitch value={p.view.value} onChange={p.view.onChange} />
         <a href={p.practiceHref} className="c12-btn sm">Test oluştur</a>
-      </header>
+      </header>}
 
       <div className="c12-bar" role="search">
         <div className="c12-searchwrap">
@@ -373,6 +387,7 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
           )}
         </div>
 
+        <div className="c13-row">
         <div className="c12-seg" role="tablist" aria-label="Çözüm durumu">
           {STATUS.map(([id, label]) => (
             <button key={id} type="button" role="tab" aria-selected={p.status.value === id} className={p.status.value === id ? 'is-on' : ''}
@@ -388,6 +403,7 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
             aria-haspopup={wide ? undefined : 'dialog'} aria-label={`Tüm süzgeçler${activeCount ? `, ${activeCount} etkin` : ''}`}>
             <SlidersHorizontal aria-hidden /><span>Süzgeç</span>{activeCount > 0 && <b>{activeCount}</b>}
           </button>
+        </div>
         </div>
 
         {wide && (
@@ -437,6 +453,7 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
                 </select>
               </label>
             )}
+            {v13 && topActions}
           </div>
           {p.children}
         </section>

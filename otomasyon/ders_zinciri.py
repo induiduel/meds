@@ -131,7 +131,7 @@ def a_hazirla(d, pk, W, kuru):
     L = []
     for q in Q:
         m = (q.get("checkSolve") or {}).get("mufredat") or {}
-        if m.get("kurul") == d["kurul"] and m.get("ders") == d["brans"] and AH.norm(m.get("konu")) in hedef_konu:
+        if m.get("kurul") == d.get("cikmis_kurul", d["kurul"]) and m.get("ders") == d["brans"] and AH.norm(m.get("konu")) in hedef_konu:
             c = AH.aday(q, gizli, silinen)
             if c: L.append(c)
     cik = AH.grupla(L) if L else []
@@ -140,6 +140,8 @@ def a_hazirla(d, pk, W, kuru):
         {**liste[-1], "brans": W.name, "cikmis_tekil": len(cik), "ornek_hedef": AH.ornek_hedefi(len(cik), sayfa)},
         ensure_ascii=False, indent=1))
     print(f"   {kod}: {sayfa} sayfa · çıkmış aday {len(L)} → tekil {len(cik)}")
+    if not cik:  # yeni konu olabilir; ama müfredat eşlemesi kopuk da olabilir → görünür kalsın
+        print(f"   UYARI {kod}: bu derse eşlenmiş çıkmış soru yok (konu: {d['konu']}) — önem yalnız PDF + örnek sorularla")
     # Önem haritası: sayfa başına sınava konu olma puanı (çıkmış benzerliği × sıklık × yakınlık) → tüm üreticilere girdi
     return calistir([str(MEDS / ".venv-ocr/bin/python"), str(MEDS / "scripts/onem/onem_haritasi.py"),
                      str(W / "pdf_metin" / f"{kod}.md"), str(W / "cikmis" / f"{kod}.json"), "--kod", kod,

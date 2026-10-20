@@ -53,6 +53,8 @@
 .tk-mod-k.is-on .tk-mod-ad svg { color: var(--color-accent); }
 .tk-mod-alt { font-size: 12.5px; color: var(--color-ink-3); }
 .tk-mod-say { font-size: 12.5px; color: var(--color-ink-2); }
+.tk-mod-k { cursor: pointer; }
+.tk-mod-basla { margin-top: 8px; min-height: 36px; }
 
 /* çıkmış haritası */
 .tk-harita { padding: 12px 14px; border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); display: grid; gap: 8px; }

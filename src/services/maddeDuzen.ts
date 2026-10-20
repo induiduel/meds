@@ -77,7 +77,10 @@ export function mdDuzenle(md: string): string {
     // "Klinik Seyir ve Evreler:" gibi kısa duyuru satırı: alt başlık
     if (/:$/.test(d) && d.split(/\s+/).length <= 8 && cumleler(t).length === 1) { out.push(`### ${d.replace(/:$/, '').trim()}`); continue; }
     // 1–2 cümlelik giriş paragraf olarak kalır; daha uzunu maddelenir
-    out.push(cumleler(t).length >= 3 ? paragrafMd(t, '-', '', false) : t);
+    const cs = cumleler(t);
+    // "Bu soru … ölçer." gibi tanıtım cümlesi giriş olarak kalır, ardındaki bilgi maddelenir
+    if (cs.length >= 3 && /^Bu (soru|sorunun)/u.test(duzMetin(cs[0]))) { out.push(cs[0], paragrafMd(cs.slice(1).join(' '), '-', '', false)); continue; }
+    out.push(cs.length >= 3 ? paragrafMd(t, '-', '', false) : t);
   }
   return out.join('\n');
 }

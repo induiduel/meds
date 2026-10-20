@@ -9,6 +9,8 @@ import React from 'react';
 import { BookOpen, Check, ShieldCheck, Library, PencilLine, CornerLeftUp } from 'lucide-react';
 import { StemText } from '../ui/StemText';
 import { SourceText } from '../ui/SourceText';
+import { mdDuzenle } from '../../services/maddeDuzen';
+import { sayilariYaz } from '../../services/sayiYazim';
 import type { PdfQuestion } from './pdfSources';
 import { committeeShort } from './pdfSources';
 import { Cover, Masthead, type CoverInfo } from './PdfParts';
@@ -102,7 +104,7 @@ const Analysis: React.FC<{ q: PdfQuestion }> = ({ q }) => (
                   {o.verdict && <span className={`ms-tag is-${o.verdict.tone}`}>{o.verdict.label}</span>}
                   {isAnswer && <span className="ms-tag is-ok"><Check /> Cevap</span>}
                 </div>
-                <p className="m-0 text-[13px] text-ink-2 leading-relaxed">{o.why}</p>
+                <p className="m-0 text-[13px] text-ink-2 leading-relaxed">{sayilariYaz(o.why || '')}</p>
               </div>
             </li>
           );
@@ -124,7 +126,7 @@ const Solution: React.FC<{ q: PdfQuestion; o: QuestionDocOptions; withAnswerLine
       {o.explanation && q.explanation && (
         <section className="ls-expl">
           <span className="ls-expl-h"><BookOpen aria-hidden /> Açıklama</span>
-          <SourceText text={q.explanation} size="sm" answerTerms={q.options.filter((x) => x.key === q.answer).map((x) => x.text)} />
+          <SourceText text={mdDuzenle(q.explanation)} size="sm" answerTerms={q.options.filter((x) => x.key === q.answer).map((x) => x.text)} />
         </section>
       )}
       {hasNotes && <Analysis q={q} />}
@@ -184,7 +186,7 @@ const QuestionCard: React.FC<{ e: Entry; o: QuestionDocOptions }> = ({ e, o }) =
                 {inlineWhy && opt.why && (
                   <li className={`pd-why ${opt.key === q.answer ? 'is-ok' : ''}`}>
                     <span className="ls-opt-verdict">{opt.verdict?.label || (opt.key === q.answer ? 'Neden doğru' : 'Neden yanlış')}</span>
-                    {opt.why}
+                    {sayilariYaz(opt.why)}
                   </li>
                 )}
               </React.Fragment>

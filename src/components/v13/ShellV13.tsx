@@ -152,6 +152,8 @@ export const SideNavV13: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
   const activeGroup = groupOf(active);
   const [view, setView] = useState<V13Group['id']>(activeGroup?.id && activeGroup.id !== 'bugun' ? activeGroup.id : 'ders');
   const [fly, setFly] = useState(false);
+  // Panel öbeği kullanıcı seçti mi (seçmediyse yalnız açık sayfanın öbeği vurgulanır)
+  const [picked, setPicked] = useState(false);
   const rootRef = useRef<HTMLElement>(null);
   const panelId = useId();
 
@@ -160,6 +162,7 @@ export const SideNavV13: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
     const g = groupOf(active);
     if (g && g.id !== 'bugun') setView(g.id);
     setFly(false);
+    setPicked(false);
   }, [active]);
 
   // Açılır kutu: dışarı tıklama ve Escape kapatır
@@ -230,7 +233,7 @@ export const SideNavV13: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
                 </a>
               );
             }
-            const viewing = panelShown && view === g.id;
+            const viewing = panelShown && view === g.id && (here || picked || fly);
             return (
               <button
                 key={g.id}
@@ -244,6 +247,7 @@ export const SideNavV13: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
                 onClick={() => {
                   if (docked) {
                     setView(g.id);
+                    setPicked(true);
                     return;
                   }
                   if (fly && view === g.id) setFly(false);

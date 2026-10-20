@@ -42,7 +42,7 @@ R harfi Rubella, yani kızamıkçık virüsüdür ve öksürük ya da hapşırma
 C harfi Sitomegalovirüstür; tükürük ve vücut sıvıları yoluyla yayılan bir herpes virüsüdür.
 H harfi ise Herpes simpleks virüstür ve genellikle vajinal doğum sırasında bebeğe bulaşır.
 
-Torç enfeksiyonlarında plasentadaki örüntü asendan enfeksiyondan farklıdır.
+TORCH enfeksiyonlarında plasentadaki örüntü asendan enfeksiyondan farklıdır.
 Koryon villuslarında kronik inflamatuvar infiltrasyon görülür; buna kronik villit diyoruz.
 Dikkat edin, bu iki örüntü sık karıştırılır: asendan enfeksiyonun imzası zarlarda akut, nötrofil ağırlıklı koryoamniyonittir; hematojen enfeksiyonun imzası ise villuslarda kronik villittir.
 

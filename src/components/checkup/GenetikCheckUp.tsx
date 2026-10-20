@@ -61,10 +61,16 @@ function modSorulari(n: Nokta, mod: Mod): Soru[] {
   return c ? [c] : n.sorular.slice(0, 1);
 }
 
+/** Tam ekran asistan için hızlı mod: yalnız puan ≥ 97 noktalar, adım başına tek soru */
+const hizliSuz = (d: Ders): Ders => ({
+  ...d,
+  noktalar: d.noktalar.filter((n) => n.puan >= HIZLI_PUAN).map((n) => ({ ...n, sorular: modSorulari(n, 'hizli') })),
+});
+
 export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
   const [kayit, setKayit] = useState<Kayit>(kayitOku);
   const [sekme, setSekme] = useState<Sekme>('ders');
-  const [tamEkran, setTamEkran] = useState(false);
+  const [tamEkran, setTamEkran] = useState<Mod | null>(null);
   const [genis] = useState(() => typeof window === 'undefined' || window.matchMedia('(min-width: 720px)').matches);
   const [yardim, setYardim] = useState<Record<string, boolean>>({});
   const [calan, setCalan] = useState<{ id: string; cumle: number; oynuyor: boolean } | null>(null);
@@ -213,7 +219,7 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
           <p>Hoca soruları son yılların çıkmışlarından ve üç kalıptan soruyor: <b>bulgudan sendrom</b>, <b>kanserde hedef ilaç</b>, <b>spesifik belirteç</b>. Ders bu kalıplara göre adım adım ve sesli anlatılır.</p>
         </div>
         <div className="tk-bas-arac">
-          <button type="button" className="tk-btn" onClick={() => { durdur(); setTamEkran(true); }}><Maximize2 aria-hidden /> Tam ekran asistan</button>
+          <button type="button" className="tk-btn" onClick={() => { durdur(); setTamEkran(mod); }}><Maximize2 aria-hidden /> Asistanı aç · {mod === 'hizli' ? 'Hızlı' : 'Tam'}</button>
           <MetinAktarMenu belge={belge} dosyaAdi={`tbg-sinav-kampi-${mod}`} dugmeSinif="tk-btn" etiket="Özeti indir" />
         </div>
       </header>
@@ -222,12 +228,16 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
         {(['hizli', 'tam'] as Mod[]).map((m) => {
           const N = DERS.noktalar.filter((n) => m === 'tam' || n.puan >= HIZLI_PUAN);
           return (
-            <button key={m} type="button" className={`tk-mod-k${mod === m ? ' is-on' : ''}`} aria-pressed={mod === m}
-              onClick={() => { durdur(); guncelle((k) => ({ ...k, mod: m })); }}>
+            <div key={m} role="button" tabIndex={0} className={`tk-mod-k${mod === m ? ' is-on' : ''}`} aria-pressed={mod === m}
+              onClick={() => { durdur(); guncelle((k) => ({ ...k, mod: m })); }}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); durdur(); guncelle((k) => ({ ...k, mod: m })); } }}>
               <span className="tk-mod-ad">{m === 'hizli' ? <Zap aria-hidden /> : <BookOpen aria-hidden />}{m === 'hizli' ? 'Hızlı mod' : 'Tam mod'}</span>
               <span className="tk-mod-alt">{m === 'hizli' ? 'En çok sorulanlar, adım başına 1 soru' : 'Kalıba uyan tüm bilgiler ve sorular'}</span>
               <span className="tk-mod-say"><b>{N.length}</b> adım · <b>{N.reduce((t, n) => t + modSorulari(n, m).length, 0)}</b> soru · ~<b>{sure[m]}</b> dk</span>
-            </button>
+              <button type="button" className="tk-btn tk-btn-ana tk-mod-basla" onClick={(e) => { e.stopPropagation(); durdur(); guncelle((k) => ({ ...k, mod: m })); setTamEkran(m); }}>
+                <Play aria-hidden /> Asistanla başla
+              </button>
+            </div>
           );
         })}
       </section>
@@ -338,7 +348,7 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
       {sekme === 'kalip' && <KalipKartlari mod={mod} />}
       {sekme === 'deneme' && <Deneme mod={mod} havuz={adimlar} cal={cal} durdur={durdur} />}
 
-      {tamEkran && <PatolojiAsistan kod={DERS.kod} onClose={() => setTamEkran(false)} />}
+      {tamEkran && <PatolojiAsistan key={tamEkran} kod={DERS.kod} suz={tamEkran === 'hizli' ? hizliSuz : undefined} onClose={() => setTamEkran(null)} />}
     </div>
   );
 };

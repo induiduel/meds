@@ -194,12 +194,12 @@ Patoloji laboratuvarına gelen materyaller 3 grupta toplanır. Birinci grup biyo
 
 Biyopsi, canlıdan tanısal amaçla doku veya hücre örneği alınmasıdır.
 Amaç, en az invaziv yöntemle en fazla tanısal bilgiyi elde etmektir.
-Başlıca türleri şunlardır: insizyonel ve eksizyonel biyopsi; silindirik bir bıçakla yuvarlak doku alınan ve özellikle deride kullanılan panç biyopsi; kalın iğneyle doku silindiri alınan ve meme, karaciğer, böbrek ve prostatta kullanılan tru-cut ya da kor biyopsi; ince iğneyle hücre çekilen ince iğne aspirasyon sitolojisi; ve kamera eşliğinde iç organlardan örnek alınan endoskopik ya da laparoskopik biyopsi.
+Başlıca türleri şunlardır: insizyonel ve eksizyonel biyopsi; silindirik bir bıçakla yuvarlak doku alınan ve özellikle deride kullanılan punch biyopsi; kalın iğneyle doku silindiri alınan ve meme, karaciğer, böbrek ve prostatta kullanılan tru-cut ya da kor biyopsi; ince iğneyle hücre çekilen ince iğne aspirasyon sitolojisi; ve kamera eşliğinde iç organlardan örnek alınan endoskopik ya da laparoskopik biyopsi.
 
 Burası önemli, bu soru çıkmış sorularda en sık tekrar eden sorudur: herhangi bir lezyonun yalnızca bir kısmının, yani bir parçasının çıkarılmasına insizyonel biyopsi denir.
 Lezyonun tamamının çıkarılması ise eksizyonel biyopsidir ve tanıyla birlikte tedavi de sağlayabilir.
 İnsizyonel biyopsi daha çok büyük kitlelerde tanı amacıyla temsili bir parça almak için, eksizyonel biyopsi ise küçük ve sınırlı lezyonlarda tercih edilir.
-Şıklarda karşınıza çıkan panç biyopsi, küretaj ve tıraşlama biyopsisi bu tanımın karşılığı değildir.
+Şıklarda karşınıza çıkan punch biyopsi, küretaj ve tıraşlama biyopsisi bu tanımın karşılığı değildir.
 
 Doğru tanı, doğru hastaya ait doğru örnekle başlar.
 Her materyalde ad ve soyad, kimlik numarası, tarih ve saat, alındığı yer ve örnek tipi bulunmalıdır.

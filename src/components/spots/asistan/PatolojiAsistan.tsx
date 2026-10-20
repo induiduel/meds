@@ -104,7 +104,8 @@ const sahneleriKur = (d: Ders, y: Yogunluk, tekrar?: Set<string>): Sahne[] => {
   return out;
 };
 
-export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDersDegis?: (kod: string) => void }> = ({ kod: kod0, onClose, onDersDegis }) => {
+/** suz: ders yüklendikten sonra uygulanan süzgeç (ör. genetik kampında hızlı mod: yalnız seçili noktalar ve sorular) */
+export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDersDegis?: (kod: string) => void; suz?: (d: any) => any }> = ({ kod: kod0, onClose, onDersDegis, suz }) => {
   const [kod, setKod] = useState(kod0);
   const [ogrenAcik, setOgrenAcik] = useState(false);
   const [dizin, setDizin] = useState<DizinDers[]>([]);
@@ -239,8 +240,9 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     setAdimPanelAcik(false); setHoverNoktaIdx(null); setSifirlaOnay(false);
     const p = dersYukle(kod);
     if (!p) { setHata(true); return; }
-    p.then((d) => {
+    p.then((d0) => {
       if (!canli) return;
+      const d: Ders = suz ? suz(d0) : d0;
       setDers(d);
       try {
         const k = (JSON.parse(localStorage.getItem(ILERLEME_KEY) || '{}') as Record<string, Kayit>)[kod];

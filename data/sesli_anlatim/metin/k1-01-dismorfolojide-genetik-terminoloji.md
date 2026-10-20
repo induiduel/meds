@@ -100,7 +100,7 @@ Deformasyon, fetusta normal gelişen yapının dış mekanik etkilere maruz kalm
 Yapının genetik programı sağlamdır; sorun dışarıdan gelen kuvvettir.
 Normal gelişen organlarda kompresyon, yani bası, konstrüksiyon, yani kısıtlanma, ve hareketsizlik sonucu oluşur.
 Sıklıkla kıkırdak, kemik ve eklemleri tutar ve doğum sonrası geri dönüşümlüdür; bası kalkınca yapı düzelme eğilimindedir.
-Örnek olarak pes ekinovarus, yani İngilizce adıyla klab fut, ayrıca kalça çıkığı ve kraniyofasiyal şekil bozukluğu gösterilebilir.
+Örnek olarak pes ekinovarus, yani İngilizce adıyla club foot, ayrıca kalça çıkığı ve kraniyofasiyal şekil bozukluğu gösterilebilir.
 Tekrarlama riski altta yatan nedene bağlı olarak değişkendir.
 Deformasyonun nedenleri 3 döneme ayrılır: antenatal dönemde fetal ve maternal nedenler, natal dönemde verteks ve makat gelişi, postnatal dönemde ise prematürite ve hipotonisite.
 
@@ -131,7 +131,7 @@ Defekt belli bir anatomik bölgeye sınırlıdır ve embriyolojik gelişimden ba
 Örnekleri şunlardır: amniyotik bantlara bağlı ekstremite amputasyonları ya da fasiyal kleftler, yani yüz yarıkları; talidomid gibi ilaçlara bağlı embriyopatiler; vasküler nedenlere bağlı oluşan gastroşizis ve beyin dokusunda yıkım sonrası oluşan kistik boşluk olan porensefalik kist.
 
 Burası önemli: disrupsiyonda genetik program sağlamdır, bu nedenle tekrarlama riski çok düşüktür.
-Ayrıca sınavın klasik tuzağı şudur: gastroşizis ve amniyotik bant amputasyonu malformasyon değil disrupsiyondur; klab fut ise deformasyondur.
+Ayrıca sınavın klasik tuzağı şudur: gastroşizis ve amniyotik bant amputasyonu malformasyon değil disrupsiyondur; club foot ise deformasyondur.
 
 @@ Displazi ve malformasyon
 Displazi, vücuttaki belli bir dokuda anormal hücresel organizasyonun yapısal değişikliklere neden olmasıdır. Belirli bir doku tipinde hücresel organizasyon bozukluğu sonucu ortaya çıkan morfogenez hatasıdır. Hücre düzeyinde enzim yapımı ya da yapısal protein sentezi bozulur. Örnekleri depo hastalıkları, iskelet displazileri ve ektodermal displazilerdir. Slayttaki görsellerde iskelet displazisinde kısa boylu çocuklar, ektodermal displazide ise az sayıda ve sivri, konik dişler görülür; her iki tabloda da sorun tek bir doku tipindedir. Displastik durumlar süreklilik gösterir. Burası önemli: dokuda intrinsik bir bozukluk olduğundan, doku büyüdükçe ya da fonksiyon gördükçe klinik bulgular ağırlaşır. Displazi ile deformasyon bu açıdan zıt seyirlidir: deformasyon zamanla düzelme eğilimindedir, displazi ise doku büyüdükçe ağırlaşır.
