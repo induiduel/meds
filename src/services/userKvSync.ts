@@ -114,7 +114,12 @@ const META_KEY = 'medsoru_kv_meta_v1'; // anahtar → son yerel değişiklik zam
 const DIRTY_KEY = 'medsoru_kv_dirty_v1'; // henüz sunucuya gitmemiş anahtarlar
 const MAX_VALUE = 2_000_000; // sunucudaki sınırla aynı
 
-export const isProfileKey = (key: string): boolean => SYNC_PATTERNS.some((re) => re.test(key));
+/**
+ * Cihaza özgü görünüm/düzen tercihleri: profile eşitlenmez, her cihaz (telefon, tablet, bilgisayar) kendi
+ * ayarını saklar — yoksa telefondaki değişiklik bilgisayarın görünümünü eziyordu. Sunucudaki eski kopyaları da uygulanmaz.
+ */
+export const DEVICE_PREFS = /^(medsoru_appearance|medsoru_theme|medsoru_rail_collapsed|medsoru_tabbar_v1|medsoru_learn_(layout|mode|toc|zoom)|medsoru_lesson_day_mode|medsoru_(glossary|search|studio)_view|medsoru_reader_prefs|tc_layout|medsoru_auto_reveal|medsoru_solve_drawer|medsoru_study_section|medsoru_music_volume_v1|medsoru_card_note_open|medsoru_canli_ders_(gorunum|tam_yazi)|medsoru_(cikmis_gorunum|saglik_gorunum|saglik_yogunluk|r12_reader))$/;
+export const isProfileKey = (key: string): boolean => !DEVICE_PREFS.test(key) && SYNC_PATTERNS.some((re) => re.test(key));
 /** Öğrenciye ait (profil, paket ya da sayaç) anahtar mı — oturum değişince ayrılır (userScope). */
 export const isUserDataKey = (key: string): boolean => isProfileKey(key) || BUNDLE_KEYS.has(key) || QUIET_KEYS.has(key);
 

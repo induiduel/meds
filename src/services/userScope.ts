@@ -12,7 +12,7 @@
  *    (aksi halde sonraki oturumsuz kişi eski öğrencinin cihaz yedeğini çekerdi).
  * Genel/cihaz ayarları (tema, önbellekler, API adresi) dokunulmadan kalır.
  */
-import { isUserDataKey, withoutTracking } from './userKvSync';
+import { DEVICE_PREFS, isUserDataKey, withoutTracking } from './userKvSync';
 
 const OWNER_KEY = 'medsoru_owner_v1';
 const STASH_PREFIX = 'medsoru_stash_v1:';
@@ -33,8 +33,6 @@ const EXTRA_PERSONAL: RegExp[] = [
   /^medsoru_device_(token|pub)$/,
 ];
 
-/** Profilde eşitlense de kişisel bilgi taşımayan görünüm/düzen tercihleri: cihazda kalır. */
-const DEVICE_PREFS = /^(medsoru_appearance|medsoru_rail_collapsed|medsoru_learn_(layout|mode|toc|zoom)|medsoru_(glossary|search|studio)_view|medsoru_reader_prefs|tc_layout|medsoru_auto_reveal|medsoru_solve_drawer|medsoru_study_section|medsoru_music_volume_v1|medsoru_card_note_open)$/;
 
 export const isPersonalKey = (k: string) =>
   !k.startsWith(STASH_PREFIX) && k !== OWNER_KEY && !DEVICE_PREFS.test(k) && (isUserDataKey(k) || EXTRA_PERSONAL.some((re) => re.test(k)));
