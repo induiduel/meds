@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 124,
-  "baslik": "Sesli derslerde toplu PDF indirme",
+  "onem": 125,
+  "baslik": "İyileştirmeler ve düzeltmeler",
   "maddeler": [
-    "Sesli dersler listesinde yeni \"Toplu PDF\" düğmesi: istediğin dersleri (branşa göre ya da tek tek) seçip metinlerini tek seferde indirebilirsin.",
-    "İki seçenek var: her ders ayrı PDF (tek ZIP dosyası) ya da tek PDF (içindekiler, her ders yeni sayfada, PDF yer imleriyle). Önemli yer işaretleri ve slayt başlıkları isteğe bağlı."
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "eklenen": [
-    "Sesli dersler listesinde yeni \"Toplu PDF\" düğmesi: istediğin dersleri (branşa göre ya da tek tek) seçip metinlerini tek seferde indirebilirsin.",
-    "İki seçenek var: her ders ayrı PDF (tek ZIP dosyası) ya da tek PDF (içindekiler, her ders yeni sayfada, PDF yer imleriyle). Önemli yer işaretleri ve slayt başlıkları isteğe bağlı."
+  "eklenen": [],
+  "degisen": [
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

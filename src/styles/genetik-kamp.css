@@ -227,42 +227,81 @@
 }
 
 /* ——— Sesli ders + slayt (GenetikSesliDers.tsx) ——— */
-.gsd { display: grid; gap: 10px; }
-.gsd-govde { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 12px; height: calc(100vh - var(--sh-top-h, 0px) - 170px); min-height: 460px; }
-.gsd-metin { min-width: 0; overflow-y: auto; padding: 4px 10px 40vh 4px; border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); }
-.gsd-b { display: grid; gap: 3px; width: 100%; margin: 14px 0 6px; padding: 10px 12px; border: 0; border-radius: 10px; background: var(--color-field); text-align: left; font: 650 15px/1.35 var(--font-sans); }
-.gsd-b span { font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
-.gsd-b small { font-size: 13px; font-weight: 400; line-height: 1.45; color: var(--color-ink-2); }
+.gsd { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 8px; height: calc(100dvh - var(--sh-top-h, 0px) - var(--sh-tabs-h, 0px) - 120px); min-height: 520px; }
+.tk.gsd-tam-kap { position: fixed; inset: 0; z-index: 2147483000; display: block; max-width: none; margin: 0; padding: 0; background: var(--color-canvas, var(--color-white)); }
+.gsd.is-tam { height: 100dvh; min-height: 0; padding: max(10px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); background: var(--color-canvas, var(--color-white)); }
+.gsd:fullscreen { background: var(--color-canvas, var(--color-white)); }
+
+/* araç çubuğu */
+.gsd-arac { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.gsd-sec { display: inline-flex; padding: 3px; gap: 2px; border-radius: 11px; background: var(--color-field); }
+.gsd-sec button { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 12px; border: 0; border-radius: 8px; background: transparent; font: 600 13px/1 var(--font-sans); color: var(--color-ink-2); }
+.gsd-sec button svg { width: 15px; height: 15px; }
+.gsd-sec button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 1px 3px rgb(0 0 0 / .1); }
+.gsd-oran input { width: 120px; accent-color: var(--color-accent); }
+.gsd-yazi { display: inline-flex; align-items: center; gap: 2px; font-size: 12px; color: var(--color-ink-3); }
+.gsd-tam-btn { margin-left: auto; }
+
+/* gövde: görünüm + taraf + oran */
+.gsd-govde { display: grid; gap: 12px; min-height: 0; grid-template-columns: minmax(0, var(--gsd-oran, 1fr)) minmax(0, var(--gsd-pdf-oran, 1.15fr)); }
+.gsd-t-sol .gsd-pdf { order: -1; }
+.gsd-g-metin .gsd-govde, .gsd-g-pdf .gsd-govde { grid-template-columns: minmax(0, 1fr); }
+.gsd-g-metin .gsd-pdf { display: none; }
+.gsd-g-pdf .gsd-metin { display: none; }
+
+/* metin */
+.gsd-metin { min-width: 0; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 4px 14px 30vh 8px; border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); font-size: calc(15px * var(--gsd-yazi, 1)); contain: content; }
+.gsd-g-metin .gsd-metin { padding-inline: max(14px, calc((100% - 820px) / 2)); }
+.gsd-b { display: grid; gap: 3px; width: 100%; margin: 16px 0 6px; padding: 10px 12px; border: 0; border-radius: 10px; background: var(--color-field); text-align: left; font: 650 1.02em/1.35 var(--font-sans); }
+.gsd-b span { font-size: .72em; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
+.gsd-b small { font-size: .88em; font-weight: 400; line-height: 1.5; color: var(--color-ink-2); }
 .gsd-b.is-on { background: var(--color-accent-soft); }
-.gsd-n { padding: 8px 6px 4px; }
-.gsd-n h4 { margin: 0 0 4px; font: 650 14.5px/1.35 var(--font-sans); color: var(--color-ink); }
+.gsd-n { padding: 10px 4px 4px; }
+.gsd-n h4 { margin: 0 0 6px; font: 700 1.04em/1.35 var(--font-sans); color: var(--color-ink); }
 .gsd-n:not(.is-on) h4 { color: var(--color-ink-2); }
-.gsd-n ul { display: grid; gap: 1px; }
-.gsd-c button { position: relative; display: block; width: 100%; padding: 5px 8px 5px 22px; border: 0; border-radius: 8px; background: transparent; text-align: left; font-size: 14.5px; line-height: 1.55; color: var(--color-ink-2); }
-.gsd-c button::before { content: ''; position: absolute; left: 9px; top: .95em; width: 5px; height: 5px; border-radius: 50%; background: var(--color-ink-3); }
+.gsd-n ul { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.gsd-c button { position: relative; display: block; width: 100%; padding: 5px 8px 5px 24px; border: 0; border-radius: 8px; background: transparent; text-align: left; font: inherit; line-height: 1.6; color: var(--color-ink-2); }
+.gsd-c button::before { content: ''; position: absolute; left: 10px; top: calc(5px + .8em - 3px); width: 6px; height: 6px; border-radius: 50%; background: var(--color-ink-3); }
+.gsd-c.is-alt button { padding-left: 46px; }
+.gsd-c.is-alt button::before { left: 30px; width: 8px; height: 2px; border-radius: 1px; top: calc(5px + .8em - 1px); }
 .gsd-c button:hover { background: var(--color-field); }
+.gsd-c.is-gecti button { color: var(--color-ink); }
 .gsd-c.is-on button { background: var(--color-accent-soft); color: var(--color-ink); }
 .gsd-c.is-on button::before { background: var(--color-accent); }
-.gsd-pdf { min-width: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); overflow: hidden; }
+.gsd-c.is-not button { box-shadow: inset 3px 0 0 var(--color-warn, #e0a100); }
+.gsd-c.is-not button::before { background: var(--color-warn, #e0a100); }
+/* cümle içi alt maddeler: "tanım; örnekler" */
+.gsd-p { display: block; }
+.gsd-p.gsd-d1 { position: relative; margin-top: 2px; padding-left: 20px; }
+.gsd-p.gsd-d1::before { content: ''; position: absolute; left: 6px; top: calc(.8em - 1px); width: 8px; height: 2px; border-radius: 1px; background: var(--color-ink-3); }
+.gsd-k { border-radius: 4px; transition: background-color .1s; }
+.gsd-k.is-on { background: color-mix(in srgb, var(--color-accent) 30%, transparent); color: var(--color-ink); box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-accent) 30%, transparent); }
+
+/* slayt */
+.gsd-pdf { min-width: 0; min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); overflow: hidden; }
 .gsd-pdf-bas { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; padding: 8px 12px; border-bottom: 1px solid var(--color-line); font-size: 13px; color: var(--color-ink-2); }
 .gsd-pdf-bas b { color: var(--color-ink); }
 .gsd-pdf-bas small { margin-left: auto; font-size: 11.5px; color: var(--color-ink-3); }
 .gsd-pdf-alan { position: relative; min-height: 0; }
-.gsd-pdf-k { position: absolute; inset: 0; visibility: hidden; pointer-events: none; }
+/* görüntüleyici (.pdv flex: 1) kendi içinde kaysın: kap esnek sütun olmalı, yoksa sayfaya hiç gidilmez */
+.gsd-pdf-k { position: absolute; inset: 0; display: flex; flex-direction: column; visibility: hidden; pointer-events: none; }
 .gsd-pdf-k.is-on { visibility: visible; pointer-events: auto; }
 .gsd-pdf-bos { display: grid; place-items: center; height: 100%; font-size: 13px; color: var(--color-ink-3); }
-.gsd-oynatici { position: sticky; bottom: calc(var(--sh-tabs-h, 0px) + 8px); z-index: 3; display: flex; align-items: center; gap: 6px; padding: 8px 10px; border: 1px solid var(--color-line); border-radius: 14px; background: var(--color-white); }
+
+/* oynatıcı: gövdenin altında kendi satırı (metnin üstüne binmez) */
+.gsd-oynatici { display: flex; align-items: center; gap: 6px; padding: 8px 10px; border: 1px solid var(--color-line); border-radius: 14px; background: var(--color-white); }
 .gsd-oyna { min-width: 104px; }
 .gsd-ilerle { flex: 1 1 auto; min-width: 40px; height: 5px; border-radius: 3px; background: var(--color-field); position: relative; overflow: hidden; }
 .gsd-ilerle i { position: absolute; inset: 0 auto 0 0; width: var(--w); background: var(--color-accent); border-radius: 3px; }
 .gsd-sure { font-size: 12px; color: var(--color-ink-3); white-space: nowrap; }
 @media (max-width: 900px) {
-  .gsd-govde { grid-template-columns: minmax(0, 1fr); grid-template-rows: 42vh minmax(0, 1fr); height: calc(100vh - var(--sh-top-h, 0px) - var(--sh-tabs-h, 0px) - 150px); }
-  .gsd-pdf { order: -1; }
+  .gsd-g-ikisi .gsd-govde { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 42%) minmax(0, 1fr); }
+  .gsd-g-ikisi .gsd-pdf { order: -1; }
+  .gsd-oran, .gsd-taraf { display: none; }
 }
 @media (max-width: 560px) {
   .gsd-sure, .gsd-oynatici .tk-hiz { display: none; }
   .gsd-oyna { min-width: 0; }
+  .gsd-sec button span { display: none; }
+  .gsd-tam-btn { padding-inline: 10px; }
 }
-.gsd-k { border-radius: 4px; transition: background-color .12s; }
-.gsd-k.is-on { background: color-mix(in srgb, var(--color-accent) 28%, transparent); color: var(--color-ink); }
