@@ -1,5 +1,8 @@
 # CLAUDE.md
 
+> **Kurul 2+ otomatik hat:** `docs/KURUL_OTOMASYON_EL_KITABI.md` (aşamalar, zamanlayıcılar, kapılar, dağıtım kuralları) +
+> `docs/KURUL2_YAPILMAYACAK_HATALAR.md`; aşama defteri `otomasyon/hat.json`.
+
 > **Önce oku:** `../PROJE_TANITIMI.md` — projenin amacı, klasör yapısı (downloads/temp1-2-3/database) ve zorunlu boru hattı. Tüm ajanlar buna uygun davranmalıdır.
 
 MeDSor: shared exam-question pool for Turkish medical school (Dönem 3). Students submit fragments of
