@@ -182,9 +182,10 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
   göndermez (`provak2`, çıktılar `meds_temp/prova/<zaman>/`).
 
 ## 10. Çok oturum ve dağıtım kuralları
-- Kod dağıtımı: **temiz worktree** (`/home/indu/medsor/meds-dagitim`, `git checkout -f --detach <commit>`) →
-  `deploy/oracle/deploy-code.sh` (cihaz kilidi `${XDG_RUNTIME_DIR}/medsor-deploy.lock`; Oracle kilidi `/tmp/meds-deploy.lock`).
-  Önce `guncelleme_notu.json` `onem`+1 commit. Dağıtım `dist/dagitim.json` damgasını yazar.
+- Kod dağıtımı: **yalnız `bash deploy/oracle/dagit.sh`** (önce commit + push; `onem`+1). Kilidi bekler (≤30 dk), origin/main →
+  temiz worktree `/home/indu/medsor/meds-dagitim` → `deploy-code.sh` (onaylı mod). Durma kodları: 75 kilit, 77 canlı commit
+  hedefte yok, 78 canlı kirli, 79 `onem` artmamış (`--sessiz` küçük düzeltme). `deploy-code.sh` doğrudan: kirli ağaç 76,
+  canlıyı geri alacaksa 77 (acil `--kirli-izin`). Dağıtım `dist/dagitim.json` damgasını yazar; eşitleme commit'i main'e gider.
 - Canlı sürüm commit'lenmiş bir commit'e karşılık gelmeli; çalışma ağacından kirli dağıtım içerik dağıtımını durdurur.
 - Karışık dosyada yalnız kendi parçanı sahnele (`git apply --cached`), sahnelenmiş ağacı `git checkout-index` ile ayrı
   klasörde `tsc` ile sına. Toplu "bekleyen tüm değişiklikler" commit'leri başkasının yarım işini taşır — kaçın.
