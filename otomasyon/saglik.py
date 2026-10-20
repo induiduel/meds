@@ -51,7 +51,9 @@ def turev_eksikleri(api="https://api.nofrostlife.com.tr"):
         if not sesli:
             continue
         k2 = str(d["key"])[:2] in ("k2", "k3", "k4", "k5", "k6")
-        kontrol = [("cumleZaman", any(v.get("cumleZaman") for v in sesli)), ("isaret", bool(x.get("isaret")))]
+        kontrol = [("cumleZaman", any(v.get("cumleZaman") for v in sesli))]
+        if x.get("pdf"):  # PDF'i olmayan derste (2026-27 slaytı Drive'da yok) işaret üretilemez — eksik sayılmaz
+            kontrol.append(("isaret", bool(x.get("isaret"))))
         if k2:  # kelime zamanlaması yalnız cihazda (GPU, meds-kelime-zaman-hat) üretilir: cihaz kapalıysa gecikir → görünür olsun
             kontrol.append(("kelimeZaman", any(v.get("kelimeZaman") for v in sesli)))
         eksik = [a for a, ok in kontrol if not ok]
