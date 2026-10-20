@@ -21,7 +21,7 @@ import { OgrenYeri } from '../ogren/OgrenYeri';
 import { ogrenEslemeVar } from '../ogren/ogrenEsle';
 import { useYildizliMi, useYildizliSayisi, yildizToggle, yildizliMi } from '../../../services/yildizliParagrafStore';
 import { YildizliParagraflarModal } from '../../study/YildizliParagraflarModal';
-import { releasePageFullscreen } from '../../../utils/fullscreen';
+import { isAppFullscreen, releasePageFullscreen } from '../../../utils/fullscreen';
 import '../../../styles/soru-cozucu.css';
 
 /**
@@ -144,7 +144,8 @@ export const SoruCozucu: React.FC<Props> = ({
   const [engel, setEngel] = useState(false);
   const [dersMenu, setDersMenu] = useState(false);
   const [ayarAcik, setAyarAcik] = useState(false);
-  const [tamEkran, setTamEkran] = useState(false);
+  // Uygulama tam ekrandayken açılırsa (tam ekranda sayfa geçişi, Geri) doğrudan tam ekran kipinde başlar.
+  const [tamEkran, setTamEkran] = useState(() => isAppFullscreen());
   const [ogrenAcik, setOgrenAcik] = useState(false);
   const [yildizModalAcik, setYildizModalAcik] = useState(false);
   const yildizSayisi = useYildizliSayisi();

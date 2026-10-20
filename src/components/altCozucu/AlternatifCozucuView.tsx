@@ -26,7 +26,7 @@ import { openPwaInstallGuide } from '../../services/pwaService';
 import { toast } from '../ui/Toast';
 import { navigateTo, pathFor } from '../../router';
 import '../../styles/soru-cozucu.css';
-import { releasePageFullscreen } from '../../utils/fullscreen';
+import { isAppFullscreen, releasePageFullscreen } from '../../utils/fullscreen';
 import '../../styles/alternatif-cozucu.css';
 import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 
@@ -149,7 +149,8 @@ const AlternatifCozucuOynatici: React.FC<OynaticiProps> = ({
   const [engel, setEngel] = useState(false);
   const [dersMenu, setDersMenu] = useState(false);
   const [ayarAcik, setAyarAcik] = useState(false);
-  const [tamEkran, setTamEkran] = useState(false);
+  // Uygulama tam ekrandayken açılırsa (tam ekranda sayfa geçişi, Geri) doğrudan tam ekran kipinde başlar.
+  const [tamEkran, setTamEkran] = useState(() => isAppFullscreen());
   const [ogrenAcik, setOgrenAcik] = useState(false);
   const [yildizModalAcik, setYildizModalAcik] = useState(false);
   const yildizSayisi = useYildizliSayisi();

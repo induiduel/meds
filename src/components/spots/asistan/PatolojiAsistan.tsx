@@ -20,7 +20,7 @@ import { OgrenYeri } from '../ogren/OgrenYeri';
 import { ogrenEslemeVar } from '../ogren/ogrenEsle';
 import { useYildizliMi, useYildizliSayisi, yildizToggle, yildizliMi } from '../../../services/yildizliParagrafStore';
 import { YildizliParagraflarModal } from '../../study/YildizliParagraflarModal';
-import { releasePageFullscreen } from '../../../utils/fullscreen';
+import { isAppFullscreen, releasePageFullscreen } from '../../../utils/fullscreen';
 import '../../../styles/patoloji-asistan.css';
 
 /**
@@ -139,7 +139,8 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   const [sesYok, setSesYok] = useState(false);
   const [devamSor, setDevamSor] = useState<Kayit | null>(null);
   const [dersMenu, setDersMenu] = useState(false);
-  const [tamEkran, setTamEkran] = useState(false);
+  // Uygulama tam ekrandayken açılırsa (tam ekranda sayfa geçişi, Geri) doğrudan tam ekran kipinde başlar.
+  const [tamEkran, setTamEkran] = useState(() => isAppFullscreen());
   const [ayarAcik, setAyarAcik] = useState(false); // dar ekranda oynatma ayarları açılır panelde
   const [engel, setEngel] = useState(false);
   const [yildizModalAcik, setYildizModalAcik] = useState(false);

@@ -1,20 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 72,
-  "baslik": "Sesli derste slayt işaretleri iyileşti",
+  "onem": 73,
+  "baslik": "Soru çözücü ve asistanda tam ekran gezinme",
   "maddeler": [
-    "Sesli derste okunan cümlenin slayttaki karşılığı daha çok derste bulunuyor; anlatım slayttan farklı sırayla ilerlese de doğru madde işaretleniyor.",
-    "Fotoğraf veya tarama olarak eklenmiş slaytlardaki yazılar da okunup işaretleniyor.",
-    "Lazer imleci artık yalnız bir görsel anlatılırken çıkıyor; ilgisiz resimlere gitmiyor."
+    "Soru çözücü, alternatif çözücü ve sınav asistanında tam ekrandayken başka sayfaya gidip Geri ile dönünce ekran doğrudan tam ekran kipinde açılıyor."
   ],
-  "eklenen": [
-    "Fotoğraf veya tarama olarak eklenmiş slaytlardaki yazılar da okunup işaretleniyor."
-  ],
-  "degisen": [
-    "Sesli derste okunan cümlenin slayttaki karşılığı daha çok derste bulunuyor; anlatım slayttan farklı sırayla ilerlese de doğru madde işaretleniyor."
-  ],
+  "eklenen": [],
+  "degisen": [],
   "duzeltilen": [
-    "Lazer imleci artık yalnız bir görsel anlatılırken çıkıyor; ilgisiz resimlere gitmiyor."
+    "Soru çözücü, alternatif çözücü ve sınav asistanında tam ekrandayken başka sayfaya gidip Geri ile dönünce ekran doğrudan tam ekran kipinde açılıyor."
   ],
   "silinen": []
 }
