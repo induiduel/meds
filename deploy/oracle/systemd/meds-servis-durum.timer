@@ -1,0 +1,12 @@
+# /etc/systemd/system/meds-servis-durum.timer — dakikada bir durum + son 200 satır günlük (panel okur)
+# Kurulum: sudo cp deploy/oracle/systemd/meds-servis-isci.{path,service} deploy/oracle/systemd/meds-servis-durum.{service,timer} /etc/systemd/system/
+#          && sudo systemctl daemon-reload && sudo systemctl enable --now meds-servis-isci.path meds-servis-durum.timer
+# Ayrıntı: deploy/oracle/servis_isci.sh başlığı (beyaz liste orada yeniden doğrulanır).
+[Unit]
+Description=MeDSor panel servis durumu dökümü (1 dk)
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+AccuracySec=10s
+[Install]
+WantedBy=timers.target

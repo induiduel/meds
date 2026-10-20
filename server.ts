@@ -162,6 +162,10 @@ import { createPoolClusterService } from './src/services/poolClusterService.ts';
 import { createRecallFeedback } from './src/services/recall/feedback.ts';
 import { registerUserPushRoutes } from './src/services/userPushService.ts';
 import { registerPgAdminRoutes } from './src/services/pgAdminRoutes.ts';
+import { registerUserAdminRoutes } from './src/services/userAdminRoutes.ts';
+import { registerServiceControlRoutes } from './src/services/serviceControlRoutes.ts';
+import { registerModerationActionRoutes } from './src/services/moderationActionsRoutes.ts';
+import { registerHatActionRoutes } from './src/services/hatActionsRoutes.ts';
 import { registerUserDataBackupRoutes, userEventHash, type ServerUserNotification } from './src/services/userDataBackupService.ts';
 import { registerPeopleInsights } from './src/services/peopleInsights.ts';
 import { initContentOverlay, resolveContent, writableContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
@@ -495,6 +499,9 @@ registerPgAdminRoutes(app, {
   oracleApiUrl: process.env.MEDS_ORACLE_API_URL || 'https://api.nofrostlife.com.tr',
   isPgOnline: () => pgOnline,
 });
+// Yönetim v14: kullanıcı rolü/askı (askıdaki hesapların yazma isteklerini reddeden ara katman dahil) ve servis yönetimi
+registerUserAdminRoutes(app, { adminEmail: 'nofrostlife@gmail.com', loadUsers: () => loadUsers() as any[], saveUsers: (u) => saveUsers(u as any), mirrorUser: mirrorUserToDb, broadcastAdmin: (e, d) => broadcastRealtimeEvent(e, d, true), oracleApiUrl: process.env.MEDS_ORACLE_API_URL || 'https://api.nofrostlife.com.tr' });
+registerServiceControlRoutes(app, { rootDir: __dirname, adminEmail: 'nofrostlife@gmail.com' });
 
 // Public, read-only API directory and versioned aliases for the site's public datasets.
 // Keep this allowlist explicit: `/v1/admin`, write routes, user records and raw AI data
@@ -2777,6 +2784,7 @@ registerSesliAnlatimRoutes(app, requireAdmin, (ev, data) => broadcastRealtimeEve
 registerCanliDersRoutes(app);
 registerPatolojiAsistanRoutes(app);
 registerOlasiSoruRoutes(app, { rootDir: __dirname, requireAdmin });
+registerHatActionRoutes(app, { rootDir: __dirname, requireAdmin });
 registerKimlikRoutes(app, { rootDir: __dirname });
 registerKampRoutes(app, { dataDir: path.resolve(__dirname, 'data'), requireAdmin });
 registerPatolojiCozucuRoutes(app);
@@ -6956,6 +6964,23 @@ const userDataRoutes = registerUserDataBackupRoutes(app, {
 });
 /** Sunucu olayını öğrencinin profil bildirimlerine yazar (tüm cihazlarında canlı görünür). */
 const notifyStudent = (target: { uid?: string | null; email?: string | null }, n: ServerUserNotification) => userDataRoutes.pushUserNotification(target, n);
+registerModerationActionRoutes(app, {
+  dataDir: DATA_DIR,
+  requireAdmin,
+  actorOf: (req) => String(req.headers['x-admin-email'] || ADMIN_EMAIL),
+  notifyStudent,
+  broadcastAdmin: (ev, data) => broadcastRealtimeEvent(ev, data, true),
+  findTarget: (id) => {
+    for (const q of [...getPastQuestionsDb(), ...((db?.questions || []) as any[])]) {
+      const r = (q.reports || []).find((x: any) => x?.id === id);
+      if (r) return { uid: r.reporterUid, email: r.reporterEmail, name: r.reportedBy, questionId: q.id };
+      const c = (q.comments || []).find((x: any) => x?.id === id);
+      if (c) return { uid: c.authorUid, email: c.authorEmail, name: c.author, questionId: q.id };
+    }
+    const a: any = autoRepairStore.getById(id);
+    return a ? { uid: a.userReport?.uid, email: a.userReport?.email, name: a.userReport?.reportedBy } : null;
+  },
+});
 
 // WhatsApp Meta Cloud API bildirim rotaları ve günlük tekrar servisi
 registerWhatsAppRoutes(app, {

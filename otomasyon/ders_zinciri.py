@@ -394,6 +394,8 @@ def main():
             continue
         if not pk:
             continue
+        if s.get("cekildi") and not a.ders:  # Hat panosundan yayından çekildi: kendiliğinden yeniden yayına alınmaz
+            continue
         kp = kaynak_getir(pk)
         sha = hashlib.sha256(kp.read_bytes()).hexdigest()[:16] if kp.exists() else ""
         if not sha:

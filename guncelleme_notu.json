@@ -1,14 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 105,
-  "baslik": "İyileştirmeler ve düzeltmeler",
+  "onem": 106,
+  "baslik": "Yönetim paneli: tüm işlemler çalışır",
   "maddeler": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+    "Moderasyon: kişiye atama, etiket, reddetme, öğrenciye yanıt, erteleme (tekli ve toplu).",
+    "Kullanıcılar: rol değiştirme ve hesap askıya alma.",
+    "Sistem: servisleri yeniden başlatma/durdurma ve servis günlükleri.",
+    "Hat panosu: ders × aşama tablosu; sürdür, baştan üret, denetçiye gönder, yayından çek."
   ],
-  "eklenen": [],
-  "degisen": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+  "eklenen": [
+    "Moderasyon: kişiye atama, etiket, reddetme, öğrenciye yanıt, erteleme (tekli ve toplu).",
+    "Kullanıcılar: rol değiştirme ve hesap askıya alma.",
+    "Sistem: servisleri yeniden başlatma/durdurma ve servis günlükleri.",
+    "Hat panosu: ders × aşama tablosu; sürdür, baştan üret, denetçiye gönder, yayından çek."
   ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

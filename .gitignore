@@ -102,3 +102,6 @@ data/farmakoloji_cozucu/ses/
 data/ogren_ses/
 src/data/sinav_calisma_k*.json
 data/sesli_anlatim/.pdf_onbellek/
+
+# Yönetim › Sistem: servis istek/sonuç/durum dosyaları (makineye özel, geçici)
+data/servis_kontrol/

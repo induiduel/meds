@@ -1,11 +1,12 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Flag, Save, Wand2, FilePlus2, Eye, EyeOff, Check, Trash2, Inbox } from 'lucide-react';
+import { Flag, Save, Wand2, FilePlus2, Eye, EyeOff, Check, Trash2, Inbox, UserPlus, Tag, Ban, Reply, Clock } from 'lucide-react';
 import type { QuestionItem, QuestionOption } from '../../types';
 import { ApiService, safeJsonFetch } from '../../services/api';
 import type { InboxReport } from '../../services/manageConsoleService';
 import { EmptyState, ConfirmButton, Field, timeLabel, Drawer } from './consoleUi';
 import { StatRow, Tabs14, SearchField, Toolbar, DataTable, Pill, DetailNav, DetailLayout, FactList, Card14, type Col } from '../v14/pageKit';
 import { BulkBar, useSelection } from '../v14/manageKit';
+import { useModerationMeta, ModerationActionDrawer, MetaPills, metaFacts, ReplyHistory, isSnoozed, isRejected, isMine, type ActionMode } from './moderationActions';
 
 const AiQuestionOptimizerModal = React.lazy(() => import('../AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal || (m as any).default })));
 
@@ -47,7 +48,11 @@ export const ManageModerationSection: React.FC<Props> = ({
   onRefreshData,
   reloadInbox,
 }) => {
-  const [status, setStatus] = useState<'pending' | 'resolved' | 'all'>('pending');
+  const [status, setStatus] = useState<'pending' | 'mine' | 'snoozed' | 'rejected' | 'resolved' | 'all'>('pending');
+  const { meta, act } = useModerationMeta();
+  const [actMode, setActMode] = useState<ActionMode | null>(null);
+  const [actIds, setActIds] = useState<string[]>([]);
+  const openAction = (mode: ActionMode, ids: string[]) => { setActIds(ids); setActMode(mode); };
   const [stem, setStem] = useState('');
   const [answer, setAnswer] = useState<Key>('A');
   const [explanation, setExplanation] = useState('');
@@ -56,16 +61,20 @@ export const ManageModerationSection: React.FC<Props> = ({
   const [busy, setBusy] = useState<'' | 'hide' | 'delete' | 'draft' | 'resolve'>('');
   const [aiOpen, setAiOpen] = useState(false);
 
-  const isDone = (r: InboxReport) => resolvedIds.has(r.id) || (r.status || 'pending') !== 'pending';
-  const pending = useMemo(() => reports.filter((r) => !isDone(r)), [reports, resolvedIds]); // eslint-disable-line react-hooks/exhaustive-deps
-  const resolved = useMemo(() => reports.filter((r) => isDone(r)), [reports, resolvedIds]); // eslint-disable-line react-hooks/exhaustive-deps
+  const isDone = (r: InboxReport) => resolvedIds.has(r.id) || (r.status || 'pending') !== 'pending' || isRejected(meta[r.id]);
+  const open = useMemo(() => reports.filter((r) => !isDone(r)), [reports, resolvedIds, meta]); // eslint-disable-line react-hooks/exhaustive-deps
+  const pending = useMemo(() => open.filter((r) => !isSnoozed(meta[r.id])), [open, meta]);
+  const snoozed = useMemo(() => open.filter((r) => isSnoozed(meta[r.id])), [open, meta]);
+  const mine = useMemo(() => open.filter((r) => isMine(meta[r.id])), [open, meta]);
+  const rejected = useMemo(() => reports.filter((r) => isRejected(meta[r.id])), [reports, meta]);
+  const resolved = useMemo(() => reports.filter((r) => isDone(r) && !isRejected(meta[r.id])), [reports, resolvedIds, meta]); // eslint-disable-line react-hooks/exhaustive-deps
   const [q, setQ] = useState('');
   const list = useMemo(() => {
-    const base = status === 'pending' ? pending : status === 'resolved' ? resolved : reports;
+    const base = status === 'pending' ? pending : status === 'mine' ? mine : status === 'snoozed' ? snoozed : status === 'rejected' ? rejected : status === 'resolved' ? resolved : reports;
     const t = q.trim().toLocaleLowerCase('tr-TR');
     if (!t) return base;
-    return base.filter((r) => [r.reason, r.details, r.questionTopic, r.questionId, r.reportedBy].some((x) => String(x || '').toLocaleLowerCase('tr-TR').includes(t)));
-  }, [status, pending, resolved, reports, q]);
+    return base.filter((r) => [r.reason, r.details, r.questionTopic, r.questionId, r.reportedBy, meta[r.id]?.assignee, ...(meta[r.id]?.tags || [])].some((x) => String(x || '').toLocaleLowerCase('tr-TR').includes(t)));
+  }, [status, pending, mine, snoozed, rejected, resolved, reports, q, meta]);
   const selection = useSelection<string>();
   const [bulkBusy, setBulkBusy] = useState(false);
 
@@ -228,12 +237,24 @@ export const ManageModerationSection: React.FC<Props> = ({
     { key: 'reason', label: 'Bildirim', main: true, render: (r) => r.reason },
     { key: 'topic', label: 'Soru', render: (r) => <span className="clip">{r.questionTopic || r.questionId}</span>, width: '28%' },
     { key: 'who', label: 'Gönderen', muted: true, render: (r) => r.reportedBy || 'Anonim' },
-    { key: 'st', label: 'Durum', render: (r) => (isDone(r) ? <Pill tone="ok">Kapatıldı</Pill> : <Pill tone="bad">Açık</Pill>) },
+    { key: 'st', label: 'Durum', render: (r) => (isRejected(meta[r.id]) ? <Pill tone="warn">Reddedildi</Pill> : isDone(r) ? <Pill tone="ok">Kapatıldı</Pill> : <Pill tone="bad">Açık</Pill>) },
+    { key: 'meta', label: 'Atama ve etiket', render: (r) => <MetaPills m={meta[r.id]} />, width: '20%' },
     { key: 'when', label: 'Zaman', muted: true, render: (r) => (r.createdAt ? timeLabel(r.createdAt, true) : '—') },
   ];
 
+  const metaActions = report ? (
+    <>
+      <button type="button" onClick={() => openAction('assign', [report.id])} className="m14-btn ghost"><UserPlus aria-hidden="true" /> Kişiye ata</button>
+      <button type="button" onClick={() => openAction('tags', [report.id])} className="m14-btn ghost"><Tag aria-hidden="true" /> Etiket</button>
+      <button type="button" onClick={() => openAction('snooze', [report.id])} className="m14-btn ghost"><Clock aria-hidden="true" /> Ertele</button>
+      <button type="button" onClick={() => openAction('reply', [report.id])} className="m14-btn ghost"><Reply aria-hidden="true" /> Kişiye yanıt</button>
+      <button type="button" onClick={() => openAction('reject', [report.id])} className="m14-btn ghost"><Ban aria-hidden="true" /> {isRejected(meta[report.id]) ? 'Ret' : 'Reddet'}</button>
+    </>
+  ) : null;
+
   const actions = question ? (
     <>
+      {metaActions}
       <ConfirmButton icon={Trash2} className="m14-btn danger" confirmLabel="Kalıcı silmeyi onayla" busy={busy === 'delete'} busyLabel="Siliniyor…" onConfirm={remove}>
         Sil
       </ConfirmButton>
@@ -256,7 +277,10 @@ export const ManageModerationSection: React.FC<Props> = ({
       </button>
     </>
   ) : report ? (
-    <button type="button" onClick={() => void closeClean()} disabled={busy === 'resolve'} className="m14-btn primary">Bildirimi kapat</button>
+    <>
+      {metaActions}
+      <button type="button" onClick={() => void closeClean()} disabled={busy === 'resolve'} className="m14-btn primary">Bildirimi kapat</button>
+    </>
   ) : null;
 
   return (
@@ -264,6 +288,8 @@ export const ManageModerationSection: React.FC<Props> = ({
       <StatRow
         stats={[
           { label: 'Bekleyen', value: pending.length, tone: pending.length ? 'bad' : 'ok', onClick: () => setStatus('pending') },
+          { label: 'Bana atanan', value: mine.length, onClick: () => setStatus('mine') },
+          { label: 'Ertelenen', value: snoozed.length, onClick: () => setStatus('snoozed') },
           { label: 'Çözülen', value: resolved.length, onClick: () => setStatus('resolved') },
           { label: 'Toplam bildirim', value: reports.length, onClick: () => setStatus('all') },
         ]}
@@ -275,6 +301,9 @@ export const ManageModerationSection: React.FC<Props> = ({
           onChange={setStatus}
           options={[
             { id: 'pending', label: 'Bekleyen', n: pending.length },
+            { id: 'mine', label: 'Bana atanan', n: mine.length },
+            { id: 'snoozed', label: 'Ertelenenler', n: snoozed.length },
+            { id: 'rejected', label: 'Reddedilen', n: rejected.length },
             { id: 'resolved', label: 'Çözülen', n: resolved.length },
             { id: 'all', label: 'Tümü', n: reports.length },
           ]}
@@ -286,7 +315,14 @@ export const ManageModerationSection: React.FC<Props> = ({
         noun="bildirim"
         busy={bulkBusy}
         onClear={selection.clear}
-        actions={[{ label: 'Hatasız kapat', kind: 'main', run: bulkResolve }]}
+        actions={[
+          { label: 'Hatasız kapat', kind: 'main', run: bulkResolve },
+          { label: 'Kişiye ata', run: () => openAction('assign', [...selection.sel]) },
+          { label: 'Etiket ekle', run: () => openAction('tags', [...selection.sel]) },
+          { label: 'Ertele', run: () => openAction('snooze', [...selection.sel]) },
+          { label: 'Kişiye yanıt', run: () => openAction('reply', [...selection.sel]) },
+          { label: 'Reddet', kind: 'danger', run: () => openAction('reject', [...selection.sel]) },
+        ]}
       />
       <DataTable
         rows={list}
@@ -295,12 +331,12 @@ export const ManageModerationSection: React.FC<Props> = ({
         onOpen={(r) => setFocusReportId(r.id)}
         selection={selection}
         activeKey={report?.id || null}
-        minWidth={720}
+        minWidth={860}
         empty={status === 'pending' ? 'Bekleyen şikâyet yok.' : 'Bu filtrede kayıt yok.'}
       />
 
       <Drawer
-        open={!!report}
+        open={!!report && !actMode}
         onClose={() => setFocusReportId('')}
         title={report?.reason || 'Bildirim'}
         label="Şikâyet edilen soru"
@@ -369,13 +405,24 @@ export const ManageModerationSection: React.FC<Props> = ({
                           { k: 'Kimlik', v: <span className="font-mono text-xs [overflow-wrap:anywhere]">{question.id}</span> },
                         ]
                       : [{ k: 'Soru kimliği', v: <span className="font-mono text-xs [overflow-wrap:anywhere]">{report.questionId}</span> }]),
+                    ...metaFacts(meta[report.id]),
                   ]}
                 />
               </Card14>
             }
           />
         )}
+        {report && <div className="mt-3"><ReplyHistory m={meta[report.id]} /></div>}
       </Drawer>
+
+      <ModerationActionDrawer
+        mode={actMode}
+        ids={actIds}
+        kind="report"
+        current={actIds.length === 1 ? meta[actIds[0]] : undefined}
+        onClose={() => setActMode(null)}
+        act={act}
+      />
 
       {aiOpen && question && (
         <React.Suspense fallback={null}>

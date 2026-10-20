@@ -601,7 +601,14 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   const sectionBody = (
     <>
       {section === 'pending' && (
-        <ManagePendingOperationsSection />
+        <ManagePendingOperationsSection
+          onOpenModeration={(id) => {
+            if (reports.some((r) => r.id === id)) {
+              setFocusReportId(id);
+              setSection('moderation');
+            }
+          }}
+        />
       )}
 
       {section === 'inbox' && (

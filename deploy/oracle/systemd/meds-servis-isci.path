@@ -1,0 +1,12 @@
+# /etc/systemd/system/meds-servis-isci.path — panel servis isteği dosyası gelince işçiyi tetikler
+# Kurulum: sudo cp deploy/oracle/systemd/meds-servis-isci.{path,service} deploy/oracle/systemd/meds-servis-durum.{service,timer} /etc/systemd/system/
+#          && sudo systemctl daemon-reload && sudo systemctl enable --now meds-servis-isci.path meds-servis-durum.timer
+# Ayrıntı: deploy/oracle/servis_isci.sh başlığı (beyaz liste orada yeniden doğrulanır).
+[Unit]
+Description=MeDSor panel servis istekleri (data/servis_kontrol/istekler)
+[Path]
+PathExistsGlob=/home/ubuntu/medsor/meds/data/servis_kontrol/istekler/*.json
+MakeDirectory=yes
+Unit=meds-servis-isci.service
+[Install]
+WantedBy=multi-user.target

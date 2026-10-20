@@ -7,6 +7,7 @@ import { ConfirmButton, Drawer } from '../manage/consoleUi';
 import { PageActions, StatRow, Toolbar, Tabs14, SearchField, DataTable, Pill, DetailNav, Card14, type Col } from '../v14/pageKit';
 import { BulkBar, useSelection } from '../v14/manageKit';
 import type { PeopleV12Parts, PeopleFilter, PeopleSort, PeopleTab } from '../manage/ManagePeopleSection';
+import { AccessBulkDrawer, AccessPills, AccessSection, useUserAccess, type UserAccessApi } from '../manage/UserAccessControls';
 import '../../styles/v12/manage.css';
 
 /**
@@ -42,7 +43,9 @@ interface Props {
   parts: PeopleV12Parts;
 }
 
-type RoleF = 'all' | 'student' | 'admin';
+type RoleF = 'all' | 'student' | 'moderator' | 'admin' | 'suspended';
+const OWNER = 'nofrostlife@gmail.com';
+const isOwnerEmail = (e?: string | null) => (e || '').toLowerCase() === OWNER;
 type SeenF = 'any' | '24h' | '7d' | 'old';
 const PAGE = 50;
 const DAY = 86_400_000;
@@ -103,12 +106,19 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
   const sel = useSelection<string>();
   const [bulkMail, setBulkMail] = useState(false);
   const [busy, setBusy] = useState(false);
+  const access = useUserAccess(p.notify);
+  const [accessBulk, setAccessBulk] = useState<null | 'role' | 'suspend'>(null);
+  const accOf = (r: PersonRow) => (r.uid ? access.map[r.uid] : undefined);
 
   const filtered = useMemo(
     () =>
       rows.filter((r) => {
-        if (role === 'admin' && r.role !== 'admin') return false;
-        if (role === 'student' && (r.role === 'admin' || r.kind !== 'account')) return false;
+        const acc = accOf(r);
+        const rr = isOwnerEmail(r.email) ? 'admin' : acc?.role || (r.role === 'admin' ? 'admin' : 'student');
+        if (role === 'suspended' && !acc?.suspended) return false;
+        if (role === 'admin' && rr !== 'admin') return false;
+        if (role === 'moderator' && rr !== 'moderator') return false;
+        if (role === 'student' && (rr !== 'student' || r.kind !== 'account')) return false;
         if (seen !== 'any') {
           const a = r.online ? 0 : ageMs(r.lastSeen);
           if (seen === '24h' && a > DAY) return false;
@@ -117,7 +127,8 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
         }
         return true;
       }),
-    [rows, role, seen],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [rows, role, seen, access.map],
   );
   useEffect(() => setPage(0), [p.filter, p.query, p.sort, role, seen]);
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE));
@@ -136,6 +147,16 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
   };
   const emails = selRows.map((r) => r.email).filter(Boolean) as string[];
   const deletable = selRows.filter((r) => r.uid && r.kind === 'account' && r.role !== 'admin');
+  const accessable = selRows.filter((r) => r.uid && r.kind === 'account' && !isOwnerEmail(r.email));
+  const unsuspendable = accessable.filter((r) => accOf(r)?.suspended);
+  const bulkUnsuspend = async () => {
+    setBusy(true);
+    try {
+      if (await access.unsuspend(unsuspendable.map((r) => r.uid!))) sel.clear();
+    } finally {
+      setBusy(false);
+    }
+  };
   const current = p.openKey ? filtered.find((r) => r.key === p.openKey) || rows.find((r) => r.key === p.openKey) || null : null;
 
   const bulkDelete = async () => {
@@ -168,7 +189,7 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
         </span>
       ),
     },
-    { key: 'role', label: 'Rol', render: (r) => <Pill tone={r.role === 'admin' ? 'acc' : ''}>{roleOf(r)}</Pill> },
+    { key: 'role', label: 'Rol', render: (r) => (r.kind === 'account' ? <AccessPills access={accOf(r)} fallbackRole={r.role} owner={isOwnerEmail(r.email)} /> : <Pill>{roleOf(r)}</Pill>) },
     { key: 'state', label: 'Durum', render: (r) => (r.online ? <Pill tone="ok">Çevrim içi</Pill> : <Pill>Çevrim dışı</Pill>) },
     { key: 'contrib', label: 'Katkı', right: true, render: (r) => parts.contribTotal(r) },
     { key: 'report', label: 'Bildirim', right: true, render: (r) => r.counts.report },
@@ -229,7 +250,9 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
         <select className="m14-select" value={role} onChange={(e) => setRole(e.target.value as RoleF)} aria-label="Rol">
           <option value="all">Her rol</option>
           <option value="student">Öğrenci</option>
+          <option value="moderator">Moderatör</option>
           <option value="admin">Yönetici</option>
+          <option value="suspended">Askıdakiler</option>
         </select>
         <select className="m14-select" value={seen} onChange={(e) => setSeen(e.target.value as SeenF)} aria-label="Son görülme">
           <option value="any">Her zaman</option>
@@ -258,6 +281,9 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
           { label: 'E-posta gönder', kind: 'main', disabled: !emails.length, run: () => setBulkMail(true) },
           { label: 'E-postaları kopyala', disabled: !emails.length, run: () => copyText(emails.join(', '), p.notify, `${emails.length} e-posta kopyalandı.`) },
           { label: 'Seçileni dışa aktar', run: () => downloadCsv(selRows, parts.contribTotal) },
+          { label: `Rol değiştir (${accessable.length})`, disabled: !accessable.length, run: () => setAccessBulk('role') },
+          { label: `Askıya al (${accessable.length})`, disabled: !accessable.length, run: () => setAccessBulk('suspend') },
+          { label: `Askıyı kaldır (${unsuspendable.length})`, kind: 'danger', disabled: !unsuspendable.length, confirm: `${unsuspendable.length} hesabın askısını kaldırmayı onayla`, run: bulkUnsuspend },
           { label: `Hesapları sil (${deletable.length})`, kind: 'danger', disabled: !deletable.length, confirm: `${deletable.length} hesabı silmeyi onayla`, run: bulkDelete },
         ]}
       />
@@ -285,6 +311,18 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
         </div>
       </div>
 
+      <AccessBulkDrawer
+        mode={accessBulk}
+        uids={accessable.map((r) => r.uid!)}
+        names={accessable.map((r) => r.name || r.email || '')}
+        api={access}
+        onClose={() => setAccessBulk(null)}
+        onDone={() => {
+          setAccessBulk(null);
+          sel.clear();
+        }}
+      />
+
       <BulkMail open={bulkMail} onClose={() => setBulkMail(false)} rows={selRows.filter((r) => r.email)} notify={p.notify} />
 
       <Drawer
@@ -297,7 +335,7 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
       >
         {p.detailErr && !p.detail && <p className="m12-note bad">{p.detailErr}</p>}
         {!p.detail && !p.detailErr && <div className="m12-td-empty" aria-busy="true">{p.loadingDetail ? 'Yükleniyor…' : ''}</div>}
-        {p.detail && <PersonDrawer key={p.detail.person.key} {...p} d={p.detail} />}
+        {p.detail && <PersonDrawer key={p.detail.person.key} {...p} d={p.detail} access={access} />}
       </Drawer>
     </div>
   );
@@ -366,9 +404,10 @@ const TABS: { id: PeopleTab; label: string }[] = [
   { id: 'cihazlar', label: 'Cihazlar' },
 ];
 
-const PersonDrawer: React.FC<Props & { d: PersonDetail }> = ({ d, tab, setTab, open, adminEmail, notify, reload, parts }) => {
+const PersonDrawer: React.FC<Props & { d: PersonDetail; access: UserAccessApi }> = ({ d, tab, setTab, open, adminEmail, notify, reload, parts, access }) => {
   const pr = d.person;
-  const [mode, setMode] = useState<'none' | 'mail' | 'edit'>('none');
+  const [mode, setMode] = useState<'none' | 'mail' | 'edit' | 'access'>('none');
+  const acc = pr.uid ? access.map[pr.uid] : undefined;
   const online = d.devices.some((x) => x.online);
   const reports = d.items.filter((i) => i.kind === 'report');
   const contribs = d.items.filter((i) => ['comment', 'question', 'fragment', 'option', 'like', 'vote'].includes(i.kind));
@@ -394,6 +433,8 @@ const PersonDrawer: React.FC<Props & { d: PersonDetail }> = ({ d, tab, setTab, o
           <span className="m12-dh-b">
             <Pill tone={pr.role === 'admin' ? 'acc' : ''}>{pr.role === 'admin' ? <><Shield aria-hidden="true" /> Yönetici</> : pr.kind === 'guest' ? 'Misafir cihaz' : 'Öğrenci'}</Pill>
             {online ? <Pill tone="ok">Çevrim içi</Pill> : <Pill>Çevrim dışı</Pill>}
+            {acc?.role === 'moderator' && <Pill tone="ok">Moderatör</Pill>}
+            {acc?.suspended && <Pill tone="bad">Askıda</Pill>}
             {pr.kind === 'account' && <Pill tone={pr.verified ? '' : 'warn'}>{pr.verified ? 'Doğrulanmış' : 'Doğrulanmamış'}</Pill>}
           </span>
         </div>
@@ -412,6 +453,11 @@ const PersonDrawer: React.FC<Props & { d: PersonDetail }> = ({ d, tab, setTab, o
           {pr.uid && pr.kind === 'account' && (
             <button type="button" className={`m14-btn ${mode === 'edit' ? 'primary' : ''}`} aria-expanded={mode === 'edit'} onClick={() => setMode(mode === 'edit' ? 'none' : 'edit')}>
               <Pencil aria-hidden="true" /> Düzenle
+            </button>
+          )}
+          {pr.uid && pr.kind === 'account' && (
+            <button type="button" className={`m14-btn ${mode === 'access' ? 'primary' : ''}`} aria-expanded={mode === 'access'} onClick={() => setMode(mode === 'access' ? 'none' : 'access')}>
+              <Shield aria-hidden="true" /> {acc?.suspended ? 'Askıyı yönet' : 'Rol ve askı'}
             </button>
           )}
           {canDelete && (
@@ -435,6 +481,11 @@ const PersonDrawer: React.FC<Props & { d: PersonDetail }> = ({ d, tab, setTab, o
         </div>
       </div>
 
+      {mode === 'access' && pr.uid && (
+        <div className="m12-dform">
+          <AccessSection uid={pr.uid} email={pr.email || undefined} owner={isOwnerEmail(pr.email)} api={access} />
+        </div>
+      )}
       {(mode === 'mail' || mode === 'edit') && (
         <div className="m12-dform">
           {mode === 'mail' && pr.email && <parts.MailBox to={pr.email} name={pr.name} notify={notify} onDone={() => setMode('none')} />}

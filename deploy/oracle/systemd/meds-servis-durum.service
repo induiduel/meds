@@ -1,0 +1,17 @@
+# /etc/systemd/system/meds-servis-durum.service — panel servis denetimi: durum + günlük dökümü
+# Kurulum: sudo cp deploy/oracle/systemd/meds-servis-isci.{path,service} deploy/oracle/systemd/meds-servis-durum.{service,timer} /etc/systemd/system/
+#          && sudo systemctl daemon-reload && sudo systemctl enable --now meds-servis-isci.path meds-servis-durum.timer
+# Ayrıntı: deploy/oracle/servis_isci.sh başlığı (beyaz liste orada yeniden doğrulanır).
+# root çalışır (docker + systemctl gerekir); yalnız betikteki beyaz liste uygulanır.
+[Unit]
+Description=MeDSor panel servis işçisi (durum)
+After=docker.service
+[Service]
+Type=oneshot
+ExecStart=/home/ubuntu/medsor/meds/deploy/oracle/servis_isci.sh durum
+Environment=CUDA_VISIBLE_DEVICES= TZ=Europe/Istanbul
+Nice=10
+MemoryMax=256M
+CPUQuota=25%
+OOMScoreAdjust=500
+TimeoutStartSec=10min

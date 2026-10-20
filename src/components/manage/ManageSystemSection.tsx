@@ -7,10 +7,12 @@ import { consoleLogBuffer, ManageLogEntry } from './ConsoleLogBuffer';
 import { Panel, EmptyState, Seg } from './consoleUi';
 import { PageActions, StatRow, SearchField, Pill } from '../v14/pageKit';
 import { BulkBar, useSelection, SelectAllBox } from '../v14/manageKit';
+import { ManageServiceControl } from './ManageServiceControl';
 
 /**
  * Sistem (v14, canvas Sistem.dc.html): eylemler → durum sayıları → seçilebilir servis kartları (toplu çubuk) →
- * düzey süzgeçli ve aramalı günlük ekranı. Servis yeniden başlatma ucu yok; toplu işlem bilgiyi kopyalar.
+ * düzey süzgeçli ve aramalı günlük ekranı. Gerçek servis denetimi (yeniden başlat/durdur/başlat, servis günlüğü)
+ * ManageServiceControl'dadır (beyaz liste, /api/admin/servis/*); alttaki envanter kartları yalnız bilgi verir.
  */
 const STATUS_LABEL: Record<string, string> = {
   online: 'Çevrimiçi',
@@ -170,6 +172,8 @@ export const ManageSystemSection: React.FC<{ notify: (msg: string) => void }> = 
           </span>
         </div>
       )}
+
+      <ManageServiceControl notify={notify} />
 
       <BulkBar
         count={pickedSvc.length}

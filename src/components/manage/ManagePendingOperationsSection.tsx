@@ -11,6 +11,11 @@ import {
   ShieldCheck,
   ExternalLink,
   MapPin,
+  Clock,
+  UserPlus,
+  Tag,
+  Reply,
+  ShieldAlert,
 } from 'lucide-react';
 import { Drawer } from './consoleUi';
 import { PageActions, StatRow, Tabs14, SearchField, Toolbar, DataTable, Pill, DetailNav, DetailLayout, FactList, Card14, type Col } from '../v14/pageKit';
@@ -36,8 +41,19 @@ import {
 } from '../../services/universalRedirectService';
 import { guardedInterval } from '../../services/net';
 import { realtimeEventService } from '../../services/realtimeEvents';
+import { useModerationMeta, ModerationActionDrawer, MetaPills, metaFacts, ReplyHistory, isSnoozed, isMine, type ActionMode } from './moderationActions';
 
-export const ManagePendingOperationsSection: React.FC = () => {
+export const ManagePendingOperationsSection: React.FC<{ onOpenModeration?: (id: string) => void }> = ({ onOpenModeration }) => {
+  const { meta, act } = useModerationMeta();
+  const [actMode, setActMode] = useState<ActionMode | null>(null);
+  const [actIds, setActIds] = useState<string[]>([]);
+  const openAction = (mode: ActionMode, ids: string[]) => { setActIds(ids); setActMode(mode); };
+  /** Moderasyona aktar: kayıt işaretlenir, eşleşen bildirim varsa moderasyon ekranında açılır */
+  const escalate = async (ids: string[]) => {
+    if (!ids.length) return;
+    const ok = await act(ids, 'escalate', { kind: 'repair' });
+    if (ok && ids.length === 1 && onOpenModeration) onOpenModeration(ids[0]);
+  };
   const [items, setItems] = useState<AutoRepairItemClient[]>([]);
   const [stats, setStats] = useState<AutoRepairStats | null>(null);
   const [loading, setLoading] = useState(true);
@@ -234,7 +250,10 @@ export const ManagePendingOperationsSection: React.FC = () => {
   // Filtreleme
   const filteredItems = useMemo(() => {
     return items.filter((item) => {
-      if (filterStatus !== 'all' && item.status !== filterStatus) return false;
+      const m = meta[item.id];
+      if (filterStatus === 'snoozed') { if (!isSnoozed(m)) return false; }
+      else if (filterStatus === 'mine') { if (!isMine(m)) return false; }
+      else if (filterStatus !== 'all' && (item.status !== filterStatus || isSnoozed(m))) return false;
       if (filterSource !== 'all' && item.source !== filterSource) return false;
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
@@ -247,12 +266,14 @@ export const ManagePendingOperationsSection: React.FC = () => {
           item.aiAnalysis?.medicalReasoning,
           item.subTarget?.label,
           item.subTarget?.location,
+          m?.assignee,
+          ...(m?.tags || []),
         ].filter(Boolean).join(' ').toLowerCase();
         if (!text.includes(q)) return false;
       }
       return true;
     });
-  }, [items, filterStatus, filterSource, searchQuery]);
+  }, [items, filterStatus, filterSource, searchQuery, meta]);
 
   const SOURCE_LABEL: Record<string, string> = {
     past_question: 'Çıkmış soru',
@@ -346,6 +367,7 @@ export const ManagePendingOperationsSection: React.FC = () => {
     { key: 'r', label: 'İşlem', main: true, render: (x) => <>{x.userReport.reason}{x.userReport.details ? ` · ${x.userReport.details}` : ''}</> },
     { key: 's', label: 'Durum', render: (x) => getStatusBadge(x.status) },
     { key: 'k', label: 'Kaynak', render: (x) => getSourceBadge(x.source, x.subTarget) },
+    { key: 'm', label: 'Atama ve etiket', render: (x) => <MetaPills m={meta[x.id]} />, width: '18%' },
     { key: 't', label: 'Hedef', mono: true, render: (x) => <span className="clip">#{x.targetId}</span>, width: '16%' },
     { key: 'z', label: 'Zaman', muted: true, render: (x) => new Date(x.userReport.reportedAt).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) },
   ];
@@ -436,6 +458,7 @@ export const ManagePendingOperationsSection: React.FC = () => {
                   { k: 'Bildiren', v: item.userReport.reportedBy || 'Anonim öğrenci' },
                   ...(item.userReport.email ? [{ k: 'E-posta', v: <span className="[overflow-wrap:anywhere]">{item.userReport.email}</span> }] : []),
                   { k: 'Tarih', v: new Date(item.userReport.reportedAt).toLocaleString('tr-TR') },
+                  ...metaFacts(meta[item.id]),
                   ...(item.userReport.suggestedAnswer ? [{ k: 'Önerilen cevap', v: item.userReport.suggestedAnswer }] : []),
                   ...(item.aiAnalysis?.releaseQuarantine ? [{ k: 'Karantina', v: <Pill tone="ok">Karantinadan kurtarıldı</Pill> }] : []),
                   ...(item.aiAnalysis?.referencedRedactedId ? [{ k: 'Redakte soru', v: `#${item.aiAnalysis.referencedRedactedId}` }] : []),
@@ -523,6 +546,8 @@ export const ManagePendingOperationsSection: React.FC = () => {
             { id: 'no_change', label: 'Değişiklik yok', n: countOf('no_change') },
             { id: 'rolled_back', label: 'Geri alındı', n: countOf('rolled_back') },
             { id: 'error', label: 'Hata', n: countOf('error') },
+            { id: 'mine', label: 'Bana atanan', n: items.filter((x) => isMine(meta[x.id])).length },
+            { id: 'snoozed', label: 'Ertelenenler', n: items.filter((x) => isSnoozed(meta[x.id])).length },
           ]}
         />
         <SearchField value={searchQuery} onChange={setSearchQuery} placeholder="Soru no, deste, kullanıcı notu, AI gerekçesi" label="İşlemlerde ara" />
@@ -545,6 +570,11 @@ export const ManagePendingOperationsSection: React.FC = () => {
         actions={[
           { label: 'İncelet', kind: 'main', run: () => runBulk((x) => x.status !== 'processing' && x.status !== 'applied', retryAutoRepair) },
           { label: 'Geri al', run: () => runBulk((x) => x.status === 'applied', rollbackAutoRepair) },
+          { label: 'Ertele', run: () => openAction('snooze', [...selection.sel]) },
+          { label: 'Moderasyona aktar', run: () => escalate([...selection.sel]) },
+          { label: 'Kişiye ata', run: () => openAction('assign', [...selection.sel]) },
+          { label: 'Etiket ekle', run: () => openAction('tags', [...selection.sel]) },
+          { label: 'Kişiye yanıt', run: () => openAction('reply', [...selection.sel]) },
           { label: 'Sil ve banla', kind: 'danger', confirm: `${selection.count} kayıt silinsin ve banlansın`, run: handleBulkDelete },
         ]}
       />
@@ -562,7 +592,7 @@ export const ManagePendingOperationsSection: React.FC = () => {
           onOpen={(x) => setExpandedId(x.id)}
           selection={selection}
           activeKey={expandedId}
-          minWidth={820}
+          minWidth={960}
           empty={
             searchQuery || filterStatus !== 'all' || filterSource !== 'all'
               ? 'Seçili süzgeçlere uygun işlem bulunamadı.'
@@ -572,7 +602,7 @@ export const ManagePendingOperationsSection: React.FC = () => {
       )}
 
       <Drawer
-        open={!!openItem}
+        open={!!openItem && !actMode}
         onClose={() => setExpandedId(null)}
         title={openItem ? openItem.userReport.reason : 'İşlem'}
         label="İşlem ayrıntısı"
@@ -581,6 +611,15 @@ export const ManagePendingOperationsSection: React.FC = () => {
         foot={openItem && (
           <>
             <button type="button" onClick={() => handleDelete(openItem.id)} className="m14-btn danger"><Trash2 aria-hidden="true" /> Sil ve banla</button>
+            <button type="button" onClick={() => openAction('assign', [openItem.id])} className="m14-btn ghost"><UserPlus aria-hidden="true" /> Kişiye ata</button>
+            <button type="button" onClick={() => openAction('tags', [openItem.id])} className="m14-btn ghost"><Tag aria-hidden="true" /> Etiket</button>
+            <button type="button" onClick={() => openAction('reply', [openItem.id])} className="m14-btn ghost"><Reply aria-hidden="true" /> Kişiye yanıt</button>
+            <button type="button" onClick={() => openAction('snooze', [openItem.id])} className="m14-btn ghost"><Clock aria-hidden="true" /> Ertele</button>
+            {meta[openItem.id]?.escalated ? (
+              <button type="button" onClick={() => void act([openItem.id], 'unescalate')} className="m14-btn ghost"><ShieldAlert aria-hidden="true" /> Aktarmayı geri al</button>
+            ) : (
+              <button type="button" onClick={() => void escalate([openItem.id])} className="m14-btn" title="Kaydı moderasyona elle karar için aktar"><ShieldAlert aria-hidden="true" /> Moderasyona aktar</button>
+            )}
             {openItem.status === 'applied' && (
               <button type="button" onClick={() => handleRollback(openItem.id)} disabled={actionBusy} className="m14-btn" title="Bu değişikliği geri al ve eski veriyi yerine koy">
                 <RotateCcw aria-hidden="true" /> Geri al
@@ -596,7 +635,17 @@ export const ManagePendingOperationsSection: React.FC = () => {
         )}
       >
         {openItem && renderDetail(openItem)}
+        {openItem && <div className="mt-3"><ReplyHistory m={meta[openItem.id]} /></div>}
       </Drawer>
+
+      <ModerationActionDrawer
+        mode={actMode}
+        ids={actIds}
+        kind="repair"
+        current={actIds.length === 1 ? meta[actIds[0]] : undefined}
+        onClose={() => setActMode(null)}
+        act={act}
+      />
     </div>
   );
 };

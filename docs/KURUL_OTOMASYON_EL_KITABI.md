@@ -182,6 +182,15 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
 
 ## 9. İzleme ve müdahale
 - **Pano:** Yönetim › Hat (`/manage/hat`): aşama durumu, son başarı, son kod (kırmızı = hata, 3 = atlandı, 10 = bağımlılık düştü), günlük.
+  **Dersler** sekmesi: Kurul 2+ ders × aşama matrisi (`GET /api/admin/hat/dersler`, `src/services/hatActionsRoutes.ts`;
+  işçi/yayın sütunları Oracle taslaklarından SSH ile salt-okunur, zincir sütunları `meds_temp/hat/dersler/<id>.json`).
+  Ders eylemleri kuyruğa yazılır (`meds_temp/hat/eylemler/`), `otomasyon/hat_eylem.py` geçici `meds-hat-eylem` birimiyle
+  sırayla işler, gece hattı sürerken bekler: **sürdür** (`ders_zinciri.py --ders`; Oracle aşamasında takılan ders işçinin
+  `yeniden`/`yeniden-dene` uçlarıyla), **denetçiye gönder** (`--adim denetim`, geçerse birleştirme ve sonrası yeniden),
+  **baştan üret** (ara çıktılar `_eski/<kod>-<zaman>-bastan/`, durum `dersler/_eski/`, onay düşer), **yayından çek**
+  (kod `onayli.json`'dan çıkar → birleştiriciler yeniden; yedek `meds_temp/hat/yayindan_cekilen/`; başka ders etkilenirse geri
+  alınır; `cekildi` işaretli ders zincirde kendiliğinden yeniden yayına girmez; Oracle'daki Öğren destesi/ders paketi geri
+  alınmaz). Kapılar atlanmaz; Kurul 1 dersleri eylem kabul etmez; Oracle'da pano salt okunur.
 - **Sağlık:** `python3 meds/otomasyon/saglik.py` (canlı API, Oracle SSH, 3000, vektör, EMA, disk + **kapı öz-sınaması**:
   üslup/şık/v2 kapıları iyi-kötü örnekle; arıza = `kapi_ariza`, içerik reddi sanılmaz).
 - **Sık durumlar:**

@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Flag, MessageSquare, FileText, Bell, Eye, Check, Send, Pencil, Trash2, Inbox, CheckCircle2, ChevronDown, Smartphone, ExternalLink } from 'lucide-react';
+import { Flag, MessageSquare, FileText, Bell, Eye, Check, Send, Pencil, Trash2, Inbox, CheckCircle2, ChevronDown, Smartphone, ExternalLink, UserPlus, Tag, Ban, Reply, Clock } from 'lucide-react';
 import type { QuestionItem, AdminNotification } from '../../types';
 import type { InboxReport, InboxComment } from '../../services/manageConsoleService';
 import { EmptyState, Switch, ConfirmButton, timeLabel, Drawer, Field } from './consoleUi';
@@ -8,6 +8,7 @@ import { BulkBar, useSelection } from '../v14/manageKit';
 import { toast } from '../ui/Toast';
 import { AdminMobileNotificationCard } from '../AdminMobileNotificationCard';
 import { inAppPath } from '../../services/universalRedirectService';
+import { useModerationMeta, ModerationActionDrawer, MetaPills, metaFacts, ReplyHistory, isSnoozed, isRejected, isMine, type ActionMode } from './moderationActions';
 
 /**
  * Gelen kutusu: bildirim, yorum, taslak ve sistem uyarıları tek iş kuyruğunda, en yenisi üstte.
@@ -88,8 +89,16 @@ export const ManageInboxSection: React.FC<Props> = ({
   const [showResolved, setShowResolved] = useState(false);
   const [showNotificationCard, setShowNotificationCard] = useState(false);
   const [limit, setLimit] = useState(PAGE);
+  const [view, setView] = useState<'open' | 'mine' | 'snoozed'>('open');
+  const { meta, act } = useModerationMeta();
+  const [actMode, setActMode] = useState<ActionMode | null>(null);
+  const [actIds, setActIds] = useState<string[]>([]);
+  const [actKind, setActKind] = useState('report');
+  const openAction = (mode: ActionMode, ids: string[], kind: string) => { setActIds(ids); setActKind(kind); setActMode(mode); };
+  /** Yan kayıt kimliği: bildirim ve yorumun kendi kimliği */
+  const metaId = (i: QueueItem) => i.report?.id || i.comment?.id || '';
 
-  const isDone = (r: InboxReport) => resolvedIds.has(r.id) || (r.status || 'pending') !== 'pending';
+  const isDone = (r: InboxReport) => resolvedIds.has(r.id) || (r.status || 'pending') !== 'pending' || isRejected(meta[r.id]);
 
   const all: QueueItem[] = useMemo(() => {
     const out: QueueItem[] = [];
@@ -154,10 +163,16 @@ export const ManageInboxSection: React.FC<Props> = ({
     }
     return out.sort((a, b) => (b.at || '').localeCompare(a.at || ''));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [reports, comments, drafts, notifications, resolvedIds]);
+  }, [reports, comments, drafts, notifications, resolvedIds, meta]);
 
   const q = query.trim().toLocaleLowerCase('tr-TR');
-  const base = all.filter((i) => (showResolved || !i.done) && (!q || [i.title, i.text, ...i.meta].join(' ').toLocaleLowerCase('tr-TR').includes(q)));
+  const inView = (i: QueueItem) => {
+    const m = meta[metaId(i)];
+    if (view === 'mine') return isMine(m);
+    if (view === 'snoozed') return isSnoozed(m);
+    return !isSnoozed(m);
+  };
+  const base = all.filter((i) => inView(i) && (showResolved || !i.done) && (!q || [i.title, i.text, ...i.meta, meta[metaId(i)]?.assignee, ...(meta[metaId(i)]?.tags || [])].join(' ').toLocaleLowerCase('tr-TR').includes(q)));
   const count = (k: Kind) => base.filter((i) => i.kind === k).length;
   const visible = filter === 'all' ? base : base.filter((i) => i.kind === filter);
   const shown = visible.slice(0, limit);
@@ -204,6 +219,7 @@ export const ManageInboxSection: React.FC<Props> = ({
       ),
     },
     { key: 'from', label: 'Gönderen', render: (i) => <span className="clip">{i.sender || 'Bilinmiyor'}</span> },
+    { key: 'mm', label: 'Atama ve etiket', render: (i) => (metaId(i) ? <MetaPills m={meta[metaId(i)]} /> : <span className="text-ink-3">—</span>), width: '18%' },
     { key: 'ctx', label: 'Bağlam', muted: true, render: (i) => <span className="clip">{i.meta[0] || '—'}</span>, width: '22%' },
     { key: 'at', label: 'Zaman', muted: true, render: (i) => timeLabel(i.at) || '—' },
   ];
@@ -260,6 +276,14 @@ export const ManageInboxSection: React.FC<Props> = ({
           ]}
         />
         <SearchField value={query} onChange={(v) => { setQuery(v); setLimit(PAGE); }} placeholder="Bildirim, yorum, taslak, kişi" label="Kuyrukta ara" />
+        <label className="ms-select-chip !h-9">
+          <span className="sr-only">Görünüm</span>
+          <select value={view} onChange={(e) => { setView(e.target.value as typeof view); setLimit(PAGE); }}>
+            <option value="open">Açık iş</option>
+            <option value="mine">Bana atanan</option>
+            <option value="snoozed">Ertelenenler</option>
+          </select>
+        </label>
       </Toolbar>
 
       <BulkBar
@@ -269,6 +293,13 @@ export const ManageInboxSection: React.FC<Props> = ({
         onClear={selection.clear}
         actions={[
           ...(sel.some((i) => i.report && !i.done) ? [{ label: 'Çözüldü', kind: 'main' as const, run: () => runBulk((i) => !!i.report && !i.done, (i) => onResolve(i.report!)) }] : []),
+          ...(sel.some((i) => metaId(i)) ? [
+            { label: 'Kişiye ata', run: () => openAction('assign', sel.map(metaId).filter(Boolean), 'mixed') },
+            { label: 'Etiket ekle', run: () => openAction('tags', sel.map(metaId).filter(Boolean), 'mixed') },
+            { label: 'Ertele', run: () => openAction('snooze', sel.map(metaId).filter(Boolean), 'mixed') },
+            { label: 'Kişiye yanıt', run: () => openAction('reply', sel.map(metaId).filter(Boolean), 'mixed') },
+          ] : []),
+          ...(sel.some((i) => i.report && !i.done) ? [{ label: 'Reddet', kind: 'danger' as const, run: () => openAction('reject', sel.filter((i) => i.report && !i.done).map((i) => i.report!.id), 'report') }] : []),
           ...(sel.some((i) => i.draft) ? [{ label: 'Taslakları yayınla', run: () => runBulk((i) => !!i.draft, (i) => onPublishDraft(i.draft!)) }] : []),
           ...deleteActions.filter((a) => sel.some(a.test)).map((a) => ({ label: a.label, kind: 'danger' as const, confirm: `${sel.filter(a.test).length} öge kalıcı silinsin`, run: () => runBulk(a.test, a.fn) })),
         ]}
@@ -286,7 +317,7 @@ export const ManageInboxSection: React.FC<Props> = ({
           onOpen={(i) => setOpenKey(i.key)}
           selection={selection}
           activeKey={openKey}
-          minWidth={760}
+          minWidth={900}
           empty={
             q ? (
               <EmptyState icon={Inbox} title="Aramaya uyan kayıt yok">“{query}” için kuyrukta bir şey bulunamadı.</EmptyState>
@@ -305,7 +336,7 @@ export const ManageInboxSection: React.FC<Props> = ({
       )}
 
       <Drawer
-        open={!!openItem && !editingReport && !editingComment}
+        open={!!openItem && !editingReport && !editingComment && !actMode}
         onClose={() => setOpenKey(null)}
         title={openItem?.title || 'Öge'}
         label="Gelen kutusu ögesi"
@@ -324,6 +355,8 @@ export const ManageInboxSection: React.FC<Props> = ({
             onEditDraft={onEditDraft}
             onPublishDraft={onPublishDraft}
             onDeleteDraft={onDeleteDraft}
+            onAction={metaId(openItem) ? (mode) => openAction(mode, [metaId(openItem)], openItem.report ? 'report' : 'comment') : undefined}
+            rejected={isRejected(meta[metaId(openItem)])}
           />
         )}
       >
@@ -344,6 +377,7 @@ export const ManageInboxSection: React.FC<Props> = ({
                     { k: 'Zaman', v: openItem.at ? new Date(openItem.at).toLocaleString('tr-TR', { dateStyle: 'medium', timeStyle: 'short' }) : '—' },
                     ...(openItem.done ? [{ k: 'Durum', v: <Pill tone="ok"><Check aria-hidden="true" /> Çözüldü</Pill> }] : []),
                     ...openItem.meta.map((m) => ({ k: 'Not', v: m })),
+                    ...metaFacts(meta[metaId(openItem)]),
                     ...(openItem.questionId && onNavigateToData
                       ? [{
                           k: 'Soru',
@@ -363,7 +397,17 @@ export const ManageInboxSection: React.FC<Props> = ({
             }
           />
         )}
+        {openItem && metaId(openItem) && <div className="mt-3"><ReplyHistory m={meta[metaId(openItem)]} /></div>}
       </Drawer>
+
+      <ModerationActionDrawer
+        mode={actMode}
+        ids={actIds}
+        kind={actKind}
+        current={actIds.length === 1 ? meta[actIds[0]] : undefined}
+        onClose={() => setActMode(null)}
+        act={act}
+      />
 
       <Drawer
         open={!!editingReport}
@@ -447,13 +491,26 @@ interface ItemActionsProps {
   onEditDraft: (d: QuestionItem) => void;
   onPublishDraft: (d: QuestionItem) => void;
   onDeleteDraft: (d: QuestionItem) => void;
+  onAction?: (mode: ActionMode) => void;
+  rejected?: boolean;
 }
 
 /** Ayrıntı alanının alt eylem şeridi: türe göre */
 const ItemActions: React.FC<ItemActionsProps> = ({
-  item, busyAction, onReview, onResolve, onStartEditReport, onDeleteReport, onStartEditComment, onDeleteComment, onEditDraft, onPublishDraft, onDeleteDraft,
+  item, busyAction, onReview, onResolve, onStartEditReport, onDeleteReport, onStartEditComment, onDeleteComment, onEditDraft, onPublishDraft, onDeleteDraft, onAction, rejected,
 }) => (
   <>
+    {onAction && (
+      <>
+        <button type="button" onClick={() => onAction('assign')} className="m14-btn ghost"><UserPlus aria-hidden="true" /> Kişiye ata</button>
+        <button type="button" onClick={() => onAction('tags')} className="m14-btn ghost"><Tag aria-hidden="true" /> Etiket</button>
+        <button type="button" onClick={() => onAction('snooze')} className="m14-btn ghost"><Clock aria-hidden="true" /> Ertele</button>
+        <button type="button" onClick={() => onAction('reply')} className="m14-btn ghost"><Reply aria-hidden="true" /> Kişiye yanıt</button>
+        {item.report && (!item.done || rejected) && (
+          <button type="button" onClick={() => onAction('reject')} className="m14-btn ghost"><Ban aria-hidden="true" /> {rejected ? 'Ret' : 'Reddet'}</button>
+        )}
+      </>
+    )}
     {item.report && (
       <>
         {onDeleteReport && (

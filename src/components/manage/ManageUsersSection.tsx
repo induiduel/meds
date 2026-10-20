@@ -15,6 +15,8 @@ import {
 import { EmptyState, Seg, ConfirmButton, Drawer, Field } from './consoleUi';
 import { PageActions, StatRow, Toolbar, Tabs14, SearchField, DataTable, Pill, DetailNav, type Col } from '../v14/pageKit';
 import { BulkBar, useSelection } from '../v14/manageKit';
+import { AccessBulkDrawer, AccessPills, AccessSection, useUserAccess } from './UserAccessControls';
+import type { UserRole } from '../../services/userAccessService';
 
 /**
  * Kullanıcılar (v14, canvas Kullanicilar.dc.html): sayılar → sekme + arama → toplu işlem → seçimli tablo.
@@ -54,7 +56,10 @@ export const ManageUsersSection: React.FC<Props> = ({
   onRefreshData,
   reloadInbox,
 }) => {
-  const [tab, setTab] = useState<'registered' | 'activity'>('registered');
+  const [tab, setTab] = useState<'registered' | 'suspended' | 'activity'>('registered');
+  const [roleF, setRoleF] = useState<'all' | UserRole>('all');
+  const access = useUserAccess(notify);
+  const [accessBulk, setAccessBulk] = useState<null | 'role' | 'suspend'>(null);
   const [query, setQuery] = useState('');
   const [openKey, setOpenKey] = useState<string | null>(null);
   const [mode, setMode] = useState<'detail' | 'mail' | 'notify'>('detail');
@@ -83,18 +88,25 @@ export const ManageUsersSection: React.FC<Props> = ({
     );
 
   const q = query.toLocaleLowerCase('tr-TR').trim();
+  const roleOf = (u: ManageUser): UserRole =>
+    isOwner(u.email) ? 'admin' : (u.uid && access.map[u.uid]?.role) || (u.role === 'admin' ? 'admin' : (u.role as string) === 'moderator' ? 'moderator' : 'student');
+  const isSuspended = (u: ManageUser) => !!(u.uid && access.map[u.uid]?.suspended);
+  const suspendedCount = registeredUsers.filter(isSuspended).length;
   const regRows = useMemo(
     () =>
-      !q
-        ? registeredUsers
-        : registeredUsers.filter((u) => [u.displayName, u.email, u.studentNumber, u.uid].join(' ').toLocaleLowerCase('tr-TR').includes(q)),
-    [registeredUsers, q],
+      registeredUsers.filter((u) => {
+        if (tab === 'suspended' && !isSuspended(u)) return false;
+        if (roleF !== 'all' && roleOf(u) !== roleF) return false;
+        return !q || [u.displayName, u.email, u.studentNumber, u.uid].join(' ').toLocaleLowerCase('tr-TR').includes(q);
+      }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [registeredUsers, q, tab, roleF, access.map],
   );
   const actRows = useMemo(
     () => (!q ? activity : activity.filter((u) => [u.name, u.email].join(' ').toLocaleLowerCase('tr-TR').includes(q))),
     [activity, q],
   );
-  const admins = registeredUsers.filter((u) => u.role === 'admin' || isOwner(u.email)).length;
+  const admins = registeredUsers.filter((u) => roleOf(u) === 'admin').length;
 
   const open = (key: string, m: 'detail' | 'mail' | 'notify' = 'detail', target: 'single' | 'all' = 'single') => {
     setOpenKey(key === '__ALL__' ? '__ALL__' : normKey(key));
@@ -307,7 +319,7 @@ export const ManageUsersSection: React.FC<Props> = ({
         </span>
       ),
     },
-    { key: 'role', label: 'Rol', render: (u) => (u.role === 'admin' || isOwner(u.email) ? <Pill tone="acc">Yönetici</Pill> : <Pill>Öğrenci</Pill>) },
+    { key: 'role', label: 'Rol', render: (u) => <AccessPills access={u.uid ? access.map[u.uid] : undefined} fallbackRole={u.role} owner={isOwner(u.email)} /> },
     { key: 'no', label: 'Öğrenci no', mono: true, render: (u) => u.studentNumber || '—' },
     { key: 'created', label: 'Kayıt', muted: true, render: (u) => fmtDate(u.createdAt) },
     { key: 'login', label: 'Son giriş', muted: true, render: (u) => fmtDate(u.lastLoginAt) },
@@ -342,10 +354,10 @@ export const ManageUsersSection: React.FC<Props> = ({
     },
   ];
   const actShown = actRows.slice(0, 200);
-  const activeSel = tab === 'registered' ? regSel : actSel;
+  const activeSel = tab !== 'activity' ? regSel : actSel;
   /** Seçilen satırlar → alıcı listesi (ad, e-posta, uid) */
   const targets = useMemo(() => {
-    if (tab === 'registered') return regRows.filter((u) => regSel.has(regKey(u))).map((u) => ({ key: regKey(u), name: u.displayName || u.email || '', email: u.email, uid: u.uid }));
+    if (tab !== 'activity') return regRows.filter((u) => regSel.has(regKey(u))).map((u) => ({ key: regKey(u), name: u.displayName || u.email || '', email: u.email, uid: u.uid }));
     return actShown
       .filter((u) => actSel.has(u.key))
       .map((u) => {
@@ -355,6 +367,17 @@ export const ManageUsersSection: React.FC<Props> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tab, regRows, actShown, regSel.sel, actSel.sel, registeredUsers]);
   const deletable = targets.filter((x) => x.uid && !isOwner(x.email));
+  const accessable = targets.filter((x) => x.uid && !isOwner(x.email));
+  const unsuspendable = accessable.filter((x) => access.map[x.uid!]?.suspended);
+  const bulkUnsuspend = async () => {
+    setBulkBusy(true);
+    try {
+      const r = await access.unsuspend(unsuspendable.map((x) => x.uid!));
+      if (r) activeSel.clear();
+    } finally {
+      setBulkBusy(false);
+    }
+  };
 
   const runBulk = async (fn: (x: (typeof targets)[number]) => Promise<{ ok: boolean }>, list = targets) => {
     setBulkBusy(true);
@@ -413,7 +436,7 @@ export const ManageUsersSection: React.FC<Props> = ({
     setBulkDone(0);
     setBulk(m);
   };
-  const openRows = tab === 'registered' ? regRows.map((u) => regKey(u)) : actShown.map((u) => u.key);
+  const openRows = tab !== 'activity' ? regRows.map((u) => regKey(u)) : actShown.map((u) => u.key);
   const curKey = openKey && openKey !== '__ALL__' ? (sel?.key && openRows.includes(sel.key) ? sel.key : openKey) : null;
 
   return (
@@ -441,6 +464,7 @@ export const ManageUsersSection: React.FC<Props> = ({
           { label: 'Kayıtlı hesap', value: registeredUsers.length, onClick: () => setTab('registered') },
           { label: 'Katkı yapan', value: activity.length, onClick: () => setTab('activity') },
           { label: 'Yönetici', value: admins },
+          { label: 'Askıda', value: suspendedCount, tone: suspendedCount ? 'bad' : undefined, onClick: () => setTab('suspended') },
         ]}
       />
       <Toolbar>
@@ -450,11 +474,20 @@ export const ManageUsersSection: React.FC<Props> = ({
           onChange={(v) => setTab(v)}
           options={[
             { id: 'registered', label: 'Hesaplar', n: registeredUsers.length },
+            { id: 'suspended', label: 'Askıda', n: suspendedCount },
             { id: 'activity', label: 'Katkılar', n: activity.length },
           ]}
         />
-        <SearchField value={query} onChange={setQuery} placeholder={tab === 'registered' ? 'Ad, e-posta, öğrenci no ya da kimlik' : 'Ad ya da e-posta'} label="Kullanıcı ara" />
-        <span className="pk14-note">{tab === 'registered' ? `${regRows.length} hesap` : `${actRows.length} kişi`}</span>
+        {tab !== 'activity' && (
+          <select className="m14-select" value={roleF} onChange={(e) => setRoleF(e.target.value as 'all' | UserRole)} aria-label="Rol">
+            <option value="all">Her rol</option>
+            <option value="student">Öğrenci</option>
+            <option value="moderator">Moderatör</option>
+            <option value="admin">Yönetici</option>
+          </select>
+        )}
+        <SearchField value={query} onChange={setQuery} placeholder={tab !== 'activity' ? 'Ad, e-posta, öğrenci no ya da kimlik' : 'Ad ya da e-posta'} label="Kullanıcı ara" />
+        <span className="pk14-note">{tab !== 'activity' ? `${regRows.length} hesap` : `${actRows.length} kişi`}</span>
       </Toolbar>
 
       <BulkBar
@@ -465,13 +498,16 @@ export const ManageUsersSection: React.FC<Props> = ({
         actions={[
           { label: 'Bildirim gönder', kind: 'main', run: () => startBulk('notify') },
           { label: 'E-posta gönder', disabled: !targets.some((x) => x.email), run: () => startBulk('mail') },
+          { label: `Rol değiştir (${accessable.length})`, disabled: !accessable.length, run: () => setAccessBulk('role') },
+          { label: `Askıya al (${accessable.length})`, disabled: !accessable.length, run: () => setAccessBulk('suspend') },
+          { label: `Askıyı kaldır (${unsuspendable.length})`, kind: 'danger', disabled: !unsuspendable.length, confirm: `${unsuspendable.length} hesabın askısını kaldırmayı onayla`, run: bulkUnsuspend },
           { label: `Hesapları sil (${deletable.length})`, kind: 'danger', disabled: !deletable.length, confirm: `${deletable.length} hesabı kalıcı silmeyi onayla`, run: bulkDelete },
         ]}
       />
 
-      {tab === 'registered' ? (
+      {tab !== 'activity' ? (
         regRows.length === 0 ? (
-          <EmptyState icon={Users} title={query ? 'Aramaya uyan hesap yok' : 'Kayıtlı hesap yok'} />
+          <EmptyState icon={Users} title={query || roleF !== 'all' ? 'Süzgece uyan hesap yok' : tab === 'suspended' ? 'Askıdaki hesap yok' : 'Kayıtlı hesap yok'} />
         ) : (
           <DataTable rows={regRows} cols={regCols} rowKey={regKey} onOpen={(u) => open(u.email || u.uid || u.displayName || '')} selection={regSel} activeKey={openKey} />
         )
@@ -480,6 +516,18 @@ export const ManageUsersSection: React.FC<Props> = ({
       ) : (
         <DataTable rows={actShown} cols={actCols} rowKey={(u) => u.key} onOpen={(u) => open(u.key)} selection={actSel} activeKey={openKey} minWidth={860} />
       )}
+
+      <AccessBulkDrawer
+        mode={accessBulk}
+        uids={accessable.map((x) => x.uid!)}
+        names={accessable.map((x) => x.name || x.email || '')}
+        api={access}
+        onClose={() => setAccessBulk(null)}
+        onDone={() => {
+          setAccessBulk(null);
+          activeSel.clear();
+        }}
+      />
 
       <Drawer
         open={!!bulk}
@@ -536,7 +584,7 @@ export const ManageUsersSection: React.FC<Props> = ({
         head={
           openKey !== '__ALL__' && mode === 'detail' ? (
             <DetailNav list={openRows} current={curKey} same={(a, b) => a === b} onGo={(k) => {
-              if (tab === 'registered') { const u = regRows.find((x) => regKey(x) === k); if (u) open(u.email || u.uid || u.displayName || ''); }
+              if (tab !== 'activity') { const u = regRows.find((x) => regKey(x) === k); if (u) open(u.email || u.uid || u.displayName || ''); }
               else open(k);
             }} />
           ) : undefined
@@ -677,7 +725,7 @@ export const ManageUsersSection: React.FC<Props> = ({
                 <div className="min-w-0 flex flex-col gap-1">
                   <span className="flex flex-wrap gap-1">
                     {sel.reg ? <span className="ms-tag is-ok">Kayıtlı hesap</span> : <span className="ms-tag is-warn">Hesabı yok, yalnız katkı izi</span>}
-                    {(sel.reg?.role === 'admin' || isOwner(sel.email)) && <span className="ms-tag is-accent"><ShieldCheck /> Yönetici</span>}
+                    {sel.reg ? <AccessPills access={sel.reg.uid ? access.map[sel.reg.uid] : undefined} fallbackRole={sel.reg.role} owner={isOwner(sel.email)} /> : null}
                   </span>
                   {sel.email && <span className="font-mono text-sm text-ink-2 truncate">{sel.email}</span>}
                 </div>
@@ -688,6 +736,7 @@ export const ManageUsersSection: React.FC<Props> = ({
                 {sel.reg?.lastLoginAt && (<><dt>Son giriş</dt><dd>{new Date(sel.reg.lastLoginAt).toLocaleString('tr-TR', { dateStyle: 'medium', timeStyle: 'short' })}</dd></>)}
                 {sel.reg?.uid && (<><dt>UID</dt><dd className="font-mono text-xs">{sel.reg.uid}</dd></>)}
               </dl>
+              {sel.reg && <AccessSection uid={sel.reg.uid} email={sel.email} owner={isOwner(sel.email)} api={access} />}
               <dl className="ms-statgrid m-0">
                 {([['Soru', sel.act?.questions], ['Düzenleme', sel.act?.revisions], ['Parça', sel.act?.fragments], ['Şık', sel.act?.options], ['Bildirim', sel.act?.reports], ['Yorum', sel.act?.comments]] as const).map(([k, v]) => (
                   <div key={k}><dt>{k}</dt><dd>{v || 0}</dd></div>

@@ -217,6 +217,7 @@ html.m14-on .ms-overlay > .ms-modal-panel { max-width: none !important; width: 1
 .jv14-cell span { font-size: 12px; padding: 2px 7px; border-radius: 6px; background: var(--color-field); color: var(--color-ink-2); white-space: nowrap; }
 html.m14-on .ms-drawer.is-ws14 { margin: 0 !important; top: 0 !important; bottom: 0 !important; }
 html.m14-on .ms-drawer.is-ws14 .ms-drawer-foot > :is(button, a) { flex: none; width: auto; }
+html.m14-on .ms-drawer.is-ws14 .ms-drawer-foot { flex-wrap: wrap; }
 
 /* Taşma güvenliği 2: tablo içindeki .sr-only (absolute) konumlu ata yoksa kaydırma kutusundan taşar → başa sabitle */
 .m14-inner .sr-only { left: 0; top: 0; }
