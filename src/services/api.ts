@@ -1,4 +1,5 @@
 import { FIREBASE_DB_ENABLED } from './dbFlags';
+import { SUSPENDED_CODE, showSuspendedNotice } from './suspensionNotice';
 import { Committee, QuestionItem, MemoryFragment, ReconstructedQuestion, PastQuestionReviewRecord } from '../types';
 import { FirestoreDbService, INITIAL_COMMITTEES, COMMITTEE_SORT_ORDER, filterCurrent2026_2027Committees, db } from './firestoreDb';
 import { multiDbManager } from './multiDbManager';
@@ -330,6 +331,7 @@ export async function safeJsonFetch<T = any>(
         try {
           const errObj = await res.json();
           errMsg = errObj.error || errObj.hata || errObj.message || errMsg;
+          if (res.status === 403 && errObj?.code === SUSPENDED_CODE) showSuspendedNotice(errObj);
         } catch (_) {}
       } else if (res.status === 405) {
         errMsg = 'Statik barındırma ortamı (HTTP 405 Method Not Allowed). İstemci modu veya yedek veritabanı devreye alınıyor.';

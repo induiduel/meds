@@ -83,12 +83,12 @@ export const PALETTES: PaletteDef[] = [
     },
   },
   {
-    id: 'c', mode: 'light', name: 'Lavanta', hint: 'Serin lila zemin, çivit vurgu',
-    swatch: ['#F5F4FA', '#FFFFFF', '#5146B8'],
+    id: 'c', mode: 'light', name: 'Lavanta', hint: 'Serin lila zemin, menekşe vurgu',
+    swatch: ['#F5F4FA', '#FFFFFF', '#6233C2'],
     vars: {
       canvas: '#F5F4FA', white: '#FFFFFF', field: '#EDEBF6', line: '#E0DDEE', 'line-soft': '#EAE8F4', 'line-2': '#C4BFDC',
-      ink: '#1A1730', 'ink-2': '#423E5A', 'ink-3': '#5F5A7A', 'ink-surface': '#24203D', accent: '#5146B8', 'accent-hover': '#41379A',
-      'accent-soft': '#E6E3F8', 'on-accent': '#FFFFFF', clinic: '#0F6F66', 'clinic-soft': '#DAF1EE', ok: '#1F6D3F', 'ok-soft': '#DFEFE5',
+      ink: '#1A1730', 'ink-2': '#423E5A', 'ink-3': '#5F5A7A', 'ink-surface': '#24203D', accent: '#6233C2', 'accent-hover': '#4F27A0',
+      'accent-soft': '#ECE4FB', 'on-accent': '#FFFFFF', clinic: '#0F6F66', 'clinic-soft': '#DAF1EE', ok: '#1F6D3F', 'ok-soft': '#DFEFE5',
       'ok-tint': '#EEF8F1', 'ok-bright': '#1F9D55', warn: '#8C510D', 'warn-soft': '#F7EAD5', bad: '#BD333A', 'bad-text': '#A82A30',
       'bad-soft': '#F8E2E3', ai: '#8A3B9E', 'ai-soft': '#F4E5F7', brand: '#E0245E', 'brand-soft': '#FCE6ED', 'on-solid': '#FFFFFF',
     },
@@ -104,42 +104,31 @@ export const PALETTES: PaletteDef[] = [
       'bad-soft': '#F8E1DE', ai: '#7B3F96', 'ai-soft': '#F1E5F5', brand: '#D12B5C', 'brand-soft': '#FBE4EA', 'on-solid': '#FFFFFF',
     },
   },
-  // ── Açık · X serisi (v10): zemin neredeyse beyaz, vurgu koyu ve doygun ──
+  // ── Açık · v15: her palet ayrı renk ailesi (eski X serisi a/c/d'nin kopyasıydı) ──
   {
-    id: 'e', mode: 'light', name: 'LavantaX', hint: 'Bembeyaz lila zemin, koyu çivit (canlı)',
-    swatch: ['#FCFBFF', '#FFFFFF', '#3A2BB8'],
-    vars: {
-      canvas: '#FCFBFF', white: '#FFFFFF', field: '#F2F0FD', line: '#E6E3F7', 'line-soft': '#EFEDFA', 'line-2': '#C9C3EE',
-      ink: '#15122B', 'ink-2': '#3D3958', 'ink-3': '#5B5778', 'ink-surface': '#1F1B3A', accent: '#3A2BB8',
-      'accent-hover': '#2E2196', 'accent-soft': '#EBE8FF', 'on-accent': '#FFFFFF', clinic: '#0D6A62', 'clinic-soft': '#D9F2EE',
-      ok: '#1A6A3B', 'ok-soft': '#DDF3E6', 'ok-tint': '#EEF9F2', 'ok-bright': '#1F9D55', warn: '#8A4E08', 'warn-soft': '#FBEBD3',
-      bad: '#B8262F', 'bad-text': '#A21F28', 'bad-soft': '#FCE4E5', ai: '#7E2FA0', 'ai-soft': '#F4E6FA', brand: '#D61F57',
-      'brand-soft': '#FDE5EC', 'on-solid': '#FFFFFF',
-    },
+    id: 'e', mode: 'light', name: 'Zümrüt', hint: 'Yeşilimsi beyaz zemin, zümrüt yeşili vurgu',
+    swatch: ['#F3F7F3', '#FFFFFF', '#1B6B34'],
+    vars: { canvas: '#F3F7F3', white: '#FFFFFF', field: '#E8F0E9', line: '#D6E4D8', 'line-soft': '#E4EDE5', 'line-2': '#B5CDB9', ink: '#0F1F14', 'ink-2': '#2F4636', 'ink-3': '#4A604F', 'ink-surface': '#17301F', accent: '#1B6B34', 'accent-hover': '#14562A', 'accent-soft': '#DCEFE0', 'on-accent': '#FFFFFF', clinic: '#00626B', 'clinic-soft': '#D7EEF0', ok: '#1D6E3E', 'ok-soft': '#DDF0E3', 'ok-tint': '#EEF8F1', 'ok-bright': '#1F9D55', warn: '#8A4E08', 'warn-soft': '#F7E9D3', bad: '#B8262F', 'bad-text': '#A21F28', 'bad-soft': '#FCE4E5', ai: '#7A33A6', 'ai-soft': '#F2E6FA', brand: '#D61F57', 'brand-soft': '#FDE5EC', 'on-solid': '#FFFFFF' },
   },
   {
-    id: 'f', mode: 'light', name: 'MaviX', hint: 'Buz beyazı zemin, derin kobalt (canlı)',
-    swatch: ['#FAFCFF', '#FFFFFF', '#0A4DBA'],
-    vars: {
-      canvas: '#FAFCFF', white: '#FFFFFF', field: '#EEF4FD', line: '#E0E9F6', 'line-soft': '#EBF1FA', 'line-2': '#C2D2EA',
-      ink: '#0E1626', 'ink-2': '#334055', 'ink-3': '#526075', 'ink-surface': '#172238', accent: '#0A4DBA',
-      'accent-hover': '#083E96', 'accent-soft': '#E1ECFF', 'on-accent': '#FFFFFF', clinic: '#006B65', 'clinic-soft': '#D6F3EF',
-      ok: '#1A6A3B', 'ok-soft': '#DDF3E6', 'ok-tint': '#EEF9F2', 'ok-bright': '#1F9D55', warn: '#8A4E08', 'warn-soft': '#FBEBD3',
-      bad: '#B8262F', 'bad-text': '#A21F28', 'bad-soft': '#FCE4E5', ai: '#7A33A6', 'ai-soft': '#F2E6FA', brand: '#D61F57',
-      'brand-soft': '#FDE5EC', 'on-solid': '#FFFFFF',
-    },
+    id: 'f', mode: 'light', name: 'Kehribar', hint: 'Kremsi beyaz zemin, koyu kehribar vurgu',
+    swatch: ['#F9F6F0', '#FFFFFF', '#8F4A00'],
+    vars: { canvas: '#F9F6F0', white: '#FFFFFF', field: '#F2ECE1', line: '#E6DCCB', 'line-soft': '#EFE8DC', 'line-2': '#D0C1A6', ink: '#221A0E', 'ink-2': '#4A3D2A', 'ink-3': '#665641', 'ink-surface': '#2C2214', accent: '#8F4A00', 'accent-hover': '#733B00', 'accent-soft': '#F8E7CF', 'on-accent': '#FFFFFF', clinic: '#0F6A64', 'clinic-soft': '#D9F0EC', ok: '#1F6B3A', 'ok-soft': '#DFF0E4', 'ok-tint': '#EFF7F0', 'ok-bright': '#1F9D55', warn: '#9A3D0A', 'warn-soft': '#FBE3D3', bad: '#B8262F', 'bad-text': '#A21F28', 'bad-soft': '#FCE4E5', ai: '#6E3FA0', 'ai-soft': '#EFE6F8', brand: '#C8215A', 'brand-soft': '#FDE3EB', 'on-solid': '#FFFFFF' },
   },
   {
-    id: 'g', mode: 'light', name: 'MercanX', hint: 'Pembe-beyaz zemin, koyu mercan (canlı)',
-    swatch: ['#FFFBFA', '#FFFFFF', '#B11E3A'],
-    vars: {
-      canvas: '#FFFBFA', white: '#FFFFFF', field: '#FCF0EE', line: '#F3E1DE', 'line-soft': '#F8EAE8', 'line-2': '#E4C3BE',
-      ink: '#24110F', 'ink-2': '#4D3532', 'ink-3': '#6C514D', 'ink-surface': '#301A17', accent: '#B11E3A',
-      'accent-hover': '#8F152D', 'accent-soft': '#FFE2E6', 'on-accent': '#FFFFFF', clinic: '#186A64', 'clinic-soft': '#DAF0EC',
-      ok: '#236A38', 'ok-soft': '#DFF1E3', 'ok-tint': '#F0F8F1', 'ok-bright': '#1F9D55', warn: '#8A4C08', 'warn-soft': '#FBE8D0',
-      bad: '#B02A22', 'bad-text': '#9C221B', 'bad-soft': '#FCE1DC', ai: '#7A3594', 'ai-soft': '#F3E5F7', brand: '#C8215A',
-      'brand-soft': '#FDE3EB', 'on-solid': '#FFFFFF',
-    },
+    id: 'g', mode: 'light', name: 'Mürekkep', hint: 'Nötr gri zemin, siyah-grafit vurgu (renksiz, odaklı)',
+    swatch: ['#F5F5F6', '#FFFFFF', '#1F2937'],
+    vars: { canvas: '#F5F5F6', white: '#FFFFFF', field: '#EDEDEF', line: '#DEDEE2', 'line-soft': '#EAEAED', 'line-2': '#BDBDC4', ink: '#0B0B0E', 'ink-2': '#2E2E35', 'ink-3': '#4B4B54', 'ink-surface': '#18181C', accent: '#1F2937', 'accent-hover': '#111827', 'accent-soft': '#E5E7EB', 'on-accent': '#FFFFFF', clinic: '#006B65', 'clinic-soft': '#D6F3EF', ok: '#1A6A3B', 'ok-soft': '#DDF3E6', 'ok-tint': '#EEF9F2', 'ok-bright': '#1F9D55', warn: '#8A4E08', 'warn-soft': '#FBEBD3', bad: '#B8262F', 'bad-text': '#A21F28', 'bad-soft': '#FCE4E5', ai: '#7A33A6', 'ai-soft': '#F2E6FA', brand: '#D61F57', 'brand-soft': '#FDE5EC', 'on-solid': '#FFFFFF' },
+  },
+  {
+    id: 'h', mode: 'light', name: 'Erik', hint: 'Pembemsi beyaz zemin, erik moru vurgu',
+    swatch: ['#FAF5F9', '#FFFFFF', '#8E1F74'],
+    vars: { canvas: '#FAF5F9', white: '#FFFFFF', field: '#F3EAF1', line: '#E8DAE5', 'line-soft': '#F1E7EF', 'line-2': '#D3BCCD', ink: '#22121E', 'ink-2': '#4A3245', 'ink-3': '#684E62', 'ink-surface': '#2E1A29', accent: '#8E1F74', 'accent-hover': '#731760', 'accent-soft': '#F6E1F0', 'on-accent': '#FFFFFF', clinic: '#0F6A64', 'clinic-soft': '#D9F0EC', ok: '#1F6B3A', 'ok-soft': '#DFF0E4', 'ok-tint': '#EFF7F0', 'ok-bright': '#1F9D55', warn: '#8A4E08', 'warn-soft': '#F7E9D3', bad: '#B8262F', 'bad-text': '#A21F28', 'bad-soft': '#FCE4E5', ai: '#5B3FB0', 'ai-soft': '#ECE7FA', brand: '#C8215A', 'brand-soft': '#FDE3EB', 'on-solid': '#FFFFFF' },
+  },
+  {
+    id: 'i', mode: 'light', name: 'Yüksek kontrast', hint: 'Saf beyaz zemin, siyah metin, koyu mavi vurgu (en okunaklı)',
+    swatch: ['#FFFFFF', '#FFFFFF', '#0040B0'],
+    vars: { canvas: '#FFFFFF', white: '#FFFFFF', field: '#F2F2F2', line: '#C8C8C8', 'line-soft': '#E0E0E0', 'line-2': '#8A8A8A', ink: '#000000', 'ink-2': '#1F1F1F', 'ink-3': '#3D3D3D', 'ink-surface': '#111111', accent: '#0040B0', 'accent-hover': '#00308A', 'accent-soft': '#DCE6FA', 'on-accent': '#FFFFFF', clinic: '#005A55', 'clinic-soft': '#D6F0EC', ok: '#0F5A2C', 'ok-soft': '#D9EFE0', 'ok-tint': '#ECF7EF', 'ok-bright': '#1A8A48', warn: '#7A4100', 'warn-soft': '#F7E6CF', bad: '#A3121C', 'bad-text': '#8F0F18', 'bad-soft': '#FBDDDF', ai: '#64208A', 'ai-soft': '#EFE1F7', brand: '#B0103F', 'brand-soft': '#FBDCE6', 'on-solid': '#FFFFFF' },
   },
   // ── Sarı (sepya) — v10: çamurlu bej yerine sıcak kâğıt zemin + tek doygun vurgu ──
   {
@@ -189,6 +178,16 @@ export const PALETTES: PaletteDef[] = [
       bad: '#A8302C', 'bad-text': '#942925', 'bad-soft': '#F4DAD1', ai: '#5D4693', 'ai-soft': '#E8E1F0', brand: '#B12F55',
       'brand-soft': '#F5DAE0', 'on-solid': '#FFFFFF',
     },
+  },
+  {
+    id: 'e', mode: 'sepia', name: 'Petrol', hint: 'Kum zemin, petrol mavisi vurgu',
+    swatch: ['#F7F1E3', '#FFFCF4', '#006E80'],
+    vars: { canvas: '#F7F1E3', white: '#FFFCF4', field: '#EFE6D2', line: '#E2D6BC', 'line-soft': '#EBE2CD', 'line-2': '#CDBD9C', ink: '#1C2422', 'ink-2': '#404A47', 'ink-3': '#5A625E', 'ink-surface': '#283030', accent: '#006E80', 'accent-hover': '#005766', 'accent-soft': '#D6EAEC', 'on-accent': '#FFFFFF', clinic: '#2F6448', 'clinic-soft': '#DCEADD', ok: '#2C6748', 'ok-soft': '#DCEBDD', 'ok-tint': '#ECF4EC', 'ok-bright': '#3E8F5E', warn: '#8A5208', 'warn-soft': '#F6E3BF', bad: '#A92F2A', 'bad-text': '#962824', 'bad-soft': '#F6DCD3', ai: '#6E4180', 'ai-soft': '#EDE0EE', brand: '#B8324F', 'brand-soft': '#F6DCDF', 'on-solid': '#FFFFFF' },
+  },
+  {
+    id: 'f', mode: 'sepia', name: 'Sepya kontrast', hint: 'Açık kâğıt zemin, koyu kahve metin ve vurgu (en okunaklı)',
+    swatch: ['#FBF6EA', '#FFFDF6', '#3A2E1C'],
+    vars: { canvas: '#FBF6EA', white: '#FFFDF6', field: '#F2EAD6', line: '#D9CBAE', 'line-soft': '#EAE0CA', 'line-2': '#A8987A', ink: '#140E06', 'ink-2': '#2E2618', 'ink-3': '#463C2C', 'ink-surface': '#221A10', accent: '#3A2E1C', 'accent-hover': '#241C10', 'accent-soft': '#EADFC9', 'on-accent': '#FFFFFF', clinic: '#1F5148', 'clinic-soft': '#D8E8DE', ok: '#205A36', 'ok-soft': '#D8E9D9', 'ok-tint': '#EAF3EA', 'ok-bright': '#2E7A4A', warn: '#704000', 'warn-soft': '#F3DDB5', bad: '#931F1A', 'bad-text': '#7F1A16', 'bad-soft': '#F4D6CC', ai: '#592F6B', 'ai-soft': '#E9DCEB', brand: '#9A2440', 'brand-soft': '#F4D8DC', 'on-solid': '#FFFFFF' },
   },
   // ── Koyu ──
   {
@@ -261,6 +260,16 @@ export const PALETTES: PaletteDef[] = [
       bad: '#FF7A86', 'bad-text': '#FF9AA3', 'bad-soft': '#3D1A20', ai: '#D6A8FF', 'ai-soft': '#2B1E38', brand: '#FF6B95',
       'brand-soft': '#3E1726', 'on-solid': '#150F12',
     },
+  },
+  {
+    id: 'g', mode: 'dark', name: 'Okyanus', hint: 'Derin petrol zemin, pembe vurgu',
+    swatch: ['#0A171A', '#112226', '#FF9EDB'],
+    vars: { canvas: '#0A171A', white: '#112226', field: '#182D32', line: '#21393F', 'line-soft': '#182D32', 'line-2': '#30505A', ink: '#E0EEF0', 'ink-2': '#B0C6CA', 'ink-3': '#8CA4A9', 'ink-surface': '#182D32', accent: '#FF9EDB', 'accent-hover': '#FFB9E5', 'accent-soft': '#3A1630', 'on-accent': '#1E0618', clinic: '#7AB4FF', 'clinic-soft': '#0F2238', ok: '#6CD99A', 'ok-soft': '#12291E', 'ok-tint': '#0D2018', 'ok-bright': '#4ADE80', warn: '#F0B865', 'warn-soft': '#2E2516', bad: '#F28585', 'bad-text': '#F59C9C', 'bad-soft': '#361C1F', ai: '#C9A6FF', 'ai-soft': '#261F38', brand: '#FF5C82', 'brand-soft': '#37161F', 'on-solid': '#061416' },
+  },
+  {
+    id: 'h', mode: 'dark', name: 'Yüksek kontrast', hint: 'Siyaha yakın zemin, beyaz metin, sarı vurgu (en okunaklı)',
+    swatch: ['#050505', '#121212', '#FFD24A'],
+    vars: { canvas: '#050505', white: '#121212', field: '#1E1E1E', line: '#3A3A3A', 'line-soft': '#262626', 'line-2': '#5C5C5C', ink: '#FFFFFF', 'ink-2': '#E6E6E6', 'ink-3': '#C4C4C4', 'ink-surface': '#1E1E1E', accent: '#FFD24A', 'accent-hover': '#FFE07A', 'accent-soft': '#2E2608', 'on-accent': '#000000', clinic: '#5EEAD4', 'clinic-soft': '#0A2A26', ok: '#6EE7A0', 'ok-soft': '#0E2A1A', 'ok-tint': '#0A1F14', 'ok-bright': '#4ADE80', warn: '#FFB45C', 'warn-soft': '#33240C', bad: '#FF8080', 'bad-text': '#FF9C9C', 'bad-soft': '#3A1414', ai: '#D8B4FE', 'ai-soft': '#28183D', brand: '#FF6B95', 'brand-soft': '#3A1424', 'on-solid': '#000000' },
   },
 ];
 
