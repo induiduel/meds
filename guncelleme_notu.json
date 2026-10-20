@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 141,
-  "baslik": "Sıralama ve Başarımlar açılıyor",
+  "onem": 142,
+  "baslik": "Hesap verileri tek profilde",
   "maddeler": [
-    "Sıralama ve Başarımlar ekranlarında internet varken çıkan \"Ağ bağlantısı yok (çevrimdışı)\" hatası giderildi."
+    "Google ile ya da e-posta ile girişte aynı hesabın verileri artık ayrı kişiler gibi görünmez; profil gerçek hesaba bağlanır."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Sıralama ve Başarımlar ekranlarında internet varken çıkan \"Ağ bağlantısı yok (çevrimdışı)\" hatası giderildi."
+    "Google ile ya da e-posta ile girişte aynı hesabın verileri artık ayrı kişiler gibi görünmez; profil gerçek hesaba bağlanır."
   ],
   "silinen": []
 }

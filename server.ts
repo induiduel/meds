@@ -15,6 +15,7 @@ import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
 import { exec, execFile, execSync, spawn, spawnSync } from 'child_process';
 import { pgDb, pgHealth, pgListen } from './src/services/pgDb';
+import { requestUser } from './src/services/firebaseIdentity';
 import * as rawLedger from './src/services/rawQuestionLedger';
 import { registerDbQueryRoute, invalidateDbQueryCache } from './src/services/dbQueryRoute';
 import { registerTtsRoute } from './src/services/ttsRoute';
@@ -8760,7 +8761,7 @@ app.get('/api/summaries/:id', (req, res) => {
 });
 
 // User Synchronization Endpoint (syncs from Auth/Firestore to Server Database)
-app.post('/api/users/sync', (req, res) => {
+app.post('/api/users/sync', async (req, res) => {
   const { uid, email, displayName, studentNumber, photoURL, congratsSentCommittees } = req.body;
   if (!uid && !email) {
     return res.status(400).json({ error: 'uid veya email zorunludur.' });
@@ -8777,6 +8778,16 @@ app.post('/api/users/sync', (req, res) => {
 
   if (existingIdx !== -1) {
     const existing = users[existingIdx];
+    // Aynı e-posta farklı uid ile kayıtlıysa (eski sahte admin-nofrostlife/std-… kimliği) ve istek doğrulanmış
+    // Firebase jetonu taşıyorsa kayıt gerçek uid'ye taşınır; yoksa profil ile kullanıcı verisi ayrı kişiler gibi görünür.
+    if (uid && existing.uid !== uid && targetEmail && existing.email.toLowerCase() === targetEmail) {
+      const { user: verified } = await requestUser(req).catch(() => ({ user: null }));
+      if (verified && verified.uid === uid && verified.email.toLowerCase() === targetEmail) {
+        const oldUid = existing.uid;
+        existing.uid = uid;
+        pgDb.from('users').delete().eq('uid', oldUid).then(() => {}, () => {});
+      }
+    }
     existing.lastLoginAt = now;
     if (email) existing.email = targetEmail;
     if (displayName) existing.displayName = displayName.trim();

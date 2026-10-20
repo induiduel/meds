@@ -163,9 +163,11 @@ export const saveFirestoreUserProfile = async (user: AppUser): Promise<void> => 
 
   // Dual sync to server database (Realtime sync bridge)
   try {
+    // Kimlik jetonu: sunucu e-postayla eşleşen eski kaydı (ör. admin-nofrostlife) doğrulanmış uid'ye taşır.
+    const idToken = auth.currentUser?.uid === user.uid ? await auth.currentUser.getIdToken().catch(() => '') : '';
     fetch('/api/users/sync', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', ...(idToken ? { Authorization: `Bearer ${idToken}` } : {}) },
       body: JSON.stringify({
         uid: user.uid,
         email: user.email || null,
