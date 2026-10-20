@@ -152,8 +152,33 @@ function deckSources(): SourcesFile {
   return best || { decks: {} };
 }
 
+/**
+ * Sanal desteler: birden çok dersin PDF'lerini tek destede birleştirir (sıra = dosya indeksi). TBG Sınav Kampı sesli dersi
+ * altı genetik dersinin slaytlarını tek görüntüleyicide açar (data/sesli_anlatim/hizalama/k1-70-tbg-sinav-kampi.json).
+ */
+export const SANAL_DESTELER: Record<string, { title: string; decks: string[] }> = {
+  'k1p-k1-70-tbg-sinav-kampi': {
+    title: 'TBG Sınav Kampı',
+    decks: [
+      'k1p-k1-01-dismorfolojide-genetik-terminoloji-v2',
+      'k1p-k1-10-kromozomal-hastaliklar-ve-genetik-danisma-v2',
+      'k1p-k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri-v2',
+      'k1p-k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler-v2',
+      'k1p-k1-35-prenatal-tani-yontemleri-v2',
+      'k1p-k1-60-preimplantasyon-genetik-tani-pgt',
+    ],
+  },
+};
+function sanalDeste(deckId: string, decks: Record<string, DeckSourceEntry>): DeckSourceEntry | undefined {
+  const s = SANAL_DESTELER[deckId];
+  if (!s) return undefined;
+  const files = s.decks.map((id) => decks[id]?.files?.[0]).filter((f): f is SourceFile => !!f);
+  return files.length === s.decks.length ? { title: s.title, files } as DeckSourceEntry : undefined;
+}
+
 export function deckSourceEntry(deckId: string): DeckSourceEntry | undefined {
-  return deckSources().decks[deckId];
+  const decks = deckSources().decks;
+  return decks[deckId] || sanalDeste(deckId, decks);
 }
 
 export interface ResolvedDeckPdf {
@@ -216,7 +241,7 @@ export const toPublic = (f: ResolvedDeckPdf): DeckPdfPublic => ({ name: f.name, 
 /** Tüm desteler için diskte açılabilen PDF listesi (Öğren kataloğundaki PDF düğmeleri için). */
 export function deckPdfAvailability(): Record<string, DeckPdfPublic[]> {
   const out: Record<string, DeckPdfPublic[]> = {};
-  for (const id of Object.keys(deckSources().decks)) {
+  for (const id of [...Object.keys(deckSources().decks), ...Object.keys(SANAL_DESTELER)]) {
     const files = resolveDeckPdfs(id);
     if (files.some((f) => f.full)) out[id] = files.map(toPublic);
   }

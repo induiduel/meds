@@ -129,11 +129,14 @@ def sessiz_kirp(x, esik=0.012, pay=0.08):
 
 
 UZUN_KISALTMA = False  # iş başına ayarlanır: Kurul 2+ anahtarları (k2-…, k2p-…) True
+MODUL_OKUNUS = False  # modül dersleri (TBG Sınav Kampı): ekrandaki standart yazım (BRCA1, PAPP-A) → modul_okunus.py
 
 
 def uzun_kisaltma_ayarla(anahtar: str) -> None:
-    global UZUN_KISALTMA
+    global UZUN_KISALTMA, MODUL_OKUNUS
+    import modul_okunus
     UZUN_KISALTMA = bool(re.match(r"k[2-6](p-k[2-6])?-", str(anahtar or "")))
+    MODUL_OKUNUS = str(anahtar or "") in modul_okunus.MODUL_ANAHTARLAR
 
 
 def _ks():
@@ -149,7 +152,10 @@ def paragraf_seslendir(tts, metin: str):
     # Kısaltma okunuşu — yalnız modele giden metin; paragraf/zamanlama değişmez.
     # Kurul 2+ (UZUN_KISALTMA): fonetik terimler + ünlüsü uzatılmış harf adları ("dee nee aa"); birleşik "denea" EMA'da
     # kelime gibi okunuyordu ("deneye", 2026-10-17 ölçümü, KURUL2_YAPILMAYACAK_HATALAR H3). Kurul 1 eski yolda.
-    if UZUN_KISALTMA:
+    if MODUL_OKUNUS:
+        import modul_okunus
+        metin = modul_okunus.donustur(metin)
+    elif UZUN_KISALTMA:
         for pat, fon in okunus.FONETIK_TTS:
             metin = pat.sub(fon, metin)
         metin = _ks().uzat(metin)
@@ -234,6 +240,8 @@ def sentezle(is_dosyasi: str) -> int:
     is_ = j["is"]
     parcalar = j["parcalar"]
     mevcut = set(j.get("mevcut") or [])
+    # okunuş ayarı bu (alt) süreçte de yapılmalı: üst süreçteki ayar buraya taşınmaz
+    uzun_kisaltma_ayarla(is_.get("key", ""))
     tts = model_yukle()
     toplam = len(parcalar)
     for i, p in enumerate(parcalar):

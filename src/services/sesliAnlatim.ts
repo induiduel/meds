@@ -1377,6 +1377,17 @@ export function registerSesliAnlatimRoutes(
       });
       hizalama = 'yazıldı';
     } else if (sayfalar.length) hizalama = `atlandı (${sayfalar.length} sayfa ≠ ${pars.length} paragraf)`;
+    // Hazır çok dosyalı hizalama (modül dersleri: birden çok dersin PDF'i, cümle başına sayfa/dosya)
+    const hz = req.body?.hizalama && typeof req.body.hizalama === 'object' ? req.body.hizalama : null;
+    if (hz && Array.isArray(hz.dosyalar) && hz.dosyalar.length && Array.isArray(hz.paragraflar)) {
+      const n = hz.dosyalar.length;
+      const gecerli = hz.paragraflar.length === pars.length && hz.paragraflar.every((x: any) => x && Number.isInteger(x.dosya) && x.dosya >= 0 && x.dosya < n
+        && Number.isInteger(x.sayfa) && x.sayfa >= 1 && (!Array.isArray(x.dosyalar) || x.dosyalar.every((d: unknown) => Number.isInteger(d) && (d as number) >= 0 && (d as number) < n)));
+      if (gecerli) {
+        yaz(path.join(KOK, 'hizalama', `${k}.json`), { deckId: String(hz.deckId || req.body?.deckId || ''), dosyalar: hz.dosyalar, paragraflar: hz.paragraflar, kaynak: String(hz.kaynak || 'ders-ekle') });
+        hizalama = 'yazıldı (çok dosyalı)';
+      } else hizalama = `atlandı (hizalama ${hz.paragraflar.length} ≠ ${pars.length} paragraf ya da geçersiz)`;
+    }
     // Slayt çapaları (Kurul 2+, konusma_v2 → konusma_capalari.json): paragraf başına cümle → {ses, sayfa, satir[], sekil}.
     // pdf_isaret.py bunlarla okunan cümlenin PDF'teki maddesini tahminsiz bulur; metin değişince hash tutmaz, yok sayılır.
     const capalar = Array.isArray(req.body?.capalar) && req.body.capalar.length === pars.length ? req.body.capalar : null;
@@ -1386,7 +1397,8 @@ export function registerSesliAnlatimRoutes(
     const kayit = kayitlar()[k] || [];
     const isteyen = 'ders-isci';
     const isler: string[] = [];
-    const yalnizEma = Number((/^k(\d+)-/.exec(k) || [])[1] || 1) >= 2;
+    // Kurul 2+ ve modül dersleri (yalnizEma: true, ör. TBG Sınav Kampı): yalnız EMA, varsayılan
+    const yalnizEma = Number((/^k(\d+)-/.exec(k) || [])[1] || 1) >= 2 || req.body?.yalnizEma === true;
     if (!yalnizEma && (degisti || !kayit.some((v) => v.saglayici === 'edge-emel' && v.metinHash === hash(metin))))
       isler.push(isEkle(k, 'edge-emel', 'Emel', { varsayilanYap: true, isteyen }).id);
     if (degisti || !kayit.some((v) => v.saglayici === 'ema-yerel' && v.metinHash === hash(metin)))
