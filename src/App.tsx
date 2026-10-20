@@ -59,13 +59,15 @@ import { syncNotes } from './services/notesSync';
 import { buildDeepLinkUrl, executeDeepLinkFocus, initDeepLinkAutoScroll, openDeepLink } from './services/universalRedirectService';
 
 import CevrimdisiYok from './components/cevrimdisi/CevrimdisiYok';
+import { sunucuyaUlasilir } from './services/cevrimdisi/baglanti';
 
 function wrapLazy<T extends { default: React.ComponentType<any> }>(
   promise: Promise<T>
 ): Promise<T> {
-  return promise.catch((err) => {
+  return promise.catch(async (err) => {
     console.warn('[SafeLazy] Failed to load component:', err?.message || err);
-    const isOnline = typeof window !== 'undefined' && navigator.onLine;
+    // navigator.onLine Wi-Fi'ye bağlı ama internetsiz cihazda da true: yenileme kararı yalnız sunucu gerçekten yanıt verirse
+    const isOnline = typeof window !== 'undefined' && navigator.onLine && (await sunucuyaUlasilir());
     if (isOnline) {
       const msg = String(err?.message || err || '');
       if (

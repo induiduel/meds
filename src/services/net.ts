@@ -43,6 +43,11 @@ function reportOk() {
   failTimes = [];
   if (state !== 'online' && (typeof navigator === 'undefined' || navigator.onLine !== false)) setState('online');
 }
+/** SW ağa ulaşamadığını bildirdi (X-Cevrimdisi): Wi-Fi bağlı ama internetsizken de "çevrimdışı" gösterilir */
+function reportOffline() {
+  failTimes = [];
+  setState('offline');
+}
 function reportFail() {
   if (typeof navigator !== 'undefined' && navigator.onLine === false) return setState('offline');
   const now = Date.now();
@@ -108,7 +113,9 @@ export function installFetchGuard() {
       const signal = callerSignal ? anySignal([callerSignal, timer.signal]) : timer.signal;
       try {
         const res = await nativeFetch(input, { ...sendInit, signal });
-        reportOk();
+        // SW'nin internetsiz yanıtları (cihazdaki kopya / "ağ yok" 503'ü) bağlantı geldi sayılmaz
+        if (res.headers.get('X-Cevrimdisi')) reportOffline();
+        else if (res.headers.get('X-From-Cache') !== '1') reportOk();
         return res;
       } catch (err: any) {
         if (timedOut) {

@@ -1,18 +1,22 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 139,
-  "baslik": "Deneme sınavı ve olası sorular artık ATP ile açılıyor",
+  "onem": 140,
+  "baslik": "Çevrimdışı kullanım daha sağlam",
   "maddeler": [
-    "Kurul deneme sınavları 250 mol ATP ile açılır; bir kez açınca hesabında kalıcıdır.",
-    "Olası sorular 400 mol ATP ile açılır; bir kez açınca hesabında kalıcıdır.",
-    "ATP'yi hedeflerin üst seviyelerinden, başarımlardan ve haftalık sıralamada ilk 5'e girerek kazanırsın (Başarımlar sayfası)."
+    "İndirdiğin içerik internetsizken (Wi-Fi bağlı ama internet yokken de) eksiksiz açılır; uygulama artık kendi kopyasını silmez.",
+    "İnternetsiz arama: çıkmış ve havuz soruları, sözlük ve ders başlıklarında cihazdaki verilerle arar.",
+    "Tek branş indirdiğinde de Spotlar, En önemliler, Soru çözücü, Sınav çalışması ve İstatistik internetsiz açılır.",
+    "Yazı tipleri, sesli dersin motivasyon klipleri ve TBG kampının sesli dersi indirilen pakete eklendi; internetsiz deneme sınavı kurulur."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "İnternetsiz arama: çıkmış ve havuz soruları, sözlük ve ders başlıklarında cihazdaki verilerle arar."
+  ],
   "degisen": [
-    "Kurul deneme sınavları 250 mol ATP ile açılır; bir kez açınca hesabında kalıcıdır.",
-    "Olası sorular 400 mol ATP ile açılır; bir kez açınca hesabında kalıcıdır.",
-    "ATP'yi hedeflerin üst seviyelerinden, başarımlardan ve haftalık sıralamada ilk 5'e girerek kazanırsın (Başarımlar sayfası)."
+    "İndirdiğin içerik internetsizken (Wi-Fi bağlı ama internet yokken de) eksiksiz açılır; uygulama artık kendi kopyasını silmez.",
+    "Yazı tipleri, sesli dersin motivasyon klipleri ve TBG kampının sesli dersi indirilen pakete eklendi; internetsiz deneme sınavı kurulur."
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Tek branş indirdiğinde de Spotlar, En önemliler, Soru çözücü, Sınav çalışması ve İstatistik internetsiz açılır."
+  ],
   "silinen": []
 }

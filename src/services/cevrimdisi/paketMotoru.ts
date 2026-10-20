@@ -41,6 +41,8 @@ export interface Paket {
   /** İsteğe bağlı ağır parçalar (ses klipleri, ders PDF'leri) */
   ek?: { ses?: { b: number; n: number }; pdf?: { b: number; n: number } };
   surumT?: { veri: string; ses?: string; pdf?: string };
+  /** Birlikte inmesi gereken paketler (sunucu kataloğu) */
+  bagimli?: string[];
 }
 /** Paket başına içerik seçimi: sesler ve PDF'ler inecek mi */
 export interface Secim { ses: boolean; pdf: boolean }
@@ -148,7 +150,7 @@ export function useCevrimdisi(): Durumlar {
 
 /* ------------------------------------------------------------------ yardımcılar ------------------------------------------------------------------ */
 export const destek = () => typeof caches !== 'undefined' && typeof indexedDB !== 'undefined';
-const SES_RE = /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses)\//;
+const SES_RE = /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses|kamp\/ses)\//;
 /** Dosya türü (sunucu cevrimdisiKatalog.dosyaTuru ile aynı kural) */
 export const dosyaTuru = (u: string): DosyaTuru =>
   /\.mp3($|\?)/i.test(u) || SES_RE.test(u) ? 'ses' : u.startsWith('/api/lecture-pdf/') || u.startsWith('/vendor/pdfjs/') ? 'pdf' : 'veri';
@@ -318,8 +320,15 @@ let calisiyor = false;
 let iptal: AbortController | null = null;
 
 export function kuyrugaEkle(ids: string[], basa = false, secim?: Secim) {
+  // Bağımlı paketler (katalogdaki `bagimli`): cihazda olmayanlar da birlikte kuyruğa girer (iç içe olabilir)
+  const tum = new Set(ids);
+  for (let i = 0; i < 3; i++) {
+    for (const id of [...tum]) for (const b of S.katalog.find((p) => p.id === id)?.bagimli || []) if (paketDurumu(b) === 'yok') tum.add(b);
+  }
+  ids = [...tum];
   // İçerik inerken uygulama kodu da cihazda olmalı (yoksa ekranlar internetsiz açılmaz; PDF görüntüleyici, çizim işçisi vb.)
-  if (ids.some((x) => x !== 'uygulama') && !ids.includes('uygulama') && paketDurumu('uygulama') === 'yok') ids = ['uygulama', ...ids];
+  // Güncel olmalı da: içerik parçalarının adları yeni derlemeye aittir, eski kabuk onları bulamaz
+  if (ids.some((x) => x !== 'uygulama') && !ids.includes('uygulama') && ['yok', 'guncelleme', 'hata'].includes(paketDurumu('uygulama'))) ids = ['uygulama', ...ids];
   if (secim) {
     const sm = { ...S.secimler };
     ids.forEach((id) => { sm[id] = secim; });
@@ -411,7 +420,8 @@ async function paketIndir(id: string, signal: AbortSignal) {
   if (!r.ok) throw new Error(r.status === 404 ? 'Bu paket artık sunucuda yok.' : `Paket bilgisi alınamadı (${r.status}).`);
   const ham: Paket & { dosyalar: PDosya[] } = await r.json();
   const secim = secimAl(id);
-  const bilgi = { ...ham, dosyalar: ham.dosyalar.filter((d) => { const t = dosyaTuru(d.u); return t === 'veri' || secim[t]; }) };
+  // Uygulama paketi seçimden bağımsız tam iner (sessiz klip, motivasyon klipleri, PDF.js yardımcıları uygulamanın parçası)
+  const bilgi = { ...ham, dosyalar: ham.dosyalar.filter((d) => { const t = dosyaTuru(d.u); return id === 'uygulama' || t === 'veri' || secim[t]; }) };
   const cache = await caches.open(PAKET_CACHE);
   const onceki = S.kayitlar[id];
   // Yarım kaldığında silinebilsin diye plan önce kaydedilir (eski dosyalar + yeni dosyalar)
@@ -500,6 +510,22 @@ async function paketIndir(id: string, signal: AbortSignal) {
     }
   };
   await Promise.all(Array.from({ length: Math.min(paralel, eksik.length) }, isci));
+  // Google yazı tipi CSS'i indiyse içindeki Türkçe için gereken (latin, latin-ext) woff2 dosyaları da iner ve pakete yazılır
+  for (const d of bilgi.dosyalar.filter((x) => x.u.startsWith('https://fonts.googleapis.com/'))) {
+    try {
+      const css = await (await cache.match(anahtar(d)))?.text();
+      const bloklar = (css || '').split('/*').filter((b) => /^\s*latin(-ext)?\s*\*\//.test(b));
+      const adresler = [...new Set(bloklar.flatMap((b) => b.match(/https:\/\/fonts\.gstatic\.com\/[^)'"\s]+/g) || []))];
+      for (const u of adresler) {
+        if (signal.aborted) break;
+        if (!(await cache.match(u))) {
+          const r = await fetch(u, { signal, mode: 'cors' });
+          if (r.ok) await cache.put(u, new Response(await r.blob(), { headers: { 'Content-Type': r.headers.get('Content-Type') || 'font/woff2', 'X-Paket-Surum': '' } }));
+        }
+        bilgi.dosyalar.push({ u, b: 0 });
+      }
+    } catch { /* yazı tipi inmezse sistem yazı tipi kullanılır */ }
+  }
 
   // Artık kullanılmayan eski dosyalar (başka paket kullanmıyorsa) silinir
   const yeni = new Set(bilgi.dosyalar.map((d) => d.u));
@@ -649,6 +675,8 @@ export async function cevrimdisiBaslat() {
   } catch { /* IndexedDB kapalı */ }
   await import('./uyarlayicilar').then((m) => m.uyarlayicilariKur()).catch(() => {});
   guncelle({ hazir: true });
+  // Otomatik çevrimdışı sınaması (scripts/cevrimdisi_sinama) motoru arayüzsüz sürer
+  (window as any).__medsorCevrimdisi = { kuyrugaEkle, durumAl, katalogYenile, paketSil, ayarYaz, paketDurumu, cevrimdisiModuAc };
   void depolamaYenile();
   window.addEventListener('online', () => { void calistir(); void otomatikTur(); });
   (navigator as any).connection?.addEventListener?.('change', () => void calistir());
@@ -682,7 +710,8 @@ export function bildir(metin: string, ms = 4500) {
 async function otomatikTur() {
   if (!navigator.onLine) return;
   if (!S.katalog.length) await katalogYenile().catch(() => {});
-  if (S.ayar.acik) {
+  // Cihazda herhangi bir paket varsa uygulama paketi de güncel tutulur (çevrimdışı mod kapalı olsa bile)
+  if (S.ayar.acik || Object.keys(S.kayitlar).some((id) => id !== 'uygulama')) {
     const u = paketDurumu('uygulama');
     if (u === 'yok' || u === 'guncelleme') kuyrugaEkle(['uygulama'], true);
   }

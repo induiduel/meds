@@ -406,7 +406,8 @@ export async function backupUserDataToDatabase(): Promise<{
     };
   } catch (err: any) {
     // Sunucunun hız sınırı (429) bir hata değil; otomatik yedekleme sonra yeniden dener
-    (/Çok sık/.test(String(err?.message)) ? console.warn : console.error)('[UserDataSync] Backup failed:', err?.message || err);
+    // Hız sınırı (429) ve internetsizlik (Failed to fetch / NetworkError) hata değil: veri cihazda durur, bağlantı gelince yeniden denenir
+    (/Çok sık|Failed to fetch|NetworkError|Load failed|çevrimdışı/i.test(String(err?.message)) ? console.warn : console.error)('[UserDataSync] Backup failed:', err?.message || err);
     return { success: false, error: err.message || 'Veritabanı yedekleme hatası' };
   }
 }

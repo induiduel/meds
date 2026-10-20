@@ -42,6 +42,7 @@ import { markDeviceClasses } from './utils/device';
 import { pwaService } from './services/pwaService';
 import { offlineDatabaseService } from './services/offlineDatabaseService';
 import { arkaPlanPushKur } from './services/arkaPlanPush';
+import { cevrimdisiGibi, sunucuyaUlasilir } from './services/cevrimdisi/baglanti';
 
 // Yönetici oturumundaki API isteklerine Firebase jetonu (sunucu x-admin-email'e güvenmez; src/services/adminAuth.ts)
 installAdminFetchAuth();
@@ -112,18 +113,22 @@ installSelectionShare();
 installStudyTimer();
 
 // Auto reload on stale Vite chunk after a new deployment
+// (Wi-Fi bağlı ama internetsizken de yenilenmez: önce sunucuya ulaşılıyor mu bakılır)
 window.addEventListener('vite:preloadError', (event) => {
   if (!navigator.onLine) {
     event.preventDefault();
     return;
   }
-  const key = 'medsoru_last_chunk_reload';
-  const now = Date.now();
-  const last = Number(sessionStorage.getItem(key) || 0);
-  if (now - last > 5000) {
-    sessionStorage.setItem(key, String(now));
-    window.location.reload();
-  }
+  void sunucuyaUlasilir().then((ok) => {
+    if (!ok) return;
+    const key = 'medsoru_last_chunk_reload';
+    const now = Date.now();
+    const last = Number(sessionStorage.getItem(key) || 0);
+    if (now - last > 5000) {
+      sessionStorage.setItem(key, String(now));
+      window.location.reload();
+    }
+  });
 });
 
 interface ErrorBoundaryProps {
@@ -150,13 +155,16 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
     if (!navigator.onLine) return;
     const msg = error?.message || '';
     if (/Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg)) {
-      const key = 'medsoru_last_chunk_reload';
-      const now = Date.now();
-      const last = Number(sessionStorage.getItem(key) || 0);
-      if (now - last > 8000) {
-        sessionStorage.setItem(key, String(now));
-        window.location.reload();
-      }
+      void sunucuyaUlasilir().then((ok) => {
+        if (!ok) { this.forceUpdate(); return; } // internetsiz: "cihazında yok" ekranı (render cevrimdisiGibi'ye bakar)
+        const key = 'medsoru_last_chunk_reload';
+        const now = Date.now();
+        const last = Number(sessionStorage.getItem(key) || 0);
+        if (now - last > 8000) {
+          sessionStorage.setItem(key, String(now));
+          window.location.reload();
+        }
+      });
     }
   }
 
@@ -198,7 +206,7 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
     if (this.state.hasError) {
       const msg = this.state.error?.message || 'Bilinmeyen arayüz hatası';
       const isChunkError = /Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg);
-      if (isChunkError && !navigator.onLine) return <CevrimdisiYok />;
+      if (isChunkError && cevrimdisiGibi()) return <CevrimdisiYok />;
 
       return (
         <div className="min-h-dvh bg-canvas text-ink flex flex-col items-center justify-center p-4">

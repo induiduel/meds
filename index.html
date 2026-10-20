@@ -60,22 +60,31 @@
     <script>
       // Dağıtımdan sonra service worker eski index.html'i (artık sunucuda olmayan /assets/ parçalarıyla) verirse
       // uygulama açılış ekranında kalıyordu: eski kabuk parçası yüklenemeyince önbellekteki kabuğu sil ve yenile.
+      // Yalnız sunucu gerçekten yanıt veriyorsa yapılır (Wi-Fi bağlı ama internet yoksa navigator.onLine yine true'dur) ve
+      // kullanıcının indirdiği çevrimdışı önbelleklerine (medsor-paket-v1 vb.) dokunulmaz: yoksa internetsiz kabuk silinir.
       window.__medsoruTazeYukle = function () {
         if (!navigator.onLine) return false;
         var son = Number(sessionStorage.getItem('medsoru_chunk_reload') || 0);
         if (Date.now() - son < 8000) return false;
         sessionStorage.setItem('medsoru_chunk_reload', String(Date.now()));
         var bitti = function () { window.location.reload(); };
+        var korunan = /^(medsor-paket-|medsoru-canli-ders-offline|medsoru-cd-bekleyen|medsoru-pdf-offline)/;
         try {
-          if (!window.caches) return bitti(), true;
-          caches.keys().then(function (keys) {
-            return Promise.all(keys.map(function (k) {
-              return caches.open(k).then(function (c) {
-                return Promise.all(['/', '/index.html', location.pathname].map(function (u) { return c.delete(u, { ignoreSearch: true }); }));
-              });
-            }));
-          }).then(bitti, bitti);
-        } catch (e) { bitti(); }
+          var ctl = window.AbortController ? new AbortController() : null;
+          var zaman = setTimeout(function () { if (ctl) ctl.abort(); }, 4000);
+          fetch('/api/surum?t=' + Date.now(), { cache: 'no-store', signal: ctl ? ctl.signal : undefined }).then(function (r) {
+            clearTimeout(zaman);
+            if (!r.ok) return; // /api/surum SW'den geçmez: yanıt gerçekten sunucudan
+            if (!window.caches) return bitti();
+            return caches.keys().then(function (keys) {
+              return Promise.all(keys.filter(function (k) { return !korunan.test(k); }).map(function (k) {
+                return caches.open(k).then(function (c) {
+                  return Promise.all(['/', '/index.html', location.pathname].map(function (u) { return c.delete(u, { ignoreSearch: true }); }));
+                });
+              }));
+            }).then(bitti, bitti);
+          }).catch(function () { clearTimeout(zaman); });
+        } catch (e) { /* ağ yok: yenileme de yok */ }
         return true;
       };
       window.addEventListener('error', function (e) {
@@ -97,7 +106,6 @@
         var msg = event.reason ? (event.reason.message || String(event.reason)) : '';
         if (
           msg.indexOf('dynamically imported module') !== -1 ||
-          msg.indexOf('Failed to fetch') !== -1 ||
           msg.indexOf("reading 'default'") !== -1
         ) {
           if (!navigator.onLine) {

@@ -9,7 +9,7 @@ const CD_OFFLINE_CACHE = 'medsoru-canli-ders-offline';
 const CD_BEKLEYEN_CACHE = 'medsoru-cd-bekleyen';
 /** Çevrimdışı merkezi paketleri (src/services/cevrimdisi/paketMotoru.ts): sürüm temizliğinde silinmez, yalnız kullanıcı siler */
 const PAKET_CACHE = 'medsor-paket-v1';
-const PAKET_SES_RE = /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses)\//;
+const PAKET_SES_RE = /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses|kamp\/ses)\//;
 
 /** İndirilmemiş ses klibi internetsiz istenince verilen 0,4 sn'lik sessiz klip: oynatıcı hata vermez, akış sessiz sürer */
 const SESSIZ_KLIP = '/ses/sessiz.mp3';
@@ -348,6 +348,18 @@ self.addEventListener('fetch', (event) => {
     }
   }
 
+  // Uygulamanın kendi ses klipleri (/ses/: sessiz klip, sesli ders motivasyon/mola): cihazdaysa Range/206 ile oradan
+  if (url.origin === self.location.origin && url.pathname.startsWith('/ses/') && /\.mp3$/i.test(url.pathname)) {
+    event.respondWith(
+      (async () => {
+        const hit = await caches.match(url.origin + url.pathname, { ignoreSearch: true, ignoreVary: true });
+        if (hit) return aralikYaniti(req, hit, 'audio/mpeg');
+        return fetch(req).catch(() => sessizYanit(req));
+      })()
+    );
+    return;
+  }
+
   // PDF.js yardımcı dosyaları (yazı tipi, wasm, ICC, CMap): sürüme bağlı, değişmez → önbellek önce
   if (url.pathname.startsWith('/vendor/pdfjs/')) {
     event.respondWith(
@@ -360,6 +372,22 @@ self.addEventListener('fetch', (event) => {
           caches.open(RUNTIME_CACHE).then((cache) => cache.put(req, clone)).catch(() => {});
         }
         return res;
+      })()
+    );
+    return;
+  }
+
+  // Google yazı tipi CSS'i (uzantısız adres): cihazdaki kopya (çevrimdışı paketi ya da önceki açılış) önce, arka planda tazelenir
+  if (url.hostname === 'fonts.googleapis.com') {
+    event.respondWith(
+      (async () => {
+        const cached = await caches.match(req.url, { ignoreVary: true });
+        const ag = fetch(req).then((res) => {
+          if (res && res.ok) { const k = res.clone(); caches.open(RUNTIME_CACHE).then((c) => c.put(req.url, k)).catch(() => {}); }
+          return res;
+        });
+        if (cached) { ag.catch(() => {}); return cached; }
+        return ag.catch(() => new Response('/* yazı tipi çevrimdışı */', { headers: { 'Content-Type': 'text/css' } }));
       })()
     );
     return;
@@ -435,6 +463,7 @@ self.addEventListener('fetch', (event) => {
       url.pathname.startsWith('/api/patoloji-asistan/ses/') || // sınav asistanı EMA klipleri (Range/206)
       url.pathname.startsWith('/api/patoloji-cozucu/ses/') || // soru çözücü EMA klipleri (Range/206)
       url.pathname.startsWith('/api/cozucu-ses/') || // soru çözücü klipleri, branş geneli (Range/206)
+      url.pathname.startsWith('/api/kamp/ses/') || // kurul kampı klipleri (Range/206)
       url.pathname.includes('/events') ||
       url.pathname.includes('/stream') ||
       url.pathname.includes('/sse') ||
@@ -460,7 +489,10 @@ self.addEventListener('fetch', (event) => {
         const kazanan = await Promise.race([network.catch(() => null), yavas]);
         if (kazanan && kazanan.ok) return kazanan;
         const hit = await c.match(url.href);
-        return hit || network;
+        if (!hit) return network;
+        const h = new Headers(hit.headers);
+        h.set('X-From-Cache', '1');
+        return new Response(await hit.blob(), { status: hit.status, headers: h });
       })());
       return;
     }
@@ -505,7 +537,7 @@ self.addEventListener('fetch', (event) => {
             });
           }
           return new Response(JSON.stringify({ offline: true, error: 'Ağ bağlantısı yok (çevrimdışı)' }), {
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', 'X-Cevrimdisi': 'ag-yok' },
             status: 503,
           });
         }

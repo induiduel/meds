@@ -116,7 +116,12 @@ export async function fetchSearch(
       ]).catch(() => null)
     : null;
   const res = await safeJsonFetch<SearchResponse & { success: boolean }>(`/api/search/all?${params}`, { signal });
-  if (!res.ok || !res.data?.success) return null;
+  if (!res.ok || !res.data?.success) {
+    // Sunucuya ulaşılamadı (internetsiz / SW 503): cihazdaki verilerde ara
+    if (signal?.aborted) return null;
+    const { yerelArama } = await import('./yerelArama');
+    return yerelArama(normalizedQ, opts);
+  }
   if (!includeV3) {
     setCachedSearch(cacheKey, res.data);
     return res.data;

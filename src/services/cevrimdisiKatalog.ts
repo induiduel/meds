@@ -28,13 +28,15 @@ export interface Paket {
   zorunlu?: boolean;
   /** İsteğe bağlı ağır parçalar (istemci "sesleri / PDF'leri de indir" seçimine göre atlar): bayt + dosya sayısı */
   ek?: { ses?: { b: number; n: number }; pdf?: { b: number; n: number } };
+  /** Bu paket indirilince birlikte inmesi gereken paketler (ör. TBG kampı → sesli dersi); istemci kuyruğa kendisi ekler */
+  bagimli?: string[];
   /** Tür başına sürüm: sessiz indirilen paket yalnız ses değişince "güncelleme var" göstermesin */
   surumT?: { veri: string; ses?: string; pdf?: string };
 }
 
 /** Dosya türü (istemci paketMotoru.dosyaTuru ile aynı kural) */
 export const dosyaTuru = (u: string): 'ses' | 'pdf' | 'veri' =>
-  /\.mp3($|\?)/i.test(u) || /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses)\//.test(u) ? 'ses'
+  /\.mp3($|\?)/i.test(u) || /^\/api\/(cozucu-ses|patoloji-asistan\/ses|patoloji-cozucu\/ses|patoloji-cozucu-alt\/ses|ogren-ses|kamp\/ses)\//.test(u) ? 'ses'
     : u.startsWith('/api/lecture-pdf/') || u.startsWith('/vendor/pdfjs/') ? 'pdf' : 'veri';
 
 /** PDF.js'in çizim için istediği yardımcı dosyalar (yazı tipi, wasm, renk profili); server.ts /vendor/pdfjs'ten sunar */
@@ -91,7 +93,7 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
     const tekil = new Map<string, PDosya>();
     for (const d of dosyalar) if (d.b > 0 || d.u.startsWith('/api/')) tekil.set(d.u, d);
     const ds = [...tekil.values()];
-    if (!ds.length) return;
+    if (!ds.length && !p.bagimli?.length) return;
     const tur: Record<'ses' | 'pdf' | 'veri', PDosya[]> = { ses: [], pdf: [], veri: [] };
     for (const d of ds) tur[dosyaTuru(d.u)].push(d);
     const sur = (xs: PDosya[]) => ozet(xs.map((d) => `${d.u}@${d.v || ''}`).sort().join('|'));
@@ -175,6 +177,31 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
       [...veri(`decks/items/${safe}.json`), ...sesler, ...pdfler]);
   });
 
+  // Kurul kampları: kurul × branş (kamp JSON parçası + EMA klipleri; data/kamp/ses/k<N>/<brans>/)
+  for (const k of Object.keys(m.veri).filter((x) => /^src\/data\/kamp\/k\d+\/[a-z0-9]+\.json$/.test(x)).sort()) {
+    const [, kurul, brans] = k.match(/kamp\/k(\d+)\/([a-z0-9]+)\.json$/)!;
+    const kamp = jsonOku(path.join(KOK, k));
+    const klipler = Object.values<string>(kamp?.ses || {}).filter((d) => /^[a-z0-9-]{1,60}\.mp3$/.test(d)).map((d) =>
+      ses(`/api/kamp/ses/${kurul}/${brans}/${d}`, path.join(DATA, 'kamp', 'ses', `k${kurul}`, brans, d)));
+    ekle({ id: `kamp:${kurul}:${brans}`, modul: 'veri', grup: 'Kurul kampı', baslik: `Kurul ${kurul} · ${kamp?.baslik || brans}`,
+      alt: `${(kamp?.anlatim || []).length} anlatım · ${(kamp?.deneme || []).length} deneme sorusu`, sira: Number(kurul) },
+    [...veri(k.slice('src/data/'.length)), ...klipler]);
+  }
+  // TBG sınav kampı (/genetik-check-up): kalıp tabloları uygulama kodunda; Ders 7 sesli asistanı (g07) klipleri burada,
+  // anlatımın kendisi sesli ders (k1-70) olarak bağımlı paketle iner
+  const g07 = jsonOku(path.join(SRC_DATA, 'genetik_asistan', 'g07.json'));
+  if (g07) {
+    ekle({ id: 'sayfa:tbg-kampi', modul: 'veri', grup: 'Kurul kampı', baslik: 'TBG Sınav Kampı', alt: 'Sesli ders, soru çözerek anlatım, kalıp kartları', sira: 0,
+      bagimli: ['sesli:k1-70-tbg-sinav-kampi'] },
+    Object.entries<any>(g07.klip || {}).map(([k, x]) => ses(`/api/patoloji-asistan/ses/g07/${k}.mp3`, path.join(DATA, 'genetik_asistan', 'ses', 'g07', `${k}.mp3`), x.v)));
+  }
+  // Olası sorular: yayımlanmış kurul setleri (data/olasi_sorular/k<N>.json) + özet listesi
+  const olasi = [1, 2, 3, 4, 5, 6].filter((k) => boyut(path.join(DATA, 'olasi_sorular', `k${k}.json`)) > 0);
+  if (olasi.length) {
+    ekle({ id: 'veri:olasi', modul: 'veri', grup: 'Başvuru', baslik: 'Olası sorular', alt: `Kurul ${olasi.join(', ')} olası soru setleri`, sira: 0 },
+      [{ u: '/api/olasi-sorular', b: 2_000 }, ...olasi.map((k) => ({ u: `/api/olasi-sorular/${k}`, b: boyut(path.join(DATA, 'olasi_sorular', `k${k}.json`)) }))]);
+  }
+
   // Başvuru verileri (tek paket halinde)
   const grupVeri = (id: string, baslik: string, alt: string, onekler: RegExp) => {
     const ks = Object.keys(m.veri).filter((k) => onekler.test(k));
@@ -202,8 +229,25 @@ function kur(): Map<string, { p: Paket; dosyalar: PDosya[] }> {
   const kucuk: string[] = [];
   const buyuk: string[] = [];
   for (const f of kalanVeri) (boyut(path.join(DIST, f)) >= 1_000_000 ? buyuk : kucuk).push(f);
+  // Dizinler (branş/ders listeleri, Öğren eşlemeleri): liste ekranları (spotlar, çözücü, sınav çalışması, istatistik) tüm
+  // branşlarınkini birlikte yükler; yalnız bir branşın paketi inmiş cihazda da internetsiz açılsınlar diye uygulamaya girer (~0,3 MB)
+  const dizinler = Object.entries(m.veri).filter(([k]) => /^src\/data\/[^/]+\/(k\d+\/)?index\.json$|^src\/data\/cozucu_ogren\//.test(k)).flatMap(([, fs_]) => fs_);
+  // Uygulama simgeleri ve PWA tanımı (her sayfa ister; internetsiz kurulu uygulamada simge/başlık eksik kalmasın)
+  const simgeler = ['/manifest.json', '/favicon.ico', '/favicon.png', '/favicon.svg', '/apple-touch-icon.png', '/ses/sessiz.mp3',
+    ...['icon-144x144.png', 'icon-192x192.png', 'icon-512x512.png', 'maskable-icon-192x192.png', 'maskable-icon-512x512.png'].map((f) => `/icons/${f}`)]
+    .map((u) => ({ u, b: boyut(path.join(DIST, u)) }));
+  // Sesli dersin motivasyon/mola klipleri (public/ses/motivasyon, ~3 MB): sesli ders internetsiz de konuşur
+  try {
+    for (const f of fs.readdirSync(path.join(DIST, 'ses', 'motivasyon')).filter((x) => x.endsWith('.mp3'))) {
+      simgeler.push({ u: `/ses/motivasyon/${f}`, b: boyut(path.join(DIST, 'ses', 'motivasyon', f)) });
+    }
+  } catch { /* klasör yok */ }
+  // Google yazı tipleri: CSS adresi index.html'den; içindeki woff2 dosyalarını istemci indirir (CSS tarayıcıya göre değişir)
+  let html = '';
+  try { html = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8'); } catch { /* derleme yok */ }
+  const yaziTipi = [...new Set(html.match(/https:\/\/fonts\.googleapis\.com\/css2\?[^"'\s]+/g) || [])].map((u) => ({ u: u.replace(/&amp;/g, '&'), b: 250_000 }));
   ekle({ id: 'uygulama', modul: 'uygulama', grup: 'Uygulama', baslik: 'Uygulama dosyaları', alt: 'Tüm sayfaların kodu, görünüm ve yazı tipleri', sira: 0, zorunlu: true },
-    [...m.kod.filter((f) => !/composer_model/.test(f)).map(parca), ...kucuk.map(parca),
+    [...m.kod.filter((f) => !/composer_model/.test(f)).map(parca), ...kucuk.map(parca), ...dizinler.map(parca), ...simgeler, ...yaziTipi,
       { u: '/index.html', b: boyut(path.join(DIST, 'index.html')), v: m.olusturma }]);
   if (buyuk.length) ekle({ id: 'veri:diger', modul: 'veri', grup: 'Başvuru', baslik: 'Diğer içerik', alt: 'Kalan büyük veri dosyaları', sira: 9 }, buyuk.map(parca));
 

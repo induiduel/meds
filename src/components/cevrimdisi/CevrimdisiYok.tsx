@@ -4,12 +4,15 @@
  */
 import React, { useEffect } from 'react';
 import { CloudOff } from 'lucide-react';
+import { sunucuyaUlasilir } from '../../services/cevrimdisi/baglanti';
 
 export default function CevrimdisiYok({ baslik = 'Bu bölüm cihazında yok' }: { baslik?: string }) {
   useEffect(() => {
     const f = () => window.location.reload();
     window.addEventListener('online', f);
-    return () => window.removeEventListener('online', f);
+    // Wi-Fi bağlı ama internetsizken 'online' olayı gelmez: sunucu yeniden yanıt verince de açılır
+    const t = window.setInterval(() => { void sunucuyaUlasilir().then((ok) => { if (ok) f(); }); }, 15_000);
+    return () => { window.removeEventListener('online', f); window.clearInterval(t); };
   }, []);
   return (
     <div className="cv-yok" role="status">

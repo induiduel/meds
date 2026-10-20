@@ -103,6 +103,7 @@ async function loadFromIndexedDb(id: string): Promise<any> {
 
 import { defaultApiBaseForThisHost } from '../config/deployment';
 import { contentReady, isContentChanged, changedIds, onContentChanged } from '../services/contentLive';
+import { cevrimdisiGibi } from '../services/cevrimdisi/baglanti';
 
 /** Canlı API tabanı: Ayarlar'daki özel URL, yoksa bulunulan hostun varsayılanı (Oracle tüneli). */
 function apiBase(): string {
@@ -148,7 +149,7 @@ export function loadDeck<T = any>(id: string): Promise<T | null> {
   p = (async () => {
     // 0. Panelden değiştirilen deste paketteki kopyadan yenidir: önce sunucudan
     await contentReady();
-    if (isContentChanged('decks', id) && (typeof navigator === 'undefined' || navigator.onLine)) {
+    if (isContentChanged('decks', id) && (typeof navigator === 'undefined' || navigator.onLine) && !cevrimdisiGibi()) {
       const fresh = await loadFromApi<T>(id);
       if (fresh) return fresh;
     }
@@ -167,8 +168,8 @@ export function loadDeck<T = any>(id: string): Promise<T | null> {
       if (fromDb) return fromDb;
     } catch (_) {}
 
-    // 3. Cihazda yoksa ve internete bağlıysak sunucudan dene
-    if (typeof navigator === 'undefined' || navigator.onLine) {
+    // 3. Cihazda yoksa ve internete bağlıysak sunucudan dene (Wi-Fi bağlı ama internetsizse beklemeden geç)
+    if ((typeof navigator === 'undefined' || navigator.onLine) && !cevrimdisiGibi()) {
       try {
         const viaApi = await loadFromApi<T>(id);
         if (viaApi) return viaApi;
@@ -198,10 +199,11 @@ export async function loadDeckFlashcards(): Promise<any[] | null> {
 /** Tüm desteleri sırayla yükler; her desteden sonra ana iş parçacığına nefes aldırır. */
 export async function loadAllDecks<T = any>(): Promise<T[]> {
   await loadDeckCatalog();
+  // 4'erli gruplar (sıra korunur): internetsizken cihazda olmayan desteler hızlıca boş döner, yalnız inmiş olanlar gelir
   const out: T[] = [];
-  for (const d of DECK_CATALOG) {
-    const full = await loadDeck<T>(d.id);
-    if (full) out.push(full);
+  for (let i = 0; i < DECK_CATALOG.length; i += 4) {
+    const grup = await Promise.all(DECK_CATALOG.slice(i, i + 4).map((d) => loadDeck<T>(d.id).catch(() => null)));
+    for (const full of grup) if (full) out.push(full);
     await new Promise((r) => setTimeout(r, 0));
   }
   return out;
