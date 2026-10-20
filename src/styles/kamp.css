@@ -1,0 +1,58 @@
+/* =============================================================================
+ * MeDSor · Kurul kampı (components/kamp/KampView.tsx, TuyoFormu.tsx) — önek .km-
+ * Taban görünüm genetik-kamp.css (.tk-*); burada liste kartları, kurul hapları, anlatım maddeleri ve tüyo formu.
+ * Renk yalnız palet tokenı; yatay taşma yok (min-width: 0, sarma).
+ * ============================================================================= */
+.km-bilgi { font-size: 14px; color: var(--color-ink-3); padding: 12px 0; }
+.km-geri { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 550; color: var(--color-ink-2); text-decoration: none; justify-self: start; }
+.km-geri:hover { color: var(--color-accent); }
+
+.km-kurullar { display: flex; flex-wrap: wrap; gap: 6px; }
+.km-kurul { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); font-size: 13.5px; font-weight: 550; color: var(--color-ink-2); text-decoration: none; }
+.km-kurul.is-on { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+
+.km-kartlar { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 10px; }
+.km-kart { display: flex; flex-direction: column; gap: 6px; height: 100%; box-sizing: border-box; padding: 14px 16px; border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); color: var(--color-ink); text-decoration: none; min-width: 0; }
+.km-kart:hover { border-color: var(--color-accent); }
+.km-kart > b { font-size: 16px; line-height: 1.3; }
+.km-kart-kisa { font-size: 13.5px; line-height: 1.45; color: var(--color-ink-2); }
+.km-kart-say { margin-top: auto; font-size: 12.5px; color: var(--color-ink-3); }
+
+.km-bos { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; padding: 36px 16px; border: 1px dashed var(--color-line); border-radius: var(--tk-r); }
+.km-bos > svg { width: 32px; height: 32px; color: var(--color-ink-3); }
+.km-bos b { font-size: 16px; }
+.km-bos p { font-size: 14px; line-height: 1.5; color: var(--color-ink-2); max-width: 52ch; }
+.km-bos .km-form { width: 100%; text-align: left; }
+
+/* sesli anlatım */
+.km-anlatim { display: grid; gap: 12px; min-width: 0; }
+.km-oynat { position: sticky; top: var(--sh-top-h, 0px); z-index: 2; padding: 10px 12px; border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); flex-wrap: wrap; }
+.km-sira { margin-left: auto; font-size: 13px; color: var(--color-ink-3); }
+.km-maddeler { display: grid; gap: 10px; }
+.km-madde.is-on { border-color: var(--color-accent); }
+.km-madde-bas { display: inline-flex; align-items: center; gap: 6px; padding: 0; border: 0; background: none; text-align: left; font: inherit; }
+.km-madde-bas:hover { color: var(--color-accent); }
+.km-rozet { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 999px; background: var(--color-warn-soft, var(--color-field)); color: var(--color-warn, var(--color-ink)); }
+.km-rozet svg { width: 13px; height: 13px; }
+.km-tuyo { font-size: 13.5px; line-height: 1.5; font-style: italic; color: var(--color-ink-2); padding: 8px 12px; border-left: 3px solid var(--color-warn, var(--color-accent)); background: var(--color-field); border-radius: 0 8px 8px 0; }
+.km-metin { font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; }
+.km-kaynak { display: flex; flex-wrap: wrap; gap: 6px; }
+.km-kaynak span { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--color-field); color: var(--color-ink-2); overflow-wrap: anywhere; }
+
+/* tüyo formu */
+.km-form { display: grid; gap: 12px; padding: 16px; border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); min-width: 0; }
+.km-form-bas { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.km-form-bas h2 { display: inline-flex; align-items: center; gap: 8px; font: 650 16px/1.3 var(--font-sans); }
+.km-form-acik { font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); }
+.km-form-izgara { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 10px; }
+.km-form-genis { grid-column: 1 / -1; }
+.km-form label { display: flex; flex-direction: column; gap: 5px; font-size: 13px; font-weight: 600; color: var(--color-ink-2); min-width: 0; position: relative; }
+.km-form :where(select, input, textarea) { font: inherit; font-size: 15px; font-weight: 400; color: var(--color-ink); background: var(--color-field); border: 1px solid var(--color-line); border-radius: 10px; padding: 9px 11px; min-width: 0; width: 100%; box-sizing: border-box; }
+.km-form textarea { resize: vertical; min-height: 96px; line-height: 1.5; }
+.km-form-metin small { align-self: flex-end; font-weight: 400; color: var(--color-ink-3); }
+.km-form-hata { font-size: 13.5px; color: var(--color-bad, var(--color-ink)); background: var(--color-bad-soft, var(--color-field)); padding: 8px 12px; border-radius: 10px; }
+.km-form-arac { display: flex; flex-wrap: wrap; gap: 8px; }
+.km-form-tamam { grid-template-columns: auto minmax(0, 1fr); align-items: start; }
+.km-form-tamam > svg { width: 22px; height: 22px; color: var(--color-ok, var(--color-accent)); }
+.km-form-tamam p { font-size: 13.5px; color: var(--color-ink-2); margin-top: 4px; }
+.km-form-tamam .km-form-arac { grid-column: 1 / -1; }

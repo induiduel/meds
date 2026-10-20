@@ -135,6 +135,7 @@ const BitirdiklerimView = React.lazy(() => wrapLazy(import('./components/takip/B
 const CevrimdisiView = React.lazy(() => wrapLazy(import('./components/cevrimdisi/CevrimdisiView')));
 const OlasiSorularView = React.lazy(() => wrapLazy(import('./components/olasi/OlasiSorularView')));
 const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/GecmisKurullarView')));
+const KampView = React.lazy(() => wrapLazy(import('./components/kamp/KampView')));
 const GuncellemeGunluguView = React.lazy(() => wrapLazy(import('./components/guncellemeler/GuncellemeGunluguView')));
 const SinavCalismaView = React.lazy(() => wrapLazy(import('./components/SinavCalismaView').then(m => ({ default: m.SinavCalismaView }))));
 
@@ -507,7 +508,7 @@ export default function App() {
       const qs = sp.toString();
       const cur = window.location.pathname.replace(/^\/meds(?=\/|$)/, '');
       // Yönetim alt derin bağlantısı (/manage/kisiler/<kişi>) üçüncü parçayı taşır; kırpılmaz
-      const deeperManage = initialRoute.route === 'manage' && cur.startsWith(`${next}/`);
+      const deeperManage = (initialRoute.route === 'manage' || initialRoute.route === 'kamp') && cur.startsWith(`${next}/`);
       if ((cur !== next && !deeperManage) || window.location.search.includes('questionId')) {
         window.history.replaceState({ route: initialRoute.route, param: initialRoute.param }, '', next + (qs ? `?${qs}` : '') + window.location.hash);
       }
@@ -1691,6 +1692,12 @@ export default function App() {
               onSelectCommittee={(id) => setSelectedCommitteeId(id)}
             />
             </LearnFab>
+          </Suspense>
+        )}
+        {/* TAB: /kamp — kurul kampları; /kamp/<kurul>/<brans> tek kamp (yolu kendisi okur) */}
+        {activeTab === 'kamp' && (
+          <Suspense fallback={<ViewFallback />}>
+            <KampView />
           </Suspense>
         )}
 

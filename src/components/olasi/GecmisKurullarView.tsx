@@ -2,11 +2,11 @@
  * Geçmiş kurullar (/gecmis-kurullar): sınavı geçmiş (arşiv) kurulların içeriğine tek yerden erişim.
  * Takvim: services/kurulTakvimi (aktif = sınavı geçmemiş ilk kurul). Yerelde ?gun=YYYY-AA-GG ile tarih denenir.
  * Bütün bağlantılar ?kurul=N ile o kurula süzülmüş açılır (Öğren, Kazanımlar, Olası sorular, Sesli ders, En önemliler,
- * Spotlar, Soru çözücü, Çıkmış). Stil: styles/olasi-sorular.css (.gk-*).
+ * Spotlar, Soru çözücü, Çıkmış, Kurul kampı). Stil: styles/olasi-sorular.css (.gk-*).
  */
 import React, { useEffect, useMemo } from 'react';
 import {
-  Archive, AudioLines, BookOpen, CalendarDays, Compass, Crosshair, GraduationCap, Library, MessageCircleQuestion, Sparkles, Star,
+  Archive, AudioLines, BookOpen, CalendarDays, Compass, Crosshair, GraduationCap, Library, MessageCircleQuestion, Sparkles, Star, Tent,
 } from 'lucide-react';
 import { KURULLAR, gunFarki, gunluBag, kurulAdi, takvimDurumu, tarihYaz, tarihteYaz, type KurulBilgi } from '../../services/kurulPencere';
 import { linkClick, navigateTo } from '../../router';
@@ -24,6 +24,7 @@ const BAGLAR: Bag[] = [
   { ad: 'Sınav spotları', url: (k) => `/spotlar?kurul=${k}`, ikon: Crosshair },
   { ad: 'Soru çözücü', url: (k) => `/soru-cozucu?kurul=${k}`, ikon: MessageCircleQuestion },
   { ad: 'Çıkmış sorular', url: (k) => `/cikmis?kurul=${k}`, ikon: Library },
+  { ad: 'Kurul kampı', url: (k) => `/kamp?kurul=${k}`, ikon: Tent },
 ];
 
 const desteSayisi = (k: number) => Object.values(SCHEDULE as Record<string, { k?: number }>).filter((x) => x.k === k).length;

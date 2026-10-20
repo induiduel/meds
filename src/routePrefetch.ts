@@ -22,6 +22,7 @@ const LOADERS: Partial<Record<AppRoute, () => Promise<unknown>>> = {
   bitirdiklerim: () => import('./components/takip/BitirdiklerimView'),
   olasi_sorular: () => import('./components/olasi/OlasiSorularView'),
   gecmis_kurullar: () => import('./components/olasi/GecmisKurullarView'),
+  kamp: () => import('./components/kamp/KampView'),
   guncellemeler: () => import('./components/guncellemeler/GuncellemeGunluguView'),
   summaries: () => import('./components/LectureSummariesView'),
   kazanimlar: () => import('./components/KazanimlarView'),

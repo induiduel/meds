@@ -16,6 +16,7 @@
  *   /cevrimdisi → çevrimdışı merkezi (ders paketlerini indir, güncelle, sil)
  *   /olasi-sorular → sınav sonrası öğrenci hatıralarından kurulan olası sorular (?kurul=N)
  *   /gecmis-kurullar → sınavı geçmiş kurulların içeriğine bağlantılar
+ *   /kamp        → kurul kampları (?kurul=N), /kamp/<kurul>/<brans> tek kamp: sesli anlatım, kalıp kartları, deneme
  *   /alternatif-cozucu → patoloji alternatif sesli çözücü (kısa anlatım, otomatik geçiş)
  *   /en-onemliler → sınav için en önemliler (100 puan; eski /spotlar?gorunum=onem buraya yönlenir)
  *   /patoloji-check-up → Patoloji Hızlı Check Up: ders slaytlarından karşılaştırma tabloları + kısa notlar (?bolum=)
@@ -67,6 +68,7 @@ export type AppRoute =
   | 'cevrimdisi'
   | 'olasi_sorular'
   | 'gecmis_kurullar'
+  | 'kamp'
   | 'guncellemeler';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
@@ -111,6 +113,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   cevrimdisi: '/cevrimdisi',
   olasi_sorular: '/olasi-sorular',
   gecmis_kurullar: '/gecmis-kurullar',
+  kamp: '/kamp',
   guncellemeler: '/guncellemeler',
 };
 
@@ -156,6 +159,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   cevrimdisi: 'Çevrimdışı',
   olasi_sorular: 'Olası sorular',
   gecmis_kurullar: 'Geçmiş kurullar',
+  kamp: 'Kurul kampı',
   guncellemeler: 'Güncelleme günlüğü',
 };
 
@@ -273,6 +277,8 @@ const ALIASES: Record<string, AppRoute> = {
   'gecmis-kurul': 'gecmis_kurullar',
   arsiv: 'gecmis_kurullar',
   'kurul-arsivi': 'gecmis_kurullar',
+  kamplar: 'kamp',
+  'sinav-kampi': 'kamp',
   guncellemeler: 'guncellemeler',
   guncelleme: 'guncellemeler',
   surumler: 'guncellemeler',
