@@ -229,11 +229,16 @@
   {
    "id": "hastalik_birlestir",
    "kapsam": "genel",
-   "durum": "el",
+   "durum": "hazir",
    "gerekir": [
     "yayin"
    ],
-   "komut": "python3 meds/scripts/ders_isci/yayinla.py --hastaliklar"
+   "komut": "python3 meds/otomasyon/hastalik_zinciri.py --en-cok 4",
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "not": "Oracle önerileri → Claude şema 2 (TALIMAT_SEMA2.md) → yayinla.hastaliklari_uygula (diseases.json kirliyse bekler, denetim hatası artarsa geri alır) → Oracle data/content/diseases.json + POST /api/admin/icerik/diseases/degisti (panel sırrı) → SSE."
   },
   {
    "id": "rag_vektor",
@@ -270,7 +275,27 @@
     "yayin"
    ],
    "komut": "yayinla.py --esitle → guncelleme_notu.json onem+1 → deploy-code.sh --build",
-   "not": "Kural 13: her dağıtımda guncelleme_notu.json güncellenir."
+   "not": "Kod dağıtımı (deploy-code.sh) kullanıcı/oturum kararıyla; gece içerik dağıtımı icerik_dagit aşamasında. Kural 13: kod dağıtımında guncelleme_notu.json onem+1."
+  },
+  {
+   "id": "icerik_dagit",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [
+    "ders_zinciri",
+    "hastalik_birlestir",
+    "olasi_soru"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/otomasyon/icerik_dagit.py",
+   "cikti": [
+    "Oracle dist/ (yalnız içerik derlemesi)",
+    "Oracle src/data/k[2-6]*_*"
+   ],
+   "not": "origin/main temiz worktree + Oracle src/data + zincir çıktıları → vite build → yalnız dist. Çalışma ağacından derlemez; dağıtım kilidini paylaşır; değişiklik yoksa atlar; commit/onem artırımı yok."
   }
  ]
 }

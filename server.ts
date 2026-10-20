@@ -23,6 +23,7 @@ import { registerCanliDersRoutes } from './src/services/canliDers';
 import { registerPatolojiAsistanRoutes } from './src/services/patolojiAsistan';
 import { registerOlasiSoruRoutes } from './src/services/olasiSoruRoutes';
 import { registerKimlikRoutes } from './src/services/kimlikRoutes';
+import { registerIcerikYayinRoutes } from './src/services/icerikYayinRoutes';
 import { registerPatolojiCozucuRoutes } from './src/services/patolojiCozucu';
 import { registerPatolojiCozucuAltRoutes } from './src/services/patolojiCozucuAlt';
 import { registerCozucuSesRoutes } from './src/services/cozucuSes';
@@ -6952,6 +6953,15 @@ setInterval(() => {
     console.error('[WhatsApp Scheduler] Hata:', err);
   });
 }, 2 * 60 * 1000).unref?.();
+
+// Otomatik hatların canlı içerik yayını (hastalık zinciri vb.): katmana konan dosya → content_changed
+registerIcerikYayinRoutes(app, {
+  dataDir: DATA_DIR,
+  onChange: (entity, ids) => {
+    markContentChanged(entity, ids);
+    broadcastRealtimeEvent('content_changed', { entity, ids: ids.slice(0, 200), at: Date.now() });
+  },
+});
 
 // Yönetim · veri kataloğu: tüm veri türleri tek arayüzde (liste/ara/süz, düzenle, değerlendir-sınıfla, ilişkiler)
 registerDataCatalogRoutes(app, requireAdmin, {
