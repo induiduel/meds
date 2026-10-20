@@ -31,8 +31,9 @@ def sh(kom, **k):
 
 def zincir_klasorleri():
     d = MEDS / "src/data"
+    ek = [d / "cozucu_ogren", d / "kamp"] + sorted((d / "patoloji_checkup").glob("k[2-6]"))  # Öğren eşlemesi, kamp, Check Up K2+
     return sorted([p for p in d.glob("k[2-6]*_onem")] + [p for p in d.glob("k[2-6]*_cozucu")] +
-                  [p for p in d.glob("k[2-6]*_asistan")] + ([d / "cozucu_ogren"] if (d / "cozucu_ogren").exists() else []))
+                  [p for p in d.glob("k[2-6]*_asistan")] + [p for p in ek if p.exists()])
 
 
 def karma(dizinler):
@@ -80,7 +81,8 @@ def main():
         if r.returncode or r2.returncode:
             print("HATA: Oracle src/data ya da panel katmanı çekilemedi"); return 1
         for k in zincir_klasorleri():
-            sh(["rsync", "-a", "--delete", f"{k}/", f"{wm}/src/data/{k.name}/"], check=True)
+            rel = k.relative_to(MEDS / "src/data")  # patoloji_checkup/k2 gibi alt klasörler yerinde kalsın
+            sh(["rsync", "-a", "--mkpath", "--delete", f"{k}/", f"{wm}/src/data/{rel}/"], check=True)
         oz = karma([wm / "src/data"]) + damga["commit"][:12]
         onceki = json.loads(DURUM.read_text()).get("karma") if DURUM.exists() else None
         if oz == onceki and not a.zorla:
@@ -94,7 +96,8 @@ def main():
         (wm / "dist/dagitim.json").write_text(json.dumps({**damga, "icerik_dagit": time.strftime("%Y-%m-%dT%H:%M:%S")},
                                                          ensure_ascii=False))
         for k in zincir_klasorleri():  # Oracle src/data da güncel kalsın (sonraki tam dağıtım/eşitleme için)
-            sh(["rsync", "-az", UZ_RSYNC, f"{k}/", f"{UZAK}/src/data/{k.name}/"], check=True)
+            rel = k.relative_to(MEDS / "src/data")
+            sh(["rsync", "-az", "--mkpath", UZ_RSYNC, f"{k}/", f"{UZAK}/src/data/{rel}/"], check=True)
         r = sh(["rsync", "-az", UZ_RSYNC, f"{wm}/dist/", f"{UZAK}/dist/"], timeout=900)
         if r.returncode:
             print("HATA: dist gönderilemedi"); return 1

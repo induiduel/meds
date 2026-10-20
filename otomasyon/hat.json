@@ -182,6 +182,23 @@
    "not": "Yayımlanmış her Kurul 2+ dersi: hazirla → onem → cozucu → denetim (bağımsız) → birlestir → asistan → ses (EMA) → oracle. Her adım kapılı; gece başına en çok 3 ders."
   },
   {
+   "id": "bilgi_deposu",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "ders_zinciri"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/scripts/dersler/bilgi_deposu.py",
+   "cikti": [
+    "meds_database_v2/ders_bilgi/<ders>/{manifest.json,ozet.md}"
+   ],
+   "not": "Her PDF bir kez okunur (ders işçisi, karma değişince). Depo: bilgi paketi + önem + tablolar + hoca vurgusu + çıkmışlar → ozet.md (kod:sayfa). Yeni ürünler PDF yerine bunu okur; girdiler değişmezse yeniden üretilmez."
+  },
+  {
    "id": "spot_onem",
    "kapsam": "ders",
    "durum": "hazir",
@@ -295,14 +312,33 @@
    "not": "Kurul 2+ patoloji Hızlı Check Up: ≥3 bağımsız denetimden geçmiş ders + onaylı küme değişince Claude (TALIMAT_CHECKUP.md) → dogrula.py --kurul N; geçmezse önceki sürüm. Sitede /patoloji-check-up?kurul=N."
   },
   {
+   "id": "kamp",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "bilgi_deposu"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/otomasyon/kamp_zinciri.py",
+   "cikti": [
+    "meds/src/data/kamp/k{N}/<brans>.json",
+    "Oracle data/kamp/ses/k{N}/<brans>/"
+   ],
+   "not": "Kurul kampı: ONAYLI hoca tüyoları (/api/kamp/tuyolar) + ders bilgi deposu → Claude TALIMAT_KAMP.md → kapı scripts/kamp/dogrula.py (kaynak kod:sayfa, her tüyo işlenmiş, şık açıklama, üslup) → EMA (scripts/kamp/ses.py) → yayın. Kapı geçmezse önceki sürüm + bildirim."
+  },
+  {
    "id": "icerik_dagit",
    "kapsam": "genel",
    "durum": "hazir",
    "gerekir": [
+    "checkup",
     "ders_zinciri",
     "hastalik_birlestir",
-    "olasi_soru",
-    "checkup"
+    "kamp",
+    "olasi_soru"
    ],
    "tetik": [
     "gece",
