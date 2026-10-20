@@ -48,29 +48,35 @@ export function getPanelTarget(): 'oracle' | 'yerel' {
 export const PANEL_ON_ORACLE_AT_BOOT: boolean =
   isLocalHost() && /^\/manage(\/|$)/.test(window.location.pathname) && getPanelTarget() === 'oracle';
 
-/** Yerel paneldeyken bu yol Oracle'a mı gider (gidiyorsa taban adres, yoksa '') */
-export function panelApiBase(path?: string): string {
-  if (!PANEL_ON_ORACLE_AT_BOOT) return '';
-  if (path && PANEL_DEVICE_ONLY.some((p) => path.startsWith(p))) return '';
-  return ORACLE_API_URL.replace(/\/$/, '');
+/** Yerel paneldeyken bu yol Oracle'a mı gider (yerel sunucunun vekili üzerinden: x-panel-proxy / ?panelProxy=oracle) */
+export function panelProxied(path?: string): boolean {
+  if (!PANEL_ON_ORACLE_AT_BOOT) return false;
+  return !(path && PANEL_DEVICE_ONLY.some((p) => path.startsWith(p)));
 }
 
-// Ön eksiz `fetch('/api/...')` çağrıları da (api.ts dışındaki eski yollar) yerel panelde Oracle'a gitsin:
-// yalnız localhost'ta /manage ile açılmışken, tek noktadan sarılır.
+/**
+ * Eskiden Oracle taban adresi dönerdi (tarayıcı doğrudan Oracle'a x-admin-email ile giderdi). 2026-10-20'den beri
+ * yerel panel istekleri aynı kökende kalır; yerel sunucu gerçek loopback isteğini gizli anahtarla Oracle'a iletir
+ * (src/services/adminAuth.ts panelOracleProxyMiddleware). Bu yüzden hep '' döner; işaret fetch sarmalayıcısında eklenir.
+ */
+export function panelApiBase(_path?: string): string {
+  return '';
+}
+
+// Ön eksiz `fetch('/api/...')` çağrıları yerel panelde Oracle'a gitsin: istek aynı kökende kalır, yalnız
+// `x-panel-proxy: oracle` işareti eklenir (localhost'ta /manage ile açılmışken, tek noktadan sarılır).
 if (PANEL_ON_ORACLE_AT_BOOT && typeof window.fetch === 'function') {
   const nativeFetch = window.fetch.bind(window);
   window.fetch = (input: RequestInfo | URL, init?: RequestInit) => {
     let path: string | null = null;
-    if (typeof input === 'string') path = input;
-    else if (input instanceof URL && input.origin === window.location.origin) path = input.pathname + input.search;
-    if (path && path.startsWith('/api/')) {
-      const base = panelApiBase(path);
-      if (base) {
-        const headers = new Headers(init?.headers);
-        // auth.ts ADMIN_EMAIL ile aynı (burada firebase'i içe aktarmamak için yazılı)
-        if (!headers.get('x-admin-email')) headers.set('x-admin-email', 'nofrostlife@gmail.com');
-        return nativeFetch(`${base}${path}`, { ...init, headers });
-      }
+    if (typeof input === 'string') {
+      if (input.startsWith('/')) path = input;
+      else if (input.startsWith(window.location.origin + '/')) path = input.slice(window.location.origin.length);
+    } else if (input instanceof URL && input.origin === window.location.origin) path = input.pathname + input.search;
+    if (path && path.startsWith('/api/') && panelProxied(path)) {
+      const headers = new Headers(init?.headers);
+      headers.set('x-panel-proxy', 'oracle');
+      return nativeFetch(path, { ...init, headers });
     }
     return nativeFetch(input as RequestInfo, init);
   };

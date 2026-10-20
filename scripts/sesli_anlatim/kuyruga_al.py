@@ -20,9 +20,24 @@ SAG = {'emel': ('edge-emel', 'Emel')}  # varsayılan ses her derste Emel
 ALTERNATIF = ('gemini-ucretsiz', 'Aoede')  # kullanıcı isteği: ücretsiz anahtarlarla sırayla Aoede alternatifi (ücretli asla)
 
 
+def _panel_secret():
+    """Oracle'a (--sunucu) giderken yönetici doğrulaması: MEDS_PANEL_SECRET (ortam ya da meds/.env). Yazdırılmaz."""
+    import os
+    if os.environ.get('MEDS_PANEL_SECRET'):
+        return os.environ['MEDS_PANEL_SECRET'].strip()
+    env = MEDS / '.env'
+    for satir in env.read_text(encoding='utf-8').splitlines() if env.exists() else []:
+        if satir.startswith('MEDS_PANEL_SECRET='):
+            return satir.split('=', 1)[1].strip().strip('"')
+    return ''
+
+
 def istek(url, veri=None):
+    h = {'Content-Type': 'application/json', 'x-admin-email': 'nofrostlife@gmail.com'}
+    if _panel_secret():
+        h['x-panel-secret'] = _panel_secret()
     req = urllib.request.Request(url, data=json.dumps(veri).encode() if veri is not None else None,
-                                 headers={'Content-Type': 'application/json', 'x-admin-email': 'nofrostlife@gmail.com'},
+                                 headers=h,
                                  method='POST' if veri is not None else 'GET')
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read())

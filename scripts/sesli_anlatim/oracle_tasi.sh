@@ -44,7 +44,7 @@ SECRET=$(grep '^MEDS_PANEL_SECRET=' "$MEDS_DIR/.env" | cut -d= -f2-)
 curl -sf -X POST "https://api.nofrostlife.com.tr/api/sesli-anlatim/isci" "${HDR[@]}" -H "x-panel-secret: $SECRET" -d '{"aktif":true}' && echo
 
 echo "==> [5/5] doğrulama"
-curl -sf "https://api.nofrostlife.com.tr/api/sesli-anlatim" -H 'x-admin-email: nofrostlife@gmail.com' | python3 -c "
+curl -sf "https://api.nofrostlife.com.tr/api/sesli-anlatim" -H 'x-admin-email: nofrostlife@gmail.com' -H "x-panel-secret: $SECRET" | python3 -c "
 import sys, json
 d = json.load(sys.stdin)
 ses = sum(1 for x in d['dersler'] if x['varyantlar'])

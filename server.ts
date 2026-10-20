@@ -170,6 +170,7 @@ import { registerHatActionRoutes } from './src/services/hatActionsRoutes.ts';
 import { registerUserDataBackupRoutes, userEventHash, type ServerUserNotification } from './src/services/userDataBackupService.ts';
 import { registerPeopleInsights } from './src/services/peopleInsights.ts';
 import { initContentOverlay, resolveContent, writableContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
+import { adminAuthMiddleware, configureAdminAuthLog, isRequestAdminVerified, panelOracleProxyMiddleware } from './src/services/adminAuth.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -349,9 +350,16 @@ const app = express();
 const PORT = 3000;
 
 // Enable HTTP Gzip/Brotli compression for high-speed delivery over tunnel/broadband
+// Yerel panel → Oracle akış vekili (yalnız gerçek loopback + x-panel-proxy/?panelProxy=oracle): gövdeyi ham akış olarak
+// iletebilmek ve SSE'nin sıkıştırmaya takılmaması için compression ve express.json'dan ÖNCE (bkz. src/services/adminAuth.ts)
+app.use(panelOracleProxyMiddleware());
+
 app.use(compression({ threshold: 1024 }));
 
 app.use(express.json({ limit: '100mb' }));
+// Yönetici doğrulaması (/api/*): gizli anahtar | gerçek loopback | yöneticinin Firebase jetonu → req.adminAuth
+configureAdminAuthLog(path.resolve(__dirname, 'data'));
+app.use(adminAuthMiddleware('nofrostlife@gmail.com'));
 app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 
 // Enable CORS for all origins (canlı alan adı ve tünel erişimi)
@@ -1118,17 +1126,9 @@ function saveQuestionLive(question: any) {
 const ADMIN_EMAIL = 'nofrostlife@gmail.com';
 
 function isRequestAdmin(req: express.Request): boolean {
-  const adminEmail = (req.headers['x-admin-email'] || req.body?.adminEmail || req.body?.requestedBy || req.query?.adminEmail) as string;
-  const ip = req.ip || req.socket?.remoteAddress || '';
-  const isLoopback = ip.includes('127.0.0.1') || ip.includes('::1') || ip.includes('localhost') || ip.includes('::ffff:127.0.0.1');
-
-  if (adminEmail && adminEmail.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
-    return true;
-  }
-  if (isLoopback && (!adminEmail || adminEmail.toLowerCase() === ADMIN_EMAIL.toLowerCase())) {
-    return true;
-  }
-  return false;
+  // Doğrulanmış yönetici (gizli anahtar / gerçek loopback / Firebase jetonu); eski e-posta iddiası yalnız
+  // MEDS_ADMIN_AUTH=log (varsayılan) kipinde günlüğe yazılarak kabul edilir (src/services/adminAuth.ts)
+  return isRequestAdminVerified(req, ADMIN_EMAIL);
 }
 
 function canUserManageComment(comment: any, req: express.Request): boolean {

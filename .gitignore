@@ -105,3 +105,6 @@ data/sesli_anlatim/.pdf_onbellek/
 
 # Yönetim › Sistem: servis istek/sonuç/durum dosyaları (makineye özel, geçici)
 data/servis_kontrol/
+# Kimlik doğrulama günlükleri (IP içerir)
+data/admin_auth_log.jsonl
+data/moderator_audit.jsonl

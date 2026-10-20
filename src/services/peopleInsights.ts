@@ -56,7 +56,7 @@ const GENERIC_NAMES = new Set(['', 'öğrenci', 'anonim', 'anonim öğrenci', 't
 export function isLoopback(req: express.Request) {
   const ip = String(req.socket?.remoteAddress || '');
   // Tünel/Caddy arkasındaki istekler de loopback'ten gelir: vekil başlığı varsa dış istek sayılır
-  if (req.headers['cf-connecting-ip'] || req.headers['x-forwarded-for']) return false;
+  if (req.headers['cf-connecting-ip'] || req.headers['x-forwarded-for'] || req.headers['x-real-ip']) return false;
   return ip === '127.0.0.1' || ip === '::1' || ip === '::ffff:127.0.0.1';
 }
 

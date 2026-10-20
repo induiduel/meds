@@ -117,8 +117,14 @@ after a rebuild go to a small pending map. The old nested `Map<term, Map<chunkId
 
 ## Known gaps
 
-- `requireAdmin` trusts the `x-admin-email` header and loopback IPs (tunnel traffic is loopback):
-  effectively unauthenticated. AI endpoints have no auth or rate limit.
+- Admin auth (2026-10-20, `src/services/adminAuth.ts`): `isRequestAdmin`/`requireAdmin` accept only a verified
+  caller — `x-panel-secret` = `MEDS_PANEL_SECRET`, genuine loopback (no `cf-connecting-ip`/`x-forwarded-for`/`x-real-ip`),
+  or `Authorization: Bearer <Firebase ID token>` of the admin email (browser adds it via `src/services/adminFetchAuth.ts`).
+  Switch `MEDS_ADMIN_AUTH`: `log` (default) still accepts the legacy `x-admin-email`/`adminEmail`/`requestedBy` claim but
+  writes it to `data/admin_auth_log.jsonl`; `strict` rejects it. Go strict only after the log stays empty of legitimate
+  traffic. Scripts calling Oracle must send `x-panel-secret`. Local panel → Oracle goes same-origin with
+  `x-panel-proxy: oracle` (`?panelProxy=oracle` for EventSource); the local server forwards genuine-loopback requests
+  with the secret. AI endpoints have no auth or rate limit.
 - Lecture data contains duplicate decks, chat exports with personal data, and empty OCR pages.
 
 ## Öğren destesi (src/data/interactive_learning_decks.json)

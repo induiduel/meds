@@ -1,4 +1,5 @@
 import './services/netInstall';
+import { installAdminFetchAuth } from './services/adminFetchAuth';
 import { Component, ErrorInfo, ReactNode } from 'react';
 import CevrimdisiYok from './components/cevrimdisi/CevrimdisiYok';
 import { createRoot } from 'react-dom/client';
@@ -42,6 +43,8 @@ import { pwaService } from './services/pwaService';
 import { offlineDatabaseService } from './services/offlineDatabaseService';
 import { arkaPlanPushKur } from './services/arkaPlanPush';
 
+// Yönetici oturumundaki API isteklerine Firebase jetonu (sunucu x-admin-email'e güvenmez; src/services/adminAuth.ts)
+installAdminFetchAuth();
 applyTheme(readTheme());
 applyUiVersion();
 // iOS/iPadOS sınıfları: zoom ve tam ekran CSS kuralları bu sınıflara bağlı (macOS Safari'yi etkilemez).
