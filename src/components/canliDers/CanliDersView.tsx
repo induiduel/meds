@@ -17,7 +17,8 @@ import { cdListeOzetleri, useCdListe } from './canliDersListe';
 import { ListeEkleDugme, Listem } from './CanliDersListem';
 import { useCdTur } from './useCdTur';
 import { CevrimdisiDugme, useCevrimdisiSuzgec } from './CanliDersCevrimdisi';
-import { cdBransKisa, cdDersEtiketi, cdKategoriGrupla, cdKonuSayisi, cdParca, type CdKategori } from './canliDersKategori';
+import { CD_SPOT_BRANS, cdBransKisa, cdDersEtiketi, cdKategoriGrupla, cdKonuSayisi, cdParca, type CdKategori } from './canliDersKategori';
+import { bransAdresi, icKonum } from '../../siteHaritasi';
 import { useCdTvGezinme } from './CanliDersTv';
 import { useYildizliSayisi } from '../../services/yildizliParagrafStore';
 import { YildizliParagraflarPanel } from '../study/YildizliParagraflarModal';
@@ -30,9 +31,24 @@ import { KurulBos, KurulHapi, kurulKimlikten, useKurulParam } from '../kurul/Kur
 const fold = (s: string) =>
   s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i').replace(/\s+/g, ' ').trim();
 
+/** Son Prova partı (k1-81-son-prova-patoloji-1) → /son-prova/patoloji/1: aşama soruları yalnız orada çalışır */
+export function sonProvaYolu(key: string): string | null {
+  const m = /^k\d+-\d+-son-prova-([a-z-]+?)(?:-(\d+))?$/.exec(key);
+  return m ? `/son-prova/${m[1].replace(/-/g, '')}/${m[2] || 1}` : null;
+}
+
 export default function CanliDersView({ dersKey }: { dersKey?: string }) {
+  const sp = dersKey ? sonProvaYolu(dersKey) : null;
+  useEffect(() => { if (sp) navigateTo(sp); }, [sp]);
+  if (sp) return null;
   return dersKey ? <CanliDersDers key={dersKey} dersKey={dersKey} /> : <CanliDersListe />;
 }
+
+/** Sesli ders kategorisinin adres adı (Tıbbi Genetik → tbg; Kurul 2+ branşları adından) */
+const katSlug = (kat: CdKategori) => {
+  const b = CD_SPOT_BRANS[kat.ad];
+  return b ? bransAdresi(b).slug : fold(kat.ad).replace(/^tibbi /, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+};
 
 const dersAc = (key: string) => navigateTo(pathFor('canli_ders', key));
 
@@ -65,7 +81,9 @@ function CanliDersListe() {
     return () => window.removeEventListener('popstate', f);
   }, []);
   /** 'tum' | 'yarim' | kategori kimliği */
-  const [suzgec, setSuzgec] = useState<string>('tum');
+  const [suzgec, setSuzgec0] = useState<string>('tum');
+  // Adresteki branş (/dersler/canliders/kurul1/tbg → ?brans=tbg): liste gelince o branşın çipi seçilir
+  const [urlBrans] = useState(() => new URLSearchParams(icKonum().search).get('brans'));
   const [kapali, setKapali] = useState<Set<string>>(() => new Set());
   const [konum] = useState(konumHaritasi);
   const tanitim = useCdTur('liste', !!dersler?.length, () => !!document.querySelector('.cd-satir'));
@@ -93,6 +111,22 @@ function CanliDersListe() {
     const g = cdKategoriGrupla(cevrimdisi.liste);
     return suzgec === 'tum' || suzgec === 'yarim' ? g : g.filter((x) => x.kat.id === suzgec);
   }, [cevrimdisi.liste, suzgec]);
+  // Branş çipi seçilince adres de o branşa döner (/dersler/canliders/kurul<N>/<branş>); paylaşılabilir, geri tuşu bozulmaz
+  const setSuzgec = (id: string) => {
+    setSuzgec0(id);
+    const kat = tumGruplar.find((g) => g.kat.id === id);
+    const k = kurul ?? kat?.dersler[0]?.kurul ?? (dersler?.[0] ? (dersler[0].kurul ?? kurulKimlikten(dersler[0].key)) : null);
+    const sp = new URLSearchParams(icKonum().search);
+    sp.delete('brans'); sp.delete('kurul');
+    if (kat && k) { sp.set('kurul', String(k)); sp.set('brans', katSlug(kat.kat)); } else if (kurul) sp.set('kurul', String(kurul));
+    const q = sp.toString();
+    try { history.replaceState(history.state, '', `/canliders${q ? `?${q}` : ''}${location.hash}`); } catch { /* yok */ }
+  };
+  useEffect(() => {
+    if (!urlBrans || !tumGruplar.length) return;
+    const g = tumGruplar.find((x) => katSlug(x.kat) === urlBrans) || tumGruplar.find((x) => fold(x.kat.ad).includes(urlBrans.replace(/-/g, ' ')));
+    if (g) setSuzgec0(g.kat.id);
+  }, [urlBrans, tumGruplar]);
   const gorunenN = gruplar.reduce((n, g) => n + g.dersler.length, 0);
   const katDegistir = (id: string) => setKapali((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
   const yarimSayi = useMemo(() => (dersler ? dersler.filter((d) => konum.has(d.key)).length : 0), [dersler, konum]);

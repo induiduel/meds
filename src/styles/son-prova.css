@@ -185,3 +185,11 @@
   .sp-test-alt .sp-btn { flex: 1 1 0; }
   .sp-part-serit { padding: 6px 12px; }
 }
+
+/* part: oynatıcı başlığına gömülü tek satır gezinme */
+.sp-ust-gez { display: flex; align-items: center; gap: 6px; min-width: 0; flex-wrap: nowrap; font-family: var(--font-sans); }
+.sp-ust-gez .sp-geri-bag { min-height: 36px; font-size: 13.5px; }
+.sp-btn-kucuk { min-height: 36px; padding: 0 10px; font-size: 13px; border-radius: 10px; }
+.sp-btn-kucuk.is-tamam { color: var(--color-ok, var(--color-accent)); }
+@media (max-width: 560px) { .sp-ust-gez .sp-btn-kucuk span { display: none; } .sp-ust-gez .sp-btn-kucuk { min-width: 40px; } }
+.sp-chip.is-yeni { background: var(--color-accent-soft); color: var(--color-accent); }

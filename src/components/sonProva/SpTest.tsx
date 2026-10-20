@@ -58,6 +58,11 @@ export function asamaYolu(ix: SpIndex, partKey: string, no: number): string | nu
   return b ? `/son-prova/${b.ders.brans}/${b.part.no}?asama=${no}` : null;
 }
 
+/** **kalın** işaretlerini <b>'ye çevirir (soru çözücü metinleri bu biçimde yazılı) */
+function Z({ t }: { t?: string }) {
+  return <>{String(t || '').split(/(\*\*[^*]+\*\*)/g).map((p, i) => (p.startsWith('**') && p.endsWith('**') ? <b key={i}>{p.slice(2, -2)}</b> : <React.Fragment key={i}>{p}</React.Fragment>))}</>;
+}
+
 function harfler(q: Q): Harf[] {
   return (['A', 'B', 'C', 'D', 'E'] as Harf[]).filter((h) => q.secenekler[h]);
 }
@@ -69,9 +74,10 @@ function SoruGovde({ q, i, n }: { q: Q; i: number; n: number }) {
         <span className="sp-mono">Soru {i + 1}/{n}</span>
         <span className="sp-chip">{BRANS_KISA[spBrans(q.ref)] || spBrans(q.ref)}</span>
         {q.tur === 'cikmis' && <span className="sp-chip is-cikmis" title={q.sinav}>Çıkmış</span>}
+        {q.tur === 'yeni' && <span className="sp-chip is-yeni" title="Bu aşama için yazılmış, çıkmış üslubunda örnek soru">Yeni örnek</span>}
         {q.zorluk && <span className="sp-chip">{q.zorluk}</span>}
       </div>
-      <p className="sp-kok">{q.soru}</p>
+      <p className="sp-kok"><Z t={q.soru} /></p>
     </div>
   );
 }
@@ -118,7 +124,10 @@ export default function SpTest({ ix, kip, refs, baslik, alt, anahtar, sureDk, on
   const [yardim, setYardim] = useState<Record<string, boolean>>({});
   const [bitti, setBitti] = useState<boolean>(() => (deneme ? !!kayit.deneme[anahtar]?.bitti : false));
   const [sesAcik, setSesAcik] = useState(sesAcikOku);
-  const { cal, dur, caliyor } = useKlipCalar(sesAcik && !deneme);
+  // Deneme: varsayılan "anlık cevap" — işaretleyince doğru/yanlış, açıklama ve sesli çözüm hemen; kapatılırsa sınav kipi
+  const [anlik, setAnlik] = useState(() => { try { return localStorage.getItem('medsoru_son_prova_anlik') !== '0'; } catch { return true; } });
+  const geriBildirim = !deneme || anlik;
+  const { cal, dur, caliyor } = useKlipCalar(sesAcik && geriBildirim);
   const ustRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -144,7 +153,7 @@ export default function SpTest({ ix, kip, refs, baslik, alt, anahtar, sureDk, on
   const q = sorular?.[i];
   // soru açılınca sesli asistan okur (deneme hariç)
   useEffect(() => {
-    if (!q || deneme || bitti) return;
+    if (!q || !geriBildirim || bitti) return;
     if (!cevap[q.ref]) cal([spKlip(q.ref, q, 'q')]);
     ustRef.current?.scrollIntoView({ block: 'nearest' });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -153,7 +162,9 @@ export default function SpTest({ ix, kip, refs, baslik, alt, anahtar, sureDk, on
   const sec = (h: Harf) => {
     if (!q || bitti) return;
     if (deneme) {
+      if (anlik && cevap[q.ref]) return;
       const n = { ...cevap, [q.ref]: h };
+      if (anlik) cal(h === q.dogru ? [spKlip(q.ref, q, 'd'), spKlip(q.ref, q, 'c')] : [spKlip(q.ref, q, 's', h), spKlip(q.ref, q, 'c')]);
       setCevap(n);
       spYaz((k) => ({ ...k, deneme: { ...k.deneme, [anahtar]: { ...(k.deneme[anahtar] || { bas: Date.now() }), cevap: n } } }));
       return;
@@ -277,12 +288,12 @@ export default function SpTest({ ix, kip, refs, baslik, alt, anahtar, sureDk, on
               const c = cevap[x.ref];
               return (
                 <li key={x.ref} className={c === x.dogru ? 'is-dogru' : 'is-yanlis'}>
-                  <p className="sp-kok"><span className="sp-mono">{k + 1}.</span> {x.soru}</p>
+                  <p className="sp-kok"><span className="sp-mono">{k + 1}.</span> <Z t={x.soru} /></p>
                   <p className="sp-cevap-ozet">
-                    {c ? <>Senin cevabın <b>{c}</b> · </> : <>Boş · </>}Doğru cevap <b>{x.dogru}) {x.secenekler[x.dogru]}</b>
+                    {c ? <>Senin cevabın <b>{c}</b> · </> : <>Boş · </>}Doğru cevap <b>{x.dogru}) <Z t={x.secenekler[x.dogru]} /></b>
                   </p>
-                  {c && c !== x.dogru && x.siklar[c] && <p className="sp-aciklama is-yanlis"><b>{c})</b> {x.siklar[c]}</p>}
-                  <p className="sp-aciklama">{x.cozum || x.siklar[x.dogru]}</p>
+                  {c && c !== x.dogru && x.siklar[c] && <p className="sp-aciklama is-yanlis"><b>{c})</b> <Z t={x.siklar[c]} /></p>}
+                  <p className="sp-aciklama"><Z t={x.cozum || x.siklar[x.dogru]} /></p>
                   <Kaynak q={x} ix={ix} onGit={onGit} />
                 </li>
               );
@@ -295,7 +306,7 @@ export default function SpTest({ ix, kip, refs, baslik, alt, anahtar, sureDk, on
 
   /* ---------------- soru ---------------- */
   const c = cevap[q.ref];
-  const goster = !deneme && !!c;
+  const goster = geriBildirim && !!c;
   const cevapli = Object.keys(cevap).filter((r) => sorular.some((x) => x.ref === r)).length;
   return (
     <div className="sp-test" ref={ustRef}>
@@ -305,9 +316,16 @@ export default function SpTest({ ix, kip, refs, baslik, alt, anahtar, sureDk, on
           <h2>{baslik}</h2>
         </div>
         <div className="sp-arac">
-          {deneme && sureDk ? (
+          {deneme && sureDk && (
             <span className={`sp-sure${kalanSn < 600 ? ' is-az' : ''}`} aria-live="off"><Clock aria-hidden />{Math.floor(kalanSn / 60)}:{String(kalanSn % 60).padStart(2, '0')}</span>
-          ) : (
+          )}
+          {deneme && (
+            <button type="button" className={`sp-btn${anlik ? ' is-on' : ''}`} aria-pressed={anlik} title="Cevabı ve açıklamayı hemen göster"
+              onClick={() => { const v = !anlik; setAnlik(v); try { localStorage.setItem('medsoru_son_prova_anlik', v ? '1' : '0'); } catch { /* yok */ } if (!v) dur(); }}>
+              <Check aria-hidden /><span>Anlık cevap</span>
+            </button>
+          )}
+          {geriBildirim && (
             <button type="button" className={`sp-btn${sesAcik ? ' is-on' : ''}`} onClick={sesDegis} aria-pressed={sesAcik} title="Sesli asistan">
               {sesAcik ? <Volume2 aria-hidden /> : <VolumeX aria-hidden />}<span>{caliyor ? 'Okuyor…' : 'Sesli asistan'}</span>
             </button>
@@ -326,26 +344,26 @@ export default function SpTest({ ix, kip, refs, baslik, alt, anahtar, sureDk, on
               <li key={h}>
                 <button type="button" className={`sp-sik ${durum}`} onClick={() => sec(h)} disabled={goster} aria-pressed={c === h}>
                   <span className="sp-harf">{h}</span>
-                  <span className="sp-sik-t">{q.secenekler[h]}</span>
+                  <span className="sp-sik-t"><Z t={q.secenekler[h]} /></span>
                   {goster && h === q.dogru && <Check aria-label="doğru" />}
                   {goster && h === c && h !== q.dogru && <X aria-label="yanlış" />}
                 </button>
                 {goster && (h === c || h === q.dogru) && q.siklar[h] && (
-                  <p className={`sp-aciklama ${h === q.dogru ? 'is-dogru' : 'is-yanlis'}`}>{q.siklar[h]}</p>
+                  <p className={`sp-aciklama ${h === q.dogru ? 'is-dogru' : 'is-yanlis'}`}><Z t={q.siklar[h]} /></p>
                 )}
               </li>
             );
           })}
         </ul>
-        {!deneme && !c && q.ipucu && (
+        {geriBildirim && !c && q.ipucu && (
           yardim[q.ref]
-            ? <p className="sp-ipucu"><LifeBuoy aria-hidden /> {q.ipucu}</p>
+            ? <p className="sp-ipucu"><LifeBuoy aria-hidden /> <Z t={q.ipucu} /></p>
             : <button type="button" className="sp-btn sp-btn-yardim" onClick={() => { setYardim((y) => ({ ...y, [q.ref]: true })); cal([spKlip(q.ref, q, 'i')]); }}><LifeBuoy aria-hidden /> Yardım al</button>
         )}
         {goster && (
           <div className={`sp-geri ${c === q.dogru ? 'is-dogru' : 'is-yanlis'}`}>
             <b>{c === q.dogru ? 'Doğru!' : `Doğru cevap ${q.dogru}`}</b>
-            {q.cozum && <p>{q.cozum}</p>}
+            {q.cozum && <p><Z t={q.cozum} /></p>}
             <Kaynak q={q} ix={ix} onGit={onGit} />
           </div>
         )}

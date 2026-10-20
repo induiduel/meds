@@ -77,6 +77,28 @@ def main():
 
     brans_sira = list(PLAN["sinav"])
     havuz = {b: havuz_yukle(b) for b in brans_sira}
+    # Son Prova'ya özel yeni örnek sorular (YENI_SORU.md; sesler scripts/son_prova/yeni_ses.py → <brans>_cozucu/ses/s<NN>)
+    for p in partlar:
+        kl = "s" + re.match(r"k\d+-(\d+)-", p["key"]).group(1)
+        kp = MEDS / f"data/{p['brans']}_cozucu/ses/{kl}/kayit.json"
+        kayit = json.loads(kp.read_text(encoding="utf-8")) if kp.exists() else {}
+        for n, f in enumerate(sorted((KOK / "parca" / p["key"]).glob("a*.json")), 1):
+            a = json.loads(f.read_text(encoding="utf-8"))
+            for i, q in enumerate(a.get("yeni_sorular") or [], 1):
+                no = n * 10 + i
+                klip = {}
+                for t in "qicd":
+                    if f"{t}-{no}" in kayit:
+                        klip[t] = kayit[f"{t}-{no}"]["h"]
+                for h in "ABCDE":
+                    if f"s-{no}-{h}" in kayit:
+                        klip[f"s{h}"] = kayit[f"s-{no}-{h}"]["h"]
+                ref = f"{p['brans']}/{kl}#{no}"
+                havuz[p["brans"]][ref] = {**q, "no": no, "tur": "yeni", "_kod": a["ders"].lstrip("p") if p["brans"] == "patoloji" else a["ders"],
+                                          "_kl": kl, "_klip": klip}
+                hedef = next(x for x in p["asamalar"] if x["no"] == n)
+                if ref not in hedef["sorular"]:
+                    hedef["sorular"].append(ref)
     kullanildi: set[str] = set()
     kok_kullanildi: set[str] = set()
     sorular_out = defaultdict(dict)  # brans → ref → soru

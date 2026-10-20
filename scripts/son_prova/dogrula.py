@@ -15,6 +15,7 @@ KOK = Path(__file__).resolve().parent
 ROOT = KOK.parents[1]
 sys.path.insert(0, str(ROOT / "meds" / "scripts"))
 from turkce_uslup import denetle as uslup  # noqa: E402
+from sik_aciklama import denetle as sik_denetle  # noqa: E402
 
 PLAN = json.loads((KOK / "plan.json").read_text(encoding="utf-8"))
 PARTLAR = {p["key"]: p for p in PLAN["partlar"]}
@@ -208,6 +209,41 @@ def denetle(p: Path, ozet: dict | None = None) -> int:
     tur = [refs[r].get("tur") for r in sor if r in refs]
     if sor and "cikmis" not in tur and any(q.get("tur") == "cikmis" and q["_ders"] == d.get("ders", "").lstrip("p") for q in refs.values()):
         U.append("aşama sonu sorularında hiç çıkmış yok (varsa en az bir çıkmış seç)")
+    # yeni örnek sorular (aşama başına 2; yalnız bu aşamada anlatılan bilgiyle, çıkmış üslubunda)
+    ys = d.get("yeni_sorular")
+    if ys is not None:
+        if not 2 <= len(ys) <= 3:
+            H.append(f"yeni_sorular {len(ys)} (2–3)")
+        for qi, q in enumerate(ys, 1):
+            yer = f"yeni{qi}"
+            sec = q.get("secenekler") or {}
+            if sorted(sec) != list("ABCDE"):
+                H.append(f"{yer}: 5 şık (A–E) olmalı")
+            if q.get("dogru") not in sec:
+                H.append(f"{yer}: doğru şık geçersiz")
+            if len({str(v).strip().lower() for v in sec.values()}) != len(sec):
+                H.append(f"{yer}: aynı şık iki kez")
+            if q.get("zorluk") not in ("kolay", "orta", "zor"):
+                H.append(f"{yer}: zorluk kolay/orta/zor")
+            kok = str(q.get("soru", ""))
+            if len(kok.split()) < 6:
+                H.append(f"{yer}: soru kökü çok kısa")
+            ip = str(q.get("ipucu", ""))
+            dt = str(sec.get(q.get("dogru"), "")).lower()
+            if not ip or (dt and len(dt) > 3 and dt in ip.lower()):
+                H.append(f"{yer}: ipucu yok ya da cevabı sızdırıyor")
+            sk = q.get("siklar") or {}
+            for h in "ABCDE":
+                if not sk.get(h):
+                    H.append(f"{yer}: {h} şıkkının açıklaması yok")
+                else:
+                    for e in sik_denetle(sk[h], f"{yer}{h}"):
+                        H.append(f"şık {e}")
+            if len(str(q.get("cozum", "")).split()) < 12:
+                H.append(f"{yer}: çözüm çok kısa")
+            for alan in ("soru", "ipucu", "cozum"):
+                for e in uslup(str(q.get(alan, "")), f"{yer}.{alan}"):
+                    H.append(f"üslup {e}")
     kc = d.get("karsilanan_cikmis") or []
     if not isinstance(kc, list):
         H.append("karsilanan_cikmis liste olmalı")

@@ -127,7 +127,8 @@ const ozet = (key: string) => (v: KayitVaryant) => ({ id: v.id, etiket: v.etiket
 export function registerCanliDersRoutes(app: Express) {
   app.get('/api/canli-ders', (_req: Request, res: Response) => {
     const out = dersler()
-      .filter((d) => !LISTEDE_GIZLI.has(d.key))
+      // Son Prova partları kendi sayfasında (/son-prova) aşama sorularıyla oynatılır; sesli ders listesinde gösterilmez
+      .filter((d) => !LISTEDE_GIZLI.has(d.key) && !/-son-prova-/.test(d.key))
       .sort((a, b) => a.sira - b.sira)
       .map((d) => {
         const vs = varyantlar(d.key);

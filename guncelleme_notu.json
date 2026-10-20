@@ -1,16 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 144,
-  "baslik": "En önemliler: ders seçenek ekranı",
+  "onem": 145,
+  "baslik": "Son Prova: denemede anlık cevap, sade oynatıcı",
   "maddeler": [
-    "En önemliler'de bir derse girince önce sade bir seçenek ekranı açılır: sesli asistanla çalış, soruları sesli çöz, PDF indir ve süreler tek dokunuşla.",
-    "Detaylı bakış kartı, madde listesi sayfasında neler olduğunu (önem partları, sınav adayları, arama, süzgeç, tekrar modu) önceden anlatır; 'Seçeneklere dön' ile geri gelinir."
+    "Denemelerde 'Anlık cevap' açık: işaretlediğin anda doğru/yanlış, şık açıklaması ve çözüm sesli asistanla gelir (istersen kapatıp sınav gibi çöz).",
+    "Son Prova partları artık yalnız kendi sayfasında açılır; her aşama bitince sorular otomatik gelir.",
+    "Part ekranı sadeleşti: geri, aşama soruları ve check-up tek satırda; PDF çubuğunda hangi dersin hangi slaytı olduğu yazar."
   ],
-  "eklenen": [
-    "En önemliler'de bir derse girince önce sade bir seçenek ekranı açılır: sesli asistanla çalış, soruları sesli çöz, PDF indir ve süreler tek dokunuşla.",
-    "Detaylı bakış kartı, madde listesi sayfasında neler olduğunu (önem partları, sınav adayları, arama, süzgeç, tekrar modu) önceden anlatır; 'Seçeneklere dön' ile geri gelinir."
+  "eklenen": [],
+  "degisen": [
+    "Son Prova partları artık yalnız kendi sayfasında açılır; her aşama bitince sorular otomatik gelir.",
+    "Part ekranı sadeleşti: geri, aşama soruları ve check-up tek satırda; PDF çubuğunda hangi dersin hangi slaytı olduğu yazar."
   ],
-  "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Denemelerde 'Anlık cevap' açık: işaretlediğin anda doğru/yanlış, şık açıklaması ve çözüm sesli asistanla gelir (istersen kapatıp sınav gibi çöz)."
+  ],
   "silinen": []
 }

@@ -8,6 +8,7 @@
  * Part açılmadan önce cihaza indirilmesi şarttır (ses + kırpılmış özet PDF): internet gitse de kaldığı yerden sürer.
  * Kurul seçimi ?kurul=N (yoksa içeriği olan en yeni kurul). İçerik: spVeri.ts.
  */
+import { icKonum, icUrl } from '../../siteHaritasi';
 import React, { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowLeft, BookOpenCheck, CheckCircle2, ChevronRight, CloudDownload, FileDown, Flag, Headphones, ListChecks, Loader2,
@@ -38,8 +39,8 @@ type Yol =
   | { t: 'deneme'; no: number };
 
 function yolOku(): Yol {
-  const p = window.location.pathname.replace(/^\/meds(?=\/|$)/, '').replace(/\/+$/, '').split('/').slice(2).map(decodeURIComponent);
-  const sp = new URLSearchParams(window.location.search);
+  const p = icKonum().pathname.replace(/\/+$/, '').split('/').slice(2).map(decodeURIComponent);
+  const sp = new URLSearchParams(icKonum().search);
   if (!p.length) return { t: 'merkez' };
   if (p[0] === 'deneme' && Number(p[1])) return { t: 'deneme', no: Number(p[1]) };
   if (p.length === 1) return { t: 'ders', brans: p[0] };
@@ -74,7 +75,7 @@ export default function SonProvaView() {
     return () => window.removeEventListener('popstate', f);
   }, []);
   const kurullar = spKurullar();
-  const kurul = Number(new URLSearchParams(window.location.search).get('kurul')) || kurullar[kurullar.length - 1] || 1;
+  const kurul = Number(new URLSearchParams(icKonum().search).get('kurul')) || kurullar[kurullar.length - 1] || 1;
   const [ix, setIx] = useState<SpIndex | null>(null);
   const [hata, setHata] = useState<string | null>(null);
   useEffect(() => { spIndexYukle(kurul).then(setIx).catch((e) => setHata(String(e?.message || e))); }, [kurul]);
@@ -339,7 +340,6 @@ function PartOynatici({ ix, ders, part, asama, gez }: { ix: SpIndex; ders: SpDer
   const hazir = useCd((s) => s.key === key && s.dur > 0 && !!s.detay);
   const [test, setTest] = useState<SpAsama | null>(null);
   const [checkupSor, setCheckupSor] = useState(false);
-  const onceki = useRef(-1);
   const atlanan = useRef(new Set<number>());
 
   // ?asama=N: ses yüklenince o aşamanın başına git (oynatmadan)
@@ -351,19 +351,22 @@ function PartOynatici({ ix, ders, part, asama, gez }: { ix: SpIndex; ders: SpDer
     gidildi.current = true;
   }, [hazir, asama, part]);
 
-  // Aşama sınırı: ses bir sonraki aşamaya geçtiği anda durur ve biten aşamanın soruları açılır
+  // Aşama sınırı: ses bir sonraki aşamaya geçtiği anda (oynarken) durur ve biten aşamanın soruları açılır.
+  // Aşama sırası paragraf aralığından bulunur; geçiş bir aşama ileri olmalı (elle ileri atlamada soru sorulmaz).
+  const asamaSira = (i: number) => part.asamalar.findIndex((a) => i >= a.p[0] && i <= a.p[1]);
+  const oncekiSira = useRef(-1);
   useEffect(() => {
-    const pr = onceki.current;
-    onceki.current = aktif;
-    if (!caliyor || pr < 0 || aktif <= pr) return;
-    const sinir = part.asamalar.findIndex((a, j) => j > 0 && a.p[0] === aktif && pr < aktif && pr >= part.asamalar[j - 1].p[0]);
-    if (sinir < 1) return;
-    const biten = part.asamalar[sinir - 1];
+    const yeni = aktif >= 0 ? asamaSira(aktif) : -1;
+    const eski = oncekiSira.current;
+    oncekiSira.current = yeni;
+    if (!caliyor || eski < 0 || yeni !== eski + 1) return;
+    const biten = part.asamalar[eski];
     if (k.asama[`${key}:${biten.no}`] || atlanan.current.has(biten.no)) return;
     cdDuraklat();
-    cdParagrafa(part.asamalar[sinir].p[0], false);
+    cdParagrafa(part.asamalar[yeni].p[0], false);
     setTest(biten);
-  }, [aktif, caliyor, part, key, k.asama]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [aktif, caliyor]);
 
   // Ses bitince: son aşamanın soruları, sonra check-up önerisi
   useEffect(() => {
@@ -386,29 +389,28 @@ function PartOynatici({ ix, ders, part, asama, gez }: { ix: SpIndex; ders: SpDer
     }
   }, [test, part, key, k.checkup]);
 
-  const asamaDurum = useMemo(() => part.asamalar.map((a) => ({ a, s: k.asama[`${key}:${a.no}`] })), [part, k.asama, key]);
   const suAn = part.asamalar.find((a) => aktif >= a.p[0] && aktif <= a.p[1]);
+
+  const soruAsama = suAn || part.asamalar[0];
+  const soruDurum = k.asama[`${key}:${soruAsama.no}`];
+  const ust = (
+    <nav className="sp-ust-gez" aria-label="Son Prova">
+      <Geri yol={`/son-prova/${ders.brans}`} metin={BRANS_KISA[ders.brans]} />
+      <button type="button" className={`sp-btn sp-btn-kucuk${soruDurum ? ' is-tamam' : ''}`} onClick={() => { cdDuraklat(); setTest(soruAsama); }}
+        title={`Aşama ${soruAsama.no} · ${soruAsama.baslik} — ${soruAsama.dersNo}) ${soruAsama.dersAd}`}>
+        {soruDurum ? <CheckCircle2 aria-hidden /> : <ListChecks aria-hidden />}
+        <span>Aşama {soruAsama.no} soruları{soruDurum ? ` · ${soruDurum.d}/${soruDurum.n}` : ''}</span>
+      </button>
+      <button type="button" className={`sp-btn sp-btn-kucuk${k.checkup[key] ? ' is-tamam' : ''}`} onClick={() => git(`/son-prova/${ders.brans}/${part.no}/checkup`)}>
+        <Target aria-hidden /><span>Check-up</span>
+      </button>
+    </nav>
+  );
 
   return (
     <div className="sp-part-sayfa">
-      <div className="sp-part-serit">
-        {gez}
-        <div className="sp-serit" role="list" aria-label="Aşamalar ve soruları">
-          {asamaDurum.map(({ a, s }) => (
-            <button key={a.no} type="button" role="listitem" className={`sp-serit-a${suAn?.no === a.no ? ' is-su' : ''}${s ? ' is-tamam' : ''}`}
-              title={`Aşama ${a.no} · ${a.baslik} — ${a.dersNo}) ${a.dersAd}${s ? ` · ${s.d}/${s.n}` : ''}`}
-              onClick={() => { cdDuraklat(); setTest(a); }}>
-              {s ? <CheckCircle2 aria-hidden /> : <span>{a.no}</span>}
-            </button>
-          ))}
-          <button type="button" className={`sp-serit-c${k.checkup[key] ? ' is-tamam' : ''}`} onClick={() => git(`/son-prova/${ders.brans}/${part.no}/checkup`)}>
-            <ListChecks aria-hidden /> Check-up
-          </button>
-        </div>
-        {suAn && <p className="sp-su-an"><Headphones aria-hidden /> Aşama {suAn.no}: <b>{suAn.baslik}</b> · {BRANS_KISA[ders.brans]} {suAn.dersNo}) {suAn.dersAd}</p>}
-      </div>
       <Suspense fallback={<div className="sp-kart sp-bos"><Loader2 className="sp-don" aria-hidden /></div>}>
-        <CanliDersDers dersKey={key} kamp={{ geri: <span className="sp-kamp-ad">{BRANS_KISA[ders.brans]} · Son Prova</span> }} />
+        <CanliDersDers dersKey={key} kamp={{ geri: ust }} />
       </Suspense>
 
       {test && (

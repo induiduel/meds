@@ -17,7 +17,7 @@ export interface SpDeneme { no: number; sure: number; sorular: string[] }
 export interface SpIndex { kurul: number; ad: string; surum: string; sinav: Record<string, { ad: string; soru: number }>; dersler: SpDers[]; denemeler: SpDeneme[] }
 export interface SpSoru {
   soru: string; secenekler: Partial<Record<Harf, string>>; dogru: Harf; ipucu: string; siklar: Partial<Record<Harf, string>>; cozum: string;
-  tur?: 'cikmis' | 'ornek' | 'benzer'; sinav?: string; zorluk?: 'kolay' | 'orta' | 'zor';
+  tur?: 'cikmis' | 'ornek' | 'benzer' | 'yeni'; sinav?: string; zorluk?: 'kolay' | 'orta' | 'zor';
   kaynak: { kod: string; s: number[] }; asama: [string, number]; kl: string; klip: Record<string, string>;
 }
 

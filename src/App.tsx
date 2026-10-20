@@ -6,7 +6,9 @@ import { logActivity } from './services/activityLog';
 import { getVoterId, toggledVote } from './utils/voterId';
 import { foldTurkish } from './utils/fuzzyMatching';
 import type { SearchHit } from './components/search/searchShared';
-import { AppRoute, parseLocation, writeLocation, pathFor, ROUTE_TITLES, deepLinkIdFor, navigateTo } from './router';
+import { AppRoute, parseLocation, writeLocation, pathFor, icPathFor, ROUTE_TITLES, deepLinkIdFor, navigateTo } from './router';
+import { icKonum, kanonik } from './siteHaritasi';
+import { KAPALI_SAYFALAR, kategoriOf } from './components/merkez/merkezModel';
 import {
   Sparkles,
   Plus,
@@ -135,6 +137,9 @@ const CevrimdisiView = React.lazy(() => wrapLazy(import('./components/cevrimdisi
 const OlasiSorularView = React.lazy(() => wrapLazy(import('./components/olasi/OlasiSorularView')));
 const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/GecmisKurullarView')));
 const KampView = React.lazy(() => wrapLazy(import('./components/kamp/KampView')));
+const MerkezView = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView')));
+const BolumSeridi = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView').then((m) => ({ default: m.BolumSeridi }))));
+const NeYapmak = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView').then((m) => ({ default: m.NeYapmak }))));
 const GuncellemeGunluguView = React.lazy(() => wrapLazy(import('./components/guncellemeler/GuncellemeGunluguView')));
 const SinavCalismaView = React.lazy(() => wrapLazy(import('./components/SinavCalismaView').then(m => ({ default: m.SinavCalismaView }))));
 
@@ -500,16 +505,19 @@ export default function App() {
   // Normalise legacy #tab links to their path once, then follow back / forward
   useEffect(() => {
     // Yol normalleştirilirken derin bağlantının sorgu (?opt, ?sec, ?highlight) ve çapası (#…) korunur.
+    // Karşılaştırma iç adreste yapılır (siteHaritasi): görünen adres iç içe olsa da sayfa/parametre aynıysa dokunulmaz.
     try {
-      const next = pathFor(initialRoute.route, initialRoute.param);
-      const sp = new URLSearchParams(window.location.search);
+      const next = icPathFor(initialRoute.route, initialRoute.param);
+      const ic = icKonum();
+      const sp = new URLSearchParams(ic.search);
       sp.delete('questionId');
       const qs = sp.toString();
-      const cur = window.location.pathname.replace(/^\/meds(?=\/|$)/, '');
-      // Yönetim alt derin bağlantısı (/manage/kisiler/<kişi>) üçüncü parçayı taşır; kırpılmaz
-      const deeperManage = (initialRoute.route === 'manage' || initialRoute.route === 'kamp' || initialRoute.route === 'son_prova') && cur.startsWith(`${next}/`);
-      if ((cur !== next && !deeperManage) || window.location.search.includes('questionId')) {
-        window.history.replaceState({ route: initialRoute.route, param: initialRoute.param }, '', next + (qs ? `?${qs}` : '') + window.location.hash);
+      // Yönetim alt derin bağlantısı (/manage/kisiler/<kişi>), kamp ve Son Prova alt yolları kırpılmaz
+      const deeper = (initialRoute.route === 'manage' || initialRoute.route === 'kamp' || initialRoute.route === 'son_prova') && ic.pathname.startsWith(`${next}/`);
+      const hedef = kanonik((deeper ? ic.pathname : next) + (qs ? `?${qs}` : '')) + window.location.hash;
+      const simdi = window.location.pathname.replace(/^\/meds(?=\/|$)/, '') + window.location.search + window.location.hash;
+      if (hedef !== simdi) {
+        window.history.replaceState({ route: initialRoute.route, param: initialRoute.param }, '', hedef);
       }
     } catch {
       writeLocation(initialRoute.route, initialRoute.param, true);
@@ -833,6 +841,7 @@ export default function App() {
   const currentCommittee = (committees || []).find((c) => c.id === selectedCommitteeId);
   const targetCount = currentCommittee?.targetCount || 100;
   const isAdmin = isAdminUser(currentUser);
+  const sayfaKapali = KAPALI_SAYFALAR.has(activeTab) && !isAdmin;
   // Moderatör: rol sunucudan (GET /api/me/access, Firebase jetonu) öğrenilir; yalnız moderasyon bölümleri açılır
   const [isModerator, setIsModerator] = useState(false);
   useEffect(() => {
@@ -1614,6 +1623,29 @@ export default function App() {
       {/* Main Container */}
       <main ref={mainRef} className={`sh-main ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}`}>
 
+        {/* Bölüm şeridi: araç sayfasının kategorisi + kardeş araçlar (components/merkez; tam ekran ögede kendini gizler) */}
+        {kategoriOf(activeTab) && !sayfaKapali && (
+          <Suspense fallback={null}>
+            <BolumSeridi route={activeTab} />
+          </Suspense>
+        )}
+
+        {/* Merkez sayfaları: /dersler · /sorular · /kamplar[/kurulN] · /kaynaklar */}
+        {(activeTab === 'hub_dersler' || activeTab === 'hub_sorular' || activeTab === 'hub_kamplar' || activeTab === 'hub_kaynaklar') && (
+          <Suspense fallback={<ViewFallback />}>
+            <MerkezView key={activeTab} kategori={activeTab === 'hub_dersler' ? 'dersler' : activeTab === 'hub_sorular' ? 'sorular' : activeTab === 'hub_kamplar' ? 'kamplar' : 'kaynaklar'} />
+          </Suspense>
+        )}
+
+        {/* Öğrenciye kapatılan sayfalar (Sınav çalışması, Alternatif çözücü, Ders notları): yalnız yönetici açar */}
+        {sayfaKapali && (
+          <div className="mz-kapali" role="status">
+            <h1>Bu sayfa kullanımdan kaldırıldı</h1>
+            <p>Aradığın içerik artık yeni bölümlerde. Ne yapmak istediğini seç:</p>
+            <Suspense fallback={null}><NeYapmak kart /></Suspense>
+          </div>
+        )}
+
         {/* Drive Upload Notification Banner if successful */}
         {driveUploadSuccess && (
           <div role="status" className="bg-ok-soft rounded-xl px-4 py-3 sm:px-5 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -1743,7 +1775,7 @@ export default function App() {
         )}
 
         {/* TAB: Patoloji alternatif sesli çözücü (/alternatif-cozucu) */}
-        {activeTab === 'alternatif_cozucu' && (
+        {activeTab === 'alternatif_cozucu' && !sayfaKapali && (
           <Suspense fallback={<ViewFallback />}>
             <AlternatifCozucuView />
           </Suspense>
@@ -1869,9 +1901,10 @@ export default function App() {
             <PastExamsView
               currentUser={currentUser}
               initialSearchQuery={pastExamsSearchQuery}
-              onOpenNote={(noteId, pageNumber) => {
+              // Ders notları öğrenciye kapalı (merkezModel.KAPALI_SAYFALAR): bağlantı yalnız yöneticide
+              onOpenNote={isAdmin ? (noteId, pageNumber) => {
                 navigateTo(`${pathFor('notes')}?id=${encodeURIComponent(noteId)}${pageNumber ? `&page=${pageNumber}` : ''}`);
-              }}
+              } : undefined}
               onUpdateQuestionReference={handleUpdateQuestionReference}
               onNavigateToLearn={(deckId, slideNumber, focus) => {
                 setSelectedLearnDeckId(deckId);
@@ -1895,7 +1928,7 @@ export default function App() {
         )}
 
         {/* TAB: /sinav-calisma — Tüm kazanımlar ve sesli sınav asistanı */}
-        {activeTab === 'sinav_calisma' && (
+        {activeTab === 'sinav_calisma' && !sayfaKapali && (
           <Suspense fallback={<ViewFallback />}>
             <SinavCalismaView />
           </Suspense>
@@ -2046,6 +2079,7 @@ export default function App() {
         {activeTab === 'today' && (
           <Suspense fallback={<ViewFallback />}>
             <KurulSeridi />
+            <div className="mz-bugun"><NeYapmak kart /></div>
             <TodayView committeeLabel={currentCommittee ? committeeShortLabel(currentCommittee) : undefined} onGo={(r) => setActiveTab(r)} />
           </Suspense>
         )}
@@ -2097,7 +2131,7 @@ export default function App() {
         )}
 
         {/* TAB 6: Ders Notları & Slaytlar */}
-        {activeTab === 'notes' && (
+        {activeTab === 'notes' && !sayfaKapali && (
           <Suspense fallback={<ViewFallback />}>
             <LectureNotesView
               key={deepLinkNonce}
