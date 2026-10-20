@@ -1,13 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 148,
-  "baslik": "Düzeltme: sayfa üstündeki bölüm şeridi kaldırıldı",
+  "onem": 149,
+  "baslik": "Düzeltme: Sesli ders listesi ve Bugün ekranı",
   "maddeler": [
-    "Sayfaların üstündeki bölüm hapları kaldırıldı; bölüm adı üst çubukta görünür, diğer araçlara bölüm sayfasından geçilir."
+    "Sesli ders listesinde branş başlıkları artık açıkça tıklanabilir kartlar: 'Dersleri göster / Gizle' düğmesiyle.",
+    "Bugün ekranındaki 'Ne yapmak istiyorsun?' kartları sayfayla aynı hizada, kategori rengiyle."
   ],
   "eklenen": [],
   "degisen": [
-    "Sayfaların üstündeki bölüm hapları kaldırıldı; bölüm adı üst çubukta görünür, diğer araçlara bölüm sayfasından geçilir."
+    "Sesli ders listesinde branş başlıkları artık açıkça tıklanabilir kartlar: 'Dersleri göster / Gizle' düğmesiyle.",
+    "Bugün ekranındaki 'Ne yapmak istiyorsun?' kartları sayfayla aynı hizada, kategori rengiyle."
   ],
   "duzeltilen": [],
   "silinen": []

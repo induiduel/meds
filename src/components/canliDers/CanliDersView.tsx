@@ -450,7 +450,7 @@ function KategoriBolumu({ kat, n, sure, acik, onDegistir, children }: { kat: CdK
       <button type="button" className="cd-kat-bas" aria-expanded={acik} onClick={onDegistir}>
         <span className="cd-kat-ad"><b>{kat.ad}</b>{kat.alt && <small>{kat.alt}</small>}</span>
         <span className="cd-kat-n">{n} ders · {fmtSaat(sure)}</span>
-        <ChevronDown aria-hidden className="cd-kat-ok" />
+        <span className="cd-kat-eylem">{acik ? 'Gizle' : 'Dersleri göster'}<ChevronDown aria-hidden className="cd-kat-ok" /></span>
       </button>
       {acik && children}
     </section>
