@@ -93,10 +93,10 @@ yarımları da):
 | onem | Claude `spot_cozucu/TALIMAT_ONEM.md` (önem haritasına dayanır) | `onem_dogrula.py` (≤3 düzeltme turu) |
 | cozucu | Claude `TALIMAT_COZUCU.md` | `cozucu_dogrula.py` |
 | denetim | **bağımsız denetçi** Claude `DENETIM.md`; rapor `denetim/<kod>.md` zorunlu | iki kapı yeniden; geçerse `onayli.json` |
-| birlestir | `birlestir.py k2<brans>` — **yalnız `onayli.json`'daki kodlar** | çıktı dosyası var mı |
+| birlestir | `birlestir.py k2<brans>` — **yalnız `onayli.json`'daki kodlar**; ardından `ogren_esle.py` ("Öğren'de bu bilgi") | çıktı var mı; **silme koruması** (ders/öğe sayısı düşerse yedek geri, kod 11) |
 | asistan | `asistan_plan.py` → Claude `TALIMAT_ASISTAN.md` → `asistan_birlestir.py` (yalnız onaylı) | `asistan_dogrula.py` |
-| ses | EMA: çözücü (`ses_kuyruk.sh`), asistan (`asistan_ses_kuyruk.sh`), Öğren adımları (`ogren_ses_uret.py --oracle`) | — |
-| oracle | ses klasörleri Oracle'a; içerik sürüm kaydı (`icerik_setleri`) | kayıt yazılamazsa adım tekrar |
+| ses | EMA: çözücü (`ses_kuyruk.sh`), asistan (`asistan_ses_kuyruk.sh`), Öğren adımları (`ogren_ses_uret.py --oracle`, Kurul 2+ `ema-2`). Kısaltmalar uzun harf okunuşuyla ("dee nee aa") | — |
+| oracle | ses klasörleri Oracle'a; canlıda rastgele 5 klip yoklaması (kod 12); içerik sürüm kaydı (`icerik_setleri`) | kayıt yazılamazsa adım tekrar |
 Durum `meds_temp/hat/dersler/<id>.json`. Kaynak değişince eski ara dosyalar `_eski/`, onay düşer, zincir baştan.
 Art arda hata → 1/2/4/7 gün geri çekilme. Claude zaman aşımı 3 sa. Branş klasörü `k<N><slug>` (Kurul 1 klasörleri ezilmez);
 sitede sekme, veri klasörü oluşunca kendiliğinden (`components/spots/brans.ts`).
@@ -163,7 +163,8 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
 
 ## 9. İzleme ve müdahale
 - **Pano:** Yönetim › Hat (`/manage/hat`): aşama durumu, son başarı, son kod (kırmızı = hata, 3 = atlandı, 10 = bağımlılık düştü), günlük.
-- **Sağlık:** `python3 meds/otomasyon/saglik.py` (canlı API, Oracle SSH, 3000, vektör, EMA, disk).
+- **Sağlık:** `python3 meds/otomasyon/saglik.py` (canlı API, Oracle SSH, 3000, vektör, EMA, disk + **kapı öz-sınaması**:
+  üslup/şık/v2 kapıları iyi-kötü örnekle; arıza = `kapi_ariza`, içerik reddi sanılmaz).
 - **Sık durumlar:**
   | Belirti | Yapılacak |
   |---|---|
@@ -193,5 +194,10 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
 5. Kurul sınavı günü: olası soru akşam çalıştırmaları; ertesi gün `/olasi-sorular?kurul=N`.
 6. Sınavdan sonra kurul arşive geçer (`/gecmis-kurullar`), aktif içerik bir sonraki kurula.
 
-## 12. Bilinçli olarak elle kalan
+## 12. Açık kapılar (hata defteri H7–H12)
+Düzeltme yayılımı (tek soru kimliği, H7) · PDF içerik tekrarı (H8) · sayfa kapsama ≥%90 (H9) · çıkmış anahtar çelişkisi
+karantinası (H10) · türev veri hash tutarlılığı (H12) · `vurgu_uret.py` hatta alınması · deste `versionGroup` kapısı ·
+kelime zamanlaması yalnız cihazda (cihaz kapalıyken gecikir).
+
+## 13. Bilinçli olarak elle kalan
 Kod dağıtımı (`esitle_dagit`). Kurul 1 içerik düzeltmeleri. Test bankası Kurul 2+ kapsamı (geliştirme bekliyor).
