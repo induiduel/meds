@@ -83,7 +83,6 @@ export default function CanliDersCozucuSoru() {
     const a = oneri.asistan;
     if (!a) return;
     setOneri(null);
-    if (document.fullscreenElement) void document.exitFullscreen?.().catch(() => {});
     navigateTo(onemYolu({ brans: oneri.brans, ders: a.kod, asistan: '1' }));
   };
 
@@ -91,7 +90,6 @@ export default function CanliDersCozucuSoru() {
     const c = oneri.cozucu;
     if (!c) return;
     setOneri(null);
-    if (document.fullscreenElement) void document.exitFullscreen?.().catch(() => {});
     navigateTo(cozucuYolu({ brans: oneri.brans, ders: c.kod, coz: '1' }));
   };
 

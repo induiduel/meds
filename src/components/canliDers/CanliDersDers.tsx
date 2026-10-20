@@ -9,7 +9,7 @@ import React, { Suspense, lazy, memo, useCallback, useMemo, useEffect, useLayout
 import { ArrowLeftRight, ArrowUpDown, ChevronDown, ChevronLeft, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
-import { wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
+import { releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { isIosBrowserTab, shouldAvoidNativeFullscreen } from '../../utils/device';
 import { openPwaInstallGuide } from '../../services/pwaService';
@@ -316,10 +316,8 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
   }, [tamEkran]);
   useEffect(() => () => {
     document.documentElement.classList.remove('cd-tam-ekran', 'cd-tam-oynatici');
-    const d = document as any;
-    if (d.fullscreenElement || d.webkitFullscreenElement) {
-      void (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
-    }
+    // Sayfa geçişinde tam ekran korunur, aksi hâlde kapanır.
+    if (document.documentElement.classList.contains('is-app-fullscreen') || (document as any).fullscreenElement || (document as any).webkitFullscreenElement) releasePageFullscreen();
   }, []);
   const tamEkranAc = () => {
     setOynaticiAcik(true);

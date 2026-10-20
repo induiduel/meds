@@ -1,16 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 60,
-  "baslik": "Sağlık Bakanlığı sayfası daha kompakt",
+  "onem": 61,
+  "baslik": "Tam ekranda sayfalar arası gezinme",
   "maddeler": [
-    "Sağlık Bakanlığı (halk sağlığı) sayfası artık varsayılan olarak kompakt görünümde açılıyor; Görünüm menüsünden Rahat'a dönebilirsin.",
-    "Sayfa başlığı ve bölüm başlıkları Genetik Check Up ile aynı düzene getirildi."
+    "Tam ekrandayken sol kenardaki gezinme çubuğuyla (Geri, İleri, Ana sayfa, Sayfalar) tam ekrandan çıkmadan başka sayfalara geçebilirsin.",
+    "Geri tuşu ve sayfa geçişleri artık tam ekranı kapatmıyor; yeni sayfa tam ekranda açılıyor."
   ],
-  "eklenen": [],
-  "degisen": [
-    "Sağlık Bakanlığı (halk sağlığı) sayfası artık varsayılan olarak kompakt görünümde açılıyor; Görünüm menüsünden Rahat'a dönebilirsin.",
-    "Sayfa başlığı ve bölüm başlıkları Genetik Check Up ile aynı düzene getirildi."
+  "eklenen": [
+    "Tam ekrandayken sol kenardaki gezinme çubuğuyla (Geri, İleri, Ana sayfa, Sayfalar) tam ekrandan çıkmadan başka sayfalara geçebilirsin."
   ],
-  "duzeltilen": [],
+  "degisen": [],
+  "duzeltilen": [
+    "Geri tuşu ve sayfa geçişleri artık tam ekranı kapatmıyor; yeni sayfa tam ekranda açılıyor."
+  ],
   "silinen": []
 }

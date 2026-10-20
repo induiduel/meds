@@ -26,6 +26,7 @@ import { MiniMusicPlayer } from './components/music/MiniMusicPlayer';
 import { SideNav } from './components/shell/SideNav';
 import { TopBar } from './components/shell/TopBar';
 import { ScrollTopFab } from './components/shell/ScrollTopFab';
+import { TamEkranGezinme } from './components/shell/TamEkranGezinme';
 import { TabBar } from './components/shell/TabBar';
 import { CanliDersDockGate } from './components/canliDers/CanliDersDockGate';
 import { ConfirmHost, confirmDialog } from './components/ui/ConfirmDialog';
@@ -1525,6 +1526,7 @@ export default function App() {
       <SideNav active={activeTab} onGo={setActiveTab} isAdmin={isAdmin} user={currentUser} />
       <div className="sh-app">
         <ScrollTopFab routeKey={activeTab} />
+        <TamEkranGezinme active={activeTab} onGo={setActiveTab} />
         <TopBar
           active={activeTab}
           onGo={setActiveTab}

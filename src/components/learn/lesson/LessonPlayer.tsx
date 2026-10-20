@@ -58,7 +58,7 @@ import { useDeckPdf } from '../../../services/deckPdfService';
 import { QuestionFocus, focusMarks } from '../../../services/questionFocus';
 import { detectIosDevice, openPwaInstallGuide } from '../../../services/pwaService';
 import { shouldAvoidNativeFullscreen } from '../../../utils/device';
-import { wasRecentlyScrollingOrTouching } from '../../../utils/fullscreen';
+import { releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../../utils/fullscreen';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
 import { toast } from '../../ui/Toast';
 import { deckName } from '../../../data/deckStore';
@@ -640,7 +640,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       document.body.style.overflow = prev;
       document.documentElement.style.overflow = prevHtml;
       hideTermTip();
-      if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+      if (document.fullscreenElement) releasePageFullscreen();
     };
   }, []);
   useEffect(() => onProgress(index), [index]); // eslint-disable-line react-hooks/exhaustive-deps

@@ -26,6 +26,7 @@ import { openPwaInstallGuide } from '../../services/pwaService';
 import { toast } from '../ui/Toast';
 import { navigateTo, pathFor } from '../../router';
 import '../../styles/soru-cozucu.css';
+import { releasePageFullscreen } from '../../utils/fullscreen';
 import '../../styles/alternatif-cozucu.css';
 import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 
@@ -531,11 +532,8 @@ const AlternatifCozucuOynatici: React.FC<OynaticiProps> = ({
     return () => {
       document.removeEventListener('fullscreenchange', f);
       document.removeEventListener('webkitfullscreenchange', f);
-      document.documentElement.classList.remove('is-app-fullscreen');
-      const d = document as any;
-      if (d.fullscreenElement || d.webkitFullscreenElement) {
-        (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
-      }
+      // Sayfa geçişinde tam ekran korunur (yeni sayfa tam ekranda açılır), aksi hâlde kapanır.
+      releasePageFullscreen();
     };
   }, []);
 

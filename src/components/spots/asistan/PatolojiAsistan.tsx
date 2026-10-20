@@ -20,6 +20,7 @@ import { OgrenYeri } from '../ogren/OgrenYeri';
 import { ogrenEslemeVar } from '../ogren/ogrenEsle';
 import { useYildizliMi, useYildizliSayisi, yildizToggle, yildizliMi } from '../../../services/yildizliParagrafStore';
 import { YildizliParagraflarModal } from '../../study/YildizliParagraflarModal';
+import { releasePageFullscreen } from '../../../utils/fullscreen';
 import '../../../styles/patoloji-asistan.css';
 
 /**
@@ -606,11 +607,8 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     return () => {
       document.removeEventListener('fullscreenchange', f);
       document.removeEventListener('webkitfullscreenchange', f);
-      document.documentElement.classList.remove('is-app-fullscreen');
-      const d = document as any;
-      if (d.fullscreenElement || d.webkitFullscreenElement) {
-        (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
-      }
+      // Sayfa geçişinde tam ekran korunur (yeni sayfa tam ekranda açılır), aksi hâlde kapanır.
+      releasePageFullscreen();
     };
   }, []);
   const tamEkranDegis = () => {

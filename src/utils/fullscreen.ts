@@ -36,6 +36,51 @@ export function installFullscreenScrollGuard(): void {
 
 installFullscreenScrollGuard();
 
+/**
+ * Sayfa geçişi izi: uygulama içi her adres değişikliği (pushState, yol değiştiren replaceState,
+ * geri/ileri = popstate) zamanı tutulur. Geçişte kapanan sayfanın temizliği tam ekranı kapatmasın
+ * diye `releasePageFullscreen` buna bakar; kullanıcı tam ekrandan çıkmadan sayfalar arasında gezer.
+ */
+let lastRouteChangeAt = 0;
+let routeTrackerInstalled = false;
+function installRouteChangeTracker(): void {
+  if (typeof window === 'undefined' || routeTrackerInstalled) return;
+  routeTrackerInstalled = true;
+  const mark = () => { lastRouteChangeAt = Date.now(); };
+  const h = window.history;
+  const push = h.pushState.bind(h);
+  const replace = h.replaceState.bind(h);
+  h.pushState = (...args: Parameters<History['pushState']>) => { mark(); return push(...args); };
+  h.replaceState = (...args: Parameters<History['replaceState']>) => {
+    const before = window.location.pathname;
+    const r = replace(...args);
+    if (window.location.pathname !== before) mark();
+    return r;
+  };
+  window.addEventListener('popstate', mark, { capture: true });
+}
+installRouteChangeTracker();
+
+export function isRouteChanging(thresholdMs = 1500): boolean {
+  return Date.now() - lastRouteChangeAt < thresholdMs;
+}
+
+/**
+ * Tam ekranlı bir sayfa kapanırken (unmount) çağrılır. Sayfa geçişiyse tam ekran (uygulama sınıfı +
+ * native katman) korunur ve yeni sayfa tam ekranda açılır; değilse tam ekran tamamen kapanır.
+ */
+export function releasePageFullscreen(): void {
+  if (typeof document === 'undefined') return;
+  if (isRouteChanging() && (isAppFullscreen() || isNativeFullscreen())) {
+    document.documentElement.classList.add(APP_FS_CLASS);
+    notifyFullscreenChange();
+    return;
+  }
+  document.documentElement.classList.remove(APP_FS_CLASS);
+  exitNativeFullscreen();
+  notifyFullscreenChange();
+}
+
 /** Geriye dönük ad: algılama tek kaynakta (`utils/device.ts`). */
 export function isIosWebKit(): boolean {
   return isIosDevice();
