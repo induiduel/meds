@@ -56,7 +56,7 @@ CHANGED="$(mktemp)"; trap 'rm -f "$CHANGED"' EXIT
 # --checksum: değişiklik listesi içeriğe göre (worktree checkout'u tarihleri yeniler; tarihe bakınca package.json
 # 'değişti' sayılıp imaj gereksiz kuruluyordu, 2026-10-20). Ölçüm: ~2 sn.
 # sudo rsync: konteyner src/data'ya root olarak yazar; tarih/sahip eşitlemesi yetki ister (sahip uid 1000 olur)
-rsync -az --checksum --rsync-path='sudo rsync' --out-format='%n' \
+rsync -az --checksum --rsync-path='sudo rsync' --out-format='%i %n' \
   --exclude='/node_modules' --exclude='/dist-gh' \
   --exclude='/data' --exclude='/.git' --exclude='/models' \
   --exclude='/training_data' --exclude='/linux' \
@@ -66,7 +66,8 @@ rsync -az --checksum --rsync-path='sudo rsync' --out-format='%n' \
   --exclude='/get-pip.py' --exclude='/.agents' --exclude='/.claude' --exclude='/.github' \
   --exclude='/scripts/archive' --exclude='/scripts/semantic/data' \
   -e "$SSH" "$MEDS_DIR/" "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/" > "$CHANGED"
-grep -v '/$' "$CHANGED" > "$CHANGED.f" || true; mv "$CHANGED.f" "$CHANGED"
+# Yalnız içeriği aktarılan dosyalar (>f); tarih/sahip eşitlemesi (.f..t..) yeniden başlatma sebebi değil
+sed -n 's/^>f[^ ]* //p' "$CHANGED" > "$CHANGED.f" || true; mv "$CHANGED.f" "$CHANGED"
 echo "  $(wc -l < "$CHANGED") dosya aktarıldı"
 
 if grep -qE '^(package(-lock)?\.json|deploy/oracle/(Dockerfile\.oracle|docker-compose\.oracle\.yml))$' "$CHANGED"; then DO_IMAGE=1; fi
