@@ -64,6 +64,9 @@ services:
       - MEDS_EMBED_BGE_URL=http://meds-embed:8094/embed
       - MEDS_VECTOR_SEARCH=${MEDS_VECTOR_SEARCH:-1}
     volumes:
+      # Kod imaja gömülmez (2026-10-20): çalışan ağaç doğrudan bağlanır, dist/ cihazda derlenip rsync ile gelir.
+      # Ön yüz değişikliği = yalnız rsync; sunucu kodu = docker restart; bağımlılık = imaj (yalnız /node_modules).
+      - ../..:/app
       - ../../data:/app/data
       - /home/ubuntu/medsor/meds_database:/home/ubuntu/medsor/meds_database:ro
       - /home/ubuntu/medsor/meds_database_v2:/home/ubuntu/medsor/meds_database_v2:ro

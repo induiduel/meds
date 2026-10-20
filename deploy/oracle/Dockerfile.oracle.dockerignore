@@ -1,0 +1,4 @@
+# Dockerfile.oracle yalnız package*.json kopyalar; 600 MB+ çalışma ağacını BuildKit'e göndermesin (2026-10-20).
+*
+!package.json
+!package-lock.json

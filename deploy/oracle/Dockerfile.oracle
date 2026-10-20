@@ -1,23 +1,22 @@
 # Dockerfile.oracle — Oracle Always Free (ARM Ampere dahil) üzerinde MedSoru API sunucusu.
-# Yalnızca web/API katmanı çalışır (server.ts, port 3000). Ağır AI boru hattı (Ollama/GPU,
-# watchdog, pipeline) Oracle'da çalışmaz; veri rsync ile cihazdan gelir.
-# Build: docker compose -f deploy/oracle/docker-compose.oracle.yml up -d --build
-# Cihaz Node 24 çalıştırır; parity için aynı sürüm.
+# Yalnızca web/API katmanı çalışır (server.ts, port 3000). Ağır AI boru hattı Oracle'da çalışmaz.
+# 2026-10-20: imaj yalnız çalışma ortamı + bağımlılıklar (/node_modules). Kod ve dist/ imaja gömülmez;
+# compose ../..:/app bağlar, dist/ cihazda derlenip rsync ile gelir. İmaj yalnız package*.json ya da bu dosya
+# değişince yeniden kurulur (deploy-code.sh kendisi karar verir).
+# Node ESM çözümü /app'ten yukarı çıkarak /node_modules'u bulur; process.cwd() yolları için MEDS_NODE_MODULES.
 FROM node:24-bookworm-slim
 
 RUN apt-get update && apt-get install -y --no-install-recommends python3 \
   && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
-
+WORKDIR /
 COPY package.json package-lock.json* ./
 RUN npm ci --no-audit --no-fund || npm install --no-audit --no-fund
 
-COPY . .
-
-ENV NODE_OPTIONS=--max-old-space-size=4096
-RUN npm run build
+ENV MEDS_NODE_MODULES=/node_modules
+ENV PATH=/node_modules/.bin:$PATH
+WORKDIR /app
 
 EXPOSE 3000
 
-CMD ["npx", "tsx", "server.ts"]
+CMD ["tsx", "server.ts"]

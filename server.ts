@@ -21,6 +21,8 @@ import { registerTtsRoute } from './src/services/ttsRoute';
 import { registerSesliAnlatimRoutes } from './src/services/sesliAnlatim';
 import { registerCanliDersRoutes } from './src/services/canliDers';
 import { registerPatolojiAsistanRoutes } from './src/services/patolojiAsistan';
+import { registerOlasiSoruRoutes } from './src/services/olasiSoruRoutes';
+import { registerKimlikRoutes } from './src/services/kimlikRoutes';
 import { registerPatolojiCozucuRoutes } from './src/services/patolojiCozucu';
 import { registerPatolojiCozucuAltRoutes } from './src/services/patolojiCozucuAlt';
 import { registerCozucuSesRoutes } from './src/services/cozucuSes';
@@ -2754,6 +2756,8 @@ registerTtsRoute(app);
 registerSesliAnlatimRoutes(app, requireAdmin, (ev, data) => broadcastRealtimeEvent(ev, data, true), ADMIN_EMAIL);
 registerCanliDersRoutes(app);
 registerPatolojiAsistanRoutes(app);
+registerOlasiSoruRoutes(app, { rootDir: __dirname, requireAdmin });
+registerKimlikRoutes(app, { rootDir: __dirname });
 registerPatolojiCozucuRoutes(app);
 registerPatolojiCozucuAltRoutes(app);
 registerCozucuSesRoutes(app);
@@ -6880,7 +6884,7 @@ const recallFeedback = createRecallFeedback(DATA_DIR);
   const tryLearn = () => {
     if (learning || recallFeedback.count() - learnedAt < 20) return;
     learning = true;
-    const child = spawn('nice', ['-n', '15', path.join(__dirname, 'node_modules/.bin/tsx'), 'scripts/recall/learn.mts', '--write'], {
+    const child = spawn('nice', ['-n', '15', path.join(process.env.MEDS_NODE_MODULES || path.join(__dirname, 'node_modules'), '.bin/tsx'), 'scripts/recall/learn.mts', '--write'], {
       cwd: __dirname, env: { ...process.env, CUDA_VISIBLE_DEVICES: '' }, stdio: ['ignore', 'pipe', 'pipe'],
     });
     let log = '';
@@ -9951,7 +9955,7 @@ app.post('/api/pdf/render', async (req, res) => {
 
 // PDF.js yardımcı dosyaları (gömülü olmayan standart yazı tipleri, JPEG2000/ICC wasm, CMap). Sürüme bağlı, değişmez.
 for (const sub of ['standard_fonts', 'wasm', 'cmaps', 'iccs']) {
-  app.use(`/vendor/pdfjs/${sub}`, express.static(path.resolve(process.cwd(), 'node_modules', 'pdfjs-dist', sub), { maxAge: '30d', immutable: true, index: false }));
+  app.use(`/vendor/pdfjs/${sub}`, express.static(path.resolve(process.env.MEDS_NODE_MODULES || path.resolve(process.cwd(), 'node_modules'), 'pdfjs-dist', sub), { maxAge: '30d', immutable: true, index: false }));
 }
 app.use('/vendor/pdfjs', (_req, res) => res.status(404).end()); // SPA sayfasına düşmesin
 
