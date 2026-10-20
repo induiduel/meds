@@ -1,16 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 130,
-  "baslik": "Etkileşimli derslerde toplu PDF indirme",
+  "onem": 131,
+  "baslik": "Video oluşturma arka planda sürer",
   "maddeler": [
-    "Etkileşimli dersler kitaplığında yeni \"Toplu PDF\" düğmesi: dersleri kurul ve branşa göre ya da tek tek seçip metinlerini tek seferde indirebilirsin (her ders ayrı PDF olarak ZIP içinde ya da içindekiler ve yer imleriyle tek PDF).",
-    "Toplu ve tek ders PDF indirmelerinde sayfa düzeni seçeneği: bir yaprağa 2, 4 ya da 8 sayfa basabilirsin."
+    "Ders videosu oluşturulurken pencereyi kapatıp başka sayfaya ya da sekmeye geçebilirsin; ilerleme her sayfada üstteki küçük rozette görünür, oradan iptal edebilirsin.",
+    "Telefon ve tablette ders menüsünden açılan pencereler (video oluştur, çevrimdışı, metni dışa aktar) artık alttaki oynatıcının altında kalmıyor."
   ],
   "eklenen": [
-    "Etkileşimli dersler kitaplığında yeni \"Toplu PDF\" düğmesi: dersleri kurul ve branşa göre ya da tek tek seçip metinlerini tek seferde indirebilirsin (her ders ayrı PDF olarak ZIP içinde ya da içindekiler ve yer imleriyle tek PDF).",
-    "Toplu ve tek ders PDF indirmelerinde sayfa düzeni seçeneği: bir yaprağa 2, 4 ya da 8 sayfa basabilirsin."
+    "Ders videosu oluşturulurken pencereyi kapatıp başka sayfaya ya da sekmeye geçebilirsin; ilerleme her sayfada üstteki küçük rozette görünür, oradan iptal edebilirsin."
   ],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Telefon ve tablette ders menüsünden açılan pencereler (video oluştur, çevrimdışı, metni dışa aktar) artık alttaki oynatıcının altında kalmıyor."
+  ],
   "silinen": []
 }

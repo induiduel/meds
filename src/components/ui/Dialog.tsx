@@ -1,6 +1,7 @@
 import React, { useEffect, useId, useRef, useState } from 'react';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { X } from 'lucide-react';
+import { createPortal } from 'react-dom';
 
 interface DialogProps {
   title: React.ReactNode;
@@ -16,7 +17,9 @@ interface DialogProps {
 
 /**
  * Ortak pencere: sade beyaz başlık, kendi içinde kayan gövde, isteğe bağlı alt eylem şeridi.
- * Masaüstünde ortada, telefonda alttan açılan sayfa. Esc ve dış tıklama kapatır; açılınca odak pencereye geçer.
+ * Masaüstünde ortada, telefonda alttan açılan sayfa. Gövdeye (tam ekrandaysa o öğeye) taşınır: menü gibi bir
+ * yığın bağlamının içinde açılınca telefonda alt oynatıcı/alt çubuk altını örtüyordu.
+ * Esc ve dış tıklama kapatır; açılınca odak pencereye geçer.
  */
 export const Dialog: React.FC<DialogProps> = ({ title, subtitle, onClose, footer, width = 'max-w-xl', children, bareBody }) => {
   const id = useId();
@@ -47,7 +50,7 @@ export const Dialog: React.FC<DialogProps> = ({ title, subtitle, onClose, footer
     };
   }, []);
 
-  return (
+  return createPortal(
     <div className={`ms-overlay fixed inset-0 z-[70] flex items-center justify-center p-4 ${closing ? 'is-closing' : ''}`} onMouseDown={(e) => e.target === e.currentTarget && requestClose()}>
       <div
         ref={panelRef}
@@ -73,6 +76,7 @@ export const Dialog: React.FC<DialogProps> = ({ title, subtitle, onClose, footer
           </footer>
         )}
       </div>
-    </div>
+    </div>,
+    document.fullscreenElement || document.body,
   );
 };

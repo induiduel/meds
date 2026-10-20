@@ -2,10 +2,8 @@
  * Canlı ders · "Video oluştur": dersin PDF slaytları + okunan metin + sesinden senkron MP4 (60 fps) üretir.
  * Kodlama tamamen kullanıcının cihazında yapılır (cdVideo.ts); motor tembel yüklenir.
  * İş pencereden bağımsızdır (cdVideoIs.ts): pencere kapanınca arka planda sürer, ilerleme CdVideoRozet'te görünür.
- * Pencere gövdeye taşınır (portal): ⋯ menüsünün yığın bağlamında kalınca telefonda oynatıcı/alt çubuk altını örtüyordu.
  */
 import React, { useEffect, useState, useSyncExternalStore } from 'react';
-import { createPortal } from 'react-dom';
 import { Clapperboard } from 'lucide-react';
 import { Dialog } from '../ui/Dialog';
 import { cdVideoIptal, cdVideoIsAl, cdVideoIsBaslat, cdVideoIsDinle } from './cdVideoIs';
@@ -29,7 +27,7 @@ export function VideoOlusturDugme({ detay }: { detay: CdDetay }) {
         title={destek ? 'Slayt, metin ve sesten senkron video (MP4, 60 fps) oluştur' : 'Bu tarayıcı video oluşturmayı desteklemiyor (Chrome ya da Edge kullan)'}>
         <Clapperboard aria-hidden /> Video oluştur
       </button>
-      {acik && createPortal(<VideoPenceresi detay={detay} onKapat={() => setAcik(false)} />, document.body)}
+      {acik && <VideoPenceresi detay={detay} onKapat={() => setAcik(false)} />}
     </>
   );
 }
