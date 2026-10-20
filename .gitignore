@@ -41,6 +41,7 @@ supabase-server/local-supabase-keys.json
 supabase-server/backups/
 
 .venv-ocr/
+.venv-hizala/
 
 # Local Model Checkpoints & Large Training Datasets
 models/
@@ -100,3 +101,4 @@ data/kadindogum_cozucu/ses/
 data/farmakoloji_cozucu/ses/
 data/ogren_ses/
 src/data/sinav_calisma_k*.json
+data/sesli_anlatim/.pdf_onbellek/

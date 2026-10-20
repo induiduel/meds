@@ -14,7 +14,7 @@ import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { isIosBrowserTab, shouldAvoidNativeFullscreen } from '../../utils/device';
 import { openPwaInstallGuide } from '../../services/pwaService';
 import {
-  cdCumleAraligi, cdCumleIlerleme, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
+  cdCumleAraligi, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
 import { useCdTur } from './useCdTur';
 import { cdDersEtiketi } from './canliDersKategori';
@@ -817,6 +817,7 @@ function GeriBag() {
 
 const hlDestek = () => typeof CSS !== 'undefined' && 'highlights' in CSS && typeof (window as any).Highlight === 'function';
 const HL_AD = 'cd-cumle';
+const HL_KELIME = 'cd-kelime';
 
 /** Paragrafı panoya kopyalar; vurgu DOM'u değiştirdiği için metin p'den değil veriden alınır. */
 function KopyalaDugme({ metin }: { metin: string }) {
@@ -954,6 +955,26 @@ const MetinListe = memo(function MetinListe({ detay, onTik }: { detay: CdDetay; 
   );
 });
 
+/** Kelime kelime: sesin o an okuduğu kelime metinde işaretlenir. Ayrı ve görünmez bileşen: kelime değişince
+ *  yalnız bu çalışır, ders metni yeniden çizilmez. Yalnız Highlight API ile (DOM'a dokunmaz). */
+function CdKelimeIsaret({ pane, aktif, acik }: { pane: React.RefObject<HTMLDivElement | null>; aktif: number; acik: boolean }) {
+  const kelimeBas = useCd(() => (acik ? cdKelimeBas() : -1));
+  useEffect(() => {
+    if (!hlDestek()) return;
+    const el = aktif >= 0 && kelimeBas >= 0 ? pane.current?.querySelector<HTMLElement>(`p[data-i="${aktif}"]`) : null;
+    const m = el?.textContent || '';
+    if (!el || kelimeBas >= m.length) return void (CSS as any).highlights.delete(HL_KELIME);
+    const son = m.slice(kelimeBas).search(/[\s,;:.!?…)"”’]/);
+    const range = metinAraligi(el, kelimeBas, son < 0 ? m.length : kelimeBas + Math.max(1, son));
+    if (range) (CSS as any).highlights.set(HL_KELIME, new (window as any).Highlight(range));
+    else (CSS as any).highlights.delete(HL_KELIME);
+  }, [aktif, kelimeBas, pane]);
+  useEffect(() => () => {
+    if (hlDestek()) (CSS as any).highlights.delete(HL_KELIME);
+  }, []);
+  return null;
+}
+
 function CdMetinBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   const paneRef = useRef<HTMLDivElement>(null);
   const aktif = useCd((s) => (canli ? s.aktif : -1));
@@ -1023,6 +1044,8 @@ function CdMetinBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   useEffect(() => () => {
     if (hlDestek()) (CSS as any).highlights.delete(HL_AD);
   }, []);
+
+
 
   // Otomatik kaydırma: etkin paragraf (uzunsa cümle) görünür alanın ortasına yakın
   const kaydirRef = useRef<(ani?: boolean) => void>(() => {});
@@ -1101,6 +1124,7 @@ function CdMetinBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
       <div className="cd-metin" ref={paneRef} tabIndex={0} aria-label="Konuşma metni">
         <MetinListe detay={detay} onTik={onTik} />
       </div>
+      <CdKelimeIsaret pane={paneRef} aktif={aktif} acik={canli && !durdu} />
       {durdu && canli ? (
         <button type="button" className="cd-donus" onClick={() => { surdur(); requestAnimationFrame(() => kaydir()); }}>
           <Crosshair aria-hidden /> Canlı konuma dön
@@ -1156,13 +1180,6 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   const es = aktif >= 0 ? pdf.paragraflar[aktif] : null;
   const isr = aktif >= 0 && cumle >= 0 ? detay.isaret?.[String(aktif)]?.[cumle] ?? null : null;
   // Okunan kelime: cümle içindeki ses ilerlemesine göre son geçilen eşleşmiş kelime (yalnız değişince yeniden çizilir)
-  const kelime = useCd(() => {
-    if (!isr || !isr.w.length) return -1;
-    const o = cdCumleIlerleme();
-    let k = 0;
-    while (k + 1 < isr.w.length && isr.w[k + 1][0] <= o) k++;
-    return k;
-  });
   if (es && Number.isFinite(es.sayfa)) {
     let s = es.sayfa;
     let d = es.dosya || 0;
@@ -1185,11 +1202,19 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   const hedef = sonHedef.current;
   // Takip sürerken hedef; durunca kullanıcının baktığı yer (sürdürünce yeniden hedefe kayar)
   const gor = durdu && elle ? elle : hedef;
+  // Kelime takibi yalnız işaret katmanında (useFocus): görüntüleyici cümle başına bir kez çizilir, kelimede yeniden çizilmez
   const marks = useMemo<PdfMarks | null>(() => {
     if (!canli || durdu || !isr || isr.t === 'sayfa' || isr.d !== gor.dosya) return null;
-    const focus = isr.t === 'resim' ? isr.l[0] : kelime >= 0 ? isr.w[kelime].slice(1) : null;
-    return { page: isr.s, kind: isr.t, lines: isr.l, focus };
-  }, [canli, durdu, isr, kelime, gor.dosya]);
+    const ws = isr.w;
+    const useFocus = (): number => useCd(() => {
+      if (!ws.length) return -1;
+      const k = cdKonusulanKarakter();
+      if (!k) return -1;
+      // yalnız o an konuşulan kelimenin slayttaki karşılığı; karşılıksız kelimede işaret yok
+      return ws.findIndex((w) => k.c >= w[0] && k.c < w[1]);
+    });
+    return { page: isr.s, kind: isr.t, lines: isr.l, words: ws.map((w) => w.slice(2)), useFocus };
+  }, [canli, durdu, isr, gor.dosya]);
 
   useEffect(() => { if (!durdu) setElle(null); }, [durdu]);
 

@@ -18,6 +18,7 @@ const P = {
   hizalama: (k: string) => path.join(KOK, 'hizalama', `${k}.json`),
   vurgu: (k: string) => path.join(KOK, 'vurgu', `${k}.json`),
   cumle: (k: string) => path.join(KOK, 'cumle_zaman', `${k}.json`),
+  kelime: (k: string) => path.join(KOK, 'kelime_zaman', `${k}.json`),
   isaret: (k: string) => path.join(KOK, 'isaret', `${k}.json`),
 };
 
@@ -179,9 +180,18 @@ export function registerCanliDersRoutes(app: Express) {
     const b = bransBilgisi(d);
     // Cümle başlangıçları (scripts/sesli_anlatim/cumle_zaman.py): yalnız metin ve ses dosyası ölçüldüğü hâliyle duruyorsa
     const cz = oku<any>(P.cumle(key), null);
-    const czGecerli = cz && cz.metinHash === crypto.createHash('sha1').update(pars.map((p) => p.t).join('\n')).digest('hex');
+    const czHash = crypto.createHash('sha1').update(pars.map((p) => p.t).join('\n')).digest('hex');
+    const czGecerli = cz && cz.metinHash === czHash;
     const cumleZaman = (vid: string) => {
       const e = czGecerli ? cz.varyantlar?.[vid] : null;
+      if (!e || !e.p) return null;
+      try { return fs.statSync(P.ses(key, vid)).size === e.bayt ? e.p : null; } catch { return null; }
+    };
+    // Kelime başlangıçları (scripts/sesli_anlatim/kelime_zaman.py): aynı koşul — metin ve ses dosyası ölçüldüğü hâliyle
+    const kz = oku<any>(P.kelime(key), null);
+    const kzGecerli = kz && czHash === kz.metinHash;
+    const kelimeZaman = (vid: string) => {
+      const e = kzGecerli ? kz.varyantlar?.[vid] : null;
       if (!e || !e.p) return null;
       try { return fs.statSync(P.ses(key, vid)).size === e.bayt ? e.p : null; } catch { return null; }
     };
@@ -200,6 +210,9 @@ export function registerCanliDersRoutes(app: Express) {
         ...ozet(key)(v),
         zamanlama: Array.isArray(v.zamanlama) && v.zamanlama.length === pars.length ? v.zamanlama : null,
         cumleZaman: Array.isArray(v.zamanlama) && v.zamanlama.length === pars.length ? cumleZaman(v.id) : null,
+        // cümle başına sesteki konuşma parçaları [a1,b1,a2,b2…] (duraklamalar çıkarılmış): kelime kelime takip
+        cumleKonusma: Array.isArray(v.zamanlama) && v.zamanlama.length === pars.length && cumleZaman(v.id) ? cz.varyantlar[v.id].k || null : null,
+        kelimeZaman: Array.isArray(v.zamanlama) && v.zamanlama.length === pars.length ? kelimeZaman(v.id) : null,
       })),
       pdf,
       // önemli cümle/terim aralıkları (scripts/sesli_anlatim/vurgu_uret.py): { "<i>": [[bas, son, "c"|"t", onem]] }

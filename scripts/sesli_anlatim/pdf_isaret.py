@@ -16,13 +16,15 @@ Eşleme (cümle × sayfa kelimeleri):
 
 Çıktı: data/sesli_anlatim/isaret/<key>.json
   { surum:1, metinHash, c: { "<paragraf i>": [ <cümle işareti> | null, … ] } }
-  cümle işareti: { d: dosya, s: sayfa, t: "metin"|"tablo"|"resim"|"sayfa",
-                   l: [[x0,y0,x1,y1], …]          # satır/hücre/resim kutuları (sayfa oranı 0–1)
-                   w: [[o, x0,y0,x1,y1], …] }      # kelime kutuları; o = kelimenin cümledeki karakter oranı (0–1)
+  cümle işareti: { d: dosya, s: sayfa, t: "metin"|"tablo"|"kelime"|"resim"|"sayfa",
+                   l: [[x0,y0,x1,y1], …]          # ≥%80'i okunan madde satırları / resim kutusu (sayfa oranı 0–1)
+                   w: [[b, e, x0,y0,x1,y1], …] }   # kelime kutuları; [b, e) = konuşulan kelimenin cümle içi karakter aralığı
 Sunucu yalnız metinHash tutarsa gönderir (metin değişince eski işaret kendiliğinden yok sayılır).
 
 Kullanım (PyMuPDF .venv-ocr'da):
-  .venv-ocr/bin/python scripts/sesli_anlatim/pdf_isaret.py --hepsi | --key <key> [--rapor] [--kuru]
+  .venv-ocr/bin/python scripts/sesli_anlatim/pdf_isaret.py --hepsi | --key <key> [--kuru] [--zorla]
+  Değişmemiş ders (aynı metinHash + hizalama + SURUM) atlanır; zamanlayıcıda (cihaz ve Oracle) ~saniyeler.
+  Yerelde PDF yoksa sunucunun /api/lecture-pdf/deck/<id>/<i> ucundan .pdf_onbellek'e indirilir.
   --esik X : kapsama (metin+tablo+resim işaretli cümle oranı) bunun altındaysa çıkış kodu 1 (Kurul 2 kapısı)
 3000 açık olmalı (paragraf/cümle bölmesi istemciyle birebir: GET /api/canli-ders/<key>). Yalnız CPU.
 """
@@ -34,6 +36,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 import warnings
 from pathlib import Path
@@ -50,6 +53,9 @@ KOK = MEDS / "data" / "sesli_anlatim"
 CIKTI = KOK / "isaret"
 API = os.environ.get("MEDS_API", "http://127.0.0.1:3000")
 KELIME = re.compile(r"[\wçğıöşüâîû]+", re.I)
+MADDE_IMI = re.compile(r"^(?:[•●▪■◦○➢➤►▶✓✔\-–—*]|\d{1,2}[.)]|[a-zA-Z][.)])$")
+SURUM = 3  # eşleme kuralı değişince artır: tüm dersler yeniden üretilir
+MADDE_ORAN = 0.80  # slayt maddesinin en az bu kadarı okunan cümlede geçmeli (kullanıcı kuralı)
 CUMLE_RE = re.compile(r"[.!?…]+[\"'”’)\]]*(?:\s+|$)")
 
 
@@ -83,9 +89,9 @@ def kok(w: str) -> str | None:
     return k[:5]
 
 
-def tokenler(metin: str) -> list[tuple[str, int]]:
-    """(kök, karakter konumu) — anlamsız parçalar atılır."""
-    return [(k, m.start()) for m in KELIME.finditer(metin) if (k := kok(m.group(0)))]
+def tokenler(metin: str) -> list[tuple[str, int, int]]:
+    """(kök, başlangıç, bitiş) — anlamsız parçalar atılır."""
+    return [(k, m.start(), m.end()) for m in KELIME.finditer(metin) if (k := kok(m.group(0)))]
 
 
 class Sayfa:
@@ -98,15 +104,30 @@ class Sayfa:
             r = pymupdf.Rect(r) * M if pg.rotation else pymupdf.Rect(r)
             return [round(r.x0 / W, 4), round(r.y0 / H, 4), round(r.x1 / W, 4), round(r.y1 / H, 4)]
         self.n = n
-        self.kelimeler = []  # (kök, satır anahtarı, kutu)
-        self.satirlar: dict[tuple, list] = {}
+        # Madde: madde imiyle (•, –, 1. …) başlayan satır + aynı bloktaki devam satırları; imsiz blokta her satır
+        # cümle sonuyla biter. Kelimeler (kök, madde no, kutu); madde → satır kutuları ve içerik kökü sayısı.
+        self.kelimeler = []
+        self.maddeler: list[dict] = []
+        satirlar: dict[tuple, list] = {}
         for x0, y0, x1, y1, w, b, l, _ in pg.get_text("words"):
-            k = kok(w)
-            if not k:
-                continue
-            key = (b, l)
-            self.kelimeler.append((k, key, (x0, y0, x1, y1)))
-            self.satirlar.setdefault(key, []).append((x0, y0, x1, y1))
+            satirlar.setdefault((b, l), []).append((w, (x0, y0, x1, y1)))
+        onceki_blok, acik = None, None
+        for (b, l), ws in sorted(satirlar.items()):
+            ilk = ws[0][0]
+            im = bool(MADDE_IMI.match(ilk))
+            if b != onceki_blok or im or acik is None or acik["bitti"]:
+                acik = {"satirlar": [], "kok": 0, "bitti": False}
+                self.maddeler.append(acik)
+            onceki_blok = b
+            r = (min(x[1][0] for x in ws), min(x[1][1] for x in ws), max(x[1][2] for x in ws), max(x[1][3] for x in ws))
+            acik["satirlar"].append(r)
+            mi = len(self.maddeler) - 1
+            for w, box in ws:
+                k = kok(w)
+                if k:
+                    self.kelimeler.append((k, mi, box))
+                    acik["kok"] += 1
+            acik["bitti"] = bool(re.search(r"[.!?:]$", ws[-1][0]))
         self.tablolar = []
         try:
             for t in pg.find_tables().tables:
@@ -151,31 +172,99 @@ def lcs(a: list[str], b: list[str]) -> list[tuple[int, int]]:
     return out
 
 
+def c_oran(c: int, n: int) -> float:
+    return c / n if n else 0.0
+
+
 def eslestir(cumle: str, sy: Sayfa):
+    """Sıra korumalı kelime eşlemesi. Madde zemini yalnız maddenin içeriğinin ≥%80'i cümlede okunuyorsa;
+    kelime işareti yalnız gerçekten anlatılan maddede (≥2 eşleşme ya da maddenin yarısı)."""
     tk = tokenler(cumle)
     if not tk or not sy.kelimeler:
         return 0, None
-    es = lcs([k for k, _ in tk], [k for k, _, _ in sy.kelimeler])
-    satir_say: dict[tuple, int] = {}
-    for _, j in es:
-        satir_say[sy.kelimeler[j][1]] = satir_say.get(sy.kelimeler[j][1], 0) + 1
-    gecerli = set()
-    for key, c in satir_say.items():
-        uz = len(sy.satirlar[key])
-        if c >= 2 or c / uz >= 0.5:
-            gecerli.add(key)
-    es = [(i, j) for i, j in es if sy.kelimeler[j][1] in gecerli]
+    es = lcs([k for k, _, _ in tk], [k for k, _, _ in sy.kelimeler])
+    say: dict[int, int] = {}
+    bas: set[int] = set()  # cümlenin ilk 3 kelimesinde karşılığı olan maddeler (başlık maddesi: "Patoloji:")
+    for i, j in es:
+        m = sy.kelimeler[j][1]
+        say[m] = say.get(m, 0) + 1
+        if i < 3:
+            bas.add(m)
+    # tek ortak kelime ancak maddenin kendisi tek kelimeyse ve cümle o kelimeyle açılıyorsa sayılır
+    yeter = lambda m, c: c >= 2 or (m in bas and sy.maddeler[m]["kok"] == 1)  # noqa: E731
+    anlatilan = {m for m, c in say.items() if yeter(m, c) and (c >= 2 or c * 2 >= sy.maddeler[m]["kok"])}
+    tam = {m for m in anlatilan if c_oran(say[m], sy.maddeler[m]["kok"]) >= MADDE_ORAN}
+    es = [(i, j) for i, j in es if sy.kelimeler[j][1] in anlatilan]
     if not es:
         return 0, None
-    L = len(cumle) or 1
-    w = [[round(tk[i][1] / L, 3), *sy.n(sy.kelimeler[j][2])] for i, j in es]
+    w = [[tk[i][1], tk[i][2], *sy.n(sy.kelimeler[j][2])] for i, j in es]
     l, tablo = [], 0
-    for key in sorted(gecerli, key=lambda k: min(r[1] for r in sy.satirlar[k])):
-        rs = sy.satirlar[key]
-        r = (min(x[0] for x in rs), min(x[1] for x in rs), max(x[2] for x in rs), max(x[3] for x in rs))
-        tablo += sy.tabloda(r)
-        l.append(sy.n(r))
-    return len(es), {"t": "tablo" if tablo * 2 >= len(l) else "metin", "l": l, "w": w}
+    for m in sorted(tam):
+        for r in sy.maddeler[m]["satirlar"]:
+            tablo += sy.tabloda(r)
+            l.append(sy.n(r))
+    tur = "tablo" if l and tablo * 2 >= len(l) else "metin" if l else "kelime"
+    return len(es), {"t": tur, "l": l, "w": w}
+
+
+def madde_kokleri(sy: Sayfa, m: int) -> list[str]:
+    return [k for k, mi, _ in sy.kelimeler if mi == m]
+
+
+def capa_maddeleri(sy: Sayfa, satirlar: list[str]) -> set[int]:
+    """Yazarın kaynak.md'den birebir kopyaladığı satır(lar) → PDF maddeleri. kaynak.md ile PDF metni küçük farklar
+    taşıyabilir (OCR, bölünmüş satır): satırın köklerinin ≥%80'ini ardışık maddelerde toplayan en kısa aralık seçilir."""
+    out: set[int] = set()
+    for st in satirlar:
+        hedef = [k for k, _, _ in tokenler(st)]
+        if not hedef:
+            continue
+        en = None
+        for a in range(len(sy.maddeler)):
+            kok_say: list[str] = []
+            for b in range(a, min(a + 4, len(sy.maddeler))):
+                kok_say += madde_kokleri(sy, b)
+                ort = len(lcs(hedef, kok_say))
+                if ort / len(hedef) >= MADDE_ORAN and ort / max(1, len(kok_say)) >= 0.5:
+                    if en is None or (b - a, -ort) < (en[1] - en[0], -en[2]):
+                        en = (a, b, ort)
+                    break
+        if en:
+            out.update(range(en[0], en[1] + 1))
+    return out
+
+
+def eslestir_capa(cumle: str, sy: Sayfa, ms: set[int]):
+    """Çapalı cümle: madde zemini yazarın gösterdiği maddeler; kelimeler yalnız bu maddelerde aranır."""
+    tk = tokenler(cumle)
+    idx = [j for j, (_, mi, _) in enumerate(sy.kelimeler) if mi in ms]
+    es = lcs([k for k, _, _ in tk], [sy.kelimeler[j][0] for j in idx]) if tk else []
+    w = [[tk[i][1], tk[i][2], *sy.n(sy.kelimeler[idx[j]][2])] for i, j in es]
+    l, tablo = [], 0
+    for m in sorted(ms):
+        for r in sy.maddeler[m]["satirlar"]:
+            tablo += sy.tabloda(r)
+            l.append(sy.n(r))
+    return {"t": "tablo" if tablo * 2 >= len(l) else "metin", "l": l, "w": w}
+
+
+def resim_kutusu(sy: Sayfa):
+    return max(sy.resimler, key=lambda b: (b[2] - b[0]) * (b[3] - b[1])) if sy.resimler else None
+
+
+def cumle_capalari(metin: str, sinir: list[int], capa: list[dict]) -> list[list[dict]]:
+    """v2 cümleleri (ses metni) paragraf içinde sırayla bulunur; her istemci cümlesine başlangıcı içine düşen
+    çapalar verilir (iki bölme farklı olabilir: v2 cümlesi istemcide ikiye bölünebilir ya da tersi)."""
+    out: list[list[dict]] = [[] for _ in sinir]
+    konum = 0
+    for c in capa:
+        i = metin.find(c.get("ses", "")[:40], konum)
+        if i < 0:
+            continue
+        konum = i + 1
+        ci = next((k for k, e in enumerate(sinir) if i < e), len(sinir) - 1)
+        out[ci].append(c)
+    return out
 
 
 class Pdf:
@@ -191,7 +280,50 @@ class Pdf:
         return self.cache[s]
 
 
-def ders_isle(key: str, kuru: bool) -> dict | None:
+def pdf_indir(deck_id: str, f: dict, fi: int) -> Path | None:
+    """Yerelde olmayan PDF (Oracle): sunucunun ders PDF ucundan önbelleğe indirilir (Drive kimliği/adıyla eşlenir)."""
+    ON = Path(os.environ.get("PDF_ONBELLEK", str(KOK / ".pdf_onbellek")))
+    ON.mkdir(parents=True, exist_ok=True)
+    try:
+        with urllib.request.urlopen(f"{API}/api/lecture-pdf/deck/{urllib.parse.quote(deck_id)}", timeout=30) as r:
+            dosyalar = json.load(r).get("files") or []
+    except Exception:
+        return None
+    i = next((k for k, x in enumerate(dosyalar) if (f.get("fileId") and x.get("fileId") == f["fileId"]) or x.get("name") == f.get("name")), fi)
+    if i >= len(dosyalar) or not dosyalar[i].get("available", True):
+        return None
+    hedef = ON / f"{deck_id}_{i}_{dosyalar[i].get('size') or 0}.pdf"
+    if not hedef.exists():
+        try:
+            with urllib.request.urlopen(f"{API}/api/lecture-pdf/deck/{urllib.parse.quote(deck_id)}/{i}", timeout=180) as r:
+                tmp = hedef.with_suffix(".tmp")
+                tmp.write_bytes(r.read())
+                os.replace(tmp, hedef)
+        except Exception:
+            return None
+    return hedef
+
+
+def capali(cumle: str, capalar: list[dict], pdf: "Pdf | None") -> dict | None:
+    """Yazar çapasından işaret: sayfa ve madde tahminsiz; şekil anlatılıyorsa resim + lazer."""
+    if not pdf:
+        return None
+    sayfa = next((c.get("sayfa") for c in capalar if c.get("sayfa")), None)
+    sy = pdf.sayfa(int(sayfa)) if sayfa else None
+    if not sy:
+        return None
+    satirlar = [x for c in capalar for x in (c.get("satir") or [])]
+    ms = capa_maddeleri(sy, satirlar) if satirlar else set()
+    if ms:
+        return {"s": int(sayfa), **eslestir_capa(cumle, sy, ms)}
+    if any(c.get("sekil") for c in capalar):
+        rb = resim_kutusu(sy)
+        if rb:
+            return {"s": int(sayfa), "t": "resim", "l": [sy.n(rb)], "w": []}
+    return {"s": int(sayfa), "t": "sayfa", "l": [], "w": []}
+
+
+def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
     hz_yol = KOK / "hizalama" / f"{key}.json"
     if not hz_yol.exists():
         return None
@@ -201,24 +333,51 @@ def ders_isle(key: str, kuru: bool) -> dict | None:
     paras = [p for b in d["bolumler"] for p in b["paragraflar"]]
     if len(paras) != len(hz["paragraflar"]):
         return None
+    metin_hash = hashlib.sha1("\n".join(p["metin"] for p in paras).encode("utf-8")).hexdigest()
+    capa_yol = KOK / "capa" / f"{key}.json"
+    capa_p = None
+    if capa_yol.exists():
+        cj = json.loads(capa_yol.read_text(encoding="utf-8"))
+        md = KOK / "metin" / f"{key}.md"
+        if md.exists() and cj.get("mdSha1") == hashlib.sha1(md.read_bytes()).hexdigest() and len(cj.get("p") or []) == len(paras):
+            capa_p = cj["p"]
+    hiz_hash = hashlib.sha1(hz_yol.read_bytes() + (capa_yol.read_bytes() if capa_p else b"")).hexdigest()
+    hedef = CIKTI / f"{key}.json"
+    if not zorla and hedef.exists():
+        try:
+            e = json.loads(hedef.read_text(encoding="utf-8"))
+            if e.get("metinHash") == metin_hash and e.get("hizHash") == hiz_hash and e.get("surum") == SURUM:
+                return {"guncel": True}
+        except ValueError:
+            pass
     pdfler: list[Pdf | None] = []
-    for f in hz["dosyalar"]:
+    for fi, f in enumerate(hz["dosyalar"]):
         yol = INDIR / f["path"]
         if not yol.exists() and os.environ.get("HIZALA_PDF_DIZIN"):
-            ek = f"_{len(pdfler)}" if pdfler else ""
+            ek = f"_{fi}" if fi else ""
             yol = Path(os.environ["HIZALA_PDF_DIZIN"]) / f"{hz['deckId']}{ek}.pdf"
-        pdfler.append(Pdf(yol) if yol.exists() else None)
+        if not yol.exists():
+            yol = pdf_indir(hz["deckId"], f, fi)
+        pdfler.append(Pdf(yol) if yol and yol.exists() else None)
     if not any(pdfler):
         return None
-    metin_hash = hashlib.sha1("\n".join(p["metin"] for p in paras).encode("utf-8")).hexdigest()
-    say = {"metin": 0, "tablo": 0, "resim": 0, "sayfa": 0, "yok": 0}
+    say = {"metin": 0, "tablo": 0, "kelime": 0, "resim": 0, "sayfa": 0, "yok": 0, "capa": 0}
     c_out: dict[str, list] = {}
-    for p, es in zip(paras, hz["paragraflar"]):
+    for pn, (p, es) in enumerate(zip(paras, hz["paragraflar"])):
         m = p["metin"]
         sinir = cumle_sonlari(m)
+        cc = cumle_capalari(m, sinir, capa_p[pn]) if capa_p else None
         liste = []
         for ci, e in enumerate(sinir):
             cumle = m[(sinir[ci - 1] if ci else 0):e]
+            if cc and cc[ci] and es:
+                isr = capali(cumle, cc[ci], pdfler[es.get("dosya", 0)] if es.get("dosya", 0) < len(pdfler) else None)
+                if isr:
+                    isr["d"] = es.get("dosya", 0)
+                    say[isr["t"]] += 1
+                    say["capa"] += 1
+                    liste.append(isr)
+                    continue
             if not es:
                 liste.append(None)
                 say["yok"] += 1
@@ -245,7 +404,8 @@ def ders_isle(key: str, kuru: bool) -> dict | None:
                 isr = {"d": d0, "s": s, **r}
             else:
                 sy = pdf.sayfa(s0)
-                if sy and sy.resimler:
+                # taranmış (metinsiz) sayfanın tamamı resimdir: orada resim kutusu yanıltır, yalnız sayfa vurgulanır
+                if sy and sy.resimler and len(sy.kelimeler) >= 5:
                     rb = max(sy.resimler, key=lambda b: (b[2] - b[0]) * (b[3] - b[1]))
                     isr = {"d": d0, "s": s0, "t": "resim", "l": [sy.n(rb)], "w": []}
                 else:
@@ -253,9 +413,10 @@ def ders_isle(key: str, kuru: bool) -> dict | None:
             say[isr["t"]] += 1
             liste.append(isr)
         c_out[str(p["i"])] = liste
-    toplam = sum(say.values()) or 1
-    kapsama = (say["metin"] + say["tablo"] + say["resim"]) / toplam
-    sonuc = {"surum": 1, "metinHash": metin_hash, "c": c_out}
+    toplam = sum(v for k, v in say.items() if k != "capa") or 1
+    say.pop("capa") if not say["capa"] else None
+    kapsama = (say["metin"] + say["tablo"] + say["kelime"] + say["resim"]) / toplam
+    sonuc = {"surum": SURUM, "metinHash": metin_hash, "hizHash": hiz_hash, "c": c_out}
     if not kuru:
         CIKTI.mkdir(parents=True, exist_ok=True)
         out = CIKTI / f"{key}.json"
@@ -272,15 +433,18 @@ def main() -> int:
     g.add_argument("--hepsi", action="store_true")
     ap.add_argument("--kuru", action="store_true")
     ap.add_argument("--esik", type=float, default=0.0)
+    ap.add_argument("--zorla", action="store_true", help="güncel olanları da yeniden üret")
     a = ap.parse_args()
     keys = a.key or sorted(p.stem for p in (KOK / "hizalama").glob("*.json"))
     kotu = 0
     for key in keys:
         try:
-            r = ders_isle(key, a.kuru)
+            r = ders_isle(key, a.kuru, a.zorla)
         except Exception as e:  # tek ders hatası diğerlerini durdurmasın
             print(f"{key}: HATA {e}")
             kotu += 1
+            continue
+        if r and r.get("guncel"):
             continue
         if not r:
             print(f"{key}: atlandı (hizalama/PDF/metin uyuşmuyor)")

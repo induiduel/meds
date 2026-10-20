@@ -104,6 +104,25 @@ def sessizlikler(en: np.ndarray, esik: float, min_kare: int = 8) -> list[tuple[i
     return out
 
 
+def konusma_parcalari(sinir: list[float], sess: list[tuple[int, int]]) -> list[list[float]]:
+    """Her cümlenin sesteki konuşma parçaları [a1, b1, a2, b2, …] (sn): cümle aralığından ≥80 ms duraklamalar çıkarılır.
+    Kelime kelime takip bununla yapılır: sessizlik kelimelere paylaştırılmaz (cümle sonu/virgül gecikmesi olmaz)."""
+    out = []
+    for a, b in zip(sinir, sinir[1:]):
+        parca, bas = [], a
+        for x, y in sess:
+            x, y = x / 100.0, y / 100.0
+            if y <= a or x >= b or y - x < 0.08:
+                continue
+            if x > bas + 0.05:
+                parca += [round(bas, 2), round(x, 2)]
+            bas = max(bas, y)
+        if b > bas + 0.05:
+            parca += [round(bas, 2), round(b, 2)]
+        out.append(parca or [round(a, 2), round(b, 2)])
+    return out
+
+
 def ders_isle(key: str, zorla: bool, kuru: bool) -> str:
     with urllib.request.urlopen(f"{API}/api/canli-ders/{key}", timeout=30) as r:
         d = json.load(r)
@@ -111,9 +130,9 @@ def ders_isle(key: str, zorla: bool, kuru: bool) -> str:
     metin_hash = hashlib.sha1("\n".join(p["metin"] for p in paras).encode("utf-8")).hexdigest()
     hedef = CIKTI / f"{key}.json"
     eski = json.loads(hedef.read_text()) if hedef.exists() else None
-    if eski and eski.get("metinHash") != metin_hash:
+    if eski and (eski.get("metinHash") != metin_hash or eski.get("surum") != 2):
         eski = None
-    sonuc = {"surum": 1, "metinHash": metin_hash, "varyantlar": dict((eski or {}).get("varyantlar") or {})}
+    sonuc = {"surum": 2, "metinHash": metin_hash, "varyantlar": dict((eski or {}).get("varyantlar") or {})}
     rapor = []
     for v in d["varyantlar"]:
         vid, z = v["id"], v.get("zamanlama")
@@ -133,6 +152,7 @@ def ders_isle(key: str, zorla: bool, kuru: bool) -> str:
         orta = np.array([(a + b) / 2 for a, b in sess]) / 100.0
         uzun = np.array([(b - a) for a, b in sess]) / 100.0
         p_out: dict[str, list[float]] = {}
+        k_out: dict[str, list[list[float]]] = {}
         oturan = toplam = 0
         for p in paras:
             i = p["i"]
@@ -170,7 +190,8 @@ def ders_isle(key: str, zorla: bool, kuru: bool) -> str:
                 tlar.append(round(sec, 2))
                 onceki = sec
             p_out[str(i)] = tlar
-        sonuc["varyantlar"][vid] = {"bayt": bayt, "p": p_out}
+            k_out[str(i)] = konusma_parcalari([bas, *tlar, son], sess)
+        sonuc["varyantlar"][vid] = {"bayt": bayt, "p": p_out, "k": k_out}
         rapor.append(f"{vid}: {oturan}/{toplam} sınır duraklamaya oturdu")
     if not rapor:
         return f"{key}: güncel"

@@ -1,14 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 63,
-  "baslik": "Tam ekran gezinme çubuğu düzeltmesi",
+  "onem": 64,
+  "baslik": "Sesli derste kelime kelime takip",
   "maddeler": [
-    "Tam ekrandaki gezinme çubuğu artık açık bir pencerenin (tanıtım, onay, ayarlar) üstüne binmiyor; pencere kapanınca yeniden görünüyor."
+    "Sesli derste okunan kelime artık hem konuşma metninde hem PDF slaytında sesle aynı anda işaretleniyor.",
+    "Slayttaki madde, içeriğinin büyük kısmı okunan cümlede geçiyorsa hafif zeminle işaretleniyor.",
+    "Metni olmayan resim veya şema anlatılırken slaytta lazer imleci çıkıyor."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Sesli derste okunan kelime artık hem konuşma metninde hem PDF slaytında sesle aynı anda işaretleniyor.",
+    "Slayttaki madde, içeriğinin büyük kısmı okunan cümlede geçiyorsa hafif zeminle işaretleniyor.",
+    "Metni olmayan resim veya şema anlatılırken slaytta lazer imleci çıkıyor."
+  ],
   "degisen": [],
   "duzeltilen": [
-    "Tam ekrandaki gezinme çubuğu artık açık bir pencerenin (tanıtım, onay, ayarlar) üstüne binmiyor; pencere kapanınca yeniden görünüyor."
+    "PDF sayfaları bazen çizildiği hâlde yükleniyor gibi görünüyordu; düzeltildi."
   ],
   "silinen": []
 }

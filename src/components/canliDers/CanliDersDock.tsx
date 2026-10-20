@@ -33,7 +33,7 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
       t = 0;
       const kok = document.documentElement;
       const tamFs = kok.classList.contains('cd-tam-ekran') || kok.classList.contains('is-app-fullscreen');
-      const tabs = document.querySelector<HTMLElement>('.s12-tabs, .sh-tabs');
+      const tabs = document.querySelector<HTMLElement>('.a13-island-wrap, .s12-tabs, .sh-tabs');
       // Görünür alanı visualViewport'tan ölç: iOS Safari/Chrome'da adres çubuğu ve klavye
       // window.innerHeight'i değiştirmeden görünür alanı kaydırır; dock aksi hâlde tarayıcı
       // altlığının altında/klavyenin arkasında kalıyordu.
@@ -58,7 +58,7 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
     olc();
     const ro = new ResizeObserver(plan);
     ro.observe(el);
-    const tabs = document.querySelector('.s12-tabs, .sh-tabs');
+    const tabs = document.querySelector('.a13-island-wrap, .s12-tabs, .sh-tabs');
     if (tabs) ro.observe(tabs);
     window.addEventListener('resize', plan);
     vv?.addEventListener('resize', plan);

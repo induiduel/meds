@@ -1,5 +1,5 @@
 [Unit]
-Description=MeDSor sesli ders cümle zamanlaması (yeni/değişen ses ve metin; yoksa ~2 sn) — scripts/sesli_anlatim/cumle_zaman.py
+Description=MeDSor sesli ders cümle zamanlaması + PDF kelime işareti (yeni/değişen ses ve metin; yoksa ~2 sn) — scripts/sesli_anlatim/cumle_zaman.py, pdf_isaret.py
 After=docker.service
 
 [Service]
@@ -7,8 +7,11 @@ Type=oneshot
 User=ubuntu
 WorkingDirectory=/home/ubuntu/medsor/meds
 Environment=CUDA_VISIBLE_DEVICES= PYTHONUNBUFFERED=1 TZ=Europe/Istanbul MEDS_API=http://127.0.0.1:3000
-# Sanal ortam: python3 -m venv ~/medsor/venv-cumle && venv-cumle/bin/pip install numpy imageio-ffmpeg (ARM ffmpeg dahil)
+# Sanal ortam: python3 -m venv ~/medsor/venv-cumle && venv-cumle/bin/pip install numpy imageio-ffmpeg pymupdf (ARM ffmpeg dahil)
 ExecStart=/bin/sh -c 'mkdir -p deploy/oracle/logs && /home/ubuntu/medsor/venv-cumle/bin/python scripts/sesli_anlatim/cumle_zaman.py --hepsi 2>&1 | grep -v ": güncel$" >> deploy/oracle/logs/cumle-zaman.log; exit 0'
+# Okunan cümlenin slayttaki madde/kelime/resim kutuları (canlı ders kelime kelime işaret); değişmeyen ders atlanır.
+# PDF yerelde yoksa sunucunun /api/lecture-pdf ucundan data/sesli_anlatim/.pdf_onbellek'e iner.
+ExecStart=/bin/sh -c '/home/ubuntu/medsor/venv-cumle/bin/python scripts/sesli_anlatim/pdf_isaret.py --hepsi 2>&1 | grep -v "pymupdf_layout" >> deploy/oracle/logs/pdf-isaret.log; exit 0'
 Nice=15
 IOSchedulingClass=idle
 MemoryMax=1G

@@ -18,6 +18,7 @@ import express from 'express';
 import type { Express, Request, Response, NextFunction } from 'express';
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
 import { Mp3Encoder } from '@breezystack/lamejs';
 import { freeGeminiKeyNames } from './aiProvider';
@@ -1340,7 +1341,7 @@ export function registerSesliAnlatimRoutes(
   // Ders işçisi yayını (scripts/ders_isci/yayinla.py --sunucu) onaylanan dersi canlı derse ekler: ders listesi, konuşma
   // metni, PDF hizalaması (paragraf → sayfa, metni yazan Claude'un sayfa listesinden) ve varsayılan iki ses: Emel (varsayılan)
   // + EMA (Oracle'daki meds-ema konteyneri). Güncellenen derste metin değişirse yeni sesler varsayılan olur, eskiler kalır.
-  // Gövde: { key, no, baslik, metin, sayfalar?: number[], deckId?, dosya?: {path,name,pages,fileId} }
+  // Gövde: { key, no, baslik, metin, sayfalar?: number[], deckId?, dosya?: {path,name,pages,fileId}, capalar?: [[{ses,sayfa,satir,sekil}]] }
   app.post('/api/sesli-anlatim/ders-ekle', guclu, (req, res) => {
     const k = guvenliAnahtar(String(req.body?.key || ''));
     const metin = String(req.body?.metin || '');
@@ -1376,6 +1377,10 @@ export function registerSesliAnlatimRoutes(
       });
       hizalama = 'yazıldı';
     } else if (sayfalar.length) hizalama = `atlandı (${sayfalar.length} sayfa ≠ ${pars.length} paragraf)`;
+    // Slayt çapaları (Kurul 2+, konusma_v2 → konusma_capalari.json): paragraf başına cümle → {ses, sayfa, satir[], sekil}.
+    // pdf_isaret.py bunlarla okunan cümlenin PDF'teki maddesini tahminsiz bulur; metin değişince hash tutmaz, yok sayılır.
+    const capalar = Array.isArray(req.body?.capalar) && req.body.capalar.length === pars.length ? req.body.capalar : null;
+    if (capalar) yaz(path.join(KOK, 'capa', `${k}.json`), { mdSha1: crypto.createHash('sha1').update(metin).digest('hex'), p: capalar });
     // sesler: metin değiştiyse (ya da hiç ses yoksa) Emel varsayılan + EMA
     const kayit = kayitlar()[k] || [];
     const isteyen = 'ders-isci';

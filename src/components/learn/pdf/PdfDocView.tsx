@@ -10,7 +10,7 @@
  *    tuvaller bırakılır (telefon belleği). Yakınlaştırmada eski tuval yeni çizim bitene kadar ölçeklenerek kalır.
  *  - Metin katmanı (seçme/kopyalama) yalnız görünür sayfalarda kurulur.
  */
-import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { memo, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import * as pdfjs from 'pdfjs-dist';
 import type { PDFDocumentProxy, PDFPageProxy, RenderTask } from 'pdfjs-dist';
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
@@ -49,26 +49,31 @@ export interface PdfDocViewProps {
 
 export interface PdfMarks {
   page: number;
-  kind: 'metin' | 'tablo' | 'resim' | 'sayfa';
-  /** satır / hücre / resim kutuları [x0, y0, x1, y1] */
+  kind: 'metin' | 'tablo' | 'kelime' | 'resim' | 'sayfa';
+  /** ≥%80'i okunan madde satırları / resim kutusu [x0, y0, x1, y1] (sayfa oranı) */
   lines: number[][];
-  /** şu an okunan kelimenin (ya da resmin) kutusu: lazer buraya gider */
-  focus?: number[] | null;
+  /** slaytta karşılığı olan kelimelerin kutuları */
+  words: number[][];
+  /** o an konuşulan kelimenin words dizini (-1: yok). Yalnız işaret katmanını yeniden çizer. */
+  useFocus?: () => number;
 }
 
 const pct = (b: number[]) => ({ left: `${b[0] * 100}%`, top: `${b[1] * 100}%`, width: `${(b[2] - b[0]) * 100}%`, height: `${(b[3] - b[1]) * 100}%` });
+const noFocus = () => -1;
 
-/** Satırlar hafif zeminle, okunan kelime altı çizgiyle; lazer noktası kelimeden kelimeye kayar (resimde resmin üstünde durur). */
-function MarkLayer({ m }: { m: PdfMarks }) {
-  const f = m.focus;
+/** Metin: madde zemini + konuşulan kelimenin zemini/altı. Lazer yalnız metni olmayan yerde (resim/şekil). */
+const MarkLayer = memo(function MarkLayer({ m }: { m: PdfMarks }) {
+  const fi = (m.useFocus || noFocus)();
+  const f = fi >= 0 ? m.words[fi] : null;
+  const r = m.kind === 'resim' ? m.lines[0] : null;
   return (
     <div className={`pdv-marks is-${m.kind}`} aria-hidden>
       {m.lines.map((b, i) => <span key={i} className="pdv-mark-line" style={pct(b)} />)}
-      {f && m.kind !== 'resim' && <span className="pdv-mark-word" style={pct(f)} />}
-      {f && <span className="pdv-laser" style={{ left: `${((f[0] + f[2]) / 2) * 100}%`, top: `${(m.kind === 'resim' ? (f[1] + f[3]) / 2 : f[3]) * 100}%` }} />}
+      {f && <span className="pdv-mark-word" style={pct(f)} />}
+      {r && <span className="pdv-laser" style={{ left: `${((r[0] + r[2]) / 2) * 100}%`, top: `${((r[1] + r[3]) / 2) * 100}%` }} />}
     </div>
   );
-}
+});
 
 export interface PdfSearchHit {
   page: number;
@@ -258,7 +263,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
           host.prepend(canvas);
           slot.canvas = canvas;
           slot.scale = key;
-          host.classList.add('is-drawn');
+          host.dataset.drawn = '1'; // sınıf değil: React className'i yeniden yazınca silinmesin
         } catch {
           canvas.width = 0; // iptal edildi
         } finally {
@@ -298,7 +303,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
       s.canvas.remove();
     }
     s.text?.remove();
-    slotEls.current.get(n)?.classList.remove('is-drawn');
+    { const h = slotEls.current.get(n); if (h) delete h.dataset.drawn; }
     slots.current.delete(n);
     const p = pages.current.get(n);
     if (p) {

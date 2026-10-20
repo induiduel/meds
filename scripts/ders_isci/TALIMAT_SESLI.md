@@ -106,6 +106,15 @@ kuralları aynen geçerlidir. Şema ve kimlik kuralları `konusma_v2.py` başın
   çeldirici; `sayi` = eşik/oran/doz/süre; `tanim` = tanım cümlesinin çekirdeği. Her cümlede vurgu zorunlu değil.
 - **Bağlar:** paragrafın `sayfa`'sı `kaynak.md` sayfası (eski konusma_sayfalari kuralı); cümlenin `slayt_adim`'ı
   deck.json'daki ilgili adımın kimliği (`<ders_id>-d-s<adım no 2 hane>`), varsa `spot` kimliği.
+- **Slayt çapası (ZORUNLU, kullanıcı kararı 2026-10-20):** canlı derste konuşulan her kelime PDF'te anlık işaretlenir;
+  bunun için her cümleye `slayt: {"sayfa": N, "satir": [...], "sekil": null}` yaz.
+  - `satir`: cümlenin anlattığı slayt madde(ler)ini `kaynak.md`'nin o sayfasından **harfi harfine kopyala** (madde imi
+    hariç, satır bölünmüşse birleştir). Uydurma/yeniden yazılmış satır kapıdan geçmez.
+  - `ses` cümlesini o maddenin kelimeleriyle kur: maddedeki terimler aynı sırayla ve aynı biçimde geçsin (açıklama,
+    neden-sonuç ekleri serbest). Maddenin en az %80'i cümlede geçmezse PDF'te madde zemini yanmaz.
+  - `sekil`: metni olmayan resim/şema/grafik anlatılıyorsa kısa tarifi (ör. "nekroz tiplerinin mikroskobik görüntüsü");
+    canlı derste lazer imleci o resme gider. Tablo hücresi anlatılıyorsa hücre metni `satir`'a yazılır.
+  - Yalnız bağlam/geçiş cümlesi `slayt: null` olabilir (en çok %25). Kapı her satırı o sayfanın metninde arar.
 - **Kimlik:** `ders_id` = `baglam.json` → `ders_id`'nin ilk iki parçası (ör. `k2-07`). Bölüm `k2-07-b01`, paragraf
   `k2-07-p001`, cümle `k2-07-c0001`; ders içinde tekil. İlk yazımda sırayla ver. Düzeltme turunda var olan cümlenin
   kimliğini **değiştirme** (soru açıklamaları ve deeplinkler buna bağlanır); araya eklenen cümle kullanılmamış bir

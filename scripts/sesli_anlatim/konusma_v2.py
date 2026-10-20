@@ -15,7 +15,13 @@ Kurul 2'den itibaren ders işçisi (TALIMAT_SESLI.md §v2) `konusma_v2.json` yaz
                    "vurgu": [{"metin": "…", "tur": "terim|sayi|tuzak|cikmis|tanim"}],
                    "slayt_adim": "k2-07-d-s05" | null,  # Öğren destesi adımı
                    "cikmis": ["<çıkmış soru id>"],     # bu cümlenin cevapladığı çıkmışlar
-                   "spot": "k2-07-s03" | null}]}]}]}
+                   "spot": "k2-07-s03" | null,
+                   "slayt": {"sayfa": 5,              # anlatılan slayt (yoksa paragrafın sayfası)
+                             "satir": ["<kaynak.md o sayfasından BİREBİR kopyalanmış madde/satır>", …],
+                             "sekil": "<anlatılan resim/şema/tablo kısa tarifi>" | null} | null}]}]}]}
+Slayt çapası (canlı derste kelime kelime PDF işareti, pdf_isaret.py): her cümle anlattığı slayt satır(lar)ını
+`satir`'a harfi harfine kopyalar; metinsiz resim/şema anlatılıyorsa `sekil` dolar (lazer o resme gider).
+Bağlam/geçiş cümlesi `slayt: null` olabilir (en çok %25). Kapı: her satır o sayfanın metninde geçmeli.
 Kimlik kuralları: bölüm b NN, paragraf p NNN, cümle c NNNN; ders içinde tekil. Kimlik kalıcıdır: düzeltmede var olan
 cümlenin kimliği değişmez, araya eklenen cümle kullanılmamış bir sonraki numarayı alır (sıra şartı yok).
 Deeplink: /k/k2-07-c0142.
@@ -37,8 +43,18 @@ def cumlelere(paragraf):
     return [c.strip() for c in CUMLE.split(paragraf.strip()) if c.strip()]
 
 
-def dogrula(d, kaynak_sayfalar=None):
+def _katla(t):
+    return re.sub(r"[^0-9a-zçğıöşü]+", " ", (t or "").replace("I", "ı").replace("İ", "i").lower()).strip()
+
+
+CAPA_BOS_TAVAN = 0.25  # slayt çapası olmayan (bağlam/geçiş) cümle oranı en çok
+
+
+def dogrula(d, kaynak_sayfalar=None, kaynak_metin=None):
+    """kaynak_metin: {sayfa: metin} (kaynak.md) — verilirse slayt çapası satırları birebir denetlenir."""
     h = []
+    capa_bos = capa_top = 0
+    km = {k: _katla(v) for k, v in (kaynak_metin or {}).items()}
     did = d.get("ders_id", "")
     if d.get("surum") != 2: h.append("surum 2 değil")
     if not re.fullmatch(r"k\d-\d{2}", did): h.append(f"ders_id biçimi: {did!r}")
@@ -74,6 +90,22 @@ def dogrula(d, kaynak_sayfalar=None):
                         h.append(f"{i}: vurgu {v.get('metin')!r} ekran metninde yok")
                 if uslup:
                     h += uslup(ses, f"{i}/ses") + uslup(ekran.replace("**", ""), f"{i}/ekran")
+                if "slayt" in c or km:
+                    capa_top += 1
+                    sl = c.get("slayt")
+                    if "slayt" not in c:
+                        h.append(f"{i}: slayt çapası yok (satir/sekil ya da açıkça null)")
+                    elif sl is None or not (sl.get("satir") or sl.get("sekil")):
+                        capa_bos += 1
+                    else:
+                        sy = sl.get("sayfa", p.get("sayfa"))
+                        if km and sy not in km:
+                            h.append(f"{i}: slayt sayfası {sy} kaynakta yok")
+                        for st in sl.get("satir") or []:
+                            if km and sy in km and _katla(st) not in km[sy]:
+                                h.append(f"{i}: slayt satırı s.{sy} metninde birebir yok: {st[:60]!r}")
+    if capa_top and capa_bos / capa_top > CAPA_BOS_TAVAN:
+        h.append(f"slayt çapası olmayan cümle %{100 * capa_bos // capa_top} (tavan %{int(CAPA_BOS_TAVAN * 100)})")
     return h
 
 
@@ -116,6 +148,31 @@ def k1_donustur(key):
     return out
 
 
+def capalar(d):
+    """Paragraf başına cümle çapaları (yayinla.py → data/sesli_anlatim/capa/<key>.json → pdf_isaret.py)."""
+    out = []
+    for b in d["bolumler"]:
+        for p in b["paragraflar"]:
+            out.append([{"ses": c["ses"].strip(), "sayfa": (c.get("slayt") or {}).get("sayfa", p.get("sayfa")),
+                         "satir": (c.get("slayt") or {}).get("satir") or [], "sekil": (c.get("slayt") or {}).get("sekil")}
+                        for c in p["cumleler"]])
+    return out
+
+
+def kaynak_metin(dizin):
+    k = Path(dizin) / "kaynak.md"
+    if not k.exists():
+        return None
+    out, cur = {}, None
+    for ln in k.read_text().splitlines():
+        m = re.match(r"=== SAYFA (\d+) ===", ln)
+        if m:
+            cur = int(m.group(1)); out[cur] = ""
+        elif cur is not None:
+            out[cur] += ln + "\n"
+    return out
+
+
 def kaynak_sayfa(dizin):
     k = Path(dizin) / "kaynak.md"
     return {int(x) for x in re.findall(r"=== SAYFA (\d+) ===", k.read_text())} if k.exists() else None
@@ -129,7 +186,7 @@ if __name__ == "__main__":
     a = ap.parse_args()
     if a.dogrula:
         d = json.loads((Path(a.dogrula) / "konusma_v2.json").read_text())
-        h = dogrula(d, kaynak_sayfa(a.dogrula))
+        h = dogrula(d, kaynak_sayfa(a.dogrula), kaynak_metin(a.dogrula))
         for x in h[:80]: print("HATA", x)
         n = sum(len(p["cumleler"]) for b in d["bolumler"] for p in b["paragraflar"])
         print(f"{len(d['bolumler'])} bölüm · {n} cümle · {len(h)} HATA"); sys.exit(1 if h else 0)
@@ -138,6 +195,7 @@ if __name__ == "__main__":
         md, s = turet(d)
         (Path(a.turet) / "konusma_metni.md").write_text(md)
         (Path(a.turet) / "konusma_sayfalari.json").write_text(json.dumps(s))
+        (Path(a.turet) / "konusma_capalari.json").write_text(json.dumps(capalar(d), ensure_ascii=False))
         print(f"türetildi: {len(s)} paragraf")
     if a.k1_donustur:
         d = k1_donustur(a.k1_donustur)

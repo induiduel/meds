@@ -871,3 +871,10 @@
 }
 :root.cd-tam-oynatici .cd-ders.is-tam :is(.cd-metin, .pdv) { padding-bottom: calc(var(--cd-dock-h, 0px) + 20px); scroll-padding-bottom: calc(var(--cd-dock-h, 0px) + 20px); }
 :root.cd-dock-acik .cd-dock > * { box-shadow: 0 14px 40px -12px rgb(16 24 40 / .32), 0 0 0 1px var(--color-line); }
+/* Sesin o an okuduğu kelime (kelime kelime takip; PDF'teki lazerle eş zamanlı) */
+.cd-metin ::highlight(cd-kelime) { background-color: color-mix(in srgb, var(--color-accent) 55%, transparent); color: var(--color-ink); text-decoration: underline 2px var(--color-accent); text-underline-offset: 4px; }
+
+/* Kutu oynatıcının altına uzandığından dipteki yüzen öğeler kart yüksekliği kadar yukarıda durur
+ * ("Dinlemeye başla" ve "Canlı konuma dön" oynatıcının arkasında kalıp görünmüyordu, canlı iPhone testi 2026-10-20) */
+.cd-ders .cd-bolme > :is(.cd-basla, .cd-donus) { bottom: calc(var(--cd-ortu, 0px) + 14px); }
+:root.cd-tam-oynatici .cd-ders.is-tam .cd-bolme > :is(.cd-basla, .cd-donus) { bottom: calc(var(--cd-dock-h, 0px) + 14px); }

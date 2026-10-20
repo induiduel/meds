@@ -24,6 +24,8 @@ export interface CdVaryant {
   zamanlama?: [number, number][] | null;
   /** Paragraf → 2., 3., … cümlenin seste başladığı saniye (sesteki duraklamalardan ölçülü; yoksa karakter oranı) */
   cumleZaman?: Record<string, number[]> | null;
+  /** cümle başına sesteki konuşma parçaları [a1, b1, a2, b2, …] sn (cumle_zaman.py surum 2) */
+  cumleKonusma?: Record<string, number[][]> | null;
 }
 export interface CdListeDers {
   key: string;
@@ -63,8 +65,8 @@ export interface CdDetay {
   /** okunan cümlenin slayttaki karşılığı, paragraf dizini → cümle başına (pdf_isaret.py) */
   isaret?: Record<string, (CdIsaret | null)[]> | null;
 }
-/** Kutular sayfa oranıdır (0–1). w: [cümledeki karakter oranı, x0, y0, x1, y1] */
-export interface CdIsaret { d: number; s: number; t: 'metin' | 'tablo' | 'resim' | 'sayfa'; l: number[][]; w: number[][] }
+/** Kutular sayfa oranıdır (0–1). l: ≥%80'i okunan madde satırları (ya da resim); w: [kelimenin cümle içi baş, son, x0, y0, x1, y1] */
+export interface CdIsaret { d: number; s: number; t: 'metin' | 'tablo' | 'kelime' | 'resim' | 'sayfa'; l: number[][]; w: number[][] }
 /** Çalmaya başlamak için en az bu kadarı yeter (liste satırından hızlı oynatma) */
 export interface CdOzet { key: string; no: string | number; brans?: string; parca?: number; baslik: string; varyantlar: CdVaryant[] }
 
@@ -143,6 +145,17 @@ function sayilariDuzelt(d: CdDetay): CdDetay {
     for (const p of b.paragraflar) {
       const r = sayilariYazEslemeli(p.metin);
       if (r.metin === p.metin) continue;
+      // PDF işaretinin kelime konumları cümle başına göredir: eski metindeki mutlak konum üzerinden yeni metne taşınır
+      const is = d.isaret?.[String(p.i)];
+      if (is) {
+        const sinir = cumleSinirlari({ i: p.i, len: p.metin.length, bolum: 0, metin: p.metin });
+        is.forEach((x, ci) => {
+          if (!x) return;
+          const b0 = ci ? sinir[ci - 1] : 0;
+          const y0 = r.konum(b0);
+          x.w = x.w.map(([b, e, ...k]) => [r.konum(b0 + b) - y0, r.konum(b0 + e, true) - y0, ...k]);
+        });
+      }
       p.metin = r.metin;
       const v = d.vurgu?.[p.i];
       if (v) d.vurgu![p.i] = v.map(([bas, son, tur, onem]) => [r.konum(bas), r.konum(son, true), tur, onem]);
@@ -237,6 +250,7 @@ let starts: number[] = [];
 let ends: number[] = [];
 let bolumBas: number[] = []; // her bölümün ilk paragrafının konumu (paras dizini)
 let cumleBas: (number[] | null)[] = []; // paras dizini → ölçülü cümle başlangıçları
+let konusma: (number[][] | null)[] = []; // paras dizini → cümle başına konuşma parçaları
 
 function parasKur(d: CdDetay | null) {
   paras = [];
@@ -254,6 +268,7 @@ function zamanlamaKur() {
   starts = [];
   ends = [];
   cumleBas = [];
+  konusma = [];
   const v = st.varyantlar.find((x) => x.id === st.vid);
   const z = v?.zamanlama;
   if (paras.length && z && z.length) {
@@ -270,6 +285,11 @@ function zamanlamaKur() {
         const t = cz?.[String(p.i)];
         // Cümle sayısı istemcideki bölmeyle tutmuyorsa (metin değişti) tahmine dön
         return Array.isArray(t) && t.length === cumleSinirlari(p).length - 1 ? t : null;
+      });
+      const ck = v?.cumleKonusma;
+      konusma = paras.map((p, k) => {
+        const x = ck?.[String(p.i)];
+        return cumleBas[k] && Array.isArray(x) && x.length === cumleSinirlari(p).length ? x : null;
       });
       return void set({ zs: st.zs + 1 });
     }
@@ -310,23 +330,71 @@ function cumleSinirlari(p: ParaBilgi): number[] {
   p.cumleler = out;
   return out;
 }
-/** Etkin cümlenin içinde sesin geldiği yer (0–1): ölçülü cümle sınırları arasında doğrusal */
-export function cdCumleIlerleme(): number {
-  const k = posByI.get(st.aktif);
-  if (k == null || st.cumle < 0) return 0;
-  const p = paras[k];
-  const s = cumleSinirlari(p);
-  const cb = cumleBas[k];
-  let t0: number, t1: number;
-  if (cb) {
-    t0 = st.cumle ? cb[st.cumle - 1] : starts[k];
-    t1 = st.cumle < cb.length ? cb[st.cumle] : ends[k];
-  } else {
-    const span = ends[k] - starts[k];
-    t0 = starts[k] + ((st.cumle ? s[st.cumle - 1] : 0) / p.len) * span;
-    t1 = starts[k] + (s[st.cumle] / p.len) * span;
+/** Türkçe hece ≈ ünlü sayısı: kelimenin okunma süresi hecesiyle orantılıdır (harf sayısından çok daha yakın) */
+const heceSay = (w: string) => Math.max(1, (w.match(/[aeıioöuüâîû]/gi) || []).length + (/\d/.test(w) ? w.replace(/\D/g, '').length * 1.5 : 0));
+const heceOnbellek = new Map<string, { bas: number[]; birikim: number[] }>();
+/** Cümledeki kelimeler: başlangıç karakteri ve o kelimeye kadarki hece birikimi */
+function heceler(c: string) {
+  let h = heceOnbellek.get(c);
+  if (!h) {
+    const bas: number[] = [], birikim: number[] = [];
+    let top = 0;
+    for (const m of c.matchAll(/\S+/g)) { bas.push(m.index!); birikim.push(top); top += heceSay(m[0]); }
+    birikim.push(top);
+    h = { bas, birikim };
+    if (heceOnbellek.size > 400) heceOnbellek.clear();
+    heceOnbellek.set(c, h);
   }
-  return t1 > t0 ? Math.min(1, Math.max(0, (st.t - t0) / (t1 - t0))) : 0;
+  return h;
+}
+/** Ses öne alma (sn): çizim + göz algısı gecikmesini karşılar, işaret kelimeyle aynı anda yanar */
+const ONDE = 0.08;
+/** Sesin o an okuduğu konum: etkin cümle içindeki karakter (cümle başına göre) ve cümlenin paragraf içi başlangıcı.
+ *  Ölçülü konuşma parçaları varsa duraklamalar atlanır ve kelimeler hece sayısıyla paylaştırılır. */
+export function cdKonusulanKarakter(): { cumleBas: number; c: number } | null {
+  const k = posByI.get(st.aktif);
+  const r = cdCumleAraligi(st.aktif, st.cumle);
+  if (k == null || !r) return null;
+  const p = paras[k];
+  const metin = p.metin.slice(r[0], r[1]);
+  const h = heceler(metin);
+  const t = st.t + ONDE * (st.rate || 1);
+  const parca = konusma[k]?.[st.cumle];
+  let oran: number;
+  if (parca && parca.length >= 2) {
+    let top = 0, gecen = 0;
+    for (let q = 0; q + 1 < parca.length; q += 2) {
+      const d = parca[q + 1] - parca[q];
+      top += d;
+      gecen += Math.min(d, Math.max(0, t - parca[q]));
+    }
+    oran = top > 0 ? gecen / top : 0;
+  } else {
+    const s = cumleSinirlari(p);
+    const cb = cumleBas[k];
+    let t0: number, t1: number;
+    if (cb) {
+      t0 = st.cumle ? cb[st.cumle - 1] : starts[k];
+      t1 = st.cumle < cb.length ? cb[st.cumle] : ends[k];
+    } else {
+      const span = ends[k] - starts[k];
+      t0 = starts[k] + ((st.cumle ? s[st.cumle - 1] : 0) / p.len) * span;
+      t1 = starts[k] + (s[st.cumle] / p.len) * span;
+    }
+    oran = t1 > t0 ? Math.min(1, Math.max(0, (t - t0) / (t1 - t0))) : 0;
+  }
+  // hece birikimine göre kelime
+  const hedef = oran * h.birikim[h.birikim.length - 1];
+  let w = 0;
+  while (w + 1 < h.bas.length && h.birikim[w + 1] <= hedef) w++;
+  return { cumleBas: r[0], c: h.bas[w] ?? 0 };
+}
+/** Okunan kelimenin paragraf içi başlangıcı (yalnız kelime değişince değişir: seçici olarak kullanılır) */
+export function cdKelimeBas(): number {
+  const k = cdKonusulanKarakter();
+  const pi = posByI.get(st.aktif);
+  if (!k || pi == null) return -1;
+  return k.cumleBas + k.c;
 }
 /** Etkin cümlenin [başlangıç, bitiş) karakter aralığı */
 export function cdCumleAraligi(i: number, cumle: number): [number, number] | null {
@@ -378,7 +446,9 @@ let audio: HTMLAudioElement | null = null;
 let raf = 0;
 let sonKayit = 0;
 
+let sonTik = 0;
 function tick() {
+  sonTik = performance.now();
   if (!audio) return;
   const t = audio.currentTime || 0;
   set({ t, ...konumBul(t) });
@@ -390,6 +460,9 @@ function loop() {
   if (st.playing && document.visibilityState === 'visible') raf = requestAnimationFrame(loop);
 }
 const loopBaslat = () => { if (!raf && st.playing) raf = requestAnimationFrame(loop); };
+// Yedek saat: kare döngüsü kısılırsa (gömülü pencere, güç tasarrufu, düşük kare hızı) timeupdate ~250 ms–1 sn'de bir gelir;
+// kelime kelime işaret sesten geri kalmasın diye çalarken 70 ms'den eski konum 50 ms'de bir tazelenir.
+if (typeof window !== 'undefined') window.setInterval(() => { if (st.playing && performance.now() - sonTik > 70) tick(); }, 50);
 
 function pitch(a: HTMLAudioElement) {
   const x = a as HTMLAudioElement & { mozPreservesPitch?: boolean; webkitPreservesPitch?: boolean };
