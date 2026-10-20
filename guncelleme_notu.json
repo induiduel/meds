@@ -1,8 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
   "onem": 47,
-  "baslik": "Sesli derslerde güncel vurgular",
+  "baslik": "Kurul 2 otomatik ders hattı hazır",
   "maddeler": [
-    "Sesli ders vurguları tüm Kurul 1 derslerinde yenilendi."
+    "Kurul 2 dersleri program sırasıyla kalıcı kimlik alıyor; sesli metinler cümle cümle kimlikli.",
+    "Kalite kapılarından hatasız geçen Kurul 2 dersleri onay beklemeden yayına giriyor.",
+    "Kurul 2 derslerinde Türkçe üslup ve şık açıklama denetimi yayın aşamasında da zorunlu."
   ]
 }
