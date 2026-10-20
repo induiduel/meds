@@ -47,6 +47,7 @@ const MOD_ALT: Record<string, string> = {
 const modda = (n: { puan: number }, m: string) => (m === 'hizli' ? n.puan >= HIZLI_PUAN : m === 'yavas' ? n.puan >= YAVAS_PUAN : true);
 const HIZLAR = [1, 1.15, 1.25, 1.5, 1.75, 2];
 const ANAHTAR = 'medsoru_genetik_kamp_v1';
+const YANLIS_KEY = 'medsoru_genetik_kamp_yanlis_v1';
 const KATEGORI: Record<string, string> = { sendrom: 'Bulgu → sendrom', ilac: 'Kanser → ilaç', belirtec: 'Belirteç', tani: 'Tanı yöntemi' };
 
 type Mod = 'hizli' | 'yavas' | 'tam';
@@ -501,23 +502,41 @@ function Deneme({ mod, havuz, cal, durdur }: { mod: Mod; havuz: Nokta[]; cal: (i
   const [cevap, setCevap] = useState<Record<string, string>>({});
   const [yardim, setYardim] = useState<Record<string, boolean>>({});
   const [i, setI] = useState(0);
-  const basla = () => {
+  // Yanlış yapılan deneme soruları cihazda tutulur: "Yanlışlarım" turu yalnız onlardan kurulur
+  const [yanlislar, setYanlislar] = useState<string[]>(() => { try { return JSON.parse(localStorage.getItem(YANLIS_KEY) || '[]'); } catch { return []; } });
+  const yanlisYaz = (f: (a: string[]) => string[]) => setYanlislar((a) => { const n = f(a); try { localStorage.setItem(YANLIS_KEY, JSON.stringify(n)); } catch { /* yok */ } return n; });
+  const karis = <T,>(a: T[]) => a.map((x) => [Math.random(), x] as const).sort((p, r) => p[0] - r[0]).map((x) => x[1]);
+  type Tur = 'karma' | 'cikmis' | 'yanlis';
+  const basla = (tur: Tur = 'karma') => {
     durdur();
-    // Çıkmışlar önce: 12 sorunun en az 8'i çıkmış, kalan kalıba uygun örnek; bölümler dengeli dağılır
-    const tum = havuz.flatMap((n) => n.sorular);
-    const karis = <T,>(a: T[]) => a.map((x) => [Math.random(), x] as const).sort((p, r) => p[0] - r[0]).map((x) => x[1]);
-    const cik = karis(tum.filter((s) => s.tur === 'cikmis'));
-    const orn = karis(tum.filter((s) => s.tur === 'ornek'));
-    const secilen = [...cik.slice(0, 8), ...orn].slice(0, 12);
-    setSet(karis(secilen.length < 12 ? [...secilen, ...cik.slice(8)].slice(0, 12) : secilen));
-    setCevap({}); setYardim({}); setI(0);
+    let secilen: Soru[];
+    if (tur === 'yanlis') {
+      const Y = new Set(yanlislar);
+      secilen = karis(havuz.flatMap((n) => n.sorular).filter((x) => Y.has(x.k))).slice(0, 12);
+    } else {
+      // Bölümler dengeli: her bölümden sırayla, önce çıkmış (karmada 12'nin ~8'i çıkmış, kalanı kalıba uygun örnek)
+      const B = [...new Set(havuz.map((n) => n.bolum))];
+      const kuyruk = (t: 'cikmis' | 'ornek') => B.map((b) => karis(havuz.filter((n) => n.bolum === b).flatMap((n) => n.sorular).filter((x) => x.tur === t)));
+      const al = (Q: Soru[][], n: number) => { const out: Soru[] = []; for (let r = 0; out.length < n && Q.some((q) => q.length); r++) for (const q of karis(Q)) { if (out.length >= n) break; const x = q.shift(); if (x) out.push(x); } return out; };
+      const cik = al(kuyruk('cikmis'), tur === 'cikmis' ? 12 : 8);
+      secilen = tur === 'cikmis' ? cik : [...cik, ...al(kuyruk('ornek'), 12 - cik.length)];
+    }
+    setSet(karis(secilen)); setCevap({}); setYardim({}); setI(0);
   };
   if (!set) {
+    const cikSay = havuz.reduce((t, n) => t + n.sorular.filter((x) => x.tur === 'cikmis').length, 0);
+    const ornSay = havuz.reduce((t, n) => t + n.sorular.filter((x) => x.tur === 'ornek').length, 0);
+    const Y = new Set(yanlislar);
+    const ySay = havuz.flatMap((n) => n.sorular).filter((x) => Y.has(x.k)).length;
     return (
       <div className="tk-deneme-giris">
         <h3>Sınav provası</h3>
-        <p>{MOD_AD[mod]} adımlarından rastgele 12 soru: çoğu son yılların çıkmışı, kalanı hocanın kalıbına uygun örnek. Her yanlışta neden yanlış olduğu sesli anlatılır.</p>
-        <button type="button" className="tk-btn tk-btn-ana" onClick={basla}><Shuffle aria-hidden /> 12 soruyu başlat</button>
+        <p>{MOD_AD[mod]} havuzu: <b>{cikSay}</b> çıkmış · <b>{ornSay}</b> kalıba uygun örnek. Her denemede bölümler dengeli dağılır; her yanlışta neden yanlış olduğu sesli anlatılır, "Yardım al" her şıkkı açıklar.</p>
+        <div className="tk-deneme-sec">
+          <button type="button" className="tk-btn tk-btn-ana" onClick={() => basla('karma')}><Shuffle aria-hidden /> 12 soru: çıkmış ağırlıklı</button>
+          <button type="button" className="tk-btn" onClick={() => basla('cikmis')} disabled={!cikSay}><Layers aria-hidden /> Yalnız çıkmışlar</button>
+          <button type="button" className="tk-btn" onClick={() => basla('yanlis')} disabled={!ySay}><RotateCcw aria-hidden /> Yanlışlarım ({ySay})</button>
+        </div>
       </div>
     );
   }
@@ -532,16 +551,16 @@ function Deneme({ mod, havuz, cal, durdur }: { mod: Mod; havuz: Nokta[]; cal: (i
             <button key={x.k} type="button" aria-label={`${j + 1}. soru`} className={`${j === i ? 'is-on' : ''}${cevap[x.k] ? (cevap[x.k] === x.dogru ? ' is-dogru' : ' is-yanlis') : ''}`} onClick={() => { durdur(); setI(j); }}>{j + 1}</button>
           ))}
         </div>
-        {bitti && <span className="tk-skor"><b>{dogru}</b>/12 doğru</span>}
+        {bitti && <span className="tk-skor"><b>{dogru}</b>/{set.length} doğru</span>}
       </div>
       <SoruKart s={s} no={i + 1} secim={cevap[s.k]} yardimAcik={!!yardim[s.k]}
-        onSec={(h) => { setCevap((c) => ({ ...c, [s.k]: h })); cal(h === s.dogru ? `d-${s.k}` : `y-${s.k}-${h}`); }}
+        onSec={(h) => { setCevap((c) => ({ ...c, [s.k]: h })); yanlisYaz((a) => (h === s.dogru ? a.filter((x) => x !== s.k) : a.includes(s.k) ? a : [...a, s.k])); cal(h === s.dogru ? `d-${s.k}` : `y-${s.k}-${h}`); }}
         onOku={() => cal(`q-${s.k}`)} onYardim={() => { setYardim((y) => ({ ...y, [s.k]: true })); cal(`h-${s.k}`); }}
         onTekrar={() => setCevap((c) => { const d = { ...c }; delete d[s.k]; return d; })} />
       <div className="tk-gezin">
         <button type="button" className="tk-btn" onClick={() => { durdur(); setI(i - 1); }} disabled={i === 0}><ChevronLeft aria-hidden /> Önceki</button>
-        {i < 11 ? <button type="button" className="tk-btn tk-btn-ana" onClick={() => { durdur(); setI(i + 1); }}>Sonraki <ChevronRight aria-hidden /></button>
-          : <button type="button" className="tk-btn tk-btn-ana" onClick={basla}><Shuffle aria-hidden /> Yeni 12 soru</button>}
+        {i < set.length - 1 ? <button type="button" className="tk-btn tk-btn-ana" onClick={() => { durdur(); setI(i + 1); }}>Sonraki <ChevronRight aria-hidden /></button>
+          : <button type="button" className="tk-btn tk-btn-ana" onClick={() => setSet(null)}><Shuffle aria-hidden /> Yeni deneme</button>}
       </div>
     </div>
   );

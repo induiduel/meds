@@ -280,3 +280,4 @@
 .cd-k-son .cd-btn { max-width: 100%; }
 .cd-k-son .cd-btn span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cd-k-son .cd-btn.is-ana { margin-left: auto; }
+.tk-deneme-sec { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }

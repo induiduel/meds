@@ -1,24 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 137,
-  "baslik": "Başarımlar geldi: hedefler, puan ve ATP",
+  "onem": 138,
+  "baslik": "TBG Sınav Kampı: soru bankası 277 soruya çıktı",
   "maddeler": [
-    "Yeni Başarımlar sayfası: günlük, haftalık ve kurul hedefleri seviye seviye; her seviye puan, üst seviyeler ATP kazandırır.",
-    "Kalıcı başarımlar: Kitap Kurdu, Soru Canavarı, Ders Avcısı, Kopmayan Zincir ve daha fazlası; tüm kurullar boyunca birikir.",
-    "Herkese başlangıçta 100 mol ATP. ATP ile unvan, çerçeve ve kutlama efekti kilitleri açılır; günde en çok 100 mol kazanılır.",
-    "Sıralama artık dönemine göre: bu hafta, bu kurul ve tüm zamanlar. Haftalık ve kurul sonu ilk 5'e ATP hediye edilir.",
-    "İlk girişte dönemini ve kurulunu seçersin; ödül kazanınca kutlama ekranı çıkar."
+    "Soru çözerek ve Deneme bankası 123 → 277 soru: eksik çıkmışlar eklendi (46 çıkmış) ve her adıma hocanın kalıbına uygun en az 3 soru.",
+    "Yeni sorular vaka köklü (bulgu → sendrom), kanser → ilaç ve belirteç sorularıdır; her şık sesli açıklamalı, \"Yardım al\" her şıkkı anlatır.",
+    "Deneme: 12 soru çıkmış ağırlıklı ve bölümler dengeli; ayrıca \"Yalnız çıkmışlar\" ve \"Yanlışlarım\" turları."
   ],
   "eklenen": [
-    "Yeni Başarımlar sayfası: günlük, haftalık ve kurul hedefleri seviye seviye; her seviye puan, üst seviyeler ATP kazandırır.",
-    "Kalıcı başarımlar: Kitap Kurdu, Soru Canavarı, Ders Avcısı, Kopmayan Zincir ve daha fazlası; tüm kurullar boyunca birikir.",
-    "Herkese başlangıçta 100 mol ATP. ATP ile unvan, çerçeve ve kutlama efekti kilitleri açılır; günde en çok 100 mol kazanılır.",
-    "Sıralama artık dönemine göre: bu hafta, bu kurul ve tüm zamanlar. Haftalık ve kurul sonu ilk 5'e ATP hediye edilir.",
-    "İlk girişte dönemini ve kurulunu seçersin; ödül kazanınca kutlama ekranı çıkar."
+    "Soru çözerek ve Deneme bankası 123 → 277 soru: eksik çıkmışlar eklendi (46 çıkmış) ve her adıma hocanın kalıbına uygun en az 3 soru.",
+    "Yeni sorular vaka köklü (bulgu → sendrom), kanser → ilaç ve belirteç sorularıdır; her şık sesli açıklamalı, \"Yardım al\" her şıkkı anlatır.",
+    "Deneme: 12 soru çıkmış ağırlıklı ve bölümler dengeli; ayrıca \"Yalnız çıkmışlar\" ve \"Yanlışlarım\" turları."
   ],
-  "degisen": [
-    "Sıralama puanı artık çalışma süresi, çözülen soru, bitirilen ders ve katkılardan hesaplanır."
-  ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
