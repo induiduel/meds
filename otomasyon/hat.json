@@ -29,6 +29,23 @@
    "not": "Canlı API, Oracle SSH, yerel 3000, vektör ve EMA servisleri, disk. Sorun = kırmızı (panoda)."
   },
   {
+   "id": "db_goc",
+   "kapsam": "genel",
+   "durum": "hazir",
+   "gerekir": [
+    "saglik"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/scripts/db/goc.py --uygula && python3 meds/scripts/db/goc.py --uygula --oracle",
+   "cikti": [
+    "schema_migrations (yerel + Oracle)"
+   ],
+   "not": "deploy/pg/sql/goc/NNNN_ad.sql numaralı, yalnız ekleyen göçler; iki makinede aynı sırayla bir kez. İçerik sürümleri icerik_setleri tablosunda (0001)."
+  },
+  {
    "id": "drive_tarama",
    "kapsam": "genel",
    "durum": "hazir",

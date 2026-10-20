@@ -18,6 +18,8 @@ yayinla() {
   ssh medsor-oracle "mkdir -p /home/ubuntu/medsor/meds/data/olasi_sorular" 2>/dev/null || sudo_yok=1
   rsync -az --rsync-path="sudo rsync" "$KOK/meds/data/olasi_sorular/k$K.json" "medsor-oracle:/home/ubuntu/medsor/meds/data/olasi_sorular/k$K.json" \
     && echo "yayınlandı: k$K.json (yerel + Oracle)" || { echo "HATA: Oracle'a gönderilemedi"; exit 4; }
+  python3 "$KOK/meds/scripts/db/icerik_kaydi.py" --kimlik "k$K" --tur olasi_soru --kurul "$K" --oracle \
+    --kaynak-sha "$(python3 -c "import json;print(json.load(open('$D/yuvalar.json'))['parmak_izi'][:16])")" --yol "data/olasi_sorular/k$K.json" || true
 }
 # Claude (başsız). Dar izin listesi: yalnız dosya okuma/yazma + doğrulayıcı + yerel API okuma.
 IZIN='Read,Write,Edit,Glob,Grep,Bash(python3 *),Bash(curl -s http://127.0.0.1:3000/*)'

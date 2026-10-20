@@ -257,6 +257,10 @@ def main():
                 durum_yaz(d, s)
             if kod:
                 print(f"  ✗ {x} kod={kod} — ders bu adımda kaldı"); hata += 1; break
+            if x == "oracle" and not a.kuru:  # zincir bitti → içerik seti sürümleri (göç 0001), yerel + Oracle
+                sys.path.insert(0, str(MEDS / "scripts/db")); from icerik_kaydi import kaydet
+                for tur, alt in (("onem", "onem"), ("cozucu", "cozucu"), ("asistan", "asistan")):
+                    kaydet(d["id"], tur, s.get("kaynak_sha"), f"src/data/{W.name}_{alt}/{d['kod']}.json", d["kurul"], oracle=True)
     return 1 if hata else 0
 
 
