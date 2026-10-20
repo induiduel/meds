@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 68,
-  "baslik": "Genetik: Hızlı ve Tam mod asistanla açılır",
+  "onem": 69,
+  "baslik": "Genetik: Hızlı moda PGT adımı eklendi",
   "maddeler": [
-    "TBG Sınav Kampı'nda Hızlı mod ve Tam mod kartlarındaki \"Asistanla başla\" ile sesli asistan seçilen modda açılır; Hızlı modda yalnız en önemli 15 adım ve 14 soru gelir."
+    "TBG Sınav Kampı Hızlı modunda Preimplantasyon genetik tanı bölümü de gelir: polar cisim biyopsisi adımı ve çıkmış sorusu (16 adım)."
   ],
-  "eklenen": [],
-  "degisen": [
-    "TBG Sınav Kampı'nda Hızlı mod ve Tam mod kartlarındaki \"Asistanla başla\" ile sesli asistan seçilen modda açılır; Hızlı modda yalnız en önemli 15 adım ve 14 soru gelir."
+  "eklenen": [
+    "TBG Sınav Kampı Hızlı modunda Preimplantasyon genetik tanı bölümü de gelir: polar cisim biyopsisi adımı ve çıkmış sorusu (16 adım)."
   ],
+  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
