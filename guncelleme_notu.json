@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 118,
-  "baslik": "Sesli ders PDF'inde başlık ve alt başlıklar",
+  "onem": 119,
+  "baslik": "Kurulu uygulamada gerçek tam ekran",
   "maddeler": [
-    "Sesli ders PDF'inde slayt başlıkları alt başlık olarak yer alır; bölüm başlıkları daha belirgin.",
-    "'2 gruba ayrılırlar' gibi duyuruların ardındaki maddeler alt madde olarak dizilir."
+    "Bilgisayara ya da Android telefona/tablete kurulan MeDSor uygulamasında tam ekran tuşları artık gerçek tam ekran açıyor: pencere başlığı, durum ve gezinme çubukları gizleniyor (sesli ders, soru çözücü, dersler ve diğer tüm tam ekranlar)."
   ],
   "eklenen": [],
-  "degisen": [
-    "Sesli ders PDF'inde slayt başlıkları alt başlık olarak yer alır; bölüm başlıkları daha belirgin.",
-    "'2 gruba ayrılırlar' gibi duyuruların ardındaki maddeler alt madde olarak dizilir."
+  "degisen": [],
+  "duzeltilen": [
+    "Bilgisayara ya da Android telefona/tablete kurulan MeDSor uygulamasında tam ekran tuşları artık gerçek tam ekran açıyor: pencere başlığı, durum ve gezinme çubukları gizleniyor (sesli ders, soru çözücü, dersler ve diğer tüm tam ekranlar)."
   ],
-  "duzeltilen": [],
   "silinen": []
 }

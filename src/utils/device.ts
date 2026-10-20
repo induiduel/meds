@@ -63,7 +63,7 @@ export function isIosBrowserTab(): boolean {
 }
 
 /**
- * Native `requestFullscreen` YALNIZ iOS/iPadOS WebKit'te atlanır: iPhone'da sayfa öğeleri için hiç desteklenmez,
+ * Native `requestFullscreen` YALNIZ iOS/iPadOS WebKit'te atlanır (kurulu PWA dahil diğer her yerde açılır): iPhone'da sayfa öğeleri için hiç desteklenmez,
  * iPad'de bölünmüş ekranda kaydırırken kendiliğinden kapanır. Oradaki çözüm uygulama içi tam ekran + "Ana ekrana
  * ekle" ipucudur (ana ekrandan açılan uygulama zaten tarayıcı çubuksuzdur).
  * 2026-10-20: eskiden tüm dokunmatik cihazlarda (Android, dokunmatik dizüstü, Chromebook) da atlanıyordu; bu
@@ -73,10 +73,9 @@ export function isIosBrowserTab(): boolean {
  */
 export function shouldAvoidNativeFullscreen(): boolean {
   if (typeof window === 'undefined' || typeof navigator === 'undefined') return true;
-  if (isIosDevice()) return true;
-  // Ana ekrandan açılmış uygulama (PWA) zaten tarayıcı çubuksuz; native kip gereksiz
-  if (isStandaloneApp()) return true;
-  return false;
+  // Kurulu uygulamada (masaüstü PWA penceresi, Android ana ekran) da gerçek tam ekran açılır: pencere başlığı,
+  // Android durum/gezinme çubukları ancak böyle gizlenir (2026-10-20: "masaüstü uygulamasında tam ekran olmuyor").
+  return isIosDevice();
 }
 
 /**
