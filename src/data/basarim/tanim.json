@@ -93,8 +93,8 @@
     { "id": "cerceve_mito", "tur": "cerceve", "ad": "Mitokondri çerçevesi (hareketli)", "fiyat": 800, "etkin": true, "renk": "#F97316" },
     { "id": "efekt_mitoz", "tur": "efekt", "ad": "Kutlama efekti: Mitoz", "fiyat": 150, "etkin": true },
     { "id": "efekt_sentaz", "tur": "efekt", "ad": "Kutlama efekti: ATP sentaz", "fiyat": 300, "etkin": true },
-    { "id": "icerik_deneme", "tur": "icerik", "ad": "Kurul deneme sınavı", "fiyat": 250, "etkin": false },
-    { "id": "icerik_olasi_erken", "tur": "icerik", "ad": "Olası sorulara erken erişim", "fiyat": 400, "etkin": false },
+    { "id": "icerik_deneme", "tur": "icerik", "ad": "Kurul deneme sınavı", "fiyat": 250, "etkin": true },
+    { "id": "icerik_olasi_erken", "tur": "icerik", "ad": "Olası sorular", "fiyat": 400, "etkin": true },
     { "id": "icerik_kamp", "tur": "icerik", "ad": "Kurul kampı ek paketi", "fiyat": 600, "etkin": false }
   ]
 }

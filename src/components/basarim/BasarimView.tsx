@@ -242,7 +242,7 @@ function AtpMagaza() {
       {ileti && <p className="bs-ileti" role="status">{ileti}</p>}
       {turler.map(({ t, liste }) => (
         <section key={t} className="bs-bolum">
-          <header className="bs-bolum-bas"><h2>{KILIT_TUR_AD[t]}</h2>{t === 'icerik' && <span className="bs-kalan">Yakında açılacak</span>}</header>
+          <header className="bs-bolum-bas"><h2>{KILIT_TUR_AD[t]}</h2>{t === 'icerik' && <span className="bs-kalan">Bir kez açılır, kalıcıdır</span>}</header>
           <div className="bs-magaza">
             {liste.map((k) => {
               const sahip = !!d.kilit[k.id];

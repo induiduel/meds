@@ -4,6 +4,7 @@
  * Kart: yuva no, güven rozeti, branş, kök, şıkları çözme (seç → doğru/yanlış + her şıkkın açıklaması), kaynak/destek,
  * ders bağı, benzer çıkmışlar ve geri bildirim (buydu / değildi / düzeltme). Stil: styles/olasi-sorular.css (.os-*).
  */
+import { KilitKapisi } from '../basarim/KilitKapisi';
 import React, { useEffect, useMemo, useState } from 'react';
 import { BookOpen, Check, CircleHelp, MessageSquarePlus, Search, Sparkles, SquarePen, ThumbsDown, ThumbsUp, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
@@ -52,7 +53,16 @@ const Bag: React.FC<{ url: string; className?: string; children: React.ReactNode
   <a href={url} className={className} onClick={linkClick(() => navigateTo(url))}>{children}</a>
 );
 
-export default function OlasiSorularView({ uid }: { uid?: string }) {
+/** Olası sorular ATP kilidiyle açılır (tanim.json › icerik_olasi_erken). */
+export default function OlasiSorularView(props: { uid?: string }) {
+  return (
+    <KilitKapisi kilit="icerik_olasi_erken" aciklama="Sınav sonrası hatıralardan kurulan olası sorular ATP ile açılır. Bir kez açtığında hesabında kalıcı olarak açık kalır.">
+      <OlasiSorularIc {...props} />
+    </KilitKapisi>
+  );
+}
+
+function OlasiSorularIc({ uid }: { uid?: string }) {
   const gun = ekranGunu();
   const [kurul, setKurul0] = useState<number>(urlKurul);
   const [durum, setDurum] = useState<Durum>({ yuk: true });

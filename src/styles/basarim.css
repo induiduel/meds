@@ -341,3 +341,18 @@
   .bs *, .bs-k *, .bs-giris *, .bs-atp-ikon *, .bs-cerceve-ornek::after, .lbx-av.bs-cerceve { animation: none !important; transition: none !important; }
   .bs-k-kart, .bs-k-perde, .bs-giris-kart, .bs-bolumler, .bs-defter { animation: none !important; }
 }
+
+/* ── İçerik kilidi (KilitKapisi) ──────────────────────────── */
+.bs-kilit { min-height: 60dvh; justify-content: center; align-items: center; padding: 24px 16px; }
+.bs-kilit-kart { width: min(440px, 100%); display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; padding: 28px 22px; border: 1px solid var(--color-line); border-radius: 24px; background: linear-gradient(170deg, var(--bs-atp-soft), transparent 55%), var(--color-white); animation: bs-yuksel .35s cubic-bezier(.32,.72,0,1); }
+.bs-kilit-ikon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 18px; background: var(--bs-atp-soft); color: var(--bs-atp); }
+.bs-kilit-ikon svg { width: 26px; height: 26px; }
+.bs-kilit-kart h1 { font: 700 22px/1.2 var(--font-sans); }
+.bs-kilit-kart > p { font-size: 14.5px; line-height: 1.5; color: var(--color-ink-2); }
+.bs-kilit-fiyat { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; font-size: 14px; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
+.bs-kilit-fiyat > span { display: inline-flex; align-items: center; gap: 6px; }
+.bs-kilit-fiyat b { color: var(--color-ink); }
+.bs-kilit-eksik { font-size: 13px !important; color: var(--color-ink-3) !important; }
+.bs-kilit .bs-dk-kaydet { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+.bs-kilit .bs-dk-kaydet svg { width: 17px; height: 17px; }
+.bs-dk-kaydet.is-atp { background: var(--bs-atp); }

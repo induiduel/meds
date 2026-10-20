@@ -5,6 +5,7 @@
  * basarsa bütün kaynaklardan rastgele kurulur. Soru havuzundaki kullanıcı soruları bu ekranda listelenmez.
  * Sınıf öneki `tb-` (styles/test-builder.css); v12 kuralları :root[data-design='v12'] altında.
  */
+import { KilitKapisi } from '../basarim/KilitKapisi';
 import React, { useEffect, useMemo, useState } from 'react';
 import { ArrowLeft, Shuffle, Play, Archive, Target, HelpCircle, Stethoscope, SearchX, TextCursorInput, Check, RotateCcw } from 'lucide-react';
 import type { QuestionItem } from '../../types';
@@ -65,7 +66,14 @@ const toItem = (q: TestQuestion, i: number): QuestionItem =>
     },
   }) as unknown as QuestionItem;
 
-export const TestHub: React.FC<TestHubProps> = ({ onExit }) => {
+/** Deneme sınavı ATP kilidiyle açılır (tanim.json › icerik_deneme). */
+export const TestHub: React.FC<TestHubProps> = (props) => (
+  <KilitKapisi kilit="icerik_deneme" aciklama="Kurul deneme sınavları ATP ile açılır. Bir kez açtığında tüm denemeler hesabında açık kalır.">
+    <TestHubIc {...props} />
+  </KilitKapisi>
+);
+
+const TestHubIc: React.FC<TestHubProps> = ({ onExit }) => {
   const [c, setC] = useState<TestCriteria>(readSaved);
   const [archive, setArchive] = useState<TestQuestion[] | null>(null);
   const [archiveErr, setArchiveErr] = useState(false);

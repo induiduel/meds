@@ -1,18 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 138,
-  "baslik": "TBG Sınav Kampı: soru bankası 277 soruya çıktı",
+  "onem": 139,
+  "baslik": "Deneme sınavı ve olası sorular artık ATP ile açılıyor",
   "maddeler": [
-    "Soru çözerek ve Deneme bankası 123 → 277 soru: eksik çıkmışlar eklendi (46 çıkmış) ve her adıma hocanın kalıbına uygun en az 3 soru.",
-    "Yeni sorular vaka köklü (bulgu → sendrom), kanser → ilaç ve belirteç sorularıdır; her şık sesli açıklamalı, \"Yardım al\" her şıkkı anlatır.",
-    "Deneme: 12 soru çıkmış ağırlıklı ve bölümler dengeli; ayrıca \"Yalnız çıkmışlar\" ve \"Yanlışlarım\" turları."
+    "Kurul deneme sınavları 250 mol ATP ile açılır; bir kez açınca hesabında kalıcıdır.",
+    "Olası sorular 400 mol ATP ile açılır; bir kez açınca hesabında kalıcıdır.",
+    "ATP'yi hedeflerin üst seviyelerinden, başarımlardan ve haftalık sıralamada ilk 5'e girerek kazanırsın (Başarımlar sayfası)."
   ],
-  "eklenen": [
-    "Soru çözerek ve Deneme bankası 123 → 277 soru: eksik çıkmışlar eklendi (46 çıkmış) ve her adıma hocanın kalıbına uygun en az 3 soru.",
-    "Yeni sorular vaka köklü (bulgu → sendrom), kanser → ilaç ve belirteç sorularıdır; her şık sesli açıklamalı, \"Yardım al\" her şıkkı anlatır.",
-    "Deneme: 12 soru çıkmış ağırlıklı ve bölümler dengeli; ayrıca \"Yalnız çıkmışlar\" ve \"Yanlışlarım\" turları."
+  "eklenen": [],
+  "degisen": [
+    "Kurul deneme sınavları 250 mol ATP ile açılır; bir kez açınca hesabında kalıcıdır.",
+    "Olası sorular 400 mol ATP ile açılır; bir kez açınca hesabında kalıcıdır.",
+    "ATP'yi hedeflerin üst seviyelerinden, başarımlardan ve haftalık sıralamada ilk 5'e girerek kazanırsın (Başarımlar sayfası)."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }
