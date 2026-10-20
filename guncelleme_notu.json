@@ -1,14 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 125,
-  "baslik": "İyileştirmeler ve düzeltmeler",
+  "onem": 126,
+  "baslik": "TBG Sınav Kampı: sesli ders yenilendi",
   "maddeler": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+    "Sesli ders + slayt: okunan kelime hem metinde hem PDF slaytında anlık vurgulanıyor; slayt okunan bilgiyle eşleşiyor.",
+    "Metin / Metin + Slayt / Slayt görünümü, slayt tarafı, genişlik ve yazı boyutu ayarlanabiliyor; tam ekran açılıyor.",
+    "Maddeler iç içe ve okunaklı diziliyor; önemli notlar ayrı işaretleniyor."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Metin / Metin + Slayt / Slayt görünümü, slayt tarafı, genişlik ve yazı boyutu ayarlanabiliyor; tam ekran açılıyor."
+  ],
   "degisen": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+    "Maddeler iç içe ve okunaklı diziliyor; önemli notlar ayrı işaretleniyor."
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Sesli ders + slayt: okunan kelime hem metinde hem PDF slaytında anlık vurgulanıyor; slayt okunan bilgiyle eşleşiyor."
+  ],
   "silinen": []
 }
