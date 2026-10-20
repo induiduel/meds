@@ -2,11 +2,13 @@
  * Sesli ders metnini dışa aktarma belgesine çevirir (motor: services/metinDisaAktar).
  * Metin birebir korunur, yalnız okunaklı dizilir: her bölüm başlık; kısa, noktasız paragraf alt başlık;
  * paragrafın ilk cümlesi ana madde, sonraki cümleler iç içe alt madde, "Yani/Örneğin…" açıklamaları bir düzey daha içte.
+ * Konuşma üslubu dışa aktarımda ders notu üslubuna redakte edilir (services/konusmaRedakte); PDF'de başlık + maddeleri bölünmez.
  * Önemli cümleler ==…==, terimler **…**; okunuş için yazıya dökülmüş sayılar ("iki virgül bir") rakama döner.
  */
 import type { AktarBelge } from '../../services/metinDisaAktar';
 import { sayilariYaz } from '../../services/sayiYazim';
 import { paragrafMd } from '../../services/maddeDuzen';
+import { konusmaRedakte } from '../../services/konusmaRedakte';
 import type { CdDetay } from './canliDersStore';
 
 function vurgula(metin: string, v?: [number, number, 'c' | 't', number][]): string {
@@ -30,11 +32,12 @@ const tekSatir = (t: string) => t.replace(/[ \t]*\r?\n+[ \t]*/g, ' ').trim();
 export function cdAktarBelgesi(detay: CdDetay, etiket: string, vurguAcik = true): AktarBelge {
   return {
     baslik: detay.baslik,
+    dersDuzeni: true,
     alt: `${etiket} · Sesli ders metni${vurguAcik && detay.vurgu ? ' · işaretli yerler çıkmış, örnek soru ve spotlarla eşleşen önemli bilgiler' : ''}`,
     bolumler: detay.bolumler.map((b) => ({
       baslik: b.baslik.trim(),
       md: b.paragraflar.filter((p) => p.metin.trim())
-        .map((p) => paragrafMd(sayilariYaz(tekSatir(vurgula(p.metin, vurguAcik ? detay.vurgu?.[p.i] : undefined)))))
+        .map((p) => konusmaRedakte(paragrafMd(sayilariYaz(tekSatir(vurgula(p.metin, vurguAcik ? detay.vurgu?.[p.i] : undefined))))))
         .join('\n'),
     })),
   };

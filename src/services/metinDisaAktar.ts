@@ -10,7 +10,11 @@ import { setupPdfFonts } from './drive';
 
 export type AktarBicim = 'txt' | 'md' | 'docx' | 'pdf';
 export interface AktarBolum { baslik: string; alt?: string; md: string }
-export interface AktarBelge { baslik: string; alt: string; bolumler: AktarBolum[] }
+export interface AktarBelge {
+  baslik: string; alt: string; bolumler: AktarBolum[];
+  /** Sesli ders: PDF'de alt başlık + maddeleri ve ana madde + alt maddeleri tek sayfada tutulur (sayfaya sığdıkça); "1)" maddesi "1 -" yazılır */
+  dersDuzeni?: boolean;
+}
 
 /* ---------------- ayrıştırma ---------------- */
 
@@ -266,7 +270,7 @@ async function pdf(b: AktarBelge): Promise<Blob> {
       return satirla(x.r, CW, 10.5).length * lh(10.5) + 1.8;
     }
     if (x.tur === 'li') {
-      const ic = x.isaret === '•' ? 5 : 6.5;
+      const ic = x.isaret === '•' ? 5 : b.dersDuzeni ? 8 : 6.5;
       const gen = CW - ic - x.dz * 5;
       return satirla(x.r, gen, 10.5).length * lh(10.5) + (x.dz ? 1 : 1.8);
     }
@@ -293,6 +297,33 @@ async function pdf(b: AktarBelge): Promise<Blob> {
       return th;
     }
     return 10;
+  };
+
+  /** dersDuzeni: i'de başlayan küme (alt başlık → sonraki alt başlığa dek; ana madde → alt maddeleri) yüksekliği */
+  const kumeBitis = (dz: Blok[], i: number): number => {
+    const x = dz[i];
+    let j = i + 1;
+    if (x.tur === 'h') while (j < dz.length && dz[j].tur !== 'h') j++;
+    else if (x.tur === 'li') while (j < dz.length && dz[j].tur === 'li' && (dz[j] as { dz: number }).dz > x.dz) j++;
+    return j;
+  };
+  const kumeH = (dz: Blok[], i: number, j: number) => {
+    let h = 0;
+    for (let k = i; k < j; k++) h += hesaplaBlokH(dz[k]) + (dz[k].tur === 'h' ? 1.5 : 0);
+    return h + 2;
+  };
+  /** Küme sayfaya sığıyor ama kalan yere sığmıyorsa yeni sayfa; alt başlık kümesi sığmıyorsa içindeki madde kümelerine bakılır */
+  const kumeyiTut = (dz: Blok[], i: number) => {
+    if (!b.dersDuzeni || y <= M) return;
+    const x = dz[i];
+    if (x.tur !== 'h' && !(x.tur === 'li' && x.dz === 0)) return;
+    const h = kumeH(dz, i, kumeBitis(dz, i));
+    if (h <= ALT - M) { if (y + h > ALT) { doc.addPage(); y = M; } return; }
+    // Alt başlık kümesi tek sayfayı aşıyor: başlık ilk madde kümesiyle birlikte
+    if (x.tur === 'h' && i + 1 < dz.length) {
+      const ilk = kumeH(dz, i, kumeBitis(dz, i + 1));
+      if (ilk <= ALT - M && y + ilk > ALT) { doc.addPage(); y = M; }
+    }
   };
 
   /** metni akıtır: paragraf / madde bütünlüğünü korur, sayfa sonuna sığmıyorsa yeni sayfaya taşır */
@@ -340,11 +371,17 @@ async function pdf(b: AktarBelge): Promise<Blob> {
       const s = doc.splitTextToSize(T(bo.baslik), CW - 4) as string[];
       const hBaslik = s.length * lh(13) + 4.5;
       const hAlt = bo.alt ? satirla([{ t: bo.alt, i: true }], CW - 3.5, 9.5).length * lh(9.5) + 1 : 0;
-      const hIlk = blokDizisi.length > 0 ? hesaplaBlokH(blokDizisi[0]) : 20;
+      const hIlk = !blokDizisi.length ? 20
+        : b.dersDuzeni && (blokDizisi[0].tur === 'h' || blokDizisi[0].tur === 'li') && kumeH(blokDizisi, 0, kumeBitis(blokDizisi, 0)) <= ALT - M - 30
+          ? kumeH(blokDizisi, 0, kumeBitis(blokDizisi, 0))
+          : hesaplaBlokH(blokDizisi[0]);
 
       // Konu başlığı + alt başlığı + ilk bloğu bu sayfaya sığmıyorsa
       // veya sayfada 45 mm'den az alan kalmışsa konuyu ve başlığı yeni sayfada başlat
       // (+1: başlıktan sonraki boşluk, +2: yuvarlama payı — başlık sayfa sonunda yalnız kalmasın)
+      // dersDuzeni: bölümün tamamı bir sayfaya sığıyorsa bölünmez (sayfa sayısı artabilir)
+      const hTum = b.dersDuzeni && blokDizisi.length ? hBaslik + hAlt + 1 + kumeH(blokDizisi, 0, blokDizisi.length) : Infinity;
+      if (y > M && hTum <= ALT - M && y + hTum > ALT) { doc.addPage(); y = M; }
       if (y > M && (y + hBaslik + hAlt + 1 + hIlk + 2 > ALT || ALT - y < 45)) {
         doc.addPage();
         y = M;
@@ -363,6 +400,7 @@ async function pdf(b: AktarBelge): Promise<Blob> {
 
     for (let bIdx = 0; bIdx < blokDizisi.length; bIdx++) {
       const x = blokDizisi[bIdx];
+      kumeyiTut(blokDizisi, bIdx);
       if (x.tur === 'h') {
         const sonrakiBlok = blokDizisi[bIdx + 1];
         const sonrakiH = sonrakiBlok ? hesaplaBlokH(sonrakiBlok) : 15;
@@ -380,7 +418,7 @@ async function pdf(b: AktarBelge): Promise<Blob> {
       } else if (x.tur === 'p') {
         akit(x.r, M, CW, 10.5, INK, undefined, 1.8);
       } else if (x.tur === 'li') {
-        const gx = M + x.dz * 5, ic = x.isaret === '•' ? 5 : 6.5;
+        const gx = M + x.dz * 5, ic = x.isaret === '•' ? 5 : b.dersDuzeni ? 8 : 6.5;
         akit(
           x.r,
           gx + ic,
@@ -399,7 +437,7 @@ async function pdf(b: AktarBelge): Promise<Blob> {
               doc.setFont(F, 'bold');
               doc.setFontSize(10.5);
               doc.setTextColor(...VURGU);
-              doc.text(x.isaret, gx, y + 3.7);
+              doc.text(b.dersDuzeni ? x.isaret.replace(/^(\d+)[.)]$/, '$1 -') : x.isaret, gx, y + 3.7);
             }
           },
           x.dz ? 1 : 1.8

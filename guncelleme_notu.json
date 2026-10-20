@@ -1,16 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 115,
-  "baslik": "Çevrimdışı PDF düzeltmesi",
+  "onem": 116,
+  "baslik": "İyileştirmeler ve düzeltmeler",
   "maddeler": [
-    "İndirilen ders PDF'leri artık internetsiz de açılıyor.",
-    "PDF'li dersler için Çevrimdışı sayfasında güncelleme görünür; güncelleyince PDF cihazdan açılır."
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
   "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "İndirilen ders PDF'leri artık internetsiz de açılıyor.",
-    "PDF'li dersler için Çevrimdışı sayfasında güncelleme görünür; güncelleyince PDF cihazdan açılır."
+  "degisen": [
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
+  "duzeltilen": [],
   "silinen": []
 }
