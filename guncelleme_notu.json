@@ -1,17 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 103,
-  "baslik": "Yönetim paneli: gece yedekleri listesi",
+  "onem": 104,
+  "baslik": "İyileştirmeler ve düzeltmeler",
   "maddeler": [
-    "Veritabanı ve yedek sayfasında gece yedekleri listelenir; her yedeğin içeriği denetlenir.",
-    "Ayrıntı alanlarında düğme boyutu ve ekran yüksekliği düzeltildi."
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "eklenen": [
-    "Veritabanı ve yedek sayfasında gece yedekleri listelenir; her yedeğin içeriği denetlenir."
+  "eklenen": [],
+  "degisen": [
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "degisen": [],
-  "duzeltilen": [
-    "Ayrıntı alanlarında düğme boyutu ve ekran yüksekliği düzeltildi."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }

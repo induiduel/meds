@@ -4,10 +4,12 @@
  * Kesintisizlik: sıradaki ses klibi önceden yüklenir; sıradaki farklı ders PDF'i gizli bir görüntüleyicide önceden açılır,
  * başlık o derse geçince yalnız görünürlük değişir.
  */
-import React, { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import { ChevronLeft, ChevronRight, FileText, Pause, Play, SkipBack, SkipForward } from 'lucide-react';
 import { getCustomApiUrl } from '../../services/api';
 import slaytRaw from '../../data/genetik_kamp/slayt.json';
+import kelimeRaw from '../../data/genetik_kamp/kelime.json';
+import type { PdfMarks } from '../learn/pdf/PdfDocView';
 
 const PdfDocView = lazy(() => import('../learn/pdf/PdfDocView'));
 
@@ -15,7 +17,44 @@ interface Klip { v: string; sure: number; zaman: [number, number][] }
 interface Nokta { id: string; bolum: number; baslik: string; cumleler: string[] }
 interface Ders { kod: string; bolumler: { baslik: string; neden: string }[]; noktalar: Nokta[]; klip: Record<string, Klip> }
 type Yer = [string, number, number];
-const SLAYT = slaytRaw as unknown as { pdf: Record<string, { deck: string; sayfa: number }>; cumle: Record<string, Yer[]> };
+interface Isaret { s: number; t: PdfMarks['kind']; l: number[][]; w: number[][] }
+const SLAYT = slaytRaw as unknown as { pdf: Record<string, { deck: string; sayfa: number }>; cumle: Record<string, Yer[]>; isaret?: Record<string, (Isaret | null)[]> };
+const KELIME = kelimeRaw as unknown as Record<string, { v: string; c: number[][] }>;
+
+/* ——— okunan kelime deposu: kelime değişince yalnız aktif cümle ve slayt işaret katmanı yeniden çizilir ——— */
+const odak = { klip: '', c: -1, w: -1 };
+const dinleyen = new Set<() => void>();
+const odakAbone = (f: () => void) => { dinleyen.add(f); return () => { dinleyen.delete(f); }; };
+function odakYaz(klip: string, c: number, w: number) {
+  if (odak.klip === klip && odak.c === c && odak.w === w) return;
+  odak.klip = klip; odak.c = c; odak.w = w;
+  dinleyen.forEach((f) => f());
+}
+const useOdakKelime = (klip: string, c: number) => useSyncExternalStore(odakAbone, () => (odak.klip === klip && odak.c === c ? odak.w : -1));
+
+/** Ekran metni (** silinmiş) karakterlerinin kalınlığı + /\S+/g kelimeleri (kelime zamanlarıyla birebir aynı bölme) */
+function kelimeler(t: string) {
+  let duz = ''; const kalin: boolean[] = []; let b = false;
+  for (const p of t.split(/(\*\*)/)) { if (p === '**') { b = !b; continue; } for (const ch of p) { duz += ch; kalin.push(b); } }
+  const K: { bas: number; son: number }[] = [];
+  for (const m of duz.matchAll(/\S+/g)) K.push({ bas: m.index!, son: m.index! + m[0].length });
+  return { duz, kalin, K };
+}
+
+/** Okunan cümle: kelime kelime vurgu */
+function AktifCumle({ t, klip, c }: { t: string; klip: string; c: number }) {
+  const w = useOdakKelime(klip, c);
+  const { duz, kalin, K } = useMemo(() => kelimeler(t), [t]);
+  const parca = (a: number, z: number) => {
+    const out: React.ReactNode[] = []; let i = a;
+    while (i < z) { let j = i; while (j < z && kalin[j] === kalin[i]) j++; const s = duz.slice(i, j); out.push(kalin[i] ? <b key={i}>{s}</b> : s); i = j; }
+    return out;
+  };
+  const out: React.ReactNode[] = []; let son = 0;
+  K.forEach((k, i) => { out.push(...parca(son, k.bas)); out.push(<span key={`k${i}`} className={i === w ? 'gsd-k is-on' : i < w ? 'gsd-k is-gecti' : 'gsd-k'}>{parca(k.bas, k.son)}</span>); son = k.son; });
+  out.push(...parca(son, duz.length));
+  return <>{out}</>;
+}
 const PDF_AD: Record<string, string> = {
   g01: 'Dismorfolojide genetik terminoloji', g02: 'Kromozomal hastalıklar ve genetik danışma', g03: 'Doğumsal kadın-erkek gelişim anomalileri',
   g04: 'Ürogenital sistem tümörlerinde genetik belirteçler', g05: 'Prenatal tanı ve uygulama alanları', g06: 'Preimplantasyon genetik tanı',
@@ -87,12 +126,23 @@ export default function GenetikSesliDers({ ders, adimlar }: { ders: Ders; adimla
     a.playbackRate = durum.current.hiz;
     if (ci > 0 && k.zaman[ci]) a.currentTime = Math.max(0, k.zaman[ci][0] - 0.05);
     setI(oi); setCumle(ci);
-    a.ontimeupdate = () => {
+    const kz = KELIME[o.klip]?.v === k.v ? KELIME[o.klip].c : null;
+    const izle = () => {
       const t = a.currentTime;
       let c = 0;
       for (let j = 0; j < k.zaman.length; j++) if (t >= k.zaman[j][0] - 0.1) c = j;
-      setCumle((x) => (x === c ? x : c));
+      const cc = o.nokta ? c : 0;
+      setCumle((x) => (x === cc ? x : cc));
+      let w = -1;
+      const z = kz?.[cc];
+      if (z) for (let j = 0; j < z.length; j++) if (t >= z[j] - 0.08) w = j;
+      odakYaz(o.klip, cc, w);
     };
+    a.ontimeupdate = izle;
+    // timeupdate ~4 Hz; kelime için kare kare izle
+    let kare = 0;
+    const dongu = () => { if (ses.current !== a || a.paused) return; izle(); kare = requestAnimationFrame(dongu); };
+    a.onplaying = () => { cancelAnimationFrame(kare); kare = requestAnimationFrame(dongu); };
     a.onended = () => oynat(oi + 1);
     a.play().then(() => setCaliyor(true)).catch(() => setCaliyor(false));
     onYukle(oi);
@@ -125,6 +175,20 @@ export default function GenetikSesliDers({ ders, adimlar }: { ders: Ders; adimla
   }, [i, cumle]);
 
   const simdi = yer(i, cumle);
+  const isr = ogeler[i]?.nokta ? SLAYT.isaret?.[ogeler[i].nokta!.id]?.[cumle] ?? null : null;
+  const aktifKlip = ogeler[i]?.klip || '';
+  const marks = useMemo<PdfMarks | null>(() => {
+    if (!isr || !caliyor) return null;
+    const ws = isr.w;
+    const { K } = kelimeler(ogeler[i]?.nokta?.cumleler[cumle] || '');
+    // o an konuşulan kelimenin slayttaki karşılığı (karakter aralığı eşleşmesi); karşılıksız kelimede işaret yok
+    const useFocus = (): number => useSyncExternalStore(odakAbone, () => {
+      if (odak.klip !== aktifKlip || odak.c !== cumle || odak.w < 0 || !K[odak.w]) return -1;
+      const ch = K[odak.w].bas;
+      return ws.findIndex((x) => ch >= x[0] && ch < x[1]);
+    });
+    return { page: isr.s, kind: isr.t, lines: isr.l, words: ws.map((x) => x.slice(2)), useFocus };
+  }, [isr, caliyor, aktifKlip, cumle, i, ogeler]);
   const pdf = simdi?.[0] || 'g01';
   const sayfa = simdi?.[1] || 1;
   // Sıradaki (farklı) PDF ve onun ilk sayfası: gizli görüntüleyicide önceden açılır
@@ -165,7 +229,7 @@ export default function GenetikSesliDers({ ders, adimlar }: { ders: Ders; adimla
               <ul>
                 {o.nokta.cumleler.map((c, ci) => (
                   <li key={ci} className={`gsd-c${oi === i && ci === cumle ? ' is-on' : ''}`}>
-                    <button type="button" onClick={() => oynat(oi, ci)} title="Buradan dinle"><Zengin t={c} /></button>
+                    <button type="button" onClick={() => oynat(oi, ci)} title="Buradan dinle">{oi === i && ci === cumle ? <AktifCumle t={c} klip={o.klip} c={ci} /> : <Zengin t={c} />}</button>
                   </li>
                 ))}
               </ul>
@@ -173,7 +237,7 @@ export default function GenetikSesliDers({ ders, adimlar }: { ders: Ders; adimla
           ) : (
             <button key={o.klip} type="button" className={`gsd-b${oi === i ? ' is-on' : ''}`} onClick={() => oynat(oi)}>
               <span>{o.bolum + 1}. bölüm</span>{ders.bolumler[o.bolum]?.baslik}
-              <small>{ders.bolumler[o.bolum]?.neden}</small>
+              <small>{oi === i ? <AktifCumle t={ders.bolumler[o.bolum]?.neden || ''} klip={o.klip} c={0} /> : ders.bolumler[o.bolum]?.neden}</small>
             </button>
           )))}
         </div>
@@ -197,6 +261,7 @@ export default function GenetikSesliDers({ ders, adimlar }: { ders: Ders; adimla
                       zoom={1}
                       fit="page"
                       preload={k === pdf ? onSayfalar : sonrakiPdf?.k === k ? [sonrakiPdf.p] : undefined}
+                      marks={k === pdf && marks && marks.page === sayfa ? marks : null}
                       onError={() => setPdfHata((h) => ({ ...h, [k]: true }))}
                     />
                   )}
