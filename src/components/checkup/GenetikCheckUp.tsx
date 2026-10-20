@@ -6,8 +6,8 @@
  */
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
-  Check, ChevronLeft, ChevronRight, Dna, Eye, EyeOff, LifeBuoy, ListChecks, Maximize2, Pause, Play,
-  RotateCcw, Search, Shuffle, Table2, Volume2, X, Zap, BookOpen,
+  Check, ChevronLeft, ChevronRight, Dna, Eye, EyeOff, LifeBuoy, ListChecks, Pause, Play,
+  RotateCcw, Search, Shuffle, Table2, Volume2, X, Zap, BookOpen, Layers,
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../services/api';
 import { PatolojiAsistan } from '../spots/asistan/PatolojiAsistan';
@@ -30,16 +30,26 @@ interface Kalip { id: string; baslik: string; soru: string; sutun: [string, stri
 const DERS = dersRaw as unknown as Ders;
 const KALIPLAR = (kalipRaw as unknown as { kalipler: Kalip[] }).kalipler;
 const HIZLI_PUAN = 97;
+const YAVAS_PUAN = 85;
+const MODLAR = ['hizli', 'yavas', 'tam'] as const;
+const MOD_AD: Record<string, string> = { hizli: 'Hızlı mod', yavas: 'Yavaş mod', tam: 'Tam mod' };
+const MOD_ALT: Record<string, string> = {
+  hizli: 'En çok sorulanlar, adım başına 1 soru',
+  yavas: 'Kalıba uyan önemli bilgilerin hepsi',
+  tam: 'Yavaş modun 2 katı ayrıntı: sınavda çıkabilecek her bilgi',
+};
+/** Bir nokta bu modda görünür mü */
+const modda = (n: { puan: number }, m: string) => (m === 'hizli' ? n.puan >= HIZLI_PUAN : m === 'yavas' ? n.puan >= YAVAS_PUAN : true);
 const HIZLAR = [1, 1.15, 1.25, 1.5, 1.75, 2];
 const ANAHTAR = 'medsoru_genetik_kamp_v1';
 const KATEGORI: Record<string, string> = { sendrom: 'Bulgu → sendrom', ilac: 'Kanser → ilaç', belirtec: 'Belirteç', tani: 'Tanı yöntemi' };
 
-type Mod = 'hizli' | 'tam';
+type Mod = 'hizli' | 'yavas' | 'tam';
 type Sekme = 'ders' | 'kalip' | 'deneme';
 interface Kayit { mod: Mod; adim: Record<Mod, number>; tamam: Record<string, 1>; cevap: Record<string, string>; hiz: number; oto: boolean }
 
 function kayitOku(): Kayit {
-  const bos: Kayit = { mod: 'hizli', adim: { hizli: 0, tam: 0 }, tamam: {}, cevap: {}, hiz: 1, oto: true };
+  const bos: Kayit = { mod: 'hizli', adim: { hizli: 0, yavas: 0, tam: 0 }, tamam: {}, cevap: {}, hiz: 1, oto: true };
   try {
     const r = JSON.parse(localStorage.getItem(ANAHTAR) || 'null');
     return r ? { ...bos, ...r, adim: { ...bos.adim, ...(r.adim || {}) } } : bos;
@@ -56,7 +66,7 @@ const harfler = (s: Soru) => Object.keys(s.secenekler).sort();
 
 /** Bir adımın sorularından hızlı modda gösterilecek tek soru: önce çıkmış */
 function modSorulari(n: Nokta, mod: Mod): Soru[] {
-  if (mod === 'tam') return n.sorular;
+  if (mod !== 'hizli') return n.sorular;
   const c = n.sorular.find((s) => s.tur === 'cikmis');
   return c ? [c] : n.sorular.slice(0, 1);
 }
@@ -66,12 +76,12 @@ const hizliSuz = (d: Ders): Ders => ({
   ...d,
   noktalar: d.noktalar.filter((n) => n.puan >= HIZLI_PUAN).map((n) => ({ ...n, sorular: modSorulari(n, 'hizli') })),
 });
+const yavasSuz = (d: Ders): Ders => ({ ...d, noktalar: d.noktalar.filter((n) => n.puan >= YAVAS_PUAN) });
 
 export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
   const [kayit, setKayit] = useState<Kayit>(kayitOku);
   const [sekme, setSekme] = useState<Sekme>('ders');
   const [tamEkran, setTamEkran] = useState<Mod | null>(null);
-  const [genis] = useState(() => typeof window === 'undefined' || window.matchMedia('(min-width: 720px)').matches);
   const [yardim, setYardim] = useState<Record<string, boolean>>({});
   const [calan, setCalan] = useState<{ id: string; cumle: number; oynuyor: boolean } | null>(null);
   const audio = useRef<HTMLAudioElement | null>(null);
@@ -82,20 +92,20 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
   const guncelle = useCallback((f: (k: Kayit) => Kayit) => setKayit((k) => f(k)), []);
   useEffect(() => { try { localStorage.setItem(ANAHTAR, JSON.stringify(kayit)); } catch { /* özel pencere */ } }, [kayit]);
 
-  const adimlar = useMemo(() => DERS.noktalar.filter((n) => mod === 'tam' || n.puan >= HIZLI_PUAN), [mod]);
+  const adimlar = useMemo(() => DERS.noktalar.filter((n) => modda(n, mod)), [mod]);
   const idx = Math.min(kayit.adim[mod] || 0, adimlar.length - 1);
   const nokta = adimlar[idx];
 
   const sure = useMemo(() => {
     const top = (m: Mod) => {
-      const N = DERS.noktalar.filter((n) => m === 'tam' || n.puan >= HIZLI_PUAN);
+      const N = DERS.noktalar.filter((n) => modda(n, m));
       const b = new Set(N.map((n) => n.bolum));
       const k = (id: string, yedek: number) => DERS.klip[id]?.sure ?? yedek;
       return N.reduce((t, n) => t + k(`a-${n.id}`, n.cumleler.join(' ').split(/\s+/).length / 2.4)
         + modSorulari(n, m).reduce((x, s) => x + k(`q-${s.k}`, 10) + 25, 0), 0)
         + [...b].reduce((t, i) => t + k(`b-${i + 1}`, 8), 0);
     };
-    return { hizli: dakika(top('hizli')), tam: dakika(top('tam')) };
+    return { hizli: dakika(top('hizli')), yavas: dakika(top('yavas')), tam: dakika(top('tam')) };
   }, []);
 
   /* ——— ses ——— */
@@ -177,7 +187,7 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
     if (!window.confirm('Bu sayfadaki ilerleme ve cevaplar silinsin mi?')) return;
     durdur();
     setYardim({});
-    guncelle((k) => ({ ...k, adim: { hizli: 0, tam: 0 }, tamam: {}, cevap: {} }));
+    guncelle((k) => ({ ...k, adim: { hizli: 0, yavas: 0, tam: 0 }, tamam: {}, cevap: {} }));
   };
 
   /* ——— istatistik ——— */
@@ -194,7 +204,7 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
 
   const belge = useCallback((): AktarBelge => ({
     baslik: 'TBG Sınav Kampı — Genetik',
-    alt: mod === 'hizli' ? 'Hızlı mod: en önemli bilgiler' : 'Tam mod: hocanın kalıbına uyan tüm bilgiler',
+    alt: `${MOD_AD[mod]}: ${MOD_ALT[mod]}`,
     bolumler: [
       ...DERS.bolumler.map((b, bi) => ({
         baslik: b.baslik,
@@ -204,45 +214,45 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
       ...KALIPLAR.map((k) => ({
         baslik: k.baslik,
         alt: k.soru,
-        md: `| ${k.sutun[0]} | ${k.sutun[1]} |\n|---|---|\n${k.satir.filter((r) => mod === 'tam' || r.h).map((r) => `| ${r.s} | ${r.t} |`).join('\n')}`,
+        md: `| ${k.sutun[0]} | ${k.sutun[1]} |\n|---|---|\n${k.satir.filter((r) => mod !== 'hizli' || r.h).map((r) => `| ${r.s} | ${r.t} |`).join('\n')}`,
       })),
     ],
   }), [adimlar, mod]);
 
   return (
     <div className="tk">
+      {/* Sade baş: konu + tek satır kalıp özeti; mod seçici ve tek başlat düğmesi aynı satırda (eskiden 3 büyük kart) */}
       <header className="tk-bas">
         <span className="tk-ic" aria-hidden><Dna /></span>
         <div className="tk-bas-t">
           <span className="tk-ust">Kurul 1 · Tıbbi Biyoloji ve Genetik · 12 soru</span>
           <h1>TBG Sınav Kampı</h1>
-          <p>Hoca soruları son yılların çıkmışlarından ve üç kalıptan soruyor: <b>bulgudan sendrom</b>, <b>kanserde hedef ilaç</b>, <b>spesifik belirteç</b>. Ders bu kalıplara göre adım adım ve sesli anlatılır.</p>
+          <p>Üç kalıp: <b>bulgudan sendrom</b> · <b>kanserde hedef ilaç</b> · <b>spesifik belirteç</b></p>
         </div>
         <div className="tk-bas-arac">
-          <button type="button" className="tk-btn" onClick={() => { durdur(); setTamEkran(mod); }}><Maximize2 aria-hidden /> Asistanı aç · {mod === 'hizli' ? 'Hızlı' : 'Tam'}</button>
           <MetinAktarMenu belge={belge} dosyaAdi={`tbg-sinav-kampi-${mod}`} dugmeSinif="tk-btn" etiket="Özeti indir" />
         </div>
       </header>
 
-      <section className="tk-mod" aria-label="Çalışma modu">
-        {(['hizli', 'tam'] as Mod[]).map((m) => {
-          const N = DERS.noktalar.filter((n) => m === 'tam' || n.puan >= HIZLI_PUAN);
-          return (
-            <div key={m} role="button" tabIndex={0} className={`tk-mod-k${mod === m ? ' is-on' : ''}`} aria-pressed={mod === m}
-              onClick={() => { durdur(); guncelle((k) => ({ ...k, mod: m })); }}
-              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); durdur(); guncelle((k) => ({ ...k, mod: m })); } }}>
-              <span className="tk-mod-ad">{m === 'hizli' ? <Zap aria-hidden /> : <BookOpen aria-hidden />}{m === 'hizli' ? 'Hızlı mod' : 'Tam mod'}</span>
-              <span className="tk-mod-alt">{m === 'hizli' ? 'En çok sorulanlar, adım başına 1 soru' : 'Kalıba uyan tüm bilgiler ve sorular'}</span>
-              <span className="tk-mod-say"><b>{N.length}</b> adım · <b>{N.reduce((t, n) => t + modSorulari(n, m).length, 0)}</b> soru · ~<b>{sure[m]}</b> dk</span>
-              <button type="button" className="tk-btn tk-btn-ana tk-mod-basla" onClick={(e) => { e.stopPropagation(); durdur(); guncelle((k) => ({ ...k, mod: m })); setTamEkran(m); }}>
-                <Play aria-hidden /> Asistanla başla
+      <section className="tk-mod tk-mod-sade" aria-label="Çalışma modu">
+        <div className="tk-mod-sec" role="radiogroup" aria-label="Mod">
+          {MODLAR.map((m) => {
+            const N = DERS.noktalar.filter((n) => modda(n, m));
+            return (
+              <button key={m} type="button" role="radio" aria-checked={mod === m} className={`tk-mod-k${mod === m ? ' is-on' : ''}`} title={MOD_ALT[m]}
+                onClick={() => { durdur(); guncelle((k) => ({ ...k, mod: m })); }}>
+                <span className="tk-mod-ad">{m === 'hizli' ? <Zap aria-hidden /> : m === 'yavas' ? <BookOpen aria-hidden /> : <Layers aria-hidden />}{MOD_AD[m]}</span>
+                <span className="tk-mod-say">{N.length} adım · {N.reduce((t, n) => t + modSorulari(n, m).length, 0)} soru · ~{sure[m]} dk</span>
               </button>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+        <button type="button" className="tk-btn tk-btn-ana tk-mod-basla" onClick={() => { durdur(); setTamEkran(mod); }}>
+          <Play aria-hidden /> Asistanla başla
+        </button>
       </section>
 
-      <details className="tk-harita" open={genis}>
+      <details className="tk-harita">
         <summary className="tk-harita-bas">
           <span className="tk-ust">Son yılların çıkmışları nereden geliyor</span>
           <span className="tk-harita-top"><b>{tumSorular.filter((x) => x.s.tur === 'cikmis').length}</b> çıkmış · <b>{tumSorular.filter((x) => x.s.tur === 'ornek').length}</b> kalıba uygun örnek</span>
@@ -348,7 +358,7 @@ export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
       {sekme === 'kalip' && <KalipKartlari mod={mod} />}
       {sekme === 'deneme' && <Deneme mod={mod} havuz={adimlar} cal={cal} durdur={durdur} />}
 
-      {tamEkran && <PatolojiAsistan key={tamEkran} kod={DERS.kod} suz={tamEkran === 'hizli' ? hizliSuz : undefined} onClose={() => setTamEkran(null)} />}
+      {tamEkran && <PatolojiAsistan key={tamEkran} kod={DERS.kod} suz={tamEkran === 'hizli' ? hizliSuz : tamEkran === 'yavas' ? yavasSuz : undefined} onClose={() => setTamEkran(null)} />}
     </div>
   );
 };
@@ -408,7 +418,7 @@ function KalipKartlari({ mod }: { mod: Mod }) {
         </button>
       </div>
       {KALIPLAR.map((k) => {
-        const R = k.satir.filter((r) => (mod === 'tam' || r.h) && (!q || `${r.s} ${r.t}`.toLocaleLowerCase('tr').includes(q)));
+        const R = k.satir.filter((r) => (mod !== 'hizli' || r.h) && (!q || `${r.s} ${r.t}`.toLocaleLowerCase('tr').includes(q)));
         if (!R.length) return null;
         return (
           <section key={k.id} className="tk-kalip-k">
@@ -458,7 +468,7 @@ function Deneme({ mod, havuz, cal, durdur }: { mod: Mod; havuz: Nokta[]; cal: (i
     return (
       <div className="tk-deneme-giris">
         <h3>Sınav provası</h3>
-        <p>{mod === 'hizli' ? 'Hızlı modun adımlarından' : 'Tüm adımlardan'} rastgele 12 soru: çoğu son yılların çıkmışı, kalanı hocanın kalıbına uygun örnek. Her yanlışta neden yanlış olduğu sesli anlatılır.</p>
+        <p>{MOD_AD[mod]} adımlarından rastgele 12 soru: çoğu son yılların çıkmışı, kalanı hocanın kalıbına uygun örnek. Her yanlışta neden yanlış olduğu sesli anlatılır.</p>
         <button type="button" className="tk-btn tk-btn-ana" onClick={basla}><Shuffle aria-hidden /> 12 soruyu başlat</button>
       </div>
     );

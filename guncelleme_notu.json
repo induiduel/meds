@@ -1,14 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 80,
-  "baslik": "Ders özeti okuyucusunda tam ekran her cihazda",
+  "onem": 81,
+  "baslik": "Genetik: Yavaş ve Tam mod",
   "maddeler": [
-    "Ders özeti okuyucusu artık iPhone dahil her cihazda tam ekran açılıyor (\"Tam ekran desteklenmiyor\" uyarısı kalktı); tam ekranda gezinme çubuğu da çıkıyor."
+    "TBG Sınav Kampı artık üç modlu: Hızlı (16 adım), Yavaş (34 adım) ve yeni Tam mod (80 adım, 123 soru).",
+    "Tam mod, Yavaş modun iki katından fazla ayrıntıyla sınavda çıkabilecek her bilgiyi sesli anlatır; her yeni adımda kalıba uygun soru vardır."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "TBG Sınav Kampı artık üç modlu: Hızlı (16 adım), Yavaş (34 adım) ve yeni Tam mod (80 adım, 123 soru).",
+    "Tam mod, Yavaş modun iki katından fazla ayrıntıyla sınavda çıkabilecek her bilgiyi sesli anlatır; her yeni adımda kalıba uygun soru vardır."
+  ],
   "degisen": [],
-  "duzeltilen": [
-    "Ders özeti okuyucusu artık iPhone dahil her cihazda tam ekran açılıyor (\"Tam ekran desteklenmiyor\" uyarısı kalktı); tam ekranda gezinme çubuğu da çıkıyor."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }

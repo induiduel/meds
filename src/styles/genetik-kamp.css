@@ -36,13 +36,13 @@
 }
 .tk-btn:not(:disabled):hover { background: var(--color-field); }
 .tk-btn.is-on { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
-.tk-btn-ana { border-color: transparent; background: var(--color-accent); color: var(--color-on-accent); }
-.tk-btn-ana:not(:disabled):hover { background: var(--color-accent-hover, var(--color-accent)); }
+.tk .tk-btn-ana { border-color: transparent; background: var(--color-accent); color: var(--color-on-accent); }
+.tk .tk-btn-ana:not(:disabled):hover { background: var(--color-accent-hover, var(--color-accent)); }
 .tk-metin-btn { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 8px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-2); font-size: 13px; }
 .tk-metin-btn:hover { background: var(--color-field); color: var(--color-ink); }
 
 /* mod seçici */
-.tk-mod { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.tk-mod { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .tk-mod-k {
   display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding: 12px 14px; text-align: left;
   border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white);
@@ -203,9 +203,25 @@
   .tk-ic { display: none; }
   .tk-bas h1 { font-size: 20px; }
   .tk-bas p { font-size: 13px; }
-  .tk-mod { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .tk-mod { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .tk-mod-ad { font-size: 13.5px; }
+  .tk-mod-basla { padding: 0 6px; font-size: 12.5px; }
   .tk-mod-k { padding: 10px 11px; }
   .tk-mod-alt { display: none; }
   .tk-mod-say { font-size: 12px; }
   .tk-harita { padding: 10px 12px; }
+}
+
+/* Sade mod satırı: üç modlu seçici + tek başlat düğmesi (eski üç büyük kartın yerine) */
+.tk-mod.tk-mod-sade { display: flex; align-items: stretch; gap: 10px; flex-wrap: wrap; }
+.tk-mod-sec { flex: 1 1 420px; min-width: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; padding: 4px; border-radius: 12px; background: var(--color-field); }
+.tk .tk-mod-sade .tk-mod-k { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 8px 10px; border: 0; border-radius: 9px; background: transparent; box-shadow: none; text-align: left; min-width: 0; }
+.tk .tk-mod-sade .tk-mod-k.is-on { background: var(--color-white); box-shadow: 0 0 0 1px var(--color-line); }
+.tk-mod-sade .tk-mod-ad { font-size: 14px; }
+.tk-mod-sade .tk-mod-say { font-size: 12px; color: var(--color-ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.tk .tk-mod-sade .tk-mod-basla { margin-top: 0; align-self: stretch; min-height: 44px; padding: 0 18px; }
+@media (max-width: 560px) {
+  .tk-mod-sec { flex-basis: 100%; }
+  .tk .tk-mod-sade .tk-mod-basla { flex: 1 1 100%; justify-content: center; }
+  .tk-mod-sade .tk-mod-say { white-space: normal; }
 }
