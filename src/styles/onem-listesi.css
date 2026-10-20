@@ -655,3 +655,7 @@ button.on-dersad:hover { color: var(--color-accent); text-decoration: underline;
   .on-hero-eylem { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
   .on-eylem { justify-content: center; padding: 0 10px; }
 }
+/* Dar telefon: iki eylem yan yana sığmıyor (metin 3 satıra kırılıyordu) → alt alta tam genişlik */
+@media (max-width: 420px) {
+  .on-hero-eylem { grid-template-columns: minmax(0, 1fr); }
+}
