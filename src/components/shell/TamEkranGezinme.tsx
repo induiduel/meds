@@ -18,6 +18,22 @@ export const TamEkranGezinme: React.FC<{ active: AppRoute; onGo: (r: AppRoute) =
     try { return sessionStorage.getItem('medsor_fs_nav_katli') === '1'; } catch { return false; }
   });
 
+  // Açık bir pencere (tanıtım, onay, ayar diyaloğu) varken ada gizlenir; üstüne binmesin, odak tuzağını bozmasın.
+  // Tam ekran oynatıcılar da aria-modal taşır (ders, çözücü, asistan): onlar pencere sayılmaz.
+  const [pencere, setPencere] = useState(false);
+  useEffect(() => {
+    if (!fs) return;
+    let raf = 0;
+    const bak = () => {
+      raf = 0;
+      setPencere(!!document.querySelector('[aria-modal="true"]:not(.ls-root):not(.sc):not(.pa), .sh-sheet-root'));
+    };
+    bak();
+    const mo = new MutationObserver(() => { if (!raf) raf = window.setTimeout(bak, 50); });
+    mo.observe(document.body, { childList: true, subtree: true });
+    return () => { mo.disconnect(); if (raf) clearTimeout(raf); };
+  }, [fs]);
+
   useEffect(() => { if (!fs) setAcik(false); }, [fs]);
   useEffect(() => { setAcik(false); }, [active]);
   useEffect(() => {
@@ -27,7 +43,7 @@ export const TamEkranGezinme: React.FC<{ active: AppRoute; onGo: (r: AppRoute) =
     return () => window.removeEventListener('keydown', k, true);
   }, [acik]);
 
-  if (!fs) return null;
+  if (!fs || pencere) return null;
 
   const katla = (v: boolean) => {
     setKatli(v);

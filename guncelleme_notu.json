@@ -1,21 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 62,
-  "baslik": "Kurul 2 hazırlığı: otomatik dersler, olası sorular, kurul süzgeci",
+  "onem": 63,
+  "baslik": "Tam ekran gezinme çubuğu düzeltmesi",
   "maddeler": [
-    "Sınav sonrası eklenen sorulardan her akşam 'Olası sorular' oluşturuluyor.",
-    "Sesli ders, En önemliler, Spotlar, Soru çözücü ve Çıkmışlarda kurula göre süzme; Geçmiş kurullar sayfası.",
-    "Paylaşılan bağlantı (/k/…) sesli dersin ilgili cümlesine götürüyor.",
-    "Kurul 2 dersleri ve örnek soruları yayımlandıkça sitede kendiliğinden görünecek.",
-    "Tam ekrandayken sol kenardaki gezinme çubuğuyla (Geri, İleri, Ana sayfa, Sayfalar) tam ekrandan çıkmadan başka sayfalara geçebilirsin.",
-    "Geri tuşu ve sayfa geçişleri artık tam ekranı kapatmıyor; yeni sayfa tam ekranda açılıyor."
+    "Tam ekrandaki gezinme çubuğu artık açık bir pencerenin (tanıtım, onay, ayarlar) üstüne binmiyor; pencere kapanınca yeniden görünüyor."
   ],
-  "eklenen": [
-    "Tam ekrandayken sol kenardaki gezinme çubuğuyla (Geri, İleri, Ana sayfa, Sayfalar) tam ekrandan çıkmadan başka sayfalara geçebilirsin."
-  ],
+  "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Geri tuşu ve sayfa geçişleri artık tam ekranı kapatmıyor; yeni sayfa tam ekranda açılıyor."
+    "Tam ekrandaki gezinme çubuğu artık açık bir pencerenin (tanıtım, onay, ayarlar) üstüne binmiyor; pencere kapanınca yeniden görünüyor."
   ],
   "silinen": []
 }
