@@ -45,6 +45,7 @@ except Exception:
 YEREL = os.environ.get("MEDS_YEREL_API", "http://127.0.0.1:3000").rstrip("/")
 ORACLE = (os.environ.get("MEDS_ORACLE_API_URL") or ENV.get("MEDS_ORACLE_API_URL") or "https://api.nofrostlife.com.tr").rstrip("/")
 SIR = os.environ.get("MEDS_PANEL_SECRET") or ENV.get("MEDS_PANEL_SECRET", "")
+API_SIFRE = os.environ.get("MEDSORU_API_PASSWORD") or ENV.get("MEDSORU_API_PASSWORD", "")  # canlıda yazma isteği kapısı
 SSH = os.environ.get("DERS_VIDEO_ORACLE_SSH", "medsor-oracle")
 UZAK_CIKTI = "/home/ubuntu/medsor/meds/data/ders_video/cikti"
 FFMPEG = os.environ.get("DERS_VIDEO_FFMPEG") or shutil.which("ffmpeg") or "ffmpeg"
@@ -378,7 +379,8 @@ def uret(key: str, vid: str, coz: str, cikti: Path, en_cok_sn: float | None = No
 # ——— işçi döngüsü ———
 def api(yol: str, govde: dict | None = None):
     req = urllib.request.Request(f"{ORACLE}{yol}", data=json.dumps(govde or {}).encode(), method="POST",
-                                 headers={"x-panel-secret": SIR, "Content-Type": "application/json", "User-Agent": "meds-ders-video"})
+                                 headers={"x-panel-secret": SIR, "Content-Type": "application/json", "User-Agent": "meds-ders-video",
+                                          **({"X-API-Password": API_SIFRE} if API_SIFRE else {})})
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read().decode())
 

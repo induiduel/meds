@@ -32,12 +32,13 @@ export function CdVideoGpu({ dersKey, vid, cozunurluk }: { dersKey: string; vid:
   const iste = async () => {
     setHata('');
     const r = await safeJsonFetch('/api/canli-ders/video-is', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key: dersKey, vid, cozunurluk }),
+      method: 'POST', headers: { 'Content-Type': 'application/json', 'x-admin-email': ADMIN_EMAIL }, body: JSON.stringify({ key: dersKey, vid, cozunurluk }),
     });
     if (!r.ok) setHata(r.error || 'İş eklenemedi.');
     void yenile();
   };
-  const iptal = async (id: string) => { await safeJsonFetch(`/api/canli-ders/video-is/${id}`, { method: 'DELETE' }); void yenile(); };
+  const iptal = async (id: string) => { await safeJsonFetch(`/api/canli-ders/video-is/${id}`, { method: 'DELETE', headers: { 'x-admin-email': ADMIN_EMAIL } }); void yenile(); };
+  // x-admin-email yalnız genel yazma kapısını geçer; asıl yetki uçta Firebase yönetici jetonuyla (isStrongAdmin) denetlenir
   const indir = async (id: string) => {
     const r = await safeJsonFetch<{ url: string }>(`/api/canli-ders/video-is/${id}/baglanti`);
     if (!r.ok || !r.data) { setHata(r.error || 'Bağlantı alınamadı.'); return; }
