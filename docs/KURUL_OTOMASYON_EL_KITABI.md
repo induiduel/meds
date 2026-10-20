@@ -106,6 +106,11 @@ Oracle önerileri (yalnız `k[2-6]-*`) → Claude `scripts/diseases/TALIMAT_SEMA
 (`diseases.json` kirliyse bekler; denetim hatası artarsa geri alır) → Oracle `data/content/diseases.json` +
 `POST /api/admin/icerik/diseases/degisti` (panel sırrı) → SSE `content_changed`.
 
+### Aşama D2 — Cihaz: Patoloji Check Up (`otomasyon/checkup_zinciri.py`, gece)
+Kurulda ≥3 bağımsız denetimden geçmiş patoloji dersi olunca ve onaylı küme/PDF'ler değişince Claude
+`scripts/patoloji_checkup/TALIMAT_CHECKUP.md` → `src/data/patoloji_checkup/k<N>/` → `dogrula.py --kurul N` (geçmezse önceki
+sürüm geri). Site: `/patoloji-check-up?kurul=N` (veri yoksa Kurul 1 gösterilir).
+
 ### Aşama E — RAG ve diğerleri
 RAG vektörleri 3 saatte bir + gece. Kimlik çözücü `/api/k/:id`, kısa bağlantı `/k/<id>`.
 
@@ -194,10 +199,15 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
 5. Kurul sınavı günü: olası soru akşam çalıştırmaları; ertesi gün `/olasi-sorular?kurul=N`.
 6. Sınavdan sonra kurul arşive geçer (`/gecmis-kurullar`), aktif içerik bir sonraki kurula.
 
-## 12. Açık kapılar (hata defteri H7–H12)
+## 12. Açık kapılar
 çıkmış anahtar çelişkisi
 karantinası (H10) ·
 kelime zamanlaması yalnız cihazda (cihaz kapalıyken gecikir).
 
 ## 13. Bilinçli olarak elle kalan
-Kod dağıtımı (`esitle_dagit`). Kurul 1 içerik düzeltmeleri. Test bankası Kurul 2+ kapsamı (geliştirme bekliyor).
+Kod dağıtımı (`esitle_dagit`). Kurul 1 içerik düzeltmeleri. Çıkmış anahtar karantinasının sitede uygulanması (öneri +
+bildirim otomatik; gizleme/düzeltme kararı yöneticinin). Genetik sınav kampı (K1'e özgü).
+
+## 14. Bildirimler
+Gece hattında başarısız aşama → sabah tek bildirim (panel › bildirimler, `otomasyon/bildir.py`); çıkmış anahtar çelişkisi →
+karantina önerisi bildirimi. Sağlık: kapı arızası, Kurul 2+ türev veri eksikliği (cümle/kelime zamanı, PDF işareti).

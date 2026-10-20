@@ -278,13 +278,31 @@
    "not": "Kod dağıtımı (deploy-code.sh) kullanıcı/oturum kararıyla; gece içerik dağıtımı icerik_dagit aşamasında. Kural 13: kod dağıtımında guncelleme_notu.json onem+1."
   },
   {
+   "id": "checkup",
+   "kapsam": "kurul",
+   "durum": "hazir",
+   "gerekir": [
+    "ders_zinciri"
+   ],
+   "tetik": [
+    "gece",
+    "elle"
+   ],
+   "komut": "python3 meds/otomasyon/checkup_zinciri.py",
+   "cikti": [
+    "meds/src/data/patoloji_checkup/k{N}/"
+   ],
+   "not": "Kurul 2+ patoloji Hızlı Check Up: ≥3 bağımsız denetimden geçmiş ders + onaylı küme değişince Claude (TALIMAT_CHECKUP.md) → dogrula.py --kurul N; geçmezse önceki sürüm. Sitede /patoloji-check-up?kurul=N."
+  },
+  {
    "id": "icerik_dagit",
    "kapsam": "genel",
    "durum": "hazir",
    "gerekir": [
     "ders_zinciri",
     "hastalik_birlestir",
-    "olasi_soru"
+    "olasi_soru",
+    "checkup"
    ],
    "tetik": [
     "gece",
