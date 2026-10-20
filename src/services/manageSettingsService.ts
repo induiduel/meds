@@ -115,6 +115,9 @@ export const saveManageSettings = async (
       body: JSON.stringify(payload),
     });
     if (res.ok) return { savedLocal: true, savedServer: true, message: 'Ayarlar tarayıcıya ve sunucuya kaydedildi.' };
+    if (res.status && res.status !== 0) {
+      return { savedLocal: true, savedServer: false, message: `Sunucu ayarları yazmadı (${res.error || `HTTP ${res.status}`}); yalnız bu tarayıcıda saklandı.` };
+    }
   } catch {
     /* yoksay */
   }

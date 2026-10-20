@@ -14,6 +14,7 @@ import { EmptyState, ConfirmButton } from './consoleUi';
 import '../../styles/manage-people.css';
 import { useAppearance } from '../../utils/appearance';
 import { ManagePeopleV12 } from '../v12/ManagePeopleV12';
+import { PersonStudy } from './PersonStudy';
 
 /**
  * Kişiler: her kullanıcının (hesaplı ya da girişsiz cihaz) tüm izi tek ekranda — cihazlar, kullanım süresi, skorlar,
@@ -26,14 +27,15 @@ interface Props {
   notify: (msg: string) => void;
 }
 
-type Filter = 'all' | 'online' | 'accounts' | 'guests' | 'reporters' | 'contributors';
-type Sort = 'seen' | 'usage' | 'contrib';
-type Tab = 'ozet' | 'etkinlik' | 'katkilar' | 'bildirimler' | 'notlar' | 'skorlar' | 'cihazlar';
+type Filter = 'all' | 'online' | 'accounts' | 'guests' | 'reporters' | 'contributors' | 'studying';
+type Sort = 'seen' | 'usage' | 'study' | 'contrib';
+type Tab = 'ozet' | 'calisma' | 'etkinlik' | 'katkilar' | 'bildirimler' | 'notlar' | 'skorlar' | 'cihazlar';
 export type PeopleFilter = Filter;
 export type PeopleSort = Sort;
 export type PeopleTab = Tab;
 const TABS: { id: Tab; label: string }[] = [
   { id: 'ozet', label: 'Özet' },
+  { id: 'calisma', label: 'Çalışma' },
   { id: 'etkinlik', label: 'Etkinlik' },
   { id: 'katkilar', label: 'Katkılar' },
   { id: 'bildirimler', label: 'Bildirimler' },
@@ -186,10 +188,12 @@ export const ManagePeopleSection: React.FC<Props> = ({ adminEmail, notify }) => 
       if (filter === 'guests' && p.kind !== 'guest') return false;
       if (filter === 'reporters' && !p.counts.report) return false;
       if (filter === 'contributors' && !contribTotal(p)) return false;
+      if (filter === 'studying' && !p.study?.konu) return false;
       if (!q) return true;
       return fold([p.name, p.email, p.studentNumber, p.phone, p.uid, ...p.deviceNames].filter(Boolean).join(' ')).includes(q);
     });
     if (sort === 'usage') r = [...r].sort((a, b) => b.totalSeconds - a.totalSeconds);
+    if (sort === 'study') r = [...r].sort((a, b) => (b.study?.sn || 0) - (a.study?.sn || 0));
     if (sort === 'contrib') r = [...r].sort((a, b) => contribTotal(b) - contribTotal(a));
     return r;
   }, [list, query, filter, sort]);
@@ -202,6 +206,7 @@ export const ManagePeopleSection: React.FC<Props> = ({ adminEmail, notify }) => 
     ['guests', 'Misafir'],
     ['reporters', 'Bildirim yapanlar'],
     ['contributors', 'Katkı yapanlar'],
+    ['studying', 'Çalışanlar', list?.people.filter((p) => p.study?.konu).length],
   ];
 
   // v12 "Net": denetim düzeni (kayıtlı görünümler, süzgeç çubuğu, seçimli tablo, sağ ayrıntı çekmecesi); veri ve işlevler aynı
@@ -254,6 +259,7 @@ export const ManagePeopleSection: React.FC<Props> = ({ adminEmail, notify }) => 
           <select className="pp-sort" value={sort} onChange={(e) => setSort(e.target.value as Sort)} aria-label="Sırala">
             <option value="seen">Son görülme</option>
             <option value="usage">Kullanım süresi</option>
+            <option value="study">Çalışma süresi</option>
             <option value="contrib">Katkı sayısı</option>
           </select>
           <button type="button" className="ms-btn is-sm" onClick={() => void refreshList()} title="Yenile" aria-label="Yenile">
@@ -430,6 +436,7 @@ const PersonPane: React.FC<{
 
       <div className="pp-body" role="tabpanel">
         {tab === 'ozet' && <Overview d={d} setTab={setTab} />}
+        {tab === 'calisma' && <PersonStudy d={d} reload={reload} notify={notify} />}
         {tab === 'etkinlik' && <Timeline d={d} reload={reload} notify={notify} />}
         {tab === 'katkilar' && <ItemList items={contribs} adminEmail={adminEmail} notify={notify} reload={reload} empty="Yorum, soru, ipucu, şık ya da beğeni yok." filterable />}
         {tab === 'bildirimler' && <ItemList items={reports} adminEmail={adminEmail} notify={notify} reload={reload} empty="Hata bildirimi ya da öneri yok." />}
@@ -894,5 +901,5 @@ const EditBox: React.FC<{ d: PersonDetail; adminEmail: string; notify: (m: strin
 };
 
 /** v12 görünümünün yeniden kullandığı parçalar (ManagePeopleV12'ye prop olarak geçer; döngüsel içe aktarma yok). */
-const PEOPLE_V12_PARTS = { Timeline, ItemList, Scores, Devices, MailBox, EditBox, mergeTimeline, contribTotal };
+const PEOPLE_V12_PARTS = { PersonStudy, Timeline, ItemList, Scores, Devices, MailBox, EditBox, mergeTimeline, contribTotal };
 export type PeopleV12Parts = typeof PEOPLE_V12_PARTS;

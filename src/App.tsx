@@ -833,7 +833,7 @@ export default function App() {
   // Hoş geldin turu: kayıt/girişten sonra bir kez (profilde `medsoru_tour_v1`); Ayarlar'dan `medsoru:tour` ile yeniden
   const [showTour, setShowTour] = useState(false);
   // Giriş bilgilendirmesi (yapay zekâ uyarısı): kabul edilmeden uygulama kullanılmaz; turlar kabulü bekler
-  const [girisUyarisi, setGirisUyarisi] = useState(() => !girisUyarisiKabulEdildi());
+  const [girisUyarisi, setGirisUyarisi] = useState(() => !girisUyarisiKabulEdildi() && !/^\/manage(\/|$)/.test(window.location.pathname));
   const justAuthedRef = useRef(false);
   const activeTabRef = useRef(activeTab);
   activeTabRef.current = activeTab;

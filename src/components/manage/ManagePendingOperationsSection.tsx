@@ -685,6 +685,7 @@ export const ManagePendingOperationsSection: React.FC = () => {
                           try {
                             const res = await retryAutoRepair(item.id);
                             if (res.success) toast.success('İşlendi', 'Yapay zeka incelemesi tamamlandı.');
+                            else toast.error('İşlenemedi', res.error);
                             await loadData();
                           } finally {
                             setActionBusy(false);

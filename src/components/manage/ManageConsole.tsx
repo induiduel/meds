@@ -33,6 +33,8 @@ import {
   Archive,
   UserSearch,
   LayoutDashboard,
+  DatabaseZap,
+  Link2,
 } from 'lucide-react';
 import { ManageShellV12, ManageOverviewV12, type M12NavGroup } from '../v12/ManageV12';
 import type { QuestionItem, Committee, AdminNotification } from '../../types';
@@ -62,6 +64,8 @@ import { ManageDataCoreSection } from './ManageDataCoreSection';
 import { ManageNotebookLMSection } from './ManageNotebookLMSection';
 import { ManagePendingOperationsSection } from './ManagePendingOperationsSection';
 import { ManageHatSection } from './ManageHatSection';
+import { ManageDatabaseExplorer } from './ManageDatabaseExplorer';
+import { ManageShortcuts } from './ManageShortcuts';
 const ManageSesliAnlatimSection = lazy(() => import('./ManageSesliAnlatimSection'));
 import { consoleLogBuffer } from './ConsoleLogBuffer';
 import { ManageMetrics } from './ManageMetrics';
@@ -88,7 +92,7 @@ import {
   deleteDraftEverywhere,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'overview' | 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database' | 'sesli' | 'hat';
+export type ManageSection = 'overview' | 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database' | 'sesli' | 'hat' | 'dbexplorer' | 'shortcuts';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -129,6 +133,8 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
   { id: 'system', slug: 'sistem', label: 'Sistem ve günlükler', hint: 'Veritabanı ve AI sağlığı, servisler, tarayıcı konsolu.', icon: Activity, group: 'Sistem', keywords: 'log sağlık servis' },
   { id: 'automation', slug: 'otomasyon', label: 'Otomasyon', hint: 'Zamanlanmış işler, AI pencereleri, anahtarlar; Drive eşitlemesi ve masaüstü servisleri.', icon: Settings, group: 'Sistem', keywords: 'drive yedek anahtar zamanla' },
   { id: 'hat', slug: 'hat', label: 'Hat panosu', hint: 'Tam otomatik içerik hattının aşamaları: otomatik/elle/plan durumu, bağımlılıklar, eksikler, son çalışma kodu ve günlük.', icon: GitBranch, group: 'Sistem', keywords: 'hat otomasyon aşama gece pipeline olası soru durum log' },
+  { id: 'dbexplorer', slug: 'veritabani-gezgini', label: 'Veritabanı gezgini', hint: 'meds-pg\'nin tüm tabloları: satırları ara, sırala, düzenle, ekle, sil; salt okunur SQL ve CSV.', icon: DatabaseZap, group: 'Sistem', keywords: 'postgres pg sql tablo satır sorgu meds-pg veritabanı düzenle user_data cihaz' },
+  { id: 'shortcuts', slug: 'kisayollar', label: 'Kısayollar', hint: 'Veri ekranları, sitenin tüm sayfaları, API/sağlık uçları, dış konsollar (Drive, GitHub, Firebase, Oracle, Cloudflare) ve veritabanı bağlantı komutları.', icon: Link2, group: 'Sistem', keywords: 'kısayol bağlantı link site sayfa github firebase oracle cloudflare drive psql tünel' },
   { id: 'database', slug: 'veritabani', label: 'Veritabanı ve yedek', hint: 'Etkin veritabanı, eşitleme, dışa ve içe aktarım.', icon: HardDrive, group: 'Sistem', keywords: 'supabase firebase yedek dışa aktar' },
 ];
 /** v12 "Net": bölümler işe göre gruplanır (v10/v11 yukarıdaki sırayı ve grup adlarını korur). */
@@ -136,7 +142,7 @@ const V12_GROUPS: { label: string; ids: ManageSection[] }[] = [
   { label: 'Gelen', ids: ['inbox', 'pending', 'moderation'] },
   { label: 'Sorular', ids: ['pool', 'raw_pool', 'intake', 'drafts', 'studio', 'merges'] },
   { label: 'Öğrenme içeriği', ids: ['ders_isci', 'sesli', 'catalog', 'notebooklm'] },
-  { label: 'Veri', ids: ['data', 'phases', 'datacore', 'database'] },
+  { label: 'Veri', ids: ['dbexplorer', 'data', 'phases', 'datacore', 'database', 'shortcuts'] },
   { label: 'Kişiler ve denetim', ids: ['people', 'users'] },
   { label: 'Sistem', ids: ['system', 'automation', 'hat', 'scripts'] },
 ];
@@ -411,7 +417,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     setBusyAction(`resolve-${report.id}`);
     try {
       const res = await resolveInboxReport(adminEmail, report);
-      setResolvedIds((prev) => new Set(prev).add(report.id));
+      if (res.ok) setResolvedIds((prev) => new Set(prev).add(report.id));
       notify(res.message);
     } finally {
       setBusyAction(null);
@@ -758,6 +764,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       {section === 'datacore' && <ManageDataCoreSection notify={notify} />}
       {section === 'notebooklm' && <ManageNotebookLMSection />}
       {section === 'hat' && <ManageHatSection adminEmail={adminEmail} />}
+      {section === 'dbexplorer' && <ManageDatabaseExplorer notify={notify} />}
+      {section === 'shortcuts' && <ManageShortcuts notify={notify} />}
       {section === 'automation' && <SubTabs value={autoTab} onChange={setAutoTab} items={[['schedule', 'Zamanlama ve anahtarlar'], ['services', 'Drive ve servisler']]} />}
       {section === 'automation' && autoTab === 'schedule' && (
         <ManageAutomationSection adminEmail={adminEmail} selectedCommitteeId={selectedCommitteeId} onRefreshData={onRefreshData} notify={notify} />

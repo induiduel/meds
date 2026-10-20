@@ -160,6 +160,7 @@ import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } fro
 import { createPoolClusterService } from './src/services/poolClusterService.ts';
 import { createRecallFeedback } from './src/services/recall/feedback.ts';
 import { registerUserPushRoutes } from './src/services/userPushService.ts';
+import { registerPgAdminRoutes } from './src/services/pgAdminRoutes.ts';
 import { registerUserDataBackupRoutes, userEventHash, type ServerUserNotification } from './src/services/userDataBackupService.ts';
 import { registerPeopleInsights } from './src/services/peopleInsights.ts';
 import { initContentOverlay, resolveContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
@@ -475,6 +476,23 @@ const peopleInsights = registerPeopleInsights(app, {
   getPoolQuestions: () => (db?.questions || []) as any[],
   broadcastAdmin: (event, data) => broadcastRealtimeEvent(event, data, true),
   oracleApiUrl: process.env.MEDS_ORACLE_API_URL || 'https://api.nofrostlife.com.tr',
+  // Yönetici düzeltmesi öğrencinin açık cihazlarına hemen insin (profil kaydıyla aynı yol)
+  onBackupEdited: (uid, bundle) => {
+    if (!uid) return;
+    broadcastRealtimeEvent('user_data_changed', { who: userEventHash(uid), origin: 'admin', at: Date.now() });
+    if (!pgOnline) return;
+    void pgDb
+      .from('user_data')
+      .upsert([{ uid, email: bundle?.email || null, verified: !!bundle?.verified, data: bundle, rev: Date.now(), updated_at: new Date().toISOString() }], { onConflict: 'uid' })
+      .then(({ error }: any) => error && console.warn('[Kişiler] user_data yansıtma:', error.message));
+  },
+});
+
+// Yönetim › Veritabanı gezgini (meds-pg tüm tablolar; güçlü yönetici yetkisi, yerel panel → Oracle vekili)
+registerPgAdminRoutes(app, {
+  adminEmail: 'nofrostlife@gmail.com',
+  oracleApiUrl: process.env.MEDS_ORACLE_API_URL || 'https://api.nofrostlife.com.tr',
+  isPgOnline: () => pgOnline,
 });
 
 // Public, read-only API directory and versioned aliases for the site's public datasets.
@@ -8789,17 +8807,24 @@ app.delete('/api/admin/users/:uid', requireAdmin, async (req, res) => {
 
 // Admin: Update any question (full payload supported)
 app.put('/api/admin/questions/:id', requireAdmin, (req, res) => {
-  const question = db.questions.find((q) => q.id === req.params.id);
-  if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
+  let question = db.questions.find((q) => q.id === req.params.id);
+  if (!question) {
+    // Panelde yeni oluşturulup henüz sunucuya ulaşmamış taslak: 404 yerine oluştur (PUT /api/questions/:id ile aynı)
+    if (!req.body || typeof req.body !== 'object' || !req.body.committeeId) return res.status(404).json({ error: 'Soru bulunamadı.' });
+    question = { ...req.body, id: req.params.id } as any;
+    db.questions.push(question as any);
+  }
 
   // Nesneyi gelen tüm alanlarla güncelle, id ve güncel tarih korunsun
-  Object.assign(question, req.body, {
+  Object.assign(question as any, req.body, {
     id: req.params.id,
     updatedAt: new Date().toISOString(),
   });
 
   saveDatabase();
-  res.json({ question });
+  // Düzenleme yalnız JSON'a yazılıyordu: meds-pg aynası (okuyan ekranlar, SSE) eski kalıyordu
+  mirrorQuestionToDb(question);
+  res.json({ success: true, question });
 });
 
 // Admin: Update past question (full payload supported)
@@ -8827,6 +8852,8 @@ app.put('/api/admin/past-questions/:id', requireAdmin, async (req, res) => {
   } catch (e) {
     console.warn('Supabase past_questions update error', e);
   }
+  // Açık sekmeler (çıkmış listesi, panel) düzenlemeyi anında görsün — /api/past-exams/:id PUT ile aynı olay
+  broadcastRealtimeEvent('past_question_updated', { question: updatedQuestion, id: updatedQuestion.id, time: Date.now() });
 
   res.json({ success: true, question: updatedQuestion });
 });

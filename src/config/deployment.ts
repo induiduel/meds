@@ -32,7 +32,7 @@ export function defaultApiBaseForThisHost(): string {
 export const PANEL_TARGET_KEY = 'medsoru_panel_hedef';
 // Kişiler (kişisel veri): yerel sunucuya gider, o da Oracle'a gizli anahtarla vekillik eder (x-panel-target: oracle);
 // başlıktaki e-postaya güvenen doğrudan istek Oracle'da reddedilir.
-const PANEL_DEVICE_ONLY = ['/api/admin/ders-revize', '/api/automation/', '/api/admin/scripts/', '/api/admin/people', '/api/admin/hat'];
+const PANEL_DEVICE_ONLY = ['/api/admin/ders-revize', '/api/automation/', '/api/admin/scripts/', '/api/admin/people', '/api/admin/hat', '/api/admin/pg/'];
 
 export function isLocalHost(): boolean {
   if (typeof window === 'undefined') return false;
@@ -68,7 +68,7 @@ if (PANEL_ON_ORACLE_AT_BOOT && typeof window.fetch === 'function') {
       if (base) {
         const headers = new Headers(init?.headers);
         // auth.ts ADMIN_EMAIL ile aynı (burada firebase'i içe aktarmamak için yazılı)
-        if (!headers.has('x-admin-email')) headers.set('x-admin-email', 'nofrostlife@gmail.com');
+        if (!headers.get('x-admin-email')) headers.set('x-admin-email', 'nofrostlife@gmail.com');
         return nativeFetch(`${base}${path}`, { ...init, headers });
       }
     }

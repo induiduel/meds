@@ -328,7 +328,7 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     }
     setOlay(o.ok && o.data && Array.isArray(o.data.olaylar) ? o.data : null);
     if (!t.ok) {
-      setHata((t.data as any)?.hata || 'Ders işçisine ulaşılamıyor.');
+      setHata((t.data as any)?.hata || t.error || 'Ders işçisine ulaşılamıyor.');
       setListe([]);
       return;
     }
@@ -386,7 +386,7 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     setBusy(true);
     const r = await api(`/taslak/${secili}/karar`, { method: 'POST', body: JSON.stringify({ karar: k, not }) });
     setBusy(false);
-    if (!r.ok) return toast.error((r.data as any)?.hata || 'Karar kaydedilemedi.');
+    if (!r.ok) return toast.error((r.data as any)?.hata || r.error || 'Karar kaydedilemedi.');
     toast.success(k === 'onayla' ? 'Onaylandı; yayına birleştirme sırasına alındı.' : k === 'reddet' ? 'Reddedildi.' : 'Düzeltme istendi.');
     await yukle();
     api(`/taslak/${secili}`).then((x) => x.ok && setAyr(x.data));
@@ -397,7 +397,7 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     setBusy(true);
     const r = await api(`/taslak/${secili}/yeniden`, { method: 'POST', body: '{}' });
     setBusy(false);
-    if (!r.ok) return toast.error((r.data as any)?.hata || 'Yeniden gönderilemedi.');
+    if (!r.ok) return toast.error((r.data as any)?.hata || r.error || 'Yeniden gönderilemedi.');
     toast.success('Yeniden gönderildi; sunucu en geç 10 dakika içinde yeniden dener.');
     await yukle();
     api(`/taslak/${secili}`).then((x) => x.ok && setAyr(x.data));
@@ -408,7 +408,7 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     setBusy(true);
     const r = await api(`/kuyruk/${isId}/${eylem}`, { method: 'POST', body: '{}' });
     setBusy(false);
-    if (!r.ok) return toast.error((r.data as any)?.hata || 'Yapılamadı.');
+    if (!r.ok) return toast.error((r.data as any)?.hata || r.error || 'Yapılamadı.');
     toast.success({ 'one-al': 'Sıranın başına alındı.', 'sona-at': 'Sıranın sonuna alındı.', kaldir: 'Kuyruktan çıkarıldı.', 'yeniden-dene': 'Yeniden kuyrukta.' }[eylem]);
     await yukle();
   };
@@ -417,7 +417,7 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     setBusy(true);
     const r = await api('/pdf/kuyruga', { method: 'POST', body: JSON.stringify({ yollar }) });
     setBusy(false);
-    if (!r.ok) return toast.error((r.data as any)?.hata || 'Kuyruğa alınamadı.');
+    if (!r.ok) return toast.error((r.data as any)?.hata || r.error || 'Kuyruğa alınamadı.');
     toast.success(`"${baslik}" kuyruğa alınıyor; işçi bir dakika içinde ekler.`);
     await yukle();
   };
@@ -426,7 +426,7 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     setBusy(true);
     const r = await api(`/taslak/${secili}/esik-atla`, { method: 'POST', body: '{}' });
     setBusy(false);
-    if (!r.ok) return toast.error((r.data as any)?.hata || 'Gönderilemedi.');
+    if (!r.ok) return toast.error((r.data as any)?.hata || r.error || 'Gönderilemedi.');
     toast.success('Yeniden gönderildi; sunucu en geç 10 dakika içinde yayınlar.');
     await yukle();
     api(`/taslak/${secili}`).then((x) => x.ok && setAyr(x.data));
@@ -438,7 +438,7 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     setBusy(true);
     const r = await api(`/kuyruk/${isId}/simdi`, { method: 'POST', body: '{}' });
     setBusy(false);
-    if (!r.ok) return toast.error((r.data as any)?.hata || 'Başlatılamadı.');
+    if (!r.ok) return toast.error((r.data as any)?.hata || r.error || 'Başlatılamadı.');
     toast.success('İşleme alındı; ders işçisi şimdi başladı.');
     await yukle();
   };
@@ -509,7 +509,7 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
             { id: 'hepsi' as Filtre, label: 'Hepsi', icon: Layers, n: satirlar.length },
           ]}
         />
-        {hata && <EmptyState icon={FileWarning} title="Ders işçisine ulaşılamıyor">{hata}</EmptyState>}
+        {hata && <EmptyState icon={FileWarning} title={/Oracle/.test(hata) ? 'Ders işçisi bu sunucuda yok' : 'Ders işçisine ulaşılamıyor'}>{hata}</EmptyState>}
         {!hata && liste && gorunen.length === 0 && <EmptyState icon={ClipboardList} title="Bu kategoride ders yok" />}
         <ul className="flex flex-col gap-2 mt-2">
           {gorunen.map((x) => {

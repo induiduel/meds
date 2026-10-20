@@ -1,14 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 73,
-  "baslik": "Soru çözücü ve asistanda tam ekran gezinme",
+  "onem": 74,
+  "baslik": "Yönetim paneli: çalışma takibi, veritabanı gezgini, kısayollar",
   "maddeler": [
-    "Soru çözücü, alternatif çözücü ve sınav asistanında tam ekrandayken başka sayfaya gidip Geri ile dönünce ekran doğrudan tam ekran kipinde açılıyor."
+    "Yönetim panelinde kişi başına çalışma süresi ve konu takibi.",
+    "Veritabanı gezgini ve kısayollar sayfası eklendi.",
+    "Panelde başarısız kayıtların 'Kaydedildi' görünmesi düzeltildi."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Yönetim panelinde kişi başına çalışma süresi ve konu takibi.",
+    "Veritabanı gezgini ve kısayollar sayfası eklendi."
+  ],
   "degisen": [],
   "duzeltilen": [
-    "Soru çözücü, alternatif çözücü ve sınav asistanında tam ekrandayken başka sayfaya gidip Geri ile dönünce ekran doğrudan tam ekran kipinde açılıyor."
+    "Panelde başarısız kayıtların 'Kaydedildi' görünmesi düzeltildi."
   ],
   "silinen": []
 }

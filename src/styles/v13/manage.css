@@ -13,6 +13,14 @@
   & .m12-top { border: 1px solid var(--color-line); border-radius: 14px; box-shadow: var(--a13-float, 0 8px 24px -12px rgb(16 24 40 / .18)); padding: 6px 8px 6px 14px; min-height: 48px; gap: 8px; }
   & .m12-top.is-live { box-shadow: inset 0 3px 0 var(--color-warn), var(--a13-float, 0 8px 24px -12px rgb(16 24 40 / .18)); border-top-color: var(--color-line); }
   & .m12-body { border-radius: 16px; }
+  /* Masaüstü kapsül tek satır: yol kısalır, araçlar sabit kalır */
+  @media (min-width: 761px) {
+    & .m12-top { flex-wrap: nowrap; }
+    & .m12-top > * { flex-shrink: 0; }
+    & .m12-top > .m12-crumb { flex: 1 1 auto; min-width: 0; overflow: hidden; }
+    & .m12-top > .m12-search { flex: 0 1 260px; min-width: 120px; }
+    & .m12-top > .m12-kurul { flex: 0 1 200px; min-width: 110px; }
+  }
   & .m12-inner { padding-inline: 2px; }
 }
 
@@ -28,7 +36,7 @@
     & .m12-top > .m12-search { order: -1; }
     & .m12-top { grid-auto-flow: row; }
     & .m12-top > :not(.m12-search, .m12-crumb) { grid-row: 2; }
-    & .m12-top { grid-template-columns: auto minmax(120px, 1fr) repeat(6, auto); overflow-x: auto; scrollbar-width: none; }
+    & .m12-top { grid-template-columns: max-content minmax(110px, 1fr) repeat(6, max-content); overflow-x: auto; scrollbar-width: none; }
     & .m12-top::-webkit-scrollbar { display: none; }
     & .m12-top > .m12-search { grid-column: 1 / -1; grid-row: 1; }
   }

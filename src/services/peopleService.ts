@@ -25,10 +25,54 @@ export interface PersonRow {
   deviceNames: string[];
   totalSeconds: number;
   weekSeconds: number;
+  /** Konu bazlı çalışma takibi özeti (profil yedeği yoksa null) */
+  study?: StudySummary | null;
   accuracy: number | null;
   testCount: number;
   counts: { comment: number; report: number; question: number; fragment: number; option: number; like: number; note: number; events: number };
 }
+export interface StudySummary {
+  sn: number;
+  haftaSn: number;
+  konu: number;
+  bitti: number;
+  soru: number;
+  modul: Record<string, number>;
+  son: string | null;
+}
+export type StudyModule = 'sesli' | 'ogren' | 'cozucu' | 'onem';
+export interface StudyTopic {
+  id: string;
+  modul: StudyModule | 'diger';
+  konu: string;
+  sn: number;
+  soru: number;
+  durum: 'bitti' | 'tekrar' | 'acik' | null;
+  tur: number;
+  ilkAt: string | null;
+  sonAt: string | null;
+  bittiAt: string | null;
+  adm: string | null;
+}
+export interface StudyDetail {
+  ozet: StudySummary;
+  konular: StudyTopic[];
+  gunluk: ({ day: string; toplam: number } & Partial<Record<StudyModule, number>>)[];
+  /** sayfa ziyaretleri: p yol, t başlık, g giriş (ms), c son (ms), s etkin sn, k kaydırma % */
+  ziyaret: { p: string; t: string; g: number; c: number; s: number; k: number }[];
+  /** sayfa başına son konum: at (ms), t başlık, s toplam sn, n ziyaret, k kaydırma % */
+  konum: { p: string; at: number; t: string; s: number; n: number; k: number }[];
+  son: string | null;
+  kvAt: string | null;
+}
+export interface StudyEditOp {
+  id: string;
+  durum?: 'bitti' | 'acik' | 'tekrar' | null;
+  sn?: number;
+  soru?: number;
+  sifirla?: boolean;
+}
+
 export interface PeopleList {
   people: PersonRow[];
   totals: { people: number; accounts: number; online: number; devices: number; weekSeconds: number; openReports: number };
@@ -105,6 +149,7 @@ export interface PersonDetail {
   devices: PersonDevice[];
   usage: { totalSeconds: number; studySeconds: number; daily: { day: string; seconds: number }[]; studyDaily: { day: string; seconds: number }[]; sessions: number };
   score: { tests: PersonTest[]; testCount: number; correct: number; wrong: number; total: number; net: number; accuracy: number | null; answeredAccuracy: number | null };
+  calisma?: StudyDetail;
   study: { progress: number; review: number; favorites: number; flashcards: number; kvCount: number };
   activityLog: { kind: string; text: string; at: string }[];
   events: PersonEvent[];
@@ -113,7 +158,8 @@ export interface PersonDetail {
   at: string;
 }
 
-async function call<T>(path: string, init: RequestInit = {}): Promise<T> {
+/** Güçlü yönetici yetkili uçlar (Kişiler, Veritabanı gezgini) için ortak çağrı */
+export async function adminCall<T>(path: string, init: RequestInit = {}): Promise<T> {
   const headers = new Headers(init.headers);
   headers.set('Accept', 'application/json');
   if (init.body) headers.set('Content-Type', 'application/json');
@@ -133,10 +179,13 @@ async function call<T>(path: string, init: RequestInit = {}): Promise<T> {
   return data as T;
 }
 
-export const loadPeople = () => call<PeopleList>('/api/admin/people');
-export const loadPerson = (key: string) => call<PersonDetail>(`/api/admin/people/${encodeURIComponent(key)}`);
-export const forgetDevice = (deviceId: string) => call<{ success: boolean }>(`/api/admin/people/devices/${encodeURIComponent(deviceId)}`, { method: 'DELETE' });
-export const deletePersonEvent = (id: number) => call<{ success: boolean }>(`/api/admin/people/events/${id}`, { method: 'DELETE' });
+export const loadPeople = () => adminCall<PeopleList>('/api/admin/people');
+export const loadPerson = (key: string) => adminCall<PersonDetail>(`/api/admin/people/${encodeURIComponent(key)}`);
+export const forgetDevice = (deviceId: string) => adminCall<{ success: boolean }>(`/api/admin/people/devices/${encodeURIComponent(deviceId)}`, { method: 'DELETE' });
+export const deletePersonEvent = (id: number) => adminCall<{ success: boolean }>(`/api/admin/people/events/${id}`, { method: 'DELETE' });
+
+export const editPersonStudy = (key: string, body: { ops?: StudyEditOp[]; hepsiniSifirla?: boolean }) =>
+  adminCall<{ success: boolean; changed: number }>(`/api/admin/people/${encodeURIComponent(key)}/calisma`, { method: 'PATCH', body: JSON.stringify(body) });
 
 /** Panelde kişinin derin bağlantısı (kopyalanabilir, yeni sekmede açılır) */
 export const personDeepLink = (key: string, tab?: string) =>

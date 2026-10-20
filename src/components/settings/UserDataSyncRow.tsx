@@ -140,7 +140,7 @@ export const UserDataSyncRow: React.FC = () => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))',
           gap: 8,
           padding: '10px 12px',
-          background: 'var(--color-surface-2)',
+          background: 'var(--color-field)',
           borderRadius: 8,
           fontSize: 12,
         }}

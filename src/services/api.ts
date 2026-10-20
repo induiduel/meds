@@ -276,7 +276,7 @@ export async function safeJsonFetch<T = any>(
     const method = (init?.method || 'GET').toUpperCase();
     const headers = new Headers(init?.headers);
     // Yerel panel → Oracle: orada loopback yöneticisi yok; okuma isteklerinde de yönetici başlığı gider
-    if (PANEL_ON_ORACLE_AT_BOOT && typeof resolvedInput === 'string' && !resolvedInput.startsWith('/') && !headers.has('x-admin-email')) {
+    if (PANEL_ON_ORACLE_AT_BOOT && typeof resolvedInput === 'string' && !resolvedInput.startsWith('/') && !headers.get('x-admin-email')) {
       headers.set('x-admin-email', ADMIN_EMAIL);
     }
     if (!['GET', 'HEAD', 'OPTIONS'].includes(method) && typeof window !== 'undefined') {
@@ -299,7 +299,7 @@ export async function safeJsonFetch<T = any>(
       // tıklamada yeniden çıkan bir pencere. Artık sorulmaz; sunucu parola isterse 401 yanıtı arayüzde gösterilir
       // (parola gerekiyorsa sessionStorage 'medsoru_api_write_password' anahtarına yazılır).
       if (password) headers.set('X-API-Password', password);
-      if (isAdmin && !headers.has('x-admin-email')) {
+      if (isAdmin && !headers.get('x-admin-email')) {
         headers.set('x-admin-email', ADMIN_EMAIL);
       }
     }
@@ -329,7 +329,7 @@ export async function safeJsonFetch<T = any>(
       if (contentType.includes('application/json')) {
         try {
           const errObj = await res.json();
-          errMsg = errObj.error || errObj.message || errMsg;
+          errMsg = errObj.error || errObj.hata || errObj.message || errMsg;
         } catch (_) {}
       } else if (res.status === 405) {
         errMsg = 'Statik barındırma ortamı (HTTP 405 Method Not Allowed). İstemci modu veya yedek veritabanı devreye alınıyor.';
@@ -1819,8 +1819,8 @@ export const ApiService = {
       },
       body: JSON.stringify(saved),
     });
-    // Yerelde de yoksa ve sunucu da yazmadıysa başarı gösterme
-    if (!r.ok && idx === -1) throw new Error(r.error || 'Sunucu soruyu güncelleyemedi');
+    // Sunucu yazmadıysa başarı gösterme (eskiden yerel kopya varsa hata yutuluyor, düzenleme sunucuya hiç ulaşmıyordu)
+    if (!r.ok) throw new Error(r.error || 'Sunucu soruyu güncelleyemedi');
 
     return saved;
   },
@@ -1837,18 +1837,16 @@ export const ApiService = {
       console.warn('multiDbManager adminUpdatePastQuestion fallback', e);
     }
 
-    try {
-      await safeJsonFetch(`/api/admin/past-questions/${encodeURIComponent(id)}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-admin-email': adminEmail,
-        },
-        body: JSON.stringify(merged),
-      });
-    } catch (e) {
-      console.warn('server adminUpdatePastQuestion fallback', e);
-    }
+    // Sunucu yazımı asıl kayıttır: başarısızsa hata fırlatılır (eskiden sessizce yutulup "Kaydedildi" deniyordu)
+    const r = await safeJsonFetch<{ success?: boolean; question?: any; error?: string }>(`/api/admin/past-questions/${encodeURIComponent(id)}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-email': adminEmail,
+      },
+      body: JSON.stringify(merged),
+    });
+    if (!r.ok) throw new Error(r.data?.error || r.error || 'Sunucu çıkmış soruyu güncelleyemedi');
 
     try {
       await pastQuestionsCache.saveQuestion(merged);
@@ -1913,14 +1911,12 @@ export const ApiService = {
     } catch (e) {
       console.warn('[ApiService] adminDeleteQuestion multiDbManager error', e);
     }
-    try {
-      await safeJsonFetch(`/api/questions/${encodeURIComponent(id)}`, {
-        method: 'DELETE',
-        headers: { 'x-admin-email': adminEmail },
-      });
-    } catch (e) {
-      console.warn('[ApiService] adminDeleteQuestion server error', e);
-    }
+    const r = await safeJsonFetch(`/api/questions/${encodeURIComponent(id)}`, {
+      method: 'DELETE',
+      headers: { 'x-admin-email': adminEmail || ADMIN_EMAIL },
+    });
+    // 404 = sunucuda zaten yok; diğer hatalar toplu işlem sayacına yansısın diye fırlatılır
+    if (!r.ok && r.status !== 404) throw new Error((r.data as any)?.error || r.error || 'Sunucu soruyu silemedi');
   },
 
   async deleteQuestion(id: string, user?: { uid?: string; email?: string | null } | null): Promise<void> {
@@ -1945,14 +1941,14 @@ export const ApiService = {
       console.warn('[ApiService] deleteQuestion multiDbManager error', e);
     }
 
-    try {
-      await safeJsonFetch(`/api/questions/${encodeURIComponent(id)}`, {
-        method: 'DELETE',
-        headers: user?.email ? { 'x-admin-email': user.email } : {},
-      });
-    } catch (e) {
-      console.warn('[ApiService] deleteQuestion server error', e);
-    }
+    const r = await safeJsonFetch(`/api/questions/${encodeURIComponent(id)}`, {
+      method: 'DELETE',
+      headers: user?.email ? { 'x-admin-email': user.email } : {},
+    });
+    // Yönetici silmesinde sunucu hatası gizlenmez (404 = zaten yok)
+    const byAdmin = Boolean(user?.email && user.email.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase());
+    if (!r.ok && r.status !== 404 && byAdmin) throw new Error((r.data as any)?.error || r.error || 'Sunucu soruyu silemedi');
+    if (!r.ok && !byAdmin) console.warn('[ApiService] deleteQuestion server error', r.status, r.error);
   },
 
   async assignUnassignedQuestion(
@@ -3735,16 +3731,14 @@ export const ApiService = {
     };
 
     // 1. Express sunucusuna PUT gönder (sunucu belleği + pastQuestions.json + Supabase anında güncellenir)
-    try {
-      const email = adminEmailHint || (typeof window !== 'undefined' && (window as any).currentUser?.email) || ADMIN_EMAIL;
-      await safeJsonFetch(`/api/past-exams/${encodeURIComponent(question.id)}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json', 'x-admin-email': email },
-        body: JSON.stringify(updated),
-      });
-    } catch (e) {
-      console.warn('[ApiService] saveApprovedPastQuestion server PUT warning:', e);
-    }
+    // Sunucu yazımı asıl kayıttır: başarısızsa hata fırlatılır (eskiden yutulup bildirim "çözüldü" sayılıyordu)
+    const email = adminEmailHint || (typeof window !== 'undefined' && (window as any).currentUser?.email) || ADMIN_EMAIL;
+    const put = await safeJsonFetch<{ success?: boolean; error?: string }>(`/api/past-exams/${encodeURIComponent(question.id)}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': email },
+      body: JSON.stringify(updated),
+    });
+    if (!put.ok) throw new Error(put.data?.error || put.error || 'Sunucu çıkmış soruyu kaydedemedi');
 
     // 2. İstemci IndexedDB Cache'ini anında güncelle (ekranda ve sınav listesinde hemen güncel görünür)
     try {

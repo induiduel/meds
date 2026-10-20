@@ -251,19 +251,21 @@ export function mergeKvJsonValue(key: string, olderRaw: string, newerRaw: string
         const aTime = String(cur.sonAt || cur.bittiAt || cur.ilkAt || '');
         const bTime = String(rec.sonAt || rec.bittiAt || rec.ilkAt || '');
         const [lo, hi] = bTime >= aTime ? [cur, rec] : [rec, cur];
+        // Yönetici düzeltmesi (adm): düzeltmeden sonra çalışılmadıysa süre/soru en büyüğe değil düzeltilmiş değere eşitlenir
+        const admWins = !!hi.adm && String(hi.adm) >= String(lo.sonAt || lo.bittiAt || lo.ilkAt || '');
         const merged: Record<string, any> = {
           ...lo,
           ...hi,
-          sn: Math.max(Number(cur.sn) || 0, Number(rec.sn) || 0),
-          soru: Math.max(Number(cur.soru) || 0, Number(rec.soru) || 0),
+          sn: admWins ? Number(hi.sn) || 0 : Math.max(Number(cur.sn) || 0, Number(rec.sn) || 0),
+          soru: admWins ? Number(hi.soru) || 0 : Math.max(Number(cur.soru) || 0, Number(rec.soru) || 0),
         };
-        const tur = Math.max(Number(cur.tur) || 0, Number(rec.tur) || 0);
+        const tur = admWins ? Number(hi.tur) || 0 : Math.max(Number(cur.tur) || 0, Number(rec.tur) || 0);
         if (tur > 0) merged.tur = tur;
         const ilkAt = cur.ilkAt && rec.ilkAt ? (cur.ilkAt < rec.ilkAt ? cur.ilkAt : rec.ilkAt) : cur.ilkAt || rec.ilkAt;
         if (ilkAt) merged.ilkAt = ilkAt;
         const sonAt = cur.sonAt && rec.sonAt ? (cur.sonAt > rec.sonAt ? cur.sonAt : rec.sonAt) : cur.sonAt || rec.sonAt;
         if (sonAt) merged.sonAt = sonAt;
-        if (hi.durum === undefined && lo.durum === 'bitti') {
+        if (!admWins && hi.durum === undefined && lo.durum === 'bitti') {
           merged.durum = 'bitti';
           if (lo.bittiAt) merged.bittiAt = lo.bittiAt;
         }

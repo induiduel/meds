@@ -37,7 +37,15 @@ export function dersIsciRouter(): express.Router {
       res.setHeader('Cache-Control', 'no-store');
       return res.send(Buffer.from(await yanit.arrayBuffer()));
     } catch (e: any) {
-      return res.status(503).json({ hata: 'Ders işçisine ulaşılamıyor', ayrinti: String(e?.message || e) });
+      // İşçi yalnız Oracle'daki compose ağında çalışır; cihazdaki sunucu ona ulaşamaz (beklenen durum).
+      const yerel = !process.env.MEDS_ISCI_URL;
+      return res.status(503).json({
+        hata: yerel
+          ? 'Ders işçisi yalnız Oracle sunucusunda çalışır; bu yerel sunucudan erişilemez. Panel başlığından hedefi "Canlı" yapıp sayfayı yenileyin.'
+          : 'Ders işçisine ulaşılamıyor (işçi kapalı ya da yeniden başlıyor olabilir).',
+        yerel,
+        ayrinti: String(e?.message || e),
+      });
     }
   });
   return r;

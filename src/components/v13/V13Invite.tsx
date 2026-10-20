@@ -15,7 +15,8 @@ const V13Invite: React.FC = () => {
   const asked = look.v13Asked;
 
   useEffect(() => {
-    if (asked) return;
+    // Yönetim konsolunda öğrenci tasarım daveti gösterilmez
+    if (asked || /^\/manage(\/|$)/.test(window.location.pathname)) return;
     let tries = 0;
     let t = 0;
     const check = () => {

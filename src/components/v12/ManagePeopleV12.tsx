@@ -72,9 +72,9 @@ const csvCell = (v: unknown) => {
   return /[",;\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 };
 const downloadCsv = (rows: PersonRow[], contrib: (r: PersonRow) => number) => {
-  const head = ['Ad', 'E-posta', 'Öğrenci no', 'Telefon', 'Tür', 'Çevrimiçi', 'Son görülme', 'Kayıt', 'Kullanım (sn)', 'Son 7 gün (sn)', 'Cihaz', 'Katkı', 'Bildirim', 'Beğeni', 'Test', 'Doğruluk (%)', 'Anahtar'];
+  const head = ['Ad', 'E-posta', 'Öğrenci no', 'Telefon', 'Tür', 'Çevrimiçi', 'Son görülme', 'Kayıt', 'Kullanım (sn)', 'Son 7 gün (sn)', 'Çalışma (sn)', 'Çalışma 7 gün (sn)', 'Çalışılan konu', 'Biten konu', 'Cihaz', 'Katkı', 'Bildirim', 'Beğeni', 'Test', 'Doğruluk (%)', 'Anahtar'];
   const lines = rows.map((r) =>
-    [r.name, r.email, r.studentNumber, r.phone, roleOf(r), r.online ? 'evet' : 'hayır', r.lastSeen, r.createdAt, r.totalSeconds, r.weekSeconds, r.deviceCount, contrib(r), r.counts.report, r.counts.like, r.testCount, r.accuracy, r.key]
+    [r.name, r.email, r.studentNumber, r.phone, roleOf(r), r.online ? 'evet' : 'hayır', r.lastSeen, r.createdAt, r.totalSeconds, r.weekSeconds, r.study?.sn ?? '', r.study?.haftaSn ?? '', r.study?.konu ?? '', r.study?.bitti ?? '', r.deviceCount, contrib(r), r.counts.report, r.counts.like, r.testCount, r.accuracy, r.key]
       .map(csvCell)
       .join(','),
   );
@@ -247,6 +247,7 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
               <select value={p.sort} onChange={(e) => p.setSort(e.target.value as PeopleSort)}>
                 <option value="seen">Son görülme</option>
                 <option value="usage">Kullanım süresi</option>
+                <option value="study">Çalışma süresi</option>
                 <option value="contrib">Katkı sayısı</option>
               </select>
             </label>
@@ -309,6 +310,7 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
                     <th className="n">Katkı</th>
                     <th className="n">Bildirim</th>
                     <th className="n">Kullanım</th>
+                    <th className="n" title="Konu takibindeki etkin çalışma (toplam · bitti konu)">Çalışma</th>
                     <th>Son görülme</th>
                     <th className="n">Cihaz</th>
                     <th className="c-act"><span className="sr-only">İşlemler</span></th>
@@ -317,12 +319,12 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
                 <tbody>
                   {!list && !p.listErr && (
                     <tr>
-                      <td colSpan={10} className="m12-td-empty" aria-busy="true">Yükleniyor…</td>
+                      <td colSpan={11} className="m12-td-empty" aria-busy="true">Yükleniyor…</td>
                     </tr>
                   )}
                   {list && pageRows.length === 0 && (
                     <tr>
-                      <td colSpan={10} className="m12-td-empty">Eşleşen kişi yok. Süzgeci ya da aramayı değiştir.</td>
+                      <td colSpan={11} className="m12-td-empty">Eşleşen kişi yok. Süzgeci ya da aramayı değiştir.</td>
                     </tr>
                   )}
                   {pageRows.map((r, i) => {
@@ -350,6 +352,15 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
                         <td className="n"><span className="m12-num">{contrib}</span></td>
                         <td className="n"><span className={`m12-num ${r.counts.report ? 'warn' : ''}`}>{r.counts.report}</span></td>
                         <td className="n"><span className="m12-num">{fmtDuration(r.totalSeconds)}</span></td>
+                        <td className="n">
+                          {r.study?.konu ? (
+                            <button type="button" className="m12-linkbtn" onClick={() => p.open(r.key, 'calisma')} title={`${r.study.konu} konu · son 7 gün ${fmtDuration(r.study.haftaSn)}`}>
+                              <span className="m12-num">{fmtDuration(r.study.sn)}</span> <span className="m12-meta">· {r.study.bitti} bitti</span>
+                            </button>
+                          ) : (
+                            <span className="m12-meta">—</span>
+                          )}
+                        </td>
                         <td><span className="m12-meta">{r.online ? 'şimdi' : relTime(r.lastSeen)}</span></td>
                         <td className="n"><span className="m12-num">{r.deviceCount}</span></td>
                         <td className="c-act">
@@ -424,6 +435,7 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
 
 const TABS: { id: PeopleTab; label: string }[] = [
   { id: 'ozet', label: 'Özet' },
+  { id: 'calisma', label: 'Çalışma' },
   { id: 'etkinlik', label: 'Etkinlik' },
   { id: 'katkilar', label: 'Katkılar' },
   { id: 'bildirimler', label: 'Bildirimler' },
@@ -440,6 +452,7 @@ const PersonDrawer: React.FC<Props & { d: PersonDetail }> = ({ d, tab, setTab, o
   const contribs = d.items.filter((i) => ['comment', 'question', 'fragment', 'option', 'like', 'vote'].includes(i.kind));
   const notes = d.items.filter((i) => i.kind === 'note');
   const counts: Partial<Record<PeopleTab, number>> = {
+    calisma: d.calisma?.konular.length || 0,
     etkinlik: d.events.length + d.activityLog.length,
     katkilar: contribs.length,
     bildirimler: reports.length,
@@ -528,6 +541,7 @@ const PersonDrawer: React.FC<Props & { d: PersonDetail }> = ({ d, tab, setTab, o
         {tab === 'ozet' && <Summary d={d} setTab={setTab} parts={parts} />}
         {tab !== 'ozet' && (
           <div className="m12-dsec m12-pp-legacy">
+            {tab === 'calisma' && <parts.PersonStudy d={d} reload={reload} notify={notify} />}
             {tab === 'etkinlik' && <parts.Timeline d={d} reload={reload} notify={notify} />}
             {tab === 'katkilar' && <parts.ItemList items={contribs} adminEmail={adminEmail} notify={notify} reload={reload} empty="Yorum, soru, ipucu, şık ya da beğeni yok." filterable />}
             {tab === 'bildirimler' && <parts.ItemList items={reports} adminEmail={adminEmail} notify={notify} reload={reload} empty="Hata bildirimi ya da öneri yok." />}

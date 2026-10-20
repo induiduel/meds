@@ -97,7 +97,7 @@ export const SpotCozucuIstatistikModal: React.FC<Props> = ({ onClose, onBransSec
           </div>
 
           {/* Doğruluk Dağılımı ve Hız */}
-          <div className="scd-kart" style={{ background: 'var(--color-surface, #fff)' }}>
+          <div className="scd-kart" style={{ background: 'var(--color-white)' }}>
             <div className="scd-kart-bas">
               <span className="scd-kart-etiket">
                 <Target size={16} />

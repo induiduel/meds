@@ -48,7 +48,7 @@ const sure = (t?: number) => {
 };
 
 export const IsciKontrol: React.FC<{
-  api: (yol: string, init?: RequestInit) => Promise<{ ok: boolean; data?: any }>;
+  api: (yol: string, init?: RequestInit) => Promise<{ ok: boolean; data?: any; error?: string }>;
   durum: IsciDurum;
   /** Ayar ya da tarama sonrası listeyi tazele */
   onDegisti: () => void;
@@ -77,7 +77,7 @@ export const IsciKontrol: React.FC<{
     setBusy(true);
     const r = await api('/ayarlar', { method: 'POST', body: JSON.stringify({ ayar: degisen }) });
     setBusy(false);
-    if (!r.ok) return toast.error(r.data?.hata || 'Ayar kaydedilemedi.');
+    if (!r.ok) return toast.error(r.data?.hata || r.error || 'Ayar kaydedilemedi.');
     setVeri((v) => (v ? { ...v, ayar: r.data.ayar } : v));
     setTaslak(r.data.ayar);
     toast.success(mesaj);
@@ -87,7 +87,7 @@ export const IsciKontrol: React.FC<{
     setBusy(true);
     const r = await api('/tara', { method: 'POST', body: '{}' });
     setBusy(false);
-    if (!r.ok) return toast.error(r.data?.hata || 'Tarama istenemedi.');
+    if (!r.ok) return toast.error(r.data?.hata || r.error || 'Tarama istenemedi.');
     toast.success('Drive taraması istendi; işçi bir dakika içinde başlar.');
     onDegisti();
   };

@@ -71,7 +71,7 @@
   padding: 6px 12px;
   border-radius: 8px;
   border: 1px solid var(--color-line);
-  background: var(--color-field, #f8f9fa);
+  background: var(--color-field);
   color: var(--color-text);
   font-size: 12.5px;
   font-weight: 600;
@@ -104,7 +104,7 @@
 }
 
 .scd-kart {
-  background: var(--color-canvas, #fafbfc);
+  background: var(--color-canvas);
   border: 1px solid var(--color-line);
   border-radius: 12px;
   padding: 14px;
@@ -155,7 +155,7 @@
   border-radius: 6px;
   font-size: 11px;
   font-weight: 650;
-  background: var(--color-surface, #fff);
+  background: var(--color-white);
   border: 1px solid var(--color-line);
   color: var(--color-text-sub);
 }
@@ -167,14 +167,14 @@
 }
 
 .scd-rozet.is-dogru {
-  color: #16a34a;
-  background: #dcfce7;
+  color: var(--color-ok);
+  background: var(--color-ok-soft);
   border-color: transparent;
 }
 
 .scd-rozet.is-orta {
-  color: #d97706;
-  background: #fef3c7;
+  color: var(--color-warn);
+  background: var(--color-warn-soft);
   border-color: transparent;
 }
 
@@ -201,17 +201,17 @@
 }
 
 .scd-seg-d {
-  background: #16a34a;
+  background: var(--color-ok);
   transition: width 0.3s ease;
 }
 
 .scd-seg-d2 {
-  background: #2563eb;
+  background: var(--color-accent);
   transition: width 0.3s ease;
 }
 
 .scd-seg-y {
-  background: #dc2626;
+  background: var(--color-bad);
   transition: width 0.3s ease;
 }
 
@@ -234,7 +234,7 @@
   align-items: flex-start;
   gap: 8px;
   padding: 8px 10px;
-  background: var(--color-surface, #fff);
+  background: var(--color-white);
   border: 1px solid var(--color-line);
   border-radius: 8px;
   font-size: 12px;
@@ -304,7 +304,7 @@
 }
 
 .scd-btn-devam.is-ikincil {
-  background: var(--color-surface, #fff);
+  background: var(--color-white);
   border: 1px solid var(--color-line);
   color: var(--color-text);
 }
@@ -410,7 +410,7 @@
 }
 
 .scd-kpi-kart {
-  background: var(--color-canvas, #fafbfc);
+  background: var(--color-canvas);
   border: 1px solid var(--color-line);
   border-radius: 10px;
   padding: 10px;
@@ -451,7 +451,7 @@
 }
 
 .scd-tablo th {
-  background: var(--color-canvas, #fafbfc);
+  background: var(--color-canvas);
   padding: 8px 12px;
   text-align: left;
   font-weight: 700;
@@ -498,5 +498,5 @@
 .scd-brans-prog > i {
   display: block;
   height: 100%;
-  background: #16a34a;
+  background: var(--color-ok);
 }

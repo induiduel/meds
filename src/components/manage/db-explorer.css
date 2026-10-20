@@ -1,0 +1,70 @@
+/* Yönetim › Veritabanı gezgini (ManageDatabaseExplorer) ve Kısayollar (ManageShortcuts) */
+.dbx-grid { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 14px; min-width: 0; }
+@media (max-width: 860px) { .dbx-grid { grid-template-columns: minmax(0, 1fr); } .dbx-side ul { max-height: 180px; } }
+.dbx-side { min-width: 0; }
+.dbx-side ul { list-style: none; margin: 8px 0 0; padding: 0; max-height: 64vh; overflow: auto; }
+.dbx-t {
+  width: 100%; display: flex; justify-content: space-between; gap: 8px; align-items: center; border: 0; background: none;
+  padding: 6px 8px; border-radius: 8px; font: inherit; font-size: 13px; color: var(--color-ink); cursor: pointer; text-align: left;
+}
+.dbx-t .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; }
+.dbx-t .n { flex-shrink: 0; color: var(--color-ink-3); font-size: 11.5px; font-variant-numeric: tabular-nums; }
+.dbx-t:hover { background: var(--color-accent-soft); }
+.dbx-t.is-on { background: var(--color-ink); color: var(--color-white); }
+.dbx-t.is-on .n { color: inherit; opacity: .75; }
+.dbx-t:focus-visible, .dbx-link:focus-visible, .dbx-table tr:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.dbx-main { min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.dbx-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.dbx-head h3 { margin: 0; flex: 1 1 260px; font-size: 15px; font-weight: 700; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; min-width: 0; }
+.dbx-head h3 small { display: block; font-family: inherit; font-weight: 500; font-size: 11.5px; color: var(--color-ink-3); font-family: system-ui, sans-serif; }
+.dbx-bar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.dbx-grow { flex: 1 1 200px; min-width: 0; }
+.dbx-search {
+  display: flex; align-items: center; gap: 6px; height: 32px; padding: 0 9px; border: 1px solid var(--color-line); border-radius: 8px; min-width: 0;
+}
+.dbx-search svg { width: 14px; height: 14px; color: var(--color-ink-3); flex-shrink: 0; }
+.dbx-search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font: inherit; font-size: 13px; color: var(--color-ink); }
+.dbx-search:focus-within { border-color: var(--color-accent); }
+.dbx-sel { height: 32px; border: 1px solid var(--color-line); border-radius: 8px; background: transparent; color: var(--color-ink); font: inherit; font-size: 13px; padding: 0 8px; max-width: 100%; }
+.dbx-tablewrap { overflow: auto; max-height: 62vh; border: 1px solid var(--color-line); border-radius: 10px; }
+.dbx-table { border-collapse: collapse; font-size: 12.5px; min-width: 100%; }
+.dbx-table th { position: sticky; top: 0; z-index: 1; background: var(--color-white); border-bottom: 1px solid var(--color-line); text-align: left; padding: 0; white-space: nowrap; }
+.dbx-table th button, .dbx-table th span { display: block; width: 100%; border: 0; background: none; font: inherit; font-weight: 600; color: var(--color-ink-2, var(--color-ink)); padding: 7px 10px; text-align: left; cursor: pointer; }
+.dbx-table td { padding: 6px 10px; border-bottom: 1px solid var(--color-line); max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--color-ink); }
+.dbx-table td.is-null { color: var(--color-ink-3); }
+.dbx-table tbody tr { cursor: pointer; }
+.dbx-table tbody tr:hover td { background: var(--color-accent-soft); }
+.dbx-pager { display: flex; align-items: center; gap: 8px; font-size: 12.5px; flex-wrap: wrap; }
+.dbx-muted { color: var(--color-ink-3); font-size: 12.5px; margin: 0; }
+.dbx-err { color: var(--color-danger, #b91c1c); font-size: 13px; margin: 0 0 8px; }
+.dbx-warn { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0; padding: 8px 10px; border-radius: 8px; font-size: 12.5px; background: color-mix(in srgb, var(--color-warn, #b45309) 12%, transparent); color: var(--color-ink); }
+.dbx-warn svg { width: 15px; height: 15px; color: var(--color-warn, #b45309); flex-shrink: 0; }
+.dbx-link { border: 0; background: none; padding: 0; font: inherit; color: var(--color-accent); text-decoration: underline; cursor: pointer; }
+.dbx-form { display: flex; flex-direction: column; gap: 10px; }
+.dbx-field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.dbx-field > span { font-size: 12.5px; font-weight: 600; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--color-ink); }
+.dbx-field > span small { font-weight: 400; color: var(--color-ink-3); font-family: system-ui, sans-serif; }
+.dbx-field input, .dbx-field textarea, .dbx-sqlbox {
+  width: 100%; border: 1px solid var(--color-line); border-radius: 8px; padding: 7px 9px; font: 12.5px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: transparent; color: var(--color-ink); resize: vertical; min-width: 0;
+}
+.dbx-field input:focus, .dbx-field textarea:focus, .dbx-sqlbox:focus { outline: 2px solid var(--color-accent); outline-offset: 0; }
+.dbx-sql { display: flex; flex-direction: column; gap: 8px; }
+.dbx-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.dbx-ic { width: 13px; height: 13px; vertical-align: -2px; }
+.dbx-sql kbd { font-size: 10.5px; opacity: .7; margin-left: 4px; }
+
+/* Kısayollar */
+.ksy { display: flex; flex-direction: column; gap: 14px; }
+.ksy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
+.ksy-card {
+  display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border: 1px solid var(--color-line); border-radius: 10px;
+  color: var(--color-ink); text-decoration: none; background: none; font: inherit; text-align: left; cursor: pointer; min-width: 0;
+}
+.ksy-card:hover { border-color: var(--color-accent); background: var(--color-accent-soft); }
+.ksy-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.ksy-card svg { width: 17px; height: 17px; flex-shrink: 0; margin-top: 1px; color: var(--color-accent); }
+.ksy-card b { display: block; font-size: 13px; font-weight: 600; }
+.ksy-card small { display: block; font-size: 11.5px; color: var(--color-ink-3); overflow-wrap: anywhere; }
+.ksy-cmd { display: flex; gap: 6px; align-items: center; font-size: 12px; min-width: 0; }
+.ksy-cmd code { flex: 1; min-width: 0; overflow-x: auto; white-space: nowrap; padding: 6px 8px; border-radius: 7px; background: color-mix(in srgb, var(--color-ink) 6%, transparent); }

@@ -222,3 +222,34 @@ button.pp-tile:hover { border-color: var(--color-line-2); background: var(--colo
 .pp-form-grid label { display: flex; flex-direction: column; gap: 3px; font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); }
 .pp-form .ms-btn { align-self: flex-start; }
 .pp-danger { margin: 0 16px 16px; padding: 10px 12px; border: 1px solid var(--color-bad-soft); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 12.5px; color: var(--color-ink-3); }
+
+/* ---------- Kişiler › Çalışma (PersonStudy) ---------- */
+.ps-study .ps-small { font-size: 15px; }
+.ps-seg { display: flex; flex-wrap: wrap; gap: 6px; }
+.ps-bar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 10px; }
+.ps-bar .ps-q { flex: 1 1 200px; min-width: 0; }
+.ps-sel {
+  height: 32px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-surface, transparent);
+  color: var(--color-ink); font: inherit; font-size: 13px; padding: 0 8px; max-width: 100%;
+}
+.ps-sel:focus-visible, .ps-num:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.ps-durum.is-bitti { color: var(--color-ok, #15803d); font-weight: 600; }
+.ps-durum.is-tekrar { color: var(--color-warn); font-weight: 600; }
+.ps-num { width: 72px; height: 30px; border: 1px solid var(--color-line); border-radius: 7px; padding: 0 6px; text-align: right; font: inherit; font-variant-numeric: tabular-nums; background: transparent; color: var(--color-ink); }
+.ps-table td { vertical-align: middle; }
+.ps-table .n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ps-konu { min-width: 180px; max-width: 360px; }
+.ps-konu b { display: block; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ps-konu small { display: block; color: var(--color-ink-3); font-size: 11.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ps-konu a { color: inherit; text-decoration: none; }
+.ps-konu a:hover b { text-decoration: underline; }
+.ps-pct { color: var(--color-ink-3); font-size: 11px; }
+.ps-act { white-space: nowrap; text-align: right; }
+.ps-act > * + * { margin-left: 4px; }
+.ps-barcol { width: 28%; min-width: 80px; }
+.ps-barcol .pp-meter-bar { display: block; }
+.ps-note { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 10px 0 0; font-size: 12px; }
+.ps-note svg { width: 13px; height: 13px; }
+.m12-linkbtn { border: 0; background: none; padding: 2px 4px; margin: -2px -4px; border-radius: 6px; cursor: pointer; color: inherit; font: inherit; white-space: nowrap; }
+.m12-linkbtn:hover { background: var(--color-accent-soft); }
+.m12-linkbtn:focus-visible { outline: 2px solid var(--color-accent); }

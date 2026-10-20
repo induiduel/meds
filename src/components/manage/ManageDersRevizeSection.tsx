@@ -115,7 +115,7 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
   const yukle = async () => {
     const r = await api('/taslaklar');
     if (!r.ok) {
-      setHata((r.data as any)?.hata || 'Revize taslakları alınamadı.');
+      setHata((r.data as any)?.hata || (r as any).error || 'Revize taslakları alınamadı.');
       setListe([]);
       return;
     }
@@ -177,7 +177,7 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
     setBusy(true);
     const r = await api(`/taslak/${t.is_id}/islem`, { method: 'POST', body: JSON.stringify({ islem }) });
     setBusy(false);
-    if (!r.ok) return toast.error((r.data as any)?.hata || 'İşlem başlatılamadı.');
+    if (!r.ok) return toast.error((r.data as any)?.hata || (r as any).error || 'İşlem başlatılamadı.');
     toast.success(islem === 'kaldir' ? 'Taslak kaldırıldı.' : 'Sıraya alındı; kaynaklara yazılıp site derlenecek (birkaç dakika).');
     yukle();
   };
@@ -189,7 +189,7 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
     setBusy(true);
     const r = t ? await api(`/taslak/${t.is_id}/yeniden`, { method: 'POST', body: '{}' }) : await api('/yeniden', { method: 'POST', body: '{}' });
     setBusy(false);
-    if (!r.ok) return toast.error((r.data as any)?.hata || 'Yeniden gönderilemedi.');
+    if (!r.ok) return toast.error((r.data as any)?.hata || (r as any).error || 'Yeniden gönderilemedi.');
     toast.success(t ? 'Yeniden sıraya alındı.' : `${(r.data?.alinan || []).length} taslak yeniden sıraya alındı.`);
     yukle();
   };
@@ -207,7 +207,7 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
     setBusy(true);
     const r = await api('/toplu', { method: 'POST', body: '{}' });
     setBusy(false);
-    if (!r.ok) return toast.error((r.data as any)?.hata || 'Toplu gönderim başlatılamadı.');
+    if (!r.ok) return toast.error((r.data as any)?.hata || (r as any).error || 'Toplu gönderim başlatılamadı.');
     const d = r.data || {};
     toast.success(`${(d.alinan || []).length} taslak sıraya alındı${d.atlanan?.length ? `, ${d.atlanan.length} atlandı` : ''}.`);
     yukle();

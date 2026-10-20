@@ -36,6 +36,8 @@ export interface PeopleDeps {
   /** Yalnız yöneticilere SSE (veritabanı kapalıyken doğrudan yayın için) */
   broadcastAdmin: (event: string, data: any) => void;
   oracleApiUrl: string;
+  /** Yönetici bir profil yedeğini düzenledi: kullanıcının cihazlarına `user_data_changed` + meds-pg yansısı */
+  onBackupEdited?: (uid: string, bundle: Any) => void;
 }
 
 const clip = (v: unknown, n: number) => String(v ?? '').replace(/\s+/g, ' ').trim().slice(0, n);
@@ -51,7 +53,7 @@ const GENERIC_NAMES = new Set(['', 'öğrenci', 'anonim', 'anonim öğrenci', 't
 /* Erişim                                                              */
 /* ------------------------------------------------------------------ */
 
-function isLoopback(req: express.Request) {
+export function isLoopback(req: express.Request) {
   const ip = String(req.socket?.remoteAddress || '');
   // Tünel/Caddy arkasındaki istekler de loopback'ten gelir: vekil başlığı varsa dış istek sayılır
   if (req.headers['cf-connecting-ip'] || req.headers['x-forwarded-for']) return false;
@@ -393,6 +395,7 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
       const b = readJson<Any | null>(path.join(backupsDir, f), null);
       if (!b?.uid) continue;
       const prev = byUid.get(b.uid);
+      Object.defineProperty(b, '__file', { value: path.join(backupsDir, f), enumerable: false });
       if (!prev || String(b.serverSavedAt || '') > String(prev.serverSavedAt || '')) byUid.set(b.uid, b);
     }
     return [...byUid.values()];
@@ -639,6 +642,75 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
     listCache = null;
   };
 
+  /* ---------------- Çalışma takibi (kv medsoru_calisma_takip_v1 + etkinlik günlüğü) ---------------- */
+  const CALISMA_KEY = 'medsoru_calisma_takip_v1';
+  const kvJson = (b: Any | null, key: string, fb: any) => {
+    try {
+      const r = b?.kv?.[key];
+      return r && typeof r.v === 'string' ? JSON.parse(r.v) : fb;
+    } catch {
+      return fb;
+    }
+  };
+  const gunTr = (d = new Date()) => new Date(d.getTime() + 3 * 3600_000).toISOString().slice(0, 10);
+  const calismaVeri = (b: Any | null): { k: Record<string, Any>; g: Record<string, Record<string, number>> } => {
+    const t = kvJson(b, CALISMA_KEY, null);
+    return { k: t?.k && typeof t.k === 'object' ? t.k : {}, g: t?.g && typeof t.g === 'object' ? t.g : {} };
+  };
+  /** Liste satırı için kısa özet: toplam/7 gün çalışma, konu ve bitti sayısı, modül dağılımı */
+  const calismaOzet = (b: Any | null) => {
+    const { k, g } = calismaVeri(b);
+    const hafta = new Set(Array.from({ length: 7 }, (_, i) => gunTr(new Date(Date.now() - i * 86400_000))));
+    const modul: Record<string, number> = {};
+    let sn = 0;
+    let haftaSn = 0;
+    for (const [m, gunler] of Object.entries(g)) {
+      for (const [d, s] of Object.entries(gunler || {})) {
+        const v = Number(s) || 0;
+        modul[m] = (modul[m] || 0) + v;
+        sn += v;
+        if (hafta.has(d)) haftaSn += v;
+      }
+    }
+    const kayitlar = Object.values(k);
+    // Günlük sayaç yalnız son 120 günü tutar: konu toplamı daha büyükse onu kullan
+    const konuSn = kayitlar.reduce((a, r: any) => a + (Number(r?.sn) || 0), 0);
+    return {
+      sn: Math.max(sn, konuSn),
+      haftaSn,
+      konu: kayitlar.length,
+      bitti: kayitlar.filter((r: any) => r?.durum === 'bitti').length,
+      soru: kayitlar.reduce((a, r: any) => a + (Number(r?.soru) || 0), 0),
+      modul,
+      son: kayitlar.reduce((m: string, r: any) => (String(r?.sonAt || '') > m ? String(r.sonAt) : m), '') || null,
+    };
+  };
+  /** Ayrıntı: konu listesi, gün × modül, sayfa ziyaretleri ve son konumlar */
+  const calismaAyrinti = (b: Any | null) => {
+    const { k, g } = calismaVeri(b);
+    const konular = Object.entries(k)
+      .map(([id, r]: [string, any]) => {
+        const i = id.indexOf(':');
+        return { id, modul: i > 0 ? id.slice(0, i) : 'diger', konu: i > 0 ? id.slice(i + 1) : id, sn: Number(r?.sn) || 0, soru: Number(r?.soru) || 0, durum: r?.durum || null, tur: Number(r?.tur) || 0, ilkAt: r?.ilkAt || null, sonAt: r?.sonAt || null, bittiAt: r?.bittiAt || null, adm: r?.adm || null };
+      })
+      .sort((x, y) => String(y.sonAt || '').localeCompare(String(x.sonAt || '')));
+    const gunMap = new Map<string, Record<string, number>>();
+    for (const [m, gunler] of Object.entries(g)) for (const [d, s] of Object.entries(gunler || {})) {
+      const row = gunMap.get(d) || {};
+      row[m] = (row[m] || 0) + (Number(s) || 0);
+      gunMap.set(d, row);
+    }
+    const gunluk = [...gunMap.entries()].map(([day, m]) => ({ day, ...m, toplam: Object.values(m).reduce((a, v) => a + v, 0) })).sort((x, y) => y.day.localeCompare(x.day));
+    const ziyaretRaw = kvJson(b, 'medsoru_etkinlik_v1', []);
+    const ziyaret = (Array.isArray(ziyaretRaw) ? ziyaretRaw : []).slice(-300).reverse();
+    const konumRaw = kvJson(b, 'medsoru_son_konum_v1', { sayfalar: {} });
+    const konum = Object.entries<any>(konumRaw?.sayfalar || {})
+      .map(([p, v]) => ({ p, ...v }))
+      .sort((x: any, y: any) => (Number(y.at) || 0) - (Number(x.at) || 0))
+      .slice(0, 100);
+    return { ozet: calismaOzet(b), konular, gunluk, ziyaret, konum, son: konumRaw?.son || null, kvAt: b?.kv?.[CALISMA_KEY]?.at || null };
+  };
+
   const buildList = async () => {
     if (listCache && Date.now() - listCache.at < 4000) return listCache.data;
     const ps = people();
@@ -690,6 +762,7 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
         deviceNames: devs.slice(0, 4).map((d) => d.label),
         totalSeconds: devs.reduce((a, d) => a + Number(d.active_seconds || 0), 0) || studySeconds(p.backup),
         weekSeconds: week,
+        study: calismaOzet(p.backup) as ReturnType<typeof calismaOzet> | null,
         accuracy: score.accuracy,
         testCount: score.testCount,
         counts: {
@@ -711,6 +784,7 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
       for (const e of eventCounts) if (e.who === `d:${d.device_id}`) counts[e.kind] = (counts[e.kind] || 0) + e.n;
       rows.push({
         key: `d:${d.device_id}`,
+        study: null,
         kind: 'guest',
         uid: null,
         email: null,
@@ -748,7 +822,7 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
     for (const [who, o] of orphan) {
       const c = o.counts;
       rows.push({
-        key: `x:${who}`, kind: 'guest', uid: who.startsWith('d:') ? null : who, email: who.includes('@') ? who : null,
+        key: `x:${who}`, study: null, kind: 'guest', uid: who.startsWith('d:') ? null : who, email: who.includes('@') ? who : null,
         name: who.startsWith('d:') ? 'Kayıtsız cihaz' : 'Kayıtsız kimlik', studentNumber: null, phone: null, role: 'guest', photoURL: null,
         createdAt: null, lastSeen: o.last, online: false, deviceCount: 0, deviceNames: [], totalSeconds: 0, weekSeconds: 0, accuracy: null, testCount: 0,
         counts: { comment: c.comment || 0, report: c.report || 0, question: c.question || 0, fragment: c.fragment || 0, option: c.option || 0, like: c.like || 0, note: c.note || 0, events: Object.values(c).reduce((a, n) => a + n, 0) },
@@ -837,6 +911,7 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
         sessions: facts.devices.reduce((a, d) => a + Number(d.sessions || 0), 0),
       },
       score: scoreSummary(b),
+      calisma: calismaAyrinti(b),
       study: {
         progress: Object.keys(b?.stats?.studyProgress || {}).length,
         review: Object.keys(b?.stats?.studyReview || {}).length,
@@ -913,6 +988,58 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
       deviceOwner.delete(id);
       invalidate();
       res.json({ success: true });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || String(e) });
+    }
+  });
+
+  // Çalışma kaydını düzenle: konu durumu (bitti/açık/tekrar), süre, soru; konu ya da tümünü sıfırla.
+  // Yazılan kayıt `adm` damgası taşır: öğrencinin cihazındaki eski (daha büyük) değer bunu ezmez (userKvSync).
+  app.patch('/api/admin/people/:key/calisma', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    try {
+      const key = String(req.params.key);
+      const bare = lc(key.replace(/^u:/, ''));
+      const p = people().find((x) => x.key === key) || people().find((x) => x.ids.has(key.replace(/^u:/, '')) || x.ids.has(bare));
+      const b = p?.backup;
+      const file: string | undefined = b?.__file;
+      if (!p || !b || !file) return res.status(404).json({ error: 'Bu kişinin profil yedeği yok; çalışma kaydı düzenlenemez.' });
+      const body: Any = req.body || {};
+      const ops: Any[] = Array.isArray(body.ops) ? body.ops.slice(0, 500) : [];
+      const now = new Date().toISOString();
+      const { k, g } = calismaVeri(b);
+      let n = 0;
+      if (body.hepsiniSifirla) {
+        for (const id of Object.keys(k)) k[id] = { sn: 0, soru: 0, durum: 'acik', tur: 0, sonAt: now, adm: now };
+        n = Object.keys(k).length;
+      }
+      for (const op of ops) {
+        const id = String(op?.id || '');
+        if (!/^(sesli|ogren|cozucu|onem):.{1,200}$/.test(id)) continue;
+        const cur: Any = k[id] && typeof k[id] === 'object' ? { ...k[id] } : { sn: 0, soru: 0, ilkAt: now };
+        if (op.sifirla) Object.assign(cur, { sn: 0, soru: 0, durum: 'acik', tur: 0, bittiAt: undefined });
+        if (op.durum === 'bitti') Object.assign(cur, { durum: 'bitti', bittiAt: now });
+        else if (op.durum === 'acik') Object.assign(cur, { durum: 'acik', bittiAt: undefined });
+        else if (op.durum === 'tekrar') Object.assign(cur, { durum: 'tekrar', tur: (Number(cur.tur) || 0) + 1, bittiAt: undefined });
+        else if (op.durum === null) delete cur.durum;
+        if (op.sn != null && Number.isFinite(Number(op.sn))) cur.sn = Math.max(0, Math.round(Number(op.sn)));
+        if (op.soru != null && Number.isFinite(Number(op.soru))) cur.soru = Math.max(0, Math.round(Number(op.soru)));
+        cur.sonAt = now;
+        cur.adm = now;
+        k[id] = JSON.parse(JSON.stringify(cur));
+        n++;
+      }
+      if (!n) return res.status(400).json({ error: 'Değiştirilecek konu yok.' });
+      const fresh = JSON.parse(fs.readFileSync(file, 'utf8'));
+      fresh.kv = fresh.kv && typeof fresh.kv === 'object' ? fresh.kv : {};
+      fresh.kv[CALISMA_KEY] = { v: JSON.stringify({ k, g }), at: now };
+      fresh.serverSavedAt = now;
+      const tmp = `${file}.${process.pid}.${Date.now()}.tmp`;
+      fs.writeFileSync(tmp, JSON.stringify(fresh), 'utf8');
+      fs.renameSync(tmp, file);
+      invalidate();
+      deps.onBackupEdited?.(String(fresh.uid || p.uid || ''), fresh);
+      res.json({ success: true, changed: n });
     } catch (e: any) {
       res.status(500).json({ error: e?.message || String(e) });
     }

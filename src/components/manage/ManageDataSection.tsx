@@ -558,16 +558,30 @@ export const ManageDataSection: React.FC<Props> = ({
       } else if (ds.id === 'summaries') {
         await ApiService.adminUpdateSummary(adminEmail, id, payload);
         await load();
-      } else if (ds.id === 'decks' || ds.id === 'glossary' || ds.id === 'cards') {
+      } else if (ds.id === 'decks' || ds.id === 'glossary') {
         // Gerçek kayıt: veri kataloğu ucu (izinli alanlar, yedekli atomik yazma). Eskiden yalnız ekrandaki
         // satır değişiyor ama "Kaydedildi" deniyordu — veri hiç yazılmıyordu.
         const entity = ds.id;
-        const r = await safeJsonFetch(`/api/admin/catalog/${entity}/${encodeURIComponent(entity === 'glossary' ? String(openRow._key || id).toLocaleLowerCase('tr') : id)}`, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
-          body: JSON.stringify({ patch: payload }),
-        });
-        if (!r.ok) throw new Error(r.error || (r.data as any)?.error || 'Sunucu kaydı reddetti');
+        // Sözlük anahtarı kaynakta küçük harfli terimdir; büyük "İ/I" iki biçimde de küçültülmüş olabilir
+        // (tr: "i"/"ı", en: "i̇"), bu yüzden adaylar sırayla denenir (eskiden ~115 terim "Terim bulunamadı" veriyordu).
+        const raw = String(openRow._key || id);
+        const keys = entity === 'glossary'
+          ? Array.from(new Set([raw, raw.toLocaleLowerCase('tr'), raw.toLowerCase()]))
+          : [id];
+        let r: Awaited<ReturnType<typeof safeJsonFetch>> | null = null;
+        for (const k of keys) {
+          r = await safeJsonFetch(`/api/admin/catalog/${entity}/${encodeURIComponent(k)}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+            body: JSON.stringify({ patch: payload }),
+          });
+          if (r.ok || !/bulunamad/i.test(String((r.data as any)?.error || r.error || ''))) break;
+        }
+        if (!r?.ok) throw new Error((r?.data as any)?.error || r?.error || 'Sunucu kaydı reddetti');
+      } else if (ds.id === 'cards') {
+        // Bu tablo destelerin slayt kartlarıdır (deste dosyasının içinde); tek tek düzenleme ucu yok.
+        // Eskiden ezber kartları (question_cards) ucuna yanlış kimlikle gidip "Kart bulunamadı" alıyordu.
+        throw new Error('Deste kartları buradan düzenlenemez: Öğren destesini düzenleyin ya da Veri kataloğu → Ezber kartları kullanın.');
       } else {
         throw new Error('Bu veri kümesi buradan düzenlenemez. Değerlendirme ve etiket için Veri kataloğunu kullanın.');
       }

@@ -29,7 +29,7 @@ v12 korunur, v13 isteğe bağlıdır (açılışta sorulur).
 | 7 | Sınav sayfaları: Sınav çalışması, En önemliler, Spotlar, Check Up (patoloji/genetik), Olası sorular, Örnek sorular, Geçmiş kurullar | ✅ sütun hizası (dar ortalı kutular kalktı), cx-dock şeridi ada |
 | 8 | Kişisel/topluluk: Profil ve ayarlar, İstatistik, Bitirdiklerim, Çevrimdışı, Çalışma masam, Sıralama, Harita, Müzik, Güncellemeler | ✅ sütun hizası, harita sakin |
 | 9 | Giriş/kayıt, tanıtım turu, giriş uyarısı, hata/boş/yükleniyor durumları | ⏳ |
-| 10 | Yönetim konsolu (`/manage` tüm bölümler) | ⏳ |
+| 10 | Yönetim konsolu (`/manage` tüm bölümler) | ✅ `styles/v13/manage.css`: menü yüzen ada, üst çubuk tek satır kapsül, telefonda 2 satır araç; 22 bölüm × 390/1440 taşma 0 |
 | 11 | Son tarama: tüm rotalar × 9 boyut × 3 tema; dokunma/adsız düğme/kontrast raporu sıfır | ⏳ |
 
 Her aşama sonunda: `npx tsc --noEmit`, `npx vite build`, başsız Chrome taraması (`scripts/perf/sayfa_tarama.mjs`, SEED v13),

@@ -762,7 +762,7 @@ export const runNextAutoRepair = async (): Promise<{ success: boolean; message?:
     method: 'POST',
     headers: { 'Content-Type': 'application/json', ...getAdminHeader() },
   });
-  return res.data || { success: false, error: res.error };
+  return res.ok && res.data ? res.data : { success: false, error: res.error || 'Sunucu yanıt vermedi.' };
 };
 
 export const runAllAutoRepair = async (): Promise<{ success: boolean; message?: string; count?: number; error?: string }> => {
@@ -770,7 +770,7 @@ export const runAllAutoRepair = async (): Promise<{ success: boolean; message?: 
     method: 'POST',
     headers: { 'Content-Type': 'application/json', ...getAdminHeader() },
   });
-  return res.data || { success: false, error: res.error };
+  return res.ok && res.data ? res.data : { success: false, error: res.error || 'Sunucu yanıt vermedi.' };
 };
 
 export const rollbackAutoRepair = async (id: string): Promise<{ success: boolean; message?: string; error?: string }> => {
@@ -778,7 +778,7 @@ export const rollbackAutoRepair = async (id: string): Promise<{ success: boolean
     method: 'POST',
     headers: { 'Content-Type': 'application/json', ...getAdminHeader() },
   });
-  return res.data || { success: false, error: res.error };
+  return res.ok && res.data ? res.data : { success: false, error: res.error || 'Sunucu yanıt vermedi.' };
 };
 
 export const retryAutoRepair = async (id: string): Promise<{ success: boolean; item?: AutoRepairItemClient; error?: string }> => {
@@ -786,7 +786,7 @@ export const retryAutoRepair = async (id: string): Promise<{ success: boolean; i
     method: 'POST',
     headers: { 'Content-Type': 'application/json', ...getAdminHeader() },
   });
-  return res.data || { success: false, error: res.error };
+  return res.ok && res.data ? res.data : { success: false, error: res.error || 'Sunucu yanıt vermedi.' };
 };
 
 export const toggleAutoRepairWorker = async (paused: boolean): Promise<{ success: boolean; isWorkerActive?: boolean }> => {
@@ -795,7 +795,8 @@ export const toggleAutoRepairWorker = async (paused: boolean): Promise<{ success
     headers: { 'Content-Type': 'application/json', ...getAdminHeader() },
     body: JSON.stringify({ paused }),
   });
-  return res.data || { success: false };
+  if (!res.ok || !res.data?.success) throw new Error(res.error || 'Sunucu ayarı yazamadı.');
+  return res.data;
 };
 
 export const deleteAutoRepairItem = async (id: string): Promise<boolean> => {
@@ -803,7 +804,8 @@ export const deleteAutoRepairItem = async (id: string): Promise<boolean> => {
     method: 'DELETE',
     headers: getAdminHeader(),
   });
-  return Boolean(res.ok && res.data?.success);
+  if (!res.ok || !res.data?.success) throw new Error(res.error || 'Sunucu kaydı silemedi.');
+  return true;
 };
 
 export const clearProcessedAutoRepair = async (): Promise<{ success: boolean; clearedCount?: number; message?: string }> => {
@@ -811,7 +813,7 @@ export const clearProcessedAutoRepair = async (): Promise<{ success: boolean; cl
     method: 'POST',
     headers: getAdminHeader(),
   });
-  return res.data || { success: false };
+  return res.ok && res.data ? res.data : { success: false, message: res.error || 'Sunucu yanıt vermedi.' };
 };
 
 export const bulkDeleteAutoRepair = async (ids: string[]): Promise<{ success: boolean; removedCount?: number; message?: string }> => {
@@ -820,5 +822,5 @@ export const bulkDeleteAutoRepair = async (ids: string[]): Promise<{ success: bo
     headers: { 'Content-Type': 'application/json', ...getAdminHeader() },
     body: JSON.stringify({ ids }),
   });
-  return res.data || { success: false };
+  return res.ok && res.data ? res.data : { success: false, message: res.error || 'Sunucu yanıt vermedi.' };
 };
