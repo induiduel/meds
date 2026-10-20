@@ -78,6 +78,15 @@ function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul
   const kurul = Number(/^k(\d+)-/.exec(d.key)?.[1]) || 0;
   const modul = MODUL_DERS[d.key];
   if (modul) return { brans: modul[0], bransNo: modul[1], kurul };
+  // Kurul 2+: branş ve branş içi numara YALNIZ ders kayıt defterinden (kod "2n07" → 7). Drive dosya adındaki "33)"
+  // numarası çakışabiliyor (Kurul 1: Meme Kanseri ile Memenin Benign ikisi de 33) — KURUL2_YAPILMAYACAK_HATALAR H16.
+  const dk = /^k([2-6])-(\d{2})/.exec(d.key);
+  if (dk) {
+    const kd = oku<{ dersler?: { id: string; kod: string; brans: string }[] }>(path.join(process.cwd(), 'src', 'data', 'dersler', `k${dk[1]}.json`), {});
+    const r = kd.dersler?.find((x) => x.id === `k${dk[1]}-${dk[2]}`);
+    const no = Number(/(\d+)$/.exec(r?.kod || '')?.[1]);
+    if (r && no) return { brans: r.brans, bransNo: no, kurul };
+  }
   const elle = BRANS_DUZELT[d.key];
   if (elle) return { brans: elle[0], bransNo: elle[1], kurul, ...(elle[2] ? { parca: elle[2] } : {}) };
   const p = P.hizalama(d.key);

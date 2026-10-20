@@ -87,6 +87,9 @@ export function isIosWebKit(): boolean {
 }
 
 export function wasRecentlyScrollingOrTouching(thresholdMs = 1200): boolean {
+  // Kaydırmanın tarayıcı tam ekranını kendiliğinden kapatması yalnız iOS/PWA sorunudur; orada native tam ekran
+  // hiç açılmaz. Diğer cihazlarda native çıkış (Esc, geri hareketi) her zaman kullanıcının isteğidir: uygulama da kapanır.
+  if (!shouldAvoidNativeFullscreen()) return false;
   return Date.now() - lastTouchOrScrollAt < thresholdMs;
 }
 

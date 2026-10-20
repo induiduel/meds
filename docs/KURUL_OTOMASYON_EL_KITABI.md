@@ -257,3 +257,8 @@ bildirim otomatik; gizleme/düzeltme kararı yöneticinin). Genetik sınav kamp�
 - **Sınav günü kontrol listesi** (bir kez, sınav günü 20:00): soru girişi, olası soru saatleri, ertesi sabah bakılacaklar;
   **ertesi gün**: olası soru setinin durumu (`scripts/olasi_soru/gece.sh`; işaret `meds_temp/olasi_soru/sinav_gunu_bildirimleri.json`).
 - Çıkmış anahtar çelişkisi → karantina önerisi; kamp kapıdan geçmezse; gece aşaması başarısızsa (sabah özetinde). Sağlık: kapı arızası, Kurul 2+ türev veri eksikliği (cümle/kelime zamanı, PDF işareti).
+
+### Sağlık kapıları ek (2026-10-20, H16–H17)
+- `saglik.py` artık ders kayıt defterinde kimlik/kod/branş numarası çiftini (`kayit_defteri`) ve EMA alt süreç okunuş
+  ayarını (`kapi_ariza`) denetler; ikisi de sabah özetinde sorun olarak görünür.
+- K2+ sesli ders listesinde branş numarası kayıt defterinden gelir (`canliDers.ts`); Drive `NN)` öneki kullanılmaz.

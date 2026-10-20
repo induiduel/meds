@@ -95,6 +95,31 @@ def kapi_oz_sinama():
     return sorun
 
 
+def kayit_defteri_sorunlari():
+    """H16: ders kimliği/kodu ve branş içi numara her kurulda tekil olmalı (Drive "33)" çakışması K1'de iki dersi aynı
+    numaraya düşürmüştü). Sesli ders listesi K2+ numarayı yalnız buradan alır (src/services/canliDers.ts)."""
+    sorun = []
+    for p in sorted((KOK / "meds/src/data/dersler").glob("k[1-6].json")):
+        ds = json.loads(p.read_text()).get("dersler") or []
+        for alan in ("id", "kod"):
+            g = [d[alan] for d in ds]
+            sorun += [f"{p.stem}: {alan} çift {x}" for x in sorted({x for x in g if g.count(x) > 1})]
+        bn = [(d["brans"], d["kod"].rstrip("0123456789"), int("".join(c for c in d["kod"][-2:] if c.isdigit()) or 0)) for d in ds]
+        sorun += [f"{p.stem}: {b} numara {n} çift" for b, _, n in sorted({x for x in bn if bn.count(x) > 1})]
+    return sorun
+
+
+def ema_alt_surec_okunusu():
+    """H17: ema_isci.sentezle alt süreçte çalışır; okunuş ayarı (uzun kısaltma / modül) orada da kurulmalı."""
+    import inspect, sys as _s
+    _s.path.insert(0, str(KOK / "meds/scripts/sesli_anlatim"))
+    try:
+        import ema_isci as E
+        return [] if "uzun_kisaltma_ayarla(" in inspect.getsource(E.sentezle) else ["ema_isci.sentezle okunuş ayarını kurmuyor"]
+    except Exception as e:  # noqa: BLE001
+        return [f"ema_isci yüklenemedi: {e}"]
+
+
 def main():
     s = {
         "zaman": time.strftime("%Y-%m-%dT%H:%M:%S"),
@@ -105,12 +130,13 @@ def main():
         "disk_bos_gb": round(shutil.disk_usage(str(KOK)).free / 1e9, 1),
     }
     s["oracle_ok"] = s["canli_api"] == 200 and s["oracle_ssh"]
-    s["kapi_ariza"] = kapi_oz_sinama()
+    s["kapi_ariza"] = kapi_oz_sinama() + ema_alt_surec_okunusu()
+    s["kayit_defteri"] = kayit_defteri_sorunlari()
     s["turev_eksik"] = turev_eksikleri() if s["canli_api"] == 200 else {"hata": "canlı API yok"}
     sorun = [k for k, ok in [("canli_api", s["canli_api"] == 200), ("oracle_ssh", s["oracle_ssh"]),
                              ("yerel_3000", s["yerel_3000"] == 200), ("embed_bge", s["embed_bge"] == "active"),
                              ("ema_isci", s["ema_isci"] == "active"), ("disk", s["disk_bos_gb"] >= 10),
-                             ("kapi_ariza", not s["kapi_ariza"]),
+                             ("kapi_ariza", not s["kapi_ariza"]), ("kayit_defteri", not s["kayit_defteri"]),
                              ("turev_eksik_k2", not (s["turev_eksik"].get("k2") or []))] if not ok]  # K1 eksikleri yalnız rapor
     s["sorun"] = sorun
     CIKTI.parent.mkdir(parents=True, exist_ok=True); CIKTI.write_text(json.dumps(s, ensure_ascii=False, indent=1))
