@@ -123,6 +123,15 @@ if grep -qE '^(package(-lock)?\.json|deploy/oracle/(Dockerfile\.oracle|docker-co
 # Sunucunun belleğe aldığı her şey: dist/, public/, ön yüz bileşenleri, belgeler dışındaki her değişiklik
 NEED_RESTART=$FORCE
 if grep -vE '^(dist/|public/|docs/|src/(components|screens|styles|pages)/|.*\.(tsx|css|md)$|guncelleme_notu\.json$|deploy/)' "$CHANGED" | grep -q .; then NEED_RESTART=1; fi
+# Sunucu kodu karması (2026-10-20): değişen dosya listesi yetmez — dosya Oracle'a başka bir yoldan (tek dosya rsync,
+# başka oturum) yeniden başlatmasız gelmiş olabilir; rsync saat damgasını da korur. Çalışan sunucunun yüklediği kodun
+# karması her yeniden başlatmada .sunucu_kod_karma'ya yazılır; Oracle'daki kodun karması farklıysa yeniden başlat.
+KOD_KARMA_KOMUT="cd $ORACLE_DIR && find server.ts src/services src/serverLectureNotes.ts src/config src/types -type f \( -name '*.ts' -o -name '*.json' \) 2>/dev/null | LC_ALL=C sort | xargs sha256sum | sha256sum | cut -c1-16"
+UZAK_KARMA="$($SSH "$ORACLE_USER@$ORACLE_HOST" "$KOD_KARMA_KOMUT" 2>/dev/null || true)"
+YUKLU_KARMA="$($SSH "$ORACLE_USER@$ORACLE_HOST" "cat $ORACLE_DIR/.sunucu_kod_karma 2>/dev/null" || true)"
+if [[ -n "$UZAK_KARMA" && "$UZAK_KARMA" != "$YUKLU_KARMA" ]]; then
+  echo "  sunucu kodu çalışan sürümden farklı ($YUKLU_KARMA → $UZAK_KARMA) — yeniden başlatılacak"; NEED_RESTART=1
+fi
 
 echo "==> [2/4] bütünlük: kritik dosya md5 karşılaştırma"
 KRITIK="deploy/oracle/docker-compose.oracle.yml deploy/oracle/Dockerfile.oracle server.ts package.json dist/index.html"
@@ -142,6 +151,9 @@ else
   echo "==> [3/4] yalnız ön yüz/statik → yeniden başlatma yok (dist/ diskten anında sunulur)"
 fi
 
+if [[ "$NEED_RESTART" == "1" || "$DO_IMAGE" == "1" ]]; then  # yüklenen kodun karması (bir sonraki dağıtım karşılaştırır)
+  $SSH "$ORACLE_USER@$ORACLE_HOST" "$KOD_KARMA_KOMUT > $ORACLE_DIR/.sunucu_kod_karma.tmp && mv $ORACLE_DIR/.sunucu_kod_karma.tmp $ORACLE_DIR/.sunucu_kod_karma" || true
+fi
 echo "==> [4/4] sağlık kontrolü (kapı üzerinden, en çok 120 sn)"
 $SSH "$ORACLE_USER@$ORACLE_HOST" 'for i in $(seq 1 60); do curl -sf -m 5 http://127.0.0.1:3000/api/health && exit 0; sleep 2; done; echo "sağlık kontrolü geçmedi"; docker logs meds-app --tail 40; exit 1' | head -c 2000
 echo
