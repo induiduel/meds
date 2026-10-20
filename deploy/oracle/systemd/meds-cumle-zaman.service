@@ -5,6 +5,9 @@ After=docker.service
 [Service]
 Type=oneshot
 User=ubuntu
+# Türev klasörler kapsayıcı (root) ve cihazdan sudo rsync (opc) tarafından da yazılıyor; ubuntu yazamayınca her ders
+# "Permission denied" alıp sessizce atlanıyordu (2026-10-20, 15 ders cümle zamanısız). "+" = root olarak, her çalıştırmada onar.
+ExecStartPre=+/bin/sh -c 'cd /home/ubuntu/medsor/meds/data/sesli_anlatim && mkdir -p cumle_zaman kelime_zaman isaret && chown -R ubuntu:ubuntu cumle_zaman kelime_zaman isaret'
 WorkingDirectory=/home/ubuntu/medsor/meds
 Environment=CUDA_VISIBLE_DEVICES= PYTHONUNBUFFERED=1 TZ=Europe/Istanbul MEDS_API=http://127.0.0.1:3000
 # Sanal ortam: python3 -m venv ~/medsor/venv-cumle && venv-cumle/bin/pip install numpy imageio-ffmpeg pymupdf (ARM ffmpeg dahil)

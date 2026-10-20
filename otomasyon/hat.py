@@ -117,6 +117,15 @@ def main():
                 continue
             if kod != 0:
                 dusen.add(s["id"]); kotu += 1
+        if dusen:  # sabah görülsün: başarısız aşamalar tek bildirimde (panel › bildirimler)
+            try:
+                from bildir import bildir
+                dr = json.loads(DURUM.read_text()) if DURUM.exists() else {}
+                bildir(f"Gece hattı: {len(dusen)} aşama başarısız",
+                       "\n".join(f"{i}: kod {dr.get(i, {}).get('kod')} {dr.get(i, {}).get('not', '')}".strip() for i in sorted(dusen))
+                       + "\nAyrıntı: Yönetim › Hat (/manage/hat), meds_temp/hat/hat.log")
+            except Exception as e:  # noqa: BLE001
+                print("bildirim gönderilemedi:", e)
         sys.exit(1 if kotu else 0)
     ap.print_help()
 

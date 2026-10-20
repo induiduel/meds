@@ -150,6 +150,15 @@ def a_hazirla(d, pk, W, kuru):
 
 
 def a_onem(d, pk, W, kuru):
+    r = _a_onem(d, pk, W, kuru)
+    if r == 0 and not kuru:
+        n = karantina_onerileri(d, W)
+        if n:
+            print(f"   {n} çıkmış anahtar çelişkisi → karantina önerisi + bildirim")
+    return r
+
+
+def _a_onem(d, pk, W, kuru):
     k = d["kod"]
     return kapili_claude(
         f"{SC}/TALIMAT_ONEM.md talimatını uygula. Çalışma klasörü: {W} (branş klasörü {W.name}, Kurul {d['kurul']} "
@@ -160,6 +169,32 @@ def a_onem(d, pk, W, kuru):
         f"{(KOK / pk['kaynak_md']).parent}/ — görsel ağırlıklı sayfaları Read ile görüntü olarak aç. "
         f"Kurul 2 kuralları: {MEDS}/docs/KURUL2_YAPILMAYACAK_HATALAR.md, TURKCE_USLUP_STANDARDI.md, SIK_ACIKLAMA_STANDARDI.md.",
         f"python3 {SC}/onem_dogrula.py {W}/onem/{k}.json", W, kuru)
+
+
+def karantina_onerileri(d, W):
+    """H10: yazar ajanın "anahtar_celiskili" diye elediği çıkmışlar (veritabanı anahtarı ders PDF'iyle çelişiyor).
+    Otomatik DÜZELTİLMEZ ve sitede otomatik GİZLENMEZ: öneri dosyasına yazılır + yöneticiye bildirim; karar yöneticinin."""
+    p = W / "onem" / f"{d['kod']}.json"
+    if not p.exists():
+        return 0
+    el = [x for x in json.loads(p.read_text()).get("elenen_cikmis") or [] if x.get("neden") == "anahtar_celiskili"]
+    if not el:
+        return 0
+    dosya = KOK / "meds_database_v2/ders_isci/cikmis_karantina_onerileri.jsonl"
+    dosya.parent.mkdir(parents=True, exist_ok=True)
+    eski = {json.loads(l)["id"] for l in dosya.read_text().splitlines() if l.strip()} if dosya.exists() else set()
+    yeni = [x for x in el if x["id"] not in eski]
+    with open(dosya, "a") as f:
+        for x in yeni:
+            f.write(json.dumps({"id": x["id"], "ders": d["id"], "kod": d["kod"], "not": x.get("not"),
+                                "zaman": dt.datetime.now().isoformat(timespec="seconds")}, ensure_ascii=False) + "\n")
+    if yeni:
+        sys.path.insert(0, str(MEDS / "otomasyon")); from bildir import bildir
+        bildir(f"Çıkmış anahtarı ders PDF'iyle çelişiyor ({len(yeni)} soru, {d['id']})",
+               "\n".join(f"{x['id']}: {x.get('not', '')}" for x in yeni)
+               + "\nSorular bu dersin çözücüsüne/önem listesine alınmadı. Sitede düzeltme/gizleme kararı yöneticinin "
+                 f"(öneri listesi: {dosya.relative_to(KOK)}).", hedef="cikmis-anahtar")
+    return len(yeni)
 
 
 def a_cozucu(d, pk, W, kuru):

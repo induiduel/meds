@@ -50,8 +50,11 @@ def turev_eksikleri(api="https://api.nofrostlife.com.tr"):
         sesli = [v for v in x.get("varyantlar") or [] if v.get("ses")]
         if not sesli:
             continue
-        eksik = [a for a, ok in (("cumleZaman", any(v.get("cumleZaman") for v in sesli)), ("isaret", bool(x.get("isaret"))))
-                 if not ok]
+        k2 = str(d["key"])[:2] in ("k2", "k3", "k4", "k5", "k6")
+        kontrol = [("cumleZaman", any(v.get("cumleZaman") for v in sesli)), ("isaret", bool(x.get("isaret")))]
+        if k2:  # kelime zamanlaması yalnız cihazda (GPU, meds-kelime-zaman-hat) üretilir: cihaz kapalıysa gecikir → görünür olsun
+            kontrol.append(("kelimeZaman", any(v.get("kelimeZaman") for v in sesli)))
+        eksik = [a for a, ok in kontrol if not ok]
         if eksik:
             out["k2" if str(d["key"])[:2] in ("k2", "k3", "k4", "k5", "k6") else "k1"].append(f"{d['key']}: {','.join(eksik)}")
     return out
