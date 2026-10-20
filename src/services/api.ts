@@ -2041,6 +2041,15 @@ export const ApiService = {
     consolidated.examYear = '2026-2027';
     consolidated.updatedAt = new Date().toISOString();
 
+    // Asıl kaynak sunucu: önce oraya yaz (hata gerçek mesajla gösterilir), sonra yerel kopya.
+    // Sunucu çapayı kaydeder, uyduları siler; meds-pg tetikleyicisi diğer sekmelere SSE ile yayar.
+    const r = await safeJsonFetch(`/api/admin/drafts/merge`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail || ADMIN_EMAIL },
+      body: JSON.stringify({ consolidated, mergedIds }),
+    });
+    if (!r.ok) throw new Error((r.data as any)?.error || r.error || `Sunucu birleştirmeyi kaydedemedi (HTTP ${r.status}).`);
+
     // Remove merged satellites from local database
     const mergedSet = new Set(mergedIds);
     db.questions = db.questions.filter((q) => !mergedSet.has(q.id));
@@ -2055,7 +2064,7 @@ export const ApiService = {
 
     saveLocalDb(db);
 
-    // Cloud DB sync (Supabase + Firestore + Local PC)
+    // İstemci önbellekleri (IndexedDB vb.) — sunucu zaten yazdı, burada hata yalnız uyarı
     try {
       await multiDbManager.saveQuestion(consolidated);
       for (const satId of mergedIds) {
@@ -2063,6 +2072,9 @@ export const ApiService = {
       }
     } catch (e) {
       console.warn('Draft merge cloud sync warning:', e);
+    }
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('medsoru:questions-changed', { detail: { eventType: 'MERGE', id: consolidated.id, removed: mergedIds } }));
     }
 
     return consolidated;

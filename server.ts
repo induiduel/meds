@@ -163,7 +163,7 @@ import { registerUserPushRoutes } from './src/services/userPushService.ts';
 import { registerPgAdminRoutes } from './src/services/pgAdminRoutes.ts';
 import { registerUserDataBackupRoutes, userEventHash, type ServerUserNotification } from './src/services/userDataBackupService.ts';
 import { registerPeopleInsights } from './src/services/peopleInsights.ts';
-import { initContentOverlay, resolveContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
+import { initContentOverlay, resolveContent, writableContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -8628,7 +8628,7 @@ app.post('/api/send-welcome-email', async (req, res) => {
 let summariesMetaCache: { mtime: number; data: any[] } | null = null;
 app.get('/api/summaries', (req, res) => {
   try {
-    const metaPath = path.resolve(__dirname, 'src', 'data', 'summaries_meta.json');
+    const metaPath = resolveContent(path.resolve(__dirname, 'src', 'data', 'summaries_meta.json'));
     if (fs.existsSync(metaPath)) {
       const mtime = fs.statSync(metaPath).mtimeMs;
       if (!summariesMetaCache || summariesMetaCache.mtime !== mtime) {
@@ -8669,8 +8669,10 @@ let cachedSummariesMap: Map<string, any> | null = null;
 function getCachedSummaryById(id: string) {
   if (!cachedSummariesMap) {
     const catalogPath = path.resolve(__dirname, 'data', 'lectureSummariesCatalog.json');
-    const fallbackPath = path.resolve(__dirname, 'src', 'data', 'lectureSummariesCatalog.json');
-    const targetPath = fs.existsSync(catalogPath) ? catalogPath : (fs.existsSync(fallbackPath) ? fallbackPath : null);
+    const srcPath = path.resolve(__dirname, 'src', 'data', 'lectureSummariesCatalog.json');
+    const overlayPath = resolveContent(srcPath);
+    // Panel düzenlemesi (canlı katman) her zaman önce; sonra data/, en son paketteki kopya
+    const targetPath = overlayPath !== srcPath ? overlayPath : fs.existsSync(catalogPath) ? catalogPath : (fs.existsSync(srcPath) ? srcPath : null);
     if (targetPath) {
       try {
         const data = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
@@ -8827,6 +8829,49 @@ app.put('/api/admin/questions/:id', requireAdmin, (req, res) => {
   res.json({ success: true, question });
 });
 
+// Taslak birleştirme: birleştirilmiş çapa sunucuya yazılır, uydular kalıcı olarak kaldırılır.
+// Eskiden birleştirme yalnız tarayıcının yerel kopyasında kalıyordu (multiDb hataları yutuluyordu).
+app.post('/api/admin/drafts/merge', requireAdmin, async (req, res) => {
+  try {
+    const consolidated = req.body?.consolidated;
+    const mergedIds: string[] = Array.isArray(req.body?.mergedIds) ? req.body.mergedIds.map(String).filter(Boolean) : [];
+    if (!consolidated || typeof consolidated !== 'object' || !consolidated.id) {
+      return res.status(400).json({ error: 'Birleştirilmiş taslak (consolidated) eksik.' });
+    }
+    if (!mergedIds.length) return res.status(400).json({ error: 'Birleştirilecek uydu taslak kimliği yok.' });
+    if (mergedIds.includes(String(consolidated.id))) return res.status(400).json({ error: 'Çapa taslak uydu listesinde olamaz.' });
+    const anchorId = String(consolidated.id);
+    let anchor: any = db.questions.find((q) => q.id === anchorId);
+    if (!anchor) {
+      if (!consolidated.committeeId) return res.status(404).json({ error: 'Çapa taslak sunucuda bulunamadı.' });
+      anchor = { id: anchorId };
+      db.questions.push(anchor);
+    }
+    Object.assign(anchor, consolidated, { id: anchorId, updatedAt: new Date().toISOString() });
+    const removed: string[] = [];
+    const mergedSet = new Set(mergedIds);
+    for (let i = db.questions.length - 1; i >= 0; i--) {
+      const q: any = db.questions[i];
+      if (!mergedSet.has(q.id)) continue;
+      rawLedger.allowRemoval(q.id, ledgerAdminActor(req), q, `taslak birleştirme → ${anchorId}`);
+      db.questions.splice(i, 1);
+      removed.push(q.id);
+    }
+    saveQuestionLive(anchor);
+    const cloud: Record<string, any> = {};
+    for (const id of mergedIds) {
+      try { cloud[id] = await deleteFromDb('questions', id); } catch (e: any) { cloud[id] = { error: e?.message || String(e) }; }
+      if (!pgOnline) {
+        broadcastRealtimeEvent('questions_changed', { id, eventType: 'DELETE', time: Date.now() });
+        broadcastRealtimeEvent('db_change', { table: 'questions', eventType: 'DELETE', new: null, old: { id, committee_id: anchor.committeeId } });
+      }
+    }
+    res.json({ success: true, question: anchor, removed, cloud });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Taslak birleştirme sunucuya yazılamadı: ' + (err?.message || err) });
+  }
+});
+
 // Admin: Update past question (full payload supported)
 app.put('/api/admin/past-questions/:id', requireAdmin, async (req, res) => {
   const list = getPastQuestionsDb();
@@ -8888,36 +8933,56 @@ app.put('/api/admin/users/:uid', requireAdmin, async (req, res) => {
 });
 
 // Admin: Update lecture summary
+// Oracle'da src/data imajla gelir (geçici): panel yazımı canlı katmana (data/content) gider, dağıtımın [0b]
+// adımı (content-overlay-sync.sh) onu yerele geri çeker. data/ kopyası da (okuyucular önce ona bakıyor) güncellenir.
+const META_SUMMARY_FIELDS = ['kurul', 'committeeId', 'discipline', 'title', 'instructor', 'fileName', 'keyPoints', 'charCount', 'readingTimeMinutes'];
 app.put('/api/admin/summaries/:id', requireAdmin, (req, res) => {
   try {
-    const catPath = path.resolve(__dirname, 'src', 'data', 'lectureSummariesCatalog.json');
+    const srcCat = path.resolve(__dirname, 'src', 'data', 'lectureSummariesCatalog.json');
     const dataCatPath = path.resolve(DATA_DIR, 'lectureSummariesCatalog.json');
-    const p = fs.existsSync(catPath) ? catPath : dataCatPath;
-    if (fs.existsSync(p)) {
-      const content = JSON.parse(fs.readFileSync(p, 'utf-8'));
-      const targetId = req.params.id;
-      let updated: any = null;
-      if (Array.isArray(content)) {
-        const idx = content.findIndex((s) => String(s.id) === targetId);
-        if (idx !== -1) {
-          content[idx] = { ...content[idx], ...req.body, id: targetId };
-          updated = content[idx];
+    const readFrom = fs.existsSync(resolveContent(srcCat)) ? resolveContent(srcCat) : dataCatPath;
+    if (!fs.existsSync(readFrom)) return res.status(404).json({ error: 'Özet kataloğu bulunamadı.' });
+    const content = JSON.parse(fs.readFileSync(readFrom, 'utf-8'));
+    const targetId = String(req.params.id);
+    const body = req.body && typeof req.body === 'object' ? { ...req.body } : {};
+    delete body.id;
+    let updated: any = null;
+    if (Array.isArray(content)) {
+      const idx = content.findIndex((s: any) => String(s.id) === targetId);
+      if (idx !== -1) updated = content[idx] = { ...content[idx], ...body, id: targetId, updatedAt: new Date().toISOString() };
+    } else if (content && typeof content === 'object' && content[targetId]) {
+      updated = content[targetId] = { ...content[targetId], ...body, id: targetId, updatedAt: new Date().toISOString() };
+    }
+    if (!updated) return res.status(404).json({ error: 'Özet bulunamadı.' });
+    if (typeof updated.content === 'string') updated.charCount = updated.content.length;
+
+    const json = JSON.stringify(content, null, 2);
+    const atomic = (file: string, data: string) => { const tmp = `${file}.${process.pid}.tmp`; fs.writeFileSync(tmp, data, 'utf-8'); fs.renameSync(tmp, file); };
+    atomic(writableContent(srcCat), json);
+    if (fs.existsSync(dataCatPath)) atomic(dataCatPath, json);
+
+    // Liste (summaries_meta.json) da katmana: başlık/kurul vb. değişince liste ekranı da güncel kalsın
+    const srcMeta = path.resolve(__dirname, 'src', 'data', 'summaries_meta.json');
+    const metaFrom = resolveContent(srcMeta);
+    if (fs.existsSync(metaFrom)) {
+      const meta = JSON.parse(fs.readFileSync(metaFrom, 'utf-8'));
+      if (Array.isArray(meta)) {
+        const mi = meta.findIndex((m: any) => String(m.id) === targetId);
+        if (mi !== -1) {
+          const next = { ...meta[mi] };
+          for (const k of META_SUMMARY_FIELDS) if (k in updated) next[k] = updated[k];
+          if (JSON.stringify(next) !== JSON.stringify(meta[mi])) {
+            meta[mi] = next;
+            atomic(writableContent(srcMeta), JSON.stringify(meta, null, 1));
+          }
         }
-      } else if (typeof content === 'object') {
-        if (content[targetId]) {
-          content[targetId] = { ...content[targetId], ...req.body, id: targetId };
-          updated = content[targetId];
-        }
-      }
-      if (updated) {
-        fs.writeFileSync(p, JSON.stringify(content, null, 2), 'utf-8');
-        if (fs.existsSync(dataCatPath) && dataCatPath !== p) {
-          fs.writeFileSync(dataCatPath, JSON.stringify(content, null, 2), 'utf-8');
-        }
-        return res.json({ success: true, summary: updated });
       }
     }
-    res.status(404).json({ error: 'Özet bulunamadı.' });
+    cachedSummariesMap = null;
+    summariesMetaCache = null;
+    markContentChanged('summaries', [targetId]);
+    broadcastRealtimeEvent('content_changed', { entity: 'summaries', ids: [targetId], at: Date.now() });
+    return res.json({ success: true, summary: updated });
   } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
@@ -11357,9 +11422,54 @@ registerDatabaseSyncHook(async ({ source, targetId, updatedData }) => {
 });
 
 // Hafif ve anlık Yönetici Gelen Kutusu Endpoint'i (60MB yerine 20KB hızlı yanıt)
+// Kimliksiz eski bildirimler için kararlı kimlik: soru + içerik özetinden (sıra/zamana bağlı değil).
+function stableReportId(qId: string, r: any, idx: number): string {
+  const basis = [r?.timestamp || r?.createdAt || '', r?.reason || '', r?.details || '', r?.reportedBy || r?.reporterUid || r?.reporterEmail || '', r?.timestamp || r?.createdAt ? '' : String(idx)].join('|');
+  return `rep-${qId}-${crypto.createHash('sha1').update(basis).digest('hex').slice(0, 10)}`;
+}
+
+// Göç: kimliksiz bildirimlere kalıcı kimlik yazar (önce dosyanın yedeği alınır). Değişen soru sayısını döndürür.
+let pastReportIdMigrationBackedUp = false;
+async function ensurePastReportIds(pastList: any[]): Promise<number> {
+  const changed: any[] = [];
+  for (const q of pastList) {
+    if (!Array.isArray(q?.reports)) continue;
+    const used = new Set<string>(q.reports.map((r: any) => r?.id).filter(Boolean));
+    let touched = false;
+    q.reports.forEach((r: any, idx: number) => {
+      if (!r || r.id) return;
+      let id = stableReportId(String(q.id), r, idx);
+      while (used.has(id)) id = `${id}x`;
+      used.add(id);
+      r.id = id;
+      r.idMigratedAt = new Date().toISOString();
+      touched = true;
+    });
+    if (touched) changed.push(q);
+  }
+  if (!changed.length) return 0;
+  if (!pastReportIdMigrationBackedUp) {
+    try {
+      flushPastQuestionsDbSync();
+      const dir = path.resolve(DATA_DIR, 'yedek');
+      fs.mkdirSync(dir, { recursive: true });
+      fs.copyFileSync(PAST_QUESTIONS_FILE, path.join(dir, `pastQuestions.rapor-kimlik-oncesi.${Date.now()}.json`));
+      pastReportIdMigrationBackedUp = true;
+    } catch (e: any) {
+      console.warn('[Gelen kutusu] yedek alınamadı, göç ertelendi:', e?.message || e);
+      return 0;
+    }
+  }
+  savePastQuestionsDb(pastList);
+  for (const q of changed) mirrorPastQuestionToDb(q).catch(() => {});
+  console.log(`[Gelen kutusu] ${changed.length} sorudaki kimliksiz bildirimlere kalıcı kimlik yazıldı.`);
+  return changed.length;
+}
+
 app.get('/api/admin/inbox', requireAdmin, async (_req, res) => {
   try {
     const pastList = getPastQuestionsDb();
+    try { await ensurePastReportIds(pastList); } catch (e: any) { console.warn('[Gelen kutusu] kimlik göçü:', e?.message || e); }
     const reports: any[] = [];
     const comments: any[] = [];
 
@@ -11367,7 +11477,7 @@ app.get('/api/admin/inbox', requireAdmin, async (_req, res) => {
       if (Array.isArray(q.reports) && q.reports.length > 0) {
         for (const r of q.reports) {
           reports.push({
-            id: r.id || `rep-${q.id}-${reports.length}`,
+            id: r.id || stableReportId(String(q.id), r, q.reports.indexOf(r)),
             questionId: q.id,
             questionTopic: q.topic,
             discipline: q.discipline,

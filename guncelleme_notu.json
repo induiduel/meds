@@ -1,14 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 77,
-  "baslik": "Okuyucu ve PDF görüntüleyicide tam ekran gezinme",
+  "onem": 78,
+  "baslik": "Yönetim paneli düzeltmeleri",
   "maddeler": [
-    "Ders notu okuyucusu ve ders PDF görüntüleyicisi tam ekrandayken de gezinme çubuğu çıkıyor; tam ekrandan çıkmadan başka sayfaya geçebilirsin."
+    "Eski hata bildirimleri artık düzenlenip silinebiliyor.",
+    "Taslak birleştirme sunucuya kaydediliyor.",
+    "Özet düzenlemeleri güncellemelerde kaybolmuyor."
   ],
   "eklenen": [],
   "degisen": [],
   "duzeltilen": [
-    "Ders notu okuyucusu ve ders PDF görüntüleyicisi tam ekrandayken de gezinme çubuğu çıkıyor; tam ekrandan çıkmadan başka sayfaya geçebilirsin."
+    "Eski hata bildirimleri artık düzenlenip silinebiliyor.",
+    "Taslak birleştirme sunucuya kaydediliyor.",
+    "Özet düzenlemeleri güncellemelerde kaybolmuyor."
   ],
   "silinen": []
 }

@@ -26,6 +26,7 @@ export const CONTENT_FILES: Record<string, string> = {
   diseases: 'diseases.json',
   decks: 'interactive_learning_decks.json',
   ornek: 'ornek_sorular',
+  summaries: 'lectureSummariesCatalog.json',
 };
 
 export function initContentOverlay(rootDir: string, dataDir: string) {
