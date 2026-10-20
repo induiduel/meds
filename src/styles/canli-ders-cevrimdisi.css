@@ -70,3 +70,18 @@
   .cd-cd-p-eylem .ms-btn { flex: 1; justify-content: center; }
 }
 @media (prefers-reduced-motion: reduce) { .cd-cd-p-ses, .cd-cd-p-kutu { transition: none; } }
+
+/* Video oluştur penceresi */
+.cd-vid-not { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--muted, #667); }
+.cd-vid-grup { display: flex; flex-direction: column; gap: 6px; border: 0; padding: 0; margin: 0; min-width: 0; }
+.cd-vid-grup > legend, .cd-vid-grup > span { font-size: 13px; font-weight: 600; margin-bottom: 6px; padding: 0; }
+.cd-vid-grup select { min-height: 40px; border-radius: 10px; padding: 0 10px; border: 1px solid var(--line, rgba(0,0,0,.15)); background: transparent; color: inherit; }
+.cd-vid-secim { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.cd-vid-sec { position: relative; display: flex; align-items: center; justify-content: center; min-height: 44px; border-radius: 10px;
+  border: 1px solid var(--line, rgba(0,0,0,.15)); font-weight: 600; cursor: pointer; }
+.cd-vid-sec input { position: absolute; opacity: 0; pointer-events: none; }
+.cd-vid-sec.is-on { border-color: var(--accent, #2b6cb0); box-shadow: inset 0 0 0 1px var(--accent, #2b6cb0); color: var(--accent, #2b6cb0); }
+.cd-vid-sec:has(input:focus-visible) { outline: 2px solid var(--accent, #2b6cb0); outline-offset: 2px; }
+.cd-vid-sec.is-yok { opacity: .4; cursor: not-allowed; text-decoration: line-through; }
+.cd-vid-bar { width: 100%; height: 8px; accent-color: var(--accent, #2b6cb0); }
+.cd-vid-hata { margin: 0; font-size: 13.5px; color: #c0392b; }

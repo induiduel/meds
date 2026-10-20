@@ -25,6 +25,7 @@ import { CdDaha } from './CanliDersDaha';
 import { cdMotivasyonAyarla, useCdMotivasyonAcik } from './canliDersMotivasyon';
 import { CdTvKumanda } from './CanliDersTv';
 import { MetniAktarDugme } from './CanliDersAktarDugme';
+import { VideoOlusturDugme } from './CanliDersVideo';
 import { Highlighter, Sparkles, Star } from 'lucide-react';
 import { useKonuSayaci } from '../../services/calismaTakip';
 import { KonuDugmeleri } from '../takip/KonuTakip';
@@ -506,6 +507,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
               <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
               <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} etiketli />
               <MetniAktarDugme detay={detay} vurguAcik={vurguAcik} />
+              {detay.pdf && <VideoOlusturDugme detay={detay} />}
               <MotivasyonDugme />
               {detay.vurgu && (
                 <button type="button" className={`cd-btn${vurguAcik ? ' is-on' : ''}`} aria-pressed={vurguAcik} onClick={() => setVurguAcik(!vurguAcik)}

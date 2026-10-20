@@ -1,20 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 120,
-  "baslik": "Yeni renk paletleri ve daha okunaklı temalar",
+  "onem": 121,
+  "baslik": "İyileştirmeler ve düzeltmeler",
   "maddeler": [
-    "Renk paleti sayısı 23'e çıktı; her temada ayrı renk aileleri ve bir \"Yüksek kontrast\" seçeneği var.",
-    "Açık temada birbirinin aynısı olan üç palet yeni renklerle değiştirildi (Zümrüt, Kehribar, Mürekkep).",
-    "Koyu ve OLED temada okunmayan rozet, işaret ve sayaç yazıları düzeltildi."
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "eklenen": [
-    "Renk paleti sayısı 23'e çıktı; her temada ayrı renk aileleri ve bir \"Yüksek kontrast\" seçeneği var."
-  ],
+  "eklenen": [],
   "degisen": [
-    "Açık temada birbirinin aynısı olan üç palet yeni renklerle değiştirildi (Zümrüt, Kehribar, Mürekkep)."
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "duzeltilen": [
-    "Koyu ve OLED temada okunmayan rozet, işaret ve sayaç yazıları düzeltildi."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
