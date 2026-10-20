@@ -906,3 +906,11 @@
 .cd-metin .cd-onem.is-canli { background: linear-gradient(transparent 52%, rgba(255, 214, 10, .42) 52%, rgba(255, 214, 10, .42) 92%, transparent 92%); box-shadow: none; }
 :root[data-mode="dark"] .cd-metin .cd-onem.is-canli { background: linear-gradient(transparent 52%, rgba(255, 214, 10, .2) 52%, rgba(255, 214, 10, .2) 92%, transparent 92%); box-shadow: none; }
 .cd-metin ::highlight(cd-kelime) { background-color: color-mix(in srgb, var(--color-accent) 42%, transparent); text-decoration: none; }
+/* Dikey tablet: görünüm sekmeleri ikinci sıraya, ders adı tam genişlikte okunsun */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cd-ders-bas { flex-wrap: wrap; row-gap: 8px; }
+  .cd-ders-bas > .cd-ders-baslik { flex: 1 1 0; }
+  .cd-ders-bas > .cd-ders-arac { order: 10; flex: 1 1 100%; }
+  .cd-ders-bas > .cd-ders-arac .cd-sekmeler { flex: 1; display: flex; }
+  .cd-ders-bas > .cd-ders-arac .cd-sekmeler button { flex: 1; justify-content: center; }
+}
