@@ -467,6 +467,24 @@ def _isle_tek(j: dict) -> dict:
     return _sesli_ve_bitir(j, d, b, den)
 
 
+def otomatik_onay_uygun(b: dict, den: dict, sesli: dict) -> tuple[bool, str]:
+    """Otomatik onay koşulları (hepsi): ayar açık, Kurul 2+, yeni ders (güncelleme değil), program eşleşmesi yüksek
+    güvenli, uyarı yok, denetleyici 0 HATA, sesli metin tamam. Döner (uygun mu, neden)."""
+    a = ayar()
+    if not a.get("otomatik_onay", True):
+        return False, "ayar kapalı"
+    if int(b.get("kurul") or 0) < 2:
+        return False, ""  # Kurul 1 eski düzende (yönetici onayı)
+    eksik = [m for m, kosul in [
+        ("güncelleme modu (mevcut desteyi değiştirir)", b.get("mod") == "guncelleme"),
+        (f"program eşleşmesi {b.get('program', {}).get('guven')}", b.get("program", {}).get("guven") != "yuksek"),
+        ("uyarı var: " + str(b.get("uyari"))[:120], bool(b.get("uyari"))),
+        (f"denetim {den.get('hata')} HATA", den.get("hata") != 0),
+        (f"sesli metin {sesli.get('durum')}", sesli.get("durum") not in ("tamam", "kapali")),
+    ] if kosul]
+    return (not eksik), ("; ".join(eksik) if eksik else "Kurul 2+, tüm kapılar 0 HATA, eşleşme yüksek")
+
+
 def _sesli_ve_bitir(j: dict, d: Path, b: dict, den: dict) -> dict:
     sesli = konusma_metni(d)
     if sesli["durum"] == "kota":
@@ -477,7 +495,17 @@ def _sesli_ve_bitir(j: dict, d: Path, b: dict, den: dict) -> dict:
             f"{s.get('bag', 0)} çıkmış bağı · denetim {den.get('hata', '?')} HATA · {sesli['ozet']}")
     yaz(d / "durum.json", {"durum": "onay_bekliyor", "ozet": ozet, "denetim_hata": den.get("hata"), "zaman": time.time(),
                            "deste_id": b.get("deste_id"), "ders_id": b.get("ders_id"), "canli_ders": sesli["durum"]})
-    bildir("Yeni ders işlendi — onay bekliyor", ozet + (f"\nUyarı: {b['uyari']}" if b.get("uyari") else ""), b.get("ders_id", j["is_id"]))
+    oto, neden = otomatik_onay_uygun(b, den, sesli)
+    if oto:
+        # Kurul 2+ tam otomatik hat (AGENTS.md 14): kapılar 0 HATA → panel onayıyla aynı karar; yayinla.py kendi
+        # kapılarını (sadakat, deste doğrulayıcı --kurul2) yine uygular, takılırsa denetim_hatasi olarak panelde kalır.
+        yaz(d / "karar.json", {"karar": "onayla", "not": "otomatik onay: " + neden, "kim": "otomatik (ders işçisi)",
+                               "zaman": time.time()})
+        bildir("Yeni ders otomatik onaylandı — yayına giriyor", ozet, b.get("ders_id", j["is_id"]))
+        log(f"otomatik onay: {j['is_id']} ({neden})")
+    else:
+        bildir("Yeni ders işlendi — onay bekliyor", ozet + (f"\nUyarı: {b['uyari']}" if b.get("uyari") else "")
+               + (f"\nOtomatik onay yok: {neden}" if neden else ""), b.get("ders_id", j["is_id"]))
     log(f"taslak hazır: {j['is_id']} → {ozet}")
     return {"durum": "taslak", "mesaj": ozet}
 

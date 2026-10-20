@@ -181,7 +181,10 @@ class Yayin:
         tmp = self.yedek / "_deneme_deck.json"
         tmp.parent.mkdir(parents=True, exist_ok=True)
         tmp.write_text(json.dumps([self._deste()], ensure_ascii=False), encoding="utf-8")
-        r = subprocess.run([sys.executable, str(MEDS / "scripts" / "validate_learning_decks.py"), str(tmp), "--ozet"],
+        # Kurul 2+: Türkçe üslup + şık açıklama kapıları HATA (AGENTS.md 14). Toplu denetim (toplu_adimlar) bayraksız
+        # kalır: Kurul 1 desteleri toplu düzeltilmez (KURUL2_YAPILMAYACAK_HATALAR.md).
+        k2 = ["--kurul2"] if int(b.get("kurul") or 0) >= 2 else []
+        r = subprocess.run([sys.executable, str(MEDS / "scripts" / "validate_learning_decks.py"), str(tmp), "--ozet"] + k2,
                            capture_output=True, text=True)
         tmp.unlink()
         if r.returncode != 0:

@@ -134,6 +134,7 @@ const BitirdiklerimView = React.lazy(() => wrapLazy(import('./components/takip/B
 const CevrimdisiView = React.lazy(() => wrapLazy(import('./components/cevrimdisi/CevrimdisiView')));
 const OlasiSorularView = React.lazy(() => wrapLazy(import('./components/olasi/OlasiSorularView')));
 const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/GecmisKurullarView')));
+const GuncellemeGunluguView = React.lazy(() => wrapLazy(import('./components/guncellemeler/GuncellemeGunluguView')));
 const SinavCalismaView = React.lazy(() => wrapLazy(import('./components/SinavCalismaView').then(m => ({ default: m.SinavCalismaView }))));
 
 // Lazy-loaded Modals (Only downloaded when opened)
@@ -1879,6 +1880,13 @@ export default function App() {
         {activeTab === 'gecmis_kurullar' && (
           <Suspense fallback={<ViewFallback />}>
             <GecmisKurullarView />
+          </Suspense>
+        )}
+
+        {/* TAB: /guncellemeler — sürüm sürüm eklenen / değişen / düzeltilen / kaldırılanlar + geliştirme notları */}
+        {activeTab === 'guncellemeler' && (
+          <Suspense fallback={<ViewFallback />}>
+            <GuncellemeGunluguView />
           </Suspense>
         )}
 

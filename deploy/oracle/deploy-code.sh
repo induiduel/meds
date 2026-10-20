@@ -55,7 +55,8 @@ echo "==> [1/4] rsync kod + dist (src/data DAHİL, .env HARİÇ; içerik karşı
 CHANGED="$(mktemp)"; trap 'rm -f "$CHANGED"' EXIT
 # --checksum: değişiklik listesi içeriğe göre (worktree checkout'u tarihleri yeniler; tarihe bakınca package.json
 # 'değişti' sayılıp imaj gereksiz kuruluyordu, 2026-10-20). Ölçüm: ~2 sn.
-rsync -az --checksum --out-format='%n' \
+# sudo rsync: konteyner src/data'ya root olarak yazar; tarih/sahip eşitlemesi yetki ister (sahip uid 1000 olur)
+rsync -az --checksum --rsync-path='sudo rsync' --out-format='%n' \
   --exclude='/node_modules' --exclude='/dist-gh' \
   --exclude='/data' --exclude='/.git' --exclude='/models' \
   --exclude='/training_data' --exclude='/linux' \

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch server.ts",
-    "build": "vite build",
+    "build": "python3 scripts/surum_gunlugu.py; vite build",
+    "surum:gunluk": "python3 scripts/surum_gunlugu.py",
     "postbuild": "node scripts/prune-dist.mjs --keep-hours 6 --apply",
     "start": "tsx server.ts",
     "preview": "vite preview",

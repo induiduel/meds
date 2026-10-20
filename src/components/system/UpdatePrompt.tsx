@@ -141,7 +141,7 @@ const UpdatePrompt: React.FC = () => {
         <h2 id="up-baslik" className="up-h">{bilgi.baslik || 'Site güncellendi'}</h2>
         <div id="up-govde" className="up-b">
           {maddeler.length ? <ul>{maddeler.map((m, i) => <li key={i}>{m}</li>)}</ul> : <p>Yeni değişikliklerin hepsini görmek için siteyi yenile.</p>}
-          <p className="up-not">Notların ve ilerlemen korunur. “Sonra” dersen site sonraki açılışında kendiliğinden yenilenir; o zamana dek üst çubuktaki ✦ simgesinden güncelleyebilirsin.</p>
+          <p className="up-not">Notların ve ilerlemen korunur. “Sonra” dersen site sonraki açılışında kendiliğinden yenilenir; o zamana dek üst çubuktaki ✦ simgesinden güncelleyebilirsin. <a href="/guncellemeler" target="_blank" rel="noopener">Tüm sürüm notları</a></p>
         </div>
         <div className="up-act">
           <button type="button" className="up-btn is-2" onClick={sonra}>Sonra</button>

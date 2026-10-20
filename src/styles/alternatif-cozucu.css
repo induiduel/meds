@@ -154,3 +154,15 @@
     max-width: 100%;
   }
 }
+
+/* Alternatif çözücünün alt çubuğunda zaman + bölüm çubuğu da var: geniş ekranda ayarlar satır içine açılınca çubuk
+ * sağdan taşıyordu ("Önce kendim çözeyim" kesik). Ayarlar her genişlikte ⚙ açılır kutusunda kalır. */
+@media (min-width: 1360px) {
+  .sc:not(.is-ogren) .ac-alt-bar .sc-ayar-b { display: grid; }
+  .sc:not(.is-ogren) .ac-alt-bar .sc-ayar-p { display: none; position: absolute; right: 0; bottom: calc(100% + 10px); padding: 8px;
+    border-radius: 14px; background: var(--color-white); border: 1px solid var(--color-line); box-shadow: var(--shadow-xl, 0 16px 40px rgb(0 0 0 / .18)); }
+  .sc:not(.is-ogren) .ac-alt-bar .sc-ayar-p.is-acik { display: flex; }
+}
+.ac-alt-bar { min-width: 0; }
+.ac-alt-bar .ac-zaman-cubuk { min-width: 0; }
+.ac-bolum-cubuk { min-width: 0; max-width: 100%; overflow-x: auto; }

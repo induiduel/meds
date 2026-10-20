@@ -95,6 +95,7 @@ AYAR_TANIM: dict[str, tuple] = {  # anahtar → (tür, varsayılan, alt, üst)
     "effort": (str, CLAUDE_EFFORT, None, None),          # low | medium | high | "" (CLI varsayılanı)
     "sadakat_esigi": (float, 0.80, 0.0, 1.0),            # yayın denetimi: ders notu sadakat alt sınırı
     "canli_ders": (bool, True, None, None),              # taslakta canlı ders konuşma metni de yaz; yayında Emel + EMA sesi
+    "otomatik_onay": (bool, True, None, None),           # Kurul 2+: kapılar 0 HATA + yüksek eşleşme → yönetici onayı beklenmez (2026-10-20)
 }
 MODELLER = ["claude-opus-5-5", "claude-sonnet-5-5", "claude-fable-5-1", "claude-haiku-4-5-20251001"]
 EFORLAR = ["", "low", "medium", "high"]

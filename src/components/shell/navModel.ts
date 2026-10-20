@@ -2,6 +2,7 @@ import {
   Activity,
   Archive,
   History,
+  ScrollText,
   Sparkles,
   AudioLines,
   CircleCheckBig,
@@ -82,6 +83,7 @@ const I: Record<string, NavItem> = {
   diseases: { id: 'diseases', label: 'Hastalıklar', short: 'Atlas', hint: 'Tıbbi hastalık ve klinik atlası', icon: Activity, tint: '#06B6D4' },
   health_ministry: { id: 'health_ministry', label: 'Sağlık Bakanlığı', short: 'Bakanlık', hint: 'Resmî veriler: aşı, yenidoğan, anne, tarama, salgın, Karabük', icon: Landmark, tint: '#C8102E' },
   gecmis_kurullar: { id: 'gecmis_kurullar', label: 'Geçmiş kurullar', short: 'Geçmiş', tile: 'Geçmiş kurullar', hint: 'Sınavı biten kurulların dersleri, spotları ve soruları', icon: History, tint: '#8E8E93' },
+  guncellemeler: { id: 'guncellemeler', label: 'Güncelleme günlüğü', short: 'Sürümler', tile: 'Güncellemeler', hint: 'Her sürümde eklenen, değişen ve kaldırılanlar', icon: ScrollText, tint: '#5E5CE6' },
   kazanimlar: { id: 'kazanimlar', label: 'Kazanımlar', hint: 'Müfredat ve kazanım haritası', icon: Compass, tint: '#00A79D' },
   // Topluluk
   matrix: { id: 'matrix', label: 'Soru haritası', short: 'Harita', hint: 'Havuzda 1–100 soru doluluğu', icon: LayoutGrid, tint: '#64748B' },
@@ -109,7 +111,7 @@ export const NAV_TREE: NavGroup[] = [
   { label: 'Ders çalış', items: [I.learn, I.canli_ders, I.notes, I.flashcards, I.summaries] },
   { label: 'Sınava hazırlan', items: [I.sinav_calisma, I.soru_cozucu, I.alternatif_cozucu, I.en_onemliler, I.patoloji_checkup, I.genetik_checkup, I.spots] },
   { label: 'Soru çöz', items: [I.past_exams, I.questions, I.practice, I.ornek_sorular, I.olasi_sorular] },
-  { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar, I.gecmis_kurullar] },
+  { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar, I.gecmis_kurullar, I.guncellemeler] },
   { label: 'Topluluk', items: [I.matrix, I.leaderboard] },
   { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music] },
 ];

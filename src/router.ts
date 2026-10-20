@@ -66,7 +66,8 @@ export type AppRoute =
   | 'bitirdiklerim'
   | 'cevrimdisi'
   | 'olasi_sorular'
-  | 'gecmis_kurullar';
+  | 'gecmis_kurullar'
+  | 'guncellemeler';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -110,6 +111,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   cevrimdisi: '/cevrimdisi',
   olasi_sorular: '/olasi-sorular',
   gecmis_kurullar: '/gecmis-kurullar',
+  guncellemeler: '/guncellemeler',
 };
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
@@ -154,6 +156,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   cevrimdisi: 'Çevrimdışı',
   olasi_sorular: 'Olası sorular',
   gecmis_kurullar: 'Geçmiş kurullar',
+  guncellemeler: 'Güncelleme günlüğü',
 };
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
@@ -270,6 +273,11 @@ const ALIASES: Record<string, AppRoute> = {
   'gecmis-kurul': 'gecmis_kurullar',
   arsiv: 'gecmis_kurullar',
   'kurul-arsivi': 'gecmis_kurullar',
+  guncellemeler: 'guncellemeler',
+  guncelleme: 'guncellemeler',
+  surumler: 'guncellemeler',
+  degisiklikler: 'guncellemeler',
+  changelog: 'guncellemeler',
 };
 
 export interface ParsedRoute {
