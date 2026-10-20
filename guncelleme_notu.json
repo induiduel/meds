@@ -1,20 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 67,
-  "baslik": "Sesli ders kelime takibi ve tasarım iyileştirmeleri",
+  "onem": 68,
+  "baslik": "Genetik: Hızlı ve Tam mod asistanla açılır",
   "maddeler": [
-    "Sesli derste konuşulan kelime metinde ve PDF'te anlık işaretleniyor.",
-    "Yeni tasarımda (Ada) çıkmış, öğren ve geniş sayfalar daha düzenli.",
-    "Çeşitli görünüm ve oynatıcı düzeltmeleri."
+    "TBG Sınav Kampı'nda Hızlı mod ve Tam mod kartlarındaki \"Asistanla başla\" ile sesli asistan seçilen modda açılır; Hızlı modda yalnız en önemli 15 adım ve 14 soru gelir."
   ],
-  "eklenen": [
-    "Sesli derste konuşulan kelime metinde ve PDF'te anlık işaretleniyor."
-  ],
+  "eklenen": [],
   "degisen": [
-    "Yeni tasarımda (Ada) çıkmış, öğren ve geniş sayfalar daha düzenli."
+    "TBG Sınav Kampı'nda Hızlı mod ve Tam mod kartlarındaki \"Asistanla başla\" ile sesli asistan seçilen modda açılır; Hızlı modda yalnız en önemli 15 adım ve 14 soru gelir."
   ],
-  "duzeltilen": [
-    "Çeşitli görünüm ve oynatıcı düzeltmeleri."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
