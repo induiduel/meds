@@ -17,7 +17,12 @@ from pathlib import Path
 KOK = Path(__file__).resolve().parent.parent
 CIKTI = KOK / 'src/data/surum_gunlugu.json'
 NOT = 'guncelleme_notu.json'
+ELLE = KOK / 'scripts/surum_gunlugu_turler.json'   # madde metni → tür (elle gözden geçirilmiş; öncelikli)
 TURLER = ('eklenen', 'degisen', 'duzeltilen', 'silinen')
+
+
+try: ELLE_TUR: dict[str, str] = json.loads(ELLE.read_text(encoding='utf-8'))
+except Exception: ELLE_TUR = {}
 
 
 def git(*a: str) -> str:
@@ -25,10 +30,11 @@ def git(*a: str) -> str:
 
 
 def madde_turu(m: str) -> str:
+    if m in ELLE_TUR: return ELLE_TUR[m]
     s = m.lower()
     if re.search(r'kaldırıldı|silindi|çıkarıldı|artık gösterilmiyor|kaldırdık', s): return 'silinen'
-    if re.search(r'düzelt|giderildi|hata|takılm|sorun|çökme|donma|kaymıyor|taşm', s): return 'duzeltilen'
-    if re.search(r'^yeni|eklendi|geldi|artık .* (indir|seç|ayarla)|yeni ', s): return 'eklenen'
+    if re.search(r'düzelt|giderildi|hata|sorun|çökme|donmuyor|kaymıyor|taşm|sıkışmıyor|binmiyor|önlendi', s): return 'duzeltilen'
+    if re.search(r'^yeni\b|eklendi|geldi\b|getirildi|kullanıma sunuldu|yayına alındı|entegre edildi|dahil edildi', s): return 'eklenen'
     return 'degisen'
 
 

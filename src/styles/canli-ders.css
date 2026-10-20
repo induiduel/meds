@@ -865,8 +865,9 @@
 /* Tam ekranda oynatıcı yüzen karttır: altta boş bant ayırmaz; metin ve PDF kartın altından kayar, son satırlar da
  * kartın üstüne gelebilsin diye kayan alanların içine kart yüksekliği kadar alt boşluk verilir. */
 :root.cd-tam-oynatici .cd-ders.is-tam { padding-bottom: 0; }
-:root.cd-tam-oynatici .cd-ders.is-tam :is(.cd-metin, .pdv) {
-  padding-bottom: calc(var(--cd-dock-h, 0px) + 20px);
-  scroll-padding-bottom: calc(var(--cd-dock-h, 0px) + 20px);
+.cd-ders :is(.cd-metin, .pdv) {
+  padding-bottom: calc(var(--cd-ortu, 0px) + 16px);
+  scroll-padding-bottom: calc(var(--cd-ortu, 0px) + 16px);
 }
-:root.cd-tam-oynatici .cd-dock > * { box-shadow: 0 14px 40px -12px rgb(16 24 40 / .32), 0 0 0 1px var(--color-line); }
+:root.cd-tam-oynatici .cd-ders.is-tam :is(.cd-metin, .pdv) { padding-bottom: calc(var(--cd-dock-h, 0px) + 20px); scroll-padding-bottom: calc(var(--cd-dock-h, 0px) + 20px); }
+:root.cd-dock-acik .cd-dock > * { box-shadow: 0 14px 40px -12px rgb(16 24 40 / .32), 0 0 0 1px var(--color-line); }

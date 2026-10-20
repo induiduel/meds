@@ -4,7 +4,7 @@
  * Metin sesle akar (etkin paragraf + tahmini cümle vurgusu), görünüm etkin paragrafı ortada tutar; kullanıcı elle
  * kaydırınca/PDF'i gezince takip 8 sn durur ve "Canlı konuma dön" çıkar. Oynatıcı alt çubuktadır (CanliDersDock).
  */
-import React, { Suspense, lazy, memo, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { Suspense, lazy, memo, useCallback, useMemo, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { ArrowLeftRight, ArrowUpDown, ChevronDown, ChevronLeft, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
@@ -13,7 +13,7 @@ import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { isIosBrowserTab, shouldAvoidNativeFullscreen } from '../../utils/device';
 import { openPwaInstallGuide } from '../../services/pwaService';
 import {
-  cdCumleAraligi, cdCumleMetni, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
+  cdCumleAraligi, cdCumleIlerleme, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
 import { useCdTur } from './useCdTur';
 import { cdDersEtiketi } from './canliDersKategori';
@@ -56,6 +56,7 @@ function elementZoom(el: Element | null | undefined): number {
 }
 
 const PdfDocView = lazy(() => import('../learn/pdf/PdfDocView'));
+import type { PdfMarks } from '../learn/pdf/PdfDocView';
 
 const TAKIP_ARA = 8000;
 
@@ -1153,6 +1154,15 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   // Etkin paragrafın eşlemesi; eşlemesi olmayan paragrafta son bilinen sayfada kalınır
   const sonHedef = useRef<{ dosya: number; sayfa: number }>({ dosya: 0, sayfa: 1 });
   const es = aktif >= 0 ? pdf.paragraflar[aktif] : null;
+  const isr = aktif >= 0 && cumle >= 0 ? detay.isaret?.[String(aktif)]?.[cumle] ?? null : null;
+  // Okunan kelime: cümle içindeki ses ilerlemesine göre son geçilen eşleşmiş kelime (yalnız değişince yeniden çizilir)
+  const kelime = useCd(() => {
+    if (!isr || !isr.w.length) return -1;
+    const o = cdCumleIlerleme();
+    let k = 0;
+    while (k + 1 < isr.w.length && isr.w[k + 1][0] <= o) k++;
+    return k;
+  });
   if (es && Number.isFinite(es.sayfa)) {
     let s = es.sayfa;
     let d = es.dosya || 0;
@@ -1164,6 +1174,8 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
       const cd = es.dosyalar[cumle];
       if (typeof cd === 'number' && Number.isFinite(cd) && cd >= 0) d = cd;
     }
+    // Önceden hizalanmış işaret (pdf_isaret.py) komşu slaytı daha kesin bulduysa o sayfa kullanılır
+    if (isr && isr.t !== 'sayfa') { s = isr.s; d = isr.d; }
     sonHedef.current = { dosya: d, sayfa: Math.max(1, s) };
   }
   if (aktif < 0 && !canli) {
@@ -1173,6 +1185,11 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   const hedef = sonHedef.current;
   // Takip sürerken hedef; durunca kullanıcının baktığı yer (sürdürünce yeniden hedefe kayar)
   const gor = durdu && elle ? elle : hedef;
+  const marks = useMemo<PdfMarks | null>(() => {
+    if (!canli || durdu || !isr || isr.t === 'sayfa' || isr.d !== gor.dosya) return null;
+    const focus = isr.t === 'resim' ? isr.l[0] : kelime >= 0 ? isr.w[kelime].slice(1) : null;
+    return { page: isr.s, kind: isr.t, lines: isr.l, focus };
+  }, [canli, durdu, isr, kelime, gor.dosya]);
 
   useEffect(() => { if (!durdu) setElle(null); }, [durdu]);
 
@@ -1224,7 +1241,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
               page={gor.sayfa}
               highlight={canli && !durdu && es ? [hedef.sayfa, hedef.sayfa] : undefined}
               highlightLabel="Şu an anlatılan"
-              follow={canli && !durdu && es ? cdCumleMetni(aktif, cumle) : ''}
+              marks={marks}
               zoom={zoom}
               onZoom={setZoom}
               onVisiblePage={onVisible}

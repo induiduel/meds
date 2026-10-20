@@ -328,12 +328,6 @@ export function cdCumleIlerleme(): number {
   }
   return t1 > t0 ? Math.min(1, Math.max(0, (st.t - t0) / (t1 - t0))) : 0;
 }
-/** Etkin cümlenin metni (PDF'te karşılığını hafifçe işaretlemek için) */
-export function cdCumleMetni(i: number, cumle: number): string {
-  const r = cdCumleAraligi(i, cumle);
-  const k = posByI.get(i);
-  return r && k != null ? paras[k].metin.slice(r[0], r[1]) : '';
-}
 /** Etkin cümlenin [başlangıç, bitiş) karakter aralığı */
 export function cdCumleAraligi(i: number, cumle: number): [number, number] | null {
   const k = posByI.get(i);
