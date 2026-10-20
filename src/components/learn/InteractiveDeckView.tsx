@@ -20,7 +20,7 @@ import {
   ArrowRight,
   Bot,
 } from 'lucide-react';
-import { DECK_CATALOG, loadDeck, loadDeckCatalog } from '../../data/deckStore';
+import { DECK_CATALOG, deckName, loadDeck, loadDeckCatalog } from '../../data/deckStore';
 import { OPEN_REVIEW_FLAG } from '../../services/learnReview';
 const LearnReview = React.lazy(() => import('./LearnReview').then((m) => ({ default: m.LearnReview })));
 import {
@@ -32,8 +32,9 @@ import { safeJsonFetch } from '../../services/api';
 import { QuestionFocus } from '../../services/questionFocus';
 import { LessonPlayer } from './lesson/LessonPlayer';
 import { touchRecent } from './LearnHub';
-import { LearnLibrary, LessonSkeleton } from './LearnLibrary';
+import { LearnLibrary, LessonSkeleton, isPublished } from './LearnLibrary';
 import { LearnLibraryV12 } from '../v12/LearnLibraryV12';
+import { TopluPdfDugme } from '../ui/TopluPdf';
 import { useAppearance } from '../../utils/appearance';
 import { Dialog } from '../ui/Dialog';
 import { NoPdfNotice, useNoPdfGate } from './NoPdfNotice';
@@ -708,6 +709,32 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     });
     return m;
   }, [versionGroups]);
+  // Toplu PDF: listedeki (en yeni sürüm) dersler kurul › ders dalına göre gruplu; metin oynatıcıdaki "Ders metnini dışa aktar" ile aynı
+  const topluOgeler = useMemo(
+    () => hubDecks
+      // Kitaplıkla aynı kapsam: öğrenci yalnız yayındaki dersleri görür (eski kopya desteler hariç); yönetici süzgeci izlenir
+      .filter((d) => {
+        const f = isAdmin ? adminArchiveFilter : 'new_only';
+        const pub = isPublished(d) || !!versionLabels[d.id];
+        return f === 'all' || (f === 'legacy_only' ? !pub : pub);
+      })
+      .map((d) => ({ key: d.id, grup: [String(d.committee || '').match(/Kurul\s*\d+/i)?.[0] || d.committee, d.discipline].filter(Boolean).join(' · ') || 'Diğer', baslik: deckName(d) }))
+      .sort((a, b) => a.grup.localeCompare(b.grup, 'tr', { numeric: true })),
+    [hubDecks, isAdmin, adminArchiveFilter, versionLabels]
+  );
+  const topluPdf = topluOgeler.length ? (
+    <TopluPdfDugme
+      ad="Etkileşimli dersler"
+      dugmeSinif="tp-btn"
+      ogeler={topluOgeler}
+      belgeAl={async (key) => {
+        const [d, { ogrenAktarBelgesi }] = await Promise.all([loadDeck<InteractiveDeck>(key), import('./lesson/ogrenAktar')]);
+        if (!d || !Array.isArray(d.slides) || !d.slides.length) throw new Error('ders yüklenemedi');
+        return ogrenAktarBelgesi(d);
+      }}
+      altMetin={(n) => `${n} ders · etkileşimli ders metinleri`}
+    />
+  ) : null;
   /** Hata defteri tekrar ekranı (deckId: yalnız o ders) ve "Kaynağa git" ile açılacak adım */
   /** v12 "Net": kitaplık kendi yapısıyla çizilir (components/v12/LearnLibraryV12); v10/v11 LearnLibrary */
   const Library = useAppearance().design === 'v12' ? LearnLibraryV12 : LearnLibrary;
@@ -824,6 +851,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   return (
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
       <Library
+        actions={topluPdf}
         decks={hubDecks}
         versions={versionLabels}
         onOpenReview={(id) => setReview({ deckId: id })}

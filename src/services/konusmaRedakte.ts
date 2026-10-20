@@ -52,6 +52,8 @@ const FIIL: [string, string][] = [
 const FIIL_RE = FIIL.map(([a, b]) => [new RegExp(`${H}${a}${S}`, 'gu'), b] as const);
 
 const buyut = (s: string) => {
+  // pH, p53, mRNA gibi terimler küçük harfle kalır
+  if (/^(?:\*\*|==|["“(])*\p{Ll}+[\p{Lu}\d]/u.test(s)) return s;
   const m = s.match(/^((?:\*\*|==|["“(])*)(\p{Ll})/u);
   return m ? m[1] + m[2].toLocaleUpperCase('tr') + s.slice(m[0].length) : s;
 };
@@ -68,19 +70,20 @@ function satirRedakte(metin: string): { t: string; no?: number } {
     if (t === once) break;
   }
   const r = t.match(SIRA_RAKAM);
-  if (r) { no = +r[1]; t = t.slice(r[0].length).replace(/^[\s,:;-]+/, ''); }
+  if (r) { no = +r[1]; t = t.slice(r[0].length).replace(/^[\s,:;-]+(?:ise\s+|de\s+|da\s+)?/u, ''); }
   else for (const [re, n] of SIRA_SOZ) {
     const k = t.match(re);
-    if (k) { no = n; t = t.slice(k[0].length).replace(/^[\s,:;-]+/, ''); break; }
+    if (k) { no = n; t = t.slice(k[0].length).replace(/^[\s,:;-]+(?:ise\s+|de\s+|da\s+)?/u, ''); break; }
   }
   // "1.'si nörojenik reflekslerdir; …" → "1) Nörojenik refleksler: …" (sıralı maddenin başındaki yüklem eki atılır)
-  if (no) t = t.replace(/^([^;.,:]{2,60}?)'?[dt][ıiuü]r(\*\*|==)*([;.]|$)/u, (_, a, m = '', p) => `${a}${m}${p === ';' ? ':' : p}`);
+  if (no) t = t.replace(/^([^;.,:]{2,60}?)'?[dt][ıiuü]r(\*\*|==)*(;)/u, (_, a, m = '', p) => `${a}${m}${p === ';' ? ':' : p}`);
   t = t.replace(/^Son olarak[,\s]+/u, '').replace(/^Çünkü\s+/u, 'Nedeni: ');
   t = t.replace(/^Buradaki temel ilke şudur:\s*/u, 'Temel ilke: ');
   // Edilgen yapı belirtme durumlu nesneyle bozulur ("Etiyolojiyi 2 gruba ayrılır"): öyle cümlede fiile dokunulmaz
   if (!/\p{L}{2,}[ıiuü](?!\p{L})/u.test(duz(t))) for (const [re, b] of FIIL_RE) t = t.replace(re, b);
   else t = t.replace(FIIL_RE[0][0], 'denir').replace(FIIL_RE[1][0], 'denir');
-  return { t: buyut(on + t), no };
+  // Yalnız baştan bir şey atıldıysa ilk harf büyür ("p53", "pH" gibi küçük harfle başlayan terimler korunur)
+  return { t: t === m[2] ? on + t : buyut(on + t), no };
 }
 
 /** paragrafMd çıktısını (madde/alt başlık satırları) ders notu üslubuna çevirir. */

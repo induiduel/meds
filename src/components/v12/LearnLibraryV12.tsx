@@ -40,6 +40,8 @@ export interface LearnLibraryV12Props {
   onOpenReview?: (deckId?: string) => void;
   /** "Tekrar et": kalınan adımı başa alıp dersi açar */
   onRestart?: (id: string) => void;
+  /** Başlık satırına eklenen eylemler (ör. Toplu PDF) */
+  actions?: React.ReactNode;
 }
 
 const STATUS_LABEL: Record<Status, string> = { all: 'Tümü', active: 'Devam eden', done: 'Biten' };
@@ -70,7 +72,7 @@ const Prog: React.FC<{ pct: number; done?: boolean }> = ({ pct, done }) => (
   </span>
 );
 
-export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen, versions, onOpenReview, onRestart }) => {
+export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen, versions, onOpenReview, onRestart, actions }) => {
   const review = useReviewCounts();
   const v13 = !!useAppearance().v13;
   const [input, setInput] = useState('');
@@ -364,6 +366,7 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
           )}
         </div>
         <span className="l12-grow" />
+        {actions}
         <div className="l12-view" role="radiogroup" aria-label="Görünüm">
           <button type="button" role="radio" aria-checked={view === 'list'} aria-label="Liste görünümü" title="Liste" onClick={() => setView('list')}><List aria-hidden /></button>
           <button type="button" role="radio" aria-checked={view === 'grid'} aria-label="Izgara görünümü" title="Izgara" onClick={() => setView('grid')}><LayoutGrid aria-hidden /></button>

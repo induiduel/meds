@@ -948,30 +948,6 @@
 .cd-mola-baslik { font-size: 16px; font-weight: 800; color: var(--color-ink); }
 .cd-bitti-mot { margin-bottom: 4px; } .cd-bitti-mot .cd-mola-anim { width: 140px; height: 140px; }
 
-/* Toplu PDF indirme (CanliDersTopluPdf.tsx) */
-.cd-toplu { max-height: min(88vh, 900px); }
-.cd-toplu .cd-dlg-govde { display: flex; flex-direction: column; gap: 12px; min-height: 0; }
-.cd-toplu-ayar { display: grid; gap: 8px; margin: 0; padding: 12px; border: 1px solid var(--color-line); border-radius: 12px; }
-.cd-toplu-ayar label, .cd-toplu-liste label { display: flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer; }
-.cd-toplu-ayar small { color: var(--color-ink-3); }
-.cd-toplu-ayar input, .cd-toplu-liste input { width: 18px; height: 18px; flex: none; accent-color: var(--color-accent); }
-.cd-toplu-ust { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: var(--color-ink-2); }
-.cd-toplu-hizli { display: inline-flex; gap: 6px; }
-.cd-toplu-liste section + section { margin-top: 10px; }
-.cd-toplu-grup { padding: 6px 2px; border-bottom: 1px solid var(--color-line); }
-.cd-toplu-grup span { margin-left: auto; font-size: 12px; color: var(--color-ink-3); }
-.cd-toplu-liste ul { margin: 0; padding: 0; list-style: none; }
-.cd-toplu-liste li label { min-height: 40px; padding: 4px 2px 4px 10px; border-radius: 8px; }
-.cd-toplu-liste li label:hover { background: color-mix(in srgb, var(--color-ink) 5%, transparent); }
-.cd-toplu-no { flex: none; min-width: 4.5em; font-size: 12px; font-weight: 600; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
-.cd-toplu-ad { min-width: 0; overflow-wrap: anywhere; }
-.cd-toplu-alt { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--color-line); }
-.cd-toplu-ilerleme { display: grid; gap: 6px; flex: 1 1 220px; min-width: 0; font-size: 13px; }
-.cd-toplu-ilerleme > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.cd-toplu-cubuk { display: block; height: 4px; border-radius: 4px; background: var(--color-line); overflow: hidden; }
-.cd-toplu-cubuk i { display: block; height: 100%; background: var(--color-accent); transform-origin: left; transition: transform .25s; }
-.cd-toplu-atlanan { color: var(--color-bad-text, #b42318); overflow-wrap: anywhere; }
-.cd-toplu-not { flex: 1 1 220px; font-size: 12px; color: var(--color-ink-3); }
 
 /* süreler diyaloğu — zoom'a duyarlı yükseklik, zarif/kompakt düzen; tablet+mobilde tablo satır kartına döner */
 .cd-dlg { padding: 16px; }

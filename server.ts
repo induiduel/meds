@@ -20,6 +20,7 @@ import { registerDbQueryRoute, invalidateDbQueryCache } from './src/services/dbQ
 import { registerTtsRoute } from './src/services/ttsRoute';
 import { registerSesliAnlatimRoutes } from './src/services/sesliAnlatim';
 import { registerCanliDersRoutes } from './src/services/canliDers';
+import { registerDersVideoIsRoutes } from './src/services/dersVideoIs';
 import { registerPatolojiAsistanRoutes } from './src/services/patolojiAsistan';
 import { registerOlasiSoruRoutes } from './src/services/olasiSoruRoutes';
 import { registerKimlikRoutes } from './src/services/kimlikRoutes';
@@ -2785,6 +2786,7 @@ app.post('/api/live/broadcast', (req, res) => {
 registerDbQueryRoute(app, isRequestAdmin);
 registerTtsRoute(app);
 registerSesliAnlatimRoutes(app, requireAdmin, (ev, data) => broadcastRealtimeEvent(ev, data, true), ADMIN_EMAIL);
+registerDersVideoIsRoutes(app, ADMIN_EMAIL); // /api/canli-ders/:key'den önce
 registerCanliDersRoutes(app);
 registerPatolojiAsistanRoutes(app);
 registerOlasiSoruRoutes(app, { rootDir: __dirname, requireAdmin });

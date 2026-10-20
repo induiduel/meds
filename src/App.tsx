@@ -38,6 +38,7 @@ import { ScrollTopFab } from './components/shell/ScrollTopFab';
 import { TamEkranGezinme } from './components/shell/TamEkranGezinme';
 import { TabBar } from './components/shell/TabBar';
 import { CanliDersDockGate } from './components/canliDers/CanliDersDockGate';
+import { CdVideoRozet } from './components/canliDers/CdVideoRozet';
 import { ConfirmHost, confirmDialog } from './components/ui/ConfirmDialog';
 import { PageHeader } from './components/ui/PageHeader';
 import { LearnFab } from './components/learn/LearnFab';
@@ -1482,6 +1483,7 @@ export default function App() {
       )}
       <div className="min-h-dvh bg-canvas text-ink flex flex-col font-sans antialiased">
       <ToastHost />
+      <CdVideoRozet />
       <ConfirmHost />
       <TooltipHost />
       {activeTab !== 'music' && activeTab !== 'practice' && activeTab !== 'manage' && (

@@ -1,14 +1,18 @@
 /**
  * Canlı ders · "Video oluştur": dersin PDF slaytları + okunan metin + sesinden senkron MP4 (60 fps) üretir.
  * Kodlama tamamen kullanıcının cihazında yapılır (cdVideo.ts); motor tembel yüklenir.
+ * İş pencereden bağımsızdır (cdVideoIs.ts): pencere kapanınca arka planda sürer, ilerleme CdVideoRozet'te görünür.
+ * Pencere gövdeye taşınır (portal): ⋯ menüsünün yığın bağlamında kalınca telefonda oynatıcı/alt çubuk altını örtüyordu.
  */
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState, useSyncExternalStore } from 'react';
+import { createPortal } from 'react-dom';
 import { Clapperboard } from 'lucide-react';
 import { Dialog } from '../ui/Dialog';
-import { toast } from '../ui/Toast';
+import { cdVideoIptal, cdVideoIsAl, cdVideoIsBaslat, cdVideoIsDinle } from './cdVideoIs';
 import { cdSesKisa, cdTercihVaryant, fmtSure, type CdDetay } from './canliDersStore';
 import { cdDersEtiketi } from './canliDersKategori';
 import type { CdVideoCozunurluk, CdVideoIlerleme } from './cdVideo';
+import { CdVideoGpu, cdYoneticiMi } from './CanliDersVideoGpu';
 import '../../styles/canli-ders-cevrimdisi.css';
 
 const COZ: CdVideoCozunurluk[] = ['720p', '1080p', '2k', '4k'];
@@ -25,7 +29,7 @@ export function VideoOlusturDugme({ detay }: { detay: CdDetay }) {
         title={destek ? 'Slayt, metin ve sesten senkron video (MP4, 60 fps) oluştur' : 'Bu tarayıcı video oluşturmayı desteklemiyor (Chrome ya da Edge kullan)'}>
         <Clapperboard aria-hidden /> Video oluştur
       </button>
-      {acik && <VideoPenceresi detay={detay} onKapat={() => setAcik(false)} />}
+      {acik && createPortal(<VideoPenceresi detay={detay} onKapat={() => setAcik(false)} />, document.body)}
     </>
   );
 }
@@ -35,10 +39,11 @@ function VideoPenceresi({ detay, onKapat }: { detay: CdDetay; onKapat: () => voi
   const [vid, setVid] = useState(() => (cdTercihVaryant(sesli) || sesli[0])?.id || '');
   const [coz, setCoz] = useState<CdVideoCozunurluk>('720p');
   const [uygun, setUygun] = useState<Partial<Record<CdVideoCozunurluk, boolean>>>({});
-  const [ilerleme, setIlerleme] = useState<CdVideoIlerleme | null>(null);
   const [hata, setHata] = useState('');
-  const iptal = useRef<AbortController | null>(null);
+  const is = useSyncExternalStore(cdVideoIsDinle, cdVideoIsAl);
   const v = sesli.find((x) => x.id === vid);
+  const buDers = is?.dersKey === detay.key;
+  const ilerleme = buDers ? is!.ilerleme : null;
   const calisiyor = !!ilerleme;
 
   useEffect(() => {
@@ -48,17 +53,15 @@ function VideoPenceresi({ detay, onKapat }: { detay: CdDetay; onKapat: () => voi
       for (const c of COZ) r[c] = !!(await m.cdVideoKodlanabilir(c));
       if (canli) setUygun(r);
     });
-    return () => { canli = false; iptal.current?.abort(); };
+    return () => { canli = false; };
   }, []);
 
-  const kapat = () => {
-    if (calisiyor && !window.confirm('Video oluşturma sürüyor. İptal edilsin mi?')) return;
-    iptal.current?.abort();
-    onKapat();
-  };
+  // Kapatmak işi durdurmaz: üretim arka planda sürer
+  const kapat = () => onKapat();
+  const iptal = () => { if (window.confirm('Video oluşturma iptal edilsin mi?')) cdVideoIptal(); };
 
   const baslat = async () => {
-    if (!v) return;
+    if (!v || is) return;
     setHata('');
     const etiket = cdDersEtiketi(detay);
     const ad = `${dosyaAdi(`${etiket} - ${detay.baslik}`)} (${ETIKET[coz]} 60fps).mp4`;
@@ -73,26 +76,9 @@ function VideoPenceresi({ detay, onKapat }: { detay: CdDetay; onKapat: () => voi
         if (e?.name === 'AbortError') return;
       }
     }
-    const ac = new AbortController();
-    iptal.current = ac;
-    setIlerleme({ asama: 'hazirlik', oran: 0, t: 0, sure: 0 });
-    try {
-      const m = await import('./cdVideo');
-      const blob = await m.cdVideoOlustur({ detay, varyant: v, cozunurluk: coz, etiket, dosya, sinyal: ac.signal, onIlerleme: setIlerleme });
-      if (blob) {
-        const u = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = u; a.download = ad; a.click();
-        setTimeout(() => URL.revokeObjectURL(u), 60_000);
-      }
-      toast.success('Video hazır', ad);
-      onKapat();
-    } catch (e: any) {
-      if (e?.name === 'AbortError') { try { await dosya?.abort(); } catch { /* */ } setIlerleme(null); return; }
-      console.error('video', e);
-      setHata(e?.message || 'Video oluşturulamadı.');
-      setIlerleme(null);
-    }
+    const r = await cdVideoIsBaslat({ detay, varyant: v, cozunurluk: coz, etiket, ad, dosya });
+    if (r === 'tamam') onKapat();
+    else if (r !== 'iptal') setHata(r);
   };
 
   const sure = v?.sureSn || 0;
@@ -105,8 +91,17 @@ function VideoPenceresi({ detay, onKapat }: { detay: CdDetay; onKapat: () => voi
           : sure ? `${fmtSure(sure)} · en çok ~${Math.round((MB_SAAT[coz] * sure) / 3600)} MB` : ''}
       </p>
       <div className="cd-cd-p-eylem">
-        <button type="button" className="ms-btn is-ghost" onClick={kapat}>{calisiyor ? 'İptal' : 'Vazgeç'}</button>
-        {!calisiyor && <button type="button" className="ms-btn is-primary" onClick={baslat} disabled={!v || !uygun[coz]}><Clapperboard aria-hidden /> Oluştur</button>}
+        {calisiyor ? (
+          <>
+            <button type="button" className="ms-btn is-ghost" onClick={iptal}>İptal</button>
+            <button type="button" className="ms-btn is-primary" onClick={kapat}>Arka planda sürdür</button>
+          </>
+        ) : (
+          <>
+            <button type="button" className="ms-btn is-ghost" onClick={kapat}>Vazgeç</button>
+            <button type="button" className="ms-btn is-primary" onClick={baslat} disabled={!v || !uygun[coz] || !!is}><Clapperboard aria-hidden /> Oluştur</button>
+          </>
+        )}
       </div>
     </div>
   );
@@ -114,8 +109,9 @@ function VideoPenceresi({ detay, onKapat }: { detay: CdDetay; onKapat: () => voi
   return (
     <Dialog title="Video oluştur" subtitle={detay.baslik} onClose={kapat} footer={footer} width="max-w-md">
       <div className="cd-cd-p cd-vid">
-        <p className="cd-vid-not">Slaytlar, okunan metin (kelime kelime) ve ses senkron bir MP4 videoda birleşir. Video bu cihazda oluşturulur; sekme açık kalmalı.</p>
-        <fieldset className="cd-vid-grup" disabled={calisiyor}>
+        <p className="cd-vid-not">Slaytlar, okunan metin (kelime kelime) ve ses senkron bir MP4 videoda birleşir. Video bu cihazda oluşturulur; başlayınca pencereyi kapatıp başka sayfaya ya da sekmeye geçebilirsin. Sekmeyi kapatma; telefonda ekran kilitlenirse üretim duraklar.</p>
+        {is && !buDers && <p className="cd-vid-hata">Şu an başka bir dersin videosu oluşturuluyor ({is.baslik}). Bitince yenisini başlatabilirsin.</p>}
+        <fieldset className="cd-vid-grup" disabled={!!is}>
           <legend>Çözünürlük (60 fps)</legend>
           <div className="cd-vid-secim">
             {COZ.map((c) => (
@@ -130,7 +126,7 @@ function VideoPenceresi({ detay, onKapat }: { detay: CdDetay; onKapat: () => voi
         {sesli.length > 1 && (
           <label className="cd-vid-grup">
             <span>Ses</span>
-            <select value={vid} onChange={(e) => setVid(e.target.value)} disabled={calisiyor}>
+            <select value={vid} onChange={(e) => setVid(e.target.value)} disabled={!!is}>
               {sesli.map((x) => <option key={x.id} value={x.id}>{cdSesKisa(x)}</option>)}
             </select>
           </label>
@@ -138,7 +134,9 @@ function VideoPenceresi({ detay, onKapat }: { detay: CdDetay; onKapat: () => voi
         {!sesli.length && <p className="cd-vid-hata">Bu dersin sesinde zamanlama yok; video oluşturulamaz.</p>}
         {calisiyor && <progress className="cd-vid-bar" max={1} value={ilerleme!.oran} />}
         {hata && <p className="cd-vid-hata" role="alert">{hata}</p>}
+        {cdYoneticiMi() && sesli.length > 0 && <CdVideoGpu dersKey={detay.key} vid={vid} cozunurluk={coz} />}
       </div>
     </Dialog>
   );
 }
+

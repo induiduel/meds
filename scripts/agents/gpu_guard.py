@@ -58,7 +58,8 @@ RISE_FROM = 72    # sıçrama freni yalnız bu sıcaklık ve üstünde (kart her
 POLL = 1.0
 WINDOW = 20       # sn, kullanım ortalaması penceresi
 # GPU'ya iş gönderen istemciler: yalnız ağır sentez süreçleri (bekleme döngüsü `xtts_isci.py bekle` dondurulmaz)
-CLIENTS = ("xtts_isci.py sentezle", "xtts_isci.py dene", "xtts_ornekler.py")
+CLIENTS = ("xtts_isci.py sentezle", "xtts_isci.py dene", "xtts_ornekler.py",
+           "video_uret.py uret")  # ders videosu: çizim süreci dondurulunca boru durur, NVENC boşa düşer
 
 paused: set[int] = set()
 

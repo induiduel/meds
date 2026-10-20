@@ -59,6 +59,7 @@ import { QuestionFocus, focusMarks } from '../../../services/questionFocus';
 import { detectIosDevice, openPwaInstallGuide } from '../../../services/pwaService';
 import { shouldAvoidNativeFullscreen } from '../../../utils/device';
 import { pdfAdresOku, pdfAdresYaz } from '../../../utils/pdfAdres';
+import { ogrenAktarBelgesi } from './ogrenAktar';
 import { isAppFullscreen, releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../../utils/fullscreen';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
 import { toast } from '../../ui/Toast';
@@ -107,8 +108,6 @@ import { tekrarTamamlandi, useKonuSayaci, useSoruSayaci } from '../../../service
 import { ogrenTakipId } from '../../takip/ogrenTakipId';
 import type { IxResult } from './lessonModel';
 import { MetinAktarMenu } from '../../MetinAktarMenu';
-import type { AktarBelge } from '../../../services/metinDisaAktar';
-import { mdDuzenle } from '../../../services/maddeDuzen';
 
 type Layout = 'A' | 'B';
 
@@ -400,18 +399,6 @@ export interface LessonPlayerProps {
   onOpenReview?: (deckId: string) => void;
 }
 
-/** Ders metni (her adımın başlığı, alt başlığı ve anlatımı birebir) → dışa aktarma belgesi */
-function ogrenAktarBelgesi(deck: InteractiveDeck): AktarBelge {
-  const ust = [deck.discipline, deck.instructor].filter(Boolean).join(' · ');
-  return {
-    baslik: deckName(deck),
-    alt: `${ust ? `${ust} · ` : ''}Etkileşimli ders metni`,
-    bolumler: (deck.slides || [])
-      .map((sl: any) => ({ sl, md: String(sl.synthesisNarrative || sl.content || '').trim() }))
-      .filter((x) => x.md)
-      .map(({ sl, md }) => ({ baslik: `${sl.slideNumber}. ${String(sl.title || '').replace(/^\[[^\]]+\]\s*/, '')}`, alt: sl.subtitle || undefined, md: mdDuzenle(md) })),
-  };
-}
 
 export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initialViewMode = 'interactive', onProgress, onClose, onExportPdf, focus, onClearFocus, versions, onSwitchVersion, onOpenReview }) => {
   const steps = useMemo(() => buildSteps(deck), [deck]);

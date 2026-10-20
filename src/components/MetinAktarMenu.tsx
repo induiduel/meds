@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { Download, FileDown, Loader2 } from 'lucide-react';
 import type { AktarBelge, AktarBicim } from '../services/metinDisaAktar';
+import { duzenOku, duzenYaz, type PdfDuzen } from '../services/pdfDuzen';
+import { PdfDuzenSecici } from './ui/PdfDuzenSecici';
 import '../styles/metin-aktar.css';
 
 const BICIMLER: { id: AktarBicim; ad: string; alt: string }[] = [
@@ -17,11 +19,13 @@ export function MetinAktarMenu({ belge, dosyaAdi, dugmeSinif = 'cd-btn', etiket 
   const [acik, setAcik] = useState(false);
   const [calisan, setCalisan] = useState<AktarBicim | null>(null);
   const [hata, setHata] = useState('');
+  const [duzen, setDuzenH] = useState<PdfDuzen>(duzenOku);
+  const setDuzen = (d: PdfDuzen) => { setDuzenH(d); duzenYaz(d); };
   const indir = async (b: AktarBicim) => {
     setCalisan(b); setHata('');
     try {
       const { metniIndir } = await import('../services/metinDisaAktar');
-      await metniIndir(await belge(b), b, dosyaAdi);
+      await metniIndir(await belge(b), b, dosyaAdi, duzen);
     } catch (e) {
       console.warn('dışa aktarma', e);
       setHata('Dosya oluşturulamadı, yeniden dene.');
@@ -40,6 +44,10 @@ export function MetinAktarMenu({ belge, dosyaAdi, dugmeSinif = 'cd-btn', etiket 
               <b>{b.ad}</b><small>{b.alt}</small>
             </button>
           ))}
+          <div className="cd-aktar-duzen">
+            <small>PDF sayfa düzeni</small>
+            <PdfDuzenSecici ad="cd-aktar-duzen" deger={duzen} onDegis={setDuzen} />
+          </div>
           {hata && <p className="cd-aktar-hata" role="alert">{hata}</p>}
         </div>
       )}

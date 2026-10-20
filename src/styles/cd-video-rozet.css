@@ -1,0 +1,15 @@
+/* Video oluşturma rozeti (CdVideoRozet): üstte ortada, alt oynatıcı/alt çubukla çakışmaz */
+.cd-vid-rozet { position: fixed; z-index: 65; top: calc(env(safe-area-inset-top, 0px) + 8px); left: 50%; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 10px; width: max-content; max-width: calc(100vw - 32px); min-height: 44px; padding: 6px 6px 6px 12px;
+  overflow: hidden; border: 1px solid var(--color-line); border-radius: 14px; background: var(--color-white, #fff); color: var(--color-ink);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .14); font-size: 12.5px; }
+.cd-vid-rozet-ikon { width: 18px; height: 18px; flex: none; color: var(--color-accent); }
+.cd-vid-rozet-metin { display: flex; flex-direction: column; min-width: 0; line-height: 1.25; }
+.cd-vid-rozet-metin > b { max-width: 46vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
+.cd-vid-rozet-metin > span { color: var(--color-ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cd-vid-rozet-iptal { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 36px; height: 36px; border: 0; border-radius: 10px;
+  background: none; color: var(--color-ink-3); cursor: pointer; }
+.cd-vid-rozet-iptal:hover { background: var(--color-field); color: var(--color-ink); }
+.cd-vid-rozet-iptal > svg { width: 16px; height: 16px; }
+.cd-vid-rozet-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--color-accent); transform-origin: left; transition: transform .3s linear; }
+@media (prefers-reduced-motion: reduce) { .cd-vid-rozet-bar { transition: none; } }

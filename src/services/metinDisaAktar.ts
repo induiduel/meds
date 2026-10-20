@@ -553,8 +553,9 @@ export async function metinDosyasi(b: AktarBelge, bicim: AktarBicim): Promise<Bl
     : pdf(b);
 }
 
-export async function metniIndir(b: AktarBelge, bicim: AktarBicim, dosyaAdi: string): Promise<void> {
-  const blob = await metinDosyasi(b, bicim);
+export async function metniIndir(b: AktarBelge, bicim: AktarBicim, dosyaAdi: string, duzen?: import('./pdfDuzen').PdfDuzen): Promise<void> {
+  let blob = await metinDosyasi(b, bicim);
+  if (bicim === 'pdf' && duzen && duzen.nup > 1) blob = await (await import('./pdfDuzen')).pdfDuzenle(blob, duzen);
   const ad = dosyaAdi.replace(/[\\/:*?"<>|\u0000-\u001f]/g, '-').replace(/\s+/g, ' ').trim().slice(0, 120);
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');

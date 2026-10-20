@@ -129,7 +129,9 @@ export const LearnLibrary: React.FC<{
   onOpenReview?: (deckId?: string) => void;
   /** "Tekrar et": kalınan adımı başa alıp açar (klasik görünümde yalnız Bitirdim işareti var) */
   onRestart?: (id: string) => void;
-}> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen, versions, onOpenReview }) => {
+  /** Araç çubuğuna eklenen eylemler (ör. Toplu PDF) */
+  actions?: React.ReactNode;
+}> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen, versions, onOpenReview, actions }) => {
   const review = useReviewCounts();
   const [query, setQuery] = useState('');
   const [branch, setBranch] = useState('all');
@@ -320,6 +322,8 @@ export const LearnLibrary: React.FC<{
           ),
         }]}
         tools={
+          <>
+          {actions}
           <div className="pt-view" role="radiogroup" aria-label="Görünüm">
             {([['grid', 'Izgara', LayoutGrid], ['list', 'Liste', Rows3]] as const).map(([id, label, Icon]) => (
               <button key={id} type="button" role="radio" aria-checked={view === id} className={view === id ? 'is-on' : ''} onClick={() => setView(id)} title={id === 'grid' ? 'Izgara: kartlar' : 'Liste: her deste tek satır'}>
@@ -328,6 +332,7 @@ export const LearnLibrary: React.FC<{
               </button>
             ))}
           </div>
+          </>
         }
         chips={chips}
         onClearChips={() => { setBranch('all'); setKurul('all'); onArchive('new_only'); }}

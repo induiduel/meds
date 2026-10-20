@@ -16,3 +16,5 @@
 .ls-tools-pop .cd-aktar { display: contents; }
 .ls-tools-pop .cd-aktar-liste { grid-column: 1 / -1; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 2px 0 4px; }
 @media (max-width: 520px) { .ls-tools-pop .cd-aktar-liste { grid-template-columns: 1fr 1fr; } }
+.cd-aktar-duzen { grid-column: 1 / -1; display: grid; gap: 6px; padding-top: 6px; border-top: 1px solid var(--color-line); }
+.cd-aktar-duzen > small { font-size: 12px; font-weight: 600; color: var(--color-ink-3); }

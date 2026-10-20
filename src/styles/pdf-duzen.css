@@ -1,0 +1,14 @@
+/* PDF sayfa düzeni seçici (components/ui/PdfDuzenSecici.tsx) */
+.pdz { display: grid; gap: 8px; }
+.pdz-nup { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.pdz-nup-ops { position: relative; display: grid; justify-items: center; gap: 4px; padding: 8px 4px; border: 1px solid var(--color-line); border-radius: 10px; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.pdz-nup-ops input { position: absolute; opacity: 0; pointer-events: none; }
+.pdz-nup-ops.is-on { border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
+.pdz-nup-ops:focus-within { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.pdz-simge { display: grid; gap: 2px; width: 24px; height: 32px; padding: 2px; border: 1px solid var(--color-ink-3); border-radius: 2px; }
+.pdz-simge.is-yatay { width: 32px; height: 24px; }
+.pdz-simge i { border-radius: 1px; background: color-mix(in srgb, var(--color-ink) 28%, transparent); }
+.pdz-ek { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; font-size: 13px; }
+.pdz-ek label { display: inline-flex; align-items: center; gap: 6px; }
+.pdz-ek select { min-height: 32px; padding: 0 6px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-white); color: var(--color-ink); font: inherit; }
+.pdz-kutu input { width: 16px; height: 16px; margin: 0; accent-color: var(--color-accent); }
