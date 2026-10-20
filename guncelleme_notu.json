@@ -1,22 +1,16 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 129,
-  "baslik": "PDF indirme: sayfa düzeni ve Toplu PDF",
+  "onem": 130,
+  "baslik": "Etkileşimli derslerde toplu PDF indirme",
   "maddeler": [
-    "PDF indirirken bir yaprağa 2, 4 ya da 8 sayfa yerleştirilebiliyor; yön, sıra, boşluk ve çerçeve seçilebiliyor.",
-    "Etkileşimli derslerde de Toplu PDF ile birden çok dersin metni tek seferde indirilebiliyor.",
-    "Konuşma metninde pH, p53 gibi küçük harfle başlayan terimler artık bozulmuyor."
+    "Etkileşimli dersler kitaplığında yeni \"Toplu PDF\" düğmesi: dersleri kurul ve branşa göre ya da tek tek seçip metinlerini tek seferde indirebilirsin (her ders ayrı PDF olarak ZIP içinde ya da içindekiler ve yer imleriyle tek PDF).",
+    "Toplu ve tek ders PDF indirmelerinde sayfa düzeni seçeneği: bir yaprağa 2, 4 ya da 8 sayfa basabilirsin."
   ],
   "eklenen": [
-    "PDF indirirken bir yaprağa 2, 4 ya da 8 sayfa yerleştirilebiliyor; yön, sıra, boşluk ve çerçeve seçilebiliyor.",
-    "Etkileşimli derslerde de Toplu PDF ile birden çok dersin metni tek seferde indirilebiliyor.",
-    "Sesli ders videosu dışa aktarılırken ilerleme rozeti görünüyor."
+    "Etkileşimli dersler kitaplığında yeni \"Toplu PDF\" düğmesi: dersleri kurul ve branşa göre ya da tek tek seçip metinlerini tek seferde indirebilirsin (her ders ayrı PDF olarak ZIP içinde ya da içindekiler ve yer imleriyle tek PDF).",
+    "Toplu ve tek ders PDF indirmelerinde sayfa düzeni seçeneği: bir yaprağa 2, 4 ya da 8 sayfa basabilirsin."
   ],
-  "degisen": [
-    "Sayfa düzeni hem tek ders \"Metni dışa aktar\" menüsünde hem Toplu PDF penceresinde var; son seçim hatırlanıyor."
-  ],
-  "duzeltilen": [
-    "Konuşma metninde pH, p53 gibi küçük harfle başlayan terimler artık bozulmuyor."
-  ],
+  "degisen": [],
+  "duzeltilen": [],
   "silinen": []
 }
