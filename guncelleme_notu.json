@@ -1,14 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 119,
-  "baslik": "Kurulu uygulamada gerçek tam ekran",
+  "onem": 120,
+  "baslik": "Yeni renk paletleri ve daha okunaklı temalar",
   "maddeler": [
-    "Bilgisayara ya da Android telefona/tablete kurulan MeDSor uygulamasında tam ekran tuşları artık gerçek tam ekran açıyor: pencere başlığı, durum ve gezinme çubukları gizleniyor (sesli ders, soru çözücü, dersler ve diğer tüm tam ekranlar)."
+    "Renk paleti sayısı 23'e çıktı; her temada ayrı renk aileleri ve bir \"Yüksek kontrast\" seçeneği var.",
+    "Açık temada birbirinin aynısı olan üç palet yeni renklerle değiştirildi (Zümrüt, Kehribar, Mürekkep).",
+    "Koyu ve OLED temada okunmayan rozet, işaret ve sayaç yazıları düzeltildi."
   ],
-  "eklenen": [],
-  "degisen": [],
+  "eklenen": [
+    "Renk paleti sayısı 23'e çıktı; her temada ayrı renk aileleri ve bir \"Yüksek kontrast\" seçeneği var."
+  ],
+  "degisen": [
+    "Açık temada birbirinin aynısı olan üç palet yeni renklerle değiştirildi (Zümrüt, Kehribar, Mürekkep)."
+  ],
   "duzeltilen": [
-    "Bilgisayara ya da Android telefona/tablete kurulan MeDSor uygulamasında tam ekran tuşları artık gerçek tam ekran açıyor: pencere başlığı, durum ve gezinme çubukları gizleniyor (sesli ders, soru çözücü, dersler ve diğer tüm tam ekranlar)."
+    "Koyu ve OLED temada okunmayan rozet, işaret ve sayaç yazıları düzeltildi."
   ],
   "silinen": []
 }
