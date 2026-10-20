@@ -100,7 +100,7 @@ html.ui-v7 :where(a, button, input, select, textarea, summary, [tabindex]):focus
 html.ui-v7 ::selection { background: color-mix(in srgb, var(--color-accent) 22%, transparent); }
 
 /* ---------- Kabuk: kenar menüsü (iPadOS kenar çubuğu) ---------- */
-html.ui-v7 .ms-rail-mark { background: var(--color-brand); color: #fff; border-radius: 8px; }
+html.ui-v7 .ms-rail-mark { background: var(--color-brand); color: var(--color-on-solid); border-radius: 8px; }
 html.ui-v7 .ms-rail-word { font-family: var(--font-display); }
 
 /* Üst çubuk: buzlu cam */

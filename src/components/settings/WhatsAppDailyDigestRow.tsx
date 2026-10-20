@@ -441,7 +441,7 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
                 gap: '6px',
                 backgroundColor: '#25D366',
                 borderColor: '#25D366',
-                color: '#fff',
+                color: '#062A14', // WhatsApp yeşilinde beyaz yazı 2:1 kalıyordu
               }}
             >
               <Sparkles size={13} />

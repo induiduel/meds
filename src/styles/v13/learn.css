@@ -23,7 +23,8 @@
   background: var(--color-white); color: var(--color-ink-2); font: 500 13.5px/1 var(--font-sans); white-space: nowrap; cursor: pointer; }
 .l13-branch:hover { border-color: var(--color-line-2, var(--color-line)); color: var(--color-ink); }
 .l13-branch[aria-checked='true'] { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
-.l13-branch-n { font: 500 11.5px var(--font-mono); font-variant-numeric: tabular-nums; opacity: .7; }
+.l13-branch-n { font: 500 11.5px var(--font-mono); font-variant-numeric: tabular-nums; color: var(--color-ink-3); }
+.l13-branch[aria-checked='true'] .l13-branch-n { color: inherit; }
 .l13-branches > .l13-branch:last-child { margin-right: 24px; }
 
 .l13 :is(.l12-panel, .l12-list) { border-radius: 16px; }

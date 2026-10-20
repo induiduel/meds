@@ -75,8 +75,9 @@
 
 /* ---------- kategori çipleri ---------- */
 .xs-chip { flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 11px; border-radius: 999px; border: 1px solid var(--color-line); background: transparent; color: var(--color-ink-2); font-size: 12.5px; font-weight: 600; transition: background var(--mo-fast, 120ms), color var(--mo-fast, 120ms), border-color var(--mo-fast, 120ms); }
-.xs-chip span { font-variant-numeric: tabular-nums; opacity: .7; }
+.xs-chip span { font-variant-numeric: tabular-nums; color: var(--color-ink-3); }
 .xs-chip:hover:not(:disabled) { border-color: color-mix(in srgb, var(--k, var(--color-ink)) 45%, var(--color-line)); }
+.xs-chip.is-on span { color: inherit; }
 .xs-chip.is-on { background: var(--color-ink); border-color: transparent; color: var(--color-canvas); }
 .xs-chip.is-on[class*="k-"] { background: color-mix(in srgb, var(--k) 16%, var(--color-white)); border-color: color-mix(in srgb, var(--k) 45%, transparent); color: color-mix(in srgb, var(--k) 78%, var(--color-ink)); }
 .xs-chip:disabled { opacity: .4; }

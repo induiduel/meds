@@ -296,7 +296,7 @@
   .cd-ders-uc .cd-btn-yildizli { position: relative; width: 34px; padding: 0; justify-content: center; }
   .cd-ders-uc .cd-btn-yildizli > span { display: none; }
   .cd-ders-uc .cd-btn-yildizli[data-sayi]::after { content: attr(data-sayi); position: absolute; top: -5px; right: -5px; min-width: 16px; height: 16px; padding: 0 4px; box-sizing: border-box;
-    border-radius: 99px; background: #f59e0b; color: #fff; font-size: 10px; font-weight: 700; line-height: 16px; text-align: center; }
+    border-radius: 99px; background: #f59e0b; color: #1F1300; font-size: 10px; font-weight: 700; line-height: 16px; text-align: center; }
 }
 
 /* ders başlığı: telefonda iki satıra kadar (kesilip okunmaz olmasın) */
@@ -499,7 +499,7 @@
   .cd-ders-uc .cd-btn-yildizli { position: relative; }
   .cd-ders-uc .cd-btn-yildizli > span { display: none; }
   .cd-ders-uc .cd-btn-yildizli[data-sayi]::after { content: attr(data-sayi); position: absolute; top: -5px; right: -5px; min-width: 16px; height: 16px; padding: 0 4px; box-sizing: border-box;
-    border-radius: 99px; background: #f59e0b; color: #fff; font-size: 10px; font-weight: 700; line-height: 16px; text-align: center; }
+    border-radius: 99px; background: #f59e0b; color: #1F1300; font-size: 10px; font-weight: 700; line-height: 16px; text-align: center; }
   .cd-ders-bas > .cd-ders-arac { grid-area: arac; flex-wrap: wrap; gap: 4px; }
   .cd-ders-bas .cd-sekmeler { flex: 1; min-width: 140px; margin: 0; display: flex; }
   .cd-ders-bas .cd-sekmeler button { flex: 1; min-width: 0; justify-content: center; height: 30px; padding: 0 6px; font-size: 12px; }
@@ -704,7 +704,7 @@
 .cd-bitti-hero-btn { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px; text-align: left; border-radius: 14px; border: 1px solid var(--color-line); background: var(--color-canvas); color: var(--color-ink); cursor: pointer; transition: all .15s ease; }
 .cd-bitti-hero-btn:hover { border-color: var(--color-accent); background: var(--color-field); }
 .cd-bitti-hero-btn:active { transform: scale(.995); }
-.cd-bitti-hero-btn .on-hero-asistan-i { flex-shrink: 0; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--color-accent); color: #fff; }
+.cd-bitti-hero-btn .on-hero-asistan-i { flex-shrink: 0; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--color-accent); color: var(--color-on-accent); }
 .cd-bitti-hero-btn.is-cozucu .on-hero-asistan-i { background: #3b82f6; }
 .cd-bitti-hero-btn .on-hero-asistan-i svg { width: 20px; height: 20px; }
 .cd-bitti-hero-btn > span:nth-child(2) { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }

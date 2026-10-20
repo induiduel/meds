@@ -104,10 +104,10 @@
 .sc-sik:active:not(:disabled) { transform: scale(.99); }
 .sc-sik.is-okunuyor { border-color: var(--color-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 22%, transparent); opacity: 1; }
 .sc-sik.is-dogru { border-color: var(--color-ok); background: var(--color-ok-soft, color-mix(in srgb, var(--color-ok) 12%, transparent)); font-weight: 650; opacity: 1; animation: sc-dogru .45s var(--mo-ease, ease); }
-.sc-sik.is-dogru > b { background: var(--color-ok); color: #fff; }
+.sc-sik.is-dogru > b { background: var(--color-ok); color: var(--color-on-solid); }
 .sc-sik.is-yanlis { border-color: color-mix(in srgb, var(--color-bad) 45%, transparent); background: var(--color-bad-soft, color-mix(in srgb, var(--color-bad) 7%, transparent)); color: var(--color-ink-2); }
 .sc-sik.is-yanlis.is-secili { animation: sc-sars .35s; }
-.sc-sik.is-yanlis > b { background: var(--color-bad); color: #fff; }
+.sc-sik.is-yanlis > b { background: var(--color-bad); color: var(--color-on-solid); }
 .sc-sik.is-yanlis span { text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--color-bad) 60%, transparent); }
 .sc-sik.is-sonuk { opacity: .62; }
 .sc-sik.is-sonuk:hover { opacity: 1; }
@@ -153,7 +153,7 @@
 .sc-aciklamalar li { display: flex; gap: 10px; align-items: flex-start; padding: 8px; margin-inline: -8px; border-radius: 10px; color: var(--color-ink-2); transition: background .2s, color .2s; }
 .sc-aciklamalar li p { font-size: 15.5px; }
 .sc-aciklamalar li.is-aktif { background: var(--color-accent-soft); color: var(--color-ink); }
-.sc-h { flex-shrink: 0; width: 26px; height: 26px; margin-top: 1px; border-radius: 8px; display: grid; place-items: center; font-weight: 800; font-size: 13px; color: #fff; background: var(--color-bad); }
+.sc-h { flex-shrink: 0; width: 26px; height: 26px; margin-top: 1px; border-radius: 8px; display: grid; place-items: center; font-weight: 800; font-size: 13px; color: var(--color-on-solid); background: var(--color-bad); }
 .sc-aciklamalar li.is-dogru .sc-h { background: var(--color-ok); }
 .sc-dene { font-size: 13px; color: var(--color-ink-3); }
 .sc-cozum { background: var(--color-accent-soft); }
@@ -291,7 +291,7 @@
 .scs-ders { padding: 12px; border-radius: 16px; background: var(--color-white); border: 1px solid var(--color-line); display: flex; flex-direction: column; gap: 10px; height: 100%; }
 .scs-ders-ust { display: flex; gap: 10px; align-items: flex-start; }
 .scs-no { flex-shrink: 0; min-width: 32px; height: 32px; padding: 0 4px; border-radius: 9px; display: grid; place-items: center; background: var(--color-field); font-weight: 800; font-size: 13px; color: var(--color-ink-2); }
-.scs-ders.is-tamam .scs-no { background: var(--color-ok); color: #fff; }
+.scs-ders.is-tamam .scs-no { background: var(--color-ok); color: var(--color-on-solid); }
 .scs-ad { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 2px; }
 .scs-ad b { font-size: 14.5px; line-height: 1.35; font-weight: 650; }
 .scs-ad small { font-size: 12.5px; color: var(--color-ink-3); }
@@ -346,7 +346,7 @@
 .scs-row-b:hover { background: var(--color-canvas); }
 .scs-row-b:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
 .scs-row .scs-no { min-width: 30px; height: 30px; font: 600 12.5px var(--font-mono, ui-monospace, monospace); }
-.scs-row.is-tamam .scs-no { background: var(--color-ok); color: #fff; }
+.scs-row.is-tamam .scs-no { background: var(--color-ok); color: var(--color-on-solid); }
 .scs-row .scs-ad b { font-size: 14px; font-weight: 600; }
 .scs-row .scs-cubuk { height: 4px; margin-top: 5px; max-width: 260px; }
 .scs-durum { display: inline-flex; align-items: center; gap: 5px; height: 30px; padding: 0 11px; border-radius: 99px; flex: none;
@@ -389,7 +389,7 @@
 .sc-btn-yildiz.is-on { color: #f59e0b !important; }
 .sc-yildiz-rozet {
   position: absolute; top: -3px; right: -3px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 99px;
-  background: #f59e0b; color: #ffffff; font-size: 10.5px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  background: #f59e0b; color: #1F1300; font-size: 10.5px; font-weight: 800; display: flex; align-items: center; justify-content: center;
 }
 .sc-li-sar { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .sc-p-yildiz {

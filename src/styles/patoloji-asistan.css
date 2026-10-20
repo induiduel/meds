@@ -145,7 +145,7 @@
 .pa-btn-yildiz.is-on { color: #f59e0b !important; }
 .pa-yildiz-rozet {
   position: absolute; top: -3px; right: -3px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 99px;
-  background: #f59e0b; color: #ffffff; font-size: 10.5px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  background: #f59e0b; color: #1F1300; font-size: 10.5px; font-weight: 800; display: flex; align-items: center; justify-content: center;
 }
 .pa-cumleler p { margin: 0; font-size: 19px; line-height: 1.6; color: var(--color-ink-2); padding: 6px 10px; margin-inline: -10px; border-radius: 10px;
   transition: background var(--mo-base, 200ms), color var(--mo-base, 200ms); }
@@ -171,9 +171,9 @@
 .pa-sik:hover:not(:disabled) { border-color: var(--color-accent); background: var(--color-accent-soft); }
 .pa-sik:active:not(:disabled) { transform: scale(.99); }
 .pa-sik.is-dogru { border-color: var(--color-ok); background: var(--color-ok-soft, color-mix(in srgb, var(--color-ok) 12%, transparent)); font-weight: 650; animation: pa-dogru .45s var(--mo-ease, ease); }
-.pa-sik.is-dogru > b { background: var(--color-ok); color: #fff; }
+.pa-sik.is-dogru > b { background: var(--color-ok); color: var(--color-on-solid); }
 .pa-sik.is-yanlis { border-color: color-mix(in srgb, var(--color-bad) 50%, transparent); background: var(--color-bad-soft, color-mix(in srgb, var(--color-bad) 8%, transparent)); color: var(--color-ink-2); animation: pa-sars .35s; }
-.pa-sik.is-yanlis > b { background: var(--color-bad); color: #fff; }
+.pa-sik.is-yanlis > b { background: var(--color-bad); color: var(--color-on-solid); }
 .pa-sik.is-yanlis span { text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--color-bad) 60%, transparent); }
 .pa-sik.is-sonuk { opacity: .5; }
 .pa-sik-i { width: 20px; height: 20px; }
@@ -481,7 +481,7 @@
 .pa-yardim ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
 .pa-yardim li { display: flex; gap: 10px; align-items: flex-start; padding: 7px 8px; border-radius: 10px; font-size: 15px; line-height: 1.5; color: var(--color-ink-2); transition: background .2s, color .2s; }
 .pa-yardim li.is-aktif { background: color-mix(in srgb, var(--color-ai) 14%, transparent); color: var(--color-ink); }
-.pa-yardim li.is-dogru .pa-yardim-h { background: var(--color-ok); color: #fff; }
+.pa-yardim li.is-dogru .pa-yardim-h { background: var(--color-ok); color: var(--color-on-solid); }
 .pa-yardim li.is-elenen { opacity: .75; }
 .pa-yardim-h { flex-shrink: 0; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: color-mix(in srgb, var(--color-ai) 16%, transparent); color: var(--color-ai); font-weight: 800; font-size: 13px; }
 @media (max-width: 640px) {
@@ -501,7 +501,7 @@
 }
 .pa-hero-cozucu:hover { border-color: var(--color-accent); box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
 .pa-hero-cozucu:active { transform: scale(.995); }
-.pa-hero-cozucu-i { flex-shrink: 0; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: var(--color-accent); color: #fff; }
+.pa-hero-cozucu-i { flex-shrink: 0; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: var(--color-accent); color: var(--color-on-accent); }
 .pa-hero-cozucu-i svg { width: 21px; height: 21px; }
 .pa-hero-cozucu-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .pa-hero-cozucu-t b { font-size: 15px; color: var(--color-ink); }
@@ -914,7 +914,7 @@
 .pa-yonet-btn.is-tehlike-dolu {
   background: var(--color-bad);
   border-color: var(--color-bad);
-  color: #fff !important;
+  color: var(--color-on-solid) !important;
 }
 .pa-sifirla-onay {
   margin-left: auto;
@@ -1045,9 +1045,9 @@
   background: var(--color-field);
   color: var(--color-ink-2);
 }
-.pa-adim-no.d-tamam { background: var(--color-ok); color: #fff; }
-.pa-adim-no.d-yardimli { background: var(--color-warn); color: #fff; }
-.pa-adim-no.d-yanlis { background: var(--color-bad); color: #fff; }
+.pa-adim-no.d-tamam { background: var(--color-ok); color: var(--color-on-solid); }
+.pa-adim-no.d-yardimli { background: var(--color-warn); color: var(--color-on-solid); }
+.pa-adim-no.d-yanlis { background: var(--color-bad); color: var(--color-on-solid); }
 .pa-adim-no.d-okundu, .pa-adim-no.d-kismi { background: color-mix(in srgb, var(--color-accent) 22%, var(--color-field)); color: var(--color-accent); }
 .pa-adim-no.is-simdi { box-shadow: 0 0 0 2px var(--color-white), 0 0 0 3.5px var(--color-accent); }
 
