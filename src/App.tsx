@@ -8,7 +8,7 @@ import { foldTurkish } from './utils/fuzzyMatching';
 import type { SearchHit } from './components/search/searchShared';
 import { AppRoute, parseLocation, writeLocation, pathFor, icPathFor, ROUTE_TITLES, deepLinkIdFor, navigateTo } from './router';
 import { icKonum, kanonik } from './siteHaritasi';
-import { KAPALI_SAYFALAR, kategoriOf } from './components/merkez/merkezModel';
+import { KAPALI_SAYFALAR } from './components/merkez/merkezModel';
 import {
   Sparkles,
   Plus,
@@ -138,7 +138,6 @@ const OlasiSorularView = React.lazy(() => wrapLazy(import('./components/olasi/Ol
 const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/GecmisKurullarView')));
 const KampView = React.lazy(() => wrapLazy(import('./components/kamp/KampView')));
 const MerkezView = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView')));
-const BolumSeridi = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView').then((m) => ({ default: m.BolumSeridi }))));
 const NeYapmak = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView').then((m) => ({ default: m.NeYapmak }))));
 const GuncellemeGunluguView = React.lazy(() => wrapLazy(import('./components/guncellemeler/GuncellemeGunluguView')));
 const SinavCalismaView = React.lazy(() => wrapLazy(import('./components/SinavCalismaView').then(m => ({ default: m.SinavCalismaView }))));
@@ -1623,12 +1622,7 @@ export default function App() {
       {/* Main Container */}
       <main ref={mainRef} className={`sh-main ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}`}>
 
-        {/* Bölüm şeridi: araç sayfasının kategorisi + kardeş araçlar (components/merkez; tam ekran ögede kendini gizler) */}
-        {kategoriOf(activeTab) && !sayfaKapali && (
-          <Suspense fallback={null}>
-            <BolumSeridi route={activeTab} />
-          </Suspense>
-        )}
+        {/* Bölüm adı üst çubukta görünür (kabuğun grup etiketi); sayfa içinde ayrıca şerit yok (kullanıcı kararı 2026-10-21) */}
 
         {/* Merkez sayfaları: /dersler · /sorular · /kamplar[/kurulN] · /kaynaklar */}
         {(activeTab === 'hub_dersler' || activeTab === 'hub_sorular' || activeTab === 'hub_kamplar' || activeTab === 'hub_kaynaklar') && (

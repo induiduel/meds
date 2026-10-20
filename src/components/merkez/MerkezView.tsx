@@ -6,7 +6,7 @@
  * Model: merkezModel.ts · adresler: siteHaritasi.ts · stil: styles/merkez.css (.mz-*)
  */
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, BookOpenText, ClipboardCheck, Flag, GraduationCap, MessageCircleQuestion } from 'lucide-react';
+import { ArrowRight, ChevronLeft, BookOpenText, ClipboardCheck, Flag, GraduationCap, MessageCircleQuestion } from 'lucide-react';
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { KATEGORILER, icKonum, type KategoriId } from '../../siteHaritasi';
 import { NAV_ITEMS } from '../shell/navModel';
@@ -76,26 +76,14 @@ export const BolumSeridi: React.FC<{ route: AppRoute }> = ({ route }) => {
   const kat = kategoriOf(route);
   if (!kat || seritGizli(route)) return null;
   const tanim = KATEGORILER.find((k) => k.id === kat)!;
-  const Ic = KATEGORI_IKON[kat];
-  const araclar = MERKEZ_ARACLARI[kat];
   const checkup = route === 'genetik_checkup' || route === 'patoloji_checkup';
+  const it = NAV_ITEMS[route];
   return (
-    <nav className={`mz-serit is-${kat}`} aria-label={`${tanim.ad} bölümleri`}>
-      <Bag url={pathFor(MERKEZ_ROUTE[kat])} className="mz-serit-kat"><Ic aria-hidden /><span>{tanim.ad}</span></Bag>
-      <span className="mz-serit-l">
-        {araclar.map((a) => {
-          const it = NAV_ITEMS[a.id];
-          const on = a.id === route;
-          return (
-            <Bag key={a.id} url={aracYolu(a.id, null)} className={`mz-serit-a${on ? ' is-on' : ''}`} aria={on ? { 'aria-current': 'page' } : undefined}>
-              {it?.short || it?.label}
-            </Bag>
-          );
-        })}
-        {kat === 'kamplar' && (
-          <Bag url="/kamplar/kurul1/checkup" className={`mz-serit-a${checkup ? ' is-on' : ''}`} aria={checkup ? { 'aria-current': 'page' } : undefined}>Check Up</Bag>
-        )}
-      </span>
+    <nav className={`mz-iz is-${kat}`} aria-label="Konum">
+      <Bag url={pathFor(MERKEZ_ROUTE[kat])} className="mz-iz-kat"><ChevronLeft aria-hidden /><span>{tanim.ad}</span></Bag>
+      {checkup && <><span className="mz-iz-ayir" aria-hidden>/</span><Bag url="/kamplar/kurul1/checkup" className="mz-iz-kat"><span>Check Up</span></Bag></>}
+      <span className="mz-iz-ayir" aria-hidden>/</span>
+      <span className="mz-iz-sayfa" aria-current="page">{it?.label}</span>
     </nav>
   );
 };

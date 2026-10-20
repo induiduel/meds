@@ -1,25 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 147,
-  "baslik": "Yeni düzen: Ders çalış · Soru çöz · Sınava hazırlan · Başvuru",
+  "onem": 148,
+  "baslik": "Düzeltme: sayfa üstündeki bölüm şeridi kaldırıldı",
   "maddeler": [
-    "Site dört bölüme ayrıldı: ne yapmak istediğini seç, sana uygun araçlar 'ne zaman kullanılır' açıklamasıyla listelensin.",
-    "Adresler artık düzenli: örneğin /sorular/soru-cozucu/kurul1/patoloji, /dersler/canliders/kurul1/tbg.",
-    "Check Up ayrı bir bölümde; TBG Sınav Kampı'nın sesli ders, soru çözerek tekrar, kalıp kartları ve deneme sayfaları ayrı sayfalar oldu.",
-    "Sınav çalışması, Alternatif çözücü ve Ders notları kaldırıldı; eski bağlantılar yeni sayfalara yönlenir.",
-    "Son Prova denemelerinde 'Anlık cevap': işaretleyince doğru/yanlış, şık açıklaması ve çözüm sesli asistanla gelir.",
-    "Son Prova partları yalnız kendi sayfasında açılır; her aşama bitince sorular otomatik gelir; PDF çubuğunda ders ve slayt yazar."
+    "Sayfaların üstündeki bölüm hapları kaldırıldı; bölüm adı üst çubukta görünür, diğer araçlara bölüm sayfasından geçilir."
   ],
-  "eklenen": [
-    "Site dört bölüme ayrıldı: ne yapmak istediğini seç, sana uygun araçlar 'ne zaman kullanılır' açıklamasıyla listelensin.",
-    "Adresler artık düzenli: örneğin /sorular/soru-cozucu/kurul1/patoloji, /dersler/canliders/kurul1/tbg.",
-    "Check Up ayrı bir bölümde; TBG Sınav Kampı'nın sesli ders, soru çözerek tekrar, kalıp kartları ve deneme sayfaları ayrı sayfalar oldu.",
-    "Son Prova denemelerinde 'Anlık cevap': işaretleyince doğru/yanlış, şık açıklaması ve çözüm sesli asistanla gelir.",
-    "Son Prova partları yalnız kendi sayfasında açılır; her aşama bitince sorular otomatik gelir; PDF çubuğunda ders ve slayt yazar."
+  "eklenen": [],
+  "degisen": [
+    "Sayfaların üstündeki bölüm hapları kaldırıldı; bölüm adı üst çubukta görünür, diğer araçlara bölüm sayfasından geçilir."
   ],
-  "degisen": [],
   "duzeltilen": [],
-  "silinen": [
-    "Sınav çalışması, Alternatif çözücü ve Ders notları kaldırıldı; eski bağlantılar yeni sayfalara yönlenir."
-  ]
+  "silinen": []
 }

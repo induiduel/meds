@@ -24,6 +24,7 @@ Tek kaynak: `src/siteHaritasi.ts` (adres çevirisi + kategoriler) ve `src/compon
 - **Branş adres adları:** patoloji, enfeksiyon, uroloji, **tbg** (genetik), halk-sagligi, kadin-dogum, farmakoloji.
   Kurul 2+: `k2noroloji` ↔ `kurul2/noroloji` (`bransAdresi` / `bransKimligi`).
 - **Kamp / check-up sürümü:** içerik baştan yeniden kurulursa yeni sürüm (`v2`) açılır, eski sürüm adresi kalır.
+- **Sayfa içi bölüm şeridi yok:** bölüm adı kabuğun üst çubuğunda görünür; kardeş araçlara merkez sayfasından geçilir (kullanıcı: şerit tasarımı bozuyordu).
 - **Her bölüm ayrı sayfa:** bir kampın bölümleri sekme değil ayrı adrestir ve kendi başlığı/rengiyle ayrı görünür
   (TBG v1 örneği: iz yolu + sayfaya özgü baş + sonda "kampın diğer sayfaları" kartları).
 
