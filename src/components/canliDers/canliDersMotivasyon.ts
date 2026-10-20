@@ -85,6 +85,11 @@ let mola: MolaDurum = { acik: false, metin: '', dk: 0, anim: 'kutlama', tip: 'mo
 const ANIM_KEY = 'medsoru_cd_mola_anim_v1';
 /** Hikâyeli animasyon: sınav yakınsa zirve (azim), gece güneş (zor günler geçer); yoksa dörtlü sırayla, öncekinden farklı */
 function animSec(bag: string | undefined): MolaAnim {
+  // sınama: medsoru_cd_mola_test=<zirve|calisma|sevgi|gunes> o animasyonu zorlar (yalnız bu tarayıcı)
+  try {
+    const z = localStorage.getItem('medsoru_cd_mola_test');
+    if (z === 'zirve' || z === 'calisma' || z === 'sevgi' || z === 'gunes') return z;
+  } catch { /* yok */ }
   let son = '';
   try { son = localStorage.getItem(ANIM_KEY) || ''; } catch { /* yok */ }
   let a: MolaAnim;
@@ -160,7 +165,7 @@ let oncekiT = 0;
 let dinlenen = 0;
 let molaEsik = 0;
 // medsoru_cd_mola_test=1: sınama için 20 sn
-const yeniEsik = () => { let t = false; try { t = localStorage.getItem('medsoru_cd_mola_test') === '1'; } catch { /* yok */ } molaEsik = t ? 20 : (15 + Math.random() * 5) * 60; };
+const yeniEsik = () => { let t = false; try { t = !!localStorage.getItem('medsoru_cd_mola_test'); } catch { /* yok */ } molaEsik = t ? 20 : (15 + Math.random() * 5) * 60; };
 let molaBekliyor = false;
 let sonSaat = 0;
 
