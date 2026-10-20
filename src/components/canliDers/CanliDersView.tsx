@@ -290,9 +290,16 @@ function SureListesi({ dersler, onDersAc }: { dersler: CdListeDers[]; onDersAc?:
   }), [dersler]);
   const toplam = gruplar.reduce((n, g) => n + g.sure, 0);
   const konuN = gruplar.reduce((n, g) => n + g.konular.length, 0);
+  const kokRef = React.useRef<HTMLDivElement>(null);
+  const topRef = React.useRef<HTMLElement>(null);
+  useEffect(() => {
+    const el = topRef.current; if (!el || typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(() => kokRef.current?.style.setProperty('--sl-top', `${el.offsetHeight}px`));
+    ro.observe(el); return () => ro.disconnect();
+  }, []);
   return (
-    <div className="cd-sl">
-      <section className="cd-sl-toplam" aria-label="Tüm dersler toplamı">
+    <div className="cd-sl" ref={kokRef}>
+      <section ref={topRef} className="cd-sl-toplam" aria-label="Tüm dersler toplamı">
         <div><small>Tüm dersler</small><b>{dk(toplam).toLocaleString('tr')} dk</b><span>{fmtSaat(toplam)} · {konuN} konu · {gruplar.length} branş</span></div>
         <ul>
           {gruplar.map((g) => (
