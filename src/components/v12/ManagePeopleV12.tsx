@@ -57,7 +57,8 @@ const ageMs = (iso?: string | null) => {
   const t = iso ? new Date(iso).getTime() : NaN;
   return Number.isFinite(t) ? Date.now() - t : Infinity;
 };
-const roleOf = (p: { kind: string; role: string }) => (p.role === 'admin' ? 'Yönetici' : p.kind === 'guest' ? 'Misafir' : 'Öğrenci');
+const roleOf = (p: { kind: string; role: string; agent?: string }) =>
+  p.role === 'admin' ? 'Yönetici' : p.agent === 'bot' ? 'Bot' : p.agent === 'otomasyon' ? 'Otomasyon' : p.agent === 'bos' ? 'Boş kayıt' : p.kind === 'guest' ? 'Misafir' : 'Öğrenci';
 
 const copyText = async (text: string, notify: (m: string) => void, msg: string) => {
   try {
@@ -184,7 +185,7 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
           <Avatar name={r.name} photo={r.photoURL} online={r.online} />
           <span className="m12-user-tx">
             <span className="nm m12-clamp1">{r.name}</span>
-            <span className="em m12-clamp1">{[r.email, r.studentNumber && `No ${r.studentNumber}`].filter(Boolean).join(' · ') || 'Girişsiz cihaz'}</span>
+            <span className="em m12-clamp1">{parts.personSubline(r)}</span>
           </span>
         </span>
       ),

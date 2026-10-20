@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 134,
-  "baslik": "Kişiler listesi düzeltildi",
+  "onem": 135,
+  "baslik": "Kişiler: botlar ve sınama araçları ayrıldı",
   "maddeler": [
-    "Yönetim › Kişiler tablosunda satırların ekran boyu uzayıp boş yer kaplaması giderildi.",
-    "Öğren ekranındaki Hata defteri kartı ve ders bilgi kutucuklarında aynı görünüm çakışması önlendi."
+    "Yönetim › Kişiler listesinde arama motoru botları, tarama/sınama araçları ve boş kayıtlar artık kişi sayılmıyor; ayrı \"Bot / otomasyon / boş\" süzgecinde görünüyor.",
+    "Girişsiz kişilerde cihaz, tarayıcı, ilk görülme, oturum sayısı ve son sayfa gösteriliyor.",
+    "Aynı adla girişsiz kullanan kişinin farklı cihazları tek satırda birleşiyor."
   ],
   "eklenen": [],
   "degisen": [

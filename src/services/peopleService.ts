@@ -8,9 +8,16 @@ import { getCustomApiUrl } from './api';
 import { PANEL_ON_ORACLE_AT_BOOT } from '../config/deployment';
 
 export type PersonKind = 'account' | 'guest';
+/** insan: gerçek kişi; bot: arama motoru vb.; otomasyon: bizim tarama/sınama araçlarımız; bos: cihazı/etkinliği olmayan yedek */
+export type AgentKind = 'insan' | 'bot' | 'otomasyon' | 'bos';
+export interface GuestDevice { platform: string; browser: string; userAgent: string; firstSeen: string | null; sessions: number; lastPath: string }
 export interface PersonRow {
   key: string;
   kind: PersonKind;
+  agent: AgentKind;
+  agentNote: string;
+  /** yalnız hesaba bağlanmamış cihaz satırlarında */
+  device?: GuestDevice | null;
   uid: string | null;
   email: string | null;
   name: string;
@@ -75,7 +82,7 @@ export interface StudyEditOp {
 
 export interface PeopleList {
   people: PersonRow[];
-  totals: { people: number; accounts: number; online: number; devices: number; weekSeconds: number; openReports: number };
+  totals: { people: number; accounts: number; guests?: number; machines?: number; online: number; devices: number; weekSeconds: number; openReports: number };
   database: boolean;
   at: string;
 }
@@ -92,6 +99,9 @@ export interface PersonDevice {
   last_path: string;
   verified: boolean;
   online: boolean;
+  user_agent?: string;
+  agent?: AgentKind;
+  note?: string;
 }
 export interface PersonItem {
   kind: 'comment' | 'report' | 'question' | 'fragment' | 'option' | 'like' | 'vote' | 'note';

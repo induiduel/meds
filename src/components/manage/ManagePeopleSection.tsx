@@ -27,7 +27,7 @@ interface Props {
   notify: (msg: string) => void;
 }
 
-type Filter = 'all' | 'online' | 'accounts' | 'guests' | 'reporters' | 'contributors' | 'studying';
+type Filter = 'all' | 'online' | 'accounts' | 'guests' | 'reporters' | 'contributors' | 'studying' | 'machines';
 type Sort = 'seen' | 'usage' | 'study' | 'contrib';
 type Tab = 'ozet' | 'calisma' | 'etkinlik' | 'katkilar' | 'bildirimler' | 'notlar' | 'skorlar' | 'cihazlar';
 export type PeopleFilter = Filter;
@@ -62,6 +62,20 @@ const fold = (t: string) => t.toLocaleLowerCase('tr-TR').normalize('NFD').replac
 const initial = (s?: string | null) => (s || '?').trim().charAt(0).toLocaleUpperCase('tr-TR') || '?';
 const fmtDateTime = (iso?: string | null) =>
   iso ? new Date(iso).toLocaleString('tr-TR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '—';
+/** Liste satırının ikinci satırı: hesapta iletişim, girişsiz cihazda cihaz ayrıntısı (tarayıcı, ilk görülme, oturum, son sayfa) */
+const personSubline = (p: PersonRow) => {
+  const acc = [p.email, p.studentNumber && `No ${p.studentNumber}`, p.deviceCount > 1 ? `${p.deviceCount} cihaz` : null].filter(Boolean).join(' · ');
+  if (acc) return acc;
+  const d = p.device;
+  if (!d) return p.agentNote || p.deviceNames[0] || 'Girişsiz cihaz';
+  return [
+    p.agent !== 'insan' ? p.agentNote : null,
+    [d.platform, d.browser].filter(Boolean).join(' · '),
+    d.firstSeen ? `ilk ${fmtDateTime(d.firstSeen)}` : null,
+    `${d.sessions} oturum`,
+    d.lastPath || null,
+  ].filter(Boolean).join(' · ');
+};
 const contribTotal = (r: PersonRow) => r.counts.comment + r.counts.question + r.counts.fragment + r.counts.option + r.counts.report + r.counts.note;
 const deviceIcon = (label: string) => (/iphone|android|mobile|telefon/i.test(label) ? Smartphone : /ipad|tablet/i.test(label) ? Tablet : Monitor);
 
@@ -183,6 +197,8 @@ export const ManagePeopleSection: React.FC<Props> = ({ adminEmail, notify }) => 
     const all = list?.people || [];
     const q = fold(query.trim());
     let r = all.filter((p) => {
+      // Bot ve tarama/sınama araçlarımız kişi sayılmaz; yalnız kendi süzgecinde görünür
+      if ((filter === 'machines') !== ((p.agent || 'insan') !== 'insan')) return false;
       if (filter === 'online' && !p.online) return false;
       if (filter === 'accounts' && p.kind !== 'account') return false;
       if (filter === 'guests' && p.kind !== 'guest') return false;
@@ -190,7 +206,7 @@ export const ManagePeopleSection: React.FC<Props> = ({ adminEmail, notify }) => 
       if (filter === 'contributors' && !contribTotal(p)) return false;
       if (filter === 'studying' && !p.study?.konu) return false;
       if (!q) return true;
-      return fold([p.name, p.email, p.studentNumber, p.phone, p.uid, ...p.deviceNames].filter(Boolean).join(' ')).includes(q);
+      return fold([p.name, p.email, p.studentNumber, p.phone, p.uid, p.agentNote, p.device?.userAgent, ...p.deviceNames].filter(Boolean).join(' ')).includes(q);
     });
     if (sort === 'usage') r = [...r].sort((a, b) => b.totalSeconds - a.totalSeconds);
     if (sort === 'study') r = [...r].sort((a, b) => (b.study?.sn || 0) - (a.study?.sn || 0));
@@ -203,10 +219,11 @@ export const ManagePeopleSection: React.FC<Props> = ({ adminEmail, notify }) => 
     ['all', 'Tümü', t?.people],
     ['online', 'Çevrimiçi', t?.online],
     ['accounts', 'Hesaplar', t?.accounts],
-    ['guests', 'Misafir'],
+    ['guests', 'Misafir', t?.guests],
     ['reporters', 'Bildirim yapanlar'],
     ['contributors', 'Katkı yapanlar'],
     ['studying', 'Çalışanlar', list?.people.filter((p) => p.study?.konu).length],
+    ['machines', 'Bot / otomasyon / boş', t?.machines],
   ];
 
   // v12 "Net": denetim düzeni (kayıtlı görünümler, süzgeç çubuğu, seçimli tablo, sağ ayrıntı çekmecesi); veri ve işlevler aynı
@@ -290,7 +307,7 @@ export const ManagePeopleSection: React.FC<Props> = ({ adminEmail, notify }) => 
                   <span className="pp-row-seen">{p.online ? 'çevrimiçi' : relTime(p.lastSeen)}</span>
                 </span>
                 <span className="pp-row-sub">
-                  {[p.email, p.studentNumber && `No ${p.studentNumber}`, p.deviceCount ? `${p.deviceCount} cihaz` : null].filter(Boolean).join(' · ') || 'Girişsiz cihaz'}
+                  {personSubline(p)}
                 </span>
                 <span className="pp-row-stats">
                   <span title="Toplam kullanım"><Clock aria-hidden />{fmtDuration(p.totalSeconds)}</span>
@@ -803,7 +820,8 @@ const Devices: React.FC<{ d: PersonDetail; notify: (m: string) => void; reload: 
             <span className="pp-dev-ic"><Icon aria-hidden />{x.online && <i className="pp-dot" />}</span>
             <div className="pp-dev-main">
               <b>{x.label || 'Cihaz'}</b>
-              <span>{[x.platform, x.browser, x.model].filter(Boolean).join(' · ')}</span>
+              <span>{[x.platform, x.browser, x.model].filter(Boolean).join(' · ')}{x.agent && x.agent !== 'insan' ? ` · ${x.agent === 'bot' ? 'Bot' : 'Otomasyon'}: ${x.note}` : ''}</span>
+              {x.user_agent && <span className="pp-muted pp-mono" title="Tarayıcı kimliği (User-Agent)">{x.user_agent}</span>}
               <span className="pp-muted">
                 İlk {fmtDateTime(x.first_seen)} · Son {x.online ? 'şimdi' : relTime(x.last_seen)} · {fmtDuration(x.active_seconds)} · {x.sessions} oturum
                 {x.verified ? ' · hesapla doğrulandı' : ''}
@@ -901,5 +919,5 @@ const EditBox: React.FC<{ d: PersonDetail; adminEmail: string; notify: (m: strin
 };
 
 /** v12 görünümünün yeniden kullandığı parçalar (ManagePeopleV12'ye prop olarak geçer; döngüsel içe aktarma yok). */
-const PEOPLE_V12_PARTS = { PersonStudy, Timeline, ItemList, Scores, Devices, MailBox, EditBox, mergeTimeline, contribTotal };
+const PEOPLE_V12_PARTS = { personSubline, PersonStudy, Timeline, ItemList, Scores, Devices, MailBox, EditBox, mergeTimeline, contribTotal };
 export type PeopleV12Parts = typeof PEOPLE_V12_PARTS;

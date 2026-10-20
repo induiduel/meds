@@ -198,6 +198,27 @@ export function describeDevice(ua: string, hint: Any = {}): { label: string; pla
   return { label, platform, browser, model };
 }
 
+/** İstemci türü: arama motoru botu, bizim tarama/sınama araçlarımız (başsız tarayıcı, öykünme) ya da gerçek kişi. */
+export type AgentKind = 'insan' | 'bot' | 'otomasyon' | 'bos';
+export function classifyAgent(ua: string): { agent: AgentKind; note: string } {
+  const s = ua || '';
+  if (!s.trim()) return { agent: 'otomasyon', note: 'Tarayıcı kimliği yok' };
+  const bot =
+    /Googlebot|Google-Read-Aloud|bingbot|YandexBot|Applebot|DuckDuck|facebookexternalhit|Reflectionbot|GPTBot|ClaudeBot|PerplexityBot|AhrefsBot|SemrushBot|Lighthouse|PageSpeed/i.exec(s) ||
+    /\b[\w-]*(?:bot|crawler|spider)\b/i.exec(s);
+  if (bot) return { agent: 'bot', note: bot[0] };
+  if (/Android 6\.0\.1; Nexus 5X Build\/MMB29P/.test(s)) return { agent: 'bot', note: 'Googlebot (mobil)' };
+  if (/HeadlessChrome/.test(s)) return { agent: 'otomasyon', note: 'Başsız tarayıcı (tarama/sınama betiği)' };
+  if (/\bClaude\/[\d.]+/.test(s)) return { agent: 'otomasyon', note: 'Claude tarayıcı paneli' };
+  if (/Playwright|Puppeteer|Electron\//i.test(s)) return { agent: 'otomasyon', note: 'Otomasyon tarayıcısı' };
+  // Playwright cihaz öykünmesinin sabit kimlikleri (gerçek cihazlarda bu sürüm/model eşleşmesi görülmez)
+  if (/Chrome\/130\.0(?:\.0\.0)? (?:Mobile )?Safari/.test(s) && /Pixel 8|Pixel Tablet|SM-X710/.test(s)) return { agent: 'otomasyon', note: 'Cihaz öykünmesi (Playwright)' };
+  if (/Version\/18\.5 (?:Mobile\/15E148 )?Safari\/60[45]/.test(s)) return { agent: 'otomasyon', note: 'Cihaz öykünmesi (Playwright WebKit)' };
+  // Gerçek Chrome sürümü hep dört parçalıdır (154.0.7977.130); "Chrome/124.0 " elle yazılmış sınama kimliğidir
+  if (/Chrome\/\d+\.0 /.test(s)) return { agent: 'otomasyon', note: 'Elle yazılmış sınama kimliği' };
+  return { agent: 'insan', note: '' };
+}
+
 /* ------------------------------------------------------------------ */
 /* Eylem günlüğü: hangi istek hangi kayıt                              */
 /* ------------------------------------------------------------------ */
@@ -456,6 +477,8 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
       byId.set(u.uid, p);
       if (u.email) byId.set(lc(u.email), p);
     }
+    // Girişsiz yedekler aynı (genel olmayan) adı taşıyorsa aynı kişinin farklı cihaz/tarayıcılarıdır: tek satır
+    const guestByName = new Map<string, Person>();
     for (const b of backups) {
       const owner = byId.get(b.uid) || (b.verified && b.email ? byId.get(lc(b.email)) : undefined);
       if (owner) {
@@ -464,8 +487,16 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
         if (String(b.uid).startsWith('dev-')) owner.devs.add(publicDeviceId(b.uid));
         continue;
       }
+      const nameKey = !b.verified && !GENERIC_NAMES.has(lc(b.displayName)) ? lc(b.displayName) : '';
+      const twin = nameKey ? guestByName.get(nameKey) : undefined;
+      if (twin) {
+        if (String(b.serverSavedAt || '') > String(twin.backup?.serverSavedAt || '')) twin.backup = b;
+        twin.ids.add(b.uid);
+        if (String(b.uid).startsWith('dev-')) twin.devs.add(publicDeviceId(b.uid));
+        continue;
+      }
       const p: Person = {
-        key: b.verified ? `u:${b.uid}` : `g:${hash16(b.uid)}`,
+        key: b.verified ? `u:${b.uid}` : nameKey ? `g:${hash16(`ad:${nameKey}`)}` : `g:${hash16(b.uid)}`,
         kind: b.verified ? 'account' : 'guest',
         uid: b.verified ? b.uid : null,
         email: b.verified ? b.email || null : null,
@@ -482,6 +513,7 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
         backup: b,
       };
       out.push(p);
+      if (nameKey) guestByName.set(nameKey, p);
     }
     return out;
   };
@@ -580,7 +612,7 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
     };
     const emails = ids.filter((x) => x.includes('@'));
     const devices = await q(
-      `select device_id, uid, email, display_name, verified, label, platform, browser, model, first_seen, last_seen, active_seconds, sessions, last_path
+      `select device_id, uid, email, display_name, verified, label, platform, browser, model, user_agent, first_seen, last_seen, active_seconds, sessions, last_path
          from user_devices where uid = any($1) or lower(email) = any($2) or device_id = any($3) order by last_seen desc limit 50`,
       [ids, emails, deviceIds],
     );
@@ -719,7 +751,7 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
     let eventCounts: Any[] = [];
     if (deps.isPgOnline() && schemaReady) {
       try {
-        devices = (await pgDb.query(`select device_id, uid, lower(email) as email, display_name, verified, label, platform, browser, last_seen, active_seconds from user_devices order by last_seen desc limit 5000`)).rows;
+        devices = (await pgDb.query(`select device_id, uid, lower(email) as email, display_name, verified, label, platform, browser, user_agent, first_seen, last_seen, active_seconds, sessions, last_path from user_devices order by last_seen desc limit 5000`)).rows;
         usage = (await pgDb.query(`select uid, device_id, sum(active_seconds)::int as s from user_usage_daily where day >= (now() at time zone 'Europe/Istanbul')::date - 6 group by uid, device_id`)).rows;
         eventCounts = (await pgDb.query(`select coalesce(uid, lower(email), 'd:' || device_id) as who, kind, count(*)::int as n, max(at) as last from user_events group by 1, 2`)).rows;
       } catch (e: any) {
@@ -745,9 +777,27 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
       const cnt = (k: string) => c.filter((x) => x.kind === k).length;
       const lastSeen = [devs[0]?.last_seen ? new Date(devs[0].last_seen).toISOString() : '', sinceIso(p.backup), p.lastLoginAt || '', lastEvent].sort().pop() || null;
       const score = scoreSummary(p.backup);
+      // Girişsiz yedek: bağlı cihazların hepsi bot/otomasyonsa o; hiç cihazı ve etkinliği yoksa boş kayıt
+      let agent: AgentKind = 'insan';
+      let agentNote = '';
+      if (p.kind === 'guest') {
+        const cls = devs.map((d) => classifyAgent(d.user_agent || ''));
+        const machine = cls.find((c) => c.agent !== 'insan');
+        if (cls.length && cls.every((c) => c.agent !== 'insan')) ({ agent, note: agentNote } = machine!);
+        else if (!cls.length && !lastEvent && !score.testCount && studySeconds(p.backup) < 60) {
+          agent = 'bos';
+          agentNote = 'Boş kayıt (cihaz ve etkinlik yok)';
+        }
+      }
+      const d0 = p.kind === 'guest' ? devs[0] : null;
       return {
         key: p.key,
         kind: p.kind,
+        agent,
+        agentNote,
+        device: d0
+          ? { platform: d0.platform || '', browser: d0.browser || '', userAgent: d0.user_agent || '', firstSeen: d0.first_seen ? new Date(d0.first_seen).toISOString() : null, sessions: devs.reduce((a, d) => a + Number(d.sessions || 0), 0), lastPath: d0.last_path || '' }
+          : null,
         uid: p.uid,
         email: p.email,
         name: p.name,
@@ -782,10 +832,14 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
       if (claimed.has(d.device_id) || d.uid) continue;
       const counts: Record<string, number> = {};
       for (const e of eventCounts) if (e.who === `d:${d.device_id}`) counts[e.kind] = (counts[e.kind] || 0) + e.n;
+      const ag = classifyAgent(d.user_agent || '');
       rows.push({
         key: `d:${d.device_id}`,
         study: null,
         kind: 'guest',
+        agent: ag.agent,
+        agentNote: ag.note,
+        device: { platform: d.platform || '', browser: d.browser || '', userAgent: d.user_agent || '', firstSeen: d.first_seen ? new Date(d.first_seen).toISOString() : null, sessions: Number(d.sessions || 0), lastPath: d.last_path || '' },
         uid: null,
         email: null,
         name: d.display_name || 'Misafir cihaz',
@@ -822,7 +876,7 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
     for (const [who, o] of orphan) {
       const c = o.counts;
       rows.push({
-        key: `x:${who}`, study: null, kind: 'guest', uid: who.startsWith('d:') ? null : who, email: who.includes('@') ? who : null,
+        key: `x:${who}`, study: null, kind: 'guest', agent: 'insan' as AgentKind, agentNote: '',  device: null, uid: who.startsWith('d:') ? null : who, email: who.includes('@') ? who : null,
         name: who.startsWith('d:') ? 'Kayıtsız cihaz' : 'Kayıtsız kimlik', studentNumber: null, phone: null, role: 'guest', photoURL: null,
         createdAt: null, lastSeen: o.last, online: false, deviceCount: 0, deviceNames: [], totalSeconds: 0, weekSeconds: 0, accuracy: null, testCount: 0,
         counts: { comment: c.comment || 0, report: c.report || 0, question: c.question || 0, fragment: c.fragment || 0, option: c.option || 0, like: c.like || 0, note: c.note || 0, events: Object.values(c).reduce((a, n) => a + n, 0) },
@@ -832,9 +886,11 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
     const data = {
       people: rows,
       totals: {
-        people: rows.length,
+        people: rows.filter((r) => r.agent === 'insan').length,
         accounts: rows.filter((r) => r.kind === 'account').length,
-        online: rows.filter((r) => r.online).length,
+        guests: rows.filter((r) => r.kind === 'guest' && r.agent === 'insan').length,
+        machines: rows.filter((r) => r.agent !== 'insan').length,
+        online: rows.filter((r) => r.online && r.agent === 'insan').length,
         devices: devices.length,
         weekSeconds: usage.reduce((a, u) => a + u.s, 0),
         openReports: rows.reduce((a, r) => a + r.counts.report, 0),
@@ -898,7 +954,7 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
         lastBackupAt: b?.serverSavedAt || null,
         verified: !!b?.verified || p.kind === 'account',
       },
-      devices: facts.devices.map((d) => ({ ...d, online: Date.now() - new Date(d.last_seen).getTime() < 150_000 })),
+      devices: facts.devices.map((d) => ({ ...d, ...classifyAgent(d.user_agent || ''), online: Date.now() - new Date(d.last_seen).getTime() < 150_000 })),
       usage: {
         totalSeconds: totalSeconds || studySeconds(b),
         studySeconds: studySeconds(b),
