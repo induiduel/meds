@@ -1,1181 +1,482 @@
+/**
+ * /genetik-check-up — TBG Sınav Kampı (Kurul 1 Tıbbi Genetik, 12 soru).
+ * Hocanın kalıbı: "… bulguyla gelen hasta hangi sendromu düşündürür?", kanserde hedef ilaçlar, spesifik belirteçler + son yılların çıkmışları.
+ * Tek kaynak: data/genetik_asistan/g07.json (asistan_birlestir.py; EMA klipleri /api/patoloji-asistan/ses/g07/<klip>.mp3)
+ * ve data/genetik_kamp/kalip.json (hızlı tekrar tabloları). Hızlı mod = puan ≥ 97 adımlar + adım başına 1 soru; Tam mod = hepsi.
+ */
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
-  ArrowLeft,
-  BookOpen,
-  Check,
-  CheckCircle2,
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  Dna,
-  Download,
-  FileSpreadsheet,
-  FileText,
-  HelpCircle,
-  Layers,
-  LifeBuoy,
-  Maximize2,
-  Pause,
-  Play,
-  RotateCcw,
-  Search,
-  Sparkles,
-  Target,
-  Volume2,
-  XCircle,
-  Zap,
+  Check, ChevronLeft, ChevronRight, Dna, Eye, EyeOff, LifeBuoy, ListChecks, Maximize2, Pause, Play,
+  RotateCcw, Search, Shuffle, Table2, Volume2, X, Zap, BookOpen,
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../services/api';
 import { PatolojiAsistan } from '../spots/asistan/PatolojiAsistan';
-import {
-  GENETIK_BOLUMLER,
-  GENETIK_SORU_CEVAPLAR,
-  GENETIK_SORULAR,
-  GENETIK_SPOTLAR,
-  GENETIK_TABLOLAR,
-  GenetikBolumId,
-  GenetikZenginSoru,
-  KALIP_META,
-  SecenekHarf,
-} from './genetikCheckupVeri';
-import { GENETIK_PDF_MODLAR, GenetikPdfMod, genetikCheckupPdfIndir } from './genetikCheckupPdf';
-import g07Raw from '../../data/genetik_asistan/g07.json';
-import genetikDizinRaw from '../../data/genetik_asistan/index.json';
-import '../../styles/checkup.css';
+import { MetinAktarMenu } from '../MetinAktarMenu';
+import type { AktarBelge } from '../../services/metinDisaAktar';
+import dersRaw from '../../data/genetik_asistan/g07.json';
+import kalipRaw from '../../data/genetik_kamp/kalip.json';
+import '../../styles/genetik-kamp.css';
 
-type SekmeTipi = 'anlatici' | 'hepsi' | 'tablolar' | 'spotlar' | 'soru_cevap' | 'sorular';
-type SoruFiltreTipi = 'hepsi' | 'cikmis' | 'ornek';
+interface Klip { v: string; sure: number; zaman: [number, number][] }
+interface Soru {
+  k: string; tur: 'cikmis' | 'ornek'; sinav?: string; kok: string; secenekler: Record<string, string>; dogru: string;
+  dogruMetin: string; yanlis: Record<string, string>; yardim: Record<string, string>;
+}
+interface Nokta { id: string; bolum: number; puan: number; aday: number | null; kategori: string; baslik: string; bilgi: string; cumleler: string[]; sorular: Soru[] }
+interface Ders { kod: string; baslik: string; giris: string[]; kapanis: string[]; bolumler: { baslik: string; neden: string }[]; noktalar: Nokta[]; klip: Record<string, Klip> }
+interface KalipSatir { s: string; t: string; k: string; h: number }
+interface Kalip { id: string; baslik: string; soru: string; sutun: [string, string]; satir: KalipSatir[] }
 
-interface KlipVeri {
-  v: string;
-  sure: number;
-  zaman: [number, number][];
+const DERS = dersRaw as unknown as Ders;
+const KALIPLAR = (kalipRaw as unknown as { kalipler: Kalip[] }).kalipler;
+const HIZLI_PUAN = 97;
+const HIZLAR = [1, 1.15, 1.25, 1.5, 1.75, 2];
+const ANAHTAR = 'medsoru_genetik_kamp_v1';
+const KATEGORI: Record<string, string> = { sendrom: 'Bulgu → sendrom', ilac: 'Kanser → ilaç', belirtec: 'Belirteç', tani: 'Tanı yöntemi' };
+
+type Mod = 'hizli' | 'tam';
+type Sekme = 'ders' | 'kalip' | 'deneme';
+interface Kayit { mod: Mod; adim: Record<Mod, number>; tamam: Record<string, 1>; cevap: Record<string, string>; hiz: number; oto: boolean }
+
+function kayitOku(): Kayit {
+  const bos: Kayit = { mod: 'hizli', adim: { hizli: 0, tam: 0 }, tamam: {}, cevap: {}, hiz: 1, oto: true };
+  try {
+    const r = JSON.parse(localStorage.getItem(ANAHTAR) || 'null');
+    return r ? { ...bos, ...r, adim: { ...bos.adim, ...(r.adim || {}) } } : bos;
+  } catch { return bos; }
 }
 
-interface AsistanSoru {
-  k: string;
-  tur: 'cikmis' | 'ornek';
-  sinav?: string;
-  kok: string;
-  secenekler: Record<string, string>;
-  dogru: string;
-  dogruMetin: string;
-  yanlis: Record<string, string>;
-  yardim: Record<string, string>;
+/** **kalın** işaretlerini <b>'ye çevirir */
+function Zengin({ t }: { t: string }) {
+  return <>{String(t || '').split(/(\*\*[^*]+\*\*)/g).map((p, i) => (p.startsWith('**') && p.endsWith('**') ? <b key={i}>{p.slice(2, -2)}</b> : <React.Fragment key={i}>{p}</React.Fragment>))}</>;
 }
 
-interface AsistanNokta {
-  id: string;
-  bolum: number;
-  puan: number;
-  aday: number | null;
-  kategori: string;
-  baslik: string;
-  bilgi: string;
-  cumleler: string[];
-  sorular: AsistanSoru[];
+const dakika = (sn: number) => Math.max(1, Math.round(sn / 60));
+const harfler = (s: Soru) => Object.keys(s.secenekler).sort();
+
+/** Bir adımın sorularından hızlı modda gösterilecek tek soru: önce çıkmış */
+function modSorulari(n: Nokta, mod: Mod): Soru[] {
+  if (mod === 'tam') return n.sorular;
+  const c = n.sorular.find((s) => s.tur === 'cikmis');
+  return c ? [c] : n.sorular.slice(0, 1);
 }
 
-interface AsistanDers {
-  kod: string;
-  no: number;
-  baslik: string;
-  giris: string[];
-  kapanis: string[];
-  bolumler: { baslik: string; neden: string }[];
-  noktalar: AsistanNokta[];
-  klip: Record<string, KlipVeri>;
-}
+export const GenetikCheckUp: React.FC<{ onBack?: () => void }> = () => {
+  const [kayit, setKayit] = useState<Kayit>(kayitOku);
+  const [sekme, setSekme] = useState<Sekme>('ders');
+  const [tamEkran, setTamEkran] = useState(false);
+  const [genis] = useState(() => typeof window === 'undefined' || window.matchMedia('(min-width: 720px)').matches);
+  const [yardim, setYardim] = useState<Record<string, boolean>>({});
+  const [calan, setCalan] = useState<{ id: string; cumle: number; oynuyor: boolean } | null>(null);
+  const audio = useRef<HTMLAudioElement | null>(null);
+  const kartRef = useRef<HTMLElement | null>(null);
+  const zincir = useRef<(() => void) | null>(null);
 
-const g07 = g07Raw as unknown as AsistanDers;
-const DIZIN_DERSLER = (genetikDizinRaw as any).dersler as {
-  kod: string;
-  no: number;
-  baslik: string;
-  adim: number;
-  soru: number;
-  sure: number;
-}[];
+  const mod = kayit.mod;
+  const guncelle = useCallback((f: (k: Kayit) => Kayit) => setKayit((k) => f(k)), []);
+  useEffect(() => { try { localStorage.setItem(ANAHTAR, JSON.stringify(kayit)); } catch { /* özel pencere */ } }, [kayit]);
 
-const BOLUM_HARITASI: Record<number, GenetikBolumId[]> = {
-  0: ['sendrom-dismorfoloji-kromozom'],
-  1: ['sendrom-dismorfoloji-kromozom'],
-  2: ['sendrom-cinsiyet-gelisim'],
-  3: ['sendrom-kanser-yatkinlik', 'kanser-ilac-tedavileri', 'kanser-prenatal-belirtecler'],
-  4: ['kanser-prenatal-belirtecler'],
-};
+  const adimlar = useMemo(() => DERS.noktalar.filter((n) => mod === 'tam' || n.puan >= HIZLI_PUAN), [mod]);
+  const idx = Math.min(kayit.adim[mod] || 0, adimlar.length - 1);
+  const nokta = adimlar[idx];
 
-const ASAMA_TABLO_HARITASI: Record<string, string[]> = {
-  'g07-01': ['gt-anomali-mekanizma'],
-  'g07-02': ['gt-dismorfik-mikrodelesyon'],
-  'g07-03': ['gt-dismorfik-mikrodelesyon'],
-  'g07-04': ['gt-trizomi-gonozom'],
-  'g07-05': ['gt-gonad-genler'],
-  'g07-06': ['gt-cgb-ayirici'],
-  'g07-07': ['gt-rcc-sendrom', 'gt-meme-over-endometriyum-sendrom'],
-  'g07-08': ['gt-kanser-hedef-ilac'],
-  'g07-09': ['gt-rcc-endometriyum-ilac'],
-  'g07-10': ['gt-kanser-belirtecler'],
-  'g07-11': ['gt-prenatal-pgt-belirtecler'],
-};
+  const sure = useMemo(() => {
+    const top = (m: Mod) => {
+      const N = DERS.noktalar.filter((n) => m === 'tam' || n.puan >= HIZLI_PUAN);
+      const b = new Set(N.map((n) => n.bolum));
+      const k = (id: string, yedek: number) => DERS.klip[id]?.sure ?? yedek;
+      return N.reduce((t, n) => t + k(`a-${n.id}`, n.cumleler.join(' ').split(/\s+/).length / 2.4)
+        + modSorulari(n, m).reduce((x, s) => x + k(`q-${s.k}`, 10) + 25, 0), 0)
+        + [...b].reduce((t, i) => t + k(`b-${i + 1}`, 8), 0);
+    };
+    return { hizli: dakika(top('hizli')), tam: dakika(top('tam')) };
+  }, []);
 
-const HIZ_SECENEKLERI = [0.75, 1, 1.15, 1.25, 1.5, 1.75, 2];
+  /* ——— ses ——— */
+  const durdur = useCallback(() => {
+    zincir.current = null;
+    const a = audio.current;
+    if (a) { a.onended = null; a.ontimeupdate = null; a.pause(); }
+    setCalan(null);
+  }, []);
+  useEffect(() => () => durdur(), [durdur]);
+  useEffect(() => { if (audio.current) audio.current.playbackRate = kayit.hiz; }, [kayit.hiz]);
 
-/** Markdown **kalın** ifadeleri React düğümüne çevirir */
-function RichText({ text }: { text: string }) {
-  const parts = String(text || '').split(/(\*\*[^*]+\*\*)/g);
+  const cal = useCallback((id: string, bitince?: () => void, cumle = 0) => {
+    const k = DERS.klip[id];
+    if (!k) { bitince?.(); return; }
+    durdur();
+    const a = audio.current || new Audio();
+    audio.current = a;
+    a.src = `${getCustomApiUrl()}/api/patoloji-asistan/ses/${DERS.kod}/${id}.mp3?v=${k.v}`;
+    a.playbackRate = kayit.hiz;
+    if (cumle > 0 && k.zaman[cumle]) a.currentTime = Math.max(0, k.zaman[cumle][0] - 0.05);
+    zincir.current = bitince || null;
+    a.ontimeupdate = () => {
+      const t = a.currentTime;
+      const i = k.zaman.findIndex(([b, s]) => t >= b - 0.08 && t <= s + 0.15);
+      if (i >= 0) setCalan((c) => (c && c.id === id && c.cumle !== i ? { ...c, cumle: i } : c));
+    };
+    a.onended = () => { setCalan(null); const z = zincir.current; zincir.current = null; z?.(); };
+    a.onerror = () => setCalan(null);
+    setCalan({ id, cumle, oynuyor: true });
+    a.play().catch(() => setCalan(null));
+  }, [durdur, kayit.hiz]);
+
+  const duraklat = useCallback(() => {
+    const a = audio.current;
+    if (!a || !calan) return;
+    if (calan.oynuyor) { a.pause(); setCalan({ ...calan, oynuyor: false }); }
+    else { a.play().catch(() => {}); setCalan({ ...calan, oynuyor: true }); }
+  }, [calan]);
+
+  const git = useCallback((i: number, oku = false) => {
+    durdur();
+    const yeni = Math.max(0, Math.min(adimlar.length - 1, i));
+    guncelle((k) => ({ ...k, adim: { ...k.adim, [mod]: yeni } }));
+    const el = kartRef.current;
+    if (el && el.getBoundingClientRect().top < 0) el.scrollIntoView({ block: 'start' });
+    if (oku) setTimeout(() => anlatRef.current(yeni), 60);
+  }, [adimlar.length, durdur, guncelle, mod]);
+
+  /** Adımı anlat: bölümün ilk adımıysa önce bölüm girişi, sonra anlatım, sonra ilk cevapsız sorunun kökü */
+  const anlat = useCallback((i: number, cumle = 0) => {
+    const n = adimlar[i];
+    if (!n) return;
+    const ilk = adimlar.findIndex((x) => x.bolum === n.bolum) === i;
+    const soruOku = () => {
+      if (!kayit.oto) return;
+      const s = modSorulari(n, mod).find((x) => !kayit.cevap[x.k]);
+      if (s) cal(`q-${s.k}`);
+      else if (i < adimlar.length - 1) git(i + 1, true);
+    };
+    const ana = () => cal(`a-${n.id}`, () => { guncelle((k) => ({ ...k, tamam: { ...k.tamam, [n.id]: 1 } })); soruOku(); }, cumle);
+    if (ilk && cumle === 0 && DERS.klip[`b-${n.bolum + 1}`]) cal(`b-${n.bolum + 1}`, ana); else ana();
+  }, [adimlar, cal, git, guncelle, kayit.cevap, kayit.oto, mod]);
+  const anlatRef = useRef(anlat);
+  anlatRef.current = anlat;
+
+  const sec = useCallback((n: Nokta, s: Soru, h: string, adimIci: boolean) => {
+    guncelle((k) => ({ ...k, cevap: { ...k.cevap, [s.k]: h } }));
+    const devam = () => {
+      if (!adimIci || !kayit.oto) return;
+      const kalan = modSorulari(n, mod).filter((x) => x.k !== s.k && !kayit.cevap[x.k]);
+      if (kalan[0]) cal(`q-${kalan[0].k}`);
+      else if (idx < adimlar.length - 1) git(idx + 1, true);
+    };
+    cal(h === s.dogru ? `d-${s.k}` : `y-${s.k}-${h}`, h === s.dogru ? devam : undefined);
+  }, [adimlar.length, cal, git, guncelle, idx, kayit.cevap, kayit.oto, mod]);
+
+  const sifirla = () => {
+    if (!window.confirm('Bu sayfadaki ilerleme ve cevaplar silinsin mi?')) return;
+    durdur();
+    setYardim({});
+    guncelle((k) => ({ ...k, adim: { hizli: 0, tam: 0 }, tamam: {}, cevap: {} }));
+  };
+
+  /* ——— istatistik ——— */
+  const tumSorular = useMemo(() => DERS.noktalar.flatMap((n) => n.sorular.map((s) => ({ s, n }))), []);
+  const cikmisDagilim = useMemo(() => DERS.bolumler.map((b, i) => ({
+    ad: b.baslik.split(':')[0],
+    n: DERS.noktalar.filter((x) => x.bolum === i).reduce((t, x) => t + x.sorular.filter((s) => s.tur === 'cikmis').length, 0),
+  })), []);
+  const enCok = Math.max(1, ...cikmisDagilim.map((d) => d.n));
+  const bitenAdim = adimlar.filter((n) => kayit.tamam[n.id]).length;
+  const modSoru = adimlar.flatMap((n) => modSorulari(n, mod));
+  const dogruSay = modSoru.filter((s) => kayit.cevap[s.k] === s.dogru).length;
+  const cevapSay = modSoru.filter((s) => kayit.cevap[s.k]).length;
+
+  const belge = useCallback((): AktarBelge => ({
+    baslik: 'TBG Sınav Kampı — Genetik',
+    alt: mod === 'hizli' ? 'Hızlı mod: en önemli bilgiler' : 'Tam mod: hocanın kalıbına uyan tüm bilgiler',
+    bolumler: [
+      ...DERS.bolumler.map((b, bi) => ({
+        baslik: b.baslik,
+        alt: b.neden,
+        md: adimlar.filter((n) => n.bolum === bi).map((n) => `### ${n.baslik}\n\n${n.cumleler.map((c) => `- ${c}`).join('\n')}`).join('\n\n'),
+      })).filter((b) => b.md),
+      ...KALIPLAR.map((k) => ({
+        baslik: k.baslik,
+        alt: k.soru,
+        md: `| ${k.sutun[0]} | ${k.sutun[1]} |\n|---|---|\n${k.satir.filter((r) => mod === 'tam' || r.h).map((r) => `| ${r.s} | ${r.t} |`).join('\n')}`,
+      })),
+    ],
+  }), [adimlar, mod]);
+
   return (
-    <>
-      {parts.map((p, i) =>
-        p.startsWith('**') && p.endsWith('**') ? (
-          <strong key={i} className="gcu-bold-term">
-            {p.slice(2, -2)}
-          </strong>
-        ) : (
-          <React.Fragment key={i}>{p}</React.Fragment>
-        ),
-      )}
-    </>
-  );
-}
-
-interface GenetikCheckUpProps {
-  onBack?: () => void;
-}
-
-export const GenetikCheckUp: React.FC<GenetikCheckUpProps> = ({ onBack }) => {
-  const [aktifBolum, setAktifBolum] = useState<GenetikBolumId | 'tumu'>('tumu');
-  const [aktifSekme, setAktifSekme] = useState<SekmeTipi>('anlatici');
-  const [soruFiltre, setSoruFiltre] = useState<SoruFiltreTipi>('hepsi');
-  const [arama, setArama] = useState('');
-
-  // Aşama Aşama Sesli Ders Anlatıcısı Durumu
-  const [adimIdx, setAdimIdx] = useState<number>(() => {
-    try {
-      const saved = Number(localStorage.getItem('medsoru_genetik_anlatici_adim_v1'));
-      if (!Number.isNaN(saved) && saved >= 0 && saved < g07.noktalar.length) return saved;
-    } catch {}
-    return 0;
-  });
-  const [tamamlananAdimlar, setTamamlananAdimlar] = useState<Record<string, boolean>>(() => {
-    try {
-      const raw = localStorage.getItem('medsoru_genetik_anlatici_tamam_v1');
-      return raw ? JSON.parse(raw) : {};
-    } catch {
-      return {};
-    }
-  });
-  const [asistanSoruSecim, setAsistanSoruSecim] = useState<Record<string, string>>(() => {
-    try {
-      const raw = localStorage.getItem('medsoru_genetik_anlatici_soru_v1');
-      return raw ? JSON.parse(raw) : {};
-    } catch {
-      return {};
-    }
-  });
-  const [yardimAcikSoru, setYardimAcikSoru] = useState<Record<string, boolean>>({});
-  const [aktifKlipId, setAktifKlipId] = useState<string | null>(null);
-  const [caliyor, setCaliyor] = useState(false);
-  const [aktifCumleIdx, setAktifCumleIdx] = useState<number>(-1);
-  const [hiz, setHiz] = useState<number>(1);
-  const [otomatikIlerle, setOtomatikIlerle] = useState<boolean>(true);
-  const [ekTabloAcik, setEkTabloAcik] = useState<boolean>(true);
-
-  // Tam ekran PatolojiAsistan modalı
-  const [tamEkranKod, setTamEkranKod] = useState<string | null>(null);
-
-  // PDF İndirme Modalı ve Durumu
-  const [pdfMenuAcik, setPdfMenuAcik] = useState(false);
-  const [pdfYukleniyor, setPdfYukleniyor] = useState<GenetikPdfMod | null>(null);
-
-  // Soru-Cevap ve tüm soru bankası durumları
-  const [acikCevaplar, setAcikCevaplar] = useState<Record<string, boolean>>({});
-  const [secilenSiklar, setSecilenSiklar] = useState<Record<string, 'A' | 'B' | 'C' | 'D' | 'E'>>(() => {
-    try {
-      const raw = localStorage.getItem('medsoru_genetik_checkup_answers_v1');
-      return raw ? JSON.parse(raw) : {};
-    } catch {
-      return {};
-    }
-  });
-
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const pdfRef = useRef<HTMLDivElement | null>(null);
-  const asamaRef = useRef<HTMLElement | null>(null);
-  const ilkAdimRef = useRef(true);
-
-  // PDF menüsü dışına tıklanınca ya da Esc ile kapanır
-  useEffect(() => {
-    if (!pdfMenuAcik) return;
-    const kapat = (e: MouseEvent) => {
-      if (pdfRef.current && !pdfRef.current.contains(e.target as Node)) setPdfMenuAcik(false);
-    };
-    const tus = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setPdfMenuAcik(false);
-    };
-    document.addEventListener('mousedown', kapat);
-    document.addEventListener('keydown', tus);
-    return () => {
-      document.removeEventListener('mousedown', kapat);
-      document.removeEventListener('keydown', tus);
-    };
-  }, [pdfMenuAcik]);
-
-  const aktifNokta = g07.noktalar[adimIdx] || g07.noktalar[0];
-  const aktifAnlaticiBolum = g07.bolumler[aktifNokta.bolum] || g07.bolumler[0];
-  const aktifBolumKeys = BOLUM_HARITASI[aktifNokta.bolum] || ['sendrom-dismorfoloji-kromozom'];
-
-  useEffect(() => {
-    try {
-      localStorage.setItem('medsoru_genetik_anlatici_adim_v1', String(adimIdx));
-    } catch {}
-    // Aşama değişince kartın başı görünmüyorsa oraya kaydır (ilk açılışta değil)
-    if (ilkAdimRef.current) {
-      ilkAdimRef.current = false;
-      return;
-    }
-    const el = asamaRef.current;
-    if (el && el.getBoundingClientRect().top < 0) {
-      const azalt = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-      el.scrollIntoView({ behavior: azalt ? 'auto' : 'smooth', block: 'start' });
-    }
-  }, [adimIdx]);
-
-  useEffect(() => {
-    try {
-      localStorage.setItem('medsoru_genetik_anlatici_tamam_v1', JSON.stringify(tamamlananAdimlar));
-    } catch {}
-  }, [tamamlananAdimlar]);
-
-  useEffect(() => {
-    try {
-      localStorage.setItem('medsoru_genetik_anlatici_soru_v1', JSON.stringify(asistanSoruSecim));
-    } catch {}
-  }, [asistanSoruSecim]);
-
-  useEffect(() => {
-    try {
-      localStorage.setItem('medsoru_genetik_checkup_answers_v1', JSON.stringify(secilenSiklar));
-    } catch {}
-  }, [secilenSiklar]);
-
-  const sesDurdur = useCallback(() => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.onended = null;
-      audioRef.current.ontimeupdate = null;
-    }
-    setCaliyor(false);
-    setAktifCumleIdx(-1);
-  }, []);
-
-  useEffect(() => {
-    return () => sesDurdur();
-  }, [sesDurdur]);
-
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.playbackRate = hiz;
-    }
-  }, [hiz]);
-
-  const klipCal = useCallback(
-    (klipId: string, baslangicCumle = 0, bittiginde?: () => void) => {
-      const k = g07.klip[klipId];
-      if (!k) return;
-
-      // Aynı klip çalıyorsa ve başlangıç cümlesi belirtilmemişse duraklat/devam et
-      if (aktifKlipId === klipId && audioRef.current && baslangicCumle === 0 && !bittiginde) {
-        if (caliyor) {
-          audioRef.current.pause();
-          setCaliyor(false);
-          return;
-        } else {
-          audioRef.current.playbackRate = hiz;
-          audioRef.current.play().catch(() => {});
-          setCaliyor(true);
-          return;
-        }
-      }
-
-      sesDurdur();
-      const url = `${getCustomApiUrl()}/api/patoloji-asistan/ses/g07/${klipId}.mp3?v=${k.v}`;
-      const audio = new Audio(url);
-      audio.playbackRate = hiz;
-      audioRef.current = audio;
-      setAktifKlipId(klipId);
-
-      if (baslangicCumle > 0 && k.zaman[baslangicCumle]) {
-        audio.currentTime = Math.max(0, k.zaman[baslangicCumle][0] - 0.05);
-      }
-
-      audio.ontimeupdate = () => {
-        const t = audio.currentTime;
-        const idx = k.zaman.findIndex(([b, s]) => t >= b - 0.08 && t <= s + 0.12);
-        if (idx !== -1) setAktifCumleIdx(idx);
-      };
-
-      audio.onended = () => {
-        setCaliyor(false);
-        setAktifCumleIdx(-1);
-        if (bittiginde) bittiginde();
-      };
-
-      audio.onerror = () => {
-        setCaliyor(false);
-        setAktifCumleIdx(-1);
-      };
-
-      audio
-        .play()
-        .then(() => {
-          setCaliyor(true);
-          setAktifCumleIdx(baslangicCumle);
-        })
-        .catch(() => {
-          setCaliyor(false);
-        });
-    },
-    [aktifKlipId, caliyor, hiz, sesDurdur],
-  );
-
-  // Aşamayı sesli başlat (cümleler bittiğinde otomatik ilerle açıksa ilk soruyu okur)
-  const asamayiSesliAnlat = useCallback(
-    (hedefIdx = adimIdx, baslangicCumle = 0) => {
-      const nk = g07.noktalar[hedefIdx];
-      if (!nk) return;
-      const klipId = `a-${nk.id}`;
-      klipCal(klipId, baslangicCumle, () => {
-        setTamamlananAdimlar((prev) => ({ ...prev, [nk.id]: true }));
-        if (otomatikIlerle && nk.sorular.length > 0) {
-          const ilkSoru = nk.sorular[0];
-          klipCal(`q-${ilkSoru.k}`);
-        }
-      });
-    },
-    [adimIdx, klipCal, otomatikIlerle],
-  );
-
-  const adimDegistir = useCallback(
-    (yeniIdx: number, otomatikOku = false) => {
-      const clamped = Math.max(0, Math.min(g07.noktalar.length - 1, yeniIdx));
-      sesDurdur();
-      setAktifKlipId(null);
-      setAdimIdx(clamped);
-      if (otomatikOku) {
-        setTimeout(() => {
-          const nk = g07.noktalar[clamped];
-          if (nk) klipCal(`a-${nk.id}`);
-        }, 80);
-      }
-    },
-    [klipCal, sesDurdur],
-  );
-
-  const asistanSoruSikSec = useCallback(
-    (soru: AsistanSoru, harf: string) => {
-      setAsistanSoruSecim((prev) => ({ ...prev, [soru.k]: harf }));
-      if (harf === soru.dogru) {
-        klipCal(`d-${soru.k}`);
-      } else {
-        klipCal(`y-${soru.k}-${harf}`);
-      }
-    },
-    [klipCal],
-  );
-
-  const yardimToggleVeOku = useCallback(
-    (soru: AsistanSoru) => {
-      setYardimAcikSoru((prev) => ({ ...prev, [soru.k]: true }));
-      klipCal(`h-${soru.k}`);
-    },
-    [klipCal],
-  );
-
-  const handlePdfIndir = useCallback(async (mod: GenetikPdfMod) => {
-    setPdfYukleniyor(mod);
-    try {
-      await genetikCheckupPdfIndir(mod);
-    } finally {
-      setPdfYukleniyor(null);
-      setPdfMenuAcik(false);
-    }
-  }, []);
-
-  const aramaKucuk = arama.trim().toLowerCase();
-
-  const filtrelenmisTablolar = useMemo(() => {
-    return GENETIK_TABLOLAR.filter((t) => {
-      if (aktifBolum !== 'tumu' && t.bolum !== aktifBolum) return false;
-      if (!aramaKucuk) return true;
-      const metin = [t.baslik, t.aciklama, ...t.sutunlar, ...t.satirlar.flat()].join(' ').toLowerCase();
-      return metin.includes(aramaKucuk);
-    });
-  }, [aktifBolum, aramaKucuk]);
-
-  const filtrelenmisSpotlar = useMemo(() => {
-    return GENETIK_SPOTLAR.filter((s) => {
-      if (aktifBolum !== 'tumu' && s.bolum !== aktifBolum) return false;
-      if (!aramaKucuk) return true;
-      return s.cumle.toLowerCase().includes(aramaKucuk) || s.etiket.toLowerCase().includes(aramaKucuk);
-    });
-  }, [aktifBolum, aramaKucuk]);
-
-  const filtrelenmisSoruCevaplar = useMemo(() => {
-    return GENETIK_SORU_CEVAPLAR.filter((sc) => {
-      if (aktifBolum !== 'tumu' && sc.bolum !== aktifBolum) return false;
-      if (!aramaKucuk) return true;
-      return (
-        sc.soru.toLowerCase().includes(aramaKucuk) ||
-        sc.cevap.toLowerCase().includes(aramaKucuk) ||
-        (sc.ipucu && sc.ipucu.toLowerCase().includes(aramaKucuk))
-      );
-    });
-  }, [aktifBolum, aramaKucuk]);
-
-  const filtrelenmisSorular = useMemo(() => {
-    return GENETIK_SORULAR.filter((q) => {
-      if (aktifBolum !== 'tumu' && q.bolum !== aktifBolum) return false;
-      if (soruFiltre !== 'hepsi' && q.tur !== soruFiltre) return false;
-      if (!aramaKucuk) return true;
-      const metin = [
-        q.kok,
-        q.kalipEtiketi,
-        q.aciklama,
-        q.spotCikarim,
-        ...Object.values(q.secenekler),
-      ]
-        .join(' ')
-        .toLowerCase();
-      return metin.includes(aramaKucuk);
-    });
-  }, [aktifBolum, soruFiltre, aramaKucuk]);
-
-  // Aktif aşamanın bağlı olduğu bölümün tabloları ve spotları
-  const asamaTablolari = useMemo(() => {
-    const hedefTabloIdler = ASAMA_TABLO_HARITASI[aktifNokta.id];
-    if (hedefTabloIdler && hedefTabloIdler.length > 0) {
-      return GENETIK_TABLOLAR.filter((t) => hedefTabloIdler.includes(t.id));
-    }
-    return GENETIK_TABLOLAR.filter((t) => aktifBolumKeys.includes(t.bolum));
-  }, [aktifNokta.id, aktifBolumKeys]);
-
-  const asamaSpotlari = useMemo(
-    () => GENETIK_SPOTLAR.filter((s) => aktifBolumKeys.includes(s.bolum)),
-    [aktifBolumKeys],
-  );
-
-  const istatistik = useMemo(() => {
-    const toplamCikmis = GENETIK_SORULAR.filter((q) => q.tur === 'cikmis').length;
-    const toplamOrnek = GENETIK_SORULAR.filter((q) => q.tur === 'ornek').length;
-    const cozulen = Object.keys(secilenSiklar).length;
-    const dogruSayisi = GENETIK_SORULAR.filter((q) => secilenSiklar[q.id] === q.dogru).length;
-    const tamamAdim = Object.keys(tamamlananAdimlar).length;
-    return {
-      toplamSpot: GENETIK_SPOTLAR.length,
-      toplamSoruCevap: GENETIK_SORU_CEVAPLAR.length,
-      toplamTablo: GENETIK_TABLOLAR.length,
-      toplamCikmis,
-      toplamOrnek,
-      toplamSoru: GENETIK_SORULAR.length,
-      cozulen,
-      dogruSayisi,
-      tamamAdim,
-    };
-  }, [secilenSiklar, tamamlananAdimlar]);
-
-  const asistanToplam = useMemo(() => g07.noktalar.reduce((x, n) => x + n.sorular.length, 0), []);
-  const asistanDogru = useMemo(
-    () => g07.noktalar.reduce((x, n) => x + n.sorular.filter((q) => asistanSoruSecim[q.k] === q.dogru).length, 0),
-    [asistanSoruSecim],
-  );
-
-  const toggleCevap = (id: string) => {
-    setAcikCevaplar((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
-
-  const tumCevaplariAcKapat = (ac: boolean) => {
-    const next: Record<string, boolean> = {};
-    if (ac) {
-      filtrelenmisSoruCevaplar.forEach((sc) => {
-        next[sc.id] = true;
-      });
-    }
-    setAcikCevaplar(next);
-  };
-
-  const sikSec = (soruId: string, sik: 'A' | 'B' | 'C' | 'D' | 'E') => {
-    setSecilenSiklar((prev) => ({ ...prev, [soruId]: sik }));
-  };
-
-  const cevaplariSifirla = () => {
-    setSecilenSiklar({});
-    setAsistanSoruSecim({});
-    setTamamlananAdimlar({});
-  };
-
-  const harfler: ('A' | 'B' | 'C' | 'D' | 'E')[] = ['A', 'B', 'C', 'D', 'E'];
-
-  const sekmeler: { id: SekmeTipi; ad: string; ikon: React.ReactNode; say?: number }[] = [
-    { id: 'anlatici', ad: 'Sesli ders', ikon: <Volume2 /> },
-    { id: 'tablolar', ad: 'Tablolar', ikon: <FileSpreadsheet />, say: filtrelenmisTablolar.length },
-    { id: 'spotlar', ad: 'Spotlar', ikon: <Zap />, say: filtrelenmisSpotlar.length },
-    { id: 'soru_cevap', ad: 'Soru–cevap', ikon: <HelpCircle />, say: filtrelenmisSoruCevaplar.length },
-    { id: 'sorular', ad: 'Sorular', ikon: <BookOpen />, say: filtrelenmisSorular.length },
-    { id: 'hepsi', ad: 'Hepsi', ikon: <Layers /> },
-  ];
-
-  const tabloKart = (t: (typeof GENETIK_TABLOLAR)[number]) => (
-    <article key={t.id} className="gcu-kart">
-      <header className="gcu-kart-bas">
-        <span className="gcu-ust">
-          {KALIP_META[t.kalip].kisa} · Slayt {t.k.join(', ')}
-        </span>
-        <h3>{t.baslik}</h3>
+    <div className="tk">
+      <header className="tk-bas">
+        <span className="tk-ic" aria-hidden><Dna /></span>
+        <div className="tk-bas-t">
+          <span className="tk-ust">Kurul 1 · Tıbbi Biyoloji ve Genetik · 12 soru</span>
+          <h1>TBG Sınav Kampı</h1>
+          <p>Hoca soruları son yılların çıkmışlarından ve üç kalıptan soruyor: <b>bulgudan sendrom</b>, <b>kanserde hedef ilaç</b>, <b>spesifik belirteç</b>. Ders bu kalıplara göre adım adım ve sesli anlatılır.</p>
+        </div>
+        <div className="tk-bas-arac">
+          <button type="button" className="tk-btn" onClick={() => { durdur(); setTamEkran(true); }}><Maximize2 aria-hidden /> Tam ekran asistan</button>
+          <MetinAktarMenu belge={belge} dosyaAdi={`tbg-sinav-kampi-${mod}`} dugmeSinif="tk-btn" etiket="Özeti indir" />
+        </div>
       </header>
-      <div className="gcu-tablo-kap">
-        <table className="gcu-tablo">
-          <thead>
-            <tr>
-              {t.sutunlar.map((col, i) => (
-                <th key={i}>{col}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {t.satirlar.map((row, r) => (
-              <tr key={r}>
-                {row.map((cell, c) =>
-                  c === 0 ? (
-                    <th key={c} scope="row">
-                      {cell}
-                    </th>
-                  ) : (
-                    <td key={c} data-l={t.sutunlar[c]}>
-                      {cell}
-                    </td>
-                  ),
-                )}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </article>
-  );
 
-  const spotListe = (liste: typeof GENETIK_SPOTLAR) => (
-    <ol className="gcu-spotlar">
-      {liste.map((s, i) => (
-        <li key={s.id}>
-          <span className="gcu-no">{i + 1}</span>
-          <div>
-            <p>
-              <RichText text={s.cumle} />
-            </p>
-            <small>
-              {s.etiket}
-              {s.cikmisYil && <b> · Çıkmış {s.cikmisYil}</b>}
-            </small>
-          </div>
-        </li>
-      ))}
-    </ol>
-  );
-
-  const siklar = (
-    secenekler: Record<string, string>,
-    dogru: string,
-    secilen: string | undefined,
-    sec: (h: 'A' | 'B' | 'C' | 'D' | 'E') => void,
-    aciklama: (h: string) => string | undefined,
-    aciklamaGoster: boolean,
-    okunanIdx = -1,
-  ) => (
-    <div className="gcu-siklar">
-      {harfler.map((h, hi) => {
-        const metin = secenekler[h];
-        if (!metin) return null;
-        const cozuldu = !!secilen;
-        const durum = cozuldu ? (h === dogru ? 'is-dogru' : h === secilen ? 'is-yanlis' : '') : '';
-        const not = aciklamaGoster ? aciklama(h) : undefined;
-        return (
-          <div key={h} className="gcu-sik">
-            <button
-              type="button"
-              className={`gcu-sik-btn ${durum} ${okunanIdx === hi ? 'is-okunuyor' : ''}`}
-              onClick={() => sec(h)}
-              aria-pressed={secilen === h}
-            >
-              <span className="gcu-sik-harf">{h}</span>
-              <span className="gcu-sik-metin">{metin}</span>
-              {durum === 'is-dogru' && <CheckCircle2 className="gcu-sik-ikon" />}
-              {durum === 'is-yanlis' && <XCircle className="gcu-sik-ikon" />}
+      <section className="tk-mod" aria-label="Çalışma modu">
+        {(['hizli', 'tam'] as Mod[]).map((m) => {
+          const N = DERS.noktalar.filter((n) => m === 'tam' || n.puan >= HIZLI_PUAN);
+          return (
+            <button key={m} type="button" className={`tk-mod-k${mod === m ? ' is-on' : ''}`} aria-pressed={mod === m}
+              onClick={() => { durdur(); guncelle((k) => ({ ...k, mod: m })); }}>
+              <span className="tk-mod-ad">{m === 'hizli' ? <Zap aria-hidden /> : <BookOpen aria-hidden />}{m === 'hizli' ? 'Hızlı mod' : 'Tam mod'}</span>
+              <span className="tk-mod-alt">{m === 'hizli' ? 'En çok sorulanlar, adım başına 1 soru' : 'Kalıba uyan tüm bilgiler ve sorular'}</span>
+              <span className="tk-mod-say"><b>{N.length}</b> adım · <b>{N.reduce((t, n) => t + modSorulari(n, m).length, 0)}</b> soru · ~<b>{sure[m]}</b> dk</span>
             </button>
-            {not && (
-              <p className={`gcu-sik-not ${h === dogru && cozuldu ? 'is-dogru' : ''} ${okunanIdx === hi ? 'is-okunuyor' : ''}`}>
-                <RichText text={not} />
-              </p>
+          );
+        })}
+      </section>
+
+      <details className="tk-harita" open={genis}>
+        <summary className="tk-harita-bas">
+          <span className="tk-ust">Son yılların çıkmışları nereden geliyor</span>
+          <span className="tk-harita-top"><b>{tumSorular.filter((x) => x.s.tur === 'cikmis').length}</b> çıkmış · <b>{tumSorular.filter((x) => x.s.tur === 'ornek').length}</b> kalıba uygun örnek</span>
+        </summary>
+        <ul>
+          {cikmisDagilim.map((d) => (
+            <li key={d.ad}><span>{d.ad}</span><i style={{ ['--w' as string]: `${(d.n / enCok) * 100}%` }} /><b className="tk-mono">{d.n}</b></li>
+          ))}
+        </ul>
+      </details>
+
+      <nav className="tk-sekme" role="tablist" aria-label="Bölümler">
+        {([['ders', 'Adım adım ders', ListChecks], ['kalip', 'Kalıp kartları', Table2], ['deneme', '12 soruluk deneme', Shuffle]] as const).map(([id, ad, Ic]) => (
+          <button key={id} type="button" role="tab" aria-selected={sekme === id} className={sekme === id ? 'is-on' : ''} onClick={() => setSekme(id)}>
+            <Ic aria-hidden /> {ad}
+          </button>
+        ))}
+        <span className="tk-ilerleme">
+          <span>{bitenAdim}/{adimlar.length} adım</span>
+          <span>{dogruSay}/{cevapSay || 0} doğru</span>
+          <button type="button" className="tk-metin-btn" onClick={sifirla} title="İlerlemeyi sıfırla"><RotateCcw aria-hidden /></button>
+        </span>
+      </nav>
+
+      {sekme === 'ders' && nokta && (
+        <div className="tk-ders">
+          <aside className="tk-liste" aria-label="Adımlar">
+            {DERS.bolumler.map((b, bi) => {
+              const N = adimlar.map((n, i) => ({ n, i })).filter((x) => x.n.bolum === bi);
+              if (!N.length) return null;
+              return (
+                <div key={bi} className="tk-liste-b">
+                  <span className="tk-liste-bas">{bi + 1}. {b.baslik.split(':')[0]}</span>
+                  {N.map(({ n, i }) => (
+                    <button key={n.id} type="button" className={`tk-liste-o${i === idx ? ' is-on' : ''}${kayit.tamam[n.id] ? ' is-bitti' : ''}`} onClick={() => git(i)}>
+                      <span className="tk-liste-no">{kayit.tamam[n.id] ? <Check aria-hidden /> : i + 1}</span>
+                      <span className="tk-liste-ad">{n.baslik}</span>
+                      {n.sorular.some((s) => s.tur === 'cikmis') && <span className="tk-cik" title="Çıkmış sorusu var">Ç</span>}
+                    </button>
+                  ))}
+                </div>
+              );
+            })}
+          </aside>
+
+          <article className="tk-kart" ref={kartRef}>
+            <div className="tk-kart-ust">
+              <span className="tk-ust">{nokta.bolum + 1}. bölüm · {DERS.bolumler[nokta.bolum]?.baslik.split(':')[0]} · adım {idx + 1}/{adimlar.length}</span>
+              <span className={`tk-kat tk-kat-${nokta.kategori}`}>{KATEGORI[nokta.kategori] || nokta.kategori}</span>
+            </div>
+            <h2>{nokta.baslik}</h2>
+            {adimlar.findIndex((x) => x.bolum === nokta.bolum) === idx && <p className="tk-neden">{DERS.bolumler[nokta.bolum]?.neden}</p>}
+
+            <div className="tk-oynat">
+              {calan && /^[ab]-/.test(calan.id) ? (
+                <button type="button" className="tk-btn tk-btn-ana" onClick={duraklat}>{calan.oynuyor ? <Pause aria-hidden /> : <Play aria-hidden />}{calan.oynuyor ? 'Duraklat' : 'Devam et'}</button>
+              ) : (
+                <button type="button" className="tk-btn tk-btn-ana" onClick={() => anlat(idx)} disabled={!DERS.klip[`a-${nokta.id}`]}><Volume2 aria-hidden /> Sesli anlat</button>
+              )}
+              <label className="tk-hiz">Hız
+                <select value={kayit.hiz} onChange={(e) => guncelle((k) => ({ ...k, hiz: Number(e.target.value) }))}>
+                  {HIZLAR.map((h) => <option key={h} value={h}>{h}×</option>)}
+                </select>
+              </label>
+              <label className="tk-oto"><input type="checkbox" checked={kayit.oto} onChange={(e) => guncelle((k) => ({ ...k, oto: e.target.checked }))} /> Soruyu oku, doğruysa sonraki adıma geç</label>
+            </div>
+
+            <ol className="tk-anlatim">
+              {nokta.cumleler.map((c, i) => (
+                <li key={i} className={calan?.id === `a-${nokta.id}` && calan.cumle === i ? 'is-on' : ''}>
+                  <button type="button" onClick={() => anlat(idx, i)} title="Buradan dinle"><Zengin t={c} /></button>
+                </li>
+              ))}
+            </ol>
+
+            <div className="tk-sorular">
+              {modSorulari(nokta, mod).map((s, si) => (
+                <SoruKart key={s.k} s={s} no={si + 1} secim={kayit.cevap[s.k]} yardimAcik={!!yardim[s.k]}
+                  onSec={(h) => sec(nokta, s, h, true)} onOku={() => cal(`q-${s.k}`)}
+                  onYardim={() => { setYardim((y) => ({ ...y, [s.k]: true })); cal(`h-${s.k}`); }}
+                  onTekrar={() => guncelle((k) => { const c = { ...k.cevap }; delete c[s.k]; return { ...k, cevap: c }; })} />
+              ))}
+            </div>
+
+            <div className="tk-gezin">
+              <button type="button" className="tk-btn" onClick={() => git(idx - 1)} disabled={idx === 0}><ChevronLeft aria-hidden /> Önceki</button>
+              {idx < adimlar.length - 1 ? (
+                <button type="button" className="tk-btn tk-btn-ana" onClick={() => { guncelle((k) => ({ ...k, tamam: { ...k.tamam, [nokta.id]: 1 } })); git(idx + 1, calan !== null); }}>Sonraki adım <ChevronRight aria-hidden /></button>
+              ) : (
+                <button type="button" className="tk-btn tk-btn-ana" onClick={() => { guncelle((k) => ({ ...k, tamam: { ...k.tamam, [nokta.id]: 1 } })); setSekme('deneme'); }}>Bitir, denemeye geç <ChevronRight aria-hidden /></button>
+              )}
+            </div>
+            {idx === adimlar.length - 1 && DERS.kapanis.length > 0 && (
+              <div className="tk-kapanis">
+                <span className="tk-ust">Sınava girerken</span>
+                <ul>{DERS.kapanis.map((c, i) => <li key={i}><Zengin t={c} /></li>)}</ul>
+              </div>
             )}
-          </div>
+          </article>
+        </div>
+      )}
+
+      {sekme === 'kalip' && <KalipKartlari mod={mod} />}
+      {sekme === 'deneme' && <Deneme mod={mod} havuz={adimlar} cal={cal} durdur={durdur} />}
+
+      {tamEkran && <PatolojiAsistan kod={DERS.kod} onClose={() => setTamEkran(false)} />}
+    </div>
+  );
+};
+
+/* ——— soru kartı ——— */
+function SoruKart({ s, no, secim, yardimAcik, onSec, onOku, onYardim, onTekrar }: {
+  s: Soru; no: number; secim?: string; yardimAcik: boolean; onSec: (h: string) => void; onOku: () => void; onYardim: () => void; onTekrar: () => void;
+}) {
+  const bitti = !!secim;
+  return (
+    <section className="tk-soru">
+      <div className="tk-soru-ust">
+        <span className={`tk-etiket${s.tur === 'cikmis' ? ' is-cik' : ''}`}>{s.tur === 'cikmis' ? `Çıkmış${s.sinav ? ` · ${s.sinav}` : ''}` : 'Kalıba uygun örnek'}</span>
+        <span className="tk-soru-arac">
+          <button type="button" className="tk-metin-btn" onClick={onOku} title="Soruyu sesli oku"><Volume2 aria-hidden /></button>
+          {bitti && <button type="button" className="tk-metin-btn" onClick={onTekrar} title="Yeniden çöz"><RotateCcw aria-hidden /></button>}
+        </span>
+      </div>
+      <p className="tk-kok"><span className="tk-mono">{no}.</span> {s.kok}</p>
+      <ul className="tk-siklar">
+        {harfler(s).map((h) => {
+          const durum = !bitti ? '' : h === s.dogru ? ' is-dogru' : h === secim ? ' is-yanlis' : ' is-sonuk';
+          return (
+            <li key={h}>
+              <button type="button" className={`tk-sik${durum}`} disabled={bitti} onClick={() => onSec(h)}>
+                <span className="tk-harf">{h}</span><span>{s.secenekler[h]}</span>
+                {bitti && h === s.dogru && <Check aria-hidden className="tk-sik-ic" />}
+                {bitti && h === secim && h !== s.dogru && <X aria-hidden className="tk-sik-ic" />}
+              </button>
+              {yardimAcik && s.yardim[h] && <p className="tk-yardim"><Zengin t={s.yardim[h]} /></p>}
+            </li>
+          );
+        })}
+      </ul>
+      {bitti && (
+        <p className={`tk-geri${secim === s.dogru ? ' is-dogru' : ' is-yanlis'}`}>
+          <Zengin t={secim === s.dogru ? s.dogruMetin : s.yanlis[secim!] || s.dogruMetin} />
+        </p>
+      )}
+      {!yardimAcik && <button type="button" className="tk-metin-btn tk-yardim-btn" onClick={onYardim}><LifeBuoy aria-hidden /> Yardım al: her şıkkı açıkla</button>}
+    </section>
+  );
+}
+
+/* ——— kalıp kartları ——— */
+function KalipKartlari({ mod }: { mod: Mod }) {
+  const [ara, setAra] = useState('');
+  const [gizle, setGizle] = useState(false);
+  const [acik, setAcik] = useState<Record<string, boolean>>({});
+  const q = ara.trim().toLocaleLowerCase('tr');
+  return (
+    <div className="tk-kalip">
+      <div className="tk-kalip-arac">
+        <label className="tk-ara"><Search aria-hidden /><input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder="Bulgu, sendrom, ilaç, gen ara" /></label>
+        <button type="button" className={`tk-btn${gizle ? ' is-on' : ''}`} aria-pressed={gizle} onClick={() => { setGizle((g) => !g); setAcik({}); }}>
+          {gizle ? <Eye aria-hidden /> : <EyeOff aria-hidden />}{gizle ? 'Cevapları göster' : 'Cevapları gizle, kendini sına'}
+        </button>
+      </div>
+      {KALIPLAR.map((k) => {
+        const R = k.satir.filter((r) => (mod === 'tam' || r.h) && (!q || `${r.s} ${r.t}`.toLocaleLowerCase('tr').includes(q)));
+        if (!R.length) return null;
+        return (
+          <section key={k.id} className="tk-kalip-k">
+            <header><h3>{k.baslik}</h3><span>{k.soru}</span></header>
+            <div className="tk-tablo" role="table">
+              <div className="tk-tablo-s tk-tablo-bas" role="row"><span role="columnheader">{k.sutun[0]}</span><span role="columnheader">{k.sutun[1]}</span></div>
+              {R.map((r, i) => {
+                const id = `${k.id}-${i}`;
+                const goster = !gizle || acik[id];
+                return (
+                  <div key={id} className="tk-tablo-s" role="row">
+                    <span role="cell">{r.s}</span>
+                    <span role="cell">
+                      {goster ? <><b>{r.t}</b><small className="tk-mono">{r.k}</small></> : (
+                        <button type="button" className="tk-gizli" onClick={() => setAcik((a) => ({ ...a, [id]: true }))}>Göster</button>
+                      )}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
         );
       })}
     </div>
   );
+}
 
-  const anlatimCaliyor = caliyor && aktifKlipId === `a-${aktifNokta.id}`;
-
+/* ——— 12 soruluk deneme ——— */
+function Deneme({ mod, havuz, cal, durdur }: { mod: Mod; havuz: Nokta[]; cal: (id: string, b?: () => void) => void; durdur: () => void }) {
+  const [set, setSet] = useState<Soru[] | null>(null);
+  const [cevap, setCevap] = useState<Record<string, string>>({});
+  const [yardim, setYardim] = useState<Record<string, boolean>>({});
+  const [i, setI] = useState(0);
+  const basla = () => {
+    durdur();
+    // Çıkmışlar önce: 12 sorunun en az 8'i çıkmış, kalan kalıba uygun örnek; bölümler dengeli dağılır
+    const tum = havuz.flatMap((n) => n.sorular);
+    const karis = <T,>(a: T[]) => a.map((x) => [Math.random(), x] as const).sort((p, r) => p[0] - r[0]).map((x) => x[1]);
+    const cik = karis(tum.filter((s) => s.tur === 'cikmis'));
+    const orn = karis(tum.filter((s) => s.tur === 'ornek'));
+    const secilen = [...cik.slice(0, 8), ...orn].slice(0, 12);
+    setSet(karis(secilen.length < 12 ? [...secilen, ...cik.slice(8)].slice(0, 12) : secilen));
+    setCevap({}); setYardim({}); setI(0);
+  };
+  if (!set) {
+    return (
+      <div className="tk-deneme-giris">
+        <h3>Sınav provası</h3>
+        <p>{mod === 'hizli' ? 'Hızlı modun adımlarından' : 'Tüm adımlardan'} rastgele 12 soru: çoğu son yılların çıkmışı, kalanı hocanın kalıbına uygun örnek. Her yanlışta neden yanlış olduğu sesli anlatılır.</p>
+        <button type="button" className="tk-btn tk-btn-ana" onClick={basla}><Shuffle aria-hidden /> 12 soruyu başlat</button>
+      </div>
+    );
+  }
+  const s = set[i];
+  const bitti = set.every((x) => cevap[x.k]);
+  const dogru = set.filter((x) => cevap[x.k] === x.dogru).length;
   return (
-    <div className="gcu">
-      {tamEkranKod && (
-        <PatolojiAsistan
-          kod={tamEkranKod}
-          onClose={() => setTamEkranKod(null)}
-          onDersDegis={(yeniKod) => setTamEkranKod(yeniKod)}
-        />
-      )}
-
-      {/* BAŞLIK */}
-      <header className="gcu-bas">
-        {onBack && (
-          <button type="button" className="gcu-geri" onClick={onBack} aria-label="Geri dön">
-            <ArrowLeft />
-          </button>
-        )}
-        <span className="gcu-ic" aria-hidden>
-          <Dna />
-        </span>
-        <div className="gcu-bas-t">
-          <span className="gcu-ust">Kurul 1 · Tıbbi Biyoloji ve Genetik</span>
-          <h1>Genetik sınav kalıbı</h1>
-          <p>
-            Üç soru kalıbı: <b>bulgudan sendrom</b>, <b>kanserde hedef ilaç</b>, <b>kanser ve prenatal belirteçler</b>.
-          </p>
+    <div className="tk-deneme">
+      <div className="tk-deneme-ust">
+        <div className="tk-nokta" role="tablist" aria-label="Sorular">
+          {set.map((x, j) => (
+            <button key={x.k} type="button" aria-label={`${j + 1}. soru`} className={`${j === i ? 'is-on' : ''}${cevap[x.k] ? (cevap[x.k] === x.dogru ? ' is-dogru' : ' is-yanlis') : ''}`} onClick={() => { durdur(); setI(j); }}>{j + 1}</button>
+          ))}
         </div>
-        {/* İLERLEME */}
-        <div className="gcu-ilerleme">
-          <div className="gcu-ilerleme-oge">
-            <span>Sesli ders</span>
-            <b className="gcu-mono">
-              {istatistik.tamamAdim}/{g07.noktalar.length} aşama
-            </b>
-            <i style={{ ['--p' as string]: `${(istatistik.tamamAdim / g07.noktalar.length) * 100}%` }} />
-          </div>
-          <div className="gcu-ilerleme-oge">
-            <span>Ders soruları</span>
-            <b className="gcu-mono">
-              {asistanDogru}/{asistanToplam} doğru
-            </b>
-            <i style={{ ['--p' as string]: `${(asistanDogru / Math.max(1, asistanToplam)) * 100}%` }} />
-          </div>
-          <div className="gcu-ilerleme-oge">
-            <span>Soru bankası</span>
-            <b className="gcu-mono">
-              {istatistik.dogruSayisi}/{istatistik.toplamSoru} doğru
-            </b>
-            <i style={{ ['--p' as string]: `${(istatistik.dogruSayisi / Math.max(1, istatistik.toplamSoru)) * 100}%` }} />
-          </div>
-          {(istatistik.cozulen > 0 || istatistik.tamamAdim > 0) && (
-            <button type="button" className="gcu-metin-btn" onClick={cevaplariSifirla}>
-              <RotateCcw />
-              Sıfırla
-            </button>
-          )}
-        </div>
-        <div className="gcu-bas-arac">
-          <button
-            type="button"
-            className="gcu-btn"
-            onClick={() => {
-              sesDurdur();
-              setTamEkranKod('g07');
-            }}
-          >
-            <Maximize2 />
-            <span>Tam ekran asistan</span>
-          </button>
-          <div className="gcu-pdf" ref={pdfRef}>
-            <button
-              type="button"
-              className="gcu-btn"
-              onClick={() => setPdfMenuAcik((v) => !v)}
-              disabled={!!pdfYukleniyor}
-              aria-expanded={pdfMenuAcik}
-            >
-              <Download />
-              <span>{pdfYukleniyor ? 'Hazırlanıyor…' : 'PDF'}</span>
-              <ChevronDown />
-            </button>
-            {pdfMenuAcik && (
-              <div className="gcu-pdf-menu" role="menu">
-                {GENETIK_PDF_MODLAR.map((m) => (
-                  <button
-                    key={m.id}
-                    type="button"
-                    role="menuitem"
-                    disabled={!!pdfYukleniyor}
-                    onClick={() => handlePdfIndir(m.id)}
-                  >
-                    <FileText />
-                    <span>
-                      <b>{m.baslik}</b>
-                      <small>{m.aciklama}</small>
-                    </span>
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
-      </header>
-
-      {/* SEKMELER */}
-      <nav className="gcu-sekme" aria-label="Bölümler">
-        {sekmeler.map((s) => (
-          <button
-            key={s.id}
-            type="button"
-            className={aktifSekme === s.id ? 'is-on' : ''}
-            aria-current={aktifSekme === s.id ? 'page' : undefined}
-            onClick={() => setAktifSekme(s.id)}
-          >
-            {s.ikon}
-            <span>{s.ad}</span>
-            {s.say !== undefined && <em className="gcu-mono">{s.say}</em>}
-          </button>
-        ))}
-      </nav>
-
-      {aktifSekme !== 'anlatici' && (
-        <div className="gcu-arac">
-          <label className="gcu-ara">
-            <Search />
-            <input
-              type="search"
-              value={arama}
-              onChange={(e) => setArama(e.target.value)}
-              placeholder="Sendrom, gen, ilaç, belirteç ara (Turner, FGFR3, olaparib, AFP…)"
-            />
-            {arama && (
-              <button type="button" className="gcu-ara-sil" onClick={() => setArama('')} aria-label="Aramayı temizle">
-                <XCircle />
-              </button>
-            )}
-          </label>
-          <div className="gcu-cipler" role="group" aria-label="Konu bölümü">
-            <button
-              type="button"
-              className={aktifBolum === 'tumu' ? 'is-on' : ''}
-              onClick={() => setAktifBolum('tumu')}
-            >
-              Tümü
-            </button>
-            {GENETIK_BOLUMLER.map((b) => (
-              <button
-                key={b.id}
-                type="button"
-                className={aktifBolum === b.id ? 'is-on' : ''}
-                onClick={() => setAktifBolum(b.id)}
-                title={b.kisa}
-              >
-                {b.ad}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* 1. AŞAMA AŞAMA SESLİ DERS */}
-      {aktifSekme === 'anlatici' && (
-        <div className="gcu-ders">
-          <nav className="gcu-asamalar" aria-label="Ders aşamaları">
-            {g07.bolumler.map((b, bi) => (
-              <div key={bi} className="gcu-asama-grup">
-                <span className="gcu-asama-grup-ad">
-                  <span className="gcu-mono">{bi + 1}</span> {b.baslik}
-                </span>
-                {g07.noktalar.map((nk, idx) => {
-                  if (nk.bolum !== bi) return null;
-                  const isCurrent = idx === adimIdx;
-                  const isDone =
-                    !!tamamlananAdimlar[nk.id] || nk.sorular.every((q) => asistanSoruSecim[q.k] === q.dogru);
-                  return (
-                    <button
-                      key={nk.id}
-                      type="button"
-                      className={`gcu-asama ${isCurrent ? 'is-on' : ''} ${isDone ? 'is-ok' : ''}`}
-                      aria-current={isCurrent ? 'step' : undefined}
-                      onClick={() => adimDegistir(idx, false)}
-                    >
-                      <span className="gcu-asama-no gcu-mono">{isDone ? <Check /> : idx + 1}</span>
-                      <span className="gcu-asama-ad">{nk.baslik}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            ))}
-          </nav>
-
-          <article className="gcu-asama-kart" ref={asamaRef}>
-            <header className="gcu-asama-bas">
-              <span className="gcu-ust">
-                Bölüm {aktifNokta.bolum + 1} · {aktifAnlaticiBolum.baslik}
-              </span>
-              <h2>
-                <span className="gcu-mono">{adimIdx + 1}.</span> {aktifNokta.baslik}
-              </h2>
-              <p>{aktifAnlaticiBolum.neden}</p>
-              <div className="gcu-onem" title="Sınavda çıkma önemi">
-                <Target />
-                <span>Sınav önemi</span>
-                <b className="gcu-mono">{aktifNokta.puan}</b>
-                <i style={{ ['--p' as string]: `${aktifNokta.puan}%` }} />
-              </div>
-            </header>
-
-            {/* oynatıcı */}
-            <div className="gcu-oynatici">
-              <button
-                type="button"
-                className={`gcu-oynat ${anlatimCaliyor ? 'is-caliyor' : ''}`}
-                onClick={() => asamayiSesliAnlat(adimIdx)}
-              >
-                {anlatimCaliyor ? <Pause /> : <Play />}
-                <span>{anlatimCaliyor ? 'Duraklat' : aktifKlipId === `a-${aktifNokta.id}` ? 'Devam et' : 'Aşamayı dinle'}</span>
-              </button>
-              <button
-                type="button"
-                className="gcu-btn"
-                onClick={() => klipCal(`b-${aktifNokta.bolum + 1}`)}
-                title="Bölüm girişini sesli dinle"
-              >
-                <Volume2 />
-                <span>Bölüm girişi</span>
-              </button>
-              {caliyor && !anlatimCaliyor && (
-                <button type="button" className="gcu-btn" onClick={sesDurdur} title="Sesi durdur">
-                  <Pause />
-                  <span>Durdur</span>
-                </button>
-              )}
-              <span className="gcu-oynatici-bosluk" />
-              <label className="gcu-hiz">
-                <span>Hız</span>
-                <select value={hiz} onChange={(e) => setHiz(Number(e.target.value))}>
-                  {HIZ_SECENEKLERI.map((s) => (
-                    <option key={s} value={s}>
-                      {s}×
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label className="gcu-anahtar">
-                <input
-                  type="checkbox"
-                  checked={otomatikIlerle}
-                  onChange={(e) => setOtomatikIlerle(e.target.checked)}
-                />
-                <span>Sonra soruyu oku</span>
-              </label>
-            </div>
-
-            {/* anlatım */}
-            <ol className="gcu-anlatim" aria-label="Doktor anlatımı">
-              {aktifNokta.cumleler.map((cm, ci) => {
-                const okunuyor = anlatimCaliyor && aktifCumleIdx === ci;
-                return (
-                  <li key={ci}>
-                    <button
-                      type="button"
-                      className={okunuyor ? 'is-okunuyor' : ''}
-                      onClick={() => asamayiSesliAnlat(adimIdx, ci)}
-                      title="Buradan dinle"
-                    >
-                      <RichText text={cm} />
-                    </button>
-                  </li>
-                );
-              })}
-            </ol>
-
-            <aside className="gcu-kural">
-              <span className="gcu-ust">
-                <Zap /> Sınavda aranan kural
-              </span>
-              <p>
-                <RichText text={aktifNokta.bilgi} />
-              </p>
-            </aside>
-
-            {/* aşama soruları */}
-            {aktifNokta.sorular.length > 0 && (
-              <section className="gcu-asama-sorular">
-                <h3>
-                  Bu aşamanın soruları <span className="gcu-mono">{aktifNokta.sorular.length}</span>
-                </h3>
-                {aktifNokta.sorular.map((q, qi) => {
-                  const secilen = asistanSoruSecim[q.k];
-                  const cozuldu = !!secilen;
-                  const yardimAcik = !!yardimAcikSoru[q.k];
-                  const yardimOkunuyor = caliyor && aktifKlipId === `h-${q.k}`;
-                  return (
-                    <article
-                      key={q.k}
-                      className={`gcu-soru ${cozuldu ? (secilen === q.dogru ? 'is-dogru' : 'is-yanlis') : ''}`}
-                    >
-                      <div className="gcu-soru-bas">
-                        <span className="gcu-mono gcu-soru-no">{qi + 1}</span>
-                        <span className={`gcu-tur ${q.tur}`}>
-                          {q.tur === 'cikmis' ? `Çıkmış · ${q.sinav || 'Kurul 1'}` : 'Örnek soru'}
-                        </span>
-                        <span className="gcu-oynatici-bosluk" />
-                        <button
-                          type="button"
-                          className={`gcu-metin-btn ${caliyor && aktifKlipId === `q-${q.k}` ? 'is-on' : ''}`}
-                          onClick={() => klipCal(`q-${q.k}`)}
-                        >
-                          <Volume2 />
-                          Oku
-                        </button>
-                        <button
-                          type="button"
-                          className={`gcu-metin-btn ${yardimOkunuyor ? 'is-on' : ''}`}
-                          onClick={() => yardimToggleVeOku(q)}
-                        >
-                          <LifeBuoy />
-                          Yardım al
-                        </button>
-                      </div>
-                      <p className="gcu-soru-kok">{q.kok}</p>
-                      {siklar(
-                        q.secenekler,
-                        q.dogru,
-                        secilen,
-                        (h) => asistanSoruSikSec(q, h),
-                        (h) => q.yardim[h],
-                        yardimAcik || cozuldu,
-                        yardimOkunuyor ? aktifCumleIdx : -1,
-                      )}
-                      {cozuldu && (
-                        <p className="gcu-cozum">
-                          <Sparkles />
-                          <span>
-                            <RichText text={secilen === q.dogru ? q.dogruMetin : q.yanlis[secilen] || q.dogruMetin} />
-                          </span>
-                        </p>
-                      )}
-                    </article>
-                  );
-                })}
-              </section>
-            )}
-
-            {/* başvuru: tablo + spot */}
-            <details className="gcu-basvuru" open={ekTabloAcik} onToggle={(e) => setEkTabloAcik((e.target as HTMLDetailsElement).open)}>
-              <summary>
-                <FileSpreadsheet />
-                <span>
-                  İlgili tablolar <em className="gcu-mono">{asamaTablolari.length}</em> ve spotlar{' '}
-                  <em className="gcu-mono">{asamaSpotlari.length}</em>
-                </span>
-                <ChevronDown className="gcu-basvuru-ok" />
-              </summary>
-              <div className="gcu-basvuru-ic">
-                {asamaTablolari.map(tabloKart)}
-                {asamaSpotlari.length > 0 && spotListe(asamaSpotlari)}
-              </div>
-            </details>
-
-            <footer className="gcu-gezinti">
-              <button
-                type="button"
-                className="gcu-btn"
-                disabled={adimIdx === 0}
-                onClick={() => adimDegistir(adimIdx - 1, false)}
-              >
-                <ChevronLeft />
-                <span>Önceki</span>
-              </button>
-              <span className="gcu-mono gcu-gezinti-say">
-                {adimIdx + 1} / {g07.noktalar.length}
-              </span>
-              {adimIdx < g07.noktalar.length - 1 ? (
-                <button
-                  type="button"
-                  className="gcu-btn gcu-btn-ana"
-                  onClick={() => {
-                    setTamamlananAdimlar((prev) => ({ ...prev, [aktifNokta.id]: true }));
-                    adimDegistir(adimIdx + 1, otomatikIlerle);
-                  }}
-                >
-                  <span>Tamamla, sonraki aşama</span>
-                  <ChevronRight />
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  className="gcu-btn gcu-btn-ana"
-                  onClick={() => {
-                    setTamamlananAdimlar((prev) => ({ ...prev, [aktifNokta.id]: true }));
-                    setAktifSekme('sorular');
-                  }}
-                >
-                  <span>Dersi bitir, sorulara geç</span>
-                  <ChevronRight />
-                </button>
-              )}
-            </footer>
-          </article>
-
-          {/* diğer genetik dersleri */}
-          <section className="gcu-dersler">
-            <h3>Genetik amfi derslerinin sesli asistanları</h3>
-            <div className="gcu-dersler-izgara">
-              {DIZIN_DERSLER.map((d) => (
-                <button
-                  key={d.kod}
-                  type="button"
-                  className={d.kod === 'g07' ? 'is-on' : ''}
-                  onClick={() => {
-                    sesDurdur();
-                    setTamEkranKod(d.kod);
-                  }}
-                >
-                  <span className="gcu-ust gcu-mono">{d.kod.toUpperCase()}</span>
-                  <b>{d.baslik}</b>
-                  <small className="gcu-mono">
-                    {d.adim} adım · {d.soru} soru · {Math.round(d.sure / 60)} dk
-                  </small>
-                </button>
-              ))}
-            </div>
-          </section>
-        </div>
-      )}
-
-      {/* 2. TABLOLAR */}
-      {(aktifSekme === 'hepsi' || aktifSekme === 'tablolar') && filtrelenmisTablolar.length > 0 && (
-        <section className="gcu-bolum">
-          <h2>
-            Karşılaştırma tabloları <span className="gcu-mono">{filtrelenmisTablolar.length}</span>
-          </h2>
-          {filtrelenmisTablolar.map(tabloKart)}
-        </section>
-      )}
-
-      {/* 3. SPOTLAR */}
-      {(aktifSekme === 'hepsi' || aktifSekme === 'spotlar') && filtrelenmisSpotlar.length > 0 && (
-        <section className="gcu-bolum">
-          <h2>
-            Tek satırlık spotlar <span className="gcu-mono">{filtrelenmisSpotlar.length}</span>
-          </h2>
-          <div className="gcu-kart">{spotListe(filtrelenmisSpotlar)}</div>
-        </section>
-      )}
-
-      {/* 4. SORU – CEVAP */}
-      {(aktifSekme === 'hepsi' || aktifSekme === 'soru_cevap') && filtrelenmisSoruCevaplar.length > 0 && (
-        <section className="gcu-bolum">
-          <div className="gcu-bolum-bas">
-            <h2>
-              Soru–cevap kartları <span className="gcu-mono">{filtrelenmisSoruCevaplar.length}</span>
-            </h2>
-            <div className="gcu-cipler">
-              <button type="button" onClick={() => tumCevaplariAcKapat(true)}>
-                Tümünü aç
-              </button>
-              <button type="button" onClick={() => tumCevaplariAcKapat(false)}>
-                Tümünü kapat
-              </button>
-            </div>
-          </div>
-          <div className="gcu-qa-izgara">
-            {filtrelenmisSoruCevaplar.map((sc) => {
-              const acik = !!acikCevaplar[sc.id];
-              return (
-                <button
-                  key={sc.id}
-                  type="button"
-                  className={`gcu-qa ${acik ? 'is-acik' : ''}`}
-                  aria-expanded={acik}
-                  onClick={() => toggleCevap(sc.id)}
-                >
-                  <span className="gcu-ust">{sc.odak}</span>
-                  <b>{sc.soru}</b>
-                  {acik ? (
-                    <span className="gcu-qa-cevap">
-                      <RichText text={sc.cevap} />
-                      {sc.ipucu && <small>{sc.ipucu}</small>}
-                    </span>
-                  ) : (
-                    <span className="gcu-qa-ac">Cevabı göster</span>
-                  )}
-                </button>
-              );
-            })}
-          </div>
-        </section>
-      )}
-
-      {/* 5. ÇIKMIŞ + ÖRNEK SORULAR */}
-      {(aktifSekme === 'hepsi' || aktifSekme === 'sorular') && (
-        <section className="gcu-bolum">
-          <div className="gcu-bolum-bas">
-            <h2>
-              Çıkmış ve örnek sorular <span className="gcu-mono">{filtrelenmisSorular.length}</span>
-            </h2>
-            <div className="gcu-cipler" role="group" aria-label="Soru türü">
-              {(
-                [
-                  ['hepsi', `Tümü ${GENETIK_SORULAR.length}`],
-                  ['cikmis', `Çıkmış ${istatistik.toplamCikmis}`],
-                  ['ornek', `Örnek ${istatistik.toplamOrnek}`],
-                ] as [SoruFiltreTipi, string][]
-              ).map(([id, ad]) => (
-                <button key={id} type="button" className={soruFiltre === id ? 'is-on' : ''} onClick={() => setSoruFiltre(id)}>
-                  {ad}
-                </button>
-              ))}
-            </div>
-          </div>
-          {filtrelenmisSorular.length === 0 && <p className="gcu-bos">Bu filtreye uyan soru yok.</p>}
-          {filtrelenmisSorular.map((q: GenetikZenginSoru, idx: number) => {
-            const secilen = secilenSiklar[q.id];
-            const cozuldu = !!secilen;
-            return (
-              <article
-                key={q.id}
-                className={`gcu-soru ${cozuldu ? (secilen === q.dogru ? 'is-dogru' : 'is-yanlis') : ''}`}
-              >
-                <div className="gcu-soru-bas">
-                  <span className="gcu-mono gcu-soru-no">{idx + 1}</span>
-                  <span className={`gcu-tur ${q.tur}`}>
-                    {q.tur === 'cikmis' ? `Çıkmış · ${q.yil || 'Kurul 1'}` : 'Örnek soru'}
-                  </span>
-                  <span className="gcu-soru-etiket">{q.kalipEtiketi}</span>
-                </div>
-                <p className="gcu-soru-kok">{q.kok}</p>
-                {siklar(q.secenekler, q.dogru, secilen, (h) => sikSec(q.id, h), (h) => q.sikAciklamalari?.[h as SecenekHarf], cozuldu)}
-                {cozuldu && q.aciklama && (
-                  <p className="gcu-cozum">
-                    <Sparkles />
-                    <span>{q.aciklama}</span>
-                  </p>
-                )}
-              </article>
-            );
-          })}
-        </section>
-      )}
-
-      {aktifSekme !== 'anlatici' &&
-        aramaKucuk &&
-        !filtrelenmisTablolar.length &&
-        !filtrelenmisSpotlar.length &&
-        !filtrelenmisSoruCevaplar.length &&
-        !filtrelenmisSorular.length && <p className="gcu-bos">“{arama}” için sonuç bulunamadı.</p>}
+        {bitti && <span className="tk-skor"><b>{dogru}</b>/12 doğru</span>}
+      </div>
+      <SoruKart s={s} no={i + 1} secim={cevap[s.k]} yardimAcik={!!yardim[s.k]}
+        onSec={(h) => { setCevap((c) => ({ ...c, [s.k]: h })); cal(h === s.dogru ? `d-${s.k}` : `y-${s.k}-${h}`); }}
+        onOku={() => cal(`q-${s.k}`)} onYardim={() => { setYardim((y) => ({ ...y, [s.k]: true })); cal(`h-${s.k}`); }}
+        onTekrar={() => setCevap((c) => { const d = { ...c }; delete d[s.k]; return d; })} />
+      <div className="tk-gezin">
+        <button type="button" className="tk-btn" onClick={() => { durdur(); setI(i - 1); }} disabled={i === 0}><ChevronLeft aria-hidden /> Önceki</button>
+        {i < 11 ? <button type="button" className="tk-btn tk-btn-ana" onClick={() => { durdur(); setI(i + 1); }}>Sonraki <ChevronRight aria-hidden /></button>
+          : <button type="button" className="tk-btn tk-btn-ana" onClick={basla}><Shuffle aria-hidden /> Yeni 12 soru</button>}
+      </div>
     </div>
   );
-};
+}
 
 export default GenetikCheckUp;

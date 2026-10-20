@@ -70,7 +70,7 @@ const I: Record<string, NavItem> = {
   alternatif_cozucu: { id: 'alternatif_cozucu', label: 'Alternatif çözücü', short: 'Alternatif', hint: 'Her soru baştan sona sesli anlatılır, otomatik geçer', icon: Headphones, tint: '#6366F1' },
   en_onemliler: { id: 'en_onemliler', label: 'En önemliler', short: 'Önemli', hint: 'Konu başına en önemli bilgiler, 100 puan', icon: Star, tint: '#F59E0B' },
   patoloji_checkup: { id: 'patoloji_checkup', label: 'Patoloji Check Up', short: 'Check Up', tile: 'Patoloji Check Up', hint: 'Mediyatör, sitokin, hücre ve hastalık tabloları; kendini sına', icon: Table2, tint: '#14B8A6' },
-  genetik_checkup: { id: 'genetik_checkup', label: 'Genetik Check Up', short: 'Genetik', tile: 'Genetik Check Up', hint: 'Sendrom eşleştirme, kanser hedef ilaçları, belirteçler, çıkmış ve örnek sorular', icon: Dna, tint: '#10B981' },
+  genetik_checkup: { id: 'genetik_checkup', label: 'TBG Sınav Kampı', short: 'Genetik', tile: 'TBG Sınav Kampı', hint: 'Hızlı ve tam mod sesli ders: bulgudan sendrom, kanserde hedef ilaç, belirteçler, çıkmışlar ve 12 soruluk deneme', icon: Dna, tint: '#10B981' },
   spots: { id: 'spots', label: 'Sınav spotları', short: 'Spotlar', hint: 'En sık, ayırıcı bulgular, tuzaklar', icon: Crosshair, tint: '#FF3B30' },
   // Soru çöz
   past_exams: { id: 'past_exams', label: 'Çıkmış sorular', short: 'Çıkmış', hint: 'Kurullara göre çıkmışlar', icon: Archive, tint: '#007AFF' },

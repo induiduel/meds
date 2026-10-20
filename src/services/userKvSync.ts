@@ -51,6 +51,7 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_checkup_v1$/,
   /^medsoru_genetik_checkup_(v1|answers_v1)$/,
   /^medsoru_genetik_anlatici_(adim|soru|tamam)_v1$/,
+  /^medsoru_genetik_kamp_v1$/,
   /^medsoru_(test_kriter_v1|pdf_sel_v1|saglik_sina_v1|quickadd_draft_v1|nav_recent_v1)$/,
   /^medsoru_(cikmis_gorunum|pool_segment|saglik_gorunum|saglik_yogunluk|r12_reader)$/,
   /^medsoru_calisma_takip_v1$/,
@@ -105,7 +106,7 @@ const BUNDLE_KEYS = new Set([
 /** Sık yazılan sayaçlar: profile girer ama anlık gönderim tetiklemez (dönemsel/arka plana geçişte gider). */
 const QUIET_KEYS = new Set(['medsoru_study_seconds_v1', 'medsoru_activity_v1']);
 /** Ders okurken her adımda/harekette yazılan profil anahtarları: damgalanır ama dönemsel gönderime kalır. */
-const QUIET_PROFILE = /^medsoru_(learn_(progress|done|zoom|review|attempts)(_v1)?|calisma_takip_v1|canli_ders_konum_v1|genetik_anlatici_adim_v1|etkinlik_v1|son_konum_v1)$/;
+const QUIET_PROFILE = /^medsoru_(learn_(progress|done|zoom|review|attempts)(_v1)?|calisma_takip_v1|canli_ders_konum_v1|genetik_anlatici_adim_v1|genetik_kamp_v1|etkinlik_v1|son_konum_v1)$/;
 
 const META_KEY = 'medsoru_kv_meta_v1'; // anahtar → son yerel değişiklik zamanı
 const DIRTY_KEY = 'medsoru_kv_dirty_v1'; // henüz sunucuya gitmemiş anahtarlar

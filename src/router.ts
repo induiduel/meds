@@ -151,7 +151,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   alternatif_cozucu: 'Alternatif çözücü',
   en_onemliler: 'En önemliler',
   patoloji_checkup: 'Patoloji Hızlı Check Up',
-  genetik_checkup: 'Genetik Sınav Kalıbı & Check Up',
+  genetik_checkup: 'TBG Sınav Kampı',
   bitirdiklerim: 'Bitirdiklerim',
   cevrimdisi: 'Çevrimdışı',
   olasi_sorular: 'Olası sorular',

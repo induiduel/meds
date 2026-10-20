@@ -1,0 +1,209 @@
+/* =============================================================================
+ * MeDSor · TBG Sınav Kampı (components/checkup/GenetikCheckUp.tsx) — önek .tk-
+ * Gölgesiz yüzey + 1 px çizgi, renk yalnız palet tokenı (açık/sepya/koyu). Geniş ekranda solda adım listesi
+ * + sağda adım kartı; dar ekranda liste yatay kayar, tablo satırları karta döner. Yatay taşma yok.
+ * ============================================================================= */
+.tk {
+  --tk-r: 14px;
+  width: 100%; max-width: 1180px; min-width: 0; margin: 0 auto; padding: 20px 0 48px;
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px;
+  font-family: var(--font-sans); color: var(--color-ink);
+}
+.tk :where(h1, h2, h3, p, ul, ol) { margin: 0; }
+.tk :where(ul, ol) { list-style: none; padding: 0; }
+.tk button, .tk select { font: inherit; color: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.tk button:disabled { cursor: default; opacity: .45; }
+.tk :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.tk svg { flex: none; width: 16px; height: 16px; }
+.tk b { font-weight: 650; }
+.tk-mono { font-family: var(--font-mono, ui-monospace, monospace); font-variant-numeric: tabular-nums; }
+.tk-ust { font-size: 11.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
+
+/* başlık */
+.tk-bas { display: flex; flex-wrap: wrap; gap: 12px 14px; align-items: flex-start; }
+.tk-ic { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--color-accent-soft); color: var(--color-accent); }
+.tk-ic svg { width: 22px; height: 22px; }
+.tk-bas-t { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.tk-bas h1 { font: 680 22px/1.2 var(--font-sans); letter-spacing: -.02em; }
+.tk-bas p { font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); max-width: 70ch; }
+.tk-bas p b { color: var(--color-ink); }
+.tk-bas-arac { display: flex; gap: 8px; flex-wrap: wrap; position: relative; }
+
+/* düğmeler */
+.tk-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 40px; padding: 0 14px;
+  border: 1px solid var(--color-line); border-radius: 11px; background: var(--color-white); font-size: 14px; font-weight: 550; white-space: nowrap;
+}
+.tk-btn:not(:disabled):hover { background: var(--color-field); }
+.tk-btn.is-on { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+.tk-btn-ana { border-color: transparent; background: var(--color-accent); color: var(--color-on-accent); }
+.tk-btn-ana:not(:disabled):hover { background: var(--color-accent-hover, var(--color-accent)); }
+.tk-metin-btn { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 8px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-2); font-size: 13px; }
+.tk-metin-btn:hover { background: var(--color-field); color: var(--color-ink); }
+
+/* mod seçici */
+.tk-mod { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.tk-mod-k {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding: 12px 14px; text-align: left;
+  border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white);
+}
+.tk-mod-k:hover { border-color: var(--color-line-2, var(--color-line)); }
+.tk-mod-k.is-on { border-color: var(--color-accent); box-shadow: inset 0 0 0 1px var(--color-accent); }
+.tk-mod-ad { display: inline-flex; align-items: center; gap: 7px; font-size: 15px; font-weight: 650; }
+.tk-mod-k.is-on .tk-mod-ad svg { color: var(--color-accent); }
+.tk-mod-alt { font-size: 12.5px; color: var(--color-ink-3); }
+.tk-mod-say { font-size: 12.5px; color: var(--color-ink-2); }
+
+/* çıkmış haritası */
+.tk-harita { padding: 12px 14px; border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); display: grid; gap: 8px; }
+.tk-harita > summary { list-style: none; cursor: pointer; }
+.tk-harita > summary::-webkit-details-marker { display: none; }
+.tk-harita-bas { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; }
+.tk-harita-top { font-size: 12.5px; color: var(--color-ink-2); }
+.tk-harita ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px 22px; }
+.tk-harita li { display: grid; grid-template-columns: minmax(0, 11em) minmax(0, 1fr) 2ch; align-items: center; gap: 8px; font-size: 12.5px; }
+.tk-harita li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--color-ink-2); }
+.tk-harita li i { height: 6px; border-radius: 3px; background: var(--color-field); position: relative; overflow: hidden; }
+.tk-harita li i::after { content: ''; position: absolute; inset: 0 auto 0 0; width: var(--w); border-radius: 3px; background: var(--color-accent); }
+.tk-harita li b { text-align: right; }
+
+/* sekmeler */
+.tk-sekme {
+  position: sticky; top: var(--sh-top-h, 0px); z-index: 3; display: flex; align-items: center; gap: 4px; padding: 4px;
+  border-radius: 12px; background: var(--color-field); overflow-x: auto; scrollbar-width: none;
+}
+.tk-sekme::-webkit-scrollbar { display: none; }
+.tk-sekme > button { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 12px; border: 0; border-radius: 9px; background: transparent; color: var(--color-ink-2); font-size: 14px; font-weight: 550; white-space: nowrap; }
+.tk-sekme > button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 0 0 1px var(--color-line); }
+.tk-ilerleme { margin-left: auto; display: inline-flex; align-items: center; gap: 10px; padding-left: 8px; font-size: 12.5px; color: var(--color-ink-3); white-space: nowrap; }
+
+/* ders: liste + kart */
+.tk-ders { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 14px; align-items: start; }
+.tk-liste { position: sticky; top: calc(var(--sh-top-h, 0px) + 56px); max-height: calc(100vh - var(--sh-top-h, 0px) - 72px); overflow-y: auto; display: grid; gap: 10px; padding-right: 2px; }
+.tk-liste-b { display: grid; gap: 2px; }
+.tk-liste-bas { padding: 4px 8px; font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); }
+.tk-liste-o { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 36px; padding: 5px 8px; border: 0; border-radius: 9px; background: transparent; text-align: left; font-size: 13.5px; color: var(--color-ink-2); }
+.tk-liste-o:hover { background: var(--color-field); }
+.tk-liste-o.is-on { background: var(--color-accent-soft); color: var(--color-ink); font-weight: 600; }
+.tk-liste-no { display: grid; place-items: center; flex: none; width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--color-line); font-size: 11.5px; font-variant-numeric: tabular-nums; }
+.tk-liste-o.is-bitti .tk-liste-no { border-color: transparent; background: var(--color-ok); color: var(--color-on-accent, #fff); }
+.tk-liste-no svg { width: 13px; height: 13px; }
+.tk-liste-ad { flex: 1 1 auto; min-width: 0; line-height: 1.3; }
+.tk-cik { flex: none; font-size: 10.5px; font-weight: 700; padding: 1px 5px; border-radius: 5px; background: var(--color-warn-soft, var(--color-field)); color: var(--color-warn, var(--color-ink-2)); }
+
+.tk-kart { min-width: 0; display: grid; gap: 12px; padding: 16px 18px; border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); scroll-margin-top: calc(var(--sh-top-h, 0px) + 60px); }
+.tk-kart-ust { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 10px; }
+.tk-kart h2 { font: 680 20px/1.25 var(--font-sans); letter-spacing: -.015em; }
+.tk-neden { font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); padding: 8px 12px; border-radius: 10px; background: var(--color-field); }
+.tk-kat { font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 999px; background: var(--color-accent-soft); color: var(--color-accent); }
+.tk-kat-ilac { background: var(--color-ok-soft, var(--color-field)); color: var(--color-ok); }
+.tk-kat-belirtec { background: var(--color-warn-soft, var(--color-field)); color: var(--color-warn); }
+.tk-kat-tani { background: var(--color-field); color: var(--color-ink-2); }
+
+.tk-oynat { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.tk-hiz { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--color-ink-2); }
+.tk-hiz select { min-height: 34px; padding: 0 8px; border: 1px solid var(--color-line); border-radius: 9px; background: var(--color-white); }
+.tk-oto { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; color: var(--color-ink-2); }
+.tk-oto input { width: 16px; height: 16px; accent-color: var(--color-accent); }
+
+.tk-anlatim { display: grid; gap: 2px; counter-reset: c; }
+.tk-anlatim li button {
+  display: block; width: 100%; padding: 7px 10px 7px 30px; border: 0; border-radius: 9px; background: transparent; text-align: left;
+  font-size: 15.5px; line-height: 1.6; color: var(--color-ink); position: relative;
+}
+.tk-anlatim li button::before { counter-increment: c; content: counter(c); position: absolute; left: 8px; top: 9px; font-size: 11.5px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.tk-anlatim li button:hover { background: var(--color-field); }
+.tk-anlatim li.is-on button { background: var(--color-accent-soft); }
+
+/* soru */
+.tk-sorular { display: grid; gap: 12px; }
+.tk-soru { display: grid; gap: 10px; padding: 14px; border: 1px solid var(--color-line); border-radius: 12px; }
+.tk-soru-ust { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.tk-soru-arac { display: inline-flex; gap: 2px; }
+.tk-etiket { font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 6px; background: var(--color-field); color: var(--color-ink-2); }
+.tk-etiket.is-cik { background: var(--color-warn-soft, var(--color-field)); color: var(--color-warn, var(--color-ink)); }
+.tk-kok { font-size: 15px; line-height: 1.55; font-weight: 550; white-space: pre-line; }
+.tk-siklar { display: grid; gap: 6px; }
+.tk-sik {
+  display: flex; align-items: flex-start; gap: 10px; width: 100%; min-height: 44px; padding: 9px 12px; text-align: left;
+  border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-white); font-size: 14.5px; line-height: 1.45;
+}
+.tk-sik:not(:disabled):hover { border-color: var(--color-accent); }
+.tk-sik:disabled { opacity: 1; }
+.tk-harf { flex: none; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 7px; background: var(--color-field); font-size: 12.5px; font-weight: 650; }
+.tk-sik > span:nth-child(2) { flex: 1 1 auto; min-width: 0; }
+.tk-sik-ic { margin-top: 3px; }
+.tk-sik.is-dogru { border-color: var(--color-ok); background: var(--color-ok-soft, var(--color-white)); }
+.tk-sik.is-dogru .tk-harf { background: var(--color-ok); color: var(--color-on-accent, #fff); }
+.tk-sik.is-yanlis { border-color: var(--color-bad); background: var(--color-bad-soft, var(--color-white)); }
+.tk-sik.is-yanlis .tk-harf { background: var(--color-bad); color: var(--color-on-accent, #fff); }
+.tk-sik.is-sonuk { color: var(--color-ink-3); }
+.tk-yardim { margin: 4px 0 4px 34px; font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); }
+.tk-geri { padding: 10px 12px; border-radius: 10px; font-size: 14px; line-height: 1.5; }
+.tk-geri.is-dogru { background: var(--color-ok-soft, var(--color-field)); }
+.tk-geri.is-yanlis { background: var(--color-bad-soft, var(--color-field)); }
+.tk-yardim-btn { justify-self: start; }
+
+.tk-gezin { display: flex; justify-content: space-between; gap: 8px; }
+.tk-kapanis { display: grid; gap: 6px; padding: 12px 14px; border-radius: 12px; background: var(--color-field); }
+.tk-kapanis li { font-size: 14px; line-height: 1.5; padding-left: 14px; position: relative; }
+.tk-kapanis li::before { content: ''; position: absolute; left: 2px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--color-accent); }
+
+/* kalıp kartları */
+.tk-kalip { display: grid; gap: 14px; }
+.tk-kalip-arac { display: flex; flex-wrap: wrap; gap: 8px; }
+.tk-ara { flex: 1 1 260px; display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: 11px; background: var(--color-white); color: var(--color-ink-3); }
+.tk-ara:focus-within { border-color: var(--color-accent); }
+.tk-ara input { flex: 1 1 auto; min-width: 0; border: 0; outline: 0; background: transparent; font: 400 14px var(--font-sans); color: var(--color-ink); }
+.tk-kalip-k { border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); overflow: hidden; }
+.tk-kalip-k > header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; padding: 12px 14px 10px; }
+.tk-kalip-k h3 { font: 650 16px/1.3 var(--font-sans); }
+.tk-kalip-k > header span { font-size: 12.5px; color: var(--color-ink-3); }
+.tk-tablo { display: grid; }
+.tk-tablo-s { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 14px; padding: 9px 14px; border-top: 1px solid var(--color-line); font-size: 14px; line-height: 1.45; }
+.tk-tablo-bas { font-size: 11.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--color-ink-3); background: var(--color-field); }
+.tk-tablo-s > span:last-child { display: flex; flex-direction: column; gap: 2px; }
+.tk-tablo-s small { font-size: 11.5px; color: var(--color-ink-3); }
+.tk-gizli { justify-self: start; align-self: start; min-height: 30px; padding: 0 12px; border: 1px dashed var(--color-line); border-radius: 8px; background: var(--color-field); font-size: 13px; color: var(--color-ink-2); }
+
+/* deneme */
+.tk-deneme-giris { display: grid; gap: 10px; justify-items: start; padding: 18px; border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); }
+.tk-deneme-giris h3 { font: 650 18px/1.3 var(--font-sans); }
+.tk-deneme-giris p { font-size: 14px; line-height: 1.55; color: var(--color-ink-2); max-width: 62ch; }
+.tk-deneme { display: grid; gap: 12px; padding: 16px; border: 1px solid var(--color-line); border-radius: var(--tk-r); background: var(--color-white); }
+.tk-deneme-ust { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+.tk-nokta { display: flex; flex-wrap: wrap; gap: 4px; }
+.tk-nokta button { width: 32px; height: 32px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-white); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.tk-nokta button.is-on { border-color: var(--color-accent); box-shadow: inset 0 0 0 1px var(--color-accent); }
+.tk-nokta button.is-dogru { background: var(--color-ok-soft, var(--color-field)); border-color: var(--color-ok); }
+.tk-nokta button.is-yanlis { background: var(--color-bad-soft, var(--color-field)); border-color: var(--color-bad); }
+.tk-skor { font-size: 14px; }
+
+/* dar ekran */
+@media (max-width: 900px) {
+  .tk-ders { grid-template-columns: minmax(0, 1fr); }
+  .tk-liste { position: static; max-height: none; display: flex; gap: 6px; overflow-x: auto; overflow-y: visible; padding-bottom: 4px; scrollbar-width: thin; }
+  .tk-liste-b { display: contents; }
+  .tk-liste-bas { display: none; }
+  .tk-liste-o { flex: none; width: auto; max-width: 220px; border: 1px solid var(--color-line); background: var(--color-white); }
+  .tk-liste-ad { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tk-harita ul { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .tk { padding-top: 12px; }
+  .tk-kart { padding: 14px 12px; }
+  .tk-anlatim li button { font-size: 15px; }
+  .tk-tablo-s { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .tk-tablo-bas { display: none; }
+  .tk-ilerleme span { display: none; }
+  .tk-bas-arac { width: 100%; }
+  .tk-bas-arac .tk-btn { flex: 1 1 0; padding: 0 10px; }
+  .tk-ic { display: none; }
+  .tk-bas h1 { font-size: 20px; }
+  .tk-bas p { font-size: 13px; }
+  .tk-mod { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .tk-mod-k { padding: 10px 11px; }
+  .tk-mod-alt { display: none; }
+  .tk-mod-say { font-size: 12px; }
+  .tk-harita { padding: 10px 12px; }
+}

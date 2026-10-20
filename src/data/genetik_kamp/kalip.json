@@ -1,0 +1,123 @@
+{
+ "surum": "genetik-kamp-v1",
+ "kaynak": "Kurul 1 Tıbbi Genetik ders notları g01–g06 (sayfa: g0N sX)",
+ "kalipler": [
+  {
+   "id": "sendrom",
+   "baslik": "Bulgu → sendrom",
+   "soru": "“… bulguyla gelen hasta hangi sendromu düşündürür?”",
+   "sutun": ["Bulgu", "Tanı"],
+   "satir": [
+    {"s": "Hipotoni, Simian çizgisi, Brushfield lekesi, endokardiyal yastık defekti, duodenal atrezi", "t": "Down · 47,+21", "k": "g02 s36–40", "h": 1},
+    {"s": "Hipertoni, üst üste binen yumruk parmaklar, rocker-bottom ayak, kısa sternum", "t": "Edwards · 47,+18", "k": "g02 s54–56", "h": 1},
+    {"s": "19. hafta USG: kistik higroma + geniş VSD + ASD + ense kalınlığı artışı (ders vakası)", "t": "Edwards · 47,XY,+18", "k": "g02 s58", "h": 1},
+    {"s": "Holoprozensefali; mikroftalmi + yarık dudak-damak + polidaktili", "t": "Patau · 47,+13", "k": "g02 s59–61", "h": 1},
+    {"s": "Kedi miyavlamasına benzer ağlama, mikrosefali, yuvarlak yüz", "t": "Cri du chat · 5p- (5p15)", "k": "g02 s66–67", "h": 1},
+    {"s": "Balık ağzı, belirgin glabella, ağır büyüme geriliği; FISH ile tanı", "t": "Wolf-Hirschhorn · 4p16.3", "k": "g02 s68", "h": 0},
+    {"s": "Elfin yüz, supravalvüler aort stenozu, hiperkalsemi", "t": "Williams · 7q11.23 (ELN)", "k": "g01 s79", "h": 1},
+    {"s": "Hiperfaji, obezite, hipogonadizm, küçük el-ayak", "t": "Prader-Willi · 15q11-13 (maternal UPD %30)", "k": "g02 s85–87", "h": 0},
+    {"s": "Nöbet, ataksik geniş tabanlı yürüyüş, gülme nöbetleri", "t": "Angelman · 15q11-13 (paternal UPD %3–5)", "k": "g02 s87", "h": 0},
+    {"s": "Yele boyun, el-ayak sırtı ödemi, kısa boy, çizgi gonad, aort koarktasyonu; zekâ normal", "t": "Turner · 45,X", "k": "g02 s80–82", "h": 1},
+    {"s": "Uzun boy, küçük testis, azospermi, jinekomasti; T↓ FSH/LH↑", "t": "Klinefelter · 47,XXY", "k": "g02 s70–73", "h": 1},
+    {"s": "Bir tarafta disgenetik testis, diğerinde çizgi gonad, ambigus genitalya", "t": "Miks gonadal disgenezi · 45,X/46,XY", "k": "g03 s49–50", "h": 0},
+    {"s": "46,XX ambigus genitalya, gonad ele gelmez, Müller yapıları var, 17-OHP ↑", "t": "KAH · 21-hidroksilaz (CYP21A2)", "k": "g03 s65", "h": 1},
+    {"s": "46,XY, dişi dış genitalya, kör vajen, uterus yok, inguinal testis, meme var, amenore", "t": "Tam androjen duyarsızlığı (AR, X'e bağlı)", "k": "g03 s56–60", "h": 1},
+    {"s": "46,XY, doğumda dişi/ambigus, pubertede virilizasyon, DHT ↓", "t": "5α-redüktaz 2 eksikliği (SRD5A2)", "k": "g03 s53–55", "h": 1},
+    {"s": "Gonadal disgenezi + FSGS + Wilms tümörü", "t": "WT1", "k": "g03 s25", "h": 0},
+    {"s": "Blefarofimozis, pitozis, epikantus inversus, over yetmezliği", "t": "BPES · FOXL2", "k": "g03 s31", "h": 0},
+    {"s": "Serebellar-retinal hemanjioblastom, böbrek-pankreas kistleri, berrak hücreli RCC, feokromositoma", "t": "Von Hippel-Lindau · 3p25.5", "k": "g04 s10–12", "h": 1},
+    {"s": "Kıl folikülü hamartomu + akciğer kisti/pnömotoraks + böbrek tümörü", "t": "Birt-Hogg-Dubé · FLCN 17p11", "k": "g04 s15", "h": 1},
+    {"s": "Tip 2 papiller RCC (leiomiyomatozis)", "t": "HLRCC · FH 1q43", "k": "g04 s17", "h": 0},
+    {"s": "Bilateral, multifokal papiller RCC", "t": "HPRC · MET 7q31", "k": "g04 s18", "h": 0},
+    {"s": "Uveal melanom, mezotelyoma, kutanöz melanom, RCC", "t": "BAP1-TPDS · 3p21", "k": "g04 s13", "h": 1},
+    {"s": "Beyin-deri-kalp hamartomları, böbrekte bilateral anjiyomiyolipom", "t": "Tüberoz skleroz · TSC1 9q34 / TSC2 16p13", "k": "g04 s19–20", "h": 1},
+    {"s": "Mukokutanöz pigmentasyon, GİS hamartomatöz polip, serviksde adenoma malignum", "t": "Peutz-Jeghers · STK11", "k": "g04 s63, s70", "h": 1},
+    {"s": "Lobüler meme kanseri + diffüz mide kanseri", "t": "CDH1", "k": "g04 s71", "h": 1},
+    {"s": "Yaşam boyu kanser riski %100, genç yaşta meme kanseri", "t": "Li-Fraumeni · TP53", "k": "g04 s70", "h": 0},
+    {"s": "Meme kanseri riski %85 + endometriyum kanseri, hamartomlar", "t": "PTEN hamartom tümör sendromu", "k": "g04 s71", "h": 0},
+    {"s": "Yüksek dereceli seröz over kanseri, öncül lezyon fallop tüpü", "t": "HBOC · BRCA1/2", "k": "g04 s61", "h": 1}
+   ]
+  },
+  {
+   "id": "ilac",
+   "baslik": "Kanser → hedef ilaç",
+   "soru": "“Hangi kanser / mutasyonda hangi ilaç?”",
+   "sutun": ["Kanser · hedef", "İlaç"],
+   "satir": [
+    {"s": "Meme-over kanseri, BRCA1/2 (sentetik letalite)", "t": "PARP inhibitörleri", "k": "g04 s69", "h": 1},
+    {"s": "Prostat kanseri, HRR gen mutasyonu (BRCA2, ATM…)", "t": "Olaparib, rukaparib (PARP inh.)", "k": "g04 s44", "h": 1},
+    {"s": "Prostat, CDK12 mutasyonu", "t": "Hormonal tedavi ve PARP inh. yanıtı kötü", "k": "g04 s44", "h": 0},
+    {"s": "Mesane, FGFR2/FGFR3 mutasyonu (evre IV)", "t": "Erdafitinib (pan-FGFR)", "k": "g04 s30–31", "h": 1},
+    {"s": "Mesane, bağışıklık tedavisi", "t": "Avelumab, pembrolizumab, atezolizumab, nivolumab", "k": "g04 s31", "h": 0},
+    {"s": "VHL ilişkili RCC", "t": "Belzutifan (2021)", "k": "g04 s23", "h": 1},
+    {"s": "İleri evre berrak hücreli RCC, 1. basamak", "t": "Aksitinib / lenvatinib + pembrolizumab; kabozantinib + nivolumab; ipilimumab + nivolumab", "k": "g04 s22–23", "h": 1},
+    {"s": "İpilimumab hedefi", "t": "CTLA-4", "k": "g04 s23", "h": 0},
+    {"s": "Tüberoz skleroz (anjiyomiyolipom)", "t": "mTOR inhibitörü: sirolimus / everolimus", "k": "g04 s21", "h": 1},
+    {"s": "Endometriyum, MSI-H / dMMR", "t": "Pembrolizumab, dostarlimab", "k": "g04 s57", "h": 1},
+    {"s": "Endometriyum, NTRK füzyonu", "t": "Larotrektinib, entrektinib", "k": "g04 s57", "h": 1},
+    {"s": "Endometriyum, HER2 pozitif seröz / karsinosarkom", "t": "Trastuzumab (+ karboplatin/paklitaksel)", "k": "g04 s56", "h": 1},
+    {"s": "Endometriyum, pMMR", "t": "Lenvatinib + pembrolizumab", "k": "g04 s57", "h": 0},
+    {"s": "Riskli gebelikte KAH (kız fetüs virilizasyonu)", "t": "Anneye deksametazon, 6–8. hafta", "k": "g03 s70, s75", "h": 1}
+   ]
+  },
+  {
+   "id": "belirtec",
+   "baslik": "Belirteç → anlam",
+   "soru": "“Spesifik belirteç hangi kanseri / tanıyı gösterir?”",
+   "sutun": ["Belirteç", "Anlam"],
+   "satir": [
+    {"s": "AFP + β-hCG + LDH", "t": "Testis germ hücreli tümörü (prognoz, tedavi izlemi)", "k": "g04 s47", "h": 1},
+    {"s": "Evre, derece, lokal yayılım, nodal ve uzak metastaz", "t": "RCC prognostik belirteçleri (aile öyküsü değil)", "k": "g04 s5", "h": 1},
+    {"s": "FGFR3 (mesane)", "t": "Düşük dereceli, kasa invaziv olmayan, iyi prognoz", "k": "g04 s32", "h": 1},
+    {"s": "TP53, yüksek Ki67 (mesane)", "t": "Kötü prognoz", "k": "g04 s32", "h": 1},
+    {"s": "ERBB2, RAS, PIK3CA (mesane)", "t": "Erken nüks", "k": "g04 s32", "h": 1},
+    {"s": "p53 ve pRB yolakları", "t": "Kasa invaziv, papiller olmayan mesane tümörü", "k": "g04 s28", "h": 0},
+    {"s": "POLE mutasyonu (endometriyum)", "t": "En iyi prognoz", "k": "g04 s53", "h": 1},
+    {"s": "Kopya sayısı yüksek, anormal p53 (endometriyum)", "t": "En agresif grup", "k": "g04 s53", "h": 1},
+    {"s": "MLH1 kaybı (endometriyum)", "t": "Promotör metilasyonuna bak (sporadik/Lynch ayrımı)", "k": "g04 s54", "h": 0},
+    {"s": "Lynch: MSH6 / PMS2", "t": "Endometriyum riski en yüksek / en düşük", "k": "g04 s52", "h": 1},
+    {"s": "HOXB13", "t": "Prostat kanseri risk geni (germline panel)", "k": "g04 s36, s39", "h": 0},
+    {"s": "17-OH progesteron ↑", "t": "KAH (21-hidroksilaz eksikliği)", "k": "g03 s65", "h": 1},
+    {"s": "DHT ↓, testosteron normal", "t": "5α-redüktaz 2 eksikliği", "k": "g03 s55", "h": 0}
+   ]
+  },
+  {
+   "id": "prenatal",
+   "baslik": "Prenatal belirteç → sendrom",
+   "soru": "“Tarama sonucu hangi sendromu düşündürür?”",
+   "sutun": ["Bulgu / test", "Anlam"],
+   "satir": [
+    {"s": "İkili test: NT + serbest β-hCG + PAPP-A", "t": "11–14. hafta (11+0 – 13+6)", "k": "g05 s39–40", "h": 1},
+    {"s": "PAPP-A ↓ + hCG ↑", "t": "Trizomi 21", "k": "g05 s40, s42", "h": 1},
+    {"s": "PAPP-A ↓ + hCG ↓", "t": "Trizomi 13 / 18", "k": "g05 s40, s42", "h": 0},
+    {"s": "Üçlü test: AFP ↓, uE3 ↓, hCG ↑ (15–20. hafta)", "t": "Down sendromu", "k": "g05 s16, s34", "h": 1},
+    {"s": "AFP ↓, uE3 ↓, hCG ↓", "t": "Trizomi 18", "k": "g05 s16", "h": 1},
+    {"s": "Dörtlü test = üçlü + inhibin A (Down'da ↑)", "t": "16–18. hafta ideal", "k": "g05 s37–38", "h": 0},
+    {"s": "Anne serumu AFP ↑", "t": "Açık nöral tüp defekti", "k": "g05 s31", "h": 1},
+    {"s": "NT > 3 mm", "t": "T13, T18, T21, 45,X, kalp anomalisi, Noonan, SLO (Klinefelter listede yok)", "k": "g05 s43–44", "h": 1},
+    {"s": "Kistik higroma", "t": "45,X, +21 ya da normal karyotip", "k": "g05 s30", "h": 0}
+   ]
+  },
+  {
+   "id": "sayi",
+   "baslik": "Çıkmışların sorduğu sayı ve kurallar",
+   "soru": "Hafta, köken, endikasyon",
+   "sutun": ["Konu", "Cevap"],
+   "satir": [
+    {"s": "Koryon villus örneklemesi (CVS)", "t": "10–12. hafta; trofoblast kökenli; direkt analiz = sitotrofoblast", "k": "g05 s64–70", "h": 1},
+    {"s": "Amniyosentez", "t": "15–18. hafta; kayıp %0,5–1", "k": "g05 s51–63", "h": 1},
+    {"s": "Kordosentez", "t": "18–20. haftadan doğuma (12. hafta değil); kayıp %2–3", "k": "g05 s71–73", "h": 1},
+    {"s": "Polar cisim biyopsisi", "t": "Yalnız maternal mayoz hatası ve X'e bağlı maternal mutasyon; paternal/mitotik/cinsiyet yok", "k": "g06 s53–65", "h": 1},
+    {"s": "Trofektoderm biyopsisi", "t": "5. gün blastokist; en az zararlı, en çok DNA", "k": "g06 s59–63", "h": 0},
+    {"s": "PGT endikasyonu", "t": "Tek gen, ≥35 yaş, ≥2 IVF başarısızlığı, translokasyon, HLA uyumlu kardeş, TGK; uterus anomalisi değil", "k": "g06 s9–12", "h": 1},
+    {"s": "PGT yöntemleri", "t": "PCR, WGA, FISH, mikroarray, SNP, STR, NGS, Sanger (RFLP yok)", "k": "g06 s40, s66", "h": 1},
+    {"s": "Minör anomali", "t": "Toplumun <%4'ü; ≥3 minör = dismorfik çocuk; yarık damak majördür", "k": "g01 s13–15, s42", "h": 1},
+    {"s": "Deformasyon", "t": "Normal yapıya dış mekanik bası (oligohidramniyos, pes ekinovarus); amniyotik bant = disrupsiyon", "k": "g01 s16–23", "h": 1},
+    {"s": "Testis yönü / over yönü genleri", "t": "SRY, SOX9, SF1 / RSPO1, WNT4, FOXL2 (+ DAX1)", "k": "g03 s17–30", "h": 1},
+    {"s": "Hem 46,XX hem 46,XY CGB", "t": "3β-HSD (HSD3B2) ve POR; 11β-hidroksilaz yalnız 46,XX", "k": "g03 s36–37, s67", "h": 1},
+    {"s": "Ambigus genitalyanın en sık nedeni", "t": "KAH", "k": "g03 s65", "h": 1},
+    {"s": "Robertsonian translokasyon Down riski", "t": "Anne taşıyıcı %15, baba %4–5; 21q21q %100", "k": "g02 s26, g05 s20", "h": 0}
+   ]
+  }
+ ]
+}
