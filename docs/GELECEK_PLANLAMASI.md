@@ -235,3 +235,39 @@ görsel/tablo çıkarımı (P2.1); göç koşucusu (P3).
 - **Branş tek kaynak:** `src/data/dersler/branslar.json`; `brans.ts` Kurul 2+ klasörlerini kendiliğinden sekmeye çevirir (derleme ile sınandı).
 - **Tuzak:** `dist` `emptyOutDir:false` → eski parçalar kalır; derleme sınamasında yalnız güncel parçaya bak. rsync saat damgasını koruduğu için "değişen dosya → yeniden başlat" kararı yanılabilir; sunucu kodu gönderilince sağlık + uç denemesiyle doğrula.
 - **Açık:** sesli ders/olası soru ekranında `#kimlik` kaydırması; Sesli ders · En önemliler · Spotlar · Soru çözücü · Çıkmış ekranlarına `?kurul=` süzgeci; ders zincirinin ilk gerçek Kurul 2 dersiyle uçtan uca koşusu (ilk K2 PDF'i gelince).
+
+## 12. 4. tur (2026-10-20) — kalan işler kapatıldı
+
+- **Hastalık zinciri** `otomasyon/hastalik_zinciri.py`: Oracle önerileri → Claude şema 2 (`scripts/diseases/TALIMAT_SEMA2.md`) →
+  `yayinla.hastaliklari_uygula` (kapılı, geri alınır) → Oracle `data/content/diseases.json` + `POST /api/admin/icerik/diseases/degisti`
+  (`src/services/icerikYayinRoutes.ts`, panel sırrı; x-admin-email'e güvenmez) → SSE. Uçtan uca koşuldu: 3 profil (k1-40), denetim 0→0, canlıda.
+- **Gece içerik dağıtımı** `otomasyon/icerik_dagit.py`: Oracle'da ön yüz derlenmediği için yayımlanan deste/zincir çıktıları dist
+  gönderilmeden görünmez. origin/main temiz worktree + Oracle src/data + zincir çıktıları → vite build → yalnız dist. Koruma: çalışma
+  ağacında commit'lenmemiş ön yüz kodu varsa ATLAR (çıkış 3, panoda kırmızı) — başka oturumun ağaçtan yaptığı canlı dağıtımı geri almasın.
+- **Kimlik kaydırma + kurul süzgeci:** sesli ders `#k1-03-c0142` → paragrafa kaydırır, cümleyi işaretler, "Buradan dinle"; olası soru kartı;
+  `/?kimlik_yok=` bilgisi; `?kurul=N` Sesli ders, En önemliler, Spotlar, Soru çözücü, Çıkmış (+ Geçmiş kurullar bağları). Tarayıcıda sınandı.
+- Elle kalan tek aşama: kod dağıtımı (`esitle_dagit`) — bilinçli olarak kullanıcı/oturum kararında.
+- **Çok oturum tuzağı:** oturumlar ortak ağaçta toplu commit atıyor; karışık dosyada yalnız kendi parçanı `git apply --cached` ile sahnele,
+  sahnelenmiş ağacı `git checkout-index` ile ayrı klasöre çıkarıp `tsc` ile sına.
+
+## 13. Bağımsız denetim + düzeltmeler (2026-10-20, commit 5e597dc; Oracle'a gönderildi)
+
+Bulunan ve kapatılan hatalar:
+| # | Hata | Düzeltme |
+|---|---|---|
+| K1 | yayinla.py yalnız Kurul 1 yayınlıyordu → K2 zinciri sessizce boş | s14/s16 `kurul_ayarla`, yayinla `kurula_bagla`; uygula() tur başına tek kurul (en küçük önce); K1 gerileme testi TAMAM |
+| K2 | hastalık zinciri K1 kayıtlarını değiştirebilirdi (k1-40 koşusu: 2 kayda yalnız madde EKLENDİ, kayıp 0) | yalnız `k[2-6]-*` öneriler; geri alma/zaman aşımı raporlanır |
+| K3 | denetimden geçmemiş ders branş birleştirmesiyle yayına sızabilirdi | `onayli.json` (denetim + denetçi raporu şart); kaynak değişince ara dosyalar `_eski/`e |
+| Y1 | başarısız aşamanın bağımlıları çalışıyordu | hat.py bağımlılık engeli (kod 10), kod 3 = atlandı, kilitli durum yazımı |
+| Y2 | içerik dağıtımı origin/main'den → dağıtılmamış kod canlıya çıkabilirdi | deploy-code.sh `dist/dagitim.json` damgası; içerik dağıtımı yalnız o commit'ten, canlı kirliyse atlar; Oracle src/data birebir + panel katmanı; uzak rsync yayın kilidiyle |
+| Y4 | olası soru: sentez başarısızsa yeniden denenmiyordu | `yayinlanan_iz.txt` yalnız yayından sonra; claude hatası betiği kesmez |
+| — | olası soru yerel veriyi okuyordu (öğrenci kayıtları Oracle'da) | gece.sh Oracle'dan salt-okunur çeker, çekemezse durur |
+| — | sınav akşamı işlenmiyordu | `meds-olasi-soru.timer` 20:00 + 23:30 (kilitli) |
+| — | tarih süzgeci UTC | TR saatiyle sınav 10:00 sonrası |
+| Y5 | sürekli hata veren ders kotayı tıkıyordu; önceki kurul terk ediliyordu | geri çekilme 1-2-4-7 gün; Kurul 2..aktif |
+| Y6 | `4q01`/`5q01` çift ders kodu | branslar.json +5 branş, sayaç harfe göre, bilinmeyen/çift = HATA |
+| Y7 | defter eşleşmesi yoksa yanlış derse bağlanabilirdi | uyarı → otomatik onay kapanır; defter konusu kimliğe |
+| — | örnek sorular ekranı/dizin yalnız k1 | K1–6 klasörleri (ekran, PDF kaynakları, yönetim, RAG) |
+| orta | claude zaman aşımı yok, birleştirme sessiz 0, sürüm kaydı yolu, göç commit'siz/işlemsiz, takvim boş yazım, geri bildirim sınırsız, Türkçe kurul adı | hepsi düzeltildi |
+
+`claude -p` gözetimsiz ortamda (systemd, dar izin listesi) sınandı: izinli araçlar çalışır, izin dışı komut takılmadan reddedilir.
