@@ -15,7 +15,7 @@ import {
   saveTestResult,
   clearTestHistory,
 } from '../../services/studyStore';
-import { committeeShortLabel } from '../QuickAddHero';
+import { committeeShortLabel } from '../quickAddOrtak';
 import { Segmented, OptionButton, ExplanationBlock, EmptyState, cardCls, btnPrimary, btnSecondary, btnGhost, selectCls, Field, formatDuration, isTypingTarget } from './StudyUI';
 import { StudyReportButton } from './StudyReportButton';
 import { QuestionAiChatDrawer } from '../QuestionAiChatDrawer';

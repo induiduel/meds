@@ -1,12 +1,14 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { BookOpenText, ChevronLeft, ChevronRight, ExternalLink, Locate, X } from 'lucide-react';
-import { DECK_CATALOG, loadDeck } from '../../../data/deckStore';
+import { DECK_CATALOG, loadDeck, loadDeckCatalog } from '../../../data/deckStore';
 import type { InteractiveDeck } from '../../learn/InteractiveDeckView';
 import { buildSteps, inline, mdToHtml, stripEmoji, type LessonStep } from '../../learn/lesson/lessonModel';
 import { navigateTo } from '../../../router';
 import type { Brans } from '../brans';
 import { ogrenYerleri, type OgrenYer } from './ogrenEsle';
 import '../../../styles/ogren-yeri.css';
+// Katalog tembel yüklenir; bu modül eşzamanlı okuduğundan yüklenirken hazır olmasını bekle.
+await loadDeckCatalog().catch(() => undefined);
 
 /**
  * "Öğren'de bu yer" paneli: sesli çözücüdeki soru (ya da sesli asistan noktası) için Öğren destesindeki eşleşen adımı

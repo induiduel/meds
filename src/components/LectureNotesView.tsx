@@ -40,6 +40,7 @@ import { multiDbManager } from '../services/multiDbManager';
 import { triggerDomHighlightAndScroll } from '../services/universalRedirectService';
 import { useAppearance } from '../utils/appearance';
 import { LectureNotesV12 } from './v12/LectureNotesV12';
+import '../styles/summary.css';
 
 /**
  * Ders notları (v10 kompakt; ders özetleriyle aynı okuyucu dili). Yapı:

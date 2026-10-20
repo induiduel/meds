@@ -20,7 +20,7 @@ import {
   ArrowRight,
   Bot,
 } from 'lucide-react';
-import { DECK_CATALOG, loadDeck } from '../../data/deckStore';
+import { DECK_CATALOG, loadDeck, loadDeckCatalog } from '../../data/deckStore';
 import { OPEN_REVIEW_FLAG } from '../../services/learnReview';
 const LearnReview = React.lazy(() => import('./LearnReview').then((m) => ({ default: m.LearnReview })));
 import {
@@ -41,6 +41,8 @@ import type { DeckCatalogEntry } from '../../data/deckStore';
 import { triggerDomHighlightAndScroll } from '../../services/universalRedirectService';
 import { tourSeen } from '../onboarding/tourState';
 import { learnTourSeen, type LearnTourKind } from '../onboarding/learnTourState';
+// Katalog tembel yüklenir; bu modül eşzamanlı okuduğundan yüklenirken hazır olmasını bekle.
+await loadDeckCatalog().catch(() => undefined);
 const LearnTour = React.lazy(() => import('../onboarding/LearnTour'));
 
 // ---------------------------------------------------------------------------

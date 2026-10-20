@@ -14,9 +14,11 @@ import { cozucuDizinYukle, ilerlemeOku, ilerlemeYaz, ozet, setAdi, type CDizin }
 import { dizinYukle as onemDizinYukle, ogrenilenler, type Dizin as OnemDizin } from '../spots/onem/onemVeri';
 import { getAsistanSureGruplari } from '../spots/sure/spotsSureVeri';
 import { cozucuyaGit, onemeGit } from '../spots/spotsYol';
-import { DECK_CATALOG, type DeckCatalogEntry } from '../../data/deckStore';
+import { DECK_CATALOG, type DeckCatalogEntry, loadDeckCatalog } from '../../data/deckStore';
 import { branchOf, isPublished, stateOf, type Progress } from '../learn/LearnLibrary';
 import { ogrenBasaAl, onemAsistanBasaAl } from './basaAl';
+// Katalog tembel yüklenir; bu modül eşzamanlı okuduğundan yüklenirken hazır olmasını bekle.
+await loadDeckCatalog().catch(() => undefined);
 
 export interface BdKonu {
   id: string;

@@ -6,7 +6,9 @@
  *  - data: diğer /api/… yanıtları
  *  - app:  uygulama dosyaları (js, css, yazı tipi, ikon, index.html)
  */
-import { DECK_CATALOG } from '../data/deckStore';
+import { DECK_CATALOG, loadDeckCatalog } from '../data/deckStore';
+// Katalog tembel yüklenir; bu modül eşzamanlı okuduğundan yüklenirken hazır olmasını bekle.
+await loadDeckCatalog().catch(() => undefined);
 
 export type CacheKind = 'pdf' | 'data' | 'app';
 

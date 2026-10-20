@@ -40,6 +40,7 @@ import { disciplineClass, disciplineLabel } from '../../utils/discipline';
 import { driveViewUrl, resolveDeckPdf, type DeckPdfInfo } from '../../services/deckPdfService';
 import { ReaderPanel, useLessonSpots, useScopeMarks, type ScopeMark } from './ReaderPanel';
 import { R12MenuGroup, R12MenuItem, R12MenuSeg, R12NextRow, ReaderV12, type ReaderTocItem } from '../v12/ReaderV12';
+import '../../styles/summary.css';
 
 /**
  * Ders özeti okuyucusu (v10 kompakt). Uygulamanın temasını ve paletini kullanır — ayrı okuyucu teması yok;

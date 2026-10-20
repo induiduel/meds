@@ -12,7 +12,7 @@ import { ApiService, safeJsonFetch, type SimilarPastQuestion } from '../services
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
 import { validateNamePolicy } from '../utils/namePolicy';
 import { MetaPicker } from './ui/MetaPicker';
-import { academicYears, committeeShortLabel, currentAcademicYear, isCommitteeLocked } from './QuickAddHero';
+import { academicYears, committeeShortLabel, currentAcademicYear, isCommitteeLocked } from './quickAddOrtak';
 import { getDefaultActiveCommitteeId } from '../services/firestoreDb';
 
 const SAVED_NAME_KEY = 'medsoru_saved_contributor_name';

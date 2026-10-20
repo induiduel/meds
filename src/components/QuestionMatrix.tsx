@@ -2,7 +2,7 @@ import React, { useEffect, useId, useMemo, useState } from 'react';
 import { ArrowRight, Plus } from 'lucide-react';
 import { PageToolbar } from './ui/PageToolbar';
 import { Sheet } from './ui/Sheet';
-import { committeeShortLabel, questionStemText } from './QuickAddHero';
+import { committeeShortLabel, questionStemText } from './quickAddOrtak';
 import type { Committee, QuestionItem } from '../types';
 import '../styles/matrix.css';
 import '../styles/v12/secondary.css';

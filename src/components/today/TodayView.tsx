@@ -104,6 +104,7 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean }> 
     if (!hasLearn) return;
     let off = false;
     import('../../data/deckStore')
+      .then((m) => m.loadDeckCatalog().then(() => m))
       .then(({ DECK_CATALOG, deckName }) => {
         if (off) return;
         const byId = new Map(DECK_CATALOG.map((d) => [d.id, d]));

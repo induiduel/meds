@@ -8,9 +8,8 @@ import './styles/appearance.css';
 import './styles/shell.css';
 import './styles/screens.css';
 import './styles/rebuild.css';
-import './styles/summary.css';
-import './styles/spots.css';
 import './styles/toolbar.css';
+// summary.css (özet/not okuyucu) ve spots.css (sınav spotları) kendi tembel ekranlarıyla yüklenir (başarım turu 2026-10-20).
 import './styles/layout-modes.css';
 import './styles/bento.css';
 import './styles/motion.css';

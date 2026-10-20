@@ -12,9 +12,11 @@
  */
 import { loadArchiveBank } from './studyStore';
 import { normalizeDonem3Discipline } from '../data/curriculumData';
-import { DECK_CATALOG, loadDeck } from '../data/deckStore';
+import { DECK_CATALOG, loadDeck, loadDeckCatalog } from '../data/deckStore';
 import { ORNEK_INDEX, loadOrnekQuestions, miniQuestionsFromDeck, type PdfQuestion } from '../components/pdf/pdfSources';
 import { cleanWhy } from '../components/learn/lesson/LessonBlocks';
+// Katalog tembel yüklenir; bu modül eşzamanlı okuduğundan yüklenirken hazır olmasını bekle.
+await loadDeckCatalog().catch(() => undefined);
 
 export type TestSource = 'cikmis' | 'ornek' | 'mini' | 'vaka' | 'tuzak' | 'bosluk';
 type DeckSource = 'mini' | 'vaka' | 'tuzak' | 'bosluk';

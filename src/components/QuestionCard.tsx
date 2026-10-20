@@ -43,7 +43,7 @@ const SOURCE_TYPE_LABELS: Record<string, string> = {
   summary: 'Ders özeti',
   transcript: 'Amfi kaydı',
 };
-import { StatusPill, questionStemText } from './QuickAddHero';
+import { StatusPill, questionStemText } from './quickAddOrtak';
 import { toast } from './ui/Toast';
 import { validateNamePolicy } from '../utils/namePolicy';
 import { disciplineClass, disciplineLabel } from '../utils/discipline';

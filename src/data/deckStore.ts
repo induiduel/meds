@@ -24,8 +24,34 @@ export interface DeckCatalogEntry {
 }
 
 // Katalog derlemede üretilir; glob kullanımı dosya henüz yokken de tür denetiminin geçmesini sağlar
-const catalogModules = import.meta.glob('./decks/catalog.json', { eager: true, import: 'default' }) as Record<string, unknown>;
-export const DECK_CATALOG = ((Object.values(catalogModules)[0] as DeckCatalogEntry[] | undefined) || []);
+// Başarım (2026-10-20): katalog (~575 KB) ilk paketten çıkarıldı; ayrı parça olarak tembel yüklenir.
+// DECK_CATALOG aynı dizi nesnesidir, yüklenince yerinde doldurulur. Katalogu eşzamanlı okuyan modüller
+// en üstte `await loadDeckCatalog()` yapar (hepsi tembel parçalarda), diğerleri kullanmadan önce bekler.
+const catalogModules = import.meta.glob('./decks/catalog.json', { import: 'default' }) as Record<string, () => Promise<unknown>>;
+export const DECK_CATALOG: DeckCatalogEntry[] = [];
+let catalogPromise: Promise<DeckCatalogEntry[]> | null = null;
+let catalogLoaded = false;
+export const isDeckCatalogLoaded = () => catalogLoaded;
+export function loadDeckCatalog(): Promise<DeckCatalogEntry[]> {
+  if (!catalogPromise) {
+    const fn = Object.values(catalogModules)[0];
+    catalogPromise = (fn ? fn() : Promise.resolve([]))
+      .then((list) => {
+        // patchCatalog yüklemeden önce eklediyse onları koru (aynı kimlik: canlı sürüm kazanır)
+        const early = new Map(DECK_CATALOG.map((d) => [d.id, d]));
+        DECK_CATALOG.length = 0;
+        for (const d of (Array.isArray(list) ? list : []) as DeckCatalogEntry[]) {
+          DECK_CATALOG.push(early.get(d.id) || d);
+          early.delete(d.id);
+        }
+        for (const d of early.values()) DECK_CATALOG.push(d);
+        catalogLoaded = true;
+        return DECK_CATALOG;
+      })
+      .catch((err) => { catalogPromise = null; throw err; });
+  }
+  return catalogPromise;
+}
 
 const loaders = import.meta.glob('./decks/items/*.json', { import: 'default' }) as Record<string, () => Promise<any>>;
 const flashcardModules = import.meta.glob('./decks/flashcards.json', { import: 'default' }) as Record<string, () => Promise<any>>;
@@ -171,6 +197,7 @@ export async function loadDeckFlashcards(): Promise<any[] | null> {
 
 /** Tüm desteleri sırayla yükler; her desteden sonra ana iş parçacığına nefes aldırır. */
 export async function loadAllDecks<T = any>(): Promise<T[]> {
+  await loadDeckCatalog();
   const out: T[] = [];
   for (const d of DECK_CATALOG) {
     const full = await loadDeck<T>(d.id);
@@ -191,6 +218,7 @@ export const deckName = (d: { title?: string; shortTitle?: string }, short = tru
 async function patchCatalog(ids: string[]) {
   if (!ids.length) return;
   try {
+    await loadDeckCatalog();
     const res = await fetch(`${apiBase()}/api/content/deck-catalog?ids=${encodeURIComponent(ids.join(','))}`, { cache: 'no-store' });
     if (!res.ok) return;
     const { decks } = (await res.json()) as { decks: DeckCatalogEntry[] };

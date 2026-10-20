@@ -15,6 +15,7 @@ import { queryClient } from '../queryClient';
 import { offlineDatabaseService } from '../services/offlineDatabaseService';
 import { useAppearance } from '../utils/appearance';
 import { LectureSummariesV12 } from './v12/LectureSummariesV12';
+import '../styles/summary.css';
 
 /**
  * Ders özetleri (v10 kompakt). Yapı:

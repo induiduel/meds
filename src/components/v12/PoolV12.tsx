@@ -3,7 +3,7 @@ import { Activity, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Combine, L
 import type { PoolViewProps } from '../pool/PoolView';
 import type { QuestionItem } from '../../types';
 import { QuestionCard } from '../QuestionCard';
-import { committeeShortLabel } from '../QuickAddHero';
+import { committeeShortLabel } from '../quickAddOrtak';
 import { ActionMenu, ActionItem } from '../ui/ActionMenu';
 import { useAppearance } from '../../utils/appearance';
 import { topBarOffset } from '../../utils/uiZoom';

@@ -1,7 +1,9 @@
-import { DECK_CATALOG, loadDeck } from '../data/deckStore';
+import { DECK_CATALOG, loadDeck, loadDeckCatalog } from '../data/deckStore';
 import { safeJsonFetch } from './api';
 import { QuestionItem } from '../types';
 import { SlideFlashcard } from '../components/learn/InteractiveDeckView';
+// Katalog tembel yüklenir; bu modül eşzamanlı okuduğundan yüklenirken hazır olmasını bekle.
+await loadDeckCatalog().catch(() => undefined);
 
 export interface QuestionLearnMatch {
   deckId: string;

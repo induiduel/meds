@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useId, useMemo, useState } from 'react';
 import { ChevronDown, Highlighter as PenIcon } from 'lucide-react';
 import { HL_COLORS, type HlColor } from '../ui/Highlighter';
 import { KAT, Zengin, type Kategori, type Spot as ExamSpot, type Veri } from '../spots/spotsShared';
+import '../../styles/summary.css';
 
 /**
  * Okuyucunun sağ paneli (v10): "Spotlar · n" (bu dersin sınav spotları, src/data/exam_spots_k1.json — tembel)

@@ -3,7 +3,7 @@ import { Activity, ChevronLeft, ChevronRight, ChevronUp, Combine, LayoutGrid, Pl
 import type { Committee, QuestionItem } from '../../types';
 import type { AppUser } from '../../services/auth';
 import { QuestionCard } from '../QuestionCard';
-import { committeeShortLabel } from '../QuickAddHero';
+import { committeeShortLabel } from '../quickAddOrtak';
 import { PageToolbar, FilterPills, ToolbarChip } from '../ui/PageToolbar';
 import { ActionMenu, ActionItem } from '../ui/ActionMenu';
 import { useAppearance } from '../../utils/appearance';

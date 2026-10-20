@@ -152,7 +152,8 @@ export const ManageDataSection: React.FC<Props> = ({
         label: 'Dersler',
         load: async () => {
           // Tablo yalnızca özet bilgileri gösterir: hafif katalog yeterli
-          const { DECK_CATALOG } = await import('../../data/deckStore');
+          const { DECK_CATALOG, loadDeckCatalog } = await import('../../data/deckStore');
+          await loadDeckCatalog();
           return DECK_CATALOG as unknown as Row[];
         },
         idOf: (r) => r.id,

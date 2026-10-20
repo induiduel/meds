@@ -11,6 +11,7 @@ import {
   BANTLAR, KAT_AD, KAYNAK_AD, PDF_KEY, TUR_AD, bantOf, dersAdi, dersYukle, katOf, ogrenilenler, tercihOku, tercihYaz,
   type Ders, type Dizin, type Kat, type Madde, type Tur,
 } from './onemVeri';
+import '../../../styles/spots.css';
 
 const OnemPdfOnizleme = React.lazy(() => import('./OnemPdfOnizleme'));
 

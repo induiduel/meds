@@ -17,7 +17,7 @@ import {
   newNoteId,
   resetProgress,
 } from '../../services/studyStore';
-import { committeeShortLabel } from '../QuickAddHero';
+import { committeeShortLabel } from '../quickAddOrtak';
 import { Segmented, ExplanationBlock, EmptyState, cardCls, btnPrimary, btnSecondary, btnGhost, selectCls, Field, isTypingTarget } from './StudyUI';
 import { QuestionAiChatDrawer } from '../QuestionAiChatDrawer';
 import { StudyReportButton } from './StudyReportButton';

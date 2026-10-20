@@ -17,6 +17,7 @@ import { CozucuBaslangic, OnemBaslangic } from './BransBaslangic';
 import { cozucuYolu, cozucuyaGit, onemYolu, onemeGit } from './spotsYol';
 import { SpotCozucuDevamKart } from './stats/SpotCozucuDevamKart';
 import { ekleSpotSure, type LastSpotInfo, type LastCozucuInfo } from '../../services/spotCozucuIstatistik';
+import '../../styles/spots.css';
 
 export { KATEGORILER };
 

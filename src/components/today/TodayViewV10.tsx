@@ -88,6 +88,7 @@ export const TodayViewV10: React.FC<TodayViewProps> = ({ committeeLabel, onGo })
     if (!hasLearn) return;
     let off = false;
     import('../../data/deckStore')
+      .then((m) => m.loadDeckCatalog().then(() => m))
       .then(({ DECK_CATALOG, deckName }) => {
         if (off) return;
         const byId = new Map(DECK_CATALOG.map((d) => [d.id, d]));

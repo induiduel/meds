@@ -45,7 +45,7 @@ import { DraftDeduplicationModal } from './DraftDeduplicationModal';
 import { AdminScriptsTab } from './AdminScriptsTab';
 import { AdminDriveSyncSettings } from './AdminDriveSyncSettings';
 import { AdminMobileNotificationCard } from './AdminMobileNotificationCard';
-import { StatusPill, questionStemText } from './QuickAddHero';
+import { StatusPill, questionStemText } from './quickAddOrtak';
 import { ApiService, safeJsonFetch } from '../services/api';
 import { FirestoreDbService } from '../services/firestoreDb';
 import { SupabaseDbService } from '../services/supabaseDb';

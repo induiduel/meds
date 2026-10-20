@@ -17,7 +17,7 @@ import {
 import type { Committee, QuestionItem } from '../../types';
 import { ApiService, getCustomApiUrl } from '../../services/api';
 import { normalizeDonem3Discipline, isDonem3Question } from '../../data/curriculumData';
-import { DECK_CATALOG, loadDeck, deckName } from '../../data/deckStore';
+import { DECK_CATALOG, loadDeck, deckName, loadDeckCatalog } from '../../data/deckStore';
 import type { InteractiveDeck } from '../learn/InteractiveDeckView';
 import { buildSteps, buildSections, loadKazanimIndex, type DeckKazanim } from '../learn/lesson/lessonModel';
 import { IX_META } from '../learn/lesson/LessonBlocks';
@@ -42,6 +42,8 @@ import { LessonDoc, IX_TYPES, type LessonDocOptions, type IxType, type AnswerMod
 import { SummaryDoc, type SummaryDocOptions, type SummaryForPdf, type SummaryQuestions } from './PdfSummaryDoc';
 import type { CoverInfo } from './PdfParts';
 import './pdf.css';
+// Katalog tembel yüklenir; bu modül eşzamanlı okuduğundan yüklenirken hazır olmasını bekle.
+await loadDeckCatalog().catch(() => undefined);
 
 export type PdfContentKind = 'past' | 'pool' | 'ornek' | 'learn' | 'mini' | 'summary';
 

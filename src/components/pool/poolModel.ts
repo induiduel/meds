@@ -1,5 +1,5 @@
 import type { QuestionItem } from '../../types';
-import { questionStemText } from '../QuickAddHero';
+import { questionStemText } from '../quickAddOrtak';
 
 /**
  * Soru havuzu (v11) veri yardımcıları: son etkinlik, şık doluluğu, katkıcılar ve katkı olayları.

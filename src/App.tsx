@@ -19,7 +19,15 @@ import {
 import { Committee, QuestionItem, QuestionLectureMatch } from './types';
 import { MetricsBar } from './components/MetricsBar';
 import { PoolView } from './components/pool/PoolView';
-import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
+import { committeeShortLabel, questionStemText } from './components/quickAddOrtak';
+// Soru ekle (ana sayfa) tembel yüklenir (başarım turu 2026-10-20); ana sayfada açılışta hemen istenir.
+const quickAddYukle = () => import('./components/QuickAddHero').then((m) => ({ default: m.QuickAddHero }));
+if (typeof window !== 'undefined' && /^\/(meds\/?)?$/.test(window.location.pathname)) void quickAddYukle();
+const QuickAddHero = React.lazy(quickAddYukle);
+/** QuickAddHero ile aynı dış kap ve ölçülen yükseklik (1440: 262, 375: 252 px): yüklenirken düzen kaymaz. */
+const QuickAddYerTutucu = () => (
+  <div className="w-full max-w-[760px] mx-auto lg:mx-0 flex flex-col gap-5 pt-4 sm:pt-8 min-h-[252px] sm:min-h-[262px]" aria-busy="true" />
+);
 import KurulSeridi from './components/olasi/KurulSeridi';
 import { MusicPlayerProvider } from './components/music/MusicPlayerContext';
 import { MiniMusicPlayer } from './components/music/MiniMusicPlayer';
@@ -1646,6 +1654,7 @@ export default function App() {
         {/* TAB 0: Home — quick add, pool status, committees */}
         {activeTab === 'quick_add' && <KurulSeridi soruEkleGoster={false} sola />}
         {activeTab === 'quick_add' && (
+          <Suspense fallback={<QuickAddYerTutucu />}>
           <QuickAddHero
             committee={currentCommittee}
             committees={committees}
@@ -1661,6 +1670,7 @@ export default function App() {
             onOpenAdminPanel={() => setActiveTab('admin')}
             onQuestionsUpdated={fetchQuestions}
           />
+          </Suspense>
         )}
 
         {/* TAB: Learn / İnteraktif Ses & Slayt Hub'ı */}
@@ -1692,12 +1702,6 @@ export default function App() {
               onSelectCommittee={(id) => setSelectedCommitteeId(id)}
             />
             </LearnFab>
-          </Suspense>
-        )}
-        {/* TAB: /kamp — kurul kampları; /kamp/<kurul>/<brans> tek kamp (yolu kendisi okur) */}
-        {activeTab === 'kamp' && (
-          <Suspense fallback={<ViewFallback />}>
-            <KampView />
           </Suspense>
         )}
 
@@ -1911,6 +1915,13 @@ export default function App() {
         {activeTab === 'gecmis_kurullar' && (
           <Suspense fallback={<ViewFallback />}>
             <GecmisKurullarView />
+          </Suspense>
+        )}
+
+        {/* TAB: /kamp — kurul kampları; /kamp/<kurul>/<brans> tek kamp (yolu kendisi okur) */}
+        {activeTab === 'kamp' && (
+          <Suspense fallback={<ViewFallback />}>
+            <KampView />
           </Suspense>
         )}
 

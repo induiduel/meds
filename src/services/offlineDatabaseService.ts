@@ -12,7 +12,7 @@
 
 import { QuestionItem, Committee } from '../types';
 import { pastQuestionsCache } from './pastQuestionsCache';
-import { loadDeck, DECK_CATALOG } from '../data/deckStore';
+import { loadDeck, DECK_CATALOG, loadDeckCatalog } from '../data/deckStore';
 import { pwaService } from './pwaService';
 import { toast } from '../components/ui/Toast';
 import { defaultApiBaseForThisHost } from '../config/deployment';
@@ -332,7 +332,7 @@ class OfflineDatabaseService {
       pastQuestionsCount: pqCount,
       poolQuestionsCount: poolCount,
       committeesCount: commCount,
-      decksCount: decksCount || DECK_CATALOG.length,
+      decksCount: decksCount || (await loadDeckCatalog().catch(() => DECK_CATALOG)).length,
       summariesCount: savedStats?.summariesCount || 66,
       glossaryCount: glossaryCount || (savedStats?.glossaryCount || 0),
       flashcardsCount: flashcardsCount || (savedStats?.flashcardsCount || 0),
@@ -661,6 +661,7 @@ class OfflineDatabaseService {
       report('İnteraktif ders öğrenme desteleri önbelleğe alınıyor...', 52);
       const loadedDecks: any[] = [];
       if (!opts.yalnizSorular) try {
+        await loadDeckCatalog();
         const total = DECK_CATALOG.length;
         let count = 0;
         for (const d of DECK_CATALOG) {
