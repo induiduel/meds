@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 92,
-  "baslik": "Tanıtım turu yeni Ada tasarımına uyarlandı",
+  "onem": 93,
+  "baslik": "Yeni: Kurul kampı ve hoca tüyoları",
   "maddeler": [
-    "Hoş geldin turu Ada (v13) tasarımında doğru menü öğelerini gösteriyor.",
-    "Telefonda tur, alt adadaki bölümleri ve Menü sayfasındaki sayfaları vurguluyor."
+    "Kurul kampı: hocanızın derste verdiği ipuçlarından sesli anlatım, kalıp kartları ve deneme sınavı.",
+    "Hocanın tüyosunu ekle: derste duyduğunuz ipucunu önerin; onaylanınca kampa eklenir.",
+    "Kurul 2 sesli asistanları ve deneme sınavı kaynakları kurula göre doğru açılıyor."
   ],
   "eklenen": [],
   "degisen": [
