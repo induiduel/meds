@@ -1,7 +1,8 @@
+import { icKonum, icUrl } from '../../siteHaritasi';
 import React, { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Check, ChevronDown, ChevronLeft, ChevronRight, ChevronsDownUp, ChevronsUpDown, Clock, Download, Eye, EyeOff, HelpCircle,
-  Headphones, Info, Keyboard, ListFilter, Search, Star, X,
+  Headphones, Info, Keyboard, LayoutList, ListFilter, Search, Star, X,
 } from 'lucide-react';
 import { Sheet } from '../ui/Sheet';
 import { kucuk, azHareket } from './spotsShared';
@@ -43,10 +44,10 @@ type OgrSuz = 'hepsi' | 'gizle' | 'yalniz';
 interface Tercih { gizle: boolean; kuralAcik: boolean; siralama: 'puan' | 'slayt'; ogr: OgrSuz }
 const TERCIH0: Tercih = { gizle: false, kuralAcik: true, siralama: 'puan', ogr: 'hepsi' };
 
-const urlOku = (k: string) => { try { return new URLSearchParams(location.search).get(k); } catch { return null; } };
+const urlOku = (k: string) => { try { return new URLSearchParams(icKonum().search).get(k); } catch { return null; } };
 const urlYaz = (p: Record<string, string | null>) => {
   try {
-    const u = new URL(location.href);
+    const u = icUrl();
     for (const [k, v] of Object.entries(p)) { if (v) u.searchParams.set(k, v); else u.searchParams.delete(k); }
     history.replaceState(history.state, '', u.pathname + u.search + u.hash);
   } catch { /* yok */ }
@@ -201,6 +202,8 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
   const [kisayolAcik, setKisayolAcik] = useState(false);
   const [aktifPart, setAktifPart] = useState<number | null>(null);
   const [ozetAcik, setOzetAcik] = useState(false);
+  // ders açılınca önce seçenek ekranı; "Detaylı bakış" ile madde listesi (hedef madde varsa doğrudan liste)
+  const [detay, setDetay] = useState<string | null>(() => (urlOku('m') ? urlOku('ders') || null : null));
   const aramaRef = useRef<HTMLInputElement>(null);
   const hedefRef = useRef<string | null>(urlOku('m'));
   const ogr = useOgrenilen();
@@ -307,6 +310,7 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
   // ders değişince açık kartlar, odak ve arama sıfırlanır; hedef madde (aday kutusu / adres) açılıp kaydırılır
   const dersSec = useCallback((k: string, hedef?: string) => {
     hedefRef.current = hedef || null;
+    setDetay(hedef ? k : null);
     setKod(k); setAcik(new Map()); setOdak(null); setGezAcik(false);
     if (!hedef) window.scrollTo({ top: 0, behavior: azHareket() ? 'auto' : 'smooth' });
   }, []);
@@ -480,6 +484,76 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
         </aside>
 
         <div className="on-ana">
+          {!cokDers && detay !== kod && dizinDers && (() => {
+            const yuzde = Math.round((dersOgr / Math.max(1, dizinDers.madde)) * 100);
+            const sure = asistanSureHaritasi.get(kod);
+            const kart = (ton: string, ikon: React.ReactNode, ad: string, acik: string, onClick: () => void, ek?: string) => (
+              <button type="button" className={`on-giris-k t-${ton}`} onClick={onClick}>
+                <span className="on-giris-ikon">{ikon}</span>
+                <span className="on-giris-kt"><b>{ad}{ek && <em>{ek}</em>}</b><small>{acik}</small></span>
+                <ChevronRight className="on-giris-ok" aria-hidden />
+              </button>
+            );
+            return (
+            <section className="on-giris" aria-label="Ders seçenekleri">
+              <header className="on-giris-bas">
+                <span className="on-giris-no">{dizinDers.no}</span>
+                <div className="on-giris-t">
+                  <small>Ders {dersSira + 1}/{dizin.dersler.length}{ders ? ` · ${ders.pdf}` : ''}</small>
+                  <h2>{dizinDers.baslik}</h2>
+                  <div className="on-giris-cipler">
+                    <span><b>{dizinDers.madde}</b> madde</span>
+                    {bt.sinavKurali && dersAday > 0 && <span className="is-aday"><Star aria-hidden /><b>{dersAday}</b> aday</span>}
+                    {dersCikmis > 0 && <span className="is-cik"><b>{dersCikmis}</b> çıkmış</span>}
+                    {sure ? <span><Clock aria-hidden />~{dk(sure)} dk</span> : null}
+                  </div>
+                </div>
+                <div className="on-giris-ilerle" style={{ '--p': `${yuzde}%` } as React.CSSProperties} title={`${dersOgr}/${dizinDers.madde} öğrenildi`}>
+                  <span><b>{yuzde}</b>%</span><small>öğrenildi</small>
+                </div>
+              </header>
+
+              <h3 className="on-giris-soru">Bu derste ne yapmak istersin?</h3>
+              <div className="on-giris-izgara">
+                {bt.asistan && asistanDersVar(kod) && kart('ana', <Headphones />, 'Sesli asistanla çalış', 'En önemli noktaları anlatır, soru sorar, yanlışını açıklar', () => asistanAc(kod), sure ? `~${dk(sure)} dk` : undefined)}
+                {kart('ai', <Headphones />, 'Soruları sesli çöz', 'Çıkmış ve örnek sorular; ipucu, yanlışı ele, çözümü dinle', () => cozucuyuAc(kod))}
+                {kart('ok', <Download />, 'PDF indir', 'Bu dersin önem listesi, yazdırılabilir', () => setPdfAcik(true))}
+                {asistanVar && kart('warn', <Clock />, 'Süreler', 'Ders ders anlatım süreleri; planını buna göre yap', () => setSureAcik(true))}
+              </div>
+
+              <button type="button" className="on-giris-detay" onClick={() => setDetay(kod)}>
+                <span className="on-giris-detay-bas">
+                  <span className="on-giris-ikon"><LayoutList /></span>
+                  <span className="on-giris-kt">
+                    <b>Detaylı bakış</b>
+                    <small>Tüm maddeler tek sayfada · okuyarak çalışmak, bilgi aramak ve sınav öncesi hızlı tekrar için</small>
+                  </span>
+                  <span className="on-giris-ac">Aç<ChevronRight aria-hidden /></span>
+                </span>
+                <ul>
+                  <li><Check aria-hidden />100 puan üzerinden 10'ar puanlık önem partları, her madde PDF'ten alıntılı</li>
+                  {bt.sinavKurali && <li><Check aria-hidden />Sınavda çıkabilecek adaylar, en olası soru ve sınav kuralı</li>}
+                  <li><Check aria-hidden />Puan dağılımı, ders özeti ve neden önemli olduğu</li>
+                  <li><Check aria-hidden />Arama, süzgeç (puan, bilgi türü, çıkmış) ve tekrar modu</li>
+                  <li><Check aria-hidden />Maddeleri “öğrendim” diye işaretleme, Bitti / Tekrar et</li>
+                </ul>
+              </button>
+
+              {(onceki || sonraki) && (
+                <nav className="on-dersnav" aria-label="Ders gezintisi">
+                  {onceki ? <button type="button" onClick={() => dersSec(onceki.kod)}><ChevronLeft aria-hidden /><span><small>Önceki ders</small><b>{dersAdi(onceki)}</b></span></button> : <span />}
+                  {sonraki ? <button type="button" className="is-sonraki" onClick={() => dersSec(sonraki.kod)}><span><small>Sonraki ders</small><b>{dersAdi(sonraki)}</b></span><ChevronRight aria-hidden /></button> : <span />}
+                </nav>
+              )}
+            </section>
+            );
+          })()}
+          {(cokDers || detay === kod || !dizinDers) && <>
+          {!cokDers && (
+            <button type="button" className="on-link on-giris-geri" onClick={() => { setDetay(null); window.scrollTo({ top: 0 }); }}>
+              <ChevronLeft aria-hidden />Seçeneklere dön
+            </button>
+          )}
           {/* başlık kartı */}
           <header className="on-hero">
             <div className="on-hero-ust">
@@ -747,6 +821,7 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
               ) : <span />}
             </nav>
           )}
+          </>}
         </div>
       </div>
 
@@ -767,7 +842,7 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
           }}
           onDersAc={(b, k) => {
             if (b !== brans) {
-              const u = new URL(location.href);
+              const u = icUrl();
               u.searchParams.set('brans', b);
               u.searchParams.set('asistan', '1');
               u.searchParams.set('ders', k);
