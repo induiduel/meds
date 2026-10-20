@@ -79,6 +79,7 @@ export const ManageDatabaseExplorer: React.FC<{ notify: (m: string) => void }> =
   const loadMeta = useCallback(async (force = false) => {
     try {
       const m = await adminCall<Tables>(`/api/admin/pg/tables${force ? '?yenile=1' : ''}`);
+      if (!Array.isArray(m?.tables)) throw new Error('Sunucu tablo listesi döndürmedi (bu sunucuda veritabanı gezgini ucu yok olabilir; Canlı/Yerel seçimini kontrol et).');
       setMeta(m);
       setErr('');
       setSel((s) => s || m.tables.slice().sort((a, b) => b.rows - a.rows).find((t) => t.name !== 'rag_chunks')?.name || '');
