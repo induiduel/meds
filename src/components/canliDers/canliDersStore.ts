@@ -430,6 +430,13 @@ export function cdKelimeBas(): number {
   return k.cumleBas + k.c;
 }
 /** Etkin cümlenin [başlangıç, bitiş) karakter aralığı */
+/** Görüntü için cümle sınırları: yüklü dersin (ses hizalı) sınırları, yoksa aynı kural metinden. */
+export function cdParagrafSinirlari(i: number, metin: string): number[] {
+  const k = posByI.get(i);
+  if (k != null && paras[k]?.metin === metin) return cumleSinirlari(paras[k]);
+  return cumleSinirlari({ metin } as ParaBilgi);
+}
+
 export function cdCumleAraligi(i: number, cumle: number): [number, number] | null {
   const k = posByI.get(i);
   if (k == null || cumle < 0) return null;

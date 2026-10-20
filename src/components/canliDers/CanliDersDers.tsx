@@ -14,7 +14,7 @@ import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { isIosBrowserTab, shouldAvoidNativeFullscreen } from '../../utils/device';
 import { openPwaInstallGuide } from '../../services/pwaService';
 import {
-  cdCumleAraligi, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
+  cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
 import { useCdTur } from './useCdTur';
 import { cdDersEtiketi } from './canliDersKategori';
@@ -833,28 +833,48 @@ function KopyalaDugme({ metin }: { metin: string }) {
 type Vurgu = [number, number, 'c' | 't', number][];
 const ONEM_AD: Record<number, string> = { 3: 'Çıkmışta sorulmuş', 2: 'Sınav spotu', 1: 'Örnek soruda geçiyor' };
 
-/** Önemli cümleler (çıkmış/spot/örnek soruyla eşleşen) marker + kırmızı kalın; anahtar terimler ayrıca kalın. */
-function VurguluMetin({ metin, v }: { metin: string; v?: Vurgu }) {
-  if (!v?.length) return <>{metin}</>;
+/** Önemli cümleler (çıkmış/spot/örnek soruyla eşleşen) marker + kırmızı kalın; anahtar terimler ayrıca kalın.
+ *  [a, b) aralığına kırpılır (madde görünümünde her cümle ayrı satırdır). */
+function vurguParcasi(metin: string, v: Vurgu | undefined, a: number, b: number): React.ReactNode[] {
+  if (!v?.length) return [metin.slice(a, b)];
   const out: React.ReactNode[] = [];
-  let k = 0;
-  for (const [s, e, tur, onem] of v) {
-    if (tur !== 'c' || s < k) continue;
+  let k = a;
+  for (const [s0, e0, tur, onem] of v) {
+    if (tur !== 'c') continue;
+    const s = Math.max(s0, a), e = Math.min(e0, b);
+    if (e <= s || s < k) continue;
     if (s > k) out.push(metin.slice(k, s));
     const ic: React.ReactNode[] = [];
     let j = s;
-    for (const [ts, te, tt] of v) {
-      if (tt !== 't' || ts < j || te > e) continue;
+    for (const [ts0, te0, tt] of v) {
+      if (tt !== 't') continue;
+      const ts = Math.max(ts0, s), te = Math.min(te0, e);
+      if (te <= ts || ts < j) continue;
       if (ts > j) ic.push(metin.slice(j, ts));
       ic.push(<b key={ts} className="cd-terim">{metin.slice(ts, te)}</b>);
       j = te;
     }
     if (j < e) ic.push(metin.slice(j, e));
-    out.push(<span key={s} className={`cd-onem o${onem}`} data-s={s} data-e={e} title={ONEM_AD[onem]}>{ic}</span>);
+    out.push(<span key={s} className={`cd-onem o${onem}`} data-s={s0} data-e={e0} title={ONEM_AD[onem]}>{ic}</span>);
     k = e;
   }
-  if (k < metin.length) out.push(metin.slice(k));
-  return <>{out}</>;
+  if (k < b) out.push(metin.slice(k, b));
+  return out;
+}
+
+/** Paragrafı ses cümleleriyle aynı sınırlardan maddeler: ilk cümle giriş, kalanlar madde. Metin (ve karakter
+ *  konumları) aynen korunur; madde imi yalnız CSS ::before olduğundan ses/cümle vurgusu etkilenmez. */
+function VurguluMetin({ metin, v, i }: { metin: string; v?: Vurgu; i: number }) {
+  const sin = cdParagrafSinirlari(i, metin);
+  if (sin.length < 3) return <>{vurguParcasi(metin, v, 0, metin.length)}</>;
+  return (
+    <>
+      {sin.map((e, c) => {
+        const a = c ? sin[c - 1] : 0;
+        return <span key={a} className={c ? 'cd-madde' : 'cd-giris'}>{vurguParcasi(metin, v, a, e)}</span>;
+      })}
+    </>
+  );
 }
 
 /** Paragraf içi [s, e) karakter aralığını (iç içe öğeler dahil) kapsayan Range */
@@ -926,7 +946,7 @@ const MetinListe = memo(function MetinListe({ detay, onTik }: { detay: CdDetay; 
           {b.baslik && <h2 className="cd-bolum-ad">{b.baslik}</h2>}
           {b.paragraflar.map((p) => (
             <div key={p.i} className="cd-p-sar">
-              <p data-i={p.i} className="cd-p" onClick={() => onTik(p.i)}><VurguluMetin metin={p.metin} v={detay.vurgu?.[p.i]} /></p>
+              <p data-i={p.i} className="cd-p" onClick={() => onTik(p.i)}><VurguluMetin metin={p.metin} v={detay.vurgu?.[p.i]} i={p.i} /></p>
               <div className="cd-p-araclar">
                 <CdParagrafYildizDugme
                   dersKey={detay.key}

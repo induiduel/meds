@@ -1,19 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 74,
-  "baslik": "Yönetim paneli: çalışma takibi, veritabanı gezgini, kısayollar",
+  "onem": 75,
+  "baslik": "Sesli ders metni maddelere ayrıldı",
   "maddeler": [
-    "Yönetim panelinde kişi başına çalışma süresi ve konu takibi.",
-    "Veritabanı gezgini ve kısayollar sayfası eklendi.",
-    "Panelde başarısız kayıtların 'Kaydedildi' görünmesi düzeltildi."
+    "Sesli ders metni maddeler halinde: her paragrafın ilk cümlesi giriş, kalan cümleler ayrı madde (ses değişmedi)."
   ],
-  "eklenen": [
-    "Yönetim panelinde kişi başına çalışma süresi ve konu takibi.",
-    "Veritabanı gezgini ve kısayollar sayfası eklendi."
+  "eklenen": [],
+  "degisen": [
+    "Sesli ders metni maddeler halinde: her paragrafın ilk cümlesi giriş, kalan cümleler ayrı madde (ses değişmedi)."
   ],
-  "degisen": [],
-  "duzeltilen": [
-    "Panelde başarısız kayıtların 'Kaydedildi' görünmesi düzeltildi."
-  ],
+  "duzeltilen": [],
   "silinen": []
 }

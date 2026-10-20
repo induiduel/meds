@@ -125,6 +125,10 @@
 .cd-p-kopya.is-tamam { opacity: 1; color: var(--color-success, var(--color-accent)); }
 @media (hover: none) { .cd-p-kopya { opacity: .6; } }
 .cd-p.is-on { background: var(--color-accent-soft); color: var(--color-ink); }
+/* Madde görünümü: ilk cümle giriş, kalanlar madde (imi yalnız ::before, metin konumları değişmez) */
+.cd-p .cd-giris { display: block; font-weight: 600; color: var(--color-ink); }
+.cd-p .cd-madde { display: block; position: relative; padding-left: 1.15em; margin-top: 0.3em; }
+.cd-p .cd-madde::before { content: ""; position: absolute; left: 0.3em; top: 0.72em; width: 0.36em; height: 0.36em; border-radius: 50%; background: var(--color-accent); opacity: 0.75; }
 .cd-metin ::highlight(cd-cumle) { background-color: color-mix(in srgb, var(--color-accent) 26%, transparent); color: var(--color-ink); }
 .cd-metin mark.cd-cumle { background: color-mix(in srgb, var(--color-accent) 26%, transparent); color: var(--color-ink); border-radius: 3px; }
 
