@@ -60,7 +60,11 @@ export interface CdDetay {
   pdf: CdPdf | null;
   /** önemli cümle (c) ve anahtar terim (t) aralıkları, paragraf dizinine göre: [baş, son, tür, önem 1–3] */
   vurgu?: Record<string, [number, number, "c" | "t", number][]> | null;
+  /** okunan cümlenin slayttaki karşılığı, paragraf dizini → cümle başına (pdf_isaret.py) */
+  isaret?: Record<string, (CdIsaret | null)[]> | null;
 }
+/** Kutular sayfa oranıdır (0–1). w: [cümledeki karakter oranı, x0, y0, x1, y1] */
+export interface CdIsaret { d: number; s: number; t: 'metin' | 'tablo' | 'resim' | 'sayfa'; l: number[][]; w: number[][] }
 /** Çalmaya başlamak için en az bu kadarı yeter (liste satırından hızlı oynatma) */
 export interface CdOzet { key: string; no: string | number; brans?: string; parca?: number; baslik: string; varyantlar: CdVaryant[] }
 
@@ -305,6 +309,24 @@ function cumleSinirlari(p: ParaBilgi): number[] {
   if (!out.length || out[out.length - 1] < p.metin.length) out.push(p.metin.length);
   p.cumleler = out;
   return out;
+}
+/** Etkin cümlenin içinde sesin geldiği yer (0–1): ölçülü cümle sınırları arasında doğrusal */
+export function cdCumleIlerleme(): number {
+  const k = posByI.get(st.aktif);
+  if (k == null || st.cumle < 0) return 0;
+  const p = paras[k];
+  const s = cumleSinirlari(p);
+  const cb = cumleBas[k];
+  let t0: number, t1: number;
+  if (cb) {
+    t0 = st.cumle ? cb[st.cumle - 1] : starts[k];
+    t1 = st.cumle < cb.length ? cb[st.cumle] : ends[k];
+  } else {
+    const span = ends[k] - starts[k];
+    t0 = starts[k] + ((st.cumle ? s[st.cumle - 1] : 0) / p.len) * span;
+    t1 = starts[k] + (s[st.cumle] / p.len) * span;
+  }
+  return t1 > t0 ? Math.min(1, Math.max(0, (st.t - t0) / (t1 - t0))) : 0;
 }
 /** Etkin cümlenin metni (PDF'te karşılığını hafifçe işaretlemek için) */
 export function cdCumleMetni(i: number, cumle: number): string {

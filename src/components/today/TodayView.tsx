@@ -8,6 +8,7 @@ import { KAT, Zengin, okuOgrenilen, type Spot, type Veri } from '../spots/spotsS
 import { useReviewCounts } from '../../hooks/useReviewCounts';
 import { OPEN_REVIEW_FLAG } from '../../services/learnReview';
 import '../../styles/today.css';
+import '../../styles/v13/today.css';
 import { useAppearance } from '../../utils/appearance';
 import { TodayViewV10 } from './TodayViewV10';
 
@@ -82,12 +83,12 @@ interface ResumeCard {
 
 /** Tasarım seçimi: v11 Sade (bu dosya) ya da Klasik v10 (TodayViewV10.tsx, dokunulmadan korunur) */
 export const TodayView: React.FC<TodayViewProps> = (props) => {
-  const { design } = useAppearance();
-  return design === 'v10' ? <TodayViewV10 {...props} /> : <TodayViewV11 {...props} v12={design === 'v12'} />;
+  const { design, v13 } = useAppearance();
+  return design === 'v10' ? <TodayViewV10 {...props} /> : <TodayViewV11 {...props} v12={design === 'v12'} v13={design === 'v12' && !!v13} />;
 };
 
 /** v11 ve v12 aynı verileri kullanır; v12 yalnız düzeni değiştirir (iki sütun, tek birincil blok, satır listeleri). */
-const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean }> = ({ committeeLabel, onGo, v12 }) => {
+const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean }> = ({ committeeLabel, onGo, v12, v13 }) => {
   const today = dayKey();
   const dateLine = useMemo(
     () => new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' }),
@@ -273,6 +274,132 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean }> = ({ committeeL
   const primary = resume[0];
   const reviewDue = review.total.due;
   const totalDue = reviewDue + dueCards;
+
+  if (v13) {
+    const goReview = () => {
+      try { sessionStorage.setItem(OPEN_REVIEW_FLAG, '1'); } catch { /* yok say */ }
+      onGo('learn');
+    };
+    const spotHref = spotOfDay ? `${pathFor('spots')}?id=${encodeURIComponent(spotOfDay.s.id)}` : '';
+    let step = 0;
+    const Step: React.FC<{ title: string; meta?: React.ReactNode; children: React.ReactNode; tone?: 'acc' | 'due' }> = ({ title, meta, children, tone }) => {
+      step += 1;
+      return (
+        <li className={`t13-step ${tone ? `is-${tone}` : ''}`}>
+          <span className="t13-n" aria-hidden>{step}</span>
+          <div className="t13-card">
+            <div className="t13-card-h"><h2 className="t13-h">{title}</h2>{meta && <span className="t13-meta">{meta}</span>}</div>
+            {children}
+          </div>
+        </li>
+      );
+    };
+    return (
+      <div className="t13">
+        <p className="t13-date">{dateLine}{committeeLabel ? ` · ${committeeLabel}` : ''}</p>
+        <div className="t13-grid">
+          <ol className="t13-plan" aria-label="Bugünün planı">
+            <Step title="Kaldığın yer" meta={primary?.kicker} tone="acc">
+              {primary ? (
+                <a className="t13-resume" href={primary.href} onClick={linkClick(primary.go)}>
+                  <span className="t13-resume-t">{primary.title}</span>
+                  <span className="t13-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={primary.pct} aria-label={`${primary.kicker} ilerlemesi`}>
+                    <span style={{ width: `${primary.pct}%` }} />
+                  </span>
+                  <span className="t13-resume-f"><span className="t13-meta">{primary.sub} · %{primary.pct}</span><span className="t13-go">Devam et <ArrowRight aria-hidden /></span></span>
+                </a>
+              ) : resumeLoading ? (
+                <span className="t13-skel ui-skel" aria-hidden />
+              ) : (
+                <div className="t13-empty">
+                  <span>Henüz bir derse başlamadın. Bir ders aç; kaldığın yer burada görünür.</span>
+                  <a className="t13-go is-solid" href={pathFor('learn')} onClick={linkClick(() => onGo('learn'))}>Derslere git <ArrowRight aria-hidden /></a>
+                </div>
+              )}
+              {resume.length > 1 && (
+                <ul className="t13-rows" role="list">
+                  {resume.slice(1).map((r) => (
+                    <li key={r.id}>
+                      <a href={r.href} onClick={linkClick(r.go)} className="t13-row">
+                        <span className="t13-row-t">{r.title}</span>
+                        <span className="t13-meta">{r.kicker} · %{r.pct}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </Step>
+            {totalDue > 0 && (
+              <Step title="Tekrar" meta={`${totalDue.toLocaleString('tr-TR')} öge · ~${Math.max(1, Math.round(totalDue * 0.4))} dk`} tone="due">
+                <ul className="t13-rows" role="list">
+                  {reviewDue > 0 && (
+                    <li><a className="t13-row" href={pathFor('learn')} onClick={linkClick(goReview)}><span className="t13-row-t">Hata defteri</span><span className="t13-meta">{reviewDue} öge</span></a></li>
+                  )}
+                  {dueCards > 0 && (
+                    <li><a className="t13-row" href={pathFor('flashcards')} onClick={linkClick(() => onGo('flashcards'))}><span className="t13-row-t">Ezber kartları</span><span className="t13-meta">{dueCards} kart</span></a></li>
+                  )}
+                </ul>
+              </Step>
+            )}
+            {spotOfDay && (
+              <Step title="Günün spotu" meta={KAT[spotOfDay.s.kategori]?.kisa || 'Spot'}>
+                <a className="t13-spot" href={spotHref} onClick={linkClick(() => navigateTo(spotHref))}>
+                  <strong>{spotOfDay.s.baslik}</strong>
+                  <span className="t13-spot-x"><Zengin metin={spotOfDay.s.spot} /></span>
+                  {spotOfDay.ders && <span className="t13-meta">Ders {spotOfDay.ders.no} · {spotOfDay.ders.baslik}</span>}
+                </a>
+              </Step>
+            )}
+            {goals.length > 0 && (
+              <Step title="Bugünün hedefi" meta="son 14 günün ortalaması">
+                {goals.map((g) => (
+                  <div key={g.id} className="t13-goal">
+                    <span className="t13-goal-l">{g.label}</span>
+                    <span className="t13-num">{g.value}</span>
+                    <span className="t13-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={g.pct} aria-label={g.label}><span style={{ width: `${g.pct}%` }} /></span>
+                  </div>
+                ))}
+              </Step>
+            )}
+          </ol>
+
+          <aside className="t13-side" aria-label="Kısayollar ve hafta">
+            <section className="t13-box" aria-labelledby="t13-q-h">
+              <h2 id="t13-q-h" className="t13-h">{hasAnyStudy ? 'Kısayollar' : 'Nereden başlamalı?'}</h2>
+              <nav className="t13-chips">
+                {(hasAnyStudy ? QUICK : [...START, ...QUICK.slice(0, 2)]).map((id) => {
+                  const it = NAV_ITEMS[id];
+                  if (!it) return null;
+                  const Icon = it.icon;
+                  return (
+                    <a key={id} href={pathFor(id)} onClick={linkClick(() => onGo(id))} className="t13-chip" title={it.hint}>
+                      <Icon aria-hidden /><span>{it.short || it.label}</span>
+                    </a>
+                  );
+                })}
+              </nav>
+            </section>
+            {hasAnyStudy && (
+              <section className="t13-box" aria-labelledby="t13-w-h">
+                <div className="t13-card-h">
+                  <h2 id="t13-w-h" className="t13-h">Bu hafta</h2>
+                  <span className="t13-meta">{week.streak > 1 ? `${week.streak} gün seri` : fmtMin(week.total)}</span>
+                </div>
+                <div className="t13-week" role="img" aria-label={`Bu haftaki çalışma süresi: ${week.days.map((d) => `${d.label} ${fmtMin(d.sec)}`).join(', ')}`}>
+                  {week.days.map((d) => (
+                    <div key={d.key} className={`t13-day ${d.isToday ? 'is-today' : ''} ${d.future ? 'is-future' : ''}`}>
+                      <span className="t13-day-bar" style={{ height: `${Math.max(4, Math.round((d.sec / week.max) * 100))}%` }} />
+                      <span className="t13-day-l">{d.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+          </aside>
+        </div>
+      </div>
+    );
+  }
 
   if (v12) {
     const rest = resume.slice(1);

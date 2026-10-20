@@ -8,6 +8,19 @@ yönetici onayından sonra yayınlanır.
 ## Girdiler (çalışma dizininde)
 
 - `kaynak.md` — PDF metni, `=== SAYFA n ===` işaretleriyle. **Tek bilgi kaynağın budur.**
+- `sayfalar.json` (varsa; 2026-10-20) — sayfa başına PDF'in metin dışı içeriği. **Resim, tablo ve hocanın vurgusu da
+  dersin parçasıdır; atlama:**
+  - `tablolar`: slayttaki tablolar satır/sütun hâlinde. Karşılaştırma ve sınıflama tablolarını destede tablo/çapraz
+    tablo ögesine, ders notunda Markdown tablosuna dönüştür (kaynak.md'de bu tablolar satırları birbirine karışmış hâlde
+    olabilir; yapıyı buradan al).
+  - `goruntu`: görsel ağırlıklı sayfanın PNG'si (`sayfa_goruntu/<n>.png`). Bu sayfaları **Read ile görüntü olarak aç**:
+    şekil alt yazısı, mikroskopi/makroskopi bulgusu, şema, akış, grafik ve slayttaki renkli/işaretli ifadeler sınavın
+    sık sorduğu yerlerdir (ör. "muskat karaciğeri"). Görselde gördüğün bilgiyi yalnız slaytta yazılı ya da açıkça
+    gösterilen kadarıyla kullan. Kanıt: sayfada metin varsa kaynak.md alıntısı; yalnız görselde görünen bilgi için
+    `kanit: {"sayfa": n, "gorsel": "görselde ne görüldüğü (≥4 kelime)"}` (yalnız `goruntu`'su olan sayfalar; denetleyici
+    başka sayfada reddeder, onay ekranında ayrıca listelenir).
+  - `vurgulu`: hocanın renkli/kalın yazdığı ifadeler (`renk`, `kalin`, `baslik`). Renkli ve kalın ifadeler spot/önem
+    adayıdır; önem sıralamasında yukarı al.
 - `baglam.json` — `mod`: `yeni` (yeni ders) ya da `guncelleme` (bu konunun destesi zaten var; aynı `deste_id` ile
   güncel PDF'ten baştan, eksiksiz bir paket üret — onaylanınca eskisinin yerini alır; değişenleri `rapor.md`'de özetle);
   ders programı eşleşmesi (kurul, ders, konu, öğretim üyesi, tarih, güven), önerilen kimlikler

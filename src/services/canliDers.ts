@@ -18,6 +18,7 @@ const P = {
   hizalama: (k: string) => path.join(KOK, 'hizalama', `${k}.json`),
   vurgu: (k: string) => path.join(KOK, 'vurgu', `${k}.json`),
   cumle: (k: string) => path.join(KOK, 'cumle_zaman', `${k}.json`),
+  isaret: (k: string) => path.join(KOK, 'isaret', `${k}.json`),
 };
 
 interface Ders { key: string; no: number; baslik: string; sira: number }
@@ -203,6 +204,13 @@ export function registerCanliDersRoutes(app: Express) {
       pdf,
       // önemli cümle/terim aralıkları (scripts/sesli_anlatim/vurgu_uret.py): { "<i>": [[bas, son, "c"|"t", onem]] }
       vurgu: oku<any>(P.vurgu(key), null)?.p || null,
+      // okunan cümlenin slayttaki satır/kelime/resim kutuları (scripts/sesli_anlatim/pdf_isaret.py); metin değiştiyse gönderilmez
+      isaret: (() => {
+        const is = oku<any>(P.isaret(key), null);
+        if (!is || !pdf) return null;
+        const h = crypto.createHash('sha1').update(pars.map((p) => p.t).join('\n')).digest('hex');
+        return is.metinHash === h ? is.c : null;
+      })(),
     });
   });
 }

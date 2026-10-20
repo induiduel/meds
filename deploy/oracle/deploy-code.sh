@@ -70,6 +70,21 @@ rsync -az --checksum --rsync-path='sudo rsync' --out-format='%i %n' \
 sed -n 's/^>f[^ ]* //p' "$CHANGED" > "$CHANGED.f" || true; mv "$CHANGED.f" "$CHANGED"
 echo "  $(wc -l < "$CHANGED") dosya aktarıldı"
 
+echo "==> [1b/4] sesli ders verisi (metin/hizalama/cumle_zaman/vurgu → Oracle data/sesli_anlatim)"
+# data/ yukarıda dışlanır; bu dört klasör metinle birlikte değişmezse canlıda paragraf/cümle zamanlaması ve PDF
+# eşlemesi kullanılamaz (2026-10-20: eski metin yüzünden 55 ses kaydı zamanlamasız kaldı). Ses dosyaları ve kayit.json
+# Oracle'da üretilip yönetildiği için gönderilmez. Commit'lenmemiş değişikliği olan klasör (başka oturumun yarım işi) atlanır.
+SA="data/sesli_anlatim"
+for k in metin hizalama cumle_zaman vurgu; do
+  [[ -d "$MEDS_DIR/$SA/$k" ]] || continue
+  if [[ -n "$(git -C "$MEDS_DIR" status --porcelain -- "$SA/$k" 2>/dev/null)" ]]; then
+    echo "  ATLANDI $k: commit'lenmemiş değişiklik var (önce commit edin)"; continue
+  fi
+  n=$(rsync -az --checksum --rsync-path='sudo rsync' --out-format='%i %n' -e "$SSH" \
+    "$MEDS_DIR/$SA/$k/" "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/$SA/$k/" | grep -c '^>f' || true)
+  echo "  $k: $n dosya"
+done
+
 if grep -qE '^(package(-lock)?\.json|deploy/oracle/(Dockerfile\.oracle|docker-compose\.oracle\.yml))$' "$CHANGED"; then DO_IMAGE=1; fi
 # Sunucunun belleğe aldığı her şey: dist/, public/, ön yüz bileşenleri, belgeler dışındaki her değişiklik
 NEED_RESTART=$FORCE

@@ -42,9 +42,32 @@ export interface PdfDocViewProps {
   thumbs?: boolean;
   /** Metin araması (≥2 harf); eşleşen sayfalar onSearch ile bildirilir, görünen sayfalarda vurgulanır */
   query?: string;
-  /** Okunan cümle: vurgulu sayfadaki metin katmanında kelime örtüşmesiyle hafifçe işaretlenir */
-  follow?: string;
+  /** Okunan cümlenin slayttaki karşılığı (önceden hizalanmış kutular, sayfa oranı 0–1): satırlar hafif, okunan kelime/resim lazerle */
+  marks?: PdfMarks | null;
   onSearch?: (r: { hits: PdfSearchHit[]; done: boolean } | null) => void;
+}
+
+export interface PdfMarks {
+  page: number;
+  kind: 'metin' | 'tablo' | 'resim' | 'sayfa';
+  /** satır / hücre / resim kutuları [x0, y0, x1, y1] */
+  lines: number[][];
+  /** şu an okunan kelimenin (ya da resmin) kutusu: lazer buraya gider */
+  focus?: number[] | null;
+}
+
+const pct = (b: number[]) => ({ left: `${b[0] * 100}%`, top: `${b[1] * 100}%`, width: `${(b[2] - b[0]) * 100}%`, height: `${(b[3] - b[1]) * 100}%` });
+
+/** Satırlar hafif zeminle, okunan kelime altı çizgiyle; lazer noktası kelimeden kelimeye kayar (resimde resmin üstünde durur). */
+function MarkLayer({ m }: { m: PdfMarks }) {
+  const f = m.focus;
+  return (
+    <div className={`pdv-marks is-${m.kind}`} aria-hidden>
+      {m.lines.map((b, i) => <span key={i} className="pdv-mark-line" style={pct(b)} />)}
+      {f && m.kind !== 'resim' && <span className="pdv-mark-word" style={pct(f)} />}
+      {f && <span className="pdv-laser" style={{ left: `${((f[0] + f[2]) / 2) * 100}%`, top: `${(m.kind === 'resim' ? (f[1] + f[3]) / 2 : f[3]) * 100}%` }} />}
+    </div>
+  );
 }
 
 export interface PdfSearchHit {
@@ -67,7 +90,7 @@ interface Slot {
   textFor?: number; // metin katmanı kuruldu (döndürme)
 }
 
-export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, follow = '' }: PdfDocViewProps) {
+export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null }: PdfDocViewProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null);
   const [sizes, setSizes] = useState<{ w: number; h: number }[]>([]);
@@ -79,8 +102,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
   const q = query.trim().length >= 2 ? norm(query.trim()) : '';
   const qRef = useRef(q);
   qRef.current = q;
-  const fRef = useRef({ page: 0, words: new Set<string>() });
-  fRef.current = { page: highlight ? highlight[0] : 0, words: followWords(follow) };
+
   const [progress, setProgress] = useState<number | null>(0);
   const slots = useRef(new Map<number, Slot>());
   const slotEls = useRef(new Map<number, HTMLDivElement>());
@@ -259,7 +281,6 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
           host.appendChild(div);
           slot.text = div;
           markHits(div, qRef.current);
-          if (n === fRef.current.page) markFollow(div, fRef.current.words);
         } catch {
           /* metinsiz sayfa */
         }
@@ -370,13 +391,6 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     el.scrollTop = t + a.frac * (ph + GAP);
   });
 
-  /* ---- okunan cümlenin slayttaki karşılığı ---- */
-  const followKey = fRef.current.page + '|' + [...fRef.current.words].join(' ');
-  useEffect(() => {
-    const { page: fp, words } = fRef.current;
-    for (const [n, s] of slots.current) if (s.text) markFollow(s.text, n === fp ? words : new Set());
-  }, [followKey]);
-
   /* ---- arama ---- */
   useEffect(() => {
     for (const s of slots.current.values()) if (s.text) markHits(s.text, q);
@@ -459,6 +473,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
               style={{ top: tops[i], width: s.w * sc, height: s.h * sc, ['--scale-factor' as any]: sc }}
             >
               {src && n === hs && <span className="pdv-src-tag">{highlightLabel}</span>}
+              {marks && marks.page === n && !rot && <MarkLayer m={marks} />}
               <span className="pdv-no" aria-hidden>{n}</span>
             </div>
           );
@@ -478,28 +493,6 @@ function markHits(layer: HTMLElement, q: string) {
     if (hit && !first) first = sp;
   });
   return first;
-}
-
-// Kelime kökü: Türkçe ekler için ilk 5 harf yeterince ayırt edici
-const stem = (w: string) => w.slice(0, 5);
-const STOP = new Set(['için', 'ancak', 'gibi', 'daha', 'olan', 'olarak', 'veya', 'yani', 'ise', 'ile', 'bir', 'her', 'bu', 'şu', 've', 'de', 'da']);
-function wordsOf(t: string) {
-  return (t.toLocaleLowerCase('tr').match(/[\p{L}\p{N}]+/gu) || []).filter((w) => w.length >= 3 && !STOP.has(w));
-}
-function followWords(t: string) {
-  return new Set(wordsOf(t).map(stem));
-}
-/** Satır, kelimelerinin yarısı (en az 1, uzun satırda 2) okunan cümlede geçiyorsa işaretlenir */
-function markFollow(layer: HTMLElement, words: Set<string>) {
-  layer.querySelectorAll<HTMLElement>('span').forEach((sp) => {
-    let on = false;
-    if (words.size && !sp.children.length) {
-      const ws = wordsOf(sp.textContent || '');
-      const hit = ws.filter((w) => words.has(stem(w))).length;
-      on = hit >= (ws.length > 3 ? 2 : 1) && hit / ws.length >= 0.5;
-    }
-    sp.classList.toggle('is-follow', on);
-  });
 }
 
 const THUMB_W = 92;

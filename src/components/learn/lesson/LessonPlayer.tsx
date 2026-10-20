@@ -107,6 +107,7 @@ import { ogrenTakipId } from '../../takip/ogrenTakipId';
 import type { IxResult } from './lessonModel';
 import { MetinAktarMenu } from '../../MetinAktarMenu';
 import type { AktarBelge } from '../../../services/metinDisaAktar';
+import { mdDuzenle } from '../../../services/maddeDuzen';
 
 type Layout = 'A' | 'B';
 
@@ -407,7 +408,7 @@ function ogrenAktarBelgesi(deck: InteractiveDeck): AktarBelge {
     bolumler: (deck.slides || [])
       .map((sl: any) => ({ sl, md: String(sl.synthesisNarrative || sl.content || '').trim() }))
       .filter((x) => x.md)
-      .map(({ sl, md }) => ({ baslik: `${sl.slideNumber}. ${String(sl.title || '').replace(/^\[[^\]]+\]\s*/, '')}`, alt: sl.subtitle || undefined, md })),
+      .map(({ sl, md }) => ({ baslik: `${sl.slideNumber}. ${String(sl.title || '').replace(/^\[[^\]]+\]\s*/, '')}`, alt: sl.subtitle || undefined, md: mdDuzenle(md) })),
   };
 }
 

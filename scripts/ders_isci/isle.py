@@ -18,7 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ayarlar import API, APP, CLAUDE_BIN, DATABASE, TASLAK, ayar, log, oku, yaz  # noqa: E402
-from cikar import pdf_metni  # noqa: E402
+from cikar import pdf_metni, sayfa_varliklari  # noqa: E402
 
 sys.path.insert(0, str(APP / "scripts" / "agents"))
 TALIMAT = Path(__file__).resolve().parent / "TALIMAT.md"
@@ -429,6 +429,13 @@ def _isle_tek(j: dict) -> dict:
             return {"durum": "hata", "mesaj": "PDF'ten okunabilir metin çıkmadı"}
         (d / "kaynak.md").write_text(metin, encoding="utf-8")
         yaz(d / "kaynak_bilgi.json", bilgi)
+    if not (d / "sayfalar.json").exists():
+        # tablolar, görsel ağırlıklı sayfa görüntüleri, hoca vurgusu (P2.1). Hata olursa metinle devam (eski davranış).
+        try:
+            v = sayfa_varliklari(Path(j["tam"]), d)
+            log(f"sayfa varlıkları: {v}")
+        except Exception as e:  # noqa: BLE001
+            log(f"sayfa varlıkları çıkarılamadı: {e}")
     if not (d / "baglam.json").exists():
         b = baglam_hazirla(j, d, (d / "kaynak.md").read_text(encoding="utf-8"), oku(d / "kaynak_bilgi.json", {}))
         log(f"bağlam: {b['ders_id']} · eşleşme {b['program'].get('guven')} ({b['program'].get('skor')}) · "

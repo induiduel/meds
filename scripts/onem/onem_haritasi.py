@@ -7,7 +7,8 @@ tekrar + yillar). Yöntem (yerel, CPU; bge-m3 servisi :8094):
   2. Her çıkmış (kökü genelse kök + tüm şıklarla) en benzer sayfaya (ve 0.92×en iyi üstündeki komşulara) bağlanır; bağ eşiği 0.55.
   3. Sayfa puanı = Σ çıkmış ağırlığı × benzerlik; ağırlık = soruldu sayısı (temsilci + tekrar) × yakınlık
      (son 3 yıl 1.0, 4–6 yıl 0.7, daha eski 0.5). 0–100'e ölçeklenir (dersin en yüksek sayfası 100).
-  4. Hocanın vurgusu: sayfada "önemli/dikkat/sık/mutlaka/sınav" geçerse +%10.
+  4. Hocanın vurgusu: sayfada "önemli/dikkat/sık/mutlaka/sınav" geçerse +%10; sayfalar.json varsa renkli/kalın ifade
+     sayısına göre en çok +%15.
 Çıktı: {"surum":1,"kod","sayfalar":[{"sayfa","puan","cikmis":[{"id","benzerlik","kez","yillar"}],"vurgu"}],
         "baglanamayan":[id…]}  — baglanamayan = PDF'te karşılığı bulunamayan çıkmışlar (müfredat dışı ya da eşleme hatası).
 Tüm üreticiler (spot/önem, çözücü, örnek soru, sesli metin vurgusu) bu haritayı girdi alır.
@@ -36,7 +37,7 @@ def yakinlik(yillar, simdi=2026):
     return 1.0 if fark <= 3 else 0.7 if fark <= 6 else 0.5
 
 
-def hesapla(md, cikmis, kod=""):
+def hesapla(md, cikmis, kod="", sayfa_vurgu=None):
     from lib import embed
     import numpy as np
     S = [(n, t) for n, t in sayfalar(md) if len(t) >= 40]
@@ -67,7 +68,11 @@ def hesapla(md, cikmis, kod=""):
                 b = float(B[i, j]); puan[j] += w * b
                 bag[j].append({"id": c["id"], "benzerlik": round(b, 3), "kez": kez, "yillar": c.get("yillar") or []})
     vurgu = [bool(VURGU.search(t)) for _, t in S]
-    puan = puan * np.array([1.1 if v else 1.0 for v in vurgu])
+    # hoca vurgusu: sözcük ("önemli", "dikkat" …) +%10; sayfalar.json'daki renkli/kalın ifade sayısı en çok +%15
+    sv = sayfa_vurgu or {}
+    carpan = [1 + (0.10 if v else 0) + 0.15 * min(1.0, sv.get(n, 0) / 8) for (n, _), v in zip(S, vurgu)]
+    vurgu = [v or sv.get(n, 0) >= 3 for (n, _), v in zip(S, vurgu)]
+    puan = puan * np.array(carpan)
     tepe = float(puan.max()) or 1.0
     out = [{"sayfa": n, "puan": round(100 * float(p) / tepe), "cikmis": sorted(b, key=lambda x: -x["benzerlik"]),
             "vurgu": v} for (n, _), p, b, v in zip(S, puan, bag, vurgu)]
@@ -77,8 +82,13 @@ def hesapla(md, cikmis, kod=""):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("kaynak"); ap.add_argument("cikmis"); ap.add_argument("--kod", default=""); ap.add_argument("--yaz")
+    ap.add_argument("--sayfalar", help="ders işçisinin sayfalar.json'u (renkli/kalın hoca vurgusu)")
     a = ap.parse_args()
-    h = hesapla(Path(a.kaynak).read_text(), json.loads(Path(a.cikmis).read_text()), a.kod)
+    sv = None
+    if a.sayfalar and Path(a.sayfalar).exists():
+        sv = {x["sayfa"]: sum(1 for v in x.get("vurgulu", []) if v["tur"] in ("renk", "kalin"))
+              for x in json.loads(Path(a.sayfalar).read_text())}
+    h = hesapla(Path(a.kaynak).read_text(), json.loads(Path(a.cikmis).read_text()), a.kod, sv)
     ust = sorted(h["sayfalar"], key=lambda s: -s["puan"])[:8]
     print(f"{a.kod}: {len(h['sayfalar'])} sayfa · {h.get('cikmis_sayisi', 0)} çıkmış · bağlanamayan {len(h['baglanamayan'])}")
     for s in ust:

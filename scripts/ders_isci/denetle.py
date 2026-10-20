@@ -57,6 +57,8 @@ class Denetim:
         self.sayilar: dict[str, int] = {}
         self.referanslar: list[str] = []
         self.sp = sayfalar((d / "kaynak.md").read_text(encoding="utf-8")) if (d / "kaynak.md").exists() else {}
+        _sv = json.loads((d / "sayfalar.json").read_text(encoding="utf-8")) if (d / "sayfalar.json").exists() else []
+        self.gorsel_sayfalar = {x["sayfa"] for x in _sv if x.get("goruntu")}
         # hafif revize (yalnız "ikisini tut" V2 destesi): ders notu, örnek soru, hastalık, bilgi havuzu üretilmez
         self.hafif = bool(json.loads((d / "baglam.json").read_text(encoding="utf-8")).get("hafif")) \
             if (d / "baglam.json").exists() else False
@@ -92,6 +94,19 @@ class Denetim:
                 return False
             self.sayilar["referans"] = self.sayilar.get("referans", 0) + 1
             self.referanslar.append(f"{yer}: {k['referans']}" + (f" ({k['neden']})" if k.get("neden") else ""))
+            return True
+        if isinstance(k, dict) and k.get("gorsel") and not k.get("alinti"):
+            # Görsel kanıt (2026-10-20): metni olmayan şekil/mikroskopi sayfası. Yalnız sayfalar.json'da görüntüsü
+            # çıkarılmış sayfa için geçerli; onay ekranı ve raporda ayrıca listelenir.
+            s = int(k.get("sayfa") or 0)
+            if s not in self.gorsel_sayfalar:
+                self.hata(f"{yer}: görsel kanıt s.{s} için sayfa görüntüsü yok (sayfalar.json)")
+                return False
+            if len(str(k["gorsel"]).split()) < 4:
+                self.hata(f"{yer}: görsel kanıtta görüleni en az 4 kelimeyle yaz")
+                return False
+            self.sayilar["gorsel_kanit"] = self.sayilar.get("gorsel_kanit", 0) + 1
+            self.referanslar.append(f"{yer}: görsel s.{s} — {str(k['gorsel'])[:100]}")
             return True
         if not isinstance(k, dict) or not k.get("alinti"):
             if zorunlu:

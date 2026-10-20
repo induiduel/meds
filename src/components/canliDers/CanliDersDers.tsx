@@ -373,20 +373,19 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
       t = 0;
       const r = el.getBoundingClientRect();
       const top = r.top + window.scrollY; // belge konumu: sayfa en üstteyken görünür üst kenar
-      let alt = window.visualViewport?.height || window.innerHeight;
-      const dock = document.querySelector<HTMLElement>('.cd-dock');
-      if (dock && getComputedStyle(dock).display !== 'none') {
-        const dr = dock.getBoundingClientRect();
-        if (dr.height > 0 && dr.top < alt) alt = Math.min(alt, dr.top);
-      }
-      const tabs = document.querySelector<HTMLElement>('.s12-tabs, .sh-tabs');
-      if (tabs && getComputedStyle(tabs).display !== 'none') {
-        const tr = tabs.getBoundingClientRect();
-        if (tr.height > 0 && tr.top < alt) alt = Math.min(alt, tr.top);
+      // Bölmeler görünür alanın altına kadar uzanır; oynatıcı ve alt gezinme üstlerinde yüzen kart olarak durur.
+      // Kartların kapladığı alt şerit kayan alanlara iç boşluk (--cd-ortu) olarak verilir: son satır kartın üstüne gelir.
+      const ekranAlt = window.visualViewport?.height || window.innerHeight;
+      let ust = ekranAlt;
+      for (const sel of ['.cd-dock', '.s12-tabs, .sh-tabs', '.a13-island-wrap']) {
+        const k = document.querySelector<HTMLElement>(sel);
+        if (!k || getComputedStyle(k).display === 'none') continue;
+        const kr = k.getBoundingClientRect();
+        if (kr.height > 0 && kr.top < ust) ust = kr.top;
       }
       const z = elementZoom(el) || 1;
-      // Telefon yatayda (390 px) 320 alt sınırı bölmeyi oynatıcının altına itiyordu
-      setYuk(Math.max(180, (alt - Math.max(0, top) - 10) / z));
+      el.style.setProperty('--cd-ortu', `${Math.max(0, Math.round((ekranAlt - ust) / z))}px`);
+      setYuk(Math.max(180, (ekranAlt - Math.max(0, top) - 8) / z));
     };
     const plan = () => { if (!t) t = window.setTimeout(olc, 30); };
     olc();

@@ -25,6 +25,8 @@ import {
 import { KonuDugmeleri, KonuSureEtiketi } from '../takip/KonuTakip';
 import { ogrenTakipId } from '../takip/ogrenTakipId';
 import '../../styles/v12/learn-library.css';
+import '../../styles/v13/learn.css';
+import { useAppearance } from '../../utils/appearance';
 import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 
 export interface LearnLibraryV12Props {
@@ -61,7 +63,8 @@ const ago = (t?: number) => {
 };
 
 const Prog: React.FC<{ pct: number; done?: boolean }> = ({ pct, done }) => (
-  <span className="l12-prog">
+  // v13: yüzde halkası (styles/v13/learn.css); v12: yüzde + ince çubuk
+  <span className="l12-prog" style={{ '--p': pct } as React.CSSProperties} data-done={done ? '' : undefined}>
     <span className="l12-pct">{pct}%</span>
     <span className="l12-bar" aria-hidden><i className={done ? 'is-done' : ''} style={{ width: `${pct}%` }} /></span>
   </span>
@@ -69,6 +72,7 @@ const Prog: React.FC<{ pct: number; done?: boolean }> = ({ pct, done }) => (
 
 export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen, versions, onOpenReview, onRestart }) => {
   const review = useReviewCounts();
+  const v13 = !!useAppearance().v13;
   const [input, setInput] = useState('');
   const query = useDeferredValue(input);
   const [branch, setBranch] = useState('all');
@@ -285,7 +289,7 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
   };
 
   return (
-    <div className="l12">
+    <div className={`l12${v13 ? ' l13' : ''}`}>
       <header className="l12-head">
         <h1 className="l12-h1">Etkileşimli dersler</h1>
         <span className="l12-head-m">
@@ -330,7 +334,7 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
               ),
             }} />
           )}
-          {branches.length > 1 && (
+          {!v13 && branches.length > 1 && (
             <QuickPill q={{
               id: 'ders',
               label: 'Ders',
@@ -365,6 +369,16 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
           <button type="button" role="radio" aria-checked={view === 'grid'} aria-label="Izgara görünümü" title="Izgara" onClick={() => setView('grid')}><LayoutGrid aria-hidden /></button>
         </div>
       </div>
+
+      {v13 && branches.length > 1 && (
+        <div className="l13-branches" role="radiogroup" aria-label="Ders dalı">
+          {[['all', scoped.length] as [string, number], ...branches].map(([g, n]) => (
+            <button key={g} type="button" role="radio" aria-checked={branch === g} className="l13-branch" onClick={() => setBranch(g)}>
+              {g === 'all' ? 'Tüm dersler' : g}<span className="l13-branch-n">{n}</span>
+            </button>
+          ))}
+        </div>
+      )}
 
       {!filtered && resume.length > 0 && (
         <section className="l12-panel" aria-labelledby="l12-cont-h">

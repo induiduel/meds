@@ -861,3 +861,12 @@
 :root[data-mode="dark"] .cd-liste .cd-devam { background: color-mix(in srgb, var(--color-accent) 16%, var(--color-white)); color: var(--color-ink); border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent); }
 :root[data-mode="dark"] .cd-liste .cd-devam small { color: var(--color-ink-3); }
 :root[data-mode="dark"] .cd-liste .cd-devam .cd-ilerleme { background: color-mix(in srgb, var(--color-ink) 18%, transparent); }
+
+/* Tam ekranda oynatıcı yüzen karttır: altta boş bant ayırmaz; metin ve PDF kartın altından kayar, son satırlar da
+ * kartın üstüne gelebilsin diye kayan alanların içine kart yüksekliği kadar alt boşluk verilir. */
+:root.cd-tam-oynatici .cd-ders.is-tam { padding-bottom: 0; }
+:root.cd-tam-oynatici .cd-ders.is-tam :is(.cd-metin, .pdv) {
+  padding-bottom: calc(var(--cd-dock-h, 0px) + 20px);
+  scroll-padding-bottom: calc(var(--cd-dock-h, 0px) + 20px);
+}
+:root.cd-tam-oynatici .cd-dock > * { box-shadow: 0 14px 40px -12px rgb(16 24 40 / .32), 0 0 0 1px var(--color-line); }

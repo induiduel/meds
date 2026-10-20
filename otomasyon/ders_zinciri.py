@@ -51,9 +51,11 @@ def yayinlar():
 def kaynak_getir(pk):
     """Paketin kaynak.md'si cihazda yoksa Oracle'dan (aynı göreli yol) çekilir."""
     p = KOK / pk["kaynak_md"]
-    if not p.exists():
+    if not p.exists() or not (p.parent / "sayfalar.json").exists():
+        # yayımlanan taslağın tamamı: kaynak.md + sayfalar.json + sayfa_goruntu/ (yazar Claude görselleri de okur)
         p.parent.mkdir(parents=True, exist_ok=True)
-        subprocess.run(["rsync", "-az", f"medsor-oracle:/home/ubuntu/medsor/{pk['kaynak_md']}", str(p)], timeout=120)
+        subprocess.run(["rsync", "-az", f"medsor-oracle:/home/ubuntu/medsor/{Path(pk['kaynak_md']).parent}/", f"{p.parent}/"],
+                       timeout=300)
     return p
 
 
@@ -138,7 +140,8 @@ def a_hazirla(d, pk, W, kuru):
     # Önem haritası: sayfa başına sınava konu olma puanı (çıkmış benzerliği × sıklık × yakınlık) → tüm üreticilere girdi
     return calistir([str(MEDS / ".venv-ocr/bin/python"), str(MEDS / "scripts/onem/onem_haritasi.py"),
                      str(W / "pdf_metin" / f"{kod}.md"), str(W / "cikmis" / f"{kod}.json"), "--kod", kod,
-                     "--yaz", str(W / "onem_haritasi" / f"{kod}.json")])
+                     "--yaz", str(W / "onem_haritasi" / f"{kod}.json"),
+                     "--sayfalar", str(kaynak.parent / "sayfalar.json")])
 
 
 def a_onem(d, pk, W, kuru):
@@ -148,6 +151,8 @@ def a_onem(d, pk, W, kuru):
         f"{d['brans']}). Yalnız ders kodu {k}: girdi/{k}.json, cikmis/{k}.json, pdf_metin/{k}.md → onem/{k}.json. "
         f"onem_haritasi/{k}.json her sayfanın çıkmış sorularla örtüşme puanını (0–100) ve bağlı çıkmışları verir: madde "
         f"puanlarını ve sırasını buna dayandır; puanı yüksek sayfaların bilgisi mutlaka madde olsun. "
+        f"Ders klasöründeki sayfalar.json'da tablolar, hoca vurgusu ve görsel sayfa görüntüleri (sayfa_goruntu/) var: "
+        f"{(KOK / pk['kaynak_md']).parent}/ — görsel ağırlıklı sayfaları Read ile görüntü olarak aç. "
         f"Kurul 2 kuralları: {MEDS}/docs/KURUL2_YAPILMAYACAK_HATALAR.md, TURKCE_USLUP_STANDARDI.md, SIK_ACIKLAMA_STANDARDI.md.",
         f"python3 {SC}/onem_dogrula.py {W}/onem/{k}.json", W, kuru)
 
