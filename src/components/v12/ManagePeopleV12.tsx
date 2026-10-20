@@ -182,7 +182,7 @@ export const ManagePeopleV12: React.FC<Props> = (p) => {
       render: (r) => (
         <span className="m12-user" style={{ pointerEvents: 'none' }}>
           <Avatar name={r.name} photo={r.photoURL} online={r.online} />
-          <span className="tx">
+          <span className="m12-user-tx">
             <span className="nm m12-clamp1">{r.name}</span>
             <span className="em m12-clamp1">{[r.email, r.studentNumber && `No ${r.studentNumber}`].filter(Boolean).join(' · ') || 'Girişsiz cihaz'}</span>
           </span>

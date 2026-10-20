@@ -1640,7 +1640,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
             return (
               <button key={t.id} type="button" className={`ls-tile ${infoSheet === t.id ? 'is-on' : ''}`} onClick={() => setInfoSheet((v) => (v === t.id ? null : t.id))} aria-expanded={infoSheet === t.id}>
                 <span className={`ico is-${t.id === 'spot' ? 'warn' : t.id === 'kaz' ? 'ok' : t.id === 'src' ? 'plain' : 'accent'}`}><t.icon aria-hidden /></span>
-                <span className="tx"><b>{t.label}{t.id !== 'src' ? ` · ${t.count}` : ''}</b><small>{stripEmoji(String(first || '')).replace(/^\[?[A-ZÇĞİÖŞÜ ]{4,}\]?\s*:?\s*/, '')}</small></span>
+                <span className="row-tx"><b>{t.label}{t.id !== 'src' ? ` · ${t.count}` : ''}</b><small>{stripEmoji(String(first || '')).replace(/^\[?[A-ZÇĞİÖŞÜ ]{4,}\]?\s*:?\s*/, '')}</small></span>
               </button>
             );
           })}

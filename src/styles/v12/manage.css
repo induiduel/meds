@@ -282,7 +282,7 @@
     display: flex; align-items: center; gap: 9px; min-width: 0; max-width: 280px; padding: 0; border: 0; background: transparent;
     font: inherit; color: inherit; text-align: left; cursor: pointer; border-radius: 6px;
   }
-  & .m12-user .tx { display: flex; flex-direction: column; min-width: 0; }
+  & .m12-user .m12-user-tx { display: flex; flex-direction: column; min-width: 0; }
   & .m12-user .nm { font-weight: 500; font-size: 13px; color: var(--color-ink); }
   & .m12-user .em { font-size: 12px; color: var(--color-ink-3); }
   & .m12-user:hover .nm { text-decoration: underline; text-underline-offset: 3px; }

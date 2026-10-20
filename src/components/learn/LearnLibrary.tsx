@@ -343,7 +343,7 @@ export const LearnLibrary: React.FC<{
       {onOpenReview && review.total.open > 0 && (
         <button type="button" className="lr-due-card" onClick={() => onOpenReview()}>
           <span className="ico"><RotateCcw aria-hidden /></span>
-          <span className="tx">
+          <span className="row-tx">
             <b>{review.total.due > 0 ? `Bugün ${review.total.due} öge tekrar zamanı` : 'Hata defteri'}</b>
             <small>{review.total.due > 0 ? `~${Math.max(1, Math.round(review.total.due * 0.5))} dk · derste yanlış yaptıkların aralıklarla geri gelir` : `${review.total.open} öge defterde; vadeleri henüz gelmedi`}</small>
           </span>
