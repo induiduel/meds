@@ -231,6 +231,33 @@ def korumali(klasorler, is_):
     return r
 
 
+def kopya_tutarliligi(W_ad, kod):
+    """H7: aynı soru (aynı kök) önem listesinde ve çözücüde farklı doğru cevapla duramaz (düzeltme tek kopyada kalmış).
+    Döner: uyuşmazlık listesi (boşsa tutarlı)."""
+    def n(t):
+        return re.sub(r"\s+", " ", re.sub(r"[^\w\s]", " ", str(t or "").casefold())).strip()
+    oy, cy = MEDS / "src/data" / f"{W_ad}_onem" / f"{kod}.json", MEDS / "src/data" / f"{W_ad}_cozucu"
+    if not oy.exists():
+        return []
+    o = json.loads(oy.read_text())
+    kaynak = {}  # kök → (doğru harf, doğru metin, nereden)
+    for i, c in (o.get("cikmis") or {}).items():
+        kaynak[n(c.get("kok"))] = (c.get("dogru"), n((c.get("secenekler") or {}).get(c.get("dogru"))), f"önem çıkmış {i}")
+    for m in o.get("maddeler") or []:
+        for q in m.get("ornek26") or []:
+            kaynak.setdefault(n(q.get("kok")), (q.get("dogru"), n((q.get("secenekler") or {}).get(q.get("dogru"))), f"önem örnek {m.get('id')}"))
+    sorun = []
+    for f in sorted(cy.glob(f"{kod}*.json")):
+        for q in json.loads(f.read_text()).get("sorular") or []:
+            k = kaynak.get(n(q.get("soru")))
+            if not k:
+                continue
+            dm = n((q.get("secenekler") or {}).get(q.get("dogru")))
+            if k[1] and dm and k[1] != dm:  # harf karışık olabilir (şık sırası); doğru şık METNİ aynı olmalı
+                sorun.append(f"{k[2]} ↔ çözücü no {q.get('no')}: doğru şık farklı ({k[0]} '{k[1][:40]}' / {q.get('dogru')} '{dm[:40]}')")
+    return sorun
+
+
 def a_birlestir(d, pk, W, kuru):
     if kuru:
         return calistir(f"python3 {SC}/birlestir.py {W.name} --taslak", kuru=True)
@@ -241,6 +268,9 @@ def a_birlestir(d, pk, W, kuru):
     # --taslak hatalı dersi atlayıp 0 döner: bu dersin çıktısı gerçekten yazıldı mı?
     if not (MEDS / "src/data" / f"{W.name}_onem" / f"{d['kod']}.json").exists():
         print(f"   birleştirme {d['kod']} önem çıktısını yazmadı"); return 9
+    tut = kopya_tutarliligi(W.name, d["kod"])
+    if tut:
+        print("   HATA (H7) aynı soru ürünler arasında farklı:", *tut[:8], sep="\n     "); return 13
     # "Öğren'de bu bilgi": çözücü/asistan ↔ Öğren adımı eşlemesi (tüm branşlar, ~3 sn)
     return calistir(f"python3 {SC}/ogren_esle.py", cwd=MEDS)
 

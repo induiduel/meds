@@ -82,7 +82,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 
 ### H7 — Düzeltme tek kopyada kalıyor (çözücüde düzeltilen soru spot/asistan/örnekte eski)
 - **Kural:** soru kimliği tek; denetçi düzeltmesi tüm kopyalara yayılır.
-- **Kapı — AÇIK:** birleştirme sonrası kimlik başına kök + doğru şık karşılaştırması (plan P2).
+- **Kapı — EKLENDİ:** `ders_zinciri.kopya_tutarliligi` (birleştirme sonrası): aynı kökteki soru önem listesi (çıkmış +
+  örnek) ile çözücüde farklı doğru şık METNİYLE duramaz (harf farkı serbest: şık sırası değişebilir) → kod 13. K1'in 6
+  branşında 0 yanlış pozitif; sahte uyuşmazlık yakalandı.
 
 ### H8 — Aynı PDF iki ders / yanlış PDF eşleşmesi
 - **Kural:** PDF içerikle tanınır; mevcut dersle yüksek sayfa örtüşmesinde yeni ders açılmaz ("tekrar/kısım").
