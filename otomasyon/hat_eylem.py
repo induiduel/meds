@@ -6,7 +6,12 @@ Ağır iş istek içinde yapılmaz; bu betik işleri sırayla, tek kopya (flock)
 Eylemler (yalnız Kurul 2+ ders zinciri; Kurul 1 otomatik hatta değildir):
   surdur   ders_zinciri.py --ders <id>                 takılan/bekleyen adımdan devam (geri çekilme yok sayılır)
   denetci  ders_zinciri.py --ders <id> --adim denetim  bağımsız denetçi yeniden; geçerse sonraki adımlar yeniden çalışır
-  bastan   ara çıktılar meds_temp/spot_cozucu/<brans>/_eski/<kod>-<zaman>-bastan/, durum dosyası dersler/_eski/'ye
+  bastan   1) Oracle ders işçisi: dersin son taslağının kuyruk işi POST /kuyruk/<is>/yeniden-uret ile yeniden kuyruğa
+           (aynı PDF yeniden okunur, paket baştan üretilir; yayımlanmışsa yeni kimlikli iş, eski taslak kalır) →
+           işçi durumu (GET /kuyruk, /taslaklar) 60 sn'de bir yoklanır: taslak çıkıp yayinla.py "yayinlandi" yazana dek
+           (en çok ISCI_BEKLE_SN = 8 sa). Takılırsa (hata, reddedildi, onay bekliyor, yayın denetimi, zaman aşımı) cihaz
+           zinciri çalışmaz, kod 20–25. İşçiye ssh medsor-oracle + docker exec meds-ders-isci ile 127.0.0.1:8095'ten gidilir.
+           2) cihaz: ara çıktılar meds_temp/spot_cozucu/<brans>/_eski/<kod>-<zaman>-bastan/, durum dosyası dersler/_eski/'ye
            kopyalanır, onay düşer, zincir 1. adımdan (hazirla) çalışır. Kaynak değişince yapılanın aynısı.
   cek      yayından çekme: kod onayli.json'dan çıkar → birlestir.py / asistan_birlestir.py yeniden (yalnız onaylılar
            yayına girer) → src/data/<brans>_{onem,cozucu,asistan} öncesi meds_temp/hat/yayindan_cekilen/<id>-<zaman>/
@@ -27,6 +32,22 @@ CEKILEN = KOK / "meds_temp/hat/yayindan_cekilen"
 SC = MEDS / "scripts/spot_cozucu"
 sys.path.insert(0, str(MEDS / "otomasyon"))
 import ders_zinciri as DZ  # noqa: E402
+
+ISCI_BEKLE_SN = 8 * 3600; ISCI_YOKLA_SN = 60
+# İşçi iç API'sine (yalnız compose iç ağı) konteyner içinden istek: stdin'den betik, çıktı tek satır JSON
+ISCI_PY = """
+import json, sys, urllib.request as u
+y, g = sys.argv[1], sys.argv[2]
+r = u.Request("http://127.0.0.1:8095" + y, data=None if g == "-" else g.encode(), method="GET" if g == "-" else "POST",
+              headers={"Content-Type": "application/json"})
+try:
+    with u.urlopen(r, timeout=30) as x: print(json.dumps({"kod": x.status, "veri": json.loads(x.read() or b"null")}))
+except u.HTTPError as e:
+    b = e.read()
+    try: v = json.loads(b)
+    except Exception: v = {"hata": b.decode(errors="replace")[:300]}
+    print(json.dumps({"kod": e.code, "veri": v}))
+"""
 
 SONRAKI = {"denetim": ["birlestir", "asistan", "ses", "oracle"]}
 
@@ -83,7 +104,71 @@ def e_denetci(d, kuru):
     return zincir(d, kuru=kuru)
 
 
+def isci(yol, govde=None):
+    """Oracle ders işçisi iç API'si. Dönüş (http_kod, veri); ulaşılamazsa (0, {"hata": ...})."""
+    try:
+        r = subprocess.run(["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=15", "medsor-oracle", "docker", "exec", "-i",
+                            "meds-ders-isci", "python3", "-", yol, "-" if govde is None else
+                            "'" + json.dumps(govde, ensure_ascii=False).replace("'", "") + "'"],
+                           input=ISCI_PY, capture_output=True, text=True, timeout=90)
+        x = json.loads(r.stdout.strip().splitlines()[-1])
+        return x["kod"], x["veri"]
+    except Exception as e:  # noqa: BLE001
+        return 0, {"hata": f"ders işçisine ulaşılamadı: {e!r}"[:300]}
+
+
+def isci_yeniden_uret(d, kuru):
+    """Adım 1: işçide PDF'ten yeniden üretim + tamamlanmayı bekleme. 0 = yeni paket yayında."""
+    k, taslaklar = isci("/taslaklar")
+    if k != 200:
+        print("   ders işçisi okunamadı:", taslaklar); return 20
+    onek = d["id"] + "-"
+    bu = sorted((t for t in taslaklar if str(t.get("ders_id") or "").startswith(onek)), key=lambda t: t.get("zaman") or 0)
+    if not bu:
+        print("   işçide bu dersin taslağı yok (PDF henüz işlenmedi); baştan üretilecek bir şey yok"); return 21
+    son = bu[-1]["is_id"]; ana = son.rsplit("-", 1)[0] if son.count("-") > 1 else son
+    print(f"   işçi: son taslak {son} ({bu[-1].get('durum')}), kuyruk işi {ana}", flush=True)
+    if kuru:
+        print(f"   (kuru) POST /kuyruk/{ana}/yeniden-uret {{hemen: true}} → işçi durumu {ISCI_YOKLA_SN} sn'de bir yoklanır "
+              f"(en çok {ISCI_BEKLE_SN // 3600} sa) → taslak yayinlandi olunca cihaz zinciri")
+        return 0
+    k, v = isci(f"/kuyruk/{ana}/yeniden-uret", {"hemen": True, "kim": "hat_eylem"})
+    if k == 404 and ("yol yok" in str(v) or "taslak yok" in str(v)):
+        print("   işçide yeniden üretim ucu yok (scripts/ders_isci/api.py Oracle'a dağıtılmadı)"); return 20
+    if k != 200:
+        print(f"   işçi isteği reddetti ({k}):", (v or {}).get("hata", v)); return 20
+    yid = v["is_id"]
+    print(f"   işçi yeniden üretimi kuyruğa aldı: {yid} (önceki {v.get('onceki')}; hemen başladı: {v.get('basladi')})", flush=True)
+    bas = time.time(); son_not = None
+    while time.time() - bas < ISCI_BEKLE_SN:
+        time.sleep(ISCI_YOKLA_SN)
+        k1, kuyruk = isci("/kuyruk"); k2, ts = isci("/taslaklar")
+        if k1 != 200 or k2 != 200:
+            print(f"   {simdi()} işçi okunamadı, sürüyor", flush=True); continue
+        j = next((x for x in kuyruk if x.get("is_id") == yid), None) or {}
+        tt = [t for t in ts if t["is_id"] == yid or t["is_id"].startswith(yid + "-")]
+        yd = [(t.get("yayin") or {}).get("durum") for t in tt]
+        notu = f"kuyruk={j.get('durum')} taslaklar=" + ",".join(f"{t['is_id'][-4:]}:{t.get('durum')}/{y or '-'}" for t, y in zip(tt, yd))
+        if notu != son_not:
+            print(f"   {simdi()} {notu} {(j.get('son_mesaj') or '')[:120]}", flush=True); son_not = notu
+        if j.get("durum") == "hata":
+            print("   işçi 3 denemede de üretemedi"); return 22
+        if any(t.get("durum") == "reddedildi" for t in tt) or "denetim_hatasi" in yd:
+            print("   yeni taslak reddedildi ya da yayın denetimine takıldı"); return 23
+        if j.get("durum") == "taslak" and tt and any(t.get("durum") == "onay_bekliyor" and not t.get("karar") for t in tt) \
+                and time.time() - bas > 1800:
+            print("   yeni taslak otomatik onaylanmadı, yönetici onayı bekliyor (Yönetim › Ders işçisi)"); return 24
+        if j.get("durum") == "taslak" and tt and all(y == "yayinlandi" for y in yd):
+            print(f"   yeni paket yayında ({time.time() - bas:.0f} sn)"); return 0
+    print(f"   işçi {ISCI_BEKLE_SN // 3600} saatte bitirmedi (zaman aşımı)"); return 25
+
+
 def e_bastan(d, kuru):
+    r = isci_yeniden_uret(d, kuru)
+    if r:
+        return r
+    while not kuru and gece_calisiyor():  # uzun bekleme sırasında gece hattı başladıysa çakışma yok
+        print("   gece hattı çalışıyor; cihaz zinciri için bekleniyor", flush=True); time.sleep(60)
     W = DZ.W0 / DZ.brans_klasoru(d); kod = d["kod"]; ts = f"{dt.datetime.now():%Y%m%d%H%M%S}"
     eski = W / "_eski" / f"{kod}-{ts}-bastan"
     for alt in ("onem", "cozucu", "denetim", "asistan/cikti", "onem_haritasi", "cikmis", "girdi"):

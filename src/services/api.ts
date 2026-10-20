@@ -8,6 +8,7 @@ import { pastQuestionsCache } from './pastQuestionsCache';
 import { offlineDatabaseService } from './offlineDatabaseService';
 import { collection, addDoc } from 'firebase/firestore';
 import { ADMIN_EMAIL, getLocalAdminSession } from './auth';
+import { attachModeratorToken, isModeratorMode } from './moderatorSession';
 import { defaultApiBaseForThisHost, panelApiBase, PANEL_ON_ORACLE_AT_BOOT } from '../config/deployment';
 import { clientCache } from './clientCache';
 import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
@@ -305,6 +306,7 @@ export async function safeJsonFetch<T = any>(
       }
     }
     const resolvedUrlString = typeof resolvedInput === 'string' ? resolvedInput : String(resolvedInput);
+    await attachModeratorToken(resolvedUrlString, headers);
     const storedEtagEntry = method === 'GET' ? clientCache.getStoredETag(resolvedUrlString) : null;
     if (storedEtagEntry?.etag && !headers.has('If-None-Match')) {
       headers.set('If-None-Match', storedEtagEntry.etag);
@@ -1794,7 +1796,7 @@ export const ApiService = {
 
   // Admin endpoints
   async adminUpdateQuestion(adminEmail: string, id: string, updated: Partial<QuestionItem>): Promise<QuestionItem> {
-    if (adminEmail !== ADMIN_EMAIL) {
+    if (adminEmail !== ADMIN_EMAIL && !isModeratorMode()) {
       throw new Error('Yetkisiz işlem: Soru düzenleme yetkisi yalnızca sistem yöneticisine aittir.');
     }
     // Soru bu tarayıcının yerel kopyasında olmayabilir (yalnız sunucudan yüklenmiş): eskiden burada
@@ -1828,7 +1830,7 @@ export const ApiService = {
   },
 
   async adminUpdatePastQuestion(adminEmail: string, id: string, updated: any): Promise<any> {
-    if (adminEmail !== ADMIN_EMAIL) {
+    if (adminEmail !== ADMIN_EMAIL && !isModeratorMode()) {
       throw new Error('Yetkisiz işlem: Çıkmış soru düzenleme yetkisi yalnızca sistem yöneticisine aittir.');
     }
     const merged = { ...updated, id, updatedAt: new Date().toISOString() };
@@ -2024,7 +2026,7 @@ export const ApiService = {
     satelliteIds: string[],
     adminName: string = 'Yönetici'
   ): Promise<QuestionItem> {
-    const isAuth = !adminEmail || adminEmail.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
+    const isAuth = !adminEmail || adminEmail.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase() || isModeratorMode();
     if (!isAuth) {
       throw new Error('Yetkisiz işlem: Taslak birleştirme yetkisi yalnızca sistem yöneticisine aittir.');
     }

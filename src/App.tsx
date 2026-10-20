@@ -1,3 +1,4 @@
+import { fetchMyAccess, setModeratorMode } from './services/moderatorSession';
 import { getAppearance } from './utils/appearance';
 import React, { useState, useEffect, useMemo, useCallback, useRef, Suspense } from 'react';
 import { startLiveDataSync } from './services/liveDataSync';
@@ -842,6 +843,25 @@ export default function App() {
   const currentCommittee = (committees || []).find((c) => c.id === selectedCommitteeId);
   const targetCount = currentCommittee?.targetCount || 100;
   const isAdmin = isAdminUser(currentUser);
+  // Moderatör: rol sunucudan (GET /api/me/access, Firebase jetonu) öğrenilir; yalnız moderasyon bölümleri açılır
+  const [isModerator, setIsModerator] = useState(false);
+  useEffect(() => {
+    let cancelled = false;
+    if (!currentUser || isAdmin) {
+      setIsModerator(false);
+      setModeratorMode(false);
+      return;
+    }
+    void fetchMyAccess().then((a) => {
+      if (cancelled) return;
+      const on = !!a && a.role !== 'student' && !a.suspended;
+      setModeratorMode(on);
+      setIsModerator(on);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [currentUser?.uid, isAdmin]);
 
   // Hoş geldin turu: kayıt/girişten sonra bir kez (profilde `medsoru_tour_v1`); Ayarlar'dan `medsoru:tour` ile yeniden
   const [showTour, setShowTour] = useState(false);
@@ -1490,13 +1510,14 @@ export default function App() {
           </Suspense>
         </main>
       ) : activeTab === 'manage' || activeTab === 'admin' ? (
-        isAdmin ? (
+        isAdmin || isModerator ? (
           <Suspense fallback={<ViewFallback />}>
             <ManageConsole
+              moderatorOnly={!isAdmin}
               key={activeTab}
               entry={activeTab === 'admin' ? 'admin' : 'manage'}
               initialSlug={parseLocation().param}
-              adminEmail={ADMIN_EMAIL}
+              adminEmail={isAdmin ? ADMIN_EMAIL : currentUser?.email || ''}
               committees={committees}
               questions={questions}
               selectedCommitteeId={selectedCommitteeId}
@@ -1513,7 +1534,7 @@ export default function App() {
                 <ShieldCheck className="w-6 h-6" />
               </span>
               <h1 className="m-0 font-display font-bold text-2xl tracking-[-0.02em]">Yönetim Konsolu</h1>
-              <p className="m-0 text-md text-ink-2">Bu konsol yalnızca yöneticilere açık. Devam etmek için yönetici hesabıyla giriş yap.</p>
+              <p className="m-0 text-md text-ink-2">Bu konsol yalnızca yöneticilere ve moderatörlere açık. Devam etmek için yetkili hesabınla giriş yap.</p>
               <div className="flex gap-2 pt-1">
                 <button
                   type="button"

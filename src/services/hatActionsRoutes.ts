@@ -6,6 +6,9 @@
  *   GET  /api/admin/hat/eylemler              — son eylem işleri (yoklama)
  *   POST /api/admin/hat/eylem                 — {eylem: surdur|bastan|denetci|cek, dersler: [id], onay?, kuru?}
  *   POST /api/admin/hat/eylem/:is/iptal       — sırada bekleyen işi iptal
+ *   GET  /api/admin/hat/gece                  — gece hattı birimi (meds-hat-gece.service) çalışıyor mu
+ *   POST /api/admin/hat/gece/calistir         — {onay: true} gece hattını şimdi başlat (zamanlayıcının birimi; çalışıyorsa
+ *                                               ya da ders eylemi işleyicisi sürüyorsa 409)
  *
  * Aşamalar ve kaynakları (gerçek dosyalardan):
  *   isci, yayin  — Oracle ders işçisi: taslak/<is>/{baglam,durum,denetim,yayin,karar}.json + kuyruk.json + yayin_kaydi.json
@@ -309,5 +312,37 @@ export function registerHatActionRoutes(app: Express, deps: { rootDir: string; r
     if (j.durum !== 'bekliyor') return res.status(409).json({ error: 'Yalnız sırada bekleyen iş iptal edilir.' });
     fs.writeFileSync(p, JSON.stringify({ ...j, durum: 'iptal', bitis: new Date().toISOString() }, null, 1));
     res.json({ success: true });
+  });
+  // ── Gece hattı: "Şimdi çalıştır" (zamanlayıcının birimiyle aynı; Type=oneshot → çalışırken ActiveState=activating) ──
+  const GECE_BIRIM = 'meds-hat-gece.service';
+  const geceDurum = async () => {
+    const r = await calistir('systemctl', ['--user', 'show', GECE_BIRIM, '-p', 'ActiveState,SubState,Result,ExecMainStartTimestamp,ExecMainExitTimestamp'], 5000);
+    const v: Record<string, string> = Object.fromEntries(r.out.split('\n').filter((l) => l.includes('=')).map((l) => [l.slice(0, l.indexOf('=')), l.slice(l.indexOf('=') + 1)]));
+    const tarih = (x?: string) => { const t = x ? Date.parse(x.replace(/^\w+ /, '').replace(/ [A-Z+0-9]+$/, '')) : NaN; return Number.isFinite(t) ? new Date(t).toISOString() : null; };
+    return {
+      calisiyor: v.ActiveState === 'activating' || v.ActiveState === 'active' || v.ActiveState === 'reloading',
+      durum: v.ActiveState || 'bilinmiyor', sonuc: v.Result || null,
+      baslama: tarih(v.ExecMainStartTimestamp), bitis: tarih(v.ExecMainExitTimestamp),
+    };
+  };
+
+  app.get('/api/admin/hat/gece', deps.requireAdmin, async (_req: Request, res: Response) => {
+    res.set('Cache-Control', 'no-store');
+    if (!cihaz) return res.json({ cihaz, calisiyor: false, durum: 'cihaz-disi' });
+    res.json({ cihaz, ...(await geceDurum()) });
+  });
+
+  app.post('/api/admin/hat/gece/calistir', deps.requireAdmin, async (req: Request, res: Response) => {
+    if (!cihaz) return res.status(409).json({ error: 'Gece hattı yalnız cihazda çalışır.' });
+    if ((req.body || {}).onay !== true) return res.status(400).json({ error: 'Bu eylem için onay gerekir.' });
+    const once = await geceDurum();
+    if (once.calisiyor) return res.status(409).json({ error: 'Gece hattı zaten çalışıyor.', ...once });
+    const eylem = await calistir('systemctl', ['--user', 'is-active', '--quiet', 'meds-hat-eylem.service'], 5000);
+    if (eylem.kod === 0) return res.status(409).json({ error: 'Ders eylemi işleyicisi çalışıyor; ders zinciri çakışmasın diye bitmesi beklenmeli.', ...once });
+    const r = await calistir('systemctl', ['--user', 'start', '--no-block', GECE_BIRIM], 10000);
+    if (r.kod !== 0) return res.status(500).json({ error: (r.err || r.out).trim().slice(0, 300) || 'Birim başlatılamadı.' });
+    await new Promise((ok) => setTimeout(ok, 1500));
+    console.log(`[hat] gece hattı elle başlatıldı (${String(req.headers['x-admin-email'] || '-')})`);
+    res.json({ success: true, cihaz, ...(await geceDurum()) });
   });
 }

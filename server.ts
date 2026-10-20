@@ -165,6 +165,7 @@ import { registerPgAdminRoutes } from './src/services/pgAdminRoutes.ts';
 import { registerUserAdminRoutes } from './src/services/userAdminRoutes.ts';
 import { registerServiceControlRoutes } from './src/services/serviceControlRoutes.ts';
 import { registerModerationActionRoutes } from './src/services/moderationActionsRoutes.ts';
+import { createModeratorAccess, moderatorOf } from './src/services/moderatorAccess.ts';
 import { registerHatActionRoutes } from './src/services/hatActionsRoutes.ts';
 import { registerUserDataBackupRoutes, userEventHash, type ServerUserNotification } from './src/services/userDataBackupService.ts';
 import { registerPeopleInsights } from './src/services/peopleInsights.ts';
@@ -1173,6 +1174,9 @@ function requireAdmin(req: express.Request, res: express.Response, next: express
     error: 'Bu işlem için yetkiniz yok. Sadece sistem yöneticisi (nofrostlife@gmail.com) işlem yapabilir.' 
   });
 }
+
+// Moderatör: yalnız moderasyon rotalarında (doğrulanmış Firebase jetonu + users.json rolü; bkz. moderatorAccess.ts)
+const { requireModeratorOrAdmin } = createModeratorAccess({ dataDir: DATA_DIR, adminEmail: ADMIN_EMAIL, loadUsers: () => loadUsers() as any[], isAdmin: isRequestAdmin });
 
 
 // HTTP Koşullu İstek (Conditional Request - ETag & 304 Not Modified) Motoru
@@ -5494,7 +5498,7 @@ app.post('/api/learn/feedback/:id/vote', (req, res) => {
   if (!r.ok) return res.status(r.status).json({ error: r.error });
   res.json({ success: true, item: r.item });
 });
-app.post('/api/admin/learn-feedback/:id/resolve', requireAdmin, (req, res) => {
+app.post('/api/admin/learn-feedback/:id/resolve', requireModeratorOrAdmin, (req, res) => {
   if (!learnFeedback.resolve(String(req.params.id))) return res.status(404).json({ error: 'Bildirim bulunamadı.' });
   res.json({ success: true });
 });
@@ -6966,8 +6970,8 @@ const userDataRoutes = registerUserDataBackupRoutes(app, {
 const notifyStudent = (target: { uid?: string | null; email?: string | null }, n: ServerUserNotification) => userDataRoutes.pushUserNotification(target, n);
 registerModerationActionRoutes(app, {
   dataDir: DATA_DIR,
-  requireAdmin,
-  actorOf: (req) => String(req.headers['x-admin-email'] || ADMIN_EMAIL),
+  requireAdmin: requireModeratorOrAdmin,
+  actorOf: (req) => moderatorOf(req)?.email || String(req.headers['x-admin-email'] || ADMIN_EMAIL),
   notifyStudent,
   broadcastAdmin: (ev, data) => broadcastRealtimeEvent(ev, data, true),
   findTarget: (id) => {
@@ -7726,7 +7730,7 @@ app.post('/api/admin/manage-settings', requireAdmin, (req, res) => {
 // Bildirimi çözüldü olarak işaretle: önce past_question_reports tablosu, sonra
 // sorunun gömülü reports dizisi güncellenir. Bulut kapalıysa bile 200 dönülür
 // ki konsol yerelde kapatabilsin.
-app.post('/api/admin/reports/:id/resolve', requireAdmin, async (req, res) => {
+app.post('/api/admin/reports/:id/resolve', requireModeratorOrAdmin, async (req, res) => {
   const reportId = String(req.params.id || '');
   const questionId = String(req.body?.questionId || '');
   try {
@@ -8835,7 +8839,7 @@ app.delete('/api/admin/users/:uid', requireAdmin, async (req, res) => {
 });
 
 // Admin: Update any question (full payload supported)
-app.put('/api/admin/questions/:id', requireAdmin, (req, res) => {
+app.put('/api/admin/questions/:id', requireModeratorOrAdmin, (req, res) => {
   let question = db.questions.find((q) => q.id === req.params.id);
   if (!question) {
     // Panelde yeni oluşturulup henüz sunucuya ulaşmamış taslak: 404 yerine oluştur (PUT /api/questions/:id ile aynı)
@@ -8858,7 +8862,7 @@ app.put('/api/admin/questions/:id', requireAdmin, (req, res) => {
 
 // Taslak birleştirme: birleştirilmiş çapa sunucuya yazılır, uydular kalıcı olarak kaldırılır.
 // Eskiden birleştirme yalnız tarayıcının yerel kopyasında kalıyordu (multiDb hataları yutuluyordu).
-app.post('/api/admin/drafts/merge', requireAdmin, async (req, res) => {
+app.post('/api/admin/drafts/merge', requireModeratorOrAdmin, async (req, res) => {
   try {
     const consolidated = req.body?.consolidated;
     const mergedIds: string[] = Array.isArray(req.body?.mergedIds) ? req.body.mergedIds.map(String).filter(Boolean) : [];
@@ -8900,7 +8904,7 @@ app.post('/api/admin/drafts/merge', requireAdmin, async (req, res) => {
 });
 
 // Admin: Update past question (full payload supported)
-app.put('/api/admin/past-questions/:id', requireAdmin, async (req, res) => {
+app.put('/api/admin/past-questions/:id', requireModeratorOrAdmin, async (req, res) => {
   const list = getPastQuestionsDb();
   const targetId = String(req.params.id);
   const idx = list.findIndex((q) => String(q.id) === targetId);
@@ -11493,7 +11497,7 @@ async function ensurePastReportIds(pastList: any[]): Promise<number> {
   return changed.length;
 }
 
-app.get('/api/admin/inbox', requireAdmin, async (_req, res) => {
+app.get('/api/admin/inbox', requireModeratorOrAdmin, async (_req, res) => {
   try {
     const pastList = getPastQuestionsDb();
     try { await ensurePastReportIds(pastList); } catch (e: any) { console.warn('[Gelen kutusu] kimlik göçü:', e?.message || e); }
@@ -11544,7 +11548,7 @@ app.get('/api/admin/inbox', requireAdmin, async (_req, res) => {
 });
 
 // Admin Auto-Repair API Endpoints (Catch-all'dan ÖNCE Express'e kaydedilir)
-app.get('/api/admin/auto-repair/items', requireAdmin, (_req, res) => {
+app.get('/api/admin/auto-repair/items', requireModeratorOrAdmin, (_req, res) => {
   try {
     const items = autoRepairStore.getAll();
     res.json({ success: true, items });
@@ -11553,7 +11557,7 @@ app.get('/api/admin/auto-repair/items', requireAdmin, (_req, res) => {
   }
 });
 
-app.get('/api/admin/auto-repair/stats', requireAdmin, (_req, res) => {
+app.get('/api/admin/auto-repair/stats', requireModeratorOrAdmin, (_req, res) => {
   try {
     const all = autoRepairStore.getAll();
     const stats = {
@@ -11607,7 +11611,7 @@ app.post('/api/admin/auto-repair/run-all', requireAdmin, async (_req, res) => {
   }
 });
 
-app.post('/api/admin/auto-repair/:id/rollback', requireAdmin, (req, res) => {
+app.post('/api/admin/auto-repair/:id/rollback', requireModeratorOrAdmin, (req, res) => {
   try {
     const result = rollbackRepair(req.params.id);
     if (!result.success) {
@@ -11619,7 +11623,7 @@ app.post('/api/admin/auto-repair/:id/rollback', requireAdmin, (req, res) => {
   }
 });
 
-app.post('/api/admin/auto-repair/:id/retry', requireAdmin, async (req, res) => {
+app.post('/api/admin/auto-repair/:id/retry', requireModeratorOrAdmin, async (req, res) => {
   try {
     const item = autoRepairStore.getById(req.params.id);
     if (!item) return res.status(404).json({ error: 'İşlem bulunamadı.' });

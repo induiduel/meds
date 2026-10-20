@@ -10,6 +10,8 @@ yönetici yetkisiyle buraya vekil olur.
   GET  /checklist                      → checklist.json (2026-27 durum raporu verisi)
   GET  /kuyruk                         → kuyruk.json özeti (sonra/basladi dahil)
   GET  /zamanlama                      → işçi zamanlaması + bekleyen işlerin tahmini başlama saatleri (plan)
+  POST /kuyruk/<is_id>/yeniden-uret    ← {"hemen": bool, "kim": "..."}  Hat panosu "Baştan üret": aynı PDF'i yeniden
+                                          okuyup paketi baştan üretir (ayrıntı: _yeniden_uret)
 Kararlar taslak/<is_id>/karar.json'a yazılır; birleştirme (yayın) ayrı adımdır.
 """
 from __future__ import annotations
@@ -220,6 +222,13 @@ class H(BaseHTTPRequestHandler):
         h = re.match(r"^/kuyruk/([0-9]{8}-[0-9a-f]{10}(?:-\d+)?)/(simdi|one-al|sona-at|kaldir|yeniden-dene)$", yol)
         if h:
             return self._simdi(h.group(1)) if h.group(2) == "simdi" else self._kuyruk_eylem(h.group(1), h.group(2))
+        u = re.match(r"^/kuyruk/([0-9]{8}-[0-9a-f]{10}(?:-\d+)?)/yeniden-uret$", yol)
+        if u:
+            try:
+                body = json.loads(self.rfile.read(min(int(self.headers.get("Content-Length") or 0), 20000)) or b"{}")
+            except Exception:  # noqa: BLE001
+                return self._json(400, {"hata": "geçersiz JSON"})
+            return self._yeniden_uret(u.group(1), bool(body.get("hemen")), str(body.get("kim") or "")[:200])
         if yol in ("/ayarlar", "/tara", "/pdf/kuyruga") or re.match(r"^/taslak/[^/]+/esik-atla$", yol):
             try:
                 body = json.loads(self.rfile.read(min(int(self.headers.get("Content-Length") or 0), 20000)) or b"{}")
@@ -295,6 +304,54 @@ class H(BaseHTTPRequestHandler):
             if any(k["is_id"] == is_id and k["durum"] != "bekliyor" for k in oku(KUYRUK, [])):
                 break
         return self._json(200, {"ok": True})
+
+    def _yeniden_uret(self, is_id: str, hemen: bool, kim: str):
+        """Hat panosu "Baştan üret" (cihaz otomasyon/hat_eylem.py çağırır): dersin PDF'i yeniden okunur, paket baştan üretilir.
+        · İş bekliyor/hata durumundaysa (hiç yayımlanmadı): yerinde sıfırlanır (deneme 0) ve sıranın başına alınır.
+        · İş taslak çıkardıysa: aynı PDF + konularla YENİ kimlikli iş açılır (yayinla.py yayımlanmış is_id'yi bir daha
+          yayımlamaz). Eski taslak ve yayın izi olduğu gibi kalır (silinmez/taşınmaz); yeni taslak kapılardan geçip
+          otomatik onaylanırsa yayinla.py mevcut dersi günceller (yazmadan önce kendi yedeğini alır).
+        Reddedilir: iş işleniyor, eski taslak onaylandı ve yayın sürüyor, PDF yok, bugün aynı PDF'ten zaten iş açıldı."""
+        ana = re.sub(r"-\d+$", "", is_id)
+        with KUYRUK_KILIT:
+            kuyruk = oku(KUYRUK, [])
+            j = next((k for k in kuyruk if k["is_id"] == ana), None)
+            if not j:
+                return self._json(404, {"hata": "kuyrukta yok"})
+            if any(k["durum"] == "isleniyor" for k in kuyruk):
+                return self._json(409, {"hata": "şu an bir ders işleniyor; bitince yeniden deneyin"})
+            from pathlib import Path  # noqa: E402
+            if not Path(j.get("tam") or "").is_file():
+                return self._json(409, {"hata": "dersin PDF'i işçide bulunamadı"})
+            for d in TASLAK.glob(ana + "*"):
+                if d.is_dir() and re.fullmatch(re.escape(ana) + r"(?:-\d+)?", d.name) and \
+                        (oku(d / "karar.json", {}) or {}).get("karar") == "onayla" and not (d / "yayin.json").exists():
+                    return self._json(409, {"hata": f"{d.name} onaylandı ve yayın sürüyor; yayın bitince yeniden deneyin"})
+            if j["durum"] in ("bekliyor", "hata"):
+                yeni = j
+                j.update(durum="bekliyor", deneme=0, sonra=0, oncelik=1, son_mesaj="baştan üretim istendi (Hat panosu)")
+                kuyruk.remove(j)
+            else:
+                yid = time.strftime("%Y%m%d") + "-" + j["sha256"][:10]
+                if yid == ana or any(k["is_id"] == yid for k in kuyruk) or (TASLAK / yid).exists():
+                    return self._json(409, {"hata": "bu PDF'ten bugün zaten iş açıldı; baştan üretim yarın yapılabilir"})
+                yeni = {k: j[k] for k in ("yol", "tam", "sha256", "yil", "uyari", "konular") if k in j} | {
+                    "is_id": yid, "durum": "bekliyor", "eklendi": time.time(), "deneme": 0, "sonra": 0, "oncelik": 1,
+                    "yeniden_uretim": {"onceki": ana, "kim": kim, "zaman": time.time()},
+                    "son_mesaj": "baştan üretim istendi (Hat panosu)"}
+            bekleyen = [i for i, k in enumerate(kuyruk) if k["durum"] == "bekliyor"]
+            kuyruk.insert(bekleyen[0] if bekleyen else len(kuyruk), yeni)
+            yaz(KUYRUK, kuyruk)
+            kayit = oku(KAYIT, {})
+            if kayit.get(j.get("sha256"), {}).get("durum") == "hata":
+                kayit.pop(j["sha256"], None)
+                yaz(KAYIT, kayit)
+        log(f"baştan üretim istendi (Hat panosu{', ' + kim if kim else ''}): {ana} → {yeni['is_id']}")
+        basladi = False
+        if hemen:
+            import izle  # noqa: E402
+            basladi = izle.isi_baslat(yeni["is_id"])
+        return self._json(200, {"ok": True, "is_id": yeni["is_id"], "onceki": ana, "basladi": basladi})
 
     def _kuyruk_eylem(self, is_id: str, eylem: str):
         with KUYRUK_KILIT:

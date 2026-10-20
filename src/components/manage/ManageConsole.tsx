@@ -38,6 +38,7 @@ import {
   Lightbulb,
 } from 'lucide-react';
 import { ManageShellV12, ManageOverviewV12, type M12NavGroup } from '../v12/ManageV12';
+import { MODERATOR_SECTIONS } from '../../services/moderatorSession';
 import { ManageShellV14 } from '../v14/ManageShellV14';
 import { Tabs14 } from '../v14/pageKit';
 
@@ -117,6 +118,8 @@ interface ManageConsoleProps {
   entry?: 'manage' | 'admin';
   /** Adresteki bölüm (ikinci parça), örn. "taslaklar" */
   initialSlug?: string;
+  /** Moderatör oturumu: yalnız moderasyon bölümleri görünür ve açılır (sunucu da yalnız o uçlara izin verir) */
+  moderatorOnly?: boolean;
 }
 
 const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; icon: React.ElementType; group: string; keywords?: string }[] = [
@@ -166,6 +169,7 @@ const OVERVIEW_SECTION: (typeof SECTIONS)[number] = {
   hint: 'Şimdi ilgilenmen gerekenler, servis durumu ve son hareketler tek ekranda.', keywords: 'özet pano kuyruk durum öncelik',
 };
 const V12_ALL = [OVERVIEW_SECTION, ...V12_SECTIONS];
+const MODERATOR_BLOCKED_TEXT = 'Moderatör hesabıyla yalnız Genel bakış, Gelen kutusu, Moderasyon, Taslaklar ve Bekleyen işlemler bölümlerini açabilirsin. Diğer bölümler için ana yönetici yetkisi gerekir.';
 const isV12Doc = () => typeof document !== 'undefined' && document.documentElement.dataset.design === 'v12';
 const foldTr = (t: string) => t.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ı/g, 'i');
 const sectionBySlug = (slug?: string, v12 = false) =>
@@ -217,6 +221,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   fullscreen = true,
   entry = 'manage',
   initialSlug,
+  moderatorOnly = false,
 }) => {
   // v8: konsol uygulamanın tek yoğunluk ayarını kullanır (Profil ve ayarlar ile aynı)
   const look = useAppearance();
@@ -229,7 +234,12 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [usersTab, setUsersTab] = useState<'activity' | 'accounts'>('activity');
   const [autoTab, setAutoTab] = useState<'schedule' | 'services'>('schedule');
+  const sectionAllowed = (s: ManageSection) => !moderatorOnly || (MODERATOR_SECTIONS as readonly string[]).includes(s);
   const setSection = (s: ManageSection, opts: { replace?: boolean } = {}) => {
+    if (!sectionAllowed(s)) {
+      notify(MODERATOR_BLOCKED_TEXT);
+      return;
+    }
     setSectionState(s);
     setMenuOpen(false);
     setPaletteOpen(false);
@@ -299,7 +309,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       // Alt + ↑/↓: önceki / sonraki bölüm (yazı alanındayken de çalışır; Alt+ok metinde iş görmez)
       if (e.altKey && !e.ctrlKey && !e.metaKey && (e.key === 'ArrowUp' || e.key === 'ArrowDown')) {
         e.preventDefault();
-        const order = isV12Doc() ? V12_ALL : SECTIONS;
+        const order = (isV12Doc() ? V12_ALL : SECTIONS).filter((x) => sectionAllowed(x.id));
         const i = order.findIndex((x) => x.id === sectionRef.current);
         setSection(order[(i + (e.key === 'ArrowDown' ? 1 : order.length - 1)) % order.length].id);
       }
@@ -562,7 +572,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   const renderNav = (filter = '', grid = false) => {
     const q = foldTr(filter.trim());
     const source = look.design === 'v12' ? V12_SECTIONS : SECTIONS;
-    const list = source.filter((x) => !q || foldTr(`${x.label} ${x.hint} ${x.keywords || ''} ${x.group}`).includes(q));
+    const list = source.filter((x) => sectionAllowed(x.id)).filter((x) => !q || foldTr(`${x.label} ${x.hint} ${x.keywords || ''} ${x.group}`).includes(q));
     if (!list.length) return <span className="msv-mgrid-empty">Eşleşen bölüm yok</span>;
     return list.map((sec, i) => {
       const on = section === sec.id;
@@ -598,7 +608,17 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   }, [section]);
 
   // Bölüm içerikleri: v10/v11 ve v12 kabukları aynı içeriği çizer (veri ve işlevler tek yerde)
-  const sectionBody = (
+  const sectionBody = !sectionAllowed(section) ? (
+    <div className="ms-card" role="alert" style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 8, color: 'var(--ink-2)' }}>
+      <strong style={{ color: 'var(--ink)' }}>Bu bölüm moderatörlere kapalı</strong>
+      <span>{MODERATOR_BLOCKED_TEXT}</span>
+      <span>
+        <button type="button" className="ms-btn" onClick={() => setSection(v12 ? 'overview' : 'inbox')}>
+          {v12 ? 'Genel bakışa dön' : 'Gelen kutusuna dön'}
+        </button>
+      </span>
+    </div>
+  ) : (
     <>
       {section === 'pending' && (
         <ManagePendingOperationsSection
@@ -801,7 +821,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     </>
   );
   const paletteEl = paletteOpen && (
-    <SectionPalette current={section} onPick={(id) => setSection(id)} onClose={() => setPaletteOpen(false)} badgeOf={badgeOf} sections={v12 ? V12_ALL : undefined} />
+    <SectionPalette current={section} onPick={(id) => setSection(id)} onClose={() => setPaletteOpen(false)} badgeOf={badgeOf} sections={moderatorOnly ? (v12 ? V12_ALL : SECTIONS).filter((x) => sectionAllowed(x.id)) : v12 ? V12_ALL : undefined} />
   );
   const draftModal = editingDraft && (
     <AdminEditQuestionModal
@@ -823,7 +843,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     const badgeV12 = (id: ManageSection) => (id === 'users' ? undefined : badgeOf(id)); // menüde yalnız bekleyen sayılar
     const groups: M12NavGroup[] = [
       { label: null, items: [{ id: 'overview', label: OVERVIEW_SECTION.label, hint: OVERVIEW_SECTION.hint, icon: OVERVIEW_SECTION.icon }] },
-      ...V12_GROUPS.map((g) => ({
+      ...V12_GROUPS.map((g) => ({ ...g, ids: g.ids.filter(sectionAllowed) })).filter((g) => g.ids.length).map((g) => ({
         label: g.label,
         items: g.ids.map((id) => {
           const sec = SECTIONS.find((x) => x.id === id)!;

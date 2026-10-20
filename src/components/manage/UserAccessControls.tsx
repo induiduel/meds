@@ -16,7 +16,7 @@ import { Pill } from '../v14/pageKit';
 
 /**
  * Rol ve askı denetimleri (Kullanıcılar + Kişiler ekranları ortak kullanır).
- * Sunucu: /api/admin/people-access* (yalnız ana yönetici). Moderatör rolü şimdilik yalnız kayıt ve gösterimdir.
+ * Sunucu: /api/admin/people-access* (yalnız ana yönetici). Moderatör rolü yalnız moderasyon uçlarına izin verir (sunucu: moderatorAccess.ts).
  */
 
 const ROLE_OPTS: { id: UserRole; label: string }[] = [
@@ -120,7 +120,7 @@ export const AccessSection: React.FC<{ uid?: string; email?: string; owner: bool
       <Field label="Rol">
         <Seg label="Rol" value={role} onChange={(r) => r !== role && void wrap(() => api.setRole([uid], r))} options={ROLE_OPTS} />
       </Field>
-      <p className="m-0 text-sm text-ink-3">Moderatör ve yönetici rolleri şimdilik yalnız kayıt ve gösterim içindir; yönetim yetkisi yalnız ana yöneticidedir.</p>
+      <RoleScopeNote />
       {access?.suspended ? (
         <div className="flex flex-col gap-2" style={{ minWidth: 0 }}>
           <p className="m-0 text-sm" style={{ color: 'var(--danger, var(--bad))', overflowWrap: 'anywhere' }}>
@@ -214,9 +214,12 @@ export const AccessBulkDrawer: React.FC<{
       }
     >
       {mode === 'role' ? (
-        <Field label="Yeni rol">
-          <Seg label="Yeni rol" value={role} onChange={setRole} options={ROLE_OPTS} />
-        </Field>
+        <>
+          <Field label="Yeni rol">
+            <Seg label="Yeni rol" value={role} onChange={setRole} options={ROLE_OPTS} />
+          </Field>
+          <RoleScopeNote />
+        </>
       ) : (
         <>
           <Field label="Gerekçe (zorunlu)">
@@ -233,3 +236,20 @@ export const AccessBulkDrawer: React.FC<{
     </Drawer>
   );
 };
+
+/** Rolün kapsamı: moderatör ne yapabilir, ne yapamaz */
+function RoleScopeNote() {
+  return (
+    <div className="m-0 text-sm" style={{ color: 'var(--ink-3)', display: 'flex', flexDirection: 'column', gap: 4 }}>
+      <span>
+        <strong style={{ color: 'var(--ink-2)' }}>Moderatör:</strong> yönetim konsolunda yalnız Genel bakış, Gelen kutusu, Moderasyon, Taslaklar ve
+        Bekleyen işlemler bölümlerini görür. Hata bildirimlerini ve geri bildirimleri çözebilir, bildirilen soruyu düzeltebilir, taslakları
+        yayımlayıp birleştirebilir, otomatik düzeltmeyi geri alabilir ya da yeniden deneyebilir. Yaptığı her değişiklik denetim kaydına yazılır.
+      </span>
+      <span>
+        Kullanıcılar, Kişiler, roller, veritabanı, servisler, hat, betikler, otomasyon, yedekler ve ayarlar moderatöre kapalıdır. Yönetici rolü
+        kayıtta moderatörle aynı kapsamı taşır; tam yetki yalnız ana yöneticidedir.
+      </span>
+    </div>
+  );
+}

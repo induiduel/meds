@@ -7,7 +7,7 @@
  *   accessHistory?: { at; by; kind: 'role' | 'suspend' | 'unsuspend'; from?; to?; reason?; until? }[]  (yalnız eklenir)
  *
  * Rol anlamı: 'admin' ve 'moderator' bu dosyada yalnız kayıt + gösterim içindir; güçlü yönetici yetkisi hâlâ yalnız
- * ana yöneticidedir (isStrongAdmin). Moderatör hiçbir yönetici ucuna erişim kazanmaz (ileride dar izinler eklenebilir).
+ * ana yöneticidedir (isStrongAdmin). Moderatör yalnız moderasyon uçlarına erişir (src/services/moderatorAccess.ts).
  *
  * Askı uygulaması: aynı dosyadaki ara katman, askıdaki uid/e-postadan gelen tüm öğrenci yazma isteklerini (GET dışı
  * /api/*) 403 + code 'ACCOUNT_SUSPENDED' ile reddeder. Ana yönetici rolü değiştirilemez, askıya alınamaz.

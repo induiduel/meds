@@ -4,11 +4,13 @@
  * Hücre renkleri: geçti / çalışıyor / kapıda takıldı / bekliyor (her hücrede ekran okuyucu metni). Seçim + toplu eylem
  * (Baştan üret ve Yayından çek iki dokunuşla), satır → tam sayfa ayrıntı (takılan kapı, hatalar, günlük, tek ders eylemleri).
  * Eylemler kuyruğa yazılır (otomasyon/hat_eylem.py işler); iş varken pano 10 sn'de bir yenilenir.
+ * "Şimdi çalıştır" (iki dokunuş): gece hattı birimini hemen başlatır (POST /api/admin/hat/gece/calistir); çalışırken 10 sn'de bir yoklanır.
+ * "Baştan üret": önce Oracle ders işçisi PDF'ten yeniden üretir ve yayımlar, ardından cihaz zinciri baştan çalışır (hat_eylem.py).
  * Aşama defteri sekmesi: otomasyon/hat.json + durum.json + hat.log (GET /api/admin/hat).
  * Stil: hat.css (.mh-*), ortak kabuk consoleUi.
  */
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { GitBranch, RefreshCw, ScrollText } from 'lucide-react';
+import { GitBranch, Play, RefreshCw, ScrollText } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { EmptyState, Panel, Drawer, ConfirmButton, logTone, timeLabel } from './consoleUi';
 import { PageActions, StatRow, Toolbar, Tabs14, SearchField, DataTable, DetailNav, DetailLayout, FactList, Card14, type Col } from '../v14/pageKit';
@@ -27,6 +29,7 @@ type Satir = {
 type DerslerYanit = { cihaz: boolean; asamalar: AsamaTanim[]; oracleHata: string | null; oracleZaman: string; dersler: Satir[]; calisan: number };
 type Is = { id: string; ders: string; eylem: string; durum: string; olusturma: string; baslama?: string; bitis?: string; kod?: number; kim?: string; not?: string; log?: string[] };
 type Ayrinti = { cihaz: boolean; ders: Satir & { ogretim_uyesi: string | null }; isler: Is[]; gece: string[]; claudeLog: string[]; denetimRaporu: string; oracleHata: string | null };
+type GeceDurum = { cihaz: boolean; calisiyor: boolean; durum: string; sonuc?: string | null; baslama?: string | null; bitis?: string | null };
 type Eylem = 'surdur' | 'bastan' | 'denetci' | 'cek';
 
 type Asama = { id: string; kapsam?: string; durum?: string; gerekir?: string[]; tetik?: string[]; komut?: string; kapi?: string; cikti?: string[]; eksik?: string; not?: string };
@@ -113,6 +116,32 @@ export const ManageHatSection: React.FC<{ adminEmail?: string }> = ({ adminEmail
     return !q || `${d.ad} ${d.id} ${d.kod} ${d.brans}`.toLocaleLowerCase('tr').includes(q);
   });
 
+  // ── gece hattı: şimdi çalıştır ──
+  const [gece, setGece] = useState<GeceDurum | null>(null);
+  const geceYukle = useCallback(async () => {
+    const r = await safeJsonFetch<GeceDurum>('/api/admin/hat/gece', { headers: basliklar });
+    if (r.ok && r.data) setGece(r.data);
+  }, [basliklar]);
+  useEffect(() => { void geceYukle(); }, [geceYukle]);
+  useEffect(() => {
+    if (!gece?.calisiyor) return;
+    const t = window.setInterval(() => { if (!document.hidden) { void geceYukle(); void yukle(true); } }, 10000);
+    return () => window.clearInterval(t);
+  }, [gece?.calisiyor, geceYukle, yukle]);
+  const geceCalistir = async () => {
+    setMesaj(null);
+    const r = await safeJsonFetch<any>('/api/admin/hat/gece/calistir', {
+      method: 'POST', headers: { ...basliklar, 'Content-Type': 'application/json' }, body: JSON.stringify({ onay: true }),
+    });
+    if (r.data && typeof r.data.calisiyor === 'boolean') setGece({ cihaz: true, ...r.data });
+    setMesaj(r.ok ? { tur: 'ok', metin: 'Gece hattı başlatıldı. Bugün başarıyla geçmiş aşamalar yeniden çalışmaz.' }
+      : { tur: 'hata', metin: r.data?.error || r.error || `Gece hattı başlatılamadı (${r.status}).` });
+    void geceYukle();
+  };
+  const geceNot = !gece ? null : gece.calisiyor
+    ? <>Gece hattı şu an çalışıyor{gece.baslama ? ` (başlangıç ${zaman(gece.baslama)})` : ''}.</>
+    : gece.bitis ? <>Gece hattı en son {zaman(gece.bitis)} bitti{gece.sonuc && gece.sonuc !== 'success' ? ', hata verdi' : ''}.</> : null;
+
   const secim = useSelection<string>();
   const cur = dersler.find((d) => d.id === acik) || null;
 
@@ -180,7 +209,7 @@ export const ManageHatSection: React.FC<{ adminEmail?: string }> = ({ adminEmail
           {d.oracleEylem ? d.oracleEylem.ad : 'Takılan aşamadan sürdür'}
         </button>
         <button type="button" className="m14-btn" disabled={dis} onClick={() => void eylemYap('denetci', [d.id])}>Denetçiye gönder</button>
-        <ConfirmButton className="m14-btn danger" disabled={dis} confirmLabel="Eminim, baştan üret" onConfirm={() => eylemYap('bastan', [d.id])}>Baştan üret</ConfirmButton>
+        <ConfirmButton className="m14-btn danger" disabled={dis} confirmLabel="Eminim, baştan üret" title="Önce ders işçisi PDF'i yeniden okuyup paketi üretir ve yayımlar, ardından cihaz zinciri baştan çalışır" onConfirm={() => eylemYap('bastan', [d.id])}>Baştan üret</ConfirmButton>
         <ConfirmButton className="m14-btn danger" disabled={dis || !d.paket} confirmLabel="Eminim, yayından çek" onConfirm={() => eylemYap('cek', [d.id])}>Yayından çek</ConfirmButton>
       </div>
     );
@@ -188,8 +217,14 @@ export const ManageHatSection: React.FC<{ adminEmail?: string }> = ({ adminEmail
 
   return (
     <div className="mh">
-      <PageActions note={<>Kurul 2 ve sonrası tam otomatik hat. Ders zinciri her gece 02:30'da çalışır (en çok 3 ders); eylemler sıraya alınır, gece hattı sürerken bekler.</>}>
-        <button type="button" className="m14-btn" onClick={() => void (sekme === 'dersler' ? yukle() : undefined)} disabled={yuk}>
+      <PageActions note={<>Kurul 2 ve sonrası tam otomatik hat. Ders zinciri her gece 02:30'da çalışır (en çok 3 ders); eylemler sıraya alınır, gece hattı sürerken bekler.{geceNot && <> {geceNot}</>}</>}>
+        {gece?.calisiyor ? (
+          <button type="button" className="m14-btn" disabled><Play aria-hidden /> Gece hattı çalışıyor</button>
+        ) : (
+          <ConfirmButton className="m14-btn" icon={Play} disabled={salt || !gece?.cihaz} confirmLabel="Eminim, şimdi çalıştır"
+            title={salt ? 'Gece hattı yalnız cihazda çalışır' : 'Gece hattını beklemeden şimdi başlatır'} onConfirm={geceCalistir}>Şimdi çalıştır</ConfirmButton>
+        )}
+        <button type="button" className="m14-btn" onClick={() => { void geceYukle(); void (sekme === 'dersler' ? yukle() : undefined); }} disabled={yuk}>
           <RefreshCw className={yuk ? 'animate-spin' : ''} aria-hidden /> Yenile
         </button>
       </PageActions>

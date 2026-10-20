@@ -187,10 +187,20 @@ Göçler `deploy/pg/sql/goc/NNNN_ad.sql` (yalnız ekler; idempotent; commit'lenm
   Ders eylemleri kuyruğa yazılır (`meds_temp/hat/eylemler/`), `otomasyon/hat_eylem.py` geçici `meds-hat-eylem` birimiyle
   sırayla işler, gece hattı sürerken bekler: **sürdür** (`ders_zinciri.py --ders`; Oracle aşamasında takılan ders işçinin
   `yeniden`/`yeniden-dene` uçlarıyla), **denetçiye gönder** (`--adim denetim`, geçerse birleştirme ve sonrası yeniden),
-  **baştan üret** (ara çıktılar `_eski/<kod>-<zaman>-bastan/`, durum `dersler/_eski/`, onay düşer), **yayından çek**
+  **baştan üret** (iki adım: 1) Oracle ders işçisi `POST /kuyruk/<is>/yeniden-uret` — `scripts/ders_isci/api.py`, cihazdan
+  `ssh medsor-oracle docker exec meds-ders-isci` ile iç API'ye — aynı PDF'i yeniden okuyup paketi baştan üretir; iş
+  yayımlanmışsa bugünün tarihiyle YENİ kimlikli iş açılır (yayinla.py yayımlanmış is_id'yi yeniden yayımlamaz; aynı gün
+  ikinci baştan üretim 409), eski taslak/iz silinmez, yayinla.py yazmadan önce kendi yedeğini alır; `hat_eylem.py`
+  işçiyi 60 sn'de bir yoklar, en çok 8 sa; kodlar 20 işçi okunamadı/ret/uç dağıtılmamış, 21 işçide taslak yok, 22 işçi
+  3 denemede üretemedi, 23 reddedildi/yayın denetimi, 24 otomatik onay yok (yönetici onayı), 25 zaman aşımı — bunlarda
+  cihaz zinciri çalışmaz; 2) yeni paket `yayinlandi` olunca cihaz: ara çıktılar `_eski/<kod>-<zaman>-bastan/`, durum
+  `dersler/_eski/`, onay düşer, zincir baştan), **yayından çek**
   (kod `onayli.json`'dan çıkar → birleştiriciler yeniden; yedek `meds_temp/hat/yayindan_cekilen/`; başka ders etkilenirse geri
   alınır; `cekildi` işaretli ders zincirde kendiliğinden yeniden yayına girmez; Oracle'daki Öğren destesi/ders paketi geri
   alınmaz). Kapılar atlanmaz; Kurul 1 dersleri eylem kabul etmez; Oracle'da pano salt okunur.
+  **Şimdi çalıştır** (sayfa üstü, iki dokunuş): `POST /api/admin/hat/gece/calistir` → `systemctl --user start --no-block
+  meds-hat-gece.service` (zamanlayıcının birimi, `--gece --kacirilan`: bugün başarıyla geçmiş aşamalar atlanır). Birim zaten
+  çalışıyorsa ya da `meds-hat-eylem` işleyicisi sürüyorsa 409; durum `GET /api/admin/hat/gece`, çalışırken pano 10 sn'de bir yoklar.
 - **Sağlık:** `python3 meds/otomasyon/saglik.py` (canlı API, Oracle SSH, 3000, vektör, EMA, disk + **kapı öz-sınaması**:
   üslup/şık/v2 kapıları iyi-kötü örnekle; arıza = `kapi_ariza`, içerik reddi sanılmaz).
 - **Sık durumlar:**
