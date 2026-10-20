@@ -271,3 +271,16 @@ Bulunan ve kapatılan hatalar:
 | orta | claude zaman aşımı yok, birleştirme sessiz 0, sürüm kaydı yolu, göç commit'siz/işlemsiz, takvim boş yazım, geri bildirim sınırsız, Türkçe kurul adı | hepsi düzeltildi |
 
 `claude -p` gözetimsiz ortamda (systemd, dar izin listesi) sınandı: izinli araçlar çalışır, izin dışı komut takılmadan reddedilir.
+
+## 14. Tam dağıtım + prova + hata dersleri (2026-10-20)
+
+- **Tam dağıtım:** temiz worktree (`meds-dagitim`, d283171, önem 62); `dist/dagitim.json` damgası temiz → gece içerik dağıtımı engelsiz.
+- **Prova** (`otomasyon/prova.py`, Sifiliz → sahte Kurul 2 dersi `2x99`, canlıya gönderim yok): 7 adım 0 HATA, 51 dk.
+  önem 26 madde (14 çıkmış bağlı, 3 kapsam dışı elendi; 1. madde = önem haritasının en yüksek sayfası), çözücü 33 soru,
+  bağımsız denetçi raporu + onay, asistan 23 nokta, EMA 568 klip (asistan 263, çözücü 305). Çıktılar `meds_temp/prova/20261020_0608/`.
+  Provanın yakaladığı kusur: çıkmışlar ders kurulundan süzülüyordu (prova K1→K2'de 0 çıkmış) → `cikmis_kurul` + çıkmışsız ders UYARI.
+- **Diğer oturumlardaki düzeltmelerden dersler (H3–H13):** `KURUL2_YAPILMAYACAK_HATALAR.md`. Eklenen kapılar: EMA uzun kısaltma
+  okunuşu (K2+), iç süreç dili, kapı öz-sınaması, birleştirme silme koruması, canlı ses yoklaması, ürünler arası soru tutarlılığı,
+  PDF içerik tekrarı, görsel sayfa "boş" sayılamaz, türev veri tamlığı, K2 sesli ders vurguları v2'den, "Öğren'de bu bilgi" zincirde.
+- **Açık:** H10 (çıkmış anahtarı PDF ile çelişirse karantina), kelime zamanlaması yalnız cihazda, Check Up / sınav kampı K2 kararı,
+  test bankası K2. Ölçüm: canlıda 15 K1 sesli dersinde cümle zamanı eksik (metin bugün değişmiş).
