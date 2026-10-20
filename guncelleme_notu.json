@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 55,
-  "baslik": "Güncelleme günlüğü düzenlendi",
+  "onem": 56,
+  "baslik": "Sınav spotları PDF'i daha okunaklı",
   "maddeler": [
-    "Güncelleme günlüğünde her madde doğru türde gösteriliyor: Eklenen, Değişen, Düzeltilen ve Kaldırılan."
+    "Sınav spotları PDF'inde ayrıntılar artık iç içe maddelerle (alt kriterler girintili) basılıyor.",
+    "Uzun maddeler alt maddelere bölünüyor; yazıyla sayılar rakamla gösteriliyor."
   ],
   "eklenen": [],
   "degisen": [

@@ -13,6 +13,8 @@
  * Maddeler çağıran tarafta süzülür (OnemPdfPenceresi); burada yalnız içerik ve görünüm.
  */
 import { setupPdfFonts } from './drive';
+import { mdDuzenle } from './maddeDuzen';
+import { sayilariYaz } from './sayiYazim';
 
 export type OnemPdfMod = 'liste' | 'kompakt' | 'bosluk' | 'soru' | 'kart';
 
@@ -84,7 +86,15 @@ const utf16 = (s: string) => {
   return r;
 };
 
-export async function onemPdfOlustur(dersler: OnemPdfDers[], o: OnemPdfSecenek, ek: OnemPdfEk = {}): Promise<{ blob: Blob; sayfa: number }> {
+export async function onemPdfOlustur(dersler0: OnemPdfDers[], o: OnemPdfSecenek, ek: OnemPdfEk = {}): Promise<{ blob: Blob; sayfa: number }> {
+  // okunuş için yazıya dökülmüş sayılar ("iki virgül bir", "yüzde kırk") rakamla basılır
+  const dersler = dersler0.map((d) => ({
+    ...d,
+    maddeler: d.maddeler.map((m) => ({
+      ...m, bilgi: sayilariYaz(m.bilgi), neden: sayilariYaz(m.neden || ''), detay: sayilariYaz(m.detay || ''),
+      alt: m.alt?.map(sayilariYaz),
+    })),
+  }));
   const { jsPDF } = await import('jspdf');
   const OLCU = { a4: [210, 297], a5: [148, 210], tablet: [157.5, 210], letter: [215.9, 279.4] } as const;
   const yatay = o.yon === 'yatay';
@@ -545,9 +555,20 @@ export async function onemPdfOlustur(dersler: OnemPdfDers[], o: OnemPdfSecenek, 
     if (o.alinti) for (const a of m.alinti) { y += 0.4; zengin(`“${a.metin}” — s. ${a.sayfa}`, dx, w, 7.9 * k, INK3, { it: true }); }
     if (o.detay && m.detay) {
       y += 0.8;
-      for (const s of String(m.detay).split('\n').map((x) => x.trim()).filter(Boolean)) {
-        if (/^[-•]\s+/.test(s)) madde(s.replace(/^[-•]\s+/, ''), dx, w, 8.3 * k, INK2, { vurgu: c });
-        else zengin(s, dx, w, 8.3 * k, INK2, { vurgu: c });
+      // iç içe maddeler korunur (göreli girinti → en çok 3 düzey); uzun maddeler alt maddelere bölünür (maddeDuzen)
+      const girinti: number[] = [];
+      for (const ham of mdDuzenle(String(m.detay)).split('\n')) {
+        if (!ham.trim()) continue;
+        const h = ham.match(/^\s*#{1,6}\s+(.*)$/);
+        if (h) { girinti.length = 0; y += 0.6; zengin(`**${h[1]}**`, dx, w, 8.3 * k, INK2, { vurgu: c }); continue; }
+        const li = ham.match(/^(\s*)([-*•]|\d+[.)])\s+(.*)$/);
+        if (!li) { girinti.length = 0; zengin(ham.trim(), dx, w, 8.3 * k, INK2, { vurgu: c }); continue; }
+        const g = li[1].replace(/\t/g, '    ').length;
+        while (girinti.length && girinti[girinti.length - 1] > g) girinti.pop();
+        if (!girinti.length || girinti[girinti.length - 1] < g) girinti.push(g);
+        const dz = Math.min(2, girinti.length - 1), ix = dz * 3.4;
+        const metin = /\d/.test(li[2]) ? `**${li[2]}** ${li[3]}` : li[3];
+        madde(metin, dx + ix, w - ix, (dz ? 8 : 8.3) * k, dz ? INK3 : INK2, { vurgu: c });
       }
     }
     if (o.ornekSoru) for (const q of m.ornek26 || []) {
