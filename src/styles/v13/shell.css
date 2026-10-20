@@ -229,3 +229,21 @@
 @media (max-width: 767px) {
   :root[data-v13='on']:has(.r12-root) :is(.a13-top, .a13-island-wrap) { display: none !important; }
 }
+
+/* Telefon kompakt: kapsül 44 px, alt ada 60 px, sayfa boşlukları dar */
+@media (max-width: 767px) {
+  :root[data-design='v12'][data-v13='on'] {
+    --sh-top-h: 50px;
+    --sh-tabs-h: 66px;
+    & .a13-top { padding-top: calc(env(safe-area-inset-top, 0px) + 6px); }
+    & .a13-cap { border-radius: 12px; padding-right: 4px; }
+    & .a13-h { font-size: 15px; }
+    & .a13-ib { min-width: 36px; height: 36px; }
+    & .a13-acct { width: 36px; height: 36px; }
+    & .a13-island { padding: 3px; border-radius: 18px; }
+    & .a13-tab { min-height: 40px; gap: 2px; font-size: 10px; }
+    & .a13-tab > svg, & .a13-tab-ic > svg { width: 20px; height: 20px; }
+    & .a13-plus { width: 44px; height: 36px; border-radius: 12px; }
+    & .sh-main { gap: 8px; padding-top: 4px; }
+  }
+}

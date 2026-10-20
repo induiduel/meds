@@ -1,14 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 87,
-  "baslik": "Tanıtımdaki kayıt ekranı kapatılabilir",
+  "onem": 88,
+  "baslik": "İyileştirmeler ve düzeltmeler",
   "maddeler": [
-    "İlk açılış tanıtımının kayıt ekranına kapatma düğmesi eklendi; kayıt olmadan siteye devam edilebilir, tanıtım o oturumda yeniden çıkmaz."
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "eklenen": [
-    "İlk açılış tanıtımının kayıt ekranına kapatma düğmesi eklendi; kayıt olmadan siteye devam edilebilir, tanıtım o oturumda yeniden çıkmaz."
+  "eklenen": [],
+  "degisen": [
+    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
   ],
-  "degisen": [],
   "duzeltilen": [],
   "silinen": []
 }

@@ -52,3 +52,11 @@
 :root[data-design='v12'][data-v13='on'] .l13 .l12-prog > .l12-pct { width: auto; min-width: 0; text-align: center; margin: 0; }
 /* Kitaplık sayfa sütununun tamamını kullanır: sağ kenar başlık kapsülüyle hizalı */
 :root[data-design='v12'][data-v13='on'] .sh-main .l13 { max-width: none; width: 100%; margin-inline: 0; }
+/* Sarma için satır kısıtı da kalkmalı (yoksa taşan satır künyenin üstüne biniyordu) */
+:root[data-design='v12'][data-v13='on'] .l13 :is(.l12-t, .l12-open) { display: block; -webkit-line-clamp: unset; -webkit-box-orient: initial; overflow: visible; }
+@media (max-width: 767px) {
+  :root[data-design='v12'][data-v13='on'] .l13 .l12-row { padding: 8px 10px; gap: 8px; min-height: 0; }
+  :root[data-design='v12'][data-v13='on'] .l13 .l12-main { gap: 2px; }
+  :root[data-design='v12'][data-v13='on'] .l13 .l12-sub { font-size: 12px; }
+  :root[data-design='v12'][data-v13='on'] .l13 .l12-badge { height: 18px; font-size: 10.5px; padding: 0 5px; }
+}
