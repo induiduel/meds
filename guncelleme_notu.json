@@ -1,14 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 111,
-  "baslik": "İyileştirmeler ve düzeltmeler",
+  "onem": 112,
+  "baslik": "Tam ekran her cihazda aynı çalışıyor",
   "maddeler": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+    "Android telefon ve tabletlerde, dokunmatik dizüstü bilgisayarlarda tam ekran artık tarayıcı çubuklarını da gizler (gerçek tam ekran); ders, okuyucu, sesli ders, soru çözücü ve sınav asistanında aynı davranır.",
+    "Bazı cihazlarda ve sayfalarda tam ekranın açılmaması / sayfalar arasında farklı çalışması.",
+    "Hastalık ayrıntısında telefonda hastalık adının görünmemesi."
   ],
   "eklenen": [],
   "degisen": [
-    "Çeşitli ekranlarda iyileştirmeler ve hata düzeltmeleri."
+    "Android telefon ve tabletlerde, dokunmatik dizüstü bilgisayarlarda tam ekran artık tarayıcı çubuklarını da gizler (gerçek tam ekran); ders, okuyucu, sesli ders, soru çözücü ve sınav asistanında aynı davranır."
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Bazı cihazlarda ve sayfalarda tam ekranın açılmaması / sayfalar arasında farklı çalışması.",
+    "Hastalık ayrıntısında telefonda hastalık adının görünmemesi.",
+    "Yatay telefonda kenar menüsünün alttan kırpılması."
+  ],
   "silinen": []
 }

@@ -63,24 +63,19 @@ export function isIosBrowserTab(): boolean {
 }
 
 /**
- * Dokunmatik ekranlı cihazlarda (iPhone, iPad, Android telefon/tablet, dokunmatik ekranlı bilgisayar)
- * tarayıcının native `requestFullscreen` / `webkitRequestFullscreen` API'si çağrıldığında:
- * - Chrome "Tam ekrandan çıkmak için kaydır" kipine girip sayfa içi kaydırma, bölünmüş ekran ayracı ve
- *   kart kaydırma hareketlerini yakalayarak sitenin işlevselliğini bozar,
- * - iOS/iPadOS WebKit bölünmüş ekranda metin/PDF kaydırırken tam ekrandan kendiliğinden çıkar.
- * Bu cihazlarda native Fullscreen API yerine doğrudan uygulama içi tam ekran katmanı kullanılır.
+ * Native `requestFullscreen` YALNIZ iOS/iPadOS WebKit'te atlanır: iPhone'da sayfa öğeleri için hiç desteklenmez,
+ * iPad'de bölünmüş ekranda kaydırırken kendiliğinden kapanır. Oradaki çözüm uygulama içi tam ekran + "Ana ekrana
+ * ekle" ipucudur (ana ekrandan açılan uygulama zaten tarayıcı çubuksuzdur).
+ * 2026-10-20: eskiden tüm dokunmatik cihazlarda (Android, dokunmatik dizüstü, Chromebook) da atlanıyordu; bu
+ * cihazlarda adres çubuğu kaldığı için "tam ekran açılmıyor" bildirildi ve sayfalar arasında tutarsızlık vardı.
+ * Artık bu cihazlarda gerçek tam ekran açılır; kaydırma sayfanın kendi kaydırma kabında sürer, native tam ekran
+ * kaydırma/geri hareketiyle kapanırsa uygulama içi tam ekran korunur (utils/fullscreen.ts onNativeChange).
  */
 export function shouldAvoidNativeFullscreen(): boolean {
   if (typeof window === 'undefined' || typeof navigator === 'undefined') return true;
   if (isIosDevice()) return true;
-  const ua = navigator.userAgent || '';
-  if (/Android|CriOS|FxiOS|EdgiOS|Mobile|Tablet/i.test(ua)) return true;
-  if ((navigator.maxTouchPoints || 0) > 0) return true;
-  try {
-    if (window.matchMedia?.('(pointer: coarse), (hover: none)').matches) return true;
-  } catch {
-    /* matchMedia yok */
-  }
+  // Ana ekrandan açılmış uygulama (PWA) zaten tarayıcı çubuksuz; native kip gereksiz
+  if (isStandaloneApp()) return true;
   return false;
 }
 
